@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2006/05/13 12:09:31 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/08/20 11:47:49 ykomatsu Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
-share/doc/zope3/ANNOUNCEMENT.txt
 share/doc/zope3/CHANGES.txt
 share/doc/zope3/CREDITS.txt
 share/doc/zope3/DEBUG.txt
@@ -88,48 +87,6 @@ share/zope3/lib/python/BTrees/tests/test_check.pyo
 share/zope3/lib/python/BTrees/tests/test_compare.py
 share/zope3/lib/python/BTrees/tests/test_compare.pyc
 share/zope3/lib/python/BTrees/tests/test_compare.pyo
-share/zope3/lib/python/ClientCookie/_BSDDBCookieJar.py
-share/zope3/lib/python/ClientCookie/_BSDDBCookieJar.pyc
-share/zope3/lib/python/ClientCookie/_BSDDBCookieJar.pyo
-share/zope3/lib/python/ClientCookie/_ClientCookie.py
-share/zope3/lib/python/ClientCookie/_ClientCookie.pyc
-share/zope3/lib/python/ClientCookie/_ClientCookie.pyo
-share/zope3/lib/python/ClientCookie/_ConnCache.py
-share/zope3/lib/python/ClientCookie/_ConnCache.pyc
-share/zope3/lib/python/ClientCookie/_ConnCache.pyo
-share/zope3/lib/python/ClientCookie/_Debug.py
-share/zope3/lib/python/ClientCookie/_Debug.pyc
-share/zope3/lib/python/ClientCookie/_Debug.pyo
-share/zope3/lib/python/ClientCookie/_HeadersUtil.py
-share/zope3/lib/python/ClientCookie/_HeadersUtil.pyc
-share/zope3/lib/python/ClientCookie/_HeadersUtil.pyo
-share/zope3/lib/python/ClientCookie/_LWPCookieJar.py
-share/zope3/lib/python/ClientCookie/_LWPCookieJar.pyc
-share/zope3/lib/python/ClientCookie/_LWPCookieJar.pyo
-share/zope3/lib/python/ClientCookie/_MSIECookieJar.py
-share/zope3/lib/python/ClientCookie/_MSIECookieJar.pyc
-share/zope3/lib/python/ClientCookie/_MSIECookieJar.pyo
-share/zope3/lib/python/ClientCookie/_MSIEDBCookieJar.py
-share/zope3/lib/python/ClientCookie/_MSIEDBCookieJar.pyc
-share/zope3/lib/python/ClientCookie/_MSIEDBCookieJar.pyo
-share/zope3/lib/python/ClientCookie/_MozillaCookieJar.py
-share/zope3/lib/python/ClientCookie/_MozillaCookieJar.pyc
-share/zope3/lib/python/ClientCookie/_MozillaCookieJar.pyo
-share/zope3/lib/python/ClientCookie/_Opener.py
-share/zope3/lib/python/ClientCookie/_Opener.pyc
-share/zope3/lib/python/ClientCookie/_Opener.pyo
-share/zope3/lib/python/ClientCookie/_Request.py
-share/zope3/lib/python/ClientCookie/_Request.pyc
-share/zope3/lib/python/ClientCookie/_Request.pyo
-share/zope3/lib/python/ClientCookie/_Util.py
-share/zope3/lib/python/ClientCookie/_Util.pyc
-share/zope3/lib/python/ClientCookie/_Util.pyo
-share/zope3/lib/python/ClientCookie/__init__.py
-share/zope3/lib/python/ClientCookie/__init__.pyc
-share/zope3/lib/python/ClientCookie/__init__.pyo
-share/zope3/lib/python/ClientCookie/_urllib2_support.py
-share/zope3/lib/python/ClientCookie/_urllib2_support.pyc
-share/zope3/lib/python/ClientCookie/_urllib2_support.pyo
 share/zope3/lib/python/ClientForm.py
 share/zope3/lib/python/ClientForm.pyc
 share/zope3/lib/python/ClientForm.pyo
@@ -1110,12 +1067,54 @@ share/zope3/lib/python/docutils/writers/s5_html/themes/small-white/pretty.css
 share/zope3/lib/python/mechanize/__init__.py
 share/zope3/lib/python/mechanize/__init__.pyc
 share/zope3/lib/python/mechanize/__init__.pyo
+share/zope3/lib/python/mechanize/_auth.py
+share/zope3/lib/python/mechanize/_auth.pyc
+share/zope3/lib/python/mechanize/_auth.pyo
+share/zope3/lib/python/mechanize/_clientcookie.py
+share/zope3/lib/python/mechanize/_clientcookie.pyc
+share/zope3/lib/python/mechanize/_clientcookie.pyo
+share/zope3/lib/python/mechanize/_gzip.py
+share/zope3/lib/python/mechanize/_gzip.pyc
+share/zope3/lib/python/mechanize/_gzip.pyo
+share/zope3/lib/python/mechanize/_headersutil.py
+share/zope3/lib/python/mechanize/_headersutil.pyc
+share/zope3/lib/python/mechanize/_headersutil.pyo
+share/zope3/lib/python/mechanize/_html.py
+share/zope3/lib/python/mechanize/_html.pyc
+share/zope3/lib/python/mechanize/_html.pyo
+share/zope3/lib/python/mechanize/_lwpcookiejar.py
+share/zope3/lib/python/mechanize/_lwpcookiejar.pyc
+share/zope3/lib/python/mechanize/_lwpcookiejar.pyo
 share/zope3/lib/python/mechanize/_mechanize.py
 share/zope3/lib/python/mechanize/_mechanize.pyc
 share/zope3/lib/python/mechanize/_mechanize.pyo
+share/zope3/lib/python/mechanize/_mozillacookiejar.py
+share/zope3/lib/python/mechanize/_mozillacookiejar.pyc
+share/zope3/lib/python/mechanize/_mozillacookiejar.pyo
+share/zope3/lib/python/mechanize/_msiecookiejar.py
+share/zope3/lib/python/mechanize/_msiecookiejar.pyc
+share/zope3/lib/python/mechanize/_msiecookiejar.pyo
+share/zope3/lib/python/mechanize/_opener.py
+share/zope3/lib/python/mechanize/_opener.pyc
+share/zope3/lib/python/mechanize/_opener.pyo
+share/zope3/lib/python/mechanize/_pullparser.py
+share/zope3/lib/python/mechanize/_pullparser.pyc
+share/zope3/lib/python/mechanize/_pullparser.pyo
+share/zope3/lib/python/mechanize/_request.py
+share/zope3/lib/python/mechanize/_request.pyc
+share/zope3/lib/python/mechanize/_request.pyo
+share/zope3/lib/python/mechanize/_urllib2.py
+share/zope3/lib/python/mechanize/_urllib2.pyc
+share/zope3/lib/python/mechanize/_urllib2.pyo
+share/zope3/lib/python/mechanize/_urllib2_support.py
+share/zope3/lib/python/mechanize/_urllib2_support.pyc
+share/zope3/lib/python/mechanize/_urllib2_support.pyo
 share/zope3/lib/python/mechanize/_useragent.py
 share/zope3/lib/python/mechanize/_useragent.pyc
 share/zope3/lib/python/mechanize/_useragent.pyo
+share/zope3/lib/python/mechanize/_util.py
+share/zope3/lib/python/mechanize/_util.pyc
+share/zope3/lib/python/mechanize/_util.pyo
 share/zope3/lib/python/persistent/DEPENDENCIES.cfg
 share/zope3/lib/python/persistent/README.txt
 share/zope3/lib/python/persistent/SETUP.cfg
@@ -1171,9 +1170,6 @@ share/zope3/lib/python/persistent/tests/test_wref.pyo
 share/zope3/lib/python/persistent/wref.py
 share/zope3/lib/python/persistent/wref.pyc
 share/zope3/lib/python/persistent/wref.pyo
-share/zope3/lib/python/pullparser.py
-share/zope3/lib/python/pullparser.pyc
-share/zope3/lib/python/pullparser.pyo
 share/zope3/lib/python/pytz/LICENSE.txt
 share/zope3/lib/python/pytz/README.txt
 share/zope3/lib/python/pytz/__init__.py
@@ -1562,9 +1558,15 @@ share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Knox.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Marengo.py
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Marengo.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Marengo.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Petersburg.py
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Petersburg.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Petersburg.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vevay.py
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vevay.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vevay.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vincennes.py
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vincennes.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/Indiana/Vincennes.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/__init__.py
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/__init__.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Indiana/__init__.pyo
@@ -1640,6 +1642,9 @@ share/zope3/lib/python/pytz/zoneinfo/America/Mexico_City.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Miquelon.py
 share/zope3/lib/python/pytz/zoneinfo/America/Miquelon.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Miquelon.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/Moncton.py
+share/zope3/lib/python/pytz/zoneinfo/America/Moncton.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/Moncton.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Monterrey.py
 share/zope3/lib/python/pytz/zoneinfo/America/Monterrey.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Monterrey.pyo
@@ -1670,6 +1675,9 @@ share/zope3/lib/python/pytz/zoneinfo/America/Noronha.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/Center.py
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/Center.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/Center.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/New_Salem.py
+share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/New_Salem.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/New_Salem.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/__init__.py
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/__init__.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/North_Dakota/__init__.pyo
@@ -5350,6 +5358,15 @@ share/zope3/lib/python/zope/app/README.txt
 share/zope3/lib/python/zope/app/__init__.py
 share/zope3/lib/python/zope/app/__init__.pyc
 share/zope3/lib/python/zope/app/__init__.pyo
+share/zope3/lib/python/zope/app/annotation/__init__.py
+share/zope3/lib/python/zope/app/annotation/__init__.pyc
+share/zope3/lib/python/zope/app/annotation/__init__.pyo
+share/zope3/lib/python/zope/app/annotation/attribute.py
+share/zope3/lib/python/zope/app/annotation/attribute.pyc
+share/zope3/lib/python/zope/app/annotation/attribute.pyo
+share/zope3/lib/python/zope/app/annotation/interfaces.py
+share/zope3/lib/python/zope/app/annotation/interfaces.pyc
+share/zope3/lib/python/zope/app/annotation/interfaces.pyo
 share/zope3/lib/python/zope/app/apidoc/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/apidoc/MAINTAINER.txt
 share/zope3/lib/python/zope/app/apidoc/README.txt
@@ -5397,6 +5414,8 @@ share/zope3/lib/python/zope/app/apidoc/browser/apidoc.pyo
 share/zope3/lib/python/zope/app/apidoc/browser/configure.zcml
 share/zope3/lib/python/zope/app/apidoc/browser/contents.pt
 share/zope3/lib/python/zope/app/apidoc/browser/details_macros.pt
+share/zope3/lib/python/zope/app/apidoc/browser/disabled.pt
+share/zope3/lib/python/zope/app/apidoc/browser/disabled.zcml
 share/zope3/lib/python/zope/app/apidoc/browser/favicon.png
 share/zope3/lib/python/zope/app/apidoc/browser/ftests.py
 share/zope3/lib/python/zope/app/apidoc/browser/ftests.pyc
@@ -5409,6 +5428,7 @@ share/zope3/lib/python/zope/app/apidoc/browser/macros.pyo
 share/zope3/lib/python/zope/app/apidoc/browser/menu.pt
 share/zope3/lib/python/zope/app/apidoc/browser/menu_macros.pt
 share/zope3/lib/python/zope/app/apidoc/browser/modules.pt
+share/zope3/lib/python/zope/app/apidoc/browser/nodevmode.txt
 share/zope3/lib/python/zope/app/apidoc/browser/notfound.pt
 share/zope3/lib/python/zope/app/apidoc/browser/prefIndex.pt
 share/zope3/lib/python/zope/app/apidoc/browser/preference.py
@@ -5516,6 +5536,11 @@ share/zope3/lib/python/zope/app/apidoc/component.pyc
 share/zope3/lib/python/zope/app/apidoc/component.pyo
 share/zope3/lib/python/zope/app/apidoc/component.txt
 share/zope3/lib/python/zope/app/apidoc/configure.zcml
+share/zope3/lib/python/zope/app/apidoc/disabled.py
+share/zope3/lib/python/zope/app/apidoc/disabled.pyc
+share/zope3/lib/python/zope/app/apidoc/disabled.pyo
+share/zope3/lib/python/zope/app/apidoc/disabled.zcml
+share/zope3/lib/python/zope/app/apidoc/enabled.zcml
 share/zope3/lib/python/zope/app/apidoc/ifacemodule/README.txt
 share/zope3/lib/python/zope/app/apidoc/ifacemodule/__init__.py
 share/zope3/lib/python/zope/app/apidoc/ifacemodule/__init__.pyc
@@ -5738,6 +5763,7 @@ share/zope3/lib/python/zope/app/authentication/browser/group_searching_with_empt
 share/zope3/lib/python/zope/app/authentication/browser/groupfolder.txt
 share/zope3/lib/python/zope/app/authentication/browser/groupfolder.zcml
 share/zope3/lib/python/zope/app/authentication/browser/httpplugins.zcml
+share/zope3/lib/python/zope/app/authentication/browser/issue663.txt
 share/zope3/lib/python/zope/app/authentication/browser/loginform.pt
 share/zope3/lib/python/zope/app/authentication/browser/pau_prefix_and_searching.txt
 share/zope3/lib/python/zope/app/authentication/browser/principalfolder.txt
@@ -6181,9 +6207,18 @@ share/zope3/lib/python/zope/app/content/configure.zcml
 share/zope3/lib/python/zope/app/content/interfaces.py
 share/zope3/lib/python/zope/app/content/interfaces.pyc
 share/zope3/lib/python/zope/app/content/interfaces.pyo
-share/zope3/lib/python/zope/app/content_types.py
-share/zope3/lib/python/zope/app/content_types.pyc
-share/zope3/lib/python/zope/app/content_types.pyo
+share/zope3/lib/python/zope/app/content_types/__init__.py
+share/zope3/lib/python/zope/app/content_types/__init__.pyc
+share/zope3/lib/python/zope/app/content_types/__init__.pyo
+share/zope3/lib/python/zope/app/copypastemove/__init__.py
+share/zope3/lib/python/zope/app/copypastemove/__init__.pyc
+share/zope3/lib/python/zope/app/copypastemove/__init__.pyo
+share/zope3/lib/python/zope/app/copypastemove/interfaces.py
+share/zope3/lib/python/zope/app/copypastemove/interfaces.pyc
+share/zope3/lib/python/zope/app/copypastemove/interfaces.pyo
+share/zope3/lib/python/zope/app/datetimeutils/__init__.py
+share/zope3/lib/python/zope/app/datetimeutils/__init__.pyc
+share/zope3/lib/python/zope/app/datetimeutils/__init__.pyo
 share/zope3/lib/python/zope/app/dav/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/dav/SETUP.cfg
 share/zope3/lib/python/zope/app/dav/__init__.py
@@ -6280,6 +6315,9 @@ share/zope3/lib/python/zope/app/debugskin/tests.py
 share/zope3/lib/python/zope/app/debugskin/tests.pyc
 share/zope3/lib/python/zope/app/debugskin/tests.pyo
 share/zope3/lib/python/zope/app/debugskin/unauthorized.pt
+share/zope3/lib/python/zope/app/decorator/__init__.py
+share/zope3/lib/python/zope/app/decorator/__init__.pyc
+share/zope3/lib/python/zope/app/decorator/__init__.pyo
 share/zope3/lib/python/zope/app/dependable/__init__.py
 share/zope3/lib/python/zope/app/dependable/__init__.pyc
 share/zope3/lib/python/zope/app/dependable/__init__.pyo
@@ -6319,6 +6357,33 @@ share/zope3/lib/python/zope/app/dtmlpage/tests/test_dtmlpageeval.py
 share/zope3/lib/python/zope/app/dtmlpage/tests/test_dtmlpageeval.pyc
 share/zope3/lib/python/zope/app/dtmlpage/tests/test_dtmlpageeval.pyo
 share/zope3/lib/python/zope/app/dtmlpage/url.txt
+share/zope3/lib/python/zope/app/dublincore/__init__.py
+share/zope3/lib/python/zope/app/dublincore/__init__.pyc
+share/zope3/lib/python/zope/app/dublincore/__init__.pyo
+share/zope3/lib/python/zope/app/dublincore/annotatableadapter.py
+share/zope3/lib/python/zope/app/dublincore/annotatableadapter.pyc
+share/zope3/lib/python/zope/app/dublincore/annotatableadapter.pyo
+share/zope3/lib/python/zope/app/dublincore/creatorannotator.py
+share/zope3/lib/python/zope/app/dublincore/creatorannotator.pyc
+share/zope3/lib/python/zope/app/dublincore/creatorannotator.pyo
+share/zope3/lib/python/zope/app/dublincore/dcsv.py
+share/zope3/lib/python/zope/app/dublincore/dcsv.pyc
+share/zope3/lib/python/zope/app/dublincore/dcsv.pyo
+share/zope3/lib/python/zope/app/dublincore/dcterms.py
+share/zope3/lib/python/zope/app/dublincore/dcterms.pyc
+share/zope3/lib/python/zope/app/dublincore/dcterms.pyo
+share/zope3/lib/python/zope/app/dublincore/interfaces.py
+share/zope3/lib/python/zope/app/dublincore/interfaces.pyc
+share/zope3/lib/python/zope/app/dublincore/interfaces.pyo
+share/zope3/lib/python/zope/app/dublincore/timeannotators.py
+share/zope3/lib/python/zope/app/dublincore/timeannotators.pyc
+share/zope3/lib/python/zope/app/dublincore/timeannotators.pyo
+share/zope3/lib/python/zope/app/dublincore/xmlmetadata.py
+share/zope3/lib/python/zope/app/dublincore/xmlmetadata.pyc
+share/zope3/lib/python/zope/app/dublincore/xmlmetadata.pyo
+share/zope3/lib/python/zope/app/dublincore/zopedublincore.py
+share/zope3/lib/python/zope/app/dublincore/zopedublincore.pyc
+share/zope3/lib/python/zope/app/dublincore/zopedublincore.pyo
 share/zope3/lib/python/zope/app/error/__init__.py
 share/zope3/lib/python/zope/app/error/__init__.pyc
 share/zope3/lib/python/zope/app/error/__init__.pyo
@@ -6459,6 +6524,12 @@ share/zope3/lib/python/zope/app/file/tests/test_file.pyo
 share/zope3/lib/python/zope/app/file/tests/test_image.py
 share/zope3/lib/python/zope/app/file/tests/test_image.pyc
 share/zope3/lib/python/zope/app/file/tests/test_image.pyo
+share/zope3/lib/python/zope/app/filerepresentation/__init__.py
+share/zope3/lib/python/zope/app/filerepresentation/__init__.pyc
+share/zope3/lib/python/zope/app/filerepresentation/__init__.pyo
+share/zope3/lib/python/zope/app/filerepresentation/interfaces.py
+share/zope3/lib/python/zope/app/filerepresentation/interfaces.pyc
+share/zope3/lib/python/zope/app/filerepresentation/interfaces.pyo
 share/zope3/lib/python/zope/app/folder/__init__.py
 share/zope3/lib/python/zope/app/folder/__init__.pyc
 share/zope3/lib/python/zope/app/folder/__init__.pyo
@@ -6544,6 +6615,9 @@ share/zope3/lib/python/zope/app/form/browser/ftests/test_intwidget.pyo
 share/zope3/lib/python/zope/app/form/browser/ftests/test_objectwidget.py
 share/zope3/lib/python/zope/app/form/browser/ftests/test_objectwidget.pyc
 share/zope3/lib/python/zope/app/form/browser/ftests/test_objectwidget.pyo
+share/zope3/lib/python/zope/app/form/browser/ftests/test_selectwidget.py
+share/zope3/lib/python/zope/app/form/browser/ftests/test_selectwidget.pyc
+share/zope3/lib/python/zope/app/form/browser/ftests/test_selectwidget.pyo
 share/zope3/lib/python/zope/app/form/browser/ftests/test_textareawidget.py
 share/zope3/lib/python/zope/app/form/browser/ftests/test_textareawidget.pyc
 share/zope3/lib/python/zope/app/form/browser/ftests/test_textareawidget.pyo
@@ -6777,6 +6851,12 @@ share/zope3/lib/python/zope/app/generations/demo/install.pyo
 share/zope3/lib/python/zope/app/generations/demo2/__init__.py
 share/zope3/lib/python/zope/app/generations/demo2/__init__.pyc
 share/zope3/lib/python/zope/app/generations/demo2/__init__.pyo
+share/zope3/lib/python/zope/app/generations/demo3/__init__.py
+share/zope3/lib/python/zope/app/generations/demo3/__init__.pyc
+share/zope3/lib/python/zope/app/generations/demo3/__init__.pyo
+share/zope3/lib/python/zope/app/generations/demo3/install.py
+share/zope3/lib/python/zope/app/generations/demo3/install.pyc
+share/zope3/lib/python/zope/app/generations/demo3/install.pyo
 share/zope3/lib/python/zope/app/generations/generations.py
 share/zope3/lib/python/zope/app/generations/generations.pyc
 share/zope3/lib/python/zope/app/generations/generations.pyo
@@ -7038,9 +7118,9 @@ share/zope3/lib/python/zope/app/keyreference/testing.pyo
 share/zope3/lib/python/zope/app/keyreference/tests.py
 share/zope3/lib/python/zope/app/keyreference/tests.pyc
 share/zope3/lib/python/zope/app/keyreference/tests.pyo
-share/zope3/lib/python/zope/app/layers.py
-share/zope3/lib/python/zope/app/layers.pyc
-share/zope3/lib/python/zope/app/layers.pyo
+share/zope3/lib/python/zope/app/layers/__init__.py
+share/zope3/lib/python/zope/app/layers/__init__.pyc
+share/zope3/lib/python/zope/app/layers/__init__.pyo
 share/zope3/lib/python/zope/app/locales/README.txt
 share/zope3/lib/python/zope/app/locales/TRANSLATE.txt
 share/zope3/lib/python/zope/app/locales/__init__.py
@@ -7087,6 +7167,42 @@ share/zope3/lib/python/zope/app/locales/zh_CN/LC_MESSAGES/zope.po
 share/zope3/lib/python/zope/app/locales/zh_TW/LC_MESSAGES/zope.mo
 share/zope3/lib/python/zope/app/locales/zh_TW/LC_MESSAGES/zope.po
 share/zope3/lib/python/zope/app/locales/zope.pot
+share/zope3/lib/python/zope/app/location/__init__.py
+share/zope3/lib/python/zope/app/location/__init__.pyc
+share/zope3/lib/python/zope/app/location/__init__.pyo
+share/zope3/lib/python/zope/app/location/interfaces.py
+share/zope3/lib/python/zope/app/location/interfaces.pyc
+share/zope3/lib/python/zope/app/location/interfaces.pyo
+share/zope3/lib/python/zope/app/location/location.py
+share/zope3/lib/python/zope/app/location/location.pyc
+share/zope3/lib/python/zope/app/location/location.pyo
+share/zope3/lib/python/zope/app/location/pickling.py
+share/zope3/lib/python/zope/app/location/pickling.pyc
+share/zope3/lib/python/zope/app/location/pickling.pyo
+share/zope3/lib/python/zope/app/location/traversing.py
+share/zope3/lib/python/zope/app/location/traversing.pyc
+share/zope3/lib/python/zope/app/location/traversing.pyo
+share/zope3/lib/python/zope/app/mail/__init__.py
+share/zope3/lib/python/zope/app/mail/__init__.pyc
+share/zope3/lib/python/zope/app/mail/__init__.pyo
+share/zope3/lib/python/zope/app/mail/delivery.py
+share/zope3/lib/python/zope/app/mail/delivery.pyc
+share/zope3/lib/python/zope/app/mail/delivery.pyo
+share/zope3/lib/python/zope/app/mail/event.py
+share/zope3/lib/python/zope/app/mail/event.pyc
+share/zope3/lib/python/zope/app/mail/event.pyo
+share/zope3/lib/python/zope/app/mail/interfaces.py
+share/zope3/lib/python/zope/app/mail/interfaces.pyc
+share/zope3/lib/python/zope/app/mail/interfaces.pyo
+share/zope3/lib/python/zope/app/mail/maildir.py
+share/zope3/lib/python/zope/app/mail/maildir.pyc
+share/zope3/lib/python/zope/app/mail/maildir.pyo
+share/zope3/lib/python/zope/app/mail/mailer.py
+share/zope3/lib/python/zope/app/mail/mailer.pyc
+share/zope3/lib/python/zope/app/mail/mailer.pyo
+share/zope3/lib/python/zope/app/mail/vocabulary.py
+share/zope3/lib/python/zope/app/mail/vocabulary.pyc
+share/zope3/lib/python/zope/app/mail/vocabulary.pyo
 share/zope3/lib/python/zope/app/menus.zcml
 share/zope3/lib/python/zope/app/meta.zcml
 share/zope3/lib/python/zope/app/onlinehelp/DEPENDENCIES.cfg
@@ -7588,6 +7704,18 @@ share/zope3/lib/python/zope/app/publisher/xmlrpc/tests/test_directives.pyo
 share/zope3/lib/python/zope/app/publisher/xmlrpc/tests/xmlrpc.zcml
 share/zope3/lib/python/zope/app/publisher/xmlrpc/tests/xmlrpc_error.zcml
 share/zope3/lib/python/zope/app/publisher/xmlrpc/tests/xmlrpc_noperm.zcml
+share/zope3/lib/python/zope/app/rdb/__init__.py
+share/zope3/lib/python/zope/app/rdb/__init__.pyc
+share/zope3/lib/python/zope/app/rdb/__init__.pyo
+share/zope3/lib/python/zope/app/rdb/browser.py
+share/zope3/lib/python/zope/app/rdb/browser.pyc
+share/zope3/lib/python/zope/app/rdb/browser.pyo
+share/zope3/lib/python/zope/app/rdb/gadfly.py
+share/zope3/lib/python/zope/app/rdb/gadfly.pyc
+share/zope3/lib/python/zope/app/rdb/gadfly.pyo
+share/zope3/lib/python/zope/app/rdb/interfaces.py
+share/zope3/lib/python/zope/app/rdb/interfaces.pyc
+share/zope3/lib/python/zope/app/rdb/interfaces.pyo
 share/zope3/lib/python/zope/app/renderer/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/renderer/SETUP.cfg
 share/zope3/lib/python/zope/app/renderer/__init__.py
@@ -7682,21 +7810,7 @@ share/zope3/lib/python/zope/app/schema/SETUP.cfg
 share/zope3/lib/python/zope/app/schema/__init__.py
 share/zope3/lib/python/zope/app/schema/__init__.pyc
 share/zope3/lib/python/zope/app/schema/__init__.pyo
-share/zope3/lib/python/zope/app/schema/browser/__init__.py
-share/zope3/lib/python/zope/app/schema/browser/__init__.pyc
-share/zope3/lib/python/zope/app/schema/browser/__init__.pyo
-share/zope3/lib/python/zope/app/schema/browser/configure.zcml
-share/zope3/lib/python/zope/app/schema/browser/schema_add.pt
-share/zope3/lib/python/zope/app/schema/browser/schema_edit.pt
-share/zope3/lib/python/zope/app/schema/browser/traversal.py
-share/zope3/lib/python/zope/app/schema/browser/traversal.pyc
-share/zope3/lib/python/zope/app/schema/browser/traversal.pyo
 share/zope3/lib/python/zope/app/schema/configure.zcml
-share/zope3/lib/python/zope/app/schema/fieldforms.zcml
-share/zope3/lib/python/zope/app/schema/fields.zcml
-share/zope3/lib/python/zope/app/schema/interfaces.py
-share/zope3/lib/python/zope/app/schema/interfaces.pyc
-share/zope3/lib/python/zope/app/schema/interfaces.pyo
 share/zope3/lib/python/zope/app/schema/meta.zcml
 share/zope3/lib/python/zope/app/schema/metaconfigure.py
 share/zope3/lib/python/zope/app/schema/metaconfigure.pyc
@@ -7704,43 +7818,17 @@ share/zope3/lib/python/zope/app/schema/metaconfigure.pyo
 share/zope3/lib/python/zope/app/schema/metadirectives.py
 share/zope3/lib/python/zope/app/schema/metadirectives.pyc
 share/zope3/lib/python/zope/app/schema/metadirectives.pyo
-share/zope3/lib/python/zope/app/schema/schema.py
-share/zope3/lib/python/zope/app/schema/schema.pyc
-share/zope3/lib/python/zope/app/schema/schema.pyo
 share/zope3/lib/python/zope/app/schema/tests/__init__.py
 share/zope3/lib/python/zope/app/schema/tests/__init__.pyc
 share/zope3/lib/python/zope/app/schema/tests/__init__.pyo
-share/zope3/lib/python/zope/app/schema/tests/fields.zcml
 share/zope3/lib/python/zope/app/schema/tests/keywords_vocab.zcml
 share/zope3/lib/python/zope/app/schema/tests/simple_vocab.zcml
 share/zope3/lib/python/zope/app/schema/tests/test_directives.py
 share/zope3/lib/python/zope/app/schema/tests/test_directives.pyc
 share/zope3/lib/python/zope/app/schema/tests/test_directives.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_field.py
-share/zope3/lib/python/zope/app/schema/tests/test_field.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_field.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_fieldfactory.py
-share/zope3/lib/python/zope/app/schema/tests/test_fieldfactory.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_fieldfactory.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_fieldfactory.zcml
-share/zope3/lib/python/zope/app/schema/tests/test_interfaceutility.py
-share/zope3/lib/python/zope/app/schema/tests/test_interfaceutility.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_interfaceutility.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_schemautility.py
-share/zope3/lib/python/zope/app/schema/tests/test_schemautility.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_schemautility.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_schemautilitypersistence.py
-share/zope3/lib/python/zope/app/schema/tests/test_schemautilitypersistence.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_schemautilitypersistence.pyo
-share/zope3/lib/python/zope/app/schema/tests/test_wrapper.py
-share/zope3/lib/python/zope/app/schema/tests/test_wrapper.pyc
-share/zope3/lib/python/zope/app/schema/tests/test_wrapper.pyo
 share/zope3/lib/python/zope/app/schema/vocabulary.py
 share/zope3/lib/python/zope/app/schema/vocabulary.pyc
 share/zope3/lib/python/zope/app/schema/vocabulary.pyo
-share/zope3/lib/python/zope/app/schema/wrapper.py
-share/zope3/lib/python/zope/app/schema/wrapper.pyc
-share/zope3/lib/python/zope/app/schema/wrapper.pyo
 share/zope3/lib/python/zope/app/security/__init__.py
 share/zope3/lib/python/zope/app/security/__init__.pyc
 share/zope3/lib/python/zope/app/security/__init__.pyo
@@ -8048,9 +8136,9 @@ share/zope3/lib/python/zope/app/server/zopeskel/etc/zope.conf.in
 share/zope3/lib/python/zope/app/server/zpasswd.py
 share/zope3/lib/python/zope/app/server/zpasswd.pyc
 share/zope3/lib/python/zope/app/server/zpasswd.pyo
-share/zope3/lib/python/zope/app/servicenames.py
-share/zope3/lib/python/zope/app/servicenames.pyc
-share/zope3/lib/python/zope/app/servicenames.pyo
+share/zope3/lib/python/zope/app/servicenames/__init__.py
+share/zope3/lib/python/zope/app/servicenames/__init__.pyc
+share/zope3/lib/python/zope/app/servicenames/__init__.pyo
 share/zope3/lib/python/zope/app/session/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/session/SETUP.cfg
 share/zope3/lib/python/zope/app/session/__init__.py
@@ -8084,9 +8172,15 @@ share/zope3/lib/python/zope/app/site/__init__.pyo
 share/zope3/lib/python/zope/app/site/tests/__init__.py
 share/zope3/lib/python/zope/app/site/tests/__init__.pyc
 share/zope3/lib/python/zope/app/site/tests/__init__.pyo
-share/zope3/lib/python/zope/app/skins.py
-share/zope3/lib/python/zope/app/skins.pyc
-share/zope3/lib/python/zope/app/skins.pyo
+share/zope3/lib/python/zope/app/size/__init__.py
+share/zope3/lib/python/zope/app/size/__init__.pyc
+share/zope3/lib/python/zope/app/size/__init__.pyo
+share/zope3/lib/python/zope/app/size/interfaces.py
+share/zope3/lib/python/zope/app/size/interfaces.pyc
+share/zope3/lib/python/zope/app/size/interfaces.pyo
+share/zope3/lib/python/zope/app/skins/__init__.py
+share/zope3/lib/python/zope/app/skins/__init__.pyc
+share/zope3/lib/python/zope/app/skins/__init__.pyo
 share/zope3/lib/python/zope/app/sqlscript/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/sqlscript/PUBLICATION.cfg
 share/zope3/lib/python/zope/app/sqlscript/README.txt
@@ -8187,6 +8281,33 @@ share/zope3/lib/python/zope/app/tests/setup.pyo
 share/zope3/lib/python/zope/app/tests/ztapi.py
 share/zope3/lib/python/zope/app/tests/ztapi.pyc
 share/zope3/lib/python/zope/app/tests/ztapi.pyo
+share/zope3/lib/python/zope/app/timezones/__init__.py
+share/zope3/lib/python/zope/app/timezones/__init__.pyc
+share/zope3/lib/python/zope/app/timezones/__init__.pyo
+share/zope3/lib/python/zope/app/traversing/__init__.py
+share/zope3/lib/python/zope/app/traversing/__init__.pyc
+share/zope3/lib/python/zope/app/traversing/__init__.pyo
+share/zope3/lib/python/zope/app/traversing/adapters.py
+share/zope3/lib/python/zope/app/traversing/adapters.pyc
+share/zope3/lib/python/zope/app/traversing/adapters.pyo
+share/zope3/lib/python/zope/app/traversing/api.py
+share/zope3/lib/python/zope/app/traversing/api.pyc
+share/zope3/lib/python/zope/app/traversing/api.pyo
+share/zope3/lib/python/zope/app/traversing/browser/__init__.py
+share/zope3/lib/python/zope/app/traversing/browser/__init__.pyc
+share/zope3/lib/python/zope/app/traversing/browser/__init__.pyo
+share/zope3/lib/python/zope/app/traversing/browser/absoluteurl.py
+share/zope3/lib/python/zope/app/traversing/browser/absoluteurl.pyc
+share/zope3/lib/python/zope/app/traversing/browser/absoluteurl.pyo
+share/zope3/lib/python/zope/app/traversing/browser/interfaces.py
+share/zope3/lib/python/zope/app/traversing/browser/interfaces.pyc
+share/zope3/lib/python/zope/app/traversing/browser/interfaces.pyo
+share/zope3/lib/python/zope/app/traversing/interfaces.py
+share/zope3/lib/python/zope/app/traversing/interfaces.pyc
+share/zope3/lib/python/zope/app/traversing/interfaces.pyo
+share/zope3/lib/python/zope/app/traversing/namespace.py
+share/zope3/lib/python/zope/app/traversing/namespace.pyc
+share/zope3/lib/python/zope/app/traversing/namespace.pyo
 share/zope3/lib/python/zope/app/tree/CHANGES.txt
 share/zope3/lib/python/zope/app/tree/MAINTAINER.txt
 share/zope3/lib/python/zope/app/tree/README.txt
@@ -8260,9 +8381,6 @@ share/zope3/lib/python/zope/app/twisted/accesslog.py
 share/zope3/lib/python/zope/app/twisted/accesslog.pyc
 share/zope3/lib/python/zope/app/twisted/accesslog.pyo
 share/zope3/lib/python/zope/app/twisted/accesslog.xml
-share/zope3/lib/python/zope/app/twisted/asyncore_main_loop.py
-share/zope3/lib/python/zope/app/twisted/asyncore_main_loop.pyc
-share/zope3/lib/python/zope/app/twisted/asyncore_main_loop.pyo
 share/zope3/lib/python/zope/app/twisted/configure.zcml
 share/zope3/lib/python/zope/app/twisted/ftp/__init__.py
 share/zope3/lib/python/zope/app/twisted/ftp/__init__.pyc
@@ -8346,9 +8464,6 @@ share/zope3/lib/python/zope/app/twisted/tests/__init__.pyo
 share/zope3/lib/python/zope/app/twisted/tests/test_accesslog.py
 share/zope3/lib/python/zope/app/twisted/tests/test_accesslog.pyc
 share/zope3/lib/python/zope/app/twisted/tests/test_accesslog.pyo
-share/zope3/lib/python/zope/app/twisted/tests/test_asyncore_main_loop.py
-share/zope3/lib/python/zope/app/twisted/tests/test_asyncore_main_loop.pyc
-share/zope3/lib/python/zope/app/twisted/tests/test_asyncore_main_loop.pyo
 share/zope3/lib/python/zope/app/twisted/tests/test_docs.py
 share/zope3/lib/python/zope/app/twisted/tests/test_docs.pyc
 share/zope3/lib/python/zope/app/twisted/tests/test_docs.pyo
@@ -8427,6 +8542,9 @@ share/zope3/lib/python/zope/app/zopeappgenerations/evolve3.pyo
 share/zope3/lib/python/zope/app/zopeappgenerations/evolve4.py
 share/zope3/lib/python/zope/app/zopeappgenerations/evolve4.pyc
 share/zope3/lib/python/zope/app/zopeappgenerations/evolve4.pyo
+share/zope3/lib/python/zope/app/zopeappgenerations/evolve5.py
+share/zope3/lib/python/zope/app/zopeappgenerations/evolve5.pyc
+share/zope3/lib/python/zope/app/zopeappgenerations/evolve5.pyo
 share/zope3/lib/python/zope/app/zptpage/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/app/zptpage/SETUP.cfg
 share/zope3/lib/python/zope/app/zptpage/__init__.py
@@ -8555,6 +8673,9 @@ share/zope3/lib/python/zope/component/site.py
 share/zope3/lib/python/zope/component/site.pyc
 share/zope3/lib/python/zope/component/site.pyo
 share/zope3/lib/python/zope/component/socketexample.txt
+share/zope3/lib/python/zope/component/standalonetests.py
+share/zope3/lib/python/zope/component/standalonetests.pyc
+share/zope3/lib/python/zope/component/standalonetests.pyo
 share/zope3/lib/python/zope/component/testing.py
 share/zope3/lib/python/zope/component/testing.pyc
 share/zope3/lib/python/zope/component/testing.pyo
@@ -8936,19 +9057,20 @@ share/zope3/lib/python/zope/formlib/__init__.py
 share/zope3/lib/python/zope/formlib/__init__.pyc
 share/zope3/lib/python/zope/formlib/__init__.pyo
 share/zope3/lib/python/zope/formlib/configure.zcml
+share/zope3/lib/python/zope/formlib/errors.py
+share/zope3/lib/python/zope/formlib/errors.pyc
+share/zope3/lib/python/zope/formlib/errors.pyo
+share/zope3/lib/python/zope/formlib/errors.txt
 share/zope3/lib/python/zope/formlib/form.py
 share/zope3/lib/python/zope/formlib/form.pyc
 share/zope3/lib/python/zope/formlib/form.pyo
 share/zope3/lib/python/zope/formlib/form.txt
-share/zope3/lib/python/zope/formlib/i18n.py
-share/zope3/lib/python/zope/formlib/i18n.pyc
-share/zope3/lib/python/zope/formlib/i18n.pyo
+share/zope3/lib/python/zope/formlib/ftests.py
+share/zope3/lib/python/zope/formlib/ftests.pyc
+share/zope3/lib/python/zope/formlib/ftests.pyo
 share/zope3/lib/python/zope/formlib/interfaces.py
 share/zope3/lib/python/zope/formlib/interfaces.pyc
 share/zope3/lib/python/zope/formlib/interfaces.pyo
-share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES/zope.formlib.mo
-share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES/zope.formlib.po
-share/zope3/lib/python/zope/formlib/locales/zope.formlib.pot
 share/zope3/lib/python/zope/formlib/namedtemplate.py
 share/zope3/lib/python/zope/formlib/namedtemplate.pyc
 share/zope3/lib/python/zope/formlib/namedtemplate.pyo
@@ -9294,9 +9416,6 @@ share/zope3/lib/python/zope/i18n/tests/test_gettextmessagecatalog.pyo
 share/zope3/lib/python/zope/i18n/tests/test_imessagecatalog.py
 share/zope3/lib/python/zope/i18n/tests/test_imessagecatalog.pyc
 share/zope3/lib/python/zope/i18n/tests/test_imessagecatalog.pyo
-share/zope3/lib/python/zope/i18n/tests/test_interpolate.py
-share/zope3/lib/python/zope/i18n/tests/test_interpolate.pyc
-share/zope3/lib/python/zope/i18n/tests/test_interpolate.pyo
 share/zope3/lib/python/zope/i18n/tests/test_itranslationdomain.py
 share/zope3/lib/python/zope/i18n/tests/test_itranslationdomain.pyc
 share/zope3/lib/python/zope/i18n/tests/test_itranslationdomain.pyo
@@ -9677,6 +9796,7 @@ share/zope3/lib/python/zope/pagetemplate/tests/input/teeshop1.html
 share/zope3/lib/python/zope/pagetemplate/tests/input/teeshop2.html
 share/zope3/lib/python/zope/pagetemplate/tests/input/teeshoplaf.html
 share/zope3/lib/python/zope/pagetemplate/tests/input/template_usage.html
+share/zope3/lib/python/zope/pagetemplate/tests/input/translation.html
 share/zope3/lib/python/zope/pagetemplate/tests/output/__init__.py
 share/zope3/lib/python/zope/pagetemplate/tests/output/__init__.pyc
 share/zope3/lib/python/zope/pagetemplate/tests/output/__init__.pyo
@@ -9698,6 +9818,7 @@ share/zope3/lib/python/zope/pagetemplate/tests/output/template_usage1.html
 share/zope3/lib/python/zope/pagetemplate/tests/output/template_usage2.html
 share/zope3/lib/python/zope/pagetemplate/tests/output/template_usage3.html
 share/zope3/lib/python/zope/pagetemplate/tests/output/template_usage4.html
+share/zope3/lib/python/zope/pagetemplate/tests/output/translation.html
 share/zope3/lib/python/zope/pagetemplate/tests/test_basictemplate.py
 share/zope3/lib/python/zope/pagetemplate/tests/test_basictemplate.pyc
 share/zope3/lib/python/zope/pagetemplate/tests/test_basictemplate.pyo
@@ -9742,6 +9863,7 @@ share/zope3/lib/python/zope/publisher/base.pyo
 share/zope3/lib/python/zope/publisher/browser.py
 share/zope3/lib/python/zope/publisher/browser.pyc
 share/zope3/lib/python/zope/publisher/browser.pyo
+share/zope3/lib/python/zope/publisher/configure.zcml
 share/zope3/lib/python/zope/publisher/contenttype.py
 share/zope3/lib/python/zope/publisher/contenttype.pyc
 share/zope3/lib/python/zope/publisher/contenttype.pyo
@@ -9852,6 +9974,7 @@ share/zope3/lib/python/zope/publisher/tests/xmlrpcviews.pyo
 share/zope3/lib/python/zope/publisher/xmlrpc.py
 share/zope3/lib/python/zope/publisher/xmlrpc.pyc
 share/zope3/lib/python/zope/publisher/xmlrpc.pyo
+share/zope3/lib/python/zope/publisher/xmlrpc.txt
 share/zope3/lib/python/zope/rdb/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/rdb/SETUP.cfg
 share/zope3/lib/python/zope/rdb/__init__.py
@@ -10192,6 +10315,9 @@ share/zope3/lib/python/zope/security/tests/test_permission.pyo
 share/zope3/lib/python/zope/security/tests/test_proxy.py
 share/zope3/lib/python/zope/security/tests/test_proxy.pyc
 share/zope3/lib/python/zope/security/tests/test_proxy.pyo
+share/zope3/lib/python/zope/security/tests/test_set_checkers.py
+share/zope3/lib/python/zope/security/tests/test_set_checkers.pyc
+share/zope3/lib/python/zope/security/tests/test_set_checkers.pyo
 share/zope3/lib/python/zope/security/tests/test_simpleinteraction.py
 share/zope3/lib/python/zope/security/tests/test_simpleinteraction.pyc
 share/zope3/lib/python/zope/security/tests/test_simpleinteraction.pyo
@@ -10261,6 +10387,9 @@ share/zope3/lib/python/zope/sendmail/tests/test_maildir.pyo
 share/zope3/lib/python/zope/sendmail/tests/test_mailer.py
 share/zope3/lib/python/zope/sendmail/tests/test_mailer.pyc
 share/zope3/lib/python/zope/sendmail/tests/test_mailer.pyo
+share/zope3/lib/python/zope/sendmail/tests/test_vocabulary.py
+share/zope3/lib/python/zope/sendmail/tests/test_vocabulary.pyc
+share/zope3/lib/python/zope/sendmail/tests/test_vocabulary.pyo
 share/zope3/lib/python/zope/sendmail/vocabulary.py
 share/zope3/lib/python/zope/sendmail/vocabulary.pyc
 share/zope3/lib/python/zope/sendmail/vocabulary.pyo
@@ -10887,6 +11016,7 @@ share/zope3/lib/python/zope/testing/renormalizing.py
 share/zope3/lib/python/zope/testing/renormalizing.pyc
 share/zope3/lib/python/zope/testing/renormalizing.pyo
 share/zope3/lib/python/zope/testing/testrunner-arguments.txt
+share/zope3/lib/python/zope/testing/testrunner-coverage-win32.txt
 share/zope3/lib/python/zope/testing/testrunner-coverage.txt
 share/zope3/lib/python/zope/testing/testrunner-debugging.txt
 share/zope3/lib/python/zope/testing/testrunner-edge-cases.txt
@@ -11172,6 +11302,9 @@ share/zope3/lib/python/zope/traversing/configure.zcml
 share/zope3/lib/python/zope/traversing/ftests/__init__.py
 share/zope3/lib/python/zope/traversing/ftests/__init__.pyc
 share/zope3/lib/python/zope/traversing/ftests/__init__.pyo
+share/zope3/lib/python/zope/traversing/ftests/test_skin.py
+share/zope3/lib/python/zope/traversing/ftests/test_skin.pyc
+share/zope3/lib/python/zope/traversing/ftests/test_skin.pyo
 share/zope3/lib/python/zope/traversing/ftests/test_vhosting.py
 share/zope3/lib/python/zope/traversing/ftests/test_vhosting.pyc
 share/zope3/lib/python/zope/traversing/ftests/test_vhosting.pyo
@@ -11266,6 +11399,7 @@ share/zope3/zopeskel/bin/test.in
 share/zope3/zopeskel/bin/zopectl.in
 share/zope3/zopeskel/bin/zopeservice.py.in
 share/zope3/zopeskel/bin/zpasswd.in
+share/zope3/zopeskel/etc/ftesting-base.zcml
 share/zope3/zopeskel/etc/ftesting.zcml
 share/zope3/zopeskel/etc/overrides.zcml
 share/zope3/zopeskel/etc/overrides_ftesting.zcml
@@ -11435,9 +11569,6 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/i18n
 @dirrm share/zope3/lib/python/zope/hookable/tests
 @dirrm share/zope3/lib/python/zope/hookable
-@dirrm share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES
-@dirrm share/zope3/lib/python/zope/formlib/locales/de
-@dirrm share/zope3/lib/python/zope/formlib/locales
 @dirrm share/zope3/lib/python/zope/formlib
 @dirrm share/zope3/lib/python/zope/filerepresentation
 @dirrm share/zope3/lib/python/zope/exceptions/tests
@@ -11483,15 +11614,21 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/tree/browser/images
 @dirrm share/zope3/lib/python/zope/app/tree/browser
 @dirrm share/zope3/lib/python/zope/app/tree
+@dirrm share/zope3/lib/python/zope/app/traversing/browser
+@dirrm share/zope3/lib/python/zope/app/traversing
+@dirrm share/zope3/lib/python/zope/app/timezones
 @dirrm share/zope3/lib/python/zope/app/tests
 @dirrm share/zope3/lib/python/zope/app/testing/recorded
 @dirrm share/zope3/lib/python/zope/app/testing
 @dirrm share/zope3/lib/python/zope/app/sqlscript/tests
 @dirrm share/zope3/lib/python/zope/app/sqlscript/browser
 @dirrm share/zope3/lib/python/zope/app/sqlscript
+@dirrm share/zope3/lib/python/zope/app/skins
+@dirrm share/zope3/lib/python/zope/app/size
 @dirrm share/zope3/lib/python/zope/app/site/tests
 @dirrm share/zope3/lib/python/zope/app/site
 @dirrm share/zope3/lib/python/zope/app/session
+@dirrm share/zope3/lib/python/zope/app/servicenames
 @dirrm share/zope3/lib/python/zope/app/server/zopeskel/etc
 @dirrm share/zope3/lib/python/zope/app/server/zopeskel/bin
 @dirrm share/zope3/lib/python/zope/app/server/zopeskel
@@ -11505,13 +11642,13 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/security/browser
 @dirrm share/zope3/lib/python/zope/app/security
 @dirrm share/zope3/lib/python/zope/app/schema/tests
-@dirrm share/zope3/lib/python/zope/app/schema/browser
 @dirrm share/zope3/lib/python/zope/app/schema
 @dirrm share/zope3/lib/python/zope/app/rotterdam/tests/output
 @dirrm share/zope3/lib/python/zope/app/rotterdam/tests
 @dirrm share/zope3/lib/python/zope/app/rotterdam
 @dirrm share/zope3/lib/python/zope/app/renderer/tests
 @dirrm share/zope3/lib/python/zope/app/renderer
+@dirrm share/zope3/lib/python/zope/app/rdb
 @dirrm share/zope3/lib/python/zope/app/publisher/xmlrpc/tests
 @dirrm share/zope3/lib/python/zope/app/publisher/xmlrpc
 @dirrm share/zope3/lib/python/zope/app/publisher/tests
@@ -11538,6 +11675,8 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/onlinehelp/help
 @dirrm share/zope3/lib/python/zope/app/onlinehelp/browser
 @dirrm share/zope3/lib/python/zope/app/onlinehelp
+@dirrm share/zope3/lib/python/zope/app/mail
+@dirrm share/zope3/lib/python/zope/app/location
 @dirrm share/zope3/lib/python/zope/app/locales/zh_TW/LC_MESSAGES
 @dirrm share/zope3/lib/python/zope/app/locales/zh_TW
 @dirrm share/zope3/lib/python/zope/app/locales/zh_CN/LC_MESSAGES
@@ -11567,6 +11706,7 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/locales/de/LC_MESSAGES
 @dirrm share/zope3/lib/python/zope/app/locales/de
 @dirrm share/zope3/lib/python/zope/app/locales
+@dirrm share/zope3/lib/python/zope/app/layers
 @dirrm share/zope3/lib/python/zope/app/keyreference
 @dirrm share/zope3/lib/python/zope/app/introspector/tests
 @dirrm share/zope3/lib/python/zope/app/introspector
@@ -11586,6 +11726,7 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/http/exception/tests
 @dirrm share/zope3/lib/python/zope/app/http/exception
 @dirrm share/zope3/lib/python/zope/app/http
+@dirrm share/zope3/lib/python/zope/app/generations/demo3
 @dirrm share/zope3/lib/python/zope/app/generations/demo2
 @dirrm share/zope3/lib/python/zope/app/generations/demo
 @dirrm share/zope3/lib/python/zope/app/generations/browser
@@ -11603,6 +11744,7 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/form
 @dirrm share/zope3/lib/python/zope/app/folder/browser
 @dirrm share/zope3/lib/python/zope/app/folder
+@dirrm share/zope3/lib/python/zope/app/filerepresentation
 @dirrm share/zope3/lib/python/zope/app/file/tests
 @dirrm share/zope3/lib/python/zope/app/file/browser/tests
 @dirrm share/zope3/lib/python/zope/app/file/browser
@@ -11614,14 +11756,19 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/event
 @dirrm share/zope3/lib/python/zope/app/error/browser
 @dirrm share/zope3/lib/python/zope/app/error
+@dirrm share/zope3/lib/python/zope/app/dublincore
 @dirrm share/zope3/lib/python/zope/app/dtmlpage/tests
 @dirrm share/zope3/lib/python/zope/app/dtmlpage
 @dirrm share/zope3/lib/python/zope/app/dependable
+@dirrm share/zope3/lib/python/zope/app/decorator
 @dirrm share/zope3/lib/python/zope/app/debugskin
 @dirrm share/zope3/lib/python/zope/app/debug
 @dirrm share/zope3/lib/python/zope/app/dav/tests
 @dirrm share/zope3/lib/python/zope/app/dav/ftests
 @dirrm share/zope3/lib/python/zope/app/dav
+@dirrm share/zope3/lib/python/zope/app/datetimeutils
+@dirrm share/zope3/lib/python/zope/app/copypastemove
+@dirrm share/zope3/lib/python/zope/app/content_types
 @dirrm share/zope3/lib/python/zope/app/content
 @dirrm share/zope3/lib/python/zope/app/container/tests
 @dirrm share/zope3/lib/python/zope/app/container/ftests
@@ -11659,6 +11806,7 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/app/apidoc/browser
 @dirrm share/zope3/lib/python/zope/app/apidoc/bookmodule
 @dirrm share/zope3/lib/python/zope/app/apidoc
+@dirrm share/zope3/lib/python/zope/app/annotation
 @dirrm share/zope3/lib/python/zope/app
 @dirrm share/zope3/lib/python/zope/annotation/tests
 @dirrm share/zope3/lib/python/zope/annotation
@@ -11835,7 +11983,6 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/ThreadedAsync
 @dirrm share/zope3/lib/python/RestrictedPython/tests
 @dirrm share/zope3/lib/python/RestrictedPython
-@dirrm share/zope3/lib/python/ClientCookie
 @dirrm share/zope3/lib/python/BTrees/tests
 @dirrm share/zope3/lib/python/BTrees
 @dirrm share/zope3/lib/python
