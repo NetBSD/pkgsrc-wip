@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.1 2006/04/23 00:51:08 larnor Exp $
+# $Id: svn-package.mk,v 1.2 2006/08/20 18:35:07 larnor Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -32,6 +32,8 @@
 
 .if !defined(_PKG_MK_SVN_PACKAGE_MK)
 _PKG_MK_SVN_PACKAGE_MK=	# defined
+
+DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 
 #
 # defaults for user-visible input variables
