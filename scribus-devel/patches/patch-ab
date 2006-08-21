@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/08/21 20:28:19 leuzi Exp $
+
+--- scribus/unzip.h.orig	2006-08-20 13:27:06.000000000 +0200
++++ scribus/unzip.h	2006-08-20 13:32:13.000000000 +0200
+@@ -82,6 +82,8 @@
+ #define UNZ_INTERNALERROR               (-104)
+ #define UNZ_CRCERROR                    (-105)
+ 
++#define OF(x) x
++
+ /* tm_unz contain date/time info */
+ typedef struct tm_unz_s
+ {
