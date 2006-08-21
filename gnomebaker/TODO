@@ -1,0 +1,4 @@
+patch-aa maight break the package on non-NetBSD platforms.
+gnomebaker uses "cdrecord -scanbus" to obtain a list of available devices.
+It expects device ids of the format "x,x,x" but fails to detect the entries
+that look like "xx,x,x".
