@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2338 2006/08/20 20:21:09 leuzi Exp $
+# $Id: Makefile,v 1.2339 2006/08/21 20:30:38 leuzi Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1204,6 +1204,7 @@ SUBDIR+=	scmail
 SUBDIR+=	scmgit
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
+SUBDIR+=	scribus-devel
 SUBDIR+=	scrnsaverproto
 SUBDIR+=	scsh-install-lib
 SUBDIR+=	scx
