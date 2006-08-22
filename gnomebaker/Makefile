@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/20 20:13:38 leuzi Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/22 09:53:13 leuzi Exp $
 
 DISTNAME=	gnomebaker-0.5.1
 CATEGORIES=	sysutils
@@ -9,10 +9,12 @@ MAINTAINER=	leuzi@trash.net
 HOMEPAGE=	http://gnomebaker.sourceforge.net/
 COMMENT=	GTK2/GNOME CD/DVD burning application
 
-USE_TOOLS+=             pkg-config msgfmt
+USE_TOOLS+=             pkg-config msgfmt intltool
 GNU_CONFIGURE=		YES
 
 DEPENDS+=	cdrtools-ossdvd>=2.0:../../sysutils/cdrtools-ossdvd
+DEPENDS+=	libgnomeui>=2.8.1:../../devel/libgnomeui
+
 
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
