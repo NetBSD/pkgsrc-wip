@@ -1,30 +1,34 @@
-$NetBSD: patch-ac,v 1.1 2006/08/15 16:42:45 brook1 Exp $
+$NetBSD: patch-ac,v 1.2 2006/08/23 18:39:43 brook1 Exp $
 
 --- configure.in.orig	2005-08-01 10:16:24.000000000 +0000
-+++ configure.in	2006-06-28 21:44:17.000000000 +0000
-@@ -933,9 +933,9 @@
++++ configure.in	2006-08-23 16:48:21.000000000 +0000
+@@ -933,9 +933,11 @@
  
  LOC_CHECK_INC_PATH(fftw,FFTW,FFTWINC)
  
 -LOC_CHECK_INCLUDES(fftw.h,FFTW,$FFTWINC,[
 -LOC_CHECK_INCLUDES(dfftw.h,FFTW,,)
 -])
++# XXX -- for some reason the nested checks do not work
 +# XXX LOC_CHECK_INCLUDES(fftw.h,FFTW,$FFTWINC,[
 +# XXX LOC_CHECK_INCLUDES(dfftw.h,FFTW,,)
 +# XXX ])
++LOC_CHECK_INCLUDES(fftw.h,FFTW,$FFTWINC)
  
  # With FFTW library directory
  
-@@ -1045,9 +1045,9 @@
+@@ -1045,9 +1047,11 @@
  
  LOC_CHECK_INC_PATH(glw,GLw,OPENGLWINC)
  
 -LOC_CHECK_INCLUDES(GL/GLwMDrawA.h,GLwM,$OPENGLWINC $XMINC $X_CFLAGS $OPENGLINC,[
 -LOC_CHECK_INCLUDES(X11/GLw/GLwMDrawA.h,GLwM,,)
 -])
++# XXX -- for some reason the nested checks do not work
 +# XXX LOC_CHECK_INCLUDES(GL/GLwMDrawA.h,GLwM,$OPENGLWINC $XMINC $X_CFLAGS $OPENGLINC,[
 +# XXX LOC_CHECK_INCLUDES(X11/GLw/GLwMDrawA.h,GLwM,,)
 +# XXX ])
++LOC_CHECK_INCLUDES(GL/GLwMDrawA.h,GLwM,$OPENGLWINC $XMINC $X_CFLAGS $OPENGLINC)
  
  # With GLw library directory
  

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.freetype,v 1.1 2006/08/23 18:39:43 brook1 Exp $
+grass-${PKGVERSION}/bin/d.font.freetype
+grass-${PKGVERSION}/bin/d.text.freetype
+grass-${PKGVERSION}/docs/html/d.font.freetype.html
+grass-${PKGVERSION}/docs/html/d.text.freetype.html
+grass-${PKGVERSION}/etc/freetypecap
+grass-${PKGVERSION}/man/man1/d.font.freetype.1
+grass-${PKGVERSION}/man/man1/d.text.freetype.1

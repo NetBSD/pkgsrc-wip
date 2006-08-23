@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST.fftw,v 1.1 2006/08/23 18:39:43 brook1 Exp $
+grass-${PKGVERSION}/bin/i.cca
+grass-${PKGVERSION}/bin/i.fft
+grass-${PKGVERSION}/bin/i.ifft
+grass-${PKGVERSION}/bin/i.pca
+grass-${PKGVERSION}/bin/i.zc
+grass-${PKGVERSION}/bin/r.surf.fractal
+grass-${PKGVERSION}/bin/r.surf.gauss
+grass-${PKGVERSION}/bin/r.surf.random
+grass-${PKGVERSION}/docs/html/i.cca.html
+grass-${PKGVERSION}/docs/html/i.fft.html
+grass-${PKGVERSION}/docs/html/i.ifft.html
+grass-${PKGVERSION}/docs/html/i.pca.html
+grass-${PKGVERSION}/docs/html/i.zc.html
+grass-${PKGVERSION}/docs/html/r.surf.fractal.html
+grass-${PKGVERSION}/docs/html/r.surf.gauss.html
+grass-${PKGVERSION}/docs/html/r.surf.random.html
+grass-${PKGVERSION}/man/man1/i.cca.1
+grass-${PKGVERSION}/man/man1/i.fft.1
+grass-${PKGVERSION}/man/man1/i.ifft.1
+grass-${PKGVERSION}/man/man1/i.pca.1
+grass-${PKGVERSION}/man/man1/i.zc.1
+grass-${PKGVERSION}/man/man1/r.surf.fractal.1
+grass-${PKGVERSION}/man/man1/r.surf.gauss.1
+grass-${PKGVERSION}/man/man1/r.surf.random.1

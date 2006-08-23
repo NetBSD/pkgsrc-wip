@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.common,v 1.1 2006/08/23 18:39:42 brook1 Exp $
+#
+
+# Required for dependent packages (e.g., geography/qgis) to find grass
+
+GRASS_VERSION=		6.0.2
+
+GRASS_HOME?=		${PREFIX}/grass-${GRASS_VERSION}

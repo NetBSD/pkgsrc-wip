@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST.nls,v 1.1 2006/08/23 18:39:43 brook1 Exp $
+grass-${PKGVERSION}/locale/cs/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/cs/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/de/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/de/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/es/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/es/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/fr/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/fr/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/it/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/it/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/ja/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/ja/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/ru/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/ru/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/sl/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/sl/LC_MESSAGES/grassmods.mo
+grass-${PKGVERSION}/locale/vi/LC_MESSAGES/grasslibs.mo
+grass-${PKGVERSION}/locale/vi/LC_MESSAGES/grassmods.mo
+@dirrm grass-${PKGVERSION}/locale/vi/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/vi
+@dirrm grass-${PKGVERSION}/locale/sl/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/sl
+@dirrm grass-${PKGVERSION}/locale/ru/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/ru
+@dirrm grass-${PKGVERSION}/locale/ja/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/ja
+@dirrm grass-${PKGVERSION}/locale/it/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/it
+@dirrm grass-${PKGVERSION}/locale/fr/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/fr
+@dirrm grass-${PKGVERSION}/locale/es/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/es
+@dirrm grass-${PKGVERSION}/locale/de/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/de
+@dirrm grass-${PKGVERSION}/locale/cs/LC_MESSAGES
+@dirrm grass-${PKGVERSION}/locale/cs
+@dirrm grass-${PKGVERSION}/locale

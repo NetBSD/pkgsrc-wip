@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/08/15 16:42:45 brook1 Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/23 18:39:42 brook1 Exp $
 #
 
-DISTNAME=		grass-6.0.2
+DISTNAME=		grass-${GRASS_VERSION}
 CATEGORIES=		geography
 MASTER_SITES=		http://grass.itc.it/grass60/source/
 
@@ -16,25 +16,29 @@ USE_TOOLS+=		autoconf
 USE_TOOLS+=		gm4
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=        --with-fftw=no
+.include "options.mk"
+
+PLIST_SRC+=		PLIST
+
+CONFIGURE_ARGS+=	--without-opendwg
+CONFIGURE_ARGS+=	--with-proj-share=${LOCALBASE}/share/proj
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=    ${GRASS_HOME}/lib
 
 BUILD_TARGET=		default
 
-GRASS_HOME?=		${PREFIX}/${PKGNAME}
-
 pre-configure:
 	cd ${WRKSRC} && autoconf || ${TRUE}
 
+.include "Makefile.common"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

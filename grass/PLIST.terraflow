@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.terraflow,v 1.1 2006/08/23 18:39:43 brook1 Exp $
+grass-${PKGVERSION}/bin/r.terraflow
+grass-${PKGVERSION}/bin/r.terraflow.short
+grass-${PKGVERSION}/docs/html/r.terraflow.html
+grass-${PKGVERSION}/docs/html/rterraflow_dir2.png
+grass-${PKGVERSION}/docs/html/rterraflow_dir3.png
+grass-${PKGVERSION}/man/man1/r.terraflow.1
