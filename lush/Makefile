@@ -1,24 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2006/08/12 22:13:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/23 21:59:47 thomasklausner Exp $
+
 DISTNAME=	lush-1.1
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lush/}
-#EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	dauphin@enst.fr
 HOMEPAGE=	http://lush.sourceforge.net/
 COMMENT=	Lisp interpreter/compiler with a seamless interface to C
 
-#PKG_INSTALLATION_TYPES= overwrite pkgviews
-
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
-#CONFIGURE_ENV+=
 CONFIGURE_ARGS+=	--without-bfd
-
-#./configure --without-bfd
 
 post-install:
 	${RM} ${PREFIX}/share/lush/src/*c.orig
