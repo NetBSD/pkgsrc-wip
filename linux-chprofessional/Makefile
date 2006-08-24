@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/08/24 06:49:04 thomasklausner Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
-PKGNAME=	linux-chproffessional-4.0.0
+PKGNAME=	linux-chprofessional-4.0.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.softintegration.com/download/software/release/Linux/
 
