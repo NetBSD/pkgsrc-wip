@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/10/09 01:47:34 poppnk Exp $
+$NetBSD: distinfo,v 1.3 2006/08/24 18:26:46 cheusov Exp $
 
-SHA1 (tkabber-0.9.8.tar.gz) = cab647f602ca0c04c17332555892e09588589a63
-RMD160 (tkabber-0.9.8.tar.gz) = 8960fb68c12c02c351b5c7cc9955773676c9ed99
-Size (tkabber-0.9.8.tar.gz) = 719377 bytes
+SHA1 (tkabber-0.9.9.tar.gz) = ad5187dc164e238ae7fcc62c97bb9e54cf3ecfe0
+RMD160 (tkabber-0.9.9.tar.gz) = ecaed256760caa30b97654c67852257dec770ba6
+Size (tkabber-0.9.9.tar.gz) = 785288 bytes

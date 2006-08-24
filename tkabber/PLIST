@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/09 19:45:23 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/08/24 18:26:46 cheusov Exp $
 bin/tkabber
 share/examples/tkabber/badlop-config-home.tcl
 share/examples/tkabber/badlop-config.tcl
@@ -93,14 +93,9 @@ share/tkabber/msgs/pt.msg
 share/tkabber/msgs/ro.msg
 share/tkabber/msgs/ru.msg
 share/tkabber/msgs/ru.rc
-share/tkabber/msgs/ua.msg
+share/tkabber/msgs/uk.msg
 share/tkabber/muc.tcl
 share/tkabber/negotiate.tcl
-share/tkabber/pixmaps/amibulb/browser/aim.gif
-share/tkabber/pixmaps/amibulb/browser/icq.gif
-share/tkabber/pixmaps/amibulb/browser/msn.gif
-share/tkabber/pixmaps/amibulb/browser/user.gif
-share/tkabber/pixmaps/amibulb/browser/yahoo.gif
 share/tkabber/pixmaps/amibulb/docking/tkabber.ico
 share/tkabber/pixmaps/amibulb/roster/available-away.gif
 share/tkabber/pixmaps/amibulb/roster/available-chat.gif
@@ -117,16 +112,6 @@ share/tkabber/pixmaps/amibulb/tkabber/toolbar-disco.gif
 share/tkabber/pixmaps/amibulb/tkabber/toolbar-join-conference.gif
 share/tkabber/pixmaps/amibulb/tkabber/toolbar-show-offline.gif
 share/tkabber/pixmaps/amibulb/tkabber/toolbar-show-online.gif
-share/tkabber/pixmaps/default/browser/aim.gif
-share/tkabber/pixmaps/default/browser/conference.gif
-share/tkabber/pixmaps/default/browser/gg.gif
-share/tkabber/pixmaps/default/browser/icq.gif
-share/tkabber/pixmaps/default/browser/jud.gif
-share/tkabber/pixmaps/default/browser/message.gif
-share/tkabber/pixmaps/default/browser/msn.gif
-share/tkabber/pixmaps/default/browser/user.gif
-share/tkabber/pixmaps/default/browser/weather.gif
-share/tkabber/pixmaps/default/browser/yahoo.gif
 share/tkabber/pixmaps/default/docking/available-away.gif
 share/tkabber/pixmaps/default/docking/available-chat.gif
 share/tkabber/pixmaps/default/docking/available-dnd.gif
@@ -151,51 +136,19 @@ share/tkabber/pixmaps/default/roster/group-opened.gif
 share/tkabber/pixmaps/default/roster/invisible.gif
 share/tkabber/pixmaps/default/roster/stalker.gif
 share/tkabber/pixmaps/default/roster/unavailable.gif
-share/tkabber/pixmaps/default/services/aim_away.xpm
-share/tkabber/pixmaps/default/services/aim_chat.xpm
-share/tkabber/pixmaps/default/services/aim_dnd.xpm
-share/tkabber/pixmaps/default/services/aim_offline.xpm
-share/tkabber/pixmaps/default/services/aim_online.xpm
-share/tkabber/pixmaps/default/services/aim_xa.xpm
 share/tkabber/pixmaps/default/services/gg_away.gif
 share/tkabber/pixmaps/default/services/gg_chat.gif
 share/tkabber/pixmaps/default/services/gg_dnd.gif
 share/tkabber/pixmaps/default/services/gg_offline.gif
 share/tkabber/pixmaps/default/services/gg_online.gif
 share/tkabber/pixmaps/default/services/gg_xa.gif
-share/tkabber/pixmaps/default/services/icq_away.xpm
-share/tkabber/pixmaps/default/services/icq_chat.xpm
-share/tkabber/pixmaps/default/services/icq_dnd.xpm
-share/tkabber/pixmaps/default/services/icq_offline.xpm
-share/tkabber/pixmaps/default/services/icq_online.xpm
-share/tkabber/pixmaps/default/services/icq_xa.xpm
 share/tkabber/pixmaps/default/services/jud.gif
-share/tkabber/pixmaps/default/services/msn_away.xpm
-share/tkabber/pixmaps/default/services/msn_chat.xpm
-share/tkabber/pixmaps/default/services/msn_dnd.xpm
-share/tkabber/pixmaps/default/services/msn_offline.xpm
-share/tkabber/pixmaps/default/services/msn_online.xpm
-share/tkabber/pixmaps/default/services/msn_xa.xpm
-share/tkabber/pixmaps/default/services/rss_away.xpm
-share/tkabber/pixmaps/default/services/rss_chat.xpm
-share/tkabber/pixmaps/default/services/rss_dnd.xpm
-share/tkabber/pixmaps/default/services/rss_offline.xpm
-share/tkabber/pixmaps/default/services/rss_online.xpm
-share/tkabber/pixmaps/default/services/rss_xa.xpm
-share/tkabber/pixmaps/default/services/sms.xpm
 share/tkabber/pixmaps/default/services/weather_away.gif
 share/tkabber/pixmaps/default/services/weather_chat.gif
 share/tkabber/pixmaps/default/services/weather_dnd.gif
 share/tkabber/pixmaps/default/services/weather_offline.gif
 share/tkabber/pixmaps/default/services/weather_online.gif
 share/tkabber/pixmaps/default/services/weather_xa.gif
-share/tkabber/pixmaps/default/services/yahoo_away.xpm
-share/tkabber/pixmaps/default/services/yahoo_chat.xpm
-share/tkabber/pixmaps/default/services/yahoo_dnd.xpm
-share/tkabber/pixmaps/default/services/yahoo_offline.xpm
-share/tkabber/pixmaps/default/services/yahoo_online.xpm
-share/tkabber/pixmaps/default/services/yahoo_xa.xpm
-share/tkabber/pixmaps/default/tkabber/chat-bookmark.xpm
 share/tkabber/pixmaps/default/tkabber/gpg-badsigned.gif
 share/tkabber/pixmaps/default/tkabber/gpg-encrypted.gif
 share/tkabber/pixmaps/default/tkabber/gpg-signed.gif
@@ -219,14 +172,6 @@ share/tkabber/pixmaps/feather22/roster/available-xa.gif
 share/tkabber/pixmaps/feather22/roster/available.gif
 share/tkabber/pixmaps/feather22/roster/invisible.gif
 share/tkabber/pixmaps/feather22/roster/unavailable.gif
-share/tkabber/pixmaps/gabber/browser/aim.gif
-share/tkabber/pixmaps/gabber/browser/conference.gif
-share/tkabber/pixmaps/gabber/browser/icq.gif
-share/tkabber/pixmaps/gabber/browser/jud.gif
-share/tkabber/pixmaps/gabber/browser/message.gif
-share/tkabber/pixmaps/gabber/browser/msn.gif
-share/tkabber/pixmaps/gabber/browser/user.gif
-share/tkabber/pixmaps/gabber/browser/yahoo.gif
 share/tkabber/pixmaps/gabber/docking/available-away.gif
 share/tkabber/pixmaps/gabber/docking/available-chat.gif
 share/tkabber/pixmaps/gabber/docking/available-dnd.gif
@@ -249,48 +194,11 @@ share/tkabber/pixmaps/gabber/roster/group-closed.gif
 share/tkabber/pixmaps/gabber/roster/group-opened.gif
 share/tkabber/pixmaps/gabber/roster/stalker.gif
 share/tkabber/pixmaps/gabber/roster/unavailable.gif
-share/tkabber/pixmaps/gabber/services/aim_away.xpm
-share/tkabber/pixmaps/gabber/services/aim_chat.xpm
-share/tkabber/pixmaps/gabber/services/aim_dnd.xpm
-share/tkabber/pixmaps/gabber/services/aim_offline.xpm
-share/tkabber/pixmaps/gabber/services/aim_online.xpm
-share/tkabber/pixmaps/gabber/services/aim_xa.xpm
-share/tkabber/pixmaps/gabber/services/icq_away.xpm
-share/tkabber/pixmaps/gabber/services/icq_chat.xpm
-share/tkabber/pixmaps/gabber/services/icq_dnd.xpm
-share/tkabber/pixmaps/gabber/services/icq_offline.xpm
-share/tkabber/pixmaps/gabber/services/icq_online.xpm
-share/tkabber/pixmaps/gabber/services/icq_xa.xpm
-share/tkabber/pixmaps/gabber/services/jud.gif
-share/tkabber/pixmaps/gabber/services/msn_away.xpm
-share/tkabber/pixmaps/gabber/services/msn_chat.xpm
-share/tkabber/pixmaps/gabber/services/msn_dnd.xpm
-share/tkabber/pixmaps/gabber/services/msn_offline.xpm
-share/tkabber/pixmaps/gabber/services/msn_online.xpm
-share/tkabber/pixmaps/gabber/services/msn_xa.xpm
-share/tkabber/pixmaps/gabber/services/rss_away.xpm
-share/tkabber/pixmaps/gabber/services/rss_chat.xpm
-share/tkabber/pixmaps/gabber/services/rss_dnd.xpm
-share/tkabber/pixmaps/gabber/services/rss_offline.xpm
-share/tkabber/pixmaps/gabber/services/rss_online.xpm
-share/tkabber/pixmaps/gabber/services/rss_xa.xpm
-share/tkabber/pixmaps/gabber/services/sms.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_away.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_chat.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_dnd.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_offline.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_online.xpm
-share/tkabber/pixmaps/gabber/services/yahoo_xa.xpm
 share/tkabber/pixmaps/gabber/tkabber/toolbar-add-user.gif
 share/tkabber/pixmaps/gabber/tkabber/toolbar-disco.gif
 share/tkabber/pixmaps/gabber/tkabber/toolbar-join-conference.gif
 share/tkabber/pixmaps/gabber/tkabber/toolbar-show-offline.gif
 share/tkabber/pixmaps/gabber/tkabber/toolbar-show-online.gif
-share/tkabber/pixmaps/gush/browser/aim.gif
-share/tkabber/pixmaps/gush/browser/icq.gif
-share/tkabber/pixmaps/gush/browser/msn.gif
-share/tkabber/pixmaps/gush/browser/user.gif
-share/tkabber/pixmaps/gush/browser/yahoo.gif
 share/tkabber/pixmaps/gush/docking/tkabber.ico
 share/tkabber/pixmaps/gush/roster/available-away.gif
 share/tkabber/pixmaps/gush/roster/available-chat.gif
@@ -332,13 +240,6 @@ share/tkabber/pixmaps/icq/tkabber/toolbar-disco.gif
 share/tkabber/pixmaps/icq/tkabber/toolbar-join-conference.gif
 share/tkabber/pixmaps/icq/tkabber/toolbar-show-offline.gif
 share/tkabber/pixmaps/icq/tkabber/toolbar-show-online.gif
-share/tkabber/pixmaps/jajc/browser/aim.gif
-share/tkabber/pixmaps/jajc/browser/conference.gif
-share/tkabber/pixmaps/jajc/browser/icq.gif
-share/tkabber/pixmaps/jajc/browser/jud.gif
-share/tkabber/pixmaps/jajc/browser/msn.gif
-share/tkabber/pixmaps/jajc/browser/user.gif
-share/tkabber/pixmaps/jajc/browser/yahoo.gif
 share/tkabber/pixmaps/jajc/docking/available-away.gif
 share/tkabber/pixmaps/jajc/docking/available-chat.gif
 share/tkabber/pixmaps/jajc/docking/available-dnd.gif
@@ -358,32 +259,7 @@ share/tkabber/pixmaps/jajc/roster/group-opened.gif
 share/tkabber/pixmaps/jajc/roster/group_closed.gif
 share/tkabber/pixmaps/jajc/roster/group_opened.gif
 share/tkabber/pixmaps/jajc/roster/unavailable.gif
-share/tkabber/pixmaps/jajc/services/aim_away.xpm
-share/tkabber/pixmaps/jajc/services/aim_chat.xpm
-share/tkabber/pixmaps/jajc/services/aim_dnd.xpm
-share/tkabber/pixmaps/jajc/services/aim_offline.xpm
-share/tkabber/pixmaps/jajc/services/aim_online.xpm
-share/tkabber/pixmaps/jajc/services/aim_xa.xpm
-share/tkabber/pixmaps/jajc/services/icq_away.xpm
-share/tkabber/pixmaps/jajc/services/icq_chat.xpm
-share/tkabber/pixmaps/jajc/services/icq_dnd.xpm
-share/tkabber/pixmaps/jajc/services/icq_offline.xpm
-share/tkabber/pixmaps/jajc/services/icq_online.xpm
-share/tkabber/pixmaps/jajc/services/icq_xa.xpm
 share/tkabber/pixmaps/jajc/services/jud.gif
-share/tkabber/pixmaps/jajc/services/msn_away.xpm
-share/tkabber/pixmaps/jajc/services/msn_chat.xpm
-share/tkabber/pixmaps/jajc/services/msn_dnd.xpm
-share/tkabber/pixmaps/jajc/services/msn_offline.xpm
-share/tkabber/pixmaps/jajc/services/msn_online.xpm
-share/tkabber/pixmaps/jajc/services/msn_xa.xpm
-share/tkabber/pixmaps/jajc/services/sms.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_away.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_chat.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_dnd.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_offline.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_online.xpm
-share/tkabber/pixmaps/jajc/services/yahoo_xa.xpm
 share/tkabber/pixmaps/jajc/tkabber/toolbar-add-user.gif
 share/tkabber/pixmaps/jajc/tkabber/toolbar-disco.gif
 share/tkabber/pixmaps/jajc/tkabber/toolbar-join-conference.gif
@@ -396,16 +272,6 @@ share/tkabber/pixmaps/jarl/roster/available-xa.gif
 share/tkabber/pixmaps/jarl/roster/available.gif
 share/tkabber/pixmaps/jarl/roster/invisible.gif
 share/tkabber/pixmaps/jarl/roster/unavailable.gif
-share/tkabber/pixmaps/kroc/browser/aim.gif
-share/tkabber/pixmaps/kroc/browser/conference.gif
-share/tkabber/pixmaps/kroc/browser/gg.gif
-share/tkabber/pixmaps/kroc/browser/icq.gif
-share/tkabber/pixmaps/kroc/browser/jud.gif
-share/tkabber/pixmaps/kroc/browser/message.gif
-share/tkabber/pixmaps/kroc/browser/msn.gif
-share/tkabber/pixmaps/kroc/browser/user.gif
-share/tkabber/pixmaps/kroc/browser/weather.gif
-share/tkabber/pixmaps/kroc/browser/yahoo.gif
 share/tkabber/pixmaps/kroc/docking/available-away.gif
 share/tkabber/pixmaps/kroc/docking/available-chat.gif
 share/tkabber/pixmaps/kroc/docking/available-dnd.gif
@@ -426,50 +292,19 @@ share/tkabber/pixmaps/kroc/roster/group-opened.gif
 share/tkabber/pixmaps/kroc/roster/invisible.gif
 share/tkabber/pixmaps/kroc/roster/stalker.gif
 share/tkabber/pixmaps/kroc/roster/unavailable.gif
-share/tkabber/pixmaps/kroc/services/aim_away.xpm
-share/tkabber/pixmaps/kroc/services/aim_chat.xpm
-share/tkabber/pixmaps/kroc/services/aim_dnd.xpm
-share/tkabber/pixmaps/kroc/services/aim_offline.xpm
-share/tkabber/pixmaps/kroc/services/aim_online.xpm
-share/tkabber/pixmaps/kroc/services/aim_xa.xpm
 share/tkabber/pixmaps/kroc/services/gg_away.gif
 share/tkabber/pixmaps/kroc/services/gg_chat.gif
 share/tkabber/pixmaps/kroc/services/gg_dnd.gif
 share/tkabber/pixmaps/kroc/services/gg_offline.gif
 share/tkabber/pixmaps/kroc/services/gg_online.gif
 share/tkabber/pixmaps/kroc/services/gg_xa.gif
-share/tkabber/pixmaps/kroc/services/icq_away.xpm
-share/tkabber/pixmaps/kroc/services/icq_chat.xpm
-share/tkabber/pixmaps/kroc/services/icq_dnd.xpm
-share/tkabber/pixmaps/kroc/services/icq_offline.xpm
-share/tkabber/pixmaps/kroc/services/icq_online.xpm
-share/tkabber/pixmaps/kroc/services/icq_xa.xpm
 share/tkabber/pixmaps/kroc/services/jud.gif
-share/tkabber/pixmaps/kroc/services/msn_away.xpm
-share/tkabber/pixmaps/kroc/services/msn_chat.xpm
-share/tkabber/pixmaps/kroc/services/msn_dnd.xpm
-share/tkabber/pixmaps/kroc/services/msn_offline.xpm
-share/tkabber/pixmaps/kroc/services/msn_online.xpm
-share/tkabber/pixmaps/kroc/services/msn_xa.xpm
-share/tkabber/pixmaps/kroc/services/rss_away.xpm
-share/tkabber/pixmaps/kroc/services/rss_chat.xpm
-share/tkabber/pixmaps/kroc/services/rss_dnd.xpm
-share/tkabber/pixmaps/kroc/services/rss_offline.xpm
-share/tkabber/pixmaps/kroc/services/rss_online.xpm
-share/tkabber/pixmaps/kroc/services/rss_xa.xpm
-share/tkabber/pixmaps/kroc/services/sms.xpm
 share/tkabber/pixmaps/kroc/services/weather_away.gif
 share/tkabber/pixmaps/kroc/services/weather_chat.gif
 share/tkabber/pixmaps/kroc/services/weather_dnd.gif
 share/tkabber/pixmaps/kroc/services/weather_offline.gif
 share/tkabber/pixmaps/kroc/services/weather_online.gif
 share/tkabber/pixmaps/kroc/services/weather_xa.gif
-share/tkabber/pixmaps/kroc/services/yahoo_away.xpm
-share/tkabber/pixmaps/kroc/services/yahoo_chat.xpm
-share/tkabber/pixmaps/kroc/services/yahoo_dnd.xpm
-share/tkabber/pixmaps/kroc/services/yahoo_offline.xpm
-share/tkabber/pixmaps/kroc/services/yahoo_online.xpm
-share/tkabber/pixmaps/kroc/services/yahoo_xa.xpm
 share/tkabber/pixmaps/kroc/tkabber/gpg-badsigned.gif
 share/tkabber/pixmaps/kroc/tkabber/gpg-encrypted.gif
 share/tkabber/pixmaps/kroc/tkabber/gpg-signed.gif
@@ -485,11 +320,6 @@ share/tkabber/pixmaps/kroc/tkabber/toolbar-disco.gif
 share/tkabber/pixmaps/kroc/tkabber/toolbar-join-conference.gif
 share/tkabber/pixmaps/kroc/tkabber/toolbar-show-offline.gif
 share/tkabber/pixmaps/kroc/tkabber/toolbar-show-online.gif
-share/tkabber/pixmaps/psi/browser/aim.gif
-share/tkabber/pixmaps/psi/browser/icq.gif
-share/tkabber/pixmaps/psi/browser/msn.gif
-share/tkabber/pixmaps/psi/browser/user.gif
-share/tkabber/pixmaps/psi/browser/yahoo.gif
 share/tkabber/pixmaps/psi/roster/available-away.gif
 share/tkabber/pixmaps/psi/roster/available-chat.gif
 share/tkabber/pixmaps/psi/roster/available-dnd.gif
@@ -509,13 +339,11 @@ share/tkabber/plugins/chat/bookmark_highlighted.tcl
 share/tkabber/plugins/chat/clear.tcl
 share/tkabber/plugins/chat/complete_last_nick.tcl
 share/tkabber/plugins/chat/completion.tcl
-share/tkabber/plugins/chat/draw_encrypted.tcl
 share/tkabber/plugins/chat/draw_error.tcl
 share/tkabber/plugins/chat/draw_info.tcl
 share/tkabber/plugins/chat/draw_message.tcl
 share/tkabber/plugins/chat/draw_normal_message.tcl
 share/tkabber/plugins/chat/draw_server_message.tcl
-share/tkabber/plugins/chat/draw_signed.tcl
 share/tkabber/plugins/chat/draw_timestamp.tcl
 share/tkabber/plugins/chat/draw_xhtml_message.tcl
 share/tkabber/plugins/chat/empty_body.tcl
@@ -545,7 +373,6 @@ share/tkabber/plugins/general/conferenceinfo.tcl
 share/tkabber/plugins/general/conferences.tcl
 share/tkabber/plugins/general/message_archive.tcl
 share/tkabber/plugins/general/offline.tcl
-share/tkabber/plugins/general/presenceinfo.tcl
 share/tkabber/plugins/general/rawxml.tcl
 share/tkabber/plugins/general/sound.tcl
 share/tkabber/plugins/general/stats.tcl
@@ -597,71 +424,71 @@ share/tkabber/userinfo.tcl
 share/tkabber/utils.tcl
 share/tkabber/xmppmime.tcl
 @dirrm share/examples/tkabber
-@dirrm share/tkabber/emoticons-tkabber
-@dirrm share/tkabber/mclistbox-1.02
-@dirrm share/tkabber/sounds/psi
-@dirrm share/tkabber/sounds/default
-@dirrm share/tkabber/sounds
-@dirrm share/tkabber/pixmaps/psi/tkabber
-@dirrm share/tkabber/pixmaps/psi/roster
-@dirrm share/tkabber/pixmaps/psi/browser
-@dirrm share/tkabber/pixmaps/psi
-@dirrm share/tkabber/pixmaps/kroc/tkabber
-@dirrm share/tkabber/pixmaps/kroc/services
-@dirrm share/tkabber/pixmaps/kroc/roster
-@dirrm share/tkabber/pixmaps/kroc/docking
-@dirrm share/tkabber/pixmaps/kroc/browser
-@dirrm share/tkabber/pixmaps/kroc
-@dirrm share/tkabber/pixmaps/jarl/roster
-@dirrm share/tkabber/pixmaps/jarl
-@dirrm share/tkabber/pixmaps/jajc/tkabber
-@dirrm share/tkabber/pixmaps/jajc/services
-@dirrm share/tkabber/pixmaps/jajc/roster
-@dirrm share/tkabber/pixmaps/jajc/docking
-@dirrm share/tkabber/pixmaps/jajc/browser
-@dirrm share/tkabber/pixmaps/jajc
-@dirrm share/tkabber/pixmaps/icq/tkabber
-@dirrm share/tkabber/pixmaps/icq/roster
-@dirrm share/tkabber/pixmaps/icq/docking
-@dirrm share/tkabber/pixmaps/icq
-@dirrm share/tkabber/pixmaps/gush/tkabber
-@dirrm share/tkabber/pixmaps/gush/roster
-@dirrm share/tkabber/pixmaps/gush/docking
-@dirrm share/tkabber/pixmaps/gush/browser
-@dirrm share/tkabber/pixmaps/gush
-@dirrm share/tkabber/pixmaps/gabber/tkabber
-@dirrm share/tkabber/pixmaps/gabber/services
-@dirrm share/tkabber/pixmaps/gabber/roster
-@dirrm share/tkabber/pixmaps/gabber/docking
-@dirrm share/tkabber/pixmaps/gabber/browser
-@dirrm share/tkabber/pixmaps/gabber
-@dirrm share/tkabber/pixmaps/feather22/roster
-@dirrm share/tkabber/pixmaps/feather22
-@dirrm share/tkabber/pixmaps/default/tkabber
-@dirrm share/tkabber/pixmaps/default/services
-@dirrm share/tkabber/pixmaps/default/roster
-@dirrm share/tkabber/pixmaps/default/docking
-@dirrm share/tkabber/pixmaps/default/browser
-@dirrm share/tkabber/pixmaps/default
-@dirrm share/tkabber/pixmaps/amibulb/tkabber
-@dirrm share/tkabber/pixmaps/amibulb/roster
-@dirrm share/tkabber/pixmaps/amibulb/docking
-@dirrm share/tkabber/pixmaps/amibulb/browser
-@dirrm share/tkabber/pixmaps/amibulb
-@dirrm share/tkabber/pixmaps
-@dirrm share/tkabber/jabberlib-tclxml/tclxml
-@dirrm share/tkabber/jabberlib-tclxml
-@dirrm share/tkabber/plugins/windows
-@dirrm share/tkabber/plugins/unix
-@dirrm share/tkabber/plugins/si
-@dirrm share/tkabber/plugins/jidlink
-@dirrm share/tkabber/plugins/iq
-@dirrm share/tkabber/plugins/filetransfer
-@dirrm share/tkabber/plugins/chat
-@dirrm share/tkabber/plugins/general
-@dirrm share/tkabber/plugins
-@dirrm share/tkabber/aniemoteicons
-@dirrm share/tkabber/textundo
-@dirrm share/tkabber/msgs
-@dirrm share/tkabber/ifacetk
 @dirrm share/tkabber
+@dirrm share/tkabber/aniemoteicons
+@dirrm share/tkabber/emoticons-tkabber
+@dirrm share/tkabber/ifacetk
+@dirrm share/tkabber/jabberlib-tclxml
+@dirrm share/tkabber/jabberlib-tclxml/tclxml
+@dirrm share/tkabber/mclistbox-1.02
+@dirrm share/tkabber/msgs
+@dirrm share/tkabber/pixmaps
+@dirrm share/tkabber/pixmaps/amibulb
+@dirrm share/tkabber/pixmaps/amibulb/browser
+@dirrm share/tkabber/pixmaps/amibulb/docking
+@dirrm share/tkabber/pixmaps/amibulb/roster
+@dirrm share/tkabber/pixmaps/amibulb/tkabber
+@dirrm share/tkabber/pixmaps/default
+@dirrm share/tkabber/pixmaps/default/browser
+@dirrm share/tkabber/pixmaps/default/docking
+@dirrm share/tkabber/pixmaps/default/roster
+@dirrm share/tkabber/pixmaps/default/services
+@dirrm share/tkabber/pixmaps/default/tkabber
+@dirrm share/tkabber/pixmaps/feather22
+@dirrm share/tkabber/pixmaps/feather22/roster
+@dirrm share/tkabber/pixmaps/gabber
+@dirrm share/tkabber/pixmaps/gabber/browser
+@dirrm share/tkabber/pixmaps/gabber/docking
+@dirrm share/tkabber/pixmaps/gabber/roster
+@dirrm share/tkabber/pixmaps/gabber/services
+@dirrm share/tkabber/pixmaps/gabber/tkabber
+@dirrm share/tkabber/pixmaps/gush
+@dirrm share/tkabber/pixmaps/gush/browser
+@dirrm share/tkabber/pixmaps/gush/docking
+@dirrm share/tkabber/pixmaps/gush/roster
+@dirrm share/tkabber/pixmaps/gush/tkabber
+@dirrm share/tkabber/pixmaps/icq
+@dirrm share/tkabber/pixmaps/icq/docking
+@dirrm share/tkabber/pixmaps/icq/roster
+@dirrm share/tkabber/pixmaps/icq/tkabber
+@dirrm share/tkabber/pixmaps/jajc
+@dirrm share/tkabber/pixmaps/jajc/browser
+@dirrm share/tkabber/pixmaps/jajc/docking
+@dirrm share/tkabber/pixmaps/jajc/roster
+@dirrm share/tkabber/pixmaps/jajc/services
+@dirrm share/tkabber/pixmaps/jajc/tkabber
+@dirrm share/tkabber/pixmaps/jarl
+@dirrm share/tkabber/pixmaps/jarl/roster
+@dirrm share/tkabber/pixmaps/kroc
+@dirrm share/tkabber/pixmaps/kroc/browser
+@dirrm share/tkabber/pixmaps/kroc/docking
+@dirrm share/tkabber/pixmaps/kroc/roster
+@dirrm share/tkabber/pixmaps/kroc/services
+@dirrm share/tkabber/pixmaps/kroc/tkabber
+@dirrm share/tkabber/pixmaps/psi
+@dirrm share/tkabber/pixmaps/psi/browser
+@dirrm share/tkabber/pixmaps/psi/roster
+@dirrm share/tkabber/pixmaps/psi/tkabber
+@dirrm share/tkabber/plugins
+@dirrm share/tkabber/plugins/chat
+@dirrm share/tkabber/plugins/filetransfer
+@dirrm share/tkabber/plugins/general
+@dirrm share/tkabber/plugins/iq
+@dirrm share/tkabber/plugins/jidlink
+@dirrm share/tkabber/plugins/si
+@dirrm share/tkabber/plugins/unix
+@dirrm share/tkabber/plugins/windows
+@dirrm share/tkabber/sounds
+@dirrm share/tkabber/sounds/default
+@dirrm share/tkabber/sounds/psi
+@dirrm share/tkabber/textundo
