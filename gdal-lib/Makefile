@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/04/29 18:05:37 brook1 Exp $
+# $NetBSD: Makefile,v 1.15 2006/08/24 18:48:22 brook1 Exp $
 #
 
-DISTNAME=		gdal-1.3.1
-PKGNAME=		gdal-lib-1.3.1
+DISTNAME=		gdal-1.3.2
+PKGNAME=		gdal-lib-1.3.2
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gdal.org/dl/
 
@@ -11,6 +11,7 @@ HOMEPAGE=		http://gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
@@ -31,12 +32,20 @@ CONFIGURE_ARGS+=	--with-pg
 CONFIGURE_ARGS+=	--without-pg
 .endif
 
+.if !empty(PKG_OPTIONS:Mmysql)
+. include "../../mk/mysql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql
+.else
+CONFIGURE_ARGS+=	--without-mysql
+.endif
+
 CONFIGURE_ARGS+=	--with-xerces
 CONFIGURE_ARGS+=	--with-xerces-inc=${PREFIX:Q}/include
 CONFIGURE_ARGS+=	--with-xerces-lib=-L${PREFIX:Q}/lib\ -lxerces-c
 CONFIGURE_ARGS+=	--with-geos
 CONFIGURE_ARGS+=	--without-python
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
