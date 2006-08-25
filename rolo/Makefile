@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/02 18:00:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/25 20:37:19 dhowland Exp $
 #
 
 DISTNAME=		rolo-011
@@ -12,5 +12,6 @@ COMMENT=		Text-based contact manager
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../wip/libvc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
