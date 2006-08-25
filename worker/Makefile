@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/25 21:44:29 dhowland Exp $
 #
 
 DISTNAME=		worker-2.10.0
@@ -10,6 +10,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.boomerangsworld.de/worker/
 COMMENT=		X-Window filemanager for UNIX
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
