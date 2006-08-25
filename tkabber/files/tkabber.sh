@@ -1,5 +1,5 @@
 #!/bin/sh
 #
-# $NetBSD: tkabber.sh,v 1.1.1.1 2003/11/28 18:02:03 xtraeme Exp $
+# $NetBSD: tkabber.sh,v 1.2 2006/08/25 11:21:32 minskim Exp $
 
-exec @PREFIX@/bin/wish @DATADIR@/tkabber.tcl -name tkabber "$$@"
+exec @WISH@ @DATADIR@/tkabber.tcl -name tkabber "$$@"

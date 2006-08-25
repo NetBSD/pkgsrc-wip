@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/25 11:17:49 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2006/08/25 11:21:32 minskim Exp $
 #
 
 DISTNAME=	tkabber-0.9.9
@@ -13,6 +13,7 @@ DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
 DEPENDS+=	bwidget-[0-9]*:../../x11/bwidget
 
 NO_BUILD=	yes
+USE_TOOLS+=	wish:run
 
 EGDIR=		${PREFIX}/share/examples/tkabber
 DATADIR=	${PREFIX}/share/tkabber
@@ -37,12 +38,12 @@ EXTRA_FILES=	AUTHORS README COPYING INSTALL ChangeLog
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.tcl ${DATADIR} #${WRKSRC}/*.xrdb ${DATADIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXTRA_FILES} ${DOCDIR}
-	cd ${WRKSRC}/examples && ${PAX} -rwp e . ${EGDIR}
+	cd ${WRKSRC}/examples && ${PAX} -rw -pm . ${EGDIR}
 .for i in ${SUBDIRS}
-	cd ${WRKSRC} && ${PAX} -rwp e ${i} ${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rw -pm ${i} ${DATADIR}
 .endfor
 	# TODO This must be a CLASS
-	${SED} -e "s,@PREFIX@,${PREFIX}," \
+	${SED} -e "s,@WISH@,${WISH}," \
 		-e "s,@DATADIR@,${DATADIR}," ${FILESDIR}/tkabber.sh \
 		> ${WRKSRC}/tkabber
 	${INSTALL_SCRIPT} ${WRKSRC}/tkabber ${PREFIX}/bin
