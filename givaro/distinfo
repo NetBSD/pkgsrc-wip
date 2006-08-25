@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/09 11:22:06 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2006/08/25 14:52:07 emil_s Exp $
 
-SHA1 (givaro-3.1.tar.gz) = 32322ef8e72d935affebff53bb5dbf3ec6e32bd5
-RMD160 (givaro-3.1.tar.gz) = 3bc888f8fe38c57a2d40dab77892928d00392a31
-Size (givaro-3.1.tar.gz) = 557415 bytes
+SHA1 (givaro-3.2.tar.gz) = 17151c05108f2a457d8cd9f4308b1b084e9f7450
+RMD160 (givaro-3.2.tar.gz) = d8ca6b5568a374271202fb004f3648d16ab76a0c
+Size (givaro-3.2.tar.gz) = 577682 bytes

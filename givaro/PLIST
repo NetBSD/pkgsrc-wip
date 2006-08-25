@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/09 11:22:06 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/25 14:52:07 emil_s Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -26,6 +26,7 @@ include/givaro/givgfq.inl
 include/givaro/givhashtable.h
 include/givaro/givhashtable.inl
 include/givaro/givindeter.h
+include/givaro/givinterp.h
 include/givaro/givinit.h
 include/givaro/givinteger.h
 include/givaro/givinteger.inl
@@ -146,6 +147,8 @@ share/examples/givaro/Integer/prevprime.C
 share/examples/givaro/Integer/primitiveelement.C
 share/examples/givaro/Integer/primitiveroot.C
 share/examples/givaro/Integer/probable_primroot.C
+share/examples/givaro/Polynomial/interpolate.C
+share/examples/givaro/Polynomial/isprimitive.C
 share/examples/givaro/Polynomial/isirred.C
 share/examples/givaro/Polynomial/pol_arith.C
 share/examples/givaro/Polynomial/pol_eval.C

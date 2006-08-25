@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/09 11:22:05 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/25 14:52:07 emil_s Exp $
 #
 
-DISTNAME=		givaro-3.1
+DISTNAME=		givaro-3.2
 PKGNAME=		givaro-${VERSION}
 CATEGORIES=		math
 MASTER_SITES=		http://www-lmc.imag.fr/Logiciels/givaro/
@@ -11,13 +11,13 @@ HOMEPAGE=		http://www-lmc.imag.fr/Logiciels/givaro/
 COMMENT=		C++ library for arithmetic and algebraic computations
 
 
-VERSION=		3.1.3
+VERSION=		3.2.1
 
 WRKSRC=			${WRKDIR}/givaro-${VERSION}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
