@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/28 18:00:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/25 11:01:01 minskim Exp $
 lib/bwidget/arrow.tcl
 lib/bwidget/bitmap.tcl
 lib/bwidget/button.tcl
@@ -70,43 +70,43 @@ lib/bwidget/lang/de.rc
 lib/bwidget/lang/en.rc
 lib/bwidget/lang/es.rc
 lib/bwidget/lang/fr.rc
-share/doc/html/bwidget/ArrowButton.html
-share/doc/html/bwidget/BWidget.html
-share/doc/html/bwidget/Button.html
-share/doc/html/bwidget/ButtonBox.html
-share/doc/html/bwidget/ComboBox.html
-share/doc/html/bwidget/Dialog.html
-share/doc/html/bwidget/DragSite.html
-share/doc/html/bwidget/DropSite.html
-share/doc/html/bwidget/DynamicHelp.html
-share/doc/html/bwidget/Entry.html
-share/doc/html/bwidget/Label.html
-share/doc/html/bwidget/LabelEntry.html
-share/doc/html/bwidget/LabelFrame.html
-share/doc/html/bwidget/ListBox.html
-share/doc/html/bwidget/MainFrame.html
-share/doc/html/bwidget/MessageDlg.html
-share/doc/html/bwidget/NoteBook.html
-share/doc/html/bwidget/PagesManager.html
-share/doc/html/bwidget/PanedWindow.html
-share/doc/html/bwidget/PasswdDlg.html
-share/doc/html/bwidget/ProgressBar.html
-share/doc/html/bwidget/ProgressDlg.html
-share/doc/html/bwidget/ScrollView.html
-share/doc/html/bwidget/ScrollableFrame.html
-share/doc/html/bwidget/ScrolledWindow.html
-share/doc/html/bwidget/SelectColor.html
-share/doc/html/bwidget/SelectFont.html
-share/doc/html/bwidget/Separator.html
-share/doc/html/bwidget/SpinBox.html
-share/doc/html/bwidget/TitleFrame.html
-share/doc/html/bwidget/Tree.html
-share/doc/html/bwidget/Widget.html
-share/doc/html/bwidget/contents.html
-share/doc/html/bwidget/index.html
-share/doc/html/bwidget/navtree.html
-share/doc/html/bwidget/options.htm
-@dirrm share/doc/html/bwidget
+share/doc/bwidget/ArrowButton.html
+share/doc/bwidget/BWidget.html
+share/doc/bwidget/Button.html
+share/doc/bwidget/ButtonBox.html
+share/doc/bwidget/ComboBox.html
+share/doc/bwidget/Dialog.html
+share/doc/bwidget/DragSite.html
+share/doc/bwidget/DropSite.html
+share/doc/bwidget/DynamicHelp.html
+share/doc/bwidget/Entry.html
+share/doc/bwidget/Label.html
+share/doc/bwidget/LabelEntry.html
+share/doc/bwidget/LabelFrame.html
+share/doc/bwidget/ListBox.html
+share/doc/bwidget/MainFrame.html
+share/doc/bwidget/MessageDlg.html
+share/doc/bwidget/NoteBook.html
+share/doc/bwidget/PagesManager.html
+share/doc/bwidget/PanedWindow.html
+share/doc/bwidget/PasswdDlg.html
+share/doc/bwidget/ProgressBar.html
+share/doc/bwidget/ProgressDlg.html
+share/doc/bwidget/ScrollView.html
+share/doc/bwidget/ScrollableFrame.html
+share/doc/bwidget/ScrolledWindow.html
+share/doc/bwidget/SelectColor.html
+share/doc/bwidget/SelectFont.html
+share/doc/bwidget/Separator.html
+share/doc/bwidget/SpinBox.html
+share/doc/bwidget/TitleFrame.html
+share/doc/bwidget/Tree.html
+share/doc/bwidget/Widget.html
+share/doc/bwidget/contents.html
+share/doc/bwidget/index.html
+share/doc/bwidget/navtree.html
+share/doc/bwidget/options.htm
+@dirrm share/doc/bwidget
 @dirrm lib/bwidget/images
 @dirrm lib/bwidget/lang
 @dirrm lib/bwidget
