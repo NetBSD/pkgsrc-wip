@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/07/20 15:00:24 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/08/25 23:03:33 cheusov Exp $
 
 HEIRLOOM_VER=	060122
 DISTNAME=	heirloom-${HEIRLOOM_VER}
@@ -6,4 +6,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=	.tar.bz2
 
 HOMEPAGE=	http://heirloom.sourceforge.net/
-PATCHDIR=	../../wip/heirloom/patches
+
+PATCHDIR=	${.CURDIR}/../../wip/heirloom/patches
+DISTINFO_FILE=  ${.CURDIR}/../../wip/heirloom/distinfo
