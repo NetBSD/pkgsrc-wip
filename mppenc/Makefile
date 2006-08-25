@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/25 21:29:36 dhowland Exp $
 #
 
 PKGNAME=		mppenc-1.15
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.musepack.net/
 COMMENT=		Mpeg-Plus encoder/decoder
+
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 WRKSRC=		${WRKDIR}/sv7
 USE_TOOLS+=	gmake
