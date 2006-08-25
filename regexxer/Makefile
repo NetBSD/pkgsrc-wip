@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/01 22:02:12 dhowland Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/25 20:28:22 dhowland Exp $
 #
 
 DISTNAME=	regexxer-0.8
@@ -12,7 +12,7 @@ COMMENT=	Interactive tool for performing search and replace operations
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
