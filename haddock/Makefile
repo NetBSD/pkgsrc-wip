@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/17 14:05:34 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/25 14:08:23 emil_s Exp $
 #
 
 DISTNAME=		haddock-${VERSION}
@@ -15,13 +15,13 @@ VERSION=		0.7
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 DOCDIR=			${PREFIX}/share/doc/haddock
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	@cd ${WRKDIR}/haddock-html-0.6 && \
+	cd ${WRKDIR}/haddock-html-0.6 && \
 		${INSTALL_DATA} *.html *.css ${DOCDIR}
 
 .include "../../lang/ghc/buildlink3.mk"
