@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/25 20:45:55 dhowland Exp $
 #
 
 DISTNAME=		kyra_src_2_0_7
@@ -13,6 +13,7 @@ HOMEPAGE=		http://kyra.sourceforge.net/
 COMMENT=		Sprite engine
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFLICTS+=		kyra-*
