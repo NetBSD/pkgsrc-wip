@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/22 04:42:34 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/25 13:32:39 emil_s Exp $
 #
 
 DISTNAME=	alex-2.0.1
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.haskell.org/alex/
 COMMENT=	Tool for generating lexical analysers in Haskell
 
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 GNU_CONFIGURE=	yes
 
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz alex-html.tar.gz
