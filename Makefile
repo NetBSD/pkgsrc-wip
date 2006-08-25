@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2342 2006/08/23 22:02:43 thomasklausner Exp $
+# $Id: Makefile,v 1.2343 2006/08/25 11:17:49 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -115,7 +115,6 @@ SUBDIR+=	bss
 SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
-SUBDIR+=	bwidget
 SUBDIR+=	bwm-ng
 SUBDIR+=	c-news
 SUBDIR+=	c2hs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/24 18:26:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/25 11:17:49 minskim Exp $
 #
 
 DISTNAME=	tkabber-0.9.9
@@ -10,7 +10,7 @@ HOMEPAGE=	http://tkabber.jabber.ru/en/
 COMMENT=	Free and Open Source TCL/TK jabber client
 
 DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
-DEPENDS+=	bwidget-[0-9]*:../../wip/bwidget
+DEPENDS+=	bwidget-[0-9]*:../../x11/bwidget
 
 NO_BUILD=	yes
 
