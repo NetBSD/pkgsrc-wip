@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/22 04:42:34 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/25 13:50:26 emil_s Exp $
 #
 
 DISTNAME=		happy-1.15
@@ -17,7 +17,7 @@ COMMENT=		LALR(1) parser generator for the functional language Haskell
 WRKSRC=			${WRKDIR}/happy-1.15
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 
 DOCDIR=		${PREFIX}/share/doc/happy
