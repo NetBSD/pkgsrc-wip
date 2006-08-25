@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/08/19 09:44:58 plunky Exp $
+# $NetBSD: Makefile,v 1.4 2006/08/25 21:17:27 plunky Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://homepages.rya-online.net/plunky/	\
-			${MASTER_SITE_SOURCEFORGE:=bluez/}
+			http://bluez.sourceforge.net/download/
 DISTFILES=		bcmfw-1.0.tar.gz			\
 			bluez-firmware-1.2.tar.gz
 
