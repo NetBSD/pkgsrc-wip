@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/09 21:02:04 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2006/08/25 20:31:55 dhowland Exp $
 #
 
 DISTNAME=	beast-0.5.4
@@ -9,6 +9,7 @@ MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://beast.gtk.org/
 COMMENT=	Bedevilled Audio System
 
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake autoconf213
 GNU_CONFIGURE=	yes
