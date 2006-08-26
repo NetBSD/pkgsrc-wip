@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/12 22:17:19 unex_linija Exp $
+$NetBSD: distinfo,v 1.2 2006/08/26 15:13:22 unex_linija Exp $
 
-SHA1 (libsoap-1.1.0rc1.tar.gz) = 2416b12ceb3e6605f41690a796621446d9ee1de4
-RMD160 (libsoap-1.1.0rc1.tar.gz) = bd1f3ed800aed2a0333139d4adbe7e91b34f296b
-Size (libsoap-1.1.0rc1.tar.gz) = 424588 bytes
+SHA1 (libsoap-1.1.0.tar.gz) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+RMD160 (libsoap-1.1.0.tar.gz) = 9c1185a5c5e9fc54612808977ee8f548b2258d31
+Size (libsoap-1.1.0.tar.gz) = 0 bytes
