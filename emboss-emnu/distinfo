@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/12/13 20:39:09 daprice Exp $
+$NetBSD: distinfo,v 1.3 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/emnu-1.05-20041107/EMNU-1.05.tar.gz) = 0a8798eb99f49d67c4cdbca24c2c02ec1c3918aa
+RMD160 (emboss/emnu-1.05-20041107/EMNU-1.05.tar.gz) = 9919870d6d2a823eb7dfe69d0ceb1cb853b78b96
 Size (emboss/emnu-1.05-20041107/EMNU-1.05.tar.gz) = 341879 bytes
 SHA1 (patch-aa) = 7651e9aa9e8dc8fc8a0444f70eda5121fc467f1c
 SHA1 (patch-ab) = ef4e491662f95246f5070375514b6959de050b57

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/12/14 19:38:52 daprice Exp $
+$NetBSD: distinfo,v 1.3 2006/08/26 15:41:20 kristerw Exp $
 
 SHA1 (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = bcd7ec95314d354cf95eda5e147899b46ee5da3d
+RMD160 (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = a22ef98dcc5ee0ab818293915076559de35eb1b4
 Size (emboss/mse-1.0.0-20041107/MSE-1.0.0.tar.gz) = 407726 bytes
 SHA1 (patch-aa) = 0408aadfa10c505cbdf93d8022da1550d9073b52
 SHA1 (patch-ab) = 0ed3942c71f223f31008244b4bb9a76af2607be8
