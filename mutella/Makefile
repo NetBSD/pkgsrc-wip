@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/02 18:00:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2006/08/26 14:35:26 airhead Exp $
 #
 
 DISTNAME=	mutella-0.4.5
@@ -11,15 +11,11 @@ COMMENT=	Console mode Gnutella client with optional HTTP interface
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-#
-# XXX: This should be removed when PR lib/29958 is closed.  Not sure how to
-#       check for native readline version with/without support though.
-#
-USE_GNU_READLINE=	yes
 
 PTHREAD_OPTS+=		require
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib.buildlink3.mk""
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
