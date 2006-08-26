@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/08/26 15:43:51 kristerw Exp $
 
-SHA1 (ruby/misen-0.11.1.tar.gz) = abfe59466e9b28d3967b22057d72723ec03cb6de
-RMD160 (ruby/misen-0.11.1.tar.gz) = ceb18bfd81d1cad14984c2e7083eb75b3ccbc589
-Size (ruby/misen-0.11.1.tar.gz) = 15758 bytes
+SHA1 (misen-0.11.1.tar.gz) = abfe59466e9b28d3967b22057d72723ec03cb6de
+RMD160 (misen-0.11.1.tar.gz) = ceb18bfd81d1cad14984c2e7083eb75b3ccbc589
+Size (misen-0.11.1.tar.gz) = 15758 bytes
