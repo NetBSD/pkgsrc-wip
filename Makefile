@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2343 2006/08/25 11:17:49 minskim Exp $
+# $Id: Makefile,v 1.2344 2006/08/26 16:11:05 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -311,6 +311,7 @@ SUBDIR+=	gde
 SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
+SUBDIR+=	geos
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	ghostpcl
