@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/26 01:43:38 thomasklausner Exp $
 
 DISTNAME=	ding-1.2
 CATEGORIES=	x11
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/	\
 DISTFILES=	ding-1.2.tar.gz		\
 		ger-eng.txt.gz
 
-MAINTAINER=	eukaryote@sympatico.ca
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-user.tu-chemnitz.de/~fri/ding/
 COMMENT=	Ding is a Dictionary lookup program for the X window system
 
