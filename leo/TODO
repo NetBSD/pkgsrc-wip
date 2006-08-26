@@ -1,0 +1,2 @@
+Need to figure out how to handle the .pyc files that are created at run time
+  the extra files cause deinstall to fail
