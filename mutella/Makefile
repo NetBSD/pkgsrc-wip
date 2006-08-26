@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/08/26 14:35:26 airhead Exp $
+# $NetBSD: Makefile,v 1.15 2006/08/26 14:48:16 airhead Exp $
 #
 
 DISTNAME=	mutella-0.4.5
@@ -16,6 +16,6 @@ PTHREAD_OPTS+=		require
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/zlib.buildlink3.mk""
+.include "../../devel/zlib/buildlink3.mk""
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
