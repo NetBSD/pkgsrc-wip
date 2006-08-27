@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/08/27 12:03:07 cheusov Exp $
+
+In order to finish rc.d.Interix installation
+you should run the following commands manually
+
+ln -s ${PKGSRC_PREFIX}/libexec/pkgsrc_rc /etc/rc2.d/S90pkgsrc
+ln -s ${PKGSRC_PREFIX}/libexec/pkgsrc_rc /etc/rc2.d/K10pkgsrc
+===========================================================================

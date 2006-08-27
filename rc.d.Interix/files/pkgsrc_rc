@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#
+# /etc/init.d/pkgsrc
+#
+# Written by Aleksey Cheusov
+#
+
+PATH=/bin:/usr/contrib/bin
+#RCORDER=@PKGSRC_PREFIX@/sbin/rcorder # doesn't work ;-(
+RCORDER=/usr/pkg/sbin/rcorder
+umask 002
+
+. /etc/init.d/funcs
+
+. /etc/rc.subr
+. /etc/rc.conf
+files=$(${RCORDER} -s nostart ${rc_rcorder_flags} /etc/rc.d/*)
+
+case $1 in
+	start)
+		printf 'Starting pkgsrc daemons...\n'
+		for rc in $files; do
+			run_rc_script $rc start
+		done
+		;;
+	stop)
+		printf 'Stopping pkgsrc daemons...\n'
+		for rc in $files; do
+			run_rc_script $rc stop
+		done
+		;;
+	*)
+		echo "usage: $0 start|stop"
+		;;
+	esac
+exit 0
