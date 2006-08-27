@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2348 2006/08/27 18:00:40 airhead Exp $
+# $Id: Makefile,v 1.2349 2006/08/27 18:05:55 airhead Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -209,9 +209,7 @@ SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
-SUBDIR+=	ecore
 SUBDIR+=	editline
-SUBDIR+=	edje
 SUBDIR+=	eic
 SUBDIR+=	ejourn
 SUBDIR+=	electricsheep
@@ -239,8 +237,6 @@ SUBDIR+=	epsg
 SUBDIR+=	erc
 SUBDIR+=	esdl
 SUBDIR+=	ethtool
-SUBDIR+=	evas
-SUBDIR+=	evidence
 SUBDIR+=	evieext
 SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
