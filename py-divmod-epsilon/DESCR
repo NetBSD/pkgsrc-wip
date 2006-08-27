@@ -1,0 +1,4 @@
+Small utility package that depends on tools too recent for Twisted (like
+datetime in python2.4) but performs generic enough functions that it can be
+used in projects that don't want to share Divmod's other projects' large
+footprint.
