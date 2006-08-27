@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2006/06/22 08:28:34 obache Exp $
+$NetBSD: patch-ab,v 1.3 2006/08/27 14:49:42 obache Exp $
 
---- upnp/inc/upnp.h.orig	2006-05-23 17:10:46.000000000 +0900
+--- upnp/inc/upnp.h.orig	2006-07-31 14:33:05.000000000 +0900
 +++ upnp/inc/upnp.h
-@@ -37,6 +37,7 @@
+@@ -37,9 +37,7 @@
  //@{
  
  #include <stdio.h>
-+#include <time.h>
+-#ifdef __FreeBSD__
+ #include <time.h>
+-#endif
  #include "ixml.h"
  #include "upnpconfig.h"
  #if UPNP_HAVE_DEBUG

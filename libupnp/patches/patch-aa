@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2006/06/26 08:49:48 obache Exp $
+$NetBSD: patch-aa,v 1.4 2006/08/27 14:49:42 obache Exp $
 
---- threadutil/src/ThreadPool.c.orig	2006-05-22 16:22:46.000000000 +0900
+--- threadutil/src/ThreadPool.c.orig	2006-07-31 14:33:05.000000000 +0900
 +++ threadutil/src/ThreadPool.c
-@@ -92,11 +92,15 @@ FreeThreadPoolJob( ThreadPool * tp,
- static int
- SetPolicyType( PolicyType in )
- {
-+#if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
-     struct sched_param current;
+@@ -95,11 +95,15 @@ SetPolicyType( PolicyType in )
+     #ifdef WIN32
+      return sched_setscheduler( 0, in);
+     #else
++    #if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
+      struct sched_param current;
  
-     sched_getparam( 0, &current );
-     current.sched_priority = DEFAULT_SCHED_PARAM;
-     return sched_setscheduler( 0, in, &current );
-+#else
-+    return 0;
-+#endif
+      sched_getparam( 0, &current );
+      current.sched_priority = DEFAULT_SCHED_PARAM;
+      return sched_setscheduler( 0, in, &current );
++    #else
++     return 0;
++    #endif
+     #endif
  }
  
- /****************************************************************************
-@@ -117,6 +121,7 @@ static int
+@@ -121,6 +125,7 @@ static int
  SetPriority( ThreadPriority priority )
  {
  
@@ -26,22 +26,26 @@ $NetBSD: patch-aa,v 1.3 2006/06/26 08:49:48 obache Exp $
      int currentPolicy;
      int minPriority = 0;
      int maxPriority = 0;
-@@ -148,6 +153,9 @@ SetPriority( ThreadPriority priority )
+@@ -152,7 +157,9 @@ SetPriority( ThreadPriority priority )
  
      return pthread_setschedparam( ithread_self(  ), currentPolicy,
                                    &newPriority );
+-
 +#else
 +    return 0;
 +#endif
- 
  }
  
-@@ -341,7 +349,7 @@ tp->stats.totalJobsLQ++; tp->stats.total
-     struct timeb t;
- 
+ /****************************************************************************
+@@ -349,10 +356,8 @@ tp->stats.totalJobsLQ++; tp->stats.total
      ftime( &t );
+ #if defined(WIN32)
+     srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ).p );
+-#elif defined(__FreeBSD__)
+-    srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ) );
+ #else
 -    srand( ( unsigned int )t.millitm + ithread_get_current_thread_id(  ) );
-+    srand( ( unsigned int )t.millitm + ( unsigned int )ithread_get_current_thread_id(  ) );
++    srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ) );
+ #endif
      }
  
- /****************************************************************************

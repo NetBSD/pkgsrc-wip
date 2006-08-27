@@ -1,12 +1,12 @@
-$NetBSD: patch-ad,v 1.2 2006/06/22 08:28:34 obache Exp $
+$NetBSD: patch-ad,v 1.3 2006/08/27 14:49:42 obache Exp $
 
---- upnp/src/urlconfig/urlconfig.c.orig	2006-05-22 16:24:10.000000000 +0900
+--- upnp/src/urlconfig/urlconfig.c.orig	2006-07-17 15:37:22.000000000 +0900
 +++ upnp/src/urlconfig/urlconfig.c
-@@ -31,6 +31,7 @@
- 
+@@ -32,6 +32,7 @@
  #include "config.h"
  #include <assert.h>
-+#include <sys/types.h>
- #include <sys/socket.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
+ #ifndef WIN32
++ #include <sys/types.h>
+  #include <sys/socket.h>
+  #include <netinet/in.h>
+  #include <arpa/inet.h>
