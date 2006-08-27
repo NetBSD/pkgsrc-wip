@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2006/03/19 18:54:37 airhead Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/27 17:57:44 airhead Exp $
 #
 
-DISTNAME=		siege-2.64
+DISTNAME=		siege-2.65
 CATEGORIES=		www
 MASTER_SITES=		ftp://sid.joedog.org/pub/siege/
 
 MAINTAINER=		airhead@users.sf.net
-HOMEPAGE=		http://www.joedog.org/siege
+HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
 COMMENT=		Website/webserver regression testing utility
 
 GNU_CONFIGURE=		yes
