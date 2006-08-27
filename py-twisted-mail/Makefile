@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:08:50 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 16:57:20 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedMail-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-mail-${TWISTED_VERSION}
-CATEGORIES=             net python mail
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Mail/0.1/
-EXTRACT_SUFX=		.tar.bz2
+MAIL_VERSION=	0.3.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-mail-${MAIL_VERSION}
+CATEGORIES=	net python mail
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/mail/
-COMMENT=		Mailserver and framework for Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/
+COMMENT=	A Twisted e-mail server
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-twisted-names>=0.1.0:../../wip/py-twisted-names
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedMail-${MAIL_VERSION}
 
-PY_PATCHPLIST=		yes
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-names>=0.3.0:../../wip/py-twisted-names
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.1.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

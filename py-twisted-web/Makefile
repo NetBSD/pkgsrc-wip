@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:01:08 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 17:01:43 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedWeb-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-web-${TWISTED_VERSION}
-CATEGORIES=             net python www
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Web/0.5/
-EXTRACT_SUFX=		.tar.bz2
+WEB_VERSION=	0.6.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-web-${WEB_VERSION}
+CATEGORIES=	net python www
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/web/
-COMMENT=		Webserver and webframework of Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com
+COMMENT=	A Twisted web server.
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedWeb-${WEB_VERSION}
 
-PY_PATCHPLIST=		yes
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.5.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

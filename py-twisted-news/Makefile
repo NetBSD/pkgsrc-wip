@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:05:09 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 16:59:20 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedNews-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-news-${TWISTED_VERSION}
-CATEGORIES=             net python
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/News/0.1/
-EXTRACT_SUFX=		.tar.bz2
+NEWS_VERSION=	0.2.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-news-${NEWS_VERSION}
+CATEGORIES=	net python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/news/
-COMMENT=		Newsserver and framework for Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/
+COMMENT=	An NNTP-based news service
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-twisted-mail>=0.1.0:../../wip/py-twisted-mail
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedNews-${NEWS_VERSION}
 
-PY_PATCHPLIST=		yes
+
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-mail>=0.3.0:../../wip/py-twisted-mail
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.1.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

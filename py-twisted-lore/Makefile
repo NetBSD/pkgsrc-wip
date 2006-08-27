@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:10:17 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 16:55:54 milosn Exp $
 
-DISTNAME=		TwistedLore-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-lore-${TWISTED_VERSION}
-CATEGORIES=             textproc python
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Lore/0.1/
-EXTRACT_SUFX=		.tar.bz2
+.include "../../wip/py-twisted-core/version.mk"
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/lore/
-COMMENT=		Documentation system for Twisted
+LORE_VERSION=	0.2.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-lore-${LORE_VERSION}
+CATEGORIES=	textproc python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/
+COMMENT=	The Twisted documentation deneration system
 
-PY_PATCHPLIST=		yes
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedLore-${LORE_VERSION}
+
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.6.0:../../wip/py-twisted-web
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.1.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

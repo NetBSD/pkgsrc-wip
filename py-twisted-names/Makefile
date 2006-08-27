@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:07:01 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 16:58:27 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedNames-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-names-${TWISTED_VERSION}
-CATEGORIES=             net python
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Names/0.1/
-EXTRACT_SUFX=		.tar.bz2
+NAMES_VERSION=	0.3.0
+DISTNAME=       Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-names-${NAMES_VERSION}
+CATEGORIES=	net python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=   .tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/names/
-COMMENT=		DNS implementation for Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/
+COMMENT=	DNS implementation for Twisted
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-twisted-flow>=0.1.0:../../wip/py-twisted-flow
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedNames-${NAMES_VERSION}
 
-PY_PATCHPLIST=		yes
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.1.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

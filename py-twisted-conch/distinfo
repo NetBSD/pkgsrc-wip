@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/29 05:14:22 sifu Exp $
+$NetBSD: distinfo,v 1.2 2006/08/27 16:54:29 milosn Exp $
 
-SHA1 (TwistedConch-0.5.0.tar.bz2) = 2f5df74316b395468093474943b638840872b02f
-RMD160 (TwistedConch-0.5.0.tar.bz2) = cd64533a0a4580b959e442bc03f5527c8afd3541
-Size (TwistedConch-0.5.0.tar.bz2) = 118875 bytes
+SHA1 (Twisted-2.4.0.tar.bz2) = d605333f7ca3e2479a5dd31044e540ee40a54838
+RMD160 (Twisted-2.4.0.tar.bz2) = 2d43f5b24c24bddbdacdb2752ee3c39bdd143c6f
+Size (Twisted-2.4.0.tar.bz2) = 2014921 bytes

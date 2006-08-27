@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 05:14:22 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 16:54:29 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedConch-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-conch-${TWISTED_VERSION}
-CATEGORIES=             net security python
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Conch/0.5/
-EXTRACT_SUFX=		.tar.bz2
+CONCH_VERSION=	0.7.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-conch-${CONCH_VERSION}
+CATEGORIES=	net security python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/conch
-COMMENT=		SSHv2 implementation for Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/projects/conch
+COMMENT=	SSHv2 implementation written in Python
 
-DEPENDS+=               ${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=               ${PYPKGPREFIX}-amkCrypto>=1.9a6nb3:../../security/py-amkCrypto
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedConch-${CONCH_VERSION}
 
-PY_PATCHPLIST=		yes
+
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-amkCrypto>=1.9a6nb3:../../security/py-amkCrypto
+
 PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.5.0
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

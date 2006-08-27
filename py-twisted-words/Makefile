@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/03/29 04:59:45 sifu Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 17:03:41 milosn Exp $
+.include "../../wip/py-twisted-core/version.mk"
 
-DISTNAME=		TwistedWords-${TWISTED_VERSION}
-PKGNAME=		${PYPKGPREFIX}-twisted-words-${TWISTED_VERSION}
-CATEGORIES=             net python chat
-MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Words/0.1/
-EXTRACT_SUFX=		.tar.bz2
+WORDS_VERSION=	0.4.0
+DISTNAME=	Twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-words-${WORDS_VERSION}
+CATEGORIES=	net python chat
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sifu@0xx0.net
-HOMEPAGE=		http://www.twistedmatrix.com/projects/words/
-COMMENT=		IM implementation for Twisted
+MAINTAINER=	milos.negovanovic@googlemail.com
+HOMEPAGE=	http://www.twistedmatrix.com/
+COMMENT=	A Twisted chat service
 
-DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
-DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
-DEPENDS+=		${PYPKGPREFIX}-twisted-xish>=0.1.0:../../wip/py-twisted-xish
+WRKSRC=	${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedWords-${WORDS_VERSION}
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-TWISTED_VERSION=	0.1.0
+
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.6.0:../../wip/py-twisted-web
+
+PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
