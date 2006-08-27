@@ -1,3 +1,0 @@
-This is libnum from the CAML-light contrib directory.
-It provides arbitrary-precision arithmetic functions over integers
-and rationals to CAML.

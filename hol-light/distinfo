@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:21 rillig Exp $
-
-SHA1 (holl-1.0.tar.gz) = 0eaa733afebf9a95b45fa05e26f73eba0148ac2e
-RMD160 (holl-1.0.tar.gz) = 01fee93affb6cf2af5bf88c82ea27d7dff7734b0
-Size (holl-1.0.tar.gz) = 263914 bytes
-SHA1 (patch-aa) = 5b10edc885f0569f0c4b0cbfccac4f2e18f3dc7a
