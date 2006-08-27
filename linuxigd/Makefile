@@ -1,36 +1,30 @@
-# $NetBSD: Makefile,v 1.7 2006/06/22 08:18:38 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/08/27 15:00:00 obache Exp $
 #
 
-DISTNAME=	linuxigd-0.92
+DISTNAME=	linuxigd-0.95
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://linux-igd.sourceforge.net/
 COMMENT=	Linux UPnP Internet Gateway Device
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_LANGUAGES=	c
+USE_TOOLS+=	gmake pkg-config
 
 .include "options.mk"
 
-WRKSRC=		${WRKDIR}/linux-igd
+INSTALLATION_DIRS=	${PKG_SYSCONFDIR:S|^${PREFIX}/||}/linuxigd
 
-PKG_SYSCONFSUBDIR=	linuxigd
+MAKE_ENV+=	LIBS=${LIBS:M*:Q}
 
-EGDIR=		${PREFIX}/share/examples/linuxigd
-CONF_FILES=	${EGDIR:Q}/gateconnSCPD.xml ${PKG_SYSCONFDIR:Q}/gateconnSCPD.xml
-CONF_FILES+=	${EGDIR:Q}/gatedesc.skl ${PKG_SYSCONFDIR:Q}/gatedesc.skl
-CONF_FILES+=	${EGDIR:Q}/gatedesc.xml ${PKG_SYSCONFDIR:Q}/gatedesc.xml
-CONF_FILES+=	${EGDIR:Q}/gateicfgSCPD.xml ${PKG_SYSCONFDIR:Q}/gateicfgSCPD.xml
-CONF_FILES+=	${EGDIR:Q}/gateinfoSCPD.xml ${PKG_SYSCONFDIR:Q}/gateinfoSCPD.xml
+CONF_FILES=	${PREFIX}/share/examples/upnpd.conf ${PKG_SYSCONFDIR:Q}/upnpd.conf
 RCD_SCRIPTS=	linuxigd
 
 SUBST_CLASSES+=		cfgdir
 SUBST_STAGE.cfgdir=	pre-configure
-SUBST_FILES.cfgdir=	gateway.h
+SUBST_FILES.cfgdir=	globals.h etc/upnpd.conf
 SUBST_SED.cfgdir=	-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|'
 
-.include "../../wip/libupnp10/buildlink3.mk"
+.include "../../wip/libupnp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:00 jeremy-c-reed Exp $
-bin/upnpd
-share/examples/linuxigd/gateconnSCPD.xml
-share/examples/linuxigd/gatedesc.skl
-share/examples/linuxigd/gatedesc.xml
-share/examples/linuxigd/gateicfgSCPD.xml
-share/examples/linuxigd/gateinfoSCPD.xml
+@comment $NetBSD: PLIST,v 1.3 2006/08/27 15:00:00 obache Exp $
+man/man8/upnpd.8
+sbin/upnpd
+etc/linuxigd/dummy.xml
+etc/linuxigd/gateconnSCPD.xml
+etc/linuxigd/gatedesc.xml
+etc/linuxigd/gateicfgSCPD.xml
+etc/linuxigd/ligd.gif
+share/examples/upnpd.conf
 share/examples/rc.d/linuxigd
-@dirrm share/examples/linuxigd

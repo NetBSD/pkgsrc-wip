@@ -1,6 +1,4 @@
-$Id: TODO,v 1.2 2005/04/22 02:30:56 obache Exp $
-
-Core dumped when stopping on NetBSD 2.0(i386).
+$Id: TODO,v 1.3 2006/08/27 15:00:00 obache Exp $
 
 Can compile on FreeBSD/OpenBSD/Linux ?
 

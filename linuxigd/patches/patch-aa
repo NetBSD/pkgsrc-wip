@@ -1,43 +1,64 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/13 12:48:22 obache Exp $
+$NetBSD: patch-aa,v 1.2 2006/08/27 15:00:00 obache Exp $
 
---- Makefile.orig	2002-12-14 07:16:22.000000000 +0900
+--- Makefile.orig	2006-05-24 07:16:36.000000000 +0900
 +++ Makefile
-@@ -1,6 +1,5 @@
- CC=g++
--INCLUDES= -I/usr/include/upnp 
--LIBS= -lpthread  /usr/lib/libupnp.so
-+LIBS= /usr/lib/libupnp.so
+@@ -1,43 +1,39 @@
+-PREFIX=/usr
+-LIBUPNP_PREFIX=/usr
+-#LIBIPTC_PREFIX=/usr
+-
+-CC=gcc
+-INCLUDES= -I$(LIBUPNP_PREFIX)/include -I../include
+-LIBS= -lpthread -lupnp -lixml -lthreadutil -L$(LIBUPNP_PREFIX)/lib -L../libs
++LIBS= $(PTHREAD_LIBS) `pkg-config libupnp --libs` -L../libs
+ FILES= main.o gatedevice.o pmlist.o util.o config.o
  
+-CFLAGS += -Wall -g -O2
++CFLAGS += -Wall -g -O2 $(PTHREAD_CFLAGS)
++LDFLAGS += $(PTHREAD_LDFLAGS)
  
- ifeq ($(DEBUG),1)
-@@ -9,24 +8,24 @@ else
- OPT = -O2
+ ifdef HAVE_LIBIPTC
+ ifdef LIBIPTC_PREFIX
+ LIBS += -L$(LIBIPTC_PREFIX)/lib
+-INCLUDES += -I$(LIBIPTC_PREFIX)/include
++CFLAGS += -I$(LIBIPTC_PREFIX)/include
  endif
  
--CFLAGS += -Wall -g $(OPT)
-+CFLAGS += -Wall -g $(OPT) $(PTHREAD_CFLAGS)
+ LIBS += -liptc
+-INCLUDES += -DHAVE_LIBIPTC
++CFLAGS += -DHAVE_LIBIPTC
+ FILES += iptc.o
+ endif
  
- APPS = upnpd
+ all: upnpd
  
- all: $(APPS)
- 
- upnpd:  gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o
--	$(CC)  $(CFLAGS) gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o $(LIBS) -o  $@ 
-+	$(CC)  $(LDFLAGS) gate.o gateway.o sample_util.o ipcon.o portmap.o pmlist.o $(LIBS) -o  $@ 
+ upnpd: $(FILES)
+-	$(CC) $(CFLAGS) $(FILES) $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $(FILES) $(LIBS) -o $@
  	@echo "make $@ finished on `date`"
  
- %.o:	%.cpp
+ %.o:	%.c
 -	$(CC) $(CFLAGS) $(INCLUDES) -c $<
 +	$(CC) $(CFLAGS) -c $<
  
  clean:
- 	rm -f *.o $(APPS)
+ 	rm -f *.o upnpd
  
  install: upnpd
--	@install -d /etc/linuxigd
--	@install etc/* /etc/linuxigd
--	@install upnpd /usr/bin
-+	@install -d ${PREFIX}/share/examples/linuxigd
-+	@install etc/* ${PREFIX}/share/examples/linuxigd
-+	@install upnpd ${PREFIX}/bin
- 
+-	install -d /etc/linuxigd
+-	install etc/gatedesc.xml /etc/linuxigd
+-	install etc/gateconnSCPD.xml  /etc/linuxigd
+-	install etc/gateicfgSCPD.xml /etc/linuxigd
+-	install etc/dummy.xml /etc/linuxigd
+-	install upnpd $(PREFIX)/sbin
+-	install upnpd.8 $(PREFIX)/share/man/man8
+-	if [ ! -f /etc/upnpd.conf ]; then install etc/upnpd.conf /etc; fi
++	${BSD_INSTALL_DATA_DIR} -d ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gatedesc.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/ligd.gif ${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_PROGRAM} upnpd $(PREFIX)/sbin
++	${BSD_INSTALL_MAN} upnpd.8 $(PREFIX)/$(PKGMANDIR)/man8
++	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples

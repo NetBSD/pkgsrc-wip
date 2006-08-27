@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1 2006/08/27 15:00:10 obache Exp $
+
+--- globals.h.orig	2006-02-02 08:53:39.000000000 +0900
++++ globals.h
+@@ -26,7 +26,7 @@ struct GLOBALS {
+ typedef struct GLOBALS* globals_p;
+ extern struct GLOBALS g_vars;
+ 
+-#define CONF_FILE "/etc/upnpd.conf"
++#define CONF_FILE "@CONFDIR@/upnpd.conf"
+ #define MAX_CONFIG_LINE 256
+ #define IPTABLES_DEFAULT_FORWARD_CHAIN "FORWARD"
+ #define IPTABLES_DEFAULT_PREROUTING_CHAIN "PREROUTING"
+@@ -34,6 +34,6 @@ extern struct GLOBALS g_vars;
+ #define DEFAULT_UPSTREAM_BITRATE "0"
+ #define DEFAULT_DOWNSTREAM_BITRATE "0"
+ #define DESC_DOC_DEFAULT "gatedesc.xml"
+-#define XML_PATH_DEFAULT "/etc/linuxigd"
++#define XML_PATH_DEFAULT "@CONFDIR@/linuxigd"
+ 
+ #endif // _GLOBALS_H_

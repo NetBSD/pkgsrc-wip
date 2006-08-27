@@ -1,0 +1,17 @@
+$NetBSD: patch-ah,v 1.1 2006/08/27 15:00:09 obache Exp $
+
+--- etc/upnpd.conf.orig	2006-02-02 08:53:39.000000000 +0900
++++ etc/upnpd.conf
+@@ -64,9 +64,9 @@ description_document_name = gatedesc.xml
+ 
+ # The path to the xml documents
+ # Do not include the trailing "/"
+-# default = /etc/linuxigd
++# default = @CONFDIR@/linuxigd
+ # WARNING! The make install does put the xml files
+-# in /etc/linuxigd, if you change this variable
++# in @CONFDIR@/linuxigd, if you change this variable
+ # you have to make sure the xml docs are in the
+ # right place
+-xml_document_path = /etc/linuxigd
++xml_document_path = @CONFDIR@/linuxigd
