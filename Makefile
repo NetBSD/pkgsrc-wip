@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2347 2006/08/27 17:41:21 milosn Exp $
+# $Id: Makefile,v 1.2348 2006/08/27 18:00:40 airhead Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -122,8 +122,6 @@ SUBDIR+=	c2html
 SUBDIR+=	cabal
 SUBDIR+=	cabot
 SUBDIR+=	cairo-java
-SUBDIR+=	caml-libnum
-SUBDIR+=	caml-libunix
 SUBDIR+=	cawf
 SUBDIR+=	cb2bib
 SUBDIR+=	ccid
@@ -399,7 +397,6 @@ SUBDIR+=	hellanzb
 SUBDIR+=	help2man
 SUBDIR+=	heroes
 SUBDIR+=	highlight
-SUBDIR+=	hol-light
 SUBDIR+=	hping3
 SUBDIR+=	hpoj
 SUBDIR+=	ht2html
