@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/27 12:03:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/27 12:04:02 cheusov Exp $
 #
 
 DISTNAME=		rc.d.Interix-0.0.1
@@ -10,9 +10,9 @@ MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		#none
 COMMENT=		NetBSD rc.d system for MS Interix
 
-#ONLY_FOR_PLATFORM=	Interix-*-*
-#DEPENDS+=		rcorder-[0-9]*:../../pkgtools/rcorder
-#DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
+ONLY_FOR_PLATFORM=	Interix-*-*
+DEPENDS+=		rcorder-[0-9]*:../../pkgtools/rcorder
+DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
