@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/20 13:01:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2006/08/27 11:08:17 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	dict-server-1.10.7
@@ -10,18 +10,30 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol server
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_TOOLS+=		gmake yacc m4:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--disable-plugin
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/dictd
 
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
 MESSAGE_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 FILES_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 
-PKG_GROUPS=		dictd
-PKG_USERS=		dictd:dictd
-PKG_GECOS.dictd=	Dictionary\ protocol\ server\ user
+DICTD_USER?=		dictd
+.if ${OPSYS} == "Interix"
+DICTD_GROUP?=		nogroup
+.else
+DICTD_GROUP?=		dictd
+.endif
+
+PKG_GROUPS=		${DICTD_GROUP}
+PKG_USERS=		${DICTD_USER}:${DICTD_GROUP}
+PKG_GECOS.${DICTD_USER}=	Dictionary\ protocol\ server\ user
+PKG_HOME.${DICT_USER}=		/tmp
+PKG_SHELL.${DICT_USER}=		${NOLOGIN}
 
 RCD_SCRIPTS=		dictd
 
