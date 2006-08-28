@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/07/16 16:08:38 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/28 11:28:52 emil_s Exp $
 #
 
-DISTNAME=		lhs2tex-1.10pre
+DISTNAME=		lhs2tex-1.11
 CATEGORIES=		print devel
 MASTER_SITES=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
 EXTRACT_SUFX=		.tar.bz2
@@ -12,24 +12,6 @@ COMMENT=		Preprocessor for typesetting Haskell sources with LaTeX
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-
-
-
-# We must convert ${PREFIX} to a comma separated list of quoted strings
-# e.g. /usr/pkg -> "usr","pkg"
-PREFIX_HS_cmd=		${ECHO} ${PREFIX} |             \
-			${SED}  -e 's|^/*||'            \
-				-e 's|/*$$||'		\
-				-e 's|/|","|g'    	\
-				-e 's|\(.*\)|"\1"|'
-PREFIX_HS=		${PREFIX_HS_cmd:sh}
-
-# and then hardcode the path to directory where the latex format file is found
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	pre-configure
-SUBST_MESSAGE.path=	Fixing hardcoded path
-SUBST_FILES.path=	FileNameUtils.lhs
-SUBST_SED.path=		-e 's|@PREFIX_HS@|${PREFIX_HS}|'
 
 DOCDIR=			${PREFIX}/share/doc/lhs2tex
 

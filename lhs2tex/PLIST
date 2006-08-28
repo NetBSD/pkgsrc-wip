@@ -1,14 +1,27 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/15 01:56:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/08/28 11:28:52 emil_s Exp $
 bin/lhs2TeX
+man/man1/lhs2TeX.1
+share/doc/${PKGNAME}/Guide2.pdf
 share/doc/lhs2tex/Guide2.pdf
 share/doc/lhs2tex/INSTALL
 share/doc/lhs2tex/RELEASE
 share/doc/lhs2tex/polytable.pdf
+share/lhs2tex/colorcode.fmt
+share/lhs2tex/forall.fmt
+share/lhs2tex/greek.fmt
+share/lhs2tex/jfpcompat.fmt
 share/lhs2tex/lhs2TeX.fmt
 share/lhs2tex/lhs2TeX.sty
-share/texmf/tex/latex/lazylist/lazylist.sty
-share/texmf/tex/latex/polytable/polytable.sty
-@dirrm share/texmf/tex/latex/polytable
-@dirrm share/texmf/tex/latex/lazylist
+share/lhs2tex/polycode.fmt
+share/lhs2tex/spacing.fmt
+${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist/lazylist.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable/polytable.sty
+share/texmf-var/ls-R
+share/texmf/ls-R
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex
 @dirrm share/lhs2tex
+@dirrm share/doc/${PKGNAME}
 @dirrm share/doc/lhs2tex
