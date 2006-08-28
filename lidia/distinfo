@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/10 17:14:58 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2006/08/28 09:50:59 emil_s Exp $
 
-SHA1 (LiDIA-2.1.3.tar.gz) = 066e8e1b90f802d2bac5eabf31d0e3f6bfd952b1
-RMD160 (LiDIA-2.1.3.tar.gz) = 2e2635d811f5cd3c730a3b5bb94f9e1b23e6edea
-Size (LiDIA-2.1.3.tar.gz) = 22181879 bytes
+SHA1 (lidia-2.2.0.tar.gz) = 4def5f83bfaec2446aa79299fd7b13e0a0a614e8
+RMD160 (lidia-2.2.0.tar.gz) = 9f6fbd8ba0f6aa1160dde0d2bc0bb06209b72fac
+Size (lidia-2.2.0.tar.gz) = 22370966 bytes
