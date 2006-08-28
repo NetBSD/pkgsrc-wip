@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/25 21:17:27 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2006/08/28 11:48:26 plunky Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
@@ -30,7 +30,7 @@ SUBST_STAGE.dir=	post-patch
 SUBST_MESSAGE.dir=	Fixing path to firmware directory.
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bcmfw ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bcmfw ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/bcmfw.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM-LEGAL.txt ${PREFIX}/${FIRMWARE_DIR}
 	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM2033-FW.bin ${PREFIX}/${FIRMWARE_DIR}
