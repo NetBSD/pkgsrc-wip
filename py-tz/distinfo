@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/28 16:47:18 milosn Exp $
+
+SHA1 (pytz-2006g.tar.bz2) = 87062630700b5eaa47e8b96c7a03b5eba3b86ebe
+RMD160 (pytz-2006g.tar.bz2) = 647725ddd2660b117d89400365a1570310e8c664
+Size (pytz-2006g.tar.bz2) = 110615 bytes
