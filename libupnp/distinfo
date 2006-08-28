@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/08/27 14:49:42 obache Exp $
+$NetBSD: distinfo,v 1.6 2006/08/28 12:05:28 obache Exp $
 
 SHA1 (libupnp-1.4.1.tar.gz) = 4c791fe92ec55cc49e406fbe02d6f8acd773c3bd
 RMD160 (libupnp-1.4.1.tar.gz) = 56f406160d030d5452710755bfd1b1ec606de3b3
 Size (libupnp-1.4.1.tar.gz) = 1289149 bytes
-SHA1 (patch-ad.bak) = 53999d1ea566d74027cc6c00be28c7bdd7fa5304
-SHA1 (patch-ae.bak) = 78b9882ff31531b19ea02df08deffbecd99d4c18
 SHA1 (patch-aa) = af09b371fdaa699400af17e86567cd4bcb72f855
 SHA1 (patch-ab) = 33431d0f077e54635ec90853e69796891fecf289
 SHA1 (patch-ac) = a4d457493558197872d062fc9adfdea9d0ad6827
