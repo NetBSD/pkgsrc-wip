@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/28 11:45:22 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/28 18:59:05 milosn Exp $
 
 VERTEX_VERSION=	0.2.0
 DISTNAME=	Vertex-${VERTEX_VERSION}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.0:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_ACCEPTED=       24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

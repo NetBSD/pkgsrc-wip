@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/28 01:01:58 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2006/08/28 18:56:14 milosn Exp $
 
 EPSILON_VERSION=	0.5.0
 DISTNAME=	Epsilon-${EPSILON_VERSION}
@@ -14,6 +14,7 @@ COMMENT=	A Python utilities package, most famous for its Time class
 DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
 
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_ACCEPTED=       24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
