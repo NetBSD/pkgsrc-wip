@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2352 2006/08/28 11:46:47 milosn Exp $
+# $Id: Makefile,v 1.2353 2006/08/28 16:48:55 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1109,6 +1109,7 @@ SUBDIR+=	py-twisted-runner
 SUBDIR+=	py-twisted-web
 SUBDIR+=	py-twisted-words
 SUBDIR+=	py-twisted-zopeinterface
+SUBDIR+=	py-tz
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
