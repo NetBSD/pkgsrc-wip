@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/31 03:11:10 obache Exp $
+# $NetBSD: Makefile,v 1.7 2006/08/28 12:42:53 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -16,6 +16,12 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 OWN_DIRS=		${PREFIX:Q}/lib/mecab/dic
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+USE_TOOLS+=		gmake
+.endif
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
