@@ -1,0 +1,4 @@
+Text Text Revolution is a clone of the popular Dance Dance Revolution
+for character displays. It currently supports pyDDR .step files to an
+extent (no hold arrows. ncurses doesn't really support holding keys).
+Rudimentary joystick (DDR mat) support is working now.
