@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/27 23:54:39 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/28 01:01:58 milosn Exp $
 
 EPSILON_VERSION=	0.5.0
 DISTNAME=	Epsilon-${EPSILON_VERSION}
-PKGNAME=	${PYPKGPREFIX}-divmod-espilon-${EPSILON_VERSION}
+PKGNAME=	${PYPKGPREFIX}-divmod-epsilon-${EPSILON_VERSION}
 CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
