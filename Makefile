@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2349 2006/08/27 18:05:55 airhead Exp $
+# $Id: Makefile,v 1.2350 2006/08/28 00:00:53 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1063,6 +1063,8 @@ SUBDIR+=	py-aspell
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-dateutil
+SUBDIR+=	py-divmod-epsilon
+SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-django
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
