@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/08/28 01:18:15 milosn Exp $
+
+SHA1 (Axiom-0.5.0.tar.gz) = 9ab64f2316f4f174cf8279fbe91e8a0a65f0d948
+RMD160 (Axiom-0.5.0.tar.gz) = 16d8b67ba7bb2dddb932cc675e0114d5a6c91a84
+Size (Axiom-0.5.0.tar.gz) = 103771 bytes
