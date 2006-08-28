@@ -1,0 +1,2 @@
+* Fix CFLAGS...-g and -I doesn't have to be forced
+* use ranlib for .a?
