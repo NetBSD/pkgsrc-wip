@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/10 05:05:31 obache Exp $
+# $NetBSD: Makefile,v 1.19 2006/08/28 12:35:35 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.45
 PKGNAME=	avifile-devel-0.7.45
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-ffmpeg
 PLIST_SUBST+=	FFMPEG_COMMENT=
 .else
 CONFIGURE_ARGS+=	--disable-x86opt
-CONFIGURE_ARGS+=	--disalbe-ffmpeg
+CONFIGURE_ARGS+=	--disable-ffmpeg
 PLIST_SUBST+=	FFMPEG_COMMENT="@comment "
 .endif
 .if ${OPSYS} == "Linux"
