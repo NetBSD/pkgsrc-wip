@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2355 2006/08/29 12:49:54 rillig Exp $
+# $Id: Makefile,v 1.2356 2006/08/29 16:05:47 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -39,6 +39,7 @@ SUBDIR+=	acpid
 SUBDIR+=	adamem
 SUBDIR+=	admsmb
 SUBDIR+=	aespipe
+SUBDIR+=	afflib
 SUBDIR+=	aircrack
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
@@ -292,7 +293,7 @@ SUBDIR+=	gaim
 SUBDIR+=	gaim-icb
 SUBDIR+=	gajim
 SUBDIR+=	galib
-SUBDIR+=	gambas
+SUBDIR+=	gambas2
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcl
@@ -1151,6 +1152,7 @@ SUBDIR+=	quodlibet
 SUBDIR+=	r8s
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
+SUBDIR+=	rc.d.Interix
 SUBDIR+=	rc.subr
 SUBDIR+=	rdup
 SUBDIR+=	readseq
@@ -1350,6 +1352,7 @@ SUBDIR+=	treeview
 SUBDIR+=	tripwire2
 SUBDIR+=	tsh
 SUBDIR+=	tsm
+SUBDIR+=	ttr
 SUBDIR+=	ttysnoop
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tumble
