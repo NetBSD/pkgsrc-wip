@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/21 20:28:19 leuzi Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/29 11:37:59 leuzi Exp $
 bin/scribus
 include/scribus/about.h
 include/scribus/actionmanager.h
@@ -246,6 +246,7 @@ lib/scribus/plugins/liboodrawimp.la
 lib/scribus/plugins/libsaveastemplateplugin.la
 lib/scribus/plugins/libscribusexportpixmap.la
 lib/scribus/plugins/libscribusshortwords.la
+lib/scribus/plugins/libscriptplugin.la
 lib/scribus/plugins/libsvgexplugin.la
 lib/scribus/plugins/libsvgimplugin.la
 lib/scribus/profiles/Fogra27L.icm
@@ -957,6 +958,26 @@ share/scribus/loremipsum/loremipsum.xml
 share/scribus/loremipsum/russian.xml
 share/scribus/plugins/barcode.ps
 share/scribus/plugins/scribus-short-words.rc
+share/scribus/samples/3columnA4.py
+share/scribus/samples/3columnUSLTR.py
+share/scribus/samples/Calendar.py
+share/scribus/samples/ReadMe
+share/scribus/samples/Sample1.py
+share/scribus/samples/golden-mean.py
+share/scribus/samples/legende.py
+share/scribus/samples/moins_10_pourcent_group.py
+share/scribus/samples/plus_10_pourcent_group.py
+share/scribus/samples/pochette_cd.py
+share/scribus/samples/quote.py
+share/scribus/samples/sample_db_usage.py
+share/scribus/samples/trait_de_coupe.py
+share/scribus/samples/wordcount.py
+share/scribus/scripts/CalendarWizard.py
+share/scribus/scripts/ChangeLog
+share/scribus/scripts/FontSample.py
+share/scribus/scripts/NEWS
+share/scribus/scripts/ReadMe
+share/scribus/scripts/TODO
 share/scribus/templates/br1/br1.png
 share/scribus/templates/br1/br1.sla.gz
 share/scribus/templates/br1/br1tn.png
@@ -984,6 +1005,8 @@ share/scribus/templates/textbased/textbasedtn.png
 @dirrm share/scribus/templates/nl1
 @dirrm share/scribus/templates/br1
 @dirrm share/scribus/templates
+@dirrm share/scribus/scripts
+@dirrm share/scribus/samples
 @dirrm share/scribus/plugins
 @dirrm share/scribus/loremipsum
 @dirrm share/scribus/icons
