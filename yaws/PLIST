@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/03 11:13:40 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/08/29 08:18:27 bartoszkuzma Exp $
 bin/yaws
 man/man1/yaws.1
 man/man5/yaws.conf.5
@@ -255,6 +255,7 @@ share/yaws/www/urandom.yaws
 share/yaws/www/yaws-1.55_to_1.56.patch
 share/yaws/www/ybed.erl
 share/yaws/www/yman.yaws
+share/examples/rc.d/yaws
 share/examples/yaws/yaws.conf
 @dirrm lib/yaws/ebin
 @exec ${MKDIR} %D/lib/yaws/examples/ebin
