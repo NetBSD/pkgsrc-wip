@@ -1,15 +1,9 @@
-#!/bin/sh
-# $NetBSD: INSTALL,v 1.1.1.1 2005/11/07 16:51:51 emil_s Exp $
-
 PREFIX=@PREFIX@
 PKGVERSION=@PKGVERSION@
 GHCVERSION=@GHCVERSION@
 
-PKGNAME=$1
-STAGE=$2
-
 case ${STAGE} in
-    POST-INSTALL )
+    POST-INSTALL)
 
 echo "name: Cabal
 version: ${PKGVERSION}
@@ -58,5 +52,3 @@ haddock-interfaces:
 haddock-html:" | /usr/pkg/bin/ghc-pkg update -
 ;;
 esac
-
-exit 0
