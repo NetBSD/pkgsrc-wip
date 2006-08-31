@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/05/13 15:12:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/08/31 12:31:12 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -12,20 +12,26 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mueller-dic.chat.ru/
 COMMENT=	DICTD data for English-Russian dictionary by Mueller
 
-DEPENDS+=	dict-server-[0-9]*:../../textproc/dict-server
+DEPENDS+=	dict-server-[0-9]*:../../wip/dict-server
 
-BUILD_DEPENDS+=	dict-server>=1.9.14:../../textproc/dict-server
+BUILD_DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
 BUILD_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
+BUILD_DEPENDS+=	metamail>=1.10.2:../../mail/metamail
 
 # we need GNU fmt
 BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils
 
-WRKSRC=		${WRKDIR}/usr/local/share/dict
+WRKSRC=		${WRKDIR}/mueller7/usr/local/share/dict
 
-USE_TOOLS+=	gsed perl #gfmt is unfortunately not supported
+USE_TOOLS+=	gsed perl bzip2 #gfmt is unfortunately not supported
 
 pre-configure:
 	${CP} files/mueller2utf8 files/to-dict ${WRKSRC}
+
+do-extract:
+	${MKDIR} ${WRKDIR}/mueller7
+	cd ${WRKDIR}/mueller7 && \
+	bzip2 -dc ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | tar -xf -
 
 do-build:
 	cd ${WRKSRC} && \
