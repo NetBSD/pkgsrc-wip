@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/08/31 09:13:54 obache Exp $
+
+--- configure.orig	2006-07-14 21:04:46.000000000 +0900
++++ configure
+@@ -1361,7 +1361,7 @@ archlibdir='${libexecdir}/emacs/${versio
+ docdir='${datadir}/emacs/${version}/etc'
+ gamedir='${localstatedir}/games/emacs'
+ 
+-gameuser=games
++gameuser=${GAMEOWN}
+ 
+ 
+ # Check whether --with-gcc or --without-gcc was given.
