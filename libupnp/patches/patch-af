@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.4 2006/08/31 09:15:32 obache Exp $
+
+--- upnp/sample/common/sample_util.c.orig	2006-07-17 15:37:21.000000000 +0900
++++ upnp/sample/common/sample_util.c
+@@ -67,7 +67,9 @@ SampleUtil_Initialize( print_string prin
+ 
+         gPrintFun = print_function;
+         ithread_mutexattr_init( &attr );
++#ifdef linux
+         ithread_mutexattr_setkind_np( &attr, ITHREAD_MUTEX_RECURSIVE_NP );
++#endif
+         ithread_mutex_init( &display_mutex, &attr );
+         ithread_mutexattr_destroy( &attr );
+         initialize = 0;

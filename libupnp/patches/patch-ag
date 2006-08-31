@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.3 2006/08/31 09:15:32 obache Exp $
+
+--- docs/dist/Makefile.in.orig	2006-08-11 14:27:40.000000000 +0900
++++ docs/dist/Makefile.in
+@@ -732,6 +732,8 @@ uninstall-info-am:
+ install-nobase_docsDATA: $(nobase_docs_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(docsdir)" || $(mkdir_p) "$(DESTDIR)$(docsdir)"
++	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/upnp"
++	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/ixml"
+ 	@$(am__vpath_adj_setup) \
+ 	list='$(nobase_docs_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
