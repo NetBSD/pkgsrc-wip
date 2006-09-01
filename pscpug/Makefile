@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/06/23 15:44:33 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/01 13:02:37 bartoszkuzma Exp $
 #
 
-DISTNAME=		pscpug031
-PKGNAME=		pscpug-0.3.1
+DISTNAME=		pscpug032
+PKGNAME=		pscpug-0.3.2
 CATEGORIES=		sysutils wip
 MASTER_SITES=		http://www.diablonet.net/~mercadal/projects/pscpug/
 EXTRACT_SUFX=		.tgz
