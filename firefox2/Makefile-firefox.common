@@ -1,8 +1,8 @@
-# $NetBSD: Makefile-firefox.common,v 1.5 2006/08/03 16:35:52 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.6 2006/09/01 13:53:37 ghen Exp $
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		2.0${SUB_VER}
-SUB_VER=		beta1
+SUB_VER=		beta2
 DIST_VER=		${MOZ_VER:S/beta/b/}
 EXTRACT_SUFX=		.tar.bz2
 
@@ -13,7 +13,7 @@ MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${DIST_VE
 MASTER_SITES+=		http://public.planetmirror.com.au/pub/firefox/releases/${DIST_VER}/source/
 MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/firefox/releases/${DIST_VER}/source/
 
-HOMEPAGE=		http://www.mozilla.org/projects/bonecho/
+HOMEPAGE=		http://www.mozilla.org/projects/bonecho/releases/2.0b2.html
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/firefox2/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/firefox2/patches

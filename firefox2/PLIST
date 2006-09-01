@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/08/03 16:35:52 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/09/01 13:53:37 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -175,6 +175,7 @@ lib/${MOZILLA}/components/filepicker.xpt
 lib/${MOZILLA}/components/find.xpt
 lib/${MOZILLA}/components/gfx.xpt
 lib/${MOZILLA}/components/gksvgrenderer.xpt
+lib/${MOZILLA}/components/globalstore.js
 lib/${MOZILLA}/components/history.xpt
 lib/${MOZILLA}/components/htmlparser.xpt
 lib/${MOZILLA}/components/imglib2.xpt
@@ -231,6 +232,7 @@ lib/${MOZILLA}/components/nsSessionStartup.js
 lib/${MOZILLA}/components/nsSessionStore.js
 lib/${MOZILLA}/components/nsSetDefaultBrowser.js
 lib/${MOZILLA}/components/nsSidebar.js
+lib/${MOZILLA}/components/nsURLFormatter.js
 lib/${MOZILLA}/components/nsUpdateService.js
 lib/${MOZILLA}/components/nsUrlClassifierLib.js
 lib/${MOZILLA}/components/nsUrlClassifierListManager.js
@@ -266,6 +268,7 @@ lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
 lib/${MOZILLA}/components/uriloader.xpt
 lib/${MOZILLA}/components/url-classifier.xpt
+lib/${MOZILLA}/components/urlformatter.xpt
 lib/${MOZILLA}/components/webBrowser_core.xpt
 lib/${MOZILLA}/components/webbrowserpersist.xpt
 lib/${MOZILLA}/components/webshell_idls.xpt
@@ -655,6 +658,7 @@ include/${MOZILLA}/content/nsIScriptLoader.h
 include/${MOZILLA}/content/nsIScriptLoaderObserver.h
 include/${MOZILLA}/content/nsISelectElement.h
 include/${MOZILLA}/content/nsISelection.h
+include/${MOZILLA}/content/nsISelection2.h
 include/${MOZILLA}/content/nsISelectionController.h
 include/${MOZILLA}/content/nsISelectionDisplay.h
 include/${MOZILLA}/content/nsISelectionListener.h
@@ -1124,8 +1128,11 @@ include/${MOZILLA}/exthandler/nsOSHelperAppService.h
 include/${MOZILLA}/fastfind/nsITypeAheadFind.h
 include/${MOZILLA}/feeds/nsIFeed.h
 include/${MOZILLA}/feeds/nsIFeedContainer.h
+include/${MOZILLA}/feeds/nsIFeedElementBase.h
 include/${MOZILLA}/feeds/nsIFeedEntry.h
+include/${MOZILLA}/feeds/nsIFeedGenerator.h
 include/${MOZILLA}/feeds/nsIFeedListener.h
+include/${MOZILLA}/feeds/nsIFeedPerson.h
 include/${MOZILLA}/feeds/nsIFeedProcessor.h
 include/${MOZILLA}/feeds/nsIFeedResult.h
 include/${MOZILLA}/feeds/nsIFeedTextConstruct.h
@@ -1437,6 +1444,7 @@ include/${MOZILLA}/layout/nsLayoutAtomList.h
 include/${MOZILLA}/layout/nsLayoutAtoms.h
 include/${MOZILLA}/layout/nsLayoutCID.h
 include/${MOZILLA}/layout/nsLayoutErrors.h
+include/${MOZILLA}/layout/nsLayoutStatics.h
 include/${MOZILLA}/layout/nsLayoutStylesheetCache.h
 include/${MOZILLA}/layout/nsLayoutUtils.h
 include/${MOZILLA}/layout/nsPIBoxObject.h
@@ -1548,6 +1556,7 @@ include/${MOZILLA}/necko/nsIFileChannel.h
 include/${MOZILLA}/necko/nsIFileProtocolHandler.h
 include/${MOZILLA}/necko/nsIFileStreams.h
 include/${MOZILLA}/necko/nsIFileURL.h
+include/${MOZILLA}/necko/nsIHttpActivityObserver.h
 include/${MOZILLA}/necko/nsIHttpAuthManager.h
 include/${MOZILLA}/necko/nsIHttpAuthenticator.h
 include/${MOZILLA}/necko/nsIHttpChannel.h
@@ -1809,6 +1818,7 @@ include/${MOZILLA}/pipnss/nsIClientAuthDialogs.h
 include/${MOZILLA}/pipnss/nsIDOMCryptoDialogs.h
 include/${MOZILLA}/pipnss/nsIFormSigningDialog.h
 include/${MOZILLA}/pipnss/nsIGenKeypairInfoDlg.h
+include/${MOZILLA}/pipnss/nsIKeyModule.h
 include/${MOZILLA}/pipnss/nsIKeygenThread.h
 include/${MOZILLA}/pipnss/nsINSSCertCache.h
 include/${MOZILLA}/pipnss/nsIOCSPResponder.h
@@ -1819,6 +1829,7 @@ include/${MOZILLA}/pipnss/nsIPKCS11ModuleDB.h
 include/${MOZILLA}/pipnss/nsIPKCS11Slot.h
 include/${MOZILLA}/pipnss/nsISMimeCert.h
 include/${MOZILLA}/pipnss/nsISSLStatus.h
+include/${MOZILLA}/pipnss/nsIStreamCipher.h
 include/${MOZILLA}/pipnss/nsITokenDialogs.h
 include/${MOZILLA}/pipnss/nsITokenPasswordDialogs.h
 include/${MOZILLA}/pipnss/nsIUserCertPicker.h
@@ -2047,6 +2058,7 @@ include/${MOZILLA}/url-classifier/nsIUrlClassifierDBService.h
 include/${MOZILLA}/url-classifier/nsIUrlClassifierStreamUpdater.h
 include/${MOZILLA}/url-classifier/nsIUrlClassifierTable.h
 include/${MOZILLA}/url-classifier/nsIUrlListManager.h
+include/${MOZILLA}/urlformatter/nsIURLFormatter.h
 include/${MOZILLA}/util/nsTimer.h
 include/${MOZILLA}/util/stopwatch.h
 include/${MOZILLA}/view/nsICompositeListener.h
@@ -2593,6 +2605,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/webbrowserpersist
 @dirrm include/${MOZILLA}/view
 @dirrm include/${MOZILLA}/util
+@dirrm include/${MOZILLA}/urlformatter
 @dirrm include/${MOZILLA}/url-classifier
 @dirrm include/${MOZILLA}/uriloader
 @dirrm include/${MOZILLA}/update
