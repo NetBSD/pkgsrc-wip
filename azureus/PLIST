@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/01 21:34:32 dhowland Exp $
+bin/azureus
+share/azureus/Azureus.png
+share/azureus/Azureus.torrent.png
+share/azureus/Azureus2.jar
+share/azureus/ChangeLog.txt
+share/azureus/License.txt
+share/azureus/README.txt
+share/azureus/libcairo-swt.so
+share/azureus/libswt-atk-gtk-3232.so
+share/azureus/libswt-awt-gtk-3232.so
+share/azureus/libswt-cairo-gtk-3232.so
+share/azureus/libswt-glx-gtk-3232.so
+share/azureus/libswt-gnome-gtk-3232.so
+share/azureus/libswt-gtk-3232.so
+share/azureus/libswt-mozilla-gcc3-gtk-3232.so
+share/azureus/libswt-mozilla-gtk-3232.so
+share/azureus/libswt-pi-gtk-3232.so
+share/azureus/plugins/azplugins/azplugins_2.1.1.jar
+share/azureus/plugins/azrating/azrating_1.3.1.jar
+share/azureus/plugins/azupdater/Updater.jar
+share/azureus/plugins/azupdater/azupdaterpatcher_1.8.3.jar
+share/azureus/plugins/azupdater/plugin.properties
+share/azureus/swt-about.html
+share/azureus/swt.jar
+@dirrm share/azureus/plugins/azupdater
+@dirrm share/azureus/plugins/azrating
+@dirrm share/azureus/plugins/azplugins
+@dirrm share/azureus/plugins
+@dirrm share/azureus

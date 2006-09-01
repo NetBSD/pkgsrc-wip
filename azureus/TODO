@@ -1,0 +1,3 @@
+- AFAIK azureus will not work with NetBSD native java, therefore,
+  this package uses Linux binary emulation.
+  Should the package name be changed to reflect this?
