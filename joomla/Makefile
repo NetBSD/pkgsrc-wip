@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/09/01 02:48:25 obache Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/01 02:49:57 obache Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
 PKGNAME=	joomla-1.0.4
-CATEGORIES=	wip www
+CATEGORIES=	www
 MASTER_SITES=	http://developer.joomla.org/sf/frs/do/downloadFile/projects.joomla/frs.joomla_1_0.1_0_4/frs2532?dl=1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
