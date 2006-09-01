@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/15 13:57:36 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/01 10:56:25 emil_s Exp $
 bin/c2hs
-lib/${PKGNAME}/C2HS.hs
-lib/${PKGNAME}/c2hs
 share/examples/c2hs/Calls.chs
 share/examples/c2hs/Calls.h
 share/examples/c2hs/Cpp.chs
@@ -29,4 +27,3 @@ share/examples/c2hs/simple.h
 share/examples/c2hs/structs.c
 share/examples/c2hs/structs.h
 @dirrm share/examples/c2hs
-@dirrm lib/${PKGNAME}
