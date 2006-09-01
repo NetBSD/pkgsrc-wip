@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/01 10:17:23 emil_s Exp $
 #
 
-DISTNAME=		cabal-1.1.3
+DISTNAME=		cabal-1.1.4
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/cabal/release/${DISTNAME}/
 
 MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/cabal/release/${DISTNAME}/
 COMMENT=		Haskell common architecture for building applications and libraries
-
-WRKSRC=			${WRKDIR}/cabal
 
 USE_TOOLS+=		gmake
 MAKEFILE=		GNUmakefile
@@ -21,16 +19,24 @@ FILES_SUBST+=		GHCVERSION=${GHCVERSION:Q}
 FILES_SUBST+=		PKGVERSION=${PKGVERSION:Q}
 PLIST_SUBST+=		GHCVERSION=${GHCVERSION:Q}
 
+CHECK_FILES_SKIP+=	lib/ghc-${GHCVERSION}/package.conf.old
+
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
+
 do-configure:
-	cd ${WRKSRC} && ${GMAKE} config
+	cd ${WRKSRC:Q} &&						\
+	runhaskell -cpp Setup.lhs configure					\
+	  --ghc								\
+	  --prefix=${PREFIX:Q}						\
+	  --with-compiler=${PREFIX:Q}/bin/ghc				\
+	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
 
 do-build:
-	cd ${WRKSRC} && ${GMAKE} build
+	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs build
 
 do-install:
-	cd ${WRKSRC} && ${GMAKE} install
+	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}/pkg-spec-html
