@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/01 02:48:25 obache Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
 
-DEPENDS+=	php-mysql>=4.2.0:../../databases/php-mysql
-DEPENDS+=	php-zlib>=4.2.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.2.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.2.0:../../archivers/php-zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -55,4 +55,5 @@ do-install:
 	    ${JOOMLA_DIR}/{} \;
 	${INSTALL_DATA} ${WRKDIR}/joomla.conf ${EGDIR}/joomla.conf
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
