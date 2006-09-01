@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/09 03:56:50 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/01 15:29:20 obache Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -302,6 +302,8 @@ share/joomla/administrator/images/back_f2.png
 share/joomla/administrator/images/backup.png
 share/joomla/administrator/images/blank.png
 share/joomla/administrator/images/browser.png
+share/joomla/administrator/images/calendar.png
+share/joomla/administrator/images/calendar_f2.png
 share/joomla/administrator/images/cancel.png
 share/joomla/administrator/images/cancel_f2.png
 share/joomla/administrator/images/categories.png
@@ -315,6 +317,10 @@ share/joomla/administrator/images/cpanel.png
 share/joomla/administrator/images/credits.png
 share/joomla/administrator/images/css.png
 share/joomla/administrator/images/css_f2.png
+share/joomla/administrator/images/cut.png
+share/joomla/administrator/images/cut_f2.png
+share/joomla/administrator/images/day.png
+share/joomla/administrator/images/day_f2.png
 share/joomla/administrator/images/dbrestore.png
 share/joomla/administrator/images/delete.png
 share/joomla/administrator/images/delete_f2.png
@@ -328,12 +334,24 @@ share/joomla/administrator/images/downloads.png
 share/joomla/administrator/images/downloads_f2.png
 share/joomla/administrator/images/edit.png
 share/joomla/administrator/images/edit_f2.png
+share/joomla/administrator/images/edittime.png
+share/joomla/administrator/images/edittime_f2.png
 share/joomla/administrator/images/expandall.png
+share/joomla/administrator/images/extensions.png
+share/joomla/administrator/images/extensions_f2.png
+share/joomla/administrator/images/file.png
+share/joomla/administrator/images/file_f2.png
 share/joomla/administrator/images/filesave.png
+share/joomla/administrator/images/folder_add.png
+share/joomla/administrator/images/folder_add_f2.png
 share/joomla/administrator/images/forward.png
 share/joomla/administrator/images/forward_f2.png
 share/joomla/administrator/images/frontpage.png
 share/joomla/administrator/images/generic.png
+share/joomla/administrator/images/go.png
+share/joomla/administrator/images/go_f2.png
+share/joomla/administrator/images/groups.png
+share/joomla/administrator/images/groups_f2.png
 share/joomla/administrator/images/help.png
 share/joomla/administrator/images/help_f2.png
 share/joomla/administrator/images/html.png
@@ -351,6 +369,8 @@ share/joomla/administrator/images/menu_divider.png
 share/joomla/administrator/images/message_config.png
 share/joomla/administrator/images/messaging.png
 share/joomla/administrator/images/module.png
+share/joomla/administrator/images/month.png
+share/joomla/administrator/images/month_f2.png
 share/joomla/administrator/images/move.png
 share/joomla/administrator/images/move_f2.png
 share/joomla/administrator/images/new.png
@@ -358,8 +378,16 @@ share/joomla/administrator/images/new_f2.png
 share/joomla/administrator/images/next.png
 share/joomla/administrator/images/next_f2.png
 share/joomla/administrator/images/nomail.png
+share/joomla/administrator/images/note.png
+share/joomla/administrator/images/note_f2.png
+share/joomla/administrator/images/paste.png
+share/joomla/administrator/images/paste_f2.png
 share/joomla/administrator/images/preview.png
 share/joomla/administrator/images/preview_f2.png
+share/joomla/administrator/images/print.png
+share/joomla/administrator/images/print_f2.png
+share/joomla/administrator/images/properties.png
+share/joomla/administrator/images/properties_f2.png
 share/joomla/administrator/images/publish.png
 share/joomla/administrator/images/publish_f2.png
 share/joomla/administrator/images/publish_g.png
@@ -367,6 +395,10 @@ share/joomla/administrator/images/publish_r.png
 share/joomla/administrator/images/publish_x.png
 share/joomla/administrator/images/publish_y.png
 share/joomla/administrator/images/query.png
+share/joomla/administrator/images/reload.png
+share/joomla/administrator/images/reload_f2.png
+share/joomla/administrator/images/rename.png
+share/joomla/administrator/images/rename_f2.png
 share/joomla/administrator/images/restore.png
 share/joomla/administrator/images/restore_f2.png
 share/joomla/administrator/images/restoredb.png
@@ -379,9 +411,17 @@ share/joomla/administrator/images/sections.png
 share/joomla/administrator/images/security.png
 share/joomla/administrator/images/security_f2.png
 share/joomla/administrator/images/support.png
+share/joomla/administrator/images/switch.png
+share/joomla/administrator/images/switch_f2.png
 share/joomla/administrator/images/systeminfo.png
+share/joomla/administrator/images/task.png
+share/joomla/administrator/images/task_f2.png
 share/joomla/administrator/images/templatemanager.png
+share/joomla/administrator/images/themes.png
+share/joomla/administrator/images/themes_f2.png
 share/joomla/administrator/images/tick.png
+share/joomla/administrator/images/tool.png
+share/joomla/administrator/images/tool_f2.png
 share/joomla/administrator/images/trash.png
 share/joomla/administrator/images/unarchive.png
 share/joomla/administrator/images/unarchive_f2.png
@@ -394,6 +434,9 @@ share/joomla/administrator/images/upload.png
 share/joomla/administrator/images/upload_f2.png
 share/joomla/administrator/images/user.png
 share/joomla/administrator/images/users.png
+share/joomla/administrator/images/version_check.png
+share/joomla/administrator/images/week.png
+share/joomla/administrator/images/week_f2.png
 share/joomla/administrator/images/xml.png
 share/joomla/administrator/images/xml_f2.png
 share/joomla/administrator/includes/admin.php
@@ -430,6 +473,7 @@ share/joomla/administrator/modules/mod_pathway.php
 share/joomla/administrator/modules/mod_popular.php
 share/joomla/administrator/modules/mod_popular.xml
 share/joomla/administrator/modules/mod_quickicon.php
+share/joomla/administrator/modules/mod_quickicon.xml
 share/joomla/administrator/modules/mod_stats.php
 share/joomla/administrator/modules/mod_stats.xml
 share/joomla/administrator/modules/mod_toolbar.php
@@ -460,14 +504,6 @@ share/joomla/administrator/templates/joomla_admin/index.php
 share/joomla/administrator/templates/joomla_admin/login.php
 share/joomla/administrator/templates/joomla_admin/templateDetails.xml
 share/joomla/administrator/templates/joomla_admin/template_thumbnail.png
-share/joomla/administrator/templates/mambo_admin/css/index.html
-share/joomla/administrator/templates/mambo_admin/css/template_css.css
-share/joomla/administrator/templates/mambo_admin/index.html
-share/joomla/administrator/templates/mambo_admin/index.php
-share/joomla/administrator/templates/mambo_admin_blue/css/index.html
-share/joomla/administrator/templates/mambo_admin_blue/css/template_css.css
-share/joomla/administrator/templates/mambo_admin_blue/index.html
-share/joomla/administrator/templates/mambo_admin_blue/index.php
 share/joomla/cache/index.html
 share/joomla/components/com_banners/banners.class.php
 share/joomla/components/com_banners/banners.php
@@ -638,6 +674,7 @@ share/joomla/images/new_f2.png
 share/joomla/images/powered_by.png
 share/joomla/images/preview_f2.png
 share/joomla/images/publish_f2.png
+share/joomla/images/publish_x.png
 share/joomla/images/save.png
 share/joomla/images/save_f2.png
 share/joomla/images/smilies/biggrin.gif
@@ -665,6 +702,7 @@ share/joomla/images/stories/key.jpg
 share/joomla/images/stories/pastarchives.jpg
 share/joomla/images/stories/taking_notes.jpg
 share/joomla/images/stories/web_links.jpg
+share/joomla/images/tick.png
 share/joomla/images/unarchive_f2.png
 share/joomla/images/unpublish_f2.png
 share/joomla/images/upload_f2.png
@@ -684,6 +722,7 @@ share/joomla/includes/class.pdf.php
 share/joomla/includes/compat.php41x.php
 share/joomla/includes/compat.php42x.php
 share/joomla/includes/compat.php50x.php
+share/joomla/includes/database.mysql5.php
 share/joomla/includes/database.mysqli.php
 share/joomla/includes/database.php
 share/joomla/includes/domit/dom_xmlrpc_array_document.php
@@ -746,10 +785,12 @@ share/joomla/includes/frontend.php
 share/joomla/includes/gacl.class.php
 share/joomla/includes/gacl_api.class.php
 share/joomla/includes/index.html
+share/joomla/includes/joomla.cache.php
 share/joomla/includes/joomla.php
 share/joomla/includes/joomla.xml.php
 share/joomla/includes/js/JSCookMenu.js
 share/joomla/includes/js/JSCookMenu_mini.js
+share/joomla/includes/js/ThemeOffice/Joomla_16x16.png
 share/joomla/includes/js/ThemeOffice/add_section.png
 share/joomla/includes/js/ThemeOffice/arrow.png
 share/joomla/includes/js/ThemeOffice/backup.png
@@ -772,6 +813,7 @@ share/joomla/includes/js/ThemeOffice/help.png
 share/joomla/includes/js/ThemeOffice/home.png
 share/joomla/includes/js/ThemeOffice/index.html
 share/joomla/includes/js/ThemeOffice/install.png
+share/joomla/includes/js/ThemeOffice/joomla_16x16.png
 share/joomla/includes/js/ThemeOffice/language.png
 share/joomla/includes/js/ThemeOffice/license.png
 share/joomla/includes/js/ThemeOffice/mail.png
@@ -967,7 +1009,9 @@ share/joomla/mambots/content/geshi.xml
 share/joomla/mambots/content/geshi/geshi.php
 share/joomla/mambots/content/geshi/geshi/css.php
 share/joomla/mambots/content/geshi/geshi/html4strict.php
+share/joomla/mambots/content/geshi/geshi/ini.php
 share/joomla/mambots/content/geshi/geshi/javascript.php
+share/joomla/mambots/content/geshi/geshi/mysql.php
 share/joomla/mambots/content/geshi/geshi/php-brief.php
 share/joomla/mambots/content/geshi/geshi/php.php
 share/joomla/mambots/content/geshi/geshi/sql.php
@@ -1007,7 +1051,6 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/blank.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/langs/en.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/langs/index.html
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/license.txt
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/editor_plugin.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/editor_plugin_src.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/images/index.html
@@ -1016,6 +1059,8 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/index.h
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/langs/en.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/langs/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/popup.htm
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/css/advhr.css
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/css/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/editor_plugin.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/editor_plugin_src.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/images/advhr.gif
@@ -1053,6 +1098,9 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave/editor_p
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave/langs/en.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave/langs/index.html
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/cleanup/editor_plugin.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/cleanup/editor_plugin_src.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/cleanup/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/css/contextmenu.css
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/css/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/editor_plugin.js
@@ -1137,6 +1185,13 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/im
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/langs/en.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/langs/index.html
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/editor_plugin.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/editor_plugin_src.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/images/absolute.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/images/backward.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/images/forward.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/images/insert_layer.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/langs/en.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/css/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/css/noneditable.css
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/editor_plugin.js
@@ -1195,6 +1250,14 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/lan
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/langs/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/replace.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/search.htm
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/css/props.css
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/editor_plugin.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/editor_plugin_src.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/images/apply_button_bg.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/images/style_info.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/jscripts/props.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/langs/en.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/props.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/cell.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/css/cell.css
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/css/index.html
@@ -1230,12 +1293,7 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/table.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/editor_plugin.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/editor_plugin_src.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/index.html
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/es.js
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/he.js
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/index.html
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/ru.js
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/ru_KOI8-R.js
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs/ru_UTF-8.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/readme.txt
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/about.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/anchor.htm
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/charmap.htm
@@ -1255,11 +1313,12 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bo
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bold_es.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bold_fr.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bold_ru.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bold_tw.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/browse.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/bullist.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/button_menu.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/buttons.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/cancel_button_bg.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/center.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/charmap.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/cleanup.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/close.gif
@@ -1269,7 +1328,6 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/co
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/custom_1.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/cut.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/forecolor.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/full.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/help.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/hr.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/image.gif
@@ -1280,8 +1338,13 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/it
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/italic_de_se.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/italic_es.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/italic_ru.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/left.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/italic_tw.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/justifycenter.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/justifyfull.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/justifyleft.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/justifyright.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/link.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/menu_check.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/newdocument.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/numlist.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/opacity.png
@@ -1289,23 +1352,17 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/ou
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/paste.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/redo.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/removeformat.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/right.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/separator.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/spacer.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/statusbar_resize.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/strikethrough.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/sub.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/sup.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_delete_col.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_delete_row.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_insert_col_after.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_insert_col_before.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_insert_row_after.gif
-share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/table_insert_row_before.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/underline.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/underline_es.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/underline_fr.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/underline_ru.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/underline_tw.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/undo.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/unlink.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/visualaid.gif
@@ -1339,27 +1396,34 @@ share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bold
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bold_de_se.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bold_fr.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bold_ru.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bold_tw.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/bullist.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/buttons.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/cleanup.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/italic.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/italic_de_se.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/italic_ru.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/italic_tw.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/numlist.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/redo.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/separator.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/spacer.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/strikethrough.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/underline.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/underline_fr.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/underline_ru.gif
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/underline_tw.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/images/undo.gif
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/simple/index.html
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/tiny_mce.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/tiny_mce_gzip.php
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/tiny_mce_popup.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/tiny_mce_src.js
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/editable_selects.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/form_utils.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/index.html
+share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/mclayer.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/mctabs.js
 share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/utils/validate.js
 share/joomla/mambots/index.html
@@ -1419,6 +1483,7 @@ share/joomla/offline.php
 share/joomla/offlinebar.php
 share/joomla/pathway.php
 share/joomla/robots.txt
+share/joomla/templates/404.php
 share/joomla/templates/css/index.html
 share/joomla/templates/css/offline.css
 share/joomla/templates/index.html
@@ -1510,13 +1575,17 @@ share/joomla/templates/rhuk_solarflare_ii/template_thumbnail.png
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced/css
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes/advanced
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/themes
-@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/zoom
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/jscripts
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/images
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table/css
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/table
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/langs
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/jscripts
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/images
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style/css
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/style
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/jscripts
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/images
@@ -1537,6 +1606,9 @@ share/joomla/templates/rhuk_solarflare_ii/template_thumbnail.png
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/paste
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/css
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/noneditable
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/langs
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer/images
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/layer
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/images
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime
@@ -1562,6 +1634,7 @@ share/joomla/templates/rhuk_solarflare_ii/template_thumbnail.png
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/images
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/css
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/cleanup
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/autosave
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advlink/langs
@@ -1576,6 +1649,7 @@ share/joomla/templates/rhuk_solarflare_ii/template_thumbnail.png
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/jscripts
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/images
+@dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr/css
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/advhr
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/langs
 @dirrm share/joomla/mambots/editors/tinymce/jscripts/tiny_mce/plugins/_template/images
@@ -1651,10 +1725,6 @@ share/joomla/templates/rhuk_solarflare_ii/template_thumbnail.png
 @dirrm share/joomla/components/com_banners
 @dirrm share/joomla/components
 @dirrm share/joomla/cache
-@dirrm share/joomla/administrator/templates/mambo_admin_blue/css
-@dirrm share/joomla/administrator/templates/mambo_admin_blue
-@dirrm share/joomla/administrator/templates/mambo_admin/css
-@dirrm share/joomla/administrator/templates/mambo_admin
 @dirrm share/joomla/administrator/templates/joomla_admin/images
 @dirrm share/joomla/administrator/templates/joomla_admin/css
 @dirrm share/joomla/administrator/templates/joomla_admin
