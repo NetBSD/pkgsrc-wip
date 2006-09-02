@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/06/11 14:24:54 scode Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/02 12:32:17 scode Exp $
 #
 
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://starfury.scode.org/pkgmanager/
+MASTER_SITES=	http://distfiles.scode.org/pkgmanager/
 DISTFILES+=	pkgmanager-${PKGMGR_VERSION:Q}.tar.gz
 DISTFILES+=	clocc-06-24-05.tgz
 DISTFILES+=	cl-ppcre-${PPCRE_VERSION:Q}.tar.gz
