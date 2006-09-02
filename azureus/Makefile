@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/01 21:34:32 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/02 16:38:13 dhowland Exp $
 #
 
-DISTNAME=		azureus-2.5.0.0
+DISTNAME=		azureus-2.2.0.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=azureus/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		Azureus_2.5.0.0_linux.tar.bz2
+DISTFILES=		Azureus_2.2.0.2_linux.GTK.tar.bz2
 
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://azureus.sourceforge.net/
 COMMENT=		Bittorrent client written in java
+
+ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-i386
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		suse_gtk2>=10.0:../../emulators/suse100_gtk2
@@ -35,8 +37,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/azureus/plugins
 	${INSTALL_DATA_DIR} ${PREFIX}/share/azureus/plugins/azplugins
 	${INSTALL} ${WRKSRC}/plugins/azplugins/*.jar ${PREFIX}/share/azureus/plugins/azplugins/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/azureus/plugins/azrating
-	${INSTALL} ${WRKSRC}/plugins/azrating/*.jar ${PREFIX}/share/azureus/plugins/azrating/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/azureus/plugins/azupdater
 	${INSTALL} ${WRKSRC}/plugins/azupdater/*.jar ${PREFIX}/share/azureus/plugins/azupdater/
 	${INSTALL} ${WRKSRC}/plugins/azupdater/*.properties ${PREFIX}/share/azureus/plugins/azupdater/

@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/09/01 21:34:32 dhowland Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/02 16:38:13 dhowland Exp $
 
---- azureus.orig	2006-08-13 22:27:26.000000000 -0400
+--- azureus.orig	2004-11-01 07:35:05.000000000 -0500
 +++ azureus
 @@ -1,8 +1,8 @@
 -#!/bin/bash
 +#!@PREFIX@/bin/bash
  
- ######## CONFIGURATION OPTIONS ########
+ ######## CONFIGURE ########
 -JAVA_PROGRAM_DIR=""				# use full path to java bin dir, ex. "/usr/java/j2sdk1.4.2/bin/"
 -#PROGRAM_DIR="/home/username/apps/azureus"	# use full path to Azureus bin dir
 +JAVA_PROGRAM_DIR="@PREFIX@/bin/"		# use full path to java bin dir, ex. "/usr/java/j2sdk1.4.2/bin/"
 +PROGRAM_DIR="@PREFIX@/share/azureus"		# use full path to Azureus bin dir
- #######################################
+ ##########i#################
  
- 
-@@ -108,8 +108,8 @@ echo $MSG0
+ MSG0="Loading Azureus:"
+@@ -103,8 +103,8 @@ echo $MSG0
  cd ${PROGRAM_DIR}
  
  
