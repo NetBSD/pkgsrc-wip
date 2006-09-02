@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2359 2006/09/02 18:29:41 tnn2 Exp $
+# $Id: Makefile,v 1.2360 2006/09/02 22:09:33 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -188,7 +188,6 @@ SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
-SUBDIR+=	djvu
 SUBDIR+=	dmd-bin
 SUBDIR+=	dnrd
 SUBDIR+=	dnswalk

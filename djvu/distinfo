@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/30 22:00:39 thomasklausner Exp $
-
-SHA1 (djvulibre-3.5.17.tar.gz) = ee7358b0d3a5941e0f68dae1f5cd44407d63b1bd
-RMD160 (djvulibre-3.5.17.tar.gz) = 1f9d2b1106d1e1898f04c0657b2c8b557246c33e
-Size (djvulibre-3.5.17.tar.gz) = 2298690 bytes
-SHA1 (patch-aa) = 287c15b9f99287d7dabc52a198fcc086133d994c
-SHA1 (patch-ab) = 9706550b8bc32de60d0b3c9a6428259a7d638c12
-SHA1 (patch-ac) = d1d3b88317e8cfe1023d80c416da6a73c12f27ba
-SHA1 (patch-ad) = 05a523a8c0cc0c3b2d07d8838089956710735345
