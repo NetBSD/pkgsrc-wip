@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/02 07:33:46 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/02 12:05:39 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
@@ -44,6 +44,9 @@ CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=	-Dsocklen_t=int
+# needs snprintf()
+.include "../../pkgtools/libnbcompat/buildlink3.mk"
+TRN_EXTRALIBS+=	${BUILDLINK_LDADD.libnbcompat}
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
