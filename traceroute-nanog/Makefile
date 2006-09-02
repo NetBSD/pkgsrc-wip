@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/05/01 21:32:48 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/02 07:33:46 gschwarz Exp $
 
-DISTNAME=	traceroute-nanog-6.4.0
+DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.login.com/pub/software/traceroute/beta/
-DISTFILES=	traceroute_640.c
+MASTER_SITES=	ftp://ftp.login.com/pub/software/traceroute/
+DISTFILES=	traceroute.c
 DIST_SUBDIR=	traceroute-nanog
 
 # for the man page:
@@ -16,7 +16,7 @@ MAINTAINER=	schwarz@NetBSD.org
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
 
-EXTRALIBS=
+TRN_EXTRALIBS=
 
 .include "../../mk/bsd.prefs.mk"
 .if empty(PKGSRC_COMPILER:Mgcc*)
@@ -27,7 +27,7 @@ CPPFLAGS+=	-D__attribute__=
 .if ${OS_VERSION} >= 5.0
 .if ${OS_VERSION} != 5.4
 CPPFLAGS+=	-DSOLARIS
-EXTRALIBS+=	-lresolv -lsocket -lnsl
+TRN_EXTRALIBS+=	-lresolv -lsocket -lnsl
 .endif
 .if ${LOWER_ARCH} == "i386"
 CPPFLAGS+=	-DBYTESWAP_IP_LEN
@@ -35,7 +35,7 @@ CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
 .endif
 .if ${OPSYS} == "Linux"
-EXTRALIBS+=	-lresolv
+TRN_EXTRALIBS+=	-lresolv
 .endif
 
 .if ${OPSYS} == "Darwin"
@@ -49,9 +49,9 @@ CPPFLAGS+=	-Dsocklen_t=int
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-extract:
-		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute_640.c ${WRKSRC}
+		${CP} ${DISTDIR}/${DIST_SUBDIR}/traceroute.c ${WRKSRC}
 do-build:
-		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute_640.c -o traceroute-nanog ${LDFLAGS} -lm ${EXTRALIBS}
+		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${TRN_EXTRALIBS}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${PREFIX}/sbin
