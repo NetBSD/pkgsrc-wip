@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.2 2006/06/26 03:16:44 tnn2 Exp $
+$NetBSD: patch-aj,v 1.1.1.1 2006/09/02 18:26:59 tnn2 Exp $
 
 --- client/SSLSocket.h.orig	2006-06-15 20:30:50.000000000 +0200
 +++ client/SSLSocket.h

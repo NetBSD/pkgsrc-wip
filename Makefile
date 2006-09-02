@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2358 2006/08/31 10:21:31 milosn Exp $
+# $Id: Makefile,v 1.2359 2006/09/02 18:29:41 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -504,7 +504,6 @@ SUBDIR+=	lammpi
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
-SUBDIR+=	ldcpp
 SUBDIR+=	lde
 SUBDIR+=	ldp
 SUBDIR+=	leo
@@ -611,6 +610,7 @@ SUBDIR+=	linux-nfs-utils
 SUBDIR+=	linux-wlan-ng
 SUBDIR+=	linux24-kernel
 SUBDIR+=	linux24-kernel-headers
+SUBDIR+=	linuxdcpp
 SUBDIR+=	linuxigd
 SUBDIR+=	linuxigd-current
 SUBDIR+=	linuxtv-dvb-apps

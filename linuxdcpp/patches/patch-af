@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2006/08/17 22:09:45 tnn2 Exp $
+$NetBSD: patch-af,v 1.1.1.1 2006/09/02 18:26:59 tnn2 Exp $
 
 --- client/stdinc.h.orig	2006-08-16 22:11:46.000000000 +0200
 +++ client/stdinc.h

@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2006/07/26 17:23:07 tnn2 Exp $
+# $NetBSD: Makefile,v 1.1.1.1 2006/09/02 18:26:59 tnn2 Exp $
 
-DISTNAME=		ldcpp
-PKGNAME=		ldcpp-${LDCPP_VERSION}
+DISTNAME=		linuxdcpp
+PKGNAME=		linuxdcpp-${LDCPP_VERSION}
 CATEGORIES=		net x11
 MASTER_SITES=		http://linuxdcpp.berlios.de/
 
 MAINTAINER=		tnn+nbsd@nygren.pp.se
 HOMEPAGE=		http://linuxdcpp.berlios.de/
 COMMENT=		DC++-based p2p filesharing application
+
+CONFLICTS+=		ldcpp-*
 
 CVS_REPOSITORIES=	linuxdcpp
 CVS_ROOT.linuxdcpp=	:pserver:anonymous:@cvs.linuxdcpp.berlios.de:/cvsroot/linuxdcpp
@@ -25,19 +27,18 @@ LDCPP_VERSION!=		${DATE} +%Y%m%d
 LDFLAGS+=		${X11_LDFLAGS}
 
 post-extract:
-	${MV} ${WRKDIR}/linuxdcpp ${WRKSRC}
 	${CP} ${FILESDIR}/make.sh ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} ./make.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ldcpp ${PREFIX}/bin/ldcpp
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ldcpp
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ldcpp/glade
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ldcpp/pixmaps
-	cd ${WRKSRC}/glade && ${PAX} -rw *.glade ${PREFIX}/share/ldcpp/glade
-	cd ${WRKSRC}/pixmaps && ${PAX} -rw *.png ${PREFIX}/share/ldcpp/pixmaps
+	${INSTALL_PROGRAM} ${WRKSRC}/linuxdcpp ${PREFIX}/bin/linuxdcpp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/glade
+	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/pixmaps
+	cd ${WRKSRC}/glade && ${PAX} -rw *.glade ${PREFIX}/share/linuxdcpp/glade
+	cd ${WRKSRC}/pixmaps && ${PAX} -rw *.png ${PREFIX}/share/linuxdcpp/pixmaps
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/compiler.mk"
