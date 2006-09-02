@@ -1,13 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/08/27 11:08:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/02 00:19:32 cheusov Exp $
 
-DISTNAME=	dictd-1.10.7
-PKGNAME=	dict-server-1.10.7
-CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
-		ftp://ftp.dict.org/pub/dict/
+.include "../../wip/dict-server/Makefile.common"
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://www.dict.org/
+PKGNAME=	${DISTNAME:S/dictd/dict-server/}
 COMMENT=	Dictionary Service Protocol server
 
 .include "../../mk/bsd.prefs.mk"
