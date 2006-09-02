@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2360 2006/09/02 22:09:33 thomasklausner Exp $
+# $Id: Makefile,v 1.2361 2006/09/02 22:16:22 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -82,6 +82,7 @@ SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
 SUBDIR+=	awflwm
 SUBDIR+=	axe
+SUBDIR+=	azureus
 SUBDIR+=	backplane
 SUBDIR+=	barnyard
 SUBDIR+=	bastard
@@ -141,6 +142,7 @@ SUBDIR+=	cinelerra
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
+SUBDIR+=	clhep
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
 SUBDIR+=	com_err
@@ -179,6 +181,7 @@ SUBDIR+=	dfbsee
 SUBDIR+=	di
 SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
+SUBDIR+=	dict-client
 SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
@@ -272,6 +275,7 @@ SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foremost
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
+SUBDIR+=	freedict-tools-xsl
 SUBDIR+=	freej
 SUBDIR+=	freetds
 SUBDIR+=	freevo
@@ -1200,7 +1204,6 @@ SUBDIR+=	scim-tables
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scmail
-SUBDIR+=	scmgit
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scribus-devel
