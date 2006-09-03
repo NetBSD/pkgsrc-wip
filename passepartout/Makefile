@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 00:12:20 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/03 12:56:40 thomasklausner Exp $
 #
 
 DISTNAME=		passepartout-0.3
@@ -18,5 +18,5 @@ BUILDLINK_TRANSFORM+=	S:-Wold-style-casts:
 
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../wip/libxml++/buildlink3.mk"
+.include "../../textproc/libxml++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
