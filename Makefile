@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2362 2006/09/03 12:57:01 thomasklausner Exp $
+# $Id: Makefile,v 1.2363 2006/09/03 14:25:18 zul_ Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -124,6 +124,7 @@ SUBDIR+=	c2html
 SUBDIR+=	cabal
 SUBDIR+=	cabot
 SUBDIR+=	cairo-java
+SUBDIR+=	calcurse
 SUBDIR+=	cawf
 SUBDIR+=	cb2bib
 SUBDIR+=	ccid
