@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2006/05/14 08:09:40 gschwarz Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/03 12:50:06 gschwarz Exp $
 
-DISTNAME=	siproxd-0.5.12
+DISTNAME=	siproxd-0.5.13
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
