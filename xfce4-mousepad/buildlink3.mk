@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/07/18 12:24:23 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_MOUSEPAD_BUILDLINK3_MK:=	${XFCE4_MOUSEPAD_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-mousepad
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-mousepad
 
 .if ${XFCE4_MOUSEPAD_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-mousepad+=	xfce4-mousepad>=0.2.6
+BUILDLINK_API_DEPENDS.xfce4-mousepad+=	xfce4-mousepad>=0.2.8
 BUILDLINK_PKGSRCDIR.xfce4-mousepad?=	../../wip/xfce4-mousepad
 .endif	# XFCE4_MOUSEPAD_BUILDLINK3_MK
 

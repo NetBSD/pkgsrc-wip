@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/17 13:21:17 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/04 08:54:04 marttikuparinen Exp $
 bin/orage
 lib/xfce4/mcs-plugins/orage_plugin.la
 libexec/xfce4/panel-plugins/orageclock
@@ -23,6 +23,7 @@ share/locale/eu/LC_MESSAGES/orage.mo
 share/locale/fa/LC_MESSAGES/orage.mo
 share/locale/fi/LC_MESSAGES/orage.mo
 share/locale/fr/LC_MESSAGES/orage.mo
+share/locale/gl/LC_MESSAGES/orage.mo
 share/locale/gu/LC_MESSAGES/orage.mo
 share/locale/he/LC_MESSAGES/orage.mo
 share/locale/hi/LC_MESSAGES/orage.mo
@@ -30,6 +31,7 @@ share/locale/hu/LC_MESSAGES/orage.mo
 share/locale/hy/LC_MESSAGES/orage.mo
 share/locale/it/LC_MESSAGES/orage.mo
 share/locale/ja/LC_MESSAGES/orage.mo
+share/locale/ka/LC_MESSAGES/orage.mo
 share/locale/ko/LC_MESSAGES/orage.mo
 share/locale/lt/LC_MESSAGES/orage.mo
 share/locale/mr/LC_MESSAGES/orage.mo
@@ -65,8 +67,14 @@ share/orage/doc/C/images/orage_preferences_display.png
 share/orage/doc/C/images/orage_preferences_sound.png
 share/orage/doc/C/images/orage_preferences_timezone.png
 share/orage/doc/C/orage.html
+share/orage/sounds/Boiling.wav
 share/orage/sounds/KDE_Beep_Digital_1.ogg
 share/orage/sounds/KDE_Beep_Digital_2.ogg
+share/orage/sounds/Knock.wav
+share/orage/sounds/Phone.wav
+share/orage/sounds/Spo.wav
+share/orage/sounds/Tear.wav
+share/orage/sounds/Wall_c.wav
 share/orage/zoneinfo/Africa/Abidjan.ics
 share/orage/zoneinfo/Africa/Accra.ics
 share/orage/zoneinfo/Africa/Addis_Ababa.ics

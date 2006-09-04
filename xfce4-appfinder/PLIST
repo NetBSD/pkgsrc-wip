@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/17 13:21:17 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/09/04 08:54:04 marttikuparinen Exp $
 bin/xfce4-appfinder
 share/applications/xfce4-appfinder.desktop
 share/icons/hicolor/48x48/apps/xfce4-appfinder.png
@@ -9,6 +9,7 @@ share/locale/cs/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/de/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/el/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/eo/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/es/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/es_MX/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/et/LC_MESSAGES/xfce4-appfinder.mo
@@ -16,12 +17,14 @@ share/locale/eu/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/fa/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/fi/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/fr/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/gl/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/gu/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/he/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/hu/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/hy/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/it/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ja/LC_MESSAGES/xfce4-appfinder.mo
+share/locale/ka/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/ko/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/lt/LC_MESSAGES/xfce4-appfinder.mo
 share/locale/mr/LC_MESSAGES/xfce4-appfinder.mo

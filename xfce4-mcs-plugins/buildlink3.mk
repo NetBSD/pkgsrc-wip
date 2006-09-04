@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_MCS_PLUGINS_BUILDLINK3_MK:=	${XFCE4_MCS_PLUGINS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-mcs-plugins
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-mcs-plugins
 
 .if ${XFCE4_MCS_PLUGINS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-mcs-plugins+=	xfce4-mcs-plugins>=4.3.90.2
+BUILDLINK_API_DEPENDS.xfce4-mcs-plugins+=	xfce4-mcs-plugins>=4.3.99.1
 BUILDLINK_PKGSRCDIR.xfce4-mcs-plugins?=	../../wip/xfce4-mcs-plugins
 .endif	# XFCE4_MCS_PLUGINS_BUILDLINK3_MK
 

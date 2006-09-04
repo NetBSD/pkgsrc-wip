@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/07/14 10:52:26 thomasklausner Exp $
+$NetBSD: distinfo,v 1.9 2006/09/04 08:54:05 marttikuparinen Exp $
 
-SHA1 (xfwm4-4.3.90.2.tar.bz2) = 98394bb38dc4cc78caf6e6065b9c8b9f2678814e
-RMD160 (xfwm4-4.3.90.2.tar.bz2) = 8b6544f1601a681062e6e5211d625e0f8ce779c2
-Size (xfwm4-4.3.90.2.tar.bz2) = 1544888 bytes
+SHA1 (xfwm4-4.3.99.1.tar.bz2) = d22be9dbfc72f011214a400ead55f71b824e9e7d
+RMD160 (xfwm4-4.3.99.1.tar.bz2) = 86846cc868ddea2ff05eedac47c8695257e48809
+Size (xfwm4-4.3.99.1.tar.bz2) = 1560005 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/07/14 10:52:26 thomasklausner Exp $
+$NetBSD: distinfo,v 1.9 2006/09/04 08:54:04 marttikuparinen Exp $
 
-SHA1 (xfce4-mixer-4.3.90.2.tar.bz2) = de9e9e8b8c5bbe7e4d70bbb7e796a2a5ea101b3a
-RMD160 (xfce4-mixer-4.3.90.2.tar.bz2) = 53d11cbf0e975b59c089d6a1d649c267db2ec6dd
-Size (xfce4-mixer-4.3.90.2.tar.bz2) = 453875 bytes
+SHA1 (xfce4-mixer-4.3.99.1.tar.bz2) = 91d83617d89e5189e6db95ca87210d715e5165a8
+RMD160 (xfce4-mixer-4.3.99.1.tar.bz2) = 73c3a3598b7d18e738ac74a348de143e4724d2ed
+Size (xfce4-mixer-4.3.99.1.tar.bz2) = 456754 bytes

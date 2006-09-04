@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/07/18 12:30:37 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/09/04 08:54:04 marttikuparinen Exp $
 lib/xfce4/mcs-plugins/display_plugin.la
 lib/xfce4/mcs-plugins/fm_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.la
@@ -37,12 +37,14 @@ share/locale/eu/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/fa/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/fi/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/fr/LC_MESSAGES/xfce-mcs-plugins.mo
+share/locale/gl/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/gu/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/he/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/hi/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/hu/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/it/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
+share/locale/ka/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ko/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/lt/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/mr/LC_MESSAGES/xfce-mcs-plugins.mo
