@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/08/28 11:48:26 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/05 20:46:40 plunky Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
@@ -18,7 +18,6 @@ BUILD_DEFS+=		PKGMANDIR
 FIRMWARE_DIR=		libdata/bcmfw
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8			\
-			${PKGMANDIR}/cat8			\
 			${FIRMWARE_DIR}
 
 PLIST_SUBST+=		FIRMWARE_DIR=${FIRMWARE_DIR}
