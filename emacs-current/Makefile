@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/12 04:48:36 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/05 12:54:43 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -36,7 +36,7 @@ MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
+PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= emacs-xaw3d motif gtk
 .include "../../mk/bsd.options.mk"
