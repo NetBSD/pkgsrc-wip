@@ -1,8 +1,0 @@
-misen is the text template library like Amrita.
-
-misen generates text document from a template and a model data
-('template expansion'). The difference to Amrita is:
-
- * Not only HTML/XML, you can use it with any type of text.
- * You can customize rules of parsing and formatting by implementing 'style'.
- * Simpler architecture and faster.

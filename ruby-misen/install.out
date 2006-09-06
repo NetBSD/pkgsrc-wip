@@ -1,9 +1,0 @@
- misen-expand ${PREFIX}/bin/
- expand-acq.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- expand.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- node.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- parse.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- style-sgml.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- style-tex.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- style.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
- util.rb ${PREFIX}/lib/ruby/site_ruby/1.6/misen
