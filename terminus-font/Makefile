@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:40 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/06 13:05:07 obache Exp $
 #
 
-DISTNAME=		terminus-font-4.16
+DISTNAME=		terminus-font-4.20
 CATEGORIES=		fonts
 MASTER_SITES=		http://www.is-vn.bg/hamster/
 
