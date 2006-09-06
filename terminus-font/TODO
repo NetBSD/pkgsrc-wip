@@ -1,7 +1,0 @@
-$Id: TODO,v 1.2 2003/12/26 22:19:05 blef Exp $
-
-Fri Dec 26 21:07:16 CET 2003
-- this font can do Linux console fonts. Anyone willing to create support
-  for it?
-  (eg. installation, PLIST.Linux and testing) ?
-	-- dotz@irc.pl
