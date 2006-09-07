@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2368 2006/09/07 19:06:17 kristerw Exp $
+# $Id: Makefile,v 1.2369 2006/09/07 19:07:37 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -643,6 +643,7 @@ SUBDIR+=	mapserver
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	mc-mp
+SUBDIR+=	mcabber
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
