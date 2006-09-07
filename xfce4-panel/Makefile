@@ -1,27 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2006/09/04 08:54:04 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/07 10:08:42 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-panel-${XFCE4_VERSION}
-PKGNAME=		xfce4-panel-${XFCE4_VERSION:S/svn-/./}
 CATEGORIES=		x11
 COMMENT=		Xfce panel
 
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
-
-PKG_SYSCONFSUBDIR=	xdg/xfce4/panel
-EGDIR=			${XFCE4_EGBASE}/panel
-CONF_FILES=		${EGDIR:Q}/contents.xml ${PKG_SYSCONFDIR:Q}/contents.xml
-.for l in ar az ca da el eu fi fr he hu it ja ko lt ms nl pl ro ru sk sv \
-	tr vi zh_CN zh_TW
-CONF_FILES+=		${EGDIR:Q}/contents.xml.${l} \
-			${PKG_SYSCONFDIR:Q}/contents.xml.${l}
-.endfor
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
-
-REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
