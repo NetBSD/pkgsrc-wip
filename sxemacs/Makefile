@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/04/08 22:14:05 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/07 12:03:21 hfath Exp $
 
-DISTNAME=	sxemacs-22.1.3
+DISTNAME=	sxemacs-22.1.5
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.sxemacs.org/pub/sxemacs/
 
@@ -9,13 +9,13 @@ HOMEPAGE=	http://www.sxemacs.org/
 COMMENT=	SXEmacs text editor version 22
 
 CONFLICTS+=	gnuclient-[0-9]*
-CONFLICTS+=	xemacs-21.*
+CONFLICTS+=	xemacs-[0-9]*
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 MESSAGE_SUBST+=	DISTNAME=${DISTNAME:Q}
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo perl
 INSTALL_UNSTRIPPED=	yes
 
 .include "options.mk"
@@ -55,8 +55,8 @@ WITH_DIALOGS= \
 		--with-toolbars=yes \
 		--with-menubars=lucid \
 		--with-scrollbars=lucid \
-		--with-dialogs=lucid \
-		--with-widgets=lucid \
+		--with-dialogs=athena \
+		--with-widgets=athena \
 		--with-athena=xaw \
 		--with-xim=xlib
 .include "../../mk/xaw.buildlink3.mk"
@@ -97,7 +97,7 @@ CONFIGURE_ARGS+=       --with-ncurses
 .elif ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	--with-ncurses=no
 .endif
-CONFIGURE_ARGS+=	--with-msw=no
+CONFIGURE_ARGS+=	--with-pdump
 CONFIGURE_ARGS+=	${WITH_DIALOGS}
 CONFIGURE_ARGS+=	--with-infopath=${INFOPATH:Q}
 CONFIGURE_ARGS+=	--with-site-includes=${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include

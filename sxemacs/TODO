@@ -11,6 +11,8 @@
 (4) Per default, sxemacs appears not to install gnuclient*, 
     but installs the man pages?
 
-(5) Feed back the patches
+(5) Feed back the patches to SXEmacs maintainers
 
 (6) Fix the ugly X11 toolkit selection
+
+(7) Is this OSS sound support still relevant?

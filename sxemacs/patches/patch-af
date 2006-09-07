@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+$NetBSD: patch-af,v 1.2 2006/09/07 12:03:21 hfath Exp $
 
---- configure.ac.orig	2005-12-10 14:44:04.000000000 +0100
+--- configure.ac.orig	2006-05-07 02:18:31.000000000 +0200
 +++ configure.ac
-@@ -1081,10 +1081,10 @@ case "$ac_cv_build" in
+@@ -1472,10 +1472,10 @@ case "$ac_cv_build" in
      case "ac_cv_build" in
        i[[3-9]]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -15,7 +15,7 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
      esac
    ;;
  
-@@ -2349,7 +2349,7 @@ if test "$add_runtime_path" = "yes"; the
+@@ -2751,7 +2751,7 @@ if test "$add_runtime_path" = "yes"; the
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -23,8 +23,8 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
 +      for try_dash_r in "-Wl,-R" "-R" "-R " "-rpath "; do
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          XE_PROTECT_LINKER_FLAGS(xe_check_libs)
-         AC_TRY_LINK(, , dash_r="$try_dash_r")
-@@ -4949,6 +4949,9 @@ else dnl "$with_tty" = "no"
+         AC_LINK_IFELSE([AC_LANG_SOURCE([[]])], dash_r="$try_dash_r")
+@@ -5770,6 +5770,9 @@ else dnl "$with_tty" = "no"
    done
  fi dnl with_tty
  
@@ -32,5 +32,5 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
 +AC_SUBST(LIBOSSAUDIO)
 +
  dnl Do we need event-unixoid.o ?
- dnl This is needed for X, or for TTY, or for MSWIN w/Cygwin select()
- dnl [but not Mingw MSWIN]
+ dnl This is needed for X, or for TTY select()
+ test "$with_x11" = "yes" -o "$with_tty" = "yes" -o "$need_event_unixoid" = "yes" -o "$with_gtk" = "yes" -o "$with_gnome" = "yes" && XE_ADD_OBJS(event-unixoid.o)
