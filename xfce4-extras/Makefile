@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/07 08:14:02 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/07 10:09:37 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -16,6 +16,9 @@ WRKSRC=		${WRKDIR}
 
 do-install:
 	@${DO_NADA}
+
+# Xfce
+.include "../../wip/xfce4/buildlink3.mk"
 
 # Additional plugins etc.
 .include "../../graphics/xfce4-artwork/buildlink3.mk"
@@ -39,5 +42,4 @@ do-install:
 # .include "../../x11/xfce4-taskbar-plugin/buildlink3.mk"
 # .include "../../x11/xfce4-windowlist-plugin/buildlink3.mk"
 
-.include "../../wip/xfce4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
