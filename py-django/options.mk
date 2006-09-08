@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/09/08 10:40:00 jsonn Exp $
+# $NetBSD: options.mk,v 1.2 2006/09/08 10:44:25 jsonn Exp $
 
 PKG_OPTIONS_VAR =       PKG_OPTIONS.django
 PKG_SUPPORTED_OPTIONS=  mysql psycopg1 psycopg2 sqlite
@@ -13,13 +13,6 @@ PLIST_SUBST+=	COND_MYSQL=
 PLIST_SUBST+=	COND_MYSQL="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mpsycopg2)
-DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
-PLIST_SUBST+=	COND_PSYCOPG2=
-.else
-PLIST_SUBST+=	COND_PSYCOPG2="@comment "
-.endif
-
 .if !empty(PKG_OPTIONS:Mpsycopg1)
 DEPENDS+=	${PYPKGPREFIX}-psycopg-[0-9]*:../../databases/py-psycopg
 PLIST_SUBST+=	COND_PSYCOPG1=
@@ -27,8 +20,15 @@ PLIST_SUBST+=	COND_PSYCOPG1=
 PLIST_SUBST+=	COND_PSYCOPG1="@comment "
 .endif
 
+.if !empty(PKG_OPTIONS:Mpsycopg2)
+DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
+PLIST_SUBST+=	COND_PSYCOPG2=
+.else
+PLIST_SUBST+=	COND_PSYCOPG2="@comment "
+.endif
+
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqllite2
+DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 PLIST_SUBST+=	COND_SQLITE=
 .else
 PLIST_SUBST+=	COND_SQLITE="@comment "
