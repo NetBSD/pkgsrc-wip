@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/06/09 13:08:24 obache Exp $
+$NetBSD: MESSAGE,v 1.2 2006/09/08 03:53:05 obache Exp $
 You can install the following packages for feature improvement.
 	textproc/ruby-xmlscan:	performance improvement
 	textproc/ruby-xmlparser:performance improvement
-	wip/zphoto:		create flash-based photo album
+	graphics/zphoto:	create flash-based photo album
 	mail/ruby-tmail:	use mail interface
 ===========================================================================
