@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/30 20:19:02 jsonn Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/08 10:40:00 jsonn Exp $
 
-DISTNAME=	django-0.95pre3007
-PKGNAME=	${PYPKGPREFIX}-django-0.95pre3007
+DISTNAME=	Django-0.95
+PKGNAME=	${PYPKGPREFIX}-django-0.95
 CATEGORIES=	www python
-MASTER_SITES=	ftp://packages.stura.uni-rostock.de/misc/
+MASTER_SITES=	http://www.djangoproject.com/download/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
@@ -15,6 +15,25 @@ PYTHON_VERSIONS_ACCEPTED=	24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py24-setuptools
+DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+
+.include "options.mk"
+
+post-extract:
+	rm -r ${WRKSRC}/django/db/backends/ado_mssql
+	rm -r ${WRKSRC}/django/db/backends/oracle
+.if empty(PKG_OPTIONS:Mmysql)
+	rm -r ${WRKSRC}/django/db/backends/mysql
+.endif
+.if empty(PKG_OPTIONS:Mpsycopg1)
+	rm -r ${WRKSRC}/django/db/backends/postgresql
+.endif
+.if empty(PKG_OPTIONS:Mpsycopg2)
+	rm -r ${WRKSRC}/django/db/backends/postgresql_psycopg2
+.endif
+.if empty(PKG_OPTIONS:Msqlite)
+	rm -r ${WRKSRC}/django/db/backends/sqlite3
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
