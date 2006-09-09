@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/08/14 22:45:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/09 02:49:33 obache Exp $
 
 DISTNAME=		scite170
 PKGNAME=		scite-1.70
@@ -17,7 +17,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 BUILD_DIRS=		scintilla/gtk scite/gtk
 MAKE_FLAGS+=		GTK2=1 CPPFLAGS=-Dunix
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 do-install:
 	cd ${WRKSRC}/scite/gtk && ${GMAKE} GTK2=1 install

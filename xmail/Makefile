@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:49:34 obache Exp $
 #
 
 DISTNAME=	xmail-1.18
@@ -32,7 +32,7 @@ EXT=bsd # Default one :)
 .	endif
 .endif
 
-MAKEFILE=Makefile.${EXT}
+MAKE_FILE=Makefile.${EXT}
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/xmail

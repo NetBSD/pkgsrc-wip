@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/02 19:04:35 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/09 02:49:34 obache Exp $
 #
 
 DISTNAME=		wise2.2.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.ebi.ac.uk/Wise2/
 COMMENT=		Tool for Comparing bio polymers like DNA and Protein sequences
 
 WRKSRC=			${WRKDIR}/wise2.2.0/src
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 do-install:

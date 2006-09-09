@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		fbida-2.03
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://linux.bytesex.org/fbida/
 COMMENT=		Image viewer and editor
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		prefix=${PREFIX:Q}
 USE_TOOLS+=		gmake perl
 

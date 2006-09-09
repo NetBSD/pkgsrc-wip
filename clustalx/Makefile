@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/01 01:31:59 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		clustalx1.83.sun
@@ -12,7 +12,7 @@ COMMENT=		X-Windows interface for ClustalW
 
 WRKSRC=                 ${WRKDIR}/clustalx1.83.sun
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 do-install:
 .for PROGRAM in clustalx

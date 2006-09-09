@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/23 04:12:22 mchittur Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:49:33 obache Exp $
 #
 VERSION=		1.1.1
 PKGNAME=		postgresql74-postgis-${VERSION}
@@ -40,7 +40,7 @@ SCRIPTDIR=		${PREFIX}/share/postgis
 MAKE_ENV+=		PROJ_DIR=${PREFIX:Q}
 MAKE_ENV+=		GEOS_DIR=${PREFIX:Q}
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 # configures postgis source within contrib directory
 post-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/01 01:31:59 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		cops104+
@@ -12,7 +12,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.fish2.com/cops/
 COMMENT=		Computer Oracle and Password System
 
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 USE_TOOLS+=	gmake
 

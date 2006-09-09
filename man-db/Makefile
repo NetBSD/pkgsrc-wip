@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/09 02:49:33 obache Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -35,7 +35,7 @@ PKG_USERS=		${MAN_DB_USER}:${ROOT_GROUP}::man-db\ user:${MAN_DB_CAT_DIR}
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-setuid=${MAN_DB_USER:Q}

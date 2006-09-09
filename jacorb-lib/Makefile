@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:14 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
@@ -19,7 +19,7 @@ PKG_JVMS_ACCEPTED+=	sun-jdk14
 DIST_VERSION=           1_4_1
 PKG_VERSION=            1.4.1
 
-MAKEFILE=	        build.xml
+MAKE_FILE=	        build.xml
 
 do-install:
 	@${ECHO} "Installing lib"

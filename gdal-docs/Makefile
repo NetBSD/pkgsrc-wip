@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/31 13:13:06 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		gdal-1.3.1
@@ -16,7 +16,7 @@ DEPENDS+=		doxygen>=1.4.1:../../devel/doxygen
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 BUILD_TARGET=		docs
 INSTALL_TARGET=		install-docs

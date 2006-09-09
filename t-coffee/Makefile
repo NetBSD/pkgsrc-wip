@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/18 18:55:32 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		T-COFFEE_distribution
@@ -15,7 +15,7 @@ DEPENDS+=               clustalw>=1.8:../../biology/clustalw
 WRKSRC=		 	${WRKDIR}/T-COFFEE_distribution_Version_1.37/t_coffee_source
 
 MESSAGE_SUBST+=         PREFIX=${PREFIX}
-MAKEFILE=               makefile
+MAKE_FILE=              makefile
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/tcoffee

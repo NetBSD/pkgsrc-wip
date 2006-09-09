@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/11 12:27:58 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		btfs-0.0.3
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.mulliner.org/bluetooth/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.mulliner.org/bluetooth/btfs.php
 COMMENT=		Bluetooth Filesystem for FUSE
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 WRKSRC=			${WRKDIR}/btfs/src/
 USE_TOOLS=		gmake
 USE_LANGUAGES=		c

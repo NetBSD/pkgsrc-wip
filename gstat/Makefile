@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 10:48:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=	gstat-2.4.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gstat.org/
 COMMENT=	Geostatistical modelling, prediction and simulation
 
 GNU_CONFIGURE=	YES
-MAKEFILE=	makefile
+MAKE_FILE=	makefile
 
 # TODO:  detects ncurses instead of curses
 CONFIGURE_ARGS+=	--without-curses
@@ -30,11 +30,11 @@ post-configure:
 		-e 's:@DOCDIR@:${DOCDIR}:'
 
 x-post-build:
-	cd ${WRKSRC}/doc/www && ${MAKE} -f ${MAKEFILE} ${BUILD_TARGET}
+	cd ${WRKSRC}/doc/www && ${MAKE} -f ${MAKE_FILE} ${BUILD_TARGET}
 
 x-post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/doc/www && ${MAKE} -f ${MAKEFILE} ${INSTALL_TARGET}
+	cd ${WRKSRC}/doc/www && ${MAKE} -f ${MAKE_FILE} ${INSTALL_TARGET}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

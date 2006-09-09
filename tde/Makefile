@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
 
 DISTNAME=		tde-5.1s
 CATEGORIES=		editors
@@ -11,7 +11,7 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Thomson-Davis Editor
 
 USE_TOOLS+=		gmake
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 BUILD_TARGET=		tde
 
 SUBST_CLASSES+=		base

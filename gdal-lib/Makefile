@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/08/24 18:48:22 brook1 Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		gdal-1.3.2
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdal-lib
 PKG_SUPPORTED_OPTIONS=	pgsql mysql

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:26 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		mppdec-1.1
@@ -17,12 +17,12 @@ MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
-# do nothing, MAKEFILE is already set to "Makefile"
+# do nothing, MAKE_FILE is already set to "Makefile"
 # not compiling? see TODO!
 .elif ${OPSYS} == "Solaris"
-MAKEFILE=		Makefile.sun
+MAKE_FILE=		Makefile.sun
 .else
-MAKEFILE=		Makefile.nol
+MAKE_FILE=		Makefile.nol
 .endif
 
 # see TODO

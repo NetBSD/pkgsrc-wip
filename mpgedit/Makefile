@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/15 13:31:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		mpgedit_0-7p2beta_src
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mpgedit.org/mpgedit/
 COMMENT=		MPEG audio file editor
 
-MAKEFILE=		makefile.linux
+MAKE_FILE=		makefile.linux
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xmpgedit

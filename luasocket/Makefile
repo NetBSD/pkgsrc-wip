@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/08/14 22:44:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		luasocket-2.0.1
@@ -10,7 +10,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.cs.princeton.edu/~diego/professional/luasocket/
 COMMENT=		Gives socket capabilities to lua
 
-MAKEFILE=		${WRKSRC}/makefile
+MAKE_FILE=		${WRKSRC}/makefile
 BUILD_TARGET=		all
 USE_TOOLS+=		gmake
 

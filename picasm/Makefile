@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/01 01:32:10 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=	picasm105
@@ -10,7 +10,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://hyvatti.iki.fi/~jaakko/pic/
 COMMENT=	Assembler for Microchip PIC16Cxx microcontrollers
 
-MAKEFILE=	makefile.uni
+MAKE_FILE=	makefile.uni
 BUILD_TARGET=	picasm
 WRKSRC=		${WRKDIR}
 

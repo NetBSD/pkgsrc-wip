@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		omniORB-4.0.4
@@ -9,7 +9,7 @@ MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://omniorb.sourceforge.net/
 COMMENT=		omniORB is an ORB that implements the 2.6 specification of the CORBA
 
-MAKEFILE=		GNUmakefile
+MAKE_FILE=		GNUmakefile
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

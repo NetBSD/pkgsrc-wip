@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/05/24 10:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -20,11 +20,11 @@ CONFIGURE_ARGS+=	--enable-iodbc
 
 do-build:
 	cd ${WRKSRC}/src/modules/iodbc &&			\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${BUILD_TARGET}
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
 
 do-install:
 	cd ${WRKSRC}/src/modules/iodbc &&			\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKE_FILE} ${INSTALL_TARGET}
 
 .include "../../databases/iodbc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

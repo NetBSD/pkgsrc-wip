@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/11/03 14:48:34 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME?=		gcl-2.5.3
@@ -14,7 +14,7 @@ USE_X11=		yes
 USE_LIBTOOL?=		yes
 LIBTOOL_OVERRIDE?=	${WRKSRC}/libtool
 GNU_CONFIGURE?=		yes
-MAKEFILE=		makefile
+MAKE_FILE=		makefile
 
 DISTINFO_FILE?=		${.CURDIR}/../gcl/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../gcl/files

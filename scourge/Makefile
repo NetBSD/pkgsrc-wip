@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/12 16:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		scourge-0.4
@@ -12,7 +12,7 @@ COMMENT=		Graphical 3D roguelike, vermin extermination
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MAKEFILE=		Makefile.Fedora
+MAKE_FILE=		Makefile.Fedora
 
 post-extract:
 	${CP} ${FILESDIR}/scourge.sh ${WRKSRC}

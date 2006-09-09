@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/11 22:24:02 jcflack Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/09 02:49:33 obache Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -61,7 +61,7 @@ pre-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}for DIR in ${BUILD_DIRS} ; do \
 		( cd $${DIR} &&  \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-		-f ${MAKEFILE} prepare ) || exit 1 ; done
+		-f ${MAKE_FILE} prepare ) || exit 1 ; done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${PREFIX}/bin

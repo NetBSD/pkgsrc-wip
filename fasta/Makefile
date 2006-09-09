@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		fasta3
@@ -11,7 +11,7 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
 
-MAKEFILE=		Makefile.NetBSD
+MAKE_FILE=		Makefile.NetBSD
 
 WRKSRC=			${WRKDIR}
 
@@ -20,10 +20,10 @@ LICENSE=		no-commercial-use
 post-extract:
 	${SED} -e 's:/seqprg/slib/bin:@PREFIX@:' \
 	       -e 's:your.host.here:@HOSTNAME@:' \
-	        ${WRKSRC:Q}/${MAKEFILE:Q} > ${WRKSRC:Q}/${MAKEFILE:Q}.in
+	        ${WRKSRC:Q}/${MAKE_FILE:Q} > ${WRKSRC:Q}/${MAKE_FILE:Q}.in
 
 do-configure:
-	${SED} < ${WRKSRC:Q}/${MAKEFILE:Q}.in > ${WRKSRC:Q}/${MAKEFILE:Q} \
+	${SED} < ${WRKSRC:Q}/${MAKE_FILE:Q}.in > ${WRKSRC:Q}/${MAKE_FILE:Q} \
  		-e 's:@PREFIX@:${PREFIX}:' \
 	        -e 's:@HOSTNAME@:fasta.bioch.virginia.edu:'
 do-install:

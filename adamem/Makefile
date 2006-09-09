@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/09 21:02:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/09 02:49:32 obache Exp $
 #
 
 DISTNAME=		adamem
@@ -10,7 +10,7 @@ MAINTAINER=		xmor61@users.sourceforge.net
 HOMEPAGE=		http://www.komkon.org/~dekogel/adamem.html
 COMMENT=		Emulator for the Colecovision game console and Adam computer system
 
-MAKEFILE=		Makefile.X
+MAKE_FILE=		Makefile.X
 WRKSRC=			${WRKDIR}
 
 SUBST_CLASSES+=		dsp
