@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2370 2006/09/08 04:23:17 samott Exp $
+# $Id: Makefile,v 1.2371 2006/09/09 11:20:37 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -767,6 +767,7 @@ SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
+SUBDIR+=	openca
 SUBDIR+=	openct
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
