@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/09/09 13:13:47 adrian_p Exp $
+
+--- avahi-dnsconfd/Makefile.in.orig	2006-01-07 21:14:35.000000000 +0000
++++ avahi-dnsconfd/Makefile.in
+@@ -374,7 +374,7 @@ target_alias = @target_alias@
+ @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@avahi_dnsconfd_SOURCES = main.c 
+ @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@avahi_dnsconfd_CFLAGS = $(AM_CFLAGS) $(LIBDAEMON_CFLAGS)
+ @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@avahi_dnsconfd_LDADD = $(AM_LDADD) ../avahi-common/libavahi-common.la $(LIBDAEMON_LIBS)
+-@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgsysconf_SCRIPTS = avahi-dnsconfd.action
++@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgsysconf_SCRIPTS =
+ EXTRA_DIST = avahi-dnsconfd.action
+ all: all-am
+ 

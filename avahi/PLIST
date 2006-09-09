@@ -1,0 +1,53 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/09 13:13:47 adrian_p Exp $
+include/avahi-common/address.h
+include/avahi-common/alternative.h
+include/avahi-common/cdecl.h
+include/avahi-common/defs.h
+include/avahi-common/domain.h
+include/avahi-common/error.h
+include/avahi-common/gccmacro.h
+include/avahi-common/llist.h
+include/avahi-common/malloc.h
+include/avahi-common/rlist.h
+include/avahi-common/simple-watch.h
+include/avahi-common/strlst.h
+include/avahi-common/thread-watch.h
+include/avahi-common/timeval.h
+include/avahi-common/watch.h
+include/avahi-core/core.h
+include/avahi-core/log.h
+include/avahi-core/lookup.h
+include/avahi-core/publish.h
+include/avahi-core/rr.h
+lib/libavahi-common.la
+lib/libavahi-core.la
+lib/pkgconfig/avahi-core.pc
+man/man5/avahi-daemon.conf.5
+man/man5/avahi.hosts.5
+man/man5/avahi.service.5
+man/man8/avahi-daemon.8
+man/man8/avahi-dnsconfd.8
+man/man8/avahi-dnsconfd.action.8
+sbin/avahi-daemon
+sbin/avahi-dnsconfd
+share/avahi/avahi-service.dtd
+share/avahi/service-types
+share/doc/avahi/HACKING
+share/doc/avahi/INSTALL
+share/doc/avahi/NEWS
+share/doc/avahi/README
+share/doc/avahi/TODO
+share/examples/avahi/avahi-daemon.conf
+share/examples/avahi/avahi-dnsconfd.action
+share/examples/avahi/hosts
+share/examples/avahi/ssh.service
+share/examples/rc.d/avahidaemon
+@dirrm share/examples/avahi
+@dirrm share/doc/avahi
+@exec ${MKDIR} %D/share/avahi/introspection
+@dirrm share/avahi/introspection
+@dirrm share/avahi
+@dirrm include/avahi-core
+@dirrm include/avahi-common
+@unexec ${RMDIR} %D/etc/avahi/services 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/avahi 2>/dev/null || ${TRUE}

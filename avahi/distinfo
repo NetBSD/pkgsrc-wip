@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/09/09 13:13:47 adrian_p Exp $
+
+SHA1 (avahi-0.6.10.tar.gz) = 26ad1f9845126f2ca2e2a46a00bd201619a1a682
+RMD160 (avahi-0.6.10.tar.gz) = 59274b5314476830614fe9cb2d90e59eec3aba0f
+Size (avahi-0.6.10.tar.gz) = 879819 bytes
+SHA1 (patch-ac) = 577f65371079a4661ccb91e47e3dabcc34e38b11
+SHA1 (patch-ad) = 23bb347eb148d71f852f85541281245283b2f52c
