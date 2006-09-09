@@ -1,0 +1,69 @@
+$NetBSD: patch-aa,v 1.1 2006/09/09 15:28:16 cheusov Exp $
+
+--- makefile.orig	2005-07-06 13:59:57.000000000 +0300
++++ makefile
+@@ -2,17 +2,17 @@
+ # Root directory. Mainly useful for package building; leave empty for
+ # normal installation.
+ #
+-ROOT=
++#ROOT=
+ 
+ #
+ # The destination directory for the "sh" and "jsh" binaries.
+ #
+-SV3BIN=/usr/5bin
++SV3BIN=${DESTDIR}/heirloom/bin
+ 
+ #
+ # Location for manual pages (with man1 below).
+ #
+-MANDIR=/usr/share/man/5man
++MANDIR=${DESTDIR}/heirloom/man
+ 
+ #
+ # Enable this definition if spell checking should be done for the
+@@ -23,7 +23,7 @@ MANDIR=/usr/share/man/5man
+ #
+ # A BSD-compatible install command.
+ #
+-UCBINST=/usr/ucb/install
++UCBINST=install
+ 
+ #
+ # The strip command that is used at installation time.
+@@ -44,26 +44,26 @@ LNS=ln -s
+ #
+ # Compiler flags.
+ #
+-CFLAGS=-O
++#CFLAGS=-O
+ 
+ #
+ # Flags for the C preprocessor.
+ #
+-CFLAGS=-D_GNU_SOURCE
++#CFLAGS=-D_GNU_SOURCE
+ 
+ #
+ # A define for large file support, if necessary.
+ #
+-LARGEF=-D_FILE_OFFSET_BITS=64L
++#LARGEF=-D_FILE_OFFSET_BITS=64L
+ 
+ #
+ # The compiler warning options.
+ #
+-WERROR=-Werror
+-WARN = -Wchar-subscripts -Wformat -Wno-format-y2k -Wimplicit \
+-	-Wmissing-braces -Wsequence-point -Wreturn-type -Wtrigraphs \
+-	-Wunused-function -Wunused-label -Wunused-variable -Wunused-value \
+-	-Wuninitialized -Wmultichar -Wpointer-arith $(WERROR)
++#WERROR=-Werror
++#WARN = -Wchar-subscripts -Wformat -Wno-format-y2k -Wimplicit \
++#	-Wmissing-braces -Wsequence-point -Wreturn-type -Wtrigraphs \
++#	-Wunused-function -Wunused-label -Wunused-variable -Wunused-value \
++#	-Wuninitialized -Wmultichar -Wpointer-arith $(WERROR)
+ WARN=
+ 
+ #
