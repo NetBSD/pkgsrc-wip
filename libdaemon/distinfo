@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/09/09 11:35:02 adrian_p Exp $
+
+SHA1 (libdaemon-0.10.tar.gz) = 2606710f5b130078c313cbdb86765cf2da20c334
+RMD160 (libdaemon-0.10.tar.gz) = af210b110ab89d0c4289bf3241ab2b176ef40c1d
+Size (libdaemon-0.10.tar.gz) = 345084 bytes
