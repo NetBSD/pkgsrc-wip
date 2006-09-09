@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2372 2006/09/09 11:36:07 adrian_p Exp $
+# $Id: Makefile,v 1.2373 2006/09/09 13:15:02 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -78,6 +78,7 @@ SUBDIR+=	atftp
 SUBDIR+=	audacity-devel
 SUBDIR+=	autocutsel
 SUBDIR+=	autoproject
+SUBDIR+=	avahi
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
 SUBDIR+=	awflwm
