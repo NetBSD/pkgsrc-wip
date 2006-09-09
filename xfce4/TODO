@@ -14,7 +14,3 @@ This to do (remove from this list when task completed)
 * maybe add theme-dir for xfce4-wm and remove it from xfce4-wm-themes
 
 * what is causing core dump in xfce4-panel
-
-* comment out this for on Solaris
-
-	lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
