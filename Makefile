@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2371 2006/09/09 11:20:37 adrian_p Exp $
+# $Id: Makefile,v 1.2372 2006/09/09 11:36:07 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -544,6 +544,7 @@ SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
+SUBDIR+=	libdaemon
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdrm
