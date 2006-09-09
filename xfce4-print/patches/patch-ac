@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2006/09/09 09:03:39 marttikuparinen Exp $
+
+Index: printing-system.c
+===================================================================
+--- libxfprint/printing-system.c	(revision 22662)
++++ libxfprint/printing-system.c	(revision 23104)
+@@ -331,7 +331,7 @@
+ {
+   g_return_if_fail (ps);
+ 
+-  return PRINTING_SYSTEM_GET_PRIVATE (ps)->ps_customize_printer_list_window (win);
++  PRINTING_SYSTEM_GET_PRIVATE (ps)->ps_customize_printer_list_window (win);
+ }
+ 
+ void
+@@ -339,7 +339,7 @@
+ {
+   g_return_if_fail (ps);
+ 
+-  return PRINTING_SYSTEM_GET_PRIVATE (ps)->ps_customize_printer_queue_window (win);
++  PRINTING_SYSTEM_GET_PRIVATE (ps)->ps_customize_printer_queue_window (win);
+ }
+ 
+ PrintingSystem *
