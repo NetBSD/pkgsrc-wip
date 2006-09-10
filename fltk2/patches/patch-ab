@@ -1,0 +1,19 @@
+--- src/x11/event_key_state.cxx.orig	2006-09-10 16:33:56.000000000 +0100
++++ src/x11/event_key_state.cxx	2006-09-10 16:32:50.000000000 +0100
+@@ -3,6 +3,7 @@
+ // keys (mostly) by the X keysym.  So this turns the keysym into a keycode
+ // and looks it up in the X key bit vector, which x.C keeps track of.
+ 
++#include <sys/param.h>
+ #include <fltk/events.h>
+ #include <fltk/x.h>
+ 
+@@ -27,7 +28,7 @@
+     keycode = XKeysymToKeycode(xdisplay, 0xff20); // try XK_Multi_key
+     if (keycode) goto DONE;
+   } else if (keysym == RightAltKey) {
+-#if defined(__linux) || defined(__FreeBSD__)
++#if defined(__linux) || defined(BSD)
+     keycode = XKeysymToKeycode(xdisplay, 0xfe03); // AltGr european iso
+     if (keycode) goto DONE;
+ #endif

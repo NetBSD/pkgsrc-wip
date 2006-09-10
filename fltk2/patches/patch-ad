@@ -1,0 +1,19 @@
+--- src/x11/run.cxx.orig	2006-09-10 16:39:51.000000000 +0100
++++ src/x11/run.cxx	2006-09-10 16:40:32.000000000 +0100
+@@ -39,6 +39,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/time.h>
++#include <sys/param.h>
+ #include <limits.h>
+ #include <locale.h>
+ #include <fltk/visual.h>
+@@ -1732,7 +1733,7 @@
+ 	if (event==KEY) extra_state |= META; else extra_state &= ~META;
+ 	goto GET_STATE;
+ 
+-#if defined(__linux) || defined(__FreeBSD__)
++#if defined(__linux) || defined(BSD)
+       case 0xfe03: // XK_ISO_Level3_Shift (AltGr on my portuguese keyboard)
+ #endif
+       case 0xff7e: // XK_Mode_switch

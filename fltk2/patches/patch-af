@@ -1,0 +1,19 @@
+--- forms/colbrowser.cxx.orig	2006-09-10 16:43:55.000000000 +0100
++++ forms/colbrowser.cxx	2006-09-10 16:45:00.000000000 +0100
+@@ -32,6 +32,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>	// added for fltk
+ #include <string.h>	// added for fltk
++#include <sys/param.h>
+ 
+ #define MAX_RGB 3000
+ 
+@@ -50,7 +51,7 @@
+ #include <X11/XlibInt.h>
+   static const char *rgbfile = "/XFree86/lib/X11/rgb.txt";
+ #else
+-#ifdef __FreeBSD__
++#ifdef BSD
+   static const char *rgbfile = "/usr/X11R6/lib/X11/rgb.txt";
+ #else
+    static const char *rgbfile = "/usr/lib/X11/rgb.txt";

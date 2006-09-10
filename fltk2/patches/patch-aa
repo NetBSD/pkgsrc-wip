@@ -1,0 +1,22 @@
+--- src/filename_list.cxx.orig	2006-09-10 16:29:24.000000000 +0100
++++ src/filename_list.cxx	2006-09-10 16:30:42.000000000 +0100
+@@ -31,6 +31,7 @@
+ #include <ctype.h>
+ #include <string.h>
+ #include <stdio.h>
++#include <sys/param.h> 
+ #include <fltk/string.h>
+ #include <fltk/utf.h>
+ #include <fltk/filename.h>
+@@ -56,9 +57,9 @@
+   // do this even for our own internal version because some compilers
+   // will not cast it to the non-const version! Egad. So we have to
+   // use if's to go to what the various systems use:
+-#if HAVE_SCANDIR && !defined(__APPLE__) && !defined(__linux) && !defined(__FreeBSD__)&& !defined(__CYGWIN__)
++#if HAVE_SCANDIR && !defined(__APPLE__) && !defined(__linux) && !defined(BSD)&& !defined(__CYGWIN__)
+   int n = scandir(d, list, 0, sort);
+-#elif HAVE_SCANDIR && ( defined(__linux) || defined (__FreeBSD__) )
++#elif HAVE_SCANDIR && ( defined(__linux) || defined (BSD) )
+   int n = scandir(d, list, 0, (int(*)(const void*,const void*))sort);
+ #elif defined(__hpux) || defined(__CYGWIN__)
+   // HP-UX, Cygwin define the comparison function like this:
