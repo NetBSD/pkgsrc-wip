@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2006/07/14 14:57:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/10 17:48:11 thomasklausner Exp $
 
-DISTNAME=	cdrtools-2.01.01a11
+DISTNAME=	cdrtools-2.01.01a13
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -88,5 +88,6 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

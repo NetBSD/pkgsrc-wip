@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/09/10 17:48:11 thomasklausner Exp $
+
+--- mkisofs/Makefile.orig	2006-09-08 09:07:51.000000000 +0000
++++ mkisofs/Makefile
+@@ -51,7 +51,7 @@ HFILES=		apple.h bootinfo.h config.h def
+ 		ifo_read.h dvd_file.h dvd_reader.h bswap.h ifo_types.h \
+ 		../cdrecord/defaults.h
+ 
+-LIBS=		-lhfs -lfile -lunls -lrscg -lscg $(LIB_VOLMGT) -ldeflt -lfind -lschily $(SCSILIB) $(LIB_SOCKET)
++LIBS=		-lhfs -lfile -lunls -lrscg -lscg $(LIB_VOLMGT) -ldeflt -lfind -lschily $(SCSILIB) $(LIB_SOCKET) -lintl
+ XMK_FILE=	Makefile.man hybridman.mk
+ 
+ ###########################################################################
