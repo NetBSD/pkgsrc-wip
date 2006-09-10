@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST.dbus,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+bin/avahi-browse
+bin/avahi-browse-domains
+bin/avahi-publish
+bin/avahi-publish-address
+bin/avahi-publish-service
+bin/avahi-resolve
+bin/avahi-resolve-address
+bin/avahi-resolve-host-name
+include/avahi-client/client.h
+include/avahi-client/lookup.h
+include/avahi-client/publish.h
+lib/libavahi-client.la
+lib/pkgconfig/avahi-client.pc
+man/man1/avahi-browse-domains.1
+man/man1/avahi-browse.1
+man/man1/avahi-publish-address.1
+man/man1/avahi-publish-service.1
+man/man1/avahi-publish.1
+man/man1/avahi-resolve-address.1
+man/man1/avahi-resolve-host-name.1
+man/man1/avahi-resolve.1
+share/avahi/introspection/AddressResolver.introspect
+share/avahi/introspection/DomainBrowser.introspect
+share/avahi/introspection/EntryGroup.introspect
+share/avahi/introspection/HostNameResolver.introspect
+share/avahi/introspection/RecordBrowser.introspect
+share/avahi/introspection/Server.introspect
+share/avahi/introspection/ServiceBrowser.introspect
+share/avahi/introspection/ServiceResolver.introspect
+share/avahi/introspection/ServiceTypeBrowser.introspect
+share/examples/avahi/avahi-dbus.conf
+@dirrm include/avahi-client

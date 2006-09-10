@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/09 13:13:47 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/10 18:29:58 adrian_p Exp $
 include/avahi-common/address.h
 include/avahi-common/alternative.h
 include/avahi-common/cdecl.h
@@ -42,11 +42,7 @@ share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
 share/examples/avahi/ssh.service
 share/examples/rc.d/avahidaemon
-@dirrm share/examples/avahi
 @dirrm share/doc/avahi
-@exec ${MKDIR} %D/share/avahi/introspection
-@dirrm share/avahi/introspection
-@dirrm share/avahi
 @dirrm include/avahi-core
 @dirrm include/avahi-common
 @unexec ${RMDIR} %D/etc/avahi/services 2>/dev/null || ${TRUE}

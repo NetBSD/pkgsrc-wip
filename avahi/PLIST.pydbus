@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.pydbus,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+man/man1/avahi-bookmarks.1
+man/man1/avahi-discover.1
+share/avahi/interfaces/avahi-discover.glade

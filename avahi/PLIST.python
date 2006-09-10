@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.python,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+${PYSITELIB}/avahi/ServiceTypeDatabase.py
+@unexec ${RMDIR} %D/${PYSITELIB}/avahi 2>/dev/null || ${TRUE}

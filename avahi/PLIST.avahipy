@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.avahipy,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+bin/avahi-bookmarks
+bin/avahi-discover
+${PYSITELIB}/avahi/SimpleGladeApp.py
+${PYSITELIB}/avahi/SimpleGladeApp.pyc
+${PYSITELIB}/avahi/SimpleGladeApp.pyo
+${PYSITELIB}/avahi/__init__.py
+${PYSITELIB}/avahi/__init__.pyc
+${PYSITELIB}/avahi/__init__.pyo
+share/applications/avahi-discover.desktop
+@unexec ${RMDIR} %D/${PYSITELIB}/avahi 2>/dev/null || ${TRUE}

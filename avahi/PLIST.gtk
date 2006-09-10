@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.gtk,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+bin/avahi-discover-standalone
+share/avahi/interfaces/avahi-discover.glade

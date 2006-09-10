@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+
+--- avahi-client/client.c.orig	2006-04-24 01:18:46.000000000 +0100
++++ avahi-client/client.c
+@@ -67,7 +67,11 @@ static void client_set_state (AvahiClien
+     switch (client->state) {
+         case AVAHI_CLIENT_FAILURE:
+             if (client->bus) {
++#if (DBUS_VERSION_MAJOR == 0) && (DBUS_VERSION_MINOR >= 62)
++		dbus_connection_close(client->bus);
++#else
+                 dbus_connection_disconnect(client->bus);
++#endif
+                 dbus_connection_unref(client->bus);
+                 client->bus = NULL;
+             }
+@@ -598,8 +602,12 @@ void avahi_client_free(AvahiClient *clie
+     if (client->bus)
+         /* Disconnect in advance, so that the free() functions won't
+          * issue needless server calls */
++#if (DBUS_VERSION_MAJOR == 0) && (DBUS_VERSION_MINOR >= 62)
++	dbus_connection_close(client->bus);
++#else
+         dbus_connection_disconnect(client->bus);
+-    
++#endif    
++
+     while (client->groups)
+         avahi_entry_group_free(client->groups);
+ 

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.glib,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+include/avahi-glib/glib-malloc.h
+include/avahi-glib/glib-watch.h
+lib/libavahi-glib.la
+lib/pkgconfig/avahi-glib.pc
+@dirrm include/avahi-glib
