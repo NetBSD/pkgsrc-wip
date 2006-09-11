@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/09/11 22:11:19 cheusov Exp $
+
+--- scripts/Makefile.in.orig	2006-09-11 20:50:53.000000000 +0300
++++ scripts/Makefile.in
+@@ -218,7 +218,7 @@ noinst_SCRIPTS = \
+ 	test-attrcache
+ 
+ bin_SCRIPTS = expn
+-sysconf_DATA = amd.conf-sample lostaltmail.conf-sample
++sysconf_DATA =
+ 
+ # man pages
+ man_MANS = amd.conf.5 automount2amd.8 expn.1
