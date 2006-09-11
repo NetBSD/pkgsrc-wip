@@ -1,0 +1,7 @@
+nginx [engine x] is a HTTP server and IMAP/POP3 proxy server written by Igor
+Sysoev.
+It has been running on many heavily loaded Russian sites for more than two
+years.
+The sources are licensed under the BSD-like license.
+
+Check http://nginx.net/

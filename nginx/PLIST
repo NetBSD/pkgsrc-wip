@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/11 22:24:21 neimal Exp $
+sbin/nginx
