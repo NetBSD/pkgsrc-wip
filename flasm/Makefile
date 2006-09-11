@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/09/11 18:59:07 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/11 19:07:21 kh-p Exp $
 
 DISTNAME=		flasm16src
-PKGNAME=		flasm-16
+PKGNAME=		flasm-1.6.1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.nowrap.de/download/
 EXTRACT_SUFX=		.zip
