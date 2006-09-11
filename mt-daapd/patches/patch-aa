@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/05/20 18:42:28 airhead Exp $
+$NetBSD: patch-aa,v 1.2 2006/09/11 08:47:39 adrian_p Exp $
 
---- contrib/mt-daapd.conf.orig	2006-05-20 19:49:14.000000000 +0200
+--- contrib/mt-daapd.conf.orig	2004-12-29 06:20:26.000000000 +0000
 +++ contrib/mt-daapd.conf
 @@ -23,7 +23,7 @@
  # path is probably /usr/local/share/mt-daapd/admin-root.
@@ -16,16 +16,34 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/05/20 18:42:28 airhead Exp $
  #
  
 -db_dir		/var/cache/mt-daapd
-+db_dir		@PREFIX@/var/cache/mt-daapd
++db_dir		@VARBASE@/cache/mt-daapd
  
  #
  # mp3_dir (required)
+@@ -83,7 +83,7 @@ servername	mt-daapd
+ # as root or not.
+ #
+ 
+-runas	nobody
++runas	@MTDAAPD_USER@
+ 
+ #
+ # playlist (optional)
 @@ -98,7 +98,7 @@ runas	nobody
  # below.
  #
  
 -playlist	/etc/mt-daapd.playlist
-+playlist	@PKG_SYSCONFDIR@/etc/mt-daapd.playlist
++playlist	@PKG_SYSCONFDIR@/mt-daapd.playlist
  
  #
  # password (optional)
+@@ -136,7 +136,7 @@ extensions .mp3,.m4a,.m4p
+ # will vary the amount of logging you get.
+ #
+ 
+-#logfile /var/log/mt-daapd.log
++#logfile @VARBASE@/log/mt-daapd.log
+ 
+ #
+ # art_filename (optional)

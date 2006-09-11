@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/20 18:42:28 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/11 08:47:39 adrian_p Exp $
 sbin/mt-daapd
 share/examples/mt-daapd/mt-daapd.conf
 share/examples/mt-daapd/mt-daapd.playlist
-share/examples/rc.d/mt_daapd
+share/examples/rc.d/mtdaapd
 share/mt-daapd/admin-root/aspl-license.html
 share/mt-daapd/admin-root/aspl-license.txt
 share/mt-daapd/admin-root/config-update.html
