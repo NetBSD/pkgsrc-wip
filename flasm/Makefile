@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/11 18:18:17 kh-p Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/11 18:59:07 kh-p Exp $
 
 DISTNAME=		flasm16src
 PKGNAME=		flasm-16
@@ -12,11 +12,13 @@ COMMENT=		Flasm is a assembler/disassembler of Flash ActionScript bytecode
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_GNU_TOOLS+=         yacc
+USE_TOOLS+=		gmake yacc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flasm ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/flasm.html ${PREFIX}/share/doc
+	${INSTALL_DATA} ${WRKSRC}/classic.css ${PREFIX}/share/doc
+	${INSTALL_DATA} ${WRKSRC}/flasm.ini ${PREFIX}/share/examples
 
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
