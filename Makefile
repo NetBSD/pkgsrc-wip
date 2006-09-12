@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2375 2006/09/11 11:48:21 jsonn Exp $
+# $Id: Makefile,v 1.2376 2006/09/12 09:38:38 neimal Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -567,6 +567,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
 SUBDIR+=	libneural
+SUBDIR+=	libnjb
 SUBDIR+=	libobby
 SUBDIR+=	libootool
 SUBDIR+=	libopenmodeller
@@ -753,6 +754,7 @@ SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	nfdump
+SUBDIR+=	nginx
 SUBDIR+=	ninvaders
 SUBDIR+=	nnrpd
 SUBDIR+=	noip
