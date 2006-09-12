@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2377 2006/09/12 10:26:17 neimal Exp $
+# $Id: Makefile,v 1.2378 2006/09/12 12:18:07 neimal Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -337,6 +337,7 @@ SUBDIR+=	glulxe
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gnokii
+SUBDIR+=	gnomad2
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
