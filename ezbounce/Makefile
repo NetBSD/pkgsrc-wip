@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.17 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.18 2006/09/12 23:18:47 samott Exp $
 #
 
-DISTNAME=	ezbounce-1.04a
+DISTNAME=	ezbounce-1.04c
 CATEGORIES=	chat
-MASTER_SITES=	http://druglord.freelsd.org/ezbounce/ \
-		http://www.shellcentral.com/downloads/files/
-
-PATCHFILES=	ezb-1.04a-crash-fix-patch
-PATCH_DIST_STRIP=	-p1
-PATCH_SITES=	${MASTER_SITES}
+MASTER_SITES=	http://druglord.freelsd.org/ezbounce/		\
+		http://www.shellcentral.com/downloads/files/	\
+		http://ezbounce.dc-team.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
 GNU_CONFIGURE=	YES
+
+USE_LANGUAGES+=	c c++
 
 CONFIGURE_ARGS+=	--with-ssl
 
