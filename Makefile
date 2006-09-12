@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2378 2006/09/12 12:18:07 neimal Exp $
+# $Id: Makefile,v 1.2379 2006/09/12 22:42:01 samott Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -763,6 +763,7 @@ SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nos-tun
 SUBDIR+=	nrpe
+SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nzbget
