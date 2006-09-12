@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/12 12:14:56 neimal Exp $
+bin/gnomad2
+man/man1/gnomad2.1
+share/application-registry/gnomad2.applications
+share/applications/gnomad2.desktop
+share/pixmaps/gnomad2-logo.png
+@dirrm share/pixmaps
+@dirrm share/applications
+@dirrm share/application-registry
