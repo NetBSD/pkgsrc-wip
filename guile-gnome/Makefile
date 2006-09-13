@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2006/09/11 19:57:13 lexort Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/13 16:39:14 lexort Exp $
 
 DISTNAME=	guile-gnome-platform-2.7.99
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-platform/
 
-MAINTAINER=	gdt@ir.bbn.com
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/guile-gnome/
 COMMENT=	Library to access gobject/glib/gtk and gnome from guile
 
