@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- binaries/web/downloads/Makefile.in.orig	2006-03-13 19:04:11.000000000 +0100
++++ binaries/web/downloads/Makefile.in
+@@ -178,7 +178,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-myserverdatadir = $(root_prefix)/var/web/downloads
++myserverdatadir = $(prefix)/share/myserver/web/downloads
+ dist_myserverdata_DATA = hello.php script.sh file1.txt file2.txt
+ all: all-am
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- binaries/web/cgi-src/post/Makefile.in.orig	2006-03-13 19:04:11.000000000 +0100
++++ binaries/web/cgi-src/post/Makefile.in
+@@ -494,7 +494,7 @@ post.mscgi : $(libpost_a_OBJECTS) $(libp
+ 	$(CXX) $(libpost_a_OBJECTS) $(libpost_a_LIBADD) -o post.mscgi -shared
+ 
+ install : post.mscgi
+-	$(INSTALL) -D 'post.mscgi' '$(root_prefix)/var/web/cgi-bin/post.mscgi'
++	$(INSTALL) 'post.mscgi' '$(prefix)/share/myserver/web/cgi-bin/post.mscgi'
+ 
+ clean :
+ 	rm -f post.mscgi

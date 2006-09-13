@@ -1,0 +1,154 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+bin/myserver
+lib/myserver/cgi-lib.so
+share/doc/myserver/how_create_certificates.txt
+share/examples/myserver/MIMEtypes.xml
+share/examples/myserver/myserver.xml
+share/examples/myserver/virtualhosts.xml
+share/myserver/languages/brazilian.xml
+share/myserver/languages/configure/english.xml
+share/myserver/languages/configure/italiano.xml
+share/myserver/languages/configure/spanish.xml
+share/myserver/languages/english.xml
+share/myserver/languages/french.xml
+share/myserver/languages/german.xml
+share/myserver/languages/italiano.xml
+share/myserver/languages/russian.xml
+share/myserver/languages/russian_koi8r.xml
+share/myserver/languages/spanish.xml
+share/myserver/system/errors/300.html
+share/myserver/system/errors/301.html
+share/myserver/system/errors/302.html
+share/myserver/system/errors/303.html
+share/myserver/system/errors/304.html
+share/myserver/system/errors/305.html
+share/myserver/system/errors/307.html
+share/myserver/system/errors/400.html
+share/myserver/system/errors/401.html
+share/myserver/system/errors/402.html
+share/myserver/system/errors/403.html
+share/myserver/system/errors/404.html
+share/myserver/system/errors/405.html
+share/myserver/system/errors/406.html
+share/myserver/system/errors/407.html
+share/myserver/system/errors/408.html
+share/myserver/system/errors/409.html
+share/myserver/system/errors/410.html
+share/myserver/system/errors/411.html
+share/myserver/system/errors/412.html
+share/myserver/system/errors/413.html
+share/myserver/system/errors/414.html
+share/myserver/system/errors/415.html
+share/myserver/system/errors/416.html
+share/myserver/system/errors/417.html
+share/myserver/system/errors/500.html
+share/myserver/system/errors/501.html
+share/myserver/system/errors/502.html
+share/myserver/system/errors/503.html
+share/myserver/system/errors/504.html
+share/myserver/system/errors/505.html
+share/myserver/system/folderstyle.css
+share/myserver/system/icons/codes/300myserver.png
+share/myserver/system/icons/codes/301myserver.png
+share/myserver/system/icons/codes/302myserver.png
+share/myserver/system/icons/codes/303myserver.png
+share/myserver/system/icons/codes/304myserver.png
+share/myserver/system/icons/codes/305myserver.png
+share/myserver/system/icons/codes/307myserver.png
+share/myserver/system/icons/codes/400myserver.png
+share/myserver/system/icons/codes/401myserver.png
+share/myserver/system/icons/codes/402myserver.png
+share/myserver/system/icons/codes/403myserver.png
+share/myserver/system/icons/codes/404myserver.png
+share/myserver/system/icons/codes/405myserver.png
+share/myserver/system/icons/codes/406myserver.png
+share/myserver/system/icons/codes/407myserver.png
+share/myserver/system/icons/codes/408myserver.png
+share/myserver/system/icons/codes/409myserver.png
+share/myserver/system/icons/codes/410myserver.png
+share/myserver/system/icons/codes/411myserver.png
+share/myserver/system/icons/codes/412myserver.png
+share/myserver/system/icons/codes/413myserver.png
+share/myserver/system/icons/codes/414myserver.png
+share/myserver/system/icons/codes/415myserver.png
+share/myserver/system/icons/codes/416myserver.png
+share/myserver/system/icons/codes/417myserver.png
+share/myserver/system/icons/codes/500myserver.png
+share/myserver/system/icons/codes/501myserver.png
+share/myserver/system/icons/codes/502myserver.png
+share/myserver/system/icons/codes/503myserver.png
+share/myserver/system/icons/codes/504myserver.png
+share/myserver/system/icons/codes/505myserver.png
+share/myserver/system/security
+share/myserver/web/cgi-bin/counter.html
+share/myserver/web/cgi-bin/counter.mscgi
+share/myserver/web/cgi-bin/counter.readme
+share/myserver/web/cgi-bin/default.html
+share/myserver/web/cgi-bin/math_sum.mscgi
+share/myserver/web/cgi-bin/post.mscgi
+share/myserver/web/documentation/images/browsefolder.png
+share/myserver/web/documentation/images/confMIME.png
+share/myserver/web/documentation/images/consolescreen.png
+share/myserver/web/documentation/images/control_file.png
+share/myserver/web/documentation/images/control_service.png
+share/myserver/web/documentation/images/logo.png
+share/myserver/web/documentation/images/myfiles.png
+share/myserver/web/documentation/images/myserver.png
+share/myserver/web/documentation/images/sample404.png
+share/myserver/web/documentation/images/webserver.png
+share/myserver/web/documentation/index.htm
+share/myserver/web/documentation/style/myserver.css
+share/myserver/web/documentation/texts/background.htm
+share/myserver/web/documentation/texts/basicserver.htm
+share/myserver/web/documentation/texts/browsefolder.htm
+share/myserver/web/documentation/texts/cgi.htm
+share/myserver/web/documentation/texts/cvsversion.htm
+share/myserver/web/documentation/texts/errorfiles.htm
+share/myserver/web/documentation/texts/fastcgi.htm
+share/myserver/web/documentation/texts/helpus.htm
+share/myserver/web/documentation/texts/htmlfiles.htm
+share/myserver/web/documentation/texts/http.htm
+share/myserver/web/documentation/texts/https.htm
+share/myserver/web/documentation/texts/isapi.htm
+share/myserver/web/documentation/texts/license.htm
+share/myserver/web/documentation/texts/linuxrun.htm
+share/myserver/web/documentation/texts/mimetypes.htm
+share/myserver/web/documentation/texts/performance.htm
+share/myserver/web/documentation/texts/perl.htm
+share/myserver/web/documentation/texts/php.htm
+share/myserver/web/documentation/texts/publishwebsite.htm
+share/myserver/web/documentation/texts/remotecontrol.htm
+share/myserver/web/documentation/texts/runwindows9x.htm
+share/myserver/web/documentation/texts/security.htm
+share/myserver/web/documentation/texts/services.htm
+share/myserver/web/documentation/texts/tableofcontents.htm
+share/myserver/web/documentation/texts/viewingsite.htm
+share/myserver/web/documentation/texts/virtualhosts.htm
+share/myserver/web/documentation/texts/webserver.htm
+share/myserver/web/documentation/texts/wincgi.htm
+share/myserver/web/downloads/file1.txt
+share/myserver/web/downloads/file2.txt
+share/myserver/web/downloads/hello.php
+share/myserver/web/downloads/script.sh
+share/myserver/web/default.html
+share/myserver/web/goto.png
+share/myserver/web/link.html
+share/myserver/web/logo.png
+@exec ${MKDIR} %D/lib/myserver/external/protocols
+@dirrm lib/myserver/external/protocols
+@dirrm lib/myserver/external
+@dirrm lib/myserver
+@dirrm share/myserver/languages/configure
+@dirrm share/myserver/languages
+@dirrm share/myserver/system/errors
+@dirrm share/myserver/system/icons/codes
+@dirrm share/myserver/system/icons
+@dirrm share/myserver/system
+@dirrm share/myserver/web/cgi-bin
+@dirrm share/myserver/web/documentation/images
+@dirrm share/myserver/web/documentation/style
+@dirrm share/myserver/web/documentation/texts
+@dirrm share/myserver/web/documentation
+@dirrm share/myserver/web/downloads
+@dirrm share/myserver/web
+@dirrm share/myserver

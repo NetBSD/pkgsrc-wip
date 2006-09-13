@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- Documentation/En/style/Makefile.in.orig	2006-03-13 19:04:09.000000000 +0100
++++ Documentation/En/style/Makefile.in
+@@ -178,7 +178,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-myserverdatadir = $(root_prefix)/var/web/documentation/style
++myserverdatadir = $(prefix)/share/myserver/web/documentation/style
+ dist_myserverdata_DATA = myserver.css
+ all: all-am
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- binaries/certificates/Makefile.in.orig	2006-03-13 19:04:09.000000000 +0100
++++ binaries/certificates/Makefile.in
+@@ -328,7 +328,8 @@ uninstall-am: uninstall-info-am
+ 
+ 
+ install :
+-	$(INSTALL) -D 'how create certificates.txt' '$(root_prefix)/etc/myserver/certificates/how create certificates.txt'
++	$(INSTALL) -d '$(prefix)/share/doc/myserver'
++	$(INSTALL) 'how create certificates.txt' '$(prefix)/share/doc/myserver/how_create_certificates.txt'
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

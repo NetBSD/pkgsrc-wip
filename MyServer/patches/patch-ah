@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- binaries/web/cgi-bin/Makefile.in.orig	2006-03-13 19:04:10.000000000 +0100
++++ binaries/web/cgi-bin/Makefile.in
+@@ -178,7 +178,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-myserverdatadir = $(root_prefix)/var/web/cgi-bin
++myserverdatadir = $(prefix)/share/myserver/web/cgi-bin
+ dist_myserverdata_DATA = counter.html default.html counter.readme
+ all: all-am
+ 

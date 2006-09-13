@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- CGI-LIB/Makefile.in.orig	2006-03-13 19:04:08.000000000 +0100
++++ CGI-LIB/Makefile.in
+@@ -544,7 +544,8 @@ makemscgi :
+ 	if test x$(MAKE_MSCGI) = xno; then exit; fi
+ 
+ install : makemscgi cgi-lib.so
+-	$(INSTALL) -D 'cgi-lib.so' '$(prefix)/lib/myserver/cgi-lib.so'
++	$(INSTALL) -d '$(prefix)/lib/myserver'
++	$(INSTALL) 'cgi-lib.so' '$(prefix)/lib/myserver/cgi-lib.so'
+ 
+ clean :
+ 	rm -f cgi-lib.so

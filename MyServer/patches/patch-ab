@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- binaries/web/cgi-src/counter/Makefile.in.orig	2006-03-13 19:04:11.000000000 +0100
++++ binaries/web/cgi-src/counter/Makefile.in
+@@ -559,7 +559,7 @@ counter.mscgi : $(libcounter_a_OBJECTS) 
+ 	$(CXX) $(libcounter_a_OBJECTS) $(libcounter_a_LIBADD) -o counter.mscgi -shared
+ 
+ install : counter.mscgi
+-	$(INSTALL) -D 'counter.mscgi' '$(root_prefix)/var/web/cgi-bin/counter.mscgi'
++	$(INSTALL) 'counter.mscgi' '$(prefix)/share/myserver/web/cgi-bin/counter.mscgi'
+ 
+ clean :
+ 	rm -f counter.mscgi

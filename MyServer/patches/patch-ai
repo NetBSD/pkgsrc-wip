@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+--- Documentation/En/Makefile.in.orig	2006-03-13 19:04:08.000000000 +0100
++++ Documentation/En/Makefile.in
+@@ -188,7 +188,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = images style texts
+-myserverdatadir = $(root_prefix)/var/web/documentation
++myserverdatadir = $(prefix)/share/myserver/web/documentation
+ dist_myserverdata_DATA = index.htm
+ all: all-recursive
+ 

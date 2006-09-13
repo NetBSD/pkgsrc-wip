@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+
+SHA1 (MyServer-src-0.8.2.tar.bz2) = 6f3f44587f395e1f8ab6bd1d9a73f17cd669e3ba
+RMD160 (MyServer-src-0.8.2.tar.bz2) = eae91629dc3bfd91cb9e6b62d02e9e109f21b647
+Size (MyServer-src-0.8.2.tar.bz2) = 1094212 bytes
+SHA1 (patch-aa) = 6b2b975d23c8253d73a7b4fce02c15fd23d0527f
+SHA1 (patch-ab) = 2c0385e77373ec04f0d6b75c54f6bd60e71cd0a8
+SHA1 (patch-ac) = c6329269dd4a7b318598df2298fe70514183c3e9
+SHA1 (patch-ad) = 1c7f2d65535e0c4ca5dac1336476b7b0f6223587
+SHA1 (patch-ae) = 98f71ad8976919769e3d9c28d8cd54091645d830
+SHA1 (patch-af) = be499d6f9230a506a7b0d694ebbd68c90641e976
+SHA1 (patch-ag) = 6ea23d52a85e2ca7dfde8977b6c4fc6c240df944
+SHA1 (patch-ah) = 5e63b44cb4d51200cced964442601d489fb0a9eb
+SHA1 (patch-ai) = 666c0f0b7d3ed108c044c101fb715717a7c9f684
+SHA1 (patch-aj) = 8fcc1382a558fafc204dfe48c847c91fa2d806ca
+SHA1 (patch-ak) = e0548f146b29c85b40e270b904051e8380200888
+SHA1 (patch-al) = 1e8563879cacb917219c792e722aa3048ba6cfc5
+SHA1 (patch-am) = 18eac2c25854095acae7fcdbe42a6f2223abb765
