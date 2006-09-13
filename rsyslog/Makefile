@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/13 12:24:17 bartoszkuzma Exp $
 #
 
 DISTNAME=		rsyslog-1.0.4
@@ -7,7 +7,7 @@ MASTER_SITES=		http://download.adiscon.com/rsyslog/
 
 MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://www.rsyslog.com/
-COMMENT=		Rsyslog, the enhanced syslogd for Unix
+COMMENT=		The enhanced syslogd for Unix
 
 MAKE_FILE=		master.make
 VPATH=			./ # Required for master.make.
