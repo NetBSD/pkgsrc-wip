@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/09 20:33:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/13 18:50:46 peterih Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -9,13 +9,18 @@ MAINTAINER=		pih@xbase.dk
 HOMEPAGE=		http://pointless.sourceforge.net/
 COMMENT=		Markup-language presentation tool
 
+GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c c++
+
 DEPENDS+=               a2ps>=4.1:../../print/a2ps
+DEPENDS+=               pdflib>=4.0.3:../../print/pdflib
+DEPENDS+=               plotutils>=2.4.1:../../graphics/plotutils
 DEPENDS+=               gnuplot>=3.7:../../graphics/gnuplot
+DEPENDS+=               freetype2>=2.1:../../graphics/freetype2
 DEPENDS+=               Mesa>=6.0:../../graphics/Mesa
 DEPENDS+=               ghostscript-esp>=7.0:../../print/ghostscript-esp
 
 USE_PKGLOCALEDIR=       yes
-GNU_CONFIGURE=		yes
 
 INSTALL_TARGET=		${INSTALL} install-modules
 
