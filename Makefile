@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2379 2006/09/12 22:42:01 samott Exp $
+# $Id: Makefile,v 1.2380 2006/09/13 14:10:17 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -7,6 +7,7 @@ SUBDIR+=	Chinput
 SUBDIR+=	DarwinStreamingServer
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
+SUBDIR+=	MyServer
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
@@ -880,6 +881,7 @@ SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
 SUBDIR+=	p5-File-Copy-Recursive
+SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-Geo-IPfree
@@ -887,6 +889,7 @@ SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
 SUBDIR+=	p5-HTML-Strip
+SUBDIR+=	p5-HTML-TableContentParser
 SUBDIR+=	p5-HTML-TagCloud
 SUBDIR+=	p5-HTML-TokeParser-Simple
 SUBDIR+=	p5-HTML-Widget
@@ -907,6 +910,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-MKDoc-XML
+SUBDIR+=	p5-MP3-Mplib
 SUBDIR+=	p5-Mail-Webmail-Gmail
 SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
@@ -1314,6 +1318,7 @@ SUBDIR+=	swami
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	sxemacs
+SUBDIR+=	sxid
 SUBDIR+=	sysjail
 SUBDIR+=	sysklogd
 SUBDIR+=	sysstat
