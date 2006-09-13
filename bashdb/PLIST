@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/13 17:34:14 splitscreen Exp $
+bin/bashdb
+info/bashdb.info
+man/man1/bashdb.1
+share/bashdb/dbg-brk.inc
+share/bashdb/dbg-cmds.inc
+share/bashdb/dbg-commands.inc
+share/bashdb/dbg-complete.inc
+share/bashdb/dbg-file.inc
+share/bashdb/dbg-fns.inc
+share/bashdb/dbg-help.inc
+share/bashdb/dbg-hist.inc
+share/bashdb/dbg-info.inc
+share/bashdb/dbg-init.inc
+share/bashdb/dbg-io.inc
+share/bashdb/dbg-list.inc
+share/bashdb/dbg-log.inc
+share/bashdb/dbg-main.inc
+share/bashdb/dbg-pre.inc
+share/bashdb/dbg-set-d-vars.inc
+share/bashdb/dbg-set.inc
+share/bashdb/dbg-show.inc
+share/bashdb/dbg-sig.inc
+share/bashdb/dbg-stack.inc
+share/emacs/site-lisp/bashdb.el
+share/emacs/site-lisp/bashdb.elc
+@dirrm share/bashdb
