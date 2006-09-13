@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/09/13 13:56:57 bartoszkuzma Exp $
+
+--- source/Makefile.in.orig	2003-08-11 17:40:32.000000000 +0200
++++ source/Makefile.in
+@@ -53,10 +53,10 @@ $(TARGET): $(OBJS) $(EXTRA_OBJ)
+ 
+ install: $(TARGET) ../docs/sxid.1 ../docs/sxid.conf.example
+ 	$(INSTALL_DIR) $(DESTDIR){$(sysconfdir),$(mandir)/man{1,5},$(bindir)}
+-	if ! test -e $(DESTDIR)$(sysconfdir)/sxid.conf; then \
+-		$(INSTALL_DATA) ../docs/sxid.conf.example \
+-		$(DESTDIR)$(sysconfdir)/sxid.conf; \
+-	fi
++	#if ! test -e $(DESTDIR)$(sysconfdir)/sxid.conf; then \
++	#	$(INSTALL_DATA) ../docs/sxid.conf.example \
++	#	$(DESTDIR)$(sysconfdir)/sxid.conf; \
++	#fi
+ 	$(INSTALL_DATA) ../docs/sxid.1 $(DESTDIR)$(mandir)/man1/sxid.1
+ 	$(INSTALL_DATA) ../docs/sxid.conf.5 $(DESTDIR)$(mandir)/man5/sxid.conf.5
+ 	$(INSTALL_PROGRAM) $(TARGET) $(DESTDIR)$(bindir)/$(TARGET)
