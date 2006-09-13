@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2006/08/20 11:47:49 ykomatsu Exp $
+$NetBSD: patch-aa,v 1.10 2006/09/13 09:23:14 ykomatsu Exp $
 
---- Dependencies/zdaemon-Zope-3.3.0b2/zdaemon/zdctl.py.orig	2006-08-19 01:12:05.000000000 +0900
-+++ Dependencies/zdaemon-Zope-3.3.0b2/zdaemon/zdctl.py
+--- Dependencies/zdaemon-Zope-3.3.0c1/zdaemon/zdctl.py.orig	2006-09-13 01:24:22.000000000 +0900
++++ Dependencies/zdaemon-Zope-3.3.0c1/zdaemon/zdctl.py
 @@ -58,6 +58,14 @@ if __name__ == "__main__":
      scriptdir = dirname(normpath(abspath(sys.argv[0])))
      if basename(scriptdir).lower() == "zdaemon":

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/20 11:47:49 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/09/13 09:23:13 ykomatsu Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
@@ -1408,6 +1408,9 @@ share/zope3/lib/python/pytz/zoneinfo/America/Aruba.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Asuncion.py
 share/zope3/lib/python/pytz/zoneinfo/America/Asuncion.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Asuncion.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/Atikokan.py
+share/zope3/lib/python/pytz/zoneinfo/America/Atikokan.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/Atikokan.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Atka.py
 share/zope3/lib/python/pytz/zoneinfo/America/Atka.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Atka.pyo
@@ -1423,6 +1426,9 @@ share/zope3/lib/python/pytz/zoneinfo/America/Belem.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Belize.py
 share/zope3/lib/python/pytz/zoneinfo/America/Belize.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Belize.pyo
+share/zope3/lib/python/pytz/zoneinfo/America/Blanc_minus_Sablon.py
+share/zope3/lib/python/pytz/zoneinfo/America/Blanc_minus_Sablon.pyc
+share/zope3/lib/python/pytz/zoneinfo/America/Blanc_minus_Sablon.pyo
 share/zope3/lib/python/pytz/zoneinfo/America/Boa_Vista.py
 share/zope3/lib/python/pytz/zoneinfo/America/Boa_Vista.pyc
 share/zope3/lib/python/pytz/zoneinfo/America/Boa_Vista.pyo
@@ -2425,12 +2431,21 @@ share/zope3/lib/python/pytz/zoneinfo/Europe/Dublin.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Gibraltar.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Gibraltar.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Gibraltar.pyo
+share/zope3/lib/python/pytz/zoneinfo/Europe/Guernsey.py
+share/zope3/lib/python/pytz/zoneinfo/Europe/Guernsey.pyc
+share/zope3/lib/python/pytz/zoneinfo/Europe/Guernsey.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Helsinki.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Helsinki.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Helsinki.pyo
+share/zope3/lib/python/pytz/zoneinfo/Europe/Isle_of_Man.py
+share/zope3/lib/python/pytz/zoneinfo/Europe/Isle_of_Man.pyc
+share/zope3/lib/python/pytz/zoneinfo/Europe/Isle_of_Man.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Istanbul.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Istanbul.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Istanbul.pyo
+share/zope3/lib/python/pytz/zoneinfo/Europe/Jersey.py
+share/zope3/lib/python/pytz/zoneinfo/Europe/Jersey.pyc
+share/zope3/lib/python/pytz/zoneinfo/Europe/Jersey.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Kaliningrad.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Kaliningrad.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Kaliningrad.pyo
@@ -2530,6 +2545,9 @@ share/zope3/lib/python/pytz/zoneinfo/Europe/Vienna.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Vilnius.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Vilnius.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Vilnius.pyo
+share/zope3/lib/python/pytz/zoneinfo/Europe/Volgograd.py
+share/zope3/lib/python/pytz/zoneinfo/Europe/Volgograd.pyc
+share/zope3/lib/python/pytz/zoneinfo/Europe/Volgograd.pyo
 share/zope3/lib/python/pytz/zoneinfo/Europe/Warsaw.py
 share/zope3/lib/python/pytz/zoneinfo/Europe/Warsaw.pyc
 share/zope3/lib/python/pytz/zoneinfo/Europe/Warsaw.pyo
@@ -11016,7 +11034,6 @@ share/zope3/lib/python/zope/testing/renormalizing.py
 share/zope3/lib/python/zope/testing/renormalizing.pyc
 share/zope3/lib/python/zope/testing/renormalizing.pyo
 share/zope3/lib/python/zope/testing/testrunner-arguments.txt
-share/zope3/lib/python/zope/testing/testrunner-coverage-win32.txt
 share/zope3/lib/python/zope/testing/testrunner-coverage.txt
 share/zope3/lib/python/zope/testing/testrunner-debugging.txt
 share/zope3/lib/python/zope/testing/testrunner-edge-cases.txt
