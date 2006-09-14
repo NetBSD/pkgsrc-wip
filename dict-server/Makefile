@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/02 00:19:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2006/09/14 14:46:22 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -11,6 +11,7 @@ USE_TOOLS+=		gmake yacc m4:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--disable-plugin
+CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/dictd
 
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
