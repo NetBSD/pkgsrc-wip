@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/14 18:33:37 dhowland Exp $
 
 DISTNAME=	korelib-1.0
 CATEGORIES=	devel kde
@@ -12,6 +12,7 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_TOOLS+=	automake
+USE_LANGUAGES=	c c++
 
 pre-configure:
 	cd ${WRKSRC} && aclocal

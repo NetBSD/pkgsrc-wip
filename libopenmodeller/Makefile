@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/02 21:03:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/14 18:25:48 dhowland Exp $
 #
 
 DISTNAME=		libopenmodeller-0.3.3
@@ -10,6 +10,7 @@ HOMEPAGE=		http://openmodeller.sourceforge.net/
 COMMENT=		Spatial distribution modelling library
 
 USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/09/14 18:34:40 dhowland Exp $
 #
 
 DISTNAME=		kahakai-0.6.2
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kahakai.sourceforge.net/
 COMMENT=		Window manager with Python scripting
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 GCC_REQD=		3.3
