@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/12 17:33:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/14 18:50:53 dhowland Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -11,6 +11,7 @@ COMMENT=		Fluxbox workspace manager, environment
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 PY_PATCHPLIST=		YES
 
