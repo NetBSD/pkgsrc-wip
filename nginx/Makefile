@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/11 22:24:21 neimal Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/14 22:06:52 neimal Exp $
 #
 
-DISTNAME=		nginx-0.4.0
+DISTNAME=		nginx-0.4.2
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
@@ -24,10 +24,9 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
-CONFIGURE_ARGS+=	--pid-path=/var/run/nginx.pid
-CONFIGURE_ARGS+=	--error-log-path=/var/log/nginx/error.log
-CONFIGURE_ARGS+=	--http-log-path=/var/log/nginx/access.log
-CONFIGURE_ARGS+=	--without-http_gzip_module
+CONFIGURE_ARGS+=	--pid-path=${VARBASE}/run/nginx.pid
+CONFIGURE_ARGS+=	--error-log-path=${VARBASE}/log/nginx/error.log
+CONFIGURE_ARGS+=	--http-log-path=${VARBASE}var/log/nginx/access.log
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
