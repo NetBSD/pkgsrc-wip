@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/14 18:16:28 dhowland Exp $
 #
 
 DISTNAME=		ncc-2.1
@@ -11,6 +11,8 @@ COMMENT=		Compiler that produces program analysis information
 
 BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
+
+USE_LANGUAGES=		c c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objdir/ncc ${PREFIX}/bin

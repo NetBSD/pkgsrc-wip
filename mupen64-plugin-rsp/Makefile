@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/14 18:18:58 dhowland Exp $
 #
 
 DISTNAME=	hack_azi_rsp_hle
@@ -13,6 +13,8 @@ HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	RSP plugin for mupen64 emulator
 
 BUILD_DEPENDS+=	mupen64-base-[0-9]*:../../wip/mupen64-base
+
+USE_LANGUAGES=	c c++
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"

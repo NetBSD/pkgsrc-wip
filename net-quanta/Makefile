@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/14 18:15:09 dhowland Exp $
 
 DISTNAME=		QUANTA-0.3
 PKGNAME=		net-quanta-0.3
@@ -12,6 +12,7 @@ COMMENT=		Toolkit for extremely high bandwidth networking
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CXXFLAGS="${PTHREAD_CFLAGS} ${EXTRA_LDFLAGS}"
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
