@@ -1,8 +1,8 @@
-$NetBSD: patch-cg,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
+$NetBSD: patch-cg,v 1.2 2006/09/14 23:12:23 thomasklausner Exp $
 
---- mkisofs/write.c.orig	2005-08-07 14:50:48.000000000 +0000
+--- mkisofs/write.c.orig	2006-09-10 18:03:27.000000000 +0000
 +++ mkisofs/write.c
-@@ -463,7 +463,7 @@ write_one_file(filename, size, outfile)
+@@ -469,7 +469,7 @@ write_one_file(filename, size, outfile)
  static	char		buffer[SECTOR_SIZE * NSECT];
  	FILE		*infile;
  	off_t		remain;
@@ -11,7 +11,7 @@ $NetBSD: patch-cg,v 1.1.1.1 2006/01/31 17:31:43 thomasklausner Exp $
  
  
  	if ((infile = fopen(filename, "rb")) == NULL) {
-@@ -554,7 +554,10 @@ static	char		buffer[SECTOR_SIZE * NSECT]
+@@ -560,7 +560,10 @@ static	char		buffer[SECTOR_SIZE * NSECT]
  			fflush(stderr);
  		}
  #endif
