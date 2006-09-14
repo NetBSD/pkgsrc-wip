@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/14 19:50:14 shattered Exp $
 #
 
 DISTNAME=		sara-5.0.5b
@@ -10,13 +10,12 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www-arc.com/sara/
 COMMENT=		Security Auditor's Research Assistant
 
-DEPENDS+=		nmap>=3.50:../../net/nmap/
-DEPENDS+=		fping>=2.4:../../net/fping/
+DEPENDS+=		nmap>=3.50:../../net/nmap
+DEPENDS+=		fping>=2.4:../../net/fping
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_PERL5=			yes
-#PKG_DEBUG_LEVEL=2
+USE_TOOLS+=		perl
 
 SUBST_CLASSES+=	grp
 SUBST_STAGE.grp= post-patch
@@ -58,12 +57,10 @@ do-install:
 .for bin in faux_fping fwping get_targets
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${bin} ${PREFIX}/bin/
 .endfor
-.undef bin
 .for bin in ddos-scan dscan ftp_scan sys_socket sqlanlz yp-chk \
 	nfs-chk irix-telnet rcmd rex safe_finger tcp_scan timeout udp_scan
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${bin} ${PREFIX}/bin/
 .endfor
-.undef bin
 	#${PAX} -rwppm ${WRKSRC}/rules/* ${PREFIX}/share/sara/rules/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/rules/
 	${CP} -rf ${WRKSRC}/rules/* ${PREFIX}/share/sara/rules/
