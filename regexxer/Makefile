@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/08/25 20:28:22 dhowland Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/14 17:47:38 dhowland Exp $
 #
 
 DISTNAME=	regexxer-0.8
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
+
+DEPENDS+=       p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
