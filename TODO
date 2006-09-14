@@ -1,6 +1,7 @@
 Suggested package updates
 
 	o autoproject-0.20
+	o avahi-0.6.14
 	o bmpx-0.21.0
 	o chora-2.0.1
 	o cinelerra-2.1
@@ -22,7 +23,7 @@ Suggested package updates
 	o gtick-0.3.10
 	o gxmms2-0.6.2
 	o hu-go-2.11
-	o linphone-1.3.5
+	o linphone-1.4.0
 	o mupen64-0.5
 	o planner-0.14
 	o py-PyPE-1.9.2
@@ -38,6 +39,6 @@ Suggested package updates
 	o uqm-0.5.0
 	o xaralx-bin-0.7.1692
 	o xmms2-0.2DrFeelgood
-	o yabause-0.7.1
+	o yabause-0.7.2
 	o zinf-2.2.5
 	o zsnes-devel-20060904
