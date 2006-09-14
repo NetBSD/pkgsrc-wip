@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/06/17 15:12:48 poppnk Exp $
+$NetBSD: distinfo,v 1.7 2006/09/14 14:08:03 poppnk Exp $
 
-SHA1 (bluez-hcidump-1.31.tar.gz) = d04a459a5b5807f3e8f6c300c019226d67fd7dda
-RMD160 (bluez-hcidump-1.31.tar.gz) = 3127adff5e1cbb796c0e55109cc8e49aa5b41141
-Size (bluez-hcidump-1.31.tar.gz) = 138039 bytes
+SHA1 (bluez-hcidump-1.32.tar.gz) = ba6d4799a260a34f73f7bb25d70461c55f74fa57
+RMD160 (bluez-hcidump-1.32.tar.gz) = 26689d77354108d23df5c12b3fbee2c7a6d8c69d
+Size (bluez-hcidump-1.32.tar.gz) = 138353 bytes
