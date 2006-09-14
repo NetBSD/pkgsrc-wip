@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/17 15:12:48 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/09/14 14:11:50 poppnk Exp $
 bin/ciptool
 bin/dund
 bin/hcitool
@@ -22,10 +22,13 @@ man/man5/hcid.conf.5
 man/man8/hciattach.8
 man/man8/hciconfig.8
 man/man8/hcid.8
+man/man8/hid2hci.8
 man/man8/sdpd.8
 sbin/hciattach
 sbin/hciconfig
 sbin/hcid
+sbin/hid2hci
 sbin/sdpd
 @dirrm etc/dbus-1/system.d
+@dirrm etc/dbus-1
 @dirrm etc/bluetooth

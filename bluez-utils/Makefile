@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/06/17 15:12:48 poppnk Exp $
+# $NetBSD: Makefile,v 1.13 2006/09/14 14:11:50 poppnk Exp $
 #
 
-DISTNAME=		bluez-utils-3.0
+DISTNAME=		bluez-utils-3.5
 CATEGORIES=		net
 MASTER_SITES=		http://bluez.sf.net/download/
 
@@ -11,6 +11,7 @@ COMMENT=		Linux Bluetooth Stack utilities
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=	c
 
 EGDIR=${PKG_SYSCONFDIR}/bluetooth/
 CONF_FILES=${EGDIR}/hcid.conf ${EGDIR}/rfcomm.conf
