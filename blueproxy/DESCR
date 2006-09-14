@@ -1,0 +1,6 @@
+Blueproxy is a simple proxy server to convert Bluetooth RFCOMM connections into
+TCP connections. This frees Bluetooth application programmers from having to
+worry about getting Bluetooth bindings for their language of choice (in my
+case, OCaml). Notable features include sending preambles to allow a single TCP
+server to aggregrate multiple Bluetooth sensors, and a scanning mode to
+continuously detect Bluetooth devices entering into range of a sensor.
