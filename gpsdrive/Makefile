@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2006/04/30 19:26:49 alnix Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/14 18:57:39 dhowland Exp $
 #
 
 DISTNAME=		gpsdrive-2.09
@@ -14,6 +14,7 @@ DEPENDS+=		wget>=1:../../net/wget
 DEPENDS+=		pcre>=6.6:../../devel/pcre
 
 GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c c++
 
 WRKSRC=			${WRKDIR}/gpsdrive-2.09
 USE_PKGLOCALEDIR=	yes

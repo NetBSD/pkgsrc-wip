@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 02:49:34 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/09/14 19:16:56 dhowland Exp $
 #
 
 DISTNAME=	xmail-1.18
@@ -9,6 +9,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.xmailserver.com/
 COMMENT=	SMTP, POP3 and finder server
 
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 MAKE_ENV+=	OSTYPE=${OPSYS:Q}

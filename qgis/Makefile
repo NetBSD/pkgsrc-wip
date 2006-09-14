@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/02 21:03:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/14 19:05:59 dhowland Exp $
 #
 
 DISTNAME=		qgis-0.7.4
@@ -12,6 +12,7 @@ COMMENT=		Open Source Geographic Information System
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--without-grass

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:40 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/14 19:20:03 dhowland Exp $
 #
 
 DISTNAME=		xbase-2.0.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		Xbase (i.e. dBase, FoxPro, etc.) compatible C++ class library
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

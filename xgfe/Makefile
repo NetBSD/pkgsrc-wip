@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/02 19:38:50 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/14 19:18:03 dhowland Exp $
 #
 
 DISTNAME=		xgfe-2.1
@@ -9,6 +9,8 @@ MAINTAINER=		dprice@cs.nmsu.edu
 COMMENT=		GUI front end for Gnuplot plotting package
 
 WRKSRC=			${WRKDIR}/xgfe-2.1/source
+
+USE_LANGUAGES=		c c++
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

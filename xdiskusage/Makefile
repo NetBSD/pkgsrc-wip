@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 22:57:28 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/14 19:19:11 dhowland Exp $
 #
 
 DISTNAME=		xdiskusage-1.48
@@ -10,6 +10,7 @@ MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://xdiskusage.sourceforge.net/
 COMMENT=		Graphical space disk viewer
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

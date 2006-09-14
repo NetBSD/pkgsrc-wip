@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/08 10:56:11 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/09/14 19:13:30 dhowland Exp $
 
 DISTNAME=		xxdiff-3.1
 CATEGORIES=		devel
@@ -10,6 +10,7 @@ COMMENT=		Graphical file comparator and merge tool
 
 BUILD_DEPENDS+=		tmake>=1.7:../../devel/tmake
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex gmake
 
 BUILD_DIRS=		src
