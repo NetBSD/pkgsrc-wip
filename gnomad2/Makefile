@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/12 12:14:56 neimal Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/15 19:05:45 neimal Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
@@ -6,15 +6,12 @@ CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnomad2/}
 
 MAINTAINER=		ku3@sl.aanet.ru
-HOMEPAGE=		http://belnet.dl.sourceforge.net/sourceforge/gnomad2/
+HOMEPAGE=		http://gnomad2.sourceforge.net/
 COMMENT=		GTK+2 tool for managing Creative and Dell mp3 players
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-#CFLAGS+=		-I${PREFIX}/include
-#CPPFLAGS+=		-I${PREFIX}/include
-#PKGC=			${PREFIX}/bin/pkg-config
 CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
 
 USE_TOOLS+=perl
