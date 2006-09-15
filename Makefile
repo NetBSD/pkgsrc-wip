@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2382 2006/09/13 17:43:28 splitscreen Exp $
+# $Id: Makefile,v 1.2383 2006/09/15 16:06:59 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -48,6 +48,7 @@ SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
+SUBDIR+=	am-utils
 SUBDIR+=	and
 SUBDIR+=	anope
 SUBDIR+=	aols-freetds
@@ -99,6 +100,8 @@ SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bison13
 SUBDIR+=	blassic
+SUBDIR+=	blueproxy
+SUBDIR+=	bluez-gnome
 SUBDIR+=	bluez-hcidump
 SUBDIR+=	bluez-hciemu
 SUBDIR+=	bluez-libs
@@ -263,6 +266,7 @@ SUBDIR+=	firefox2
 SUBDIR+=	firefox2-bin
 SUBDIR+=	firefox2-gtk1
 SUBDIR+=	firehose
+SUBDIR+=	flasm
 SUBDIR+=	flc
 SUBDIR+=	flexdump
 SUBDIR+=	flightgear
@@ -401,6 +405,7 @@ SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	hdparm
 SUBDIR+=	heirloom
+SUBDIR+=	heirloom-sh
 SUBDIR+=	hellanzb
 SUBDIR+=	help2man
 SUBDIR+=	heroes
