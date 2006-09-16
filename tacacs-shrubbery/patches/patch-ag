@@ -1,13 +1,17 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/07/08 20:50:15 gschwarz Exp $
+$NetBSD: patch-ag,v 1.2 2006/09/16 19:04:11 gschwarz Exp $
 
---- skey_fn.c.orig	2006-07-08 21:39:40.000000000 +0200
-+++ skey_fn.c	2006-07-08 21:39:55.000000000 +0200
-@@ -168,7 +168,7 @@
+--- skey_fn.c.orig	2006-09-16 16:30:40.000000000 +0200
++++ skey_fn.c	2006-09-16 16:32:53.000000000 +0200
+@@ -168,7 +168,11 @@
  		return(1);
  	    }
  
 -	    if (skeychallenge(&p->skey, name, skeyprompt, 80) == 0) {
-+	    if (skeychallenge(&p->skey, name, skeyprompt) == 0) {
++	    if (skeychallenge(&p->skey, name, skeyprompt
++#ifndef OLDSKEY
++                                                        , 80
++#endif
++                                                            ) == 0) {
  		char buf[256];
  		sprintf(buf, "%s\nS/Key challenge: ", skeyprompt);
  		data->server_msg = tac_strdup(buf);
