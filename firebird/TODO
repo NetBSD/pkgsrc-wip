@@ -1,16 +1,17 @@
-$Id: TODO,v 1.4 2005/07/01 02:05:11 hisazumi Exp $
+$Id: TODO,v 1.5 2006/09/16 06:55:10 thomasklausner Exp $
 
-install appropreate destination (/usr/pkg/bin, etc...) insted of /usr/pkg/firebird.
+Fix installation.
 
-Fix pkglint warnings.
+These comments were for the 1.5 version of the package:
 
-Create PLIST.
+Install appropriate destination (/usr/pkg/bin, etc...) instead of
+${PREFIX}/firebird.
 
 	-- nel@soraneko.com
 
-Firebird can be compiled as "classic" and "super" version -- I have no idea
-how do they differ; I think, when it is ready, Makefile should be divided to
-Makefile and Makefile.common and package should be split to "firebird" and
-"firebird-super"
+Firebird can be compiled as "classic" and "super" version -- I have
+no idea how do they differ; I think, when it is ready, Makefile
+should be divided in Makefile and Makefile.common and package should
+be split in "firebird" and "firebird-super".
 
 	-- dotz@irc.pl

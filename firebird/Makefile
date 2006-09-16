@@ -1,24 +1,25 @@
-# $NetBSD: Makefile,v 1.16 2005/11/03 14:57:35 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/09/16 06:55:10 thomasklausner Exp $
 #
 
-DISTNAME=		firebird-1.5.2.4731
+DISTNAME=		Firebird-2.0.0.12710-ReleaseCandidate3
+PKGNAME=		firebird-2.0.0.12710rc3
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		nel@soraneko.com
-HOMEPAGE=		http://sourceforge.net/projects/firebird/
+HOMEPAGE=		http://www.firebirdsql.org/
 COMMENT=		SQL database, opensource version of InterBase
 
-DEPENDS=		autoconf>=2.58:../../devel/autoconf
-
+WRKSRC=			${WRKDIR}/firebird-2.0.0.12710-ReleaseCandidate3
 USE_PKGLOCALEDIR=	yes
-HAS_CONFIGURE=          yes
-CONFIGURE_SCRIPT=       AUTOCONF=/usr/pkg/bin/autoconf ./autogen.sh
-CONFIGURE_ARGS+=        --prefix=/usr/pkg/firebird
-USE_TOOLS+=             gmake
-USE_TOOLS+=             gm4
-TOOLS_DEPMETHOD.gm4=    DEPENDS
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		AUTOCONF=${LOCALBASE}/bin/autoconf
+CONFIGURE_SCRIPT=	./autogen.sh
+CONFIGURE_ARGS+=	--prefix=${PREFIX}/firebird
+USE_TOOLS+=		autoconf gm4:run gmake
 
 PKG_USERS=		firebird:firebird
 PKG_GROUPS=		firebird
