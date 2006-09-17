@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/09/14 11:55:57 peterih Exp $
+# $NetBSD: Makefile,v 1.14 2006/09/17 21:30:28 peterih Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGREVISION=	1
@@ -13,7 +13,7 @@ MAINTAINER=	pih@xbase.dk
 HOMEPAGE=	http://mgw.k-fish.de/
 COMMENT=	Web based GroupWare system
 
-DEPENDS+=	php-curl>=4.3.4:../../www/php-curl
+DEPENDS+=	php4-curl>=4.3.4:../../www/php-curl
 DEPENDS+=	mysql4-server>=4.0.0:../../databases/mysql4-server
 DEPENDS+=	php-ldap>=4.3.4:../../databases/php-ldap
 DEPENDS+=	php-mysql>=4.3.4:../../databases/php-mysql
