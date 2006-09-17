@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/11 08:19:34 anielski Exp $
-lib/gtk-2.0/2.4.0/engines/libdwerg.la
+@comment $NetBSD: PLIST,v 1.6 2006/09/17 21:18:17 thomasklausner Exp $
+lib/gtk-2.0/2.10.0/engines/libdwerg.la
 share/themes/dwerg/gtk-2.0/gtkrc
 @dirrm share/themes/dwerg/gtk-2.0
 @dirrm share/themes/dwerg
-@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
+@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/engines
