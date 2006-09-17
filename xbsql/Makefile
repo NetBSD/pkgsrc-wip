@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2006/09/17 21:18:59 thomasklausner Exp $
 #
 
 DISTNAME=		xbsql-0.11
@@ -13,6 +13,7 @@ COMMENT=		SQL frontend for DB4 (DBF) files with xbase
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
