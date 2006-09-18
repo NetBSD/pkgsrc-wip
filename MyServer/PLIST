@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/18 08:11:33 bartoszkuzma Exp $
 bin/myserver
 lib/myserver/cgi-lib.so
 share/doc/myserver/how_create_certificates.txt
 share/examples/myserver/MIMEtypes.xml
 share/examples/myserver/myserver.xml
 share/examples/myserver/virtualhosts.xml
+share/examples/rc.d/myserver
 share/myserver/languages/brazilian.xml
 share/myserver/languages/configure/english.xml
 share/myserver/languages/configure/italiano.xml
