@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 16:56:37 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/09/18 18:20:42 dhowland Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SCIM_BUILDLINK3_MK:=	${SCIM_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.scim?=	../../wip/scim
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
