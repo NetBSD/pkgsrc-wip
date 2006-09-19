@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2006/05/16 17:08:36 thomasklausner Exp $
+$NetBSD: patch-aj,v 1.3 2006/09/19 20:06:13 thomasklausner Exp $
 
---- cdrecord/scsi_cdr.c.orig	2006-05-11 21:00:12.000000000 +0000
+--- cdrecord/scsi_cdr.c.orig	2006-09-17 12:33:53.000000000 +0000
 +++ cdrecord/scsi_cdr.c
-@@ -311,7 +311,11 @@ request_sense(scgp)
+@@ -312,7 +312,11 @@ request_sense(scgp)
  		char	sensebuf[CCS_SENSE_LEN];
  	register struct	scg_cmd	*scmd = scgp->scmd;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.2 2006/05/16 17:08:36 thomasklausner Exp $
  	fillbytes((caddr_t)scmd, sizeof (*scmd), '\0');
  	scmd->addr = sensebuf;
  	scmd->size = sizeof (sensebuf);
-@@ -327,6 +331,7 @@ request_sense(scgp)
+@@ -328,6 +332,7 @@ request_sense(scgp)
  	if (scg_cmd(scgp) < 0)
  		return (-1);
  	scg_prsense((Uchar *)sensebuf, CCS_SENSE_LEN - scg_getresid(scgp));
