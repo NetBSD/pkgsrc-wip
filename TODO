@@ -3,6 +3,7 @@ Suggested package updates
 	o autoproject-0.20
 	o avahi-0.6.14
 	o bmpx-0.21.0
+	o cdrtools-devel-2.01.01a15
 	o chora-2.0.1
 	o cinelerra-2.1
 	o cvstrac-2.0.0
@@ -28,7 +29,7 @@ Suggested package updates
 	o planner-0.14
 	o py-PyPE-1.9.2
 	o qcomicbook-0.3.2
-	o rdup-0.2.15
+	o rdup-0.2.16
 	o rosegarden-current-1.0
 	o sendmailX-0.0.0.0
 	o smc-0.98.1
