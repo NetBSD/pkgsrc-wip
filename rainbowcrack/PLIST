@@ -1,1 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/20 20:28:26 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/20 22:42:24 rillig Exp $
+bin/rcrack
+bin/rtdump
+bin/rtgen
+bin/rtsort
+share/doc/rainbowcrack/configurations.htm
+share/doc/rainbowcrack/customcharset.htm
+share/doc/rainbowcrack/rcrackdemo.htm
+share/doc/rainbowcrack/rcracktutorial.htm
