@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/27 17:15:21 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/09/20 15:34:35 milosn Exp $
 .include "../../wip/py-twisted-core/version.mk"
 
 DISTNAME=		Twisted-${TWISTED_VERSION}
 PKGNAME=		${PYPKGPREFIX}-twisted-core-${TWISTED_VERSION}
+PKGREVISION=		1
 CATEGORIES=		net python
 MASTER_SITES=		http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted-zopeinterface>=3.1.0c1:../../wip/py-twisted-zop
 
 PYDISTUTILSPKG=		yes
 
-CONFLICTS+=            ${PYPKGPREFIX}-twisted-[0-9]*
+CONFLICTS+=            ${PYPKGPREFIX}-twisted<2.4
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
