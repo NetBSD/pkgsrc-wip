@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2383 2006/09/15 16:06:59 kristerw Exp $
+# $Id: Makefile,v 1.2384 2006/09/21 12:38:56 hugor Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -41,6 +41,7 @@ SUBDIR+=	adamem
 SUBDIR+=	admsmb
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
+SUBDIR+=	aida
 SUBDIR+=	aircrack
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
