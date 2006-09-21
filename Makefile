@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2384 2006/09/21 12:38:56 hugor Exp $
+# $Id: Makefile,v 1.2385 2006/09/21 17:39:14 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1175,6 +1175,7 @@ SUBDIR+=	quickie
 SUBDIR+=	quilt
 SUBDIR+=	quodlibet
 SUBDIR+=	r8s
+SUBDIR+=	rainbowcrack
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.d.Interix
