@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/20 19:55:59 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/21 12:50:41 hugor Exp $
 #
 
 DISTNAME=	clhep-1.9.2.3
@@ -13,17 +13,22 @@ COMMENT=	Class library for high energy physics
 
 EXTRACT_DIR=	${WRKDIR}/1.9.2.3/CLHEP
 AUTOCONF_REQD=	2.59
-USE_TOOLS+=	aclocal autoconf automake gmake perl
+USE_TOOLS+=	automake
+USE_TOOLS+=	gmake
+USE_TOOLS+=	perl
+
+GNU_CONFIGURE=	yes
+CONFIGURE_SCRIPT= ${EXTRACT_DIR}/configure
+USE_LANGUAGES+=	c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${EXTRACT_DIR}/configure
-USE_LANGUAGES=		c c++
 
 pre-configure:
-	mkdir ${WRKSRC}
-	cd ${EXTRACT_DIR}	\
-	&& autoconf		\
-	&& aclocal		\
-	&& automake -a --foreign -i
+	${MKDIR} ${WRKSRC};	\
+	cd ${EXTRACT_DIR};	\
+	autoconf;	\
+	aclocal;	\
+	automake -a --foreign -i
 
 .include	"../../mk/bsd.pkg.mk"
