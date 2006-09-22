@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2006/08/10 06:53:41 christian_gall Exp $
+$NetBSD: distinfo,v 1.12 2006/09/22 08:47:26 poppnk Exp $
 
-SHA1 (muttng-20060409.tar.gz) = 3179381b2a7b70f52d5cb46355045507808dd38e
-RMD160 (muttng-20060409.tar.gz) = ddffcd990ea9781af9149457eac4b3bad6c123db
-Size (muttng-20060409.tar.gz) = 2734088 bytes
+SHA1 (muttng-20060921.tar.gz) = 0e54ee00800bea086ebb5bfa99552e731e6b0927
+RMD160 (muttng-20060921.tar.gz) = df9a90c17d6526d6559596ac0bec0c69586fd776
+Size (muttng-20060921.tar.gz) = 2734137 bytes
