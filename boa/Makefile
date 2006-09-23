@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/14 06:34:02 gschwarz Exp $
+# $NetBSD: Makefile,v 1.12 2006/09/23 18:21:55 gschwarz Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -20,6 +20,8 @@ USE_TOOLS+=	gmake lex
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=	-Dsocklen_t=int
+# needs snprintf()
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
 .endif
 
 PKG_SUPPORTED_OPTIONS=	inet6

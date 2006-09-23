@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/03 14:41:05 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/23 18:21:05 gschwarz Exp $
 #
 
 DISTNAME=		e00pg-1.0.1
@@ -12,4 +12,9 @@ COMMENT=		Converting ESRI-E00 coverages into PostgreSQL/PostGIS sql instructions
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs snprintf()
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
