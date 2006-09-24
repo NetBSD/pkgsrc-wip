@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2006/09/24 20:35:35 mrohrer Exp $
+bin/crafty
+share/crafty/books.bin
+@dirrm share/crafty

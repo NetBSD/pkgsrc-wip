@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2006/09/24 20:35:35 mrohrer Exp $
+
+SHA1 (crafty-20.14.zip) = 5dbcbb9a6a3fc7fa8e8e874fc7cb39839fbe428a
+RMD160 (crafty-20.14.zip) = a68e46b1d68ffa77c477d707e4003737c786e11f
+Size (crafty-20.14.zip) = 422894 bytes
+SHA1 (start.pgn) = f63bfceac30893bc853c11f13ac1046bb4afb6ce
+RMD160 (start.pgn) = 3f5fc8f8dbf20ff3c18c6f97bb1367bfe5b0e753
+Size (start.pgn) = 1349 bytes
+SHA1 (patch-aa) = 078f789878567f743ba9bee0df4f178ff5dd4b4e
+RMD160 (patch-aa) = 7d3aa958bd8fefceeb2d53cd6ed11b489c46039d
+Size (patch-aa) = 633 bytes
