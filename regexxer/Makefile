@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2006/09/14 19:46:15 dhowland Exp $
+# $NetBSD: Makefile,v 1.16 2006/09/24 21:35:37 dhowland Exp $
 #
 
 DISTNAME=	regexxer-0.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
 
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl intltool
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
+MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
