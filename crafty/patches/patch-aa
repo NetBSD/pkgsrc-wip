@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2006/09/24 20:42:35 mrohrer Exp $
+
+--- Makefile.orig	2006-06-20 08:57:17.000000000 -0500
++++ Makefile
+@@ -253,6 +253,7 @@ netbsd:
+ 			-finline-functions -ffast-math' \
+ 		CXFLAGS=$(CFLAGS) \
+ 		LDFLAGS=$(LDFLAGS) \
++		LIBS='-lstdc++' \
+ 		opt='$(opt) -DINLINE32' \
+ 		crafty-make
+ 
+@@ -264,6 +265,7 @@ netbsd-i386:
+ 			-finline-functions -ffast-math' \
+ 		CXFLAGS=$(CFLAGS) \
+ 		LDFLAGS=$(LDFLAGS) \
++		LIBS='-lstdc++' \
+ 		opt='$(opt) -DINLINE32' \
+ 		crafty-make
+ 
+@@ -441,7 +443,7 @@ dgt:    dgtdrv.o
+ 	@cc -O -o dgt dgtdrv.c
+ 
+ egtb.o: egtb.cpp
+-	$(CXX) -c $(CXFLAGS) $(opts) egtb.cpp
++	$(CC) -c $(CXFLAGS) $(opts) egtb.cpp
+ clean:
+ 	-rm -f *.o crafty
+ 
