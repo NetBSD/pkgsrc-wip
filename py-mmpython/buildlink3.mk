@@ -1,20 +1,20 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:21 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/09/25 12:37:52 dhowland Exp $
 
-.include "../../lang/python/pyversion.mk"
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_MMPYTHON_BUILDLINK3_MK:=	${PY_MMPYTHON_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pymmpython
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	py-mmpython
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npymmpython}
-BUILDLINK_PACKAGES+=	pymmpython
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-mmpython}
+BUILDLINK_PACKAGES+=	py-mmpython
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-mmpython
 
-.if !empty(PY_MMPYTHON_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.pymmpython+=		${PYPKGPREFIX}-mmpython>=0.3
-BUILDLINK_PKGSRCDIR.pymmpython?=	../../wip/py-mmpython
+.if ${PY_MMPYTHON_BUILDLINK3_MK} == "+"
+.include "../../lang/python/pyversion.mk"
+BUILDLINK_API_DEPENDS.py-mmpython+=	${PYPKGPREFIX}-mmpython>=0.4.9
+BUILDLINK_PKGSRCDIR.py-mmpython?=	../../wip/py-mmpython
 .endif	# PY_MMPYTHON_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
