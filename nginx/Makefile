@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/09/14 22:06:52 neimal Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/26 19:18:59 neimal Exp $
 #
 
-DISTNAME=		nginx-0.4.2
+DISTNAME=		nginx-0.4.3
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
@@ -14,13 +14,8 @@ HAS_CONFIGURE=		yes
 
 PKG_SYSCONFBASE=	${PREFIX}/etc
 PKG_SYSCONFSUBDIR=	nginx
-#CDIR=			${PKG_SYSCONFDIR}
 
-#CONF_FILES=		${CDIR}/nginx.conf ${CDIR}/nginx.conf.default
-#CONF_FILES+=		${CDIR}/koi-win ${CDIR}/koi-utf ${CDIR}/win-utf
-#CONF_FILES+=		${CDIR}/mime.types ${CDIR}/mime.types.default
-
-BUILD_DEFS+=		PKG_SYSCONFBASE
+BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
 
 CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
