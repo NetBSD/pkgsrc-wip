@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/18 18:20:42 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/26 22:10:31 dhowland Exp $
 #
 
 DISTNAME=		scim-1.4.4
@@ -12,6 +12,7 @@ COMMENT=		Smart Common Input Method
 PKG_SYSCONFSUBDIR=	scim
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
 USE_TOOLS+=		gmake	# make scim-setup.desktop
