@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2385 2006/09/21 17:39:14 dhowland Exp $
+# $Id: Makefile,v 1.2386 2006/09/26 08:44:21 thomaspfaff Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1490,6 +1490,7 @@ SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
+SUBDIR+=	xmms-pac
 SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-scrobbler
 SUBDIR+=	xmms-skins
