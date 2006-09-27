@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/09/01 13:53:37 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2006/09/27 12:13:47 ghen Exp $
 
 MOZILLA=		firefox
 MOZ_EXTRA=		2
@@ -17,4 +17,4 @@ ONLY_FOR_PLATFORM+=	Linux-*-i386
 
 WRKSRC=			${WRKDIR}/firefox
 
-.include "../../www/mozilla-bin/Makefile.common"
+.include "../../www/seamonkey-bin/Makefile.common"
