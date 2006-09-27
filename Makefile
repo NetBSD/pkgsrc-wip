@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2386 2006/09/26 08:44:21 thomaspfaff Exp $
+# $Id: Makefile,v 1.2387 2006/09/27 16:04:42 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1156,12 +1156,6 @@ SUBDIR+=	pysite
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
-SUBDIR+=	qcad
-SUBDIR+=	qcad-manual-cs
-SUBDIR+=	qcad-manual-de
-SUBDIR+=	qcad-manual-en
-SUBDIR+=	qcad-manual-hu
-SUBDIR+=	qcad-partlibrary
 SUBDIR+=	qcomicbook
 SUBDIR+=	qemu-qvm86
 SUBDIR+=	qgis
