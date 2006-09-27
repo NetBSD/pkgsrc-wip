@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/09/01 13:53:37 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/09/27 16:15:26 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -292,8 +292,10 @@ lib/${MOZILLA}/components/xultmpl.xpt
 lib/${MOZILLA}/defaults/autoconfig/platform.js
 lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
 lib/${MOZILLA}/defaults/pref/channel-prefs.js
+lib/${MOZILLA}/defaults/pref/firefox-branding.js
 lib/${MOZILLA}/defaults/pref/firefox-l10n.js
 lib/${MOZILLA}/defaults/pref/firefox.js
+lib/${MOZILLA}/defaults/pref/reporter.js
 lib/${MOZILLA}/defaults/profile/bookmarks.html
 lib/${MOZILLA}/defaults/profile/chrome/userChrome-example.css
 lib/${MOZILLA}/defaults/profile/chrome/userContent-example.css
