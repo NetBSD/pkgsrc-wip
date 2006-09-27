@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2387 2006/09/27 16:04:42 dhowland Exp $
+# $Id: Makefile,v 1.2388 2006/09/27 18:30:41 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1248,28 +1248,6 @@ SUBDIR+=	sipsak
 SUBDIR+=	six
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
-SUBDIR+=	slackware_aaa_base
-SUBDIR+=	slackware_aaa_elflibs
-SUBDIR+=	slackware_awk
-SUBDIR+=	slackware_bash
-SUBDIR+=	slackware_bc
-SUBDIR+=	slackware_binutils
-SUBDIR+=	slackware_compat
-SUBDIR+=	slackware_coreutils
-SUBDIR+=	slackware_devel
-SUBDIR+=	slackware_findutils
-SUBDIR+=	slackware_gcc
-SUBDIR+=	slackware_glibc
-SUBDIR+=	slackware_glibc_solibs
-SUBDIR+=	slackware_grep
-SUBDIR+=	slackware_gzip
-SUBDIR+=	slackware_jed
-SUBDIR+=	slackware_kernel_headers
-SUBDIR+=	slackware_make
-SUBDIR+=	slackware_ncurses
-SUBDIR+=	slackware_sed
-SUBDIR+=	slackware_tar
-SUBDIR+=	slackware_tcsh
 SUBDIR+=	slate
 SUBDIR+=	sleuthkit
 SUBDIR+=	slocate

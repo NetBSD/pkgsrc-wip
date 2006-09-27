@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/10/23 14:59:03 rillig Exp $
-
-SHA1 (slackware/ncurses-5.4-i486-2.tgz) = 8975da86b1a3d63753519a38226c2ac82b1b6c12
-RMD160 (slackware/ncurses-5.4-i486-2.tgz) = df04b337f12582f37b91d902b4661326d34cb456
-Size (slackware/ncurses-5.4-i486-2.tgz) = 1688627 bytes
-SHA1 (patch-aa) = 5b1416f0f1f9859c1664585c1d6ecb091054a83b
