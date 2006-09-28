@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/28 21:47:31 elge Exp $
+# $NetBSD: Makefile,v 1.5 2006/09/28 22:45:45 elge Exp $
 #
 
 DISTNAME=		postoffice-1.3.4
@@ -43,5 +43,6 @@ CONFIGURE_ARGS+=--with-vhost=/etc/virtual \
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/postoffice.cf ${PREFIX}/share/examples/postoffice
+	${INSTALL_SCRIPT} ${FILESDIR}/pop_passwd.pl ${PREFIX}/share/examples/postoffice
 
 .include "../../mk/bsd.pkg.mk"
