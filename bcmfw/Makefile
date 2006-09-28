@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2006/09/06 05:55:16 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2006/09/28 19:28:19 plunky Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://homepages.rya-online.net/plunky/
 DISTFILES=		bcmfw-1.0.tar.gz		\
 			bluez-firmware-1.2.tar.gz
-SITES.bluez-firmware-1.2.tar.gz= \
-			http://bluez.sourceforge.net/download/
 
 MAINTAINER=		plunky@rya-online.net
 COMMENT=		Broadcom 2033 Bluetooth Firmware Loader
+
+SITES.bluez-firmware-1.2.tar.gz= \
+			http://bluez.sourceforge.net/download/
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
 
