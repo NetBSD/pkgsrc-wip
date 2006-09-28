@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/09/28 20:03:41 elge Exp $
+# $NetBSD: Makefile,v 1.4 2006/09/28 21:47:31 elge Exp $
 #
 
-DISTNAME=		postoffice-1.3.2
+DISTNAME=		postoffice-1.3.4
 CATEGORIES=		mail
 MASTER_SITES=		http://www.tsfr.org/~orc/Code/postoffice/
 
@@ -12,8 +12,10 @@ COMMENT=		Simple greylist, auth, milter, virtual hosts mbox capable SMTP server
 HAS_CONFIGURE=yes
 CONFIGURE_SCRIPT=./configure.sh
 CONFIGURE_ARGS+=--prefix=${PREFIX}
+CONFIGURE_ARGS+=--use-mailwrappers
 INSTALLATION_DIRS+=${PREFIX}/share/examples/postoffice
 INSTALLATION_DIRS+=${PREFIX}/share/examples/rc.d
+RCD_SCRIPTS+=postoffice
 
 BUILD_DEFS+=POSTOFFICE_AUTH
 BUILD_DEFS+=POSTOFFICE_GREYLIST
@@ -40,8 +42,6 @@ CONFIGURE_ARGS+=--with-vhost=/etc/virtual \
 .  endif
 
 post-install:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	${FILESDIR}/postoffice \
-	> ${PREFIX}/share/examples/rc.d/postoffice
+	${INSTALL_DATA} ${FILESDIR}/postoffice.cf ${PREFIX}/share/examples/postoffice
 
 .include "../../mk/bsd.pkg.mk"

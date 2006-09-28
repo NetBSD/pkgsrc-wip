@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/09/28 20:03:41 elge Exp $
+$NetBSD: MESSAGE,v 1.3 2006/09/28 21:47:31 elge Exp $
 
-- Create ${PKG_SYSCONFDIR}/postoffice.cf (see manuals)
+- Run	cp ${PREFIX}/share/examples/postoffice.cf ${PKG_SYSCONFDIR}/postoffice.cf
+  AND EDIT IT (man 5 postoffice.cf)
 
 - Run	mv /etc/mailer.conf /etc/mailer.conf.sendmail
 	cp ${PREFIX}/share/examples/postoffice/mailer.conf /etc/mailer.conf
@@ -10,24 +11,24 @@ $NetBSD: MESSAGE,v 1.2 2006/09/28 20:03:41 elge Exp $
   and run
 	newaliases
 
-- If using POSTOFFICE_VIRTUAL=YES, also create
-   /etc/virtual/domains.cf (see manuals)
-   /etc/virtual/example.com/passwd
-   /etc/virtual/example.com/aliases
-  and run
+- If using /etc/mk.conf:POSTOFFICE_VIRTUAL=YES, also create
+    /etc/virtual/domains.cf
+    /etc/virtual/example.com/passwd
+    /etc/virtual/example.com/aliases
+  all readable by user having uid 8 (mail) and run
 	newaliases example.com
 
 - Run	/etc/rc.d/sendmail stop
 	/etc/rc.d/smmsp stop
-	cp ${PREFIX}/share/examples/rc.d/postoffice /etc/rc.d
+	cp -p ${PREFIX}/share/examples/rc.d/postoffice /etc/rc.d
 
 - Edit /etc/rc.conf:
-	sendmail=NO
-	smmsp=NO
-	postoffice=YES
-        postoffice_flags="-bd -q2"
+    sendmail=NO
+    smmsp=NO
+    postoffice=YES
+    postoffice_flags="-bd -q2"
 
 - Run	/etc/rc.d/postoffice start
 
-- Try ``pkg_info postoffice'' to see which features are enabled in this build
+- Try	pkg_info postoffice  to see which features are enabled in this build
 ===========================================================================

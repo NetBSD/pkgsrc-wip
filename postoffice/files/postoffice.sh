@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: postoffice,v 1.1 2006/09/28 20:03:41 elge Exp $
+# $NetBSD: postoffice.sh,v 1.1 2006/09/28 21:47:31 elge Exp $
 #
 # PROVIDE: postoffice
 # REQUIRE: DAEMON

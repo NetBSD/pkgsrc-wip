@@ -1,0 +1,29 @@
+self=mx.example.com
+#audit
+
+clients=30
+delay=1m
+hops=3
+#localmx
+minfree=400m
+#qreturn=Xm Xh Xd
+size=10m
+# soft-deny temporary
+#soft-deny
+#load=2
+timeout=1h
+#verify-from=1 (default)
+
+# smart host or (dedicated?) backup MX,
+#forward-all
+#relay-host=
+
+# under attack,
+#nodaemon
+#paranoid
+#checkhelo
+# greater delay=4h
+# no soft-deny
+
+# private network or firewalled
+#relay

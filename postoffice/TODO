@@ -1,9 +1,0 @@
- - provide an postoffice.cf example
-
- - rc.d: create /etc/virtual and /var/spool/virtual if POSTOFFICE_VIRTUAL=YES
-
- - + UID_8 thinky in MESSAGE
-
- - vpasswd/valiases package or pop_passwd.pl
-
- - maybe ${EXAMPLESDIR} intead of ${PREFIX}/share/examples
