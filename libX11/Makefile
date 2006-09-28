@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2006/04/21 16:31:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.28 2006/09/28 22:54:29 jeremy-c-reed Exp $
 #
 
-# todo: do PLIST again
-DISTNAME=		libX11-1.0.0
+DISTNAME=		libX11-1.0.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
@@ -26,7 +25,9 @@ PKGCONFIG_OVERRIDE+=	x11.pc.in
 # XXX need to test this and see how PLIST changes
 CONFIGURE_ARGS+=	--disable-xthreads
 .else
-CONFIGURE_ENV+=		XTHREADS_LIBS=${BUILDLINK_LDADD.pthread}
+CFLAGS+=		-D_POSIX_THREAD_SAFE_FUNCTIONS
+#CONFIGURE_ENV+=		XTHREADS_LIBS=${BUILDLINK_LDADD.pthread}
+#CPPFLAGS+=		-DXNO_MTSAFE_PWDAPI -D_REENTRANT
 #CPPFLAGS+=		-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI -D_REENTRANT
 # -DXUSE_MTSAFE_API redefined? maybe not needed
 .endif
