@@ -1,15 +1,9 @@
-things to fix:
+ - provide an postoffice.cf example
 
-	- make install still installs in /usr/local !
+ - rc.d: create /etc/virtual and /var/spool/virtual if POSTOFFICE_VIRTUAL=YES
 
-	- I've got a little trouble with PKGNAME that can't be equal to DISTNAME
-	  as it finishes with .pre3.  I'm using PKGNAME=postoffice-1.3 as a hack for now.
+ - + UID_8 thinky in MESSAGE
 
-	- make /usr/pkg/etc/rc.d/postoffice
-	- make /usr/pkg/share/examples/postoffice/mailer.conf
-	- make /usr/pkg/etc/postoffice.cf that equals to 
-	  /usr/pkg/share/examples/postoffice/postoffice.cf
+ - vpasswd/valiases package or pop_passwd.pl
 
-	- create /etc/virtual and /var/spool/virtual if POSTOFFICE_VIRTUAL=YES
-
-	- probably other things
+ - maybe ${EXAMPLESDIR} intead of ${PREFIX}/share/examples

@@ -1,10 +1,11 @@
-"Postoffice is a simple SMTP mail server and client. I wrote it for pell because
-spam was getting out of control and I would rather write my own mail service
-than continue to hack up sendmail for antispammery. Postoffice provides a
-greylist to slow down the rate of incoming spam, and can be configured to do
-antivirus checking on incoming mail either via the sendmail milter protocol or a
-traditional hardcoded AV program. (the copy on Pell is configured to call the
-ClamAV antivirus program to [slowly] detect and reject viruses.)
+David Parsons wirtes "Postoffice is a simple SMTP mail server and client. I
+wrote it for pell because spam was getting out of control and I would rather
+write my own mail service than continue to hack up sendmail for antispammery.
+Postoffice provides a greylist to slow down the rate of incoming spam, and can
+be configured to do antivirus checking on incoming mail either via the sendmail
+milter protocol or a traditional hardcoded AV program. (the copy on Pell is
+configured to call the ClamAV antivirus program to [slowly] detect and reject
+viruses.)
 
 Postoffice can be configured to deliver mail to accounts inside vm-pop3d-style
 virtual domains, and it can further be enabled to support AUTH LOGIN for people
@@ -17,4 +18,4 @@ passed to sendmail, and it comes with the usual crop of sendmail compatable
 aliases; runq, mailq, newaliases, and sendmail."
 
 Postoffice home: http://www.tsfr.org/~orc/Code/postoffice/
-Guide and online manuals : http://www.nethence.com/postoffice/
+Tutorial and online manuals: http://www.nethence.com/postoffice/

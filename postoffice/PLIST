@@ -1,1 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/19 14:58:04 elge Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/09/28 20:03:41 elge Exp $
+bin/ndbm
+bin/runq
+libexec/authexpire
+libexec/postoffice
+man/man1/mailq.1
+man/man1/ndbm.1
+man/man1/newaliases.1
+man/man1/runq.1
+man/man5/aliases.5
+man/man5/mailaudit.5
+man/man5/postoffice.cf.5
+man/man5/smtpauth.5
+man/man7/greylist.7
+man/man7/mailaddr.7
+man/man8/authexpire.8
+man/man8/postoffice.8
+man/man8/sendmail.8
+man/man8/smtpd.8
+share/examples/postoffice/mailer.conf
+share/examples/rc.d/postoffice
+@dirrm share/examples/postoffice

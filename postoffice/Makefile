@@ -1,29 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2006/04/19 16:56:08 elge Exp $
+# $NetBSD: Makefile,v 1.3 2006/09/28 20:03:41 elge Exp $
 #
 
-DISTNAME=		postoffice-1.3.pre3
-PKGNAME=		postoffice-1.3
+DISTNAME=		postoffice-1.3.2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.tsfr.org/~orc/Code/postoffice/
 
 MAINTAINER=		pbraun@nethence.com
 HOMEPAGE=		http://www.tsfr.org/~orc/Code/postoffice/
-COMMENT=		Simple greylist, auth, milter, virtual hosts capable SMTP server
-
+COMMENT=		Simple greylist, auth, milter, virtual hosts mbox capable SMTP server
 
 HAS_CONFIGURE=yes
 CONFIGURE_SCRIPT=./configure.sh
+CONFIGURE_ARGS+=--prefix=${PREFIX}
+INSTALLATION_DIRS+=${PREFIX}/share/examples/postoffice
+INSTALLATION_DIRS+=${PREFIX}/share/examples/rc.d
 
-# no use of this, we're going to do post-install and MESSAGE
-#CONFIGURE_ARGS+=--use-mailwrappers
-
-
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=POSTOFFICE_TCPWRAPPERS
-BUILD_DEFS+=POSTOFFICE_GREYLIST
 BUILD_DEFS+=POSTOFFICE_AUTH
+BUILD_DEFS+=POSTOFFICE_GREYLIST
 BUILD_DEFS+=POSTOFFICE_MILTER
+BUILD_DEFS+=POSTOFFICE_TCPWRAPPERS
 BUILD_DEFS+=POSTOFFICE_VIRTUAL
 
 .if defined(POSTOFFICE_TCPWRAPPERS) && !empty(POSTOFFICE_TCPWRAPPERS:M[Yy][Ee][Ss])
@@ -41,8 +36,12 @@ CONFIGURE_ARGS+=--with-milter
 .if defined(POSTOFFICE_VIRTUAL) && !empty(POSTOFFICE_VIRTUAL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=--with-vhost=/etc/virtual \
 	--with-vspool=/var/spool/virtual \
-	--with-vuser=vm
+	--with-vuser=mail
 .  endif
 
+post-install:
+	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	${FILESDIR}/postoffice \
+	> ${PREFIX}/share/examples/rc.d/postoffice
 
 .include "../../mk/bsd.pkg.mk"
