@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/09/28 22:54:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.29 2006/09/29 22:46:03 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libX11-1.0.3
@@ -40,6 +40,7 @@ CFLAGS+=		-D_POSIX_THREAD_SAFE_FUNCTIONS
 .include "../../wip/xcmiscproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../wip/xf86bigfontproto/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xproto+=  xproto>=7.0.6
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../wip/xtrans/buildlink3.mk"
 
