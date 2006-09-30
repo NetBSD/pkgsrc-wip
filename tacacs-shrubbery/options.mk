@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/09/16 19:04:11 gschwarz Exp $
+# $NetBSD: options.mk,v 1.4 2006/09/30 17:32:26 gschwarz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tacacs-shrubbery
 PKG_SUPPORTED_OPTIONS=	acls-support drop-root-privileges tcpwrappers skey
@@ -14,15 +14,12 @@ CONFIGURE_ARGS+=	--disable-acls
 
 .if !empty(PKG_OPTIONS:Mdrop-root-privileges)
 # tac_plus code requires numeric UID, GID
-. if ${OPSYS} == "Linux"
-TACACS_USER?=	65534 # nobody
-TACACS_GROUP?=	65534
-. else
-TACACS_USER?=	-2 # nobody
-TACACS_GROUP?=	-2
-. endif
-PKG_GROUPS=	${TACACS_GROUP}
-PKG_USERS=	${TACACS_USER}:${TACACS_GROUP}
+_TACACS_USER!=		${ID} -u nobody
+_TACACS_GROUP!=		${ID} -g nobody
+TACACS_USER?=		${_TACACS_USER}
+TACACS_GROUP?=		${_TACACS_GROUP}
+PKG_USERS=		${TACACS_USER}:${TACACS_GROUP}
+PKG_GROUPS=		${TACACS_GROUP}
 CONFIGURE_ARGS+=	--with-userid=${TACACS_USER:Q}
 CONFIGURE_ARGS+=	--with-groupid=${TACACS_GROUP:Q}
 .endif
