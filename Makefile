@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2388 2006/09/27 18:30:41 dhowland Exp $
+# $Id: Makefile,v 1.2389 2006/09/30 17:07:30 thomaspfaff Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1467,6 +1467,7 @@ SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-scrobbler
 SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-status
+SUBDIR+=	xmms-xmp
 SUBDIR+=	xmms2
 SUBDIR+=	xorg-server
 SUBDIR+=	xpde
