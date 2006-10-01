@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/09/13 09:23:13 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.24 2006/10/01 15:03:25 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.3.0c1
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-python ${PYTHONBIN} \
 EXTRACT_USING=		gtar
 .endif
 
+BUILD_DEFS+=		VARBASE ZOPE3_GROUP ZOPE3_USER
 BUILD_TARGET=		build
 
 RCD_SCRIPTS=		zope3 zss3
@@ -37,7 +38,7 @@ MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 			VARBASE=${VARBASE:Q}
 
 pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print -type f | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
 
 post-install:
 	${LN} -s ${ZOPE3_DIR}/bin/mkzeoinstance ${PREFIX}/bin
