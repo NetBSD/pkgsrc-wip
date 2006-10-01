@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/09 13:32:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/01 07:49:26 obache Exp $
 lib/libjqdbm.so
 lib/libjqdbm.so.1
 lib/libjqdbm.so.1.0.0
@@ -20,6 +20,7 @@ share/doc/qdbm/java/japidoc/qdbm/Depot.html
 share/doc/qdbm/java/japidoc/qdbm/DepotException.html
 share/doc/qdbm/java/japidoc/qdbm/Util.html
 share/doc/qdbm/java/japidoc/qdbm/Villa.html
+share/doc/qdbm/java/japidoc/qdbm/VillaCursor.html
 share/doc/qdbm/java/japidoc/qdbm/VillaException.html
 share/doc/qdbm/java/japidoc/qdbm/package-frame.html
 share/doc/qdbm/java/japidoc/qdbm/package-summary.html
