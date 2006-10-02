@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2391 2006/10/02 19:07:35 plunky Exp $
+# $Id: Makefile,v 1.2392 2006/10/02 19:20:18 plunky Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -121,6 +121,7 @@ SUBDIR+=	brltty
 SUBDIR+=	bscript
 SUBDIR+=	bsfilter
 SUBDIR+=	bss
+SUBDIR+=	bthfp
 SUBDIR+=	btpin-qt
 SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
