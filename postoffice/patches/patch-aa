@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/09/28 20:03:41 elge Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/03 12:58:51 elge Exp $
 
---- configure.sh	2006-04-21 00:02:02.000000000 +0200
-+++ configure.sh	2006-09-22 02:21:54.000000000 +0200
-@@ -351,21 +351,7 @@
+--- configure.sh.orig	2006-04-21 00:02:02.000000000 +0200
++++ configure.sh
+@@ -351,21 +351,6 @@ if [ "$USE_MAILWRAPPERS" ]; then
  fi
  
  if [ "$USE_MAILWRAPPERS" ]; then
@@ -21,7 +21,6 @@ $NetBSD: patch-aa,v 1.1 2006/09/28 20:03:41 elge Exp $
 -    else
 -	AC_SUB MAILERCONF /etc/mailer.conf
 -    fi
-+    AC_SUB MAILERCONF ${PREFIX}/share/examples/postoffice/mailer.conf
      AC_SUB WHICH mailfilter
      AC_SUB MAILWRAPPER /usr/sbin/mailwrapper
  else

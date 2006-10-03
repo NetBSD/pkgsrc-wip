@@ -1,4 +1,4 @@
-David Parsons wirtes "Postoffice is a simple SMTP mail server and client. I
+David Parsons writes "Postoffice is a simple SMTP mail server and client. I
 wrote it for pell because spam was getting out of control and I would rather
 write my own mail service than continue to hack up sendmail for antispammery.
 Postoffice provides a greylist to slow down the rate of incoming spam, and can

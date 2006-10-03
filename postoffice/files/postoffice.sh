@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: postoffice.sh,v 1.1 2006/09/28 21:47:31 elge Exp $
+# $NetBSD: postoffice.sh,v 1.2 2006/10/03 12:58:51 elge Exp $
 #
 # PROVIDE: postoffice
 # REQUIRE: DAEMON
@@ -9,8 +9,8 @@ $_rc_subr_loaded . /etc/rc.subr
 
 name="postoffice"
 rcvar=$name
-command="/usr/pkg/libexec/${name}"
-pidfile="/var/run/${name}.pid"
+command="@PREFIX@/libexec/${name}"
+pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PREFIX@/etc/${name}.cf"
 start_precmd="postoffice_precmd"
 

@@ -1,8 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/09/28 21:47:31 elge Exp $
-
-- Run	cp ${PREFIX}/share/examples/postoffice.cf ${PKG_SYSCONFDIR}/postoffice.cf
-  AND EDIT IT (man 5 postoffice.cf)
+$NetBSD: MESSAGE,v 1.4 2006/10/03 12:58:51 elge Exp $
 
 - Run	mv /etc/mailer.conf /etc/mailer.conf.sendmail
 	cp ${PREFIX}/share/examples/postoffice/mailer.conf /etc/mailer.conf
@@ -12,12 +9,14 @@ $NetBSD: MESSAGE,v 1.3 2006/09/28 21:47:31 elge Exp $
 	newaliases
 
 - If using /etc/mk.conf:POSTOFFICE_VIRTUAL=YES, also create
-    /etc/virtual/domains.cf
-    /etc/virtual/example.com/passwd
-    /etc/virtual/example.com/aliases
+    ${VARBASE}/spool/virtual
+    ${SYSCONFBASE}/virtual/domains.cf
+    ${SYSCONFBASE}/virtual/example.com/passwd
+    ${SYSCONFBASE}/virtual/example.com/aliases
   all readable by user having uid 8 (mail) and run
 	newaliases example.com
 
+NetBSD:
 - Run	/etc/rc.d/sendmail stop
 	/etc/rc.d/smmsp stop
 	cp -p ${PREFIX}/share/examples/rc.d/postoffice /etc/rc.d
@@ -30,5 +29,6 @@ $NetBSD: MESSAGE,v 1.3 2006/09/28 21:47:31 elge Exp $
 
 - Run	/etc/rc.d/postoffice start
 
-- Try	pkg_info postoffice  to see which features are enabled in this build
+Others:
+- /usr/pkg/libexec/postoffice -C/usr/pkg/etc/postoffice.cf -bd -q2
 ===========================================================================

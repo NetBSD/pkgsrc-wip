@@ -9,7 +9,3 @@
  $passwd = crypt ($ARGV[1], $salt);
 
  print "$name:$passwd\n";
-
-## NOTE: this previously used
-## $salt               = $salt_chars[rand(63)] . $salt_chars[rand(63)];
-## this is wrong!

@@ -1,11 +1,12 @@
-self=mx.example.com
+#self=mx.example.com
 #audit
 
 clients=30
-delay=1m
+#grey listing,
+#delay=1m
 hops=3
 #localmx
-minfree=400m
+minfree=40m
 #qreturn=Xm Xh Xd
 size=10m
 # soft-deny temporary
