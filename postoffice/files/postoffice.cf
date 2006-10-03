@@ -1,18 +1,24 @@
-#self=mx.example.com
-#audit
+# man postoffice.cf
 
-clients=30
-#grey listing,
+# examples,
+
+#self=mx.example.com
+#clients=30
 #delay=1m
-hops=3
+#hops=3
+#minfree=40m
+#size=10m
+#timeout=1h
+
+
+# more examples,
+
+#audit
 #localmx
-minfree=40m
 #qreturn=Xm Xh Xd
-size=10m
 # soft-deny temporary
 #soft-deny
 #load=2
-timeout=1h
 #verify-from=1 (default)
 
 # smart host or (dedicated?) backup MX,

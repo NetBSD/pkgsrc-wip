@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2006/10/03 12:58:51 elge Exp $
+$NetBSD: MESSAGE,v 1.5 2006/10/03 15:14:00 elge Exp $
 
-- Run	mv /etc/mailer.conf /etc/mailer.conf.sendmail
-	cp ${PREFIX}/share/examples/postoffice/mailer.conf /etc/mailer.conf
+- Run	mv ${SYSCONFBASE}/mailer.conf ${SYSCONFBASE}/mailer.conf.sendmail
+	cp ${PREFIX}/share/examples/postoffice/mailer.conf ${SYSCONFBASE}/mailer.conf
 
 - Edit /etc/mail/aliases
   and run
@@ -30,5 +30,5 @@ NetBSD:
 - Run	/etc/rc.d/postoffice start
 
 Others:
-- /usr/pkg/libexec/postoffice -C/usr/pkg/etc/postoffice.cf -bd -q2
+- ${PREFIX}/libexec/postoffice -C/usr/pkg/etc/postoffice.cf -bd -q2
 ===========================================================================
