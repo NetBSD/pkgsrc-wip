@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2393 2006/10/03 19:55:55 lexort Exp $
+# $Id: Makefile,v 1.2394 2006/10/03 20:42:55 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1146,6 +1146,7 @@ SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-willow
+SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
@@ -1408,6 +1409,8 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
+SUBDIR+=	wxGTK-contrib-unicode
+SUBDIR+=	wxGTK-unicode
 SUBDIR+=	xace
 SUBDIR+=	xanim-codecs
 SUBDIR+=	xaralx-bin
