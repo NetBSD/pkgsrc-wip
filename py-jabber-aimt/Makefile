@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/04/15 04:10:02 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/03 04:15:35 schnoebe Exp $
 
-DISTNAME=		pyaim-t-0.7c
+DISTNAME=		pyaim-t-0.8
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://www.blathersource.org/download.php/pyaim-t/
@@ -47,8 +47,8 @@ MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 CONF_FILES=	${EGDIR}/pyaimt.xml ${PKG_SYSCONFDIR}/pyaimt.xml
 
 do-install:
-	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
-	@ cd ${WRKSRC} && \
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
+	cd ${WRKSRC} && \
 	for i in `find src data tools \\( \\( -type f -name '*.orig' -o \
 		    -type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
@@ -56,7 +56,7 @@ do-install:
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	@ cd ${WRKSRC} && \
+	cd ${WRKSRC} && \
 	    ${INSTALL_SCRIPT} PyAIMt.py ${PREFIX}/bin/PyAIMt
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/config_example.xml ${EGDIR}/pyaimt.xml

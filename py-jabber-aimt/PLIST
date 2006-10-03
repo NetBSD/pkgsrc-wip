@@ -1,22 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/15 04:10:02 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/03 04:22:53 schnoebe Exp $
 bin/PyAIMt
-${TRANSPORTDIR}/data/defaultAIMAvatar.png
-${TRANSPORTDIR}/data/defaultICQAvatar.png
-${TRANSPORTDIR}/data/www/css/style.css
-${TRANSPORTDIR}/data/www/images/pyaim.png
-${TRANSPORTDIR}/data/www/template.html
 ${TRANSPORTDIR}/src/avatar.py
-${TRANSPORTDIR}/src/bool.py
+${TRANSPORTDIR}/src/adhoc.py
 ${TRANSPORTDIR}/src/config.py
-${TRANSPORTDIR}/src/contact.py
-${TRANSPORTDIR}/src/daemonize.py
-${TRANSPORTDIR}/src/debug.py
-${TRANSPORTDIR}/src/disco.py
-${TRANSPORTDIR}/src/globals.py
-${TRANSPORTDIR}/src/groupchat.py
-${TRANSPORTDIR}/src/imgmanip.py
-${TRANSPORTDIR}/src/jabw.py
-${TRANSPORTDIR}/src/lang.py
+${TRANSPORTDIR}/src/bool.py
 ${TRANSPORTDIR}/src/langs/__init__.py
 ${TRANSPORTDIR}/src/langs/cs.py
 ${TRANSPORTDIR}/src/langs/de.py
@@ -25,43 +12,86 @@ ${TRANSPORTDIR}/src/langs/fr.py
 ${TRANSPORTDIR}/src/langs/nl.py
 ${TRANSPORTDIR}/src/langs/pl.py
 ${TRANSPORTDIR}/src/langs/ru.py
+${TRANSPORTDIR}/src/utils.py
+${TRANSPORTDIR}/src/contact.py
+${TRANSPORTDIR}/src/debug.py
+${TRANSPORTDIR}/src/disco.py
+${TRANSPORTDIR}/src/globals.py
+${TRANSPORTDIR}/src/groupchat.py
+${TRANSPORTDIR}/src/imgmanip.py
+${TRANSPORTDIR}/src/iq.py
+${TRANSPORTDIR}/src/jabw.py
+${TRANSPORTDIR}/src/lang.py
+${TRANSPORTDIR}/src/legacy/services/AIMURITranslate.py
+${TRANSPORTDIR}/src/legacy/services/ChangeEmail.py
+${TRANSPORTDIR}/src/legacy/services/ChangePassword.py
+${TRANSPORTDIR}/src/legacy/services/ConfirmAccount.py
+${TRANSPORTDIR}/src/legacy/services/EmailLookup.py
+${TRANSPORTDIR}/src/legacy/services/FormatScreenName.py
+${TRANSPORTDIR}/src/legacy/services/__init__.py
 ${TRANSPORTDIR}/src/legacy/__init__.py
 ${TRANSPORTDIR}/src/legacy/aimt.py
+${TRANSPORTDIR}/src/legacy/buddies.py
 ${TRANSPORTDIR}/src/legacy/glue.py
-${TRANSPORTDIR}/src/legacy/legacyiq.py
-${TRANSPORTDIR}/src/legacy/legacylist.py
-${TRANSPORTDIR}/src/main.py
-${TRANSPORTDIR}/src/misciq.py
 ${TRANSPORTDIR}/src/register.py
+${TRANSPORTDIR}/src/main.py
+${TRANSPORTDIR}/src/services/GatewayTranslator.py
+${TRANSPORTDIR}/src/services/ConnectUsers.py
+${TRANSPORTDIR}/src/services/EntityTime.py
+${TRANSPORTDIR}/src/services/IqAvatarFactory.py
+${TRANSPORTDIR}/src/services/LastActivity.py
+${TRANSPORTDIR}/src/services/PingService.py
+${TRANSPORTDIR}/src/services/RosterRetrieval.py
+${TRANSPORTDIR}/src/services/SearchFactory.py
+${TRANSPORTDIR}/src/services/Statistics.py
+${TRANSPORTDIR}/src/services/VCardFactory.py
+${TRANSPORTDIR}/src/services/VersionTeller.py
+${TRANSPORTDIR}/src/services/__init__.py
 ${TRANSPORTDIR}/src/sasl.py
-${TRANSPORTDIR}/src/session.py
-${TRANSPORTDIR}/src/tlib/__init__.py
 ${TRANSPORTDIR}/src/tlib/countrycodes.py
-${TRANSPORTDIR}/src/tlib/domish.py
-${TRANSPORTDIR}/src/tlib/jabber/__init__.py
-${TRANSPORTDIR}/src/tlib/jabber/client.py
-${TRANSPORTDIR}/src/tlib/jabber/component.py
-${TRANSPORTDIR}/src/tlib/jabber/jid.py
-${TRANSPORTDIR}/src/tlib/jabber/jstrports.py
-${TRANSPORTDIR}/src/tlib/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/src/tlib/__init__.py
+${TRANSPORTDIR}/src/tlib/httpcompat.py
+${TRANSPORTDIR}/src/tlib/ifcompat.py
 ${TRANSPORTDIR}/src/tlib/oscar.py
 ${TRANSPORTDIR}/src/tlib/scheduler.py
 ${TRANSPORTDIR}/src/tlib/socks5.py
 ${TRANSPORTDIR}/src/tlib/sockserror.py
-${TRANSPORTDIR}/src/tlib/twistwrap.py
-${TRANSPORTDIR}/src/tlib/xmlstream.py
-${TRANSPORTDIR}/src/utils.py
 ${TRANSPORTDIR}/src/web/__init__.py
 ${TRANSPORTDIR}/src/web/handler.py
 ${TRANSPORTDIR}/src/web/xmppcred.py
+${TRANSPORTDIR}/src/session.py
+${TRANSPORTDIR}/src/svninfo.py
 ${TRANSPORTDIR}/src/xdb/__init__.py
-${TRANSPORTDIR}/src/xdb/legacyaimtransport.py
 ${TRANSPORTDIR}/src/xdb/mysql.py
 ${TRANSPORTDIR}/src/xdb/template.py
+${TRANSPORTDIR}/src/xdb/legacyaimtransport.py
 ${TRANSPORTDIR}/src/xdb/xmlfiles.py
+${TRANSPORTDIR}/src/twistfix/__init__.py
+${TRANSPORTDIR}/src/twistfix/README
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/xmpp_stringprep.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/client.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/component.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jid.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jstrports.py
+${TRANSPORTDIR}/src/twistfix/words/protocols/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xpathparser.py
+${TRANSPORTDIR}/src/twistfix/words/xish/__init__.py
+${TRANSPORTDIR}/src/twistfix/words/xish/domish.py
+${TRANSPORTDIR}/src/twistfix/words/xish/utility.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xmlstream.py
+${TRANSPORTDIR}/src/twistfix/words/xish/xpath.py
+${TRANSPORTDIR}/src/twistfix/version.py
 ${TRANSPORTDIR}/src/xmlconfig.py
-${TRANSPORTDIR}/tools/Makefile
+${TRANSPORTDIR}/data/www/css/style.css
+${TRANSPORTDIR}/data/www/images/pyaim.png
+${TRANSPORTDIR}/data/www/template.html
+${TRANSPORTDIR}/data/defaultAIMAvatar.png
+${TRANSPORTDIR}/data/defaultICQAvatar.png
 ${TRANSPORTDIR}/tools/db-setup.mysql
+${TRANSPORTDIR}/tools/Makefile
+${TRANSPORTDIR}/tools/infodump.py
 ${TRANSPORTDIR}/tools/managessi.py
 ${TRANSPORTDIR}/tools/migrate.py
 share/examples/jabberd/pyaimt.xml
@@ -69,8 +99,14 @@ share/examples/rc.d/pyaimt
 @dirrm ${TRANSPORTDIR}/tools
 @dirrm ${TRANSPORTDIR}/src/xdb
 @dirrm ${TRANSPORTDIR}/src/web
-@dirrm ${TRANSPORTDIR}/src/tlib/jabber
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/xish
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols/jabber
+@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols
+@dirrm ${TRANSPORTDIR}/src/twistfix/words
+@dirrm ${TRANSPORTDIR}/src/twistfix
 @dirrm ${TRANSPORTDIR}/src/tlib
+@dirrm ${TRANSPORTDIR}/src/services
+@dirrm ${TRANSPORTDIR}/src/legacy/services
 @dirrm ${TRANSPORTDIR}/src/legacy
 @dirrm ${TRANSPORTDIR}/src/langs
 @dirrm ${TRANSPORTDIR}/src
