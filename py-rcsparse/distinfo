@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/01 21:22:59 scode Exp $
+$NetBSD: distinfo,v 1.2 2006/10/04 20:32:45 scode Exp $
 
-SHA1 (rcsparse-0.0.0_20060723.tar.gz) = 9b5093a210dd38f5f3811633127b2a3bcec0057b
-RMD160 (rcsparse-0.0.0_20060723.tar.gz) = 13822c3bdf43ce6359011adaec401671e08cb2f9
-Size (rcsparse-0.0.0_20060723.tar.gz) = 126320 bytes
+SHA1 (rcsparse-0.0.0_20061004.tar.gz) = bd9181e7ffdbb6cc9b263177511c370b5f390eaa
+RMD160 (rcsparse-0.0.0_20061004.tar.gz) = 9d166f1bd2d8d84c8e8f6a64d13182290b23b101
+Size (rcsparse-0.0.0_20061004.tar.gz) = 129858 bytes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/08/01 22:20:36 scode Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/04 20:33:29 scode Exp $
 
-DISTNAME=	cvs20hg-0.0.0_20060723
-PKGNAME=	${PYPKGPREFIX}-cvs20hg-0.0.0_20060723
-PKGREVISION=	2
+DISTNAME=	cvs20hg-0.0.0_20061004
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://distfiles.scode.org/pkgsrc/
 
@@ -13,7 +12,7 @@ COMMENT=	CVS->Mercurial conversion tool
 PYTHON_VERSIONS_ACCEPTED=24
 PYDISTUTILSPKG=	# yes
 
-DEPENDS+=	${PYPKGPREFIX}-rcsparse-0.0.0_20060723nb1:../../wip/py-rcsparse
+DEPENDS+=	${PYPKGPREFIX}-rcsparse-0.0.0_20061004:../../wip/py-rcsparse
 
 # BUG: We require devel/mercurial to be installed with python2.4, but
 # this is not enforced. Pending change of devel/mercurial to fix this
