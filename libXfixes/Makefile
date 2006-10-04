@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/07/21 01:59:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/04 22:13:29 jeremy-c-reed Exp $
 #
- ## this needs to be updated to modular Xorg
 
-DISTNAME=		libXfixes-3.0.1.2
+DISTNAME=		libXfixes-4.0.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
