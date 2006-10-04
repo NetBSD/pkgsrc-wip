@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/29 23:56:36 hugor Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/04 13:55:02 hugor Exp $
 #
 
 DISTNAME=	clhep-1.9.2.3
@@ -18,9 +18,6 @@ USE_TOOLS+=	aclocal autoconf automake gmake perl
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ${EXTRACT_DIR}/configure
 USE_LANGUAGES+=	c c++
-
-GNU_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	${EXTRACT_DIR}/configure
 
 pre-configure:
 	${MKDIR} ${WRKSRC};	\
