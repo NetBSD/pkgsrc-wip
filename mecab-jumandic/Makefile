@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/19 13:50:25 obache Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/04 14:26:11 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -15,5 +15,7 @@ COMMENT=	Japanese Morphological Dictionary for MeCab
 DEPENDS+=	mecab-base>=${MECAB_VERSION}:../../wip/mecab-base
 
 GNU_CONFIGURE=	yes
+
+UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.pkg.mk"
