@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/04 10:09:40 ondratu Exp $
+
+SHA1 (grsync-0.5.tar.gz) = 0f9d3813c3dab22be1679ad215464bd682b97bfa
+RMD160 (grsync-0.5.tar.gz) = 8b6adf808c5fc6a21cdcddff6148dca99e2ee092
+Size (grsync-0.5.tar.gz) = 153560 bytes
