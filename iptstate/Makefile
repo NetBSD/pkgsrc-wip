@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.5 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/05 08:15:51 rillig Exp $
 #
 
-DISTNAME=		iptstate-1.3
+DISTNAME=		iptstate-2.0
 CATEGORIES=		net
 MASTER_SITES=		http://www.phildev.net/iptstate/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roland.illig@gmx.de
 HOMEPAGE=		http://www.phildev.net/iptstate/
 COMMENT=		Display Netfilter state tables in a "top"-like interface
 
-ONLY_FOR_PLATFORM=	Linux-2.4.*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
+USE_LANGUAGES=		c++
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-install:
-	cd ${WRKSRC:Q} && ${INSTALL_PROGRAM} iptstate ${PREFIX:Q}/bin/
-	cd ${WRKSRC:Q} && ${INSTALL_MAN} man/man1/iptstate.1 ${PREFIX:Q}/${PKGMANDIR}/man1/
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} iptstate ${PREFIX}/sbin/
+	cd ${WRKSRC} && ${INSTALL_MAN} iptstate.8 ${PREFIX}/${PKGMANDIR}/man8/
 
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
