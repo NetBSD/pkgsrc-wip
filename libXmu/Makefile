@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/04/18 18:27:51 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/05 03:02:09 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libXmu-1.0.0
+DISTNAME=		libXmu-1.0.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
