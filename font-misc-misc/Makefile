@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/18 13:53:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/05 13:59:37 rillig Exp $
 #
 
 DISTNAME=		font-misc-misc-1.0.0
@@ -18,6 +18,5 @@ GNU_CONFIGURE=		yes
 # build depends on bdftopcf which is part of x11-clients USE_TOOLS,
 # but I will use the modular Xorg instead
 
-.include "../../new/font-util/buildlink3.mk" # for pkg-config file
-
+.include "../../wip/font-util/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
