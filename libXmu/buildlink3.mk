@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 07:17:34 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/10/05 03:23:53 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXmu.
 #
@@ -20,9 +20,6 @@ BUILDLINK_PKGSRCDIR.libXmu?=		../../wip/libXmu
 
 .include "../../wip/libXext/buildlink3.mk"
 .include "../../wip/libXt/buildlink3.mk"
-
-# libXmu uses libXext's XShapeCombineMask()
-LDFLAGS+=	-lXext
 
 .include "../../mk/pthread.buildlink3.mk"
 LIBS+=		${BUILDLINK_LDADD.pthread}
