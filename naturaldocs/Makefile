@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/04 11:54:25 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/05 01:32:00 rillig Exp $
 #
 
 DISTNAME=	NaturalDocs-1.35
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.naturaldocs.org/
 COMMENT=	Open-source, extensible, multi-language documentation generator
 
-USE_TOOLS+=     perl:run
-REPLACE_PERL+=  NaturalDocs
+USE_TOOLS+=	perl:run
+REPLACE_PERL+=	NaturalDocs
 PERL5_REQD+=	5.5
 
 WRKSRC=		${WRKDIR}
@@ -25,17 +25,11 @@ INSTALL_DIRS=	Info JavaScript Modules Modules/NaturalDocs Modules/NaturalDocs/Bu
 		Modules/NaturalDocs/Menu Modules/NaturalDocs/Parser Modules/NaturalDocs/Project \
 		Modules/NaturalDocs/Settings Modules/NaturalDocs/SymbolTable \
 		Modules/NaturalDocs/Topics Styles Config Help Help/example Help/images \
-		Help/images/header Help/images/menu Help/javascript 
+		Help/images/header Help/images/menu Help/javascript
+INSTALLATION_DIRS=	${NDDIR}
 
 do-install:
-	for dir in ${INSTALL_DIRS}; do \
-                ${INSTALL_DATA_DIR} ${NDDIR}/$$dir; \
-        done
-	for dir in ${INSTALL_DIRS}; do                                  \
-                for file in "${WRKSRC}/$$dir"/*; do                     \
-                        ${INSTALL_DATA} $$file ${NDDIR}/$$dir;          \
-                done                                                    \
-        done
+	cd ${WRKSRC} && pax -wr * ${NDDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs ${NDDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs.bat ${NDDIR}
 	${INSTALL_DATA} ${WRKSRC}/License-GPL.txt ${NDDIR}
