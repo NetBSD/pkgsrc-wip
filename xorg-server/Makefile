@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/05/05 22:32:38 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/05 15:54:34 jeremy-c-reed Exp $
 
-DISTNAME=	xorg-server-1.0.2
+DISTNAME=	xorg-server-1.1.99.3
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
+#MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
+# use snapshot
+MASTER_SITES=	http://xorg.freedesktop.org/archive/development/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
 
 COMMENT=	Xorg X11 Server from modular X.org X11
@@ -11,6 +13,19 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xorg-server.pc.in
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake
+USE_TOOLS+=	perl
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+
+BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
+BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
+BUILDLINK_API_DEPENDS.libXfixes+=	libXfixes>=4.0
+BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
+BUILDLINK_API_DEPENDS.xkbui+=		xkbui>=1.0.2
+
+# need mesa for glx and more
+# maybe this should be a configure option?
+.include "../../graphics/MesaLib/buildlink3.mk"
 
 #.include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/bigreqsproto/buildlink3.mk"
