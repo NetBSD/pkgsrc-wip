@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2396 2006/10/04 11:57:04 ondratu Exp $
+# $Id: Makefile,v 1.2397 2006/10/06 05:02:09 kcf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -115,6 +115,7 @@ SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
+SUBDIR+=	bouml
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
