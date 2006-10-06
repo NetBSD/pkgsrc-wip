@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/16 12:31:12 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/10/06 18:52:01 shattered Exp $
 bin/gnokii
 bin/ppm2nokia
 bin/sendsms
@@ -31,6 +31,7 @@ share/locale/nl/LC_MESSAGES/gnokii.mo
 share/locale/pl/LC_MESSAGES/gnokii.mo
 share/locale/sk/LC_MESSAGES/gnokii.mo
 share/locale/sl/LC_MESSAGES/gnokii.mo
+share/locale/sv/LC_MESSAGES/gnokii.mo
 share/locale/zh_CN/LC_MESSAGES/gnokii.mo
 @dirrm share/doc/gnokii
 @dirrm include/gnokii
