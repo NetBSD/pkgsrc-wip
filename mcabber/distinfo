@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/03 21:36:40 kh-p Exp $
+$NetBSD: distinfo,v 1.2 2006/10/06 18:56:30 kh-p Exp $
 
-SHA1 (mcabber-0.8.1.tar.bz2) = 9f211ff79815fd5359e28a4750d66c42460c94aa
-RMD160 (mcabber-0.8.1.tar.bz2) = 1c6e0bed9a4117fcc7f845b49c79c8fd7607a1eb
-Size (mcabber-0.8.1.tar.bz2) = 373588 bytes
+SHA1 (mcabber-0.8.2.tar.bz2) = bca1cf626e6925e6472df583be3639bf95ec9643
+RMD160 (mcabber-0.8.2.tar.bz2) = 8cad1cf882e89aaaa8039eee8f4a70d1fc086e71
+Size (mcabber-0.8.2.tar.bz2) = 374253 bytes
