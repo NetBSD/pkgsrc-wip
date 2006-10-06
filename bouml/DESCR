@@ -1,0 +1,11 @@
+BOUML is a free UML tool box (under development) allowing you to specify and
+generate code in C++, Java and Idl. It runs under Unix/Linux/Solaris, MacOS X,
+and Windows.
+
+BOUML is very fast and doesn't need a lot of memory to manage several thousands
+of classes, see benchmark.
+
+BOUML is extensible, and the external tools (I name them plug-outs) may be
+developed in C++ or Java (not in Visual Basic, enjoy !), using BOUML for their
+definition as any other program. The code generators and reverses are ones of
+the pre-defined plug-outs included in the BOUML distribution. See features.
