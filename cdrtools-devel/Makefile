@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/09/26 21:39:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/06 06:03:37 thomasklausner Exp $
 
-DISTNAME=	cdrtools-2.01.01a16
+DISTNAME=	cdrtools-2.01.01a17
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -51,7 +51,7 @@ SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
 			readcd/readcd.1
-SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
+SUBST_SED.fix=		-e "s,/etc/default/cdrecord,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
 do-configure:
