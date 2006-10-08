@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/19 16:51:48 h2m Exp $
+$NetBSD: distinfo,v 1.2 2006/10/08 22:04:57 h2m Exp $
 
 SHA1 (supertux-0.1.3.tar.bz2) = ad783011fbf15a8a56ca8680769a8c2a15abc515
 RMD160 (supertux-0.1.3.tar.bz2) = 54568fa1e99865d18cb042be81a97fd43f56766c
 Size (supertux-0.1.3.tar.bz2) = 6715265 bytes
 SHA1 (patch-aa) = 51146fe7c3e578336f261c69164528abfca754b1
+SHA1 (patch-ab) = da3cf8492b35b63d72efbc7e5e6841bd2727a353
+SHA1 (patch-ac) = cf72e87a4e69b3183468d75383b16f596e18d038
+SHA1 (patch-ad) = 9d48207f5c2e98ebe4b36a89e48b5d5cf74ea42f

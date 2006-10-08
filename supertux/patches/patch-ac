@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2006/10/08 22:04:57 h2m Exp $
+
+--- src/setup.cpp.orig	2005-07-08 14:19:17.000000000 +0200
++++ src/setup.cpp
+@@ -889,6 +889,14 @@ void st_abort(const std::string& reason,
+   abort();
+ }
+ 
++
++/* --- WARN! --- */
++
++void st_warn(const std::string& reason, const std::string& details)
++{
++  fprintf(stderr, "\nWarning: %s\n%s\n\n", reason.c_str(), details.c_str());
++}
++
+ /* Set Icon (private) */
+ 
+ void seticon(void)
