@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/08 01:12:26 thomasklausner Exp $
+
+SHA1 (suse100/i586/SDL-1.2.8-8.i586.rpm) = c8e1b50fb47a1c5b6bbb3b2c4b1eb6addf5ca31a
+RMD160 (suse100/i586/SDL-1.2.8-8.i586.rpm) = 12195ca2c66c0381b65c492d6d4b62ba7b03dbd5
+Size (suse100/i586/SDL-1.2.8-8.i586.rpm) = 204298 bytes
+SHA1 (suse100/i586/aalib-1.4.0-290.i586.rpm) = c70c6205f0d5b3e47d07a4892516efc743f336af
+RMD160 (suse100/i586/aalib-1.4.0-290.i586.rpm) = 4c667987702c7620a977bc275e771f216c816248
+Size (suse100/i586/aalib-1.4.0-290.i586.rpm) = 136461 bytes
+SHA1 (suse100/i586/gpm-1.20.1-309.i586.rpm) = 62b0741e582fde8cc37135167841737c85ab7b09
+RMD160 (suse100/i586/gpm-1.20.1-309.i586.rpm) = 0dcbaced12d09e03d6478c5f4f77ed37f4287795
+Size (suse100/i586/gpm-1.20.1-309.i586.rpm) = 214643 bytes

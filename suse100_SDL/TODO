@@ -1,0 +1,3 @@
+Fill in distinfo for ppc and x86_64 (Makefiles already filled in).
+My test program wouldn't start because it looked for glibc symbols in
+libc and libpthread. Feel free to improve it.
