@@ -1,1 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/06 03:49:32 kcf Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/09 23:12:10 rillig Exp $
+bin/bouml
+lib/bouml/bouml
+lib/bouml/browsersort
+lib/bouml/cpp_generator
+lib/bouml/cpp_reverse
+lib/bouml/cpp_util
+lib/bouml/deplcl
+lib/bouml/file_control
+lib/bouml/ghtml
+lib/bouml/gpro
+lib/bouml/gxmi
+lib/bouml/idl_generator
+lib/bouml/irose
+lib/bouml/java_catalog
+lib/bouml/java_generator
+lib/bouml/java_reverse
+lib/bouml/plug_out_upgrade
+lib/bouml/stmgen
+lib/bouml/usecasewizard
+@dirrm lib/bouml
