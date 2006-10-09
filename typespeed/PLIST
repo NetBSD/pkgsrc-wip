@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/14 19:38:52 h2m Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/09 14:12:01 h2m Exp $
 bin/typespeed
-man/cat6/typespeed.0
 man/man6/typespeed.6
-lib/typespeed/typespeed
 share/typespeed/words.dos
 share/typespeed/words.dut
 share/typespeed/words.eng
 share/typespeed/words.fin
+share/typespeed/words.fra
+share/typespeed/words.ger
+share/typespeed/words.ita
 share/typespeed/words.portuguese
 share/typespeed/words.prog
 share/typespeed/words.spanish
+share/typespeed/words.thai
 share/typespeed/words.unix
 @dirrm share/typespeed
-@dirrm lib/typespeed
+@unexec echo Please delete var/games/typespeed, which holds the high scores, if you do not need them any longer.
