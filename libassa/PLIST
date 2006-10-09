@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/16 09:01:33 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/09 17:56:00 bartoszkuzma Exp $
 bin/assa-genesis
+bin/assa-hexdump
 include/assa-3.4/assa/Acceptor.h
 include/assa-3.4/assa/Address.h
 include/assa-3.4/assa/Assa.h

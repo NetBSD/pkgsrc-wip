@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/08/01 19:16:20 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/09 17:56:00 bartoszkuzma Exp $
 #
 
-DISTNAME=		libassa-3.4.1
+DISTNAME=		libassa-3.4.2
 CATEGORIES=		devel net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libassa/}
 
@@ -9,6 +9,7 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://libassa.sourceforge.net/
 COMMENT=		Networking library based on ACP
 
+USE_LANGUAGES+=		c
 USE_LANGUAGES+=		c++
 USE_LANGUAGES+=		fortran
 USE_LIBTOOL=		yes
