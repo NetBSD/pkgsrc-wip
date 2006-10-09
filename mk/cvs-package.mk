@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.16 2006/06/10 12:30:07 rillig Exp $
+# $Id: cvs-package.mk,v 1.17 2006/10/09 15:31:07 obache Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -48,7 +48,7 @@ DISTFILES?=		# empty
 # commonly used repositories
 CVS_ROOT_GNU=		:pserver:anonymous@cvs.savannah.gnu.org:/sources
 CVS_ROOT_NONGNU=	${CVS_ROOT_GNU}
-CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@cvs.sourceforge.net:/cvsroot
+CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@%PROJECT%.cvs.sourceforge.net:/cvsroot/%PROJECT%
 
 #
 # End of the interface part. Start of the implementation part.
