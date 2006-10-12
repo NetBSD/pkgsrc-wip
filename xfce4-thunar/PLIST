@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/07 12:21:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/12 07:08:27 marttikuparinen Exp $
 bin/Thunar
 bin/thunar
 include/thunar-vfs-1/thunar-vfs/thunar-vfs-config.h
@@ -122,6 +122,7 @@ share/locale/zh_TW/LC_MESSAGES/Thunar.mo
 share/pixmaps/Thunar/Thunar-about-logo.png
 share/pixmaps/Thunar/Thunar-fallback-icon.png
 share/xfce4/panel-plugins/thunar-tpa.desktop
+xdg/xfce4/Thunar/uca.xml
 @dirrm share/pixmaps/Thunar
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
