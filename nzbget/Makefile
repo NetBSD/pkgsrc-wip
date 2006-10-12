@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/07/28 16:36:48 martijnb Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/12 21:13:41 shattered Exp $
 #
 
 DISTNAME=		nzbget-0.2.3
@@ -7,7 +7,7 @@ CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nzbget/}
 
 MAINTAINER=		martijn.van.buul@gmail.com
-HOMEPAGE=		http://www.sourceforge.net/projects/nzbget/
+HOMEPAGE=		http://sourceforge.net/projects/nzbget/
 COMMENT=		Binary newsreader with NZB support
 
 USE_TOOLS+=	        gmake

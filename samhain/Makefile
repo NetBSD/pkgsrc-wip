@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/27 20:40:32 bseklecki Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/12 21:13:42 shattered Exp $
 PKGNAME=	samhain-2.2.1c
 DISTNAME=	samhain_signed-2.2.1c
 CATEGORIES=     security
 MASTER_SITES=   http://la-samhna.de/archive/
 
 MAINTAINER=     lavalamp@digitalfreaks.org
-HOMEPAGE=       http://www.la-samhna.de/samhain
+HOMEPAGE=       http://www.la-samhna.de/samhain/
 COMMENT=        Open-source IDS/file integrity checking
 
 GNU_CONFIGURE=	yes

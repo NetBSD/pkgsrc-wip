@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/15 10:00:45 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/12 21:13:41 shattered Exp $
 
 DISTNAME=	gforge-3.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://gforge.org/frs/download.php/44/
 
 MAINTAINER=	david@netbsd-fr.org
-HOMEPAGE=	http://www.gforge.org/
+HOMEPAGE=	http://gforge.org/
 COMMENT=	Open Source collaborative software development tool
 
 .include "../../lang/php/phpversion.mk"

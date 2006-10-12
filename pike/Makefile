@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/04/22 15:26:38 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/12 21:13:41 shattered Exp $
 #
 
 DISTNAME=		Pike-v7.6.66
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://pike.ida.liu.se/pub/pike/latest-stable/
 
 MAINTAINER=		rillig@NetBSD.org
-HOMEPAGE=		http://pike.ida.liu.se/pub/pike/latest-stable/
+HOMEPAGE=		http://pike.ida.liu.se/
 COMMENT=		Dynamic programming language similar to Java and C
 
 GNU_CONFIGURE=		yes

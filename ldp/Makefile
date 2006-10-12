@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/07/27 08:53:49 koifren Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/12 21:13:41 shattered Exp $
 
 DISTNAME=	ldp-0.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ldp/}
 
 MAINTAINER=	kefren@NetBSD.ro
-HOMEPAGE=	http://ldp.sf.net/
+HOMEPAGE=	http://ldp.sourceforge.net/
 COMMENT=	Label Distribution Protocol Daemon
 
 WRKSRC=		${WRKDIR}/ldp

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/23 09:42:12 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/12 21:13:42 shattered Exp $
 #
 
 DISTNAME=	swfmill-0.2.11
 CATEGORIES=	graphics converters
-MASTER_SITES=	http://iterative.org/swfmill/releases/
+MASTER_SITES=	http://swfmill.org/releases/
 
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
-HOMEPAGE=	http://iterative.org/swfmill/
+HOMEPAGE=	http://swfmill.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
 
 GNU_CONFIGURE=		yes

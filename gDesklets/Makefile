@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/08/15 15:54:05 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2006/10/12 21:13:41 shattered Exp $
 
 DISTNAME=	gDesklets-0.26
 CATEGORIES=	x11 gnome
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://gdesklets.gnomedesktop.org/
+HOMEPAGE=	http://www.gdesklets.org/
 COMMENT=	Advanced architecture for desktop applets
 
 GNU_CONFIGURE=	YES

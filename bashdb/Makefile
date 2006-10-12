@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/17 20:44:58 splitscreen Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/12 21:13:41 shattered Exp $
 #
 
 DISTNAME=		bashdb-3.1-0.06
@@ -7,7 +7,7 @@ CATEGORIES=	        devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bashdb/}
 
 MAINTAINER=		splitscreen@users.sourceforg.net
-HOMEPAGE=		http://easynews.dl.sourceforge.net/sourceforge/bashdb/
+HOMEPAGE=		http://sourceforge.net/projects/bashdb/
 COMMENT=		The Bash debugger project
 
 DEPENDS+=		bash-[0-9]*:../../shells/bash

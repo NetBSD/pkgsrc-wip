@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/14 14:54:34 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/12 21:13:41 shattered Exp $
 #
 
 DISTNAME=		bluez-gnome-0.4
 CATEGORIES=		wip
-MASTER_SITES=		http://bluez.sf.net/download/
+MASTER_SITES=		http://bluez.sourceforge.net/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://bluez.sf.net/download/
+HOMEPAGE=		http://bluez.sourceforge.net/download/
 COMMENT=		BlueZ helpers for Gnome
 USE_LANGUAGES=	c
 USE_PERL=	YES
