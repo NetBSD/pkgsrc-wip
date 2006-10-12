@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/12 14:31:07 kcf Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/12 15:01:59 kcf Exp $
 #
 
 BOUMLVERSION=		2.17.1
@@ -10,7 +10,6 @@ MASTER_SITES=		http://bouml.free.fr/
 MAINTAINER=		kcf@users.sourceforge.net
 HOMEPAGE=		http://bouml.free.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
-USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c++
 
@@ -24,6 +23,7 @@ all:
 	@${ECHO} "file and QT3 documentation for details."
 .endif
 
+BUILD_DEPENDS+= qt3-tools-3*:../../x11/qt3-tools
 
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
