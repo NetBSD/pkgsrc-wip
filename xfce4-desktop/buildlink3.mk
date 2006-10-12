@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/10/12 07:42:59 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_DESKTOP_BUILDLINK3_MK:=	${XFCE4_DESKTOP_BUILDLINK3_MK}+
@@ -17,8 +17,10 @@ BUILDLINK_PKGSRCDIR.xfce4-desktop?=	../../wip/xfce4-desktop
 .endif	# XFCE4_DESKTOP_BUILDLINK3_MK
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/xfce4-panel/buildlink3.mk"
+.include "../../wip/xfce4-thunar/buildlink3.mk"
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
