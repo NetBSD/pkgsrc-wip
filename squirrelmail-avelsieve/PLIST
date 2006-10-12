@@ -1,21 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/30 18:13:30 schnoebe Exp $
-share/squirrelmail/plugins/avelsieve/.cvsignore
+@comment $NetBSD: PLIST,v 1.2 2006/10/12 02:59:26 schnoebe Exp $
 share/squirrelmail/plugins/avelsieve/addrule.php
 share/squirrelmail/plugins/avelsieve/addspamrule.php
-share/squirrelmail/plugins/avelsieve/config/.cvsignore
 share/squirrelmail/plugins/avelsieve/config/config_sample.php
+share/squirrelmail/plugins/avelsieve/doc/CREDITS
 share/squirrelmail/plugins/avelsieve/doc/CREDITS.html
 share/squirrelmail/plugins/avelsieve/doc/DEVELOPMENT
 share/squirrelmail/plugins/avelsieve/doc/INSTALL
+share/squirrelmail/plugins/avelsieve/doc/NEWS
 share/squirrelmail/plugins/avelsieve/doc/NEWS.html
-share/squirrelmail/plugins/avelsieve/doc/NOTES
+share/squirrelmail/plugins/avelsieve/doc/README
 share/squirrelmail/plugins/avelsieve/doc/README-FIRST.BETA
 share/squirrelmail/plugins/avelsieve/doc/README.html
+share/squirrelmail/plugins/avelsieve/doc/RELEASE-NOTES
 share/squirrelmail/plugins/avelsieve/doc/RELEASE-NOTES.html
+share/squirrelmail/plugins/avelsieve/doc/REPORTING_BUGS
+share/squirrelmail/plugins/avelsieve/doc/REPORTING_BUGS.html
+share/squirrelmail/plugins/avelsieve/doc/TODO
 share/squirrelmail/plugins/avelsieve/doc/TODO.html
 share/squirrelmail/plugins/avelsieve/doc/avelsieve_translation_statistics.html
+share/squirrelmail/plugins/avelsieve/doc/highlight_spam.patch
+share/squirrelmail/plugins/avelsieve/doc/notes.html
 share/squirrelmail/plugins/avelsieve/doc/style/avelsieve_meta.css
 share/squirrelmail/plugins/avelsieve/edit.php
+share/squirrelmail/plugins/avelsieve/images/add.png
 share/squirrelmail/plugins/avelsieve/images/bluecurve_16x16/bottom.gif
 share/squirrelmail/plugins/avelsieve/images/bluecurve_16x16/bottom.png
 share/squirrelmail/plugins/avelsieve/images/bluecurve_16x16/del.gif
@@ -44,20 +51,33 @@ share/squirrelmail/plugins/avelsieve/images/bluecurve_24x24/top.gif
 share/squirrelmail/plugins/avelsieve/images/bluecurve_24x24/top.png
 share/squirrelmail/plugins/avelsieve/images/bluecurve_24x24/up.gif
 share/squirrelmail/plugins/avelsieve/images/bluecurve_24x24/up.png
+share/squirrelmail/plugins/avelsieve/images/mail.png
+share/squirrelmail/plugins/avelsieve/images/nr.png
 share/squirrelmail/plugins/avelsieve/images/plain_obsolete/del.png
 share/squirrelmail/plugins/avelsieve/images/plain_obsolete/down.png
 share/squirrelmail/plugins/avelsieve/images/plain_obsolete/dup.png
 share/squirrelmail/plugins/avelsieve/images/plain_obsolete/edit.png
 share/squirrelmail/plugins/avelsieve/images/plain_obsolete/up.png
+share/squirrelmail/plugins/avelsieve/images/stock_disconnect.png
 share/squirrelmail/plugins/avelsieve/images/stop.gif
+share/squirrelmail/plugins/avelsieve/images/warning.png
+share/squirrelmail/plugins/avelsieve/images/warning_small.png
+share/squirrelmail/plugins/avelsieve/include/DO_Sieve.class.php
+share/squirrelmail/plugins/avelsieve/include/DO_Sieve_File.class.php
+share/squirrelmail/plugins/avelsieve/include/DO_Sieve_ManageSieve.class.php
+share/squirrelmail/plugins/avelsieve/include/DO_Sieve_PearManageSieve.class.php
+share/squirrelmail/plugins/avelsieve/include/DO_Sieve_Skeleton.class.php
 share/squirrelmail/plugins/avelsieve/include/constants.inc.php
+share/squirrelmail/plugins/avelsieve/include/dumpr.php
 share/squirrelmail/plugins/avelsieve/include/html_main.inc.php
 share/squirrelmail/plugins/avelsieve/include/html_ruleedit.inc.php
+share/squirrelmail/plugins/avelsieve/include/html_ruleedit_wizard.inc.php
 share/squirrelmail/plugins/avelsieve/include/html_rulestable.inc.php
 share/squirrelmail/plugins/avelsieve/include/managesieve.lib.php
 share/squirrelmail/plugins/avelsieve/include/managesieve_wrapper.inc.php
 share/squirrelmail/plugins/avelsieve/include/message_commands.inc.php
 share/squirrelmail/plugins/avelsieve/include/process_user_input.inc.php
+share/squirrelmail/plugins/avelsieve/include/search_integration.inc.php
 share/squirrelmail/plugins/avelsieve/include/sieve.inc.php
 share/squirrelmail/plugins/avelsieve/include/sieve_actions.inc.php
 share/squirrelmail/plugins/avelsieve/include/sieve_buildrule.inc.php
@@ -67,6 +87,8 @@ share/squirrelmail/plugins/avelsieve/include/standalone.inc.php
 share/squirrelmail/plugins/avelsieve/include/standalone_html.inc.php
 share/squirrelmail/plugins/avelsieve/include/support.inc.php
 share/squirrelmail/plugins/avelsieve/index.php
+share/squirrelmail/plugins/avelsieve/locale/bg_BG/LC_MESSAGES/avelsieve.mo
+share/squirrelmail/plugins/avelsieve/locale/bg_BG/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/cs_CZ/LC_MESSAGES/avelsieve.mo
 share/squirrelmail/plugins/avelsieve/locale/cs_CZ/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/de_DE/LC_MESSAGES/avelsieve.mo
@@ -86,8 +108,12 @@ share/squirrelmail/plugins/avelsieve/locale/it_IT/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/it_IT/LC_MESSAGES/avelsieve_lorenzo.po
 share/squirrelmail/plugins/avelsieve/locale/lt_LT/LC_MESSAGES/avelsieve.mo
 share/squirrelmail/plugins/avelsieve/locale/lt_LT/LC_MESSAGES/avelsieve.po
-share/squirrelmail/plugins/avelsieve/locale/no_NO/LC_MESSAGES/avelsieve.mo
-share/squirrelmail/plugins/avelsieve/locale/no_NO/LC_MESSAGES/avelsieve.po
+share/squirrelmail/plugins/avelsieve/locale/nb_NO/LC_MESSAGES/avelsieve.mo
+share/squirrelmail/plugins/avelsieve/locale/nb_NO/LC_MESSAGES/avelsieve.po
+share/squirrelmail/plugins/avelsieve/locale/nl_NL/LC_MESSAGES/avelsieve.mo
+share/squirrelmail/plugins/avelsieve/locale/nl_NL/LC_MESSAGES/avelsieve.po
+share/squirrelmail/plugins/avelsieve/locale/pl_PL/LC_MESSAGES/avelsieve.mo
+share/squirrelmail/plugins/avelsieve/locale/pl_PL/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/pt_BR/LC_MESSAGES/avelsieve.mo
 share/squirrelmail/plugins/avelsieve/locale/pt_BR/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/ro_RO/LC_MESSAGES/avelsieve.mo
@@ -96,6 +122,7 @@ share/squirrelmail/plugins/avelsieve/locale/ru_RU/LC_MESSAGES/avelsieve.mo
 share/squirrelmail/plugins/avelsieve/locale/ru_RU/LC_MESSAGES/avelsieve.po
 share/squirrelmail/plugins/avelsieve/locale/zh_CN/LC_MESSAGES/avelsieve.mo
 share/squirrelmail/plugins/avelsieve/locale/zh_CN/LC_MESSAGES/avelsieve.po
+share/squirrelmail/plugins/avelsieve/manage_scripts.php
 share/squirrelmail/plugins/avelsieve/po/avelsieve.pot
 share/squirrelmail/plugins/avelsieve/po/compileallpo
 share/squirrelmail/plugins/avelsieve/po/compilepo
@@ -106,7 +133,8 @@ share/squirrelmail/plugins/avelsieve/po/xgetpo
 share/squirrelmail/plugins/avelsieve/setup.php
 share/squirrelmail/plugins/avelsieve/table.php
 share/squirrelmail/plugins/avelsieve/version
-@comment - now for the directories that need to be removed later
+@comment cleaning up after ourselves
+@dirrm share/squirrelmail/plugins/avelsieve/po
 @dirrm share/squirrelmail/plugins/avelsieve/locale/zh_CN/LC_MESSAGES
 @dirrm share/squirrelmail/plugins/avelsieve/locale/zh_CN
 @dirrm share/squirrelmail/plugins/avelsieve/locale/ru_RU/LC_MESSAGES
@@ -115,8 +143,14 @@ share/squirrelmail/plugins/avelsieve/version
 @dirrm share/squirrelmail/plugins/avelsieve/locale/ro_RO
 @dirrm share/squirrelmail/plugins/avelsieve/locale/pt_BR/LC_MESSAGES
 @dirrm share/squirrelmail/plugins/avelsieve/locale/pt_BR
-@dirrm share/squirrelmail/plugins/avelsieve/locale/no_NO/LC_MESSAGES
-@dirrm share/squirrelmail/plugins/avelsieve/locale/no_NO
+@dirrm share/squirrelmail/plugins/avelsieve/locale/pl_PL/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/avelsieve/locale/pl_PL
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nn_NO/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nn_NO
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nl_NL/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nl_NL
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nb_NO/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/avelsieve/locale/nb_NO
 @dirrm share/squirrelmail/plugins/avelsieve/locale/lt_LT/LC_MESSAGES
 @dirrm share/squirrelmail/plugins/avelsieve/locale/lt_LT
 @dirrm share/squirrelmail/plugins/avelsieve/locale/it_IT/LC_MESSAGES
@@ -135,7 +169,10 @@ share/squirrelmail/plugins/avelsieve/version
 @dirrm share/squirrelmail/plugins/avelsieve/locale/de_DE
 @dirrm share/squirrelmail/plugins/avelsieve/locale/cs_CZ/LC_MESSAGES
 @dirrm share/squirrelmail/plugins/avelsieve/locale/cs_CZ
+@dirrm share/squirrelmail/plugins/avelsieve/locale/bg_BG/LC_MESSAGES
+@dirrm share/squirrelmail/plugins/avelsieve/locale/bg_BG
 @dirrm share/squirrelmail/plugins/avelsieve/locale
+@dirrm share/squirrelmail/plugins/avelsieve/lib
 @dirrm share/squirrelmail/plugins/avelsieve/include
 @dirrm share/squirrelmail/plugins/avelsieve/images/plain_obsolete
 @dirrm share/squirrelmail/plugins/avelsieve/images/bluecurve_24x24
@@ -143,6 +180,5 @@ share/squirrelmail/plugins/avelsieve/version
 @dirrm share/squirrelmail/plugins/avelsieve/images
 @dirrm share/squirrelmail/plugins/avelsieve/doc/style
 @dirrm share/squirrelmail/plugins/avelsieve/doc
-@dirrm share/squirrelmail/plugins/avelsieve/po
 @dirrm share/squirrelmail/plugins/avelsieve/config
 @dirrm share/squirrelmail/plugins/avelsieve

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:41 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/10/12 02:59:26 schnoebe Exp $
 
-SHA1 (avelsieve-1.9.1.tar.gz) = dd7ebd24dd74da39cd987107b134579e43f3ab98
-RMD160 (avelsieve-1.9.1.tar.gz) = baa160a3e1f345b263785e2e7e9d9cbd4a30b0c3
-Size (avelsieve-1.9.1.tar.gz) = 200791 bytes
+SHA1 (avelsieve-1.9.7.tar.gz) = 75f723b59d9d93d66a42c4d2e92b6f29f28759f1
+RMD160 (avelsieve-1.9.7.tar.gz) = 2ef33e46eddbdbd8b448d77f2409dd485cf532aa
+Size (avelsieve-1.9.7.tar.gz) = 318089 bytes
