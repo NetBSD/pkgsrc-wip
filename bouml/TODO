@@ -1,25 +1,4 @@
-Libtool fails during a package build
-	$ make
-but succeeds if you cd to the work directory, and run make from the command
-line.
-	$ cd work/bouml_2.17.1/
-	$ make
-
-Error from failed package build is below.
-
-Can anyone help?
-
-$ make
-=> Checksum SHA1 OK for bouml_2.17.1.tar.gz.
-=> Checksum RMD160 OK for bouml_2.17.1.tar.gz.
-===> Creating toolchain wrappers for bouml-2.17.1
-set -e;                                                          src=/usr/pkg/lib/pkgconfig/renderproto.pc;  dst=/usr/pkgsrc/devel/bouml/work/.buildlink/lib/pkgconfig/render.pc;                  /bin/mkdir -p /usr/pkgsrc/devel/bouml/work/.buildlink/lib/pkgconfig;                    if test -f "$src"; then                                   /bin/rm -f "$dst";                                      /bin/ln -sf "$src" "$dst";               fi
-===> Configuring for bouml-2.17.1
-===> Building for bouml-2.17.1
-Generate BOUML and the hand made plug-outs
-for i in src  src/CppGenerator  src/CppReverse  src/JavaGenerator  src/JavaReverse  src/JavaCat  src/IdlGenerator  src/PlugOutUpgrade; do ( if [ -d $i ]; then cd $i ; /usr/pkg/qt3/bin/qmake ; make ; fi; ) ; done
-libtool --silent --mode=compile c++ -c -O2 -I/usr/pkg/include -I/usr/pkg/qt3/include -I/usr/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/freetype2 -DQ_TRAILING_DIR_SEP  -DQT_NO_DEBUG -I/usr/pkg/qt3/mkspecs/default -I. -Ibrowser -Idata -Idiagram -Idialog -Imisc -Itool -Ixpm -I../../../../../../pkg/include -I/usr/pkg/qt3/include -o BrowserAttribute.lo browser/BrowserAttribute.cpp
-*** Error code 1
-
-Stop.
-make: stopped in /usr/pkgsrc/devel/bouml/work/bouml_2.17.1/src
+The makefile has a very clumsy way to handle lack of
+an environment variable QTDIR.  If someone knows of
+a better way to handle this situation, rather than
+defining a target all...please help.  Thanks!
