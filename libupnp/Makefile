@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/27 14:49:41 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/13 01:10:11 obache Exp $
 #
 
 DISTNAME=		libupnp-1.4.1
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pupnp/}
 
 MAINTAINER=		obata@lins.jp
-HOMEPAGE=		http://www.virtualworlds.de/upnp/
+HOMEPAGE=		http://pupnp.sourceforge.net/
 COMMENT=		Portable SDK for Universal Plug and Play (UPnP) Devices
 
 USE_LANGUAGES=		c
