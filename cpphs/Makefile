@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/08/28 10:00:33 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/13 12:57:55 emil_s Exp $
 #
 
-DISTNAME=		cpphs-1.2
+DISTNAME=		cpphs-1.3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.cs.york.ac.uk/fp/cpphs/
 
