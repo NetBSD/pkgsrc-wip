@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/13 02:18:59 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/10/13 12:22:58 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXFT_BUILDLINK3_MK:=	${LIBXFT_BUILDLINK3_MK}+
@@ -18,5 +18,10 @@ BUILDLINK_PKGSRCDIR.libXft?=	../../wip/libXft
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../wip/libXrender/buildlink3.mk"
+
+.if defined(X11_TYPE) && ${X11_TYPE} == "native"
+CONFIGURE_ENV+=	XFT_CFLAGS="-I${PREFIX}/include -I/${PREFIX}/include/freetype2"
+CONFIGURE_ENV+=	XFT_LIBS="-L${PREFIX}/lib -lXft"
+.endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
