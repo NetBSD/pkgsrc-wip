@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 22:13:29 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.22 2006/10/13 12:16:45 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXfixes-4.0.1
@@ -20,7 +20,17 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
-.include "../../wip/libX11/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if defined(X11_TYPE) && ${X11_TYPE} == "native"
+CONFIGURE_ENV+=         X_CFLAGS="-I${X11BASE}/include"
+CONFIGURE_ENV+=         X_LIBS="-L${X11BASE}/lib -lX11"
+.  include "../../mk/x11.buildlink3.mk"
+.endif
+
+.if defined(X11_TYPE) && ${X11_TYPE} == "modular-xorg"
+.  include "../../wip/libX11/buildlink3.mk"
+.endif
+
 .include "../../x11/fixesproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
