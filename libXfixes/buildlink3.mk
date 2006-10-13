@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/10/13 12:19:21 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/10/13 16:50:51 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libXfixes.
 #
@@ -15,6 +15,7 @@ BUILDLINK_PACKAGES+=			libXfixes
 BUILDLINK_API_DEPENDS.libXfixes?=		libXfixes>=3.0.0
 BUILDLINK_PKGSRCDIR.libXfixes?=		../../wip/libXfixes
 
+.include "../../mk/bsd.prefs.mk"
 .if defined(X11_TYPE) && ${X11_TYPE} == "modular-xorg"
 .  include "../../wip/libX11/buildlink3.mk"
 .endif

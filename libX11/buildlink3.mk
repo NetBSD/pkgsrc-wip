@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/10/13 12:45:13 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/10/13 16:50:51 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 
@@ -29,6 +29,7 @@ LIBS+=		${BUILDLINK_LDADD.pthread}
 
 #.include "../../wip/xtrans/buildlink3.mk"
 
+.include "../../mk/bsd.prefs.mk"
 CHECK_X11_TYPE?=	yes
  
 .if defined(CHECK_X11_TYPE) && !empty(CHECK_X11_TYPE:M[Yy][Ee][Ss])
