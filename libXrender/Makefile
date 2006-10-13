@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/28 00:58:35 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/13 12:37:46 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libXrender-0.9.1
@@ -18,7 +18,25 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xrender.pc.in
 
-.include "../../wip/libX11/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if defined(X11_TYPE) && ${X11_TYPE} == "native"
+CONFIGURE_ENV+=		X_CFLAGS="-I${X11BASE}/include"
+CONFIGURE_ENV+=		X_LIBS="-L${X11BASE}/lib -lX11"
+.  include "../../mk/x11.buildlink3.mk"
+
+.  if !exists(${X11BASE}/include/X11/Xregion.h)
+# Xregion.h is in Xorg; if missing copy to buildlink includes directory
+pre-configure:
+	${CP} ${FILESDIR}/Xregion.h ${BUILDLINK_DIR}/include/X11/
+.  endif
+
+.endif	# native
+
+.if defined(X11_TYPE) && ${X11_TYPE} == "modular-xorg"
+.  include "../../wip/libX11/buildlink3.mk"
+.  include "../../wip/libXext/buildlink3.mk"
+.endif
+
 .include "../../x11/renderproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
