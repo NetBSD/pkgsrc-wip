@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/18 18:27:50 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/10/13 12:45:13 jeremy-c-reed Exp $
 #
 # This Makefile fragment is included by packages that use libX11.
 
@@ -28,5 +28,13 @@ LIBS+=		${BUILDLINK_LDADD.pthread}
 .include "../../wip/libXdmcp/buildlink3.mk"
 
 #.include "../../wip/xtrans/buildlink3.mk"
+
+CHECK_X11_TYPE?=	yes
+ 
+.if defined(CHECK_X11_TYPE) && !empty(CHECK_X11_TYPE:M[Yy][Ee][Ss])
+.    if !defined(X11_TYPE) || empty(X11_TYPE:Mmodular-xorg)
+PKG_FAIL_REASON+=	"X11_TYPE=modular-xorg is mandatory."
+.    endif
+.endif
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
