@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/10/13 12:12:09 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.31 2006/10/13 13:28:47 jeremy-c-reed Exp $
 #
 
 DISTNAME=		libX11-1.0.3
@@ -12,12 +12,16 @@ COMMENT=		Base X libraries from modular Xorg X11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+MAKE_JOBS_SAFE=		no
+
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-man-pages=3
 PKGCONFIG_OVERRIDE+=	x11.pc.in
+
+.include "../../mk/bsd.prefs.mk"
 
 CHECK_X11_TYPE?=	yes
 
