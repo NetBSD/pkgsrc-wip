@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/07/30 15:13:04 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/14 09:38:02 shattered Exp $
 #
 
 DISTNAME=		d4x-2.5.6
@@ -12,7 +12,7 @@ COMMENT=		Download files using a nice GUI
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-openssl
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bash
 CONFIG_SHELL=		${BASH}
 
