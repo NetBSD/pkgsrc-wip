@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2006/10/14 10:46:34 shattered Exp $
+
+--- mod_ometer.c.orig	2005-09-30 21:58:27.000000000 +0000
++++ mod_ometer.c
+@@ -365,7 +365,7 @@ odometer_handler(request_rec *r) 
+             goto err;
+         }
+         if ( strcasecmp( p, "link") == 0 ) {
+-            (const char *)ce.ce_key = param;
++            ce.ce_key = (char *)param;
+ 	    ap_unescape_url( ce.ce_key );
+         } else if ( strcasecmp( p, "reset") == 0 ) {
+             re = param;
