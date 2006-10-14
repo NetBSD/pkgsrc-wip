@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: linuxigd.sh,v 1.2 2005/04/22 02:30:57 obache Exp $
+# $NetBSD: linuxigd.sh,v 1.3 2006/10/14 15:09:00 thomasklausner Exp $
 #
 # PROVIDE: linuxidg
 # REQUIRE: ipnat
@@ -11,7 +11,7 @@
 
 name="linuxigd"
 rcvar=${name}
-command="@PREFIX@/bin/upnpd"
+command="@PREFIX@/sbin/upnpd"
 required_vars="ipnat"
 
 load_rc_config ${name}
