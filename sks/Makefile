@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/14 00:19:37 adrian_p Exp $
 #
 
 DISTNAME=	sks-1.0.9
@@ -13,9 +13,8 @@ COMMENT=	Self Replicating PGP Key Server
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
 BUILDLINK_API_DEPENDS.db4+=		db4>=4.3.0
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run tar
 BDB_ACCEPTED=	db4
-USE_PERL5=	YES
 
 MAKE_ENV+=	LIBDB=-ldb4 \
 		BDBINCLUDE=-I${BUILDLINK_DIR}/include \
@@ -27,10 +26,10 @@ MAKE_ENV+=	LIBDB=-ldb4 \
 .include "../../mk/bdb.buildlink3.mk"
 
 pre-patch:
-	@cd ${WRKSRC} && ${TAR} xmfz numerix-0.19-3.tar.gz
+	cd ${WRKSRC} && ${TAR} xmfz numerix-0.19-3.tar.gz
 
 post-install:
-	@cd ${WRKSRC} && ${MAKE_PROGRAM} sks.8
+	cd ${WRKSRC} && ${MAKE_PROGRAM} sks.8
 	${INSTALL_PROGRAM} ${WRKSRC}/sks ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/sks_add_mail ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/sks.8 ${PREFIX}/${PKGMANDIR}/man8
