@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/12 22:17:19 unex_linija Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/14 11:46:31 shattered Exp $
 bin/csoap-config
 bin/soapclient
 include/libcsoap-1.1/libcsoap/soap-admin.h
@@ -13,6 +13,7 @@ include/libcsoap-1.1/libcsoap/soap-xml.h
 include/nanohttp-1.1/nanohttp/nanohttp-base64.h
 include/nanohttp-1.1/nanohttp/nanohttp-client.h
 include/nanohttp-1.1/nanohttp/nanohttp-common.h
+include/nanohttp-1.1/nanohttp/nanohttp-logging.h
 include/nanohttp-1.1/nanohttp/nanohttp-mime.h
 include/nanohttp-1.1/nanohttp/nanohttp-request.h
 include/nanohttp-1.1/nanohttp/nanohttp-response.h
