@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/04 11:11:50 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2006/10/14 12:16:08 shattered Exp $
 
-SHA1 (dicom3tools_1.00.snapshot.20030501.helgray.tar.gz) = 13638ee9baf29b2b90d2e8a0dd316ffd842729a6
-Size (dicom3tools_1.00.snapshot.20030501.helgray.tar.gz) = 870952 bytes
-SHA1 (patch-aa) = 2ce3d962c437acdfb59416fe3a71c9977e58e519
+SHA1 (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 3fedb36c9b3583a3b19202fb9ab1ad7a374ab082
+RMD160 (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 8ee226eb4f25274c10324902435c52f1c188a856
+Size (dicom3tools_1.00.snapshot.20061010.tar.bz2) = 1005482 bytes
+SHA1 (patch-aa) = 05a6204afa5fe0a6b3d00be3f0790ec9e50ba11a

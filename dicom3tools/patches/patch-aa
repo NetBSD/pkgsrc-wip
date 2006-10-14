@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/04 11:11:50 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2006/10/14 12:16:08 shattered Exp $
 
 --- config/Configure.orig	Thu May  1 21:04:48 2003
 +++ config/Configure	Wed Dec 24 06:37:08 2003
@@ -74,9 +74,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/04 11:11:50 mpasternak Exp $
 +	fi
 +	
 +	
- 	if [ -d /usr/X11R6/lib ]		# NOT /usr/lib/X11 which contains configuration files
- 	then
- 		echo >>generic.cf "#ifndef X11LibraryPath"
+ 	# X11LibraryPath may already have been overridden, but ...
+ 
+ 	if [ -f /usr/lib64/libX11.a ]		# They changed it in FC5
 @@ -728,6 +789,111 @@
  	echo >>generic.cf "#endif"
  fi
