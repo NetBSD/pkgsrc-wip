@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2006/04/25 20:04:35 ahallmann Exp $
-# $Id: Makefile,v 1.8 2006/04/25 20:04:35 ahallmann Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/14 10:10:48 shattered Exp $
+# $Id: Makefile,v 1.9 2006/10/14 10:10:48 shattered Exp $
 
 .include "Makefile.common"
 
@@ -52,7 +52,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/cfengine
 	${INSTALL_DATA} ${WRKSRC:Q}/inputs/*.example \
 		${PREFIX:Q}/share/examples/cfengine/
-	${INSTALL_DATA_DIR:Q} ${VARBASE:Q}/cfengine/inputs
+	${INSTALL_DATA_DIR} ${VARBASE:Q}/cfengine/inputs
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
