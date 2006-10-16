@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/10/16 22:17:29 ondratu Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/10/16 22:45:04 ondratu Exp $
 
 PKGNAME=		openoffice-bin-${LANGUAGE}-${OO_RELEASE}
 CATEGORIES=		misc
@@ -7,7 +7,7 @@ DISTFILES=		openoffice.org-${LANGUAGE}-${OO_RELEASE}-5.i586.rpm \
 			openoffice.org-${LANGUAGE}-help-${OO_RELEASE}-5.i586.rpm \
 			openoffice.org-${LANGUAGE}-res-${OO_RELEASE}-5.i586.rpm
 
-MAINTAINER=		pkgsrc@blackmouse.org
+MAINTAINER=		pkgsrc@blackmouse.biz
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		${LANGUAGE} language package for OpenOffice.org2
 

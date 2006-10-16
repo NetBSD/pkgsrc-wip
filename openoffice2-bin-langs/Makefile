@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/16 22:17:29 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/16 22:45:04 ondratu Exp $
 
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	pkgsrc@blackmouse.org
+MAINTAINER=	pkgsrc@blackmouse.biz
 COMMENT=	Common package for openoffice lang packages
 
 NO_CHECKSUM=	yes
