@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/05/06 01:54:01 schnoebe Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/16 04:57:13 schnoebe Exp $
 
 --- yahoo.py.orig	2006-03-07 03:09:17.000000000 -0600
 +++ yahoo.py
@@ -264,7 +264,7 @@ $NetBSD: patch-aa,v 1.2 2006/05/06 01:54:01 schnoebe Exp $
      configfile.add_section('yahoo')
      try:
 -        configfilename = 'transport.ini'
-+        configfilename = os.path.join("/usr/pkg/etc/jabberd", "yahoo-transport.ini")
++        configfilename = os.path.join("@PKG_SYSCONFDIR@", "yahoo-transport.ini")
          cffile = open(configfilename,'r')
      except IOError:
          try:
@@ -286,7 +286,7 @@ $NetBSD: patch-aa,v 1.2 2006/05/06 01:54:01 schnoebe Exp $
 +			sys.exit(0)	# exit from the parent
 +		except OSError, e:
 +		    print "Fork failed: (" + e.errno + ") " + e.strerror
-+		    ssy.exit(1)
++		    sys.exit(1)
 +		# now in the child, redirect stdin/out/err
 +		for f in sys.stdout, sys.stderr: f.flush()
 +		si = file('/dev/null', 'r')
