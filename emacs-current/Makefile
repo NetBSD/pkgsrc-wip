@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/05 12:54:43 obache Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/16 08:17:50 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -31,6 +31,12 @@ CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+
+SUBST_CLASSES+=			test_equal
+SUBST_STAGE.test_equal=		pre-configure
+SUBST_MESSAGE.test_equal=	Fixing bashisms in test(1) usage.
+SUBST_FILES.test_equal=		mac/make-package
+SUBST_SED.test_equal=		-e 's/ == / = /g'
 
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
