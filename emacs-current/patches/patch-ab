@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/08/31 09:13:54 obache Exp $
+$NetBSD: patch-ab,v 1.2 2006/10/17 07:23:49 thomasklausner Exp $
 
---- configure.orig	2006-07-14 21:04:46.000000000 +0900
+--- configure.orig	2006-09-30 11:11:12.000000000 +0200
 +++ configure
 @@ -1361,7 +1361,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
@@ -11,3 +11,11 @@ $NetBSD: patch-ab,v 1.1 2006/08/31 09:13:54 obache Exp $
  
  
  # Check whether --with-gcc or --without-gcc was given.
+@@ -1747,6 +1747,7 @@ _ACEOF
+       powerpc-*-netbsd*) machine=macppc ;;
+       sparc*-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
++      x86_64-*-netbsd*)	machine=amd64 ;;
+       arm-*-netbsd*)	machine=arm ;;
+     esac
+   ;;

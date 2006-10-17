@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/16 08:17:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/17 07:23:49 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -63,6 +63,15 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs
 CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-${PKGVERSION}
+
+FILESDIR=	${.CURDIR}/../../editors/emacs/files
+
+post-extract:
+	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
+	${CP} ${FILESDIR}/amd64.h ${WRKSRC}/src/m
+	${CP} ${FILESDIR}/darwin.h ${WRKSRC}/src/s
+	${CP} ${FILESDIR}/unexmacosx.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/sh3el.h ${WRKSRC}/src/m
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
