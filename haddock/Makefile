@@ -1,28 +1,35 @@
-# $NetBSD: Makefile,v 1.3 2006/08/25 14:08:23 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/17 13:35:10 emil_s Exp $
 #
 
 DISTNAME=		haddock-${VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/haddock/
 DISTFILES=		haddock-${VERSION}-src.tar.gz
-DISTFILES+=		haddock-html-${VERSION}.tar.gz
+#DISTFILES+=		haddock-html-${VERSION}.tar.gz
 
 MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/haddock/
 COMMENT=		Documentation tool for Haskell
 
-VERSION=		0.7
+VERSION=		0.8
 
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
 
 DOCDIR=			${PREFIX}/share/doc/haddock
 
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKDIR}/haddock-html-0.6 && \
-		${INSTALL_DATA} *.html *.css ${DOCDIR}
+do-configure:
+	cd ${WRKSRC:Q} && runhaskell Setup.lhs configure                \
+	  --ghc								\
+	  --prefix=${PREFIX:Q}						\
+	  --with-compiler=${PREFIX:Q}/bin/ghc				\
+	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+
+do-build:
+	cd ${WRKSRC:Q} && runhaskell Setup.lhs build
+
+do-install:
+	cd ${WRKSRC:Q} && runhaskell Setup.lhs install
 
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

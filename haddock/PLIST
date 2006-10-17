@@ -1,27 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/17 14:05:34 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/10/17 13:35:10 emil_s Exp $
 bin/haddock
-bin/${PKGNAME}
-lib/${PKGNAME}/haddock.bin
-share/doc/haddock/ch01s03.html
-share/doc/haddock/ch03s02.html
-share/doc/haddock/ch03s03.html
-share/doc/haddock/ch03s04.html
-share/doc/haddock/ch03s05.html
-share/doc/haddock/ch03s08.html
-share/doc/haddock/fptools.css
-share/doc/haddock/hyperlinking.html
-share/doc/haddock/index.html
-share/doc/haddock/introduction.html
-share/doc/haddock/invoking.html
-share/doc/haddock/ix01.html
-share/doc/haddock/license.html
-share/doc/haddock/markup.html
-share/doc/haddock/module-attributes.html
-share/${PKGNAME}/haddock.css
-share/${PKGNAME}/haddock.js
-share/${PKGNAME}/haskell_icon.gif
-share/${PKGNAME}/minus.gif
-share/${PKGNAME}/plus.gif
+share/${PKGNAME}/html/haddock-DEBUG.css
+share/${PKGNAME}/html/haddock.css
+share/${PKGNAME}/html/haddock.js
+share/${PKGNAME}/html/haskell_icon.gif
+share/${PKGNAME}/html/minus.gif
+share/${PKGNAME}/html/plus.gif
+@dirrm share/${PKGNAME}/html
 @dirrm share/${PKGNAME}
-@dirrm share/doc/haddock
-@dirrm lib/${PKGNAME}
