@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/10/18 10:06:06 kcf Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/18 17:08:38 kcf Exp $
 #
 
-BOUMLVERSION=		2.17.1
+BOUMLVERSION=		2.17.2
 DISTNAME=		bouml_${BOUMLVERSION}
 PKGNAME=		bouml-${BOUMLVERSION}
 CATEGORIES=		devel
@@ -11,6 +11,7 @@ HOMEPAGE=		http://bouml.free.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
 
 USE_LIBTOOL=		YES
+USE_TOOLS=		gmake
 USE_LANGUAGES=		c++
 BUILD_TARGET=		compile
 MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"

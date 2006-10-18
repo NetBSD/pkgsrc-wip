@@ -1,27 +1,37 @@
-$NetBSD: patch-aa,v 1.2 2006/10/16 21:02:00 kcf Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/18 17:08:38 kcf Exp $
 
---- Makefile.orig	2006-06-15 03:54:20.000000000 -0500
+--- Makefile.orig	2006-10-17 12:55:32.000000000 -0500
 +++ Makefile
-@@ -1,10 +1,9 @@
- # the directory where all the bouml files will be installed
+@@ -1,19 +1,19 @@
+ # The directory where all the bouml files will be installed, you
+ # can change it for instance because you don't have root permission
 -BOUML_LIB = /usr/lib/bouml
 +BOUML_LIB = ${PREFIX}/lib/bouml
  
- # the directory where the bouml shell script will be installed
+ # The directory where the bouml shell script will be installed, you
+ # can change it for instance because you don't have root permission
 -BOUML_DIR = /usr/bin
 +BOUML_DIR = ${PREFIX}/bin
  
--QMAKE = qmake
- MAKE = make
+ # The directory containing bouml.desktop
+ # The copy is not done if you comment the definition
+-BOUML_DESKTOP_DIR = /usr/share/applications
++BOUML_DESKTOP_DIR = ${PREFIX}/share/applications
  
+ # The directories containing the bouml icons are
+ # <BOUML_ICONS_PREFIX_DIR>/<size>x<size>/apps
+ # The copy is not done if you comment the definition
+-BOUML_ICONS_PREFIX_DIR = /usr/share/icons/hicolor
++BOUML_ICONS_PREFIX_DIR = ${PREFIX}/share/icons/hicolor
+ 
+ # for packaging purpose, useless by default
+ # DESTDIR = 
+@@ -21,8 +21,6 @@ BOUML_ICONS_PREFIX_DIR = /usr/share/icon
+ # uncomment if needed
+ # MAKE = make
+ 
+-QMAKE=qmake
+-
  SRC_DIRS = src \
-@@ -63,9 +62,7 @@ install:
- 	mkdir -p $(BOUML_LIB)
- 	for i in $(PROGS); do ( if [ -f $$i ]; then cp -p $$i $(BOUML_LIB)/. ; fi; ) ; done
- 	cd plugouts ; tar cf - empty genpro html rose singleton cpp_utilities xmi sm_generator usecase_wizard sort FileControl deploy | (cd $(BOUML_LIB); tar xf -)
--	
- 	echo "#!/bin/sh" >$(BOUML_DIR)/bouml
--	#echo "cd "$(BOUML_LIB) >>$(BOUML_DIR)/bouml
- 	echo "PATH=$(BOUML_LIB):$$"PATH >>$(BOUML_DIR)/bouml
- 	echo "$(BOUML_LIB)/bouml $$"1" $$"2" $$"3" $$"4" $$"5" $$"6" $$"7" $$"8" $$"9" $$"10 >>$(BOUML_DIR)/bouml
- 	chmod +x $(BOUML_DIR)/bouml
+ 	src/CppGenerator \
+ 	src/CppReverse \
