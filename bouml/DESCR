@@ -13,5 +13,5 @@ the pre-defined plug-outs included in the BOUML distribution. See features.
 Does not work with QT4.  QT3 must be installed with the -no-xft option because
 QT3 in the pkgsrc system has been configured to depend on Xft2.  When QT3 opens
 a font, the font size is wrong, and this message is given to the console:
-"couldn't open fontconfigs chosen font with Xft!!!"  Untill the relationship
+"couldn't open fontconfigs chosen font with Xft!!!"  Until the relationship
 between QT3, fontconfigs, and Xft2 is resolved, use the -no-xft option.
