@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2006/07/29 12:27:19 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/18 13:58:14 kh-p Exp $
 #
 
 DISTNAME=		wmii-3.1
 CATEGORIES=		wip wm
-MASTER_SITES=		http://wmii.de/download/
+MASTER_SITES=		http://suckless.org/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://wmii.de/download/
+HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Third version of the window manager improved 2
 
 CONFLICTS+=		wmii-2.*
