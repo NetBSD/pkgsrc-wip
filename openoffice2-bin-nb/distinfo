@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/18 12:30:27 ondratu Exp $
+
+SHA1 (openoffice.org-nb-2.0.4-5.i586.rpm) = cd78f85b9e0576f9a25261a1b28751121c102faf
+RMD160 (openoffice.org-nb-2.0.4-5.i586.rpm) = 59c884720fcb5ab02097c67805e776ec2197d63a
+Size (openoffice.org-nb-2.0.4-5.i586.rpm) = 1826079 bytes
+SHA1 (openoffice.org-nb-help-2.0.4-5.i586.rpm) = f989e778d8fd06fb6ccef66659b85ff330bfbe6c
+RMD160 (openoffice.org-nb-help-2.0.4-5.i586.rpm) = 9db27e4fddba11aca6ac61b659dd5607b3101fd9
+Size (openoffice.org-nb-help-2.0.4-5.i586.rpm) = 11590805 bytes
+SHA1 (openoffice.org-nb-res-2.0.4-5.i586.rpm) = 5df6946f09aa418ed9a1768a74b21ef6acc42594
+RMD160 (openoffice.org-nb-res-2.0.4-5.i586.rpm) = 5bc058fc925b20cf70f818c39b7a223adfc46bbe
+Size (openoffice.org-nb-res-2.0.4-5.i586.rpm) = 568423 bytes
