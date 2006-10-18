@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/18 02:31:34 kcf Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/18 10:06:06 kcf Exp $
 #
 
 BOUMLVERSION=		2.17.1
@@ -18,4 +18,3 @@ MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
