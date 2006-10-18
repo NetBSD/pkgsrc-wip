@@ -1,4 +1,2 @@
-The makefile has a very clumsy way to handle lack of
-an environment variable QTDIR.  If someone knows of
-a better way to handle this situation, rather than
-defining a target all...please help.  Thanks!
+Package tested on i386.  Other platforms needed.
+Test away!
