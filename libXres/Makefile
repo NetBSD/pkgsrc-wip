@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/05/19 16:51:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/18 22:17:44 jeremy-c-reed Exp $
 #
 
-DISTNAME=		libXres-1.0.0
+DISTNAME=		libXres-1.0.2
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
