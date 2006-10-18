@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/01 15:29:20 obache Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/18 15:37:59 bencollver Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
@@ -34,15 +34,22 @@ CONF_FILES=		${EGDIR}/joomla.conf ${JOOMLA_CONFDIR}/joomla.conf
 SPECIAL_PERMS=		${JOOMLA_CONFDIR}/joomla.conf ${APACHE_USER} \
 			${APACHE_GROUP} 0644
 
+NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-do-extract:
-	@${MKDIR} ${WRKSRC}
-	${TAR} -zxf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} -C ${WRKSRC}
+# distfile has .gz extension but bzip2 compression
+# distfile does not extract to a subdirectory
+# extract using bzip2 decompression to the WRKSRC subdirectory
+EXTRACT_OPTS+=		-c bzip -d ${WRKSRC}
 
-do-configure:
-	@${SED} -e "s|@JOOMLA_DIR@|${JOOMLA_DIR}|g" ${FILESDIR}/joomla.conf   \
-			> ${WRKDIR}/joomla.conf
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing pathnames in configuration file.
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	../joomla.conf
+SUBST_SED.paths=	-e "s,@JOOMLA_DIR@,${JOOMLA_DIR},g"
+
+post-extract:
+	${CP} ${FILESDIR}/joomla.conf ${WRKDIR}/joomla.conf
 
 do-install:
 	${INSTALL_DATA_DIR} ${JOOMLA_DIR}
