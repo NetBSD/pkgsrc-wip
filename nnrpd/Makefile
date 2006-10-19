@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/01 01:32:10 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/19 22:11:26 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -11,8 +11,6 @@ MAINTAINER=		hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from release 1.7 of InterNet News (INN)
 
-USE_PERL5=      	YES
-
 INN_DATA_DIR?=		/var/news
 
 CONFLICTS+=		nntpclnt-[0-9]* \
@@ -22,9 +20,10 @@ RCD_SCRIPTS=		actived
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/c-news/Makefile.common"
 
-.if (exists(${PERL5}))
-PERL_LDOPTS!=		eval "perl -MExtUtils::Embed -e ldopts"
-.endif
+# We need include and library paths to compile in Perl support
+PERL_LDOPTS_cmd=	eval ${PERL5} -MExtUtils::Embed -e ldopts 2>/dev/null
+PERL_ARCHLIB_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`; \
+			${ECHO} $${installarchlib}
 
 # Given foo=${bar}, replace @foo@ with ${bar}.
 #
@@ -32,8 +31,8 @@ FILES_SUBST=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		INNDATA=${INN_DATA_DIR:Q}
 FILES_SUBST+=		INNPREFIX=${PREFIX:Q}
 FILES_SUBST+=		INNMANPREFIX=${PREFIX:Q}
-FILES_SUBST+=		PERL_LDOPTS=${PERL_LDOPTS:Q}
-FILES_SUBST+=		PERL_INC="-I${PERL5_ARCHLIB}/CORE -DPERL_POLLUTE"
+FILES_SUBST+=		PERL_LDOPTS="${PERL_LDOPTS_cmd:sh}"
+FILES_SUBST+=		PERL_INC="-I${PERL_ARCHLIB_cmd:sh}/CORE -DPERL_POLLUTE"
 
 # UBC brought read and mmap in sync
 .if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.[0-4]*} != "" || \
