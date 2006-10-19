@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2404 2006/10/18 20:37:37 bencollver Exp $
+# $Id: Makefile,v 1.2405 2006/10/19 18:12:32 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -163,6 +163,7 @@ SUBDIR+=	confuse
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	cpphs
+SUBDIR+=	crafty
 SUBDIR+=	cream
 SUBDIR+=	cryptcat
 SUBDIR+=	csoap
@@ -790,6 +791,7 @@ SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openca
 SUBDIR+=	openct
+SUBDIR+=	opencv
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
 SUBDIR+=	openoffice2-bin-af
@@ -1276,6 +1278,7 @@ SUBDIR+=	shaper
 SUBDIR+=	shed
 SUBDIR+=	shoutcast
 SUBDIR+=	showmesh
+SUBDIR+=	sic
 SUBDIR+=	sid-milter
 SUBDIR+=	siege
 SUBDIR+=	silky
@@ -1523,6 +1526,7 @@ SUBDIR+=	xrdp
 SUBDIR+=	xscribble-fs
 SUBDIR+=	xset
 SUBDIR+=	xsm
+SUBDIR+=	xspd
 SUBDIR+=	xspread
 SUBDIR+=	xtrace
 SUBDIR+=	xtrans
