@@ -1,0 +1,17 @@
+# $NetBSD: Makefile.common,v 1.1 2006/10/20 05:15:08 kcf Exp $
+#
+# Do NOT put a PKGREVISION statement in this file!
+
+XSPDVERSION=		6.3.1
+XSPDISTID=		051219
+XSPAPPID=		${XSPDISTID}
+XSPJAVAID=		${XSPDISTID}
+XSPJSYSID=		${XSPDISTID}
+XSPJSYSDOCID=		${XSPDISTID}
+XSPSYSID=		${XSPDISTID}
+XSPSYSDOCID=		${XSPDISTID}
+XSPSYS=			xspsys
+XSPAPP=			xspapp
+CATEGORIES=		www
+MAINTAINER=		kcf@users.sourceforge.net
+HOMEPAGE=		http://home.arcor.de/joachimschulze/xsp/
