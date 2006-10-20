@@ -1,2 +1,4 @@
-Package tested on i386.  Other platforms needed.
-Test away!
+PLIST needs fixing.  All the share/icons/hicolor directories are shared with
+another program, and there doesn't seem to be a USE_DIRS -dirs entry to cover
+these shared directories.  So, at the moment, pkg_delete does not remove the
+package files correctly.  Help anyone??
