@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/07/07 11:04:05 dillo Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/21 22:52:28 thomasklausner Exp $
 #
 
-DISTNAME=		ZSNESS_0319
-PKGNAME=		zsnes-20060319
+DISTNAME=		ZSNESS_1012
+PKGNAME=		zsnes-20061012
 CATEGORIES=		emulators
 MASTER_SITES=		http://files.ipherswipsite.com/zsnes/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,19 +13,27 @@ COMMENT=		Super NES emulator, development version
 
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
-WRKSRC=			${WRKDIR}/src
+WRKSRC=			${WRKDIR}
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake automake
-USE_LANGUAGES+=		c++
-ONLY_FOR_PLATFORM=	*-*-i386
-BUILD_TARGET=		zsnes
+USE_TOOLS+=		gmake autoconf automake
+USE_LANGUAGES+=		c c++
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ENV+=		force_arch=k8
+#BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
+#CONFIGURE_ENV+=		NASMPATH=${LOCALBASE}/bin/yasm
+#.else
+#BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && aclocal
 	cd ${WRKSRC} && autoconf
 
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

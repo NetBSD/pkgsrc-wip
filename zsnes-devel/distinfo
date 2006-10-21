@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2006/07/07 11:04:05 dillo Exp $
+$NetBSD: distinfo,v 1.14 2006/10/21 22:52:28 thomasklausner Exp $
 
-SHA1 (ZSNESS_0319.tar.bz2) = 1c0a84ecb6b17c15a38f4e423fb25327b7f55500
-RMD160 (ZSNESS_0319.tar.bz2) = 6c11eca06afa5733de2d0e52306cb5000918b492
-Size (ZSNESS_0319.tar.bz2) = 1157929 bytes
-SHA1 (patch-ab) = 6ae94deedcc4a9c462f990a4671586868b21fc41
+SHA1 (ZSNESS_1012.tar.bz2) = 55e6328a5b3fa78ed8630934c28de69a90007a3a
+RMD160 (ZSNESS_1012.tar.bz2) = 80a989c5ac8ba968616258b6008163fc83643ce6
+Size (ZSNESS_1012.tar.bz2) = 1455648 bytes
+SHA1 (patch-ab) = 2d89b30930fedd9eea8ae1ed74c9ff6a796d96af
 SHA1 (patch-ac) = 25ecfe2c6a8db006310d80c6bb6ceb308d23fbdc
-SHA1 (patch-ad) = c492d83fd16c59ad6f9712c694ff696b5679e39e
