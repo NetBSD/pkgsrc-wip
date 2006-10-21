@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/20 05:12:43 yomram Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/21 01:59:15 yomram Exp $
 #
 
-DISTNAME=	cvstrac-1.2.1
+DISTNAME=	cvstrac-2.0.0
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.cvstrac.org/
 
@@ -15,5 +15,5 @@ pre-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cvstrac ${PREFIX}/bin
 
-.include "../../databases/sqlite/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

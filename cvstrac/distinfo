@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/20 05:12:43 yomram Exp $
+$NetBSD: distinfo,v 1.2 2006/10/21 01:59:15 yomram Exp $
 
-SHA1 (cvstrac-1.2.1.tar.gz) = da346afc61fdacc2418cc5533c3667d6b58b707b
-RMD160 (cvstrac-1.2.1.tar.gz) = 880b12f35c95e17f3d3e9a567ba5159608129c84
-Size (cvstrac-1.2.1.tar.gz) = 221447 bytes
+SHA1 (cvstrac-2.0.0.tar.gz) = 139eb9d5cf7d1bab1151aec536401dcf65e36b97
+RMD160 (cvstrac-2.0.0.tar.gz) = 271ddcdb3381b3f9511cc8f8ce455aeadc3bf61c
+Size (cvstrac-2.0.0.tar.gz) = 283011 bytes
