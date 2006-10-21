@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2405 2006/10/19 18:12:32 kristerw Exp $
+# $Id: Makefile,v 1.2406 2006/10/21 11:40:54 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -51,7 +51,6 @@ SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
 SUBDIR+=	and
-SUBDIR+=	anope
 SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
@@ -714,7 +713,6 @@ SUBDIR+=	mppdec
 SUBDIR+=	mppenc
 SUBDIR+=	mpq-tools
 SUBDIR+=	msworkbench
-SUBDIR+=	mt-daapd
 SUBDIR+=	mtf
 SUBDIR+=	mtrack
 SUBDIR+=	muine
@@ -1212,7 +1210,6 @@ SUBDIR+=	quickie
 SUBDIR+=	quilt
 SUBDIR+=	quodlibet
 SUBDIR+=	r8s
-SUBDIR+=	rainbowcrack
 SUBDIR+=	rar3
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.d.Interix
@@ -1425,7 +1422,6 @@ SUBDIR+=	vche
 SUBDIR+=	videoproto
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
-SUBDIR+=	viewvc
 SUBDIR+=	virus
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
