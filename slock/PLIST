@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/22 14:40:21 kh-p Exp $
+bin/slock

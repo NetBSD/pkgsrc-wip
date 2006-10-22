@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/10/22 14:40:21 kh-p Exp $
+
+--- config.mk.orig	2006-10-22 16:33:48.000000000 +0200
++++ config.mk
+@@ -12,12 +12,12 @@ X11LIB = ${X11BASE}/lib
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC}
+-LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11
++LIBS = -L/usr/lib -lc -L${X11LIB} -lX11
+ 
+ # flags
+-CFLAGS+= -Os ${INCS} -DVERSION=\"${VERSION}\" -DHAVE_SHADOW_H
++CFLAGS+= -Os ${INCS} -DVERSION=\"${VERSION}\"
+ LDFLAGS+= ${LIBS}
+-#CFLAGS+= -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\" -DHAVE_SHADOW_H
++#CFLAGS+= -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
+ #LDFLAGS+= -g ${LIBS}
+ 
+ # On *BSD remove -DHAVE_SHADOW_H from CFLAGS
