@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/06/20 18:17:09 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/10/22 09:26:58 thomasklausner Exp $
 ${GUI}bin/linphone
 bin/linphonec
 bin/sipomatic
@@ -21,6 +21,7 @@ include/ortp/sessionset.h
 include/ortp/str_utils.h
 include/ortp/telephonyevents.h
 ${GUI}libexec/linphone_applet
+libexec/mediastream
 lib/bonobo/servers/GNOME_LinphoneApplet.server
 lib/liblinphone.la
 lib/libortp.la

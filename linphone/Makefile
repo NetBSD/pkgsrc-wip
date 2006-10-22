@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/20 18:17:09 gschwarz Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/22 09:26:58 thomasklausner Exp $
 
 DISTNAME=	linphone-1.3.5
 CATEGORIES=	net
@@ -8,11 +8,11 @@ MAINTAINER=     schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 
-BUILD_DEPENDS+= p5-XML-Parser-*:../../textproc/p5-XML-Parser
-
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake intltool perl pkg-config
+USE_DIRS+=	gnome2-1.6 xdg-1.4
 USE_LIBTOOL=	YES
+USE_GNU_READLINE=	yes # rl_hook_func_t et al.
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}
@@ -46,9 +46,10 @@ CONFIGURE_ARGS+=	--enable-ipv6
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
 
-.include "../../mk/oss.buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
-.include "../../wip/speex-devel/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../wip/speex-devel/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
