@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/10/18 13:58:14 kh-p Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/22 15:11:06 kh-p Exp $
 #
 
 DISTNAME=		wmii-3.1
-CATEGORIES=		wip wm
+PKGREVISION=		1
+CATEGORIES=		wm
 MASTER_SITES=		http://suckless.org/download/
 
 MAINTAINER=		pancake@phreaker.net
@@ -13,26 +14,26 @@ CONFLICTS+=		wmii-2.*
 
 NO_CONFIGURE=		yes
 
-LDFLAGS+=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
+LDFLAGS+=-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
-SUBST_CLASSES     += vars pfx
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path= 	cmd/wm/wmii rc/* cmd/wm/wmii.1
+SUBST_SED.path=		-e 's|CONFPREFIX|${PREFIX}/etc/|g'
+SUBST_SED.path+=	-e 's|9PREFIX|${PREFIX}|g'
 
-SUBST_STAGE.vars   = post-patch
-SUBST_FILES.vars   = cmd/wm/wmii rc/* cmd/wm/wmii.1
-SUBST_SED.vars     = -e 's|CONFPREFIX|${PREFIX}/etc/|g'
-SUBST_SED.vars    += -e 's|9PREFIX|${PREFIX}|g'
-
-SUBST_STAGE.pfx    = patch
-SUBST_FILES.pfx    = config.mk
-SUBST_SED.pfx      = -e s,/usr/local,${PREFIX},g
-SUBST_SED.pfx	  += -e 's|/usr/X11R6|$${X11BASE}|g'
-SUBST_SED.pfx     += -e 's|/usr/X11R6|$${X11BASE}|g'
-SUBST_SED.pfx     += -e 's|CFLAGS = -O2|CFLAGS+=|g'
-SUBST_SED.pfx     += -e 's|LDFLAGS =|LDFLAGS+=|g'
-SUBST_SED.pfx     += -e 's|share/||'
-SUBST_SED.pfx     += -e 's|-g||g'
-SUBST_SED.pfx     += -e 's|/9||g'
-SUBST_SED.pfx     += -e 's|cc|${CC}|g'
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-patch
+SUBST_FILES.prefix=	config.mk
+SUBST_SED.prefix=	-e s,/usr/local,${PREFIX},g
+SUBST_SED.prefix+=	-e 's|/usr/X11R6|$${X11BASE}|g'
+SUBST_SED.prefix+=	-e 's|/usr/X11R6|$${X11BASE}|g'
+SUBST_SED.prefix+=	-e 's|CFLAGS = -O2|CFLAGS+=|g'
+SUBST_SED.prefix+=	-e 's|LDFLAGS =|LDFLAGS+=|g'
+SUBST_SED.prefix+=	-e 's|share/||'
+SUBST_SED.prefix+=	-e 's|-g||g'
+SUBST_SED.prefix+=	-e 's|/9||g'
+SUBST_SED.prefix+=	-e 's|cc|${CC:Q}|g'
 
 # TODO:
 # This must probably be fixed. so no files were created in share/examples.
