@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2406 2006/10/21 11:40:54 adrian_p Exp $
+# $Id: Makefile,v 1.2407 2006/10/22 20:10:44 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -181,7 +181,6 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbvi
-SUBDIR+=	dclib
 SUBDIR+=	ddate
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
@@ -582,7 +581,6 @@ SUBDIR+=	libnettle
 SUBDIR+=	libneural
 SUBDIR+=	libnjb
 SUBDIR+=	libobby
-SUBDIR+=	libootool
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libp11
 SUBDIR+=	libpano12
@@ -1416,7 +1414,6 @@ SUBDIR+=	urlgfe
 SUBDIR+=	uschedule
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
-SUBDIR+=	valknut
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
 SUBDIR+=	videoproto

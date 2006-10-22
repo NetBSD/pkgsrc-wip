@@ -1,8 +1,0 @@
-# $NetBSD $
-
-.include "../../mk/bsd.prefs.mk"
-
-#VALKNUT_PKG_VERSION!=   ${DATE} +%Y%m%d
-# HEAD is currently too broken to use
-CVS_TAG=		dc-0_3_8
-VALKNUT_PKG_VERSION=	0.3.8
