@@ -1,0 +1,44 @@
+$NetBSD: patch-ag,v 1.1 2006/10/22 19:21:33 anthony_mallet Exp $
+--- configure~	2006-10-22 19:33:50.000000000 +0200
++++ configure	2006-10-22 19:33:54.000000000 +0200
+@@ -873,6 +873,8 @@
+                           /etc/omniORB.cfg)
+   --with-omniNames-logdir location of omniNames log directory (default
+                           /var/omninames)
++  --with-ipv6             compile IPV6 support if supported by the machine
++                          (default: yes)
+ 
+ Some influential environment variables:
+   CC          C compiler command
+@@ -12167,6 +12169,31 @@
+ OMNINAMES_LOGDIR=$omni_cv_omninames_logdir
+ 
+ 
++echo "$as_me:$LINENO: checking omniORB IPV6 support" >&5
++echo $ECHO_N "checking omniORB IPV6 support... $ECHO_C" >&6
++if test "${omni_cv_omni_ipv6+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++
++# Check whether --with-ipv6 or --without-ipv6 was given.
++if test "${with_ipv6+set}" = set; then
++  withval="$with_ipv6"
++  omni_cv_omni_ipv6=$withval
++else
++  omni_cv_omni_ipv6="yes"
++fi;
++
++fi
++echo "$as_me:$LINENO: result: $omni_cv_omni_ipv6" >&5
++echo "${ECHO_T}$omni_cv_omni_ipv6" >&6
++if test "$omni_cv_omni_ipv6" = "no"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define OMNI_DISABLE_IPV6
++_ACEOF
++
++fi
++
+ echo "$as_me:$LINENO: checking whether to build static libraries" >&5
+ echo $ECHO_N "checking whether to build static libraries... $ECHO_C" >&6
+ if test "${omni_cv_enable_static+set}" = set; then

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/30 11:59:06 anthony_mallet Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/22 19:21:32 anthony_mallet Exp $
 #
 
 PKGNAME=		omniORB-4.1.0.2
@@ -29,7 +29,9 @@ CONFIGURE_ARGS+= --with-omniORB-config=${OMNIORB_CONFIG:Q}
 #CONFIGURE_ARGS+= --with-omniNames-logdir=
 #CONFIGURE_ARGS+= --with-openssl
 
-PY_PATCHPLIST=  yes
+.include "options.mk"
+
+PY_PATCHPLIST=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/omniORB/

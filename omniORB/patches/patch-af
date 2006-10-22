@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/10/22 19:21:33 anthony_mallet Exp $
+--- include/omniORB4/acconfig.h.in~	2006-03-25 19:54:04.000000000 +0100
++++ include/omniORB4/acconfig.h.in	2006-10-22 19:33:06.000000000 +0200
+@@ -198,6 +198,9 @@
+ /* define if you want mutexes to be traced */
+ #undef OMNIORB_ENABLE_LOCK_TRACES
+ 
++/* omniORB IPV6 support */
++#undef OMNI_DISABLE_IPV6
++
+ /* define if the compiler supports covariant return types */
+ #undef OMNI_HAVE_COVARIANT_RETURNS
+ 
