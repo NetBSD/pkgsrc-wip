@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/06 14:02:50 kh-p Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/23 14:09:57 kh-p Exp $
 
-DISTNAME=		sic-0.3
+DISTNAME=		sic-0.4
 CATEGORIES=		chat
-MASTER_SITES=		http://www.shortest.de/download/
+MASTER_SITES=		http://suckless.org/download/
 
 
 MAINTAINER=		kh.p@no-log.org
-HOMEPAGE=		http://www.shortest.de/view/simple+irc+client
+HOMEPAGE=		http://irc.suckless.org/
 COMMENT=		Simple IRC client
 
 NO_CONFIGURE=		yes
