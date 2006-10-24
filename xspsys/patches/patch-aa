@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/10/24 05:02:04 kcf Exp $
+$NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -70,45 +70,9 @@
+@@ -68,47 +68,9 @@
+ #                                                                              #
+ ################################################################################
  
- ### hints for different system environment: see Readme.txt ###
- 
+-### hints for different system environment: see Readme.txt ###
+-
 -### system dependent definitions ###
 -
 -#CC=gcc
@@ -43,14 +45,14 @@ $NetBSD: patch-aa,v 1.2 2006/10/24 05:02:04 kcf Exp $
 -#						# must not defined as "/" only
 -
 -TARGETDIR=/usr2/js
-+TARGETDIR=.
++TARGETDIR=/usr/pkgsrc/www/xspsys/work/
  #						# user specific install base dir
 -MODULE=xspsys
 +MODULE=.
  #						# module (e.g. for cvs)
  PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
  ##PWD=.
-@@ -116,19 +80,19 @@ PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
+@@ -116,19 +78,19 @@ PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
  
  ### root dir of java core classes ###
  
@@ -74,7 +76,7 @@ $NetBSD: patch-aa,v 1.2 2006/10/24 05:02:04 kcf Exp $
  #						# config file
  #						# NOTE: must be same path as
  #						# $(INSTALLDIR)
-@@ -182,12 +146,12 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
+@@ -182,12 +144,12 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
  #						# C interface documentation dir
  CDOC_CORE_DIR=$(HOMEDIR)/doc_core
  #						# core documentation dir
@@ -90,12 +92,55 @@ $NetBSD: patch-aa,v 1.2 2006/10/24 05:02:04 kcf Exp $
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,7 +180,7 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+@@ -216,13 +178,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
 -TMPDIR=$(HOME)/tmpdir
-+TMPDIR=./tmpdir
++TMPDIR=$(TARGETDIR)/tmpdir
  #						# temporary directory
  TMPFILE=$(TMPDIR)/tmpmk_
  #						# prename of temporary files
+ 
+ #						# compiler dependent flags 
+-CFLAGSX=-g -O
++#CFLAGSX=-g -O
+ ##CFLAGSX=-O3 -funroll-loops
+ #						# C-flags Linux Red Hat 7.3,
+ #						# Red Hat 8.0, or Fedora FC3
+@@ -232,7 +194,7 @@ CFLAGSX=-g -O
+ #						# C-flags SUN, gcc, 32/64-bit
+ ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
+ #						# C-flags SUN, SUN-cc, 32-bit
+-##CFLAGSX=-mcpu=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024
++CFLAGSX=-march=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024
+ #						# C-flags NetBSD, pentium
+ 
+ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
+@@ -252,7 +214,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+ #						# -DVHASHTABNAM=0   1/0
+ 
+ #						# flags for cc-link option
+-CLDFLAGS=-lcrypt
++#CLDFLAGS=-lcrypt
+ #						# link-flags Linux Red Hat 7.3,
+ #						# Red Hat 8.0, or Fedora FC3
+ ##CLDFLAGS=-lcrypt -lxnet
+@@ -261,7 +223,7 @@ CLDFLAGS=-lcrypt
+ #						# link-flags SUN, gcc, 32/64-bit
+ ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
+ #						# link-flags SUN, cc, 32-bit
+-##CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
++CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
+ #						# link-flags NetBSD, pentium
+ 
+ XHTMLPP=`( [ -x $(ETCDIR)/xhtmlpp ] && echo $(ETCDIR)/xhtmlpp ) \
+@@ -319,7 +281,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
+ 	    export OUTP MSG ; \
+ 	fi ; \
+ 	test -f $< && \
+-	echo " preprocessing `basename $< | sed -e 's/\..*//'`.hxsp -> `basename $< | sed -e 's/\..*//'`.h $$MSG"; \
++	echo " preprocessing ${.IMPSRC} -> ${.TARGET} $$MSG"; \
+ 	$(XHTMLPP) \
+ 		-d1 '<%' -d2 '%>' \
+ 		-c $(BIT7) -O -zz $$OUTP \
