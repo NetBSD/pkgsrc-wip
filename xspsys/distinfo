@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/10/23 06:07:01 kcf Exp $
+$NetBSD: distinfo,v 1.3 2006/10/24 05:02:04 kcf Exp $
 
 SHA1 (xspsys_051219.tar) = 0b91a19b41d8049301dd058ee3675cceb2cf386d
 RMD160 (xspsys_051219.tar) = 58020659bb4f04fbc3b1adfc9f462fc0d7b30a49
 Size (xspsys_051219.tar) = 2355200 bytes
-SHA1 (patch-aa) = 8acf61676b067c5138b1e865f60bc6032d33aa1f
+SHA1 (patch-aa) = 398a6857cec233777464ed0cf20efc54d46946a1
