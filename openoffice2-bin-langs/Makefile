@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2006/10/18 14:20:19 ondratu Exp $
-
+# $NetBSD: Makefile,v 1.4 2006/10/24 16:17:52 ondratu Exp $
+DISTNAME=		openoffice2-bin-langs-${OO_RELEASE}
 CATEGORIES=	meta-pkgs misc
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc@blackmouse.biz
-COMMENT=	Common package for openoffice lang packages
+COMMENT=		Common package for openoffice lang packages
 
 OO_RELEASE=		2.0.4
 
@@ -42,6 +42,7 @@ DEPENDS+=	openoffice2-bin-ts-${OO_RELEASE}:../../wip/openoffice2-bin-ts
 DEPENDS+=	openoffice2-bin-xh-${OO_RELEASE}:../../wip/openoffice2-bin-xh
 DEPENDS+=	openoffice2-bin-zu-${OO_RELEASE}:../../wip/openoffice2-bin-zu
 
+EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
