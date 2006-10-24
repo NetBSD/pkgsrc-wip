@@ -1,5 +1,6 @@
 # C News pkg issues
 
+- Work out how to deal with statfs/statvfs
 - 'make regression' fails on union mounts. Needs WRKOBJDIR set
 - use USE_PKGINSTALL=YES for /var/news
 - Sync patch list with dinoex.org
