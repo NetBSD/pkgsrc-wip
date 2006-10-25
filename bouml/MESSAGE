@@ -1,0 +1,7 @@
+=============================================================================
+Bouml shares the directories pkg/share/icons/hicolor/16x16, ../32x32,
+../48x48, and ../64x64 with the package "pkgsrc/graphics/hicolor-icon-theme".
+Updates to bouml will not update the icon cache
+            "pkg/share/icons/hicolor/icon-theme.cache"
+for the shared direcories.
+=============================================================================
