@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2006/10/25 02:08:56 rillig Exp $
+
+For the upstream package ...
+
+--- macros/am_path_gcj.m4.orig	2005-05-24 14:47:43.000000000 +0200
++++ macros/am_path_gcj.m4	2006-10-25 03:42:56.000000000 +0200
+@@ -106,13 +106,13 @@ public class Test {
+ EOF
+ 	GCJ_JAR=`gcj -C Test.java && gij Test`
+ 	rm Test.java Test.class
+-	if test x$GCJ_JAR == x ; then
++	if test "x$GCJ_JAR" = x ; then
+       GCJ_JAR=`(test -d /usr/share/local/java && find /usr/local/share/java -name libgcj-?.?.?.jar) || (test -d /usr/share/java && find /usr/share/java -name libgcj-?.?.?.jar)`
+-	  if test x$GCJ_JAR == x ; then
++	  if test "x$GCJ_JAR" = x ; then
+ 	 	GCJ_JAR=`locate libgcj | grep libgcj.*\.jar`	
+       fi
+     fi
+-     if test x$GCJ_JAR != x ; then
++     if test "x$GCJ_JAR" != x ; then
+         GCJ_CLASSPATH="${GCJ_JAR}:${CLASSPATH}"
+      else
+ 	   echo "***"

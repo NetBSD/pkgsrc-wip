@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2006/05/31 21:37:32 poppnk Exp $
+$NetBSD: distinfo,v 1.4 2006/10/25 02:08:56 rillig Exp $
 
 SHA1 (glib-java-0.2.5.tar.gz) = 6f8fc9015ffe6d8b94afa7b67d34a9261a6224f2
 RMD160 (glib-java-0.2.5.tar.gz) = 5c0d788600e6b743395139b3c3abe9584e8530eb
 Size (glib-java-0.2.5.tar.gz) = 330207 bytes
+SHA1 (patch-aa) = a761fc9f67c2679633ab7f96784f31388b267d4c
+SHA1 (patch-ab) = 717ac08b8c39fd87b769757c19d81cd476a2b608
