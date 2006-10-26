@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2408 2006/10/24 22:30:19 ghen Exp $
+# $Id: Makefile,v 1.2409 2006/10/26 22:21:47 dillo Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1258,6 +1258,7 @@ SUBDIR+=	scr2png
 SUBDIR+=	scribus-devel
 SUBDIR+=	scrnsaverproto
 SUBDIR+=	scsh-install-lib
+SUBDIR+=	scummvm-nightly
 SUBDIR+=	scx
 SUBDIR+=	sdd
 SUBDIR+=	send-pr
