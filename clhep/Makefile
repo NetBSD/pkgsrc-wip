@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 13:55:02 hugor Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/26 20:47:31 hugor Exp $
 #
 
 DISTNAME=	clhep-1.9.2.3
@@ -11,17 +11,17 @@ MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
 
-EXTRACT_DIR=	${WRKDIR}/1.9.2.3/CLHEP
+TMPEXT_DIR=	${WRKDIR}/1.9.2.3/CLHEP
 AUTOCONF_REQD=	2.59
 USE_TOOLS+=	aclocal autoconf automake gmake perl
 
 GNU_CONFIGURE=	yes
-CONFIGURE_SCRIPT= ${EXTRACT_DIR}/configure
+CONFIGURE_SCRIPT= ${TMPEXT_DIR}/configure
 USE_LANGUAGES+=	c c++
 
 pre-configure:
 	${MKDIR} ${WRKSRC};	\
-	cd ${EXTRACT_DIR};	\
+	cd ${TMPEXT_DIR};	\
 	autoconf;	\
 	aclocal;	\
 	automake -a --foreign -i
