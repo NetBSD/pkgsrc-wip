@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/17 07:23:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/26 23:27:45 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-22.0.50
@@ -61,8 +61,8 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .endif
 
 # build PATH in the dumped emacs is not a problem
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs
-CHECK_WRKREF_SKIP+=	${PREFIX}/bin/emacs-${PKGVERSION}
+CHECK_WRKREF_SKIP+=	bin/emacs
+CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION}
 
 FILESDIR=	${.CURDIR}/../../editors/emacs/files
 
