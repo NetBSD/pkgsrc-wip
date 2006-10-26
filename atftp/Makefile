@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/26 11:18:17 poppnk Exp $
 #
 
 DISTNAME=		atftp-0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.mamalinux.com/pub/atftp/
+MASTER_SITES=		ftp://ftp.mamalinux.com/pub/atftp/ \
+			http://osmirrors.cerias.purdue.edu/pub/gentoo/distfiles/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://freshmeat.net/projects/atftp/
