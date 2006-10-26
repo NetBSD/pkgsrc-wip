@@ -1,0 +1,139 @@
+$NetBSD: patch-aj,v 1.1 2006/10/26 19:33:30 rillig Exp $
+
+--- eciconftxt.sh.orig	2003-02-20 22:07:24.000000000 +0100
++++ eciconftxt.sh	2006-10-26 21:28:55.000000000 +0200
+@@ -20,7 +20,7 @@ PPPD_DIR="/etc/ppp"
+ VERSION=""
+ # </CONFIG>
+ 
+-if [ "$1" == "--version" -o "$1" == "-v" ]; then
++if [ "$1" = "--version" -o "$1" = "-v" ]; then
+ 	echo "$VERSION"
+ 	exit 0
+ fi
+@@ -261,7 +261,7 @@ case "$1" in
+ 					echo "* password unchanged"
+ 				fi
+             done
+-			if [ "$password1" == "$prev_pppd_passwd" ]; then
++			if [ "$password1" = "$prev_pppd_passwd" ]; then
+ 				password2="$password1"
+ 			else
+ 	            password2=""
+@@ -272,7 +272,7 @@ case "$1" in
+ 	            done
+ 			fi
+             stty echo
+-            if [ "$password1" == "$password2" ]; then
++            if [ "$password1" = "$password2" ]; then
+                 pwdmatch=1
+             else
+                 echo -e "** passwords don't match, try again\n"
+@@ -293,7 +293,7 @@ case "$1" in
+ 		echo
+ 
+ 		echo -n "DNS1 currently "
+-		if [ "$dns1" == "?" ]; then
++		if [ "$dns1" = "?" ]; then
+ 			echo "unset"
+ 			TMP="skip"
+ 		else
+@@ -305,7 +305,7 @@ case "$1" in
+             echo -n "Type in an IP for DNS1 (press ENTER to $TMP): "
+             read i_dns1
+             if [ -z "$i_dns1" ]; then
+-				if [ "$dns1" == "?" ]; then
++				if [ "$dns1" = "?" ]; then
+ 	                dns1=""
+ 				else
+ 					echo "* DNS1 unchanged"
+@@ -328,7 +328,7 @@ case "$1" in
+ 		echo
+         i_dns2=""
+ 		echo -n "DNS2 currently "
+-		if [ "$dns2" == "?" ]; then
++		if [ "$dns2" = "?" ]; then
+ 			echo "unset"
+ 			TMP="skip"
+ 		else
+@@ -339,7 +339,7 @@ case "$1" in
+             echo -n "Type in an IP for DNS2 (press ENTER to $TMP): "
+             read i_dns2
+             if [ -z "$i_dns2" ]; then
+-				if [ "$dns2" == "?" ]; then
++				if [ "$dns2" = "?" ]; then
+ 	                dns2=""
+ 				else
+ 					echo "* DNS2 unchanged"
+@@ -439,7 +439,7 @@ case "$1" in
+ 
+ 		echo
+ 		echo -n "VID1 currently "
+-		if [ "$vid1" == "????" ]; then
++		if [ "$vid1" = "????" ]; then
+ 			echo "unset"
+ 			TMP=""
+ 		else
+@@ -470,7 +470,7 @@ case "$1" in
+ 
+ 		echo
+ 		echo -n "PID1 currently "
+-		if [ "$pid1" == "????" ]; then
++		if [ "$pid1" = "????" ]; then
+ 			echo "unset"
+ 			TMP=""
+ 		else
+@@ -501,7 +501,7 @@ case "$1" in
+ 
+ 		echo
+ 		echo -n "VID2 currently "
+-		if [ "$vid2" == "????" ]; then
++		if [ "$vid2" = "????" ]; then
+ 			echo "unset"
+ 			TMP=""
+ 		else
+@@ -532,7 +532,7 @@ case "$1" in
+ 
+ 		echo
+ 		echo -n "PID2 currently "
+-		if [ "$pid2" == "????" ]; then
++		if [ "$pid2" = "????" ]; then
+ 			echo "unset"
+ 			TMP=""
+ 		else
+@@ -586,7 +586,7 @@ case "$1" in
+         echo
+ 		if [ -n "$prev_use_dhcp" ]; then
+ 			echo -n "In current config, DHCP is "
+-			if [ "$prev_use_dhcp" == "yes" ]; then
++			if [ "$prev_use_dhcp" = "yes" ]; then
+ 				echo "enabled"
+ 			else
+ 				echo "disabled"
+@@ -622,7 +622,7 @@ case "$1" in
+         	echo
+ 			if [ -n "$prev_use_staticip" ]; then
+ 				echo -n "In current config, static IP is "
+-				if [ "$prev_use_staticip" == "yes" ]; then
++				if [ "$prev_use_staticip" = "yes" ]; then
+ 					echo "used"
+ 					TMP=" or press ENTER to keep current setting"
+ 				else
+@@ -655,7 +655,7 @@ case "$1" in
+ 				esac
+         	done
+ 
+-			if [ "$use_staticip" == "yes" ]; then
++			if [ "$use_staticip" = "yes" ]; then
+ 				if [ -n "$prev_staticip" ]; then
+ 					TMP=" (press ENTER to use $prev_staticip)"
+ 				else
+@@ -737,7 +737,7 @@ case "$1" in
+ 		echo "  + PPP mode      : $mode"
+ 		echo "  + use DHCP      : $use_dhcp"
+ 		echo "  + use static IP : $use_dhcp"
+-		if [ "$use_staticip" == "yes" ]; then
++		if [ "$use_staticip" = "yes" ]; then
+ 			echo "    static IP     : $staticip"
+ 			echo "      gateway     : $gateway"
+ 		fi

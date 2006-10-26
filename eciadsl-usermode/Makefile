@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/26 19:33:30 rillig Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -8,19 +8,20 @@ MASTER_SITES=		http://benoit.is-a-geek.net/bsd-tmp/
 MAINTAINER=		imil@gcu.info
 COMMENT=		Driver for Globespan chipset-based ADSL USB modems
 
-BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 BUILD_DEPENDS+=		userppp>=001107:../../net/userppp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_TOOLS+=		gmake
+CHECK_PORTABILITY_SKIP=	configure.sav
+
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		eci-load1 eci-load2 pppoeci
 
 pre-build:
-			cd ${WRKSRC} && ${GMAKE} clean # archive's dirty
+	cd ${WRKSRC} && gmake clean # archive's dirty
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/ppp.conf ${PKG_SYSCONFDIR}/ppp/ppp.conf
