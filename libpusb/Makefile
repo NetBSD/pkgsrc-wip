@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/26 19:26:09 rillig Exp $
 #
 
 DISTNAME=		libpusb
@@ -11,14 +11,15 @@ COMMENT=		Simple and portable USB development interface
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*
 
 WRKSRC=			${WRKDIR}/libpusb/src
+MAKE_ENV+=		${BSD_MAKE_ENV}
 
 INSTALL_TARGET=		install includes
 
 pre-build:
-			@cd ${WRKSRC} && ${MAKE} clean # archive's dirty
+	cd ${WRKSRC} && ${MAKE} clean # archive's dirty
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Setting up hardcoded path.
