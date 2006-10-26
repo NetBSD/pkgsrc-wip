@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/12 04:48:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/26 23:27:25 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -101,6 +101,7 @@ share/emacs/${PKGVERSION}/etc/CENSORSHIP
 share/emacs/${PKGVERSION}/etc/COOKIES
 share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
+share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
@@ -2367,6 +2368,8 @@ share/emacs/${PKGVERSION}/lisp/shell.el.gz
 share/emacs/${PKGVERSION}/lisp/shell.elc
 share/emacs/${PKGVERSION}/lisp/simple.el.gz
 share/emacs/${PKGVERSION}/lisp/simple.elc
+share/emacs/${PKGVERSION}/lisp/site-init.el.gz
+share/emacs/${PKGVERSION}/lisp/site-init.elc
 share/emacs/${PKGVERSION}/lisp/skeleton.el.gz
 share/emacs/${PKGVERSION}/lisp/skeleton.elc
 share/emacs/${PKGVERSION}/lisp/smerge-mode.el.gz
@@ -2579,8 +2582,6 @@ share/emacs/${PKGVERSION}/lisp/url/url-history.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-history.elc
 share/emacs/${PKGVERSION}/lisp/url/url-http.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-http.elc
-share/emacs/${PKGVERSION}/lisp/url/url-https.el.gz
-share/emacs/${PKGVERSION}/lisp/url/url-https.elc
 share/emacs/${PKGVERSION}/lisp/url/url-imap.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-imap.elc
 share/emacs/${PKGVERSION}/lisp/url/url-irc.el.gz
