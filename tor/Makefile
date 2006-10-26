@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/09 00:57:31 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/26 14:46:22 tvierling Exp $
 #
 
 DISTNAME=		tor-0.1.2.2-alpha
@@ -35,6 +35,8 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
+
+CHECK_PORTABILITY_SKIP+=contrib/*
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=		-c99
