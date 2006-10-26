@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
+$NetBSD: patch-aa,v 1.4 2006/10/26 03:44:28 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -68,47 +68,9 @@
+@@ -68,67 +68,29 @@
  #                                                                              #
  ################################################################################
  
@@ -45,14 +45,15 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
 -#						# must not defined as "/" only
 -
 -TARGETDIR=/usr2/js
-+TARGETDIR=/usr/pkgsrc/www/xspsys/work/
++TARGETDIR=/usr/pkgsrc/www/xspsys/work
  #						# user specific install base dir
 -MODULE=xspsys
 +MODULE=.
  #						# module (e.g. for cvs)
- PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
+-PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
++PWD=$(TARGETDIR)
  ##PWD=.
-@@ -116,19 +78,19 @@ PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
+ #                                               # home directory
  
  ### root dir of java core classes ###
  
@@ -72,27 +73,36 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
  ### XSPD/XSP runtime config file ###
  
 -CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
-+CONFIGFILE=$(TARGETDIR)/$(SUBDIR)/xspd.conf
++CONFIGFILE=$(TARGETDIR)/xspd.conf
  #						# config file
  #						# NOTE: must be same path as
  #						# $(INSTALLDIR)
-@@ -182,12 +144,12 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
+@@ -166,8 +128,6 @@ IDENT=0
+ 
+ HOMEDIR=$(PWD)
+ #						# user specific home directory
+-UTILDIR=/usr2/util
+-#						# user specific utility dir
+ SRCDIR=$(HOMEDIR)/src
+ #						# source directory
+ OBJDIR=$(HOMEDIR)/obj
+@@ -182,12 +142,12 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
  #						# C interface documentation dir
  CDOC_CORE_DIR=$(HOMEDIR)/doc_core
  #						# core documentation dir
 -INSTALLDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+INSTALLDIR=$(TARGETDIR)/$(SUBDIR)
++INSTALLDIR=$(TARGETDIR)
  #						# installation directory
  
 -XSPDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+XSPDIR=$(TARGETDIR)/$(SUBDIR)
++XSPDIR=$(TARGETDIR)
  #						# XSP installation directory
 -APPUTILDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+APPUTILDIR=$(TARGETDIR)/$(SUBDIR)
++APPUTILDIR=$(TARGETDIR)
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,13 +178,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+@@ -216,13 +176,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
@@ -108,7 +118,7 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
  ##CFLAGSX=-O3 -funroll-loops
  #						# C-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
-@@ -232,7 +194,7 @@ CFLAGSX=-g -O
+@@ -232,7 +192,7 @@ CFLAGSX=-g -O
  #						# C-flags SUN, gcc, 32/64-bit
  ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
  #						# C-flags SUN, SUN-cc, 32-bit
@@ -117,7 +127,7 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
  #						# C-flags NetBSD, pentium
  
  CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
-@@ -252,7 +214,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+@@ -252,7 +212,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
  #						# -DVHASHTABNAM=0   1/0
  
  #						# flags for cc-link option
@@ -126,7 +136,7 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
  #						# link-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
  ##CLDFLAGS=-lcrypt -lxnet
-@@ -261,7 +223,7 @@ CLDFLAGS=-lcrypt
+@@ -261,11 +221,10 @@ CLDFLAGS=-lcrypt
  #						# link-flags SUN, gcc, 32/64-bit
  ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
  #						# link-flags SUN, cc, 32-bit
@@ -134,8 +144,13 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
 +CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
  #						# link-flags NetBSD, pentium
  
- XHTMLPP=`( [ -x $(ETCDIR)/xhtmlpp ] && echo $(ETCDIR)/xhtmlpp ) \
-@@ -319,7 +281,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
+-XHTMLPP=`( [ -x $(ETCDIR)/xhtmlpp ] && echo $(ETCDIR)/xhtmlpp ) \
+-	|| ( [ -x $(UTILDIR)/xhtmlpp ] && echo $(UTILDIR)/xhtmlpp )`
++XHTMLPP=$(ETCDIR)/xhtmlpp
+ #						# HTML preprocessor
+ 
+ #BIT7=-bit7
+@@ -319,7 +278,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
  	    export OUTP MSG ; \
  	fi ; \
  	test -f $< && \
@@ -144,3 +159,11 @@ $NetBSD: patch-aa,v 1.3 2006/10/24 20:32:57 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
+@@ -1183,6 +1142,7 @@ $(INCLADMXSP)/admchart.h: $(INCLXSP)/htt
+ 	MSG="(using commbuf)" ; \
+ 	[ -f $$SRCFIL ] && \
+ 	echo " preprocessing $$SRCFIL -> $$DSTFIL  $$MSG"; \
++	echo " $$XHTMLPP   $$DSTFIL"; \
+ 	$(XHTMLPP) \
+ 		-d1 '<%' -d2 '%>' \
+ 		-c $(BIT7) -O -zz -cb ocbp \
