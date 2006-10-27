@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+
+--- tac_plus.c.orig	2006-10-22 11:34:23.000000000 +0200
++++ tac_plus.c	2006-10-22 11:35:04.000000000 +0200
+@@ -350,11 +350,11 @@
+ 
+ #ifndef REAPCHILD
+ 
+-#ifdef LINUX
++#if defined(LINUX) || defined(__sgi)
+ 	if (setpgrp() == -1)
+-#else /* LINUX */
++#else /* LINUX or IRIX */
+ 	if (setpgrp(0, getpid()) == -1)
+-#endif /* LINUX */
++#endif /* LINUX or IRIX */
+ 	    report(LOG_ERR, "Can't change process group");
+ 	
+ 	c = open("/dev/tty", O_RDWR);

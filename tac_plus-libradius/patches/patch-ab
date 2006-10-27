@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+
+--- tac_plus.h.orig	2002-01-23 11:52:06.000000000 +0100
++++ tac_plus.h	2006-10-21 22:40:29.000000000 +0200
+@@ -80,6 +80,7 @@
+ #define STDLIB_MALLOC
+ #define NO_PWAGE
+ #define CONST_SYSERRLIST
++#define HAVE_SYSERR_PROTO
+ #define VOIDSIG
+ #endif
+ 
+@@ -695,12 +696,15 @@
+ extern void set_expiration_status();
+ 
+ /* miscellaneous */
++#ifndef HAVE_SYSERR_PROTO
+ #ifdef CONST_SYSERRLIST
+ extern const char *const sys_errlist[];
+ #else
++#ifndef __APPLE__
+ extern char *sys_errlist[];
+ #endif
+-extern int errno;
++#endif
++#endif
+ extern int sendauth_fn();
+ extern int sendpass_fn();
+ extern int enable_fn();

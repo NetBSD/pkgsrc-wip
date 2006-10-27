@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+
+--- utils.c.orig	2006-10-21 22:47:05.000000000 +0200
++++ utils.c	2006-10-21 22:48:25.000000000 +0200
+@@ -25,7 +25,9 @@
+ 
+ #else /* !STDLIB_MALLOC */
+ 
++#ifdef HAVE_MALLOC_H
+ #include <malloc.h>
++#endif
+ 
+ #endif /* STDLIB_MALLOC */
+ 

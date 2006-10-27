@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+
+--- do_acct.c.orig	2002-01-23 11:52:05.000000000 +0100
++++ do_acct.c	2006-10-22 11:24:22.000000000 +0200
+@@ -19,6 +19,10 @@
+ 
+ #include "tac_plus.h"
+ 
++#if defined(__DragonFly__) && !defined(O_SYNC)
++#define O_SYNC O_FSYNC
++#endif
++
+ static int acctfd = 0;
+ 
+ /* Make a acct entry into the accounting file for accounting. 
+@@ -152,7 +156,7 @@
+ 	strcpy(entry.ut_name, name);
+     else bcopy(name, entry.ut_name, sizeof entry.ut_name);
+ 
+-#ifndef SOLARIS
++#if !defined(SOLARIS) && !defined(__sgi)
+     if (strlen(host) < sizeof entry.ut_host)
+ 	strcpy(entry.ut_host, host);
+     else bcopy(host, entry.ut_host, sizeof entry.ut_host);
