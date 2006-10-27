@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:14 ykomatsu Exp $
-# $Id: Makefile,v 1.6 2006/05/19 16:51:14 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/27 17:51:40 shattered Exp $
+# $Id: Makefile,v 1.7 2006/10/27 17:51:40 shattered Exp $
 #
 
 DISTNAME=		bison-1.35
@@ -12,15 +12,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/bison/bison.html
 COMMENT=		Package for old version of GNU yacc(1) replacement
 
-DEPENDS+=		m4>=1.4:../../devel/m4
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	 --program-suffix=-1.35
-USE_TOOLS+=		msgfmt
-
-M4=			${LOCALBASE}/bin/gm4
+CONFIGURE_ARGS+=	--program-suffix=-1.35
+USE_TOOLS+=		gm4:run msgfmt
 
 INFO_FILES=		# PLIST
 
