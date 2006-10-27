@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/16 12:31:12 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/27 20:54:28 shattered Exp $
 #
 
 DISTNAME=		gnokii-0.6.13
@@ -19,10 +19,11 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt xgettext
+USE_BUILTIN.gettext=	no
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
