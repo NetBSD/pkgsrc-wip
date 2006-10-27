@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2410 2006/10/27 18:44:43 kristerw Exp $
+# $Id: Makefile,v 1.2411 2006/10/27 18:46:33 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -166,6 +166,7 @@ SUBDIR+=	crafty
 SUBDIR+=	cream
 SUBDIR+=	cryptcat
 SUBDIR+=	csoap
+SUBDIR+=	csstidy
 SUBDIR+=	csup
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
@@ -1288,6 +1289,7 @@ SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slate
 SUBDIR+=	sleuthkit
 SUBDIR+=	slocate
+SUBDIR+=	slock
 SUBDIR+=	slony1
 SUBDIR+=	slrn-pl
 SUBDIR+=	slune
@@ -1518,6 +1520,7 @@ SUBDIR+=	xset
 SUBDIR+=	xsm
 SUBDIR+=	xspd
 SUBDIR+=	xspread
+SUBDIR+=	xspsys
 SUBDIR+=	xtrace
 SUBDIR+=	xtrans
 SUBDIR+=	xxdiff
