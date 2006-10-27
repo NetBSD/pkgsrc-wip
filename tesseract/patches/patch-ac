@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+
+--- ccutil/platform.h.orig	2006-06-17 00:17:05.000000000 +0200
++++ ccutil/platform.h
+@@ -4,7 +4,7 @@
+ #define SIGNED
+ #else
+ #define __UNIX__
+-#include <linux/limits.h>
++#include <limits.h>
+ #define MAX_PATH PATH_MAX
+ #define SIGNED signed
+ #endif

@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+
+--- cutil/tordvars.h.orig	2006-06-17 00:17:07.000000000 +0200
++++ cutil/tordvars.h
+@@ -45,7 +45,9 @@ extern int similarity_enable;    /* Swit
+ extern int similarity_debug;     /* Level of debug output */
+ extern int write_raw_output;     /* Text before context */
+ extern int write_output;         /* Text file output */
++extern "C" {
+ extern int display_ratings;      /* Show the ratings */
++}
+ extern int show_bold;            /* Use bold text */
+ extern int display_text;         /* Show word text */
+ extern int display_blocks;       /* Show word as boxes */

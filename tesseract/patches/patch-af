@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+
+--- cutil/structures.h.orig	2006-06-17 00:17:07.000000000 +0200
++++ cutil/structures.h
+@@ -82,7 +82,7 @@ type *new()                             
+ 			newblock=(char *)memalloc_p(sizeof(type)*blocksize+4);              \
+ 			if (newblock!=NULL)                                                 \
+ 			{                                                                   \
+-				newblock=(char *)(((int)newblock +4) & (-8));                    \
++				newblock=(char *)(((long)newblock +4) & (-8));                    \
+ 			}                                                                   \
+ 			element=(type *)newblock;                                           \
+ 		}                                                                      \
+@@ -142,7 +142,7 @@ type *name()											/*returns a new t
+ 			newblock=(char *)memalloc_p(sizeof(type)*blocksize+4);\
+ 			if (newblock!=NULL)\
+ 			{\
+-				newblock=(char *)(((int)newblock +4) & (-8));\
++				newblock=(char *)(((long)newblock +4) & (-8));\
+ 			}\
+ 			element=(type *)newblock;\
+ 		}\

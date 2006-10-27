@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+
+--- ccutil/memry.cpp.orig	2006-06-17 00:17:05.000000000 +0200
++++ ccutil/memry.cpp
+@@ -124,7 +124,7 @@ DLLSYM char *alloc_string(             /
+ DLLSYM void free_string(              //free a string
+                         char *string  //string to free
+                        ) {
+-  if (((int) string & 3) == 1) { //one over word
++  if (((long) string & 3) == 1) { //one over word
+     string--;                    //get id marker
+     if (*string == 0) {
+       free_mem(string);  //generally free it

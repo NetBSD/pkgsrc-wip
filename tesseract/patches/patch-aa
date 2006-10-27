@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+
+--- ccutil/memblk.cpp.orig	2006-06-17 00:17:05.000000000 +0200
++++ ccutil/memblk.cpp
+@@ -442,7 +442,7 @@ void MEM_ALLOCATOR::check(              
+         || chunk + chunksize - block->blockstart <= 0 || block->blockend - (chunk + chunksize) < 0)
+         BADMEMCHUNKS.error ("check_mem", ABORT,
+           "Block=%x, Prev chunk=%x, Chunk=%x, Size=%x",
+-          (int) block, (int) prevchunk, (int) chunk,
++          (long) block, (long) prevchunk, (long) chunk,
+           (int) chunk->size);
+ 
+       else if (chunk->size < 0) {

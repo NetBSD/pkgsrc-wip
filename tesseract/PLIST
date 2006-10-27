@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+bin/tesseract
+libexec/tessdata/DangAmbigs
+libexec/tessdata/blackText.params
+libexec/tessdata/configs/api_config
+libexec/tessdata/configs/api_resaljet
+libexec/tessdata/configs/box.train
+libexec/tessdata/configs/inter
+libexec/tessdata/configs/oldapi_config
+libexec/tessdata/configs/oldbox.train
+libexec/tessdata/configs/var_api_config
+libexec/tessdata/configs/var_box.train
+libexec/tessdata/configs/variable_config
+libexec/tessdata/confsets
+libexec/tessdata/fmtable.cls
+libexec/tessdata/fnetwts
+libexec/tessdata/freq-dawg
+libexec/tessdata/inttemp
+libexec/tessdata/netwts
+libexec/tessdata/newdiff.asccodes
+libexec/tessdata/normproto
+libexec/tessdata/pffmtable
+libexec/tessdata/soptable.cls
+libexec/tessdata/tessconfigs/batch
+libexec/tessdata/tessconfigs/matdemo
+libexec/tessdata/tessconfigs/old_batch
+libexec/tessdata/tessconfigs/segdemo
+libexec/tessdata/tessconfigs/var_batch
+libexec/tessdata/test_matrix
+libexec/tessdata/user-words
+libexec/tessdata/word-dawg
+libexec/tesseract
+share/doc/tesseract/README
+@dirrm share/doc/tesseract
+@dirrm libexec/tessdata/tessconfigs
+@dirrm libexec/tessdata/configs
+@dirrm libexec/tessdata
