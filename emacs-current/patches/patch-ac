@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/10/27 18:04:26 thomasklausner Exp $
+
+--- src/ralloc.c.orig	2006-02-06 15:23:21.000000000 +0000
++++ src/ralloc.c
+@@ -330,7 +330,7 @@ static void
+ relinquish ()
+ {
+   register heap_ptr h;
+-  int excess = 0;
++  long excess = 0;
+ 
+   /* Add the amount of space beyond break_value
+      in all heaps which have extend beyond break_value at all.  */
