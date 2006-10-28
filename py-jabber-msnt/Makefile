@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/08/16 15:35:26 schnoebe Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/28 05:31:25 schnoebe Exp $
 
-DISTNAME=		pymsnt-0.11.2-dev2
+DISTNAME=		pymsnt-0.11.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 # MASTER_SITES=		http://msn-transport.jabberstudio.org/tarballs/
@@ -17,10 +17,9 @@ COMMENT=		Transport connecting Jabber to the MSN network
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-twisted>=2.1.0:../../wip/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.1.0:../../wip/py-twisted-core
 DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.1.0:../../wip/py-twisted-words
 DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
-DEPENDS+=	${PYPKGPREFIX}-twisted-xish>=0.1.0:../../wip/py-twisted-xish
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 
 # Fifth paragraph - all build definitions that describe things used by

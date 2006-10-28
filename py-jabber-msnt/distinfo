@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2006/08/16 15:35:26 schnoebe Exp $
+$NetBSD: distinfo,v 1.8 2006/10/28 05:31:25 schnoebe Exp $
 
-SHA1 (pymsnt-0.11.2-dev2.tar.gz) = f61882b1165f00f1a45a0695c860d7af58792678
-RMD160 (pymsnt-0.11.2-dev2.tar.gz) = 1d9b7b5d1eab518bf1c352b12ae1a9fe0dd5d8ab
-Size (pymsnt-0.11.2-dev2.tar.gz) = 313504 bytes
+SHA1 (pymsnt-0.11.2.tar.gz) = 631743956339435e05d69548142e390fd95263ae
+RMD160 (pymsnt-0.11.2.tar.gz) = f3b952832400a67407c9c9e713953f7bcae5fbfa
+Size (pymsnt-0.11.2.tar.gz) = 311947 bytes
 SHA1 (patch-aa) = ad76738e75f2527d421a12d852c7c5775f6ccea9
 SHA1 (patch-ad) = 5b510b0caba7519dbc344fa9561a51ff97de2963
 SHA1 (patch-ae) = 3e5247a0ad0e19a1568b9632243ec7438170da7f
