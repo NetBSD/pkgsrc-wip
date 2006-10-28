@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/28 17:25:21 shattered Exp $
 #
 
 DISTNAME=		zvbi-0.2.16
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zapping/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://zapping.sourceforge.net/
+HOMEPAGE=		http://zapping.sourceforge.net/Zapping/
 COMMENT=		Library for accessing raw VBI sampling devices
 
 USE_PKGLOCALEDIR=	yes

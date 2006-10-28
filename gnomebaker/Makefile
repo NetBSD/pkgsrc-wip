@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/22 09:53:13 leuzi Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/28 17:25:20 shattered Exp $
 
 DISTNAME=	gnomebaker-0.5.1
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomebaker/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	leuzi@trash.net
-HOMEPAGE=	http://gnomebaker.sourceforge.net/
+HOMEPAGE=	http://gnomebaker.sourceforge.net/v2/
 COMMENT=	GTK2/GNOME CD/DVD burning application
 
 USE_TOOLS+=             pkg-config msgfmt intltool

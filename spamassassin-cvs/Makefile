@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/14 01:28:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/28 17:25:21 shattered Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.spamassassin.org/devel/		\
 
 #MAINTAINER=	heinz@NetBSD.org # maintainer of pkgsrc in base
 MAINTAINER=	tom@replic8.net
-HOMEPAGE=	http://www.spamassassin.org/
+HOMEPAGE=	http://spamassassin.apache.org/
 COMMENT=	Mail filter to identify spam (CVS snapshot)
 
 DEPENDS+=	p5-Net-DNS>=0.29:../../net/p5-Net-DNS

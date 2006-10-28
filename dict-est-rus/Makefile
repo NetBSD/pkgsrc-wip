@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/01 23:38:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/28 17:25:20 shattered Exp $
 
 DISTNAME=	er-dict-gtk-0.23
 PKGNAME=	dict-est-rus-0.23
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=er-dict/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://sf.net/projects/er-dict
+HOMEPAGE=	http://sourceforge.net/projects/er-dict
 COMMENT=	DICTD data for Estonian-Russian dictionary
 
 DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
