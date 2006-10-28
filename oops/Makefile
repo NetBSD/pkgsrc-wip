@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/16 12:26:36 shattered Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/28 20:48:50 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -54,7 +54,7 @@ CONF_FILES+=	${EGDIR:Q}/tables/koi-win.tab ${PKG_SYSCONFDIR:Q}/tables/koi-win.ta
 
 RCD_SCRIPTS=	oops
 
-BDB_ACCEPTED=	db2
+BDB_ACCEPTED=	db2 db4
 
 .if ${OPSYS} == NetBSD
 PTHREAD_OPTS+=	require native

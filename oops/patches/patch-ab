@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/09/09 21:46:38 shattered Exp $
+$NetBSD: patch-ab,v 1.3 2006/10/28 20:48:50 shattered Exp $
 
---- configure.orig	2003-11-21 13:02:08.000000000 +0300
+--- configure.orig	2005-01-31 14:42:31.000000000 +0000
 +++ configure
-@@ -3991,7 +3991,6 @@
+@@ -5073,7 +5073,6 @@ _ACEOF
  	fi
  fi
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.2 2004/09/09 21:46:38 shattered Exp $
  CXXCOMPFLAGS=-c
  CXXSOFLAGS=$SOFLAGS
  
-@@ -4028,6 +4027,17 @@
+@@ -5109,6 +5108,17 @@ freebsd*) CFLAGS="$CFLAGS -D_REENTRANT -
            esac
  	  RPATH_OPTION="-rpath"
  	  ;;
@@ -28,11 +28,13 @@ $NetBSD: patch-ab,v 1.2 2004/09/09 21:46:38 shattered Exp $
  bsdi*)	  CFLAGS="$CFLAGS -pthread -DBSDOS"
            rel=`uname -r`
            case "$rel" in
-@@ -4827,6 +4840,9 @@ echo "$as_me:4826: checking for libdb.a"
+@@ -5988,6 +5998,11 @@ echo "$as_me:$LINENO: checking for libdb
  echo $ECHO_N "checking for libdb.a... $ECHO_C" >&6
  if test "X$LIBDB_PATH" != "X" ; then
      LIBDB_PATH=$LIBDB_PATH
-+    if test -r "$LIBDB_PATH/lib/libdb2.a"; then
++    if test -r "$LIBDB_PATH/lib/libdb4.a"; then
++	LIBDB_NAME=-ldb4
++    elif test -r "$LIBDB_PATH/lib/libdb2.a"; then
 +	LIBDB_NAME=-ldb2
 +    fi
  elif test -r "/usr/local/BerkeleyDB/lib/libdb.a"; then
