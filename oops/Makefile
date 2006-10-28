@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/28 20:48:50 shattered Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/28 21:27:18 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -61,7 +61,7 @@ PTHREAD_OPTS+=	require native
 .endif
 
 post-install:
-	${MKDIR} ${EGDIR:Q} ${EGDIR:Q}/tables
+	mkdir ${EGDIR:Q} ${EGDIR:Q}/tables
 	set -eu;							\
 	for m in oops.cfg accel_maps acl_local_networks passwd		\
 		redir_rules select.sql auth_template.html		\

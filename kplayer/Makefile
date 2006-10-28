@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/16 12:35:44 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/28 21:27:18 shattered Exp $
 #
 
 DISTNAME=		kplayer-0.5.3
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c c++
 
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/16 12:26:36 shattered Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/10/28 21:27:18 shattered Exp $
 libexec/oops/accel.so
 libexec/oops/berkeley_db_api.so
 libexec/oops/custom_log.so
@@ -23,9 +23,6 @@ man/man8/oops.8
 man/man8/oopsctl.8
 sbin/oops
 sbin/oopsctl
-share/examples/oops/tables/koi-alt.tab
-share/examples/oops/tables/koi-iso.tab
-share/examples/oops/tables/koi-win.tab
 share/examples/oops/accel_maps
 share/examples/oops/acl_local_networks
 share/examples/oops/auth_template.html
@@ -35,6 +32,9 @@ share/examples/oops/passwd
 share/examples/oops/redir_rules
 share/examples/oops/redir_template.html
 share/examples/oops/select.sql
+share/examples/oops/tables/koi-alt.tab
+share/examples/oops/tables/koi-iso.tab
+share/examples/oops/tables/koi-win.tab
 share/examples/rc.d/oops
 @dirrm share/examples/oops/tables
 @dirrm share/examples/oops
