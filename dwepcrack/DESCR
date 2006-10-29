@@ -1,0 +1,4 @@
+dwepcrack is a WEP cracking application built for all forms of attacks on WEP
+encrypted 802.11b networks. It implements a few different techniques into one
+package that allows you to fully test a wep encrypted network with all of the
+available methods currently available.
