@@ -1,3 +1,5 @@
+# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:11 shattered Exp $
+
 DISTNAME=	DBD-ODBC-1.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
@@ -11,11 +13,10 @@ DEPENDS+=	unixodbc-*:../../databases/unixodbc
 
 MAKE_PARAMS+=	-o ${PREFIX}
 
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/ODBC/.packlist
+PERL5_PACKLIST=		auto/DBD/ODBC/.packlist
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-

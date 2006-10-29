@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/08/25 21:29:36 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:10 shattered Exp $
 #
 
-PKGNAME=		mppenc-1.15
 DISTNAME=		mpcsv7-src-1.15v
+PKGNAME=		mppenc-1.15
 CATEGORIES=		audio
 MASTER_SITES=		http://files.musepack.net/source/
 EXTRACT_SUFX=		.tar.bz2

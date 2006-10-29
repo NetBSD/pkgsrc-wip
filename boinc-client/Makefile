@@ -1,6 +1,8 @@
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:06 shattered Exp $
+
 DISTNAME=		boinc
 PKGNAME=		boinc-client-1
-CATEGORIES=		net wip
+CATEGORIES=		net
 
 COMMENT=		The BOINC distributed computing application
 

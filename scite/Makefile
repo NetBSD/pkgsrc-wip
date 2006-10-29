@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/29 11:23:12 shattered Exp $
 
 DISTNAME=		scite170
 PKGNAME=		scite-1.70
@@ -20,7 +20,7 @@ MAKE_FLAGS+=		GTK2=1 CPPFLAGS=-Dunix
 MAKE_FILE=		makefile
 
 do-install:
-	cd ${WRKSRC}/scite/gtk && ${GMAKE} GTK2=1 install
+	cd ${WRKSRC}/scite/gtk && gmake GTK2=1 install
 	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../converters/libiconv/buildlink3.mk"

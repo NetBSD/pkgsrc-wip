@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:42 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 11:23:07 shattered Exp $
 #
 
 DISTNAME=		eboard-extras-2
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 
 MAINTAINER=		zul@netbsd-fr.org
 HOMEPAGE=		http://eboard.sourceforge.net/
-COMMENT=		Extras sets pieces and sound or eboard
+COMMENT=		Extras sets, pieces and sound or eboard
 
 NO_BUILD=YES
 

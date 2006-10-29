@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:07 shattered Exp $
 #
 
 DISTNAME=		ecasound-2.4.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://ecasound.seul.org/download/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ecasound.seul.org/
-COMMENT=		multitrack audio processor.
+COMMENT=		Multitrack audio processor
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

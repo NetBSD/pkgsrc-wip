@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2006/10/29 11:23:08 shattered Exp $
+
 --- src/x11/event_key_state.cxx.orig	2006-09-10 16:33:56.000000000 +0100
 +++ src/x11/event_key_state.cxx	2006-09-10 16:32:50.000000000 +0100
 @@ -3,6 +3,7 @@

@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 2006/10/29 11:23:08 shattered Exp $
+
 --- forms/colbrowser.cxx.orig	2006-09-10 16:43:55.000000000 +0100
 +++ forms/colbrowser.cxx	2006-09-10 16:45:00.000000000 +0100
 @@ -32,6 +32,7 @@

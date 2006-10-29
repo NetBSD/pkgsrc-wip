@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/09/14 14:13:59 vstakhov Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:09 shattered Exp $
 #
 
 DISTNAME=	gajim-0.8.2
@@ -6,13 +6,13 @@ CATEGORIES=	chat python
 MASTER_SITES=	http://www.gajim.org/downloads/
 
 MAINTAINER=	vsevolod@highsecure.ru
-HOMEPAGE=	http://www.gajim.org
+HOMEPAGE=	http://www.gajim.org/
 COMMENT=	Jabber client written in PyGTK
 
 DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PY_PATCHPLIST=	yes
-USE_TOOLS=	gmake
+USE_TOOLS+=	gmake
 MAKE_ENV=	"MAKE=gmake"
 
 PATCH_MAKEFILE=	src src/common

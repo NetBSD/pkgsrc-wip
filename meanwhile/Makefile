@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/10 12:38:49 absd Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:10 shattered Exp $
 #
 
 DISTNAME=		meanwhile-1.0.2
@@ -18,9 +18,7 @@ CONFIGURE_ARGS+=	--enable-doxygen=no
 
 PKGCONFIG_OVERRIDE+=	meanwhile.pc.in
 
-USE_LANGUAGES+=		c
-USE_LANGUAGES+=		c++
-USE_LANGUAGES+=		fortran
+USE_LANGUAGES=		c c++ fortran
 
 # path hackery
 SUBST_CLASSES+=			pkg-config

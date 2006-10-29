@@ -1,3 +1,5 @@
+# $NetBSD: Makefile.common,v 1.3 2006/10/29 11:23:07 shattered Exp $
+
 post-extract:
 	${CP} ${PREFIX}/share/EMBOSS/scripts/* ${WRKSRC}
 

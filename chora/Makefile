@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 11:23:07 shattered Exp $
 #
 
 DISTNAME=	chora-1.2.3
@@ -12,7 +12,7 @@ COMMENT=	Another CVS-via-web system
 #DEPENDS+=	cvs>=1.11.20:../../devel/cvs
 DEPENDS+=	horde>=2.2.4:../../www/horde
 
-USE_LANGUAGES=  # empty
+USE_LANGUAGES=	# empty
 NO_BUILD=	YES
 
 CHORADIR=	${PREFIX}/share/chora

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:42 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 11:23:07 shattered Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
 PKGNAME=		emboss-java-0.0.3
 CATEGORIES=		biology
-MASTER_SITES		ftp://ftp.uk.embnet.org/pub/EMBOSS/
+MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
-COMMENT=		interface between emboss and jemboss
+COMMENT=		Interface between emboss and jemboss
 
 DEPENDS+=		emboss-base-2.9.0:../../wip/emboss-base
 DEPENDS+=		cross-i386-linux>=2.0.7.1:../../cross/i386-linux
@@ -18,15 +18,14 @@ DEPENDS+=		cross-binutils>=2.15.0.0:../../cross/binutils
 #setenv PKG_JAVA_HOME <pkgdir>/java/sun-<version>
 #setenv CROSS_PKG i386-linux
 
-
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_JAVA=		YES
+USE_JAVA=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-NO_CONFIGURE=		YES
-USE_CROSS_BINUTILS=	YES
-CHECK_SHLIBS=		NO
+NO_CONFIGURE=		yes
+USE_CROSS_BINUTILS=	yes
+CHECK_SHLIBS=		no
 
 DIST_SUBDIR=		emboss/emboss-2.9.0
 

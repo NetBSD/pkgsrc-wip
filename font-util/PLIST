@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/18 14:05:19 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/29 11:23:08 shattered Exp $
 bin/bdftruncate
 bin/ucs2any
 lib/X11/fonts/util/map-ISO8859-1
@@ -19,8 +19,8 @@ lib/X11/fonts/util/map-ISO8859-9
 lib/X11/fonts/util/map-JISX0201.1976-0
 lib/X11/fonts/util/map-KOI8-R
 lib/pkgconfig/fontutil.pc
-share/aclocal/fontutil.m4
 man/man1/bdftruncate.1
 man/man1/ucs2any.1
+share/aclocal/fontutil.m4
 @dirrm lib/X11/fonts/util
 @dirrm lib/X11/fonts

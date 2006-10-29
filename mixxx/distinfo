@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/12 19:34:46 ghen Exp $
+$NetBSD: distinfo,v 1.2 2006/10/29 11:23:10 shattered Exp $
 
 SHA1 (mixxx-1.4.2.tar.gz) = 0406bcdd7c04eaacc74aeb7466c8ea31da19b6e0
 RMD160 (mixxx-1.4.2.tar.gz) = 64e7233239b8dad486cbde9a05f24d069ee277b0
 Size (mixxx-1.4.2.tar.gz) = 3839230 bytes
-SHA1 (patch-aa) = a20e61ac6a8a21b3d40995d9241a735992cb5639
 SHA1 (patch-ab) = 3daadfbec0b87c72f86ef90e6dc54f02850b3bae
 SHA1 (patch-ac) = 36db427c5708a16b3fa25c2567ed99b44223a220

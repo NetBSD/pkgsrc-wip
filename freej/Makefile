@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2006/06/12 16:28:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:08 shattered Exp $
 #
 
 DISTNAME=		freej-0.8.1
 PKGREVISION=		1
-CATEGORIES=		wip multimedia
+CATEGORIES=		multimedia
 MASTER_SITES=		http://www.ljudmila.org/~jaromil/freej/releases/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://freej.dyne.org
-COMMENT=		An instrument for realtime video manipulation
+HOMEPAGE=		http://freej.dyne.org/
+COMMENT=		Instrument for realtime video manipulation
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

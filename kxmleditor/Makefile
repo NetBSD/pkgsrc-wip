@@ -1,8 +1,7 @@
-# $NetBSD $
+# $NetBSD: Makefile,v 1.11 2006/10/29 11:23:10 shattered Exp $
 #
 
 DISTNAME=	kxmleditor-1.0.0
-PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kxmleditor/}
 

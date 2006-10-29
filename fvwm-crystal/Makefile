@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:43 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:09 shattered Exp $
 
 CRYSTAL_VERSION=	3.0.4
 DISTNAME=		fvwm-crystal-${CRYSTAL_VERSION}
 CATEGORIES=		wm
 MASTER_SITES=		http://download.gna.org/fvwm-crystal/${CRYSTAL_VERSION}/
-EXTRACT_SUFX=		.tar.gz
 PKGREVISION=		1
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://fvwm-crystal.org/
 COMMENT=		Easy to use, powerful desktop environment
 
+EGDIR=			${PREFIX}/share/examples/fvwm-crystal
 
-EGDIR=		${PREFIX}/share/examples/fvwm-crystal
-
-
-SUBST_CLASSES=		python bash
-
+SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch
 SUBST_FILES.python=	bin/fvwm-crystal.apps bin/fvwm-crystal.wallpaper \
 			fvwm/scripts/FvwmMPD/getprevdir.py fvwm/scripts/FvwmMPD/stripnames.py
 SUBST_SED.python=	-e "s,/usr/bin/env python,${PREFIX}/bin/python${PYVERSSUFFIX},g"
-SUBST_MESSAGE.python=	"Fixing harcoded python path"
+SUBST_MESSAGE.python=	Fixing harcoded python path
 
+SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-patch
 SUBST_FILES.bash=	fvwm/scripts/FvwmMPD/getdir.sh fvwm/scripts/FvwmMPD/listsongs.sh \
 			fvwm/scripts/FvwmMPD/parseplaylist.sh
 SUBST_SED.bash=		-e "s,/usr/bin/env bash,${PREFIX}/bin/bash,g"
-SUBST_MESSAGE.bash=	"Fixing harcoded bash path"
+SUBST_MESSAGE.bash=	Fixing harcoded bash path
 
 
 DEPENDS+=	fvwm>=2.5.14:../../wm/fvwm-devel

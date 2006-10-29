@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/05 17:29:19 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 11:23:11 shattered Exp $
 
 MODNAME=		recode
 CATEGORIES+=		converters
-PKGREVISION=		# empty
 MAINTAINER=		evaldo@gardenali.biz
 COMMENT=		PHP extension for recode support
 

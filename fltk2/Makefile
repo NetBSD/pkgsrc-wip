@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/10 23:13:27 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 11:23:08 shattered Exp $
 
-FLTK_VERSION=	5425
 DISTNAME=	fltk-2.0.x-r${FLTK_VERSION}
 PKGNAME=	fltk2-${FLTK_VERSION}
-PKGREVISION=	0
 CATEGORIES=	x11
 MASTER_SITES=	http://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/snapshots/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for GUI, development branch
+
+FLTK_VERSION=	5425
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:12 shattered Exp $
 #
 
-PKGNAME=	pmars-0.8.6
 DISTNAME=		pmars-0_8_6_tar
-CATEGORIES=		wip games
+PKGNAME=		pmars-0.8.6
+CATEGORIES=		games
 MASTER_SITES=		http://www.koth.org/pmars/
 EXTRACT_SUFX=		.gz
 
@@ -11,9 +11,9 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.koth.org/pmars/
 COMMENT=		The official Core Wars simulator
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		pkg-config gmake
-MAKE_FILE=	makefile
+MAKE_FILE=		makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pmars ${PREFIX}/bin

@@ -1,3 +1,5 @@
+# $NetBSD: Makefile,v 1.2 2006/10/29 11:23:11 shattered Exp $
+
 DISTNAME=	Net-Whois-RIPE-1.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
@@ -13,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_REQD+=		5.6.0
 PERL_CONFIGURE=	yes
 MAKE_PARAMS=		--online-tests
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/Whois/RIPE/.packlist
+PERL5_PACKLIST=		auto/Net/Whois/RIPE/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

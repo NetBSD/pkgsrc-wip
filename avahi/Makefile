@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:06 shattered Exp $
 
 DISTNAME=		avahi-0.6.10
 CATEGORIES=		net
@@ -17,7 +17,7 @@ AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
 USE_PKGINSTALL=		YES
-BUILD_DEFS=		VARBASE
+BUILD_DEFS+=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
 

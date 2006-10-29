@@ -1,5 +1,6 @@
+@comment $NetBSD: PLIST,v 1.3 2006/10/29 11:23:10 shattered Exp $
 bin/ifstat
-man/man1/ifstat.1
 bin/libifstat-config
 include/ifstat.h
 lib/libifstat.a
+man/man1/ifstat.1

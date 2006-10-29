@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/08/18 14:05:19 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/10/29 11:23:08 shattered Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FONT_UTIL_BUILDLINK3_MK:=	${FONT_UTIL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}font-util
 
 .if ${FONT_UTIL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.font-util+=	font-util>=1.0.1
-BUILDLINK_PKGSRCDIR.font-util?=	../../new/font-util
+BUILDLINK_PKGSRCDIR.font-util?=	../../wip/font-util
 BUILDLINK_DEPMETHOD.font-util?=	build
 .endif	# FONT_UTIL_BUILDLINK3_MK
 

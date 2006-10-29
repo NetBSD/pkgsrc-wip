@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2006/05/01 14:20:07 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:09 shattered Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
 PKGNAME=		fuse-sshfs-1.4
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Mount remote directories using ssh and FUSE
+
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 

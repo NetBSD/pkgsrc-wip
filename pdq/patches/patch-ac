@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2006/10/29 11:23:11 shattered Exp $
+
 --- etc/printrc.example.in.orig	2005-09-20 13:36:44.000000000 -0700
 +++ etc/printrc.example.in	2005-09-20 13:38:07.000000000 -0700
 @@ -26,10 +26,10 @@
