@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/29 14:39:38 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 14:46:27 cetrox Exp $
 #
 
 DISTNAME=		subtitleeditor-0.11.1
-CATEGORIES=		editors
+CATEGORIES=		multimedia
 MASTER_SITES=		http://kitone.free.fr/subtitleeditor/files/
 
 MAINTAINER=		ccatrian@eml.cc
