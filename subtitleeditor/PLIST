@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/29 14:39:38 cetrox Exp $
+bin/subtitleeditor
+share/applications/subtitleeditor.desktop
+share/locale/ca/LC_MESSAGES/subtitleeditor.mo
+share/locale/cs/LC_MESSAGES/subtitleeditor.mo
+share/locale/es/LC_MESSAGES/subtitleeditor.mo
+share/locale/fr/LC_MESSAGES/subtitleeditor.mo
+share/locale/pt_BR/LC_MESSAGES/subtitleeditor.mo
+share/subtitleeditor/dialog-change-fps.glade
+share/subtitleeditor/dialog-encodings-chooser.glade
+share/subtitleeditor/dialog-find-and-replace.glade
+share/subtitleeditor/dialog-move-subtitles.glade
+share/subtitleeditor/dialog-preferences.glade
+share/subtitleeditor/dialog-scale.glade
+share/subtitleeditor/dialog-script-properties.glade
+share/subtitleeditor/dialog-spell-checking.glade
+share/subtitleeditor/dialog-split.glade
+share/subtitleeditor/dialog-style-editor.glade
+share/subtitleeditor/menubar.xml
+share/subtitleeditor/subtitleeditor.glade
+share/subtitleeditor/subtitleeditor.png
+share/subtitleeditor/subtitleeditor-icon.png
+@dirrm share/subtitleeditor
+@dirrm share/applications
