@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/09/11 22:11:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 11:28:02 cheusov Exp $
 #
 
 DISTNAME=	am-utils-6.1.5
@@ -19,7 +19,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.am-utils.org/
 COMMENT=		Berkeley automounter suite of utilities
 
-USE_TOOLS+=		yacc lex
+USE_TOOLS+=		yacc lex perl:run
 GNU_CONFIGURE=		yes
 
 INFO_FILES=		yes
