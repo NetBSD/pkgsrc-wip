@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/08/27 16:50:05 milosn Exp $
+# $NetBSD: Makefile,v 1.21 2006/10/29 08:32:54 shattered Exp $
 .include "../../wip/py-twisted-core/version.mk"
 
 DISTNAME=	Twisted-${TWISTED_VERSION}
-PKGNAME=        ${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
 CATEGORIES =	meta-pkgs net python
 MASTER_SITES=	# empty
 DISTFILES=	# empty

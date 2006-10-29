@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/20 21:36:41 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2006/10/29 08:32:49 shattered Exp $
 
 SHA1 (Catalyst-Engine-Apache-1.06.tar.gz) = 5a71372fdce5543f7a4e215689c0841bdb4e6668
 RMD160 (Catalyst-Engine-Apache-1.06.tar.gz) = ff7d659f87f71a0196b3742d9feba7fc27c7b08f
-MD5 (Catalyst-Engine-Apache-1.06.tar.gz) = 0a523c0f4c07d34ef3505f3560cf1e69
-SHA256 (Catalyst-Engine-Apache-1.06.tar.gz) = 4a0160571b2791fef9153e8085f5a7542ec202d15b1db70ae3e26a33739fd171
 Size (Catalyst-Engine-Apache-1.06.tar.gz) = 19365 bytes

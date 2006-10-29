@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2005/10/08 21:56:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:45 shattered Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
-PKGNAME=                jemboss-standalone-2.9.0
+PKGNAME=		jemboss-standalone-2.9.0
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.emboss.org/
-COMMENT=	  	Standalone Interface for EMBOSS
+COMMENT=	Standalone Interface for EMBOSS
 
 DEPENDS+=		emboss-java>=0.0.3:../../wip/emboss-java
-DEPENDS+=       	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
-DEPENDS+=	 	xerces-j>=1.2.0:../../textproc/xerces-j
+DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
+DEPENDS+=		xerces-j>=1.2.0:../../textproc/xerces-j
 DEPENDS+=		iasp>=2.1.1:../../www/iasp
 DEPENDS+=		apache-ant>=1.5.3.1:../../devel/apache-ant
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/09 15:51:16 dauphing Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:57 shattered Exp $
 
 DISTNAME=	vreng-6.7.4
 PKGREVISION=	1
@@ -14,7 +14,7 @@ COMMENT=	Virtual Reality Engine interactive distributed 3D application
 
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

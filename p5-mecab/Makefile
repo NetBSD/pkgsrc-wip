@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/31 03:11:10 obache Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:52 shattered Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -13,7 +13,7 @@ HOMEPAGE=		http://mecab.sourceforge.jp/
 COMMENT=		MeCab perl module
 
 PERL5_CONFIGURE=	yes
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c++
 
 PERL5_PACKLIST=		auto/MeCab/.packlist
 REPLACE_PERL+=		test.pl

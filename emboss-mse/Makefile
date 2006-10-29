@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/14 19:42:24 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:42 shattered Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -15,7 +15,7 @@ COMMENT=	Multiple Sequence Editor for EMBOSS
 #mse.c:149: dereferencing pointer to incomplete type
 #mse.c 148  __Cols=Display->_maxx;
 #mse.c 149  __Rows=Display->_maxy;
-USE_NCURSES=    	yes
+USE_NCURSES=	yes
 DIST_SUBDIR=		emboss/mse-1.0.0-20041107
 BUILD_TARGET=		#empty
 

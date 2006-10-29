@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2005/09/11 05:46:34 udontknow Exp $
+# $NetBSD: options.mk,v 1.3 2006/10/29 08:32:46 shattered Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.libobby
-PKG_SUPPORTED_OPTIONS=  zeroconf
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libobby
+PKG_SUPPORTED_OPTIONS=	zeroconf
 
 .include "../../mk/bsd.options.mk"
 

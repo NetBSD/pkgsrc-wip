@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/06 19:13:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/29 08:32:46 shattered Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -6,11 +6,11 @@ PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/
 EXTRACT_SUFX=	.tgz
-DISTFILES+=     ${DISTNAME}${EXTRACT_SUFX} links-fonts-new${EXTRACT_SUFX}
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} links-fonts-new${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/
-COMMENT=        Enhanced version of Links with tabs and more
+COMMENT=	Enhanced version of Links with tabs and more
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake automake
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--without-x
 
 .if defined(LINKS_HACKED_USES_SVGALIB) && \
 	!empty(LINKS_HACKED_USES_SVGALIB:M[yY][eE][sS])
-CONFIGURE_ARGS+=        --without-x
+CONFIGURE_ARGS+=	--without-x
 .include "../../wip/svgalib/buildlink3.mk"
 .endif
 

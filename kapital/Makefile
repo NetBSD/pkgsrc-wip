@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/22 10:48:36 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/10/29 08:32:45 shattered Exp $
 
 DISTNAME=	kapital-1.1.030606
 CATEGORIES=	devel kde
@@ -36,8 +36,8 @@ _FETCH_MESSAGE= \
 	${ECHO} "======================================================================"
 
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=  YES
-USE_LIBTOOL=    YES
+GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=  ${WRKSRC}/ltconfig
 SHLIBTOOL_OVERRIDE=	libtool
 

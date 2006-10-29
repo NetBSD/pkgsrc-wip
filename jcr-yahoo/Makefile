@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:00 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:45 shattered Exp $
 #
 
 DISTNAME=		yahoo-transport-2.3.2
@@ -19,8 +19,8 @@ XMLCONFIG=		${WRKDIR}/${DISTNAME}/yahoo-jcr.xml
 
 USE_TOOLS+=		gmake pkg-config
 
-PKG_SYSCONFSUBDIR=      jabberd
-RCD_SCRIPTS=            yahoo
+PKG_SYSCONFSUBDIR=	jabberd
+RCD_SCRIPTS=		yahoo
 
 BUILD_DEFS+=		JABBERD_USER JABBERD_LOGDIR JABBERD_PIDDIR
 JABBERD_USER?=		jabberd

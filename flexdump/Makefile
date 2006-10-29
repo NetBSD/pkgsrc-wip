@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		flexbackup-1.2.1
@@ -10,15 +10,15 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://flexbackup.sourceforge.net/
 COMMENT=		Flexible backup tool
 
-USE_TOOLS+=		perl5:run
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		${WRKSRC}/flexbackup
 NO_BUILD=		YES
 
 SUBST_CLASSES+=		cfgpath
 SUBST_MESSAGE.cfgpath = Fixing hardcoded configuration file path.
-SUBST_STAGE.cfgpath = 	post-patch
-SUBST_FILES.cfgpath = 	flexbackup flexbackup.1 flexbackup.conf.5
-SUBST_SED.cfgpath = 	-e s,/etc/flexbackup.conf,${PKG_SYSCONFDIR}/flexbackup.conf,
+SUBST_STAGE.cfgpath =	post-patch
+SUBST_FILES.cfgpath =	flexbackup flexbackup.1 flexbackup.conf.5
+SUBST_SED.cfgpath =	-e s,/etc/flexbackup.conf,${PKG_SYSCONFDIR}/flexbackup.conf,
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/flexbackup.conf ${PKG_SYSCONFDIR}/flexbackup.conf

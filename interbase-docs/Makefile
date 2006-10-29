@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:44 shattered Exp $
 #
 
 DISTNAME=		60All
@@ -17,7 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
 
-ID6_DIR=       		${PREFIX}/share/doc/${PKGNAME}
+ID6_DIR=	${PREFIX}/share/doc/${PKGNAME}
 ID6_FILES=		apiguide.pdf datadef.pdf devguide.pdf embedsql.pdf \
 			getstart.pdf langref.pdf opguide.pdf
 

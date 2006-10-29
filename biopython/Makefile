@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/08/14 00:59:34 splitscreen Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:38 shattered Exp $
 #
 
 DISTNAME=		biopython-1.40b
@@ -12,7 +12,7 @@ COMMENT=		Python libraries for computational molecular biology
 LICENSE=		no-commercial-use
 
 PY_PATCHPLIST=		YES
-PYDISTUTILSPKG=         YES
+PYDISTUTILSPKG=		YES
 NO_CONFIGURE=		YES
 
 post-install:

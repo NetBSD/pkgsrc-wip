@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2006/02/16 20:30:18 ghen Exp $
+# $NetBSD: options.mk,v 1.3 2006/10/29 08:32:53 shattered Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.pcsc-lite
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pcsc-lite
 PKG_SUPPORTED_OPTIONS=	extendedapdu usb
 
 .include "../../mk/bsd.options.mk"

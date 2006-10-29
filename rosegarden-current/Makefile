@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/12 13:11:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:55 shattered Exp $
 #
 
 DISTNAME=	rosegarden-4-0.9.1
@@ -12,7 +12,7 @@ COMMENT=	Development release of rosegarden
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
-USE_LANGUAGES+= c c++
+USE_LANGUAGES= c c++
 USE_LIBTOOL=	yes
 
 post-install:

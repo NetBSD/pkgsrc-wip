@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/14 18:00:25 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:53 shattered Exp $
 #
 
 DISTNAME=	pinball-0.2.0a
@@ -11,7 +11,7 @@ COMMENT=	Pinball using the Allegro game library
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=  YES
+GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}/pinball-0.2.0
 
 .include "../../devel/allegro/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:57 shattered Exp $
 #
 
 DISTNAME=		Tops
@@ -13,7 +13,7 @@ COMMENT=		Protein Topology Cartoons Tools
 
 USE_JAVA=		yes
 
-CHECK_SHLIBS=   	no
+CHECK_SHLIBS=	no
 
 NO_BUILD=		yes
 

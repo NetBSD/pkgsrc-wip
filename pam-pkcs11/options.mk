@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2006/05/31 18:27:01 ghen Exp $
+# $NetBSD: options.mk,v 1.3 2006/10/29 08:32:52 shattered Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.pam-pkcs11
+PKG_OPTIONS_VAR=	PKG_OPTIONS.pam-pkcs11
 PKG_SUPPORTED_OPTIONS=	pcsc-lite ldap
 
 .include "../../mk/bsd.options.mk"

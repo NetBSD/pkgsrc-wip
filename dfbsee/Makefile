@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/29 08:32:41 shattered Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM=     Linux-*-* NetBSD-*-*
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-USE_LIBTOOL=            yes
+USE_LIBTOOL=		yes
 
 .include "../../wip/directfb/buildlink3.mk"
 

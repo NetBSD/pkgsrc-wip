@@ -1,6 +1,6 @@
 Vertex is an implementation of the Q2Q protocol (sort of like P2P, but one
 better). There are a few moving parts in Vertex:
-	
+
  - PTCP: a protocol which is nearly identical to TCP, but which runs over UDP.
    This lets Q2Q penetrate most NAT configurations.
 

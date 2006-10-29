@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:48 shattered Exp $
 #
 
 DISTNAME=	nos-tun
@@ -12,7 +12,7 @@ COMMENT=	The nos-tun utility is used to establish an nos style tunnel
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 WRKSRC=		${WRKDIR}/nos-tun
 

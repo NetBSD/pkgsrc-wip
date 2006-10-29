@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/20 18:35:21 jsonn Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:55 shattered Exp $
 #
 
 DISTNAME=	RPSL-OL-3.1.1
@@ -12,9 +12,9 @@ COMMENT=	RPSL Object Library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
-BUILD_DIRS=             ${WRKSRC} ${WRKSRC}/perl
+BUILD_DIRS=		${WRKSRC} ${WRKSRC}/perl
 
-USE_LIBTOOL=            YES
+USE_LIBTOOL=		YES
 
 BUILD_DEPENDS+=       p5-Net-Whois-RIPE-[0-9]*:../../wip/p5-Net-Whois-RIPE
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/14 18:50:53 dhowland Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 PY_PATCHPLIST=		YES
 
 # Ensure we export symbols in the linked shared object.
-LDFLAGS+=       ${EXPORT_SYMBOLS_LDFLAGS}
+LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
 CONFIGURE_ENV+= PYTHON=${PYTHONBIN:Q}
 

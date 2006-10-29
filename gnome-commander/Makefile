@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/12 08:32:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		gnome-commander-1.2.0
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc@blackmouse.biz
 HOMEPAGE=		http://www.nongnu.org/gcmd/
 COMMENT=		GNOME Commander is a fast and powerful graphical filemanager
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_DIRS=		gnome2-1.6

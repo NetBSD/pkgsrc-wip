@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2006/05/07 14:00:36 jtonio Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/10/29 08:32:45 shattered Exp $
 
 DISTNAME=     kaffe-1.1.7
 PKGNAME=      ${DISTNAME:S/-rc/rc/}
@@ -11,7 +11,7 @@ HOMEPAGE=   http://www.kaffe.org/
 COMMENT=    Virtual machine capable of running Java(tm) code
 
 EXTRACT_USING=	gtar
-DEPENDS+=       jikes>=1.22:../../lang/jikes
+DEPENDS+=	jikes>=1.22:../../lang/jikes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe

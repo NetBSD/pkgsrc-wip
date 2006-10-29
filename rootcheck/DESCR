@@ -1,6 +1,6 @@
 Rootcheck is an open source rootkit detection software. It scans the whole
 system looking for known rootkits and also for the presence of unknown
-rootkits and kernel level ones using anomaly detection. 
+rootkits and kernel level ones using anomaly detection.
 
 Rootcheck is also integrated with the OSSEC HIDS, providing a powerful
 host-based IDS solution. It includes log analysis, file integrity change

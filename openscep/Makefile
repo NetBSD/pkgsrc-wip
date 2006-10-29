@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/31 18:27:01 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:49 shattered Exp $
 
 DISTNAME=		openscep-0.4.2
 CATEGORIES=		security
@@ -15,13 +15,13 @@ BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
 USE_TOOLS+=		automake autoconf grep perl:run
 OPENSCEP_USER?=		openscep
 OPENSCEP_GROUP?=	openscep
-PKG_GROUPS=     	${OPENSCEP_USER}
-PKG_USERS=      	${OPENSCEP_USER}:${OPENSCEP_GROUP}
+PKG_GROUPS=	${OPENSCEP_USER}
+PKG_USERS=	${OPENSCEP_USER}:${OPENSCEP_GROUP}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-PKG_SYSCONFSUBDIR?=     openscep # it installs more subdirectories under this
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
+PKG_SYSCONFSUBDIR?=	openscep # it installs more subdirectories under this
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-openscep-dir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=/openscep
 CONFIGURE_ARGS+=	--with-cgi-dir=/cgi-bin/openscep

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=		cabot-0.0.20050504
 CATEGORIES=		misc security
@@ -19,7 +19,7 @@ PERL5_CONFIGURE=	no
 REPLACE_PERL=		Cabot.pm ca-createsendout ca-recv ca-sendout ca-dosign
 
 EGDIR=			${PREFIX}/share/examples/cabot
-CONF_FILES+=            ${EGDIR}/cabot.conf ${PKG_SYSCONFDIR}/cabot.conf
+CONF_FILES+=		${EGDIR}/cabot.conf ${PKG_SYSCONFDIR}/cabot.conf
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 MAKE_ENV+=		PKG_PERL5_SITELIB=${PERL5_INSTALLVENDORLIB:Q}
 

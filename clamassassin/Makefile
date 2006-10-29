@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:41 shattered Exp $
 
 DISTNAME=	clamassassin-1.2.2
 CATEGORIES=	mail
@@ -18,8 +18,8 @@ CONFIGURE_ENV+=	CONF_SED=${SED:Q}
 CONFIGURE_ENV+=	CONF_ECHO=${ECHO:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamassassin
-PKG_SUPPORTED_OPTIONS=  clamdscan subject_rewrite
-PKG_SUGGESTED_OPTIONS=  clamdscan
+PKG_SUPPORTED_OPTIONS=	clamdscan subject_rewrite
+PKG_SUGGESTED_OPTIONS=	clamdscan
 
 .include "../../mk/bsd.options.mk"
 

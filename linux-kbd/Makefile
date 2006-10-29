@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/13 18:18:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:46 shattered Exp $
 
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
@@ -28,7 +28,7 @@ MAKE_ENV+=		LEX=${LEX:Q}
 .endif
 
 .if !exists(/usr/bin/yacc)
-BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 YACC=			${LOCALBASE}/bin/bison -y
 MAKE_ENV+=		YACC=${YACC:Q}
 .endif

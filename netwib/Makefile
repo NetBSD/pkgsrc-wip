@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:31 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:48 shattered Exp $
 #
 
 DISTNAME=	netwib-5.16.0-src
@@ -11,10 +11,10 @@ MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://www.laurentconstantin.com/en/netw/
 COMMENT=	Network library providing network functionality for developers
 
-WRKSRC=         	${WRKDIR}/${DISTNAME}/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./genemake
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 post-patch:
 	@${CP} ${WRKSRC}/config.dat ${WRKSRC}/config.dat.new

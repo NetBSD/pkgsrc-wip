@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/26 16:17:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:58 shattered Exp $
 #
 
 DISTNAME=		xrdb-1.0.2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X server resource database utility
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=             pkg-config
+USE_TOOLS+=		pkg-config
 
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXmu/buildlink3.mk"

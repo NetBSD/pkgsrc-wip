@@ -9,9 +9,9 @@ COMMENT=	DBD module interfacing the ODBC databases
 DEPENDS+=	p5-DBI-*:../../databases/p5-DBI
 DEPENDS+=	unixodbc-*:../../databases/unixodbc
 
-MAKE_PARAMS+=   -o ${PREFIX}
+MAKE_PARAMS+=	-o ${PREFIX}
 
-PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/DBD/ODBC/.packlist
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/DBD/ODBC/.packlist
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"

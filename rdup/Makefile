@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/04 20:02:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:55 shattered Exp $
 #
 
 DISTNAME=		rdup-0.2.14
@@ -16,9 +16,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
 
-REPLACE_INTERPRETER+=   bash
-REPLACE.bash.old=       .*/bin/bash
-REPLACE.bash.new=       ${LOCALBASE}/bin/bash
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${LOCALBASE}/bin/bash
 REPLACE_FILES.bash=     \
 	sh-restore/monthday.sh.in \
 	sh-restore/rorrim.sh.in \

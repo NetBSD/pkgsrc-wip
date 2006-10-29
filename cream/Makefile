@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/06/23 20:44:39 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:41 shattered Exp $
 #
 
 DISTNAME=		cream-0.36
 CATEGORIES=		editors
-MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=cream/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cream/}
 
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://cream.sourceforge.net/
@@ -12,7 +12,7 @@ COMMENT=		Usability add-on for Vim
 DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=6.0:../../editors/vim-gtk2
 
 NO_BUILD=		yes
-USE_DIRS+=              xdg-1.2
+USE_DIRS+=		xdg-1.2
 
 .include "../../editors/vim-share/version.mk"
 VIMRUNTIME=		${PREFIX}/share/vim/${VIM_SUBDIR}

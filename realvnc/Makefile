@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/25 03:36:27 dhowland Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:55 shattered Exp $
 #
 
 DISTNAME=		vnc-4_1_2-unixsrc
@@ -24,8 +24,8 @@ CONFLICTS+=		vncviewer4-[0-9]*
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=        --with-installed-zlib
-NO_INSTALL_MANPAGES=    yes
+CONFIGURE_ARGS+=	--with-installed-zlib
+NO_INSTALL_MANPAGES=	yes
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run tar

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.16 2006/10/29 08:32:37 shattered Exp $
 #
 
 DISTNAME=		aolserver-4.0.10-src
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-PTHREAD_OPTS+=  	require
+PTHREAD_OPTS+=	require
 
 NSD_LOGDIR=		${VARBASE}/log/nsd
 NSD_PIDDIR=		${VARBASE}/run/nsd
@@ -28,7 +28,7 @@ NSD_GROUP?=		nsadmin
 PKG_GROUPS=		${NSD_GROUP}
 PKG_USERS=		${NSD_USER}:${NSD_GROUP}::Aolserver\ User
 
-EGDIR=                  ${PREFIX}/share/examples/nsd
+EGDIR=			${PREFIX}/share/examples/nsd
 CONF_FILES=		${EGDIR}/sample-config.tcl ${PKG_SYSCONFDIR}/nsd.tcl
 RCD_SCRIPTS=		nsd
 

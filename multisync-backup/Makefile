@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/01/05 16:51:15 mreriksson Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:47 shattered Exp $
 #
 
 PKGNAME=		multisync-backup-0.82
@@ -9,7 +9,7 @@ WRKSRC=			${WRKDIR}/multisync-0.82/plugins/backup_plugin/
 
 DEPENDS+=		multisync>=0.82:../../wip/multisync
 
-BUILD_DEPENDS+=         libtool-base>=1.5.10:../../devel/libtool-base
+BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
 
 pre-configure:
 	cd work/multisync-${PKGVERSION} && \

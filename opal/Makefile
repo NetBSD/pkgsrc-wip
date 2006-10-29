@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/31 19:15:51 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:48 shattered Exp $
 #
 
 DISTNAME=		opal-v2_2_1-src
@@ -23,7 +23,7 @@ post-wrapper:
 
 CONFIGURE_ENV+=		PWLIBDIR=${BUILDLINK_DIR}/include/ptlib
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 

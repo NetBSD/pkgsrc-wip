@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/08 21:44:13 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -56,7 +56,7 @@ EGDIR=		${PREFIX}/share/examples/arla
 EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf
 
 .for f in ${EGFILES}
-CONF_FILES+=    ${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 RCD_SCRIPTS=	arlad

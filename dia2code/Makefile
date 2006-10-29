@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:41 shattered Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
-CATEGORIES=	 	devel
+CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dia2code/}
 
 MAINTAINER=		dprice@cs.nmsu.edu

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/24 19:51:50 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:51 shattered Exp $
 
 DISTNAME=	Email-Simple-Creator-1.4
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Constructor to Email::Simple for creating messages from scratch
 
 DEPENDS+=	p5-Email-Simple>=0:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Email-Date>=0:../../wip/p5-Email-Date
-DEPENDS+=       {perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 PERL5_PACKLIST= auto/Email/Simple/Creator/.packlist
 

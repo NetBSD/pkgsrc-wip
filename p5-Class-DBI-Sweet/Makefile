@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/02 18:18:03 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:50 shattered Exp $
 
 DISTNAME=	Class-DBI-Sweet-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-SQL-Abstract>=1.17:../../databases/p5-SQL-Abstract
 DEPENDS+=	p5-DBD-SQLite>=1.08:../../databases/p5-DBD-SQLite
 
-PERL5_MODULE_TYPE=      Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/Class/DBI/Sweet/.packlist
 
 .include "../../lang/perl5/module.mk"

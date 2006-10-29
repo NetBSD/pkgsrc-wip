@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/29 08:32:47 shattered Exp $
 #
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
@@ -15,7 +15,7 @@ HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler ported to win32 platforms
 
 USE_TOOLS+=		gmake
-USE_PKGLOCALEDIR=      	yes
+USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
 

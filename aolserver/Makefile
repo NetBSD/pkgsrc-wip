@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/14 01:27:57 jlamwww Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/29 08:32:37 shattered Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -20,8 +20,8 @@ OWN_DIRS=		?
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-EGDIR=                  ${PREFIX}/share/examples/nsd
-PKG_SYSCONFSUBDIR=      nsd
+EGDIR=			${PREFIX}/share/examples/nsd
+PKG_SYSCONFSUBDIR=	nsd
 NSD_LOGDIR=		/var/log/nsd
 NSD_ROOT=		${PREFIX}/share/nsd
 NSD_USER?=		nsadmin

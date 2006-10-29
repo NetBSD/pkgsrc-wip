@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/04/29 04:52:52 akihabara Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:44 shattered Exp $
 
 DISTNAME=	ipsvd-0.12.1
 CATEGORIES=	net
@@ -9,7 +9,7 @@ HOMEPAGE=	http://smarden.org/ipsvd/
 COMMENT=	Internet protocol service daemons
 
 WRKSRC=		${WRKDIR}/net/${DISTNAME}
-CMDDIR=         ${WRKSRC}/command
+CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 DJB_ERRNO_HACK=		NO

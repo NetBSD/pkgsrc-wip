@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/15 19:05:45 neimal Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
 
 USE_TOOLS+=perl
 
-DEPENDS+=       p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
+DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 .include "../../wip/libmtp/buildlink3.mk"
 .include "../../wip/libnjb/buildlink3.mk"

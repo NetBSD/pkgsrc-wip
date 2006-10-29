@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/03 15:14:58 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:58 shattered Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ PKGREVISION=		0
 COMMENT=		GTK-based unicode implementation of the wxWidgets GUI library
 
 # conflicts with non unicode version
-CONFLICTS+=     	wxGTK-[0-9]*
+CONFLICTS+=	wxGTK-[0-9]*
 
 post-build:
 	set -e; cd ${WRKSRC}/locale; \

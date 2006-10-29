@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:46 shattered Exp $
 
 DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME}
@@ -15,7 +15,7 @@ COMMENT=		Linux kernel module utilities
 
 CONFLICTS+=		linux-module-init-tools-[0-9]*
 
-ONLY_FOR_PLATFORM=      Linux-*-* # This is for the Linux kernel
+ONLY_FOR_PLATFORM=	Linux-*-* # This is for the Linux kernel
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q} --sysconfdir=${PKG_SYSCONFDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/24 15:15:50 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:38 shattered Exp $
 #
 
 DISTNAME=		ccid-0.9.3
@@ -7,7 +7,7 @@ MASTER_SITES=		http://alioth.debian.org/download.php/992/
 
 MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://alioth.debian.org/download.php/992/
-COMMENT=	 	USB CCID-compliant smartcard/token driver for pcsc-lite
+COMMENT=	USB CCID-compliant smartcard/token driver for pcsc-lite
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

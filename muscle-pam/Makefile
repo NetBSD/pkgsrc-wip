@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/07 19:24:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:48 shattered Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-pam-1.1.5
@@ -6,8 +6,8 @@ PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://alioth.debian.org/download.php/463/
 
-MAINTAINER=     	evaldo@gardenali.biz
-HOMEPAGE=       	http://www.linuxnet.com/
+MAINTAINER=	evaldo@gardenali.biz
+HOMEPAGE=	http://www.linuxnet.com/
 COMMENT=		PAM plugin for MUSCLE SmartCard framework
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/MusclePAM

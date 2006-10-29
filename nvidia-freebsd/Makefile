@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:28 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:48 shattered Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -14,10 +14,10 @@ ONLY_FOR_PLATFORM=	FreeBSD-5*-i386 # Yeah I don't use 4.x, sorry.
 DIST_VERSION=		1.0-4365
 LINUX_DISTVER=		1.0.4365
 
-RESTRICTED=             Redistribution of unmodified source only; resale prohibited.
-NO_SRC_ON_CDROM=        ${RESTRICTED}
-NO_BIN_ON_FTP=          ${RESTRICTED}
-NO_BIN_ON_CDROM=        ${RESTRICTED}
+RESTRICTED=		Redistribution of unmodified source only; resale prohibited.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_PACKAGE=		# Oi!
 
 .include "../../mk/bsd.prefs.mk"

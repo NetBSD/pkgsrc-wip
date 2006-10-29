@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/07 14:00:36 jtonio Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:45 shattered Exp $
 #
 
 .include "../../wip/kaffe/Makefile.common"
@@ -11,17 +11,17 @@ CONFIGURE_ARGS+=  --with-kaffe-x-awt
 CONFIGURE_ARGS+=  --enable-gtk-peer
 CONFIGURE_ARGS+=  --with-x
 
-BUILD_DIRS=     ${WRKSRC}/config
-BUILD_DIRS+=    ${WRKSRC}/libraries/javalib
-BUILD_DIRS+=    ${WRKSRC}/include
-BUILD_DIRS+=    ${WRKSRC}/replace
-BUILD_DIRS+=    ${WRKSRC}/libltdl
-BUILD_DIRS+=    ${WRKSRC}/kaffe/kaffevm
-BUILD_DIRS+=    ${WRKSRC}/libraries/clib/classpath
-BUILD_DIRS+=    ${WRKSRC}/libraries/clib/awt
+BUILD_DIRS=	${WRKSRC}/config
+BUILD_DIRS+=	${WRKSRC}/libraries/javalib
+BUILD_DIRS+=	${WRKSRC}/include
+BUILD_DIRS+=	${WRKSRC}/replace
+BUILD_DIRS+=	${WRKSRC}/libltdl
+BUILD_DIRS+=	${WRKSRC}/kaffe/kaffevm
+BUILD_DIRS+=	${WRKSRC}/libraries/clib/classpath
+BUILD_DIRS+=	${WRKSRC}/libraries/clib/awt
 BUILD_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jni/gtk-peer
 BUILD_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jawt
-INSTALL_DIRS=   ${WRKSRC}/libraries/clib/awt
+INSTALL_DIRS=	${WRKSRC}/libraries/clib/awt
 INSTALL_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jni/gtk-peer
 INSTALL_DIRS+=	${WRKSRC}/libraries/javalib/external/classpath/native/jawt
 

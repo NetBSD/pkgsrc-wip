@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 01:27:59 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		gnump3d-2.9.7
@@ -16,7 +16,7 @@ CONF_FILES=		none ${CFGFILE}
 
 USE_PERL5=		YES
 USE_TOOLS+=		gmake
-REPLACE_PERL=   	${WRKSRC}/bin/*
+REPLACE_PERL=	${WRKSRC}/bin/*
 NO_BUILD=		yes
 
 SUBST_CLASSES+=		gnump3d

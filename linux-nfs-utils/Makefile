@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:47 shattered Exp $
 
-DISTNAME= 	nfs-utils-1.0.6
+DISTNAME=	nfs-utils-1.0.6
 PKGNAME=	linux-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nfs/}

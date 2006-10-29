@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:15:00 tvierling Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:54 shattered Exp $
 #
 
 DISTNAME=		ipython-0.6.12
@@ -10,7 +10,7 @@ MAINTAINER=		sifu@0xx0.net
 HOMEPAGE=		http://ipython.scipy.org/
 COMMENT=		Interactive, enhanced Python shell
 
-CONFLICTS=              py*-IPython-*
+CONFLICTS=		py*-IPython-*
 
 DEPENDS+=		${PYPKGPREFIX}-readline>=0:../../devel/py-readline
 

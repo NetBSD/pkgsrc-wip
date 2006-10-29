@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/16 23:03:38 zul_ Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:49 shattered Exp $
 #
 
 DISTNAME=		ortp-0.7.1
@@ -6,8 +6,8 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.linphone.org/ortp/sources/
 
 MAINTAINER=		zul@netbsd-fr.org
-HOMEPAGE=	 	http://www.linphone.org/ortp/
-COMMENT=	 	"A Real-time Transport Protocol stack"
+HOMEPAGE=		http://www.linphone.org/ortp/
+COMMENT=	"A Real-time Transport Protocol stack"
 
 GNU_CONFIGURE=		yes
 

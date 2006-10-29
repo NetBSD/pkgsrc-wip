@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/16 12:50:23 jsonn Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:43 shattered Exp $
 
 DISTNAME=		ftpsesame-0.95
 CATEGORIES=		net
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.sentia.org/downloads/
 
 MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.sentia.org/projects/ftpsesame/
-COMMENT=                Automatic packet filter configurator for FTP
+COMMENT=		Automatic packet filter configurator for FTP
 
 NO_CONFIGURE=		yes
 

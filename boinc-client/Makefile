@@ -7,7 +7,7 @@ COMMENT=		The BOINC distributed computing application
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake m4 pkg-config gmake
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--disable-server
 BUILD_DIRS=		client

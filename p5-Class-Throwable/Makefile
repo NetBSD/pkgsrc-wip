@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 20:13:05 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:50 shattered Exp $
 
 DISTNAME=	Class-Throwable-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-Throwable/
 COMMENT=	Minimal lightweight exception class
 
 DEPENDS+=	p5-Scalar-List-Utils>=1.1:../../devel/p5-Scalar-List-Utils
-DEPENDS+=       {perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 PERL5_REQD+=	5.6.0
 

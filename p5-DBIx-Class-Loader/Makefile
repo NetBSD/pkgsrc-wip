@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/13 15:25:01 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:51 shattered Exp $
 
 DISTNAME=	DBIx-Class-Loader-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Dynamic definition of DBIx::Class sub classes
 DEPENDS+=	p5-DBI>=1.3:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-Class>=0.04001:../../wip/p5-DBIx-Class
 DEPENDS+=	p5-Lingua-EN-Inflect>=0:../../textproc/p5-Lingua-EN-Inflect
-DEPENDS+=       {perl>=5.7.3,p5-Test-Simple>=0.45}:../../devel/p5-Test-Simple
+DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.45}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Text-Balanced>=0:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 

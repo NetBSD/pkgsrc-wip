@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		GlimmerM-2.5.1
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/GlimmerM
 
 BUILD_DIRS=		sources train
 
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sources/glimmerm ${PREFIX}/bin

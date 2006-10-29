@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/21 17:21:40 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		gdmap-0.7.5
@@ -10,9 +10,9 @@ HOMEPAGE=		http://gdmap.sourceforge.net/
 COMMENT=		Tool to visualize disk space
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=              xdg-1.2
+USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
-USE_PKGLOCALEDIR=       yes
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config msgfmt xgettext perl intltool
 
 .include "../../textproc/libxml2/buildlink3.mk"

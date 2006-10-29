@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/07/31 03:11:11 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:54 shattered Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -12,7 +12,7 @@ MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://mecab.sourceforge.jp/
 COMMENT=	MeCab python module
 
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

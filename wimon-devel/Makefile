@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/21 07:31:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:57 shattered Exp $
 #
 
 DISTNAME=	wimon-0.3
@@ -11,7 +11,7 @@ COMMENT=	Tool that shows a real-time graph of your wireless connection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ONLY_FOR_PLATFORM=      FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-*
 
 WRKSRC=		${WRKDIR}/wimon
 

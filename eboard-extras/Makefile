@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:42 shattered Exp $
 #
 
 DISTNAME=		eboard-extras-2
-CATEGORIES=             games
-MASTER_SITES=           ${MASTER_SITE_SOURCEFORGE:=eboard/}
+CATEGORIES=		games
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 
-MAINTAINER=             zul@netbsd-fr.org
-HOMEPAGE=               http://eboard.sourceforge.net/
-COMMENT=               	Extras sets pieces and sound or eboard
+MAINTAINER=		zul@netbsd-fr.org
+HOMEPAGE=		http://eboard.sourceforge.net/
+COMMENT=		Extras sets pieces and sound or eboard
 
 NO_BUILD=YES
 

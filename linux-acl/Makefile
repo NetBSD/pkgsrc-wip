@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/09 23:08:51 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:46 shattered Exp $
 #
 
 DISTNAME=		acl_2.2.39-1
@@ -11,12 +11,12 @@ HOMEPAGE=		http://acl.bestbits.at/
 COMMENT=		The acl package contains the setfacl and getfacl utils
 
 # uses linux/version.h and only tested under Linux
-ONLY_FOR_PLATFORM=      Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-*
 
-AUTOCONF_REQD=  	2.50
+AUTOCONF_REQD=	2.50
 
-USE_TOOLS+=             autoconf gmake
-GNU_CONFIGURE=          yes
+USE_TOOLS+=		autoconf gmake
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 WRKSRC=		${WRKDIR}/acl-2.2.39

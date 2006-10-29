@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:45 shattered Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
-PKGNAME=                JacORB-lib-${PKG_VERSION}
+PKGNAME=		JacORB-lib-${PKG_VERSION}
 CATEGORIES=		corba
 MASTER_SITES=		http://www.jacorb.org/releases/${PKG_VERSION}/
 
@@ -12,14 +12,14 @@ COMMENT=		Java implementation of the OMG's CORBA jar
 
 BUILD_DEPENDS+=               apache-ant>=1.5.3.1:../../devel/apache-ant
 
-WRKSRC=		        ${WRKDIR}/JacORB_${DIST_VERSION}
+WRKSRC=		${WRKDIR}/JacORB_${DIST_VERSION}
 
 PKG_JVMS_ACCEPTED+=	sun-jdk13
 PKG_JVMS_ACCEPTED+=	sun-jdk14
-DIST_VERSION=           1_4_1
-PKG_VERSION=            1.4.1
+DIST_VERSION=		1_4_1
+PKG_VERSION=		1.4.1
 
-MAKE_FILE=	        build.xml
+MAKE_FILE=		build.xml
 
 do-install:
 	@${ECHO} "Installing lib"
@@ -31,5 +31,5 @@ do-install:
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
-MAKE_PROGRAM=	        ${LOCALBASE}/bin/ant
-MAKE_FLAGS=	        -Dpkgsrc.prefix=${PREFIX}
+MAKE_PROGRAM=		${LOCALBASE}/bin/ant
+MAKE_FLAGS=		-Dpkgsrc.prefix=${PREFIX}

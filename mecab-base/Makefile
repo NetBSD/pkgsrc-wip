@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/28 12:42:53 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:47 shattered Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -13,7 +13,7 @@ HOMEPAGE=		http://mecab.sourceforge.jp/
 COMMENT=		Yet Another Part-of-Speech and Morphological Analyzer
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 OWN_DIRS=		${PREFIX:Q}/lib/mecab/dic
 

@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2006/08/07 09:21:53 kristerw Exp $
+# $NetBSD: Makefile,v 1.17 2006/10/29 08:32:49 shattered Exp $
 
-DISTNAME=       Catalyst-5.6902
+DISTNAME=	Catalyst-5.6902
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
 COMMENT=	The Elegant MVC Web Application Framework
-PERL5_REQD+=    5.8.1
+PERL5_REQD+=	5.8.1
 
-DEPENDS+=       p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
+DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
-DEPENDS+=      	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
+DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Data-Visitor>=0.02:../../wip/p5-Data-Visitor
-DEPENDS+=       {perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
+DEPENDS+=	{perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
 DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=0.5:../../wip/p5-HTTP-Body
@@ -39,7 +39,7 @@ BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST= auto/Catalyst/.packlist
-MAKE_ENV+=      PERL_EXTUTILS_AUTOINSTALL=--skipdeps
+MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 
 # optional
 # DEPENDS+=	p5-ExtUtils-AutoInstall>=0:../../devel/p5-ExtUtils-AutoInstall

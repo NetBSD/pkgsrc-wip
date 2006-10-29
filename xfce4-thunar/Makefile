@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/12 08:22:31 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:58 shattered Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -14,7 +14,7 @@ COMMENT=	Xfce file manager
 USE_DIRS+=	xdg-1.2
 USE_TOOLS+=	intltool pkg-config
 
-PKGCONFIG_OVERRIDE+=	thunar-vfs/thunar-vfs-1.pc.in	
+PKGCONFIG_OVERRIDE+=	thunar-vfs/thunar-vfs-1.pc.in
 PKGCONFIG_OVERRIDE+=	thunarx/thunarx-1.pc.in
 
 .include "../../devel/GConf2/buildlink3.mk"

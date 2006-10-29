@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:56 shattered Exp $
 
 DISTNAME=	smtpscan-${SSVERSION}
-WRKSRC=         ${WRKDIR}/smtpscan
+WRKSRC=		${WRKDIR}/smtpscan
 CATEGORIES=	net mail
 MASTER_SITES=	http://www.greyhats.org/outils/smtpscan/
 
 MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://www.greyhats.org/outils/smtpscan/
+HOMEPAGE=	http://www.greyhats.org/outils/smtpscan/
 COMMENT=	Remote SMTP version checker
 
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS

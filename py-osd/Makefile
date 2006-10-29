@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 05:56:49 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:54 shattered Exp $
 #
 
 DISTNAME=		pyosd-0.2.14
@@ -10,7 +10,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://repose.cx/pyosd/
 COMMENT=		Display text on an X11 display
 
-DEPENDS+=               ${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
+DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
 
 PYDISTUTILSPKG=		yes
 PYBINMODULE=		yes

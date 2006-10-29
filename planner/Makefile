@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/08/11 21:17:58 ondratu Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/29 08:32:53 shattered Exp $
 #
 
 DISTNAME=		planner-0.14
@@ -16,7 +16,7 @@ BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

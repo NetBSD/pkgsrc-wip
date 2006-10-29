@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:53 shattered Exp $
 #
 
 VERSION=		0.8.2
 PKGNAME=		postgis-${VERSION}
 CATEGORIES=		databases geography
-MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
-MASTER_SITES+=  	http://postgis.refractions.net/
+MASTER_SITES+=	${PGSQL_SITES:=source/v${DIST_VERS}/}
+MASTER_SITES+=	http://postgis.refractions.net/
 
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://postgis.refractions.net/
@@ -24,7 +24,7 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql74/patches
 USE_TOOLS+=		perl:run
 
 # Add postgis to the postgresql distfile
-DISTFILES+=      	postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
 
 # Only build the postgis contribted source
 BUILD_DIRS=		${WRKSRC}/contrib/postgis-${VERSION}

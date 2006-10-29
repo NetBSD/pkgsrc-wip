@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/02/08 04:56:21 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:47 shattered Exp $
 
 DISTNAME=	mlmmj-1.2.11
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE:=files/}
-EXTRACT_SUFX=  	.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://mlmmj.mmj.dk/

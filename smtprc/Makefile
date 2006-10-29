@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:56 shattered Exp $
 
 .include "Makefile.common"
 
@@ -8,9 +8,9 @@ BUILD_TARGET=	freebsd
 
 PTHREAD_OPTS=	require
 
-CONF_FILES=     ${PREFIX}/share/examples/smtprc/auto.conf \
+CONF_FILES=	${PREFIX}/share/examples/smtprc/auto.conf \
 			${PKG_SYSCONFDIR}/auto.conf
-CONF_FILES+=    ${PREFIX}/share/examples/smtprc/email.tmpl \
+CONF_FILES+=	${PREFIX}/share/examples/smtprc/email.tmpl \
 			${PKG_SYSCONFDIR}/email.tmpl
 CONF_FILES+=	${PREFIX}/share/examples/smtprc/rcheck.conf \
 			${PKG_SYSCONFDIR}/rcheck.conf

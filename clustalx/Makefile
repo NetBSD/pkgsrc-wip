@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:41 shattered Exp $
 #
 
 DISTNAME=		clustalx1.83.sun
@@ -10,8 +10,8 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://bips.u-strasbg.fr/fr/Documentation/ClustalX/
 COMMENT=		X-Windows interface for ClustalW
 
-WRKSRC=                 ${WRKDIR}/clustalx1.83.sun
-MESSAGE_SUBST+=         PREFIX=${PREFIX}
+WRKSRC=			${WRKDIR}/clustalx1.83.sun
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MAKE_FILE=		makefile
 
 do-install:

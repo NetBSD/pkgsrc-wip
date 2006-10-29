@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.18 2006/10/29 08:32:47 shattered Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -21,7 +21,7 @@ DEPENDS+=		groff-[0-9]*:../../textproc/groff
 .endif
 
 .if !exists(/usr/bin/yacc)
-BUILD_DEPENDS+=         bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 .endif
 
 VERSION=		2.4.2

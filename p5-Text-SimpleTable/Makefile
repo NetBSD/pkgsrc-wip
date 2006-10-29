@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/20 20:39:22 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:52 shattered Exp $
 
 DISTNAME=	Text-SimpleTable-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Text-SimpleTable/
 COMMENT=	Simple Eyecandy ASCII Tables
 
-PERL5_MODULE_TYPE=      Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/Text/SimpleTable/.packlist
 
 .include "../../lang/perl5/module.mk"

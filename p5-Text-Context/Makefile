@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 15:36:17 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:52 shattered Exp $
 
-DISTNAME=       Text-Context-3.6
-PKGNAME=        p5-${DISTNAME}
+DISTNAME=	Text-Context-3.6
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

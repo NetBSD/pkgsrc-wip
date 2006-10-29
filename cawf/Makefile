@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=	cawf
 PKGNAME=	cawf-4.10
@@ -13,7 +13,7 @@ HOMEPAGE=	ftp://vic.cc.purdue.edu/pub/cawf.README
 COMMENT=	nroff-like text formatter
 
 CAWFLIB=	${PREFIX}/share/cawf
-PLIST_SUBST+=   CAWFLIB=share/cawf
+PLIST_SUBST+=	CAWFLIB=share/cawf
 BUILD_DEFS+=	CAWFLIB
 MAKE_FLAGS+=	CAWFLIB=${CAWFLIB:Q}
 

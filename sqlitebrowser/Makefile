@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/10 12:38:49 absd Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:56 shattered Exp $
 #
 
 PKGNAME=	sqlitebrowser-1.3
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/sqlitebrowser
 QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_ARGS+=	QMAKE=${QMAKE:Q}
 
-BUILDLINK_DEPMETHOD.qt3-tools=  build
+BUILDLINK_DEPMETHOD.qt3-tools=	build
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

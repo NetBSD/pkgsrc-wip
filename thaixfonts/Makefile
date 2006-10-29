@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:56 shattered Exp $
 #
 
 DISTNAME=	thaixfonts-1.1-3.noarch
@@ -7,7 +7,7 @@ CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.fedu.uec.ac.jp/ZzzThai/linux/redhat/RPMS/noarch/
 EXTRACT_SUFX=	.rpm
 
-MAINTAINER= 	scole_mail@softhome.net
+MAINTAINER=	scole_mail@softhome.net
 HOMEPAGE=	http://www.fedu.uec.ac.jp/ZzzThai/fonts.html
 COMMENT=	various X11 Thai fonts in tis-620 encoding
 

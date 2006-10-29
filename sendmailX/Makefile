@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/23 07:09:02 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/29 08:32:55 shattered Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -32,8 +32,8 @@ PKG_SYSCONFSUBDIR=	smx
 SMXCNFDIR=		${PKG_SYSCONFDIR}
 SMXCNF=			${SMXCNFDIR}/smx.conf
 
-PKG_GROUPS=     smxs smxq smxc smxm smx
-PKG_USERS=      smxs:smxs::Sendmail\ X\ SMTP\ Server
+PKG_GROUPS=	smxs smxq smxc smxm smx
+PKG_USERS=	smxs:smxs::Sendmail\ X\ SMTP\ Server
 PKG_USERS+=	smxq:smxq::Sendmail\ X\ Queue\ Manager
 PKG_USERS+=	smxc:smxc::Sendmail\ X\ SMTP\ Client
 PKG_USERS+=	smxm:smxm::Sendmail\ X\ Address\ Resolver

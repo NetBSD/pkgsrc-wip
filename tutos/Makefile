@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/19 16:51:40 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.14 2006/10/29 08:32:57 shattered Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
@@ -15,7 +15,7 @@ TUTOS_USER?=	tutos
 TUTOS_GROUP?=	${TUTOS_USER}
 
 PKG_GROUPS+=	${TUTOS_GROUP}
-PKG_USERS+=     ${TUTOS_USER}:${TUTOS_GROUP}::Tutos\ Runtime\ User
+PKG_USERS+=	${TUTOS_USER}:${TUTOS_GROUP}::Tutos\ Runtime\ User
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

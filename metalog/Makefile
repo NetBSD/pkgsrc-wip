@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2005/12/11 09:21:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:47 shattered Exp $
 
 DISTNAME=		metalog-0.8-rc1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=metalog/}
 
-MAINTAINER=             nel@soraneko.com
-HOMEPAGE=               http://metalog.sourceforge.net/
-COMMENT=                Metalog is a modern replacement for syslogd and klogd
+MAINTAINER=		nel@soraneko.com
+HOMEPAGE=		http://metalog.sourceforge.net/
+COMMENT=		Metalog is a modern replacement for syslogd and klogd
 
 DEPENDS+=		pcre-[0-9]*:../../devel/pcre
 

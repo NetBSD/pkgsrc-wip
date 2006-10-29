@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/09/29 20:24:31 mrohrer Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:41 shattered Exp $
 
 DISTNAME=		crafty-20.14
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/source/ \
 			ftp://ftp.cis.uab.edu/pub/hyatt/pgn/
 DISTFILES=		${CRAFTY_DISTFILES}
-DISTFILES+=		${CRAFTY_STARTPGN} 
+DISTFILES+=		${CRAFTY_STARTPGN}
 
 MAINTAINER=		mrohrer@users.sourceforge.net
 COMMENT=		Chess engine
@@ -30,15 +30,15 @@ INSTALLATION_DIRS=	bin
 
 # build according to OS.  This list is not very thorough yet
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
-BUILD_TARGET=           netbsd-i386
+BUILD_TARGET=		netbsd-i386
 .elif !empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
-BUILD_TARGET=           netbsd-sparc
+BUILD_TARGET=		netbsd-sparc
 .elif !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-BUILD_TARGET=           netbsd
+BUILD_TARGET=		netbsd
 .elif !empty(MACHINE_PLATFORM:MLinux-*-i386)
-BUILD_TARGET=           linux
+BUILD_TARGET=		linux
 .elif !empty(MACHINE_PLATFORM:MSunOS-*-*)
-BUILD_TARGET=           solaris-gcc
+BUILD_TARGET=		solaris-gcc
 .endif
 
 post-extract:

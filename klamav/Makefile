@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/19 00:55:30 yomram Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:45 shattered Exp $
 
 DISTNAME=	klamav-0.37-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -12,8 +12,8 @@ COMMENT=	Clam Anti-Virus Manager For The KDE Desktop
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}
 
 USE_TOOLS+=		gmake pkg-config
-USE_LANGUAGES+=	c c++
-GNU_CONFIGURE=  yes
+USE_LANGUAGES=	c c++
+GNU_CONFIGURE=	yes
 
 # doesn't use embedded sqlite
 CONFIGURE_ARGS+=	--without-included-sqlite

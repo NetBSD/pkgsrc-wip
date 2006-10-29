@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/08/29 13:34:35 tvierling Exp $
+# $NetBSD: options.mk,v 1.4 2006/10/29 08:32:38 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.barnyard
 PKG_SUPPORTED_OPTIONS=	mysql pgsql
@@ -25,5 +25,5 @@ LIBS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib/postgresql
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--with-mysql-includes=${PREFIX}/include/mysql
 CONFIGURE_ARGS+=	--with-mysql-libraries=${PREFIX}/lib/mysql
-LIBS+=   		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+LIBS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 .endif

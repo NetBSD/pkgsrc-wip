@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2006/04/21 07:31:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:58 shattered Exp $
 #
 
 DISTNAME=		mim-1.2
-PKGNAME=                xmim-1.2
+PKGNAME=		xmim-1.2
 CATEGORIES=		mbone
 MASTER_SITES=		ftp://limestone.uoregon.edu/pub/videolab/
 
 MAINTAINER=		psham@cs.nmsu.edu
-HOMEPAGE=	 	http://videolab.uoregon.edu/
+HOMEPAGE=		http://videolab.uoregon.edu/
 COMMENT=		GUI interface for multicast MPEG-I stream viewer
 
 WRKSRC=			${WRKDIR}/mim-1.2

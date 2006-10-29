@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/20 13:36:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:47 shattered Exp $
 #
 
 # XXX This version is the CVS revision number from NetBSD's
@@ -21,7 +21,7 @@ NO_BUILD=	YES
 
 # XXX This would be a good place to use PREFER_PKGSRC
 .if empty(OPSYS:M*BSD)
-DEPENDS+=       mktemp>=1.4:../../sysutils/mktemp
+DEPENDS+=	mktemp>=1.4:../../sysutils/mktemp
 MKTEMP=		${LOCALBASE}/bin/mktemp
 .else
 MKTEMP=		mktemp

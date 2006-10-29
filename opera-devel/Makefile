@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/01 18:54:13 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/29 08:32:49 shattered Exp $
 
 DISTNAME=		opera-9.0beta1
 CATEGORIES=		www
@@ -18,8 +18,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386 DragonFly-*-i386
 
 LICENSE=		opera-850-license
 
-NO_CONFIGURE=           YES
-USE_LANGUAGES=          # empty
+NO_CONFIGURE=		YES
+USE_LANGUAGES=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,7 +83,7 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 .endif
 
 .if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
-NO_BUILD=               YES
+NO_BUILD=		YES
 
 SUBST_CLASSES+=		opera
 SUBST_STAGE.opera=	post-build

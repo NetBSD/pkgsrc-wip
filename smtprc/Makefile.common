@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/03/14 01:28:15 jlamwww Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/10/29 08:32:56 shattered Exp $
 
 DISTNAME=	smtprc-0.9.7
 PKGNAME=	smtprc-0.9.7b
@@ -8,6 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=smtprc/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://irc.warg.co.uk/smtprc-website/index.html
+HOMEPAGE=	http://irc.warg.co.uk/smtprc-website/index.html
 
 PKG_SYSCONFSUBDIR=	smtprc

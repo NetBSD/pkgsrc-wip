@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/10/22 09:26:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:46 shattered Exp $
 
 DISTNAME=	linphone-1.3.5
 CATEGORIES=	net
 MASTER_SITES=	http://simon.morlat.free.fr/download/1.3.x/source/
 
-MAINTAINER=     schwarz@NetBSD.org
+MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 
@@ -16,7 +16,7 @@ USE_GNU_READLINE=	yes # rl_hook_func_t et al.
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}
-CONFIGURE_ARGS+=        --with-speex=${BUILDLINK_PREFIX.speex}
+CONFIGURE_ARGS+=	--with-speex=${BUILDLINK_PREFIX.speex}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 

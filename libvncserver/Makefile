@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:46 shattered Exp $
 #
 
 DISTNAME=		LibVNCServer-0.7
@@ -12,7 +12,7 @@ COMMENT=		Library for creating quick and easy VNC applications
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=        --prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/02/25 00:33:05 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:52 shattered Exp $
 
 DISTNAME=	PluceneSimple-1.04
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/ST/STRYTOAST/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/ST/STRYTOAST/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/PluceneSimple/
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	p5-File-Find-Rule>=0.10:../../devel/p5-File-Find-Rule
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
 BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../wip/p5-Test-Class
 
-PERL5_MODULE_TYPE=      Module::Build
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/PluceneSimple/.packlist
 
 .include "../../lang/perl5/module.mk"

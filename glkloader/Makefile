@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/29 17:43:15 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=		glkloader-0.3.2
@@ -14,8 +14,8 @@ DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm
 USE_TOOLS+=		perl
 
 DOCDIR=  ${PREFIX}/share/doc/glkloader
-EGDIR=  ${DOCDIR}/samples
-CONF_FILES=     ${EGDIR}/glkloaderrc ${PKG_SYSCONFDIR}/glkloaderrc
+EGDIR=	${DOCDIR}/samples
+CONF_FILES=	${EGDIR}/glkloaderrc ${PKG_SYSCONFDIR}/glkloaderrc
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/glkstart.h ${LOCALBASE}/include/glkloader

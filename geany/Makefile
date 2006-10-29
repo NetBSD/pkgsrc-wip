@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/30 17:49:46 unex_linija Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:43 shattered Exp $
 
 DISTNAME=	geany-0.9
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ COMMENT=	Geany integrated development environment (IDE)
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

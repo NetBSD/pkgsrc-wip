@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:12 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:44 shattered Exp $
 
 DISTNAME=	iisemulator-0.95
 CATEGORIES=	net www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iisemul8/}
 
 MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://sourceforge.net/projects/iisemul8/
+HOMEPAGE=	http://sourceforge.net/projects/iisemul8/
 COMMENT=	IIS emulator
 
 IISEMUL8=	${PREFIX}/share/iisemulator

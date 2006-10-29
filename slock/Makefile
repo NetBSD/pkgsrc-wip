@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/22 14:40:21 kh-p Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:55 shattered Exp $
 
 DISTNAME=		slock-0.2
 CATEGORIES=		x11
@@ -11,7 +11,7 @@ COMMENT=		Simple screen locker
 NO_CONFIGURE=		yes
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix= 	pre-patch
+SUBST_STAGE.prefix=	pre-patch
 SUBST_FILES.prefix=	 config.mk
 SUBST_SED.prefix=		-e s,/usr/local,${PREFIX},g
 SUBST_SED.prefix+=		-e 's|/usr/X11R6|$${X11BASE}|g'

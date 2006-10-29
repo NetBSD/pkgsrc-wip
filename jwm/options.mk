@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/03/12 11:49:23 pippijn Exp $
+# $NetBSD: options.mk,v 1.3 2006/10/29 08:32:45 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jwm
 PKG_SUPPORTED_OPTIONS=	debug nopng
@@ -10,7 +10,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mnopng)
-CONFIGURE_ARGS+=        --disable-png
+CONFIGURE_ARGS+=	--disable-png
 .else
-CC+=                    -lpng -lz
+CC+=			-lpng -lz
 .endif

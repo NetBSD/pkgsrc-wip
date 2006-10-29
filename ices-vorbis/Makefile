@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:44 shattered Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -42,7 +42,7 @@ do-install:
 
 .include "../../mk/oss.buildlink3.mk"
 .if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
-CONFIGURE_ENV+=         ac_cv_libossaudio__oss_ioctl=no
+CONFIGURE_ENV+=		ac_cv_libossaudio__oss_ioctl=no
 .endif
 
 .include "../../audio/flac/buildlink3.mk"

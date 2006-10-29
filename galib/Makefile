@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2006/09/14 18:53:09 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:43 shattered Exp $
 #
 
-DISTNAME=       galib245
+DISTNAME=	galib245
 PKGNAME=	galib-2.4.5
-CATEGORIES=     devel
-MASTER_SITES=   http://lancet.mit.edu/ga/dist/
+CATEGORIES=	devel
+MASTER_SITES=	http://lancet.mit.edu/ga/dist/
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://lancet.mit.edu/ga/
-COMMENT=        GAlib contains a set of C++ genetic algorithm objects
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://lancet.mit.edu/ga/
+COMMENT=	GAlib contains a set of C++ genetic algorithm objects
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

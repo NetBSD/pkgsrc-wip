@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/08/29 15:34:33 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:58 shattered Exp $
 
 DISTNAME=		linux.words.2
 PKGNAME=		words-2
@@ -10,8 +10,8 @@ MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE=
 COMMENT=		English word list
 
-NO_CONFIGURE=   yes
-NO_BUILD=       yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dict

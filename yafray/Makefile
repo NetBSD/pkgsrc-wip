@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/17 10:20:47 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:58 shattered Exp $
 #
 
 DISTNAME=	yafray-0.0.7
@@ -19,7 +19,7 @@ DOCDIR=			${PREFIX}/share/doc/yafray
 PTHREAD_OPTS=		require
 
 SUBST_CLASSES+=     patch
-SUBST_MESSAGE.patch=    Make yafray search the grammar at the right place.
+SUBST_MESSAGE.patch=	Make yafray search the grammar at the right place.
 SUBST_STAGE.patch=  post-patch
 SUBST_FILES.patch=  src/loader/loader.cc
 SUBST_SED.patch=    -e "s|/usr/local/etc|${YAFRAYDIR}|"

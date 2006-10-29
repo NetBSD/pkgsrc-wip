@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:53 shattered Exp $
 #
 VERSION=		1.1.1
 PKGNAME=		postgresql74-postgis-${VERSION}
@@ -20,13 +20,13 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql74/patches
 
 .include "../../databases/postgresql74/Makefile.common"
 
-MASTER_SITES+=  	${PGSQL_SITES:=source/v${DIST_VERS}/}
-MASTER_SITES+=  	http://postgis.refractions.net/download/
+MASTER_SITES+=	${PGSQL_SITES:=source/v${DIST_VERS}/}
+MASTER_SITES+=	http://postgis.refractions.net/download/
 
 PGSQL_VERSION_REQD=	74
 
 # Add postgis to the postgresql distfile
-DISTFILES+=      	postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=		perl
 USE_TOOLS+=		gmake

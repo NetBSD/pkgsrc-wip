@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/02 18:51:39 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:43 shattered Exp $
 
 CRYSTAL_VERSION=	3.0.4
 DISTNAME=		fvwm-crystal-${CRYSTAL_VERSION}
@@ -9,7 +9,7 @@ PKGREVISION=		1
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://fvwm-crystal.org/
-COMMENT=                Easy to use, powerful desktop environment
+COMMENT=		Easy to use, powerful desktop environment
 
 
 EGDIR=		${PREFIX}/share/examples/fvwm-crystal

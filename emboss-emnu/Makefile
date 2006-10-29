@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/14 18:06:54 daprice Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:42 shattered Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -12,7 +12,7 @@ BUILD_TARGET=		#empty
 DIST_SUBDIR=		emboss/emnu-1.05-20041107
 GNU_CONFIGURE=		yes
 #ncurses required for the redrawwin function
-USE_NCURSES=            yes
+USE_NCURSES=		yes
 
 pre-configure:
 	${SED} -e 's|../../../plplot/libplplot.la|${PREFIX}/lib/libplplot.la|' \

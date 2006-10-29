@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:56 shattered Exp $
 
 .include "../../wip/smtprc/Makefile.common"
 
-PKGNAME=        ${DISTNAME:S/-/-gui-/}
+PKGNAME=	${DISTNAME:S/-/-gui-/}
 
 COMMENT=	Open relay scanner Tk GUI
 
@@ -13,7 +13,7 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 USE_PERL5=	YES
 
-PKGDIR=         ${.CURDIR}/../../wip/smtprc
+PKGDIR=		${.CURDIR}/../../wip/smtprc
 PLIST_SRC=	${.CURDIR}/PLIST
 
 REPLACE_PERL=	gsmtprc

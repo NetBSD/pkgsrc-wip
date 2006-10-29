@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:39 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:56 shattered Exp $
 #
 
 DISTNAME=		Songwrite-0.12
@@ -19,7 +19,7 @@ PYTHON_PATCH_SCRIPTS=	songwrite
 
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-SW_FILES= 	__init__.py asciitab.py drum.py fourml.py globdef.py \
+SW_FILES=	__init__.py asciitab.py drum.py fourml.py globdef.py \
 		gp3_loader.py init_editobj.py latex.py lilypond.py lyric.py \
 		lyric2.py main.py midi_import.py player.py song.py \
 		songbook.py staff.py stemml.py tablature.py ui.py view.py

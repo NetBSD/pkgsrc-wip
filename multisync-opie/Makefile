@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/01/09 22:41:46 mreriksson Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:47 shattered Exp $
 #
 
 PKGNAME=		multisync-opie-0.82
@@ -9,7 +9,7 @@ WRKSRC=			${WRKDIR}/multisync-0.82/plugins/opie_sync/
 
 DEPENDS+=		multisync>=0.82:../../wip/multisync
 
-BUILD_DEPENDS+=         libtool-base>=1.5.10:../../devel/libtool-base
+BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
 
 pre-configure:
 	cd work/multisync-${PKGVERSION} && \

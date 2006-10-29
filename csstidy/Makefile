@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/22 21:32:34 kh-p Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:41 shattered Exp $
 
 DISTNAME=		csstidy-source-1.2
 PKGNAME=		csstidy-1.2
@@ -10,10 +10,10 @@ MAINTAINER=		kh.p@no-log.org
 HOMEPAGE=		http://csstidy.sourceforge.net/
 COMMENT=		Opensource CSS parser
 
-WRKSRC=                 ${WRKDIR}
+WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 USE_TOOLS+=		sh gmake
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c++
 
 do-build:
 	cd ${WRKSRC} && ${SH} ./compile.sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:48 shattered Exp $
 #
 
 DISTNAME=		neb-hdtoolbox-src-0.9
@@ -7,9 +7,9 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://binary.florian-stoehr.de/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	 	netbsd@wolfnode.de
+MAINTAINER=		netbsd@wolfnode.de
 HOMEPAGE=		http://binary.florian-stoehr.de/
-COMMENT=	 	Tool for cross-partitioning a disk for NetBSD/amiga
+COMMENT=	Tool for cross-partitioning a disk for NetBSD/amiga
 
 NO_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	NetBSD-*-*

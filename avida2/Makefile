@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2006/09/18 18:30:27 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:38 shattered Exp $
 #
 
-DISTNAME=       avida-2.0b1
-CATEGORIES=     misc
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=avida/}
+DISTNAME=	avida-2.0b1
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avida/}
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://nemus.dllab.caltech.edu/avida/
-COMMENT=        Avida is an auto-adaptive genetic system
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://nemus.dllab.caltech.edu/avida/
+COMMENT=	Avida is an auto-adaptive genetic system
 
 HAS_CONFIGURE=		YES
 GNU_CONFIGURE=		YES

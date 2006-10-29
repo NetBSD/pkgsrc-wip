@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-wip-discuss@lists.sourceforge.net
 HOMEPAGE=		http://www.slony.info/
 COMMENT=		Async Replication System for PostgreSQL
 
-GNU_CONFIGURE=          yes
+GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-pgconfigdir=${LOCALBASE}/bin \
 			--with-pgbindir=${LOCALBASE}/bin \

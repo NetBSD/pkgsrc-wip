@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/26 14:14:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2006/10/29 08:32:40 shattered Exp $
 
 DISTNAME=	cdrtools-2.01.01a18
 CATEGORIES=	sysutils
@@ -23,8 +23,8 @@ BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 .endif
 
 # avoid picking up a bad ${ARCH} during the build
-MAKE_ENV+=      ARCH=""
-MAKE_ENV+=      MAKEPROG="gmake"
+MAKE_ENV+=	ARCH=""
+MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:M*:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:M*:Q}
 

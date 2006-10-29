@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:41 shattered Exp $
 
 DISTNAME=		copytape
 PKGNAME=		${DISTNAME}-1.0
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	gsharutils>=4.2.1nb2:../../archivers/gsharutils
 WRKSRC=			${WRKDIR}
 BUILD_TARGET=		copytape
 
-EXTRACT_CMD=            ${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}unshar
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}unshar
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/copytape ${PREFIX}/bin/copytape

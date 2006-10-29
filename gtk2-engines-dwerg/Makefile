@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:18 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:44 shattered Exp $
 
 DISTNAME=		dwerg-default-${DWERG_VERSION}
 DWERG_VERSION=		0.8
@@ -6,7 +6,7 @@ PKGNAME=		gtk2-engines-dwerg-${DWERG_VERSION}
 CATEGORIES=		x11
 MASTER_SITES=		http://download.freshmeat.net/themes/dwerg/
 EXTRACT_SUFX=		.tar.gz
-WRKSRC= 		${WRKDIR}/gtk-engines-dwerg-${DWERG_VERSION}/
+WRKSRC=	${WRKDIR}/gtk-engines-dwerg-${DWERG_VERSION}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://themes.freshmeat.net/projects/dwerg/

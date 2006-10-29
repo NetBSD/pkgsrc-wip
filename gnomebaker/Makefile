@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/28 17:25:20 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:43 shattered Exp $
 
 DISTNAME=	gnomebaker-0.5.1
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ MAINTAINER=	leuzi@trash.net
 HOMEPAGE=	http://gnomebaker.sourceforge.net/v2/
 COMMENT=	GTK2/GNOME CD/DVD burning application
 
-USE_TOOLS+=             pkg-config msgfmt intltool
+USE_TOOLS+=		pkg-config msgfmt intltool
 GNU_CONFIGURE=		YES
 
 DEPENDS+=	cdrtools-ossdvd>=2.0:../../sysutils/cdrtools-ossdvd

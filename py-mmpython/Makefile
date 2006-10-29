@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/23 07:07:20 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:54 shattered Exp $
 #
 
 DISTNAME=		mmpython-0.4.9
@@ -10,7 +10,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://mmpython.sourceforge.net/
 COMMENT=		Extract text information from mp3, ogg, avi, jpg and more
 
-DEPENDS+=               lsdvd>=0.10:../../multimedia/lsdvd
+DEPENDS+=		lsdvd>=0.10:../../multimedia/lsdvd
 
 PYDISTUTILSPKG=		yes
 

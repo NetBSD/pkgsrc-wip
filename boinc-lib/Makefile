@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/06 20:05:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=		boinc
 PKGNAME=		boinc-lib-1
@@ -9,7 +9,7 @@ COMMENT=		Libraries for the BOINC distributed computing application
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake m4 pkg-config gmake
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 #LIBTOOL_OVERRIDE=	m4/libtool.m4
 SHLIBTOOL_OVERRIDE=	m4/libtool.m4

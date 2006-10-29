@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:44 shattered Exp $
 #
 
 DISTNAME=		gromacs-3.2.1
@@ -9,8 +9,8 @@ MAINTAINER=		pih@xbase.dk
 HOMEPAGE=		ftp://ftp.gromacs.org/pub/gromacs/
 COMMENT=		Molecular dynamics package
 
-DEPENDS+=               fftw2>=2.1.5:../../math/fftw2
-DEPENDS+=               binutils>=2.10.91:../../devel/binutils
+DEPENDS+=		fftw2>=2.1.5:../../math/fftw2
+DEPENDS+=		binutils>=2.10.91:../../devel/binutils
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

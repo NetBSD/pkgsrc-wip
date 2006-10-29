@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/07 04:50:43 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=	bsfilter-1.0.12
 CATEGORIES=	mail
@@ -9,8 +9,8 @@ MAINTAINER=	ura@jp.netbsd.org
 HOMEPAGE=	http://bsfilter.org/index-e.html
 COMMENT=	Bayesian spam filter written in Ruby
 
-DEPENDS+=       ${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
-DEPENDS+=       ${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}:../../converters/ruby-iconv
+DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+DEPENDS+=	${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}:../../converters/ruby-iconv
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter

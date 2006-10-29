@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/03 15:16:26 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:58 shattered Exp $
 #
 
 .include "../../wip/wxGTK-unicode/Makefile.common"
@@ -11,7 +11,7 @@ COMMENT=		GTK-based unicode implementation of the wxWidgets GUI library (contrib
 USE_TOOLS+=		gmake
 
 # conflicts with non unicode version
-CONFLICTS+=             wxGTK-contrib-[0-9]*
+CONFLICTS+=		wxGTK-contrib-[0-9]*
 
 do-build:
 	cd ${WRKSRC}/contrib/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}

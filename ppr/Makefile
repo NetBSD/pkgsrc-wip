@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:53 shattered Exp $
 
 DISTNAME=		ppr-1.53
 CATEGORIES=		print
@@ -46,8 +46,8 @@ PPR_USER?=		ppr
 PPRWEB_USER?=		pprwww
 PPR_GROUP?=		ppr
 
-PKG_GROUPS=             ${PPR_GROUP}
-PKG_USERS=              ${PPR_USER}:${PPR_GROUP}::PPR\ user::${SH}
+PKG_GROUPS=		${PPR_GROUP}
+PKG_USERS=		${PPR_USER}:${PPR_GROUP}::PPR\ user::${SH}
 PKG_USERS+=		${PPRWEB_USER}:${PPR_GROUP}::PPR\ web\ user::${SH}
 
 #FILES_SUBST+=		PPR_USER=${PPR_USER}

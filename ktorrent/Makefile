@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/07 09:02:15 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:45 shattered Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 CATEGORIES=	net kde
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ktorrent.pwsp.net/downloads/${KTORRENT_VER}/
 KTORRENT_VER=	2.0rc1
 
 MAINTAINER=	pkg-maintainer@NetBSD.org
-HOMEPAGE=       http://ktorrent.org/
+HOMEPAGE=	http://ktorrent.org/
 COMMENT=	Graphical BitTorrent client for KDE
 
 USE_LANGUAGES=		c c++

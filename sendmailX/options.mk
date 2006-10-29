@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2006/04/13 21:33:47 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.8 2006/10/29 08:32:55 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmailX
 PKG_SUPPORTED_OPTIONS=	tls sasl pmilter
@@ -13,7 +13,7 @@ PKG_SUPPORTED_OPTIONS=	tls sasl pmilter
 CONFIGURE_ARGS+=	-enable-TLS
 CFLAGS+=		-DSM_USE_TLS
 .else
-CONFIGURE_ARGS+=        -disable-TLS
+CONFIGURE_ARGS+=	-disable-TLS
 CONFIGURE_ENV+=		ac_cv_header_openssl_ssl_h=no
 .endif
 

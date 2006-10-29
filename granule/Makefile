@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/11 22:06:08 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:44 shattered Exp $
 #
 
 DISTNAME=		granule-1.2.1
@@ -12,8 +12,7 @@ COMMENT=		Program for Leitner methodology for learning new words
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		xdg-1.1
-USE_LANGUAGES+=		c++
-USE_LANGUAGES+=		fortran
+USE_LANGUAGES=		c++ fortran
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl

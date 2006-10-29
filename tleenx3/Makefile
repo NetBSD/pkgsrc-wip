@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:40 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:57 shattered Exp $
 #
 
 DISTNAME=		TleenX3-0.1
 PKGNAME=		${DISTNAME:S/T/t/:S/X/x/}
-CATEGORIES=	        chat
+CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tleenx/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

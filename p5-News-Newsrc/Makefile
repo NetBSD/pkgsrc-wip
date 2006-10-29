@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:14:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:52 shattered Exp $
 #
 
 DISTNAME=	News-Newsrc-1.08
@@ -7,7 +7,7 @@ CATEGORIES=	news perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=News/}
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://search.cpan.org/dist/News-Newsrc
+HOMEPAGE=	http://search.cpan.org/dist/News-Newsrc/
 COMMENT=	Perl module to manage newsrc files
 
 DEPENDS+=	p5-Set-IntSpan>=1.07:../../devel/p5-Set-IntSpan

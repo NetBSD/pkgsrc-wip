@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:57 shattered Exp $
 #
 
 DISTNAME=		uebimiau-2.7.2
@@ -9,7 +9,7 @@ MAINTAINER=		rpereyra@users.sourceforge.net
 HOMEPAGE=		http://www.uebimiau.org/
 COMMENT=		Web based email client
 
-DEPENDS+=      		ap{,2}-php>=4.3.0:../../www/ap-php
+DEPENDS+=	ap{,2}-php>=4.3.0:../../www/ap-php
 
 NO_BUILD=		yes
 

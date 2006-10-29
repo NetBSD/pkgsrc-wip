@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:33 ykomatsu Exp $
-# $Id: Makefile,v 1.5 2006/05/19 16:51:33 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:54 shattered Exp $
+# $Id: Makefile,v 1.6 2006/10/29 08:32:54 shattered Exp $
 
-DISTNAME=       MySQL-python-0.9.2
-PKGNAME=        py-mysqldb-docs-0.9.2
-CATEGORIES=     databases
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=mysql-python/}
+DISTNAME=	MySQL-python-0.9.2
+PKGNAME=	py-mysqldb-docs-0.9.2
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 
-MAINTAINER=     pkgsrc-users@NetBSD.org
-HOMEPAGE=       http://sourceforge.net/projects/mysql-python
-COMMENT=        HTML documentation for MySQL interface for Python
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://sourceforge.net/projects/mysql-python
+COMMENT=	HTML documentation for MySQL interface for Python
 
 NO_BUILD=	yes
 NO_CONFIGURE=	# certainly

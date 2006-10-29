@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/08/14 03:50:12 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:38 shattered Exp $
 #
 
 DISTNAME=		cb2bib-0.6.1
@@ -12,17 +12,17 @@ COMMENT=		Extract and organize bibliographic references
 QTPREFIX=		${PREFIX}/qt3
 CONFIGURE_ENV+=		QTDIR=${QTPREFIX:Q}
 
-USE_DIRS+=              xdg-1.2
+USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
 # needed to find qmake
-PATH:=                  ${PATH}:${QTPREFIX}/bin
+PATH:=			${PATH}:${QTPREFIX}/bin
 
-SUBST_CLASSES+=         path
-SUBST_STAGE.path=       post-patch
-SUBST_FILES.path=       src/src.pro
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	src/src.pro
 SUBST_SED.path=          -e 's,xxPREFIXxx,${PREFIX},g'
 SUBST_MESSAGE.path=      Fixing hardcoded paths.
 

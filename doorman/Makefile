@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:41 shattered Exp $
 #
 
 DISTNAME=		doorman-0.8
@@ -14,7 +14,7 @@ DEPENDS=	lsof>4.7:../../sysutils/lsof
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS=		bison
+USE_TOOLS+=		bison
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

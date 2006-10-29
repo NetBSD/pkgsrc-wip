@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/09/11 06:32:14 udontknow Exp $
+# $NetBSD: options.mk,v 1.2 2006/10/29 08:32:43 shattered Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gobby
-PKG_SUPPORTED_OPTIONS=  gnome
-PKG_SUGGESTED_OPTIONS=  gnome
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gobby
+PKG_SUPPORTED_OPTIONS=	gnome
+PKG_SUGGESTED_OPTIONS=	gnome
 
 .include "../../mk/bsd.options.mk"
 

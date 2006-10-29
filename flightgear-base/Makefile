@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:43 shattered Exp $
 #
 
 DISTNAME=	fgfs-base-0.9.3
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Shared/ \
 		http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Shared/ \
 		ftp://ftp.de.flightgear.org/pub/fgfs/Shared/ \
 		ftp://obgyn.edu.pl/fgfs/Shared/
-EXTRACT_SUFX=   .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.flightgear.org/pub/fgfs/Shared/

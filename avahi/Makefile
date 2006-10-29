@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/10 18:29:58 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:38 shattered Exp $
 
 DISTNAME=		avahi-0.6.10
 CATEGORIES=		net
@@ -46,10 +46,10 @@ CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+= 	--disable-qt3
-CONFIGURE_ARGS+= 	--disable-qt4
-CONFIGURE_ARGS+= 	--disable-mono
-CONFIGURE_ARGS+= 	--disable-monodoc
+CONFIGURE_ARGS+=	--disable-qt3
+CONFIGURE_ARGS+=	--disable-qt4
+CONFIGURE_ARGS+=	--disable-mono
+CONFIGURE_ARGS+=	--disable-monodoc
 CONFIGURE_ARGS+=	--disable-doxygen-doc
 CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html

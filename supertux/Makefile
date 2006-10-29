@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/08 22:04:57 h2m Exp $
+# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:56 shattered Exp $
 #
 
 DISTNAME=		supertux-0.1.3
@@ -14,9 +14,9 @@ COMMENT=		2D jump'n run game in the style of the Super Mario ones
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
-BUILDLINK_API_DEPENDS.SDL= 	SDL>=1.2.9nb1
+BUILDLINK_API_DEPENDS.SDL=	SDL>=1.2.9nb1
 BUILDLINK_API_DEPENDS.SDL_mixer=	SDL_mixer>=1.2.6nb3
 BUILDLINK_API_DEPENDS.SDL_image=	SDL_image>=1.2.4nb2
 
