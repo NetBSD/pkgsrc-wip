@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/30 20:20:54 hugor Exp $
+
+SHA1 (fish-1.21.12.tar.bz2) = 8ab4da3ffc4acb5cd56e395bdbef83eb6c8cf8ab
+RMD160 (fish-1.21.12.tar.bz2) = b8172eee345fe84959acc88f242742bcf1018e50
+Size (fish-1.21.12.tar.bz2) = 706246 bytes
