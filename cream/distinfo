@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/06/23 20:44:39 dhowland Exp $
+$NetBSD: distinfo,v 1.5 2006/10/30 22:26:31 dhowland Exp $
 
-SHA1 (cream-0.36.tar.gz) = 8b86bb50e23c4282854b0a5721a3f852751cecfd
-RMD160 (cream-0.36.tar.gz) = 123240f8b9be824bbb2c5def1705105fcf7db39f
-Size (cream-0.36.tar.gz) = 759442 bytes
+SHA1 (cream-0.38.tar.gz) = 2bab745344b6553bc95a000446d094599eb3d837
+RMD160 (cream-0.38.tar.gz) = c65c31d214385d3f31ce96fed82d70683e19982c
+Size (cream-0.38.tar.gz) = 807537 bytes

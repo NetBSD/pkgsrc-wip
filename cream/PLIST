@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/23 20:44:39 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/10/30 22:26:31 dhowland Exp $
 bin/cream
 share/applications/cream.desktop
 share/icons/cream/cream.ico
@@ -31,6 +31,7 @@ share/vim/${VIM_SUBDIR}/cream/addons/cream-highlight-ctrlchars.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-highlight-mbyte.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-ispell.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-sort.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-slide-generator.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-spell-french.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-stamp-filename.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-str-invert.vim
@@ -111,7 +112,6 @@ share/vim/${VIM_SUBDIR}/cream/cream-columns.vim
 share/vim/${VIM_SUBDIR}/cream/cream-conf.example.vim
 share/vim/${VIM_SUBDIR}/cream/cream-devel.vim
 share/vim/${VIM_SUBDIR}/cream/cream-expertmode.vim
-share/vim/${VIM_SUBDIR}/cream/cream-explorer.vim
 share/vim/${VIM_SUBDIR}/cream/cream-filetype.vim
 share/vim/${VIM_SUBDIR}/cream/cream-find.vim
 share/vim/${VIM_SUBDIR}/cream/cream-gui.vim
@@ -184,6 +184,7 @@ share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot2.png
 share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot3-thumb.png
 share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot3.html
 share/vim/${VIM_SUBDIR}/cream/docs-html/screenshot3.png
+share/vim/${VIM_SUBDIR}/cream/docs-html/statusline-orig.png
 share/vim/${VIM_SUBDIR}/cream/docs-html/statusline-thumb.png
 share/vim/${VIM_SUBDIR}/cream/docs-html/statusline.html
 share/vim/${VIM_SUBDIR}/cream/docs-html/statusline.png
@@ -211,7 +212,6 @@ share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.gbk.vim
 share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.utf-8.vim
 share/vim/${VIM_SUBDIR}/cream/lang/strings_en_us.utf-8.vim
 share/vim/${VIM_SUBDIR}/cream/multvals.vim
-share/vim/${VIM_SUBDIR}/cream/opsplorer.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_1.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_2.vim
 share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_3.vim
