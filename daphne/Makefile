@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:41 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/10/30 16:09:44 dillo Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -13,7 +13,7 @@ COMMENT=		Emulator for Laserdisc arcade games
 
 WRKSRC=			${WRKDIR}/daphne
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c++
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		src/vldp2
 BUILD_DIRS=		src
