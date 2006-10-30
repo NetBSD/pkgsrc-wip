@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2006/10/29 08:32:40 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2006/10/30 18:24:55 thomasklausner Exp $
 
-DISTNAME=	cdrtools-2.01.01a18
+DISTNAME=	cdrtools-2.01.01a19
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2

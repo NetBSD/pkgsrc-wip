@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.4 2006/09/26 21:39:55 thomasklausner Exp $
+$NetBSD: patch-bb,v 1.5 2006/10/30 18:24:55 thomasklausner Exp $
 
---- mkisofs/mkisofs.c.orig	2006-09-24 13:22:59.000000000 +0000
+--- mkisofs/mkisofs.c.orig	2006-10-29 12:50:11.000000000 +0000
 +++ mkisofs/mkisofs.c
-@@ -2166,12 +2166,12 @@ args_ok:
+@@ -2035,12 +2035,12 @@ args_ok:
  		}
  	}
  	/* We don't need root privilleges anymore. */
