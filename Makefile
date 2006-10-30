@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2413 2006/10/29 14:41:23 cetrox Exp $
+# $Id: Makefile,v 1.2414 2006/10/30 17:25:26 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1072,6 +1072,7 @@ SUBDIR+=	pmars
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
+SUBDIR+=	policyd-weight
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
