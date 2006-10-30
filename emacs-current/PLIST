@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/26 23:27:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/10/30 18:23:46 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -811,6 +811,8 @@ share/emacs/${PKGVERSION}/lisp/calendar/cal-french.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-french.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-hebrew.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-hebrew.elc
+share/emacs/${PKGVERSION}/lisp/calendar/cal-html.el.gz
+share/emacs/${PKGVERSION}/lisp/calendar/cal-html.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-islam.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-islam.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-iso.el.gz
