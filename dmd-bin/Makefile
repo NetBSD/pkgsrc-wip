@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/30 22:45:30 shattered Exp $
 #
 
 DISTNAME=		dmd
@@ -29,12 +29,12 @@ do-install:
 	# docs
 	#
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
-	cd ${WRKSRC}/html/d && ${PAX} -rw -pe [a-z]* ${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC}/html/d && pax -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
 	#
 	# sources
 	#
 	${INSTALL_DATA_DIR} ${EMULDIR}/usr/src
-	cd ${WRKSRC}/src && ${PAX} -rw -pe * ${EMULDIR}/usr/src
+	cd ${WRKSRC}/src && pax -rw -pp * ${EMULDIR}/usr/src
 	#
 	# dmd.conf
 	#

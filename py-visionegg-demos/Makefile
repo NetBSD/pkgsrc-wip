@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/12 16:29:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2006/10/30 22:45:31 shattered Exp $
 #
 
 DISTNAME=		visionegg-0.9.9-demo
@@ -19,7 +19,7 @@ PY_VE_DEMO_DIR=		${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/demo
 
 do-install:
 	${INSTALL_DATA_DIR} ${PY_VE_DEMO_DIR}
-	cd ${WRKSRC}/demo && ${PAX} -rw -pe * ${PY_VE_DEMO_DIR}
+	cd ${WRKSRC}/demo && pax -rw -pp * ${PY_VE_DEMO_DIR}
 
 .include "../../wip/py-visionegg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

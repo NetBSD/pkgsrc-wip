@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/28 02:32:43 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/30 22:45:31 shattered Exp $
 bin/showrgb
-share/X11/rgb.txt
 man/man1/showrgb.1
+share/X11/rgb.txt
 @comment @dirrm share/X11

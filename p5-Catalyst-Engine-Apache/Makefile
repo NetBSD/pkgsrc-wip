@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:49 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/10/30 22:45:31 shattered Exp $
 
 DISTNAME=	Catalyst-Engine-Apache-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Engine-Apache/
 COMMENT=	Catalyst Apache Engines
 
-BUILD_DEPENDS=	p5-Catalyst>=5.50:../../wip/p5-Catalyst
+BUILD_DEPENDS+=	p5-Catalyst>=5.50:../../wip/p5-Catalyst
 
 PERL5_MODULE_TYPE=	Module::Build
 

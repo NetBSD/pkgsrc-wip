@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:50 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/30 22:45:31 shattered Exp $
 
 DISTNAME=	Catalyst-Plugin-Singleton-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Singleton//
-COMMENT=	Singleton to context.
+COMMENT=	Singleton to context
 
 PERL5_REQD+=	5.7.3
 

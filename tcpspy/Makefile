@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2006/10/30 22:45:31 shattered Exp $
 #
 
 DISTNAME=		tcpspy-1.7
@@ -8,7 +8,6 @@ MASTER_SITES=		http://www.mirrors.wiretapped.net/security/network-monitoring/tcp
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://freshmeat.net/projects/tcpspy/
 COMMENT=		TCP/IP connections logger
-
 
 ONLY_FOR_PLATFORM=	Linux-*-* # It uses /proc and some linux-defines
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:28 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2006/10/30 22:45:31 shattered Exp $
 #
 
 DISTNAME=	or1ksim-0.2.0rc3
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	bin share/examples/or1ksim share/doc/or1ksim
 USE_GNU_READLINE=	yes # uses rl_event_hook
 
 post-build:
-	${MV} ${WRKSRC}/sim.cfg ${WRKSRC}/or1ksim.cfg
+	mv ${WRKSRC}/sim.cfg ${WRKSRC}/or1ksim.cfg
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/or1ksim ${PREFIX}/bin
