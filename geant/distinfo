@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/10/30 11:31:34 hugor Exp $
+
+SHA1 (geant4.8.1.p01.tar.gz) = ababbbf4e836127649b224a734b220851bd9d937
+RMD160 (geant4.8.1.p01.tar.gz) = 19ec5a3ea9988d40c1bcced35b7d2915286ca997
+Size (geant4.8.1.p01.tar.gz) = 17291964 bytes
