@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/30 11:33:14 hugor Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/31 18:23:04 hugor Exp $
 geant/config/G4UI_BUILD.gmk
 geant/config/G4UI_USE.gmk
 geant/config/G4VIS_BUILD.gmk
@@ -4351,7 +4351,6 @@ geant/lib/Linux-g++/libG4optical.a
 geant/lib/Linux-g++/libG4parameterisation.a
 geant/lib/Linux-g++/libG4partman.a
 geant/lib/Linux-g++/libG4partutils.a
-geant/lib/Linux-g++/libG4persistency.a
 geant/lib/Linux-g++/libG4procman.a
 geant/lib/Linux-g++/libG4readout.a
 geant/lib/Linux-g++/libG4run.a
