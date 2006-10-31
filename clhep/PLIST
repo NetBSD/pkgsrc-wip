@@ -1,92 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/01 05:27:35 hugor Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/10/31 17:01:33 hugor Exp $
 bin/Cast-config
 bin/Evaluator-config
 bin/Exceptions-config
 bin/GenericFunctions-config
 bin/Geometry-config
-bin/HepMC-config
-bin/HepPDT-config
 bin/Matrix-config
 bin/Random-config
 bin/RandomObjects-config
 bin/RefCount-config
-bin/StdHep-config
 bin/Units-config
 bin/Vector-config
 bin/clhep-config
 bin/clheplib
-data/HepPDT/PDG_mass_width_1998.mc
-data/HepPDT/PDG_mass_width_1998_withSusy.mc
-data/HepPDT/PDG_mass_width_2000.mc
-data/HepPDT/PDG_mass_width_2001.mc
-data/HepPDT/PDG_mass_width_2002.mc
-data/HepPDT/PDG_mass_width_2004.mc
-examples/HepMC/GNUmakefile
-examples/HepMC/IO_Ascii.cc
-examples/HepMC/IO_Ascii.h
-examples/HepMC/RunAllExamples.job
-examples/HepMC/examplePythiaWriteHepMC.cc
-examples/HepMC/exampleReadHepMC.cc
-examples/HepMC/example_EventSelection.cc
-examples/HepMC/example_MyHerwig.cc
-examples/HepMC/example_MyPythia.cc
-examples/HepMC/example_MyPythiaOnlyToHepMC.cc
-examples/HepMC/example_MyPythiaWithEventSelection.cc
-examples/HepMC/example_UsingIterators.cc
-examples/HepMC/initpydata.F
-examples/HepMC/pythia.tbl
-examples/HepMC/testMethods.cc
-examples/HepMC/test_MakeUsingIteratorsInput.cc
-examples/HepPDT/GNUmakefile
-examples/HepPDT/ModeA.cpp
-examples/HepPDT/ModeA.hh
-examples/HepPDT/ModeAT.hh
-examples/HepPDT/ModeB.cpp
-examples/HepPDT/ModeB.hh
-examples/HepPDT/data/DECAY.EvtGen.DEC
-examples/HepPDT/data/decay.dec
-examples/HepPDT/data/evt.pdl
-examples/HepPDT/data/pdt.table
-examples/HepPDT/data/pythia.tbl
-examples/HepPDT/examDMF.cc
-examples/HepPDT/examListHerwig.cc
-examples/HepPDT/examListHerwig.out.save
-examples/HepPDT/examListHerwigInterface.F
-examples/HepPDT/examListIsajet.cc
-examples/HepPDT/examListIsajet.out.save
-examples/HepPDT/examListIsajetInterface.F
-examples/HepPDT/examListPythia.cc
-examples/HepPDT/examListPythia.lpt.save
-examples/HepPDT/examListPythia.out.save
-examples/HepPDT/examListPythiaInterface.F
-examples/HepPDT/examMyPDT.cc
-examples/HepPDT/examMyPDT.out.save
-examples/HepPDT/examReadEvtGen.cc
-examples/HepPDT/examReadEvtGen.out.save
-examples/HepPDT/examReadPDG.cc
-examples/HepPDT/examReadPDG.out.save
-examples/HepPDT/examReadPythia.cc
-examples/HepPDT/examReadPythia.out.save
-examples/HepPDT/examReadQQ.cc
-examples/HepPDT/examReadQQ.out.save
-examples/StdHep/GNUmakefile
-examples/StdHep/analyzeEvent.cc
-examples/StdHep/analyzeEvent.hh
-examples/StdHep/bookhist.F
-examples/StdHep/dummy.F
-examples/StdHep/examHerwigToStdHep.cc
-examples/StdHep/examPythiaToStdHep.cc
-examples/StdHep/hwghep.F
-examples/StdHep/hwtran.F
-examples/StdHep/lunhep.F
-examples/StdHep/lutran.F
-examples/StdHep/readPythia.cc
-examples/StdHep/readPythiaHerwig.cc
-examples/StdHep/readcxx.F
-examples/StdHep/stdflhwxsec.F
-examples/StdHep/stdflpyxsec.F
-examples/StdHep/stdhwgcxx.F
-examples/StdHep/stdpytcxx.F
 include/CLHEP/Cast/defs.h
 include/CLHEP/Cast/itos.h
 include/CLHEP/Evaluator/Evaluator.h
@@ -204,99 +129,6 @@ include/CLHEP/Geometry/Transform3D.h
 include/CLHEP/Geometry/Transform3D.icc
 include/CLHEP/Geometry/Vector3D.h
 include/CLHEP/Geometry/defs.h
-include/CLHEP/HepMC/CBInterface.h
-include/CLHEP/HepMC/CBhepevt.h
-include/CLHEP/HepMC/CBhepevt.icc
-include/CLHEP/HepMC/CBherwig.h
-include/CLHEP/HepMC/CBherwig.icc
-include/CLHEP/HepMC/ConvertHEPEVT.h
-include/CLHEP/HepMC/ConvertHerwig.h
-include/CLHEP/HepMC/DoubleConversion.hh
-include/CLHEP/HepMC/DummyDecayModel.h
-include/CLHEP/HepMC/Flow.h
-include/CLHEP/HepMC/GenEvent.h
-include/CLHEP/HepMC/GenEventConvert.h
-include/CLHEP/HepMC/GenEventConvert.icc
-include/CLHEP/HepMC/GenEventtoHEPEVT.icc
-include/CLHEP/HepMC/GenParticle.h
-include/CLHEP/HepMC/GenVertex.h
-include/CLHEP/HepMC/HEPEVTtoGenEvent.icc
-include/CLHEP/HepMC/HepMCConfig.h
-include/CLHEP/HepMC/ParticleDataTableConfig.h
-include/CLHEP/HepMC/Polarization.h
-include/CLHEP/HepMC/ReadHepMC.h
-include/CLHEP/HepMC/WeightContainer.h
-include/CLHEP/HepMC/WriteHepMC.h
-include/CLHEP/HepMC/defs.h
-include/CLHEP/HepMC/include/HerwigWrapper.h
-include/CLHEP/HepMC/include/HerwigWrapper6_4.h
-include/CLHEP/HepMC/include/PythiaWrapper.h
-include/CLHEP/HepMC/include/PythiaWrapper5_720.h
-include/CLHEP/HepMC/include/PythiaWrapper6_152.h
-include/CLHEP/HepMC/include/PythiaWrapper6_152_WIN32.h
-include/CLHEP/HepMC/include/PythiaWrapper6_2.h
-include/CLHEP/HepMC/include/PythiaWrapper6_2_WIN32.h
-include/CLHEP/HepMC/include/hepev4.h
-include/CLHEP/HepMC/include/hepev4.inc
-include/CLHEP/HepMC/include/stdhep.h
-include/CLHEP/HepMC/include/stdhep.inc
-include/CLHEP/HepPDT/CommonParticleData.hh
-include/CLHEP/HepPDT/CommonParticleData.icc
-include/CLHEP/HepPDT/Constituent.hh
-include/CLHEP/HepPDT/DMFactory.hh
-include/CLHEP/HepPDT/DMFactory.icc
-include/CLHEP/HepPDT/DecayChannel.hh
-include/CLHEP/HepPDT/DecayChannelT.hh
-include/CLHEP/HepPDT/DecayChannelT.icc
-include/CLHEP/HepPDT/DecayData.hh
-include/CLHEP/HepPDT/DecayDataT.hh
-include/CLHEP/HepPDT/DecayDataT.icc
-include/CLHEP/HepPDT/DecayModel.hh
-include/CLHEP/HepPDT/DecayModelBase.hh
-include/CLHEP/HepPDT/DefTable.hh
-include/CLHEP/HepPDT/DefaultConfig.hh
-include/CLHEP/HepPDT/MapVector.hh
-include/CLHEP/HepPDT/Measurement.hh
-include/CLHEP/HepPDT/Measurement.icc
-include/CLHEP/HepPDT/NullDecayModel.hh
-include/CLHEP/HepPDT/NullDecayModelT.hh
-include/CLHEP/HepPDT/PDGtoQQTable.hh
-include/CLHEP/HepPDT/ParticleData.hh
-include/CLHEP/HepPDT/ParticleDataT.hh
-include/CLHEP/HepPDT/ParticleDataT.icc
-include/CLHEP/HepPDT/ParticleDataTable.hh
-include/CLHEP/HepPDT/ParticleDataTableT.hh
-include/CLHEP/HepPDT/ParticleDataTableT.icc
-include/CLHEP/HepPDT/ParticleID.hh
-include/CLHEP/HepPDT/ParticleID.icc
-include/CLHEP/HepPDT/ParticleIDTranslations.hh
-include/CLHEP/HepPDT/ParticleName.hh
-include/CLHEP/HepPDT/ParticleTranslation.hh
-include/CLHEP/HepPDT/ParticleTranslation.icc
-include/CLHEP/HepPDT/QQChannel.hh
-include/CLHEP/HepPDT/QQDecay.hh
-include/CLHEP/HepPDT/QQDecayTable.hh
-include/CLHEP/HepPDT/QQStructs.hh
-include/CLHEP/HepPDT/ResonanceStructure.hh
-include/CLHEP/HepPDT/SimpleDecayModel.hh
-include/CLHEP/HepPDT/SimpleParticle.hh
-include/CLHEP/HepPDT/SpinState.hh
-include/CLHEP/HepPDT/SpinState.icc
-include/CLHEP/HepPDT/TableBuilder.hh
-include/CLHEP/HepPDT/TableBuilderHerwigT.icc
-include/CLHEP/HepPDT/TableBuilderIsajetT.icc
-include/CLHEP/HepPDT/TableBuilderPythiaT.icc
-include/CLHEP/HepPDT/TableBuilderT.hh
-include/CLHEP/HepPDT/TableBuilderT.icc
-include/CLHEP/HepPDT/TableBuilderTEvtGen.icc
-include/CLHEP/HepPDT/TableBuilderTQQ.icc
-include/CLHEP/HepPDT/TempParticleData.hh
-include/CLHEP/HepPDT/TranslationList.hh
-include/CLHEP/HepPDT/Version.hh
-include/CLHEP/HepPDT/convertTemporaryMap.icc
-include/CLHEP/HepPDT/defs.h
-include/CLHEP/HepPDT/pretend.hh
-include/CLHEP/HepPDT/stringtodouble.hh
 include/CLHEP/Matrix/DiagMatrix.h
 include/CLHEP/Matrix/DiagMatrix.icc
 include/CLHEP/Matrix/GenMatrix.h
@@ -376,37 +208,6 @@ include/CLHEP/RefCount/ZMhandleTo.icc
 include/CLHEP/RefCount/ZMuseCount.h
 include/CLHEP/RefCount/ZMuseCount.icc
 include/CLHEP/RefCount/defs.h
-include/CLHEP/StdHep/CBcm.hh
-include/CLHEP/StdHep/CBstdhep.hh
-include/CLHEP/StdHep/CBstdhep.icc
-include/CLHEP/StdHep/ConversionMethods.hh
-include/CLHEP/StdHep/RandomState.hh
-include/CLHEP/StdHep/ReadStdHep.hh
-include/CLHEP/StdHep/StdEvent.hh
-include/CLHEP/StdHep/StdEventConvert.hh
-include/CLHEP/StdHep/StdEventConvert.icc
-include/CLHEP/StdHep/StdHep.hh
-include/CLHEP/StdHep/StdHepVersion.h
-include/CLHEP/StdHep/StdHepfromStdEvent.icc
-include/CLHEP/StdHep/StdHeptoGenEvent.icc
-include/CLHEP/StdHep/StdRunInfo.hh
-include/CLHEP/StdHep/StdRunInfoConvert.hh
-include/CLHEP/StdHep/StdRunInfoConvert.icc
-include/CLHEP/StdHep/WriteStdHep.hh
-include/CLHEP/StdHep/defs.h
-include/CLHEP/StdHep/include/herwig61.inc
-include/CLHEP/StdHep/include/herwig64.inc
-include/CLHEP/StdHep/include/stdcm1.h
-include/CLHEP/StdHep/include/stdcm1.inc
-include/CLHEP/StdHep/include/stdcnt.h
-include/CLHEP/StdHep/include/stdcnt.inc
-include/CLHEP/StdHep/include/stdevent.h
-include/CLHEP/StdHep/include/stdlun.h
-include/CLHEP/StdHep/include/stdlun.inc
-include/CLHEP/StdHep/include/stdtmp.h
-include/CLHEP/StdHep/include/stdtmp.inc
-include/CLHEP/StdHep/include/stdver.h
-include/CLHEP/StdHep/include/stdver.inc
 include/CLHEP/Units/PhysicalConstants.h
 include/CLHEP/Units/SystemOfUnits.h
 include/CLHEP/Units/defs.h
@@ -465,10 +266,6 @@ lib/libCLHEP-GenericFunctions-${PKGVERSION}.a
 lib/libCLHEP-GenericFunctions-${PKGVERSION}.so
 lib/libCLHEP-Geometry-${PKGVERSION}.a
 lib/libCLHEP-Geometry-${PKGVERSION}.so
-lib/libCLHEP-HepMC-${PKGVERSION}.a
-lib/libCLHEP-HepMC-${PKGVERSION}.so
-lib/libCLHEP-HepPDT-${PKGVERSION}.a
-lib/libCLHEP-HepPDT-${PKGVERSION}.so
 lib/libCLHEP-Matrix-${PKGVERSION}.a
 lib/libCLHEP-Matrix-${PKGVERSION}.so
 lib/libCLHEP-Random-${PKGVERSION}.a
@@ -477,8 +274,6 @@ lib/libCLHEP-RandomObjects-${PKGVERSION}.a
 lib/libCLHEP-RandomObjects-${PKGVERSION}.so
 lib/libCLHEP-RefCount-${PKGVERSION}.a
 lib/libCLHEP-RefCount-${PKGVERSION}.so
-lib/libCLHEP-StdHep-${PKGVERSION}.a
-lib/libCLHEP-StdHep-${PKGVERSION}.so
 lib/libCLHEP-Vector-${PKGVERSION}.a
 lib/libCLHEP-Vector-${PKGVERSION}.so
 lib/libCLHEP.a
@@ -486,25 +281,13 @@ lib/libCLHEP.so
 @dirrm include/CLHEP/config
 @dirrm include/CLHEP/Vector
 @dirrm include/CLHEP/Units
-@dirrm include/CLHEP/StdHep/include
-@dirrm include/CLHEP/StdHep
 @dirrm include/CLHEP/RefCount
 @dirrm include/CLHEP/RandomObjects
 @dirrm include/CLHEP/Random
 @dirrm include/CLHEP/Matrix
-@dirrm include/CLHEP/HepPDT
-@dirrm include/CLHEP/HepMC/include
-@dirrm include/CLHEP/HepMC
 @dirrm include/CLHEP/Geometry
 @dirrm include/CLHEP/GenericFunctions
 @dirrm include/CLHEP/Exceptions
 @dirrm include/CLHEP/Evaluator
 @dirrm include/CLHEP/Cast
 @dirrm include/CLHEP
-@dirrm examples/StdHep
-@dirrm examples/HepPDT/data
-@dirrm examples/HepPDT
-@dirrm examples/HepMC
-@dirrm examples
-@dirrm data/HepPDT
-@dirrm data

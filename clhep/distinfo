@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/01 05:27:32 hugor Exp $
+$NetBSD: distinfo,v 1.2 2006/10/31 17:01:33 hugor Exp $
 
-SHA1 (clhep-1.9.2.3.tgz) = 0d09d322aff837f0e52b1ca48a524e6e90f725e2
-RMD160 (clhep-1.9.2.3.tgz) = 9f399cb79d3d5620ab967bf9b4a33a28478b8c91
-Size (clhep-1.9.2.3.tgz) = 5427972 bytes
+SHA1 (clhep-1.9.3.0.tgz) = d16910c56ee0d1b5a5c276a8ebcdb4f9a6fadd35
+RMD160 (clhep-1.9.3.0.tgz) = d4992420d996eb6778755774118269a93e8ec99a
+Size (clhep-1.9.3.0.tgz) = 5260153 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/09/29 23:56:36 hugor Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/10/31 17:01:33 hugor Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CLHEP_BUILDLINK3_MK:=	${CLHEP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	clhep
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}clhep
 
 .if ${CLHEP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.clhep+=	clhep>=1.9.2.3
+BUILDLINK_API_DEPENDS.clhep+=	clhep>=1.9.3.0
 BUILDLINK_PKGSRCDIR.clhep?=	../../wip/clhep
 BUILDLINK_DEPMETHOD.clhep?=	build
 .endif
