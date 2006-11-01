@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/11/01 10:28:23 kcf Exp $
+
+--- etc/xhtmlpp.orig	2006-11-01 05:14:02.000000000 -0500
++++ etc/xhtmlpp
+@@ -133,7 +133,7 @@
+ PROGRAM=$0
+ PROGNAME=`basename $0`
+ SHELL=/bin/sh
+-AWK=`type gawk nawk awk 2>/dev/null | head -1 | sed -e "s/.* //"` 
++AWK=awk 
+ 
+ ################################################################################
+ 
