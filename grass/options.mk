@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2006/08/23 18:39:43 brook1 Exp $
+# $NetBSD: options.mk,v 1.2 2006/11/01 22:22:04 brook1 Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grass
 PKG_SUPPORTED_OPTIONS=	ffmpeg fftw freetype glw gmath motif nls
 PKG_SUPPORTED_OPTIONS+=	odbc opengl readline sqlite terraflow
-PKG_SUGGESTED_OPTIONS=	ffmpeg fftw freetype glw gmath motif nls
+PKG_SUGGESTED_OPTIONS=	ffmpeg fftw freetype glw motif nls
 PKG_SUGGESTED_OPTIONS+=	odbc opengl readline sqlite terraflow
 
 .include "../../mk/bsd.options.mk"
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--without-glw
 .endif
 
 .if !empty(PKG_OPTIONS:Mgmath)
+USE_LANGUAGES+=		fortran
 CONFIGURE_ARGS+=	--with-blas
 CONFIGURE_ARGS+=	--with-lapack
 .include "../../math/blas/buildlink3.mk"
@@ -96,6 +97,7 @@ CONFIGURE_ARGS+=	--without-sqlite
 .endif
 
 .if !empty(PKG_OPTIONS:Mterraflow)
+USE_LANGUAGES+=		c++
 CONFIGURE_ARGS+=	--with-cxx
 PLIST_SRC+=		PLIST.terraflow
 .else
