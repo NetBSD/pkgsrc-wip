@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.17 2006/11/01 22:09:03 brook1 Exp $
 #
 
-DISTNAME=		gdal-1.3.2
-PKGNAME=		gdal-lib-1.3.2
+DISTNAME=		gdal-1.3.1
+PKGNAME=		gdal-lib-1.3.1
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gdal.org/dl/
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://gdal.org/
 COMMENT=		Translator library for raster geospatial data formats
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
