@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.3 2006/11/01 10:17:13 mwdavies Exp $
+
+--- src/m/amdx86-64.h.orig	2006-11-01 23:06:29.000000000 +1300
++++ src/m/amdx86-64.h
+@@ -125,7 +125,11 @@ Boston, MA 02110-1301, USA.  */
+ #undef LIB_STANDARD
+ #define LIB_STANDARD -lgcc -lc -lgcc /usr/lib/crtend.o
+ 
+-#else /* !__OpenBSD__ && !__FreeBSD__ */
++#elif defined(__NetBSD__)
++
++/* LIB_STANDARD and START_FILES set correctly in s/netbsd.h */
++
++#else /* !__OpenBSD__ && !__FreeBSD__ && !__NetBSD__ */
+ 
+ #undef START_FILES
+ #define START_FILES pre-crt0.o /usr/lib64/crt1.o /usr/lib64/crti.o
