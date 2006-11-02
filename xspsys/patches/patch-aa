@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
+$NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
 +#TARGETDIR=${PREFIX}/bin/xspsys
  #						# user specific install base dir
 -MODULE=xspsys
-+MODULE=.
++MODULE=
  #						# module (e.g. for cvs)
 -PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
 -##PWD=.
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
  #						# internet distribution dir
  
 -TMPDIR=$(HOME)/tmpdir
-+TMPDIR=$(TARGETDIR)/tmpdir
++TMPDIR=$(HOMEDIR)/tmpdir
  #						# temporary directory
  TMPFILE=$(TMPDIR)/tmpmk_
  #						# prename of temporary files
@@ -159,20 +159,22 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
-@@ -513,17 +471,19 @@ CDOC_CORE_FILES=\
+@@ -513,17 +471,20 @@ CDOC_CORE_FILES=\
  
  ### targets ###
  
 -install: \
 +compile: \
  	mkdirs \
- 	$(CVSMAKEFILE) mkcvs \
+-	$(CVSMAKEFILE) mkcvs \
++	#$(CVSMAKEFILE) mkcvs \
  	all \
  	helpdoc \
 -	$(CONFIGFILE) \
 +	$(CONFIGFILE)
 +
 +install: \
++	mkinstalldirs \
  	installadmin \
  	installapputil \
 -	xspjsys \
@@ -184,7 +186,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
-@@ -554,7 +514,7 @@ installapputil: \
+@@ -554,7 +515,7 @@ installapputil: \
  
  ################################################################################
  
@@ -193,7 +195,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
  	$(SCCS_FILES) \
  	$(LIBXSPD) \
  	$(LIBCMN) \
-@@ -748,8 +708,8 @@ lp:	
+@@ -748,8 +709,8 @@ lp:	
  ################################################################################
  
  mkdirs:
@@ -204,7 +206,20 @@ $NetBSD: patch-aa,v 1.5 2006/11/01 10:24:46 kcf Exp $
  	    $(SRCDIR) \
  	    $(LIBDIR) \
  	    $(OBJDIR) \
-@@ -1183,6 +1143,7 @@ $(INCLADMXSP)/admchart.h: $(INCLXSP)/htt
+@@ -758,6 +719,12 @@ mkdirs:
+ 	    $(DISTRDIR) \
+ 	    $(INTERNETDIR) \
+ 	    $(DOCDIR) \
++	    2>/dev/null
++	
++################################################################################
++
++mkinstalldirs:
++	-mkdir -p \
+ 	    $(INSTALLDIR) \
+ 	    $(XSPDIR) \
+ 	    $(APPUTILDIR) \
+@@ -1183,6 +1150,7 @@ $(INCLADMXSP)/admchart.h: $(INCLXSP)/htt
  	MSG="(using commbuf)" ; \
  	[ -f $$SRCFIL ] && \
  	echo " preprocessing $$SRCFIL -> $$DSTFIL  $$MSG"; \
