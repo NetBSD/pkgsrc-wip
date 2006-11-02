@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/30 18:23:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/11/02 07:46:40 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2552,6 +2552,8 @@ share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
 share/emacs/${PKGVERSION}/lisp/tumme.el.gz
 share/emacs/${PKGVERSION}/lisp/tumme.elc
+share/emacs/${PKGVERSION}/lisp/tutorial.el.gz
+share/emacs/${PKGVERSION}/lisp/tutorial.elc
 share/emacs/${PKGVERSION}/lisp/type-break.el.gz
 share/emacs/${PKGVERSION}/lisp/type-break.elc
 share/emacs/${PKGVERSION}/lisp/uniquify.el.gz
