@@ -1,23 +1,25 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.2 2006/11/02 11:35:46 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/11/02 11:37:58 jsonn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBXEVIE_BUILDLINK3_MK:=	${LIBXEVIE_BUILDLINK3_MK}+
+LIBXCOMPOSITE_BUILDLINK3_MK:=	${LIBXCOMPOSITE_BUILDLINK3_MK}+
 
 .if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libXevie
+BUILDLINK_DEPENDS+=	libXcomposite
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXevie}
-BUILDLINK_PACKAGES+=	libXevie
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXevie
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXcomposite}
+BUILDLINK_PACKAGES+=	libXcomposite
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXcomposite
 
-.if ${LIBXEVIE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libXevie+=	libXevie>=1.0.2
-BUILDLINK_PKGSRCDIR.libXevie?=	../../wip/libXevie
-.endif	# LIBXEVIE_BUILDLINK3_MK
+.if ${LIBXCOMPOSITE_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libXcomposite+=	libXcomposite>=0.3.1
+BUILDLINK_PKGSRCDIR.libXcomposite?=	../../wip/libXcomposite
+.endif	# LIBXCOMPOSITE_BUILDLINK3_MK
 
-.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/compositeproto/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
 .include "../../wip/libX11/buildlink3.mk"
 .include "../../wip/libXext/buildlink3.mk"
+.include "../../wip/libXfixes/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
