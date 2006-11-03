@@ -1,4 +1,0 @@
-on netbsd current
-XpJob.c: In function `XpStartJob':
-XpJob.c:111: error: too few arguments to function `getpwuid_r'
-

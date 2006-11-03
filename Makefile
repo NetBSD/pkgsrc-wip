@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2417 2006/11/03 20:29:58 jsonn Exp $
+# $Id: Makefile,v 1.2418 2006/11/03 22:17:10 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -250,7 +250,6 @@ SUBDIR+=	epplets
 SUBDIR+=	erc
 SUBDIR+=	esdl
 SUBDIR+=	ethtool
-SUBDIR+=	evieext
 SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
@@ -525,24 +524,8 @@ SUBDIR+=	lhs2tex
 SUBDIR+=	libFS
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
-SUBDIR+=	libXTrap
-SUBDIR+=	libXaw
 SUBDIR+=	libXcomposite
 SUBDIR+=	libXcursor
-SUBDIR+=	libXdamage
-SUBDIR+=	libXevie
-SUBDIR+=	libXfixes
-SUBDIR+=	libXfont
-SUBDIR+=	libXft
-SUBDIR+=	libXinerama
-SUBDIR+=	libXmu
-SUBDIR+=	libXp
-SUBDIR+=	libXpm
-SUBDIR+=	libXrandr
-SUBDIR+=	libXrender
-SUBDIR+=	libXres
-SUBDIR+=	libXt
-SUBDIR+=	libXv
 SUBDIR+=	libXvMC
 SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
@@ -1212,7 +1195,6 @@ SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	rep-gtk2
-SUBDIR+=	resourceproto
 SUBDIR+=	rgb
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
