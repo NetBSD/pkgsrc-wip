@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/17 18:32:03 jeremy-c-reed Exp $
-include/X11/Xdmcp.h
-lib/libXdmcp.la
-lib/pkgconfig/xdmcp.pc
