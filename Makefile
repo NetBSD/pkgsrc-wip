@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2418 2006/11/03 22:17:10 jsonn Exp $
+# $Id: Makefile,v 1.2419 2006/11/03 22:29:03 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -525,7 +525,6 @@ SUBDIR+=	libFS
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libXcomposite
-SUBDIR+=	libXcursor
 SUBDIR+=	libXvMC
 SUBDIR+=	libXxf86misc
 SUBDIR+=	libXxf86vm
