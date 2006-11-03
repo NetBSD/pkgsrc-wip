@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/05 15:54:34 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/03 16:53:26 jsonn Exp $
 
 DISTNAME=	xorg-server-1.1.99.3
 CATEGORIES=	x11
@@ -43,7 +43,7 @@ BUILDLINK_API_DEPENDS.xkbui+=		xkbui>=1.0.2
 .include "../../wip/libXxf86misc/buildlink3.mk"
 .include "../../wip/libXxf86vm/buildlink3.mk"
 .include "../../wip/libdrm/buildlink3.mk"
-.include "../../wip/libfontenc/buildlink3.mk"
+.include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../wip/liblbxutil/buildlink3.mk"
 .include "../../wip/libxkbfile/buildlink3.mk"
 .include "../../wip/libxkbui/buildlink3.mk"
