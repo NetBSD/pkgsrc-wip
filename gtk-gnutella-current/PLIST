@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/29 15:42:39 larnor Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/11/04 22:43:11 larnor Exp $
 bin/gtk-gnutella
 share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
@@ -48,17 +48,17 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtk-gnutella.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk-gnutella.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtk-gnutella.mo
 share/pixmaps/gtk-gnutella.png
 share/pixmaps/gtk-gnutella.svg
-@dirrm share/pixmaps
 @dirrm share/gtk-gnutella/pixmaps
 @dirrm share/gtk-gnutella/ja
 @dirrm share/gtk-gnutella/en
 @dirrm share/gtk-gnutella/el
 @dirrm share/gtk-gnutella
-@dirrm share/applications
