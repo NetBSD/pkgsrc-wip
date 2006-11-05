@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/05 18:17:34 kh-p Exp $
+
+SHA1 (libixp.tar.gz) = 8723886121d8e4bc44eb5860307e524cc78af191
+RMD160 (libixp.tar.gz) = 71cbdb849c231066b2ac5d1b651969a1f5079cd8
+Size (libixp.tar.gz) = 55892 bytes
+SHA1 (patch-aa) = 04df3aceb82dd39c898438f19c6eb563fbee4aee

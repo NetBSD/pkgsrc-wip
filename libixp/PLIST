@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/05 18:17:34 kh-p Exp $
+bin/ixpc
+include/ixp.h
+lib/libixp.a
+man/man1/ixpc.1
