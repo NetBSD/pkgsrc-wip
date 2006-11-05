@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2419 2006/11/03 22:29:03 jsonn Exp $
+# $Id: Makefile,v 1.2420 2006/11/05 00:54:27 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -521,7 +521,6 @@ SUBDIR+=	lde
 SUBDIR+=	ldp
 SUBDIR+=	leo
 SUBDIR+=	lhs2tex
-SUBDIR+=	libFS
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libXcomposite
@@ -1188,7 +1187,6 @@ SUBDIR+=	rdup
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
-SUBDIR+=	recordproto
 SUBDIR+=	redfang
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
