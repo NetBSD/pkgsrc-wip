@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/11/06 12:19:41 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/11/06 13:24:17 marttikuparinen Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -112,12 +112,12 @@ share/xfce4/helpers/urxvt.desktop
 share/xfce4/helpers/w3m.desktop
 share/xfce4/helpers/xterm.desktop
 @dirrm share/xfce4/helpers
-@dirrm share/xfce4/doc/fr/images
-@dirrm share/xfce4/doc/fr
-@dirrm share/xfce4/doc/ja/images
-@dirrm share/xfce4/doc/ja
-@dirrm share/xfce4/doc/C/images
-@dirrm share/xfce4/doc/C
 @dirrm include/exo-0.3/exo
 @dirrm include/exo-0.3
+@unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/ja/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/ja 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}
