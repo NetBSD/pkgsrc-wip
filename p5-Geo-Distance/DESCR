@@ -1,0 +1,5 @@
+Geo::Distance is a Perl module to calculate the distance between
+two geograpical coordinates. Currently there is support for
+finding the closest locations within a specified distance, to
+find the closest number of points to a specified point, and to do
+basic point-to-point distance calculations.
