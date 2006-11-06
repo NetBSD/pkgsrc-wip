@@ -1,0 +1,4 @@
+GPS::Garmin provides an object-oriented interface to Garmin
+GPS receivers. This way it's possible to access the stored
+tracks and waypoint on the receiver using the serial port.
+Right now there is no possibility to tranfer to the device.
