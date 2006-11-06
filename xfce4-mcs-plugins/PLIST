@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/11/06 11:00:26 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/11/06 12:19:41 marttikuparinen Exp $
 lib/xfce4/mcs-plugins/display_plugin.la
 lib/xfce4/mcs-plugins/fm_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.la
@@ -87,3 +87,4 @@ share/xfce4/doc/it/xfce-mcs-plugins.html
 @dirrm lib/xfce4/mcs-plugins
 @dirrm share/xfce-mcs-plugins/shortcuts
 @dirrm share/xfce-mcs-plugins
+@unexec ${RMDIR} %D/lib/xfce4 2>/dev/null || ${TRUE}

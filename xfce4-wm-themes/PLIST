@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/07/17 13:21:17 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/11/06 12:19:41 marttikuparinen Exp $
 share/themes/Adept/xfwm4/README
 share/themes/Adept/xfwm4/bottom-active.xpm
 share/themes/Adept/xfwm4/bottom-inactive.xpm
@@ -3979,7 +3979,6 @@ share/themes/Xfce/xfwm4/top-left-inactive.xpm
 share/themes/Xfce/xfwm4/top-right-active.xpm
 share/themes/Xfce/xfwm4/top-right-inactive.xpm
 @dirrm share/themes/Xfce/xfwm4
-@unexec ${RMDIR} %D/share/themes/Xfce 2>/dev/null || ${TRUE}
 @dirrm share/themes/Wildbush/xfwm4
 @dirrm share/themes/Wildbush
 @dirrm share/themes/Waza/xfwm4
@@ -4144,3 +4143,4 @@ share/themes/Xfce/xfwm4/top-right-inactive.xpm
 @dirrm share/themes/Agua
 @dirrm share/themes/Adept/xfwm4
 @dirrm share/themes/Adept
+@unexec ${RMDIR} %D/share/themes/Xfce 2>/dev/null || ${TRUE}
