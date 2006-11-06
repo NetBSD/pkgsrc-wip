@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/09/04 08:54:03 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/11/06 11:00:25 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXFCE4MCS_BUILDLINK3_MK:=	${LIBXFCE4MCS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libxfce4mcs
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxfce4mcs
 
 .if ${LIBXFCE4MCS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libxfce4mcs+=	libxfce4mcs>=4.3.99.1
+BUILDLINK_API_DEPENDS.libxfce4mcs+=	libxfce4mcs>=4.3.99.2
 BUILDLINK_PKGSRCDIR.libxfce4mcs?=	../../wip/libxfce4mcs
 .endif	# LIBXFCE4MCS_BUILDLINK3_MK
 

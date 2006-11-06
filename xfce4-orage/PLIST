@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/04 08:54:04 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/11/06 11:00:26 marttikuparinen Exp $
 bin/orage
 lib/xfce4/mcs-plugins/orage_plugin.la
 libexec/xfce4/panel-plugins/orageclock
@@ -14,7 +14,9 @@ share/locale/bn_IN/LC_MESSAGES/orage.mo
 share/locale/ca/LC_MESSAGES/orage.mo
 share/locale/cs/LC_MESSAGES/orage.mo
 share/locale/de/LC_MESSAGES/orage.mo
+share/locale/dz/LC_MESSAGES/orage.mo
 share/locale/el/LC_MESSAGES/orage.mo
+share/locale/en_AU/LC_MESSAGES/orage.mo
 share/locale/en_GB/LC_MESSAGES/orage.mo
 share/locale/eo/LC_MESSAGES/orage.mo
 share/locale/es/LC_MESSAGES/orage.mo

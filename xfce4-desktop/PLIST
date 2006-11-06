@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/09/04 08:54:04 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/11/06 11:00:25 marttikuparinen Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -34,6 +34,7 @@ share/examples/xfce4/desktop/menu.xml.uk
 share/examples/xfce4/desktop/menu.xml.vi
 share/examples/xfce4/desktop/menu.xml.zh_TW
 share/examples/xfce4/desktop/xfce-registered-categories.xml
+share/examples/xfce4/desktop/xfce-registered-categories.xml.ca
 share/examples/xfce4/desktop/xfce-registered-categories.xml.cs
 share/examples/xfce4/desktop/xfce-registered-categories.xml.de
 share/examples/xfce4/desktop/xfce-registered-categories.xml.el
@@ -67,6 +68,7 @@ share/locale/bn_IN/LC_MESSAGES/xfdesktop.mo
 share/locale/ca/LC_MESSAGES/xfdesktop.mo
 share/locale/cs/LC_MESSAGES/xfdesktop.mo
 share/locale/de/LC_MESSAGES/xfdesktop.mo
+share/locale/dz/LC_MESSAGES/xfdesktop.mo
 share/locale/el/LC_MESSAGES/xfdesktop.mo
 share/locale/en_GB/LC_MESSAGES/xfdesktop.mo
 share/locale/eo/LC_MESSAGES/xfdesktop.mo

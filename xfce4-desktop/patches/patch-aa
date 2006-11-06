@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/07/14 10:43:16 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2006/11/06 11:00:25 marttikuparinen Exp $
 
---- Makefile.in.orig	2006-07-10 12:14:51.000000000 +0000
-+++ Makefile.in	2006-07-14 08:24:47.000000000 +0000
-@@ -313,7 +313,7 @@
+--- Makefile.in.orig	2006-11-05 11:15:02.000000000 +0000
++++ Makefile.in	2006-11-06 12:36:51.000000000 +0000
+@@ -317,7 +317,7 @@
  
  SUBDIRS = backdrops common doc po settings src modules pixmaps \
  	$(am__append_1) $(am__append_2)

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/10/12 07:42:59 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/11/06 11:00:26 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PRINT_BUILDLINK3_MK:=	${XFCE4_PRINT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-print
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-print
 
 .if ${XFCE4_PRINT_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-print+=	xfce4-print>=4.3.99.1nb1
+BUILDLINK_API_DEPENDS.xfce4-print+=	xfce4-print>=4.3.99.2
 BUILDLINK_PKGSRCDIR.xfce4-print?=	../../wip/xfce4-print
 .endif	# XFCE4_PRINT_BUILDLINK3_MK
 

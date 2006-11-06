@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/04 08:54:04 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/11/06 11:00:25 marttikuparinen Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -38,12 +38,14 @@ libexec/exo-helper-0.3
 man/man1/exo-csource.1
 man/man1/exo-open.1
 share/applications/exo-preferred-applications.desktop
+share/icons/hicolor/24x24/apps/preferences-desktop-default-applications.png
 share/icons/hicolor/48x48/apps/applications-internet.png
 share/icons/hicolor/48x48/apps/applications-other.png
 share/icons/hicolor/48x48/apps/preferences-desktop-default-applications.png
 share/locale/ca/LC_MESSAGES/libexo-0.3.mo
 share/locale/cs/LC_MESSAGES/libexo-0.3.mo
 share/locale/de/LC_MESSAGES/libexo-0.3.mo
+share/locale/dz/LC_MESSAGES/libexo-0.3.mo
 share/locale/el/LC_MESSAGES/libexo-0.3.mo
 share/locale/en_GB/LC_MESSAGES/libexo-0.3.mo
 share/locale/es/LC_MESSAGES/libexo-0.3.mo
@@ -54,9 +56,11 @@ share/locale/fr/LC_MESSAGES/libexo-0.3.mo
 share/locale/gl/LC_MESSAGES/libexo-0.3.mo
 share/locale/he/LC_MESSAGES/libexo-0.3.mo
 share/locale/hu/LC_MESSAGES/libexo-0.3.mo
+share/locale/it/LC_MESSAGES/libexo-0.3.mo
 share/locale/ja/LC_MESSAGES/libexo-0.3.mo
 share/locale/ka/LC_MESSAGES/libexo-0.3.mo
 share/locale/lt/LC_MESSAGES/libexo-0.3.mo
+share/locale/nl/LC_MESSAGES/libexo-0.3.mo
 share/locale/pl/LC_MESSAGES/libexo-0.3.mo
 share/locale/pt_BR/LC_MESSAGES/libexo-0.3.mo
 share/locale/ro/LC_MESSAGES/libexo-0.3.mo
@@ -68,6 +72,11 @@ share/xfce4/doc/C/images/exo-preferred-applications-internet.png
 share/xfce4/doc/C/images/exo-preferred-applications-utilities.png
 share/xfce4/doc/C/images/exo-preferred-applications-webbrowser-custom.png
 share/xfce4/doc/C/images/exo-preferred-applications-webbrowser-menu.png
+share/xfce4/doc/fr/exo-preferred-applications.html
+share/xfce4/doc/fr/images/exo-preferred-applications-internet.png
+share/xfce4/doc/fr/images/exo-preferred-applications-utilities.png
+share/xfce4/doc/fr/images/exo-preferred-applications-webbrowser-custom.png
+share/xfce4/doc/fr/images/exo-preferred-applications-webbrowser-menu.png
 share/xfce4/doc/ja/exo-preferred-applications.html
 share/xfce4/doc/ja/images/exo-preferred-applications-internet.png
 share/xfce4/doc/ja/images/exo-preferred-applications-utilities.png

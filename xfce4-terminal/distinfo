@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2006/11/06 11:00:27 marttikuparinen Exp $
 
-SHA1 (Terminal-0.2.5.6rc1.tar.bz2) = 9b464d9f614f4f7e5faebea1631b1672126f5d29
-RMD160 (Terminal-0.2.5.6rc1.tar.bz2) = 92dcb57eff7755e5cba6d67ad4e2a26e098779f4
-Size (Terminal-0.2.5.6rc1.tar.bz2) = 1546043 bytes
+SHA1 (Terminal-0.2.5.8rc2.tar.bz2) = d1ec2c6cdb9051e5c182f3ce2a029b67202789c8
+RMD160 (Terminal-0.2.5.8rc2.tar.bz2) = 40d9cddb88959ea142cb70d987b8ded54a986ad9
+Size (Terminal-0.2.5.8rc2.tar.bz2) = 1561665 bytes

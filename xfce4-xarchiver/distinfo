@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/09/04 08:54:05 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2006/11/06 11:00:28 marttikuparinen Exp $
 
-SHA1 (xarchiver-0.4.0.tar.bz2) = 1744e1c30df1edb6c62c9216238edd0818b2ff09
-RMD160 (xarchiver-0.4.0.tar.bz2) = 823d2bbe952a2f21ef0e9593eec976a602ba7d83
-Size (xarchiver-0.4.0.tar.bz2) = 407510 bytes
+SHA1 (xarchiver-0.4.2rc2.tar.bz2) = 8174d8e9cf178480a926ebd0dd18e6396475b769
+RMD160 (xarchiver-0.4.2rc2.tar.bz2) = f82a79ca73619bbab9a28b5fd72f204124467675
+Size (xarchiver-0.4.2rc2.tar.bz2) = 646034 bytes

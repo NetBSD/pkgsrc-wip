@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/07 10:12:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/06 11:00:25 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -17,7 +17,7 @@ CONF_FILES+=		${EGDIR:Q}/menu.xml.${l:Q} \
 .endfor
 CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml \
 			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml
-.for l in cs de el es eu fi he hu ja nl pl pt_BR ro ru sk sv zh_CN zh_TW
+.for l in ca cs de el es eu fi he hu ja nl pl pt_BR ro ru sk sv zh_CN zh_TW
 CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml.${l:Q} \
 			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml.${l:Q}
 .endfor

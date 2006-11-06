@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2006/11/06 11:00:26 marttikuparinen Exp $
 
-SHA1 (mousepad-0.2.8.tar.bz2) = da8c48661c22c03284bada51da040f0c1812d192
-RMD160 (mousepad-0.2.8.tar.bz2) = 5b7c10c15ca530bdff6bc2a4d89aabc67770ed15
-Size (mousepad-0.2.8.tar.bz2) = 334648 bytes
+SHA1 (mousepad-0.2.10.tar.bz2) = cf53cb77ee5b10cfea55a74c2a45a431455eed4e
+RMD160 (mousepad-0.2.10.tar.bz2) = 49f4bbb7737d57f299e970a20a51d22e0a06848a
+Size (mousepad-0.2.10.tar.bz2) = 318200 bytes

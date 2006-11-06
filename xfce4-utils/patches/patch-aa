@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/07/14 10:55:31 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.5 2006/11/06 11:00:27 marttikuparinen Exp $
 
---- scripts/Makefile.in.orig	2006-07-10 11:56:16.000000000 +0000
-+++ scripts/Makefile.in	2006-07-14 09:18:18.000000000 +0000
-@@ -232,7 +232,7 @@
+--- scripts/Makefile.in.orig	2006-11-05 11:08:43.000000000 +0000
++++ scripts/Makefile.in	2006-11-06 12:47:55.000000000 +0000
+@@ -239,7 +239,7 @@
  	-e 's,@BROWSER_DEFAULT\@,@BROWSER_DEFAULT@,g' \
  	-e 's,@TERMINAL_DEFAULT\@,@TERMINAL_DEFAULT@,g'
  

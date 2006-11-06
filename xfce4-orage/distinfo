@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/09/04 08:54:04 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.3 2006/11/06 11:00:26 marttikuparinen Exp $
 
-SHA1 (orage-4.3.99.1.tar.bz2) = 3aa464c279590b178fe1dc257b2f376772c69646
-RMD160 (orage-4.3.99.1.tar.bz2) = b5599ebb32fe85dbc210661503c2691ff11c23a8
-Size (orage-4.3.99.1.tar.bz2) = 1566016 bytes
+SHA1 (orage-4.3.99.2.tar.bz2) = 25260668597baa654409890455bd8ce80c99683e
+RMD160 (orage-4.3.99.2.tar.bz2) = 0a057844980f93186da7b6a71f0e14affad22d76
+Size (orage-4.3.99.2.tar.bz2) = 1626060 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/10/12 08:16:20 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/11/06 11:00:27 marttikuparinen Exp $
 bin/Thunar
 bin/thunar
 etc/xdg/Thunar/uca.xml
@@ -97,6 +97,7 @@ share/icons/hicolor/scalable/apps/Thunar.svg
 share/locale/ca/LC_MESSAGES/Thunar.mo
 share/locale/cs/LC_MESSAGES/Thunar.mo
 share/locale/de/LC_MESSAGES/Thunar.mo
+share/locale/dz/LC_MESSAGES/Thunar.mo
 share/locale/el/LC_MESSAGES/Thunar.mo
 share/locale/eo/LC_MESSAGES/Thunar.mo
 share/locale/es/LC_MESSAGES/Thunar.mo
