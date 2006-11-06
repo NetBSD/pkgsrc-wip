@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/11/06 11:00:26 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/11/06 11:19:30 marttikuparinen Exp $
 bin/xfce4-iconbox
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
@@ -145,5 +145,7 @@ share/xfce4/panel-plugins/windowlist.desktop
 @unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/libexec/xfce4 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/xdg/xfce4 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/xdg 2>/dev/null || ${TRUE}
