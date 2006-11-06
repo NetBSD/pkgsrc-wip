@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2420 2006/11/05 00:54:27 kristerw Exp $
+# $Id: Makefile,v 1.2421 2006/11/06 21:59:15 uhabel Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -898,6 +898,8 @@ SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
+SUBDIR+=	p5-GPS-Garmin
+SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
@@ -949,6 +951,8 @@ SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RPC-XML
+SUBDIR+=	p5-RRD-Simple
+SUBDIR+=	p5-RRDTool-OO
 SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-Set-Object
