@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
+$NetBSD: patch-aa,v 1.7 2006/11/06 05:47:36 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -68,67 +68,28 @@
+@@ -68,75 +68,31 @@
  #                                                                              #
  ################################################################################
  
@@ -45,14 +45,12 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
 -#						# must not defined as "/" only
 -
 -TARGETDIR=/usr2/js
-+#TARGETDIR=${PREFIX}/bin/xspsys
- #						# user specific install base dir
+-#						# user specific install base dir
 -MODULE=xspsys
-+MODULE=
- #						# module (e.g. for cvs)
+-#						# module (e.g. for cvs)
 -PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
 -##PWD=.
-+#PWD=.
++PWD=${TARGETDIR}
  #                                               # home directory
  
  ### root dir of java core classes ###
@@ -74,25 +72,41 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  
 -CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
 +CONFIGFILE=$(TARGETDIR)/xspd.conf
++#BUILDCONFIGFILE=$(INSTALLDIR)/xspd.conf
  #						# config file
  #						# NOTE: must be same path as
  #						# $(INSTALLDIR)
-@@ -166,8 +127,6 @@ IDENT=0
+ 
+ ### configuration and other file directory ###
+ 
+-ETCDIR=$(PWD)/etc
+-#						# etc dir
+ 
+ ### default parameter setting ###
+ 
+@@ -166,8 +122,8 @@ IDENT=0
  
  HOMEDIR=$(PWD)
  #						# user specific home directory
 -UTILDIR=/usr2/util
 -#						# user specific utility dir
++ETCDIR=$(HOMEDIR)/etc
++#						# etc dir
  SRCDIR=$(HOMEDIR)/src
  #						# source directory
  OBJDIR=$(HOMEDIR)/obj
-@@ -182,12 +141,12 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
+@@ -178,16 +134,16 @@ LIBDIR=$(HOMEDIR)/lib
+ #						# library directory
+ DOCDIR=$(HOMEDIR)/xspdoc
+ #						# documentation directory
++#INSTALLDIR=$(HOMEDIR)/installdir
++#						# installation directory
+ CDOC_IF_DIR=$(HOMEDIR)/doc
  #						# C interface documentation dir
  CDOC_CORE_DIR=$(HOMEDIR)/doc_core
  #						# core documentation dir
 -INSTALLDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+INSTALLDIR=$(TARGETDIR)
- #						# installation directory
+-#						# installation directory
  
 -XSPDIR=$(TARGETDIR)/$(SUBDIR)html/test
 +XSPDIR=$(TARGETDIR)
@@ -102,7 +116,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,13 +175,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+@@ -216,13 +172,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
@@ -118,7 +132,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  ##CFLAGSX=-O3 -funroll-loops
  #						# C-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
-@@ -232,7 +191,7 @@ CFLAGSX=-g -O
+@@ -232,7 +188,7 @@ CFLAGSX=-g -O
  #						# C-flags SUN, gcc, 32/64-bit
  ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
  #						# C-flags SUN, SUN-cc, 32-bit
@@ -127,7 +141,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  #						# C-flags NetBSD, pentium
  
  CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
-@@ -252,7 +211,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+@@ -252,7 +208,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
  #						# -DVHASHTABNAM=0   1/0
  
  #						# flags for cc-link option
@@ -136,7 +150,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  #						# link-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
  ##CLDFLAGS=-lcrypt -lxnet
-@@ -261,11 +220,10 @@ CLDFLAGS=-lcrypt
+@@ -261,11 +217,10 @@ CLDFLAGS=-lcrypt
  #						# link-flags SUN, gcc, 32/64-bit
  ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
  #						# link-flags SUN, cc, 32-bit
@@ -150,7 +164,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  #						# HTML preprocessor
  
  #BIT7=-bit7
-@@ -319,7 +277,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
+@@ -319,7 +274,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
  	    export OUTP MSG ; \
  	fi ; \
  	test -f $< && \
@@ -159,21 +173,15 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
-@@ -513,17 +471,20 @@ CDOC_CORE_FILES=\
- 
+@@ -514,16 +469,12 @@ CDOC_CORE_FILES=\
  ### targets ###
  
--install: \
-+compile: \
- 	mkdirs \
+ install: \
+-	mkdirs \
 -	$(CVSMAKEFILE) mkcvs \
-+	#$(CVSMAKEFILE) mkcvs \
- 	all \
- 	helpdoc \
+-	all \
+-	helpdoc \
 -	$(CONFIGFILE) \
-+	$(CONFIGFILE)
-+
-+install: \
 +	mkinstalldirs \
  	installadmin \
  	installapputil \
@@ -186,7 +194,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
-@@ -554,7 +515,7 @@ installapputil: \
+@@ -554,7 +505,7 @@ installapputil: \
  
  ################################################################################
  
@@ -195,18 +203,17 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  	$(SCCS_FILES) \
  	$(LIBXSPD) \
  	$(LIBCMN) \
-@@ -748,8 +709,8 @@ lp:	
+@@ -562,6 +513,9 @@ all:	\
+ 	$(EXEDIR)/xspd \
+ 	$(XSPDIR)/xspanalyze
+ 	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- make `basename \`pwd\`` ready ---"
++	helpdoc \
++	$(BUILDCONFIGFILE)
++
+ 
  ################################################################################
  
- mkdirs:
--	-@mkdir -p $(TMPDIR) 2>/dev/null
--	-@mkdir -p \
-+	-mkdir -p $(TMPDIR) 2>/dev/null
-+	-mkdir -p \
- 	    $(SRCDIR) \
- 	    $(LIBDIR) \
- 	    $(OBJDIR) \
-@@ -758,6 +719,12 @@ mkdirs:
+@@ -758,6 +712,12 @@ mkdirs:
  	    $(DISTRDIR) \
  	    $(INTERNETDIR) \
  	    $(DOCDIR) \
@@ -219,7 +226,7 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  	    $(INSTALLDIR) \
  	    $(XSPDIR) \
  	    $(APPUTILDIR) \
-@@ -1183,6 +1150,7 @@ $(INCLADMXSP)/admchart.h: $(INCLXSP)/htt
+@@ -1183,6 +1143,7 @@ $(INCLADMXSP)/admchart.h: $(INCLXSP)/htt
  	MSG="(using commbuf)" ; \
  	[ -f $$SRCFIL ] && \
  	echo " preprocessing $$SRCFIL -> $$DSTFIL  $$MSG"; \
@@ -227,3 +234,32 @@ $NetBSD: patch-aa,v 1.6 2006/11/02 05:11:33 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz -cb ocbp \
+@@ -1593,7 +1554,7 @@ xspd_conf_distr:
+ 	  XSPJAVADIR=`(cd $(XSPJAVADIR); pwd)` ; \
+ 	  APPUTILDIR=`(cd $(APPUTILDIR); pwd)` ; \
+ 	  \
+-	  cat $(CONFIGFILE) \
++	  cat $(BUILDCONFIGFILE) \
+ 	    | egrep -v "^### (generated by|adapt to)" \
+ 	    | sed \
+ 		-e "s%$${XSPDIR}%~~01~~%g" \
+@@ -1619,7 +1580,7 @@ xspd_conf_distr:
+ ### build the default xspd.conf config file ###
+ ### do not overwrite existing versions      ###
+ 
+-$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
++$(BUILDCONFIGFILE): $(ETCDIR)/xspd.conf_distr
+ 	@SRCFILE=$(ETCDIR)/xspd.conf_distr; \
+ 	 DSTFILE=$@; \
+ 	 if [ ! -s $@ ] ; \
+@@ -1656,8 +1617,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
+ 
+ ### for backup only ###
+ 
+-$(ETCDIR)/xspd.conf:	$(CONFIGFILE)
+-	@cp $(CONFIGFILE) $@
++#$(ETCDIR)/xspd.conf:	$(CONFIGFILE)
++#	@cp $(CONFIGFILE) $@
+ 	
+ ################################################################################
+ 
