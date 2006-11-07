@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2421 2006/11/06 21:59:15 uhabel Exp $
+# $Id: Makefile,v 1.2422 2006/11/07 17:52:29 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -577,7 +577,6 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
-SUBDIR+=	libxkbfile
 SUBDIR+=	libxkbui
 SUBDIR+=	lidia
 SUBDIR+=	lilo
@@ -1466,7 +1465,6 @@ SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xinetd
-SUBDIR+=	xinit
 SUBDIR+=	xmail
 SUBDIR+=	xmim
 SUBDIR+=	xmlformat-docs
@@ -1486,10 +1484,8 @@ SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
-SUBDIR+=	xrdb
 SUBDIR+=	xrdp
 SUBDIR+=	xscribble-fs
-SUBDIR+=	xset
 SUBDIR+=	xsm
 SUBDIR+=	xspd
 SUBDIR+=	xspread

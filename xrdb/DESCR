@@ -1,3 +1,0 @@
-The xrdb tool is used to set or query X resources. It allows dynamic
-changing of defaults without editing files for user preferences,
-such as color, fonts, and other configurations.
