@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2422 2006/11/07 17:52:29 jsonn Exp $
+# $Id: Makefile,v 1.2423 2006/11/07 21:18:52 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -545,6 +545,7 @@ SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
+SUBDIR+=	libixp
 SUBDIR+=	libjudy
 SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
