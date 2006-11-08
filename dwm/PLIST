@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/08 22:51:22 kh-p Exp $
+bin/dwm
+share/man

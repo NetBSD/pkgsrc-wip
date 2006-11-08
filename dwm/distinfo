@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/08 22:51:22 kh-p Exp $
+
+SHA1 (dwm-2.1.tar.gz) = 7e02d3d0dbaf5b9ccec48c2e930d65db7ce023d2
+RMD160 (dwm-2.1.tar.gz) = 11aa2fcc0dd600e2d317f8a942552123aa3ba236
+Size (dwm-2.1.tar.gz) = 17532 bytes
+SHA1 (patch-aa) = 91bbd3fd5f2a8aecba9cfe3edcc8bdc802c30e28

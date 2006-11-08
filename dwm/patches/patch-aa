@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/08 22:51:22 kh-p Exp $
+
+--- config.orig	2006-11-08 22:55:46.000000000 +0100
++++ config.mk
+@@ -4,22 +4,21 @@ VERSION = 2.1
+ # Customize below to fit your system
+ 
+ # paths
+-PREFIX = /usr/local
+ MANPREFIX = ${PREFIX}/share/man
+ 
+-X11INC = /usr/X11R6/include
+-X11LIB = /usr/X11R6/lib
++X11INC = ${X11BASE}
++X11LIB = ${X11BASE}
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC}
+ LIBS = -L/usr/lib -lc -L${X11LIB} -lX11
+ 
+ # flags
+-CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
+-LDFLAGS = ${LIBS}
++CFLAGS+= -Os ${INCS} -DVERSION=\"${VERSION}\"
++LDFLAGS+= ${LIBS}
+ #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
+ #LDFLAGS = -g ${LIBS}
+ 
+ # compiler and linker
+ CC = cc
+-LD = ${CC}
++LD = ${CC:Q}
