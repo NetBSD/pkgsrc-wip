@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/10/20 05:15:08 kcf Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/11/09 06:12:47 kcf Exp $
 #
 # Do NOT put a PKGREVISION statement in this file!
 
@@ -15,3 +15,8 @@ XSPAPP=			xspapp
 CATEGORIES=		www
 MAINTAINER=		kcf@users.sourceforge.net
 HOMEPAGE=		http://home.arcor.de/joachimschulze/xsp/
+
+DISTNAME=		xspsrc_${XSPDISTID}_tar
+MASTER_SITES=		http://home.arcor.de/joachimschulze/xsp/download/
+EXTRACT_SUFX=		.tgz
+WRKSRC=			${WRKDIR}
