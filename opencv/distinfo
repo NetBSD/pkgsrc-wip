@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/16 09:27:06 anthony_mallet Exp $
-
-SHA1 (opencv-0.9.9.tar.gz) = 67a530c7e2e014266b8dba70c418fe5bfc43eb41
-RMD160 (opencv-0.9.9.tar.gz) = 5ca1eb38e44f35088814f13b04b8368c86857044
-Size (opencv-0.9.9.tar.gz) = 10927846 bytes
-SHA1 (patch-aa) = 3d363f1660cb3a9f8cf444cb3ead74c1a68893cf
-SHA1 (patch-ab) = aa53f54b881cfe64b785e5d1e6c91a2712cbf45d
-SHA1 (patch-ac) = 77e8818b781dfece0f85606b8310f484d57753a3
