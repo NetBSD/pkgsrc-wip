@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:26 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/10 18:08:25 jeremy-c-reed Exp $
 
 # probably a meta package is not needed
 # could just install the libX11 and others
@@ -8,7 +8,7 @@
 # depend on those, if not just depend on this meta package
 
 DISTNAME=	modular-xorg-libs-7.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,19 +17,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Meta package for modular X.org X libraries
 
 # todo: depend on specific versions or "nb" revisions
-DEPENDS+=	libX11>=0.99.0:../../wip/libX11
-DEPENDS+=	libXau>=0.99.0:../../wip/libXau
-DEPENDS+=	libXaw>=0.99.0:../../wip/libXaw
-DEPENDS+=	libXext>=0.99.0:../../wip/libXext
-DEPENDS+=	libXfont>=0.99.0:../../wip/libXfont
-DEPENDS+=	libXi>=1.0.0:../../wip/libXi
-DEPENDS+=	libXinerama>=1.0.1:../../wip/libXinerama
-DEPENDS+=	libXmu>=1.0.0:../../wip/libXmu
-DEPENDS+=	libXp>=1.0.0:../../wip/libXp
-DEPENDS+=	libXt>=0.99.2:../../wip/libXt
+DEPENDS+=	libX11>=0.99.0:../../x11/libX11
+DEPENDS+=	libXau>=0.99.0:../../x11/libXau
+DEPENDS+=	libXaw>=0.99.0:../../x11/libXaw
+DEPENDS+=	libXext>=0.99.0:../../x11/libXext
+DEPENDS+=	libXfont>=0.99.0:../../x11/libXfont
+DEPENDS+=	libXi>=1.0.0:../../x11/libXi
+DEPENDS+=	libXinerama>=1.0.1:../../x11/libXinerama
+DEPENDS+=	libXmu>=1.0.0:../../x11/libXmu
+DEPENDS+=	libXp>=1.0.0:../../x11/libXp
+DEPENDS+=	libXt>=0.99.2:../../x11/libXt
 DEPENDS+=	libXxf86misc>=1.0.0:../../wip/libXxf86misc
 DEPENDS+=	libXxf86vm>=1.0.0:../../wip/libXxf86vm
-DEPENDS+=	libxkbfile>=0.99.1:../../wip/libxkbfile
+DEPENDS+=	libxkbfile>=0.99.1:../../x11/libxkbfile
 DEPENDS+=	libxkbui>=1.0.1:../../wip/libxkbui
 
 EXTRACT_ONLY=	# empty
