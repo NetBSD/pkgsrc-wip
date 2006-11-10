@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:30:24 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/10 23:07:17 shattered Exp $
 #
 
 DISTNAME=		charva-1.1.0
 PKGNAME=		java-charva-1.1.0
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.pitman.co.za/projects/download/
 
@@ -11,7 +11,7 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.pitman.co.za/projects/charva/
 COMMENT=		Java Windowing Toolkit for Text Terminals
 
-USE_JAVA=		YES
+USE_JAVA=		yes
 USE_TOOLS+=		gmake
 
 do-build:

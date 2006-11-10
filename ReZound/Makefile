@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:13 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2006/11/10 23:07:17 shattered Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
@@ -22,8 +22,8 @@ USE_TOOLS+=		flex gmake bison pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
-PKG_SUPPORTED_OPTIONS= alsa
-PKG_OPTIONS_VAR=       PKG_OPTIONS.rezound
+PKG_SUPPORTED_OPTIONS=	alsa
+PKG_OPTIONS_VAR=	PKG_OPTIONS.rezound
 
 .include "../../mk/bsd.options.mk"
 
