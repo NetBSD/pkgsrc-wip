@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/07 11:30:53 sohsmith Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/10 23:11:50 shattered Exp $
 
 DISTNAME=	tcmplex-panteltje-0.4.7
 CATEGORIES=	multimedia
@@ -10,6 +10,8 @@ HOMEPAGE=	http://ip51cf87c4.direct-adsl.nl/panteltje/dvd/
 COMMENT=	Re-write of the A/V multiplexer from the transcode distribution
 
 BUILD_TARGET=	a.out
+# requires authorization
+INTERACTIVE_STAGE=	fetch
 
 DOCSDIR=	${PREFIX}/share/doc/tcmplex-panteltje
 
