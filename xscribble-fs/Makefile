@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/19 16:51:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/10 22:55:39 shattered Exp $
 
 DISTNAME=	xscribblefs
 PKGNAME=	xscribble-fs-20001213
@@ -11,6 +11,7 @@ COMMENT=	Handwriting recognition (like graffiti)
 
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
+BROKEN=		distfile is not available from master site
 
 post-configure:
 	cd ${WRKSRC} && ${MAKE_PROGRAM} clean
