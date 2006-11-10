@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/11/14 23:51:42 plunky Exp $
+$NetBSD: patch-ab,v 1.2 2006/11/10 19:07:00 plunky Exp $
 
---- lib/libunshield.c.orig	2005-11-14 23:45:57.000000000 +0000
+--- lib/libunshield.c.orig	2004-08-24 07:10:27.000000000 +0100
 +++ lib/libunshield.c
 @@ -27,7 +27,7 @@ static bool unshield_create_filename_pat
  

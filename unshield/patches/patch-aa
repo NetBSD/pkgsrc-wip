@@ -1,15 +1,27 @@
-$NetBSD: patch-aa,v 1.3 2005/11/14 23:49:43 plunky Exp $
+$NetBSD: patch-aa,v 1.4 2006/11/10 19:07:00 plunky Exp $
 
-Well there are quite a few errors in compilation, so lets not die because of them
-
---- src/Makefile.in.orig	2004-05-01 14:48:00.000000000 +0100
-+++ src/Makefile.in
-@@ -92,7 +92,7 @@ WORDS_BIGENDIAN = @WORDS_BIGENDIAN@
- am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
--AM_CFLAGS = -g -ansi -Wall -Wsign-compare -Wno-long-long -Werror @APPLE_CFLAGS@ -I../lib
-+AM_CFLAGS = -g -ansi -Wall -Wsign-compare -Wno-long-long @APPLE_CFLAGS@ -I../lib
- LDADD = ../lib/libunshield.la
- 
- bin_PROGRAMS = unshield
+--- src/unshield.c.orig	2005-07-08 15:08:37.000000000 +0100
++++ src/unshield.c
+@@ -2,3 +2,3 @@
+ #define _BSD_SOURCE 1
+-#define _POSIX_C_SOURCE 2
++/*#define _POSIX_C_SOURCE 2*/
+ #include "../lib/libunshield.h"
+@@ -280,6 +280,6 @@ static bool extract_file(Unshield* unshi
+       default:
+-        if (!isprint(*p))
++        if (!isprint((int)*p))
+           *p = '_';
+         else if (make_lowercase)
+-          *p = tolower(*p);
++          *p = tolower((int)*p);
+         break;;
+@@ -300,6 +300,6 @@ static bool extract_file(Unshield* unshi
+   {
+-    if (!isprint(*p))
++    if (!isprint((int)*p))
+       *p = '_';
+     else if (make_lowercase)
+-      *p = tolower(*p);
++      *p = tolower((int)*p);
+   }
