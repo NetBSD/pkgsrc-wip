@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/10 23:16:04 shattered Exp $
 #
 
 DISTNAME=	tesseract-1.02
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tesseract-ocr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tesseract-ocr.sourceforge.net/
+HOMEPAGE=	http://sourceforge.net/projects/tesseract-ocr
 COMMENT=	Commercial quality open source OCR engine
 
 GNU_CONFIGURE=	yes

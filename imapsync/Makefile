@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/19 21:33:04 ahallmann Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/10 23:16:04 shattered Exp $
 #
 
 DISTNAME=		imapsync-${VERS}
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.linux-france.org/prj/imapsync/dist/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		hallmann@ahatec.de
-HOMEPAGE=		http://www.linux-france.org/prj/imapsync
+HOMEPAGE=		http://www.linux-france.org/prj/imapsync/
 COMMENT=		Slow, memory intensive but great tool to sync and migrate imap servers
 
 NAME=			imapsync

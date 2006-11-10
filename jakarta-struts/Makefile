@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/10 23:16:04 shattered Exp $
 #
 
 DISTNAME=		jakarta-struts-1.1
 CATEGORIES=		www
-MASTER_SITES=		http://apache.rediris.es/jakarta/struts/binaries/
+MASTER_SITES=		http://archive.apache.org/dist/struts/struts-1.1/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://apache.rediris.es/jakarta/struts/binaries/
+HOMEPAGE=		http://archive.apache.org/dist/struts/struts-1.1/
 COMMENT=		struts is struts xD
 
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/09 11:17:09 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/10 23:16:04 shattered Exp $
 
 DISTNAME=	openca-0.9.2.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openca/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.openca.org/
+HOMEPAGE=	http://pki.openca.org/
 COMMENT=	Robust, full-featured out-of-the-box Certification Authority
 
 DEPENDS+=	p5-Authen-SASL>=2.04:../../security/p5-Authen-SASL
