@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.i386,v 1.1.1.1 2006/11/10 15:54:15 hfath Exp $
+
+RPMFILES= \
+		binutils-2.16.91.0.2-8.2.${SUSE_ARCH}.rpm \
+		cpp-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-c++-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-fortran-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-locale-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-mudflap-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		gcc-objc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+		make-3.80-188.${SUSE_ARCH}.rpm \
+		glibc-devel-2.3.5-40.${SUSE_ARCH}.rpm \
+		libobjc-4.0.2_20050901-3.${SUSE_ARCH}.rpm
