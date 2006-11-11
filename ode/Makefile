@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/11 12:14:19 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/11 20:00:55 kh-p Exp $
 
 DISTNAME=	ode-src-0.7
 PKGNAME=	ode-0.7
@@ -19,6 +19,12 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	include/ode lib
 
 CONFIGURE_ARGS+=	--enable-double-precision
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINEÃ_ARCH} == "x86_64"
+CFLAGS+= -fPIC
+.endif
 
 ## TODO: Install needs to be corrected.
 #do-install:
