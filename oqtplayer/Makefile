@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/12 16:28:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/11 13:26:33 shattered Exp $
 #
 
 DISTNAME=		oqtplayer-0.5-src
@@ -12,11 +12,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openquicktime.org/
 COMMENT=		Small OpenQuickTime (TM) player, using SDL
 
-
 WRKSRC=			${WRKDIR}/OQTPlayer-0.5
+INSTALLATION_DIRS+=	share/oqtplayer
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/oqtplayer
 	${INSTALL_PROGRAM} ${WRKSRC}/oqtplayer ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/readme ${PREFIX}/share/oqtplayer/
 

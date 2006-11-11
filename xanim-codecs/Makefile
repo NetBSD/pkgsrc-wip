@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/10 18:31:40 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/11 13:26:33 shattered Exp $
 
 DISTNAME=
 PKGNAME=	xanim-codecs-19990322
@@ -15,6 +15,7 @@ COMMENT=	Dynamically loadable codecs for XAnim
 DIST_SUBDIR=	xanim
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}
+INSTALLATION_DIRS+=	lib/xanim share/doc/xanim
 ONLY_FOR_PLATFORM=	*-*-i386 # *-*-alpha *-*-powerpc *-*-sparc *-*-sgimips
 
 .include "Makefile.codecs"
@@ -25,9 +26,7 @@ PLIST_SRC+=	PLIST.${MACHINE_ARCH}
 BUILD_DEFS+=	XANIM_DLL_CODECS
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xanim
 	${INSTALL_DATA} ${WRKSRC}/*.readme ${PREFIX}/share/doc/xanim
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xanim
-	${INSTALL_DATA} ${WRKSRC}/*.xa ${PREFIX}/lib/xanim
 
 .include "../../mk/bsd.pkg.mk"

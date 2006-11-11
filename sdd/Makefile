@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/20 11:21:38 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 13:26:33 shattered Exp $
 #
 
 DISTNAME=		sdd-1.52
@@ -10,7 +10,6 @@ HOMEPAGE=		http://directory.fsf.org/All_Packages_in_Directory/sdd.html
 COMMENT=		Replacement for 'dd'
 
 USE_PKGLOCALEDIR=	yes
-USE_CONFIGURE=		no
 USE_TOOLS+=		gmake
 MAKEFLAGS+=		INS_BASE=${PREFIX}/
 

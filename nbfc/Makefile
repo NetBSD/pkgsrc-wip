@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/07 01:00:16 thomaspfaff Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 13:26:33 shattered Exp $
 #
 
 DISTNAME=		nbfc-0.1
@@ -14,6 +14,6 @@ USE_TOOLS+=		gmake yacc
 
 do-install:
 			${INSTALL_PROGRAM} ${WRKSRC}/nbfc ${PREFIX}/bin
-			${INSTALL_MAN} ${WRKSRC}/nbfc.1 ${PREFIX}/man/man1
+			${INSTALL_MAN} ${WRKSRC}/nbfc.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
