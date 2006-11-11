@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2006/11/11 12:14:19 kh-p Exp $
+
+SHA1 (ode-src-0.7.zip) = 89d1593fd530e222c9d4aef3820414d4c0b0206b
+RMD160 (ode-src-0.7.zip) = 6215cc2b825321abdf3c9113a2711c6092590e06
+Size (ode-src-0.7.zip) = 1903503 bytes
+SHA1 (patch-aa) = 918cd5978159a47eb91bf6acc51b5297ec6cead8
