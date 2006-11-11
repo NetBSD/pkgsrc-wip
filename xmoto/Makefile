@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/11 17:57:35 kh-p Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/11 20:44:33 kh-p Exp $
 
 DISTNAME=		xmoto-0.2.2-src
 PKGNAME=		xmoto-0.2.2
@@ -16,8 +16,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt autoconf automake gmake pkg-config
 USE_LANGUAGES+=		c c++
 
-GCC_REQD+=		3.4
-
 GNU_CONFIGURE=          yes
 
 #Not needed
@@ -26,6 +24,10 @@ GNU_CONFIGURE=          yes
 BROKEN_GETTEXT_DETECTION=     yes
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-3].[0-9]*)
+GCC_REQD+=              3.4
+.endif
 
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=         INTLLIBS="-lintl"
@@ -48,7 +50,6 @@ CONFIGURE_ENV+=         INTLLIBS="-lintl"
 .include "../../wip/ode/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../lang/gcc34/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
