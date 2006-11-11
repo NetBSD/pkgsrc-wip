@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/11/10 18:08:25 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/11/11 00:40:55 jeremy-c-reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MODULAR_XORG_LIBS_BUILDLINK3_MK:=	${MODULAR_XORG_LIBS_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ BUILDLINK_ORDER:=       ${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}modular-xorg-libs
 .if !empty(MODULAR_XORG_LIBS_BUILDLINK3_MK:M+)
 
 BUILDLINK_API_DEPENDS.modular-xorg-libs+=	modular-xorg-libs>=7.0nb6
-BUILDLINK_PKGSRCDIR.modular-xorg-libs?=		../../x11/modular-xorg-libs
+BUILDLINK_PKGSRCDIR.modular-xorg-libs?=		../../wip/modular-xorg-libs
 #BUILDLINK_TRANSFORM.modular-xorg-libs+=	-e "s|/${X11ROOT_PREFIX}/|/|"
 
 .endif  # MODULAR_XORG_LIBS_BUILDLINK3_MK
