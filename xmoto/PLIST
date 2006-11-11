@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/11 17:36:32 kh-p Exp $
+bin/xmoto
+bin/xmoto-edit
+man/man6/xmoto-edit.6.gz
+man/man6/xmoto.6.gz
+share/locale/de/LC_MESSAGES/xmoto.mo
+share/locale/fr/LC_MESSAGES/xmoto.mo
+share/xmoto/credits.rpl
+share/xmoto/editor.dat
+share/xmoto/fonts.dat
+share/xmoto/xmoto.bin
+share/xmoto/xmoto.ogg
+@dirrm share/xmoto
+@dirrm man/mang
