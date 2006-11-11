@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/28 16:47:13 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 11:31:05 shattered Exp $
 
 TZ_VERSION=	2006g
 DISTNAME=	pytz-${TZ_VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://pytz.sourceforge.net/
-COMMENT=	pytz brings the Olson tz database into Python
+COMMENT=	Python interface to Olson tz database
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_ACCEPTED=	24 23

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/05/19 16:51:18 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.16 2006/11/11 11:31:04 shattered Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
 PKGNAME=		gtk2-engines-qt-0.2
-WRKSRC=			${WRKDIR}/gtk-qt-engine-0.2
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.kde-look.org/content/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kde-look.org/content/show.php?content=9714
 COMMENT=		GTK+ 2.x theme, which looks just like Qt toolkit
 
+WRKSRC=			${WRKDIR}/gtk-qt-engine-0.2
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config

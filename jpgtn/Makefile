@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/11 11:31:05 shattered Exp $
 #
 
 DISTNAME=		jpgtn-2.06
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jpgtn/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jpgtn.sourceforge.net/
-COMMENT=		A thumbnail generator for JPEG images
+COMMENT=		Thumbnail generator for JPEG images
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

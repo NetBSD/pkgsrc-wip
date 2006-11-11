@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/23 18:23:14 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/11 11:31:06 shattered Exp $
 
 DISTNAME=	uqwk-2.21
 CATEGORIES=	news
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 SUBST_CLASSES+=		 regex_h
 SUBST_STAGE.regex_h=	post-patch
 SUBST_FILES.regex_h=	score.c
-SUBST_SED.regex_h=	-e "s,<regex\.h>,<nbcompat/regex.h>,"
+SUBST_SED.regex_h=	-e "s,<regex\\.h>,<nbcompat/regex.h>,"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

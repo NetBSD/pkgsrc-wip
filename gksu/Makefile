@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/16 23:28:55 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 11:31:04 shattered Exp $
 #
 
 DISTNAME=		gksu-1.3.6
@@ -7,7 +7,7 @@ MASTER_SITES=		http://people.debian.org/~kov/gksu/gksu/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.nongnu.org/gksu/
-COMMENT=		An authorization dialog library
+COMMENT=		Authorization dialog library
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

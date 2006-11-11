@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/03 19:48:26 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/11 11:31:06 shattered Exp $
 
 DISTNAME=	sipp.1.0
 PKGNAME=	sipp-1.0
@@ -22,7 +22,7 @@ do-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 LIBS+=		${BUILDLINK_LDADD.dl}
-MAKE_ENV+=	LIBS=${LIBS:M*:Q}
+MAKE_ENV+=	LIBS=${LIBS:Q}
 # not automatically added by ../../mk/dlopen.builtin.mk
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

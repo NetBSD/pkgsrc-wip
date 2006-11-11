@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/05 17:24:09 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/11 11:31:04 shattered Exp $
 
 DISTNAME=	easymesh-1.4
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ NO_CONFIGURE=	YES
 INSTALLATION_DIRS=	bin
 
 do-extract:
-		${CP} ${DISTDIR}/easymesh_1_4.c ${WRKSRC}
+		cp ${DISTDIR}/easymesh_1_4.c ${WRKSRC}
 do-build:
 		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} easymesh_1_4.c -o easymesh ${LDFLAGS} -lm
 

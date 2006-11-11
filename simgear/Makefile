@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:36 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/11 11:31:06 shattered Exp $
 #
 
 DISTNAME=		SimGear-0.3.4
@@ -12,6 +12,7 @@ COMMENT=		Simulator Construction Tools
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"

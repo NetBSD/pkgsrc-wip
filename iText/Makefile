@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/07/02 19:04:34 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/11 11:31:04 shattered Exp $
 #
 
 DISTNAME=		itext-1.3
 PKGNAME=		java-itext-1.3
 CATEGORIES=		textproc
-MASTER_SITES=		http://${MASTER_SITE_SOURCEFORGE:=itext/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=itext/
 EXTRACT_SUFX=		.jar
 
 MAINTAINER=		pancake@phreaker.net

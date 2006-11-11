@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/02/11 23:59:08 christian_gall Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 11:31:04 shattered Exp $
 #
 
 DISTNAME=		fprobe-1.1
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://fprobe.sourceforge.net/
-COMMENT=		collect network traffic data and emit it as NetFlow flows
+COMMENT=		Collect network traffic data and emit it as NetFlow flows
 
 GNU_CONFIGURE=		yes
 

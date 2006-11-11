@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/17 13:49:26 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/11 11:31:04 shattered Exp $
 #
 
 DISTNAME=		cdogs-sdl-0.3
@@ -19,7 +19,7 @@ BUILD_TARGET=		cdogs
 USE_TOOLS+=		gmake
 
 post-extract:
-	${MV} ${WRKDIR}/cdogs-data-2006-08-16 ${WRKDIR}/${DISTNAME}/data
+	mv ${WRKDIR}/cdogs-data-2006-08-16 ${WRKDIR}/${DISTNAME}/data
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

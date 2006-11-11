@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/14 11:38:43 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/11 11:31:03 shattered Exp $
 #
 
 DISTNAME=		redland-0.9.14
@@ -11,6 +11,7 @@ HOMEPAGE=		http://download.librdf.org/source/
 COMMENT=		Library for RDF in C, Java, Perl, PHP, Python, Ruby and Tcl
 
 GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-perl=yes
 CONFIGURE_ARGS+=	--with-python=yes

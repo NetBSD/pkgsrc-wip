@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/17 21:06:20 unex_linija Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/11 11:31:05 shattered Exp $
 
 DISTNAME=		jetty-5.1.10
 CATEGORIES=		www java
@@ -13,7 +13,6 @@ NO_BUILD=		yes
 
 USE_JAVA2=		yes
 PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15 jdk14
-PKG_JVM_DEFAULT=	sun-jdk15
 
 JETTY_HOME=		${PREFIX}/jetty
 RCD_SCRIPTS=		jetty
@@ -28,7 +27,7 @@ do-install:
 			${INSTALL_DATA_DIR} ${JETTY_HOME}
 			${INSTALL_DATA_DIR} ${EGDIR}
 			${INSTALL_DATA} ${WRKSRC}/etc/*.xml ${EGDIR}
-			(cd ${WRKSRC} && ${PAX} -rw -pmo . ${JETTY_HOME})
+			(cd ${WRKSRC} && pax -rw -pmo . ${JETTY_HOME})
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
