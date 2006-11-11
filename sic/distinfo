@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/10/26 10:53:40 kh-p Exp $
+$NetBSD: distinfo,v 1.4 2006/11/11 17:21:39 kh-p Exp $
 
-SHA1 (sic-0.5.tar.gz) = 493bf58fa93eaacc7c1a8e76d8d8671d07caf2f8
-RMD160 (sic-0.5.tar.gz) = 2e0fb6d9dc11ac518b3d559feaa94729afe31b4d
-Size (sic-0.5.tar.gz) = 5075 bytes
+SHA1 (sic-0.6.tar.gz) = dc85f67690837d52a2d4f84fada0360b6d9e4791
+RMD160 (sic-0.6.tar.gz) = 3462e785d5efdcb68e18d97bd9feb06b256ffe01
+Size (sic-0.6.tar.gz) = 5072 bytes

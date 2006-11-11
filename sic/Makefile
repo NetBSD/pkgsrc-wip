@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/10/26 10:53:40 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/11 17:21:39 kh-p Exp $
 
-DISTNAME=		sic-0.5
+DISTNAME=		sic-0.6
 CATEGORIES=		chat
 MASTER_SITES=		http://suckless.org/download/
 
