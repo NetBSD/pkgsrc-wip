@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/11 20:00:55 kh-p Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/12 16:49:29 kh-p Exp $
 
 DISTNAME=	ode-src-0.7
 PKGNAME=	ode-0.7
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-double-precision
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINEÃ_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64"
 CFLAGS+= -fPIC
 .endif
 
