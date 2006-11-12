@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2426 2006/11/12 21:46:25 kristerw Exp $
+# $Id: Makefile,v 1.2427 2006/11/12 21:48:42 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -211,6 +211,7 @@ SUBDIR+=	drpython
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dwepcrack
+SUBDIR+=	dwm
 SUBDIR+=	dxmake
 SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
@@ -750,6 +751,7 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nzbget
 SUBDIR+=	oak
 SUBDIR+=	octave-nox11
+SUBDIR+=	ode
 SUBDIR+=	omniORB
 SUBDIR+=	oops
 SUBDIR+=	opal
@@ -1340,6 +1342,7 @@ SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
+SUBDIR+=	thunderbird-bin
 SUBDIR+=	thunderbird2
 SUBDIR+=	thunderbird2-gtk1
 SUBDIR+=	tilda
@@ -1480,6 +1483,7 @@ SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-status
 SUBDIR+=	xmms-xmp
 SUBDIR+=	xmms2
+SUBDIR+=	xmoto
 SUBDIR+=	xorg-server
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
