@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2425 2006/11/12 21:39:29 kristerw Exp $
+# $Id: Makefile,v 1.2426 2006/11/12 21:46:25 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -758,7 +758,6 @@ SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openca
 SUBDIR+=	openct
-SUBDIR+=	opencv
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
 SUBDIR+=	openoffice2-bin-af
