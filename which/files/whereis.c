@@ -1,4 +1,4 @@
-/*	$NetBSD: whereis.c,v 1.2 2004/06/11 20:20:47 ppostma Exp $	*/
+/*	$NetBSD: whereis.c,v 1.3 2006/11/12 17:45:39 cheusov Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -33,7 +33,7 @@
 
 #include <sys/param.h>
 #include <sys/stat.h>
-#ifndef __linux__
+#if !defined(__linux__) && !defined(__INTERIX)
 #include <sys/sysctl.h>
 #endif
 
@@ -95,6 +95,7 @@ main(int argc, char *argv[])
  		if ((std = getenv("PATH")) == NULL)
  			errx(1, "PATH environment variable is not set");
 	} else {
+#ifndef __INTERIX
 #ifdef __linux__
 #include <paths.h>
 	if ((std = malloc(MAXPATHLEN)) == NULL)
@@ -119,6 +120,7 @@ main(int argc, char *argv[])
 		if (sysctl(mib, 2, std, &len, NULL, 0) == -1)
 			err(1, "sysctl: user.cs_path");
 #endif /* not Linux */
+#endif /* Interix */
 	}
 
 	/* For each path, for each program... */
