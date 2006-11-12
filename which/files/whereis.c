@@ -1,4 +1,4 @@
-/*	$NetBSD: whereis.c,v 1.3 2006/11/12 17:45:39 cheusov Exp $	*/
+/*	$NetBSD: whereis.c,v 1.4 2006/11/12 18:08:08 cheusov Exp $	*/
 
 /*-
  * Copyright (c) 1993
@@ -55,7 +55,7 @@ main(int argc, char *argv[])
 	struct stat sb;
 	size_t len;
 	int ch, mib[2];
-	char *p, *std, path[MAXPATHLEN];
+	char *p, *std=NULL, path[MAXPATHLEN];
 	const char *t;
 	int which;
 	int useenvpath, found = 0;
