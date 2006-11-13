@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:06 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/13 12:27:12 adrian_p Exp $
 
-DISTNAME=		avahi-0.6.10
+DISTNAME=		avahi-0.6.15
 CATEGORIES=		net
-MASTER_SITES=		http://avahi.org/download/
+MASTER_SITES=		http://lathiat.net/
 
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://avahi.org/
@@ -17,7 +17,7 @@ AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
 USE_PKGINSTALL=		YES
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
 
@@ -42,18 +42,20 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
 			${PREFIX}/etc/dbus-1/system.d/avahi-dbus.conf
 .endif
 
+CONFIGURE_ARGS+=	--with-distro=netbsd
 CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-qt3
-CONFIGURE_ARGS+=	--disable-qt4
-CONFIGURE_ARGS+=	--disable-mono
-CONFIGURE_ARGS+=	--disable-monodoc
+CONFIGURE_ARGS+= 	--disable-qt3
+CONFIGURE_ARGS+= 	--disable-qt4
+CONFIGURE_ARGS+= 	--disable-mono
+CONFIGURE_ARGS+= 	--disable-monodoc
 CONFIGURE_ARGS+=	--disable-doxygen-doc
 CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
+CONFIGURE_ARGS+=	--disable-autoipd
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/libdaemon/buildlink3.mk"

@@ -1,18 +1,20 @@
-$NetBSD: patch-ac,v 1.2 2006/09/10 18:29:58 adrian_p Exp $
+$NetBSD: patch-ac,v 1.3 2006/11/13 12:27:12 adrian_p Exp $
 
---- avahi-daemon/Makefile.in.orig	2006-05-05 16:13:19.000000000 +0100
+--- avahi-daemon/Makefile.in.orig	2006-11-06 13:02:42.000000000 +0000
 +++ avahi-daemon/Makefile.in
-@@ -515,18 +515,15 @@ AM_CFLAGS = -I$(top_srcdir) '-DDEBUG_TRA
+@@ -519,19 +519,15 @@ AM_CFLAGS = -I$(top_srcdir) '-DDEBUG_TRA
  
  @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@ini_file_parser_test_CFLAGS = $(AM_CFLAGS)
  @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@ini_file_parser_test_LDADD = $(AM_LDADD) ../avahi-common/libavahi-common.la ../avahi-core/libavahi-core.la 
 -@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgsysconf_DATA = \
 -@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@	avahi-daemon.conf \
 -@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@	hosts
-+@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgsysconf_DATA =
- 
+-
 -@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@service_DATA = \
--@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@	ssh.service
+-@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@	ssh.service \
+-@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@	sftp-ssh.service
++@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgsysconf_DATA =
++
 +@HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@service_DATA =
  
  @HAVE_EXPAT_TRUE@@HAVE_LIBDAEMON_TRUE@pkgdata_DATA = \
