@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
+$NetBSD: patch-aa,v 1.6 2006/11/14 05:20:21 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -68,75 +68,31 @@
+@@ -68,75 +68,32 @@
  #                                                                              #
  ################################################################################
  
@@ -71,8 +71,9 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  ### XSPD/XSP runtime config file ###
  
 -CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
++#CONFIGFILE=$(ETCDIR)/xspd.conf
 +CONFIGFILE=$(TARGETDIR)/xspd.conf
-+#BUILDCONFIGFILE=$(INSTALLDIR)/xspd.conf
++#CONFIGFILE=$(INSTALLDIR)/xspd.conf
  #						# config file
  #						# NOTE: must be same path as
  #						# $(INSTALLDIR)
@@ -84,7 +85,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  
  ### default parameter setting ###
  
-@@ -166,8 +122,8 @@ IDENT=0
+@@ -166,8 +123,8 @@ IDENT=0
  
  HOMEDIR=$(PWD)
  #						# user specific home directory
@@ -95,7 +96,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  SRCDIR=$(HOMEDIR)/src
  #						# source directory
  OBJDIR=$(HOMEDIR)/obj
-@@ -178,16 +134,16 @@ LIBDIR=$(HOMEDIR)/lib
+@@ -178,16 +135,16 @@ LIBDIR=$(HOMEDIR)/lib
  #						# library directory
  DOCDIR=$(HOMEDIR)/xspdoc
  #						# documentation directory
@@ -116,7 +117,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,13 +172,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+@@ -216,13 +173,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
@@ -132,7 +133,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  ##CFLAGSX=-O3 -funroll-loops
  #						# C-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
-@@ -232,7 +188,7 @@ CFLAGSX=-g -O
+@@ -232,7 +189,7 @@ CFLAGSX=-g -O
  #						# C-flags SUN, gcc, 32/64-bit
  ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
  #						# C-flags SUN, SUN-cc, 32-bit
@@ -141,7 +142,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  #						# C-flags NetBSD, pentium
  
  CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
-@@ -252,7 +208,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+@@ -252,7 +209,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
  #						# -DVHASHTABNAM=0   1/0
  
  #						# flags for cc-link option
@@ -150,7 +151,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  #						# link-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
  ##CLDFLAGS=-lcrypt -lxnet
-@@ -261,11 +217,10 @@ CLDFLAGS=-lcrypt
+@@ -261,11 +218,10 @@ CLDFLAGS=-lcrypt
  #						# link-flags SUN, gcc, 32/64-bit
  ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
  #						# link-flags SUN, cc, 32-bit
@@ -164,7 +165,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  #						# HTML preprocessor
  
  #BIT7=-bit7
-@@ -320,6 +275,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
+@@ -320,6 +276,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
  	fi ; \
  	test -f $< && \
  	echo " preprocessing `basename $< | sed -e 's/\..*//'`.hxsp -> `basename $< | sed -e 's/\..*//'`.h $$MSG"; \
@@ -172,7 +173,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
-@@ -514,16 +470,14 @@ CDOC_CORE_FILES=\
+@@ -514,16 +471,14 @@ CDOC_CORE_FILES=\
  ### targets ###
  
  install: \
@@ -195,7 +196,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
-@@ -554,15 +508,18 @@ installapputil: \
+@@ -554,15 +509,18 @@ installapputil: \
  
  ################################################################################
  
@@ -217,7 +218,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  ################################################################################
  
  helpdoc: \
-@@ -758,6 +715,12 @@ mkdirs:
+@@ -758,6 +716,12 @@ mkdirs:
  	    $(DISTRDIR) \
  	    $(INTERNETDIR) \
  	    $(DOCDIR) \
@@ -230,7 +231,7 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  	    $(INSTALLDIR) \
  	    $(XSPDIR) \
  	    $(APPUTILDIR) \
-@@ -1389,7 +1352,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
+@@ -1389,7 +1353,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
  		-o $@  $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o \
  		$(CLIBS) \
  		$(LIBCMN)
@@ -239,49 +240,24 @@ $NetBSD: patch-aa,v 1.5 2006/11/10 12:45:46 kcf Exp $
  	
  ################################################################################
  
-@@ -1535,15 +1498,15 @@ $(INCL)/inpwait.h: $(EXEDIR)/selectchk
+@@ -1535,6 +1499,7 @@ $(INCL)/inpwait.h: $(EXEDIR)/selectchk
  ################################################################################
  
  $(DOCDIR)/_xsp.h: $(INCL)/xsp.h
--	-@cat $(INCL)/`basename $@ | sed -e 's/^_//'` \
--	     | $(AWK) ' \
--BEGIN		{ printf("/* general description */\n"); \
--		  bname="'`basename $@`'"; gsub("^_","",bname); \
--		  printf("/* Extract from '$(INCL)'/%s for c-doc only. */\n",bname); \
--		  printf("/* Contains global constant definitions. */\n\n"); } \
-+        -@cat $(INCL)/`basename $@ | sed -e 's/^_//'` \
-+             | $(AWK) ' \
-+BEGIN           { printf("/* general description */\n"); \
-+                  bname="'`basename $@`'"; gsub("^_","",bname); \
-+                  printf("/* Extract from '$(INCL)'/%s for c-doc only. */\n",bname); \
-+                  printf("/* Contains global constant definitions. */\n\n"); } \
++	@echo here we go
+ 	-@cat $(INCL)/`basename $@ | sed -e 's/^_//'` \
+ 	     | $(AWK) ' \
+ BEGIN		{ printf("/* general description */\n"); \
+@@ -1543,7 +1508,7 @@ BEGIN		{ printf("/* general description 
+ 		  printf("/* Contains global constant definitions. */\n\n"); } \
  /XSP operation mode/,/M_MODEMASK/ { print $0 } \
--		' >$(DOCDIR)/`basename $@`
+ 		' >$(DOCDIR)/`basename $@`
 -	
-+                ' >$(DOCDIR)/`basename $@`
-+		
++	@echo and we are done
  ################################################################################
  
  $(DOCDIR)/_vvar.h: $(INCL)/vvar.h
-@@ -1593,7 +1556,7 @@ xspd_conf_distr:
- 	  XSPJAVADIR=`(cd $(XSPJAVADIR); pwd)` ; \
- 	  APPUTILDIR=`(cd $(APPUTILDIR); pwd)` ; \
- 	  \
--	  cat $(CONFIGFILE) \
-+	  cat $(BUILDCONFIGFILE) \
- 	    | egrep -v "^### (generated by|adapt to)" \
- 	    | sed \
- 		-e "s%$${XSPDIR}%~~01~~%g" \
-@@ -1619,7 +1582,7 @@ xspd_conf_distr:
- ### build the default xspd.conf config file ###
- ### do not overwrite existing versions      ###
- 
--$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
-+$(BUILDCONFIGFILE): $(ETCDIR)/xspd.conf_distr
- 	@SRCFILE=$(ETCDIR)/xspd.conf_distr; \
- 	 DSTFILE=$@; \
- 	 if [ ! -s $@ ] ; \
-@@ -1656,8 +1619,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
+@@ -1656,8 +1621,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
  
  ### for backup only ###
  
