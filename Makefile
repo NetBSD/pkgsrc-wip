@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2429 2006/11/14 16:05:56 jsonn Exp $
+# $Id: Makefile,v 1.2430 2006/11/14 20:07:32 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -91,7 +91,6 @@ SUBDIR+=	barnyard
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	bcmfw
-SUBDIR+=	bdftopcf
 SUBDIR+=	beast
 SUBDIR+=	bin86
 SUBDIR+=	bincimap
