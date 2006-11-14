@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/11/10 19:07:00 plunky Exp $
-
-SHA1 (unshield-0.5.tar.gz) = 317990841cceea95d51638bd4f29456e2cfaf5af
-RMD160 (unshield-0.5.tar.gz) = cf56cb3be917b8c20f131a0e82469c11b585b142
-Size (unshield-0.5.tar.gz) = 325744 bytes
-SHA1 (patch-aa) = fda2339eb2f73c2a8f628d6ecbe0b3295817406d
-SHA1 (patch-ab) = aa0bab79aa20cf8e5662fa8e1ca8ac4ffefd98e4
