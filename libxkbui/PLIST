@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 04:18:46 jeremy-c-reed Exp $
-include/X11/extensions/XKBui.h
-lib/libxkbui.la
-lib/pkgconfig/xkbui.pc
-@comment @dirrm include/X11/extensions

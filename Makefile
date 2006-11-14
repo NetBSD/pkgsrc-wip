@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2428 2006/11/14 15:16:58 jsonn Exp $
+# $Id: Makefile,v 1.2429 2006/11/14 16:05:56 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -544,7 +544,6 @@ SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
 SUBDIR+=	libixp
 SUBDIR+=	libjudy
-SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
@@ -575,7 +574,6 @@ SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
-SUBDIR+=	libxkbui
 SUBDIR+=	lidia
 SUBDIR+=	lilo
 SUBDIR+=	lingoteach-lesson
@@ -1431,8 +1429,6 @@ SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdiskusage
-SUBDIR+=	xf86dgaproto
-SUBDIR+=	xf86driproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-desktop
