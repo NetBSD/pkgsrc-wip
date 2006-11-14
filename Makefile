@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2427 2006/11/12 21:48:42 kristerw Exp $
+# $Id: Makefile,v 1.2428 2006/11/14 15:16:58 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -339,7 +339,6 @@ SUBDIR+=	glimmerm
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
-SUBDIR+=	glproto
 SUBDIR+=	glulxe
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
@@ -526,8 +525,6 @@ SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libXcomposite
 SUBDIR+=	libXvMC
-SUBDIR+=	libXxf86misc
-SUBDIR+=	libXxf86vm
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
@@ -535,7 +532,6 @@ SUBDIR+=	libbtctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=	libdrm
 SUBDIR+=	libgadu
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgksu
@@ -1437,8 +1433,6 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xdiskusage
 SUBDIR+=	xf86dgaproto
 SUBDIR+=	xf86driproto
-SUBDIR+=	xf86miscproto
-SUBDIR+=	xf86vidmodeproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-desktop

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/21 04:24:13 jeremy-c-reed Exp $
-include/GL/glxint.h
-include/GL/glxmd.h
-include/GL/glxproto.h
-include/GL/glxtokens.h
-include/GL/internal/glcore.h
-lib/pkgconfig/glproto.pc
-@dirrm include/GL/internal
-@dirrm include/GL
