@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2430 2006/11/14 20:07:32 jsonn Exp $
+# $Id: Makefile,v 1.2431 2006/11/14 21:24:33 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -273,10 +273,6 @@ SUBDIR+=	flightgear-base
 SUBDIR+=	fltk2
 SUBDIR+=	fluxspace
 SUBDIR+=	fnord
-SUBDIR+=	font-bitstream-type1
-SUBDIR+=	font-cursor-misc
-SUBDIR+=	font-misc-misc
-SUBDIR+=	font-util
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	foremost
