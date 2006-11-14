@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/08/30 12:10:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/14 19:20:32 shattered Exp $
 #
 
 DISTNAME=	freedict-tools-0.1-1.noarch
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://www.freedict.de/
+HOMEPAGE=	http://www.freedict.org/
 COMMENT=	XSL files from FreeDict tools
 
 USE_TOOLS+=	install pax #rpm2cpio cpio

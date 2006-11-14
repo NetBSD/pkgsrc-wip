@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/01 15:03:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.25 2006/11/14 19:20:33 shattered Exp $
 #
 
 DISTNAME=		Zope-3.3.0c1
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.0c1/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ykomatsu@akaumigame.org
-HOMEPAGE=		http://dev.zope.org/Zope3/
+HOMEPAGE=		http://www.zope.org/DevHome/Zope3/
 COMMENT=		Zope 3 Application Server
 
 DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml

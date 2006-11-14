@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/05 21:51:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/14 19:20:32 shattered Exp $
 #
 
 DISTNAME=		wbxml2-0.9.0-patched
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://multisync.sourceforge.net/files/
 
 MAINTAINER=		ola@mrEriksson.net
-HOMEPAGE=		http://libwbxml.aymerick.com/
+HOMEPAGE=		http://libwbxml.aymerick.com:8080/
 COMMENT=		Library to handle WBXML (Patched for MultiSync)
 
 WRKSRC=		${WRKDIR}/wbxml2-0.9.0
