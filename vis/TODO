@@ -1,0 +1,7 @@
+Unfortunately, this package confilicts with textproc/vis
+and has the same name as a NetBSD built-in command
+
+Both of those should be resolved, probably by renaming the package
+and the binary.  However, I dont know what to name it.
+
+Perhaps vis-ucb or VIS or ucvis...
