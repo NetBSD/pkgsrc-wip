@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2432 2006/11/15 00:12:11 dhowland Exp $
+# $Id: Makefile,v 1.2433 2006/11/15 04:02:03 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1387,6 +1387,7 @@ SUBDIR+=	vche
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	virus
+SUBDIR+=	vis
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
 SUBDIR+=	vm-pop3d
