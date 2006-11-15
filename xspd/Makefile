@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/13 03:33:50 kcf Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/15 20:11:47 kcf Exp $
 #
 
 .include "Makefile.common"
@@ -19,9 +19,6 @@ MAKE_ENV+=		TARGETDIR="${WRKSRC}"
 MAKE_ENV+=		INSTALLDIR="${PREFIX}/bin/xspsys"
 
 .include "options.mk"
-
-do-install:
-	@${DO_NADA}
 
 post-extract:
 	${RM} ${WRKDIR}/xspdinstall ${WRKDIR}/xspapp_* ${WRKDIR}/xspjava_* ${WRKDIR}/xspjsys_* ${WRKDIR}/xspjsysdoc_* ${WRKDIR}/xspsysdoc_*

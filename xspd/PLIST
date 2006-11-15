@@ -1,1 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/19 05:46:29 kcf Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/15 20:11:47 kcf Exp $
+bin/xspd
+share/xspd/xspanalyze
+share/xspd/xspdAdmin.xsp
+share/xspd/xspfwd
+@dirrm share/xspd

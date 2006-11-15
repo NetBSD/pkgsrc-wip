@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
+$NetBSD: patch-aa,v 1.8 2006/11/15 20:11:47 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
@@ -171,18 +171,15 @@ $NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
-@@ -513,17 +468,17 @@ CDOC_CORE_FILES=\
- 
+@@ -514,16 +469,15 @@ CDOC_CORE_FILES=\
  ### targets ###
  
--install: \
+ install: \
 -	mkdirs \
 -	$(CVSMAKEFILE) mkcvs \
 -	all \
 -	helpdoc \
-+install:
-+	echo crap
-+	mkinstalldirs \
++	installdirs \
  	$(CONFIGFILE) \
  	installadmin \
  	installapputil \
@@ -197,7 +194,7 @@ $NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
-@@ -554,15 +509,17 @@ installapputil: \
+@@ -554,15 +508,17 @@ installapputil: \
  
  ################################################################################
  
@@ -218,7 +215,7 @@ $NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
  ################################################################################
  
  helpdoc: \
-@@ -758,9 +715,15 @@ mkdirs:
+@@ -758,10 +714,16 @@ mkdirs:
  	    $(DISTRDIR) \
  	    $(INTERNETDIR) \
  	    $(DOCDIR) \
@@ -226,16 +223,17 @@ $NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
 +	
 +################################################################################
 +
-+mkinstalldirs:
-+	-mkdir -p \
++installdirs:
++	-@mkdir -p \
  	    $(INSTALLDIR) \
  	    $(XSPDIR) \
 -	    $(APPUTILDIR) \
-+	    #$(APPUTILDIR) \
  	    2>/dev/null
++	    #$(APPUTILDIR) \
  	
  ################################################################################
-@@ -1389,7 +1352,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
+ 
+@@ -1389,7 +1351,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
  		-o $@  $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o \
  		$(CLIBS) \
  		$(LIBCMN)
@@ -244,7 +242,7 @@ $NetBSD: patch-aa,v 1.7 2006/11/15 06:01:31 kcf Exp $
  	
  ################################################################################
  
-@@ -1656,8 +1619,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
+@@ -1656,8 +1618,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
  
  ### for backup only ###
  
