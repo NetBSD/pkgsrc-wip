@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2431 2006/11/14 21:24:33 jsonn Exp $
+# $Id: Makefile,v 1.2432 2006/11/15 00:12:11 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1247,6 +1247,7 @@ SUBDIR+=	simplec
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	sipsak
+SUBDIR+=	sis
 SUBDIR+=	six
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
