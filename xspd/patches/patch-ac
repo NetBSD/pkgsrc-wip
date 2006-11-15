@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2006/11/15 20:37:11 kcf Exp $
+
+--- etc/xspd.conf_distr.orig	2006-11-15 17:16:02.000000000 -0500
++++ etc/xspd.conf_distr
+@@ -123,9 +123,9 @@
+ <XSPD>
+ XSPId			"daemon"
+ XSPDescription		"eXtended Server Pages Daemon"
+-PgmRoot			"${XSPDIR:-/usr2/js/html/test}"
++PgmRoot			"${PGMROOT:-/usr2/js/html/test}"
+ PgmName			"xspd"
+-XSPRoot			"${XSPDIR:-/usr2/js/html/test}"
++XSPRoot			"${XSPROOT:-/usr2/js/html/test}"
+ ##JPgmPath		"/usr/java/jdk1.3.1_jdkgcj/bin/java"
+ ##JPgmPath		"/usr/java/jdk1.3.1_03/bin/java -server -Xms4m"
+ ##JPgmPath		"/usr/java/j2sdk1.4.2_03/bin/java -server -Xms4m"

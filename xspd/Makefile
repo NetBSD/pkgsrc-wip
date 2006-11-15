@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/11/15 20:11:47 kcf Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/15 20:37:11 kcf Exp $
 #
 
 .include "Makefile.common"
@@ -17,6 +17,12 @@ WRKSRC=			${WRKDIR}/${XSPSYS}
 MAKE_ENV+=		TARGETDIR="${WRKSRC}"
 # The install dir.
 MAKE_ENV+=		INSTALLDIR="${PREFIX}/bin/xspsys"
+# Directory for xspd program
+MAKE_ENV+=		PGMROOT="${PREFIX}/bin"
+# Directory for xsp program files for xspd
+MAKE_ENV+=		XSPROOT="${PREFIX}/share/xspd"
+
+
 
 .include "options.mk"
 
