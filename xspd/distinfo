@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2006/11/14 05:20:21 kcf Exp $
+$NetBSD: distinfo,v 1.7 2006/11/15 06:01:31 kcf Exp $
 
 SHA1 (xspsrc_051219_tar.tgz) = f237f6e88d7a72225f700beb618065ac138f995e
 RMD160 (xspsrc_051219_tar.tgz) = c1acb9e5abb8d1d94b11dc73f9036d614df9bfd2
 Size (xspsrc_051219_tar.tgz) = 886315 bytes
-SHA1 (patch-aa) = 900a80438f09ee691a0e8af810fe7e759c732e2f
+SHA1 (patch-aa) = 52bc079b7e026f9a2180e7abb51ea57e4b4f8f69
 SHA1 (patch-ab) = e5b2f03b876d622141af6df7e3f438f992d52e7c
