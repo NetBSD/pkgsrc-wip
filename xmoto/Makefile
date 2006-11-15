@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/11 20:44:33 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/15 13:35:07 kh-p Exp $
 
 DISTNAME=		xmoto-0.2.2-src
 PKGNAME=		xmoto-0.2.2
@@ -39,7 +39,7 @@ CONFIGURE_ENV+=         INTLLIBS="-lintl"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../wip/libdrm/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
