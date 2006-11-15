@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2433 2006/11/15 04:02:03 dhowland Exp $
+# $Id: Makefile,v 1.2434 2006/11/15 17:57:59 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -697,6 +697,7 @@ SUBDIR+=	mutagen
 SUBDIR+=	mutella
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
+SUBDIR+=	mvsis
 SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
 SUBDIR+=	n0t
