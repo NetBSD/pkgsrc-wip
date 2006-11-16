@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2434 2006/11/15 17:57:59 dhowland Exp $
+# $Id: Makefile,v 1.2435 2006/11/16 20:27:36 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -564,7 +564,6 @@ SUBDIR+=	libuuid
 SUBDIR+=	libuxre
 SUBDIR+=	libvc
 SUBDIR+=	libvg
-SUBDIR+=	libvncserver
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
@@ -1376,7 +1375,6 @@ SUBDIR+=	umix
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
-SUBDIR+=	unshield
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
