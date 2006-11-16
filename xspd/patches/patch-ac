@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/11/15 20:37:11 kcf Exp $
+$NetBSD: patch-ac,v 1.2 2006/11/16 05:02:46 kcf Exp $
 
---- etc/xspd.conf_distr.orig	2006-11-15 17:16:02.000000000 -0500
+--- etc/xspd.conf_distr.orig	2005-12-19 14:19:15.000000000 -0500
 +++ etc/xspd.conf_distr
-@@ -123,9 +123,9 @@
+@@ -123,16 +123,16 @@
  <XSPD>
  XSPId			"daemon"
  XSPDescription		"eXtended Server Pages Daemon"
@@ -14,3 +14,12 @@ $NetBSD: patch-ac,v 1.1 2006/11/15 20:37:11 kcf Exp $
  ##JPgmPath		"/usr/java/jdk1.3.1_jdkgcj/bin/java"
  ##JPgmPath		"/usr/java/jdk1.3.1_03/bin/java -server -Xms4m"
  ##JPgmPath		"/usr/java/j2sdk1.4.2_03/bin/java -server -Xms4m"
+ JPgmPath		"/usr/java/j2sdk1.5.0_beta2/bin/java -server -Xms4m"
+ ##JPgmPath		"/usr/j2se/bin/java -server -Xms4m -d32"
+-HTTPRedirectURL		"http://jsfc3:80/"
+-ConfigFile		"xspd.conf"
++HTTPRedirectURL		"${REDIRECTURL:-http://localhost:80/}"
++ConfigFile		"${CONFIGFILE:-xspd.conf}"
+ VarFile			"${TMPDIR:-/tmp}/xspd.var"
+ VarUpdateTimeDelay	600
+ LogFile			"${TMPDIR:-/tmp}/xspd.log%y%m%d"

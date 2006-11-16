@@ -22,9 +22,3 @@ the XSPD are:
       * Usage of fast C/C++ based application programs with the same
 	programming techniques like JSP servlet programming.
       * Support of session context for shell based scripts also.
-
-Because the sources are still under development any specification described at
-this documentation may be changed without any notice. Take a look at the
-sources, e.g. the include definition files, for the actual definition values.
-Javadoc documentation and javadoc-like C-program documentation is available
-also.

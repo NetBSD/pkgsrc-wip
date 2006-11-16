@@ -1,6 +1,32 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/15 20:11:47 kcf Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/11/16 05:02:46 kcf Exp $
 bin/xspd
+etc/xspd.conf
+include/xspd/clktck.h
+include/xspd/const.h
+include/xspd/dbg.h
+include/xspd/envvar.h
+include/xspd/errmsg.h
+include/xspd/fileio.h
+include/xspd/inpwait.h
+include/xspd/macros.h
+include/xspd/types.h
+include/xspd/vmem.h
+include/xspd/vvar.h
+include/xspd/xsp.h
+include/xspd/xspapp.h
+include/xspd/xspappextern.h
+include/xspd/xspappif.h
+include/xspd/xspappvar.h
+include/xspd/xspchart.h
+include/xspd/xspconfig.h
+include/xspd/xspdadmconfig.h
+include/xspd/xsperrno.h
+include/xspd/xspmacros.h
+lib/xspd/libcommon.a
+lib/xspd/libxspd.a
 share/xspd/xspanalyze
 share/xspd/xspdAdmin.xsp
 share/xspd/xspfwd
 @dirrm share/xspd
+@dirrm lib/xspd
+@dirrm include/xspd

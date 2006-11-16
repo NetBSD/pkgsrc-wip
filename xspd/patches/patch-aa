@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
+$NetBSD: patch-aa,v 1.10 2006/11/16 05:02:46 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -68,75 +68,30 @@
+@@ -68,75 +68,31 @@
  #                                                                              #
  ################################################################################
  
@@ -52,7 +52,9 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
 -##PWD=.
 +PWD=${TARGETDIR}
  #                                               # home directory
- 
+-
++XSPDIR=${XSPROOT}
++INSTALLDIR=${PGMROOT}
  ### root dir of java core classes ###
  
 -XSPJAVASYSDIR=../xspjsys
@@ -71,7 +73,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  ### XSPD/XSP runtime config file ###
  
 -CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
-+CONFIGFILE=${PREFIX}/etc/xspd.conf
++#CONFIGFILE=${PREFIX}/etc/xspd.conf
  #						# config file
  #						# NOTE: must be same path as
  #						# $(INSTALLDIR)
@@ -83,7 +85,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  
  ### default parameter setting ###
  
-@@ -166,8 +121,8 @@ IDENT=0
+@@ -166,8 +122,8 @@ IDENT=0
  
  HOMEDIR=$(PWD)
  #						# user specific home directory
@@ -94,11 +96,11 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  SRCDIR=$(HOMEDIR)/src
  #						# source directory
  OBJDIR=$(HOMEDIR)/obj
-@@ -178,16 +133,14 @@ LIBDIR=$(HOMEDIR)/lib
+@@ -178,16 +134,14 @@ LIBDIR=$(HOMEDIR)/lib
  #						# library directory
  DOCDIR=$(HOMEDIR)/xspdoc
  #						# documentation directory
-+INSTALLDIR=${PREFIX}/bin
++#INSTALLDIR=${PREFIX}/bin
 +#						# installation directory
  CDOC_IF_DIR=$(HOMEDIR)/doc
  #						# C interface documentation dir
@@ -114,7 +116,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,13 +169,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+@@ -216,13 +170,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
@@ -130,7 +132,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  ##CFLAGSX=-O3 -funroll-loops
  #						# C-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
-@@ -232,7 +185,7 @@ CFLAGSX=-g -O
+@@ -232,7 +186,7 @@ CFLAGSX=-g -O
  #						# C-flags SUN, gcc, 32/64-bit
  ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
  #						# C-flags SUN, SUN-cc, 32-bit
@@ -139,7 +141,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  #						# C-flags NetBSD, pentium
  
  CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
-@@ -252,7 +205,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+@@ -252,7 +206,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
  #						# -DVHASHTABNAM=0   1/0
  
  #						# flags for cc-link option
@@ -148,7 +150,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  #						# link-flags Linux Red Hat 7.3,
  #						# Red Hat 8.0, or Fedora FC3
  ##CLDFLAGS=-lcrypt -lxnet
-@@ -261,11 +214,10 @@ CLDFLAGS=-lcrypt
+@@ -261,11 +215,10 @@ CLDFLAGS=-lcrypt
  #						# link-flags SUN, gcc, 32/64-bit
  ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
  #						# link-flags SUN, cc, 32-bit
@@ -162,7 +164,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  #						# HTML preprocessor
  
  #BIT7=-bit7
-@@ -320,6 +272,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
+@@ -320,6 +273,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
  	fi ; \
  	test -f $< && \
  	echo " preprocessing `basename $< | sed -e 's/\..*//'`.hxsp -> `basename $< | sed -e 's/\..*//'`.h $$MSG"; \
@@ -170,7 +172,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  	$(XHTMLPP) \
  		-d1 '<%' -d2 '%>' \
  		-c $(BIT7) -O -zz $$OUTP \
-@@ -514,16 +467,15 @@ CDOC_CORE_FILES=\
+@@ -514,21 +468,33 @@ CDOC_CORE_FILES=\
  ### targets ###
  
  install: \
@@ -186,14 +188,32 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
 -	xspapp \
 -	xspjava
 +	$(XSPDIR)/xspfwd \
-+	$(XSPDIR)/xspanalyze
++	$(XSPDIR)/xspanalyze \
++	installincludes \
++	installlibs 
 +#	xspjsys \
 +#	xspapp \
 +#	xspjava
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
-@@ -554,15 +506,17 @@ installapputil: \
+ ################################################################################
+ 
++installincludes:
++	@cp ${INCLCOMMON}/* ${PREFIX}/include/xspd/.
++
++################################################################################
++
++installlibs:
++	@cp ${LIBXSPD} ${PREFIX}/lib/xspd/.
++	@cp ${LIBCMN} ${PREFIX}/lib/xspd/.
++
++################################################################################
++
+ installadmin: \
+ 	$(XSPDIR)/xspdAdmin.xsp
+ 
+@@ -554,15 +520,17 @@ installapputil: \
  
  ################################################################################
  
@@ -214,7 +234,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  ################################################################################
  
  helpdoc: \
-@@ -758,10 +712,16 @@ mkdirs:
+@@ -758,10 +726,18 @@ mkdirs:
  	    $(DISTRDIR) \
  	    $(INTERNETDIR) \
  	    $(DOCDIR) \
@@ -227,12 +247,14 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  	    $(INSTALLDIR) \
  	    $(XSPDIR) \
 -	    $(APPUTILDIR) \
++	    $(PREFIX)/include/xspd \
++	    $(PREFIX)/lib/xspd \
  	    2>/dev/null
 +	    #$(APPUTILDIR) \
  	
  ################################################################################
  
-@@ -1389,7 +1349,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
+@@ -1389,7 +1365,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
  		-o $@  $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o \
  		$(CLIBS) \
  		$(LIBCMN)
@@ -241,7 +263,7 @@ $NetBSD: patch-aa,v 1.9 2006/11/15 20:37:11 kcf Exp $
  	
  ################################################################################
  
-@@ -1656,8 +1616,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
+@@ -1656,8 +1632,8 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
  
  ### for backup only ###
  
