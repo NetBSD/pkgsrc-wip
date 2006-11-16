@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2006/11/16 05:02:46 kcf Exp $
+# $NetBSD: Makefile,v 1.8 2006/11/16 05:09:32 kcf Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=		xspd-${XSPDVERSION}
-COMMENT=		xspd http application server itself
-USE_TOOLS+=		gmake awk ar echo mkdir cp sed
+COMMENT=		Http application server
+USE_TOOLS+=		gmake awk echo mkdir cp sed
 USE_LANGUAGES+=		c
-MAKE_ENV+=		CFLAGSX="-march=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024"
+MAKE_ENV+=		CFLAGSX="-march=i386 -m${BITMODE} -g -O -DFD_SETSIZE=1024"
 MAKE_ENV+=		CLDFLAGS="-lcrypt -mpcu=i386 -m${BITMODE}"
 MAKE_ENV+=		AWK="awk"
 MAKE_ENV+=		AR="ar"
