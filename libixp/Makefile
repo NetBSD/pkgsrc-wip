@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2006/11/05 19:37:47 kh-p Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/16 14:08:33 kh-p Exp $
 
-DISTNAME=		libixp
-PKGNAME=		libixp-20061105
+DISTNAME=		libixp-0.1
 CATEGORIES=		devel
-MASTER_SITES=		http://perso.orange.fr/kh.p/pkgsrc/
+MASTER_SITES=		http://libs.suckless.org/download/
 
-MAINTAINER=		kh.p@no-log.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://libs.suckless.org/
 COMMENT=		Standalone client/server 9P library
 

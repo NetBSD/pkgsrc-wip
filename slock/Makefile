@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/11/04 10:48:33 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/16 14:07:13 kh-p Exp $
 
 DISTNAME=		slock-0.3
 CATEGORIES=		x11
 MASTER_SITES=		http://suckless.org/download/
 
-MAINTAINER=		kh.p@no-log.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tools.suckless.org/
 COMMENT=		Simple screen locker
 

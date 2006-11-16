@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2006/11/08 23:15:27 kh-p Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/16 14:10:40 kh-p Exp $
 
 DISTNAME=		dwm-2.1
 CATEGORIES=		wm
 MASTER_SITES=		http://suckless.org/download/
 
-MAINTAINER=		kh.p@no-log.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dwm.suckless.org/
 COMMENT=		Dynamic window manager
 
