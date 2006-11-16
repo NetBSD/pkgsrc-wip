@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/11/15 13:35:07 kh-p Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/16 15:57:12 kh-p Exp $
 
 DISTNAME=		xmoto-0.2.2-src
 PKGNAME=		xmoto-0.2.2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmoto/}
 
-MAINTAINER=		kh.p@no-log.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmoto.sourceforge.net/
 COMMENT=		2D motocross plateform game
 
