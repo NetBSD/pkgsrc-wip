@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2006/11/16 22:55:03 cheusov Exp $
+pike/${PIKE_VERSION}/lib/modules/____Regexp_PCRE.so
