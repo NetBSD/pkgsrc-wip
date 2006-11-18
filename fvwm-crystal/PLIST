@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/31 10:19:50 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/18 16:12:08 thomasklausner Exp $
 bin/fvwm-crystal
 bin/fvwm-crystal.apps
 bin/fvwm-crystal.wallpaper
+share/examples/fvwm-crystal/Xresources
+share/examples/fvwm-crystal/Xsession
 share/fvwm-crystal/fvwm/Applications/20~Games/20~FPP/15~doom3~DOOM_III
 share/fvwm-crystal/fvwm/Applications/20~Games/20~FPP/15~quake3~Quake_III_Arena
 share/fvwm-crystal/fvwm/Applications/20~Games/20~FPP/15~quake4~Quake_IV
@@ -3037,3 +3039,4 @@ share/fvwm-crystal/fvwm/wallpapers/fvwm-crystal-dark2-1024x768.jpg
 @dirrm share/fvwm-crystal/fvwm/Applications
 @dirrm share/fvwm-crystal/fvwm
 @dirrm share/fvwm-crystal
+@dirrm share/examples/fvwm-crystal
