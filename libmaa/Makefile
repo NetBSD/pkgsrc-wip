@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/11/18 17:00:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/18 17:13:01 cheusov Exp $
 
 PKGNAME=	libmaa-0.990
 DISTNAME=	dictd-1.10.7
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
-# $NetBSD: Makefile,v 1.1 2006/11/18 17:00:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/18 17:13:01 cheusov Exp $
 
 COMMENT=	Library that provides many low-level data structures
 
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-shared
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${PKGDOCDIR}
 
-EXTRA_DOC_FILES=	COPYING.LIB README
+EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 
 post-install:
 .for i in ${EXTRA_DOC_FILES}

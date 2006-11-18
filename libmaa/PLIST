@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/11/18 17:00:24 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/18 17:13:01 cheusov Exp $
 include/maa.h
 lib/libmaa.a
 lib/libmaa.so
@@ -6,4 +6,5 @@ lib/libmaa.so.0.990
 lib/libmaa.so.0.990.3
 share/doc/${PKGBASE}/COPYING.LIB
 share/doc/${PKGBASE}/README
+share/doc/${PKGBASE}/libmaa.600dpi.ps
 @dirrm share/doc/${PKGBASE}
