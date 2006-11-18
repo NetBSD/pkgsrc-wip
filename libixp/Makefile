@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/11/16 14:08:33 kh-p Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/18 18:07:58 kh-p Exp $
 
 DISTNAME=		libixp-0.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://libs.suckless.org/download/
 
@@ -15,6 +16,6 @@ do-install:
 	 ${INSTALL_PROGRAM} ${WRKSRC}/ixpc ${PREFIX}/bin
 	 ${INSTALL_DATA} ${WRKSRC}/ixp.h ${PREFIX}/include
 	 ${INSTALL_DATA} ${WRKSRC}/libixp.a ${PREFIX}/lib
-	 ${INSTALL_DATA} ${WRKSRC}/ixpc.1 ${PREFIX}/man/man1
+	 ${INSTALL_DATA} ${FILESDIR}/ixpc.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
