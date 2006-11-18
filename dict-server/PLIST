@@ -1,9 +1,31 @@
-@comment $NetBSD: PLIST,v 1.3 2006/11/18 16:54:29 cheusov Exp $
-include/maa.h
-lib/libmaa.a
-lib/libmaa.so
-lib/libmaa.so.0.990
-lib/libmaa.so.0.990.3
-share/doc/${PKGBASE}/COPYING.LIB
+@comment $NetBSD: PLIST,v 1.4 2006/11/18 17:00:01 cheusov Exp $
+bin/dictfmt
+bin/dictfmt_index2suffix
+bin/dictfmt_index2word
+bin/dictunformat
+bin/dictzip
+man/man1/dictfmt.1
+man/man1/dictfmt_index2suffix.1
+man/man1/dictfmt_index2word.1
+man/man1/dictunformat.1
+man/man1/dictzip.1
+man/man8/dictd.8
+sbin/dictd
+share/doc/${PKGBASE}/COPYING
+share/doc/${PKGBASE}/INSTALL
+share/doc/${PKGBASE}/NEWS
 share/doc/${PKGBASE}/README
+share/examples/${PKGBASE}/dictd.conf
+share/examples/${PKGBASE}/dictd1.conf
+share/examples/${PKGBASE}/dictd2.conf
+share/examples/${PKGBASE}/dictd3.conf
+share/examples/${PKGBASE}/dictd4.conf
+share/examples/${PKGBASE}/dictd_complex.conf
+share/examples/${PKGBASE}/dictd_mime.conf
+share/examples/${PKGBASE}/dictd_plugin_dbi.conf
+share/examples/${PKGBASE}/dictd_site.txt
+share/examples/${PKGBASE}/dictd_virtual.conf
+share/examples/rc.d/dictd
 @dirrm share/doc/${PKGBASE}
+@dirrm share/examples/${PKGBASE}
+@dirrm share/dictd
