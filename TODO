@@ -2,7 +2,7 @@ Suggested package updates
 
 	o autoproject-0.20
 	o avahi-0.6.14
-	o bmpx-0.32.0
+	o bmpx-0.34.3
 	o chora-2.0.1
 	o cinelerra-2.1
 	o cvstrac-2.0.0
@@ -14,8 +14,10 @@ Suggested package updates
 	o electricsheep-2.6.3
 	o emelfm2-0.1.4 
 	o fakenes-0.5.7
-	o gaim-2.0.0beta4
+	o gaim-2.0.0beta5
 	o gajim-0.10.1
+	o gambas-1.9.46
+	o gcompris-8.2.1
 	o gforge-4.5.11
 	o gmediaserver-0.12.0
 	o gnome-commander-1.2.1
@@ -24,8 +26,9 @@ Suggested package updates
 	o gtick-0.3.10
 	o gxmms2-0.6.2
 	o hu-go-2.11
-	o linphone-1.5.0
+	o linphone-1.5.1
 	o mupen64-0.5
+	o parted-1.8.0
 	o planner-0.14.1
 	o py-PyPE-2.7.2
 	o qcomicbook-0.3.3
@@ -33,6 +36,7 @@ Suggested package updates
 	o rosegarden-current-1.4.0
 	o sendmailX-0.0.0.0
 	o smc-0.99.2
+	o smlnj-110.60
 	o spe-0.8.2a
 	o speex-1.2beta1
 	o txt2tags-2.3.2
