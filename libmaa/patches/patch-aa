@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2006/11/18 17:00:25 cheusov Exp $
+
+--- configure.orig	2006-07-04 01:37:28.000000000 +0300
++++ configure
+@@ -1320,6 +1320,8 @@ echo Configuring for libmaa $MAA_MAJOR.$
+ echo .
+ 
+ 
++LIBS=`echo $LIBS | sed -e 's|-lmaa||' -e 's|-lz||' -e 's|-lregex||'`
++
+ # Check whether --with-cc or --without-cc was given.
+ if test "${with_cc+set}" = set; then
+   withval="$with_cc"
+@@ -2531,9 +2533,7 @@ esac
+ if test "${with_cflags+set}" = set; then
+   withval="$with_cflags"
+ 
+-if test "x${withval}" = xyes; then
+     CFLAGS="$withval"
+-fi
+ 
+ fi;
+ 
+@@ -8115,6 +8115,10 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/11/18 17:00:25 cheusov Exp $
+
+--- getopt.c.orig	1995-09-29 02:54:55.000000000 +0200
++++ getopt.c
+@@ -44,7 +44,7 @@ Cambridge, MA 02139, USA.  */
+ 
+ #include <stdio.h>
+ 
+-#ifdef __sparc__
++#if defined(__sparc) && !defined(__NetBSD__)
+ extern int fprintf( FILE *, const char *, ... );
+ extern int strncmp( const char *, const char *, int n );
+ #endif
