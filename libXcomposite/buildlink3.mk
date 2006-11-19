@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/11/02 11:37:58 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/11/19 11:16:11 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXCOMPOSITE_BUILDLINK3_MK:=	${LIBXCOMPOSITE_BUILDLINK3_MK}+
@@ -18,8 +18,8 @@ BUILDLINK_PKGSRCDIR.libXcomposite?=	../../wip/libXcomposite
 
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
-.include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/libXfixes/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

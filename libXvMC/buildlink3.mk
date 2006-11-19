@@ -1,24 +1,25 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/05/25 01:40:42 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/11/19 11:17:12 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXVMC_BUILDLINK3_MK:=	${LIBXVMC_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	libXvMC
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXvMC}
 BUILDLINK_PACKAGES+=	libXvMC
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXvMC
 
-.if !empty(LIBXVMC_BUILDLINK3_MK:M+)
+.if ${LIBXVMC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libXvMC+=	libXvMC>=1.0.2
-BUILDLINK_PKGSRCDIR.libXvMC?=	../../new/libXvMC
+BUILDLINK_PKGSRCDIR.libXvMC?=	../../wip/libXvMC
 .endif	# LIBXVMC_BUILDLINK3_MK
 
-.include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/libXext/buildlink3.mk"
-.include "../../wip/libXv/buildlink3.mk"
-#.include "../../wip/videoproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+#.include "../../x11/videoproto/buildlink3.mk"
 #.include "../../x11/xextproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
