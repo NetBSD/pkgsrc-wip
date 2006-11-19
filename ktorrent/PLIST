@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/07 09:02:15 koifren Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/19 13:03:57 shattered Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -16,6 +16,7 @@ lib/libktorrent.la
 share/applications/kde/ktorrent.desktop
 share/kde/applnk/Internet/ktorrent.desktop
 share/kde/apps/ktorrent/geoip/FLAGS_LICENCE
+share/kde/apps/ktorrent/geoip/GeoIP-LICENSE.txt
 share/kde/apps/ktorrent/geoip/ad.png
 share/kde/apps/ktorrent/geoip/ae.png
 share/kde/apps/ktorrent/geoip/af.png
@@ -94,6 +95,7 @@ share/kde/apps/ktorrent/geoip/ga.png
 share/kde/apps/ktorrent/geoip/gb.png
 share/kde/apps/ktorrent/geoip/gd.png
 share/kde/apps/ktorrent/geoip/ge.png
+share/kde/apps/ktorrent/geoip/geoip.dat
 share/kde/apps/ktorrent/geoip/gf.png
 share/kde/apps/ktorrent/geoip/gh.png
 share/kde/apps/ktorrent/geoip/gi.png
@@ -304,7 +306,6 @@ share/kde/icons/hicolor/64x64/apps/ktorrent.png
 share/kde/icons/hicolor/64x64/mimetypes/torrent.png
 share/kde/icons/hicolor/scalable/apps/ktorrent.svgz
 share/kde/icons/hicolor/scalable/mimetypes/torrent.svgz
-share/kde/mimelnk/application/x-bittorrent.desktop
 share/kde/services/ktinfowidgetplugin.desktop
 share/kde/services/ktipfilterplugin.desktop
 share/kde/services/ktlogviewerplugin.desktop
@@ -316,6 +317,7 @@ share/kde/services/ktupnpplugin.desktop
 share/kde/servicetypes/ktorrentplugin.desktop
 share/locale/bg/LC_MESSAGES/ktorrent.mo
 share/locale/br/LC_MESSAGES/ktorrent.mo
+share/locale/ca/LC_MESSAGES/ktorrent.mo
 share/locale/cs/LC_MESSAGES/ktorrent.mo
 share/locale/cy/LC_MESSAGES/ktorrent.mo
 share/locale/da/LC_MESSAGES/ktorrent.mo
@@ -324,15 +326,18 @@ share/locale/el/LC_MESSAGES/ktorrent.mo
 share/locale/en_GB/LC_MESSAGES/ktorrent.mo
 share/locale/es/LC_MESSAGES/ktorrent.mo
 share/locale/et/LC_MESSAGES/ktorrent.mo
+share/locale/eu/LC_MESSAGES/ktorrent.mo
 share/locale/fr/LC_MESSAGES/ktorrent.mo
 share/locale/ga/LC_MESSAGES/ktorrent.mo
 share/locale/gl/LC_MESSAGES/ktorrent.mo
 share/locale/hu/LC_MESSAGES/ktorrent.mo
 share/locale/it/LC_MESSAGES/ktorrent.mo
 share/locale/ja/LC_MESSAGES/ktorrent.mo
-share/locale/ka/LC_MESSAGES/ktorrent.mo
+share/locale/km/LC_MESSAGES/ktorrent.mo
 share/locale/lt/LC_MESSAGES/ktorrent.mo
+share/locale/mk/LC_MESSAGES/ktorrent.mo
 share/locale/ms/LC_MESSAGES/ktorrent.mo
+share/locale/nb/LC_MESSAGES/ktorrent.mo
 share/locale/nl/LC_MESSAGES/ktorrent.mo
 share/locale/pa/LC_MESSAGES/ktorrent.mo
 share/locale/pl/LC_MESSAGES/ktorrent.mo
@@ -340,6 +345,7 @@ share/locale/pt/LC_MESSAGES/ktorrent.mo
 share/locale/pt_BR/LC_MESSAGES/ktorrent.mo
 share/locale/ru/LC_MESSAGES/ktorrent.mo
 share/locale/rw/LC_MESSAGES/ktorrent.mo
+share/locale/sk/LC_MESSAGES/ktorrent.mo
 share/locale/sr/LC_MESSAGES/ktorrent.mo
 share/locale/sr@Latn/LC_MESSAGES/ktorrent.mo
 share/locale/sv/LC_MESSAGES/ktorrent.mo
