@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2436 2006/11/18 01:01:30 kristerw Exp $
+# $Id: Makefile,v 1.2437 2006/11/19 17:40:05 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -699,7 +699,6 @@ SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mysql-docs
 SUBDIR+=	mythtv
-SUBDIR+=	n0t
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
 SUBDIR+=	navigatrix
