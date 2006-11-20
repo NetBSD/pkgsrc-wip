@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/20 19:39:44 kh-p Exp $
+
+--- Makefile.orig	2006-11-20 20:23:14.000000000 +0100
++++ Makefile
+@@ -1,8 +1,5 @@
+-
+ CFLAGS=-O2 -W -Wall -D_FILE_OFFSET_BITS=64 -DSELF_TEST
+ 
+-DESTDIR=/usr/local
+-
+ LIB_OBJ=src/aes.o          src/arc4.o         src/base64.o       \
+         src/des.o          src/havege.o       src/md2.o          \
+         src/md4.o          src/md5.o          src/mpi.o          \
+@@ -28,13 +25,13 @@ apps: $(APP_OBJ)
+ 	@echo "  CC      $<"; $(CC) $(CFLAGS) -Isrc $< -o $@ -L. -lxyssl
+ 
+ install:
+-	mkdir -p  $(DESTDIR)/{include/xyssl,lib}
+-	cp src/*.h $(DESTDIR)/include/xyssl
+-	cp libxyssl.a $(DESTDIR)/lib
++	mkdir -p  ${PREFIX}/include/xyssl
++	cp src/*.h ${PREFIX}/include/xyssl
++	cp libxyssl.a ${PREFIX}/lib
+ 
+ install-apps:
+-	mkdir -p $(DESTDIR)/bin
+-	cp app/*.x $(DESTDIR)/bin
++	mkdir -p ${PREFIX}/bin
++	cp app/*.x ${PREFIX}/bin
+ 
+ clean:
+ 	@echo "  RM      libxyssl.a"; rm -f libxyssl.a

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/20 19:39:44 kh-p Exp $
+
+SHA1 (xyssl-0.1.tgz) = 9d1417d0b8f521f8aaf09e063c4cdefe23e6da11
+RMD160 (xyssl-0.1.tgz) = ed1488c251453a6cabc9c76ce56d807a334a5452
+Size (xyssl-0.1.tgz) = 278657 bytes
+SHA1 (patch-aa) = 7b558f6a096b892442f959a3fb10ae77557b30d4

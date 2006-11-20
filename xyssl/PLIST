@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/20 19:39:44 kh-p Exp $
+include/xyssl/aes.h
+include/xyssl/arc4.h
+include/xyssl/base64.h
+include/xyssl/des.h
+include/xyssl/havege.h
+include/xyssl/md2.h
+include/xyssl/md4.h
+include/xyssl/md5.h
+include/xyssl/mpi.h
+include/xyssl/net.h
+include/xyssl/rsa.h
+include/xyssl/sha1.h
+include/xyssl/sha2.h
+include/xyssl/ssl_v3.h
+include/xyssl/timing.h
+include/xyssl/x509.h
+lib/libxyssl.a
+@dirrm include/xyssl
