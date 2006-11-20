@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/11/16 05:09:32 kcf Exp $
+# $NetBSD: Makefile,v 1.9 2006/11/20 07:11:38 kcf Exp $
 #
 
 .include "Makefile.common"
@@ -13,17 +13,38 @@ MAKE_ENV+=		AWK="awk"
 MAKE_ENV+=		AR="ar"
 WRKSRC=			${WRKDIR}/${XSPSYS}
 
+# Installation directories
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+LBDIR=			${PREFIX}/lib/${PKGBASE}
+INDIR=			${PREFIX}/include/${PKGBASE}
+SHDIR=			${PREFIX}/share/${PKGBASE}
+BNDIR=			${PREFIX}/bin
+
+# Runtime configuration file subdir, default base is ${PREFIX}/etc
+PKG_SYSCONFSUBDIR=	xspd
+
 # The build dir.
 MAKE_ENV+=		TARGETDIR="${WRKSRC}"
 # Directory for xspd server
-MAKE_ENV+=		PGMROOT="${PREFIX}/bin"
+MAKE_ENV+=		PGMROOT="${BNDIR}"
 # Directory for xsp program files for xspd
-MAKE_ENV+=		XSPROOT="${PREFIX}/share/xspd"
-# Directory for xsp config file
-MAKE_ENV+=		CONFIGFILE="${PREFIX}/etc/xspd.conf"
+MAKE_ENV+=		XSPROOT="${SHDIR}"
+# Runtime xsp config file
+MAKE_ENV+=		CONFIGFILE="${PKG_SYSCONFDIR}/xspd.conf"
+# Buildtime xsp config file
+MAKE_ENV+=		EXAMPLECONFIGFILE="${EGDIR}/xspd.conf"
 # Redirect URL
 MAKE_ENV+=		REDIRECTURL="http://localhost:80/"
 
+
+# Buildtime default configuration and runtime destination files
+CONF_FILES=		${EGDIR}/xspd.conf ${PKG_SYSCONFDIR}/xspd.conf
+
+# Own Directories
+MAKE_DIRS=		${EGDIR}
+MAKE_DIRS+=		${LBDIR}
+MAKE_DIRS+=		${INDIR}
+MAKE_DIRS+=		${SHDIR}
 
 
 .include "options.mk"
