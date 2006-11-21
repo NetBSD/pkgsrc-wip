@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/21 14:26:07 bartoszkuzma Exp $
+man/man5/smtp-gated.conf.5
+man/man8/smtp-gated.8
+sbin/smtp-gated
+share/doc/smtp-gated/README.PL
+share/examples/rc.d/smtp_gated
+share/examples/smtp-gated/smtp-gated.conf
+@dirrm share/doc/smtp-gated
+@dirrm share/examples/smtp-gated

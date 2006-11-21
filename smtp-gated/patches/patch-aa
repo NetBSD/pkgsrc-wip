@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/21 14:26:07 bartoszkuzma Exp $
+
+--- src/lookup.c.orig	2006-04-04 13:36:53.000000000 +0200
++++ src/lookup.c
+@@ -50,6 +50,17 @@
+ #include <linux/netfilter_ipv4.h>
+ #endif
+ 
++#ifdef USE_NAT_IPFILTER
++#include <sys/ioctl.h>
++#include <netinet/tcp.h>
++#include <netinet/ipl.h>
++#include <netinet/ip_compat.h>
++#include <netinet/ip_fil.h>
++#include <netinet/ip_nat.h>
++#include <netinet/ip_state.h>
++#include <netinet/ip_proxy.h>
++#endif
++
+ #include "confvars.h"
+ #include "conffile.h"
+ #include "smtp-gated.h"
+@@ -75,6 +86,12 @@
+ int nat_lookup(struct proc_data *data)
+ {
+ 	socklen_t size;
++#ifdef USE_NAT_IPFILTER
++	struct sockaddr_in sin, sloc;
++	ipfobj_t ipfobj;
++	natlookup_t natlookup;
++	int namelen, ipnat_fd;
++#endif
+ 
+ 	data->target.sin_family = AF_INET;
+ 	size = sizeof(data->target);
+@@ -87,6 +104,39 @@ int nat_lookup(struct proc_data *data)
+ 	if (getsockname(data->client, &data->target, &size) != 0) 
+ 		return -1;
+ #endif
++#ifdef USE_NAT_IPFILTER
++	namelen = sizeof(sin);
++	if (getpeername(data->client, (struct sockaddr *)&sin, &namelen) == -1)
++		return -1;
++
++	namelen = sizeof(sloc);
++	if (getsockname(data->client, (struct sockaddr *)&sloc, &namelen) == -1)
++		return -1;
++
++	memset((void *)&ipfobj, 0, sizeof (ipfobj));
++	ipfobj.ipfo_rev = IPFILTER_VERSION;
++	ipfobj.ipfo_size = sizeof (natlookup);
++	ipfobj.ipfo_ptr = &natlookup;
++	ipfobj.ipfo_type = IPFOBJ_NATLOOKUP;
++
++	memset((void *)&natlookup, 0, sizeof (natlookup));
++	natlookup.nl_inip = sloc.sin_addr;
++	natlookup.nl_outip = sin.sin_addr;
++	natlookup.nl_flags = IPN_TCP;
++	natlookup.nl_inport = sloc.sin_port;
++	natlookup.nl_outport = sin.sin_port;
++
++	if ((ipnat_fd = open(IPNAT_NAME, O_RDONLY)) == -1)
++		return -1;
++	if (ioctl(ipnat_fd, SIOCGNATL, &ipfobj) == -1)
++		return -1;
++	close(ipnat_fd);
++
++	data->target.sin_family = AF_INET;
++	data->target.sin_port = natlookup.nl_realport;
++	data->target.sin_addr = natlookup.nl_realip;
++
++#endif
+ 
+ 	snprintf(data->target_str, sizeof(data->target_str), "%s", inet_ntoa(data->target.sin_addr));
+ 	TERMINATE_STRING(data->target_str);

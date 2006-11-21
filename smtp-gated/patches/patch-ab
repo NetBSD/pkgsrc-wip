@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/11/21 14:26:07 bartoszkuzma Exp $
+
+--- configure.in.orig	2006-05-12 20:14:15.000000000 +0200
++++ configure.in
+@@ -86,6 +86,8 @@ AC_CHECK_HEADERS([netinet/ip_fw.h netine
+ 	#include <netinet/ip_fw.h>
+ 	]])
+ 
++AC_CHECK_HEADERS([netinet/ipl.h], [found_ipfilter=1])
++
+ AC_CHECK_FUNCS([strndup asprintf vasprintf])
+ AC_CHECK_FUNCS([setenv])
+ AC_CHECK_FUNCS(accept,,[AC_CHECK_LIB(socket,accept)])
+@@ -137,7 +139,7 @@ fi
+ PROXY_LANG="$use_lang"
+ AC_SUBST(PROXY_LANG)
+ AC_MSG_NOTICE([---------------------------------------------------])
+-AC_MSG_NOTICE([setup: proxy messages default languate: $use_lang])
++AC_MSG_NOTICE([setup: proxy messages default language: $use_lang])
+ 
+ #
+ # --disable-nat
+@@ -164,6 +166,12 @@ if test "x$enable_nat" != "xno"; then
+ 		AC_MSG_NOTICE([setup: NAT transparent proxy code: yes (ipfw)])
+ 		found_nat="1$found_nat"
+ 	fi
++	if test "x$found_ipfilter" = "x1"; then
++		AC_DEFINE(USE_NAT_IPFILTER, 1, [Use IPFilter for transparent proxy])
++		AC_DEFINE(USE_NAT, ["ipfilter"], [Use IPFilter for transparent proxy])
++		AC_MSG_NOTICE([setup: NAT transparent proxy code: yes (ipfilter)])
++		found_nat="1$found_nat"
++	fi
+ 	if test "x$found_nat" = "x"; then
+ 		if test "x$enable_nat" = "xyes"; then
+ 			AC_DEFINE(USE_NAT_GETSOCKNAME, 1, [Use getsockname-compatible transparent proxy])
