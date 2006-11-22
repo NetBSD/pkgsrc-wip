@@ -1,0 +1,23 @@
+# $NetBSD: Makefile-seamonkey.common,v 1.1.1.1 2006/11/22 12:46:57 ghen Exp $
+
+MOZILLA_BIN=		seamonkey-bin
+MOZ_VER=		1.1beta
+MOZ_DIST_VER=		1.1b
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		seamonkey-${MOZ_DIST_VER}.source
+
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
+CATEGORIES=		www
+
+MAINTAINER=		ghen@NetBSD.org
+HOMEPAGE=		http://www.mozilla.org/projects/seamonkey/releases/${MOZ_DIST_VER}.html
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/seamonkey/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/seamonkey/patches
+
+CONFIGURE_ARGS+=	--enable-application=suite
+
+BUILD_SVG=		# yes
+BUILD_MATHML=		# yes
+
+.include "../../www/seamonkey/Makefile.common"
