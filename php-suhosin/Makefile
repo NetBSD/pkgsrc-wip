@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2006/10/09 11:34:44 christian_gall Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/22 13:09:00 christian_gall Exp $
 #
 
 MODNAME=	suhosin
-DISTNAME=	suhosin-0.9.8
-PECL_VERSION=	0.9.8
+DISTNAME=	suhosin-0.9.14
+PECL_VERSION=	0.9.14
 CATEGORIES=	www
 MASTER_SITES=	http://www.hardened-php.net/suhosin/_media/
 EXTRACT_SUFX=	.tgz
