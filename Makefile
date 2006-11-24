@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2440 2006/11/24 19:27:41 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2441 2006/11/24 20:33:49 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -541,6 +541,7 @@ SUBDIR+=	libhttpd
 SUBDIR+=	libixp
 SUBDIR+=	libjudy
 SUBDIR+=	liblingoteach
+SUBDIR+=	libmaa
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
@@ -1493,6 +1494,7 @@ SUBDIR+=	xspsys
 SUBDIR+=	xtrace
 SUBDIR+=	xxdiff
 SUBDIR+=	xxkb
+SUBDIR+=	xyssl
 SUBDIR+=	yabause
 SUBDIR+=	yafray
 SUBDIR+=	yaws
