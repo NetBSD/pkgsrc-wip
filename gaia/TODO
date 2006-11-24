@@ -1,0 +1,5 @@
+1164395922.726581 Destroying objects
+gaia: Error detected by libpthread: Destroying locked mutex.
+Detected by file "/usr/src/lib/libpthread/pthread_mutex.c", line 135, function "pthread_mutex_destroy".
+See pthread(3) for information.
+Abort (core dumped)

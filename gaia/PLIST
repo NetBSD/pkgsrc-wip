@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/24 19:22:39 bartoszkuzma Exp $
+bin/gaia
+share/gaia/data/font.png
+@dirrm share/gaia/data
+@dirrm share/gaia

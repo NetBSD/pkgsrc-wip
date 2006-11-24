@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/24 19:22:39 bartoszkuzma Exp $
+
+--- SConstruct.orig	2006-11-08 01:42:33.000000000 +0100
++++ SConstruct
+@@ -12,10 +12,13 @@ opts.Add(BoolOption('libgefetch_examples
+ #######################################
+ env = Environment( CCFLAGS = [ '-Wall', '-g' ],
+ 		   CXXFLAGS = [ '-Wall', '-g' ],
+-		   CPPPATH = [ '/usr/local/include', '/usr/X11R6/include' ],
+-		   LIBPATH = [ '/usr/X11R6/lib', '/usr/local/lib' ],
++		   CPPPATH = [ ],
++		   LIBPATH = [ ],
+ 		   options = opts )
+ 
++env.Append(CCFLAGS = os.environ['CXXFLAGS'].split())
++env.Append(CXXFLAGS = os.environ['CXXFLAGS'].split())
++
+ libgefetch = SConscript('libgefetch/SConscript', exports = ['env'])
+ 
+ SConscript('src/SConscript', exports = ['env', 'libgefetch'])

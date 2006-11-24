@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/11/24 19:22:39 bartoszkuzma Exp $
+
+SHA1 (gaia-0.1.0.tar.bz2) = cbac9aec0d670f84588ed5a953c8d76db6cd4740
+RMD160 (gaia-0.1.0.tar.bz2) = da0fd41fe6452ac3d20390e7d5a24a4e722c8963
+Size (gaia-0.1.0.tar.bz2) = 64892 bytes
+SHA1 (patch-aa) = 8926bd9879e7672694206cc40112215be8cbb444
