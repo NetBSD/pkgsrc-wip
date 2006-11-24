@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2006/11/01 10:17:13 mwdavies Exp $
+$NetBSD: patch-ab,v 1.4 2006/11/24 07:54:39 thomasklausner Exp $
 
---- configure.orig	2006-10-30 11:09:25.000000000 +1300
+--- configure.orig	2006-11-14 09:21:19.000000000 +0100
 +++ configure
 @@ -1361,7 +1361,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.3 2006/11/01 10:17:13 mwdavies Exp $
  
  
  # Check whether --with-gcc or --without-gcc was given.
-@@ -1739,7 +1739,6 @@ _ACEOF
+@@ -1742,7 +1742,6 @@ _ACEOF
        m68k-*-netbsd*)
  			# This is somewhat bogus.
  			machine=hp9000s300 ;;
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.3 2006/11/01 10:17:13 mwdavies Exp $
        mips-*-netbsd*)	machine=pmax ;;
        mipsel-*-netbsd*)	machine=pmax ;;
        mipseb-*-netbsd*)	machine=pmax ;;
-@@ -1747,7 +1746,10 @@ _ACEOF
+@@ -1750,7 +1749,10 @@ _ACEOF
        powerpc-*-netbsd*) machine=macppc ;;
        sparc*-*-netbsd*)	machine=sparc ;;
        vax-*-netbsd*)	machine=vax ;;
