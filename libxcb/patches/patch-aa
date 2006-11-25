@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/11/25 14:33:18 jeremy-c-reed Exp $
+
+http://gitweb.freedesktop.org/?p=xcb/libxcb.git;a=commitdiff_plain;h=3360d0c79e98cf6b7f30b2d84f117aea0a28595d;hp=818811a7ac660e46d0dca1cbf9e53ad0475af330
+
+--- src/xcb_util.c.orig
++++ src/xcb_util.c
+@@ -176,7 +176,10 @@ static int _xcb_open_decnet(const char *
+ static int _xcb_open_tcp(char *host, const unsigned short port)
+ {
+     int fd = -1;
+-    struct addrinfo hints = { AI_ADDRCONFIG
++    struct addrinfo hints = { 0
++#ifdef AI_ADDRCONFIG
++                              | AI_ADDRCONFIG
++#endif
+ #ifdef AI_NUMERICSERV
+                               | AI_NUMERICSERV
+ #endif
