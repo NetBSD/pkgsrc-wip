@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/19 11:47:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/25 12:17:51 shattered Exp $
 #
 
 .include "../../wip/xspd/Makefile.common"
@@ -7,7 +7,7 @@
 PKGNAME=		xspdapp-${XSPDVERSION}
 COMMENT=		Sample C programs for xspd
 USE_TOOLS+=		gmake awk echo mkdir cp sed
-USE_LANGUAGES+=		c
+USE_LANGUAGES=		c
 MAKE_ENV+=		CFLAGSX="-march=i386 -m${BITMODE} -g -O -DFD_SETSIZE=1024"
 MAKE_ENV+=		CLDFLAGS="-lcrypt -mpcu=i386 -m${BITMODE}"
 MAKE_ENV+=		AWK="awk"

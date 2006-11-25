@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/20 19:39:44 kh-p Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 12:17:51 shattered Exp $
 
 DISTNAME=		xyssl-0.1
 CATEGORIES=		devel
@@ -11,6 +11,6 @@ COMMENT=		SSL minimalist library
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 
 .include "../../mk/bsd.pkg.mk"

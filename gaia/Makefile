@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/24 19:22:39 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 12:17:51 shattered Exp $
 #
 
 DISTNAME=		gaia-0.1.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://gaia.serezhkin.com/
 COMMENT=		Opensource 3D interface to the planet
 
 NO_CONFIGURE=		yes
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c++
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 

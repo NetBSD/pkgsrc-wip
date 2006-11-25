@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/13 18:16:23 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/25 12:17:51 shattered Exp $
 #
 
 DISTNAME=		nginx-0.4.9
@@ -13,7 +13,6 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ld-opt=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib
 
-PKG_SYSCONFBASE=	${PREFIX}/etc
 PKG_SYSCONFSUBDIR=	nginx
 
 BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
