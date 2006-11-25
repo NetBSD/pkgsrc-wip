@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:35 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2006/11/25 14:34:26 shattered Exp $
 
 DISTNAME=	rawphoto.c
-PKGNAME=	rawphoto-1.1.5
+PKGNAME=	rawphoto-1.1.15
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 EXTRACT_SUFX=
