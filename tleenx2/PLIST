@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/29 21:07:41 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/25 22:49:45 shattered Exp $
 bin/tleenx2
 man/man1/tleenx2.1
-share/tleenx2/pixmaps
 share/tleenx2/pixmaps/archiwum.png
 share/tleenx2/pixmaps/away.png
 share/tleenx2/pixmaps/beback.png
