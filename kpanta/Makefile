@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/11/25 11:50:59 shattered Exp $
 #
 
 DISTNAME=		kpanta_1_0
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.geocities.com/anil_rvce/kpanta.html
 COMMENT=		AntiChess - like ordinary chess, but the objective is to loose pieces
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 # propably ${TAR} options include extraction to a specified dir
 # look it up in man :)

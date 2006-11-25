@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/11/01 22:26:59 brook1 Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 11:50:59 shattered Exp $
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/gdal-grass-1.3.1
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gdal=${LOCALBASE}/bin/gdal-config
 CONFIGURE_ARGS+=	--with-grass=${GRASS_HOME}
-USE_LANGUAGES+=		c++
+USE_LANGUAGES=		c++
 BUILD_TARGET=		default
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=    ${GRASS_HOME}/lib

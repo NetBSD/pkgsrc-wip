@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 22:27:48 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/11/25 11:51:00 shattered Exp $
 #
 
 DISTNAME=		uade-1.00
@@ -13,6 +13,7 @@ COMMENT=		Unix Amiga Delitracker Emulator
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 
-CONFIGURE_ARGS=--with-oss --without-xmms --without-bmp --prefix=${PREFIX:Q}
+CONFIGURE_ARGS=		--with-oss --without-xmms --without-bmp --prefix=${PREFIX:Q}
 
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

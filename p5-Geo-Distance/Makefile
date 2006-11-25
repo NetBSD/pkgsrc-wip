@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/06 20:38:10 uhabel Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 11:51:00 shattered Exp $
 
 DISTNAME=	Geo-Distance-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Geo::Distance implementation for Perl
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Geo/Distance/.packlist
-BUILDLINK_API_DEPENDS.p5-DBI+=  p5-DBI>=1.37
+BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.37
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

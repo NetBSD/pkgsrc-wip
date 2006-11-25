@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 04:00:50 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 11:51:00 shattered Exp $
 #
 
 DISTNAME=	vis-2.1
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	ftp://vlsi.colorado.edu/pub/vis/
 
 MAINTAINER=	dhowland@users.sourceforge.net
-HOMEPAGE=	http://vlsi.colorado.edu/~vis
+HOMEPAGE=	http://vlsi.colorado.edu/~vis/
 COMMENT=	Classic logic verification tool
 
 DISTFILES=	vis-2.1.tar.gz glu-2.1.tar.gz
