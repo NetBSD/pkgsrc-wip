@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.3 2006/11/25 15:19:26 shattered Exp $
+
+--- src/xmms/Program.orig	2006-09-26 13:50:20.000000000 +0000
++++ src/xmms/Program
+@@ -46,11 +46,7 @@ def config(env):
+ 		env.checkheader("sys/vfs.h")
+ 		env.Prepend(CPPDEFINES="STATFS_LINUX")
+ 	except ConfigError:
+-		try:
+-			env.checkheader("sys/param.h")
+-			env.Prepend(CPPDEFINES="STATFS_BSD")
+-		except ConfigError:
+-			pass
++		pass
+ 
+  	if env.platform == 'darwin':
+  		env.Append(LINKFLAGS=['-framework', 'CoreFoundation'])
