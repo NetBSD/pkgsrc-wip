@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/11/25 16:32:40 jeremy-c-reed Exp $
+
+--- configure.orig	2006-11-25 10:18:35.000000000 -0600
++++ configure	2006-11-25 10:18:51.000000000 -0600
+@@ -20927,7 +20927,7 @@
+ echo "${ECHO_T}yes" >&6; }
+ 	:
+ fi
+-NEEDED="xau pthread-stubs"
++NEEDED="xau"
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for NEEDED" >&5

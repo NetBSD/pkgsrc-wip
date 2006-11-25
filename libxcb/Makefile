@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/25 14:33:18 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/25 16:32:40 jeremy-c-reed Exp $
 #
 
 DISTNAME=	libxcb-1.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,9 @@ BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+CFLAGS+=	${PTHREAD_CFLAGS}
+LIBS+=		${PTHREAD_LDFLAGS}
+CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-damage.pc.in
@@ -39,13 +43,13 @@ PKGCONFIG_OVERRIDE+=	xcb-xv.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xvmc.pc.in
 PKGCONFIG_OVERRIDE+=	xcb.pc.in
 
-CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
-
 # libXdmcp is optional; adds support for XDM-AUTHORIZATION-1 in
 # addition to MIT-MAGIC-COOKIE-1.
 .include "../../x11/libXdmcp/buildlink3.mk"
 
 .include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
