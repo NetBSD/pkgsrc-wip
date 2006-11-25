@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2005/09/13 15:05:14 leonardschmidt Exp $
+$NetBSD: patch-aa,v 1.3 2006/11/25 15:18:17 shattered Exp $
 
---- SConstruct.orig	2005-09-06 19:06:19.000000000 +0000
+--- SConstruct.orig	2006-09-26 13:50:20.000000000 +0000
 +++ SConstruct
-@@ -32,9 +32,9 @@ if sys.platform == 'win32':
- 	default_cpppath = ['z:\\xmms2\\winlibs\\include']
+@@ -28,9 +28,9 @@ def SimpleListOption(key, help, default=
+ 
+ 
+ default_pyrex = 'pyrexc'
+-default_prefix = '/usr/local/'
+-default_cxxflags = ['-g', '-Wall', '-O0']
+-default_cflags = ['-g', '-Wall', '-O0']
++default_prefix = os.getenv('PREFIX')
++default_cxxflags = os.getenv('CXXFLAGS')
++default_cflags = os.getenv('CFLAGS')
+ if sys.platform == 'darwin':
+ 	default_cpppath = ['/sw/lib']
  else:
- 	default_pyrex = 'pyrexc'
--	default_prefix = '/usr/local/'
--	default_cxxflags = ['-g', '-Wall', '-O0']
--	default_cflags = ['-g', '-Wall', '-O0']
-+	default_prefix = os.getenv('PREFIX')
-+	default_cxxflags = os.getenv('CXXFLAGS')
-+	default_cflags = os.getenv('CFLAGS')
- 	if sys.platform == 'darwin':
- 		default_cpppath = ['/sw/lib']
- 	else:
-@@ -44,7 +44,7 @@ opts = Options("options.cache")
+@@ -40,7 +40,7 @@ opts = Options("options.cache")
  opts.Add('CC', 'C compiler to use')
  opts.Add('CXX', 'C++ compiler to use')
  opts.Add('LD', 'Linker to use')

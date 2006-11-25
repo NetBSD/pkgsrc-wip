@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2006/01/08 17:56:50 shattered Exp $
+$NetBSD: distinfo,v 1.6 2006/11/25 15:18:17 shattered Exp $
 
-SHA1 (xmms2-0.2DrAlban.tar.bz2) = 182aedc282af522d6777cce363b7e1d473d5f0ee
-RMD160 (xmms2-0.2DrAlban.tar.bz2) = 83772b58a06bcc4d7c7c88065ead15b9802ace5b
-Size (xmms2-0.2DrAlban.tar.bz2) = 687706 bytes
-SHA1 (patch-aa) = 964a3bc80f2d1ec52f1b1365925a9e9ab299d255
+SHA1 (xmms2-0.2DrGonzo.tar.bz2) = f6fc8e3253c0fdc69bd1365a4d72c6ca83117ce4
+RMD160 (xmms2-0.2DrGonzo.tar.bz2) = 82d89fd20510cd353d004a444994f29157681257
+Size (xmms2-0.2DrGonzo.tar.bz2) = 1045538 bytes
+SHA1 (patch-aa) = 42cc9a92a82ea54abaa6728ce285001e5d0d2f5a
+SHA1 (patch-ab) = ac57cbb60c1189f63876b5cdf27bd74836c03706
