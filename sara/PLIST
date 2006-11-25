@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/02 11:32:48 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/11/25 15:44:40 shattered Exp $
 bin/backdoor.sara
 bin/boot.sara
 bin/bounce.sara
@@ -65,10 +65,7 @@ bin/yp-chk.sara
 bin/ypbind.sara
 etc/sara/htm.cf
 etc/sara/paths.pl
-etc/sara/paths.pl.old
-etc/sara/paths.pl.subst.sav
 etc/sara/paths.sh
-etc/sara/paths.sh.old
 etc/sara/ports
 etc/sara/programs
 etc/sara/sara.cf
@@ -102,7 +99,6 @@ share/sara/html/cve/check_cve.pl
 share/sara/html/cve/cve-sara.html
 share/sara/html/cve/cve_build.pl
 share/sara/html/cve/cve_sara.db
-share/sara/html/cve/cve_sara.hold
 share/sara/html/cve/fix.pl
 share/sara/html/cve/full-can.csv
 share/sara/html/cve/full-cve.csv
@@ -172,7 +168,6 @@ share/sara/html/dots/purpledot.gif
 share/sara/html/dots/reddot.gif
 share/sara/html/dots/whitedot.gif
 share/sara/html/dots/yellowdot.gif
-share/sara/html/images/bckgrnd.gif.orig
 share/sara/html/images/bckgrnd.jpg
 share/sara/html/images/bluedot.gif
 share/sara/html/images/cvebanner.jpg
@@ -221,9 +216,7 @@ share/sara/html/running/sara_report_form.pl
 share/sara/html/running/sara_run_action.pl
 share/sara/html/running/sara_run_form.pl
 share/sara/html/sara.pl
-share/sara/html/sara.pl.subst.sav
 share/sara/html/sara_documentation.pl
-share/sara/html/sara_documentation.pl.subst.sav
 share/sara/html/search/sara_search_action.pl
 share/sara/html/search/sara_search_build.pl
 share/sara/html/search/sara_search_form.pl
