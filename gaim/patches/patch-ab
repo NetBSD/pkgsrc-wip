@@ -1,18 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/02/01 09:10:01 matthewluckie Exp $
+$NetBSD: patch-ab,v 1.2 2006/11/26 22:49:57 larnor Exp $
 
---- src/dnssrv.c.orig	Wed Feb  1 21:22:30 2006
-+++ src/dnssrv.c	Wed Feb  1 21:24:57 2006
+--- libgaim/dnssrv.c.orig	2006-11-10 08:24:19.000000000 +0100
++++ libgaim/dnssrv.c
 @@ -39,6 +39,16 @@
  #endif
  #endif
  
 +#ifndef NS_GET16
 +#define NS_GET16(s, cp) { \
-+	register u_char *t_cp = (u_char *)(cp); \
-+	(s) = ((u_int16_t)t_cp[0] << 8) \
-+	    | ((u_int16_t)t_cp[1]) \
-+	    ; \
-+	(cp) += 2; \
++       register u_char *t_cp = (u_char *)(cp); \
++       (s) = ((u_int16_t)t_cp[0] << 8) \
++           | ((u_int16_t)t_cp[1]) \
++           ; \
++       (cp) += 2; \
 +}
 +#endif
 +
