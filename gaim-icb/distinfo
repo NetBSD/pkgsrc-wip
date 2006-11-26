@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/05/29 22:44:46 absd Exp $
+$NetBSD: distinfo,v 1.3 2006/11/26 23:09:25 larnor Exp $
 
-SHA1 (gaim-icb-20060416.tar.gz) = 06f538087c7fa4a53f8fc7fd809e59caa8edacd1
-RMD160 (gaim-icb-20060416.tar.gz) = 13dd32045371478b4dc2611499d0603a1eb98a29
-Size (gaim-icb-20060416.tar.gz) = 15016 bytes
+SHA1 (gaim-icb-20061112.tar.gz) = 7b94a0634d8e1e48ad851a1ff63cb266f3b15e13
+RMD160 (gaim-icb-20061112.tar.gz) = d6360feb22baadec50260bf0b6e363d358809bdc
+Size (gaim-icb-20061112.tar.gz) = 15140 bytes
