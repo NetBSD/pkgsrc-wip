@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/18 16:25:35 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/11/26 23:20:32 shattered Exp $
 #
 
 DISTNAME=	tcc-0.9.22
@@ -14,6 +14,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.6.2-*
 
 USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes
+CHECK_PORTABILITY_SKIP=	gcctestsuite.sh
 
 .include "../../mk/bsd.prefs.mk"
 
