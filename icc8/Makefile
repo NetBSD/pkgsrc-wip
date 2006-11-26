@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/11/26 12:13:26 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/11/26 16:43:45 rillig Exp $
 
 DISTNAME=	l_cc_p_8.0.055
 PKGNAME=	icc-8.0
@@ -21,6 +21,7 @@ CHECK_INTERPRETER_SKIP=		emul/linux/*
 
 .include "../../mk/bsd.prefs.mk"
 
+LINUX_BASE_NODEPS=	yes
 .if ${MACHINE_ARCH}=="ia64"
 LINUX_BINPKG_FILES=	intel-icc8-8.0-44.${LINUX_ARCH_REQD}.rpm \
 			intel-eidb7-7.3.1-85.${LINUX_ARCH_REQD}.rpm \
@@ -30,6 +31,14 @@ LINUX_BINPKG_FILES=	intel-icc8-8.0-44.${LINUX_ARCH_REQD}.rpm \
 			intel-iidb7-7.3.1-85.${LINUX_ARCH_REQD}.rpm \
 			intel-isubh8-8.0-44.${LINUX_ARCH_REQD}.rpm
 .endif
+
+USE_TOOLS+=		bash:run
+INSTALLDIR=		${PREFIX}/${EMULSUBDIR}/opt/intel_cc_80
+SUBST_CLASSES+=		i
+SUBST_STAGE.i=		post-install
+SUBST_FILES.i=		${INSTALLDIR}/bin/icc
+SUBST_SED.i=		-e 's,<INSTALLDIR>,${INSTALLDIR},g'
+SUBST_SED.i+=		-e 's,/bin/sh,${BASH},'
 
 .include "../../wip/mk/linuxbin.pkg.mk"
 .include "../../mk/bsd.pkg.mk"
