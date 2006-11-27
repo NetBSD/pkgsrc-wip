@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/11/27 18:35:05 shattered Exp $
 
-SHA1 (tcptrack-1.1.4.tar.gz) = e4684c251f52e95b80c9809ad3cfad3ab41e73af
-RMD160 (tcptrack-1.1.4.tar.gz) = ae459533301df410af83806a980bb1708a2155b1
-Size (tcptrack-1.1.4.tar.gz) = 111945 bytes
+SHA1 (tcptrack-1.1.5.tar.gz) = 1b9c11b941c6e1516327cbb88e76b32d82394e8d
+RMD160 (tcptrack-1.1.5.tar.gz) = 1a91ab6ad9c6f4fd3fa25cc68bc3546a97c3560d
+Size (tcptrack-1.1.5.tar.gz) = 113384 bytes
