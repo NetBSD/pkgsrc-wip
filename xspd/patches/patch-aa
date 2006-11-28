@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2006/11/20 07:11:38 kcf Exp $
+$NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
@@ -112,7 +112,7 @@ $NetBSD: patch-aa,v 1.11 2006/11/20 07:11:38 kcf Exp $
 -XSPDIR=$(TARGETDIR)/$(SUBDIR)html/test
 -#						# XSP installation directory
 -APPUTILDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+APPUTILDIR=$(TARGETDIR)
++#APPUTILDIR=$(XSPROOT)/utils
  #						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include

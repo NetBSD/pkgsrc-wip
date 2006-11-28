@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/20 07:11:38 kcf Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/11/28 05:18:47 kcf Exp $
 bin/xspd
-etc/xspd/xspd.conf
+@comment etc/xspd/xspd.conf
 include/xspd/clktck.h
 include/xspd/const.h
 include/xspd/dbg.h
@@ -25,11 +25,28 @@ include/xspd/xspmacros.h
 lib/xspd/libcommon.a
 lib/xspd/libxspd.a
 share/examples/xspd/xspd.conf
+share/xspd/utils/xspAssignVar
+share/xspd/utils/xspGetErrno
+share/xspd/utils/xspGetLockTimeout
+share/xspd/utils/xspGetSessionId
+share/xspd/utils/xspGetVar
+share/xspd/utils/xspGetVarCnt
+share/xspd/utils/xspGetVarSize
+share/xspd/utils/xspInputHttp
+share/xspd/utils/xspInputHttpGet
+share/xspd/utils/xspInputHttpPost
+share/xspd/utils/xspPrVar
+share/xspd/utils/xspReleaseVar
+share/xspd/utils/xspSessionClose
+share/xspd/utils/xspSessionConnect
+share/xspd/utils/xspSessionDisconnect
+share/xspd/utils/xspStuffEncode
 share/xspd/xspanalyze
 share/xspd/xspdAdmin.xsp
 share/xspd/xspfwd
+@dirrm share/xspd/utils
 @dirrm share/xspd
 @dirrm share/examples/xspd
 @dirrm lib/xspd
 @dirrm include/xspd
-@dirrm etc/xspd
+@comment @dirrm etc/xspd
