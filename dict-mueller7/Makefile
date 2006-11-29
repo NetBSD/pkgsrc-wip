@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/31 12:31:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/29 18:57:38 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -12,11 +12,11 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mueller-dic.chat.ru/
 COMMENT=	DICTD data for English-Russian dictionary by Mueller
 
-DEPENDS+=	dict-server-[0-9]*:../../wip/dict-server
+DEPENDS+=	dict-server>=1.9.14*:../../wip/dict-server
 
-BUILD_DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
+BUILD_DEPENDS+=	dict-server>=1.10.2:../../wip/dict-server
 BUILD_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
-BUILD_DEPENDS+=	metamail>=1.10.2:../../mail/metamail
+BUILD_DEPENDS+=	metamail-[0-9]*:../../mail/metamail
 
 # we need GNU fmt
 BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils
