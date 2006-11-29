@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/07/29 15:42:39 larnor Exp $
+# $NetBSD: Makefile,v 1.15 2006/11/29 21:31:40 larnor Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		# not defined
 
@@ -18,7 +18,8 @@ CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
 			-D sysman="${PREFIX}/${PKGMANDIR}" \
 			-D cflags=${CFLAGS:M*:Q} \
 			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
-			-D optimize=${COPTS:Q} -D gtkversion=2 -D yacc="yacc"
+			-D optimize=${COPTS:Q} -D gtkversion=2 -D yacc="yacc" \
+			-D official=false
 
 CONFLICTS=		gtk-gnutella-*
 
@@ -31,6 +32,14 @@ WRKSRC=			${WRKDIR}/gtk-gnutella
 NO_CHECKSUM=		yes
 
 USE_BUILTIN.gettext=	no
+
+SUBST_CLASSES+=		common_h
+SUBST_STAGE.common_h=	pre-build
+SUBST_FILES.common_h=	src/common.h
+SUBST_SED.common_h=	-e "s|\#include <sys/sysctl\.h>|/\* \#include <sys/sysctl\.h> \*/|g"
+
+distclean:
+	@${DO_NADA}
 
 .include "../../wip/gtk-gnutella-current/Makefile.version"
 
