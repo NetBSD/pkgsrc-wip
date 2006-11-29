@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/11/29 14:16:39 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/29 15:12:46 cheusov Exp $
 #
 
 DISTNAME=		Net-Dict-2.07
@@ -10,11 +10,12 @@ MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		http://www.cpan.org/modules/by-module/Net/
 COMMENT=		Client API for the DICT protocol defined in RFC2229.
 
-NO_BUILD=		yes
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PERL5_PACKLIST=		auto/Net/Dict/.packlist
 
-DEPENDS+=		p5-AppConfig-[0-9]*:../../devel/p5-AppConfig
+CONFLICTS=		dict-client-[0-9]*
+
+DEPENDS+=		p5-AppConfig-Std-[0-9]*:../../devel/p5-AppConfig-Std
 DEPENDS+=		p5-Tk-[0-9]*:../../x11/p5-Tk
 
 .include "../../lang/perl5/module.mk"
