@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/05/14 21:27:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/29 19:04:21 cheusov Exp $
 
-PKGNAME=	pike-mime-${PIKE_VERSION}
+PKGNAME=	pike-MIME-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	MIME module for Pike programming language
 
