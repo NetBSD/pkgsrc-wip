@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/29 14:21:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/11/29 14:51:05 cheusov Exp $
 #
 
 DISTNAME=		txt2html-2.44
@@ -19,6 +19,7 @@ PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTML/TextToHTML/.packlist
 
 DEPENDS+=		p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
+DEPENDS+=		p5-AppConfig-Std-[0-9]*:../../wip/p5-AppConfig-Std
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
