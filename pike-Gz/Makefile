@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/11/16 22:17:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/11/29 19:05:45 cheusov Exp $
 
-PKGNAME=	pike-gz-${PIKE_VERSION}
+PKGNAME=	pike-Gz-${PIKE_VERSION}
 CATEGORIES=	lang
 COMMENT=	Gz module for Pike programming language
 
