@@ -1,4 +1,4 @@
-# $NetBSD: transports.mk,v 1.1.1.1 2005/11/05 02:24:46 schnoebe Exp $
+# $NetBSD: transports.mk,v 1.2 2006/11/30 06:06:07 schnoebe Exp $
 #
 #	definitions needed for Jabber transports and services
 #
@@ -33,5 +33,5 @@ PLIST_SUBST+=		JABBERD_TRANSDIR=${JABBERD_TRANSDIR}
 PKG_GROUPS+=		${JABBERD_GROUP}
 PKG_USERS+=		${JABBERD_USER}:${JABBERD_GROUP}
 
-EGDIR=		${PREFIX}/share/examples/jabberd
+EGDIR=		${PREFIX}/share/examples/jabber
 .endif	# JABBERD_TRANSPORTS_MK
