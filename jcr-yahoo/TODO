@@ -1,0 +1,4 @@
+Thu Nov 30 00:00:14 CST 2006
+    *	essentially abandoned, py-jabber-yahoo-t works better.
+    *	never really working when used on NetBSD/alpha.
+    *	if someone else wants to work on it, be my guest!

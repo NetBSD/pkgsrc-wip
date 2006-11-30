@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/30 22:45:31 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/11/30 06:01:49 schnoebe Exp $
 #
 
 DISTNAME=		yahoo-transport-2.3.2
@@ -7,9 +7,9 @@ CATEGORIES=		chat
 MASTER_SITES=		http://jabber.terrapin.com/JCR/ http://www.jabberstudio.org/projects/yahoo-transport/releases/download.php?file=
 DISTFILES=		${DISTNAME}.tar.gz jcr-0.2.4.tar.gz
 
-MAINTAINER=		abs@mono.org
+MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabber.terrapin.com/JCR/
-COMMENT=		Yahoo IM gateway for Jabber 2 servers
+COMMENT=		Yahoo IM gateway for Jabber/XMPP servers
 
 DEPENDS+=		jabberd-[0-9]*:../../chat/jabberd2
 
