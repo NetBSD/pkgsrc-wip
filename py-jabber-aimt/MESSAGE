@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/04/16 03:27:05 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.4 2006/11/30 06:02:46 schnoebe Exp $
 
 You will need to customize the following file to get pyaimt to work
 with jabber:
@@ -23,12 +23,5 @@ Quick start for jabberd2:
 				    shared secret in jabber2's router.xml
 				    (look for <secret>...</secret> in
 				    router.xml)
-
-Additionally, you can use the SASL authentication mechanisms and jabberd2's
-component protocol extensions by updating the following two fields:
-
-	Uncomment <useJ2Compoent/>
-	set <saslUsername>...</saslUsername> to a user defined in
-	jabber2's router-users.xml
 
 ===========================================================================
