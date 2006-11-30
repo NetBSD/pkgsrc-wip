@@ -1,0 +1,35 @@
+#!@RCD_SCRIPTS_SHELL@
+
+[ -f @PKG_SYSCONFDIR@/ejabberd.defaults ] && . @PKG_SYSCONFDIR@/ejabberd.defaults
+
+CONFIG=@PKG_SYSCONFDIR@/ejabberd.cfg
+INETRC=@PKG_SYSCONFDIR@/ejabberd.inetrc
+LOG=@JABBERD_LOGDIR@/ejabberd.log
+SASL_LOG=@JABBERD_LOGDIR@/sasl.log
+SPOOL=@JABBERD_SPOOLDIR@
+
+ARGS=
+
+while [ $# -ne 0 ]
+do
+    PARAM=$1
+    shift
+    case $PARAM in
+	--) break ;;
+	--config) CONFIG=$1 ; shift ;;
+	--log) LOG=$1 ; shift ;;
+	--sasl-log) SASL_LOG=$1 ; shift ;;
+	--spool) SPOOL=$1 ; shift ;;
+	*) ARGS="$ARGS $PARAM" ;;
+    esac
+done
+
+cd $SPOOL &&
+exec erl +K true -sname ejabberd \
+    -s ejabberd \
+    -ejabberd config \"$CONFIG\" log_path \"$LOG\" \
+    -sasl sasl_error_logger \{file,\"$SASL_LOG\"\} \
+    -mnesia dir \"$SPOOL\" \
+    -kernel inetrc \"${INETRC}\" \
+    $ERL_OPTIONS $ARGS "$@"
+
