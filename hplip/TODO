@@ -1,0 +1,5 @@
+Needs work:
+  - Net driver works fine, but USB driver needs work.
+  - umass and ulpt must be disabled in kernel or USB printing won't work at all.
+Wish list:
+  - Implement an option to build without the GUI tools and QT dependency.
