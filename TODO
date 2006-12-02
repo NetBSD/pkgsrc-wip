@@ -3,6 +3,7 @@ Suggested package updates
 	o autoproject-0.20
 	o avahi-0.6.14
 	o bmpx-0.34.5
+	o cdrtools-devel-2.01.01a21
 	o chora-2.0.1
 	o cinelerra-2.1
 	o cvstrac-2.0.0
@@ -32,7 +33,7 @@ Suggested package updates
 	o parted-1.8.0
 	o planner-0.14.1
 	o py-PyPE-2.7.2
-	o qcomicbook-0.3.3
+	o qcomicbook-0.3.4
 	o rdup-0.3.1
 	o rosegarden-current-1.4.0
 	o sendmailX-0.0.0.0
@@ -45,7 +46,7 @@ Suggested package updates
 	o uqm-0.5.0
 	o vmac-2.8.2
 	o xaralx-bin-0.7.1692
-	o xfce4-xarchiver-0.4.4
+	o xfce4-xarchiver-0.4.6
 	o xmms2-0.2DrFeelgood
 	o yabause-0.7.2
 	o zinf-2.2.5
