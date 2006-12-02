@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:41:20 bmeurer Exp $
+$NetBSD: patch-aa,v 1.2 2006/12/02 22:09:37 shattered Exp $
 
---- autoproject.in.orig	Wed Sep 18 01:42:42 2002
+--- autoproject.in.orig	2005-11-20 19:59:31.000000000 +0000
 +++ autoproject.in
 @@ -11,14 +11,16 @@ set -e
  #set -v
@@ -43,11 +43,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/03 09:41:20 bmeurer Exp $
      fi
      if echo $AUTHOR | grep -q -- "\,"; then
 -    	X=`expr index "$AUTHOR" ","`
--    	X=`expr $X - 1`
--    	AUTHOR=`expr substr "$AUTHOR" 1 $X`
+-   	X=`expr $X - 1` || true
+-   	AUTHOR=`expr substr "$AUTHOR" 1 $X` || true
 +    	X=`$EXPR index "$AUTHOR" ","`
-+    	X=`$EXPR $X - 1`
-+    	AUTHOR=`$EXPR substr "$AUTHOR" 1 $X`
++   	X=`$EXPR $X - 1` || true
++   	AUTHOR=`$EXPR substr "$AUTHOR" 1 $X` || true
      fi
      type_string "What is the name of the author?" "$AUTHOR" ""
      AUTHOR="$ans"

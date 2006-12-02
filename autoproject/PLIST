@@ -1,38 +1,47 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 09:41:19 bmeurer Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/02 22:09:37 shattered Exp $
 bin/autoproject
 man/man1/autoproject.1
 share/autoproject/cli/c/none/Makefile.am
+share/autoproject/cli/c/none/Makefile.in
 share/autoproject/cli/c/none/configure.in
 share/autoproject/cli/c/none/program.c
 share/autoproject/cli/c/none/xmalloc.c
+share/autoproject/cli/c/none/xmalloc.h
 share/autoproject/cli/c/none/getopt.h
 share/autoproject/cli/c/none/getopt.c
 share/autoproject/cli/c/none/getopt1.c
 share/autoproject/cli/c/none/acinclude.m4
 @dirrm share/autoproject/cli/c/none
 share/autoproject/cli/c/clig/Makefile.am
+share/autoproject/cli/c/clig/Makefile.in
 share/autoproject/cli/c/clig/program.1
 share/autoproject/cli/c/clig/cmdline.cli.in
 share/autoproject/cli/c/clig/configure.in
 share/autoproject/cli/c/clig/xmalloc.c
+share/autoproject/cli/c/clig/xmalloc.h
 share/autoproject/cli/c/clig/program.c
 share/autoproject/cli/c/clig/acinclude.m4
 @dirrm share/autoproject/cli/c/clig
 share/autoproject/cli/c/autogen/Makefile.am
+share/autoproject/cli/c/autogen/Makefile.in
 share/autoproject/cli/c/autogen/configure.in
 share/autoproject/cli/c/autogen/program.c
 share/autoproject/cli/c/autogen/xmalloc.c
+share/autoproject/cli/c/autogen/xmalloc.h
 share/autoproject/cli/c/autogen/checkopt.def
 share/autoproject/cli/c/autogen/acinclude.m4
 @dirrm share/autoproject/cli/c/autogen
 share/autoproject/cli/c/argp/Makefile.am
+share/autoproject/cli/c/argp/Makefile.in
 share/autoproject/cli/c/argp/configure.in
 share/autoproject/cli/c/argp/program.c
 share/autoproject/cli/c/argp/xmalloc.c
+share/autoproject/cli/c/argp/xmalloc.h
 share/autoproject/cli/c/argp/acinclude.m4
 @dirrm share/autoproject/cli/c/argp
 @dirrm share/autoproject/cli/c
 share/autoproject/cli/sh/none/Makefile.am
+share/autoproject/cli/sh/none/Makefile.in
 share/autoproject/cli/sh/none/configure.in
 share/autoproject/cli/sh/none/program.in
 @dirrm share/autoproject/cli/sh/none
@@ -48,8 +57,10 @@ share/autoproject/cli/all/argp/program.texinfo
 @dirrm share/autoproject/cli/all/argp
 @dirrm share/autoproject/cli/all
 share/autoproject/cli/c++/none/Makefile.am
+share/autoproject/cli/c++/none/Makefile.in
 share/autoproject/cli/c++/none/configure.in
 share/autoproject/cli/c++/none/xmalloc.c
+share/autoproject/cli/c++/none/xmalloc.h
 share/autoproject/cli/c++/none/program.cc
 share/autoproject/cli/c++/none/getopt.c
 share/autoproject/cli/c++/none/getopt.h

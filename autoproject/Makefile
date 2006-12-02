@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:14 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/02 22:09:37 shattered Exp $
 
-DISTNAME=		autoproject-0.17
+DISTNAME=		autoproject-0.20
 CATEGORIES=		devel
-MASTER_SITES=		http://jrv.oddones.org
+MASTER_SITES=		http://jrv.oddones.org/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jrv.oddones.org
+HOMEPAGE=		http://jrv.oddones.org/
 COMMENT=		Creates a skeleton source package for a new program
 
 DEPENDS+=		autoconf>=2.57:../../devel/autoconf
