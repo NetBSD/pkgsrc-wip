@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/05 16:38:24 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/02 16:59:08 dhowland Exp $
 #
 
-DISTNAME=	endeavour-2.6.1
+DISTNAME=	endeavour-2.7.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://wolfpack.twu.net/users/wolfpack/
 EXTRACT_SUFX=	.tgz
@@ -52,5 +52,6 @@ do-configure:
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
+.include "../../wip/xar/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
