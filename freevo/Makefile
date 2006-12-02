@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/07/30 01:18:18 dhowland Exp $
+# $NetBSD: Makefile,v 1.28 2006/12/02 17:47:39 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.4
@@ -20,6 +20,10 @@ PYDISTUTILSPKG=		yes
 USE_PKGLOCALEDIR=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
+
+CHECK_PORTABILITY_SKIP+=	boot/freevo
+CHECK_PORTABILITY_SKIP+=	contrib/suse/freevo.daily
+CHECK_PORTABILITY_SKIP+=	contrib/suse/freevo.init
 
 .include "options.mk"
 
