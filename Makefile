@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2442 2006/11/25 15:56:15 shattered Exp $
+# $Id: Makefile,v 1.2443 2006/12/02 17:08:12 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1424,6 +1424,7 @@ SUBDIR+=	wxGTK-contrib-unicode
 SUBDIR+=	wxGTK-unicode
 SUBDIR+=	xace
 SUBDIR+=	xanim-codecs
+SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xauth
 SUBDIR+=	xbase
