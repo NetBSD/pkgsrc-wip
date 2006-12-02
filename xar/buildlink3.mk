@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/12/02 17:00:57 dhowland Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/12/02 17:22:52 dhowland Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAR_BUILDLINK3_MK:=	${XAR_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_API_DEPENDS.xar+=	xar>=1.4
 BUILDLINK_PKGSRCDIR.xar?=	../../wip/xar
 .endif	# XAR_BUILDLINK3_MK
 
-#.include "../../textproc/libxml2/buildlink3.mk"
-#.include "../../www/curl/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
