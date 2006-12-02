@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/12/02 17:00:57 dhowland Exp $
+
+SHA1 (xar-1.4.tar.gz) = 18188beb297b69b34b7b4b4c132c62a73607d3d2
+RMD160 (xar-1.4.tar.gz) = 2b49a9580c86995facd7d69e1afd2a333a7e7539
+Size (xar-1.4.tar.gz) = 117083 bytes
+SHA1 (patch-aa) = dc7da59c8b4e9f5b1e2ace8a0af93e35d67b44cf
+SHA1 (patch-ab) = c249fded88992585c1f14d3e9a4021c1b2d8724d

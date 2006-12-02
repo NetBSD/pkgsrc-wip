@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/02 17:00:57 dhowland Exp $
+
+--- lib/archive.c.orig	2006-12-02 11:11:47.000000000 -0500
++++ lib/archive.c
+@@ -57,6 +57,10 @@
+ #include "subdoc.h"
+ #include "darwinattr.h"
+ 
++#if defined(__NetBSD__)
++#include <limits.h>
++#endif
++
+ #ifndef O_EXLOCK
+ #define O_EXLOCK 0
+ #endif

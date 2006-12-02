@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/02 17:00:57 dhowland Exp $
+
+--- lib/fbsdattr.c.orig	2006-12-02 11:16:45.000000000 -0500
++++ lib/fbsdattr.c
+@@ -100,7 +100,11 @@ int32_t xar_fbsdattr_archive(xar_t x, xa
+ #ifdef HAVE_SYS_EXTATTR_H
+ 	char *buf = NULL;
+ 	int ret, retval=0, bufsz, i;
++#if defined(__NetBSD__)
++	struct statvfs sfs;
++#else
+ 	struct statfs sfs;
++#endif
+ 	char *fsname = NULL;
+ 	int namespace = EXTATTR_NAMESPACE_USER;
+ 
+@@ -152,8 +156,11 @@ TRYAGAIN:
+ 		}
+ 	}
+ 
+-
++#if defined(__NetBSD__)
++	statvfs(file, &sfs);
++#else
+ 	statfs(file, &sfs);
++#endif
+ 
+ 	fsname = sfs.f_fstypename;
+ 
+@@ -205,11 +212,19 @@ int32_t xar_fbsdattr_extract(xar_t x, xa
+ #ifdef HAVE_SYS_EXTATTR_H
+ 	char *fsname = "bogus";
+ 	const char *prop;
++#if defined(__NetBSD__)
++	struct statvfs sfs;
++#else   
+ 	struct statfs sfs;
++#endif  
+ 	int eaopt = 0;
+ 	xar_iter_t iter;
+ 
+-	statfs(file, &sfs);
++#if defined(__NetBSD__)
++        statvfs(file, &sfs);
++#else
++	statfs(file, &sfs); 
++#endif      
+ 	fsname = sfs.f_fstypename;
+ 
+ 	iter = xar_iter_new();
