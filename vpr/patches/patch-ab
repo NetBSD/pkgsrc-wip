@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/03 00:38:43 dhowland Exp $
+
+--- vpr/makefile.orig	2000-03-26 14:34:20.000000000 -0500
++++ vpr/makefile
+@@ -73,7 +73,7 @@ H = util.h vpr_types.h globals.h graphic
+ 
+ # Add purify before $(CC) in the link line below to run purify on VPR.
+ 
+-$(EXE): $(OBJ) test_h.o
++all: $(OBJ) test_h.o
+ 	$(CC) $(FLAGS) $(OBJ) -o $(EXE) $(LIB_DIR) $(LIB)
+ 
+ # test_h.c is a dummy file -- it just checks the header files against each

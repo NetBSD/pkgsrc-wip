@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/03 00:38:43 dhowland Exp $
+bin/t-vpack
+bin/vpr
+share/doc/vpr/README_430.txt
+share/doc/vpr/manual_430.pdf
+share/doc/vpr/manual_430.ps
+@dirrm share/doc/vpr
