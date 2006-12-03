@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/02 16:59:08 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/03 18:55:00 dhowland Exp $
 #
 
 DISTNAME=	endeavour-2.7.3
@@ -39,14 +39,26 @@ SUBST_FILES.inst=	endeavour2/download.front/Makefile \
 			endeavour2/format.front/Makefile \
 			endeavour2/fsck.front/Makefile \
 			endeavour2/hedit/Makefile \
+			endeavour2/lib/demos/Makefile \
 			endeavour2/lib/Makefile \
 			endeavour2/sysinfo/Makefile \
+			endeavour2/tedit/Makefile \
 			endeavour2/utils/Makefile \
 			endeavour2/ziptool.front/Makefile
 SUBST_SED.inst=		-e "s|/usr|${PREFIX}|g"
 
+# ${PREFIX}/${PKGMANDIR} is preferred, but endeavour doesnt use it
+END_MAN_DIR=	${PREFIX}/man/man1
+
 do-configure:
 	cd ${WRKSRC} && ./configure UNIX --prefix=${PREFIX}
+
+post-install:
+	bunzip2 -f ${END_MAN_DIR}/endeavour2-config.1.bz2
+	bunzip2 -f ${END_MAN_DIR}/endeavour2.1.bz2
+	bunzip2 -f ${END_MAN_DIR}/hedit.1.bz2
+	bunzip2 -f ${END_MAN_DIR}/sysinfo.endeavour2.1.bz2
+	bunzip2 -f ${END_MAN_DIR}/tedit.1.bz2
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
