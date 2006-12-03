@@ -1,19 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/01 19:19:09 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/12/03 13:46:42 bartoszkuzma Exp $
 bin/granule
 share/applications/granule.desktop
 share/granule/granule
 share/granule/pixmaps/cardview_32x32.png
-share/granule/pixmaps/copy_deck.xpm
+share/granule/pixmaps/copy_deck.png
 share/granule/pixmaps/deckplayer_32x32.png
 share/granule/pixmaps/deckview_32x32.png
-share/granule/pixmaps/drawer_empty.xpm
-share/granule/pixmaps/drawer_many.xpm
-share/granule/pixmaps/drawer_one.xpm
-share/granule/pixmaps/sched_green.xpm
-share/granule/pixmaps/sched_grey.xpm
-share/granule/pixmaps/sched_red.xpm
-share/granule/pixmaps/sched_yellow.xpm
-share/granule/pixmaps/speaker_24.xpm
+share/granule/pixmaps/drawer_empty.png
+share/granule/pixmaps/drawer_many.png
+share/granule/pixmaps/drawer_one.png
+share/granule/pixmaps/granule.png
+share/granule/pixmaps/sched_green.png
+share/granule/pixmaps/sched_grey.png
+share/granule/pixmaps/sched_red.png
+share/granule/pixmaps/sched_yellow.png
+share/granule/pixmaps/speaker_24.png
 share/granule/pixmaps/text_big.png
 share/granule/pixmaps/text_block.png
 share/granule/pixmaps/text_bold.png
@@ -21,7 +22,6 @@ share/granule/pixmaps/text_center.png
 share/granule/pixmaps/text_color_background.png
 share/granule/pixmaps/text_color_foreground.png
 share/granule/pixmaps/text_color_hilight.png
-share/granule/pixmaps/text_copy.png
 share/granule/pixmaps/text_cut.png
 share/granule/pixmaps/text_italic.png
 share/granule/pixmaps/text_left.png
@@ -33,8 +33,8 @@ share/granule/pixmaps/text_small.png
 share/granule/pixmaps/text_subscript.png
 share/granule/pixmaps/text_superscript.png
 share/granule/pixmaps/text_underlined.png
-share/granule/pixmaps/thumbdown.xpm
-share/granule/pixmaps/thumbup.xpm
+share/granule/pixmaps/thumbdown.png
+share/granule/pixmaps/thumbup.png
 share/granule/xml/cardfile.dtd
 share/granule/xml/granule.dtd
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/granule.mo

@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2006/12/03 13:46:42 bartoszkuzma Exp $
+
+--- configure.in.orig	2006-10-08 04:46:30.000000000 +0200
++++ configure.in
+@@ -63,7 +63,6 @@ AC_PROG_CXX
+ AC_PROG_CXXCPP
+ dnl AM_PROG_LIBTOOL
+ AM_SANITY_CHECK
+-AC_LANG_CPLUSPLUS
+ 
+ dnl ----------------------------------------------------------------------------
+ dnl Set PACKAGE_LOCALE_DIR in config.h.
+@@ -85,6 +84,12 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GET
+ AM_GLIB_GNU_GETTEXT()
+ 
+ dnl ----------------------------------------------------------------------------
++dnl If this macro is defined before checking for *gettext,
++dnl it will cause that checking for *gettext failed under NetBSD.
++dnl ----------------------------------------------------------------------------
++AC_LANG_CPLUSPLUS
++
++dnl ----------------------------------------------------------------------------
+ dnl Pull in all necessary gtk2 libraries
+ dnl Replace with the current version number
+ dnl ----------------------------------------------------------------------------

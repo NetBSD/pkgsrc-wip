@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2006/08/01 19:19:09 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.3 2006/12/03 13:46:42 bartoszkuzma Exp $
 
-SHA1 (granule-1.2.1.tar.gz) = d862bc55a5cb3a5e910cde0fbde0d1cc950a4d23
-RMD160 (granule-1.2.1.tar.gz) = 9b266ca1574d4d680984c7c3b66cdf426869fbd9
-Size (granule-1.2.1.tar.gz) = 515978 bytes
+SHA1 (granule-1.2.3.tar.gz) = 3755aa1d7bc8f311fd045d5a7268b69e47dd9461
+RMD160 (granule-1.2.3.tar.gz) = e971c64fbc6d84ab0b409934780ffa82240b6b89
+Size (granule-1.2.3.tar.gz) = 398791 bytes
 SHA1 (patch-aa) = 45a4f8b78953ffa8238d1f2cdb7e7b99a0af0fcc
+SHA1 (patch-ab) = cfa4d09669589357e1e240f9ce3508a23d7130c0
