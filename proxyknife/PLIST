@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/03 15:59:10 gschwarz Exp $
+bin/createlist
+bin/proxyknife
+bin/sortlist
+info/proxyknife.info
+man/man1/proxyknife.1
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/proxyknife.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/proxyknife.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/proxyknife.mo
+share/proxyknife/doc/example/proxyknife.conf.example
+share/proxyknife/doc/html/en/Advanced-configuration.html
+share/proxyknife/doc/html/en/Contact.html
+share/proxyknife/doc/html/en/Copying-This-Manual.html
+share/proxyknife/doc/html/en/Copying.html
+share/proxyknife/doc/html/en/Format-of-output.html
+share/proxyknife/doc/html/en/Format-of-proxylist.html
+share/proxyknife/doc/html/en/GNU-Free-Documentation-License.html
+share/proxyknife/doc/html/en/Invoking.html
+share/proxyknife/doc/html/en/Overview.html
+share/proxyknife/doc/html/en/Quick-start.html
+share/proxyknife/doc/html/en/Requirements.html
+share/proxyknife/doc/html/en/Scripts.html
+share/proxyknife/doc/html/en/TODO.html
+share/proxyknife/doc/html/en/index.html
+share/proxyknife/doc/html/zh/Copying.html
+share/proxyknife/doc/html/zh/GNU-Free-Documentation-License.html
+share/proxyknife/doc/html/zh/_00b8_00a8_00d6_00fa_00bd_00c5_00b1_00be.html
+share/proxyknife/doc/html/zh/_00b8_00df_00bc_00b6_00c5_00e4_00d6_00c3.html
+share/proxyknife/doc/html/zh/_00b9_00a6_00c4_00dc_00c1_00d0_00b1_00ed.html
+share/proxyknife/doc/html/zh/_00bf_00aa_00b7_00a2_00b7_00bd_00cf_00f2.html
+share/proxyknife/doc/html/zh/_00bf_00ec_00cb_00d9_00ca_00b9_00d3_00c3.html
+share/proxyknife/doc/html/zh/_00c1_00aa_00cf_00b5_00b7_00bd_00ca_00bd.html
+share/proxyknife/doc/html/zh/_00c1_00d0_00b1_00ed_00b8_00f1_00ca_00bd.html
+share/proxyknife/doc/html/zh/_00c3_00fc_00c1_00ee_00b2_00ce_00ca_00fd.html
+share/proxyknife/doc/html/zh/_00ca_00e4_00b3_00f6_00b8_00f1_00ca_00bd.html
+share/proxyknife/doc/html/zh/_00cb_00f7_00d2_00fd.html
+share/proxyknife/doc/html/zh/_00ce_00c4_00b5_00b5_00b0_00e6_00c8_00a8.html
+share/proxyknife/doc/html/zh/_00d4_00cb_00d0_00d0_00bb_00b7_00be_00b3.html
+share/proxyknife/doc/html/zh/index.html
+share/proxyknife/doc/proxyknife.dvi
+share/proxyknife/doc/proxyknife.pdf
+share/proxyknife/doc/proxyknife_zh.info
+share/proxyknife/doc/proxyknife_zh.texi
+@dirrm share/proxyknife/doc/html/en
+@dirrm share/proxyknife/doc/html/en
+@dirrm share/proxyknife/doc/html
+@dirrm share/proxyknife/doc/example
+@dirrm share/proxyknife/doc
+@dirrm share/proxyknife

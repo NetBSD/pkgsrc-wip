@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/03 15:59:10 gschwarz Exp $
+
+--- doc/Makefile.in.orig	2006-11-17 23:26:28.000000000 +0100
++++ doc/Makefile.in	2006-11-17 23:27:40.000000000 +0100
+@@ -614,7 +614,7 @@
+ 	chmod u+x $@
+ 
+ proxyknife.pod: $(srcdir)/proxyknife.texi $(TEXI2POD) $(srcdir)/version.texi
+-	$(TEXI2POD) $(srcdir)/proxyknife.texi $@
++	./$(TEXI2POD) $(srcdir)/proxyknife.texi $@
+ 
+ proxyknife.1: proxyknife.pod
+ 	$(POD2MAN) --center="GNU Proxyknife" \
