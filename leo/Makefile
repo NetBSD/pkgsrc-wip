@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/08/26 19:54:35 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/03 16:33:32 dhowland Exp $
 #
 
 DISTNAME=		leo-4-4-final
@@ -18,6 +18,8 @@ PYTHON_PATCH_SCRIPTS=	src/leo.py scripts/LinixInstall.py
 
 EXTRACT_OPTS_ZIP=	-aqo
 
+PYCOMPILEALL=   ${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+
 post-extract:
 	${RM} -rf ${WRKSRC:Q}/scripts/CVS
 	${RM} -rf ${WRKSRC:Q}/extensions/Pmw/Pmw_1_2/tests/CVS
@@ -34,7 +36,12 @@ pre-install:
 	${RM} -rf ${WRKSRC:Q}/install.orig
 
 do-install:
-	cd ${WRKSRC} && ${CHMOD} 755 ./install && ${SETENV} PREFIX=${PREFIX:Q} ./install && ${CHMOD} 755 ${PREFIX}/lib/leo/src/leo.py
+	cd ${WRKSRC} && ${CHMOD} 755 ./install && \
+		${SETENV} PREFIX=${PREFIX:Q} PYTHONBIN=${PYTHONBIN:Q} \
+		./install
+
+post-install:
+	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/lib/leo/src ${PREFIX}/lib/leo/plugins ${PREFIX}/lib/leo/extensions ${PREFIX}/lib/leo/scripts ${PREFIX}/lib/leo/test
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
