@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/18 11:41:48 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/03 22:44:30 bartoszkuzma Exp $
 #
 
-DISTNAME=		gdhcpd-0.2.9
+DISTNAME=		gdhcpd-0.3.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://mange.dynalias.org/linux/gdhcpd/
 
