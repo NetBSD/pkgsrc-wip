@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/20 13:36:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/03 17:59:35 shattered Exp $
 #
 
 # TODO : wrong name ?
@@ -24,4 +24,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${VARBASE}/spool/ttysnoop
 
 ONLY_FOR_PLATFORM=	Linux-*-*
+
 .include "../../mk/bsd.pkg.mk"
