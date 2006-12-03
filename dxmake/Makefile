@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/03 22:07:48 shattered Exp $
 #
 
-DISTNAME=		dxmake-2.11
+DISTNAME=		dxmake-2.12
 CATEGORIES=		devel
 MASTER_SITES=		http://apollo.backplane.com/FreeBSDPorts/
 
