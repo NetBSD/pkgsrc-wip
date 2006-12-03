@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/12/03 16:33:32 dhowland Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/03 16:59:13 dhowland Exp $
 #
 
-DISTNAME=		leo-4-4-final
-PKGNAME=		leo-4.4
+DISTNAME=		leo-4-4-2-1-final
+PKGNAME=		leo-4.4.2.1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leo/}
 EXTRACT_SUFX=		.zip
