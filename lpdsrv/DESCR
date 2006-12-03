@@ -1,0 +1,4 @@
+lpdsrv is a small non-spooling LPD server (RFC1179) written by
+Steve Flynn and Simon Byrnand. It was developed on Linux, and it is
+unclear to what extend it supports other systems.
+lpdsrv is used as part of the fli4l project, for example.
