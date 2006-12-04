@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/12/04 06:40:00 dhowland Exp $
+
+--- src/base/ntki/ntkiFrames.c.orig	2005-07-07 21:01:22.000000000 -0400
++++ src/base/ntki/ntkiFrames.c
+@@ -23,7 +23,7 @@
+ ////////////////////////////////////////////////////////////////////////
+ 
+ static void Ntk_NetworkAddFrame( Ntk_Network_t * pNetNew, Ntk_Network_t * pNet, int iFrame );
+-static void Ntk_NetworkReorderCiCo( Ntk_Network_t * pNet );
++void Ntk_NetworkReorderCiCo( Ntk_Network_t * pNet );
+ 
+ extern int  Ntk_NetworkVerifyVariables( Ntk_Network_t * pNet1, Ntk_Network_t * pNet2, int fVerbose );
+ 
