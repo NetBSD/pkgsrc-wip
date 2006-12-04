@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/12/04 21:36:44 rumko Exp $
+$NetBSD: patch-ac,v 1.2 2006/12/04 22:34:45 rumko Exp $
 
 --- lib/connection.h.orig	2006-12-04 17:32:25.000000000 +0000
 +++ lib/connection.h	2006-12-04 17:32:38.000000000 +0000
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/12/04 21:36:44 rumko Exp $
   USA
  ***********************************************************************/
  
-+#define ulong unsigned long
++typedef unsigned long ulong;
  #ifndef MYSQLPP_CONNECTION_H
  #define MYSQLPP_CONNECTION_H
  
