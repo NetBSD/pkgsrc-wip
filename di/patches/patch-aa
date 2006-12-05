@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2006/12/05 21:59:00 dhowland Exp $
+
+--- Build.orig	2005-10-29 12:00:42.000000000 -0400
++++ Build
+@@ -4,10 +4,5 @@
+ #
+ 
+-case $SHELL in
+-    *csh)
+-        SHELL=/bin/sh
+-        ;;
+-esac
+-SHELL=${SHELL:-/bin/sh}
++SHELL=/bin/sh
+ export SHELL
+ 
