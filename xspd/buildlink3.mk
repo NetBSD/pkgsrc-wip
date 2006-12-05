@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/11/29 04:12:25 kcf Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/12/05 19:56:19 lexort Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.12.
 # XXX After this file has been verified as correct, the comment lines
@@ -22,7 +22,7 @@ BUILDLINK_PACKAGES+=	xspd
 
 .if ${XSPD_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xspd+=	xspd>=6.3.1
-BUILDLINK_PKGSRCDIR.xspd?=	../../www/xspd
+BUILDLINK_PKGSRCDIR.xspd?=	../../wip/xspd
 .endif	# XSPD_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

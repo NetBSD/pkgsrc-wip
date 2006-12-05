@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/11/29 05:25:14 kcf Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/05 19:56:19 lexort Exp $
 #
 
-.include "../../www/xspd/Makefile.common"
-.include "../../www/xspd/options.mk"
+.include "../../wip/xspd/Makefile.common"
+.include "../../wip/xspd/options.mk"
 
 PKGNAME=		xspdapp-${XSPDVERSION}
 COMMENT=		Sample C programs for xspd
@@ -32,7 +32,7 @@ post-extract:
 	../../mk/extract/extract -d ${WRKSRC} ${WRKSRC}/${XSPAPP}_${XSPAPPID}.tar
 	${RM} ${WRKSRC}/${XSPAPP}_${XSPAPPID}.tar
 
-#DEPENDS+=	xspd-${XSPDVERSION}:../../www/xspd
+#DEPENDS+=	xspd-${XSPDVERSION}:../../wip/xspd
 
-.include "../../www/xspd/buildlink3.mk"
+.include "../../wip/xspd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
