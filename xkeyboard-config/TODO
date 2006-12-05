@@ -1,0 +1,6 @@
+assumes /var/lib/xkb is for compiled xkb
+
+directory is created and
+README.compiled gets copied into place
+but then attempt to rm -f a directory and create a symlink
+against a non-existent target
