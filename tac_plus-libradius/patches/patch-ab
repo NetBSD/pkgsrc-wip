@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+$NetBSD: patch-ab,v 1.2 2006/12/05 20:43:16 gschwarz Exp $
 
 --- tac_plus.h.orig	2002-01-23 11:52:06.000000000 +0100
-+++ tac_plus.h	2006-10-21 22:40:29.000000000 +0200
++++ tac_plus.h	2006-12-04 20:39:28.000000000 +0100
 @@ -80,6 +80,7 @@
  #define STDLIB_MALLOC
  #define NO_PWAGE
@@ -9,6 +9,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
 +#define HAVE_SYSERR_PROTO
  #define VOIDSIG
  #endif
+ 
+@@ -681,7 +682,7 @@
+ extern char *cfg_get_global_secret();
+ #ifdef USE_PAM
+ extern char *cfg_get_pam_service();
+-#endif / *PAM */ 
++#endif /* PAM */ 
+ extern void cfg_clean_config();
+ extern char *cfg_nodestring();
  
 @@ -695,12 +696,15 @@
  extern void set_expiration_status();
@@ -18,7 +27,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
  #ifdef CONST_SYSERRLIST
  extern const char *const sys_errlist[];
  #else
-+#ifndef __APPLE__
++#if !defined(__APPLE__) && !defined(__NetBSD__)
  extern char *sys_errlist[];
  #endif
 -extern int errno;

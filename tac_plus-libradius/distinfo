@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.2 2006/12/03 17:46:50 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2006/12/05 20:43:15 gschwarz Exp $
 
 SHA1 (tac_plus.F5.0.0.alpha-libradius.tgz) = 937508cb00e70425890b53d1dde3e8a0ca570bb3
 RMD160 (tac_plus.F5.0.0.alpha-libradius.tgz) = c6ea0ab7c77c9b1684fcf9d26cdb7f689254e255
 Size (tac_plus.F5.0.0.alpha-libradius.tgz) = 202070 bytes
 SHA1 (patch-aa) = edd1694be30e868a266c7c96f18e1aa72beb4e03
-SHA1 (patch-ab) = 7e6dcbae925473a4a6ad1e7e0847f30a01064718
+SHA1 (patch-ab) = 40a1d31268019bd689f161c348aa67749880f17b
 SHA1 (patch-ad) = eb1c22fd7972910a2f567912473ce673a23f2f38
 SHA1 (patch-ae) = 903b8ea2a9d84f3e4d90193268919820b756849e
 SHA1 (patch-af) = 309b2cd9a51d8704930dc8814fa454e6941390b3
 SHA1 (patch-ag) = bbff1ab1dbfa290b242195dcedb6062f132ebfa4
-SHA1 (patch-ah) = efbba43bc1a3c8af98c7d18c8e046a1aeedc5989
+SHA1 (patch-ah) = 3897979b6dc67925fd528b18c3b77d1c7ef70ec3
 SHA1 (patch-ai) = e08e64bfda5965e446556541105c0af2fc3a8bc6
-SHA1 (patch-aj) = 1ed730319dc572faa382b152da05ff5fae6a083e
+SHA1 (patch-aj) = 89ab85ccbf8d368a6e275064e46f3964d863d802
+SHA1 (patch-ak) = cb22d9b7889b9af09cdd7614fd00d2ca82cbf0e7

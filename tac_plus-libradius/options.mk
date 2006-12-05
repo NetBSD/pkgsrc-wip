@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/12/03 17:46:50 gschwarz Exp $
+# $NetBSD: options.mk,v 1.2 2006/12/05 20:43:15 gschwarz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tac_plus-libradius
 PKG_SUPPORTED_OPTIONS=	pam ldap mysql db maxsess
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--with-pam
 
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
+.include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
