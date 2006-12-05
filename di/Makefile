@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/12/05 21:59:00 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2006/12/05 22:54:42 dhowland Exp $
 
 DISTNAME=	di-4.9
 CATEGORIES=	sysutils
@@ -22,5 +22,6 @@ do-install:
 		${PREFIX}/${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/di.po
 	${INSTALL_MAN} ${WRKSRC}/di.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/di ${PREFIX}/bin
+	${LN} -sf ${PREFIX}/bin/di ${PREFIX}/bin/mi
 
 .include "../../mk/bsd.pkg.mk"
