@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 12:17:51 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/06 13:34:59 bartoszkuzma Exp $
 #
 
-DISTNAME=		gaia-0.1.0
+DISTNAME=		gaia-0.1.2
 CATEGORIES=		net
-MASTER_SITES=		http://gaia.serezhkin.com/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gaia-clean/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bartosz@atom.eu.org
@@ -15,19 +15,23 @@ USE_LANGUAGES=		c++
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
+DATADIR=		share/gaia/data
+
 SCONS_BIN=		${PREFIX}/bin/scons
 SCONS_ARGS=		gpsd=0
-
-DATADIR=		${PREFIX}/share/gaia/data
-CXXFLAGS+=		-DDATADIR='"${DATADIR}"'
+SCONS_ARGS+=		use_env=1
+SCONS_ARGS+=		prefix=${PREFIX}
+SCONS_ARGS+=		bindir=bin
+SCONS_ARGS+=		datadir=${DATADIR}
 
 do-build:
 	cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${SCONS_BIN} -Q ${SCONS_ARGS}
+		${SETENV} ${MAKE_ENV:Q} CCFLAGS=${CFLAGS:Q} \
+			${SCONS_BIN} -Q ${SCONS_ARGS}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/data/font.png ${DATADIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/data/font.png ${PREFIX}/${DATADIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/gaia ${PREFIX}/bin
 
 .include "../../devel/SDL/buildlink3.mk"
