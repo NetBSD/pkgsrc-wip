@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/03 15:59:10 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/06 16:09:26 gschwarz Exp $
 
 DISTNAME=	proxyknife-1.6
 CATEGORIES=	www
@@ -20,4 +20,10 @@ SUBST_STAGE.install=	post-configure
 SUBST_FILES.install=	Makefile doc/Makefile gl/Makefile intl/Makefile po/Makefile scripts/Makefile scripts/Makefile
 SUBST_SED.install=	-e 's,^mkinstalldirs\ =\ \$$(SHELL)\ ,mkinstalldirs\ =\ ,'
 
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+# needs snprintf
+. include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
