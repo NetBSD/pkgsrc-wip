@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/07 20:56:10 dhowland Exp $
 #
 
-DISTNAME=		cb2bib-0.6.1
+DISTNAME=		cb2bib-0.7.2
 CATEGORIES=		misc
 MASTER_SITES=		http://www.molspaces.com/dl/progs/
 
@@ -9,28 +9,26 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.molspaces.com/cb2bib/
 COMMENT=		Extract and organize bibliographic references
 
-QTPREFIX=		${PREFIX}/qt3
-CONFIGURE_ENV+=		QTDIR=${QTPREFIX:Q}
+BROKEN=			Requires QT>=4.2, and pkgsrc is still at 4.1
+DEPENDS+=		qt4-libs>=4.2:../../x11/qt4-libs
+DEPENDS+=		qt4-tools>=4.2:../../x11/qt4-tools
 
 USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
-# needed to find qmake
-PATH:=			${PATH}:${QTPREFIX}/bin
-
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
+SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/src.pro
-SUBST_SED.path=          -e 's,xxPREFIXxx,${PREFIX},g'
-SUBST_MESSAGE.path=      Fixing hardcoded paths.
+SUBST_SED.path=		-e 's,xxPREFIXxx,${PREFIX},g'
+SUBST_MESSAGE.path=	Fixing hardcoded paths.
 
 do-configure:
 	cd ${WRKSRC} && ${SET_ENV} ${CONFIGURE_ENV} ./configure \
 	--prefix ${PREFIX} --bindir ${PREFIX}/bin --datadir ${PREFIX}/share
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
