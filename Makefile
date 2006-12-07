@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2444 2006/12/03 00:45:02 dhowland Exp $
+# $Id: Makefile,v 1.2445 2006/12/07 21:27:09 plunky Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -90,7 +90,6 @@ SUBDIR+=	backplane
 SUBDIR+=	barnyard
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
-SUBDIR+=	bcmfw
 SUBDIR+=	beast
 SUBDIR+=	bin86
 SUBDIR+=	bincimap
@@ -119,8 +118,6 @@ SUBDIR+=	brltty
 SUBDIR+=	bscript
 SUBDIR+=	bsfilter
 SUBDIR+=	bss
-SUBDIR+=	bthfp
-SUBDIR+=	btpin-qt
 SUBDIR+=	btscanner
 SUBDIR+=	bub-n-bros
 SUBDIR+=	busybox
