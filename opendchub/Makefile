@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/11 00:25:33 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/07 23:57:53 dhowland Exp $
 #
 
-DISTNAME=		opendchub-0.7.14
+DISTNAME=		opendchub-0.7.15
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opendchub/}
 
