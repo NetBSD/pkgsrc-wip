@@ -1,30 +1,12 @@
-KchmViewer is a chm (MS HTML help file format) viewer, written in C++.
+KchmViewer is a chm (MS HTML help file format) viewer, written in
+C++. Unlike most existing CHM viewers for Unix, it uses Trolltech
+Qt widget library with optional KDE libraries. It does not require
+KDE, but may be compiled with full KDE support, including KDE
+widgets and KIO/KHTML.
 
-* Standalone viewer, depends on Qt only. Does not require KDE, Gnome or
-  wxWindows toolkit.
-* A KDE viewer can be compiled optionally, with KIO slave, KHTML and
-  K*Widget support.
-* Completely safe and harmless. Does not support JavaScript in any way,
-  optionally warns you before opening an external web page, or switching
-  to another help file.
-* Correctly detects and shows encoding of any valid chm file.
-* Correctly shows non-English chm files, including cyrillic, chinese,
-  japanese and others.
-* Correctly searches in non-English chm files using chm built-in
-  search index.
-* Shows an appropriate image for every TOC entry.
-* Has complete chm index support, including multiple index entries,
-  cross-links and parent/child entries in index.
-* Persistent bookmarks support. Allows to store bookmarks even if
-  "Favorites" window was not enabled for this chm file. Also stores the
-  screen position for every bookmark. You can also edit/delete bookmarks.
-* For any opened chm file, stores the last opened window, search history,
-  bookmark history, font size and so on, so when you open this file again,
-  everything is always on the place.
-* Has easy and powerful search-in-page support.
-* Allows to increase or decrease the font size, so physically handicapped
-  people can read texts easily.
-* Has standard Back/Forward/Home navigation.
-* Can print the opened pages on a standard printer (usually via CUPS).
-* Has complex search query support. You can use search queries like
-  "lazy people" + learn -not.
+The main advantage of KchmViewer is extra support for non-English
+languages. Unlike other viewers, KchmViewer in most cases is able
+to detect help file encoding, correctly shows tables of context of
+Russian, Korean, Chinese and Japanese help files, and does correct
+search in non-English help files (search for MBCS languages -
+ja/ko/ch is still in progress).
