@@ -1,17 +1,22 @@
-$NetBSD: patch-ac,v 1.4 2006/12/05 17:11:41 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.5 2006/12/10 10:24:53 thomasklausner Exp $
 
---- src/m/amdx86-64.h.orig	2006-11-26 22:16:49.000000000 +0000
+--- src/m/amdx86-64.h.orig	2006-12-10 09:56:23.000000000 +0000
 +++ src/m/amdx86-64.h
-@@ -125,7 +125,11 @@ Boston, MA 02110-1301, USA.  */
+@@ -125,12 +125,16 @@ Boston, MA 02110-1301, USA.  */
  #undef LIB_STANDARD
  #define LIB_STANDARD -lgcc -lc -lgcc /usr/lib/crtend.o
  
--#else /* !__OpenBSD__ && !__FreeBSD__ */
 +#elif defined(__NetBSD__)
 +
 +/* LIB_STANDARD and START_FILES set correctly in s/netbsd.h */
 +
-+#else /* !__OpenBSD__ && !__FreeBSD__ && !__NetBSD__ */
+ #elif defined(sun)
+ 
+ #undef START_FILES
+ #undef LIB_STANDARD
+ 
+-#else /* !__OpenBSD__ && !__FreeBSD__ && !sun */
++#else /* !__OpenBSD__ && !__FreeBSD__ && !__NetBSD__ && !sun */
  
  #undef START_FILES
  #ifdef HAVE_X86_64_LIB64_DIR
