@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2445 2006/12/07 21:27:09 plunky Exp $
+# $Id: Makefile,v 1.2446 2006/12/10 11:57:39 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1250,7 +1250,6 @@ SUBDIR+=	simgear
 SUBDIR+=	simplec
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
-SUBDIR+=	sipsak
 SUBDIR+=	sis
 SUBDIR+=	six
 SUBDIR+=	sks
