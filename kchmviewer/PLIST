@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2005/12/06 08:29:41 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/10 09:41:46 thomasklausner Exp $
 bin/kchmviewer
+lib/kde3/kio_msits.a
+lib/kde3/kio_msits.la
+lib/kde3/kio_msits.so
+share/kde/applnk/kchmviewer.desktop
+share/kde/icons/crystalsvg/128x128/apps/kchmviewer.png
+share/kde/icons/crystalsvg/48x48/apps/kchmviewer.png
+share/kde/icons/crystalsvg/64x64/apps/kchmviewer.png
+share/kde/services/msits.protocol
