@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/12/01 04:25:52 mwicks Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/11 02:57:26 mwicks Exp $
 
 DISTNAME=hplip-1.6.10
 PKGREVISION=	1
@@ -81,6 +81,7 @@ SUBST_FILES.fix-misc-paths+=	prnt/hpijs/hplip_api.h
 SUBST_FILES.fix-misc-paths+=	io/hpiod/hpiod.h
 SUBST_FILES.fix-misc-paths+=	prnt/hpijs/foomatic-rip
 SUBST_SED.fix-misc-paths=	-e 's,/usr/share/cups,${LOCALBASE}/share/cups,g'
+SUBST_SED.fix-misc-paths=	-e 's,/usr/share/application,${LOCALBASE}/share/application,g'
 SUBST_SED.fix-misc-paths+=	-e 's,/usr/lib/cups,${LOCALBASE}/libexec/cups,g'
 SUBST_SED.fix-misc-paths+=	-e 's,/usr/local,${LOCALBASE},g'
 SUBST_SED.fix-misc-paths+=	-e 's,"/etc/hp,"${PKG_SYSCONFDIR},g'
