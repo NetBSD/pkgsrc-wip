@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/12 01:52:57 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/12 20:32:57 cetrox Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
-PKGNAME=	ffmpeg-snapshot-${VERSION}
+PKGNAME=        ffmpeg-snapshot-${VERSION}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ffmpeg.mplayerhq.hu/
 EXTRACT_SUFX=	.tar.bz2
-
-.include "../../mk/bsd.prefs.mk"
-VERSION!=	${DATE} +%Y%m%d
-DATEDIR!=	${DATE} +%Y-%m-%d
-SRCDIR=		ffmpeg-export-${DATEDIR}
 
 MAINTAINER=	ccatrian@eml.cc
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
@@ -18,23 +13,49 @@ COMMENT=	Nightly snapshot of the ffmpeg tool
 
 WRKSRC=		${WRKDIR}/${SRCDIR}
 HAS_CONFIGURE=	yes
+NO_CHECKSUM=	yes
 
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--enable-gpl
+CONFIGURE_ARGS+=	--enable-gprof
 CONFIGURE_ARGS+=	--enable-memalign-hack
-CONFIGURE_ARGS+=	--cpu=i686
+CONFIGURE_ARGS+=	--enable-swscaler
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gprof
 
+.include "../../mk/bsd.prefs.mk"
+
+TODAY!=         ${DATE} -u +%Y-%m-%d
+
+.if exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
+# Fetch the date of the snapshot from file
+DISTDATE!=      tar ztf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+                2>/dev/null | head -1 | cut -f 3-5 -d "-";
+.else
+DISTDATE=       ${TODAY}
+.endif
+
+.include "options.mk"
+
+# Appends today's date to the build
+SRCDIR=         ffmpeg-export-${TODAY}
+VERSION!=       ${ECHO} ${TODAY} | ${SED} -e "s/-//g"
 
 # Checking if distfile is recent.
-pre-extract:
+.if empty(PKG_OPTIONS:Mold-dist)
+post-fetch:
 	@if [ -f ${DISTDIR}/${DISTFILES} ]; then \
-	  if [ "`tar ztf ${DISTDIR}/${DISTFILES} 2> /dev/null | \
-		head -1`" = ${SRCDIR} ]; then \
-		echo lala; \
+	  if [ ${DISTDATE} = ${TODAY} ]; then \
+		${PHASE_MSG} "Distfile is from today." ; \
 	  else \
-		${ECHO} "Please cleandir and fetch distfile again." ; \
+		${ECHO} "Distfile is dated from ${DISTDATE}." ; \
+		${ECHO} "Please cleandir and fetch distfile again," ; \
+		${ECHO} "or set PKG_OPTIONS.ffmpeg-snapshot=old-dist\
+		option to build anyway." ; \
+		exit 1; \
 	  fi \
 	fi
+.endif
 
 .include "../../mk/bsd.pkg.mk"
