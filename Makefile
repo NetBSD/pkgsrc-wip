@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2447 2006/12/10 12:09:37 kristerw Exp $
+# $Id: Makefile,v 1.2448 2006/12/12 01:54:51 cetrox Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -259,6 +259,7 @@ SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
+SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-wrapper
