@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/12 20:32:57 cetrox Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/13 19:25:49 cetrox Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
@@ -15,14 +15,22 @@ WRKSRC=		${WRKDIR}/${SRCDIR}
 HAS_CONFIGURE=	yes
 NO_CHECKSUM=	yes
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-gpl
-CONFIGURE_ARGS+=	--enable-gprof
 CONFIGURE_ARGS+=	--enable-memalign-hack
 CONFIGURE_ARGS+=	--enable-swscaler
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=        --prefix=${PREFIX}
+
+CONFLICTS+=	ffmpeg-devel-[0-9]*
+CONFLICTS+=	ffmpeg-[0-9]*
+
+REPLACE_PERL+=	doc/texi2pod.pl
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake gprof
+USE_TOOLS+=	gmake
+
+CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
+		${PKG_SYSCONFDIR}/ffserver.conf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +53,7 @@ VERSION!=       ${ECHO} ${TODAY} | ${SED} -e "s/-//g"
 # Checking if distfile is recent.
 .if empty(PKG_OPTIONS:Mold-dist)
 post-fetch:
-	@if [ -f ${DISTDIR}/${DISTFILES} ]; then \
+	@if [ -f ${DISTDIR}/${DISTFILES:Q} ]; then \
 	  if [ ${DISTDATE} = ${TODAY} ]; then \
 		${PHASE_MSG} "Distfile is from today." ; \
 	  else \
