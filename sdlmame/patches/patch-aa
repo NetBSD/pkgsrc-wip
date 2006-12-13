@@ -1,0 +1,122 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+
+--- makefile.orig	2006-09-26 03:38:10.000000000 +0200
++++ makefile
+@@ -55,10 +55,10 @@ SUBARCH = linux
+ NEW_DEBUGGER = 1
+ 
+ # uncomment next line to use DRC MIPS3 engine
+-X86_MIPS3_DRC = 1
++# X86_MIPS3_DRC = 1
+ 
+ # uncomment next line to use DRC PowerPC engine
+-X86_PPC_DRC = 1
++# X86_PPC_DRC = 1
+ 
+ # uncomment next line to use DRC Voodoo rasterizers
+ # X86_VOODOO_DRC = 1
+@@ -76,7 +76,7 @@ X86_PPC_DRC = 1
+ # ATHLON = 1
+ # I686 = 1
+ # P4 = 1
+-PM = 1
++# PM = 1
+ # AMD64 = 1
+ # G4 = 1
+ # G5 = 1
+@@ -152,9 +152,9 @@ endif
+ 
+ 
+ # compiler, linker and utilities
+-AR = @ar
+-CC = @gcc
+-LD = @gcc
++#AR = @ar
++#CC = @cc
++#LD = @cc
+ MD = -mkdir
+ RM = @rm -f
+ 
+@@ -169,7 +169,7 @@ PREFIX = d
+ endif
+ 
+ # by default, don't compile for a specific target CPU
+-NAME = $(PREFIX)$(TARGET)
++NAME = $(TARGET)
+ ARCH = 
+ 
+ # architecture-specific builds get extra options
+@@ -225,15 +225,7 @@ OBJ = obj/$(NAME)
+ # compile-time definitions
+ #-------------------------------------------------
+ 
+-ifdef PPC
+-DEFS = -DPPC_ASM -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+-else
+-ifdef PTR64
+-DEFS = -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+-else
+-DEFS = -DX86_ASM -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+-endif
+-endif
++DEFS = ${PKG_DEFS} -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+ 
+ ifdef PTR64
+ DEFS += -DPTR64
+@@ -279,20 +271,19 @@ CFLAGS += -DNDEBUG \
+ 	-Wstrict-prototypes \
+ 	-Wundef \
+ 	-Wformat-security \
+-	-Wwrite-strings \
+-	-Wdeclaration-after-statement
++	-Wwrite-strings
+ endif
+ 
+ # extra options needed *only* for the osd files
+ CFLAGSOSDEPEND = $(CFLAGS)
+ 
+-LDFLAGS = -WO
++#LDFLAGS = -WO
+ 
+-ifdef SYMBOLS
+-LDFLAGS =
+-else
+-LDFLAGS += -s
+-endif
++#ifdef SYMBOLS
++#LDFLAGS =
++#else
++#LDFLAGS = -s
++#endif
+ 
+ ifdef MAP
+ MAPFLAGS = -Wl,-Map,$(NAME).map
+@@ -448,23 +439,23 @@ $(EMULATOR): $(COREOBJS) $(OSOBJS) $(CPU
+ # always recompile the version string
+ 	$(CC) $(CDEFS) $(CFLAGS) -c src/version.c -o $(OBJ)/version.o
+ 	@echo Linking $@...
+-	$(LD) $(CFLAGS) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
+ 
+ file2str$(EXE): $(OBJ)/file2str.o $(OSDBGOBJS) $(ZLIB)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
+ 
+ romcmp$(EXE): $(OBJ)/romcmp.o $(OBJ)/unzip.o $(ZLIB) $(OSDBGOBJS)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
+ 
+ chdman$(EXE): $(OBJ)/chdman.o $(OBJ)/chd.o $(OBJ)/chdcd.o $(OBJ)/cdrom.o $(OBJ)/md5.o $(OBJ)/sha1.o $(OBJ)/version.o $(ZLIB) $(OSTOOLOBJS) $(OSDBGOBJS)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(ZLIB) $(LIBS) -o $@
+ 
+ jedutil$(EXE): $(OBJ)/jedutil.o $(OBJ)/jedparse.o $(OSDBGOBJS)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ -o $@
++	$(CC) $(LDFLAGS) $^ -o $@
+ 
+ 
+ #-------------------------------------------------

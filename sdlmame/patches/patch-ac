@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+
+--- src/cpu/cpu.mak.orig	2006-09-26 18:59:30.000000000 +0200
++++ src/cpu/cpu.mak
+@@ -667,7 +667,7 @@ $(M68000_GENERATED_FILES) $(M68000_GENER
+ # rule to build the generator
+ $(OBJ)/cpu/m68000/m68kmake$(EXE): $(OBJ)/cpu/m68000/m68kmake.o $(OSDBGOBJS)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@
+ 
+ # rule to ensure we build the header before building the core CPU file
+ $(OBJ)/cpu/m68000/m68kcpu.o: $(M68000_GENERATED_HEADERS)

@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+
+--- src/sdl/osd_tool.c.orig	2006-09-26 01:40:56.000000000 +0200
++++ src/sdl/osd_tool.c
+@@ -127,7 +127,7 @@ UINT32 osd_tool_fread(osd_tool_file *fil
+ {
+ #ifdef SDLMAME_MACOSX
+ 	UINT32 res = pread(file->fd, buffer, count, offset);
+-#elif defined(SDLMAME_LINUX)
++#elif defined(SDLMAME_LINUX) && !defined(SDLMAME_NO64BITIO)
+ 	UINT32 res = pread64(file->fd, buffer, count, offset);
+ #elif defined(SDLMAME_WIN32) || defined(SDLMAME_NO64BITIO)
+ 	UINT32 res;
+@@ -147,7 +147,7 @@ UINT32 osd_tool_fwrite(osd_tool_file *fi
+ {
+ #ifdef SDLMAME_MACOSX
+ 	UINT32 res = pwrite(file->fd, buffer, count, offset);
+-#elif defined(SDLMAME_LINUX)
++#elif defined(SDLMAME_LINUX) && !defined(SDLMAME_NO64BITIO)
+ 	UINT32 res = pwrite64(file->fd, buffer, count, offset);
+ #elif defined(SDLMAME_WIN32) || defined(SDLMAME_NO64BITIO)
+ 	UINT32 res;

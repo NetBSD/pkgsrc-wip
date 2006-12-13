@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+
+--- src/sdl/misc.c.orig	2006-09-26 01:40:56.000000000 +0200
++++ src/sdl/misc.c
+@@ -152,7 +152,7 @@ void fprint_colums(FILE *f, const char *
+ void *osd_alloc_executable(size_t size)
+ {
+ #ifdef SDLMAME_LINUX 
+-#ifdef SDLMAME_FREEBSD
++#ifdef MAP_ANON
+ 	return (void *)mmap(0, size, PROT_EXEC|PROT_READ|PROT_WRITE, MAP_ANON|MAP_SHARED, 0, getpagesize());
+ #else
+ 	return (void *)mmap(0, size, PROT_EXEC|PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_SHARED, 0, getpagesize());
