@@ -3,19 +3,4 @@ It includes libavcodec, the leading audio/video codec library. FFmpeg is
 developed under Linux, but it can compiled under most operating systems,
 including Windows.
 
-The project is made of several components:
-
-  * ffmpeg is a command line tool to convert one video file format to
-    another. It also supports grabbing and encoding in real time from a TV
-    card.
-  * ffserver is an HTTP (RTSP is being developped) multimedia streaming
-    server for live broadcasts. Time shifting of live broadcast is also
-    supported.
-  * ffplay is a simple media player based on SDL and on the FFmpeg libraries.
-  * libavcodec is a library containing all the FFmpeg audio/video encoders
-    and decoders. Most codecs were developped from scratch to ensure best
-    performances and high code reusability.
-  * libavformat is a library containing parsers and generators for all common
-    audio/video formats.
-
 This package fetches nightly builds from mplayer's site, no checksums made.
