@@ -1,3 +1,6 @@
-· PLIST
-· Makefile
-· options.mk, buildlink and other stuff.
+· Makefile: tar, head and cut hardcoded.
+· Doesn't install manpages.
+· Check buildlink3.mk file.
+· PLIST unstable; may change in the future.
+· options.mk: all options not tested.
+· pkglint says that options are unknown.
