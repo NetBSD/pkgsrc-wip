@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.6 2006/12/13 21:55:53 cheusov Exp $
+
+--- libmaa/configure.orig	2006-12-13 22:27:09.000000000 +0200
++++ libmaa/configure
+@@ -1712,6 +1712,7 @@ MAA_MINOR=0
+ echo Configuring for libmaa $MAA_MAJOR.$MAA_MINOR
+ echo .
+ 
++LIBS=`echo $LIBS | sed -e 's|-lmaa||'`
+ 
+ # Check whether --with-cc was given.
+ if test "${with_cc+set}" = set; then
