@@ -1,0 +1,22 @@
+Osmose is another Sega Master System / Gamegear emulator. The
+emulator is released as open source project, under the GPL license.
+
+- SMS: Good compatibility. At this stage, the emulator can run 96%
+  of commercial games and public demos, except games that rely on
+  the codemaster mapper, which work but do not have the proper video
+  mode emulated.
+- Game Gear: Good compatibility. At this stage, the emulator can
+  run 98.0% of game gear ROMS.
+- SN76489 sound is supported, but needs more work on the noise
+  register.
+- Support for .zip, .sms and .gg formats.
+- Video filters: monochrome, scanline, scale2x, bilinear, nearest
+  neighbour, and a new interesting scale2xscanline (fullscreen option
+  always also available).
+- Pad (keyboard or joystick mapped), Sport Paddle (mouse mapped) emulation.
+- PAL/NTSC Timing.
+- Japanese/Export console.
+- In-game screenshots, GFX rip, sound shot.
+- Accurate auto-frameskip.
+- Configurable keyboard configuration.
+- Joystick support.

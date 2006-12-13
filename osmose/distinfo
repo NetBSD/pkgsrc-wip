@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/12/13 18:34:02 thomasklausner Exp $
+
+SHA1 (Osmose_0-8-0_src.zip) = 5eb4a64002bd52e2a235faa0c21a46f8315f1d3d
+RMD160 (Osmose_0-8-0_src.zip) = c88dd515689a5a243e92dee93e0a8ef4d4b51bcb
+Size (Osmose_0-8-0_src.zip) = 332579 bytes
+SHA1 (patch-aa) = a5875ae5b9cb31aa7f0592d99211ffa3749ace0b
+SHA1 (patch-ab) = 93b260b12d6b830ea57e0d22b3b67e0aa2c3b76e
+SHA1 (patch-ac) = 114838b9b0d7bc78d56ecf4fff362f0fcbabfc81
