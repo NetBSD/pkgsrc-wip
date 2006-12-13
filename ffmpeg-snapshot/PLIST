@@ -1,1 +1,36 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/12 01:52:57 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/13 19:27:02 cetrox Exp $
+bin/ffmpeg
+bin/ffserver
+include/ffmpeg/adler32.h
+include/ffmpeg/avcodec.h
+include/ffmpeg/avformat.h
+include/ffmpeg/avio.h
+include/ffmpeg/avutil.h
+include/ffmpeg/common.h
+include/ffmpeg/fifo.h
+include/ffmpeg/integer.h
+include/ffmpeg/intfloat_readwrite.h
+include/ffmpeg/log.h
+include/ffmpeg/mathematics.h
+include/ffmpeg/md5.h
+include/ffmpeg/opt.h
+include/ffmpeg/rational.h
+include/ffmpeg/rgb2rgb.h
+include/ffmpeg/rtp.h
+include/ffmpeg/rtsp.h
+include/ffmpeg/rtspcodes.h
+include/ffmpeg/swscale.h
+lib/libavcodec.a
+lib/libavformat.a
+lib/libavutil.a
+lib/libswscale.a
+lib/pkgconfig/libavcodec.pc
+lib/pkgconfig/libavformat.pc
+lib/pkgconfig/libavutil.pc
+lib/pkgconfig/libswscale.pc
+lib/vhook/fish.so
+lib/vhook/null.so
+lib/vhook/ppm.so
+lib/vhook/watermark.so
+@dirrm lib/vhook
+@dirrm include/ffmpeg
