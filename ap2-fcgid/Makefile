@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/13 04:05:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/13 15:19:49 jeremy-c-reed Exp $
 
 DISTNAME=	mod_fcgid.2.0
 PKGNAME=	ap2-fcgid-2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-fcgid/}
 
