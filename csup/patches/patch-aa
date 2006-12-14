@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/12/14 04:48:34 netcap Exp $
+
+--- mux.c.orig	2006-02-27 20:21:20.000000000 +0100
++++ mux.c
+@@ -784,6 +784,8 @@ sender_loop(void *arg)
+ 	uint16_t hdrsize, size, len;
+ 	int error, id, iovcnt, what;
+ 
++    what = 0;   /* Appease GCC4 */
++
+ 	m = (struct mux *)arg;
+ again:
+ 	id = sender_waitforwork(m, &what);
