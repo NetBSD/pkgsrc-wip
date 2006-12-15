@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2006/12/13 19:32:37 cetrox Exp $
+# $NetBSD: options.mk,v 1.3 2006/12/15 10:46:29 cetrox Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ffmpeg-snapshot
 PKG_SUPPORTED_OPTIONS=  old-dist mmx i686 gsm mp3lame libogg xvid vorbis faad \
 			faac x264 a52
-PKG_SUGGESTED_OPTIONS=  mmx i686 mp3lame libogg faac a52
+PKG_SUGGESTED_OPTIONS=  mp3lame libogg faac a52
 
 .include "../../mk/bsd.options.mk"
 
