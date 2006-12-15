@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/12/15 22:10:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 22:20:09 cheusov Exp $
 
 DISTNAME=	eng-fra
 PKGNAME=	dict-freedict-${DISTNAME}-0.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://freedict.de
+HOMEPAGE=	http://freedict.de/
 COMMENT=	DICTD data for FreeDict English-French dictionary
 
 DICTSRCNAME=	${DISTNAME}
@@ -26,8 +26,10 @@ DICTNAME=	freedict_${DICTSRCNAME}
 
 do-build:
 	cd ${WRKSRC} && \
-	gzip -dc ${DICTSRCNAME}.dict.dz | dictunformat ${DICTSRCNAME}.index | \
-		dictfmt -t --utf8 ${DICTNAME} && \
+	gzip -dc ${DICTSRCNAME}.dict.dz > ${DICTSRCNAME}.dict && \
+	dictunformat ${DICTSRCNAME}.index \
+		< ${DICTSRCNAME}.dict > dict.c5 && \
+	dictfmt -t --utf8 ${DICTNAME} < dict.c5 && \
 	dictzip ${DICTNAME}.dict
 
 do-install:
