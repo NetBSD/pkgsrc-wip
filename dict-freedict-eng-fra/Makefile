@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/15 22:20:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/15 22:26:20 cheusov Exp $
 
 DISTNAME=	eng-fra
 PKGNAME=	dict-freedict-${DISTNAME}-0.0.3
@@ -21,8 +21,8 @@ INSTALLATION_DIRS=	${DICTD_DB_DIR}
 
 WRKSRC=		${WRKDIR}/bin
 
-FILES=		freedict_eng-fra.index freedict_eng-fra.dict.dz
 DICTNAME=	freedict_${DICTSRCNAME}
+FILES=		${DICTNAME}.index ${DICTNAME}.dict.dz
 
 do-build:
 	cd ${WRKSRC} && \
