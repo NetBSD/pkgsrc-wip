@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/07 16:06:33 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:40 thomasklausner Exp $
 #
 
 DISTNAME=		gmc-0-6
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.geocities.com/SiliconValley/Software/8918/linux/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Guenthers Midi Compiler, a tool to convert text to midi
 

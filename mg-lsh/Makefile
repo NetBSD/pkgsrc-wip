@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/15 14:34:40 thomasklausner Exp $
 #
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	mg-lsh-0.70
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/l/lsh/}
 
-MAINTAINER=	ben@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20020811140533/http://people.cs.uct.ac.za/~mwelz/lsh.html
 COMMENT=	DOS compatible command line interpreter
 

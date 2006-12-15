@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/12 16:29:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2006/12/15 14:34:40 thomasklausner Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		uqm-0.3-content.zip
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sc2.sourceforge.net/
 COMMENT=		Star Control 2
 

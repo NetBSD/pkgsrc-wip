@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 00:46:04 bencollver Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:40 thomasklausner Exp $
 #
 
 DISTNAME=		gplbasic
@@ -6,7 +6,7 @@ PKGNAME=		gplbasic-0
 CATEGORIES=		lang
 MASTER_SITES=		http://www.xs4all.nl/~lennartb/
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xs4all.nl/~lennartb/basic.html
 COMMENT=		Basic interpreter for Unix
 

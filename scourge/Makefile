@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/14 19:28:59 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2006/12/15 14:34:40 thomasklausner Exp $
 #
 
 DISTNAME=		scourge-0.4
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scourge/}
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://scourge.sourceforge.net/
 COMMENT=		Graphical 3D roguelike, vermin extermination
 

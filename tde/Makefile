@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/15 14:34:40 thomasklausner Exp $
 
 DISTNAME=		tde-5.1s
 CATEGORIES=		editors
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.geocities.com/jadoxa/tde/
 
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		51s1.txt
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Thomson-Davis Editor
 
