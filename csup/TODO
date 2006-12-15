@@ -1,9 +1,1 @@
-- This package requires zlib and pthread in linking. Please add the
-  corresponding buildlink3.mk files.
-
-- GNUmakefile contains hardcoded pthread options such as "-pthread". Use
-  PTHREAD_* variables defined in mk/pthread.buildlink3.mk instead.
-
-- The homepage URL shouldn't be in DESCR.
-
 - Needs yacc.

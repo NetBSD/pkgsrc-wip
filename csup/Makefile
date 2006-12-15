@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/14 04:34:08 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2006/12/15 01:57:41 netcap Exp $
 #
 
 DISTNAME=	csup-snap-20060318
@@ -21,5 +21,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/csup ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/csup.1 ${PREFIX}/${PKGMANDIR}/man1/csup.1
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

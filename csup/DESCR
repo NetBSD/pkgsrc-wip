@@ -7,5 +7,3 @@ In addition to being a great general-purpose mirroring tool, CVSup includes
 special features and optimizations specifically tailored to CVS repositories.
 It is being used as the preferred way to update sources within the FreeBSD,
 NetBSD and OpenBSD projects and more.
-
-WWW: http://mu.org/~mux/csup.html
