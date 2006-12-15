@@ -1,1 +1,3 @@
 - Needs yacc.
+- It doesn't builds on FreeBSD, the way to fix this:
+  $ byacc -d work/csup/parse.y -o work/csup/parse.h
