@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/15 13:15:00 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/16 12:48:28 ondratu Exp $
 #
 
-DISTNAME=		pdns-recursor-3.1.2
+DISTNAME=		pdns-recursor-3.1.4
 CATEGORIES=		net
 MASTER_SITES=		http://downloads.powerdns.com/releases/
 EXTRACT_SUFX=		.tar.bz2
