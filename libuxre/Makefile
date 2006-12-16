@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/07/20 15:00:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/16 18:41:46 cheusov Exp $
 
 .include "../../wip/heirloom/Makefile.common"
 
@@ -8,7 +8,8 @@ CATEGORIES=	devel
 MAINTAINER=	cheusov@tut.by
 COMMENT=	POSIX compatible regular expression library
 
-BUILD_DIRS=		libuxre
+USE_LIBTOOL=		yes
+
 INSTALLATION_DIRS=	include/uxre share/doc/${PKGBASE}
 
 pre-build:
@@ -18,8 +19,20 @@ pre-build:
 DOC_FILES=	NOTES COPYING.LGPL
 DOC_DIR=	${PREFIX}/share/doc/${PKGBASE}
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.a ${PREFIX}/lib
+SRCFILES=	onefile    regfree    regerror
+LOFILES=	onefile.lo regfree.lo regerror.lo
+
+do-build:
+	cd ${WRKSRC}/libuxre || exit 1; \
+	for i in ${SRCFILES}; do \
+	   libtool --mode=compile \
+	      ${CC} -o $${i}.o -c ${CFLAGS} -I. $${i}.c || exit 2; \
+	done; \
+	libtool --mode=link ${CC} -o libuxre.la \
+	   -rpath ${PREFIX}/lib -version-info 0:0 ${LOFILES}
+
+do-install:
+	libtool ${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.la ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libuxre/regex.h ${PREFIX}/include/uxre
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/libuxre/"${i}" ${DOC_DIR}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/07/20 15:00:24 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/12/16 18:41:46 cheusov Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUXRE_BUILDLINK3_MK:=	${LIBUXRE_BUILDLINK3_MK}+
@@ -13,7 +13,6 @@ BUILDLINK_PACKAGES+=	libuxre
 .if ${LIBUXRE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libuxre+=	libuxre>=060122
 BUILDLINK_PKGSRCDIR.libuxre?=	../../wip/libuxre
-BUILDLINK_DEPMETHOD.pkg=	build
 BUILDLINK_INCDIRS.libuxre+=	include/uxre
 .endif	# LIBUXRE_BUILDLINK3_MK
 
