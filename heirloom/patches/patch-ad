@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2006/12/16 19:53:18 cheusov Exp $
+$NetBSD: patch-ad,v 1.8 2006/12/16 20:22:07 cheusov Exp $
 
 --- build/mk.config.orig	2006-01-22 23:48:04.000000000 +0200
 +++ build/mk.config
@@ -14,30 +14,30 @@ $NetBSD: patch-ad,v 1.7 2006/12/16 19:53:18 cheusov Exp $
  # may be identical to that of one of the first three personalities below.
  #
 -DEFBIN = /usr/5bin
-+DEFBIN = ${DESTDIR}/heirloom/bin
++DEFBIN = ${DESTDIR}${PREFIX}/bin
  
  #
  # Location for SVID3/SVR4-style binaries.
  #
 -SV3BIN = /usr/5bin
-+SV3BIN = ${DESTDIR}/heirloom/bin
++SV3BIN = ${DESTDIR}${PREFIX}/bin
  
  #
  # Location for SVID4/SVR4.2-style binaries.
  #
 -S42BIN = /usr/5bin/s42
-+S42BIN = ${DESTDIR}/heirloom/bin/s42
++S42BIN = ${DESTDIR}${PREFIX}/bin/s42
  
  #
  # Location for POSIX.2/SUS-style binaries.
  #
 -SUSBIN = /usr/5bin/posix
-+SUSBIN = ${DESTDIR}/heirloom/bin/posix
++SUSBIN = ${DESTDIR}${PREFIX}/bin/posix
  
  #
  # Location for POSIX.1-2001/SUSv3-style binaries.
 -SU3BIN = /usr/5bin/posix2001
-+SU3BIN = ${DESTDIR}/heirloom/bin/posix2001
++SU3BIN = ${DESTDIR}${PREFIX}/bin/posix2001
  
  #
  # Location for SVR4 UCB-style binaries. These do not form a complete
@@ -45,46 +45,46 @@ $NetBSD: patch-ad,v 1.7 2006/12/16 19:53:18 cheusov Exp $
  # one.
  #
 -UCBBIN = /usr/ucb
-+UCBBIN = ${DESTDIR}/heirloom/ucb
++UCBBIN = ${DESTDIR}${PREFIX}/ucb
  
  #
  # Location for library files.
  #
 -DEFLIB = /usr/5lib
-+DEFLIB = ${DESTDIR}/heirloom/lib
++DEFLIB = ${DESTDIR}${PREFIX}/lib
  
  #
  # Location for superuser-only binaries. May be identical to the
  # default binary directory.
  #
 -DEFSBIN = /usr/5bin
-+DEFSBIN = ${DESTDIR}/heirloom/sbin
++DEFSBIN = ${DESTDIR}${PREFIX}/sbin
  
  #
  # Location for manual pages (with man1, man1b ... man8 below).
  #
 -MANDIR = /usr/share/man/5man
-+MANDIR = ${DESTDIR}/heirloom/man
++MANDIR = ${DESTDIR}${PREFIX}/man
  
  #
  # Location for default files. Make sure that this directory is accessible
  # to all users.
  #
 -DFLDIR = /etc/default
-+DFLDIR = ${DESTDIR}/heirloom/etc/default
++DFLDIR = ${DESTDIR}${PREFIX}/etc/default
  
  #
  # Location for the spell history file (contains misspelled words for
  # all users; set to /dev/null to disable).
  #
 -SPELLHIST = /var/adm/spellhist
-+SPELLHIST = ${DESTDIR}/heirloom/var/adm/spellhist
++SPELLHIST = ${DESTDIR}${PREFIX}/var/adm/spellhist
  
  #
  # Location for the su logfile.
  #
 -SULOG = /var/log/sulog
-+SULOG = ${DESTDIR}/heirloom/var/log/sulog
++SULOG = ${DESTDIR}${PREFIX}/var/log/sulog
  
  #
  # Where to store the file command's magic. Note that the existing
