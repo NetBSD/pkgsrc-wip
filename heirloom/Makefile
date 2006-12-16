@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/16 22:30:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2006/12/16 23:36:20 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -12,8 +12,9 @@ USE_TOOLS+=	yacc lex
 # should be partially ported to Interix
 NOT_FOR_PLATFORM=	Interix-*-*
 
-MAKE_ENV+=	IUXRE="-I../libuxre -DUXRE"
-MAKE_ENV+=	LUXRE="-L../libuxre -luxre"
+MAKE_FILE=		makefile
+HLROOT=			heirloom
+PLIST_SUBST+=		HLROOT=${HLROOT}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,19 +39,18 @@ LCURS=		-ltermcap
 
 LDFLAGS+=	-lz -lbz2
 
-do-build:
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} UCBINST=${INSTALL} PREFIX=${PREFIX:Q}/heirloom -f makefile
-
-do-install:
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} UCBINST=${INSTALL} PREFIX=${PREFIX:Q}/heirloom install
+MAKE_FLAGS+=    LCURS=${LCURS}
+MAKE_FLAGS+=    LCRYPT=${LCRYPT}
+MAKE_FLAGS+=    PREFIX=${PREFIX:Q}/${HLROOT}
+MAKE_FLAGS+=    UCBINST=${INSTALL}
+MAKE_FLAGS+=	IUXRE="-I../libuxre -DUXRE"
+MAKE_FLAGS+=	LUXRE="-L../libuxre -luxre"
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \
 		OPENSOLARIS.LICENSE README
-
 DOC_DIR=	${PREFIX}/share/doc/${PKGBASE}
+
 INSTALLATION_DIRS=${DOC_DIR} ${DOC_DIR}/LICENSE ${PREFIX}
 .for i in bin/posix bin/posix2001 bin/s42 bin etc/default etc lib/spell \
           lib/tmac lib man/man1 man/man1b man/man1m man/man2 man/man3 \
@@ -58,6 +58,10 @@ INSTALLATION_DIRS=${DOC_DIR} ${DOC_DIR}/LICENSE ${PREFIX}
           var/adm var/log var
 INSTALLATION_DIRS+=	${PREFIX}/heirloom/${i}
 .endfor
+
+pre-build:
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOC_DIR} && \
