@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/16 20:22:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/16 22:30:07 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -40,11 +40,11 @@ LDFLAGS+=	-lz -lbz2
 
 do-build:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} PREFIX=${PREFIX:Q}/heirloom -f makefile
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} UCBINST=${INSTALL} PREFIX=${PREFIX:Q}/heirloom -f makefile
 
 do-install:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} PREFIX=${PREFIX:Q}/heirloom install
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} LCRYPT=${LCRYPT:Q} LCURS=${LCURS:Q} UCBINST=${INSTALL} PREFIX=${PREFIX:Q}/heirloom install
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \
