@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.3 2005/12/05 22:27:45 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2006/12/16 10:58:14 thomasklausner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnunet
-PKG_SUPPORTED_OPTIONS=	bdb gdbm inet6 libgcrypt openssl tdb
+PKG_OPTIONS_REQUIRED_GROUPS=	security
+PKG_OPTIONS_GROUP.security=	libgcrypt ssl
+PKG_SUPPORTED_OPTIONS=	bdb gdbm inet6 tdb
 
 # some sane defaults to use base OS functionality where appropriate
 .if !empty(OPSYS:M*BSD)
-PKG_SUGGESTED_OPTIONS=	openssl
+PKG_SUGGESTED_OPTIONS=	ssl
 .else
 PKG_SUGGESTED_OPTIONS=	libgcrypt
 .endif
@@ -53,10 +55,10 @@ CONFIGURE_ARGS+=	--without-tdb
 .include "../../security/libgcrypt/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 CONFIGURE_ARGS+=	--without-crypto
-.elif !empty(PKG_OPTIONS:Mopenssl)
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-crypto=${BUILDLINK_PREFIX.libgcrypt}
 CONFIGURE_ENV+=		LIBGCRYPT_CONFIG=/nonexistent
-.else
-.error must use one of "libgcrypt" or "openssl" in PKG_OPTIONS.gnunet
 .endif
