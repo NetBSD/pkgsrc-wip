@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2006/12/17 22:47:11 cheusov Exp $
+@dirrm ${HLROOT}/bin/posix
+@dirrm ${HLROOT}/bin/posix2001
+@dirrm ${HLROOT}/bin/s42
+@dirrm ${HLROOT}/bin
+@dirrm ${HLROOT}/etc/default
+@dirrm ${HLROOT}/etc
+@dirrm ${HLROOT}/lib/spell
+@dirrm ${HLROOT}/lib/tmac
+@dirrm ${HLROOT}/lib
+@dirrm ${HLROOT}/man/man1
+@dirrm ${HLROOT}/man/man1b
+@dirrm ${HLROOT}/man/man1m
+@dirrm ${HLROOT}/man/man2
+@dirrm ${HLROOT}/man/man3
+@dirrm ${HLROOT}/man/man4
+@dirrm ${HLROOT}/man/man5
+@dirrm ${HLROOT}/man/man6
+@dirrm ${HLROOT}/man/man7
+@dirrm ${HLROOT}/man/man8
+@dirrm ${HLROOT}/man
+@dirrm ${HLROOT}/sbin
+@dirrm ${HLROOT}/ucb
+@dirrm ${HLROOT}/var/adm
+@dirrm ${HLROOT}/var/log
+@dirrm ${HLROOT}/var
+@dirrm ${HLROOT}
