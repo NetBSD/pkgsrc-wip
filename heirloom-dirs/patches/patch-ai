@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+
+--- mail/sendmail.c.orig	2005-07-03 02:11:41.000000000 +0300
++++ mail/sendmail.c
+@@ -150,10 +150,12 @@ sendmail(int argc, char **argv)
+ 	cpy(&fromS, &fromSsize, "");
+ 	input = stdin;
+ 	if (fstat(fileno(input), &sbuf) < 0) {
++#ifdef EOVERFLOW
+ 		if (errno == EOVERFLOW) {
+ 			perror("stdin");
+ 			exit(1);
+ 		}
++#endif
+ 	}
+ 
+ 	while ((n = getline (&line, &linesize, stdin)) > 0) {

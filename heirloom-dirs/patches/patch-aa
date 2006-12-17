@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+
+--- df/df.c.orig	2006-01-22 20:42:39.000000000 +0200
++++ df/df.c
+@@ -50,10 +50,18 @@ typedef		unsigned long long	ull;
+ #include	<pwd.h>
+ #include	<sys/types.h>
+ #include	<sys/stat.h>
+-#if defined (__dietlibc__) || defined (__NetBSD__) || defined (__OpenBSD__)
++#if defined (__dietlibc__) || defined (__OpenBSD__)
+ #include	"statvfs.c"
+ #elif defined (__FreeBSD__) && (__FreeBSD__) < 5
+ #include	"statvfs.c"
++#elif defined (__NetBSD__)
++#include <sys/param.h>
++#if __NetBSD_Version__ < 300000000
++#include        "statvfs.c"
++#else
++#include        <sys/statvfs.h>
++#define statfs statvfs
++#endif
+ #else
+ #include	<sys/statvfs.h>
+ #endif

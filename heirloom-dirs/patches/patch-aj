@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+
+--- nawk/awk.g.y.orig	2005-02-06 14:19:22.000000000 +0200
++++ nawk/awk.g.y
+@@ -29,6 +29,11 @@
+ %{
+ #include "awk.h"
+ #include <unistd.h>
++
++#ifdef __OpenBSD__
++#include <inttypes.h>
++#endif
++
+ #include <pfmt.h>
+ int yywrap(void) { return(1); }
+ #ifndef	DEBUG

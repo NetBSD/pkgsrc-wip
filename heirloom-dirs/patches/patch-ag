@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+
+--- mail/doopen.c.orig	2005-06-18 17:09:15.000000000 +0300
++++ mail/doopen.c
+@@ -46,7 +46,11 @@ doopen(char *file, char *type, int errnu
+ 	FILE *fptr = NULL;
+ 	struct stat st;
+ 
+-	if ((stat(file, &st) < 0 && errno == EOVERFLOW) ||
++	if ((stat(file, &st) < 0
++#ifdef EOVERFLOW
++		&& errno == EOVERFLOW
++#endif
++		) ||
+ 		(fptr = fopen(file, type)) == NULL) {
+ 		fprintf(stderr,
+ 			"%s: Can't open '%s' type: %s\n",program,file,type);
