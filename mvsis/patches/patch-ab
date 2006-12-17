@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2006/12/17 21:42:34 dhowland Exp $
+
+--- src/graph/wn/wnStrashBin.c.orig	2004-05-12 00:30:11.000000000 -0400
++++ src/graph/wn/wnStrashBin.c
+@@ -77,7 +77,10 @@ Sh_Network_t * Wn_WindowStrashBinaryMite
+ 
+     // clean the data of the nodes in the window
+     Ntk_NetworkForEachNodeSpecial( pWnd->pNet, pNode )
+-        pNode->pCopy = (Ntk_Node_t *)pNode->pData = NULL;
++    {
++        pNode->pCopy = NULL;
++	pNode->pData = NULL;
++    }
+ 
+     // set the leaves
+     pgInputs = Sh_ManagerReadVars( pMan );
