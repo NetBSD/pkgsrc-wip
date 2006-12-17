@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/11/04 22:43:11 larnor Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/12/17 10:00:23 larnor Exp $
 bin/gtk-gnutella
 share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
@@ -6,7 +6,6 @@ share/gtk-gnutella/el/FAQ
 share/gtk-gnutella/en/FAQ
 share/gtk-gnutella/favicon.png
 share/gtk-gnutella/geo-ip.txt
-share/gtk-gnutella/gwcache.boot
 share/gtk-gnutella/hostiles.txt
 share/gtk-gnutella/ja/FAQ
 share/gtk-gnutella/pixmaps/arrow_down.xpm

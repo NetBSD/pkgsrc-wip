@@ -1,0 +1,5 @@
+Somehow handle https type urls in the subversion module. It works if
+the user building the package has already saved the certificate in her
+homedirectory. This has however never happened during bulk builds, or
+from within a pkg_comp chroot. That is why this package always fails
+to build in the pkgsrc-wip bulk builds.
