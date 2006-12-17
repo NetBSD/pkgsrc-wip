@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/12/02 17:47:39 dhowland Exp $
+# $NetBSD: Makefile,v 1.29 2006/12/17 20:01:02 dhowland Exp $
 #
 
 DISTNAME=		freevo-1.5.4
@@ -33,7 +33,7 @@ CONF_FILES=		${EGDIR}/local_conf.py.example		\
 			${PKG_SYSCONFDIR}/local_conf.py
 
 SUBST_CLASSES+=		freevo
-SUBST_STAGE.freevo=	post-patch
+SUBST_STAGE.freevo=	pre-configure
 SUBST_FILES.freevo=	src/config.py
 SUBST_SED.freevo+=	-e 's|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g'
 
@@ -41,6 +41,7 @@ post-patch:
 	${CP} ${FILESDIR}/pygamejoy.py ${WRKSRC}/src/plugins/pygamejoy.py
 
 post-install:
+	${RM} ${PREFIX}/share/freevo/contrib/fbcon/mgafb.orig
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/freevo
 	${INSTALL_DATA} ${WRKSRC}/local_conf.py.example \
 		${PREFIX}/share/examples/freevo/local_conf.py.example
