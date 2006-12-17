@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/05 20:43:15 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/17 21:39:00 gschwarz Exp $
 
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 #USE_TOOLS+=	perl
 BUILD_TARGET=	tac_plus
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CPPFLAGS+=	-DNO_PWAGE
 .endif
 
