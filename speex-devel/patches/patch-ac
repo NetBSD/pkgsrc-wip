@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2006/12/17 21:41:30 gschwarz Exp $
+
+--- libspeex/kiss_fft.h.orig	Sun Dec 17 22:35:34 2006
++++ libspeex/kiss_fft.h	Sun Dec 17 22:35:54 2006
+@@ -5,7 +5,6 @@
+ #include <stdio.h>
+ #include <math.h>
+ #include <memory.h>
+-#include <malloc.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {
