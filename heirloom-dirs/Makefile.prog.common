@@ -1,0 +1,56 @@
+# $NetBSD: Makefile.prog.common,v 1.1 2006/12/17 15:05:13 cheusov Exp $
+
+.include "../../wip/heirloom-dirs/Makefile.common"
+
+CATEGORIES?=	sysutils
+
+MAINTAINER=	cheusov@tut.by
+COMMENT?=	Collection of standard Unix utilities
+
+USE_TOOLS+=	yacc lex
+
+MAKE_FILE=		makefile
+HLROOT?=		heirloom-test
+PLIST_SUBST+=		HLROOT=${HLROOT}
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS.Linux+=		-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64L
+
+LDFLAGS.NetBSD+=	-lkvm
+LDFLAGS.FreeBSD+=	-lkvm
+LDFLAGS.OpenBSD+=	-lkvm
+LDFLAGS.DragonFly+=	-lkvm
+
+LCRYPT=		-lcrypt
+.if ${OPSYS} == "OpenBSD"
+LCRYPT=
+.endif
+
+LCURS=-lcurses
+
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=	-DUSE_TERMCAP
+LCURS=		-ltermcap
+.endif
+
+LDFLAGS+=	-lz -lbz2
+
+MAKE_FLAGS+=    LCURS=${LCURS}
+MAKE_FLAGS+=    LCRYPT=${LCRYPT}
+MAKE_FLAGS+=    PREFIX=${PREFIX:Q}/${HLROOT}
+MAKE_FLAGS+=    UCBINST=${INSTALL}
+MAKE_FLAGS+=	LUXRE="-luxre"
+
+pre-build:
+	cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
+
+#pre-install:
+#	cd ${WRKSRC}/build && \
+#	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} maninst crossln
+
+#.include "../../devel/zlib/buildlink3.mk"
+#.include "../../archivers/bzip2/buildlink3.mk"
+#.include "../../mk/curses.buildlink3.mk"
+#.include "../../mk/bsd.pkg.mk"
