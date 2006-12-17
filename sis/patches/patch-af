@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2006/12/17 20:51:30 dhowland Exp $
+
+--- sis/pld/xln_merge.c.orig	2005-03-08 00:31:12.000000000 -0500
++++ sis/pld/xln_merge.c
+@@ -284,6 +284,8 @@ array_t	        *match1_array, *match2_a
+ 
+ }
+ 
++static sm_row *xln_merge_find_neighbor_of_row1_with_minimum_neighbors();
++
+ 
+ /*----------------------------------------------------------------------------------------------------
+   An alternate to lindo option. Uses greedy merging. A node with minimum mergeable nodes is picked
+@@ -296,7 +298,6 @@ xln_merge_nodes_without_lindo(coeff, can
+ { 
+   node_t *n1, *n2;
+   sm_row *row1, *row2;
+-  static sm_row *xln_merge_find_neighbor_of_row1_with_minimum_neighbors();
+ 
+   while (TRUE) {
+       row1 = sm_shortest_row(coeff);
