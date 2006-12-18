@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/03 13:44:25 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/18 08:15:15 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -113,8 +113,6 @@ lib/${MOZILLA}/chrome/messenger.jar
 lib/${MOZILLA}/chrome/messenger.manifest
 lib/${MOZILLA}/chrome/newsblog.jar
 lib/${MOZILLA}/chrome/newsblog.manifest
-lib/${MOZILLA}/chrome/offline.jar
-lib/${MOZILLA}/chrome/offline.manifest
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/pippki.manifest
 lib/${MOZILLA}/chrome/toolkit.jar
@@ -226,9 +224,15 @@ lib/${MOZILLA}/components/nsFilePicker.js
 lib/${MOZILLA}/components/nsHelperAppDlg.js
 lib/${MOZILLA}/components/nsLDAPPrefsService.js
 lib/${MOZILLA}/components/nsMailDefaultHandler.js
+lib/${MOZILLA}/components/nsPhishingProtectionApplication.js
 lib/${MOZILLA}/components/nsProgressDialog.js
 lib/${MOZILLA}/components/nsProxyAutoConfig.js
+lib/${MOZILLA}/components/nsSetDefaultMail.js
+lib/${MOZILLA}/components/nsURLFormatter.js
 lib/${MOZILLA}/components/nsUpdateService.js
+lib/${MOZILLA}/components/nsUrlClassifierLib.js
+lib/${MOZILLA}/components/nsUrlClassifierListManager.js
+lib/${MOZILLA}/components/nsUrlClassifierTable.js
 lib/${MOZILLA}/components/offlineStartup.js
 lib/${MOZILLA}/components/pipboot.xpt
 lib/${MOZILLA}/components/pipnss.xpt
@@ -240,6 +244,7 @@ lib/${MOZILLA}/components/progressDlg.xpt
 lib/${MOZILLA}/components/proxyObjInst.xpt
 lib/${MOZILLA}/components/rdf.xpt
 lib/${MOZILLA}/components/saxparser.xpt
+lib/${MOZILLA}/components/shellservice.xpt
 lib/${MOZILLA}/components/shistory.xpt
 lib/${MOZILLA}/components/signonviewer.xpt
 lib/${MOZILLA}/components/smime-service.js
@@ -253,6 +258,8 @@ lib/${MOZILLA}/components/uconv.xpt
 lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
 lib/${MOZILLA}/components/uriloader.xpt
+lib/${MOZILLA}/components/url-classifier.xpt
+lib/${MOZILLA}/components/urlformatter.xpt
 lib/${MOZILLA}/components/wallet.xpt
 lib/${MOZILLA}/components/walleteditor.xpt
 lib/${MOZILLA}/components/walletpreview.xpt
@@ -276,7 +283,7 @@ lib/${MOZILLA}/components/xulapp.xpt
 lib/${MOZILLA}/components/xuldoc.xpt
 lib/${MOZILLA}/components/xultmpl.xpt
 lib/${MOZILLA}/defaults/isp/US/movemail.rdf
-lib/${MOZILLA}/defaults/isp/US/rss.rdf
+lib/${MOZILLA}/defaults/isp/en-US/rss.rdf
 lib/${MOZILLA}/defaults/isp/movemail.rdf
 lib/${MOZILLA}/defaults/isp/rss.rdf
 lib/${MOZILLA}/defaults/messenger/SpamAssassin.sfd
@@ -671,6 +678,7 @@ include/${MOZILLA}/content/nsIScriptLoader.h
 include/${MOZILLA}/content/nsIScriptLoaderObserver.h
 include/${MOZILLA}/content/nsISelectElement.h
 include/${MOZILLA}/content/nsISelection.h
+include/${MOZILLA}/content/nsISelection2.h
 include/${MOZILLA}/content/nsISelectionController.h
 include/${MOZILLA}/content/nsISelectionDisplay.h
 include/${MOZILLA}/content/nsISelectionListener.h
@@ -1059,8 +1067,11 @@ include/${MOZILLA}/exthandler/nsOSHelperAppService.h
 include/${MOZILLA}/fastfind/nsITypeAheadFind.h
 include/${MOZILLA}/feeds/nsIFeed.h
 include/${MOZILLA}/feeds/nsIFeedContainer.h
+include/${MOZILLA}/feeds/nsIFeedElementBase.h
 include/${MOZILLA}/feeds/nsIFeedEntry.h
+include/${MOZILLA}/feeds/nsIFeedGenerator.h
 include/${MOZILLA}/feeds/nsIFeedListener.h
+include/${MOZILLA}/feeds/nsIFeedPerson.h
 include/${MOZILLA}/feeds/nsIFeedProcessor.h
 include/${MOZILLA}/feeds/nsIFeedResult.h
 include/${MOZILLA}/feeds/nsIFeedTextConstruct.h
@@ -1518,6 +1529,7 @@ include/${MOZILLA}/msgbase/nsIMsgAccountManager.h
 include/${MOZILLA}/msgbase/nsIMsgBiffManager.h
 include/${MOZILLA}/msgbase/nsIMsgCopyService.h
 include/${MOZILLA}/msgbase/nsIMsgCopyServiceListener.h
+include/${MOZILLA}/msgbase/nsIMsgCustomColumnHandler.h
 include/${MOZILLA}/msgbase/nsIMsgDBView.h
 include/${MOZILLA}/msgbase/nsIMsgFilter.h
 include/${MOZILLA}/msgbase/nsIMsgFilterHitNotify.h
@@ -1631,7 +1643,6 @@ include/${MOZILLA}/msgcompose/nsIMsgComposeParams.h
 include/${MOZILLA}/msgcompose/nsIMsgComposeProgressParams.h
 include/${MOZILLA}/msgcompose/nsIMsgComposeSecure.h
 include/${MOZILLA}/msgcompose/nsIMsgComposeService.h
-include/${MOZILLA}/msgcompose/nsIMsgDraft.h
 include/${MOZILLA}/msgcompose/nsIMsgQuote.h
 include/${MOZILLA}/msgcompose/nsIMsgRecipientArray.h
 include/${MOZILLA}/msgcompose/nsIMsgSend.h
@@ -1655,7 +1666,6 @@ include/${MOZILLA}/msgcompose/nsMsgComposeProgressParams.h
 include/${MOZILLA}/msgcompose/nsMsgComposeService.h
 include/${MOZILLA}/msgcompose/nsMsgComposeStringBundle.h
 include/${MOZILLA}/msgcompose/nsMsgCopy.h
-include/${MOZILLA}/msgcompose/nsMsgCreate.h
 include/${MOZILLA}/msgcompose/nsMsgDeliveryListener.h
 include/${MOZILLA}/msgcompose/nsMsgEncoders.h
 include/${MOZILLA}/msgcompose/nsMsgPrompts.h
@@ -2067,6 +2077,7 @@ include/${MOZILLA}/pipnss/nsIClientAuthDialogs.h
 include/${MOZILLA}/pipnss/nsIDOMCryptoDialogs.h
 include/${MOZILLA}/pipnss/nsIFormSigningDialog.h
 include/${MOZILLA}/pipnss/nsIGenKeypairInfoDlg.h
+include/${MOZILLA}/pipnss/nsIKeyModule.h
 include/${MOZILLA}/pipnss/nsIKeygenThread.h
 include/${MOZILLA}/pipnss/nsINSSCertCache.h
 include/${MOZILLA}/pipnss/nsIOCSPResponder.h
@@ -2077,6 +2088,7 @@ include/${MOZILLA}/pipnss/nsIPKCS11ModuleDB.h
 include/${MOZILLA}/pipnss/nsIPKCS11Slot.h
 include/${MOZILLA}/pipnss/nsISMimeCert.h
 include/${MOZILLA}/pipnss/nsISSLStatus.h
+include/${MOZILLA}/pipnss/nsIStreamCipher.h
 include/${MOZILLA}/pipnss/nsITokenDialogs.h
 include/${MOZILLA}/pipnss/nsITokenPasswordDialogs.h
 include/${MOZILLA}/pipnss/nsIUserCertPicker.h
@@ -2172,6 +2184,7 @@ include/${MOZILLA}/rdf/rdfIDataSource.h
 include/${MOZILLA}/rdf/rdfISerializer.h
 include/${MOZILLA}/rdf/rdfITripleVisitor.h
 include/${MOZILLA}/rdfutil/nsRDFResource.h
+include/${MOZILLA}/shellservice/nsIShellService.h
 include/${MOZILLA}/shistory/nsIHistoryEntry.h
 include/${MOZILLA}/shistory/nsISHContainer.h
 include/${MOZILLA}/shistory/nsISHEntry.h
@@ -2290,6 +2303,11 @@ include/${MOZILLA}/uriloader/nsIWebProgress.h
 include/${MOZILLA}/uriloader/nsIWebProgressListener.h
 include/${MOZILLA}/uriloader/nsIWebProgressListener2.h
 include/${MOZILLA}/uriloader/nsURILoader.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierDBService.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierStreamUpdater.h
+include/${MOZILLA}/url-classifier/nsIUrlClassifierTable.h
+include/${MOZILLA}/url-classifier/nsIUrlListManager.h
+include/${MOZILLA}/urlformatter/nsIURLFormatter.h
 include/${MOZILLA}/util/nsTimer.h
 include/${MOZILLA}/util/stopwatch.h
 include/${MOZILLA}/view/nsICompositeListener.h
@@ -2798,6 +2816,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm lib/${MOZILLA}/defaults/pref
 @dirrm lib/${MOZILLA}/defaults/messenger/US
 @dirrm lib/${MOZILLA}/defaults/messenger
+@dirrm lib/${MOZILLA}/defaults/isp/en-US
 @dirrm lib/${MOZILLA}/defaults/isp/US
 @dirrm lib/${MOZILLA}/defaults/isp
 @dirrm lib/${MOZILLA}/defaults
@@ -2825,6 +2844,8 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/wallet
 @dirrm include/${MOZILLA}/view
 @dirrm include/${MOZILLA}/util
+@dirrm include/${MOZILLA}/urlformatter
+@dirrm include/${MOZILLA}/url-classifier
 @dirrm include/${MOZILLA}/uriloader
 @dirrm include/${MOZILLA}/update
 @dirrm include/${MOZILLA}/unicharutil
@@ -2844,6 +2865,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @dirrm include/${MOZILLA}/sqlite3
 @dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/shistory
+@dirrm include/${MOZILLA}/shellservice
 @dirrm include/${MOZILLA}/rdfutil
 @dirrm include/${MOZILLA}/rdf
 @dirrm include/${MOZILLA}/progressDlg

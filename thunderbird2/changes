@@ -1,16 +1,30 @@
-Changes in this Development Milestone
+Update to Thunderbird 2 Beta 1.  What's New in this Development Milestone:
 
-There is a lot in Thunderbird 2 Alpha 1 that we invite you to play around with
-and give us feedback on:
-
-* Message Tags
-* Folder Views including favorite folders
-* Improved New Mail Notification Alerts
-* New Windows installer based on Nullsoft Scriptable Install System
-* Find As You Type in the message pane
-* New combined and improved Add-ons manager for extensions and themes
-* Updates to the extension system to provide enhanced security and to allow for
-  easier localization of extensions
+* Message Tags: Create your own tags for organizing email. Messages can be
+  assigned any number of tags. Tags can be combined with saved searches and
+  mail views to make it easier to organize email.
+* Visual Theme:Thunderbird 2's theme and user interface have been updated to
+  improve usability.
+* Session History Navigation: Back and Forward buttons allow navigation through
+  message history.
+* Folder Views: Customize the folder pane to show favorite, unread or recent
+  folders.
+* Improved Support For Extensions: Extensions can now add custom columns to the
+  message list pane in addition to storing custom message data in the mail
+  database.
+* Improved Offline Management: Thunderbird (Linux and Windows) automatically
+  adjusts the offline state based on current network connectivity.
+* Improved New Mail Notification Alerts:New mail alerts include information
+  such as the subject, sender and message text.
+* Folder Summary Popups: Mouse over a folder with new messages to see a summary
+  of the new messages in that folder.
+* Saved Search Folder Performance: Search results for saved search folders are
+  now cached, improving folder loading performance.
+* Find As You Type
+* Improved Filing Tools: Recent folder menu items for moving and copying
+  folders to recently used folders. Move / Copy again functionality.
+* Updates to the extension system: The extension system has been updated to
+  provide enhanced security and to allow for easier localization of extensions.
 
 Rumbling Edge has a more detailed list of notable bug fixes:
-http://weblogs.mozillazine.org/rumblingedge/archives/2006/05/2-0alpha1.html
+http://weblogs.mozillazine.org/rumblingedge/archives/2006/09/2-0beta1.html
