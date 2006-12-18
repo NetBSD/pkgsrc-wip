@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/12/17 15:42:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/18 16:07:17 cheusov Exp $
+
+NEED_LIBUXRE=   1
 
 .include "../../wip/heirloom-dirs/Makefile.prog2.common"
 
