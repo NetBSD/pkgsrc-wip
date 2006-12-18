@@ -1,8 +1,22 @@
-$NetBSD: patch-af,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+$NetBSD: patch-af,v 1.2 2006/12/18 16:02:57 cheusov Exp $
 
---- libcommon/getdir.c.orig	2006-01-22 21:06:14.000000000 +0200
+--- libcommon/getdir.c.orig	Sun Jan 22 21:06:14 2006
 +++ libcommon/getdir.c
-@@ -143,8 +143,11 @@ getdir(struct getdb *db, int *err)
+@@ -59,7 +59,14 @@ extern int	getdents(int, struct dirent *
+ #ifdef	__hpux
+ #define		_KERNEL
+ #endif	/* __hpux */
++
++#ifdef __INTERIX
++#include	<dirent.h>
+en/#else
+ #include	<sys/dirent.h>
++#endif
++
+ #ifdef		__hpux
+ #ifndef	_INO64_T
+ typedef	unsigned long long	uint64_t;
+@@ -143,8 +150,11 @@ getdir(struct getdb *db, int *err)
  		&& !defined (__DragonFly__) && !defined (__APPLE__)
  				db->g_dirp->d_ino == 0
  #else	/* __FreeBSD__, __NetBSD__, __OpenBSD__, __DragonFly__, __APPLE__ */
@@ -16,7 +30,7 @@ $NetBSD: patch-af,v 1.1 2006/12/17 22:49:55 cheusov Exp $
  #endif	/* __FreeBSD__, __NetBSD__, __OpenBSD__, __DragonFly__, __APPLE__ */
  		      )
  		{
-@@ -169,8 +172,14 @@ getdir(struct getdb *db, int *err)
+@@ -169,8 +179,14 @@ getdir(struct getdb *db, int *err)
  		goto next;
  	db->g_dic.d_ino = db->g_dirp->d_ino;
  #else	/* __FreeBSD__, __NetBSD__, __OpenBSD__, __DragonFly__, __APPLE__ */
