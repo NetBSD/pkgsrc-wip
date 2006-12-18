@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2006/12/18 06:43:33 dhowland Exp $
 #
 
 DISTNAME=		cvsutils-0.2.3
@@ -11,5 +11,8 @@ COMMENT=		CVS utilities to facilitate working
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+REPLACE_PERL=		cvsu.pl cvsdo.pl cvschroot.pl
+REPLACE_SH=		cvsco.sh cvsdiscard.sh cvspurge.sh cvstrim.sh
 
 .include "../../mk/bsd.pkg.mk"
