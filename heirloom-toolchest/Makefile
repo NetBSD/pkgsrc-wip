@@ -1,4 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2006/12/18 18:59:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/18 19:13:20 cheusov Exp $
+
+NEED_LIBUXRE=		1
+NEED_LIBCRYPT=		1
+NEED_ZLIB=		1
+NEED_BZLIB=		1
+NEED_LIBCURSES=		1
 
 .include "../../wip/heirloom-common/Makefile.prog.common"
 

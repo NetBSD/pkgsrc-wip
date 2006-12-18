@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.prog.common,v 1.1 2006/12/18 18:59:53 cheusov Exp $
+# $NetBSD: Makefile.prog.common,v 1.2 2006/12/18 19:13:20 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT?=	Collection of standard Unix utilities
 USE_TOOLS+=	yacc lex
 
 MAKE_FILE=		makefile
-HLROOT?=		heirloom-test
+HLROOT?=		heirloom
 PLIST_SUBST+=		HLROOT=${HLROOT}
 
 .include "../../mk/bsd.prefs.mk"
