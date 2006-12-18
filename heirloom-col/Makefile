@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/12/17 22:47:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/18 18:59:52 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.prog2.common"
+.include "../../wip/heirloom-common/Makefile.prog2.common"
 
 PKGNAME=	heirloom-col-${HEIRLOOM_VER}
 CATEGORIES=	textproc

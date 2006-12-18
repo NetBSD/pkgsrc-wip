@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/12/17 15:05:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/18 18:59:59 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.prog.common"
+.include "../../wip/heirloom-common/Makefile.prog.common"
 
 PKGNAME=	heirloom-toolchest-${HEIRLOOM_VER}
 

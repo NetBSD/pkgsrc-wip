@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2006/12/17 22:49:55 cheusov Exp $
+$NetBSD: patch-ah,v 1.1 2006/12/18 18:59:53 cheusov Exp $
 
 --- mail/mkdead.c.orig	2005-06-22 06:12:19.000000000 +0300
 +++ mail/mkdead.c

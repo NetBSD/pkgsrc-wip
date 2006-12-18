@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/12/17 15:05:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/18 18:59:55 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.prog.common"
+.include "../../wip/heirloom-common/Makefile.prog.common"
 
 PKGNAME=	heirloom-doc-${HEIRLOOM_VER}
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ CATEGORIES=	sysutils
 MAINTAINER=	cheusov@tut.by
 COMMENT=	Collection of standard Unix utilities
 
-DEPENDS+=	heirloom-dirs-${HEIRLOOM_VER}:../../wip/heirloom-dirs
+DEPENDS+=	heirloom-common-${HEIRLOOM_VER}:../../wip/heirloom-common
 
 DOC_FILES=	COPYING COPYING.LGPL \
 		LICENSE LUCENT \

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2006/12/17 15:41:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/18 19:00:02 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.prog2.common"
+.include "../../wip/heirloom-common/Makefile.prog2.common"
 
 PKGNAME=	heirloom-xargs-${HEIRLOOM_VER}
 CATEGORIES=	sysutils

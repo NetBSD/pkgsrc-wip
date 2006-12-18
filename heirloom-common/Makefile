@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2006/12/17 15:05:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.1 2006/12/18 18:59:53 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.prog.common"
+.include "../../wip/heirloom-common/Makefile.prog.common"
 
-PKGNAME=heirloom-dirs-${HEIRLOOM_VER}
+PKGNAME=heirloom-common-${HEIRLOOM_VER}
 
 NO_BUILD=	yes
 
