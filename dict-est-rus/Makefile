@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/28 17:25:20 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/19 09:09:18 cheusov Exp $
 
 DISTNAME=	er-dict-gtk-0.23
 PKGNAME=	dict-est-rus-0.23
@@ -12,6 +12,7 @@ COMMENT=	DICTD data for Estonian-Russian dictionary
 
 DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
 BUILD_DEPENDS+=	dict-server>=1.10.2:../../wip/dict-server
+BUILD_DEPENDS+=	metamail>=1.10.2:../../mail/metamail
 
 DICTD_DB_DIR=		${PREFIX}/share/dictd
 INSTALLATION_DIRS=	${DICTD_DB_DIR}
