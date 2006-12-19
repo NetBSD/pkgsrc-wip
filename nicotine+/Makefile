@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/19 20:14:00 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/19 23:04:32 netcap Exp $
 #
 
 DISTNAME=	nicotine+-1.2.6
@@ -10,6 +10,7 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.nicotine-plus.org/
 COMMENT=        Client for the SoulSeek, a peer-to-peer network for music
 
+CONFLICTS=	nicotine-[0-9]*
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	# none
 
