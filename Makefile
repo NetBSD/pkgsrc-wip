@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2450 2006/12/15 22:12:19 jsonn Exp $
+# $Id: Makefile,v 1.2451 2006/12/19 07:42:23 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1270,6 +1270,7 @@ SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slate
 SUBDIR+=	sleuthkit
+SUBDIR+=	slime
 SUBDIR+=	slocate
 SUBDIR+=	slock
 SUBDIR+=	slony1
