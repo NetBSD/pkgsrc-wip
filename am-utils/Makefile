@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/29 18:54:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/19 09:11:33 cheusov Exp $
 #
 
 DISTNAME=	am-utils-6.1.5
@@ -23,7 +23,6 @@ GNU_CONFIGURE=		yes
 
 INFO_FILES=		yes
 
-# the following can optionally be enabled
 CONFIGURE_ARGS+=	--without-ldap
 CONFIGURE_ARGS+=	--without-hesiod
 CONFIGURE_ARGS+=	--without-ndbm
