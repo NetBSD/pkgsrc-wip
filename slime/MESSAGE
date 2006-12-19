@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/12/19 07:35:40 netcap Exp $
+
+Note:
+To use SLIME you need to have a LISP system like lang/clisp or lang/sbcl
+and add the following to your Emacs configuration file:
+
+;; load slime
+(setq inferior-lisp-program "the path to your Lisp system")
+(add-to-list 'load-path "/usr/pkg/share/emacs/site-lisp")
+(require 'slime)
+(slime-setup)
+
+===========================================================================

@@ -1,0 +1,3 @@
+SLIME is a new Emacs mode for Common Lisp development.  Inspired by
+existing systems such as Emacs Lisp and ILISP, we are working to create
+a fresh new environment for hacking Common Lisp in.

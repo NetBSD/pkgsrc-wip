@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/19 07:35:40 netcap Exp $
+${EMACS_INFOPREFIX}/slime.info
+${EMACS_LISPPREFIX}/slime/ChangeLog
+${EMACS_LISPPREFIX}/slime/bridge.el
+${EMACS_LISPPREFIX}/slime/bridge.elc
+${EMACS_LISPPREFIX}/slime/hyperspec.el
+${EMACS_LISPPREFIX}/slime/hyperspec.elc
+${EMACS_LISPPREFIX}/slime/metering.lisp
+${EMACS_LISPPREFIX}/slime/nregex.lisp
+${EMACS_LISPPREFIX}/slime/present.lisp
+${EMACS_LISPPREFIX}/slime/sbcl-pprint-patch.lisp
+${EMACS_LISPPREFIX}/slime/slime.el
+${EMACS_LISPPREFIX}/slime/slime.elc
+${EMACS_LISPPREFIX}/slime/swank-abcl.lisp
+${EMACS_LISPPREFIX}/slime/swank-allegro.lisp
+${EMACS_LISPPREFIX}/slime/swank-backend.lisp
+${EMACS_LISPPREFIX}/slime/swank-clisp.lisp
+${EMACS_LISPPREFIX}/slime/swank-cmucl.lisp
+${EMACS_LISPPREFIX}/slime/swank-corman.lisp
+${EMACS_LISPPREFIX}/slime/swank-ecl.lisp
+${EMACS_LISPPREFIX}/slime/swank-gray.lisp
+${EMACS_LISPPREFIX}/slime/swank-lispworks.lisp
+${EMACS_LISPPREFIX}/slime/swank-loader.lisp
+${EMACS_LISPPREFIX}/slime/swank-openmcl.lisp
+${EMACS_LISPPREFIX}/slime/swank-sbcl.lisp
+${EMACS_LISPPREFIX}/slime/swank-scl.lisp
+${EMACS_LISPPREFIX}/slime/swank-source-file-cache.lisp
+${EMACS_LISPPREFIX}/slime/swank-source-path-parser.lisp
+${EMACS_LISPPREFIX}/slime/swank.lisp
+${EMACS_LISPPREFIX}/slime/tree-widget.el
+${EMACS_LISPPREFIX}/slime/tree-widget.elc
+${EMACS_LISPPREFIX}/slime/xref.lisp
+@dirrm ${EMACS_LISPPREFIX}/slime
