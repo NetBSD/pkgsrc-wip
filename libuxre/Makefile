@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/12/18 16:06:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/19 21:42:34 cheusov Exp $
 
-.include "../../wip/heirloom-dirs/Makefile.common"
+.include "../../wip/heirloom-common/Makefile.common"
 
 PKGNAME=	libuxre-${HEIRLOOM_VER}
 CATEGORIES=	devel
