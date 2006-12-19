@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2451 2006/12/19 07:42:23 netcap Exp $
+# $Id: Makefile,v 1.2452 2006/12/19 20:21:02 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -733,6 +733,7 @@ SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	nfdump
 SUBDIR+=	nginx
+SUBDIR+=	nicotine+
 SUBDIR+=	ninvaders
 SUBDIR+=	nnrpd
 SUBDIR+=	noip
