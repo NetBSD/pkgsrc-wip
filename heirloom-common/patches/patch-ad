@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2006/12/18 18:59:53 cheusov Exp $
+$NetBSD: patch-ad,v 1.2 2006/12/19 22:09:40 cheusov Exp $
 
 --- build/mk.config.orig	2006-01-22 23:48:04.000000000 +0200
 +++ build/mk.config
@@ -135,7 +135,7 @@ $NetBSD: patch-ad,v 1.1 2006/12/18 18:59:53 cheusov Exp $
  
  #
  # CFLAGS, CFLAGS2, CFLAGSS, and CFLAGSU make it possible to give special
-@@ -196,10 +198,10 @@ CPPFLAGS = -D_GNU_SOURCE
+@@ -196,15 +198,16 @@ CPPFLAGS = -D_GNU_SOURCE
  # compiler mode (which is the default) until this issue is properly
  # handled by the system vendor.
  #
@@ -150,7 +150,14 @@ $NetBSD: patch-ad,v 1.1 2006/12/18 18:59:53 cheusov Exp $
  
  #
  # Binaries are stripped with this command after installation.
-@@ -218,7 +220,7 @@ STRIP = strip -s -R .comment -R .note
+ #
+-STRIP = strip -s -R .comment -R .note
++#STRIP = strip -s -R .comment -R .note
++STRIP = true
+ 
+ #
+ # The define for large file support in 32-bit environments.
+@@ -218,7 +221,7 @@ STRIP = strip -s -R .comment -R .note
  #
  # On FreeBSD, NetBSD, and OpenBSD, no such define is necessary.
  #
@@ -159,7 +166,7 @@ $NetBSD: patch-ad,v 1.1 2006/12/18 18:59:53 cheusov Exp $
  
  #
  # Use this if you prefer symbolic links between installed files.
-@@ -257,7 +259,7 @@ LEX = lex
+@@ -257,7 +260,7 @@ LEX = lex
  # Crypt library. -lcrypt is okay for everything except HP-UX, AIX, NetBSD,
  # and old versions of diet libc.
  #
@@ -168,7 +175,7 @@ $NetBSD: patch-ad,v 1.1 2006/12/18 18:59:53 cheusov Exp $
  
  #
  # Run ranlib if it is in the current path. This should take care
-@@ -277,12 +279,12 @@ RANLIB=(hash ranlib) >/dev/null 2>&1 || 
+@@ -277,12 +280,12 @@ RANLIB=(hash ranlib) >/dev/null 2>&1 || 
  ########################################################################
  ########################################################################
  
