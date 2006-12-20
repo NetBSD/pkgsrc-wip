@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/15 02:22:24 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/12/20 01:06:57 schnoebe Exp $
 bin/PyICQt
 ${TRANSPORTDIR}/src/avatar.py
 ${TRANSPORTDIR}/src/adhoc.py
@@ -94,7 +94,7 @@ ${TRANSPORTDIR}/tools/Makefile
 ${TRANSPORTDIR}/tools/infodump.py
 ${TRANSPORTDIR}/tools/managessi.py
 ${TRANSPORTDIR}/tools/migrate.py
-share/examples/jabberd/pyicqt.xml
+${JABBER_EXDIR}/pyicqt.xml
 share/examples/rc.d/pyicqt
 @dirrm ${TRANSPORTDIR}/tools
 @dirrm ${TRANSPORTDIR}/src/xdb

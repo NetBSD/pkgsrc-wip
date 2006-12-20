@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/20 01:06:57 schnoebe Exp $
 
 DISTNAME=		yahoo-transport-0.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -32,7 +32,7 @@ PYTHON_PATCH_SCRIPTS+=	yahoo.py
 
 RCD_SCRIPTS=	yahoo-transport
 
-TRANSPORTDIR=		${JABBERD_TRANSDIR}/yahoo
+TRANSPORTDIR=		${JABBER_TRANSDIR}/yahoo
 
 FILES_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR:Q}
 FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
@@ -65,13 +65,13 @@ SUBST_FILES.paths=	transport.ini
 SUBST_FILES.paths+=	yahoo.py
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_SPOOLDIR@,${JABBERD_SPOOLDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_TRANSDIR@,${JABBERD_TRANSDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_GROUP@,${JABBERD_GROUP},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_USER@,${JABBERD_USER},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${JABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_SPOOLDIR@,${JABBER_SPOOLDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_TRANSDIR@,${JABBER_TRANSDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_GROUP@,${JABBER_GROUP},g'
+SUBST_SED.paths+=	-e 's,@JABBER_USER@,${JABBER_USER},g'
+SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@JABBERD_PIDDIR@,${JABBERD_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
