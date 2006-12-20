@@ -1,18 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/30 05:48:06 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/20 02:44:51 schnoebe Exp $
 sbin/ejabberd
 bin/ejabberdctl
 share/examples/rc.d/ejabberd
-share/examples/ejabberd/ejabberd.cfg
-share/examples/ejabberd/ejabberd.defaults
-share/examples/ejabberd/ejabberd.inetrc
+${JABBER_EXDIR}/ejabberd.cfg
+${JABBER_EXDIR}/ejabberd.defaults
+${JABBER_EXDIR}/ejabberd.inetrc
+lib/erlang/lib/${DISTNAME}/ebin/ELDAPv3.beam
+lib/erlang/lib/${DISTNAME}/ebin/XmppAddr.beam
+lib/erlang/lib/${DISTNAME}/ebin/acl.beam
+lib/erlang/lib/${DISTNAME}/ebin/adhoc.beam
+lib/erlang/lib/${DISTNAME}/ebin/cyrsals_anonymous.beam
+lib/erlang/lib/${DISTNAME}/ebin/cyrsasl.beam
+lib/erlang/lib/${DISTNAME}/ebin/cyrsasl_digest.beam
+lib/erlang/lib/${DISTNAME}/ebin/cyrsasl_plain.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd.app
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd.beam
+lib/erlang/lib/${DISTNAME}/ebin/ejabberd_admin.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_app.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth.beam
+lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_anonymous.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_external.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_internal.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_ldap.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_odbc.beam
+lib/erlang/lib/${DISTNAME}/ebin/ejabberd_auth_odbc_sup.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_c2s.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_config.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_ctl.beam
@@ -31,14 +42,12 @@ lib/erlang/lib/${DISTNAME}/ebin/ejabberd_service.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_sm.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_sup.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_tmp_sup.beam
+lib/erlang/lib/${DISTNAME}/ebin/ejabberd_update.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_web.beam
 lib/erlang/lib/${DISTNAME}/ebin/ejabberd_web_admin.beam
-lib/erlang/lib/${DISTNAME}/ebin/ELDAPv3.beam
-lib/erlang/lib/${DISTNAME}/ebin/acl.beam
-lib/erlang/lib/${DISTNAME}/ebin/cyrsasl.beam
-lib/erlang/lib/${DISTNAME}/ebin/cyrsasl_digest.beam
-lib/erlang/lib/${DISTNAME}/ebin/cyrsasl_plain.beam
+lib/erlang/lib/${DISTNAME}/ebin/ejabberd_zlib.beam
 lib/erlang/lib/${DISTNAME}/ebin/eldap.beam
+lib/erlang/lib/${DISTNAME}/ebin/eldap_filter.beam
 lib/erlang/lib/${DISTNAME}/ebin/extauth.beam
 lib/erlang/lib/${DISTNAME}/ebin/gen_iq_handler.beam
 lib/erlang/lib/${DISTNAME}/ebin/gen_mod.beam
@@ -46,6 +55,7 @@ lib/erlang/lib/${DISTNAME}/ebin/iconv.beam
 lib/erlang/lib/${DISTNAME}/ebin/idna.beam
 lib/erlang/lib/${DISTNAME}/ebin/jd2ejd.beam
 lib/erlang/lib/${DISTNAME}/ebin/jlib.beam
+lib/erlang/lib/${DISTNAME}/ebin/mod_adhoc.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_announce.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_configure.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_configure2.beam
@@ -56,6 +66,7 @@ lib/erlang/lib/${DISTNAME}/ebin/mod_irc_connection.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_last.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_last_odbc.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_muc.beam
+lib/erlang/lib/${DISTNAME}/ebin/mod_muc_log.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_muc_room.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_offline.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_offline_odbc.beam
@@ -71,7 +82,9 @@ lib/erlang/lib/${DISTNAME}/ebin/mod_stats.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_time.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_vcard.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_vcard_ldap.beam
+lib/erlang/lib/${DISTNAME}/ebin/mod_vcard_odbc.beam
 lib/erlang/lib/${DISTNAME}/ebin/mod_version.beam
+lib/erlang/lib/${DISTNAME}/ebin/odbc_queries.beam
 lib/erlang/lib/${DISTNAME}/ebin/randoms.beam
 lib/erlang/lib/${DISTNAME}/ebin/sha.beam
 lib/erlang/lib/${DISTNAME}/ebin/shaper.beam
@@ -80,10 +93,12 @@ lib/erlang/lib/${DISTNAME}/ebin/tls.beam
 lib/erlang/lib/${DISTNAME}/ebin/translate.beam
 lib/erlang/lib/${DISTNAME}/ebin/xml.beam
 lib/erlang/lib/${DISTNAME}/ebin/xml_stream.beam
+lib/erlang/lib/${DISTNAME}/priv/lib/ejabberd_zlib_drv.so
 lib/erlang/lib/${DISTNAME}/priv/lib/expat_erl.so
 lib/erlang/lib/${DISTNAME}/priv/lib/iconv_erl.so
 lib/erlang/lib/${DISTNAME}/priv/lib/stringprep_drv.so
 lib/erlang/lib/${DISTNAME}/priv/lib/tls_drv.so
+lib/erlang/lib/${DISTNAME}/priv/msgs/cs.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/de.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/es.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/fr.msg
@@ -92,22 +107,31 @@ lib/erlang/lib/${DISTNAME}/priv/msgs/pl.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/pt-br.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/pt.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/ru.msg
+lib/erlang/lib/${DISTNAME}/priv/msgs/sk.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/sv.msg
 lib/erlang/lib/${DISTNAME}/priv/msgs/uk.msg
 share/doc/${DISTNAME}/dev.html
 share/doc/${DISTNAME}/dev.tex
 share/doc/${DISTNAME}/disco.png
 share/doc/${DISTNAME}/discorus.png
+share/doc/${DISTNAME}/features.html
+share/doc/${DISTNAME}/features.tex
 share/doc/${DISTNAME}/flow.dot
 share/doc/${DISTNAME}/guide.html
 share/doc/${DISTNAME}/guide.tex
 share/doc/${DISTNAME}/logo.png
-share/doc/${DISTNAME}/release_notes_1.1.2.txt
-share/doc/${DISTNAME}/release_notes_1.1.1.txt
+share/doc/${DISTNAME}/release_note_1.1.2.txt
 share/doc/${DISTNAME}/release_notes_0.9.1.txt
+share/doc/${DISTNAME}/release_notes_0.9.8.txt
 share/doc/${DISTNAME}/release_notes_0.9.txt
+share/doc/${DISTNAME}/release_notes_1.0.0.txt
+share/doc/${DISTNAME}/release_notes_1.1.0.txt
+share/doc/${DISTNAME}/release_notes_1.1.1.txt
+share/doc/${DISTNAME}/release_notes_1.1.2.txt
+share/doc/${DISTNAME}/version.tex
 share/doc/${DISTNAME}/webadmmain.png
 share/doc/${DISTNAME}/webadmmainru.png
+share/doc/${DISTNAME}/yozhikheader.png
 @dirrm share/doc/${DISTNAME}
 @dirrm etc/jabberd
 @dirrm lib/erlang/lib/${DISTNAME}/priv/msgs
