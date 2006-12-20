@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/09 10:23:14 dauphing Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/20 16:27:29 dauphing Exp $
 
-#will became 5.0.0 when ready
-DISTNAME=	ubit-5.0.4
+#DISTNAME=	ubit-5.0.4
+DISTNAME=	ubit-5.4.1
 PKGREVISION=	1
 CATEGORIES=	x11
 
