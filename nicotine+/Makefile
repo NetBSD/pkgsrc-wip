@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/20 07:28:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/20 23:52:09 netcap Exp $
 #
 
 DISTNAME=	nicotine+-1.2.6
@@ -11,11 +11,11 @@ HOMEPAGE=	http://www.nicotine-plus.org/
 COMMENT=        Client for the SoulSeek, a peer-to-peer network for music
 
 CONFLICTS=	nicotine-[0-9]*
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${DISTNAME}/
 USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=       24
+PYTHON_VERSIONS_ACCEPTED=       24 23 22 21 20
 PY_PATCHPLIST=  yes
 PYDISTUTILSPKG= yes
 
