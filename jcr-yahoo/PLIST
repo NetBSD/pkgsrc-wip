@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:59 jeremy-c-reed Exp $
-bin/yahoo-transport
-share/examples/jabberd/yahoo-jcr.xml
-share/examples/rc.d/yahoo
