@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:55 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2006/12/20 23:43:49 jeremy-c-reed Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 CATEGORIES=	net www
@@ -23,7 +23,7 @@ PKG_SYSCONFSUBDIR=	sgml
 CONFIGURE_ARGS+=	--with-etcsgml=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share
 
-PYTHON_VERSIONS_ACCEPTED=	22 23 21 20
+PYTHON_VERSIONS_ACCEPTED=	23 22 21 20
 _STRIPFLAG_INSTALL=
 
 SGML_CATALOGS=	${PKG_SYSCONFDIR}/catalog
