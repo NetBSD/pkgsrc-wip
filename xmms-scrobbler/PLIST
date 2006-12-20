@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/03 18:45:34 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/20 21:48:05 netcap Exp $
 lib/xmms/General/libxmms_scrobbler.la
+lib/xmms/General/libxmms_scrobbler.so
+lib/xmms/General/libxmms_scrobbler.a
