@@ -1,7 +1,0 @@
-Works, but building requires a manual step.
-
-I havn't tested the startup (rc.d) scripts inside files/ dir.
-
-Some documentation does not install properly (should be simple to fix).
-
-Need to include license...?
