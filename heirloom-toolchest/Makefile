@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/12/18 19:13:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2006/12/21 08:35:12 cheusov Exp $
+
+NOT_FOR_PLATFORM+=	Interix-*-*
 
 NEED_LIBUXRE=		1
 NEED_LIBCRYPT=		1
