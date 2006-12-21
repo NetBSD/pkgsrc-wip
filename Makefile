@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2453 2006/12/20 02:48:06 schnoebe Exp $
+# $Id: Makefile,v 1.2454 2006/12/21 00:04:27 larnor Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -501,6 +501,7 @@ SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
 SUBDIR+=	korelib
+SUBDIR+=	kobodl
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	ksambaplugin
