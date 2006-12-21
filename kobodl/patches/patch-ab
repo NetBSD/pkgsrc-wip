@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/12/21 00:02:39 larnor Exp $
+
+--- gamestate.h.orig	2002-04-28 03:48:59.000000000 +0200
++++ gamestate.h
+@@ -24,6 +24,8 @@
+ 
+ #include "window.h"
+ 
++class gamestatemanager_t;
++
+ class gamestate_t
+ {
+ 	friend class gamestatemanager_t;
+@@ -53,7 +55,6 @@ class gamestate_t
+ 	virtual ~gamestate_t();
+ };
+ 
+-
+ class gamestatemanager_t
+ {
+   private:

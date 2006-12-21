@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/12/21 00:02:39 larnor Exp $
+
+--- scenes.h.orig	2001-09-03 01:09:18.000000000 +0200
++++ scenes.h
+@@ -39,7 +39,7 @@ typedef struct {
+     int x, y, h, v;
+ } _base;
+ 
+-typedef const struct {
++typedef struct {
+     int ratio;
+     int startx;
+     int starty;
+@@ -55,6 +55,6 @@ typedef const struct {
+     _base base[SCENE_BASE_MAX];
+ } _scene;
+ 
+-extern _scene scene[];
++extern _scene scene[51];
+ 
+ #endif // XKOBO_H_SCENES
