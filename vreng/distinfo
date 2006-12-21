@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/08/09 13:46:54 dauphing Exp $
+$NetBSD: distinfo,v 1.5 2006/12/21 10:16:59 dauphing Exp $
 
-SHA1 (vreng-6.7.4.tar.gz) = 9d19bc39316d677a0a5d88c7cd3874d8173b071f
-RMD160 (vreng-6.7.4.tar.gz) = 1759da7a15de06509f4181f0999a708a6fa6ef84
-Size (vreng-6.7.4.tar.gz) = 985629 bytes
+SHA1 (vreng-6.8.3.tar.gz) = b35b425fbeee456383a6b4c43bf3ec1eed1b1189
+RMD160 (vreng-6.8.3.tar.gz) = 658c2d77a3d3d78a60c65357823d38f8762890fa
+Size (vreng-6.8.3.tar.gz) = 1002632 bytes

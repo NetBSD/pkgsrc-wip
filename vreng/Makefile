@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/11/03 15:13:37 dauphing Exp $
+# $NetBSD: Makefile,v 1.6 2006/12/21 10:16:24 dauphing Exp $
 
-DISTNAME=	vreng-6.7.4
+#DISTNAME=	vreng-6.7.4
+DISTNAME=	vreng-6.8.3
 PKGREVISION=	1
 CATEGORIES=	x11
 
@@ -16,12 +17,13 @@ COMMENT=	Virtual Reality Engine interactive distributed 3D application
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl:run
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 #CONFIGURE_ENV+=
 #CONFIGURE_ARGS+= --enable-ocaml
 CONFIGURE_ARGS+=	--with-GL-prefix=${LOCALBASE}
+CONFIGURE_ENV+=		PERLPATH=${LOCALBASE}/bin/perl
 
 
 #mpeg
@@ -30,6 +32,7 @@ CONFIGURE_ARGS+=	--with-GL-prefix=${LOCALBASE}
 #BUILDLINK_LDFLAGS.mysql-client?=        -Wl,-R${LOCALBASE}/lib/mysql
 LDFLAGS.SunOS+=		-R${LOCALBASE}/lib/mysql
 LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../wip/ubit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
