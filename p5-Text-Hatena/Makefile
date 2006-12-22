@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/13 05:38:42 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2006/12/22 09:09:19 jgoamakf Exp $
 
-DISTNAME=		Text-Hatena-0.10
+DISTNAME=		Text-Hatena-0.15
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
@@ -11,10 +11,10 @@ COMMENT=		Perl extension for formatting text with Hatena Style
 
 DEPENDS+=		p5-HTML-Parser>=3.26:../../www/p5-HTML-Parser
 DEPENDS+=		p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
-DEPENDS+=		p5-Net-Amazon>=0.04:../../wip/p5-Net-Amazon
-DEPENDS+=		p5-URI-Title>=1.61:../../wip/p5-URI-Title
+DEPENDS+=		p5-Net-Amazon>=0.34:../../wip/p5-Net-Amazon
 DEPENDS+=		p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit
-DEPENDS+=		p5-Jcode>=0.88:../../converters/p5-Jcode
+DEPENDS+=		p5-libwww>=5.805:../../www/p5-libwww
+DEPENDS+=		p5-Text-VimColor>=0.11:../../wip/p5-Text-VimColor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
