@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/11/28 05:18:47 kcf Exp $
+# $NetBSD: Makefile,v 1.12 2006/12/22 23:59:08 kcf Exp $
 #
 
 .include "Makefile.common"
@@ -9,9 +9,10 @@ USE_TOOLS+=		gmake awk echo mkdir cp sed
 USE_LANGUAGES+=		c
 MAKE_ENV+=		CFLAGSX="-march=i386 -m${BITMODE} -g -O -DFD_SETSIZE=1024"
 MAKE_ENV+=		CLDFLAGS="-lcrypt -mpcu=i386 -m${BITMODE}"
+MAKE_ENV+=		BITMODE="${BITMODE}"
 MAKE_ENV+=		AWK="awk"
 MAKE_ENV+=		AR="ar"
-WRKSRC=			${WRKDIR}/${XSPSYS}
+WRKSRC=			${WRKDIR}/xspsys
 
 # Installation directories
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -27,10 +28,11 @@ PKG_SYSCONFSUBDIR=	xspd
 
 # The build dir.
 MAKE_ENV+=		TARGETDIR="${WRKSRC}"
+MAKE_ENV+=		PWD="${WRKSRC}"
 # Directory for xspd server
-MAKE_ENV+=		PGMROOT="${BNDIR}"
+MAKE_ENV+=		INSTALLDIR="${BNDIR}"
 # Directory for xsp program files for xspd
-MAKE_ENV+=		XSPROOT="${SHDIR}"
+MAKE_ENV+=		XSPDIR="${SHDIR}"
 # Directory for xsp utility program files for xspd
 MAKE_ENV+=		APPUTILDIR="${UTDIR}"
 # Runtime xsp config file
@@ -39,7 +41,6 @@ MAKE_ENV+=		CONFIGFILE="${PKG_SYSCONFDIR}/xspd.conf"
 MAKE_ENV+=		EXAMPLECONFIGFILE="${EGDIR}/xspd.conf"
 # Redirect URL
 MAKE_ENV+=		REDIRECTURL="http://localhost:80/"
-
 
 # Buildtime default configuration and runtime destination files
 CONF_FILES=		${EGDIR}/xspd.conf ${PKG_SYSCONFDIR}/xspd.conf
@@ -61,8 +62,8 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 	${MV} ${WRKDIR}/Readme* ${WRKSRC}/.
 	${MV} ${WRKDIR}/*tar ${WRKSRC}/.
-	../../mk/extract/extract -d ${WRKSRC} ${WRKSRC}/${XSPSYS}_${XSPSYSID}.tar
-	${RM} ${WRKSRC}/${XSPSYS}_${XSPSYSID}.tar
+	../../mk/extract/extract -d ${WRKSRC} ${WRKSRC}/xspsys_${XSPSYSID}.tar
+	${RM} ${WRKSRC}/xspsys_${XSPSYSID}.tar
 
 
 
