@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/12/23 04:13:59 kcf Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/12/23 05:46:14 kcf Exp $
 bin/xspd
 sbin/xhtmlpp
 @comment etc/xspd/xspd.conf
@@ -23,6 +23,40 @@ include/xspd/xspconfig.h
 include/xspd/xspdadmconfig.h
 include/xspd/xsperrno.h
 include/xspd/xspmacros.h
+include/xspd/admchart.h
+include/xspd/admchartdesc.h
+include/xspd/admchartrefresh.h
+include/xspd/admcolor.h
+include/xspd/admcomm.h
+include/xspd/admcommall.h
+include/xspd/admconfig.h
+include/xspd/admconfigall.h
+include/xspd/admend.h
+include/xspd/admerrstat.h
+include/xspd/admjs.h
+include/xspd/admlog.h
+include/xspd/admlogin.h
+include/xspd/admmess.h
+include/xspd/admprocessall.h
+include/xspd/admselect.h
+include/xspd/admselstat.h
+include/xspd/admsession.h
+include/xspd/admsessionall.h
+include/xspd/admstart.h
+include/xspd/admstyle.h
+include/xspd/admsysctl.h
+include/xspd/admtablehdr.h
+include/xspd/admvar.h
+include/xspd/admvmemall.h
+include/xspd/admxsperrstat.h
+include/xspd/admxspreqstat.h
+include/xspd/admxspstat.h
+include/xspd/admxsptslotstat.h
+include/xspd/httpchart.h
+include/xspd/httpchartdesc.h
+include/xspd/httpchartrefresh.h
+include/xspd/httperr.h
+include/xspd/httperr_cb.h
 lib/xspd/libcommon.a
 lib/xspd/libxspd.a
 share/examples/xspd/xspd.conf
