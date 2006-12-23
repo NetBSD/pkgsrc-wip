@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/11/28 05:18:47 kcf Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/23 04:13:59 kcf Exp $
 bin/xspd
+sbin/xhtmlpp
 @comment etc/xspd/xspd.conf
 include/xspd/clktck.h
 include/xspd/const.h
