@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2006/12/23 13:59:22 cetrox Exp $
+
+--- configure.orig      2006-12-18 13:43:53.000000000 +0000
++++ configure
+@@ -732,6 +732,16 @@ audio_oss="yes"
+ dv1394="no"
+ add_cflags "-pthread"
+ ;;
++DragonFly)
++v4l="no"
++bktr="yes"
++audio_oss="yes"
++dv1394="no"
++make="gmake"
++CFLAGS="-pthread"
++LDFLAGS="$LDFLAGS -export-dynamic -pthread"
++LIBSUF=".a"
++;;
+ BSD/OS)
+ video4linux="no"
+ video4linux2="no"
