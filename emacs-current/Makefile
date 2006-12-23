@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/11/24 07:54:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2006/12/23 08:23:31 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-22.0.91
@@ -68,7 +68,6 @@ FILESDIR=	${.CURDIR}/../../editors/emacs/files
 
 post-extract:
 	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
-	${CP} ${FILESDIR}/sh3el.h ${WRKSRC}/src/m
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

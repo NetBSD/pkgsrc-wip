@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/11/24 07:54:39 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.5 2006/12/23 08:23:31 thomasklausner Exp $
 
---- configure.orig	2006-11-14 09:21:19.000000000 +0100
+--- configure.orig	2006-12-23 00:13:53.000000000 +0100
 +++ configure
-@@ -1361,7 +1361,7 @@ archlibdir='${libexecdir}/emacs/${versio
+@@ -1808,7 +1808,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -10,23 +10,4 @@ $NetBSD: patch-ab,v 1.4 2006/11/24 07:54:39 thomasklausner Exp $
 +gameuser=${GAMEOWN}
  
  
- # Check whether --with-gcc or --without-gcc was given.
-@@ -1742,7 +1742,6 @@ _ACEOF
-       m68k-*-netbsd*)
- 			# This is somewhat bogus.
- 			machine=hp9000s300 ;;
--      powerpc-apple-netbsd*) machine=macppc ;;
-       mips-*-netbsd*)	machine=pmax ;;
-       mipsel-*-netbsd*)	machine=pmax ;;
-       mipseb-*-netbsd*)	machine=pmax ;;
-@@ -1750,7 +1749,10 @@ _ACEOF
-       powerpc-*-netbsd*) machine=macppc ;;
-       sparc*-*-netbsd*)	machine=sparc ;;
-       vax-*-netbsd*)	machine=vax ;;
-+      x86_64-*-netbsd*)	machine=amdx86-64 ;;
-       arm-*-netbsd*)	machine=arm ;;
-+      hppa-*-netbsd*)	machine=hp800 ;;
-+      shle-*-netbsd*)	machine=sh3el ;;
-     esac
-   ;;
- 
+ # Check whether --with-gcc was given.
