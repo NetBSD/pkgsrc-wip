@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2006/11/28 06:07:03 kcf Exp $
+# $NetBSD: options.mk,v 1.3 2006/12/23 00:00:41 kcf Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xspd
 PKG_SUPPORTED_OPTIONS=	netbsd semctlunion bitmode64
 PKG_SUGGESTED_OPTIONS=	netbsd semctlunion
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,7 +17,7 @@ MAKE_ENV+=	SEMUN="0"
 .endif
 
 .if !empty(PKG_OPTIONS:Mbitmode64)
-MAKE_ENV+=	BITMODE="64"
+BITMODE=64
 .else
-MAKE_ENV+=	BITMODE="32"
+BITMODE=32
 .endif
