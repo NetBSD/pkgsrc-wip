@@ -1,15 +1,11 @@
-$NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
+$NetBSD: patch-aa,v 1.13 2006/12/23 00:01:59 kcf Exp $
 
 --- Makefile.orig	2005-12-14 16:49:08.000000000 -0500
 +++ Makefile
-@@ -68,75 +68,31 @@
- #                                                                              #
- ################################################################################
+@@ -72,67 +72,6 @@
  
--### hints for different system environment: see Readme.txt ###
--
--### system dependent definitions ###
--
+ ### system dependent definitions ###
+ 
 -#CC=gcc
 -CC=`type gcc cc 2>/dev/null | grep -v "not found" | head -1 | sed -e "s/.* //"` 
 -#						# cc
@@ -50,73 +46,54 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
 -#						# module (e.g. for cvs)
 -PWD=$(TARGETDIR)/$(SUBDIR)$(MODULE)
 -##PWD=.
-+PWD=${TARGETDIR}
- #                                               # home directory
+-#                                               # home directory
 -
-+XSPDIR=${XSPROOT}
-+INSTALLDIR=${PGMROOT}
- ### root dir of java core classes ###
- 
+-### root dir of java core classes ###
+-
 -XSPJAVASYSDIR=../xspjsys
-+#XSPJAVASYSDIR=../xspjsys
- #						# java interface directory
- ### root dir of applications ###
- 
+-#						# java interface directory
+-### root dir of applications ###
+-
 -XSPAPPDIR=../xspapp
-+#XSPAPPDIR=../xspapp
- #						# application dir
+-#						# application dir
 -XSPJAVADIR=../xspjava
-+#XSPJAVADIR=../xspjava
- #						# java application dir
- 
- 
- ### XSPD/XSP runtime config file ###
- 
+-#						# java application dir
+-
+-
+-### XSPD/XSP runtime config file ###
+-
 -CONFIGFILE=$(TARGETDIR)/$(SUBDIR)html/test/xspd.conf
-+#CONFIGFILE=${PREFIX}/etc/xspd.conf
- #						# config file
- #						# NOTE: must be same path as
- #						# $(INSTALLDIR)
- 
+-#						# config file
+-#						# NOTE: must be same path as
+-#						# $(INSTALLDIR)
+-
  ### configuration and other file directory ###
  
--ETCDIR=$(PWD)/etc
--#						# etc dir
- 
- ### default parameter setting ###
- 
-@@ -166,8 +122,8 @@ IDENT=0
+ ETCDIR=$(PWD)/etc
+@@ -166,8 +105,6 @@ IDENT=0
  
  HOMEDIR=$(PWD)
  #						# user specific home directory
 -UTILDIR=/usr2/util
 -#						# user specific utility dir
-+ETCDIR=$(HOMEDIR)/etc
-+#						# etc dir
  SRCDIR=$(HOMEDIR)/src
  #						# source directory
  OBJDIR=$(HOMEDIR)/obj
-@@ -178,16 +134,14 @@ LIBDIR=$(HOMEDIR)/lib
- #						# library directory
- DOCDIR=$(HOMEDIR)/xspdoc
- #						# documentation directory
-+#INSTALLDIR=${PREFIX}/bin
-+#						# installation directory
- CDOC_IF_DIR=$(HOMEDIR)/doc
+@@ -182,13 +119,6 @@ CDOC_IF_DIR=$(HOMEDIR)/doc
  #						# C interface documentation dir
  CDOC_CORE_DIR=$(HOMEDIR)/doc_core
  #						# core documentation dir
 -INSTALLDIR=$(TARGETDIR)/$(SUBDIR)html/test
 -#						# installation directory
- 
+-
 -XSPDIR=$(TARGETDIR)/$(SUBDIR)html/test
 -#						# XSP installation directory
 -APPUTILDIR=$(TARGETDIR)/$(SUBDIR)html/test
-+#APPUTILDIR=$(XSPROOT)/utils
- #						# application utility directory
+-#						# application utility directory
  
  INCLCOMMON=$(HOMEDIR)/include
-@@ -216,13 +170,13 @@ DISTRDIR=$(HOMEDIR)/backupdistr
+ #						# common include path
+@@ -216,25 +146,11 @@ DISTRDIR=$(HOMEDIR)/backupdistr
  INTERNETDIR=$(HOMEDIR)/internetdistr
  #						# internet distribution dir
  
@@ -126,53 +103,58 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
  TMPFILE=$(TMPDIR)/tmpmk_
  #						# prename of temporary files
  
- #						# compiler dependent flags 
+-#						# compiler dependent flags 
 -CFLAGSX=-g -O
-+#CFLAGSX=-g -O
- ##CFLAGSX=-O3 -funroll-loops
- #						# C-flags Linux Red Hat 7.3,
- #						# Red Hat 8.0, or Fedora FC3
-@@ -232,7 +186,7 @@ CFLAGSX=-g -O
- #						# C-flags SUN, gcc, 32/64-bit
- ##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
- #						# C-flags SUN, SUN-cc, 32-bit
+-##CFLAGSX=-O3 -funroll-loops
+-#						# C-flags Linux Red Hat 7.3,
+-#						# Red Hat 8.0, or Fedora FC3
+-##CFLAGSX=-R suppress,CFE1111,CFE1177,CFE1186,CFE1995,CFE1178,CFE1180,CFE1550,CFE1676 -g
+-#						# C-flags reliant unix
+-##CFLAGSX=-mcpu=v9 -m$(BITMODE) -g -O
+-#						# C-flags SUN, gcc, 32/64-bit
+-##CFLAGSX=-xtarget=ultra3 -Xt -erroff=E_NO_IMPLICIT_DECL_ALLOWED -xnativeconnect=interfaces -g -O
+-#						# C-flags SUN, SUN-cc, 32-bit
 -##CFLAGSX=-mcpu=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024
-+CFLAGSX=-march=i386 -m$(BITMODE) -g -O -DFD_SETSIZE=1024
- #						# C-flags NetBSD, pentium
- 
+-#						# C-flags NetBSD, pentium
+-
  CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMMON) -I$(INCLXSP) -I$(INCLADM) \
-@@ -252,7 +206,7 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
- #						# -DVHASHTABNAM=0   1/0
- 
- #						# flags for cc-link option
+ 	-DOSTYPE=$OSTYPE -DUNAME=$(UNAME) \
+ 	-DSEMUN=$(SEMUN) \
+@@ -246,32 +162,10 @@ CFLAGS=$(CFLAGSX) -I$(INCL) -I$(INCLCOMM
+ 	-DXSPCOMMID=$(XSPCOMMID) \
+ 	-DCONFIGFILE='"$(CONFIGFILE)"' \
+ 	-DSCCSID='$(SCCSID)' -DRCSID='$(RCSID)' -DIDENT='$(IDENT)'
+-#						# flags for compiler
+-#                                               # special flags:
+-#						# -DCOLORCHK=1      1/0
+-#						# -DVHASHTABNAM=0   1/0
+-
+-#						# flags for cc-link option
 -CLDFLAGS=-lcrypt
-+#CLDFLAGS=-lcrypt
- #						# link-flags Linux Red Hat 7.3,
- #						# Red Hat 8.0, or Fedora FC3
- ##CLDFLAGS=-lcrypt -lxnet
-@@ -261,11 +215,10 @@ CLDFLAGS=-lcrypt
- #						# link-flags SUN, gcc, 32/64-bit
- ##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
- #						# link-flags SUN, cc, 32-bit
+-#						# link-flags Linux Red Hat 7.3,
+-#						# Red Hat 8.0, or Fedora FC3
+-##CLDFLAGS=-lcrypt -lxnet
+-#						# link-flags Reliant Unix
+-##CLDFLAGS=-lcrypt -lxnet -mcpu=v9 -m$(BITMODE)
+-#						# link-flags SUN, gcc, 32/64-bit
+-##CLDFLAGS=-lcrypt -lxnet -xtarget=ultra3
+-#						# link-flags SUN, cc, 32-bit
 -##CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
-+CLDFLAGS=-lcrypt -mpcu=i386 -m$(BITMODE)
- #						# link-flags NetBSD, pentium
+-#						# link-flags NetBSD, pentium
  
 -XHTMLPP=`( [ -x $(ETCDIR)/xhtmlpp ] && echo $(ETCDIR)/xhtmlpp ) \
 -	|| ( [ -x $(UTILDIR)/xhtmlpp ] && echo $(UTILDIR)/xhtmlpp )`
-+XHTMLPP=$(ETCDIR)/xhtmlpp
++XHTMLPP=${ETCDIR}/xhtmlpp
  #						# HTML preprocessor
  
- #BIT7=-bit7
-@@ -320,6 +273,7 @@ CORE_HEADER='<b>XSPD/XSP Core Documentat
- 	fi ; \
- 	test -f $< && \
- 	echo " preprocessing `basename $< | sed -e 's/\..*//'`.hxsp -> `basename $< | sed -e 's/\..*//'`.h $$MSG"; \
-+	#echo " preprocessing ${.IMPSRC} -> ${.TARGET} $$MSG"; \
- 	$(XHTMLPP) \
- 		-d1 '<%' -d2 '%>' \
- 		-c $(BIT7) -O -zz $$OUTP \
-@@ -514,21 +468,32 @@ CDOC_CORE_FILES=\
+-#BIT7=-bit7
+-#						# enable for 7-bit-ascii convert
+-#                                               # at using HTML preprocessor
+-
+ ### cvs specifications ###
+ 
+ CVSDIR=$(CVSROOT)
+@@ -514,21 +408,29 @@ CDOC_CORE_FILES=\
  ### targets ###
  
  install: \
@@ -186,14 +168,11 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
 -	xspjsys \
 -	xspapp \
 -	xspjava
-+	$(XSPDIR)/xspfwd \
-+	$(XSPDIR)/xspanalyze \
++	${XSPDIR}/xspfwd \
++	${XSPDIR}/xspanalyze \
 +	installincludes \
-+	$(EXAMPLECONFIGFILE) \
-+	installlibs 
-+#	xspjsys \
-+#	xspapp \
-+#	xspjava
++	${EXAMPLECONFIGFILE} \
++	installlibs
  	@cp $(EXEDIR)/xspd $(INSTALLDIR)/xspd
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- install `basename \`pwd\`` ready ---"
  
@@ -213,12 +192,13 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
  installadmin: \
  	$(XSPDIR)/xspdAdmin.xsp
  
-@@ -554,15 +519,17 @@ installapputil: \
+@@ -554,13 +456,15 @@ installapputil: \
  
  ################################################################################
  
 -all:	\
-+all:	mkdirs \
++all: \
++	mkdirs \
  	$(SCCS_FILES) \
  	$(LIBXSPD) \
  	$(LIBCMN) \
@@ -230,11 +210,8 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
 +	helpdoc
  	@test $(NOREADYMSG) -eq 1 || echo "$(BELL)	--- make `basename \`pwd\`` ready ---"
  
-+
  ################################################################################
- 
- helpdoc: \
-@@ -758,9 +725,6 @@ mkdirs:
+@@ -758,9 +662,6 @@ mkdirs:
  	    $(DISTRDIR) \
  	    $(INTERNETDIR) \
  	    $(DOCDIR) \
@@ -244,7 +221,15 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
  	    2>/dev/null
  	
  ################################################################################
-@@ -1389,7 +1353,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
+@@ -1274,6 +1175,7 @@ $(OBJDIR)/xspfwd.o: $(SRCDIR)/xspfwd.c \
+ 	$(INCL)/xspconfig.h \
+ 	$(INCLCOMMON)/fileio.h \
+ 	$(INCL)/xsp.h
++	echo objdir is ${OBJDIR}
+ 	@echo "	compiling $(SRCDIR)/`basename $@ | sed -e 's/\..*//'`.c"
+ 	@$(CC) $(CFLAGS) -o $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o -c $(SRCDIR)/`basename $@ | sed -e 's/\..*//'`.c
+ 	
+@@ -1389,7 +1291,7 @@ $(EXEDIR)/xspappscript: $(LIBCMN) \
  		-o $@  $(OBJDIR)/`basename $@ | sed -e 's/\..*//'`.o \
  		$(CLIBS) \
  		$(LIBCMN)
@@ -253,38 +238,24 @@ $NetBSD: patch-aa,v 1.12 2006/11/28 05:18:47 kcf Exp $
  	
  ################################################################################
  
-@@ -1619,12 +1583,9 @@ xspd_conf_distr:
+@@ -1619,7 +1521,8 @@ xspd_conf_distr:
  ### build the default xspd.conf config file ###
  ### do not overwrite existing versions      ###
  
 -$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
++#$(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
 +$(EXAMPLECONFIGFILE): $(ETCDIR)/xspd.conf_distr
  	@SRCFILE=$(ETCDIR)/xspd.conf_distr; \
  	 DSTFILE=$@; \
--	 if [ ! -s $@ ] ; \
--	 then \
--	    echo "	process $$SRCFILE to $$DSTFILE (default config file)" ; \
- 	    cp /dev/null $$DSTFILE ; \
- 	    echo "### generated by $(MAKEFILE) at `date` ###" >>$$DSTFILE ; \
- 	    echo "### source file: $$SRCFILE ###" >>$$DSTFILE ; \
-@@ -1647,17 +1608,14 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
- 	    chmod +x $(TMPFILE).confpp; \
- 	    $(TMPFILE).confpp \
- 		| sed -e 's/~~Id~~/$$Id/' \
--		>>$$DSTFILE; \
--	 else \
--	    echo "	*** WARNING: no processing $$SRCFILE to $$DSTFILE (do not overwrite old version)" ; \
--	 fi
-+		>>$$DSTFILE;
+ 	 if [ ! -s $@ ] ; \
+@@ -1654,10 +1557,3 @@ $(CONFIGFILE): $(ETCDIR)/xspd.conf_distr
  	
  ################################################################################
  
- ### for backup only ###
- 
+-### for backup only ###
+-
 -$(ETCDIR)/xspd.conf:	$(CONFIGFILE)
 -	@cp $(CONFIGFILE) $@
-+#$(ETCDIR)/xspd.conf:	$(CONFIGFILE)
-+#	@cp $(CONFIGFILE) $@
- 	
- ################################################################################
- 
+-	
+-################################################################################
+-
