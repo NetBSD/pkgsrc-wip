@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/11/27 18:35:05 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2006/12/24 21:30:22 shattered Exp $
 #
 
-DISTNAME=		tcptrack-1.1.5
+DISTNAME=		tcptrack-1.2.0
 CATEGORIES=		net
-MASTER_SITES=		http://www.rhythm.cx/~steve/devel/tcptrack/release/1.1.5/source/
+MASTER_SITES=		http://www.rhythm.cx/~steve/devel/tcptrack/release/1.2.0/source/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.rhythm.cx/~steve/devel/tcptrack/
