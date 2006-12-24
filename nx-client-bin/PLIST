@@ -1,7 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/24 14:49:01 rumko Exp $
-bin/nxclient
-bin/nxesd
-bin/nxkill
-bin/nxprint
-bin/nxservice
-bin/nxssh
+@comment $NetBSD: PLIST,v 1.2 2006/12/24 16:16:50 rumko Exp $
+bin/nx
+lib/nx/bin/nxclient
+lib/nx/bin/nxesd
+lib/nx/bin/nxkill
+lib/nx/bin/nxprint
+lib/nx/bin/nxservice
+lib/nx/bin/nxssh
+lib/nx/lib/libXcomp.so
+lib/nx/lib/libXcomp.so.2
+lib/nx/lib/libXcomp.so.2.1.0
+lib/nx/lib/libXcompsh.so
+lib/nx/lib/libXcompsh.so.2
+lib/nx/lib/libXcompsh.so.2.1.0
+lib/nx/lib/libcrypto.so
+lib/nx/lib/libcrypto.so.0.9.8
+lib/nx/lib/libjpeg.so
+lib/nx/lib/libjpeg.so.62
+lib/nx/lib/libjpeg.so.62.0.0
+lib/nx/lib/libpng12.so
+lib/nx/lib/libpng12.so.0
+lib/nx/lib/libpng12.so.0.1.2.8
+lib/nx/lib/libz.so
+lib/nx/lib/libz.so.1
+lib/nx/lib/libz.so.1.2.3
+lib/nx/share/keyboards
+lib/nx/share/rgb
+@dirrm lib/nx/share
+@dirrm lib/nx/lib
+@dirrm lib/nx/bin
+@dirrm lib/nx
