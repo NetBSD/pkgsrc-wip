@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/24 14:49:01 rumko Exp $
+bin/nxclient
+bin/nxesd
+bin/nxkill
+bin/nxprint
+bin/nxservice
+bin/nxssh

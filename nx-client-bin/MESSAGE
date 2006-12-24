@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/12/24 14:49:01 rumko Exp $
+
+If you plan to use vmware on the machine you are connection to,
+edit the ~/.vmware/preferences file and add the following line:
+xkeymap.usekeycodeMap = "TRUE"
+
+The solution was found on:
+http://www.redhat.com/archives/fedora-list/2004-May/msg07383.html
+===========================================================================
