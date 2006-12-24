@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2455 2006/12/22 08:49:38 jgoamakf Exp $
+# $Id: Makefile,v 1.2456 2006/12/24 10:11:14 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1306,6 +1306,7 @@ SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
 SUBDIR+=	squirrelmail-vlogin
 SUBDIR+=	srvx
+SUBDIR+=	ssu
 SUBDIR+=	stardict
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
