@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/24 08:30:43 thomasklausner Exp $
+bin/ss
+bin/ssserv
+share/doc/ssu/README
+@dirrm share/doc/ssu
