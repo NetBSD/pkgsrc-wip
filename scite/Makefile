@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/10/29 11:23:12 shattered Exp $
+# $NetBSD: Makefile,v 1.17 2006/12/24 17:01:31 shattered Exp $
 
-DISTNAME=		scite170
-PKGNAME=		scite-1.70
+DISTNAME=		scite171
+PKGNAME=		scite-1.71
 PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
