@@ -15,6 +15,7 @@ Suggested package updates
 	o gajim-0.11
 	o gambas-1.9.46
 	o gcompris-8.2.2
+	o geant-4.8.2
 	o gforge-4.5.11
 	o gmediaserver-0.12.0
 	o gnome-commander-1.2.2
@@ -26,6 +27,7 @@ Suggested package updates
 	o linphone-1.5.1
 	o man-1.6e
 	o mcabber-0.9.0
+	o mednafen-0.7.1
 	o mupen64-0.5
 	o openct-0.6.11
 	o parted-1.8.0
@@ -46,5 +48,5 @@ Suggested package updates
 	o vmac-2.8.2
 	o xaralx-bin-0.7.1692
 	o xmms2-0.2DrHouse
-	o yabause-0.7.2
+	o yabause-0.8.0
 	o zinf-2.2.5
