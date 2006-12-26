@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2006/05/06 11:06:50 jsonn Exp $
+$NetBSD: patch-aa,v 1.2 2006/12/26 17:39:16 gschwarz Exp $
 
---- src/index_dir.c.orig	2006-05-06 10:53:39.000000000 +0000
-+++ src/index_dir.c
-@@ -29,7 +29,7 @@
+--- src/index_dir.c.orig	2005-02-22 04:00:24.000000000 +0100
++++ src/index_dir.c	2006-12-26 07:24:03.510006000 +0100
+@@ -29,7 +29,11 @@
  #include <fcntl.h>
  #include "compat.h"
  
--#define MAX_FILE_LENGTH                         MAXNAMLEN
-+#define MAX_FILE_LENGTH                         NAME_MAX
++#ifdef NAME_MAX
++#define MAX_FILE_LENGTH				NAME_MAX
++#else /* e.g. Solaris */
+ #define MAX_FILE_LENGTH                         MAXNAMLEN
++#endif
  #define MAX_PATH_LENGTH                         PATH_MAX
  
  #define INT_TO_HEX(x) \
