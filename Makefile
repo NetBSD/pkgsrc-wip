@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2460 2006/12/27 16:03:20 jsonn Exp $
+# $Id: Makefile,v 1.2461 2006/12/28 04:46:29 jakllsch Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1481,6 +1481,7 @@ SUBDIR+=	xfce4-xarchiver
 SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
+SUBDIR+=	xhkeys1
 SUBDIR+=	xinetd
 SUBDIR+=	xkeyboard-config
 SUBDIR+=	xmail
