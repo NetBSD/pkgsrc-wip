@@ -1,0 +1,4 @@
+$NetBSD: TODO,v 1.1.1.1 2006/12/28 17:14:41 jakllsch Exp $
+to do list for wide-dhcpv6
+ - test on more than NetBSD
+ - honor ${VARBASE}

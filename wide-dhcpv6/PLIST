@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/28 17:14:41 jakllsch Exp $
+man/man5/dhcp6c.conf.5
+man/man5/dhcp6s.conf.5
+man/man8/dhcp6c.8
+man/man8/dhcp6ctl.8
+man/man8/dhcp6relay.8
+man/man8/dhcp6s.8
+sbin/dhcp6c
+sbin/dhcp6ctl
+sbin/dhcp6relay
+sbin/dhcp6s

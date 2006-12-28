@@ -1,0 +1,4 @@
+WIDE-DHCPv6 is a project to release/develop/maintain
+an up-to-date IPv6 DHCPv6 implementaion for BSD and
+Linux. The implementation is originally developed
+in KAME project, but now it is separately maintained.
