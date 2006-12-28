@@ -1,0 +1,19 @@
+--- configure.orig	2006-12-24 00:53:15.000000000 -0300
++++ configure	2006-12-28 11:00:15.000000000 -0300
+@@ -701,7 +701,7 @@
+ SHFLAGS="-shared -Wl,-h,\$@"
+ add_extralibs "-lsocket -lnsl"
+ ;;
+-NetBSD)
++NetBSD|DragonFly)
+ video4linux="no"
+ video4linux2="no"
+ bktr="yes"
+@@ -709,6 +709,7 @@
+ dv1394="no"
+ make="gmake"
+ add_extralibs "-lossaudio"
++add_cflags "-pthread"
+ ;;
+ OpenBSD)
+ video4linux="no"
