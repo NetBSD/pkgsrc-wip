@@ -1,5 +1,5 @@
-Yabause is a Sega Saturn emulator under GNU GPL.
+Yabause is a Sega Saturn emulator.
+It is written in C using the SDL and OpenGL libraries with support
+for cdrom and iso files.
 
-Be aware that this project is at an early stage. Don't expect to
-play commercial games on your PC. This software is released for
-testing purposes only, and is essentially aimed to developers.
+WWW:	http://yabause.sourceforge.net/

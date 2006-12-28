@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 23:58:08 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/12/28 09:26:41 wilouf Exp $
+bin/gen68k
 bin/yabause
-man/man1/yabause.1
-share/doc/yabause/README
-@dirrm share/doc/yabause
+share/yabause/c68k_ini.inc
+@dirrm share/yabause
