@@ -1,21 +1,85 @@
-$NetBSD: patch-aa,v 1.1 2006/12/23 13:59:22 cetrox Exp $
-
---- configure.orig      2006-12-18 13:43:53.000000000 +0000
-+++ configure
-@@ -732,6 +732,16 @@ audio_oss="yes"
- dv1394="no"
- add_cflags "-pthread"
- ;;
-+DragonFly)
-+v4l="no"
-+bktr="yes"
-+audio_oss="yes"
-+dv1394="no"
-+make="gmake"
-+CFLAGS="-pthread"
-+LDFLAGS="$LDFLAGS -export-dynamic -pthread"
-+LIBSUF=".a"
-+;;
- BSD/OS)
- video4linux="no"
- video4linux2="no"
+--- Makefile.orig	2006-12-07 16:25:04.000000000 -0300
++++ Makefile	2006-12-28 12:05:30.000000000 -0300
+@@ -52,14 +52,14 @@
+ OBJS = ffmpeg.o ffserver.o cmdutils.o ffplay.o
+ SRCS = $(OBJS:.o=.c) $(ASM_OBJS:.o=.s)
+ LDFLAGS := -L$(BUILD_ROOT)/libavformat -L$(BUILD_ROOT)/libavcodec -L$(BUILD_ROOT)/libavutil $(LDFLAGS)
+-EXTRALIBS := -lavformat$(BUILDSUF) -lavcodec$(BUILDSUF) -lavutil$(BUILDSUF) $(EXTRALIBS)
++EXTRALIBS := libavformat/libavformat.la libavcodec/libavcodec.la libavutil/libavutil.la $(EXTRALIBS)
+ 
+ ifeq ($(CONFIG_SWSCALER),yes)
+ LDFLAGS+=-L./libswscale
+-EXTRALIBS+=-lswscale$(BUILDSUF)
++EXTRALIBS+=libswscale/libswscale.la
+ endif
+ 
+-all: lib $(PROGS_G) $(PROGS) $(VHOOK) $(DOC)
++all: lib $(PROGS) $(VHOOK) $(DOC)
+ 
+ lib:
+ 	$(MAKE) -C libavutil   all
+@@ -72,14 +72,17 @@
+ 	$(MAKE) -C libswscale  all
+ endif
+ 
+-ffmpeg_g$(EXESUF): ffmpeg.o cmdutils.o .libs
+-	$(CC) $(LDFLAGS) -o $@ ffmpeg.o cmdutils.o $(EXTRALIBS)
+-
+-ffserver$(EXESUF): ffserver.o .libs
+-	$(CC) $(LDFLAGS) $(FFSERVERLDFLAGS) -o $@ ffserver.o $(EXTRALIBS)
+-
+-ffplay_g$(EXESUF): ffplay.o cmdutils.o .libs
+-	$(CC) $(LDFLAGS) -o $@ ffplay.o cmdutils.o $(EXTRALIBS) $(SDL_LIBS)
++ffmpeg$(EXESUF): ffmpeg.o cmdutils.o .ffmpeglibs
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffmpeg.o cmdutils.o \
++	$(EXTRALIBS)
++
++ffserver$(EXESUF): ffserver.o .ffmpeglibs
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(FFSERVERLDFLAGS) -o $@ \
++	ffserver.o $(EXTRALIBS)
++
++ffplay$(EXESUF): ffplay.o cmdutils.o .ffmpeglibs
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffplay.o cmdutils.o \
++	$(EXTRALIBS) $(SDL_LIBS)
+ 
+ %$(EXESUF): %_g$(EXESUF)
+ 	cp -p $< $@
+@@ -88,8 +91,9 @@
+ version.h:
+ 	$(SRC_PATH)/version.sh $(SRC_PATH)
+ 
+-output_example$(EXESUF): output_example.o .libs
+-	$(CC) $(LDFLAGS) -o $@ output_example.o $(EXTRALIBS)
++output_example$(EXESUF): output_example.o .ffmpeglibs
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ output_example.o \
++	$(EXTRALIBS)
+ 
+ qt-faststart$(EXESUF): qt-faststart.c
+ 	$(CC) $(CFLAGS) $< -o $@
+@@ -105,7 +109,7 @@
+ %.o: %.c
+ 	$(CC) $(CFLAGS) -c -o $@ $<
+ 
+-videohook: .libs
++videohook: .ffmpeglibs
+ 	$(MAKE) -C vhook all
+ 
+ documentation:
+@@ -119,7 +123,7 @@
+ install-progs: $(PROGS)
+ endif
+ 	install -d "$(bindir)"
+-	install -c $(INSTALLSTRIP) -m 755 $(PROGS) "$(bindir)"
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGS) "$(bindir)"
+ 
+ # create the window installer
+ wininstaller: all install
+@@ -200,7 +204,7 @@
+ 
+ $(DEP_LIBS): lib
+ 
+-.libs: $(DEP_LIBS)
++.ffmpeglibs: lib
+ 	touch $@
+ 
+ clean:

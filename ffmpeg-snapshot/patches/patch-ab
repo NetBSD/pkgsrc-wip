@@ -1,0 +1,62 @@
+--- common.mak.orig	2006-12-22 02:29:14.000000000 -0300
++++ common.mak	2006-12-28 12:06:59.000000000 -0300
+@@ -17,8 +17,9 @@
+ 
+ $(LIB): $(STATIC_OBJS)
+ 	rm -f $@
+-	$(AR) rc $@ $^ $(EXTRAOBJS)
+-	$(RANLIB) $@
++	$(LIBTOOL) --mode=link $(CC) $(SHFLAGS) $(LDFLAGS) -o $(LIB:.a=.la) \
++	$(^:.o=.lo) -avoid-version -rpath $(prefix)/lib \
++	$(EXTRALIBS)
+ 
+ $(SLIBNAME): $(SLIBNAME_WITH_MAJOR)
+ 	ln -sf $^ $@
+@@ -28,20 +29,17 @@
+ 	$(SLIB_EXTRA_CMD)
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) $(LIBOBJFLAGS) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(LIBOBJFLAGS) -c -o $@ $<
+ 
+ %.o: %.S
+-	$(CC) $(CFLAGS) $(LIBOBJFLAGS) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(LIBOBJFLAGS) -c -o $@ $<
+ 
+ # BeOS: remove -Wall to get rid of all the "multibyte constant" warnings
+ %.o: %.cpp
+-	g++ $(subst -Wall,,$(CFLAGS)) -c -o $@ $<
++	$(LIBTOOL) --mode=compile $(CXX) $(subst -Wall,,$(CFLAGS)) -c -o $@ $<
+ 
+ %: %.o $(LIB)
+-	$(CC) $(LDFLAGS) -o $@ $^ $(EXTRALIBS)
+-
+-depend dep: $(SRCS)
+-	$(CC) -MM $(CFLAGS) $^ 1>.depend
++	$(LIBTOOL) --mode=compile $(CC) $(LDFLAGS) -o $@ $^ $(EXTRALIBS)
+ 
+ clean::
+ 	rm -f *.o *.d *~ *.a *.lib *.so *.so.* *.dylib *.dll \
+@@ -51,16 +49,20 @@
+ 	rm -f .depend
+ 
+ ifeq ($(BUILD_SHARED),yes)
+-INSTLIBTARGETS += install-lib-shared
++INSTLIBTARGETS += install-libt-shared
+ endif
+ ifeq ($(BUILD_STATIC),yes)
+-INSTLIBTARGETS += install-lib-static
++INSTLIBTARGETS += install-libt-static
+ endif
+ 
+ install: install-libs install-headers
+ 
+ install-libs: $(INSTLIBTARGETS)
+ 
++install-libt-static: $(LIB)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) \
++	$(prefix)/lib
++
+ install-lib-shared: $(SLIBNAME)
+ 	install -d "$(shlibdir)"
+ 	install $(INSTALLSTRIP) -m 755 $(SLIBNAME) \
