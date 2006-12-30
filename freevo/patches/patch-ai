@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2006/12/02 17:47:39 dhowland Exp $
+$NetBSD: patch-ai,v 1.2 2006/12/30 10:09:47 absd Exp $
 
---- contrib/fbcon/mgafb.orig	2005-10-16 05:18:50.000000000 -0400
+--- contrib/fbcon/mgafb.orig	2006-11-24 19:50:22.000000000 +0000
 +++ contrib/fbcon/mgafb
 @@ -28,7 +28,7 @@ else
      exit 1

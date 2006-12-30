@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2005/11/21 01:22:24 dhowland Exp $
+$NetBSD: patch-ad,v 1.5 2006/12/30 10:09:47 absd Exp $
 
---- src/plugins/rom_drives.py.orig	2005-10-16 05:18:49.000000000 -0400
+--- src/plugins/rom_drives.py.orig	2006-11-24 19:50:19.000000000 +0000
 +++ src/plugins/rom_drives.py
 @@ -66,7 +66,7 @@ try:
      # (for some strange reason, this is missing sometimes)

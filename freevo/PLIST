@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/18 00:46:31 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/12/30 10:09:46 absd Exp $
 ${PYSITELIB}/freevo/__init__.py
 ${PYSITELIB}/freevo/__init__.pyc
 ${PYSITELIB}/freevo/__init__.pyo
@@ -278,6 +278,9 @@ ${PYSITELIB}/freevo/plugins/__init__.pyo
 ${PYSITELIB}/freevo/plugins/autocolor.py
 ${PYSITELIB}/freevo/plugins/autocolor.pyc
 ${PYSITELIB}/freevo/plugins/autocolor.pyo
+${PYSITELIB}/freevo/plugins/autoshutdown.py
+${PYSITELIB}/freevo/plugins/autoshutdown.pyc
+${PYSITELIB}/freevo/plugins/autoshutdown.pyo
 ${PYSITELIB}/freevo/plugins/command.py
 ${PYSITELIB}/freevo/plugins/command.pyc
 ${PYSITELIB}/freevo/plugins/command.pyo
@@ -305,12 +308,30 @@ ${PYSITELIB}/freevo/plugins/idlebar/MultiMail.pyo
 ${PYSITELIB}/freevo/plugins/idlebar/__init__.py
 ${PYSITELIB}/freevo/plugins/idlebar/__init__.pyc
 ${PYSITELIB}/freevo/plugins/idlebar/__init__.pyo
+${PYSITELIB}/freevo/plugins/idlebar/cdstatus.py
+${PYSITELIB}/freevo/plugins/idlebar/cdstatus.pyc
+${PYSITELIB}/freevo/plugins/idlebar/cdstatus.pyo
+${PYSITELIB}/freevo/plugins/idlebar/diskfree.py
+${PYSITELIB}/freevo/plugins/idlebar/diskfree.pyc
+${PYSITELIB}/freevo/plugins/idlebar/diskfree.pyo
+${PYSITELIB}/freevo/plugins/idlebar/holidays.py
+${PYSITELIB}/freevo/plugins/idlebar/holidays.pyc
+${PYSITELIB}/freevo/plugins/idlebar/holidays.pyo
+${PYSITELIB}/freevo/plugins/idlebar/mail.py
+${PYSITELIB}/freevo/plugins/idlebar/mail.pyc
+${PYSITELIB}/freevo/plugins/idlebar/mail.pyo
 ${PYSITELIB}/freevo/plugins/idlebar/system.py
 ${PYSITELIB}/freevo/plugins/idlebar/system.pyc
 ${PYSITELIB}/freevo/plugins/idlebar/system.pyo
+${PYSITELIB}/freevo/plugins/idlebar/tv.py
+${PYSITELIB}/freevo/plugins/idlebar/tv.pyc
+${PYSITELIB}/freevo/plugins/idlebar/tv.pyo
 ${PYSITELIB}/freevo/plugins/idlebar/volume.py
 ${PYSITELIB}/freevo/plugins/idlebar/volume.pyc
 ${PYSITELIB}/freevo/plugins/idlebar/volume.pyo
+${PYSITELIB}/freevo/plugins/idlebar/weather.py
+${PYSITELIB}/freevo/plugins/idlebar/weather.pyc
+${PYSITELIB}/freevo/plugins/idlebar/weather.pyo
 ${PYSITELIB}/freevo/plugins/joy.py
 ${PYSITELIB}/freevo/plugins/joy.pyc
 ${PYSITELIB}/freevo/plugins/joy.pyo
@@ -344,12 +365,18 @@ ${PYSITELIB}/freevo/plugins/tiny_osd.pyo
 ${PYSITELIB}/freevo/plugins/tiny_xosd.py
 ${PYSITELIB}/freevo/plugins/tiny_xosd.pyc
 ${PYSITELIB}/freevo/plugins/tiny_xosd.pyo
+${PYSITELIB}/freevo/plugins/upsoon.py
+${PYSITELIB}/freevo/plugins/upsoon.pyc
+${PYSITELIB}/freevo/plugins/upsoon.pyo
 ${PYSITELIB}/freevo/plugins/usb.py
 ${PYSITELIB}/freevo/plugins/usb.pyc
 ${PYSITELIB}/freevo/plugins/usb.pyo
 ${PYSITELIB}/freevo/plugins/usbstorage.py
 ${PYSITELIB}/freevo/plugins/usbstorage.pyc
 ${PYSITELIB}/freevo/plugins/usbstorage.pyo
+${PYSITELIB}/freevo/plugins/weather.py
+${PYSITELIB}/freevo/plugins/weather.pyc
+${PYSITELIB}/freevo/plugins/weather.pyo
 ${PYSITELIB}/freevo/plugins/yac.py
 ${PYSITELIB}/freevo/plugins/yac.pyc
 ${PYSITELIB}/freevo/plugins/yac.pyo
@@ -437,6 +464,9 @@ ${PYSITELIB}/freevo/tv/plugins/irsend_generic.pyo
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.py
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.pyc
 ${PYSITELIB}/freevo/tv/plugins/ivtv_record.pyo
+${PYSITELIB}/freevo/tv/plugins/ivtv_xine_tv.py
+${PYSITELIB}/freevo/tv/plugins/ivtv_xine_tv.pyc
+${PYSITELIB}/freevo/tv/plugins/ivtv_xine_tv.pyo
 ${PYSITELIB}/freevo/tv/plugins/manual_record.py
 ${PYSITELIB}/freevo/tv/plugins/manual_record.pyc
 ${PYSITELIB}/freevo/tv/plugins/manual_record.pyo
@@ -449,6 +479,9 @@ ${PYSITELIB}/freevo/tv/plugins/scheduled_recordings.pyo
 ${PYSITELIB}/freevo/tv/plugins/tvtime.py
 ${PYSITELIB}/freevo/tv/plugins/tvtime.pyc
 ${PYSITELIB}/freevo/tv/plugins/tvtime.pyo
+${PYSITELIB}/freevo/tv/plugins/vbi2srt_record.py
+${PYSITELIB}/freevo/tv/plugins/vbi2srt_record.pyc
+${PYSITELIB}/freevo/tv/plugins/vbi2srt_record.pyo
 ${PYSITELIB}/freevo/tv/plugins/view_favorites.py
 ${PYSITELIB}/freevo/tv/plugins/view_favorites.pyc
 ${PYSITELIB}/freevo/tv/plugins/view_favorites.pyo
@@ -575,6 +608,9 @@ ${PYSITELIB}/freevo/video/plugins/bookmarker.pyo
 ${PYSITELIB}/freevo/video/plugins/details.py
 ${PYSITELIB}/freevo/video/plugins/details.pyc
 ${PYSITELIB}/freevo/video/plugins/details.pyo
+${PYSITELIB}/freevo/video/plugins/dvdimage.py
+${PYSITELIB}/freevo/video/plugins/dvdimage.pyc
+${PYSITELIB}/freevo/video/plugins/dvdimage.pyo
 ${PYSITELIB}/freevo/video/plugins/imdb.py
 ${PYSITELIB}/freevo/video/plugins/imdb.pyc
 ${PYSITELIB}/freevo/video/plugins/imdb.pyo
@@ -608,43 +644,43 @@ share/doc/${PKGNAME}/CREDITS
 share/doc/${PKGNAME}/ChangeLog
 share/doc/${PKGNAME}/INSTALL
 share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/installation/a354.html
-share/doc/${PKGNAME}/installation/c170.html
+share/doc/${PKGNAME}/installation/a353.html
+share/doc/${PKGNAME}/installation/c169.html
 share/doc/${PKGNAME}/installation/c19.html
-share/doc/${PKGNAME}/installation/c206.html
-share/doc/${PKGNAME}/installation/c223.html
-share/doc/${PKGNAME}/installation/c249.html
-share/doc/${PKGNAME}/installation/c303.html
-share/doc/${PKGNAME}/installation/c323.html
+share/doc/${PKGNAME}/installation/c205.html
+share/doc/${PKGNAME}/installation/c222.html
+share/doc/${PKGNAME}/installation/c248.html
+share/doc/${PKGNAME}/installation/c302.html
+share/doc/${PKGNAME}/installation/c322.html
 share/doc/${PKGNAME}/installation/c63.html
 share/doc/${PKGNAME}/installation/index.html
-share/doc/${PKGNAME}/installation/x184.html
-share/doc/${PKGNAME}/installation/x217.html
-share/doc/${PKGNAME}/installation/x229.html
-share/doc/${PKGNAME}/installation/x234.html
-share/doc/${PKGNAME}/installation/x245.html
+share/doc/${PKGNAME}/installation/x183.html
+share/doc/${PKGNAME}/installation/x216.html
+share/doc/${PKGNAME}/installation/x228.html
+share/doc/${PKGNAME}/installation/x233.html
+share/doc/${PKGNAME}/installation/x244.html
 share/doc/${PKGNAME}/installation/x25.html
-share/doc/${PKGNAME}/installation/x256.html
-share/doc/${PKGNAME}/installation/x263.html
-share/doc/${PKGNAME}/installation/x274.html
+share/doc/${PKGNAME}/installation/x255.html
+share/doc/${PKGNAME}/installation/x262.html
+share/doc/${PKGNAME}/installation/x273.html
 share/doc/${PKGNAME}/installation/x28.html
-share/doc/${PKGNAME}/installation/x289.html
+share/doc/${PKGNAME}/installation/x288.html
 share/doc/${PKGNAME}/installation/x32.html
-share/doc/${PKGNAME}/installation/x334.html
-share/doc/${PKGNAME}/installation/x344.html
-share/doc/${PKGNAME}/installation/x349.html
-share/doc/${PKGNAME}/installation/x364.html
-share/doc/${PKGNAME}/installation/x376.html
+share/doc/${PKGNAME}/installation/x333.html
+share/doc/${PKGNAME}/installation/x343.html
+share/doc/${PKGNAME}/installation/x348.html
+share/doc/${PKGNAME}/installation/x363.html
+share/doc/${PKGNAME}/installation/x375.html
+share/doc/${PKGNAME}/installation/x379.html
 share/doc/${PKGNAME}/installation/x38.html
-share/doc/${PKGNAME}/installation/x380.html
-share/doc/${PKGNAME}/installation/x386.html
-share/doc/${PKGNAME}/installation/x425.html
-share/doc/${PKGNAME}/installation/x431.html
-share/doc/${PKGNAME}/installation/x435.html
-share/doc/${PKGNAME}/installation/x439.html
-share/doc/${PKGNAME}/installation/x443.html
-share/doc/${PKGNAME}/installation/x446.html
-share/doc/${PKGNAME}/installation/x450.html
+share/doc/${PKGNAME}/installation/x385.html
+share/doc/${PKGNAME}/installation/x424.html
+share/doc/${PKGNAME}/installation/x430.html
+share/doc/${PKGNAME}/installation/x434.html
+share/doc/${PKGNAME}/installation/x438.html
+share/doc/${PKGNAME}/installation/x442.html
+share/doc/${PKGNAME}/installation/x445.html
+share/doc/${PKGNAME}/installation/x449.html
 share/doc/${PKGNAME}/installation/x59.html
 share/doc/${PKGNAME}/installation/x71.html
 share/doc/${PKGNAME}/installation/x90.html
@@ -683,6 +719,7 @@ share/freevo/fonts/VeraMoIt.ttf
 share/freevo/fonts/VeraMono.ttf
 share/freevo/fonts/VeraSe.ttf
 share/freevo/fonts/VeraSeBd.ttf
+share/freevo/fonts/ethopool.ttf
 share/freevo/freevo_config.py
 share/freevo/fxd/examples/german-news.fxd
 share/freevo/fxd/examples/playlist.fxd
@@ -738,6 +775,7 @@ share/freevo/icons/holidays/usa_flag.png
 share/freevo/icons/holidays/valentine.png
 share/freevo/icons/misc/case.png
 share/freevo/icons/misc/cdrom_mount.png
+share/freevo/icons/misc/chartpie.png
 share/freevo/icons/misc/clock.png
 share/freevo/icons/misc/cpu.png
 share/freevo/icons/misc/freevo_app.png
@@ -793,6 +831,79 @@ share/freevo/icons/themes/AquaFusion/shutdown.png
 share/freevo/icons/themes/AquaFusion/tv.png
 share/freevo/icons/themes/AquaFusion/up.png
 share/freevo/icons/themes/AquaFusion/videogame.png
+share/freevo/icons/themes/Crystal/auto.png
+share/freevo/icons/themes/Crystal/commands_off.png
+share/freevo/icons/themes/Crystal/commands_on.png
+share/freevo/icons/themes/Crystal/down.png
+share/freevo/icons/themes/Crystal/email_off.png
+share/freevo/icons/themes/Crystal/email_on.png
+share/freevo/icons/themes/Crystal/games_off.png
+share/freevo/icons/themes/Crystal/games_on.png
+share/freevo/icons/themes/Crystal/headlines_off.png
+share/freevo/icons/themes/Crystal/headlines_on.png
+share/freevo/icons/themes/Crystal/image_off.png
+share/freevo/icons/themes/Crystal/image_on.png
+share/freevo/icons/themes/Crystal/left.png
+share/freevo/icons/themes/Crystal/mimetypes/RadioNetscape.png
+share/freevo/icons/themes/Crystal/mimetypes/audio.png
+share/freevo/icons/themes/Crystal/mimetypes/audiocd.png
+share/freevo/icons/themes/Crystal/mimetypes/cdrom.png
+share/freevo/icons/themes/Crystal/mimetypes/detached_player.png
+share/freevo/icons/themes/Crystal/mimetypes/dvd.png
+share/freevo/icons/themes/Crystal/mimetypes/empty_cdrom.png
+share/freevo/icons/themes/Crystal/mimetypes/folder.png
+share/freevo/icons/themes/Crystal/mimetypes/linkbrowser.png
+share/freevo/icons/themes/Crystal/mimetypes/playlist.png
+share/freevo/icons/themes/Crystal/mimetypes/trailers.png
+share/freevo/icons/themes/Crystal/mimetypes/unknown.png
+share/freevo/icons/themes/Crystal/mimetypes/vcd.png
+share/freevo/icons/themes/Crystal/mimetypes/video.png
+share/freevo/icons/themes/Crystal/mimetypes/video_quicktime.png
+share/freevo/icons/themes/Crystal/mimetypes/video_real.png
+share/freevo/icons/themes/Crystal/mimetypes/webradio.png
+share/freevo/icons/themes/Crystal/misc/case.png
+share/freevo/icons/themes/Crystal/misc/cdrom_mount.png
+share/freevo/icons/themes/Crystal/misc/clock.png
+share/freevo/icons/themes/Crystal/misc/cpu.png
+share/freevo/icons/themes/Crystal/misc/freevo_app.png
+share/freevo/icons/themes/Crystal/misc/hddtemp-cool.png
+share/freevo/icons/themes/Crystal/misc/hddtemp-norm.png
+share/freevo/icons/themes/Crystal/misc/hddtemp-warm.png
+share/freevo/icons/themes/Crystal/misc/memory.png
+share/freevo/icons/themes/Crystal/movie_off.png
+share/freevo/icons/themes/Crystal/movie_on.png
+share/freevo/icons/themes/Crystal/music_off.png
+share/freevo/icons/themes/Crystal/music_on.png
+share/freevo/icons/themes/Crystal/off.png
+share/freevo/icons/themes/Crystal/on.png
+share/freevo/icons/themes/Crystal/popup/popup_wait.png
+share/freevo/icons/themes/Crystal/right.png
+share/freevo/icons/themes/Crystal/shutdown_off.png
+share/freevo/icons/themes/Crystal/shutdown_on.png
+share/freevo/icons/themes/Crystal/status/cd_audio.png
+share/freevo/icons/themes/Crystal/status/cd_burn.png
+share/freevo/icons/themes/Crystal/status/cd_inactive.png
+share/freevo/icons/themes/Crystal/status/cd_mixed.png
+share/freevo/icons/themes/Crystal/status/cd_photo.png
+share/freevo/icons/themes/Crystal/status/cd_rip.png
+share/freevo/icons/themes/Crystal/status/cd_video.png
+share/freevo/icons/themes/Crystal/status/mail_dimmed.png
+share/freevo/icons/themes/Crystal/status/mail_new.png
+share/freevo/icons/themes/Crystal/status/newmail_active.png
+share/freevo/icons/themes/Crystal/status/newmail_active_small.png
+share/freevo/icons/themes/Crystal/status/newmail_dimmed.png
+share/freevo/icons/themes/Crystal/status/television_active.png
+share/freevo/icons/themes/Crystal/status/television_expired.png
+share/freevo/icons/themes/Crystal/status/television_inactive.png
+share/freevo/icons/themes/Crystal/status/television_near_expired.png
+share/freevo/icons/themes/Crystal/status/volume_bar.png
+share/freevo/icons/themes/Crystal/status/volume_mute.png
+share/freevo/icons/themes/Crystal/status/volume_out.png
+share/freevo/icons/themes/Crystal/tv_off.png
+share/freevo/icons/themes/Crystal/tv_on.png
+share/freevo/icons/themes/Crystal/up.png
+share/freevo/icons/themes/Crystal/weather_off.png
+share/freevo/icons/themes/Crystal/weather_on.png
 share/freevo/icons/themes/Noia/README
 share/freevo/icons/themes/Noia/auto.png
 share/freevo/icons/themes/Noia/down.png
@@ -817,6 +928,144 @@ share/freevo/icons/themes/Noia/off.png
 share/freevo/icons/themes/Noia/on.png
 share/freevo/icons/themes/Noia/right.png
 share/freevo/icons/themes/Noia/up.png
+share/freevo/icons/themes/Rain/auto.png
+share/freevo/icons/themes/Rain/commands_off.png
+share/freevo/icons/themes/Rain/commands_on.png
+share/freevo/icons/themes/Rain/down.png
+share/freevo/icons/themes/Rain/email_off.png
+share/freevo/icons/themes/Rain/email_on.png
+share/freevo/icons/themes/Rain/games_off.png
+share/freevo/icons/themes/Rain/games_on.png
+share/freevo/icons/themes/Rain/headlines_off.png
+share/freevo/icons/themes/Rain/headlines_on.png
+share/freevo/icons/themes/Rain/image_off.png
+share/freevo/icons/themes/Rain/image_on.png
+share/freevo/icons/themes/Rain/left.png
+share/freevo/icons/themes/Rain/mimetypes/audio.png
+share/freevo/icons/themes/Rain/mimetypes/audiocd.png
+share/freevo/icons/themes/Rain/mimetypes/cdrom.png
+share/freevo/icons/themes/Rain/mimetypes/detached_player.png
+share/freevo/icons/themes/Rain/mimetypes/dvd.png
+share/freevo/icons/themes/Rain/mimetypes/empty_cdrom.png
+share/freevo/icons/themes/Rain/mimetypes/folder.png
+share/freevo/icons/themes/Rain/mimetypes/linkbrowser.png
+share/freevo/icons/themes/Rain/mimetypes/playlist.png
+share/freevo/icons/themes/Rain/mimetypes/trailers.png
+share/freevo/icons/themes/Rain/mimetypes/unknown.png
+share/freevo/icons/themes/Rain/mimetypes/vcd.png
+share/freevo/icons/themes/Rain/mimetypes/video.png
+share/freevo/icons/themes/Rain/mimetypes/video_quicktime.png
+share/freevo/icons/themes/Rain/mimetypes/video_real.png
+share/freevo/icons/themes/Rain/mimetypes/webradio.png
+share/freevo/icons/themes/Rain/misc/case.png
+share/freevo/icons/themes/Rain/misc/cdrom_mount.png
+share/freevo/icons/themes/Rain/misc/clock.png
+share/freevo/icons/themes/Rain/misc/cpu.png
+share/freevo/icons/themes/Rain/misc/freevo_app.png
+share/freevo/icons/themes/Rain/misc/hddtemp-cool.png
+share/freevo/icons/themes/Rain/misc/hddtemp-norm.png
+share/freevo/icons/themes/Rain/misc/hddtemp-warm.png
+share/freevo/icons/themes/Rain/misc/memory.png
+share/freevo/icons/themes/Rain/movie_off.png
+share/freevo/icons/themes/Rain/movie_on.png
+share/freevo/icons/themes/Rain/music_off.png
+share/freevo/icons/themes/Rain/music_on.png
+share/freevo/icons/themes/Rain/off.png
+share/freevo/icons/themes/Rain/on.png
+share/freevo/icons/themes/Rain/popup/popup_wait.png
+share/freevo/icons/themes/Rain/right.png
+share/freevo/icons/themes/Rain/shutdown_off.png
+share/freevo/icons/themes/Rain/shutdown_on.png
+share/freevo/icons/themes/Rain/status/cd_audio.png
+share/freevo/icons/themes/Rain/status/cd_burn.png
+share/freevo/icons/themes/Rain/status/cd_inactive.png
+share/freevo/icons/themes/Rain/status/cd_mixed.png
+share/freevo/icons/themes/Rain/status/cd_photo.png
+share/freevo/icons/themes/Rain/status/cd_rip.png
+share/freevo/icons/themes/Rain/status/cd_video.png
+share/freevo/icons/themes/Rain/status/mail_dimmed.png
+share/freevo/icons/themes/Rain/status/mail_new.png
+share/freevo/icons/themes/Rain/status/newmail_active.png
+share/freevo/icons/themes/Rain/status/newmail_active_small.png
+share/freevo/icons/themes/Rain/status/newmail_dimmed.png
+share/freevo/icons/themes/Rain/status/television_active.png
+share/freevo/icons/themes/Rain/status/television_expired.png
+share/freevo/icons/themes/Rain/status/television_inactive.png
+share/freevo/icons/themes/Rain/status/television_near_expired.png
+share/freevo/icons/themes/Rain/status/volume_bar.png
+share/freevo/icons/themes/Rain/status/volume_mute.png
+share/freevo/icons/themes/Rain/status/volume_out.png
+share/freevo/icons/themes/Rain/tv_off.png
+share/freevo/icons/themes/Rain/tv_on.png
+share/freevo/icons/themes/Rain/up.png
+share/freevo/icons/themes/Rain/weather_off.png
+share/freevo/icons/themes/Rain/weather_on.png
+share/freevo/icons/themes/bluestar/auto.png
+share/freevo/icons/themes/bluestar/down.png
+share/freevo/icons/themes/bluestar/email_off.png
+share/freevo/icons/themes/bluestar/email_on.png
+share/freevo/icons/themes/bluestar/games_off.png
+share/freevo/icons/themes/bluestar/games_on.png
+share/freevo/icons/themes/bluestar/headlines_off.png
+share/freevo/icons/themes/bluestar/headlines_on.png
+share/freevo/icons/themes/bluestar/image_off.png
+share/freevo/icons/themes/bluestar/image_on.png
+share/freevo/icons/themes/bluestar/left.png
+share/freevo/icons/themes/bluestar/mimetypes/audio.png
+share/freevo/icons/themes/bluestar/mimetypes/audiocd.png
+share/freevo/icons/themes/bluestar/mimetypes/cdrom.png
+share/freevo/icons/themes/bluestar/mimetypes/detached_player.png
+share/freevo/icons/themes/bluestar/mimetypes/dvd.png
+share/freevo/icons/themes/bluestar/mimetypes/empty_cdrom.png
+share/freevo/icons/themes/bluestar/mimetypes/folder.png
+share/freevo/icons/themes/bluestar/mimetypes/folder_audio.png
+share/freevo/icons/themes/bluestar/mimetypes/folder_image.png
+share/freevo/icons/themes/bluestar/mimetypes/folder_video.png
+share/freevo/icons/themes/bluestar/mimetypes/image.png
+share/freevo/icons/themes/bluestar/mimetypes/linkbrowser.png
+share/freevo/icons/themes/bluestar/mimetypes/playlist.png
+share/freevo/icons/themes/bluestar/mimetypes/playlist_image.png
+share/freevo/icons/themes/bluestar/mimetypes/unknown.png
+share/freevo/icons/themes/bluestar/mimetypes/vcd.png
+share/freevo/icons/themes/bluestar/mimetypes/video.png
+share/freevo/icons/themes/bluestar/mimetypes/webradio.png
+share/freevo/icons/themes/bluestar/movie_off.png
+share/freevo/icons/themes/bluestar/movie_on.png
+share/freevo/icons/themes/bluestar/music_off.png
+share/freevo/icons/themes/bluestar/music_on.png
+share/freevo/icons/themes/bluestar/off.png
+share/freevo/icons/themes/bluestar/on.png
+share/freevo/icons/themes/bluestar/popup/osd_busy.png
+share/freevo/icons/themes/bluestar/popup/popup_wait.png
+share/freevo/icons/themes/bluestar/recordinglater.png
+share/freevo/icons/themes/bluestar/recordingnow.png
+share/freevo/icons/themes/bluestar/right.png
+share/freevo/icons/themes/bluestar/shutdown_off.png
+share/freevo/icons/themes/bluestar/shutdown_on.png
+share/freevo/icons/themes/bluestar/status/cd_audio.png
+share/freevo/icons/themes/bluestar/status/cd_burn.png
+share/freevo/icons/themes/bluestar/status/cd_inactive.png
+share/freevo/icons/themes/bluestar/status/cd_mixed.png
+share/freevo/icons/themes/bluestar/status/cd_photo.png
+share/freevo/icons/themes/bluestar/status/cd_rip.png
+share/freevo/icons/themes/bluestar/status/cd_video.png
+share/freevo/icons/themes/bluestar/status/mail_dimmed.png
+share/freevo/icons/themes/bluestar/status/mail_new.png
+share/freevo/icons/themes/bluestar/status/mail_offline.png
+share/freevo/icons/themes/bluestar/status/newmail_active.png
+share/freevo/icons/themes/bluestar/status/newmail_dimmed.png
+share/freevo/icons/themes/bluestar/status/television_active.png
+share/freevo/icons/themes/bluestar/status/television_expired.png
+share/freevo/icons/themes/bluestar/status/television_inactive.png
+share/freevo/icons/themes/bluestar/status/television_near_expired.png
+share/freevo/icons/themes/bluestar/status/volume_bar.png
+share/freevo/icons/themes/bluestar/status/volume_mute.png
+share/freevo/icons/themes/bluestar/status/volume_out.png
+share/freevo/icons/themes/bluestar/tv_off.png
+share/freevo/icons/themes/bluestar/tv_on.png
+share/freevo/icons/themes/bluestar/up.png
+share/freevo/icons/themes/bluestar/weather_off.png
+share/freevo/icons/themes/bluestar/weather_on.png
 share/freevo/icons/themes/blurr/down.png
 share/freevo/icons/themes/blurr/left.png
 share/freevo/icons/themes/blurr/mimetypes/audiocd.png
@@ -838,6 +1087,62 @@ share/freevo/icons/themes/blurr/status/newmail_dimmed.png
 share/freevo/icons/themes/blurr/status/television_active.png
 share/freevo/icons/themes/blurr/status/television_inactive.png
 share/freevo/icons/themes/blurr/up.png
+share/freevo/icons/themes/mediaportal/auto.png
+share/freevo/icons/themes/mediaportal/down.png
+share/freevo/icons/themes/mediaportal/left.png
+share/freevo/icons/themes/mediaportal/mimetypes/RadioNetscape.png
+share/freevo/icons/themes/mediaportal/mimetypes/audio.png
+share/freevo/icons/themes/mediaportal/mimetypes/audiocd.png
+share/freevo/icons/themes/mediaportal/mimetypes/cdrom.png
+share/freevo/icons/themes/mediaportal/mimetypes/detached_player.png
+share/freevo/icons/themes/mediaportal/mimetypes/dvd.png
+share/freevo/icons/themes/mediaportal/mimetypes/empty_cdrom.png
+share/freevo/icons/themes/mediaportal/mimetypes/folder.png
+share/freevo/icons/themes/mediaportal/mimetypes/linkbrowser.png
+share/freevo/icons/themes/mediaportal/mimetypes/playlist.png
+share/freevo/icons/themes/mediaportal/mimetypes/trailers.png
+share/freevo/icons/themes/mediaportal/mimetypes/unknown.png
+share/freevo/icons/themes/mediaportal/mimetypes/vcd.png
+share/freevo/icons/themes/mediaportal/mimetypes/video.png
+share/freevo/icons/themes/mediaportal/mimetypes/video_quicktime.png
+share/freevo/icons/themes/mediaportal/mimetypes/video_real.png
+share/freevo/icons/themes/mediaportal/mimetypes/webradio.png
+share/freevo/icons/themes/mediaportal/misc/case.png
+share/freevo/icons/themes/mediaportal/misc/cdrom_mount.png
+share/freevo/icons/themes/mediaportal/misc/clock.png
+share/freevo/icons/themes/mediaportal/misc/freevo_app.png
+share/freevo/icons/themes/mediaportal/misc/hddtemp-cool.png
+share/freevo/icons/themes/mediaportal/misc/hddtemp-norm.png
+share/freevo/icons/themes/mediaportal/misc/hddtemp-warm.png
+share/freevo/icons/themes/mediaportal/misc/memory.png
+share/freevo/icons/themes/mediaportal/off.png
+share/freevo/icons/themes/mediaportal/on.png
+share/freevo/icons/themes/mediaportal/popup/popup_wait.png
+share/freevo/icons/themes/mediaportal/right.png
+share/freevo/icons/themes/mediaportal/status/cd_audio.png
+share/freevo/icons/themes/mediaportal/status/cd_burn.png
+share/freevo/icons/themes/mediaportal/status/cd_inactive.png
+share/freevo/icons/themes/mediaportal/status/cd_mixed.png
+share/freevo/icons/themes/mediaportal/status/cd_photo.png
+share/freevo/icons/themes/mediaportal/status/cd_rip.png
+share/freevo/icons/themes/mediaportal/status/cd_video.png
+share/freevo/icons/themes/mediaportal/status/mail_dimmed.png
+share/freevo/icons/themes/mediaportal/status/mail_new.png
+share/freevo/icons/themes/mediaportal/status/newmail_active.png
+share/freevo/icons/themes/mediaportal/status/newmail_active_small.png
+share/freevo/icons/themes/mediaportal/status/newmail_dimmed.png
+share/freevo/icons/themes/mediaportal/status/television_active.png
+share/freevo/icons/themes/mediaportal/status/television_expired.png
+share/freevo/icons/themes/mediaportal/status/television_inactive.png
+share/freevo/icons/themes/mediaportal/status/television_near_expired.png
+share/freevo/icons/themes/mediaportal/status/volume_bar.png
+share/freevo/icons/themes/mediaportal/status/volume_mute.png
+share/freevo/icons/themes/mediaportal/status/volume_out.png
+share/freevo/icons/themes/mediaportal/tv_down.png
+share/freevo/icons/themes/mediaportal/tv_up.png
+share/freevo/icons/themes/mediaportal/tvguide_arrow_left.png
+share/freevo/icons/themes/mediaportal/tvguide_arrow_right.png
+share/freevo/icons/themes/mediaportal/up.png
 share/freevo/icons/themes/tuxntosh/down.png
 share/freevo/icons/themes/tuxntosh/left.png
 share/freevo/icons/themes/tuxntosh/mainmenu/54x54/images.png
@@ -903,9 +1208,15 @@ share/freevo/icons/weather/tstorms.png
 share/freevo/icons/weather/wind.png
 share/freevo/images/aubin_bg2.jpg
 share/freevo/images/barbieri/bg.jpg
+share/freevo/images/bluestar_back.jpg
+share/freevo/images/bluestar_logo.png
+share/freevo/images/bluestar_scheduledtv.png
+share/freevo/images/bluestar_splash.jpg
 share/freevo/images/blurr_naxos.jpg
 share/freevo/images/blurrback.jpg
 share/freevo/images/blurrsplash.jpg
+share/freevo/images/crystal_back.jpg
+share/freevo/images/dark.png
 share/freevo/images/frame.png
 share/freevo/images/gant/chat.png
 share/freevo/images/gant/commands.png
@@ -922,76 +1233,165 @@ share/freevo/images/gant/weather.png
 share/freevo/images/idlebar.png
 share/freevo/images/logo.png
 share/freevo/images/logo_david.png
+share/freevo/images/mediaportal/background-xbmc.png
+share/freevo/images/mediaportal/background_my_recipies.png
+share/freevo/images/mediaportal/background_myalarm.png
+share/freevo/images/mediaportal/background_myburn.png
+share/freevo/images/mediaportal/background_myexplorer.png
+share/freevo/images/mediaportal/background_mymessenger.png
+share/freevo/images/mediaportal/background_mymusic.png
+share/freevo/images/mediaportal/background_mynews.png
+share/freevo/images/mediaportal/background_mypictures.png
+share/freevo/images/mediaportal/background_myprograms.png
+share/freevo/images/mediaportal/background_myradio.png
+share/freevo/images/mediaportal/background_mystatus.png
+share/freevo/images/mediaportal/background_mytv.png
+share/freevo/images/mediaportal/background_myvideos.png
+share/freevo/images/mediaportal/background_myweather.png
+share/freevo/images/mediaportal/background_scheduletv.png
+share/freevo/images/mediaportal/commands.png
+share/freevo/images/mediaportal/mail.png
+share/freevo/images/mediaportalsplash.png
+share/freevo/images/newmarks/README
+share/freevo/images/newmarks/game.png
+share/freevo/images/newmarks/headlines.png
+share/freevo/images/newmarks/image.png
+share/freevo/images/newmarks/mail.png
+share/freevo/images/newmarks/movie.png
+share/freevo/images/newmarks/music.png
+share/freevo/images/newmarks/shutdown.png
+share/freevo/images/newmarks/term.png
+share/freevo/images/newmarks/tv.png
+share/freevo/images/rain_back.jpg
 share/freevo/images/splashscreen-bsd.png
 share/freevo/images/splashscreen.png
+share/freevo/images/watermarks/bluestar_email.png
+share/freevo/images/watermarks/bluestar_games.png
+share/freevo/images/watermarks/bluestar_headlines.png
+share/freevo/images/watermarks/bluestar_image.png
+share/freevo/images/watermarks/bluestar_movie.png
+share/freevo/images/watermarks/bluestar_music.png
+share/freevo/images/watermarks/bluestar_shutdown.png
+share/freevo/images/watermarks/bluestar_tv.png
+share/freevo/images/watermarks/bluestar_weather.png
+share/freevo/images/watermarks/crystal_commands.png
+share/freevo/images/watermarks/crystal_email.png
+share/freevo/images/watermarks/crystal_games.png
+share/freevo/images/watermarks/crystal_headlines.png
+share/freevo/images/watermarks/crystal_image.png
+share/freevo/images/watermarks/crystal_movie.png
+share/freevo/images/watermarks/crystal_music.png
+share/freevo/images/watermarks/crystal_shutdown.png
+share/freevo/images/watermarks/crystal_tv.png
+share/freevo/images/watermarks/crystal_weather.png
 share/freevo/images/watermarks/image.png
 share/freevo/images/watermarks/movie.png
 share/freevo/images/watermarks/music.png
+share/freevo/images/watermarks/rain_commands.png
+share/freevo/images/watermarks/rain_email.png
+share/freevo/images/watermarks/rain_games.png
+share/freevo/images/watermarks/rain_headlines.png
+share/freevo/images/watermarks/rain_image.png
+share/freevo/images/watermarks/rain_movie.png
+share/freevo/images/watermarks/rain_music.png
+share/freevo/images/watermarks/rain_shutdown.png
+share/freevo/images/watermarks/rain_tv.png
+share/freevo/images/watermarks/rain_weather.png
 share/freevo/images/watermarks/shutdown.png
 share/freevo/images/watermarks/tv.png
+share/freevo/images/weather/cloudy.png
+share/freevo/images/weather/fair.png
+share/freevo/images/weather/flurries.png
+share/freevo/images/weather/fog.png
+share/freevo/images/weather/lshowers.png
+share/freevo/images/weather/mcloudy.png
+share/freevo/images/weather/mediaportal/cloudy.png
+share/freevo/images/weather/mediaportal/drizzle.png
+share/freevo/images/weather/mediaportal/fair.png
+share/freevo/images/weather/mediaportal/flurries.png
+share/freevo/images/weather/mediaportal/fog.png
+share/freevo/images/weather/mediaportal/ice.png
+share/freevo/images/weather/mediaportal/lrain.png
+share/freevo/images/weather/mediaportal/lshowers.png
+share/freevo/images/weather/mediaportal/mcloudy.png
+share/freevo/images/weather/mediaportal/msunny.png
+share/freevo/images/weather/mediaportal/pcloudy.png
+share/freevo/images/weather/mediaportal/permission.txt
+share/freevo/images/weather/mediaportal/rain.png
+share/freevo/images/weather/mediaportal/rainsnow.png
+share/freevo/images/weather/mediaportal/scthunder.png
+share/freevo/images/weather/mediaportal/showers.png
+share/freevo/images/weather/mediaportal/snow.png
+share/freevo/images/weather/mediaportal/snowshow.png
+share/freevo/images/weather/mediaportal/sunny.png
+share/freevo/images/weather/mediaportal/thunder.png
+share/freevo/images/weather/mediaportal/thunshowers.png
+share/freevo/images/weather/mediaportal/unknown.png
+share/freevo/images/weather/mediaportal/weather_frame.png
+share/freevo/images/weather/mediaportal/weathertypes.dat
+share/freevo/images/weather/mediaportal/wshowers.png
+share/freevo/images/weather/pcloudy.png
+share/freevo/images/weather/rainsnow.png
+share/freevo/images/weather/showers.png
+share/freevo/images/weather/snowshow.png
+share/freevo/images/weather/sunny.png
+share/freevo/images/weather/thunshowers.png
+share/freevo/images/weather/unknown.png
+share/freevo/images/weather/weather_frame.png
+share/freevo/images/weather/weather_watermark.png
+share/freevo/images/weather/weathertypes.dat
 share/freevo/skins/main/README
 share/freevo/skins/main/basic.fxd
+share/freevo/skins/main/bluestar.fxd
+share/freevo/skins/main/bluestar.jpg
 share/freevo/skins/main/blurr.fxd
 share/freevo/skins/main/blurr.jpg
+share/freevo/skins/main/crystal.fxd
+share/freevo/skins/main/dark.fxd
+share/freevo/skins/main/dark.jpg
 share/freevo/skins/main/image.fxd
 share/freevo/skins/main/info.fxd
 share/freevo/skins/main/info.jpg
+share/freevo/skins/main/mediaportal.fxd
+share/freevo/skins/main/mediaportal.png
 share/freevo/skins/main/noia.fxd
 share/freevo/skins/main/noia.jpg
+share/freevo/skins/main/rain.fxd
+share/freevo/skins/main/rain.jpg
 share/freevo/skins/plugins/video_details.fxd
-share/fxd/webradio.fxd
+share/freevo/skins/plugins/weather.fxd
 share/locale/cs/LC_MESSAGES/freevo.mo
 share/locale/cs/LC_MESSAGES/freevo.po
-share/locale/da/LC_MESSAGES/freevo.po
 share/locale/da/LC_MESSAGES/freevo.mo
+share/locale/da/LC_MESSAGES/freevo.po
 share/locale/de/LC_MESSAGES/freevo.mo
 share/locale/de/LC_MESSAGES/freevo.po
-share/locale/es/LC_MESSAGES/freevo.po
 share/locale/es/LC_MESSAGES/freevo.mo
-share/locale/fi/LC_MESSAGES/freevo.po
+share/locale/es/LC_MESSAGES/freevo.po
 share/locale/fi/LC_MESSAGES/freevo.mo
-share/locale/fr/LC_MESSAGES/freevo.po
+share/locale/fi/LC_MESSAGES/freevo.po
 share/locale/fr/LC_MESSAGES/freevo.mo
-share/locale/it/LC_MESSAGES/freevo.po
+share/locale/fr/LC_MESSAGES/freevo.po
 share/locale/it/LC_MESSAGES/freevo.mo
-share/locale/nl/LC_MESSAGES/freevo.po
+share/locale/it/LC_MESSAGES/freevo.po
 share/locale/nl/LC_MESSAGES/freevo.mo
-share/locale/no/LC_MESSAGES/freevo.po
+share/locale/nl/LC_MESSAGES/freevo.po
 share/locale/no/LC_MESSAGES/freevo.mo
-share/locale/pt/LC_MESSAGES/freevo.po
+share/locale/no/LC_MESSAGES/freevo.po
 share/locale/pt/LC_MESSAGES/freevo.mo
-share/locale/pt_BR/LC_MESSAGES/freevo.po
+share/locale/pt/LC_MESSAGES/freevo.po
 share/locale/pt_BR/LC_MESSAGES/freevo.mo
-share/locale/sv/LC_MESSAGES/freevo.po
+share/locale/pt_BR/LC_MESSAGES/freevo.po
 share/locale/sv/LC_MESSAGES/freevo.mo
-@dirrm ${PYSITELIB}/freevo/www
-@dirrm ${PYSITELIB}/freevo/video/plugins
-@dirrm ${PYSITELIB}/freevo/video
-@dirrm ${PYSITELIB}/freevo/util
-@dirrm ${PYSITELIB}/freevo/tv/plugins
-@dirrm ${PYSITELIB}/freevo/tv
-@dirrm ${PYSITELIB}/freevo/skins/plugins
-@dirrm ${PYSITELIB}/freevo/skins/main
-@dirrm ${PYSITELIB}/freevo/skins
-@dirrm ${PYSITELIB}/freevo/plugins/idlebar
-@dirrm ${PYSITELIB}/freevo/plugins
-@dirrm ${PYSITELIB}/freevo/image/plugins
-@dirrm ${PYSITELIB}/freevo/image
-@dirrm ${PYSITELIB}/freevo/helpers
-@dirrm ${PYSITELIB}/freevo/gui
-@dirrm ${PYSITELIB}/freevo/games
-@dirrm ${PYSITELIB}/freevo/audio/plugins
-@dirrm ${PYSITELIB}/freevo/audio
-@dirrm ${PYSITELIB}/freevo/animation
-@dirrm ${PYSITELIB}/freevo
-@dirrm share/doc/${PKGNAME}/plugin_writing
-@dirrm share/doc/${PKGNAME}/installation
-@dirrm share/doc/${PKGNAME}
-@dirrm share/examples/freevo
+share/locale/sv/LC_MESSAGES/freevo.po
 @dirrm share/freevo/skins/plugins
 @dirrm share/freevo/skins/main
 @dirrm share/freevo/skins
+@dirrm share/freevo/images/weather/mediaportal
+@dirrm share/freevo/images/weather
 @dirrm share/freevo/images/watermarks
+@dirrm share/freevo/images/newmarks
+@dirrm share/freevo/images/mediaportal
 @dirrm share/freevo/images/gant
 @dirrm share/freevo/images/barbieri
 @dirrm share/freevo/images
@@ -1000,12 +1400,31 @@ share/locale/sv/LC_MESSAGES/freevo.mo
 @dirrm share/freevo/icons/themes/tuxntosh/mainmenu/54x54
 @dirrm share/freevo/icons/themes/tuxntosh/mainmenu
 @dirrm share/freevo/icons/themes/tuxntosh
+@dirrm share/freevo/icons/themes/mediaportal/status
+@dirrm share/freevo/icons/themes/mediaportal/popup
+@dirrm share/freevo/icons/themes/mediaportal/misc
+@dirrm share/freevo/icons/themes/mediaportal/mimetypes
+@dirrm share/freevo/icons/themes/mediaportal
 @dirrm share/freevo/icons/themes/blurr/status
 @dirrm share/freevo/icons/themes/blurr/mimetypes
 @dirrm share/freevo/icons/themes/blurr
+@dirrm share/freevo/icons/themes/bluestar/status
+@dirrm share/freevo/icons/themes/bluestar/popup
+@dirrm share/freevo/icons/themes/bluestar/mimetypes
+@dirrm share/freevo/icons/themes/bluestar
+@dirrm share/freevo/icons/themes/Rain/status
+@dirrm share/freevo/icons/themes/Rain/popup
+@dirrm share/freevo/icons/themes/Rain/misc
+@dirrm share/freevo/icons/themes/Rain/mimetypes
+@dirrm share/freevo/icons/themes/Rain
 @dirrm share/freevo/icons/themes/Noia/misc
 @dirrm share/freevo/icons/themes/Noia/mimetypes
 @dirrm share/freevo/icons/themes/Noia
+@dirrm share/freevo/icons/themes/Crystal/status
+@dirrm share/freevo/icons/themes/Crystal/popup
+@dirrm share/freevo/icons/themes/Crystal/misc
+@dirrm share/freevo/icons/themes/Crystal/mimetypes
+@dirrm share/freevo/icons/themes/Crystal
 @dirrm share/freevo/icons/themes/AquaFusion/mimetypes
 @dirrm share/freevo/icons/themes/AquaFusion
 @dirrm share/freevo/icons/themes
@@ -1028,4 +1447,27 @@ share/locale/sv/LC_MESSAGES/freevo.mo
 @dirrm share/freevo/contrib/fbcon
 @dirrm share/freevo/contrib
 @dirrm share/freevo
-@dirrm share/fxd
+@dirrm share/examples/freevo
+@dirrm share/doc/${PKGNAME}/plugin_writing
+@dirrm share/doc/${PKGNAME}/installation
+@dirrm share/doc/${PKGNAME}
+@dirrm ${PYSITELIB}/freevo/www
+@dirrm ${PYSITELIB}/freevo/video/plugins
+@dirrm ${PYSITELIB}/freevo/video
+@dirrm ${PYSITELIB}/freevo/util
+@dirrm ${PYSITELIB}/freevo/tv/plugins
+@dirrm ${PYSITELIB}/freevo/tv
+@dirrm ${PYSITELIB}/freevo/skins/plugins
+@dirrm ${PYSITELIB}/freevo/skins/main
+@dirrm ${PYSITELIB}/freevo/skins
+@dirrm ${PYSITELIB}/freevo/plugins/idlebar
+@dirrm ${PYSITELIB}/freevo/plugins
+@dirrm ${PYSITELIB}/freevo/image/plugins
+@dirrm ${PYSITELIB}/freevo/image
+@dirrm ${PYSITELIB}/freevo/helpers
+@dirrm ${PYSITELIB}/freevo/gui
+@dirrm ${PYSITELIB}/freevo/games
+@dirrm ${PYSITELIB}/freevo/audio/plugins
+@dirrm ${PYSITELIB}/freevo/audio
+@dirrm ${PYSITELIB}/freevo/animation
+@dirrm ${PYSITELIB}/freevo
