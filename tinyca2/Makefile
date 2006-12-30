@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/09/21 11:23:19 ondratu Exp $
+# $NetBSD: Makefile,v 1.3 2006/12/30 23:01:13 ondratu Exp $
 #
 
 DISTNAME=	tinyca2-0.7.5
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://tinyca.sm-zone.net/
 
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		script
 SUBST_STAGE.script=	post-patch
 SUBST_FILES.script=	tinyca2
 SUBST_SED.script=	-e "s|./lib|${CADIR}|g"
-SUBST_SED.script+=	-e "s|/usr/bin/openssl|${PREFIX}/bin/openssl|g"
+SUBST_SED.script+=	-e "s|/usr/bin/openssl|${BUILDLINK_PREFIX.openssl}/bin/openssl|g"
 SUBST_SED.script+=	-e "s|/usr/bin/zip|${PREFIX}/bin/zip|g"
 SUBST_SED.script+=	-e "s|./templates|${CADIR}/templates|g"
 SUBST_MESSAGE.script=	Fixing hardcoded paths.
