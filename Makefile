@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2465 2006/12/30 19:32:33 kristerw Exp $
+# $Id: Makefile,v 1.2466 2006/12/30 19:35:25 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -65,6 +65,7 @@ SUBDIR+=	ap2-auth-imap
 SUBDIR+=	ap2-auth-pam
 SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-evasive
+SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
@@ -189,6 +190,7 @@ SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
 SUBDIR+=	dict-est-rus
+SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
 SUBDIR+=	dictem
@@ -580,6 +582,7 @@ SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
+SUBDIR+=	javascript-mode
 SUBDIR+=	javascript-reference
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
@@ -846,6 +849,7 @@ SUBDIR+=	nrpe
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
+SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
 SUBDIR+=	oak
 SUBDIR+=	octave-nox11
@@ -1348,6 +1352,7 @@ SUBDIR+=	scsh-install-lib
 SUBDIR+=	scummvm-nightly
 SUBDIR+=	scx
 SUBDIR+=	sdd
+SUBDIR+=	sdlmame
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-bin
 SUBDIR+=	seamonkey-gtk1
@@ -1594,6 +1599,7 @@ SUBDIR+=	xmim
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
+SUBDIR+=	xmlsysinfo
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
 SUBDIR+=	xmms-pac
