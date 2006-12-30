@@ -1,2 +1,0 @@
-the tinyca2 script doesn't get the path to the openssl binary
-right. pkgsrc/security/tinyca gets this right. - HF
