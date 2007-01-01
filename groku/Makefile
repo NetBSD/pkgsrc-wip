@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2007/01/01 01:11:21 mwicks Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/01 01:19:41 mwicks Exp $
 #
 
 DISTNAME=		groku-0.1
 CATEGORIES=		audio
-MASTER_SITES=		http://www.groku.org/
+MASTER_SITES=		http://digitalssg.net/debian/
 
 MAINTAINER=		mwicks@kettering.edu
-HOMEPAGE=		http://www.groku.org/
+HOMEPAGE=		http://groku.digitalssg.net/
 COMMENT=		Groku is a GTK for controlling your Roku Soundbridge (tm)
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-# USE_TOOLS+=		gmake
 USE_LANGUAGES+=		c c++
 CFLAGS+=		-g
 
