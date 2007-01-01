@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/08/11 21:17:58 ondratu Exp $
+$NetBSD: distinfo,v 1.4 2007/01/01 13:51:40 ondratu Exp $
 
-SHA1 (planner-0.14.tar.bz2) = 4907327e9196a72ed3bee62cb3046c30487bd0b1
-RMD160 (planner-0.14.tar.bz2) = 30a5af85c872f89038f2fca4d007d6e1371543c4
-Size (planner-0.14.tar.bz2) = 3879840 bytes
+SHA1 (planner-0.14.2.tar.bz2) = 098a129662ffbe9a067cd6fa4f497b9ec1db0e3d
+RMD160 (planner-0.14.2.tar.bz2) = a3befcb640b99e3cdf1a28011075f13f9a0c96ea
+Size (planner-0.14.2.tar.bz2) = 3590698 bytes

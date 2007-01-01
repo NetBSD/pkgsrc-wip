@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/08/11 21:17:58 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/01/01 13:51:40 ondratu Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -152,6 +152,7 @@ share/gtk-doc/html/libplanner/style.css
 share/gtk-doc/html/libplanner/up.png
 share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-planner.png
 share/locale/am/LC_MESSAGES/planner.mo
+share/locale/ar/LC_MESSAGES/planner.mo
 share/locale/az/LC_MESSAGES/planner.mo
 share/locale/be/LC_MESSAGES/planner.mo
 share/locale/bg/LC_MESSAGES/planner.mo
@@ -159,6 +160,7 @@ share/locale/ca/LC_MESSAGES/planner.mo
 share/locale/cs/LC_MESSAGES/planner.mo
 share/locale/da/LC_MESSAGES/planner.mo
 share/locale/de/LC_MESSAGES/planner.mo
+share/locale/dz/LC_MESSAGES/planner.mo
 share/locale/el/LC_MESSAGES/planner.mo
 share/locale/en_CA/LC_MESSAGES/planner.mo
 share/locale/en_GB/LC_MESSAGES/planner.mo

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.15 2007/01/01 13:51:40 ondratu Exp $
 #
 
-DISTNAME=		planner-0.14
+DISTNAME=		planner-0.14.2
 
 
 CATEGORIES=		devel
