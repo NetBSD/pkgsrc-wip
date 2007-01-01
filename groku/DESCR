@@ -1,0 +1,22 @@
+Groku is a Gnome Application for controlling your Roku Soundbridge (tm)
+device. Groku can control many aspects of your Roku Soundbridge over
+a network connection.
+
+  Currently, Groku can control your Soundbridge, and make it do the
+  following things:
+
+     * Connect to a media server
+     * Connect and play Internet Radio Stations
+     * List Containers(Folders)/Songs on the media server
+     * Manage the Soundbridge's Now Playing Play-list
+       * Add to Play-list
+       * Remove from Play-list
+     * Full transport Capabilities (In near-real-time)
+       * Play, Pause, Stop, Previous, Next
+       * Shuffle
+       * Repeat (Repeat One, Repeat All)
+       * Volume Control
+       * Time Display
+     * Remote Soundbridge Display
+       Shows you what's currently being displayed on your Soundbridge
+       in near-real-time

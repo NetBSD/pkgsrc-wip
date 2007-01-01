@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/01 01:11:21 mwicks Exp $
+bin/groku
+share/applications/groku.desktop
+share/groku/groku.glade
+share/pixmaps/groku.png
+@dirrm share/groku
