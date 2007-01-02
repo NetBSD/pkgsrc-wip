@@ -16,10 +16,11 @@ Suggested package updates
 	o gambas-1.9.46
 	o gcompris-8.2.2
 	o geant-4.8.2
+	o geany-0.10
 	o gforge-4.5.11
 	o gmediaserver-0.12.0
 	o gnome-commander-1.2.2
-	o gnunet-0.7.1
+	o gnunet-0.7.1a
 	o grisbi-0.5.8
 	o gtick-0.3.10
 	o gxmms2-0.6.2
@@ -29,18 +30,22 @@ Suggested package updates
 	o mcabber-0.9.0
 	o mednafen-0.7.1
 	o mupen64-0.5
+	o ncc-2.6
 	o openct-0.6.11
+	o osmose-0.8.1
 	o parted-1.8.0
 	o planner-0.14.1
 	o py-PyPE-2.7.2
 	o qcomicbook-0.3.4
 	o rdup-0.3.5
 	o rosegarden-current-1.4.0
+	o sdlmame-0.111u1
 	o sendmailX-0.0.0.0
 	o smc-0.99.2
 	o smlnj-110.60
 	o spe-0.8.2a
 	o speex-1.2beta1
+	o subtitleeditor-0.12
 	o sxemacs-22.1.6
 	o txt2tags-2.3.2
 	o uade-2.03
