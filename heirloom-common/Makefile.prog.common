@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.prog.common,v 1.5 2006/12/20 17:08:12 cheusov Exp $
+# $NetBSD: Makefile.prog.common,v 1.6 2007/01/03 14:29:42 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -7,7 +7,7 @@ CATEGORIES?=	sysutils
 MAINTAINER=	cheusov@tut.by
 COMMENT?=	Collection of standard Unix utilities
 
-USE_TOOLS+=	yacc lex
+USE_TOOLS+=	yacc lex make
 
 MAKE_FILE=		makefile
 HLROOT?=		heirloom
@@ -62,12 +62,3 @@ MAKE_FLAGS+=	LUXRE="-luxre"
 pre-build:
 	cd ${WRKSRC} && \
 	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
-
-#pre-install:
-#	cd ${WRKSRC}/build && \
-#	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} maninst crossln
-
-#.include "../../devel/zlib/buildlink3.mk"
-#.include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../mk/curses.buildlink3.mk"
-#.include "../../mk/bsd.pkg.mk"
