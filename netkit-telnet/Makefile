@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/14 18:14:06 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/03 14:38:15 shattered Exp $
 #
 
 DISTNAME=		netkit-telnet-0.17
@@ -13,6 +13,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
 

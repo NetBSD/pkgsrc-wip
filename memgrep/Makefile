@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/03 14:38:15 shattered Exp $
 #
 
 DISTNAME=		memgrep-0.8.0
@@ -11,6 +11,7 @@ COMMENT=		Tool to modify applications on-the-fly
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/memgrep.h ${PREFIX}/include/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/03 14:38:15 shattered Exp $
 #
 
 DISTNAME=		netkit-routed-0.17
@@ -13,6 +13,7 @@ COMMENT=		Network RIP and router discovery daemon for Linux
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
 
