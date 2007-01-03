@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/10/26 11:33:42 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/03 23:56:25 shattered Exp $
 #
 
 DISTNAME=		and-1.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=and/}
 
@@ -11,7 +11,10 @@ HOMEPAGE=		http://and.sourceforge.net/
 COMMENT=		Auto nice daemon
 
 USE_TOOLS+=		gmake
+USE_LANGUAGES=		c
 BUILD_TARGET=		default
+
+.include "../../mk/bsd.prefs.mk"
 
 MYARCH=			${OPSYS}
 .if ${MYARCH} == "NetBSD"
@@ -26,7 +29,7 @@ SUBST_SED.pref=		-e s,/usr/local,${PREFIX},
 SUBST_CLASSES+=		arch
 SUBST_STAGE.arch=	pre-patch
 SUBST_FILES.arch=	Makefile
-SUBST_SED.arch=		-e s,ARCH=,ARCH=${MYARCH}\ \#,g
+SUBST_SED.arch=		-e s,ARCH=.*,ARCH=${MYARCH},g
 
 SUBST_CLASSES+=		int
 SUBST_STAGE.int=	pre-patch
