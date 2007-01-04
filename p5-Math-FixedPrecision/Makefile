@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/28 03:57:11 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/04 16:51:55 shattered Exp $
 #
 
 DISTNAME=	Math-FixedPrecision-0.21
@@ -11,7 +11,7 @@ COMMENT=	Perl module that provides decimal math without floating point errors
 
 DEPENDS+=	p5-Math-BigInteger-*:../../math/p5-Math-BigInteger
 
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Math/FixedPrecision/.packlist
+PERL5_PACKLIST= auto/Math/FixedPrecision/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

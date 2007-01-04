@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/04 16:51:55 shattered Exp $
 #
 
 DISTNAME=	Parallel-ForkManager-0.7.5
@@ -10,8 +10,7 @@ MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://search.cpan.org/~dlux/Parallel-ForkManager-0.7.5/
 COMMENT=	Simple parallel processing fork manager
 
-
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Parallel/ForkManager/.packlist
+PERL5_PACKLIST=	auto/Parallel/ForkManager/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

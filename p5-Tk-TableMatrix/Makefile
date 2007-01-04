@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/02 16:19:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/04 16:51:55 shattered Exp $
 #
 
 DISTNAME=	Tk-TableMatrix-1.1
@@ -14,7 +14,7 @@ COMMENT=	Table/Matrix widget extension to Perl/Tk
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 
 CPPFLAGS+=		-I${PERL5_SITEARCH}/Tk/pTk
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tk/TableMatrix/.packlist
+PERL5_PACKLIST=		auto/Tk/TableMatrix/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/x11.buildlink3.mk"
