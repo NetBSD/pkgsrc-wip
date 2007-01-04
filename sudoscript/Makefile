@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/13 06:45:53 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/04 17:33:15 shattered Exp $
 
 DISTNAME=	sudoscript-2.1.1
 CATEGORIES=	security
@@ -18,5 +18,6 @@ PERMIT_DISTFILES_FTP=	Yes
 
 NO_BUILD=		Yes
 USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 
 .include "../../mk/bsd.pkg.mk"
