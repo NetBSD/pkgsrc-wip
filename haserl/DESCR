@@ -1,0 +1,3 @@
+Haserl is a small cgi wrapper that enables shell scripts to be embedded into
+html documents. It is intended for environments where something like PHP is
+too big.
