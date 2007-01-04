@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2467 2007/01/03 13:59:43 shattered Exp $
+# $Id: Makefile,v 1.2468 2007/01/04 20:49:36 xmor61 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -402,6 +402,7 @@ SUBDIR+=	gxmms2
 SUBDIR+=	haddock
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
+SUBDIR+=	haserl
 SUBDIR+=	hdparm
 SUBDIR+=	heirloom-awk
 SUBDIR+=	heirloom-banner
