@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/29 21:48:05 haad Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/04 00:14:35 haad Exp $
 #
 
 DISTNAME=	xsi-0.98.29
@@ -7,7 +7,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/xmlsysinfo/
 
 MAINTAINER=	haaaad@gmail.com
 HOMEPAGE=	http://xsi.kolabore.ath.cx/
-COMMENT=	"system monitor that provides XML encoded stats"
+COMMENT=	System monitor that provides XML encoded stats
 
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=xmlsysinfo/}
 
