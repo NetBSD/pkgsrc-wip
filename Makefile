@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2468 2007/01/04 20:49:36 xmor61 Exp $
+# $Id: Makefile,v 1.2469 2007/01/05 19:41:49 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -371,6 +371,7 @@ SUBDIR+=	grass-gully
 SUBDIR+=	graveman
 SUBDIR+=	grip
 SUBDIR+=	grisbi
+SUBDIR+=	groku
 SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
@@ -1461,6 +1462,7 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-kochi-ttf
+SUBDIR+=	tftp-hpa
 SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
