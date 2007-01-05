@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/01/05 23:53:38 cheusov Exp $
+
+--- maketab.c.orig	2006-07-26 23:46:37.000000000 +0300
++++ maketab.c
+@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
+ 		}
+ 		names[tok-FIRSTTOKEN] = strdup(name);
+ 		if (names[tok-FIRSTTOKEN] == NULL) {
+-			fprintf(stderr, "maketab out of space copying %s", s);
++			fprintf(stderr, "maketab out of space copying %s", name);
+ 			continue;
+ 		}
+ 		printf("\t\"%s\",\t/* %d */\n", name, tok);

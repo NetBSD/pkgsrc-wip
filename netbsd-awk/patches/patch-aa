@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1 2007/01/05 23:53:38 cheusov Exp $
+
+--- makefile.orig	2003-08-03 01:42:00.000000000 +0300
++++ makefile
+@@ -22,15 +22,15 @@
+ # THIS SOFTWARE.
+ # ****************************************************************/
+ 
+-CFLAGS = -g
+-CFLAGS = -O2
+-CFLAGS =
+-
+-CC = gcc -Wall -g -Wwrite-strings
+-CC = gcc -Wall -g
+-CC = /opt/SUNWspro/bin/cc
+-CC = /opt/pure/purify/purify cc
+-CC = cc
++#CFLAGS = -g
++#CFLAGS = -O2
++#CFLAGS =
++
++#CC = gcc -Wall -g -Wwrite-strings
++#CC = gcc -Wall -g
++#CC = /opt/SUNWspro/bin/cc
++#CC = /opt/pure/purify/purify cc
++#CC = cc
+ 
+ YACC = bison -y
+ YACC = yacc
+@@ -38,7 +38,7 @@ YFLAGS = -d
+ 
+ OFILES = b.o main.o parse.o proctab.o tran.o lib.o run.o lex.o
+ 
+-SOURCE = awk.h ytab.c ytab.h proto.h awkgram.y lex.c b.c main.c \
++SOURCE = awk.h awkgram.c awkgram.h proto.h awkgram.y lex.c b.c main.c \
+ 	maketab.c parse.c lib.c run.c tran.c proctab.c missing95.c
+ 
+ LISTING = awk.h proto.h awkgram.y lex.c b.c main.c maketab.c parse.c \
+@@ -47,21 +47,21 @@ LISTING = awk.h proto.h awkgram.y lex.c 
+ SHIP = README FIXES $(SOURCE) ytab[ch].bak makefile makefile.win \
+ 	vcvars32.bat buildwin.bat mac.code awk.1
+ 
+-a.out:	ytab.o $(OFILES)
+-	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm
++a.out:	awkgram.o $(OFILES)
++	$(CC) $(CFLAGS) awkgram.o $(OFILES) $(ALLOC)  -lm
+ 
+-$(OFILES):	awk.h ytab.h proto.h
++$(OFILES):	awk.h awkgram.h proto.h
+ 
+-ytab.o:	awk.h proto.h awkgram.y
++awkgram.o:	awk.h proto.h awkgram.y
+ 	$(YACC) $(YFLAGS) awkgram.y
+-	mv y.tab.c ytab.c
+-	mv y.tab.h ytab.h
+-	$(CC) $(CFLAGS) -c ytab.c
++	mv y.tab.c awkgram.c
++	mv y.tab.h awkgram.h
++	$(CC) $(CFLAGS) -c awkgram.c
+ 
+ proctab.c:	maketab
+ 	./maketab >proctab.c
+ 
+-maketab:	ytab.h maketab.c
++maketab:	awkgram.h maketab.c
+ 	$(CC) $(CFLAGS) maketab.c -o maketab
+ 
+ bundle:
