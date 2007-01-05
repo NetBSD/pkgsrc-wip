@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2007/01/05 22:08:37 cheusov Exp $
+
+SHA1 (netbsd-bsdgrep-20070105.tar.bz2) = 0bfe0d085a098dcd8b48206575f5bf56b079d330
+RMD160 (netbsd-bsdgrep-20070105.tar.bz2) = 5289d36b4b1f5efcdb120976eab4822e250973b5
+Size (netbsd-bsdgrep-20070105.tar.bz2) = 13158 bytes
+SHA1 (patch-aa) = 8b5253d465fe1ba92f64083105a6893b17e6099b
