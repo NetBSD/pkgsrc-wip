@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2003/06/11 10:01:18 cubidou Exp $
+$NetBSD: distinfo,v 1.3 2007/01/06 23:28:06 shattered Exp $
 
-SHA1 (directory_administrator-1.5.tar.gz) = ee4e6f846268687828d18faf9c4b3fe5639d2a58
-Size (directory_administrator-1.5.tar.gz) = 457829 bytes
-SHA1 (patch-aa) = a740e190227c0fa556f5de0f0e166528b869c1b1
-SHA1 (patch-ab) = 40057dbe4952201fa73736b9a194104b0609b17e
-SHA1 (patch-ac) = 0771aab890bbe7b02c92bc20340982d426846442
-SHA1 (patch-ad) = e7ff170b2ae26f83771d2fe6e5ad7173f86bfd52
+SHA1 (directory_administrator-1.7.1.tar.gz) = 458b8e7764dde1729abe03ecb8f9b0dcc4de11ec
+RMD160 (directory_administrator-1.7.1.tar.gz) = fad58e822bf90e2864e72506defbb5572aaad318
+Size (directory_administrator-1.7.1.tar.gz) = 473157 bytes
+SHA1 (patch-ac) = 600515a3313b5751afbe918f550ad467bf8238e5
+SHA1 (patch-ad) = 4b65bef5e8147e7eb2d37a7dd456b70aaafeffeb
 SHA1 (patch-ae) = ef388dbbfd7105a7118d92d5be63009b16995d6a

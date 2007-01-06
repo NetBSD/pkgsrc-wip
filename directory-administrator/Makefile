@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/07/20 20:06:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/06 23:28:06 shattered Exp $
 #
 
-DISTNAME=	directory_administrator-1.5
+DISTNAME=	directory_administrator-1.7.1
 PKGNAME=	${DISTNAME:C/_/-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://diradmin.open-it.org/
+MASTER_SITES=	http://diradmin.open-it.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://diradmin.open-it.org/
