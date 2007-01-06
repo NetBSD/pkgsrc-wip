@@ -1,0 +1,82 @@
+$NetBSD: patch-ah,v 1.3 2007/01/06 09:17:49 obache Exp $
+
+--- threadutil/inc/ithread.h.orig	2006-07-31 14:33:05.000000000 +0900
++++ threadutil/inc/ithread.h
+@@ -47,9 +47,9 @@ extern "C" {
+  #include <unistd.h>
+ #endif
+ 
+-#define ITHREAD_MUTEX_FAST_NP PTHREAD_MUTEX_FAST_NP
+-#define ITHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE_NP
+-#define ITHREAD_MUTEX_ERRORCHECK_NP PTHREAD_MUTEX_ERRORCHECK_NP
++#define ITHREAD_MUTEX_NORMAL PTHREAD_MUTEX_NORMAL
++#define ITHREAD_MUTEX_RECURSIVE PTHREAD_MUTEX_RECURSIVE
++#define ITHREAD_MUTEX_ERRORCHECK PTHREAD_MUTEX_ERRORCHECK
+ #define ITHREAD_CANCELED PTHREAD_CANCELED
+   
+   
+@@ -163,47 +163,47 @@ extern "C" {
+   
+   
+ /****************************************************************************
+- * Function: ithread_mutexattr_setkind_np
++ * Function: ithread_mutexattr_settype
+  *
+  *  Description:
+  *      Sets the mutex type in the attribute.
+- *      Valid types are: ITHREAD_MUTEX_FAST_NP 
+- *                       ITHREAD_MUTEX_RECURSIVE_NP 
+- *                       ITHREAD_MUTEX_ERRORCHECK_NP
++ *      Valid types are: ITHREAD_MUTEX_NORMAL
++ *                       ITHREAD_MUTEX_RECURSIVE 
++ *                       ITHREAD_MUTEX_ERRORCHECK
+  *
+  *  Parameters:
+  *      ithread_mutexattr_t * mutex (must be valid non NULL pointer to 
+  *                                   ithread_mutexattr_t)
+- *      int kind (one of ITHREAD_MUTEX_FAST_NP or ITHREAD_MUTEX_RECURSIVE_NP
+- *                or ITHREAD_MUTEX_ERRORCHECK_NP)
++ *      int kind (one of ITHREAD_MUTEX_NORMAL or ITHREAD_MUTEX_RECURSIVE
++ *                or ITHREAD_MUTEX_ERRORCHECK)
+  *  Returns:
+  *      0 on success. Nonzero on failure.
+- *      Returns EINVAL if the kind is not supported.
+- *      See man page for pthread_mutexattr_setkind_np
++ *      Returns EINVAL if the type is not supported.
++ *      See man page for pthread_mutexattr_settype
+  *****************************************************************************/
+-#define ithread_mutexattr_setkind_np pthread_mutexattr_setkind_np
++#define ithread_mutexattr_settype pthread_mutexattr_settype
+ 
+ 
+ /****************************************************************************
+- * Function: ithread_mutexattr_getkind_np
++ * Function: ithread_mutexattr_gettype
+  *
+  *  Description:
+  *      Gets the mutex type in the attribute.
+- *      Valid types are: ITHREAD_MUTEX_FAST_NP 
+- *                       ITHREAD_MUTEX_RECURSIVE_NP 
+- *                       ITHREAD_MUTEX_ERRORCHECK_NP
++ *      Valid types are: ITHREAD_MUTEX_NORMAL
++ *                       ITHREAD_MUTEX_RECURSIVE
++ *                       ITHREAD_MUTEX_ERRORCHECK
+  *
+  *  Parameters:
+  *      ithread_mutexattr_t * mutex (must be valid non NULL pointer to 
+  *                                   pthread_mutexattr_t)
+- *      int *kind (one of ITHREAD_MUTEX_FAST_NP or ITHREAD_MUTEX_RECURSIVE_NP
+- *                or ITHREAD_MUTEX_ERRORCHECK_NP)
++ *      int *kind (one of ITHREAD_MUTEX_NORMAL or ITHREAD_MUTEX_RECURSIVE
++ *                or ITHREAD_MUTEX_ERRORCHECK)
+  *  Returns:
+  *      0 on success. Nonzero on failure.
+  *      Always returns 0.
+- *      See man page for pthread_mutexattr_getkind_np
++ *      See man page for pthread_mutexattr_gettype
+  *****************************************************************************/
+-#define ithread_mutexattr_getkind_np pthread_mutexattr_getkind_np
++#define ithread_mutexattr_gettype pthread_mutexattr_gettype
+ 
+   
+ /****************************************************************************
