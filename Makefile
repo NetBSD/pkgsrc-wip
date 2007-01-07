@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2470 2007/01/07 19:36:06 koifren Exp $
+# $Id: Makefile,v 1.2471 2007/01/07 20:04:13 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -831,6 +831,9 @@ SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	net6
+SUBDIR+=	netbsd-awk
+SUBDIR+=	netbsd-bsdgrep
+SUBDIR+=	netbsd-m4
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
@@ -920,6 +923,7 @@ SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-B-Keywords
+SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Application-Plugin-TT
@@ -1007,6 +1011,7 @@ SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
+SUBDIR+=	p5-GTop
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-CalendarMonthSimple
