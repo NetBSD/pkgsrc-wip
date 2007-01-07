@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:13:10 tvierling Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 21:03:13 shattered Exp $
 #
 
 DISTNAME=	idled-1.16
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.darkwing.com/idled/download/
+MASTER_SITES=	http://www.netsw.org/system/tools/process/
 
 MAINTAINER=	tmarc@NetBSD.org.pl
-HOMEPAGE=	http://www.darkwing.com/idled/
+HOMEPAGE=	http://web.archive.org/web/2/http://www.darkwing.com/idled/
 COMMENT=	Daemon that logs out idle users
-
 
 post-extract:
 	${RM} -f ${WRKSRC}/parse.c ${WRKSRC}/scan.c
