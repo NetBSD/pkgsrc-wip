@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/19 21:42:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 13:40:37 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -14,7 +14,7 @@ INSTALLATION_DIRS=	include/uxre share/doc/${PKGBASE}
 
 pre-build:
 	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
+	env ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
 
 DOC_FILES=	NOTES COPYING.LGPL
 DOC_DIR=	${PREFIX}/share/doc/${PKGBASE}
@@ -23,16 +23,17 @@ SRCFILES=	onefile    regfree    regerror    btowc
 LOFILES=	onefile.lo regfree.lo regerror.lo btowc.lo
 
 do-build:
-	cd ${WRKSRC}/libuxre || exit 1; \
+	set -e; \
+	cd ${WRKSRC}/libuxre; \
 	for i in ${SRCFILES}; do \
-	   libtool --mode=compile \
-	      ${CC} -o $${i}.o -c ${CFLAGS} -I. $${i}.c || exit 2; \
+	   ${LIBTOOL} --mode=compile \
+	      ${CC} -o "$${i}".o -c ${CFLAGS} -I. "$${i}".c; \
 	done; \
-	libtool --mode=link ${CC} -o libuxre.la \
+	${LIBTOOL} --mode=link ${CC} -o libuxre.la \
 	   -rpath ${PREFIX}/lib -version-info 0:0 ${LOFILES}
 
 do-install:
-	libtool ${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.la ${PREFIX}/lib
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.la ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libuxre/regex.h ${PREFIX}/include/uxre
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/libuxre/"${i}" ${DOC_DIR}
