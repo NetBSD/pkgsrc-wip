@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/10/27 20:54:28 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 19:46:50 shattered Exp $
 #
 
-DISTNAME=		gnokii-0.6.13
+DISTNAME=		gnokii-0.6.14
 CATEGORIES=		comms
 MASTER_SITES=		http://www.gnokii.org/download/gnokii/ \
 			http://www.gnokii.org/download/gnokii/0.6.x/ \

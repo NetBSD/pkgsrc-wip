@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2007/01/07 19:46:50 shattered Exp $
+
+--- include/misc.h.orig	2006-08-27 22:36:54.000000000 +0000
++++ include/misc.h
+@@ -36,6 +36,9 @@
+ 
+ #include <stdio.h>
+ #include <sys/types.h>
++#ifdef HAVE_LIMITS_H
++#  include <limits.h>
++#endif
+ 
+ #include "config.h"
+ #include "compat.h"

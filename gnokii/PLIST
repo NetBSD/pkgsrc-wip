@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/06 18:52:01 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/07 19:46:50 shattered Exp $
 bin/gnokii
 bin/ppm2nokia
 bin/sendsms
 bin/todologo
+bin/waitcall
 include/gnokii.h
 include/gnokii/bitmaps.h
 include/gnokii/call.h
@@ -16,6 +17,7 @@ include/gnokii/rlp-common.h
 include/gnokii/sms.h
 include/gnokii/statemachine.h
 include/gnokii/virtmodem.h
+include/gnokii/wappush.h
 lib/libgnokii.la
 lib/pkgconfig/gnokii.pc
 sbin/gnokiid
