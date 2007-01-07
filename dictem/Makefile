@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/22 13:22:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/07 13:32:02 cheusov Exp $
 
 DISTNAME=		dictem-0.81
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -17,17 +17,18 @@ DEPENDS+=		dict-client>=1.9.14:../../textproc/dict-client
 SRCS=			dictem.el
 DOCS=			README NEWS COPYING ChangeLog
 
+INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EMACS_LISPPREFIX:Q}
+
 do-build:
-	for f in ${SRCS}; do						\
-		${EMACS_BIN:Q} --no-init-file --no-site-file -batch	\
-			-f batch-byte-compile ${WRKSRC}/$$f;		\
-	done
+.for f in ${SRCS}
+	${EMACS_BIN:Q} --no-init-file --no-site-file -batch	\
+		-f batch-byte-compile ${WRKSRC}/${f}
+.endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX:Q};			\
+	set -e; \
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${EMACS_LISPPREFIX:Q};				\
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE};		\
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS}				\
 			${PREFIX}/share/doc/${PKGBASE}
 
