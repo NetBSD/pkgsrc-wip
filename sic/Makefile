@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/11/16 14:06:09 kh-p Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:16:00 rillig Exp $
 
 DISTNAME=		sic-0.6
 CATEGORIES=		chat
@@ -13,6 +13,6 @@ NO_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sic ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/sic.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/sic.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

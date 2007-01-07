@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:16:00 rillig Exp $
 #
 
 DISTNAME=		mpgedit_0-7p2beta_src
@@ -18,7 +18,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xmpgedit
 	cd ${WRKSRC} && for f in mpgedit.1 xmpgedit.1 decoder.so.1 mp3decoder.sh.1 \
 		scramble_times.pl.1 scramble.pl.1 unscramble.pl.1; do \
-		${INSTALL_MAN} $$f ${PREFIX}/man/man1; \
+		${INSTALL_MAN} $$f ${PREFIX}/${PKGMANDIR}/man1; \
 	done; \
 	for f in libdecoder_mpg123.so libdecoder_popen.so libmpglib_mpgedit.so; do \
 		${INSTALL_DATA} $$f ${PREFIX}/lib; \

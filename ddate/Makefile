@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/01 12:39:01 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/07 09:16:00 rillig Exp $
 
 DISTNAME=	ddate
 PKGNAME=	ddate-19950925
@@ -15,6 +15,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ddate ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/ddate.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/ddate.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

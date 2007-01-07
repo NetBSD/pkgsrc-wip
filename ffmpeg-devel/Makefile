@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/03 22:21:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:16:00 rillig Exp $
 
 DISTNAME=	ffmpeg-0.4.9-pre1
 PKGNAME=	ffmpeg-devel-0.4.9pre1
@@ -43,8 +43,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
 		${PREFIX}/share/examples/ffmpeg
 	# ffplay not installed
-	if [ -f ${PREFIX}/man/man1/ffplay.1 ]; then \
-	${RM} ${PREFIX}/man/man1/ffplay.1 ; \
+	if [ -f ${PREFIX}/${PKGMANDIR}/man1/ffplay.1 ]; then \
+	${RM} ${PREFIX}/${PKGMANDIR}/man1/ffplay.1 ; \
 	fi
 	${INSTALL_DATA} ${WRKSRC}/libavcodec/libpostproc/postprocess.h \
 		${PREFIX}/include/ffmpeg/libpostproc

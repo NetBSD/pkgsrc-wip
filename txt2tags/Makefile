@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/31 20:08:27 dbolgheroni Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 09:16:00 rillig Exp $
 
 DISTNAME=			txt2tags-2.3
 CATEGORIES=			textproc
@@ -23,7 +23,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/*.* ${SAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/img/*.* ${SAMPLES_DIR}/img
-	${INSTALL_MAN} ${WRKSRC}/doc/manpage.man ${PREFIX}/man/man1/txt2tags.1
+	${INSTALL_MAN} ${WRKSRC}/doc/manpage.man ${PREFIX}/${PKGMANDIR}/man1/txt2tags.1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

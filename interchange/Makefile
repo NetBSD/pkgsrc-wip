@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2007/01/07 09:16:00 rillig Exp $
 #
 
 DISTNAME=	interchange-5.2.1
@@ -67,8 +67,8 @@ do-configure:
 		rpmbuilddir=${WRKSRC} \
 		INTERCHANGE_USER=${INTERCHANGE_USER} \
 		PREFIX=${INTERCHANGE_DIR} \
-		INSTALLMAN1DIR=${PREFIX}/man/man1 \
-		INSTALLMAN3DIR=${PREFIX}/man/man8 \
+		INSTALLMAN1DIR=${PREFIX}/${PKGMANDIR}/man1 \
+		INSTALLMAN3DIR=${PREFIX}/${PKGMANDIR}/man8 \
 		INSTALLBIN=${PREFIX}/bin \
 		link_file=/var/run/interchange/socket \
 		force=1

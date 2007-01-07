@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/09/02 12:32:17 scode Exp $
+# $NetBSD: Makefile,v 1.19 2007/01/07 09:16:00 rillig Exp $
 #
 
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
@@ -73,6 +73,6 @@ do-install:
 	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmanager.fas ${PKGMGR_LIBDIR}/pkgmanager.fas
 	${INSTALL_SCRIPT} ${PKGMGR_SRC:Q}/pkgmanager-wrapper.sh \
 		${PKGMGR_BINDIR}/pkgmanager
-	${INSTALL_MAN} ${PKGMGR_SRC:Q}/pkgmanager.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${PKGMGR_SRC:Q}/pkgmanager.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

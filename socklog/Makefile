@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 09:16:00 rillig Exp $
 
 DISTNAME=	socklog-2.1.0
 CATEGORIES=	sysutils
@@ -23,8 +23,8 @@ SYS_CMDS=	${CMDDIR}/socklog ${CMDDIR}/socklog-check ${CMDDIR}/socklog-conf
 do-install:
 	${INSTALL_PROGRAM} ${USER_CMDS} ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${SYS_CMDS} ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA_DIR} ${PKGDOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${PKGDOCDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/12/03 18:55:00 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/07 09:16:00 rillig Exp $
 #
 
 DISTNAME=	endeavour-2.7.3
@@ -48,7 +48,7 @@ SUBST_FILES.inst=	endeavour2/download.front/Makefile \
 SUBST_SED.inst=		-e "s|/usr|${PREFIX}|g"
 
 # ${PREFIX}/${PKGMANDIR} is preferred, but endeavour doesnt use it
-END_MAN_DIR=	${PREFIX}/man/man1
+END_MAN_DIR=	${PREFIX}/${PKGMANDIR}/man1
 
 do-configure:
 	cd ${WRKSRC} && ./configure UNIX --prefix=${PREFIX}
