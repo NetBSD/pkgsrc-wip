@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/10/12 21:13:41 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/07 11:18:24 koifren Exp $
 
-DISTNAME=	ldp-0.1
+DISTNAME=	ldp-0.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ldp/}
 
@@ -11,6 +11,8 @@ COMMENT=	Label Distribution Protocol Daemon
 WRKSRC=		${WRKDIR}/ldp
 
 BUILD_TARGET=	# empty
+
+.include "options.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ldpd ${PREFIX}/bin
