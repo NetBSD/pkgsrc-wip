@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/15 22:26:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/07 13:55:49 cheusov Exp $
 
 DISTNAME=	eng-fra
 PKGNAME=	dict-freedict-${DISTNAME}-0.0.3
@@ -27,10 +27,10 @@ FILES=		${DICTNAME}.index ${DICTNAME}.dict.dz
 do-build:
 	cd ${WRKSRC} && \
 	gzip -dc ${DICTSRCNAME}.dict.dz > ${DICTSRCNAME}.dict && \
-	dictunformat ${DICTSRCNAME}.index \
+	${LOCALBASE}/bin/dictunformat ${DICTSRCNAME}.index \
 		< ${DICTSRCNAME}.dict > dict.c5 && \
-	dictfmt -t --utf8 ${DICTNAME} < dict.c5 && \
-	dictzip ${DICTNAME}.dict
+	${LOCALBASE}/bin/dictfmt -t --utf8 ${DICTNAME} < dict.c5 && \
+	${LOCALBASE}/bin/dictzip ${DICTNAME}.dict
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${FILES} ${DICTD_DB_DIR}
