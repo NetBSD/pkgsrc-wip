@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/06 20:24:20 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 14:15:40 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -23,28 +23,31 @@ BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils
 
 WRKSRC=		${WRKDIR}/mueller7/usr/local/share/dict
 
-USE_TOOLS+=	gsed perl tar #gfmt is unfortunately not supported
+USE_TOOLS+=	gsed perl tar bzip2 #gfmt is unfortunately not supported
+
+INSTALLATION_DIRS+=	share/dictd
 
 pre-configure:
 	cp files/mueller2utf8 files/to-dict ${WRKSRC}
 
 do-extract:
-	mkdir ${WRKDIR}/mueller7
-	cd ${WRKDIR}/mueller7 && \
-	bzip2 -dc ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | tar -xf -
+	set -e; \
+	mkdir ${WRKDIR}/mueller7; \
+	cd ${WRKDIR}/mueller7; \
+	bzip2 -dc ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >${WRKDIR}/1.tar; \
+	tar -xf ${WRKDIR}/1.tar
 
 do-build:
 	cd ${WRKSRC} && \
 	sh to-dict --src-data Mueller7GPL.koi mueller7.data > /dev/null && \
 	perl mueller2utf8 < mueller7.data > tmp_1 && \
-	dictfmt --utf8 -p --columns 0 \
+	${LOCALBASE}/bin/dictfmt --utf8 -p --columns 0 \
 		-s 'Mueller English-Russian Dictionary' \
 		-u 'http://www.chat.ru/~mueller_dic' \
 		--headword-separator ', ' mueller7 < tmp_1 && \
-	dictzip *.dict
+	${LOCALBASE}/bin/dictzip *.dict
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd && \
 	${INSTALL_DATA} ${WRKSRC}/*.dict.dz ${WRKSRC}/*.index \
 		${PREFIX}/share/dictd
 
