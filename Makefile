@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2469 2007/01/05 19:41:49 kristerw Exp $
+# $Id: Makefile,v 1.2470 2007/01/07 19:36:06 koifren Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -211,6 +211,7 @@ SUBDIR+=	dvbsnoop
 SUBDIR+=	dwepcrack
 SUBDIR+=	dwm
 SUBDIR+=	dxmake
+SUBDIR+=	dynamips
 SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
 SUBDIR+=	e16menuedit
