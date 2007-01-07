@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/07 14:38:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 14:09:06 cheusov Exp $
 
 DISTNAME=	rxspencer-alpha3.8.g3
 PKGNAME=	librxspencer-3.8.3
@@ -18,10 +18,12 @@ TEST_TARGET=		check
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
+INSTALLATION_DIRS+=	${DOCDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} && \
+	set -e; \
 	for i in COPYRIGHT INSTALL README WHATSNEW; do \
-		${INSTALL_DATA} ${WRKSRC}/$${i} ${DOCDIR} || exit 1; \
+		${INSTALL_DATA} ${WRKSRC}/"$${i}" ${DOCDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
