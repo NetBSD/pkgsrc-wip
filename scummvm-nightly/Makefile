@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/11 07:24:08 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/07 22:26:41 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -18,7 +18,6 @@ USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=--enable-lure
-CONFIGURE_ARGS+=--enable-agi
 USE_DIRS+=	xdg-1.1
 WRKSRC=		${WRKDIR}/scummvm
 
