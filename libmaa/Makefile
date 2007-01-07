@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/11/18 17:13:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/07 13:48:10 cheusov Exp $
 
-PKGNAME=	libmaa-0.990
 DISTNAME=	dictd-1.10.7
+PKGNAME=	libmaa-0.990
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
-# $NetBSD: Makefile,v 1.2 2006/11/18 17:13:01 cheusov Exp $
-
 COMMENT=	Library that provides many low-level data structures
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/libmaa
