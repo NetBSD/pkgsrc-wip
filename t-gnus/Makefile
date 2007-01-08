@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/04/08 22:14:06 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/08 01:05:27 shattered Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
 CATEGORIES=	mail
 FETCH_CMD=	${FILESDIR}/fetch.sh
 
 MAINTAINER=	carton@Ivy.NET
-HOMEPAGE=	http://www.gnus.org/
+HOMEPAGE=	http://gnus.org/
 COMMENT=	Gnus is a flexible message reader running under GNU Emacs
 
 DEPENDS+=	semi>=1.14.6:../../devel/semi

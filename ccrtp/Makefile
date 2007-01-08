@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/16 10:14:26 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/08 01:05:26 shattered Exp $
 #
 
 DISTNAME=		ccrtp-1.3.5
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnutelephony/}
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://gnutelephony.sourceforge.net/
+HOMEPAGE=		http://wiki.gnutelephony.org/
 COMMENT=		RTP and RTSP protocol implementation using GNU CommonCpp
 
 USE_PKGLOCALEDIR=	yes
