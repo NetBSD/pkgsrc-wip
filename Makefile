@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2471 2007/01/07 20:04:13 kristerw Exp $
+# $Id: Makefile,v 1.2472 2007/01/08 19:05:39 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1636,6 +1636,7 @@ SUBDIR+=	xyssl
 SUBDIR+=	yabause
 SUBDIR+=	yafray
 SUBDIR+=	yaws
+SUBDIR+=	yougrabber
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
