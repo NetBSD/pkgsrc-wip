@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/08 01:03:29 shattered Exp $
 #
 
 DISTNAME=		sysstat-6.0.1
@@ -11,6 +11,7 @@ COMMENT=		System performance tools for Linux
 
 USE_TOOLS+=		gmake
 # uses msgfmt
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 MAKE_ENV+=		SA_DIR=${VARBASE}/log/sa
 MAKE_ENV+=		SA_LIB_DIR=${PREFIX}/libexec/sa
