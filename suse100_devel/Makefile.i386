@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.i386,v 1.2 2007/01/08 16:52:49 hfath Exp $
+# $NetBSD: Makefile.i386,v 1.3 2007/01/08 16:55:55 hfath Exp $
 
 RPMFILES= \
 		binutils-2.16.91.0.2-8.2.${SUSE_ARCH}.rpm \
@@ -6,11 +6,11 @@ RPMFILES= \
 		gcc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		gcc-c++-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		gcc-fortran-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
-		gmp-4.1.4-6.i586.rpm \
+		gmp-4.1.4-6.${SUSE_ARCH}.rpm \
 		gcc-locale-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		gcc-mudflap-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		gcc-objc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		make-3.80-188.${SUSE_ARCH}.rpm \
 		glibc-devel-2.3.5-40.${SUSE_ARCH}.rpm \
-		libstdc++-devel-4.0.2_20050901-3.i586.rpm \
+		libstdc++-devel-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 		libobjc-4.0.2_20050901-3.${SUSE_ARCH}.rpm
