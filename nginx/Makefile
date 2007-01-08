@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/08 17:12:29 neimal Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/08 21:29:10 neimal Exp $
 #
 
 DISTNAME=		nginx-0.5.5
@@ -17,6 +17,7 @@ PKG_SYSCONFSUBDIR=	nginx
 
 BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
 
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
 CONFIGURE_ARGS+=	--pid-path=${VARBASE}/run/nginx.pid
