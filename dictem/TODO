@@ -1,4 +1,0 @@
-NOTE: Makefile:16: Alignment of variable values should be done with tabs, not spaces.
-WARN: Makefile:2: Empty line expected.
-WARN: PLIST:3: share/doc/dictem/NEWS should be sorted before share/doc/dictem/README.
-WARN: PLIST:4: share/doc/dictem/COPYING should be sorted before share/doc/dictem/NEWS.
