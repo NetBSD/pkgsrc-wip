@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2007/01/05 23:53:38 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/09 08:39:45 cheusov Exp $
 
---- makefile.orig	2003-08-03 01:42:00.000000000 +0300
+--- makefile.orig	2006-07-26 00:25:55.000000000 +0300
 +++ makefile
 @@ -22,15 +22,15 @@
  # THIS SOFTWARE.
@@ -36,14 +36,14 @@ $NetBSD: patch-aa,v 1.1 2007/01/05 23:53:38 cheusov Exp $
  	maketab.c parse.c lib.c run.c tran.c proctab.c missing95.c
  
  LISTING = awk.h proto.h awkgram.y lex.c b.c main.c maketab.c parse.c \
-@@ -47,21 +47,21 @@ LISTING = awk.h proto.h awkgram.y lex.c 
+@@ -47,22 +47,22 @@ LISTING = awk.h proto.h awkgram.y lex.c 
  SHIP = README FIXES $(SOURCE) ytab[ch].bak makefile makefile.win \
  	vcvars32.bat buildwin.bat mac.code awk.1
  
 -a.out:	ytab.o $(OFILES)
 -	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm
 +a.out:	awkgram.o $(OFILES)
-+	$(CC) $(CFLAGS) awkgram.o $(OFILES) $(ALLOC)  -lm
++	$(CC) $(CFLAGS) awkgram.o $(OFILES) $(ALLOC) $(LDFLAGS) -lm
  
 -$(OFILES):	awk.h ytab.h proto.h
 +$(OFILES):	awk.h awkgram.h proto.h
@@ -62,7 +62,9 @@ $NetBSD: patch-aa,v 1.1 2007/01/05 23:53:38 cheusov Exp $
  	./maketab >proctab.c
  
 -maketab:	ytab.h maketab.c
+-	$(CC) $(CFLAGS) maketab.c -o maketab
 +maketab:	awkgram.h maketab.c
- 	$(CC) $(CFLAGS) maketab.c -o maketab
++	$(CC) $(CFLAGS) maketab.c -o maketab $(LDFLAGS)
  
  bundle:
+ 	@cp ytab.h ytabh.bak
