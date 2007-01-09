@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2472 2007/01/08 19:05:39 shattered Exp $
+# $Id: Makefile,v 1.2473 2007/01/09 16:02:25 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1176,9 +1176,7 @@ SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
-SUBDIR+=	postgis74
 SUBDIR+=	postgresql-uniqueidentifier
-SUBDIR+=	postgresql74-postgis
 SUBDIR+=	postgresql80-postgis
 SUBDIR+=	postoffice
 SUBDIR+=	powerdns-recursor
