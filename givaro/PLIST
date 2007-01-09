@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/25 15:13:50 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/09 15:25:34 emil_s Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -60,6 +60,7 @@ include/givaro/givperf.h
 include/givaro/givpointer.h
 include/givaro/givpoly1.h
 include/givaro/givpoly1addsub.inl
+include/givaro/givpoly1axpy.inl
 include/givaro/givpoly1cstor.inl
 include/givaro/givpoly1cyclo.inl
 include/givaro/givpoly1dense.h
@@ -116,6 +117,7 @@ include/gmp++/gmp++_int.h
 include/gmp++/gmp++_int.inl
 lib/libgivaro.la
 share/examples/givaro/FiniteField/ChineseRemaindering.C
+share/examples/givaro/FiniteField/GF128.C
 share/examples/givaro/FiniteField/Test_Extension.C
 share/examples/givaro/FiniteField/all_field.C
 share/examples/givaro/FiniteField/domain_to_operatorstyle.C
