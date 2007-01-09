@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/21 14:26:07 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/09 18:33:18 bartoszkuzma Exp $
 #
 
-DISTNAME=		smtp-gated-1.4.14-rc1
+DISTNAME=		smtp-gated-1.4.15.1
 PKGNAME=		${DISTNAME:S/-rc/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		http://smtp-proxy.klolik.org/files/
@@ -37,16 +37,12 @@ CONF_FILES=		${EGDIR}/smtp-gated.conf \
 			${PKG_SYSCONFDIR}/smtp-gated.conf
 RCD_SCRIPTS=		smtp_gated
 
-USE_TOOLS+=		aclocal autoconf autoheader automake
+USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-nat
 
 post-extract:
 	${CP} ${FILESDIR}/smtp-gated.conf ${WRKDIR}
-
-pre-configure:
-	cd ${WRKSRC}; aclocal; autoheader; automake -a --foreign -i; autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
