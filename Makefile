@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2473 2007/01/09 16:02:25 absd Exp $
+# $Id: Makefile,v 1.2474 2007/01/10 14:55:28 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -193,7 +193,6 @@ SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
-SUBDIR+=	dictem
 SUBDIR+=	ding
 SUBDIR+=	directfb
 SUBDIR+=	directory-administrator
