@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2007/01/10 11:08:46 emil_s Exp $
+
+--- distrib/prep-bin-dist-mingw.orig	2004-10-27 11:29:15.000000000 +0000
++++ distrib/prep-bin-dist-mingw
+@@ -27,16 +27,16 @@
+ #    - gcc_version -- what gcc version your mingw tree uses.
+ #
+ #
+-if [ "x${old_ghc_top}" == "x" ]; then
++if [ "x${old_ghc_top}" = "x" ]; then
+     export old_ghc_top=c:/ghc/ghc-6.2.1
+ fi
+-if [ "x${mingw_top}" == "x" ]; then
++if [ "x${mingw_top}" = "x" ]; then
+  export mingw_top=c:/mingw3
+ fi
+ 
+ # The gcc-lib directory of the mingw tree you want to
+ # include with the binary dist.
+-if [ "x${gcc_version}" == "x" ]; then
++if [ "x${gcc_version}" = "x" ]; then
+   # The default (with mingw3)
+   export gcc_lib=$mingw_top/lib/gcc-lib/mingw32/3.2.3
+ else
