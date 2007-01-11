@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2007/01/11 15:59:17 bartoszkuzma Exp $
+
+--- Makefile.am.orig	2006-06-14 04:19:18.000000000 +0200
++++ Makefile.am
+@@ -2,7 +2,7 @@
+ # Makefile.am 
+ # -----------------------------------------------------
+ 
+-SUBDIRS = src pixmaps po hildon
++SUBDIRS = src pixmaps po # hildon
+ 
+ if USE_HILDON
+ 
