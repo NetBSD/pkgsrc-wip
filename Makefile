@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2474 2007/01/10 14:55:28 obache Exp $
+# $Id: Makefile,v 1.2475 2007/01/12 05:04:28 geeohgeegeeoh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -864,6 +864,8 @@ SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
+SUBDIR+=	openbgpd
+SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openca
 SUBDIR+=	openct
 SUBDIR+=	opendchub
