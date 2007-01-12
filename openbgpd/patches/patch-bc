@@ -1,0 +1,35 @@
+--- bgpd/mrt.c.orig	2006-02-09 00:49:58.000000000 +1000
++++ bgpd/mrt.c	2007-01-07 14:02:34.000000000 +1000
+@@ -114,8 +114,8 @@
+ 		return (-1);
+ 	}
+ 
+-	DUMP_SHORT(buf, bgp->as);
+-	DUMP_SHORT(buf, peer->conf.remote_as);
++	DUMP_LONG(buf, bgp->as);
++	DUMP_LONG(buf, peer->conf.remote_as);
+ 	DUMP_SHORT(buf, /* ifindex */ 0);
+ 	switch (peer->sa_local.ss_family) {
+ 	case AF_INET:
+@@ -181,8 +181,8 @@
+ 		return (-1);
+ 	}
+ 
+-	DUMP_SHORT(buf, bgp->as);
+-	DUMP_SHORT(buf, peer->conf.remote_as);
++	DUMP_LONG(buf, bgp->as);
++	DUMP_LONG(buf, peer->conf.remote_as);
+ 	DUMP_SHORT(buf, /* ifindex */ 0);
+ 	switch (peer->sa_local.ss_family) {
+ 	case AF_INET:
+@@ -350,8 +350,8 @@
+ 		return (-1);
+ 	}
+ 
+-	DUMP_SHORT(buf, rde_local_as());
+-	DUMP_SHORT(buf, peer->conf.remote_as);
++	DUMP_LONG(buf, rde_local_as());
++	DUMP_LONG(buf, peer->conf.remote_as);
+ 	DUMP_SHORT(buf, /* ifindex */ 0);
+ 
+ 	switch (af) {

@@ -1,0 +1,413 @@
+--- bgpd/session.c.orig	2007-01-12 09:49:37.000000000 +1000
++++ bgpd/session.c	2007-01-12 09:50:12.000000000 +1000
+@@ -64,6 +64,7 @@
+ void	session_tcp_established(struct peer *);
+ void	session_capa_ann_none(struct peer *);
+ int	session_capa_mp_add(struct buf *, u_int16_t, u_int8_t);
++int     session_capa_as_4bytes_add(struct buf *, u_int32_t) ;         /*4BYTE - add the 4byte AS capability to the Open message block */
+ void	session_open(struct peer *);
+ void	session_keepalive(struct peer *);
+ void	session_update(u_int32_t, void *, size_t);
+@@ -1168,6 +1169,7 @@
+ 	peer->capa.ann.mp_v4 = SAFI_NONE;
+ 	peer->capa.ann.mp_v4 = SAFI_NONE;
+ 	peer->capa.ann.refresh = 0;
++        peer->capa.ann.as_4bytes = 0 ;
+ }
+ 
+ int
+@@ -1188,6 +1190,22 @@
+ 	return (errs);
+ }
+ 
++/*4BYTE - add the 4byte AS capability to the Open message block */
++int
++session_capa_as_4bytes_add(struct buf *buf, u_int32_t myas)
++{
++	u_int8_t		 capa_code, capa_len;
++	int			 errs = 0;
++
++        myas = htonl(myas) ;
++	capa_code = CAPA_4AS;
++	capa_len = 4;
++	errs += buf_add(buf, &capa_code, sizeof(capa_code));
++	errs += buf_add(buf, &capa_len, sizeof(capa_len));
++	errs += buf_add(buf, &myas, sizeof(myas));
++	return (errs);
++}
++
+ void
+ session_open(struct peer *p)
+ {
+@@ -1195,10 +1213,15 @@
+ 	struct buf		*buf;
+ 	struct mrt		*mrt;
+ 	u_int16_t		 len;
++        u_int16_t                short_as;
+ 	int			 errs = 0;
+ 	u_int8_t		 op_type, op_len = 0, optparamlen = 0;
+ 	u_int8_t		 capa_code, capa_len;
+ 
++	/***/
++	fprintf(stderr,"session_open: called\n");
++	/****/
++
+ 	/* multiprotocol extensions, RFC 2858 */
+ 	if (p->capa.ann.mp_v4)
+ 		op_len += 2 + 4;	/* 1 code + 1 len + 4 data */
+@@ -1209,6 +1232,11 @@
+ 	if (p->capa.ann.refresh)
+ 		op_len += 2 + 0;	/* 1 code + 1 len, no data */
+ 
++        /*4BYTE 4-byte AS capability  - always advertised (65,4,as)*/
++	if (p->capa.ann.as_4bytes)
++	        op_len += 2 + 4 ;      /* 1 code + 1 len + 4 data */
++
++       
+ 	if (op_len > 0)
+ 		optparamlen = sizeof(op_type) + sizeof(op_len) + op_len;
+ 	len = MSGSIZE_OPEN_MIN + optparamlen;
+@@ -1217,7 +1245,21 @@
+ 	msg.header.len = htons(len);
+ 	msg.header.type = OPEN;
+ 	msg.version = 4;
+-	msg.myas = htons(conf->as);
++
++        /*4BYTE - myas is the low 16 bits if the upper 16 bits of the AS are zero - AS_TRANS otherwise */
++
++	/****/
++	fprintf(stderr,"Open: conf->as = %u.%u\n",((conf->as >> 16) & 65535),(conf->as & 65535));
++	/****/
++
++	if (!((conf->as >> 16) & 65535)) short_as = (u_int16_t) conf->as;
++        else short_as = AS_TRANS ;
++        msg.myas = htons(short_as) ;
++
++	/****/
++	fprintf(stderr,"Open: myas = %u (net = %u)\n",short_as, msg.myas);
++	/****/
++
+ 	if (p->conf.holdtime)
+ 		msg.holdtime = htons(p->conf.holdtime);
+ 	else
+@@ -1238,25 +1280,45 @@
+ 	errs += buf_add(buf, &msg.bgpid, sizeof(msg.bgpid));
+ 	errs += buf_add(buf, &msg.optparamlen, sizeof(msg.optparamlen));
+ 
++	/****/
++	fprintf(stderr,"Options length: %d)\n",op_len);
++	/****/
+ 	if (optparamlen) {
+ 		op_type = OPT_PARAM_CAPABILITIES;
+ 		errs += buf_add(buf, &op_type, sizeof(op_type));
+ 		errs += buf_add(buf, &op_len, sizeof(op_len));
+ 
++		/*4BYTE - 4 byte as capability */
++		if (p->capa.ann.as_4bytes) {
++		        errs += session_capa_as_4bytes_add(buf, conf->as);
++	/****/
++	fprintf(stderr,"Options: 4byte AS\n");
++	/****/
++		}
+ 		/* multiprotocol extensions, RFC 2858 */
+-		if (p->capa.ann.mp_v4)
++		if (p->capa.ann.mp_v4) {
+ 			errs += session_capa_mp_add(buf, AFI_IPv4,
+ 			    p->capa.ann.mp_v4);
+-		if (p->capa.ann.mp_v6)
++	/****/
++	fprintf(stderr,"Options: multiproto V4\n");
++	/****/
++		}
++		if (p->capa.ann.mp_v6) {
+ 			errs += session_capa_mp_add(buf, AFI_IPv6,
+ 			    p->capa.ann.mp_v6);
+-
++	/****/
++	fprintf(stderr,"Options: multiproto V6\n");
++	/****/
++		}
+ 		/* route refresh, RFC 2918 */
+ 		if (p->capa.ann.refresh) {
+ 			capa_code = CAPA_REFRESH;
+ 			capa_len = 0;
+ 			errs += buf_add(buf, &capa_code, sizeof(capa_code));
+ 			errs += buf_add(buf, &capa_len, sizeof(capa_len));
++	/****/
++	fprintf(stderr,"Options: refresh\n");
++	/****/
+ 		}
+ 	}
+ 
+@@ -1284,6 +1346,10 @@
+ 	}
+ 
+ 	p->stats.msg_sent_open++;
++
++	/***/
++	fprintf(stderr,"session_open: message queued for delivery\n");
++	/****/
+ }
+ 
+ void
+@@ -1295,6 +1361,9 @@
+ 	ssize_t			 len;
+ 	int			 errs = 0;
+ 
++	/***/
++	fprintf(stderr,"session_keepalive: called\n");
++	/****/
+ 	len = MSGSIZE_KEEPALIVE;
+ 
+ 	memset(&msg.marker, 0xff, sizeof(msg.marker));
+@@ -1333,6 +1402,10 @@
+ 
+ 	start_timer_keepalive(peer);
+ 	peer->stats.msg_sent_keepalive++;
++
++	/***/
++	fprintf(stderr,"session_keepalive: message queued for delivery\n");
++	/****/
+ }
+ 
+ void
+@@ -1345,6 +1418,10 @@
+ 	ssize_t			 len;
+ 	int			 errs = 0;
+ 
++	/***/
++	fprintf(stderr,"session_update: called\n");
++	/****/
++
+ 	if ((p = getpeerbyid(peerid)) == NULL) {
+ 		log_warnx("no such peer: id=%u", peerid);
+ 		return;
+@@ -1392,6 +1469,9 @@
+ 
+ 	start_timer_keepalive(p);
+ 	p->stats.msg_sent_update++;
++	/***/
++	fprintf(stderr,"session_update: message queued for delivery\n");
++	/****/
+ }
+ 
+ void
+@@ -1405,6 +1485,10 @@
+ 	int			 errs = 0;
+ 	u_int8_t		 null8 = 0;
+ 
++	/***/
++	fprintf(stderr,"session_notification: called\n");
++	/****/
++
+ 	if (peer->stats.last_sent_errcode)	/* some notifctn already sent */
+ 		return;
+ 
+@@ -1455,6 +1539,10 @@
+ 	peer->stats.msg_sent_notification++;
+ 	peer->stats.last_sent_errcode = errcode;
+ 	peer->stats.last_sent_suberr = subcode;
++
++	/***/
++	fprintf(stderr,"session_notification: message queued for delivery\n");
++	/****/
+ }
+ 
+ int
+@@ -1554,28 +1642,47 @@
+ 				break;
+ 			p->rbuf->rptr = p->rbuf->buf + rpos;
+ 
++
+ 			switch (msgtype) {
+ 			case OPEN:
++			/****/
++			  fprintf(stderr,"session_dispatch: msg OPEN\n") ;
++			/****/
+ 				bgp_fsm(p, EVNT_RCVD_OPEN);
+ 				p->stats.msg_rcvd_open++;
+ 				break;
+ 			case UPDATE:
++			/****/
++			  fprintf(stderr,"session_dispatch: msg UPDATE\n") ;
++			/****/
+ 				bgp_fsm(p, EVNT_RCVD_UPDATE);
+ 				p->stats.msg_rcvd_update++;
+ 				break;
+ 			case NOTIFICATION:
++			/****/
++			  fprintf(stderr,"session_dispatch: msg NOTIFY\n") ;
++			/****/
+ 				bgp_fsm(p, EVNT_RCVD_NOTIFICATION);
+ 				p->stats.msg_rcvd_notification++;
+ 				break;
+ 			case KEEPALIVE:
++			/****/
++			  fprintf(stderr,"session_dispatch: msg KEEPALIVE\n") ;
++			/****/
+ 				bgp_fsm(p, EVNT_RCVD_KEEPALIVE);
+ 				p->stats.msg_rcvd_keepalive++;
+ 				break;
+ 			case RREFRESH:
++			/****/
++			  fprintf(stderr,"session_dispatch: msg RREFRESH\n") ;
++			/****/
+ 				parse_refresh(p);
+ 				p->stats.msg_rcvd_rrefresh++;
+ 				break;
+ 			default:	/* cannot happen */
++			/****/
++			  fprintf(stderr,"session_dispatch: msg OUNK\n") ;
++			/****/
+ 				session_notification(p, ERR_HEADER,
+ 				    ERR_HDR_TYPE, &msgtype, 1);
+ 				log_warnx("received message with "
+@@ -1717,7 +1824,13 @@
+ 	u_int32_t	 bgpid;
+ 	u_int8_t	 optparamlen, plen;
+ 	u_int8_t	 op_type, op_len;
++        int              error_code;
+ 
++	/****/
++fprintf(stderr,"parse_open\n") ;
++/****/
++
++        peer->capa.peer.as_4bytes = 0 ;
+ 	p = peer->rbuf->rptr;
+ 	p += MSGSIZE_HEADER_MARKER;
+ 	memcpy(&msglen, p, sizeof(msglen));
+@@ -1751,13 +1864,6 @@
+ 		peer->conf.ebgp = (peer->conf.remote_as != conf->as);
+ 	}
+ 
+-	if (peer->conf.remote_as != ntohs(as)) {
+-		log_peer_warnx(&peer->conf, "peer sent wrong AS %u", ntohs(as));
+-		session_notification(peer, ERR_OPEN, ERR_OPEN_AS, NULL, 0);
+-		change_state(peer, STATE_IDLE, EVNT_RCVD_OPEN);
+-		return (-1);
+-	}
+-
+ 	memcpy(&oholdtime, p, sizeof(oholdtime));
+ 	p += sizeof(oholdtime);
+ 
+@@ -1836,8 +1942,9 @@
+ 
+ 		switch (op_type) {
+ 		case OPT_PARAM_CAPABILITIES:		/* RFC 3392 */
+-			if (parse_capabilities(peer, op_val, op_len) == -1) {
+-				session_notification(peer, ERR_OPEN, 0,
++		  if ((error_code = parse_capabilities(peer, op_val, op_len)) < 0) {
++		    error_code = -1 - error_code;
++				session_notification(peer, ERR_OPEN, error_code,
+ 				    NULL, 0);
+ 				change_state(peer, STATE_IDLE, EVNT_RCVD_OPEN);
+ 				return (-1);
+@@ -1864,6 +1971,19 @@
+ 		}
+ 	}
+ 
++	/*4BYTE - delayed check */
++
++	if ((peer->conf.remote_as != (unsigned int)ntohs(as)) && (!peer->capa.peer.as_4bytes)) {
++		log_peer_warnx(&peer->conf, "peer sent wrong AS %u", ntohs(as));
++		session_notification(peer, ERR_OPEN, ERR_OPEN_AS, NULL, 0);
++		change_state(peer, STATE_IDLE, EVNT_RCVD_OPEN);
++		return (-1);
++	}
++
++        /****/
++	fprintf(stderr,"no errors in OPEN\n") ;
++	/*****/
++
+ 	return (0);
+ }
+ 
+@@ -1873,6 +1993,10 @@
+ 	u_char		*p;
+ 	u_int16_t	 datalen;
+ 
++	/****/
++	fprintf(stderr,"parse_update\n") ;
++	/****/
++
+ 	/*
+ 	 * we pass the message verbatim to the rde.
+ 	 * in case of errors the whole session is reset with a
+@@ -1888,10 +2012,18 @@
+ 	datalen -= MSGSIZE_HEADER;
+ 
+ 	if (imsg_compose(ibuf_rde, IMSG_UPDATE, peer->conf.id, 0, -1, p,
+-	    datalen) == -1)
++			 datalen) == -1) {
++        /****/
++        fprintf(stderr,"send to imsg_compose -- error (-1)\n") ;
++        /***/
+ 		return (-1);
++	}
+ 
++        /****/
++        fprintf(stderr,"send to imsg message bus\n") ;
++        /***/
+ 	return (0);
++        
+ }
+ 
+ int
+@@ -2025,6 +2157,7 @@
+ 	u_char		*capa_val;
+ 	u_int16_t	 mp_afi;
+ 	u_int8_t	 mp_safi;
++        u_int32_t        remote_as ;
+ 
+ 	len = dlen;
+ 	while (len > 0) {
+@@ -2039,6 +2172,9 @@
+ 		memcpy(&capa_len, d, sizeof(capa_len));
+ 		d += sizeof(capa_len);
+ 		len -= sizeof(capa_len);
++		/***/
++		fprintf(stderr,"capability code = %u length = %u\n",capa_code,capa_len) ;
++		/***/
+ 		if (capa_len > 0) {
+ 			if (len < capa_len) {
+ 				log_peer_warnx(&peer->conf,
+@@ -2054,6 +2190,24 @@
+ 			capa_val = NULL;
+ 
+ 		switch (capa_code) {
++                case CAPA_4AS:
++			if (capa_len != 4) {
++				log_peer_warnx(&peer->conf,
++				    "parse_capabilities: "
++				    "expect len 4, len is %u", capa_len);
++				return (-1);
++			}
++			memcpy(&remote_as, capa_val, sizeof(remote_as));
++			remote_as = ntohl(remote_as);
++                        peer->capa.peer.as_4bytes = 1 ;
++                       	if (peer->conf.remote_as != remote_as) {
++		          log_peer_warnx(&peer->conf, "peer sent wrong AS %u", ntohs(remote_as));
++		          return (0 - (ERR_OPEN_AS + 1));
++	                }
++		/***/
++			fprintf(stderr,"capability 4byteas = %u.%u\n",((remote_as >> 16) & 65535),(remote_as & 65535)) ;
++		/***/
++                        break ;
+ 		case CAPA_MP:			/* RFC 2858 */
+ 			if (capa_len != 4) {
+ 				log_peer_warnx(&peer->conf,
+@@ -2067,10 +2221,14 @@
+ 			switch (mp_afi) {
+ 			case AFI_IPv4:
+ 				if (mp_safi < 1 || mp_safi > 3) {
++				  /****
+ 					log_peer_warnx(&peer->conf,
+ 					    "parse_capabilities: AFI IPv4, "
+ 					    "mp_safi %u illegal", mp_safi);
+ 					return (-1);
++				  ***/
++                                  fprintf(stderr,"change mp_safi from %u to 1\n",mp_safi) ;
++				  mp_safi = 1 ;
+ 				}
+ 				peer->capa.peer.mp_v4 = mp_safi;
+ 				break;

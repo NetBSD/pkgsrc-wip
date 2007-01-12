@@ -1,0 +1,118 @@
+--- bgpd/bgpd.h.orig	2007-01-11 15:02:39.000000000 +1000
++++ bgpd/bgpd.h	2007-01-07 14:02:34.000000000 +1000
+@@ -148,7 +148,7 @@
+ 	int					 log;
+ 	u_int32_t				 bgpid;
+ 	u_int32_t				 clusterid;
+-	u_int16_t				 as;
++	u_int32_t				 as;
+ 	u_int16_t				 holdtime;
+ 	u_int16_t				 min_holdtime;
+ };
+@@ -206,6 +206,7 @@
+ 	u_int8_t	mp_v4;		/* multiprotocol extensions, RFC 2858 */
+ 	u_int8_t	mp_v6;
+ 	u_int8_t	refresh;	/* route refresh, RFC 2918 */
++        u_int8_t        as_4bytes;      /* 4 byte AS capability */
+ };
+ 
+ struct peer_config {
+@@ -222,7 +223,7 @@
+ 	enum announce_type	 announce_type;
+ 	enum enforce_as		 enforce_as;
+ 	enum reconf_action	 reconf_action;
+-	u_int16_t		 remote_as;
++	u_int32_t		 remote_as;
+ 	u_int16_t		 holdtime;
+ 	u_int16_t		 min_holdtime;
+ 	u_int8_t		 template;
+@@ -236,6 +237,7 @@
+ 	u_int8_t		 reflector_client;
+ 	u_int8_t		 softreconfig_in;
+ 	u_int8_t		 softreconfig_out;
++        u_int8_t                 as_4bytes;    /* 1 = 4byte as capability, 0 = 2byte */     
+ };
+ 
+ struct network_config {
+@@ -251,6 +253,10 @@
+ 	TAILQ_ENTRY(network)	entry;
+ };
+ 
++
++/*4BYTE 4-byte AS capability  - AS_TRANS for 4-byte AS value placeholder */
++#define AS_TRANS                23456
++
+ /* ipc messages */
+ 
+ #define	IMSG_HEADER_SIZE	sizeof(struct imsg_hdr)
+@@ -367,7 +373,8 @@
+ 	ERR_UPD_NEXTHOP,
+ 	ERR_UPD_OPTATTR,
+ 	ERR_UPD_NETWORK,
+-	ERR_UPD_ASPATH
++	ERR_UPD_ASPATH,
++	ERR_UPD_NEWASPATH
+ };
+ 
+ enum suberr_cease {
+@@ -493,7 +500,7 @@
+ 
+ struct filter_as {
+ 	enum as_spec	type;
+-	u_int16_t	as;
++	u_int32_t	as;
+ };
+ 
+ enum filter_actions {
+@@ -541,6 +548,30 @@
+ #define	COMMUNITY_NO_EXPSUBCONFED	0xff03
+ #define	COMMUNITY_NO_PEER		0xff04	/* rfc3765 */
+ 
++/* BGP Path Attributes */
++#define ATTRIBUTE_ORIGIN                            1
++#define ATTRIBUTE_AS_PATH                           2
++#define ATTRIBUTE_NEXT_HOP                          3
++#define ATTRIBUTE_MULTI_EXIT_DISC                   4
++#define ATTRIBUTE_LOCAL_PREF                        5
++#define ATTRIBUTE_ATOMIC_AGGREGATE                  6
++#define ATTRIBUTE_AGGREGATOR                        7
++#define ATTRIBUTE_COMMUNITY                         8
++#define ATTRIBUTE_ORIGINATOR_ID                     9
++#define ATTRIBUTE_CLUSTER_LIST                     10
++#define ATTRIBUTE_DPA                              11
++#define ATTRIBUTE_ADVERTISER                       12
++#define ATTRIBUTE_RCID_PATH_CLUSTER_ID             13
++#define ATTRIBUTE_MP_REACH_NLRI                    14
++#define ATTRIBUTE_MP_UNREACH_NLRI                  15
++#define ATTRIBUTE_EXTENDED_COMMUNITIES             16
++#define ATTRIBUTE_NEW_AS_PATH                      17
++#define ATTRIBUTE_NEW_AGGREGATOR                   18
++#define ATTRIBUTE_SSA                              19
++#define ATTRIBUTE_CONNECTOR                        20
++#define ATTRIBUTE_AS_PATHLIMIT                     21
++
++
+ struct filter_prefix {
+ 	struct bgpd_addr	addr;
+ 	u_int8_t		len;
+@@ -554,7 +585,7 @@
+ };
+ 
+ struct filter_community {
+-	int			as;
++	u_int32_t      		as;
+ 	int			type;
+ };
+ 
+@@ -768,8 +799,8 @@
+ const char	*log_addr(const struct bgpd_addr *);
+ const char	*log_in6addr(const struct in6_addr *);
+ const char *	 log_sockaddr(struct sockaddr *);
+-int		 aspath_snprint(char *, size_t, void *, u_int16_t);
+-int		 aspath_asprint(char **, void *, u_int16_t);
+-size_t		 aspath_strlen(void *, u_int16_t);
++int		 aspath_snprint(char *, size_t, void *, u_int16_t, int);
++int		 aspath_asprint(char **, void *, u_int16_t, int);
++size_t		 aspath_strlen(void *, u_int16_t, int);
+ 
+ #endif /* __BGPD_H__ */
