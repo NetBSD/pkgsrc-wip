@@ -1,0 +1,69 @@
+--- bgpd/rde.h.orig	2006-02-10 07:05:09.000000000 +1000
++++ bgpd/rde.h	2007-01-07 14:02:34.000000000 +1000
+@@ -100,7 +100,10 @@
+ 	ATTR_ORIGINATOR_ID,
+ 	ATTR_CLUSTER_LIST,
+ 	ATTR_MP_REACH_NLRI=14,
+-	ATTR_MP_UNREACH_NLRI=15
++	ATTR_MP_UNREACH_NLRI=15,
++        ATTR_NEW_ASPATH=ATTRIBUTE_NEW_AS_PATH,
++        ATTR_NEW_AGGREGATOR=ATTRIBUTE_NEW_AGGREGATOR
++
+ };
+ 
+ /* attribute flags. 4 low order bits reserved */
+@@ -257,7 +260,7 @@
+ void		 rde_send_pftable_commit(void);
+ 
+ void		 rde_generate_updates(struct prefix *, struct prefix *);
+-u_int16_t	 rde_local_as(void);
++u_int32_t	 rde_local_as(void);
+ int		 rde_noevaluate(void);
+ int		 rde_decisionflags(void);
+ 
+@@ -272,23 +275,29 @@
+ void		 attr_copy(struct rde_aspath *, struct rde_aspath *);
+ int		 attr_compare(struct rde_aspath *, struct rde_aspath *);
+ void		 attr_freeall(struct rde_aspath *);
++void             attr_put(struct attr *) ;
++void	         attr_free(struct rde_aspath *, struct attr *);
+ 
+-int		 aspath_verify(void *, u_int16_t);
++int		 aspath_verify(void *, u_int16_t, u_int8_t);
+ #define		 AS_ERR_LEN	-1
+ #define		 AS_ERR_TYPE	-2
+ #define		 AS_ERR_BAD	-3
+ void		 aspath_init(u_int32_t);
+ void		 aspath_shutdown(void);
+-struct aspath	*aspath_get(void *, u_int16_t);
++struct aspath	*aspath_get(void *, u_int16_t, int);
+ void		 aspath_put(struct aspath *);
+ u_char		*aspath_dump(struct aspath *);
+ u_int16_t	 aspath_length(struct aspath *);
+-u_int16_t	 aspath_count(const void *, u_int16_t);
+-u_int16_t	 aspath_neighbor(struct aspath *);
+-int		 aspath_loopfree(struct aspath *, u_int16_t);
++u_int16_t	 aspath_count(const void *, u_int16_t,int);
++u_int32_t	 aspath_neighbor(struct aspath *, int);
++int		 aspath_loopfree(struct aspath *, u_int32_t, int);
+ int		 aspath_compare(struct aspath *, struct aspath *);
+-struct aspath	*aspath_prepend(struct aspath *, u_int16_t, int);
+-int		 aspath_match(struct aspath *, enum as_spec, u_int16_t);
++struct aspath	*aspath_prepend(struct aspath *, u_int32_t, int);
++int		 aspath_match(struct aspath *, enum as_spec, u_int32_t, int);
++struct aspath   *aspath_translate(struct aspath *, u_int8_t *, u_int16_t);
++u_char          *aspath_inflate(void *, u_int16_t, u_int16_t *);
++struct aspath   *aspath_convert(struct aspath *);
++
+ int		 community_match(void *, u_int16_t, int, int);
+ int		 community_set(struct rde_aspath *, int, int);
+ void		 community_delete(struct rde_aspath *, int, int);
+@@ -377,6 +386,7 @@
+ 		     struct rde_peer *, enum directions);
+ 
+ /* util.c */
+-u_int16_t	 aspath_extract(const void *, int);
++u_int32_t	 aspath_extract(const void *, int, int);
++u_int32_t	 as_extract(const void *, int);
+ 
+ #endif /* __RDE_H__ */

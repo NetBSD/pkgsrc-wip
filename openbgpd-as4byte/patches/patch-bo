@@ -1,0 +1,163 @@
+--- bgpd/util.c.orig	2006-01-04 08:19:59.000000000 +1000
++++ bgpd/util.c	2007-01-07 14:02:34.000000000 +1000
+@@ -75,7 +75,7 @@
+ }
+ 
+ int
+-aspath_snprint(char *buf, size_t size, void *data, u_int16_t len)
++aspath_snprint(char *buf, size_t size, void *data, u_int16_t len, int as_size)
+ {
+ #define UPDATE()				\
+ 	do {					\
+@@ -94,13 +94,14 @@
+ 	int		 r, total_size;
+ 	u_int16_t	 seg_size;
+ 	u_int8_t	 i, seg_type, seg_len;
++        u_int32_t        as;
+ 
+ 	total_size = 0;
+ 	seg = data;
+ 	for (; len > 0; len -= seg_size, seg += seg_size) {
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
+-		seg_size = 2 + 2 * seg_len;
++		seg_size = 2 + (as_size * seg_len);
+ 
+ 		if (seg_type == AS_SET) {
+ 			if (total_size != 0)
+@@ -114,7 +115,11 @@
+ 		}
+ 
+ 		for (i = 0; i < seg_len; i++) {
+-			r = snprintf(buf, size, "%hu", aspath_extract(seg, i));
++		  as = aspath_extract(seg,i,as_size) ;
++		  if (as_size == 4) 
++			r = snprintf(buf, size, "%u.%u", ((as >> 16) & 65535), (as & 65535));
++                  else 
++		    r = snprintf(buf, size, "%u", as);
+ 			UPDATE();
+ 			if (i + 1 < seg_len) {
+ 				r = snprintf(buf, size, " ");
+@@ -135,17 +140,17 @@
+ }
+ 
+ int
+-aspath_asprint(char **ret, void *data, u_int16_t len)
++aspath_asprint(char **ret, void *data, u_int16_t len, int as_size)
+ {
+ 	size_t	slen;
+ 	int	plen;
+ 
+-	slen = aspath_strlen(data, len) + 1;
++	slen = aspath_strlen(data, len, as_size) + 1;
+ 	*ret = malloc(slen);
+ 	if (*ret == NULL)
+ 		return (-1);
+ 
+-	plen = aspath_snprint(*ret, slen, data, len);
++	plen = aspath_snprint(*ret, slen, data, len, as_size);
+ 	if (plen == -1) {
+ 		free(*ret);
+ 		*ret = NULL;
+@@ -156,11 +161,12 @@
+ }
+ 
+ size_t
+-aspath_strlen(void *data, u_int16_t len)
++aspath_strlen(void *data, u_int16_t len, int as_size)
+ {
+ 	u_int8_t	*seg;
+ 	int		 total_size;
+-	u_int16_t	 as, seg_size;
++        u_int32_t        as;
++	u_int16_t	 seg_size;
+ 	u_int8_t	 i, seg_type, seg_len;
+ 
+ 	total_size = 0;
+@@ -168,7 +174,7 @@
+ 	for (; len > 0; len -= seg_size, seg += seg_size) {
+ 		seg_type = seg[0];
+ 		seg_len = seg[1];
+-		seg_size = 2 + 2 * seg_len;
++		seg_size = 2 + (as_size * seg_len);
+ 
+ 		if (seg_type == AS_SET)
+ 			if (total_size != 0)
+@@ -179,20 +185,29 @@
+ 			total_size += 1;
+ 
+ 		for (i = 0; i < seg_len; i++) {
+-			as = aspath_extract(seg, i);
+-			if (as >= 10000)
+-				total_size += 5;
++		        as = aspath_extract(seg, i,as_size);
++			if (((as >> 16) & 65535) >= 10000)
++				total_size += 11;
++			else if (((as >> 16) & 65535) >= 1000)
++				total_size += 10;
++			else if (((as >> 16) & 65535) >= 100)
++				total_size += 9;
++			else if (((as >> 16) & 65535) >= 10)
++				total_size += 8;
++			else if (as >= 65535)
++				total_size += 7;
+ 			else if (as >= 1000)
+-				total_size += 4;
++				total_size += 6;
+ 			else if (as >= 100)
+-				total_size += 3;
++				total_size += 5;
+ 			else if (as >= 10)
+-				total_size += 2;
++				total_size += 4;
+ 			else
+-				total_size += 1;
++				total_size += 3;
+ 
+ 			if (i + 1 < seg_len)
+ 				total_size += 1;
++                        if (as_size == 2) total_size -= 2 ;
+ 		}
+ 
+ 		if (seg_type == AS_SET)
+@@ -206,15 +221,34 @@
+  * Direct access is not possible because of non-aligned reads.
+  * ATTENTION: no bounds check are done.
+  */
+-u_int16_t
+-aspath_extract(const void *seg, int pos)
++u_int32_t
++aspath_extract(const void *seg, int pos, int as_size)
+ {
+ 	const u_char	*ptr = seg;
+-	u_int16_t	 as = 0;
++	u_int32_t	 as = 0;
+ 
+-	ptr += 2 + 2 * pos;
+-	as = *ptr++;
+-	as <<= 8;
++        ptr += 2 + (as_size * pos);
++	if (as_size == 4) {
++	  as =  ((*ptr++) << 24);
++	  as |= ((*ptr++) << 16);
++	  }
++        
++    	as |= ((*ptr++) << 8);
++	as |= *ptr;
++	return (as);
++}
++
++u_int32_t
++as_extract(const void *seg, int as_size)
++{
++	const u_char	*ptr = seg;
++	u_int32_t	 as = 0;
++
++        if (as_size == 4) {
++  	  as |=  ((*ptr++) << 24);
++	  as |= ((*ptr++) << 16);
++	  }
++	as |= ((*ptr++) << 8);
+ 	as |= *ptr;
+ 	return (as);
+ }

@@ -1,0 +1,47 @@
+--- bgpd/printconf.c.orig	2007-01-12 09:54:36.000000000 +1000
++++ bgpd/printconf.c	2007-01-12 09:56:35.000000000 +1000
+@@ -150,7 +150,7 @@
+ 	struct in_addr		 ina;
+ 	struct listen_addr	*la;
+ 
+-	printf("AS %u\n", conf->as);
++	printf("AS %u.%u\n", ((conf->as >> 16) & 65535),(conf->as & 65535));
+ 	ina.s_addr = conf->bgpid;
+ 	printf("router-id %s\n", inet_ntoa(ina));
+ 	if (conf->holdtime)
+@@ -237,7 +237,7 @@
+ 	if (p->descr[0])
+ 		printf("%s\tdescr \"%s\"\n", c, p->descr);
+ 	if (p->remote_as)
+-		printf("%s\tremote-as %u\n", c, p->remote_as);
++	  printf("%s\tremote-as %u.%u\n", c, ((p->remote_as >> 16) & 65535),(p->remote_as & 65535));
+ 	if (p->distance > 1)
+ 		printf("%s\tmultihop %u\n", c, p->distance);
+ 	if (p->passive)
+@@ -422,20 +422,20 @@
+ 
+ 	if (r->match.as.type) {
+ 		if (r->match.as.type == AS_ALL)
+-			printf("AS %u ", r->match.as.as);
++		  printf("AS %u.%u ", ((r->match.as.as >> 16) & 65535) ,(r->match.as.as & 65535));
+ 		else if (r->match.as.type == AS_SOURCE)
+-			printf("source-as %u ", r->match.as.as);
++		  printf("source-as %u.%u ", ((r->match.as.as >> 16) & 65535), (r->match.as.as & 65535));
+ 		else if (r->match.as.type == AS_TRANSIT)
+-			printf("transit-as %u ", r->match.as.as);
++			printf("transit-as %u.%u ", ((r->match.as.as >> 16) & 65535), (r->match.as.as & 65535));
+ 		else
+-			printf("unfluffy-as %u ", r->match.as.as);
++			printf("unfluffy-as %u.%u ", ((r->match.as.as >> 16) & 65535), (r->match.as.as & 65535));
+ 	}
+ 
+ 	if (r->match.community.as != 0) {
+ 		printf("community ");
+-		if (r->match.community.as == COMMUNITY_ANY)
++		if (r->match.community.as == (unsigned int)COMMUNITY_ANY)
+ 			printf("*:");
+-		else if (r->match.community.as == COMMUNITY_NEIGHBOR_AS)
++		else if (r->match.community.as == (unsigned int)COMMUNITY_NEIGHBOR_AS)
+ 			printf("neighbor-as:");
+ 		else
+ 			printf("%d:", r->match.community.as);

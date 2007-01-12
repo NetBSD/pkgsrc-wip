@@ -1,0 +1,11 @@
+--- bgpd/parse.y.dist	2007-01-11 13:14:40.000000000 +1000
++++ bgpd/parse.y	2007-01-11 12:50:41.000000000 +1000
+@@ -2322,7 +2322,7 @@
+ 		t[0] = s[2*i];
+ 		t[1] = s[2*i + 1];
+ 		t[2] = 0;
+-		if (!isxdigit(t[0]) || !isxdigit(t[1])) {
++		if (!isxdigit((int)t[0]) || !isxdigit((int)t[1])) {
+ 			yyerror("key must be specified in hex");
+ 			return (-1);
+ 		}

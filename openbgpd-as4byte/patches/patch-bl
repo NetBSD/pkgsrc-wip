@@ -1,0 +1,99 @@
+--- bgpd/rde_update.c.orig	2007-01-11 15:02:39.000000000 +1000
++++ bgpd/rde_update.c	2007-01-11 16:40:09.000000000 +1000
+@@ -22,6 +22,8 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
++#include <stdio.h>
++
+ #include "bgpd.h"
+ #include "rde.h"
+ 
+@@ -285,7 +287,7 @@
+ 	}
+ 
+ 	if (peer->conf.ebgp && !aspath_loopfree(p->aspath->aspath,
+-	    peer->conf.remote_as)) {
++						peer->conf.remote_as,4)) {
+ 		/*
+ 		 * Do not send routes back to sender which would
+ 		 * cause an aspath loop.
+@@ -466,7 +468,7 @@
+ 		return;
+ 
+ 	asp = path_get();
+-	asp->aspath = aspath_get(NULL, 0);
++	asp->aspath = aspath_get(NULL, 0, 4);
+ 	asp->origin = ORIGIN_IGP;
+ 	/* the other default values are OK, nexthop is once again NULL */
+ 
+@@ -619,12 +621,16 @@
+     struct rde_aspath *a, sa_family_t af)
+ {
+ 	struct aspath	*path;
++        struct aspath   *oasp;
+ 	struct attr	*oa;
+ 	u_int32_t	 tmp32;
+ 	in_addr_t	 nexthop;
+ 	int		 r, ismp = 0;
+ 	u_int16_t	 len = sizeof(up_attr_buf), wlen = 0;
+ 	u_int8_t	 l;
++        /****/
++        char *buf;
++	/****/
+ 
+ 	/* origin */
+ 	if ((r = attr_write(up_attr_buf + wlen, len, ATTR_WELL_KNOWN,
+@@ -633,13 +639,52 @@
+ 	wlen += r; len -= r;
+ 
+ 	/* aspath */
++        /****/
++        aspath_asprint(&buf,a->aspath->data,a->aspath->len,4) ;
++        fprintf(stderr,"ASPATH: a->aspath (4byte) ascnt = %d, len=%d, path=%s\n",a->aspath->ascnt, a->aspath->len,buf) ;
++        free(buf);
++        /****/
++
+ 	if (!peer->conf.ebgp ||
+ 	    rde_decisionflags() & BGPD_FLAG_DECISION_TRANS_AS)
+ 		path = aspath_prepend(a->aspath, rde_local_as(), 0);
+ 	else
+ 		path = aspath_prepend(a->aspath, rde_local_as(), 1);
+ 
++        /****/
++        aspath_asprint(&buf,path->data,path->len,4) ;
++        fprintf(stderr,"ASPATH: path (4byte) ascnt = %d, len=%d, path=%s\n",path->ascnt, path->len,buf) ;
++        free(buf);
++        /****/
++
++        /* if this is a 2 byte peer then the as path will been to be translated
++           into a 2byte version and this 4byte path written out as ATTR_NEW_ASPATH */
++        if (!(peer->capa_received.as_4bytes)) {
++          if ((oasp = aspath_convert(path)) == NULL) 
++            return(-1) ;
++
++          /****/
++          aspath_asprint(&buf,oasp->data,oasp->len,2) ;
++          fprintf(stderr,"ASPATHCONVERT: oasp (2byte) ascnt = %d, len=%d, path=%s\n",oasp->ascnt, oasp->len,buf) ;
++          free(buf);
++          /****/
++
+ 	if ((r = attr_write(up_attr_buf + wlen, len, ATTR_WELL_KNOWN,
++	    ATTR_ASPATH, oasp->data, oasp->len)) == -1)
++		return (-1);
++  	  aspath_put(oasp);
++	  wlen += r; len -= r;
++          /* the AS_CONFED_SET and AS_CONFED_SEQUENCE attrs should be stripped here */
++          if ((r = attr_write(up_attr_buf + wlen, len, (ATTR_TRANSITIVE | ATTR_OPTIONAL),
++	    ATTR_NEW_ASPATH, path->data, path->len)) == -1)
++		return (-1);
++          /****/
++          aspath_asprint(&buf,path->data,path->len,4) ;
++          fprintf(stderr,"NEW_ASPATH: path (4byte) ascnt = %d, len=%d, path=%s\n",path->ascnt, path->len,buf) ;
++          free(buf);
++          /****/
++	  }
++        else if ((r = attr_write(up_attr_buf + wlen, len, ATTR_WELL_KNOWN,
+ 	    ATTR_ASPATH, path->data, path->len)) == -1)
+ 		return (-1);
+ 	aspath_put(path);
