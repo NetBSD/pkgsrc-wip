@@ -1,0 +1,19 @@
+--- bgpd/rde_update.c.orig	2007-01-11 13:58:49.000000000 +1000
++++ bgpd/rde_update.c	2007-01-11 14:00:27.000000000 +1000
+@@ -882,7 +882,7 @@
+ 	/* total length includes the two 2-bytes length fields. */
+ 	*len = attrlen + 2 * sizeof(u_int16_t);
+ 
+-	return (buf);
++	return ((char *)buf);
+ }
+ 
+ char *
+@@ -973,6 +973,6 @@
+ 		peer->up_acnt--;
+ 	}
+ 
+-	return (buf);
++	return ((char *)buf);
+ }
+ 

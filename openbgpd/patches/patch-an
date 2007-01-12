@@ -1,0 +1,11 @@
+--- bgpd/printconf.c.orig	2007-01-11 14:02:33.000000000 +1000
++++ bgpd/printconf.c	2007-01-11 14:04:14.000000000 +1000
+@@ -495,7 +495,7 @@
+ 				printf("%s%sdump %s %s %d\n", prep, prep2,
+ 				    mrt_type(m->type),
+ 				    MRT2MC(m)->name,
+-				    MRT2MC(m)->ReopenTimerInterval);
++				    (int)MRT2MC(m)->ReopenTimerInterval);
+ 		}
+ }
+ 
