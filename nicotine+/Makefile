@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/20 23:52:09 netcap Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/12 06:24:20 netcap Exp $
 #
 
 DISTNAME=	nicotine+-1.2.6
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/
 USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=       24 23 22 21 20
+PYTHON_VERSIONS_ACCEPTED=       24 23 22
 PY_PATCHPLIST=  yes
 PYDISTUTILSPKG= yes
 
