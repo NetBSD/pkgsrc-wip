@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.2 2007/01/12 04:30:41 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/12 04:58:45 geeohgeegeeoh Exp $
 # FreeBSD Id: ports/net/openbgpd/Makefile,v 1.10 2006/05/25 11:09:26 flz Exp
 
-PKGNAME=	openbgpd-as4byte-3.9
+PKGNAME=	openbgpd-3.9
 DISTNAME=	openbgpd
 VERSION=	3.9
 PKGREVISION=	1
@@ -16,7 +16,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openbgp.org/
 COMMENT=	Free implementation of the Border Gateway Protocol, Version 4
 
-CONFLICTS=	zebra-0* quagga-0* openbgpd-3*
+CONFLICTS=	zebra-0* quagga-0* openbgpd-as4byte-3*
 
 WRKSRC=		${WRKDIR}
 MANCOMPRESSED=	yes

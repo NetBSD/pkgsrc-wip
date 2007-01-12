@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.2 2007/01/12 04:30:41 geeohgeegeeoh Exp $
+$NetBSD: distinfo,v 1.2 2007/01/12 04:58:45 geeohgeegeeoh Exp $
 
 SHA1 (openbgpd/hash.h) = d813343b0780318baa2b9fde747e462ba158060b
 RMD160 (openbgpd/hash.h) = ee944d79046a5863a7a7137ae325a4c5c0ab1927
@@ -30,18 +30,3 @@ SHA1 (patch-al) = 33668a0e1ba81c372c5aed18801e4617cdfba811
 SHA1 (patch-am) = 1cc69d1f8a8cd7c4f668312c95ba33414281d6d9
 SHA1 (patch-an) = abeb49988b075f4e26832011c57afad08eb4657c
 SHA1 (patch-ao) = b3b37a178163b5794a71151e4eeacce5bd050477
-SHA1 (patch-ba) = 7fd313941c099bbbcdaf85adf65495d4d8fc4c88
-SHA1 (patch-bb) = 6fe7890a5dd65813718629a22b6f726d8d940762
-SHA1 (patch-bc) = e3fce93fca76385f7ee49c5e79d7f8d7fcf1b0ef
-SHA1 (patch-bd) = c5fb5f9ad0d95a7a6ef5b04d7f960aa8b21292eb
-SHA1 (patch-be) = 770b639dceb5ed866d4bbbce09524881ad9a0b7c
-SHA1 (patch-bf) = b2e6865f26cedd0172dab369dee532f727c61311
-SHA1 (patch-bg) = f279150cf73c25c7852d0a5b2c9cc22cbbe74f32
-SHA1 (patch-bh) = d1b667cf66b6710082750c80f09b2a44b51f0d45
-SHA1 (patch-bi) = 69d8a5fddb21f487e4ed95a1ace943e3f8f9f229
-SHA1 (patch-bj) = cfdadc2e173bec086e65dfd22362272312524643
-SHA1 (patch-bk) = 553dcf01fdf2ce83d24c1aa00505de796aad80ab
-SHA1 (patch-bl) = 6adc8eac234e5ec3b3820d5ce8f3c8d5b1d7f9f2
-SHA1 (patch-bm) = 814dc3e9e435726e7a42ce35c800a0cf2560281a
-SHA1 (patch-bn) = c4b53cd0e8b610c8bf461dbfb1b175ba6d147465
-SHA1 (patch-bo) = d7b7958a2b734f9650299f40905d5b6abdd75452
