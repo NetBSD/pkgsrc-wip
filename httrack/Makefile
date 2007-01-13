@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/11/11 11:31:04 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2007/01/13 22:13:43 shattered Exp $
 #
 
 DISTNAME=	httrack-3.40-2
@@ -16,12 +16,12 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
-LDFLAGS+=-L${WRKSRC}/./src/.libs/
+LDFLAGS+=	-L${WRKSRC}/src/.libs/
 
 SUBST_CLASSES+=	html
 SUBST_STAGE.html=pre-install
 SUBST_FILES.html=html/Makefile
-SUBST_SED.html=-e 's,install-data-hook,,'
+SUBST_SED.html=	-e 's,install-data-hook,,'
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/06/28 10:41:04 poppnk Exp $
+$NetBSD: distinfo,v 1.6 2007/01/13 22:13:43 shattered Exp $
 
 SHA1 (httrack-3.40-2.tar.gz) = a6da028849f0897e201c3a3e60fa116184bb1965
 RMD160 (httrack-3.40-2.tar.gz) = 334e762cf7cb37ff9f4bb304d6d8d799adc74e6c
 Size (httrack-3.40-2.tar.gz) = 1626291 bytes
+SHA1 (patch-aa) = d229a637a1f7a8c0deb65161fcf7d86f1dae6f82
