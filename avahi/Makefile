@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/11/13 12:27:12 adrian_p Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/13 00:15:59 adrian_p Exp $
 
-DISTNAME=		avahi-0.6.15
+DISTNAME=		avahi-0.6.16
 CATEGORIES=		net
-MASTER_SITES=		http://lathiat.net/
+MASTER_SITES=		http://avahi.org/download/
 
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://avahi.org/
@@ -47,10 +47,10 @@ CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+= 	--disable-qt3
-CONFIGURE_ARGS+= 	--disable-qt4
-CONFIGURE_ARGS+= 	--disable-mono
-CONFIGURE_ARGS+= 	--disable-monodoc
+CONFIGURE_ARGS+=	--disable-qt3
+CONFIGURE_ARGS+=	--disable-qt4
+CONFIGURE_ARGS+=	--disable-mono
+CONFIGURE_ARGS+=	--disable-monodoc
 CONFIGURE_ARGS+=	--disable-doxygen-doc
 CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html
