@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/03 20:11:50 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/13 21:34:43 shattered Exp $
+bin/kissmebin
