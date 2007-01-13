@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/07/07 20:53:19 shattered Exp $
+$NetBSD: patch-ac,v 1.2 2007/01/13 20:37:54 shattered Exp $
 
---- mutagen/id3.py.orig	2006-06-03 20:16:43.000000000 +0000
+--- mutagen/id3.py.orig	2006-12-10 03:56:13.000000000 +0000
 +++ mutagen/id3.py
-@@ -1666,22 +1666,28 @@ def ParseID3v1(string):
+@@ -1814,22 +1814,28 @@ def ParseID3v1(string):
      from struct import error as StructError
      frames = {}
      try:
@@ -34,6 +34,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/07/07 20:53:19 shattered Exp $
 +    comment = comment.strip("\x00").strip().decode('latin1')
 +    if comment: frames["COMM"] = COMM(encoding=0, lang="eng", desc="", text=comment)
 +
-     if track: frames["TRCK"] = TRCK(encoding=0, text=str(track))
-     if genre != 255: frames["TCON"] = TCON(encoding=0, text=str(genre))
-     return frames
+     # Don't read a track number if it looks like the comment was
+     # padded with spaces instead of nulls (thanks, WinAmp).
+     if track and (track != 32 or string[-3] == '\x00'):

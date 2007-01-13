@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/08 09:57:55 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/13 20:37:54 shattered Exp $
 bin/mid3iconv
 bin/mid3v2
 bin/moggsplit
@@ -33,19 +33,43 @@ ${PYSITELIB}/mutagen/flac.pyo
 ${PYSITELIB}/mutagen/id3.py
 ${PYSITELIB}/mutagen/id3.pyc
 ${PYSITELIB}/mutagen/id3.pyo
+${PYSITELIB}/mutagen/m4a.py
+${PYSITELIB}/mutagen/m4a.pyc
+${PYSITELIB}/mutagen/m4a.pyo
+${PYSITELIB}/mutagen/monkeysaudio.py
+${PYSITELIB}/mutagen/monkeysaudio.pyc
+${PYSITELIB}/mutagen/monkeysaudio.pyo
 ${PYSITELIB}/mutagen/mp3.py
 ${PYSITELIB}/mutagen/mp3.pyc
 ${PYSITELIB}/mutagen/mp3.pyo
+${PYSITELIB}/mutagen/mp4.py
+${PYSITELIB}/mutagen/mp4.pyc
+${PYSITELIB}/mutagen/mp4.pyo
+${PYSITELIB}/mutagen/musepack.py
+${PYSITELIB}/mutagen/musepack.pyc
+${PYSITELIB}/mutagen/musepack.pyo
 ${PYSITELIB}/mutagen/ogg.py
 ${PYSITELIB}/mutagen/ogg.pyc
 ${PYSITELIB}/mutagen/ogg.pyo
 ${PYSITELIB}/mutagen/oggflac.py
 ${PYSITELIB}/mutagen/oggflac.pyc
 ${PYSITELIB}/mutagen/oggflac.pyo
+${PYSITELIB}/mutagen/oggspeex.py
+${PYSITELIB}/mutagen/oggspeex.pyc
+${PYSITELIB}/mutagen/oggspeex.pyo
 ${PYSITELIB}/mutagen/oggtheora.py
 ${PYSITELIB}/mutagen/oggtheora.pyc
 ${PYSITELIB}/mutagen/oggtheora.pyo
 ${PYSITELIB}/mutagen/oggvorbis.py
 ${PYSITELIB}/mutagen/oggvorbis.pyc
 ${PYSITELIB}/mutagen/oggvorbis.pyo
+${PYSITELIB}/mutagen/optimfrog.py
+${PYSITELIB}/mutagen/optimfrog.pyc
+${PYSITELIB}/mutagen/optimfrog.pyo
+${PYSITELIB}/mutagen/trueaudio.py
+${PYSITELIB}/mutagen/trueaudio.pyc
+${PYSITELIB}/mutagen/trueaudio.pyo
+${PYSITELIB}/mutagen/wavpack.py
+${PYSITELIB}/mutagen/wavpack.pyc
+${PYSITELIB}/mutagen/wavpack.pyo
 @dirrm ${PYSITELIB}/mutagen
