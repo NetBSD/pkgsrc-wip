@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 22:26:41 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/13 14:36:53 thomasklausner Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -13,7 +13,6 @@ NO_CHECKSUM=	yes
 NO_SRC_ON_FTP=	# changes daily
 NO_SRC_ON_CDROM=# changes daily
 USE_TOOLS+=	gmake
-USE_X11=	yes
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
@@ -37,4 +36,5 @@ SCM_VER!=	${DATE} -r ${YESTERDAY} +%Y%m%d
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
