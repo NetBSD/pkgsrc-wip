@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/13 18:38:51 ishit Exp $
 
 DISTNAME=	bsfilter-1.0.12
 CATEGORIES=	mail
@@ -10,7 +10,6 @@ HOMEPAGE=	http://bsfilter.org/index-e.html
 COMMENT=	Bayesian spam filter written in Ruby
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
-DEPENDS+=	${RUBY_PKGPREFIX}-iconv>=${RUBY_VERSION}:../../converters/ruby-iconv
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
@@ -18,13 +17,17 @@ REPLACE_RUBY=	bsfilter/bsfilter
 EXAMPLESDIR=	${PREFIX}/share/examples/bsfilter
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/bsfilter/bsfilter ${PREFIX}/bin/bsfilter
-	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bsfilter/bsfilter ${PREFIX}/bin/bsfilter
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in bsfilter.conf.sample dot-qmail.sample
-	@${INSTALL_DATA} ${FILESDIR}/${f} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/${f} ${EXAMPLESDIR}
 .endfor
-.for d in mda mua
-	@${CP} -r ${WRKSRC}/${d} ${EXAMPLESDIR}/${d}
+.for d in mda/maildrop mda/procmail mua/mew3 mua/mew4
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}/${d}
+	${FIND} ${WRKSRC}/${d} -type f -print |			\
+        while read f; do					\
+                ${INSTALL_DATA} $$f ${EXAMPLESDIR}/${d};	\
+        done
 .endfor
 
 .include "../../lang/ruby/rubyversion.mk"
