@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/09 22:21:51 neutr1n0x Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/13 23:46:40 shattered Exp $
 bin/ding
 man/man1/ding.1
-share/dict/ger-eng.txt
+share/dict/de-en.txt

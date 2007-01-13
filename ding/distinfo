@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/09 22:21:51 neutr1n0x Exp $
+$NetBSD: distinfo,v 1.2 2007/01/13 23:46:40 shattered Exp $
 
-SHA1 (ding-1.2.tar.gz) = d07c7d56042f6a6de63a04fc64e2213cddb6b1fe
-Size (ding-1.2.tar.gz) = 1581400 bytes
-SHA1 (ger-eng.txt.gz) = fde1a47316a7a0231a57d8773a5e86924ab77d24
-Size (ger-eng.txt.gz) = 1527727 bytes
-SHA1 (patch-aa) = 23e1fd039b3feb7b4b5569e1712df07d4887bce3
+SHA1 (de-en.txt.gz) = cdf24e02a261adcaa24500403c2efe1638c6201a
+RMD160 (de-en.txt.gz) = 2887ad2760eaf4802b99460a6d0f758f6b16a2cd
+Size (de-en.txt.gz) = 2268859 bytes
+SHA1 (ding-1.4.tar.gz) = 5e738ee2c2eb2bc57012bec68e88c5973796cf24
+RMD160 (ding-1.4.tar.gz) = 5a090defdd30b58b1163330954074f27fb487a0b
+Size (ding-1.4.tar.gz) = 2325538 bytes
+SHA1 (patch-aa) = ff7e8f655444fce934ea7e1f1fa2e9e061a78eac
