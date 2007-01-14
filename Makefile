@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2476 2007/01/12 06:08:16 netcap Exp $
+# $Id: Makefile,v 1.2477 2007/01/14 19:36:41 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1102,7 +1102,6 @@ SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-XML-DOM-XPath
-SUBDIR+=	p5-YAML-Syck
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
 SUBDIR+=	pal
