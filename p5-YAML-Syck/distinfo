@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/31 10:24:39 roelants Exp $
-
-SHA1 (YAML-Syck-0.45.tar.gz) = 7ab6126747f28b944552ee071dd357c07c8633df
-RMD160 (YAML-Syck-0.45.tar.gz) = 439626b53e66e0434d2154e2d8fe836faf5e2f48
-Size (YAML-Syck-0.45.tar.gz) = 123720 bytes
