@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/12 12:36:50 virtus Exp $
+$NetBSD: distinfo,v 1.2 2007/01/14 20:11:48 shattered Exp $
 
-SHA1 (qinx-0.3.tar.gz) = 86c5d4a7042b5d0fba13fadf208dbadba1c2ac65
-Size (qinx-0.3.tar.gz) = 504288 bytes
+SHA1 (qinx-1.4.tar.bz2) = f9624c76171b3d2990db65b03af4f4dc342cdb23
+RMD160 (qinx-1.4.tar.bz2) = 5aac207b326e15e1728963be15dc87e15e174ee6
+Size (qinx-1.4.tar.bz2) = 383043 bytes
