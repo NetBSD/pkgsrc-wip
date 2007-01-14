@@ -8,7 +8,7 @@ Suggested package updates
 	o daphne-0.99.7c
 	o editline-20061228.2.10
 	o electricsheep-2.6.3
-	o emelfm2-0.1.4 
+	o emelfm2-0.3.1 
 	o fakenes-0.5.7
 	o gajim-0.11
 	o gambas-1.9.46
@@ -32,7 +32,7 @@ Suggested package updates
 	o openct-0.6.11
 	o osmose-0.8.1
 	o parted-1.8.0
-	o planner-0.14.1
+	o planner-0.14.2
 	o py-PyPE-2.7.2
 	o qcomicbook-0.3.4
 	o rdup-0.3.5
@@ -46,6 +46,7 @@ Suggested package updates
 	o speex-1.2beta1
 	o subtitleeditor-0.12
 	o sxemacs-22.1.6
+	o tor-0.1.2.6
 	o txt2tags-2.3.2
 	o uade-2.03
 	o uqm-0.5.0
