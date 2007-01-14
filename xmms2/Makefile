@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/11/25 15:18:17 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/14 12:11:05 thomasklausner Exp $
 #
 
 DISTNAME=	xmms2-0.2DrGonzo
@@ -18,11 +18,12 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 MANCOMPRESSED=		yes
 
-PKGCONFIG_OVERRIDE=	xmms2-client-ecore.pc
+PKGCONFIG_OVERRIDE=	xmms2-client-cpp-glib.pc
+PKGCONFIG_OVERRIDE+=	xmms2-client-cpp.pc
+PKGCONFIG_OVERRIDE+=	xmms2-client-ecore.pc
 PKGCONFIG_OVERRIDE+=	xmms2-client-glib.pc
 PKGCONFIG_OVERRIDE+=	xmms2-client.pc
 PKGCONFIG_OVERRIDE+=	xmms2-plugin.pc
-PKGCONFIG_OVERRIDE_STAGE=	pre-build
 
 .include "options.mk"
 .include "../../audio/libmad/buildlink3.mk"

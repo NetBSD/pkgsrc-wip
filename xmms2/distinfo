@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.6 2006/11/25 15:18:17 shattered Exp $
+$NetBSD: distinfo,v 1.7 2007/01/14 12:11:06 thomasklausner Exp $
 
 SHA1 (xmms2-0.2DrGonzo.tar.bz2) = f6fc8e3253c0fdc69bd1365a4d72c6ca83117ce4
 RMD160 (xmms2-0.2DrGonzo.tar.bz2) = 82d89fd20510cd353d004a444994f29157681257
 Size (xmms2-0.2DrGonzo.tar.bz2) = 1045538 bytes
 SHA1 (patch-aa) = 42cc9a92a82ea54abaa6728ce285001e5d0d2f5a
 SHA1 (patch-ab) = ac57cbb60c1189f63876b5cdf27bd74836c03706
+SHA1 (patch-ac) = 61a4f960c36917f64fb1e14ad200a90e037e3ca9
+SHA1 (patch-ad) = e7808bc6558ea0e80fa189f1c87cb229daa643ca
