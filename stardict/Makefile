@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:28 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/14 22:51:17 shattered Exp $
 #
 
 DISTNAME=		stardict-2.4.4
@@ -13,8 +13,10 @@ COMMENT=		Cross-Platform and international dictionary written in Gtk2
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
