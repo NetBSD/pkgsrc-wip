@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2478 2007/01/15 11:43:24 ghen Exp $
+# $Id: Makefile,v 1.2479 2007/01/15 14:20:16 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1241,6 +1241,7 @@ SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-kyra
+SUBDIR+=        py-libtunepimp
 SUBDIR+=	py-mecab
 SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
