@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/15 14:04:47 netcap Exp $
+${PYSITELIB}/tunepimp/__init__.py
+${PYSITELIB}/tunepimp/__init__.pyc
+${PYSITELIB}/tunepimp/__init__.pyo
+${PYSITELIB}/tunepimp/metadata.py
+${PYSITELIB}/tunepimp/metadata.pyc
+${PYSITELIB}/tunepimp/metadata.pyo
+${PYSITELIB}/tunepimp/track.py
+${PYSITELIB}/tunepimp/track.pyc
+${PYSITELIB}/tunepimp/track.pyo
+${PYSITELIB}/tunepimp/tunepimp.py
+${PYSITELIB}/tunepimp/tunepimp.pyc
+${PYSITELIB}/tunepimp/tunepimp.pyo
+@dirrm ${PYSITELIB}/tunepimp
