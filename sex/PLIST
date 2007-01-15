@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/15 17:04:34 netcap Exp $
+bin/sex
+man/cat6/sex.0
+man/man6/sex.6

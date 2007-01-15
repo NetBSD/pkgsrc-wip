@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/15 17:04:34 netcap Exp $
+
+--- Makefile.orig	2001-05-23 00:13:16.000000000 +0200
++++ Makefile
+@@ -1,9 +1,9 @@
+ # Make sex
+ 
+ PROG=sex
+-PREFIX?=/usr/local
++PREFIX?=@PREFIX@
+ BINDIR=${PREFIX}/bin
+-MANDIR=${PREFIX}/man/man
+-MAN6=sex.6
++MANDIR=${PREFIX}/man
++MAN=${PROG}.6
+ 
+ .include <bsd.prog.mk>
