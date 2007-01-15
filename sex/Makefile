@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/15 17:04:34 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/15 17:08:45 netcap Exp $
 
 DISTNAME=	sex-1.0
 CATEGORIES=	games
 MASTER_SITES=	http://spatula.net/software/sex/
 
-MAINTAINER=	jfranz@thundrix.ch
-COMMENT=	Spout silly, random porn-like text
+MAINTAINER=	jfranz@bsdprojects.net
+COMMENT=	Yet another program for spouting silly random phrases.
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
