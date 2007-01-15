@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2480 2007/01/15 17:07:02 netcap Exp $
+# $Id: Makefile,v 1.2481 2007/01/15 23:39:21 larnor Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -609,7 +609,6 @@ SUBDIR+=	kchmviewer
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
-SUBDIR+=	kobodl
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
