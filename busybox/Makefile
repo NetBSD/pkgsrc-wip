@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/13 10:36:20 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/15 10:08:03 rillig Exp $
 #
 
 DISTNAME=	busybox-1.3.1
@@ -9,11 +9,10 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.busybox.net/
 COMMENT=	The Swiss Army Knife of Embedded Linux
 
-OPSYSVARS+=	HOSTLDFLAGS
-HOSTLDFLAGS.NetBSD=	-lintl
+ONLY_FOR_PLATFORM=	Linux-*-*
+# See crunchgen(1) on BSD-systems for similar functionality.
 
 USE_TOOLS+=	gmake
-MAKE_ENV+=	HOSTLDFLAGS=${HOSTLDFLAGS:Q}
 
 CHECK_PORTABILITY_SKIP+=	scripts/individual
 CHECK_PORTABILITY_SKIP+=	scripts/kconfig/lxdialog/check-lxdialog.sh
