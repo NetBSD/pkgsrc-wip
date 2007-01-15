@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2479 2007/01/15 14:20:16 netcap Exp $
+# $Id: Makefile,v 1.2480 2007/01/15 17:07:02 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1366,6 +1366,7 @@ SUBDIR+=	seamonkey-gtk1
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
+SUBDIR+=	sex
 SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
