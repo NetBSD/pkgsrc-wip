@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/16 13:00:49 netcap Exp $
+
+SHA1 (liblo-0.23.tar.gz) = 5f2ab1e151ed5d17a1a230a1a1df56ea5070f28d
+RMD160 (liblo-0.23.tar.gz) = 0d9cea4f0887429cc7e8e2dae74caa7965aba7d0
+Size (liblo-0.23.tar.gz) = 419662 bytes
+SHA1 (patch-aa) = bb6bcd986611e860d6deb9ee6361c6d112a43786

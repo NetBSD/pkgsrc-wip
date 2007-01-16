@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/16 13:00:49 netcap Exp $
+
+--- src/lo_types_internal.h.orig	2005-08-11 11:07:29.000000000 +0200
++++ src/lo_types_internal.h
+@@ -9,6 +9,7 @@
+ #endif
+ 
+ #include <pthread.h>
++#include <sys/socket.h>
+ 
+ #include "lo/lo_osc_types.h"
+ 

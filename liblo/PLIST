@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 13:00:49 netcap Exp $
+include/lo/lo.h
+include/lo/lo_endian.h
+include/lo/lo_errors.h
+include/lo/lo_lowlevel.h
+include/lo/lo_macros.h
+include/lo/lo_osc_types.h
+include/lo/lo_throw.h
+include/lo/lo_types.h
+lib/liblo.la
+lib/pkgconfig/liblo.pc
+@dirrm include/lo
