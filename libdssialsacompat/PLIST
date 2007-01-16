@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 17:54:53 netcap Exp $
+include/dssi/alsa/asoundef.h
+include/dssi/alsa/asoundlib.h
+include/dssi/alsa/seq.h
+include/dssi/alsa/seq_event.h
+include/dssi/alsa/seq_midi_event.h
+include/dssi/alsa/sound/asequencer.h
+lib/libdssialsacompat.la
+lib/pkgconfig/libdssialsacompat.pc
+@dirrm include/dssi/alsa/sound
+@dirrm include/dssi/alsa
+@dirrm include/dssi
