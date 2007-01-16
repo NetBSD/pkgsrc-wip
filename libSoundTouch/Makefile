@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/16 10:19:56 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/16 11:50:36 netcap Exp $
 #
 
 DISTNAME=		soundtouch-1.3.1
@@ -26,10 +26,8 @@ GNU_CONFIGURE=		yes
 #       but it would be a lot better if it was fixed upstream. 
 pre-patch:
 	${RM} -rf ${WRKSRC}/config/*
-	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} ${SED} -e \
-		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
 
-post-patch: .SILENT
+post-patch:
 	${SED} -e 's|-O3|${CFLAGS:M*:Q}|; s|$$(prefix)/doc|$$(datadir)/doc|' \
 		${WRKSRC}/source/example/bpm/Makefile.in \
 		${WRKSRC}/source/example/SoundStretch/Makefile.in \
