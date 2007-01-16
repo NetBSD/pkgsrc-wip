@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2484 2007/01/16 17:59:36 netcap Exp $
+# $Id: Makefile,v 1.2485 2007/01/16 22:59:16 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -205,7 +205,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
 SUBDIR+=	drow
 SUBDIR+=	drpython
-SUBDIR+=        dssi
+SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dwepcrack
@@ -638,7 +638,7 @@ SUBDIR+=	libbtctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
-SUBDIR+=        libdssialsacompat
+SUBDIR+=	libdssialsacompat
 SUBDIR+=	libgadu
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgksu
@@ -652,7 +652,7 @@ SUBDIR+=	libhttpd
 SUBDIR+=	libixp
 SUBDIR+=	libjudy
 SUBDIR+=	liblingoteach
-SUBDIR+=        liblo
+SUBDIR+=	liblo
 SUBDIR+=	libmaa
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
@@ -1244,7 +1244,7 @@ SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-kyra
-SUBDIR+=        py-libtunepimp
+SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-mecab
 SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
