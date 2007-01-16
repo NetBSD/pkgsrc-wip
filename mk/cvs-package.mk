@@ -1,36 +1,45 @@
-# $Id: cvs-package.mk,v 1.18 2007/01/16 10:35:35 rillig Exp $
+# $Id: cvs-package.mk,v 1.19 2007/01/16 10:54:38 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
 #
-# A package using this file shall define the following variables:
+# Package-settable variables:
 #
-#	CVS_REPOSITORIES
-#		A list of unique identifiers /id/ for which appropriate
-#		CVS_ROOT and CVS_MODULE must be defined.
+# CVS_REPOSITORIES
+#	A list of unique identifiers. For each of those identifiers, the
+#	following variables define the details of how to access the
+#	CVS repository.
 #
-#	CVS_ROOT.${id}
-#		The CVSROOT for the CVS repository, including anoncvs
-#		password, if applicable.
+# CVS_TAG
+#	The default CVS tag that is checked out. May be overridden by
+#	CVS_TAG.${id}.
 #
-#	CVS_MODULE.${id}
-#		The CVS module to check out.
+#	Default value: today at midnight.
 #
-# It may define the following variables:
+# CVS_ROOT.${id}
+#	The CVSROOT for the CVS repository, including anoncvs password,
+#	if applicable.
 #
-#	CVS_TAG
-#		The CVS tag to check out (default: today at midnight).
+#	Examples:
+#		${CVS_ROOT_GNU}/emacs
+#		:pserver:anoncvs:@anoncvs.example.com:/cvsroot/project
 #
-#	CVS_TAG.${id}
-#		Overridable CVS tag for a repository.
+# CVS_MODULE.${id}
+#	The CVS module to check out.
+#
+#	Default value: ${id}
+#
+# CVS_TAG.${id}
+#	Overridable CVS tag for a repository.
 #
 # This file defines the following variables:
 #
-#	CVS_ROOT_GNU
-#	CVS_ROOT_NONGNU
-#	CVS_ROOT_SOURCEFORGE
-#		Common CVS repository locations for use in the CVS_ROOT
-#		variables.
+# CVS_ROOT_GNU
+# CVS_ROOT_NONGNU
+# CVS_ROOT_SOURCEFORGE
+#	Common CVS repository locations for use in the CVS_ROOT
+#	variables.
+#
 
 .if !defined(_PKG_MK_CVS_PACKAGE_MK)
 _PKG_MK_CVS_PACKAGE_MK=	# defined
@@ -67,9 +76,6 @@ CVS_REPOSITORIES?=	# none
 .  if !defined(CVS_ROOT.${_repo_})
 PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${_repo_:Q}" must be set."
 .  endif
-.  if !defined(CVS_MODULE.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_MODULE."${_repo_:Q}" must be set."
-.  endif
 .endfor
 
 #
@@ -95,6 +101,7 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 #
 
 .for _repo_ in ${CVS_REPOSITORIES}
+CVS_MODULE.${_repo_}?=		${_repo_}
 .  if defined(CVS_TAG.${_repo_})
 _CVS_TAG_FLAG.${_repo_}=	-r${CVS_TAG.${_repo_}}
 _CVS_TAG.${_repo_}=		${CVS_TAG.${_repo_}}
