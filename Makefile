@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2481 2007/01/15 23:39:21 larnor Exp $
+# $Id: Makefile,v 1.2482 2007/01/16 13:04:02 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -650,6 +650,7 @@ SUBDIR+=	libhttpd
 SUBDIR+=	libixp
 SUBDIR+=	libjudy
 SUBDIR+=	liblingoteach
+SUBDIR+=        liblo
 SUBDIR+=	libmaa
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
