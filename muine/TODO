@@ -1,1 +1,2 @@
 - Crashes after startup.
+- Might need patching for flac-1.1.3 API changes.
