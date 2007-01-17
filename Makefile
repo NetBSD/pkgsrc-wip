@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2485 2007/01/16 22:59:16 kristerw Exp $
+# $Id: Makefile,v 1.2486 2007/01/17 21:20:20 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1237,6 +1237,7 @@ SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
+SUBDIR+=	py-gnucash
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
