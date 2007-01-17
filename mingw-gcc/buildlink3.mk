@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 07:18:02 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/01/17 03:11:30 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MINGW_GCC_BUILDLINK3_MK:=	${MINGW_GCC_BUILDLINK3_MK}+
@@ -15,7 +15,7 @@ BUILDLINK_PACKAGES+=	mingw-gcc
 .if !empty(MINGW_GCC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.mingw-gcc+=	mingw-gcc>=3.4.2
 BUILDLINK_PKGSRCDIR.mingw-gcc?=	../../wip/mingw-gcc
-BUILDLINK_TRANSFORM.mingw-gcc+=	-e "s,${MINGW_TARGET}/lib,lib/,g"
+BUILDLINK_FNAME_TRANSFORM.mingw-gcc+=	-e "s,${MINGW_TARGET}/lib,lib/,g"
 .endif	# MINGW_GCC_BUILDLINK3_MK
 
 .include "../../wip/mingw-binutils/buildlink3.mk"

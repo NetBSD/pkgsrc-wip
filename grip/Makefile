@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/11/10 23:07:17 shattered Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/17 03:11:30 rillig Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
-BUILDLINK_TRANSFORM.cdparanoia+=	-e s,/cdparanoia/,/,g
+BUILDLINK_FNAME_TRANSFORM.cdparanoia+=	-e s,/cdparanoia/,/,g
 
 CONFIGURE_ARGS+=	--disable-id3
 
