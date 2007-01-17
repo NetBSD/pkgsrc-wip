@@ -1,0 +1,2 @@
+python-gnucash is a python binding to the GnuCash libraries. It
+uses SWIG and some additional python code to achieve this.
