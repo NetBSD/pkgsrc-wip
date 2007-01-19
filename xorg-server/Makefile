@@ -1,23 +1,32 @@
-# $NetBSD: Makefile,v 1.10 2006/11/19 11:46:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2007/01/19 23:12:48 jeremy-c-reed Exp $
 
-DISTNAME=	xorg-server-1.1.99.3
+DISTNAME=	xorg-server-1.1.99.903
+PKGNAME=	modular-${DISTNAME}
 CATEGORIES=	x11
-#MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 # use snapshot
-MASTER_SITES=	http://xorg.freedesktop.org/archive/development/individual/xserver/
+#MASTER_SITES=	http://xorg.freedesktop.org/archive/development/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
 
+SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Xorg X11 Server from modular X.org X11
 
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/xorg-server.pc.in
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	gmake
-USE_TOOLS+=	perl
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CPPFLAGS+=		-D_NETBSD_SOURCE
+
+BUILD_DEFS+=		VARBASE
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.4
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 BUILDLINK_API_DEPENDS.libXfixes+=	libXfixes>=4.0
 BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
@@ -25,14 +34,16 @@ BUILDLINK_API_DEPENDS.xkbui+=		xkbui>=1.0.2
 
 # need mesa for glx and more
 # maybe this should be a configure option?
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-
-#.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
+.include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/inputproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
