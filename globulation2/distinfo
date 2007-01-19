@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/01/02 21:27:14 h2m Exp $
+$NetBSD: distinfo,v 1.2 2007/01/19 18:05:40 thomasklausner Exp $
 
-SHA1 (glob2-0.8.17.tar.gz) = 0b1865b2eef60cfdbfea6e0ef8362a9f84aeb1b1
-RMD160 (glob2-0.8.17.tar.gz) = ab6f76b1589973e8ca550de1a4023c8034be66d0
-Size (glob2-0.8.17.tar.gz) = 8887975 bytes
+SHA1 (glob2-0.8.21.tar.gz) = c9829ea4e78e7c7e901126bf77d2fbb36272bfc0
+RMD160 (glob2-0.8.21.tar.gz) = f8f69e8d86d8f175d8ed152278241900584c67d1
+Size (glob2-0.8.21.tar.gz) = 9496398 bytes

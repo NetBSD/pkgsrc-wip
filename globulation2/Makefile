@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:10 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/19 18:05:40 thomasklausner Exp $
 #
 
-PKGNAME=		globulation2-0.8.17
-DISTNAME=		glob2-0.8.17
-PKGREVISION=		2
+PKGNAME=		globulation2-0.8.21
+DISTNAME=		glob2-0.8.21
 CATEGORIES=		games
-MASTER_SITES=		http://lissrv3.epfl.ch/~glob2/data/
+MASTER_SITES=		http://globulation2.org/releases/0.8.21/
 
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://globulation2.org/wiki/
 COMMENT=		Real-Time Strategy (RTS) game providing AI and net mode
 
 GNU_CONFIGURE=		YES
+USE_DIRS+=		xdg-1.4
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 
@@ -19,6 +19,7 @@ USE_TOOLS+=		gmake
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"

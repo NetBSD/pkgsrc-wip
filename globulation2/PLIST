@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/02 21:27:14 h2m Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/19 18:05:40 thomasklausner Exp $
 bin/glob2
 share/applications/glob2.desktop
 share/glob2/AUTHORS
@@ -245,6 +245,16 @@ share/glob2/data/gfx/cursor/wait6r.png
 share/glob2/data/gfx/cursor/wait7r.png
 share/glob2/data/gfx/cursor/wait8r.png
 share/glob2/data/gfx/cursor/wait9r.png
+share/glob2/data/gfx/death0r.png
+share/glob2/data/gfx/death1r.png
+share/glob2/data/gfx/death2r.png
+share/glob2/data/gfx/death3r.png
+share/glob2/data/gfx/death4r.png
+share/glob2/data/gfx/death5r.png
+share/glob2/data/gfx/death6r.png
+share/glob2/data/gfx/death7r.png
+share/glob2/data/gfx/death8r.png
+share/glob2/data/gfx/death9r.png
 share/glob2/data/gfx/defencetower0b0.png
 share/glob2/data/gfx/defencetower0b0r.png
 share/glob2/data/gfx/defencetower1b0.png
@@ -281,6 +291,8 @@ share/glob2/data/gfx/gamegui22.png
 share/glob2/data/gfx/gamegui23.png
 share/glob2/data/gfx/gamegui24.png
 share/glob2/data/gfx/gamegui25.png
+share/glob2/data/gfx/gamegui26.png
+share/glob2/data/gfx/gamegui27.png
 share/glob2/data/gfx/gamegui3.png
 share/glob2/data/gfx/gamegui4.png
 share/glob2/data/gfx/gamegui5.png
@@ -1601,12 +1613,17 @@ share/glob2/data/texts.keys.txt
 share/glob2/data/texts.list.txt
 share/glob2/data/texts.nl.txt
 share/glob2/data/texts.pl.txt
+share/glob2/data/texts.pt.txt
 share/glob2/data/texts.ro.txt
 share/glob2/data/texts.ru.txt
 share/glob2/data/texts.se.txt
 share/glob2/data/texts.si.txt
+share/glob2/data/texts.sk.txt
 share/glob2/data/texts.sr.txt
+share/glob2/data/texts.sv.txt
+share/glob2/data/texts.tr.txt
 share/glob2/data/units.txt
+share/glob2/data/unitsSkins.txt
 share/glob2/data/zik/a1.ogg
 share/glob2/data/zik/a2.ogg
 share/glob2/data/zik/a3.ogg
@@ -1615,16 +1632,26 @@ share/glob2/data/zik/menu.ogg
 share/glob2/maps/A_big_pond.map
 share/glob2/maps/Centerfolds_2.map
 share/glob2/maps/Easy_Three.map
+share/glob2/maps/FourSquares1.map
+share/glob2/maps/G2.map
 share/glob2/maps/Garden_3.map
 share/glob2/maps/Isles.map
 share/glob2/maps/Migration.map
+share/glob2/maps/Muka.map
+share/glob2/maps/No_name.map
+share/glob2/maps/One_on_One.map
 share/glob2/maps/Playground.map
 share/glob2/maps/SmallForTwo.map
 share/glob2/maps/Tower_Defense_for_2.map
+share/glob2/maps/TriangIe.map
+share/glob2/maps/Triangle.map
 share/glob2/maps/WaterInTheDesert.map
 share/glob2/maps/WaterInTheDesert2.map
 share/glob2/maps/Wild_River.map
+share/glob2/maps/a_new_try.map
+share/glob2/maps/newislands_green_blue.map
 share/glob2/maps/stone_bases.map
+share/glob2/maps/strange2.map
 share/glob2/maps/the_sand_square.map
 share/glob2/maps/tutorial.map
 share/glob2/maps/weakness.map
