@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.14 2007/01/20 11:37:58 thomasklausner Exp $
 
 DISTNAME=		mixxx-1.4.2
 CATEGORIES=		audio
@@ -19,7 +19,9 @@ CONFIGURE_ARGS+=	--dependency-dir=${LOCALBASE}/bin\;${LOCALBASE}/lib\;${LOCALBAS
 CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--disable-jack
 
-USE_TOOLS+=		bash
+USE_LANGUAGES=		c++
+USE_TOOLS+=		bash pkg-config
+USE_LIBTOOL+=		yes
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash

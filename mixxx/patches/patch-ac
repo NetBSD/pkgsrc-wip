@@ -1,16 +1,18 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/09/12 19:34:47 ghen Exp $
+$NetBSD: patch-ac,v 1.2 2007/01/20 11:37:58 thomasklausner Exp $
 
---- mixxx.pro.orig	2004-10-22 09:29:25.000000000 +0200
-+++ mixxx.pro	2005-08-21 10:55:45.000000000 +0200
-@@ -82,6 +82,7 @@
+--- mixxx.pro.orig	2004-10-22 07:29:25.000000000 +0000
++++ mixxx.pro
+@@ -82,6 +82,9 @@ win32 {
  unix:!macx:SOURCES += midiobjectoss.cpp
  unix:!macx:HEADERS += midiobjectoss.h
  unix:!macx:DEFINES += __OSSMIDI__
 +unix:!macx:LIBS += -lossaudio
++# for libsndfile
++unix:!macx:LIBS += -lFLAC
  
  # Windows MIDI
  win32:SOURCES += midiobjectwin.cpp
-@@ -136,8 +137,8 @@
+@@ -136,8 +139,8 @@ macx:LIBS += $$MACLIBPATH/lib/libvorbis.
  # PowerMate
  SOURCES += powermate.cpp
  HEADERS += powermate.h
@@ -21,7 +23,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/09/12 19:34:47 ghen Exp $
  win32:SOURCES += powermatewin.cpp
  win32:HEADERS += powermatewin.h
  win32:LIBS += setupapi.lib
-@@ -145,16 +146,16 @@
+@@ -145,16 +148,16 @@ win32:LIBS += setupapi.lib
  # Mouse
  SOURCES += mouse.cpp
  HEADERS += mouse.h
@@ -42,7 +44,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/09/12 19:34:47 ghen Exp $
  
  # KissFFT
  KISSFFT_DIR = ../lib/kissfft
-@@ -197,7 +198,7 @@
+@@ -197,7 +200,7 @@ unix:!macx {
  
    SETTINGS_FILE = \".mixxx.cfg\"
    TRACK_FILE = \".mixxxtrack.xml\"
