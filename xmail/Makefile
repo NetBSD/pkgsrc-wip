@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/14 19:16:56 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2007/01/21 09:45:01 gschwarz Exp $
 #
 
 DISTNAME=	xmail-1.18
@@ -25,7 +25,7 @@ EXT=bsd # Default one :)
 .	elif ${MACHINE_ARCH} == "ppc"
 		EXT="plx"
 .	endif
-.elif ${OPSYS} == "Solaris"
+.elif ${OPSYS} == "SunOS"
 .	if   ${MACHINE_ARCH} == "sparc"
 		EXT="sso"
 .	elif ${MACHINE_ARCH} == "i86pc"
