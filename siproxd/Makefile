@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/03 12:50:06 gschwarz Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/21 09:18:22 gschwarz Exp $
 
 DISTNAME=	siproxd-0.5.13
 CATEGORIES=	net
@@ -13,6 +13,7 @@ USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-libosip-prefix=${BUILDLINK_PREFIX.libosip2}
+
 EGDIR=		${PREFIX}/share/examples/siproxd
 
 CONF_FILES=	${EGDIR}/siproxd.conf.example ${PKG_SYSCONFDIR}/siproxd.conf \
