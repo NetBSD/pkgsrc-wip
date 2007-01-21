@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1 2007/01/21 13:38:43 bartoszkuzma Exp $
+
+--- src/DeckManager.cpp.orig	2007-01-15 05:09:08.000000000 +0100
++++ src/DeckManager.cpp
+@@ -21,6 +21,10 @@
+ 
+ #include <gtkmm/fileselection.h>
+ 
++#if !defined(WIN32)
++#  include <libgen.h>			// basename(3), dirname(3)
++#endif
++
+ #include "Granule-main.h"
+ #include "Granule.h"
+ #include "Deck.h"
+@@ -306,7 +310,7 @@ export_deck_cb ()
+ 	MyFileSaveDialog f (_("Select File To Export to"), MAINWIN);
+ 
+ 	std::string::size_type idx;
+-	std::string fname = basename (selected->get_name ().c_str ());
++	std::string fname = basename ((char *)selected->get_name ().c_str ());
+ 	if ((idx = fname.find (DECK_FILE_EXT)) != string::npos) {
+ 		fname.replace (idx, idx+3, ".csv");
+ 	}
+@@ -370,7 +374,7 @@ save_all_deck_cb ()
+ 			MyFileSaveDialog f (_("Save New Deck"), MAINWIN,
+ 								"DeckFile", "*" DECK_FILE_EXT);
+ 
+-			fname = basename (DECKLIST->get_deck (iter)->get_name ().c_str ());
++			fname = basename ((char *)DECKLIST->get_deck (iter)->get_name ().c_str ());
+ 			f.set_current_name (fname);
+ 
+ 			if (f.run () == Gtk::RESPONSE_OK) 
+@@ -431,7 +435,7 @@ save_as_deck_cb ()
+ 							"DeckFile", "*" DECK_FILE_EXT);
+ 
+ 		std::string::size_type idx;
+-		std::string fname = basename (selected->get_name ().c_str ());
++		std::string fname = basename ((char *)selected->get_name ().c_str ());
+ 		if ((idx = fname.find (ext)) != string::npos) {
+ 			fname.replace (idx, idx+3, "(copy).dkf");
+ 		}

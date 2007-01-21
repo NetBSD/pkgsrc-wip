@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/03 13:46:42 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/21 13:38:43 bartoszkuzma Exp $
 bin/granule
 share/applications/granule.desktop
 share/granule/granule
@@ -10,11 +10,14 @@ share/granule/pixmaps/drawer_empty.png
 share/granule/pixmaps/drawer_many.png
 share/granule/pixmaps/drawer_one.png
 share/granule/pixmaps/granule.png
+share/granule/pixmaps/hide_control.png
 share/granule/pixmaps/sched_green.png
 share/granule/pixmaps/sched_grey.png
 share/granule/pixmaps/sched_red.png
 share/granule/pixmaps/sched_yellow.png
+share/granule/pixmaps/show_control.png
 share/granule/pixmaps/speaker_24.png
+share/granule/pixmaps/text_addindex.png
 share/granule/pixmaps/text_big.png
 share/granule/pixmaps/text_block.png
 share/granule/pixmaps/text_bold.png
@@ -26,6 +29,7 @@ share/granule/pixmaps/text_cut.png
 share/granule/pixmaps/text_italic.png
 share/granule/pixmaps/text_left.png
 share/granule/pixmaps/text_monospaced.png
+share/granule/pixmaps/text_normalize.png
 share/granule/pixmaps/text_paste.png
 share/granule/pixmaps/text_remove_tags.png
 share/granule/pixmaps/text_right.png
