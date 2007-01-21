@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/23 18:24:44 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/21 09:47:19 gschwarz Exp $
 
 DISTNAME=	pdnsd-1.2.5-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-.if ${OPSYS} == "IRIX" || ${OPSYS} == "Solaris" || ${OPSYS} == "Dragonfly"
+.if ${OPSYS} == "IRIX" || ${OPSYS} == "Dragonfly"
 CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
 .endif
 
