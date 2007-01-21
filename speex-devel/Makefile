@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/20 18:20:21 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/21 09:53:19 gschwarz Exp $
 #
 
 DISTNAME=	speex-1.1.12
@@ -16,11 +16,13 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speex.pc.in
 USE_TOOLS+=		pkg-config
 
+
 # previous versions of the package were called Speex
 # conflicts with the non-development version
 CONFLICTS=	Speex-[0-9]* speex-[0-9]*
 
 CONFIGURE_ARGS+=	--with-ogg-dir="${BUILDLINK_PREFIX.libogg}"
+LIBS+=			${BUILDLINK_LDADD.getopt:Q}
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
@@ -29,6 +31,5 @@ BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
