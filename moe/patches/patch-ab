@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2007/01/21 11:48:56 gschwarz Exp $
+
+--- configure.orig	2007-01-21 11:44:16.000000000 +0100
++++ configure	2007-01-21 11:45:16.000000000 +0100
+@@ -23,12 +23,12 @@
+ infodir='$(datadir)/info'
+ mandir='$(datadir)/man'
+ sysconfdir='$(prefix)/etc'
+-CC=
+-CXX=
+-CPPFLAGS=
+-CFLAGS='-Wall -W -O2'
+-CXXFLAGS='-Wall -W -O2'
+-LDFLAGS=-lncurses
++#CC=
++#CXX=
++#CPPFLAGS=
++#CFLAGS='-Wall -W -O2'
++#CXXFLAGS='-Wall -W -O2'
++#LDFLAGS=-lncurses
+ 
+ # Loop over all args
+ while [ x"$1" != x ] ; do
