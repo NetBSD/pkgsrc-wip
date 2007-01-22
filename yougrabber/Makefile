@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/08 16:08:36 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/22 17:49:13 minskim Exp $
 #
 
 DISTNAME=		YouGrabber-0.20
@@ -10,7 +10,7 @@ HOMEPAGE=		http://yougrabber.sourceforge.net/
 COMMENT=		YouTube downloader
 
 BUILD_TARGET=		yg
-USE_NCURSES=		color
+USE_NCURSES=		yes # color
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/yg ${PREFIX}/bin
