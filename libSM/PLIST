@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.6 2007/01/22 10:08:38 bsadewitz Exp $
+include/X11/SM/SM.h
+include/X11/SM/SMlib.h
+include/X11/SM/SMproto.h
+lib/libSM.la
+lib/pkgconfig/sm.pc
+@dirrm include/X11/SM
+@comment @dirrm include/X11
