@@ -1,0 +1,4 @@
+Inter-client exchange (ICE) library for modular X.org
+
+I attempt to keep this package synchronized with the latest available
+["stable"] tarball.
