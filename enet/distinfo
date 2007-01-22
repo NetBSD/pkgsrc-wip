@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/22 04:28:42 pseudo_anim Exp $
+
+SHA1 (enet-1.0.tar.gz) = f141111b0100c24e5b8f419d41fa8bceff4c2a65
+RMD160 (enet-1.0.tar.gz) = ac102356b32d4f19e2d3995e5470696ec2013298
+Size (enet-1.0.tar.gz) = 135811 bytes
