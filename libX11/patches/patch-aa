@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4 2007/01/22 09:42:47 bsadewitz Exp $
+
+--- configure.ac.orig	2006-11-30 20:50:11.000000000 -0500
++++ configure.ac
+@@ -171,6 +171,9 @@ AM_CONDITIONAL(THRSTUBS, test x$thrstubs
+ dnl XXX incomplete, please fill this in
+ if test x$xthreads = xyes ; then
+     case $host_os in
++    netbsd*)
++    XTHREAD_CFLAGS="-D_REENTRANT"
++    XTHREADLIB="-lpthread" ;;
+     linux*|openbsd*|gnu*|k*bsd*-gnu)
+         XTHREADLIB=-lpthread ;;
+     freebsd*)
