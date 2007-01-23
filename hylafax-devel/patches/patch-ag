@@ -1,8 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
-
---- etc/Makefile.in.orig	Tue Feb  6 04:54:06 2001
-+++ etc/Makefile.in
-@@ -85,14 +85,16 @@ install: default
+--- etc/Makefile.in.orig	2007-01-23 17:29:26.000000000 +0100
++++ etc/Makefile.in	2007-01-23 17:35:00.000000000 +0100
+@@ -87,14 +87,16 @@
  		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
  	done
  	${PUTSERVER} -F ${SBIN} -m 755 -src probemodem.sh -O probemodem
@@ -21,5 +19,5 @@ $NetBSD: patch-ag,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
 -	${PUTSAMPLE} -F ${SPOOL}/etc -m 644 -idb nostrip \
 +	${PUTSAMPLE} -F ${PREFIX}/share/hylafax/etc_template -m 644 -idb nostrip \
  	    -src ${SRCDIR}/lutRS18.pcf -O lutRS18.pcf
- 
- #
+ 	${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m ${DIRMODE} \
+ 	    -idb hylafax.sw.server -dir -F ${SPOOL}/etc templates

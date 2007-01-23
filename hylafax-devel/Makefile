@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/01/23 18:16:05 ahallmann Exp $
 
-VERS=		4.3.0
+VERS=		4.3.1
 PKGNAME=	hylafax-devel-${VERS}
 DISTNAME=	hylafax-${VERS}
 CATEGORIES=	comms
@@ -29,11 +29,13 @@ USE_TOOLS+=		gs:run
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-MAKE=${MAKE_PROGRAM:Q}
 CONFIGURE_ARGS+=	--with-INSTALL="" --nointeractive
-CONFIGURE_ARGS+=	--with-ZLIBINC=-I${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--with-ZLIBINC=-I${BUILDLINK_PREFIX.zlib:Q}/include
 CONFIGURE_ARGS+=	--with-LIBZ="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} OPTIMIZER=${CFLAGS:M*:Q}
 CONFIGURE_ENV+=		FAXUID=${FAXUSER:Q} FAXGID=${FAXGROUP:Q}
 MANCOMPRESSED=		yes
+
+.include "../../mk/bsd.prefs.mk"
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
@@ -42,8 +44,8 @@ RCD_SCRIPTS=	hylafax
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
 
-PKG_OPTIONS_VAR=      PKG_OPTIONS.hylafax
-PKG_SUPPORTED_OPTIONS=        pam
+PKG_OPTIONS_VAR=	PKG_OPTIONS.hylafax
+PKG_SUPPORTED_OPTIONS=	pam
 ######################################################
 # pam doesn't work right now, so disabled by default #
 ######################################################
