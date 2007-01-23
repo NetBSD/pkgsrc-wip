@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/12/10 21:00:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/01/23 07:42:28 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1143,6 +1143,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-backend.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-backend.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-button.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-button.elc
+share/emacs/${PKGVERSION}/lisp/erc/erc-capab.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-capab.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-compat.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-dcc.el.gz
