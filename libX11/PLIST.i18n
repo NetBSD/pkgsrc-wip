@@ -1,0 +1,9 @@
+# $NetBSD: PLIST.i18n,v 1.1 2007/01/23 05:58:28 bsadewitz Exp $
+lib/X11/locale/common/ximcp.la
+lib/X11/locale/common/xlcDef.la
+lib/X11/locale/common/xlcUTF8Load.la
+lib/X11/locale/common/xlibi18n.la
+lib/X11/locale/common/xlocale.la
+lib/X11/locale/common/xomGeneric.la
+@dirrm lib/X11/locale/common
+@dirrm lib/X11/locale

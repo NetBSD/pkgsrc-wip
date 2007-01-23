@@ -1,0 +1,3 @@
+include/X11/Xlib-xcb.h
+lib/libX11-xcb.la
+lib/pkgconfig/x11-xcb.pc

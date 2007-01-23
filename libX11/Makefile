@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/01/23 05:16:10 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.36 2007/01/23 05:58:28 bsadewitz Exp $
 #
 
 DISTNAME=	libX11-1.1.1
@@ -11,8 +11,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/
 COMMENT=	X11 protocol library (C bindings) from modular X.org
 
-MAKE_JOBS_SAFE=	no
-
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,6 +19,8 @@ CONFIGURE_ARGS+=	--enable-man-pages=3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+
+PLIST_SRC=	PLIST
 
 PKGCONFIG_OVERRIDE+=	x11.pc.in
 
