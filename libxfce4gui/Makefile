@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/04 08:54:03 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/23 19:00:11 xtraeme Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -12,7 +12,6 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc/html
 
 PKGCONFIG_OVERRIDE=	libxfcegui4/libxfcegui4-1.0.pc.in
 
-.include "../../databases/dbh/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/libxfce4util/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
