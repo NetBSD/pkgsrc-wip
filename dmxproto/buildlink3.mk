@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1 2007/01/23 08:33:30 bsadewitz Exp $
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+DMXPROTO_BUILDLINK3_MK:=	${DMXPROTO_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	dmxproto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndmxproto}
+BUILDLINK_PACKAGES+=	dmxproto
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}dmxproto
+
+.if ${DMXPROTO_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.dmxproto+=	dmxproto>=2.2.2
+BUILDLINK_PKGSRCDIR.dmxproto?=	../../wip/dmxproto
+.endif	# DMXPROTO_BUILDLINK3_MK
+
+.include "../../x11/xproto/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
