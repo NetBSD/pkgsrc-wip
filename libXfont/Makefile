@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/01/23 08:24:17 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.21 2007/01/23 15:52:54 bsadewitz Exp $
 #
 
 DISTNAME=	libXfont-1.2.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,7 +30,7 @@ PKGCONFIG_OVERRIDE+=	xfont.pc.in
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/fontcacheproto/buildlink3.mk"
-.include "../../fonts/libfontenc/buildlink3.mk"
+.include "../../wip/libfontenc/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"

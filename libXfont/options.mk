@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2007/01/23 08:24:17 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.2 2007/01/23 15:52:54 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libXfont
-PKG_SUPPORTED_OPTIONS=	ipv6 libxfont-unix-transport libxfont-tcp-transport
+PKG_SUPPORTED_OPTIONS=	inet6 libxfont-unix-transport libxfont-tcp-transport
 PKG_SUGGESTED_OPTIONS=	libxfont-unix-transport libxfont-tcp-transport
 
 .include "../../mk/bsd.options.mk"
