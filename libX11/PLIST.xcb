@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.xcb,v 1.2 2007/01/23 06:23:37 bsadewitz Exp $
 include/X11/Xlib-xcb.h
 lib/libX11-xcb.la
 lib/pkgconfig/x11-xcb.pc

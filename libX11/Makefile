@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2007/01/23 05:58:28 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.37 2007/01/23 06:23:37 bsadewitz Exp $
 #
 
 DISTNAME=	libX11-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +27,7 @@ PKGCONFIG_OVERRIDE+=	x11.pc.in
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-CPPFLAGS+=              -D_NETBSD_SOURCE
+CPPFLAGS+=		-D_NETBSD_SOURCE
 .endif
 
 .include "options.mk"
@@ -45,4 +45,3 @@ CPPFLAGS+=              -D_NETBSD_SOURCE
 
 
 .include "../../mk/bsd.pkg.mk"
-
