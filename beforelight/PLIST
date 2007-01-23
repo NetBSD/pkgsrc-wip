@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/23 13:45:07 bsadewitz Exp $
+bin/beforelight
+lib/X11/app-defaults/Beforelight
+lib/libXaw6.so
+lib/libXaw6.so.6
+lib/libXaw7.so
+lib/libXaw7.so.7
+lib/libXaw8.so
+lib/libXaw8.so.8
+man/man1/beforelight.1
+@comment @dirrm lib/X11/app-defaults
