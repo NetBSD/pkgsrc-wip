@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/23 08:00:37 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/01/23 08:55:11 marttikuparinen Exp $
 bin/xfce-mcs-manager
 bin/xfce-setting-show
 include/xfce4/xfce-mcs-manager/manager-plugin.h
@@ -68,10 +68,10 @@ share/xfce4/doc/it/images/smgr_from_root_menu.png
 share/xfce4/doc/it/images/smgr_from_setup_button.png
 share/xfce4/doc/it/xfce-mcs-manager.html
 @dirrm include/xfce4/xfce-mcs-manager
-@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/it/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/it 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/xfce4/doc/C 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc 2>/dev/null || ${TRUE}
