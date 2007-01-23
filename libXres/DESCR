@@ -1,0 +1,5 @@
+This package contains the X Resource Information Extension Library, an
+extension that allows a client to query the X server about its resource usage.
+
+This package tracks--based upon my free time, unfortunately--the current
+tarball from modular X.org.
