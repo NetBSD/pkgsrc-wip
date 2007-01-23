@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1 2007/01/23 14:37:04 bsadewitz Exp $
+#
+
+DISTNAME=	editres-1.0.2
+CATEGORIES=	x11
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	blair.sadewitz@gmail.com
+HOMEPAGE=	http://xorg.freedesktop.org/
+COMMENT=	The modular X.org resource editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
+
+.include "../../wip/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
