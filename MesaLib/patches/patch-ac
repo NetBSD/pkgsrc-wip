@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2007/01/23 17:49:34 bsadewitz Exp $
+
+--- Makefile.orig	2006-12-02 12:20:04.000000000 -0600
++++ Makefile	2007-01-15 12:42:19.000000000 -0600
+@@ -2,7 +2,7 @@
+ 
+ TOP = .
+ 
+-SUBDIRS = src progs
++SUBDIRS = src
+ 
+ 
+ default: $(TOP)/configs/current
+@@ -80,6 +80,7 @@
+ hpux11-ia64-static \
+ hpux9 \
+ hpux9-gcc \
++interix3 \
+ irix6-64 \
+ irix6-64-static \
+ irix6-n32 \
+@@ -129,6 +130,7 @@
+ openbsd \
+ osf1 \
+ osf1-static \
++pkgsrc \
+ solaris-x86 \
+ solaris-x86-gcc \
+ solaris-x86-gcc-static \

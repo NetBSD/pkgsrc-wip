@@ -1,0 +1,59 @@
+$NetBSD: patch-ad,v 1.1 2007/01/23 17:49:34 bsadewitz Exp $
+
+--- src/mesa/Makefile.orig	2006-12-02 12:14:16.000000000 -0600
++++ src/mesa/Makefile	2007-01-18 15:27:42.000000000 -0600
+@@ -14,13 +14,13 @@
+ .SUFFIXES : .cpp
+ 
+ .c.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+ 
+ .cpp.o:
+-	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
+ 
+ .S.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+ 
+ 
+ # Figure out what to make here
+@@ -113,25 +113,23 @@
+ 
+ # Make the GL library
+ $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
+-	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' \
+-		-major $(GL_MAJOR) -minor $(GL_MINOR) -patch $(GL_TINY) \
+-		-install $(TOP)/$(LIB_DIR) \
+-		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
++	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
++		${STAND_ALONE_OBJECTS:.o=.lo} \
++		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR} \
++		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GL_LIB_DEPS}
+ 
+ # Make the OSMesa library
+ $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
+ 	@ if [ "${DRIVER_DIRS}" = "osmesa" ] ; then \
+-		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+-			-major $(MESA_MAJOR) \
+-			-minor $(MESA_MINOR) -patch $(MESA_TINY) \
+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
++		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
++			${OSMESA16_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
++			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
++			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
+ 	else \
+-		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+-			-major $(MESA_MAJOR) \
+-			-minor $(MESA_MINOR) -patch $(GL_TINY) \
+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
++		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
++			${OSMESA_DRIVER_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
++			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
++			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
+ 	fi
+ 
+ 

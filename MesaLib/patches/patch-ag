@@ -1,0 +1,27 @@
+$NetBSD: patch-ag,v 1.1 2007/01/23 17:49:34 bsadewitz Exp $
+
+--- src/glut/glx/Makefile.orig	2006-10-19 14:57:52.000000000 -0500
++++ src/glut/glx/Makefile	2007-01-18 15:36:47.000000000 -0600
+@@ -79,6 +79,7 @@
+ ##### RULES #####
+ 
+ .c.o:
++	${LIBTOOL} --mode=compile \
+ 	$(CC) -c -I$(TOP)/include $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) $<
+ 
+ 
+@@ -90,10 +91,10 @@
+ 
+ # Make the library
+ $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
+-	$(TOP)/bin/mklib -o $(GLUT_LIB) -linker '$(CC)' \
+-		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		$(GLUT_LIB_DEPS) $(OBJECTS)
++	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} \
++		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${GLUT_MAJOR}:${GLUT_MINOR} \
++		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GLUT_LIB_DEPS}
+ 
+ 
+ install:

@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2007/01/23 17:49:34 bsadewitz Exp $
+
+--- src/glw/Makefile.orig	2006-10-19 14:58:24.000000000 -0500
++++ src/glw/Makefile	2007-01-18 15:29:28.000000000 -0600
+@@ -17,7 +17,7 @@
+ ##### RULES #####
+ 
+ .c.o:
+-	$(CC) -c $(INCDIRS) $(CFLAGS) $<
++	${LIBTOOL} --mode=compile $(CC) -c $(INCDIRS) $(CFLAGS) $<
+ 
+ 
+ 
+@@ -38,10 +38,10 @@
+ 
+ # Make the library
+ $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
+-	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' \
+-		-major $(MAJOR) -minor $(MINOR) -patch $(TINY) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		$(GLW_LIB_DEPS) $(OBJECTS)
++	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB_NAME:.so=.la} \
++		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${MAJOR}:${MINOR} -L${X11BASE}/lib \
++		${GLW_LIB_DEPS:S|-lGL|../mesa/libGL.la|} -Wl,-R${X11BASE}/lib
+ 
+ 
+ #
