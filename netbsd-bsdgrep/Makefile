@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/05 22:08:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/23 20:23:42 cheusov Exp $
 #
 
 DISTNAME=	netbsd-bsdgrep-20070105
@@ -16,8 +16,6 @@ MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 MAKE_ENV+=	BINDIR=${PREFIX}/bin
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	MKCATPAGES=no
-
-CFLAGS+=	-O0 -g
 
 post-patch:
 	sed -e 's|grep|nbgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/nbgrep.1
