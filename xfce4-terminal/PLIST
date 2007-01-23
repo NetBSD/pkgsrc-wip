@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/06 11:00:27 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/23 08:00:40 marttikuparinen Exp $
 bin/Terminal
 bin/terminal
 libexec/TerminalHelp
@@ -96,6 +96,7 @@ share/icons/hicolor/48x48/stock/navigation/stock_terminal-mailreader.png
 share/icons/hicolor/48x48/stock/navigation/stock_terminal-shortcuts.png
 share/icons/hicolor/48x48/stock/navigation/stock_terminal-webbrowser.png
 share/icons/hicolor/scalable/apps/Terminal.svg
+share/locale/be/LC_MESSAGES/Terminal.mo
 share/locale/ca/LC_MESSAGES/Terminal.mo
 share/locale/cs/LC_MESSAGES/Terminal.mo
 share/locale/de/LC_MESSAGES/Terminal.mo
@@ -115,6 +116,7 @@ share/locale/ja/LC_MESSAGES/Terminal.mo
 share/locale/ko/LC_MESSAGES/Terminal.mo
 share/locale/lt/LC_MESSAGES/Terminal.mo
 share/locale/nl/LC_MESSAGES/Terminal.mo
+share/locale/pa/LC_MESSAGES/Terminal.mo
 share/locale/pl/LC_MESSAGES/Terminal.mo
 share/locale/pt_BR/LC_MESSAGES/Terminal.mo
 share/locale/ru/LC_MESSAGES/Terminal.mo

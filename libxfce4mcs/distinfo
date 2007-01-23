@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2006/11/06 11:00:25 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.11 2007/01/23 08:00:34 marttikuparinen Exp $
 
-SHA1 (libxfce4mcs-4.3.99.2.tar.bz2) = b62c6621e7b72721f7454bcae6817f8cd67f0d4b
-RMD160 (libxfce4mcs-4.3.99.2.tar.bz2) = dcc48342f0c71c0782572c5ec0c4f2c6dd0adf5c
-Size (libxfce4mcs-4.3.99.2.tar.bz2) = 244036 bytes
+SHA1 (libxfce4mcs-4.4.0.tar.bz2) = 12c932d9045f6672225ab31e7ba5c6765a79311f
+RMD160 (libxfce4mcs-4.4.0.tar.bz2) = 1f14eca9933cbf0b2181bfd4f280ce010d76930a
+Size (libxfce4mcs-4.4.0.tar.bz2) = 259923 bytes

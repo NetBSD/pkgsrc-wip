@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/11/06 11:00:27 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/23 08:00:40 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.5.0rc2
+XFCE4_VERSION=	0.8.0
 
 DISTNAME=	Thunar-${XFCE4_VERSION}
 PKGNAME=	xfce4-thunar-${XFCE4_VERSION}

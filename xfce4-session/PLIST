@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/06 11:00:27 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/01/23 08:00:39 marttikuparinen Exp $
 bin/xfce4-autostart-editor
 bin/xfce4-session
 bin/xfce4-session-logout
@@ -61,6 +61,7 @@ share/locale/ja/LC_MESSAGES/xfce4-session.mo
 share/locale/ka/LC_MESSAGES/xfce4-session.mo
 share/locale/ko/LC_MESSAGES/xfce4-session.mo
 share/locale/lt/LC_MESSAGES/xfce4-session.mo
+share/locale/mk/LC_MESSAGES/xfce4-session.mo
 share/locale/mr/LC_MESSAGES/xfce4-session.mo
 share/locale/ms/LC_MESSAGES/xfce4-session.mo
 share/locale/nb_NO/LC_MESSAGES/xfce4-session.mo
@@ -100,3 +101,4 @@ share/xfce4/tips/tips.dat
 @dirrm include/xfce4/xfce4-session-4.2
 @dirrm etc/xdg/xfce4-session
 @dirrm etc/xdg/autostart
+@unexec ${RMDIR} %D/etc/xdg 2>/dev/null || ${TRUE}

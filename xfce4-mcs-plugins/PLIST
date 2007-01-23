@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/11/06 12:19:41 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 08:00:37 marttikuparinen Exp $
 lib/xfce4/mcs-plugins/display_plugin.la
 lib/xfce4/mcs-plugins/fm_plugin.la
 lib/xfce4/mcs-plugins/keyboard_plugin.la
@@ -9,12 +9,10 @@ share/applications/xfce-display-settings.desktop
 share/applications/xfce-keyboard-settings.desktop
 share/applications/xfce-mouse-settings.desktop
 share/applications/xfce-ui-settings.desktop
-share/icons/hicolor/48x48/apps/xfce-filemanager.png
 share/icons/hicolor/48x48/apps/xfce4-display.png
 share/icons/hicolor/48x48/apps/xfce4-keyboard.png
 share/icons/hicolor/48x48/apps/xfce4-mouse.png
 share/icons/hicolor/48x48/apps/xfce4-ui.png
-share/icons/hicolor/scalable/apps/xfce-filemanager.svg
 share/icons/hicolor/scalable/apps/xfce4-display.svg
 share/icons/hicolor/scalable/apps/xfce4-keyboard.svg
 share/icons/hicolor/scalable/apps/xfce4-mouse.svg
@@ -48,6 +46,7 @@ share/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ka/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ko/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/lt/LC_MESSAGES/xfce-mcs-plugins.mo
+share/locale/mk/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/mr/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/ms/LC_MESSAGES/xfce-mcs-plugins.mo
 share/locale/nl/LC_MESSAGES/xfce-mcs-plugins.mo
@@ -84,7 +83,7 @@ share/xfce4/doc/it/images/keyboard_settings.png
 share/xfce4/doc/it/images/mouse_settings.png
 share/xfce4/doc/it/images/user_interface_settings.png
 share/xfce4/doc/it/xfce-mcs-plugins.html
-@dirrm lib/xfce4/mcs-plugins
 @dirrm share/xfce-mcs-plugins/shortcuts
 @dirrm share/xfce-mcs-plugins
+@dirrm lib/xfce4/mcs-plugins
 @unexec ${RMDIR} %D/lib/xfce4 2>/dev/null || ${TRUE}

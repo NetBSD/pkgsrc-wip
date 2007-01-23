@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2006/11/06 11:00:26 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.11 2007/01/23 08:00:37 marttikuparinen Exp $
 
-SHA1 (xfce-mcs-plugins-4.3.99.2.tar.bz2) = 933c1d5a9b043dfbe793522574788a0c9615c9aa
-RMD160 (xfce-mcs-plugins-4.3.99.2.tar.bz2) = 572088b0429f984bedc62484a7a28b2d37aab305
-Size (xfce-mcs-plugins-4.3.99.2.tar.bz2) = 842712 bytes
+SHA1 (xfce-mcs-plugins-4.4.0.tar.bz2) = dcaa3a2d0291e640980355b0c5baadd9e87afea4
+RMD160 (xfce-mcs-plugins-4.4.0.tar.bz2) = fd09de27aa519b3ab4a650cebb7ddc74c8e0c77f
+Size (xfce-mcs-plugins-4.4.0.tar.bz2) = 850632 bytes

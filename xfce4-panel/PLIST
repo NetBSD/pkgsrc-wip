@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/11/06 11:19:30 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 08:00:38 marttikuparinen Exp $
 bin/xfce4-iconbox
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
@@ -60,21 +60,8 @@ share/icons/hicolor/16x16/apps/xfce-system-exit.png
 share/icons/hicolor/16x16/apps/xfce-system-info.png
 share/icons/hicolor/16x16/apps/xfce-system-lock.png
 share/icons/hicolor/16x16/apps/xfce-system-settings.png
-share/icons/hicolor/48x48/apps/xfce-edit.png
-share/icons/hicolor/48x48/apps/xfce-filemanager.png
-share/icons/hicolor/48x48/apps/xfce-games.png
-share/icons/hicolor/48x48/apps/xfce-graphics.png
-share/icons/hicolor/48x48/apps/xfce-internet.png
 share/icons/hicolor/48x48/apps/xfce-mail.png
-share/icons/hicolor/48x48/apps/xfce-man.png
 share/icons/hicolor/48x48/apps/xfce-mouse.png
-share/icons/hicolor/48x48/apps/xfce-multimedia.png
-share/icons/hicolor/48x48/apps/xfce-printer.png
-share/icons/hicolor/48x48/apps/xfce-schedule.png
-share/icons/hicolor/48x48/apps/xfce-sound.png
-share/icons/hicolor/48x48/apps/xfce-terminal.png
-share/icons/hicolor/48x48/apps/xfce-unknown.png
-share/icons/hicolor/48x48/apps/xfce-utils.png
 share/icons/hicolor/48x48/apps/xfce4-iconbox.png
 share/icons/hicolor/48x48/apps/xfce4-panel.png
 share/icons/hicolor/48x48/apps/xfce4-taskbar.png
@@ -108,6 +95,7 @@ share/locale/ja/LC_MESSAGES/xfce4-panel.mo
 share/locale/ka/LC_MESSAGES/xfce4-panel.mo
 share/locale/ko/LC_MESSAGES/xfce4-panel.mo
 share/locale/lt/LC_MESSAGES/xfce4-panel.mo
+share/locale/mk/LC_MESSAGES/xfce4-panel.mo
 share/locale/mr/LC_MESSAGES/xfce4-panel.mo
 share/locale/ms/LC_MESSAGES/xfce4-panel.mo
 share/locale/nb_NO/LC_MESSAGES/xfce4-panel.mo
@@ -126,6 +114,12 @@ share/locale/uk/LC_MESSAGES/xfce4-panel.mo
 share/locale/vi/LC_MESSAGES/xfce4-panel.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-panel.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-panel.mo
+share/xfce4/doc/C/images/add_item_dialog.png
+share/xfce4/doc/C/images/default_bottom_panel.png
+share/xfce4/doc/C/images/default_top_panel.png
+share/xfce4/doc/C/images/item_popup.png
+share/xfce4/doc/C/images/launcher_properties.png
+share/xfce4/doc/C/images/panel_manager.png
 share/xfce4/doc/C/xfce4-panel.html
 share/xfce4/panel-plugins/actions.desktop
 share/xfce4/panel-plugins/clock.desktop

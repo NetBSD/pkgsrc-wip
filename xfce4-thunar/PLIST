@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/11/06 11:00:27 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/23 08:00:40 marttikuparinen Exp $
 bin/Thunar
 bin/thunar
 etc/xdg/Thunar/uca.xml
@@ -59,41 +59,180 @@ share/doc/Thunar/README.volumes
 share/doc/Thunar/ThumbnailersCacheFormat.txt
 share/doc/Thunar/html/C/advanced-topics.html
 share/doc/Thunar/html/C/copyright.html
+share/doc/Thunar/html/C/customizing-thunar.html
 share/doc/Thunar/html/C/faq.html
+share/doc/Thunar/html/C/images/bulk-rename.png
+share/doc/Thunar/html/C/images/file-manager-window.png
+share/doc/Thunar/html/C/images/file-properties.png
+share/doc/Thunar/html/C/images/preferences-advanced.png
+share/doc/Thunar/html/C/images/preferences-behavior.png
+share/doc/Thunar/html/C/images/preferences-side-pane.png
+share/doc/Thunar/html/C/images/preferences-views.png
+share/doc/Thunar/html/C/images/removable-drives-and-media.png
+share/doc/Thunar/html/C/images/removable-media-unmount.png
+share/doc/Thunar/html/C/images/sendto-menu.png
+share/doc/Thunar/html/C/images/visible-columns.png
 share/doc/Thunar/html/C/index.html
+share/doc/Thunar/html/C/preferences.html
 share/doc/Thunar/html/C/support.html
+share/doc/Thunar/html/C/the-file-manager-window.html
+share/doc/Thunar/html/C/using-removable-media.html
+share/doc/Thunar/html/C/working-with-files-and-folders.html
 share/doc/Thunar/html/es/advanced-topics.html
 share/doc/Thunar/html/es/copyright.html
+share/doc/Thunar/html/es/customizing-thunar.html
 share/doc/Thunar/html/es/faq.html
+share/doc/Thunar/html/es/images/bulk-rename.png
+share/doc/Thunar/html/es/images/file-manager-window.png
+share/doc/Thunar/html/es/images/file-properties.png
+share/doc/Thunar/html/es/images/preferences-advanced.png
+share/doc/Thunar/html/es/images/preferences-behavior.png
+share/doc/Thunar/html/es/images/preferences-side-pane.png
+share/doc/Thunar/html/es/images/preferences-views.png
+share/doc/Thunar/html/es/images/removable-drives-and-media.png
+share/doc/Thunar/html/es/images/removable-media-unmount.png
+share/doc/Thunar/html/es/images/sendto-menu.png
+share/doc/Thunar/html/es/images/visible-columns.png
 share/doc/Thunar/html/es/index.html
+share/doc/Thunar/html/es/preferences.html
 share/doc/Thunar/html/es/support.html
+share/doc/Thunar/html/es/the-file-manager-window.html
+share/doc/Thunar/html/es/using-removable-media.html
+share/doc/Thunar/html/es/working-with-files-and-folders.html
+share/doc/Thunar/html/eu/advanced-topics.html
+share/doc/Thunar/html/eu/copyright.html
+share/doc/Thunar/html/eu/customizing-thunar.html
+share/doc/Thunar/html/eu/faq.html
+share/doc/Thunar/html/eu/images/bulk-rename.png
+share/doc/Thunar/html/eu/images/file-manager-window.png
+share/doc/Thunar/html/eu/images/file-properties.png
+share/doc/Thunar/html/eu/images/preferences-advanced.png
+share/doc/Thunar/html/eu/images/preferences-behavior.png
+share/doc/Thunar/html/eu/images/preferences-side-pane.png
+share/doc/Thunar/html/eu/images/preferences-views.png
+share/doc/Thunar/html/eu/images/removable-drives-and-media.png
+share/doc/Thunar/html/eu/images/removable-media-unmount.png
+share/doc/Thunar/html/eu/images/sendto-menu.png
+share/doc/Thunar/html/eu/images/visible-columns.png
+share/doc/Thunar/html/eu/index.html
+share/doc/Thunar/html/eu/preferences.html
+share/doc/Thunar/html/eu/support.html
+share/doc/Thunar/html/eu/the-file-manager-window.html
+share/doc/Thunar/html/eu/using-removable-media.html
+share/doc/Thunar/html/eu/working-with-files-and-folders.html
 share/doc/Thunar/html/fr/advanced-topics.html
 share/doc/Thunar/html/fr/copyright.html
+share/doc/Thunar/html/fr/customizing-thunar.html
 share/doc/Thunar/html/fr/faq.html
+share/doc/Thunar/html/fr/images/bulk-rename.png
+share/doc/Thunar/html/fr/images/file-manager-window.png
+share/doc/Thunar/html/fr/images/file-properties.png
+share/doc/Thunar/html/fr/images/preferences-advanced.png
+share/doc/Thunar/html/fr/images/preferences-behavior.png
+share/doc/Thunar/html/fr/images/preferences-side-pane.png
+share/doc/Thunar/html/fr/images/preferences-views.png
+share/doc/Thunar/html/fr/images/removable-drives-and-media.png
+share/doc/Thunar/html/fr/images/removable-media-unmount.png
+share/doc/Thunar/html/fr/images/sendto-menu.png
+share/doc/Thunar/html/fr/images/visible-columns.png
 share/doc/Thunar/html/fr/index.html
+share/doc/Thunar/html/fr/preferences.html
 share/doc/Thunar/html/fr/support.html
+share/doc/Thunar/html/fr/the-file-manager-window.html
+share/doc/Thunar/html/fr/using-removable-media.html
+share/doc/Thunar/html/fr/working-with-files-and-folders.html
 share/doc/Thunar/html/ja/advanced-topics.html
 share/doc/Thunar/html/ja/copyright.html
+share/doc/Thunar/html/ja/customizing-thunar.html
 share/doc/Thunar/html/ja/faq.html
+share/doc/Thunar/html/ja/images/bulk-rename.png
+share/doc/Thunar/html/ja/images/file-manager-window.png
+share/doc/Thunar/html/ja/images/file-properties.png
+share/doc/Thunar/html/ja/images/preferences-advanced.png
+share/doc/Thunar/html/ja/images/preferences-behavior.png
+share/doc/Thunar/html/ja/images/preferences-side-pane.png
+share/doc/Thunar/html/ja/images/preferences-views.png
+share/doc/Thunar/html/ja/images/removable-drives-and-media.png
+share/doc/Thunar/html/ja/images/removable-media-unmount.png
+share/doc/Thunar/html/ja/images/sendto-menu.png
+share/doc/Thunar/html/ja/images/visible-columns.png
 share/doc/Thunar/html/ja/index.html
+share/doc/Thunar/html/ja/preferences.html
 share/doc/Thunar/html/ja/support.html
+share/doc/Thunar/html/ja/the-file-manager-window.html
+share/doc/Thunar/html/ja/using-removable-media.html
+share/doc/Thunar/html/ja/working-with-files-and-folders.html
+share/doc/Thunar/html/pl/advanced-topics.html
+share/doc/Thunar/html/pl/copyright.html
+share/doc/Thunar/html/pl/customizing-thunar.html
+share/doc/Thunar/html/pl/faq.html
+share/doc/Thunar/html/pl/images/bulk-rename.png
+share/doc/Thunar/html/pl/images/file-manager-window.png
+share/doc/Thunar/html/pl/images/file-properties.png
+share/doc/Thunar/html/pl/images/preferences-advanced.png
+share/doc/Thunar/html/pl/images/preferences-behavior.png
+share/doc/Thunar/html/pl/images/preferences-side-pane.png
+share/doc/Thunar/html/pl/images/preferences-views.png
+share/doc/Thunar/html/pl/images/removable-drives-and-media.png
+share/doc/Thunar/html/pl/images/removable-media-unmount.png
+share/doc/Thunar/html/pl/images/sendto-menu.png
+share/doc/Thunar/html/pl/images/visible-columns.png
+share/doc/Thunar/html/pl/index.html
+share/doc/Thunar/html/pl/preferences.html
+share/doc/Thunar/html/pl/support.html
+share/doc/Thunar/html/pl/the-file-manager-window.html
+share/doc/Thunar/html/pl/using-removable-media.html
+share/doc/Thunar/html/pl/working-with-files-and-folders.html
 share/doc/Thunar/html/ru/advanced-topics.html
 share/doc/Thunar/html/ru/copyright.html
+share/doc/Thunar/html/ru/customizing-thunar.html
 share/doc/Thunar/html/ru/faq.html
+share/doc/Thunar/html/ru/images/bulk-rename.png
+share/doc/Thunar/html/ru/images/file-manager-window.png
+share/doc/Thunar/html/ru/images/file-properties.png
+share/doc/Thunar/html/ru/images/preferences-advanced.png
+share/doc/Thunar/html/ru/images/preferences-behavior.png
+share/doc/Thunar/html/ru/images/preferences-side-pane.png
+share/doc/Thunar/html/ru/images/preferences-views.png
+share/doc/Thunar/html/ru/images/removable-drives-and-media.png
+share/doc/Thunar/html/ru/images/removable-media-unmount.png
+share/doc/Thunar/html/ru/images/sendto-menu.png
+share/doc/Thunar/html/ru/images/visible-columns.png
 share/doc/Thunar/html/ru/index.html
+share/doc/Thunar/html/ru/preferences.html
 share/doc/Thunar/html/ru/support.html
+share/doc/Thunar/html/ru/the-file-manager-window.html
+share/doc/Thunar/html/ru/using-removable-media.html
+share/doc/Thunar/html/ru/working-with-files-and-folders.html
 share/doc/Thunar/html/thunar.css
 share/doc/Thunar/html/zh_TW/advanced-topics.html
 share/doc/Thunar/html/zh_TW/copyright.html
+share/doc/Thunar/html/zh_TW/customizing-thunar.html
 share/doc/Thunar/html/zh_TW/faq.html
+share/doc/Thunar/html/zh_TW/images/bulk-rename.png
+share/doc/Thunar/html/zh_TW/images/file-manager-window.png
+share/doc/Thunar/html/zh_TW/images/file-properties.png
+share/doc/Thunar/html/zh_TW/images/preferences-advanced.png
+share/doc/Thunar/html/zh_TW/images/preferences-behavior.png
+share/doc/Thunar/html/zh_TW/images/preferences-side-pane.png
+share/doc/Thunar/html/zh_TW/images/preferences-views.png
+share/doc/Thunar/html/zh_TW/images/removable-drives-and-media.png
+share/doc/Thunar/html/zh_TW/images/removable-media-unmount.png
+share/doc/Thunar/html/zh_TW/images/sendto-menu.png
+share/doc/Thunar/html/zh_TW/images/visible-columns.png
 share/doc/Thunar/html/zh_TW/index.html
+share/doc/Thunar/html/zh_TW/preferences.html
 share/doc/Thunar/html/zh_TW/support.html
+share/doc/Thunar/html/zh_TW/the-file-manager-window.html
+share/doc/Thunar/html/zh_TW/using-removable-media.html
+share/doc/Thunar/html/zh_TW/working-with-files-and-folders.html
 share/icons/hicolor/16x16/apps/Thunar.png
 share/icons/hicolor/16x16/stock/navigation/stock_thunar-shortcuts.png
 share/icons/hicolor/16x16/stock/navigation/stock_thunar-templates.png
 share/icons/hicolor/24x24/apps/Thunar.png
 share/icons/hicolor/48x48/apps/Thunar.png
 share/icons/hicolor/scalable/apps/Thunar.svg
+share/locale/be/LC_MESSAGES/Thunar.mo
 share/locale/ca/LC_MESSAGES/Thunar.mo
 share/locale/cs/LC_MESSAGES/Thunar.mo
 share/locale/de/LC_MESSAGES/Thunar.mo
@@ -111,7 +250,9 @@ share/locale/hu/LC_MESSAGES/Thunar.mo
 share/locale/it/LC_MESSAGES/Thunar.mo
 share/locale/ja/LC_MESSAGES/Thunar.mo
 share/locale/ka/LC_MESSAGES/Thunar.mo
+share/locale/ko/LC_MESSAGES/Thunar.mo
 share/locale/lt/LC_MESSAGES/Thunar.mo
+share/locale/mk/LC_MESSAGES/Thunar.mo
 share/locale/nl/LC_MESSAGES/Thunar.mo
 share/locale/pl/LC_MESSAGES/Thunar.mo
 share/locale/pt_BR/LC_MESSAGES/Thunar.mo
@@ -123,37 +264,27 @@ share/locale/zh_CN/LC_MESSAGES/Thunar.mo
 share/locale/zh_TW/LC_MESSAGES/Thunar.mo
 share/pixmaps/Thunar/Thunar-about-logo.png
 share/pixmaps/Thunar/Thunar-fallback-icon.png
+share/thumbnailers/thunar-vfs-font-thumbnailer-1.desktop
 share/xfce4/panel-plugins/thunar-tpa.desktop
 @dirrm share/pixmaps/Thunar
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/stock/navigation
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@exec ${MKDIR} %D/share/doc/Thunar/html/zh_TW/images
 @dirrm share/doc/Thunar/html/zh_TW/images
 @dirrm share/doc/Thunar/html/zh_TW
-@exec ${MKDIR} %D/share/doc/Thunar/html/ru/images
 @dirrm share/doc/Thunar/html/ru/images
 @dirrm share/doc/Thunar/html/ru
-@exec ${MKDIR} %D/share/doc/Thunar/html/ja/images
+@dirrm share/doc/Thunar/html/pl/images
+@dirrm share/doc/Thunar/html/pl
 @dirrm share/doc/Thunar/html/ja/images
 @dirrm share/doc/Thunar/html/ja
-@exec ${MKDIR} %D/share/doc/Thunar/html/fr/images
 @dirrm share/doc/Thunar/html/fr/images
 @dirrm share/doc/Thunar/html/fr
-@exec ${MKDIR} %D/share/doc/Thunar/html/es/images
+@dirrm share/doc/Thunar/html/eu/images
+@dirrm share/doc/Thunar/html/eu
 @dirrm share/doc/Thunar/html/es/images
 @dirrm share/doc/Thunar/html/es
-@exec ${MKDIR} %D/share/doc/Thunar/html/C/images
 @dirrm share/doc/Thunar/html/C/images
 @dirrm share/doc/Thunar/html/C
 @dirrm share/doc/Thunar/html
 @dirrm share/doc/Thunar
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in xdg-dirs: @dirrm share/applications
 @dirrm share/Thunar/sendto
 @dirrm share/Thunar
 @dirrm lib/thunarx-1

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/11/06 11:00:25 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/23 08:00:36 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=	2.3.99.2
+XFCE4_VERSION=	2.4.0
 
 DISTNAME=	gtk-xfce-engine-${XFCE4_VERSION}
 PKGNAME=	xfce4-gtk2-engine-${XFCE4_VERSION}

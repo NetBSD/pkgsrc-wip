@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/11/06 12:19:41 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/01/23 08:00:35 marttikuparinen Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -90,6 +90,7 @@ share/locale/ja/LC_MESSAGES/xfdesktop.mo
 share/locale/ka/LC_MESSAGES/xfdesktop.mo
 share/locale/ko/LC_MESSAGES/xfdesktop.mo
 share/locale/lt/LC_MESSAGES/xfdesktop.mo
+share/locale/mk/LC_MESSAGES/xfdesktop.mo
 share/locale/mr/LC_MESSAGES/xfdesktop.mo
 share/locale/ms/LC_MESSAGES/xfdesktop.mo
 share/locale/nb_NO/LC_MESSAGES/xfdesktop.mo
@@ -128,10 +129,10 @@ share/xfce4/backdrops/xfce4logo.png
 share/xfce4/doc/C/images/root_menu.png
 share/xfce4/doc/C/images/root_menu2.png
 share/xfce4/doc/C/images/select_bg_color.png
-share/xfce4/doc/C/images/xfdesktop-background.png
+share/xfce4/doc/C/images/xfdesktop-appearance-tab.png
+share/xfce4/doc/C/images/xfdesktop-behavior-tab.png
 share/xfce4/doc/C/images/xfdesktop-editor.png
 share/xfce4/doc/C/images/xfdesktop-list.png
-share/xfce4/doc/C/images/xfdesktop-menu-tab.png
 share/xfce4/doc/C/xfdesktop.html
 share/xfce4/doc/fr/images/root_menu.png
 share/xfce4/doc/fr/images/root_menu2.png
@@ -141,12 +142,6 @@ share/xfce4/doc/fr/images/xfdesktop-editor.png
 share/xfce4/doc/fr/images/xfdesktop-list.png
 share/xfce4/doc/fr/images/xfdesktop-menu-tab.png
 share/xfce4/doc/fr/xfdesktop.html
-share/xfce4/doc/it/images/root_menu.png
-share/xfce4/doc/it/images/root_menu2.png
-share/xfce4/doc/it/images/select_bg_color.png
-share/xfce4/doc/it/images/xfdesktop-background.png
-share/xfce4/doc/it/images/xfdesktop-list.png
-share/xfce4/doc/it/xfdesktop.html
 share/xfce4/panel-plugins/xfce4-menu.desktop
 @dirrm share/xfce4-menueditor
 @dirrm share/pixmaps/xfdesktop

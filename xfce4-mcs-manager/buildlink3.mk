@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/11/06 11:00:26 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/01/23 08:00:37 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_MCS_MANAGER_BUILDLINK3_MK:=	${XFCE4_MCS_MANAGER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-mcs-manager
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-mcs-manager
 
 .if ${XFCE4_MCS_MANAGER_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-mcs-manager+=	xfce4-mcs-manager>=4.3.99.2
+BUILDLINK_API_DEPENDS.xfce4-mcs-manager+=	xfce4-mcs-manager>=4.4.0
 BUILDLINK_PKGSRCDIR.xfce4-mcs-manager?=	../../wip/xfce4-mcs-manager
 .endif	# XFCE4_MCS_MANAGER_BUILDLINK3_MK
 
