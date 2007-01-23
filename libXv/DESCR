@@ -1,0 +1,5 @@
+This package provides the X Window System video extension from
+the modular X.org project.
+
+This package attempts to track the most current tarball available from modular
+X.org.
