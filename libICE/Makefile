@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2007/01/22 10:06:23 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.24 2007/01/23 06:12:52 bsadewitz Exp $
 #
 
 DISTNAME=	libICE-1.0.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/
 EXTRACT_SUFX=	.tar.bz2
