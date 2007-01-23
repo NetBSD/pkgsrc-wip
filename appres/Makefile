@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/01/23 13:33:08 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/23 19:22:40 bsadewitz Exp $
 #
 
 DISTNAME=	appres-1.0.1
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,6 @@ USE_TOOLS+=	pkg-config
 
 
 .include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/libXt/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
