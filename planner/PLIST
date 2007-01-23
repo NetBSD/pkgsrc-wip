@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/01 13:51:40 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/01/23 22:05:09 ondratu Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -28,6 +28,7 @@ lib/planner/plugins/libxmlplanner-plugin.la
 lib/planner/storage-modules/libstorage-mrproject-1.la
 ${PYSITELIB}/planner.la
 ${PYSITELIB}/plannerui.la
+man/man1/planner.1
 share/applications/planner.desktop
 share/doc/planner/README.sql
 share/doc/planner/kitchen.planner
