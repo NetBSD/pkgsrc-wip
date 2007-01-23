@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/07 13:48:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/23 20:21:34 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	libmaa-0.990
@@ -17,15 +17,16 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		lib
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--enable-shared
-
+ 
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${PKGDOCDIR}
 
 EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 
 post-install:
-.for i in ${EXTRA_DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PKGDOCDIR}
-.endfor
+	set -e; \
+	for i in $${EXTRA_DOC_FILES}; do \
+		${INSTALL_DATA} ${WRKSRC}/"$${i}" ${PKGDOCDIR}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
