@@ -1,0 +1,7 @@
+Fslsfonts  lists  the fonts that match the given pattern.  The wildcard
+character "*" may be used to match any sequence of characters  (includ-
+ing  none),  and  "?"  to match any single character.  If no pattern is
+given, "*" is assumed.
+
+The "*" and "?" characters must be quoted to prevent  them  from  being
+expanded by the shell.
