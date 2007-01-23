@@ -1,0 +1,5 @@
+This is the modular X.org Toolkit Intrinsics library, which provides Xlib-based
+functions used for designing user interfaces with widgets, handling events,
+initializing windows, and interpreting resource files.
+
+I endeavour to track the most current source tarball available.
