@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2006/12/13 04:55:00 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/23 14:05:57 marttikuparinen Exp $
 
-#.include "../../meta-pkgs/xfce4/Makefile.common"
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.9.1
+XFCE4_VERSION=	1.9.2
 
 DISTNAME=	xfce4-quicklauncher-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-quicklauncher-plugin/
 EXTRACT_SUFX=	.tar.bz2
 COMMENT=	Xfce quicklaunch plugin
 
 USE_TOOLS+=	intltool
 
-#.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../wip/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
