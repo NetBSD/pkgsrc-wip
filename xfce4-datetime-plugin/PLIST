@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/24 08:23:05 marttikuparinen Exp $
+lib/xfce4/panel-plugins/libdatetime.la
+share/locale/nl/LC_MESSAGES/xfce4-datetime-plugin.mo
+share/xfce4/panel-plugins/datetime.desktop
