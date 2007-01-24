@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/09 17:13:59 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/24 09:56:38 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q} \
 			ICEAUTH=${TOOLS_PATH.iceauth:Q}
 
 REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
+BUILD_DEFS+=		PKG_SYSCONFBASE
 
 USE_TOOLS+=		iceauth:run
 USE_TOOLS+=		intltool
