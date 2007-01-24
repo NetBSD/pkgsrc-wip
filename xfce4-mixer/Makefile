@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2006/07/15 15:23:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/24 09:49:43 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mixer-${XFCE4_VERSION}
 CATEGORIES=	audio
 COMMENT=	Xfce mixer plugin
+
 USE_TOOLS+=	intltool
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

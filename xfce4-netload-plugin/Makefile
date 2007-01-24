@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/24 08:37:28 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.7 2007/01/24 09:49:43 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -9,8 +9,6 @@ DISTNAME=	xfce4-netload-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-netload-plugin/
 COMMENT=	Xfce network load plugin
-
-EXTRACT_SUFX=	.tar.bz2
 
 .include "../../wip/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
