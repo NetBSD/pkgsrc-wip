@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/01/24 07:46:55 lkundrak Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/01/24 18:34:31 lkundrak Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBARGP_BUILDLINK3_MK:=	${LIBARGP_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibargp}
 BUILDLINK_PACKAGES+=	libargp
 
 .if !empty(LIBARGP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libargp+=	libargp>=1.3
+BUILDLINK_API_DEPENDS.libargp+=	libargp>=1.3
 BUILDLINK_PKGSRCDIR.libargp?=	../../wip/libargp
 BUILDLINK_DEPMETHOD.libargp?=	build
 .endif	# LIBARGP_BUILDLINK3_MK
