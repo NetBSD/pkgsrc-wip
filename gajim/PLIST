@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/14 14:13:59 vstakhov Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/24 10:10:24 rillig Exp $
 bin/gajim
 bin/gajim-remote
 lib/gajim/gtkspell.so
@@ -333,7 +333,6 @@ share/gajim/src/tooltips.py
 share/gajim/src/vcard.py
 share/pixmaps/gajim.png
 share/pixmaps/gajim_about.png
-@dirrm share/pixmaps
 @dirrm share/gajim/src/common/xmpp
 @dirrm share/gajim/src/common
 @dirrm share/gajim/src
@@ -379,5 +378,4 @@ share/pixmaps/gajim_about.png
 @dirrm share/gajim/data/emoticons
 @dirrm share/gajim/data
 @dirrm share/gajim
-@dirrm share/applications
 @dirrm lib/gajim

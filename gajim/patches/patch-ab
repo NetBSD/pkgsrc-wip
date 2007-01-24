@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2007/01/24 10:10:24 rillig Exp $
+
+--- src/gajim.py.orig	2005-09-06 17:30:15.000000000 +0200
++++ src/gajim.py	2007-01-24 10:33:06.055454524 +0100
+@@ -1,7 +1,4 @@
+-#!/bin/sh
+-''':'
+-exec python -OOt "$0" ${1+"$@"}
+-' '''
++#! python
+ ##	gajim.py
+ ##
+ ## Gajim Team:
+@@ -23,6 +20,8 @@ exec python -OOt "$0" ${1+"$@"}
+ ##
+ 		
+ import sys
++sys.path += ["@PREFIX@/share/gajim/src"]
++
+ import pygtk
+ import os
+ if not os.name == 'nt': # py2exe only in windows
