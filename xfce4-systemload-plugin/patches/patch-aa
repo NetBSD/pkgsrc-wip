@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/24 08:25:44 marttikuparinen Exp $
+
+--- panel-plugin/memswap.c.orig	2007-01-17 18:01:09.000000000 +0000
++++ panel-plugin/memswap.c	2007-01-23 21:42:59.000000000 +0000
+@@ -113,7 +113,7 @@
+     return 0;
+ }
+ 
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ /*
+  * This is inspired by /usr/src/usr.bin/top/machine.c 
+  *
