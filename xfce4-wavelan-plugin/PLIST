@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/24 08:26:17 marttikuparinen Exp $
+libexec/xfce4/panel-plugins/xfce4-wavelan-plugin
+share/locale/de/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/eu/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/hu/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/it/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/ja/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/ko/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/pl/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/locale/vi/LC_MESSAGES/xfce4-wavelan-plugin.mo
+share/xfce4/panel-plugins/wavelan.desktop
