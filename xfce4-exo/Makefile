@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/23 08:00:35 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/24 18:25:49 xtraeme Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -10,6 +10,12 @@ CATEGORIES=	x11
 COMMENT=	Xfce extension library
 
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
+
+.if !empty(OPSYS:MNetBSD)
+.  if exists(/usr/include/mmintrin.h)
+CPPFLAGS+=	-D__MMX__
+.  endif
+.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
