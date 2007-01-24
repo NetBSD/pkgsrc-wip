@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/07 10:09:37 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/24 08:30:53 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -21,24 +21,26 @@ do-install:
 .include "../../wip/xfce4/buildlink3.mk"
 
 # Additional plugins etc.
-.include "../../graphics/xfce4-artwork/buildlink3.mk"
+.include "../../wip/xfce4-xmms-plugin/buildlink3.mk"
+.include "../../wip/xfce4-weather-plugin/buildlink3.mk"
+.include "../../wip/xfce4-wavelan-plugin/buildlink3.mk"
+.include "../../wip/xfce4-datetime-plugin/buildlink3.mk"
+.include "../../wip/xfce4-cpugraph-plugin/buildlink3.mk"
+.include "../../wip/xfce4-diskperf-plugin/buildlink3.mk"
 .include "../../wip/xfce4-fsguard-plugin/buildlink3.mk"
+.include "../../wip/xfce4-netload-plugin/buildlink3.mk"
 .include "../../wip/xfce4-quicklauncher-plugin/buildlink3.mk"
+.include "../../wip/xfce4-systemload-plugin/buildlink3.mk"
 .include "../../wip/xfce4-xkb-plugin/buildlink3.mk"
+.include "../../wip/xfce4-clipman-plugin/buildlink3.mk"
+.include "../../wip/xfce4-notes-plugin/buildlink3.mk"
 
-## TODO
-# .include "../../audio/xfce4-xmms-plugin/buildlink3.mk"
-# .include "../../misc/xfce4-weather-plugin/buildlink3.mk"
-# .include "../../net/xfce4-wavelan-plugin/buildlink3.mk"
-# .include "../../time/xfce4-datetime-plugin/buildlink3.mk"
-# .include "../../sysutils/xfce4-cpugraph-plugin/buildlink3.mk"
-# .include "../../sysutils/xfce4-diskperf-plugin/buildlink3.mk"
+## WHAT TO DO WITH THESE?
+# .include "../../graphics/xfce4-artwork/buildlink3.mk"
+
+## CURRENTLY NO SUPPORT FOR 4.4
 # .include "../../sysutils/xfce4-minicmd-plugin/buildlink3.mk"
-# .include "../../sysutils/xfce4-netload-plugin/buildlink3.mk"
 # .include "../../sysutils/xfce4-showdesktop-plugin/buildlink3.mk"
-# .include "../../sysutils/xfce4-systemload-plugin/buildlink3.mk"
-# .include "../../x11/xfce4-clipman-plugin/buildlink3.mk"
-# .include "../../x11/xfce4-notes-plugin/buildlink3.mk"
 # .include "../../x11/xfce4-taskbar-plugin/buildlink3.mk"
 # .include "../../x11/xfce4-windowlist-plugin/buildlink3.mk"
 
