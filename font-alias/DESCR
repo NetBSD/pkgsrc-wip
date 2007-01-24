@@ -1,0 +1,2 @@
+These tiny files proved integral to getting xorg-server-1.2.0 to load
+for me.  This should, IMHO, be put in pkgsrc ASAP (unless I missed it).

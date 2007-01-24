@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/24 07:42:51 bsadewitz Exp $
+lib/X11/fonts/100dpi/fonts.alias
+lib/X11/fonts/75dpi/fonts.alias
+lib/X11/fonts/cyrillic/fonts.alias
+lib/X11/fonts/misc/fonts.alias
+@comment @dirrm lib/X11/fonts/misc
+@comment @dirrm lib/X11/fonts/cyrillic
+@comment @dirrm lib/X11/fonts/75dpi
+@comment @dirrm lib/X11/fonts/100dpi
