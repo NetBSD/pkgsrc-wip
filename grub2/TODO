@@ -4,3 +4,4 @@
 * Make PLIST multiplatform
 * Make fixed locations like '/grub' configurable when GRUB does so.
 * Resolve conflict with GRUB Legacy. Change grub to grub2 in file names?
+* Add options.description
