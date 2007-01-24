@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/14 14:54:34 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/24 19:41:08 thomasklausner Exp $
 bin/bt-applet
 etc/xdg/autostart/bt-applet.desktop
 @dirrm etc/xdg/autostart
-@dirrm etc/xdg
