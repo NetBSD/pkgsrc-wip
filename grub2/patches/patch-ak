@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.3 2006/06/15 13:19:23 thomasklausner Exp $
+$NetBSD: patch-ak,v 1.4 2007/01/24 08:25:36 lkundrak Exp $
 
---- util/misc.c.orig	2006-06-13 22:50:01.000000000 +0000
+--- util/misc.c.orig	2006-06-14 00:50:01.000000000 +0200
 +++ util/misc.c
 @@ -242,7 +242,11 @@ grub_memalign (grub_size_t align, grub_s
  #elif defined(HAVE_MEMALIGN)

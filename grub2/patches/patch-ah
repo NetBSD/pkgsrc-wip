@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.3 2006/06/15 13:19:23 thomasklausner Exp $
+$NetBSD: patch-ah,v 1.4 2007/01/24 08:25:36 lkundrak Exp $
 
---- kern/mm.c.orig	2006-04-25 20:08:31.000000000 +0000
+--- kern/mm.c.orig	2006-04-25 22:08:31.000000000 +0200
 +++ kern/mm.c
 @@ -429,6 +429,16 @@ grub_mm_dump (unsigned lineno)
    grub_printf ("\n");

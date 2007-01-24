@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.3 2006/06/15 13:19:24 thomasklausner Exp $
+$NetBSD: patch-al,v 1.4 2007/01/24 08:25:36 lkundrak Exp $
 
---- normal/parser.y.orig	2006-06-16 01:08:22.000000000 +0000
+--- normal/parser.y.orig	2006-06-04 17:56:55.000000000 +0200
 +++ normal/parser.y
 @@ -56,7 +56,7 @@
  

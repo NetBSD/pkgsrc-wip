@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.4 2006/06/15 13:19:22 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.5 2007/01/24 08:25:36 lkundrak Exp $
 
---- configure.ac.orig	2006-06-13 22:50:00.000000000 +0000
+--- configure.ac.orig	2006-12-13 23:30:19.000000000 +0100
 +++ configure.ac
-@@ -150,6 +150,12 @@ AC_CHECK_LIB(ncurses, wgetch, [LIBCURSES
-   [AC_CHECK_LIB(curses, wgetch, [LIBCURSES="-lcurses"])])
- AC_SUBST(LIBCURSES)
+@@ -148,6 +148,12 @@ fi
+ # Check for functions.
+ AC_CHECK_FUNCS(posix_memalign memalign)
  
 +# Check for argp
 +AC_CHECK_FUNC(argp_parse,,
@@ -12,6 +12,6 @@ $NetBSD: patch-ae,v 1.4 2006/06/15 13:19:22 thomasklausner Exp $
 +    AC_MSG_ERROR([Argp required. Either use glibc or install argp-standalone.])))
 +AC_SUBST(LIBARGP)
 +
- # Check for headers.
- AC_CHECK_HEADERS(ncurses/curses.h ncurses.h curses.h)
- 
+ #
+ # Check for target programs.
+ #

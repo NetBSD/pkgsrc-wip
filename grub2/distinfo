@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2006/06/15 13:19:22 thomasklausner Exp $
+$NetBSD: distinfo,v 1.7 2007/01/24 08:25:36 lkundrak Exp $
 
-SHA1 (patch-aa) = a5673031b8d02f7118ffef3e605ef81f165b76e7
-SHA1 (patch-ab) = 1728d3a239c8d62eec5e846297319f17b0ebd2e2
-SHA1 (patch-ac) = e610949ae1bc7e9cfafe9515576636298732e644
-SHA1 (patch-ad) = 414f9934bf5be8ba8b65510b153e1e85730251f3
-SHA1 (patch-ae) = 331587facb1518dd0935b241eb3505a32c04ea04
-SHA1 (patch-af) = 101b7f960bda3de348129ec850053716180eb8fe
-SHA1 (patch-ag) = 4754c5d7971135d62d5148c8606e45b2b7778710
-SHA1 (patch-ah) = b18556a95fd95f3eb54db8c720035fc4323e934f
-SHA1 (patch-ai) = 20929d7570bf1ac87d6bf22f2579212e58eb148d
-SHA1 (patch-ak) = a8f98ba49d0e2bd04f9f73bd035a93f69d47e88a
-SHA1 (patch-al) = cf7bb9b811633f3ff252f45e84d64ad248a87b4d
-SHA1 (patch-am) = 897a6fe90933ea423af23ec00aecc7cbee4b1721
+SHA1 (patch-aa) = ec4f7ffd18e87c72574f62b0ffc0d31707095dc2
+SHA1 (patch-ab) = 740e938a96c75c729bb034b218fec659abe20c8f
+SHA1 (patch-ac) = f787e0c38c768faa851b38e1860a94036113e3cd
+SHA1 (patch-ad) = 6425e4f97a12624c4826c89db238b1d574b5a465
+SHA1 (patch-ae) = 60a6c3fea231f14e974d8ced4218cf096a1ed38f
+SHA1 (patch-af) = f7ac6a58bdfe9bc4001ea9f1439ad500cee4234d
+SHA1 (patch-ag) = b107074050eaef570899ab07ca1aeaa3bb81690d
+SHA1 (patch-ah) = b88863bf8b240c233dc5d333836b2d4f549dfd92
+SHA1 (patch-ai) = f510d32b89acbdfa352cabf47bb297b0dab051de
+SHA1 (patch-ak) = c5143d0387ef8bdcfd14285b845d22ba8df994f2
+SHA1 (patch-al) = 2eed9fa45be448caa62935f5a01872b621d3e66a
+SHA1 (patch-am) = 3fef4f7cd8b79f8dd36419661ac01cf3a01c979c

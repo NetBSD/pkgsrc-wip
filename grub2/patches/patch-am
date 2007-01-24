@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2006/06/15 13:19:24 thomasklausner Exp $
+$NetBSD: patch-am,v 1.2 2007/01/24 08:25:36 lkundrak Exp $
 
---- kern/rescue.c.orig	2006-04-23 13:37:36.000000000 +0000
+--- kern/rescue.c.orig	2006-04-23 15:37:36.000000000 +0200
 +++ kern/rescue.c
 @@ -32,6 +32,15 @@
  #include <grub/env.h>
