@@ -1,38 +1,80 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/08 11:40:08 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/25 23:34:18 thomasklausner Exp $
 bin/exfalso
 bin/quodlibet
+lib/quodlibet/_mmkeys.so
+lib/quodlibet/_trayicon.so
 man/man1/exfalso.1
 man/man1/quodlibet.1
+share/applications/exfalso.desktop
+share/applications/quodlibet.desktop
+share/locale/bg/LC_MESSAGES/quodlibet.mo
+share/locale/de/LC_MESSAGES/quodlibet.mo
+share/locale/en_CA/LC_MESSAGES/quodlibet.mo
+share/locale/en_GB/LC_MESSAGES/quodlibet.mo
+share/locale/es/LC_MESSAGES/quodlibet.mo
+share/locale/fi/LC_MESSAGES/quodlibet.mo
+share/locale/fr/LC_MESSAGES/quodlibet.mo
+share/locale/gl/LC_MESSAGES/quodlibet.mo
+share/locale/he/LC_MESSAGES/quodlibet.mo
+share/locale/hu/LC_MESSAGES/quodlibet.mo
+share/locale/it/LC_MESSAGES/quodlibet.mo
+share/locale/ja/LC_MESSAGES/quodlibet.mo
+share/locale/ko/LC_MESSAGES/quodlibet.mo
+share/locale/lt/LC_MESSAGES/quodlibet.mo
+share/locale/nb/LC_MESSAGES/quodlibet.mo
+share/locale/nl/LC_MESSAGES/quodlibet.mo
+share/locale/pl/LC_MESSAGES/quodlibet.mo
+share/locale/pt/LC_MESSAGES/quodlibet.mo
+share/locale/ro/LC_MESSAGES/quodlibet.mo
+share/locale/ru/LC_MESSAGES/quodlibet.mo
+share/locale/sk/LC_MESSAGES/quodlibet.mo
+share/locale/sv/LC_MESSAGES/quodlibet.mo
+share/locale/zh_CN/LC_MESSAGES/quodlibet.mo
+share/locale/zh_TW/LC_MESSAGES/quodlibet.mo
 share/pixmaps/exfalso.png
 share/pixmaps/quodlibet.png
+share/quodlibet/audio-volume-high.png
+share/quodlibet/audio-volume-low.png
+share/quodlibet/audio-volume-medium.png
+share/quodlibet/audio-volume-muted.png
 share/quodlibet/browsers/__init__.py
 share/quodlibet/browsers/_base.py
 share/quodlibet/browsers/albums.py
 share/quodlibet/browsers/audiofeeds.py
 share/quodlibet/browsers/filesystem.py
 share/quodlibet/browsers/iradio.py
+share/quodlibet/browsers/media.py
 share/quodlibet/browsers/paned.py
 share/quodlibet/browsers/playlists.py
 share/quodlibet/browsers/search.py
 share/quodlibet/config.py
 share/quodlibet/const.py
+share/quodlibet/device-generic.png
+share/quodlibet/device-ipod.png
+share/quodlibet/devices/__init__.py
+share/quodlibet/devices/_base.py
+share/quodlibet/devices/ipod.py
+share/quodlibet/devices/storage.py
 share/quodlibet/exfalso.png
 share/quodlibet/exfalso.py
 share/quodlibet/exfalso.svg
 share/quodlibet/formats/__init__.py
 share/quodlibet/formats/_apev2.py
 share/quodlibet/formats/_audio.py
-share/quodlibet/formats/_vorbis.py
-share/quodlibet/formats/flac.py
+share/quodlibet/formats/_id3.py
 share/quodlibet/formats/mod.py
 share/quodlibet/formats/mp3.py
 share/quodlibet/formats/mp4.py
 share/quodlibet/formats/mpc.py
-share/quodlibet/formats/oggvorbis.py
 share/quodlibet/formats/remote.py
+share/quodlibet/formats/trueaudio.py
 share/quodlibet/formats/wav.py
 share/quodlibet/formats/wavpack.py
-share/quodlibet/library.py
+share/quodlibet/formats/xiph.py
+share/quodlibet/library/__init__.py
+share/quodlibet/library/_library.py
+share/quodlibet/library/songs.py
+share/quodlibet/media-eject.png
 share/quodlibet/parse/__init__.py
 share/quodlibet/parse/_match.py
 share/quodlibet/parse/_pattern.py
@@ -84,18 +126,14 @@ share/quodlibet/qltk/textedit.py
 share/quodlibet/qltk/tracker.py
 share/quodlibet/qltk/tracknumbers.py
 share/quodlibet/qltk/views.py
-share/quodlibet/qltk/watcher.py
 share/quodlibet/qltk/wlw.py
 share/quodlibet/qltk/x.py
 share/quodlibet/quodlibet.png
 share/quodlibet/quodlibet.py
 share/quodlibet/quodlibet.svg
-share/quodlibet/rhythmbox-volume-max.png
-share/quodlibet/rhythmbox-volume-medium.png
-share/quodlibet/rhythmbox-volume-min.png
-share/quodlibet/rhythmbox-volume-zero.png
 share/quodlibet/stock.py
 share/quodlibet/util/__init__.py
+share/quodlibet/util/copool.py
 share/quodlibet/util/i18n.py
 share/quodlibet/util/massagers.py
 share/quodlibet/util/uri.py
@@ -104,7 +142,9 @@ share/quodlibet/widgets.py
 @dirrm share/quodlibet/qltk
 @dirrm share/quodlibet/plugins
 @dirrm share/quodlibet/parse
+@dirrm share/quodlibet/library
 @dirrm share/quodlibet/formats
+@dirrm share/quodlibet/devices
 @dirrm share/quodlibet/browsers
 @dirrm share/quodlibet
-@dirrm share/pixmaps
+@dirrm lib/quodlibet

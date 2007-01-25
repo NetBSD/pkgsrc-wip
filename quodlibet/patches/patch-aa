@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/07/08 11:40:08 shattered Exp $
+$NetBSD: patch-aa,v 1.3 2007/01/25 23:34:18 thomasklausner Exp $
 
---- Makefile.orig	2006-05-30 20:09:04.000000000 +0000
+--- Makefile.orig	2006-10-05 13:03:59.000000000 +0000
 +++ Makefile
-@@ -13,7 +13,7 @@ all:
+@@ -8,18 +8,16 @@ TO = share/quodlibet
+ TODEP = lib/quodlibet
+ 
+ all:
+-	@/bin/echo -n "Checking for Python... "
+-	@which python || ( echo "Not found." && /bin/false )
  	@./check.py $(DESTDIR)$(PREFIX)/$(TO)
  
  make-install-dirs:
@@ -11,18 +16,15 @@ $NetBSD: patch-aa,v 1.2 2006/07/08 11:40:08 shattered Exp $
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
  	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)
  
-@@ -23,8 +23,8 @@ make-install-dirs:
- # have (potentially) outdated translations. Ideally any developers
- # installing the SVN version will have intltool and so it will build fine.
  install: make-install-dirs install-dirs install-programs
--	install -m 644 $(MODULES) rhythmbox-*.png $(DESTDIR)$(PREFIX)/$(TO)
--	-for E in $(EXTENSIONS); do (test -e $$E && install -m 755 -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
-+	$(BSD_INSTALL_DATA) $(MODULES) rhythmbox-*.png $(DESTDIR)$(PREFIX)/$(TO)
-+	-for E in $(EXTENSIONS); do (test -e $$E && $(BSD_INSTALL_SCRIPT) -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
- 	-cd po && make install-po DESTDIR=$(DESTDIR)
+-	install -m 644 $(MODULES) audio-*.png media-*.png device-*.png $(DESTDIR)$(PREFIX)/$(TO)
+-	for E in $(EXTENSIONS); do (test -e $$E && install -m 755 -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
++	${BSD_INSTALL_DATA} $(MODULES) audio-*.png media-*.png device-*.png $(DESTDIR)$(PREFIX)/$(TO)
++	for E in $(EXTENSIONS); do (test -e $$E && ${BSD_INSTALL_SCRIPT} -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
+ 	cd po && make install-po DESTDIR=$(DESTDIR)
  
  install-dirs: $(addprefix dir-install-, $(MODULE_DIRS))
-@@ -33,14 +33,14 @@ install-programs: $(addprefix app-instal
+@@ -28,14 +26,14 @@ install-programs: $(addprefix app-instal
  
  dir-install-%: make-install-dirs
  	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)/$*

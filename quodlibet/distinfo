@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/07/08 11:40:08 shattered Exp $
+$NetBSD: distinfo,v 1.3 2007/01/25 23:34:18 thomasklausner Exp $
 
-SHA1 (quodlibet-0.22.tar.gz) = 7622407f8c6f3bc11643859d0d9bb49c78a637aa
-RMD160 (quodlibet-0.22.tar.gz) = f115a112ecb8e152b575ef55fed192ea55ca9451
-Size (quodlibet-0.22.tar.gz) = 505179 bytes
-SHA1 (patch-aa) = f65a6da5358633bf356dc1c7840a49d793346075
+SHA1 (quodlibet-0.24.tar.gz) = 9ac6142a2cb8db7e37b56b63a0adeed888aaf1f4
+RMD160 (quodlibet-0.24.tar.gz) = b4fec7495b081abc92faf74a746c4f43c66f1ead
+Size (quodlibet-0.24.tar.gz) = 615554 bytes
+SHA1 (patch-aa) = ff41943b23c0059af6b10ceffaa7d811163d1c79
