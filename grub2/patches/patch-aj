@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.5 2007/01/25 05:24:18 lkundrak Exp $
+
+--- util/i386/pc/grub-install.in.orig	2007-01-25 06:07:24.000000000 +0100
++++ util/i386/pc/grub-install.in
+@@ -29,11 +29,12 @@ PACKAGE_VERSION=@PACKAGE_VERSION@
+ target_cpu=@target_cpu@
+ platform=@platform@
+ pkglibdir=${libdir}/${PACKAGE_TARNAME}/${target_cpu}-${platform}
++transform=@program_transform_name@
+ 
+-grub_setup=${sbindir}/grub-setup
+-grub_mkimage=${bindir}/grub-mkimage
+-grub_mkdevicemap=${sbindir}/grub-mkdevicemap
+-grub_probe=${sbindir}/grub-probe
++grub_setup=${sbindir}/`echo grub-setup | sed ${transform}`
++grub_mkimage=${bindir}/`echo grub-mkimage | sed ${transform}`
++grub_mkdevicemap=${sbindir}/`echo grub-mkdevicemap | sed ${transform}`
++grub_probe=${sbindir}/`echo grub-probe | sed ${transform}`
+ rootdir=
+ grub_prefix=/boot/grub
+ modules=

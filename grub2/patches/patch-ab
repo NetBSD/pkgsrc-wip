@@ -1,22 +1,48 @@
-$NetBSD: patch-ab,v 1.5 2007/01/24 08:25:36 lkundrak Exp $
+$NetBSD: patch-ab,v 1.6 2007/01/25 05:24:18 lkundrak Exp $
 
---- Makefile.in.orig	2006-12-13 23:30:19.000000000 +0100
+--- Makefile.in.orig	2007-01-25 06:07:24.000000000 +0100
 +++ Makefile.in
-@@ -56,7 +56,7 @@ mkinstalldirs = $(srcdir)/mkinstalldirs
+@@ -52,6 +52,7 @@ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ 
++transform = @program_transform_name@
+ mkinstalldirs = $(srcdir)/mkinstalldirs
  
  CC = @CC@
- CFLAGS = @CFLAGS@
--LDFLAGS = @LDFLAGS@
-+LDFLAGS = -Wl,-R$(PREFIX)/lib @LDFLAGS@
- CPPFLAGS = @CPPFLAGS@ -I. -Iinclude -I$(srcdir)/include -Wall -W \
- 	 -DGRUB_LIBDIR=\"$(pkglibdir)\"
- TARGET_CC = @TARGET_CC@
-@@ -71,6 +71,8 @@ RUBY = @RUBY@
- AWK = @AWK@
- LIBCURSES = @LIBCURSES@
- LIBLZO = @LIBLZO@
-+LIBARGP = @LIBARGP@
-+LIBMALLOC = @LIBMALLOC@
- YACC = @YACC@
+@@ -139,18 +140,18 @@ install-local: all
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_UTILITIES)'; for file in $$list; do \
+ 	  if test -f "$$file"; then dir=; else dir="$(srcdir)"; fi; \
+-	  dest="`echo $$file | sed 's,.*/,,'`"; \
++	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
+ 	  $(INSTALL_PROGRAM) $$dir$$file $(DESTDIR)$(bindir)/$$dest; \
+ 	done
+ 	$(mkinstalldirs) $(DESTDIR)$(sbindir)
+ 	@list='$(sbin_UTILITIES)'; for file in $$list; do \
+ 	  if test -f "$$file"; then dir=; else dir="$(srcdir)"; fi; \
+-	  dest="`echo $$file | sed 's,.*/,,'`"; \
++	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
+ 	  $(INSTALL_PROGRAM) $$dir$$file $(DESTDIR)$(sbindir)/$$dest; \
+ 	done
+ 	@list='$(sbin_SCRIPTS)'; for file in $$list; do \
+ 	  if test -f "$$file"; then dir=; else dir="$(srcdir)"; fi; \
+-	  dest="`echo $$file | sed 's,.*/,,'`"; \
++	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
+ 	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sbindir)/$$dest; \
+ 	done
  
- # Options.
+@@ -164,11 +165,11 @@ uninstall:
+ 	  rm -f $(DESTDIR)$(pkglibdir)/$$dest; \
+ 	done
+ 	@list='$(bin_UTILITIES)'; for file in $$list; do \
+-	  dest="`echo $$file | sed 's,.*/,,'`"; \
++	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
+ 	  rm -f $(DESTDIR)$(bindir)/$$dest; \
+ 	done
+ 	@list='$(sbin_UTILITIES) $(sbin_SCRIPTS)'; for file in $$list; do \
+-	  dest="`echo $$file | sed 's,.*/,,'`"; \
++	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
+ 	  rm -f $(DESTDIR)$(sbindir)/$$dest; \
+ 	done
+ 

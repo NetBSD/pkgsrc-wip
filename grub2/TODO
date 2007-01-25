@@ -1,7 +1,5 @@
 * Remove NetBSD patches when official GNU GRUB release supports NetBSD.
 * Handle configuration file with SYSCONF when grub supports it.
 * Test GRUB on supported architectures and possibly port it.
-* Make PLIST multiplatform
 * Make fixed locations like '/grub' configurable when GRUB does so.
-* Resolve conflict with GRUB Legacy. Change grub to grub2 in file names?
 * Add options.description

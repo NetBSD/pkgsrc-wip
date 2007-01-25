@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.grub-emu,v 1.1 2007/01/24 20:02:03 lkundrak Exp $
-sbin/grub-emu
+@comment $NetBSD: PLIST.grub-emu,v 1.2 2007/01/25 05:24:18 lkundrak Exp $
+sbin/grub2-emu

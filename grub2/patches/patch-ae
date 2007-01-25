@@ -1,17 +1,14 @@
-$NetBSD: patch-ae,v 1.5 2007/01/24 08:25:36 lkundrak Exp $
+$NetBSD: patch-ae,v 1.6 2007/01/25 05:24:18 lkundrak Exp $
 
---- configure.ac.orig	2006-12-13 23:30:19.000000000 +0100
+--- configure.ac.orig	2007-01-25 06:07:24.000000000 +0100
 +++ configure.ac
-@@ -148,6 +148,12 @@ fi
- # Check for functions.
- AC_CHECK_FUNCS(posix_memalign memalign)
+@@ -40,6 +40,9 @@ AC_CONFIG_HEADER([config.h])
+ AC_CANONICAL_HOST
+ AC_CANONICAL_TARGET
  
-+# Check for argp
-+AC_CHECK_FUNC(argp_parse,,
-+  AC_CHECK_LIB(argp, argp_parse, [LIBARGP="-largp"],
-+    AC_MSG_ERROR([Argp required. Either use glibc or install argp-standalone.])))
-+AC_SUBST(LIBARGP)
++# Program name transformations
++AC_ARG_PROGRAM
 +
- #
- # Check for target programs.
- #
+ case "$host_cpu" in
+   powerpc64) host_m32=1 ;;
+ esac

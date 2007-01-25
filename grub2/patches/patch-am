@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.4 2007/01/25 05:24:18 lkundrak Exp $
+
+--- util/powerpc/ieee1275/grub-install.in.orig	2007-01-25 06:07:24.000000000 +0100
++++ util/powerpc/ieee1275/grub-install.in
+@@ -31,8 +31,9 @@ PACKAGE_VERSION=@PACKAGE_VERSION@
+ target_cpu=@target_cpu@
+ platform=@platform@
+ pkglibdir=${libdir}/${PACKAGE_TARNAME}/${target_cpu}-${platform}
++transform=@program_transform_name@
+ 
+-grub_mkimage=${bindir}/grub-mkimage
++grub_mkimage=${bindir}/`echo grub-mkimage | sed ${transform}`
+ rootdir=
+ grub_prefix=/boot/grub
+ modules=
