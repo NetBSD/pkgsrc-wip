@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/23 14:00:49 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/25 16:11:02 bsadewitz Exp $
 #
 
 DISTNAME=	bitmap-1.0.2
@@ -13,9 +13,8 @@ COMMENT=	Rudimentary bitmap editor from modular X.org
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-# url2pkg-marker (please do not remove this line.)
-.include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/xbitmaps/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
