@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/17 21:38:36 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2007/01/25 10:58:14 netcap Exp $
 
-SHA1 (qcomicbook-0.2.8.tar.gz) = 6b5e9ab98b9a8266129cb60d6253bee7266ce9ae
-RMD160 (qcomicbook-0.2.8.tar.gz) = 854496b0ebccd87b7687a315737659a89392fa1a
-Size (qcomicbook-0.2.8.tar.gz) = 388902 bytes
+SHA1 (qcomicbook-0.3.4.tar.gz) = 5fac6ef8c1e69da3c6477130681cbf312eefbfb2
+RMD160 (qcomicbook-0.3.4.tar.gz) = 86c00ece34847fd9f51555ceb7dc767c2b7f6e50
+Size (qcomicbook-0.3.4.tar.gz) = 384681 bytes
