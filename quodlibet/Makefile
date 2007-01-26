@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/25 23:34:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/01/26 00:46:26 thomasklausner Exp $
 #
 
 DISTNAME=		quodlibet-0.24
@@ -24,5 +24,9 @@ USE_PKGLOCALEDIR=	yes
 BUILD_TARGET=		_trayicon.so _mmkeys.so
 
 .include "../../lang/python/application.mk"
+# complains about importing missing dbus during startup, but
+# works fine without it. With py-dbus installed however, it
+# fails loading hal and exits.
+#.include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
