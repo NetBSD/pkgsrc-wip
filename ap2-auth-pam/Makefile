@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/11 11:26:44 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2007/01/26 14:48:13 lkundrak Exp $
 
 DISTNAME=	mod_auth_pam-2.0-1.1.1
 PKGNAME=	ap2-auth-pam-1.1.1
@@ -17,7 +17,7 @@ EGDIR=		${PREFIX}/share/examples/mod_auth_pam
 HTMLDIR=	${PREFIX}/share/doc/html/mod_auth_pam
 
 post-extract:
-	${MV} ${WRKDIR}/mod_auth_pam ${WRKSRC}
+	${MV} ${WRKDIR}/${APACHE_MODULE_NAME} ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
