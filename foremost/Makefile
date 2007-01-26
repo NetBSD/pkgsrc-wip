@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/02/09 15:36:41 lkundrak Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/26 14:28:42 lkundrak Exp $
 
-DISTNAME=	foremost-1.0
+DISTNAME=	foremost-1.3
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foremost/}
+MASTER_SITES=	http://foremost.sourceforge.net/pkg/
 
 MAINTAINER=	lkundrak@skosi.org
 HOMEPAGE=	http://foremost.sourceforge.net/
