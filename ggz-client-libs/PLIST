@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/26 17:13:28 mrohrer Exp $
+bin/ggz
+bin/ggz-config
+bin/ggz-wrapper
+etc/xdg/menus/applications-merged/ggz.merge.menu
+etc/xdg/menus/ggz.menu
+include/ggzcore.h
+include/ggzmod.h
+@dirrm lib/ggz
+lib/ggz/ggzwrap
+lib/libggzcore.a
+lib/libggzcore.la
+lib/libggzcore.so
+lib/libggzcore.so.9
+lib/libggzcore.so.9.0.0
+lib/libggzmod.a
+lib/libggzmod.la
+lib/libggzmod.so
+lib/libggzmod.so.4
+lib/libggzmod.so.4.1.0
+man/man1/ggzwrap.1
+man/man3/ggzcore_h.3
+man/man3/ggzmod_h.3
+man/man5/ggz.modules.5
+man/man6/ggz-config.6
+man/man6/ggz-wrapper.6
+man/man6/ggz.6
+man/man7/ggz.7
+share/desktop-directories/ggz-games.directory
+share/desktop-directories/ggz.directory
+share/locale/de/LC_MESSAGES/ggz-config.mo
+share/locale/de/LC_MESSAGES/ggzcore.mo
