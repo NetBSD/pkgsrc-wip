@@ -1,3 +1,4 @@
 Test build at least on Darwin and SFU/Interix
 foremost's Makefile seems horrbile, stuff is repeated
-for different plattforms
+for different plattforms.
+Bump to 1.3.
