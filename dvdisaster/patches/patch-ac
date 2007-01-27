@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/01/27 18:35:47 shattered Exp $
+
+--- scripts/bash-based-configure.orig	2006-04-18 18:14:45.000000000 +0000
++++ scripts/bash-based-configure	2007-01-27 17:39:12.000000000 +0000
+@@ -129,6 +129,15 @@
+ 	}
+ 	;;
+ 
++  NetBSD*) cfg_system=netbsd
++        CFG_SYS_OPTIONS="-DSYS_NETBSD"
++        CFG_EXE_SUFFIX=""
++	CFG_SYS_LDFLAGS="-lutil"
++	function add_linker_flags()
++	{  lflags_return="-L$1 $2"
++	}
++	;;
++
+   *) cfg_system=unknown-system
+         CFG_SYS_OPTIONS="-DSYS_UNKNOWN"
+         CFG_EXE_SUFFIX=""

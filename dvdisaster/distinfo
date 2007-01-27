@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/01/27 18:36:20 shattered Exp $
+
+SHA1 (dvdisaster-0.70.4.tar.bz2) = 0ab5fe59d4c91e77c2f73b389485d0f5443d8873
+RMD160 (dvdisaster-0.70.4.tar.bz2) = 917457581309db33aef5ceddc7dddbd2ef084497
+Size (dvdisaster-0.70.4.tar.bz2) = 1148733 bytes
+SHA1 (patch-aa) = c16b7fbe6c02971eeed40fe287932dc01c390561
+SHA1 (patch-ab) = 396adfa5878659da60dcd691cd8609a82e09bdb2
+SHA1 (patch-ac) = 82e8fbe97a4c4399450f80888c56999552dafa59
+SHA1 (patch-ad) = 19f6c198fab2a1c3dff79498ef53c05e96f07bf6

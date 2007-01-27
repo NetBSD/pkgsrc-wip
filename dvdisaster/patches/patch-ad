@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/01/27 18:35:57 shattered Exp $
+
+--- closure.c.orig	2007-01-20 15:44:59.000000000 +0000
++++ closure.c
+@@ -212,7 +212,7 @@ static void get_base_dirs()
+    /*** The location of the dotfile depends on the operating system. 
+ 	Under Unix the users home directory is used. */
+ 
+-#if defined(SYS_LINUX) || defined(SYS_FREEBSD) || defined(SYS_DARWIN) || defined(SYS_UNKNOWN)
++#ifndef SYS_MINGW
+ find_dotfile:
+ 
+    Closure->dotFile = g_strdup_printf("%s/.dvdisaster", g_getenv("HOME"));

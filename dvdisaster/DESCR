@@ -1,0 +1,8 @@
+dvdisaster:
+
+* creates error correction data to compensate read errors which are not
+  correctable in the CD/DVD drive.
+* tries to read as much data as possible from defective
+  media. Afterwards unreadable sectors are recovered using the previously
+  created error correction data.
+* operates at the image level and does not depend on the file system.
