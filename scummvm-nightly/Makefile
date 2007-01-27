@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/01/27 15:34:29 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/27 20:01:46 dillo Exp $
 
-PKGNAME=	scummvm-${SCM_VER}
+DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
 
 MAINTAINER=	dillo@NetBSD.org
