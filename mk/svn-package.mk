@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.2 2006/08/20 18:35:07 larnor Exp $
+# $Id: svn-package.mk,v 1.3 2007/01/27 15:33:09 dillo Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -20,6 +20,9 @@
 #
 #	SVN_TAG
 #		The SVN tag to check out (default: HEAD).
+#
+#	SVN_CERTS
+#		Files holding SSL certificates of the svn servers.
 #
 #	SVN_TAG.${id}
 #		Overridable SVN tag for a repository.
@@ -68,17 +71,22 @@ SVN_ROOT_SOURCEFORGE=	https://svn.sourceforge.net/svnroot
 # Internal variables
 #
 
+_SVN_CONFIG_DIR=	${WRKDIR}/.subversion
 _SVN_RSH=		ssh
 _SVN_CMD=		svn
 _SVN_ENV=		# empty
 _SVN_ENV+=		SVN_RSH=${_SVN_RSH:Q}
 _SVN_FLAGS=		-q
-_SVN_CHECKOUT_FLAGS=	--non-interactive -r ${SVN_TAG:Q}
+_SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive -r ${SVN_TAG:Q}
 
 pre-extract: do-svn-extract
 
 .PHONY: do-svn-extract
 do-svn-extract:
+.if defined(SVN_CERTS) && !empty(SVN_CERTS)
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${SVN_CERTS:Q} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+.endif
 .for _repo_ in ${SVN_REPOSITORIES}
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKDIR};							\
