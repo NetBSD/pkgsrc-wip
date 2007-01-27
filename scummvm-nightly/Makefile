@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/01/14 22:56:07 dillo Exp $
+# $NetBSD: Makefile,v 1.8 2007/01/27 15:34:29 dillo Exp $
 
-DISTNAME=	scummvm-${SCM_VER}
+PKGNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
-MASTER_SITES=	http://scummvm.sourceforge.net/daily/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
@@ -21,15 +19,23 @@ CONFIGURE_ARGS+=--enable-parallaction
 USE_DIRS+=	xdg-1.1
 WRKSRC=		${WRKDIR}/scummvm
 
+SVN_REPOSITORIES=	scummvm
+SVN_TAG=		{${SCM_TAG}}
+SVN_CERTS=		files/dbd39a6ed632407eb1510e5009956117
+SVN_ROOT.scummvm=	https://scummvm.svn.sourceforge.net/svnroot/scummvm/scummvm/trunk
+SVN_MODULE.scummvm=	scummvm
+
+.include "../../wip/mk/svn-package.mk"
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == i386
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .endif
 
-# tar balls get created about 0545.  Give it some room and subtract 7h
-YESTERDAY!=	expr `date +%s` - 25200
+YESTERDAY!=	expr `date +%s` - 86399
 SCM_VER!=	${DATE} -r ${YESTERDAY} +%Y%m%d
+SCM_TAG!=	${DATE} +%Y%m%d
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
