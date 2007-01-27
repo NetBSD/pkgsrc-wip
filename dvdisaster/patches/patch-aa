@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/27 13:14:10 shattered Exp $
+
+--- GNUmakefile.template.orig	2007-01-27 12:38:42.000000000 +0000
++++ GNUmakefile.template
+@@ -307,23 +307,10 @@ install: dvdisaster html images
+ 	    install -m 644 $$i/LC_MESSAGES/dvdisaster.mo $(BUILDROOT)$(LOCALEDIR)/$$i/LC_MESSAGES; \
+ 	  done \
+ 	fi
+-	@echo "# dvdisaster uninstaller script" > $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@echo "# Usage: sh dvdisaster-uninstall.sh" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@echo >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@echo "rm -f $(BINDIR)/dvdisaster $(BINDIR)/dvdisaster.exe $(BINDIR)/dvdisaster-win.exe $(BINDIR)/dvdisaster-uninstall.sh" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@echo "rm -rf $(DOCSUBDIR)" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@echo "rm -f $(MANDIR)/man1/dvdisaster.1" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	@for i in $(PO_LOCALES); do \
+-	  echo "rm $(LOCALEDIR)/$$i/LC_MESSAGES/dvdisaster.mo" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh ; \
+-	done
+-	@for i in $(MAN_LOCALES); do \
+-	  echo "rm $(MANDIR)/$$i/man1/dvdisaster.1" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh ; \
+-	done
+-	@echo "echo \"dvdisaster has been uninstalled.\"" >> $(BUILDROOT)$(BINDIR)/dvdisaster-uninstall.sh
+-	
++
+ uninstall:
+ 	@echo "Uninstalling package..."
+-	rm -f $(BINDIR)/dvdisaster $(BINDIR)/dvdisaster.exe $(BINDIR)/dvdisaster-win.exe $(BINDIR)/dvdisaster-uninstall.sh
++	rm -f $(BINDIR)/dvdisaster $(BINDIR)/dvdisaster.exe $(BINDIR)/dvdisaster-win.exe
+ 	rm -rf $(DOCSUBDIR)
+ 	rm -f $(MANDIR)/man1/dvdisaster.1
+ 	for i in $(PO_LOCALES); do \
