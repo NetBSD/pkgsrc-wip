@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2494 2007/01/26 16:38:07 minskim Exp $
+# $Id: Makefile,v 1.2495 2007/01/27 00:22:20 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1216,7 +1216,6 @@ SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
-SUBDIR+=	pscpug
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pwlib
