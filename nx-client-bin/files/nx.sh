@@ -5,7 +5,7 @@ export PATH
 LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/@NX@"
 export LD_LIBRARY_PATH
 
-if [ $# > 0 ]
+if [ $# -gt 0 ]
 then
 	exec /usr/pkg/lib/nx/bin/$*
 else
