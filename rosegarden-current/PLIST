@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:37 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/27 10:02:15 thomasklausner Exp $
 bin/rosegarden
 bin/rosegardensequencer
 lib/libRosegardenSequencer.la
@@ -16,6 +16,10 @@ share/doc/kde/HTML/en/rosegarden/rg-split.png
 share/doc/kde/HTML/en/rosegarden/rg-trackeditor.png
 share/doc/kde/HTML/en/rosegarden/rg-transport.png
 share/doc/kde/HTML/en/rosegarden/tips
+share/icons/hicolor/16x16/apps/rosegarden.xpm
+share/icons/hicolor/32x32/apps/rosegarden.xpm
+share/icons/locolor/16x16/apps/rosegarden.xpm
+share/icons/locolor/32x32/apps/rosegarden.xpm
 share/kde/applnk/Applications/rosegarden.desktop
 share/kde/apps/rosegarden/autoload.rg
 share/kde/apps/rosegarden/bankeditor.rc
@@ -1085,20 +1089,16 @@ share/kde/apps/rosegarden/styles/Mensural.xml
 share/kde/apps/rosegarden/styles/Triangle.xml
 share/kde/apps/rosegarden/tips
 share/kde/apps/rosegarden/version.txt
-share/kde/icons/hicolor/16x16/apps/rosegarden.xpm
-share/kde/icons/hicolor/32x32/apps/rosegarden.xpm
-share/kde/icons/locolor/16x16/apps/rosegarden.xpm
-share/kde/icons/locolor/32x32/apps/rosegarden.xpm
 share/locale/de/LC_MESSAGES/rosegarden.mo
 share/locale/en/LC_MESSAGES/rosegarden.mo
 share/locale/en_GB/LC_MESSAGES/rosegarden.mo
 share/locale/es/LC_MESSAGES/rosegarden.mo
 share/locale/fr/LC_MESSAGES/rosegarden.mo
 share/locale/ru/LC_MESSAGES/rosegarden.mo
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/rosegarden/styles
 @dirrm share/kde/apps/rosegarden/pixmaps/transport
 @dirrm share/kde/apps/rosegarden/pixmaps/toolbar

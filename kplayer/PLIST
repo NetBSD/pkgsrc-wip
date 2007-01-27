@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/20 14:54:13 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/27 10:02:15 thomasklausner Exp $
 bin/kplayer
 lib/kde3/kfile_kplayer.la
 lib/kde3/libkplayerpart.la
@@ -144,6 +144,14 @@ share/doc/kde/HTML/sv/kplayer/settings-volume.png
 share/doc/kde/HTML/sv/kplayer/settings.docbook
 share/doc/kde/HTML/sv/kplayer/shortcuts-configure.png
 share/doc/kde/HTML/sv/kplayer/shortcuts-define.png
+share/icons/hicolor/16x16/apps/kplayer.png
+share/icons/hicolor/22x22/apps/kplayer.png
+share/icons/hicolor/32x32/apps/kplayer.png
+share/icons/hicolor/48x48/apps/kplayer.png
+share/icons/hicolor/64x64/apps/kplayer.png
+share/icons/locolor/16x16/apps/kplayer.png
+share/icons/locolor/22x22/apps/kplayer.png
+share/icons/locolor/32x32/apps/kplayer.png
 share/kde/applnk/Multimedia/kplayer.desktop
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/brightness.png
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/contrast.png
@@ -211,14 +219,6 @@ share/kde/apps/kplayer/icons/hicolor/32x32/actions/window_fullscreen.png
 share/kde/apps/kplayer/input.conf
 share/kde/apps/kplayer/kplayerpartui.rc
 share/kde/apps/kplayer/kplayerui.rc
-share/kde/icons/hicolor/16x16/apps/kplayer.png
-share/kde/icons/hicolor/22x22/apps/kplayer.png
-share/kde/icons/hicolor/32x32/apps/kplayer.png
-share/kde/icons/hicolor/48x48/apps/kplayer.png
-share/kde/icons/hicolor/64x64/apps/kplayer.png
-share/kde/icons/locolor/16x16/apps/kplayer.png
-share/kde/icons/locolor/22x22/apps/kplayer.png
-share/kde/icons/locolor/32x32/apps/kplayer.png
 share/kde/services/kfile_kplayer.desktop
 share/kde/services/kplayerpart.desktop
 share/kde/services/mms.protocol
@@ -226,30 +226,30 @@ share/kde/services/mmst.protocol
 share/kde/services/mmsu.protocol
 share/kde/services/pnm.protocol
 share/kde/services/rtsp.protocol
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kplayer.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kplayer.mo
+share/locale/ca/LC_MESSAGES/kplayer.mo
+share/locale/cs/LC_MESSAGES/kplayer.mo
+share/locale/da/LC_MESSAGES/kplayer.mo
+share/locale/de/LC_MESSAGES/kplayer.mo
+share/locale/en_GB/LC_MESSAGES/kplayer.mo
+share/locale/es/LC_MESSAGES/kplayer.mo
+share/locale/fi/LC_MESSAGES/kplayer.mo
+share/locale/fr/LC_MESSAGES/kplayer.mo
+share/locale/hu/LC_MESSAGES/kplayer.mo
+share/locale/it/LC_MESSAGES/kplayer.mo
+share/locale/pl/LC_MESSAGES/kplayer.mo
+share/locale/pt/LC_MESSAGES/kplayer.mo
+share/locale/ru/LC_MESSAGES/kplayer.mo
+share/locale/sv/LC_MESSAGES/kplayer.mo
+share/locale/zh_CN/LC_MESSAGES/kplayer.mo
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/locolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
-@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/22x22/apps
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kplayer/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kplayer/icons/hicolor/32x32
 @dirrm share/kde/apps/kplayer/icons/hicolor/22x22/actions

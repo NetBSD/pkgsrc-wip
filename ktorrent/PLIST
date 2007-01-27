@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/19 13:03:57 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/27 10:02:15 thomasklausner Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -14,6 +14,20 @@ lib/kde3/ktsearchplugin.la
 lib/kde3/ktupnpplugin.la
 lib/libktorrent.la
 share/applications/kde/ktorrent.desktop
+share/icons/hicolor/128x128/apps/ktorrent.png
+share/icons/hicolor/128x128/mimetypes/torrent.png
+share/icons/hicolor/16x16/apps/ktorrent.png
+share/icons/hicolor/16x16/mimetypes/torrent.png
+share/icons/hicolor/22x22/apps/ktorrent.png
+share/icons/hicolor/22x22/mimetypes/torrent.png
+share/icons/hicolor/32x32/apps/ktorrent.png
+share/icons/hicolor/32x32/mimetypes/torrent.png
+share/icons/hicolor/48x48/apps/ktorrent.png
+share/icons/hicolor/48x48/mimetypes/torrent.png
+share/icons/hicolor/64x64/apps/ktorrent.png
+share/icons/hicolor/64x64/mimetypes/torrent.png
+share/icons/hicolor/scalable/apps/ktorrent.svgz
+share/icons/hicolor/scalable/mimetypes/torrent.svgz
 share/kde/applnk/Internet/ktorrent.desktop
 share/kde/apps/ktorrent/geoip/FLAGS_LICENCE
 share/kde/apps/ktorrent/geoip/GeoIP-LICENSE.txt
@@ -292,20 +306,6 @@ share/kde/config.kcfg/ktscanfolderplugin.kcfg
 share/kde/config.kcfg/ktschedulerplugin.kcfg
 share/kde/config.kcfg/ktsearchplugin.kcfg
 share/kde/config.kcfg/ktupnpplugin.kcfg
-share/kde/icons/hicolor/128x128/apps/ktorrent.png
-share/kde/icons/hicolor/128x128/mimetypes/torrent.png
-share/kde/icons/hicolor/16x16/apps/ktorrent.png
-share/kde/icons/hicolor/16x16/mimetypes/torrent.png
-share/kde/icons/hicolor/22x22/apps/ktorrent.png
-share/kde/icons/hicolor/22x22/mimetypes/torrent.png
-share/kde/icons/hicolor/32x32/apps/ktorrent.png
-share/kde/icons/hicolor/32x32/mimetypes/torrent.png
-share/kde/icons/hicolor/48x48/apps/ktorrent.png
-share/kde/icons/hicolor/48x48/mimetypes/torrent.png
-share/kde/icons/hicolor/64x64/apps/ktorrent.png
-share/kde/icons/hicolor/64x64/mimetypes/torrent.png
-share/kde/icons/hicolor/scalable/apps/ktorrent.svgz
-share/kde/icons/hicolor/scalable/mimetypes/torrent.svgz
 share/kde/services/ktinfowidgetplugin.desktop
 share/kde/services/ktipfilterplugin.desktop
 share/kde/services/ktlogviewerplugin.desktop

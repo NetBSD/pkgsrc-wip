@@ -1,12 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/19 00:48:45 yomram Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/27 10:02:15 thomasklausner Exp $
 bin/ScanWithKlamAV
 bin/klamarkollon
 bin/klamav
 bin/klamd
 bin/klammail
+share/doc/kde/HTML/en/klamav02/common
 share/doc/kde/HTML/en/klamav02/index.cache.bz2
 share/doc/kde/HTML/en/klamav02/index.docbook
-share/doc/kde/HTML/en/klamav02/common
+share/icons/hicolor/22x22/actions/klamav.png
+share/icons/hicolor/32x32/actions/klamav.png
+share/icons/hicolor/32x32/apps/klamav.png
+share/icons/hicolor/48x48/apps/klamav.png
+share/icons/locolor/16x16/actions/klamav.png
+share/icons/locolor/16x16/apps/klamav.png
+share/icons/locolor/32x32/actions/klamav.png
+share/icons/locolor/32x32/apps/klamav.png
 share/kde/applnk/Utilities/klamav.desktop
 share/kde/apps/klamav/about/aboutklamav.html
 share/kde/apps/klamav/about/klam.png
@@ -35,14 +43,6 @@ share/kde/apps/klamav/icons/locolor/32x32/apps/klamav.png
 share/kde/apps/klamav/klamavui.rc
 share/kde/apps/konqueror/servicemenus/klamav-dropdown.desktop
 share/kde/config.kcfg/klamavconfig.kcfg
-share/kde/icons/hicolor/22x22/actions/klamav.png
-share/kde/icons/hicolor/32x32/actions/klamav.png
-share/kde/icons/hicolor/32x32/apps/klamav.png
-share/kde/icons/hicolor/48x48/apps/klamav.png
-share/kde/icons/locolor/16x16/actions/klamav.png
-share/kde/icons/locolor/16x16/apps/klamav.png
-share/kde/icons/locolor/32x32/actions/klamav.png
-share/kde/icons/locolor/32x32/apps/klamav.png
 share/locale/cs/LC_MESSAGES/klamav.mo
 share/locale/de/LC_MESSAGES/klamav.mo
 share/locale/es/LC_MESSAGES/klamav.mo

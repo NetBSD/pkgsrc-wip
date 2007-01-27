@@ -1,24 +1,24 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:55 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/01/27 10:02:15 thomasklausner Exp $
 bin/navigatrix
 include/giscoordinate.h
 include/gisdegrees.h
 include/gislocation.h
 lib/libgis.la
+share/icons/hicolor/16x16/actions/crosshairs.png
+share/icons/hicolor/16x16/actions/track.png
+share/icons/hicolor/16x16/apps/navigatrix.png
+share/icons/hicolor/22x22/actions/crosshairs.png
+share/icons/hicolor/22x22/actions/track.png
+share/icons/hicolor/32x32/actions/crosshairs.png
+share/icons/hicolor/32x32/actions/track.png
+share/icons/hicolor/48x48/actions/track.png
 share/kde/applnk/Applications/navigatrix.desktop
 share/kde/apps/navigatrix/navigatrixui.rc
-share/kde/icons/hicolor/16x16/actions/crosshairs.png
-share/kde/icons/hicolor/16x16/actions/track.png
-share/kde/icons/hicolor/16x16/apps/navigatrix.png
-share/kde/icons/hicolor/22x22/actions/crosshairs.png
-share/kde/icons/hicolor/22x22/actions/track.png
-share/kde/icons/hicolor/32x32/actions/crosshairs.png
-share/kde/icons/hicolor/32x32/actions/track.png
-share/kde/icons/hicolor/48x48/actions/track.png
-@comment dirrm share/kde/icons/hicolor/48x48/actions
-@comment dirrm share/kde/icons/hicolor/32x32/actions
-@comment dirrm share/kde/icons/hicolor/22x22/actions
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/16x16/actions
+@comment dirrm share/icons/hicolor/48x48/actions
+@comment dirrm share/icons/hicolor/32x32/actions
+@comment dirrm share/icons/hicolor/22x22/actions
+@comment dirrm share/icons/hicolor/16x16/apps
+@comment dirrm share/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/navigatrix
 @comment dirrm share/kde/apps
 @comment dirrm share/kde/applnk/Applications
