@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/23 08:00:40 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2007/01/28 10:59:42 xtraeme Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE+=	thunarx/thunarx-1.pc.in
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/fam/buildlink3.mk"
 .include "../../wip/xfce4-exo/buildlink3.mk"
 .include "../../wip/xfce4-panel/buildlink3.mk"
