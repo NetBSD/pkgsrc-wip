@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/01/29 22:20:29 thomasklausner Exp $
+
+--- genisoimage/genisoimage.c.orig	2006-12-02 10:09:56.000000000 +0000
++++ genisoimage/genisoimage.c
+@@ -1354,7 +1354,7 @@ int main(int argc, char *argv[])
+ 		longopts[il].name = NULL;
+ 	}
+ 
+-	while ((c = getopt_long_only(argc, argv, shortopts,
++	while ((c = getopt_long(argc, argv, shortopts,
+ 						longopts, &longind)) != EOF)
+ 		switch (c) {
+ 		case 1:
