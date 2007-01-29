@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/29 08:55:31 bsadewitz Exp $
+bin/xkill
+man/man1/xkill.1
