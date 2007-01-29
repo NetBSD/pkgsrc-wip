@@ -1,0 +1,8 @@
+Luit is a filter that can be run between an arbitrary application and a
+UTF-8 terminal emulator.  It will convert application output  from  the
+locale's  encoding  into  UTF-8,  and convert terminal input from UTF-8
+into the locale's encoding.
+
+An application may also request switching to a different output  encod-
+ing  using ISO 2022 and ISO 6429 escape sequences.  Use of this feature
+is  discouraged:  multilingual  applications  should  be  modified   to
