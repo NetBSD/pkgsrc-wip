@@ -1,0 +1,9 @@
+--Fix shared memory access code
+--Implement scheduler activations for NetBSD
+--possibly get solaris module working on NetBSD for /dev/audio
+--Fix dynamic module detection
+--Add pulse user/group in Makefile
+--Fix PLIST generation
+--Use SUBST_* macros where appropriate
+--Use CONF_FILES framework
+--And more.

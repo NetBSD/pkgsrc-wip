@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2007/01/29 22:07:32 bsadewitz Exp $
+
+--- src/Makefile.in.orig	2006-08-26 15:23:02.000000000 -0400
++++ src/Makefile.in
+@@ -112,8 +112,8 @@ noinst_PROGRAMS = mainloop-test$(EXEEXT)
+ ###################################
+ #         OSS emulation           #
+ ###################################
+-@HAVE_OSS_TRUE@am__append_17 = libpulsedsp.la
+-@HAVE_OSS_TRUE@am__append_18 = utils/padsp
++#@HAVE_OSS_TRUE@am__append_17 = libpulsedsp.la
++#@HAVE_OSS_TRUE@am__append_18 = utils/padsp
+ @OS_IS_WIN32_TRUE@am__append_19 = \
+ @OS_IS_WIN32_TRUE@		pulsecore/dllmain.c 
+ 

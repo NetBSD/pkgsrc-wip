@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2007/01/29 22:07:32 bsadewitz Exp $
+
+--- src/modules/module-oss.c.orig	2006-08-18 17:38:48.000000000 -0400
++++ src/modules/module-oss.c
+@@ -259,11 +259,15 @@ static pa_usec_t sink_get_latency_cb(pa_
+     struct userdata *u = s->userdata;
+     assert(s && u && u->sink);
+ 
++#ifndef __NetBSD__
+     if (ioctl(u->fd, SNDCTL_DSP_GETODELAY, &arg) < 0) {
++#endif
+         pa_log_info("device doesn't support SNDCTL_DSP_GETODELAY: %s", pa_cstrerror(errno));
+         s->get_latency = NULL;
+         return 0;
++#ifndef __NetBSD__
+     }
++#endif
+ 
+     r += pa_bytes_to_usec(arg, &s->sample_spec);
+ 

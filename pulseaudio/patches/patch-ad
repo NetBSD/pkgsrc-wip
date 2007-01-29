@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2007/01/29 22:07:33 bsadewitz Exp $
+
+--- src/daemon/main.c.orig	2006-08-24 19:56:34.000000000 -0400
++++ src/daemon/main.c
+@@ -290,7 +290,9 @@ static void set_one_rlimit(const pa_rlim
+ }
+ 
+ static void set_all_rlimits(const pa_daemon_conf *conf) {
++#ifdef RLIMIT_AS
+     set_one_rlimit(&conf->rlimit_as, RLIMIT_AS, "RLIMIT_AS");
++#endif
+     set_one_rlimit(&conf->rlimit_core, RLIMIT_CORE, "RLIMIT_CORE");
+     set_one_rlimit(&conf->rlimit_data, RLIMIT_DATA, "RLIMIT_DATA");
+     set_one_rlimit(&conf->rlimit_fsize, RLIMIT_FSIZE, "RLIMIT_FSIZE");
