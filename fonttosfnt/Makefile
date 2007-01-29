@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 08:25:10 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/01/29 08:26:15 bsadewitz Exp $
 #
 
 DISTNAME=	fonttosfnt-1.0.3
-CATEGORIES=	x11
+CATEGORIES=	fonts x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 
