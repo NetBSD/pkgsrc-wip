@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2007/01/29 08:25:10 bsadewitz Exp $
+bin/fonttosfnt
+man/man1/fonttosfnt.1
