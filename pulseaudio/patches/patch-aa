@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/01/29 22:07:32 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.2 2007/01/30 03:19:05 bsadewitz Exp $
 
 --- src/Makefile.in.orig	2006-08-26 15:23:02.000000000 -0400
 +++ src/Makefile.in
@@ -8,8 +8,21 @@ $NetBSD: patch-aa,v 1.1 2007/01/29 22:07:32 bsadewitz Exp $
  ###################################
 -@HAVE_OSS_TRUE@am__append_17 = libpulsedsp.la
 -@HAVE_OSS_TRUE@am__append_18 = utils/padsp
-+#@HAVE_OSS_TRUE@am__append_17 = libpulsedsp.la
-+#@HAVE_OSS_TRUE@am__append_18 = utils/padsp
++@USE_PADSP@am__append_17 = libpulsedsp.la
++@USE_PADSP@am__append_18 = utils/padsp
  @OS_IS_WIN32_TRUE@am__append_19 = \
  @OS_IS_WIN32_TRUE@		pulsecore/dllmain.c 
  
+@@ -1932,10 +1932,10 @@ module_x11_publish_la_LIBADD = $(AM_LIBA
+ 
+ # OSS
+ liboss_util_la_SOURCES = modules/oss-util.c modules/oss-util.h
+-liboss_util_la_LDFLAGS = -avoid-version
++liboss_util_la_LDFLAGS = -avoid-version ${OSS_LDFLAGS}
+ liboss_util_la_LIBADD = libpulsecore.la
+ module_oss_la_SOURCES = modules/module-oss.c
+-module_oss_la_LDFLAGS = -module -avoid-version
++module_oss_la_LDFLAGS = -module -avoid-version 
+ module_oss_la_LIBADD = $(AM_LIBADD) libiochannel.la liboss-util.la
+ module_oss_mmap_la_SOURCES = modules/module-oss-mmap.c
+ module_oss_mmap_la_LDFLAGS = -module -avoid-version

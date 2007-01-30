@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2007/01/29 22:07:33 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.2 2007/01/30 03:19:05 bsadewitz Exp $
 
---- src/daemon/default.pa.in.orig	2006-08-25 08:08:11.000000000 -0400
-+++ src/daemon/default.pa.in
-@@ -72,7 +72,7 @@ load-module module-rescue-streams
- .nofail
+--- configure.orig	2006-08-26 15:22:48.000000000 -0400
++++ configure
+@@ -25301,7 +25301,7 @@ rm -f conftest*
  
- ### Load something to the sample cache
--load-sample x11-bell /usr/share/sounds/gtk-events/activate.wav
-+load-sample x11-bell %%LOCALBASE%%/share/gnome/sounds/gtk-events/activate.wav
- #load-sample-dir-lazy /usr/share/sounds/*.wav
- 
- ### Load X11 bell module
+ for ac_func in chmod chown getaddrinfo getgrgid_r getpwuid_r gettimeofday \
+     getuid inet_ntop inet_pton nanosleep pipe posix_memalign setpgid setsid \
+-    shm_open sigaction sleep sysconf
++    shmat shm_open sigaction sleep sysconf
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { echo "$as_me:$LINENO: checking for $ac_func" >&5
