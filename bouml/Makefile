@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/29 11:23:06 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2007/01/30 21:05:05 kcf Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -10,7 +10,7 @@ MAINTAINER=		kcf@users.sourceforge.net
 HOMEPAGE=		http://bouml.free.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
 
-BOUMLVERSION=		2.17.2
+BOUMLVERSION=		2.21.4
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
