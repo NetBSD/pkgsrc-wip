@@ -1,0 +1,28 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/01/30 03:20:58 bsadewitz Exp $
+
+This package is far from complete, but it does work!  It is
+probably leaking some amount of memory at least upon exit,
+but I'm not sure how much (nothing bad has happened to me yet,
+but caveat emptor [yes I know you're not buying anything, but
+I dont know much latin] and all that.
+
+This package does not behave properly re: CONF_FILES framework,
+so the configuration files are already in ${LOCALBASE}/etc/pulse.
+They're relatively inuitive.  To get this to work, comment out the
+module autodetection (both of them), the gconf module, and basically
+everything but ossaudio and esd support.  I included my configuration
+file (not much special about it) in the files directory of this
+package.
+
+Once you have that done, you need to run the 'esdcompat' shell
+script with bash.  Well, at least NetBSD's /bin/sh has a problem with
+all the shifting going on.  It takes the same arguments as esd.
+Start it as a daemon using the unix protocol with -nobeeps (the
+audio files it looks for currently are included with GNOME, ugh).
+It should work.
+
+Enjoy!  And if you want to help me with this beast, please let me know.
+
+--Blair
+===========================================================================
