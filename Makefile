@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2499 2007/01/29 22:21:24 thomasklausner Exp $
+# $Id: Makefile,v 1.2500 2007/01/30 17:01:51 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -209,6 +209,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
 SUBDIR+=	drow
 SUBDIR+=	drpython
+SUBDIR+=	drumpiler
 SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
