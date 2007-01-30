@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/12/11 02:57:26 mwicks Exp $
+# $NetBSD: Makefile,v 1.3 2007/01/30 14:04:58 mwicks Exp $
 
 DISTNAME=hplip-1.6.10
 PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mwicks@kettering.edu
 HOMEPAGE=	http://hplip.sourceforge.net/
 COMMENT=	Drivers and utilities for HP Printers and All-in-One devices
 
