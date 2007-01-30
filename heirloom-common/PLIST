@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/23 20:22:35 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/01/30 19:21:41 cheusov Exp $
 @dirrm ${HLROOT}/bin/posix
 @dirrm ${HLROOT}/bin/posix2001
 @dirrm ${HLROOT}/bin/s42
@@ -25,29 +25,3 @@
 @dirrm ${HLROOT}/var/log
 @dirrm ${HLROOT}/var
 @dirrm ${HLROOT}
-@exec ${MKDIR} %D/${HLROOT}/bin/posix
-@exec ${MKDIR} %D/${HLROOT}/bin/posix2001
-@exec ${MKDIR} %D/${HLROOT}/bin/s42
-@exec ${MKDIR} %D/${HLROOT}/bin
-@exec ${MKDIR} %D/${HLROOT}/etc/default
-@exec ${MKDIR} %D/${HLROOT}/etc
-@exec ${MKDIR} %D/${HLROOT}/lib/spell
-@exec ${MKDIR} %D/${HLROOT}/lib/tmac
-@exec ${MKDIR} %D/${HLROOT}/lib
-@exec ${MKDIR} %D/${HLROOT}/man/man1
-@exec ${MKDIR} %D/${HLROOT}/man/man1b
-@exec ${MKDIR} %D/${HLROOT}/man/man1m
-@exec ${MKDIR} %D/${HLROOT}/man/man2
-@exec ${MKDIR} %D/${HLROOT}/man/man3
-@exec ${MKDIR} %D/${HLROOT}/man/man4
-@exec ${MKDIR} %D/${HLROOT}/man/man5
-@exec ${MKDIR} %D/${HLROOT}/man/man6
-@exec ${MKDIR} %D/${HLROOT}/man/man7
-@exec ${MKDIR} %D/${HLROOT}/man/man8
-@exec ${MKDIR} %D/${HLROOT}/man
-@exec ${MKDIR} %D/${HLROOT}/sbin
-@exec ${MKDIR} %D/${HLROOT}/ucb
-@exec ${MKDIR} %D/${HLROOT}/var/adm
-@exec ${MKDIR} %D/${HLROOT}/var/log
-@exec ${MKDIR} %D/${HLROOT}/var
-@exec ${MKDIR} %D/${HLROOT}
