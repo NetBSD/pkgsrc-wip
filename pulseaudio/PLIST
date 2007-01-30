@@ -1,5 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2007/01/29 22:07:32 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/01/30 03:13:24 bsadewitz Exp $
+bin/abxtest
+bin/audiofile-config
+bin/esd
+bin/esd-config
+bin/esdcat
 bin/esdcompat
+bin/esdctl
+bin/esdfilt
+bin/esdloop
+bin/esdmon
+bin/esdplay
+bin/esdrec
+bin/esdsample
+bin/madplay
 bin/pacat
 bin/pacmd
 bin/pactl
@@ -7,15 +20,21 @@ bin/paplay
 bin/parec
 bin/pax11publish
 bin/pulseaudio
+bin/sfconvert
+bin/sfinfo
+etc/esd.conf
 etc/pulse/client.conf
 etc/pulse/daemon.conf
 etc/pulse/default.pa
+include/af_vfs.h
+include/audiofile.h
+include/aupvlist.h
+include/esd.h
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h
 include/pulse/def.h
 include/pulse/error.h
-include/pulse/glib-mainloop.h
 include/pulse/introspect.h
 include/pulse/mainloop-api.h
 include/pulse/mainloop-signal.h
@@ -102,11 +121,13 @@ include/pulsecore/tagstruct.h
 include/pulsecore/tokenizer.h
 include/pulsecore/x11prop.h
 include/pulsecore/x11wrap.h
-lib/libpulse-mainloop-glib.la
+lib/libaudiofile.la
+lib/libesd.la
 lib/libpulse-simple.la
 lib/libpulse.la
 lib/libpulsecore.la
-lib/pkgconfig/libpulse-mainloop-glib.pc
+lib/pkgconfig/audiofile.pc
+lib/pkgconfig/esound.pc
 lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc
 lib/pulse-0.9/modules/libauthkey-prop.la
@@ -144,7 +165,6 @@ lib/pulse-0.9/modules/module-esound-compat-spawnpid.la
 lib/pulse-0.9/modules/module-esound-protocol-tcp.la
 lib/pulse-0.9/modules/module-esound-protocol-unix.la
 lib/pulse-0.9/modules/module-esound-sink.la
-lib/pulse-0.9/modules/module-gconf.la
 lib/pulse-0.9/modules/module-http-protocol-tcp.la
 lib/pulse-0.9/modules/module-http-protocol-unix.la
 lib/pulse-0.9/modules/module-jack-sink.la
@@ -169,7 +189,45 @@ lib/pulse-0.9/modules/module-tunnel-source.la
 lib/pulse-0.9/modules/module-volume-restore.la
 lib/pulse-0.9/modules/module-x11-bell.la
 lib/pulse-0.9/modules/module-x11-publish.la
-libexec/pulse/gconf-helper
+man/man1/abxtest.1
+man/man1/esd-config.1
+man/man1/esd.1
+man/man1/esdcat.1
+man/man1/esdctl.1
+man/man1/esddsp.1
+man/man1/esdfilt.1
+man/man1/esdloop.1
+man/man1/esdmon.1
+man/man1/esdplay.1
+man/man1/esdrec.1
+man/man1/esdsample.1
+man/man1/madplay.1
+share/aclocal/audiofile.m4
+share/aclocal/esd.m4
+share/doc/libaudiofile/afCloseFile
+share/doc/libaudiofile/afGetFrameSize
+share/doc/libaudiofile/afGetTrackBytes
+share/doc/libaudiofile/afIntro
+share/doc/libaudiofile/afNewFileSetup
+share/doc/libaudiofile/afOpenFile
+share/doc/libaudiofile/afQuery
+share/doc/libaudiofile/afReadFrames
+share/doc/libaudiofile/afReadMisc
+share/doc/libaudiofile/afSeekFrame
+share/doc/libaudiofile/afSetErrorHandler
+share/doc/libaudiofile/afSetVirtualByteOrder
+share/doc/libaudiofile/afWriteFrames
+share/doc/libaudiofile/sfconvert
+share/doc/libaudiofile/sfinfo
+share/examples/esound/esd.conf
+share/locale/en/LC_MESSAGES/madplay.mo
+share/locale/es/LC_MESSAGES/madplay.mo
+share/locale/fr/LC_MESSAGES/madplay.mo
+share/locale/hr/LC_MESSAGES/madplay.mo
+share/locale/no/LC_MESSAGES/madplay.mo
+@dirrm share/examples/esound
+@dirrm share/doc/libaudiofile
+@exec ${MKDIR} %D/libexec/pulse
 @dirrm libexec/pulse
 @dirrm lib/pulse-0.9/modules
 @dirrm lib/pulse-0.9

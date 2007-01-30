@@ -1,9 +1,13 @@
---Fix shared memory access code
+--Fix shared memory code
 --Implement scheduler activations for NetBSD
 --possibly get solaris module working on NetBSD for /dev/audio
---Fix dynamic module detection
+--Fix dynamic module detection (am I doing dlopen wrong?)
+	Does it even matter because it seems to only want to make static
+	libraries?
 --Add pulse user/group in Makefile
---Fix PLIST generation
---Use SUBST_* macros where appropriate
+--Fix PLIST generation (libtool issue and conf files)
+--Use SUBST_* macros where appropriate (example already there)
 --Use CONF_FILES framework
 --And more.
+
+At least it works now!

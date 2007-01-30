@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2007/01/30 03:13:24 bsadewitz Exp $
+
+--- config.h.in.orig	2006-08-26 15:39:53.000000000 -0400
++++ config.h.in
+@@ -160,6 +160,9 @@
+ /* Define to 1 if you have the `shm_open' function. */
+ #undef HAVE_SHM_OPEN
+ 
++/* Define to 1 if you have the `shmat' function. */
++#undef HAVE_SHMAT
++
+ /* Define to 1 if you have the `sigaction' function. */
+ #undef HAVE_SIGACTION
+ 

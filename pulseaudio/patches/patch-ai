@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2007/01/30 03:13:24 bsadewitz Exp $
+
+--- src/pulsecore/shm.c.orig	2006-08-24 19:56:34.000000000 -0400
++++ src/pulsecore/shm.c
+@@ -67,8 +67,8 @@ int pa_shm_create_rw(pa_shm *m, size_t s
+         m->id = 0;
+         m->size = size;
+ 
+-#ifdef MAP_ANONYMOUS
+-        if ((m->ptr = mmap(NULL, m->size, PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_PRIVATE, -1, 0)) == MAP_FAILED) {
++#ifdef MAP_ANON
++        if ((m->ptr = mmap(NULL, m->size, PROT_READ|PROT_WRITE, MAP_ANON|MAP_PRIVATE, -1, 0)) == MAP_FAILED) {
+             pa_log("mmap() failed: %s", pa_cstrerror(errno));
+             goto fail;
+         }
