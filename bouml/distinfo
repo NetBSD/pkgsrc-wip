@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/10/18 17:08:38 kcf Exp $
+$NetBSD: distinfo,v 1.4 2007/01/30 21:12:19 kcf Exp $
 
-SHA1 (bouml_2.17.2.tar.gz) = 1e66600aa5982d428e52370d3891cab9a9e08a0f
-RMD160 (bouml_2.17.2.tar.gz) = ab4fec5cbf874af8d7cb3bdc14af0eed93b50a45
-Size (bouml_2.17.2.tar.gz) = 2884752 bytes
+SHA1 (bouml_2.21.4.tar.gz) = ff463c2b962efc488b7a23b7e0824bccf8e82a13
+RMD160 (bouml_2.21.4.tar.gz) = 12e1fbfee3ac5a754b7812bd2286c03096f12d1f
+Size (bouml_2.21.4.tar.gz) = 3444651 bytes
 SHA1 (patch-aa) = 6fb2274d5b0895f368bdaa66d85aaf6ad6982d96
