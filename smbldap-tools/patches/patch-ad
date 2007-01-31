@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2005/06/20 07:00:36 marmfield Exp $
+$NetBSD: patch-ad,v 1.3 2007/01/31 13:52:40 marmfield Exp $
 
---- smbldap-populate.orig	2005-05-31 18:49:26.000000000 +1000
+--- smbldap-populate.orig	2006-01-03 21:57:41.000000000 +1100
 +++ smbldap-populate
-@@ -205,7 +205,7 @@ uidNumber: $adminUidNumber\n";
+@@ -212,7 +212,7 @@ uidNumber: $adminUidNumber\n";
      $userHome=~s/\%U/$adminName/;
      $entries.="homeDirectory: $userHome\n";
    } else {
 -    $entries.="homeDirectory: /dev/null\n";
-+    $entries.="homeDirectory: /nonexistant\n";
++    $entries.="homeDirectory: /nonexistent\n";
    }
    $entries.="sambaPwdLastSet: 0
  sambaLogonTime: 0
-@@ -231,7 +231,7 @@ sambaLMPassword: XXX
+@@ -238,7 +238,7 @@ sambaLMPassword: XXX
  sambaNTPassword: XXX
  sambaAcctFlags: [U          ]
  sambaSID: $config{SID}-$adminrid
@@ -20,16 +20,16 @@ $NetBSD: patch-ad,v 1.2 2005/06/20 07:00:36 marmfield Exp $
  gecos: Netbios Domain Administrator
  
  dn: uid=$guestName,$config{usersdn}
-@@ -244,7 +244,7 @@ objectClass: shadowAccount
+@@ -254,7 +254,7 @@ objectClass: shadowAccount
  gidNumber: 514
  uid: $guestName
  uidNumber: $guestUidNumber
 -homeDirectory: /dev/null
-+homeDirectory: /nonexistant
++homeDirectory: /nonexistent
  sambaPwdLastSet: 0
  sambaLogonTime: 0
  sambaLogoffTime: 2147483647
-@@ -270,7 +270,7 @@ sambaNTPassword: NO PASSWORDXXXXXXXXXXXX
+@@ -280,7 +280,7 @@ sambaNTPassword: NO PASSWORDXXXXXXXXXXXX
  # account disabled by default
  sambaAcctFlags: [NUD        ]
  sambaSID: $config{SID}-2998
@@ -37,15 +37,4 @@ $NetBSD: patch-ad,v 1.2 2005/06/20 07:00:36 marmfield Exp $
 +loginShell: /sbin/nologin
  
  dn: cn=Domain Admins,$config{groupsdn}
- objectClass: posixGroup
-@@ -517,8 +517,8 @@ The smbldap-populate command helps to po
- 
- =head1 FILES
- 
--       /etc/opt/IDEALX/smbldap-tools/smbldap.conf : main configuration
--       /etc/opt/IDEALX/smbldap-tools/smbldap_bind.conf : credentials for binding to the directory
-+       @PREFIX@/etc/smbldap-tools/smbldap.conf : main configuration
-+       @PREFIX@/etc/smbldap-tools/smbldap_bind.conf : credentials for binding to the directory
- 
- =head1 SEE ALSO
- 
+ objectClass: top
