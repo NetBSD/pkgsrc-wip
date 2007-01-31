@@ -1,3 +1,0 @@
-This package is a Japanese charset handler for perl.
-Jcode.pm supports both object and traditional approach of use.
-For perl is 5.8.1 or later, Jcode acts as a wrapper to Encode
