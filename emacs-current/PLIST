@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/01/23 07:42:28 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/02/01 06:46:14 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -490,8 +490,6 @@ share/emacs/${PKGVERSION}/etc/letter.pbm
 share/emacs/${PKGVERSION}/etc/letter.xpm
 share/emacs/${PKGVERSION}/etc/ms-7bkermit
 share/emacs/${PKGVERSION}/etc/ms-kermit
-share/emacs/${PKGVERSION}/etc/orgcard.ps
-share/emacs/${PKGVERSION}/etc/orgcard.tex
 share/emacs/${PKGVERSION}/etc/pl-refcard.ps
 share/emacs/${PKGVERSION}/etc/pl-refcard.tex
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
