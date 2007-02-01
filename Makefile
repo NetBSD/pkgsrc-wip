@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2500 2007/01/30 17:01:51 netcap Exp $
+# $Id: Makefile,v 1.2501 2007/02/01 04:20:15 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -79,6 +79,8 @@ SUBDIR+=	argouml
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	artemis
 SUBDIR+=	atftp
+SUBDIR+=	audacious
+SUBDIR+=	audacious-plugins
 SUBDIR+=	audacity-devel
 SUBDIR+=	autocutsel
 SUBDIR+=	autoproject
