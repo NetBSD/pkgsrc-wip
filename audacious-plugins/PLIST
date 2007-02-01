@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/01 04:18:19 netcap Exp $
+lib/audacious/Container/libm3u.so
+lib/audacious/Container/libpls.so
+lib/audacious/Container/libxspf.so
+lib/audacious/Effect/libaudiocompress.so
+lib/audacious/Effect/libecho.so
+lib/audacious/Effect/libladspa.so
+lib/audacious/Effect/libstereo.so
+lib/audacious/Effect/libvoice_removal.so
+lib/audacious/General/libalarm.so
+lib/audacious/General/libscrobbler.so
+lib/audacious/General/libsong_change.so
+lib/audacious/Input/libaac.so
+lib/audacious/Input/libalac.so
+lib/audacious/Input/libcdaudio.so
+lib/audacious/Input/libconsole.so
+lib/audacious/Input/libcuesheet.so
+lib/audacious/Input/libflac.so
+lib/audacious/Input/libmodplug.so
+lib/audacious/Input/libmpc.so
+lib/audacious/Input/libmpg123.so
+lib/audacious/Input/libsexypsf.so
+lib/audacious/Input/libsid.so
+lib/audacious/Input/libtimidity.so
+lib/audacious/Input/libtonegen.so
+lib/audacious/Input/libvorbis.so
+lib/audacious/Input/libwav.so
+lib/audacious/Input/libwavpack.so
+lib/audacious/Output/libOSS.so
+lib/audacious/Output/libdisk_writer.so
+lib/audacious/Output/libnull.so
+lib/audacious/Output/libsun.so
+lib/audacious/Visualization/libbscope.so
+lib/audacious/Visualization/libparanormal.so
+lib/audacious/Visualization/libspectrum.so
+share/audacious-plugins/paranormal/Presets/aerdan_-_bloody_vortex.pnv
+share/audacious-plugins/paranormal/Presets/aerdan_-_cloudscape.pnv
+share/audacious-plugins/paranormal/Presets/aerdan_-_cloudscape2.pnv
+share/audacious-plugins/paranormal/Presets/aerdan_-_dancing_snow.pnv
+share/audacious-plugins/paranormal/Presets/aerdan_-_portal_to_hell.pnv
+share/audacious-plugins/paranormal/Presets/aerdan_-_telestatic.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_beatscope.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_branchscope.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_bumblebees.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_cubism.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_flying_into_pastels.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_interlaced.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_phosphor_flame.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_psuedo_starfield.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_purple_flower.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_quakingscope.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_retroscope.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_rush.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_smoke.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_swarm.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_technicolour_nightmare.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_value_replace_fun.pnv
+share/audacious-plugins/paranormal/Presets/nenolod_-_worms.pnv
+share/audacious/images/audioscrobbler.png
+share/audacious/images/audioscrobbler_badge.png
+@dirrm share/audacious/images
+@dirrm share/audacious-plugins/paranormal/Presets
+@dirrm share/audacious-plugins/paranormal
+@dirrm share/audacious-plugins
+@dirrm lib/audacious/Visualization
+@dirrm lib/audacious/Output
+@dirrm lib/audacious/Input
+@dirrm lib/audacious/General
+@dirrm lib/audacious/Effect
+@dirrm lib/audacious/Container
+@dirrm lib/audacious
+@exec ${MKDIR} %D/include/audacious-plugins
+@dirrm include/audacious-plugins
