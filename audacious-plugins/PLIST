@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/01 04:18:19 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/01 16:15:02 netcap Exp $
 lib/audacious/Container/libm3u.so
 lib/audacious/Container/libpls.so
 lib/audacious/Container/libxspf.so
@@ -30,6 +30,7 @@ lib/audacious/Output/libOSS.so
 lib/audacious/Output/libdisk_writer.so
 lib/audacious/Output/libnull.so
 lib/audacious/Output/libsun.so
+lib/audacious/Output/libESD.so
 lib/audacious/Visualization/libbscope.so
 lib/audacious/Visualization/libparanormal.so
 lib/audacious/Visualization/libspectrum.so
