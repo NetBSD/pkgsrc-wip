@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/01 04:17:17 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/01 10:17:36 lkundrak Exp $
 #
 
 DISTNAME=		audacious-1.2.2
@@ -19,8 +19,11 @@ CONFIGURE_ARGS+=        --enable-chardet --enable-nls
 
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
 
-# make this linux-only
-#.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.  include "../../wip/alsa-lib/buildlink3.mk"
+.endif
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
