@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2006/11/26 22:55:21 larnor Exp $
+$NetBSD: distinfo,v 1.7 2007/02/01 22:43:30 larnor Exp $
 
-SHA1 (gaim-2.0.0beta5.tar.bz2) = cc897b656b933c60d9557df7f6dfdffc913fb6b6
-RMD160 (gaim-2.0.0beta5.tar.bz2) = 5fdb0f16411745033a691c4991e0f36cd31655c5
-Size (gaim-2.0.0beta5.tar.bz2) = 6489271 bytes
+SHA1 (gaim-2.0.0beta6.tar.bz2) = 39345fe6e0519f2e126f7f60f7d9905e3460517b
+RMD160 (gaim-2.0.0beta6.tar.bz2) = b741288aeba621fbfeea3fd3ed16a2b4deff3dc9
+Size (gaim-2.0.0beta6.tar.bz2) = 6667700 bytes
 SHA1 (patch-ab) = 0759f8d4426f69bbfb4995eb94a940da24cf54c1
