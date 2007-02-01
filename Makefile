@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2501 2007/02/01 04:20:15 netcap Exp $
+# $Id: Makefile,v 1.2502 2007/02/01 22:50:50 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -685,6 +685,7 @@ SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
 SUBDIR+=	libneural
 SUBDIR+=	libnjb
+SUBDIR+=	libnms
 SUBDIR+=	libobby
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libp11
