@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2007/01/29 07:55:41 bsadewitz Exp $
+$NetBSD: distinfo,v 1.2 2007/02/02 10:24:50 absd Exp $
 
 SHA1 (xdm-1.1.3.tar.bz2) = d3f85da5f4e5a272bef128e91286281ef707202a
 RMD160 (xdm-1.1.3.tar.bz2) = 95ebd4ba4ddc871b3dfab3520c853f9024fc65e6
 Size (xdm-1.1.3.tar.bz2) = 386319 bytes
-SHA1 (patch-aa) = 6d27d99c2f1d08fd4ab09b5560d3010cfbb0a5aa
+SHA1 (patch-aa) = b7ad75f298492b8096763ad9ba470aeeb251e93d
