@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/03 09:22:19 thomasklausner Exp $
 
 DISTNAME=		dwerg-default-${DWERG_VERSION}
 DWERG_VERSION=		0.8
@@ -13,6 +13,7 @@ HOMEPAGE=		http://themes.freshmeat.net/projects/dwerg/
 COMMENT=		Theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
+USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
