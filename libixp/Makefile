@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/11/18 18:07:58 kh-p Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/03 21:53:05 neimal Exp $
 
-DISTNAME=		libixp-0.1
+DISTNAME=		libixp-0.2
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://libs.suckless.org/download/
