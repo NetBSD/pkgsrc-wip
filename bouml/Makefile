@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/30 21:05:05 kcf Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/03 15:13:47 obache Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -18,6 +18,7 @@ USE_LANGUAGES=		c++
 BUILD_TARGET=		compile
 USE_DIRS+=		xdg-1.3
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
