@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/24 18:25:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/03 17:20:30 xtraeme Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -13,7 +13,7 @@ DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
 .if !empty(OPSYS:MNetBSD)
 .  if exists(/usr/include/mmintrin.h)
-CPPFLAGS+=	-D__MMX__
+CFLAGS+=	-msse
 .  endif
 .endif
 
