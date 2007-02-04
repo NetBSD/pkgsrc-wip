@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/01 16:33:01 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/04 23:47:11 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -13,18 +13,30 @@ COMMENT=        	Plugins for Audacious media player
 GNU_CONFIGURE=		yes
 USE_TOOLS=      	gmake intltool pkg-config
 USE_LIBTOOL=    	yes
+
+# From audio/bmp/Makefile:
+# XXX Workaround a crash during shutdown that happens when dlclose(3)ing
+# any open plugin.  libstdc++ gets dynamically linked in when the id3lib
+# library is loaded, and is the one causing problems.  See PR pkg/26846
+# for more information.
 USE_LANGUAGES=		c c++
+LDFLAGS.NetBSD+=        -lstdc++ -lm
 
 CONFIGURE_ARGS+= 	--disable-jack --disable-adplug --disable-lirc \
 		 	--disable-amidiplug --disable-arts --disable-wma
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
+RAWPART_cmd=            /sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
+CONFIGURE_ARGS+=        --with-dev-dsp=${DEVOSSSOUND:Q}                 \
+                        --with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}   \
+                        --with-cdda-dir=/cdrom/
+.endif
+
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+= 	--enable-alsa
-.	include "../../wip/alsa-lib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= 	--disable-alsa
+.	include	"../../wip/alsa-lib/buildlink3.mk"
 .endif
 
 CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
@@ -33,6 +45,7 @@ CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
 BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
 
 .include "../../wip/audacious/buildlink3.mk"
+.include "../../wip/libnms/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
