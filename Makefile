@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2503 2007/02/03 17:02:14 kristerw Exp $
+# $Id: Makefile,v 1.2504 2007/02/04 09:39:00 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -341,6 +341,7 @@ SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-libggz
 SUBDIR+=	ghostpcl
+SUBDIR+=	gimmie
 SUBDIR+=	git
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
