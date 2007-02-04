@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/04 09:13:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/04 09:46:43 cheusov Exp $
 #
 
 DISTNAME=		txt2html-2.44
@@ -9,10 +9,8 @@ MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		http://txt2html.sourceforge.net/
 COMMENT=		Plain text to HTML convertor
 
-USE_TOOLS+=		perl:run
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 REPLACE_PERL=		scripts/txt2html
-NO_BUILD=		yes
 
 PERL5_CONFIGURE=	yes
 PERL5_MODULE_TYPE=	Module::Build
