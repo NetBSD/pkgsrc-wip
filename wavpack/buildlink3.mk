@@ -1,18 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/24 13:58:14 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/02/04 19:44:04 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WAVPACK_BUILDLINK3_MK:=	${WAVPACK_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	wavpack
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nwavpack}
 BUILDLINK_PACKAGES+=	wavpack
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wavpack
 
-.if !empty(WAVPACK_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.wavpack+=	wavpack>=wavpack-4.32
-BUILDLINK_ABI_DEPENDS.wavpack+=	wavpack>=wavpack-4.32
+.if ${WAVPACK_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.wavpack+=	wavpack>=4.32
 BUILDLINK_PKGSRCDIR.wavpack?=	../../wip/wavpack
 .endif	# WAVPACK_BUILDLINK3_MK
 
