@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2006/08/31 19:04:06 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/04 19:11:06 milosn Exp $
 .include "../../wip/py-twisted-core/version.mk"
 
-ZI_VERSION=	3.1.0c1
+ZI_VERSION=	3.3.0
 DISTNAME=	Twisted-${TWISTED_VERSION}
 PKGNAME=	${PYPKGPREFIX}-twisted-zopeinterface-${ZI_VERSION}
-PKGREVISION=	1
+PKGREVISION=	0
 CATEGORIES=	devel python
-MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.4/
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://www.twistedmatrix.com/
 COMMENT=	The zope.interface package for Twisted.
 
-WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/ZopeInterface-${ZI_VERSION}
+WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/zope.interface-${ZI_VERSION}
 
 DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
