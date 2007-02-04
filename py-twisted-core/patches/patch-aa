@@ -1,0 +1,20 @@
+--- twisted/internet/kqreactor.py.orig	2007-02-04 17:12:19.000000000 +0000
++++ twisted/internet/kqreactor.py	2007-02-04 17:15:06.000000000 +0000
+@@ -66,7 +66,7 @@
+ import errno, sys
+ 
+ # PyKQueue imports
+-from kqsyscall import *
++from kqueue import *
+ 
+ # Twisted imports
+ from twisted.python import log, failure
+@@ -86,7 +86,7 @@
+     """A reactor that uses kqueue(2)/kevent(2)."""
+ 
+     def _updateRegistration(self, *args):
+-        kq.kevent([kevent(*args)], 0, 0)
++        kq.kevent([EV_SET(*args)], 0, 0)
+ 
+     def addReader(self, reader):
+         """Add a FileDescriptor for notification of data available to read.
