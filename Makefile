@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2504 2007/02/04 09:39:00 thomasklausner Exp $
+# $Id: Makefile,v 1.2505 2007/02/04 19:09:18 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1310,6 +1310,7 @@ SUBDIR+=	py-tagger
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-conch
 SUBDIR+=	py-twisted-core
+SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-lore
 SUBDIR+=	py-twisted-mail
 SUBDIR+=	py-twisted-names
