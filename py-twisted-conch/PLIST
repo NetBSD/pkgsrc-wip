@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/27 16:54:29 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/04 19:22:35 milosn Exp $
 ${PYSITELIB}/twisted/plugins/twisted_conch.py
-${PYSITELIB}/twisted/conch/authorizer.py
 ${PYSITELIB}/twisted/conch/__init__.py
 ${PYSITELIB}/twisted/conch/_version.py
 ${PYSITELIB}/twisted/conch/avatar.py
 ${PYSITELIB}/twisted/conch/checkers.py
-${PYSITELIB}/twisted/conch/identity.py
 ${PYSITELIB}/twisted/conch/error.py
+${PYSITELIB}/twisted/conch/unix.py
 ${PYSITELIB}/twisted/conch/interfaces.py
 ${PYSITELIB}/twisted/conch/ls.py
 ${PYSITELIB}/twisted/conch/manhole.py
@@ -18,7 +17,6 @@ ${PYSITELIB}/twisted/conch/telnet.py
 ${PYSITELIB}/twisted/conch/stdio.py
 ${PYSITELIB}/twisted/conch/tap.py
 ${PYSITELIB}/twisted/conch/ttymodes.py
-${PYSITELIB}/twisted/conch/unix.py
 ${PYSITELIB}/twisted/conch/client/connect.py
 ${PYSITELIB}/twisted/conch/client/direct.py
 ${PYSITELIB}/twisted/conch/client/options.py
@@ -30,17 +28,17 @@ ${PYSITELIB}/twisted/conch/ssh/connection.py
 ${PYSITELIB}/twisted/conch/ssh/common.py
 ${PYSITELIB}/twisted/conch/ssh/transport.py
 ${PYSITELIB}/twisted/conch/ssh/agent.py
-${PYSITELIB}/twisted/conch/ssh/__init__.py
 ${PYSITELIB}/twisted/conch/ssh/forwarding.py
-${PYSITELIB}/twisted/conch/ssh/userauth.py
+${PYSITELIB}/twisted/conch/ssh/__init__.py
 ${PYSITELIB}/twisted/conch/ssh/service.py
-${PYSITELIB}/twisted/conch/ssh/factory.py
+${PYSITELIB}/twisted/conch/ssh/userauth.py
 ${PYSITELIB}/twisted/conch/ssh/asn1.py
+${PYSITELIB}/twisted/conch/ssh/filetransfer.py
+${PYSITELIB}/twisted/conch/ssh/factory.py
 ${PYSITELIB}/twisted/conch/ssh/channel.py
 ${PYSITELIB}/twisted/conch/ssh/sexpy.py
-${PYSITELIB}/twisted/conch/ssh/session.py
 ${PYSITELIB}/twisted/conch/ssh/keys.py
-${PYSITELIB}/twisted/conch/ssh/filetransfer.py
+${PYSITELIB}/twisted/conch/ssh/session.py
 ${PYSITELIB}/twisted/conch/insults/client.py
 ${PYSITELIB}/twisted/conch/insults/helper.py
 ${PYSITELIB}/twisted/conch/insults/__init__.py
@@ -56,6 +54,9 @@ ${PYSITELIB}/twisted/conch/scripts/conch.py
 ${PYSITELIB}/twisted/conch/scripts/cftp.py
 ${PYSITELIB}/twisted/conch/scripts/__init__.py
 ${PYSITELIB}/twisted/conch/scripts/ckeygen.py
+${PYSITELIB}/twisted/conch/ui/tkvt100.py
+${PYSITELIB}/twisted/conch/ui/ansi.py
+${PYSITELIB}/twisted/conch/ui/__init__.py
 ${PYSITELIB}/twisted/conch/test/test_filetransfer.py
 ${PYSITELIB}/twisted/conch/test/test_conch.py
 ${PYSITELIB}/twisted/conch/test/test_telnet.py
@@ -69,9 +70,6 @@ ${PYSITELIB}/twisted/conch/test/test_manhole.py
 ${PYSITELIB}/twisted/conch/test/test_text.py
 ${PYSITELIB}/twisted/conch/test/test_mixin.py
 ${PYSITELIB}/twisted/conch/test/test_recvline.py
-${PYSITELIB}/twisted/conch/ui/tkvt100.py
-${PYSITELIB}/twisted/conch/ui/ansi.py
-${PYSITELIB}/twisted/conch/ui/__init__.py
 bin/cftp
 bin/ckeygen
 bin/conch
@@ -80,8 +78,6 @@ ${PYSITELIB}/twisted/conch/__init__.pyc
 ${PYSITELIB}/twisted/conch/__init__.pyo
 ${PYSITELIB}/twisted/conch/_version.pyc
 ${PYSITELIB}/twisted/conch/_version.pyo
-${PYSITELIB}/twisted/conch/authorizer.pyc
-${PYSITELIB}/twisted/conch/authorizer.pyo
 ${PYSITELIB}/twisted/conch/avatar.pyc
 ${PYSITELIB}/twisted/conch/avatar.pyo
 ${PYSITELIB}/twisted/conch/checkers.pyc
@@ -102,8 +98,6 @@ ${PYSITELIB}/twisted/conch/client/unix.pyc
 ${PYSITELIB}/twisted/conch/client/unix.pyo
 ${PYSITELIB}/twisted/conch/error.pyc
 ${PYSITELIB}/twisted/conch/error.pyo
-${PYSITELIB}/twisted/conch/identity.pyc
-${PYSITELIB}/twisted/conch/identity.pyo
 ${PYSITELIB}/twisted/conch/insults/__init__.pyc
 ${PYSITELIB}/twisted/conch/insults/__init__.pyo
 ${PYSITELIB}/twisted/conch/insults/client.pyc

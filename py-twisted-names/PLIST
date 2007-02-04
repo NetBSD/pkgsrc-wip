@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/27 16:58:27 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/04 19:26:04 milosn Exp $
 ${PYSITELIB}/twisted/plugins/twisted_names.py
 ${PYSITELIB}/twisted/names/srvconnect.py
 ${PYSITELIB}/twisted/names/__init__.py
@@ -8,6 +8,7 @@ ${PYSITELIB}/twisted/names/cache.py
 ${PYSITELIB}/twisted/names/client.py
 ${PYSITELIB}/twisted/names/common.py
 ${PYSITELIB}/twisted/names/dns.py
+${PYSITELIB}/twisted/names/error.py
 ${PYSITELIB}/twisted/names/hosts.py
 ${PYSITELIB}/twisted/names/resolve.py
 ${PYSITELIB}/twisted/names/root.py
@@ -15,8 +16,9 @@ ${PYSITELIB}/twisted/names/secondary.py
 ${PYSITELIB}/twisted/names/server.py
 ${PYSITELIB}/twisted/names/tap.py
 ${PYSITELIB}/twisted/names/test/test_rootresolve.py
-${PYSITELIB}/twisted/names/test/test_cache.py
+${PYSITELIB}/twisted/names/test/test_client.py
 ${PYSITELIB}/twisted/names/test/__init__.py
+${PYSITELIB}/twisted/names/test/test_cache.py
 ${PYSITELIB}/twisted/names/test/test_names.py
 ${PYSITELIB}/twisted/names/test/test_dns.py
 ${PYSITELIB}/twisted/names/__init__.pyc
@@ -33,6 +35,8 @@ ${PYSITELIB}/twisted/names/common.pyc
 ${PYSITELIB}/twisted/names/common.pyo
 ${PYSITELIB}/twisted/names/dns.pyc
 ${PYSITELIB}/twisted/names/dns.pyo
+${PYSITELIB}/twisted/names/error.pyc
+${PYSITELIB}/twisted/names/error.pyo
 ${PYSITELIB}/twisted/names/hosts.pyc
 ${PYSITELIB}/twisted/names/hosts.pyo
 ${PYSITELIB}/twisted/names/resolve.pyc
@@ -51,6 +55,8 @@ ${PYSITELIB}/twisted/names/test/__init__.pyc
 ${PYSITELIB}/twisted/names/test/__init__.pyo
 ${PYSITELIB}/twisted/names/test/test_cache.pyc
 ${PYSITELIB}/twisted/names/test/test_cache.pyo
+${PYSITELIB}/twisted/names/test/test_client.pyc
+${PYSITELIB}/twisted/names/test/test_client.pyo
 ${PYSITELIB}/twisted/names/test/test_dns.pyc
 ${PYSITELIB}/twisted/names/test/test_dns.pyo
 ${PYSITELIB}/twisted/names/test/test_names.pyc

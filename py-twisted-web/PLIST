@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/27 17:01:43 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/04 19:23:56 milosn Exp $
 ${PYSITELIB}/twisted/plugins/twisted_web.py
 ${PYSITELIB}/twisted/web/domhelpers.py
 ${PYSITELIB}/twisted/web/__init__.py
@@ -12,7 +12,7 @@ ${PYSITELIB}/twisted/web/microdom.py
 ${PYSITELIB}/twisted/web/guard.py
 ${PYSITELIB}/twisted/web/html.py
 ${PYSITELIB}/twisted/web/http.py
-${PYSITELIB}/twisted/web/widgets.py
+${PYSITELIB}/twisted/web/trp.py
 ${PYSITELIB}/twisted/web/monitor.py
 ${PYSITELIB}/twisted/web/proxy.py
 ${PYSITELIB}/twisted/web/resource.py
@@ -23,13 +23,8 @@ ${PYSITELIB}/twisted/web/soap.py
 ${PYSITELIB}/twisted/web/static.py
 ${PYSITELIB}/twisted/web/sux.py
 ${PYSITELIB}/twisted/web/tap.py
-${PYSITELIB}/twisted/web/trp.py
 ${PYSITELIB}/twisted/web/twcgi.py
 ${PYSITELIB}/twisted/web/util.py
-${PYSITELIB}/twisted/web/vhost.py
-${PYSITELIB}/twisted/web/xmlrpc.py
-${PYSITELIB}/twisted/web/scripts/websetroot.py
-${PYSITELIB}/twisted/web/scripts/__init__.py
 ${PYSITELIB}/twisted/web/test/test_webclient.py
 ${PYSITELIB}/twisted/web/test/test_web.py
 ${PYSITELIB}/twisted/web/test/test_woven.py
@@ -43,6 +38,9 @@ ${PYSITELIB}/twisted/web/test/test_cgi.py
 ${PYSITELIB}/twisted/web/test/test_mvc.py
 ${PYSITELIB}/twisted/web/test/test_xmlrpc.py
 ${PYSITELIB}/twisted/web/test/test_static.py
+${PYSITELIB}/twisted/web/vhost.py
+${PYSITELIB}/twisted/web/widgets.py
+${PYSITELIB}/twisted/web/xmlrpc.py
 ${PYSITELIB}/twisted/web/woven/__init__.py
 ${PYSITELIB}/twisted/web/woven/input.py
 ${PYSITELIB}/twisted/web/woven/model.py
@@ -65,7 +63,6 @@ ${PYSITELIB}/twisted/web/woven/FlashConduit.swf
 ${PYSITELIB}/twisted/web/woven/WebConduit2_msie.js
 ${PYSITELIB}/twisted/web/woven/FlashConduit.fla
 ${PYSITELIB}/twisted/web/woven/FlashConduitGlue.html
-bin/websetroot
 ${PYSITELIB}/twisted/plugins/twisted_web.pyc
 ${PYSITELIB}/twisted/plugins/twisted_web.pyo
 ${PYSITELIB}/twisted/web/__init__.pyc
@@ -102,10 +99,6 @@ ${PYSITELIB}/twisted/web/rewrite.pyc
 ${PYSITELIB}/twisted/web/rewrite.pyo
 ${PYSITELIB}/twisted/web/script.pyc
 ${PYSITELIB}/twisted/web/script.pyo
-${PYSITELIB}/twisted/web/scripts/__init__.pyc
-${PYSITELIB}/twisted/web/scripts/__init__.pyo
-${PYSITELIB}/twisted/web/scripts/websetroot.pyc
-${PYSITELIB}/twisted/web/scripts/websetroot.pyo
 ${PYSITELIB}/twisted/web/server.pyc
 ${PYSITELIB}/twisted/web/server.pyo
 ${PYSITELIB}/twisted/web/soap.pyc
@@ -188,7 +181,6 @@ ${PYSITELIB}/twisted/web/xmlrpc.pyc
 ${PYSITELIB}/twisted/web/xmlrpc.pyo
 @dirrm ${PYSITELIB}/twisted/web/woven
 @dirrm ${PYSITELIB}/twisted/web/test
-@dirrm ${PYSITELIB}/twisted/web/scripts
 @dirrm ${PYSITELIB}/twisted/web
 @dirrm ${PYSITELIB}/twisted/plugins
 @dirrm ${PYSITELIB}/twisted

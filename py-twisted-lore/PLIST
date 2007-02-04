@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/27 16:55:54 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/04 19:25:09 milosn Exp $
 ${PYSITELIB}/twisted/plugins/twisted_lore.py
 ${PYSITELIB}/twisted/lore/__init__.py
 ${PYSITELIB}/twisted/lore/_version.py
@@ -20,30 +20,30 @@ ${PYSITELIB}/twisted/lore/scripts/__init__.py
 ${PYSITELIB}/twisted/lore/scripts/lore.py
 ${PYSITELIB}/twisted/lore/test/__init__.py
 ${PYSITELIB}/twisted/lore/test/test_lore.py
+${PYSITELIB}/twisted/lore/test/lore_numbering_test_out.html
+${PYSITELIB}/twisted/lore/test/lore_index_test_out.html
 ${PYSITELIB}/twisted/lore/test/good_internal.xhtml
-${PYSITELIB}/twisted/lore/test/simple1.xhtml
 ${PYSITELIB}/twisted/lore/test/simple3.html
 ${PYSITELIB}/twisted/lore/test/simple4.html
+${PYSITELIB}/twisted/lore/test/good_simple.xhtml
 ${PYSITELIB}/twisted/lore/test/simple.xhtml
-${PYSITELIB}/twisted/lore/test/simple.html
-${PYSITELIB}/twisted/lore/test/lore_index_file_out_multiple.html
 ${PYSITELIB}/twisted/lore/test/lore_index_file_unnumbered_multiple_out.html
 ${PYSITELIB}/twisted/lore/test/lore_index_file_out.html
-${PYSITELIB}/twisted/lore/test/lore_index_test_out.html
 ${PYSITELIB}/twisted/lore/test/lore_index_test.xhtml
+${PYSITELIB}/twisted/lore/test/simple.html
 ${PYSITELIB}/twisted/lore/test/lore_numbering_test_out2.html
-${PYSITELIB}/twisted/lore/test/simple4foo.xhtml
-${PYSITELIB}/twisted/lore/test/template.tpl
-${PYSITELIB}/twisted/lore/test/good_simple.xhtml
-${PYSITELIB}/twisted/lore/test/simple2.xhtml
-${PYSITELIB}/twisted/lore/test/lore_numbering_test_out.html
+${PYSITELIB}/twisted/lore/test/simple1.xhtml
+${PYSITELIB}/twisted/lore/test/lore_index_file_out_multiple.html
 ${PYSITELIB}/twisted/lore/test/lore_numbering_test.xhtml
 ${PYSITELIB}/twisted/lore/test/lore_index_test_out2.html
 ${PYSITELIB}/twisted/lore/test/lore_index_test2.xhtml
 ${PYSITELIB}/twisted/lore/test/lore_index_test3.xhtml
+${PYSITELIB}/twisted/lore/test/simple2.xhtml
 ${PYSITELIB}/twisted/lore/test/simple3.xhtml
 ${PYSITELIB}/twisted/lore/test/simple4.xhtml
 ${PYSITELIB}/twisted/lore/test/lore_index_file_unnumbered_out.html
+${PYSITELIB}/twisted/lore/test/template.tpl
+${PYSITELIB}/twisted/lore/test/simple4foo.xhtml
 ${PYSITELIB}/twisted/lore/template.mgp
 bin/bookify
 bin/lore

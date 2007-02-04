@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/27 16:57:20 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/04 19:26:55 milosn Exp $
 ${PYSITELIB}/twisted/plugins/twisted_mail.py
 ${PYSITELIB}/twisted/mail/pop3client.py
 ${PYSITELIB}/twisted/mail/__init__.py
@@ -18,8 +18,9 @@ ${PYSITELIB}/twisted/mail/tap.py
 ${PYSITELIB}/twisted/mail/scripts/__init__.py
 ${PYSITELIB}/twisted/mail/scripts/mailmail.py
 ${PYSITELIB}/twisted/mail/test/pop3testserver.py
-${PYSITELIB}/twisted/mail/test/test_pop3client.py
+${PYSITELIB}/twisted/mail/test/test_options.py
 ${PYSITELIB}/twisted/mail/test/test_bounce.py
+${PYSITELIB}/twisted/mail/test/test_pop3client.py
 ${PYSITELIB}/twisted/mail/test/__init__.py
 ${PYSITELIB}/twisted/mail/test/test_pop3.py
 ${PYSITELIB}/twisted/mail/test/test_mail.py
@@ -72,6 +73,8 @@ ${PYSITELIB}/twisted/mail/test/test_imap.pyc
 ${PYSITELIB}/twisted/mail/test/test_imap.pyo
 ${PYSITELIB}/twisted/mail/test/test_mail.pyc
 ${PYSITELIB}/twisted/mail/test/test_mail.pyo
+${PYSITELIB}/twisted/mail/test/test_options.pyc
+${PYSITELIB}/twisted/mail/test/test_options.pyo
 ${PYSITELIB}/twisted/mail/test/test_pop3.pyc
 ${PYSITELIB}/twisted/mail/test/test_pop3.pyo
 ${PYSITELIB}/twisted/mail/test/test_pop3client.pyc
