@@ -1,0 +1,31 @@
+--- kqueuemodule.c.orig	2006-08-29 00:14:40.000000000 +0100
++++ kqueuemodule.c	2006-08-29 01:57:26.000000000 +0100
+@@ -246,7 +246,7 @@
+ }
+ 
+ static PyTypeObject kqueue_keventType = {
+-    PyObject_HEAD_INIT(NULL)
++    PyObject_HEAD_INIT(&PyType_Type)
+     0,
+     "kevent",
+     sizeof(kqueue_keventObject),
+@@ -474,8 +474,8 @@
+ 			to = PyLong_AsLong(timo);
+ 		else
+ 			to = PyInt_AsLong(timo);
+-		ts.tv_sec = to / 1000000000;
+-		ts.tv_nsec = to % 1000000000;
++		ts.tv_sec = to / 1000;
++		ts.tv_nsec = (to % 1000) * 1000000;
+ 		tsp = &ts;
+ 	} else {
+ 		PyErr_SetString(PyExc_ValueError, "timeout must be tuple (sec, nsec), or int/long nsec");
+@@ -606,7 +606,7 @@
+ }
+ 
+ static PyTypeObject kqueue_kqueueType = {
+-    PyObject_HEAD_INIT(NULL)
++    PyObject_HEAD_INIT(&PyType_Type)
+     0,
+     "kqueue",
+     sizeof(kqueue_kqueueObject),
