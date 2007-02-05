@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/02/05 17:57:27 bsadewitz Exp $
+
+To ensure OpenGL applications work properly, please apply the diff in
+files/ to the root of your pkgsrc tree and do 'make distinfo' in
+each of the Mesa directories (MesaLib, glu, and glut).  Then, change
+the flags in WRKSRC/configs/pkgsrc to -DPTHREADS -DGLXEXT -DGLX_USE_MESA
+-DUSE_GAS and -D__GLX_ALIGN64 if you're using a 64-bit platform.  Build
+and install Mesa 6.5.2.  Then, change -DGLX_GLXEXT_LEGACY in
+MesaLib/buildlink3.mk to -DGLX_GLXEXT_PROTOTYPES.  If there are any
+rejected patches, just look at them and apply it manually; I haven't had
+time to fix it yet.
+
+
+This step is most likely necessary right now so that the Mesa version
+the server requires is also in userland.  Alternatively, you can
+just use Mesa 6.4.2, but you've been duly warned. ;)
+
+===========================================================================
