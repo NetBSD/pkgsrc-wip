@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/05 02:14:53 netcap Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/05 22:40:00 thomasklausner Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -59,7 +59,7 @@ BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/esound/buildlink3.mk"
 #.include "../../wip/pulseaudio/buildlink3.mk"
-.include "../../wip/wavpack/buildlink3.mk"
+.include "../../audio/wavpack/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
