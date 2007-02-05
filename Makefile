@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2505 2007/02/04 19:09:18 milosn Exp $
+# $Id: Makefile,v 1.2506 2007/02/05 22:42:49 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1585,7 +1585,6 @@ SUBDIR+=	vncselector
 SUBDIR+=	vpr
 SUBDIR+=	vreng
 SUBDIR+=	wang-ttf
-SUBDIR+=	wavpack
 SUBDIR+=	webcleaner
 SUBDIR+=	weplab
 SUBDIR+=	west
