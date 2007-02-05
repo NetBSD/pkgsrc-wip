@@ -1,0 +1,36 @@
+--- configure	2007-02-05 02:37:28.000000000 +1000
++++ configure	2007-02-05 02:37:01.000000000 +1000
+@@ -7140,23 +7140,12 @@
+ 
+ 
+ 
+-# Option to enable OpenGL
++# Force enable OpenGL
+ 
+-# Check whether --with-opengl was given.
+-if test "${with_opengl+set}" = set; then
+-  withval=$with_opengl;
+-fi
+-
+-if test "x$with_opengl" == "xyes"; then
+     with_opengl=yes
+     OPENGL_CFLAGS=' -DUSE_OPENGL'
+     OPENGL_LIBS=' -lGL -lguichan_opengl'
+ 
+-
+-else
+-    with_opengl=no
+-fi
+-
+ # Search for sdl-config
+ # Extract the first word of "sdl-config", so it can be a program name with args.
+ set dummy sdl-config; ac_word=$2
+@@ -7729,6 +7718,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
