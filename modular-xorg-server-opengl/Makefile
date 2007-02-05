@@ -1,0 +1,98 @@
+# $NetBSD: Makefile,v 1.1 2007/02/05 03:44:13 bsadewitz Exp $
+
+DISTNAME=	xorg-server-1.2.0
+PKGNAME=	modular-${DISTNAME}
+CATEGORIES=	x11
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
+EXTRACT_SUFX=	.tar.bz2
+
+SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAINTAINER=	blair.sadewitz@gmail.com
+COMMENT=	Xorg X11 Server from modular X.org X11 with OpenGL built-in
+
+MESA_VERSION=	6.5.2
+MESA_SRC=	${WRKDIR}/Mesa-${MESA_VERSION}
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MESALIB_DISTFILE}
+DISTFILES+=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
+SITES.MesaLib-${MESA_VERSION}= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+#MESA_PATCHES=	af ag ah
+
+GL_CFLAGS=	# empty
+GL_CFLAGS+=	-DGLX_USE_MESA -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN
+GL_CFLAGS+=	-I${MESA_SRC:Q}/include
+.if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "alpha") || \
+	(${MACHINE_ARCH} == "sparc64")
+GL_CFLAGS+=	-D__GLX_ALIGN64
+.endif
+
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake
+USE_TOOLS+=		perl
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--enable-glx
+CONFIGURE_ARGS+=	--enable-dri
+
+CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
+CONFIGURE_ENV+=		GL_CFLAGS=${GL_CFLAGS:M*:Q}
+
+BUILD_DEFS+=		VARBASE
+
+DEPENDS+=		xkbdata-[0-9]*:../../x11/xkbdata
+
+BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
+BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
+
+pre-configure:
+	@${STEP_MSG} 'Fixing GL symlinks.'
+	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
+
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/libfontenc/buildlink3.mk"
+#.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/bigreqsproto/buildlink3.mk"
+.include "../../x11/compositeproto/buildlink3.mk"
+.include "../../x11/damageproto/buildlink3.mk"
+.include "../../x11/evieext/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
+.include "../../x11/fontsproto/buildlink3.mk"
+.include "../../x11/glproto/buildlink3.mk"
+.include "../../x11/inputproto/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXau/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXxf86misc/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/liblbxutil/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
+.include "../../x11/libxkbui/buildlink3.mk"
+.include "../../x11/randrproto/buildlink3.mk"
+.include "../../x11/recordproto/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
+.include "../../x11/resourceproto/buildlink3.mk"
+.include "../../x11/scrnsaverproto/buildlink3.mk"
+.include "../../x11/trapproto/buildlink3.mk"
+.include "../../x11/videoproto/buildlink3.mk"
+.include "../../x11/xcmiscproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xf86bigfontproto/buildlink3.mk"
+.include "../../x11/xf86dgaproto/buildlink3.mk"
+.include "../../x11/xf86driproto/buildlink3.mk"
+.include "../../x11/xf86miscproto/buildlink3.mk"
+.include "../../x11/xf86vidmodeproto/buildlink3.mk"
+.include "../../x11/xineramaproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xtrans/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"

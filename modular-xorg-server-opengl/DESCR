@@ -1,0 +1,13 @@
+The X.org X11 Server from the modularized source tree of
+X.org X11.  This package is my current hack-ish effort to build-in
+Mesa to modular-xorg-server.  IMHO, we should just package our own glcore/glx
+module (we can build it a la src/x11) and link it with the server. Another
+option is to set up our own GL tree inside WRKSRC which could not qualify
+for listing in _The Devil's Dictionary_ under "broken".  mesa-symlinks build
+system is an abhorrent abomination--PURE EVIL.
+
+This package should work on amd64 and i386.  For other hardware, please
+contact me and I will gladly try to help or refer you to someone who can.
+
+
+Many thanks to joerg@ and reed@ for all their work on packaging modular X.org.

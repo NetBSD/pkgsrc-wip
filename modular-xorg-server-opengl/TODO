@@ -1,0 +1,7 @@
+--How do we wish to integrate this into modular-xorg-server?  Options?
+--Don't we have to use CONF_FILES with this, etc? no?  
+--I am a newcomer to pkgsrc development, so please let me know if there is 
+anything I should have done differently.
+--Anything else for buildlink3.mk? (not included here because you might as well
+link to the real one)
+--Add more to TODO. ;)

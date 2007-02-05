@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2007/02/05 03:44:13 bsadewitz Exp $
+
+SHA1 (MesaLib-6.5.2.tar.bz2) = ba860bb6ee57c02202342dfd5927464a068ea18f
+RMD160 (MesaLib-6.5.2.tar.bz2) = 9a92d69110c066ae6734bcaafb78f222ac2df6d3
+Size (MesaLib-6.5.2.tar.bz2) = 3295166 bytes
+SHA1 (xorg-server-1.2.0.tar.bz2) = 85fa0e8fa7d6bea6f1a73c66a57488ea68dffa17
+RMD160 (xorg-server-1.2.0.tar.bz2) = 0bbc5ccb5cbbe7627b4f09f17848b188e8be2a50
+Size (xorg-server-1.2.0.tar.bz2) = 6014596 bytes
+SHA1 (patch-aa) = f72780165c9ecd3e9ab31d03c1b2d777290d09e2
+SHA1 (patch-ab) = 980fc43bfdb6ea204e5645308ff067121896c66a
+SHA1 (patch-ac) = 0f097f5b45480fa4fba341aedd75f1ea18202f2f
+SHA1 (patch-ad) = 3a188cb2797b7df79efe7304326461c34429848c
+SHA1 (patch-ae) = 6c58872798a30b31154dd7b167c84bf20ac417be
