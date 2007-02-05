@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/04 23:47:11 netcap Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/05 02:14:53 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -22,8 +22,12 @@ USE_LIBTOOL=    	yes
 USE_LANGUAGES=		c c++
 LDFLAGS.NetBSD+=        -lstdc++ -lm
 
+# cdaudio plugin complains about missing OSS at runtime
+LDFLAGS+=               ${LIBOSSAUDIO}
+
 CONFIGURE_ARGS+= 	--disable-jack --disable-adplug --disable-lirc \
-		 	--disable-amidiplug --disable-arts --disable-wma
+		 	--disable-amidiplug --disable-arts --disable-wma \
+			--disable-timidity
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +39,6 @@ CONFIGURE_ARGS+=        --with-dev-dsp=${DEVOSSSOUND:Q}                 \
 .endif
 
 .if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+= 	--enable-alsa
 .	include	"../../wip/alsa-lib/buildlink3.mk"
 .endif
 
