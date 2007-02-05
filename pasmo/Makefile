@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/09/14 18:02:33 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/05 00:37:11 ivaniclixx Exp $
 #
 
-DISTNAME=		pasmo-0.5.2
+DISTNAME=		pasmo-0.5.3
 CATEGORIES=		devel
-MASTER_SITES=		http://www.arrakis.es/~ninsesabe/pasmo/
+MASTER_SITES=		http://pasmo.euler.es/bin/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		ivaniclixx@gmail.com
