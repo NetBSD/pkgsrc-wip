@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2506 2007/02/05 22:42:49 thomasklausner Exp $
+# $Id: Makefile,v 1.2507 2007/02/06 06:07:15 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -961,6 +961,7 @@ SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-AppConfig-Std
+SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
@@ -1601,6 +1602,7 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
+SUBDIR+=	wsmake
 SUBDIR+=	wxGTK-contrib-unicode
 SUBDIR+=	wxGTK-unicode
 SUBDIR+=	xace
