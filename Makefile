@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2507 2007/02/06 06:07:15 netcap Exp $
+# $Id: Makefile,v 1.2508 2007/02/06 09:42:55 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -975,8 +975,11 @@ SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Catalyst
+SUBDIR+=	p5-Catalyst-Action-RenderView
+SUBDIR+=	p5-Catalyst-Devel
 SUBDIR+=	p5-Catalyst-Engine-Apache
 SUBDIR+=	p5-Catalyst-Log-Log4perl
+SUBDIR+=	p5-Catalyst-Manual
 SUBDIR+=	p5-Catalyst-Model-CDBI
 SUBDIR+=	p5-Catalyst-Model-DBIC
 SUBDIR+=	p5-Catalyst-Model-DBIC-Plain
@@ -988,6 +991,7 @@ SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-Htpasswd
 SUBDIR+=	p5-Catalyst-Plugin-Authorization-ACL
 SUBDIR+=	p5-Catalyst-Plugin-Authorization-Roles
 SUBDIR+=	p5-Catalyst-Plugin-Cache-FileCache
+SUBDIR+=	p5-Catalyst-Plugin-ConfigLoader
 SUBDIR+=	p5-Catalyst-Plugin-DefaultEnd
 SUBDIR+=	p5-Catalyst-Plugin-Email
 SUBDIR+=	p5-Catalyst-Plugin-FillInForm
@@ -1000,10 +1004,14 @@ SUBDIR+=	p5-Catalyst-Plugin-Session
 SUBDIR+=	p5-Catalyst-Plugin-Session-FastMmap
 SUBDIR+=	p5-Catalyst-Plugin-Session-State-Cookie
 SUBDIR+=	p5-Catalyst-Plugin-Session-State-URI
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-CDBI
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBI
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBIC
 SUBDIR+=	p5-Catalyst-Plugin-Session-Store-File
 SUBDIR+=	p5-Catalyst-Plugin-Singleton
 SUBDIR+=	p5-Catalyst-Plugin-StackTrace
 SUBDIR+=	p5-Catalyst-Plugin-Static
+SUBDIR+=	p5-Catalyst-Plugin-Static-Simple
 SUBDIR+=	p5-Catalyst-Plugin-SubRequest
 SUBDIR+=	p5-Catalyst-Plugin-Unicode-Encoding
 SUBDIR+=	p5-Catalyst-Plugin-XMLRPC
@@ -1023,6 +1031,7 @@ SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-ISA
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
+SUBDIR+=	p5-Config-Any
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-DBIx-Class
