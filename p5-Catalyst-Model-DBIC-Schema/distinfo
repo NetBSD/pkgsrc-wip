@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/07 20:27:08 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2007/02/06 09:21:15 netcap Exp $
 
-SHA1 (Catalyst-Model-DBIC-Schema-0.11.tar.gz) = aff74c3d87d894832c6fe9c3c3c2be3b8074e32e
-RMD160 (Catalyst-Model-DBIC-Schema-0.11.tar.gz) = 11fb9992d33261bfff96de54e139b90e9af994d6
-Size (Catalyst-Model-DBIC-Schema-0.11.tar.gz) = 8170 bytes
+SHA1 (Catalyst-Model-DBIC-Schema-0.18.tar.gz) = ca86c5d07a68288d43fd9169d27834a30d136454
+RMD160 (Catalyst-Model-DBIC-Schema-0.18.tar.gz) = 823d12fc6a1bf83f96786ea70250f392c5ba448c
+Size (Catalyst-Model-DBIC-Schema-0.18.tar.gz) = 9384 bytes
