@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/06 09:23:55 netcap Exp $
+
+SHA1 (Catalyst-Plugin-ConfigLoader-0.13.tar.gz) = 28ea7e866608a848d659df9385aeaa0b16488352
+RMD160 (Catalyst-Plugin-ConfigLoader-0.13.tar.gz) = dd1e06b6b10cc51298bbef667e4af71aa095516a
+Size (Catalyst-Plugin-ConfigLoader-0.13.tar.gz) = 6245 bytes
