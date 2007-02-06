@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/07 20:01:15 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/06 09:30:22 netcap Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-0.05
+DISTNAME=	Catalyst-Plugin-Session-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/N/NU/NUFFIN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-module/Catalyst/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session/
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 DEPENDS+=	p5-Test-Simple>=0:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
-PERL5_MODULE_TYPE=	Module::Build
+# PERL5_MODULE_TYPE=	Module::Build
 
 PERL5_PACKLIST=	auto/Catalyst/Plugin/Session/.packlist
 
