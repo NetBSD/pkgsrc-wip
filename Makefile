@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2508 2007/02/06 09:42:55 netcap Exp $
+# $Id: Makefile,v 1.2509 2007/02/06 21:23:39 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -417,6 +417,7 @@ SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
 SUBDIR+=	gtklp
 SUBDIR+=	gtypist
+SUBDIR+=	guichan
 SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer
 SUBDIR+=	gune
@@ -1542,6 +1543,7 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
+SUBDIR+=	tmw
 SUBDIR+=	topless
 SUBDIR+=	toppler
 SUBDIR+=	tops-bin
