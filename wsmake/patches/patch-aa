@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/02/06 06:05:21 netcap Exp $
+
+--- libwsmake/wsUtil.cpp.orig	2001-09-01 22:09:13.000000000 +0200
++++ libwsmake/wsUtil.cpp
+@@ -709,12 +709,12 @@ void std::__wsmake_set_quiet(int quiet)
+   }
+ }
+ 
+-void std::__wsmake_print_it(FILE *out, const char *output, const va_list *ap)
++void std::__wsmake_print_it(FILE *out, const char *output, va_list *ap)
+ {
+   if(__wsmake_quiet) return;
+ 
+   vfprintf(out,output,*ap);
+-  va_end((void*&)*ap);
++  va_end(*ap);
+ }
+ 
+ #ifdef DEBUG

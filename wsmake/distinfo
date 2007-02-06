@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/02/06 06:05:21 netcap Exp $
+
+SHA1 (wsmake-0.6.4.tar.bz2) = 7bd163c0f76f1ad768458964cebdf495a3fa18ce
+RMD160 (wsmake-0.6.4.tar.bz2) = cfb48e73191b63cfb57fe318de8111d4feb11666
+Size (wsmake-0.6.4.tar.bz2) = 351688 bytes
+SHA1 (patch-aa) = e8df2168023c8686e17b03a39391e8b91d01de86
+SHA1 (patch-ab) = 2e4335d5a7ae13160caea1d30d35fd2b9c81b9a2
