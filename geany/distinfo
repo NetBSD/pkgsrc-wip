@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/30 17:49:46 unex_linija Exp $
+$NetBSD: distinfo,v 1.2 2007/02/07 12:17:10 unex_linija Exp $
 
-SHA1 (geany-0.9.tar.gz) = 7dbd2cf27d30938c53ff1c1bd15e2e9c75e3c74b
-RMD160 (geany-0.9.tar.gz) = 6228245ff76d2223073baa7757dd9b6031a787c4
-Size (geany-0.9.tar.gz) = 1720433 bytes
+SHA1 (geany-0.10.tar.gz) = a47ac6ef444755a3d5bccd8270adf36507048fe1
+RMD160 (geany-0.10.tar.gz) = 6a69798162c0fd1a5ed49ac0f5e80ab2c534f81c
+Size (geany-0.10.tar.gz) = 2027571 bytes
