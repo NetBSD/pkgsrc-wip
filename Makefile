@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2510 2007/02/07 20:09:16 unex_linija Exp $
+# $Id: Makefile,v 1.2511 2007/02/07 21:58:28 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -306,6 +306,7 @@ SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
+SUBDIR+=	fvwm1-tch
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
