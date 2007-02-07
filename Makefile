@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2509 2007/02/06 21:23:39 netcap Exp $
+# $Id: Makefile,v 1.2510 2007/02/07 20:09:16 unex_linija Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -332,7 +332,6 @@ SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
-SUBDIR+=	geany
 SUBDIR+=	geos
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
