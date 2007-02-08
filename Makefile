@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2511 2007/02/07 21:58:28 netcap Exp $
+# $Id: Makefile,v 1.2512 2007/02/08 05:25:06 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -52,6 +52,7 @@ SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
 SUBDIR+=	and
+SUBDIR+=	aoi
 SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
