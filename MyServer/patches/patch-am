@@ -1,13 +1,16 @@
-$NetBSD: patch-am,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+$NetBSD: patch-am,v 1.2 2007/02/08 14:07:58 bartoszkuzma Exp $
 
---- binaries/web/downloads/Makefile.in.orig	2006-03-13 19:04:11.000000000 +0100
-+++ binaries/web/downloads/Makefile.in
-@@ -178,7 +178,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
--myserverdatadir = $(root_prefix)/var/web/downloads
-+myserverdatadir = $(prefix)/share/myserver/web/downloads
- dist_myserverdata_DATA = hello.php script.sh file1.txt file2.txt
- all: all-am
+--- binaries/Makefile.am.orig	2007-01-20 11:51:30.000000000 +0100
++++ binaries/Makefile.am
+@@ -3,9 +3,10 @@ SUBDIRS = languages logs system web cert
+ EXTRA_DIST = myserver-daemon myserver.ico license.txt MIMEtypes.xml.unix.default \
+ myserver.xml.unix.default readme.txt virtualhosts.xml.unix.default
  
+-configdir = $(root_prefix)/etc/myserver
++configdir = $(root_prefix)/share/examples/myserver
+ 
+ install: install-recursive
++	$(INSTALL) -d $(configdir)
+ 	$(install_sh_DATA) MIMEtypes.xml.unix.default $(configdir)/MIMEtypes.xml
+ 	$(install_sh_DATA) myserver.xml.unix.default $(configdir)/myserver.xml
+ 	$(install_sh_DATA) virtualhosts.xml.unix.default $(configdir)/virtualhosts.xml

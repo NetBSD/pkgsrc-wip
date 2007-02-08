@@ -1,30 +1,12 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+$NetBSD: patch-af,v 1.2 2007/02/08 14:07:58 bartoszkuzma Exp $
 
---- binaries/Makefile.in.orig	2006-03-13 19:04:09.000000000 +0100
-+++ binaries/Makefile.in
-@@ -178,7 +178,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- SUBDIRS = languages logs system web certificates external
- EXTRA_DIST = myserver.ico license.txt MIMEtypes.xml.unix.default myserver.xml.unix.default readme.txt virtualhosts.xml.unix.default
--configdir = $(root_prefix)/etc/myserver
-+configdir = $(prefix)/etc/myserver
- all: all-recursive
+--- binaries/web/Makefile.am.orig	2007-01-20 11:51:30.000000000 +0100
++++ binaries/web/Makefile.am
+@@ -5,6 +5,6 @@ endif
  
- .SUFFIXES:
-@@ -488,9 +488,13 @@ uninstall-info: uninstall-info-recursive
+ SUBDIRS = cgi-bin $(CGI_SRC) downloads
  
+-myserverdatadir = $(root_prefix)/var/web
++myserverdatadir = $(root_prefix)/share/myserver/web
  
- install: install-recursive
--	$(install_sh_DATA) MIMEtypes.xml.unix.default $(configdir)/MIMEtypes.xml
--	$(install_sh_DATA) myserver.xml.unix.default $(configdir)/myserver.xml
--	$(install_sh_DATA) virtualhosts.xml.unix.default $(configdir)/virtualhosts.xml
-+	$(INSTALL) -d '$(prefix)/share/examples/myserver'
-+	$(install_sh_DATA) MIMEtypes.xml.unix.default \
-+		$(prefix)/share/examples/myserver/MIMEtypes.xml
-+	$(install_sh_DATA) myserver.xml.unix.default \
-+		$(prefix)/share/examples/myserver/myserver.xml
-+	$(install_sh_DATA) virtualhosts.xml.unix.default \
-+		$(prefix)/share/examples/myserver/virtualhosts.xml
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ dist_myserverdata_DATA = logo.png goto.png default.html link.html

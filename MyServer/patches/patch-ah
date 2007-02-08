@@ -1,13 +1,11 @@
-$NetBSD: patch-ah,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+$NetBSD: patch-ah,v 1.2 2007/02/08 14:07:58 bartoszkuzma Exp $
 
---- binaries/web/cgi-bin/Makefile.in.orig	2006-03-13 19:04:10.000000000 +0100
-+++ binaries/web/cgi-bin/Makefile.in
-@@ -178,7 +178,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
--myserverdatadir = $(root_prefix)/var/web/cgi-bin
-+myserverdatadir = $(prefix)/share/myserver/web/cgi-bin
- dist_myserverdata_DATA = counter.html default.html counter.readme
- all: all-am
+--- binaries/web/downloads/Makefile.am.orig	2007-01-20 11:51:30.000000000 +0100
++++ binaries/web/downloads/Makefile.am
+@@ -1,5 +1,5 @@
+ 
+-myserverdatadir = $(root_prefix)/var/web/downloads
++myserverdatadir = $(root_prefix)/share/myserver/web/downloads
+ 
+ dist_myserverdata_DATA = hello.php script.sh file1.txt file2.txt
  

@@ -1,0 +1,97 @@
+$NetBSD: patch-an,v 1.1 2007/02/08 14:07:58 bartoszkuzma Exp $
+
+--- configure.in.orig	2007-01-20 11:51:36.000000000 +0100
++++ configure.in
+@@ -27,6 +27,9 @@ AC_SUBST(LDFLAGS)
+ 
+ AC_ARG_WITH([root-prefix], [  --with-root-prefix=PREFIX override prefix variable for files to be placed in the root], root_prefix=$withval, root_prefix="")
+ 
++AC_ARG_ENABLE([control], [  --with-control build myserver-configure], enable_control="yes", enable_control="")
++AC_ARG_ENABLE([ipv6], [  --with-ipv6 build with IPv6 support], enable_ipv6="yes", enable_ipv6="")
++
+ root_bindir='${root_prefix}/bin'
+ root_sbindir='${root_prefix}/sbin'
+ root_sysconfdir='${root_prefix}/etc'
+@@ -190,41 +193,53 @@ else
+ fi
+ 
+ 
+-dnl Looking for FLTK
+-AM_PATH_FLTK(1.1.0, have_fltk=yes)
+-if test x$have_fltk != xyes; then
+-    AC_MSG_WARN([
++if test x$enable_control = xyes; then
++    dnl Looking for FLTK
++    AM_PATH_FLTK(1.1.0, have_fltk=yes)
++    if test x$have_fltk != xyes; then
++        AC_MSG_ERROR([
+ *** Cannot find FLTK (www.fltk.org)
+ *** control program will not be built
+ ])
+-    MAKE_CONTROL=no
+-else
+-    MAKE_CONTROL=yes
++        MAKE_CONTROL=no
++    else
++        MAKE_CONTROL=yes
++    fi
+ fi
+ 
+ dnl Check for IPv6
+-AC_MSG_CHECKING([for IPv6])
+-AC_TRY_RUN([ /* AF_INET6 available check */
+-#include <sys/types.h>
+-#include <sys/socket.h>
+-main()
+-{
+- if (socket(AF_INET6, SOCK_STREAM, 0) < 0)
+-   exit(1);
+- else
+-   exit(0);
+-}
+-],
+-[ AC_MSG_RESULT(yes)
+-  AC_DEFINE(HAVE_IPV6, 1, [Enable IPv6 support])
+-	 ],
+-[ AC_MSG_RESULT(no)
+-  AC_DEFINE(HAVE_IPV6, 0, [Enable IPv6 support])
+-],
+-[ AC_MSG_RESULT(no)
+-  AC_DEFINE(HAVE_IPV6, 0, [Enable IPv6 support])
+-]
+-)
++if test x$enable_ipv6 = xyes; then
++    AC_MSG_CHECKING([for IPv6])
++    AC_TRY_RUN([ /* AF_INET6 available check */
++    #include <sys/types.h>
++    #include <sys/socket.h>
++    main()
++    {
++     if (socket(AF_INET6, SOCK_STREAM, 0) < 0)
++       exit(1);
++     else
++       exit(0);
++    }
++    ],
++    [ AC_MSG_RESULT(yes)
++      AC_DEFINE(HAVE_IPV6, 1, [Enable IPv6 support])
++    ],
++    [ AC_MSG_RESULT(no)
++      AC_DEFINE(HAVE_IPV6, 0, [Disable IPv6 support])
++      AC_MSG_ERROR([
++*** Cannot enable IPv6 support
++])
++    ],
++    [ AC_MSG_RESULT(no)
++      AC_DEFINE(HAVE_IPV6, 0, [Disable IPv6 support])
++      AC_MSG_ERROR([
++*** Cannot enable IPv6 support
++])
++    ]
++    )
++else
++    AC_DEFINE(HAVE_IPV6, 0, [Disable IPv6 support])
++fi
+ 
+ AM_CONDITIONAL(BUILD_MSCGI, test "$MAKE_MSCGI" = "yes")
+ AM_CONDITIONAL(BUILD_COUNTER, test "$MAKE_COUNTER" = "yes")

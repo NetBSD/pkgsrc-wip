@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/18 08:11:33 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/02/08 14:07:58 bartoszkuzma Exp $
 bin/myserver
 lib/myserver/cgi-lib.so
 share/doc/myserver/how_create_certificates.txt
@@ -87,6 +87,7 @@ share/myserver/web/cgi-bin/counter.readme
 share/myserver/web/cgi-bin/default.html
 share/myserver/web/cgi-bin/math_sum.mscgi
 share/myserver/web/cgi-bin/post.mscgi
+share/myserver/web/default.html
 share/myserver/web/documentation/images/browsefolder.png
 share/myserver/web/documentation/images/confMIME.png
 share/myserver/web/documentation/images/consolescreen.png
@@ -103,7 +104,6 @@ share/myserver/web/documentation/texts/background.htm
 share/myserver/web/documentation/texts/basicserver.htm
 share/myserver/web/documentation/texts/browsefolder.htm
 share/myserver/web/documentation/texts/cgi.htm
-share/myserver/web/documentation/texts/cvsversion.htm
 share/myserver/web/documentation/texts/errorfiles.htm
 share/myserver/web/documentation/texts/fastcgi.htm
 share/myserver/web/documentation/texts/helpus.htm
@@ -122,6 +122,7 @@ share/myserver/web/documentation/texts/remotecontrol.htm
 share/myserver/web/documentation/texts/runwindows9x.htm
 share/myserver/web/documentation/texts/security.htm
 share/myserver/web/documentation/texts/services.htm
+share/myserver/web/documentation/texts/svnversion.htm
 share/myserver/web/documentation/texts/tableofcontents.htm
 share/myserver/web/documentation/texts/viewingsite.htm
 share/myserver/web/documentation/texts/virtualhosts.htm
@@ -131,7 +132,6 @@ share/myserver/web/downloads/file1.txt
 share/myserver/web/downloads/file2.txt
 share/myserver/web/downloads/hello.php
 share/myserver/web/downloads/script.sh
-share/myserver/web/default.html
 share/myserver/web/goto.png
 share/myserver/web/link.html
 share/myserver/web/logo.png
@@ -139,6 +139,8 @@ share/myserver/web/logo.png
 @dirrm lib/myserver/external/protocols
 @dirrm lib/myserver/external
 @dirrm lib/myserver
+@dirrm share/doc/myserver
+@dirrm share/examples/myserver
 @dirrm share/myserver/languages/configure
 @dirrm share/myserver/languages
 @dirrm share/myserver/system/errors

@@ -1,13 +1,10 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+$NetBSD: patch-ag,v 1.2 2007/02/08 14:07:58 bartoszkuzma Exp $
 
---- binaries/web/Makefile.in.orig	2006-03-13 19:04:10.000000000 +0100
-+++ binaries/web/Makefile.in
-@@ -189,7 +189,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- @BUILD_MSCGI_TRUE@CGI_SRC = cgi-src
- SUBDIRS = cgi-bin $(CGI_SRC) downloads
--myserverdatadir = $(root_prefix)/var/web
-+myserverdatadir = $(prefix)/share/myserver/web
- dist_myserverdata_DATA = logo.png goto.png default.html link.html
- all: all-recursive
+--- binaries/web/cgi-bin/Makefile.am.orig	2007-01-20 11:51:30.000000000 +0100
++++ binaries/web/cgi-bin/Makefile.am
+@@ -1,4 +1,4 @@
+-myserverdatadir = $(root_prefix)/var/web/cgi-bin
++myserverdatadir = $(root_prefix)/share/myserver/web/cgi-bin
+ 
+ dist_myserverdata_DATA = counter.html default.html counter.readme
  

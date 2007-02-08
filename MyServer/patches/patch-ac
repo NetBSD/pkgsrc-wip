@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/09/13 13:55:07 bartoszkuzma Exp $
+$NetBSD: patch-ac,v 1.2 2007/02/08 14:07:58 bartoszkuzma Exp $
 
---- binaries/web/cgi-src/math_sum/Makefile.in.orig	2006-03-13 19:04:11.000000000 +0100
-+++ binaries/web/cgi-src/math_sum/Makefile.in
-@@ -494,7 +494,7 @@ math_sum.mscgi : $(libmath_sum_a_OBJECTS
+--- binaries/web/cgi-src/math_sum/Makefile.am.orig	2007-01-20 11:51:30.000000000 +0100
++++ binaries/web/cgi-src/math_sum/Makefile.am
+@@ -15,7 +15,7 @@ math_sum.mscgi : $(libmath_sum_a_OBJECTS
  	$(CXX) $(libmath_sum_a_OBJECTS) $(libmath_sum_a_LIBADD) -o math_sum.mscgi -shared
  
  install : math_sum.mscgi
 -	$(INSTALL) -D 'math_sum.mscgi' '$(root_prefix)/var/web/cgi-bin/math_sum.mscgi'
-+	$(INSTALL) 'math_sum.mscgi' '$(prefix)/share/myserver/web/cgi-bin/math_sum.mscgi'
++	$(INSTALL) 'math_sum.mscgi' '$(root_prefix)/share/myserver/web/cgi-bin/math_sum.mscgi'
  
  clean :
  	rm -f math_sum.mscgi
