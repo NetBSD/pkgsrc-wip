@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2513 2007/02/09 05:51:48 netcap Exp $
+# $Id: Makefile,v 1.2514 2007/02/09 09:51:26 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1382,6 +1382,7 @@ SUBDIR+=	rep-gtk2
 SUBDIR+=	rgb
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
+SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rlab
 SUBDIR+=	rlpr
