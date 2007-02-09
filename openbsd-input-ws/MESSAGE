@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/02/09 19:06:33 bsadewitz Exp $
+
+To use this driver, your xorg.conf file should have an entry like this:
+
+	Identifier  	"UeberMaus"
+	Driver      	"ws"
+	Option		"Device"	"/dev/wsmouse"
+
+This should work with many wscons pointing devices, especially the zaurus.
+Please see the manual page for more information.
+===========================================================================
