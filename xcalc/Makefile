@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 08:16:40 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/09 12:34:21 bsadewitz Exp $
 #
 
 DISTNAME=	xcalc-1.0.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS=	pkg-config
 
-.include "../../x11/libXaw/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
