@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 16:46:14 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/09 12:29:30 bsadewitz Exp $
 #
 
 DISTNAME=	xlsfonts-1.0.1
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/invdividual/app/
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	http://xorg.freedesktop.org/releases/invdividual/app/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Lists available fonts
 
 PKG_DESTDIR_SUPPORT=	user-destdir
