@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2512 2007/02/08 05:25:06 netcap Exp $
+# $Id: Makefile,v 1.2513 2007/02/09 05:51:48 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -216,6 +216,7 @@ SUBDIR+=	drumpiler
 SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
+SUBDIR+=	dvd2xvid
 SUBDIR+=	dvdisaster
 SUBDIR+=	dwepcrack
 SUBDIR+=	dwm
