@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2007/02/09 12:16:42 bsadewitz Exp $
+
+--- jackd/engine.c.orig	2006-12-16 07:51:14.000000000 -0500
++++ jackd/engine.c
+@@ -1442,7 +1442,7 @@ jack_server_thread (void *arg)
+ 				    (engine, pfd[i].fd)) {
+ 					jack_error ("could not handle external"
+ 						    " client request");
+-#ifdef JACK_USE_MACH_THREADS
++#if 1
+                                     /* poll is implemented using
+ 				       select (see the macosx/fakepoll
+ 				       code). When the socket is closed

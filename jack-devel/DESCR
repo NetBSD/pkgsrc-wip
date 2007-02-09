@@ -1,0 +1,7 @@
+       JACK is  a  low-latency  audio  server.   Originally  written  for  the
+       GNU/Linux  operating system, it also supports Mac OS X and various Unix
+       platforms.  JACK can connect a number of different client  applications
+       to  an audio device and also to each other.  Most clients are external,
+       running in their own processes as normal applications.  JACK also  sup-
+       ports  internal  clients,  which  run  within the jackd process using a
+       loadable "plugin" interface.

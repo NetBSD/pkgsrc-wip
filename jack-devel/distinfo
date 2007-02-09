@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2007/02/09 12:16:42 bsadewitz Exp $
+
+SHA1 (jack-0.102.28.svn20061216.tar.gz) = 6b795e598b85620a16f88e7f452e84c70e83e9ef
+RMD160 (jack-0.102.28.svn20061216.tar.gz) = 4ddb90a1b518a0d6d9cf92befd7ed5bca7ae0cc8
+Size (jack-0.102.28.svn20061216.tar.gz) = 770203 bytes
+SHA1 (patch-aa) = 6f9e2108b1bee285ee7921033f11618c0702972e
+SHA1 (patch-ab) = 723b44d1b8c1098a4c9ccf8ad8f2c0853551ceb4
+SHA1 (patch-ac) = edb69f78d830e07130897636eba302893fb173d2
+SHA1 (patch-ad) = 0e31b4ac26cd51aefc8bb3b1c144e3e69f847e3d
+SHA1 (patch-ae) = 2c3dee13983ce3ba01cc68d5dada1514ec3c008c
+SHA1 (patch-af) = fb4ca3996e50c97b81854cced447a62cf8990b80
+SHA1 (patch-ba) = 59cd58510d14cfc127ef76e5b0a4ae15eca15f17

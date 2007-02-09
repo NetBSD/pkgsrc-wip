@@ -1,0 +1,15 @@
+$NetBSD: patch-ba,v 1.1 2007/02/09 12:16:42 bsadewitz Exp $
+
+--- example-clients/transport.c.orig	2006-12-16 07:50:12.000000000 -0500
++++ example-clients/transport.c
+@@ -29,6 +29,10 @@
+ #include <jack/jack.h>
+ #include <jack/transport.h>
+ 
++#ifndef whitespace
++#define whitespace(c) (((c) == ' ') || ((c) == '\t'))
++#endif
++
+ char *package;				/* program name */
+ int done = 0;
+ jack_client_t *client;
