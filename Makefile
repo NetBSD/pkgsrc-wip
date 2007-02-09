@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2514 2007/02/09 09:51:26 netcap Exp $
+# $Id: Makefile,v 1.2515 2007/02/09 19:19:37 jakllsch Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -430,6 +430,7 @@ SUBDIR+=	haddock
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
+SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
 SUBDIR+=	heirloom-awk
 SUBDIR+=	heirloom-banner
