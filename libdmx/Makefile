@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2007/01/23 08:44:10 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/12 09:09:11 bsadewitz Exp $
 #
 
 DISTNAME=	libdmx-1.0.2
 CATEGORIES=	wip
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/proto/
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
