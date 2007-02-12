@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/05 00:07:39 pseudo_anim Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2007/02/12 17:54:18 pseudo_anim Exp $
 bin/tmw
 share/applications/tmw.desktop
 share/pixmaps/tmw.png
@@ -175,5 +175,3 @@ share/tmw/data/icons/tmw-icon.xpm
 @dirrm share/tmw/data/graphics
 @dirrm share/tmw/data
 @dirrm share/tmw
-@dirrm share/pixmaps
-@dirrm share/applications
