@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/02/05 03:44:13 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/13 22:02:45 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -191,10 +191,10 @@ lib/X11/Cards
 lib/X11/Options
 lib/X11/app-defaults/XOrgCfg
 lib/pkgconfig/xorg-server.pc
+lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
-lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
@@ -245,11 +245,15 @@ man/man4/fbdevhw.4
 man/man5/xorg.conf.5
 share/X11/xkb/compiled/README.compiled
 share/aclocal/xorg-server.m4
+@dirrm share/X11/xkb/compiled
 @dirrm lib/xserver
-@dirrm lib/xorg/modules/${LOWER_OPSYS}
 @dirrm lib/xorg/modules/multimedia
 @dirrm lib/xorg/modules/linux
 @dirrm lib/xorg/modules/fonts
 @dirrm lib/xorg/modules/extensions
 @dirrm lib/xorg/modules
-@dirrm lib/xorg
+@comment @dirrm lib/X11/app-defaults
+@comment @dirrm lib/X11
+@dirrm include/xorg
+@comment @dirrm include/X11/pixmaps
+@comment @dirrm include/X11/bitmaps

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/02/05 03:44:13 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/13 22:02:45 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.2.0
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,12 +21,14 @@ DISTFILES+=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
 SITES.MesaLib-${MESA_VERSION}= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 #MESA_PATCHES=	af ag ah
 
-GL_CFLAGS=	# empty
-GL_CFLAGS+=	-DGLX_USE_MESA -DGLX_DIRECT_RENDERING -DGLX_USE_DLOPEN
-GL_CFLAGS+=	-I${MESA_SRC:Q}/include
+GLX_DEFINES=	# empty
+GLX_LIBS=	#empty
+
+GLX_DEFINES+=	-DPTHREADS ${PTHREAD_CFLAGS}
+GLX_LIBS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 .if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "alpha") || \
 	(${MACHINE_ARCH} == "sparc64")
-GL_CFLAGS+=	-D__GLX_ALIGN64
+GLX_DEFINES+=	-D__GLX_ALIGN64
 .endif
 
 USE_LIBTOOL=		YES
@@ -34,12 +37,16 @@ PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-kbd_mode
+CONFIGURE_ARGS+=	--enable-multibuffer
+CONFIGURE_ARGS+=	--enable-fontcache
 
-CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
-CONFIGURE_ENV+=		GL_CFLAGS=${GL_CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC:Q}
+CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
+CONFIGURE_ENV+=		GLX_LIBS=${GLX_LIBS:M*:Q}
 
 BUILD_DEFS+=		VARBASE
 
@@ -61,6 +68,7 @@ pre-configure:
 .include "../../x11/damageproto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
+.include "../../x11/fontcacheproto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
@@ -95,4 +103,5 @@ pre-configure:
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
