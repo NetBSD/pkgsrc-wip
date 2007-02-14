@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/14 16:58:14 netcap Exp $
+# $NetBSD: Makefile,v 1.9 2007/02/14 17:00:13 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -25,7 +25,7 @@ LDFLAGS.NetBSD+=        -lstdc++ -lm
 # cdaudio plugin complains about missing OSS at runtime
 LDFLAGS+=               ${LIBOSSAUDIO}
 
-CONFIGURE_ARGS+= 	--disable-adplug --disable-lirc --disable-amidiplug
+CONFIGURE_ARGS+= 	--disable-adplug --disable-amidiplug
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=  arts esound gnome inet6 jack midi pulse
