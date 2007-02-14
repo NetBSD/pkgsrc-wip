@@ -1,0 +1,3 @@
+Either update included xpdf or make dependency on popper.
+Test on non-GNU/Linuces.
+Check dependencies.
