@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/14 12:55:14 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2007/02/14 16:58:14 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -84,6 +84,11 @@ CONFIGURE_ARGS+=        --with-dev-dsp=${DEVOSSSOUND:Q}                 \
 
 .if ${OPSYS} == "Linux"
 .	include	"../../wip/alsa-lib/buildlink3.mk"
+PKG_SUPPORTED_OPTIONS+= lirc
+.	if !empty(PKG_OPTIONS:Mlirc)
+CONFIGURE_ARGS+=	--enable-lirc
+	.	include "../../wip/lirc/buildlink3.mk"
+.	endif
 .endif
 
 CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
