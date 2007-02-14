@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/01 10:17:36 lkundrak Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/14 12:58:22 netcap Exp $
 #
 
 DISTNAME=		audacious-1.2.2
@@ -19,10 +19,20 @@ CONFIGURE_ARGS+=        --enable-chardet --enable-nls
 
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious
+PKG_SUPPORTED_OPTIONS=  gnome inet6
 
-.if ${OPSYS} == "Linux"
-.  include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=        --enable-gconf
+CONFIGURE_ARGS+=        --enable-gnome-vfs
+.       include "../../devel/GConf2/buildlink3.mk"
+.       include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=        --enable-ipv6
 .endif
 
 .include "../../devel/pango/buildlink3.mk"
