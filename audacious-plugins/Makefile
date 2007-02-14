@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/07 19:51:19 netcap Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/14 12:55:14 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -25,14 +25,53 @@ LDFLAGS.NetBSD+=        -lstdc++ -lm
 # cdaudio plugin complains about missing OSS at runtime
 LDFLAGS+=               ${LIBOSSAUDIO}
 
-CONFIGURE_ARGS+= 	--disable-jack --disable-adplug --disable-lirc \
-		 	--disable-amidiplug --disable-arts --disable-timidity
-			
+CONFIGURE_ARGS+= 	--disable-adplug --disable-lirc --disable-amidiplug
+
 PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS=  inet6 arts esound
+PKG_SUPPORTED_OPTIONS=  arts esound gnome inet6 jack midi pulse
 
 .include "../../mk/bsd.options.mk"
-.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKG_OPTIONS:Marts)
+.	include "../../audio/arts/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-arts
+.endif
+
+.if !empty(PKG_OPTIONS:Mesound)
+.	include "../../audio/esound/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-esd
+.endif
+
+.if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=	--enable-gconf
+CONFIGURE_ARGS+=	--enable-gnome-vfs
+.	include "../../devel/GConf2/buildlink3.mk"
+.	include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mjack)
+.	include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-jack
+.endif
+
+.if !empty(PKG_OPTIONS:Mmidi)
+BUILD_DEPENDS+=		timidity>=0:../../audio/timidity
+.else
+CONFIGURE_ARGS+=	--disable-timidity
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulse)
+.	include "../../wip/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-pulse
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,7 +101,6 @@ BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
 #.include "../../audio/libsidplay2/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/esound/buildlink3.mk"
 #.include "../../wip/pulseaudio/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
