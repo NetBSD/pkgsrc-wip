@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2516 2007/02/14 17:53:00 netcap Exp $
+# $Id: Makefile,v 1.2517 2007/02/14 18:41:41 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -668,6 +668,7 @@ SUBDIR+=	libXi
 SUBDIR+=	libXres
 SUBDIR+=	libXt
 SUBDIR+=	libXv
+SUBDIR+=	libadplug
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
