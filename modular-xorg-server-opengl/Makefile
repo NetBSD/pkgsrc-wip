@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/02/15 06:02:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/15 20:23:30 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.2.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,10 +22,12 @@ SITES.MesaLib-${MESA_VERSION}= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 #MESA_PATCHES=	af ag ah
 
 GLX_DEFINES?=	# empty
-GLX_LIBS=	# empty
+GLX_LIBS?=	# empty
 
-GLX_OPTS?=	-O3 -ffast-math -frename-registers -mfpmath-sse \
-		-maccumulate-outgoing-args
+GLX_OPTS?=	-O3 -ffast-math -funroll-loops
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
+GLX_OPTS+=	-maccumulate-outgoing-args -mfpmath=sse
+.endif
 
 GLX_DEFINES+=	-DPTHREADS ${PTHREAD_CFLAGS}
 GLX_DEFINES+=	-DUSE_XSHM ${GLX_OPTS}
@@ -48,6 +50,7 @@ USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XORG_XKBOUTPUTDIR:Q}
 CONFIGURE_ARGS+=	--with-xkb-path=${XORG_XKBDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-kbd_mode
@@ -58,12 +61,12 @@ CONFIGURE_ARGS+=	--disable-xprint
 CONFIGURE_ARGS+=	--disable-kdrive
 CONFIGURE_ARGS+=	--disable-xephyr
 CONFIGURE_ARGS+=	--disable-xsdl
-CONFIGURE_ARGS+=	--disable-aiglx
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC:Q}
 CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 CONFIGURE_ENV+=		GLX_LIBS=${GLX_LIBS:M*:Q}
+CONFIGURE_ENV+=		GL_CFLAGS=${GLX_OPTS:M*:Q}
 
 BUILD_DEFS+=		VARBASE
 
