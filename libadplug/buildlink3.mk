@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/02/14 18:40:19 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/02/15 11:27:38 netcap Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ADPLUG_BUILDLINK3_MK:=	${ADPLUG_BUILDLINK3_MK}+
@@ -16,5 +16,7 @@ BUILDLINK_API_DEPENDS.adplug+=	adplug>=2.0.1
 BUILDLINK_PKGSRCDIR.adplug?=	../../wip/libadplug
 BUILDLINK_DEPMETHOD.adplug?=	build
 .endif	# ADPLUG_BUILDLINK3_MK
+
+.include "../../wip/libbinio/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
