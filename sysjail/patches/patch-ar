@@ -1,0 +1,20 @@
+$NetBSD: patch-ar,v 1.1 2007/02/15 19:25:05 lkundrak Exp $
+
+Versioned socket(2) change breaks stuff depending on SYS_socket.
+See http://mail-index.netbsd.org/source-changes/2006/06/26/0038.html
+
+--- src/jail/sysjail.c.orig	2007-02-15 19:05:08.000000000 +0100
++++ src/jail/sysjail.c
+@@ -369,7 +369,12 @@ do_init_syst(const struct sysjail *jail,
+ #endif
+ 	IFP_MAP_ADD(SYS_mount, &inter_mount);
+ 	IFP_MAP_ADD(SYS_unmount, &inter_mount);
++#ifdef SYS_compat_30_socket
++	IFP_MAP_ADD(SYS_compat_30_socket, &inter_socket);
++#endif
++#ifdef SYS_socket
+ 	IFP_MAP_ADD(SYS_socket, &inter_socket);
++#endif
+ 	IFP_MAP_ADD(SYS_bind, &inter_socket);
+ 	IFP_MAP_ADD(SYS___sysctl, &inter_sysctl);
+ 	IFP_MAP_ADD(SYS_ioctl, &inter_ioctl);

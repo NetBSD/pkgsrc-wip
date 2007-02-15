@@ -1,0 +1,18 @@
+$NetBSD: patch-aq,v 1.1 2007/02/15 19:25:05 lkundrak Exp $
+
+Versioned socket(2) change breaks stuff depending on SYS_socket.
+See http://mail-index.netbsd.org/source-changes/2006/06/26/0038.html
+
+--- src/jail/intercept-socket.c.orig	2007-02-15 19:39:14.000000000 +0100
++++ src/jail/intercept-socket.c
+@@ -73,6 +73,10 @@ SJ_IFP_DEFINE(inter_socket)
+ 	code = msg->msg_data.msg_ask.code;
+ 	*err = EPROTONOSUPPORT;
+ 
++#ifndef SYS_socket
++# define SYS_socket SYS_compat_30_socket
++#endif
++
+ 	if (code == SYS_socket) {
+ 		int domain, proto, type;
+ 

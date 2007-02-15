@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/15 19:25:04 lkundrak Exp $
+bin/mksysjail-base
+bin/mksysjail-dev
 include/sysjail/sysjail.h
 lib/libsysjail.a
 man/man3/sysjail.3
+man/man8/mksysjail-base.8
+man/man8/mksysjail-dev.8
 man/man8/sjls.8
+man/man8/sysjail-cmd.8
 man/man8/sysjail.8
 sbin/sjls
 sbin/sysjail
+sbin/sysjail-cmd
 @dirrm include/sysjail

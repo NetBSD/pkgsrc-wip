@@ -1,21 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/06/01 12:03:23 lkundrak Exp $
+$NetBSD: distinfo,v 1.2 2007/02/15 19:25:04 lkundrak Exp $
 
-SHA1 (sysjail-0.2.2.tar.gz) = 9a9cbe73fe473fc5a8b7384088bfa070c5fa053e
-RMD160 (sysjail-0.2.2.tar.gz) = e440815dadc7a8c6200ce2f59f17d5fa3c0eb809
-Size (sysjail-0.2.2.tar.gz) = 152858 bytes
-SHA1 (patch-aa) = 04521b50350725f4e62f9acea2d535972ca0d918
-SHA1 (patch-ab) = d51c0ea7c1b688526cd94a8bb18e70be562da9a0
-SHA1 (patch-ac) = 058781b0d001eae11e86a823ef30806a663d0ff2
-SHA1 (patch-ad) = aba62d1a8c956ac3290befea4e4399aa58b041c3
-SHA1 (patch-ae) = b3f13033b2969dc220d6e58d93c1314bf2ae8c8b
-SHA1 (patch-af) = 85bcfe51dc536fd577d457b0fcc51014e3ed1ca1
-SHA1 (patch-ag) = 64767d1647dd08afc08eff1d0d95cbeaeed2668c
-SHA1 (patch-ah) = a80ffb01ca4d49739ea532e88d657633c28fddde
-SHA1 (patch-ai) = c475a070d2f91d02356d61a7b8cbc3e19aa737e9
-SHA1 (patch-aj) = 672f5622095e8711f3c6336949c5e03c4a777df2
-SHA1 (patch-ak) = bb58bc19563dba6b0998b4ae2ef9cf86eada73f5
-SHA1 (patch-al) = fedc9bf0f9e708365f41ed2f4447937b36c0c7d3
-SHA1 (patch-am) = 2f9f87cf2c639f92f2828827dad955c110e0568b
-SHA1 (patch-an) = bdad03ef897d3682d360385c0bcba1e7111fa174
-SHA1 (patch-ao) = b697e8e313fd987aa0e2009bcd5c181cda1c2c9d
-SHA1 (patch-ap) = 1443cbbd2b155fefdb7ebf3be1315bfff973394b
+SHA1 (sysjail-1.0.4.tar.gz) = 93b28856abefb606343230f5f6b4b8093b9dfb26
+RMD160 (sysjail-1.0.4.tar.gz) = 5ee656aed9456962f412f7eedf07711722b23a59
+Size (sysjail-1.0.4.tar.gz) = 581030 bytes
+SHA1 (patch-aq) = b46d1dd80d1d1fedeba9af6fc01a149317cff505
+SHA1 (patch-ar) = 09c40402f1e80bdc7677f0c5706adfe3350df3cc
