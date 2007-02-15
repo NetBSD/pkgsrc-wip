@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/14 17:47:27 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/15 11:24:59 netcap Exp $
 #
 
 DISTNAME=	libbinio-1.4
@@ -15,7 +15,7 @@ INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-GCC_REQD=	3.4
+#GCC_REQD=	3.4
 
 PKGCONFIG_OVERRIDE+=	libbinio.pc.in
 
