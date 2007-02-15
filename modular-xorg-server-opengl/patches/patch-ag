@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2007/02/15 20:24:29 bsadewitz Exp $
+
+--- xkb/Makefile.orig	2007-02-14 23:59:41.000000000 -0500
++++ xkb/Makefile
+@@ -603,7 +603,7 @@ libxkb_la_SOURCES = $(DDX_SRCS) $(DIX_SR
+ libxkbstubs_la_SOURCES = ddxVT.c ddxPrivate.c ddxKillSrv.c
+ EXTRA_DIST = xkb.h xkbDflts.h
+ xkbcompileddir = $(XKB_COMPILED_DIR)
+-dist_xkbcompiled_DATA = README.compiled
++dist_xkbcompiled_DATA =
+ all: all-am
+ 
+ .SUFFIXES:
