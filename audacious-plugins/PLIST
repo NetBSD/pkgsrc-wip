@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2007/02/14 12:55:14 netcap Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/02/15 11:15:48 netcap Exp $
+${ARTS}bin/audacious-arts-helper
 lib/audacious/Container/libm3u.so
 lib/audacious/Container/libpls.so
 lib/audacious/Container/libxspf.so
@@ -11,6 +12,7 @@ lib/audacious/General/libalarm.so
 lib/audacious/General/libscrobbler.so
 lib/audacious/General/libsong_change.so
 lib/audacious/Input/libaac.so
+lib/audacious/Input/libadplug.so
 lib/audacious/Input/libalac.so
 lib/audacious/Input/libcdaudio.so
 lib/audacious/Input/libconsole.so
@@ -21,14 +23,19 @@ lib/audacious/Input/libmpc.so
 lib/audacious/Input/libmpg123.so
 lib/audacious/Input/libsexypsf.so
 lib/audacious/Input/libsid.so
+${MIDI}lib/audacious/Input/libtimidity.so
 lib/audacious/Input/libtonegen.so
 lib/audacious/Input/libvorbis.so
 lib/audacious/Input/libwav.so
 lib/audacious/Input/libwavpack.so
 lib/audacious/Input/libwma.so
+${ESD}lib/audacious/Output/libESD.so
+${ARTS}lib/audacious/Output/libarts.so
 lib/audacious/Output/libOSS.so
 lib/audacious/Output/libdisk_writer.so
+${JACK}lib/audacious/Output/libjackout.so
 lib/audacious/Output/libnull.so
+${PULSE}lib/audacious/Output/libpulse_audio.so
 lib/audacious/Output/libsun.so
 lib/audacious/Visualization/libbscope.so
 lib/audacious/Visualization/libparanormal.so

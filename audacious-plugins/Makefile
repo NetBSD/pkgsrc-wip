@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/14 17:00:13 netcap Exp $
+# $NetBSD: Makefile,v 1.10 2007/02/15 11:15:49 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -25,7 +25,7 @@ LDFLAGS.NetBSD+=        -lstdc++ -lm
 # cdaudio plugin complains about missing OSS at runtime
 LDFLAGS+=               ${LIBOSSAUDIO}
 
-CONFIGURE_ARGS+= 	--disable-adplug --disable-amidiplug
+CONFIGURE_ARGS+= 	--disable-amidiplug
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=  arts esound gnome inet6 jack midi pulse
@@ -34,14 +34,18 @@ PKG_SUPPORTED_OPTIONS=  arts esound gnome inet6 jack midi pulse
 
 .if !empty(PKG_OPTIONS:Marts)
 .	include "../../audio/arts/buildlink3.mk"
+PLIST_SUBST+=		ARTS=""
 .else
 CONFIGURE_ARGS+=	--disable-arts
+PLIST_SUBST+=		ARTS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
 .	include "../../audio/esound/buildlink3.mk"
+PLIST_SUBST+=		ESD=""
 .else
 CONFIGURE_ARGS+=	--disable-esd
+PLIST_SUBST+=		ESD="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
@@ -57,20 +61,26 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 .if !empty(PKG_OPTIONS:Mjack)
 .	include "../../audio/jack/buildlink3.mk"
+PLIST_SUBST+=		JACK=""
 .else
 CONFIGURE_ARGS+=	--disable-jack
+PLIST_SUBST+=		JACK="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mmidi)
 BUILD_DEPENDS+=		timidity>=0:../../audio/timidity
+PLIST_SUBST+=		MIDI=""
 .else
 CONFIGURE_ARGS+=	--disable-timidity
+PLIST_SUBST+=		MIDI="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulse)
 .	include "../../wip/pulseaudio/buildlink3.mk"
+PLIST_SUBST+=		PULSE=""
 .else
 CONFIGURE_ARGS+=	--disable-pulse
+PLIST_SUBST+=		PULSE="@comment "
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -87,17 +97,18 @@ CONFIGURE_ARGS+=        --with-dev-dsp=${DEVOSSSOUND:Q}                 \
 PKG_SUPPORTED_OPTIONS+= lirc
 .	if !empty(PKG_OPTIONS:Mlirc)
 CONFIGURE_ARGS+=	--enable-lirc
-	.	include "../../wip/lirc/buildlink3.mk"
+.		include "../../wip/lirc/buildlink3.mk"
 .	endif
 .endif
 
-CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
-                	CFLAGS="-I${LOCALBASE}/include/audacious"
+#CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
+#                	CFLAGS="-I${LOCALBASE}/include/audacious"
 
-BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
+#BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
 
 .include "../../wip/audacious/buildlink3.mk"
 .include "../../wip/libnms/buildlink3.mk"
+.include "../../wip/libadplug/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
@@ -106,7 +117,6 @@ BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
 #.include "../../audio/libsidplay2/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-#.include "../../wip/pulseaudio/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
