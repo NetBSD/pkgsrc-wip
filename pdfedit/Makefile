@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/14 10:57:52 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/15 13:35:06 rillig Exp $
 
 DISTNAME=	pdfedit-0.2.5
 CATEGORIES=	print
@@ -17,4 +17,5 @@ post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
 
 .include "../../x11/qt3/application.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
