@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/16 13:58:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/16 14:01:29 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
@@ -21,7 +21,7 @@ USE_TOOLS+=		pkg-config
 
 PTHREAD_OPTS+=		native
 NO_CONFIGURE=		yes
-BUILD_DEPENDS+=         scons>=0.96:../../devel/scons
+BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
 .include "../../mk/bsd.prefs.mk"
 LDCPP_VERSION!=		${DATE} +%Y%m%d
