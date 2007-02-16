@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/11/30 08:57:10 larnor Exp $
+# $NetBSD: Makefile,v 1.17 2007/02/16 00:07:08 larnor Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
 PKGREVISION=		7
@@ -9,7 +9,10 @@ MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
 COMMENT=		GTK-based gnutella client, SVN snapshot
 
-USE_TOOLS+=		gmake msgfmt
+# Debug
+#CFLAGS+=		-g
+
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
@@ -24,6 +27,7 @@ CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
 CONFLICTS=		gtk-gnutella-*
 
 SVN_REPOSITORIES=	gtk-gnutella
+SVN_CERTS=		files/dc5a395eac239ee84380e60694cec8f1
 SVN_ROOT.gtk-gnutella=	${SVN_ROOT_SOURCEFORGE}/gtk-gnutella/trunk/gtk-gnutella
 SVN_MODULE.gtk-gnutella=gtk-gnutella
 
@@ -41,6 +45,7 @@ distclean:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../wip/mk/svn-package.mk"
