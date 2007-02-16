@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/16 11:55:20 lkundrak Exp $
 
-DISTNAME=		shed-1.12
+DISTNAME=		shed-1.13
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=shed/}
 
