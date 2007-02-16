@@ -1,5 +1,0 @@
-Dbvi is a console utility which provides a full screen interface to gdb(1).
-It splits the screen into two windows, the lower containing the debugger
-command line interface, the upper containing a vi(1) session which shows
-the current source file including terminal graphics for breakpoints and the
-current address.
