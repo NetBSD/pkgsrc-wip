@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/24 07:46:55 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/16 12:13:13 lkundrak Exp $
 
 DISTNAME=		argp-standalone-1.3
 PKGNAME=		libargp-1.3
@@ -11,8 +11,10 @@ COMMENT=		Standalone version of argument parsing interface from GNU libc
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+INSTALLATION_DIRS+=	lib include
+
 do-install:
-	${INSTALL_LIB}	${WRKSRC}/libargp.a ${PREFIX}/lib
-	${INSTALL}	${WRKSRC}/argp.h ${PREFIX}/include
+	${INSTALL_DATA}	${WRKSRC}/libargp.a ${PREFIX}/lib
+	${INSTALL_DATA}	${WRKSRC}/argp.h ${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
