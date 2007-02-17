@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/30 03:13:24 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/17 10:15:23 netcap Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.5
@@ -10,7 +10,7 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.pulseaudio.org/
 COMMENT=	The esound replacement everyone's been waiting for
 
-#CONFLICTS=	esound-[0-9]*
+CONFLICTS=	esound-[0-9]* libaudiofile-[0-9]* madplay-[0-9]*
 
 USE_TOOLS+=	pkg-config gmake
 
