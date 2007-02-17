@@ -1,0 +1,3 @@
+dpic is a replacement for pic/gpic that supports additional
+output formats.  Supported formats are pict2e, Postscript,
+PGF, mfpic, PSTricks, MetaPost, eepicemu, and xfig
