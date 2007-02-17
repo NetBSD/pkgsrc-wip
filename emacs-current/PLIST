@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/02/05 22:38:34 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/02/17 06:46:04 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -125,7 +125,6 @@ share/emacs/${PKGVERSION}/etc/NEWS.19
 share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
 share/emacs/${PKGVERSION}/etc/ORDERS
-share/emacs/${PKGVERSION}/etc/OTHER.EMACSES
 share/emacs/${PKGVERSION}/etc/PROBLEMS
 share/emacs/${PKGVERSION}/etc/README
 share/emacs/${PKGVERSION}/etc/SERVICE
@@ -137,6 +136,7 @@ share/emacs/${PKGVERSION}/etc/TUTORIAL.bg
 share/emacs/${PKGVERSION}/etc/TUTORIAL.cn
 share/emacs/${PKGVERSION}/etc/TUTORIAL.cs
 share/emacs/${PKGVERSION}/etc/TUTORIAL.de
+share/emacs/${PKGVERSION}/etc/TUTORIAL.eo
 share/emacs/${PKGVERSION}/etc/TUTORIAL.es
 share/emacs/${PKGVERSION}/etc/TUTORIAL.fr
 share/emacs/${PKGVERSION}/etc/TUTORIAL.it
@@ -181,7 +181,6 @@ share/emacs/${PKGVERSION}/etc/emacs.bash
 share/emacs/${PKGVERSION}/etc/emacs.csh
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.py
-share/emacs/${PKGVERSION}/etc/emacs.xbm
 share/emacs/${PKGVERSION}/etc/emacsclient.1
 share/emacs/${PKGVERSION}/etc/emacstool.1
 share/emacs/${PKGVERSION}/etc/enriched.doc
@@ -193,7 +192,6 @@ share/emacs/${PKGVERSION}/etc/fr-refcard.tex
 share/emacs/${PKGVERSION}/etc/fr-survival.tex
 share/emacs/${PKGVERSION}/etc/future-bug
 share/emacs/${PKGVERSION}/etc/gfdl.1
-share/emacs/${PKGVERSION}/etc/gnu.xpm
 share/emacs/${PKGVERSION}/etc/gnus-booklet.ps
 share/emacs/${PKGVERSION}/etc/gnus-logo.eps
 share/emacs/${PKGVERSION}/etc/gnus-refcard.ps
@@ -227,6 +225,7 @@ share/emacs/${PKGVERSION}/etc/images/diropen.xpm
 share/emacs/${PKGVERSION}/etc/images/disconnect.xpm
 share/emacs/${PKGVERSION}/etc/images/exit.pbm
 share/emacs/${PKGVERSION}/etc/images/exit.xpm
+share/emacs/${PKGVERSION}/etc/images/ezimage/README
 share/emacs/${PKGVERSION}/etc/images/ezimage/bits.xpm
 share/emacs/${PKGVERSION}/etc/images/ezimage/bitsbang.xpm
 share/emacs/${PKGVERSION}/etc/images/ezimage/box-minus.xpm
@@ -256,13 +255,11 @@ share/emacs/${PKGVERSION}/etc/images/ezimage/tag.xpm
 share/emacs/${PKGVERSION}/etc/images/ezimage/unlock.xpm
 share/emacs/${PKGVERSION}/etc/images/fwd-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/fwd-arrow.xpm
-share/emacs/${PKGVERSION}/etc/images/gnus/bar.xbm
-share/emacs/${PKGVERSION}/etc/images/gnus/bar.xpm
+share/emacs/${PKGVERSION}/etc/images/gnus/README
 share/emacs/${PKGVERSION}/etc/images/gnus/catchup.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/catchup.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/cu-exit.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/cu-exit.xpm
-share/emacs/${PKGVERSION}/etc/images/gnus/dead.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/describe-group.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/describe-group.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/exit-gnus.pbm
@@ -299,7 +296,6 @@ share/emacs/${PKGVERSION}/etc/images/gnus/reply-wo.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/reply-wo.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/reply.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/reply.xpm
-share/emacs/${PKGVERSION}/etc/images/gnus/reverse-smile.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/rot13.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/rot13.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/save-aif.pbm
@@ -316,6 +312,7 @@ share/emacs/${PKGVERSION}/etc/images/gnus/uu-decode.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/uu-decode.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/uu-post.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/uu-post.xpm
+share/emacs/${PKGVERSION}/etc/images/gud/README
 share/emacs/${PKGVERSION}/etc/images/gud/break.pbm
 share/emacs/${PKGVERSION}/etc/images/gud/break.xpm
 share/emacs/${PKGVERSION}/etc/images/gud/cont.pbm
@@ -356,6 +353,7 @@ share/emacs/${PKGVERSION}/etc/images/help.pbm
 share/emacs/${PKGVERSION}/etc/images/help.xpm
 share/emacs/${PKGVERSION}/etc/images/home.pbm
 share/emacs/${PKGVERSION}/etc/images/home.xpm
+share/emacs/${PKGVERSION}/etc/images/icons/README
 share/emacs/${PKGVERSION}/etc/images/icons/emacs_16.png
 share/emacs/${PKGVERSION}/etc/images/icons/emacs_24.png
 share/emacs/${PKGVERSION}/etc/images/icons/emacs_32.png
@@ -371,6 +369,7 @@ share/emacs/${PKGVERSION}/etc/images/left-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/lock-broken.xpm
 share/emacs/${PKGVERSION}/etc/images/lock-ok.xpm
 share/emacs/${PKGVERSION}/etc/images/lock.xpm
+share/emacs/${PKGVERSION}/etc/images/low-color/README
 share/emacs/${PKGVERSION}/etc/images/low-color/back-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/low-color/copy.xpm
 share/emacs/${PKGVERSION}/etc/images/low-color/cut.xpm
@@ -395,6 +394,7 @@ share/emacs/${PKGVERSION}/etc/images/low-color/spell.xpm
 share/emacs/${PKGVERSION}/etc/images/low-color/undo.xpm
 share/emacs/${PKGVERSION}/etc/images/low-color/up-arrow.xpm
 share/emacs/${PKGVERSION}/etc/images/low-color/up-node.xpm
+share/emacs/${PKGVERSION}/etc/images/mail/README
 share/emacs/${PKGVERSION}/etc/images/mail/compose.pbm
 share/emacs/${PKGVERSION}/etc/images/mail/compose.xpm
 share/emacs/${PKGVERSION}/etc/images/mail/copy.xpm
@@ -456,10 +456,12 @@ share/emacs/${PKGVERSION}/etc/images/search.xpm
 share/emacs/${PKGVERSION}/etc/images/separator.xpm
 share/emacs/${PKGVERSION}/etc/images/show.pbm
 share/emacs/${PKGVERSION}/etc/images/show.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/README
 share/emacs/${PKGVERSION}/etc/images/smilies/blink.pbm
 share/emacs/${PKGVERSION}/etc/images/smilies/blink.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/braindamaged.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/cry.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/dead.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/evil.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/forced.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/frown.pbm
@@ -516,6 +518,7 @@ share/emacs/${PKGVERSION}/etc/splash8.xpm
 share/emacs/${PKGVERSION}/etc/spook.lines
 share/emacs/${PKGVERSION}/etc/survival.tex
 share/emacs/${PKGVERSION}/etc/termcap.src
+share/emacs/${PKGVERSION}/etc/tree-widget/default/README
 share/emacs/${PKGVERSION}/etc/tree-widget/default/close.png
 share/emacs/${PKGVERSION}/etc/tree-widget/default/close.xpm
 share/emacs/${PKGVERSION}/etc/tree-widget/default/empty.png
@@ -534,6 +537,7 @@ share/emacs/${PKGVERSION}/etc/tree-widget/default/no-handle.png
 share/emacs/${PKGVERSION}/etc/tree-widget/default/no-handle.xpm
 share/emacs/${PKGVERSION}/etc/tree-widget/default/open.png
 share/emacs/${PKGVERSION}/etc/tree-widget/default/open.xpm
+share/emacs/${PKGVERSION}/etc/tree-widget/folder/README
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/close.png
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/close.xpm
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/empty.png
