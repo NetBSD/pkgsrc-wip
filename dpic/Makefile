@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/17 22:43:47 mwicks Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/17 22:49:37 mwicks Exp $
 #
 
 PKGNAME=		dpic-07.2.2
@@ -19,4 +19,3 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/Examples.txt ${PREFIX}/share/doc/dpic
 
 .include "../../mk/bsd.pkg.mk"
-
