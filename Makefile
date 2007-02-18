@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2521 2007/02/18 03:12:26 thomasklausner Exp $
+# $Id: Makefile,v 1.2522 2007/02/18 14:09:36 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -181,7 +181,6 @@ SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	db1
 SUBDIR+=	dbf
-SUBDIR+=	dbvi
 SUBDIR+=	ddate
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
