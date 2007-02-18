@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/18 03:02:41 thomasklausner Exp $
 
-DISTNAME=	DateTime-Format-Mail-0.2901
+DISTNAME=	DateTime-Format-Mail-0.30
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
 MAINTAINER=	kuli0020@umn.edu
-HOMEPAGE=	http://datetime.perl.org/
+HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-Mail/
 COMMENT=	Convert between DateTime and RFC2822/822 formats
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
