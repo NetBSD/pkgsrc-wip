@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2519 2007/02/18 02:18:00 thomasklausner Exp $
+# $Id: Makefile,v 1.2520 2007/02/18 02:54:19 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -971,7 +971,6 @@ SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-B-Keywords
-SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Application-Plugin-TT
