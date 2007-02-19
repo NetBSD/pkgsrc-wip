@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2523 2007/02/18 14:14:58 kristerw Exp $
+# $Id: Makefile,v 1.2524 2007/02/19 19:44:25 guigui2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1520,6 +1520,7 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
+SUBDIR+=	tagtool
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcmplex-panteltje
