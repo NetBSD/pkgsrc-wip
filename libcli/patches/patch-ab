@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/19 22:09:59 haad Exp $
+
+--- Makefile.orig	2007-02-19 04:42:28.000000000 +0100
++++ Makefile
+@@ -1,5 +1,5 @@
+ DESTDIR =
+-PREFIX = /usr/local
++PREFIX = /usr/pkg
+ 
+ MAJOR = 1
+ MINOR = 8
+@@ -14,7 +14,7 @@ LDFLAGS += -shared -Wl,-soname,$(LIB).$(
+ LIBPATH += -L.
+ LIBS = -lcrypt
+ 
+-all: $(LIB) clitest
++all: $(LIB)
+ 
+ $(LIB): libcli.o
+ 	$(CC) -o $(LIB).$(MAJOR).$(MINOR).$(REVISION) $^ $(LDFLAGS) $(LIBS)
