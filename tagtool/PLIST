@@ -1,1 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/19 19:34:33 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/19 21:40:43 lkundrak Exp $
+bin/tagtool
+share/applications/tagtool.desktop
+share/locale/bg/LC_MESSAGES/tagtool.mo
+share/locale/cs/LC_MESSAGES/tagtool.mo
+share/locale/de/LC_MESSAGES/tagtool.mo
+share/locale/en_GB/LC_MESSAGES/tagtool.mo
+share/locale/es/LC_MESSAGES/tagtool.mo
+share/locale/fr/LC_MESSAGES/tagtool.mo
+share/locale/it/LC_MESSAGES/tagtool.mo
+share/locale/lt/LC_MESSAGES/tagtool.mo
+share/locale/pt/LC_MESSAGES/tagtool.mo
+share/locale/ru/LC_MESSAGES/tagtool.mo
+share/locale/ua/LC_MESSAGES/tagtool.mo
+share/pixmaps/TagTool.png
+share/tagtool/TagTool.png
+share/tagtool/edit.png
+share/tagtool/fail.png
+share/tagtool/file.png
+share/tagtool/folder.png
+share/tagtool/graydot.png
+share/tagtool/greendot.png
+share/tagtool/info.png
+share/tagtool/ok.png
+share/tagtool/preferences.dtd
+share/tagtool/tab_clear.png
+share/tagtool/tab_edit.png
+share/tagtool/tab_playlist.png
+share/tagtool/tab_rename.png
+share/tagtool/tab_tag.png
+share/tagtool/tagtool.glade
+share/tagtool/warn.png
+@dirrm share/tagtool
