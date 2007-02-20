@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/20 15:54:44 lkundrak Exp $
+
+--- src/avformat_writer.h.orig	2007-02-20 15:02:26.000000000 +0100
++++ src/avformat_writer.h
+@@ -28,7 +28,7 @@
+ #include <memory.h>
+ 
+ #include "type.h"
+-#include "avformat.h" // libavformat is part of ffmpeg(http://ffmpeg.sf.net)
++#include <ffmpeg/avformat.h>
+ #include "mp3header.h"
+ 
+ typedef struct _AVFWRITER
