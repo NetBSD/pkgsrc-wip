@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/20 15:54:44 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/20 17:47:04 lkundrak Exp $
 
 DISTNAME=	flv2mpeg4-${FLV2MPEG_VERSION}
 CATEGORIES=	multimedia
@@ -14,10 +14,11 @@ DOCDIR=		${PREFIX}/share/doc/${PKGNAME}
 SVN_REPOSITORIES+=	flv2mpeg4
 SVN_ROOT.flv2mpeg4=	${SVN_ROOT_SOURCEFORGE}/vixynet/trunk/flv2mpeg4
 SVN_MODULE.flv2mpeg4=	${DISTNAME}
+SVN_CERTS=		files/dc5a395eac239ee84380e60694cec8f1
 
 SOURCES=	avformat_writer.c dcprediction.c flv2mpeg4.c fetch.c
 SOURCES+=	flvdecoder.c m4vencode.c mp3header.c
-LIBS=		-lavformat -lavcodec -lavutil
+LIBS=		-lavformat -lavcodec
 do-build:
 	cd ${WRKSRC}/src;						\
 	${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} ${LIBS} ${SOURCES}	\
