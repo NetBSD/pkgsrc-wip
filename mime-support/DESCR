@@ -1,0 +1,5 @@
+mime-support provides support for viewing, editing, composing, and
+printing files based on mailcap settings.  A useful approximation
+to the Windows `start' command would be to set up an alias such as:
+
+    alias start='run-mailcap --action=edit'

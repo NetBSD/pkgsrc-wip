@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/02/20 19:59:08 briandealwis Exp $
+
+--- run-mailcap.man.orig	1999-07-20 18:51:14.000000000 -0600
++++ run-mailcap.man
+@@ -4,7 +4,7 @@
+ .\"
+ .TH RUN-MAILCAP 1 "14th Mar 1998" "Debian Project" "Run Mailcap Programs"
+ .SH NAME
+-run-mailcap, see, edit, compose, print \- execute programs via entries in the
++run-mailcap, mime-see, mime-edit, mime-compose, mime-print \- execute programs via entries in the
+ .I mailcap
+ file
+ .SH SYNOPSIS
+@@ -13,11 +13,11 @@ file
+ [<mime-type>:[<encoding>:]]<filename>  [...]
+ 
+ The
+-.BR see ,
+-.BR edit ,
+-.B compose
++.BR mime-see ,
++.BR mime-edit ,
++.B mime-compose
+ and
+-.B print
++.B mime-print
+ versions are just aliases that default to the view, edit, compose, and
+ print actions (respectively).
+ 
+@@ -26,10 +26,10 @@ following to your shell startup:
+ 
+   shell  file        line(s) to add
+   ~~~~~  ~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-  sh     ~/.profile  PAGER=/usr/bin/see; export PAGER
+-                     EDITOR=/usr/bin/edit; export EDITOR
+-  csh    ~/.login    setenv PAGER /usr/bin/see
+-                     setenv EDITOR /usr/bin/edit
++  sh     ~/.profile  PAGER=@PREFIX@/bin/mime-see; export PAGER
++                     EDITOR=@PREFIX@/bin/mime-edit; export EDITOR
++  csh    ~/.login    setenv PAGER @PREFIX@/bin/mime-see
++                     setenv EDITOR @PREFIX@/bin/mime-edit
+ 
+ .SH DESCRIPTION
+ .PP
