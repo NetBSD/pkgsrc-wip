@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2007/02/20 18:36:04 lkundrak Exp $
+
+Fix possible NULL pointer dereferences.
+
+--- src/flv2mpeg4.c.orig	2007-02-20 19:24:56.000000000 +0100
++++ src/flv2mpeg4.c
+@@ -483,6 +483,11 @@ int main (int argc, const char * argv[])
+ 	avfwriter_global_init();
+ 
+ 	fp = fopen(argv[1], "rb");
++	if (fp == NULL)
++	{
++		perror (argv[1]);
++		exit (EXIT_FAILURE);
++	}
+ 	
+ 	memset(&ctx, 0, sizeof(ctx));
+ 	ctx.out_buf = malloc(PACKETBUFFER_SIZE);
+@@ -490,6 +495,12 @@ int main (int argc, const char * argv[])
+ 	memset(&ctx.vol, 0, sizeof(ctx.vol));
+ 	
+ 	ctx.avf = avfwriter_init(argv[2]);
++	if (ctx.avf == NULL)
++	{
++		fprintf (stderr, "%s: Cannot open output file\n", argv[2]);
++		exit (EXIT_FAILURE);
++	}
++	
+ 
+ 	set_params_from_dst_format_name(&ctx, avfwriter_get_format_name(ctx.avf));
+ 	

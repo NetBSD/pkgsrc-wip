@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1 2007/02/20 18:36:04 lkundrak Exp $
+
+Free close the descriptor only in case the open was successful
+
+--- src/avformat_writer.c.orig	2007-02-20 19:24:56.000000000 +0100
++++ src/avformat_writer.c
+@@ -191,7 +191,10 @@ int avfwriter_release(AVFWRITER* p)
+ 			av_freep(&p->oc->streams[i]);
+ 		}
+ 
+-		url_fclose(&p->oc->pb);
++		if (&p->oc->pb != NULL)
++		{
++			url_fclose(&p->oc->pb);
++		}
+ 		av_free(p->oc);
+ 	}
+ 	
