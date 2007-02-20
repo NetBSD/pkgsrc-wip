@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/19 22:09:59 haad Exp $
+$NetBSD: distinfo,v 1.2 2007/02/20 10:51:22 lkundrak Exp $
 
 SHA1 (libcli-1.8.8.tar.gz) = b9b6fff7bdb45b1046c3111a24e7056d131072bd
 RMD160 (libcli-1.8.8.tar.gz) = 3d66169f868dc87d84a196d73c7e4718f637505a
 Size (libcli-1.8.8.tar.gz) = 29790 bytes
 SHA1 (patch-aa) = 22af6ef2d07c22606ed51b8f6e6de87072e13d11
-SHA1 (patch-ab) = 09ad3ff22fcccb9747d927b0077c257ece328ae9
+SHA1 (patch-ab) = 6ea4fb92a07a170be34cf60a98f4bd19e5fed450
