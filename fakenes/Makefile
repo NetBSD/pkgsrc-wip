@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/05 17:17:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/02/20 19:11:09 thomasklausner Exp $
 #
 
 DISTNAME=		fakenes-0.5.4
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fakenes/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fakenes.sourceforge.net/
 COMMENT=		Portable Open Source NES emulator
 
