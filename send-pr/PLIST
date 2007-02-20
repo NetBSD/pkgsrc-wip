@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/13 23:23:33 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/20 19:04:26 thomasklausner Exp $
 bin/install-sid
 bin/send-pr
 info/send-pr.info
@@ -7,9 +7,5 @@ share/emacs/site-lisp/send-pr.el
 share/gnats/cygnus
 share/gnats/netbsd
 share/gnats/dist/INSTALL.send-pr
-@exec ${MKDIR} %D/share/gnats/dist
 @dirrm share/gnats/dist
 @dirrm share/gnats
-@exec ${MKDIR} %D/share/emacs/site-lisp
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
