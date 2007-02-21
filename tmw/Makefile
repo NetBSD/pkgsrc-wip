@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2007/02/12 17:54:18 pseudo_anim Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/21 20:53:47 thomasklausner Exp $
 #
 
 DISTNAME=	tmw-0.0.22.1
@@ -13,6 +13,7 @@ COMMENT=	Free open source 2D MMORPG in development
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--with-opengl
+USE_TOOLS+=	pkg-config
 
 USE_DIRS+= xdg-1.4
 
