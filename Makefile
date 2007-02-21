@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2525 2007/02/20 20:06:17 briandealwis Exp $
+# $Id: Makefile,v 1.2526 2007/02/21 21:07:08 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -712,7 +712,6 @@ SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
-SUBDIR+=	librxspencer
 SUBDIR+=	libspf2
 SUBDIR+=	libticables
 SUBDIR+=	libticalcs
