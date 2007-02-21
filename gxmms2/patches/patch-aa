@@ -1,31 +1,45 @@
-$NetBSD: patch-aa,v 1.6 2006/01/10 21:20:08 christian_gall Exp $
+$NetBSD: patch-aa,v 1.7 2007/02/21 22:25:33 thomasklausner Exp $
 
---- Makefile.orig	2005-12-18 20:52:52.000000000 +0100
+--- Makefile.orig	2007-01-17 16:11:29.000000000 +0000
 +++ Makefile
-@@ -1,7 +1,7 @@
+@@ -1,7 +1,6 @@
  # Makefile for gxmms2 and gkrellxmms2
  
- #Installation directory
--INSTALLPATH = /usr/local/bin
-+INSTALLPATH = ${PREFIX}/bin
- KRELLINSTALLPATH = /usr/lib/gkrellm2/plugins
+ # Installation directory
+-PREFIX=/usr/local
+ KRELLPREFIX=/usr
  
- ALLFILES=gkrellxmms2/*.c gkrellxmms2/*.h gkrellxmms2/*.xpm gmedialib/*.c gmedialib/*.h gmedialib/*.xpm gtrackinfo/*.c gtrackinfo/*.h gxmms2src/*.c gxmms2src/*.h gxmms2src/*.xpm sdecode/*.c sdecode/*.h xmms2ctrl/*.c xmms2ctrl/*.h Makefile README README.gxmms2 README.gkrellxmms2 COPYING CHANGELOG
-@@ -17,7 +17,7 @@ LIBS = $(GTK_LIB) $(XMMS2_LIB)
- LFLAGS =
- KRELLLFLAGS = -shared
+ ALLFILES=gkrellxmms2/*.c gkrellxmms2/*.h gkrellxmms2/*.xpm gmedialib/*.c gmedialib/*.h gmedialib/*.xpm gtrackinfo/*.c gtrackinfo/*.h gxmms2src/*.c gxmms2src/*.h gxmms2src/*.xpm sdecode/*.c sdecode/*.h xmms2ctrl/*.c xmms2ctrl/*.h Makefile README COPYING CHANGELOG
+@@ -11,7 +10,7 @@ GTK_LIB=$(shell pkg-config gtk+-2.0 --li
+ XMMS2_CFLAGS=$(shell pkg-config xmms2-client xmms2-client-glib --cflags)
+ XMMS2_LIB=$(shell pkg-config xmms2-client xmms2-client-glib --libs)
  
--CC = gcc $(CFLAGS) $(FLAGS)
-+CC = cc $(CFLAGS) $(FLAGS)
+-CFLAGS=-O2 -Wall -fPIC $(GTK_CFLAGS) $(XMMS2_CFLAGS) -I.
++CFLAGS+=-Wall -fPIC $(GTK_CFLAGS) $(XMMS2_CFLAGS) -I.
+ LIBS=$(GTK_LIB) $(XMMS2_LIB)
  
- OBJS = gxmms2.o xmms2ctrl.o trackinfo.o gtrackinfo.o gmlplaylist.o gmedialib.o gmlbrowser.o gmlsearch.o gmlplaylists.o gmladdfiles.o sdecode.o wejpscroller.o statusdisplay.o wejpconfig.o
- 
-@@ -75,7 +75,7 @@ wejpconfig.o:    gxmms2src/wejpconfig.c
- 	$(CC) -c gxmms2src/wejpconfig.c
+ KRELLLFLAGS=-shared
+@@ -46,13 +45,16 @@ clean:
+ 	$(CC) $(CFLAGS) -c -o $@ $<
  
  install:
--	install -D gxmms2 $(INSTALLPATH)/gxmms2
-+	${BSD_INSTALL_PROGRAM} gxmms2 $(INSTALLPATH)/gxmms2
+-	install -D gxmms2 $(PREFIX)/bin/gxmms2
+-	install -D gxmms2src/gxmms2_mini.xpm $(PREFIX)/share/gxmms2/gxmms2_mini.xpm
+-	install -D README $(PREFIX)/share/gxmms2/README
+-	install -D COPYING $(PREFIX)/share/gxmms2/COPYING
+-	install -D gkrellxmms2.so $(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
+-	install -D README $(KRELLPREFIX)/share/gkrellxmms2/README
+-	install -D COPYING $(KRELLPREFIX)/share/gkrellxmms2/COPYING
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm2/plugins
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/gxmms2
++#	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/gkrellxmms2
++	${BSD_INSTALL_PROGRAM} gxmms2 $(PREFIX)/bin/gxmms2
++	${BSD_INSTALL_DATA} gxmms2src/gxmms2_mini.xpm $(PREFIX)/share/gxmms2/gxmms2_mini.xpm
++	${BSD_INSTALL_DATA} README $(PREFIX)/share/gxmms2/README
++	${BSD_INSTALL_DATA} COPYING $(PREFIX)/share/gxmms2/COPYING
++#	${BSD_INSTALL_LIB} gkrellxmms2.so $(KRELLPREFIX)/lib/gkrellm2/plugins/gkrellxmms2.so
++#	${BSD_INSTALL_DATA} README $(KRELLPREFIX)/share/gkrellxmms2/README
++#	${BSD_INSTALL_DATA} COPYING $(KRELLPREFIX)/share/gkrellxmms2/COPYING
  
- install_gkrellxmms2:
- 	install -D gkrellxmms2.so $(KRELLINSTALLPATH)/gkrellxmms2.so
+ install_gxmms2:
+ 	install -D gxmms2 $(PREFIX)/bin/gxmms2
