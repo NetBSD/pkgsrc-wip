@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/20 21:36:10 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/21 21:54:16 thomasklausner Exp $
 
 DISTNAME=	pdfedit-0.2.5
 CATEGORIES=	print
@@ -10,6 +10,7 @@ HOMEPAGE=	http://pdfedit.petricek.net/
 COMMENT=	Editor for manipulating PDF documents
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
 # this could rather go into qt3-tools
