@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/21 21:54:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/22 11:57:14 lkundrak Exp $
 
 DISTNAME=	pdfedit-0.2.5
 CATEGORIES=	print
@@ -12,9 +12,6 @@ COMMENT=	Editor for manipulating PDF documents
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
-
-# this could rather go into qt3-tools
-PREPEND_PATH=	${QTDIR}/bin
 
 # pdfedit bug #129
 post-extract:
