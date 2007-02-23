@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/29 22:20:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/23 18:06:16 thomasklausner Exp $
 #
 
-DISTNAME=	cdrkit-1.1.1
+DISTNAME=	cdrkit-1.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cdrkit.org/releases/
 
