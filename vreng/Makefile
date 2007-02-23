@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/12/21 10:16:24 dauphing Exp $
+# $NetBSD: Makefile,v 1.7 2007/02/23 14:35:21 dauphing Exp $
 
-#DISTNAME=	vreng-6.7.4
-DISTNAME=	vreng-6.8.3
+#DISTNAME=	vreng-6.8.3
+DISTNAME=	vreng-6.8.8
 PKGREVISION=	1
 CATEGORIES=	x11
 
