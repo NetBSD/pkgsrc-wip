@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1 2007/02/24 13:10:31 plunky Exp $
+
+--- configure.in.orig	2006-08-27 23:36:54.000000000 +0100
++++ configure.in
+@@ -338,6 +338,9 @@ USE_BLUETOOTH="no"
+ if test $ac_cv_have_sockaddr_rc = yes; then
+ 	AC_DEFINE(HAVE_BLUETOOTH)
+ 	AC_DEFINE(HAVE_BLUETOOTH_BLUEZ,[],[Compile on Linux])
++	AC_DEFINE(HAVE_BACPY,[],[Have the bacpy() function])
++	AC_DEFINE(HAVE_BASWAP,[],[Have the baswap() function])
++	AC_DEFINE(HAVE_STR2BA,[],[Have the str2ba() function])
+ 	USE_BLUETOOTH="yes"
+ 	LIBS="$LIBS -lbluetooth"
+ fi
+@@ -387,9 +390,30 @@ AC_CACHE_CHECK(for the struct sockaddr_r
+ if test $ac_cv_have_sockaddr_rfcomm = yes; then
+ 	AC_DEFINE(HAVE_BLUETOOTH)
+ 	AC_DEFINE(HAVE_BLUETOOTH_NETGRAPH,[],[Compile on FreeBSD])
++	AC_DEFINE(HAVE_SOCKADDR_LEN,[],[struct sockaddr has length field])
+ 	USE_BLUETOOTH="yes"
+ 	AC_CHECK_LIB(bluetooth, bt_aton,
+-		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Define to 1 if you have the \`bt_aton' function.])])
++		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Have the \`bt_aton' function.])])
++fi
++
++
++dnl ======================== Checks for NetBSD/netbt Bluetooth support
++
++AC_MSG_CHECKING([for the NetBSD/netbt bluetooth support])
++echo
++AC_CACHE_CHECK([for the struct sockaddr_bt in <bluetooth.h>], ac_cv_have_sockaddr_bt,
++	[AC_TRY_COMPILE([#include <bluetooth.h>],
++		[struct sockaddr_bt rc;],
++		ac_cv_have_sockaddr_bt=yes,
++		ac_cv_have_sockaddr_bt=no)])
++
++if test $ac_cv_have_sockaddr_bt = yes; then
++	AC_DEFINE(HAVE_BLUETOOTH)
++	AC_DEFINE(HAVE_BLUETOOTH_NETBT,[],[Compile on NetBSD])
++	AC_DEFINE(HAVE_SOCKADDR_LEN,[],[struct sockaddr has length field])
++	USE_BLUETOOTH="yes"
++	AC_CHECK_LIB(bluetooth, bt_aton,
++		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Have the \`bt_aton' function.])])
+ fi
+ 
+ 
