@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2007/02/24 13:10:31 plunky Exp $
+$NetBSD: patch-ag,v 1.2 2007/02/24 20:46:15 plunky Exp $
 
 --- common/devices/unixbluetooth.c.orig	2006-08-27 23:36:54.000000000 +0100
 +++ common/devices/unixbluetooth.c
@@ -71,11 +71,11 @@ $NetBSD: patch-ag,v 1.1 2007/02/24 13:10:31 plunky Exp $
 +#endif	/* HAVE_BLUETOOTH_XXXX */
  
 -#endif	/* HAVE_BT_ATON */
-+#ifdef HAVE_SOCKADDR_LEN
++#ifdef SOCKADDR_HAS_LEN
 +#define SOCKLEN(sa)	((sa).rc_len = sizeof(sa))
 +#else
 +#define SOCKLEN(sa)
-+#endif	/* HAVE_SOCKADDR_LEN */
++#endif	/* SOCKADDR_HAS_LEN */
 +
 +#ifndef HAVE_BACPY
 +#define bacpy(dst, src)		memcpy((dst), (src), sizeof(bdaddr_t))

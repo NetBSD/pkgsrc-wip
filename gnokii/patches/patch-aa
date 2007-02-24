@@ -1,34 +1,57 @@
-$NetBSD: patch-aa,v 1.1 2007/02/24 13:10:31 plunky Exp $
+$NetBSD: patch-aa,v 1.2 2007/02/24 20:46:15 plunky Exp $
 
 --- configure.in.orig	2006-08-27 23:36:54.000000000 +0100
 +++ configure.in
-@@ -338,6 +338,9 @@ USE_BLUETOOTH="no"
- if test $ac_cv_have_sockaddr_rc = yes; then
- 	AC_DEFINE(HAVE_BLUETOOTH)
+@@ -313,6 +313,7 @@ AC_CHECK_HEADER(linux/irda.h,
+ 	 #include <linux/types.h>])
+ 
+ dnl ======================== Checks for Linux Bluetooth support
++
+ bluetooth="no"
+ AC_ARG_WITH(bluetooth,
+ 	[  --with-bluetooth=DIR    specifies the base libbluetooth],
+@@ -327,7 +328,7 @@ AC_ARG_WITH(bluetooth,
+ 
+ AC_MSG_CHECKING([for the bluetooth support])
+ echo
+-AC_CACHE_CHECK(for the struct sockaddr_rc in <bluetooth/rfcomm.h>, ac_cv_have_sockaddr_rc,
++AC_CACHE_CHECK(for struct sockaddr_rc in <bluetooth/rfcomm.h>, ac_cv_have_sockaddr_rc,
+ 	[AC_TRY_COMPILE([#include <sys/socket.h>
+ 			#include <bluetooth/bluetooth.h>
+ 			#include <bluetooth/rfcomm.h>],
+@@ -340,6 +341,7 @@ if test $ac_cv_have_sockaddr_rc = yes; t
  	AC_DEFINE(HAVE_BLUETOOTH_BLUEZ,[],[Compile on Linux])
-+	AC_DEFINE(HAVE_BACPY,[],[Have the bacpy() function])
-+	AC_DEFINE(HAVE_BASWAP,[],[Have the baswap() function])
-+	AC_DEFINE(HAVE_STR2BA,[],[Have the str2ba() function])
  	USE_BLUETOOTH="yes"
  	LIBS="$LIBS -lbluetooth"
++	AC_CHECK_FUNCS(str2ba bacpy baswap)
  fi
-@@ -387,9 +390,30 @@ AC_CACHE_CHECK(for the struct sockaddr_r
- if test $ac_cv_have_sockaddr_rfcomm = yes; then
+ 
+ 
+@@ -371,9 +373,7 @@ fi
+ 
+ dnl ======================== Checks for FreeBSD/netgraph Bluetooth support
+ 
+-AC_MSG_CHECKING([for the FreeBSD/netgraph bluetooth support])
+-echo
+-AC_CACHE_CHECK(for the struct sockaddr_rfcomm in <netgraph/.../ng_btsocket.h>, ac_cv_have_sockaddr_rfcomm,
++AC_CACHE_CHECK(for struct sockaddr_rfcomm in <netgraph/.../ng_btsocket.h>, ac_cv_have_sockaddr_rfcomm,
+ 	[AC_TRY_COMPILE([#include <sys/types.h>
+ 			#include <sys/socket.h>
+ 			#include <bitstring.h>
+@@ -388,11 +388,35 @@ if test $ac_cv_have_sockaddr_rfcomm = ye
  	AC_DEFINE(HAVE_BLUETOOTH)
  	AC_DEFINE(HAVE_BLUETOOTH_NETGRAPH,[],[Compile on FreeBSD])
-+	AC_DEFINE(HAVE_SOCKADDR_LEN,[],[struct sockaddr has length field])
  	USE_BLUETOOTH="yes"
- 	AC_CHECK_LIB(bluetooth, bt_aton,
+-	AC_CHECK_LIB(bluetooth, bt_aton,
 -		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Define to 1 if you have the \`bt_aton' function.])])
-+		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Have the \`bt_aton' function.])])
++	LIBS="$LIBS -lbluetooth"
++	AC_CHECK_FUNCS(bt_aton)
 +fi
 +
 +
 +dnl ======================== Checks for NetBSD/netbt Bluetooth support
 +
-+AC_MSG_CHECKING([for the NetBSD/netbt bluetooth support])
-+echo
-+AC_CACHE_CHECK([for the struct sockaddr_bt in <bluetooth.h>], ac_cv_have_sockaddr_bt,
++AC_CACHE_CHECK([for struct sockaddr_bt in <bluetooth.h>], ac_cv_have_sockaddr_bt,
 +	[AC_TRY_COMPILE([#include <bluetooth.h>],
 +		[struct sockaddr_bt rc;],
 +		ac_cv_have_sockaddr_bt=yes,
@@ -37,10 +60,19 @@ $NetBSD: patch-aa,v 1.1 2007/02/24 13:10:31 plunky Exp $
 +if test $ac_cv_have_sockaddr_bt = yes; then
 +	AC_DEFINE(HAVE_BLUETOOTH)
 +	AC_DEFINE(HAVE_BLUETOOTH_NETBT,[],[Compile on NetBSD])
-+	AC_DEFINE(HAVE_SOCKADDR_LEN,[],[struct sockaddr has length field])
 +	USE_BLUETOOTH="yes"
-+	AC_CHECK_LIB(bluetooth, bt_aton,
-+		    [LIBS="$LIBS -lbluetooth" AC_DEFINE(HAVE_BT_ATON,[],[Have the \`bt_aton' function.])])
++	LIBS="$LIBS -lbluetooth"
++	AC_CHECK_FUNCS(bt_aton)
  fi
  
  
++dnl ======================== Check if sockaddr has length field
++
++AC_TRY_COMPILE([#include <sys/socket.h>],
++		[struct sockaddr sa; sa.sa_len;],
++		AC_DEFINE(SOCKADDR_HAS_LEN, [], [struct sockaddr has length field]))
++
++
+ dnl ======================== Checks for X base support
+ 
+ if test "$no_x" = yes -o "$with_x" = "no"; then
