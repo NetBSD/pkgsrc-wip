@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/11/19 13:03:57 shattered Exp $
-
-SHA1 (ktorrent-2.0.3.tar.gz) = 75d63e1e8f8cc5449d6f0e0b096c0425b1b807cf
-RMD160 (ktorrent-2.0.3.tar.gz) = eb0c73142ecd05a4daf255ec87f827d475cabcf8
-Size (ktorrent-2.0.3.tar.gz) = 2736562 bytes
-SHA1 (patch-aa) = fdcc454b7711138b020a278342d4d6f961f78f5d
