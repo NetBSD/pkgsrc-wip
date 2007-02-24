@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2007/02/24 21:21:15 bsadewitz Exp $
+lib/libXfontcache.la
+lib/pkgconfig/xfontcache.pc
+man/man3/FontCacheChangeCacheSettings.3
+man/man3/FontCacheGetCacheSettings.3
+man/man3/FontCacheGetCacheStatistics.3
+man/man3/FontCacheQueryExtension.3
+man/man3/FontCacheQueryVersion.3
+man/man3/Xfontcache.3
