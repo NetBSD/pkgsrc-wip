@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2006/12/28 15:25:06 cetrox Exp $
+# $NetBSD: options.mk,v 1.5 2007/02/25 17:46:58 cetrox Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ffmpeg-snapshot
-PKG_SUPPORTED_OPTIONS=  old-dist mmx i686 gsm mp3lame libogg xvid vorbis faad \
-			faac x264 a52
+PKG_SUPPORTED_OPTIONS=  old-dist mmx i686 gsm mp3lame libogg xvid vorbis \
+			faad faac x264 a52
 PKG_SUGGESTED_OPTIONS=  mp3lame libogg a52
 
 .include "../../mk/bsd.options.mk"
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--enable-libgsm
 .endif
 
 .if !empty(PKG_OPTIONS:Mmp3lame)
-CONFIGURE_ARGS+=	--enable-mp3lame
+CONFIGURE_ARGS+=	--enable-libmp3lame
 .include "../../audio/lame/buildlink3.mk"
 .endif
 
@@ -40,17 +40,17 @@ CONFIGURE_ARGS+=        --enable-xvid
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+=        --enable-vorbis
+CONFIGURE_ARGS+=        --enable-libvorbis
 .include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=        --enable-faad
+CONFIGURE_ARGS+=        --enable-libfaad
 .include "../../audio/faad2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mfaac)
-CONFIGURE_ARGS+=        --enable-faac
+CONFIGURE_ARGS+=        --enable-libfaac
 .include "../../audio/faac/buildlink3.mk"
 .endif
 
@@ -60,6 +60,6 @@ CONFIGURE_ARGS+=        --enable-x264
 .endif
 
 .if !empty(PKG_OPTIONS:Ma52)
-CONFIGURE_ARGS+=        --enable-a52
+CONFIGURE_ARGS+=        --enable-liba52
 .include "../../audio/liba52/buildlink3.mk"
 .endif
