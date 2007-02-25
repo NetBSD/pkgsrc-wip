@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/24 01:47:21 achemze Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/02/25 10:47:18 achemze Exp $
 bin/hellanzb.py
 ${PYSITELIB}/Hellanzb/Core.pyc
 ${PYSITELIB}/Hellanzb/Core.pyo
@@ -20,6 +20,8 @@ ${PYSITELIB}/Hellanzb/Log.pyc
 ${PYSITELIB}/Hellanzb/Log.pyo
 ${PYSITELIB}/Hellanzb/Logging.pyc
 ${PYSITELIB}/Hellanzb/Logging.pyo
+${PYSITELIB}/Hellanzb/NZBDownloader.pyc
+${PYSITELIB}/Hellanzb/NZBDownloader.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/ArticleDecoder.pyc
 ${PYSITELIB}/Hellanzb/NZBLeecher/ArticleDecoder.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/DupeHandler.pyc
@@ -28,8 +30,12 @@ ${PYSITELIB}/Hellanzb/NZBLeecher/NZBLeecherUtil.pyc
 ${PYSITELIB}/Hellanzb/NZBLeecher/NZBLeecherUtil.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/NZBModel.pyc
 ${PYSITELIB}/Hellanzb/NZBLeecher/NZBModel.pyo
+${PYSITELIB}/Hellanzb/NZBLeecher/NZBParser.pyc
+${PYSITELIB}/Hellanzb/NZBLeecher/NZBParser.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/NZBSegmentQueue.pyc
 ${PYSITELIB}/Hellanzb/NZBLeecher/NZBSegmentQueue.pyo
+${PYSITELIB}/Hellanzb/NZBLeecher/Protocol.pyc
+${PYSITELIB}/Hellanzb/NZBLeecher/Protocol.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/__init__.pyc
 ${PYSITELIB}/Hellanzb/NZBLeecher/__init__.pyo
 ${PYSITELIB}/Hellanzb/NZBLeecher/nntp.pyc
@@ -54,4 +60,8 @@ ${PYSITELIB}/Hellanzb/external/elementtree/SimpleXMLWriter.pyc
 ${PYSITELIB}/Hellanzb/external/elementtree/SimpleXMLWriter.pyo
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyc
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyo
-@unexec ${RM} -rf %D/${PYSITELIB}/Hellanzb 2>/dev/null
+@dirrm ${PYSITELIB}/Hellanzb/external/elementtree
+@dirrm ${PYSITELIB}/Hellanzb/external
+@dirrm ${PYSITELIB}/Hellanzb/NZBLeecher
+@dirrm ${PYSITELIB}/Hellanzb/HellaXMLRPC
+@dirrm ${PYSITELIB}/Hellanzb
