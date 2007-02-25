@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/26 00:46:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/02/25 15:47:22 shattered Exp $
 #
 
 DISTNAME=		quodlibet-0.24
@@ -16,7 +16,7 @@ DEPENDS+=		gst-plugins0.10-mad>=0.10.0:../../audio/gst-plugins0.10-mad
 DEPENDS+=		gst-plugins0.10-vorbis>=0.10.0:../../audio/gst-plugins0.10-vorbis
 DEPENDS+=		gst-plugins0.10-ogg>=0.10.0:../../multimedia/gst-plugins0.10-ogg
 
-PYTHON_VERSIONS_ACCEPTED=	24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYTHON_PATCH_SCRIPTS=	*.py */*.py
 USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake intltool
