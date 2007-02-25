@@ -1,8 +1,8 @@
---- libavcodec/Makefile.orig	2006-12-28 09:45:48.000000000 -0300
-+++ libavcodec/Makefile	2006-12-28 09:46:13.000000000 -0300
-@@ -406,7 +406,7 @@
- OBJS += $(OBJS-yes)
- ASM_OBJS += $(ASM_OBJS-yes)
+--- libavcodec/Makefile.orig	2007-02-25 13:46:27.000000000 -0300
++++ libavcodec/Makefile	2007-02-25 13:46:44.000000000 -0300
+@@ -394,7 +394,7 @@
+ 
+ OBJS-$(TARGET_ARCH_BFIN)               += bfin/dsputil_bfin.o \
  
 -EXTRALIBS := -L$(BUILD_ROOT)/libavutil -lavutil$(BUILDSUF) $(EXTRALIBS)
 +EXTRALIBS := ../libavutil/libavutil.la $(EXTRALIBS)
