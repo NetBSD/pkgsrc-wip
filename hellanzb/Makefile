@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/02/25 10:42:01 achemze Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/25 10:43:09 achemze Exp $
 #
 
 DISTNAME=		hellanzb-0.12
 CATEGORIES=		news
-MASTER_SITES=		http://www.hellanzb.com/distfiles/ \
-			http://unix.freshmeat.net/redir/hellanzb/58351/url_tgz/
+MASTER_SITES=		http://www.hellanzb.com/distfiles/ 
 DISTFILES=		${DISTNAME}.tar.gz
 
 MAINTAINER=		silicon@kalifornia.com
