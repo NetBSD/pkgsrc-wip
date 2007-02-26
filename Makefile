@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2526 2007/02/21 21:07:08 minskim Exp $
+# $Id: Makefile,v 1.2527 2007/02/26 07:56:04 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1164,6 +1164,7 @@ SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-MapUTF8
+SUBDIR+=	p5-WebService-CIA
 SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
