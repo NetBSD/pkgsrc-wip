@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/06 09:16:38 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/26 03:37:52 netcap Exp $
 
 DISTNAME=	Catalyst-Devel-1.02
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Catalyst-Plugin-Static-Simple>=0.14:../../wip/p5-Catalyst-Plugin-St
 DEPENDS+=	p5-Catalyst-Plugin-ConfigLoader>=0:../../wip/p5-Catalyst-Plugin-ConfigLoader
 DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
 DEPENDS+=	p5-Module-Install>=0.64:../../devel/p5-Module-Install
-DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
+DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
 
 PERL5_REQD+=	5.8.0
 

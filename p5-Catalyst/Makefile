@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/06 09:33:25 netcap Exp $
+# $NetBSD: Makefile,v 1.19 2007/02/26 03:37:52 netcap Exp $
 
 PKGVERSION=	5.7006
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
@@ -35,7 +35,7 @@ DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
-DEPENDS+=	p5-File-Copy-Recursive>=0:../../wip/p5-File-Copy-Recursive
+DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-Module-Install>=0.54:../../devel/p5-Module-Install
 DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
 BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
