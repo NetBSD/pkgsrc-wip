@@ -1,0 +1,5 @@
+Courierpassd is a utility for changing a user 's password from across
+a network. It uses the same protocol as poppassd to obtain user IDs
+and passwords. I use this program to allow my mail users to change
+their own passwords on my mail server from squirrelmail or roundcube,
+the webmail application I use.
