@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/12 13:47:16 rumko Exp $
+# $NetBSD: Makefile,v 1.4 2007/02/26 16:39:24 lkundrak Exp $
 
 DISTNAME=	nxclient-${NX_VER}.i386
 PKGNAME=	nx-client-bin-${NX_VER}
@@ -26,10 +26,10 @@ SUBST_SED.paths+=       -e 's,@SH@,${SH},g'
 SUBST_SED.paths+=       -e 's,@NX@,${NX},g'
 SUBST_STAGE.paths=      post-patch
 
-
-
 .include "../../emulators/suse_linux/Makefile.application"
 DEPENDS+=	suse_libpng>=9.1:../../emulators/${SUSE_DIR_PREFIX}_libpng
+DEPENDS+=	suse_compat>=9.1:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 post-extract:
 	${CP} ${FILESDIR}/${NX_SCRIPT} ${WRKDIR}/${NX_SCRIPT}
