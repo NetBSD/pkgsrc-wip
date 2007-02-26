@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+$NetBSD: patch-ae,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
 
---- sesman/Makefile.orig	2006-02-09 19:01:41.000000000 +0100
+--- sesman/Makefile.orig	2006-05-26 15:10:14.000000000 +0200
 +++ sesman/Makefile
-@@ -5,12 +5,6 @@ SESMANOBJ = sesman.o config.o tcp.o sig.
+@@ -6,20 +6,12 @@ SESMANOBJ = sesman.o config.o tcp.o sig.
  SESRUNOBJ = sesrun.o config.o tcp.o \
              os_calls.o d3des.o list.o file.o log.o
  
@@ -15,30 +15,17 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
  DEFINES = -DSESMAN_CFG_FILE=\"$(CFGDIR)/sesman.ini\" \
            -DSESMAN_PID_FILE=\"$(PIDDIR)/sesman.pid\"
  
-@@ -27,28 +21,28 @@ nopam: no-pam tools
- kerberos: kerberos-base tools
+-CFLAGS = -Wall -O2 -I../common $(DEFINES)
+-LDFLAGS = -L /usr/gnu/lib $(DEFINES)
++CFLAGS += -Wall -I../common $(DEFINES)
++LDFLAGS += -L /usr/gnu/lib $(DEFINES)
+ C_OS_FLAGS = $(CFLAGS) -c
+-CC = gcc
+-
  
- no-pam: $(SESMANOBJ) verify_user.o
--	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user.o -ldl -lcrypt
-+	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user.o -lcrypt
+ all: pam tools
  
- pam: $(SESMANOBJ) verify_user_pam.o
--	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam.o -ldl -lpam
-+	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam.o -lpam
- 
- pam_userpass: $(SESMANOBJ) verify_user_pam_userpass.o
--	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam_userpass.o -ldl -lpam -lpam_userpass
-+	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_pam_userpass.o -lpam -lpam_userpass
- 
- kerberos-base: $(SESMANOBJ) verify_user_kerberos.o
--	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_kerberos.o -ldl -lkrb5
-+	$(CC) $(LDFLAGS) -o sesman $(SESMANOBJ) verify_user_kerberos.o -lkrb5
- 
- tools: $(SESRUNOBJ)
--	$(CC) $(LDFLAGS) -o sesrun $(SESRUNOBJ) -ldl
-+	$(CC) $(LDFLAGS) -o sesrun $(SESRUNOBJ)
- 
- clean:
+@@ -46,10 +38,10 @@ clean:
  	rm -f $(SESMANOBJ) verify_user.o verify_user_pam.o verify_user_pam_userpass.o sesman sesrun.o sesrun
  
  install:
@@ -46,10 +33,32 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
 -	install sesrun $(DESTDIR)/sesrun
 -	install startwm.sh $(DESTDIR)/startwm.sh
 -	install sesman.ini $(CFGDIR)/sesman.ini
-+	$(BSD_INSTALL_PROGRAM) sesman $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM) sesrun $(PREFIX)/bin
-+	$(BSD_INSTALL_SCRIPT) startwm.sh $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA) sesman.ini $(PREFIX)/share/examples/xrdp
++	$(BSD_INSTALL_PROGRAM) sesman $(DESTDIR)/bin/sesman
++	$(BSD_INSTALL_PROGRAM) sesrun $(DESTDIR)/bin/sesrun
++	$(BSD_INSTALL_SCRIPT) startwm.sh $(DESTDIR)/bin/startwm.sh
++	$(BSD_INSTALL_DATA) sesman.ini $(CFGDIR)/sesman.ini
+ 
+ installdeb:
+ 	install sesman $(DESTDIRDEB)/usr/xrdp/sesman
+@@ -58,16 +50,16 @@ installdeb:
+ 	install sesman.ini $(DESTDIRDEB)/etc/xrdp/sesman.ini
  
  os_calls.o: ../common/os_calls.c
- 	$(CC) $(C_OS_FLAGS) ../common/os_calls.c
+-	$(CC) $(C_OS_FLAGS) ../common/os_calls.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/os_calls.c
+ 
+ d3des.o: ../common/d3des.c
+-	$(CC) $(C_OS_FLAGS) ../common/d3des.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/d3des.c
+ 
+ list.o: ../common/list.c
+-	$(CC) $(C_OS_FLAGS) ../common/list.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/list.c
+ 
+ file.o: ../common/file.c
+-	$(CC) $(C_OS_FLAGS) ../common/file.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/file.c
+ 
+ log.o: ../common/log.c
+-	$(CC) $(C_OS_FLAGS) ../common/log.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/log.c

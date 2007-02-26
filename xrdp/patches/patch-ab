@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+$NetBSD: patch-ab,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
 
---- docs/Makefile.orig	2006-02-04 19:51:05.000000000 +0100
+--- docs/Makefile.orig	2006-03-04 02:02:02.000000000 +0100
 +++ docs/Makefile
-@@ -1,10 +1,4 @@
+@@ -1,15 +1,14 @@
  
 -DESTDIR = /usr/local/xrdp
 -CFGDIR = /etc/xrdp
@@ -13,3 +13,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
  all: world
  
  world:
+ 
+ install:
++	$(BSD_INSTALL_MAN) man/sesman.8 $(MANDIR)/man8/sesman.8
++	$(BSD_INSTALL_MAN) man/sesrun.8 $(MANDIR)/man8/sesrun.8
++	$(BSD_INSTALL_MAN) man/xrdp.8 $(MANDIR)/man8/xrdp.8
++	$(BSD_INSTALL_MAN) man/sesman.ini.5 $(MANDIR)/man5/sesman.ini.5
++	$(BSD_INSTALL_MAN) man/xrdp.ini.5 $(MANDIR)/man5/xrdp.ini.5
+ 
+ installdeb:
+ 	install man/sesman.8 $(DESTDIRDEB)/usr/man/man8/sesman.8

@@ -1,4 +1,5 @@
 Replace hardcoded paths
 Write a rc.d script
-bump to 0.3.2
-
+MESSAGE
+fix bugs such as -n one
+try it

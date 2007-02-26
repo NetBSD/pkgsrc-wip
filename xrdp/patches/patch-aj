@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2007/01/26 08:12:07 lkundrak Exp $
+$NetBSD: patch-aj,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
 
---- instfiles/xrdp_control.sh.orig	2006-02-12 20:29:16.000000000 +0100
+--- instfiles/xrdp_control.sh.orig	2006-06-07 18:27:43.000000000 +0200
 +++ instfiles/xrdp_control.sh
 @@ -35,12 +35,12 @@ check_up () {
    sesup=`ps u --noheading -C $SESMAN`

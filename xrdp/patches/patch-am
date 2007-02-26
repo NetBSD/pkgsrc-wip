@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 2007/02/26 20:00:44 lkundrak Exp $
+
+--- xrdp/xrdp_login_wnd.c.orig	2006-04-29 03:47:06.000000000 +0200
++++ xrdp/xrdp_login_wnd.c
+@@ -645,7 +645,7 @@ xrdp_login_wnd_create(struct xrdp_wm* se
+ 
+   /* image */
+   but = xrdp_bitmap_create(4, 4, self->screen->bpp, WND_TYPE_IMAGE, self);
+-  xrdp_bitmap_load(but, "xrdp256.bmp", self->palette);
++  xrdp_bitmap_load(but, SHAREDIR"/xrdp256.bmp", self->palette);
+   but->parent = self->screen;
+   but->owner = self->screen;
+   but->left = self->screen->width - but->width;
+@@ -654,7 +654,7 @@ xrdp_login_wnd_create(struct xrdp_wm* se
+ 
+   /* image */
+   but = xrdp_bitmap_create(4, 4, self->screen->bpp, WND_TYPE_IMAGE, self);
+-  xrdp_bitmap_load(but, "ad256.bmp", self->palette);
++  xrdp_bitmap_load(but, SHAREDIR"/ad256.bmp", self->palette);
+   but->parent = self->login_window;
+   but->owner = self->login_window;
+   but->left = 10;

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+$NetBSD: patch-af,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
 
---- vnc/Makefile.orig	2005-12-10 02:40:09.000000000 +0100
+--- vnc/Makefile.orig	2006-03-04 02:02:06.000000000 +0100
 +++ vnc/Makefile
-@@ -1,18 +1,12 @@
+@@ -1,19 +1,12 @@
  # libvnc makefile
  VNCOBJ = vnc.o os_calls.o d3des.o
  
@@ -14,18 +14,30 @@ $NetBSD: patch-af,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
 -
  DEFINES =
  
- CFLAGS = -Wall -O2 -I../common -fPIC $(DEFINES)
+-CFLAGS = -Wall -O2 -I../common -fPIC $(DEFINES)
++CFLAGS += -Wall -I../common -fPIC $(DEFINES)
  C_OS_FLAGS = $(CFLAGS) -c
- LDFLAGS = -shared
--LIBS = -ldl
-+#LIBS = -ldl
- CC = gcc
+-LDFLAGS = -shared
++LDFLAGS += -shared
+ LIBS = -ldl
+-CC = gcc
  
  all: vnc
-@@ -30,5 +24,5 @@ d3des.o: ../common/d3des.c
- 	$(CC) $(C_OS_FLAGS) ../common/d3des.c
+ 
+@@ -24,13 +17,13 @@ clean:
+ 	rm -f $(VNCOBJ) libvnc.so
+ 
+ os_calls.o: ../common/os_calls.c
+-	$(CC) $(C_OS_FLAGS) ../common/os_calls.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/os_calls.c
+ 
+ d3des.o: ../common/d3des.c
+-	$(CC) $(C_OS_FLAGS) ../common/d3des.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/d3des.c
  
  install:
 -	install libvnc.so $(DESTDIR)/libvnc.so
-+	$(BSD_INSTALL_LIB) libvnc.so $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libvnc.so $(DESTDIR)/lib/libvnc.so
  
+ installdeb:
+ 	install libvnc.so $(DESTDIRDEB)/usr/xrdp/libvnc.so

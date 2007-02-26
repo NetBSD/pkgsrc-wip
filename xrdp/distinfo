@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.2 2007/01/26 08:12:07 lkundrak Exp $
+$NetBSD: distinfo,v 1.3 2007/02/26 20:00:44 lkundrak Exp $
 
-SHA1 (xrdp-0.2.tar.gz) = b9a5d4bdf826eaca0bd6ca43fad55e2a03633ff1
-RMD160 (xrdp-0.2.tar.gz) = 9ba085af1ac6a516d2f345575f35a3e190b55599
-Size (xrdp-0.2.tar.gz) = 157716 bytes
-SHA1 (patch-aa) = 29bed1f85b56c810eb60b30d375304efd3758584
-SHA1 (patch-ab) = 9d7403b8bb688957041f7604fcf0dd9c4e5523de
-SHA1 (patch-ac) = d848d79d9725ce33aa8d3dbdefda22e441a1d566
-SHA1 (patch-ad) = 26eb9b415ccc5eead1093e4a4a7436cca066f4b7
-SHA1 (patch-ae) = 812c30e6bde691a4e123c518a7f0a690cc17445e
-SHA1 (patch-af) = abd92569c51478a5185ffc660605671b2b8ddfd0
-SHA1 (patch-ag) = 2fb03c28b144085db2698e6dc4677fb821636241
-SHA1 (patch-ah) = f6d99c2b0cea294fe2fac119d8f1382d42748333
-SHA1 (patch-ai) = 80d989453e8553d8c602dfc0e94474453540b2cb
-SHA1 (patch-aj) = 6e426af6dd023ec17e24b8947ee9a13196a5097a
+SHA1 (xrdp-0.3.2.tar.gz) = 6689f0119c53c717de989d7f79a9e1e7c0d3598f
+RMD160 (xrdp-0.3.2.tar.gz) = 7a094653fe43524c04cfb43541bd861d75a5f3c8
+Size (xrdp-0.3.2.tar.gz) = 164273 bytes
+SHA1 (patch-aa) = 5b4108e1a2a0f60dc75ffcf79f6cdeb47124b52e
+SHA1 (patch-ab) = fbeb0a3485c87f69942770a6dced7233a90271bb
+SHA1 (patch-ac) = c2cc19f8169bbca64446589c087cc6d63d61e4c0
+SHA1 (patch-ad) = e0b3eff93ffb6d018399a5539fd7e2f64d30547c
+SHA1 (patch-ae) = 68afb29b1eb32a7b52ef483c4c7b4ee3dc53d389
+SHA1 (patch-af) = ae58c3fc047d6212573f3f314263e6ac8fc119d5
+SHA1 (patch-ag) = 20a2a786d78ed4253f5630612f55097cebef424e
+SHA1 (patch-ah) = e40d636aa9e110f8490b11adfcb630ecb99c7d89
+SHA1 (patch-ai) = b03a52ea6464c7fb0794c6e4a64f58ddc1bcc9c4
+SHA1 (patch-aj) = 7597bb522f80a59d29023cd8ba2b4cf6633bf0e3
+SHA1 (patch-ak) = 5530baf35d6162293f6028cb4ca8b543e5267d63
+SHA1 (patch-al) = a9c543fbde69f2376ec3c2ffcc5cb3cdf817d51d
+SHA1 (patch-am) = 7687456a5d7a4125964df430874b5dd9bb98fad4
+SHA1 (patch-an) = 9f4c57521dae4c7a2b29d1c1f7b2a306bc9428d2

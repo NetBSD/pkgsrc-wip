@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/04/10 15:10:00 lkundrak Exp $
+$NetBSD: patch-ai,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
 
---- sesman/env.c.orig	2005-11-13 23:06:49.000000000 +0100
+--- sesman/env.c.orig	2006-10-21 05:02:19.000000000 +0200
 +++ sesman/env.c
-@@ -82,7 +82,7 @@ env_set_user(char* username, char* passw
+@@ -80,7 +80,7 @@ env_set_user(char* username, char* passw
      {
        g_clearenv();
        g_setenv("SHELL", pw_shell, 1);
