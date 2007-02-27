@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/02/15 20:23:30 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/02/27 02:32:52 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.2.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +24,7 @@ SITES.MesaLib-${MESA_VERSION}= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 GLX_DEFINES?=	# empty
 GLX_LIBS?=	# empty
 
-GLX_OPTS?=	-O3 -ffast-math -funroll-loops
+GLX_OPTS?=	-O3 -ffast-math -funroll-loops -fomit-frame-pointer
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
 GLX_OPTS+=	-maccumulate-outgoing-args -mfpmath=sse
 .endif
@@ -37,26 +37,25 @@ GLX_LIBS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 GLX_DEFINES+=	-D__GLX_ALIGN64
 .endif
 
-XORG_XKBOUTPUTDIR?=	${VARBASE}/db/xkb
-XORG_XKBDIR?=		${LOCALBASE}/share/xkb
-XORG_XKBCOMPILED=	README.compiled
+#XORG_XKBOUTPUTDIR?=	${VARBASE}/db/xkb
+#XORG_XKBDIR?=		${LOCALBASE}/share/xkb
+#XORG_XKBCOMPILED=	README.compiled
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=		pkg-config
-USE_TOOLS+=		gmake
-USE_TOOLS+=		perl
+USE_TOOLS+=		gmake perl pkg-config
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-xkb-output=${XORG_XKBOUTPUTDIR:Q}
-CONFIGURE_ARGS+=	--with-xkb-path=${XORG_XKBDIR:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-kbd_mode
 CONFIGURE_ARGS+=	--enable-multibuffer
 CONFIGURE_ARGS+=	--enable-fontcache
 CONFIGURE_ARGS+=	--disable-dmx
+CONFIGURE_ARGS+=	--disable-xegl
+CONFIGURE_ARGS+=	--disable-xglx
+CONFIGURE_ARGS+=	--disable-xvfb
 CONFIGURE_ARGS+=	--disable-xprint
 CONFIGURE_ARGS+=	--disable-kdrive
 CONFIGURE_ARGS+=	--disable-xephyr
@@ -78,9 +77,6 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 pre-configure:
 	@${STEP_MSG} 'Fixing GL symlinks.'
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
-
-#post-install:
-# install README.compiled somewhere.
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
