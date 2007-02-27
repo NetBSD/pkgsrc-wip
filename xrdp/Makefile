@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/26 20:00:43 lkundrak Exp $
+# $NetBSD: Makefile,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
 
 DISTNAME=		xrdp-0.3.2
 CATEGORIES=		net
@@ -16,6 +16,7 @@ MAKE_ENV+=		CFGDIR=${EGDIR:Q}
 MAKE_ENV+=		PIDDIR=/var/run
 MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_ENV+=		DOCDIR=${PREFIX:Q}/share/doc/xrdp
+MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
 INSTALLATION_DIRS+=	bin share/doc/xrdp share/xrdp
 INSTALLATION_DIRS+=	${EGDIR} share/examples/pam.d

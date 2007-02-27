@@ -3,3 +3,4 @@ Write a rc.d script
 MESSAGE
 fix bugs such as -n one
 try it
+pam && kerberos optional

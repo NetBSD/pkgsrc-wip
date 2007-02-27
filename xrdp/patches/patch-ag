@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
+$NetBSD: patch-ag,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
 
 --- xrdp/Makefile.orig	2006-03-04 02:02:08.000000000 +0100
 +++ xrdp/Makefile
@@ -20,9 +20,10 @@ $NetBSD: patch-ag,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
  #CFLAGS += -DXRDP_DEBUG
  C_OS_FLAGS = $(CFLAGS) -c
 -LDFLAGS = -L/usr/gnu/lib -L../libxrdp -Wl,-rpath,.
-+LDFLAGS += -L/usr/gnu/lib -L../libxrdp -Wl,-rpath,.
- LIBS = -ldl -lpthread -lxrdp
+-LIBS = -ldl -lpthread -lxrdp
 -CC = gcc
++LDFLAGS += -L/usr/gnu/lib -L../libxrdp -Wl,-rpath,.
++LIBS = $(DLLIB) -lpthread -lxrdp
 +CPPFLAGS += -DSHAREDIR=\"$(DESTDIR)/share/xrdp\"
  
  all: xrdp
