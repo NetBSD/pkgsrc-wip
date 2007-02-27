@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/02/09 19:06:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/27 04:46:22 bsadewitz Exp $
 #
 
 DISTNAME=	openbsd-input-ws-1.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://xenocara.org/src/
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xenocara.org/
 COMMENT=	OpenBSD's wscons input driver for modular X.org
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
