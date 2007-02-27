@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2527 2007/02/26 07:56:04 netcap Exp $
+# $Id: Makefile,v 1.2528 2007/02/27 12:45:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1067,7 +1067,6 @@ SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Encode-Detect
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
-SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
