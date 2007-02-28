@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/27 22:54:17 dzoe Exp $
+# $NetBSD: Makefile,v 1.2 2007/02/28 09:46:33 lkundrak Exp $
 #
 
 DISTNAME=		uptimed-0.3.10
@@ -14,7 +14,11 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+EGDIR=			share/examples/${PKGBASE}
+INSTALLATION_DIRS=	bin sbin lib ${PKGMANDIR}/man2 ${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	share/examples/rc.d ${EGDIR}
+
 RCD_SCRIPTS=            uptimed
-CONF_FILES=		etc/uptimed.conf-dist etc/uptimed.conf
+CONF_FILES=		${EGDIR}/uptimed.conf-dist ${PKG_SYSCONFDIR}/uptimed.conf
 
 .include "../../mk/bsd.pkg.mk"
