@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2528 2007/02/27 12:45:34 thomasklausner Exp $
+# $Id: Makefile,v 1.2529 2007/02/28 06:15:37 dzoe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -163,6 +163,7 @@ SUBDIR+=	compare
 SUBDIR+=	confuse
 SUBDIR+=	cops
 SUBDIR+=	copytape
+SUBDIR+=	courierpassd
 SUBDIR+=	cpphs
 SUBDIR+=	crafty
 SUBDIR+=	cream
@@ -1587,6 +1588,7 @@ SUBDIR+=	umix
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
+SUBDIR+=	uptimed
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
