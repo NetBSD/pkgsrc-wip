@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/11/14 19:20:33 shattered Exp $
+# $NetBSD: Makefile,v 1.26 2007/02/28 11:23:45 ykomatsu Exp $
 #
 
 DISTNAME=		Zope-3.3.0c1
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.0c1/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		ykomatsu@akaumigame.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.zope.org/DevHome/Zope3/
 COMMENT=		Zope 3 Application Server
 
