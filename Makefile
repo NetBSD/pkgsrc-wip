@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2531 2007/03/01 07:39:53 netcap Exp $
+# $Id: Makefile,v 1.2532 2007/03/01 15:28:38 lkundrak Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -286,6 +286,7 @@ SUBDIR+=	flightgear
 SUBDIR+=	flightgear-base
 SUBDIR+=	fltk2
 SUBDIR+=	fluxspace
+SUBDIR+=	flv2mpeg4
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	font-alias
@@ -1629,6 +1630,7 @@ SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
 SUBDIR+=	wsmake
+SUBDIR+=	wrcs
 SUBDIR+=	wxGTK-contrib-unicode
 SUBDIR+=	wxGTK-unicode
 SUBDIR+=	xace
