@@ -1,0 +1,6 @@
+# $NetBSD: DEINSTALL.tmpl,v 1.1 2007/03/01 16:58:00 briandealwis Exp $
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} -f @JAVA_HOME@/lib/@MACHINE_ARCH@/client/classes.jsa;;
+esac

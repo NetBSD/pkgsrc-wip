@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2006/10/22 08:44:47 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.4 2007/03/01 16:58:01 briandealwis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin
-PKG_SUGGESTED_OPTIONS=		jdk15-plugin
+PKG_SUGGESTED_OPTIONS+=		jdk15-plugin
 PKG_OPTIONS_LEGACY_VARS+=	JDK15_USE_JCE:jdk15-jce
 PKG_OPTIONS_REQUIRED_GROUPS+=	mozilla
-PKG_OPTIONS_GROUP.mozilla=	firefox firefox-gtk1
-PKG_SUGGESTED_OPTIONS=		firefox
+PKG_OPTIONS_GROUP.mozilla=	firefox firefox-gtk1 firefox2
+PKG_SUGGESTED_OPTIONS+=		firefox2
 
 .include "../../mk/bsd.options.mk"
 

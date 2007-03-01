@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:45 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/01 16:58:00 briandealwis Exp $
 
 JDK_VERSION=	1.5.0
-JDK_PATCHSET_VERSION=	2
+JDK_PATCHSET_VERSION=	4
 SUN_LINUX_JDK_VERSION=	1.5.0
 
 DISTNAME=		jdk-1_5_0-src-scsl
@@ -72,7 +72,13 @@ MAKE_ENV+=		ALT_MOTIF_DIR=${MOTIFBASE:Q}
 MAKE_ENV+=		DEV_ONLY=YES
 MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
-MAKE_ENV+=		ALT_MOZILLA_PATH=${LOCALBASE:Q}
+MAKE_ENV+=		ALT_MOZILLA_HEADERS_PATH=${LOCALBASE:Q}/include/${MOZILLA}
+MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
+
+.if empty(PKG_OPTIONS:Minet6)
+MAKE_ENV+=		DONT_ENABLE_IPV6=YES
+.endif
+
 
 BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
@@ -115,6 +121,7 @@ _FETCH_MESSAGE= \
 
 MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
+MESSAGE_SUBST+=		MOZILLA=${MOZILLA}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -139,6 +146,9 @@ BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 
 .include "options.mk"
 
+INSTALL_TEMPLATES+=     ${PKGDIR}/INSTALL.tmpl
+DEINSTALL_TEMPLATES+=   ${PKGDIR}/DEINSTALL.tmpl
+
 PLIST_SRC+=		PLIST.common_end
 
 post-extract:
@@ -146,7 +156,7 @@ post-extract:
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -p0 -E -s <jdk15.patches
-	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC}/ -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
@@ -163,8 +173,6 @@ do-install:
 		${JAVA_HOME}/jre/lib/security/cacerts
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
 #		${JAVA_HOME}/jre/javaws/cacerts
-
-BROKEN=		This doesn't build yet. No bug-reports please.
 
 .include "../../mk/java-env.mk"
 .include "../../mk/motif.buildlink3.mk"

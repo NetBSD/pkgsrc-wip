@@ -1,0 +1,15 @@
+  * Test other browsers (currently tested: firefox2)
+
+  * Fix up installation without the plugin
+
+  * files/cacerts stolen from a Sun JDK 1.6 installation -- is there
+    a better source?
+
+  * Figure out why some directories aren't properly removed on
+    package deletion.
+
+  * Can we suppress all the static and inline warning messages on build?
+	modify ${WRKSRC}/hotspot/build/bsd/makefiles/gcc.make
+
+  * Stole INSTALL.tmpl and DEINSTALL.tmpl from sun-jre15 -- but these
+    don't seem to be executed.
