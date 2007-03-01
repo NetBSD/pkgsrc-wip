@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/08 14:07:58 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:14 shattered Exp $
 #
 
 DISTNAME=		MyServer-src-0.8.5
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-root-prefix=${PREFIX}
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(USE_INET6:M[yY][eE][sS])
-CONFIGURE_ARGS+=        --enable-ipv6
+CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .include "options.mk"

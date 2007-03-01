@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/06/22 20:51:58 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=		bss-0.6
 PKGREVISION=   1
-CATEGORIES=		wip security
+CATEGORIES=		security
 MASTER_SITES=		http://www.secuobs.com/
 
 MAINTAINER=		pancake@phreaker.net

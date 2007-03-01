@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/01/25 10:58:14 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:20 shattered Exp $
 #
 
 DISTNAME=		qcomicbook-0.3.4
 CATEGORIES=		graphics
 MASTER_SITES=		http://linux.bydg.org/~yogin/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org	
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://linux.bydg.org/~yogin/
 COMMENT=		Viewer for comic book archives
 

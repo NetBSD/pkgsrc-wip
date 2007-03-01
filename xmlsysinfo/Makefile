@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/04 00:14:35 haad Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:21 shattered Exp $
 #
 
 DISTNAME=	xsi-0.98.29
@@ -9,7 +9,7 @@ MAINTAINER=	haaaad@gmail.com
 HOMEPAGE=	http://xsi.kolabore.ath.cx/
 COMMENT=	System monitor that provides XML encoded stats
 
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=xmlsysinfo/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlsysinfo/}
 
 BUILDLINK_API_DEPENDS.libxml2+=   libxml2>=2.0.0
 BUILDLINK_API_DEPENDS.zlib+=	  zlib>=1.2.0
@@ -19,7 +19,7 @@ USE_LANGUAGES+=	c c++
 #DEPENDS+=	libxml2>=2.0.0:../../textproc/libxml2
 #DEPENDS+=      zlib>=1.2.0:../../devel/zlib
 
-GNU_CONFIGURE=          YES
+GNU_CONFIGURE=		YES
 #USE_LIBTOOL=            YES
 
 CONFIGURE_ARGS+= --enable-user=xsi

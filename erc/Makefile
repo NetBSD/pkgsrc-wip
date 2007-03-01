@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:38 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=	erc-5.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=erc/}
 
 MAINTAINER=	hsaliak@gmail.com
-HOMEPAGE=	http://www.emacswiki.org/cgi-bin/wiki?EmacsIRCClient
+HOMEPAGE=	http://www.emacswiki.org/cgi-bin/wiki?ERC
 COMMENT=	IRC client for Emacs
 
 USE_TOOLS+=	gmake

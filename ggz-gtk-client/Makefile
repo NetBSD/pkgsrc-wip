@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/26 17:15:02 mrohrer Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:16 shattered Exp $
 #
 
 DISTNAME=	ggz-gtk-client-0.0.14
 CATEGORIES=	wip
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14/
 
-MAINTAINER=     mrohrer@users.sourceforge.net
-HOMEPAGE=       http://www.ggzgamingzone.org
-COMMENT=        GGZ Gaming Zone libraries
+MAINTAINER=	mrohrer@users.sourceforge.net
+HOMEPAGE=	http://www.ggzgamingzone.org
+COMMENT=	GGZ Gaming Zone libraries
 
 CONFIGURE_ARGS+= --enable-debug-gdb
 

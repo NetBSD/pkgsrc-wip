@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/01/23 17:48:28 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:14 shattered Exp $
 
 PKGNAME=	Mesa-${MESA_VERSION}
-MASTER_SITES= 	# empty
+MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

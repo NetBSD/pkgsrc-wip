@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/23 13:39:05 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.20 2007/03/01 19:12:18 shattered Exp $
 #
 
 DISTNAME=	libXres-1.0.3
@@ -8,15 +8,15 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
-COMMENT=                X Resource Information Extension Library
+COMMENT=		X Resource Information Extension Library
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=            yes
-GNU_CONFIGURE=          yes
-USE_TOOLS+=             pkg-config
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
-PKGCONFIG_OVERRIDE+=    xres.pc.in
+PKGCONFIG_OVERRIDE+=	xres.pc.in
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

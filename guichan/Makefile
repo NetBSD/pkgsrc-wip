@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/06 21:18:28 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=		guichan-0.6.0-src
@@ -8,11 +8,11 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=guichan/}
 
 MAINTAINER=		Pseudo.Statistic@gmail.com
 HOMEPAGE=		http://guichan.sourceforge.net/
-COMMENT= 		Portable C++ GUI library for games
+COMMENT=	Portable C++ GUI library for games
 
-USE_TOOLS+=             gmake
-USE_LIBTOOL=            yes
-GNU_CONFIGURE=          yes
+USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 SHLIBTOOL_OVERRIDE+=	libtool
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/13 18:18:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.16 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -23,7 +23,7 @@ LDFLAGS+=		-lpthread -lintl
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--with-extractor=${BUILDLINK_PREFIX.libextractor}
-CONFIGURE_ARGS+=        --without-gtk
+CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 post-patch:

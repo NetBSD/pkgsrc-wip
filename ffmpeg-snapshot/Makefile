@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/12/28 15:17:36 cetrox Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
-PKGNAME=        ffmpeg-snapshot-${VERSION}
+PKGNAME=	ffmpeg-snapshot-${VERSION}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ffmpeg.mplayerhq.hu/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--enable-memalign-hack
 CONFIGURE_ARGS+=	--enable-swscaler
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=        --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 CONFLICTS+=	ffmpeg-devel-[0-9]*
 CONFLICTS+=	ffmpeg-[0-9]*
@@ -35,26 +35,26 @@ CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 
 .include "../../mk/bsd.prefs.mk"
 
-TODAY!=         ${DATE} -u +%Y-%m-%d
+TODAY!=		${DATE} -u +%Y-%m-%d
 
 .if exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 # Fetch the date of the snapshot from file
 .  if ${OPSYS} != "DragonFly"
-DISTDATE!=      tar jtf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+DISTDATE!=	tar jtf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
                 2>/dev/null | head -1 | cut -f 3-5 -d "-";
 .  else
 DISTDATE!=	gtar ytf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
 		2>/dev/null | head -1 | cut -f 3-5 -d "-";
 .  endif
 .else
-DISTDATE=       ${TODAY}
+DISTDATE=	${TODAY}
 .endif
 
 .include "options.mk"
 
 # Appends today's date to the build
-SRCDIR=         ffmpeg-export-${TODAY}
-VERSION!=       ${ECHO} ${TODAY} | ${SED} -e "s/-//g"
+SRCDIR=		ffmpeg-export-${TODAY}
+VERSION!=	${ECHO} ${TODAY} | ${SED} -e "s/-//g"
 
 # Checking if distfile is recent.
 .if empty(PKG_OPTIONS:Mold-dist)

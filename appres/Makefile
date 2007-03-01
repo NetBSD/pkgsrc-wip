@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/01/25 16:10:09 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:14 shattered Exp $
 #
 
 DISTNAME=	appres-1.0.1
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
 

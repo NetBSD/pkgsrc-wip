@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.prog.common,v 1.6 2007/01/03 14:29:42 cheusov Exp $
+# $NetBSD: Makefile.prog.common,v 1.7 2007/03/01 19:12:17 shattered Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -50,10 +50,10 @@ LDFLAGS+=	-lz
 LDFLAGS+=	-lbz2
 .endif
 
-MAKE_FLAGS+=    LCURS=${LCURS}
-MAKE_FLAGS+=    LCRYPT=${LCRYPT}
-MAKE_FLAGS+=    PREFIX=${PREFIX:Q}/${HLROOT}
-MAKE_FLAGS+=    UCBINST=${INSTALL}
+MAKE_FLAGS+=	LCURS=${LCURS}
+MAKE_FLAGS+=	LCRYPT=${LCRYPT}
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}/${HLROOT}
+MAKE_FLAGS+=	UCBINST=${INSTALL}
 
 .if "${NEED_LIBUXRE}" == 1
 MAKE_FLAGS+=	LUXRE="-luxre"

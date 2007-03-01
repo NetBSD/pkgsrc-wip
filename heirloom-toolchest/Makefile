@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/21 08:35:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/01 19:12:17 shattered Exp $
 
 NOT_FOR_PLATFORM+=	Interix-*-*
 
@@ -12,7 +12,7 @@ NEED_LIBCURSES=		1
 
 PKGNAME=	heirloom-toolchest-${HEIRLOOM_VER}
 
-DEPENDS+=       heirloom-doc-${HEIRLOOM_VER}:../../wip/heirloom-doc
+DEPENDS+=	heirloom-doc-${HEIRLOOM_VER}:../../wip/heirloom-doc
 
 MAKE_FLAGS+=	NO_INSTALL_INTRO=1
 

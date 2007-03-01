@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.4 2007/01/15 14:57:58 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:20 shattered Exp $
 
-DISTNAME=       libtunepimp-0.5.3
-PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=     audio devel
-MASTER_SITES=   ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
+DISTNAME=	libtunepimp-0.5.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	audio devel
+MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
                 http://ftp.musicbrainz.org/pub/musicbrainz/
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://musicbrainz.org/products/tunepimp/index.html
-COMMENT=	Python bindings for TunePimp library. 
+COMMENT=	Python bindings for TunePimp library.
 
-WRKSRC=         ${WRKDIR}/${DISTNAME}/python
+WRKSRC=		${WRKDIR}/${DISTNAME}/python
 
-PYTHON_VERSIONS_ACCEPTED=       24 23
-PY_PATCHPLIST=  yes
+PYTHON_VERSIONS_ACCEPTED=	24 23
+PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
 
 BUILD_DEPENDS+= ${PYPKGPREFIX}-ctypes-[0-9]*:../../devel/py-ctypes

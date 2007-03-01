@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/01/24 19:41:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=		bluez-gnome-0.4
-CATEGORIES=		wip
+CATEGORIES=		comms
 MASTER_SITES=		http://bluez.sourceforge.net/download/
 
 MAINTAINER=		pancake@phreaker.net

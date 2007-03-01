@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/30 14:04:58 mwicks Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:17 shattered Exp $
 
 DISTNAME=hplip-1.6.10
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	mwicks@kettering.edu
 HOMEPAGE=	http://hplip.sourceforge.net/
 COMMENT=	Drivers and utilities for HP Printers and All-in-One devices
 
-USE_TOOLS+= 	gmake
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 

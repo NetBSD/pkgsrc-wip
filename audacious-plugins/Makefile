@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/15 11:15:49 netcap Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=		audacious-plugins-1.2.5
@@ -8,11 +8,11 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://audacious-media-player.org/
-COMMENT=        	Plugins for Audacious media player
+COMMENT=	Plugins for Audacious media player
 
 GNU_CONFIGURE=		yes
-USE_TOOLS=      	gmake intltool pkg-config
-USE_LIBTOOL=    	yes
+USE_TOOLS=	gmake intltool pkg-config
+USE_LIBTOOL=	yes
 
 # From audio/bmp/Makefile:
 # XXX Workaround a crash during shutdown that happens when dlclose(3)ing
@@ -20,15 +20,15 @@ USE_LIBTOOL=    	yes
 # library is loaded, and is the one causing problems.  See PR pkg/26846
 # for more information.
 USE_LANGUAGES=		c c++
-LDFLAGS.NetBSD+=        -lstdc++ -lm
+LDFLAGS.NetBSD+=	-lstdc++ -lm
 
 # cdaudio plugin complains about missing OSS at runtime
-LDFLAGS+=               ${LIBOSSAUDIO}
+LDFLAGS+=		${LIBOSSAUDIO}
 
-CONFIGURE_ARGS+= 	--disable-amidiplug
+CONFIGURE_ARGS+=	--disable-amidiplug
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS=  arts esound gnome inet6 jack midi pulse
+PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
+PKG_SUPPORTED_OPTIONS=	arts esound gnome inet6 jack midi pulse
 
 .include "../../mk/bsd.options.mk"
 
@@ -86,8 +86,8 @@ PLIST_SUBST+=		PULSE="@comment "
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-RAWPART_cmd=            /sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
-CONFIGURE_ARGS+=        --with-dev-dsp=${DEVOSSSOUND:Q}                 \
+RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND:Q}                 \
                         --with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}   \
                         --with-cdda-dir=/cdrom/
 .endif

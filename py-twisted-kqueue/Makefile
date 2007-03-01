@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/04 19:05:16 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:20 shattered Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-twisted-kqueue-2.0
@@ -19,7 +19,7 @@ PYTHON_VERSIONS_ACCEPTED= 24 23 22
 PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}, needs OS support for kqueue(2)"
 .endif
 
-CONFLICTS+=     ${PYPKGPREFIX}-kqueue-[0-9]*
+CONFLICTS+=	${PYPKGPREFIX}-kqueue-[0-9]*
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/01 19:12:17 shattered Exp $
 
 DISTNAME=	l_cc_p_7.1.006
 PKGNAME=	icc-7.1
@@ -27,7 +27,7 @@ LINUX_BINPKG_FILES=	intel-icc7-7.1-6.${LINUX_ARCH_REQD}.rpm \
 			intel-iidb7-7.1-11.${LINUX_ARCH_REQD}.rpm \
 			intel-isubh7-7.1-6.${LINUX_ARCH_REQD}.rpm
 .else
-.error "This is unavailable for your machine!"
+PKG_FAIL_REASON=	"This is unavailable for your machine!"
 .endif
 .endif
 

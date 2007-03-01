@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 16:39:03 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/03/01 19:12:14 shattered Exp $
+lib/httpd/mod_frontpage.so
 sbin/fpexec
 sbin/fpstatic
-lib/httpd/mod_frontpage.so

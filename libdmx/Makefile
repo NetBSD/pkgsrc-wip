@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/12 09:09:11 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:18 shattered Exp $
 #
 
 DISTNAME=	libdmx-1.0.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/proto/
-COMMENT= 	Distributed, multi-headed X protocol headers from modular X.org	
+COMMENT=	Distributed, multi-headed X protocol headers from modular X.org
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

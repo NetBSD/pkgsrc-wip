@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:18 shattered Exp $
 #
 
 DISTNAME=		libpano12-2.7.0.8
@@ -11,7 +11,7 @@ HOMEPAGE=		http://panotools.sourceforge.net/
 COMMENT=		Panorama-tools is for making panoramic images from multiple pictures
 
 MAKE_FILE=		makefile.netbsd
-USE_JAVA=		YES
+USE_JAVA=		yes
 USE_PKGLOCALEDIR=	yes
 
 post-extract:

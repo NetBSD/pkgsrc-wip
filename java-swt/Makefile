@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
@@ -15,7 +15,7 @@ DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=			${WRKDIR}
 USE_JAVA2=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 kaffe
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe
 PKG_JVM_DEFAULT=	kaffe
 
 UNZIP_BIN=	${LOCALBASE}/bin/unzip

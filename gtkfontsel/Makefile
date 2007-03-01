@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/12 06:04:56 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=	gtkfontsel_1.1.orig
-PKGNAME=        ${DISTNAME:S/_/-/:S/.orig//}
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	x11 fonts
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/g/gtkfontsel/}
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://packages.debian.org/gtkfontsel
-COMMENT=        Utility for selecting X11 fonts	to the clipboard
+COMMENT=	Utility for selecting X11 fonts	to the clipboard
 
-USE_TOOLS=      gmake autoconf automake
-USE_LIBTOOL=    yes
-GNU_CONFIGURE=  yes
+USE_TOOLS=	gmake autoconf automake
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
-WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}.orig/ # Debian is strange
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.orig/ # Debian is strange
 USE_LANGUAGES=	c
 
 .include "../../x11/gtk/buildlink3.mk"

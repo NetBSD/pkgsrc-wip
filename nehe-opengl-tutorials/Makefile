@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/01 19:12:19 shattered Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -22,7 +22,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nehe.gamedev.net/
 COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} versions
 
-DIST_SUBDIR=   		nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
+DIST_SUBDIR=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
 USE_TOOLS+=		gmake
 RESTRICTED=		I am not sure if we can redistribute it
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -45,7 +45,7 @@ NEHE_OPENGL_TUT_DIR?=		share/${DISTNAME}
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk" # for lesson 21
 .else
-.error "Flavour ${NEHE_OPENGL_TUT_FLAVOUR} unknown!"
+PKG_FAIL_REASON=	"Flavour ${NEHE_OPENGL_TUT_FLAVOUR} unknown!"
 #
 # In case you want to create new Flavour: remember:
 # not found in SDL, but propably found in GLX are:

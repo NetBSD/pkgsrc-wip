@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/12 22:09:56 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=		confuse-2.5
-CATEGORIES=		wip devel
+CATEGORIES=		devel
 MASTER_SITES=		http://download.savannah.gnu.org/releases/confuse/
 
 MAINTAINER=		pancake@phreaker.net

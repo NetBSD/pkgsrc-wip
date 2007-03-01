@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/10 13:39:11 d_sieger Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/01 19:12:20 shattered Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 .include "../../mk/compiler.mk"
@@ -11,7 +11,7 @@ COMMENT=		Xfce panel
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
 
-# If using gcc-4, compile the panel launcher without 
+# If using gcc-4, compile the panel launcher without
 # GCC optimization. See
 # http://bugzilla.xfce.org/show_bug.cgi?id=2262
 

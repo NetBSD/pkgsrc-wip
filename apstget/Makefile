@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/10 14:08:25 poppnk Exp $
+# $NetBSD: Makefile,v 1.31 2007/03/01 19:12:15 shattered Exp $
 
 DISTNAME=	apstget-20060410
 CATEGORIES=	pkgtools
@@ -20,7 +20,7 @@ NO_BUILD=	yes
 CONF_FILES=	apstget.conf ${PKG_SYSCONFDIR}/apstget.conf
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	cp -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${PREFIX}/bin/apstget

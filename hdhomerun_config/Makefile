@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 19:11:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=	libhdhomerun_20070204
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/libhdhomerun
 BUILD_TARGET=	hdhomerun_config
 USE_LANGUAGES+=	c
 
-INSTALLATION_DIRS=      bin
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hdhomerun_config ${PREFIX}/bin/hdhomerun_config

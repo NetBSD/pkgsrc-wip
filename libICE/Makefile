@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/23 06:12:52 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.25 2007/03/01 19:12:17 shattered Exp $
 #
 
 DISTNAME=	libICE-1.0.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/
 COMMENT=	Inter-client exchange (ICE) library for modular X.org
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CPPFLAGS+=	-D_NETBSD_SOURCE
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/05 03:01:34 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:21 shattered Exp $
 #
 
 DISTNAME=	xkeyboard-config-0.9
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake intltool
 
-CONFIGURE_ARGS+=	--disable-xkbcomp-symlink 
+CONFIGURE_ARGS+=	--disable-xkbcomp-symlink
 CONFIGURE_ARGS+=	--with-xkb-base=${PREFIX}/share/X11/xkb
 
 .include "../../mk/bsd.pkg.mk"

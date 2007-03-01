@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/03 22:44:30 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:15 shattered Exp $
 #
 
 DISTNAME=		gdhcpd-0.3.1
@@ -17,7 +17,7 @@ BUILD_DEFS+=		DHCPD_BINARY
 BUILD_DEFS+=		DHCPD_CONF
 BUILD_DEFS+=		LEASE_FILE
 
-USE_DIRS+=		xgd-1.1
+USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 
