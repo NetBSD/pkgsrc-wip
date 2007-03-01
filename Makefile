@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2530 2007/03/01 03:20:42 netcap Exp $
+# $Id: Makefile,v 1.2531 2007/03/01 07:39:53 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -700,6 +700,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
 SUBDIR+=	libmcs
+SUBDIR+=    libmms
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
