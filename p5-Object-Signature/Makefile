@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/07 19:56:12 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/01 16:08:06 netcap Exp $
 
-DISTNAME=	Object-Signature-1.03
+DISTNAME=	Object-Signature-1.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
