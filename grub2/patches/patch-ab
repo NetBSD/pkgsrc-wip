@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2007/01/25 05:24:18 lkundrak Exp $
+$NetBSD: patch-ab,v 1.7 2007/03/02 07:40:54 lkundrak Exp $
 
---- Makefile.in.orig	2007-01-25 06:07:24.000000000 +0100
+--- Makefile.in.orig	2006-12-13 23:30:19.000000000 +0100
 +++ Makefile.in
-@@ -52,6 +52,7 @@ INSTALL_DATA = @INSTALL_DATA@
+@@ -52,11 +52,12 @@ INSTALL_DATA = @INSTALL_DATA@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
  INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
  
@@ -10,7 +10,23 @@ $NetBSD: patch-ab,v 1.6 2007/01/25 05:24:18 lkundrak Exp $
  mkinstalldirs = $(srcdir)/mkinstalldirs
  
  CC = @CC@
-@@ -139,18 +140,18 @@ install-local: all
+ CFLAGS = @CFLAGS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -Wl,-R$(PREFIX)/lib @LDFLAGS@
+ CPPFLAGS = @CPPFLAGS@ -I. -Iinclude -I$(srcdir)/include -Wall -W \
+ 	 -DGRUB_LIBDIR=\"$(pkglibdir)\"
+ TARGET_CC = @TARGET_CC@
+@@ -76,6 +77,9 @@ YACC = @YACC@
+ # Options.
+ enable_grub_emu = @enable_grub_emu@
+ 
++LIBARGP = @LIBARGP@
++LIBMALLOC = @LIBMALLOC@
++
+ ### General variables.
+ 
+ RMKFILES = $(addprefix conf/,common.rmk i386-pc.rmk powerpc-ieee1275.rmk \
+@@ -137,18 +141,18 @@ install-local: all
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
  	@list='$(bin_UTILITIES)'; for file in $$list; do \
  	  if test -f "$$file"; then dir=; else dir="$(srcdir)"; fi; \
@@ -32,7 +48,7 @@ $NetBSD: patch-ab,v 1.6 2007/01/25 05:24:18 lkundrak Exp $
  	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sbindir)/$$dest; \
  	done
  
-@@ -164,11 +165,11 @@ uninstall:
+@@ -162,11 +166,11 @@ uninstall:
  	  rm -f $(DESTDIR)$(pkglibdir)/$$dest; \
  	done
  	@list='$(bin_UTILITIES)'; for file in $$list; do \
