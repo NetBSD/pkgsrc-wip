@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:51:29 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/02 08:48:51 thomasklausner Exp $
 
 # Notes to package maintainers:
 #
@@ -25,24 +25,23 @@ CONFIGURE_ARGS+=	--with-mtree=${MTREE:Q}
 CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
 CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
 
-NO_PKGTOOLS_REQD_CHECK=	# defined
+SKIP_AUDIT_PACKAGES=	yes
+NO_PKGTOOLS_REQD_CHECK=	yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
-# Removing this package would break pkgsrc, so allow this package to
-# reinstall over itself.
-# XXX need to figure out a way not to have multiple pkg entries for old ones.
-FORCE_PKG_REGISTER=	# defined
-PKG_PRESERVE=		# defined
+PKG_PRESERVE=		yes
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
 # newer features of pkg_install, but older NetBSD installations won't
 # support them.  In this case, we explicitly use the native GCC
 # compiler to avoid problems with depending on pkgsrc GCC for building
-# pkg_install.  We also avoid building digest as that would involve
-# using the newer pkg_install tools.
+# pkg_install.
+#
+# We also use the newly built pkg_delete since upgrading from an older
+# pkg_install might required features of the new program.
 #
 USE_NATIVE_GCC=		yes
-USE_DIGEST=		no
+PKG_DELETE=		${WRKSRC}/delete/pkg_delete
 
 PLIST_SUBST+=		MANDIR=${MANDIR:Q}
 PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}
@@ -67,8 +66,24 @@ PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
+
+# XXX This breaks for those who set their own LOCALBASE to "/usr" and also
+# XXX set PKGMANDIR to be other than "share/man".
+# XXX
+.if !empty(PKG_TOOLS_PREFIX:M/usr)
+PKGMANDIR=		share/man
+.endif
+
+# If ${PKG_TOOLS_PREFIX} doesn't match ${LOCALBASE}, then don't run
+# check-files since it's likely ${PKG_TOOLS_PREFIX} contains directories
+# that shouldn't be checked.
+#
+.if ${PKG_TOOLS_PREFIX} != ${LOCALBASE}
+CHECK_FILES_SUPPORTED=	no
+.endif
 
 do-extract:
 	@${CP} -R ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
@@ -83,14 +98,15 @@ post-install:
 		${PKG_ADMIN} rebuild;					\
 	fi
 
+# XXX Reverse the order that update does things since
+# XXX we need pkg_delete built before we can deinstall.
+# XXX This should probably be the default order for all packages.
+update:
+	${MAKE}
+	${MAKE} deinstall _UPDATE_RUNNING=YES
+	${MAKE} ${UPDATE_TARGET}
+	${MAKE} clean
+
 .include "../../mk/bsd.pkg.mk"
 
-PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
-.if ${PREFIX} == "/usr"
-# XXX This should be fixed to use _MAN_DIR
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/man
-MANDIR=			share/
-.else
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
-MANDIR=			# empty
-.endif
+PREFIX:=	${PKG_TOOLS_PREFIX}
