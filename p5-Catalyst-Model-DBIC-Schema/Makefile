@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/06 09:21:15 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/03 10:25:17 netcap Exp $
 
 DISTNAME=	Catalyst-Model-DBIC-Schema-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -12,9 +12,10 @@ COMMENT=	DBIx::Class::Schema Model Class
 DEPENDS+=	p5-Catalyst>=5.64:../../wip/p5-Catalyst
 DEPENDS+=	p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Accessor>=0.02:../../wip/p5-Class-Data-Accessor
-DEPENDS+=	p5-DBIx-Class>=0.05007:../../wip/p5-DBIx-Class
+DEPENDS+=	p5-DBIx-Class>=0.07:../../wip/p5-DBIx-Class
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
-DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.02007:../../wip/p5-DBIx-Class-Schema-Loader
+DEPENDS+=	p5-Catalyst-Devel>=1:../../wip/p5-Catalyst-Devel
+DEPENDS+=	p5-DBIx-Class-Schema-Loader>=0.03006:../../wip/p5-DBIx-Class-Schema-Loader
 BUILD_DEPENDS+= {perl>=5.7.3,p5-Test-Simple>=0.32}:../../devel/p5-Test-Simple
 
 PERL5_MODULE_TYPE=	Module::Build
