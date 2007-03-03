@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 18:02:38 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/03 06:59:19 netcap Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-State-URI-0.02
+DISTNAME=	Catalyst-Plugin-Session-State-URI-0.07
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -9,12 +9,15 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-State-URI/
 COMMENT=	Saves Catalyst Session IDs by rewriting URIs
 
-DEPENDS+=	p5-Catalyst-Plugin-Session>=0.01:../../wip/p5-Catalyst-Plugin-Session
+DEPENDS+=	p5-Catalyst-Plugin-Session>=0.06:../../wip/p5-Catalyst-Plugin-Session
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-HTML-TokeParser-Simple>=0:../../wip/p5-HTML-TokeParser-Simple
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
+DEPENDS+=	p5-Test-MockObject>=1.01:../../wip/p5-Test-MockObject
+DEPENDS+=	p5-URI>=0:../../www/p5-URI
+DEPENDS+=	p5-URI-Find>=0:../../wip/p5-URI-Find
 
-PERL5_MODULE_TYPE=	Module::Build
+# PERL5_MODULE_TYPE=	Module::Build
 
 PERL5_REQD+=	5.8.1
 
