@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
+$NetBSD: distinfo,v 1.3 2007/03/03 15:22:17 shattered Exp $
 
-SHA1 (qico-0.48.5.tar.gz) = 2c5aba404d1cdc3037ac2bbf0bb6cedfc165995e
-RMD160 (qico-0.48.5.tar.gz) = dae47578d698a477b0f599fa2866f8a1db9e5df6
-Size (qico-0.48.5.tar.gz) = 103893 bytes
-SHA1 (patch-aa) = fded64b6b898d22b7b49ccaf137e92cb9b5a822d
-SHA1 (patch-ab) = 6e8b4f3c7134fe8244d3b6c6fcbf1fb20434aa40
-SHA1 (patch-ac) = 9d64e7c1a82f0212561d86d6196a208c01fc6f09
-SHA1 (patch-ad) = 02a6e510116f1e7821de6d3239ce62d7cba4543e
-SHA1 (patch-ae) = e070a585670d46faa68d366797268b48dad4c0ea
+SHA1 (qico-0.55si.tar.bz2) = 25c3c5612c9eaacb2d61c1f45f8b488e21b109f1
+RMD160 (qico-0.55si.tar.bz2) = 9f223d59466f7940c64760774369c029504d16ee
+Size (qico-0.55si.tar.bz2) = 266992 bytes
