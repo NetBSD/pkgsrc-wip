@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2533 2007/03/01 18:49:49 shattered Exp $
+# $Id: Makefile,v 1.2534 2007/03/03 09:57:18 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1092,6 +1092,7 @@ SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-JSON
 SUBDIR+=	p5-Jcode
+SUBDIR+=	p5-Lingua-EN-Inflect-Number
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
 SUBDIR+=	p5-Lingua-Stem-Fr
