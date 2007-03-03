@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/03 20:18:51 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2007/03/03 04:58:04 netcap Exp $
 
-SHA1 (Catalyst-Log-Log4perl-0.1.tar.gz) = 857fb84150708eccf4341e76a3b2abbcb164d274
-RMD160 (Catalyst-Log-Log4perl-0.1.tar.gz) = c8f30aec6e199fbb31446cbc60ad8c8a010beb17
-Size (Catalyst-Log-Log4perl-0.1.tar.gz) = 2870 bytes
+SHA1 (Catalyst-Log-Log4perl-0.4.tar.gz) = c9b3eab6dd7e278df298c27502d3c53273706a78
+RMD160 (Catalyst-Log-Log4perl-0.4.tar.gz) = e10f7a2b3dcc52b635ab0db5df57a5c14a0bfce0
+Size (Catalyst-Log-Log4perl-0.4.tar.gz) = 3992 bytes
