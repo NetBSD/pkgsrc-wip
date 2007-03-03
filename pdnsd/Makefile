@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/03 21:52:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/03 22:07:35 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.5-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -36,6 +36,8 @@ PDNSD_GROUP?=		pdnsd
 PKG_GROUPS=		${PDNSD_GROUP}
 PKG_USERS=		${PDNSD_USER}:${PDNSD_GROUP}
 PKG_GECOS.${PDNSD_USER}=	proxy\ DNS\ server\ user
+
+RCD_SCRIPTS=		pdnsd
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			share/examples/pdnsd
