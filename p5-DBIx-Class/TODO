@@ -1,1 +1,0 @@
-This package depends on databases/p5-SQL-Abstract >= 1.2, make sure pkgsrc has version 1.2 or higher of that package.
