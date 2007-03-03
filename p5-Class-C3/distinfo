@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/04/07 20:14:29 kuli0020 Exp $
+$NetBSD: distinfo,v 1.3 2007/03/03 08:47:28 netcap Exp $
 
-SHA1 (Class-C3-0.11.tar.gz) = 745d3a47df0286646fce63ec9adff49d33a4960c
-RMD160 (Class-C3-0.11.tar.gz) = 455310d264c548102439aae2cce35b6fb5b55714
-Size (Class-C3-0.11.tar.gz) = 14382 bytes
+SHA1 (Class-C3-0.14.tar.gz) = f9035fd44f871374a52956c3da33a0d710dff269
+RMD160 (Class-C3-0.14.tar.gz) = c82653df657f4611e9ceadd6fccfde3dbd9e98d7
+Size (Class-C3-0.14.tar.gz) = 15881 bytes
