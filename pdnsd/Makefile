@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/03 21:41:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/03 21:52:25 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.5-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -25,6 +25,17 @@ CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-src-addr-disc
 .endif
+
+PDNSD_USER?=		pdnsd
+.if ${OPSYS} == "Interix"
+PDNSD_GROUP?=		nogroup
+.else
+PDNSD_GROUP?=		pdnsd
+.endif
+
+PKG_GROUPS=		${PDNSD_GROUP}
+PKG_USERS=		${PDNSD_USER}:${PDNSD_GROUP}
+PKG_GECOS.${PDNSD_USER}=	proxy\ DNS\ server\ user
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			share/examples/pdnsd
