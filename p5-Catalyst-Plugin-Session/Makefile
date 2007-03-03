@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/02/06 09:30:22 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/03 06:26:17 netcap Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-0.13
+DISTNAME=	Catalyst-Plugin-Session-0.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-module/Catalyst/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session/
 COMMENT=	Generic Catalyst Session plugin
 PERL5_REQD+=	5.8.1
 
-DEPENDS+=	p5-Catalyst>=5.50:../../wip/p5-Catalyst
+DEPENDS+=	p5-Catalyst>=5.49:../../wip/p5-Catalyst
 DEPENDS+=	p5-Test-MockObject>=1.01:../../wip/p5-Test-MockObject
 DEPENDS+=	p5-Digest>=0:../../security/p5-Digest
 DEPENDS+=	p5-Object-Signature>=0:../../wip/p5-Object-Signature
