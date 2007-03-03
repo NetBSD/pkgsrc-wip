@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/10 17:54:50 kuli0020 Exp $
+$NetBSD: distinfo,v 1.2 2007/03/03 10:15:52 netcap Exp $
 
-SHA1 (Class-Data-Accessor-0.02.tar.gz) = b44e7c19440a30463e79e7145b5f18b47ed4ec7b
-RMD160 (Class-Data-Accessor-0.02.tar.gz) = ffd13046d21fea83c01849f0c588064e9e973a1e
-Size (Class-Data-Accessor-0.02.tar.gz) = 4683 bytes
+SHA1 (Class-Data-Accessor-0.03.tar.gz) = 30cc2963b4168f19edb3d4ff07a2cec3209727d7
+RMD160 (Class-Data-Accessor-0.03.tar.gz) = a33df2b44c3e148af8e5786c82e1f163fd0bb3e2
+Size (Class-Data-Accessor-0.03.tar.gz) = 5195 bytes
