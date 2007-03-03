@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:52 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/03 11:15:49 netcap Exp $
 
-DISTNAME=	Task-Catalyst-1.70
+DISTNAME=	Task-Catalyst-1.90
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/S/SR/SRI/}
