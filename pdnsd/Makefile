@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/21 09:47:19 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/03 21:41:02 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.5-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -20,6 +20,10 @@ USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 .if ${OPSYS} == "IRIX" || ${OPSYS} == "Dragonfly"
 CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--disable-src-addr-disc
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
