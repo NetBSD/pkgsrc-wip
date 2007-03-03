@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/24 11:40:08 dillo Exp $
+# $NetBSD: Makefile,v 1.23 2007/03/03 11:05:56 shattered Exp $
 #
 
 DISTNAME=		ZSNESS_1012
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake autoconf automake
 USE_LANGUAGES=		c c++
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.1
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 
 .include "../../mk/bsd.prefs.mk"
 

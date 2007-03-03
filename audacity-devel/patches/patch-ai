@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2006/03/09 10:13:29 ghen Exp $
+$NetBSD: patch-ai,v 1.2 2007/03/03 10:53:15 shattered Exp $
 
 --- lib-src/soundtouch/source/SoundTouch/cpu_detect_x86_gcc.cpp.orig	2005-07-22 17:07:42.000000000 +0000
 +++ lib-src/soundtouch/source/SoundTouch/cpu_detect_x86_gcc.cpp

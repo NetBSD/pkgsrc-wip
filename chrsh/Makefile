@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:41 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/03 10:56:11 shattered Exp $
 #
 
 DISTNAME=	chrsh
@@ -14,11 +14,11 @@ COMMENT=	Chroot jail wrapper for ordinary Unix shells
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${CP} $${extract_file} .
 
-RCS_HEAD=	$$NetBSD: Makefile,v 1.6 2006/10/29 08:32:41 shattered Exp $$
+RCS_HEAD=	$$NetBSD: Makefile,v 1.7 2007/03/03 10:56:11 shattered Exp $$
 
 do-build:
 	cd ${WRKSRC} && \
-	cc -o chrsh chrsh.c
+	${CC} -o chrsh chrsh.c
 
 pre-install:
 	${SED} -e 's:@PREFIX@:@RCS@:' \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/12 16:28:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/03 10:56:11 shattered Exp $
 #
 
 DISTNAME=		bub-n-bros-1.1
@@ -16,7 +16,7 @@ PY_PATCHPLIST=		yes
 MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
 
-PYTHON_VERSIONS_ACCEPTED= 23 23pth 22 22pth
+PYTHON_VERSIONS_ACCEPTED= 23 22 
 
 PYTHON_PATCH_SCRIPTS=	pclient-pygame.py
 PYTHON_PATCH_SCRIPTS+=	pclient-slow-X.py

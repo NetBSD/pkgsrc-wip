@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/28 17:14:41 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/03 11:05:56 shattered Exp $
 #
 
 DISTNAME=	wide-dhcpv6-20061016
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		dhcp6*8 dhcp6*5
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 

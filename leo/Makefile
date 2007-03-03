@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/03 16:59:13 dhowland Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/03 11:00:18 shattered Exp $
 #
 
 DISTNAME=		leo-4-4-2-1-final
@@ -18,7 +18,7 @@ PYTHON_PATCH_SCRIPTS=	src/leo.py scripts/LinixInstall.py
 
 EXTRACT_OPTS_ZIP=	-aqo
 
-PYCOMPILEALL=   ${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 post-extract:
 	${RM} -rf ${WRKSRC:Q}/scripts/CVS
