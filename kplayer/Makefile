@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/10/28 21:27:18 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/04 18:46:52 shattered Exp $
 #
 
-DISTNAME=		kplayer-0.5.3
+DISTNAME=		kplayer-0.6.0
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kplayer/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,6 +15,11 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf automake perl
+AUTOMAKE_OVERRIDE=	no
+
+pre-configure:
+	cd ${WRKSRC} && gmake -f Makefile.dist
 
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"

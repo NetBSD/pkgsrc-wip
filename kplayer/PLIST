@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/27 10:02:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/04 18:46:52 shattered Exp $
 bin/kplayer
-lib/kde3/kfile_kplayer.la
 lib/kde3/libkplayerpart.la
 share/doc/kde/HTML/da/kplayer/basics.docbook
 share/doc/kde/HTML/da/kplayer/commands.docbook
@@ -152,7 +151,6 @@ share/icons/hicolor/64x64/apps/kplayer.png
 share/icons/locolor/16x16/apps/kplayer.png
 share/icons/locolor/22x22/apps/kplayer.png
 share/icons/locolor/32x32/apps/kplayer.png
-share/kde/applnk/Multimedia/kplayer.desktop
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/brightness.png
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/contrast.png
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/fileopen.png
@@ -219,13 +217,7 @@ share/kde/apps/kplayer/icons/hicolor/32x32/actions/window_fullscreen.png
 share/kde/apps/kplayer/input.conf
 share/kde/apps/kplayer/kplayerpartui.rc
 share/kde/apps/kplayer/kplayerui.rc
-share/kde/services/kfile_kplayer.desktop
 share/kde/services/kplayerpart.desktop
-share/kde/services/mms.protocol
-share/kde/services/mmst.protocol
-share/kde/services/mmsu.protocol
-share/kde/services/pnm.protocol
-share/kde/services/rtsp.protocol
 share/locale/ca/LC_MESSAGES/kplayer.mo
 share/locale/cs/LC_MESSAGES/kplayer.mo
 share/locale/da/LC_MESSAGES/kplayer.mo
