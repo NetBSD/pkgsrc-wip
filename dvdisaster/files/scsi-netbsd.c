@@ -19,6 +19,9 @@
  *  or direct your browser at http://www.gnu.org.
  */
 
+/* NetBSD support by Sergey Svishchev <svs@ropnet.ru>. 
+ */
+
 #include "dvdisaster.h"
 
 #include "scsi-layer.h"
@@ -35,25 +38,26 @@
 
 char* DefaultDevice()
 {  DeviceHandle *dh;
-   GDir *dir;
-   char *disknames, *p;
+   char *disknames, *p, raw;
    int dev_type, sysctl_mib[2];
    size_t sysctl_len;
+
+   raw = 'a' + getrawpartition();
 
    sysctl_mib[0] = CTL_HW;
    sysctl_mib[1] = HW_DISKNAMES;
    if (-1 == sysctl(sysctl_mib, 2, NULL, &sysctl_len, NULL, 0)) {
      PrintLog("Failed to get value of sysctl `hw.disknames'\n");
-     return g_strdup("/dev/cdrom");
+     return g_strdup("no_drives");
    }
    if (!(disknames = g_malloc(sysctl_len))) {
      PrintLog("Out of memory constructing scan device list\n");
-     return g_strdup("/dev/cdrom");
+     return g_strdup("no_drives");
    }
    if (-1 == sysctl(sysctl_mib, 2, disknames, &sysctl_len, NULL, 0)) {
      PrintLog("Failed to get value of sysctl `hw.disknames'\n");
      g_free(disknames);
-     return g_strdup("/dev/cdrom");
+     return g_strdup("no_drives");
    }
 
    dh = g_malloc(sizeof(DeviceHandle));
@@ -63,7 +67,7 @@ char* DefaultDevice()
      if(!strncmp(p,"cd",2))
      { char buf[80];
 
-       sprintf(buf,"/dev/r%sd", p); 
+       sprintf(buf,"/dev/r%s%c", p, raw);
 
        memset(dh, 0, sizeof(DeviceHandle));
        dh->fd = open(buf, O_RDONLY | O_NONBLOCK);
@@ -79,7 +83,7 @@ char* DefaultDevice()
 	 continue;
 
        g_ptr_array_add(Closure->deviceNodes, g_strdup(buf));
-       sprintf(buf, "%s (/dev/r%sd)", dh->devinfo, p);
+       sprintf(buf, "%s (/dev/r%s%c)", dh->devinfo, p, raw);
        g_ptr_array_add(Closure->deviceNames, g_strdup(buf));
      }
    }
@@ -92,7 +96,7 @@ char* DefaultDevice()
    {  PrintLog(_("No CD/DVD drives found.\n"
 		  "No drives will be pre-selected.\n"));
 
-      return g_strdup("/dev/cdrom");
+      return g_strdup("no_drives");
    }
 }
 
@@ -134,12 +138,14 @@ int SendPacket(DeviceHandle *dh, unsigned char *cmd, int cdb_size, unsigned char
 {  struct scsireq sc;
    int rc;
 
+   /* prepare the scsi request */
+
    memset(&sc, 0, sizeof(sc));
    memcpy(sc.cmd, cmd, cdb_size);
    sc.cmdlen = cdb_size;
    sc.databuf = (char *)buf;
    sc.datalen = size;
-   sc.senselen = 24;			/* what */
+   sc.senselen = 24;			/* Maybe SENSEBUFLEN would be better? -cg */
    sc.timeout = 60000;			/* linux uses 5000 = 5 * HZ */
 
    switch(data_mode)
@@ -150,10 +156,30 @@ int SendPacket(DeviceHandle *dh, unsigned char *cmd, int cdb_size, unsigned char
 	Stop(_("illegal data_mode: %d"),data_mode);
    }
 
+   /* Send the request and save the sense data. */
+
    rc = ioctl(dh->fd, SCIOCCOMMAND, &sc);
-   if (rc < 0)
-      return rc;
    memcpy(sense, sc.sense, sc.senselen_used);
-   return 0;
+
+   /* See what we've got back */
+
+   if(rc<0) return rc;    /* does not happen on SCSI errors */
+
+   switch(sc.retsts)
+   {  case SCCMD_OK:	  /* everything went fine */  
+       	  return 0;   	
+      case SCCMD_TIMEOUT: /* we don't know how to handle that yet */
+	  PrintLog("SendPacket() - SCSI timeout\n");
+	  return -1;
+      case SCCMD_BUSY:    /* same here */
+	  PrintLog("SendPacket() - target busy\n");
+	  return -1;
+      case SCCMD_SENSE:   /* SCSI error occurred, sense data available */
+	  return -1;
+      default:            /* something other went wrong */
+	  return -1;
+   }
+
+   return -1; /* unreachable */
 }
 #endif /* SYS_NETBSD */
