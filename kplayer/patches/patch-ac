@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2007/03/04 19:25:07 shattered Exp $
+
+--- admin/cvs.sh.orig	2006-08-25 16:28:08.000000000 +0000
++++ admin/cvs.sh
+@@ -68,13 +68,13 @@ case $AUTOMAKE_STRING in
+     echo "*** KDE requires automake $required_automake_version"
+     exit 1
+     ;;
+-  automake*1.6.* | automake*1.7* | automake*1.8* | automake*1.9*)
++  automake*1.6.* | automake*1.7* | automake*1.8* | automake*1.9* | automake*1.10*)
+     echo "*** $AUTOMAKE_STRING found."
+     UNSERMAKE=no
+     ;;
+   "" )
+     echo "*** AUTOMAKE NOT FOUND!."
+-    echo "*** KDE requires automake $required_automake_version"
++    echo "*** KDE requires automake $required_automake_version, you have '$AUTOMAKE'"
+     exit 1
+     ;;
+   *unsermake* ) :
