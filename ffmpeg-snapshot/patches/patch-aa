@@ -1,8 +1,8 @@
---- Makefile.orig	2007-02-25 11:27:58.000000000 -0300
-+++ Makefile	2007-02-25 13:40:39.000000000 -0300
-@@ -52,11 +52,11 @@
- OBJS = ffmpeg.o ffserver.o cmdutils.o ffplay.o
- SRCS = $(OBJS:.o=.c) $(ASM_OBJS:.o=.s)
+--- Makefile.orig	2007-03-04 11:10:08.000000000 -0300
++++ Makefile	2007-03-04 11:16:13.000000000 -0300
+@@ -42,11 +42,11 @@
+ 
+ SRCS = ffmpeg.c ffserver.c cmdutils.c ffplay.c
  LDFLAGS := -L$(BUILD_ROOT)/libavformat -L$(BUILD_ROOT)/libavcodec -L$(BUILD_ROOT)/libavutil $(LDFLAGS)
 -EXTRALIBS := -lavformat$(BUILDSUF) -lavcodec$(BUILDSUF) -lavutil$(BUILDSUF) $(EXTRALIBS)
 +EXTRALIBS := libavformat/libavformat.la libavcodec/libavcodec.la libavutil/libavutil.la $(EXTRALIBS)
@@ -13,46 +13,46 @@
 +EXTRALIBS+=libswscale/libswscale.la
  endif
  
- all: lib $(PROGS) $(VHOOK) $(DOC)
-@@ -72,14 +72,18 @@
+ all: lib $(PROGS)
+@@ -62,14 +62,17 @@
  	$(MAKE) -C libswscale  all
  endif
  
 -ffmpeg_g$(EXESUF): ffmpeg.o cmdutils.o .libs
 -	$(CC) $(LDFLAGS) -o $@ ffmpeg.o cmdutils.o $(EXTRALIBS)
-+ffmpeg$(EXESUF): ffmpeg.o cmdutils.o .ffmpeglibs
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffmpeg.o cmdutils.o \
-+	$(EXTRALIBS)
-+
-+ffserver$(EXESUF): ffserver.o .ffmpeglibs
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(FFSERVERLDFLAGS) -o $@ \
-+	ffserver.o $(EXTRALIBS)
-+
-+ffplay$(EXESUF): ffplay.o cmdutils.o .ffmpeglibs
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffplay.o cmdutils.o \
-+	$(EXTRALIBS) $(SDL_LIBS)
- 
+-
 -ffserver$(EXESUF): ffserver.o .libs
 -	$(CC) $(LDFLAGS) $(FFSERVERLDFLAGS) -o $@ ffserver.o $(EXTRALIBS)
 -
 -ffplay_g$(EXESUF): ffplay.o cmdutils.o .libs
 -	$(CC) $(LDFLAGS) -o $@ ffplay.o cmdutils.o $(EXTRALIBS) $(SDL_LIBS)
++ffmpeg$(EXESUF): ffmpeg.o cmdutils.o .ffmpeglibs
++       $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffmpeg.o cmdutils.o \
++       $(EXTRALIBS)
++
++ffserver$(EXESUF): ffserver.o .ffmpeglibs
++       $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(FFSERVERLDFLAGS) -o $@ \
++       ffserver.o $(EXTRALIBS)
++
++ffplay$(EXESUF): ffplay.o cmdutils.o .ffmpeglibs
++       $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ ffplay.o cmdutils.o \
++       $(EXTRALIBS) $(SDL_LIBS)
  
  %$(EXESUF): %_g$(EXESUF)
  	cp -p $< $@
-@@ -93,8 +97,9 @@
+@@ -83,8 +86,9 @@
  version.h:
  	$(SRC_PATH)/version.sh $(SRC_PATH)
  
 -output_example$(EXESUF): output_example.o .libs
 -	$(CC) $(LDFLAGS) -o $@ output_example.o $(EXTRALIBS)
 +output_example$(EXESUF): output_example.o .ffmpeglibs
-+	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ output_example.o \
-+	$(EXTRALIBS)
++       $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ output_example.o \
++       $(EXTRALIBS)
  
  qt-faststart$(EXESUF): qt-faststart.c
  	$(CC) $(CFLAGS) $< -o $@
-@@ -110,7 +115,7 @@
+@@ -100,7 +104,7 @@
  %.o: %.c
  	$(CC) $(CFLAGS) -c -o $@ $<
  
@@ -61,7 +61,7 @@
  	$(MAKE) -C vhook all
  
  documentation:
-@@ -124,7 +129,7 @@
+@@ -114,7 +118,7 @@
  install-progs: $(PROGS)
  endif
  	install -d "$(bindir)"
@@ -70,7 +70,15 @@
  
  # Create the Windows installer.
  wininstaller: all install
-@@ -205,7 +210,7 @@
+@@ -152,6 +156,7 @@
+ 	$(MAKE) -C libswscale  install-headers
+ 
+ uninstall: uninstall-progs uninstall-libs uninstall-headers uninstall-man uninstall-vhook
++	$(MAKE) -C vhook all
+ 
+ uninstall-progs:
+ 	rm -f $(addprefix $(bindir)/, $(ALLPROGS))
+@@ -195,7 +200,7 @@
  
  $(DEP_LIBS): lib
  

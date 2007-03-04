@@ -1,6 +1,6 @@
---- libavcodec/Makefile.orig	2007-02-25 13:46:27.000000000 -0300
-+++ libavcodec/Makefile	2007-02-25 13:46:44.000000000 -0300
-@@ -394,7 +394,7 @@
+--- libavcodec/Makefile.orig	2007-03-04 11:17:11.000000000 -0300
++++ libavcodec/Makefile	2007-03-04 11:17:38.000000000 -0300
+@@ -395,7 +395,7 @@
  
  OBJS-$(TARGET_ARCH_BFIN)               += bfin/dsputil_bfin.o \
  
@@ -8,4 +8,4 @@
 +EXTRALIBS := ../libavutil/libavutil.la $(EXTRALIBS)
  
  NAME=avcodec
- ifeq ($(BUILD_SHARED),yes)
+ LIBVERSION=$(LAVCVERSION)
