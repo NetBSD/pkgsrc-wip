@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2534 2007/03/03 09:57:18 netcap Exp $
+# $Id: Makefile,v 1.2535 2007/03/04 19:25:46 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -402,7 +402,6 @@ SUBDIR+=	groku
 SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
-SUBDIR+=	gst-python
 SUBDIR+=	gstat
 SUBDIR+=	gtick
 SUBDIR+=	gtk-engines-thinice
