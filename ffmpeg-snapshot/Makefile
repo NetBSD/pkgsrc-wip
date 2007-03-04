@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/03/04 14:18:24 cetrox Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
@@ -64,7 +64,7 @@ post-fetch:
 		${PHASE_MSG} "Distfile is from today." ; \
 	  else \
 		${ECHO} "Distfile is dated from ${DISTDATE}." ; \
-		${ECHO} "Please cleandir and fetch distfile again," ; \
+		${ECHO} "Please distclean and fetch distfile again," ; \
 		${ECHO} "or set PKG_OPTIONS.ffmpeg-snapshot=old-dist\
 		option to build anyway." ; \
 		exit 1; \
