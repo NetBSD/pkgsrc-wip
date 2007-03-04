@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2535 2007/03/04 19:25:46 shattered Exp $
+# $Id: Makefile,v 1.2536 2007/03/04 20:33:46 guigui2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -831,6 +831,7 @@ SUBDIR+=	moregroupware
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
 SUBDIR+=	mp3gain
+SUBDIR+=	mpdscribble
 SUBDIR+=	mpgedit
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-share
