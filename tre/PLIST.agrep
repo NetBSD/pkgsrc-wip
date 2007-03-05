@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.agrep,v 1.1.1.1 2007/03/05 17:25:42 briandealwis Exp $
-bin/agrep
-man/man1/agrep.1
