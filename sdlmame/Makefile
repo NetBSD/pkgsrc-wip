@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/06 15:26:12 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/06 20:44:31 thomasklausner Exp $
 #
 
 DISTNAME=		sdlmame0113
@@ -24,8 +24,8 @@ X86_MIPS3_DRC = 1
 X86_PPC_DRC = 1
 #PKG_DEFS+=	-DX86_ASM
 .else
-X86_MIPS3_DRC = 0
-X86_PPC_DRC = 0
+X86_MIPS3_DRC =
+X86_PPC_DRC =
 .endif
 .if ${MACHINE_ARCH:Mppc}
 PKG_DEFS+=	-DPPC_ASM
