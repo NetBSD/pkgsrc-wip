@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/09 18:33:18 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/06 13:06:42 bartoszkuzma Exp $
 #
 
 DISTNAME=		smtp-gated-1.4.15.1
@@ -12,6 +12,8 @@ COMMENT=		Proxy for SMTP sessions with virus and spam scan
 
 SMTP_GATED_GROUP?=	smtpgw
 SMTP_GATED_USER?=	smtpgw
+
+BUILD_DEFS+=		VARBASE
 
 BUILD_DEFS+=		SMTP_GATED_GROUP SMTP_GATED_USER
 FILES_SUBST+=		SMTP_GATED_GROUP=${SMTP_GATED_GROUP:Q}
