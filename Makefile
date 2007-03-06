@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2536 2007/03/04 20:33:46 guigui2 Exp $
+# $Id: Makefile,v 1.2537 2007/03/06 13:01:08 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -35,6 +35,7 @@ SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
 SUBDIR+=	WEPCrack
+SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abclock
 SUBDIR+=	abuse_sdl
 SUBDIR+=	acpid
