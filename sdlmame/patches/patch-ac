@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+$NetBSD: patch-ac,v 1.2 2007/03/06 15:26:12 dillo Exp $
 
---- src/cpu/cpu.mak.orig	2006-09-26 18:59:30.000000000 +0200
-+++ src/cpu/cpu.mak
-@@ -667,7 +667,7 @@ $(M68000_GENERATED_FILES) $(M68000_GENER
+--- src/emu/cpu/cpu.mak.orig	2007-03-05 19:13:24.000000000 +0100
++++ src/emu/cpu/cpu.mak
+@@ -969,7 +969,7 @@ $(CPUOBJ)/m68000/m68kops.c: $(CPUOBJ)/m6
  # rule to build the generator
- $(OBJ)/cpu/m68000/m68kmake$(EXE): $(OBJ)/cpu/m68000/m68kmake.o $(OSDBGOBJS)
+ $(CPUOBJ)/m68000/m68kmake$(EXE): $(CPUOBJ)/m68000/m68kmake.o $(LIBOCORE)
  	@echo Linking $@...
 -	$(LD) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@
 +	$(CC) $(LDFLAGS) $(OSDBGLDFLAGS) $^ $(LIBS) -o $@
  
  # rule to ensure we build the header before building the core CPU file
- $(OBJ)/cpu/m68000/m68kcpu.o: $(M68000_GENERATED_HEADERS)
+ $(CPUOBJ)/m68000/m68kcpu.o: $(CPUOBJ)/m68000/m68kops.c

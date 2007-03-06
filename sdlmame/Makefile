@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/13 22:50:33 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/06 15:26:12 dillo Exp $
 #
 
-DISTNAME=		sdlmame0109
-PKGNAME=		sdlmame-0.109
+DISTNAME=		sdlmame0113
+PKGNAME=		sdlmame-0.113
 CATEGORIES=		emulators
 MASTER_SITES=		http://rbelmont.mameworld.info/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dillo@NetBSD.org
-HOMEPAGE=		http://rbelmont.mameworld.info/
+HOMEPAGE=		http://rbelmont.mameworld.info/?page_id=163
 COMMENT=		Multiple Arcade Machine Emulator, SDL port
 
 RESTRICTED=		selling is not allowed

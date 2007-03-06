@@ -1,0 +1,55 @@
+$NetBSD: patch-af,v 1.1 2007/03/06 15:26:12 dillo Exp $
+
+--- src/tools/tools.mak.orig	2007-03-05 19:13:23.000000000 +0100
++++ src/tools/tools.mak
+@@ -46,7 +46,7 @@ FILE2STROBJS = \
+ 
+ $(FILE2STR): $(FILE2STROBJS) $(LIBOCORE)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -59,7 +59,7 @@ ROMCMPOBJS = \
+ 
+ romcmp$(EXE): $(ROMCMPOBJS) $(LIBUTIL) $(ZLIB) $(EXPAT) $(LIBOCORE)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -73,7 +73,7 @@ CHDMANOBJS = \
+ 
+ chdman$(EXE): $(VERSIONOBJ) $(CHDMANOBJS) $(LIBUTIL) $(ZLIB) $(EXPAT) $(LIBOCORE)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -86,7 +86,7 @@ JEDUTILOBJS = \
+ 
+ jedutil$(EXE): $(JEDUTILOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -99,7 +99,7 @@ MAKEMETAOBJS = \
+ 
+ makemeta$(EXE): $(MAKEMETAOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -112,4 +112,4 @@ REGREPOBJS = \
+ 
+ regrep$(EXE): $(REGREPOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
