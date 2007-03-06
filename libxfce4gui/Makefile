@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/24 09:49:43 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/06 03:05:49 ondratu Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -16,4 +16,5 @@ PKGCONFIG_OVERRIDE=	libxfcegui4/libxfcegui4-1.0.pc.in
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../wip/libxfce4util/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
