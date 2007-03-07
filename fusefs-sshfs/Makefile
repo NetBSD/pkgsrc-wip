@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:09 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/07 17:39:06 xtraeme Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
@@ -15,6 +15,6 @@ USE_TOOLS+=		gmake
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../wip/fusefs/buildlink3.mk"
 .include "../../wip/bluez-libs/buildlink3.mk"
+.include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

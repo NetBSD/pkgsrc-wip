@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:08 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/07 17:38:11 xtraeme Exp $
 #
 
 DISTNAME=		btfs-0.0.3
@@ -20,5 +20,5 @@ do-install:
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../wip/bluez-libs/buildlink3.mk"
-.include "../../wip/fusefs/buildlink3.mk"
+.include "../../mk/fuse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
