@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2537 2007/03/06 13:01:08 cheusov Exp $
+# $Id: Makefile,v 1.2538 2007/03/07 17:37:08 xtraeme Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -307,7 +307,6 @@ SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
 SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
-SUBDIR+=	fusefs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
 SUBDIR+=	fvcool
