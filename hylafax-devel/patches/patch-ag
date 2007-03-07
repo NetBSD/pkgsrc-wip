@@ -1,6 +1,9 @@
---- etc/Makefile.in.orig	2007-01-23 17:29:26.000000000 +0100
-+++ etc/Makefile.in	2007-01-23 17:35:00.000000000 +0100
-@@ -87,14 +87,16 @@
+<<<<<<< patch-ag
+$NetBSD: patch-ag,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
+
+--- etc/Makefile.in.orig	2007-02-09 19:47:08.000000000 +0100
++++ etc/Makefile.in
+@@ -87,14 +87,16 @@ install: default
  		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
  	done
  	${PUTSERVER} -F ${SBIN} -m 755 -src probemodem.sh -O probemodem

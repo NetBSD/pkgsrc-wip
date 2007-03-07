@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
+$NetBSD: patch-ad,v 1.2 2007/03/07 09:56:21 ahallmann Exp $
 
---- config/skel.orig	Sun Apr  7 21:29:27 2002
+--- config/skel.orig	2004-04-19 20:44:47.000000000 +0200
 +++ config/skel
 @@ -41,8 +41,8 @@ ServerTracing:		1		# log server-related 
  SessionTracing:		11		# log server-related operations

@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
+$NetBSD: patch-an,v 1.2 2007/03/07 09:56:21 ahallmann Exp $
 
---- faxd/faxGettyApp.c++.orig	2005-01-01 21:27:16.000000000 +0000
+--- faxd/faxGettyApp.c++.orig	2006-07-21 19:55:20.000000000 +0200
 +++ faxd/faxGettyApp.c++
-@@ -789,7 +789,7 @@ faxGettyApp::notifyDocumentRecvd(const F
+@@ -812,7 +812,7 @@ faxGettyApp::notifyDocumentRecvd(FaxRecv
      FaxServer::notifyDocumentRecvd(ri);
  
      FaxAcctInfo ai;

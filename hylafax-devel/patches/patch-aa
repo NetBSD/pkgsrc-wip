@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
+$NetBSD: patch-aa,v 1.2 2007/03/07 09:56:21 ahallmann Exp $
 
---- Makefile.in.orig	Mon Apr 14 03:44:42 2003
+--- Makefile.in.orig	2006-03-29 21:33:50.000000000 +0200
 +++ Makefile.in
-@@ -237,22 +237,13 @@ makeClientDirs::
+@@ -238,22 +238,13 @@ makeClientDirs::
  makeServerDirs::
  	-${INSTALL} -u ${SYSUSER} -g ${SYSGROUP} -m ${DIRMODE} \
  	    -idb hylafax.sw.server -dir ${SBIN};

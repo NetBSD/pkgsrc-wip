@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/02/14 12:39:27 ahallmann Exp $
+$NetBSD: patch-al,v 1.2 2007/03/07 09:56:21 ahallmann Exp $
 
---- faxd/Getty.c++.orig	2005-01-01 21:27:15.000000000 +0000
+--- faxd/Getty.c++.orig	2005-01-01 22:27:15.000000000 +0100
 +++ faxd/Getty.c++
 @@ -234,7 +234,7 @@ Getty::hangup()
      // NB: this is executed in the parent
