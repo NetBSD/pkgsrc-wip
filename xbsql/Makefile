@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/09/17 21:18:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/08 01:31:25 uhabel Exp $
 #
 
 DISTNAME=		xbsql-0.11
-CATEGORIES=		database
+CATEGORIES=		databases
 MASTER_SITES=		http://www.rekallrevealed.org/packages/
 EXTRACT_SUFX=		.tgz
 
