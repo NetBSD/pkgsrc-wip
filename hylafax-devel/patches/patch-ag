@@ -1,22 +1,24 @@
-$NetBSD: patch-ag,v 1.5 2007/03/07 19:04:22 ahallmann Exp $
+$NetBSD: patch-ag,v 1.6 2007/03/08 12:46:04 ahallmann Exp $
 
 --- etc/Makefile.in.orig	2007-02-09 19:47:08.000000000 +0100
 +++ etc/Makefile.in
-@@ -78,6 +78,7 @@ ondelay: ${SRCDIR}/ondelay.c
+@@ -78,6 +78,9 @@ ondelay: ${SRCDIR}/ondelay.c
  PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
  PUTSAMPLE	= ${PUTSERVER} -u ${FAXUSER} -g ${FAXGROUP} \
  		  -idb "config(noupdate)"
-+ETCTEMPLATE	= ${PREFIX}/share/hylafax/etc_template
++ETCBASE		= ${PREFIX}/share/hylafax
++ETCTEMPLATE	= ${ETCBASE}/etc_template
++ETCTEMPLATES	= ${ETCBASE}/etc_templates
  
  install: default
  	${PUTSERVER} -F ${SBIN} -m 755 -src faxaddmodem.sh -O faxaddmodem
-@@ -87,24 +88,26 @@ install: default
+@@ -87,24 +90,26 @@ install: default
  		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
  	done
  	${PUTSERVER} -F ${SBIN} -m 755 -src probemodem.sh -O probemodem
 -	${PUTSAMPLE} -F ${SPOOL}/etc -m 644 -o xferfaxlog
 -	${PUTSAMPLE} -F ${SPOOL}/etc -m 600 -o hosts.hfaxd
-+	-${MKDIR} -m 755 ${PREFIX}/share/hylafax
++	-${MKDIR} -m 755 ${ETCBASE}
 +	-${MKDIR} -m 755 ${ETCTEMPLATE}
 +	${PUTSAMPLE} -F ${ETCTEMPLATE} -m 644 -o xferfaxlog
 +	${PUTSAMPLE} -F ${ETCTEMPLATE} -m 600 -o hosts.hfaxd
@@ -32,16 +34,16 @@ $NetBSD: patch-ag,v 1.5 2007/03/07 19:04:22 ahallmann Exp $
  	${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m ${DIRMODE} \
 -	    -idb hylafax.sw.server -dir -F ${SPOOL}/etc templates
 -	${PUTSAMPLE} -F ${SPOOL}/etc/templates -m 644 \
-+	    -idb hylafax.sw.server -dir -F ${ETCTEMPLATE} templates
-+	${PUTSAMPLE} -F ${ETCTEMPLATE}/templates -m 644 \
++	    -idb hylafax.sw.server -dir -F ${ETCBASE} etc_templates
++	${PUTSAMPLE} -F ${ETCTEMPLATES} -m 644 \
  	    -src ${SRCDIR}/templates/README -O README
  	for d in ${TEMPLATES}; do \
  		${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m ${DIRMODE} \
 -		    -idb hylafax.sw.server -dir -F ${SPOOL}/etc/templates $$d; \
-+		    -idb hylafax.sw.server -dir -F ${ETCTEMPLATE}/templates $$d; \
++		    -idb hylafax.sw.server -dir -F ${ETCTEMPLATES} $$d; \
  		for f in templates/$$d/*; do \
 -			${PUTSAMPLE} -F ${SPOOL}/etc/templates/$$d -m 644 -src $$f `basename $$f`; \
-+			${PUTSAMPLE} -F ${ETCTEMPLATE}/templates/$$d -m 644 -src $$f `basename $$f`; \
++			${PUTSAMPLE} -F ${ETCTEMPLATES}/$$d -m 644 -src $$f `basename $$f`; \
  		done; \
  	done;
  	

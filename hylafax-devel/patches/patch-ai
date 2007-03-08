@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
+$NetBSD: patch-ai,v 1.4 2007/03/08 12:46:04 ahallmann Exp $
 
 --- etc/faxsetup.sh.in.orig	2007-02-23 23:36:23.000000000 +0100
 +++ etc/faxsetup.sh.in
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
  MKFIFO
  MV
  PATH
-@@ -858,6 +862,61 @@ if [ "$euid" != "root" ]; then
+@@ -858,6 +862,64 @@ if [ "$euid" != "root" ]; then
      boom
  fi
  
@@ -69,6 +69,7 @@ $NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
 +	for i in bin client config cover dev etc info log recvq status ; do
 +	    ${MKDIR} -m 0755 ${DIR_SPOOL}/$i
 +	done
++
 +	for i in `ls ${PREFIX}/share/hylafax/etc_template` ; do
 +	    ${CP} -p  ${PREFIX}/share/hylafax/etc_template/$i \
 +							${DIR_SPOOL}/etc/$i
@@ -80,6 +81,8 @@ $NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
 +	for i in `ls ${PREFIX}/libexec/hylafax` ; do
 +	    ${CP} -p  ${PREFIX}/libexec/hylafax/$i ${DIR_SPOOL}/bin/$i
 +	done
++	${MKDIR} -p -m 755 ${DIRSPOOL}/etc/templates
++	${CP} -p -R ${PREFIX}/share/hylafax/etc_templates ${DIRSPOOL}/etc/templates
 +	${CHOWN} -R ${PROTOUID}:${PROTOGID} ${DIR_SPOOL}
 +    fi
 +}
@@ -91,7 +94,7 @@ $NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
  onClient && Note "Checking system for proper client configuration."
  onServer && Note "Checking system for proper server configuration."
  
-@@ -2264,12 +2323,7 @@ if onServer; then
+@@ -2264,12 +2326,7 @@ if onServer; then
  
      findproc()
      {
@@ -105,7 +108,7 @@ $NetBSD: patch-ai,v 1.3 2007/03/07 09:56:21 ahallmann Exp $
  	echo "$pid"
      }
  
-@@ -2498,6 +2552,8 @@ Note "Done verifying system setup."
+@@ -2498,6 +2555,8 @@ Note "Done verifying system setup."
  
  if onServer; then
      $RM $JUNK
