@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2538 2007/03/07 17:37:08 xtraeme Exp $
+# $Id: Makefile,v 1.2539 2007/03/08 17:26:59 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -348,6 +348,7 @@ SUBDIR+=	ggz-libggz
 SUBDIR+=	ghostpcl
 SUBDIR+=	gimmie
 SUBDIR+=	git
+SUBDIR+=	git-fvcs
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gkrellm-reminder
