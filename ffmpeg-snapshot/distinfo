@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/03/04 14:20:28 cetrox Exp $
+$NetBSD: distinfo,v 1.6 2007/03/08 23:11:04 cetrox Exp $
 
-SHA1 (patch-aa) = 9ce34693e7a576ae27d6fd5e6b9c6a29e5bf636d
+SHA1 (patch-aa) = 98fa0d0fa4fce6000e2211c230dd228eb0209783
 SHA1 (patch-ab) = e2f14dff4d9548419ad67299fb8cedaaff01ef94
 SHA1 (patch-ac) = 434da608153fe266f0290e0ee3fe78545a65894c
 SHA1 (patch-ad) = b98288833626387348007d0b1ebbbe2e78f52796
