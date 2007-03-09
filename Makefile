@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2540 2007/03/09 08:44:33 ondratu Exp $
+# $Id: Makefile,v 1.2541 2007/03/09 19:06:01 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -701,7 +701,7 @@ SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
 SUBDIR+=	libmcs
-SUBDIR+=    libmms
+SUBDIR+=	libmms
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
@@ -1632,8 +1632,8 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
-SUBDIR+=	wsmake
 SUBDIR+=	wrcs
+SUBDIR+=	wsmake
 SUBDIR+=	wxGTK-contrib-unicode
 SUBDIR+=	wxGTK-unicode
 SUBDIR+=	xace
