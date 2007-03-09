@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/03/09 08:23:57 ondratu Exp $
+
+--- privileges/Makefile.in.orig	2007-03-08 21:55:19.000000000 +0100
++++ privileges/Makefile.in
+@@ -192,7 +192,8 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-privilegedir = $(sysconfdir)/PolicyKit/privilege.d
++#privilegedir = $(sysconfdir)/PolicyKit/privilege.d
++privilegedir = $(prefix)/share/examples/policykit
+ dist_privilege_DATA = desktop-console.privilege
+ all: all-am
+ 

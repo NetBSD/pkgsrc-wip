@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/09 08:23:56 ondratu Exp $
+
+SHA1 (PolicyKit-20060821.tar.bz2) = 8706a52cd96fb68513c5a5b7ec3cb3356ac987d9
+RMD160 (PolicyKit-20060821.tar.bz2) = b2ead7ee1d6542d33a8b9ea8b0768a4503dd85f5
+Size (PolicyKit-20060821.tar.bz2) = 585242 bytes
+SHA1 (patch-aa) = b4033d43b38bdbe82660e495fced95a5442bd841
+SHA1 (patch-ab) = 7d3c311367463dbc000a9402339b93f1ff4e2b05
+SHA1 (patch-ac) = 1e9a8462a92ea50c9bfdd0e83b7c7ff31848517a

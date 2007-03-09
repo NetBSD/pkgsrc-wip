@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/09 08:23:56 ondratu Exp $
+bin/polkit-grant-privilege
+bin/polkit-is-privileged
+bin/polkit-list-privileges
+bin/polkit-revoke-privilege
+include/libpolkit/libpolkit.h
+include/libpolkit/libpolkit-grant.h
+lib/libpolkit.la
+lib/libpolkit-grant.la
+lib/pkgconfig/polkit.pc
+lib/security/pam_polkit_console.la
+sbin/polkitd
+share/examples/policykit/desktop-console.privilege
+share/examples/policykit/policy-kit
+share/examples/policykit/PolicyKit.conf
+share/examples/rc.d/polkitd
+@comment "I need xmlto :("
+@comment share/gtk-doc/html/polkit/home.png
+@comment share/gtk-doc/html/polkit/ch01.html
+@comment share/gtk-doc/html/polkit/index.html
+@comment share/gtk-doc/html/polkit/index.sgml
+@comment share/gtk-doc/html/polkit/left.png
+@comment share/gtk-doc/html/polkit/polkit.devhelp
+@comment share/gtk-doc/html/polkit/polkit.devhelp2
+@comment share/gtk-doc/html/polkit/polkit-libpolkit.html
+@comment share/gtk-doc/html/polkit/right.png
+@comment share/gtk-doc/html/polkit/style.css
+@comment share/gtk-doc/html/polkit/up.png
+@comment @dirrm share/gtk-doc/html/polkit
+@dirrm share/examples/policykit
+@dirrm include/libpolkit

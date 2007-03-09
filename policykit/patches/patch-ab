@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/03/09 08:23:57 ondratu Exp $
+
+--- polkitd/Makefile.in.orig	2007-03-08 21:55:19.000000000 +0100
++++ polkitd/Makefile.in
+@@ -261,7 +261,8 @@ SCRIPT_IN_FILES = PolicyKit.in
+ 
+ # D-BUS configuration file
+ #
+-dbusdir = $(sysconfdir)/dbus-1/system.d
++#dbusdir = $(sysconfdir)/dbus-1/system.d
++dbusdir = $(prefix)/share/examples/policykit
+ dist_dbus_DATA = PolicyKit.conf
+ BUILT_SOURCES = polkit-interface-manager-glue.h \
+ 	polkit-interface-session-glue.h polkit-marshal.c \
