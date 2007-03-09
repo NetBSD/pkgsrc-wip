@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/03/09 08:23:57 ondratu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/03/09 17:43:01 ondratu Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POLICYKIT_BUILDLINK3_MK:=	${POLICYKIT_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}PolicyKit
 
 .if ${POLICYKIT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.PolicyKit+=	PolicyKit>=20060821
-BUILDLINK_PKGSRCDIR.PolicyKit?=	../../wip/policykit.import
+BUILDLINK_PKGSRCDIR.PolicyKit?=	../../wip/policykit
 .endif	# POLICYKIT_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
