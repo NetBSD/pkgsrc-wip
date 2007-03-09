@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2539 2007/03/08 17:26:59 ondratu Exp $
+# $Id: Makefile,v 1.2540 2007/03/09 08:44:33 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -431,6 +431,7 @@ SUBDIR+=	gurlchecker
 SUBDIR+=	gwc
 SUBDIR+=	gxmms2
 SUBDIR+=	haddock
+SUBDIR+=	hal
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
@@ -1242,6 +1243,7 @@ SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
 SUBDIR+=	policyd-weight
+SUBDIR+=	policykit
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
