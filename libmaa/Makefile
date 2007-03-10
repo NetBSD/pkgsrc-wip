@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/30 19:15:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/10 21:34:44 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	libmaa-0.990
@@ -25,7 +25,7 @@ EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 
 post-install:
 	set -e; \
-	for i in $${EXTRA_DOC_FILES}; do \
+	for i in ${EXTRA_DOC_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/"$${i}" ${PKGDOCDIR}; \
 	done
 
