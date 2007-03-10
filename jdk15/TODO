@@ -1,4 +1,4 @@
-  * Test other browsers (currently tested: firefox2)
+  * Test other browsers (currently tested: firefox-2.0.0.2)
 
   * Fix up installation without the plugin
 
@@ -8,8 +8,10 @@
   * Figure out why some directories aren't properly removed on
     package deletion.
 
-  * Can we suppress all the static and inline warning messages on build?
-	modify ${WRKSRC}/hotspot/build/bsd/makefiles/gcc.make
+  * The JDK Makefiles use `gcc -w' to suppress all the static and
+    inline warning messages from the build -- and there are lots!
+    But `-w' is stripped by the pkgsrc wrappers for gcc.  Can we
+    add this back in?  Is it worth it?
 
   * Stole INSTALL.tmpl and DEINSTALL.tmpl from sun-jre15 -- but these
     don't seem to be executed.
