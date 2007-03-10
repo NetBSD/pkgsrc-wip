@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/03 10:42:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/10 21:21:25 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -19,4 +19,5 @@ FILESDIR=	${.CURDIR}/../../wip/dict-server/files
 PATCHDIR=	${.CURDIR}/../../wip/dict-server/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/dict-server/distinfo
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
