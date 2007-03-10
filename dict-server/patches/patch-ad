@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.6 2007/03/10 21:28:43 cheusov Exp $
+
+--- Makefile.in.orig	2006-12-13 16:55:59.000000000 +0200
++++ Makefile.in
+@@ -251,7 +251,7 @@ clientparse.o: clientparse.c
+         install.libs install.includes install.colorit
+ 
+ install.dict: dict
+-        mkdir -p $(DESTDIR)$(bindir) && \
++	mkdir -p $(DESTDIR)$(bindir) && \
+         mkdir -p $(DESTDIR)$(man1_prefix) && \
+ 	libtool --mode=install $(INSTALL_PROGRAM) dict$(EXEEXT) $(DESTDIR)$(bindir) && \
+ 	$(INSTALL_DATA) dict.1 $(DESTDIR)$(man1_prefix)/dict.1 && \
