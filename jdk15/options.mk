@@ -1,13 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2007/03/01 16:58:01 briandealwis Exp $
+# $NetBSD: options.mk,v 1.5 2007/03/10 17:11:05 briandealwis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin
-PKG_SUGGESTED_OPTIONS+=		jdk15-plugin
+PKG_SUGGESTED_OPTIONS=		jdk15-plugin
 PKG_OPTIONS_LEGACY_VARS+=	JDK15_USE_JCE:jdk15-jce
-PKG_OPTIONS_REQUIRED_GROUPS+=	mozilla
-PKG_OPTIONS_GROUP.mozilla=	firefox firefox-gtk1 firefox2
-PKG_SUGGESTED_OPTIONS+=		firefox2
 
+.include "../../www/seamonkey/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -20,20 +18,21 @@ post-build:
 	cd ${WRKDIR}/jce ; ${PAX} -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
 .endif
 
-###
-### Mozilla headers
-###
-MOZILLA=	${PKG_OPTIONS:@opt@${PKG_OPTIONS_GROUP.mozilla:M${opt}}@}
-.include "../../www/${MOZILLA}/buildlink3.mk"
-MAKE_ENV+=	BROWSER=${MOZILLA:Q}
 
 ###
 ### Mozilla plugin
 ###
 .if !empty(PKG_OPTIONS:Mjdk15-plugin)
+
+MOZILLA=	${PKG_OPTIONS:@opt@${PKG_OPTIONS_GROUP.gecko:M${opt}}@}
+#.include "../../www/${MOZILLA}/buildlink3.mk"
+MAKE_ENV+=	BROWSER=${MOZILLA:Q}
+MAKE_ENV+=	ALT_MOZILLA_HEADERS_PATH=${LOCALBASE:Q}/include/${MOZILLA}
+
 .include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.nspr=	build
 PLIST_SRC+=			PLIST.plugin
+
 .else
 MAKE_ENV+=			NO_PLUGIN=YES
 .endif

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/03/01 16:58:00 briandealwis Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/10 17:11:05 briandealwis Exp $
 
-JDK_VERSION=	1.5.0
+JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
 SUN_LINUX_JDK_VERSION=	1.5.0
 
@@ -72,7 +72,6 @@ MAKE_ENV+=		ALT_MOTIF_DIR=${MOTIFBASE:Q}
 MAKE_ENV+=		DEV_ONLY=YES
 MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
-MAKE_ENV+=		ALT_MOZILLA_HEADERS_PATH=${LOCALBASE:Q}/include/${MOZILLA}
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
 
 .if empty(PKG_OPTIONS:Minet6)
@@ -175,5 +174,6 @@ do-install:
 #		${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
