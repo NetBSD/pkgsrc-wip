@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2006/08/27 15:00:10 obache Exp $
+$NetBSD: patch-ai,v 1.2 2007/03/11 06:26:21 obache Exp $
 
---- globals.h.orig	2006-02-02 08:53:39.000000000 +0900
+--- globals.h.orig	2006-11-13 02:14:11.000000000 +0900
 +++ globals.h
-@@ -26,7 +26,7 @@ struct GLOBALS {
+@@ -38,7 +38,7 @@ struct GLOBALS {
  typedef struct GLOBALS* globals_p;
  extern struct GLOBALS g_vars;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.1 2006/08/27 15:00:10 obache Exp $
  #define MAX_CONFIG_LINE 256
  #define IPTABLES_DEFAULT_FORWARD_CHAIN "FORWARD"
  #define IPTABLES_DEFAULT_PREROUTING_CHAIN "PREROUTING"
-@@ -34,6 +34,6 @@ extern struct GLOBALS g_vars;
+@@ -46,6 +46,6 @@ extern struct GLOBALS g_vars;
  #define DEFAULT_UPSTREAM_BITRATE "0"
  #define DEFAULT_DOWNSTREAM_BITRATE "0"
  #define DESC_DOC_DEFAULT "gatedesc.xml"

@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.3 2007/03/11 06:26:21 obache Exp $
+
+--- config.c.orig	2006-11-13 00:38:46.000000000 +0900
++++ config.c
+@@ -7,6 +7,20 @@
+ 
+ #define NMATCH 3
+ 
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
++static size_t strnlen(const char* s, size_t maxlen) {
++    int len;
++
++    for(len = 0; len < maxlen; len++) {
++	if(s[len] == '\0') {
++	    len++;
++	    break;
++	}
++    }
++    return len;
++}
++#endif
++
+ int getConfigOptionArgument(char var[],int varlen, char line[], regmatch_t *submatch) 
+ {
+     /* bound buffer operations to varlen - 1 */

@@ -1,23 +1,23 @@
-$NetBSD: patch-af,v 1.6 2006/08/27 15:00:09 obache Exp $
+$NetBSD: patch-af,v 1.7 2007/03/11 06:26:21 obache Exp $
 
---- pmlist.c.orig	2006-02-02 08:53:39.000000000 +0900
+--- pmlist.c.orig	2006-10-02 00:58:32.000000000 +0900
 +++ pmlist.c
-@@ -244,7 +244,7 @@ int pmlist_AddPortMapping (int enabled, 
+@@ -249,7 +249,7 @@ int pmlist_AddPortMapping (int enabled, 
  
  	iptc_add_rule("nat", g_vars.preroutingChainName, protocol, g_vars.extInterfaceName, NULL, NULL, NULL, NULL, externalPort, "DNAT", buffer, TRUE);
  	free(buffer);
 -#else
 +#elif defined(USE_IPTABLES)
- 	char command[500];
+ 	char command[COMMAND_LEN];
  	int status;
  	
-@@ -278,6 +278,26 @@ int pmlist_AddPortMapping (int enabled, 
+@@ -281,6 +281,26 @@ int pmlist_AddPortMapping (int enabled, 
  	    wait(&status);		
  	  }
  	}
 +#else
-+	char rules[512];
-+	char command[512];
++	char rules[COMMAND_LEN];
++	char command[COMMAND_LEN];
 +	GetIpAddressStr(ExternalIPAddress, g_vars.extInterfaceName);
 +#if defined(USE_PF)
 +	snprintf(command, sizeof(command), "/sbin/pfctl -a upnpd/%s-%s-%s-%s-%s-%s -f -", g_vars.extInterfaceName, protocol, ExternalIPAddress, externalPort, internalClient, internalPort);
@@ -38,21 +38,21 @@ $NetBSD: patch-af,v 1.6 2006/08/27 15:00:09 obache Exp $
  #endif
      }
      return 1;
-@@ -298,7 +318,7 @@ int pmlist_DeletePortMapping(int enabled
+@@ -301,7 +321,7 @@ int pmlist_DeletePortMapping(int enabled
  
  	iptc_delete_rule("nat", g_vars.preroutingChainName, protocol, g_vars.extInterfaceName, NULL, NULL, NULL, NULL, externalPort, "DNAT", buffer);
  	free(buffer);
 -#else
 +#elif defined(USE_IPTABLES)
- 	char command[500];
+ 	char command[COMMAND_LEN];
  	int status;
  	
-@@ -334,6 +354,28 @@ int pmlist_DeletePortMapping(int enabled
+@@ -335,6 +355,28 @@ int pmlist_DeletePortMapping(int enabled
  	    wait(&status);		
  	  }
  	}
 +#elif defined(USE_PF)
-+	char anchor[128];
++	char anchor[COMMAND_LEN];
 +	snprintf(anchor, sizeof(anchor), "upnpd/%s-%s-%s-%s-%s-%s", g_vars.extInterfaceName, protocol, ExternalIPAddress, externalPort, internalClient, internalPort);
 +	trace(3, "flush anchor %s", anchor);
 +	{
@@ -66,7 +66,7 @@ $NetBSD: patch-af,v 1.6 2006/08/27 15:00:09 obache Exp $
 +		}
 +	}
 +#elif defined(USE_IPFILTER)
-+	char rules[512];
++	char rules[COMMAND_LEN];
 +	FILE *ipnat = popen("/usr/sbin/ipnat -rf -", "w");
 +	if (ipnat == NULL) return 0;
 +	snprintf(rules, sizeof(rules), "rdr %s %s/32 port %s -> %s port %s %s", g_vars.extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol);

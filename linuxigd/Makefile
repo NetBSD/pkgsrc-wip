@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/08/27 15:00:00 obache Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/11 06:26:21 obache Exp $
 #
 
-DISTNAME=	linuxigd-0.95
+DISTNAME=	linuxigd-1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
 
