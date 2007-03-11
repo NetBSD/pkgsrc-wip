@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/08/27 14:49:42 obache Exp $
+$NetBSD: patch-aa,v 1.5 2007/03/11 06:23:25 obache Exp $
 
---- threadutil/src/ThreadPool.c.orig	2006-07-31 14:33:05.000000000 +0900
+--- threadutil/src/ThreadPool.c.orig	2007-02-08 10:51:45.000000000 +0900
 +++ threadutil/src/ThreadPool.c
-@@ -95,11 +95,15 @@ SetPolicyType( PolicyType in )
+@@ -93,11 +93,15 @@ SetPolicyType( PolicyType in )
      #ifdef WIN32
       return sched_setscheduler( 0, in);
      #else
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.4 2006/08/27 14:49:42 obache Exp $
      #endif
  }
  
-@@ -121,6 +125,7 @@ static int
+@@ -119,6 +123,7 @@ static int
  SetPriority( ThreadPriority priority )
  {
  
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.4 2006/08/27 14:49:42 obache Exp $
      int currentPolicy;
      int minPriority = 0;
      int maxPriority = 0;
-@@ -152,7 +157,9 @@ SetPriority( ThreadPriority priority )
+@@ -150,7 +155,9 @@ SetPriority( ThreadPriority priority )
  
      return pthread_setschedparam( ithread_self(  ), currentPolicy,
                                    &newPriority );
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.4 2006/08/27 14:49:42 obache Exp $
  }
  
  /****************************************************************************
-@@ -349,10 +356,8 @@ tp->stats.totalJobsLQ++; tp->stats.total
+@@ -347,10 +354,8 @@ tp->stats.totalJobsLQ++; tp->stats.total
      ftime( &t );
  #if defined(WIN32)
      srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ).p );

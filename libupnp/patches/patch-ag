@@ -1,13 +1,44 @@
-$NetBSD: patch-ag,v 1.3 2006/08/31 09:15:32 obache Exp $
+$NetBSD: patch-ag,v 1.4 2007/03/11 06:23:25 obache Exp $
 
---- docs/dist/Makefile.in.orig	2006-08-11 14:27:40.000000000 +0900
+--- docs/dist/Makefile.in.orig	2007-03-06 19:26:18.000000000 +0900
 +++ docs/dist/Makefile.in
-@@ -732,6 +732,8 @@ uninstall-info-am:
+@@ -737,23 +737,25 @@ distclean-libtool:
+ uninstall-info-am:
  install-nobase_docsDATA: $(nobase_docs_DATA)
  	@$(NORMAL_INSTALL)
- 	test -z "$(docsdir)" || $(mkdir_p) "$(DESTDIR)$(docsdir)"
-+	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/upnp"
-+	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/ixml"
- 	@$(am__vpath_adj_setup) \
- 	list='$(nobase_docs_DATA)'; for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	test -z "$(docsdir)" || $(mkdir_p) "$(DESTDIR)$(docsdir)"
+-	@$(am__vpath_adj_setup) \
+-	list='$(nobase_docs_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  $(am__vpath_adj) \
+-	  echo " $(nobase_docsDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(docsdir)/$$f'"; \
+-	  $(nobase_docsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docsdir)/$$f"; \
+-	done
++@WITH_DOCUMENTATION_TRUE@	test -z "$(docsdir)" || $(mkdir_p) "$(DESTDIR)$(docsdir)"
++@WITH_DOCUMENTATION_TRUE@	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/upnp"
++@WITH_DOCUMENTATION_TRUE@	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/ixml"
++@WITH_DOCUMENTATION_TRUE@	@$(am__vpath_adj_setup) \
++@WITH_DOCUMENTATION_TRUE@	list='$(nobase_docs_DATA)'; for p in $$list; do \
++@WITH_DOCUMENTATION_TRUE@	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++@WITH_DOCUMENTATION_TRUE@	  $(am__vpath_adj) \
++@WITH_DOCUMENTATION_TRUE@	  echo " $(nobase_docsDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(docsdir)/$$f'"; \
++@WITH_DOCUMENTATION_TRUE@	  $(nobase_docsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docsdir)/$$f"; \
++@WITH_DOCUMENTATION_TRUE@	done
+ 
+ uninstall-nobase_docsDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@$(am__vpath_adj_setup) \
+-	list='$(nobase_docs_DATA)'; for p in $$list; do \
+-	  $(am__vpath_adj) \
+-	  echo " rm -f '$(DESTDIR)$(docsdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(docsdir)/$$f"; \
+-	done
++@WITH_DOCUMENTATION_TRUE@	@$(am__vpath_adj_setup) \
++@WITH_DOCUMENTATION_TRUE@	list='$(nobase_docs_DATA)'; for p in $$list; do \
++@WITH_DOCUMENTATION_TRUE@	  $(am__vpath_adj) \
++@WITH_DOCUMENTATION_TRUE@	  echo " rm -f '$(DESTDIR)$(docsdir)/$$f'"; \
++@WITH_DOCUMENTATION_TRUE@	  rm -f "$(DESTDIR)$(docsdir)/$$f"; \
++@WITH_DOCUMENTATION_TRUE@	done
+ tags: TAGS
+ TAGS:
+ 
