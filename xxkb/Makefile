@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/08/19 20:09:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2007/03/11 19:49:33 cheusov Exp $
 
 DISTNAME=	xxkb-1.10
 #PKGREVISION=	1
@@ -12,6 +12,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://pascal.tsu.ru/other/xxkb/
 COMMENT=	XXKB - switches and indicates a current keyboard layout
 
+USE_TOOLS+=		xmkmf
 USE_IMAKE=		yes
 DOC_FILES=		LICENSE README.koi8
 DOC_DIR=		${PREFIX}/share/doc/${PKGBASE}
