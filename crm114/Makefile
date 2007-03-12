@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/12 16:16:14 briandealwis Exp $
 
 PKGNAME=		crm114-20061103
 DISTNAME=		${PKGNAME}-BlameDalkey.src
@@ -26,7 +26,6 @@ DOCS=			CRM114_Mailfilter_HOWTO.txt README FAQ.txt INTRO.txt \
 SCRIPTS=		mailfilter.crm maillib.crm mailreaver.crm \
 			mailtrainer.crm shuffle.crm pad.crm classifymail.crm \
 			rewriteutil.crm
-ADDLSCRIPTS=		crmlearn
 EXAMPLES=		procmailrc.recipe mailfilter.cf blacklist.mfp.example \
 			priolist.mfp.example whitelist.mfp.example pad.dat \
 			rewrites.mfp
@@ -53,13 +52,6 @@ TEST_TARGET=		megatest
 post-extract:
 	${CP} ${WRKDIR}/defaulttest.crm ${WRKSRC}
 
-pre-configure:
-	for FILE in ${ADDLSCRIPTS}; do					\
-	    ${SED} -e "s,@PREFIX@,${PREFIX},g"				\
-		-e 's,@SCRIPTSDIR@,${SCRIPTSDIR},g'			\
-		${FILESDIR}/$${FILE}.sh > ${WRKSRC}/$$FILE;		\
-	done
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/crm114 ${PREFIX}/bin/crm
 	cd ${WRKSRC} &&							\
@@ -70,8 +62,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${SCRIPTSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
-	cd ${WRKSRC} && \
-	    ${INSTALL_SCRIPT} ${SCRIPTS} ${ADDLSCRIPTS} ${SCRIPTSDIR}
 	cd ${WRKSRC} &&							\
 	    ${INSTALL_SCRIPT} crm114-mode.el ${EMACSDIR}
 
