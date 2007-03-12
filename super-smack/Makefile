@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/12 08:54:26 bartoszkuzma Exp $
 #
 
 DISTNAME=		super-smack-1.3
@@ -9,7 +9,7 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://vegan.net/tony/supersmack/
 COMMENT=		Database benchmarking tool
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
