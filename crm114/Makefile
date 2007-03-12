@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/12 16:16:14 briandealwis Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/12 16:21:56 briandealwis Exp $
 
 PKGNAME=		crm114-20061103
 DISTNAME=		${PKGNAME}-BlameDalkey.src
@@ -64,6 +64,8 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
 	cd ${WRKSRC} &&							\
 	    ${INSTALL_SCRIPT} crm114-mode.el ${EMACSDIR}
+
+BROKEN=	Regression tests are not quite right yet.
 
 .include "../../devel/tre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
