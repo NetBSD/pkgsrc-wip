@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:47 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/12 14:10:29 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -6,10 +6,10 @@
 DISTNAME=		mecab-${MECAB_VERSION}
 PKGNAME=		mecab-base-${MECAB_VERSION}
 CATEGORIES=		japanese textproc
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=mecab/21187/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mecab/}
 
 MAINTAINER=		obata@lins.jp
-HOMEPAGE=		http://mecab.sourceforge.jp/
+HOMEPAGE=		http://mecab.sourceforge.net/
 COMMENT=		Yet Another Part-of-Speech and Morphological Analyzer
 
 GNU_CONFIGURE=		yes
@@ -24,6 +24,8 @@ USE_TOOLS+=		gmake
 .endif
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+TEST_TARGET=		check
 
 EGDIR=			${PREFIX}/share/examples/mecab
 CONF_FILES=		${EGDIR:Q}/mecabrc ${PKG_SYSCONFDIR:Q}/mecabrc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/10 05:30:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/12 14:10:29 obache Exp $
 bin/mecab
 bin/mecab-config
 include/mecab.h
@@ -6,7 +6,6 @@ lib/libmecab.la
 libexec/mecab/mecab-cost-train
 libexec/mecab/mecab-dict-gen
 libexec/mecab/mecab-dict-index
-libexec/mecab/mecab-dict-info
 libexec/mecab/mecab-system-eval
 libexec/mecab/mecab-test-gen
 man/man1/mecab.1
