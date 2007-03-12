@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+SHA1 (crm114-20061103-BlameDalkey.src.tar.gz) = 094f77ed10ae7512326abfded5f398e0654a29e1
+RMD160 (crm114-20061103-BlameDalkey.src.tar.gz) = d35bf7cd6ac1a2b46f301a67bbdda3cb6477ed1b
+Size (crm114-20061103-BlameDalkey.src.tar.gz) = 1055458 bytes
+SHA1 (defaulttest.crm.gz) = 73d7e9576110d194638a94739aba3f1ca5ee9be9
+RMD160 (defaulttest.crm.gz) = a26fb12670c1b39f05fa48cce009843756e0af0c
+Size (defaulttest.crm.gz) = 179 bytes
+SHA1 (patch-aa) = 5d5712fe48184428936ea1e3a1b0d620082755e6
+SHA1 (patch-ac) = 35310836fda8df85ac27881ae06891268113e37a
+SHA1 (patch-ad) = ab684fc5f294ed8db2c3dac48c5973216e6c6bee
+SHA1 (patch-ae) = 5fd551ef3f19f95a8bb1e94477a36788059c9f79
+SHA1 (patch-af) = 3392bedf4326920657c159db6110f2b772cd82b6
+SHA1 (patch-ah) = 94f51e5a856970b1024be84873e3c4a8fbaeec99
+SHA1 (patch-ba) = e6a6fbe2ee426fdbfea821f7d741624a681956b9
+SHA1 (patch-bb) = 2e13dee48f21a6fa66ba6988bee9d613a2be318d
+SHA1 (patch-bc) = f595d9bf7cb61b1e5c95e014680414988f542297
+SHA1 (patch-ca) = 63992e2b1be3542e3dac0a448dc8bdb6c6620027
+SHA1 (patch-cb) = 9ecb7f4d94c65a45ea16ec4cb50e1562391e5ac9

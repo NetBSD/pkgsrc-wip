@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+--- Makefile.orig	2006-11-03 09:19:12.000000000 -0600
++++ Makefile
+@@ -50,9 +50,9 @@ SYSTEMTYPE = POSIX
+ #  Tell the compiler full optimization, allow debugging, and warn on every
+ #  possible error
+ #  
+-CFLAGS += -O3 -g -Wall 
++# CFLAGS += -O3 -g -Wall 
+ #     turn this one on for no optimization debugging.
+-#CFLAGS += -O0 -g -Wall 
++CFLAGS += -O0 -g -Wall 
+ #     turn this one on for really picayune debugging.
+ # CFLAGS += -Wextra
+ #
+@@ -60,7 +60,7 @@ CFLAGS += -O3 -g -Wall 
+ #   Comment this out if you want dynamic linking
+ #
+ #    BSD users - do NOT use -static-libgcc!!!
+-LDFLAGS += -static -static-libgcc
++#LDFLAGS += -static -static-libgcc
+ #
+ #   Any standard install flags?  We nominally use protection 755
+ INSTALLFLAGS += -m 755
+@@ -138,8 +138,9 @@ all: crm114 cssutil cssdiff cssmerge osb
+ 
+ crm114: FORCE
+ 	$(MAKE) crm114_tre
+-	#  ./crm114 is used locally; make sure it's there too.
++	#  ./crm114 and crm are used locally; make sure they're there too.
+ 	ln -f -s crm114_tre crm114
++	ln -f -s crm114_tre crm
+ 
+ 
+ crm114_gnu: $(OFILES) crmregex_gnu.o 

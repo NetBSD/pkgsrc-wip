@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+bin/crm
+bin/cssdiff
+bin/cssmerge
+bin/cssutil
+bin/osbf-util
+share/crm114/classifymail.crm
+share/crm114/crmlearn
+share/crm114/mailfilter.crm
+share/crm114/maillib.crm
+share/crm114/mailreaver.crm
+share/crm114/mailtrainer.crm
+share/crm114/pad.crm
+share/crm114/rewriteutil.crm
+share/crm114/shuffle.crm
+share/doc/crm114/CRM114_Mailfilter_HOWTO.txt
+share/doc/crm114/FAQ.txt
+share/doc/crm114/INTRO.txt
+share/doc/crm114/QUICKREF.txt
+share/doc/crm114/README
+share/doc/crm114/knownbugs.txt
+share/emacs/site-lisp/crm114-mode.el
+share/examples/crm114/blacklist.mfp.example
+share/examples/crm114/mailfilter.cf
+share/examples/crm114/pad.dat
+share/examples/crm114/priolist.mfp.example
+share/examples/crm114/procmailrc.recipe
+share/examples/crm114/rewrites.mfp
+share/examples/crm114/whitelist.mfp.example
+@dirrm share/examples/crm114
+@dirrm share/doc/crm114
+@dirrm share/crm114

@@ -1,0 +1,24 @@
+$NetBSD: patch-cb,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+Pass along our environment.
+
+--- mailfilter.crm.old	2007-02-23 17:44:31.000000000 -0600
++++ mailfilter.crm	2007-02-23 17:38:14.000000000 -0600
+@@ -592,7 +592,7 @@
+ 		    #      and remember this file on a permanent basis
+ 		    syscall /ln :*:fileprefix::*:text_cache:\/texts\/:*:fileid: :*:fileprefix::*:text_cache:\/known_good\/:*:fileid: /
+ 		    # output / \n DOING: crm mailtrainer.crm --good=:*:fileprefix::*:text_cache:\/texts\/:*:fileid: --spam=:*:fileprefix::*:text_cache:\/empty\/ \n / () (:mailtrainer_output:)
+-		    syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --good=:*:fileprefix::*:text_cache:\/texts\/:*:fileid: --spam=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++		    syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --config=:*:config: --good=:*:fileprefix::*:text_cache:\/texts\/:*:fileid: --spam=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 		    # output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 		    #      and remove it from the prob_* directories, as
+ 		    #      now it's known
+@@ -689,7 +689,7 @@
+ 		#      remember this file on a permanent basis
+ 		syscall /ln :*:fileprefix::*:text_cache:\/texts\/:*:fileid: :*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: /
+ 		#output /DOING: crm mailtrainer.crm --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+-		syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++		syscall /crm mailtrainer.crm --fileprefix=:*:fileprefix: --config=:*:config: --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:fileid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 		#output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 		#      and remove it from the prob_* directories, as
+ 		#      now it's known

@@ -1,0 +1,63 @@
+$NetBSD: patch-ba,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+This patch patches mailreaver.crm for use :fileprefix: for all :text_cache:
+references.
+
+--- /tmp/crm114-20061103-BlameDalkey.src/mailreaver.crm	2006-11-03 09:19:12.000000000 -0600
++++ mailreaver.crm	2007-02-23 17:11:55.000000000 -0600
+@@ -376,21 +376,21 @@
+     match [:spam:] /SET/
+     {
+ 	isolate (:tmp:) //
+-	syscall () (:tmp:) /\/bin\/ls :*:long_cacheid:/
++	syscall () (:tmp:) /\/bin\/ls :*:fileprefix::*:long_cacheid:/
+ 	match [:tmp:] /:*:cacheid:/
+ 	#
+ 	#      remember this file on a permanent basis by linking it into
+ 	#      the known-spam directory.
+-	syscall /:*:cache_dupe_command: :*:text_cache:\/texts\/:*:cacheid: :*:text_cache:\/known_spam\/:*:cacheid: /
++	syscall /:*:cache_dupe_command: :*:fileprefix::*:text_cache:\/texts\/:*:cacheid: :*:fileprefix::*:text_cache:\/known_spam\/:*:cacheid: /
+ 	#
+ 	#      Now run mailtrainer.crm on the new copy
+ 	isolate (:mailtrainer_output:)
+-	syscall /:*:fileprefix::*:trainer_invoke_command: --spam=:*:text_cache:\/known_spam\/:*:cacheid: --good=:*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++	syscall /:*:trainer_invoke_command: --spam=:*:fileprefix::*:text_cache:\/known_spam\/:*:cacheid: --good=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 	#output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 	#      and remove it from the prob_* directories, as
+ 	#      now it's known
+-	syscall /\/bin\/rm -rf  :*:text_cache:\/prob_spam\/:*:cacheid:/
+-	syscall /\/bin\/rm -rf  :*:text_cache:\/prob_good\/:*:cacheid:/
++	syscall /\/bin\/rm -rf  :*:fileprefix::*:text_cache:\/prob_spam\/:*:cacheid:/
++	syscall /\/bin\/rm -rf  :*:fileprefix::*:text_cache:\/prob_good\/:*:cacheid:/
+ 	#
+ 	#      now it's trained; put in a marker in the headers
+ 	call /:mungmail_delete:/ [X-CRM114-Status: ]
+@@ -428,22 +428,22 @@
+     match [:good:] /SET/
+     {
+ 	isolate (:tmp:) //
+-	syscall () (:tmp:) /\/bin\/ls :*:long_cacheid:/
++	syscall () (:tmp:) /\/bin\/ls :*:fileprefix::*:long_cacheid:/
+ 	match [:tmp:] /:*:cacheid:/
+ 	#
+ 	#      remember this file on a permanent basis by linking it into
+ 	#      the known-good directory.
+-	syscall /:*:cache_dupe_command: :*:text_cache:\/texts\/:*:cacheid: :*:text_cache:\/known_good\/:*:cacheid: /
++	syscall /:*:cache_dupe_command: :*:fileprefix::*:text_cache:\/texts\/:*:cacheid: :*:fileprefix::*:text_cache:\/known_good\/:*:cacheid: /
+ 	#
+ 	#      Now run mailtrainer.crm on the new copy
+-	#output /COMMAND mailtrainer.crm --good=:*:text_cache:\/known_good\/:*:cacheid: --spam=:*:text_cache:\/empty\/ /
++	#output /COMMAND mailtrainer.crm --good=:*:fileprefix::*:text_cache:\/known_good\/:*:cacheid: --spam=:*:fileprefix::*:text_cache:\/empty\/ /
+ 	isolate (:mailtrainer_output:)
+-	syscall /:*:fileprefix::*:trainer_invoke_command: --good=:*:text_cache:\/known_good\/:*:cacheid: --spam=:*:text_cache:\/empty\/ / () (:mailtrainer_output:)
++	syscall /:*:trainer_invoke_command: --good=:*:fileprefix::*:text_cache:\/known_good\/:*:cacheid: --spam=:*:fileprefix::*:text_cache:\/empty\/ / () (:mailtrainer_output:)
+ 	#output /mailtrainer output:  ':*:mailtrainer_output:'\n/
+ 	#      and remove it from the prob_* directories, as
+ 	#      now it's known
+-	syscall /\/bin\/rm -rf  :*:text_cache:\/prob_spam\/:*:cacheid:/
+-	syscall /\/bin\/rm -rf  :*:text_cache:\/prob_good\/:*:cacheid:/
++	syscall /\/bin\/rm -rf :*:fileprefix::*:text_cache:\/prob_spam\/:*:cacheid:/
++	syscall /\/bin\/rm -rf :*:fileprefix::*:text_cache:\/prob_good\/:*:cacheid:/
+ 	#
+ 	#      now it's trained; put in a marker in the headers
+ 	call /:mungmail_delete:/ [X-CRM114-Status: ]

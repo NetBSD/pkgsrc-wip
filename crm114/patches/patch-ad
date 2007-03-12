@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+
+--- userdirtest.crm.orig	2006-11-03 09:19:12.000000000 -0600
++++ userdirtest.crm
+@@ -2,6 +2,6 @@
+ window
+ output /:*:_nl: CRM114 - syscall test - 'ls' -- :*:_nl: :*:_nl:/
+ {
+-	syscall () (:_dw:) /ls .\/tre-0.7.2/
++	syscall () (:_dw:) /ls .\/tre-0.7.4/
+ 	accept
+ }
