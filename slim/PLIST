@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.3 2007/03/12 22:17:25 ondratu Exp $
+sbin/slim
+man/man1/slim.1
+share/examples/rc.d/slim
+share/examples/slim.conf
+share/slim/themes/default/background.jpg
+share/slim/themes/default/panel.png
+share/slim/themes/default/slim.theme
+@dirrm share/slim/themes/default
+@dirrm share/slim/themes
+@dirrm share/slim
