@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2543 2007/03/12 22:21:01 ondratu Exp $
+# $Id: Makefile,v 1.2544 2007/03/13 19:01:12 briandealwis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1515,6 +1515,7 @@ SUBDIR+=	super-smack
 SUBDIR+=	supertux
 SUBDIR+=	suse100_SDL
 SUBDIR+=	suse100_devel
+SUBDIR+=	suse100_gdb
 SUBDIR+=	svgalib
 SUBDIR+=	swami
 SUBDIR+=	swfmill
@@ -1634,6 +1635,7 @@ SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
 SUBDIR+=	worker
+SUBDIR+=	workrave
 SUBDIR+=	wrcs
 SUBDIR+=	wsmake
 SUBDIR+=	wxGTK-contrib-unicode
