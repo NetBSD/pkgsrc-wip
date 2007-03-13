@@ -1,0 +1,14 @@
+  * what's the proper way to cause proper definitions of vfwscanf,
+    vswscanf, vwscanf, and wcstof? In NetBSD's /usr/include/wchar.h,
+    these are conditional on either _ISOC99_SOURCE, _NETBSD_SOURCE
+    or __STDC_VERSION__, none of which are defined normally.
+    (Required to compile backend/src/Break.cc)
+
+  * figure out how to properly handle the different compilation options:
+    --disable-gnome --disable-gnomemm --disable-kde
+    # --disable-app-gtk --disable-gconf
+    # --without-arts
+    # --enable-dbus
+    # --enable-gnome
+    # --enable-gnomemm
+    # --enable-kde

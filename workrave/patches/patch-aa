@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/13 18:58:35 briandealwis Exp $
+
+--- frontend/gtkmm/src/Menus.hh.old	2007-03-13 10:48:36.000000000 -0600
++++ frontend/gtkmm/src/Menus.hh	2007-03-13 10:48:43.000000000 -0600
+@@ -186,13 +186,11 @@
+ }
+ 
+ 
+-#if defined(HAVE_GNOME) || defined(WIN32)
+ inline Menus *
+ Menus::get_instance()
+ {
+   assert(instance != 0);
+   return instance;
+ }
+-#endif
+ 
+ #endif // MENUS_HH
