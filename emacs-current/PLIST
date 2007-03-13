@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/02/28 07:05:19 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/03/13 07:05:07 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -155,7 +155,6 @@ share/emacs/${PKGVERSION}/etc/TUTORIAL.th
 share/emacs/${PKGVERSION}/etc/TUTORIAL.translators
 share/emacs/${PKGVERSION}/etc/TUTORIAL.zh
 share/emacs/${PKGVERSION}/etc/WHY-FREE
-share/emacs/${PKGVERSION}/etc/Xkeymap.txt
 share/emacs/${PKGVERSION}/etc/calccard.ps
 share/emacs/${PKGVERSION}/etc/calccard.tex
 share/emacs/${PKGVERSION}/etc/celibacy.1
@@ -343,8 +342,6 @@ share/emacs/${PKGVERSION}/etc/images/gud/step.xpm
 share/emacs/${PKGVERSION}/etc/images/gud/stepi.pbm
 share/emacs/${PKGVERSION}/etc/images/gud/stepi.xpm
 share/emacs/${PKGVERSION}/etc/images/gud/stop.pbm
-share/emacs/${PKGVERSION}/etc/orgcard.ps
-share/emacs/${PKGVERSION}/etc/orgcard.tex
 share/emacs/${PKGVERSION}/etc/images/gud/stop.xpm
 share/emacs/${PKGVERSION}/etc/images/gud/until.pbm
 share/emacs/${PKGVERSION}/etc/images/gud/until.xpm
@@ -495,8 +492,9 @@ share/emacs/${PKGVERSION}/etc/images/zoom-out.pbm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.xpm
 share/emacs/${PKGVERSION}/etc/letter.pbm
 share/emacs/${PKGVERSION}/etc/letter.xpm
-share/emacs/${PKGVERSION}/etc/ms-7bkermit
 share/emacs/${PKGVERSION}/etc/ms-kermit
+share/emacs/${PKGVERSION}/etc/orgcard.ps
+share/emacs/${PKGVERSION}/etc/orgcard.tex
 share/emacs/${PKGVERSION}/etc/pl-refcard.ps
 share/emacs/${PKGVERSION}/etc/pl-refcard.tex
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
@@ -559,7 +557,6 @@ share/emacs/${PKGVERSION}/etc/tree-widget/folder/no-handle.png
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/no-handle.xpm
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/open.png
 share/emacs/${PKGVERSION}/etc/tree-widget/folder/open.xpm
-share/emacs/${PKGVERSION}/etc/ulimit.hack
 share/emacs/${PKGVERSION}/etc/vipcard.tex
 share/emacs/${PKGVERSION}/etc/viperCard.tex
 share/emacs/${PKGVERSION}/etc/yow.lines
