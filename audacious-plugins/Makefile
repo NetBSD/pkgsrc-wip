@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/14 01:53:13 netcap Exp $
 #
 
-DISTNAME=		audacious-plugins-1.2.5
+DISTNAME=		audacious-plugins-1.3.1
 CATEGORIES=		audio
-MASTER_SITES=		http://audacious-media-player.org/release/
+MASTER_SITES=		http://static.audacious-media-player.org/release/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://audacious-media-player.org/
-COMMENT=	Plugins for Audacious media player
+COMMENT=		Plugins for Audacious media player
 
 GNU_CONFIGURE=		yes
-USE_TOOLS=	gmake intltool pkg-config
-USE_LIBTOOL=	yes
+USE_TOOLS=		gmake intltool pkg-config
+USE_LIBTOOL=		yes
 
 # From audio/bmp/Makefile:
 # XXX Workaround a crash during shutdown that happens when dlclose(3)ing
@@ -25,10 +25,14 @@ LDFLAGS.NetBSD+=	-lstdc++ -lm
 # cdaudio plugin complains about missing OSS at runtime
 LDFLAGS+=		${LIBOSSAUDIO}
 
-CONFIGURE_ARGS+=	--disable-amidiplug
+# do not use pkgsrc' flac if it is installed
+CFLAGS+=	-I. -I../libflac -Ilibflac
+
+CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
+			--disable-coreaudio --disable-projectm
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS=	arts esound gnome inet6 jack midi pulse
+PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
 
 .include "../../mk/bsd.options.mk"
 
@@ -46,13 +50,6 @@ PLIST_SUBST+=		ESD=""
 .else
 CONFIGURE_ARGS+=	--disable-esd
 PLIST_SUBST+=		ESD="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gconf
-CONFIGURE_ARGS+=	--enable-gnome-vfs
-.	include "../../devel/GConf2/buildlink3.mk"
-.	include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
@@ -101,25 +98,27 @@ CONFIGURE_ARGS+=	--enable-lirc
 .	endif
 .endif
 
-#CONFIGURE_ENV+=  	LDFLAGS="-L${LOCALBASE}/lib" \
-#                	CFLAGS="-I${LOCALBASE}/include/audacious"
-
-#BUILD_DEPENDS+=		audacious-[0-9]*:../../wip/audacious
+DEPENDS+=	audacious-1.3.1:../../wip/audacious
+DEPENDS+=	taglib>=1.4:../../audio/taglib
 
 .include "../../wip/audacious/buildlink3.mk"
-.include "../../wip/libnms/buildlink3.mk"
 .include "../../wip/libadplug/buildlink3.mk"
-.include "../../audio/flac/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/taglib/buildlink3.mk"
+.include "../../wip/libbinio/buildlink3.mk"
+.include "../../wip/libmms/buildlink3.mk"
+.include "../../wip/libnms/buildlink3.mk"
+.include "../../audio/faac/buildlink3.mk"
+#.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
+.include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libsidplay/buildlink3.mk"
 #.include "../../audio/libsidplay2/buildlink3.mk"
-.include "../../audio/libmpcdec/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

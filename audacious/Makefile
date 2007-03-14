@@ -1,40 +1,35 @@
-# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/14 01:53:13 netcap Exp $
 #
 
-DISTNAME=		audacious-1.2.2
+DISTNAME=		audacious-1.3.1
 CATEGORIES=		audio
-MASTER_SITES=		http://audacious-media-player.org/release/
+MASTER_SITES=		http://static.audacious-media-player.org/release/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://audacious-media-player.org/
-COMMENT=	Media player based on BMP and XMMS
+COMMENT=		Media player based on BMP and XMMS
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool pkg-config
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++
+USE_DIRS+=		xdg-1.4
 
 CONFIGURE_ARGS+=	--enable-chardet --enable-nls
 
 PKGCONFIG_OVERRIDE+=	audacious.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious
-PKG_SUPPORTED_OPTIONS=	gnome inet6
+PKG_SUPPORTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gconf
-CONFIGURE_ARGS+=	--enable-gnome-vfs
-.       include "../../devel/GConf2/buildlink3.mk"
-.       include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.include "../../wip/libmcs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"

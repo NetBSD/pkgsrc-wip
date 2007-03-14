@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/02/01 04:17:17 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/03/14 01:53:13 netcap Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AUDACIOUS_BUILDLINK3_MK:=	${AUDACIOUS_BUILDLINK3_MK}+
@@ -12,11 +12,12 @@ BUILDLINK_PACKAGES+=	audacious
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}audacious
 
 .if ${AUDACIOUS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.audacious+=	audacious>=1.2.2
-BUILDLINK_PKGSRCDIR.audacious?=		../../wip/audacious
-BUILDLINK_DEPMETHOD.audacious?=		build
+BUILDLINK_API_DEPENDS.audacious+=	audacious>=1.3.1
+BUILDLINK_PKGSRCDIR.audacious?=	../../wip/audacious
+BUILDLINK_DEPMETHOD.audacious?=	build
 .endif	# AUDACIOUS_BUILDLINK3_MK
 
+.include "../../wip/libmcs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
