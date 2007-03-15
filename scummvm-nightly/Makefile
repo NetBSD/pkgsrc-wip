@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/27 20:01:46 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2007/03/15 19:13:40 thomasklausner Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -43,5 +43,4 @@ SCM_TAG!=	${DATE} +%Y%m%d
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
