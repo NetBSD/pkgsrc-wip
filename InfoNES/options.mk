@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/03/09 21:02:03 jlamwww Exp $
+# $NetBSD: options.mk,v 1.3 2007/03/15 18:44:18 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.InfoNES
 PKG_OPTIONS_REQUIRED_GROUPS=	frontend
@@ -20,7 +20,7 @@ SRC_SUBDIR=		linux
 .include "../../mk/oss.buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk)
+.if !empty(PKG_OPTIONS:Msdl)
 SRC_SUBDIR=		sdl
 .include "../../devel/SDL/buildlink3.mk"
 .endif
