@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/06 20:44:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/15 18:43:19 thomasklausner Exp $
 #
 
 DISTNAME=		sdlmame0113
@@ -54,4 +54,5 @@ do-install:
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
