@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/14 01:53:13 netcap Exp $
+# $NetBSD: Makefile,v 1.13 2007/03/15 18:45:09 thomasklausner Exp $
 #
 
 DISTNAME=		audacious-plugins-1.3.1
@@ -97,9 +97,6 @@ CONFIGURE_ARGS+=	--enable-lirc
 .		include "../../wip/lirc/buildlink3.mk"
 .	endif
 .endif
-
-DEPENDS+=	audacious-1.3.1:../../wip/audacious
-DEPENDS+=	taglib>=1.4:../../audio/taglib
 
 .include "../../wip/audacious/buildlink3.mk"
 .include "../../wip/libadplug/buildlink3.mk"
