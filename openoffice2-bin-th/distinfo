@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/18 12:36:16 ondratu Exp $
+$NetBSD: distinfo,v 1.2 2007/03/15 22:00:26 fgudin Exp $
 
-SHA1 (openoffice.org-th-2.0.4-5.i586.rpm) = d2f4714d1ddc7253fe61154d61c05c573b42e6b8
-RMD160 (openoffice.org-th-2.0.4-5.i586.rpm) = e7c65aa03306ed86043972d33b7d9aaa8a821079
-Size (openoffice.org-th-2.0.4-5.i586.rpm) = 1846428 bytes
-SHA1 (openoffice.org-th-help-2.0.4-5.i586.rpm) = 935dd168c29ddc98246020b9003388c250ce6045
-RMD160 (openoffice.org-th-help-2.0.4-5.i586.rpm) = c9668efc2304b09db7523a7405147088f0cedd0a
-Size (openoffice.org-th-help-2.0.4-5.i586.rpm) = 11371652 bytes
-SHA1 (openoffice.org-th-res-2.0.4-5.i586.rpm) = ade7fb6105ac5b9934715a5178f535375740aebe
-RMD160 (openoffice.org-th-res-2.0.4-5.i586.rpm) = 7f61116f4bb100960643fadac0a595418e447211
-Size (openoffice.org-th-res-2.0.4-5.i586.rpm) = 644068 bytes
+SHA1 (openoffice.org-th-2.1.0-6.i586.rpm) = fafa463f0bd40fc422b5c36abd23ffa4f61ebc97
+RMD160 (openoffice.org-th-2.1.0-6.i586.rpm) = 887f141ee9e1108ba2f539e4ba9d71e78c36358d
+Size (openoffice.org-th-2.1.0-6.i586.rpm) = 1846993 bytes
+SHA1 (openoffice.org-th-help-2.1.0-6.i586.rpm) = c536a2afd3d03ef3f3226931561f8c1dc93e1fde
+RMD160 (openoffice.org-th-help-2.1.0-6.i586.rpm) = 101b335b98a5fab34a320226f74b453484e72b95
+Size (openoffice.org-th-help-2.1.0-6.i586.rpm) = 11427920 bytes
+SHA1 (openoffice.org-th-res-2.1.0-6.i586.rpm) = 4c37b8bf2c9ed8b60a5f4ffa3c299b293931ace9
+RMD160 (openoffice.org-th-res-2.1.0-6.i586.rpm) = f341e4f4b53ae7ed64a2fd282f35505e5f9b558f
+Size (openoffice.org-th-res-2.1.0-6.i586.rpm) = 644999 bytes
