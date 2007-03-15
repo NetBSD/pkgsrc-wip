@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/03 15:13:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/03/15 11:24:51 obache Exp $
 bin/bouml
 bin/projectControl
 bin/projectSynchro
@@ -719,6 +719,7 @@ lib/bouml/html/stereotypes
 lib/bouml/html/tools
 lib/bouml/idl_generator
 lib/bouml/irose
+lib/bouml/ixmi2
 lib/bouml/java_catalog
 lib/bouml/java_generator
 lib/bouml/java_reverse
@@ -1308,6 +1309,7 @@ lib/bouml/xmi2/136066.bodies
 lib/bouml/xmi2/136192.bodies
 lib/bouml/xmi2/136322.bodies
 lib/bouml/xmi2/136448.bodies
+lib/bouml/xmi2/136578.bodies
 lib/bouml/xmi2/136704.bodies
 lib/bouml/xmi2/136834.bodies
 lib/bouml/xmi2/136960.bodies
@@ -1424,6 +1426,186 @@ lib/bouml/xmi2/java_imports
 lib/bouml/xmi2/stereotypes
 lib/bouml/xmi2/tools
 lib/bouml/xmi2/xmi2.prj
+lib/bouml/xmi2import/1024.bodies
+lib/bouml/xmi2import/1152.bodies
+lib/bouml/xmi2import/1280.bodies
+lib/bouml/xmi2import/128002.bodies
+lib/bouml/xmi2import/128002.diagram
+lib/bouml/xmi2import/128130
+lib/bouml/xmi2import/128130.diagram
+lib/bouml/xmi2import/128256.bodies
+lib/bouml/xmi2import/128258.diagram
+lib/bouml/xmi2import/128386.bodies
+lib/bouml/xmi2import/128386.diagram
+lib/bouml/xmi2import/128512.bodies
+lib/bouml/xmi2import/128514.diagram
+lib/bouml/xmi2import/128642.diagram
+lib/bouml/xmi2import/128768.bodies
+lib/bouml/xmi2import/128770.diagram
+lib/bouml/xmi2import/128896.bodies
+lib/bouml/xmi2import/128898.diagram
+lib/bouml/xmi2import/129.diagram
+lib/bouml/xmi2import/129026.bodies
+lib/bouml/xmi2import/129026.diagram
+lib/bouml/xmi2import/129152.bodies
+lib/bouml/xmi2import/129154.diagram
+lib/bouml/xmi2import/129280.bodies
+lib/bouml/xmi2import/129282.diagram
+lib/bouml/xmi2import/129410.bodies
+lib/bouml/xmi2import/129410.diagram
+lib/bouml/xmi2import/129536.bodies
+lib/bouml/xmi2import/129538.diagram
+lib/bouml/xmi2import/129666.diagram
+lib/bouml/xmi2import/129794.bodies
+lib/bouml/xmi2import/129794.diagram
+lib/bouml/xmi2import/129920.bodies
+lib/bouml/xmi2import/130050.bodies
+lib/bouml/xmi2import/130176.bodies
+lib/bouml/xmi2import/130432.bodies
+lib/bouml/xmi2import/130562.bodies
+lib/bouml/xmi2import/130688.bodies
+lib/bouml/xmi2import/130944.bodies
+lib/bouml/xmi2import/131200.bodies
+lib/bouml/xmi2import/131456.bodies
+lib/bouml/xmi2import/131712.bodies
+lib/bouml/xmi2import/131968.bodies
+lib/bouml/xmi2import/132224.bodies
+lib/bouml/xmi2import/132480.bodies
+lib/bouml/xmi2import/132736.bodies
+lib/bouml/xmi2import/133120.bodies
+lib/bouml/xmi2import/133250.bodies
+lib/bouml/xmi2import/133376.bodies
+lib/bouml/xmi2import/133888.bodies
+lib/bouml/xmi2import/134018.bodies
+lib/bouml/xmi2import/134144.bodies
+lib/bouml/xmi2import/134272.bodies
+lib/bouml/xmi2import/134528.bodies
+lib/bouml/xmi2import/134658.bodies
+lib/bouml/xmi2import/134912.bodies
+lib/bouml/xmi2import/135042.bodies
+lib/bouml/xmi2import/135168.bodies
+lib/bouml/xmi2import/135298.bodies
+lib/bouml/xmi2import/135424.bodies
+lib/bouml/xmi2import/135554.bodies
+lib/bouml/xmi2import/135680.bodies
+lib/bouml/xmi2import/135810.bodies
+lib/bouml/xmi2import/135936.bodies
+lib/bouml/xmi2import/136066.bodies
+lib/bouml/xmi2import/136192.bodies
+lib/bouml/xmi2import/136322.bodies
+lib/bouml/xmi2import/136448.bodies
+lib/bouml/xmi2import/136578.bodies
+lib/bouml/xmi2import/136704.bodies
+lib/bouml/xmi2import/136834.bodies
+lib/bouml/xmi2import/136960.bodies
+lib/bouml/xmi2import/137090.bodies
+lib/bouml/xmi2import/137216.bodies
+lib/bouml/xmi2import/137346.bodies
+lib/bouml/xmi2import/137472.bodies
+lib/bouml/xmi2import/137602.bodies
+lib/bouml/xmi2import/137728.bodies
+lib/bouml/xmi2import/137858.bodies
+lib/bouml/xmi2import/137984.bodies
+lib/bouml/xmi2import/138114.bodies
+lib/bouml/xmi2import/138240.bodies
+lib/bouml/xmi2import/138370.bodies
+lib/bouml/xmi2import/138496.bodies
+lib/bouml/xmi2import/138626.bodies
+lib/bouml/xmi2import/138752.bodies
+lib/bouml/xmi2import/138882.bodies
+lib/bouml/xmi2import/139008.bodies
+lib/bouml/xmi2import/139138.bodies
+lib/bouml/xmi2import/139264.bodies
+lib/bouml/xmi2import/139394.bodies
+lib/bouml/xmi2import/139650.bodies
+lib/bouml/xmi2import/139776.bodies
+lib/bouml/xmi2import/140032.bodies
+lib/bouml/xmi2import/140288.bodies
+lib/bouml/xmi2import/140544.bodies
+lib/bouml/xmi2import/1408.bodies
+lib/bouml/xmi2import/140800.bodies
+lib/bouml/xmi2import/141056.bodies
+lib/bouml/xmi2import/141312.bodies
+lib/bouml/xmi2import/141568.bodies
+lib/bouml/xmi2import/141698.bodies
+lib/bouml/xmi2import/141952.bodies
+lib/bouml/xmi2import/142082.bodies
+lib/bouml/xmi2import/142208.bodies
+lib/bouml/xmi2import/142338.bodies
+lib/bouml/xmi2import/142592.bodies
+lib/bouml/xmi2import/142722.bodies
+lib/bouml/xmi2import/142848.bodies
+lib/bouml/xmi2import/142978.bodies
+lib/bouml/xmi2import/143104.bodies
+lib/bouml/xmi2import/143362.bodies
+lib/bouml/xmi2import/143490.bodies
+lib/bouml/xmi2import/143874.bodies
+lib/bouml/xmi2import/144002.bodies
+lib/bouml/xmi2import/144130.bodies
+lib/bouml/xmi2import/144258.bodies
+lib/bouml/xmi2import/144386.bodies
+lib/bouml/xmi2import/144514.bodies
+lib/bouml/xmi2import/144898.bodies
+lib/bouml/xmi2import/145026.bodies
+lib/bouml/xmi2import/1536.bodies
+lib/bouml/xmi2import/1664.bodies
+lib/bouml/xmi2import/1792.bodies
+lib/bouml/xmi2import/1920.bodies
+lib/bouml/xmi2import/2048.bodies
+lib/bouml/xmi2import/2176.bodies
+lib/bouml/xmi2import/2304.bodies
+lib/bouml/xmi2import/2432.bodies
+lib/bouml/xmi2import/256
+lib/bouml/xmi2import/2560.bodies
+lib/bouml/xmi2import/257.diagram
+lib/bouml/xmi2import/2688.bodies
+lib/bouml/xmi2import/2944.bodies
+lib/bouml/xmi2import/3072.bodies
+lib/bouml/xmi2import/3200.bodies
+lib/bouml/xmi2import/3328.bodies
+lib/bouml/xmi2import/3456.bodies
+lib/bouml/xmi2import/3584.bodies
+lib/bouml/xmi2import/3712.bodies
+lib/bouml/xmi2import/384
+lib/bouml/xmi2import/3840.bodies
+lib/bouml/xmi2import/385.diagram
+lib/bouml/xmi2import/3968.bodies
+lib/bouml/xmi2import/4096.bodies
+lib/bouml/xmi2import/4224.bodies
+lib/bouml/xmi2import/4352.bodies
+lib/bouml/xmi2import/4736.bodies
+lib/bouml/xmi2import/4864.bodies
+lib/bouml/xmi2import/4992.bodies
+lib/bouml/xmi2import/512
+lib/bouml/xmi2import/5120.bodies
+lib/bouml/xmi2import/513.diagram
+lib/bouml/xmi2import/5248.bodies
+lib/bouml/xmi2import/641
+lib/bouml/xmi2import/6528.bodies
+lib/bouml/xmi2import/6913.bodies
+lib/bouml/xmi2import/7041.bodies
+lib/bouml/xmi2import/7169.bodies
+lib/bouml/xmi2import/7553.bodies
+lib/bouml/xmi2import/768.bodies
+lib/bouml/xmi2import/7681.bodies
+lib/bouml/xmi2import/8065.bodies
+lib/bouml/xmi2import/8193.bodies
+lib/bouml/xmi2import/8449.bodies
+lib/bouml/xmi2import/8833.bodies
+lib/bouml/xmi2import/896.bodies
+lib/bouml/xmi2import/8961.bodies
+lib/bouml/xmi2import/9089.bodies
+lib/bouml/xmi2import/9217.bodies
+lib/bouml/xmi2import/9345.bodies
+lib/bouml/xmi2import/9729.bodies
+lib/bouml/xmi2import/9985.bodies
+lib/bouml/xmi2import/cpp_includes
+lib/bouml/xmi2import/generation_settings
+lib/bouml/xmi2import/idl_includes
+lib/bouml/xmi2import/java_imports
+lib/bouml/xmi2import/stereotypes
+lib/bouml/xmi2import/tools
+lib/bouml/xmi2import/xmi2import.prj
 share/applications/bouml.desktop
 share/applications/projectControl.desktop
 share/applications/projectSynchro.desktop
@@ -1444,18 +1626,19 @@ share/icons/hicolor/64x64/apps/projectSynchro.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/bouml/FileControl
-@dirrm lib/bouml/GlobalChange
-@dirrm lib/bouml/cpp_utilities
-@dirrm lib/bouml/deploy
-@dirrm lib/bouml/empty
-@dirrm lib/bouml/genpro
-@dirrm lib/bouml/html
-@dirrm lib/bouml/rose
-@dirrm lib/bouml/singleton
-@dirrm lib/bouml/sm_generator
-@dirrm lib/bouml/sort
-@dirrm lib/bouml/usecase_wizard
-@dirrm lib/bouml/xmi
+@dirrm lib/bouml/xmi2import
 @dirrm lib/bouml/xmi2
+@dirrm lib/bouml/xmi
+@dirrm lib/bouml/usecase_wizard
+@dirrm lib/bouml/sort
+@dirrm lib/bouml/sm_generator
+@dirrm lib/bouml/singleton
+@dirrm lib/bouml/rose
+@dirrm lib/bouml/html
+@dirrm lib/bouml/genpro
+@dirrm lib/bouml/empty
+@dirrm lib/bouml/deploy
+@dirrm lib/bouml/cpp_utilities
+@dirrm lib/bouml/GlobalChange
+@dirrm lib/bouml/FileControl
 @dirrm lib/bouml
