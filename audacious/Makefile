@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/14 01:53:13 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/15 18:44:47 thomasklausner Exp $
 #
 
 DISTNAME=		audacious-1.3.1
@@ -37,5 +37,4 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
