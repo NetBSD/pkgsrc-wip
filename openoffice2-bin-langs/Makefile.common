@@ -1,15 +1,17 @@
-# $NetBSD: Makefile.common,v 1.4 2007/03/15 08:12:59 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/03/15 22:58:20 fgudin Exp $
 
-PKGNAME=		openoffice-bin-${LANGUAGE}-${OO_RELEASE}
+PKGNAME=		openoffice2-bin-${LANGUAGE}-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		ftp://ftp.openoffice.cz/${OO_RELEASE}/OOo_OOD680_m5_native_LinuxIntel_langpacks_rpm/
-DISTFILES=		openoffice.org-${LANGUAGE}-${OO_RELEASE}-5.i586.rpm \
-			openoffice.org-${LANGUAGE}-help-${OO_RELEASE}-5.i586.rpm \
-			openoffice.org-${LANGUAGE}-res-${OO_RELEASE}-5.i586.rpm
+MASTER_SITES=		ftp://ftp.openoffice.cz/${OO_VER}/OOo_2.1.0rc2_native_LinuxIntel_langpacks_rpm/
+DISTFILES=		openoffice.org-${LANGUAGE}-${OO_RELEASE}-6.i586.rpm \
+			openoffice.org-${LANGUAGE}-help-${OO_RELEASE}-6.i586.rpm \
+			openoffice.org-${LANGUAGE}-res-${OO_RELEASE}-6.i586.rpm
 
 MAINTAINER=		pkgsrc@blackmouse.biz
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		${LANGUAGE} language package for OpenOffice.org2
+
+CONFLICTS+=		openoffice-bin-${LANGUAGE}-[0-9]*
 
 BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 
@@ -18,8 +20,8 @@ DEPENDS+=		openoffice2-bin-${OO_RELEASE}{,nb*}:../../misc/openoffice2-bin
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 2
 
-OO_VER=			2.0
-OO_RELEASE=		2.0.4
+OO_VER=			2.1
+OO_RELEASE=		2.1.0
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
