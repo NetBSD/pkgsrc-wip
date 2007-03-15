@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/27 22:59:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2007/03/15 18:43:59 thomasklausner Exp $
 #
 
 DISTNAME=		InfoNES097JRC1_SDL
@@ -19,5 +19,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/InfoNES
 	${INSTALL_DATA} ${FILESDIR}/keys.txt ${PREFIX}/share/doc/InfoNES
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
