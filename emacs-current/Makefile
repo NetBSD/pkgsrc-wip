@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/03/15 11:45:07 obache Exp $
+# $NetBSD: Makefile,v 1.22 2007/03/15 12:02:03 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.95
@@ -31,6 +31,9 @@ CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		GAMEDATAMODE
 
 SUBST_CLASSES+=			test_equal
 SUBST_STAGE.test_equal=		pre-configure
