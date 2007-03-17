@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2546 2007/03/17 20:53:48 cheusov Exp $
+# $Id: Makefile,v 1.2547 2007/03/17 20:58:14 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1118,7 +1118,6 @@ SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-Delicious
-SUBDIR+=	p5-Net-Dict
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
