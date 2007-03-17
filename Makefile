@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2547 2007/03/17 20:58:14 cheusov Exp $
+# $Id: Makefile,v 1.2548 2007/03/17 21:03:54 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -977,7 +977,6 @@ SUBDIR+=	p5-Accessor-Chained
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Apache-AuthenNTLM
-SUBDIR+=	p5-AppConfig-Std
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
