@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/02/03 21:53:05 neimal Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/17 22:27:19 cosmedbr Exp $
 
 DISTNAME=		libixp-0.2
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://libs.suckless.org/download/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		cosmedbr@users.sourceforge.net
 HOMEPAGE=		http://libs.suckless.org/
 COMMENT=		Standalone client/server 9P library
 
