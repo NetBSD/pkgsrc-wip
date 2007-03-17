@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/17 22:30:26 cosmedbr Exp $
-bin/dmenu
-bin/dmenu_path
-man/man1/dmenu.1
+@comment $NetBSD: PLIST,v 1.2 2007/03/17 22:42:20 cosmedbr Exp $
+bin/wmii
+bin/wmiir
+bin/wmiiwm
+man/man1/wmii.1
+man/man1/wmiir.1
+man/man1/wmiiwm.1
+share/examples/wmii-3.5/quit
+share/examples/wmii-3.5/status
+share/examples/wmii-3.5/welcome
+share/examples/wmii-3.5/wmiirc
+@dirrm share/examples/wmii-3.5

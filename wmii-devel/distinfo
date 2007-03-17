@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/17 22:30:26 cosmedbr Exp $
+$NetBSD: distinfo,v 1.2 2007/03/17 22:42:20 cosmedbr Exp $
 
-SHA1 (dmenu-2.8.tar.gz) = 6f486ce751e314c131b9233161fc621f69a7c42c
-RMD160 (dmenu-2.8.tar.gz) = 7cbbe6ffd75d99f8c021cc83c480be431e90353d
-Size (dmenu-2.8.tar.gz) = 7755 bytes
-SHA1 (patch-aa) = aad2e196993e7342353d42a45250e07e6913022f
+SHA1 (wmii-3.6-rc2.tar.gz) = 9f26807567f5541f1bc9dc508db223a1be4dd011
+RMD160 (wmii-3.6-rc2.tar.gz) = 3934edf33cbdc7ac3c1dc05e5edc8f33f96d1360
+Size (wmii-3.6-rc2.tar.gz) = 42890 bytes
+SHA1 (patch-aa) = e5328ad094d31d58e1466e8f0be1003effe50bee
