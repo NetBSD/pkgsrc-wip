@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/11/04 10:48:33 kh-p Exp $
+$NetBSD: distinfo,v 1.3 2007/03/18 21:34:05 cosmedbr Exp $
 
-SHA1 (slock-0.3.tar.gz) = e0197bfcff1301af1ed6c8f3882bb1363a116dd0
-RMD160 (slock-0.3.tar.gz) = d23ae5d25298ffb3a14f7c18c6965fe084f94936
-Size (slock-0.3.tar.gz) = 3393 bytes
-SHA1 (patch-aa) = f45925ff5e2aea12a0f7181adbe2e9c1099e2b4e
+SHA1 (slock-0.6.tar.gz) = b73435f61549c3e52708724e34dccb64b762c2bc
+RMD160 (slock-0.6.tar.gz) = fcd7b69722e8d2a687f61501bdb059c5b6d311b8
+Size (slock-0.6.tar.gz) = 3446 bytes
+SHA1 (patch-aa) = 8f3043404e48372886bd9b5ee5289bf5dd45a6a0
