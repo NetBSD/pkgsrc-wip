@@ -4,3 +4,4 @@ developed under Linux, but it can compiled under most operating systems,
 including Windows.
 
 This package fetches nightly builds from mplayer's site, no checksums made.
+It is proven to build with distfile dated from 18-03-2007.

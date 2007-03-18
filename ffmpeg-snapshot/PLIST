@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/08 23:09:43 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/18 15:50:20 cetrox Exp $
 bin/ffmpeg
 bin/ffserver
 include/ffmpeg/adler32.h
@@ -11,9 +11,12 @@ include/ffmpeg/fifo.h
 include/ffmpeg/integer.h
 include/ffmpeg/intfloat_readwrite.h
 include/ffmpeg/log.h
+include/ffmpeg/lzo.h
 include/ffmpeg/mathematics.h
 include/ffmpeg/md5.h
+include/ffmpeg/mem.h
 include/ffmpeg/opt.h
+include/ffmpeg/random.h
 include/ffmpeg/rational.h
 include/ffmpeg/rgb2rgb.h
 include/ffmpeg/rtp.h
