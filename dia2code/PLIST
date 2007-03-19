@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/02 22:43:03 daprice Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/03/19 12:47:09 rillig Exp $
 bin/dia2code
-man/man1/dia2code.1.gz
+man/man1/dia2code.1
 share/doc/dia2code/README
 @dirrm share/doc/dia2code
