@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2007/03/19 14:11:52 rillig Exp $
+
+--- logos_libs/utility/phrasemanager.h.orig	2005-11-02 17:15:14.000000000 +0100
++++ logos_libs/utility/phrasemanager.h	2007-03-19 14:39:54.000000000 +0100
+@@ -164,7 +164,7 @@ private:
+     static void appendString(const LgsString& s, CharacterVector& buffer);
+ 
+     // looks up a phrase in the map given a key - throws an exception if not found
+-    Phrase* PhraseManager::lookup(Key key) const;
++    Phrase* lookup(Key key) const;
+ 
+     // appends a phrase to the buffer_ including trailing spaces
+     void appendPhraseToBuffer(const LgsString& phrase, int trailingSpaces);

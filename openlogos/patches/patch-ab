@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/03/19 14:11:52 rillig Exp $
+
+--- logos_libs/halfnoun/germandictionary.h.orig	2005-11-02 17:12:38.000000000 +0100
++++ logos_libs/halfnoun/germandictionary.h	2007-03-19 14:43:11.000000000 +0100
+@@ -135,7 +135,7 @@ private:
+ 
+     // convert word class to GermanWordClass
+     // return true if entry is acceptable - false if not (eg on a Proper noun)
+-    bool GermanDictionary::convertWordClass(const LgsString& word, const LgsString& clazz, int pat, int stem,
++    bool convertWordClass(const LgsString& word, const LgsString& clazz, int pat, int stem,
+                                             int s0, int s1, int s2, GermanWordClass& wordClass);
+ };
+ 

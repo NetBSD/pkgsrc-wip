@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2007/03/19 14:11:52 rillig Exp $
+
+--- logos_libs/regex/regularexpression.h.orig	2005-11-02 17:14:25.000000000 +0100
++++ logos_libs/regex/regularexpression.h	2007-03-19 14:39:04.000000000 +0100
+@@ -112,7 +112,7 @@ public:
+ 
+    ~RegularExpression();
+ 
+-   static void RegularExpression::printTimes();
++   static void printTimes();
+ 
+    void printGroups(const char *txt);
+ 

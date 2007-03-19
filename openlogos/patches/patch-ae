@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2007/03/19 14:11:52 rillig Exp $
+
+Don't install CVS directories.
+
+--- Makefile.in.orig	2006-04-04 15:08:16.000000000 +0200
++++ Makefile.in	2007-03-19 15:09:36.000000000 +0100
+@@ -649,7 +649,7 @@ uninstall-info: uninstall-info-recursive
+ 
+ 
+ install-data-hook:
+-	test -d "$(DESTDIR)$(pkgdatadir)/bin_data" || cp -r $(top_srcdir)/bin_data "$(DESTDIR)$(pkgdatadir)"
++	cd $(top_srcdir) && pax -wr -s',.*CVS.*,,' $(top_srcdir)/bin_data "$(DESTDIR)$(pkgdatadir)"
+ 
+ install-exec-local:
+ 	test -d "$(DESTDIR)$(bindir)" || mkdir -p "$(DESTDIR)$(bindir)"
