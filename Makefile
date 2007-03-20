@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2548 2007/03/17 21:03:54 cheusov Exp $
+# $Id: Makefile,v 1.2549 2007/03/20 16:07:08 jakllsch Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -788,6 +788,7 @@ SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	mc-mp
 SUBDIR+=	mcabber
+SUBDIR+=	mcast-tools
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
