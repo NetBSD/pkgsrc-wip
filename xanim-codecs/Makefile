@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/03 13:49:35 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/20 21:16:57 shattered Exp $
 
 DISTNAME=
 PKGNAME=	xanim-codecs-19990322
@@ -28,7 +28,6 @@ BUILD_DEFS+=	XANIM_DLL_CODECS
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.readme ${PREFIX}/share/doc/xanim
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/xanim
 	${INSTALL_DATA} ${WRKSRC}/*.xa ${PREFIX}/lib/xanim
 
 .include "../../mk/bsd.pkg.mk"
