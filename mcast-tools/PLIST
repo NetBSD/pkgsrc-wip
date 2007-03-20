@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/20 16:04:06 jakllsch Exp $
+bin/mcastread
+bin/mcastsend
+bin/mtrace6
+bin/pmsft
+man/man1/mcastread.1
+man/man1/mcastsend.1
+man/man1/pim6stat.1
+man/man1/pmsft.1
+man/man5/pim6dd.conf.5
+man/man5/pim6sd.conf.5
+man/man8/mfc.8
+man/man8/mtrace6.8
+man/man8/pim6dd.8
+man/man8/pim6sd.8
+sbin/mfc
+sbin/pim6dd
+sbin/pim6sd
+sbin/pim6stat
