@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.3 2007/01/27 15:33:09 dillo Exp $
+# $Id: svn-package.mk,v 1.4 2007/03/21 11:23:11 obache Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -77,7 +77,7 @@ _SVN_CMD=		svn
 _SVN_ENV=		# empty
 _SVN_ENV+=		SVN_RSH=${_SVN_RSH:Q}
 _SVN_FLAGS=		-q
-_SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive -r ${SVN_TAG:Q}
+_SVN_CHECKOUT_FLAGS=	--config-dir=${_SVN_CONFIG_DIR} --non-interactive
 
 pre-extract: do-svn-extract
 
@@ -92,6 +92,7 @@ do-svn-extract:
 	cd ${WRKDIR};							\
 	${SETENV} ${_SVN_ENV}						\
 		${_SVN_CMD} checkout ${_SVN_CHECKOUT_FLAGS}		\
+			-r ${SVN_TAG.${_repo_}:Q}			\
 			${_SVN_FLAGS}		 			\
 			${SVN_ROOT.${_repo_}:Q}				\
 			${SVN_MODULE.${_repo_}:Q}
