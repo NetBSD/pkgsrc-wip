@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1 2007/03/21 20:21:07 bsadewitz Exp $
+
+--- configure.orig	2007-03-18 18:33:01.000000000 -0400
++++ configure
+@@ -21019,13 +21019,13 @@ if test $ac_cv_func_pthread_create = yes
+   :
+ else
+ 
+-{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -21085,7 +21085,7 @@ if test $ac_cv_lib_pthread_pthread_creat
+ #define HAVE_LIBPTHREAD 1
+ _ACEOF
+ 
+-  LIBS="-lpthread $LIBS"
++  LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ 
+ else
+   { { echo "$as_me:$LINENO: error: *** JACK requires POSIX threads support" >&5
+@@ -21949,7 +21949,7 @@ fi
+ 
+ 
+ JACK_CORE_CFLAGS="-I\$(top_srcdir)/config -I\$(top_srcdir) \
+--I\$(top_srcdir) -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS -Wall -g"
++-I\$(top_srcdir) ${PTHREAD_CFLAGS} -Wall -g"
+ JACK_OPT_CFLAGS="$JACK_CORE_CFLAGS -march=pentium2 -mcpu=pentium4 -O3 \
+ -ffast-math -funroll-loops -fprefetch-loop-arrays"
+ JACK_CFLAGS="$JACK_CORE_CFLAGS $CFLAGS"
+@@ -22033,7 +22033,7 @@ rm -f core conftest.err conftest.$ac_obj
+     fi
+ 
+ 
+-    JACK_OPT_CFLAGS="-D_REENTRANT -O2 -mcpu=7400 $ALTIVEC_OPT_FLAGS_FLAGS -mhard-float -mpowerpc-gfxopt"
++    JACK_OPT_CFLAGS="${PTHREAD_CFLAGS} -O2 -mcpu=7400 $ALTIVEC_OPT_FLAGS_FLAGS -mhard-float -mpowerpc-gfxopt"
+ 
+ elif echo $target_cpu | egrep '(i.86|x86_64)' >/dev/null; then
+ 
+@@ -22205,7 +22205,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define x86 1
+ _ACEOF
+ 
+-    COMMON_X86_OPT_FLAGS="-DREENTRANT -O3 -fomit-frame-pointer -ffast-math -funroll-loops"
++    COMMON_X86_OPT_FLAGS="${PTHREAD_CFLAGS} -O3 -fomit-frame-pointer -ffast-math -funroll-loops"
+ 
+     if test "$target_cpu" = "i586"; then
+ 	JACK_OPT_CFLAGS="-march=i586 "
+@@ -22727,13 +22727,13 @@ if test "${with_barrier+set}" = set; the
+ fi
+ 
+ if test "x$USE_BARRIER" = "xyes"; then
+-	{ echo "$as_me:$LINENO: checking for pthread_barrier_init in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_barrier_init in -lpthread... $ECHO_C" >&6; }
++	{ echo "$as_me:$LINENO: checking for pthread_barrier_init in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_barrier_init in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_pthread_pthread_barrier_init+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF

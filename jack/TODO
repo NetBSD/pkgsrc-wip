@@ -1,0 +1,11 @@
+--add files to PLISTs for options/seperate PLISTs according to options
+--write rc.d script
+--actually test this thing
+--Handle dynamic CPU detection, etc.
+--use CONF_FILES (maybe SUBST), RCD_SCRIPTS, and user/group stuff
+--maybe even write some real NetBSD-specific code so this actually works
+as intended ...
+
+-- XXX more?
+
+--Blair
