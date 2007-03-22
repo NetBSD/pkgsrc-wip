@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/15 19:13:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/22 15:18:28 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -37,10 +37,13 @@ YESTERDAY!=	expr `date +%s` - 86399
 SCM_VER!=	${DATE} -r ${YESTERDAY} +%Y%m%d
 SCM_TAG!=	${DATE} +%Y%m%d
 
+BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.0.4
+
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
