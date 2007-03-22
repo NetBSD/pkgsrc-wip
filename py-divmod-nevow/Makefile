@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:54 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/22 21:01:34 milosn Exp $
 
-NEVOW_VERSION=	0.9.0
+NEVOW_VERSION=	0.9.18
 DISTNAME=	Nevow-${NEVOW_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-nevow-${NEVOW_VERSION}
 CATEGORIES=	www python
-MASTER_SITES=	http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/
+MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	milos.negovanovic@googlemail.com
