@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/28 18:48:46 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/22 21:02:42 milosn Exp $
 
-MANTISSA_VERSION=	0.5.0
+MANTISSA_VERSION=	0.6.1
 DISTNAME=	Mantissa-${MANTISSA_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-mantissa-${MANTISSA_VERSION}
 CATEGORIES=	python www net

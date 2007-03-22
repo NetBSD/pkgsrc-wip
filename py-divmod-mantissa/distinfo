@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/28 18:48:47 milosn Exp $
+$NetBSD: distinfo,v 1.2 2007/03/22 21:02:42 milosn Exp $
 
-SHA1 (Mantissa-0.5.0.tar.gz) = ed00fb869a98a0ac6af185d494d91cf60a4a39f3
-RMD160 (Mantissa-0.5.0.tar.gz) = 94bc04de92972cb697d9747006732e16cca04496
-Size (Mantissa-0.5.0.tar.gz) = 227928 bytes
+SHA1 (Mantissa-0.6.1.tar.gz) = 447b8756a0b2053fbb140cbeebf578c6365833bc
+RMD160 (Mantissa-0.6.1.tar.gz) = e2a0413f8beef67370777963e4dfd272dc643952
+Size (Mantissa-0.6.1.tar.gz) = 472449 bytes
