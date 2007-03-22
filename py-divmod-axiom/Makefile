@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/22 20:59:23 milosn Exp $
 
-AXIOM_VERSION=	0.5.0
+AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-axiom-${AXIOM_VERSION}
 CATEGORIES=	python
@@ -13,7 +13,7 @@ COMMENT=	An object database implemented on top of SQLite
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2.0:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.0:../../wip/py-divmod-epsilon
+DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.6:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=	24
