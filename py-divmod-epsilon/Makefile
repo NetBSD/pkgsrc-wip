@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/22 21:00:27 milosn Exp $
 
-EPSILON_VERSION=	0.5.0
+EPSILON_VERSION=	0.5.6
 DISTNAME=	Epsilon-${EPSILON_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-epsilon-${EPSILON_VERSION}
 CATEGORIES=	python
