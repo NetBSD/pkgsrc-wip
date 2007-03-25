@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/15 18:43:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/03/25 12:37:42 dillo Exp $
 #
 
 DISTNAME=		sdlmame0113
@@ -32,7 +32,7 @@ PKG_DEFS+=	-DPPC_ASM
 .endif
 
 .  include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN:Mlittle-endian}
+.if ${MACHINE_ENDIAN:Mlittle}
 PKG_DEFS+=	-DLSB_FIRST
 .endif
 
