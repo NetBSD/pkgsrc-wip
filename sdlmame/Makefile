@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/25 12:37:42 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/25 20:43:30 thomasklausner Exp $
 #
 
 DISTNAME=		sdlmame0113
@@ -18,6 +18,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 USE_TOOLS+=             gmake
 UNLIMIT_RESOURCES=      datasize
 MAKE_FILE=              makefile
+LICENSE=		mame-license
 
 .if ${MACHINE_ARCH:Mi386}
 X86_MIPS3_DRC = 1
@@ -50,6 +51,11 @@ SUBST_SED.pragma=       -e "s|\#pragma once||g"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mame ${LOCALBASE}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdlmame
+	${INSTALL_DATA} ${WRKSRC}/SDLMAME.txt ${PREFIX}/share/doc/sdlmame
+	${INSTALL_DATA} ${WRKSRC}/docs/license.txt ${PREFIX}/share/doc/sdlmame
+	${INSTALL_DATA} ${WRKSRC}/docs/mame.txt ${PREFIX}/share/doc/sdlmame
+	${INSTALL_DATA} ${WRKSRC}/docs/windows.txt ${PREFIX}/share/doc/sdlmame
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
