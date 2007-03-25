@@ -1,0 +1,11 @@
+WebMake is a simple content management system, based around a templating system
+for HTML documents, with lots of built-in smarts about what a "typical"
+informational website needs in the way of functionality; metadata,
+sitemapping, navigational aids, and (of course) embedded perl code. ;)
+
+It requires no dynamic scripting capabilities on the server; WebMake sites can
+be deployed to a plain old FTP site without any problems.
+
+It allows the separation of responsibilities between the content editors, the
+HTML page designers, and the site architect; only the site architect needs to
+edit the WebMake file itself, or know perl or WebMake code.
