@@ -1,0 +1,8 @@
+EtText is a simple plain-text format which allows conversion to and from HTML.
+Instead of editing HTML directly, it provides an easy-to-edit, easy-to-read and
+intuitive way to write HTML, based on the plain-text markup conventions we've
+been using for years.
+
+Like most simple text markup formats (POD, setext, etc.), EtText markup handles
+the usual things: insertion of P tags, header recognition and markup. However
+it also adds a powerful link markup system.
