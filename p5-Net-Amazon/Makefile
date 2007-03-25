@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2005/09/02 18:30:55 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/25 05:21:48 obache Exp $
 
-DISTNAME=	Net-Amazon-0.34
+DISTNAME=	Net-Amazon-0.40
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -13,7 +13,7 @@ DEPENDS+=	p5-libwww>=2:../../www/p5-libwww
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-XML-Simple>=2.08:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-Log-Log4perl>=0.30:../../wip/p5-Log-Log4perl
-DEPENDS+=	{perl>=5.007003,p5-Time-HiRes>=1}:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.007.003,p5-Time-HiRes>=1}:../../time/p5-Time-HiRes
 
 PERL5_PACKLIST= auto/Net/Amazon/.packlist
 
