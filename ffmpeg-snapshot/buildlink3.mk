@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/12/13 19:29:53 cetrox Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/03/27 23:51:53 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FFMPEG_SNAPSHOT_BUILDLINK3_MK:=	${FFMPEG_SNAPSHOT_BUILDLINK3_MK}+
@@ -15,5 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ffmpeg-snapshot
 BUILDLINK_API_DEPENDS.ffmpeg-snapshot+=	ffmpeg-snapshot>=20061213
 BUILDLINK_PKGSRCDIR.ffmpeg-snapshot?=	../../wip/ffmpeg-snapshot
 .endif	# FFMPEG_SNAPSHOT_BUILDLINK3_MK
+
+.include "../../multimedia/libogg/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
