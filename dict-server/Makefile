@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/13 21:27:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.19 2007/03/27 20:16:16 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -7,7 +7,7 @@ COMMENT=	Dictionary Service Protocol server
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gmake yacc m4:run
+USE_TOOLS+=		gmake yacc lex m4:run
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
