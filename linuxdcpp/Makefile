@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/16 14:01:29 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/27 15:42:07 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
@@ -47,5 +47,4 @@ do-install:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
