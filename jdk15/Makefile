@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/10 17:11:05 briandealwis Exp $
+# $NetBSD: Makefile,v 1.11 2007/03/27 17:51:23 briandealwis Exp $
 
 JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
@@ -8,7 +8,7 @@ DISTNAME=		jdk-1_5_0-src-scsl
 PKGNAME=		jdk15-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
 CATEGORIES=		lang java
 MASTER_SITES=		# http://www.sun.com/software/java2/download.html
-#			http://www.eyesbeyond.com/freebsddom/java/jdk15.html
+# 			  http://www.eyesbeyond.com/freebsddom/java/jdk15.html
 EXTRACT_SUFX=		.zip
 DISTFILES=		${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
 
@@ -30,7 +30,7 @@ USE_TOOLS+=		gmake m4
 USE_LANGUAGES=		c c++
 EXTRACT_CMD_OPTS.zip=	-q
 WRKSRC=			${WRKDIR}
-PLIST_SRC=	PLIST.common
+PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
@@ -92,31 +92,22 @@ PATCH_DOWNLOAD=		http://www.eyesbeyond.com/freebsddom/java/JDK15SCSLConfirm.html
 JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
-.if !exists(${DISTDIR}/${SCSL_SRCFILE}) ||	\
-	 !exists(${DISTDIR}/${SCSL_BINFILE}) ||	\
-	 !exists(${DISTDIR}/${PATCHSETFILE})
 INTERACTIVE_STAGE=	fetch
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================================"; \
-	${ECHO} ; \
-	${ECHO} " The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"; \
-	${ECHO} " containing the Java(tm) 2 SDK, Standard Edition must be fetched"; \
-	${ECHO} " into:"; \
-	${ECHO} "	${DISTDIR}/${SCSL_SRCFILE}"; \
-	${ECHO} " and:"; \
-	${ECHO} "	${DISTDIR}/${SCSL_BINFILE}"; \
-	${ECHO} " from (choose the Download link for JDK 5.0):"; \
-	${ECHO} "	${SCSL_DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} " This requires a Sun Community Source Licensing account."; \
-	${ECHO} ; \
-	${ECHO} " Also, the file ${PATCHSETFILE} must be fetched into:"; \
-	${ECHO} "	${DISTDIR}/${PATCHSETFILE}"; \
-	${ECHO} " from:"; \
-	${ECHO} "	${PATCH_DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} "======================================================================"
-.endif
+FETCH_MESSAGE+= " The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"
+FETCH_MESSAGE+= " containing the Java(tm) 2 SDK, Standard Edition must be fetched"
+FETCH_MESSAGE+= " into:"
+FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_SRCFILE}"
+FETCH_MESSAGE+= " and:"
+FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_BINFILE}"
+FETCH_MESSAGE+= " from (choose the Download link for JDK 5.0):"
+FETCH_MESSAGE+= "       ${SCSL_DOWNLOAD}"
+FETCH_MESSAGE+= ""
+FETCH_MESSAGE+= " This requires a Sun Community Source Licensing account."
+FETCH_MESSAGE+= ""
+FETCH_MESSAGE+= " Also, the file ${PATCHSETFILE} must be fetched into:"
+FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
+FETCH_MESSAGE+= " from:"
+FETCH_MESSAGE+= "      ${PATCH_DOWNLOAD}"
 
 MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
