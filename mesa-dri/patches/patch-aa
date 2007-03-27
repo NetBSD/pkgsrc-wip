@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/03/27 22:28:19 dillo Exp $
+
+Workaround a crash in r300EmitArrays triggered by AIGLX/compiz.
+
+--- src/mesa/drivers/dri/r300/r300_context.h.orig	2007-03-26 21:58:42.000000000 -0400
++++ src/mesa/drivers/dri/r300/r300_context.h	2007-03-26 21:58:56.000000000 -0400
+@@ -48,7 +48,7 @@
+ #include "radeon_context.h"
+ 
+ #define USER_BUFFERS
+-#define RADEON_VTXFMT_A
++//#define RADEON_VTXFMT_A
+ #define HW_VBOS
+ 
+ /* We don't handle 16 bits elts swapping yet */

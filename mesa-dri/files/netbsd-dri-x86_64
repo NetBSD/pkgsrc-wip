@@ -1,0 +1,9 @@
+# -*-makefile-*-
+# Configuration for netbsd-dri-x86_64: NetBSD DRI hardware drivers
+
+include $(TOP)/configs/netbsd-dri
+
+CONFIG_NAME = netbsd-dri-x86-64
+
+ASM_FLAGS = -DUSE_X86_64_ASM
+ASM_SOURCES = $(X86-64_SOURCES) $(X86-64_API)

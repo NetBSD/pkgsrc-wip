@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/27 22:28:19 dillo Exp $
+include/GL/GLwDrawA.h
+include/GL/GLwDrawAP.h
+include/GL/GLwMDrawA.h
+include/GL/GLwMDrawAP.h
+include/GL/amesa.h
+include/GL/dmesa.h
+include/GL/fxmesa.h
+include/GL/ggimesa.h
+include/GL/gl.h
+include/GL/gl_mangle.h
+include/GL/glext.h
+include/GL/glfbdev.h
+include/GL/glu.h
+include/GL/glu_mangle.h
+include/GL/glx.h
+include/GL/glx_mangle.h
+include/GL/glxext.h
+include/GL/mesa_wgl.h
+include/GL/mglmesa.h
+include/GL/osmesa.h
+include/GL/svgamesa.h
+include/GL/uglglutshapes.h
+include/GL/uglmesa.h
+include/GL/vms_x_fix.h
+include/GL/wmesa.h
+include/GL/xmesa.h
+include/GL/xmesa_x.h
+include/GL/xmesa_xf86.h
+lib/libGL.so
+lib/libGL.so.1
+lib/libGL.so.1.2
+lib/libGLU.so
+lib/libGLU.so.1
+lib/libGLU.so.1.3.060502
+lib/libGLw.so
+lib/libGLw.so.1
+lib/libGLw.so.1.0.0
+lib/modules/dri/r200_dri.so
+lib/modules/dri/r300_dri.so
+lib/modules/dri/radeon_dri.so
+@dirrm lib/modules/dri
+@dirrm lib/modules
+@dirrm include/GL

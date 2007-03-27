@@ -1,0 +1,5 @@
+This is still work in progress and rough around the edges -- see
+also the TODO file.
+
+To use mesa-dri to satisfy MesaLib dependencies, copy MesaLib.buildlink3.mk
+to graphics/MesaLib/buildlink3.mk
