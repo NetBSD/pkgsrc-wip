@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/03/05 01:59:41 christian_gall Exp $
+$NetBSD: distinfo,v 1.4 2007/03/27 07:56:29 christian_gall Exp $
 
-SHA1 (php-suhosin/suhosin-0.9.17.tgz) = 0c572aefeef730f509330fb07a44edcf9b0d4cc8
-RMD160 (php-suhosin/suhosin-0.9.17.tgz) = 550928d91321239c2a0b9c9870ef866d388f6baa
-Size (php-suhosin/suhosin-0.9.17.tgz) = 110324 bytes
+SHA1 (php-suhosin/suhosin-0.9.18.tgz) = 9338e972cc61516c1da9c6d1d4b37438999cf2d9
+RMD160 (php-suhosin/suhosin-0.9.18.tgz) = 65ac81383d881da0d827378bc3019e8c692313ac
+Size (php-suhosin/suhosin-0.9.18.tgz) = 110421 bytes
