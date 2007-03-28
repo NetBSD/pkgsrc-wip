@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2550 2007/03/28 07:26:12 uhabel Exp $
+# $Id: Makefile,v 1.2551 2007/03/28 07:51:19 dillo Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -802,6 +802,7 @@ SUBDIR+=	mednafen
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
+SUBDIR+=	mesa-dri
 SUBDIR+=	metalog
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
