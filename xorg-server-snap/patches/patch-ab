@@ -1,0 +1,80 @@
+$NetBSD: patch-ab,v 1.1 2007/03/28 19:21:49 bsadewitz Exp $
+
+--- configure.orig	2007-03-26 23:48:43.000000000 -0400
++++ configure
+@@ -24767,6 +24767,10 @@ _ACEOF
+ #define USE_DEV_IO 1
+ _ACEOF
+  ;;
++		*dragonfly*)	cat >>confdefs.h <<\_ACEOF
++#define USE_DEV_IO 1
++_ACEOF
++ ;;
+ 		*netbsd*)	cat >>confdefs.h <<\_ACEOF
+ #define USE_I386_IOPL 1
+ _ACEOF
+@@ -24873,7 +24877,7 @@ fi
+ DRI=no
+ KDRIVE_HW=no
+ case $host_os in
+-  *freebsd*)
++  *freebsd* | *dragonfly*)
+ 	case $host_os in
+ 		kfreebsd*-gnu) ;;
+ 		*)
+@@ -24912,6 +24916,11 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
++#define PCVT_SUPPORT 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
+ #define WSCONS_SUPPORT 1
+ _ACEOF
+ 
+@@ -27048,20 +27057,16 @@ fi
+ if test "x$AIGLX" = xyes; then
+   AIGLX_TRUE=
+   AIGLX_FALSE='#'
++  GLX_DEFINES="-DPTHREADS"
++  GLX_LIBS="$GLX_LIBS"
++  if test "x$GLX_USE_TLS" = xyes; then
++    GLX_DEFINES="-DGLX_USE_TLS $GLX_DEFINES"
++  fi
+ else
+   AIGLX_TRUE='#'
+   AIGLX_FALSE=
+ fi
+ 
+-
+-if test "x$GLX_USE_TLS" = xyes -a "x$AIGLX" = xyes; then
+-	GLX_DEFINES="-DGLX_USE_TLS -DPTHREADS"
+-	GLX_LIBS="$GLX_LIBS -lpthread"
+-fi
+-
+-
+-
+-
+ if test "x$DRI" = xyes; then
+   DRI_TRUE=
+   DRI_FALSE='#'
+@@ -28182,7 +28187,7 @@ _ACEOF
+ 
+ fi
+ 
+-VENDOR_RELEASE="((($VERSION_MAJOR) * 10000000) + (($VERSION_MINOR) * 100000) + (($VERSION_PATCH) * 1000) + $VERSION_SNAP)"
++VENDOR_RELEASE=`expr \( $VERSION_MAJOR \* 10000000 \) + \( $VERSION_MINOR \* 100000 \) + \( $VERSION_PATCH \* 1000 \) + $VERSION_SNAP`
+ 
+ if test $VERSION_SNAP = "0"; then
+ 	if test $VERSION_PATCH = "0"; then
+@@ -30903,7 +30908,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 		;;
+-	  freebsd* | kfreebsd*-gnu)
++	  freebsd* | kfreebsd*-gnu | dragonfly*)
+ 	  	XORG_OS="freebsd"
+ 		XORG_OS_SUBDIR="bsd"
+ 		XORG_OS_KBD="BSD"
