@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 13:29:53 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/28 18:29:52 bsadewitz Exp $
 #
 
 DISTNAME=	xcursor-themes-1.0.1
@@ -10,7 +10,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X.org xcursor themes
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	xcursorgen>=4.3.0:../../x11/xcursorgen
@@ -19,7 +18,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 GNU_CONFIGURE=	yes
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../x11/libXcursor/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
