@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/29 08:05:13 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/03/28 18:11:02 bsadewitz Exp $
 #
 
 DISTNAME=	xvinfo-1.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Xv info utility from modular X.org
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
