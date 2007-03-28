@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 08:39:28 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/28 18:09:05 bsadewitz Exp $
 #
 
 DISTNAME=	luit-1.0.2
@@ -8,12 +8,11 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
-COMMENT=
+COMMENT=	UTF-8 filter for terminal emulators
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 
 .include "../../fonts/libfontenc/buildlink3.mk"
