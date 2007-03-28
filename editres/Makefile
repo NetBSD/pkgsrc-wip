@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/12 20:11:36 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/03/28 18:21:56 bsadewitz Exp $
 #
 
 DISTNAME=	editres-1.0.3
@@ -10,12 +10,8 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	The modular X.org resource editor
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c
 
 .include "../../x11/libXaw/buildlink3.mk"
 
