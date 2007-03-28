@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2007/03/28 15:30:12 bsadewitz Exp $
+
+--- configure.orig	2007-03-27 18:40:18.000000000 -0400
++++ configure
+@@ -18420,7 +18420,7 @@ if test -z "$disable_lua"; then
+ 	for luadir in "$withval" "" /usr /usr/local; do
+ 		for suffix in "" 50 51; do
+ 			if test "$cf_result" = no; then
+-				LUA_LIBS="-llua$suffix -llualib$suffix -lm"
++				LUA_LIBS="-llua$suffix -lm"
+ 
+ 				if test ! -z "$luadir"; then
+ 					LUA_LIBS="-L$luadir/lib $LUA_LIBS"

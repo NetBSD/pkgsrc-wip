@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2007/03/28 15:30:08 bsadewitz Exp $
+
+SHA1 (elinks-current-unstable.tar.bz2) = c7d0db21361f3e3a18cc44f8f1d5e0050e4819f1
+RMD160 (elinks-current-unstable.tar.bz2) = 5daae1b2c3a8cc654697cd499fa668a710adddb7
+Size (elinks-current-unstable.tar.bz2) = 2725871 bytes
+SHA1 (patch-aa) = 3c62fd29d92f010176074e51ba424514817ee00c
+SHA1 (patch-ab) = b08b2c8a9148e69ab18eb8577f95672cd707cdf3
+SHA1 (patch-ac) = f7dc18652782a5ad0768a5693a69bcadc6e5754d

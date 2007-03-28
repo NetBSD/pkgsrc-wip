@@ -1,0 +1,12 @@
+--Make sure idiotic configure script can detect all options correctly
+
+--Add new options, create package for SEE
+
+--Elinks should ideally be linked with boehm-gc
+
+--Proper handling of strange libiconv file conflicts
+
+--Figure out how to get the snapshot date right at all times of day ...
+  maybe just move the directory and forget about it?
+
+And more ...
