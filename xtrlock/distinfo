@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/03/28 07:19:42 uhabel Exp $
+
+SHA1 (xtrlock_2.0-12.tar.gz) = fa405cf2da351c83d7b86cd1843a71d2b0afe0f2
+RMD160 (xtrlock_2.0-12.tar.gz) = d4fb80b24f3be974673501b3e60c5e9a9a3ddee4
+Size (xtrlock_2.0-12.tar.gz) = 7642 bytes
+SHA1 (patch-aa) = e6e5938367c4db54b7d593870007d06af64fe927

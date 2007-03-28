@@ -1,0 +1,12 @@
+xtrlock is a very minimal X display lock program, which uses
+nothing except the Xlib library. It doesn't obscure the screen,
+it is completely idle while the display is locked and you don't
+type at it, and it doesn't do funny things to the X access control
+lists.
+
+I needed this package for a monitoring workstation at my work
+and patched the Debian xtrlock for it. I haven't tested this
+on Linux or other systems, just made it working on NetBSD i386
+more testing is needed.
+
+Is there a workaround for the setuid bit to lock the screen?
