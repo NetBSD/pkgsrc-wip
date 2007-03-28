@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/27 17:51:23 briandealwis Exp $
+# $NetBSD: Makefile,v 1.12 2007/03/28 14:34:04 absd Exp $
 
 JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
@@ -167,4 +167,6 @@ do-install:
 .include "../../mk/java-env.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
