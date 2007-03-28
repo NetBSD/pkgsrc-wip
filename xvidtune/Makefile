@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/29 13:02:24 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/28 18:12:19 bsadewitz Exp $
 #
 
 DISTNAME=	xvidtune-1.0.1
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
