@@ -1,6 +1,0 @@
---Don't we have to use CONF_FILES with this, etc? no?  
---Port DRI to NetBSD-current. ;)
---Bring in assembly dispatch routines that xorg forgot about
---Sanity check GLX setup, though I think its OK
---xorgcfg dies soon after starting on amd64
---Add more to TODO. ;)
