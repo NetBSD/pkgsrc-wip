@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/28 02:32:43 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2007/03/28 18:07:11 bsadewitz Exp $
 
-SHA1 (rgb-1.0.0.tar.bz2) = 9549a8cb8e95074e9cfbbb5a0383fee50b5ce199
-RMD160 (rgb-1.0.0.tar.bz2) = 5b13691ba32433ade68e726966ee4e5ae815a5f1
-Size (rgb-1.0.0.tar.bz2) = 87305 bytes
+SHA1 (rgb-1.0.1.tar.bz2) = 004e9d7359f0fd1742710c35bcae3eaf9917839f
+RMD160 (rgb-1.0.1.tar.bz2) = eac4fd041778ed5bc4d9a3182322610b2fb5ef16
+Size (rgb-1.0.1.tar.bz2) = 91473 bytes
 SHA1 (patch-aa) = 9ae53024c1878f890bf36c89e54b43362ba02469

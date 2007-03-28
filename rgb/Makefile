@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/28 02:32:43 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/28 18:07:11 bsadewitz Exp $
 #
 
-DISTNAME=		rgb-1.0.0
+DISTNAME=		rgb-1.0.1
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xorg.freedesktop.org/releases/individual/app/
