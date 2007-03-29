@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/08/14 16:31:14 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2007/03/29 05:18:53 dhowland Exp $
 
 DISTNAME=	noip-duc-linux
-PKGNAME=	noip-2.1.3
+PKGNAME=	noip-2.1.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.no-ip.com/client/linux/
 
