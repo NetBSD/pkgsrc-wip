@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/27 22:28:19 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/03/29 09:24:56 dillo Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -36,9 +36,18 @@ lib/libGLU.so.1.3.060502
 lib/libGLw.so
 lib/libGLw.so.1
 lib/libGLw.so.1.0.0
+lib/modules/dri/i810_dri.so
+lib/modules/dri/i915_dri.so
+lib/modules/dri/i965_dri.so
+lib/modules/dri/mach64_dri.so
+lib/modules/dri/mga_dri.so
+lib/modules/dri/r128_dri.so
 lib/modules/dri/r200_dri.so
 lib/modules/dri/r300_dri.so
 lib/modules/dri/radeon_dri.so
+lib/modules/dri/savage_dri.so
+lib/modules/dri/sis_dri.so
+lib/modules/dri/tdfx_dri.so
+lib/modules/dri/unichrome_dri.so
 @dirrm lib/modules/dri
 @dirrm lib/modules
-@dirrm include/GL

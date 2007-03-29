@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/27 22:28:19 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2007/03/29 09:24:56 dillo Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VER}
@@ -21,9 +21,6 @@ NO_CONFIGURE=	yes
 
 post-extract:
 	${CP} ${FILESDIR}/netbsd-dri* ${WRKSRC}/configs
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}/
-	${CP} ${FILESDIR}/mklib ${WRKSRC}/bin
-	chmod +x ${WRKSRC}/bin/mklib
 
 .include "../../mk/bsd.prefs.mk"
 

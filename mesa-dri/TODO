@@ -1,4 +1,1 @@
-- solve libraries not found on resulting binaries
-- compile drivers other than radeon
-- convert Makefile and mklib into patches
 - merge with MesaLib -- dri support as build option
