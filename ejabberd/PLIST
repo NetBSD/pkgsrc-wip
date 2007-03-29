@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/03/09 15:32:19 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/03/29 21:31:37 schnoebe Exp $
 @comment sbin/ejabberd
 bin/ejabberdctl
 share/examples/rc.d/ejabberd
@@ -123,7 +123,6 @@ share/doc/${DISTNAME}/guide.html
 share/doc/${DISTNAME}/guide.tex
 share/doc/${DISTNAME}/introduction.tex
 share/doc/${DISTNAME}/logo.png
-share/doc/${DISTNAME}/release_note_1.1.2.txt
 share/doc/${DISTNAME}/release_notes_0.9.1.txt
 share/doc/${DISTNAME}/release_notes_0.9.8.txt
 share/doc/${DISTNAME}/release_notes_0.9.txt
@@ -131,6 +130,7 @@ share/doc/${DISTNAME}/release_notes_1.0.0.txt
 share/doc/${DISTNAME}/release_notes_1.1.0.txt
 share/doc/${DISTNAME}/release_notes_1.1.1.txt
 share/doc/${DISTNAME}/release_notes_1.1.2.txt
+share/doc/${DISTNAME}/release_notes_1.1.3.txt
 share/doc/${DISTNAME}/version.tex
 share/doc/${DISTNAME}/webadmmain.png
 share/doc/${DISTNAME}/webadmmainru.png
