@@ -227,7 +227,7 @@ case $ARCH in
 		OPTS="-Xlinker -Bsymbolic -shared -Wl,-soname,${LIBNAME}.so.${MAJOR}"
 	    ;;
 	    'NetBSD')
-		OPTS="-shared -Wl,-R/usr/pkg/lib -Wl,-soname,${LIBNAME}.so.${MAJOR}"
+		OPTS="-shared -Wl,-R${PREFIX}/lib -Wl,-R${X11PREFIX} -Wl,-soname,${LIBNAME}.so.${MAJOR}"
 	    ;;
 	    *)
 		OPTS="-shared -Wl,-soname,${LIBNAME}.so.${MAJOR}"

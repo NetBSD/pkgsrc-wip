@@ -32,7 +32,7 @@ LIBDRM_CFLAGS = `pkg-config --cflags libdrm`
 LIBDRM_LIB = `pkg-config --libs libdrm`
 DRI_LIB_DEPS = -lm -lpthread -lexpat $(LIBDRM_LIB)
 
-APP_LIB_DEPS = -L$(LIB_DIR) -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm -lpthread $(LIBDRM_LIB) -lXxf86vm
+APP_LIB_DEPS = -L$(LIB_DIR) -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${X11PREFIX}/lib ${COMPLIER_RPATH_FLAG}{$X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm -lpthread $(LIBDRM_LIB) -lXxf86vm
 
 # Directories
 SRC_DIRS = glx/x11 mesa glu glut/glx glw
