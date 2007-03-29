@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/16 06:55:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2007/03/29 19:54:46 shindenmorr Exp $
 #
 
 DISTNAME=		Firebird-2.0.0.12710-ReleaseCandidate3
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
+RCD_SCRIPTS=            000.firebird.sh
 CONFIGURE_ENV+=		AUTOCONF=${LOCALBASE}/bin/autoconf
 CONFIGURE_SCRIPT=	./autogen.sh
 CONFIGURE_ARGS+=	--prefix=${PREFIX}/firebird

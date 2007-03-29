@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/03 22:05:01 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/03/29 19:54:46 shindenmorr Exp $
 firebird/README
 firebird/UDF/fbudf.so
 firebird/UDF/fbudf.sql
@@ -16,32 +16,66 @@ firebird/bin/gds_drop
 firebird/bin/gfix
 firebird/bin/gpre
 firebird/bin/gsec
+firebird/bin/gsplit
 firebird/bin/gstat
 firebird/bin/isql
 firebird/bin/qli
 firebird/doc/README.NTSecurity
+firebird/doc/README.Optimizer.txt
 firebird/doc/README.Win32LibraryInstallation.txt
 firebird/doc/README.build.mingw.html
 firebird/doc/README.build.msvc.html
-firebird/doc/README.install.Solaris_on_Intel
+firebird/doc/README.coding.style
+firebird/doc/README.garbage_collector
+firebird/doc/README.incompatibilities.txt
 firebird/doc/README.instsvc
+firebird/doc/README.intl
+firebird/doc/README.isql_enhancements.txt
 firebird/doc/README.makefiles
+firebird/doc/README.performance_monitoring
+firebird/doc/README.sha1
 firebird/doc/README.user
 firebird/doc/README.user.embedded
 firebird/doc/README.user.troubleshooting
-firebird/doc/sql.extensions
+firebird/doc/README.xnet
+firebird/doc/sql.extensions/README.PSQL_stack_trace.txt
 firebird/doc/sql.extensions/README.aggregate_tracking
 firebird/doc/sql.extensions/README.case
 firebird/doc/sql.extensions/README.coalesce
 firebird/doc/sql.extensions/README.context_variables
+firebird/doc/sql.extensions/README.context_variables2
+firebird/doc/sql.extensions/README.current_time
+firebird/doc/sql.extensions/README.cursors
+firebird/doc/sql.extensions/README.data_type_results_of_aggregations.txt
 firebird/doc/sql.extensions/README.data_types
+firebird/doc/sql.extensions/README.ddl.txt
+firebird/doc/sql.extensions/README.default_parameters
+firebird/doc/sql.extensions/README.derived_tables.txt
+firebird/doc/sql.extensions/README.distinct
 firebird/doc/sql.extensions/README.exception_handling
+firebird/doc/sql.extensions/README.execute_block
 firebird/doc/sql.extensions/README.execute_statement
 firebird/doc/sql.extensions/README.explicit_locks
+firebird/doc/sql.extensions/README.expression_indices
+firebird/doc/sql.extensions/README.iif
+firebird/doc/sql.extensions/README.isc_info_xxx
+firebird/doc/sql.extensions/README.keywords
+firebird/doc/sql.extensions/README.leave_labels
+firebird/doc/sql.extensions/README.length
+firebird/doc/sql.extensions/README.null_value
 firebird/doc/sql.extensions/README.nullif
 firebird/doc/sql.extensions/README.order_by_expressions_nulls
+firebird/doc/sql.extensions/README.plan
+firebird/doc/sql.extensions/README.returning
+firebird/doc/sql.extensions/README.rows
 firebird/doc/sql.extensions/README.savepoints
+firebird/doc/sql.extensions/README.select_expressions
+firebird/doc/sql.extensions/README.sequence_generators
+firebird/doc/sql.extensions/README.set_transaction.txt
+firebird/doc/sql.extensions/README.trim
 firebird/doc/sql.extensions/README.universal_triggers
+firebird/doc/sql.extensions/README.view_updates
+firebird/examples/README
 firebird/examples/align.h
 firebird/examples/api1.c
 firebird/examples/api10.c
@@ -61,6 +95,7 @@ firebird/examples/api7.c
 firebird/examples/api8.c
 firebird/examples/api9.c
 firebird/examples/api9f.c
+firebird/examples/api9f.def
 firebird/examples/api9f.sql
 firebird/examples/apifull.c
 firebird/examples/dyn1.e
@@ -69,11 +104,10 @@ firebird/examples/dyn3.e
 firebird/examples/dyn4.e
 firebird/examples/dyn5.e
 firebird/examples/dynfull.e
-firebird/examples/employe2.sql
 firebird/examples/employee.fdb
-firebird/examples/employee.gbk
+firebird/examples/example.def
 firebird/examples/example.h
-firebird/examples/readme
+firebird/examples/functions.c
 firebird/examples/stat1.e
 firebird/examples/stat10.e
 firebird/examples/stat11.e
@@ -89,26 +123,49 @@ firebird/examples/stat8.e
 firebird/examples/stat9.e
 firebird/examples/udf.sql
 firebird/examples/udflib.c
+firebird/examples/udflib.def
+firebird/examples/winevent.c
+firebird/examples/winevent.def
+firebird/examples/winevent.rc
 firebird/firebird.conf
 firebird/firebird.conf.sample
 firebird/firebird.log
 firebird/firebird.msg
 firebird/help/help.fdb
 firebird/include/blr.h
-firebird/include/gds.h
 firebird/include/ib_util.h
 firebird/include/ibase.h
 firebird/include/iberror.h
 firebird/include/perf.h
 firebird/intl/fbintl
 firebird/lib/libfbclient.so
-firebird/lib/libfbclient.so.1
-firebird/lib/libfbclient.so.1.5.2
+firebird/lib/libfbclient.so.2
+firebird/lib/libfbclient.so.2.0.0
 firebird/lib/libfbembed.so
-firebird/lib/libfbembed.so.1
-firebird/lib/libfbembed.so.1.5.2
-firebird/lib/libgds.so
-firebird/lib/libgds.so.1
+firebird/lib/libfbembed.so.2
+firebird/lib/libfbembed.so.2.0.0
 firebird/lib/libib_util.so
-firebird/security.fdb
-firebird/security.fdb.sample
+firebird/lib/libicudata.so
+firebird/lib/libicudata.so.30
+firebird/lib/libicudata.so.30.0
+firebird/lib/libicui18n.so
+firebird/lib/libicui18n.so.30
+firebird/lib/libicui18n.so.30.0
+firebird/lib/libicuuc.so
+firebird/lib/libicuuc.so.30
+firebird/lib/libicuuc.so.30.0
+firebird/security2.fdb
+firebird/security2.fdb.sample
+firebird/isc_event1
+firebird/isc_init1
+firebird/isc_lock1
+@dirrm firebird/lib
+@dirrm firebird/intl
+@dirrm firebird/include
+@dirrm firebird/help
+@dirrm firebird/examples
+@dirrm firebird/doc/sql.extensions
+@dirrm firebird/doc
+@dirrm firebird/bin
+@dirrm firebird/UDF
+@dirrm firebird

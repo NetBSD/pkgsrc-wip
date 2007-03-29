@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- builds/install/arch-specific/netbsd/install.sh.in.orig	2007-03-29 19:49:19.000000000 +0200
++++ builds/install/arch-specific/netbsd/install.sh.in	2007-03-29 19:50:06.000000000 +0200
+@@ -134,7 +134,7 @@
+ # The guts of the tranfer of files and other directories
+ # (mkdir -p <dirname> does not elicit an error message if the <dirname> exists.)
+ echo Installing binaries
+-for D in "bin examples help include intl doc/sql.extensions UDF"
++for D in bin examples help include intl doc/sql.extensions lib UDF
+ do
+ 	mkdir -p $DestDir/$D || exit
+ done
+@@ -177,6 +177,7 @@
+ 
+ cp -Rf $BuiltFBDir/lib/libfbembed.so* $DestDir/lib || exit
+ cp -Rf $BuiltFBDir/lib/libfbclient.so* $DestDir/lib || exit
++cp -Rf $BuiltFBDir/lib/libicu*.so* $DestDir/lib || exit                                                                                                                 
+ 
+ cp -f $BuiltFBDir/lib/libib_util.so $DestDir/lib/libib_util.so  || exit
+ 

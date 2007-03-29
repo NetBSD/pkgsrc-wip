@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/09/16 06:55:10 thomasklausner Exp $
+$NetBSD: distinfo,v 1.6 2007/03/29 19:54:46 shindenmorr Exp $
 
 SHA1 (Firebird-2.0.0.12710-ReleaseCandidate3.tar.bz2) = a8017556085f32c0b726778507e32cd554a58912
 RMD160 (Firebird-2.0.0.12710-ReleaseCandidate3.tar.bz2) = a240586f4f3586f4898eb6a4439d8a6aecf935f9
 Size (Firebird-2.0.0.12710-ReleaseCandidate3.tar.bz2) = 12457911 bytes
 SHA1 (patch-aa) = 2f230d788537bce68fd392f121e39fcde1a9508b
+SHA1 (patch-ab) = 47fc3cd8a5ea16331cc9b5a9fab9cc6475ab5207
+SHA1 (patch-ac) = bd60cea1958d976e9a9c9fa490259f5f48ff4ee9

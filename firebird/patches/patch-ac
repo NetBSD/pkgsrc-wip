@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- builds/install/arch-specific/netbsd/install.sh.in.orig	2007-03-29 21:13:52.000000000 +0200
++++ builds/install/arch-specific/netbsd/install.sh.in	2007-03-29 21:14:00.000000000 +0200
+@@ -267,7 +267,7 @@
+ 
+ for i in isc_init1 isc_lock1 isc_event1
+ do
+-	FileName=$i.`hostname`
++	FileName=$i
+ 	touch $FileName
+ 	chmod ug=rw,o= $FileName || exit
+ 	chown firebird:firebird $FileName || exit
