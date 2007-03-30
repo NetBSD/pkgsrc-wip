@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2007/03/30 11:52:45 cheusov Exp $
+lib/xmms/Input/libcdread.so
+share/doc/${PKGBASE}/AUTHORS
+share/doc/${PKGBASE}/ChangeLog
+share/doc/${PKGBASE}/COPYING
+share/doc/${PKGBASE}/NEWS
+share/doc/${PKGBASE}/README
+@dirrm lib/xmms/Input
+@dirrm share/doc/${PKGBASE}
