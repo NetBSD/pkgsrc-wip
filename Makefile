@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2551 2007/03/28 07:51:19 dillo Exp $
+# $Id: Makefile,v 1.2552 2007/04/01 21:36:57 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -351,7 +351,6 @@ SUBDIR+=	git
 SUBDIR+=	git-fvcs
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
-SUBDIR+=	gkrellm-reminder
 SUBDIR+=	gksu
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glib-java
