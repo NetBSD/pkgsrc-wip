@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/20 09:32:49 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/01 02:20:23 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.93
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	#
 CONFLICTS=	emacs-[0-9]*
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
