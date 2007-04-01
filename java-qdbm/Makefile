@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 12:55:17 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/01 02:19:12 obache Exp $
 #
 
 .include "../../databases/qdbm/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	java-qdbm-1.0.0.${QDBM_VERSION}
 CATEGORIES=	databases java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qdbm/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://qdbm.sourceforge.net/
 COMMENT=	Java API of QDBM
 

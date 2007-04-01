@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:09 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/01 02:19:13 obache Exp $
 #
 
 DISTNAME=	pop-before-smtp-1.41
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=popbsmtp/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://popbsmtp.sourceforge.net/
 COMMENT=	Simple daemon for pop-before-smtp
 

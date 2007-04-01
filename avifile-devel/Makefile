@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/08/28 12:35:35 obache Exp $
+# $NetBSD: Makefile,v 1.20 2007/04/01 02:19:12 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.45
 PKGNAME=	avifile-devel-0.7.45
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=avifile/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/12 14:10:28 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/01 02:19:12 obache Exp $
 
 .include "Makefile.common"
 
@@ -7,7 +7,7 @@ CATEGORIES=	japanese textproc
 MASTER_SITES=	#empty
 DISTFILES=	#empty
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mecab.sourceforge.net/
 COMMENT=	Yet Another Part-of-Speech and Morphological Analyzer
 

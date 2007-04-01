@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/08/16 04:43:06 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/01 02:19:13 obache Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-ldap/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://ruby-ldap.sourceforge.net/
 COMMENT=	LDAP extension module for Ruby
 

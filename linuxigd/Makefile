@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2007/03/11 06:26:21 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/01 02:19:12 obache Exp $
 #
 
 DISTNAME=	linuxigd-1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://linux-igd.sourceforge.net/
 COMMENT=	Linux UPnP Internet Gateway Device
 

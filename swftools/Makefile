@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/02/11 16:31:00 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/01 02:19:13 obache Exp $
 #
 
 DISTNAME=	swftools-0.7.0
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.swftools.org/
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.swftools.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
 

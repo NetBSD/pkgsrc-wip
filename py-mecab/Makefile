@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/12 14:10:29 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/01 02:19:13 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
@@ -8,7 +8,7 @@ PKGNAME=	${PYPKGPREFIX}-mecab-${MECAB_VERSION}
 CATEGORIES=	japanese textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mecab/}
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mecab.sourceforge.net/
 COMMENT=	MeCab python module
 

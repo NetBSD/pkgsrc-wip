@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/06/23 01:22:36 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/01 02:19:12 obache Exp $
 
 DISTNAME=		gmediaserver-0.11.0
 CATEGORIES=		multimedia net
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gmediaserver/
 
-MAINTAINER=		obata@lins.jp
+MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gmediaserver/
 COMMENT=		UPnP compatible media server for the GNU system
 
