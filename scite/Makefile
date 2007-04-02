@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2006/12/24 17:01:31 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2007/04/02 00:58:23 loic-hoguin Exp $
 
-DISTNAME=		scite171
-PKGNAME=		scite-1.71
-PKGREVISION=		1
+DISTNAME=		scite173
+PKGNAME=		scite-1.73
+#PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		loic-hoguin@users.sourceforge.net
 HOMEPAGE=		http://www.scintilla.org/SciTE.html
 COMMENT=		Editor with facilities for building and running programs
 
@@ -16,11 +16,11 @@ USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 BUILD_DIRS=		scintilla/gtk scite/gtk
-MAKE_FLAGS+=		GTK2=1 CPPFLAGS=-Dunix
+MAKE_FLAGS+=		GTK2=1 CPPFLAGS=-Dunix prefix=${PREFIX}
 MAKE_FILE=		makefile
 
 do-install:
-	cd ${WRKSRC}/scite/gtk && gmake GTK2=1 install
+	cd ${WRKSRC}/scite/gtk && gmake GTK2=1 prefix=${PREFIX} install
 	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../converters/libiconv/buildlink3.mk"

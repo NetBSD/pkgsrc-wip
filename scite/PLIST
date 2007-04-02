@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/16 12:50:58 shattered Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/04/02 00:58:23 loic-hoguin Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
 share/pixmaps/Sci48M.png
+share/scite/CommandValues.html
 share/scite/Embedded.properties
 share/scite/PrintHi.png
 share/scite/SciTE.html
@@ -30,10 +31,12 @@ share/scite/baan.properties
 share/scite/blitzbasic.properties
 share/scite/bullant.properties
 share/scite/caml.properties
+share/scite/cmake.properties
 share/scite/conf.properties
 share/scite/cpp.properties
 share/scite/csound.properties
 share/scite/css.properties
+share/scite/d.properties
 share/scite/eiffel.properties
 share/scite/erlang.properties
 share/scite/escript.properties
