@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/03 19:58:30 cosmedbr Exp $
 
-DISTNAME=		dwm-2.1
+DISTNAME=		dwm-3.9
 CATEGORIES=		wm
 MASTER_SITES=		http://suckless.org/download/
 
