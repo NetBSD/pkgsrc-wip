@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/28 18:29:52 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/03 13:32:36 bsadewitz Exp $
 #
 
 DISTNAME=	xcursor-themes-1.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X.org xcursor themes
+
+MAKE_JOBS_SAFE=	no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
