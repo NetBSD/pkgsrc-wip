@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2007/03/06 15:26:12 dillo Exp $
+$NetBSD: patch-ac,v 1.3 2007/04/04 16:07:54 dillo Exp $
 
---- src/emu/cpu/cpu.mak.orig	2007-03-05 19:13:24.000000000 +0100
+--- src/emu/cpu/cpu.mak.orig	2007-04-02 23:49:42.000000000 +0200
 +++ src/emu/cpu/cpu.mak
-@@ -969,7 +969,7 @@ $(CPUOBJ)/m68000/m68kops.c: $(CPUOBJ)/m6
+@@ -986,7 +986,7 @@ $(CPUOBJ)/m68000/m68kops.c: $(CPUOBJ)/m6
  # rule to build the generator
  $(CPUOBJ)/m68000/m68kmake$(EXE): $(CPUOBJ)/m68000/m68kmake.o $(LIBOCORE)
  	@echo Linking $@...

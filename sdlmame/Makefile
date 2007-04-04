@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/03/25 20:43:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/04 16:07:54 dillo Exp $
 #
 
-DISTNAME=		sdlmame0113
-PKGNAME=		sdlmame-0.113
+DISTNAME=		sdlmame0114
+PKGNAME=		sdlmame-0.114
 CATEGORIES=		emulators
 MASTER_SITES=		http://rbelmont.mameworld.info/
 EXTRACT_SUFX=		.zip
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://rbelmont.mameworld.info/?page_id=163
 COMMENT=		Multiple Arcade Machine Emulator, SDL port
+
+CONFLICTS=		xmame-[0-9]*
 
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -50,7 +52,10 @@ SUBST_FILES.pragma=     src/*.h src/*/*.h
 SUBST_SED.pragma=       -e "s|\#pragma once||g"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mame ${LOCALBASE}/bin
+	for prg in chdman jedutil mame romcmp; \
+	do \
+		${INSTALL_PROGRAM} ${WRKSRC}/$$prg ${LOCALBASE}/bin; \
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdlmame
 	${INSTALL_DATA} ${WRKSRC}/SDLMAME.txt ${PREFIX}/share/doc/sdlmame
 	${INSTALL_DATA} ${WRKSRC}/docs/license.txt ${PREFIX}/share/doc/sdlmame

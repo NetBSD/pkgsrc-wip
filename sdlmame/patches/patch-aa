@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2007/03/06 15:26:12 dillo Exp $
+$NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
 
---- makefile.orig	2007-03-05 19:21:07.000000000 +0100
+--- makefile.orig	2007-03-30 09:03:29.000000000 +0200
 +++ makefile
 @@ -64,10 +64,10 @@ SUBARCH = linux
  # DEBUG = 1    
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.2 2007/03/06 15:26:12 dillo Exp $
  
  ifdef PTR64
  DEFS += -DPTR64
-@@ -312,25 +304,24 @@ CFLAGS += $(ARCH) \
+@@ -313,25 +305,24 @@ CFLAGS += $(ARCH) \
  	-Wstrict-prototypes \
  	-Wundef \
  	-Wformat-security \
@@ -97,12 +97,12 @@ $NetBSD: patch-aa,v 1.2 2007/03/06 15:26:12 dillo Exp $
  
  ifdef MAP
  MAPFLAGS = -Wl,-Map,$(NAME).map
-@@ -472,7 +463,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
+@@ -475,7 +466,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
  # always recompile the version string
  	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
  	@echo Linking $@...
--	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
-+	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
+-	$(LD) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
++	$(CC) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
  
  #-------------------------------------------------
  # generic rules
