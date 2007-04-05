@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/26 12:43:56 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/05 12:23:28 obache Exp $
 #
 
 DISTNAME=	gallery-0.0.8
@@ -6,7 +6,7 @@ PKGNAME=	${RUBY_PKGPREFIX}-GalleryAdministrator-0.0.8
 CATEGORIES=	graphics ruby www
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/
 
-MAINTAINER=	obata@lins.jp
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.cozmixng.org/~rwiki/?cmd=view;name=GalleryAdministrator
 COMMENT=	CGI and mail interface for [RAA:RubyPhoto] and zphoto
 
