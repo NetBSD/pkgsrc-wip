@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2553 2007/04/05 19:59:37 alchow Exp $
+# $Id: Makefile,v 1.2554 2007/04/05 20:12:52 alchow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -91,6 +91,7 @@ SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
 SUBDIR+=	awflwm
 SUBDIR+=	axe
+SUBDIR+=	axel
 SUBDIR+=	azureus
 SUBDIR+=	backplane
 SUBDIR+=	barnyard
@@ -871,6 +872,7 @@ SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
+SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
