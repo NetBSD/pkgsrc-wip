@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/05 20:03:22 alchow Exp $
+bin/axel
+man/man1/axel.1
+@dirrm man/man1
