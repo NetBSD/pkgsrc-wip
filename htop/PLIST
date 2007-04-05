@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/05 02:19:34 alchow Exp $
+bin/htop
+man/man1/htop.1
+share/htop/applications/htop.desktop
+share/htop/pixmaps/htop.png
+@dirrm share/htop/applications
+@dirrm share/htop/pixmaps
+@dirrm share/htop
