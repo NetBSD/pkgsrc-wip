@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2552 2007/04/01 21:36:57 thomasklausner Exp $
+# $Id: Makefile,v 1.2553 2007/04/05 19:59:37 alchow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -553,6 +553,7 @@ SUBDIR+=	hplip
 SUBDIR+=	hpoj
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
+SUBDIR+=	htop
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
 SUBDIR+=	hylafax
