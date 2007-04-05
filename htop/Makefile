@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/05 02:19:34 alchow Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/05 23:31:37 alchow Exp $
 #
 
 DISTNAME=	htop-0.6.5
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htop/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	alchow@users.sourceforge.net
 HOMEPAGE=	http://htop.sourceforge.net/
 COMMENT=	Interactive process viewer for Linux
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/05 20:03:22 alchow Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/05 23:32:24 alchow Exp $
 #
 
 DISTNAME=		axel-1.0b
 CATEGORIES=		net
 MASTER_SITES=		http://wilmer.gaast.net/downloads/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		alchow@users.sourceforge.net
 HOMEPAGE=		http://wilmer.gaast.net/downloads/
 COMMENT=		HTTP/FTP download accelerator
 
