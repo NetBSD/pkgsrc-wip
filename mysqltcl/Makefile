@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/05 20:07:07 alchow Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/06 00:03:07 alchow Exp $
 
 DISTNAME=		mysqltcl-3.02
 CATEGORIES=		wip
 MASTER_SITES=		http://www.xdobry.de/mysqltcl/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		alchow@users.sourceforge.net
 
 HOMEPAGE=               http://www.xdobry.de/mysqltcl/
 COMMENT=		Tcl Mysql Interface
