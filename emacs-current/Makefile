@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.26 2007/04/06 02:13:16 obache Exp $
 #
 
 DISTNAME=	emacs-22.0.96
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 
 USE_TOOLS+=	gmake makeinfo gzip
+
+CONFLICTS+=	emacs-nox11-[0-9]*
 
 BUILD_TARGET=	bootstrap
 
