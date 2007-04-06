@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/28 14:34:04 absd Exp $
+# $NetBSD: Makefile,v 1.13 2007/04/06 16:51:01 briandealwis Exp $
 
 JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
@@ -93,21 +93,24 @@ JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
 INTERACTIVE_STAGE=	fetch
-FETCH_MESSAGE+= " The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"
-FETCH_MESSAGE+= " containing the Java(tm) 2 SDK, Standard Edition must be fetched"
-FETCH_MESSAGE+= " into:"
-FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_SRCFILE}"
-FETCH_MESSAGE+= " and:"
-FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_BINFILE}"
-FETCH_MESSAGE+= " from (choose the Download link for JDK 5.0):"
+FETCH_MESSAGE+= " The source and patches for the Java (tm) 2 SDK require"
+FETCH_MESSAGE+= " a Sun Community Source Licensing account, and cannot be"
+FETCH_MESSAGE+= " fetched automatically."
+FETCH_MESSAGE+= ""
+FETCH_MESSAGE+= " Please download the JDK 5.0 SCSL Source (${SCSL_SRCFILE})"
+FETCH_MESSAGE+= " and SCSL Binaries (${SCSL_BINFILE}) for J2SE from:"
 FETCH_MESSAGE+= "       ${SCSL_DOWNLOAD}"
+FETCH_MESSAGE+= " and place them as:"
+FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_SRCFILE}"
+FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_BINFILE}"
 FETCH_MESSAGE+= ""
-FETCH_MESSAGE+= " This requires a Sun Community Source Licensing account."
-FETCH_MESSAGE+= ""
-FETCH_MESSAGE+= " Also, the file ${PATCHSETFILE} must be fetched into:"
-FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
-FETCH_MESSAGE+= " from:"
+FETCH_MESSAGE+= " Please download the BSD JDK 1.5 Patchset ${JDK_PATCHSET_VERSION}"
+FETCH_MESSAGE+= " (${PATCHSETFILE}) from:"
 FETCH_MESSAGE+= "      ${PATCH_DOWNLOAD}"
+FETCH_MESSAGE+= " and place it as:"
+FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
+FETCH_MESSAGE+= ""
+FETCH_MESSAGE+= " Then resume this build by running '${MAKE}' again."
 
 MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
