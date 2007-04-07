@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2006/12/20 01:06:57 schnoebe Exp $
+# $NetBSD: Makefile,v 1.19 2007/04/07 18:45:55 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
-# MASTER_SITES=		http://msn-transport.jabberstudio.org/tarballs/
 MASTER_SITES=		http://delx.cjb.net/pymsnt/tarballs/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://msn-transport.jabberstudio.org/
+HOMEPAGE=		http://delx.cjb.net/pymsnt/
 COMMENT=		Transport connecting Jabber to the MSN network
 
 #
@@ -17,9 +16,9 @@ COMMENT=		Transport connecting Jabber to the MSN network
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.1.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.1.0:../../wip/py-twisted-words
-DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
+DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.7.0:../../wip/py-twisted-web
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 
 # Fifth paragraph - all build definitions that describe things used by
@@ -49,8 +48,8 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 
 do-install:
-	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
-	@ cd ${WRKSRC} && \
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
+	cd ${WRKSRC} && \
 	for i in `find src data \\( \\( -type f -name '*.orig' -o \
 		    -type d -name .svn \\) -prune \\) -o -type f -print` \
 		.svn/entries ;\
@@ -59,7 +58,7 @@ do-install:
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	@ cd ${WRKSRC}; \
+	cd ${WRKSRC}; \
 	${INSTALL_SCRIPT} PyMSNt.py ${PREFIX}/bin/PyMSNt
 	${INSTALL_DATA_DIR} ${EGDIR};\
 	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
