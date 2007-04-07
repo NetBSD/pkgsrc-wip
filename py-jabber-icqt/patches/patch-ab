@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
+$NetBSD: patch-ab,v 1.3 2007/04/07 18:58:37 schnoebe Exp $
 
---- src/main.py.orig	2006-03-06 18:58:50.000000000 -0600
+--- src/main.py.orig	2006-09-30 14:44:21.000000000 -0500
 +++ src/main.py
 @@ -1,3 +1,5 @@
 +#!/usr/pkg/bin/python2.4
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
  # Copyrigh 2004-2006 Daniel Henninger <jadestorm@nc.rr.com>
  # Licensed for distribution under the GPL version 2, check COPYING for details
  
-@@ -25,7 +27,7 @@ if VersionNumber(sys.version[:3]) < Vers
+@@ -36,7 +38,7 @@ import debug
  
  import config
  import xmlconfig
@@ -17,3 +17,38 @@ $NetBSD: patch-ab,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
  profilelog = None
  options = {}
  daemonizeme = False
+@@ -89,7 +91,7 @@ if os.name == "posix":
+ 	import signal
+ 	signal.signal(signal.SIGHUP, reloadConfig)
+ 	# Load scripts for PID and daemonizing
+-	from twisted.scripts import twistd
++	from twisted.scripts import _twistd_unix
+ 
+ selectWarning = "Unable to install any good reactors (kqueue, cf, epoll, poll).\nWe fell back to using select. You may have scalability problems.\nThis reactor will not support more than 1024 connections +at a time.  You may silence this message by choosing 'select' or 'default' as your reactor in the transport config."
+ if config.reactor and len(config.reactor) > 0:
+@@ -390,14 +392,14 @@ class App:
+ 		if config.pid and os.name != "posix":
+ 			config.pid = ""
+ 		if config.pid:
+-			twistd.checkPID(config.pid)
++			_twistd_unix.checkPID(config.pid)
+ 
+ 		# Do any auto-update stuff
+ 		xdb.housekeep()
+ 
+ 		# Daemonise the process and write the PID file
+ 		if daemonizeme and os.name == "posix":
+-			twistd.daemonize()
++			_twistd_unix.daemonize()
+ 		if config.pid:
+ 			self.writePID()
+ 
+@@ -431,7 +433,7 @@ class App:
+ 		self.transportSvc.removeMe()
+ 		def cb(ignored=None):
+ 			if config.pid:
+-				twistd.removePID(config.pid)
++				_twistd_unix.removePID(config.pid)
+ 		d = Deferred()
+ 		d.addCallback(cb)
+ 		reactor.callLater(3.0, d.callback, None)

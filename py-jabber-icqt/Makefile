@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/20 01:06:57 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2007/04/07 18:58:37 schnoebe Exp $
 
 DISTNAME=		pyicq-t-0.8
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -15,9 +15,9 @@ COMMENT=		Transport connecting Jabber to the ICQ IM network
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.1.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.1.0:../../wip/py-twisted-words
-DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.1.0:../../wip/py-twisted-web
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
+DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.7.0:../../wip/py-twisted-web
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 
 # Fifth paragraph - all build definitions that describe things used by
@@ -47,8 +47,8 @@ MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 CONF_FILES=	${EGDIR}/pyicqt.xml ${PKG_SYSCONFDIR}/pyicqt.xml
 
 do-install:
-	@ ${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
-	@ cd ${WRKSRC} && \
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
+	cd ${WRKSRC} && \
 	for i in `find src data tools \\( \\( -type f -name '*.orig' -o \
 			-type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
