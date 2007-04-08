@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:54 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/08 13:52:16 hoka_adam Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -10,7 +10,7 @@ HOMEPAGE=		http://pypanel.sourceforge.net/
 COMMENT=		Lightweight panel written in Python and C for X11
 
 PYDISTUTILSPKG=		yes
-PY_PATCHPLIST=	yes
+PY_PATCHPLIST=		yes
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing LOCALBASE and X11BASE paths.
@@ -27,5 +27,5 @@ PYTHON_VERSIONS_ACCEPTED=	24 23 22
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/py-Xlib/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
