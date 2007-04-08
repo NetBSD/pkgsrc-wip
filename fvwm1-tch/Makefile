@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/27 20:51:31 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/08 10:07:41 netcap Exp $
 
 DISTNAME=		fvwm-1.24r-tch1
 PKGNAME=		${DISTNAME:S/fvwm/fvwm1/:S/-tch/tch/}
@@ -14,5 +14,22 @@ CONFLICTS=		fvwm2-[0-9]* fvwm1-[0-9]* fvwm>=1
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf automake
 
+.if "${X11_TYPE}" == "modular"
+post-configure:
+	find ${WRKDIR} -name Makefile -print | while read file; do	\
+		sed -e's/ -I$$//g' $$file > $$file.new;			\
+		mv $$file.new $$file;					\
+	done
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
+.else
 .include "../../mk/x11.buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
