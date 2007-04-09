@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2555 2007/04/05 20:24:40 alchow Exp $
+# $Id: Makefile,v 1.2556 2007/04/09 13:26:49 yeled Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -994,6 +994,7 @@ SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
+SUBDIR+=	p5-Calendar-Simple
 SUBDIR+=	p5-Catalyst
 SUBDIR+=	p5-Catalyst-Action-RenderView
 SUBDIR+=	p5-Catalyst-Devel
