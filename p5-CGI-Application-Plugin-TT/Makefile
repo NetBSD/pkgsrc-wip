@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/17 05:47:57 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/10 07:13:48 jgoamakf Exp $
 
-DISTNAME=		CGI-Application-Plugin-TT-1.02
+DISTNAME=		CGI-Application-Plugin-TT-1.03
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5cpo
 CATEGORIES=		databases perl5
