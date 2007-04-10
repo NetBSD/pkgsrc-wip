@@ -1,0 +1,4 @@
+For full set of features you could install also:
+	* sysutils/py-dbus
+	* security/py-OpenSSL 
+	* x11/py-gnome2

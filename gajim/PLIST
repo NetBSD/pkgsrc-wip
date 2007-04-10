@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/10 14:29:37 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/04/10 15:46:57 shindenmorr Exp $
 bin/gajim
 lib/gajim/gtkspell.la
 lib/gajim/idle.la
@@ -702,9 +702,11 @@ share/gajim/data/iconsets/transports/tlen/16x16/not_in_roster.png
 share/gajim/data/iconsets/transports/tlen/16x16/offline.png
 share/gajim/data/iconsets/transports/tlen/16x16/online.png
 share/gajim/data/iconsets/transports/tlen/16x16/xa.png
+share/gajim/data/iconsets/transports/tlen/32x32/away.png
 share/gajim/data/iconsets/transports/tlen/32x32/chat.png
 share/gajim/data/iconsets/transports/tlen/32x32/dnd.png
 share/gajim/data/iconsets/transports/tlen/32x32/not_in_roster.png
+share/gajim/data/iconsets/transports/tlen/32x32/offline.png
 share/gajim/data/iconsets/transports/tlen/32x32/online.png
 share/gajim/data/iconsets/transports/tlen/32x32/xa.png
 share/gajim/data/iconsets/transports/tlen/48x48/offline.png
