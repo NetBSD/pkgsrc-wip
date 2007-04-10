@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/01/24 10:10:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/10 14:29:37 shindenmorr Exp $
 #
 
-DISTNAME=	gajim-0.8.2
+DISTNAME=	gajim-0.11.1
 CATEGORIES=	chat python
 MASTER_SITES=	http://www.gajim.org/downloads/
 
@@ -13,7 +13,8 @@ DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PY_PATCHPLIST=	yes
 USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake intltool pkg-config
+GNU_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -22,7 +23,7 @@ SUBST_SED.paths=	-e 's,/usr/include,${LOCALBASE}/include,g'
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	src/gajim.py
+SUBST_FILES.prefix=	src/gajim.py src/common/configpaths.py src/gtkgui_helpers.py
 SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		abs
@@ -40,6 +41,14 @@ BUILDLINK_TRANSFORM+=	rm:-lXss
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/gajim.py ${PREFIX}/bin/gajim
+	cd ${WRKSRC} && \
+	for i in `find data/emoticons data/iconsets -iname\
+	'*.jpg' -o -iname '*.png'` ;\
+	do\
+	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/share/gajim/$$i` ;\
+            ${INSTALL_SCRIPT} $$i ${PREFIX}/share/gajim/$$i ;\
+	done
+	
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

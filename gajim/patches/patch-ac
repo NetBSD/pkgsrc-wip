@@ -1,0 +1,11 @@
+--- src/gajim.py.orig	2007-04-03 12:13:42.000000000 +0200
++++ src/gajim.py	2007-04-03 12:14:00.000000000 +0200
+@@ -18,6 +18,8 @@
+ ##
+ 
+ import sys
++sys.path += ["@PREFIX@/share/gajim/src"]                                                                                                                                
++
+ import os
+ import urllib
+ 
