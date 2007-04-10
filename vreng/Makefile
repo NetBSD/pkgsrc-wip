@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/02/23 14:35:21 dauphing Exp $
+# $NetBSD: Makefile,v 1.8 2007/04/10 14:47:23 dauphing Exp $
 
 #DISTNAME=	vreng-6.8.3
-DISTNAME=	vreng-6.8.8
+DISTNAME=	vreng-6.8.12
 PKGREVISION=	1
 CATEGORIES=	x11
 
@@ -19,6 +19,10 @@ USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+CXXFLAGS=	-g
+CFLAGS=		-g
+CXXFLAGS+=	-D_POSIX_PTHREAD_SEMANTICS
+CFLAGS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 #CONFIGURE_ENV+=
 #CONFIGURE_ARGS+= --enable-ocaml
@@ -35,7 +39,7 @@ LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../wip/ubit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
+#.include "../../lang/ocaml/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
