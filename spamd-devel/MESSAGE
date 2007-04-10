@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/04/10 18:27:25 jeremy-c-reed Exp $
+
+Don't forget to add the spamd ports to /etc/services:
+
+spamd		8025/tcp		# spamd(8)
+spamd-sync	8025/udp		# spamd(8) synchronisation
+spamd-cfg	8026/tcp		# spamd(8) configuration
+
+
+===========================================================================

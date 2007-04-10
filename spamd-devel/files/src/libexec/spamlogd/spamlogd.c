@@ -1,0 +1,385 @@
+/*	$OpenBSD: spamlogd.c,v 1.19 2007/03/05 14:55:09 beck Exp $	*/
+
+/*
+ * Copyright (c) 2006 Henning Brauer <henning@openbsd.org>
+ * Copyright (c) 2006 Berk D. Demir.
+ * Copyright (c) 2004-2007 Bob Beck.
+ * Copyright (c) 2001 Theo de Raadt.
+ * Copyright (c) 2001 Can Erkin Acar.
+ * All rights reserved
+ *
+ * Permission to use, copy, modify, and distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
+/* watch pf log for mail connections, update whitelist entries. */
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/ioctl.h>
+
+#include <net/if.h>
+#include <net/if_pflog.h>
+
+#include <netinet/in.h>
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <arpa/inet.h>
+
+#include <net/pfvar.h>
+
+#include <db.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <netdb.h>
+#include <pwd.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <syslog.h>
+#include <string.h>
+#include <unistd.h>
+#include <pcap.h>
+
+#include "grey.h"
+#include "sync.h"
+
+#define MIN_PFLOG_HDRLEN	45
+#define PCAPSNAP		512
+#define PCAPTIMO		500	/* ms */
+#define PCAPOPTZ		1	/* optimize filter */
+#define PCAPFSIZ		512	/* pcap filter string size */
+
+int debug = 1;
+int greylist = 1;
+FILE *grey = NULL;
+
+u_short sync_port;
+int syncsend;
+u_int8_t		 flag_debug = 0;
+u_int8_t		 flag_inbound = 0;
+char			*networkif = NULL;
+char			*pflogif = "pflog0";
+char			 errbuf[PCAP_ERRBUF_SIZE];
+pcap_t			*hpcap = NULL;
+struct syslog_data	 sdata	= SYSLOG_DATA_INIT;
+extern char		*__progname;
+
+void	logmsg(int , const char *, ...);
+void	sighandler_close(int);
+int	init_pcap(void);
+void	logpkt_handler(u_char *, const struct pcap_pkthdr *, const u_char *);
+int	dbupdate(char *, char *);
+void	usage(void);
+
+void
+logmsg(int pri, const char *msg, ...)
+{
+	va_list	ap;
+	va_start(ap, msg);
+
+	if (flag_debug) {
+		vfprintf(stderr, msg, ap);
+		fprintf(stderr, "\n");
+	} else
+		vsyslog_r(pri, &sdata, msg, ap);
+
+	va_end(ap);
+}
+
+/* ARGSUSED */
+void
+sighandler_close(int signal)
+{
+	if (hpcap != NULL)
+		pcap_breakloop(hpcap);	/* sighdlr safe */
+}
+
+int
+init_pcap(void)
+{
+	struct bpf_program	bpfp;
+	char	filter[PCAPFSIZ] = "ip and port 25 and action pass "
+		    "and tcp[13]&0x12=0x2";
+
+	if ((hpcap = pcap_open_live(pflogif, PCAPSNAP, 1, PCAPTIMO,
+	    errbuf)) == NULL) {
+		logmsg(LOG_ERR, "Failed to initialize: %s", errbuf);
+		return (-1);
+	}
+
+	if (pcap_datalink(hpcap) != DLT_PFLOG) {
+		logmsg(LOG_ERR, "Invalid datalink type");
+		pcap_close(hpcap);
+		hpcap = NULL;
+		return (-1);
+	}
+
+	if (networkif != NULL) {
+		strlcat(filter, " and on ", PCAPFSIZ);
+		strlcat(filter, networkif, PCAPFSIZ);
+	}
+
+	if (pcap_compile(hpcap, &bpfp, filter, PCAPOPTZ, 0) == -1 ||
+	    pcap_setfilter(hpcap, &bpfp) == -1) {
+		logmsg(LOG_ERR, "%s", pcap_geterr(hpcap));
+		return (-1);
+	}
+
+	pcap_freecode(&bpfp);
+
+#ifdef BIOCLOCK
+/* in FreeBSD and OpenBSD for locking the descriptor */
+	if (ioctl(pcap_fileno(hpcap), BIOCLOCK) < 0) {
+		logmsg(LOG_ERR, "BIOCLOCK: %s", strerror(errno));
+		return (-1);
+	}
+#endif
+
+	return (0);
+}
+
+/* ARGSUSED */
+void
+logpkt_handler(u_char *user, const struct pcap_pkthdr *h, const u_char *sp)
+{
+	sa_family_t		 af;
+	u_int8_t		 hdrlen;
+	u_int32_t		 caplen = h->caplen;
+	const struct ip		*ip = NULL;
+	const struct pfloghdr	*hdr;
+	char			 ipstraddr[40] = { '\0' };
+
+	hdr = (const struct pfloghdr *)sp;
+	if (hdr->length < MIN_PFLOG_HDRLEN) {
+		logmsg(LOG_WARNING, "invalid pflog header length (%u/%u). "
+		    "packet dropped.", hdr->length, MIN_PFLOG_HDRLEN);
+		return;
+	}
+	hdrlen = BPF_WORDALIGN(hdr->length);
+
+	if (caplen < hdrlen) {
+		logmsg(LOG_WARNING, "pflog header larger than caplen (%u/%u). "
+		    "packet dropped.", hdrlen, caplen);
+		return;
+	}
+
+	/* We're interested in passed packets */
+	if (hdr->action != PF_PASS)
+		return;
+
+	af = hdr->af;
+	if (af == AF_INET) {
+		ip = (const struct ip *)(sp + hdrlen);
+		if (hdr->dir == PF_IN)
+			inet_ntop(af, &ip->ip_src, ipstraddr,
+			    sizeof(ipstraddr));
+		else if (hdr->dir == PF_OUT && !flag_inbound)
+			inet_ntop(af, &ip->ip_dst, ipstraddr,
+			    sizeof(ipstraddr));
+	}
+
+	if (ipstraddr[0] != '\0') {
+		if (hdr->dir == PF_IN)
+			logmsg(LOG_DEBUG,"inbound %s", ipstraddr);
+		else 
+			logmsg(LOG_DEBUG,"outbound %s", ipstraddr);
+		dbupdate(PATH_SPAMD_DB, ipstraddr);
+	}
+}
+
+int
+dbupdate(char *dbname, char *ip)
+{
+	HASHINFO	hashinfo;
+	DBT		dbk, dbd;
+	DB		*db;
+	struct gdata	gd;
+	time_t		now;
+	int		r;
+	struct in_addr	ia;
+
+	now = time(NULL);
+	memset(&hashinfo, 0, sizeof(hashinfo));
+	db = dbopen(dbname, O_EXLOCK|O_RDWR, 0600, DB_HASH, &hashinfo);
+	if (db == NULL) {
+		logmsg(LOG_ERR, "Can not open db %s: %s", dbname,
+		    strerror(errno));
+		return (-1);
+	}
+	if (inet_pton(AF_INET, ip, &ia) != 1) {
+		logmsg(LOG_NOTICE, "Invalid IP address %s", ip);
+		goto bad;
+	}
+	memset(&dbk, 0, sizeof(dbk));
+	dbk.size = strlen(ip);
+	dbk.data = ip;
+	memset(&dbd, 0, sizeof(dbd));
+
+	/* add or update whitelist entry */
+	r = db->get(db, &dbk, &dbd, 0);
+	if (r == -1) {
+		logmsg(LOG_NOTICE, "db->get failed (%m)");
+		goto bad;
+	}
+
+	if (r) {
+		/* new entry */
+		memset(&gd, 0, sizeof(gd));
+		gd.first = now;
+		gd.bcount = 1;
+		gd.pass = now;
+		gd.expire = now + WHITEEXP;
+		memset(&dbk, 0, sizeof(dbk));
+		dbk.size = strlen(ip);
+		dbk.data = ip;
+		memset(&dbd, 0, sizeof(dbd));
+		dbd.size = sizeof(gd);
+		dbd.data = &gd;
+		r = db->put(db, &dbk, &dbd, 0);
+		if (r) {
+			logmsg(LOG_NOTICE, "db->put failed (%m)");
+			goto bad;
+		}
+	} else {
+		if (dbd.size != sizeof(gd)) {
+			/* whatever this is, it doesn't belong */
+			db->del(db, &dbk, 0);
+			goto bad;
+		}
+		memcpy(&gd, dbd.data, sizeof(gd));
+		gd.pcount++;
+		gd.expire = now + WHITEEXP;
+		memset(&dbk, 0, sizeof(dbk));
+		dbk.size = strlen(ip);
+		dbk.data = ip;
+		memset(&dbd, 0, sizeof(dbd));
+		dbd.size = sizeof(gd);
+		dbd.data = &gd;
+		r = db->put(db, &dbk, &dbd, 0);
+		if (r) {
+			logmsg(LOG_NOTICE, "db->put failed (%m)");
+			goto bad;
+		}
+	}
+	db->close(db);
+	db = NULL;
+	if (syncsend)
+		sync_white(now, now + WHITEEXP, ip);
+	return (0);
+ bad:
+	db->close(db);
+	db = NULL;
+	return (-1);
+}
+
+void
+usage(void)
+{
+	fprintf(stderr,
+	    "usage: %s [-DI] [-i interface] [-l pflog_interface] [-Y synctarget]\n",
+	    __progname);
+	exit(1);
+}
+
+int
+main(int argc, char **argv)
+{
+	int		 ch;
+	struct passwd	*pw;
+	pcap_handler	 phandler = logpkt_handler;
+	int syncfd = 0;
+	struct servent *ent;
+	char *sync_iface = NULL;
+	char *sync_baddr = NULL;
+
+	if ((ent = getservbyname("spamd-sync", "udp")) == NULL)
+		errx(1, "Can't find service \"spamd-sync\" in /etc/services");
+	sync_port = ntohs(ent->s_port);
+
+	while ((ch = getopt(argc, argv, "DIi:l:Y:")) != -1) {
+		switch (ch) {
+		case 'D':
+			flag_debug = 1;
+			break;
+		case 'I':
+			flag_inbound = 1;
+			break;
+		case 'i':
+			networkif = optarg;
+			break;
+		case 'l':
+			pflogif = optarg;
+			break;
+		case 'Y':
+			if (sync_addhost(optarg, sync_port) != 0)
+				sync_iface = optarg;
+			syncsend++;
+			break;
+		default:
+			usage();
+			/* NOTREACHED */
+		}
+	}
+
+	signal(SIGINT , sighandler_close);
+	signal(SIGQUIT, sighandler_close);
+	signal(SIGTERM, sighandler_close);
+
+	logmsg(LOG_DEBUG, "Listening on %s for %s %s", pflogif,
+	    (networkif == NULL) ? "all interfaces." : networkif,
+	    (flag_inbound) ? "Inbound direction only." : "");
+
+	if (init_pcap() == -1)
+		err(1, "couldn't initialize pcap");
+
+	if (syncsend) {
+		syncfd = sync_init(sync_iface, sync_baddr, sync_port);
+		if (syncfd == -1)
+			err(1, "sync init");
+	}
+
+	/* privdrop */
+	pw = getpwnam("_spamd");
+	if (pw == NULL)
+		errx(1, "User '_spamd' not found! ");
+
+#ifdef __OpenBSD__
+	if (setgroups(1, &pw->pw_gid) ||
+	    setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) ||
+	    setresuid(pw->pw_uid, pw->pw_uid, pw->pw_uid))
+		err(1, "failed to drop privs");
+#else
+/* TODO */
+		setgroups(1, &pw->pw_gid);
+		setegid(pw->pw_gid);
+		setgid(pw->pw_gid);
+		seteuid(pw->pw_uid);
+		setuid(pw->pw_uid);
+#endif
+
+	if (!flag_debug) {
+		if (daemon(0, 0) == -1)
+			err(1, "daemon");
+		tzset();
+		openlog_r("spamlogd", LOG_PID | LOG_NDELAY, LOG_DAEMON, &sdata);
+	}
+
+	pcap_loop(hpcap, -1, phandler, NULL);
+
+	logmsg(LOG_NOTICE, "exiting");
+	if (!flag_debug)
+		closelog_r(&sdata);
+
+	exit(0);
+}

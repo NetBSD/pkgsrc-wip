@@ -1,0 +1,28 @@
+netbsd needs to make sure /usr/src/sys/dist/pf/net/if_pflog.h is installed?
+
+-=-=-=
+
+spamd-setup.c:38:29: error: netinet/ip_ipsp.h: No such file or directory
+
+
+-=-=-=-
+
+many warnings
+
+-=-=-=
+patch spamd.conf manpage s/getcap/cgetcap/
+
+I don't know if following is still a problem.
+
+   394 spamd    RET   open -1 errno 2 No such file or directory
+   394 spamd    CALL  sendto(3,0xbfbff250,0x51,0,0,0)
+   394 spamd    GIO   fd 3 wrote 81 bytes
+       "<31>Apr 14 12:25:37 spamd[394]: read_configline: fgetln (Operation not\
+         permitted)"
+
+And don't know if this still is a problem:
+
+if spamd can't connect to pf then the usage is like:
+PID USERNAME PRI NICE   SIZE   RES STATE      TIME   WCPU    CPU COMMAND
+445 root      67    4  8312K 8860K RUN       12:05 88.57% 88.57% spamd
+
