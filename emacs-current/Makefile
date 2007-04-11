@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/04/07 09:49:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.28 2007/04/11 06:51:52 rillig Exp $
 #
 
 DISTNAME=	emacs-22.0.97
@@ -17,7 +17,6 @@ BUILD_TARGET=	bootstrap
 
 CVS_REPOSITORIES=	emacs
 CVS_ROOT.emacs=		${CVS_ROOT_GNU}/emacs
-CVS_MODULE.emacs=	emacs
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
