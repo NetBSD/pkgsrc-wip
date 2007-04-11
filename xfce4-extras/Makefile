@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/24 08:53:06 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/11 00:42:23 hoka_adam Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -26,7 +26,7 @@ do-install:
 #
 
 # Additional plugins etc.
-.include "../../wip/xfce4-xmms-plugin/buildlink3.mk"
+#.include "../../wip/xfce4-xmms-plugin/buildlink3.mk"
 .include "../../wip/xfce4-weather-plugin/buildlink3.mk"
 .include "../../wip/xfce4-wavelan-plugin/buildlink3.mk"
 .include "../../wip/xfce4-datetime-plugin/buildlink3.mk"

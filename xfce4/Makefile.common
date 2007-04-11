@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2007/01/23 08:00:34 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.19 2007/04/11 00:42:23 hoka_adam Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.0/src/
 EXTRACT_SUFX=		.tar.bz2
@@ -22,8 +22,9 @@ GCC_REQD+=		3.0
 XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 
 ## # Use the latest GNU tar when the native tar is buggy
 ## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)

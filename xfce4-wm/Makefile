@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/03 09:24:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2007/04/11 00:42:23 hoka_adam Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=	Xfce window manager
 USE_DIRS+=	xdg-1.4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+#.include "../../graphics/xpm/buildlink3.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

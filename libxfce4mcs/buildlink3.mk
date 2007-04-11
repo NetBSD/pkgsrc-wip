@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/01/23 08:00:34 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/04/11 00:42:23 hoka_adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXFCE4MCS_BUILDLINK3_MK:=	${LIBXFCE4MCS_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_API_DEPENDS.libxfce4mcs+=	libxfce4mcs>=4.4.0
 BUILDLINK_PKGSRCDIR.libxfce4mcs?=	../../wip/libxfce4mcs
 .endif	# LIBXFCE4MCS_BUILDLINK3_MK
 
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../wip/libxfce4util/buildlink3.mk"
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
