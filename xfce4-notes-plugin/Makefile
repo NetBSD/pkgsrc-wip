@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/24 08:25:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/11 06:51:46 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.4
+XFCE4_VERSION=	1.4.1
 
 DISTNAME=	xfce4-notes-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
