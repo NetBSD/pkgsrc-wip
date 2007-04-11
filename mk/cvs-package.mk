@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.19 2007/01/16 10:54:38 rillig Exp $
+# $Id: cvs-package.mk,v 1.20 2007/04/11 06:42:33 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -15,6 +15,11 @@
 #	CVS_TAG.${id}.
 #
 #	Default value: today at midnight.
+#
+# CVS_PROJECT
+#	The project name to be used in CVS_ROOT_SOURCEFORGE.
+#
+#	Default: ${PKGBASE}
 #
 # CVS_ROOT.${id}
 #	The CVSROOT for the CVS repository, including anoncvs password,
@@ -40,6 +45,8 @@
 #	Common CVS repository locations for use in the CVS_ROOT
 #	variables.
 #
+# Keywords: cvs
+#
 
 .if !defined(_PKG_MK_CVS_PACKAGE_MK)
 _PKG_MK_CVS_PACKAGE_MK=	# defined
@@ -57,7 +64,8 @@ DISTFILES?=		# empty
 # commonly used repositories
 CVS_ROOT_GNU=		:pserver:anonymous:@cvs.savannah.gnu.org:/sources
 CVS_ROOT_NONGNU=	${CVS_ROOT_GNU}
-CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@%PROJECT%.cvs.sourceforge.net:/cvsroot/%PROJECT%
+CVS_ROOT_SOURCEFORGE=	:pserver:anonymous:@${CVS_PROJECT}.cvs.sourceforge.net:/cvsroot/${CVS_PROJECT}
+CVS_PROJECT?=		${PKGBASE}
 
 #
 # End of the interface part. Start of the implementation part.
