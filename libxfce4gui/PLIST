@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/23 08:00:33 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.12 2007/04/11 14:12:57 marttikuparinen Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -48,30 +48,31 @@ include/xfce4/libxfcegui4/xfce_togglebutton.h
 include/xfce4/libxfcegui4/xinerama.h
 lib/libxfcegui4.la
 lib/pkgconfig/libxfcegui4-1.0.pc
-share/doc/html/libxfcegui4/XfceAboutDialog.html
-share/doc/html/libxfcegui4/XfceAppMenuItem.html
-share/doc/html/libxfcegui4/XfceFramebox.html
-share/doc/html/libxfcegui4/XfceHeading.html
-share/doc/html/libxfcegui4/XfceIconTheme.html
-share/doc/html/libxfcegui4/XfceTitledDialog.html
-share/doc/html/libxfcegui4/home.png
-share/doc/html/libxfcegui4/index.html
-share/doc/html/libxfcegui4/index.sgml
-share/doc/html/libxfcegui4/left.png
-share/doc/html/libxfcegui4/libxfcegui4-Standard-Macros.html
-share/doc/html/libxfcegui4/libxfcegui4-Xfce-Gdk-extensions.html
-share/doc/html/libxfcegui4/libxfcegui4-Xfce-Gtk+-extensions.html
-share/doc/html/libxfcegui4/libxfcegui4-XfceFileChooser.html
-share/doc/html/libxfcegui4/libxfcegui4-core.html
-share/doc/html/libxfcegui4/libxfcegui4-dialogs.html
-share/doc/html/libxfcegui4/libxfcegui4-fundamentals.html
-share/doc/html/libxfcegui4/libxfcegui4-netk.html
-share/doc/html/libxfcegui4/libxfcegui4-xfce-exec.html
-share/doc/html/libxfcegui4/libxfcegui4.devhelp
-share/doc/html/libxfcegui4/reference.html
-share/doc/html/libxfcegui4/right.png
-share/doc/html/libxfcegui4/style.css
-share/doc/html/libxfcegui4/up.png
+share/doc/libxfcegui4/XfceAboutDialog.html
+share/doc/libxfcegui4/XfceAppMenuItem.html
+share/doc/libxfcegui4/XfceFramebox.html
+share/doc/libxfcegui4/XfceHeading.html
+share/doc/libxfcegui4/XfceIconTheme.html
+share/doc/libxfcegui4/XfceTitledDialog.html
+share/doc/libxfcegui4/home.png
+share/doc/libxfcegui4/index.html
+share/doc/libxfcegui4/index.sgml
+share/doc/libxfcegui4/left.png
+share/doc/libxfcegui4/libxfcegui4-Standard-Macros.html
+share/doc/libxfcegui4/libxfcegui4-Xfce-Gdk-extensions.html
+share/doc/libxfcegui4/libxfcegui4-Xfce-Gtk+-extensions.html
+share/doc/libxfcegui4/libxfcegui4-XfceFileChooser.html
+share/doc/libxfcegui4/libxfcegui4-core.html
+share/doc/libxfcegui4/libxfcegui4-dialogs.html
+share/doc/libxfcegui4/libxfcegui4-fundamentals.html
+share/doc/libxfcegui4/libxfcegui4-netk.html
+share/doc/libxfcegui4/libxfcegui4-xfce-exec.html
+share/doc/libxfcegui4/libxfcegui4.devhelp
+share/doc/libxfcegui4/libxfcegui4.devhelp2
+share/doc/libxfcegui4/reference.html
+share/doc/libxfcegui4/right.png
+share/doc/libxfcegui4/style.css
+share/doc/libxfcegui4/up.png
 share/icons/hicolor/48x48/apps/xfce-edit.png
 share/icons/hicolor/48x48/apps/xfce-filemanager.png
 share/icons/hicolor/48x48/apps/xfce-games.png
@@ -86,6 +87,7 @@ share/icons/hicolor/48x48/apps/xfce-terminal.png
 share/icons/hicolor/48x48/apps/xfce-unknown.png
 share/icons/hicolor/48x48/apps/xfce-utils.png
 share/icons/hicolor/scalable/apps/xfce-filemanager.svg
+share/locale/ar/LC_MESSAGES/libxfcegui4.mo
 share/locale/be/LC_MESSAGES/libxfcegui4.mo
 share/locale/bn_IN/LC_MESSAGES/libxfcegui4.mo
 share/locale/ca/LC_MESSAGES/libxfcegui4.mo
@@ -121,10 +123,12 @@ share/locale/pt_BR/LC_MESSAGES/libxfcegui4.mo
 share/locale/ro/LC_MESSAGES/libxfcegui4.mo
 share/locale/ru/LC_MESSAGES/libxfcegui4.mo
 share/locale/sk/LC_MESSAGES/libxfcegui4.mo
+share/locale/sq/LC_MESSAGES/libxfcegui4.mo
 share/locale/sv/LC_MESSAGES/libxfcegui4.mo
 share/locale/ta/LC_MESSAGES/libxfcegui4.mo
+share/locale/tr/LC_MESSAGES/libxfcegui4.mo
 share/locale/uk/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_CN/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_TW/LC_MESSAGES/libxfcegui4.mo
-@dirrm share/doc/html/libxfcegui4
+@dirrm share/doc/libxfcegui4
 @dirrm include/xfce4/libxfcegui4

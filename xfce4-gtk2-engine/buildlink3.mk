@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/01/23 08:00:36 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/04/11 14:12:57 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_GTK2_ENGINE_BUILDLINK3_MK:=	${XFCE4_GTK2_ENGINE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-gtk2-engine
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-gtk2-engine
 
 .if ${XFCE4_GTK2_ENGINE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xfce4-gtk2-engine+=	xfce4-gtk2-engine>=2.4.0
+BUILDLINK_API_DEPENDS.xfce4-gtk2-engine+=	xfce4-gtk2-engine>=2.4.1
 BUILDLINK_PKGSRCDIR.xfce4-gtk2-engine?=	../../wip/xfce4-gtk2-engine
 .endif	# XFCE4_GTK2_ENGINE_BUILDLINK3_MK
 

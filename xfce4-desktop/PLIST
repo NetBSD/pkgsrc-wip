@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/01/23 08:00:35 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/04/11 14:12:57 marttikuparinen Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -9,6 +9,7 @@ man/man1/xfdesktop.1
 share/applications/xfce-backdrop-settings.desktop
 share/applications/xfce-menueditor.desktop
 share/examples/xfce4/desktop/menu.xml
+share/examples/xfce4/desktop/menu.xml.be
 share/examples/xfce4/desktop/menu.xml.ca
 share/examples/xfce4/desktop/menu.xml.cs
 share/examples/xfce4/desktop/menu.xml.da
@@ -21,15 +22,18 @@ share/examples/xfce4/desktop/menu.xml.fi
 share/examples/xfce4/desktop/menu.xml.fr
 share/examples/xfce4/desktop/menu.xml.he
 share/examples/xfce4/desktop/menu.xml.hu
+share/examples/xfce4/desktop/menu.xml.it
 share/examples/xfce4/desktop/menu.xml.ja
 share/examples/xfce4/desktop/menu.xml.ko
 share/examples/xfce4/desktop/menu.xml.nl
+share/examples/xfce4/desktop/menu.xml.pa
 share/examples/xfce4/desktop/menu.xml.pl
 share/examples/xfce4/desktop/menu.xml.pt_BR
 share/examples/xfce4/desktop/menu.xml.ro
 share/examples/xfce4/desktop/menu.xml.ru
 share/examples/xfce4/desktop/menu.xml.sk
 share/examples/xfce4/desktop/menu.xml.sv
+share/examples/xfce4/desktop/menu.xml.tr
 share/examples/xfce4/desktop/menu.xml.uk
 share/examples/xfce4/desktop/menu.xml.vi
 share/examples/xfce4/desktop/menu.xml.zh_TW
@@ -44,6 +48,7 @@ share/examples/xfce4/desktop/xfce-registered-categories.xml.fi
 share/examples/xfce4/desktop/xfce-registered-categories.xml.fr
 share/examples/xfce4/desktop/xfce-registered-categories.xml.he
 share/examples/xfce4/desktop/xfce-registered-categories.xml.hu
+share/examples/xfce4/desktop/xfce-registered-categories.xml.it
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ja
 share/examples/xfce4/desktop/xfce-registered-categories.xml.nl
 share/examples/xfce4/desktop/xfce-registered-categories.xml.pl
@@ -52,6 +57,7 @@ share/examples/xfce4/desktop/xfce-registered-categories.xml.ro
 share/examples/xfce4/desktop/xfce-registered-categories.xml.ru
 share/examples/xfce4/desktop/xfce-registered-categories.xml.sk
 share/examples/xfce4/desktop/xfce-registered-categories.xml.sv
+share/examples/xfce4/desktop/xfce-registered-categories.xml.tr
 share/examples/xfce4/desktop/xfce-registered-categories.xml.zh_CN
 share/examples/xfce4/desktop/xfce-registered-categories.xml.zh_TW
 share/icons/hicolor/32x32/apps/xfce4-backdrop.png
@@ -137,10 +143,10 @@ share/xfce4/doc/C/xfdesktop.html
 share/xfce4/doc/fr/images/root_menu.png
 share/xfce4/doc/fr/images/root_menu2.png
 share/xfce4/doc/fr/images/select_bg_color.png
-share/xfce4/doc/fr/images/xfdesktop-background.png
+share/xfce4/doc/fr/images/xfdesktop-appearance-tab.png
+share/xfce4/doc/fr/images/xfdesktop-behavior-tab.png
 share/xfce4/doc/fr/images/xfdesktop-editor.png
 share/xfce4/doc/fr/images/xfdesktop-list.png
-share/xfce4/doc/fr/images/xfdesktop-menu-tab.png
 share/xfce4/doc/fr/xfdesktop.html
 share/xfce4/panel-plugins/xfce4-menu.desktop
 @dirrm share/xfce4-menueditor

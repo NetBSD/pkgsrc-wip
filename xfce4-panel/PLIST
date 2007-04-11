@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/01/23 08:55:11 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/04/11 14:12:58 marttikuparinen Exp $
 bin/xfce4-iconbox
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
@@ -37,25 +37,26 @@ lib/xfce4/panel-plugins/libsystray.la
 lib/xfce4/panel-plugins/libtasklist.la
 lib/xfce4/panel-plugins/libwindowlist.la
 share/applications/xfce4-panel-manager.desktop
-share/gtk-doc/html/libxfce4panel/XfceArrowButton.html
-share/gtk-doc/html/libxfce4panel/XfceExternalPanelPlugin.html
-share/gtk-doc/html/libxfce4panel/XfceHVBox.html
-share/gtk-doc/html/libxfce4panel/XfceInternalPanelPlugin.html
-share/gtk-doc/html/libxfce4panel/XfceItembar.html
-share/gtk-doc/html/libxfce4panel/XfcePanelPlugin.html
-share/gtk-doc/html/libxfce4panel/XfcePanelWindow.html
-share/gtk-doc/html/libxfce4panel/ch01.html
-share/gtk-doc/html/libxfce4panel/home.png
-share/gtk-doc/html/libxfce4panel/index.html
-share/gtk-doc/html/libxfce4panel/index.sgml
-share/gtk-doc/html/libxfce4panel/left.png
-share/gtk-doc/html/libxfce4panel/libxfce4panel-Convenience-Functions.html
-share/gtk-doc/html/libxfce4panel/libxfce4panel-Standard-Enumerations.html
-share/gtk-doc/html/libxfce4panel/libxfce4panel-Writing-Plugins.html
-share/gtk-doc/html/libxfce4panel/libxfce4panel.devhelp
-share/gtk-doc/html/libxfce4panel/right.png
-share/gtk-doc/html/libxfce4panel/style.css
-share/gtk-doc/html/libxfce4panel/up.png
+share/doc/libxfce4panel/XfceArrowButton.html
+share/doc/libxfce4panel/XfceExternalPanelPlugin.html
+share/doc/libxfce4panel/XfceHVBox.html
+share/doc/libxfce4panel/XfceInternalPanelPlugin.html
+share/doc/libxfce4panel/XfceItembar.html
+share/doc/libxfce4panel/XfcePanelPlugin.html
+share/doc/libxfce4panel/XfcePanelWindow.html
+share/doc/libxfce4panel/ch01.html
+share/doc/libxfce4panel/home.png
+share/doc/libxfce4panel/index.html
+share/doc/libxfce4panel/index.sgml
+share/doc/libxfce4panel/left.png
+share/doc/libxfce4panel/libxfce4panel-Convenience-Functions.html
+share/doc/libxfce4panel/libxfce4panel-Standard-Enumerations.html
+share/doc/libxfce4panel/libxfce4panel-Writing-Plugins.html
+share/doc/libxfce4panel/libxfce4panel.devhelp
+share/doc/libxfce4panel/libxfce4panel.devhelp2
+share/doc/libxfce4panel/right.png
+share/doc/libxfce4panel/style.css
+share/doc/libxfce4panel/up.png
 share/icons/hicolor/16x16/apps/xfce-system-exit.png
 share/icons/hicolor/16x16/apps/xfce-system-info.png
 share/icons/hicolor/16x16/apps/xfce-system-lock.png
@@ -132,7 +133,7 @@ share/xfce4/panel-plugins/systray.desktop
 share/xfce4/panel-plugins/tasklist.desktop
 share/xfce4/panel-plugins/windowlist.desktop
 @dirrm share/xfce4/panel-plugins
-@dirrm share/gtk-doc/html/libxfce4panel
+@dirrm share/doc/libxfce4panel
 @dirrm lib/xfce4/panel-plugins
 @dirrm include/xfce4/libxfce4panel
 @dirrm etc/xdg/xfce4/panel

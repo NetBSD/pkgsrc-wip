@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/01/23 08:00:39 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/04/11 14:12:58 marttikuparinen Exp $
 ${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint4
 bin/xfprint4-manager
@@ -15,20 +15,21 @@ lib/xfce4/mcs-plugins/xfprint_plugin.la
 share/applications/xfce-xfprint-settings.desktop
 share/applications/xfprint-manager.desktop
 share/applications/xfprint.desktop
-share/gtk-doc/html/libxfprint/PrinterListWindow.html
-share/gtk-doc/html/libxfprint/PrinterQueueWindow.html
-share/gtk-doc/html/libxfprint/PrintingSystem.html
-share/gtk-doc/html/libxfprint/ch01.html
-share/gtk-doc/html/libxfprint/home.png
-share/gtk-doc/html/libxfprint/index.html
-share/gtk-doc/html/libxfprint/index.sgml
-share/gtk-doc/html/libxfprint/left.png
-share/gtk-doc/html/libxfprint/libxfprint-Job.html
-share/gtk-doc/html/libxfprint/libxfprint-Printer.html
-share/gtk-doc/html/libxfprint/libxfprint.devhelp
-share/gtk-doc/html/libxfprint/right.png
-share/gtk-doc/html/libxfprint/style.css
-share/gtk-doc/html/libxfprint/up.png
+share/doc/libxfprint/PrinterListWindow.html
+share/doc/libxfprint/PrinterQueueWindow.html
+share/doc/libxfprint/PrintingSystem.html
+share/doc/libxfprint/ch01.html
+share/doc/libxfprint/home.png
+share/doc/libxfprint/index.html
+share/doc/libxfprint/index.sgml
+share/doc/libxfprint/left.png
+share/doc/libxfprint/libxfprint-Job.html
+share/doc/libxfprint/libxfprint-Printer.html
+share/doc/libxfprint/libxfprint.devhelp
+share/doc/libxfprint/libxfprint.devhelp2
+share/doc/libxfprint/right.png
+share/doc/libxfprint/style.css
+share/doc/libxfprint/up.png
 share/icons/hicolor/24x24/devices/printer.png
 share/icons/hicolor/48x48/devices/printer.png
 share/icons/hicolor/scalable/devices/printer.svg
@@ -96,6 +97,6 @@ share/xfce4/doc/fr/images/xfprint_prettyprinting.png
 share/xfce4/doc/fr/images/xfprint_sheets.png
 share/xfce4/doc/fr/images/xfprint_virtualpages.png
 share/xfce4/doc/fr/xfprint.html
-@dirrm share/gtk-doc/html/libxfprint
+@dirrm share/doc/libxfprint
 @dirrm lib/xfce4/xfprint-plugins
 @dirrm include/xfce4/libxfprint

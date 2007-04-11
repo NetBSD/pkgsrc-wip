@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2007/01/23 08:00:40 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.12 2007/04/11 14:12:58 marttikuparinen Exp $
 
-SHA1 (xfce-utils-4.4.0.tar.bz2) = 181dadd737a7ff4f7085729318d3b7a3aebb9a69
-RMD160 (xfce-utils-4.4.0.tar.bz2) = 4e7668bd6827cfd8ed60b6e2a3b60b70cc2f05a2
-Size (xfce-utils-4.4.0.tar.bz2) = 559900 bytes
+SHA1 (xfce-utils-4.4.1.tar.bz2) = 69ab30d45bbe252993f783e2f4d7f184226cacbb
+RMD160 (xfce-utils-4.4.1.tar.bz2) = 65ed96acb6491829d0f97e8b1e4b5cba64a73e63
+Size (xfce-utils-4.4.1.tar.bz2) = 608154 bytes
 SHA1 (patch-aa) = 9fba43b9ee2314743b19c0b72bd1a67ecb92ee29
