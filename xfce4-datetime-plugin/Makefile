@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/24 08:23:05 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/11 06:43:59 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.4.1
+XFCE4_VERSION=	0.5.0
 
 DISTNAME=	xfce4-datetime-plugin-${XFCE4_VERSION}
 #PKGREVISION=	1
