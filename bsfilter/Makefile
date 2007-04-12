@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/01/13 18:38:51 ishit Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/12 06:48:13 jgoamakf Exp $
 
-DISTNAME=	bsfilter-1.0.12
+DISTNAME=	bsfilter-1.0.15
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=bsfilter/18693/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=bsfilter/21887/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ura@jp.netbsd.org
