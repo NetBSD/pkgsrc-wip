@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/04/10 14:47:23 dauphing Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/12 17:53:22 dauphing Exp $
 
 #DISTNAME=	vreng-6.8.3
 DISTNAME=	vreng-6.8.12
@@ -41,7 +41,7 @@ LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../lang/ocaml/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -49,6 +49,5 @@ LIBS.SunOS+=		-R${LOCALBASE}/lib/mysql
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
