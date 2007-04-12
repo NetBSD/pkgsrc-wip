@@ -1,3 +1,5 @@
+# $NetBSD: options.mk,v 1.2 2007/04/12 05:35:11 marttikuparinen Exp $
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xfce4-xmms-plugin
 PKG_SUPPORTED_OPTIONS=
 PKG_OPTIONS_REQUIRED_GROUPS+=	xfce4-xmms-plugin-player
