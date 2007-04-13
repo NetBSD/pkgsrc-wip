@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/04/13 00:31:26 netcap Exp $
+# $NetBSD: Makefile,v 1.15 2007/04/13 10:47:26 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.3.2
@@ -30,7 +30,7 @@ CFLAGS+=	-I. -I../libflac -Ilibflac
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 			--disable-coreaudio --disable-projectm \
-#			--disable-lame
+			--disable-lame
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
@@ -88,6 +88,8 @@ RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND:Q}                 \
                         --with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}   \
                         --with-cdda-dir=/cdrom/
+PLIST_SUBST+=          OSS=""
+PLIST_SUBST+=          SUN=""
 .elif ${OPSYS} == "FreeBSD"
 PLIST_SUBST+=          OSS=""
 PLIST_SUBST+=          SUN="@comment "
