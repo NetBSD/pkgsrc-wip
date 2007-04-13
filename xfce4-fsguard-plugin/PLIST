@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/23 14:03:42 marttikuparinen Exp $
-libexec/xfce4/panel-plugins/xfce4-fsguard-plugin
-share/locale/de/LC_MESSAGES/xfce4-fsguard-plugin.mo
-share/locale/ko/LC_MESSAGES/xfce4-fsguard-plugin.mo
-share/locale/lt/LC_MESSAGES/xfce4-fsguard-plugin.mo
-share/locale/pl/LC_MESSAGES/xfce4-fsguard-plugin.mo
-share/xfce4/panel-plugins/fsguard.desktop

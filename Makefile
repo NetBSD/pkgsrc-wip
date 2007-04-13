@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2556 2007/04/09 13:26:49 yeled Exp $
+# $Id: Makefile,v 1.2557 2007/04/13 07:28:58 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1665,15 +1665,10 @@ SUBDIR+=	xdpyinfo
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
-SUBDIR+=	xfce4-clipman-plugin
-SUBDIR+=	xfce4-cpugraph-plugin
-SUBDIR+=	xfce4-datetime-plugin
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-dev-tools
-SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-extras
-SUBDIR+=	xfce4-fsguard-plugin
 SUBDIR+=	xfce4-genmon-plugin
 SUBDIR+=	xfce4-gtk2-engine
 SUBDIR+=	xfce4-icon-theme
@@ -1681,24 +1676,17 @@ SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-mousepad
-SUBDIR+=	xfce4-netload-plugin
-SUBDIR+=	xfce4-notes-plugin
 SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-print
-SUBDIR+=	xfce4-quicklauncher-plugin
 SUBDIR+=	xfce4-session
-SUBDIR+=	xfce4-systemload-plugin
 SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xfce4-terminal
 SUBDIR+=	xfce4-thunar
 SUBDIR+=	xfce4-utils
-SUBDIR+=	xfce4-wavelan-plugin
-SUBDIR+=	xfce4-weather-plugin
 SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xfce4-xarchiver
-SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xfce4-xmms-plugin
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
