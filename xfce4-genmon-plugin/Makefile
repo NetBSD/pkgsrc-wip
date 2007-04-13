@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2005/11/09 07:11:51 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/13 07:44:21 marttikuparinen Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.1
+XFCE4_VERSION=	3.1
 
 DISTNAME=	xfce4-genmon-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-genmon-plugin/
 COMMENT=	Xfce general purpose monitor plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"
