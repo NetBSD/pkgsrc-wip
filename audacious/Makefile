@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/03/15 18:44:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/13 00:31:26 netcap Exp $
 #
 
-DISTNAME=		audacious-1.3.1
+DISTNAME=		audacious-1.3.2
 CATEGORIES=		audio
 MASTER_SITES=		http://static.audacious-media-player.org/release/
 EXTRACT_SUFX=		.tgz

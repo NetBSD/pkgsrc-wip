@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/14 01:53:13 netcap Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/04/13 00:31:26 netcap Exp $
 ${ARTS}bin/audacious-arts-helper
 lib/audacious/Container/libm3u.so
 lib/audacious/Container/libmms.so
@@ -7,6 +7,7 @@ lib/audacious/Container/libstdio.so
 lib/audacious/Container/libxspf.so
 lib/audacious/Effect/libaudiocompress.so
 lib/audacious/Effect/libecho.so
+lib/audacious/Effect/libsndstretch.so
 lib/audacious/Effect/libladspa.so
 lib/audacious/Effect/libstereo.so
 lib/audacious/Effect/libvoice_removal.so
@@ -39,12 +40,12 @@ lib/audacious/Input/libwavpack.so
 lib/audacious/Input/libwma.so
 ${ESD}lib/audacious/Output/libESD.so
 ${ARTS}lib/audacious/Output/libarts.so
-lib/audacious/Output/libOSS.so
+${OSS}lib/audacious/Output/libOSS.so
 lib/audacious/Output/libdisk_writer.so
 ${JACK}lib/audacious/Output/libjackout.so
 lib/audacious/Output/libnull.so
 ${PULSE}lib/audacious/Output/libpulse_audio.so
-lib/audacious/Output/libsun.so
+${SUN}lib/audacious/Output/libsun.so
 lib/audacious/Visualization/libbscope.so
 lib/audacious/Visualization/libparanormal.so
 lib/audacious/Visualization/librocklight.so
@@ -92,6 +93,7 @@ share/locale/cy/LC_MESSAGES/audacious-plugins.mo
 share/locale/de/LC_MESSAGES/audacious-plugins.mo
 share/locale/ja/LC_MESSAGES/audacious-plugins.mo
 share/locale/ru/LC_MESSAGES/audacious-plugins.mo
+share/locale/sk/LC_MESSAGES/audacious-plugins.mo
 share/locale/tr/LC_MESSAGES/audacious-plugins.mo
 @dirrm share/audacious-plugins/paranormal/Presets
 @dirrm share/audacious-plugins/paranormal

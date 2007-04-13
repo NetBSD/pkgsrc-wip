@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/03/15 18:45:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2007/04/13 00:31:26 netcap Exp $
 #
 
-DISTNAME=		audacious-plugins-1.3.1
+DISTNAME=		audacious-plugins-1.3.2
 CATEGORIES=		audio
 MASTER_SITES=		http://static.audacious-media-player.org/release/
 EXTRACT_SUFX=		.tgz
@@ -29,7 +29,8 @@ LDFLAGS+=		${LIBOSSAUDIO}
 CFLAGS+=	-I. -I../libflac -Ilibflac
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
-			--disable-coreaudio --disable-projectm
+			--disable-coreaudio --disable-projectm \
+#			--disable-lame
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
@@ -87,9 +88,16 @@ RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND:Q}                 \
                         --with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}   \
                         --with-cdda-dir=/cdrom/
-.endif
-
-.if ${OPSYS} == "Linux"
+.elif ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=          OSS=""
+PLIST_SUBST+=          SUN="@comment "
+.elif ${OPSYS} == "DragonFly"
+PLIST_SUBST+=          OSS=""
+PLIST_SUBST+=          SUN="@comment "
+.elif ${OPSYS} == "SunOS"
+PLIST_SUBST+=          OSS="@comment "
+PLIST_SUBST+=          SUN=""
+.elif ${OPSYS} == "Linux"
 .	include	"../../wip/alsa-lib/buildlink3.mk"
 PKG_SUPPORTED_OPTIONS+= lirc
 .	if !empty(PKG_OPTIONS:Mlirc)
@@ -104,7 +112,6 @@ CONFIGURE_ARGS+=	--enable-lirc
 .include "../../wip/libmms/buildlink3.mk"
 .include "../../wip/libnms/buildlink3.mk"
 .include "../../audio/faac/buildlink3.mk"
-#.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
@@ -114,6 +121,7 @@ CONFIGURE_ARGS+=	--enable-lirc
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
+#.include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
