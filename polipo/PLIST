@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/14 00:25:06 ishit Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/14 01:53:36 ishit Exp $
 bin/polipo
 man/man1/polipo.1
 share/polipo/README
 share/polipo/config.sample
+share/polipo/forbidden.sample
 share/polipo/www/Access-control.html
 share/polipo/www/Allowed-ports.html
 share/polipo/www/Apache.html
