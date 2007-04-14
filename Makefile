@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2557 2007/04/13 07:28:58 marttikuparinen Exp $
+# $Id: Makefile,v 1.2558 2007/04/14 00:28:43 ishit Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1248,6 +1248,7 @@ SUBDIR+=	pngnq
 SUBDIR+=	pointless
 SUBDIR+=	policyd-weight
 SUBDIR+=	policykit
+SUBDIR+=	polipo
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
