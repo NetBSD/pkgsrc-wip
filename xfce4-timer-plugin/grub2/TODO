@@ -1,0 +1,5 @@
+* Remove NetBSD patches when official GNU GRUB release supports NetBSD.
+* Handle configuration file with SYSCONF when grub supports it.
+* Test GRUB on supported architectures and possibly port it.
+* Make fixed locations like '/grub' configurable when GRUB does so.
+* Add options.description

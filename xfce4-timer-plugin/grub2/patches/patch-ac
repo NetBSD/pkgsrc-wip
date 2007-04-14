@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/14 12:56:01 kibumh Exp $
+
+--- conf/i386-pc.mk.orig	2006-12-13 23:34:04.000000000 +0100
++++ conf/i386-pc.mk
+@@ -780,7 +780,7 @@ grub_emu-grub_emu_init.o: grub_emu_init.
+ -include grub_emu-grub_emu_init.d
+ 
+ 
+-grub_emu_LDFLAGS = $(LIBCURSES)
++grub_emu_LDFLAGS = $(LIBCURSES) $(LIBARGP)
+ 
+ # Scripts.
+ sbin_SCRIPTS = grub-install

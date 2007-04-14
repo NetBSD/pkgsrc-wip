@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/04/14 12:56:01 kibumh Exp $
+
+--- util/misc.c.orig	2006-06-14 00:50:01.000000000 +0200
++++ util/misc.c
+@@ -242,7 +242,11 @@ grub_memalign (grub_size_t align, grub_s
+ #elif defined(HAVE_MEMALIGN)
+   p = memalign (align, size);
+ #else
+-  grub_util_error ("grub_memalign is not supported");
++  p = malloc (size + align - 1);
++  if (p)
++    p = (void *)(((int)p/align + 1) * align);
++  else
++    grub_util_error ("out of memory");
+ #endif
+   
+   if (! p)

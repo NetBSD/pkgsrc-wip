@@ -1,0 +1,26 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/04/14 12:56:01 kibumh Exp $
+
+--- configure.ac.orig	2007-02-03 12:36:13.000000000 +0100
++++ configure.ac
+@@ -40,6 +40,9 @@ AC_CONFIG_HEADER([config.h])
+ AC_CANONICAL_HOST
+ AC_CANONICAL_TARGET
+ 
++# Program name transformations
++AC_ARG_PROGRAM
++
+ case "$host_cpu" in
+   powerpc64) host_m32=1 ;;
+ esac
+@@ -160,6 +163,11 @@ if [ x"$ssp_possible" = xyes ]; then
+   CFLAGS=$CFLAGS\ -fno-stack-protector
+ fi]
+ 
++# Check for argp
++AC_CHECK_FUNC(argp_parse,,
++  AC_CHECK_LIB(argp, argp_parse, [LIBARGP="-largp"],
++    AC_MSG_ERROR([Argp required. Either use glibc or install argp-standalone.])))
++AC_SUBST(LIBARGP)
+ 
+ #
+ # Check for target programs.
