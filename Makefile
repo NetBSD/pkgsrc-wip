@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2558 2007/04/14 00:28:43 ishit Exp $
+# $Id: Makefile,v 1.2559 2007/04/14 13:18:37 kibumh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1683,6 +1683,7 @@ SUBDIR+=	xfce4-print
 SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xfce4-terminal
+SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xfce4-thunar
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
