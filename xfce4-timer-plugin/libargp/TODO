@@ -1,5 +1,0 @@
-- a shared library?
-
-Please note:
- This package is currently required only one pkgsrc package -- wip/grub2.
- When GRUB 2 is out, it will likely contain its own argp routinres.

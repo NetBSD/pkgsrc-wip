@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/14 12:56:01 kibumh Exp $
-
-SHA1 (scim-1.4.5.tar.gz) = b9dd07a49abdba6d86385c92f8103ebf6df7f341
-RMD160 (scim-1.4.5.tar.gz) = c4ea3c3bb06cdedb29ec32f8cabb0d32330dd6f6
-Size (scim-1.4.5.tar.gz) = 3157124 bytes
-SHA1 (patch-aa) = 12a2271e1d405b53208ce25d9c323c1f2dcb3c6f
