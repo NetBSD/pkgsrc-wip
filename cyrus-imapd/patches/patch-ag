@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/04/14 15:30:50 obache Exp $
+
+--- imtest/imtest.c.orig	2006-11-30 17:11:22.000000000 +0000
++++ imtest/imtest.c
+@@ -47,7 +47,9 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/ipc.h>
++#if !defined(__APPLE__)
+ #include <sys/msg.h>
++#endif
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ 
+@@ -72,6 +74,10 @@
+ #include <netinet/in.h>
+ #include <netdb.h>
+ 
++#ifdef HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
++
+ #include <sasl/sasl.h>
+ #include <sasl/saslutil.h>
+ 

@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1.1.1 2007/04/14 15:30:49 obache Exp $
+
+--- perl/sieve/lib/request.c.orig	2003-02-13 20:15:53.000000000 +0000
++++ perl/sieve/lib/request.c
+@@ -51,7 +51,9 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ #include <sys/ipc.h>
++#if !defined(__APPLE__)
+ #include <sys/msg.h>
++#endif
+ 
+ #include <stdlib.h>
+ #include <stdio.h>

@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2007/04/14 15:30:49 obache Exp $
+
+--- sieve/sieved.c.orig	2006-11-30 17:11:25.000000000 +0000
++++ sieve/sieved.c
+@@ -45,6 +45,10 @@ OF OR IN CONNECTION WITH THE USE OR PERF
+ 
+ #include "map.h"
+ 
++#ifdef __APPLE__
++struct et_list *_et_list = NULL;
++#endif
++
+ /* config.c stuff */
+ const int config_need_data = 0;
+ 

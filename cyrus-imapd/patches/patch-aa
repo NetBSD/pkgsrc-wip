@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/04/14 15:30:49 obache Exp $
+
+--- configure.in.orig	2006-11-30 17:11:16.000000000 +0000
++++ configure.in
+@@ -975,7 +975,7 @@ dnl and compile perl/cyradm
+ dnl add perl cccdlflags when building libraries -- this ensures that the
+ dnl libraries will be compiled as PIC if perl requires PIC objects
+ dnl -- this is needed on NetBSD, but seems to cause problems on atleast Solaris --
+-dnl    eval `${PERL} -V:cccdlflags`
++    eval `${PERL} -V:cccdlflags`
+     PERL_CCCDLFLAGS="$cccdlflags"
+     AC_SUBST(PERL_CCCDLFLAGS)
+ fi
