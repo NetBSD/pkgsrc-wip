@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/03/03 14:54:57 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/04/15 01:19:28 netcap Exp $
 #
 
-DISTNAME=	nicotine+-1.2.6
+DISTNAME=	nicotine+-1.2.7.1
 CATEGORIES=	net audio x11
-MASTER_SITES=	http://www.nicotine-plus.org/files/tarballs/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nicotine-plus/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jfranz@bsdprojects.net
@@ -18,6 +18,17 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	post-patch
+SUBST_FILES.man=	setup.py
+SUBST_SED.man=		-e 's|"share", "man",|"man",|g'
+
+DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
+
+.if ${MACHINE_ARCH} == "i386"
+DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/gtk2/buildlink3.mk"

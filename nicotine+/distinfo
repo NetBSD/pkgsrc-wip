@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/12/19 20:14:00 netcap Exp $
+$NetBSD: distinfo,v 1.2 2007/04/15 01:19:28 netcap Exp $
 
-SHA1 (nicotine+-1.2.6.tar.bz2) = ad6d682634b6ec8a676aafdbe17fe78fd981524a
-RMD160 (nicotine+-1.2.6.tar.bz2) = 6a35394440aa2ec96efa3408cba35874860081dd
-Size (nicotine+-1.2.6.tar.bz2) = 611707 bytes
+SHA1 (nicotine+-1.2.7.1.tar.bz2) = 289c1aae513ab06ab8f3924ced3716acf8bd686a
+RMD160 (nicotine+-1.2.7.1.tar.bz2) = 70ad020d01ad1daa15626a1bb0956a6e7bdf3c8b
+Size (nicotine+-1.2.7.1.tar.bz2) = 746571 bytes
