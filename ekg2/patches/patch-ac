@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/04/16 19:00:24 shindenmorr Exp $
+
+--- plugins/xmsg/xmsg.c.orig	2007-03-30 02:30:34.000000000 +0200
++++ plugins/xmsg/xmsg.c	2007-03-30 02:30:50.000000000 +0200
+@@ -11,6 +11,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++#include <sys/syslimits.h>
+ #include <sys/mman.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>

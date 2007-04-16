@@ -1,0 +1,87 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/16 19:00:24 shindenmorr Exp $
+bin/ekg2
+bin/ekg2-config
+include/ekg2/audio.h
+include/ekg2/commands.h
+include/ekg2/configfile.h
+include/ekg2/debug.h
+include/ekg2/dynstuff.h
+include/ekg2/ekg2-config.h
+include/ekg2/emoticons.h
+include/ekg2/events.h
+include/ekg2/gettext.h
+include/ekg2/log.h
+include/ekg2/metacontacts.h
+include/ekg2/msgqueue.h
+include/ekg2/objects.h
+include/ekg2/plugins.h
+include/ekg2/protocol.h
+include/ekg2/queries.h
+include/ekg2/scripts.h
+include/ekg2/sessions.h
+include/ekg2/stuff.h
+include/ekg2/themes.h
+include/ekg2/userlist.h
+include/ekg2/vars.h
+include/ekg2/win32.h
+include/ekg2/windows.h
+include/ekg2/xmalloc.h
+${GG}lib/ekg2/plugins/gg.a
+${GG}lib/ekg2/plugins/gg.la
+${GG}lib/ekg2/plugins/gg.so
+lib/ekg2/plugins/httprc_xajax.la
+lib/ekg2/plugins/irc.la
+${JABBER}lib/ekg2/plugins/jabber.la
+lib/ekg2/plugins/logs.la
+lib/ekg2/plugins/logsqlite.la
+lib/ekg2/plugins/mail.la
+lib/ekg2/plugins/ncurses.la
+lib/ekg2/plugins/pcm.la
+lib/ekg2/plugins/rc.la
+lib/ekg2/plugins/rot13.la
+lib/ekg2/plugins/sim.la
+lib/ekg2/plugins/sms.la
+lib/ekg2/plugins/xmsg.la
+share/ekg2/commands-pl.txt
+${GG}share/ekg2/plugins/gg/commands-en.txt
+${GG}share/ekg2/plugins/gg/commands-pl.txt
+${GG}share/ekg2/plugins/gg/session-en.txt
+${GG}share/ekg2/plugins/gg/session-pl.txt
+${GG}share/ekg2/plugins/gg/vars-en.txt
+${GG}share/ekg2/plugins/gg/vars-pl.txt
+share/ekg2/plugins/httprc_xajax/ekg2.css
+share/ekg2/plugins/httprc_xajax/ekg2.js
+share/ekg2/plugins/httprc_xajax/xajax_0.2.4.js
+share/ekg2/plugins/irc/commands-pl.txt
+share/ekg2/plugins/irc/session-pl.txt
+${JABBER}share/ekg2/plugins/jabber/commands-en.txt
+${JABBER}share/ekg2/plugins/jabber/commands-pl.txt
+${JABBER}share/ekg2/plugins/jabber/session-en.txt
+${JABBER}share/ekg2/plugins/jabber/session-pl.txt
+share/ekg2/plugins/logs/vars-pl.txt
+share/ekg2/plugins/logsqlite/commands-pl.txt
+share/ekg2/plugins/logsqlite/vars-pl.txt
+share/ekg2/plugins/ncurses/vars-en.txt
+share/ekg2/plugins/ncurses/vars-pl.txt
+share/ekg2/plugins/rc/vars-pl.txt
+share/ekg2/plugins/sim/commands-pl.txt
+share/ekg2/plugins/sim/vars-pl.txt
+share/ekg2/plugins/sms/commands-pl.txt
+share/ekg2/plugins/sms/vars-pl.txt
+share/ekg2/themes/blue_sea_dragon.theme
+share/ekg2/themes/irc-irssi.theme
+share/ekg2/vars-pl.txt
+@dirrm share/ekg2/themes
+@dirrm share/ekg2/plugins/sms
+@dirrm share/ekg2/plugins/sim
+@dirrm share/ekg2/plugins/rc
+@dirrm share/ekg2/plugins/ncurses
+@dirrm share/ekg2/plugins/logsqlite
+@dirrm share/ekg2/plugins/logs
+@dirrm share/ekg2/plugins/jabber
+@dirrm share/ekg2/plugins/irc
+@dirrm share/ekg2/plugins/httprc_xajax
+@dirrm share/ekg2/plugins
+@dirrm share/ekg2
+@dirrm lib/ekg2/plugins
+@dirrm include/ekg2

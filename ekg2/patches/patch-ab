@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/16 19:00:24 shindenmorr Exp $
+
+--- plugins/logs/main.c.orig	2007-03-30 02:26:34.000000000 +0200
++++ plugins/logs/main.c	2007-03-30 02:26:50.000000000 +0200
+@@ -28,7 +28,7 @@
+ #define __EXTENSIONS__
+ #endif
+ 
+-#if defined(__MINGW32__) || defined(__FreeBSD__) || defined(__sun)
++#if defined(__MINGW32__) || defined(__FreeBSD__) || defined(__sun) || defined(__NetBSD__)
+ #include <limits.h>
+ #endif
+ 
