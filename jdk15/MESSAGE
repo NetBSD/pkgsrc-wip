@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/03/01 16:58:00 briandealwis Exp $
+$NetBSD: MESSAGE,v 1.3 2007/04/16 10:43:07 ghen Exp $
 
 If you have built the Mozilla browser plugin, you must create a symlink to
 
   ${JAVA_HOME}/jre/plugin/i386/ns7/libjavaplugin_oji.so
 
 in the ${LOCALBASE}/lib/${MOZILLA}/plugins/ dir, for any ${MOZILLA} package
-(firefox, firefox-gtk1, mozilla, mozilla-gtk2) you want to use the plugin
+(firefox, firefox-gtk1, seamonkey, seamonkey-gtk1) you want to use the plugin
 with.
 ===========================================================================
