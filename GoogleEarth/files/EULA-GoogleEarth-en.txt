@@ -1,0 +1,322 @@
+Thank you for using Google Earth!  By downloading,
+installing or using Google software or any portion
+thereof ("Google Software") you agree to the following
+terms and conditions (the "Terms and Conditions"). The
+Google Software, and any portion thereof, are referred
+to herein as the "Software." 
+
+1. USE OF SOFTWARE The Software is made available to
+you for your personal, non-commercial use only. You
+may not use the Software or the geographical
+information made available for display using the
+Software, or any prints or screen outputs generated
+with the Software in any commercial or business
+environment or for any commercial or business purposes
+for yourself or any third parties.  You may not use
+the Google Software in any manner that could damage,
+disable, overburden, or impair Google's services
+(e.g., you may not use the Google Software in an
+automated manner), nor may you use Software in any
+manner that could interfere with any other party's use
+and enjoyment of Google's services. 
+
+2. PRIVACY POLICY Protecting users' privacy is very
+important to Google. As a condition of downloading and
+using the Software, you agree to the terms of the
+Google Privacy Policy at
+http://www.google.com/privacy.html, which may be
+updated from time to time and without notice.
+Information collected by Google in connection with
+your use of the Software may be stored and processed
+in the United States or any other country in which
+Google or its agents maintain facilities. Accordingly,
+by using the Software you consent to any transfer of
+such information outside of your country. You
+acknowledge and agree that Google may access,
+preserve, and disclose your account information if
+required to do so by law or in a good faith belief
+that such access preservation or disclosure is
+reasonably necessary to: (a) satisfy any applicable
+law, regulation, legal process or governmental
+request, (b) enforce these Terms and Conditions,
+including investigation of potential violations
+hereof, (c) detect, prevent, or otherwise address
+fraud, security or technical issues (including,
+without limitation, the filtering of spam), (d)
+respond to user support requests, or (e) protect the
+rights, property or safety of Google, its users,  and
+the public. Google will not be responsible or liable
+for the exercise or non-exercise of rights under these
+Terms and Conditions. 
+
+3. PROPRIETARY RIGHTS You acknowledge that (a) the
+Software contains proprietary and confidential
+information that is protected by applicable
+intellectual property and other laws, and (b) Google
+owns all right, title and interest in and to the
+Software and software provided through or in
+conjunction with the Software, including without
+limitation all Intellectual Property Rights therein
+and thereto. "Intellectual Property Rights" means any
+and all rights existing from time to time under patent
+law, copyright law, trade secret law, trademark law,
+unfair competition law, and any and all other
+proprietary rights, and any and all applications,
+renewals, extensions and restorations thereof, now or
+hereafter in force and effect worldwide. You agree
+that you will not, and will not allow any third party
+to, (i) copy, sell, license, distribute, transfer,
+modify, adapt, translate, prepare derivative works
+from, decompile, reverse engineer, disassemble or
+otherwise attempt to derive source code from the
+Software, unless otherwise permitted, (ii) take any
+action to circumvent or defeat the security or content
+usage rules provided, deployed or enforced by any
+functionality (including without limitation digital
+rights management functionality) contained in the
+Software, (iii) use the Software to access, copy,
+transfer, transcode or retransmit content in violation
+of any law or third party rights, or (iv) remove,
+obscure, or alter Google's copyright notices,
+trademarks, or other proprietary rights notices
+affixed to or contained within or accessed in
+conjunction with or through the Software. 
+
+4. AUTOMATIC UPDATES The Software may communicate with
+Google servers from time to time to check for
+available updates to the Software, such as bug fixes,
+patches, enhanced functions, missing plug-ins and new
+versions (collectively, "Updates"). By installing the
+Software, you agree to automatically request and
+receive Updates. 
+
+5. U.S. GOVERNMENT RESTRICTED RIGHTS The Software and
+any related documentation are deemed "commercial
+computer software" and "commercial computer software
+documentation," respectively, within the meaning of
+the applicable civilian and military Federal
+acquisition regulations and any supplement thereto. If
+the user of the Software is an agency, department,
+employee, or other entity of the United States
+Government, the use, duplication, reproduction,
+release, modification, disclosure, or transfer of the
+Software, including technical data or manuals, is
+restricted by the terms, conditions and covenants
+contained in these Terms and Condition. In accordance
+with Federal Acquisition Regulation 12.212 for
+civilian agencies and Defense Federal Acquisition
+Regulation Supplement 227.7202 for military agencies,
+use of the Software is further restricted by these
+Terms and Conditions. 
+
+6. EXPORT RESTRICTIONS The Software may be subject to
+export controls or restrictions by the United States
+or other countries or territories. You agree to (i)
+comply with the requirements of the U.S. Department of
+Commerce (DOC) Export Administration Regulations (EAR)
+(see http://www.bis.doc.gov) and all applicable
+international, national, state, regional and local
+laws, and regulations, including without limitation
+any applicable import and use restrictions, (ii) not
+export, or re-export, directly or indirectly, the
+Software to any country outlined in the EAR, nor to
+any person or entity on the DOC Denied Persons,
+Entities and Unverified Lists, the U.S. Department of
+State's Debarred List, or on the U.S. Department of
+Treasury's lists of Specially Designated Nationals,
+Specially Designated Narcotics Traffickers, or
+Specially Designated Terrorists, (iii) not export, or
+re-export the Software to any military entity not
+approved under the EAR, or to any other entity for any
+military purpose, and (iv) not license, sell, provide
+or distribute the Software for use in connection with
+chemical, biological, or nuclear weapons or missiles
+capable of delivering such weapons. 
+
+7. COMPLIANCE WITH LAWS AND GOOGLE POLICIES You agree
+to comply with all local laws and regulations
+regarding the download, installation and/or use of the
+Software.  You agree to comply with any applicable
+policies or guidelines that Google may make available
+from time to time in its sole discretion.  By way of
+example, and not as a limitation, you agree that when
+using the Software, you will not:  * defame, abuse,
+harass, stalk, threaten or otherwise violate the legal
+rights (such as rights of privacy and publicity) of
+others;  * upload, post, email or transmit or
+otherwise make available any inappropriate,
+defamatory, infringing, obscene, or unlawful Content; 
+* upload, post, email or transmit or otherwise make
+available any Content that infringes any patent,
+trademark, copyright, trade secret or other
+proprietary right of any party, unless you are the
+owner of such rights or have the permission of the
+owner to post such Content;  * download any file
+posted by another that you know, or reasonably should
+know, that cannot be legally distributed in such
+manner;  * impersonate another person or entity, or
+falsify or delete any author attributions, legal or
+other proper notices or proprietary designations or
+labels of the origin or source of software or other
+material;  * restrict or inhibit any other user from
+using and enjoying Google services;  * use Google
+services for any illegal or unauthorized purpose;  *
+remove any copyright, trademark or other proprietary
+rights notices contained in or on Google services;  *
+interfere with or disrupt Google services or servers
+or networks connected to Google services, or disobey
+any requirements, procedures, policies or regulations
+of networks connected to Google services;  * use any
+robot, spider, site search/retrieval application, or
+other device to retrieve or index any portion of
+Google services or collect information about users for
+any unauthorized purpose;  * submit Content that
+falsely expresses or implies that such Content is
+sponsored or endorsed by Google;  * create user
+accounts by automated means or under false or
+fraudulent pretenses;  * promote or provide
+instructional information about illegal activities or
+promote physical harm or injury against any group or
+individual; or	* transmit any viruses, worms,
+defects, Trojan horses, or any items of a destructive
+nature.  
+
+8. TERMINATION You may terminate these Terms and
+Conditions at any time by permanently deleting the
+Software in its entirety. Your rights automatically
+and immediately terminate without notice from Google
+if you fail to comply with any provision of these
+Terms and Conditions. In such event, you must
+immediately delete the Software.  To the maximum
+extent permitted by law, Google reserves the right to
+terminate this agreement at any time and for any
+reason. 
+
+9. SURVIVAL The provisions of Sections 3, 5, 6, 9, 10,
+11, 12, 13, 14, 15 and 16 shall survive any
+termination or expiration of these Terms and
+Conditions. 
+
+10. INDEMNITY You agree to hold harmless and indemnify
+Google and its subsidiaries, affiliates, officers,
+agents, and employees from and against any claim, suit
+or action arising from or in any way related to your
+use of the Software or your violation of these Terms
+and Conditions, including any liability or expense
+arising from all claims, losses, damages, suits,
+judgments, litigation costs and attorneys' fees, of
+every kind and nature. In such a case, Google will
+provide you with written notice of such claim, suit or
+action. 
+
+11. DISCLAIMER OF WARRANTIES YOU EXPRESSLY UNDERSTAND
+AND AGREE THAT: a) YOUR USE OF THE SOFTWARE IS AT YOUR
+SOLE RISK. THE SOFTWARE IS PROVIDED ON AN "AS IS"
+BASIS AND WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM
+EXTENT PERMITTED BY LAW, GOOGLE EXPRESSLY DISCLAIMS
+ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER
+EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE
+IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+b) GOOGLE MAKES NO WARRANTY (I) THAT THE SOFTWARE WILL
+MEET YOUR REQUIREMENTS, (II) THAT THE SOFTWARE WILL BE
+ERROR-FREE OR BUG-FREE, (III) REGARDING THE SECURITY,
+RELIABILITY, TIMELINESS, OR PERFORMANCE OF THE
+SOFTWARE, AND (IV) THAT ANY ERRORS IN THE SOFTWARE
+WILL BE CORRECTED. c) ANY CONTENT OR MATERIAL
+DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF
+THE SOFTWARE IS DONE AT YOUR OWN DISCRETION AND RISK
+AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO
+YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA
+THAT RESULTS FROM THE DOWNLOAD OF ANY SUCH CONTENT OR
+MATERIAL. d) NONE OF THE SOFTWARE IS INTENDED FOR USE
+IN THE OPERATION OF NUCLEAR FACILITIES, LIFE SUPPORT
+SYSTEMS, EMERGENCY COMMUNICATIONS, AIRCRAFT NAVIGATION
+OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL SYSTEMS,
+OR ANY OTHER SUCH ACTIVITIES IN WHICH CASE THE FAILURE
+OF THE SOFTWARE COULD LEAD TO DEATH, PERSONAL INJURY,
+OR SEVERE PHYSICAL OR ENVIRONMENTAL DAMAGE. e) NO
+ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN,
+OBTAINED BY YOU FROM GOOGLE OR ANY THIRD PARTY OR
+THROUGH THE SOFTWARE SHALL CREATE ANY WARRANTY NOT
+EXPRESSLY STATED IN THESE TERMS AND CONDITIONS. 
+
+12. LIMITATION OF LIABILITY YOU EXPRESSLY UNDERSTAND
+AND AGREE THAT GOOGLE SHALL NOT BE LIABLE TO YOU FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT
+LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL,
+USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF GOOGLE
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES)
+RESULTING FROM: (I) THE USE OR THE INABILITY TO USE
+THE SOFTWARE; (II) THE INABILITY TO USE THE SOFTWARE
+TO ACCESS CONTENT OR DATA; (III) THE COST OF
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; (IV)
+UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR
+TRANSMISSIONS OR DATA; OR (V) ANY OTHER MATTER
+RELATING TO THE SOFTWARE. THE FOREGOING LIMITATIONS
+SHALL APPLY NOTWITHSTANDING A FAILURE OF ESSENTIAL
+PURPOSE OF ANY LIMITED REMEDY AND TO THE FULLEST
+EXTENT PERMITTED BY LAW.  
+
+13. EXCLUSIONS AND LIMITATIONS NOTHING IN THIS
+AGREEMENT IS INTENDED TO EXCLUDE OR LIMIT ANY
+CONDITION, WARRANTY, RIGHT OR LIABILITY WHICH MAY NOT
+BE LAWFULLY EXCLUDED OR LIMITED. SOME JURISDICTIONS DO
+NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR
+CONDITIONS OR THE LIMITATION OR EXCLUSION OF LIABILITY
+FOR LOSS OR DAMAGE CAUSED BY NEGLIGENCE, BREACH OF
+CONTRACT OR BREACH OF IMPLIED TERMS, OR INCIDENTAL OR
+CONSEQUENTIAL DAMAGES. ACCORDINGLY, ONLY THE ABOVE
+LIMITATIONS IN SECTIONS 11 AND 12 WHICH ARE LAWFUL IN
+YOUR JURISDICTION WILL APPLY TO YOU AND GOOGLE'S
+LIABILITY WILL BE LIMITED TO THE MAXIMUM EXTENT
+PERMITTED BY LAW. 
+
+14. NO THIRD PARTY BENEFICIARIES You agree that,
+except as otherwise expressly provided in these Terms
+and Conditions, there shall be no third party
+beneficiaries to these Terms and Conditions. 
+
+15. GOOGLE SERVICES AND THIRD PARTY PRODUCTS AND
+SERVICES Some of the Google Software is designed to be
+used in conjunction with Google's search and other
+services. Accordingly, your use of such Google
+Software is also defined by Google's Terms of Service
+located at http://www.google.com/terms_of_service.html
+and Google's Privacy Policy located at
+http://www.google.com/privacypolicy.html.  
+
+16. MISCELLANEOUS PROVISIONS a) Entire Agreement.
+These Terms and Conditions constitute the entire
+agreement between you and Google relating to the
+Software and govern your use of the Software,
+superceding any prior or contemporaneous agreements
+between you and Google regarding the Software. b)
+Choice of Law and Forum. These Terms and Conditions
+and the relationship between you and Google shall be
+governed by the laws of the State of California
+without regard to its conflict of law provisions. You
+and Google agree to submit to the personal and
+exclusive jurisdiction of the courts located within
+the county of Santa Clara, California. c) Waiver and
+Severability of Terms. The failure of Google to
+exercise or enforce any right or provision of these
+Terms and Conditions shall not constitute a waiver of
+such right or provision. If any provision of these
+Terms and Conditions is found by a court of competent
+jurisdiction to be invalid, the parties nevertheless
+agree that the court should endeavor to give effect to
+the parties' intentions as reflected in the provision,
+and the other provisions of these Terms and Conditions
+shall remain in full force and effect. d) Statute of
+Limitations. You agree that regardless of any statute
+or law to the contrary, any claim or cause of action
+arising out of or related to use of the Software or
+these Terms and Conditions must be filed within one
+(1) year after such claim or cause of action arose or
+be forever barred. e) Headings. The section headings
+in these Terms and Conditions are for convenience only
+and have no legal or contractual effect. 
+
+

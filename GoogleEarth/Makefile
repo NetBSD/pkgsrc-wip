@@ -1,0 +1,52 @@
+# $NetBSD: Makefile,v 1.1.1.1 2007/04/16 19:02:38 tnn2 Exp $
+
+DISTNAME=		GoogleEarthLinux.bin
+PKGNAME=		GoogleEarth-${GE_VERSION}
+CATEGORIES=		geography x11
+MASTER_SITES=		http://dl.google.com/earth/client/current/
+EXTRACT_SUFX=
+
+MAINTAINER=		tnn+nbsd@nygren.pp.se
+HOMEPAGE=		http://earth.google.com/
+COMMENT=		Interactive browser for satellite imagery and maps
+
+LICENSE=		google-earth-license
+LICENSE_FILE=		${FILESDIR}/EULA-GoogleEarth-en.txt
+RESTRICTED=		No redistribution allowed
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+
+# XXX still complains about missing font
+DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
+DEPENDS+=	suse_fontconfig>=10.0nb2:../../emulators/suse100_fontconfig
+DEPENDS+=	suse_glx>=10.0nb2:../../emulators/suse100_glx
+
+ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-i386
+GE_VERSION=		4.0.2735.0
+NO_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
+EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
+
+.include "../../mk/bsd.prefs.mk"
+
+# xxx COMPAT_LINUX32 hack
+.if defined(SUSE_ARCH) && ${SUSE_ARCH} == "i586"
+ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-x86_64
+.endif
+
+do-build:
+	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth \
+	&& ${PAX} -r -f ../googleearth-linux-x86.tar \
+	&& ${PAX} -r -f ../googleearth-data.tar \
+	&& cp ../EULA-GoogleEarth-en.txt ../googleearth.xpm \
+	../googleearth-icon.png ../bin/googleearth . \
+	&& ${PRINTF} "#! /bin/sh\\nexec %s/GoogleEarth/googleearth\\n" \
+	"${PREFIX}" > ${WRKDIR}/googleearth
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${PREFIX}/bin/googleearth \
+	&& cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${PREFIX}
+
+.include "../../mk/bsd.pkg.mk"
