@@ -1,0 +1,4 @@
+XBNBT is a BitTorrent tracker based on BNBT, The Trinity EasyTracker and CBTT.
+It is a complete port of the original Python BitTorrent tracker to C++ for
+speed and efficiency. It also offers many additional features beyond the
+original Python BitTorrent tracker, plus it's easy to use and customizable.
