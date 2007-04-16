@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/23 17:53:42 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/16 12:11:42 dillo Exp $
 
 PKGNAME=	glut-${MESA_VERSION}
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
@@ -14,10 +14,10 @@ BUILDLINK_API_DEPENDS.glu+=	glu>=${MESA_VERSION}
 INSTLIBS=	${WRKSRC}/src/glut/glx/libglut.la
 
 .include "../../wip/MesaLib/buildlink3.mk"
-.include "../../wip/libX11/buildlink3.mk"
-.include "../../wip/libXt/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../wip/libXi/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../wip/glu/buildlink3.mk"
 
 pre-build:
