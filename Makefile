@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2562 2007/04/17 05:35:27 marttikuparinen Exp $
+# $Id: Makefile,v 1.2563 2007/04/17 13:16:00 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1375,7 +1375,6 @@ SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
 SUBDIR+=	qcomicbook
-SUBDIR+=	qemu-qvm86
 SUBDIR+=	qgis
 SUBDIR+=	qhacc
 SUBDIR+=	qico
