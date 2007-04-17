@@ -1,19 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2007/01/02 21:28:54 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/17 11:11:16 netcap Exp $
 #
 
-DISTNAME=     slime-2.0
-PKGNAME=      ${EMACS_PKGNAME_PREFIX}${DISTNAME}
-CATEGORIES=	  editors
-MASTER_SITES= http://common-lisp.net/project/slime/
-EXTRACT_SUFX= .tgz
+DISTNAME=	slime-2.0
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+CATEGORIES=	editors
+MASTER_SITES=	http://common-lisp.net/project/slime/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	  jfranz@bsdprojects.net
-HOMEPAGE=	  http://common-lisp.net/project/slime/
-COMMENT=	  Superior Lisp Interaction Mode for Emacs
+MAINTAINER=	jfranz@bsdprojects.net
+HOMEPAGE=	http://common-lisp.net/project/slime/
+COMMENT=	Superior Lisp Interaction Mode for Emacs
 
-USE_TOOLS+=	  gmake makeinfo
-NO_CONFIGURE= yes
-INFO_FILES=   yes
+USE_TOOLS+=	gmake makeinfo
+NO_CONFIGURE=	yes
+INFO_FILES=	yes
+
+.if !exists(EMACS_TYPE)
+PKG_FAIL_REASON= "Please set your preferred EMACS_TYPE in order to avoid confusion with different versions of Emacs."
+.endif
 
 INSTALLATION_DIRS=  ${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/slime
 SLIME_LISPDIR=      ${EMACS_LISPPREFIX}/slime
