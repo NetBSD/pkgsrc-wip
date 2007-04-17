@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2561 2007/04/16 19:09:37 shindenmorr Exp $
+# $Id: Makefile,v 1.2562 2007/04/17 05:35:27 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1670,8 +1670,10 @@ SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-dev-tools
+SUBDIR+=	xfce4-dict-plugin
 SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-extras
+SUBDIR+=	xfce4-eyes-plugin
 SUBDIR+=	xfce4-genmon-plugin
 SUBDIR+=	xfce4-gtk2-engine
 SUBDIR+=	xfce4-icon-theme
@@ -1679,14 +1681,18 @@ SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-mousepad
+SUBDIR+=	xfce4-mpc-plugin
 SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-panel
+SUBDIR+=	xfce4-places-plugin
 SUBDIR+=	xfce4-print
+SUBDIR+=	xfce4-radio-plugin
+SUBDIR+=	xfce4-screenshooter-plugin
 SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-taskmanager
 SUBDIR+=	xfce4-terminal
-SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xfce4-thunar
+SUBDIR+=	xfce4-timer-plugin
 SUBDIR+=	xfce4-utils
 SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
