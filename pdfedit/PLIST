@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/14 10:57:52 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/17 16:04:23 lkundrak Exp $
 bin/pdfedit
 man/man1/pdfedit.1
 share/doc/pdfedit/LICENSE.GPL
@@ -262,6 +262,7 @@ share/pdfedit/init.qs
 share/pdfedit/init_console.qs
 share/pdfedit/lang/pdfedit_cs.qm
 share/pdfedit/lang/pdfedit_es.qm
+share/pdfedit/lang/pdfedit_ru.qm
 share/pdfedit/lang/pdfedit_sk.qm
 share/pdfedit/menu.qs
 share/pdfedit/mode.conf
