@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/11 14:48:50 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/17 14:48:32 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -9,8 +9,6 @@ DISTNAME=	xfce4-xmms-plugin-${XFCE4_VERSION}
 CATEGORIES=	audio
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-xmms-plugin/
 COMMENT=	Xfce XMMS plugin
-
-USE_TOOLS+=	intltool
 
 .include "options.mk"
 
