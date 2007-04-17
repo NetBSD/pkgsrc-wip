@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/04/17 18:25:06 briandealwis Exp $
+# $NetBSD: Makefile,v 1.13 2007/04/17 19:17:48 briandealwis Exp $
 #
 
 DISTNAME=		fbpanel-4.8
@@ -13,9 +13,6 @@ COMMENT=		Desktop panel with menu, pager, and other plugins
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 
-# Fixing broken compile because of changed gcc defaults
-LDFLAGS+= -Wl,-export-dynamic
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
@@ -25,9 +22,7 @@ CONFIGURE_ARGS+=	--cpu=off
 .endif
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-
 MAKE_ENV+=		PKGMANDIR=${PKGMANDIR:Q}
-MANCOMPRESSED=		yes
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
