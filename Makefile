@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2563 2007/04/17 13:16:00 tnn2 Exp $
+# $Id: Makefile,v 1.2564 2007/04/17 22:08:23 dillo Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1748,7 +1748,6 @@ SUBDIR+=	ypserv
 SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
-SUBDIR+=	zsnes-devel
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
