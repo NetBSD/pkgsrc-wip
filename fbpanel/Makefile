@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/04/17 17:49:34 briandealwis Exp $
+# $NetBSD: Makefile,v 1.12 2007/04/17 18:25:06 briandealwis Exp $
 #
 
 DISTNAME=		fbpanel-4.8
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fbpanel/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		reed@reedmedia.net
+MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://fbpanel.sourceforge.net/
 COMMENT=		Desktop panel with menu, pager, and other plugins
 
