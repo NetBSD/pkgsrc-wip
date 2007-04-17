@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.2 2007/03/29 21:35:58 bsadewitz Exp $
+# $NetBSD: version.mk,v 1.3 2007/04/17 20:24:48 bsadewitz Exp $
 
-MINOR_VERSION_CMD=	${DATE} +%Y%m%d
-ELINKS_VERSION=        0.12-${ELINKS_MINOR_VERSION:!${MINOR_VERSION_CMD}!}
+ELINKS_DATE_CMD=	${DATE} +%Y%m%d
+ELINKS_VERSION!=	${ELINKS_DATE_CMD}

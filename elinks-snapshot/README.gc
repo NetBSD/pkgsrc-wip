@@ -1,0 +1,4 @@
+# $NetBSD: README.gc,v 1.1 2007/04/17 20:24:48 bsadewitz Exp $
+
+I recommend building boehm-gc with --enable-redirect-malloc when
+using this option.  See the patches in ${FILESDIR}.

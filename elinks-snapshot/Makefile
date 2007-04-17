@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/04/15 00:58:43 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/17 20:24:48 bsadewitz Exp $
 #
 
 DISTNAME=	elinks-current-unstable
-PKGNAME=	elinks-${ELINKS_VERSION}
-PKGREVISION=	2
+PKGNAME=	elinks-snap-${ELINKS_VERSION}
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://elinks.or.cz/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,21 +16,22 @@ NO_CHECKSUM=	yes
 
 CONFLICTS+=	elinks-[0-9]*
 
-CONFIGURE_ARGS+=	--enable-256-colors
+CONFIGURE_ARGS+=	--enable-256-colors --enable-utf-8
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv::+=/lib:Q}
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake date
+USE_TOOLS+=		gmake date automake
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
+post-extract:
+	cd ${WRKDIR} && ${MV} elinks-* ${DISTNAME}
 
 .include "options.mk"
 .include "version.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 

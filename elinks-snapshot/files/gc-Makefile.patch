@@ -1,0 +1,33 @@
+Index: devel/boehm-gc/Makefile
+===================================================================
+RCS file: /cvsroot/pkgsrc/devel/boehm-gc/Makefile,v
+retrieving revision 1.58
+diff -u -r1.58 Makefile
+--- devel/boehm-gc/Makefile	5 Nov 2006 17:49:33 -0000	1.58
++++ devel/boehm-gc/Makefile	17 Apr 2007 19:38:28 -0000
+@@ -23,6 +23,16 @@
+ 
+ TEST_TARGET=		check
+ 
++PKG_OPTIONS_VAR=	PKG_OPTIONS.boehm-gc
++PKG_SUPPORTED_OPTIONS=	gc-redirect-malloc
++PKG_SUGGESTED_OPTIONS=	gc-redirect-malloc
++
++.include "../../mk/compiler.mk"
++
++.if !empty(CC_VERSION:Mgcc-[3-9]*)
++CFLAGS+=	-fno-strict-aliasing
++.endif
++
+ .include "../../mk/bsd.prefs.mk"
+ 
+ .if ${OPSYS} != "Darwin"
+@@ -37,6 +47,8 @@
+ CFLAGS+=		-D__MIPSEL__
+ .endif
+ 
++.include "options.mk"
++
+ post-extract:
+ 	${MV} ${WRKSRC}/doc/gc.man ${WRKSRC}/doc/gc.man.in
+ 
