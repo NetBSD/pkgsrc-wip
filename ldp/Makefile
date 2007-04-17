@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 11:18:24 koifren Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/17 17:50:48 koifren Exp $
 
-DISTNAME=	ldp-0.1.1
+DISTNAME=	ldp-0.1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ldp/}
 
