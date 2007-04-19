@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/27 22:30:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/19 00:34:36 kheinz Exp $
 bin/tesseract
+bin/cntraining
+bin/mftraining
 libexec/tessdata/DangAmbigs
 libexec/tessdata/blackText.params
 libexec/tessdata/configs/api_config
@@ -31,7 +33,9 @@ libexec/tessdata/user-words
 libexec/tessdata/word-dawg
 libexec/tesseract
 share/doc/tesseract/README
+share/tesseract/phototest.tif
 @dirrm share/doc/tesseract
+@dirrm share/tesseract
 @dirrm libexec/tessdata/tessconfigs
 @dirrm libexec/tessdata/configs
 @dirrm libexec/tessdata

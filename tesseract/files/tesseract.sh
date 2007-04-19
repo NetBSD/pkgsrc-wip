@@ -1,2 +1,2 @@
 #!/bin/sh
-@PREFIX@/libexec/tesseract "$@"
+exec @PREFIX@/libexec/tesseract "$@"
