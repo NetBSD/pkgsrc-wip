@@ -1,6 +1,7 @@
 Suggested package updates
 
 	o aircrack-ng-0.6.1
+	o avahi-0.6.18
 	o cdrtools-devel-2.01.01a24
 	o chora-2.0.1
 	o cinelerra-2.1
@@ -29,7 +30,7 @@ Suggested package updates
 	o linphone-1.7.1
 	o man-1.6e
 	o mcabber-0.9.1
-	o mednafen-0.7.2
+	o mednafen-0.8.1
 	o mixxx-1.5.0
 	o monkey-bubble-0.3.2
 	o muine-0.8.7
