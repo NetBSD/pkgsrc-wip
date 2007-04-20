@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2564 2007/04/17 22:08:23 dillo Exp $
+# $Id: Makefile,v 1.2565 2007/04/20 18:27:33 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -194,7 +194,6 @@ SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	di
-SUBDIR+=	dia2code
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
 SUBDIR+=	dict-est-rus
@@ -615,7 +614,6 @@ SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
-SUBDIR+=	java-jflex
 SUBDIR+=	java-mecab
 SUBDIR+=	java-muse
 SUBDIR+=	java-qdbm
@@ -668,16 +666,6 @@ SUBDIR+=	libGenome
 SUBDIR+=	libICE
 SUBDIR+=	libSM
 SUBDIR+=	libSoundTouch
-SUBDIR+=	libX11
-SUBDIR+=	libXau
-SUBDIR+=	libXdmcp
-SUBDIR+=	libXfixes
-SUBDIR+=	libXfont
-SUBDIR+=	libXft
-SUBDIR+=	libXi
-SUBDIR+=	libXres
-SUBDIR+=	libXt
-SUBDIR+=	libXv
 SUBDIR+=	libadplug
 SUBDIR+=	libargp
 SUBDIR+=	libassa
@@ -830,7 +818,6 @@ SUBDIR+=	mlmmj
 SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
 SUBDIR+=	modular-xorg-libs
-SUBDIR+=	modular-xorg-server-opengl
 SUBDIR+=	moe
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
@@ -1589,7 +1576,6 @@ SUBDIR+=	tumble
 SUBDIR+=	tutos
 SUBDIR+=	tuxtype2
 SUBDIR+=	twinkle
-SUBDIR+=	txt2html
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
