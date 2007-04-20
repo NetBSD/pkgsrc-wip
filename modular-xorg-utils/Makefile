@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/20 08:46:22 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/20 08:47:38 bsadewitz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-utils-1.0
@@ -60,7 +60,6 @@ DEPENDS+=		xrefresh-[0-9]*:../../x11/xrefresh
 DEPENDS+=		xsm-[0-9]*:../../x11/xsm
 DEPENDS+=		xvinfo-[0-9]*:../../x11/xvinfo
 DEPENDS+=		xwininfo-[0-9]*:../../x11/xwininfo
-DEPENDS+=		twm-[0-9]*:../../wip/twm
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
