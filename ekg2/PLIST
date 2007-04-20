@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/16 19:00:24 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/20 12:35:36 shindenmorr Exp $
 bin/ekg2
 bin/ekg2-config
 include/ekg2/audio.h
@@ -26,9 +26,8 @@ include/ekg2/vars.h
 include/ekg2/win32.h
 include/ekg2/windows.h
 include/ekg2/xmalloc.h
-${GG}lib/ekg2/plugins/gg.a
+lib/ekg2/plugins/autoresponder.la
 ${GG}lib/ekg2/plugins/gg.la
-${GG}lib/ekg2/plugins/gg.so
 lib/ekg2/plugins/httprc_xajax.la
 lib/ekg2/plugins/irc.la
 ${JABBER}lib/ekg2/plugins/jabber.la
@@ -42,46 +41,96 @@ lib/ekg2/plugins/rot13.la
 lib/ekg2/plugins/sim.la
 lib/ekg2/plugins/sms.la
 lib/ekg2/plugins/xmsg.la
+share/ekg2/commands-pl-utf.txt
 share/ekg2/commands-pl.txt
+share/ekg2/plugins/autoresponder/vars-en-utf.txt
+share/ekg2/plugins/autoresponder/vars-en.txt
+share/ekg2/plugins/autoresponder/vars-pl-utf.txt
+share/ekg2/plugins/autoresponder/vars-pl.txt
+${GG}share/ekg2/plugins/gg/commands-en-utf.txt
 ${GG}share/ekg2/plugins/gg/commands-en.txt
+${GG}share/ekg2/plugins/gg/commands-pl-utf.txt
 ${GG}share/ekg2/plugins/gg/commands-pl.txt
+${GG}share/ekg2/plugins/gg/session-en-utf.txt
 ${GG}share/ekg2/plugins/gg/session-en.txt
+${GG}share/ekg2/plugins/gg/session-pl-utf.txt
 ${GG}share/ekg2/plugins/gg/session-pl.txt
+${GG}share/ekg2/plugins/gg/vars-en-utf.txt
 ${GG}share/ekg2/plugins/gg/vars-en.txt
+${GG}share/ekg2/plugins/gg/vars-pl-utf.txt
 ${GG}share/ekg2/plugins/gg/vars-pl.txt
 share/ekg2/plugins/httprc_xajax/ekg2.css
+share/ekg2/plugins/httprc_xajax/ekg2.css-utf.txt
 share/ekg2/plugins/httprc_xajax/ekg2.js
+share/ekg2/plugins/httprc_xajax/ekg2.js-utf.txt
 share/ekg2/plugins/httprc_xajax/xajax_0.2.4.js
+share/ekg2/plugins/httprc_xajax/xajax_0.2.4.js-utf.txt
+share/ekg2/plugins/irc/commands-pl-utf.txt
 share/ekg2/plugins/irc/commands-pl.txt
+share/ekg2/plugins/irc/session-pl-utf.txt
 share/ekg2/plugins/irc/session-pl.txt
+${JABBER}share/ekg2/plugins/jabber/commands-en-utf.txt
 ${JABBER}share/ekg2/plugins/jabber/commands-en.txt
+${JABBER}share/ekg2/plugins/jabber/commands-pl-utf.txt
 ${JABBER}share/ekg2/plugins/jabber/commands-pl.txt
+${JABBER}share/ekg2/plugins/jabber/session-en-utf.txt
 ${JABBER}share/ekg2/plugins/jabber/session-en.txt
+${JABBER}share/ekg2/plugins/jabber/session-pl-utf.txt
 ${JABBER}share/ekg2/plugins/jabber/session-pl.txt
+share/ekg2/plugins/logs/vars-pl-utf.txt
 share/ekg2/plugins/logs/vars-pl.txt
+share/ekg2/plugins/logsqlite/commands-pl-utf.txt
 share/ekg2/plugins/logsqlite/commands-pl.txt
+share/ekg2/plugins/logsqlite/vars-pl-utf.txt
 share/ekg2/plugins/logsqlite/vars-pl.txt
+share/ekg2/plugins/mail/vars-pl-utf.txt
+share/ekg2/plugins/mail/vars-pl.txt
+share/ekg2/plugins/ncurses/vars-en-utf.txt
 share/ekg2/plugins/ncurses/vars-en.txt
+share/ekg2/plugins/ncurses/vars-pl-utf.txt
 share/ekg2/plugins/ncurses/vars-pl.txt
+share/ekg2/plugins/rc/vars-pl-utf.txt
 share/ekg2/plugins/rc/vars-pl.txt
+share/ekg2/plugins/sim/commands-pl-utf.txt
 share/ekg2/plugins/sim/commands-pl.txt
+share/ekg2/plugins/sim/vars-pl-utf.txt
 share/ekg2/plugins/sim/vars-pl.txt
+share/ekg2/plugins/sms/commands-pl-utf.txt
 share/ekg2/plugins/sms/commands-pl.txt
+share/ekg2/plugins/sms/vars-pl-utf.txt
 share/ekg2/plugins/sms/vars-pl.txt
+share/ekg2/plugins/xmsg/session-en-utf.txt
+share/ekg2/plugins/xmsg/session-en.txt
+share/ekg2/plugins/xmsg/session-pl-utf.txt
+share/ekg2/plugins/xmsg/session-pl.txt
+share/ekg2/plugins/xmsg/vars-en-utf.txt
+share/ekg2/plugins/xmsg/vars-en.txt
+share/ekg2/plugins/xmsg/vars-pl-utf.txt
+share/ekg2/plugins/xmsg/vars-pl.txt
+share/ekg2/session-en-utf.txt
+share/ekg2/session-en.txt
+share/ekg2/session-pl-utf.txt
+share/ekg2/session-pl.txt
 share/ekg2/themes/blue_sea_dragon.theme
 share/ekg2/themes/irc-irssi.theme
+share/ekg2/vars-pl-utf.txt
 share/ekg2/vars-pl.txt
 @dirrm share/ekg2/themes
+@dirrm share/ekg2/plugins/xmsg
 @dirrm share/ekg2/plugins/sms
 @dirrm share/ekg2/plugins/sim
 @dirrm share/ekg2/plugins/rc
 @dirrm share/ekg2/plugins/ncurses
+@dirrm share/ekg2/plugins/mail
 @dirrm share/ekg2/plugins/logsqlite
 @dirrm share/ekg2/plugins/logs
-@dirrm share/ekg2/plugins/jabber
+${JABBER}@dirrm share/ekg2/plugins/jabber
 @dirrm share/ekg2/plugins/irc
 @dirrm share/ekg2/plugins/httprc_xajax
+${GG}@dirrm share/ekg2/plugins/gg
+@dirrm share/ekg2/plugins/autoresponder
 @dirrm share/ekg2/plugins
 @dirrm share/ekg2
 @dirrm lib/ekg2/plugins
+@dirrm lib/ekg2
 @dirrm include/ekg2

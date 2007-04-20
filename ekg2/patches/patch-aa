@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2007/04/20 12:35:36 shindenmorr Exp $
+
+--- configure.orig	2007-04-20 14:18:55.000000000 +0200
++++ configure
+@@ -28854,9 +28854,9 @@ else
+   with_logsoracle=no
+ fi;
+ 
+-if test "x$with_logsoracle" == "xyes"; then
++if test "x$with_logsoracle" = "xyes"; then
+ 
+-		if test "x$have_pthread" == "xyes"; then
++		if test "x$have_pthread" = "xyes"; then
+ 		if test -z "$ORACLE_HOME"; then
+ 			{ echo "$as_me:$LINENO: WARNING: logsoracle plugin requires enviroment variable ORACLE_HOME to be set (incomplete oracle installation?)" >&5
+ echo "$as_me: WARNING: logsoracle plugin requires enviroment variable ORACLE_HOME to be set (incomplete oracle installation?)" >&2;};
+@@ -28927,7 +28927,7 @@ else
+ fi
+ 
+ 
+-			if test "x$have_clntsh" == "xyes"; then
++			if test "x$have_clntsh" = "xyes"; then
+ 				if test "${ac_cv_header_oci_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for oci.h" >&5
+ echo $ECHO_N "checking for oci.h... $ECHO_C" >&6
