@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/04/21 20:41:55 bsadewitz Exp $
+
+--- configure.orig	2007-04-20 03:06:43.000000000 -0400
++++ configure
+@@ -8385,8 +8385,6 @@ echo "${ECHO_T}no" >&6; }
+   *)
+   	{ echo "$as_me:$LINENO: WARNING: Unknown target operating system" >&5
+ echo "$as_me: WARNING: Unknown target operating system" >&2;}
+-    cpu_type="generic_fpu"
+-    CFLAGS="$CFLAGS -DGENERIC"
+   ;;
+ esac
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2007/04/21 20:41:55 bsadewitz Exp $
+
+--- src/audio_oss.c.orig	2007-02-07 04:24:33.000000000 -0500
++++ src/audio_oss.c
+@@ -173,7 +173,7 @@ int audio_open(struct audio_info_struct 
+     return -1;
+ 
+   if(!ai->device) {
+-    ai->device = "/dev/dsp";
++    ai->device = DEVOSSAUDIO;
+     usingdefdev = 1;
+   }
+ 
+@@ -182,7 +182,7 @@ int audio_open(struct audio_info_struct 
+   if(ai->fn < 0)
+   {
+     if(usingdefdev) {
+-      ai->device = "/dev/sound/dsp";
++      ai->device = DEVOSSSOUND;
+       ai->fn = open(ai->device,O_WRONLY);
+       if(ai->fn < 0) {
+       error("Can't open default sound device!");
