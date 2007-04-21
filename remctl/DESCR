@@ -1,0 +1,9 @@
+remctl (the client) and remctld (the server) implement a client/server
+protocol for running single commands on a remote host using Kerberos
+v5 authentication and returning the output. They use a very simple
+GSSAPI-authenticated network protocol, combined with server-side ACL
+support and a server configuration file that maps remctl commands to
+programs that should be run when that command is called by an
+authorized user. remctld is very similar to a CGI server that uses a
+different network protocol than HTTP and always does strong
+authentication before executing the desired command.

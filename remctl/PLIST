@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/21 01:26:08 jakllsch Exp $
+bin/remctl
+include/remctl.h
+lib/libremctl.la
+man/man1/remctl.1
+man/man8/remctld.8
+sbin/remctld
