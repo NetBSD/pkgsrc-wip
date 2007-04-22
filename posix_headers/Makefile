@@ -1,0 +1,32 @@
+# $NetBSD: Makefile,v 1.1.1.1 2007/04/22 13:38:52 tnn2 Exp $
+
+DISTNAME=		posix_headers-0.1
+CATEGORIES=		pkgtools
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.pkgsrc.org/
+COMMENT=		POSIX (IEEE 1003.1) compatibility headers
+
+SKIP_AUDIT_PACKAGES=	yes
+NO_PKGTOOLS_REQD_CHECK=	yes
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+NO_EXTRACT=		yes
+USE_LANGUAGES=
+ONLY_FOR_PLATFORM=	HPUX-*-* # add more as needed
+
+PLIST_SRC=		${WRKDIR}/PLIST_SRC
+
+POSIX_HEADERS.HPUX=	sys/select.h stdint.h
+
+do-install:
+	for h in ${POSIX_HEADERS.${OPSYS}}; do \
+		${INSTALL_DATA} ${FILESDIR}/"$$h" ${PREFIX}/include/"$$h"; \
+		echo include/"$$h" >> ${PLIST_SRC}; \
+	done
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/04/22 13:38:52 tnn2 Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+POSIX_HEADERS_BUILDLINK3_MK:=	${POSIX_HEADERS_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	posix_headers
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nposix_headers}
+BUILDLINK_PACKAGES+=	posix_headers
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}posix_headers
+
+.if !empty(POSIX_HEADERS_BUILDLINK3_MK:M+)
+BUILDLINK_API_DEPENDS.posix_headers+=	posix_headers>=0.1
+BUILDLINK_ABI_DEPENDS.posix_headers+=	posix_headers>=0.1
+BUILDLINK_PKGSRCDIR.posix_headers?=	../../wip/posix_headers
+.endif	# POSIX_HEADERS_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
