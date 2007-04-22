@@ -1,12 +1,14 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+$NetBSD: patch-ad,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
 
---- userdirtest.crm.orig	2006-11-03 09:19:12.000000000 -0600
-+++ userdirtest.crm
-@@ -2,6 +2,6 @@
- window
- output /:*:_nl: CRM114 - syscall test - 'ls' -- :*:_nl: :*:_nl:/
- {
--	syscall () (:_dw:) /ls .\/tre-0.7.2/
-+	syscall () (:_dw:) /ls .\/tre-0.7.4/
- 	accept
- }
+--- mailreaver.crm.orig	2007-04-21 23:46:09.000000000 -0600
++++ mailreaver.crm	
+@@ -89,9 +89,6 @@
+ #
+ #    --- These vars must have a value, or else we'll get errors ----
+ #
+-#     the default directory. 
+-isolate (:fileprefix:) //
+-#
+ isolate (:classifier_reason:) /no reason yet/
+ #
+ isolate (:classify_status:) //

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/04/22 03:08:12 briandealwis Exp $
+# $NetBSD: Makefile,v 1.5 2007/04/22 07:17:30 briandealwis Exp $
 
-PKGNAME=		crm114-20061103
-DISTNAME=		${PKGNAME}-BlameDalkey.src
+PKGNAME=		crm114-20070217
+DISTNAME=		${PKGNAME}-BlameBaltar.no-TRE.src
 CATEGORIES=		mail
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://crm114.sourceforge.net/
@@ -10,11 +11,13 @@ COMMENT=		Fast and accurate learning classifier, good for spam
 
 # For some reason, later versions are just being placed on the home page
 #   MASTER_SITES=		${MASTER_SITE_SOURCEFORGET:=crm114/}
-MASTER_SITES=		http://crm114.sourceforge.net/
+MASTER_SITES=		http://crm114.sourceforge.net/tarballs/
+# BlameBaltar is missing file quine.crm
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} quine.crm
+SITES.quine.crm=	http://crm114.sourceforge.net/src/
 
-# BlameDalkey is missing file defaulttest.crm
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} defaulttest.crm.gz
-SITES.defaulttest.crm.gz=http://crm114.sourceforge.net/ballgunzuntard.no-TRE/crm114-20061103-BlameDalkey.no-TRE.src/
+
+USE_TOOLS+=		msgfmt
 
 DOCDIR=			${PREFIX}/share/doc/crm114
 EMACSDIR=		${PREFIX}/share/emacs/site-lisp
@@ -50,7 +53,7 @@ SUBST_SED.crmdirs=	-e 's,@SCRIPTSDIR@,${SCRIPTSDIR},g'
 TEST_TARGET=		megatest
 
 post-extract:
-	${CP} ${WRKDIR}/defaulttest.crm ${WRKSRC}
+	${CP} ${WRKDIR}/quine.crm ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/crm114 ${PREFIX}/bin/crm
@@ -67,7 +70,6 @@ do-install:
 	cd ${WRKSRC} &&							\
 	    ${INSTALL_SCRIPT} crm114-mode.el ${EMACSDIR}
 
-BROKEN=        Regression tests are not quite right yet.
-
 .include "../../devel/tre/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+$NetBSD: patch-af,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
 
 Identified from message <mail:20070302224040.GA2038@pp> on crm114-general list.
 
 --- mailreaver.crm	2007-03-02 17:10:03.000000000 -0600
-+++ /usr/pkg/share/crm114/mailreaver.crm	2007-03-02 17:08:56.000000000 -0600
++++ mailreaver.crm	2007-03-02 17:08:56.000000000 -0600
 @@ -316,7 +316,7 @@
      alius    #  nope, not in the explicit headers.  Check for it as a 
      #           comment in the Message-Id: header.

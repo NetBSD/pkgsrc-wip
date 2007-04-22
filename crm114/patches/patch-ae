@@ -1,22 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+$NetBSD: patch-ae,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
 
---- crm_bit_entropy.c.orig	2006-11-03 09:19:12.000000000 -0600
-+++ crm_bit_entropy.c
-@@ -1367,7 +1367,7 @@ int crm_expr_bit_entropy_learn (CSL_CELL
- 	* (sizeof (ENTROPY_FEATUREBUCKET_STRUCT));
-       firlatlen = sparse_spectrum_file_length 
- 	* BIT_ENTROPIC_FIR_LOOKASIDE_FRACTION;
--      firlatbytes = firlatlen/ sizeof (long);
-+      firlatbytes = firlatlen * sizeof (long);
-       
-       if (user_trace)
- 	fprintf (stderr, 
-@@ -1379,7 +1379,7 @@ int crm_expr_bit_entropy_learn (CSL_CELL
-       
-       //       Write them bytes, all NULs.  (the 1024 is headers).
-       //
--      for (j = 0; j < (firlatbytes + nodebytes + 1024)  ; j++)
-+      for (j = 0; j < (firlatbytes + nodebytes + 1024 * sizeof(long))  ; j++)
- 	fputc ('\000', f);
-       
-       
+As per <mail:20070417173510.GB18879@ryvius.pekin.waw.pl>, ensure
+the same hash is generated between 32 abd 64 bit machines.
+
+--- crm_str_funcs.c.orig	2007-02-17 07:42:42.000000000 -0600
++++ crm_str_funcs.c
+@@ -103,7 +103,7 @@ unsigned long strnhash (char *str, long 
+ {
+   long i;
+   // unsigned long hval;
+-  long hval;
++  int32_t hval;
+   unsigned long tmp;
+ 
+   // initialize hval

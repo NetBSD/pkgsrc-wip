@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2007/04/22 07:17:30 briandealwis Exp $
+
+--- mailfilter.cf.orig	2007-02-17 07:42:42.000000000 -0600
++++ mailfilter.cf
+@@ -251,7 +251,7 @@
+ #             ------  you can use the "sort --key 1.2" on date-named files to
+ #              -----   achieve chronological training
+ :trainer_randomizer_command: / .\/shuffle.crm /
+-:trainer_randomizer_command: / .\/crm114_tre shuffle.crm /
++#:trainer_randomizer_command: / .\/crm114_tre shuffle.crm /
+ #:trainer_randomizer_command: /sort --key 1.2/
+ 
+ 

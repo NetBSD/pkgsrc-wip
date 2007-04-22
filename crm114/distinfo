@@ -1,19 +1,18 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+$NetBSD: distinfo,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
 
-SHA1 (crm114-20061103-BlameDalkey.src.tar.gz) = 094f77ed10ae7512326abfded5f398e0654a29e1
-RMD160 (crm114-20061103-BlameDalkey.src.tar.gz) = d35bf7cd6ac1a2b46f301a67bbdda3cb6477ed1b
-Size (crm114-20061103-BlameDalkey.src.tar.gz) = 1055458 bytes
-SHA1 (defaulttest.crm.gz) = 73d7e9576110d194638a94739aba3f1ca5ee9be9
-RMD160 (defaulttest.crm.gz) = a26fb12670c1b39f05fa48cce009843756e0af0c
-Size (defaulttest.crm.gz) = 179 bytes
-SHA1 (patch-aa) = 5d5712fe48184428936ea1e3a1b0d620082755e6
-SHA1 (patch-ac) = 35310836fda8df85ac27881ae06891268113e37a
-SHA1 (patch-ad) = ab684fc5f294ed8db2c3dac48c5973216e6c6bee
-SHA1 (patch-ae) = 5fd551ef3f19f95a8bb1e94477a36788059c9f79
-SHA1 (patch-af) = 3392bedf4326920657c159db6110f2b772cd82b6
+SHA1 (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 814c3619a6b5bbf120cafccd769019a00a14f654
+RMD160 (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 3dec92d642e641730d024e6952df7f218a6c53d2
+Size (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 373465 bytes
+SHA1 (quine.crm) = 38edda24489c6f793b84ef3246f0a235ef02e55d
+RMD160 (quine.crm) = 6b119232e7e3fca722c5d66cb8c75582bc1bf491
+Size (quine.crm) = 36 bytes
+SHA1 (patch-aa) = f9d12acad99a16f76b6dd4d00b0bc4a693e775a6
+SHA1 (patch-ab) = e657dad950acfc9748ca556a07972f0b96480bbf
+SHA1 (patch-ac) = 135c02fcca86c3e1c166aac6509f944113e510ff
+SHA1 (patch-ad) = ab4f922d5c3a3c15e7f684f7cb05c0af21eac638
+SHA1 (patch-ae) = 9a3fb1216a1e29d7389509beb62a3ab002687140
+SHA1 (patch-af) = 2531d70a0b4bc941d57727f00b78093478502654
 SHA1 (patch-ah) = 94f51e5a856970b1024be84873e3c4a8fbaeec99
-SHA1 (patch-ba) = e6a6fbe2ee426fdbfea821f7d741624a681956b9
+SHA1 (patch-ba) = 85cf916fb09b1890a5f4c47e1decb605ac05d08e
 SHA1 (patch-bb) = 2e13dee48f21a6fa66ba6988bee9d613a2be318d
 SHA1 (patch-bc) = f595d9bf7cb61b1e5c95e014680414988f542297
-SHA1 (patch-ca) = 63992e2b1be3542e3dac0a448dc8bdb6c6620027
-SHA1 (patch-cb) = 9ecb7f4d94c65a45ea16ec4cb50e1562391e5ac9

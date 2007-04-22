@@ -1,20 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+$NetBSD: patch-ac,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
 
---- megatest.sh.orig	2006-11-03 09:19:12.000000000 -0600
+--- megatest.sh.orig	2007-02-17 07:42:42.000000000 -0600
 +++ megatest.sh
-@@ -1,3 +1,4 @@
-+PATH=.:$PATH; export PATH
- crm -v 2>&1
- crm bracktest.crm 
- crm escapetest.crm 
-@@ -49,8 +50,8 @@ crm overalterisolatedtest.crm 
- crm rewritetest.crm 
- crm skudtest.crm 
- crm statustest.crm 
--#./exectest.crm
--./unionintersecttest.crm 
-+#crm exectest.crm
-+crm unionintersecttest.crm 
- crm beeptest.crm 
- crm defaulttest.crm
- crm defaulttest.crm --blah="command override"
+@@ -224,7 +224,7 @@ EOF
+ ./crm114 '-{window; output / \n***** checking return and exit codes \n/}'
+ ./crm114 '-{window; isolate (:s:); syscall () () (:s:) /exit 123/; output / Status: :*:s: \n/}'
+ ./crm114 '-{window; output /\n***** check that failed syscalls will code right\n/}'
+-./crm114 '-{window; isolate (:s:); syscall () () (:s:) /jibberjabber 2>&1 /; output / Status: :*:s: \n/}'
++./crm114 '-{window; isolate (:s:); syscall () () (:s:) /jibberjabber 2>/dev/null /; output / Status: :*:s: \n/}'
+ 
+ ./crm114 indirecttest.crm
+ rm -f randtst.txt
