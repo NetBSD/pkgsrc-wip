@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/12 16:08:30 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/22 03:08:12 briandealwis Exp $
 bin/crm
 bin/cssdiff
 bin/cssmerge
 bin/cssutil
 bin/osbf-util
 share/crm114/classifymail.crm
-share/crm114/crmlearn
 share/crm114/mailfilter.crm
 share/crm114/maillib.crm
 share/crm114/mailreaver.crm
