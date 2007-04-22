@@ -1,10 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/04/22 14:24:23 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/04/22 14:36:48 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 POSIX_HEADERS_BUILDLINK3_MK:=	${POSIX_HEADERS_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
-#BUILDLINK_DEPENDS+=	posix_headers
+BUILDLINK_DEPENDS+=	posix_headers
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nposix_headers}
