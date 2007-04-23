@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/04/29 04:56:43 akihabara Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/23 23:30:10 akihabara Exp $
 
-DISTNAME=	runit-1.5.0
+DISTNAME=	runit-1.7.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
