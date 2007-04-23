@@ -1,0 +1,3 @@
+A lot.  Support all of the usual platforms, merge in any relevant 
+fixes from pkgsrc, options.mk, etc.  This should work for at least
+NetBSD/i386 and NetBSD/amd64, though.
