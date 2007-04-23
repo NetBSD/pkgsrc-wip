@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/03/06 13:01:09 cheusov Exp $
+$NetBSD: MESSAGE,v 1.2 2007/04/23 20:05:47 cheusov Exp $
 
 
 In order to activate a2ps-sharatype, do the following manually:
@@ -30,5 +30,8 @@ In order to activate a2ps-sharatype, do the following manually:
 
 2) Add content of PREFIX/share/a2ps/afm/sharatype1-fonts.map to
    PREFIX/share/a2ps/afm/fonts.map
+
+P.S.
+Russian README is available in share/doc/a2ps-sharatype/
 
 ===========================================================================
