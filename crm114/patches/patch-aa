@@ -1,19 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
+$NetBSD: patch-aa,v 1.3 2007/04/23 01:12:13 briandealwis Exp $
 
 --- Makefile.orig	2007-02-17 07:42:42.000000000 -0600
 +++ Makefile
-@@ -52,9 +52,9 @@ SYSTEMTYPE = POSIX
- #  Tell the compiler full optimization, allow debugging, and warn on every
- #  possible error
- #  
--CFLAGS += -O3 -g -Wall 
-+# CFLAGS += -O3 -g -Wall 
- #     turn this one on for no optimization debugging.
--#CFLAGS += -O0 -g -Wall 
-+CFLAGS += -O0 -g -Wall 
- #     turn this one on for really picayune debugging.
- # CFLAGS += -Wextra
- #
 @@ -62,7 +62,7 @@ CFLAGS += -O3 -g -Wall 
  #   Comment this out if you want dynamic linking
  #

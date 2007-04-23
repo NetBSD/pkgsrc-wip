@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.2 2007/04/22 07:17:30 briandealwis Exp $
+$NetBSD: distinfo,v 1.3 2007/04/23 01:12:13 briandealwis Exp $
 
-SHA1 (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 814c3619a6b5bbf120cafccd769019a00a14f654
-RMD160 (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 3dec92d642e641730d024e6952df7f218a6c53d2
-Size (crm114-20070217-BlameBaltar.no-TRE.src.tar.bz2) = 373465 bytes
-SHA1 (quine.crm) = 38edda24489c6f793b84ef3246f0a235ef02e55d
-RMD160 (quine.crm) = 6b119232e7e3fca722c5d66cb8c75582bc1bf491
-Size (quine.crm) = 36 bytes
-SHA1 (patch-aa) = f9d12acad99a16f76b6dd4d00b0bc4a693e775a6
+SHA1 (crm114-20070320-BlameBaltar.src.tar.gz) = 6c708560da13f7dbbba1ed817f0f81dec5b0b172
+RMD160 (crm114-20070320-BlameBaltar.src.tar.gz) = 44f08f8323c01d631927915b040ef532c0b30fbb
+Size (crm114-20070320-BlameBaltar.src.tar.gz) = 488934 bytes
+SHA1 (patch-aa) = f400a7a886ba57a9ac85bf0a266750de86a1eb05
 SHA1 (patch-ab) = e657dad950acfc9748ca556a07972f0b96480bbf
 SHA1 (patch-ac) = 135c02fcca86c3e1c166aac6509f944113e510ff
 SHA1 (patch-ad) = ab4f922d5c3a3c15e7f684f7cb05c0af21eac638
 SHA1 (patch-ae) = 9a3fb1216a1e29d7389509beb62a3ab002687140
-SHA1 (patch-af) = 2531d70a0b4bc941d57727f00b78093478502654
 SHA1 (patch-ah) = 94f51e5a856970b1024be84873e3c4a8fbaeec99
 SHA1 (patch-ba) = 85cf916fb09b1890a5f4c47e1decb605ac05d08e
 SHA1 (patch-bb) = 2e13dee48f21a6fa66ba6988bee9d613a2be318d

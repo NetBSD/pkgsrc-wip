@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/04/22 07:17:30 briandealwis Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/23 01:12:13 briandealwis Exp $
 
-PKGNAME=		crm114-20070217
-DISTNAME=		${PKGNAME}-BlameBaltar.no-TRE.src
+PKGNAME=		crm114-20070320
+DISTNAME=		${PKGNAME}-BlameBaltar.src
 CATEGORIES=		mail
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://crm114.sourceforge.net/
@@ -12,10 +11,6 @@ COMMENT=		Fast and accurate learning classifier, good for spam
 # For some reason, later versions are just being placed on the home page
 #   MASTER_SITES=		${MASTER_SITE_SOURCEFORGET:=crm114/}
 MASTER_SITES=		http://crm114.sourceforge.net/tarballs/
-# BlameBaltar is missing file quine.crm
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} quine.crm
-SITES.quine.crm=	http://crm114.sourceforge.net/src/
-
 
 USE_TOOLS+=		msgfmt
 
@@ -51,9 +46,6 @@ SUBST_SED.crmdirs=	-e 's,@SCRIPTSDIR@,${SCRIPTSDIR},g'
 #   * many of the `pR' values differ as a rescaling effort was
 #     backed out; these will be corrected for in the next release.
 TEST_TARGET=		megatest
-
-post-extract:
-	${CP} ${WRKDIR}/quine.crm ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/crm114 ${PREFIX}/bin/crm
