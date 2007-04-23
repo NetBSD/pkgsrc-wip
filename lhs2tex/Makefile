@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/08/28 11:28:52 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2007/04/23 16:07:00 emil_s Exp $
 #
 
-DISTNAME=		lhs2tex-1.11
+DISTNAME=		lhs2tex-1.12
 CATEGORIES=		print devel
 MASTER_SITES=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
 EXTRACT_SUFX=		.tar.bz2
