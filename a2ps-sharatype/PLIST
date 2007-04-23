@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/03/06 13:01:09 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/23 20:03:11 cheusov Exp $
 share/a2ps/afm/c8c.afm
 share/a2ps/afm/c8cb.afm
 share/a2ps/afm/c8cbi.afm
@@ -43,3 +43,4 @@ share/a2ps/fonts/t8c.pfa
 share/a2ps/fonts/t8cb.pfa
 share/a2ps/fonts/t8cbi.pfa
 share/a2ps/fonts/t8ci.pfa
+share/doc/${PKGBASE}/README
