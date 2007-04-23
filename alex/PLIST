@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/15 14:32:42 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/23 15:29:37 emil_s Exp $
 bin/alex
-bin/${PKGNAME}
-lib/${PKGNAME}/AlexTemplate
-lib/${PKGNAME}/AlexTemplate-debug
-lib/${PKGNAME}/AlexTemplate-ghc
-lib/${PKGNAME}/AlexTemplate-ghc-debug
-lib/${PKGNAME}/AlexWrapper-basic
-lib/${PKGNAME}/AlexWrapper-gscan
-lib/${PKGNAME}/AlexWrapper-monad
-lib/${PKGNAME}/AlexWrapper-posn
-lib/${PKGNAME}/alex.bin
+share/${PKGNAME}/AlexTemplate
+share/${PKGNAME}/AlexTemplate-debug
+share/${PKGNAME}/AlexTemplate-ghc
+share/${PKGNAME}/AlexTemplate-ghc-debug
+share/${PKGNAME}/AlexWrapper-basic
+share/${PKGNAME}/AlexWrapper-gscan
+share/${PKGNAME}/AlexWrapper-monad
+share/${PKGNAME}/AlexWrapper-posn
 share/doc/alex/about.html
 share/doc/alex/alex-files.html
-share/doc/alex/alex.ps
 share/doc/alex/api.html
 share/doc/alex/bug-reports.html
 share/doc/alex/charsets.html
@@ -22,6 +19,7 @@ share/doc/alex/introduction.html
 share/doc/alex/invoking.html
 share/doc/alex/license.html
 share/doc/alex/regexps.html
+share/doc/alex/relnotes-20.html
 share/doc/alex/syntax.html
 share/doc/alex/wrappers.html
 share/examples/alex/Makefile
@@ -40,4 +38,4 @@ share/examples/alex/words_monad.x
 share/examples/alex/words_posn.x
 @dirrm share/examples/alex
 @dirrm share/doc/alex
-@dirrm lib/${PKGNAME}
+@dirrm share/${PKGNAME}
