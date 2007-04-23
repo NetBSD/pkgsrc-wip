@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/22 13:50:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/23 11:29:18 tnn2 Exp $
 
 DISTNAME=		posix_headers-0.2
 CATEGORIES=		pkgtools
@@ -17,7 +17,7 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 NO_EXTRACT=		yes
 USE_LANGUAGES=
-ONLY_FOR_PLATFORM=	HPUX-*-* # add more as needed
+ONLY_FOR_PLATFORM=	HPUX-11.11-* # add more as needed
 
 PLIST_SRC=		${WRKDIR}/PLIST_SRC
 
