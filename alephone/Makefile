@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/24 15:58:01 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/24 20:44:12 christtrekker Exp $
 #
 
 DISTNAME=	AlephOne-20070401
 CATEGORIES=	games
-MASTER_SITES=	http://umn.dl.sourceforge.net/sourceforge/marathon/
+MASTER_SITES+=	http://umn.dl.sourceforge.net/sourceforge/marathon/
+MASTER_SITES+=	http://easynews.dl.sourceforge.net/sourceforge/marathon/
+MASTER_SITES+=	http://internap.dl.sourceforge.net/sourceforge/marathon/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	christtrekker@sourceforge.net
