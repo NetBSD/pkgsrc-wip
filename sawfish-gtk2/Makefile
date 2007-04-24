@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/13 18:18:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2007/04/24 14:58:40 tnn2 Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
@@ -13,8 +13,8 @@ COMMENT=		Extensible window manager that is fully configurable in Lisp
 
 DEPENDS+=		rep-gtk2>=0.18:../../wip/rep-gtk2
 
-CONFLICTS+=		sawfish-*
-CONFLICTS+=		sawfish-replibs-*
+CONFLICTS+=		sawfish-[0-9]*
+CONFLICTS+=		sawfish-replibs-[0-9]*
 
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
@@ -24,10 +24,9 @@ CONFIGURE_ARGS+=	--without-audiofile --without-esd
 USE_TOOLS+=		gmake makeinfo msgfmt
 USE_PKGLOCALEDIR=	yes
 
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../lang/librep/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
