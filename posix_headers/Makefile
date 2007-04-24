@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2007/04/23 11:29:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/24 13:36:36 tnn2 Exp $
 
-DISTNAME=		posix_headers-0.2
+DISTNAME=		posix_headers-0.3
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM=	HPUX-11.11-* # add more as needed
 
 PLIST_SRC=		${WRKDIR}/PLIST_SRC
 
-POSIX_HEADERS.HPUX=	sys/select.h stdint.h
+POSIX_HEADERS.HPUX=	sys/select.h stdint.h math.h
 
 do-install:
 	for h in ${POSIX_HEADERS.${OPSYS}}; do \
