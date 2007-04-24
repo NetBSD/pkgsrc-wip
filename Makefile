@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2569 2007/04/23 17:24:55 jakllsch Exp $
+# $Id: Makefile,v 1.2570 2007/04/24 19:52:11 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1259,7 +1259,6 @@ SUBDIR+=	polipo
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	portmap
-SUBDIR+=	posix_headers
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql80-postgis
