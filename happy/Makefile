@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/08/25 13:50:26 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/24 09:36:09 emil_s Exp $
 #
 
-DISTNAME=		happy-1.15
+DISTNAME=		happy-${VERSION}
 CATEGORIES=		devel
-MASTER_SITES=		http://www.haskell.org/happy/dist/
-DISTFILES=		${DISTNAME}-src.tar.gz
+MASTER_SITES=		http://www.haskell.org/happy/dist/${VERSION}/
+DISTFILES=		${DISTNAME}.tar.gz
 DISTFILES+=		${DISTNAME}-html.tar.gz
 DISTFILES+=		happy.ps.gz
 SITES.${DISTNAME}-html.tar.gz=	http://www.haskell.org/happy/doc/
@@ -14,7 +14,9 @@ MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/happy/dist/
 COMMENT=		LALR(1) parser generator for the functional language Haskell
 
-WRKSRC=			${WRKDIR}/happy-1.15
+VERSION=		1.16
+
+WRKSRC=			${WRKDIR}/happy-${VERSION}
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
@@ -24,8 +26,19 @@ DOCDIR=		${PREFIX}/share/doc/happy
 
 #DEPENDS+=	cabal-[0-9]*:../../wip/cabal
 
-pre-build:
-	${ECHO} "SRC_HC_OPTS += -ignore-package util" >> ${WRKSRC}/mk/build.mk
+do-configure:
+	cd ${WRKSRC:Q} &&			\
+	runhaskell -cpp Setup.lhs configure	\
+	  --ghc					\
+	  --prefix=${PREFIX:Q}			\
+	  --with-compiler=${PREFIX:Q}/bin/ghc	\
+	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+
+do-build:
+	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs build
+
+do-install:
+	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
