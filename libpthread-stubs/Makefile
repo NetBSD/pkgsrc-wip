@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2007/04/25 21:43:43 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/25 22:02:37 bsadewitz Exp $
 
-DISTNAME=	pthread-stubs-1.0
+DISTNAME=	libpthread-stubs-1.0
 CATEGORIES=	devel
 DISTFILES=	# empty
 

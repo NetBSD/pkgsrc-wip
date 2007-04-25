@@ -1,19 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/04/25 21:43:43 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/04/25 22:02:37 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PTHREAD_STUBS_BUILDLINK3_MK:=	${PTHREAD_STUBS_BUILDLINK3_MK}+
 
 .if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	pthread-stubs
+BUILDLINK_DEPENDS+=	libpthread-stubs
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npthread-stubs}
-BUILDLINK_PACKAGES+=	pthread-stubs
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pthread-stubs
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpthread-stubs}
+BUILDLINK_PACKAGES+=	libpthread-stubs
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libpthread-stubs
 
 .if ${PTHREAD_STUBS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.pthread-stubs+=	pthread-stubs>=0.1
-BUILDLINK_PKGSRCDIR.pthread-stubs?=	../../wip/pthread-stubs
+BUILDLINK_API_DEPENDS.libpthread-stubs+=	libpthread-stubs>=0.1
+BUILDLINK_PKGSRCDIR.libpthread-stubs?=	../../wip/libpthread-stubs
 .endif	# PTHREAD_STUBS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
