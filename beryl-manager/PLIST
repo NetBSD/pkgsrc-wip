@@ -1,0 +1,69 @@
+@comment $NetBSD: PLIST,v 1.1 2007/04/25 07:07:57 bsadewitz Exp $
+bin/beryl-manager
+man/man1/beryl-manager.1
+share/applications/beryl-manager.desktop
+share/icons/hicolor/22x22/apps/beryl-manager.png
+share/icons/hicolor/24x24/apps/beryl-manager.png
+share/icons/hicolor/scalable/apps/beryl-manager.svg
+share/locale/ar_AR/LC_MESSAGES/beryl-manager.mo
+share/locale/ca/LC_MESSAGES/beryl-manager.mo
+share/locale/de_DE/LC_MESSAGES/beryl-manager.mo
+share/locale/es_AR/LC_MESSAGES/beryl-manager.mo
+share/locale/es_ES/LC_MESSAGES/beryl-manager.mo
+share/locale/fr/LC_MESSAGES/beryl-manager.mo
+share/locale/gl_ES/LC_MESSAGES/beryl-manager.mo
+share/locale/gl_GL/LC_MESSAGES/beryl-manager.mo
+share/locale/hu_HU/LC_MESSAGES/beryl-manager.mo
+share/locale/it_IT/LC_MESSAGES/beryl-manager.mo
+share/locale/ja/LC_MESSAGES/beryl-manager.mo
+share/locale/ko/LC_MESSAGES/beryl-manager.mo
+share/locale/my_MY/LC_MESSAGES/beryl-manager.mo
+share/locale/nb_NO/LC_MESSAGES/beryl-manager.mo
+share/locale/nl/LC_MESSAGES/beryl-manager.mo
+share/locale/pl/LC_MESSAGES/beryl-manager.mo
+share/locale/pt_BR/LC_MESSAGES/beryl-manager.mo
+share/locale/pt_PT/LC_MESSAGES/beryl-manager.mo
+share/locale/ru_RU/LC_MESSAGES/beryl-manager.mo
+share/locale/sk_SK/LC_MESSAGES/beryl-manager.mo
+share/locale/sv_FI/LC_MESSAGES/beryl-manager.mo
+share/locale/sv_SE/LC_MESSAGES/beryl-manager.mo
+share/locale/tr_TR/LC_MESSAGES/beryl-manager.mo
+share/locale/uk_UA/LC_MESSAGES/beryl-manager.mo
+share/locale/zh_CN/LC_MESSAGES/beryl-manager.mo
+share/locale/zh_HK/LC_MESSAGES/beryl-manager.mo
+share/locale/zh_TW/LC_MESSAGES/beryl-manager.mo
+share/pixmaps/beryl-manager.png
+share/pixmaps/fall-back-wm-select.png
+share/pixmaps/wd-select.png
+share/pixmaps/wm-select.png
+@dirrm share/locale/uk_UA/LC_MESSAGES
+@dirrm share/locale/uk_UA
+@dirrm share/locale/tr_TR/LC_MESSAGES
+@dirrm share/locale/tr_TR
+@dirrm share/locale/sv_FI/LC_MESSAGES
+@dirrm share/locale/sv_FI
+@dirrm share/locale/sk_SK/LC_MESSAGES
+@dirrm share/locale/sk_SK
+@dirrm share/locale/ru_RU/LC_MESSAGES
+@dirrm share/locale/ru_RU
+@dirrm share/locale/nb_NO/LC_MESSAGES
+@dirrm share/locale/nb_NO
+@dirrm share/locale/my_MY/LC_MESSAGES
+@dirrm share/locale/my_MY
+@dirrm share/locale/it_IT/LC_MESSAGES
+@dirrm share/locale/it_IT
+@dirrm share/locale/hu_HU/LC_MESSAGES
+@dirrm share/locale/hu_HU
+@dirrm share/locale/gl_GL/LC_MESSAGES
+@dirrm share/locale/gl_GL
+@dirrm share/locale/gl_ES/LC_MESSAGES
+@dirrm share/locale/gl_ES
+@dirrm share/locale/ar_AR/LC_MESSAGES
+@dirrm share/locale/ar_AR
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor

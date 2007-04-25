@@ -1,0 +1,3 @@
+Beryl is a window manager and composition manager based on OpenGL tech-
+nology.  It will run anywhere that GLX_EXT_texture_from_pixmap is  sup-
+ported, which is currently on Xgl and aiglx
