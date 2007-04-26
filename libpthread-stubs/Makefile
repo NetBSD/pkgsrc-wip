@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/25 22:02:37 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/26 20:25:35 bsadewitz Exp $
 
 DISTNAME=	libpthread-stubs-1.0
 CATEGORIES=	devel
@@ -14,11 +14,13 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	pthread-stubs.pc
 
+PKGCONFIG_BASE=		${PKGBASE:S/lib//1}
+
 SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=	post-extract
 SUBST_MESSAGE.pc=	Creating pkg-config file
 SUBST_FILES.pc+=	pthread-stubs.pc
-SUBST_VARS.pc+=		PKGVERSION PKGBASE PREFIX
+SUBST_VARS.pc+=		PKGVERSION PKGCONFIG_BASE PREFIX
 
 do-extract:
 	${CP} ${FILESDIR}/pthread-stubs.c ${FILESDIR}/Makefile \
