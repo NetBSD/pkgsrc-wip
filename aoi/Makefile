@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/08 05:22:58 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/26 13:16:29 netcap Exp $
 #
 
 BASENAME=		aoi
-PKGVERSION=		2.4
+PKGVERSION=		2.4.1
 PKGNAME=		${BASENAME}-${PKGVERSION}
 CATEGORIES=		graphics java
-DISTNAME=		${PKGNAME:S/-//:S/.//}
+DISTNAME=		${PKGNAME:S/-//:S/.//g}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aoi/}
 EXTRACT_SUFX=		.zip
 
@@ -13,7 +13,7 @@ MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://aoi.sourceforge.net/
 COMMENT=		Open source 3D modelling and rendering studio based on Java
 
-WRKSRC=			${WRKDIR}/ArtOfIllusion${PKGVERSION:S/.//}
+WRKSRC=			${WRKDIR}/ArtOfIllusion${PKGVERSION_NOREV:S/.//}
 USE_JAVA=		run
 USE_JAVA2=		yes
 USE_TOOLS+=		printf
@@ -23,16 +23,17 @@ PKG_JVMS_ACCEPTED=	jdk14 sun-jdk14 sun-jdk15
 DATADIR=		lib/java/${PKGNAME}/
 DOCSDIR=		share/doc/${PKGNAME}/
 INSTALLATION_DIRS=	bin ${DOCSDIR} ${DATADIR} ${DATADIR}/Icons \
-					${DATADIR}/Plugins ${DATADIR}/Plugins/Help \
-					${DATADIR}/Scripts ${DATADIR}/Scripts/Objects \
-					${DATADIR}/Scripts/Startup ${DATADIR}/Scripts/Tools
+			${DATADIR}/Plugins ${DATADIR}/Plugins/Help \
+			${DATADIR}/Scripts ${DATADIR}/Scripts/Objects \
+			${DATADIR}/Scripts/Startup ${DATADIR}/Scripts/Tools
+DIRS=			${INSTALLATION_DIRS}
 
 do-build:
 	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -jar ${PREFIX}/${DATADIR}/ArtOfIllusion.jar \"\$$@\"\\n" > ${WRKSRC}/${BASENAME:Q}.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/aoi.sh ${PREFIX}/bin/aoi
-.for dir in ${INSTALLATION_DIRS}
+.for dir in ${DIRS}
 	${INSTALL_DATA_DIR} ${PREFIX}/${dir}
 .endfor
 	( cd ${WRKSRC} ; \
