@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/07 13:19:05 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/04/26 20:01:09 cheusov Exp $
 bin/xxkb
 lib/X11/app-defaults/XXkb
 share/doc/xxkb/LICENSE
+share/doc/xxkb/README
 share/doc/xxkb/README.koi8
+share/xxkb/bg15.xpm
+share/xxkb/bg48.xpm
 share/xxkb/by15.xpm
 share/xxkb/by48.xpm
+share/xxkb/de15.xpm
+share/xxkb/de48.xpm
 share/xxkb/en15.xpm
 share/xxkb/en48.xpm
+share/xxkb/il15.xpm
+share/xxkb/il48.xpm
 share/xxkb/ru15.xpm
 share/xxkb/ru48.xpm
 share/xxkb/su15.xpm

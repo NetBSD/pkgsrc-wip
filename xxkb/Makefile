@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/03/11 19:49:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2007/04/26 20:01:08 cheusov Exp $
 
-DISTNAME=	xxkb-1.10
-#PKGREVISION=	1
+DISTNAME=	xxkb-1.11-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xxkb/} \
 		http://pascal.tsu.ru/other/xxkb/
@@ -14,9 +14,11 @@ COMMENT=	XXKB - switches and indicates a current keyboard layout
 
 USE_TOOLS+=		xmkmf
 USE_IMAKE=		yes
-DOC_FILES=		LICENSE README.koi8
+DOC_FILES=		LICENSE README.koi8 README
 DOC_DIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOC_DIR}
+
+WRKSRC=			${WRKDIR}/xxkb
 
 post-install:
 .for i in ${DOC_FILES}
