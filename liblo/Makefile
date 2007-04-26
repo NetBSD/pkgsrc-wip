@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:18 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/04/26 12:28:47 netcap Exp $
 #
 
-DISTNAME=	liblo-0.23
+DISTNAME=	liblo-0.24
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liblo/}
 
