@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/14 18:40:19 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/26 13:54:00 netcap Exp $
 #
 
-DISTNAME=	adplug-2.0.1
+DISTNAME=	adplug-2.1
 CATEGORIES=	audio devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adplug/}
 EXTRACT_SUFX=	.tar.bz2

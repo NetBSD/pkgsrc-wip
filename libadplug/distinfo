@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/14 18:40:19 netcap Exp $
+$NetBSD: distinfo,v 1.2 2007/04/26 13:54:00 netcap Exp $
 
-SHA1 (adplug-2.0.1.tar.bz2) = f9da0c8732d6d106ec6e6d19d47eed7ea093ce05
-RMD160 (adplug-2.0.1.tar.bz2) = 8bcdc2347568d24d1a78e7fdfc352a8878777005
-Size (adplug-2.0.1.tar.bz2) = 698708 bytes
+SHA1 (adplug-2.1.tar.bz2) = 49dd798467f194ece1863f18019912f8089cb9df
+RMD160 (adplug-2.1.tar.bz2) = 8788c174507fe39d3415f36e1ac60df6b84c889f
+Size (adplug-2.1.tar.bz2) = 730686 bytes

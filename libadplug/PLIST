@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/14 18:40:19 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/26 13:54:00 netcap Exp $
 bin/adplugdb
 include/adplug/a2m.h
+include/adplug/adl.h
 include/adplug/adlibemu.h
 include/adplug/adplug.h
 include/adplug/adtrack.h
