@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 2007/04/27 14:21:44 emil_s Exp $
+
+--- c2hs/c/CLexer.hs.orig	2005-08-07 13:01:44.000000000 +0000
++++ c2hs/c/CLexer.hs
+@@ -13,7 +13,7 @@ import UNames	 (Name)
+ import Idents    (Ident, lexemeToIdent, identToLexeme)
+ 
+ import Data.Set  (Set)
+-import qualified Data.Set as Set (mkSet, addToSet, elementOf)
++import qualified Data.Set as Set (fromList, insert, member)
+ 
+ 
+ #if __GLASGOW_HASKELL__ >= 603
+@@ -413,7 +413,7 @@ idkwtok cs = \pos -> do
+   name <- getNewName
+   tdefs <- getTypedefs
+   let ident = lexemeToIdent pos cs name
+-  if ident `Set.elementOf` tdefs
++  if ident `Set.member` tdefs
+     then return (CTokTyIdent pos ident)
+     else return (CTokIdent   pos ident)
+ 
+@@ -526,7 +526,7 @@ execParser (P parser) input pos builtins
+ 	  alex_inp = input,
+ 	  alex_last = interr "CLexer.execParser: Touched undefined token!",
+ 	  alex_names = names,
+-	  alex_tdefs = Set.mkSet builtins
++	  alex_tdefs = Set.fromList builtins
+         }
+ 
+ {-# INLINE returnP #-}
+@@ -571,7 +571,7 @@ getTypedefs = P $ \s@PState{alex_tdefs=t
+ 
+ addTypedef :: Ident -> P ()
+ addTypedef ident = (P $ \s@PState{alex_tdefs=tdefs} ->
+-                             POk s{alex_tdefs = tdefs `Set.addToSet` ident} ())
++                             POk s{alex_tdefs = ident `Set.insert` tdefs} ())
+ 
+ getInput :: P AlexInput
+ getInput = P $ \s@PState{alex_pos=p, alex_inp=i} -> POk s (p,i)
