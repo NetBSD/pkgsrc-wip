@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/13 07:44:21 marttikuparinen Exp $
-libexec/xfce4/panel-plugins/xfce4-genmon-plugin
-share/locale/cs/LC_MESSAGES/xfce4-genmon-plugin.mo
-share/locale/fr/LC_MESSAGES/xfce4-genmon-plugin.mo
-share/locale/pl/LC_MESSAGES/xfce4-genmon-plugin.mo
-share/xfce4/panel-plugins/genmon.desktop
