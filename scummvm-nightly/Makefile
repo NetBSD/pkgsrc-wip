@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/22 15:18:28 dillo Exp $
+# $NetBSD: Makefile,v 1.12 2007/04/27 20:38:23 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -14,6 +14,7 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=--enable-cruise
 CONFIGURE_ARGS+=--enable-lure
 CONFIGURE_ARGS+=--enable-parallaction
 USE_DIRS+=	xdg-1.1
