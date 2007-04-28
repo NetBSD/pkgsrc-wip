@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/04/28 19:26:57 grzela1 Exp $
+
+diff -u src/lib/eet_data.c.orig src/lib/eet_data.c
+--- src/lib/eet_data.c.orig	2007-04-18 22:04:21.000000000 +0200
++++ src/lib/eet_data.c		2007-04-18 22:05:13.000000000 +0200
+@@ -371,9 +371,9 @@
+    str[len] = 0;
+ 
+    prev_locale = setlocale(LC_NUMERIC, "C");
+-/* solaris atof is broken and doesnt understand %a format as a float */   
++/* solaris atof is broken and doesnt understand %e format as a float */   
+ /*   *d = (float)atof(str); */
+-   sscanf(str, "%a", &tf);
++   sscanf(str, "%e", &tf);
+    *d = (float)tf;
+    if (prev_locale) setlocale(LC_NUMERIC, prev_locale);
+    
+@@ -389,7 +389,7 @@
+ 
+    s = (float *)src;
+    prev_locale = setlocale(LC_NUMERIC, "C");
+-   snprintf(buf, sizeof(buf), "%a", (double)(*s));
++   snprintf(buf, sizeof(buf), "%e", (double)(*s));
+    if (prev_locale) setlocale(LC_NUMERIC, prev_locale);
+    len = strlen(buf);
+    d = malloc(len + 1);
+@@ -418,9 +418,9 @@
+    str[len] = 0;
+ 
+    prev_locale = setlocale(LC_NUMERIC, "C");
+-/* solaris atof is broken and doesnt understand %a format as a float */   
++/* solaris atof is broken and doesnt understand %e format as a float */   
+ /*   *d = (double)atof(str); */
+-   sscanf(str, "%a", &tf);
++   sscanf(str, "%e", &tf);
+    *d = (double)tf;
+    if (prev_locale) setlocale(LC_NUMERIC, prev_locale);
+ 
+@@ -436,7 +436,7 @@
+ 
+    s = (double *)src;
+    prev_locale = setlocale(LC_NUMERIC, "C");
+-   snprintf(buf, sizeof(buf), "%a", (double)(*s));
++   snprintf(buf, sizeof(buf), "%e", (double)(*s));
+    if (prev_locale) setlocale(LC_NUMERIC, prev_locale);
+    len = strlen(buf);
+    d = malloc(len + 1);
