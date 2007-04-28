@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/03/13 07:05:07 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.17 2007/04/28 18:12:25 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1623,6 +1623,8 @@ share/emacs/${PKGVERSION}/lisp/ielm.el.gz
 share/emacs/${PKGVERSION}/lisp/ielm.elc
 share/emacs/${PKGVERSION}/lisp/iimage.el.gz
 share/emacs/${PKGVERSION}/lisp/iimage.elc
+share/emacs/${PKGVERSION}/lisp/image-dired.el.gz
+share/emacs/${PKGVERSION}/lisp/image-dired.elc
 share/emacs/${PKGVERSION}/lisp/image-file.el.gz
 share/emacs/${PKGVERSION}/lisp/image-file.elc
 share/emacs/${PKGVERSION}/lisp/image-mode.el.gz
@@ -2554,8 +2556,6 @@ share/emacs/${PKGVERSION}/lisp/tooltip.el.gz
 share/emacs/${PKGVERSION}/lisp/tooltip.elc
 share/emacs/${PKGVERSION}/lisp/tree-widget.el.gz
 share/emacs/${PKGVERSION}/lisp/tree-widget.elc
-share/emacs/${PKGVERSION}/lisp/tumme.el.gz
-share/emacs/${PKGVERSION}/lisp/tumme.elc
 share/emacs/${PKGVERSION}/lisp/tutorial.el.gz
 share/emacs/${PKGVERSION}/lisp/tutorial.elc
 share/emacs/${PKGVERSION}/lisp/type-break.el.gz

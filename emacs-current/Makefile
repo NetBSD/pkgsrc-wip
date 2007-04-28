@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2007/04/11 06:51:52 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2007/04/28 18:12:25 thomasklausner Exp $
 #
 
-DISTNAME=	emacs-22.0.97
+DISTNAME=	emacs-22.1.50
 CATEGORIES=	editors
 MASTER_SITES=	#
 
