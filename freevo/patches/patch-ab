@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2006/12/30 10:09:47 absd Exp $
+$NetBSD: patch-ab,v 1.8 2007/04/29 16:32:48 dhowland Exp $
 
---- src/config.py.orig	2006-11-24 19:50:21.000000000 +0000
+--- src/config.py.orig	2007-01-12 15:58:51.000000000 -0500
 +++ src/config.py
-@@ -288,7 +288,7 @@ __builtin__.__dict__['_debug_']= _debug_
+@@ -296,7 +296,7 @@ __builtin__.__dict__['_debug_']= _debug_
  # Config file handling
  #
  cfgfilepath = [ '.', os.path.expanduser('~/.freevo'), '/etc/freevo',
@@ -11,16 +11,16 @@ $NetBSD: patch-ab,v 1.7 2006/12/30 10:09:47 absd Exp $
  
  
  #
-@@ -372,7 +372,7 @@ for program, valname, needed in setup_fr
+@@ -388,7 +388,7 @@ for program, valname, needed in setup_fr
  #
- # Under Linux, use /var/cache. Under FreeBSD, use /var/db.
- #
--if os.uname()[0] == 'FreeBSD':
-+if ((os.uname()[0] == 'FreeBSD') or (os.uname()[0] == 'NetBSD')):
+ if os.environ.has_key('OS_CACHEDIR'):
+     OS_CACHEDIR = os.environ['OS_CACHEDIR']
+-elif os.uname()[0] == 'FreeBSD':
++elif ((os.uname()[0] == 'FreeBSD') or (os.uname()[0] == 'NetBSD')):
      OS_CACHEDIR = '/var/db'
  else:
      OS_CACHEDIR = '/var/cache'
-@@ -671,7 +671,10 @@ if ROM_DRIVES == None:
+@@ -690,7 +690,10 @@ if ROM_DRIVES == None:
                      devname = devname[:-1]
                  # Use native FreeBSD device names
                  dispname = devname[5:]
