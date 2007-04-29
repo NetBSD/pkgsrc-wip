@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/17 22:32:55 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/29 13:59:39 cosmedbr Exp $
 
-DISTNAME=		dmenu-2.8
+DISTNAME=		dmenu-3.0
 CATEGORIES=		misc
 MASTER_SITES=		http://www.suckless.org/download/
 
