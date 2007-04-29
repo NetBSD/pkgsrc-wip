@@ -1,0 +1,9 @@
+The Kaa Media Repository is a set of python modules related to media.
+
+Kaa provides a base module that implements the common features needed for
+application development, such as mainloop management, timers, signals,
+callbacks, file descriptor monitors, etc. Kaa's other modules provide specific
+media-related functionality, such as retrieving metadata on arbitrary media
+files (kaa.metadata, previously called mmpython), Python wrappers for Imlib2,
+Xine, and Evas, and many other high level APIs for easily creating applications
+that deal with video and audio.

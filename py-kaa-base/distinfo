@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/04/29 16:10:42 dhowland Exp $
+
+SHA1 (kaa-base-0.1.3.tar.gz) = 14f81db1a4890516c48eccdca0e6d722aa6cd494
+RMD160 (kaa-base-0.1.3.tar.gz) = 898f4a7b0c10c6cda3289fd7721dc7dff02048ea
+Size (kaa-base-0.1.3.tar.gz) = 122141 bytes
+SHA1 (patch-aa) = 87b3ded5bfcb7a4df25ffed0eda36a173b8bb5f2
+SHA1 (patch-ab) = e8296da4304a6baa9585f53d7aebf03c3f938769
