@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2576 2007/04/29 17:05:15 dhowland Exp $
+# $Id: Makefile,v 1.2577 2007/04/29 20:06:59 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -979,7 +979,6 @@ SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	orion
-SUBDIR+=	orpie
 SUBDIR+=	ortp
 SUBDIR+=	osmose
 SUBDIR+=	owl
