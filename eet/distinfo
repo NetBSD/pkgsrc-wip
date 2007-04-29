@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.3 2007/04/29 11:58:35 grzela1 Exp $
+
+SHA1 (eet-0.9.10.037.tar.gz) = fb2060868906ce35fc59c376125a434a92e95dab
+RMD160 (eet-0.9.10.037.tar.gz) = 4118b8dc219e1d9f76538d89c395f298349a5165
+Size (eet-0.9.10.037.tar.gz) = 351219 bytes
+SHA1 (patch-aa) = 764dd2d6b30e2a894a9215c1f1b2708cb5b4f3b6
+SHA1 (patch-ab) = 964fd342ed4eeabfbb333dcf715556b450d54ade

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.4 2007/04/29 11:58:35 grzela1 Exp $
+include/Eet.h
+lib/libeet.la
+lib/pkgconfig/eet.${LOWER_VENDOR}
