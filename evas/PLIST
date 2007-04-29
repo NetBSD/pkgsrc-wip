@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.4 2007/04/29 12:50:22 grzela1 Exp $
+bin/evas-config
+include/Evas.h
+include/Evas_Engine_Buffer.h
+include/Evas_Engine_Software_X11.h
+include/Evas_Engine_XRender_X11.h
+lib/evas/modules/engines/buffer/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/engines/software_generic/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/engines/software_x11/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/engines/xrender_x11/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/eet/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/gif/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/jpeg/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/png/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/svg/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/xpm/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/savers/eet/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/savers/jpeg/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/evas/modules/savers/png/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/libevas.la
+lib/pkgconfig/evas-software-buffer.${LOWER_VENDOR}
+lib/pkgconfig/evas-software-x11.${LOWER_VENDOR}
+lib/pkgconfig/evas-xrender-x11.${LOWER_VENDOR}
+lib/pkgconfig/evas.${LOWER_VENDOR}
+@dirrm lib/evas/modules/savers/png/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/savers/jpeg/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/savers/eet/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/xpm/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/svg/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/png/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/jpeg/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/gif/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/eet/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/engines/xrender_x11/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/engines/software_x11/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/engines/software_generic/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/evas/modules/engines/buffer/${LOWER_OPSYS}-${MACHINE_ARCH}
