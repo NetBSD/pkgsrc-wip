@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/07/23 11:23:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/04/29 15:17:34 obache Exp $
 
 DISTNAME=	Judy-1.0.3
 PKGNAME=	libjudy-1.0.3
@@ -12,6 +12,8 @@ COMMENT=	High-performance sparse dynamic array library
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+TEST_TARGET=		check
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
