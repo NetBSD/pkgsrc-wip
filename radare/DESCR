@@ -1,0 +1,9 @@
+radare is an advanced commandline hexadecimal editor
+with a set of tools for working with binary files.
+
+Most of tools that come with radare have been designed
+for reverse engineering file formats, firmwares, programs,
+libraries, etc.
+
+It has a debugger plugin that supports ptrace()
+debugging on x86/arm on Linux and BSD.
