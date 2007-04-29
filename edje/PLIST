@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.4 2007/04/29 13:12:22 grzela1 Exp $
+bin/edje-config
+bin/edje_cc
+bin/edje_decc
+bin/edje_recc
+include/Edje.h
+lib/libedje.la
+lib/pkgconfig/edje.${LOWER_VENDOR}
+share/edje/include/edje.inc
+@dirrm share/edje/include
+@dirrm share/edje
