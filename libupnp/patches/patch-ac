@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2007/04/27 17:27:39 obache Exp $
+$NetBSD: patch-ac,v 1.6 2007/04/29 00:17:17 obache Exp $
 
---- upnp/src/genlib/net/uri/uri.c.orig	2007-04-17 12:48:58.000000000 +0900
+--- upnp/src/genlib/net/uri/uri.c.orig	2007-04-28 21:02:33.000000000 +0900
 +++ upnp/src/genlib/net/uri/uri.c
-@@ -38,6 +38,7 @@
+@@ -41,6 +41,7 @@
  #endif
  #include "config.h"
  #include "uri.h"
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.5 2007/04/27 17:27:39 obache Exp $
  
  #ifdef WIN32
   #include "inet_pton.h"
-@@ -615,7 +616,7 @@ parse_hostport( const char *in,
+@@ -618,7 +619,7 @@ parse_hostport( const char *in,
          // platform-specific stuff below
  #if defined(WIN32) || defined(__CYGWIN__)
          h=gethostbyname(temp_host_name);
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.5 2007/04/27 17:27:39 obache Exp $
          errCode = gethostbyname_r( temp_host_name,
                                     &h,
                                     temp_hostbyname_buff,
-@@ -628,11 +629,30 @@ parse_hostport( const char *in,
+@@ -631,11 +632,30 @@ parse_hostport( const char *in,
          if ( h == NULL ) {
              errCode = 1;
          }

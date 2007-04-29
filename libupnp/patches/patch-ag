@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2007/04/27 17:27:39 obache Exp $
+$NetBSD: patch-ag,v 1.6 2007/04/29 00:17:17 obache Exp $
 
---- docs/dist/Makefile.in.orig	2007-04-17 13:01:02.000000000 +0900
+--- docs/dist/Makefile.in.orig	2007-04-29 02:35:37.000000000 +0900
 +++ docs/dist/Makefile.in
 @@ -737,23 +737,25 @@ distclean-libtool:
  uninstall-info-am:
