@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2575 2007/04/27 11:32:57 marttikuparinen Exp $
+# $Id: Makefile,v 1.2576 2007/04/29 17:05:15 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1281,6 +1281,7 @@ SUBDIR+=	pulseaudio
 SUBDIR+=	pwlib
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
+SUBDIR+=	py-BeautifulSoup
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CVSToys
 SUBDIR+=	py-DirectoryStorage
@@ -1326,10 +1327,12 @@ SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
 SUBDIR+=	py-jabber-yahoo-transport
+SUBDIR+=	py-kaa-base
+SUBDIR+=	py-kaa-imlib2
+SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-mecab
-SUBDIR+=	py-mmpython
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm
