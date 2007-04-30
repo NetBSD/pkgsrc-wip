@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/04/29 20:27:04 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/04/30 16:02:02 bsadewitz Exp $
 #
 
 DISTNAME=	libxcb-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
+
+LIBS+=		-lpthread-stubs
 
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-damage.pc.in

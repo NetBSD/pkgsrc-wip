@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/25 14:33:18 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/04/30 16:02:02 bsadewitz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -69,4 +69,6 @@ lib/pkgconfig/xcb-xtest.pc
 lib/pkgconfig/xcb-xv.pc
 lib/pkgconfig/xcb-xvmc.pc
 lib/pkgconfig/xcb.pc
+share/doc/libxcb/tutorial/index.html
+share/doc/libxcb/tutorial/xcb.css
 @dirrm include/xcb
