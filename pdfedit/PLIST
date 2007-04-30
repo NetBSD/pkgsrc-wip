@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/17 16:04:23 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/04/30 09:18:15 lkundrak Exp $
 bin/pdfedit
 man/man1/pdfedit.1
+share/doc/pdfedit/README
+share/doc/pdfedit/AUTHORS
 share/doc/pdfedit/LICENSE.GPL
+share/doc/pdfedit/Changelog
 share/doc/pdfedit/appendix.html
 share/doc/pdfedit/design/design_doc.html
 share/doc/pdfedit/design/images/compositepattern.png
@@ -261,6 +264,7 @@ share/pdfedit/icon/zoom_out.png
 share/pdfedit/init.qs
 share/pdfedit/init_console.qs
 share/pdfedit/lang/pdfedit_cs.qm
+share/pdfedit/lang/pdfedit_de.qm
 share/pdfedit/lang/pdfedit_es.qm
 share/pdfedit/lang/pdfedit_ru.qm
 share/pdfedit/lang/pdfedit_sk.qm

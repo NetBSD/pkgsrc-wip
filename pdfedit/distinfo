@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/04/17 16:04:23 lkundrak Exp $
+$NetBSD: distinfo,v 1.3 2007/04/30 09:18:15 lkundrak Exp $
 
-SHA1 (pdfedit-0.3.0.tar.bz2) = 78562cec1e4f6fb09cfa200c1f53bc40aec1a510
-RMD160 (pdfedit-0.3.0.tar.bz2) = 83e7e4eb9d29f22808257e7334365fd22f076936
-Size (pdfedit-0.3.0.tar.bz2) = 2643877 bytes
+SHA1 (pdfedit-0.3.1.tar.bz2) = 3629977b2b7d28d12ae397afbcd6aef677aec0e7
+RMD160 (pdfedit-0.3.1.tar.bz2) = c278f71b4656f92d3d4b347dc28ba11327432c61
+Size (pdfedit-0.3.1.tar.bz2) = 2645632 bytes
