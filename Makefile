@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2578 2007/04/30 01:47:37 obache Exp $
+# $Id: Makefile,v 1.2579 2007/04/30 05:18:36 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1091,7 +1091,6 @@ SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
-SUBDIR+=	p5-HTML-Strip
 SUBDIR+=	p5-HTML-TableContentParser
 SUBDIR+=	p5-HTML-TagCloud
 SUBDIR+=	p5-HTML-TokeParser-Simple
