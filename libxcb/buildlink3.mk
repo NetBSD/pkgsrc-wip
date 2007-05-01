@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/04/29 20:27:04 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/05/01 01:36:17 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXCB_BUILDLINK3_MK:=	${LIBXCB_BUILDLINK3_MK}+
@@ -16,6 +16,9 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.0
 BUILDLINK_PKGSRCDIR.libxcb?=	../../wip/libxcb
 .endif	# LIBXCB_BUILDLINK3_MK
 
+.include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../wip/libpthread-stubs/buildlink3.mk"
+.include "../../x11/libXdmcp/buildlink3.mk"
+.include "../../x11/libXau/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
