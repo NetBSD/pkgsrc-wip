@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/04/17 20:24:48 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/01 21:08:46 bsadewitz Exp $
 #
 
 DISTNAME=	elinks-current-unstable
@@ -18,7 +18,7 @@ CONFLICTS+=	elinks-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-256-colors --enable-utf-8
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv::+=/lib:Q}
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv:Q}/lib
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
