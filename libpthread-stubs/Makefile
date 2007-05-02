@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/04/30 15:30:12 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/02 03:30:52 bsadewitz Exp $
 
 DISTNAME=	libpthread-stubs-1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 DISTFILES=	# empty
 
