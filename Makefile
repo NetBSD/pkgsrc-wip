@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2580 2007/05/01 15:14:09 roelants Exp $
+# $Id: Makefile,v 1.2581 2007/05/02 16:19:15 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1201,7 +1201,6 @@ SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pekwm-nightly
 SUBDIR+=	perl59
-SUBDIR+=	perltidy
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
 #SUBDIR+=	php-doc			# not a package
