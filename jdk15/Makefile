@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/04/06 16:51:01 briandealwis Exp $
+# $NetBSD: Makefile,v 1.14 2007/05/02 09:29:38 absd Exp $
 
 JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
-SUN_LINUX_JDK_VERSION=	1.5.0
 
 DISTNAME=		jdk-1_5_0-src-scsl
 PKGNAME=		jdk15-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
@@ -26,9 +25,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		scsl23-license
 
-USE_TOOLS+=		gmake m4
+USE_TOOLS+=		gmake m4 patch
 USE_LANGUAGES=		c c++
-EXTRACT_CMD_OPTS.zip=	-q
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
@@ -118,7 +116,6 @@ MESSAGE_SUBST+=		MOZILLA=${MOZILLA}
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-
 SUBST_FILES.paths=	control/make/common/Defs-bsd.gmk
 SUBST_FILES.paths+=	deploy/make/common/Defs-bsd.gmk
 SUBST_FILES.paths+=	deploy/make/plugin/common/config.gmk
@@ -130,7 +127,6 @@ SUBST_FILES.paths+=	motif/lib/Xm/util/Makefile
 SUBST_FILES.paths+=	j2se/src/solaris/native/sun/awt/fontpath.c
 SUBST_FILES.paths+=	j2se/make/sun/xawt/Makefile
 SUBST_FILES.paths+=	j2se/make/sun/awt/mawt.gmk
-
 SUBST_SED.paths=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 SUBST_SED.paths+=	-e 's,%%X11BASE%%,${X11BASE},g'
 SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
@@ -149,7 +145,7 @@ post-extract:
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -p0 -E -s <jdk15.patches
-	@${FIND} ${WRKSRC}/ -name '*.orig' -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC}/ -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
