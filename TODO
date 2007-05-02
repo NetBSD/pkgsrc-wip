@@ -1,6 +1,6 @@
 Suggested package updates
 
-	o aircrack-ng-0.6.1
+	o aircrack-ng-0.8
 	o avahi-0.6.18
 	o cdrtools-devel-2.01.01a24
 	o chora-2.0.1
@@ -13,7 +13,7 @@ Suggested package updates
 	o endeavour-2.8.1
 	o fakenes-0.5.7
 	o gambas-1.9.46
-	o gcompris-8.2.2
+	o gcompris-8.3.1
 	o geant-4.8.2p1
 	o gforge-4.5.11
 	o gimmie-0.2.6
@@ -40,6 +40,7 @@ Suggested package updates
 	o openct-0.6.11
 	o osmose-0.8.1
 	o parted-1.8.0
+	o pike-7.6.112
 	o py-PyPE-2.8.5
 	o rdup-0.3.8
 	o rezound-0.12.3beta
@@ -58,7 +59,7 @@ Suggested package updates
 	o tmw-0.0.22.2
 	o tripwire-2.4.0.1
 	o txt2tags-2.3.2
-	o uade-2.06
+	o uade-2.07
 	o uqm-0.6.0
 	o vmac-2.8.2
 	o xaralx-bin-0.7.1692
