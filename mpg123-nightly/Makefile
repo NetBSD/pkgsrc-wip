@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/04/23 17:41:53 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/04 05:09:41 bsadewitz Exp $
 
 DISTNAME=	mpg123-${MPG123_VERSION}
+PKGREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	blair.sadewitz@gmail.com
