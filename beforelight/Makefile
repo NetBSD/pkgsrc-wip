@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/25 16:15:14 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/04 05:12:19 bsadewitz Exp $
 #
 
 DISTNAME=	beforelight-1.0.2
@@ -11,7 +11,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Beforelight screensaver from modular X.org
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	pkg-config
