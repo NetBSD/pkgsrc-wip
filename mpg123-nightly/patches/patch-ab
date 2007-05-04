@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2007/04/23 17:41:54 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/04 04:48:26 bsadewitz Exp $
 
---- configure.ac.orig	2007-04-23 13:17:17.000000000 -0400
+--- configure.ac.orig	2007-05-04 00:47:11.000000000 -0400
 +++ configure.ac
-@@ -268,6 +268,25 @@ case $target in
-   *-pc-cygwin*)
-     cpu_type="generic_fpu"
+@@ -368,6 +368,25 @@ case $cpu_type in
+   x86) 
+     CFLAGS="$CFLAGS -DOPT_MULTI -DOPT_GENERIC -DOPT_I386 -DOPT_I586 -DOPT_I586_DITHER -DOPT_MMX -DOPT_3DNOW -DOPT_3DNOWEXT -DOPT_SSE -DREAL_IS_FLOAT"
    ;;
 +  arm-*-netbsd*)
 +    # check that... perhaps we are better off on arm with kernel math emulation
@@ -26,5 +26,5 @@ $NetBSD: patch-ab,v 1.1 2007/04/23 17:41:54 bsadewitz Exp $
 +    cpu_type="generic_fpu"
 +  ;;
    *)
-   	AC_MSG_WARN([Unknown target operating system])
-     cpu_type="generic_fpu"
+   	AC_MSG_ERROR([Unknown CPU type '$cpu_type'])
+   ;;
