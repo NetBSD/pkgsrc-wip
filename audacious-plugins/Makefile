@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/04/14 22:17:12 netcap Exp $
+# $NetBSD: Makefile,v 1.17 2007/05/04 22:28:23 netcap Exp $
 #
 
-DISTNAME=		audacious-plugins-1.3.3
+DISTNAME=		audacious-plugins-1.3.4
 CATEGORIES=		audio
 MASTER_SITES=		http://static.audacious-media-player.org/release/
 EXTRACT_SUFX=		.tgz
@@ -30,7 +30,6 @@ CFLAGS+=	-I. -I../libflac -Ilibflac
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 			--disable-coreaudio --disable-projectm \
-			--disable-lame
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
@@ -117,13 +116,12 @@ CONFIGURE_ARGS+=	--enable-lirc
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
-.include "../../audio/libsidplay/buildlink3.mk"
-#.include "../../audio/libsidplay2/buildlink3.mk"
+.include "../../audio/libsidplay2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
-#.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
