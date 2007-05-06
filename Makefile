@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2581 2007/05/02 16:19:15 kristerw Exp $
+# $Id: Makefile,v 1.2582 2007/05/06 13:03:35 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -627,7 +627,6 @@ SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
 SUBDIR+=	java-mecab
 SUBDIR+=	java-muse
-SUBDIR+=	java-qdbm
 SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
