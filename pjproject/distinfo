@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/07 15:07:08 lkundrak Exp $
+
+SHA1 (pjproject-0.5.10.3.tar.gz) = cef5542354ca1d5ce1659ff6a2e7486668a8d290
+RMD160 (pjproject-0.5.10.3.tar.gz) = 6c47b93fe5eeb8cf99f69e91fae85eb951f53d8b
+Size (pjproject-0.5.10.3.tar.gz) = 2303854 bytes
