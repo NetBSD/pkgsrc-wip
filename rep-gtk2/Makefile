@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/24 14:57:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2007/05/07 19:13:37 tnn2 Exp $
 
 DISTNAME=		rep-gtk-0.18
 PKGNAME=		rep-gtk2-0.18
@@ -9,7 +9,7 @@ MAINTAINER=		tnn+nbsd@nygren.pp.se
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
 COMMENT=		librep bindings for gtk2 (used by sawfish)
 
-DEPENDS+=		librep>=0.17:../../lang/librep
+DEPENDS+=		librep>=0.17nb3:../../lang/librep
 DEPENDS+=		gtk2+>=2.4.0:../../x11/gtk2
 
 CONFLICTS=		rep-gtk-[0-9]*
