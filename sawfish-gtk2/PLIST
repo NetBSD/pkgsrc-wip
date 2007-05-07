@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:37 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/05/07 18:58:33 tnn2 Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-ui
@@ -7,15 +7,16 @@ libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish/client.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
+libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/flippers.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/gradient.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/play-sample.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/selection.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util/x.la
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-about
-libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish-menu
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/selection.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/x.la
+share/gnome/wm-properties/Sawfish.desktop
 share/locale/am/LC_MESSAGES/sawfish.mo
 share/locale/az/LC_MESSAGES/sawfish.mo
 share/locale/be/LC_MESSAGES/sawfish.mo
@@ -58,6 +59,66 @@ share/locale/wa/LC_MESSAGES/sawfish.mo
 share/locale/zh_CN/LC_MESSAGES/sawfish.mo
 share/locale/zh_TW/LC_MESSAGES/sawfish.mo
 share/pixmaps/sawfish-logo.png
+share/sawfish/${SF_VERS}/lisp/anim-outline.jl
+share/sawfish/${SF_VERS}/lisp/anim-outline.jlc
+share/sawfish/${SF_VERS}/lisp/audio-events.jl
+share/sawfish/${SF_VERS}/lisp/audio-events.jlc
+share/sawfish/${SF_VERS}/lisp/auto-raise.jl
+share/sawfish/${SF_VERS}/lisp/auto-raise.jlc
+share/sawfish/${SF_VERS}/lisp/beos-window-menu.jl
+share/sawfish/${SF_VERS}/lisp/beos-window-menu.jlc
+share/sawfish/${SF_VERS}/lisp/custom.jl
+share/sawfish/${SF_VERS}/lisp/custom.jlc
+share/sawfish/${SF_VERS}/lisp/customize.jl
+share/sawfish/${SF_VERS}/lisp/customize.jlc
+share/sawfish/${SF_VERS}/lisp/cycle.jl
+share/sawfish/${SF_VERS}/lisp/cycle.jlc
+share/sawfish/${SF_VERS}/lisp/decode-events.jl
+share/sawfish/${SF_VERS}/lisp/decode-events.jlc
+share/sawfish/${SF_VERS}/lisp/describe.jl
+share/sawfish/${SF_VERS}/lisp/describe.jlc
+share/sawfish/${SF_VERS}/lisp/edge-flip.jl
+share/sawfish/${SF_VERS}/lisp/edge-flip.jlc
+share/sawfish/${SF_VERS}/lisp/edges.jl
+share/sawfish/${SF_VERS}/lisp/edges.jlc
+share/sawfish/${SF_VERS}/lisp/error-handler.jl
+share/sawfish/${SF_VERS}/lisp/error-handler.jlc
+share/sawfish/${SF_VERS}/lisp/gnome-commands.jl
+share/sawfish/${SF_VERS}/lisp/gnome-commands.jlc
+share/sawfish/${SF_VERS}/lisp/gnome-int.jl
+share/sawfish/${SF_VERS}/lisp/gnome-int.jlc
+share/sawfish/${SF_VERS}/lisp/gnome-match.jl
+share/sawfish/${SF_VERS}/lisp/gnome-match.jlc
+share/sawfish/${SF_VERS}/lisp/gnome-menu.jl
+share/sawfish/${SF_VERS}/lisp/gnome-menu.jlc
+share/sawfish/${SF_VERS}/lisp/gnome.jl
+share/sawfish/${SF_VERS}/lisp/gnome.jlc
+share/sawfish/${SF_VERS}/lisp/group-funs.jl
+share/sawfish/${SF_VERS}/lisp/group-funs.jlc
+share/sawfish/${SF_VERS}/lisp/groups.jl
+share/sawfish/${SF_VERS}/lisp/groups.jlc
+share/sawfish/${SF_VERS}/lisp/grow-pack.jl
+share/sawfish/${SF_VERS}/lisp/grow-pack.jlc
+share/sawfish/${SF_VERS}/lisp/gtkrc.jl
+share/sawfish/${SF_VERS}/lisp/gtkrc.jlc
+share/sawfish/${SF_VERS}/lisp/keymap.jl
+share/sawfish/${SF_VERS}/lisp/keymap.jlc
+share/sawfish/${SF_VERS}/lisp/make-theme.jl
+share/sawfish/${SF_VERS}/lisp/make-theme.jlc
+share/sawfish/${SF_VERS}/lisp/match-window.jl
+share/sawfish/${SF_VERS}/lisp/match-window.jlc
+share/sawfish/${SF_VERS}/lisp/maximize.jl
+share/sawfish/${SF_VERS}/lisp/maximize.jlc
+share/sawfish/${SF_VERS}/lisp/menus.jl
+share/sawfish/${SF_VERS}/lisp/menus.jlc
+share/sawfish/${SF_VERS}/lisp/move-resize.jl
+share/sawfish/${SF_VERS}/lisp/move-resize.jlc
+share/sawfish/${SF_VERS}/lisp/old-window-menu.jl
+share/sawfish/${SF_VERS}/lisp/old-window-menu.jlc
+share/sawfish/${SF_VERS}/lisp/prompt.jl
+share/sawfish/${SF_VERS}/lisp/prompt.jlc
+share/sawfish/${SF_VERS}/lisp/rects.jl
+share/sawfish/${SF_VERS}/lisp/rects.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/gtk/color-preview.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/gtk/color-preview.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/gtk/stock.jl
@@ -120,9 +181,13 @@ share/sawfish/${SF_VERS}/lisp/sawfish/ui/widgets/workspace-geometry.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/ui/widgets/workspace-geometry.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/ui/wm.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/ui/wm.jlc
+share/sawfish/${SF_VERS}/lisp/sawfish/wm.jl
+share/sawfish/${SF_VERS}/lisp/sawfish/wm.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/animation/outline.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/animation/outline.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/autoload.jl
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands.jl
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/cycle.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/cycle.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/describe.jl
@@ -153,8 +218,6 @@ share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/x-cycle.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/x-cycle.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/xterm.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands/xterm.jlc
-share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands.jl
-share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/cursors.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/cursors.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/custom-defaults.jl
@@ -209,6 +272,8 @@ share/sawfish/${SF_VERS}/lisp/sawfish/wm/menus.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/menus.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/misc.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/misc.jlc
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement.jl
+share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/off-center.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/off-center.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/smart.jl
@@ -217,8 +282,6 @@ share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/stagger.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/stagger.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/top-left.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement/top-left.jlc
-share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement.jl
-share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/server.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/server.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/session/init.jl
@@ -311,8 +374,26 @@ share/sawfish/${SF_VERS}/lisp/sawfish/wm/windows.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/windows.jlc
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/workspace.jl
 share/sawfish/${SF_VERS}/lisp/sawfish/wm/workspace.jlc
-share/sawfish/${SF_VERS}/lisp/sawfish/wm.jl
-share/sawfish/${SF_VERS}/lisp/sawfish/wm.jlc
+share/sawfish/${SF_VERS}/lisp/sawmill-defaults.jl
+share/sawfish/${SF_VERS}/lisp/sawmill-defaults.jlc
+share/sawfish/${SF_VERS}/lisp/shade-hover.jl
+share/sawfish/${SF_VERS}/lisp/shade-hover.jlc
+share/sawfish/${SF_VERS}/lisp/shading.jl
+share/sawfish/${SF_VERS}/lisp/shading.jlc
+share/sawfish/${SF_VERS}/lisp/tooltips.jl
+share/sawfish/${SF_VERS}/lisp/tooltips.jlc
+share/sawfish/${SF_VERS}/lisp/viewport-linear.jl
+share/sawfish/${SF_VERS}/lisp/viewport-linear.jlc
+share/sawfish/${SF_VERS}/lisp/window-history.jl
+share/sawfish/${SF_VERS}/lisp/window-history.jlc
+share/sawfish/${SF_VERS}/lisp/window-order.jl
+share/sawfish/${SF_VERS}/lisp/window-order.jlc
+share/sawfish/${SF_VERS}/lisp/window-outline.jl
+share/sawfish/${SF_VERS}/lisp/window-outline.jlc
+share/sawfish/${SF_VERS}/lisp/with-output.jl
+share/sawfish/${SF_VERS}/lisp/with-output.jlc
+share/sawfish/${SF_VERS}/lisp/x-cycle.jl
+share/sawfish/${SF_VERS}/lisp/x-cycle.jlc
 share/sawfish/${SF_VERS}/monitor.png
 share/sawfish/${SF_VERS}/sounds/activate.wav
 share/sawfish/${SF_VERS}/sounds/clicked.wav
@@ -530,3 +611,41 @@ share/sawfish/${SF_VERS}/themes/smaker/close_inv.png
 share/sawfish/${SF_VERS}/themes/smaker/min.png
 share/sawfish/${SF_VERS}/themes/smaker/min_inv.png
 share/sawfish/${SF_VERS}/themes/smaker/theme.jl
+@dirrm libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util
+@dirrm libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish/wm
+@dirrm libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/sawfish
+@dirrm libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/sawfish/${SF_VERS}
+@dirrm libexec/sawfish
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/gtk/widgets
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/gtk
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/ui/layouts
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/ui/widgets
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/ui
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/animation
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/commands
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/ext
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/gnome
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/placement
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/session
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/state
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/theming
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm/util
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish/wm
+@dirrm share/sawfish/${SF_VERS}/lisp/sawfish
+@dirrm share/sawfish/${SF_VERS}/lisp
+@dirrm share/sawfish/${SF_VERS}/sounds
+@dirrm share/sawfish/${SF_VERS}/themes/Crux
+@dirrm share/sawfish/${SF_VERS}/themes/absolute-e
+@dirrm share/sawfish/${SF_VERS}/themes/brushed-metal
+@dirrm share/sawfish/${SF_VERS}/themes/gradient
+@dirrm share/sawfish/${SF_VERS}/themes/gtk
+@dirrm share/sawfish/${SF_VERS}/themes/microGUI
+@dirrm share/sawfish/${SF_VERS}/themes/mono
+@dirrm share/sawfish/${SF_VERS}/themes/simple
+@dirrm share/sawfish/${SF_VERS}/themes/smaker
+@dirrm share/sawfish/${SF_VERS}/themes
+@dirrm share/sawfish/${SF_VERS}
+@dirrm share/sawfish/sounds
+@dirrm share/sawfish/themes
+@dirrm share/sawfish

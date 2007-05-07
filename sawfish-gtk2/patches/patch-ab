@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1 2007/05/07 18:58:33 tnn2 Exp $
+
+--- src/main.c.orig	2003-01-12 21:35:23.000000000 +0100
++++ src/main.c
+@@ -50,7 +50,7 @@
+ int exit_code = ec_no_exit;
+ 
+ /* Saved value of argv[0] */
+-static char *prog_name;
++static char *prog_name_main;
+ 
+ DEFSYM(sawfish_directory, "sawfish-directory");
+ DEFSYM(sawfish_lisp_lib_directory, "sawfish-lisp-lib-directory");
+@@ -346,9 +346,9 @@ main(int argc, char **argv)
+     g_type_init();
+ #endif
+ 
+-    prog_name = *argv++; argc--;
++    prog_name_main = *argv++; argc--;
+     lang = setlocale(LC_ALL, "");
+-    rep_init (prog_name, &argc, &argv, 0, 0);
++    rep_init (prog_name_main, &argc, &argv, 0, 0);
+     stash_argv (old_argc, old_argv);
+ 
+     if (rep_get_option ("--version", 0))
+@@ -384,7 +384,7 @@ where OPTIONS are any of:\n\
+ \n\
+     --version		print version details\n\
+     --no-rc		don't load rc or site-init files\n\
+-    --quit, -q		terminate the interpreter process\n", prog_name);
++    --quit, -q		terminate the interpreter process\n", prog_name_main);
+ 	return 0;
+    }
+ 
+@@ -394,7 +394,7 @@ where OPTIONS are any of:\n\
+ 
+     rep_push_structure ("sawfish.wm");
+ 
+-    if (sys_init(prog_name))
++    if (sys_init(prog_name_main))
+     {
+ 	sawfish_symbols();
+ 
