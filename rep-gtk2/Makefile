@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/05/07 19:13:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2007/05/07 19:21:24 tnn2 Exp $
 
 DISTNAME=		rep-gtk-0.18
 PKGNAME=		rep-gtk2-0.18
+PKGREVISION=		1
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 
