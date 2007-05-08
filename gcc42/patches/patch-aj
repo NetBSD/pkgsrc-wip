@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2007/05/08 03:35:17 bsadewitz Exp $
+
+--- gcc/opts.c.orig	2007-03-23 04:06:40.000000000 -0400
++++ gcc/opts.c
+@@ -31,7 +31,7 @@ Software Foundation, 51 Franklin Street,
+ #include "output.h"
+ #include "langhooks.h"
+ #include "opts.h"
+-#include "options.h"
++#include "../../obj/gcc/options.h"
+ #include "flags.h"
+ #include "toplev.h"
+ #include "params.h"
