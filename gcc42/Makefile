@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/05/08 03:35:16 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/08 04:03:21 bsadewitz Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-${SNAP_DATE}
@@ -101,7 +101,6 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--disable-libssp
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
-USE_GNU_ICONV=		yes
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
 UNLIMIT_RESOURCES+=	datasize
