@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2582 2007/05/06 13:03:35 obache Exp $
+# $Id: Makefile,v 1.2583 2007/05/09 09:51:28 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1401,7 +1401,6 @@ SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
-SUBDIR+=	rep-gtk2
 SUBDIR+=	rgb
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
@@ -1421,7 +1420,6 @@ SUBDIR+=	runit
 SUBDIR+=	samhain
 SUBDIR+=	sara
 SUBDIR+=	sarg
-SUBDIR+=	sawfish-gtk2
 SUBDIR+=	scare
 SUBDIR+=	scim
 SUBDIR+=	scim-anthy
