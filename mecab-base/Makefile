@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2007/04/01 02:19:13 obache Exp $
+# $NetBSD: Makefile,v 1.11 2007/05/09 13:21:10 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
 
 DISTNAME=		mecab-${MECAB_VERSION}
 PKGNAME=		mecab-base-${MECAB_VERSION}
-CATEGORIES=		japanese textproc
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mecab/}
 
-MAINTAINER=		obache@NetBSD.org
-HOMEPAGE=		http://mecab.sourceforge.net/
 COMMENT=		Yet Another Part-of-Speech and Morphological Analyzer
 
 GNU_CONFIGURE=		yes

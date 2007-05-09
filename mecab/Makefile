@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/09 13:21:09 obache Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	mecab-${MECAB_VERSION}
-CATEGORIES=	japanese textproc
-MASTER_SITES=	#empty
 DISTFILES=	#empty
 
-MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://mecab.sourceforge.net/
 COMMENT=	Yet Another Part-of-Speech and Morphological Analyzer
 
-DEPENDS+=	mecab-base>=${MECAB_VERSION}:../../wip/mecab-base
 DEPENDS+=	{mecab-ipadic>=2.7.0,mecab-jumandic>=5.1}:../../wip/mecab-ipadic
 
 NO_CHECKSUM=	yes
@@ -20,4 +15,5 @@ NO_BUILD=	yes
 
 do-install:	#empty
 
+.include "../../wip/mecab-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

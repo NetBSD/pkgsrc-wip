@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.10 2007/05/09 13:21:09 obache Exp $
 #
 
 .include "../../wip/mecab/Makefile.common"
 
 DISTNAME=	mecab-java-${MECAB_VERSION}
 PKGNAME=	java-mecab-${MECAB_VERSION}
-CATEGORIES=	japanese textproc java
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mecab/}
+CATEGORIES+=	java
 
-MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://mecab.sourceforge.net/
 COMMENT=	MeCab java module
 
 USE_LANGUAGES=	c++
