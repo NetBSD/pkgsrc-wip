@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2007/05/09 07:48:05 koifren Exp $
+$NetBSD: distinfo,v 1.4 2007/05/09 08:07:25 koifren Exp $
 
 SHA1 (openbgpd/hash.h) = d813343b0780318baa2b9fde747e462ba158060b
 RMD160 (openbgpd/hash.h) = ee944d79046a5863a7a7137ae325a4c5c0ab1927
@@ -22,7 +22,7 @@ SHA1 (patch-ad) = 4c7843de4b4bf68a18c129cb2676ff928e9898ed
 SHA1 (patch-ae) = 80ff017419e805c367e9e3df37bc0a1020476526
 SHA1 (patch-af) = af8327681ca7c044abded798f9a877207e7d7c1e
 SHA1 (patch-ag) = cf2f53d8d8f803c3da08c4026443fb52b0c31278
-SHA1 (patch-ah) = f707088230b51fcff97573077e38ea7589cbf12a
+SHA1 (patch-ah) = 9b5c90b6bdfe4c3c183548e8ed961532bf525f67
 SHA1 (patch-ai) = a5d09ff87ebfe35c341c772e48be628edd2dd2ad
 SHA1 (patch-aj) = c9af0d58136dd66d8217cb9c688640b6acd86936
 SHA1 (patch-ak) = 3adf5029b7a3ab8ae27babc792c645e55e959b6b
