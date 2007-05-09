@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.2 2007/04/04 16:07:54 dillo Exp $
+$NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
 
---- src/tools/tools.mak.orig	2007-04-02 23:49:40.000000000 +0200
+--- src/tools/tools.mak.orig	2007-05-06 18:50:35.000000000 +0200
 +++ src/tools/tools.mak
 @@ -49,7 +49,7 @@ FILE2STROBJS = \
  

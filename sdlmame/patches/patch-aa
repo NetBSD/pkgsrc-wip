@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
+$NetBSD: patch-aa,v 1.4 2007/05/09 19:07:59 dillo Exp $
 
---- makefile.orig	2007-03-30 09:03:29.000000000 +0200
+--- makefile.orig	2007-04-27 16:14:59.000000000 +0200
 +++ makefile
-@@ -64,10 +64,10 @@ SUBARCH = linux
+@@ -64,10 +64,10 @@ SUBARCH = unix
  # DEBUG = 1    
   
  # uncomment next line to use DRC MIPS3 engine
@@ -24,8 +24,8 @@ $NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
  # AMD64 = 1
  # G4 = 1
  # G5 = 1
-@@ -173,9 +173,9 @@ endif
- 
+@@ -183,9 +183,9 @@ EXE = .exe
+ endif
  
  # compiler, linker and utilities
 -AR = @ar
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
  MD = -mkdir
  RM = @rm -f
  
-@@ -191,7 +191,7 @@ MESS=1
+@@ -201,7 +201,7 @@ MESS=1
  endif
  
  # by default, don't compile for a specific target CPU
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
  ARCH = 
  
  # architecture-specific builds get extra options
-@@ -253,15 +253,7 @@ SRC = src
+@@ -263,15 +263,7 @@ SRC = src
  # compile-time definitions
  #-------------------------------------------------
  
@@ -63,13 +63,16 @@ $NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
  
  ifdef PTR64
  DEFS += -DPTR64
-@@ -313,25 +305,24 @@ CFLAGS += $(ARCH) \
- 	-Wstrict-prototypes \
- 	-Wundef \
+@@ -325,26 +317,26 @@ CFLAGS += $(ARCH) \
  	-Wformat-security \
--	-Wwrite-strings \
--	-Wdeclaration-after-statement
-+	-Wwrite-strings
+ 	-Wwrite-strings
+ 
+-ifneq ($(SUBARCH),os2)
+-CFLAGS += -Wdeclaration-after-statement
+-endif
++#ifneq ($(SUBARCH),os2)
++#CFLAGS += -Wdeclaration-after-statement
++#endif
  
  ifneq ($(OPTIMIZE),0)
  CFLAGS += -DNDEBUG $(ARCH) -fno-strict-aliasing
@@ -97,7 +100,7 @@ $NetBSD: patch-aa,v 1.3 2007/04/04 16:07:54 dillo Exp $
  
  ifdef MAP
  MAPFLAGS = -Wl,-Map,$(NAME).map
-@@ -475,7 +466,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
+@@ -494,7 +486,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
  # always recompile the version string
  	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
  	@echo Linking $@...

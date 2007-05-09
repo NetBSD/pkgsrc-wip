@@ -1,22 +1,22 @@
-$NetBSD: patch-ad,v 1.2 2007/03/06 15:26:12 dillo Exp $
+$NetBSD: patch-ad,v 1.3 2007/05/09 19:07:59 dillo Exp $
 
---- src/osd/sdl/sdlfile.c.orig	2007-03-05 01:23:53.000000000 +0100
+--- src/osd/sdl/sdlfile.c.orig	2007-05-03 18:09:34.000000000 +0200
 +++ src/osd/sdl/sdlfile.c
-@@ -248,7 +248,7 @@ mame_file_error osd_read(osd_file *file,
+@@ -252,7 +252,7 @@ file_error osd_read(osd_file *file, void
  {
  	UINT32 result;
  
--#if defined(SDLMAME_MACOSX) || defined(SDLMAME_FREEBSD)
-+#if defined(SDLMAME_MACOSX) || defined(SDLMAME_FREEBSD) || defined(__NetBSD__)
+-#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD)
++#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD) || defined(__NetBSD__)
  	result = pread(file->handle, buffer, count, offset);
  	if (!result)
- #elif defined(SDLMAME_LINUX)
-@@ -276,7 +276,7 @@ mame_file_error osd_write(osd_file *file
+ #elif defined(SDLMAME_WIN32) || defined(SDLMAME_NO64BITIO) || defined(SDLMAME_OS2)
+@@ -280,7 +280,7 @@ file_error osd_write(osd_file *file, con
  {
  	UINT32 result;
  
--#if defined(SDLMAME_MACOSX) || defined(SDLMAME_FREEBSD)
-+#if defined(SDLMAME_MACOSX) || defined(SDLMAME_FREEBSD) || defined(__NetBSD__)
+-#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD)
++#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD) || defined(__NetBSD__)
  	result = pwrite(file->handle, buffer, count, offset);
  	if (!result)
- #elif defined(SDLMAME_LINUX)
+ #elif defined(SDLMAME_WIN32) || defined(SDLMAME_NO64BITIO) || defined(SDLMAME_OS2)

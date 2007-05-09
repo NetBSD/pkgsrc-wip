@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2007/03/06 15:26:12 dillo Exp $
+$NetBSD: patch-ae,v 1.2 2007/05/09 19:07:59 dillo Exp $
 
---- src/osd/sdl/sdldir.c.orig	2007-02-04 03:06:36.000000000 +0100
+--- src/osd/sdl/sdldir.c.orig	2007-04-27 17:16:56.000000000 +0200
 +++ src/osd/sdl/sdldir.c
-@@ -23,6 +23,7 @@
+@@ -26,6 +26,7 @@
  #include <string.h>
  #define __USE_BSD	// to get DT_xxx on Linux
  #undef _POSIX_C_SOURCE  // to get DT_xxx on OS X
