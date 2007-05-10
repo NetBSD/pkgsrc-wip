@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2583 2007/05/09 09:51:28 tnn2 Exp $
+# $Id: Makefile,v 1.2584 2007/05/10 20:45:57 ekamperi Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -428,6 +428,7 @@ SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
 SUBDIR+=	gtk2-engines-galaxy
 SUBDIR+=	gtk2-engines-magichicken
+SUBDIR+=	gtk2-engines-murrine
 SUBDIR+=	gtk2-engines-qt
 SUBDIR+=	gtk2-theme-pack
 SUBDIR+=	gtkada
