@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/05/02 03:30:52 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.10 2007/05/10 18:09:24 bsadewitz Exp $
 
 DISTNAME=	libpthread-stubs-1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 DISTFILES=	# empty
 
@@ -25,6 +25,6 @@ SUBST_VARS.pc+=		PKGVERSION PKGCONFIG_BASE PREFIX
 
 do-extract:
 	${CP} ${FILESDIR}/pthread-stubs.c ${FILESDIR}/Makefile \
-	${FILESDIR}/pthread-stubs.pc ${WRKSRC}
+	${FILESDIR}/pthread-stubs.pc ${FILESDIR}/pth.sym ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
