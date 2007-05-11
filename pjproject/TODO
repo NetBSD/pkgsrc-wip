@@ -1,1 +1,3 @@
-Everything needs to be done.
+Split into PJSUA and PJMEDIA, buildlink3
+Shared libraties
+NetBSD patches, tweak OSS emulation compatibility

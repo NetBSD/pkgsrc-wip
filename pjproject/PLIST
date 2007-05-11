@@ -1,1 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/07 15:07:08 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/11 12:41:07 lkundrak Exp $
+bin/confsample-${MACHINE_GNU_PLATFORM}-gnu
+bin/level-${MACHINE_GNU_PLATFORM}-gnu
+bin/pjlib-test-${MACHINE_GNU_PLATFORM}-gnu
+bin/pjlib-util-test-${MACHINE_GNU_PLATFORM}-gnu
+bin/pjsip-perf-${MACHINE_GNU_PLATFORM}-gnu
+bin/pjsip-test-${MACHINE_GNU_PLATFORM}-gnu
+bin/pjsua-${MACHINE_GNU_PLATFORM}-gnu
+bin/playfile-${MACHINE_GNU_PLATFORM}-gnu
+bin/playsine-${MACHINE_GNU_PLATFORM}-gnu
+bin/recfile-${MACHINE_GNU_PLATFORM}-gnu
+bin/resampleplay-${MACHINE_GNU_PLATFORM}-gnu
+bin/simple_pjsua-${MACHINE_GNU_PLATFORM}-gnu
+bin/simpleua-${MACHINE_GNU_PLATFORM}-gnu
+bin/siprtp-${MACHINE_GNU_PLATFORM}-gnu
+bin/sipstateless-${MACHINE_GNU_PLATFORM}-gnu
+bin/sndinfo-${MACHINE_GNU_PLATFORM}-gnu
+bin/sndtest-${MACHINE_GNU_PLATFORM}-gnu
+bin/stateful_proxy-${MACHINE_GNU_PLATFORM}-gnu
+bin/stateless_proxy-${MACHINE_GNU_PLATFORM}-gnu
+bin/streamutil-${MACHINE_GNU_PLATFORM}-gnu
+bin/tonegen-${MACHINE_GNU_PLATFORM}-gnu
+lib/libpj-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjlib-util-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjmedia-codec-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjmedia-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjsdp-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjsip-simple-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjsip-ua-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjsip-${MACHINE_GNU_PLATFORM}-gnu.a
+lib/libpjsua-${MACHINE_GNU_PLATFORM}-gnu.a
