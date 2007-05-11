@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2007/05/11 12:03:52 obache Exp $
+
+--- gencat/genlib.c.orig	2006-08-02 18:11:44.000000000 +0000
++++ gencat/genlib.c
+@@ -54,7 +54,7 @@ up-to-date.  Many thanks.
+ #include <unistd.h>
+ #endif
+ 
+-#ifndef __linux__
++#if 0
+ #include <memory.h>
+ static int bcopy(src, dst, length)
+ char *src, *dst;

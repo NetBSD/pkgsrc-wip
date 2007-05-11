@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/11 12:03:52 obache Exp $
 #
 
-DISTNAME=		man-1.5p
+DISTNAME=		man-1.6e
 CATEGORIES=		sysutils
 # the metalab should be added to bsd.sites.mk
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/doctools/man/} \
-			ftp://ftp.win.tue.nl/pub/linux-local/utils/man/ \
+			http://primates.ximian.com/~flucifredi/man/ \
+			http://www.people.fas.harvard.edu/~lucifred/man/ \
 			ftp://metalab.unc.edu/pub/Linux/apps/doctools/man/
-#			ftp://ftp.XX.kernel.org/pub/linux/utils/man/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		ftp://ftp.win.tue.nl/pub/linux-local/utils/man/
+HOMEPAGE=		http://primates.ximian.com/~flucifredi/man/
 COMMENT=		Man page viewer and utilities
 
 CONFLICTS+=		man-db-[0-9]*
 
-#DEPENDS on groff
+USE_TOOLS+=		groff:run
 
 PKGMANDIR?=		man
 USE_PKGLOCALEDIR=	yes
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	-mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		deflocale=${PREFIX}/${PKGLOCALEDIR}/locale/
 
 MAN_GROUP?=		man
-BUILD_DEFS=		MAN_GROUP
+BUILD_DEFS+=		MAN_GROUP
 PKG_GROUPS=		${MAN_GROUP}
 
 EXAMPLESDIR=		${PREFIX}/share/examples/man/

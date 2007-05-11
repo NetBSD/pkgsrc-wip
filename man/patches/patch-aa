@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/11 12:03:52 obache Exp $
 
---- src/Makefile.in.orig	2005-01-07 17:56:13.000000000 -0800
+--- src/Makefile.in.orig	2006-07-19 04:28:47.000000000 +0000
 +++ src/Makefile.in
 @@ -97,19 +97,19 @@ makewhatis: makewhatis.sh Makefile
- 	    -e 's,%awk%,@awk@,' makewhatis.sh > makewhatis
+ 	../conf_script makewhatis
  	chmod +x makewhatis
  
 -MANCONFIG=$(DESTDIR)$(PREFIX)@man_config_file@

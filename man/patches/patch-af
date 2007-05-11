@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2007/05/11 12:03:52 obache Exp $
+
+--- msgs/mess.ru.orig	2005-08-20 23:26:06.000000000 +0000
++++ msgs/mess.ru
+@@ -115,7 +115,7 @@ ADDING_MANDIRS
+ CATNAME_IS
+ 	"cat_name в convert_to_cat(): %s\n"
+ NO_EXEC
+-	"\команда не выполнена:\n  %s\n"
++	"?команда не выполнена:\n  %s\n"
+ USAGE1
+ 	"Использование: %s [-adfhktwW] [раздел] [-M путь] [-P просмотрщик] [-S список]\n\t"
+ USAGE2

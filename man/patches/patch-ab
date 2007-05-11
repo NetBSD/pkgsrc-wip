@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/11 12:03:52 obache Exp $
 
---- man2html/Makefile.in.orig	2005-01-07 16:49:37.000000000 -0800
+--- man2html/Makefile.in.orig	2006-04-25 06:44:15.000000000 +0000
 +++ man2html/Makefile.in
 @@ -1,8 +1,8 @@
  CC = @CC@
@@ -13,15 +13,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/02 07:09:26 jeremy-c-reed Exp $
  vardir = $(DESTDIR)$(PREFIX)/var
  httpdir = $(DESTDIR)$(PREFIX)/home/httpd
  cgiowner = nobody
-@@ -17,9 +17,9 @@ man2html:	$(OBJECTS)
- 
+@@ -18,9 +18,9 @@ man2html:	$(OBJECTS)
  # This installs the man2html utility
  install:	man2html
+ 	mkdir -p $(bindir)
 -	install -m 755 man2html $(bindir)
-+	install -c -m 755 man2html $(bindir)
++	$(BSD_INSTALL_PROGRAM) man2html $(bindir)
  	mkdir -p $(mandir)/man1
 -	install -m 644 man2html.1 $(mandir)/man1/man2html.@man1ext@
-+	install -c -m 644 man2html.1 $(mandir)/man1/man2html.@man1ext@
++	$(BSD_INSTALL_MAN) man2html.1 $(mandir)/man1/man2html.@man1ext@
  
  install-scripts: install-man-scripts install-glimpse-stuff install-hman
  
