@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.3 2007/02/17 10:19:23 cheusov Exp $
+$NetBSD: distinfo,v 1.4 2007/05/12 20:21:11 cheusov Exp $
 
-SHA1 (heirloom-070115.tar.bz2) = d4e9b9139c7e273cc049cad5f0f847f6f0e3a962
-RMD160 (heirloom-070115.tar.bz2) = 16cc8cc5cde09f28f755318731a5176a45d8c11e
-Size (heirloom-070115.tar.bz2) = 994232 bytes
+SHA1 (heirloom-070227.tar.bz2) = 6c5fd48c0965123a4e1702e1879513bb4a0ab28b
+RMD160 (heirloom-070227.tar.bz2) = 1f86796404151deb15ad571416c0570c06a56ad5
+Size (heirloom-070227.tar.bz2) = 997486 bytes
 SHA1 (patch-ac) = ac7f1572d4d71aeb0f315a22c0ab79b34fc55c0d
-SHA1 (patch-ad) = 7fa152f5d900da74bae5c5da0a02df6c18674cf3
+SHA1 (patch-ad) = 1440f7b107650837b512dd08a97128e6cf64aae8
 SHA1 (patch-af) = 10293cc6bcfd2d78aa8a3163c8c8edd8d482fc60
 SHA1 (patch-am) = 425479d071b3cca4a43529b3d06dd8536df57b42
 SHA1 (patch-an) = 02cc11f13954e1b2848606f838d20a0a9bdcb247
-SHA1 (patch-ao) = dbba0492718bdc1b782226aa393dc459ccf45437
+SHA1 (patch-ao) = b12a6538ab8014eeda24f03fabe0e0bb52c3e27d
 SHA1 (patch-ap) = 54b685fbea9289f848777b0a822f675b39609eab
 SHA1 (patch-aq) = 2dac67f97c7b091501be30314939adb3d767fbe9
 SHA1 (patch-at) = 4a4ef538ead313a9a000e562d5c1dc005a2b4a00
