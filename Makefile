@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2585 2007/05/12 07:06:50 ghen Exp $
+# $Id: Makefile,v 1.2586 2007/05/12 14:13:09 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -626,7 +626,6 @@ SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
 SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
-SUBDIR+=	java-mecab
 SUBDIR+=	java-muse
 SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
@@ -800,10 +799,6 @@ SUBDIR+=	mcats-iodbc
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
 SUBDIR+=	meanwhile
-SUBDIR+=	mecab
-SUBDIR+=	mecab-base
-SUBDIR+=	mecab-ipadic
-SUBDIR+=	mecab-jumandic
 SUBDIR+=	mednafen
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
@@ -1178,7 +1173,6 @@ SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-MapUTF8
 SUBDIR+=	p5-WebService-CIA
 SUBDIR+=	p5-XML-DOM-XPath
-SUBDIR+=	p5-mecab
 SUBDIR+=	p5-podlators
 SUBDIR+=	pal
 SUBDIR+=	palm-db-tools
@@ -1326,7 +1320,6 @@ SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kyra
 SUBDIR+=	py-libtunepimp
-SUBDIR+=	py-mecab
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm
@@ -1416,7 +1409,6 @@ SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-ldap
-SUBDIR+=	ruby-mecab
 SUBDIR+=	runit
 SUBDIR+=	samhain
 SUBDIR+=	sara
