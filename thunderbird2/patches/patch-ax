@@ -1,6 +1,6 @@
-$NetBSD: patch-ax,v 1.1.1.1 2006/08/03 13:44:30 ghen Exp $
+$NetBSD: patch-ax,v 1.2 2007/05/12 06:29:18 ghen Exp $
 
---- security/coreconf/SunOS5.mk.orig	2006-02-03 23:26:36.000000000 +0100
+--- security/coreconf/SunOS5.mk.orig	2006-04-25 03:32:16.000000000 +0200
 +++ security/coreconf/SunOS5.mk
 @@ -176,6 +176,10 @@ endif
  endif

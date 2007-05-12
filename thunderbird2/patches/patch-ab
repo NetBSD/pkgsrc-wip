@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/08/03 13:44:29 ghen Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/12 06:29:18 ghen Exp $
 
---- configure.in.orig	2006-07-20 07:11:53.000000000 +0200
+--- configure.in.orig	2007-03-14 02:00:50.000000000 +0100
 +++ configure.in
 @@ -1433,7 +1433,6 @@ case "$target" in
      DSO_LDOPTS=''
@@ -29,21 +29,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/08/03 13:44:29 ghen Exp $
      ;; 
  
  *-hpux*)
-@@ -1937,6 +1939,13 @@ case "$target" in
-     if test "$LIBRUNPATH"; then
- 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
-     fi
-+
-+    case "${target_cpu}" in
-+    alpha*)
-+    	CFLAGS="$CFLAGS -mieee"
-+    	CXXFLAGS="$CXXFLAGS -mieee"
-+    ;;
-+    esac
-     ;;
- 
- *-openvms*) 
-@@ -2135,7 +2144,7 @@ dnl the qsort routine under solaris is f
+@@ -2136,7 +2138,7 @@ dnl the qsort routine under solaris is f
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -h $@ -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
@@ -52,7 +38,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/08/03 13:44:29 ghen Exp $
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -2835,7 +2844,7 @@ then
+@@ -2836,7 +2838,7 @@ then
      fi
  
  	case "$target" in
@@ -61,7 +47,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/08/03 13:44:29 ghen Exp $
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
  			dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -5611,7 +5620,7 @@ dnl ====================================
+@@ -5638,7 +5640,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
