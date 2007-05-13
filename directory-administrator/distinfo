@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/06 23:28:06 shattered Exp $
-
-SHA1 (directory_administrator-1.7.1.tar.gz) = 458b8e7764dde1729abe03ecb8f9b0dcc4de11ec
-RMD160 (directory_administrator-1.7.1.tar.gz) = fad58e822bf90e2864e72506defbb5572aaad318
-Size (directory_administrator-1.7.1.tar.gz) = 473157 bytes
-SHA1 (patch-ac) = 600515a3313b5751afbe918f550ad467bf8238e5
-SHA1 (patch-ad) = 4b65bef5e8147e7eb2d37a7dd456b70aaafeffeb
-SHA1 (patch-ae) = ef388dbbfd7105a7118d92d5be63009b16995d6a

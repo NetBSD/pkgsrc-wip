@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2587 2007/05/13 09:30:41 tnn2 Exp $
+# $Id: Makefile,v 1.2588 2007/05/13 14:40:02 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -206,7 +206,6 @@ SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
 SUBDIR+=	ding
 SUBDIR+=	directfb
-SUBDIR+=	directory-administrator
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
 SUBDIR+=	dmd-bin
@@ -343,7 +342,6 @@ SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
 SUBDIR+=	gdal-lib
-SUBDIR+=	gdam
 SUBDIR+=	gde
 SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
