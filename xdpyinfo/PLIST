@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/01/29 07:21:39 bsadewitz Exp $
-bin/xdpyinfo
-man/man1/xdpyinfo.1

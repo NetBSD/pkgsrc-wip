@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2586 2007/05/12 14:13:09 obache Exp $
+# $Id: Makefile,v 1.2587 2007/05/13 09:30:41 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1648,17 +1648,13 @@ SUBDIR+=	xbelmark
 SUBDIR+=	xbitmaps
 SUBDIR+=	xbnbt
 SUBDIR+=	xbsql
-SUBDIR+=	xcalc
 SUBDIR+=	xcb-proto
 SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
-SUBDIR+=	xclock
-SUBDIR+=	xconsole
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdm
-SUBDIR+=	xdpyinfo
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
@@ -1690,8 +1686,6 @@ SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
 SUBDIR+=	xinetd
 SUBDIR+=	xkeyboard-config
-SUBDIR+=	xkill
-SUBDIR+=	xload
 SUBDIR+=	xlsfonts
 SUBDIR+=	xmail
 SUBDIR+=	xmim
@@ -1718,14 +1712,12 @@ SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
 SUBDIR+=	xrdp
 SUBDIR+=	xscribble-fs
-SUBDIR+=	xsm
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
 SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
 SUBDIR+=	xvidtune
-SUBDIR+=	xvinfo
 SUBDIR+=	xxdiff
 SUBDIR+=	xxkb
 SUBDIR+=	xyssl
