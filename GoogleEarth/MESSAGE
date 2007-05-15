@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/05/15 00:48:00 tnn2 Exp $
+
+Note: Google Earth *requires* DRI accelerated 3D graphics.
+You must also make sure that your emulated linux binaries see the
+Bitstream Vera fonts. Check with:
+$ /emul/linux/usr/bin/fc-list
+
+If bitstream vera is not listed, try:
+# mkdir /emul/linux/usr/share/fonts
+# cp ${PREFIX}/lib/X11/fonts/TTF/Vera* /emul/linux/usr/share/fonts
+
+How to get past the welcome screen:
+1) Click the splash screen a couple of times(10 or so usually does it ;-)
+2) Close the login status window.
+3) Check any checkboxes, press OK.
+===========================================================================

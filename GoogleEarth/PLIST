@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/16 19:02:39 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/15 00:48:00 tnn2 Exp $
 bin/googleearth
-GoogleEarth/EULA-GoogleEarth-en.txt
 GoogleEarth/ImporterGlobalSettings.ini
 GoogleEarth/ImporterUISettings.ini
 GoogleEarth/PCOptimizations.ini
@@ -10,12 +9,18 @@ GoogleEarth/googleearth-bin
 GoogleEarth/googleearth-icon.png
 GoogleEarth/googleearth.xpm
 GoogleEarth/kvw/default_lt.kvw
+GoogleEarth/lang/cs.qm
 GoogleEarth/lang/de.qm
 GoogleEarth/lang/en.qm
 GoogleEarth/lang/es.qm
 GoogleEarth/lang/fr.qm
 GoogleEarth/lang/it.qm
 GoogleEarth/lang/ja.qm
+GoogleEarth/lang/ko.qm
+GoogleEarth/lang/nl.qm
+GoogleEarth/lang/pl.qm
+GoogleEarth/lang/pt-BR.qm
+GoogleEarth/lang/pt.qm
 GoogleEarth/lang/qt_de.qm
 GoogleEarth/lang/qt_en.qm
 GoogleEarth/lang/qt_es.qm
@@ -23,6 +28,8 @@ GoogleEarth/lang/qt_fr.qm
 GoogleEarth/lang/qt_it.qm
 GoogleEarth/lang/qt_ja.qm
 GoogleEarth/lang/qt_pt-br.qm
+GoogleEarth/lang/qt_pt.qm
+GoogleEarth/lang/ru.qm
 GoogleEarth/libGLU.so.1
 GoogleEarth/libIGAttrs.so
 GoogleEarth/libIGCollision.so
@@ -45,6 +52,7 @@ GoogleEarth/libcomponent.so
 GoogleEarth/libcrypto.so.0.9.8
 GoogleEarth/libcurl.so.3
 GoogleEarth/libevll.so
+GoogleEarth/libevllpro.so
 GoogleEarth/libframework.so
 GoogleEarth/libfreeimage.so.3
 GoogleEarth/libfusion.so
@@ -53,7 +61,7 @@ GoogleEarth/libgeobase.so
 GoogleEarth/libgoogleearth.so
 GoogleEarth/libgooglesearch.so
 GoogleEarth/libgps.so
-GoogleEarth/libinput.so
+GoogleEarth/libinput_plugin.so
 GoogleEarth/libjpeg.so.62
 GoogleEarth/liblayer.so
 GoogleEarth/libmath.so
@@ -90,11 +98,27 @@ GoogleEarth/res/arrows_w_hover.png
 GoogleEarth/res/background.png
 GoogleEarth/res/button-mo.png
 GoogleEarth/res/buttons-norm.png
+GoogleEarth/res/close_circle_active.png
+GoogleEarth/res/close_circle_hover.png
+GoogleEarth/res/close_circle_norm.png
 GoogleEarth/res/compass-opt1.png
 GoogleEarth/res/compass-opt2.png
 GoogleEarth/res/compass.png
+GoogleEarth/res/crosshair.png
 GoogleEarth/res/decal.png
+GoogleEarth/res/descrip_center.png
+GoogleEarth/res/descrip_l.png
+GoogleEarth/res/descrip_ll.png
+GoogleEarth/res/descrip_ll_noad.png
+GoogleEarth/res/descrip_lo.png
+GoogleEarth/res/descrip_lr.png
+GoogleEarth/res/descrip_lr_noad.png
+GoogleEarth/res/descrip_r.png
+GoogleEarth/res/descrip_ul.png
+GoogleEarth/res/descrip_up.png
+GoogleEarth/res/descrip_ur.png
 GoogleEarth/res/dot.png
+GoogleEarth/res/flatarrow.png
 GoogleEarth/res/full-picture.png
 GoogleEarth/res/full-picture2.png
 GoogleEarth/res/h-slider-zoom-thumb-md.png
@@ -220,8 +244,28 @@ GoogleEarth/res/paddle/grn-square-lv.png
 GoogleEarth/res/paddle/grn-square.png
 GoogleEarth/res/paddle/grn-stars-lv.png
 GoogleEarth/res/paddle/grn-stars.png
+GoogleEarth/res/paddle/ltblu-blank-lv.png
+GoogleEarth/res/paddle/ltblu-blank.png
+GoogleEarth/res/paddle/ltblu-circle-lv.png
+GoogleEarth/res/paddle/ltblu-circle.png
+GoogleEarth/res/paddle/ltblu-diamond-lv.png
+GoogleEarth/res/paddle/ltblu-diamond.png
+GoogleEarth/res/paddle/ltblu-square-lv.png
+GoogleEarth/res/paddle/ltblu-square.png
+GoogleEarth/res/paddle/ltblu-stars-lv.png
+GoogleEarth/res/paddle/ltblu-stars.png
 GoogleEarth/res/paddle/pause-lv.png
 GoogleEarth/res/paddle/pause.png
+GoogleEarth/res/paddle/pink-blank-lv.png
+GoogleEarth/res/paddle/pink-blank.png
+GoogleEarth/res/paddle/pink-circle-lv.png
+GoogleEarth/res/paddle/pink-circle.png
+GoogleEarth/res/paddle/pink-diamond-lv.png
+GoogleEarth/res/paddle/pink-diamond.png
+GoogleEarth/res/paddle/pink-square-lv.png
+GoogleEarth/res/paddle/pink-square.png
+GoogleEarth/res/paddle/pink-stars-lv.png
+GoogleEarth/res/paddle/pink-stars.png
 GoogleEarth/res/paddle/purple-circle-lv.png
 GoogleEarth/res/paddle/purple-circle.png
 GoogleEarth/res/paddle/purple-diamond-lv.png
@@ -1109,6 +1153,7 @@ GoogleEarth/res/palette-2.png
 GoogleEarth/res/palette-3.png
 GoogleEarth/res/palette-4.png
 GoogleEarth/res/palette-5.png
+GoogleEarth/res/photo_arrows_fade.png
 GoogleEarth/res/progress0.png
 GoogleEarth/res/progress1.png
 GoogleEarth/res/progress2.png
@@ -1198,6 +1243,13 @@ GoogleEarth/res/zoom_plus_hover.png
 GoogleEarth/res/zoombar_active.png
 GoogleEarth/res/zoombar_hover.png
 GoogleEarth/res/zoombar_norm.png
+GoogleEarth/resources/%maps-gr.png
+GoogleEarth/resources/%maps-md.png
+GoogleEarth/resources/%maps-mo.png
+GoogleEarth/resources/%maps-pl.png
+GoogleEarth/resources/%panel-close.png
+GoogleEarth/resources/%rgb.png
+GoogleEarth/resources/%rgba.png
 GoogleEarth/resources/1-lv.png
 GoogleEarth/resources/1.png
 GoogleEarth/resources/10-lv.png
@@ -1282,6 +1334,7 @@ GoogleEarth/resources/Y.png
 GoogleEarth/resources/Z-lv.png
 GoogleEarth/resources/Z.png
 GoogleEarth/resources/aboutlogo.png
+GoogleEarth/resources/ad.country/startinglocation.kml
 GoogleEarth/resources/ad_center.png
 GoogleEarth/resources/ad_l.png
 GoogleEarth/resources/ad_ll.png
@@ -1297,10 +1350,24 @@ GoogleEarth/resources/add_button_off.png
 GoogleEarth/resources/add_clickx42.png
 GoogleEarth/resources/add_glowx42.png
 GoogleEarth/resources/addx42.png
+GoogleEarth/resources/ae.country/startinglocation.kml
+GoogleEarth/resources/af.country/startinglocation.kml
+GoogleEarth/resources/ag.country/startinglocation.kml
+GoogleEarth/resources/ai.country/startinglocation.kml
+GoogleEarth/resources/aircraft-gr.png
+GoogleEarth/resources/aircraft-md.png
+GoogleEarth/resources/aircraft-mo.png
+GoogleEarth/resources/aircraft-pl.png
+GoogleEarth/resources/al.country/startinglocation.kml
 GoogleEarth/resources/al.png
 GoogleEarth/resources/alhl.png
+GoogleEarth/resources/am.country/startinglocation.kml
 GoogleEarth/resources/american-flag.png
 GoogleEarth/resources/american_state_border_fade_out_mask.png
+GoogleEarth/resources/an.country/startinglocation.kml
+GoogleEarth/resources/ao.country/startinglocation.kml
+GoogleEarth/resources/aq.country/startinglocation.kml
+GoogleEarth/resources/ar.country/startinglocation.kml
 GoogleEarth/resources/arrow-reverse.png
 GoogleEarth/resources/arrow.png
 GoogleEarth/resources/arrows_e_active.png
@@ -1312,9 +1379,16 @@ GoogleEarth/resources/arrows_s_active.png
 GoogleEarth/resources/arrows_s_hover.png
 GoogleEarth/resources/arrows_w_active.png
 GoogleEarth/resources/arrows_w_hover.png
+GoogleEarth/resources/as.country/startinglocation.kml
 GoogleEarth/resources/asian-flag.png
+GoogleEarth/resources/at.country/startinglocation.kml
+GoogleEarth/resources/au.country/startinglocation.kml
 GoogleEarth/resources/auto-service.png
 GoogleEarth/resources/auto.png
+GoogleEarth/resources/aw.country/startinglocation.kml
+GoogleEarth/resources/ax.country/startinglocation.kml
+GoogleEarth/resources/az.country/startinglocation.kml
+GoogleEarth/resources/ba.country/startinglocation.kml
 GoogleEarth/resources/back-dis.png
 GoogleEarth/resources/back.png
 GoogleEarth/resources/back_click.png
@@ -1338,6 +1412,14 @@ GoogleEarth/resources/balloon_ur.png
 GoogleEarth/resources/balloon_x.png
 GoogleEarth/resources/bang.png
 GoogleEarth/resources/bars.png
+GoogleEarth/resources/bb.country/startinglocation.kml
+GoogleEarth/resources/bd.country/startinglocation.kml
+GoogleEarth/resources/be.country/startinglocation.kml
+GoogleEarth/resources/bf.country/startinglocation.kml
+GoogleEarth/resources/bg.country/startinglocation.kml
+GoogleEarth/resources/bh.country/startinglocation.kml
+GoogleEarth/resources/bi.country/startinglocation.kml
+GoogleEarth/resources/bj.country/startinglocation.kml
 GoogleEarth/resources/blu-blank-lv.png
 GoogleEarth/resources/blu-blank.png
 GoogleEarth/resources/blu-circle-lv.png
@@ -1349,16 +1431,22 @@ GoogleEarth/resources/blu-square.png
 GoogleEarth/resources/blu-stars-lv.png
 GoogleEarth/resources/blu-stars.png
 GoogleEarth/resources/blue-pushpin.png
+GoogleEarth/resources/bm.country/startinglocation.kml
+GoogleEarth/resources/bn.country/startinglocation.kml
+GoogleEarth/resources/bo.country/startinglocation.kml
 GoogleEarth/resources/bookmark_01_16.png
 GoogleEarth/resources/borders_off.png
 GoogleEarth/resources/borders_on.png
 GoogleEarth/resources/boulder_city_block_mask.png
+GoogleEarth/resources/br.country/startinglocation.kml
 GoogleEarth/resources/browser-base-dis.png
 GoogleEarth/resources/browser-base.png
 GoogleEarth/resources/browser-pop-dis.png
 GoogleEarth/resources/browser-pop.png
 GoogleEarth/resources/browser-side-dis.png
 GoogleEarth/resources/browser-side.png
+GoogleEarth/resources/bs.country/startinglocation.kml
+GoogleEarth/resources/bt.country/startinglocation.kml
 GoogleEarth/resources/building.png
 GoogleEarth/resources/button-dis-leftendcap.png
 GoogleEarth/resources/button-dis-repeating.png
@@ -1374,22 +1462,41 @@ GoogleEarth/resources/button-normal-leftendcap.png
 GoogleEarth/resources/button-normal-repeating.png
 GoogleEarth/resources/button-normal-rightendcap.png
 GoogleEarth/resources/buttons-norm.png
+GoogleEarth/resources/bv.country/startinglocation.kml
+GoogleEarth/resources/bw.country/startinglocation.kml
+GoogleEarth/resources/by.country/startinglocation.kml
+GoogleEarth/resources/bz.country/startinglocation.kml
+GoogleEarth/resources/ca.country/startinglocation.kml
 GoogleEarth/resources/cancel-dis.png
 GoogleEarth/resources/cancel.png
+GoogleEarth/resources/cc.country/startinglocation.kml
+GoogleEarth/resources/cd.country/startinglocation.kml
+GoogleEarth/resources/cf.country/startinglocation.kml
+GoogleEarth/resources/cg.country/startinglocation.kml
+GoogleEarth/resources/ch.country/startinglocation.kml
 GoogleEarth/resources/check-sel.png
 GoogleEarth/resources/check-somechildsel.png
 GoogleEarth/resources/check-unsel.png
 GoogleEarth/resources/check.png
+GoogleEarth/resources/ci.country/startinglocation.kml
 GoogleEarth/resources/circle-gr.png
 GoogleEarth/resources/circle-md.png
 GoogleEarth/resources/circle-mo.png
 GoogleEarth/resources/circle-pl.png
 GoogleEarth/resources/circle.png
+GoogleEarth/resources/ck.country/startinglocation.kml
+GoogleEarth/resources/cl.country/startinglocation.kml
 GoogleEarth/resources/clear_off.png
 GoogleEarth/resources/clear_on.png
+GoogleEarth/resources/close_circle_active.png
+GoogleEarth/resources/close_circle_hover.png
+GoogleEarth/resources/close_circle_norm.png
 GoogleEarth/resources/closedarrow.png
 GoogleEarth/resources/closedfolder.png
 GoogleEarth/resources/closednetworkfolder.png
+GoogleEarth/resources/cm.country/startinglocation.kml
+GoogleEarth/resources/cn.country/startinglocation.kml
+GoogleEarth/resources/co.country/startinglocation.kml
 GoogleEarth/resources/coffee_house_16.png
 GoogleEarth/resources/collapsedtree.png
 GoogleEarth/resources/colorincomelevel.png
@@ -1414,17 +1521,27 @@ GoogleEarth/resources/contour4.png
 GoogleEarth/resources/contour5.png
 GoogleEarth/resources/contour6.png
 GoogleEarth/resources/contour7.png
+GoogleEarth/resources/cr.country/startinglocation.kml
 GoogleEarth/resources/crosshair.png
+GoogleEarth/resources/cs.locale/license-utf8.txt
+GoogleEarth/resources/cs.locale/license.html
+GoogleEarth/resources/cu.country/startinglocation.kml
 GoogleEarth/resources/cursor_crosshair_inverse.png
 GoogleEarth/resources/cursor_crosshair_open.png
 GoogleEarth/resources/cursor_crosshair_thick.png
 GoogleEarth/resources/cursor_hand_grab.png
 GoogleEarth/resources/cursor_hand_open.png
+GoogleEarth/resources/cv.country/startinglocation.kml
+GoogleEarth/resources/cx.country/startinglocation.kml
+GoogleEarth/resources/cy.country/startinglocation.kml
+GoogleEarth/resources/cz.country/startinglocation.kml
 GoogleEarth/resources/dc_benchmark_mask.png
+GoogleEarth/resources/de.country/startinglocation.kml
 GoogleEarth/resources/de.locale/default_myplaces.kml
-GoogleEarth/resources/de.locale/license.txt
-GoogleEarth/resources/de.locale/releasenotes.txt
+GoogleEarth/resources/de.locale/license-utf8.txt
+GoogleEarth/resources/de.locale/license.html
 GoogleEarth/resources/decal.png
+GoogleEarth/resources/default_myplaces.kml
 GoogleEarth/resources/descrip_center.png
 GoogleEarth/resources/descrip_l.png
 GoogleEarth/resources/descrip_ll.png
@@ -1456,6 +1573,10 @@ GoogleEarth/resources/designer_wordwrap.png
 GoogleEarth/resources/dfwblocks.png
 GoogleEarth/resources/dining.png
 GoogleEarth/resources/dining_16.png
+GoogleEarth/resources/dj.country/startinglocation.kml
+GoogleEarth/resources/dk.country/startinglocation.kml
+GoogleEarth/resources/dm.country/startinglocation.kml
+GoogleEarth/resources/do.country/startinglocation.kml
 GoogleEarth/resources/donut.png
 GoogleEarth/resources/dot.png
 GoogleEarth/resources/down.png
@@ -1472,6 +1593,11 @@ GoogleEarth/resources/drawpolygon.png
 GoogleEarth/resources/drawpolyline.png
 GoogleEarth/resources/dropdown.png
 GoogleEarth/resources/dummy.png
+GoogleEarth/resources/dz.country/startinglocation.kml
+GoogleEarth/resources/ec.country/startinglocation.kml
+GoogleEarth/resources/ee.country/startinglocation.kml
+GoogleEarth/resources/eg.country/startinglocation.kml
+GoogleEarth/resources/eh.country/startinglocation.kml
 GoogleEarth/resources/email.png
 GoogleEarth/resources/email_button_click.png
 GoogleEarth/resources/email_button_glow.png
@@ -1482,28 +1608,26 @@ GoogleEarth/resources/email_large.png
 GoogleEarth/resources/email_off.png
 GoogleEarth/resources/email_on.png
 GoogleEarth/resources/en.locale/default_myplaces.kml
-GoogleEarth/resources/en.locale/license.txt
-GoogleEarth/resources/en.locale/releasenotes.txt
+GoogleEarth/resources/en.locale/license-utf8.txt
+GoogleEarth/resources/en.locale/license.html
 GoogleEarth/resources/en_AU.locale/default_myplaces.kml
-GoogleEarth/resources/en_AU.locale/license.txt
-GoogleEarth/resources/en_AU.locale/releasenotes.txt
 GoogleEarth/resources/en_CA.locale/default_myplaces.kml
-GoogleEarth/resources/en_CA.locale/license.txt
-GoogleEarth/resources/en_CA.locale/releasenotes.txt
 GoogleEarth/resources/en_GB.locale/default_myplaces.kml
-GoogleEarth/resources/en_GB.locale/license.txt
-GoogleEarth/resources/en_GB.locale/releasenotes.txt
 GoogleEarth/resources/en_NZ.locale/default_myplaces.kml
-GoogleEarth/resources/en_NZ.locale/license.txt
-GoogleEarth/resources/en_NZ.locale/releasenotes.txt
 GoogleEarth/resources/en_US.locale/default_myplaces.kml
-GoogleEarth/resources/en_US.locale/license.txt
-GoogleEarth/resources/en_US.locale/releasenotes.txt
+GoogleEarth/resources/er.country/startinglocation.kml
+GoogleEarth/resources/es.country/startinglocation.kml
 GoogleEarth/resources/es.locale/default_myplaces.kml
-GoogleEarth/resources/es.locale/license.txt
-GoogleEarth/resources/es.locale/releasenotes.txt
+GoogleEarth/resources/es.locale/license-utf8.txt
+GoogleEarth/resources/es.locale/license.html
+GoogleEarth/resources/et.country/startinglocation.kml
 GoogleEarth/resources/fast-food.png
+GoogleEarth/resources/fi.country/startinglocation.kml
+GoogleEarth/resources/fj.country/startinglocation.kml
+GoogleEarth/resources/fk.country/startinglocation.kml
 GoogleEarth/resources/flatarrow.png
+GoogleEarth/resources/fm.country/startinglocation.kml
+GoogleEarth/resources/fo.country/startinglocation.kml
 GoogleEarth/resources/fonts_mask.png
 GoogleEarth/resources/forbidden.png
 GoogleEarth/resources/forward_click.png
@@ -1515,16 +1639,28 @@ GoogleEarth/resources/forward_off.png
 GoogleEarth/resources/forward_off_1.png
 GoogleEarth/resources/four-dollars.png
 GoogleEarth/resources/fr-layers.png
+GoogleEarth/resources/fr.country/startinglocation.kml
 GoogleEarth/resources/fr.locale/default_myplaces.kml
-GoogleEarth/resources/fr.locale/license.txt
-GoogleEarth/resources/fr.locale/releasenotes.txt
+GoogleEarth/resources/fr.locale/license-utf8.txt
+GoogleEarth/resources/fr.locale/license.html
 GoogleEarth/resources/french-flag.png
 GoogleEarth/resources/full-picture.png
 GoogleEarth/resources/full-picture2.png
+GoogleEarth/resources/ga.country/startinglocation.kml
+GoogleEarth/resources/gb.country/startinglocation.kml
+GoogleEarth/resources/gd.country/startinglocation.kml
 GoogleEarth/resources/gdalicon.png
+GoogleEarth/resources/ge.country/startinglocation.kml
 GoogleEarth/resources/geforce_cursor.png
 GoogleEarth/resources/geforce_cursor_32.png
+GoogleEarth/resources/gf.country/startinglocation.kml
+GoogleEarth/resources/gg.country/startinglocation.kml
+GoogleEarth/resources/gh.country/startinglocation.kml
+GoogleEarth/resources/gi.country/startinglocation.kml
+GoogleEarth/resources/gl.country/startinglocation.kml
+GoogleEarth/resources/gm.country/startinglocation.kml
 GoogleEarth/resources/gmail.png
+GoogleEarth/resources/gn.country/startinglocation.kml
 GoogleEarth/resources/go-lv.png
 GoogleEarth/resources/go.png
 GoogleEarth/resources/go_off.png
@@ -1535,6 +1671,9 @@ GoogleEarth/resources/googleearth-icon.png
 GoogleEarth/resources/googlelogo.png
 GoogleEarth/resources/googlelogo_unix.png
 GoogleEarth/resources/googlesmall.png
+GoogleEarth/resources/gp.country/startinglocation.kml
+GoogleEarth/resources/gq.country/startinglocation.kml
+GoogleEarth/resources/gr.country/startinglocation.kml
 GoogleEarth/resources/grab_off.png
 GoogleEarth/resources/grab_on.png
 GoogleEarth/resources/green_mid.png
@@ -1558,13 +1697,25 @@ GoogleEarth/resources/grn-square-lv.png
 GoogleEarth/resources/grn-square.png
 GoogleEarth/resources/grn-stars-lv.png
 GoogleEarth/resources/grn-stars.png
+GoogleEarth/resources/gs.country/startinglocation.kml
+GoogleEarth/resources/gt.country/startinglocation.kml
+GoogleEarth/resources/gu.country/startinglocation.kml
+GoogleEarth/resources/gw.country/startinglocation.kml
+GoogleEarth/resources/gy.country/startinglocation.kml
 GoogleEarth/resources/h-slider-zoom-thumb-md.png
 GoogleEarth/resources/h-slider-zoom-thumb-mo.png
 GoogleEarth/resources/h-slider-zoom-thumb-norm.png
 GoogleEarth/resources/hand.png
+GoogleEarth/resources/he.locale/panel-close.png
 GoogleEarth/resources/high_res_places.png
 GoogleEarth/resources/highway_16.png
+GoogleEarth/resources/hk.country/startinglocation.kml
+GoogleEarth/resources/hm.country/startinglocation.kml
+GoogleEarth/resources/hn.country/startinglocation.kml
 GoogleEarth/resources/hotel_off_24.png
+GoogleEarth/resources/hr.country/startinglocation.kml
+GoogleEarth/resources/ht.country/startinglocation.kml
+GoogleEarth/resources/hu.country/startinglocation.kml
 GoogleEarth/resources/icon0.png
 GoogleEarth/resources/icon0l.png
 GoogleEarth/resources/icon0s.png
@@ -1821,19 +1972,32 @@ GoogleEarth/resources/icon9.png
 GoogleEarth/resources/icon9l.png
 GoogleEarth/resources/icon9s.png
 GoogleEarth/resources/icon9t.png
+GoogleEarth/resources/id.country/startinglocation.kml
+GoogleEarth/resources/ie.country/startinglocation.kml
+GoogleEarth/resources/il.country/startinglocation.kml
+GoogleEarth/resources/im.country/startinglocation.kml
+GoogleEarth/resources/in.country/startinglocation.kml
 GoogleEarth/resources/indxed-interlaced.png
 GoogleEarth/resources/indxed-non-interlaced.png
 GoogleEarth/resources/info-i.png
 GoogleEarth/resources/instances_mask.png
 GoogleEarth/resources/interstate_highway_16.png
 GoogleEarth/resources/invisible.png
+GoogleEarth/resources/io.country/startinglocation.kml
+GoogleEarth/resources/iq.country/startinglocation.kml
+GoogleEarth/resources/ir.country/startinglocation.kml
+GoogleEarth/resources/is.country/startinglocation.kml
+GoogleEarth/resources/it.country/startinglocation.kml
 GoogleEarth/resources/it.locale/default_myplaces.kml
-GoogleEarth/resources/it.locale/license.txt
-GoogleEarth/resources/it.locale/releasenotes.txt
+GoogleEarth/resources/it.locale/license-utf8.txt
+GoogleEarth/resources/it.locale/license.html
 GoogleEarth/resources/italian-flag.png
 GoogleEarth/resources/ja.locale/default_myplaces.kml
-GoogleEarth/resources/ja.locale/license.txt
-GoogleEarth/resources/ja.locale/releasenotes.txt
+GoogleEarth/resources/ja.locale/license-utf8.txt
+GoogleEarth/resources/ja.locale/license.html
+GoogleEarth/resources/je.country/startinglocation.kml
+GoogleEarth/resources/jm.country/startinglocation.kml
+GoogleEarth/resources/jo.country/startinglocation.kml
 GoogleEarth/resources/joystick-md.png
 GoogleEarth/resources/joystick-mo.png
 GoogleEarth/resources/joystick-norm.png
@@ -1850,41 +2014,105 @@ GoogleEarth/resources/joystickon_off.png
 GoogleEarth/resources/joystickon_right.png
 GoogleEarth/resources/joystickon_rightdown.png
 GoogleEarth/resources/joystickon_up.png
+GoogleEarth/resources/jp.country/startinglocation.kml
+GoogleEarth/resources/ke.country/startinglocation.kml
 GoogleEarth/resources/keyholelogo-sm.png
 GoogleEarth/resources/keyholelogo.png
+GoogleEarth/resources/kg.country/startinglocation.kml
+GoogleEarth/resources/kh.country/startinglocation.kml
+GoogleEarth/resources/ki.country/startinglocation.kml
+GoogleEarth/resources/km.country/startinglocation.kml
+GoogleEarth/resources/kn.country/startinglocation.kml
+GoogleEarth/resources/ko.locale/license-utf8.txt
+GoogleEarth/resources/ko.locale/license.html
+GoogleEarth/resources/kp.country/startinglocation.kml
+GoogleEarth/resources/kr.country/startinglocation.kml
+GoogleEarth/resources/kw.country/startinglocation.kml
+GoogleEarth/resources/ky.country/startinglocation.kml
+GoogleEarth/resources/kz.country/startinglocation.kml
+GoogleEarth/resources/la.country/startinglocation.kml
 GoogleEarth/resources/large_traffic_count_16.png
 GoogleEarth/resources/layers_16.png
+GoogleEarth/resources/lb.country/startinglocation.kml
+GoogleEarth/resources/lc.country/startinglocation.kml
 GoogleEarth/resources/left.png
 GoogleEarth/resources/leftbar_active.png
 GoogleEarth/resources/leftbar_hover.png
 GoogleEarth/resources/leftbar_norm.png
+GoogleEarth/resources/li.country/startinglocation.kml
+GoogleEarth/resources/license-utf8.txt
+GoogleEarth/resources/license.html
 GoogleEarth/resources/line-gr.png
 GoogleEarth/resources/line-md.png
 GoogleEarth/resources/line-mo.png
 GoogleEarth/resources/line-pl.png
 GoogleEarth/resources/line.png
+GoogleEarth/resources/lk.country/startinglocation.kml
 GoogleEarth/resources/loading.png
 GoogleEarth/resources/loginicon.png
 GoogleEarth/resources/logo.png
 GoogleEarth/resources/logobluewhite200.png
 GoogleEarth/resources/logouticon.png
+GoogleEarth/resources/lr.country/startinglocation.kml
+GoogleEarth/resources/ls.country/startinglocation.kml
+GoogleEarth/resources/lt.country/startinglocation.kml
+GoogleEarth/resources/ltblu-blank-lv.png
+GoogleEarth/resources/ltblu-blank.png
+GoogleEarth/resources/ltblu-circle-lv.png
+GoogleEarth/resources/ltblu-circle.png
+GoogleEarth/resources/ltblu-diamond-lv.png
+GoogleEarth/resources/ltblu-diamond.png
 GoogleEarth/resources/ltblu-pushpin.png
+GoogleEarth/resources/ltblu-square-lv.png
+GoogleEarth/resources/ltblu-square.png
+GoogleEarth/resources/ltblu-stars-lv.png
+GoogleEarth/resources/ltblu-stars.png
 GoogleEarth/resources/ltnv_print_banner.png
+GoogleEarth/resources/lu.country/startinglocation.kml
+GoogleEarth/resources/lv.country/startinglocation.kml
+GoogleEarth/resources/ly.country/startinglocation.kml
+GoogleEarth/resources/ma.country/startinglocation.kml
 GoogleEarth/resources/mail-gr.png
 GoogleEarth/resources/mail-md.png
 GoogleEarth/resources/mail-mo.png
 GoogleEarth/resources/mail-pl.png
 GoogleEarth/resources/mail.png
+GoogleEarth/resources/maps-gr.png
+GoogleEarth/resources/maps-md.png
+GoogleEarth/resources/maps-mo.png
+GoogleEarth/resources/maps-pl.png
 GoogleEarth/resources/materials_test_mask.png
+GoogleEarth/resources/mc.country/startinglocation.kml
+GoogleEarth/resources/md.country/startinglocation.kml
+GoogleEarth/resources/me.country/startinglocation.kml
 GoogleEarth/resources/mexican-flag.png
+GoogleEarth/resources/mg.country/startinglocation.kml
+GoogleEarth/resources/mh.country/startinglocation.kml
 GoogleEarth/resources/misc-dining.png
+GoogleEarth/resources/mk.country/startinglocation.kml
+GoogleEarth/resources/ml.country/startinglocation.kml
+GoogleEarth/resources/mm.country/startinglocation.kml
+GoogleEarth/resources/mn.country/startinglocation.kml
+GoogleEarth/resources/mo.country/startinglocation.kml
 GoogleEarth/resources/mouseleft.png
 GoogleEarth/resources/mouseright.png
+GoogleEarth/resources/mp.country/startinglocation.kml
+GoogleEarth/resources/mq.country/startinglocation.kml
+GoogleEarth/resources/mr.country/startinglocation.kml
+GoogleEarth/resources/ms.country/startinglocation.kml
+GoogleEarth/resources/mt.country/startinglocation.kml
 GoogleEarth/resources/mt_st_helens_mask.png
+GoogleEarth/resources/mu.country/startinglocation.kml
 GoogleEarth/resources/multiple_polygons_mask.png
+GoogleEarth/resources/mv.country/startinglocation.kml
+GoogleEarth/resources/mw.country/startinglocation.kml
+GoogleEarth/resources/mx.country/startinglocation.kml
+GoogleEarth/resources/my.country/startinglocation.kml
 GoogleEarth/resources/mysavedplaces.png
 GoogleEarth/resources/mysavedplaces_closed.png
 GoogleEarth/resources/mysavedplaces_open.png
+GoogleEarth/resources/mz.country/startinglocation.kml
+GoogleEarth/resources/na.country/startinglocation.kml
 GoogleEarth/resources/nav-east-md.png
 GoogleEarth/resources/nav-east-mo.png
 GoogleEarth/resources/nav-north-md.png
@@ -1925,8 +2153,13 @@ GoogleEarth/resources/navright_rot_click.png
 GoogleEarth/resources/navright_rot_glow.png
 GoogleEarth/resources/navright_tilt_click.png
 GoogleEarth/resources/navright_tilt_glow.png
+GoogleEarth/resources/nc.country/startinglocation.kml
+GoogleEarth/resources/ne.country/startinglocation.kml
 GoogleEarth/resources/new-overlay.png
+GoogleEarth/resources/nf.country/startinglocation.kml
+GoogleEarth/resources/ng.country/startinglocation.kml
 GoogleEarth/resources/ngm_seals_mask.png
+GoogleEarth/resources/ni.country/startinglocation.kml
 GoogleEarth/resources/ni_closed_connected.png
 GoogleEarth/resources/ni_closed_disconnected.png
 GoogleEarth/resources/ni_closed_fetching_01.png
@@ -1937,16 +2170,25 @@ GoogleEarth/resources/ni_open_disconnected.png
 GoogleEarth/resources/ni_open_fetching_01.png
 GoogleEarth/resources/ni_open_fetching_02.png
 GoogleEarth/resources/ni_open_fetching_03.png
+GoogleEarth/resources/nl.country/startinglocation.kml
+GoogleEarth/resources/nl.locale/license-utf8.txt
+GoogleEarth/resources/nl.locale/license.html
 GoogleEarth/resources/nl.png
 GoogleEarth/resources/nlhl.png
+GoogleEarth/resources/no.country/startinglocation.kml
 GoogleEarth/resources/node-closed.png
 GoogleEarth/resources/node-open.png
 GoogleEarth/resources/northreset_off.png
 GoogleEarth/resources/northreset_on.png
 GoogleEarth/resources/note.png
 GoogleEarth/resources/notfound.png
+GoogleEarth/resources/np.country/startinglocation.kml
+GoogleEarth/resources/nr.country/startinglocation.kml
+GoogleEarth/resources/nu.country/startinglocation.kml
+GoogleEarth/resources/nz.country/startinglocation.kml
 GoogleEarth/resources/oftab_trans.png
 GoogleEarth/resources/oftab_trans_glow.png
+GoogleEarth/resources/om.country/startinglocation.kml
 GoogleEarth/resources/one-dollar.png
 GoogleEarth/resources/ontab_trans.png
 GoogleEarth/resources/ontab_trans_glow.png
@@ -1962,6 +2204,7 @@ GoogleEarth/resources/overlay-pl.png
 GoogleEarth/resources/overlay.png
 GoogleEarth/resources/overlay_mask.png
 GoogleEarth/resources/overviewframe.png
+GoogleEarth/resources/pa.country/startinglocation.kml
 GoogleEarth/resources/palette-2.png
 GoogleEarth/resources/palette-3.png
 GoogleEarth/resources/palette-4.png
@@ -1986,12 +2229,31 @@ GoogleEarth/resources/pause-lv.png
 GoogleEarth/resources/pause.png
 GoogleEarth/resources/pause_click.png
 GoogleEarth/resources/pause_glow.png
+GoogleEarth/resources/pe.country/startinglocation.kml
+GoogleEarth/resources/pf.country/startinglocation.kml
+GoogleEarth/resources/pg.country/startinglocation.kml
+GoogleEarth/resources/ph.country/startinglocation.kml
+GoogleEarth/resources/photo_arrows_fade.png
 GoogleEarth/resources/pin-gr.png
 GoogleEarth/resources/pin-md.png
 GoogleEarth/resources/pin-mo.png
 GoogleEarth/resources/pin-pl.png
+GoogleEarth/resources/pink-blank-lv.png
+GoogleEarth/resources/pink-blank.png
+GoogleEarth/resources/pink-circle-lv.png
+GoogleEarth/resources/pink-circle.png
+GoogleEarth/resources/pink-diamond-lv.png
+GoogleEarth/resources/pink-diamond.png
 GoogleEarth/resources/pink-pushpin.png
+GoogleEarth/resources/pink-square-lv.png
+GoogleEarth/resources/pink-square.png
+GoogleEarth/resources/pink-stars-lv.png
+GoogleEarth/resources/pink-stars.png
 GoogleEarth/resources/pinpoint.png
+GoogleEarth/resources/pk.country/startinglocation.kml
+GoogleEarth/resources/pl.country/startinglocation.kml
+GoogleEarth/resources/pl.locale/license-utf8.txt
+GoogleEarth/resources/pl.locale/license.html
 GoogleEarth/resources/placemark_off.png
 GoogleEarth/resources/placemark_on.png
 GoogleEarth/resources/play-forward-dis.png
@@ -1999,6 +2261,8 @@ GoogleEarth/resources/play-forward.png
 GoogleEarth/resources/play.png
 GoogleEarth/resources/play_click.png
 GoogleEarth/resources/play_glow.png
+GoogleEarth/resources/pm.country/startinglocation.kml
+GoogleEarth/resources/pn.country/startinglocation.kml
 GoogleEarth/resources/point_off.png
 GoogleEarth/resources/point_on.png
 GoogleEarth/resources/polygon-gr.png
@@ -2006,6 +2270,7 @@ GoogleEarth/resources/polygon-md.png
 GoogleEarth/resources/polygon-mo.png
 GoogleEarth/resources/polygon-pl.png
 GoogleEarth/resources/polygon.png
+GoogleEarth/resources/pr.country/startinglocation.kml
 GoogleEarth/resources/premium_lock.png
 GoogleEarth/resources/premium_locked.png
 GoogleEarth/resources/premium_star.png
@@ -2030,6 +2295,10 @@ GoogleEarth/resources/progress4.png
 GoogleEarth/resources/progress5.png
 GoogleEarth/resources/progress6.png
 GoogleEarth/resources/progress7.png
+GoogleEarth/resources/ps.country/startinglocation.kml
+GoogleEarth/resources/pt.country/startinglocation.kml
+GoogleEarth/resources/pt.locale/license-utf8.txt
+GoogleEarth/resources/pt.locale/license.html
 GoogleEarth/resources/purple-circle-lv.png
 GoogleEarth/resources/purple-circle.png
 GoogleEarth/resources/purple-diamond-lv.png
@@ -2039,7 +2308,11 @@ GoogleEarth/resources/purple-square-lv.png
 GoogleEarth/resources/purple-square.png
 GoogleEarth/resources/purple-stars-lv.png
 GoogleEarth/resources/purple-stars.png
+GoogleEarth/resources/pw.country/startinglocation.kml
+GoogleEarth/resources/py.country/startinglocation.kml
+GoogleEarth/resources/qa.country/startinglocation.kml
 GoogleEarth/resources/query.png
+GoogleEarth/resources/re.country/startinglocation.kml
 GoogleEarth/resources/recreation.png
 GoogleEarth/resources/red-circle-lv.png
 GoogleEarth/resources/red-circle.png
@@ -2061,6 +2334,8 @@ GoogleEarth/resources/red_tile.png
 GoogleEarth/resources/red_tile_glow.png
 GoogleEarth/resources/redheader.png
 GoogleEarth/resources/resizeiconmac.png
+GoogleEarth/resources/rgb.png
+GoogleEarth/resources/rgba.png
 GoogleEarth/resources/right.png
 GoogleEarth/resources/rightbar_active.png
 GoogleEarth/resources/rightbar_hover.png
@@ -2075,6 +2350,7 @@ GoogleEarth/resources/ring_hover.png
 GoogleEarth/resources/ring_n_active.png
 GoogleEarth/resources/ring_n_hover.png
 GoogleEarth/resources/ring_norm.png
+GoogleEarth/resources/ro.country/startinglocation.kml
 GoogleEarth/resources/road_labels_mask.png
 GoogleEarth/resources/roads_off.png
 GoogleEarth/resources/roads_on.png
@@ -2101,11 +2377,19 @@ GoogleEarth/resources/rotright_glow_1.png
 GoogleEarth/resources/rotright_off.png
 GoogleEarth/resources/rotright_off_1.png
 GoogleEarth/resources/route.png
+GoogleEarth/resources/rs.country/startinglocation.kml
+GoogleEarth/resources/ru.country/startinglocation.kml
+GoogleEarth/resources/ru.locale/license-utf8.txt
+GoogleEarth/resources/ru.locale/license.html
 GoogleEarth/resources/ruler-gr.png
 GoogleEarth/resources/ruler-md.png
 GoogleEarth/resources/ruler-mo.png
 GoogleEarth/resources/ruler-pl.png
 GoogleEarth/resources/ruler.png
+GoogleEarth/resources/rw.country/startinglocation.kml
+GoogleEarth/resources/sa.country/startinglocation.kml
+GoogleEarth/resources/sb.country/startinglocation.kml
+GoogleEarth/resources/sc.country/startinglocation.kml
 GoogleEarth/resources/school_16.png
 GoogleEarth/resources/screen_overlay.png
 GoogleEarth/resources/scrollbluetile.png
@@ -2116,6 +2400,8 @@ GoogleEarth/resources/scrollgreytile.png
 GoogleEarth/resources/scrollup.png
 GoogleEarth/resources/scrollup_click.png
 GoogleEarth/resources/scrollup_glow.png
+GoogleEarth/resources/sd.country/startinglocation.kml
+GoogleEarth/resources/se.country/startinglocation.kml
 GoogleEarth/resources/search-dis.png
 GoogleEarth/resources/search-toolbar-md.png
 GoogleEarth/resources/search-toolbar-mo.png
@@ -2129,8 +2415,14 @@ GoogleEarth/resources/searchbutton.png
 GoogleEarth/resources/searchbutton_click.png
 GoogleEarth/resources/searchbutton_glow.png
 GoogleEarth/resources/sf_benchmark_mask.png
+GoogleEarth/resources/sg.country/startinglocation.kml
+GoogleEarth/resources/sh.country/startinglocation.kml
 GoogleEarth/resources/shadedrelief.png
+GoogleEarth/resources/si.country/startinglocation.kml
 GoogleEarth/resources/singlecontour.png
+GoogleEarth/resources/sj.country/startinglocation.kml
+GoogleEarth/resources/sk.country/startinglocation.kml
+GoogleEarth/resources/sl.country/startinglocation.kml
 GoogleEarth/resources/slider-tilt-left-md.png
 GoogleEarth/resources/slider-tilt-left-mo.png
 GoogleEarth/resources/slider-tilt-norm.png
@@ -2155,9 +2447,14 @@ GoogleEarth/resources/slider_zoom_in_glow.png
 GoogleEarth/resources/slider_zoom_out.png
 GoogleEarth/resources/slider_zoom_out_click.png
 GoogleEarth/resources/slider_zoom_out_glow.png
+GoogleEarth/resources/sm.country/startinglocation.kml
 GoogleEarth/resources/smallbutton.png
 GoogleEarth/resources/smalllogo.png
+GoogleEarth/resources/sn.country/startinglocation.kml
+GoogleEarth/resources/so.country/startinglocation.kml
 GoogleEarth/resources/square.png
+GoogleEarth/resources/sr.country/startinglocation.kml
+GoogleEarth/resources/st.country/startinglocation.kml
 GoogleEarth/resources/star.png
 GoogleEarth/resources/statue_of_liberty_mask.png
 GoogleEarth/resources/stop-dis.png
@@ -2167,9 +2464,17 @@ GoogleEarth/resources/stop_click.png
 GoogleEarth/resources/stop_glow.png
 GoogleEarth/resources/streamed_layer.png
 GoogleEarth/resources/streamed_layers.png
+GoogleEarth/resources/sv.country/startinglocation.kml
+GoogleEarth/resources/sy.country/startinglocation.kml
+GoogleEarth/resources/sz.country/startinglocation.kml
 GoogleEarth/resources/tab_background_tile.png
 GoogleEarth/resources/target.png
+GoogleEarth/resources/tc.country/startinglocation.kml
+GoogleEarth/resources/td.country/startinglocation.kml
 GoogleEarth/resources/terrain_16.png
+GoogleEarth/resources/tf.country/startinglocation.kml
+GoogleEarth/resources/tg.country/startinglocation.kml
+GoogleEarth/resources/th.country/startinglocation.kml
 GoogleEarth/resources/three-dollars.png
 GoogleEarth/resources/tile.png
 GoogleEarth/resources/tilt_back01.png
@@ -2217,18 +2522,42 @@ GoogleEarth/resources/timeplay_hover.png
 GoogleEarth/resources/timeplay_norm.png
 GoogleEarth/resources/timewindow.png
 GoogleEarth/resources/titlebarlogo.png
+GoogleEarth/resources/tj.country/startinglocation.kml
+GoogleEarth/resources/tk.country/startinglocation.kml
+GoogleEarth/resources/tl.country/startinglocation.kml
+GoogleEarth/resources/tm.country/startinglocation.kml
+GoogleEarth/resources/tn.country/startinglocation.kml
+GoogleEarth/resources/to.country/startinglocation.kml
 GoogleEarth/resources/toggle.png
+GoogleEarth/resources/tr.country/startinglocation.kml
 GoogleEarth/resources/trans_back.png
 GoogleEarth/resources/trans_handle.png
 GoogleEarth/resources/transportation.png
 GoogleEarth/resources/trialmode_overlay.png
 GoogleEarth/resources/triangle.png
+GoogleEarth/resources/tt.country/startinglocation.kml
+GoogleEarth/resources/tv.country/startinglocation.kml
+GoogleEarth/resources/tw.country/startinglocation.kml
 GoogleEarth/resources/two-dollars.png
+GoogleEarth/resources/tz.country/startinglocation.kml
+GoogleEarth/resources/ua.country/startinglocation.kml
+GoogleEarth/resources/ug.country/startinglocation.kml
+GoogleEarth/resources/um.country/startinglocation.kml
 GoogleEarth/resources/up.png
+GoogleEarth/resources/us.country/startinglocation.kml
+GoogleEarth/resources/uy.country/startinglocation.kml
+GoogleEarth/resources/uz.country/startinglocation.kml
 GoogleEarth/resources/v-slider-zoom-thumb-md.png
 GoogleEarth/resources/v-slider-zoom-thumb-mo.png
 GoogleEarth/resources/v-slider-zoom-thumb-norm.png
+GoogleEarth/resources/va.country/startinglocation.kml
+GoogleEarth/resources/vc.country/startinglocation.kml
+GoogleEarth/resources/ve.country/startinglocation.kml
+GoogleEarth/resources/vg.country/startinglocation.kml
+GoogleEarth/resources/vi.country/startinglocation.kml
+GoogleEarth/resources/vn.country/startinglocation.kml
 GoogleEarth/resources/volcanodatamapping.png
+GoogleEarth/resources/vu.country/startinglocation.kml
 GoogleEarth/resources/waterlevel.png
 GoogleEarth/resources/webcam_16.png
 GoogleEarth/resources/websearch_click.png
@@ -2237,6 +2566,7 @@ GoogleEarth/resources/websearch_glow.png
 GoogleEarth/resources/websearch_glow_1.png
 GoogleEarth/resources/websearch_off.png
 GoogleEarth/resources/websearch_off_1.png
+GoogleEarth/resources/wf.country/startinglocation.kml
 GoogleEarth/resources/white_3d.png
 GoogleEarth/resources/white_linestring.png
 GoogleEarth/resources/white_pixel.png
@@ -2252,12 +2582,14 @@ GoogleEarth/resources/wht-square-lv.png
 GoogleEarth/resources/wht-square.png
 GoogleEarth/resources/wht-stars-lv.png
 GoogleEarth/resources/wht-stars.png
+GoogleEarth/resources/ws.country/startinglocation.kml
 GoogleEarth/resources/x_click.png
 GoogleEarth/resources/x_click_1.png
 GoogleEarth/resources/x_glow.png
 GoogleEarth/resources/x_glow_1.png
 GoogleEarth/resources/x_off.png
 GoogleEarth/resources/x_off_1.png
+GoogleEarth/resources/ye.country/startinglocation.kml
 GoogleEarth/resources/ylw-blank-lv.png
 GoogleEarth/resources/ylw-blank.png
 GoogleEarth/resources/ylw-circle-lv.png
@@ -2269,6 +2601,9 @@ GoogleEarth/resources/ylw-square-lv.png
 GoogleEarth/resources/ylw-square.png
 GoogleEarth/resources/ylw-stars-lv.png
 GoogleEarth/resources/ylw-stars.png
+GoogleEarth/resources/yt.country/startinglocation.kml
+GoogleEarth/resources/za.country/startinglocation.kml
+GoogleEarth/resources/zm.country/startinglocation.kml
 GoogleEarth/resources/zoom_back01.png
 GoogleEarth/resources/zoom_in.png
 GoogleEarth/resources/zoom_in_click.png
@@ -2287,6 +2622,7 @@ GoogleEarth/resources/zoombar_norm.png
 GoogleEarth/resources/zt_handle.png
 GoogleEarth/resources/zt_handle_click.png
 GoogleEarth/resources/zt_handle_glow.png
+GoogleEarth/resources/zw.country/startinglocation.kml
 GoogleEarth/resources/zz_screen_overlay_mask.png
 GoogleEarth/xml/3dconnexion.plugin.xml
 GoogleEarth/xml/app.module.xml
@@ -2311,17 +2647,269 @@ GoogleEarth/xml/web.module.xml
 @dirrm GoogleEarth/res/pushpin
 @dirrm GoogleEarth/res/shapes
 @dirrm GoogleEarth/res
+@dirrm GoogleEarth/resources/ad.country
+@dirrm GoogleEarth/resources/ae.country
+@dirrm GoogleEarth/resources/af.country
+@dirrm GoogleEarth/resources/ag.country
+@dirrm GoogleEarth/resources/ai.country
+@dirrm GoogleEarth/resources/al.country
+@dirrm GoogleEarth/resources/am.country
+@dirrm GoogleEarth/resources/an.country
+@dirrm GoogleEarth/resources/ao.country
+@dirrm GoogleEarth/resources/aq.country
+@dirrm GoogleEarth/resources/ar.country
+@dirrm GoogleEarth/resources/as.country
+@dirrm GoogleEarth/resources/at.country
+@dirrm GoogleEarth/resources/au.country
+@dirrm GoogleEarth/resources/aw.country
+@dirrm GoogleEarth/resources/ax.country
+@dirrm GoogleEarth/resources/az.country
+@dirrm GoogleEarth/resources/ba.country
+@dirrm GoogleEarth/resources/bb.country
+@dirrm GoogleEarth/resources/bd.country
+@dirrm GoogleEarth/resources/be.country
+@dirrm GoogleEarth/resources/bf.country
+@dirrm GoogleEarth/resources/bg.country
+@dirrm GoogleEarth/resources/bh.country
+@dirrm GoogleEarth/resources/bi.country
+@dirrm GoogleEarth/resources/bj.country
+@dirrm GoogleEarth/resources/bm.country
+@dirrm GoogleEarth/resources/bn.country
+@dirrm GoogleEarth/resources/bo.country
+@dirrm GoogleEarth/resources/br.country
+@dirrm GoogleEarth/resources/bs.country
+@dirrm GoogleEarth/resources/bt.country
+@dirrm GoogleEarth/resources/bv.country
+@dirrm GoogleEarth/resources/bw.country
+@dirrm GoogleEarth/resources/by.country
+@dirrm GoogleEarth/resources/bz.country
+@dirrm GoogleEarth/resources/ca.country
+@dirrm GoogleEarth/resources/cc.country
+@dirrm GoogleEarth/resources/cd.country
+@dirrm GoogleEarth/resources/cf.country
+@dirrm GoogleEarth/resources/cg.country
+@dirrm GoogleEarth/resources/ch.country
+@dirrm GoogleEarth/resources/ci.country
+@dirrm GoogleEarth/resources/ck.country
+@dirrm GoogleEarth/resources/cl.country
+@dirrm GoogleEarth/resources/cm.country
+@dirrm GoogleEarth/resources/cn.country
+@dirrm GoogleEarth/resources/co.country
+@dirrm GoogleEarth/resources/cr.country
+@dirrm GoogleEarth/resources/cs.locale
+@dirrm GoogleEarth/resources/cu.country
+@dirrm GoogleEarth/resources/cv.country
+@dirrm GoogleEarth/resources/cx.country
+@dirrm GoogleEarth/resources/cy.country
+@dirrm GoogleEarth/resources/cz.country
+@dirrm GoogleEarth/resources/de.country
 @dirrm GoogleEarth/resources/de.locale
+@dirrm GoogleEarth/resources/dj.country
+@dirrm GoogleEarth/resources/dk.country
+@dirrm GoogleEarth/resources/dm.country
+@dirrm GoogleEarth/resources/do.country
+@dirrm GoogleEarth/resources/dz.country
+@dirrm GoogleEarth/resources/ec.country
+@dirrm GoogleEarth/resources/ee.country
+@dirrm GoogleEarth/resources/eg.country
+@dirrm GoogleEarth/resources/eh.country
 @dirrm GoogleEarth/resources/en.locale
 @dirrm GoogleEarth/resources/en_AU.locale
 @dirrm GoogleEarth/resources/en_CA.locale
 @dirrm GoogleEarth/resources/en_GB.locale
 @dirrm GoogleEarth/resources/en_NZ.locale
 @dirrm GoogleEarth/resources/en_US.locale
+@dirrm GoogleEarth/resources/er.country
+@dirrm GoogleEarth/resources/es.country
 @dirrm GoogleEarth/resources/es.locale
+@dirrm GoogleEarth/resources/et.country
+@dirrm GoogleEarth/resources/fi.country
+@dirrm GoogleEarth/resources/fj.country
+@dirrm GoogleEarth/resources/fk.country
+@dirrm GoogleEarth/resources/fm.country
+@dirrm GoogleEarth/resources/fo.country
+@dirrm GoogleEarth/resources/fr.country
 @dirrm GoogleEarth/resources/fr.locale
+@dirrm GoogleEarth/resources/ga.country
+@dirrm GoogleEarth/resources/gb.country
+@dirrm GoogleEarth/resources/gd.country
+@dirrm GoogleEarth/resources/ge.country
+@dirrm GoogleEarth/resources/gf.country
+@dirrm GoogleEarth/resources/gg.country
+@dirrm GoogleEarth/resources/gh.country
+@dirrm GoogleEarth/resources/gi.country
+@dirrm GoogleEarth/resources/gl.country
+@dirrm GoogleEarth/resources/gm.country
+@dirrm GoogleEarth/resources/gn.country
+@dirrm GoogleEarth/resources/gp.country
+@dirrm GoogleEarth/resources/gq.country
+@dirrm GoogleEarth/resources/gr.country
+@dirrm GoogleEarth/resources/gs.country
+@dirrm GoogleEarth/resources/gt.country
+@dirrm GoogleEarth/resources/gu.country
+@dirrm GoogleEarth/resources/gw.country
+@dirrm GoogleEarth/resources/gy.country
+@dirrm GoogleEarth/resources/he.locale
+@dirrm GoogleEarth/resources/hk.country
+@dirrm GoogleEarth/resources/hm.country
+@dirrm GoogleEarth/resources/hn.country
+@dirrm GoogleEarth/resources/hr.country
+@dirrm GoogleEarth/resources/ht.country
+@dirrm GoogleEarth/resources/hu.country
+@dirrm GoogleEarth/resources/id.country
+@dirrm GoogleEarth/resources/ie.country
+@dirrm GoogleEarth/resources/il.country
+@dirrm GoogleEarth/resources/im.country
+@dirrm GoogleEarth/resources/in.country
+@dirrm GoogleEarth/resources/io.country
+@dirrm GoogleEarth/resources/iq.country
+@dirrm GoogleEarth/resources/ir.country
+@dirrm GoogleEarth/resources/is.country
+@dirrm GoogleEarth/resources/it.country
 @dirrm GoogleEarth/resources/it.locale
 @dirrm GoogleEarth/resources/ja.locale
+@dirrm GoogleEarth/resources/je.country
+@dirrm GoogleEarth/resources/jm.country
+@dirrm GoogleEarth/resources/jo.country
+@dirrm GoogleEarth/resources/jp.country
+@dirrm GoogleEarth/resources/ke.country
+@dirrm GoogleEarth/resources/kg.country
+@dirrm GoogleEarth/resources/kh.country
+@dirrm GoogleEarth/resources/ki.country
+@dirrm GoogleEarth/resources/km.country
+@dirrm GoogleEarth/resources/kn.country
+@dirrm GoogleEarth/resources/ko.locale
+@dirrm GoogleEarth/resources/kp.country
+@dirrm GoogleEarth/resources/kr.country
+@dirrm GoogleEarth/resources/kw.country
+@dirrm GoogleEarth/resources/ky.country
+@dirrm GoogleEarth/resources/kz.country
+@dirrm GoogleEarth/resources/la.country
+@dirrm GoogleEarth/resources/lb.country
+@dirrm GoogleEarth/resources/lc.country
+@dirrm GoogleEarth/resources/li.country
+@dirrm GoogleEarth/resources/lk.country
+@dirrm GoogleEarth/resources/lr.country
+@dirrm GoogleEarth/resources/ls.country
+@dirrm GoogleEarth/resources/lt.country
+@dirrm GoogleEarth/resources/lu.country
+@dirrm GoogleEarth/resources/lv.country
+@dirrm GoogleEarth/resources/ly.country
+@dirrm GoogleEarth/resources/ma.country
+@dirrm GoogleEarth/resources/mc.country
+@dirrm GoogleEarth/resources/md.country
+@dirrm GoogleEarth/resources/me.country
+@dirrm GoogleEarth/resources/mg.country
+@dirrm GoogleEarth/resources/mh.country
+@dirrm GoogleEarth/resources/mk.country
+@dirrm GoogleEarth/resources/ml.country
+@dirrm GoogleEarth/resources/mm.country
+@dirrm GoogleEarth/resources/mn.country
+@dirrm GoogleEarth/resources/mo.country
+@dirrm GoogleEarth/resources/mp.country
+@dirrm GoogleEarth/resources/mq.country
+@dirrm GoogleEarth/resources/mr.country
+@dirrm GoogleEarth/resources/ms.country
+@dirrm GoogleEarth/resources/mt.country
+@dirrm GoogleEarth/resources/mu.country
+@dirrm GoogleEarth/resources/mv.country
+@dirrm GoogleEarth/resources/mw.country
+@dirrm GoogleEarth/resources/mx.country
+@dirrm GoogleEarth/resources/my.country
+@dirrm GoogleEarth/resources/mz.country
+@dirrm GoogleEarth/resources/na.country
+@dirrm GoogleEarth/resources/nc.country
+@dirrm GoogleEarth/resources/ne.country
+@dirrm GoogleEarth/resources/nf.country
+@dirrm GoogleEarth/resources/ng.country
+@dirrm GoogleEarth/resources/ni.country
+@dirrm GoogleEarth/resources/nl.country
+@dirrm GoogleEarth/resources/nl.locale
+@dirrm GoogleEarth/resources/no.country
+@dirrm GoogleEarth/resources/np.country
+@dirrm GoogleEarth/resources/nr.country
+@dirrm GoogleEarth/resources/nu.country
+@dirrm GoogleEarth/resources/nz.country
+@dirrm GoogleEarth/resources/om.country
+@dirrm GoogleEarth/resources/pa.country
+@dirrm GoogleEarth/resources/pe.country
+@dirrm GoogleEarth/resources/pf.country
+@dirrm GoogleEarth/resources/pg.country
+@dirrm GoogleEarth/resources/ph.country
+@dirrm GoogleEarth/resources/pk.country
+@dirrm GoogleEarth/resources/pl.country
+@dirrm GoogleEarth/resources/pl.locale
+@dirrm GoogleEarth/resources/pm.country
+@dirrm GoogleEarth/resources/pn.country
+@dirrm GoogleEarth/resources/pr.country
+@dirrm GoogleEarth/resources/ps.country
+@dirrm GoogleEarth/resources/pt.country
+@dirrm GoogleEarth/resources/pt.locale
+@dirrm GoogleEarth/resources/pw.country
+@dirrm GoogleEarth/resources/py.country
+@dirrm GoogleEarth/resources/qa.country
+@dirrm GoogleEarth/resources/re.country
+@dirrm GoogleEarth/resources/ro.country
+@dirrm GoogleEarth/resources/rs.country
+@dirrm GoogleEarth/resources/ru.country
+@dirrm GoogleEarth/resources/ru.locale
+@dirrm GoogleEarth/resources/rw.country
+@dirrm GoogleEarth/resources/sa.country
+@dirrm GoogleEarth/resources/sb.country
+@dirrm GoogleEarth/resources/sc.country
+@dirrm GoogleEarth/resources/sd.country
+@dirrm GoogleEarth/resources/se.country
+@dirrm GoogleEarth/resources/sg.country
+@dirrm GoogleEarth/resources/sh.country
+@dirrm GoogleEarth/resources/si.country
+@dirrm GoogleEarth/resources/sj.country
+@dirrm GoogleEarth/resources/sk.country
+@dirrm GoogleEarth/resources/sl.country
+@dirrm GoogleEarth/resources/sm.country
+@dirrm GoogleEarth/resources/sn.country
+@dirrm GoogleEarth/resources/so.country
+@dirrm GoogleEarth/resources/sr.country
+@dirrm GoogleEarth/resources/st.country
+@dirrm GoogleEarth/resources/sv.country
+@dirrm GoogleEarth/resources/sy.country
+@dirrm GoogleEarth/resources/sz.country
+@dirrm GoogleEarth/resources/tc.country
+@dirrm GoogleEarth/resources/td.country
+@dirrm GoogleEarth/resources/tf.country
+@dirrm GoogleEarth/resources/tg.country
+@dirrm GoogleEarth/resources/th.country
+@dirrm GoogleEarth/resources/tj.country
+@dirrm GoogleEarth/resources/tk.country
+@dirrm GoogleEarth/resources/tl.country
+@dirrm GoogleEarth/resources/tm.country
+@dirrm GoogleEarth/resources/tn.country
+@dirrm GoogleEarth/resources/to.country
+@dirrm GoogleEarth/resources/tr.country
+@dirrm GoogleEarth/resources/tt.country
+@dirrm GoogleEarth/resources/tv.country
+@dirrm GoogleEarth/resources/tw.country
+@dirrm GoogleEarth/resources/tz.country
+@dirrm GoogleEarth/resources/ua.country
+@dirrm GoogleEarth/resources/ug.country
+@dirrm GoogleEarth/resources/um.country
+@dirrm GoogleEarth/resources/us.country
+@dirrm GoogleEarth/resources/uy.country
+@dirrm GoogleEarth/resources/uz.country
+@dirrm GoogleEarth/resources/va.country
+@dirrm GoogleEarth/resources/vc.country
+@dirrm GoogleEarth/resources/ve.country
+@dirrm GoogleEarth/resources/vg.country
+@dirrm GoogleEarth/resources/vi.country
+@dirrm GoogleEarth/resources/vn.country
+@dirrm GoogleEarth/resources/vu.country
+@dirrm GoogleEarth/resources/wf.country
+@dirrm GoogleEarth/resources/ws.country
+@dirrm GoogleEarth/resources/ye.country
+@dirrm GoogleEarth/resources/yt.country
+@dirrm GoogleEarth/resources/za.country
+@dirrm GoogleEarth/resources/zm.country
+@dirrm GoogleEarth/resources/zw.country
 @dirrm GoogleEarth/resources
 @dirrm GoogleEarth/xml
+@dirrm GoogleEarth
 @dirrm GoogleEarth

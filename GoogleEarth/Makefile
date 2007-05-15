@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/19 15:56:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/15 00:48:00 tnn2 Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -6,12 +6,12 @@ CATEGORIES=		geography x11
 MASTER_SITES=		http://dl.google.com/earth/client/current/
 EXTRACT_SUFX=
 
-MAINTAINER=		tnn+nbsd@nygren.pp.se
+MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://earth.google.com/
 COMMENT=		Interactive browser for satellite imagery and maps
 
 LICENSE=		google-earth-license
-LICENSE_FILE=		${FILESDIR}/EULA-GoogleEarth-en.txt
+LICENSE_FILE=		${FILESDIR}/google-earth-license
 RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -24,7 +24,7 @@ DEPENDS+=	suse_fontconfig>=10.0nb2:../../emulators/suse100_fontconfig
 DEPENDS+=	suse_glx>=10.0nb2:../../emulators/suse100_glx
 
 ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-i386
-GE_VERSION=		4.0.2735.0
+GE_VERSION=		4.1.7076.4458
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
 EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
@@ -34,17 +34,18 @@ EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
 SUSE_COMPAT32=		yes
 
 do-build:
-	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth \
-	&& ${PAX} -r -f ../googleearth-linux-x86.tar \
-	&& ${PAX} -r -f ../googleearth-data.tar \
-	&& cp ../EULA-GoogleEarth-en.txt ../googleearth.xpm \
-	../googleearth-icon.png ../bin/googleearth . \
-	&& ${PRINTF} "#! /bin/sh\\nexec %s/GoogleEarth/googleearth\\n" \
-	"${PREFIX}" > ${WRKDIR}/googleearth
+	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth && \
+	${PAX} -r -f ../googleearth-linux-x86.tar && \
+	${PAX} -r -f ../googleearth-data.tar && \
+	${CP} ../*.xpm ../*.png ../bin/googleearth . && \
+	${FIND} . -type f | ${XARGS} ${CHMOD} -x && \
+	${CHMOD} +x googleearth googleearth-bin *.so*
+	printf '#! /bin/sh\nexec ${PREFIX}/GoogleEarth/googleearth "$$@"\n' > \
+	${WRKDIR}/googleearth
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${PREFIX}/bin/googleearth \
-	&& cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${PREFIX}
+	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${PREFIX}/bin/googleearth
+	cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${PREFIX}
 
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
