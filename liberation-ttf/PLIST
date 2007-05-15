@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/15 13:38:49 bartoszkuzma Exp $
+lib/X11/fonts/TTF/LiberationMono-Bold.ttf
+lib/X11/fonts/TTF/LiberationMono-BoldItalic.ttf
+lib/X11/fonts/TTF/LiberationMono-Italic.ttf
+lib/X11/fonts/TTF/LiberationMono-Regular.ttf
+lib/X11/fonts/TTF/LiberationSans-Bold.ttf
+lib/X11/fonts/TTF/LiberationSans-BoldItalic.ttf
+lib/X11/fonts/TTF/LiberationSans-Italic.ttf
+lib/X11/fonts/TTF/LiberationSans-Regular.ttf
+lib/X11/fonts/TTF/LiberationSerif-Bold.ttf
+lib/X11/fonts/TTF/LiberationSerif-BoldItalic.ttf
+lib/X11/fonts/TTF/LiberationSerif-Italic.ttf
+lib/X11/fonts/TTF/LiberationSerif-Regular.ttf
+share/doc/liberation-ttf/License.txt
+@dirrm share/doc/liberation-ttf
