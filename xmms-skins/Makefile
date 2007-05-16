@@ -1,43 +1,27 @@
-# $NetBSD: Makefile,v 1.2 2007/01/23 19:11:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/16 21:26:30 cheusov Exp $
 
-DISTNAME=		xmms-skins_0.5.orig
-PKGNAME=		xmms-skins-0.5
-CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/x/xmms-skins/}
+DISTNAME=	xmms-skins-0.10
+CATEGORIES=	meta-pkgs audio
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=		cheusov@tut.by
-# I don't know where it is real home page of xmms-skins
-HOMEPAGE=		http://www.debian.org/
-COMMENT=		Skins for XMMS
+MAINTAINER=	cheusov@tut.by
+HOMEPAGE=	http://www.xmms.org/skins.php
+COMMENT=	Skins for XMMS
 
-DEPENDS+=		xmms>=1.2.0:../../audio/xmms
+SKINS=		AdamAmp Cracked Eclipse Fire HelixSawfish LinuxDotCom \
+		Plume UltrafinaSEM VegetalBlues nixamp
 
-NO_CONFIGURE=		yes
+.for skin in ${SKINS}
+DEPENDS+=	xmms-skin-${skin}-[0-9]*:../../wip/xmms-skin-${skin}
+.endfor
 
-XMMS_SKINS_VERSION=	${PKGNAME:S/xmms-skins-//1}
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_MTREE=	yes
 
-WRKSRC=			${WRKDIR}/xmms-skins-${XMMS_SKINS_VERSION}.orig
-
-DOC_FILES=		AUTHORS COPYING ChangeLog README
-SKIN_FILES=		Absolute-Blue.tar.gz Cherry-Best.tar.gz \
-			Cobalt.tar.gz Colder.tar.gz Eclipse.tar.gz \
-			FB2.tar.gz Helix-Sawfish.tar.gz Plume.tar.gz \
-			SpiffMedia.tar.gz Titanium.tar.gz minEguE.tar.gz
-
-DOC_DIR=		${PREFIX}/share/doc/xmms-skins
-SKIN_DIR=		${PREFIX}/share/xmms/Skins
-
-INSTALLATION_DIRS+=	${DOC_DIR} ${SKIN_DIR}
-
-do-build:
-
-do-install:
-	set -e;                                                 \
-	for i in ${DOC_FILES}; do                               \
-		${INSTALL_DATA} ${WRKSRC}/"$$i" ${DOC_DIR};       \
-	done;                                                   \
-	for i in ${SKIN_FILES}; do                              \
-		${INSTALL_DATA} ${WRKSRC}/Skins/"$$i" ${SKIN_DIR};\
-	done
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
