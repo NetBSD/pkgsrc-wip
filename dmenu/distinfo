@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/04/29 13:59:39 cosmedbr Exp $
+$NetBSD: distinfo,v 1.3 2007/05/16 16:55:50 netcap Exp $
 
 SHA1 (dmenu-3.0.tar.gz) = e2b1f14e373711754212da0d5f9e3775e7824c55
 RMD160 (dmenu-3.0.tar.gz) = 678ab3f35c682cf8fc907df4c9dcf9b1376202ea
 Size (dmenu-3.0.tar.gz) = 7804 bytes
-SHA1 (patch-aa) = aad2e196993e7342353d42a45250e07e6913022f
+SHA1 (patch-aa) = afb910efdfcd3322923e66b19f353957e3aba4d0

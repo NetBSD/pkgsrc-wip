@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/03/17 22:32:55 cosmedbr Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/16 16:55:50 netcap Exp $
 
 --- config.mk.orig	2007-03-17 22:14:34.000000000 +0100
 +++ config.mk
@@ -22,7 +22,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/03/17 22:32:55 cosmedbr Exp $
  
  # flags
 -CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
+-LDFLAGS = ${LIBS}
 +CFLAGS = -DVERSION=\"${VERSION}\"
- LDFLAGS = ${LIBS}
++LDFLAGS += ${LIBS}
  #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
  #LDFLAGS = -g ${LIBS}
