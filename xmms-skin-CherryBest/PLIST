@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2007/05/17 08:00:31 cheusov Exp $
+share/xmms/Skins/cherry_best.tar.gz
+@dirrm share/xmms/Skins
