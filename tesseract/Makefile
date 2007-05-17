@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/04/19 00:34:36 kheinz Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/17 22:43:13 thomasklausner Exp $
 #
 
-DISTNAME=	tesseract-1.03
+DISTNAME=	tesseract-1.04b
 CATEGORIES=	graphics
 MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
 
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+WRKSRC=		${WRKDIR}/tesseract-1.04
 
 post-build:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/tesseract.sh \
@@ -22,7 +23,6 @@ post-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec
 	${MV} ${DESTDIR}${PREFIX}/bin/tesseract ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/tesseract.sh ${DESTDIR}${PREFIX}/bin/tesseract
-	cd ${WRKSRC} && ${PAX} -pp -rw tessdata ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tesseract
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tesseract
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/tesseract
