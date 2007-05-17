@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2589 2007/05/15 13:40:30 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2590 2007/05/17 08:07:41 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1698,6 +1698,26 @@ SUBDIR+=	xmms-infopipe
 SUBDIR+=	xmms-pac
 SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-scrobbler
+SUBDIR+=	xmms-skin-AdamAmp
+SUBDIR+=	xmms-skin-Chaos
+SUBDIR+=	xmms-skin-CherryBest
+SUBDIR+=	xmms-skin-Cobalt
+SUBDIR+=	xmms-skin-CoolBlue
+SUBDIR+=	xmms-skin-Cracked
+SUBDIR+=	xmms-skin-Eclipse
+SUBDIR+=	xmms-skin-Fire
+SUBDIR+=	xmms-skin-HelixSawfish
+SUBDIR+=	xmms-skin-LinuxDotCom
+SUBDIR+=	xmms-skin-m2n
+SUBDIR+=	xmms-skin-MarbleX
+SUBDIR+=	xmms-skin-maXMMS
+SUBDIR+=	xmms-skin-nixamp
+SUBDIR+=	xmms-skin-NoerdAmp-SE
+SUBDIR+=	xmms-skin-Plume
+SUBDIR+=	xmms-skin-Sword
+SUBDIR+=	xmms-skin-UltrafinaSEM
+SUBDIR+=	xmms-skin-VegetalBlues
+SUBDIR+=	xmms-skin-WinampX
 SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-status
 SUBDIR+=	xmms-xmp
