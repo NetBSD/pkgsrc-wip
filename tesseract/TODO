@@ -1,19 +1,5 @@
-- Builds and does not crash on NetBSD/i386 3.1.
-- Does not extract text correctly from phototest.tif.
+Is the following still true? (Added for 1.03)
+- NetBSD/i386 3.1: Does not extract text correctly from phototest.tif.
   Maybe this is related to the many warnings about sign mismatches or the missing
   virtual destructors?
-
-
-- Is this still true? According to "ChangeLog" fixes for 64-bit systems were added.
-Compiles fine, but dumps core on NetBSD-4.99.3/amd64. Backtrace:
-Program terminated with signal 11, Segmentation fault.
-#0  0x00000000004c1c70 in reverse32 ()
-(gdb) bt
-#0  0x00000000004c1c70 in reverse32 ()
-#1  0x00000000004aed12 in read_squished_dawg ()
-#2  0x00000000004aaded in init_permute ()
-#3  0x0000000000485779 in program_editup ()
-#4  0x0000000000485869 in start_recog ()
-#5  0x0000000000403d04 in init_tesseract ()
-#6  0x000000000040309b in main ()
-(gdb)
+Works fine on NetBSD/amd64 4.99.19.
