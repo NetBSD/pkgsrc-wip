@@ -1,0 +1,48 @@
+PREFIX=@PREFIX@
+PKGVERSION=@PKGVERSION@
+GHCVERSION=@GHCVERSION@
+
+case ${STAGE} in
+    POST-INSTALL)
+        echo 'name: X11
+version: 1.2
+license: BSD3
+copyright: Alastair Reid, 1999-2003
+maintainer: <libraries@haskell.org>
+stability:
+homepage:
+package-url:
+description: A Haskell binding to the X11 graphics library.
+             .
+             The binding is a direct translation of the C binding; for
+             documentation of these calls, refer to "The Xlib Programming
+             Manual", available online at <http://tronche.com/gui/x/xlib/>.
+category: Graphics
+author:
+exposed: True
+exposed-modules: Graphics.X11 Graphics.X11.Types Graphics.X11.Xlib
+                 Graphics.X11.Xlib.Atom Graphics.X11.Xlib.Color
+                 Graphics.X11.Xlib.Context Graphics.X11.Xlib.Display
+                 Graphics.X11.Xlib.Event Graphics.X11.Xlib.Font
+                 Graphics.X11.Xlib.Misc Graphics.X11.Xlib.Region
+                 Graphics.X11.Xlib.Screen Graphics.X11.Xlib.Types
+                 Graphics.X11.Xlib.Window
+hidden-modules:
+import-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1
+library-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1
+hs-libraries: HSX11-1.2
+extra-libraries: X11
+extra-ghci-libraries:
+include-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1/include
+includes: HsXlib.h
+depends: base-2.1.1
+hugs-options:
+cc-options:
+ld-options: -L/usr/X11R6/lib
+framework-dirs:
+frameworks:
+haddock-interfaces: /usr/pkg/share/X11-1.2/doc/html/X11.haddock
+haddock-html: /usr/pkg/share/X11-1.2/doc/html' | /usr/pkg/bin/ghc-pkg update -
+        ;;
+esac
+
