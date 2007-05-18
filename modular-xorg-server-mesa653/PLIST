@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/05/02 01:27:28 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/05/18 16:36:33 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -179,11 +179,11 @@ include/xorg/xvmcext.h
 lib/X11/Cards
 lib/X11/Options
 lib/pkgconfig/xorg-server.pc
-lib/xorg/modules/extensions/libGLcore.la
+${DRI}lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
-lib/xorg/modules/extensions/libdri.la
+${DRI}lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
-lib/xorg/modules/extensions/libglx.la
+${DRI}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
 lib/xorg/modules/fonts/libfreetype.la

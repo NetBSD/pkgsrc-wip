@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/05/02 01:27:28 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/18 16:36:33 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -12,6 +12,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	blair.sadewitz@gmail.com
 COMMENT=	Xorg X11 Server from modular X.org X11
 
+MESA_VERSION=	6.5.3
+
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
@@ -20,19 +22,20 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
 USE_TOOLS+=		automake
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--disable-xorgcfg
 
 PKG_SUPPORTED_OPTIONS=	dri
+PKG_SUGGESTED_OPTIONS=	dri
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xorg-server
 PKG_OPTIONS_LEGACY_OPTS=glx:dri
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdri)
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		MesaLib-6.5.3.tar.bz2
-SITES.MesaLib-6.5.3.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-MESA_SRC=		${WRKDIR}/Mesa-6.5.3
+DISTFILES+=		MesaLib-${MESA_VERSION}.tar.bz2
+SITES.MesaLib-${MESA_VERSION}.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+MESA_SRC=		${WRKDIR}/Mesa-${MESA_VERSION}
+CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
 CONFIGURE_ARGS+=	--with-dri-driver-path=${PREFIX}/lib/xorg/modules/dri
@@ -48,9 +51,9 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
 post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
-PLIST_SUBST+=		GLX=""
+PLIST_SUBST+=		DRI=""
 .else
-CONFIGURE_ARGS+=	--disable-glx
+CONFIGURE_ARGS+=	--disable-dri
 PLIST_SUBST+=		GLX="@comment "
 .endif
 
