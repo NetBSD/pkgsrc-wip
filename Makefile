@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2591 2007/05/18 06:42:08 thomasklausner Exp $
+# $Id: Makefile,v 1.2592 2007/05/18 12:40:32 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -563,6 +563,8 @@ SUBDIR+=	highlight
 SUBDIR+=	hping3
 SUBDIR+=	hplip
 SUBDIR+=	hpoj
+SUBDIR+=	hs-x11
+SUBDIR+=	hs-x11-extras
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	htop
@@ -1721,6 +1723,7 @@ SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-status
 SUBDIR+=	xmms-xmp
 SUBDIR+=	xmms2
+SUBDIR+=	xmonad
 SUBDIR+=	xmoto
 SUBDIR+=	xorg-server
 SUBDIR+=	xorg-server-snap
