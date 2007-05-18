@@ -1,5 +1,2 @@
-Is the following still true? (Added for 1.03)
-- NetBSD/i386 3.1: Does not extract text correctly from phototest.tif.
-  Maybe this is related to the many warnings about sign mismatches or the missing
-  virtual destructors?
 Works fine on NetBSD/amd64 4.99.19.
+1.04b works (tested with phototest.tif) on NetBSD/i386 3.1.
