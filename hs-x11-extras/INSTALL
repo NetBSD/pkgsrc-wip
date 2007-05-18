@@ -1,0 +1,41 @@
+PREFIX=@PREFIX@
+PKGVERSION=@PKGVERSION@
+GHCVERSION=@GHCVERSION@
+
+case ${STAGE} in
+    POST-INSTALL)
+        echo 'name: X11-extras
+version: 0.1
+license: BSD3
+copyright: Spencer Janssen 2007
+maintainer: sjanssen@cse.unl.edu
+stability:
+homepage:
+package-url:
+description: Missing bindings to the X11 graphics library.
+             .
+             The binding is a direct translation of the C binding; for
+             documentation of these calls, refer to "The Xlib Programming
+             Manual", available online at <http://tronche.com/gui/x/xlib/>.
+category: Graphics
+author: Spencer Janssen
+exposed: True
+exposed-modules: Graphics.X11.Xlib.Extras Graphics.X11.Xinerama
+hidden-modules:
+import-dirs: /usr/pkg/lib/X11-extras-0.1/ghc-6.6.1
+library-dirs: /usr/pkg/lib/X11-extras-0.1/ghc-6.6.1
+hs-libraries: HSX11-extras-0.1
+extra-libraries: Xinerama X11 Xext
+extra-ghci-libraries:
+include-dirs: /usr/pkg/lib/X11-extras-0.1/ghc-6.6.1/include
+includes: XlibExtras.h
+depends: base-2.1.1 X11-1.2
+hugs-options:
+cc-options:
+ld-options: -L/usr/X11R6/lib
+framework-dirs:
+frameworks:
+haddock-interfaces: /usr/pkg/share/X11-extras-0.1/doc/html/X11-extras.haddock
+haddock-html: /usr/pkg/share/X11-extras-0.1/doc/html' | /usr/pkg/bin/ghc-pkg update -
+        ;;
+esac
