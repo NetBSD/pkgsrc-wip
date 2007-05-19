@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2007/05/19 13:26:14 cheusov Exp $
+$NetBSD: patch-ad,v 1.5 2007/05/19 17:22:51 cheusov Exp $
 
 --- build/mk.config.orig	2007-02-27 01:03:01.000000000 +0200
 +++ build/mk.config
@@ -14,30 +14,30 @@ $NetBSD: patch-ad,v 1.4 2007/05/19 13:26:14 cheusov Exp $
  # may be identical to that of one of the first three personalities below.
  #
 -DEFBIN = /usr/5bin
-+DEFBIN = ${DESTDIR}${PREFIX}/bin
++DEFBIN = ${PREFIX}/bin
  
  #
  # Location for SVID3/SVR4-style binaries.
  #
 -SV3BIN = /usr/5bin
-+SV3BIN = ${DESTDIR}${PREFIX}/bin
++SV3BIN = ${PREFIX}/bin
  
  #
  # Location for SVID4/SVR4.2-style binaries.
  #
 -S42BIN = /usr/5bin/s42
-+S42BIN = ${DESTDIR}${PREFIX}/bin/s42
++S42BIN = ${PREFIX}/bin/s42
  
  #
  # Location for POSIX.2/SUS-style binaries.
  #
 -SUSBIN = /usr/5bin/posix
-+SUSBIN = ${DESTDIR}${PREFIX}/bin/posix
++SUSBIN = ${PREFIX}/bin/posix
  
  #
  # Location for POSIX.1-2001/SUSv3-style binaries.
 -SU3BIN = /usr/5bin/posix2001
-+SU3BIN = ${DESTDIR}${PREFIX}/bin/posix2001
++SU3BIN = ${PREFIX}/bin/posix2001
  
  #
  # Location for SVR4 UCB-style binaries. These do not form a complete
@@ -45,7 +45,7 @@ $NetBSD: patch-ad,v 1.4 2007/05/19 13:26:14 cheusov Exp $
  # one.
  #
 -UCBBIN = /usr/ucb
-+UCBBIN = ${DESTDIR}${PREFIX}/ucb
++UCBBIN = ${PREFIX}/ucb
  
  #
  # Location for development binaries. The "tsort" utility is
@@ -54,46 +54,46 @@ $NetBSD: patch-ad,v 1.4 2007/05/19 13:26:14 cheusov Exp $
  # installed in it.
  #
 -CCSBIN = /usr/ccs/bin
-+CCSBIN = ${DESTDIR}${PREFIX}/bin/ccs
++CCSBIN = ${PREFIX}/bin/ccs
  
  #
  # Location for library files.
  #
 -DEFLIB = /usr/5lib
-+DEFLIB = ${DESTDIR}${PREFIX}/lib
++DEFLIB = ${PREFIX}/lib
  
  #
  # Location for superuser-only binaries. May be identical to the
  # default binary directory.
  #
 -DEFSBIN = /usr/5bin
-+DEFSBIN = ${DESTDIR}${PREFIX}/sbin
++DEFSBIN = ${PREFIX}/sbin
  
  #
  # Location for manual pages (with man1, man1b ... man8 below).
  #
 -MANDIR = /usr/share/man/5man
-+MANDIR = ${DESTDIR}${PREFIX}/man
++MANDIR = ${PREFIX}/man
  
  #
  # Location for default files. Make sure that this directory is accessible
  # to all users.
  #
 -DFLDIR = /etc/default
-+DFLDIR = ${DESTDIR}${PREFIX}/etc/default
++DFLDIR = ${PREFIX}/etc/default
  
  #
  # Location for the spell history file (contains misspelled words for
  # all users; set to /dev/null to disable).
  #
 -SPELLHIST = /var/adm/spellhist
-+SPELLHIST = ${DESTDIR}${PREFIX}/var/adm/spellhist
++SPELLHIST = ${PREFIX}/var/adm/spellhist
  
  #
  # Location for the su logfile.
  #
 -SULOG = /var/log/sulog
-+SULOG = ${DESTDIR}${PREFIX}/var/log/sulog
++SULOG = ${PREFIX}/var/log/sulog
  
  #
  # Where to store the file command's magic. Note that the existing
