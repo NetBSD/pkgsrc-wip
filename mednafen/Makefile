@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/05/19 12:06:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.23 2007/05/19 12:21:07 thomasklausner Exp $
 #
 
 DISTNAME=	mednafen-0.8.1
@@ -22,7 +22,7 @@ SUBST_STAGE.dsp=	pre-configure
 SUBST_MESSAGE.dsp=	Fixing path to audio device.
 SUBST_FILES.dsp=	src/sexyal/drivers/esd.c src/sexyal/drivers/oss.c \
 			src/sexyal/drivers/oss.c src/sexyal/sexyal.c
-SUBST_SED.dsp=		s,/dev/dsp,${DEVOSSAUDIO},
+SUBST_SED.dsp=		-e s,/dev/dsp,${DEVOSSAUDIO},
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mednafen
