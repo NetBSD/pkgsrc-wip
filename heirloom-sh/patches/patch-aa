@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/09/09 15:28:16 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/19 14:25:09 cheusov Exp $
 
 --- makefile.orig	2005-07-06 13:59:57.000000000 +0300
 +++ makefile
@@ -13,25 +13,31 @@ $NetBSD: patch-aa,v 1.1 2006/09/09 15:28:16 cheusov Exp $
  # The destination directory for the "sh" and "jsh" binaries.
  #
 -SV3BIN=/usr/5bin
-+SV3BIN=${DESTDIR}/heirloom/bin
++SV3BIN=${PREFIX}/heirloom/bin
  
  #
  # Location for manual pages (with man1 below).
  #
 -MANDIR=/usr/share/man/5man
-+MANDIR=${DESTDIR}/heirloom/man
++MANDIR=${PREFIX}/heirloom/man
  
  #
  # Enable this definition if spell checking should be done for the
-@@ -23,7 +23,7 @@ MANDIR=/usr/share/man/5man
+@@ -23,12 +23,12 @@ MANDIR=/usr/share/man/5man
  #
  # A BSD-compatible install command.
  #
 -UCBINST=/usr/ucb/install
-+UCBINST=install
++#UCBINST=install
  
  #
  # The strip command that is used at installation time.
+ #
+-STRIP=strip
++#STRIP=strip
+ 
+ #
+ # A command to create the link from "jsh" to "sh".
 @@ -44,26 +44,26 @@ LNS=ln -s
  #
  # Compiler flags.
@@ -67,3 +73,12 @@ $NetBSD: patch-aa,v 1.1 2006/09/09 15:28:16 cheusov Exp $
  WARN=
  
  #
+@@ -93,7 +93,7 @@ sh.1.out: sh.1
+ 
+ install: all
+ 	test -d $(ROOT)$(SV3BIN) || mkdir -p $(ROOT)$(SV3BIN)
+-	$(UCBINST) -c -m 755 sh $(ROOT)$(SV3BIN)/sh
++	$(UCBINST_PROG) -c -m 755 sh $(ROOT)$(SV3BIN)/sh
+ 	$(STRIP) $(ROOT)$(SV3BIN)/sh
+ 	rm -f $(ROOT)$(SV3BIN)/jsh
+ 	cd $(ROOT)$(SV3BIN) && $(LNS) sh jsh
