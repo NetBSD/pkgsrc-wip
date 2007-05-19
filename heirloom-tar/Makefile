@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/21 08:33:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:19 cheusov Exp $
 
 NOT_FOR_PLATFORM+=	Interix-*-*
 
@@ -9,6 +9,7 @@ CATEGORIES=	sysutils
 
 DOC_FILES=	NOTES
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build tar"
+MAKE_FLAGS+=	SUBDIRS="build tar"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

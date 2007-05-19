@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/18 20:34:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:18 cheusov Exp $
 
 NEED_LIBCRYPT=	1
 
@@ -7,6 +7,7 @@ NEED_LIBCRYPT=	1
 PKGNAME=	heirloom-su-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build su"
+MAKE_FLAGS+=	SUBDIRS="build su"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

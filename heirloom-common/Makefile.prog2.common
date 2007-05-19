@@ -3,5 +3,6 @@
 CONFLICTS+=	heirloom-toolchest-[0-9]*
 
 MAKE_FLAGS+=	NO_INSTALL_INTRO=1
+LDFLAGS+=	-lheirloomcommon
 
 DEPENDS+=	heirloom-doc-${HEIRLOOM_VER}:../../wip/heirloom-doc

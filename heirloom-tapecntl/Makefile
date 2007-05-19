@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/21 08:33:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:19 cheusov Exp $
 
 NOT_FOR_PLATFORM+=	Interix-*-*
 
@@ -7,6 +7,7 @@ NOT_FOR_PLATFORM+=	Interix-*-*
 PKGNAME=	heirloom-tapecntl-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build tapecntl"
+MAKE_FLAGS+=	SUBDIRS="build tapecntl"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

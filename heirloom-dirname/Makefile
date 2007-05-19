@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/12/18 18:59:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/19 13:26:15 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.prog2.common"
 
 PKGNAME=	heirloom-dirname-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build dirname"
+MAKE_FLAGS+=	SUBDIRS="build dirname"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

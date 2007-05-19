@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/21 08:33:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:14 cheusov Exp $
 
 NOT_FOR_PLATFORM+=	Interix-*-*
 
@@ -7,6 +7,7 @@ NOT_FOR_PLATFORM+=	Interix-*-*
 PKGNAME=	heirloom-date-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build date"
+MAKE_FLAGS+=	SUBDIRS="build date"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

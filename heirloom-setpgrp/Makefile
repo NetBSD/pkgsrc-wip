@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/21 08:33:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:18 cheusov Exp $
 
 NOT_FOR_PLATFORM+=	Interix-*-*
 
@@ -7,6 +7,7 @@ NOT_FOR_PLATFORM+=	Interix-*-*
 PKGNAME=	heirloom-setpgrp-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build setpgrp"
+MAKE_FLAGS+=	SUBDIRS="build setpgrp"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

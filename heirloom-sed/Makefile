@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/19 21:44:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:18 cheusov Exp $
 
 NEED_LIBUXRE=	1
 
@@ -7,7 +7,8 @@ NEED_LIBUXRE=	1
 PKGNAME=	heirloom-sed-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build sed"
+MAKE_FLAGS+=	SUBDIRS="build sed"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../wip/libuxre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

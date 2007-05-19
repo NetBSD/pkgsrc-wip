@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/18 20:13:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/19 13:26:17 cheusov Exp $
 
 NEED_LIBUXRE=	1
 
@@ -7,7 +7,8 @@ NEED_LIBUXRE=	1
 PKGNAME=	heirloom-pgrep-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
-MAKE_FLAGS+=	SUBDIRS="libcommon build pgrep"
+MAKE_FLAGS+=	SUBDIRS="build pgrep"
 
+.include "../../wip/heirloom-libcommon/buildlink3.mk"
 .include "../../wip/libuxre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
