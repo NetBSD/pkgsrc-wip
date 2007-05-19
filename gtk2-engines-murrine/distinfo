@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/05/10 20:12:49 ekamperi Exp $
+$NetBSD: distinfo,v 1.2 2007/05/19 10:27:15 ekamperi Exp $
 
-SHA1 (murrine-0.52.tar.bz2) = 90a57a8a22e7a30e47a6959af55e04f6fac3fa2d
-RMD160 (murrine-0.52.tar.bz2) = 976d7257c410e3843f30dae1815d42d4b07afa64
-Size (murrine-0.52.tar.bz2) = 260740 bytes
+SHA1 (murrine-0.53.1.tar.bz2) = 108e2fa43c152406ff0c7bcdaf484413fd7bd735
+RMD160 (murrine-0.53.1.tar.bz2) = dd7a507ee7ce323b88382cf42bab7f01881f9c39
+Size (murrine-0.53.1.tar.bz2) = 261530 bytes

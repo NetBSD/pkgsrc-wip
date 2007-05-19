@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/10 20:12:49 ekamperi Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/19 10:27:15 ekamperi Exp $
 #
 
-DISTNAME=	murrine-0.52
+DISTNAME=	murrine-0.53.1
 CATEGORIES=	x11
 MASTER_SITES=	http://cimi.netsons.org/media/download_gallery/murrine/
 EXTRACT_SUFX=	.tar.bz2
