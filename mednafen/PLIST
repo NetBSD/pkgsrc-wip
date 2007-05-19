@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/17 21:53:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/05/19 12:06:19 thomasklausner Exp $
 bin/mednafen
 @comment belongs to libiconv: lib/charset.alias
 share/doc/mednafen/debugger.html
 share/doc/mednafen/mednafen.html
+share/doc/mednafen/netplay.html
+share/locale/de/LC_MESSAGES/mednafen.mo
 share/locale/es/LC_MESSAGES/mednafen.mo
 share/locale/ru/LC_MESSAGES/mednafen.mo
 @dirrm share/doc/mednafen
