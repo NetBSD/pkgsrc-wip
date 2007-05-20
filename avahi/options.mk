@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+# $NetBSD: options.mk,v 1.2 2007/05/20 17:21:50 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
@@ -34,15 +34,19 @@ CONFIGURE_ARGS+=	--disable-pygtk
 ### Enable gtk support (implies glib)
 ### This will get you avahi-discover-standalone
 ###
-.if !empty(PKG_OPTIONS:Mgtk)
-PKG_OPTIONS+=		glib
-.  include "../../x11/gtk2/buildlink3.mk"
-.  include "../../x11/gnome-libs/buildlink3.mk"
-.  include "../../devel/libglade2/buildlink3.mk"
-PLIST_SRC+=		${PKGDIR}/PLIST.gtk
-.else
-CONFIGURE_ARGS+=	--disable-gtk
-.endif
+#
+# XXX: This looks wrong -- you shouldn't mix gtk2 and gnome1
+# Additionally, gnome-libs has been removed from pkgsrc.
+#
+#.if !empty(PKG_OPTIONS:Mgtk)
+#PKG_OPTIONS+=		glib
+#.  include "../../x11/gtk2/buildlink3.mk"
+#.  include "../../x11/gnome-libs/buildlink3.mk"
+#.  include "../../devel/libglade2/buildlink3.mk"
+#PLIST_SRC+=		${PKGDIR}/PLIST.gtk
+#.else
+#CONFIGURE_ARGS+=	--disable-gtk
+#.endif
 
 ###
 ### Enable glib support
