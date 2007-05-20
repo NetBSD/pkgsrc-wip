@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:25 ykomatsu Exp $
-# $Id: Makefile,v 1.11 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2007/05/20 03:08:24 kheinz Exp $
+# $Id: Makefile,v 1.12 2007/05/20 03:08:24 kheinz Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -15,6 +15,7 @@ COMMENT=		Standalone libuuid from e2fsprogs package
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
 CONFLICTS=		e2fsprogs-1.32 e2fsprogs-1.36
+CONFLICTS+=		ossp-uuid-[0-9]* # libuuid.* uuid.pc uuid.3
 BUILD_DIRS=		lib/uuid
 PKGCONFIG_OVERRIDE+=	lib/uuid/uuid.pc.in
 

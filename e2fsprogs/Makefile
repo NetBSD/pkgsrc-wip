@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2005/04/16 21:35:27 jeremy-c-reed Exp $
-# $Id: Makefile,v 1.8 2005/04/16 21:35:27 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/20 03:08:24 kheinz Exp $
+# $Id: Makefile,v 1.9 2007/05/20 03:08:24 kheinz Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 CATEGORIES=	sysutils
@@ -16,6 +16,7 @@ COMMENT=	Filesystem utilities for the ext2 and ext3 filesystems
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 CONFLICTS+=	mit-krb4-[0-9]*
+CONFLICTS+=	ossp-uuid-[0-9]* # libuuid.* uuid.3
 
 CONFIGURE_ARGS+=	--with-ldopts=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
