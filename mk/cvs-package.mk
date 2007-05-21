@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.20 2007/04/11 06:42:33 rillig Exp $
+# $Id: cvs-package.mk,v 1.21 2007/05/21 11:51:12 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs.
@@ -45,6 +45,19 @@
 #	Common CVS repository locations for use in the CVS_ROOT
 #	variables.
 #
+# It also provides default values for the following variables, differing
+# from the system-wide defaults:
+#
+# DISTFILES
+#	Is set to an empty list, since that is the right choice for most
+#	of the CVS packages.
+#
+# PKGNAME
+#	Is set to consist of the package name from DISTNAME, combined
+#	with the current date. This is useful when no CVS_TAG variables
+#	are defined. When they are defined (and there may be multiple
+#	ones), the package author should define PKGNAME explicitly.
+#
 # Keywords: cvs
 #
 
@@ -56,6 +69,7 @@ _PKG_MK_CVS_PACKAGE_MK=	# defined
 #
 
 DISTFILES?=		# empty
+PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
 
 #
 # definition of user-visible output variables
@@ -102,6 +116,8 @@ _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
 _CVS_TODAY=		${_CVS_TODAY_CMD:sh}
+_CVS_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
+_CVS_PKGVERSION=	${_CVS_PKGVERSION_CMD:sh}
 _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 #
@@ -128,17 +144,15 @@ pre-extract: do-cvs-extract
 .PHONY: do-cvs-extract
 do-cvs-extract:
 .for _repo_ in ${CVS_REPOSITORIES}
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	cd ${WRKDIR};							\
-	if ${TEST} -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; then \
+	${RUN} cd ${WRKDIR};						\
+	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ]; then	\
 	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
 	  ${PAX} -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; \
-	else								\
+	  exit 0;							\
+	fi;								\
 	case ${CVS_ROOT.${_repo_}:Q} in					\
 	  :pserver:*)							\
-	    if ${TEST} ! -f ${_CVS_PASSFILE:Q}; then			\
-	      ${TOUCH} ${_CVS_PASSFILE:Q};				\
-	    fi;								\
+	    [ -f ${_CVS_PASSFILE:Q} ] || ${TOUCH} ${_CVS_PASSFILE:Q};	\
 	    ${STEP_MSG} "Logging in to "${CVS_ROOT.${_repo_}:Q}".";	\
 	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS} 		\
 		-d ${CVS_ROOT.${_repo_}:Q} login			\
@@ -152,8 +166,7 @@ do-cvs-extract:
 	      -d ${_repo_:Q} ${CVS_MODULE.${_repo_}:Q};			\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ${_repo_:Q}; \
-	fi
+	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ${_repo_:Q}
 .endfor
 
 .endif
