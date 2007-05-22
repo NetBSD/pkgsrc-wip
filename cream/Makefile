@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/30 22:26:31 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2007/05/22 13:53:47 dhowland Exp $
 #
 
-DISTNAME=		cream-0.38
+DISTNAME=		cream-0.39beta2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cream/}
 
@@ -9,7 +9,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://cream.sourceforge.net/
 COMMENT=		Usability add-on for Vim
 
-DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=6.0:../../editors/vim-gtk2
+DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=7.0:../../editors/vim-gtk2
 
 NO_BUILD=		yes
 USE_DIRS+=		xdg-1.2
@@ -40,7 +40,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/filetypes/*.vim ${VIMRUNTIME}/cream/filetypes/
 	${INSTALL_DATA} ${WRKSRC}/help/*.txt ${VIMRUNTIME}/cream/help/
 	${INSTALL_DATA} ${WRKSRC}/lang/*.vim ${VIMRUNTIME}/cream/lang/
-	${INSTALL_DATA} ${WRKSRC}/spelldicts/*.vim ${VIMRUNTIME}/cream/spelldicts/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/cream
 	${INSTALL_DATA} ${WRKSRC}/cream.ico ${PREFIX}/share/icons/cream/
 	${INSTALL_DATA} ${WRKSRC}/cream.png ${PREFIX}/share/icons/cream/

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/30 22:26:31 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/05/22 13:53:47 dhowland Exp $
 bin/cream
 share/applications/cream.desktop
 share/icons/cream/cream.ico
@@ -196,7 +196,6 @@ share/vim/${VIM_SUBDIR}/cream/filetypes/txt.vim
 share/vim/${VIM_SUBDIR}/cream/filetypes/vim.vim
 share/vim/${VIM_SUBDIR}/cream/genutils.vim
 share/vim/${VIM_SUBDIR}/cream/help/EnhancedCommentify.txt
-share/vim/${VIM_SUBDIR}/cream/help/opsplorer.txt
 share/vim/${VIM_SUBDIR}/cream/lang/menu_chinese_gb.936.vim
 share/vim/${VIM_SUBDIR}/cream/lang/menu_en_us.utf-8.vim
 share/vim/${VIM_SUBDIR}/cream/lang/menu_fr_fr.latin1.vim
@@ -212,23 +211,7 @@ share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.gbk.vim
 share/vim/${VIM_SUBDIR}/cream/lang/menu_zh_cn.utf-8.vim
 share/vim/${VIM_SUBDIR}/cream/lang/strings_en_us.utf-8.vim
 share/vim/${VIM_SUBDIR}/cream/multvals.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-CA_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-GB_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s-US_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_1.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_2.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_3.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict-eng-s_4.vim
-share/vim/${VIM_SUBDIR}/cream/spelldicts/cream-spell-dict.vim
+share/vim/${VIM_SUBDIR}/cream/securemodelines.vim
 share/vim/${VIM_SUBDIR}/cream/taglist.vim
 @dirrm share/icons/cream
 @dirrm share/vim/${VIM_SUBDIR}/cream/addons
