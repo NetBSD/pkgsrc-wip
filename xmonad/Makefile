@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/18 12:31:55 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/23 11:24:45 emil_s Exp $
 #
 
 DISTNAME=	xmonad-${VERSION}
@@ -28,7 +28,7 @@ do-install:
 	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
 
 
-.include "../../wip/hs-mtl/buildlink3.mk"
+#.include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-x11-extras/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
