@@ -646,7 +646,9 @@ void
 initcon(struct con *cp, int fd, struct sockaddr *sa)
 {
 	time_t tt;
+#if 0
 	char *tmp;
+#endif
 	int error;
 
 	time(&tt);
@@ -675,6 +677,7 @@ initcon(struct con *cp, int fd, struct sockaddr *sa)
 	    NI_NUMERICHOST);
 	if (error)
 		errx(1, "%s", gai_strerror(error));
+#if 0
 	tmp = strdup(ctime(&t));
 	if (tmp == NULL)
 		err(1, "malloc");
@@ -682,6 +685,9 @@ initcon(struct con *cp, int fd, struct sockaddr *sa)
 	snprintf(cp->obuf, cp->osize, "220 %s ESMTP %s; %s\r\n",
 	    hostname, spamd, tmp);
 	free(tmp);
+#else
+	snprintf(cp->obuf, cp->osize, "220 %s ESMTP %s\r\n", hostname, spamd);
+#endif
 	cp->op = cp->obuf;
 	cp->ol = strlen(cp->op);
 	cp->w = tt + cp->stutter;

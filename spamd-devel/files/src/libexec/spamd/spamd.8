@@ -207,6 +207,11 @@ along with the message body and SMTP dialogue being logged at
 level.
 .It Fl w Ar window
 Set the socket receive buffer to this many bytes, adjusting the window size.
+This is during the DATA phase for a trapped spammer.
+(The default is in
+.Va net.inet.tcp.recvspace
+sysctl.)
+.\" add some details about why and an example of a window
 .It Fl Y Ar synctarget
 Add target
 .Ar synctarget
@@ -568,7 +573,8 @@ sending or receiving synchronisation messages.
 .It /etc/mail/spamd.alloweddomains
 Required suffixes for greytrapping.
 .It /etc/mail/spamd.conf
-Default configuration file.
+Default configuration file (used by
+.Xr spamd-setup 8 . )
 .It /etc/mail/spamd.key
 Authentication key for synchronisation messages.
 .It /var/db/spamd

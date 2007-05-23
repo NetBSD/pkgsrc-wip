@@ -22,6 +22,7 @@
 .Nd spamd database tool
 .Sh SYNOPSIS
 .Nm spamdb
+.Oo Fl f Ar filename Oc
 .Oo Oo Fl Tt Oc
 .Fl a Ar keys Oc
 .Oo Oo Fl Tt Oc
@@ -49,6 +50,11 @@ updates the entry's time last seen to now.
 .It Fl d Ar keys
 Delete entries for
 .Ar keys .
+.It Fl f Ar filename
+Use
+.Ar filename
+as alternative database instead of default
+.Pa /var/db/spamd .
 .It Fl T
 Add or delete the keys as SPAMTRAP entries.
 See the

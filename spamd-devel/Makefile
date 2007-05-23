@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/10 18:27:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/23 17:29:10 jeremy-c-reed Exp $
 
-DISTNAME=		spamd-20070405
+DISTNAME=		spamd-20070428
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -61,13 +61,13 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/libexec/spamd-setup/spamd-setup.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
 	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
+#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.8 ${PREFIX}/${PKGMANDIR}/man8
+#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
 
 	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd-setup/spamd-setup ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd/spamd ${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/spamdb/spamdb ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamlogd/spamlogd ${PREFIX}/libexec
+#	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamlogd/spamlogd ${PREFIX}/libexec
 	${INSTALL_DATA} ${WRKSRC}/etc/mail/spamd.conf ${PREFIX}/share/examples/spamd
 
 .include "../../security/pflkm/buildlink3.mk"

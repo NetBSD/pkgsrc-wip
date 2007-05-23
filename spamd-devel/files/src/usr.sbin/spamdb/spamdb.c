@@ -259,7 +259,7 @@ extern char *__progname;
 static int
 usage(void)
 {
-	fprintf(stderr, "usage: %s [[-Tt] -a keys] [[-Tt] -d keys]\n", __progname);
+	fprintf(stderr, "usage: %s [-f file] [[-Tt] -a keys] [[-Tt] -d keys]\n", __progname);
 	exit(1);
 	/* NOTREACHED */
 }
@@ -270,14 +270,20 @@ main(int argc, char **argv)
 	int i, ch, action = 0, type = WHITE, r = 0;
 	HASHINFO	hashinfo;
 	DB		*db;
+	char		*spamd_db_file = NULL;
 
-	while ((ch = getopt(argc, argv, "adtT")) != -1) {
+	while ((ch = getopt(argc, argv, "adf:tT")) != -1) {
 		switch (ch) {
 		case 'a':
 			action = 1;
 			break;
 		case 'd':
 			action = 2;
+			break;
+		case 'f':
+			spamd_db_file = optarg;
+			if ('\0' == spamd_db_file[0])
+				usage();
 			break;
 		case 't':
 			type = TRAPHIT;
@@ -295,16 +301,19 @@ main(int argc, char **argv)
 	if (action == 0 && type != WHITE)
 		usage();
 	
+	if (spamd_db_file == NULL)
+		spamd_db_file = PATH_SPAMD_DB;
+
 	memset(&hashinfo, 0, sizeof(hashinfo));
-	db = dbopen(PATH_SPAMD_DB, O_EXLOCK | (action ? O_RDWR : O_RDONLY),
+	db = dbopen(spamd_db_file, O_EXLOCK | (action ? O_RDWR : O_RDONLY),
 	    0600, DB_HASH, &hashinfo);
 	if (db == NULL) {
 		if (errno == EFTYPE)	
 			err(1,
 			    "%s is old, run current spamd to convert it",
-			    PATH_SPAMD_DB);
+			    spamd_db_file);
 		else 
-			err(1, "cannot open %s for %s", PATH_SPAMD_DB,
+			err(1, "cannot open %s for %s", spamd_db_file,
 			    action ? "writing" : "reading");
 	}
 
