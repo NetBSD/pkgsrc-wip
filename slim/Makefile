@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/05/24 18:50:22 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/24 21:01:04 loic-hoguin Exp $
 #
 
 DISTNAME=	slim-1.2.6
@@ -8,6 +8,8 @@ MASTER_SITES=	http://download.berlios.de/slim/
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://slim.berlios.de/
 COMMENT=	SLiM is a Desktop-independent graphical login manager for X11
+
+DEPENDS+=	xauth>=1.0.0:../../x11/xauth
 
 USE_LANGUAGES=	c c++
 
