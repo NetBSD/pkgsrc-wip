@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/05/18 16:36:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/24 00:46:15 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +24,7 @@ USE_TOOLS+=		perl
 USE_TOOLS+=		automake
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-xorgcfg
+CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 PKG_SUPPORTED_OPTIONS=	dri
 PKG_SUGGESTED_OPTIONS=	dri
