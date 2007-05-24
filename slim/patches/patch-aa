@@ -1,0 +1,10 @@
+--- panel.cpp	2007-05-24 20:37:38.000000000 +0200
++++ panel.cpp	2007-05-24 20:36:57.000000000 +0200
+@@ -11,6 +11,7 @@
+ 
+ #include <sstream>
+ #include "panel.h"
++#include <libgen.h>
+ 
+ using namespace std;
+ 
