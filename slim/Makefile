@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/12 22:17:25 ondratu Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/24 18:50:22 hoka_adam Exp $
 #
 
 DISTNAME=	slim-1.2.6
@@ -22,6 +22,8 @@ CFLAGS+=	-I. -I${BUILDLINK_DIR}/include -I${BUILDLINK_DIR}/freetype2 \
 LDFLAGS+=	-L${BUILDLINK_DIR}/lib -lXft -lX11 -lfreetype -lXrender -lfontconfig \
 		-lpng12 -lz -lm -lcrypt -lXmu -lpng -ljpeg
 
+CUSTOM=
+
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
@@ -34,7 +36,7 @@ SUBST_MESSAGE.conf=	Fixing hardcoded paths.
 
 do-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} CC=${PKG_CC} CXX=${PKG_CXX} \
-	    CFGDIR=${PKG_SYSCONFDIR} CFLAGS='${CFLAGS}' LDFLAGS='${LDFLAGS}'
+	    CFGDIR=${PKG_SYSCONFDIR} CFLAGS='${CFLAGS}' LDFLAGS='${LDFLAGS}' CUSTOM='${CUSTOM}'
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -50,9 +52,12 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} slim.conf ${EGDIR}/slim.conf
 
 
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../x11/xorg-libs/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
