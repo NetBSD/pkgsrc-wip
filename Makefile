@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2595 2007/05/20 18:19:53 tnn2 Exp $
+# $Id: Makefile,v 1.2596 2007/05/25 18:04:53 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1705,16 +1705,16 @@ SUBDIR+=	xmms-skin-Eclipse
 SUBDIR+=	xmms-skin-Fire
 SUBDIR+=	xmms-skin-HelixSawfish
 SUBDIR+=	xmms-skin-LinuxDotCom
-SUBDIR+=	xmms-skin-m2n
 SUBDIR+=	xmms-skin-MarbleX
-SUBDIR+=	xmms-skin-maXMMS
-SUBDIR+=	xmms-skin-nixamp
 SUBDIR+=	xmms-skin-NoerdAmp-SE
 SUBDIR+=	xmms-skin-Plume
 SUBDIR+=	xmms-skin-Sword
 SUBDIR+=	xmms-skin-UltrafinaSEM
 SUBDIR+=	xmms-skin-VegetalBlues
 SUBDIR+=	xmms-skin-WinampX
+SUBDIR+=	xmms-skin-m2n
+SUBDIR+=	xmms-skin-maXMMS
+SUBDIR+=	xmms-skin-nixamp
 SUBDIR+=	xmms-skins
 SUBDIR+=	xmms-status
 SUBDIR+=	xmms-xmp
