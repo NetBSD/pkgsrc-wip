@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2007/04/28 18:12:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.30 2007/05/25 12:15:56 rillig Exp $
 #
 
 DISTNAME=	emacs-22.1.50
+PKGNAME=	emacs-22.1.50 # needed because of cvs-package.mk
 CATEGORIES=	editors
 MASTER_SITES=	#
 
