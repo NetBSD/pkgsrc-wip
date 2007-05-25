@@ -1,0 +1,13 @@
+$NetBSD: patch-bu,v 1.3 2007/05/25 15:50:40 bsadewitz Exp $
+
+--- hw/xfree86/loader/loadmod.c.orig	2007-04-16 12:37:51.000000000 -0400
++++ hw/xfree86/loader/loadmod.c
+@@ -864,7 +864,7 @@ doLoadModule(const char *module, const c
+     char *m = NULL;
+     const char **cim;
+ 
+-    xf86MsgVerb(X_INFO, 3, "LoadModule: \"%s\"", module);
++    xf86MsgVerb(X_INFO, 3, "LoadModule: \"%s\"\n", module);
+ 
+     for (cim = compiled_in_modules; *cim; cim++)
+ 	if (!strcmp (module, *cim))

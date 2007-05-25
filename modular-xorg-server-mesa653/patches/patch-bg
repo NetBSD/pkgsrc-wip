@@ -1,0 +1,32 @@
+$NetBSD: patch-bg,v 1.3 2007/05/25 15:50:40 bsadewitz Exp $
+
+--- fb/fbpict.c.orig	2007-01-30 01:03:18.000000000 -0500
++++ fb/fbpict.c
+@@ -1136,7 +1136,12 @@ fbComposite (CARD8      op,
+ 			func = fbCompositeSrc_8888x0888;
+ 			break;
+ 		    case PICT_r5g6b5:
+-			func = fbCompositeSrc_8888x0565;
++#ifdef USE_MMX
++			if (fbHaveMMX())
++			    func = fbCompositeSrc_8888x0565mmx;
++			else
++#endif
++			    func = fbCompositeSrc_8888x0565;
+ 			break;
+ 		    default:
+ 			break;
+@@ -1182,7 +1187,12 @@ fbComposite (CARD8      op,
+ 			func = fbCompositeSrc_8888x0888;
+ 			break;
+ 		    case PICT_b5g6r5:
+-			func = fbCompositeSrc_8888x0565;
++#ifdef USE_MMX
++			if (fbHaveMMX())
++			    func = fbCompositeSrc_8888x0565mmx;
++			else
++#endif
++			    func = fbCompositeSrc_8888x0565;
+ 			break;
+ 		    default:
+ 			break;

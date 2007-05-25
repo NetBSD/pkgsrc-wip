@@ -1,0 +1,42 @@
+$NetBSD: patch-bz,v 1.3 2007/05/25 15:50:40 bsadewitz Exp $
+
+--- hw/xfree86/parser/Makefile.am.orig	2007-02-16 11:03:12.000000000 -0500
++++ hw/xfree86/parser/Makefile.am
+@@ -1,13 +1,11 @@
+-if INSTALL_LIBXF86CONFIG
+-lib_LIBRARIES = libxf86config.a
++lib_LTLIBRARIES = libxf86config.la
+ LIBHEADERS = \
+ 	xf86Optrec.h \
+ 	xf86Parser.h
+-else
+-noinst_LIBRARIES = libxf86config.a
+-endif
+ 
+-libxf86config_a_SOURCES = \
++libxf86config_la_LDFLAGS = -version-number 6:9:99
++libxf86config_la_LIBADD = $(XF86CONFIG_LIBS) -lm
++libxf86config_la_SOURCES = \
+ 	Device.c \
+ 	Files.c \
+ 	Flags.c \
+@@ -24,7 +22,8 @@ libxf86config_a_SOURCES = \
+ 	scan.c \
+ 	write.c \
+ 	DRI.c \
+-	Extensions.c
++	Extensions.c \
++	error.c
+ 
+ AM_CFLAGS = $(XORG_CFLAGS)
+ 
+@@ -36,7 +35,5 @@ EXTRA_DIST = \
+ 	xf86tokens.h \
+ 	cpconfig.c
+ 
+-sdk_HEADERS = \
+-	$(LIBHEADERS) \
+-	xf86Parser.h \
+-	xf86Optrec.h
++xf86configincludedir=$(includedir)
++xf86configinclude_HEADERS = $(LIBHEADERS)
