@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2007/05/25 04:02:03 bsadewitz Exp $
+include/GL/gl.h
+include/GL/gl_mangle.h
+include/GL/glext.h
+include/GL/glx.h
+include/GL/glx_mangle.h
+include/GL/glxext.h
+include/GL/osmesa.h
+include/GL/xmesa.h
+include/GL/xmesa_x.h
+include/GL/xmesa_xf86.h
+lib/libGL.la
+lib/libGLw.la
+${dri-i810}${DRI_MODULE_PATH}/i810_dri.so
+${dri-i915}${DRI_MODULE_PATH}/i915_dri.so
+${dri-i965}${DRI_MODULE_PATH}/i965_dri.so
+${dri-mach64}${DRI_MODULE_PATH}/mach64_dri.so
+${dri-mga}${DRI_MODULE_PATH}/mga_dri.so
+${dri-r128}${DRI_MODULE_PATH}/r128_dri.so
+${dri-r200}${DRI_MODULE_PATH}/r200_dri.so
+${dri-r300}${DRI_MODULE_PATH}/r300_dri.so
+${dri-radeon}${DRI_MODULE_PATH}/radeon_dri.so
+${dri-tdfx}${DRI_MODULE_PATH}/tdfx_dri.so
+${dri-unichrome}${DRI_MODULE_PATH}/unichrome_dri.so
+${dri-savage}${DRI_MODULE_PATH}/savage_dri.so
+${dri-sis}${DRI_MODULE_PATH}/sis_dri.so
+@dirrm ${DRI_MODULE_PATH}

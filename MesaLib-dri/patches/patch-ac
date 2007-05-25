@@ -1,0 +1,56 @@
+$NetBSD: patch-ac,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+
+--- bin/mklib.orig	2007-03-27 12:28:55.000000000 -0400
++++ bin/mklib
+@@ -180,7 +180,7 @@ fi
+ #
+ case $ARCH in
+ 
+-    'Linux' | 'OpenBSD' | 'GNU' | GNU/*)
++    'Linux' | 'NetBSD' | 'OpenBSD' | 'GNU' | GNU/*)
+ 	# we assume gcc
+ 
+ 	if [ "x$LINK" = "x" ] ; then
+@@ -196,7 +196,7 @@ case $ARCH in
+ 	    # No "lib" or ".so" part
+ 	    echo "mklib: Making" $ARCH "shared library: " ${LIBNAME}
+ 	    #OPTS="-shared -Wl,-soname,${LIBNAME}"  # soname???
+-	    OPTS="-shared"
++	    OPTS="-fPIC -DPIC -shared -Wl,-rpath,${PREFIX}/lib"
+ 
+ 	    # Check if objects are 32-bit and we're running in 64-bit
+ 	    # environment.  If so, pass -m32 flag to linker.
+@@ -227,6 +227,9 @@ case $ARCH in
+ 	    case $ARCH in 'Linux' | 'GNU' | GNU/*)
+ 		OPTS="-Xlinker -Bsymbolic -shared -Wl,-soname,${LIBNAME}.so.${MAJOR}"
+ 	    ;;
++	    'NetBSD')
++		OPTS="-shared -Wl,-R${PREFIX}/lib -Wl,-soname,${LIBNAME}.so.${MAJOR}"
++	    ;;
+ 	    *)
+ 		OPTS="-shared -Wl,-soname,${LIBNAME}.so.${MAJOR}"
+ 	    ;;
+@@ -385,23 +388,6 @@ case $ARCH in
+ 	fi
+ 	;;
+ 
+-    'NetBSD')
+-        if [ $STATIC = 1 ] ; then
+-	    LIBNAME="lib${LIBNAME}_pic.a"
+-	    echo "mklib: Making NetBSD PIC static library: " ${LIBNAME}
+-	    rm -f ${LIBNAME}
+-	    ar cq ${LIBNAME} ${OBJECTS}
+-	    ranlib ${LIBNAME}
+-	    FINAL_LIBS=${LIBNAME}
+-	else
+-	    LIBNAME="lib${LIBNAME}.so.${MAJOR}.${MINOR}"
+-	    echo "mklib: Making NetBSD PIC shared library: " ${LIBNAME}
+-	    rm -f ${LIBNAME}
+-	    ld -x -Bshareable -Bforcearchive -o ${LIBNAME} ${OBJECTS}
+-	    FINAL_LIBS=${LIBNAME}
+-	fi
+-	;;
+-
+     'IRIX' | 'IRIX64')
+         if [ $STATIC = 1 ] ; then
+ 	    LIBNAME="lib${LIBNAME}.a"

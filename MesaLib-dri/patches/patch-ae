@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+
+--- src/mesa/Makefile.orig	2007-04-19 10:38:58.000000000 -0400
++++ src/mesa/Makefile
+@@ -14,13 +14,13 @@ GL_TINY = 0$(MESA_MAJOR)0$(MESA_MINOR)0$
+ .SUFFIXES : .cpp
+ 
+ .c.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@ -static
+ 
+ .cpp.o:
+-	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@ -static
+ 
+ .S.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@ -static
+ 
+ 
+ # Figure out what to make here
+@@ -52,10 +52,7 @@ beos: depend subdirs libmesa.a
+ 
+ # Make archive of core object files
+ libmesa.a: $(SOLO_OBJECTS)
+-	@ $(TOP)/bin/mklib -o mesa -static $(SOLO_OBJECTS);
+-	@if [ "${CONFIG_NAME}" = "beos" ] ; then \
+-		mimeset -f "$@" ; \
+-	fi
++	${LIBTOOL} --mode=link ${CC} -o $@ -all-static $(SOLO_OBJECTS:.o=.lo)
+ 
+ linux-solo: depend subdirs libmesa.a
+ 	cd drivers/dri ; $(MAKE)

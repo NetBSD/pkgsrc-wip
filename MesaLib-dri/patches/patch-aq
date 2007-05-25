@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+
+--- src/mesa/drivers/dri/r300/radeon_state.c.orig	2007-03-06 11:03:18.000000000 -0500
++++ src/mesa/drivers/dri/r300/radeon_state.c
+@@ -154,7 +154,8 @@ void radeonSetCliprects(radeonContextPtr
+ 
+ 	if (draw_fb->_ColorDrawBufferMask[0] == BUFFER_BIT_BACK_LEFT) {
+ 		/* Can't ignore 2d windows if we are page flipping. */
+-		if (drawable->numBackClipRects == 0 || radeon->doPageFlip) {
++		if (drawable->numBackClipRects == 0 || radeon->doPageFlip ||
++		    radeon->sarea->pfCurrentPage == 1) {
+ 			radeon->numClipRects = drawable->numClipRects;
+ 			radeon->pClipRects = drawable->pClipRects;
+ 		} else {

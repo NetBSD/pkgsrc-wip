@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+
+--- src/mesa/drivers/dri/i915tex/i915_tex_layout.c.orig	2007-03-08 09:58:46.000000000 -0500
++++ src/mesa/drivers/dri/i915tex/i915_tex_layout.c
+@@ -161,11 +161,9 @@ i915_miptree_layout(struct intel_mipmap_
+             if (mt->compressed)
+                img_height = MAX2(1, height / 4);
+             else
+-               img_height = MAX2(2, height);
++               img_height = (MAX2(2, height) + 1) & ~1;
+ 
+ 	    mt->total_height += img_height;
+-	    mt->total_height += 1;
+-	    mt->total_height &= ~1;
+ 
+             width = minify(width);
+             height = minify(height);

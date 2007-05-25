@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+
+--- src/glw/Makefile.orig	2006-12-07 18:16:31.000000000 -0500
++++ src/glw/Makefile
+@@ -17,7 +17,7 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
+ ##### RULES #####
+ 
+ .c.o:
+-	$(CC) -c $(INCDIRS) $(CFLAGS) $<
++	${LIBTOOL} --mode=compile $(CC) -c $(INCDIRS) $(CFLAGS) $<
+ 
+ 
+ 
+@@ -38,11 +38,9 @@ clean:
+ 
+ # Make the library
+ $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
+-	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' \
+-		-major $(MAJOR) -minor $(MINOR) -patch $(TINY) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		$(GLW_LIB_DEPS) $(OBJECTS)
+-
++	${LIBTOOL} --mode=link ${CC} -o $(GLW_LIB_NAME:.so=.la)  \
++	-version-info ${MAJOR}:${MINOR} $(GLW_LIB_DEPS) $(OBJECTS:.o=.lo) \
++	-rpath ${PREFIX}/lib
+ 
+ #
+ # Run 'make depend' to update the dependencies if you change what's included
