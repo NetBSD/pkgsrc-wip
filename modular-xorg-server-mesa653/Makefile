@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/05/24 00:46:15 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/25 15:57:12 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -14,6 +14,8 @@ MAINTAINER=	blair.sadewitz@gmail.com
 COMMENT=	Xorg X11 Server from modular X.org X11
 
 MESA_VERSION=	6.5.3
+
+DRI_MODULE_PATH?=	lib/xorg/modules/dri	# Relative to ${PREFIX}
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -40,8 +42,8 @@ MESA_SRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
-CONFIGURE_ARGS+=	--with-dri-driver-path=${PREFIX}/lib/xorg/modules/dri
-.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "sparc64" || \
+CONFIGURE_ARGS+=	--with-dri-driver-path=${PREFIX}/${DRI_MODULE_PATH}
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
     ${MACHINE_ARCH} == "alpha"
 GLX_DEFINES+=		-D__GLX_ALIGN64
 .endif
