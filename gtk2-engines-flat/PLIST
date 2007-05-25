@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 05:59:40 jlamwww Exp $
-lib/gtk-2.0/2.4.0/engines/libflat.la
+@comment $NetBSD: PLIST,v 1.5 2007/05/25 20:14:34 ekamperi Exp $
+lib/gtk-${PKGVERSION}/2.10.0/engines/libflat.la
 share/themes/Flat/ICON.png
 share/themes/Flat/README.html
-share/themes/Flat/gtk-2.0/gtkrc
-@dirrm share/themes/Flat/gtk-2.0
+share/themes/Flat/gtk-${PKGVERSION}/gtkrc
+@dirrm share/themes/Flat/gtk-${PKGVERSION}
 @dirrm share/themes/Flat
-@comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines
+@comment in xdg-dirs: @dirrm share/themes
+@comment in gtk2: @dirrm lib/gtk-${PKGVERSION}/2.10.0/engines
