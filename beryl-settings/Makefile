@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/26 21:50:24 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/26 21:52:52 bsadewitz Exp $
 #
 
 DISTNAME=	beryl-settings-${BERYL_VERSION}
@@ -23,7 +23,7 @@ CONFIGURE_ENV+=	PKG_CONFIG_PATH=${PKG_CONFIG_PATH:Q}
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc[3-4]*)
+.if !empty(CC_VERSION:Mgcc-[3-4]*)
 CFLAGS+= -fno-strict-aliasing
 .endif
 
