@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/04/25 07:07:58 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/26 21:50:24 bsadewitz Exp $
 #
 
 DISTNAME=	beryl-settings-${BERYL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	wm
 
 COMMENT=	Beryl settings bindings
@@ -19,6 +20,13 @@ PKG_CONFIG_PATH=${BUILDLINK_PREFIX.beryl-settings-bindings}/lib/pkgconfig
 
 
 CONFIGURE_ENV+=	PKG_CONFIG_PATH=${PKG_CONFIG_PATH:Q}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc[3-4]*)
+CFLAGS+= -fno-strict-aliasing
+.endif
+
 
 
 .include "../../x11/py-gtk2/buildlink3.mk"
