@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
+
+--- protocols/sspi_unix.cpp.orig	2006-06-07 19:13:00.000000000 +0200
++++ protocols/sspi_unix.cpp
+@@ -20,7 +20,7 @@
+ #define MODULE sspi
+ 
+ #include "common.h"
+-#include "ntlm/ntlm.h"
++#include <ntlm.h>
+ #include "../version.h"
+ 
+ static int sspi_connect(const struct protocol_interface *protocol, int verify_only);

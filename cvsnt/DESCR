@@ -1,0 +1,19 @@
+CVSNT is an advanced multiplatform version control system. Compatible with the
+industry standard CVS protocol it now supports many more features.
+
+CVSNT is Open Source, Free software licensed under the GNU General Public
+License.
+
+    * Authentication via all standard CVS protocols, plus Windows specific SSPI
+      and Active Directory
+    * Secure transport support via sserver or encrypted SSPI
+    * Cross platform: Runs in Windows or *nix environments
+    * Windows NT/2000/XP/2003/Vista version is fully integrated with Win32
+      system.
+    * MergePoint processing means no more tagging to merge!
+    * MergePoint processing means you can "see" which versions were merged
+      to which other versions
+    * Change sets means you can group changes together into logical
+      groups - even over multiple commits
+    * support for concurrent and non-concurrent (reserved/locked) development
+    * Under active development

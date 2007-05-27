@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
+
+--- Makefile.in.orig	2006-07-05 16:26:07.000000000 +0200
++++ Makefile.in
+@@ -564,13 +564,10 @@ realclean: maintainer-clean
+ 
+ install-exec-local:
+ @INSTALL_SERVER_TRUE@	$(mkinstalldirs) $(DESTDIR)$(cvs_config_dir)
+-@INSTALL_SERVER_TRUE@	$(INSTALL_DATA) $(top_srcdir)/doc/PServer.example $(DESTDIR)$(cvs_config_dir)
+-@INSTALL_SERVER_TRUE@	$(INSTALL_DATA) $(top_srcdir)/doc/Plugins.example $(DESTDIR)$(cvs_config_dir)
+-@INSTALL_SERVER_TRUE@	if [ -f $(DESTDIR)$(cvs_config_dir)/ca.pem ]; then \
+-@INSTALL_SERVER_TRUE@	  $(INSTALL_DATA) $(top_srcdir)/ca.pem $(DESTDIR)$(cvs_config_dir)/ca.pem.example; \
+-@INSTALL_SERVER_TRUE@	else \
+-@INSTALL_SERVER_TRUE@	  $(INSTALL_DATA) $(top_srcdir)/ca.pem $(DESTDIR)$(cvs_config_dir); \
+-@INSTALL_SERVER_TRUE@	fi
++@INSTALL_SERVER_TRUE@	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/examples/cvsnt
++@INSTALL_SERVER_TRUE@	$(INSTALL_DATA) $(top_srcdir)/doc/PServer.example $(DESTDIR)$(prefix)/share/examples/cvsnt
++@INSTALL_SERVER_TRUE@	$(INSTALL_DATA) $(top_srcdir)/doc/Plugins.example $(DESTDIR)$(prefix)/share/examples/cvsnt
++@INSTALL_SERVER_TRUE@	$(INSTALL_DATA) $(top_srcdir)/ca.pem $(DESTDIR)$(prefix)/share/examples/cvsnt/ca.pem.example; \
+ 
+ testkey:
+ 	sh $(DESTDIR)$(top_srcdir)/contrib/genkey
