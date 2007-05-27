@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2007/05/27 06:52:52 bsadewitz Exp $
+
+SHA1 (emerald-0.2.1.tar.bz2) = d3f4b15dd24f731a8a5930adff79f6503a5ea661
+RMD160 (emerald-0.2.1.tar.bz2) = 80bc1965dc66b511e763a73d7d8e23345596714c
+Size (emerald-0.2.1.tar.bz2) = 502243 bytes
+SHA1 (patch-aa) = b860e3ba10340ac6e2534d5646d52450260a0fcf

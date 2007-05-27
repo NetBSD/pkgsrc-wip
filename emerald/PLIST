@@ -1,0 +1,67 @@
+@comment $NetBSD: PLIST,v 1.1 2007/05/27 06:52:52 bsadewitz Exp $
+bin/emerald
+bin/emerald-theme-manager
+include/emerald/emerald.h
+include/emerald/engine.h
+include/emerald/libengine.h
+include/emerald/titlebar.h
+lib/emerald/engines/liblegacy.la
+lib/emerald/engines/liboxygen.la
+lib/emerald/engines/libpixmap.la
+lib/emerald/engines/libtruglass.la
+lib/emerald/engines/libvrunner.la
+lib/emerald/engines/libzootreeves.la
+lib/libemeraldengine.la
+lib/pkgconfig/emeraldengine.pc
+man/man1/emerald-theme-manager.1
+man/man1/emerald.1
+share/applications/emerald-theme-manager.desktop
+share/emerald/settings.ini
+share/emerald/theme/buttons.above.png
+share/emerald/theme/buttons.close.png
+share/emerald/theme/buttons.glow.png
+share/emerald/theme/buttons.help.png
+share/emerald/theme/buttons.inactive_glow.png
+share/emerald/theme/buttons.max.png
+share/emerald/theme/buttons.menu.png
+share/emerald/theme/buttons.min.png
+share/emerald/theme/buttons.restore.png
+share/emerald/theme/buttons.shade.png
+share/emerald/theme/buttons.sticky.png
+share/emerald/theme/buttons.unabove.png
+share/emerald/theme/buttons.unshade.png
+share/emerald/theme/buttons.unsticky.png
+share/emerald/theme/theme.ini
+share/emerald/theme/theme.screenshot.png
+share/icons/hicolor/48x48/mimetypes/application-x-emerald-theme.png
+share/locale/ca/LC_MESSAGES/emerald.mo
+share/locale/cs/LC_MESSAGES/emerald.mo
+share/locale/de_DE/LC_MESSAGES/emerald.mo
+share/locale/en_GB/LC_MESSAGES/emerald.mo
+share/locale/es_AR/LC_MESSAGES/emerald.mo
+share/locale/es_ES/LC_MESSAGES/emerald.mo
+share/locale/fr_FR/LC_MESSAGES/emerald.mo
+share/locale/gu_IN/LC_MESSAGES/emerald.mo
+share/locale/hu_HU/LC_MESSAGES/emerald.mo
+share/locale/it/LC_MESSAGES/emerald.mo
+share/locale/ja/LC_MESSAGES/emerald.mo
+share/locale/ko_KR/LC_MESSAGES/emerald.mo
+share/locale/nb_NO/LC_MESSAGES/emerald.mo
+share/locale/nl/LC_MESSAGES/emerald.mo
+share/locale/pt_BR/LC_MESSAGES/emerald.mo
+share/locale/pt_PT/LC_MESSAGES/emerald.mo
+share/locale/sv_FI/LC_MESSAGES/emerald.mo
+share/locale/sv_SE/LC_MESSAGES/emerald.mo
+share/locale/tr_TR/LC_MESSAGES/emerald.mo
+share/locale/zh_CN/LC_MESSAGES/emerald.mo
+share/locale/zh_HK/LC_MESSAGES/emerald.mo
+share/locale/zh_TW/LC_MESSAGES/emerald.mo
+share/mime-info/emerald.mime
+share/mime/packages/emerald.xml
+share/pixmaps/emerald-theme-manager-icon.png
+@comment in shared-mime-info: @dirrm share/mime/packages
+@dirrm share/emerald/theme
+@dirrm share/emerald
+@dirrm lib/emerald/engines
+@dirrm lib/emerald
+@dirrm include/emerald
