@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2007/01/14 12:11:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/05/27 17:46:28 tnn2 Exp $
 bin/xmms2
 bin/xmms2-et
 bin/xmms2-launcher
 bin/xmms2d
 include/xmms2/xmms/xmms_bindata.h
 include/xmms2/xmms/xmms_config.h
-include/xmms2/xmms/xmms_defs.h
 include/xmms2/xmms/xmms_effect.h
 include/xmms2/xmms/xmms_effectplugin.h
 include/xmms2/xmms/xmms_error.h
@@ -14,13 +13,13 @@ include/xmms2/xmms/xmms_log.h
 include/xmms2/xmms/xmms_medialib.h
 include/xmms2/xmms/xmms_object.h
 include/xmms2/xmms/xmms_outputplugin.h
-include/xmms2/xmms/xmms_plsplugins.h
 include/xmms2/xmms/xmms_plugin.h
 include/xmms2/xmms/xmms_sample.h
 include/xmms2/xmms/xmms_streamtype.h
 include/xmms2/xmms/xmms_strfunc.h
 include/xmms2/xmms/xmms_xformplugin.h
-include/xmms2/xmmsc/xmmsc_asyncns.h
+include/xmms2/xmms/xmms_util.h
+include/xmms2/xmmsc/xmmsc_coll.h
 include/xmms2/xmmsc/xmmsc_errorcodes.h
 include/xmms2/xmmsc/xmmsc_idnumbers.h
 include/xmms2/xmmsc/xmmsc_inline.h
@@ -30,12 +29,15 @@ include/xmms2/xmmsc/xmmsc_sockets.h
 include/xmms2/xmmsc/xmmsc_stdbool.h
 include/xmms2/xmmsc/xmmsc_stdint.h
 include/xmms2/xmmsc/xmmsc_stringport.h
+include/xmms2/xmmsc/xmmsc_strlist.h
 include/xmms2/xmmsc/xmmsc_unistd.h
 include/xmms2/xmmsc/xmmsc_util.h
 include/xmms2/xmmsclient/xmmsclient++-glib.h
 include/xmms2/xmmsclient/xmmsclient++.h
 include/xmms2/xmmsclient/xmmsclient++/bindata.h
 include/xmms2/xmmsclient/xmmsclient++/client.h
+include/xmms2/xmmsclient/xmmsclient++/coll.h
+include/xmms2/xmmsclient/xmmsclient++/collection.h
 include/xmms2/xmmsclient/xmmsclient++/config.h
 include/xmms2/xmmsclient/xmmsclient++/dict.h
 include/xmms2/xmmsclient/xmmsclient++/exceptions.h
@@ -46,6 +48,7 @@ include/xmms2/xmmsclient/xmmsclient++/mainloop.h
 include/xmms2/xmmsclient/xmmsclient++/medialib.h
 include/xmms2/xmmsclient/xmmsclient++/playback.h
 include/xmms2/xmmsclient/xmmsclient++/playlist.h
+include/xmms2/xmmsclient/xmmsclient++/result.h
 include/xmms2/xmmsclient/xmmsclient++/signal.h
 include/xmms2/xmmsclient/xmmsclient++/stats.h
 include/xmms2/xmmsclient/xmmsclient++/typedefs.h
@@ -55,22 +58,40 @@ include/xmms2/xmmsclient/xmmsclient-ecore.h
 include/xmms2/xmmsclient/xmmsclient-glib.h
 include/xmms2/xmmsclient/xmmsclient-qt.h
 include/xmms2/xmmsclient/xmmsclient.h
-lib/libxmmsclient++-glib.a
-lib/libxmmsclient++-glib.so
-lib/libxmmsclient-glib.a
-lib/libxmmsclient-glib.so
-lib/libxmmsclient.a
-lib/libxmmsclient.so
 lib/pkgconfig/xmms2-client-cpp-glib.pc
-lib/pkgconfig/xmms2-client-cpp.pc
-lib/pkgconfig/xmms2-client-ecore.pc
 lib/pkgconfig/xmms2-client-glib.pc
 lib/pkgconfig/xmms2-client.pc
 lib/pkgconfig/xmms2-plugin.pc
-${PYREX}${PYSITELIB}/xmmsclient.so
-${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient.so
-${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient_glib.so
-${CURL}lib/xmms2/libxmms_curl_http.so
+${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient.pm
+${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Collection.pm
+${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Glib.pm
+${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Sync.pm
+${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/auto/Audio/XMMSClient/XMMSClient.so
+${PYREX}${PYSITELIB}/xmmsclient/__init__.py
+${PYREX}${PYSITELIB}/xmmsclient/collections.py
+${PYREX}${PYSITELIB}/xmmsclient/consts.py
+${PYREX}${PYSITELIB}/xmmsclient/glib.py
+${PYREX}${PYSITELIB}/xmmsclient/propdict.py
+${PYREX}${PYSITELIB}/xmmsclient/qt3.py
+${PYREX}${PYSITELIB}/xmmsclient/sync.py
+${PYREX}${PYSITELIB}/xmmsclient/xmmsapi.so
+${RUBY}lib/ruby/site_ruby/1.8/x86_64-netbsd/xmmsclient_ext.so
+${RUBY}lib/ruby/site_ruby/1.8/x86_64-netbsd/xmmsclient_glib.so
+${RUBY}lib/ruby/site_ruby/1.8/xmmsclient.rb
+${RUBY}lib/ruby/site_ruby/1.8/xmmsclient/async.rb
+${RUBY}lib/ruby/site_ruby/1.8/xmmsclient/sync.rb
+lib/libxmmsclient++-glib.so
+lib/libxmmsclient++-glib.so.1
+lib/libxmmsclient++-glib.so.1.0.0
+lib/libxmmsclient-glib.so
+lib/libxmmsclient-glib.so.1
+lib/libxmmsclient-glib.so.1.0.0
+lib/libxmmsclient.so
+lib/libxmmsclient.so.2
+lib/libxmmsclient.so.2.0.0
+lib/xmms2/libxmms_asx.so
+lib/xmms2/libxmms_cue.so
+lib/xmms2/libxmms_curl.so
 lib/xmms2/libxmms_daap.so
 lib/xmms2/libxmms_diskwrite.so
 lib/xmms2/libxmms_equalizer.so
@@ -79,27 +100,35 @@ ${FLAC}lib/xmms2/libxmms_flac.so
 ${GNOMEVFS}lib/xmms2/libxmms_gnomevfs.so
 lib/xmms2/libxmms_icymetaint.so
 lib/xmms2/libxmms_id3v2.so
+lib/xmms2/libxmms_lastfm.so
+lib/xmms2/libxmms_lastfmeta.so
 ${MODPLUG}lib/xmms2/libxmms_modplug.so
 lib/xmms2/libxmms_null.so
 lib/xmms2/libxmms_nulstripper.so
 lib/xmms2/libxmms_mad.so
+lib/xmms2/libxmms_m3u.so
+lib/xmms2/libxmms_mp4.so
 lib/xmms2/libxmms_oss.so
+lib/xmms2/libxmms_pls.so
 lib/xmms2/libxmms_replaygain.so
-${OGG}lib/xmms2/libxmms_vorbisfile.so
+lib/xmms2/libxmms_rss.so
+lib/xmms2/libxmms_sun.so
+${OGG}lib/xmms2/libxmms_vorbis.so
 lib/xmms2/libxmms_wave.so
-man/man1/xmms2-et.1
-man/man1/xmms2-launcher.8
-man/man1/xmms2-mdns-avahi.8
-man/man1/xmms2.1
-man/man8/xmms2d.8
-share/mind.in.a.box-lament_snipplet.ogg
-share/scripts/startup.d/xmms2-et-launcher.sh
-share/scripts/startup.d/xmms2-mdns-launcher.sh
-@dirrm share/scripts/startup.d
-@dirrm share/scripts
+lib/xmms2/libxmms_xml.so
+lib/xmms2/libxmms_xspf.so
+share/man/man1/xmms2-et.1.gz
+share/man/man1/xmms2-launcher.1.gz
+share/man/man1/xmms2.1.gz
+share/man/man1/xmms2d.1.gz
+share/xmms2/mind.in.a.box-lament_snipplet.ogg
+share/xmms2/scripts/startup.d/xmms2-et-launcher.sh
+@dirrm share/xmms2/scripts/startup.d
+@dirrm share/xmms2/scripts
+@dirrm share/xmms2
 @dirrm lib/xmms2
-${RUBY}@dirrm lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf
-${RUBY}@dirrm lib/ruby/site_ruby/1.8
+${PERL}@dirrm /lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient
+${RUBY}@dirrm lib/ruby/site_rube/1.8/xmmsclient
 @dirrm include/xmms2/xmmsclient/xmmsclient++
 @dirrm include/xmms2/xmmsclient
 @dirrm include/xmms2/xmmsc

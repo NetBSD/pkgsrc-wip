@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.7 2007/01/14 12:11:06 thomasklausner Exp $
+$NetBSD: distinfo,v 1.8 2007/05/27 17:46:28 tnn2 Exp $
 
-SHA1 (xmms2-0.2DrGonzo.tar.bz2) = f6fc8e3253c0fdc69bd1365a4d72c6ca83117ce4
-RMD160 (xmms2-0.2DrGonzo.tar.bz2) = 82d89fd20510cd353d004a444994f29157681257
-Size (xmms2-0.2DrGonzo.tar.bz2) = 1045538 bytes
-SHA1 (patch-aa) = 42cc9a92a82ea54abaa6728ce285001e5d0d2f5a
-SHA1 (patch-ab) = ac57cbb60c1189f63876b5cdf27bd74836c03706
-SHA1 (patch-ac) = 61a4f960c36917f64fb1e14ad200a90e037e3ca9
-SHA1 (patch-ad) = e7808bc6558ea0e80fa189f1c87cb229daa643ca
+SHA1 (xmms2-0.2DrJekyll.tar.bz2) = 6169594c07701fd2eea0691fe50c57a019e17dd8
+RMD160 (xmms2-0.2DrJekyll.tar.bz2) = 76b0deb9eb92db023c4ff15dbdb82938ef8f663d
+Size (xmms2-0.2DrJekyll.tar.bz2) = 1207014 bytes
+SHA1 (patch-aa) = e0584a22a47b8f7e0347ee90e25bba47c4b76a27
+SHA1 (patch-ab) = ec9c35f4716e7733089812a126efeb281a688dbc

@@ -1,17 +1,16 @@
-# $NetBSD: options.mk,v 1.8 2005/11/03 09:53:44 leonardschmidt Exp $
+# $NetBSD: options.mk,v 1.9 2007/05/27 17:46:28 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
-PKG_SUPPORTED_OPTIONS=	curl flac gnomevfs modplug ogg pyrex ruby
-PKG_SUGGESTED_OPTIONS=	curl flac gnomevfs modplug ogg
+PKG_SUPPORTED_OPTIONS=	faad flac gnomevfs modplug ogg pyrex ruby perl
+PKG_SUGGESTED_OPTIONS=	flac gnomevfs modplug ogg
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mcurl)
-.  include "../../www/curl/buildlink3.mk"
-PLIST_SUBST+=		CURL=""
+.if !empty(PKG_OPTIONS:Mfaad)
+.  include "../../audio/faad2/buildlink3.mk"
+PLIST_SUBST+=		FAAD=""
 .else
-PLIST_SUBST+=		CURL="@comment "
-EXCLUDES+=		curl
+PLIST_SUBST+=		FAAD="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
@@ -19,7 +18,6 @@ EXCLUDES+=		curl
 PLIST_SUBST+=		FLAC=""
 .else
 PLIST_SUBST+=		FLAC="@comment "
-EXCLUDES+=		flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnomevfs)
@@ -27,7 +25,6 @@ EXCLUDES+=		flac
 PLIST_SUBST+=		GNOMEVFS=""
 .else
 PLIST_SUBST+=		GNOMEVFS="@comment "
-EXCLUDES+=		gnomevfs
 .endif
 
 .if !empty(PKG_OPTIONS:Mmodplug)
@@ -35,7 +32,6 @@ EXCLUDES+=		gnomevfs
 PLIST_SUBST+=		MODPLUG=""
 .else
 PLIST_SUBST+=		MODPLUG="@comment "
-EXCLUDES+=		modplug
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
@@ -43,7 +39,14 @@ EXCLUDES+=		modplug
 PLIST_SUBST+=		OGG=""
 .else
 PLIST_SUBST+=		OGG="@comment "
-EXCLUDES+=		ogg
+.endif
+
+.if !empty(PKG_OPTIONS:Mperl)
+.   include "../../lang/perl5/buildlink3.mk"
+PLIST_SUBST+=		PERL=""
+USE_TOOLS+=		perl
+.else
+PLIST_SUBST+=		PERL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
@@ -52,7 +55,6 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 .  include "../../lang/python/extension.mk"
 PLIST_SUBST+=		PYREX=""
 .else
-EXCLUDES+=		python
 PLIST_SUBST+=		PYREX="@comment "
 .endif
 
@@ -61,7 +63,6 @@ USE_RUBY_DIST_SUBDIR=	no
 .  include "../../lang/ruby/buildlink3.mk"
 PLIST_SUBST+=		RUBY=""
 .else
-EXCLUDES+=		ruby
 PLIST_SUBST+=		RUBY="@comment "
 .endif
 
@@ -71,6 +72,5 @@ PLIST_SUBST+=		RUBY="@comment "
 DEPENDS+=		sidplay-[0-9]*:../../audio/sidplay
 PLIST_SUBST+=		SID=""
 .else
-EXCLUDES+=		sid
 PLIST_SUBST+=		SID="@comment "
 .endif

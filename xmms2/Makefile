@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/01/14 12:11:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/05/27 17:46:28 tnn2 Exp $
 #
 
-DISTNAME=	xmms2-0.2DrGonzo
-PKGNAME=	xmms2-0.2rc7
+DISTNAME=	xmms2-0.2DrJekyll
+PKGNAME=	xmms2-0.2rc8
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,36 +11,29 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmms2.xmms.org/
 COMMENT=	Audio player featuring a client-server model
 
-BUILD_DEPENDS+=		scons>=0.96.1nb1:../../devel/scons
+BUILD_DEPENDS+=		python24>=2.4.0:../../lang/python24
 
-NO_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 MANCOMPRESSED=		yes
 
-PKGCONFIG_OVERRIDE=	xmms2-client-cpp-glib.pc
-PKGCONFIG_OVERRIDE+=	xmms2-client-cpp.pc
-PKGCONFIG_OVERRIDE+=	xmms2-client-ecore.pc
-PKGCONFIG_OVERRIDE+=	xmms2-client-glib.pc
-PKGCONFIG_OVERRIDE+=	xmms2-client.pc
-PKGCONFIG_OVERRIDE+=	xmms2-plugin.pc
+do-configure:
+	cd ${WRKSRC:Q} && ${PREFIX}/bin/python2.4 ./waf configure --prefix=${PREFIX}
+
+do-build:
+	cd ${WRKSRC:Q} && ${PREFIX}/bin/python2.4 ./waf build
+
+do-install:
+	cd ${WRKSRC:Q} && ${PREFIX}/bin/python2.4 ./waf install
+
 
 .include "options.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-EXCLUDES+=		sun
-
-do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
-		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons \
-		EXCLUDE="${EXCLUDES}"
-
-do-install:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
-		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
-
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

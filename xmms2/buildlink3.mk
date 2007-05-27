@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 07:18:41 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/05/27 17:46:28 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
@@ -23,8 +23,8 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.xmms2=${PKG_BUILD_OPTIONS.xmms2:Q}
 .endif
 MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 
-.if !empty(PKG_BUILD_OPTIONS.xmms2:Mcurl)
-.  include "../../www/curl/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mfaad)
+.  include "../../audio/faad2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mflac)
@@ -43,10 +43,15 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 .  include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mperl)
+.  include "../../lang/perl5/buildlink3.mk"
+.endif
+
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-
 .include "../../mk/oss.buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
