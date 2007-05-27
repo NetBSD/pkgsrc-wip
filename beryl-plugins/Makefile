@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/04/25 07:07:57 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/27 06:51:50 bsadewitz Exp $
 #
 
 DISTNAME=	beryl-plugins-${BERYL_VERSION}
@@ -21,6 +21,10 @@ USE_LIBTOOL+=	yes
 .include "../../wip/beryl-settings/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
