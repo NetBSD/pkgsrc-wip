@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/17 22:42:20 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.3 2007/05/28 18:12:54 cosmedbr Exp $
 
 DISTNAME=		wmii-3.6-rc2
 PKGNAME=		wmii-3.6rc2
@@ -18,5 +18,4 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 .include "../../wip/libixp/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../wip/dmenu/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
