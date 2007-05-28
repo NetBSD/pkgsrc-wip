@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/04/28 18:12:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.18 2007/05/28 20:55:47 tnn2 Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -125,6 +125,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.18
 share/emacs/${PKGVERSION}/etc/NEWS.19
 share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
+share/emacs/${PKGVERSION}/etc/NEWS.22
 share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
 share/emacs/${PKGVERSION}/etc/README
