@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/28 13:25:06 obache Exp $
 
-DISTNAME=		gmediaserver-0.11.0
+DISTNAME=		gmediaserver-0.12.0
 CATEGORIES=		multimedia net
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gmediaserver/
 

@@ -1,12 +1,33 @@
-$NetBSD: patch-aa,v 1.1 2006/06/22 08:32:18 obache Exp $
+$NetBSD: patch-aa,v 1.2 2007/05/28 13:25:07 obache Exp $
 
---- src/metadata.c.orig	2006-03-13 13:16:10.000000000 +0000
-+++ src/metadata.c
-@@ -55,6 +55,7 @@
- #include "strutil.h"
- #include "intutil.h"
- #include "gmediaserver.h"
-+#include <ithread.h>
+--- configure.orig	2006-08-29 20:53:54.000000000 +0000
++++ configure
+@@ -23324,7 +23324,7 @@ if test "${ac_cv_lib_magic_magic_open+se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lmagic  $LIBS"
++LIBS="-lmagic -lz $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -23396,7 +23396,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_magic_magic_open" >&5
+ echo "${ECHO_T}$ac_cv_lib_magic_magic_open" >&6; }
+ if test $ac_cv_lib_magic_magic_open = yes; then
+-  LIBMAGIC=-lmagic
++  LIBMAGIC="-lmagic -lz"
  
- #define DEFAULT_ENTRIES_SIZE 		512
- #define DEFAULT_FILE_TYPES 		"mp3,wma,m3u,pls"
+ else
+   { { echo "$as_me:$LINENO: error: libmagic library or magic_open function not found" >&5
+@@ -24725,6 +24725,10 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;

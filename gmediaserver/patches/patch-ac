@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2006/06/22 08:32:18 obache Exp $
+$NetBSD: patch-ac,v 1.2 2007/05/28 13:25:07 obache Exp $
 
---- src/webserver.c.orig	2006-03-04 18:58:47.000000000 +0000
-+++ src/webserver.c
-@@ -282,7 +282,7 @@ webserver_read(UpnpWebFileHandle fh, cha
- 	len = read(file->detail.local.fd, buf, buflen);
- 	break;
-     case FILE_MEMORY:
--	len = min(buflen, file->detail.memory.len - file->pos);
-+	len = MIN(buflen, file->detail.memory.len - file->pos);
- 	memcpy(buf, file->detail.memory.contents + file->pos, len);
- 	break;
-     case FILE_URL:
+--- po/Makefile.in.in.orig	2007-05-28 07:31:58.000000000 +0000
++++ po/Makefile.in.in
+@@ -30,7 +30,7 @@ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+-mkinstalldirs = $(SHELL) @install_sh@ -d
++mkinstalldirs = @install_sh@ -d
+ mkdir_p = @mkdir_p@
+ 
+ GMSGFMT_ = @GMSGFMT@

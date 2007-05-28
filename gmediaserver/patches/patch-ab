@@ -1,12 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2006/06/22 08:32:18 obache Exp $
+$NetBSD: patch-ab,v 1.2 2007/05/28 13:25:07 obache Exp $
 
---- src/webclient.c.orig	2005-09-16 14:31:12.000000000 +0000
-+++ src/webclient.c
-@@ -19,6 +19,7 @@
-  */
- 
- #include <config.h>
-+#include <unistd.h>		/* POSIX */
- #include <sys/socket.h>		/* POSIX */
- #include <netinet/in.h>		/* POSIX */
- #include <netdb.h>		/* POSIX */
+--- src/main.c.orig	2006-08-31 18:44:25.000000000 +0000
++++ src/main.c
+@@ -399,7 +399,9 @@ main(int argc, char **argv)
+      */
+     if (!background)
+         write_pid_file(pidfilename, getpid(), false);
+-
++#ifndef MSG_NOSIGNAL
++    signal(SIGPIPE, SIG_IGN);
++#endif
+     signalaction.sa_handler = dummy_signal_handler;
+     if (sigemptyset(&signalaction.sa_mask) < 0)
+     	die(_("cannot empty signal set - %s\n"), errstr);
