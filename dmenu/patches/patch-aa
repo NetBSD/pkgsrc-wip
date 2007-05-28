@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2007/05/16 16:55:50 netcap Exp $
+$NetBSD: patch-aa,v 1.3 2007/05/28 18:30:22 cosmedbr Exp $
 
---- config.mk.orig	2007-03-17 22:14:34.000000000 +0100
+--- config.mk.orig	2007-05-28 20:23:18.000000000 +0200
 +++ config.mk
-@@ -4,18 +4,17 @@ VERSION = 2.8
+@@ -4,19 +4,18 @@ VERSION = 3.1
  # Customize below to fit your system
  
  # paths
@@ -22,8 +22,9 @@ $NetBSD: patch-aa,v 1.2 2007/05/16 16:55:50 netcap Exp $
  
  # flags
 -CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
--LDFLAGS = ${LIBS}
+-LDFLAGS = -s ${LIBS}
 +CFLAGS = -DVERSION=\"${VERSION}\"
 +LDFLAGS += ${LIBS}
  #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
  #LDFLAGS = -g ${LIBS}
+ 
