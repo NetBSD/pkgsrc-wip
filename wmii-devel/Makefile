@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2007/05/28 18:12:54 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.4 2007/05/29 21:25:41 cosmedbr Exp $
 
-DISTNAME=		wmii-3.6-rc2
-PKGNAME=		wmii-3.6rc2
+DISTNAME=		wmii+ixp-20070516
+PKGNAME=		wmii-20070516
 CATEGORIES=		wm
-MASTER_SITES=		http://suckless.org/download/
+MASTER_SITES=		http://suckless.org/snaps/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		cosmedbr@users.sourceforge.net
 HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Window manager improved 2
 
-CONFLICTS=		wmii<3.5
+CONFLICTS+=		wmii-[0-9]*
 
 NO_CONFIGURE=		yes
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
-.include "../../wip/libixp/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../wip/dmenu/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

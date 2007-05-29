@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/17 22:42:20 cosmedbr Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/05/29 21:25:41 cosmedbr Exp $
 bin/wmii
+bin/wmii9menu
+bin/wmii9rc
+bin/wmiiloop
 bin/wmiir
-bin/wmiiwm
+bin/wmiistartrc
 man/man1/wmii.1
+man/man1/wmiiloop.1
 man/man1/wmiir.1
 man/man1/wmiiwm.1
-share/examples/wmii-3.5/quit
-share/examples/wmii-3.5/status
+share/examples/wmii-3.5/rc.wmii
 share/examples/wmii-3.5/welcome
 share/examples/wmii-3.5/wmiirc
-@dirrm share/examples/wmii-3.5
