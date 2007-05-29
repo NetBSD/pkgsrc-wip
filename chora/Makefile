@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 11:23:07 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/05/29 02:02:57 schmonz Exp $
 #
 
 DISTNAME=	chora-1.2.3
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/chora/
 COMMENT=	Another CVS-via-web system
 
-#DEPENDS+=	cvs>=1.11.20:../../devel/cvs
+#DEPENDS+=	cvs>=1.11.20:../../devel/scmcvs
 DEPENDS+=	horde>=2.2.4:../../www/horde
 
 USE_LANGUAGES=	# empty
