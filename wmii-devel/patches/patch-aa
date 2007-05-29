@@ -1,34 +1,46 @@
-$NetBSD: patch-aa,v 1.3 2007/05/15 23:14:34 netcap Exp $
+$NetBSD: patch-aa,v 1.4 2007/05/29 21:26:27 cosmedbr Exp $
 
---- config.mk.orig	2007-03-17 22:52:07.000000000 +0100
+--- config.mk.orig	2007-05-29 00:13:35.000000000 +0200
 +++ config.mk
-@@ -5,22 +5,21 @@ CONFVERSION = 3.5
+@@ -1,22 +1,19 @@
  # Customize below to fit your system
  
  # paths
 -PREFIX = /usr/local
--CONFPREFIX = ${PREFIX}/etc
--MANPREFIX = ${PREFIX}/share/man
-+CONFPREFIX = ${PREFIX}/share/examples
-+MANPREFIX = ${PREFIX}/${PKGMANDIR}
+ BIN = ${PREFIX}/bin
+-MAN = ${PREFIX}/share/man
+-ETC = ${PREFIX}/etc
+-LIBDIR = ${PREFIX}/lib
+-INCLUDE = ${PREFIX}/include
++MAN = ${PREFIX}/${PKGMANDIR}
++ETC = ${PREFIX}/share/examples
  
--X11INC = /usr/X11R6/include
--X11LIB = /usr/X11R6/lib
-+X11INC = ${X11BASE}/include
-+X11LIB = ${X11BASE}/lib
+ # Includes and libs
+ INCS = -I. -I${ROOT}/include -I${INCLUDE} -I/usr/include
+-LIBS = -L/usr/lib -lc
++LIBS = --lc -lX11
  
- # includes and libs
- INCS = -I. -I${PREFIX}/include -I/usr/include -I${X11INC}
--LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 -L${PREFIX}/lib -lixp
-+LIBS = --lc -lX11 -lixp
- 
- # flags
- #CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
- #LDFLAGS = ${LIBS}
--CFLAGS = -g -Wall ${INCS} -DVERSION=\"${VERSION}\"
--LDFLAGS = -g ${LIBS}
-+CFLAGS = -DVERSION=\"${VERSION}\"
+ # Flags
+ include ${ROOT}/mk/gcc.mk
+ # wmii is IO bound, not CPU bound. Please do not use -O2 here. -O is more than sufficient.
+-CFLAGS += 
+-LDFLAGS += 
++CFLAGS += -DVERSION=\"${VERSION}\"
 +LDFLAGS += ${LIBS}
+ STATIC = -static
+ 
+ # Compiler
+@@ -27,10 +24,10 @@ LD = cc
+ AR = ar crs
+ #AR = sh -c 'ar cr "$$@" && ranlib "$$@"'
+ 
+-P9PATHS = /usr/local/plan9 /usr/local/9 /opt/plan9 /opt/9 /usr/plan9 /usr/9
++P9PATHS = ${PREFIX}/plan9 ${PREFIX}/9
+ 
+-INCX11 = -I/usr/X11R6/include
+-LIBX11 = -L/usr/X11R6/lib -lX11
++INCX11 = -I${X11BASE}/include
++LIBX11 = -L${X11BASE}/lib
+ LIBIXP = ${ROOT}/libixp/libixp.a
  
  # Solaris
- #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
