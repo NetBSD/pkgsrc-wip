@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/30 18:23:41 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/05/30 18:35:07 hoka_adam Exp $
 
 DISTNAME=	bsdinstaller-2.0
-CATEGORIES=	wip
+CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=     adam.hoka@gmail.com
-HOMEPAGE=	http://www.bsdinstaller.org
-COMMENT=	BSD Installer meta-package.
+HOMEPAGE=	http://www.bsdinstaller.org/
+COMMENT=	BSD Installer meta-package
 
 DEPENDS+=	libdfui>=4.1:../../wip/libdfui
 DEPENDS+=       libinstaller>=5.1:../../wip/libinstaller
-DEPENDS+=	dfuibe-installer>=1.1.7:../../wip/dfuibe_installer
-DEPENDS+=	dfuife-curses>=1.5.1:../../wip/dfuife_curses
+#DEPENDS+=	dfuibe-installer>=1.1.7:../../wip/dfuibe_installer
+#DEPENDS+=	dfuife-curses>=1.5.1:../../wip/dfuife_curses
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
