@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.3 2007/05/30 17:41:49 hoka_adam Exp $
+include/installer/commands.h
+include/installer/confed.h
+include/installer/diskutil.h
+include/installer/functions.h
+include/installer/package.h
+include/installer/uiutil.h
+lib/libinstaller.a
+lib/libinstaller.so
+lib/libinstaller.so.5
+@dirrm include/installer
