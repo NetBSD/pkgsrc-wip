@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/05/30 21:01:23 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2007/05/30 22:04:02 hoka_adam Exp $
 
 DISTNAME=	bsdinstaller-20070528
 PKGNAME=	libdfui-4.99.1
@@ -10,8 +10,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/installer/src/lib/libdfui
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	Abstract user interface protocol library
-
-CONFLICTS=	libdfui<4.99
 
 FILESDIR=	${.CURDIR}/../../wip/bsdinstaller/files
 
