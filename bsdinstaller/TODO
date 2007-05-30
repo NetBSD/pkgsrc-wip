@@ -1,0 +1,3 @@
+- Fix this currently broken meta-pkg.
+- Add more packages from BSD installer version 2.
+  The package is now only here to hold commonly used files at the moment.
