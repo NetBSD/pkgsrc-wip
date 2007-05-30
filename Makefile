@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2600 2007/05/30 14:06:31 obache Exp $
+# $Id: Makefile,v 1.2601 2007/05/30 17:49:06 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -701,6 +701,7 @@ SUBDIR+=	libbtctl
 SUBDIR+=	libcli
 SUBDIR+=	libcm
 SUBDIR+=	libdaemon
+SUBDIR+=	libdfui
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdmx
@@ -717,6 +718,7 @@ SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
+SUBDIR+=	libinstaller
 SUBDIR+=	libixp
 SUBDIR+=	libjudy
 SUBDIR+=	liblingoteach
