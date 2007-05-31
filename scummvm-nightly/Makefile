@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/05/13 07:30:55 dillo Exp $
+# $NetBSD: Makefile,v 1.14 2007/05/31 08:42:21 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -14,6 +14,7 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=--mandir=${LOCALBASE}/${PKGMANDIR}
 USE_DIRS+=	xdg-1.1
 WRKSRC=		${WRKDIR}/scummvm
 
