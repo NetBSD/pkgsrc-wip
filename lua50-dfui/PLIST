@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/31 19:31:15 hoka_adam Exp $
+lib/lua/5.0/ldfui.so
+share/lua/5.0/dfui.lua
+@dirrm share/lua/5.0
+@dirrm lib/lua/5.0
