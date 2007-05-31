@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/31 19:34:24 hoka_adam Exp $
+lib/lua/5.0/lposix.so
+share/lua/5.0/posix.lua
+@dirrm share/lua/5.0
+@dirrm lib/lua/5.0

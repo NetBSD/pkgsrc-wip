@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/05/31 19:34:24 hoka_adam Exp $
+
+--- Makefile.orig	2003-11-06 01:26:49.000000000 +0100
++++ Makefile
+@@ -1,30 +1,33 @@
+ # makefile for POSIX library for Lua
+ 
+ # change these to reflect your Lua installation
+-LUA= /tmp/lhf/lua-5.0
++LUA= ${PREFIX}
+ LUAINC= $(LUA)/include
+ LUALIB= $(LUA)/lib
+ LUABIN= $(LUA)/bin
+ 
+ # no need to change anything below here
+ CFLAGS= -fPIC $(INCS) $(WARN) -O2 $G
+-WARN= -pedantic -Wall
++WARN= -Wall
+ INCS= -I$(LUAINC)
+ 
+ MYNAME= posix
+ MYLIB= l$(MYNAME)
+ 
+-OBJS= $(MYLIB).o
++OBJS= $(MYLIB).o compat-5.1.o
+ 
+ T= $(MYLIB).so
+ 
+-all:	test
++all:	$T
+ 
+ test:	$T
+ 	$(LUABIN)/lua -l$(MYNAME) test.lua
+ 
+ $T:	$(OBJS)
+-	$(CC) -o $@ -shared $(OBJS)
++	$(CC) -o $@ -shared $(OBJS) -L$(LUALIB) -llua -llualib
++
++compat-5.1.c: $(LUALIB)/lua/compat-5.1r5/compat-5.1.c
++	cp $(LUALIB)/lua/compat-5.1r5/compat-5.1.? .
+ 
+ $(OBJS): modemuncher.c
+ 
