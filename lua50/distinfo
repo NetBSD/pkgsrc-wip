@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/05/31 02:30:17 hoka_adam Exp $
+
+SHA1 (lua-5.0.3.tar.gz) = e7e91f78b8a8deb09b13436829bed557a46af8ae
+RMD160 (lua-5.0.3.tar.gz) = cb3ed4320b438d73c8ff6c93a02275c9fb461883
+Size (lua-5.0.3.tar.gz) = 191384 bytes
