@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2603 2007/05/31 19:37:18 hoka_adam Exp $
+# $Id: Makefile,v 1.2604 2007/06/01 20:19:32 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -207,6 +207,8 @@ SUBDIR+=	debian_gtk
 SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
+SUBDIR+=	dfuibe_installer
+SUBDIR+=	dfuibe_lua
 SUBDIR+=	di
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
@@ -794,8 +796,10 @@ SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
 SUBDIR+=	lua50
+SUBDIR+=	lua50-app
 SUBDIR+=	lua50-compat51
 SUBDIR+=	lua50-dfui
+SUBDIR+=	lua50-filename
 SUBDIR+=	lua50-posix
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
