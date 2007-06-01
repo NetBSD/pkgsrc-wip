@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/01 20:11:56 hoka_adam Exp $
+share/lua/5.0/app.lua
