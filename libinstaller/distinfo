@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/05/30 17:41:49 hoka_adam Exp $
+$NetBSD: distinfo,v 1.4 2007/06/01 19:52:53 hoka_adam Exp $
 
-SHA1 (bsdinstaller-20070628.tar.gz) = 440b55b742dcde435e3b896f84eab75718f55b98
-RMD160 (bsdinstaller-20070628.tar.gz) = 826bfaf291c800673914271bbec09a20691e80a0
-Size (bsdinstaller-20070628.tar.gz) = 846719 bytes
+SHA1 (bsdinstaller-20070528.tar.gz) = 2829dcd0ed1045cb5c711e3a1296da6bb9a1b3a3
+RMD160 (bsdinstaller-20070528.tar.gz) = 7c92c0d1b879dc23a2c75dbbc3b8c955bf6f94f7
+Size (bsdinstaller-20070528.tar.gz) = 845680 bytes
