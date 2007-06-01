@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/05/30 22:09:04 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/01 19:46:03 hoka_adam Exp $
 
 PKGNAME=	libinstaller-5.99.1
-DISTNAME=	bsdinstaller-20070628
+DISTNAME=	bsdinstaller-20070528
 CATEGORIES=	devel
 
 MASTER_SITES=	http://rnrdoctor.sytes.net/~replaced/bsdinstaller/
