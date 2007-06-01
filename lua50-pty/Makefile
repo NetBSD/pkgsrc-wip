@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/01 00:57:58 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/01 15:17:47 hoka_adam Exp $
 
 DISTNAME=	bsdinstaller-20070528
-PKGNAME=	luapty-0.1
 PKGNAME=	lua50-pty-0.1
 CATEGORIES=	devel
 
