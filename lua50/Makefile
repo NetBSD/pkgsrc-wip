@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/31 02:30:17 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/01 18:00:07 hoka_adam Exp $
 #
 
 DISTNAME=	lua-5.0.3
@@ -34,9 +34,6 @@ MAKE_ENV+=      MYCFLAGS=${CFLAGS:Q}
 MAKE_ENV+=      MYLDFLAGS=${LDFLAGS:Q}\ ${LIBS:Q}
 MAKE_ENV+=      DLLIB=${BUILDLINK_LDADD.dl:Q}
 
-DOCDIR=         ${PREFIX}/share/doc/lua
-EGDIR=          ${PREFIX}/share/examples/lua
-
 # fixing the hardcoded tools and prefix.
 SUBST_CLASSES+=                 fix-conf
 SUBST_STAGE.fix-conf=    pre-configure
@@ -48,6 +45,9 @@ SUBST_SED.fix-conf+=     -e "s:cp:${CP}:g"
 SUBST_SED.fix-conf+=     -e "s:strip:${STRIP}:g"
 SUBST_SED.fix-conf+=     -e "s:INSTALL_EXEC= cp:${INSTALL_PROGRAM}:g"
 SUBST_SED.fix-conf+=     -e "s:INSTALL_DATA= cp:${INSTALL_DATA}:g"
+
+DOCDIR=         ${PREFIX}/share/doc/lua
+EGDIR=          ${PREFIX}/share/examples/lua
 
 post-build:
 	cd ${WRKSRC}/etc && ${SETENV} ${MAKE_ENV} ${MAKE} bin2c
@@ -73,6 +73,9 @@ post-install:
 		${INSTALL_DATA} "$$f" ${EGDIR}/etc;			\
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/etc/bin2c ${PREFIX}/bin
+
+	${INSTALL_DATA_DIR} ${PREFIX}/share/lua/5.0
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/lua/5.0
 
 # FIXME: I don`t know if dlopen is needed:
 #.include "../../mk/dlopen.buildlink3.mk"

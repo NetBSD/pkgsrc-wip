@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/31 02:32:53 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/01 18:00:08 hoka_adam Exp $
 bin/lua50c51
 lib/lua/compat-5.1r5/compat-5.1.c
 lib/lua/compat-5.1r5/compat-5.1.h
 share/lua/5.0/compat-5.1.lua
-@dirrm share/lua/5.0
 @dirrm lib/lua/compat-5.1r5

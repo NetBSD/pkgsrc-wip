@@ -1,20 +1,20 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/05/31 19:31:15 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/06/01 18:00:09 hoka_adam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LUADFUI_BUILDLINK3_MK:=	${LUADFUI_BUILDLINK3_MK}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LUA50_DFUI_BUILDLINK3_MK:=	${LUA50_DFUI_BUILDLINK3_MK}+
 
 .if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	luadfui
+BUILDLINK_DEPENDS+=	lua50-dfui
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nluadfui}
-BUILDLINK_PACKAGES+=	luadfui
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}luadfui
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlua50-dfui}
+BUILDLINK_PACKAGES+=	lua50-dfui
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}lua50-dfui
 
-.if ${LUADFUI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.luadfui+=	luadfui>=0.1
-BUILDLINK_PKGSRCDIR.luadfui?=	../../wip/lua50-dfui
-.endif	# LUADFUI_BUILDLINK3_MK
+.if ${LUA50_DFUI_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.lua50-dfui+=	lua50-dfui>=0.1
+BUILDLINK_PKGSRCDIR.lua50-dfui?=	../../wip/lua50-dfui
+.endif	# LUA50_DFUI_BUILDLINK3_MK
 
 .include "../../devel/libaura/buildlink3.mk"
 .include "../../wip/libdfui/buildlink3.mk"
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.luadfui?=	../../wip/lua50-dfui
 .include "../../wip/lua50-compat51/buildlink3.mk"
 .include "../../wip/lua50-posix/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
