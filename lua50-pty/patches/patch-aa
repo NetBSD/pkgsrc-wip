@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/01 00:57:58 hoka_adam Exp $
+
+--- Makefile.orig	2007-06-01 02:37:20.000000000 +0200
++++ Makefile
+@@ -11,7 +11,7 @@ COMPATOBJ=${COMPAT}/compat-5.1.o
+ CFLAGS+=	${WARNS} -fPIC ${EXTRA_CFLAGS}
+ CFLAGS+=	-I../ -I${LUA}/include -I/usr/local/include -I/usr/pkg/include
+ LDFLAGS+=	-L${LUA}/lib -L/usr/local/lib -L/usr/pkg/lib
+-LDFLAGS+=	-lutil -lm -llua50 -llualib50
++LDFLAGS+=	-lutil -lm -llua -llualib
+ 
+ LIB=	lpty.so
+ OBJS=	pty.o
