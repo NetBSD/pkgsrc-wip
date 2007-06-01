@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2007/03/15 11:24:51 obache Exp $
+$NetBSD: patch-aa,v 1.5 2007/06/01 20:37:53 kcf Exp $
 
---- Makefile.orig	2007-03-03 15:28:44.000000000 +0000
+--- Makefile.orig	2007-04-22 10:39:42.000000000 -0500
 +++ Makefile
 @@ -1,19 +1,19 @@
  # The directory where all the bouml files will be installed, you
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.4 2007/03/15 11:24:51 obache Exp $
  SRC_DIRS = src \
  	src/CppGenerator \
  	src/CppReverse \
-@@ -86,19 +84,19 @@ clean:
+@@ -88,19 +86,19 @@ clean:
  	for i in $(SRC_DIRS) $(PLUGOUT_DIRS); do if [ -d $$i ]; then (cd $$i ; $(MAKE) clean; rm -f Makefile; ) || exit 1 ; fi; done
  
  install:
@@ -62,13 +62,13 @@ $NetBSD: patch-aa,v 1.4 2007/03/15 11:24:51 obache Exp $
 +	cd plugouts ; pax -rw -pp -pm empty genpro html rose singleton cpp_utilities xmi xmi2 xmi2import sm_generator usecase_wizard sort FileControl deploy GlobalChange $(DESTDIR)$(BOUML_LIB)
  	echo "#!/bin/sh" >$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "PATH=$(BOUML_LIB):$$"PATH >>$(DESTDIR)$(BOUML_DIR)/bouml
- 	echo "$(BOUML_LIB)/bouml \"$$"@"\"" >>$(DESTDIR)$(BOUML_DIR)/bouml
-@@ -107,7 +105,7 @@ install:
+ 	echo "exec $(BOUML_LIB)/bouml \"$$"@"\"" >>$(DESTDIR)$(BOUML_DIR)/bouml
+@@ -109,7 +107,7 @@ install:
  	cd $(DESTDIR)$(BOUML_DIR) ; rm -f projectSynchro ; ln -s $(BOUML_LIB)/projectSynchro
  	if test -n "$(BOUML_DESKTOP_DIR)" ; \
  	then \
 -		mkdir -p "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
-+		${BSD_INSTALL_DATA_DIR} "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
++		${BSD_INSTALL_DATA_DIR} "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \ 
  		echo "[Desktop Entry]" > "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
  		echo "Encoding=UTF-8" >> "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
  		echo "Name=BOUML" >> "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
