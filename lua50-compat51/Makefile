@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/01 18:00:08 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/02 16:09:22 hoka_adam Exp $
 
 DISTNAME=	compat-5.1r5
 PKGNAME=	lua50-compat51-5.1.5
@@ -13,6 +13,12 @@ SUBST_STAGE.fix-paths-in-sh=	pre-configure
 SUBST_MESSAGE.fix-paths-in-sh=	Fixing absolute paths.
 SUBST_FILES.fix-paths-in-sh=	lua50c51.sh
 SUBST_SED.fix-paths-in-sh=	-e "s:/usr/local:${PREFIX}:g"
+
+SUBST_CLASSES+=                 fix-paths-in-lua
+SUBST_STAGE.fix-paths-in-lua=    pre-configure
+SUBST_MESSAGE.fix-paths-in-lua=  Fixing absolute paths..
+SUBST_FILES.fix-paths-in-lua=    compat-5.1.lua
+SUBST_SED.fix-paths-in-lua=      -e "s:/usr/local:${PREFIX}:g"
 
 post-extract:
 	${CP} ${FILESDIR}/lua50c51.sh ${WRKSRC}
