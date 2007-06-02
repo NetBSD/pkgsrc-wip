@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/06/01 19:46:03 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/02 00:13:00 hoka_adam Exp $
 
 PKGNAME=	libinstaller-5.99.1
 DISTNAME=	bsdinstaller-20070528
@@ -12,6 +12,12 @@ HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	BSD Installer library
 
 FILESDIR=	${.CURDIR}/../../wip/bsdinstaller/files
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	functions.c
+SUBST_SED.conf=		-e "s|@@prefix@@|${PREFIX}|g"
+SUBST_MESSAGE.conf=	Fixing hardcoded paths.
 
 pre-configure:
 	${CP} ${FILESDIR}/Config ${WRKDIR}/${DISTNAME}/installer/src/Config
