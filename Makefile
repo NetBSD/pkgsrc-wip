@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2604 2007/06/01 20:19:32 hoka_adam Exp $
+# $Id: Makefile,v 1.2605 2007/06/02 01:01:46 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -209,6 +209,7 @@ SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfuibe_installer
 SUBDIR+=	dfuibe_lua
+SUBDIR+=	dfuife_curses
 SUBDIR+=	di
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
