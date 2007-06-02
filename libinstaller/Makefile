@@ -1,27 +1,22 @@
-# $NetBSD: Makefile,v 1.7 2007/06/02 01:14:24 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/02 03:34:43 hoka_adam Exp $
 
-DISTNAME=	bsdinstaller-20070528
 PKGNAME=	libinstaller-5.99.1
 PKGREVISION=	1
 CATEGORIES=	devel
 
-MASTER_SITES=	http://rnrdoctor.sytes.net/~replaced/bsdinstaller/
+.include "../../wip/bsdinstaller/bsdinstaller.mk"
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/installer/src/lib/libinstaller
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	BSD Installer library
 
-FILESDIR=	${.CURDIR}/../../wip/bsdinstaller/files
-
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	functions.c
 SUBST_SED.conf=		-e "s|@@prefix@@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing hardcoded paths.
-
-pre-configure:
-	${CP} ${FILESDIR}/Config ${WRKDIR}/${DISTNAME}/installer/src/Config
 
 do-install:
 	${INSTALL_DATA_DIR} -p ${PREFIX}/include/installer

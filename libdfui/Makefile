@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2007/05/30 22:04:02 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/02 03:34:43 hoka_adam Exp $
 
-DISTNAME=	bsdinstaller-20070528
 PKGNAME=	libdfui-4.99.1
 CATEGORIES=	devel
 
-MASTER_SITES=	http://rnrdoctor.sytes.net/~replaced/bsdinstaller/
+.include "../../wip/bsdinstaller/bsdinstaller.mk"
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/installer/src/lib/libdfui
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	Abstract user interface protocol library
-
-FILESDIR=	${.CURDIR}/../../wip/bsdinstaller/files
-
-post-extract:
-	${CP} ${FILESDIR}/Config ${WRKDIR}/${DISTNAME}/installer/src/Config
 
 do-install:
 	${INSTALL_DATA_DIR} -p ${PREFIX}/include/dfui

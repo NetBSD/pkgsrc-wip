@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/01 20:13:26 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/02 03:34:43 hoka_adam Exp $
 
-DISTNAME=	bsdinstaller-20070528
 PKGNAME=	lua50-filename-0.1
 CATEGORIES=	devel
 
-MASTER_SITES=	http://rnrdoctor.sytes.net/~replaced/bsdinstaller/
+.include "../../wip/bsdinstaller/bsdinstaller.mk"
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/installer/src/lib/lua/filename
 
 MAINTAINER=	adam.hoka@gmail.com
