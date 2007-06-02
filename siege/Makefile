@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/08/27 17:57:44 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/02 19:18:51 airhead Exp $
 #
 
-DISTNAME=		siege-2.65
+DISTNAME=		siege-2.66
 CATEGORIES=		www
 MASTER_SITES=		ftp://sid.joedog.org/pub/siege/
 
