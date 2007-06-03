@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/19 17:22:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/03 08:26:01 cheusov Exp $
 .include "../../wip/heirloom-common/Makefile.prog.common"
 
 PKGNAME=	heirloom-libcommon-${HEIRLOOM_VER}
@@ -17,9 +17,16 @@ HEADERS=	_alloca.h _malloc.h _utmpx.h alloca.h asciitype.h atoll.h \
 		msgselect.h oblok.h pathconf.h pfmt.h regexp.h regexpr.h \
 		sfile.h sigset.h utmpx.h
 
+PLIST_SUBST+=	NO_ALLOCA=
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=	"NO_ALLOCA=@comment "
+.endif
+
 do-install:
 .for i in ${HEADERS}
-	${INSTALL_DATA} ${WRKSRC}/libcommon/${i} ${DESTDIR}${HEADERS_DIR}
+	if test -r ${WRKSRC}/libcommon/${i}; then \
+	   ${INSTALL_DATA} ${WRKSRC}/libcommon/${i} ${DESTDIR}${HEADERS_DIR}; \
+	fi
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/libcommon/libcommon.a \
 		${DESTDIR}${PREFIX}/lib/libheirloomcommon.a
