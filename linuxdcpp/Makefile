@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2007/03/27 15:42:07 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/03 17:43:03 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
 CATEGORIES=		net x11
 MASTER_SITES=		http://linuxdcpp.berlios.de/
 
-MAINTAINER=		tnn+nbsd@nygren.pp.se
+MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://linuxdcpp.berlios.de/
 COMMENT=		DC++-based p2p filesharing application
 
