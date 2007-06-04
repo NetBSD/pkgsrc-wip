@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/05/20 15:29:29 ahallmann Exp $
+$NetBSD: patch-af,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
 
---- defs.in.orig	2004-04-27 20:16:15.000000000 +0000
+--- defs.in.orig	2006-01-31 20:03:34.000000000 +0100
 +++ defs.in
 @@ -44,6 +44,7 @@ SHELL		= @SCRIPT_SH@
  # to insufficient; you are better off rerunning the

@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2006/05/20 15:29:29 ahallmann Exp $
+$NetBSD: patch-am,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
 
---- faxd/UUCPLock.c++.orig	Thu Sep 21 10:24:54 2000
+--- faxd/UUCPLock.c++.orig	2000-09-21 11:24:54.000000000 +0200
 +++ faxd/UUCPLock.c++
 @@ -37,6 +37,7 @@ extern "C" {
  }
