@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2007/03/08 12:46:04 ahallmann Exp $
+$NetBSD: distinfo,v 1.9 2007/06/04 09:32:24 ahallmann Exp $
 
-SHA1 (hylafax/hylafax-4.3.3.tar.gz) = 934b30e257b3b3ce89464635377464acdcb64d23
-RMD160 (hylafax/hylafax-4.3.3.tar.gz) = f260643d93a6e1784b32a7db903ec10f3d14dc8c
-Size (hylafax/hylafax-4.3.3.tar.gz) = 1520317 bytes
+SHA1 (hylafax/hylafax-4.3.4.tar.gz) = 5b019a00edd59c66d77866662273e5405f1286f5
+RMD160 (hylafax/hylafax-4.3.4.tar.gz) = ada041ef72d65586f32e5dbdab39ef8ab7fbbe67
+Size (hylafax/hylafax-4.3.4.tar.gz) = 1467634 bytes
 SHA1 (patch-aa) = 59f814f979f1e247a1a40c1e3ba31581dde99d62
 SHA1 (patch-ab) = 8cc571b5d1f36a2353e4c407f153618bdae9d748
 SHA1 (patch-ac) = 1f37405fd71840672f7f3916c8da9af4d3ff7333
