@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/15 11:24:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/06/04 15:37:18 kcf Exp $
 bin/bouml
 bin/projectControl
 bin/projectSynchro
@@ -800,6 +800,7 @@ lib/bouml/rose/java_imports
 lib/bouml/rose/rose.prj
 lib/bouml/rose/stereotypes
 lib/bouml/rose/tools
+lib/bouml/roundtrip_body
 lib/bouml/singleton/1024.bodies
 lib/bouml/singleton/1152.bodies
 lib/bouml/singleton/1280.bodies
@@ -888,7 +889,45 @@ lib/bouml/sm_generator/131968.bodies
 lib/bouml/sm_generator/132098.bodies
 lib/bouml/sm_generator/132224.bodies
 lib/bouml/sm_generator/132480.bodies
+lib/bouml/sm_generator/132736.bodies
+lib/bouml/sm_generator/133120.bodies
+lib/bouml/sm_generator/133376.bodies
+lib/bouml/sm_generator/133888.bodies
+lib/bouml/sm_generator/134144.bodies
+lib/bouml/sm_generator/134272.bodies
+lib/bouml/sm_generator/134528.bodies
+lib/bouml/sm_generator/134912.bodies
+lib/bouml/sm_generator/135168.bodies
+lib/bouml/sm_generator/135424.bodies
+lib/bouml/sm_generator/135680.bodies
+lib/bouml/sm_generator/135936.bodies
+lib/bouml/sm_generator/136192.bodies
+lib/bouml/sm_generator/136448.bodies
+lib/bouml/sm_generator/136704.bodies
+lib/bouml/sm_generator/136960.bodies
+lib/bouml/sm_generator/137216.bodies
+lib/bouml/sm_generator/137472.bodies
+lib/bouml/sm_generator/137728.bodies
+lib/bouml/sm_generator/137984.bodies
+lib/bouml/sm_generator/138240.bodies
+lib/bouml/sm_generator/138496.bodies
+lib/bouml/sm_generator/138752.bodies
+lib/bouml/sm_generator/139008.bodies
+lib/bouml/sm_generator/139264.bodies
+lib/bouml/sm_generator/139776.bodies
+lib/bouml/sm_generator/140032.bodies
+lib/bouml/sm_generator/140288.bodies
+lib/bouml/sm_generator/140544.bodies
 lib/bouml/sm_generator/1408.bodies
+lib/bouml/sm_generator/140800.bodies
+lib/bouml/sm_generator/141056.bodies
+lib/bouml/sm_generator/141312.bodies
+lib/bouml/sm_generator/141568.bodies
+lib/bouml/sm_generator/141952.bodies
+lib/bouml/sm_generator/142208.bodies
+lib/bouml/sm_generator/142592.bodies
+lib/bouml/sm_generator/142848.bodies
+lib/bouml/sm_generator/143104.bodies
 lib/bouml/sm_generator/1536.bodies
 lib/bouml/sm_generator/1664.bodies
 lib/bouml/sm_generator/1792.bodies
@@ -1625,6 +1664,7 @@ share/icons/hicolor/64x64/apps/projectSynchro.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/bouml/xmi2import
 @dirrm lib/bouml/xmi2

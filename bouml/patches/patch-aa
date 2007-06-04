@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/06/01 20:37:53 kcf Exp $
+$NetBSD: patch-aa,v 1.6 2007/06/04 15:37:18 kcf Exp $
 
 --- Makefile.orig	2007-04-22 10:39:42.000000000 -0500
 +++ Makefile
@@ -63,12 +63,13 @@ $NetBSD: patch-aa,v 1.5 2007/06/01 20:37:53 kcf Exp $
  	echo "#!/bin/sh" >$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "PATH=$(BOUML_LIB):$$"PATH >>$(DESTDIR)$(BOUML_DIR)/bouml
  	echo "exec $(BOUML_LIB)/bouml \"$$"@"\"" >>$(DESTDIR)$(BOUML_DIR)/bouml
-@@ -109,7 +107,7 @@ install:
+@@ -109,7 +107,8 @@ install:
  	cd $(DESTDIR)$(BOUML_DIR) ; rm -f projectSynchro ; ln -s $(BOUML_LIB)/projectSynchro
  	if test -n "$(BOUML_DESKTOP_DIR)" ; \
  	then \
 -		mkdir -p "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
-+		${BSD_INSTALL_DATA_DIR} "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \ 
++		\
++		${BSD_INSTALL_DATA_DIR} "$(DESTDIR)$(BOUML_DESKTOP_DIR)" ; \
  		echo "[Desktop Entry]" > "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
  		echo "Encoding=UTF-8" >> "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
  		echo "Name=BOUML" >> "$(DESTDIR)$(BOUML_DESKTOP_DIR)/bouml.desktop" ; \
