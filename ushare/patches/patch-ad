@@ -1,0 +1,74 @@
+$NetBSD: patch-ad,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
+
+--- src/ushare.c.orig	2007-02-26 20:09:16.000000000 +0000
++++ src/ushare.c
+@@ -34,7 +34,11 @@
+ #include <errno.h>
+ #include <getopt.h>
+ 
+-#if (defined(BSD) || defined(__FreeBSD__))
++#if (defined(__unix__) || defined(unix)) && !defined(USG) || defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+ #include <sys/socket.h>
+ #include <sys/sysctl.h>
+ #include <net/if_dl.h>
+@@ -47,10 +51,6 @@
+ #include <stdbool.h>
+ #include <fcntl.h>
+ 
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
+-#include <sys/param.h>
+-#endif
+-
+ #include <upnp/upnp.h>
+ #include <upnp/upnptools.h>
+ 
+@@ -381,7 +381,7 @@ create_udn (char *interface)
+   char *buf;
+   unsigned char *ptr;
+ 
+-#if (defined(BSD) || defined(__FreeBSD__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+   int mib[6], len;
+   struct if_msghdr *ifm;
+   struct sockaddr_dl *sdl;
+@@ -392,7 +392,7 @@ create_udn (char *interface)
+   if (!interface)
+     return NULL;
+ 
+-#if (defined(BSD) || defined(__FreeBSD__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+   mib[0] = CTL_NET;
+   mib[1] = AF_ROUTE;
+   mib[2] = 0;
+@@ -443,7 +443,7 @@ create_udn (char *interface)
+   buf = (char *) malloc (64 * sizeof (char));
+   memset (buf, 0, 64);
+   ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
+-#endif /* (defined(BSD) || defined(__FreeBSD__)) */
++#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__)) */
+ 
+   snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
+             (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
+@@ -616,7 +616,7 @@ setup_i18n(void)
+ #if HAVE_SETLOCALE && ENABLE_NLS
+   setlocale (LC_ALL, "");
+ #endif
+-#if (!defined(BSD) && !defined(__FreeBSD__))
++#if (!defined(BSD) && !defined(__FreeBSD__) || defined(__NetBSD__))
+   bindtextdomain (PACKAGE, LOCALEDIR);
+ #endif
+   textdomain (PACKAGE);
+@@ -711,6 +711,9 @@ main (int argc, char **argv)
+ 
+   signal (SIGINT, UPnPBreak);
+   signal (SIGHUP, reload_config);
++#ifndef MSG_NOSIGNAL
++  signal (SIGPIPE, SIG_IGN);
++#endif
+ 
+   if (init_upnp (ut) < 0)
+   {

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
+
+--- src/osdep.h.orig	2007-02-26 20:09:16.000000000 +0000
++++ src/osdep.h
+@@ -21,7 +21,7 @@
+ #ifndef _OS_DEP_H_
+ #define _OS_DEP_H_
+ 
+-#if (defined(BSD) || defined(__FreeBSD__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+ #include <unistd.h>
+ char *strndup (const char *s, size_t n);
+ ssize_t getline (char **lineptr, size_t *n, FILE *stream);
