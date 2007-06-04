@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2605 2007/06/02 01:01:46 hoka_adam Exp $
+# $Id: Makefile,v 1.2606 2007/06/04 13:34:50 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1633,6 +1633,7 @@ SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	urlgfe
 SUBDIR+=	uschedule
+SUBDIR+=	ushare
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
 SUBDIR+=	vcdgear
