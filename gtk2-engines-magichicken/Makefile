@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2007/02/03 09:22:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/04 09:02:54 ekamperi Exp $
 
-DISTNAME=		GTK2-mgicchikn-1.0.2
-PKGNAME=		gtk2-engines-magichicken-1.0.2
-WRKSRC=			${WRKDIR}/mgicchikn-1.0.2/
+PKGNAME=		gtk2-engines-magicchicken
+DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
+WRKSRC=                 ${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
 CATEGORIES=		x11
-MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
+MASTER_SITES=		ftp://ftp.debian.org/debian/pool/main/g/gtk2-engines-magicchicken/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
