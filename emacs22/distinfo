@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/05 13:45:14 uebayasi Exp $
+$NetBSD: distinfo,v 1.2 2007/06/05 13:53:13 uebayasi Exp $
 
 SHA1 (emacs-21.4a.tar.gz) = cdb33731180fe4a912838af805dd35e3f55394d4
 RMD160 (emacs-21.4a.tar.gz) = c312e739935b56d08783bbfe97992297a363cb8a

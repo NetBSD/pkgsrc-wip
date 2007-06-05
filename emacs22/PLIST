@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/05 13:45:14 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/05 13:53:13 uebayasi Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
