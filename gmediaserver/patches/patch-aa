@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/05/28 13:25:07 obache Exp $
+$NetBSD: patch-aa,v 1.3 2007/06/05 07:05:36 obache Exp $
 
 --- configure.orig	2006-08-29 20:53:54.000000000 +0000
 +++ configure
@@ -20,14 +20,3 @@ $NetBSD: patch-aa,v 1.2 2007/05/28 13:25:07 obache Exp $
  
  else
    { { echo "$as_me:$LINENO: error: libmagic library or magic_open function not found" >&5
-@@ -24725,6 +24725,10 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
