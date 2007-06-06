@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2007/04/29 00:17:17 obache Exp $
+$NetBSD: patch-ac,v 1.7 2007/06/06 12:51:10 obache Exp $
 
---- upnp/src/genlib/net/uri/uri.c.orig	2007-04-28 21:02:33.000000000 +0900
+--- upnp/src/genlib/net/uri/uri.c.orig	2007-04-28 12:02:33.000000000 +0000
 +++ upnp/src/genlib/net/uri/uri.c
 @@ -41,6 +41,7 @@
  #endif
@@ -10,29 +10,29 @@ $NetBSD: patch-ac,v 1.6 2007/04/29 00:17:17 obache Exp $
  
  #ifdef WIN32
   #include "inet_pton.h"
-@@ -618,7 +619,7 @@ parse_hostport( const char *in,
+@@ -616,9 +617,9 @@ parse_hostport( const char *in,
+         //call gethostbyname_r (reentrant form of gethostbyname)
+         // TODO: Use autoconf to discover this rather than the
          // platform-specific stuff below
- #if defined(WIN32) || defined(__CYGWIN__)
+-#if defined(WIN32) || defined(__CYGWIN__)
++#if defined(WIN32) || defined(__CYGWIN__) || defined(_AIX50) || defined(__upux11)
          h=gethostbyname(temp_host_name);
 -#elif defined(SPARC_SOLARIS)
-+#elif defined(sun)
++#elif defined(sun) || defined(__sun) || defined(sgi) || defined(__sgi)
          errCode = gethostbyname_r( temp_host_name,
                                     &h,
                                     temp_hostbyname_buff,
-@@ -631,11 +632,30 @@ parse_hostport( const char *in,
+@@ -631,11 +632,27 @@ parse_hostport( const char *in,
          if ( h == NULL ) {
              errCode = 1;
          }
 -#else
-+#elif defined(linux)
++#elif defined(__GLIBC__)
          errCode = gethostbyname_r( temp_host_name,
                                     &h_buf,
                                     temp_hostbyname_buff,
                                     BUFFER_SIZE, &h, &errcode );
-+#elif defined(__osf1__)
-+        h = gethostbyname( temp_host_name );
-+	errCode = h = NULL ? -1 : 0;
-+#elif defined(__hpux) || defined(_AIX)
++#elif defined(__osf1__) || defined(__hpux) || defined(_AIX)
 +        errCode = gethostbyname_r( temp_host_name,
 +                                   &h_buf,
 +                                   (struct hostent_data*)temp_hostbyname_buff);

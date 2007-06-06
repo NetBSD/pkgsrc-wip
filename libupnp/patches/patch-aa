@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/04/27 17:27:39 obache Exp $
+$NetBSD: patch-aa,v 1.7 2007/06/06 12:51:10 obache Exp $
 
---- threadutil/src/ThreadPool.c.orig	2007-03-13 12:19:24.000000000 +0900
+--- threadutil/src/ThreadPool.c.orig	2007-03-13 03:19:24.000000000 +0000
 +++ threadutil/src/ThreadPool.c
 @@ -97,11 +97,15 @@ SetPolicyType( PolicyType in )
      #ifdef WIN32
