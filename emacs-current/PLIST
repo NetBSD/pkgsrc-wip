@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/05/28 20:55:47 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.19 2007/06/06 05:45:51 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1991,6 +1991,8 @@ share/emacs/${PKGVERSION}/lisp/net/rlogin.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rlogin.elc
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.elc
+share/emacs/${PKGVERSION}/lisp/net/socks.el.gz
+share/emacs/${PKGVERSION}/lisp/net/socks.elc
 share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
 share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
@@ -2463,6 +2465,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.el.gz
