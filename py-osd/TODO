@@ -1,3 +1,0 @@
-- Change patch-aa to not mention /usr/pkg explicitly.  LOCALBASE can be
-  modified by the end user at built time, so patches must honor this
-  setting.
