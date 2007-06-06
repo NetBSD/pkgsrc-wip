@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/03 11:29:30 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/06 22:36:55 rillig Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -51,7 +51,6 @@ OSMAP_SUBSTVARS=	PKG_SYSCONFDIR PREFIX VARBASE
 
 post-extract:
 	cd ${WRKSRC} && find . -print | checkperms -ffc
-	cd ${WRKSRC} && chmod -x *.pm
 	cd ${FILESDIR} && cp ${OSMAP_FILES} ${WRKSRC}/OSMap/.
 
 post-configure:
