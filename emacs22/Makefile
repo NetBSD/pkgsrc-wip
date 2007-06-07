@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2007/06/07 02:06:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/07 02:27:17 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor)
 
 .include "../../editors/emacs/Makefile.common"
-
-USE_TOOLS+=	imake
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -26,9 +24,10 @@ CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
+# XXX emacs-xaw3d vs. xaw
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_OPTIONS_OPTIONAL_GROUPS= toolkit
-PKG_OPTIONS_GROUP.toolkit= emacs-xaw3d motif
+PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
+PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmotif)
@@ -37,6 +36,10 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .elif !empty(PKG_OPTIONS:Memacs-xaw3d)
 .include "../../x11/Xaw3d/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
+.elif !empty(PKG_OPTIONS:Mgtk)
+USE_TOOLS+=		pkg-config
+.include "../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-x-toolkit=gtk
 .else
 .include "../../x11/libXaw/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
