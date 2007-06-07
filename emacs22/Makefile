@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/06/07 04:53:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/07 04:59:44 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
@@ -11,6 +11,14 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 
+# XXX emacs-xaw3d vs. xaw
+PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
+PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
+PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk xaw
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Memacs-xaw3d) || \
+    !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mxaw)
 .include "../../x11/libXpm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xpm
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -23,12 +31,7 @@ BUILDLINK_API_DEPENDS.libungif+=	libungif>=4.1.0.1
 CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
-
-# XXX emacs-xaw3d vs. xaw
-PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk xaw
-.include "../../mk/bsd.options.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mmotif)
 .include "../../mk/motif.buildlink3.mk"
