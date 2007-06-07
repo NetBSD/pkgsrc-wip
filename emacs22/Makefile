@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/07 02:27:17 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/07 04:53:38 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-png
 # XXX emacs-xaw3d vs. xaw
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk
+PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk xaw
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmotif)
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk
-.else
+.elif !empty(PKG_OPTIONS:Mxaw)
 .include "../../x11/libXaw/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .endif
