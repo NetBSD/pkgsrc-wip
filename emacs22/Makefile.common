@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2007/06/07 02:35:07 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.4 2007/06/07 04:27:15 uebayasi Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -10,7 +10,7 @@ USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 
 PATCHDIR=	${.CURDIR}/../../editors/emacs22/patches
-FILESDIR=	${.CURDIR}/../../editors/emacs22/files
+FILESDIR=	${.CURDIR}/../../editors/emacs/files
 DISTINFO_FILE=	${.CURDIR}/../../editors/emacs22/distinfo
 PLIST_SRC=	${.CURDIR}/../../editors/emacs22/PLIST
 
