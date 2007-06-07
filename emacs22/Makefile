@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/06/07 05:10:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.9 2007/06/07 12:19:33 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
 COMMENT=	GNU editing macros (editor)
 
-.include "../../editors/emacs/Makefile.common"
+#.include "../../editors/emacs22/Makefile.common"
+.include "../../wip/emacs22/Makefile.common"
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
