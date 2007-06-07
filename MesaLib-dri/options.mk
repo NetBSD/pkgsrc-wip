@@ -25,7 +25,7 @@ DRI_DRIVERS+=	${_drv:S/dri-//}
 
 .for _drv in ${PKG_OPTIONS_SET.driver}
 .  if empty(PKG_OPTIONS:M${_drv})
-PLIST_SUBST+=	${_drv}=" @comment"
+PLIST_SUBST+=	${_drv}="@comment "
 .  endif
 .endfor
 
