@@ -14,8 +14,6 @@ PKG_OPTIONS_GROUP.asm=	x86_64
 PKG_OPTIONS_OPTIONAL_GROUPS=	asm
 .endif
 
-PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS:Mdri-*}
-
 .include "../../mk/bsd.options.mk"
 
 Z=${PKG_OPTIONS:Mdri-*}
@@ -27,7 +25,7 @@ DRI_DRIVERS+=	${_drv:S/dri-//}
 
 .for _drv in ${PKG_OPTIONS_SET.driver}
 .  if empty(PKG_OPTIONS:M${_drv})
-PLIST_SUBST+=	${_drv}="@comment"
+PLIST_SUBST+=	${_drv}=" @comment"
 .  endif
 .endfor
 
@@ -35,6 +33,7 @@ PLIST_SUBST+=	${_drv}="@comment"
 BUILD_TARGET=	netbsd-dri-x86
 .elif !empty(PKG_OPTIONS:Mx86_64)
 BUILD_TARGET=	netbsd-dri-amd64
+CFLAGS+=	-D__GLX_ALIGN64
 .else
 BUILD_TARGET=	netbsd-dri
 .endif
