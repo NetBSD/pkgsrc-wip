@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/07 12:23:08 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/06/07 12:45:51 uebayasi Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
 bin/emacs
-bin/${EMACS_PKGNAME}
+bin/emacs-${PKGVERSION}
 bin/emacsclient
 bin/etags
 bin/grep-changelog
@@ -125,7 +125,6 @@ share/emacs/${PKGVERSION}/etc/NEWS.18
 share/emacs/${PKGVERSION}/etc/NEWS.19
 share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
-share/emacs/${PKGVERSION}/etc/NEWS.22
 share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
 share/emacs/${PKGVERSION}/etc/README
@@ -192,7 +191,6 @@ share/emacs/${PKGVERSION}/etc/fr-refcard.ps
 share/emacs/${PKGVERSION}/etc/fr-refcard.tex
 share/emacs/${PKGVERSION}/etc/fr-survival.tex
 share/emacs/${PKGVERSION}/etc/future-bug
-share/emacs/${PKGVERSION}/etc/gfdl.1
 share/emacs/${PKGVERSION}/etc/gnus-booklet.ps
 share/emacs/${PKGVERSION}/etc/gnus-logo.eps
 share/emacs/${PKGVERSION}/etc/gnus-refcard.ps
@@ -717,7 +715,6 @@ share/emacs/${PKGVERSION}/lisp/buff-menu.elc
 share/emacs/${PKGVERSION}/lisp/button.el.gz
 share/emacs/${PKGVERSION}/lisp/button.elc
 share/emacs/${PKGVERSION}/lisp/calc/README
-share/emacs/${PKGVERSION}/lisp/calc/README.prev
 share/emacs/${PKGVERSION}/lisp/calc/calc-aent.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-aent.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-alg.el.gz
@@ -2377,8 +2374,7 @@ share/emacs/${PKGVERSION}/lisp/shell.el.gz
 share/emacs/${PKGVERSION}/lisp/shell.elc
 share/emacs/${PKGVERSION}/lisp/simple.el.gz
 share/emacs/${PKGVERSION}/lisp/simple.elc
-share/emacs/${PKGVERSION}/lisp/site-init.el.gz
-share/emacs/${PKGVERSION}/lisp/site-init.elc
+share/emacs/${PKGVERSION}/lisp/site-init.el
 share/emacs/${PKGVERSION}/lisp/skeleton.el.gz
 share/emacs/${PKGVERSION}/lisp/skeleton.elc
 share/emacs/${PKGVERSION}/lisp/smerge-mode.el.gz
