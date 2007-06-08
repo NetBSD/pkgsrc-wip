@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/07 12:19:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/08 05:50:51 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
@@ -13,11 +13,10 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_OPTIONS_OPTIONAL_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	emacs-xaw3d motif gtk xaw
+PKG_OPTIONS_GROUP.toolkit=	motif gtk xaw
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Memacs-xaw3d) || \
-    !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mxaw)
+.if !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mxaw)
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-xpm
@@ -35,15 +34,12 @@ CONFIGURE_ARGS+=	--with-png
 .if !empty(PKG_OPTIONS:Mmotif)
 .include "../../mk/motif.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=motif
-.elif !empty(PKG_OPTIONS:Memacs-xaw3d)
-.include "../../x11/Xaw3d/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .elif !empty(PKG_OPTIONS:Mgtk)
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk
 .elif !empty(PKG_OPTIONS:Mxaw)
-.include "../../x11/libXaw/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .endif
 
