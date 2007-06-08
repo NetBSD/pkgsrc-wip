@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/06/08 07:11:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2007/06/08 07:17:44 uebayasi Exp $
 
 DISTNAME=	emacs-22.1
 CATEGORIES=	editors
@@ -11,41 +11,6 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
-PKG_OPTIONS_REQUIRED_GROUPS=	toolkit
-PKG_OPTIONS_GROUP.toolkit=	gtk motif xaw nox11
-PKG_SUGGESTED_OPTIONS=	xaw
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mxaw)
-
-CONFIGURE_ARGS+=	--with-x
-CONFIGURE_ARGS+=	--with-xpm
-CONFIGURE_ARGS+=	--with-jpeg
-CONFIGURE_ARGS+=	--with-tiff
-CONFIGURE_ARGS+=	--with-gif
-CONFIGURE_ARGS+=	--with-png
-
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-
-.if !empty(PKG_OPTIONS:Mgtk)
-.include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=gtk
-.elif !empty(PKG_OPTIONS:Mmotif)
-.include "../../mk/motif.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=motif
-USE_TOOLS+=		pkg-config
-.elif !empty(PKG_OPTIONS:Mxaw)
-.include "../../mk/xaw.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-x-toolkit=athena
-.endif
-
-# need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
-BUILDLINK_API_DEPENDS.libungif+=	libungif>=4.1.0.1
-.endif
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
