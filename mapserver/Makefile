@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/05/02 21:03:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/06/08 21:39:51 thomasklausner Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -11,6 +11,7 @@ COMMENT=		Environment for building spatially enabled Internet apps
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+PGSQL_VERSIONS_ACCEPTED?=	80
 
 CONFIGURE_ARGS+=	--with-curl-config		\
 			--with-tiff			\
