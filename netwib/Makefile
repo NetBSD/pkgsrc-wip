@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/08 21:41:27 thomasklausner Exp $
 #
 
 DISTNAME=	netwib-5.16.0-src
@@ -21,7 +21,7 @@ post-patch:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#g' \
 		< ${WRKSRC}/config.dat.new > ${WRKSRC}/config.dat
 
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
