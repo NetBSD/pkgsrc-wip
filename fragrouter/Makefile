@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/11 11:31:04 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/08 21:32:22 thomasklausner Exp $
 
 DISTNAME=	fragrouter-1.6
 CATEGORIES=	security
@@ -11,9 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tool for testing network IDS implementations
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet}
+CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet10}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 
+SUBST_CLASSES+=		net
+SUBST_STAGE.net=	pre-configure
+SUBST_FILES.net=	configure Makefile.in
+SUBST_SED.net=		-e 's/libnet-config/libnet10-config/'
+SUBST_MESSAGE.net=	Fix libnet-config name.
+
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/libnet/buildlink3.mk"
+.include "../../devel/libnet10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
