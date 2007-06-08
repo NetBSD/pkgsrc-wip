@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2007/06/07 12:19:33 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.6 2007/06/08 06:51:13 uebayasi Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -29,8 +29,6 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACSVERSION}
 
 INFO_FILES=	# PLIST
 REPLACE_PERL=	lib-src/grep-changelog
-
-.include "../../mk/bsd.prefs.mk"
 
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
