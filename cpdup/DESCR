@@ -1,0 +1,3 @@
+It works like the standard 'cp' program but is designed to make exact mirrors of
+directory trees by default, whereas the 'cp' program requires a ton of options
+to even come close (and even then doesn't do it properly).

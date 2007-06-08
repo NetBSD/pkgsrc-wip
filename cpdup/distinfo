@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/08 01:10:17 hoka_adam Exp $
+
+SHA1 (cpdup-1.07.tgz) = c5bf465a5331c7c507a90ad0dfe34858dfce82f8
+RMD160 (cpdup-1.07.tgz) = 14cb34a206eb8c65fa2b594ffdcbd7e6b62fadfd
+Size (cpdup-1.07.tgz) = 23242 bytes
+SHA1 (patch-aa) = abedd03e5b451e54453c2b358b84cc37abf645b3
+SHA1 (patch-ab) = 2845c3d73cd4c35bb2441069273182048472098f
