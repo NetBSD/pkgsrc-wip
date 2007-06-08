@@ -8,7 +8,7 @@ Suggested package updates
 	o directfb-1.0.0
 	o editline-20070302.2.10
 	o electricsheep-2.6.3
-	o emelfm2-0.3.3
+	o emelfm2-0.3.4
 	o endeavour-2.8.1
 	o fakenes-0.5.7
 	o gambas-1.9.46
@@ -40,7 +40,7 @@ Suggested package updates
 	o pike-7.6.112
 	o py-PyPE-2.8.5
 	o quodlibet-1.0
-	o rdup-0.3.9
+	o rdup-0.5.0
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o sara-7.0.4a
@@ -49,12 +49,13 @@ Suggested package updates
 	o smc-0.99.2
 	o smlnj-110.60
 	o spe-0.8.2a
-	o speex-1.2beta1
+	o speex-1.2beta2
 	o subtitleeditor-0.12
 	o swftools-0.8.1
 	o sxemacs-22.1.6
 	o tagtool-0.12.3
 	o tmw-0.0.22.2
+	o tor-0.2.0.2
 	o tripwire-2.4.0.1
 	o txt2tags-2.3.2
 	o uade-2.07
