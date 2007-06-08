@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/30 22:45:31 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/08 21:45:01 thomasklausner Exp $
 #
 
 DISTNAME=		noiptun-1.0
@@ -15,7 +15,13 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		noiptun
 
-.include "../../devel/libnet/buildlink3.mk"
+SUBST_CLASSES+=		net
+SUBST_STAGE.net=	pre-configure
+SUBST_FILES.net=	configure Makefile.in
+SUBST_SED.net=		-e 's/libnet-config/libnet11-config/'
+SUBST_MESSAGE.net=	Fix libnet-config name.
+
+.include "../../devel/libnet11/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
