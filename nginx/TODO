@@ -1,4 +1,3 @@
-- handle configs properly (nginx.conf, etc)
 - make .if for openssl
 - test under different architectures/platforms
 

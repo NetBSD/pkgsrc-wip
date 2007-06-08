@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2007/06/08 18:30:49 shattered Exp $
+
+--- auto/install.orig	2006-08-30 10:39:17.000000000 +0000
++++ auto/install
+@@ -33,12 +33,11 @@ install:	$NGX_OBJS${ngx_dirsep}nginx${ng
+ 	cp conf/koi-utf '`dirname "$NGX_CONF_PATH"`'
+ 	cp conf/win-utf '`dirname "$NGX_CONF_PATH"`'
+ 
+-	test -f '`dirname "$NGX_CONF_PATH"`/mime.types' || \
+-		cp conf/mime.types '`dirname "$NGX_CONF_PATH"`/mime.types'
+-	cp conf/mime.types '`dirname "$NGX_CONF_PATH"`/mime.types.default'
++	test -d '$NGX_PREFIX/share/examples/nginx' \
++		|| mkdir -p '$NGX_PREFIX/share/examples/nginx'
+ 
+-	test -f '$NGX_CONF_PATH' || cp conf/nginx.conf '$NGX_CONF_PATH'
+-	cp conf/nginx.conf '`dirname "$NGX_CONF_PATH"`/nginx.conf.default'
++	cp conf/mime.types '$NGX_PREFIX/share/examples/nginx'
++	cp conf/nginx.conf '$NGX_PREFIX/share/examples/nginx'
+ 
+ 	test -d '`dirname "$NGX_PID_PATH"`' \
+ 		|| mkdir -p '`dirname "$NGX_PID_PATH"`'
+@@ -46,7 +45,7 @@ install:	$NGX_OBJS${ngx_dirsep}nginx${ng
+ 	test -d '`dirname "$NGX_HTTP_LOG_PATH"`' || \
+ 		mkdir -p '`dirname "$NGX_HTTP_LOG_PATH"`'
+ 
+-	test -d '$NGX_PREFIX/html' || cp -r html '$NGX_PREFIX'
++	test -d '$NGX_PREFIX/share/doc/html/nginx' || cp -r html/ '$NGX_PREFIX/share/doc/html/nginx'
+ END
+ 
+ 

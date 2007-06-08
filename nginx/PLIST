@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/11 22:24:21 neimal Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/08 18:30:49 shattered Exp $
+etc/nginx/koi-utf
+etc/nginx/koi-win
+etc/nginx/win-utf
 sbin/nginx
+share/doc/html/nginx/50x.html
+share/doc/html/nginx/index.html
+share/examples/nginx/mime.types
+share/examples/nginx/nginx.conf
+@dirrm share/examples/nginx
