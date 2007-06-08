@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/06/04 09:02:54 ekamperi Exp $
+# $NetBSD: Makefile,v 1.14 2007/06/08 22:00:25 thomasklausner Exp $
 
-PKGNAME=		gtk2-engines-magicchicken
 DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
-WRKSRC=                 ${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
+PKGNAME=		gtk2-engines-magicchicken-1.1.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.debian.org/debian/pool/main/g/gtk2-engines-magicchicken/
 
@@ -14,6 +13,7 @@ USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
+WRKSRC=                 ${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
