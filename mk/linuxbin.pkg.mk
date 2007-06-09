@@ -1,7 +1,7 @@
-# $NetBSD: linuxbin.pkg.mk,v 1.24 2007/05/21 11:33:03 rillig Exp $
+# $NetBSD: linuxbin.pkg.mk,v 1.25 2007/06/09 11:02:55 rillig Exp $
 ###########################################################################
 #
-# $Id: linuxbin.pkg.mk,v 1.24 2007/05/21 11:33:03 rillig Exp $
+# $Id: linuxbin.pkg.mk,v 1.25 2007/06/09 11:02:55 rillig Exp $
 #
 # Proposal: how should we deal with Linux binary packages packages
 #
@@ -237,6 +237,7 @@ do-install:
 	@${ECHO} "Please provide do-install target for plain binaries!"
 	@exit -1
 .endif
+
 .elif ${LINUX_BINPKG_FMT}=="slackware"
 #
 # installation procedures for slackware packages
@@ -270,6 +271,7 @@ do-install: warn-on-freebsd
 	${RM} -rf ${EMULDIR}/install
 .endif
 .endif
+
 .else
 PKG_FAIL_REASON+=	"[linuxbin.pkg.mk] Please add support for this kind of package!"
 .endif
