@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/06/09 12:24:07 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2007/06/09 12:28:44 cheusov Exp $
 
 SHA1 (lam-7.1.3.tar.bz2) = 4a583308c0442eb46f4fd0abe7e26ea3e1fd4adb
 RMD160 (lam-7.1.3.tar.bz2) = e0de240380d2275090bad0f0f57ac3a54b6d9f96
 Size (lam-7.1.3.tar.bz2) = 7862204 bytes
-
