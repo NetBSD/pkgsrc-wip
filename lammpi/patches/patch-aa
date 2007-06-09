@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2007/06/09 17:35:26 cheusov Exp $
+
+--- romio/adio/common/ad_fstype.c.orig	2003-03-26 00:41:35.000000000 +0200
++++ romio/adio/common/ad_fstype.c
+@@ -12,7 +12,7 @@
+ 
+ #include "adio.h"
+ 
+-#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY))
++#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY) || __NetBSD_Version >= 300000000)
+ #include <sys/statvfs.h>
+ #endif
+ #ifdef LINUX
+@@ -45,6 +45,11 @@
+ #include <unistd.h>
+ #endif
+ 
++#if __NetBSD_Version__ >= 300000000
++#define statfs statvfs
++#define ROMIO_HAVE_STATFS_F_FSTYPENAME 1
++#endif
++
+ #ifndef ROMIO_NTFS
+ static void ADIO_FileSysType_parentdir(char *filename, char **dirnamep);
+ #endif
