@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:44 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/09 12:24:07 cheusov Exp $
 bin/hboot
-bin/hcc
-bin/hcp
-bin/hf77
 bin/lamboot
+bin/lamcheckpoint
 bin/lamclean
 bin/lamd
 bin/lamexec
@@ -11,9 +9,10 @@ bin/lamgrow
 bin/lamhalt
 bin/laminfo
 bin/lamnodes
+bin/lamrestart
 bin/lamshrink
 bin/lamtrace
-bin/mpiCC
+bin/lamwipe
 bin/mpic++
 bin/mpicc
 bin/mpiexec
@@ -24,11 +23,6 @@ bin/mpitask
 bin/recon
 bin/tkill
 bin/tping
-bin/wipe
-etc/lam-bhost.def
-etc/lam-conf.lamd
-etc/lam-helpfile
-etc/lam-ssi-boot-globus-helpfile
 include/lam_config.h
 include/lam_config_bottom.h
 include/mpi.h
@@ -96,13 +90,18 @@ man/man1/hcp.1
 man/man1/hf77.1
 man/man1/introu.1
 man/man1/lamboot.1
+man/man1/lamcheckpoint.1
 man/man1/lamclean.1
 man/man1/lamd.1
 man/man1/lamexec.1
 man/man1/lamgrow.1
+man/man1/lamhalt.1
 man/man1/laminfo.1
+man/man1/lamnodes.1
+man/man1/lamrestart.1
 man/man1/lamshrink.1
 man/man1/lamtrace.1
+man/man1/lamwipe.1
 man/man1/mpiCC.1
 man/man1/mpic++.1
 man/man1/mpicc.1
@@ -136,6 +135,7 @@ man/man3/MPI_Alloc_mem.3
 man/man3/MPI_Allreduce.3
 man/man3/MPI_Alltoall.3
 man/man3/MPI_Alltoallv.3
+man/man3/MPI_Alltoallw.3
 man/man3/MPI_Attr_delete.3
 man/man3/MPI_Attr_get.3
 man/man3/MPI_Attr_put.3
@@ -196,6 +196,7 @@ man/man3/MPI_Errhandler_get.3
 man/man3/MPI_Errhandler_set.3
 man/man3/MPI_Error_class.3
 man/man3/MPI_Error_string.3
+man/man3/MPI_Exscan.3
 man/man3/MPI_File_c2f.3
 man/man3/MPI_File_close.3
 man/man3/MPI_File_delete.3
@@ -416,7 +417,6 @@ man/man3/MPI_Wtime.3
 man/man3/XMPI_Buoy.3
 man/man3/XMPI_Coloroff.3
 man/man3/XMPI_Coloron.3
-man/man3/libmpi.3
 man/man5/CONSTANTS.5
 man/man5/appschema.5
 man/man5/bhost.5
@@ -431,17 +431,37 @@ man/man7/lamssi_boot.7
 man/man7/lamssi_coll.7
 man/man7/lamssi_cr.7
 man/man7/lamssi_rpi.7
+man/man7/libmpi.7
 man/man7/mpi.7
 man/mans/mpi.share
+share/examples/lammpi/lam-bhost.def
+share/examples/lammpi/lam-conf.lamd
+share/examples/lammpi/lam-helpfile
+share/examples/lammpi/lam-hostmap.txt
+share/examples/lammpi/lam-ssi-boot-globus-helpfile
+share/examples/lammpi/lam-ssi-boot-slurm-helpfile
+share/examples/lammpi/lam-ssi-crlam-self-helpfile
+share/examples/lammpi/lam-ssi-crmpi-self-helpfile
+share/lam/doc/APPLE_LICENSE
 share/lam/doc/ROMIO-COPYRIGHT
 share/lam/doc/ROMIO-README
 share/lam/doc/ROMIO-README_LAM
+share/lam/doc/ptmalloc-COPYRIGHT
+share/lam/doc/ptmalloc2-COPYRIGHT
 share/lam/doc/romio-users-guide.ps.gz
-share/lam/lam-shell-setup.csh
-share/lam/lam-shell-setup.sh
-share/lam/lam_module.tcl
-@dirrm share/lam/doc
-@dirrm share/lam
-@dirrm man/mans
-@dirrm lib/lam
+@dirrm bin
+@dirrm etc
+@dirrm include
 @dirrm include/mpi2cxx
+@dirrm lib
+@dirrm lib/lam
+@dirrm man
+@dirrm man/man1
+@dirrm man/man2
+@dirrm man/man3
+@dirrm man/man5
+@dirrm man/man7
+@dirrm man/mans
+@dirrm share
+@dirrm share/lam
+@dirrm share/lam/doc
