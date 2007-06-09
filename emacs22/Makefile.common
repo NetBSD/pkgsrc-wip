@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2007/06/08 07:21:14 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/06/09 09:51:07 thomasklausner Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -13,7 +13,7 @@ FILESDIR=	${.CURDIR}/../../editors/emacs/files
 #PATCHDIR=	${.CURDIR}/../../editors/emacs22/patches
 #DISTINFO_FILE=	${.CURDIR}/../../editors/emacs22/distinfo
 #PLIST_SRC=	${.CURDIR}/../../editors/emacs22/PLIST
-PATCHDIR=	${.CURDIR}/../../wip/emacs22/patches
+#PATCHDIR=	${.CURDIR}/../../wip/emacs22/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/emacs22/distinfo
 PLIST_SRC=	${.CURDIR}/../../wip/emacs22/PLIST
 
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${EMACSVERSION}
 
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 REPLACE_PERL=	lib-src/grep-changelog
 
 post-extract:
