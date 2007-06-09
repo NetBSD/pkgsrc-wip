@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/04/19 10:33:33 ahallmann Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/09 13:32:39 ahallmann Exp $
 
---- Makefile.orig	2006-02-28 04:55:11.000000000 +0100
+--- Makefile.orig	2007-02-02 03:05:30.000000000 +0100
 +++ Makefile
 @@ -14,7 +14,7 @@ usage:
  	@echo make testv   # run tests verbosely
@@ -11,14 +11,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/19 10:33:33 ahallmann Exp $
  
  .PHONY: test testp testf
  
-@@ -54,8 +54,8 @@ clean_tilde:
- .PHONY: install dist
+@@ -62,9 +62,9 @@ $(TARGET).1: $(TARGET)
+ 	pod2man $(TARGET) > $(TARGET).1
  
- install: testp
--	cp $(TARGET) $(DESTDIR)/usr/bin/$(TARGET)
+ install: testp $(TARGET).1
+-	install -D $(TARGET) $(DESTDIR)/usr/bin/$(TARGET)
+-	install -D $(TARGET).1 $(DESTDIR)/usr/share/man/man1/$(TARGET).1
 -	chmod 755 $(DESTDIR)/usr/bin/$(TARGET)
-+	cp $(TARGET) $(DESTDIR)/bin/$(TARGET)
++	install -D $(TARGET) $(DESTDIR)/bin/$(TARGET)
++	install -D $(TARGET).1 $(DESTDIR)/share/man/man1/$(TARGET).1
 +	chmod 755 $(DESTDIR)/bin/$(TARGET)
  
+ 
  DIST_NAME=$(TARGET)-$(VERSION)
- DIST_FILE=$(DIST_NAME).tgz

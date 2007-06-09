@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/10 23:16:04 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/09 13:32:39 ahallmann Exp $
 #
 
 DISTNAME=		imapsync-${VERS}
@@ -11,8 +11,9 @@ HOMEPAGE=		http://www.linux-france.org/prj/imapsync/
 COMMENT=		Slow, memory intensive but great tool to sync and migrate imap servers
 
 NAME=			imapsync
-VERS=			1.156
+VERS=			1.219
 
+USE_TOOLS+=		perl
 REPLACE_PERL+=		imapsync
 DEPENDS+=		p5-Mail-IMAPClient>=2.2.9nb2:../../mail/p5-Mail-IMAPClient
 DEPENDS+=		p5-Digest-MD5>=2.33:../../security/p5-Digest-MD5
