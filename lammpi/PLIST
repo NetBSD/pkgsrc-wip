@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/09 12:28:44 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/09 12:38:58 cheusov Exp $
 bin/hboot
 bin/lamboot
 bin/lamcheckpoint
@@ -449,16 +449,8 @@ share/lam/doc/ROMIO-README_LAM
 share/lam/doc/ptmalloc-COPYRIGHT
 share/lam/doc/ptmalloc2-COPYRIGHT
 share/lam/doc/romio-users-guide.ps.gz
-@dirrm etc
 @dirrm include/mpi2cxx
 @dirrm lib/lam
-@dirrm man
-@dirrm man/man1
-@dirrm man/man2
-@dirrm man/man3
-@dirrm man/man5
-@dirrm man/man7
 @dirrm man/mans
-@dirrm share
-@dirrm share/lam
 @dirrm share/lam/doc
+@dirrm share/lam
