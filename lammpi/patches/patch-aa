@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/06/09 17:35:26 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2007/06/10 15:23:28 cheusov Exp $
 
 --- romio/adio/common/ad_fstype.c.orig	2003-03-26 00:41:35.000000000 +0200
 +++ romio/adio/common/ad_fstype.c
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2007/06/09 17:35:26 cheusov Exp $
  #include "adio.h"
  
 -#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY))
-+#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY) || __NetBSD_Version >= 300000000)
++#if (defined(HPUX) || defined(SPPUX) || defined(IRIX) || defined(SOLARIS) || defined(AIX) || defined(DEC) || defined(CRAY) || __NetBSD_Version__ >= 300000000)
  #include <sys/statvfs.h>
  #endif
  #ifdef LINUX
