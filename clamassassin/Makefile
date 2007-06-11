@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2006/11/10 23:07:17 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/06/11 10:50:11 shattered Exp $
 
 DISTNAME=	clamassassin-1.2.2
 CATEGORIES=	mail
-MASTER_SITES=	http://drivel.com/clamassassin/
+MASTER_SITES=	http://jameslick.com/clamassassin/
 
 MAINTAINER=	ura@jp.NetBSD.org
-HOMEPAGE=	http://drivel.com/clamassassin/
+HOMEPAGE=	http://jameslick.com/clamassassin/
 COMMENT=	Simple virus filter wrapper for ClamAV
 
 DEPENDS+=	clamav>=0.84:../../mail/clamav

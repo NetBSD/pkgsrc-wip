@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/11 10:50:12 shattered Exp $
 #
 
 DISTNAME=		orion-0.2
@@ -6,7 +6,7 @@ CATEGORIES=		wm
 MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/orion-wm/
 
 MAINTAINER=		airhead@users.sf.net
-HOMEPAGE=		http://orion.elektrubadur.se/
+HOMEPAGE=		http://orion.antidesktop.org/
 COMMENT=		Orion - a window manager for X written in Scheme
 
 #

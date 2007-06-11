@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/11 10:50:12 shattered Exp $
 #
 
 DISTNAME=		makesis_2.0.0-1
-PKGNAME=	gnupoc-makesis-2.0.0
+PKGNAME=		gnupoc-makesis-2.0.0
 CATEGORIES=		devel
-MASTER_SITES=		http://symbianos.org/download/
+MASTER_SITES=		http://www.symbianos.org/download/
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://symbianos.org/download/
+HOMEPAGE=		http://www.symbianos.org/download/
 COMMENT=		GNU SIS file generator for SymbianOS
 
 USE_TOOLS+=	gmake

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2007/03/17 22:27:19 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.7 2007/06/11 10:50:12 shattered Exp $
 
 DISTNAME=		libixp-0.2
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		http://libs.suckless.org/download/
+MASTER_SITES=		http://www.suckless.org/download/
 
 MAINTAINER=		cosmedbr@users.sourceforge.net
-HOMEPAGE=		http://libs.suckless.org/
+HOMEPAGE=		http://www.suckless.org/
 COMMENT=		Standalone client/server 9P library
 
 NO_CONFIGURE=		yes
