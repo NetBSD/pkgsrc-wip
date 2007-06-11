@@ -1,0 +1,9 @@
+$Id: TODO,v 1.1 2007/06/11 00:58:44 minskim Exp $
+
+Does not build on Darwin with the following error:
+
+===> build-message [cpdup-1.07] ===> Building for cpdup-1.07
+gcc -pipe -O2  -no-cpp-precomp -c cpdup.c
+In file included from cpdup.c:58:
+cpdup.h:26:17: error: md5.h: No such file or directory
+*** Error code 1
