@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/08 01:10:17 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/11 00:46:54 minskim Exp $
 #
 
 DISTNAME=	cpdup-1.07
@@ -12,6 +12,8 @@ HOMEPAGE=	http://apollo.backplane.com/FreeSrc/
 COMMENT=	Designed to make exact mirrors of directory trees
 
 WRKSRC=	${WRKDIR}/cpdup
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cpdup ${PREFIX}/bin
