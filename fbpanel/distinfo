@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.5 2007/04/17 17:49:34 briandealwis Exp $
+$NetBSD: distinfo,v 1.6 2007/06/12 03:16:15 briandealwis Exp $
 
-SHA1 (fbpanel-4.8.tgz) = 5887c8307466d9cd76c1a1e81010119cb61eeff0
-RMD160 (fbpanel-4.8.tgz) = 5c82dac0b1389689fdcbaba8d62bd7e8df6d84bb
-Size (fbpanel-4.8.tgz) = 169183 bytes
+SHA1 (fbpanel-4.9.tgz) = e051d0cd419773c807f632a242b6ee490ba7d54f
+RMD160 (fbpanel-4.9.tgz) = 4e4e58ad549e9d3e6a8a95df16f8b5e4a4dd1581
+Size (fbpanel-4.9.tgz) = 169637 bytes
 SHA1 (patch-ab) = 43b99e1a67477fde2d7611aa8372b52d36f5eb48
 SHA1 (patch-ac) = dd0e1d5bcee53583025b265f76f7e601f5d0cb2a
 SHA1 (patch-ad) = ea2c3345ab702489dff12212764c92e37e07ec19
 SHA1 (patch-ae) = f2ec8f217d135d01c09060392195d39ff4170fd0
+SHA1 (patch-af) = 12f9209bf68047dec2249206005a306149f6e4aa
+SHA1 (patch-ag) = e6ef42525e73f24ecd2c0b019e8881dffee48c3f
+SHA1 (patch-ah) = d386bf01d6dd2079e9db0f5ea265934bbcca5cbe
+SHA1 (patch-ai) = 76c0120eb89870a5b58ead33b1fc8401adc0baa5

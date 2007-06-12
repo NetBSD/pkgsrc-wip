@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1 2007/06/12 03:16:15 briandealwis Exp $
+
+Patch from fbpanel SVN r48, necessary for correctly reporting windows
+on openbox 3.4:
+
+> WM_STATE usage is dropped. NET_WM_STATE is used instead. affected plugins are 
+> taskbar and pager
+
+--- misc.h.orig	2007-04-24 07:45:43.000000000 -0600
++++ misc.h
+@@ -47,7 +47,6 @@ void resolve_atoms();
+ int get_net_number_of_desktops();
+ int get_net_current_desktop ();
+ int get_net_wm_desktop(Window win);
+-int get_wm_state (Window win);
+ void get_net_wm_state(Window win, net_wm_state *nws);
+ void get_net_wm_window_type(Window win, net_wm_window_type *nwwt);
+ 

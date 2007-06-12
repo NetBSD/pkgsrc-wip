@@ -1,0 +1,46 @@
+$NetBSD: patch-ag,v 1.1 2007/06/12 03:16:15 briandealwis Exp $
+
+Patch from fbpanel SVN r48, necessary for correctly reporting windows
+on openbox 3.4:
+
+> WM_STATE usage is dropped. NET_WM_STATE is used instead. affected plugins are 
+> taskbar and pager
+
+--- plugins/taskbar.c.orig	2007-04-24 07:45:43.000000000 -0600
++++ plugins/taskbar.c
+@@ -941,7 +941,7 @@ tb_net_client_list(GtkWidget *widget, ta
+             tb->num_tasks++;
+             tk->win = tb->wins[i];
+             tk->tb = tb;
+-            tk->iconified = (get_wm_state(tk->win) == IconicState);
++            tk->iconified = nws.hidden;
+             tk->desktop = get_net_wm_desktop(tk->win);
+             tk->nws = nws;
+             tk->nwwt = nwwt;
+@@ -1082,15 +1082,6 @@ tb_propertynotify(taskbar *tb, XEvent *e
+                 tk_get_names(tk);
+                 tk_set_names(tk);
+             }
+-	}  else if (at == XA_WM_CLASS) {
+-            DBG("WM_CLASS\n");
+-	} else if (at == a_WM_STATE)    {
+-            DBG("WM_STATE\n");
+-	    /* iconified state changed? */
+-            if (!tb->icons_only) {
+-                tk->iconified = (get_wm_state (tk->win) == IconicState);
+-                tk_set_names(tk);
+-            }
+ 	} else if (at == XA_WM_HINTS)	{
+ 	    /* some windows set their WM_HINTS icon after mapping */
+ 	    DBG("XA_WM_HINTS\n");
+@@ -1113,6 +1104,9 @@ tb_propertynotify(taskbar *tb, XEvent *e
+             if (!accept_net_wm_state(&nws, tb->accept_skip_pager)) {
+ 		del_task(tb, tk, 1);
+ 		tb_display(tb);
++	    } else if (!tb->icons_only){
++		tk->iconified = nws.hidden;
++		tk_set_names(tk);
+ 	    }
+ 	} else if (at == a_NET_WM_ICON) {
+ 	    DBG("_NET_WM_ICON\n");
+

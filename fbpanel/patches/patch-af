@@ -1,0 +1,59 @@
+$NetBSD: patch-af,v 1.1 2007/06/12 03:16:15 briandealwis Exp $
+
+Patch from fbpanel SVN r48, necessary for correctly reporting windows
+on openbox 3.4:
+
+> WM_STATE usage is dropped. NET_WM_STATE is used instead. affected plugins are 
+> taskbar and pager
+
+--- plugins/pager.c.orig	2007-04-24 07:45:43.000000000 -0600
++++ plugins/pager.c
+@@ -50,7 +50,6 @@ typedef struct task {
+     guint stacking;
+     guint desktop;
+     char *name, *iname;
+-    int ws;
+     net_wm_state nws;
+     net_wm_window_type nwwt;
+     guint focused:1;
+@@ -90,9 +89,8 @@ struct _pager {
+ 
+ 
+ #define TASK_VISIBLE(tk) \
+- (!( ((tk)->ws != NormalState) || (tk)->nws.hidden || (tk)->nws.skip_pager ))
++ (!( (tk)->nws.hidden || (tk)->nws.skip_pager ))
+ 
+-//if (t->nws.skip_pager || t->nwwt.desktop /*|| t->nwwt.dock || t->nwwt.splash*/ )
+    
+ static void pager_rebuild_all(FbEv *ev, pager *pg);
+ static void desk_draw_bg(pager *pg, desk *d1);
+@@ -181,7 +179,7 @@ task_update_pix(task *t, desk *d)
+     ENTER;
+     g_return_if_fail(d->pix != NULL);
+     if (!TASK_VISIBLE(t))
+-        RET();;
++        RET();
+ 
+     if (t->desktop < p->desknum &&
+           t->desktop != d->no)
+@@ -583,7 +581,6 @@ do_net_client_list_stacking(FbEv *ev, pa
+             t = g_new0(task, 1);
+             t->refcount++;
+             t->win = p->wins[i];
+-            t->ws = get_wm_state (t->win);
+             t->desktop = get_net_wm_desktop(t->win);
+             get_net_wm_state(t->win, &t->nws);
+             get_net_wm_window_type(t->win, &t->nwwt);
+@@ -648,10 +645,7 @@ pager_propertynotify(pager *p, XEvent *e
+         RET();
+       
+     DBG("window=0x%lx\n", t->win);
+-    if (at == a_WM_STATE)    {
+-        DBG("event=WM_STATE\n");
+-        t->ws = get_wm_state (t->win);
+-    } else if (at == a_NET_WM_STATE) {
++    if (at == a_NET_WM_STATE) {
+         DBG("event=NET_WM_STATE\n");
+         get_net_wm_state(t->win, &t->nws);
+     } else if (at == a_NET_WM_DESKTOP) {	   
+
