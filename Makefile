@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2609 2007/06/10 17:11:36 minskim Exp $
+# $Id: Makefile,v 1.2610 2007/06/12 17:16:52 kheinz Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1096,10 +1096,7 @@ SUBDIR+=	p5-Email-Address
 SUBDIR+=	p5-Email-Date
 SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Email-LocalDelivery
-SUBDIR+=	p5-Email-MIME
-SUBDIR+=	p5-Email-MIME-ContentType
 SUBDIR+=	p5-Email-MIME-Creator
-SUBDIR+=	p5-Email-MIME-Encodings
 SUBDIR+=	p5-Email-MIME-Modifier
 SUBDIR+=	p5-Email-MessageID
 SUBDIR+=	p5-Email-Send
