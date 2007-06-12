@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/30 22:45:31 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/12 17:11:38 kheinz Exp $
 
 DISTNAME=	Email-MIME-Creator-1.41
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Email::MIME constructor for starting anew
 
 DEPENDS+=	p5-Email-Simple>=1.92:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Email-Simple-Creator>=1.4:../../wip/p5-Email-Simple-Creator
-DEPENDS+=	p5-Email-MIME>=1.82:../../wip/p5-Email-MIME
+DEPENDS+=	p5-Email-MIME>=1.82:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-MIME-Modifier>=1.42:../../wip/p5-Email-MIME-Modifier
 DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 

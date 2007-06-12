@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:49 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/12 17:11:38 kheinz Exp $
 
 DISTNAME=	Catalyst-Plugin-Email-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Email/
 COMMENT=	Send emails with Catalyst and Email::Send and Email::MIME::Creator
 
-DEPENDS+=	p5-Email-MIME>=0:../../wip/p5-Email-MIME
+DEPENDS+=	p5-Email-MIME>=0:../../mail/p5-Email-MIME
 DEPENDS+=	p5-Email-MIME-Creator>=0:../../wip/p5-Email-MIME-Creator
 DEPENDS+=	p5-Email-Send>=0:../../wip/p5-Email-Send
 DEPENDS+=	p5-Catalyst>=2.99:../../wip/p5-Catalyst
