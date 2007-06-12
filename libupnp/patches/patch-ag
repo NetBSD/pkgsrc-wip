@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2007/06/06 12:51:10 obache Exp $
+$NetBSD: patch-ag,v 1.8 2007/06/12 04:27:51 obache Exp $
 
---- docs/dist/Makefile.in.orig	2007-04-30 12:48:18.000000000 +0000
+--- docs/dist/Makefile.in.orig	2007-05-26 15:36:17.000000000 +0000
 +++ docs/dist/Makefile.in
-@@ -737,23 +737,25 @@ distclean-libtool:
+@@ -737,23 +737,23 @@ distclean-libtool:
  uninstall-info-am:
  install-nobase_docsDATA: $(nobase_docs_DATA)
  	@$(NORMAL_INSTALL)
@@ -15,8 +15,6 @@ $NetBSD: patch-ag,v 1.7 2007/06/06 12:51:10 obache Exp $
 -	  $(nobase_docsDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docsdir)/$$f"; \
 -	done
 +@WITH_DOCUMENTATION_TRUE@	test -z "$(docsdir)" || $(mkdir_p) "$(DESTDIR)$(docsdir)"
-+@WITH_DOCUMENTATION_TRUE@	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/upnp"
-+@WITH_DOCUMENTATION_TRUE@	$(mkdir_p) "$(DESTDIR)$(docsdir)/html/ixml"
 +@WITH_DOCUMENTATION_TRUE@	@$(am__vpath_adj_setup) \
 +@WITH_DOCUMENTATION_TRUE@	list='$(nobase_docs_DATA)'; for p in $$list; do \
 +@WITH_DOCUMENTATION_TRUE@	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \

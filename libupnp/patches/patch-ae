@@ -1,14 +1,12 @@
-$NetBSD: patch-ae,v 1.5 2007/06/06 12:51:10 obache Exp $
+$NetBSD: patch-ae,v 1.6 2007/06/12 04:27:51 obache Exp $
 
---- libupnp.pc.in.orig	2006-10-05 06:19:38.000000000 +0000
+--- libupnp.pc.in.orig	2007-05-26 15:08:41.000000000 +0000
 +++ libupnp.pc.in
-@@ -6,7 +6,7 @@ includedir=@includedir@
+@@ -6,6 +6,6 @@ includedir=@includedir@
  Name: libupnp
  Description: Linux SDK for UPnP Devices
  Version: @VERSION@
 -Libs: @PTHREAD_LIBS@ -L${libdir} -lupnp -lthreadutil -lixml 
--Cflags: @PTHREAD_CFLAGS@ -I${includedir}
 +Libs: @PTHREAD_LIBS@ -L${libdir} -lupnp -lthreadutil -lixml @LIBS@
-+Cflags: @PTHREAD_CFLAGS@ -I${includedir}/upnp
- 
+ Cflags: @PTHREAD_CFLAGS@ -I${includedir}/upnp
  

@@ -1,51 +1,22 @@
-$NetBSD: patch-aa,v 1.7 2007/06/06 12:51:10 obache Exp $
+$NetBSD: patch-aa,v 1.8 2007/06/12 04:27:51 obache Exp $
 
---- threadutil/src/ThreadPool.c.orig	2007-03-13 03:19:24.000000000 +0000
+--- threadutil/src/ThreadPool.c.orig	2007-06-10 03:48:25.000000000 +0000
 +++ threadutil/src/ThreadPool.c
-@@ -97,11 +97,15 @@ SetPolicyType( PolicyType in )
+@@ -96,7 +96,7 @@ SetPolicyType( PolicyType in )
+     #else
      #ifdef WIN32
       return sched_setscheduler( 0, in);
-     #else
-+    #if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
+-    #elif defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING > 0
++    #elif defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING >= 200112L
       struct sched_param current;
  
       sched_getparam( 0, &current );
-      current.sched_priority = DEFAULT_SCHED_PARAM;
-      return sched_setscheduler( 0, in, &current );
-+    #else
-+     return 0;
-+    #endif
-     #endif
-     #endif
- }
-@@ -124,6 +128,7 @@ static int
+@@ -125,7 +125,7 @@ SetPolicyType( PolicyType in )
+ static int
  SetPriority( ThreadPriority priority )
  {
- 
-+#if defined(_POSIX_PRIORITY_SCHEDULING) && (_POSIX_PRIORITY_SCHEDULING >= 200112L)
+-#if defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING > 0
++#if defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING >= 200112L
      int currentPolicy;
      int minPriority = 0;
      int maxPriority = 0;
-@@ -155,7 +160,9 @@ SetPriority( ThreadPriority priority )
- 
-     return pthread_setschedparam( ithread_self(  ), currentPolicy,
-                                   &newPriority );
--
-+#else
-+    return 0;
-+#endif
- }
- 
- /****************************************************************************
-@@ -352,10 +359,8 @@ tp->stats.totalJobsLQ++; tp->stats.total
-     ftime( &t );
- #if defined(WIN32)
-     srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ).p );
--#elif defined(__FreeBSD__)
--    srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ) );
- #else
--    srand( ( unsigned int )t.millitm + ithread_get_current_thread_id(  ) );
-+    srand( ( unsigned int )t.millitm + (unsigned int)ithread_get_current_thread_id(  ) );
- #endif
-     }
- 
