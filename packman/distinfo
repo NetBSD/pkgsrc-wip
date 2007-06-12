@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/06/12 13:35:09 koifren Exp $
+$NetBSD: distinfo,v 1.2 2007/06/12 20:21:51 koifren Exp $
 
-SHA1 (packman-0.0.1.tar.gz) = 6d1da60f6fa7f196c5ae2ba7c21d251bd5c9ab0c
-RMD160 (packman-0.0.1.tar.gz) = bf7683cc61969a8da85dce32add13fdd53d470b1
-Size (packman-0.0.1.tar.gz) = 6562 bytes
+SHA1 (packman-0.0.2.tar.gz) = 01286034bebf3051b85ce59df5d1b11c2af33010
+RMD160 (packman-0.0.2.tar.gz) = c7b879162eeb974ace0a6396c0e8986caef7893b
+Size (packman-0.0.2.tar.gz) = 6639 bytes
