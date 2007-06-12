@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/05/02 09:29:38 absd Exp $
+# $NetBSD: Makefile,v 1.15 2007/06/12 17:36:12 briandealwis Exp $
 
 JDK_VERSION=		1.5.0
 JDK_PATCHSET_VERSION=	4
@@ -164,7 +164,6 @@ do-install:
 #		${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
-.include "../../www/seamonkey/gecko-depends.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

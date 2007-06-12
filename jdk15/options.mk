@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/05/02 09:29:38 absd Exp $
+# $NetBSD: options.mk,v 1.7 2007/06/12 17:36:12 briandealwis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin
@@ -25,14 +25,16 @@ post-build:
 .if !empty(PKG_OPTIONS:Mjdk15-plugin)
 
 MOZILLA=	${PKG_OPTIONS:@opt@${PKG_OPTIONS_GROUP.gecko:M${opt}}@}
-#.include "../../www/${MOZILLA}/buildlink3.mk"
 MAKE_ENV+=	BROWSER=${MOZILLA:Q}
 MAKE_ENV+=	ALT_MOZILLA_HEADERS_PATH=${LOCALBASE:Q}/include/${MOZILLA}
 
-.include "../../devel/nspr/buildlink3.mk"
+.include "../../www/seamonkey/gecko-depends.mk"
+# Check: is nspr necessary?
+#.include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.nspr=	build
 PLIST_SRC+=			PLIST.plugin
+MESSAGE_SRC+=			MESSAGE.plugin
 
 .else
-MAKE_ENV+=			NO_PLUGIN=YES
+MAKE_ENV+=			BUILD_PLUGIN=false
 .endif
