@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/12 20:07:07 ondratu Exp $
+# $NetBSD: Makefile,v 1.5 2007/06/13 08:19:03 ondratu Exp $
 #
 
 DISTNAME=		sim-0.9.3
@@ -20,6 +20,9 @@ CONFLICTS+=		sim-kde*
 # Use only Qt binding
 CONFIGURE_ARGS+= --disable-kde
 
+CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
+CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
+
 # Install locale files in proper places
 USE_PKGLOCALEDIR= YES
 
@@ -30,6 +33,7 @@ SHLIBTOOL_OVERRIDE=	libtool
 post-configure:
 	${TOUCH} ${WRKSRC}/Makefile
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
