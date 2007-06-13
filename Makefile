@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2611 2007/06/13 09:27:53 ondratu Exp $
+# $Id: Makefile,v 1.2612 2007/06/13 13:32:43 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -723,7 +723,6 @@ SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libhttpd
 SUBDIR+=	libinstaller
 SUBDIR+=	libixp
-SUBDIR+=	libjudy
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
