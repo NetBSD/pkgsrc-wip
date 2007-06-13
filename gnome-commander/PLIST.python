@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.python,v 1.1 2007/06/13 12:10:36 ondratu Exp $
+@comment $NetBSD: PLIST.python,v 1.2 2007/06/13 13:57:20 ondratu Exp $
 lib/gnome-commander/plugins/md5sum.py
 lib/gnome-commander/plugins/md5sum.pyc
+lib/gnome-commander/plugins/md5sum.pyo
 lib/gnome-commander/plugins/sha1sum.py
 lib/gnome-commander/plugins/sha1sum.pyc
+lib/gnome-commander/plugins/sha1sum.pyo
 share/pixmaps/gnome-commander/python-plugin.svg
