@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/04/29 15:17:34 obache Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/13 13:22:29 obache Exp $
 
-DISTNAME=	Judy-1.0.3
-PKGNAME=	libjudy-1.0.3
+DISTNAME=	Judy-1.0.4
+PKGNAME=	libjudy-1.0.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=judy/}
 
