@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/13 10:36:37 ondratu Exp $
 #
 
 DISTNAME=	cvsnt-2.5.03.2382
@@ -17,7 +17,6 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=		--without-gssapi
-CONFIGURE_ARGS+=		--disable-mysql
 
 RCD_SCRIPTS+=		cvslockd
 
@@ -27,6 +26,8 @@ CONF_FILES=		${EGDIR}/Plugins.example ${PKG_SYSCONFDIR}/cvsnt/Plugins
 CONF_FILES=		${EGDIR}/PServer.example ${PKG_SYSCONFDIR}/cvsnt/PServer
 
 CHECK_PORTABILITY_SKIP+=	pcre/configure
+
+.include "options.mk"
 
 .include "../../devel/libltdl/convenience.mk"
 .include "../../devel/libntlm/buildlink3.mk"

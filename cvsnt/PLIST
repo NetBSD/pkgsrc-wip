@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/27 08:27:07 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/13 10:36:37 ondratu Exp $
 bin/cvs
 bin/cvslockd
 bin/cvsnt
+${AUDIT_MYSQL}
 lib/cvsnt/mdns/mini.la
 lib/cvsnt/protocols/enum.la
 lib/cvsnt/protocols/ext.la
@@ -23,6 +24,7 @@ share/examples/rc.d/cvslockd
 share/examples/cvsnt/ca.pem.example
 share/examples/cvsnt/Plugins.example
 share/examples/cvsnt/PServer.example
+@dirrm lib/cvsnt/database
 @dirrm lib/cvsnt/xdiff
 @dirrm lib/cvsnt/triggers
 @dirrm lib/cvsnt/protocols
