@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/17 23:31:53 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/13 12:10:36 ondratu Exp $
 bin/gcmd-block
 bin/gnome-commander
 lib/gnome-commander/libgcmd.la
-lib/gnome-commander/libgviewer.la
 lib/gnome-commander/plugins/libcvs.la
 lib/gnome-commander/plugins/libfileroller.la
 man/man1/gnome-commander.1
@@ -16,20 +15,18 @@ share/gnome/help/gnome-commander/C/figures/gnome-commander_dialog_file_permissio
 share/gnome/help/gnome-commander/C/figures/gnome-commander_dialog_file_properties.png
 share/gnome/help/gnome-commander/C/figures/gnome-commander_dialog_ftp.png
 share/gnome/help/gnome-commander/C/figures/gnome-commander_dialog_search.png
-share/gnome/help/gnome-commander/C/figures/gnome-commander_options_data.png
-share/gnome/help/gnome-commander/C/figures/gnome-commander_options_dev.png
-share/gnome/help/gnome-commander/C/figures/gnome-commander_options_filter.png
 share/gnome/help/gnome-commander/C/figures/gnome-commander_options_general.png
 share/gnome/help/gnome-commander/C/figures/gnome-commander_options_layout.png
-share/gnome/help/gnome-commander/C/figures/gnome-commander_options_prog.png
 share/gnome/help/gnome-commander/C/figures/gnome-commander_window.png
 share/gnome/help/gnome-commander/C/figures/mounting.png
 share/gnome/help/gnome-commander/C/gnome-commander.xml
 share/gnome/help/gnome-commander/C/legal.xml
 share/locale/ar/LC_MESSAGES/gnome-commander.mo
+share/locale/bg/LC_MESSAGES/gnome-commander.mo
 share/locale/ca/LC_MESSAGES/gnome-commander.mo
 share/locale/cs/LC_MESSAGES/gnome-commander.mo
 share/locale/de/LC_MESSAGES/gnome-commander.mo
+share/locale/dz/LC_MESSAGES/gnome-commander.mo
 share/locale/el/LC_MESSAGES/gnome-commander.mo
 share/locale/en_CA/LC_MESSAGES/gnome-commander.mo
 share/locale/en_GB/LC_MESSAGES/gnome-commander.mo
@@ -44,6 +41,7 @@ share/locale/it/LC_MESSAGES/gnome-commander.mo
 share/locale/nb/LC_MESSAGES/gnome-commander.mo
 share/locale/ne/LC_MESSAGES/gnome-commander.mo
 share/locale/nl/LC_MESSAGES/gnome-commander.mo
+share/locale/oc/LC_MESSAGES/gnome-commander.mo
 share/locale/pa/LC_MESSAGES/gnome-commander.mo
 share/locale/pl/LC_MESSAGES/gnome-commander.mo
 share/locale/pt/LC_MESSAGES/gnome-commander.mo
@@ -161,13 +159,3 @@ share/pixmaps/gnome-commander/smb-computer.xpm
 share/pixmaps/gnome-commander/smb-network.xpm
 share/pixmaps/gnome-commander/toggle_horizontal.xpm
 share/pixmaps/gnome-commander/toggle_vertical.xpm
-@dirrm share/pixmaps/gnome-commander/mime-icons
-@dirrm share/pixmaps/gnome-commander/file-type-icons
-@dirrm share/pixmaps/gnome-commander/device-icons
-@dirrm share/pixmaps/gnome-commander
-@dirrm share/omf/gnome-commander
-@dirrm share/gnome/help/gnome-commander/C/figures
-@dirrm share/gnome/help/gnome-commander/C
-@dirrm share/gnome/help/gnome-commander
-@dirrm lib/gnome-commander/plugins
-@dirrm lib/gnome-commander
