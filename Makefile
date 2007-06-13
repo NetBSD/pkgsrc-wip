@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2610 2007/06/12 17:16:52 kheinz Exp $
+# $Id: Makefile,v 1.2611 2007/06/13 09:27:53 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1696,6 +1696,7 @@ SUBDIR+=	xfce4-icon-theme
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-mixer
+SUBDIR+=	xfce4-mount-plugin
 SUBDIR+=	xfce4-mousepad
 SUBDIR+=	xfce4-orage
 SUBDIR+=	xfce4-panel
