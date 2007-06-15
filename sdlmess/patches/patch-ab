@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/06/15 22:06:10 thomasklausner Exp $
+
+--- src/mess/mess.mak.orig	2007-06-14 22:57:00.000000000 +0000
++++ src/mess/mess.mak
+@@ -1229,4 +1229,4 @@ DAT2HTML_OBJS =								\
+ 
+ dat2html$(EXE):	$(DAT2HTML_OBJS) $(LIBUTIL) $(ZLIB) $(LIBOCORE)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@

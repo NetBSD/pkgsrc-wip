@@ -1,0 +1,10 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/06/15 22:06:10 thomasklausner Exp $
+
+--- src/mess/tools/imgtool/imgtool.mak.orig	2007-04-12 11:24:22.000000000 +0000
++++ src/mess/tools/imgtool/imgtool.mak
+@@ -77,4 +77,4 @@ IMGTOOL_OBJS = \
+ 	
+ imgtool$(EXE):	 $(IMGTOOL_OBJS) $(LIBUTIL) $(EXPAT) $(ZLIB) $(LIBOCORE)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@

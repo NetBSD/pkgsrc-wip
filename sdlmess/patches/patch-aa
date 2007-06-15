@@ -1,0 +1,111 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/06/15 22:06:10 thomasklausner Exp $
+
+--- makefile.sdl.orig	2007-04-27 16:14:59.000000000 +0200
++++ makefile.sdl
+@@ -64,10 +64,10 @@ SUBARCH = unix
+ # DEBUG = 1    
+  
+ # uncomment next line to use DRC MIPS3 engine
+-X86_MIPS3_DRC = 1
++# X86_MIPS3_DRC = 1
+ 
+ # uncomment next line to use DRC PowerPC engine
+-X86_PPC_DRC = 1
++# X86_PPC_DRC = 1
+ 
+ #-------------------------------------------------
+ # specify build options; see each option below 
+@@ -78,7 +78,7 @@ X86_PPC_DRC = 1
+ # ATHLON = 1
+ # I686 = 1
+ # P4 = 1
+-PM = 1
++# PM = 1
+ # AMD64 = 1
+ # G4 = 1
+ # G5 = 1
+@@ -183,9 +183,9 @@ EXE = .exe
+ endif
+ 
+ # compiler, linker and utilities
+-AR = @ar
+-CC = @gcc
+-LD = @gcc
++#AR = @ar
++#CC = @cc
++#LD = @cc
+ MD = -mkdir
+ RM = @rm -f
+ 
+@@ -201,7 +201,7 @@ MESS=1
+ endif
+ 
+ # by default, don't compile for a specific target CPU
+-NAME = $(PREFIX)$(TARGET)
++NAME = $(TARGET)
+ ARCH = 
+ 
+ # architecture-specific builds get extra options
+@@ -263,15 +263,7 @@ SRC = src
+ # compile-time definitions
+ #-------------------------------------------------
+ 
+-ifdef PPC
+-DEFS = -DPPC_ASM -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1 -Dbool=int
+-else
+-ifdef PTR64
+-DEFS = -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+-else
+-DEFS = -DX86_ASM -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+-endif
+-endif
++DEFS = ${PKG_DEFS} -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+ 
+ ifdef PTR64
+ DEFS += -DPTR64
+@@ -325,26 +317,26 @@ CFLAGS += $(ARCH) \
+ 	-Wformat-security \
+ 	-Wwrite-strings
+ 
+-ifneq ($(SUBARCH),os2)
+-CFLAGS += -Wdeclaration-after-statement
+-endif
++#ifneq ($(SUBARCH),os2)
++#CFLAGS += -Wdeclaration-after-statement
++#endif
+ 
+ ifneq ($(OPTIMIZE),0)
+ CFLAGS += -DNDEBUG $(ARCH) -fno-strict-aliasing
+ endif
+ 
+-CFLAGS += -O$(OPTIMIZE)
++#CFLAGS += -O$(OPTIMIZE)
+ 
+ # extra options needed *only* for the osd files
+ CFLAGSOSDEPEND = $(CFLAGS)
+ 
+-LDFLAGS = -WO
++#LDFLAGS = -WO
+ 
+-ifdef SYMBOLS
+-LDFLAGS = 
+-else
+-LDFLAGS += -s
+-endif
++#ifdef SYMBOLS
++#LDFLAGS = 
++#else
++#LDFLAGS += -s
++#endif
+ 
+ ifdef MAP
+ MAPFLAGS = -Wl,-Map,$(NAME).map
+@@ -494,7 +486,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
+ # always recompile the version string
+ 	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
++	$(CC) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
+ 
+ #-------------------------------------------------
+ # generic rules
