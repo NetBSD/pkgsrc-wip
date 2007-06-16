@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/06/09 09:54:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.21 2007/06/16 13:00:30 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1881,6 +1881,8 @@ share/emacs/${PKGVERSION}/lisp/man.el.gz
 share/emacs/${PKGVERSION}/lisp/man.elc
 share/emacs/${PKGVERSION}/lisp/master.el.gz
 share/emacs/${PKGVERSION}/lisp/master.elc
+share/emacs/${PKGVERSION}/lisp/mb-depth.el.gz
+share/emacs/${PKGVERSION}/lisp/mb-depth.elc
 share/emacs/${PKGVERSION}/lisp/menu-bar.el.gz
 share/emacs/${PKGVERSION}/lisp/menu-bar.elc
 share/emacs/${PKGVERSION}/lisp/mh-e/mh-acros.el
@@ -2463,6 +2465,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/bib-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/bib-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/bibtex-style.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/bibtex-style.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.el.gz
@@ -2633,6 +2637,8 @@ share/emacs/${PKGVERSION}/lisp/userlock.el.gz
 share/emacs/${PKGVERSION}/lisp/userlock.elc
 share/emacs/${PKGVERSION}/lisp/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-arch.elc
+share/emacs/${PKGVERSION}/lisp/vc-bzr.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-bzr.elc
 share/emacs/${PKGVERSION}/lisp/vc-cvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-cvs.elc
 share/emacs/${PKGVERSION}/lisp/vc-hooks.el.gz
