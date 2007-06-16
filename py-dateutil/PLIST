@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/25 19:43:17 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/16 13:18:45 thomasklausner Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -17,4 +17,12 @@ ${PYSITELIB}/dateutil/rrule.pyo
 ${PYSITELIB}/dateutil/tz.py
 ${PYSITELIB}/dateutil/tz.pyc
 ${PYSITELIB}/dateutil/tz.pyo
+${PYSITELIB}/dateutil/tzwin.py
+${PYSITELIB}/dateutil/tzwin.pyc
+${PYSITELIB}/dateutil/tzwin.pyo
+${PYSITELIB}/dateutil/zoneinfo/__init__.py
+${PYSITELIB}/dateutil/zoneinfo/__init__.pyc
+${PYSITELIB}/dateutil/zoneinfo/__init__.pyo
+${PYSITELIB}/dateutil/zoneinfo/zoneinfo-2005q.tar.gz
+@dirrm ${PYSITELIB}/dateutil/zoneinfo
 @dirrm ${PYSITELIB}/dateutil
