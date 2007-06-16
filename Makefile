@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2612 2007/06/13 13:32:43 obache Exp $
+# $Id: Makefile,v 1.2613 2007/06/16 11:14:50 kheinz Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -236,7 +236,6 @@ SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
-SUBDIR+=	dvdisaster
 SUBDIR+=	dwepcrack
 SUBDIR+=	dwm
 SUBDIR+=	dxmake
