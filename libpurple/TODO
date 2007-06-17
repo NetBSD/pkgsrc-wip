@@ -1,0 +1,9 @@
++ Builds and installs
+
+- How to use textproc/intltool instead of the intltool in the pidgin archive?
+  This would automatically require p5-XML-Parser.
+- During build on NetBSD 3.0:
+    iconv: iconv_open(UTF-8, tis-620): Invalid argument
+- buildlink3.mk is just the output from "createbuildlink", must be checked
+  for correctness.
+- options: look for existing options in mk/defaults/options.description

@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2007/06/17 21:45:46 kheinz Exp $
+#
+
+DISTNAME=	pidgin-2.0.1
+CATEGORIES=	chat
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	jan.m.danielsson@gmail.com
+HOMEPAGE=	http://pidgin.sourceforge.net/
+COMMENT=	Multi-protocol Instant Messaging client GTK frontend
+
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake perl:run
+USE_LANGUAGES+=		c
+USE_PKGLOCALEDIR=	yes
+
+PATCHDIR=               ${.CURDIR}/../../wip/libpurple/patches
+DISTINFO_FILE?=		${.CURDIR}/../../wip/libpurple/distinfo
