@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2613 2007/06/16 11:14:50 kheinz Exp $
+# $Id: Makefile,v 1.2614 2007/06/17 21:55:18 kheinz Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -301,6 +301,7 @@ SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	filepp
+SUBDIR+=	finch
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox-wrapper
@@ -740,6 +741,7 @@ SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libpthread-stubs
+SUBDIR+=	libpurple
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
 SUBDIR+=	libspf2
@@ -1247,6 +1249,7 @@ SUBDIR+=	php-recode
 SUBDIR+=	php-suhosin
 SUBDIR+=	picasm
 SUBDIR+=	picprog
+SUBDIR+=	pidgin
 SUBDIR+=	pike
 SUBDIR+=	pike-Gettext
 SUBDIR+=	pike-Gz
