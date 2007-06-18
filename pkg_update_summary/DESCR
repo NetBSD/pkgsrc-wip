@@ -1,0 +1,2 @@
+pkg_update_summary updates pkg_summary.gz file
+that contains information about binary pkgsrc packages

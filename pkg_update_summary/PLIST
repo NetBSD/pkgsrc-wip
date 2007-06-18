@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2007/06/18 21:44:17 cheusov Exp $
+sbin/pkg_update_summary
