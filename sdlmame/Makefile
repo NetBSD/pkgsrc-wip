@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/06/14 12:00:25 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/18 13:07:34 absd Exp $
 #
 
-DISTNAME=		sdlmame0116
-PKGNAME=		sdlmame-0.116
+DISTNAME=		sdlmame0116u1
+PKGNAME=		sdlmame-0.116u1
 CATEGORIES=		emulators
 MASTER_SITES=		http://rbelmont.mameworld.info/
 EXTRACT_SUFX=		.zip
