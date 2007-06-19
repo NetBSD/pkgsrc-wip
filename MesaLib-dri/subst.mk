@@ -23,8 +23,8 @@ SUBST_SED.fix-conf+=	-e 's,^\(DRI_DIRS.*\\\),,g'
 SUBST_SED.fix-conf+=	-e 's,\(unichrome.*\),,g'
 SUBST_SED.fix-conf+=	-e 's,-l$$(GL_LIB),-lGL,g'
 #SUBST_SED.fix-conf+=	-e 's,-L,-R,g'
-SUBST_SED.fix-conf+=	-e 's,-fPIC,,g'
-SUBST_SED.fix-conf+=	-e 's,-DPIC,,g'
+#SUBST_SED.fix-conf+=	-e 's,-fPIC,,g'
+#SUBST_SED.fix-conf+=	-e 's,-DPIC,,g'
 SUBST_SED.fix-conf+=	-e 's|^DRI_DRIVER_INSTALL_DIR.*|DRI_DRIVER_INSTALL_DIR = ${PREFIX}/${DRI_MODULE_PATH}|'
 
 SUBST_CLASSES+=		fix-pthread

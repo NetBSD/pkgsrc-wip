@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/05/25 04:02:03 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/19 03:10:58 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,6 +37,12 @@ CFLAGS+=	${DRI_CFLAGS:M*:Q}
 .include "options.mk"
 MAKE_ENV+=	DRI_DIRS=${DRI_DRIVERS:M*:Q}
 MAKE_ENV+=	DRI_MODULE_PATH=${DRI_MODULE_PATH:Q}
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-4*)
+CFLAGS+=	-fvisibility=hidden # Mostly for x86_64
+.endif
 
 
 post-extract:
