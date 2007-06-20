@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/04/07 19:11:41 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/20 05:30:41 schnoebe Exp $
 
-DISTNAME=		pyaim-t-0.8
+DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://www.blathersource.org/download.php/pyaim-t/
