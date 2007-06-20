@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/04/02 00:58:23 loic-hoguin Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/06/20 17:31:33 loic-hoguin Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
@@ -44,6 +44,7 @@ share/scite/flagship.properties
 share/scite/forth.properties
 share/scite/fortran.properties
 share/scite/freebasic.properties
+share/scite/gap.properties
 share/scite/html.properties
 share/scite/inno.properties
 share/scite/kix.properties

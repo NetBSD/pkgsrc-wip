@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2006/07/16 12:50:58 shattered Exp $
+$NetBSD: patch-ah,v 1.5 2007/06/20 17:31:33 loic-hoguin Exp $
 
 --- scite/gtk/makefile.orig	2006-02-13 06:27:08.000000000 +0000
 +++ scite/gtk/makefile
@@ -24,8 +24,8 @@ $NetBSD: patch-ah,v 1.4 2006/07/16 12:50:58 shattered Exp $
  $(PROG): SciTEGTK.o FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o Exporters.o \
  MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
  	$(COMPLIB) $(LUA_OBJS)
--	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ `$(CONFIGLIB)`
-+	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ -L/usr/lib `$(CONFIGLIB)`
+-	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ $(CONFIGLIB)
++	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ -L/usr/lib $(CONFIGLIB)
  
  # Automatically generate header dependencies with "make deps"
  include deps.mak
