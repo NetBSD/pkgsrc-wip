@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/24 13:10:31 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/20 19:29:15 shattered Exp $
 #
 
 DISTNAME=		gnokii-0.6.14
@@ -19,11 +19,11 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_X11=		yes
-USE_TOOLS+=		autoconf gmake msgfmt xgettext
+USE_TOOLS+=		autoconf autoheader gmake msgfmt xgettext
 USE_BUILTIN.gettext=	no
 
 pre-configure:
-	cd ${WRKSRC}; autoheader; autoconf
+	set -e; cd ${WRKSRC}; autoheader; autoconf
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
