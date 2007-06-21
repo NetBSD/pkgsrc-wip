@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/29 08:18:27 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/06/21 13:00:33 bartoszkuzma Exp $
 bin/yaws
 man/man1/yaws.1
 man/man5/yaws.conf.5
 man/man5/yaws_api.5
-lib/yaws/ebin/.empty
+man/man5/yaws_soap_lib.5
+lib/yaws/ebin/haxe.beam
 lib/yaws/ebin/json.beam
 lib/yaws/ebin/jsonrpc.beam
 lib/yaws/ebin/mime_type_c.beam
@@ -27,28 +28,28 @@ lib/yaws/ebin/yaws_log_file_h.beam
 lib/yaws/ebin/yaws_ls.beam
 lib/yaws/ebin/yaws_pam.beam
 lib/yaws/ebin/yaws_revproxy.beam
+lib/yaws/ebin/yaws_rpc.beam
 lib/yaws/ebin/yaws_rss.beam
 lib/yaws/ebin/yaws_server.beam
 lib/yaws/ebin/yaws_session_server.beam
+lib/yaws/ebin/yaws_soap_lib.beam
+lib/yaws/ebin/yaws_soap_srv.beam
 lib/yaws/ebin/yaws_sup.beam
 lib/yaws/ebin/yaws_ticker.beam
 lib/yaws/ebin/yaws_xmlrpc.beam
 lib/yaws/ebin/yaws_zlib.beam
+lib/yaws/include/erlsom.hrl
+lib/yaws/include/soap.hrl
 lib/yaws/include/yaws.hrl
 lib/yaws/include/yaws_api.hrl
 lib/yaws/include/yaws_dav.hrl
+lib/yaws/priv/envelope.xsd
 lib/yaws/priv/epam
+lib/yaws/priv/mime.types
 lib/yaws/priv/setuid_drv.so
-lib/yaws/yaws.hrl
-lib/yaws/yaws_api.hrl
-lib/yaws/yaws_dav.hrl
-share/doc/${PKGNAME}/yaws.pdf
-share/yaws/ebin/myappmod.beam
-share/yaws/ebin/shopcart.beam
-share/yaws/www/code/myappmod.beam
-share/yaws/www/shopingcart/shopcart.beam
-share/yaws/www/.xvpics/hyber.org.gif
-share/yaws/www/.xvpics/hyber_org.jpg
+lib/yaws/priv/soap.xsd
+lib/yaws/priv/wsdl.xsd
+share/doc/yaws/yaws.pdf
 share/yaws/www/END
 share/yaws/www/END2
 share/yaws/www/HEAD
@@ -56,10 +57,9 @@ share/yaws/www/TAB.inc
 share/yaws/www/api.yaws
 share/yaws/www/appmods.yaws
 share/yaws/www/arg.yaws
+share/yaws/www/arg2.yaws
 share/yaws/www/bindings.yaws
 share/yaws/www/code.yaws
-share/yaws/www/code/Makefile
-share/yaws/www/code/myappmod.erl
 share/yaws/www/compile_layout.dia
 share/yaws/www/compile_layout.png
 share/yaws/www/configuration.yaws
@@ -72,7 +72,62 @@ share/yaws/www/embed.yaws
 share/yaws/www/examples.yaws
 share/yaws/www/favicon.ico
 share/yaws/www/form.yaws
+share/yaws/www/haxe_intro.yaws
+share/yaws/www/haxe_sample.html
+share/yaws/www/haxe_sample.yaws
 share/yaws/www/history.yaws
+share/yaws/www/index.yaws
+share/yaws/www/internals.yaws
+share/yaws/www/json_intro.yaws
+share/yaws/www/json_sample.html
+share/yaws/www/json_sample.yaws
+share/yaws/www/man.yaws
+share/yaws/www/motivation.yaws
+share/yaws/www/news
+share/yaws/www/pcookie.yaws
+share/yaws/www/post.yaws
+share/yaws/www/process_tree.dia
+share/yaws/www/process_tree.png
+share/yaws/www/query.yaws
+share/yaws/www/readcookie.yaws
+share/yaws/www/readpcookie.yaws
+share/yaws/www/redirect.yaws
+share/yaws/www/redirect2.yaws
+share/yaws/www/redirect3.yaws
+share/yaws/www/redirect4.yaws
+share/yaws/www/session.yaws
+share/yaws/www/session1.yaws
+share/yaws/www/setcookie.yaws
+share/yaws/www/setpcookie.yaws
+share/yaws/www/simple.yaws
+share/yaws/www/simple_ex1.yaws
+share/yaws/www/simple_ex2.yaws
+share/yaws/www/simple_ex3.yaws
+share/yaws/www/simple_ex4.yaws
+share/yaws/www/small.yaws
+share/yaws/www/soap_intro.yaws
+share/yaws/www/spacer.gif
+share/yaws/www/ssi.yaws
+share/yaws/www/ssi_ex1
+share/yaws/www/static.html
+share/yaws/www/stats.yaws
+share/yaws/www/stats_ex.yaws
+share/yaws/www/stil.css
+share/yaws/www/stream.yaws
+share/yaws/www/todo.yaws
+share/yaws/www/upload.yaws
+share/yaws/www/upload0.yaws
+share/yaws/www/urandom.yaws
+share/yaws/www/yapp_intro.yaws
+share/yaws/www/yaws-1.55_to_1.56.patch
+share/yaws/www/ybed.erl
+share/yaws/www/yman.yaws
+share/yaws/www/code/Makefile
+share/yaws/www/code/myappmod.beam
+share/yaws/www/code/myappmod.erl
+share/yaws/www/jsolait/jsolait.js
+share/yaws/www/jsolait/lib/jsonrpc.js
+share/yaws/www/jsolait/lib/urllib.js
 share/yaws/www/icons/PythonPowered.png
 share/yaws/www/icons/README
 share/yaws/www/icons/a.gif
@@ -142,6 +197,25 @@ share/yaws/www/icons/right.gif
 share/yaws/www/icons/screw1.gif
 share/yaws/www/icons/screw2.gif
 share/yaws/www/icons/script.gif
+share/yaws/www/icons/sound1.gif
+share/yaws/www/icons/sound2.gif
+share/yaws/www/icons/sphere1.gif
+share/yaws/www/icons/sphere2.gif
+share/yaws/www/icons/tar.gif
+share/yaws/www/icons/tex.gif
+share/yaws/www/icons/text.gif
+share/yaws/www/icons/transfer.gif
+share/yaws/www/icons/unknown.gif
+share/yaws/www/icons/up.gif
+share/yaws/www/icons/uu.gif
+share/yaws/www/icons/uuencoded.gif
+share/yaws/www/icons/world1.gif
+share/yaws/www/icons/world2.gif
+share/yaws/www/icons/yaws.gif
+share/yaws/www/icons/yawsY.gif
+share/yaws/www/icons/yaws_head.gif
+share/yaws/www/icons/yaws_pb.gif
+share/yaws/www/icons/yaws_y.gif
 share/yaws/www/icons/small/README.txt
 share/yaws/www/icons/small/back.gif
 share/yaws/www/icons/small/binary.gif
@@ -175,51 +249,6 @@ share/yaws/www/icons/small/text.gif
 share/yaws/www/icons/small/transfer.gif
 share/yaws/www/icons/small/unknown.gif
 share/yaws/www/icons/small/uu.gif
-share/yaws/www/icons/sound1.gif
-share/yaws/www/icons/sound2.gif
-share/yaws/www/icons/sphere1.gif
-share/yaws/www/icons/sphere2.gif
-share/yaws/www/icons/tar.gif
-share/yaws/www/icons/tex.gif
-share/yaws/www/icons/text.gif
-share/yaws/www/icons/transfer.gif
-share/yaws/www/icons/unknown.gif
-share/yaws/www/icons/up.gif
-share/yaws/www/icons/uu.gif
-share/yaws/www/icons/uuencoded.gif
-share/yaws/www/icons/world1.gif
-share/yaws/www/icons/world2.gif
-share/yaws/www/icons/yaws.gif
-share/yaws/www/icons/yawsY.gif
-share/yaws/www/icons/yaws_head.gif
-share/yaws/www/icons/yaws_pb.gif
-share/yaws/www/icons/yaws_y.gif
-share/yaws/www/index.yaws
-share/yaws/www/internals.yaws
-share/yaws/www/jsolait/jsolait.js
-share/yaws/www/jsolait/lib/jsonrpc.js
-share/yaws/www/jsolait/lib/urllib.js
-share/yaws/www/json_intro.yaws
-share/yaws/www/json_sample.html
-share/yaws/www/json_sample.yaws
-share/yaws/www/man.yaws
-share/yaws/www/motivation.yaws
-share/yaws/www/news
-share/yaws/www/pcookie.yaws
-share/yaws/www/post.yaws
-share/yaws/www/process_tree.dia
-share/yaws/www/process_tree.png
-share/yaws/www/query.yaws
-share/yaws/www/readcookie.yaws
-share/yaws/www/readpcookie.yaws
-share/yaws/www/redirect.yaws
-share/yaws/www/redirect2.yaws
-share/yaws/www/redirect3.yaws
-share/yaws/www/redirect4.yaws
-share/yaws/www/session.yaws
-share/yaws/www/session1.yaws
-share/yaws/www/setcookie.yaws
-share/yaws/www/setpcookie.yaws
 share/yaws/www/shopingcart/Makefile
 share/yaws/www/shopingcart/buy.yaws
 share/yaws/www/shopingcart/index.yaws
@@ -230,46 +259,18 @@ share/yaws/www/shopingcart/shopcart.erl
 share/yaws/www/shopingcart/shopcart_form.yaws
 share/yaws/www/shopingcart/source.html
 share/yaws/www/shopingcart/style.css
-share/yaws/www/simple.yaws
-share/yaws/www/simple_ex1.yaws
-share/yaws/www/simple_ex2.yaws
-share/yaws/www/simple_ex3.yaws
-share/yaws/www/simple_ex4.yaws
-share/yaws/www/small.yaws
-share/yaws/www/spacer.gif
-share/yaws/www/ssi.yaws
+share/yaws/www/shopingcart/shopcart.beam
 share/yaws/www/ssi/dynamic.1
 share/yaws/www/ssi/dynamic.2
 share/yaws/www/ssi/dynamic.3
-share/yaws/www/ssi_ex1
-share/yaws/www/static.html
-share/yaws/www/stats.yaws
-share/yaws/www/stats_ex.yaws
-share/yaws/www/stil.css
-share/yaws/www/stream.yaws
-share/yaws/www/testdir/index.html
-share/yaws/www/todo.yaws
-share/yaws/www/upload.yaws
-share/yaws/www/upload0.yaws
-share/yaws/www/urandom.yaws
-share/yaws/www/yaws-1.55_to_1.56.patch
-share/yaws/www/ybed.erl
-share/yaws/www/yman.yaws
 share/examples/rc.d/yaws
 share/examples/yaws/yaws.conf
 @dirrm lib/yaws/ebin
-@exec ${MKDIR} %D/lib/yaws/examples/ebin
-@dirrm lib/yaws/examples/ebin
-@exec ${MKDIR} %D/lib/yaws/examples/include
-@dirrm lib/yaws/examples/include
-@dirrm lib/yaws/examples
 @dirrm lib/yaws/include
 @dirrm lib/yaws/priv
 @dirrm lib/yaws
-@dirrm share/doc/${PKGNAME}
+@dirrm share/doc/yaws
 @dirrm share/examples/yaws
-@dirrm share/yaws/ebin
-@dirrm share/yaws/www/.xvpics
 @dirrm share/yaws/www/code
 @dirrm share/yaws/www/icons/small
 @dirrm share/yaws/www/icons
@@ -277,6 +278,5 @@ share/examples/yaws/yaws.conf
 @dirrm share/yaws/www/jsolait
 @dirrm share/yaws/www/shopingcart
 @dirrm share/yaws/www/ssi
-@dirrm share/yaws/www/testdir
 @dirrm share/yaws/www
 @dirrm share/yaws

@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2006/08/12 08:41:52 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/21 13:00:33 bartoszkuzma Exp $
 #
 
-PKGVERSION=		1.63
+PKGVERSION=		1.68
 
 DISTNAME=		yaws-${PKGVERSION}
 CATEGORIES=		www
 MASTER_SITES=		http://yaws.hyber.org/download/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://yaws.hyber.org/
-COMMENT=		HTTP high perfomance 1.1 webserver
+COMMENT=		HTTP high perfomance 1.1 webserver written in Erlang
 
-SUBST_CLASSES+=		man_path
-SUBST_STAGE.man_path=	post-patch
-SUBST_FILES.man_path=	man/Makefile
-SUBST_SED.man_path=	-e 's,share/,,'
+BUILD_DEFS+=		VARBASE
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
@@ -25,24 +22,45 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 EGDIR=			${PREFIX}/share/examples/yaws
 CONF_FILES=		${EGDIR}/yaws.conf ${PKG_SYSCONFDIR}/yaws/yaws.conf
 RCD_SCRIPTS=		yaws
-RCD_SCRIPT_WRK.yaws=	${WRKDIR}/yaws.sh
+RCD_SCRIPT_SRC.yaws=	${WRKSRC}/scripts/netbsd/yaws.sh
 
-# Installation of default docroot is performed as simple taring and
-# untaring files to installation location. It should remove old *.orig
-# files to avoid warnings from pkglint.
+DOCDIR=			${PREFIX}/share/doc/yaws
+LIBDIR=			${PREFIX}/lib/yaws
+WWWDIR=			${PREFIX}/share/yaws/www
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=	${LIBDIR}/ebin ${LIBDIR}/include
+INSTALLATION_DIRS+=	${LIBDIR}/priv ${WWWDIR}
+
+OWN_DIRS=		${VARBASE}/log/yaws
+
 post-patch:
-	${RM} -f ${WRKSRC}/www/code/Makefile.orig
-	${RM} -f ${WRKSRC}/www/shopingcart/Makefile.orig
+	${RM} ${WRKDIR}/yaws
+	${RM} -Rf ${WRKSRC}/www/.xvpics
+	${RM} -Rf ${WRKSRC}/www/testdir
+	${FIND} ${WRKSRC} -name \*.orig -or -name .empty | ${XARGS} ${RM}
 
 post-configure:
 	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
 		-e "s|@PREFIX@|${PREFIX}|g" \
 		-e "s|@VARBASE@|${VARBASE}|g" \
 		${FILESDIR}/yaws.conf > ${WRKDIR}/yaws.conf
-post-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/yaws
-	${INSTALL_DATA_DIR} ${EGDIR}
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/yaws ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/yaws.conf ${EGDIR}
+
+	${INSTALL_DATA} ${WRKSRC}/ebin/* ${LIBDIR}/ebin
+	${INSTALL_DATA} ${WRKSRC}/include/* ${LIBDIR}/include
+	${INSTALL_DATA} ${WRKSRC}/priv/* ${LIBDIR}/priv
+
+	${INSTALL_DATA} ${WRKSRC}/doc/yaws.pdf ${DOCDIR}
+
+	cd ${WRKSRC}/www && ${PAX} -rw . ${WWWDIR}
+
+	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${PREFIX}/${PKGMANDIR}/man5
+
+	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/yaws
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"

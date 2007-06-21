@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2007/06/21 13:00:33 bartoszkuzma Exp $
+
+--- scripts/Makefile.orig	2006-12-10 20:55:08.000000000 +0100
++++ scripts/Makefile
+@@ -5,7 +5,7 @@ all debug:	../bin/yaws yaws.conf
+ 
+ ../bin/yaws:	yaws.template
+ 	cat yaws.template | \
+-		./Subst %yawsdir% `pwd`/..  | \
++		./Subst %yawsdir% $(PREFIX)/lib/yaws | \
+ 		./Subst %vardir% $(VARDIR) | \
+ 		./Subst %run_erl% "$(ERLBINDIR)/run_erl" | \
+ 		./Subst %to_erl% "$(ERLBINDIR)/to_erl" | \
+@@ -23,7 +23,7 @@ local_install:	../bin/yaws
+ 	fi; \
+ 	echo "--- Installing local config file at $${target} "; \
+ 	cat yaws.conf.template | \
+-		./Subst %yawsdir% `pwd`/.. | \
++		./Subst %yawsdir% $(PREFIX)/lib/yaws | \
+ 		./Subst %logdir% $$HOME/yaws_logs | \
+ 		./Subst %host% `hostname` | \
+ 		./Subst %port% 8000 | \
