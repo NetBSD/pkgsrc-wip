@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/21 13:00:33 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/21 13:09:17 bartoszkuzma Exp $
 #
 
 PKGVERSION=		1.68
@@ -9,7 +9,7 @@ MASTER_SITES=		http://yaws.hyber.org/download/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://yaws.hyber.org/
-COMMENT=		HTTP high perfomance 1.1 webserver written in Erlang
+COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
 
 BUILD_DEFS+=		VARBASE
 
