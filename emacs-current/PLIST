@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/06/16 13:00:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.22 2007/06/21 18:10:44 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2321,6 +2321,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/sql.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/sql.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/which-func.el.gz
@@ -2641,6 +2643,8 @@ share/emacs/${PKGVERSION}/lisp/vc-bzr.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-bzr.elc
 share/emacs/${PKGVERSION}/lisp/vc-cvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-cvs.elc
+share/emacs/${PKGVERSION}/lisp/vc-hg.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-hg.elc
 share/emacs/${PKGVERSION}/lisp/vc-hooks.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-hooks.elc
 share/emacs/${PKGVERSION}/lisp/vc-mcvs.el.gz
