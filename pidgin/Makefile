@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/17 21:52:08 kheinz Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/22 16:39:22 hoka_adam Exp $
 #
 
 PKGNAME=	pidgin-2.0.1
@@ -32,4 +32,7 @@ pre-build:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
