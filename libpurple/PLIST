@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/17 21:45:46 kheinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/06/23 03:29:17 locutus42 Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -144,5 +144,17 @@ share/locale/xh/LC_MESSAGES/pidgin.mo
 share/locale/zh_CN/LC_MESSAGES/pidgin.mo
 share/locale/zh_HK/LC_MESSAGES/pidgin.mo
 share/locale/zh_TW/LC_MESSAGES/pidgin.mo
+${DBUS}bin/purple-client-example
+${DBUS}bin/purple-remote
+${DBUS}bin/purple-send
+${DBUS}bin/purple-send-async
+${DBUS}bin/purple-url-handler
+${DBUS}include/libpurple/dbus-bindings.h
+${DBUS}include/libpurple/dbus-define-api.h
+${DBUS}include/libpurple/dbus-purple.h
+${DBUS}include/libpurple/dbus-server.h
+${DBUS}include/libpurple/dbus-useful.h
+${DBUS}lib/libpurple-client.la
+${DBUS}lib/purple-2/dbus-example.la
 @dirrm lib/purple-2
 @dirrm include/libpurple
