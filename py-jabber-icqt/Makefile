@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/04/07 18:58:37 schnoebe Exp $
+# $NetBSD: Makefile,v 1.9 2007/06/23 00:43:25 schnoebe Exp $
 
-DISTNAME=		pyicq-t-0.8
+DISTNAME=		pyicq-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://www.blathersource.org/download.php/pyicq-t/
