@@ -28,7 +28,7 @@ pkgs2summary (){
 }
 
 get_all_pkgs (){
-    ls -t "$bin_pkg_dir" | grep '[.]t[gb]z$'
+    ls -1t "$bin_pkg_dir" | grep '[.]t[gb]z$'
 }
 
 get_updated_pkgs (){

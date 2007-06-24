@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2007/06/18 21:44:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/06/24 13:12:09 cheusov Exp $
 
-DISTNAME=	pkg_update_summary-0.3
+DISTNAME=	pkg_update_summary-0.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
