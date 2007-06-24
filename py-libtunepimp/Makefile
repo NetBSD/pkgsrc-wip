@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:20 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/24 06:34:48 thomasklausner Exp $
 
 DISTNAME=	libtunepimp-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ PYDISTUTILSPKG= yes
 
 BUILD_DEPENDS+= ${PYPKGPREFIX}-ctypes-[0-9]*:../../devel/py-ctypes
 BUILD_DEPENDS+= libtunepimp-[0-9]*:../../audio/libtunepimp
-
-PYDISTUTILSPKG= yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
