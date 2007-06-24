@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/09 12:24:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2007/06/24 10:04:30 shattered Exp $
 #
 
 DISTNAME=	lam-7.1.3
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lam-mpi.org/download/files/
 COMMENT=	Implementation of the Message Passing Interface (MPI) Standard
 
-CONFLICTS=      lam-[0-9]*
+CONFLICTS=	lam-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
