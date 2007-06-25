@@ -1,19 +1,41 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/25 07:07:57 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/25 08:22:46 dauphing Exp $
 bin/beryl
-include/beryl/beryl-decoration.h
-include/beryl/beryl-settings-backend.h
-include/beryl/beryl-settings.h
-include/beryl/beryl-text.h
 include/beryl/beryl.h
-include/beryl/beryl_helpers.h
 include/beryl/beryl_ipcs.h
-${GNOME}lib/beryl/backends/libgconf.la
-lib/beryl/backends/libini.la
-lib/libberyldecoration.la
+include/beryl/beryl_helpers.h
+include/beryl/beryl-settings.h
+include/beryl/beryl-settings-backend.h
+include/beryl/beryl-decoration.h
+include/beryl/beryl-text.h
+share/beryl/background.png
+share/beryl/icon.png
 lib/libberylsettings.la
+lib/libberyldecoration.la
+lib/pkgconfig/libberyldecoration.pc
+lib/beryl/backends/libini.la
+lib/beryl/backends/libgconf.la
 lib/pkgconfig/beryl.pc
 lib/pkgconfig/berylsettings.pc
-lib/pkgconfig/libberyldecoration.pc
+lib/locale/ca/LC_MESSAGES/beryl-core.mo
+lib/locale/cs/LC_MESSAGES/beryl-core.mo
+lib/locale/de_DE/LC_MESSAGES/beryl-core.mo
+lib/locale/es/LC_MESSAGES/beryl-core.mo
+lib/locale/es_AR/LC_MESSAGES/beryl-core.mo
+lib/locale/fr/LC_MESSAGES/beryl-core.mo
+lib/locale/hu_HU/LC_MESSAGES/beryl-core.mo
+lib/locale/it/LC_MESSAGES/beryl-core.mo
+lib/locale/ja/LC_MESSAGES/beryl-core.mo
+lib/locale/ko/LC_MESSAGES/beryl-core.mo
+lib/locale/nl/LC_MESSAGES/beryl-core.mo
+lib/locale/pl/LC_MESSAGES/beryl-core.mo
+lib/locale/pt_BR/LC_MESSAGES/beryl-core.mo
+lib/locale/pt_PT/LC_MESSAGES/beryl-core.mo
+lib/locale/ru_UA/LC_MESSAGES/beryl-core.mo
+lib/locale/sv_FI/LC_MESSAGES/beryl-core.mo
+lib/locale/sv_SE/LC_MESSAGES/beryl-core.mo
+lib/locale/zh_CN/LC_MESSAGES/beryl-core.mo
+lib/locale/zh_HK/LC_MESSAGES/beryl-core.mo
+lib/locale/zh_TW/LC_MESSAGES/beryl-core.mo
 man/man1/beryl-settings-dump.1
 man/man1/beryl-xgl.1
 man/man1/beryl.1
@@ -42,7 +64,29 @@ man/man3/beryl_setting_list_value_move_before.3
 man/man3/beryl_setting_list_value_remove.3
 man/man3/beryl_setting_list_value_swap_with.3
 man/man3/beryl_setting_reset_to_default.3
+man/man3/beryl_settings_context_comp_add_option.3
+man/man3/beryl_settings_context_comp_add_plugin.3
+man/man3/beryl_settings_context_comp_get_option_value.3
+man/man3/beryl_settings_context_comp_new.3
+man/man3/beryl_settings_context_comp_set_option_value.3
+man/man3/beryl_settings_context_destroy.3
+man/man3/beryl_settings_context_find_plugin.3
+man/man3/beryl_settings_context_find_setting.3
+man/man3/beryl_settings_context_get_plugins.3
+man/man3/beryl_settings_context_get_private.3
+man/man3/beryl_settings_context_new.3
+man/man3/beryl_settings_context_read.3
+man/man3/beryl_settings_context_set_private.3
+man/man3/beryl_settings_context_write.3
 man/man3/beryl_setting_set_private.3
+man/man3/beryl_settings_plugin_get_long_desc.3
+man/man3/beryl_settings_plugin_get_name.3
+man/man3/beryl_settings_plugin_get_private.3
+man/man3/beryl_settings_plugin_get_settings.3
+man/man3/beryl_settings_plugin_get_short_desc.3
+man/man3/beryl_settings_plugin_set_private.3
+man/man3/beryl_settings_send_reload_signal.3
+man/man3/beryl_settings_set_codeset.3
 man/man3/beryl_setting_value_get_bell.3
 man/man3/beryl_setting_value_get_bool.3
 man/man3/beryl_setting_value_get_button.3
@@ -70,58 +114,7 @@ man/man3/beryl_setting_value_set_key_enabled.3
 man/man3/beryl_setting_value_set_keymods.3
 man/man3/beryl_setting_value_set_keysym.3
 man/man3/beryl_setting_value_set_string.3
-man/man3/beryl_settings_context_comp_add_option.3
-man/man3/beryl_settings_context_comp_add_plugin.3
-man/man3/beryl_settings_context_comp_get_option_value.3
-man/man3/beryl_settings_context_comp_new.3
-man/man3/beryl_settings_context_comp_set_option_value.3
-man/man3/beryl_settings_context_destroy.3
-man/man3/beryl_settings_context_find_plugin.3
-man/man3/beryl_settings_context_find_setting.3
-man/man3/beryl_settings_context_get_plugins.3
-man/man3/beryl_settings_context_get_private.3
-man/man3/beryl_settings_context_new.3
-man/man3/beryl_settings_context_read.3
-man/man3/beryl_settings_context_set_private.3
-man/man3/beryl_settings_context_write.3
-man/man3/beryl_settings_plugin_get_long_desc.3
-man/man3/beryl_settings_plugin_get_name.3
-man/man3/beryl_settings_plugin_get_private.3
-man/man3/beryl_settings_plugin_get_settings.3
-man/man3/beryl_settings_plugin_get_short_desc.3
-man/man3/beryl_settings_plugin_set_private.3
-man/man3/beryl_settings_send_reload_signal.3
-man/man3/beryl_settings_set_codeset.3
-share/beryl/background.png
-share/beryl/icon.png
-share/locale/ca/LC_MESSAGES/beryl-core.mo
-share/locale/cs/LC_MESSAGES/beryl-core.mo
-share/locale/de_DE/LC_MESSAGES/beryl-core.mo
-share/locale/es/LC_MESSAGES/beryl-core.mo
-share/locale/es_AR/LC_MESSAGES/beryl-core.mo
-share/locale/fr/LC_MESSAGES/beryl-core.mo
-share/locale/hu_HU/LC_MESSAGES/beryl-core.mo
-share/locale/it/LC_MESSAGES/beryl-core.mo
-share/locale/ja/LC_MESSAGES/beryl-core.mo
-share/locale/ko/LC_MESSAGES/beryl-core.mo
-share/locale/nl/LC_MESSAGES/beryl-core.mo
-share/locale/pl/LC_MESSAGES/beryl-core.mo
-share/locale/pt_BR/LC_MESSAGES/beryl-core.mo
-share/locale/pt_PT/LC_MESSAGES/beryl-core.mo
-share/locale/ru/LC_MESSAGES/beryl-core.mo
-share/locale/sv_FI/LC_MESSAGES/beryl-core.mo
-share/locale/sv_SE/LC_MESSAGES/beryl-core.mo
-share/locale/uk_UA/LC_MESSAGES/beryl-core.mo
-share/locale/zh_CN/LC_MESSAGES/beryl-core.mo
-share/locale/zh_HK/LC_MESSAGES/beryl-core.mo
-share/locale/zh_TW/LC_MESSAGES/beryl-core.mo
-@comment these belong to libiconv: 	share/locale/uk_UA/LC_MESSAGES
-@comment 				share/locale/uk_UA
-@comment 				share/locale/sv_FI/LC_MESSAGES
-@comment 				share/locale/sv_FI
-@comment 				share/locale/hu_HU/LC_MESSAGES
-@comment 				share/locale/hu_HU
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/beryl
-@dirrm lib/beryl/backends
 @dirrm lib/beryl
 @dirrm include/beryl
