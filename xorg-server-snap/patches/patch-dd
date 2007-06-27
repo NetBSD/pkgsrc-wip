@@ -1,6 +1,6 @@
-$NetBSD: patch-dd,v 1.1 2007/03/28 19:21:49 bsadewitz Exp $
+$NetBSD: patch-dd,v 1.2 2007/06/27 09:03:32 bsadewitz Exp $
 
---- hw/xfree86/os-support/bus/Pci.h.orig	2007-02-05 21:08:10.000000000 +0000
+--- hw/xfree86/os-support/bus/Pci.h.orig	2006-11-16 12:39:04.000000000 -0500
 +++ hw/xfree86/os-support/bus/Pci.h
 @@ -235,7 +235,7 @@
  # if defined(linux)

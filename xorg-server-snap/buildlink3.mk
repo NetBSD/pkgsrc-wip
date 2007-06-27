@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/03/28 19:21:49 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/06/27 09:03:31 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 MODULAR_XORG_SERVER_BUILDLINK3_MK:=	${MODULAR_XORG_SERVER_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	modular-xorg-server
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}modular-xorg-server
 
 .if ${MODULAR_XORG_SERVER_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.1.1
-BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
+BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.3.0
+BUILDLINK_PKGSRCDIR.modular-xorg-server?=  ../../wip/modular-xorg-server-mesa653
 .endif	# MODULAR_XORG_SERVER_BUILDLINK3_MK
 
 .include "../../x11/compositeproto/buildlink3.mk"
