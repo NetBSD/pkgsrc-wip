@@ -15,7 +15,6 @@ SUBST_SED.fix-conf+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-conf+=	-e 's,gcc,${CC},g'
 SUBST_SED.fix-conf+=	-e 's,g++,${CXX},g'
 SUBST_SED.fix-conf+=	-e 's,OPT_FLAGS = .*,OPT_FLAGS = ${CFLAGS},g'
-SUBST_SED.fix-conf+=	-e 's,-lpthread,,g'
 SUBST_SED.fix-conf+=	-e 's,SRC_DIRS = .*,SRC_DIRS = glx/x11 mesa glw,g'
 SUBST_SED.fix-conf+=	-e 's,^\(MKDEP_OPTIONS.*\),\1 -- -I${PREFIX}/include --,'
 #SUBST_SED.fix-conf+=	-e 's,-ffast-math,,g'
@@ -32,7 +31,7 @@ SUBST_STAGE.fix-pthread= pre-patch
 SUBST_MESSAGE.fix-pthread= Eliminating pthread links
 SUBST_FILES.fix-pthread=src/mesa/drivers/dri/glcore/Makefile
 SUBST_FILES.fix-pthread+=${SUBST_FILES.fix-conf}
-SUBST_SED.fix-pthread+= -e "s,-lpthread,,g"
+SUBST_SED.fix-pthread+= -e "s,\-[l]*pthread,,g"
 
 SUBST_CLASSES+=		pkg-config
 SUBST_STAGE.pkg-config=	pre-patch

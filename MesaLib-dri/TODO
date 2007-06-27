@@ -1,3 +1,2 @@
---Verification of dependencies
---Libtoolize driver build?
+--Libtoolize driver build?  Libtoolize mklib instead?
 --Integrate Interix/LP64/etc patches from graphics/MesaLib(?)

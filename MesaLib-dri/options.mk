@@ -16,9 +16,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	asm
 
 .include "../../mk/bsd.options.mk"
 
-Z=${PKG_OPTIONS:Mdri-*}
-
-.for _drv in ${Z}
+.for _drv in ${PKG_OPTIONS:Mdri-*}
 PLIST_SUBST+=	${_drv}=""
 DRI_DRIVERS+=	${_drv:S/dri-//}
 .endfor

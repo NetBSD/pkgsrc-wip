@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/06/19 03:10:58 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/27 19:23:41 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
-MESA_VERSION=	6.5.3
+MESA_VERSION=	7.0
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
@@ -18,19 +17,18 @@ USE_LIBTOOL+=	yes
 
 PKG_DESTDIR_SUPPORT=user-destdir
 
-INSTALLATION_DIRS=	lib
+INSTALLATION_DIRS_FROM_PLIST=	yes
 DRI_MODULE_PATH?=	lib/xorg/modules/dri
 PLIST_SUBST+=		DRI_MODULE_PATH=${DRI_MODULE_PATH}
-INSTALLATION_DIRS+=	${DRI_MODULE_PATH}
-INSTALLATION_DIRS+=	include/GL
+#INSTALLATION_DIRS+=	${DRI_MODULE_PATH}
+#INSTALLATION_DIRS+=	include/GL
 
 GL_HEADERS=	gl.h gl_mangle.h glext.h glx.h glx_mangle.h glxext.h
 GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-DRI_CFLAGS+=	-D_POSIX_SOURCE -D_POSIX_C_SOURCE=199309L -DPTHREADS -fno-strict-aliasing -DUSE_XSHM -DDEBUG_FP=0 -DDEBUG_VP=0 -DENABLE_HW_3D_TEXTURE=1
-DRI_CFLAGS+=	-fPIC -DPIC
+DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM -ffast-math -fno-strict-aliasing
 CFLAGS+=	${DRI_CFLAGS:M*:Q}
 
 .include "subst.mk"
