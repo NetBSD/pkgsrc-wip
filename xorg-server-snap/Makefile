@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/06/27 09:03:31 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/06/28 15:17:23 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -54,7 +54,14 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 #BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
 post-extract:
-	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
+	@cd ${WRKSRC} && 						\
+	${MKDIR} GL/mesa/vbo; 						\
+	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL;
+
+pre-configure:
+	@cd ${WRKSRC} &&						\
+	autoreconf -v --install -f;
+
 PLIST_SUBST+=		DRI=""
 .else
 CONFIGURE_ARGS+=	--disable-dri
@@ -74,8 +81,6 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 
 DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -v --install
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
