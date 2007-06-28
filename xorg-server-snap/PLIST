@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/28 15:17:23 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/06/28 22:40:28 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -177,8 +177,8 @@ include/xorg/xorgVersion.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/X11/Options
-lib/pkgconfig/xorg-server.pc
 lib/libxf86config.la
+lib/pkgconfig/xorg-server.pc
 lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
@@ -213,17 +213,17 @@ lib/xorg/modules/multimedia/tda8425_drv.la
 lib/xorg/modules/multimedia/tda9850_drv.la
 lib/xorg/modules/multimedia/tda9885_drv.la
 lib/xorg/modules/multimedia/uda1380_drv.la
-${PKGMANDIR}man1/Xnest.1
-${PKGMANDIR}man1/Xorg.1
-${PKGMANDIR}man1/Xserver.1
-${PKGMANDIR}man1/Xvfb.1
-${PKGMANDIR}man1/cvt.1
-${PKGMANDIR}man1/gtf.1
-${PKGMANDIR}man1/pcitweak.1
-${PKGMANDIR}man1/xorgconfig.1
-${PKGMANDIR}man4/exa.4
-${PKGMANDIR}man4/fbdevhw.4
-${PKGMANDIR}man5/xorg.conf.5
+${PKGMANDIR}/man1/Xnest.1
+${PKGMANDIR}/man1/Xorg.1
+${PKGMANDIR}/man1/Xserver.1
+${PKGMANDIR}/man1/Xvfb.1
+${PKGMANDIR}/man1/cvt.1
+${PKGMANDIR}/man1/gtf.1
+${PKGMANDIR}/man1/pcitweak.1
+${PKGMANDIR}/man1/xorgconfig.1
+${PKGMANDIR}/man4/exa.4
+${PKGMANDIR}/man4/fbdevhw.4
+${PKGMANDIR}/man5/xorg.conf.5
 share/X11/Cards
 share/X11/xkb/compiled/README.compiled
 share/aclocal/xorg-server.m4

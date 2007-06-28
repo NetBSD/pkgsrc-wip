@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+$NetBSD: patch-bo,v 1.2 2007/06/28 22:40:28 bsadewitz Exp $
 
 --- hw/xfree86/dri/dri.c.orig	2006-11-30 20:40:10.000000000 -0500
 +++ hw/xfree86/dri/dri.c
@@ -49,3 +49,29 @@ $NetBSD: patch-bo,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
      }
  }
  
+@@ -1276,13 +1278,18 @@ DRIGetDrawableInfo(ScreenPtr pScreen,
+ 	       if (x1 > pScreen->width) x1 = pScreen->width;
+ 	       if (y1 > pScreen->height) y1 = pScreen->height;
+ 
+-	       pDRIPriv->private_buffer_rect.x1 = x0;
+-	       pDRIPriv->private_buffer_rect.y1 = y0;
+-	       pDRIPriv->private_buffer_rect.x2 = x1;
+-	       pDRIPriv->private_buffer_rect.y2 = y1;
+-
+-	       *numBackClipRects = 1;
+-	       *pBackClipRects = &(pDRIPriv->private_buffer_rect);
++	       if (y0 >= y1 || x0 >= x1) {
++		    *numBackClipRects = 0;
++		    *pBackClipRects = NULL;
++	       } else {
++		    pDRIPriv->private_buffer_rect.x1 = x0;
++		    pDRIPriv->private_buffer_rect.y1 = y0;
++		    pDRIPriv->private_buffer_rect.x2 = x1;
++		    pDRIPriv->private_buffer_rect.y2 = y1;
++
++		    *numBackClipRects = 1;
++		    *pBackClipRects = &(pDRIPriv->private_buffer_rect);
++	       }
+ 	    } else {
+ 	       /* Use the frontbuffer cliprects for back buffers.  */
+ 	       *numBackClipRects = 0;
