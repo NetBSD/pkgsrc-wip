@@ -1,0 +1,58 @@
+$NetBSD: patch-cn,v 1.1 2007/06/28 15:18:35 bsadewitz Exp $
+
+--- os/Makefile.am.orig	2006-11-30 20:40:11.000000000 -0500
++++ os/Makefile.am
+@@ -3,14 +3,14 @@ noinst_LTLIBRARIES = libos.la libcwrappe
+ AM_CFLAGS = $(DIX_CFLAGS)
+ 
+ # FIXME: Add support for these in configure.ac
+-K5AUTH_SOURCES = k5auth.c
+-SECURERPC_SOURCES = rpcauth.c
+-INTERNALMALLOC_SOURCES = xalloc.c
+-
+-XCSECURITY_SOURCES = secauth.c
+-XDMCP_SOURCES = xdmcp.c
+-STRLCAT_SOURCES = strlcat.c strlcpy.c
+-XORG_SOURCES = log.c
++K5AUTH_SRCS = k5auth.c
++SECURERPC_SRCS = rpcauth.c
++INTERNALMALLOC_SRCS = xalloc.c
++
++XCSECURITY_SRCS = secauth.c
++XDMCP_SRCS = xdmcp.c
++STRLCAT_SRCS = strlcat.c strlcpy.c
++XORG_SRCS = log.c
+ 
+ libos_la_SOURCES = 	\
+ 	WaitFor.c	\
+@@ -27,18 +27,18 @@ libos_la_SOURCES = 	\
+ 	xdmauth.c	\
+ 	xstrans.c	\
+ 	xprintf.c	\
+-	$(XORG_SOURCES)
++	$(XORG_SRCS)
+ 
+ if XCSECURITY
+-libos_la_SOURCES += $(XCSECURITY_SOURCES)
++libos_la_SOURCES += $(XCSECURITY_SRCS)
+ endif
+ 
+ if XDMCP
+-libos_la_SOURCES += $(XDMCP_SOURCES)
++libos_la_SOURCES += $(XDMCP_SRCS)
+ endif
+ 
+ if NEED_STRLCAT
+-libos_la_SOURCES += $(STRLCAT_SOURCES)
++libos_la_SOURCES += $(STRLCAT_SRCS)
+ endif
+ 
+ libcwrapper_la_SOURCES = \
+@@ -48,5 +48,5 @@ libcwrapper_la_CFLAGS = \
+ 	-I$(top_srcdir)/hw/xfree86/os-support \
+ 	$(AM_CFLAGS)
+ 
+-EXTRA_DIST = $(K5AUTH_SOURCES) $(SECURERPC_SOURCES) $(INTERNALMALLOC_SOURCES) \
+-     $(XCSECURITY_SOURCES) $(XDMCP_SOURCES) $(STRLCAT_SOURCES)
++EXTRA_DIST = $(K5AUTH_SRCS) $(SECURERPC_SRCS) $(INTERNALMALLOC_SRCS) \
++     $(XCSECURITY_SRCS) $(XDMCP_SRCS) $(STRLCAT_SRCS)

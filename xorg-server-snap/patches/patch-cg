@@ -1,0 +1,12 @@
+$NetBSD: patch-cg,v 1.1 2007/06/28 15:18:35 bsadewitz Exp $
+
+--- render/renderedge.c.orig	2006-06-06 13:13:55.000000000 -0400
++++ render/renderedge.c
+@@ -143,6 +143,7 @@ RenderEdgeInit (RenderEdge	*e,
+     dx = x_bot - x_top;
+     dy = y_bot - y_top;
+     e->dy = dy;
++    e->dx = 0;
+     if (dy)
+     {
+ 	if (dx >= 0)

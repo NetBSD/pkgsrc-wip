@@ -1,0 +1,13 @@
+$NetBSD: patch-bu,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+
+--- hw/xfree86/parser/Monitor.c.orig	2006-09-18 02:04:18.000000000 -0400
++++ hw/xfree86/parser/Monitor.c
+@@ -674,8 +674,6 @@ xf86printMonitorSection (FILE * cf, XF86
+ 			fprintf (cf, "\tDisplaySize  %d\t%d\n",
+ 					 ptr->mon_width,
+ 					 ptr->mon_height);
+-		if ( ptr->mon_n_hsync || ptr->mon_n_vrefresh )
+-		    fprintf(cf," ### Comment all HorizSync and VertRefresh values to use DDC:\n");
+ 		for (i = 0; i < ptr->mon_n_hsync; i++)
+ 		{
+ 			fprintf (cf, "\tHorizSync    %2.1f - %2.1f\n",

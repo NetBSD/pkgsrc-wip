@@ -1,0 +1,51 @@
+$NetBSD: patch-bo,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+
+--- hw/xfree86/dri/dri.c.orig	2006-11-30 20:40:10.000000000 -0500
++++ hw/xfree86/dri/dri.c
+@@ -123,12 +123,6 @@ DRIScreenInit(ScreenPtr pScreen, DRIInfo
+     drmVersionPtr       drmlibv;
+     int                 drmlibmajor, drmlibminor, drmdimajor, drmdiminor;
+ 
+-    if (DRIGeneration != serverGeneration) {
+-	if ((DRIScreenPrivIndex = AllocateScreenPrivateIndex()) < 0)
+-	    return FALSE;
+-	DRIGeneration = serverGeneration;
+-    }
+-
+     /* If the DRI extension is disabled, do not initialize the DRI */
+     if (noXFree86DRIExtension) {
+ 	DRIDrvMsg(pScreen->myNum, X_WARNING,
+@@ -193,9 +187,16 @@ DRIScreenInit(ScreenPtr pScreen, DRIInfo
+                  pDRIInfo->drmDriverName);
+     }
+ 
++    if (DRIGeneration != serverGeneration) {
++	if ((DRIScreenPrivIndex = AllocateScreenPrivateIndex()) < 0)
++	    return FALSE;
++	DRIGeneration = serverGeneration;
++    }
++
+     pDRIPriv = (DRIScreenPrivPtr) xcalloc(1, sizeof(DRIScreenPrivRec));
+     if (!pDRIPriv) {
+         pScreen->devPrivates[DRIScreenPrivIndex].ptr = NULL;
++        DRIScreenPrivIndex = -1;
+         return FALSE;
+     }
+ 
+@@ -488,7 +489,7 @@ DRICloseScreen(ScreenPtr pScreen)
+     drm_context_t *    reserved;
+     int              reserved_count;
+ 
+-    if (pDRIPriv && pDRIPriv->directRenderingSupport) {
++    if (pDRIPriv) {
+ 
+         pDRIInfo = pDRIPriv->pDriverInfo;
+ 
+@@ -574,6 +575,7 @@ DRICloseScreen(ScreenPtr pScreen)
+ 
+ 	xfree(pDRIPriv);
+ 	pScreen->devPrivates[DRIScreenPrivIndex].ptr = NULL;
++	DRIScreenPrivIndex = -1;
+     }
+ }
+ 

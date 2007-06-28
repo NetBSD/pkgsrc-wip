@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2007/06/28 15:18:33 bsadewitz Exp $
+
+--- Xext/Makefile.am.orig	2006-10-24 20:25:19.000000000 -0400
++++ Xext/Makefile.am
+@@ -34,7 +34,7 @@ MODULE_SRCS =			\
+ 	xcmisc.c
+ 
+ # Extra configuration files ship with some extensions
+-SERVERCONFIGdir = $(libdir)/xserver
++SERVERCONFIGdir = $(sysconfdir)/X11/xserver
+ SERVERCONFIG_DATA =
+ 
+ # Optional sources included if extension enabled by configure.ac rules

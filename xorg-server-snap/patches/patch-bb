@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+
+--- fb/fbpict.c.orig	2007-06-28 07:31:22.000000000 -0400
++++ fb/fbpict.c
+@@ -1487,7 +1487,9 @@ static unsigned int detectCPUFeatures(vo
+             features |= SSE;
+         if (result & (1 << 26))
+             features |= SSE2;
+-        if ((result & MMX) && !(result & SSE) && (strcmp(vendor, "AuthenticAMD") == 0)) {
++        if ((features & MMX) && !(features & SSE) &&
++            (strcmp(vendor, "AuthenticAMD") == 0 ||
++             strcmp(vendor, "Geode by NSC") == 0)) {
+             /* check for AMD MMX extensions */
+ 
+             unsigned int result;            

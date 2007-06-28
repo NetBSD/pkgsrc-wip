@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.3 2007/06/28 15:18:33 bsadewitz Exp $
+
+--- Xext/security.c.orig	2006-11-16 12:39:03.000000000 -0500
++++ Xext/security.c
+@@ -1187,6 +1187,7 @@ CALLBACK(SecurityCheckMapAccess)
+     if (STATEPTR(rec->client) &&
+ 	(TRUSTLEVEL(rec->client) != XSecurityClientTrusted) &&
+ 	(pWin->drawable.class == InputOnly) &&
++	pWin->parent && pWin->parent->parent &&
+ 	(TRUSTLEVEL(wClient(pWin->parent)) == XSecurityClientTrusted))
+ 
+ 	rec->rval = FALSE;

@@ -1,0 +1,14 @@
+$NetBSD: patch-bc,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+
+--- fb/fbtrap.c.orig	2006-11-16 13:01:23.000000000 -0500
++++ fb/fbtrap.c
+@@ -115,6 +115,9 @@ fbRasterizeTrapezoid (PicturePtr    pPic
+     RenderEdge	l, r;
+     xFixed	t, b;
+     
++    if (!xTrapezoidValid (trap))
++	return;
++
+     fbGetDrawable (pPicture->pDrawable, buf, stride, bpp, pxoff, pyoff);
+ 
+     width = pPicture->pDrawable->width;

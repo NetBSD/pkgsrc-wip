@@ -1,0 +1,22 @@
+$NetBSD: patch-cb,v 1.1 2007/06/28 15:18:35 bsadewitz Exp $
+
+--- hw/xfree86/utils/xorgcfg/text-mode.c.orig	2007-02-17 20:37:56.000000000 -0500
++++ hw/xfree86/utils/xorgcfg/text-mode.c
+@@ -2123,7 +2123,7 @@ LayoutConfig(void)
+ 		    else
+ 			iref->iref_option_lst =
+ 			    xf86addNewOption(iref->iref_option_lst,
+-					  "CorePointer", NULL);
++					  XtNewString("CorePointer"), NULL);
+ 		    option = xf86findOption(mref->iref_option_lst,
+ 					    "CorePointer");
+ 		    XtFree(option->opt_name);
+@@ -2221,7 +2221,7 @@ LayoutConfig(void)
+ 		    else
+ 			iref->iref_option_lst =
+ 			    xf86addNewOption(iref->iref_option_lst,
+-					  "CoreKeyboard", NULL);
++					  XtNewString("CoreKeyboard"), NULL);
+ 		    option = xf86findOption(kref->iref_option_lst,
+ 					    "CoreKeyboard");
+ 		    XtFree(option->opt_name);

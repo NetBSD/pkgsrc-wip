@@ -1,0 +1,16 @@
+$NetBSD: patch-by,v 1.1 2007/06/28 15:18:35 bsadewitz Exp $
+
+--- hw/xfree86/scanpci/Makefile.am.orig	2006-11-16 13:01:25.000000000 -0500
++++ hw/xfree86/scanpci/Makefile.am
+@@ -1,10 +1,8 @@
+-module_LTLIBRARIES = libscanpci.la libpcidata.la
++module_LTLIBRARIES = libpcidata.la
+ 
+ libpcidata_la_LDFLAGS = -avoid-version
+-libscanpci_la_LDFLAGS = -avoid-version
+ 
+ libpcidata_la_SOURCES = xf86PciData.c
+-libscanpci_la_SOURCES = xf86ScanPci.c
+ 
+ INCLUDES = $(XORG_INCS)
+ 

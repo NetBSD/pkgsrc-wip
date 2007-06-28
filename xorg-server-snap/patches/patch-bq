@@ -1,0 +1,22 @@
+$NetBSD: patch-bq,v 1.1 2007/06/28 15:18:34 bsadewitz Exp $
+
+--- hw/xfree86/modes/xf86Modes.c.orig	2007-02-16 11:03:12.000000000 -0500
++++ hw/xfree86/modes/xf86Modes.c
+@@ -46,7 +46,7 @@ extern XF86ConfigPtr xf86configptr;
+  * there but we still want to use.  We need to come up with better API here.
+  */
+ 
+-#if XORG_VERSION_CURRENT <= XORG_VERSION_NUMERIC(7,2,99,2,0)
++/* if XORG_VERSION_CURRENT <= XORG_VERSION_NUMERIC(7,2,99,2,0) */
+ /**
+  * Calculates the horizontal sync rate of a mode.
+  *
+@@ -318,7 +318,7 @@ xf86PrintModeline(int scrnIndex,DisplayM
+ 		   mode->VTotal, flags, xf86ModeHSync(mode));
+     xfree(flags);
+ }
+-#endif /* XORG_VERSION_CURRENT <= 7.2.99.2 */
++/* XORG_VERSION_CURRENT <= 7.2.99.2 */
+ 
+ /**
+  * Marks as bad any modes with unsupported flags.
