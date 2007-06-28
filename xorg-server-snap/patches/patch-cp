@@ -1,0 +1,18 @@
+From: Michel DÃ¤nzer <michel@tungstengraphics.com>
+Date: Mon, 11 Jun 2007 07:23:19 +0000 (+0200)
+Subject: DRI: Fix build warning.
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=0fb44c6f9a0415184818ba8357a21ff920e907dc
+
+DRI: Fix build warning.
+---
+
+--- hw/xfree86/dri/drimodule.c
++++ hw/xfree86/dri/drimodule.c
+@@ -88,6 +88,6 @@ driSetup(pointer module, pointer opts, i
+     drmSetServerInfo(&DRIDRMServerInfo);
+ 
+     /* Need a non-NULL return value to indicate success */
+-    return 1;
++    return (pointer)1;
+ }
+ 
