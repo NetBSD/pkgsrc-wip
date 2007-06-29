@@ -1,0 +1,21 @@
+$NetBSD: patch-br,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/layer2.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/layer2.c
+@@ -9,7 +9,6 @@
+ */
+ 
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ #include "l2tables.h"
+ 
+@@ -281,7 +280,7 @@ int do_layer2(struct frame *fr,int outmo
+   int clip=0;
+   int i,j;
+   int stereo = fr->stereo;
+-  real fraction[2][4][SBLIMIT]; /* pick_table clears unused subbands */
++  real aligned(16) fraction[2][4][SBLIMIT]; /* pick_table clears unused subbands */
+   unsigned int bit_alloc[64];
+   int scale[192];
+   int single = fr->single;

@@ -1,0 +1,71 @@
+$NetBSD: patch-ab,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- configure.ac.orig	2007-06-03 19:43:02.000000000 -0400
++++ configure.ac
+@@ -141,7 +141,7 @@ AC_ARG_WITH([seektable], [
+   --with-seektable=<size> choose size of seek index table (0 disables it), default 1000
+ ])
+ 
+-dnl ############## Assembler properties
++dnl ############## Assembler, compiler properties
+ 
+ # based on posting from John Dalgliesh <johnd@defyne.org> on ffmpeg (LGPL) mailing list
+ # find if .align arg is power-of-two or not
+@@ -162,6 +162,23 @@ if test $asmalign_exp = "yes"; then
+ 	AC_DEFINE(ASMALIGN_EXP, 1, [ Define if .align takes 3 for alignment of 2^3=8 bytes instead of 8. ])
+ fi
+ 
++ccalign="unknown"
++if test $ccalign = "unknown"; then
++	AC_MSG_CHECKING([__attribute__((aligned(16)))])
++	ccalign="no"
++	echo '__attribute__((aligned(16))) float var;' > conftest.c
++	if $CC -c -o conftest.o conftest.c; then
++		ccalign="yes"
++		AC_MSG_RESULT([yes])
++	else
++		AC_MSG_RESULT([no])
++	fi
++	rm -f conftest.o conftest.c
++fi
++if test $ccalign = "yes"; then
++	AC_DEFINE(CCALIGN, 1, [ Define if __attribute__((aligned(16))) works ])
++fi
++
+ dnl ############## Function Checks
+ 
+ AC_FUNC_MMAP
+@@ -305,19 +322,19 @@ case $target in
+     # check that... perhaps we are better off on arm with kernel math emulation
+     cpu_type="generic_nofpu"
+   ;;
+-  i386-*-linux*|i386-*-kfreebsd*-gnu)
++  i386-*-linux*|i386-*-netbsd)
+     cpu_type="i386_fpu"
+   ;;
+-  i486-*-linux*|i486-*-kfreebsd*-gnu)
++  i486-*-linux*|i486-*-netbsd)
+     cpu_type="i486"
+   ;;
+-  i586-*-linux*|i586-*-kfreebsd*-gnu)
++  i586-*-linux*|i586-*-netbsd)
+     cpu_type="x86"
+   ;;
+-  i686-*-linux*|i686-*-kfreebsd*-gnu)
++  i686-*-linux*|i686-*-netbsd)
+     cpu_type="x86"
+   ;;
+-  *-*-linux*|*-*-kfreebsd*-gnu)
++  *-*-linux*|*-*-netbsd)
+     cpu_type="generic_fpu"
+   ;;
+   i686-apple-darwin*)
+@@ -627,7 +644,7 @@ case $audio_system in
+     if test "x$HAVE_OSS" = "xyes"
+     then
+ 		AUDIO_CFLAGS=""
+-		AUDIO_LIBS=""
++		AUDIO_LIBS="$LIBOSSAUDIO"
+ 	else 
+ 		AC_MSG_ERROR([Can't find OSS header files])
+ 	fi

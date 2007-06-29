@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/audio_alib.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/audio_alib.c
+@@ -47,9 +47,7 @@
+ #include <netinet/tcp.h>
+ #include <errno.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+-#include "debug.h"
+ 
+ #include "Alib.h"		/* /opt/audio/include */
+ #include "CUlib.h"		/* /opt/audio/include */

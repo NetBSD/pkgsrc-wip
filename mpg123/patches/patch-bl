@@ -1,0 +1,14 @@
+$NetBSD: patch-bl,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/decode_ntom.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/decode_ntom.c
+@@ -10,9 +10,7 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+-#include "debug.h"
+ #include "decode.h"
+ 
+ #define NTOM_MUL (32768)

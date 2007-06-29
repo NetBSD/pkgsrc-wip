@@ -1,0 +1,28 @@
+$NetBSD: patch-bs,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/layer3.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/layer3.c
+@@ -12,12 +12,10 @@
+ */
+ 
+ #include <stdlib.h>
+-#include "config.h"
+ #include "mpg123.h"
+ #include "huffman.h"
+ 
+ #include "common.h"
+-#include "debug.h"
+ 
+ #include "getbits.h"
+ 
+@@ -1823,8 +1821,8 @@ int do_layer3(struct frame *fr,int outmo
+   set_pointer(sideinfo.main_data_begin);
+ 
+   for (gr=0;gr<granules;gr++) {
+-    real hybridIn [2][SBLIMIT][SSLIMIT];
+-    real hybridOut[2][SSLIMIT][SBLIMIT];
++    real aligned(16) hybridIn[2][SBLIMIT][SSLIMIT];
++    real aligned(16) hybridOut[2][SSLIMIT][SBLIMIT];
+ 
+     {
+       struct gr_info_s *gr_info = &(sideinfo.ch[0].gr[gr]);

@@ -1,0 +1,12 @@
+$NetBSD: patch-bm,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/equalizer.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/equalizer.c
+@@ -7,7 +7,6 @@
+ */
+ 
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ 
+ real equalizer[2][32];

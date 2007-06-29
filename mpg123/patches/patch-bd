@@ -1,0 +1,94 @@
+$NetBSD: patch-bd,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/dct64_sse.S.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/dct64_sse.S
+@@ -19,18 +19,6 @@
+  * and mp3lib/dct64_MMX.c
+  */
+ 
+-/* NOTE: The following code is suboptimal! It can be improved (at least) by
+-
+-   1. Replace all movups by movaps. (Can Parameter c be always aligned on 
+-      a 16-byte boundary?)
+-
+-   2. Rewritten using intrinsics. (GCC generally optimizes intrinsics
+-      better. However, when __m128 locals are involved, GCC may
+-      produce bad code that uses movaps to access a stack not aligned
+-      on a 16-byte boundary, which leads to run-time crashes.)
+-
+-*/
+-
+ #include "mangle.h"
+ 
+ #ifndef __APPLE__
+@@ -70,8 +58,10 @@ one.4748:
+ 
+ 	/* no .data ? */
+ 	/* .local	b2.4747 */
++	ALIGN16
+ 	COMM(b2.4747,128,16)
+ 	/* .local	b1.4746 */
++	ALIGN16
+ 	COMM(b1.4746,128,16)
+ 
+ 	.text
+@@ -85,11 +75,12 @@ ASM_NAME(dct64_sse):
+ 	pushl	%ebx
+ 	movl	8(%ebp), %ecx
+ #APP
++/* for (i = 0; i < 0x20 / 2; i += 4) cycle 1 */
+ 	movaps    ASM_NAME(costab_mmxsse), %xmm3
+ 	shufps    $27, %xmm3, %xmm3
+-	movups    (%eax), %xmm1
++	MOVUAPS    (%eax), %xmm1
+ 	movaps    %xmm1, %xmm4
+-	movups    112(%eax), %xmm2
++	MOVUAPS    112(%eax), %xmm2
+ 	shufps    $27, %xmm4, %xmm4
+ 	movaps    %xmm2, %xmm0
+ 	shufps    $27, %xmm0, %xmm0
+@@ -102,11 +93,12 @@ ASM_NAME(dct64_sse):
+ #NO_APP
+ 	movl	12(%ebp), %ebx
+ #APP
++/* for (i = 0; i < 0x20 / 2; i += 4) cycle 2 */
+ 	movaps    ASM_NAME(costab_mmxsse)+16, %xmm3
+ 	shufps    $27, %xmm3, %xmm3
+-	movups    16(%eax), %xmm1
++	MOVUAPS    16(%eax), %xmm1
+ 	movaps    %xmm1, %xmm4
+-	movups    96(%eax), %xmm2
++	MOVUAPS    96(%eax), %xmm2
+ 	shufps    $27, %xmm4, %xmm4
+ 	movaps    %xmm2, %xmm0
+ 	shufps    $27, %xmm0, %xmm0
+@@ -116,11 +108,12 @@ ASM_NAME(dct64_sse):
+ 	mulps     %xmm3, %xmm4
+ 	movaps    %xmm4, b1.4746+96
+ 	
++/* for (i = 0; i < 0x20 / 2; i += 4) cycle 3 */
+ 	movaps    ASM_NAME(costab_mmxsse)+32, %xmm3
+ 	shufps    $27, %xmm3, %xmm3
+-	movups    32(%eax), %xmm1
++	MOVUAPS    32(%eax), %xmm1
+ 	movaps    %xmm1, %xmm4
+-	movups    80(%eax), %xmm2
++	MOVUAPS    80(%eax), %xmm2
+ 	shufps    $27, %xmm4, %xmm4
+ 	movaps    %xmm2, %xmm0
+ 	shufps    $27, %xmm0, %xmm0
+@@ -130,11 +123,12 @@ ASM_NAME(dct64_sse):
+ 	mulps     %xmm3, %xmm4
+ 	movaps    %xmm4, b1.4746+80
+ 	
++/* for (i = 0; i < 0x20 / 2; i += 4) cycle 4 */
+ 	movaps    ASM_NAME(costab_mmxsse)+48, %xmm3
+ 	shufps    $27, %xmm3, %xmm3
+-	movups    48(%eax), %xmm1
++	MOVUAPS    48(%eax), %xmm1
+ 	movaps    %xmm1, %xmm4
+-	movups    64(%eax), %xmm2
++	MOVUAPS    64(%eax), %xmm2
+ 	shufps    $27, %xmm4, %xmm4
+ 	movaps    %xmm2, %xmm0
+ 	shufps    $27, %xmm0, %xmm0

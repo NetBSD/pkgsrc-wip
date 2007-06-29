@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/audio_jack.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/audio_jack.c
+@@ -13,9 +13,7 @@
+ #include <jack/jack.h>
+ #include <jack/ringbuffer.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+-#include "debug.h"
+ 
+ #define MAX_CHANNELS	(2)
+ 

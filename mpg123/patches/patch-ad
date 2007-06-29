@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/Makefile.am.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/Makefile.am
+@@ -226,5 +226,5 @@ libcpu_x86_a_SOURCES = \
+ 
+ # explicit preprocessing since mingw32 does not honor the big .S
+ .S.o:
+-	$(CPP) $(CPPFLAGS) $< > $<.s
++	$(CPP) $(AM_CPPFLAGS) $(DEFAULT_INCLUDES) $(CPPFLAGS) $< > $<.s
+ 	$(CCAS) $(CCASFLAGS) -c -o $@ $<.s && rm $<.s

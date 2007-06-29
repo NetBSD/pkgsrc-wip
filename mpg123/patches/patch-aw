@@ -1,0 +1,21 @@
+$NetBSD: patch-aw,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/buffer.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/buffer.c
+@@ -10,14 +10,13 @@
+ 	- dammed night coders;-)
+ */
+ 
++#include "mpg123.h"
++
+ #ifndef NOXFERMEM
+ 
+ #include <stdlib.h>
+ #include <errno.h>
+ 
+-#include "config.h"
+-#include "mpg123.h"
+-
+ int outburst = MAXOUTBURST;
+ 
+ static int intflag = FALSE;

@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/audio_os2.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/audio_os2.c
+@@ -17,7 +17,6 @@
+ 
+ /* I guess this #ifndef could be removed now... */
+ #ifndef MPG123_INCLUDED
+-#include "config.h"
+ #include "mpg123.h"
+ #endif
+ 

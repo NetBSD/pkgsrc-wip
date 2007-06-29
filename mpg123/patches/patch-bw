@@ -1,0 +1,46 @@
+$NetBSD: patch-bw,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/optimize.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/optimize.c
+@@ -8,9 +8,7 @@
+ 	Currently, this file contains the struct and function to choose an optimization variant and works only when OPT_MULTI is in effect.
+ */
+ 
+-#include "config.h"
+ #include "mpg123.h" /* includes optimize.h */
+-#include "debug.h"
+ 
+ #ifdef OPT_MULTI
+ struct_opts cpu_opts;
+@@ -20,12 +18,12 @@ struct_opts cpu_opts;
+ void list_cpu_opt()
+ {
+ 	printf("CPU options:");
+-	#ifdef OPT_SSE
+-	printf(" SSE");
+-	#endif
+ 	#ifdef OPT_3DNOWEXT
+ 	printf(" 3DNowExt");
+ 	#endif
++	#ifdef OPT_SSE
++	printf(" SSE");
++	#endif
+ 	#ifdef OPT_3DNOW
+ 	printf(" 3DNow");
+ 	#endif
+@@ -63,12 +61,12 @@ void test_cpu_flags()
+ 		printf("Supported decoders:");
+ 		/* not yet: if(cpu_sse2(cf)) printf(" SSE2");
+ 		if(cpu_sse3(cf)) printf(" SSE3"); */
+-#ifdef OPT_SSE
+-		if(cpu_sse(cf)) printf(" SSE");
+-#endif
+ #ifdef OPT_3DNOWEXT
+ 		if(cpu_3dnowext(cf)) printf(" 3DNowExt");
+ #endif
++#ifdef OPT_SSE
++		if(cpu_sse(cf)) printf(" SSE");
++#endif
+ #ifdef OPT_3DNOW
+ 		if(cpu_3dnow(cf)) printf(" 3DNow");
+ #endif

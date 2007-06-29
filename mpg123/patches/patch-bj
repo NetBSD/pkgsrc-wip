@@ -1,0 +1,12 @@
+$NetBSD: patch-bj,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/decode_i386.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/decode_i386.c
+@@ -15,7 +15,6 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ 
+ #if 1

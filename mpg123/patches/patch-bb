@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/dct64_i386.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/dct64_i386.c
+@@ -14,7 +14,6 @@
+  * even for Intel processors.
+  */
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ 
+ static void dct64_1(real *out0,real *out1,real *b1,real *b2,real *samples)

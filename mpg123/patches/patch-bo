@@ -1,0 +1,22 @@
+$NetBSD: patch-bo,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/httpget.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/httpget.c
+@@ -26,7 +26,6 @@
+ 	Funny aspect there is that shoutcast servers do not do HTTP/1.1 chunked transfer but implement some different chunking themselves...
+ */
+ 
+-#include "config.h"
+ #include <stdlib.h>
+ /* That _is_ real now */
+ #define ACCEPT_HEAD "Accept: audio/mpeg, audio/x-mpeg, audio/x-mpegurl, audio/x-scpls, application/pls, */*\r\n"
+@@ -57,9 +56,7 @@ char *proxyurl = NULL;
+ #include <errno.h>
+ #include <ctype.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+-#include "debug.h"
+ #include "stringbuf.h"
+ #include "icy.h"
+ 

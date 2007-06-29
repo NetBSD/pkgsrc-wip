@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/audio_alsa.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/audio_alsa.c
+@@ -7,9 +7,7 @@
+ 	written by Clemens Ladisch <clemens@ladisch.de>
+ */
+ 
+-#include "config.h"
+ #include "mpg123.h"
+-#include "debug.h"
+ #include <errno.h>
+ 
+ /* make ALSA 0.9.x compatible to the 1.0.x API */

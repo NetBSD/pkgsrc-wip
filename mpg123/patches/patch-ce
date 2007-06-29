@@ -1,0 +1,12 @@
+$NetBSD: patch-ce,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/xfermem.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/xfermem.c
+@@ -9,7 +9,6 @@
+ 	See xfermem.h for documentation/description.
+ */
+ 
+-#include "config.h"
+ 
+ #ifndef NOXFERMEM
+ 

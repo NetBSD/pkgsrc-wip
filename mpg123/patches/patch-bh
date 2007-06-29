@@ -1,0 +1,12 @@
+$NetBSD: patch-bh,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/decode_4to1.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/decode_4to1.c
+@@ -13,7 +13,6 @@
+ #include <math.h>
+ #include <string.h>
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ #include "decode.h"
+ 

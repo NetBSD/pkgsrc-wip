@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- src/audio_dummy.c.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/audio_dummy.c
+@@ -6,7 +6,6 @@
+ 	initially written by Michael Hipp
+ */
+ 
+-#include "config.h"
+ #include "mpg123.h"
+ 
+ int audio_open(struct audio_info_struct *ai)

@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+
+--- benchmark-cpu.pl.orig	2007-06-28 19:43:33.000000000 -0400
++++ benchmark-cpu.pl
+@@ -0,0 +1,43 @@
++#!/usr/bin/perl
++#
++# benchmark-cpu.pl: benchmark CPU optimisations of mpg123
++#
++# written by Nicholas J Humfrey <njh@aelius.com>, placed in the public domain
++#
++
++use strict;
++use Time::HiRes qw/time/;
++
++my $MPG123_CMD = '../src/mpg123';
++my $TEST_FILE = $ARGV[0];
++
++die "Please specify a test MP3 file to decode" if (scalar(@ARGV) < 1);
++die "mpg123 command does not exist" unless (-e $MPG123_CMD);
++die "mpg123 command is not executable" unless (-x $MPG123_CMD);
++die "test MP3 file does not exist" unless (-e $TEST_FILE);
++
++
++# Force unbuffed output on STDOUT
++$|=1;
++
++# Check the CPUs available
++my $cpulist = `$MPG123_CMD --test-cpu`;
++chomp( $cpulist );
++die "Failed to get list of available CPU optimisations" unless ($cpulist =~ s/^Supported decoders: //);
++
++my @cpus = split( / /, $cpulist );
++printf("Found %d CPU optimisations to test...\n\n", scalar(@cpus) );
++
++foreach my $cpu (@cpus) {
++	print "Checking speed of $cpu optimisation: ";
++	
++	my $start_time = time();
++	system( $MPG123_CMD, '-q', '--cpu', $cpu, '-t', $TEST_FILE );
++	my $end_time = time();
++	
++	printf("%4.4f seconds\n", $end_time - $start_time );
++	
++}
++
++print "\n";
++

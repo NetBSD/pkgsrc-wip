@@ -1,0 +1,17 @@
+$NetBSD: patch-bt,v 1.1 2007/06/29 02:29:25 bsadewitz Exp $
+
+--- src/mangle.h.orig	2007-06-03 19:43:01.000000000 -0400
++++ src/mangle.h
+@@ -12,6 +12,12 @@
+ 
+ #include "config.h"
+ 
++#ifdef CCALIGN
++#define MOVUAPS movaps
++#else
++#define MOVUAPS movups
++#endif
++
+ #ifdef ASMALIGN_EXP
+ #define ALIGN4  .align 2
+ #define ALIGN8  .align 3
