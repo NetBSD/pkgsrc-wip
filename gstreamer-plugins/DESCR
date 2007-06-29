@@ -1,0 +1,2 @@
+This is a meta-package which installs all of the GStreamer plug-ins.
+It does not install any software of its own.
