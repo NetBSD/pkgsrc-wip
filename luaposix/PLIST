@@ -1,6 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 23:28:43 poppnk Exp $
-lib/libluaposix.so
-lib/lua/posix.lua
-lib/lua/test.lua
-lib/lua/tree.lua
-@dirrm lib/lua
+@comment $NetBSD: PLIST,v 1.2 2007/06/30 21:56:05 corecode Exp $
+lib/lua/5.1/posix.so

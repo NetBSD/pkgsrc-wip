@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 23:28:43 poppnk Exp $
---- Makefile.orig	2004-01-26 23:11:35.000000000 +0000
-+++ Makefile	2004-01-26 23:11:46.000000000 +0000
-@@ -1,7 +1,7 @@
- # makefile for POSIX library for Lua
- 
- # change these to reflect your Lua installation
--LUA= /tmp/lhf/lua-5.0
-+LUA= ${PREFIX}
- LUAINC= $(LUA)/include
- LUALIB= $(LUA)/lib
+$NetBSD: patch-aa,v 1.2 2007/06/30 21:56:05 corecode Exp $
+--- Makefile.orig	2007-06-30 23:41:05.000000000 +0200
++++ Makefile
+@@ -7,7 +7,7 @@ LUALIB= $(LUA)/lib
  LUABIN= $(LUA)/bin
+ 
+ # no need to change anything below here
+-CFLAGS= -fPIC $(INCS) $(WARN) -O2 $G
++CFLAGS+= -fPIC $(INCS) $(WARN) $G
+ WARN= -pedantic -Wall
+ INCS= -I$(LUAINC)
+ 
