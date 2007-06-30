@@ -1,0 +1,10 @@
+syslog-ng embodies the next generation of logging systems, and is the first
+truly flexible and scalable system logging application.
+
+If you need a logging application that
+
+    * guarantees the availability of log messages,
+    * is compatible with a wide range of operating systems,
+    * can be used in environments having strong perimeter defense,
+    * has already proven its worth,
+    * provides unimaginable flexibility for tracing system events
