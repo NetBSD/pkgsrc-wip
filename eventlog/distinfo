@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/06/30 10:57:22 ondratu Exp $
+
+SHA1 (eventlog-0.2.5.tar.gz) = 6bd1fe1d9aeb93749d45e6771ab0ec747a5dbf67
+RMD160 (eventlog-0.2.5.tar.gz) = 742ea6e9d28c13b1dc7b5b06f86ca8e7523acf02
+Size (eventlog-0.2.5.tar.gz) = 312164 bytes

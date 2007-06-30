@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/30 10:57:22 ondratu Exp $
+include/eventlog/evtlog.h
+include/eventlog/evtmaps.h
+lib/libevtlog.la
+lib/pkgconfig/eventlog.pc
+@dirrm include/eventlog
