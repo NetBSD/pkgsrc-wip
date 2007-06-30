@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2007/06/30 22:20:33 cheusov Exp $
+
+--- bin/sdict-tools.plx.orig	2006-09-05 08:53:42.000000000 +0300
++++ bin/sdict-tools.plx
+@@ -19,7 +19,7 @@ use warnings;
+ BEGIN {
+   $_=$0;
+   s|^(.+)/.*|$1|;
+-  push @INC, ($_, "$_/lib", "$_/../lib", "$_/..") ;
++  push @INC, ($_);
+ };
+ 
+ 
