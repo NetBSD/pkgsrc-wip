@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/05/15 00:48:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2007/06/30 12:55:05 tnn2 Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -27,6 +27,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-i386
 GE_VERSION=		4.1.7076.4458
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
+DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
 
 .include "../../mk/bsd.prefs.mk"
