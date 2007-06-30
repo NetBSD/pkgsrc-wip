@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/01/23 13:33:08 bsadewitz Exp $
-bin/appres
-man/man1/appres.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 11:23:07 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/06/30 14:11:48 tnn2 Exp $
 #
 
 DISTNAME=		eboard-extras-2
@@ -14,7 +14,7 @@ NO_BUILD=YES
 DISTFILES+=		${EXTRA2}${EXTRACT_SUFX}
 DISTFILES+=		${EXTRA1}${EXTRACT_SUFX}
 
-DEPENDS+=		eboard-[0-9\.]*:../../wip/eboard
+DEPENDS+=		eboard-[0-9\.]*:../../games/eboard
 
 EXTRA2=			eboard-extras-2
 EXTRA1=			eboard-extras-1pl2
