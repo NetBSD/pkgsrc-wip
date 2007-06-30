@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/03 22:07:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2007/06/30 19:44:14 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.5-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -17,6 +17,13 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 
+PDNSD_USER?=		pdnsd
+.if ${OPSYS} == "Interix"
+PDNSD_GROUP?=		nogroup
+.else
+PDNSD_GROUP?=		pdnsd
+.endif
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 .if ${OPSYS} == "IRIX" || ${OPSYS} == "Dragonfly"
 CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
@@ -25,13 +32,7 @@ CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-src-addr-disc
 .endif
-
-PDNSD_USER?=		pdnsd
-.if ${OPSYS} == "Interix"
-PDNSD_GROUP?=		nogroup
-.else
-PDNSD_GROUP?=		pdnsd
-.endif
+CONFIGURE_ARGS+=	--with-default-id=${PDNSD_USER}
 
 PKG_GROUPS=		${PDNSD_GROUP}
 PKG_USERS=		${PDNSD_USER}:${PDNSD_GROUP}
@@ -41,5 +42,7 @@ RCD_SCRIPTS=		pdnsd
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			share/examples/pdnsd
+
+OWN_DIRS_PERMS+=	${VARBASE}/cache/pdnsd ${PDNSD_USER} ${PDNSD_GROUP} 755
 
 .include "../../mk/bsd.pkg.mk"
