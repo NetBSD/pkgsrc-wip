@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2616 2007/06/24 19:17:41 thomasklausner Exp $
+# $Id: Makefile,v 1.2617 2007/06/30 11:07:44 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -293,6 +293,7 @@ SUBDIR+=	erc
 SUBDIR+=	esdl
 SUBDIR+=	ethtool
 SUBDIR+=	evas
+SUBDIR+=	eventlog
 SUBDIR+=	evolution-sharp
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
@@ -1567,6 +1568,7 @@ SUBDIR+=	sxemacs
 SUBDIR+=	sxid
 SUBDIR+=	sysjail
 SUBDIR+=	sysklogd
+SUBDIR+=	syslog-ng2
 SUBDIR+=	sysstat
 SUBDIR+=	sysvinit
 SUBDIR+=	t-coffee
