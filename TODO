@@ -1,6 +1,6 @@
 Suggested package updates
 
-	o aircrack-ng-0.9
+	o aircrack-ng-0.9.1
 	o avahi-0.6.19
 	o chora-2.0.1
 	o cinelerra-2.1
@@ -39,11 +39,11 @@ Suggested package updates
 	o pike-7.6.112
 	o py-PyPE-2.8.5
 	o quodlibet-1.0
-	o rdup-0.5.0
+	o rdup-0.5.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o sara-7.0.4a
-	o sdlmame-0.116u2
+	o sdlmame-0.116u3
 	o sendmailX-0.0.0.0
 	o six-0.5.3
 	o smc-0.99.7
@@ -63,4 +63,5 @@ Suggested package updates
 	o vmac-2.8.2
 	o xaralx-bin-0.7.1692
 	o xinetd-2.3.14
+	o yabause-0.8.5
 	o zinf-2.2.5
