@@ -34,6 +34,12 @@ PKG_SUGGESTED_OPTIONS+= sun
 .if !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--with-audio=oss
 
+SUBST_CLASSES+=		ossdev
+SUBST_FILES.ossdev=	src/audio_oss.c
+SUBST_STAGE.ossdev=	pre-build
+SUBST_MESSAGE.ossdev=	Setting OSS device.
+SUBST_VARS.ossdev=	DEVOSSAUDIO DEVOSSSOUND
+
 .  include "../../mk/oss.buildlink3.mk"
 .endif
 
