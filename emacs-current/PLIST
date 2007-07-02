@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/06/21 18:10:44 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.23 2007/07/02 18:07:09 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -987,6 +987,7 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-extra.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-extra.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
