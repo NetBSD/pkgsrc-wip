@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/06/16 13:18:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/02 18:00:38 thomasklausner Exp $
 #
 
-DISTNAME=	python-dateutil-1.1
+DISTNAME=	python-dateutil-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	time python
 MASTER_SITES=	http://labix.org/download/python-dateutil/

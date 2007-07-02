@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/06/16 13:18:45 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2007/07/02 18:00:38 thomasklausner Exp $
 
-SHA1 (python-dateutil-1.1.tar.bz2) = ba700b8b77054a4e26f49a4d8a04da720f56f576
-RMD160 (python-dateutil-1.1.tar.bz2) = 635b58d0095b5db83c4c08929c8de8139ef2aa38
-Size (python-dateutil-1.1.tar.bz2) = 130243 bytes
+SHA1 (python-dateutil-1.2.tar.bz2) = 9884849261bc9dd64f7dd05a39e62385a30b5819
+RMD160 (python-dateutil-1.2.tar.bz2) = 31e62aceb2ce980b5cfb64841f7d125f817f618b
+Size (python-dateutil-1.2.tar.bz2) = 135624 bytes
