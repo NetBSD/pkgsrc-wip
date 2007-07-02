@@ -1,0 +1,3 @@
+* Update to a newer version
+	versions <= 1.0.12 are vulnerable to a cross site
+	scripting attack http://secunia.com/advisories/25804/
