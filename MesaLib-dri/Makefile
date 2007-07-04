@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/04 06:03:37 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/04 18:41:33 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
 MESA_VERSION=	7.0
+PKGREVISION=	1
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
