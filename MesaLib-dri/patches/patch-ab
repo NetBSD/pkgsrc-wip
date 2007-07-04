@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/05/25 04:02:03 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.2 2007/07/04 06:03:37 bsadewitz Exp $
 
---- Makefile.orig	2007-04-27 09:54:33.000000000 -0400
+--- Makefile.orig	2007-06-21 18:14:38.000000000 -0400
 +++ Makefile
-@@ -127,6 +127,9 @@ linux-x86-64-static \
+@@ -134,6 +134,9 @@ linux-x86-64-static \
  linux-x86-glide \
  linux-x86-static \
  netbsd \
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.1 2007/05/25 04:02:03 bsadewitz Exp $
  openbsd \
  osf1 \
  osf1-static \
-@@ -147,7 +150,6 @@ sunos5-v9-static \
+@@ -154,7 +157,6 @@ sunos5-v9-static \
  ultrix-gcc:
  	@ if [ -e configs/current ] ; then \
  		echo "Please run 'make realclean' before changing configs" ; \

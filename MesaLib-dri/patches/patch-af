@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2007/05/25 04:02:04 bsadewitz Exp $
+$NetBSD: patch-af,v 1.2 2007/07/04 06:03:37 bsadewitz Exp $
 
---- src/glx/x11/Makefile.orig	2007-04-07 14:42:54.000000000 -0400
+--- src/glx/x11/Makefile.orig	2007-06-21 18:10:54.000000000 -0400
 +++ src/glx/x11/Makefile
 @@ -53,10 +53,10 @@ INCLUDES = -I. \
  ##### RULES #####

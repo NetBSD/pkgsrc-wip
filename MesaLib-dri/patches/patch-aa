@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2007/05/25 04:02:03 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/04 06:03:37 bsadewitz Exp $
 
---- src/mesa/x86/assyntax.h.orig	2006-12-07 18:16:32.000000000 -0500
+--- src/mesa/x86/assyntax.h.orig	2007-06-21 18:10:55.000000000 -0400
 +++ src/mesa/x86/assyntax.h
 @@ -985,7 +985,8 @@ SECTION _DATA public align=16 class=DATA
  

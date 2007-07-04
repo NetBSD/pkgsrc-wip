@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.3 2007/07/04 06:03:37 bsadewitz Exp $
+
+--- src/mesa/main/texenvprogram.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ src/mesa/main/texenvprogram.c
+@@ -871,7 +871,7 @@ emit_texenv(struct texenv_fragment_progr
+ 			  key->unit[unit].OptRGB);
+    }
+    else if (key->unit[unit].ModeRGB == MODE_DOT3_RGBA_EXT ||
+-	    key->unit[unit].ModeA == MODE_DOT3_RGBA) {
++	    key->unit[unit].ModeRGB == MODE_DOT3_RGBA) {
+ 
+       out = emit_combine( p, dest, WRITEMASK_XYZW, saturate,
+ 			  unit,

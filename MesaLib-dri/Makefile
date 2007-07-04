@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/28 23:19:15 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/04 06:03:37 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 CATEGORIES=	graphics
@@ -29,6 +29,7 @@ GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
 DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM -fno-strict-aliasing
+CFLAGS.NetBSD+=-D_REENTRANT -D_PTHREADS
 CFLAGS+=	${DRI_CFLAGS:M*:Q}
 
 .include "subst.mk"
