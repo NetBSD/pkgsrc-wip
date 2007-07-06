@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/23 01:12:13 briandealwis Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/06 06:29:27 thomasklausner Exp $
 
 PKGNAME=		crm114-20070320
 DISTNAME=		${PKGNAME}-BlameBaltar.src
@@ -18,6 +18,7 @@ DOCDIR=			${PREFIX}/share/doc/crm114
 EMACSDIR=		${PREFIX}/share/emacs/site-lisp
 EXAMPLESDIR=		${PREFIX}/share/examples/crm114
 SCRIPTSDIR=		${PREFIX}/share/crm114
+INSTALLATION_DIRS+=	bin ${DOCDIR} ${EMACSDIR} ${EXAMPLESDIR} ${SCRIPTSDIR}
 
 DOCS=			CRM114_Mailfilter_HOWTO.txt README FAQ.txt INTRO.txt \
 			QUICKREF.txt knownbugs.txt
@@ -52,15 +53,10 @@ do-install:
 	cd ${WRKSRC} &&							\
 	    ${INSTALL_PROGRAM} cssdiff cssmerge cssutil osbf-util	\
 		${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_SCRIPT_DIR} ${SCRIPTSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXAMPLES} ${EXAMPLESDIR}
-	cd ${WRKSRC} &&							\
-	    ${INSTALL_SCRIPT} ${SCRIPTS} ${SCRIPTSDIR}
-	cd ${WRKSRC} &&							\
-	    ${INSTALL_SCRIPT} crm114-mode.el ${EMACSDIR}
+	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${SCRIPTS} ${SCRIPTSDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} crm114-mode.el ${EMACSDIR}
 
 .include "../../devel/tre/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
