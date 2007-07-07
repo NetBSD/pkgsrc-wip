@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/07/07 03:56:42 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/07 08:06:55 othyro Exp $
 #
 
-DISTNAME=		commoncpp2-1.3.16
+DISTNAME=		commoncpp2-1.5.3
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnutelephony/}
+MASTER_SITES=		ftp://ftp.gnu.org/gnu/commonc++/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://cplusplus.sourceforge.net/
