@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/08 01:05:26 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/07 04:14:51 othyro Exp $
 #
 
 DISTNAME=		ccrtp-1.3.5
@@ -10,6 +10,7 @@ HOMEPAGE=		http://wiki.gnutelephony.org/
 COMMENT=		RTP and RTSP protocol implementation using GNU CommonCpp
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES+=		c c++
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libccrtp1.pc.in
 GNU_CONFIGURE=		yes
 
