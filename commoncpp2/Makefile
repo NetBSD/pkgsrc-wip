@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/07 03:56:42 othyro Exp $
 #
 
 DISTNAME=		commoncpp2-1.3.16
@@ -10,6 +10,7 @@ HOMEPAGE=		http://cplusplus.sourceforge.net/
 COMMENT=		Portable and highly optimized class framework for C++
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES+=         c c++
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccgnu2.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccext2.pc.in
 GNU_CONFIGURE=		yes
