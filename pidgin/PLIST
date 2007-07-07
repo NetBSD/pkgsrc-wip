@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/17 21:52:08 kheinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/07/07 00:29:32 thomasklausner Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -516,10 +516,13 @@ share/sounds/pidgin/receive.wav
 share/sounds/pidgin/send.wav
 @dirrm share/sounds/pidgin
 @dirrm share/pixmaps/purple/buddy_icons/qq
+@dirrm share/pixmaps/purple/buddy_icons
 @dirrm share/pixmaps/pidgin/tray/22
 @dirrm share/pixmaps/pidgin/tray/16
+@dirrm share/pixmaps/pidgin/tray
 @dirrm share/pixmaps/pidgin/toolbar/22
 @dirrm share/pixmaps/pidgin/toolbar/16
+@dirrm share/pixmaps/pidgin/toolbar
 @dirrm share/pixmaps/pidgin/status/48/rtl
 @dirrm share/pixmaps/pidgin/status/48
 @dirrm share/pixmaps/pidgin/status/32/rtl
@@ -528,21 +531,23 @@ share/sounds/pidgin/send.wav
 @dirrm share/pixmaps/pidgin/status/22
 @dirrm share/pixmaps/pidgin/status/16/rtl
 @dirrm share/pixmaps/pidgin/status/16
+@dirrm share/pixmaps/pidgin/status
 @dirrm share/pixmaps/pidgin/protocols/48
 @dirrm share/pixmaps/pidgin/protocols/22
 @dirrm share/pixmaps/pidgin/protocols/16
+@dirrm share/pixmaps/pidgin/protocols
 @dirrm share/pixmaps/pidgin/emotes/none
 @dirrm share/pixmaps/pidgin/emotes/default
+@dirrm share/pixmaps/pidgin/emotes
 @dirrm share/pixmaps/pidgin/emblems/16
+@dirrm share/pixmaps/pidgin/emblems
 @dirrm share/pixmaps/pidgin/dialogs/64
 @dirrm share/pixmaps/pidgin/dialogs/16
+@dirrm share/pixmaps/pidgin/dialogs
 @dirrm share/pixmaps/pidgin/buttons
 @dirrm share/pixmaps/pidgin/animations/16
+@dirrm share/pixmaps/pidgin/animations
 @dirrm share/pixmaps/pidgin
-@dirrm share/icons/hicolor/scalable/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/24x24/apps
-@dirrm share/icons/hicolor/16x16/apps
+@dirrm share/pixmaps/purple
 @dirrm lib/pidgin
 @dirrm include/pidgin

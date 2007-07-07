@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/22 19:27:48 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/07 00:29:32 thomasklausner Exp $
 #
 
 PKGNAME=		pidgin-2.0.1
@@ -9,6 +9,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../wip/libpurple/Makefile.common"  
 
+USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		msgfmt
 
 PKGCONFIG_OVERRIDE+=	gaim.pc.in
@@ -21,6 +22,9 @@ CONFIGURE_ARGS+=	--disable-consoleui
 
 BUILD_DIRS=pidgin
 
+# includes "Arguments to configure" as string
+CHECK_WRKREF_SKIP=	bin/pidgin
+
 .include "options.mk"
 
 pre-build:
@@ -30,6 +34,7 @@ pre-build:
 
 .include "../../wip/libpurple/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
