@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/08 18:45:45 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/08 19:14:41 minskim Exp $
 #
 
 DISTNAME=		urlgfe-1.0.1
@@ -12,7 +12,6 @@ COMMENT=		Download manager for X
 USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
 .include "../../devel/pcre/buildlink3.mk"
