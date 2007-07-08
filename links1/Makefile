@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/04/15 21:51:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/08 09:44:26 thomasklausner Exp $
 #
 
 DISTNAME=		links-1.00pre20
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/links/links1/}
 CATEGORIES=		www
 MASTER_SITES=		http://artax.karlin.mff.cuni.cz/~mikulas/links/download/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://artax.karlin.mff.cuni.cz/~mikulas/links/
 COMMENT=		Text browser with tables (original version)
 

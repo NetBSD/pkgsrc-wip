@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/15 18:43:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/08 09:44:26 thomasklausner Exp $
 #
 
 DISTNAME=		InfoNES097JRC1_SDL
@@ -6,7 +6,7 @@ PKGNAME=		InfoNES-0.97rc1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=infones/19061/}
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.geocities.co.jp/SiliconValley/5604/infones.html
 COMMENT=		Portable NES emulator
 
