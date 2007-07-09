@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/09 21:14:27 shindenmorr Exp $
+
+SHA1 (dsh-0.25.8.tar.gz) = f08334911bf6d02504780a740dabc25039bc19c4
+RMD160 (dsh-0.25.8.tar.gz) = ba4ef813dc91339e3974c8cfc303d22822b3cb74
+Size (dsh-0.25.8.tar.gz) = 390842 bytes
