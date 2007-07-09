@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/07/02 18:07:09 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.24 2007/07/09 20:52:33 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2000,16 +2000,18 @@ share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
 share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tls.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-cache.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-cache.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-fish.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-fish.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-gw.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-gw.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-util.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-util.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-vc.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-vc.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp.elc
 share/emacs/${PKGVERSION}/lisp/net/trampver.el.gz
