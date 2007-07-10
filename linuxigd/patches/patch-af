@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2007/03/11 06:26:21 obache Exp $
+$NetBSD: patch-af,v 1.8 2007/07/10 04:41:32 obache Exp $
 
 --- pmlist.c.orig	2006-10-02 00:58:32.000000000 +0900
 +++ pmlist.c
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.7 2007/03/11 06:26:21 obache Exp $
 +#elif defined(USE_IPFILTER)
 +	FILE *ipnat = popen("/usr/sbin/ipnat -f -", "w");
 +	if (ipnat == NULL) return 0;
-+	snprintf(rules, sizeof(rules), "rdr %s %s/32 port %s -> %s port %s %s", g_vars.extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol);
++	snprintf(rules, sizeof(rules), "rdr %s %s/32 port %s -> %s port %s %s\n", g_vars.extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol);
 +	trace(3, "%s", rules);
 +	fprintf(ipnat, rules);
 +	pclose(ipnat);
@@ -69,7 +69,7 @@ $NetBSD: patch-af,v 1.7 2007/03/11 06:26:21 obache Exp $
 +	char rules[COMMAND_LEN];
 +	FILE *ipnat = popen("/usr/sbin/ipnat -rf -", "w");
 +	if (ipnat == NULL) return 0;
-+	snprintf(rules, sizeof(rules), "rdr %s %s/32 port %s -> %s port %s %s", g_vars.extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol);
++	snprintf(rules, sizeof(rules), "rdr %s %s/32 port %s -> %s port %s %s\n", g_vars.extInterfaceName, ExternalIPAddress, externalPort, internalClient, internalPort, protocol);
 +	trace(3, "remove %s", rules);
 +	fprintf(ipnat, rules);
 +	pclose(ipnat);
