@@ -1,14 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/09 21:07:06 shindenmorr Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.13.
-# XXX After this file has been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.libdshconfig?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2007/07/10 01:00:43 shindenmorr Exp $
 
 BUILDLINK_DEPMETHOD.libdshconfig?=      build
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
