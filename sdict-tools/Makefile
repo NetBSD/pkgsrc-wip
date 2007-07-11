@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/11 19:43:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/11 19:49:05 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -43,7 +43,8 @@ do-extract:
 	set -e; \
 	mkdir ${WRKSRC}; \
 	cd ${WRKSRC}; \
-	gzip -dc ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} | tar -xf-
+	gzip -d ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}; \
+	tar -xf ${DISTDIR}/${DISTNAME}.tar
 
 do-install:
 	set -e; \
