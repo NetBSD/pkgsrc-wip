@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/11 19:38:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/11 19:39:52 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://sdict.com/rsc/files/
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sdict.com/
 COMMENT=	SDict conversion tools
+
+USE_TOOLS+=	gzip tar
 
 #DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 #DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
