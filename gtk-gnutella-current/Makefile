@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/05/31 00:52:01 larnor Exp $
+# $NetBSD: Makefile,v 1.19 2007/07/11 22:28:27 larnor Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		net
 MASTER_SITES=		# not defined
 
@@ -27,8 +27,9 @@ CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
 CONFLICTS=		gtk-gnutella-*
 
 SVN_REPOSITORIES=	gtk-gnutella
-SVN_CERTS=		files/dc5a395eac239ee84380e60694cec8f1
-SVN_ROOT.gtk-gnutella=	${SVN_ROOT_SOURCEFORGE}/gtk-gnutella/trunk/gtk-gnutella
+SVN_CERTS=		files/163e5491b8f4ccb8a4ab62c3ea0219c9
+#SVN_ROOT.gtk-gnutella=	${SVN_ROOT_SOURCEFORGE}/gtk-gnutella/trunk/gtk-gnutella
+SVN_ROOT.gtk-gnutella=	https://gtk-gnutella.svn.sourceforge.net/svnroot/gtk-gnutella/trunk/gtk-gnutella
 SVN_MODULE.gtk-gnutella=gtk-gnutella
 
 WRKSRC=			${WRKDIR}/gtk-gnutella

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/31 00:52:01 larnor Exp $
+@comment $NetBSD: PLIST,v 1.10 2007/07/11 22:28:27 larnor Exp $
 bin/gtk-gnutella
 share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
@@ -27,6 +27,8 @@ share/gtk-gnutella/pixmaps/firewall_udp.xpm
 share/gtk-gnutella/pixmaps/firewall_udp_punchable.xpm
 share/gtk-gnutella/pixmaps/freeze.xpm
 share/gtk-gnutella/pixmaps/icon.xpm
+share/gtk-gnutella/pixmaps/icon.16x16.xpm
+share/gtk-gnutella/pixmaps/icon.32x32.xpm
 share/gtk-gnutella/pixmaps/leaf.xpm
 share/gtk-gnutella/pixmaps/legacy.xpm
 share/gtk-gnutella/pixmaps/magnet.16x16.png
@@ -44,6 +46,7 @@ share/gtk-gnutella/pixmaps/upload.xpm
 share/gtk-gnutella/pixmaps/warning.xpm
 share/gtk-gnutella/robots.txt
 share/gtk-gnutella/spam.txt
+share/gtk-gnutella/spam_sha1.txt
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtk-gnutella.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtk-gnutella.mo
