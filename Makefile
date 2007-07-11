@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2624 2007/07/09 21:46:50 shindenmorr Exp $
+# $Id: Makefile,v 1.2625 2007/07/11 10:53:53 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1627,6 +1627,7 @@ SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
+SUBDIR+=	vdesk
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	virus
