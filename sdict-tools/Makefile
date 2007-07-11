@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/06/30 22:20:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/11 19:38:33 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/ptksdict/sdict-tools/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://sdict.com/rsc/files/
 
-MAINTAINER=	Aleksey Cheusov <cheusov@tut.by>
+MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sdict.com/
 COMMENT=	SDict conversion tools
 
