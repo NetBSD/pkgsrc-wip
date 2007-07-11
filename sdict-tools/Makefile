@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/11 19:39:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/11 19:43:12 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -31,8 +31,8 @@ REPLACE_PERL+=	bin/jotter.plx
 REPLACE_PERL+=	bin/data.plx
 REPLACE_PERL+=	bin/dctinfo.plx
 
-SDICT_BINDIR=		${PREFIX}/bin/ptksdict
-SDICT_LIBDIR=		${PREFIX}/bin/ptksdict
+SDICT_BINDIR=		${PREFIX}/ptksdict/bin
+SDICT_LIBDIR=		${PREFIX}/ptksdict/bin
 
 INSTALLATION_DIRS=	${SDICT_LIBDIR} ${SDICT_BINDIR}
 
