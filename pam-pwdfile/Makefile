@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/29 07:25:27 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/12 07:33:19 bartoszkuzma Exp $
 #
 
 DISTNAME=		pam_pwdfile-0.99
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://cpbotha.net/files/pam_pwdfile/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://cpbotha.net/pam_pwdfile.html
 COMMENT=		PAM module for authenticating with text password files
 
