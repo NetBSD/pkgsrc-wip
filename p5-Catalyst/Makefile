@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/26 03:37:52 netcap Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/13 17:14:43 absd Exp $
 
 PKGVERSION=	5.7006
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
@@ -27,7 +27,7 @@ DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../wip/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable>=3.01:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
-DEPENDS+=	p5-Path-Class>=0.09:../../wip/p5-Path-Class
+DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../wip/p5-Text-SimpleTable
