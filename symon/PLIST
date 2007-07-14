@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/14 11:49:07 yeled Exp $
+libexec/symon
+libexec/symux
+man/man8/symon.8
+man/man8/symux.8
+share/examples/symon/symon.conf
+share/examples/symon/symux.conf
+share/symon/c_config.sh
+share/symon/c_smrrds.sh
+share/symon/client/SymuxClient.0
+share/symon/client/SymuxClient.pm
+share/symon/client/getsymonitem.pl
+@dirrm share/examples/symon
+@dirrm share/symon

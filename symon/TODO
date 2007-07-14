@@ -1,0 +1,5 @@
+add rc.d scripts.
+
+add a MESSAGE so it's not so confusing for a pkg-hunter
+
+librrd.so.2.10 isn't picked up. i'm lazy until i import ..
