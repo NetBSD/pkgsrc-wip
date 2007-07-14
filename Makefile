@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2627 2007/07/14 11:51:28 yeled Exp $
+# $Id: Makefile,v 1.2628 2007/07/14 22:54:26 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1148,7 +1148,6 @@ SUBDIR+=	p5-Object-Signature
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-Parallel-ForkManager
-SUBDIR+=	p5-Path-Class
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
