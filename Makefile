@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2626 2007/07/12 12:40:34 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2627 2007/07/14 11:51:28 yeled Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1546,6 +1546,7 @@ SUBDIR+=	swfmill
 SUBDIR+=	swftools
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
+SUBDIR+=	symon
 SUBDIR+=	sysjail
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng2
