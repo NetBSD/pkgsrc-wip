@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:15 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/15 18:33:16 shattered Exp $
 #
 
 DISTNAME=		db.1.86
@@ -8,7 +8,7 @@ MASTER_SITES=		http://downloads.sleepycat.com/ \
 			ftp://ftp.sleepycat.com/release/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.sleepycat.com/
+HOMEPAGE=		http://www.oracle.com/database/berkeley-db.html
 COMMENT=		Berkeley DB 1.86
 
 BUILD_DIRS=		${WRKSRC}/PORT/linux

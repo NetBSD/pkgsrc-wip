@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2007/06/17 21:45:46 kheinz Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/07/15 18:33:16 shattered Exp $
 #
 
 DISTNAME=	pidgin-2.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jan.m.danielsson@gmail.com
-HOMEPAGE=	http://pidgin.sourceforge.net/
+HOMEPAGE=	http://www.pidgin.im/
 COMMENT=	Multi-protocol Instant Messaging client GTK frontend
 
 GNU_CONFIGURE=		yes

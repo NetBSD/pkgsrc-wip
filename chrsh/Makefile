@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2007/03/03 10:56:11 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/15 18:33:16 shattered Exp $
 #
 
 DISTNAME=	chrsh
 PKGNAME=	chrsh-1.0.2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.adg.us/computers/
+MASTER_SITES=	http://www.aarongifford.com/computers/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://www.adg.us/computers/chrsh.html
+HOMEPAGE=	http://www.aarongifford.com/computers/chrsh.html
 COMMENT=	Chroot jail wrapper for ordinary Unix shells
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${CP} $${extract_file} .
 
-RCS_HEAD=	$$NetBSD: Makefile,v 1.7 2007/03/03 10:56:11 shattered Exp $$
+RCS_HEAD=	$$NetBSD: Makefile,v 1.8 2007/07/15 18:33:16 shattered Exp $$
 
 do-build:
 	cd ${WRKSRC} && \
