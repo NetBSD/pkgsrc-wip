@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/12/26 21:09:32 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/16 18:00:38 gschwarz Exp $
 
-DISTNAME=	dnrd-2.20.1
+DISTNAME=	dnrd-2.20.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnrd/}
 
