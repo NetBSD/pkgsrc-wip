@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2007/07/16 14:46:57 bsadewitz Exp $
+
+--- Makefile.in.orig	2007-07-10 07:53:44.000000000 -0400
++++ Makefile.in
+@@ -228,7 +228,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = intl  m4 po src test doc
++SUBDIRS = m4 po src test doc
+ ACLOCAL_AMFLAGS = -I m4
+ EXTRA_DIST = config.rpath
+ all: config.h
