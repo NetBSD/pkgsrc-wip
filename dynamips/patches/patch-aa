@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2007/01/07 18:51:16 koifren Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/16 17:56:09 gschwarz Exp $
 
---- Makefile.orig	2006-09-14 13:59:13.000000000 +0300
-+++ Makefile	2007-01-07 20:37:02.000000000 +0200
+--- Makefile.orig	2007-05-26 11:52:33.000000000 +0200
++++ Makefile	2007-07-16 19:07:57.000000000 +0200
 @@ -3,7 +3,19 @@
  
  # Replace x86 by amd64 for a build on x86_64.
@@ -23,8 +23,8 @@ $NetBSD: patch-aa,v 1.1 2007/01/07 18:51:16 koifren Exp $
  
  # Change this to 0 if your system doesn't support RFC 2553 extensions
  HAS_RFC2553?=1
-@@ -32,14 +44,19 @@
- 	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE \
+@@ -40,8 +52,8 @@
+ 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE \
  	-DHAS_RFC2553=$(HAS_RFC2553)
  
 -PCAP_LIB=/usr/local/lib/libpcap.a
@@ -34,18 +34,19 @@ $NetBSD: patch-aa,v 1.1 2007/01/07 18:51:16 koifren Exp $
  
  ifeq ($(shell uname), FreeBSD)
     PTHREAD_LIBS?=-pthread
-    CFLAGS+=-I/usr/local/include -I/usr/local/include/libelf $(PTHREAD_CFLAGS)
+@@ -49,6 +61,11 @@
+          -D_FILE_OFFSET_BITS=64
     LIBS=-L/usr/local/lib -L. -lelf $(PTHREAD_LIBS)
  else
 +ifeq ($(shell uname -s), NetBSD)
-+   PTHREAD_LIBS?=-pthread
-+   CFLAGS+=-I${LOCALBASE}/include -I${LOCALBASE}/include/libelf ${PTHREAD_CFLAGS}
-+   LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS}
++	PTHREAD_LIBS?=-pthread
++	CFLAGS+=-I${LOCALBASE}/include -I${LOCALBASE}/include/libelf ${PTHREAD_CFLAGS}
++	LIBS=-L${LOCALBASE}/lib -lelf ${PTHREAD_LIBS} ${PTHREAD_LDFLAGS}
 +else
- ifeq ($(shell uname -s), Darwin)
-    CFLAGS+=-I/usr/local/include -mdynamic-no-pic
-    LIBS=-L/usr/local/lib -L. -lelf -lpthread
-@@ -54,6 +71,7 @@
+ ifeq ($(shell uname), Linux)
+    PTHREAD_LIBS?=-lpthread
+ #   PCAP_LIB=-lpcap
+@@ -80,6 +97,7 @@
  endif
  endif
  endif

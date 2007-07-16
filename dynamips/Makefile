@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2007/01/07 18:51:16 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/16 17:56:09 gschwarz Exp $
 
-DISTNAME=	dynamips-0.2.5
+DISTNAME=	dynamips-0.2.7
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.ipflow.utc.fr/dynamips/
 
@@ -13,6 +13,12 @@ USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
 BUILD_TARGET=	# empty
+
+SUBST_CLASSES+=		libelf
+SUBST_STAGE.libelf=	post-patch
+SUBST_FILES.libelf=	dynamips.h rom2c.c
+SUBST_SED.libelf=	-e 's,<libelf.h>,<libelf/libelf.h>,'
+SUBST_MESSAGE.libelf=	Fix libelf header file path
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dynamips ${PREFIX}/bin
