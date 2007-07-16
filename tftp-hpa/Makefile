@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/01 18:40:20 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/16 18:03:26 gschwarz Exp $
 
-DISTNAME=	tftp-hpa-0.45
+DISTNAME=	tftp-hpa-0.48
 CATEGORIES=	net
 MASTER_SITES=	http://www.kernel.org/pub/software/network/tftp/
 EXTRACT_SUFX=	.tar.bz2
