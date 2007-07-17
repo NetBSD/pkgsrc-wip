@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/15 13:09:16 yeled Exp $
+# $NetBSD: Makefile,v 1.4 2007/07/17 16:02:37 yeled Exp $
 
 DISTNAME=		symon-2.76
 CATEGORIES=		net sysutils
@@ -17,7 +17,7 @@ MAKE_DIRS_PERMS+=       ${SYMON_DIR} ${SYMON_USER} ${SYMON_GROUP} 0700
 #RCD_SCRIPTS=		symon symux
 SYMON_USER?=       	_symon
 SYMON_GROUP?=      	symon
-SYMON_DIR?=     /var/db/symon
+SYMON_DIR?=     	${VARBASE}/db/symon
 PKG_GROUPS?=		${SYMON_GROUP}
 PKG_USERS?=			${SYMON_USER}:${SYMON_GROUP}::symon
 
@@ -29,8 +29,10 @@ SUBST_FILES.fix-paths+=         symux/c_smrrds.sh
 SUBST_FILES.fix-paths+=         symux/Makefile
 SUBST_FILES.fix-paths+=         symon/symon.8
 SUBST_FILES.fix-paths+=         symux/symux.8
+SUBST_FILES.fix-paths+=         symux/symux.conf
 SUBST_SED.fix-paths=            -e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-paths+=           -e 's,/etc,${PREFIX}/etc,g'
+SUBST_SED.fix-paths+=           -e 's,/var/www/,${VARBASE}/db/,g'
 
 SUBST_CLASSES+=                 fix-users
 SUBST_STAGE.fix-users=			pre-configure
