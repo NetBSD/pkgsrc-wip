@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/07/18 19:23:32 bsadewitz Exp $
+# $NetBSD: MesaLib-replacement_buildlink3.mk,v 1.1 2007/07/18 19:23:32 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+

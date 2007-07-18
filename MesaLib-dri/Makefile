@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/04 18:41:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/18 19:23:32 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
 MESA_VERSION=	7.0
-PKGREVISION=	1
+PKGREVISION=	2
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
@@ -19,10 +19,10 @@ USE_LIBTOOL+=	yes
 PKG_DESTDIR_SUPPORT=user-destdir
 
 INSTALLATION_DIRS_FROM_PLIST=	yes
+
 DRI_MODULE_PATH?=	lib/xorg/modules/dri
+BUILD_DEFS+=		DRI_MODULE_PATH
 PLIST_SUBST+=		DRI_MODULE_PATH=${DRI_MODULE_PATH}
-#INSTALLATION_DIRS+=	${DRI_MODULE_PATH}
-#INSTALLATION_DIRS+=	include/GL
 
 GL_HEADERS=	gl.h gl_mangle.h glext.h glx.h glx_mangle.h glxext.h
 GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h

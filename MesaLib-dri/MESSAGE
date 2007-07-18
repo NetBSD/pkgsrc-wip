@@ -1,0 +1,11 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/07/18 19:23:32 bsadewitz Exp $
+
+To use this package as a replacement for graphics/MesaLib, simply copy
+the replacement buildlink3.mk file in this directory to
+${PKGSRCDIR}/graphics/MesaLib/buildlink3.mk.  I hope to soon have the rest
+of the MesaLib packages available; in the meantime, you can try changing
+the version number of the Mesa packages in pkgsrc-wip to 7.0.  If you have
+trouble, please email me at blair.sadewitz@gmail.com and I will 
+endeavor to help you.
+==========================================================================
