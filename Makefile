@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2629 2007/07/14 22:59:49 kristerw Exp $
+# $Id: Makefile,v 1.2630 2007/07/21 14:20:25 krub1 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -753,6 +753,7 @@ SUBDIR+=	libuuid
 SUBDIR+=	libuxre
 SUBDIR+=	libvc
 SUBDIR+=	libvg
+SUBDIR+=	libvolumeid
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxcb
 SUBDIR+=	libxfce4gui
@@ -1627,6 +1628,7 @@ SUBDIR+=	unrealtournament-server
 SUBDIR+=	uptimed
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
+SUBDIR+=	usbids
 SUBDIR+=	uschedule
 SUBDIR+=	ushare
 SUBDIR+=	ussp-push
