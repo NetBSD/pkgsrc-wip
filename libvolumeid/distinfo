@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/21 14:02:28 krub1 Exp $
+
+SHA1 (libvolume_id-0.77.0.tgz) = 9fe525bd4a44135d2c327763074a3e67d376cc8b
+RMD160 (libvolume_id-0.77.0.tgz) = 8d452ea6d15c514494c8e534c56f71ee55d6c532
+Size (libvolume_id-0.77.0.tgz) = 27704 bytes
