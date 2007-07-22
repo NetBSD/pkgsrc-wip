@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/22 08:35:51 shattered Exp $
 
 --- Quota.xs.orig	2005-07-10 15:18:58.000000000 -0300
 +++ Quota.xs
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
  #ifndef NO_MNTENT
  FILE *mtab = NULL;
  #else
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 300000000)
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
 +struct statvfs *mntp, *mtab = NULL;
 +#else
  struct statfs *mntp, *mtab = NULL;
@@ -19,13 +19,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/14 07:32:24 udontknow Exp $
              else
  #endif
 -#ifndef __OpenBSD__
-+#if (!defined(__OpenBSD__) && (!defined(__NetBSD__) || __NetBSD_Version__ < 3000000))
++#if (!defined(__OpenBSD__) && (!defined(__NetBSD__) || __NetBSD_Version__ < 299000900))
                PUSHs(sv_2mortal(newSViv((IV)mntp->f_type)));
  #else
                /* OpenBSD struct statfs lacks the f_type member (starting with release 2.7) */
                PUSHs(sv_2mortal(newSViv((IV)"")));
  #endif
-+#if (defined(__NetBSD__) && __NetBSD_Version__ >= 3000000)
++#if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
 +            PUSHs(sv_2mortal(newSViv((IV)mntp->f_flag)));
 +#else
  	    PUSHs(sv_2mortal(newSViv((IV)mntp->f_flags)));
