@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/09 09:49:30 netcap Exp $
+$NetBSD: distinfo,v 1.2 2007/07/23 13:12:53 netcap Exp $
 
-SHA1 (ripit-3.5.1.tar.bz2) = caa832feb106201d92b906a95a983d3f15000b08
-RMD160 (ripit-3.5.1.tar.bz2) = a5e656fba8f46af645686b0d6854c28113dd2ed9
-Size (ripit-3.5.1.tar.bz2) = 52715 bytes
+SHA1 (ripit-3.6.0.tar.bz2) = ed7e49bbc682bfda21e7fde8002ca04a6b8136ef
+RMD160 (ripit-3.6.0.tar.bz2) = 42c37058540c871c1ab574c87e968046a58aae5b
+Size (ripit-3.6.0.tar.bz2) = 67702 bytes

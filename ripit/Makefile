@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 09:49:30 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/23 13:12:53 netcap Exp $
 #
 
-DISTNAME=	ripit-3.5.1
+DISTNAME=	ripit-3.6.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.suwald.com/ripit/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ COMMENT=	Perl-script frontend for encoding audio CDs to OGG/MP3 files
 
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	${WRKSRC}/ripit
+REPLACE_PERL=	${WRKSRC}/ripit.pl
 
 DEPENDS=	p5-CDDB_get>=0:../../audio/p5-CDDB_get
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
@@ -30,16 +30,16 @@ DEPENDS+=	vorbis-tools>=0:../../audio/vorbis-tools
 RAWPART_cmd=	/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 SUBST_CLASSES+=		fix-dev
 SUBST_STAGE.fix-dev=	do-configure
-SUBST_FILES.fix-dev=	ripit ripit.1
+SUBST_FILES.fix-dev=	ripit.pl ripit.1
 SUBST_SED.fix-dev=	-e 's,/dev/cdrom,/dev/rcd0${RAWPART_cmd:sh},g'
 .endif
 
 do-configure:
-	${MV} ${WRKSRC}/ripit ${WRKSRC}/ripit.dist
-	${SED} -e 's,my @coder.*;,my @coder= \(1\);,1' ${WRKSRC}/ripit.dist > ${WRKSRC}/ripit
+	${MV} ${WRKSRC}/ripit.pl ${WRKSRC}/ripit.pl.dist
+	${SED} -e 's,my @coder.*;,my @coder= \(1\);,1' ${WRKSRC}/ripit.pl.dist > ${WRKSRC}/ripit.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ripit ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/ripit.pl ${PREFIX}/bin/ripit
 	${INSTALL_MAN} ${WRKSRC}/ripit.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ripit
 	${INSTALL_DATA} ${WRKSRC}/config ${PREFIX}/share/examples/ripit
