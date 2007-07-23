@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/20 18:32:25 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/07/23 23:53:01 netcap Exp $
 ${EMACS_INFOPREFIX}/jabber.info
-${EMACS_LISPPREFIX}/emacs-jabber/hex-util.el
+${EMACS_LISPPREFIX}/emacs-jabber/fsm.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-activity.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-ahc-presence.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-ahc.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-alert.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-autoaway.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-avatar.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-browse.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-chat.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-chatbuffer.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-compose.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-conn.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-core.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-disco.el
@@ -16,6 +19,7 @@ ${EMACS_LISPPREFIX}/emacs-jabber/jabber-export.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-feature-neg.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-festival.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-ft-client.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-ft-common.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-ft-server.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-history.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-iq.el
@@ -25,7 +29,9 @@ ${EMACS_LISPPREFIX}/emacs-jabber/jabber-logon.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-menu.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-modeline.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-muc.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-newdisco.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-presence.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-private.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-ratpoison.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-register.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-roster.el
@@ -34,9 +40,12 @@ ${EMACS_LISPPREFIX}/emacs-jabber/jabber-sawfish.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-screen.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-search.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-si-client.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-si-common.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-si-server.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-socks5.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-time.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-util.el
+${EMACS_LISPPREFIX}/emacs-jabber/jabber-vcard-avatars.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-vcard.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-version.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-watch.el
@@ -44,5 +53,5 @@ ${EMACS_LISPPREFIX}/emacs-jabber/jabber-widget.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-xmessage.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-xml.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber.el
-${EMACS_LISPPREFIX}/emacs-jabber/sha1.el
+${EMACS_LISPPREFIX}/emacs-jabber/srv.el
 @dirrm ${EMACS_LISPPREFIX}/emacs-jabber
