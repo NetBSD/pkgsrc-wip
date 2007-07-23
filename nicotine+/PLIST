@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/15 01:19:28 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/07/23 01:54:45 netcap Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
 ${PYSITELIB}/pynicotine/ConfigParser.py
@@ -16,9 +16,6 @@ ${PYSITELIB}/pynicotine/gtkgui/__init__.pyo
 ${PYSITELIB}/pynicotine/gtkgui/about.py
 ${PYSITELIB}/pynicotine/gtkgui/about.pyc
 ${PYSITELIB}/pynicotine/gtkgui/about.pyo
-${PYSITELIB}/pynicotine/gtkgui/browsetreemodels.py
-${PYSITELIB}/pynicotine/gtkgui/browsetreemodels.pyc
-${PYSITELIB}/pynicotine/gtkgui/browsetreemodels.pyo
 ${PYSITELIB}/pynicotine/gtkgui/chatrooms.py
 ${PYSITELIB}/pynicotine/gtkgui/chatrooms.pyc
 ${PYSITELIB}/pynicotine/gtkgui/chatrooms.pyo
@@ -91,6 +88,9 @@ ${PYSITELIB}/pynicotine/gtkgui/userlist.pyo
 ${PYSITELIB}/pynicotine/gtkgui/utils.py
 ${PYSITELIB}/pynicotine/gtkgui/utils.pyc
 ${PYSITELIB}/pynicotine/gtkgui/utils.pyo
+${PYSITELIB}/pynicotine/multiselect.py
+${PYSITELIB}/pynicotine/multiselect.pyc
+${PYSITELIB}/pynicotine/multiselect.pyo
 ${PYSITELIB}/pynicotine/mp3.py
 ${PYSITELIB}/pynicotine/mp3.pyc
 ${PYSITELIB}/pynicotine/mp3.pyo

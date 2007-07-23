@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/04/15 01:19:28 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/23 01:54:45 netcap Exp $
 #
 
-DISTNAME=	nicotine+-1.2.7.1
+DISTNAME=	nicotine+-1.2.8
 CATEGORIES=	net audio x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nicotine-plus/}
 EXTRACT_SUFX=	.tar.bz2
