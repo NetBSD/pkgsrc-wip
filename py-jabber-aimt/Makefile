@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/06/20 05:30:41 schnoebe Exp $
+# $NetBSD: Makefile,v 1.11 2007/07/24 15:56:59 schnoebe Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -15,6 +15,7 @@ COMMENT=		Transport connecting Jabber to the AOL IM network
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6nb1:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
 DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
 DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.7.0:../../wip/py-twisted-web
