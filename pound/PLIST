@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/24 21:29:51 netcap Exp $
+sbin/pound
+sbin/poundctl
+man/man8/pound.8
+man/man8/poundctl.8
