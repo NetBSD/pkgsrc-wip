@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2630 2007/07/21 14:20:25 krub1 Exp $
+# $Id: Makefile,v 1.2631 2007/07/24 21:31:47 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1285,6 +1285,7 @@ SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql80-postgis
 SUBDIR+=	postoffice
+SUBDIR+=	pound
 SUBDIR+=	powerdns-recursor
 SUBDIR+=	ppp
 SUBDIR+=	ppr
