@@ -1,28 +1,13 @@
-$NetBSD: patch-am,v 1.3 2007/07/04 06:03:37 bsadewitz Exp $
+$NetBSD: patch-am,v 1.4 2007/07/24 19:30:12 bsadewitz Exp $
 
---- src/mesa/shader/slang/slang_codegen.c.orig	2007-06-21 18:10:54.000000000 -0400
-+++ src/mesa/shader/slang/slang_codegen.c
-@@ -1261,15 +1261,23 @@ make_writemask(const char *field)
-    while (*field) {
-       switch (*field) {
-       case 'x':
-+      case 's':
-+      case 'r':
-          mask |= WRITEMASK_X;
-          break;
-       case 'y':
-+      case 't':
-+      case 'g':
-          mask |= WRITEMASK_Y;
-          break;
-       case 'z':
-+      case 'p':
-+      case 'b':
-          mask |= WRITEMASK_Z;
-          break;
-       case 'w':
-+      case 'q':
-+      case 'a':
-          mask |= WRITEMASK_W;
-          break;
-       default:
+--- src/mesa/shader/program.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ src/mesa/shader/program.c
+@@ -333,7 +333,7 @@ _mesa_clone_program(GLcontext *ctx, cons
+ {
+    struct gl_program *clone;
+ 
+-   clone = _mesa_new_program(ctx, prog->Target, prog->Id);
++   clone = ctx->Driver.NewProgram(ctx, prog->Target, prog->Id);
+    if (!clone)
+       return NULL;
+ 
