@@ -1,34 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/12/05 03:01:34 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2007/07/24 23:47:07 bsadewitz Exp $
 
-first part already in CVS
-second part has been submitted as a bug
-
---- configure.orig	2006-10-08 17:36:07.000000000 -0500
-+++ configure	2006-12-04 13:17:39.000000000 -0600
-@@ -2169,8 +2169,6 @@
+--- configure.orig	2007-06-28 10:21:30.000000000 -0400
++++ configure
+@@ -5283,7 +5283,7 @@ else
+   echo "    Symbolic link(s) to legacy rules: $xkb_rules_symlink"
+ fi
  
- 
- 
--prefix=/usr
--
- # Extract the first word of "xkbcomp", so it can be a program name with args.
- set dummy xkbcomp; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -2263,7 +2261,7 @@
- 
- 
- 
--if test "x$enable_xkbcomp_symlink" == "xyes"; then
-+if test "x$enable_xkbcomp_symlink" = "xyes"; then
-   CREATE_XKBCOMP_SYMLINK_TRUE=
-   CREATE_XKBCOMP_SYMLINK_FALSE='#'
+-if test "$enable_compat_rules" == "yes" ; then
++if test "$enable_compat_rules" = "yes" ; then
+   echo "    Compatibility rules are included"
  else
-@@ -2274,7 +2272,7 @@
- 
- 
- 
--if test "x$enable_compat_rules" == "xyes"; then
-+if test "x$enable_compat_rules" = "xyes"; then
-   USE_COMPAT_RULES_TRUE=
-   USE_COMPAT_RULES_FALSE='#'
- else
+   echo "    Compatibility rules are not included"
