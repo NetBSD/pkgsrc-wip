@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/04/07 18:45:55 schnoebe Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/24 15:52:37 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -77,5 +77,6 @@ SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
 
+.include "../../security/py-amkCrypto/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
