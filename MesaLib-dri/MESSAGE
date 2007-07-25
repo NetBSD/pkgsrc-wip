@@ -1,11 +1,15 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/07/18 19:23:32 bsadewitz Exp $
+$NetBSD: MESSAGE,v 1.2 2007/07/25 00:13:49 bsadewitz Exp $
 
 To use this package as a replacement for graphics/MesaLib, simply copy
 the replacement buildlink3.mk file in this directory to
 ${PKGSRCDIR}/graphics/MesaLib/buildlink3.mk.  I hope to soon have the rest
-of the MesaLib packages available; in the meantime, you can try changing
-the version number of the Mesa packages in pkgsrc-wip to 7.0.  If you have
-trouble, please email me at blair.sadewitz@gmail.com and I will 
-endeavor to help you.
+of the MesaLib packages available; in the meantime, you may try appying
+the pkgsrc-mesa.diff file here to pkgsrc.  That should enable you to 
+build glu, glut, and glx-utils (version 7.0) out-of-the-box 
+(this is only for NetBSD, but why would you want this package if you 
+weren't running it?).
+
+If you have trouble, please email me at blair.sadewitz@gmail.com and I 
+will endeavor to help you.
 ==========================================================================
