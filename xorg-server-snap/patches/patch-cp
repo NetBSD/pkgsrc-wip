@@ -6,7 +6,7 @@ X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=0fb4
 DRI: Fix build warning.
 ---
 
---- hw/xfree86/dri/drimodule.c
+--- hw/xfree86/dri/drimodule.c.orig	2006-11-30 20:40:10.000000000 -0500
 +++ hw/xfree86/dri/drimodule.c
 @@ -88,6 +88,6 @@ driSetup(pointer module, pointer opts, i
      drmSetServerInfo(&DRIDRMServerInfo);

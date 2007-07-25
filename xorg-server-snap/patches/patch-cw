@@ -1,0 +1,22 @@
+$NetBSD: patch-cw,v 1.1 2007/07/25 19:38:29 bsadewitz Exp $
+
+--- ../Mesa-7.0/src/mesa/shader/slang/slang_codegen.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ ../Mesa-7.0/src/mesa/shader/slang/slang_codegen.c
+@@ -1,6 +1,6 @@
+ /*
+  * Mesa 3-D graphics library
+- * Version:  6.5.3
++ * Version:  7.1
+  *
+  * Copyright (C) 2005-2007  Brian Paul   All Rights Reserved.
+  *
+@@ -2320,7 +2320,8 @@ _slang_gen_field(slang_assemble_ctx * A,
+          n = _slang_gen_swizzle(n, swizzle);
+       return n;
+    }
+-   else if (ti.spec.type == SLANG_SPEC_FLOAT) {
++   else if (   ti.spec.type == SLANG_SPEC_FLOAT
++            || ti.spec.type == SLANG_SPEC_INT) {
+       const GLuint rows = 1;
+       slang_swizzle swz;
+       slang_ir_node *n;

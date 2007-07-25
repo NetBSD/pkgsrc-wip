@@ -1,6 +1,6 @@
-$NetBSD: patch-ch,v 1.1 2007/06/28 15:18:35 bsadewitz Exp $
+$NetBSD: patch-ch,v 1.2 2007/07/25 19:38:29 bsadewitz Exp $
 
---- /dev/null	2007-06-28 07:32:35.000000000 -0400
+--- GL/mesa/vbo/Makefile.am.orig	2007-07-24 16:57:46.000000000 -0400
 +++ GL/mesa/vbo/Makefile.am
 @@ -0,0 +1,35 @@
 +noinst_LTLIBRARIES = libvbo.la
