@@ -1,0 +1,22 @@
+$NetBSD: patch-aq,v 1.5 2007/07/27 07:38:38 bsadewitz Exp $
+
+--- src/mesa/shader/slang/slang_ir.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ src/mesa/shader/slang/slang_ir.c
+@@ -27,7 +27,7 @@
+ #include "context.h"
+ #include "slang_ir.h"
+ #include "slang_mem.h"
+-#include "prog_print.h"
++#include "shader/prog_print.h"
+ 
+ 
+ static const slang_ir_info IrInfo[] = {
+@@ -311,7 +311,7 @@ _slang_print_ir_tree(const slang_ir_node
+       printf("RETURN\n");
+       break;
+    case IR_CALL:
+-      printf("CALL\n");
++      printf("CALL %s\n", n->Label->Name);
+       break;
+ 
+    case IR_LOOP:
