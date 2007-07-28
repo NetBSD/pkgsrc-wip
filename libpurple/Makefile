@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/17 21:45:46 kheinz Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/28 11:52:21 lexort Exp $
 #
 
 PKGNAME=	libpurple-0.0.1
@@ -31,6 +31,9 @@ CONFIGURE_ARGS+=	--disable-consoleui
 
 ## #post-build:
 ## #	cp ${WRKSRC}/libpurple/gconf/purple.schemas ${WRKSRC}/purple.schemas
+
+# XXX Use textproc/intltool instead of included intltool.
+# XXX On NetBSD 3.0: iconv: iconv_open(UTF-8, tis-620): Invalid argument
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
