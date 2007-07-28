@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/07/07 00:29:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/28 12:08:40 lexort Exp $
 #
 
-PKGNAME=		pidgin-2.0.1
+PKGNAME=		pidgin-${VERSION}
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
 PKGREVISION=		1
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/07/28 11:52:21 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/28 12:08:40 lexort Exp $
 #
 
-PKGNAME=	libpurple-0.0.1
+PKGNAME=	libpurple-${VERSION}
 
 COMMENT=	Multi-protocol Instant Messaging client backend
 
