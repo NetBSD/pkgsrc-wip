@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/07/23 23:53:01 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2007/07/29 20:32:40 netcap Exp $
 
 DISTNAME=     emacs-jabber-0.7.1
 PKGNAME=      ${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=   tonio@NetBSD.org
 HOMEPAGE=     http://emacs-jabber.sourceforge.net/
 COMMENT=      Minimal jabber client for emacs
 
-DEPENDS+=     ${EMACS_PKGNAME_PREFIX}gnus>=5.10:../../mail/gnus
+#DEPENDS+=     ${EMACS_PKGNAME_PREFIX}gnus>=5.10:../../mail/gnus
 USE_TOOLS+=   makeinfo
 INFO_FILES=   yes
 
