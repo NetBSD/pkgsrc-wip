@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/29 15:47:18 obache Exp $
+
+SHA1 (bakery-2.4.1.tar.gz) = 00857e54a24eee70017180fb8b7734534d3c4c32
+RMD160 (bakery-2.4.1.tar.gz) = a244252ccb45f4ee39f1943f65c2619d1f77c4ad
+Size (bakery-2.4.1.tar.gz) = 523924 bytes
