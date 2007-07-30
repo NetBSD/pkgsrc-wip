@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2007/07/27 07:38:38 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.10 2007/07/30 02:56:15 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
+PKGNAME=	MesaLib-7.0
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.mesa3d.org/beta/
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
-MESA_VERSION=	7.0
-PKGREVISION=	4
+MESA_VERSION=	7.0.1-rc2
+PKGREVISION=	5
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
@@ -29,13 +31,23 @@ GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM -fno-strict-aliasing
+DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing -ffast-math
 CFLAGS.NetBSD+=-D_REENTRANT -D_PTHREADS
-CFLAGS+=	${DRI_CFLAGS:M*:Q}
-PKGSRC_PICFLAGS+=-fPIC -DPIC
+PKGSRC_PICFLAGS=-fPIC -DPIC
 
 .include "subst.mk"
 .include "options.mk"
+
+.if !empty(PKG_OPTIONS:Mx86)  # The idea is to not mess up the CPU autodetection
+			      # will this work?
+ARCHSTRING=		${CFLAGS:M[-]march*}
+TUNESTRING=		${ARCHSTRING:C/march/mtune/}
+.  if !empty(ARCHSTRING)
+BUILDLINK_TRANSFORM+=	opt:${ARCHSTRING}:${TUNESTRING}
+.  endif
+.endif
+
+CFLAGS+=	${DRI_CFLAGS}
 MAKE_ENV+=	DRI_DIRS=${DRI_DRIVERS:M*:Q}
 MAKE_ENV+=	DRI_MODULE_PATH=${DRI_MODULE_PATH:Q}
 MAKE_ENV+=	PKGSRC_PICFLAGS=${PKGSRC_PICFLAGS:Q}
@@ -45,7 +57,6 @@ MAKE_ENV+=	PKGSRC_PICFLAGS=${PKGSRC_PICFLAGS:Q}
 .if !empty(CC_VERSION:Mgcc-4*)
 CFLAGS+=	-fvisibility=hidden # Mostly for x86_64
 .endif
-
 
 post-extract:
 	${CP}   ${WRKSRC}/configs/freebsd-dri ${WRKSRC}/configs/netbsd-dri

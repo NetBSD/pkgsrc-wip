@@ -29,6 +29,7 @@ PLIST_SUBST+=	${_drv}="@comment "
 
 .if !empty(PKG_OPTIONS:Mx86)
 BUILD_TARGET=	netbsd-dri-x86
+CFLAGS+=	-DUSE_X86_ASM -DUSE_3DNOW_ASM -DUSE_SSE_ASM -DUSE_MMX_ASM
 .elif !empty(PKG_OPTIONS:Mx86_64)
 BUILD_TARGET=	netbsd-dri-amd64
 CFLAGS+=	-D__GLX_ALIGN64
