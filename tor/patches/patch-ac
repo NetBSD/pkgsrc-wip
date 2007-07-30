@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2007/02/12 18:29:35 netcap Exp $
+$NetBSD: patch-ac,v 1.5 2007/07/30 22:47:36 netcap Exp $
 
---- contrib/Makefile.in.orig	2007-02-07 06:36:25.000000000 +0100
+--- contrib/Makefile.in.orig	2007-07-30 05:41:18.000000000 +0200
 +++ contrib/Makefile.in
-@@ -81,8 +81,6 @@ confdir = $(sysconfdir)/tor
- 
+@@ -185,7 +185,7 @@ SUBDIRS = osx suse
+ DIST_SUBDIRS = osx suse
+ confdir = $(sysconfdir)/tor
  EXTRA_DIST = exitlist tor-tsocks.conf torify.1 TorControl.py tor.nsi.in tor.sh torctl rc.subr ExerciseServer.py PathDemo.py cross.sh tor-mingw.nsi.in package_nsis-mingw.sh tor.ico
- 
 -conf_DATA = tor-tsocks.conf
--
++#conf_DATA = tor-tsocks.conf
  bin_SCRIPTS = torify
- 
  man_MANS = torify.1
+ all: all-recursive
