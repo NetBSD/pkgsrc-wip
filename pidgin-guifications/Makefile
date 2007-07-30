@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/06/24 19:17:03 briandealwis Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/30 14:25:46 lexort Exp $
 #
 
 DISTNAME=		pidgin-guifications-2.14
@@ -15,5 +15,5 @@ USE_TOOLS+=		gmake pkg-config intltool
 USE_LIBTOOL=		yes
 USE_X11=                YES
 
-.include "../../wip/pidgin/buildlink3.mk"
+.include "../../chat/pidgin/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
