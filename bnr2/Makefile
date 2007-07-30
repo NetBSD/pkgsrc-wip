@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/07/30 15:49:10 jlamwww Exp $
+# $NetBSD: Makefile,v 1.21 2007/07/30 20:26:53 thomasklausner Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -13,7 +13,7 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.bnr2.org/
 COMMENT=		USENET bulk binary downloader (X11)
 
-EMUL_PLATFORMS=		linix-i386
+EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	jpeg x11
 
 WRKSRC=			${WRKDIR}/BNR2
