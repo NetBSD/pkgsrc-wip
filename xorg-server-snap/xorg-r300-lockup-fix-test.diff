@@ -1,0 +1,16 @@
+--- hw/xfree86/dri/dri.c.orig   Fri Oct 13 15:52:55 2006
++++ hw/xfree86/dri/dri.c        Mon Oct 30 22:06:48 2006
+@@ -1577,8 +1577,12 @@
+        /* unwrap */
+        pScreen->WindowExposures = pDRIPriv->wrap.WindowExposures;
+
++       DRILock(pScreen, 0);
++
+        /* call lower layers */
+        (*pScreen->WindowExposures)(pWin, prgn, bsreg);
++
++       DRIUnlock(pScreen);
+
+        /* rewrap */
+        pDRIPriv->wrap.WindowExposures = pScreen->WindowExposures;
+

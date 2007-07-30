@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/27 07:36:05 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/30 04:27:11 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	blair.sadewitz@gmail.com
 COMMENT=	Xorg X11 Server from modular X.org X11
 
-MESA_VERSION=	7.0
+MESA_VERSION=	7.0.1-rc2
 
 DRI_MODULE_PATH?=	lib/xorg/modules/dri	# Relative to ${PREFIX}
 
@@ -36,8 +36,9 @@ PKG_OPTIONS_LEGACY_OPTS=glx:dri
 
 .if !empty(PKG_OPTIONS:Mdri)
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		MesaLib-${MESA_VERSION}.tar.bz2
-SITES.MesaLib-${MESA_VERSION}.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+DISTFILES+=		MesaLib-${MESA_VERSION}.tar.gz
+#SITES.MesaLib-${MESA_VERSION}.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+SITES.MesaLib-${MESA_VERSION}.tar.gz= http://www.mesa3d.org/beta/
 MESA_SRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-glx
