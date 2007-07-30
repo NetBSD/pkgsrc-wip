@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/30 15:49:10 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/30 20:27:30 thomasklausner Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -20,10 +20,10 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 # XXX still complains about missing font
 DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
-DEPENDS+=	suse_fontconfig>=10.0nb2:../../emulators/suse100_fontconfig
-DEPENDS+=	suse_glx>=10.0nb2:../../emulators/suse100_glx
 
-EMUL_PLATFORMS=		linix-i386
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	fontconfig glx
+
 NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
 
 GE_VERSION=		4.1.7076.4458
