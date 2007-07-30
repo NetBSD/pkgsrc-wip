@@ -1,19 +1,13 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2005/10/21 19:15:21 ghen Exp $
+@comment $NetBSD: PLIST.freebsd-i386,v 1.1 2007/07/30 15:49:10 jlamwww Exp $
 bin/opera
-lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
-lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
-lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/spellcheck.so
-lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/works
-lib/opera/plugins/libnpp.so
-lib/opera/plugins/operamotifwrapper-1
-lib/opera/plugins/operamotifwrapper-2
-lib/opera/plugins/operamotifwrapper-3
-lib/opera/plugins/operamotifwrapper-4
-lib/opera/plugins/operaplugincleaner
 man/man1/opera.1
 share/doc/opera/LICENSE
 share/doc/opera/help
-share/opera/chartables-be.bin
+share/opera/bin/missingsyms.so
+share/opera/bin/spellcheck.so
+share/opera/bin/opera
+share/opera/bin/works
+share/opera/chartables.bin
 share/opera/config/opera6rc
 share/opera/config/opera6rc.fixed
 share/opera/help/advertising.html
@@ -25,6 +19,7 @@ share/opera/help/fonts.html
 share/opera/help/glossary.html
 share/opera/help/help.css
 share/opera/help/history.html
+share/opera/help/hotlist.html
 share/opera/help/index.html
 share/opera/help/input.html
 share/opera/help/keyboard.html
@@ -87,10 +82,12 @@ share/opera/locale/en/lngcode.txt
 share/opera/locale/en/search.ini
 share/opera/locale/english.lng
 share/opera/opera6.adr
+share/opera/plugins/libnpp.so
+share/opera/plugins/operamotifwrapper
+share/opera/plugins/operaplugincleaner
 share/opera/search.ini
 share/opera/skin/standard_skin.zip
 share/opera/skin/windows_skin.zip
-share/opera/styles/OPF.css
 share/opera/styles/about.css
 share/opera/styles/cache.css
 share/opera/styles/csr.css
@@ -117,9 +114,12 @@ share/opera/styles/user/showstructure.css
 share/opera/styles/user/textonly.css
 share/opera/styles/user/userstyle.ini
 share/opera/styles/wml.css
+share/opera/styles/OPF.css
+@dirrm share/doc/opera
 @dirrm share/opera/styles/user
 @dirrm share/opera/styles
 @dirrm share/opera/skin
+@comment @dirrm share/opera/plugins
 @dirrm share/opera/locale/en
 @dirrm share/opera/locale
 @dirrm share/opera/java
@@ -127,8 +127,5 @@ share/opera/styles/wml.css
 @dirrm share/opera/images
 @dirrm share/opera/help
 @dirrm share/opera/config
-@dirrm share/opera
-@dirrm share/doc/opera
-@dirrm lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1
-@comment @dirrm lib/opera/plugins
-@comment @dirrm lib/opera
+@dirrm share/opera/bin
+@comment @dirrm share/opera

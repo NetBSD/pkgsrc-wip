@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:29 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/30 15:49:11 jlamwww Exp $
 #
 
 DISTNAME=		postal2mpdemo-lnx-1407
@@ -12,7 +12,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://files3.worthplaying.com/postal2/
 COMMENT=		Demo of a violent 3D game
 
-DEPENDS+=		suse_glx>=7.3:../../emulators/suse_glx/
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	glx
+SUSE_VERSION_REQD=	7.3
+
+# Would install outside of ${LOCALBASE} on Linux.
+NOT_FOR_PLATFORM=	Linux-*-*
 
 RESTRICTED=		It's huge, it's demo, it's a game, I'm not sure if we can redistribute it
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -20,7 +25,7 @@ NO_PKG_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
 LICENSE=		postal2mpdemo-license
 
-POSTAL_DIR=		${PREFIX}/emul/linux/usr/games/postal
+POSTAL_DIR=		${EMULDIR}/usr/games/postal
 
 do-install:
 	cd ${WRKSRC} && ./postal2mpdemo-lnx-1407.run --target ${WRKSRC}/tmp \

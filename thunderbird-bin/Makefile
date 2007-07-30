@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/09 00:06:05 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/30 15:49:11 jlamwww Exp $
 
 MOZILLA=	thunderbird
 MOZ_VER=	1.5.0.8
@@ -11,6 +11,6 @@ DIST_SUBDIR=	${MOZILLA}/${MOZ_DISTDIR}
 # binary package is built against GTK2
 MOZ_GTK2=	YES
 
-ONLY_FOR_PLATFORM+=	Linux-*-i386
+EMUL_PLATFORMS=		linux-i386
 
 .include "../../www/seamonkey-bin/Makefile.common"

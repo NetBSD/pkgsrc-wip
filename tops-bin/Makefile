@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/04 17:20:13 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/30 15:49:11 jlamwww Exp $
 #
 
 DISTNAME=		Tops
@@ -14,9 +14,10 @@ COMMENT=		Protein Topology Cartoons Tools
 USE_JAVA=		run
 PLIST_SUBST+=		TOPS_JAVA_HOME=${PKG_JAVA_HOME:S=${PREFIX}/==}
 
-CHECK_SHLIBS=		no
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	x11
 
-NO_BUILD=		yes
+BUILD_DIRS=		# empty
 
 do-configure:
 	${SED} -e "s|java|${PKG_JAVA_HOME}/bin/java|" \
@@ -32,7 +33,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/Tops ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/EditTops ${PREFIX}/bin
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/java-vm.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

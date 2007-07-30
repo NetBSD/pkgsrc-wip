@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:36 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2007/07/30 15:49:11 jlamwww Exp $
 
 DISTNAME=	shoutcast-1-9-2-linux-glibc6
 PKGNAME=	shoutcast-1.9.2
@@ -9,17 +9,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.shoutcast.com/
 COMMENT=	Internet Streaming server for MP3 audio
 
-DEPENDS+=	suse_base>=6.4:../../emulators/suse_base
+EMUL_PLATFORMS=		linux-i386
+NOT_FOR_PLATFORM=	NetBSD-[2-9]*-*
 
-ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386
-NO_CONFIGURE=	yes
+EMUL_MODULES.linux=	base
+
+BUILD_DIRS=		# empty
+
 PKG_SYSCONFSUBDIR=	shoutcast
-
-# check-shlibs will fail unless LD_LIBRARY_PATH points to /emul/linux, but
-# the binary runs regardless, so..
-CHECK_SHLIBS=	no
-
-do-build:
 
 post-build:
 	@${SED} -e "s,@LOCALBASE@,${LOCALBASE},g" < ${WRKSRC}/sc_serv.conf > ${WRKSRC}/tmp
@@ -27,7 +24,5 @@ post-build:
 
 do-install:
 	@${FILESDIR}/install.sh ${WRKDIR}/shoutcast-1-9-2-linux-glibc6 ${LOCALBASE} ${PKG_SYSCONFDIR}
-
-.include "../../emulators/suse_linux/Makefile.application"
 
 .include "../../mk/bsd.pkg.mk"

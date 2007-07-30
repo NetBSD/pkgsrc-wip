@@ -1,26 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/08 01:12:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2007/07/30 15:49:11 jlamwww Exp $
 
 DISTNAME=		suse_SDL-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTFILES=		SDL-1.2.8-8.${SUSE_ARCH}.rpm			\
+			aalib-1.4.0-290.${SUSE_ARCH}.rpm		\
+			gpm-1.20.1-309.${SUSE_ARCH}.rpm
 
 MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the SDL library
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse100_base
-DEPENDS+=		suse_slang-${SUSE_VERSION}{,nb*}:../../emulators/suse100_slang
-
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
-
-.include "../../mk/bsd.prefs.mk"
+EMUL_MODULES.linux=	base slang
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

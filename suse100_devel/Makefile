@@ -1,27 +1,28 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 11:51:00 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/30 15:49:11 jlamwww Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE100}
-DISTFILES=		${RPMFILES}
+DISTFILES=		binutils-2.16.91.0.2-8.2.${SUSE_ARCH}.rpm \
+			cpp-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-c++-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-fortran-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-locale-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-mudflap-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			gcc-objc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			glibc-devel-2.3.5-40.${SUSE_ARCH}.rpm \
+			gmp-4.1.4-6.${SUSE_ARCH}.rpm \
+			libobjc-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			libstdc++-devel-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
+			make-3.80-188.${SUSE_ARCH}.rpm
 
 MAINTAINER=		hauke@NetBSD.org
-HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package - development tools
 
-DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse100_base
+EMUL_MODULES.linux=	base
 
-EXTRACT_ONLY=		# empty
-NO_BUILD=		YES
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
-
-.if exists(Makefile.${MACHINE_ARCH})
-.include "Makefile.${MACHINE_ARCH}"
-.endif
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EMULDIR}/usr/i586-suse-linux/lib
+OWN_DIRS+=		${EMULDIR}/usr/i586-suse-linux/lib
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

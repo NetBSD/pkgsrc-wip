@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/10/29 08:32:49 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2007/07/30 15:49:10 jlamwww Exp $
 
 DISTNAME=		opera-9.0beta1
 CATEGORIES=		www
@@ -14,40 +14,59 @@ MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://snapshot.opera.com/
 COMMENT=		Small, fast and customizable WWW client
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386 DragonFly-*-i386
-
 LICENSE=		opera-850-license
 
-NO_CONFIGURE=		YES
-USE_LANGUAGES=		# empty
+EMUL_PLATFORMS=		freebsd-i386
+EMUL_PLATFORMS+=	linux-i386
+EMUL_PLATFORMS+=	solaris-sparc
 
-.include "../../mk/bsd.prefs.mk"
+EMUL_MODULES.linux=	x11
+SUSE_VERSION_REQD=	7.3
+
+USE_LANGUAGES=		# empty
+BUILD_DIRS=		# empty
+EMUL_PKG_FMT=		plain
 
 OPERA_LANG=		en
 OPERA_VER_DATE=		20060411
 OPERA_PKG_VERSION=	9.0
 OPERA_PKG_VERSION_DIR=	900/beta1
 
-_OPERA_OPSYS?=		${OPSYS}
-_OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
+.include "../../mk/bsd.prefs.mk"
 
-.if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
-DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+# This package installs from an RPM directly into "/usr" on a Linux
+# system, which can't be managed by pkgsrc.
+#
+NOT_FOR_PLATFORMS=      Linux-*-*
 
-# we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
-DIST_SUBDIR=		.
-EXTRACT_ONLY=		# empty
-PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-
+.if ${EMUL_PLATFORM} == "linux-i386"
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
 OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
-RPMFILES=		${DISTFILES}
-RPM2PKGSTRIP=		0
+WRKSRC=			${WRKDIR}
+BUILD_DIRS=		# empty
 
-.elif (${_OPERA_OPSYS} == FreeBSD)
+EMUL_PKG_FMT=		rpm
+RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
+RPM2PKG_STAGE=		do-install
+
+do-build:
+	${SED} -e 's#@EMULDIR@#${EMULDIR}#g'				\
+		${FILESDIR}/opera.sh > ${WRKDIR}/opera
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
+	${LN} -fs ${EMULDIR}/usr/share/man/man1/opera.1			\
+		${PREFIX}/${PKGMANDIR}/man1
+	${ECHO} "bin/opera" >> ${RPM2PKG_PLIST}
+	${ECHO} "${PKGMANDIR}/man1/opera.1" >> ${RPM2PKG_PLIST}
+
+.elif ${EMUL_PLATFORM} == "freebsd-i386"
+ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
+EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
 OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
@@ -57,8 +76,10 @@ WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
 OWN_DIRS=		${PREFIX}/share/opera/plugins
 
-.elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
+.elif ${EMUL_PLATFORM} == "solaris-sparc"
+ONLY_FOR_PLATFORM+=	SunOS-*-sparc*
 EXTRACT_SUFX=		.tar.bz2
+SOLARIS_VERSION_REQD=	8
 OPERA_ARCH=		-sol8-sparc-local
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/${OPERA_LANG}/${_OPERA_MACHINE_ARCH}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
@@ -76,51 +97,19 @@ CONF_FILES+=		${PREFIX}/share/opera/config/opera6rc \
 CONF_FILES+=		${PREFIX}/share/opera/config/opera6rc.fixed \
 			/etc/opera6rc.fixed
 .  endif
+.endif
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PLIST_SUBST+=		OPERA_VER_DATE=${OPERA_VER_DATE:Q}
 PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION:C/u.*//}
 
-.endif
-
-.if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
-NO_BUILD=		YES
-
+.if ${EMUL_PKG_FMT} == "plain"
 SUBST_CLASSES+=		opera
 SUBST_STAGE.opera=	post-build
 SUBST_FILES.opera=	man/opera.1
 SUBST_SED.opera=	-e 's,/usr/,${PREFIX}/,g'
 
-.endif
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-.if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
-	@ ${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
-		${WRKDIR}/opera
-
-post-install: post-install-manpage
-	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
-
-.include "../../emulators/suse_linux/Makefile.application"
-
-.if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-USE_TOOLS+=		gzip
-.endif
-
-post-install-manpage:
-# The SuSE common makefile defines "MANCOMPRESSED=yes".
-.  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
-	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
-		${PREFIX}/${PKGMANDIR}/man1
-.  else
-	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
-		${PREFIX}/${PKGMANDIR}/man1
-.  endif
-.endif
-
-.if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 do-install:
 	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX}
 	@${ECHO} "=> You can ignore any previous lines about opera6rc"
@@ -129,18 +118,5 @@ do-install:
 post-install:
 	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/${PKGMANDIR}/man1
 .endif
-
-# regenerate distinfo for all ports supported by this package
-opera-distinfo:
-	( ${ECHO} '$$'NetBSD'$$'; \
-	  ${ECHO} ''; \
-	_OPERA_OPSYS=NetBSD ${MAKE} distinfo 1>&2; \
-		${GREP} opera distinfo; \
-	_OPERA_OPSYS=FreeBSD ${MAKE} distinfo 1>&2; \
-		${GREP} opera distinfo; \
-	_OPERA_OPSYS=SunOS _OPERA_MACHINE_ARCH=sparc make distinfo 1>&2; \
-		${GREP} opera distinfo; \
-	) > distinfo.new
-	${MV} -f distinfo.new distinfo
 
 .include "../../mk/bsd.pkg.mk"

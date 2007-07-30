@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/30 12:55:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/30 15:49:10 jlamwww Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -23,16 +23,14 @@ DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
 DEPENDS+=	suse_fontconfig>=10.0nb2:../../emulators/suse100_fontconfig
 DEPENDS+=	suse_glx>=10.0nb2:../../emulators/suse100_glx
 
-ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-i386
+EMUL_PLATFORMS=		linix-i386
+NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
+
 GE_VERSION=		4.1.7076.4458
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
-
-.include "../../mk/bsd.prefs.mk"
-
-SUSE_COMPAT32=		yes
 
 do-build:
 	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth && \
@@ -48,5 +46,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${PREFIX}/bin/googleearth
 	cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${PREFIX}
 
-.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"

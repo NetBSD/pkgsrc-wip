@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:54 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/07/30 15:49:11 jlamwww Exp $
 #
 
 DISTNAME=	urbanterror3
@@ -19,20 +19,13 @@ COMMENT=	Quake III Arena Mod: Urban Terror for Linux
 
 DEPENDS+=		quake3arena-[0-9]*:../../games/quake3arena
 
-NO_BUILD=		yes
 NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no
+
 NO_CONFIGURE=	yes
+BUILD_DIRS=	# empty
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 Linux-*-i386
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-.include "../../mk/x11.buildlink3.mk"
-.else
-.include "../../emulators/suse_linux/Makefile.application"
-.endif
+EMUL_PLATFORMS=		linux-i386
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/zq3ut3.pk3 \

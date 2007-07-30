@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/02 16:38:13 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2007/07/30 15:49:10 jlamwww Exp $
 #
 
 DISTNAME=		azureus-2.2.0.2
@@ -11,14 +11,16 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://azureus.sourceforge.net/
 COMMENT=		Bittorrent client written in java
 
-ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-i386
-
 DEPENDS+=		bash-[0-9]*:../../shells/bash
-DEPENDS+=		suse_gtk2>=10.0:../../emulators/suse100_gtk2
 
-NO_BUILD=		yes
+EMUL_PLATFORMS=		linux-i386
+NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
+
+EMUL_MODULES.linux=	gtk2
+SUSE_VERSION_REQD=	10.0
 
 WRKSRC=			${WRKDIR}/azureus
+BUILD_DIRS=		# empty
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-install
