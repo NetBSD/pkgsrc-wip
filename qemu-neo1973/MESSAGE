@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+fetch u-boot, kernel and filesystem by
+
+cd ${PREFIX}/emul/neo1973; openmoko/download.sh
+
+flash these by
+
+cd ${PREFIX}/emul/neo1973; openmoko/flash.sh
+===========================================================================

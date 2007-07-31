@@ -1,0 +1,53 @@
+$NetBSD: patch-ag,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+
+--- configure.orig	2007-07-19 22:00:54.000000000 +0200
++++ configure	2007-07-19 23:00:55.000000000 +0200
+@@ -29,7 +29,7 @@
+ make="make"
+ install="install"
+ strip="strip"
+-cpu=`uname -m`
++cpu=`uname -p`
+ target_list=""
+ case "$cpu" in
+   i386|i486|i586|i686|i86pc|BePC)
+@@ -44,7 +44,7 @@
+   alpha)
+     cpu="alpha"
+   ;;
+-  "Power Macintosh"|ppc|ppc64)
++  "Power Macintosh"|ppc|ppc64|powerpc)
+     cpu="powerpc"
+   ;;
+   mips)
+@@ -126,6 +126,12 @@
+     kqemu="yes"
+ fi
+ ;;
++DragonFly)
++bsd="yes"
++oss="yes"
++dragonfly="yes"
++;;
++
+ NetBSD)
+ bsd="yes"
+ oss="yes"
+@@ -743,7 +749,7 @@
+ 
+ echo "prefix=$prefix" >> $config_mak
+ echo "bindir=\${prefix}$binsuffix" >> $config_mak
+-echo "mandir=\${prefix}$mansuffix" >> $config_mak
++echo "mandir=\${prefix}$PKGMANDIR" >> $config_mak
+ echo "datadir=\${prefix}$datasuffix" >> $config_mak
+ echo "docdir=\${prefix}$docsuffix" >> $config_mak
+ echo "#define CONFIG_QEMU_SHAREDIR \"$prefix$datasuffix\"" >> $config_h
+@@ -812,6 +818,8 @@
+ if test "$mingw32" = "yes" ; then
+   echo "CONFIG_WIN32=yes" >> $config_mak
+   echo "#define CONFIG_WIN32 1" >> $config_h
++elif test -f "/usr/include/machine/bswap.h" ; then
++  echo "#define HAVE_MACHINE_BSWAP_H 1" >> $config_h
+ else
+   cat > $TMPC << EOF
+ #include <byteswap.h>

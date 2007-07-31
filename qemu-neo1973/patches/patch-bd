@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+
+--- openmoko/flash.sh	2007-07-20 19:54:50.000000000 +0200
++++ openmoko/flash.sh.new	2007-07-22 15:49:18.000000000 +0200
+@@ -136,7 +136,7 @@
+ echo "    "All done.
+ echo
+ echo "    "Read the qemu manual and use a commandline like the following to boot:
+-echo \ \$ $qemu_relative -mtdblock $script_dir_relative/$flash_image -kernel $script_dir_relative/openmoko-kernel.bin -usb -show-cursor
++echo \ \$ cd @@PREFIX@@/emul/neo1973\; $qemu_relative -mtdblock $script_dir_relative/$flash_image -kernel $script_dir_relative/openmoko-kernel.bin -usb -show-cursor
+ echo
+ echo "    "Append \'-snapshot\' to make the flash image read-only so that every
+ echo "    "time emulation starts in the original unmodified state.

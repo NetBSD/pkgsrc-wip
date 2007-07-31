@@ -1,0 +1,32 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+
+--- Makefile.orig	2007-07-19 22:00:53.000000000 +0200
++++ Makefile	2007-07-19 22:36:09.000000000 +0200
+@@ -67,21 +67,21 @@
+ common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
+ 
+ install-doc: $(DOCS)
+-	mkdir -p "$(DESTDIR)$(docdir)"
+-	$(INSTALL) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_MAN_DIR) "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
+ ifndef CONFIG_WIN32
+ 	mkdir -p "$(DESTDIR)$(mandir)/man1"
+ 	$(INSTALL) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
+ endif
+ 
+ install: all $(if $(BUILD_DOCS),install-doc)
+-	mkdir -p "$(DESTDIR)$(bindir)"
+-	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
+-	mkdir -p "$(DESTDIR)$(datadir)"
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
++	$(BSD_INSTALL_DATA_DIR) $(datadir)
+ 	for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
+ 		video.x openbios-sparc32 pxe-ne2k_pci.bin \
+ 		pxe-rtl8139.bin pxe-pcnet.bin; do \
+-		$(INSTALL) -m 644 $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
++		$(BSD_INSTALL_DATA) $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
+ 	done
+ ifndef CONFIG_WIN32
+ 	mkdir -p "$(DESTDIR)$(datadir)/keymaps"

@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+
+SHA1 (qemu-neo1973.tar.gz) = 5e97c004069bc99f6397b826ce5a555852a3849e
+RMD160 (qemu-neo1973.tar.gz) = 33f35831734115fa98ed5006b59c1aebd24d5cdb
+Size (qemu-neo1973.tar.gz) = 5106853 bytes
+SHA1 (patch-aa) = 455575215bad8864da285e1979da9ff7d8476a24
+SHA1 (patch-ac) = 2a9bab161813813c5e3564300854169eb1db7b65
+SHA1 (patch-ag) = a410404f1c5be77496eb6e5e343fd220c5339c37
+SHA1 (patch-ak) = aa7e90f346ee906a1bb5077d77693694b8c79a5e
+SHA1 (patch-am) = a22a3b23284c377afa8113768d68c8ef40c514f9
+SHA1 (patch-ao) = 5506776eedaa3f8e632197e4e654d5c448f4d774
+SHA1 (patch-au) = 7674469b20c9b19335c1836f28373aabdb60d354
+SHA1 (patch-aw) = 3b1472a95a2312f9e49ea1a6aa517ad81328324c
+SHA1 (patch-ax) = 66b060005ecbf9fd0451f7960e81eccbabf959ca
+SHA1 (patch-ay) = 2d3051685878abe077abdbba9681bd04e04c7fb3
+SHA1 (patch-ba) = 5d3a6129e7650b7aaee79ecb7fdd28e649a5b688
+SHA1 (patch-bb) = 6c2e27ec1cd82a3c97044e24bdff47fd54f9e97b
+SHA1 (patch-bc) = f8dd87a355e022e7fdac9e4a32a19078a09afde1
+SHA1 (patch-bd) = 2060984b4b854fccab7f6a8eb12561006ace1a62
