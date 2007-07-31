@@ -1,34 +1,46 @@
-# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/07/31 23:22:45 netcap Exp $
 #
 
-DISTNAME=	erc-5.0.1
+DISTNAME=	erc-5.2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=erc/}
+MASTER_SITES=	${MASTER_SITE_GNU:=erc/}
 
 MAINTAINER=	hsaliak@gmail.com
 HOMEPAGE=	http://www.emacswiki.org/cgi-bin/wiki?ERC
 COMMENT=	IRC client for Emacs
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake makeinfo
+INFO_FILES=	yes
 
 .include "../../mk/emacs.mk"
 .if ${EMACS_FLAVOR} == "xemacs"
 	MAKE_FLAGS+= EMACS=xemacs
 .endif
 
+.if ${EMACS_VERSION_MAJOR} == "22"
+SUBST_CLASSES+=		log
+SUBST_STAGE.log=	post-patch
+SUBST_FILES.log=	erc-log.el
+SUBST_SED.log=		-e 's|local-write-file-hooks|write-file-functions|g'
+SUBST_SED.log+=		-e 's|write-file-hooks|write-file-functions|g'
+.endif
+
+post-patch:
+	cd ${WRKSRC} && makeinfo erc.texi
+
 UNCOMPILED+=	erc-chess.el erc-bbdb.el erc-ibuffer.el erc-speak.el \
 		erc-speedbar.el erc-compat.el
 
-SRCS+=	erc-auto.el  erc-ezbounce.el erc-match.el erc-ring.el \
-	erc-autoaway.el erc-fill.el  erc-menu.el  erc-sound.el \
-	erc-autojoin.el erc-goodies.el  erc-nets.el  \
-	erc-backend.el  erc-netsplit.el \
-	erc-identd.el erc-nicklist.el erc-stamp.el \
-	erc-button.el erc-imenu.el erc-nickserv.el erc-track.el \
-	erc-lang.el  erc-notify.el erc-truncate.el \
-	erc-list.el  erc-page.el  erc-xdcc.el \
-	erc-complete.el erc-log.el  erc-pcomplete.el erc.el \
-	erc-dcc.el  erc-maint.el erc-replace.el
+SRCS+=	erc-auto.el erc-autoaway.el erc-backend.el erc-button.el \
+	erc-capab.el erc-dcc.el erc-ezbounce.el erc-fill.el \
+	erc-goodies.el erc-hecomplete.el erc-identd.el \
+	erc-imenu.el erc-join.el erc-lang.el erc-list.el erc-log.el \
+	erc-maint.el erc-match.el erc-menu.el erc-netsplit.el \
+	erc-networks.el erc-nicklist.el erc-notify.el erc-page.el \
+	erc-pcomplete.el erc-replace.el erc-ring.el erc-services.el \
+	erc-sound.el erc-spelling.el erc-stamp.el \
+	erc-track.el erc-truncate.el erc-viper.el erc-xdcc.el \
+	erc.el
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/erc
