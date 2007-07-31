@@ -1,0 +1,5 @@
+-- Darwin, HP/UX [... others?]  Darwin now has dlopen() support ... see docs.
+-- I don't know which modules should be disabled, but there are new ones.
+Please audit this list.
+-- pkgsrc framework
+-- PLISTs
