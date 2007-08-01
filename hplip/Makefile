@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:17 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/01 17:21:51 mwicks Exp $
 
 DISTNAME=hplip-1.6.10
 PKGREVISION=	1
@@ -40,6 +40,7 @@ CONF_FILES+=		${EGDIR}/hplip.conf ${PKG_SYSCONFDIR}/hplip.conf
 #RCD_SCRIPTS=		hpiod hpssd
 RCD_SCRIPTS=		hplip
 PKG_USERS=		hplip:operator
+PKG_GROUPS=		operator
 
 CONFLICTS=	hpijs-[0-9]* foomatic-filters-[0-9]*
 
