@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.shlib,v 1.1.1.1 2007/08/02 23:02:04 jukka Exp $
+lib/libcrypto.so
+lib/libcrypto.so.${SHLIB_VERSION}
+lib/libssl.so
+lib/libssl.so.${SHLIB_VERSION}

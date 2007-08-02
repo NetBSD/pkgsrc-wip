@@ -1,0 +1,13 @@
+$NetBSD: TODO,v 1.1.1.1 2007/08/02 23:02:04 jukka Exp $
+
+This package is just an update for security/openssl (0.9.7i) to its
+latest release (0.9.8e). So far I only need it for wip/dkim-milter to
+be able to use the rsa-sha256 signing algorithm on NetBSD/i386 3.1
+systems. While this seems to work fine, this package definitely needs
+more testing and should probably have some things fixed:
+
+- patches/patch-a[ac]: I mainly copied over the changed/added configs
+  from the pkgsrc patches and tested only on NetBSD/i386 (which
+  configured as `BSD-x86-elf'). This should really be revisited...
+
+- Are the pkglint(1) warnings safe to ignore?
