@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2633 2007/08/02 15:07:23 makoto Exp $
+# $Id: Makefile,v 1.2634 2007/08/02 22:57:27 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -311,8 +311,6 @@ SUBDIR+=	fish
 SUBDIR+=	flasm
 SUBDIR+=	flc
 SUBDIR+=	flexdump
-SUBDIR+=	flightgear
-SUBDIR+=	flightgear-base
 SUBDIR+=	fltk2
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
