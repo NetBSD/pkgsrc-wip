@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/09 11:35:02 adrian_p Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/02 10:22:40 makoto Exp $
 #
 
-DISTNAME=		libdaemon-0.10
+DISTNAME=		libdaemon-0.12
 CATEGORIES=		devel
 MASTER_SITES=		http://0pointer.de/lennart/projects/libdaemon/
 
