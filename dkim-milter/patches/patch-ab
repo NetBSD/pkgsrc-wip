@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2007/08/02 23:33:43 jukka Exp $
+
+--- dkim-filter/Makefile.m4.orig	2007-07-26 07:05:11.000000000 +0200
++++ dkim-filter/Makefile.m4	2007-08-01 10:38:53.000000000 +0200
+@@ -9,7 +9,9 @@
+ define(`confMT', `TRUE')
+ define(`confREQUIRE_LIBSM', `true')
+ 
+-APPENDDEF(`confLIBS', `-lssl -lcrypto')
++APPENDDEF(`confLIBS', `-lssl -lcrypto @PTHREAD_LDFLAGS@ ')
++define(`confLDOPTS', `${LDFLAGS}')
++@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
+ 
+ ifdef(`bld_USE_ARLIB', `bldPUSH_SMLIB(`ar')', `')
+ 

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.3 2007/08/02 23:33:11 jukka Exp $
+lib/libdk.a
+man/man8/dk-milter.8
+sbin/dk-milter
+share/doc/dk-milter/FEATURES
+share/doc/dk-milter/INSTALL
+share/doc/dk-milter/KNOWNBUGS
+share/doc/dk-milter/LICENSE
+share/doc/dk-milter/README
+share/doc/dk-milter/RELEASE_NOTES
+share/doc/dk-milter/rfc4870.txt
+share/examples/rc.d/dk-milter
+@dirrm share/doc/dk-milter
