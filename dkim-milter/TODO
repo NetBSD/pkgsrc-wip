@@ -1,0 +1,14 @@
+$NetBSD: TODO,v 1.1.1.1 2007/08/02 22:29:11 jukka Exp $
+
+- Licence `no-profit' seems to be deprecated (according to pkglint(1)),
+  what should LICENCE be set to? The Sendmail licence shipping with
+  the distfile and pkgsrc/licenses/sendmail-licence differ...
+
+- Are the pkglint(1) warnings for options.mk safe to ignore?
+
+- Decide whether some (all?) of the FFR (for future release) features
+  (see FEATURES file in the distfile) should be made available through
+  the options framework.
+
+- Test the package and have it tested by others. I'm using it with
+  Postfix 2.4.3 on NetBSD/i386 and so far it seems to work fine.
