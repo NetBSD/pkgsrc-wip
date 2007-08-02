@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/08/02 15:13:19 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/08/02 16:12:22 makoto Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GOOCANVAS_BUILDLINK3_MK:=	${GOOCANVAS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	goocanvas
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}goocanvas
 
 .if ${GOOCANVAS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.goocanvas+=	goocanvas>=0.4
+BUILDLINK_API_DEPENDS.goocanvas+=	goocanvas>=0.8
 BUILDLINK_PKGSRCDIR.goocanvas?=	../../wip/goocanvas
 .endif	# GOOCANVAS_BUILDLINK3_MK
 
