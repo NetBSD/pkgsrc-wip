@@ -1,7 +1,4 @@
-GooCanvas - a Cairo Canvas Widget for GTK+
-
-Features:
-
+GooCanvas - a Cairo Canvas Widget for GTK+ .... Features:
  o Optional model/view split.
  o Uses interfaces for items & views.
  o Basic items - rect/ellipse/polyline/text/image/group.
@@ -19,8 +16,7 @@ Features:
  o Keyboard focus traversal.
  o Accessibility (item title & description properties and hierarchy stuff).
  o Printing (output to a given cairo_t).
- o Scrolling.
- o Zooming.
+ o Scrolling  and  Zooming.
  o Item visibility setting - on/off/above zoom threshold.
  o Simple animation.
  o Scalable - support for thousands of items over a large canvas area.
