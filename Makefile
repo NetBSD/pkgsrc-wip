@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2634 2007/08/02 22:57:27 thomasklausner Exp $
+# $Id: Makefile,v 1.2635 2007/08/03 00:06:29 jukka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -220,6 +220,8 @@ SUBDIR+=	ding
 SUBDIR+=	directfb
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
+SUBDIR+=	dk-milter
+SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
 SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
@@ -999,6 +1001,7 @@ SUBDIR+=	openoffice2-bin-xh
 SUBDIR+=	openoffice2-bin-zu
 SUBDIR+=	opensc
 SUBDIR+=	openscep
+SUBDIR+=	openssl
 SUBDIR+=	openvrml
 SUBDIR+=	opera-devel
 SUBDIR+=	oqtplayer
