@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/08/02 16:12:22 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/08/03 03:30:35 makoto Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GOOCANVAS_BUILDLINK3_MK:=	${GOOCANVAS_BUILDLINK3_MK}+
@@ -16,6 +16,6 @@ BUILDLINK_API_DEPENDS.goocanvas+=	goocanvas>=0.8
 BUILDLINK_PKGSRCDIR.goocanvas?=	../../wip/goocanvas
 .endif	# GOOCANVAS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
-
 .include "../../x11/gtk2/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
