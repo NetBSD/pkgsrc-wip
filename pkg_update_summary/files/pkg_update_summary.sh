@@ -2,16 +2,20 @@
 
 # written by Aleksey Cheusov
 
-if test -z "$PKG_INFO"; then
-    PKG_INFO=pkg_info
+if test -z "$PKG_INFO_CMD"; then
+    PKG_INFO_CMD=pkg_info
 fi
 
-if test $# -eq 2; then
+if test -z "$TEST_CMD"; then
+    TEST_CMD=test
+fi
+
+if $TEST_CMD $# -eq 2; then
     summary_file="$1"
     bin_pkg_dir="$2"
     uncompress='cat'
     compress='cat'
-elif test $# -eq 4; then
+elif $TEST_CMD $# -eq 4; then
     summary_file="$1"
     bin_pkg_dir="$2"
     uncompress="$3"
@@ -24,7 +28,7 @@ fi
 cd "$bin_pkg_dir"
 
 pkgs2summary (){
-    xargs $PKG_INFO -X
+    xargs $PKG_INFO_CMD -X
 }
 
 get_all_pkgs (){
@@ -34,7 +38,7 @@ get_all_pkgs (){
 get_updated_pkgs (){
     get_all_pkgs |
     while read f; do
-	if test "$f" -nt "$summary_file"; then
+	if $TEST_CMD "$f" -nt "$summary_file"; then
 	    echo "$f"
 	else
 	    break
@@ -90,7 +94,7 @@ filter_unchanged (){
 }
 
 show_debugging_info (){
-    if test "$TRACE"; then
+    if $TEST_CMD "$TRACE"; then
 	printf "\n\nall binary packages : \n\n$all"
 
 	printf "\n\nupdated packages : \n\n$updated"
@@ -104,7 +108,7 @@ show_debugging_info (){
     fi
 }
 
-if test -f "$summary_file"; then
+if $TEST_CMD -f "$summary_file"; then
     updated="`get_updated_pkgs`"
     all="`get_all_pkgs`"
     get_unchanged_pkgs > "$tmp2"
@@ -120,6 +124,6 @@ else
     pkgs2summary | $compress > "$tmp1"
 fi
 
-if test -z "$TRACE"; then
+if $TEST_CMD -z "$TRACE"; then
     mv "$tmp1" "$summary_file"
 fi
