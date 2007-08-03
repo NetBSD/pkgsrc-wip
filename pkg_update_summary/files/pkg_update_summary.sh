@@ -89,10 +89,7 @@ filter_unchanged (){
     ' "$@"
 }
 
-if ! test -f "$summary_file"; then
-    get_all_pkgs |
-    pkgs2summary | $postfilter > "$tmp1"
-else
+if test -f "$summary_file"; then
     updated="`get_updated_pkgs`"
     all="`get_all_pkgs`"
     get_unchanged_pkgs > "$tmp2"
@@ -114,6 +111,9 @@ else
 	  sed -n 's/^PKGNAME=//p' "$summary_file"
 	} | subtract
     fi
+else
+    get_all_pkgs |
+    pkgs2summary | $postfilter > "$tmp1"
 fi
 
 if test -z "$TRACE"; then
