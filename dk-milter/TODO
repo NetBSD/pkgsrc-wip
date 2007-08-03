@@ -1,10 +1,12 @@
-$NetBSD: TODO,v 1.3 2007/08/02 23:33:11 jukka Exp $
+$NetBSD: TODO,v 1.4 2007/08/03 08:46:33 jukka Exp $
 
 - Licence `no-profit' seems to be deprecated (according to pkglint(1)),
   what should LICENCE be set to? The Sendmail licence shipping with
   the distfile and pkgsrc/licenses/sendmail-licence differ...
 
 - Are the pkglint(1) warnings for options.mk safe to ignore?
+
+- Run unprivileged by default?
 
 - Decide whether some (all?) of the FFR (for future release) features
   (see FEATURES file in the distfile) should be made available through
