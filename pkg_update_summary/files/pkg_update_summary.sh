@@ -61,14 +61,17 @@ tmp2="`dirname $summary_file`/`basename $summary_file`.tmp2"
 trap "rm -f $tmp1 $tmp2" 0 1 2 15
 
 filter_unchanged (){
-    awk -v tmp2="$tmp2" '
+    pkgs_fn=$1
+    shift
+
+    awk -v pkgs_fn="$pkgs_fn" '
     BEGIN {
-	while (0 < (ret = getline < tmp2)){
+	while (0 < (ret = getline < pkgs_fn)){
 	    sub(/[.]t[bg]z$/, "")
 	    keep_array [$1] = ""
 	}
 	if (ret < 0){
-	    printf "reading from %s failed\n", tmp2 > "/dev/stderr"
+	    printf "reading from %s failed\n", pkgs_fn > "/dev/stderr"
 	    exit 2
 	}
 
@@ -95,7 +98,7 @@ else
     get_unchanged_pkgs > "$tmp2"
 
     {
-	$prefilter "$summary_file" | filter_unchanged 
+	$prefilter "$summary_file" | filter_unchanged "$tmp2"
 	echo "$updated" | pkgs2summary 
     } | $postfilter > "$tmp1"
 
