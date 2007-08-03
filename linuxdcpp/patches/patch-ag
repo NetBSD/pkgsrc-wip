@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2007/08/03 13:38:34 tnn2 Exp $
+
+--- client/Util.h.orig	2007-03-24 19:33:17.000000000 +0100
++++ client/Util.h
+@@ -267,7 +267,7 @@ public:
+ #ifdef _WIN32
+ 		return _atoi64(aString.c_str());
+ #else
+-		return atoll(aString.c_str());
++		return strtoll(aString.c_str(), (char **)NULL, 10);
+ #endif
+ 	}
+ 
