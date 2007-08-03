@@ -9,15 +9,15 @@ fi
 if test $# -eq 2; then
     summary_file="$1"
     bin_pkg_dir="$2"
-    prefilter='cat'
-    postfilter='cat'
+    uncompress='cat'
+    compress='cat'
 elif test $# -eq 4; then
     summary_file="$1"
     bin_pkg_dir="$2"
-    prefilter="$3"
-    postfilter="$4"
+    uncompress="$3"
+    compress="$4"
 else
-    echo 'usage: pkg_update_summary <summary_file> <bin_pkg_dir> [prefilter postfilter]' 1>&2
+    echo 'usage: pkg_update_summary <summary_file> <bin_pkg_dir> [uncompress compress]' 1>&2
     exit 1
 fi
 
@@ -89,16 +89,7 @@ filter_unchanged (){
     ' "$@"
 }
 
-if test -f "$summary_file"; then
-    updated="`get_updated_pkgs`"
-    all="`get_all_pkgs`"
-    get_unchanged_pkgs > "$tmp2"
-
-    {
-	$prefilter "$summary_file" | filter_unchanged "$tmp2"
-	echo "$updated" | pkgs2summary 
-    } | $postfilter > "$tmp1"
-
+show_debugging_info (){
     if test "$TRACE"; then
 	printf "\n\nall binary packages : \n\n$all"
 
@@ -108,12 +99,25 @@ if test -f "$summary_file"; then
 
 	printf "\n\nremoved packages : \n\n"
 	{ echo "$all" | sed 's/[.]t[gb]z$//'
-	  sed -n 's/^PKGNAME=//p' "$summary_file"
+	    sed -n 's/^PKGNAME=//p' "$summary_file"
 	} | subtract
     fi
+}
+
+if test -f "$summary_file"; then
+    updated="`get_updated_pkgs`"
+    all="`get_all_pkgs`"
+    get_unchanged_pkgs > "$tmp2"
+
+    {
+	$uncompress "$summary_file" | filter_unchanged "$tmp2"
+	echo "$updated" | pkgs2summary 
+    } | $compress > "$tmp1"
+
+    show_debugging_info
 else
     get_all_pkgs |
-    pkgs2summary | $postfilter > "$tmp1"
+    pkgs2summary | $compress > "$tmp1"
 fi
 
 if test -z "$TRACE"; then
