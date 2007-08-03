@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/07/24 06:17:01 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.26 2007/08/03 05:43:17 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1183,8 +1183,6 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-netsplit.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-netsplit.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-networks.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-networks.elc
-share/emacs/${PKGVERSION}/lisp/erc/erc-nicklist.el.gz
-share/emacs/${PKGVERSION}/lisp/erc/erc-nicklist.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-notify.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-notify.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-page.el.gz
