@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2007/08/04 18:47:03 tnn2 Exp $
+$NetBSD: patch-ag,v 1.2 2007/08/04 19:02:53 tnn2 Exp $
 
 --- Makefile.shared.orig	2007-08-04 20:39:57.000000000 +0200
 +++ Makefile.shared
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.1 2007/08/04 18:47:03 tnn2 Exp $
  		$(DO_GNU_SO); \
  	else \
 +		# hack alert, we could do better at detecting gcc \
-+		if ${CC} = "gcc"; then \
++		if [ "$CC" = "gcc" ]; then \
 +			WL="-Wl,"; DELIM=","; \
 +		else \ 
 +			WL=""; DELIM=" "; \
