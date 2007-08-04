@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/04 06:27:04 jukka Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/04 18:52:22 jukka Exp $
 
 DISTNAME=	dkim-milter-2.0.2
 CATEGORIES=	mail
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 
 MAINTAINER=	j+pkgsrc@salmi.ch
 HOMEPAGE=	http://sourceforge.net/projects/dkim-milter/
-COMMENT=	Open source DKIM filter software from Sendmail, Inc
+COMMENT=	Open source DKIM filter software from Sendmail, Inc.
 
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
@@ -35,7 +35,7 @@ SUBST_FILES.rename=	dkim-filter/dkim-filter.conf.5 \
 			dkim-filter/dkim-filter.conf.sample \
 			dkim-filter/dkim-filter.8
 SUBST_SED.rename=	-e 's|dkim-filter|dkim-milter|g'
-SUBST_MESSAGE.rename=	Renaming -filter to -milter
+SUBST_MESSAGE.rename=	Renaming dkim-filter to dkim-milter
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			sbin share/doc/dkim-milter share/examples/dkim-milter
