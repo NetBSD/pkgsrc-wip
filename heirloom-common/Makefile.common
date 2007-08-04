@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2007/05/19 17:22:51 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/08/04 14:40:12 cheusov Exp $
 
-HEIRLOOM_VER=	070227
+HEIRLOOM_VER=	070715
 DISTNAME=	heirloom-${HEIRLOOM_VER}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=	.tar.bz2
