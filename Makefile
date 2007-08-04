@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2635 2007/08/03 00:06:29 jukka Exp $
+# $Id: Makefile,v 1.2636 2007/08/04 09:57:30 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -720,6 +720,7 @@ SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
+SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libhttpd
 SUBDIR+=	libinstaller
 SUBDIR+=	libixp
