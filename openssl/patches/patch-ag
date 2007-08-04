@@ -1,0 +1,32 @@
+$NetBSD: patch-ag,v 1.1 2007/08/04 18:47:03 tnn2 Exp $
+
+--- Makefile.shared.orig	2007-08-04 20:39:57.000000000 +0200
++++ Makefile.shared
+@@ -267,6 +267,12 @@ link_o.alpha-osf1:
+ 	@ if ${DETECT_GNU_LD}; then \
+ 		$(DO_GNU_SO); \
+ 	else \
++		# hack alert, we could do better at detecting gcc \
++		if ${CC} = "gcc"; then \
++			WL="-Wl,"; DELIM=","; \
++		else \ 
++			WL=""; DELIM=" "; \
++		fi; \
+ 		SHLIB=lib$(LIBNAME).so; \
+ 		SHLIB_SUFFIX=; \
+ 		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
+@@ -276,11 +282,11 @@ link_o.alpha-osf1:
+ 			SHLIB_HIST="$(LIBVERSION)"; \
+ 		fi; \
+ 		SHLIB_SOVER=; \
+-		ALLSYMSFLAGS='-all'; \
+-		NOALLSYMSFLAGS='-none'; \
++		ALLSYMSFLAGS="$${WL}-all"; \
++		NOALLSYMSFLAGS="$${WL}-none"; \
+ 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared"; \
+ 		if [ -n "$$SHLIB_HIST" ]; then \
+-			SHAREDFLAGS="$$SHAREDFLAGS -set_version $$SHLIB_HIST"; \
++			SHAREDFLAGS="$$SHAREDFLAGS $${WL}-set_version$${DELIM}$$SHLIB_HIST"; \
+ 		fi; \
+ 	fi; \
+ 	$(LINK_SO_O)
