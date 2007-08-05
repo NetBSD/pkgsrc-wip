@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/05 03:04:03 othyro Exp $
+bin/nomadio
+man/man1/nomadio.1
+man/cat1/nomadio.0

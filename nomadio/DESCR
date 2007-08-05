@@ -1,0 +1,13 @@
+This utility allows to modify the properties, set up the parameters and transfer
+the files on and of the ``Creative Labs NOMAD II MG'' MP3 portable player.
+
+Basic functions include:
+	Examine the model and firmware version.
+	Examine the memory usage/totals.
+	Examine and modify the ``owner''.
+	Examine and modify internal clock.
+	Examine and modify FM radio presets.
+	Format the memory devices.
+	Upload the files.
+	Download the files.
+	Erase the files.
