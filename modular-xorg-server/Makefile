@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/05 18:35:37 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.99.0
 PKGNAME=	modular-${DISTNAME}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	blair.sadewitz@gmail.com
 COMMENT=	Xorg X11 Server from modular X.org X11
 
 DRI_MODULE_PATH?=	lib/xorg/modules/dri
