@@ -7,11 +7,9 @@ PKG_OPTIONS_NONEMPTY_SETS=	driver
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-PKG_OPTIONS_GROUP.asm=	x86
-PKG_OPTIONS_OPTIONAL_GROUPS=	asm
+PKG_SUPPORTED_OPTIONS+=	x86 sse mmx 3dnow
 .elif ${MACHINE_ARCH} == "x86_64"
-PKG_OPTIONS_GROUP.asm=	x86_64
-PKG_OPTIONS_OPTIONAL_GROUPS=	asm
+PKG_SUPPORTED_OPTIONS+=	x86_64
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -28,12 +26,31 @@ PLIST_SUBST+=	${_drv}="@comment "
 .endfor
 
 .if !empty(PKG_OPTIONS:Mx86)
+CFLAGS+=	-DUSE_X86_ASM 
 BUILD_TARGET=	netbsd-dri-x86
-CFLAGS+=	-DUSE_X86_ASM -DUSE_3DNOW_ASM -DUSE_SSE_ASM -DUSE_MMX_ASM
+
+.  if !empty(PKG_OPTIONS:Mmmx)
+CFLAGS+=	-DUSE_MMX_ASM
+.  else
+MAKE_ENV+=	MESA_NO_MMX=""
+.  endif
+
+.  if !empty(PKG_OPTIONS:M3dnow)
+CFLAGS+=	-DUSE_3DNOW_ASM
+.  else
+MAKE_ENV+=	MESA_NO_3DNOW=""
+.  endif
+
+.  if !empty(PKG_OPTIONS:Msse)
+CFLAGS+=	-DUSE_SSE_ASM
+.  else
+MAKE_ENV+=	MESA_NO_SSE=""
+.  endif
+
 .elif !empty(PKG_OPTIONS:Mx86_64)
-BUILD_TARGET=	netbsd-dri-amd64
 CFLAGS+=	-D__GLX_ALIGN64
+BUILD_TARGET=	netbsd-dri-amd64
+
 .else
 BUILD_TARGET=	netbsd-dri
 .endif
-

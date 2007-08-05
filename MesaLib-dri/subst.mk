@@ -4,6 +4,7 @@ SUBST_STAGE.fix-conf=	pre-patch
 SUBST_MESSAGE.fix-conf=	Fixing configuration files
 SUBST_FILES.fix-conf=	configs/netbsd-dri
 SUBST_FILES.fix-conf+=	configs/netbsd-dri-x86
+SUBST_FILES.fix-conf+=	configs/freebsd-dri-x86
 SUBST_FILES.fix-conf+=	configs/netbsd-dri-amd64
 SUBST_FILES.fix-conf+=	configs/netbsd
 SUBST_FILES.fix-conf+=	configs/default
@@ -25,6 +26,7 @@ SUBST_SED.fix-conf+=	-e 's,-l$$(GL_LIB),-lGL,g'
 SUBST_SED.fix-conf+=	-e 's,-fPIC,,g'
 SUBST_SED.fix-conf+=	-e 's,-DPIC,,g'
 SUBST_SED.fix-conf+=	-e 's|^DRI_DRIVER_INSTALL_DIR.*|DRI_DRIVER_INSTALL_DIR = ${PREFIX}/${DRI_MODULE_PATH}|'
+SUBST_SED.fix-conf+=	-e 's,ASM_FLAGS =.*,,g'
 
 SUBST_CLASSES+=		fix-pthread
 SUBST_STAGE.fix-pthread= pre-patch

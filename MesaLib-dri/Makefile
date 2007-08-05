@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2007/07/30 02:56:15 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/05 04:56:17 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
-PKGNAME=	MesaLib-7.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.mesa3d.org/beta/
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-#EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
-MESA_VERSION=	7.0.1-rc2
-PKGREVISION=	5
+MESA_VERSION=	7.0.1
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
@@ -38,19 +35,11 @@ PKGSRC_PICFLAGS=-fPIC -DPIC
 .include "subst.mk"
 .include "options.mk"
 
-.if !empty(PKG_OPTIONS:Mx86)  # The idea is to not mess up the CPU autodetection
-			      # will this work?
-ARCHSTRING=		${CFLAGS:M[-]march*}
-TUNESTRING=		${ARCHSTRING:C/march/mtune/}
-.  if !empty(ARCHSTRING)
-BUILDLINK_TRANSFORM+=	opt:${ARCHSTRING}:${TUNESTRING}
-.  endif
-.endif
-
 CFLAGS+=	${DRI_CFLAGS}
 MAKE_ENV+=	DRI_DIRS=${DRI_DRIVERS:M*:Q}
 MAKE_ENV+=	DRI_MODULE_PATH=${DRI_MODULE_PATH:Q}
 MAKE_ENV+=	PKGSRC_PICFLAGS=${PKGSRC_PICFLAGS:Q}
+MAKE_ENV+=	SHELL=${TOOLS_SHELL:Q}
 
 .include "../../mk/compiler.mk"
 

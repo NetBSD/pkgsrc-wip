@@ -1,17 +1,16 @@
-? graphics/Mesa/work
 Index: graphics/Mesa/Makefile.common
 ===================================================================
 RCS file: /cvsroot/pkgsrc/graphics/Mesa/Makefile.common,v
 retrieving revision 1.55
 diff -u -d -r1.55 Makefile.common
 --- graphics/Mesa/Makefile.common	22 Feb 2007 19:26:32 -0000	1.55
-+++ graphics/Mesa/Makefile.common	25 Jul 2007 00:10:31 -0000
++++ graphics/Mesa/Makefile.common	5 Aug 2007 04:55:48 -0000
 @@ -16,7 +16,7 @@
  #	graphics/MesaDemos
  #	graphics/glx-utils
  #
 -MESA_VERSION=	6.4.2
-+MESA_VERSION=	7.0
++MESA_VERSION=	7.0.1
  
  MAINTAINER=	pkgsrc-users@NetBSD.org
  HOMEPAGE=	http://www.mesa3d.org/
@@ -21,9 +20,9 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/Makefile,v
 retrieving revision 1.52
 diff -u -d -r1.52 Makefile
 --- graphics/MesaLib/Makefile	24 Jan 2007 19:55:01 -0000	1.52
-+++ graphics/MesaLib/Makefile	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/Makefile	5 Aug 2007 04:55:48 -0000
 @@ -1,7 +1,6 @@
- # $NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+ # $NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
  PKGNAME=	MesaLib-${MESA_VERSION}
 -PKGREVISION=	3
@@ -36,10 +35,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/buildlink3.mk,v
 retrieving revision 1.38
 diff -u -d -r1.38 buildlink3.mk
 --- graphics/MesaLib/buildlink3.mk	2 Feb 2007 17:41:36 -0000	1.38
-+++ graphics/MesaLib/buildlink3.mk	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/buildlink3.mk	5 Aug 2007 04:55:48 -0000
 @@ -1,9 +1,9 @@
--# $NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+# $NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-# $NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++# $NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
  BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
  MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -49,7 +48,7 @@ diff -u -d -r1.38 buildlink3.mk
  BUILDLINK_DEPENDS+=	MesaLib
  .endif
  
-@@ -11,25 +11,17 @@
+@@ -11,25 +11,19 @@
  BUILDLINK_PACKAGES+=	MesaLib
  BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}MesaLib
  
@@ -57,7 +56,9 @@ diff -u -d -r1.38 buildlink3.mk
 -BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
 -BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=6.4.1nb1
 +.if ${MESALIB_BUILDLINK3_MK} == "+"
-+BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=6.4.1
++BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=7.0.1
++BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=6.4.1
++BUILDLINK_API_DEPENDS.MesaLib+= MesaLib>=3.4.2
  BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 -
 -.if !defined(BUILDING_MESA)
@@ -88,9 +89,9 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/distinfo,v
 retrieving revision 1.45
 diff -u -d -r1.45 distinfo
 --- graphics/MesaLib/distinfo	13 Apr 2007 09:12:02 -0000	1.45
-+++ graphics/MesaLib/distinfo	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/distinfo	5 Aug 2007 04:55:48 -0000
 @@ -1,24 +1,24 @@
- $NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+ $NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 -SHA1 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 35b1ff78fc1bd1c303be754ad2ff4252ad6c0258
 -RMD160 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 82e1dafd39abbe1c0e1de49adcff00dec19c6c1a
@@ -101,15 +102,15 @@ diff -u -d -r1.45 distinfo
 -SHA1 (Mesa-6.4.2/MesaLib-6.4.2.tar.bz2) = 4f042bdf38c9eb62e04660bd18566e7ca50d8640
 -RMD160 (Mesa-6.4.2/MesaLib-6.4.2.tar.bz2) = 6bf1afc0d3bd3f5e3b5c1a019838f40603446509
 -Size (Mesa-6.4.2/MesaLib-6.4.2.tar.bz2) = 2913009 bytes
-+SHA1 (Mesa-7.0/MesaDemos-7.0.tar.bz2) = 1fd5909b99d163fea3f594ea50892f5cc32c9406
-+RMD160 (Mesa-7.0/MesaDemos-7.0.tar.bz2) = d88febad74caba52da87c9b42fe8a28f86d5496c
-+Size (Mesa-7.0/MesaDemos-7.0.tar.bz2) = 1334310 bytes
-+SHA1 (Mesa-7.0/MesaGLUT-7.0.tar.bz2) = 5004296c38267bbf310ce33ac122f99a2e8ec3ca
-+RMD160 (Mesa-7.0/MesaGLUT-7.0.tar.bz2) = 0a9bb558592d2df64c274329c143861724e74edf
-+Size (Mesa-7.0/MesaGLUT-7.0.tar.bz2) = 312866 bytes
-+SHA1 (Mesa-7.0/MesaLib-7.0.tar.bz2) = 44006ac3a4924e07fed5e894d0ccdd78c43aaea9
-+RMD160 (Mesa-7.0/MesaLib-7.0.tar.bz2) = 27cfb5737fbb263f2270e9dcbd60e6ed77890110
-+Size (Mesa-7.0/MesaLib-7.0.tar.bz2) = 3366124 bytes
++SHA1 (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 4d6cb158b58dbda9411d00e99a01031e13cae2ec
++RMD160 (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 58537c690d811da09f788bf9b5b5bd999e5445c6
++Size (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 1340949 bytes
++SHA1 (Mesa-7.0.1/MesaGLUT-7.0.1.tar.bz2) = ee63b2b1804106a05efaffd3da2dee7637d0eecb
++RMD160 (Mesa-7.0.1/MesaGLUT-7.0.1.tar.bz2) = 1c84391874e013145529fee43763ff9f57a88dc9
++Size (Mesa-7.0.1/MesaGLUT-7.0.1.tar.bz2) = 315599 bytes
++SHA1 (Mesa-7.0.1/MesaLib-7.0.1.tar.bz2) = deb1002cf377ba8bd9407bd3cf573f8c8be31671
++RMD160 (Mesa-7.0.1/MesaLib-7.0.1.tar.bz2) = b44fd8ebffd17aa72c3b6cca1c2924e66787aa78
++Size (Mesa-7.0.1/MesaLib-7.0.1.tar.bz2) = 3343538 bytes
  SHA1 (patch-aa) = 90457ea124a42150e3a37b48e1e0691597668606
  SHA1 (patch-ab) = c257a57d4570576f160e9a4c029384718402c1bd
 -SHA1 (patch-ac) = a12c3538907aaa63184371037c0f70924861fbe4
@@ -119,7 +120,7 @@ diff -u -d -r1.45 distinfo
 -SHA1 (patch-ag) = 722234c02093e0d3b10659fa83bb14c7f2e7a8ac
 -SHA1 (patch-ah) = 94faa48a6945aa6e7a0fc8806129a463d99d4338
 +SHA1 (patch-ac) = 31199a11541b3bc7acc478c8349e029f344e88b4
-+SHA1 (patch-ad) = 4b43fc0145bd665bbe71bad1f717135813899f31
++SHA1 (patch-ad) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 +SHA1 (patch-ae) = ed5781ec709749f757d46a7ea67bf8e7d5286291
 +SHA1 (patch-af) = 8c041b4ec4b5411d2562de0cde417d72d835eaa2
 +SHA1 (patch-ag) = aa355b10126ad3b707d0bdcf8783019a48e55ff6
@@ -138,10 +139,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-ac,v
 retrieving revision 1.9
 diff -u -d -r1.9 patch-ac
 --- graphics/MesaLib/patches/patch-ac	19 Jan 2006 12:53:17 -0000	1.9
-+++ graphics/MesaLib/patches/patch-ac	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-ac	5 Aug 2007 04:55:48 -0000
 @@ -1,7 +1,7 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- Makefile.orig	2005-11-29 23:38:49.000000000 +0100
 -+++ Makefile
@@ -183,71 +184,77 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-ad,v
 retrieving revision 1.8
 diff -u -d -r1.8 patch-ad
 --- graphics/MesaLib/patches/patch-ad	19 Jan 2006 12:53:17 -0000	1.8
-+++ graphics/MesaLib/patches/patch-ad	25 Jul 2007 00:10:31 -0000
-@@ -1,8 +1,8 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
- 
++++ graphics/MesaLib/patches/patch-ad	5 Aug 2007 04:55:48 -0000
+@@ -1,59 +0,0 @@
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
+-
 ---- src/mesa/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 -+++ src/mesa/Makefile
 -@@ -14,13 +14,13 @@ GL_TINY = 0$(MESA_MAJOR)0$(MESA_MINOR)0$
-+--- src/mesa/Makefile.orig	2006-12-02 12:14:16.000000000 -0600
-++++ src/mesa/Makefile	2007-01-18 15:27:42.000000000 -0600
-+@@ -14,13 +14,13 @@
-  .SUFFIXES : .cpp
-  
-  .c.o:
-@@ -19,13 +19,13 @@
-  
-  
-  # Figure out what to make here
+- .SUFFIXES : .cpp
+- 
+- .c.o:
+--	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+-+	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+- 
+- .cpp.o:
+--	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
+-+	${LIBTOOL} --mode=compile $(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
+- 
+- .S.o:
+--	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+-+	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+- 
+- 
+- # Figure out what to make here
 -@@ -150,25 +150,23 @@ subdirs:
-+@@ -113,25 +113,23 @@
-  
-  # Make the GL library
+- 
+- # Make the GL library
 - $(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
-+ $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
- -	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' \
- -		-major $(GL_MAJOR) -minor $(GL_MINOR) -patch $(GL_TINY) \
+--	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' \
+--		-major $(GL_MAJOR) -minor $(GL_MINOR) -patch $(GL_TINY) \
 --		-install $(LIB_DIR) \
-+-		-install $(TOP)/$(LIB_DIR) \
- -		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
- +	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
- +		${STAND_ALONE_OBJECTS:.o=.lo} \
-@@ -33,12 +33,12 @@
- +		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GL_LIB_DEPS}
-  
-  # Make the OSMesa library
+--		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
+-+	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
+-+		${STAND_ALONE_OBJECTS:.o=.lo} \
+-+		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR} \
+-+		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GL_LIB_DEPS}
+- 
+- # Make the OSMesa library
 - $(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
-+ $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
-  	@ if [ "${DRIVER_DIRS}" = "osmesa" ] ; then \
- -		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
- -			-major $(MESA_MAJOR) \
- -			-minor $(MESA_MINOR) -patch $(MESA_TINY) \
+- 	@ if [ "${DRIVER_DIRS}" = "osmesa" ] ; then \
+--		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+--			-major $(MESA_MAJOR) \
+--			-minor $(MESA_MINOR) -patch $(MESA_TINY) \
 --			-install $(LIB_DIR) $(MKLIB_OPTIONS) \
-+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
- -			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
- +		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
- +			${OSMESA16_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-@@ -48,7 +48,7 @@
- -		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
- -			-major $(MESA_MAJOR) \
- -			-minor $(MESA_MINOR) -patch $(GL_TINY) \
+--			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
+-+		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
+-+			${OSMESA16_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
+-+			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
+-+			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
+- 	else \
+--		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+--			-major $(MESA_MAJOR) \
+--			-minor $(MESA_MINOR) -patch $(GL_TINY) \
 --			-install $(LIB_DIR) $(MKLIB_OPTIONS) \
-+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
- -			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
- +		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
- +			${OSMESA_DRIVER_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
+--			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
+-+		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
+-+			${OSMESA_DRIVER_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
+-+			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
+-+			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
+- 	fi
+- 
+- 
 Index: graphics/MesaLib/patches/patch-ae
 ===================================================================
 RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-ae,v
 retrieving revision 1.7
 diff -u -d -r1.7 patch-ae
 --- graphics/MesaLib/patches/patch-ae	19 Jan 2006 12:53:17 -0000	1.7
-+++ graphics/MesaLib/patches/patch-ae	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-ae	5 Aug 2007 04:55:48 -0000
 @@ -1,8 +1,8 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- src/glw/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 -+++ src/glw/Makefile
@@ -281,10 +288,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-af,v
 retrieving revision 1.6
 diff -u -d -r1.6 patch-af
 --- graphics/MesaLib/patches/patch-af	1 Jun 2006 12:56:41 -0000	1.6
-+++ graphics/MesaLib/patches/patch-af	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-af	5 Aug 2007 04:55:48 -0000
 @@ -1,8 +1,8 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- src/glu/sgi/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 -+++ src/glu/sgi/Makefile
@@ -318,10 +325,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-ag,v
 retrieving revision 1.8
 diff -u -d -r1.8 patch-ag
 --- graphics/MesaLib/patches/patch-ag	19 Jan 2006 12:53:17 -0000	1.8
-+++ graphics/MesaLib/patches/patch-ag	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-ag	5 Aug 2007 04:55:48 -0000
 @@ -1,22 +1,22 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- src/glut/glx/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 -+++ src/glut/glx/Makefile
@@ -362,10 +369,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-ah,v
 retrieving revision 1.5
 diff -u -d -r1.5 patch-ah
 --- graphics/MesaLib/patches/patch-ah	21 Mar 2006 19:26:32 -0000	1.5
-+++ graphics/MesaLib/patches/patch-ah	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-ah	5 Aug 2007 04:55:48 -0000
 @@ -1,8 +1,8 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- configs/default.orig	2005-10-25 01:35:14.000000000 +0200
 -+++ configs/default
@@ -409,9 +416,9 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-aj,v
 retrieving revision 1.2
 diff -u -d -r1.2 patch-aj
 --- graphics/MesaLib/patches/patch-aj	19 Jan 2006 12:53:17 -0000	1.2
-+++ graphics/MesaLib/patches/patch-aj	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-aj	5 Aug 2007 04:55:48 -0000
 @@ -1,22 +0,0 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
 -
 ---- src/mesa/drivers/x11/xmesaP.h.orig	2005-10-04 23:00:36.000000000 +0200
 -+++ src/mesa/drivers/x11/xmesaP.h
@@ -439,9 +446,9 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-al,v
 retrieving revision 1.1
 diff -u -d -r1.1 patch-al
 --- graphics/MesaLib/patches/patch-al	31 Jan 2006 21:44:31 -0000	1.1
-+++ graphics/MesaLib/patches/patch-al	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-al	5 Aug 2007 04:55:48 -0000
 @@ -1,839 +0,0 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
 -
 -Declarations inside of macros are evil. Even more if they are not preceded
 -by an additional opening brace.
@@ -1286,10 +1293,10 @@ RCS file: /cvsroot/pkgsrc/graphics/MesaLib/patches/patch-am,v
 retrieving revision 1.5
 diff -u -d -r1.5 patch-am
 --- graphics/MesaLib/patches/patch-am	13 Apr 2007 09:12:02 -0000	1.5
-+++ graphics/MesaLib/patches/patch-am	25 Jul 2007 00:10:31 -0000
++++ graphics/MesaLib/patches/patch-am	5 Aug 2007 04:55:48 -0000
 @@ -1,26 +1,13 @@
--$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
-+$NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+-$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
++$NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 ---- include/GL/glxext.h.orig	2005-11-07 22:20:29.000000000 +0100
 +--- include/GL/glxext.h.orig	2007-06-21 18:10:53.000000000 -0400
@@ -1325,7 +1332,7 @@ RCS file: /cvsroot/pkgsrc/graphics/glx-utils/Makefile,v
 retrieving revision 1.2
 diff -u -d -r1.2 Makefile
 --- graphics/glx-utils/Makefile	1 Aug 2006 21:40:20 -0000	1.2
-+++ graphics/glx-utils/Makefile	25 Jul 2007 00:10:31 -0000
++++ graphics/glx-utils/Makefile	5 Aug 2007 04:55:48 -0000
 @@ -23,7 +23,7 @@
  		-L../../lib -lGLU -lGL -lm -lXext ${PTHREAD_LIBS} -o glxinfo
  
@@ -1342,13 +1349,13 @@ RCS file: /cvsroot/pkgsrc/graphics/glx-utils/distinfo,v
 retrieving revision 1.1.1.1
 diff -u -d -r1.1.1.1 distinfo
 --- graphics/glx-utils/distinfo	13 Jun 2006 23:44:09 -0000	1.1.1.1
-+++ graphics/glx-utils/distinfo	25 Jul 2007 00:10:31 -0000
++++ graphics/glx-utils/distinfo	5 Aug 2007 04:55:48 -0000
 @@ -1,5 +1,5 @@
- $NetBSD: pkgsrc-mesa.diff,v 1.1 2007/07/25 00:13:49 bsadewitz Exp $
+ $NetBSD: pkgsrc-mesa.diff,v 1.2 2007/08/05 04:56:17 bsadewitz Exp $
  
 -SHA1 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 35b1ff78fc1bd1c303be754ad2ff4252ad6c0258
 -RMD160 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 82e1dafd39abbe1c0e1de49adcff00dec19c6c1a
 -Size (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 814178 bytes
-+SHA1 (Mesa-7.0/MesaDemos-7.0.tar.bz2) = 1fd5909b99d163fea3f594ea50892f5cc32c9406
-+RMD160 (Mesa-7.0/MesaDemos-7.0.tar.bz2) = d88febad74caba52da87c9b42fe8a28f86d5496c
-+Size (Mesa-7.0/MesaDemos-7.0.tar.bz2) = 1334310 bytes
++SHA1 (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 4d6cb158b58dbda9411d00e99a01031e13cae2ec
++RMD160 (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 58537c690d811da09f788bf9b5b5bd999e5445c6
++Size (Mesa-7.0.1/MesaDemos-7.0.1.tar.bz2) = 1340949 bytes
