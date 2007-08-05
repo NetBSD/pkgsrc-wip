@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/05 03:04:03 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/05 14:46:17 othyro Exp $
 
 DISTNAME=		nomadio-0.7
 CATEGORIES=		audio
@@ -8,7 +8,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nomadio.lucifier.net/
 COMMENT=		Utility to control Creative Nomad II MG
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
