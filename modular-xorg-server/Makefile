@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/05 18:35:37 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/05 18:37:53 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.99.0
 PKGNAME=	modular-${DISTNAME}
@@ -40,7 +40,7 @@ MESA_SRC=		${WRKDIR}/Mesa-7.0.1
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
 CONFIGURE_ARGS+=	--with-dri-drivers=${PREFIX:Q:=/${DRI_MODULE_PATH}}
-.if ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "sparc64" || \
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
     ${MACHINE_ARCH} == "alpha"
 GLX_DEFINES+=		-D__GLX_ALIGN64
 .endif
