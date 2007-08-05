@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/09 01:27:43 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/05 15:05:12 othyro Exp $
 bin/rar3
 bin/unrar3
-etc/rarfiles.lst
 lib/default.sfx
-man/cat1/rar3.1
+man/cat1/rar3.0
 share/rar3/file_id.diz
 share/rar3/license.txt
 share/rar3/order.htm
 share/rar3/rar.txt
-share/rar3/rar_faq.txt
 share/rar3/readme.txt
 share/rar3/technote.txt
 share/rar3/whatsnew.txt
