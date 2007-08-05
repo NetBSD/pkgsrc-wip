@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/08/05 02:54:07 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/05 04:59:06 bsadewitz Exp $
 #
 
-DISTNAME=	${PKGNAME}-2.20070724.fc8.src.rpm
+DISTNAME=	pixman-0.9.0-3.20070724.fc8.src.rpm
 PKGNAME=	pixman-0.9.0
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://koji.fedoraproject.org/packages/pixman/0.9.0/2.20070724.fc8/src/
+MASTER_SITES=	http://koji.fedoraproject.org/packages/pixman/0.9.0/3.20070724.fc8/src/
 EXTRACT_SUFX=	# empty
 
 
