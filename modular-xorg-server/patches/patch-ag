@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+
+--- dix/window.c.orig	2007-07-07 07:37:29.000000000 -0400
++++ dix/window.c
+@@ -138,8 +138,8 @@ Equipment Corporation.
+  *
+  ******/
+ 
+-static unsigned char _back_lsb[4] = {0x88, 0x22, 0x44, 0x11};
+-static unsigned char _back_msb[4] = {0x11, 0x44, 0x22, 0x88};
++static unsigned char _back_lsb[4] = {0x00, 0x00, 0x00, 0x00};
++static unsigned char _back_msb[4] = {0x00, 0x00, 0x00, 0x00};
+ 
+ _X_EXPORT int screenIsSaved = SCREEN_SAVER_OFF;
+ 

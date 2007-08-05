@@ -1,0 +1,54 @@
+$NetBSD: patch-ab,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+
+--- configure.orig	2007-07-31 23:57:57.000000000 -0400
++++ configure
+@@ -25921,6 +25921,10 @@ _ACEOF
+ #define USE_DEV_IO 1
+ _ACEOF
+  ;;
++		*dragonfly*)	cat >>confdefs.h <<\_ACEOF
++#define USE_DEV_IO 1
++_ACEOF
++ ;;
+ 		*netbsd*)	cat >>confdefs.h <<\_ACEOF
+ #define USE_I386_IOPL 1
+ _ACEOF
+@@ -26018,7 +26022,7 @@ fi
+ DRI=no
+ KDRIVE_HW=no
+ case $host_os in
+-  *freebsd*)
++  *freebsd* | *dragonfly*)
+ 	case $host_os in
+ 		kfreebsd*-gnu) ;;
+ 		*)
+@@ -26062,6 +26066,11 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
++#define PCVT_SUPPORT 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
+ #define WSCONS_SUPPORT 1
+ _ACEOF
+ 
+@@ -29542,7 +29551,7 @@ _ACEOF
+ 
+ fi
+ 
+-VENDOR_RELEASE="((($VERSION_MAJOR) * 10000000) + (($VERSION_MINOR) * 100000) + (($VERSION_PATCH) * 1000) + $VERSION_SNAP)"
++VENDOR_RELEASE=`expr \( $VERSION_MAJOR \* 10000000 \) + \( $VERSION_MINOR \* 100000 \) + \( $VERSION_PATCH \* 1000 \) + $VERSION_SNAP`
+ 
+ if test $VERSION_SNAP = "0"; then
+ 	if test $VERSION_PATCH = "0"; then
+@@ -32418,7 +32427,7 @@ echo "$as_me: Disabling DGA extension" >
+ 			;;
+ 		esac
+ 		;;
+-	  freebsd* | kfreebsd*-gnu)
++	  freebsd* | kfreebsd*-gnu | dragonfly*)
+ 	  	XORG_OS="freebsd"
+ 		XORG_OS_SUBDIR="bsd"
+ 		case $host_cpu in

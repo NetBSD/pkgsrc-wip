@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+
+--- hw/xfree86/loader/xf86sym.c.orig	2007-07-31 18:37:36.000000000 -0400
++++ hw/xfree86/loader/xf86sym.c
+@@ -259,6 +259,7 @@ _X_HIDDEN void *xfree86LookupTab[] = {
+     SYMFUNC(xf86UDelay)
+     SYMFUNC(xf86IODelay)
+     SYMFUNC(xf86SlowBcopy)
++    SYMFUNC(xf86SetReallySlowBcopy)
+ #ifdef __alpha__
+     SYMFUNC(xf86SlowBCopyToBus)
+     SYMFUNC(xf86SlowBCopyFromBus)

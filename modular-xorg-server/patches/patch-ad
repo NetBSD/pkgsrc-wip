@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+
+--- GL/glx/Makefile.am.orig	2007-06-30 11:16:04.000000000 -0400
++++ GL/glx/Makefile.am
+@@ -40,6 +40,7 @@ libglxdri_la_SOURCES = \
+ 
+ libglx_la_SOURCES = \
+         g_disptab.h \
++        glxbyteorder.h \
+         glxcmds.c \
+         glxcmdsswap.c \
+         glxcontext.h \
