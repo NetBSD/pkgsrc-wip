@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2007/08/02 23:33:43 jukka Exp $
+$NetBSD: patch-aa,v 1.4 2007/08/06 11:16:22 jukka Exp $
 
---- site.config.m4.dist.orig	2007-07-26 07:05:08.000000000 +0200
-+++ site.config.m4.dist	2007-07-28 11:42:59.000000000 +0200
+--- site.config.m4.dist.orig	2007-08-02 20:20:42.000000000 +0200
++++ site.config.m4.dist	2007-08-06 12:29:05.000000000 +0200
 @@ -54,8 +54,8 @@ dnl
  dnl DKIM requires several algorithms provided by this library.  You must
  dnl have v0.9.8 or later for SHA256 support.  If necessary, enable these
@@ -13,7 +13,16 @@ $NetBSD: patch-aa,v 1.3 2007/08/02 23:33:43 jukka Exp $
  
  dnl TRE -- Approximate regular expression matching
  dnl
-@@ -99,8 +99,8 @@ dnl
+@@ -84,7 +84,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQU
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_SIGN_HEADERS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SET_REPLY ')
+-dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
++@STATS@ APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
+ 
+@@ -100,8 +100,8 @@ dnl
  dnl This must be in the search rules for your compile.  If necessary,
  dnl adjust the paths below and enable the lines by deleting "dnl" from the
  dnl front of them.
