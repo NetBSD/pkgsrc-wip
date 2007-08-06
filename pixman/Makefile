@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/06 16:59:38 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/06 17:05:49 bsadewitz Exp $
 #
 
 DISTNAME=	pixman-0.9.0-3.20070724.fc8.src.rpm
@@ -14,14 +14,19 @@ COMMENT=	Modular X.org pixman library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=		c c++
+
 RPM2PKG_STRIP=		0
 RPM2PKG_PLIST=		# empty
+
+BUILD_DEPENDS+=		xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
 
 USE_TOOLS+=		gmake automake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	pixman.pc.in
 PKGCONFIG_OVERRIDE+=	libcomp.pc
+
 
 WRKSRC=			${WRKDIR}/pixman
 
