@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2007/08/06 11:16:22 jukka Exp $
+$NetBSD: patch-aa,v 1.5 2007/08/06 19:46:44 jukka Exp $
 
 --- site.config.m4.dist.orig	2007-08-02 20:20:42.000000000 +0200
-+++ site.config.m4.dist	2007-08-06 12:29:05.000000000 +0200
++++ site.config.m4.dist	2007-08-06 21:03:36.000000000 +0200
+@@ -17,7 +17,7 @@ dnl libar -- asynchronous resolver libra
+ dnl
+ dnl If you want to use the asynchronous resolver library, enable this
+ dnl next line by deleting the "dnl" at the front of it.
+-dnl define(`bld_USE_ARLIB', `true')
++@ARLIB@ define(`bld_USE_ARLIB', `true')
+ dnl 
+ dnl libar normally uses res_init() or res_ninit() to load the contents
+ dnl of resolv.conf for its use.  If neither of these work on your system
 @@ -54,8 +54,8 @@ dnl
  dnl DKIM requires several algorithms provided by this library.  You must
  dnl have v0.9.8 or later for SHA256 support.  If necessary, enable these

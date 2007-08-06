@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.stats,v 1.1 2007/08/06 11:16:22 jukka Exp $
-man/man8/dkim-stats.8
-sbin/dkim-stats

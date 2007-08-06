@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/02 23:33:43 jukka Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/08/06 19:46:44 jukka Exp $
+${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
+${WITH_ARLIB}man/man3/ar.3
 man/man5/dkim-milter.conf.5
 man/man8/dkim-milter.8
+${WITH_STATS}man/man8/dkim-stats.8
 sbin/dkim-milter
+${WITH_STATS}sbin/dkim-stats
 share/doc/dkim-milter/FEATURES
 share/doc/dkim-milter/INSTALL
 share/doc/dkim-milter/KNOWNBUGS

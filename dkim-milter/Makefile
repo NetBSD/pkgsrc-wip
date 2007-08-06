@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/08/06 11:44:45 jukka Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/06 19:46:44 jukka Exp $
 
 DISTNAME=	dkim-milter-2.0.2
 CATEGORIES=	mail
@@ -17,11 +17,10 @@ RCD_SCRIPTS=		dkim-milter
 USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
 
-PLIST_SRC=		${PKGDIR}/PLIST
-
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	post-patch
-SUBST_FILES.libs=	site.config.m4.dist dkim-filter/Makefile.m4
+SUBST_FILES.libs=	site.config.m4.dist dkim-filter/Makefile.m4 \
+			devtools/M4/header.m4
 SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
@@ -53,7 +52,7 @@ pre-configure:
 do-build:
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 
-do-install: stats-install
+do-install: arlib-install stats-install
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`; \
 	${INSTALL_PROGRAM} dkim-filter/dkim-filter ${PREFIX}/sbin/dkim-milter; \
 	${INSTALL_LIB} libdkim/libdkim.a ${PREFIX}/lib
