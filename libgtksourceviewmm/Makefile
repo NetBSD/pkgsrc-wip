@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/04 08:22:38 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/06 14:58:08 makoto Exp $
 
 DISTNAME=	libgtksourceviewmm-0.3.1
 CATEGORIES=	devel
@@ -17,5 +17,7 @@ USE_DESTDIR=	yes
 
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
+#include "../../devel/doxygen/buildlink3.mk"
+DEPENDS+= doxygen>=1.4:../../devel/doxygen
 
 .include "../../mk/bsd.pkg.mk"
