@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/04 09:51:54 ahallmann Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/06 19:21:16 ahallmann Exp $
 
 VERS=		4.3.4
 PKGNAME=	hylafax-${VERS}
@@ -43,6 +43,8 @@ RCD_SCRIPTS=	hylafax
 
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
+
+INSTALLATION_DIRS = libdata
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hylafax
 PKG_SUPPORTED_OPTIONS=	pam
