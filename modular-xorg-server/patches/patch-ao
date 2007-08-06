@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1 2007/08/06 16:44:11 bsadewitz Exp $
+
+--- GL/glx/glxdrawable.h.orig	2007-06-30 11:16:04.000000000 -0400
++++ GL/glx/glxdrawable.h
+@@ -54,6 +54,7 @@ typedef struct {
+     ScreenPtr pScreen;
+     Bool idExists;
+     int refcnt;
++    GLenum target;
+ #ifdef XF86DRI
+     DamagePtr pDamage;
+     __DRIcontext *pDRICtx;

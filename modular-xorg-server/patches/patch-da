@@ -1,8 +1,8 @@
-$NetBSD: patch-da,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+$NetBSD: patch-da,v 1.2 2007/08/06 16:44:11 bsadewitz Exp $
 
---- Xext/shm.c.orig	2007-02-05 20:58:14.000000000 +0000
+--- Xext/shm.c.orig	2007-06-30 11:16:04.000000000 -0400
 +++ Xext/shm.c
-@@ -156,7 +156,7 @@ static ShmFuncs fbFuncs = {fbShmCreatePi
+@@ -154,7 +154,7 @@ static ShmFuncs fbFuncs = {fbShmCreatePi
  }
  
  

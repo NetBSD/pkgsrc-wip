@@ -1,49 +1,45 @@
-$NetBSD: patch-ab,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.2 2007/08/06 16:44:11 bsadewitz Exp $
 
---- configure.orig	2007-07-31 23:57:57.000000000 -0400
-+++ configure
-@@ -25921,6 +25921,10 @@ _ACEOF
- #define USE_DEV_IO 1
- _ACEOF
-  ;;
-+		*dragonfly*)	cat >>confdefs.h <<\_ACEOF
-+#define USE_DEV_IO 1
-+_ACEOF
-+ ;;
- 		*netbsd*)	cat >>confdefs.h <<\_ACEOF
- #define USE_I386_IOPL 1
- _ACEOF
-@@ -26018,7 +26022,7 @@ fi
- DRI=no
- KDRIVE_HW=no
- case $host_os in
--  *freebsd*)
-+  *freebsd* | *dragonfly*)
+--- configure.ac.orig	2007-07-31 23:55:59.000000000 -0400
++++ configure.ac
+@@ -286,7 +286,7 @@ case $host_cpu in
  	case $host_os in
- 		kfreebsd*-gnu) ;;
- 		*)
-@@ -26062,6 +26066,11 @@ _ACEOF
+ 	        darwin*)	use_x86_asm="no" ;;
+ 		*linux*)	DEFAULT_INT10=vm86 ;;
+-		*freebsd*)	AC_DEFINE(USE_DEV_IO) ;;
++		*freebsd* | *dragonfly*)	AC_DEFINE(USE_DEV_IO) ;;
+ 		*netbsd*)	AC_DEFINE(USE_I386_IOPL)
+ 				SYS_LIBS=-li386
+ 				;;
+@@ -1045,7 +1045,7 @@ if test "x$GCC" = "xyes"; then
+        fi
+        XSERVER_CFLAGS="$GCC_WARNINGS $XSERVER_CFLAGS"
  
- 
- cat >>confdefs.h <<\_ACEOF
-+#define PCVT_SUPPORT 1
-+_ACEOF
-+
-+
-+cat >>confdefs.h <<\_ACEOF
- #define WSCONS_SUPPORT 1
- _ACEOF
- 
-@@ -29542,7 +29551,7 @@ _ACEOF
- 
+-       LD_EXPORT_SYMBOLS_FLAG="-rdynamic"
++       LD_EXPORT_SYMBOLS_FLAG="$EXPORT_SYMBOLS_LDFLAGS"
  fi
+ case $host_os in
+        darwin*)
+@@ -1070,6 +1070,9 @@ if ! test "x$have_clock_gettime" = xno; 
+         CLOCK_LIBS=""
+     fi
  
--VENDOR_RELEASE="((($VERSION_MAJOR) * 10000000) + (($VERSION_MINOR) * 100000) + (($VERSION_PATCH) * 1000) + $VERSION_SNAP)"
-+VENDOR_RELEASE=`expr \( $VERSION_MAJOR \* 10000000 \) + \( $VERSION_MINOR \* 100000 \) + \( $VERSION_PATCH \* 1000 \) + $VERSION_SNAP`
- 
- if test $VERSION_SNAP = "0"; then
- 	if test $VERSION_PATCH = "0"; then
-@@ -32418,7 +32427,7 @@ echo "$as_me: Disabling DGA extension" >
++    LIBS_SAVE="$LIBS"
++    LIBS="$CLOCK_LIBS"
++
+     AC_RUN_IFELSE([
+ #define _POSIX_C_SOURCE 199309L
+ #include <time.h>
+@@ -1084,6 +1087,8 @@ int main(int argc, char *argv[]) {
+ }
+     ], [MONOTONIC_CLOCK=yes], [MONOTONIC_CLOCK=no],
+        [MONOTONIC_CLOCK="cross compiling"])
++
++    LIBS="$LIBS_SAVE"
+ else
+     MONOTONIC_CLOCK=no
+ fi
+@@ -1376,7 +1381,7 @@ return 0;}
  			;;
  		esac
  		;;

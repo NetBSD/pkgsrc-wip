@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/08/06 04:41:32 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/06 16:44:11 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.99.0
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +25,8 @@ USE_TOOLS+=		automake
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--enable-dri
+
+CONFIGURE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 PKG_SUPPORTED_OPTIONS=	dri dbus
 PKG_SUGGESTED_OPTIONS=	dri
@@ -87,8 +90,10 @@ BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 .endif
 .if !empty(PKG_OPTIONS:Mdbus)
 CONFIGURE_ARGS+=	--enable-config-dbus
+PLIST_SUBST+=		DBUS=""
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
+PLIST_SUBST+=		DBUS="@comment "
 CONFIGURE_ARGS+=	--disable-config-dbus
 .endif
 .include "../../wip/pixman/buildlink3.mk"
