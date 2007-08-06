@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2007/08/06 11:01:40 jukka Exp $
+$NetBSD: patch-ac,v 1.2 2007/08/06 19:47:30 jukka Exp $
 
 --- devtools/M4/header.m4.orig	2002-08-01 23:58:26.000000000 +0200
-+++ devtools/M4/header.m4	2007-08-06 12:57:16.000000000 +0200
++++ devtools/M4/header.m4	2007-08-06 21:27:02.000000000 +0200
 @@ -25,7 +25,7 @@ define(`confSHELL', `/bin/sh')
  define(`confBEFORE', `')
  define(`confLIBDIRS', `')
  define(`confINCDIRS', `')
 -define(`confLIBSEARCH', `db bind resolv 44bsd')
-+define(`confLIBSEARCH', `db resolv bind 44bsd')
++define(`confLIBSEARCH', `@RESOLVLIB@')
  define(`confLIBSEARCHPATH', `/lib /usr/lib /usr/shlib')
  define(`confSITECONFIG', `site.config')
  define(`confBUILDBIN', `${SRCDIR}/devtools/bin')

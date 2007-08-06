@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/08/02 22:30:09 jukka Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/06 19:47:29 jukka Exp $
 
 --- site.config.m4.dist.orig	2007-05-31 20:57:51.000000000 +0200
-+++ site.config.m4.dist	2007-06-14 14:31:02.000000000 +0200
++++ site.config.m4.dist	2007-08-06 21:27:46.000000000 +0200
+@@ -17,7 +17,7 @@ dnl libar -- asynchronous resolver libra
+ dnl
+ dnl If you want to use the asynchronous resolver library, enable this
+ dnl next line by deleting the "dnl" at the front of it.
+-dnl define(`bld_USE_ARLIB', `true')
++@ARLIB@ define(`bld_USE_ARLIB', `true')
+ dnl 
+ dnl libar normally uses res_init() or res_ninit() to load the contents
+ dnl of resolv.conf for its use.  If neither of these work on your system
 @@ -53,8 +53,8 @@ dnl
  dnl DK requires several algorithms provided by this library.  If necessary,
  dnl enable these lines by deleting "dnl" from the front of them and edit
