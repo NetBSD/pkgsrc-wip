@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2 2007/08/03 08:46:33 jukka Exp $
+$NetBSD: TODO,v 1.3 2007/08/06 12:02:30 jukka Exp $
 
 - Licence `no-profit' seems to be deprecated (according to pkglint(1)),
   what should LICENCE be set to? The Sendmail licence shipping with
@@ -11,6 +11,8 @@ $NetBSD: TODO,v 1.2 2007/08/03 08:46:33 jukka Exp $
 - Decide whether some (all?) of the FFR (for future release) features
   (see FEATURES file in the distfile) should be made available through
   the options framework.
+
+- Option `dkim-stats' requires db -> use mk/db1.builtin.mk?
 
 - Test the package and have it tested by others. I'm using it with
   Postfix 2.4.3 on NetBSD/i386 and so far it seems to work fine.
