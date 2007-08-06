@@ -1,0 +1,11 @@
+--- configure.ac.orig	2007-08-06 17:47:47.000000000 -0400
++++ configure.ac	2007-08-06 17:55:02.000000000 -0400
+@@ -69,7 +69,7 @@
+                        [Name of the period field in struct kbd_repeat])
+     ;;
+ 
+-  freebsd* | kfreebsd-gnu* | netbsd* | openbsd*)
++  freebsd* | kfreebsd-gnu* | netbsd* | openbsd* | dragonfly*)
+     IS_BSD="yes"
+     ;;
+ 
