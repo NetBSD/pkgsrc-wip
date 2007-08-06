@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/08/06 02:39:43 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 MODULAR_XORG_SERVER_BUILDLINK3_MK:=	${MODULAR_XORG_SERVER_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}modular-xorg-server
 
 .if ${MODULAR_XORG_SERVER_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.3.99.0
-BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../wip/modular-xorg-server1399
+BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../wip/modular-xorg-server
 .endif	# MODULAR_XORG_SERVER_BUILDLINK3_MK
 
 .include "../../wip/pixman/buildlink3.mk"
