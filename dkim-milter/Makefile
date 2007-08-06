@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/06 11:16:22 jukka Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/06 11:44:45 jukka Exp $
 
 DISTNAME=	dkim-milter-2.0.2
 CATEGORIES=	mail
@@ -35,7 +35,8 @@ SUBST_CLASSES+=		rename
 SUBST_STAGE.rename=	post-build
 SUBST_FILES.rename=	dkim-filter/dkim-filter.conf.5 \
 			dkim-filter/dkim-filter.conf.sample \
-			dkim-filter/dkim-filter.8
+			dkim-filter/dkim-filter.8 \
+			dkim-filter/dkim-stats.8
 SUBST_SED.rename=	-e 's|dkim-filter|dkim-milter|g'
 SUBST_MESSAGE.rename=	Renaming dkim-filter to dkim-milter
 
