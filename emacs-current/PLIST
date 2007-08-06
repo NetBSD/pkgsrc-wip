@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/08/03 05:43:17 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.27 2007/08/06 05:21:34 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -764,6 +764,8 @@ share/emacs/${PKGVERSION}/lisp/calc/calc-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-mode.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-mtx.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-mtx.elc
+share/emacs/${PKGVERSION}/lisp/calc/calc-nlfit.el.gz
+share/emacs/${PKGVERSION}/lisp/calc/calc-nlfit.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-poly.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-poly.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-prog.el.gz
