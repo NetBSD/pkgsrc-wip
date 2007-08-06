@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2007/08/06 04:30:20 bsadewitz Exp $
+
+--- src/ws.c.orig	2007-05-26 13:24:45.000000000 -0400
++++ src/ws.c
+@@ -371,8 +371,18 @@ wsProc(DeviceIntPtr pWS, int what)
+ 			map[i + 1] = i + 1;
+ 		InitPointerDeviceStruct((DevicePtr)pWS, map,
+ 				min(priv->buttons, NBUTTONS),
+-		    miPointerGetMotionEvents, wsControlProc,
+-		    miPointerGetMotionBufferSize());
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) == 0
++		    miPointerGetMotionEvents,
++#else
++		    GetMotionHistory, 
++#endif
++		    wsControlProc, 
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) == 0
++		    miPointerGetMotionBufferSize()
++#else
++		    GetMotionHistorySize(), NAXES
++#endif
++		    );
+ 		xf86InitValuatorAxisStruct(pWS, 0, 0, -1, 1, 0, 1);
+ 		xf86InitValuatorDefaults(pWS, 0);
+ 		
