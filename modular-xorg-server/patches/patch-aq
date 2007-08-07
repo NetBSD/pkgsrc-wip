@@ -1,0 +1,22 @@
+From: Roland "Test-tools" BÃ¤r <roland@verifysoft.de>
+Date: Mon, 6 Aug 2007 19:37:52 +0000 (-0700)
+Subject: Probable off by one buffer overflow in .../xorgconfig/xorgconfig.c
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=f6aa2200f2fb4f4d4bb51e67d68e86aabcac0c4b
+
+Probable off by one buffer overflow in .../xorgconfig/xorgconfig.c
+
+X.Org Bug #11858 <http://bugs.freedesktop.org/show_bug.cgi?id=11858>
+Patch #11005 <http://bugs.freedesktop.org/attachment.cgi?id=11005>
+---
+
+--- hw/xfree86/utils/xorgconfig/xorgconfig.c.orig	2007-06-30 11:16:04.000000000 -0400
++++ hw/xfree86/utils/xorgconfig/xorgconfig.c
+@@ -2442,7 +2442,7 @@ write_fontpath_section(FILE *f)
+ 		len = nextdir - thisdir;
+ 		nextdir++;
+ 	    }
+-	    if (len > sizeof(cur))
++	    if (len >= sizeof(cur))
+ 		continue;
+ 	    strncpy(cur, thisdir, len);
+ 	    cur[len] = '\0';

@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1 2007/08/07 03:56:41 bsadewitz Exp $
+
+--- fb/wfbrename.h.orig	2007-06-30 11:16:04.000000000 -0400
++++ fb/wfbrename.h
+@@ -188,6 +188,7 @@
+ #define fbWinPrivateIndex wfbWinPrivateIndex
+ #define fbZeroLine wfbZeroLine
+ #define fbZeroSegment wfbZeroSegment
++#define free_pixman_pict wfb_free_pixman_pict
+ #define image_from_pict wfb_image_from_pict
+ #define xxScrPrivateIndex wfbxxScrPrivateIndex
+ #define xxGCPrivateIndex wfbxxGCPrivateIndex

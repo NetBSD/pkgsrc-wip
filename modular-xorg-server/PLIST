@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/06 16:44:11 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/07 03:56:40 bsadewitz Exp $
 bin/X
-bin/Xnest
 bin/Xorg
-bin/Xvfb
 bin/cvt
 bin/gtf
 bin/inb
@@ -15,7 +13,6 @@ bin/outw
 bin/pcitweak
 bin/scanpci
 bin/xorgconfig
-${DBUS}etc/dbus-1/system.d/xorg-server.conf
 include/xorg/BT.h
 include/xorg/IBM.h
 include/xorg/TI.h
@@ -217,10 +214,8 @@ lib/xorg/modules/multimedia/tda9850_drv.la
 lib/xorg/modules/multimedia/tda9885_drv.la
 lib/xorg/modules/multimedia/uda1380_drv.la
 lib/xserver/SecurityPolicy
-man/man1/Xnest.1
 man/man1/Xorg.1
 man/man1/Xserver.1
-man/man1/Xvfb.1
 man/man1/cvt.1
 man/man1/gtf.1
 man/man1/pcitweak.1
@@ -238,3 +233,5 @@ share/aclocal/xorg-server.m4
 @dirrm lib/xorg/modules/fonts
 @dirrm lib/xorg/modules/extensions
 @dirrm lib/xorg/modules
+@dirrm lib/xorg
+@dirrm include/xorg

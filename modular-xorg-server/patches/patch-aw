@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2007/08/07 03:56:41 bsadewitz Exp $
+
+--- mi/miregion.c.orig	2007-06-30 11:16:05.000000000 -0400
++++ mi/miregion.c
+@@ -85,7 +85,7 @@ Equipment Corporation.
+ #include "gc.h"
+ #include "mi.h"
+ #include "mispans.h"
+-#include <pixman/pixman.h>
++#include <pixman.h>
+ 
+ #undef assert
+ #ifdef DEBUG
