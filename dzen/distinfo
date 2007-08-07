@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/08/07 17:23:14 milleoiseaux Exp $
+
+SHA1 (dzen2-0.8.0.tar.gz) = bf6d8060b7b6853ea192f466f2c9e26edfb7a19a
+RMD160 (dzen2-0.8.0.tar.gz) = ac904aeda274549b450b21b96b72a58cf51be5dc
+Size (dzen2-0.8.0.tar.gz) = 30882 bytes
+SHA1 (patch-aa) = 0fa57e0d296877cc863eb3e0039c035c68f37fdc
