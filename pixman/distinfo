@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/08/05 04:59:06 bsadewitz Exp $
+$NetBSD: distinfo,v 1.3 2007/08/07 02:20:49 bsadewitz Exp $
 
-SHA1 (pixman-0.9.0-3.20070724.fc8.src.rpm) = 0740bd5800e21ebc55c79191257a2d0cd31436d6
-RMD160 (pixman-0.9.0-3.20070724.fc8.src.rpm) = 59aaa8ca5a93f88f55e92aa3fd9afa55c66f8e97
-Size (pixman-0.9.0-3.20070724.fc8.src.rpm) = 380084 bytes
+SHA1 (pixman-0.9.4.tar.bz2) = c7c790d0cd96546993918a56c973cba16e35b87b
+RMD160 (pixman-0.9.4.tar.bz2) = f352f99fc4dd527cb76507056a6329f40d04c995
+Size (pixman-0.9.4.tar.bz2) = 290396 bytes
+SHA1 (patch-aa) = 1b2d41a2bfa147e3f7caf71d22730f7eead07775

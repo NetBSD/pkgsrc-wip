@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2007/08/06 17:08:45 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/07 02:20:49 bsadewitz Exp $
 #
 
-DISTNAME=	pixman-0.9.0-3.20070724.fc8.src.rpm
-PKGNAME=	pixman-0.9.3
-PKGREVISION=	1
+DISTNAME=	pixman-0.9.4
 CATEGORIES=	x11
-MASTER_SITES=	http://koji.fedoraproject.org/packages/pixman/0.9.0/3.20070724.fc8/src/
-EXTRACT_SUFX=	# empty
+MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
+EXTRACT_SUFX=	.tar.bz2
 
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X.org pixman library
 
@@ -17,25 +15,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 
-RPM2PKG_STRIP=		0
-RPM2PKG_PLIST=		# empty
-
-BUILD_DEPENDS+=		xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
-
-USE_TOOLS+=		gmake automake pkg-config
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	pixman.pc.in
-PKGCONFIG_OVERRIDE+=	libcomp.pc
+PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 
-
-WRKSRC=			${WRKDIR}/pixman
-
-post-extract:
-	cd ${WRKDIR} && ${EXTRACT_CMD} ${PKGBASE}-*.bz2
-pre-configure:
-	cd ${WRKSRC} && autoreconf --install -v
-
-.include "../../mk/emulator/pkg-rpm.mk"
 
 .include "../../mk/bsd.pkg.mk"
