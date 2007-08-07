@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/08/05 04:56:17 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.12 2007/08/07 03:07:09 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,17 +20,17 @@ PKG_DESTDIR_SUPPORT=user-destdir
 
 INSTALLATION_DIRS_FROM_PLIST=	yes
 
-DRI_MODULE_PATH?=	lib/xorg/modules/dri
-BUILD_DEFS+=		DRI_MODULE_PATH
-PLIST_SUBST+=		DRI_MODULE_PATH=${DRI_MODULE_PATH}
+DRI_MODULE_DIR?=	lib/dri
+BUILD_DEFS+=		DRI_MODULE_DIR
+PLIST_SUBST+=		DRI_MODULE_DIR=${DRI_MODULE_DIR}
 
 GL_HEADERS=	gl.h gl_mangle.h glext.h glx.h glx_mangle.h glxext.h
 GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing -ffast-math
-CFLAGS.NetBSD+=-D_REENTRANT -D_PTHREADS
+DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing -ffast-math -fomit-frame-pointer
+CFLAGS.NetBSD+=-D_REENTRANT
 PKGSRC_PICFLAGS=-fPIC -DPIC
 
 .include "subst.mk"
@@ -37,7 +38,7 @@ PKGSRC_PICFLAGS=-fPIC -DPIC
 
 CFLAGS+=	${DRI_CFLAGS}
 MAKE_ENV+=	DRI_DIRS=${DRI_DRIVERS:M*:Q}
-MAKE_ENV+=	DRI_MODULE_PATH=${DRI_MODULE_PATH:Q}
+MAKE_ENV+=	DRI_MODULE_DIR=${DRI_MODULE_DIR:Q}
 MAKE_ENV+=	PKGSRC_PICFLAGS=${PKGSRC_PICFLAGS:Q}
 MAKE_ENV+=	SHELL=${TOOLS_SHELL:Q}
 
@@ -59,13 +60,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/GL/$$i ${DESTDIR}${PREFIX}/include/GL; done
 	cd ${WRKSRC}/lib && \
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib && \
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/${DRI_MODULE_PATH} && \
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/${DRI_MODULE_DIR} && \
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/src/glx/x11/libGL.la ${DESTDIR}${PREFIX}/lib && \
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/src/glw/libGLw.la ${DESTDIR}${PREFIX}/lib
 
 .if target(do-install)
 . for d in ${DRI_DRIVERS} 
-	${INSTALL_LIB} ${WRKSRC}/lib/${d}_dri.so ${DESTDIR}${PREFIX}/${DRI_MODULE_PATH}
+	${INSTALL_LIB} ${WRKSRC}/lib/${d}_dri.so ${DESTDIR}${PREFIX}/${DRI_MODULE_DIR}
 . endfor
 .endif
 
