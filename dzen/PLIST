@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/07 17:23:14 milleoiseaux Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/07 19:01:33 milleoiseaux Exp $
+bin/dzen2
