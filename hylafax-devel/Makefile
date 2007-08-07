@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/08/06 19:20:38 ahallmann Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/07 18:48:45 ahallmann Exp $
 
-VERS=		4.3.4
+VERS=		4.4.0
 PKGNAME=	hylafax-devel-${VERS}
 DISTNAME=	hylafax-${VERS}
 CATEGORIES=	comms
