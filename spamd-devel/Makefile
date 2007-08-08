@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/05/23 17:29:10 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/08 13:59:26 jeremy-c-reed Exp $
 
-DISTNAME=		spamd-20070428
+DISTNAME=		spamd-20070531
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
