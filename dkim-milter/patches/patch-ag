@@ -1,0 +1,20 @@
+--- libdkim/dkim.h.orig	2007-08-02 19:05:16.000000000 +0200
++++ libdkim/dkim.h	2007-08-09 15:41:29.000000000 +0200
+@@ -618,6 +618,7 @@ extern DKIM_STAT dkim_getsighdr __P((DKI
+ **  	sig -- a DKIM_SIGINFO handle
+ **  	msglen -- total size of the message body (returned)
+ **  	canonlen -- total number of canonicalized bytes (returned)
++**  	signlen -- restricted signature length (returned)
+ **
+ **  Return value:
+ **  	A DKIM_STAT value.
+@@ -628,7 +629,8 @@ extern DKIM_STAT dkim_getsighdr __P((DKI
+ */
+ 
+ extern DKIM_STAT dkim_sig_getcanonlen __P((DKIM *dkim, DKIM_SIGINFO *sig,
+-                                           off_t *msglen, off_t *canonlen));
++                                           off_t *msglen, off_t *canonlen,
++                                           off_t *signlen));
+ 
+ /*
+ **  DKIM_REPORTINFO -- return info needed to generate failure report

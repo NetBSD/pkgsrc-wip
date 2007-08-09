@@ -1,0 +1,29 @@
+--- libdkim/docs/dkim_sig_getcanonlen.html.orig	2007-06-27 21:55:49.000000000 +0200
++++ libdkim/docs/dkim_sig_getcanonlen.html	2007-08-09 15:43:33.000000000 +0200
+@@ -15,7 +15,8 @@ $Id: dkim_sig_getcanonlen.html,v 1.2 200
+ 	<a href="dkim.html"><tt>DKIM</tt></a> *dkim,
+ 	<a href="dkim_siginfo.html"><tt>DKIM_SIGINFO</tt></a> *sig,
+         off_t *msglen,
+-        off_t *canonlen
++        off_t *canonlen,
++        off_t *signlen
+ );
+ </pre>
+ Retrieve the number of bytes of message body presented for signing
+@@ -67,6 +68,16 @@ or verifying, and/or the number of bytes
+         If it is less, then the signer didn't sign the entire message.
+         A verifier can compare this value with that of <tt>msglen</tt>
+         to see what portion of the total message was signed by the signer.
++        Note that <tt>msglen</tt> and <tt>canonlen</tt> can differ even if
++	no signature length limit was set if, for example, there were
++	trailing blank lines on the message as these are always stripped.
++	Can be NULL if this information is not needed by the caller.
++	</td></tr>
++    <tr valign="top"><td>signlen</td>
++	<td>A pointer to an <tt>off_t</tt> which will receive the signature
++        length limit for this signature (i.e. the value of the "l=" tag
++	if one was present on the signature).  If no limit was set by
++	the signer, a value of -1 is returned.
+         Can be NULL if this information is not needed by the caller.
+ 	</td></tr>
+     </table>

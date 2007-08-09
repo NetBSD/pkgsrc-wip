@@ -1,0 +1,11 @@
+--- libdkim/dkim-canon.c.orig	2007-07-31 05:50:33.000000000 +0200
++++ libdkim/dkim-canon.c	2007-08-09 15:35:11.000000000 +0200
+@@ -1089,6 +1089,8 @@ dkim_canon_bodychunk(DKIM *dkim, u_char 
+ 
+ 	assert(dkim != NULL);
+ 
++	dkim->dkim_bodylen += buflen;
++
+ 	for (cur = dkim->dkim_canonhead; cur != NULL; cur = cur->canon_next)
+ 	{
+ 		/* skip done hashes and those which are of the wrong type */

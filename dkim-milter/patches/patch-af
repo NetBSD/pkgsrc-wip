@@ -1,0 +1,37 @@
+--- libdkim/dkim.c.orig	2007-08-02 19:11:11.000000000 +0200
++++ libdkim/dkim.c	2007-08-09 15:39:18.000000000 +0200
+@@ -1495,7 +1495,6 @@ dkim_siglist_setup(DKIM *dkim)
+ 		/* the rest */
+ 		dkim->dkim_siglist[c]->sig_bh = DKIM_SIGBH_UNTESTED;
+ 		dkim->dkim_siglist[c]->sig_flags = 0;
+-		dkim->dkim_siglist[c]->sig_signalg = 0;
+ 
+ 		/* allow the user to generate its handle */
+ 		if (lib->dkiml_sig_handle != NULL)
+@@ -4985,6 +4984,7 @@ dkim_reportinfo(DKIM *dkim, DKIM_SIGINFO
+ **  	sig -- DKIM_SIGINFO handle
+ **  	msglen -- total body length (returned)
+ **  	canonlen -- total canonicalized length (returned)
++**  	signlen -- maximum signed length (returned)
+ **
+ **  Return value:
+ **  	A DKIM_STAT_* constant.
+@@ -4992,7 +4992,7 @@ dkim_reportinfo(DKIM *dkim, DKIM_SIGINFO
+ 
+ DKIM_STAT
+ dkim_sig_getcanonlen(DKIM *dkim, DKIM_SIGINFO *sig, off_t *msglen,
+-                     off_t *canonlen)
++                     off_t *canonlen, off_t *signlen)
+ {
+ 	assert(dkim != NULL);
+ 	assert(sig != NULL);
+@@ -5003,6 +5003,9 @@ dkim_sig_getcanonlen(DKIM *dkim, DKIM_SI
+ 	if (canonlen != NULL)
+ 		*canonlen = sig->sig_bodycanon->canon_wrote;
+ 
++	if (signlen != NULL)
++		*signlen = sig->sig_bodycanon->canon_length;
++
+ 	return DKIM_STAT_OK;
+ }
+ 
