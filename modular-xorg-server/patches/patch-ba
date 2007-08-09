@@ -1,0 +1,93 @@
+From: Eric Anholt <eric@anholt.net>
+Date: Wed, 8 Aug 2007 21:24:42 +0000 (-0700)
+Subject: Fix the swapped decode of the EDID DTD h/v sync polarity fields.
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=ff4bd3addb48df3eacc4b121cc249a7f38eb981a
+
+Fix the swapped decode of the EDID DTD h/v sync polarity fields.
+
+As a result, we can remove the quirks that existed to flip the bits back around
+for us.  This is not confirmed in all cases due to lack of bugs containing EDID
+blocks associated with the quirks, but is likely true.
+---
+
+--- hw/xfree86/modes/xf86EdidModes.c.orig	2007-07-31 18:37:36.000000000 -0400
++++ hw/xfree86/modes/xf86EdidModes.c
+@@ -50,36 +50,12 @@
+ 
+ typedef enum {
+     DDC_QUIRK_NONE = 0,
+-    /* Force detailed sync polarity to -h +v */
+-    DDC_QUIRK_DT_SYNC_HM_VP = 1 << 0,
+     /* First detailed mode is bogus, prefer largest mode at 60hz */
+-    DDC_QUIRK_PREFER_LARGE_60 = 1 << 1,
++    DDC_QUIRK_PREFER_LARGE_60 = 1 << 0,
+     /* 135MHz clock is too high, drop a bit */
+-    DDC_QUIRK_135_CLOCK_TOO_HIGH = 1 << 2
++    DDC_QUIRK_135_CLOCK_TOO_HIGH = 1 << 1,
+ } ddc_quirk_t;
+ 
+-static Bool quirk_dt_sync_hm_vp (int scrnIndex, xf86MonPtr DDC)
+-{
+-    /* Belinea 1924S1W */
+-    if (memcmp (DDC->vendor.name, "MAX", 4) == 0 &&
+-	DDC->vendor.prod_id == 1932)
+-	return TRUE;
+-    /* Belinea 10 20 30W */
+-    if (memcmp (DDC->vendor.name, "MAX", 4) == 0 &&
+-	DDC->vendor.prod_id == 2007)
+-	return TRUE;
+-    /* ViewSonic VX2025wm (bug #9941) */
+-    if (memcmp (DDC->vendor.name, "VSC", 4) == 0 &&
+-	DDC->vendor.prod_id == 58653)
+-	return TRUE;
+-    /* Samsung SyncMaster 205BW */
+-    if (memcmp (DDC->vendor.name, "SAM", 4) == 0 &&
+-	DDC->vendor.prod_id == 541)
+-	return TRUE;
+-     
+-    return FALSE;
+-}
+-
+ static Bool quirk_prefer_large_60 (int scrnIndex, xf86MonPtr DDC)
+ {
+     /* Belinea 10 15 55 */
+@@ -122,10 +98,6 @@ typedef struct {
+ } ddc_quirk_map_t;
+ 
+ static const ddc_quirk_map_t ddc_quirks[] = {
+-    { 
+-	quirk_dt_sync_hm_vp,	DDC_QUIRK_DT_SYNC_HM_VP,
+-	"Set detailed timing sync polarity to -h +v"
+-    },
+     {
+ 	quirk_prefer_large_60,   DDC_QUIRK_PREFER_LARGE_60,
+ 	"Detailed timing is not preferred, use largest mode at 60Hz"
+@@ -274,20 +246,15 @@ DDCModeFromDetailedTiming(int scrnIndex,
+     if (timing->interlaced)
+         Mode->Flags |= V_INTERLACE;
+ 
+-    if (quirks & DDC_QUIRK_DT_SYNC_HM_VP)
+-	Mode->Flags |= V_NHSYNC | V_PVSYNC;
++    if (timing->misc & 0x02)
++	Mode->Flags |= V_PVSYNC;
+     else
+-    {
+-	if (timing->misc & 0x02)
+-	    Mode->Flags |= V_PHSYNC;
+-	else
+-	    Mode->Flags |= V_NHSYNC;
+-    
+-	if (timing->misc & 0x01)
+-	    Mode->Flags |= V_PVSYNC;
+-	else
+-	    Mode->Flags |= V_NVSYNC;
+-    }
++	Mode->Flags |= V_NVSYNC;
++
++    if (timing->misc & 0x01)
++	Mode->Flags |= V_PHSYNC;
++    else
++	Mode->Flags |= V_NHSYNC;
+ 
+     return Mode;
+ }

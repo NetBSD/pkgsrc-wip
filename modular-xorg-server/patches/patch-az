@@ -1,0 +1,19 @@
+From: Gustavo Pichorim Boiko <boiko@mandriva.com>
+Date: Thu, 2 Aug 2007 21:09:52 +0000 (-0300)
+Subject: [PATCH] Allocate the right number of entries for saving crtcs
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=2926cf1da7e4ed63573bfaecdd7e19beb3057d9b
+
+[PATCH] Allocate the right number of entries for saving crtcs
+---
+
+--- hw/xfree86/modes/xf86RandR12.c.orig	2007-07-31 18:37:36.000000000 -0400
++++ hw/xfree86/modes/xf86RandR12.c
+@@ -716,7 +716,7 @@ xf86RandR12CrtcSet (ScreenPtr	pScreen,
+     xf86CrtcPtr		*save_crtcs;
+     Bool		save_enabled = crtc->enabled;
+ 
+-    save_crtcs = ALLOCATE_LOCAL(config->num_crtc * sizeof (xf86CrtcPtr));
++    save_crtcs = ALLOCATE_LOCAL(config->num_output * sizeof (xf86CrtcPtr));
+     if ((randr_mode != NULL) != crtc->enabled)
+ 	changed = TRUE;
+     else if (randr_mode && !xf86RandRModeMatches (randr_mode, &crtc->mode))
