@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/08/07 03:07:09 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.13 2007/08/09 07:03:34 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2

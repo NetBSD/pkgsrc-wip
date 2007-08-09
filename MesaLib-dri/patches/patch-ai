@@ -1,0 +1,34 @@
+From: Brian <brian.paul@tungstengraphics.com>
+Date: Tue, 7 Aug 2007 07:17:02 +0000 (+0100)
+Subject: fix even-sized point positioning (bug 11874)
+X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=0ed3ff5011442facdaccdb84518d7712833f9dab
+
+fix even-sized point positioning (bug 11874)
+---
+
+--- src/mesa/swrast/s_points.c
++++ src/mesa/swrast/s_points.c
+@@ -172,9 +172,9 @@ sprite_point(GLcontext *ctx, const SWver
+       }
+       else {
+          /* even size */
+-         xmin = (GLint) x - iRadius + 1;
++         xmin = (GLint) x - iRadius;
+          xmax = xmin + iSize - 1;
+-         ymin = (GLint) y - iRadius + 1;
++         ymin = (GLint) y - iRadius;
+          ymax = ymin + iSize - 1;
+       }
+ 
+@@ -418,9 +418,9 @@ large_point(GLcontext *ctx, const SWvert
+       }
+       else {
+          /* even size */
+-         xmin = (GLint) x - iRadius + 1;
++         xmin = (GLint) x - iRadius;
+          xmax = xmin + iSize - 1;
+-         ymin = (GLint) y - iRadius + 1;
++         ymin = (GLint) y - iRadius;
+          ymax = ymin + iSize - 1;
+       }
+ 
