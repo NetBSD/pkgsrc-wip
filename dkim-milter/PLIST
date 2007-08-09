@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/06 19:46:44 jukka Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/08/09 14:37:20 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
@@ -21,5 +21,62 @@ share/doc/dkim-milter/rfc4686.txt
 share/doc/dkim-milter/rfc4871.txt
 share/examples/dkim-milter/dkim-milter.conf.sample
 share/examples/rc.d/dkim-milter
+share/doc/dkim-milter/libdkim/dkim.html
+share/doc/dkim-milter/libdkim/dkim_alg_t.html
+share/doc/dkim-milter/libdkim/dkim_body.html
+share/doc/dkim-milter/libdkim/dkim_canon_t.html
+share/doc/dkim-milter/libdkim/dkim_cbstat.html
+share/doc/dkim-milter/libdkim/dkim_close.html
+share/doc/dkim-milter/libdkim/dkim_eoh.html
+share/doc/dkim-milter/libdkim/dkim_eom.html
+share/doc/dkim-milter/libdkim/dkim_free.html
+share/doc/dkim-milter/libdkim/dkim_get_user_context.html
+share/doc/dkim-milter/libdkim/dkim_getsighdr.html
+share/doc/dkim-milter/libdkim/dkim_getsiglist.html
+share/doc/dkim-milter/libdkim/dkim_getsignature.html
+share/doc/dkim-milter/libdkim/dkim_header.html
+share/doc/dkim-milter/libdkim/dkim_init.html
+share/doc/dkim-milter/libdkim/dkim_lib.html
+share/doc/dkim-milter/libdkim/dkim_ohdrs.html
+share/doc/dkim-milter/libdkim/dkim_options.html
+share/doc/dkim-milter/libdkim/dkim_param_t.html
+share/doc/dkim-milter/libdkim/dkim_policy.html
+share/doc/dkim-milter/libdkim/dkim_policy_t.html
+share/doc/dkim-milter/libdkim/dkim_query_t.html
+share/doc/dkim-milter/libdkim/dkim_reportinfo.html
+share/doc/dkim-milter/libdkim/dkim_set_dns_callback.html
+share/doc/dkim-milter/libdkim/dkim_set_final.html
+share/doc/dkim-milter/libdkim/dkim_set_key_lookup.html
+share/doc/dkim-milter/libdkim/dkim_set_policy_lookup.html
+share/doc/dkim-milter/libdkim/dkim_set_prescreen.html
+share/doc/dkim-milter/libdkim/dkim_set_signature_handle.html
+share/doc/dkim-milter/libdkim/dkim_set_signature_handle_free.html
+share/doc/dkim-milter/libdkim/dkim_set_signature_tagvalues.html
+share/doc/dkim-milter/libdkim/dkim_set_signer.html
+share/doc/dkim-milter/libdkim/dkim_set_user_context.html
+share/doc/dkim-milter/libdkim/dkim_sig_getbh.html
+share/doc/dkim-milter/libdkim/dkim_sig_getcanonlen.html
+share/doc/dkim-milter/libdkim/dkim_sig_getcontext.html
+share/doc/dkim-milter/libdkim/dkim_sig_getdomain.html
+share/doc/dkim-milter/libdkim/dkim_sig_geterror.html
+share/doc/dkim-milter/libdkim/dkim_sig_geterrorstr.html
+share/doc/dkim-milter/libdkim/dkim_sig_getflags.html
+share/doc/dkim-milter/libdkim/dkim_sig_getkeysize.html
+share/doc/dkim-milter/libdkim/dkim_sig_getselector.html
+share/doc/dkim-milter/libdkim/dkim_sig_getsignalg.html
+share/doc/dkim-milter/libdkim/dkim_sig_getsigntime.html
+share/doc/dkim-milter/libdkim/dkim_sig_ignore.html
+share/doc/dkim-milter/libdkim/dkim_sig_process.html
+share/doc/dkim-milter/libdkim/dkim_sigerror.html
+share/doc/dkim-milter/libdkim/dkim_siginfo.html
+share/doc/dkim-milter/libdkim/dkim_sigkey_t.html
+share/doc/dkim-milter/libdkim/dkim_sign.html
+share/doc/dkim-milter/libdkim/dkim_ssl_version.html
+share/doc/dkim-milter/libdkim/dkim_stat.html
+share/doc/dkim-milter/libdkim/dkim_verify.html
+share/doc/dkim-milter/libdkim/index.html
+share/doc/dkim-milter/libdkim/overview.html
+share/doc/dkim-milter/libdkim/rfc2822_mailbox_split.html
+@dirrm share/doc/dkim-milter/libdkim
 @dirrm share/doc/dkim-milter
 @dirrm share/examples/dkim-milter
