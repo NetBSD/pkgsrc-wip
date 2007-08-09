@@ -26,7 +26,7 @@ SUBST_SED.fix-conf+=	-e 's,-l$$(GL_LIB),-lGL,g'
 SUBST_SED.fix-conf+=	-e 's,-fPIC,,g'
 SUBST_SED.fix-conf+=	-e 's,-DPIC,,g'
 SUBST_SED.fix-conf+=	-e 's|^DRI_DRIVER_INSTALL_DIR.*|DRI_DRIVER_INSTALL_DIR = ${PREFIX}/${DRI_MODULE_DIR}|'
-SUBST_SED.fix-conf+=	-e 's,ASM_FLAGS =.*,,g'
+#SUBST_SED.fix-conf+=	-e 's,ASM_FLAGS =.*,,g'
 
 SUBST_CLASSES+=		fix-pthread
 SUBST_STAGE.fix-pthread= pre-patch
