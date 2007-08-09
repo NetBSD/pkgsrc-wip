@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.2 2007/08/09 14:07:17 jukka Exp $
+
 --- dkim-filter/dkim-filter.c.orig	2007-08-03 17:19:40.000000000 +0200
 +++ dkim-filter/dkim-filter.c	2007-08-09 15:33:43.000000000 +0200
 @@ -3034,8 +3034,7 @@ mlfi_eom(SMFICTX *ctx)
