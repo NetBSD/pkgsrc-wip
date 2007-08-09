@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/08/06 19:47:29 jukka Exp $
+# $NetBSD: Makefile,v 1.9 2007/08/09 14:37:44 jukka Exp $
 
 DISTNAME=	dk-milter-0.6.0
 CATEGORIES=	mail
@@ -35,7 +35,7 @@ SUBST_FILES.rename=	dk-filter/dk-filter.8
 SUBST_SED.rename=	-e 's|dk-filter|dk-milter|g'
 SUBST_MESSAGE.rename=	Renaming dk-filter to dk-milter
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter/libdk
 
 pre-configure:
 	mv ${WRKSRC}/site.config.m4.dist ${WRKSRC}/devtools/Site/site.config.m4
@@ -55,6 +55,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dk-milter
 	${INSTALL_DATA} ${WRKSRC}/rfc4870.txt ${PREFIX}/share/doc/dk-milter
+	cd ${WRKSRC}/libdk/docs; for file in *.html; do \
+	${INSTALL_DATA} $$file ${PREFIX}/share/doc/dk-milter/libdk; done
 
 .include "options.mk"
 .include "../../security/openssl/buildlink3.mk"
