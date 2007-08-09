@@ -1,0 +1,20 @@
+From: Brian <brian.paul@tungstengraphics.com>
+Date: Tue, 7 Aug 2007 21:06:08 +0000 (+0100)
+Subject: move free() after dereference (bug 11878)
+X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=3973d1ad3353cd66c69e5170908a9e9ae03477fb
+
+move free() after dereference (bug 11878)
+---
+
+--- src/mesa/drivers/dri/i810/i810screen.c
++++ src/mesa/drivers/dri/i810/i810screen.c
+@@ -288,8 +288,8 @@ i810InitDriver(__DRIscreenPrivate *sPriv
+ 	      i810Screen->depth.handle,
+ 	      i810Screen->depth.size,
+ 	      (drmAddress *)&i810Screen->depth.map) != 0) {
+-      FREE(i810Screen);
+       drmUnmap(i810Screen->back.map, i810Screen->back.size);
++      FREE(i810Screen);
+       sPriv->private = NULL;
+       __driUtilMessage("i810InitDriver: drmMap (2) failed");
+       return GL_FALSE;
