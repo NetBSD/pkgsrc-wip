@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/08/06 04:30:20 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/10 15:02:35 bsadewitz Exp $
 
 --- src/ws.c.orig	2007-05-26 13:24:45.000000000 -0400
 +++ src/ws.c
@@ -23,3 +23,21 @@ $NetBSD: patch-aa,v 1.1 2007/08/06 04:30:20 bsadewitz Exp $
  		xf86InitValuatorAxisStruct(pWS, 0, 0, -1, 1, 0, 1);
  		xf86InitValuatorDefaults(pWS, 0);
  		
+@@ -458,7 +468,7 @@ wsReadInput(InputInfoPtr pInfo)
+ 	n /= sizeof(struct wscons_event);
+ 	while( n-- ) {
+ 		int buttons = priv->lastButtons;
+-		int dx = 0, dy = 0, dz, dw = 0;
++		int dx = 0, dy = 0, dz = 0, dw = 0;
+ 		int zbutton = 0, wbutton = 0;
+ 
+ 		ax = 0; ay = 0;
+@@ -526,7 +536,7 @@ wsReadInput(InputInfoPtr pInfo)
+ 			/* relative motion event */
+ 			DBG(3, ErrorF("postMotionEvent dX %d dY %d\n", 
+ 				      dx, dy));
+-#if 0
++#ifdef MOTION_EVENT_HACK
+ 			priv->x += dx;
+ 			if (priv->x < priv->min_x) priv->x = priv->min_x;
+ 			if (priv->x > priv->max_x) priv->x = priv->max_x;
