@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/11 14:20:09 mj_turner Exp $
+${PYSITELIB}/icalendar/__init__.py
+${PYSITELIB}/icalendar/__init__.pyc
+${PYSITELIB}/icalendar/__init__.pyo
+${PYSITELIB}/icalendar/cal.py
+${PYSITELIB}/icalendar/cal.pyc
+${PYSITELIB}/icalendar/cal.pyo
+${PYSITELIB}/icalendar/caselessdict.py
+${PYSITELIB}/icalendar/caselessdict.pyc
+${PYSITELIB}/icalendar/caselessdict.pyo
+${PYSITELIB}/icalendar/interfaces.py
+${PYSITELIB}/icalendar/interfaces.pyc
+${PYSITELIB}/icalendar/interfaces.pyo
+${PYSITELIB}/icalendar/parser.py
+${PYSITELIB}/icalendar/parser.pyc
+${PYSITELIB}/icalendar/parser.pyo
+${PYSITELIB}/icalendar/prop.py
+${PYSITELIB}/icalendar/prop.pyc
+${PYSITELIB}/icalendar/prop.pyo
+${PYSITELIB}/icalendar/tools.py
+${PYSITELIB}/icalendar/tools.pyc
+${PYSITELIB}/icalendar/tools.pyo
+${PYSITELIB}/icalendar/util.py
+${PYSITELIB}/icalendar/util.pyc
+${PYSITELIB}/icalendar/util.pyo
+share/doc/${PKGBASE}/example.txt
+share/doc/${PKGBASE}/groupscheduled.ics
+share/doc/${PKGBASE}/groupscheduled.txt
+share/doc/${PKGBASE}/multiple.ics
+share/doc/${PKGBASE}/multiple.txt
+share/doc/${PKGBASE}/small.ics
+share/doc/${PKGBASE}/small.txt
+@dirrm ${PYSITELIB}/icalendar
+@dirrm share/doc/${PKGBASE}
