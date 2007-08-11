@@ -1,0 +1,21 @@
+--- libdkim/dkim.c.orig	2007-08-10 10:48:50.000000000 +0200
++++ libdkim/dkim.c	2007-08-11 19:04:31.000000000 +0200
+@@ -2816,7 +2816,7 @@ dkim_eom_verify(DKIM *dkim, bool *testke
+ 
+ 			status = rfc2822_mailbox_split(colon + 1, &user,
+ 			                               &domain);
+-			if (status != 0 && domain != NULL)
++			if (status != 0 || domain == NULL)
+ 			{
+ 				dkim_error(dkim, "%s header malformed",
+ 				           DKIM_FROMHEADER);
+@@ -3812,6 +3812,9 @@ dkim_policy(DKIM *dkim, bool *test, bool
+ 	if (dkim->dkim_mode == DKIM_MODE_SIGN)
+ 		return DKIM_STAT_INVALID;
+ 
++	if (dkim->dkim_domain == NULL)
++		return DKIM_STAT_CANTVRFY;
++
+ 	/* initialize */
+ 	*test = FALSE;
+ 	dkim->dkim_presult = DKIM_PRESULT_NONE;
