@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/11 16:37:51 mj_turner Exp $
+${PYSITELIB}/gdata/__init__.py
+${PYSITELIB}/gdata/__init__.pyc
+${PYSITELIB}/gdata/__init__.pyo
+${PYSITELIB}/gdata/service.py
+${PYSITELIB}/gdata/service.pyc
+${PYSITELIB}/gdata/service.pyo
+${PYSITELIB}/gdata/test_data.py
+${PYSITELIB}/gdata/test_data.pyc
+${PYSITELIB}/gdata/test_data.pyo
+${PYSITELIB}/gdata/apps/__init__.py
+${PYSITELIB}/gdata/apps/__init__.pyc
+${PYSITELIB}/gdata/apps/__init__.pyo
+${PYSITELIB}/gdata/apps/service.py
+${PYSITELIB}/gdata/apps/service.pyc
+${PYSITELIB}/gdata/apps/service.pyo
+${PYSITELIB}/gdata/base/__init__.py
+${PYSITELIB}/gdata/base/__init__.pyc
+${PYSITELIB}/gdata/base/__init__.pyo
+${PYSITELIB}/gdata/base/service.py
+${PYSITELIB}/gdata/base/service.pyc
+${PYSITELIB}/gdata/base/service.pyo
+${PYSITELIB}/gdata/calendar/__init__.py
+${PYSITELIB}/gdata/calendar/__init__.pyc
+${PYSITELIB}/gdata/calendar/__init__.pyo
+${PYSITELIB}/gdata/calendar/service.py
+${PYSITELIB}/gdata/calendar/service.pyc
+${PYSITELIB}/gdata/calendar/service.pyo
+${PYSITELIB}/gdata/docs/__init__.py
+${PYSITELIB}/gdata/docs/__init__.pyc
+${PYSITELIB}/gdata/docs/__init__.pyo
+${PYSITELIB}/gdata/docs/service.py
+${PYSITELIB}/gdata/docs/service.pyc
+${PYSITELIB}/gdata/docs/service.pyo
+${PYSITELIB}/gdata/spreadsheet/__init__.py
+${PYSITELIB}/gdata/spreadsheet/__init__.pyc
+${PYSITELIB}/gdata/spreadsheet/__init__.pyo
+${PYSITELIB}/gdata/spreadsheet/service.py
+${PYSITELIB}/gdata/spreadsheet/service.pyc
+${PYSITELIB}/gdata/spreadsheet/service.pyo
+share/doc/${PKGBASE}/README.txt
+share/doc/${PKGBASE}/RELEASE_NOTES.txt
+share/doc/${PKGBASE}/samples/base/baseQueryExample.py
+share/doc/${PKGBASE}/samples/base/dryRunInsert.py
+share/doc/${PKGBASE}/samples/blogger/BloggerExample.py
+share/doc/${PKGBASE}/samples/calendar/calendarExample.py
+share/doc/${PKGBASE}/samples/mashups/birthdaySample.py
+share/doc/${PKGBASE}/samples/spreadsheets/spreadsheetExample.py
+@dirrm ${PYSITELIB}/gdata/apps
+@dirrm ${PYSITELIB}/gdata/base
+@dirrm ${PYSITELIB}/gdata/calendar
+@dirrm ${PYSITELIB}/gdata/docs
+@dirrm ${PYSITELIB}/gdata/spreadsheet
+@dirrm ${PYSITELIB}/gdata
+@dirrm share/doc/${PKGBASE}/samples/base
+@dirrm share/doc/${PKGBASE}/samples/blogger
+@dirrm share/doc/${PKGBASE}/samples/calendar
+@dirrm share/doc/${PKGBASE}/samples/mashups
+@dirrm share/doc/${PKGBASE}/samples/spreadsheets
+@dirrm share/doc/${PKGBASE}/samples
+@dirrm share/doc/${PKGBASE}
