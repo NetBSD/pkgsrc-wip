@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2640 2007/08/11 15:04:41 mj_turner Exp $
+# $Id: Makefile,v 1.2641 2007/08/11 16:39:40 mj_turner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1342,6 +1342,7 @@ SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
+SUBDIR+=	py-gdata
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gnucash
