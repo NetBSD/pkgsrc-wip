@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2642 2007/08/11 20:31:14 netcap Exp $
+# $Id: Makefile,v 1.2643 2007/08/12 19:22:12 mj_turner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -457,6 +457,7 @@ SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer
 SUBDIR+=	gune
 SUBDIR+=	gurlchecker
+SUBDIR+=	gwhois
 SUBDIR+=	gxmms2
 SUBDIR+=	haddock
 SUBDIR+=	hal
