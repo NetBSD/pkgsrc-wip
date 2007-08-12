@@ -1,0 +1,5 @@
+- This package may need to be renamed since it shares the old name of
+Xfce's Terminal program, which is now in pkgsrc as xfce4-terminal.  I
+originally named it Terminal.app and I can change it back if necessary.
+
+Other than that this package is ready for testing.
