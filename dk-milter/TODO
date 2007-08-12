@@ -1,8 +1,4 @@
-$NetBSD: TODO,v 1.4 2007/08/03 08:46:33 jukka Exp $
-
-- Licence `no-profit' seems to be deprecated (according to pkglint(1)),
-  what should LICENCE be set to? The Sendmail licence shipping with
-  the distfile and pkgsrc/licenses/sendmail-licence differ...
+$NetBSD: TODO,v 1.5 2007/08/12 06:32:18 jukka Exp $
 
 - Are the pkglint(1) warnings for options.mk safe to ignore?
 

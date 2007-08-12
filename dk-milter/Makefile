@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/08/09 14:37:44 jukka Exp $
+# $NetBSD: Makefile,v 1.10 2007/08/12 06:32:18 jukka Exp $
 
 DISTNAME=	dk-milter-0.6.0
 CATEGORIES=	mail
@@ -10,7 +10,7 @@ COMMENT=	Open source DomainKeys filter software from Sendmail, Inc.
 
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
-LICENSE=		no-profit
+LICENSE=		sendmail-open-source-license
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter
 USE_BUILTIN.libmilter=	no
