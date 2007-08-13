@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/13 20:08:02 dvol Exp $
+share/GNUstep/Local/Applications/GSCommander.app/GSCommander
+share/GNUstep/Local/Applications/GSCommander.app/Resources/COPYING
+share/GNUstep/Local/Applications/GSCommander.app/Resources/GSCommander.desktop
+share/GNUstep/Local/Applications/GSCommander.app/Resources/GSCommander.tiff
+share/GNUstep/Local/Applications/GSCommander.app/Resources/GSCommanderInfo.plist
+share/GNUstep/Local/Applications/GSCommander.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/GSCommander.app/Resources/README
+share/GNUstep/Local/Applications/GSCommander.app/library_paths.openapp
+share/GNUstep/Local/Applications/GSCommander.app/stamp.make
+@dirrm share/GNUstep/Local/Applications/GSCommander.app/Resources
+@dirrm share/GNUstep/Local/Applications/GSCommander.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
