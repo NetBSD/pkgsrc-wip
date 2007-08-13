@@ -1,0 +1,45 @@
+$NetBSD: patch-ae,v 1.4 2007/08/13 15:15:44 jukka Exp $
+
+--- libdkim/dkim-canon.h.orig	2007-07-02 07:44:06.000000000 +0200
++++ libdkim/dkim-canon.h	2007-08-13 17:07:26.000000000 +0200
+@@ -18,7 +18,7 @@ static char dkim_canon_h_id[] = "@(#)$Id
+ /* prototypes */
+ extern DKIM_STAT dkim_add_canon __P((DKIM *, bool, dkim_canon_t, int,
+                                      u_char *, struct dkim_header *,
+-                                     size_t length, DKIM_CANON **cout));
++                                     off_t length, DKIM_CANON **cout));
+ extern DKIM_STAT dkim_canon_bodychunk __P((DKIM *, u_char *, size_t));
+ extern void dkim_canon_cleanup __P((DKIM *));
+ extern DKIM_STAT dkim_canon_closebody __P((DKIM *));
+--- libdkim/dkim-canon.c.orig	2007-08-08 22:54:08.000000000 +0200
++++ libdkim/dkim-canon.c	2007-08-13 17:07:26.000000000 +0200
+@@ -616,7 +616,7 @@ dkim_canon_cleanup(DKIM *dkim)
+ DKIM_STAT
+ dkim_add_canon(DKIM *dkim, bool hdr, dkim_canon_t canon, int hashtype,
+                u_char *hdrlist, struct dkim_header *sighdr,
+-               size_t length, DKIM_CANON **cout)
++               off_t length, DKIM_CANON **cout)
+ {
+ 	DKIM_CANON *cur;
+ 	DKIM_CANON *new;
+@@ -1080,7 +1080,7 @@ dkim_canon_signature(DKIM *dkim, struct 
+ DKIM_STAT
+ dkim_canon_bodychunk(DKIM *dkim, u_char *buf, size_t buflen)
+ {
+-	size_t remain;
++	off_t remain;
+ 	u_int wlen;
+ 	DKIM_CANON *cur;
+ 	u_char *p;
+@@ -1101,7 +1101,10 @@ dkim_canon_bodychunk(DKIM *dkim, u_char 
+ 		if (cur->canon_remain == 0)
+ 			continue;
+ 
+-		remain = MIN(buflen, cur->canon_remain);
++		if (cur->canon_remain == (off_t) -1)
++			remain = buflen;
++		else
++			remain = MIN(buflen, cur->canon_remain);
+ 
+ 		eob = buf + remain - 1;
+ 		wrote = buf;
