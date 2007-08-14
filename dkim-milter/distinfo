@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.12 2007/08/13 15:15:44 jukka Exp $
+$NetBSD: distinfo,v 1.13 2007/08/14 13:36:23 jukka Exp $
 
-SHA1 (dkim-milter-2.1.0.tar.gz) = 0253e1ceb58c2909540b77f0a22c889a817894a0
-RMD160 (dkim-milter-2.1.0.tar.gz) = 7cc4243e26fd11e85562df7a5e756c8bf3132415
-Size (dkim-milter-2.1.0.tar.gz) = 563370 bytes
+SHA1 (dkim-milter-2.1.1.tar.gz) = bddee80deadf2fe1405196ad19c60e852ff7c7ec
+RMD160 (dkim-milter-2.1.1.tar.gz) = d4acacb1a3b2cf658ec32a3921de4fa2ac7ff926
+Size (dkim-milter-2.1.1.tar.gz) = 564757 bytes
 SHA1 (patch-aa) = 0427254b4fdf3afac179c64ed3d6c75be46bc726
 SHA1 (patch-ab) = 76c3232d6328a26f6e45df3ce4a9e37a55916d04
 SHA1 (patch-ac) = a8d0069425c3e4c94d14b7f7f98e5c31f7dbc5b2
-SHA1 (patch-ad) = 12b8170842d76ddff2ed6900bd73f9de4ad55669
-SHA1 (patch-ae) = 4511a3ee2cc17ebbc55c8c4cf6c35516fd90ae6f

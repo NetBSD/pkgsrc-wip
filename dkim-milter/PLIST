@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/08/09 14:37:20 jukka Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/08/14 13:36:23 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
@@ -31,6 +31,8 @@ share/doc/dkim-milter/libdkim/dkim_eoh.html
 share/doc/dkim-milter/libdkim/dkim_eom.html
 share/doc/dkim-milter/libdkim/dkim_free.html
 share/doc/dkim-milter/libdkim/dkim_get_user_context.html
+share/doc/dkim-milter/libdkim/dkim_getpresult.html
+share/doc/dkim-milter/libdkim/dkim_getpresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getsighdr.html
 share/doc/dkim-milter/libdkim/dkim_getsiglist.html
 share/doc/dkim-milter/libdkim/dkim_getsignature.html
@@ -42,6 +44,7 @@ share/doc/dkim-milter/libdkim/dkim_options.html
 share/doc/dkim-milter/libdkim/dkim_param_t.html
 share/doc/dkim-milter/libdkim/dkim_policy.html
 share/doc/dkim-milter/libdkim/dkim_policy_t.html
+share/doc/dkim-milter/libdkim/dkim_presult.html
 share/doc/dkim-milter/libdkim/dkim_query_t.html
 share/doc/dkim-milter/libdkim/dkim_reportinfo.html
 share/doc/dkim-milter/libdkim/dkim_set_dns_callback.html
