@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2647 2007/08/15 08:29:10 dvol Exp $
+# $Id: Makefile,v 1.2648 2007/08/15 23:47:41 briandealwis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -87,6 +87,7 @@ SUBDIR+=	aria2
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	artemis
 SUBDIR+=	atftp
+SUBDIR+=	ati-xfree86-bin
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
 SUBDIR+=	audacity-devel
