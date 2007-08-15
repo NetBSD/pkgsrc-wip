@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/15 08:26:18 dvol Exp $
+share/GNUstep/System/Applications/TextEdit.app/Resources/Edit.tiff
+share/GNUstep/System/Applications/TextEdit.app/Resources/EditTitle.tiff
+share/GNUstep/System/Applications/TextEdit.app/Resources/Encodings.txt
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Document.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Document.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/FindPanel.strings
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Info.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Info.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Localizable.strings
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm/data.classes
+share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm/objects.gorm
+share/GNUstep/System/Applications/TextEdit.app/Resources/German.lproj/Localizable.strings
+share/GNUstep/System/Applications/TextEdit.app/Resources/Info-gnustep.plist
+share/GNUstep/System/Applications/TextEdit.app/Resources/Russian.lproj/Localizable.strings
+share/GNUstep/System/Applications/TextEdit.app/Resources/TextEdit.desktop
+share/GNUstep/System/Applications/TextEdit.app/Resources/rtf.tiff
+share/GNUstep/System/Applications/TextEdit.app/Resources/rtfd.tiff
+share/GNUstep/System/Applications/TextEdit.app/Resources/text.tiff
+share/GNUstep/System/Applications/TextEdit.app/TextEdit
+share/GNUstep/System/Applications/TextEdit.app/library_paths.openapp
+share/GNUstep/System/Applications/TextEdit.app/stamp.make
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/Russian.lproj
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/German.lproj
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Info.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj/Document.gorm
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources/English.lproj
+@dirrm share/GNUstep/System/Applications/TextEdit.app/Resources
+@dirrm share/GNUstep/System/Applications/TextEdit.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Applications

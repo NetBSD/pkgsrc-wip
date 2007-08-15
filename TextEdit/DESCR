@@ -1,0 +1,3 @@
+TextEdit is a text editor for GNUstep.  It handles both plain text and RTF
+files, has a "Wrap to Page" mode, has search/replace functionality, and unlike
+Ink it can display any file as text.
