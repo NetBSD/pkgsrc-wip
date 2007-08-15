@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/04/16 19:00:24 shindenmorr Exp $
+$NetBSD: patch-ab,v 1.2 2007/08/15 22:07:31 shindenmorr Exp $
 
---- plugins/logs/main.c.orig	2007-03-30 02:26:34.000000000 +0200
-+++ plugins/logs/main.c	2007-03-30 02:26:50.000000000 +0200
+--- plugins/logs/main.c.orig	2007-03-03 20:27:30.000000000 +0100
++++ plugins/logs/main.c
 @@ -28,7 +28,7 @@
  #define __EXTENSIONS__
  #endif

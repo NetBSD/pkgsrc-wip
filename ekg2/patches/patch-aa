@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2007/04/20 12:35:36 shindenmorr Exp $
+$NetBSD: patch-aa,v 1.2 2007/08/15 22:07:31 shindenmorr Exp $
 
---- configure.orig	2007-04-20 14:18:55.000000000 +0200
+--- configure.orig	2007-03-03 23:48:52.000000000 +0100
 +++ configure
 @@ -28854,9 +28854,9 @@ else
    with_logsoracle=no
