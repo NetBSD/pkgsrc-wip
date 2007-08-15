@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/08/15 23:44:32 briandealwis Exp $
+
+To use the driver you will need to:
+
+(1) Add at least a device section to your XF86Config similar to the
+    example in ${PREFIX}/share/examples/${PKGBASE}/XF86Config.example
+    Please be sure to add ${PREFIX}/lib/modules to your ModulePath.
+
+(2) Symlink ${PREFIX}/etc/ati to /etc/ati.  Failure to do so will result
+    in a watermark on the lower-right part of the screen saying
+    `Testing use only' and `Unsupported hardware'.
+
+Useful websites:
+    http://debian.wgdd.de/temp/fglrx_man/fglrx.4x.html
+    http://ati.cchtml.com
+===========================================================================

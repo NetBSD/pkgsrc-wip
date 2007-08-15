@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/15 23:44:32 briandealwis Exp $
+bin/aticonfig
+lib/modules/drivers/fglrx_drv.o
+lib/modules/linux/libfglrxdrm.a
+share/examples/${PKGBASE}/XF86Config.example
+@unexec ${RMDIR} %D/lib/modules/drivers 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/modules/linux 2>/dev/null || ${TRUE}
+etc/ati/control
+etc/ati/signature
+@dirrm etc/ati

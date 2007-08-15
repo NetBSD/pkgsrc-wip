@@ -1,0 +1,4 @@
+This package installs the AMD/ATI Linux binary driver in a manner
+suitable for use on NetBSD/i386 with XFree86 4.3 and above.
+This package enables multi-head support.
+This package does not enable accelerated GL support.
