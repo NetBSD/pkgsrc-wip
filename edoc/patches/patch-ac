@@ -1,0 +1,44 @@
+$NetBSD: patch-ac,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+
+--- config.h.in.orig	2007-08-15 23:34:20.000000000 +1000
++++ config.h.in
+@@ -231,24 +231,24 @@
+    release 3. */
+ #undef SETVBUF_REVERSED
+ 
+-/* The size of `char', as computed by sizeof. */
++/* The size of a `char', as computed by sizeof. */
+ #undef SIZEOF_CHAR
+ 
+-/* The size of `int', as computed by sizeof. */
++/* The size of a `int', as computed by sizeof. */
+ #undef SIZEOF_INT
+ 
+-/* The size of `long', as computed by sizeof. */
++/* The size of a `long', as computed by sizeof. */
+ #undef SIZEOF_LONG
+ 
+-/* The size of `short', as computed by sizeof. */
++/* The size of a `short', as computed by sizeof. */
+ #undef SIZEOF_SHORT
+ 
+-/* The size of `void*', as computed by sizeof. */
++/* The size of a `void*', as computed by sizeof. */
+ #undef SIZEOF_VOIDP
+ 
+ /* If using the C implementation of alloca, define if you know the
+    direction of stack growth for your system; otherwise it will be
+-   automatically deduced at runtime.
++   automatically deduced at run-time.
+ 	STACK_DIRECTION > 0 => grows toward higher addresses
+ 	STACK_DIRECTION < 0 => grows toward lower addresses
+ 	STACK_DIRECTION = 0 => direction of growth unknown */
+@@ -284,7 +284,7 @@
+ /* Define to `int' if <sys/types.h> does not define. */
+ #undef pid_t
+ 
+-/* Define to `unsigned int' if <sys/types.h> does not define. */
++/* Define to `unsigned' if <sys/types.h> does not define. */
+ #undef size_t
+ 
+ /* Define as `fork' if `vfork' does not work. */
