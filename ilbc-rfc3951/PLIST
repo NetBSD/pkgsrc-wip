@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/16 01:29:59 othyro Exp $
+include/ilbc/iLBC_decode.h
+include/ilbc/iLBC_define.h
+include/ilbc/iLBC_encode.h
+lib/libilbc.la
+@dirrm include/ilbc
