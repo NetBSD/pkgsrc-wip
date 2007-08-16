@@ -1,0 +1,29 @@
+From: Fredrik HÃ¶glund <fredrik@kde.org>
+Date: Tue, 14 Aug 2007 20:47:49 +0000 (+0200)
+Subject: Fix the value comparisons in the IDLETIME wakeup handler.
+X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=0f9e89b4e309e570d7d366489d250ca2143f0ad7
+
+Fix the value comparisons in the IDLETIME wakeup handler.
+
+LessThan/GreaterThan comparisons were used in the wakeup handler,
+and LessOrEqual/GreaterOrEqual in the block handler.
+
+Change it to use LessOrEqual/GreaterOrEqual in both functions,
+since this is what XSyncNegativeComparison and
+XSyncPositiveComparison imply.
+---
+
+--- Xext/sync.c.orig	2007-06-30 11:16:04.000000000 -0400
++++ Xext/sync.c
+@@ -2592,8 +2592,9 @@ IdleTimeWakeupHandler (pointer env,
+     IdleTimeQueryValue (NULL, &idle);
+ 
+     if ((pIdleTimeValueGreater &&
+-         XSyncValueGreaterThan (idle, *pIdleTimeValueGreater)) ||
+-        (pIdleTimeValueLess && XSyncValueLessThan (idle, *pIdleTimeValueLess)))
++         XSyncValueGreaterOrEqual (idle, *pIdleTimeValueGreater)) ||
++        (pIdleTimeValueLess &&
++	 XSyncValueLessOrEqual (idle, *pIdleTimeValueLess)))
+     {
+ 	SyncChangeCounter (IdleTimeCounter, idle);
+     }

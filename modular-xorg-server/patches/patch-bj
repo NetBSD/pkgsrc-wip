@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1 2007/08/16 07:48:20 bsadewitz Exp $
+
+--- ../Mesa-7.0.1/src/mesa/main/image.c.orig	2007-08-02 11:07:54.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/image.c
+@@ -3794,7 +3794,7 @@ _mesa_pack_stencil_span( const GLcontext
+          GLint *dst = (GLint *) dest;
+          GLuint i;
+          for (i=0;i<n;i++) {
+-            *dst++ = (GLint) source[i];
++            dst[i] = (GLint) source[i];
+          }
+          if (dstPacking->SwapBytes) {
+             _mesa_swap4( (GLuint *) dst, n );

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/08/09 07:30:00 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2007/08/16 07:48:20 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.3.99.0
 PKGNAME=	modular-${DISTNAME}
@@ -52,7 +52,8 @@ CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_MODULE_PATH}
 
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
     ${MACHINE_ARCH} == "alpha"
-GLX_DEFINES+=		-D__GLX_ALIGN64
+GLX_DEFINES=		-D__GLX_ALIGN64 -DPTHREADS ${PTHREAD_CFLAGS}
+GLX_LIBS=		${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 .endif
 
 .else
@@ -61,6 +62,7 @@ PLIST_SUBST+=		GLX="@comment "
 .endif
 
 CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
+CONFIGURE_ENV+=		GLX_LIBS=${GLX_LIBS:M*:Q}
 CONFIGURE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
 BUILDLINK_API_DEPENDS.inputroto+=	inputproto>=1.4.2
@@ -105,6 +107,8 @@ PLIST_SUBST+=		DBUS=""
 PLIST_SUBST+=		DBUS="@comment "
 CONFIGURE_ARGS+=	--disable-config-dbus
 .endif
+
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../wip/pixman/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
