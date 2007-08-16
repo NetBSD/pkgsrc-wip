@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/16 01:29:59 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/16 01:42:39 othyro Exp $
 
 DISTNAME=		ilbc-rfc3951
 PKGNAME=		ilbc-rfc3951-200412
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.savannah.gnu.org/releases/linphone/1.3.x/source/
 
