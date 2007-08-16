@@ -6,7 +6,7 @@ X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=3973d1a
 move free() after dereference (bug 11878)
 ---
 
---- src/mesa/drivers/dri/i810/i810screen.c
+--- src/mesa/drivers/dri/i810/i810screen.c.orig	2007-06-21 18:10:54.000000000 -0400
 +++ src/mesa/drivers/dri/i810/i810screen.c
 @@ -288,8 +288,8 @@ i810InitDriver(__DRIscreenPrivate *sPriv
  	      i810Screen->depth.handle,

@@ -1,0 +1,36 @@
+$NetBSD: patch-ay,v 1.1 2007/08/16 07:49:49 bsadewitz Exp $
+
+--- src/mesa/drivers/dri/i915tex/intel_mipmap_tree.c.orig	2007-08-01 17:50:00.000000000 -0400
++++ src/mesa/drivers/dri/i915tex/intel_mipmap_tree.c
+@@ -79,6 +79,10 @@ intel_miptree_create(struct intel_contex
+    switch (intel->intelScreen->deviceID) {
+    case PCI_CHIP_I945_G:
+    case PCI_CHIP_I945_GM:
++   case PCI_CHIP_I945_GME:
++   case PCI_CHIP_G33_G:
++   case PCI_CHIP_Q33_G:
++   case PCI_CHIP_Q35_G:
+       ok = i945_miptree_layout(mt);
+       break;
+    case PCI_CHIP_I915_G:
+@@ -93,9 +97,19 @@ intel_miptree_create(struct intel_contex
+       break;
+    }
+ 
+-   if (ok)
++   if (ok) {
++      if (!mt->compressed) {
++	 /* XXX: Align pitch to multiple of 64 bytes for now to allow
++	  * render-to-texture to work in all cases. This should probably be
++	  * replaced at some point by some scheme to only do this when really
++	  * necessary.
++	  */
++	 mt->pitch = ((mt->pitch * cpp + 63) & ~63) / cpp;
++      }
++
+       mt->region = intel_region_alloc(intel->intelScreen,
+                                       mt->cpp, mt->pitch, mt->total_height);
++   }
+ 
+    if (!mt->region) {
+       free(mt);

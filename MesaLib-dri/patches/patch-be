@@ -1,0 +1,46 @@
+$NetBSD: patch-be,v 1.1 2007/08/16 07:49:49 bsadewitz Exp $
+
+--- src/mesa/main/framebuffer.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ src/mesa/main/framebuffer.c
+@@ -38,6 +38,7 @@
+ #include "fbobject.h"
+ #include "framebuffer.h"
+ #include "renderbuffer.h"
++#include "texobj.h"
+ 
+ 
+ 
+@@ -164,6 +165,10 @@ void
+ _mesa_destroy_framebuffer(struct gl_framebuffer *fb)
+ {
+    if (fb) {
++#ifdef DEBUG
++      printf("%lu: MESA DESTROY FRAMEBUFFER %u\n",
++             _glthread_GetID(), fb->Name);
++#endif
+       _mesa_free_framebuffer_data(fb);
+       _mesa_free(fb);
+    }
+@@ -190,17 +195,13 @@ _mesa_free_framebuffer_data(struct gl_fr
+          _mesa_reference_renderbuffer(&att->Renderbuffer, NULL);
+       }
+       if (att->Texture) {
+-         /* render to texture */
+-         att->Texture->RefCount--;
+-         if (att->Texture->RefCount == 0) {
+-            GET_CURRENT_CONTEXT(ctx);
+-            if (ctx) {
+-               ctx->Driver.DeleteTexture(ctx, att->Texture);
+-            }
+-         }
++         char s[100];
++         sprintf(s, "_mesa_free_framebuffer_data (fb=%d)", fb->Name);
++         _mesa_reference_texobj(&att->Texture, NULL, s);
+       }
++      ASSERT(!att->Renderbuffer);
++      ASSERT(!att->Texture);
+       att->Type = GL_NONE;
+-      att->Texture = NULL;
+    }
+ 
+    /* unbind _Depth/_StencilBuffer to decr ref counts */

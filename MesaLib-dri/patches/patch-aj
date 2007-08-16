@@ -6,7 +6,7 @@ X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=872d179
 fix swizzle error test (bug 11881)
 ---
 
---- src/mesa/shader/atifragshader.c
+--- src/mesa/shader/atifragshader.c.orig	2007-06-21 18:10:54.000000000 -0400
 +++ src/mesa/shader/atifragshader.c
 @@ -440,7 +440,7 @@ _mesa_PassTexCoordATI(GLuint dst, GLuint
        _mesa_error(ctx, GL_INVALID_OPERATION, "glPassTexCoordATI(coord)");

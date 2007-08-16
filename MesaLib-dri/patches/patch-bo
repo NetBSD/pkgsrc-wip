@@ -1,0 +1,16 @@
+$NetBSD: patch-bo,v 1.1 2007/08/16 07:49:49 bsadewitz Exp $
+
+--- src/mesa/swrast/s_pointtemp.h.orig	2007-08-01 17:50:01.000000000 -0400
++++ src/mesa/swrast/s_pointtemp.h
+@@ -217,9 +217,9 @@ NAME ( GLcontext *ctx, const SWvertex *v
+       }
+       else {
+          /* even size */
+-         xmin = (GLint) vert->win[0] - iRadius + 1;
++         xmin = (GLint) vert->win[0] - iRadius;
+          xmax = xmin + iSize - 1;
+-         ymin = (GLint) vert->win[1] - iRadius + 1;
++         ymin = (GLint) vert->win[1] - iRadius;
+          ymax = ymin + iSize - 1;
+       }
+ #endif /*SMOOTH*/

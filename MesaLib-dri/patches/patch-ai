@@ -6,9 +6,9 @@ X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=237b985
 fix potential NULL dereference (bug 11880)
 ---
 
---- src/mesa/shader/shader_api.c
+--- src/mesa/shader/shader_api.c.orig	2007-08-01 17:50:01.000000000 -0400
 +++ src/mesa/shader/shader_api.c
-@@ -377,7 +377,7 @@ _mesa_attach_shader(GLcontext *ctx, GLui
+@@ -378,7 +378,7 @@ _mesa_attach_shader(GLcontext *ctx, GLui
     struct gl_shader_program *shProg
        = _mesa_lookup_shader_program(ctx, program);
     struct gl_shader *sh = _mesa_lookup_shader(ctx, shader);
@@ -17,7 +17,7 @@ fix potential NULL dereference (bug 11880)
     GLuint i;
  
     if (!shProg || !sh) {
-@@ -386,6 +386,8 @@ _mesa_attach_shader(GLcontext *ctx, GLui
+@@ -387,6 +387,8 @@ _mesa_attach_shader(GLcontext *ctx, GLui
        return;
     }
  
@@ -26,7 +26,7 @@ fix potential NULL dereference (bug 11880)
     for (i = 0; i < n; i++) {
        if (shProg->Shaders[i] == sh) {
           /* already attached */
-@@ -547,7 +549,7 @@ _mesa_detach_shader(GLcontext *ctx, GLui
+@@ -548,7 +550,7 @@ _mesa_detach_shader(GLcontext *ctx, GLui
  {
     struct gl_shader_program *shProg
        = _mesa_lookup_shader_program(ctx, program);
@@ -35,7 +35,7 @@ fix potential NULL dereference (bug 11880)
     GLuint i, j;
  
     if (!shProg) {
-@@ -556,6 +558,8 @@ _mesa_detach_shader(GLcontext *ctx, GLui
+@@ -557,6 +559,8 @@ _mesa_detach_shader(GLcontext *ctx, GLui
        return;
     }
  

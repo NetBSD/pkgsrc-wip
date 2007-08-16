@@ -33,7 +33,7 @@ SUBST_STAGE.fix-pthread= pre-patch
 SUBST_MESSAGE.fix-pthread= Eliminating pthread links
 SUBST_FILES.fix-pthread=src/mesa/drivers/dri/glcore/Makefile
 SUBST_FILES.fix-pthread+=${SUBST_FILES.fix-conf}
-SUBST_SED.fix-pthread+= -e "s,\-[l]*pthread,,g"
+SUBST_SED.fix-pthread+= -e "s,\-[l]*pthread,-pthread,g"
 
 SUBST_CLASSES+=		pkg-config
 SUBST_STAGE.pkg-config=	pre-patch
