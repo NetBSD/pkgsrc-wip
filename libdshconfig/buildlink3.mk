@@ -1,6 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/07/10 01:00:43 shindenmorr Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/08/17 13:41:44 shindenmorr Exp $
 
-BUILDLINK_DEPMETHOD.libdshconfig?=      build
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDSHCONFIG_BUILDLINK3_MK:=	${LIBDSHCONFIG_BUILDLINK3_MK}+
 
@@ -14,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libdshconfig
 
 .if ${LIBDSHCONFIG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libdshconfig+=	libdshconfig>=0.20.9
+BUILDLINK_DEPMETHOD.libdshconfig?=	build
 BUILDLINK_PKGSRCDIR.libdshconfig?=	../../wip/libdshconfig
 .endif	# LIBDSHCONFIG_BUILDLINK3_MK
 
