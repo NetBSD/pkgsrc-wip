@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2007/06/22 18:36:46 christtrekker Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/17 19:13:39 christtrekker Exp $
 #
 
-DISTNAME=	AlephOne-20070401
+DISTNAME=	AlephOne-20070525
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	christtrekker@sourceforge.net
+MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://marathon.sourceforge.net/
 COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
 
