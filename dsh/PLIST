@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/09 21:14:27 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/17 13:44:18 shindenmorr Exp $
 bin/dsh
-etc/dsh.conf
 man/ja/man1/dsh.1
 man/ja/man5/dsh.conf.5
 man/man1/dsh.1
