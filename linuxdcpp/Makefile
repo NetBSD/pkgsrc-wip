@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/03 14:05:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/17 20:34:47 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
@@ -30,6 +30,10 @@ CFLAGS+=		-Du_int64_t=uint64_t
 .include "../../mk/bsd.prefs.mk"
 LDCPP_VERSION!=		${DATE} +%Y%m%d
 LDFLAGS+=		${X11_LDFLAGS}
+
+.if ${OPSYS} == "HPUX"
+CFLAGS+=		"-Dmadvise(addr,len,behav)="
+.endif
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons debug=true relase=true PREFIX=${PREFIX}
