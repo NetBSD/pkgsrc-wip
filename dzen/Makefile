@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/07 17:23:14 milleoiseaux Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/18 19:45:13 milleoiseaux Exp $
 #
 
-DISTNAME=	dzen2-0.8.0
+DISTNAME=	dzen2-0.8.5
 CATEGORIES=	misc
 MASTER_SITES=	http://gotmor.googlepages.com/
 
@@ -12,4 +12,6 @@ COMMENT=	General purpose messaging and notification program
 NO_CONFIGURE=           yes
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
