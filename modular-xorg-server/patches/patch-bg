@@ -1,90 +1,12 @@
-$NetBSD: patch-bg,v 1.2 2007/08/16 07:48:20 bsadewitz Exp $
+$NetBSD: patch-bg,v 1.3 2007/08/18 19:25:34 bsadewitz Exp $
 
---- ../Mesa-7.0.1/src/mesa/main/fbobject.c.orig	2007-08-01 17:50:01.000000000 -0400
-+++ ../Mesa-7.0.1/src/mesa/main/fbobject.c
-@@ -150,22 +150,18 @@ _mesa_remove_attachment(GLcontext *ctx, 
- {
-    if (att->Type == GL_TEXTURE) {
-       ASSERT(att->Texture);
--      att->Texture->RefCount--;
--      if (att->Texture->RefCount == 0) {
--	 ctx->Driver.DeleteTexture(ctx, att->Texture);
--      }
--      else {
--         /* tell driver that we're done rendering to this texture. */
-          if (ctx->Driver.FinishRenderTexture) {
-+         /* tell driver we're done rendering to this texobj */
-             ctx->Driver.FinishRenderTexture(ctx, att);
-          }
--      }
--      att->Texture = NULL;
-+      MESA_REF_TEXOBJ(&att->Texture, NULL); /* unbind */
-+      ASSERT(!att->Texture);
-    }
-    if (att->Type == GL_TEXTURE || att->Type == GL_RENDERBUFFER_EXT) {
-       ASSERT(att->Renderbuffer);
-       ASSERT(!att->Texture);
--      _mesa_reference_renderbuffer(&att->Renderbuffer, NULL);
-+      _mesa_reference_renderbuffer(&att->Renderbuffer, NULL); /* unbind */
-+      ASSERT(!att->Renderbuffer);
-    }
-    att->Type = GL_NONE;
-    att->Complete = GL_TRUE;
-@@ -189,10 +185,13 @@ _mesa_set_texture_attachment(GLcontext *
-    }
-    else {
-       /* new attachment */
-+      char s[100];
-       _mesa_remove_attachment(ctx, att);
-       att->Type = GL_TEXTURE;
--      att->Texture = texObj;
--      texObj->RefCount++;
-+      assert(!att->Texture);
-+      sprintf(s, "_mesa_set_texture_attachment(fb=%u tex=%u)\n",
-+              fb->Name, texObj->Name);
-+      _mesa_reference_texobj(&att->Texture, texObj, s);
-    }
- 
-    /* always update these fields */
-@@ -983,6 +982,7 @@ _mesa_BindFramebufferEXT(GLenum target, 
- 	    return;
- 	 }
-          _mesa_HashInsert(ctx->Shared->FrameBuffers, framebuffer, newFb);
-+         ASSERT(newFb->RefCount == 1);
-       }
-    }
-    else {
-@@ -992,6 +992,10 @@ _mesa_BindFramebufferEXT(GLenum target, 
-       newFb = ctx->WinSysDrawBuffer;
-    }
- 
-+#ifdef DEBUG
-+   printf("MESA BIND FRAMEBUFFER %u\n", newFb->Name);
-+#endif
-+
-    ASSERT(newFb);
-    ASSERT(newFb != &DummyFramebuffer);
- 
-@@ -1006,8 +1010,10 @@ _mesa_BindFramebufferEXT(GLenum target, 
-    if (bindDrawBuf) {
-       /* check if old FB had any texture attachments */
-       check_end_texture_render(ctx, ctx->DrawBuffer);
--      /* check if time to delete this framebuffer */
-+
-+      /* bind new drawing buffer */
-       _mesa_reference_framebuffer(&ctx->DrawBuffer, newFb);
-+
-       if (newFb->Name != 0) {
-          /* check if newly bound framebuffer has any texture attachments */
-          check_begin_texture_render(ctx, newFb);
-@@ -1039,6 +1045,10 @@ _mesa_DeleteFramebuffersEXT(GLsizei n, c
- 	 struct gl_framebuffer *fb;
- 	 fb = _mesa_lookup_framebuffer(ctx, framebuffers[i]);
- 	 if (fb) {
-+#ifdef DEBUG
-+            printf("%lu: MESA DELETE FRAMEBUFFER %u refcount = %d\n",
-+                   _glthread_GetID(), fb->Name, fb->RefCount);
-+#endif
-             ASSERT(fb == &DummyFramebuffer || fb->Name == framebuffers[i]);
- 
-             /* check if deleting currently bound framebuffer object */
+--- fb/wfbrename.h.orig	2007-06-30 11:16:04.000000000 -0400
++++ fb/wfbrename.h
+@@ -188,6 +188,7 @@
+ #define fbWinPrivateIndex wfbWinPrivateIndex
+ #define fbZeroLine wfbZeroLine
+ #define fbZeroSegment wfbZeroSegment
++#define free_pixman_pict wfb_free_pixman_pict
+ #define image_from_pict wfb_image_from_pict
+ #define xxScrPrivateIndex wfbxxScrPrivateIndex
+ #define xxGCPrivateIndex wfbxxGCPrivateIndex

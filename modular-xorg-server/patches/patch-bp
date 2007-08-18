@@ -1,40 +1,83 @@
-$NetBSD: patch-bp,v 1.1 2007/08/16 07:48:20 bsadewitz Exp $
+$NetBSD: patch-bp,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- ../Mesa-7.0.1/src/mesa/shader/shader_api.c.orig	2007-08-01 17:50:01.000000000 -0400
-+++ ../Mesa-7.0.1/src/mesa/shader/shader_api.c
-@@ -378,7 +378,7 @@ _mesa_attach_shader(GLcontext *ctx, GLui
-    struct gl_shader_program *shProg
-       = _mesa_lookup_shader_program(ctx, program);
-    struct gl_shader *sh = _mesa_lookup_shader(ctx, shader);
--   const GLuint n = shProg->NumShaders;
-+   GLuint n;
-    GLuint i;
+--- hw/xfree86/modes/xf86EdidModes.c.orig	2007-07-31 18:37:36.000000000 -0400
++++ hw/xfree86/modes/xf86EdidModes.c
+@@ -50,36 +50,12 @@
  
-    if (!shProg || !sh) {
-@@ -387,6 +387,8 @@ _mesa_attach_shader(GLcontext *ctx, GLui
-       return;
-    }
+ typedef enum {
+     DDC_QUIRK_NONE = 0,
+-    /* Force detailed sync polarity to -h +v */
+-    DDC_QUIRK_DT_SYNC_HM_VP = 1 << 0,
+     /* First detailed mode is bogus, prefer largest mode at 60hz */
+-    DDC_QUIRK_PREFER_LARGE_60 = 1 << 1,
++    DDC_QUIRK_PREFER_LARGE_60 = 1 << 0,
+     /* 135MHz clock is too high, drop a bit */
+-    DDC_QUIRK_135_CLOCK_TOO_HIGH = 1 << 2
++    DDC_QUIRK_135_CLOCK_TOO_HIGH = 1 << 1,
+ } ddc_quirk_t;
  
-+   n = shProg->NumShaders;
-+
-    for (i = 0; i < n; i++) {
-       if (shProg->Shaders[i] == sh) {
-          /* already attached */
-@@ -548,7 +550,7 @@ _mesa_detach_shader(GLcontext *ctx, GLui
+-static Bool quirk_dt_sync_hm_vp (int scrnIndex, xf86MonPtr DDC)
+-{
+-    /* Belinea 1924S1W */
+-    if (memcmp (DDC->vendor.name, "MAX", 4) == 0 &&
+-	DDC->vendor.prod_id == 1932)
+-	return TRUE;
+-    /* Belinea 10 20 30W */
+-    if (memcmp (DDC->vendor.name, "MAX", 4) == 0 &&
+-	DDC->vendor.prod_id == 2007)
+-	return TRUE;
+-    /* ViewSonic VX2025wm (bug #9941) */
+-    if (memcmp (DDC->vendor.name, "VSC", 4) == 0 &&
+-	DDC->vendor.prod_id == 58653)
+-	return TRUE;
+-    /* Samsung SyncMaster 205BW */
+-    if (memcmp (DDC->vendor.name, "SAM", 4) == 0 &&
+-	DDC->vendor.prod_id == 541)
+-	return TRUE;
+-     
+-    return FALSE;
+-}
+-
+ static Bool quirk_prefer_large_60 (int scrnIndex, xf86MonPtr DDC)
  {
-    struct gl_shader_program *shProg
-       = _mesa_lookup_shader_program(ctx, program);
--   const GLuint n = shProg->NumShaders;
-+   GLuint n;
-    GLuint i, j;
+     /* Belinea 10 15 55 */
+@@ -122,10 +98,6 @@ typedef struct {
+ } ddc_quirk_map_t;
  
-    if (!shProg) {
-@@ -557,6 +559,8 @@ _mesa_detach_shader(GLcontext *ctx, GLui
-       return;
-    }
+ static const ddc_quirk_map_t ddc_quirks[] = {
+-    { 
+-	quirk_dt_sync_hm_vp,	DDC_QUIRK_DT_SYNC_HM_VP,
+-	"Set detailed timing sync polarity to -h +v"
+-    },
+     {
+ 	quirk_prefer_large_60,   DDC_QUIRK_PREFER_LARGE_60,
+ 	"Detailed timing is not preferred, use largest mode at 60Hz"
+@@ -274,20 +246,15 @@ DDCModeFromDetailedTiming(int scrnIndex,
+     if (timing->interlaced)
+         Mode->Flags |= V_INTERLACE;
  
-+   n = shProg->NumShaders;
+-    if (quirks & DDC_QUIRK_DT_SYNC_HM_VP)
+-	Mode->Flags |= V_NHSYNC | V_PVSYNC;
++    if (timing->misc & 0x02)
++	Mode->Flags |= V_PVSYNC;
+     else
+-    {
+-	if (timing->misc & 0x02)
+-	    Mode->Flags |= V_PHSYNC;
+-	else
+-	    Mode->Flags |= V_NHSYNC;
+-    
+-	if (timing->misc & 0x01)
+-	    Mode->Flags |= V_PVSYNC;
+-	else
+-	    Mode->Flags |= V_NVSYNC;
+-    }
++	Mode->Flags |= V_NVSYNC;
 +
-    for (i = 0; i < n; i++) {
-       if (shProg->Shaders[i]->Name == shader) {
-          /* found it */
++    if (timing->misc & 0x01)
++	Mode->Flags |= V_PHSYNC;
++    else
++	Mode->Flags |= V_NHSYNC;
+ 
+     return Mode;
+ }

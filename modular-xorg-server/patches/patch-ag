@@ -1,15 +1,33 @@
-$NetBSD: patch-ag,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+$NetBSD: patch-ag,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- dix/window.c.orig	2007-07-07 07:37:29.000000000 -0400
-+++ dix/window.c
-@@ -138,8 +138,8 @@ Equipment Corporation.
-  *
-  ******/
+--- ../Mesa-7.0.1/src/mesa/main/framebuffer.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/framebuffer.c
+@@ -38,6 +38,7 @@
+ #include "fbobject.h"
+ #include "framebuffer.h"
+ #include "renderbuffer.h"
++#include "texobj.h"
  
--static unsigned char _back_lsb[4] = {0x88, 0x22, 0x44, 0x11};
--static unsigned char _back_msb[4] = {0x11, 0x44, 0x22, 0x88};
-+static unsigned char _back_lsb[4] = {0x00, 0x00, 0x00, 0x00};
-+static unsigned char _back_msb[4] = {0x00, 0x00, 0x00, 0x00};
  
- _X_EXPORT int screenIsSaved = SCREEN_SAVER_OFF;
  
+@@ -190,17 +191,11 @@ _mesa_free_framebuffer_data(struct gl_fr
+          _mesa_reference_renderbuffer(&att->Renderbuffer, NULL);
+       }
+       if (att->Texture) {
+-         /* render to texture */
+-         att->Texture->RefCount--;
+-         if (att->Texture->RefCount == 0) {
+-            GET_CURRENT_CONTEXT(ctx);
+-            if (ctx) {
+-               ctx->Driver.DeleteTexture(ctx, att->Texture);
+-            }
+-         }
++         _mesa_reference_texobj(&att->Texture, NULL);
+       }
++      ASSERT(!att->Renderbuffer);
++      ASSERT(!att->Texture);
+       att->Type = GL_NONE;
+-      att->Texture = NULL;
+    }
+ 
+    /* unbind _Depth/_StencilBuffer to decr ref counts */

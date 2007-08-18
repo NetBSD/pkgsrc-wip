@@ -1,29 +1,55 @@
-From: Fredrik HÃ¶glund <fredrik@kde.org>
-Date: Tue, 14 Aug 2007 20:47:49 +0000 (+0200)
-Subject: Fix the value comparisons in the IDLETIME wakeup handler.
-X-Git-Url: http://gitweb.freedesktop.org/?p=xorg/xserver.git;a=commitdiff;h=0f9e89b4e309e570d7d366489d250ca2143f0ad7
+$NetBSD: patch-bh,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
-Fix the value comparisons in the IDLETIME wakeup handler.
-
-LessThan/GreaterThan comparisons were used in the wakeup handler,
-and LessOrEqual/GreaterOrEqual in the block handler.
-
-Change it to use LessOrEqual/GreaterOrEqual in both functions,
-since this is what XSyncNegativeComparison and
-XSyncPositiveComparison imply.
----
-
---- Xext/sync.c.orig	2007-06-30 11:16:04.000000000 -0400
-+++ Xext/sync.c
-@@ -2592,8 +2592,9 @@ IdleTimeWakeupHandler (pointer env,
-     IdleTimeQueryValue (NULL, &idle);
+--- hw/kdrive/ephyr/ephyrinit.c.orig	2007-07-31 17:20:57.000000000 -0400
++++ hw/kdrive/ephyr/ephyrinit.c
+@@ -30,6 +30,8 @@
  
-     if ((pIdleTimeValueGreater &&
--         XSyncValueGreaterThan (idle, *pIdleTimeValueGreater)) ||
--        (pIdleTimeValueLess && XSyncValueLessThan (idle, *pIdleTimeValueLess)))
-+         XSyncValueGreaterOrEqual (idle, *pIdleTimeValueGreater)) ||
-+        (pIdleTimeValueLess &&
-+	 XSyncValueLessOrEqual (idle, *pIdleTimeValueLess)))
-     {
- 	SyncChangeCounter (IdleTimeCounter, idle);
-     }
+ extern Window EphyrPreExistingHostWin;
+ extern Bool   EphyrWantGrayScale;
++extern Bool   kdHasPointer;
++extern Bool   kdHasKbd;
+ 
+ void
+ InitCard (char *name)
+@@ -54,19 +56,30 @@ InitInput (int argc, char **argv)
+   KdKeyboardInfo *ki;
+   KdPointerInfo *pi;
+         
+-  ki = KdNewKeyboard();
+-  if (!ki)
+-    FatalError("Couldn't create Xephyr keyboard\n");
+-  ki->driver = &EphyrKeyboardDriver;
+   KdAddKeyboardDriver(&EphyrKeyboardDriver);
+-  KdAddKeyboard(ki);
+-
+-  pi = KdNewPointer();
+-  if (!pi)
+-    FatalError("Couldn't create Xephyr pointer\n");
+-  pi->driver = &EphyrMouseDriver;
++#ifdef linux
++  KdAddKeyboardDriver(&LinuxEvdevKeyboardDriver);
++#endif
+   KdAddPointerDriver(&EphyrMouseDriver);
+-  KdAddPointer(pi);
++#ifdef linux
++  KdAddPointerDriver(&LinuxEvdevMouseDriver);
++#endif
++
++  if (!kdHasKbd) {
++    ki = KdNewKeyboard();
++    if (!ki)
++      FatalError("Couldn't create Xephyr keyboard\n");
++    ki->driver = &EphyrKeyboardDriver;
++    KdAddKeyboard(ki);
++  }
++
++  if (!kdHasPointer) {
++    pi = KdNewPointer();
++    if (!pi)
++      FatalError("Couldn't create Xephyr pointer\n");
++    pi->driver = &EphyrMouseDriver;
++    KdAddPointer(pi);
++  }
+ 
+   KdInitInput();
+ }

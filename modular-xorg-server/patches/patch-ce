@@ -1,0 +1,11 @@
+$NetBSD: patch-ce,v 1.1 2007/08/18 19:25:34 bsadewitz Exp $
+
+--- xorg-server.pc.in.orig	2007-06-30 11:16:05.000000000 -0400
++++ xorg-server.pc.in
+@@ -8,5 +8,5 @@ sdkdir=@sdkdir@
+ Name: xorg-server
+ Description: Modular X.Org X Server
+ Version: @PACKAGE_VERSION@
+-Cflags: -I${sdkdir}
++Cflags: -I${sdkdir} @PIXMAN_CFLAGS@
+ Libs: -L${libdir}

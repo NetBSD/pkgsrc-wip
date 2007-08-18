@@ -1,56 +1,36 @@
-$NetBSD: patch-as,v 1.1 2007/08/07 03:56:41 bsadewitz Exp $
+$NetBSD: patch-as,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- fb/fbpict.c.orig	2007-07-31 18:37:36.000000000 -0400
-+++ fb/fbpict.c
-@@ -185,15 +185,11 @@ fbComposite (CARD8      op,
- 	pixman_image_composite (op, src, mask, dest,
- 				xSrc, ySrc, xMask, yMask, xDst, yDst,
- 				width, height);
--	    
-     }
--    
--    if (src)
--	pixman_image_unref (src);
--    if (mask)
--	pixman_image_unref (mask);
--    if (dest)
--	pixman_image_unref (dest);
-+
-+    free_pixman_pict (pSrc, src);
-+    free_pixman_pict (pMask, mask);
-+    free_pixman_pict (pDst, dest);
+--- GL/glx/glxcmdsswap.c.orig	2007-06-30 11:16:04.000000000 -0400
++++ GL/glx/glxcmdsswap.c
+@@ -266,7 +266,7 @@ int __glXDispSwap_CreateGLXPixmap(__GLXc
+     __GLX_SWAP_INT(&req->glxpixmap);
+ 
+     return DoCreateGLXPixmap( cl, req->visual, req->screen,
+-			      req->pixmap, req->glxpixmap );
++			      req->pixmap, req->glxpixmap, NULL, 0 );
  }
  
- void
-@@ -332,8 +328,6 @@ create_bits_picture (PicturePtr pict,
-     /* Indexed table */
-     if (pict->pFormat->index.devPrivate)
- 	pixman_image_set_indexed (image, pict->pFormat->index.devPrivate);
--    
--    fbFinishAccess (pict->pDrawable);
+ int __glXDispSwap_CreatePixmap(__GLXclientState *cl, GLbyte *pc)
+@@ -279,9 +279,12 @@ int __glXDispSwap_CreatePixmap(__GLXclie
+     __GLX_SWAP_INT(&req->fbconfig);
+     __GLX_SWAP_INT(&req->pixmap);
+     __GLX_SWAP_INT(&req->glxpixmap);
++    __GLX_SWAP_INT(&req->numAttribs);
  
-     return image;
- }
-@@ -379,7 +373,7 @@ set_image_properties (pixman_image_t *im
- 	pixman_image_set_alpha_map (
- 	    image, alpha_map, pict->alphaOrigin.x, pict->alphaOrigin.y);
- 	
--	pixman_image_unref (alpha_map);
-+	free_pixman_pict (pict->alphaMap, alpha_map);
-     }
-     
-     pixman_image_set_component_alpha (image, pict->componentAlpha);
-@@ -445,6 +439,13 @@ image_from_pict (PicturePtr pict,
-     return image;
+     return DoCreateGLXPixmap( cl, req->fbconfig, req->screen,
+-			      req->pixmap, req->glxpixmap );
++			      req->pixmap, req->glxpixmap,
++			      (CARD32*)(req + 1),
++			      req->numAttribs );
  }
  
-+void
-+free_pixman_pict (PicturePtr pict, pixman_image_t *image)
-+{
-+    if (image && pixman_image_unref (image) && pict->pDrawable)
-+	fbFinishAccess (pict->pDrawable);
-+}
-+
- Bool
- fbPictureInit (ScreenPtr pScreen, PictFormatPtr formats, int nformats)
- {
+ int __glXDispSwap_CreateGLXPixmapWithConfigSGIX(__GLXclientState *cl, GLbyte *pc)
+@@ -297,7 +300,7 @@ int __glXDispSwap_CreateGLXPixmapWithCon
+     __GLX_SWAP_INT(&req->glxpixmap);
+ 
+     return DoCreateGLXPixmap( cl, req->fbconfig, req->screen,
+-			      req->pixmap, req->glxpixmap );
++			      req->pixmap, req->glxpixmap, NULL, 0 );
+ }
+ 
+ int __glXDispSwap_DestroyGLXPixmap(__GLXclientState *cl, GLbyte *pc)

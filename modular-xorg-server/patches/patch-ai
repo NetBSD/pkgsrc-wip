@@ -1,13 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+$NetBSD: patch-ai,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- hw/xfree86/loader/loadmod.c.orig	2007-06-30 11:16:04.000000000 -0400
-+++ hw/xfree86/loader/loadmod.c
-@@ -859,7 +859,7 @@ doLoadModule(const char *module, const c
-     char *m = NULL;
-     const char **cim;
+--- ../Mesa-7.0.1/src/mesa/main/mtypes.h.orig	2007-08-01 17:50:01.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/mtypes.h
+@@ -1523,12 +1523,6 @@ struct gl_texture_unit
  
--    xf86MsgVerb(X_INFO, 3, "LoadModule: \"%s\"", module);
-+    xf86MsgVerb(X_INFO, 3, "LoadModule: \"%s\"\n", module);
+    struct gl_texture_object *_Current; /**< Points to really enabled tex obj */
  
-     for (cim = compiled_in_modules; *cim; cim++)
- 	if (!strcmp (module, *cim))
+-   struct gl_texture_object Saved1D;  /**< only used by glPush/PopAttrib */
+-   struct gl_texture_object Saved2D;
+-   struct gl_texture_object Saved3D;
+-   struct gl_texture_object SavedCubeMap;
+-   struct gl_texture_object SavedRect;
+-
+    /* GL_SGI_texture_color_table */
+    struct gl_color_table ColorTable;
+    struct gl_color_table ProxyColorTable;

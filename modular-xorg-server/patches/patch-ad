@@ -1,12 +1,19 @@
-$NetBSD: patch-ad,v 1.1 2007/08/05 07:19:16 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.2 2007/08/18 19:25:33 bsadewitz Exp $
 
---- GL/glx/Makefile.am.orig	2007-06-30 11:16:04.000000000 -0400
-+++ GL/glx/Makefile.am
-@@ -40,6 +40,7 @@ libglxdri_la_SOURCES = \
+--- ../Mesa-7.0.1/src/mesa/main/attrib.h.orig	2007-06-21 18:10:54.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/attrib.h
+@@ -58,10 +58,14 @@ _mesa_PopClientAttrib( void );
+ extern void 
+ _mesa_init_attrib( GLcontext *ctx );
  
- libglx_la_SOURCES = \
-         g_disptab.h \
-+        glxbyteorder.h \
-         glxcmds.c \
-         glxcmdsswap.c \
-         glxcontext.h \
++extern void 
++_mesa_free_attrib_data( GLcontext *ctx );
++
+ #else
+ 
+ /** No-op */
+ #define _mesa_init_attrib( c ) ((void)0)
++#define _mesa_free_attrib_data( c ) ((void)0)
+ 
+ #endif
+ 

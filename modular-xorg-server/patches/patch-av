@@ -1,13 +1,14 @@
-$NetBSD: patch-av,v 1.1 2007/08/07 03:56:41 bsadewitz Exp $
+$NetBSD: patch-av,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- include/miscstruct.h.orig	2007-06-30 11:16:05.000000000 -0400
-+++ include/miscstruct.h
-@@ -51,7 +51,7 @@ SOFTWARE.
- #include "misc.h"
- #include <X11/Xprotostr.h>
- #include "gc.h"
--#include <pixman/pixman.h>
-+#include <pixman.h>
+--- GL/glx/glxext.h.orig	2007-06-30 11:16:04.000000000 -0400
++++ GL/glx/glxext.h
+@@ -80,7 +80,8 @@ extern int DoGetFBConfigs(__GLXclientSta
+ extern int DoCreateContext(__GLXclientState *cl, GLXContextID gcId,
+     GLXContextID shareList, VisualID visual, GLuint screen, GLboolean isDirect);
+ extern int DoCreateGLXPixmap(__GLXclientState *cl, XID fbconfigId,
+-    GLuint screenNum, XID pixmapId, XID glxpixmapId);
++    GLuint screenNum, XID pixmapId, XID glxpixmapId, CARD32 *attribs,
++    CARD32 numAttribs);
+ extern int DoDestroyPixmap(__GLXclientState *cl, XID glxpixmapId);
  
- typedef xPoint DDXPointRec;
- 
+ extern int DoQueryContext(__GLXclientState *cl, GLXContextID gcId);

@@ -1,26 +1,12 @@
-$NetBSD: patch-at,v 1.1 2007/08/07 03:56:41 bsadewitz Exp $
+$NetBSD: patch-at,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- fb/fbtrap.c.orig	2007-06-30 11:16:04.000000000 -0400
-+++ fb/fbtrap.c
-@@ -47,9 +47,7 @@ fbAddTraps (PicturePtr	pPicture,
-     
-     pixman_add_traps (image, x_off, y_off, ntrap, (pixman_trap_t *)traps);
- 
--    fbFinishAccess (pPicture->pDrawable);
--
--    pixman_image_unref (image);
-+    free_pixman_pict (pPicture, image);
- }
- 
- void
-@@ -65,9 +63,7 @@ fbRasterizeTrapezoid (PicturePtr    pPic
- 
-     pixman_rasterize_trapezoid (image, (pixman_trapezoid_t *)trap, x_off, y_off);
- 
--    fbFinishAccess (pPicture->pDrawable);
--
--    pixman_image_unref (image);
-+    free_pixman_pict (pPicture, image);
- }
- 
- static int
+--- GL/glx/glxdrawable.h.orig	2007-06-30 11:16:04.000000000 -0400
++++ GL/glx/glxdrawable.h
+@@ -54,6 +54,7 @@ typedef struct {
+     ScreenPtr pScreen;
+     Bool idExists;
+     int refcnt;
++    GLenum target;
+ #ifdef XF86DRI
+     DamagePtr pDamage;
+     __DRIcontext *pDRICtx;

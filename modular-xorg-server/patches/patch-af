@@ -1,62 +1,65 @@
-$NetBSD: patch-af,v 1.2 2007/08/06 16:44:11 bsadewitz Exp $
+$NetBSD: patch-af,v 1.3 2007/08/18 19:25:34 bsadewitz Exp $
 
---- GL/glx/glxdri.c.orig	2007-07-31 18:37:36.000000000 -0400
-+++ GL/glx/glxdri.c
-@@ -374,20 +374,13 @@ __glXDRIbindTexImage(__GLXcontext *baseC
+--- ../Mesa-7.0.1/src/mesa/main/fbobject.c.orig	2007-08-01 17:50:01.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/fbobject.c
+@@ -150,22 +150,18 @@ _mesa_remove_attachment(GLcontext *ctx, 
  {
-     RegionPtr	pRegion = NULL;
-     PixmapPtr	pixmap;
--    int		w, h, bpp, override = 0;
--    GLenum	target, format, type;
-+    int		bpp, override = 0;
-+    GLenum	format, type;
-     ScreenPtr pScreen = glxPixmap->pScreen;
-     __GLXDRIscreen * const screen =
- 	(__GLXDRIscreen *) __glXgetActiveScreen(pScreen->myNum);
+    if (att->Type == GL_TEXTURE) {
+       ASSERT(att->Texture);
+-      att->Texture->RefCount--;
+-      if (att->Texture->RefCount == 0) {
+-	 ctx->Driver.DeleteTexture(ctx, att->Texture);
++      if (ctx->Driver.FinishRenderTexture) {
++         /* tell driver we're done rendering to this texobj */
++         ctx->Driver.FinishRenderTexture(ctx, att);
+       }
+-      else {
+-         /* tell driver that we're done rendering to this texture. */
+-         if (ctx->Driver.FinishRenderTexture) {
+-            ctx->Driver.FinishRenderTexture(ctx, att);
+-         }
+-      }
+-      att->Texture = NULL;
++      _mesa_reference_texobj(&att->Texture, NULL); /* unbind */
++      ASSERT(!att->Texture);
+    }
+    if (att->Type == GL_TEXTURE || att->Type == GL_RENDERBUFFER_EXT) {
+       ASSERT(att->Renderbuffer);
+       ASSERT(!att->Texture);
+-      _mesa_reference_renderbuffer(&att->Renderbuffer, NULL);
++      _mesa_reference_renderbuffer(&att->Renderbuffer, NULL); /* unbind */
++      ASSERT(!att->Renderbuffer);
+    }
+    att->Type = GL_NONE;
+    att->Complete = GL_TRUE;
+@@ -191,8 +187,8 @@ _mesa_set_texture_attachment(GLcontext *
+       /* new attachment */
+       _mesa_remove_attachment(ctx, att);
+       att->Type = GL_TEXTURE;
+-      att->Texture = texObj;
+-      texObj->RefCount++;
++      assert(!att->Texture);
++      _mesa_reference_texobj(&att->Texture, texObj);
+    }
  
-     pixmap = (PixmapPtr) glxPixmap->pDraw;
--    w = pixmap->drawable.width;
--    h = pixmap->drawable.height;
--
--    if (h & (h - 1) || w & (w - 1))
--	target = GL_TEXTURE_RECTANGLE_ARB;
--    else
--	target = GL_TEXTURE_2D;
- 
-     if (screen->texOffsetStart && screen->driScreen.setTexOffset) {
- 	__GLXpixmap **texOffsetOverride = screen->texOffsetOverride;
-@@ -416,7 +409,7 @@ alreadyin:
- 
- 	glxPixmap->pDRICtx = &((__GLXDRIcontext*)baseContext)->driContext;
- 
--	CALL_GetIntegerv(GET_DISPATCH(), (target == GL_TEXTURE_2D ?
-+	CALL_GetIntegerv(GET_DISPATCH(), (glxPixmap->target == GL_TEXTURE_2D ?
- 					  GL_TEXTURE_BINDING_2D :
- 					  GL_TEXTURE_BINDING_RECTANGLE_NV,
- 					  &texname));
-@@ -481,7 +474,7 @@ nooverride:
- 					   pixmap->drawable.y) );
- 
- 	CALL_TexImage2D( GET_DISPATCH(),
--			 (target,
-+			 (glxPixmap->target,
- 			  0,
- 			  bpp == 4 ? 4 : 3,
- 			  pixmap->drawable.width,
-@@ -511,7 +504,7 @@ nooverride:
- 					       pixmap->drawable.y + p[i].y1) );
- 
- 	    CALL_TexSubImage2D( GET_DISPATCH(),
--				(target,
-+				(glxPixmap->target,
- 				 0,
- 				 p[i].x1, p[i].y1,
- 				 p[i].x2 - p[i].x1, p[i].y2 - p[i].y1,
-@@ -977,7 +970,6 @@ static Bool
- glxDRIEnterVT (int index, int flags)
- {
-     __GLXDRIscreen *screen = (__GLXDRIscreen *) __glXgetActiveScreen(index);
--    Bool ret;
- 
-     LogMessage(X_INFO, "AIGLX: Resuming AIGLX clients after VT switch\n");
- 
+    /* always update these fields */
+@@ -983,6 +979,7 @@ _mesa_BindFramebufferEXT(GLenum target, 
+ 	    return;
+ 	 }
+          _mesa_HashInsert(ctx->Shared->FrameBuffers, framebuffer, newFb);
++         ASSERT(newFb->RefCount == 1);
+       }
+    }
+    else {
+@@ -1006,8 +1003,10 @@ _mesa_BindFramebufferEXT(GLenum target, 
+    if (bindDrawBuf) {
+       /* check if old FB had any texture attachments */
+       check_end_texture_render(ctx, ctx->DrawBuffer);
+-      /* check if time to delete this framebuffer */
++
++      /* bind new drawing buffer */
+       _mesa_reference_framebuffer(&ctx->DrawBuffer, newFb);
++
+       if (newFb->Name != 0) {
+          /* check if newly bound framebuffer has any texture attachments */
+          check_begin_texture_render(ctx, newFb);

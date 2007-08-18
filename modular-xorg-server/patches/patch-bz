@@ -1,0 +1,13 @@
+$NetBSD: patch-bz,v 1.1 2007/08/18 19:25:34 bsadewitz Exp $
+
+--- include/miscstruct.h.orig	2007-06-30 11:16:05.000000000 -0400
++++ include/miscstruct.h
+@@ -51,7 +51,7 @@ SOFTWARE.
+ #include "misc.h"
+ #include <X11/Xprotostr.h>
+ #include "gc.h"
+-#include <pixman/pixman.h>
++#include <pixman.h>
+ 
+ typedef xPoint DDXPointRec;
+ 

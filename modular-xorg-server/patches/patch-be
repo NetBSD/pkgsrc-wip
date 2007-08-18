@@ -1,13 +1,56 @@
-$NetBSD: patch-be,v 1.1 2007/08/13 06:18:31 bsadewitz Exp $
+$NetBSD: patch-be,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
 
---- hw/xfree86/common/xf86Priv.h.orig	2007-07-31 18:37:36.000000000 -0400
-+++ hw/xfree86/common/xf86Priv.h
-@@ -119,7 +119,7 @@ extern RootWinPropPtr *xf86RegisteredPro
- #define DEFAULT_LOG_VERBOSE	3
- #endif
- #ifndef DEFAULT_DPI
--#define DEFAULT_DPI		75
-+#define DEFAULT_DPI		100
- #endif
+--- fb/fbpict.c.orig	2007-07-31 18:37:36.000000000 -0400
++++ fb/fbpict.c
+@@ -185,15 +185,11 @@ fbComposite (CARD8      op,
+ 	pixman_image_composite (op, src, mask, dest,
+ 				xSrc, ySrc, xMask, yMask, xDst, yDst,
+ 				width, height);
+-	    
+     }
+-    
+-    if (src)
+-	pixman_image_unref (src);
+-    if (mask)
+-	pixman_image_unref (mask);
+-    if (dest)
+-	pixman_image_unref (dest);
++
++    free_pixman_pict (pSrc, src);
++    free_pixman_pict (pMask, mask);
++    free_pixman_pict (pDst, dest);
+ }
  
- #define DEFAULT_UNRESOLVED	TRUE
+ void
+@@ -332,8 +328,6 @@ create_bits_picture (PicturePtr pict,
+     /* Indexed table */
+     if (pict->pFormat->index.devPrivate)
+ 	pixman_image_set_indexed (image, pict->pFormat->index.devPrivate);
+-    
+-    fbFinishAccess (pict->pDrawable);
+ 
+     return image;
+ }
+@@ -379,7 +373,7 @@ set_image_properties (pixman_image_t *im
+ 	pixman_image_set_alpha_map (
+ 	    image, alpha_map, pict->alphaOrigin.x, pict->alphaOrigin.y);
+ 	
+-	pixman_image_unref (alpha_map);
++	free_pixman_pict (pict->alphaMap, alpha_map);
+     }
+     
+     pixman_image_set_component_alpha (image, pict->componentAlpha);
+@@ -445,6 +439,13 @@ image_from_pict (PicturePtr pict,
+     return image;
+ }
+ 
++void
++free_pixman_pict (PicturePtr pict, pixman_image_t *image)
++{
++    if (image && pixman_image_unref (image) && pict->pDrawable)
++	fbFinishAccess (pict->pDrawable);
++}
++
+ Bool
+ fbPictureInit (ScreenPtr pScreen, PictFormatPtr formats, int nformats)
+ {

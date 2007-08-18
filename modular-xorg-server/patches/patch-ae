@@ -1,54 +1,162 @@
-$NetBSD: patch-ae,v 1.1 2007/08/06 16:44:11 bsadewitz Exp $
+$NetBSD: patch-ae,v 1.2 2007/08/18 19:25:33 bsadewitz Exp $
 
---- hw/xfree86/os-support/bsd/bsd_mouse.c.orig	2007-06-30 11:16:04.000000000 -0400
-+++ hw/xfree86/os-support/bsd/bsd_mouse.c
-@@ -83,7 +83,7 @@ static const char *mouseDevs[] = {
- 	DEFAULT_PS2_DEV,
- 	NULL
- };
--#elif defined(__OpenBSD__) && defined(WSCONS_SUPPORT)
-+#elif (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
- /* Only wsmouse mices are autoconfigured for now on OpenBSD */
- #define DEFAULT_WSMOUSE_DEV		"/dev/wsmouse"
- #define DEFAULT_WSMOUSE0_DEV		"/dev/wsmouse0"
-@@ -154,7 +154,7 @@ DefaultProtocol(void)
+--- ../Mesa-7.0.1/src/mesa/main/context.c.orig	2007-08-01 17:50:00.000000000 -0400
++++ ../Mesa-7.0.1/src/mesa/main/context.c
+@@ -467,17 +467,12 @@ alloc_shared_state( GLcontext *ctx )
+    if (!ss->DefaultRect)
+       goto cleanup;
+ 
+-   /* Effectively bind the default textures to all texture units */
+-   ss->Default1D->RefCount += MAX_TEXTURE_IMAGE_UNITS;
+-   ss->Default2D->RefCount += MAX_TEXTURE_IMAGE_UNITS;
+-   ss->Default3D->RefCount += MAX_TEXTURE_IMAGE_UNITS;
+-   ss->DefaultCubeMap->RefCount += MAX_TEXTURE_IMAGE_UNITS;
+-   ss->DefaultRect->RefCount += MAX_TEXTURE_IMAGE_UNITS;
++   /* sanity check */
++   assert(ss->Default1D->RefCount == 1);
+ 
+    _glthread_INIT_MUTEX(ss->TexMutex);
+    ss->TextureStateStamp = 0;
+ 
+-
+ #if FEATURE_EXT_framebuffer_object
+    ss->FrameBuffers = _mesa_NewHashTable();
+    if (!ss->FrameBuffers)
+@@ -487,10 +482,9 @@ alloc_shared_state( GLcontext *ctx )
+       goto cleanup;
+ #endif
+ 
+-
+    return GL_TRUE;
+ 
+- cleanup:
++cleanup:
+    /* Ran out of memory at some point.  Free everything and return NULL */
+    if (ss->DisplayList)
+       _mesa_DeleteHashTable(ss->DisplayList);
+@@ -634,6 +628,33 @@ delete_shader_cb(GLuint id, void *data, 
+    }
+ }
+ 
++/**
++ * Callback for deleting a framebuffer object.  Called by _mesa_HashDeleteAll()
++ */
++static void
++delete_framebuffer_cb(GLuint id, void *data, void *userData)
++{
++   struct gl_framebuffer *fb = (struct gl_framebuffer *) data;
++   /* The fact that the framebuffer is in the hashtable means its refcount
++    * is one, but we're removing from the hashtable now.  So clear refcount.
++    */
++   /*assert(fb->RefCount == 1);*/
++   fb->RefCount = 0;
++   fb->Delete(fb);
++}
++
++/**
++ * Callback for deleting a renderbuffer object. Called by _mesa_HashDeleteAll()
++ */
++static void
++delete_renderbuffer_cb(GLuint id, void *data, void *userData)
++{
++   struct gl_renderbuffer *rb = (struct gl_renderbuffer *) data;
++   rb->RefCount = 0;  /* see comment for FBOs above */
++   rb->Delete(rb);
++}
++
++
+ 
+ /**
+  * Deallocate a shared state object and all children structures.
+@@ -656,20 +677,6 @@ free_shared_state( GLcontext *ctx, struc
+    _mesa_HashDeleteAll(ss->DisplayList, delete_displaylist_cb, ctx);
+    _mesa_DeleteHashTable(ss->DisplayList);
+ 
+-   /*
+-    * Free texture objects
+-    */
+-   ASSERT(ctx->Driver.DeleteTexture);
+-   /* the default textures */
+-   ctx->Driver.DeleteTexture(ctx, ss->Default1D);
+-   ctx->Driver.DeleteTexture(ctx, ss->Default2D);
+-   ctx->Driver.DeleteTexture(ctx, ss->Default3D);
+-   ctx->Driver.DeleteTexture(ctx, ss->DefaultCubeMap);
+-   ctx->Driver.DeleteTexture(ctx, ss->DefaultRect);
+-   /* all other textures */
+-   _mesa_HashDeleteAll(ss->TexObjects, delete_texture_cb, ctx);
+-   _mesa_DeleteHashTable(ss->TexObjects);
+-
+ #if defined(FEATURE_NV_vertex_program) || defined(FEATURE_NV_fragment_program)
+    _mesa_HashDeleteAll(ss->Programs, delete_program_cb, ctx);
+    _mesa_DeleteHashTable(ss->Programs);
+@@ -701,10 +708,27 @@ free_shared_state( GLcontext *ctx, struc
+ #endif
+ 
+ #if FEATURE_EXT_framebuffer_object
++   _mesa_HashDeleteAll(ss->FrameBuffers, delete_framebuffer_cb, ctx);
+    _mesa_DeleteHashTable(ss->FrameBuffers);
++   _mesa_HashDeleteAll(ss->RenderBuffers, delete_renderbuffer_cb, ctx);
+    _mesa_DeleteHashTable(ss->RenderBuffers);
+ #endif
+ 
++   /*
++    * Free texture objects (after FBOs since some textures might have
++    * been bound to FBOs).
++    */
++   ASSERT(ctx->Driver.DeleteTexture);
++   /* the default textures */
++   ctx->Driver.DeleteTexture(ctx, ss->Default1D);
++   ctx->Driver.DeleteTexture(ctx, ss->Default2D);
++   ctx->Driver.DeleteTexture(ctx, ss->Default3D);
++   ctx->Driver.DeleteTexture(ctx, ss->DefaultCubeMap);
++   ctx->Driver.DeleteTexture(ctx, ss->DefaultRect);
++   /* all other textures */
++   _mesa_HashDeleteAll(ss->TexObjects, delete_texture_cb, ctx);
++   _mesa_DeleteHashTable(ss->TexObjects);
++
+    _glthread_DESTROY_MUTEX(ss->Mutex);
+ 
+    _mesa_free(ss);
+@@ -1157,18 +1181,20 @@ _mesa_create_context(const GLvisual *vis
+ void
+ _mesa_free_context_data( GLcontext *ctx )
  {
- #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
-     return "Auto";
--#elif defined(__OpenBSD__) && defined(WSCONS_SUPPORT)
-+#elif (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
-     return "WSMouse";
- #else
-     return NULL;
-@@ -340,7 +340,7 @@ FindDevice(InputInfoPtr pInfo, const cha
+-   /* if we're destroying the current context, unbind it first */
+-   if (ctx == _mesa_get_current_context()) {
+-      _mesa_make_current(NULL, NULL, NULL);
+-   }
+-   else {
+-      /* unreference WinSysDraw/Read buffers */
+-      _mesa_unreference_framebuffer(&ctx->WinSysDrawBuffer);
+-      _mesa_unreference_framebuffer(&ctx->WinSysReadBuffer);
+-      _mesa_unreference_framebuffer(&ctx->DrawBuffer);
+-      _mesa_unreference_framebuffer(&ctx->ReadBuffer);
++   if (!_mesa_get_current_context()){
++      /* No current context, but we may need one in order to delete
++       * texture objs, etc.  So temporarily bind the context now.
++       */
++      _mesa_make_current(ctx, NULL, NULL);
+    }
+ 
++   /* unreference WinSysDraw/Read buffers */
++   _mesa_unreference_framebuffer(&ctx->WinSysDrawBuffer);
++   _mesa_unreference_framebuffer(&ctx->WinSysReadBuffer);
++   _mesa_unreference_framebuffer(&ctx->DrawBuffer);
++   _mesa_unreference_framebuffer(&ctx->ReadBuffer);
++
++   _mesa_free_attrib_data(ctx);
+    _mesa_free_lighting_data( ctx );
+    _mesa_free_eval_data( ctx );
+    _mesa_free_texture_data( ctx );
+@@ -1200,6 +1226,11 @@ _mesa_free_context_data( GLcontext *ctx 
+ 
+    if (ctx->Extensions.String)
+       _mesa_free((void *) ctx->Extensions.String);
++
++   /* unbind the context if it's currently bound */
++   if (ctx == _mesa_get_current_context()) {
++      _mesa_make_current(NULL, NULL, NULL);
++   }
  }
- #endif
  
--#if defined(__OpenBSD__) && defined(WSCONS_SUPPORT)
-+#if (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
  
- /* Only support wsmouse configuration for now */
- static const char *
-@@ -381,7 +381,7 @@ FindDevice(InputInfoPtr pInfo, const cha
-     }
-     return *pdev;
- }
--#endif /* __OpenBSD__ && WSCONS_SUPPORT */
-+#endif /* __OpenBSD__ || __NetBSD__ && WSCONS_SUPPORT */
- 
- #ifdef WSCONS_SUPPORT
- #define NUMEVENTS 64
-@@ -779,11 +779,11 @@ xf86OSMouseInit(int flags)
-     p->SetBMRes = SetSysMouseRes;
-     p->SetMiscRes = SetSysMouseRes;
- #endif
--#if defined(__OpenBSD__) && defined(WSCONS_SUPPORT)
-+#if (defined(__OpenBSD__) || defined(__NetBSD__)) && defined(WSCONS_SUPPORT)
-     p->SetupAuto = SetupAuto;
-     p->SetMiscRes = SetMouseRes;
- #endif
--#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__DragonFly__)
-+#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
-     p->FindDevice = FindDevice;
- #endif
-     p->PreInit = bsdMousePreInit;
