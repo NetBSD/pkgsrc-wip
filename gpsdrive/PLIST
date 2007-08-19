@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/26 09:07:33 alnix Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/08/19 19:46:24 tnn2 Exp $
 bin/friendsd2
 bin/garble
 bin/geo-code
@@ -14,13 +14,8 @@ bin/gpssql_backup.sh
 bin/gpssql_restore.sh
 bin/wpcvt
 bin/wpget
-lib/libfly.a
-lib/libfly.so.2
-lib/libfly.so.2.0.0
-lib/libnautic.a
-lib/libnautic.so
-lib/libnautic.so.2
-lib/libnautic.so.2.0.0
+lib/libfly.la
+lib/libnautic.la
 man/de/man1/gpsdrive.1
 man/es/man1/gpsdrive.1
 man/man1/gpsdrive.1
