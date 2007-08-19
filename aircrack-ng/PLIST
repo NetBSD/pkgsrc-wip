@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/11 17:23:52 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/08/19 10:37:02 tnn2 Exp $
 bin/aircrack-ng
 bin/airdecap-ng
-bin/arpforge-ng
 bin/ivstools
 bin/kstats
+bin/makeivs
+bin/packetforge-ng
 man/man1/aircrack-ng.1
 man/man1/airdecap-ng.1
 man/man1/aireplay-ng.1
 man/man1/airmon-ng.1
 man/man1/airodump-ng.1
-man/man1/arpforge-ng.1
+man/man1/airtun-ng.1
 man/man1/ivstools.1
 man/man1/kstats.1
-sbin/aireplay-ng
+man/man1/makeivs.1
+man/man1/packetforge-ng.1
+${notyet}sbin/aireplay-ng
 sbin/airmon-ng
 sbin/airodump-ng

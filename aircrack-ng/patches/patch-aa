@@ -1,12 +1,22 @@
---- Makefile.orig	2006-04-30 14:30:53.625536056 +0200
-+++ Makefile	2006-04-30 14:31:16.554050392 +0200
-@@ -1,8 +1,6 @@
--CC		= gcc
--CFLAGS          = -g -W -Wall -O3
- OPTFLAGS        = -D_FILE_OFFSET_BITS=64
+$NetBSD: patch-aa,v 1.2 2007/08/19 10:37:02 tnn2 Exp $
+
+--- Makefile.orig	2007-06-25 21:56:30.000000000 +0200
++++ Makefile
+@@ -11,7 +11,7 @@ iOPTFLAGS       = -O3 -ip -ipo -D_FILE_O
+ PROF_DIR	= $(PWD)/prof
  
+ destdir         =
 -prefix          = /usr/local
-+prefix          = ${PREFIX}
++prefix          = ${DESTDIR}${PREFIX}
  bindir          = $(prefix)/bin
- sbindir		= $(prefix)/sbin
- datadir         = $(prefix)/share
+ sbindir         = $(prefix)/sbin
+ mandir          = $(prefix)/man/man1
+@@ -19,7 +19,7 @@ datadir         = $(prefix)/share
+ docdir          = $(datadir)/doc/aircrack-ng
+ 
+ BINFILES        = aircrack-ng airdecap-ng packetforge-ng ivstools kstats
+-SBINFILES       = aireplay-ng airodump-ng airtun-ng
++SBINFILES       ?= aireplay-ng airodump-ng airtun-ng
+ SCRIPTS         = airmon-ng
+ TESTFILES       = makeivs
+ OPTFILES	= aircrack-ng-opt-prof_gen aircrack-ng-opt aircrack-ng-opt-prof prof/*
