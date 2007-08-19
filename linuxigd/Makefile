@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/19 02:21:42 obache Exp $
 #
 
 DISTNAME=	linuxigd-1.0
@@ -26,5 +26,5 @@ SUBST_STAGE.cfgdir=	pre-configure
 SUBST_FILES.cfgdir=	globals.h etc/upnpd.conf
 SUBST_SED.cfgdir=	-e 's|@CONFDIR@|${PKG_SYSCONFDIR}|'
 
-.include "../../wip/libupnp/buildlink3.mk"
+.include "../../net/libupnp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

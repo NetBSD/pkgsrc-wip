@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/05/28 13:25:06 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/08/19 02:21:42 obache Exp $
 
 DISTNAME=		gmediaserver-0.12.0
 CATEGORIES=		multimedia net
@@ -21,5 +21,5 @@ CONFIGURE_ARGS+=	--with-libupnp=${BUILDLINK_PREFIX.libupnp:Q}
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../wip/libupnp/buildlink3.mk"
+.include "../../net/libupnp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
