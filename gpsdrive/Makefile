@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/08/19 19:46:24 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/19 21:10:26 tnn2 Exp $
 #
 
 DISTNAME=		gpsdrive-2.09
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gpsdrive.de/gpsdrive.tar/
 
@@ -9,7 +10,6 @@ MAINTAINER=		alnix@phear.org
 HOMEPAGE=		http://www.gpsdrive.de/
 COMMENT=		GpsDrive is a car (bike, ship, plane) navigation system
 
-#DEPENDS+=		gpsd>=1.07:../../geography/gpsd
 DEPENDS+=		wget>=1:../../net/wget
 DEPENDS+=		pcre>=6.6:../../devel/pcre
 
@@ -21,11 +21,12 @@ WRKSRC=			${WRKDIR}/gpsdrive-2.09
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		msgfmt
 
 # XXX make this an option
 CONFIGURE_ARGS+=	--disable-mysql
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
