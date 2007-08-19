@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2006/09/14 18:57:39 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/19 19:40:08 tnn2 Exp $
 #
 
 DISTNAME=		gpsdrive-2.09
 CATEGORIES=		geography
-MASTER_SITES=		http://www.gpsdrive.cc/
+MASTER_SITES=		http://www.gpsdrive.de/gpsdrive.tar/
 
 MAINTAINER=		alnix@phear.org
-HOMEPAGE=		http://www.gpsdrive.cc/
+HOMEPAGE=		http://www.gpsdrive.de/
 COMMENT=		GpsDrive is a car (bike, ship, plane) navigation system
 
 #DEPENDS+=		gpsd>=1.07:../../geography/gpsd
