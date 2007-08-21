@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.6 2007/08/21 15:13:53 jukka Exp $
+
+--- libdkim/dkim-types.h.orig	2007-08-09 09:27:07.000000000 +0200
++++ libdkim/dkim-types.h	2007-08-21 17:00:58.000000000 +0200
+@@ -170,7 +170,6 @@ struct dkim
+ {
+ 	bool			dkim_partial;
+ 	bool			dkim_bodydone;
+-	bool			dkim_blankline;
+ 	bool			dkim_subdomain;
+ 	bool			dkim_skipbody;
+ 	int			dkim_mode;
+@@ -181,7 +180,6 @@ struct dkim
+ 	u_int			dkim_cache_queries;
+ 	u_int			dkim_cache_hits;
+ #endif /* _FFR_QUERY_CACHE */
+-	u_int			dkim_blanks;
+ 	u_int			dkim_version;
+ 	u_int			dkim_sigcount;
+ 	size_t			dkim_b64siglen;
