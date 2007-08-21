@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2007/08/21 01:18:09 bsadewitz Exp $
+bin/esc-m
+bin/min12xxw
+man/man1/min12xxw.1
