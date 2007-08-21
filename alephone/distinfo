@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/08/17 19:13:39 christtrekker Exp $
+$NetBSD: distinfo,v 1.3 2007/08/21 15:32:53 christtrekker Exp $
 
-SHA1 (AlephOne-20070525.tar.bz2) = 107315d022eb80551427c5fdd049741d4ed92e4e
-RMD160 (AlephOne-20070525.tar.bz2) = 52370ec2f73a676f57dc71add725195099566244
-Size (AlephOne-20070525.tar.bz2) = 6657074 bytes
-SHA1 (patch-aa) = 12d96c07919327be53dfa3dc2d754d88bdbe1fd7
+SHA1 (AlephOne-20070819.tar.bz2) = 41c559d8c3ac625e99df151e4df129a9cb2722b2
+RMD160 (AlephOne-20070819.tar.bz2) = 493b00916f4bd060bd51dea8a01c6647661d5455
+Size (AlephOne-20070819.tar.bz2) = 7286338 bytes
