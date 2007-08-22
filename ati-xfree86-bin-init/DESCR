@@ -1,0 +1,5 @@
+This package installs an older version of the proprietary AMD/ATI
+Linux XFree86 drivers to be used for initialization as the 8.40.4
+drivers do not appear to properly initialize certain cards.
+This provides a command, initati, that loads the older drivers
+to properly initialize the card.

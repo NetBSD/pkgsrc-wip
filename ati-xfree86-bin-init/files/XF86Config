@@ -1,0 +1,34 @@
+Section "Files"
+	ModulePath  "@X11BASE@/lib/modules"
+	ModulePath  "@INITATIDIR@"
+EndSection
+
+Section "Device"
+	Identifier  "fglrx0"
+	BusID       "PCI:1:0:0"
+	Driver      "fglrx"
+	VendorName  "ATI Technologies Inc"
+	BoardName   "firegl"
+
+	Option	    "VideoOverlay" "on"
+	Option	    "OpenGLOverlay" "off"
+	Option "no_dri"	"on"
+EndSection
+
+Section "Screen"
+	Identifier "Generic Screen"
+	Device     "fglrx0"
+	Monitor    "Generic"
+	DefaultDepth     24
+	SubSection "Display"
+		Depth     24
+	EndSubSection
+EndSection
+
+Section "Monitor"
+	Identifier   	"Generic"
+	VendorName   	"Generic"
+	ModelName    	"Generic"
+	Option	    	"DPMS" "true"
+EndSection
+

@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2007/08/22 19:18:28 briandealwis Exp $
+
+Be sure to modify the XF86Config to specify the PCI bus for your
+video card.
+
+    ${INITATIDIR}/XF86Config.initati
+
+===========================================================================
