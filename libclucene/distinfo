@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/08/22 18:06:31 krub1 Exp $
+
+SHA1 (clucene-core-0.9.20.tar.gz) = db12d8950c0d0602e80defed88551c83d1446285
+RMD160 (clucene-core-0.9.20.tar.gz) = fd1c8789a103702e10d1d45a10ea1837c97f8af6
+Size (clucene-core-0.9.20.tar.gz) = 1876859 bytes
