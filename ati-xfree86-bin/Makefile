@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/16 17:07:27 briandealwis Exp $
+# $NetBSD: Makefile,v 1.3 2007/08/22 20:51:54 briandealwis Exp $
 #
 
 DISTNAME=	ati-xfree86-bin-8.40.4
@@ -17,15 +17,12 @@ USE_DIRS+=	xdg-1.1
 LICENSE=	amd-software-license
 LICENSE_FILE=	LICENSE
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 NetBSD-[2-9]*-x86_64
+EMUL_ARCH=	i386
 
-EMUL_PLATFORMS=         linux-i386
-EMUL_MODULES.linux=     compat
-SUSE_VERSION_REQD=      9.1
-
-# Use ${ARCHNAME} to refer to the Linux-style architectures
-ARCHNAME.i386=	x86
-ARCHNAME.x86_64=x86_64
-ARCHNAME=	${ARCHNAME.${MACHINE_ARCH}}
+# Use ${ATIARCHNAME} to refer to the Linux-style architecture name
+ATIARCHNAME.i386=	x86
+ATIARCHNAME.x86_64=x86_64
+ATIARCHNAME=	${ATIARCHNAME.${MACHINE_ARCH}}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,7 +36,7 @@ do-extract:
 # the "AMD Testing Use Only" watermark
 do-install:
 	${INSTALL_PROGRAM} \
-		${WRKSRC}/arch/${ARCHNAME}/usr/X11R6/bin/aticonfig \
+		${WRKSRC}/arch/${ATIARCHNAME}/usr/X11R6/bin/aticonfig \
 		${X11PREFIX}/bin
 	${INSTALL_LIB_DIR} ${X11PREFIX}/lib/modules/drivers
 	${INSTALL_LIB} \

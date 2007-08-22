@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/08/15 23:44:32 briandealwis Exp $
+$NetBSD: MESSAGE,v 1.2 2007/08/22 20:51:54 briandealwis Exp $
 
 To use the driver you will need to:
 
@@ -10,6 +10,9 @@ To use the driver you will need to:
 (2) Symlink ${PREFIX}/etc/ati to /etc/ati.  Failure to do so will result
     in a watermark on the lower-right part of the screen saying
     `Testing use only' and `Unsupported hardware'.
+
+Note: some machines may require using `initati' from wip/ati-xfree86-bin-init
+to work-around an initialization issue that may lead to a complete hang.
 
 Useful websites:
     http://debian.wgdd.de/temp/fglrx_man/fglrx.4x.html
