@@ -1,7 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/08/22 06:50:56 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2007/08/22 06:58:59 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBSSH2_BUILDLINK3_MK:=	${LIBSSH2_BUILDLINK3_MK}+
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 .if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	libssh2
@@ -20,13 +22,10 @@ pkgbase:=	libssh2
 
 .endif	# LIBSSH2_BUILDLINK3_MK
 
-.if !empty(PKG_BUILD_OPTIONS:Mssl)
+.if !empty(PKG_BUILD_OPTIONS.libssh2:Mssl)
 .	include "../../security/openssl/buildlink3.mk"
-.elif !empty(PKG_BUILD_OPTIONS:Mgcrypt)
-.	include "../../security/openssl/buildlink3.mk"
-.else
-PKG_FAIL_REASON=	"${BUILDLINK_PACKAGES:Mlibssh2} should set \
-			PKG_SUGGESTED_OPTIONS!"
+.elif !empty(PKG_BUILD_OPTIONS.libssh2:Mlibgcrypt)
+.	include "../../security/libgcrypt/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"

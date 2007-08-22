@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/08/22 06:43:13 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/22 06:58:59 bsadewitz Exp $
 #
 
 DISTNAME=	libssh2-0.17
-CATEGORIES=	security
+CATEGORIES=	wip security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libssh2/}
 
 MAINTAINER=	blair.sadewitz@gmail.com
