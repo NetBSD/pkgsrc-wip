@@ -1,0 +1,36 @@
+$NetBSD: patch-ae,v 1.1 2007/08/22 18:19:56 bsadewitz Exp $
+
+--- pixman/pixman-image.c.orig	2007-08-06 18:11:20.000000000 -0400
++++ pixman/pixman-image.c
+@@ -403,25 +403,17 @@ pixman_image_set_transform (pixman_image
+ 
+     if (memcmp (&id, transform, sizeof (pixman_transform_t)) == 0)
+     {
+-	transform = NULL;
++	free(common->transform);
++	common->transform = NULL;
+ 	return TRUE;
+     }
+     
+-    if (common->transform)
+-	free (common->transform);
+-
+-    if (transform)
+-    {
++    if (common->transform == NULL)
+ 	common->transform = malloc (sizeof (pixman_transform_t));
+-	if (!common->transform)
+-	    return FALSE;
++    if (common->transform == NULL)
++	return FALSE;
+ 
+-	*common->transform = *transform;
+-    }
+-    else
+-    {
+-	common->transform = NULL;
+-    }
++    memcpy(common->transform, transform, sizeof(pixman_transform_t));
+ 
+     return TRUE;
+ }
