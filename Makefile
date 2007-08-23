@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2650 2007/08/19 02:23:56 obache Exp $
+# $Id: Makefile,v 1.2651 2007/08/23 13:21:42 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1657,7 +1657,6 @@ SUBDIR+=	vis
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
 SUBDIR+=	vm-pop3d
-SUBDIR+=	vmac
 SUBDIR+=	vmsbackup
 SUBDIR+=	vncselector
 SUBDIR+=	vpr

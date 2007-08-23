@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/23 23:23:01 bubuchka Exp $
-bin/vMac
-man/man1/vmac.0
-share/doc/vMac/CREDITS
-share/doc/vMac/ChangeLog
-share/doc/vMac/LICENSE
-share/doc/vMac/README
-share/doc/vMac/README.rom
-@dirrm share/doc/vMac
