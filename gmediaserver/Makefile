@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/19 02:21:42 obache Exp $
+# $NetBSD: Makefile,v 1.7 2007/08/23 14:09:39 obache Exp $
 
 DISTNAME=		gmediaserver-0.12.0
 CATEGORIES=		multimedia net
@@ -16,6 +16,8 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--with-id3lib=${BUILDLINK_PREFIX.id3lib:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv:Q}
 CONFIGURE_ARGS+=	--with-libupnp=${BUILDLINK_PREFIX.libupnp:Q}
+
+RCD_SCRIPTS=		gmediaserver
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
