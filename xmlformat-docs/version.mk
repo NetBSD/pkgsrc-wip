@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.1 2005/04/20 15:08:43 bubuchka Exp $
+# $NetBSD: version.mk,v 1.2 2007/08/23 13:45:53 bubuchka Exp $
 
-XMLFORMAT_VERSION=	1.03
+XMLFORMAT_VERSION=	1.04

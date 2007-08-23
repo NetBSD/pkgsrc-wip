@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/08/23 13:45:53 bubuchka Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
@@ -17,6 +17,7 @@ DESCR_SRC=		${.CURDIR}/DESCR.common ${.CURDIR}/DESCR
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmlformat
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmlformat/examples
 .	for _dtype in xml html pdf
 	${INSTALL_DATA} ${WRKSRC}/docs/tutorial.${_dtype} \
 		${PREFIX}/share/doc/xmlformat
@@ -26,6 +27,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/API ${PREFIX}/share/doc/xmlformat
 	${INSTALL_DATA} ${WRKSRC}/docs/xmlformat.conf \
 		${PREFIX}/share/doc/xmlformat
+	${INSTALL_DATA} ${WRKSRC}/docs/examples/* \
+		${PREFIX}/share/doc/xmlformat/examples
 
 .include "../../wip/xmlformat-docs/version.mk"
 .include "../../mk/bsd.pkg.mk"

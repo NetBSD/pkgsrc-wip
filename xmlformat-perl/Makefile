@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/08/23 13:45:53 bubuchka Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
 PKGNAME=		xmlformat-perl-${XMLFORMAT_VERSION}
-PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.kitebird.com/software/xmlformat/
 
