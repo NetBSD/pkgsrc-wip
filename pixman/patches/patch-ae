@@ -1,36 +1,30 @@
-$NetBSD: patch-ae,v 1.1 2007/08/22 18:19:56 bsadewitz Exp $
+$NetBSD: patch-ae,v 1.2 2007/08/24 02:48:29 bsadewitz Exp $
 
---- pixman/pixman-image.c.orig	2007-08-06 18:11:20.000000000 -0400
-+++ pixman/pixman-image.c
-@@ -403,25 +403,17 @@ pixman_image_set_transform (pixman_image
+--- pixman/pixman-region.c.orig	2007-07-16 15:05:16.000000000 -0400
++++ pixman/pixman-region.c
+@@ -1507,6 +1507,8 @@ pixman_region_validate(pixman_region16_t
+     box = PIXREGION_BOXPTR(&ri[0].reg);
+     ri[0].reg.extents = *box;
+     ri[0].reg.data->numRects = 1;
++    badreg->extents = *pixman_region_emptyBox;
++    badreg->data = pixman_region_emptyData;
  
-     if (memcmp (&id, transform, sizeof (pixman_transform_t)) == 0)
-     {
--	transform = NULL;
-+	free(common->transform);
-+	common->transform = NULL;
- 	return TRUE;
+     /* Now scatter rectangles into the minimum set of valid regions.  If the
+        next rectangle to be added to a region would force an existing rectangle
+@@ -1620,6 +1622,8 @@ NextRect: ;
+ 	    freeData(hreg);
+ 	}
+ 	numRI -= half;
++	if (!ret)
++	    goto bail;
      }
-     
--    if (common->transform)
--	free (common->transform);
--
--    if (transform)
--    {
-+    if (common->transform == NULL)
- 	common->transform = malloc (sizeof (pixman_transform_t));
--	if (!common->transform)
--	    return FALSE;
-+    if (common->transform == NULL)
-+	return FALSE;
- 
--	*common->transform = *transform;
--    }
--    else
--    {
--	common->transform = NULL;
--    }
-+    memcpy(common->transform, transform, sizeof(pixman_transform_t));
- 
-     return TRUE;
+     *badreg = ri[0].reg;
+     free(ri);
+@@ -1629,6 +1633,7 @@ bail:
+     for (i = 0; i < numRI; i++)
+ 	freeData(&ri[i].reg);
+     free (ri);
++
+     return pixman_break (badreg);
  }
+ 

@@ -1,13 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2007/08/18 08:43:39 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.2 2007/08/24 02:48:29 bsadewitz Exp $
 
---- configure.ac.orig	2007-08-06 17:26:38.000000000 -0400
-+++ configure.ac
-@@ -69,7 +69,7 @@ m4_define([lt_age], [pixman_minor])
- LT_VERSION_INFO="lt_current:lt_revision:lt_age"
- 
- PIXMAN_MAJOR=pixman_major
--AC_SUBST(AC_MAJOR)
-+AC_SUBST(PIXMAN_MAJOR)
- 
- AC_SUBST(LT_VERSION_INFO)
+--- pixman-1.pc.in.orig	2007-08-06 16:57:15.000000000 -0400
++++ pixman-1.pc.in
+@@ -7,5 +7,5 @@ Name: Pixman
+ Description: The pixman library (version 1)
+ Version: @PACKAGE_VERSION@
+ Cflags: -I${includedir}/pixman-1 @DEP_CFLAGS@
+-Libs: -L${libdir} -lpixman @DEP_LIBS@
++Libs: -L${libdir} -lpixman-1 @DEP_LIBS@
  
