@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/08/24 02:48:29 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.11 2007/08/24 03:45:51 bsadewitz Exp $
 #
 
 DISTNAME=	pixman-0.9.4
-PKGREVISION=	3
+PKGNAME=	pixman-0.9.5
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
