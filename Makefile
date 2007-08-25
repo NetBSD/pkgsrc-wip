@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2652 2007/08/23 20:01:52 tnn2 Exp $
+# $Id: Makefile,v 1.2653 2007/08/25 11:26:45 adrian_p Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1109,15 +1109,9 @@ SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
-SUBDIR+=	p5-Email-Address
 SUBDIR+=	p5-Email-Date
 SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Email-LocalDelivery
-SUBDIR+=	p5-Email-MIME-Creator
-SUBDIR+=	p5-Email-MIME-Modifier
-SUBDIR+=	p5-Email-MessageID
-SUBDIR+=	p5-Email-Send
-SUBDIR+=	p5-Email-Simple-Creator
 SUBDIR+=	p5-Encode-Detect
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exporter-Lite
@@ -1179,7 +1173,6 @@ SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RPC-XML
 SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-RRDTool-OO
-SUBDIR+=	p5-Return-Value
 SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Spread
