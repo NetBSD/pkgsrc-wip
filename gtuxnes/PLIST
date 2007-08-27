@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/27 19:00:43 othyro Exp $
+bin/gtuxnes
+share/doc/gtuxnes/README
+@dirrm share/doc/gtuxnes
