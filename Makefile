@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2654 2007/08/27 18:51:45 rumko Exp $
+# $Id: Makefile,v 1.2655 2007/08/27 19:06:19 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -457,6 +457,7 @@ SUBDIR+=	gtkada
 SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglk
 SUBDIR+=	gtklookat
+SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
 SUBDIR+=	guichan
 SUBDIR+=	guile-scsh
