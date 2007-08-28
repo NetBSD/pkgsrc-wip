@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/24 09:16:35 krub1 Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/28 20:09:20 krub1 Exp $
 
 DISTNAME=   rasqal-0.9.14
 
@@ -21,4 +21,5 @@ PKGCONFIG_OVERRIDE+=	rasqal.pc.in
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
