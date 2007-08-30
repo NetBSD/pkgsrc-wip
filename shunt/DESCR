@@ -1,0 +1,8 @@
+shunt was originally written for burning multi-set CDROM backups using mkiosfs
+and cdrecord. You can get both by downloading the latest cdrtools package. For
+burning DVDs, mkisofs (currently) has limitations on how much data it can stream
+while creating an ISO 9660 file system on the fly. Because of this, you need to
+replace mkisofs with flyisofs (which is part of the shunt source package that
+you can download below). Also, depending on your setup, you may have a forked or
+old version of cdrecord that cannot burn DVDs. If so, you probably will want to
+use growisofs instead.
