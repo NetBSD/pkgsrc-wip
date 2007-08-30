@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/04/16 19:07:18 loic-hoguin Exp $
+# $NetBSD: Makefile,v 1.2 2007/08/30 18:02:16 minskim Exp $
 
 DISTNAME=		xbnbt-81b.3.5
 CATEGORIES=		net
@@ -17,6 +17,8 @@ USE_TOOLS+=		gmake
 MAKE_FILE=		makefile
 BUILD_TARGET+=	bnbt
 
+INSTALLATION_DIRS+=	sbin share/doc/xbnbt share/examples/xbnbt share/xbnbt
+
 post-extract:
 	mv ${WRKDIR:Q}/"copy of xbnbt-81b.3" ${WRKDIR:Q}/xbnbt
 	mv ${WRKDIR:Q}/xbnbt/bnbt/examples/"xbnbt ipb2 mod" \
@@ -24,16 +26,11 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bnbt ${PREFIX}/sbin
-
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xbnbt
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xbnbt
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xbnbt
-
-	cd ${WRKDIR}/xbnbt/bnbt/doc && ${PAX} -rwpam . \
+	cd ${WRKDIR}/xbnbt/bnbt/doc && pax -rwpam . \
 		${PREFIX}/share/doc/xbnbt
-	cd ${WRKDIR}/xbnbt/bnbt/examples && ${PAX} -rwpam . \
+	cd ${WRKDIR}/xbnbt/bnbt/examples && pax -rwpam . \
 		${PREFIX}/share/examples/xbnbt
-	cd ${WRKDIR}/xbnbt/bnbt/public_http/xbnbt && ${PAX} -rwpam . \
+	cd ${WRKDIR}/xbnbt/bnbt/public_http/xbnbt && pax -rwpam . \
 		${PREFIX}/share/xbnbt
 
 .include "../../devel/zlib/buildlink3.mk"
