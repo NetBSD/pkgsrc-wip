@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/30 20:27:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/02 14:27:27 tnn2 Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -18,19 +18,21 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-# XXX still complains about missing font
-DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
+DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	fontconfig glx
 
 NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
 
-GE_VERSION=		4.1.7076.4458
+GE_VERSION=		4.2.180.1134
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC} && ${MKDIR} GoogleEarth && cd GoogleEarth && \
@@ -43,7 +45,7 @@ do-build:
 	${WRKDIR}/googleearth
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${PREFIX}/bin/googleearth
-	cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${PREFIX}
+	${INSTALL_SCRIPT} ${WRKDIR}/googleearth ${DESTDIR}${PREFIX}/bin/googleearth
+	cd ${WRKSRC} && ${PAX} -rw GoogleEarth ${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
