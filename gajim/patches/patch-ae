@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2007/09/02 18:19:48 shindenmorr Exp $
 --- src/gtkgui_helpers.py.orig	2007-04-10 11:08:59.000000000 +0200
 +++ src/gtkgui_helpers.py	2007-04-10 11:09:22.000000000 +0200
 @@ -48,7 +48,7 @@

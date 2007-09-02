@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/10 15:46:57 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/09/02 18:19:48 shindenmorr Exp $
 bin/gajim
 lib/gajim/gtkspell.la
 lib/gajim/idle.la
@@ -239,6 +239,7 @@ share/gajim/data/emoticons/animated/coolglasses.png
 share/gajim/data/emoticons/animated/cuffs.png
 share/gajim/data/emoticons/animated/devil.png
 share/gajim/data/emoticons/animated/drink.png
+share/gajim/data/emoticons/animated/emoticons.py
 share/gajim/data/emoticons/animated/flower.png
 share/gajim/data/emoticons/animated/frowning.png
 share/gajim/data/emoticons/animated/girl.png
@@ -276,6 +277,7 @@ share/gajim/data/emoticons/static-big/cry.png
 share/gajim/data/emoticons/static-big/cuffs.png
 share/gajim/data/emoticons/static-big/devil.png
 share/gajim/data/emoticons/static-big/drink.png
+share/gajim/data/emoticons/static-big/emoticons.py
 share/gajim/data/emoticons/static-big/flower.png
 share/gajim/data/emoticons/static-big/frowning.png
 share/gajim/data/emoticons/static-big/girl.png
@@ -314,6 +316,7 @@ share/gajim/data/emoticons/static/cry.png
 share/gajim/data/emoticons/static/cuffs.png
 share/gajim/data/emoticons/static/devil.png
 share/gajim/data/emoticons/static/drink.png
+share/gajim/data/emoticons/static/emoticons.py
 share/gajim/data/emoticons/static/flower.png
 share/gajim/data/emoticons/static/frowning.png
 share/gajim/data/emoticons/static/girl.png
