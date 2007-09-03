@@ -22,7 +22,7 @@
 .if !defined(_PKG_MK_HG_PACKAGE_MK)
 _PKG_MK_HG_PACKAGE_MK=	# defined
 
-DEPENDS+=		mercurial>=0.9:../../devel/mercurial
+BUILD_DEPENDS+=		mercurial>=0.9:../../devel/mercurial
 
 #
 # defaults for user-visible input variables
