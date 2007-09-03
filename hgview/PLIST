@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/03 20:34:34 thomasklausner Exp $
+bin/hgview
+lib/python2.4/site-packages/hgview/__init__.py
+lib/python2.4/site-packages/hgview/__init__.pyc
+lib/python2.4/site-packages/hgview/__init__.pyo
+lib/python2.4/site-packages/hgview/__pkginfo__.py
+lib/python2.4/site-packages/hgview/__pkginfo__.pyc
+lib/python2.4/site-packages/hgview/__pkginfo__.pyo
+lib/python2.4/site-packages/hgview/buildtree.py
+lib/python2.4/site-packages/hgview/buildtree.pyc
+lib/python2.4/site-packages/hgview/buildtree.pyo
+lib/python2.4/site-packages/hgview/fixes.py
+lib/python2.4/site-packages/hgview/fixes.pyc
+lib/python2.4/site-packages/hgview/fixes.pyo
+lib/python2.4/site-packages/hgview/gtk/__init__.py
+lib/python2.4/site-packages/hgview/gtk/__init__.pyc
+lib/python2.4/site-packages/hgview/gtk/__init__.pyo
+lib/python2.4/site-packages/hgview/gtk/diffstatrenderer.py
+lib/python2.4/site-packages/hgview/gtk/diffstatrenderer.pyc
+lib/python2.4/site-packages/hgview/gtk/diffstatrenderer.pyo
+lib/python2.4/site-packages/hgview/gtk/graphrenderer.py
+lib/python2.4/site-packages/hgview/gtk/graphrenderer.pyc
+lib/python2.4/site-packages/hgview/gtk/graphrenderer.pyo
+lib/python2.4/site-packages/hgview/gtk/hgview_gtk.py
+lib/python2.4/site-packages/hgview/gtk/hgview_gtk.pyc
+lib/python2.4/site-packages/hgview/gtk/hgview_gtk.pyo
+lib/python2.4/site-packages/hgview/hgrepo.py
+lib/python2.4/site-packages/hgview/hgrepo.pyc
+lib/python2.4/site-packages/hgview/hgrepo.pyo
+lib/python2.4/site-packages/hgview/hgviewrc.py
+lib/python2.4/site-packages/hgview/hgviewrc.pyc
+lib/python2.4/site-packages/hgview/hgviewrc.pyo
+lib/python2.4/site-packages/hgview/qt4/__init__.py
+lib/python2.4/site-packages/hgview/qt4/__init__.pyc
+lib/python2.4/site-packages/hgview/qt4/__init__.pyo
+lib/python2.4/site-packages/hgview/qt4/hgrepomodel.py
+lib/python2.4/site-packages/hgview/qt4/hgrepomodel.pyc
+lib/python2.4/site-packages/hgview/qt4/hgrepomodel.pyo
+lib/python2.4/site-packages/hgview/qt4/hgview_qt4.py
+lib/python2.4/site-packages/hgview/qt4/hgview_qt4.pyc
+lib/python2.4/site-packages/hgview/qt4/hgview_qt4.pyo
+share/hgview/hgview.glade
+share/hgview/hgview.ui
+man/man1/hgview.1
+@dirrm share/hgview
+@dirrm ${PYSITELIB}/hgview/qt4
+@dirrm ${PYSITELIB}/hgview/gtk
+@dirrm ${PYSITELIB}/hgview
