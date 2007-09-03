@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/09/03 19:24:05 thomasklausner Exp $
+
+--- Makefile.orig	2007-08-28 03:17:40.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ CC=g++
+-CFLAGS=-Wall -Werror -Wno-sign-compare -Wno-switch -Wno-switch-enum -Wno-non-virtual-dtor -O2 -c -g `sdl-config --cflags` -I/usr/include/GL -I/usr/local/include/boost-1_34 -I/System/Library/Frameworks/OpenGL.framework/Headers -I/sw/include -I/usr/include/qt4
+-LDFLAGS=-O2 `sdl-config --libs` -lGL -lGLU -lSDL_image -lSDL_ttf -L/System/Library/Frameworks/OpenGL.framework/Libraries -lboost_regex
++CFLAGS+=-Wall -Wno-sign-compare -Wno-switch -Wno-switch-enum -Wno-non-virtual-dtor -c -g `sdl-config --cflags`
++LDFLAGS+=`sdl-config --libs` -lGL -lGLU -lSDL_image -lSDL_ttf -lboost_regex-mt
+ SOURCES=$(wildcard *.cpp)
+ OBJECTS=$(SOURCES:.cpp=.o) xml.o
+ EDITOR_OBJECTS=editor/main.o editor/editpartydialog.o editor/editormainwindow.o editor/editorglwidget.o editor/terrainhandler.o editor/editwmldialog.o gamemap.o map_avatar.o wml_node.o wml_parser.o wml_utils.o wml_writer.o camera.o tile.o base_terrain.o model.o string_utils.o tile_logic.o parse3ds.o parseark.o parsedae.o terrain_feature.o material.o particle.o particle_emitter.o particle_system.o formula.o formula_tokenizer.o font.o texture.o filesystem.o raster.o surface_cache.o surface.o sdl_algo.o variant.o xml.o
