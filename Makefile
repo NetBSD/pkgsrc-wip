@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2660 2007/09/05 05:52:19 thomasklausner Exp $
+# $Id: Makefile,v 1.2661 2007/09/05 13:25:18 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -668,6 +668,7 @@ SUBDIR+=	jemboss-standalone
 SUBDIR+=	jetty
 SUBDIR+=	jgloss
 SUBDIR+=	joomla
+SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
 SUBDIR+=	jumpnbump
 SUBDIR+=	jwm
