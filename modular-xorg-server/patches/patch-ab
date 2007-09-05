@@ -1,18 +1,15 @@
-$NetBSD: patch-ab,v 1.4 2007/08/18 19:25:33 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.5 2007/09/05 12:04:31 bsadewitz Exp $
 
---- ../Mesa-7.0.1/src/glx/x11/glxext.c.orig	2007-06-21 18:10:54.000000000 -0400
-+++ ../Mesa-7.0.1/src/glx/x11/glxext.c
-@@ -672,8 +672,11 @@ filter_modes( __GLcontextModes ** server
- 	if ( do_delete && (m->visualID != 0) ) {
- 	    do_delete = GL_FALSE;
+--- hw/xfree86/common/Makefile.in.orig	2007-08-31 21:47:17.000000000 -0400
++++ hw/xfree86/common/Makefile.in
+@@ -808,8 +808,8 @@ uninstall-am: uninstall-sdkHEADERS
+ 	tags uninstall uninstall-am uninstall-sdkHEADERS
  
--	    fprintf(stderr, "libGL warning: 3D driver claims to not support "
--		    "visual 0x%02x\n", m->visualID);
-+	    /* don't warn for this visual (Novell #247471 / X.Org #6689) */
-+	    if (m->visualRating != GLX_NON_CONFORMANT_CONFIG) {
-+		fprintf(stderr, "libGL warning: 3D driver claims to not "
-+			"support visual 0x%02x\n", m->visualID);
-+	    }
- 	}
  
- 	if ( do_delete ) {
+-xf86DefModeSet.c: $(srcdir)/modeline2c.pl $(MODEDEFSOURCES)
+-	cat $(MODEDEFSOURCES) | $(PERL) $(srcdir)/modeline2c.pl > $@
++xf86DefModeSet.c: $(srcdir)/modeline2c.awk $(MODEDEFSOURCES)
++	cat $(MODEDEFSOURCES) | $(AWK) -f $(srcdir)/modeline2c.awk > $@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

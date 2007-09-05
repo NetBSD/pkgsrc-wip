@@ -1,17 +1,39 @@
-$NetBSD: patch-ai,v 1.2 2007/08/18 19:25:34 bsadewitz Exp $
+$NetBSD: patch-ai,v 1.3 2007/09/05 12:04:31 bsadewitz Exp $
 
---- ../Mesa-7.0.1/src/mesa/main/mtypes.h.orig	2007-08-01 17:50:01.000000000 -0400
-+++ ../Mesa-7.0.1/src/mesa/main/mtypes.h
-@@ -1523,12 +1523,6 @@ struct gl_texture_unit
+--- randr/rrxinerama.c.orig	2007-08-23 15:04:55.000000000 -0400
++++ randr/rrxinerama.c
+@@ -148,12 +148,6 @@ ProcRRXineramaGetState(ClientPtr client)
+ }
  
-    struct gl_texture_object *_Current; /**< Points to really enabled tex obj */
- 
--   struct gl_texture_object Saved1D;  /**< only used by glPush/PopAttrib */
--   struct gl_texture_object Saved2D;
--   struct gl_texture_object Saved3D;
--   struct gl_texture_object SavedCubeMap;
--   struct gl_texture_object SavedRect;
+ static Bool
+-RRXineramaScreenActive (ScreenPtr pScreen)
+-{
+-    return rrGetScrPriv(pScreen) != NULL;
+-}
 -
-    /* GL_SGI_texture_color_table */
-    struct gl_color_table ColorTable;
-    struct gl_color_table ProxyColorTable;
+-static Bool
+ RRXineramaCrtcActive (RRCrtcPtr crtc)
+ {
+     return crtc->mode != NULL && crtc->numOutputs > 0;
+@@ -165,7 +159,7 @@ RRXineramaScreenCount (ScreenPtr pScreen
+     int	i, n;
+     
+     n = 0;
+-    if (RRXineramaScreenActive (pScreen))
++    if (rrGetScrPriv (pScreen))
+     {
+ 	rrScrPriv(pScreen);
+ 	for (i = 0; i < pScrPriv->numCrtcs; i++)
+@@ -175,6 +169,12 @@ RRXineramaScreenCount (ScreenPtr pScreen
+     return n;
+ }
+ 
++static Bool
++RRXineramaScreenActive (ScreenPtr pScreen)
++{
++    return RRXineramaScreenCount (pScreen) > 0;
++}
++
+ int
+ ProcRRXineramaGetScreenCount(ClientPtr client)
+ {

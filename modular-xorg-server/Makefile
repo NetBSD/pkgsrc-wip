@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2007/08/18 19:25:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/05 12:04:31 bsadewitz Exp $
 
-DISTNAME=	xorg-server-1.3.99.0
+DISTNAME=	xorg-server-1.3.99.2
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
+
+PATCH_FILES=		mesa-7.0-master.patch
+PATCH_SITES=		http://bahar.aydogan.net/~blair/
 
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,8 +22,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 USE_TOOLS+=		pkg-config
-USE_TOOLS+=		gmake
-USE_TOOLS+=		perl
+USE_TOOLS+=		gmake awk
 USE_TOOLS+=		automake
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -71,7 +72,8 @@ BUILDLINK_API_DEPENDS.pkg-config+=	pkg-config>=0.20
 
 post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
-	${CP} ${FILESDIR:Q}/glxbyteorder.h ${WRKSRC:Q}/GL/glx
+	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
+#	${CP} ${FILESDIR:Q}/glxbyteorder.h ${WRKSRC:Q}/GL/glx
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --install -v
@@ -87,7 +89,8 @@ BUILD_DEPENDS+=		xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
-BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.9.4
+BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.9.5
+BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.3.1
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -125,7 +128,7 @@ CONFIGURE_ARGS+=	--disable-config-dbus
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/libdrm/buildlink3.mk"
+.include "../../wip/libdrm/buildlink3.mk"
 .include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
