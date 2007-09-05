@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:09 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/05 21:47:58 thomasklausner Exp $
 
 CRYSTAL_VERSION=	3.0.4
 DISTNAME=		fvwm-crystal-${CRYSTAL_VERSION}
@@ -16,7 +16,7 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch
 SUBST_FILES.python=	bin/fvwm-crystal.apps bin/fvwm-crystal.wallpaper \
 			fvwm/scripts/FvwmMPD/getprevdir.py fvwm/scripts/FvwmMPD/stripnames.py
-SUBST_SED.python=	-e "s,/usr/bin/env python,${PREFIX}/bin/python${PYVERSSUFFIX},g"
+SUBST_SED.python=	-e "s,/usr/bin/env python,${PYTHONBIN},g"
 SUBST_MESSAGE.python=	Fixing harcoded python path
 
 SUBST_CLASSES+=		bash
