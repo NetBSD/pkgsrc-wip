@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/08/24 04:17:06 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/05 11:59:44 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
+
+PATCH_SITES=	http://bahar.aydogan.net/~blair/
+PATCHFILES=	mesalib-7.0-master.patch
+PATCH_DIST_STRIP=	-p2
 
 MESA_VERSION=	7.0.1
 
