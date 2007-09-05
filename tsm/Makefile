@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/05 16:07:21 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=	sysutils
@@ -23,6 +23,7 @@ NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 
+USE_TOOLS+=		rpm2pkg
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
@@ -35,19 +36,16 @@ TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 
 MESSAGE_SUBST+=		EMULDIR=${EMULDIR:Q}
 
-do-install:
-	${RPM2PKG} ${RPM2PKGARGS}
-	@if ! ${GREP} -q "/${TSMCLIENTSUBDIR}/ba/bin" ${EMULDIR}/etc/ld.so.conf; then \
+post-install:
+	if ! ${GREP} -q "/${TSMCLIENTSUBDIR}/ba/bin" ${EMULDIR}/etc/ld.so.conf; then \
 		${ECHO} "/${TSMCLIENTSUBDIR}/ba/bin" >> ${EMULDIR}/etc/ld.so.conf; \
 	fi; \
 	if ! ${GREP} -q "/${TSMCLIENTSUBDIR}/api/bin" ${EMULDIR}/etc/ld.so.conf; then \
 		${ECHO} "/${TSMCLIENTSUBDIR}/api/bin" >> ${EMULDIR}/etc/ld.so.conf; \
 	fi
-
-post-install:
-	@${INSTALL_DATA_DIR} ${EG_DIR}
-	@${INSTALL_DATA} ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp ${EG_DIR}
-	@${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
-	@${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
+	${INSTALL_DATA_DIR} ${EG_DIR}
+	${INSTALL_DATA} ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp ${EG_DIR}
+	${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
+	${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
 
 .include "../../mk/bsd.pkg.mk"
