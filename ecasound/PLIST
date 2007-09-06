@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/19 09:13:57 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/06 22:20:16 thomasklausner Exp $
 bin/ecaconvert
 bin/ecafixdc
 bin/ecalength
@@ -139,7 +139,6 @@ include/libecasound/stamp-ctrl.h
 include/libecasound/two-stage-linear-envelope.h
 include/libecasoundc/eca-control-interface.h
 include/libecasoundc/ecasoundc.h
-lib/libGL.so.1
 lib/libecasound.la
 lib/libecasoundc.la
 lib/libkvutils.la
