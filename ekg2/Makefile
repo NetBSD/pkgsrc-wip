@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/08/15 22:07:31 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/06 12:37:13 shindenmorr Exp $
 #
 
-DISTNAME=	ekg2-0.1
+DISTNAME=	ekg2-0.1.1
 CATEGORIES=	chat
 MASTER_SITES=	http://pl.ekg2.org/ \
 		http://pl.ekg2.org/archive/
@@ -31,8 +31,6 @@ CONFIGURE_ARGS+=	--enable-shared \
 			--without-gpg \
 			--without-logsoracle \
 			--with-curses=${BUILDLINK_PREFIX.ncurses}
-
-WRKSRC=		${WRKDIR}/ekg2-20070303/
 
 .include "options.mk"
 .include "../../devel/ncurses/buildlink3.mk"
