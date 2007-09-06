@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/05/25 12:15:56 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2007/09/06 22:01:06 thomasklausner Exp $
 #
 
-DISTNAME=	emacs-22.1.50
-PKGNAME=	emacs-22.1.50 # needed because of cvs-package.mk
+DISTNAME=	emacs-23.0.50
+PKGNAME=	emacs-23.0.50 # needed because of cvs-package.mk
 CATEGORIES=	editors
 MASTER_SITES=	#
 
@@ -51,7 +51,7 @@ PKG_OPTIONS_GROUP.toolkit= motif gtk xaw carbon
 
 .if !empty(PKG_OPTIONS:Mcarbon)
 .  if !exists(/System/Library/Frameworks/Carbon.framework)
-PKG_FAIL_REASON=	"This platform dosen't support Carbon"
+PKG_FAIL_REASON=	"This platform doesn't support Carbon"
 .  else
 APPLICATIONS_DIR=	Applications
 
@@ -92,6 +92,7 @@ CONFIGURE_ARGS+=	--without-carbon
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 
 .  if !empty(PKG_OPTIONS:Mmotif)
