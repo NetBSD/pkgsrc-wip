@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/08/06 23:40:11 netcap Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/07 03:04:38 netcap Exp $
 #
 
-DISTNAME=		tor-0.2.0.4-alpha
+DISTNAME=		tor-0.2.0.6-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
@@ -50,7 +50,7 @@ post-patch:
 		-e 's|@TOR_USER@|${TOR_USER}|g'				\
 		-e 's|@TOR_GROUP@|${TOR_GROUP}|g'			\
 		-e 's|@RCD_SCRIPTS_SHELL@|'${RCD_SCRIPTS_SHELL:Q}'|g'	\
-		${FILESDIR}/tor.in > ${WRKSRC}/tor.pkgsrc.rc
+		${FILESDIR}/tor.sh > ${WRKSRC}/tor.pkgsrc.rc
 
 post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tor
