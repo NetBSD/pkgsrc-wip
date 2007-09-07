@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2661 2007/09/05 13:25:18 emil_s Exp $
+# $Id: Makefile,v 1.2662 2007/09/07 18:10:44 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1375,7 +1375,6 @@ SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rlcompleter2
-SUBDIR+=	py-scapy
 SUBDIR+=	py-scipy_distutils
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-snmp
