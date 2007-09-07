@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/07 12:22:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/07 12:24:21 dillo Exp $
 #
 
 DISTNAME=	nanoblogger-3.3
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://nanoblogger.sourceforge.net/downloads/
 
 MAINTAINER=	pkgsrc-users@pkgsrc.org
-HOMEPAGE=	http://nanoblogger.sourceforge.net/downloads/
+HOMEPAGE=	http://nanoblogger.sourceforge.net/
 COMMENT=	Small weblog engine for the UNIX command line
 
 DEPENDS+=       bash-[0-9]*:../../shells/bash
