@@ -1,113 +1,86 @@
-@comment $NetBSD: PLIST,v 1.1 2007/07/29 00:20:34 cherrymathew Exp $
-nanoblogger/plugins
-nanoblogger/plugins/entry
-nanoblogger/plugins/entry/mod
-nanoblogger/plugins/entry/mod/base_url.sh
-nanoblogger/plugins/entry/mod/moods.sh
-nanoblogger/plugins/entry/format
-nanoblogger/plugins/entry/format/markdown.sh
-nanoblogger/plugins/entry/format/raw.sh
-nanoblogger/plugins/entry/format/autobr.sh
-nanoblogger/plugins/entry/category_links.sh
-nanoblogger/plugins/page
-nanoblogger/plugins/page/format
-nanoblogger/plugins/page/format/markdown.sh
-nanoblogger/plugins/page/format/raw.sh
-nanoblogger/plugins/page/format/moods.sh
-nanoblogger/plugins/page/format/autobr.sh
-nanoblogger/plugins/page/feed_links.sh
-nanoblogger/plugins/atom.sh
-nanoblogger/plugins/archive
-nanoblogger/plugins/archive/month
-nanoblogger/plugins/archive/month/month_calendar.sh
-nanoblogger/plugins/archive/year
-nanoblogger/plugins/archive/year/year_index.sh
-nanoblogger/plugins/archive/day
-nanoblogger/plugins/archive/day/cal2daytitle.sh
-nanoblogger/plugins/archive/master_index.sh
-nanoblogger/plugins/makepage
-nanoblogger/plugins/makepage/tidy.sh
-nanoblogger/plugins/rss2.sh
-nanoblogger/plugins/z001_articles_meta.sh
-nanoblogger/plugins/weblog_status.sh
-nanoblogger/plugins/recent_entries.sh
-nanoblogger/plugins/weblog_links.sh
-nanoblogger/plugins/post
-nanoblogger/plugins/post/clean_parts.off
-nanoblogger/plugins/calendar.sh
-nanoblogger/default
-nanoblogger/default/plugins
-nanoblogger/default/blog.conf
-nanoblogger/default/atom.xml
-nanoblogger/default/data
-nanoblogger/default/data/cat_1.db
-nanoblogger/default/parts
-nanoblogger/default/articles
+@comment $NetBSD: PLIST,v 1.2 2007/09/07 12:22:35 thomasklausner Exp $
+bin/nb
 nanoblogger/default/articles/example.txt
-nanoblogger/default/styles
-nanoblogger/default/styles/nb_rusted.css
-nanoblogger/default/styles/print.css
-nanoblogger/default/styles/nb_spring.css
-nanoblogger/default/styles/nb_steelblue.css
+nanoblogger/default/atom.xml
+nanoblogger/default/blog.conf
+nanoblogger/default/data/cat_1.db
+nanoblogger/default/images/favicon.ico
+nanoblogger/default/images/feed-icon-14x14.png
+nanoblogger/default/index.html
+nanoblogger/default/index.xml
 nanoblogger/default/styles/nb_clean.css
 nanoblogger/default/styles/nb_default.css
-nanoblogger/default/index.xml
-nanoblogger/default/images
-nanoblogger/default/images/feed-icon-14x14.png
-nanoblogger/default/images/favicon.ico
-nanoblogger/default/cache
-nanoblogger/default/templates
-nanoblogger/default/templates/permalink_entry.htm
-nanoblogger/default/templates/makepage.htm
+nanoblogger/default/styles/nb_rusted.css
+nanoblogger/default/styles/nb_spring.css
+nanoblogger/default/styles/nb_steelblue.css
+nanoblogger/default/styles/print.css
 nanoblogger/default/templates/category_archive.htm
-nanoblogger/default/templates/permalink.htm
-nanoblogger/default/templates/main_index.htm
 nanoblogger/default/templates/category_entry.htm
-nanoblogger/default/templates/entry.metadata
-nanoblogger/default/templates/entry.htm
-nanoblogger/default/templates/file.metadata
 nanoblogger/default/templates/day_archive.htm
-nanoblogger/default/templates/year_archive.htm
-nanoblogger/default/templates/month_archive.htm
-nanoblogger/default/templates/weblog_status.htm
+nanoblogger/default/templates/entry.htm
+nanoblogger/default/templates/entry.metadata
+nanoblogger/default/templates/file.metadata
+nanoblogger/default/templates/main_index.htm
 nanoblogger/default/templates/main_links.htm
-nanoblogger/default/index.html
-nanoblogger/lib
-nanoblogger/lib/config.sh
-nanoblogger/lib/query.sh
-nanoblogger/lib/tools.sh
-nanoblogger/lib/error.sh
-nanoblogger/nb
-bin/nb
-nanoblogger/nb.conf
-nanoblogger/moods
-nanoblogger/moods/smilies
-nanoblogger/moods/smilies/embarassed.gif
-nanoblogger/moods/smilies/tongue.gif
-nanoblogger/moods/smilies/rolleyes.gif
-nanoblogger/moods/smilies/wink.gif
-nanoblogger/moods/smilies/grin.gif
-nanoblogger/moods/smilies/cool.gif
-nanoblogger/moods/smilies/cheesy.gif
-nanoblogger/moods/smilies/sad.gif
-nanoblogger/moods/smilies/lipsrsealed.gif
-nanoblogger/moods/smilies/laugh.gif
-nanoblogger/moods/smilies/cry.gif
-nanoblogger/moods/smilies/kiss.gif
-nanoblogger/moods/smilies/smiley.gif
-nanoblogger/moods/smilies/angry.gif
-nanoblogger/moods/smilies/huh.gif
-nanoblogger/moods/smilies/shocked.gif
-nanoblogger/moods/moods.conf
-nanoblogger/moods/mymood.txt
-nanoblogger/lang
-nanoblogger/lang/en
-nanoblogger/lang/en/templates.lang
+nanoblogger/default/templates/makepage.htm
+nanoblogger/default/templates/month_archive.htm
+nanoblogger/default/templates/permalink.htm
+nanoblogger/default/templates/permalink_entry.htm
+nanoblogger/default/templates/weblog_status.htm
+nanoblogger/default/templates/year_archive.htm
+nanoblogger/docs/nanoblogger.html
 nanoblogger/lang/en/help.txt
 nanoblogger/lang/en/messages.lang
 nanoblogger/lang/en/plugins.lang
-nanoblogger/docs
-nanoblogger/docs/nanoblogger.html
+nanoblogger/lang/en/templates.lang
+nanoblogger/lib/config.sh
+nanoblogger/lib/error.sh
+nanoblogger/lib/query.sh
+nanoblogger/lib/tools.sh
+nanoblogger/moods/moods.conf
+nanoblogger/moods/mymood.txt
+nanoblogger/moods/smilies/angry.gif
+nanoblogger/moods/smilies/cheesy.gif
+nanoblogger/moods/smilies/cool.gif
+nanoblogger/moods/smilies/cry.gif
+nanoblogger/moods/smilies/embarassed.gif
+nanoblogger/moods/smilies/grin.gif
+nanoblogger/moods/smilies/huh.gif
+nanoblogger/moods/smilies/kiss.gif
+nanoblogger/moods/smilies/laugh.gif
+nanoblogger/moods/smilies/lipsrsealed.gif
+nanoblogger/moods/smilies/rolleyes.gif
+nanoblogger/moods/smilies/sad.gif
+nanoblogger/moods/smilies/shocked.gif
+nanoblogger/moods/smilies/smiley.gif
+nanoblogger/moods/smilies/tongue.gif
+nanoblogger/moods/smilies/wink.gif
+nanoblogger/nb
+nanoblogger/nb.conf
+nanoblogger/plugins/archive/day/cal2daytitle.sh
+nanoblogger/plugins/archive/master_index.sh
+nanoblogger/plugins/archive/month/month_calendar.sh
+nanoblogger/plugins/archive/year/year_index.sh
+nanoblogger/plugins/atom.sh
+nanoblogger/plugins/calendar.sh
+nanoblogger/plugins/entry/category_links.sh
+nanoblogger/plugins/entry/format/autobr.sh
+nanoblogger/plugins/entry/format/markdown.sh
+nanoblogger/plugins/entry/format/raw.sh
+nanoblogger/plugins/entry/mod/base_url.sh
+nanoblogger/plugins/entry/mod/moods.sh
+nanoblogger/plugins/makepage/tidy.sh
+nanoblogger/plugins/page/feed_links.sh
+nanoblogger/plugins/page/format/autobr.sh
+nanoblogger/plugins/page/format/markdown.sh
+nanoblogger/plugins/page/format/moods.sh
+nanoblogger/plugins/page/format/raw.sh
+nanoblogger/plugins/post/clean_parts.off
+nanoblogger/plugins/recent_entries.sh
+nanoblogger/plugins/rss2.sh
+nanoblogger/plugins/weblog_links.sh
+nanoblogger/plugins/weblog_status.sh
+nanoblogger/plugins/z001_articles_meta.sh
 nanoblogger/welcome-to-nb.txt
 @dirrm nanoblogger/plugins/entry/format
 @dirrm nanoblogger/plugins/entry/mod
@@ -121,12 +94,15 @@ nanoblogger/welcome-to-nb.txt
 @dirrm nanoblogger/plugins/makepage
 @dirrm nanoblogger/plugins/post
 @dirrm nanoblogger/plugins
+@exec ${MKDIR} %D/nanoblogger/default/plugins
 @dirrm nanoblogger/default/plugins
 @dirrm nanoblogger/default/data
+@exec ${MKDIR} %D/nanoblogger/default/parts
 @dirrm nanoblogger/default/parts
 @dirrm nanoblogger/default/articles
 @dirrm nanoblogger/default/styles
 @dirrm nanoblogger/default/images
+@exec ${MKDIR} %D/nanoblogger/default/cache
 @dirrm nanoblogger/default/cache
 @dirrm nanoblogger/default/templates
 @dirrm nanoblogger/default
