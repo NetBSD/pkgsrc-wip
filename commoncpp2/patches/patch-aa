@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2007/09/08 16:45:16 thomasklausner Exp $
+
+--- configure.orig	2007-06-12 12:43:52.000000000 +0000
++++ configure
+@@ -1580,18 +1580,18 @@ fi;
+ 
+ case "$prefix" in
+ /opt/*)
+-	if test "$datadir" == '${prefix}/share' ; then
+-		if test "$mandir" == '${datadir}/man' ; then
++	if test "$datadir" = '${prefix}/share' ; then
++		if test "$mandir" = '${datadir}/man' ; then
+ 			mandir='${prefix}/man' ; fi
+-		if test "$infodir" == '${datadir}/info' ; then
++		if test "$infodir" = '${datadir}/info' ; then
+ 			infodir='${prefix}/info' ; fi
+ 		datadir='${prefix}'
+ 	fi
+-	if test "$sysconfdir" == '${prefix}/etc' ; then
++	if test "$sysconfdir" = '${prefix}/etc' ; then
+ 		sysconfdir=/etc${prefix} ; fi
+-	if test "$localstatedir" == '${prefix}/var' ; then
++	if test "$localstatedir" = '${prefix}/var' ; then
+ 		localstatedir=/var${prefix} ; fi
+-	if test "$includedir" == '${prefix}/include' ; then
++	if test "$includedir" = '${prefix}/include' ; then
+ 		ccincludedir="$includedir" ; fi
+ 
+ 
