@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/16 01:42:39 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/08 13:23:45 thomasklausner Exp $
 
 DISTNAME=		ilbc-rfc3951
 PKGNAME=		ilbc-rfc3951-200412
@@ -9,6 +9,13 @@ MASTER_SITES=		http://download.savannah.gnu.org/releases/linphone/1.3.x/source/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ietf.org/rfc/rfc3951.txt
 COMMENT=		Internet Low Bit Rate Codec
+
+LICENSE=		GIPS-iLBC-license
+RESTRICTED=		Personal distribution only.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
