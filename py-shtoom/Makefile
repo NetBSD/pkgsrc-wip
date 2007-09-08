@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:33 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/08 12:53:03 thomasklausner Exp $
 #
 
 DISTNAME=		shtoom-0.2
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=shtoom/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://shtoom.sourceforge.net/
+HOMEPAGE=		http://divmod.org/trac/wiki/ShtoomProject
 COMMENT=		Software VoIP telephony in Python
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
