@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2007/05/12 03:58:01 cetrox Exp $
+$NetBSD: distinfo,v 1.3 2007/09/08 11:24:05 thomasklausner Exp $
 
-SHA1 (subtitleeditor-0.11.1.tar.gz) = a9b936d524bdf8e4f961552f65dac842ac1843b5
-RMD160 (subtitleeditor-0.11.1.tar.gz) = c94d73b806c3ae7f0381445ee6c333a1bbfcd3dc
-Size (subtitleeditor-0.11.1.tar.gz) = 519278 bytes
-SHA1 (patch-aa) = ab195bbe8273effa9391c41da1fdf6f4e0c6a728
-SHA1 (patch-ab) = 8dbe9317d787a3c1382e085a7a677305ade595f1
+SHA1 (subtitleeditor-0.13.6.tar.gz) = ea932a3530bd70d379ea48d2ed316f0f55059a01
+RMD160 (subtitleeditor-0.13.6.tar.gz) = 28c8760a85f9e6106dcb0a6c7adc550858b8cf2a
+Size (subtitleeditor-0.13.6.tar.gz) = 579871 bytes
+SHA1 (patch-aa) = c9dd004b4b5e1047d02e591c5f16b8ac81ca6881
+SHA1 (patch-ab) = eaf3f75ed042f82c89d3ce536cdc5fdc7a73ec5d
