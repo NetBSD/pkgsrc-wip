@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/15 23:04:26 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/08 16:53:04 thomasklausner Exp $
 #
 
 DISTNAME=		ccrtp-1.5.1
@@ -12,12 +12,11 @@ COMMENT=		RTP and RTSP protocol implementation using GNU CommonCpp
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
-USE_LANGUAGES+=		c c++ fortran
+USE_LANGUAGES+=		c c++
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libccrtp1.pc.in
 GNU_CONFIGURE=		yes
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.commoncpp2}/include/cc++2
-
 INFO_FILES=		yes
 
 .include "../../wip/commoncpp2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
