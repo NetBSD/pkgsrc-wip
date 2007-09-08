@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/09/08 12:59:40 obache Exp $
+
+--- dbmail.h.in.orig	2007-06-02 13:14:40.000000000 +0000
++++ dbmail.h.in
+@@ -30,7 +30,7 @@
+ #include "config.h"
+ #endif
+ 
+-#define _XOPEN_SOURCE /* glibc2 */
++#define _XOPEN_SOURCE 500
+ #define __EXTENSIONS__ /* solaris */
+ 
+ #include <assert.h>
