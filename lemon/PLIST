@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/10 23:01:24 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/10 23:20:51 airhead Exp $
 bin/lemon
+bin/lempar.c
