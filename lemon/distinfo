@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/09/10 23:01:24 airhead Exp $
+
+SHA1 (lemon.c) = 0ab4cca47950da4dc04cf957db0c0ed54b464aa9
+RMD160 (lemon.c) = 5d97d22570f9d8b85a50cb5a3edd79767e566cdc
+Size (lemon.c) = 139865 bytes
