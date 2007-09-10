@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/09/05 11:59:44 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/10 05:01:38 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 PKGREVISION=	5
@@ -33,7 +33,7 @@ GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing -ffast-math
+DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing
 CFLAGS.NetBSD+=-D_REENTRANT
 PKGSRC_PICFLAGS=-fPIC -DPIC
 

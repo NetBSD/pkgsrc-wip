@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2007/09/05 12:12:11 bsadewitz Exp $
+$NetBSD: distinfo,v 1.15 2007/09/10 05:01:38 bsadewitz Exp $
 
 SHA1 (MesaLib-7.0.1.tar.bz2) = deb1002cf377ba8bd9407bd3cf573f8c8be31671
 RMD160 (MesaLib-7.0.1.tar.bz2) = b44fd8ebffd17aa72c3b6cca1c2924e66787aa78
@@ -6,6 +6,7 @@ Size (MesaLib-7.0.1.tar.bz2) = 3343538 bytes
 SHA1 (mesalib-7.0-master.patch) = 32152ff7b2e8950b657632f76c1615f0548e0536
 RMD160 (mesalib-7.0-master.patch) = 15c828753f4b16f84aa1e84a1c2716991d3e937f
 Size (mesalib-7.0-master.patch) = 78273 bytes
+SHA1 (patch-aa) = 6db543357cfe41fe1ab1fc16d823ff61d3e8646b
 SHA1 (patch-ab) = 8ca601f930227d0e6bfc494e9520016ff91e0919
 SHA1 (patch-ac) = 26969bb899448ec09b5b197ffdd3ebced5d43594
 SHA1 (patch-ad) = 26dafa9dd31201d0ddaabe9c3ee1c1cc8d305344
