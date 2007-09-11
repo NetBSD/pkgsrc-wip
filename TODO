@@ -1,6 +1,7 @@
 Suggested package updates
 
 	o aircrack-ng-0.9.1
+	o aria2-0.11.3
 	o avahi-0.6.21
 	o cdogs-0.4
 	o chora-2.0.1
@@ -36,7 +37,7 @@ Suggested package updates
 	o mupen64-0.5
 	o ncc-2.7
 	o netwib-5.35.0
-	o openct-0.6.12
+	o openct-0.6.14
 	o osmose-0.8.1
 	o parted-1.8.8
 	o pike-7.6.112
