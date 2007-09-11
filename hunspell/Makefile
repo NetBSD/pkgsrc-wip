@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/25 23:13:17 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/11 17:38:53 thomasklausner Exp $
 #
 
-DISTNAME=	hunspell-1.1.5-3
-PKGNAME=	hunspell-1.1.5
+DISTNAME=	hunspell-1.1.12-2
+PKGNAME=	${DISTNAME:C/-([0-9]+)$/.\1/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://hunspell.sourceforge.net/
 COMMENT=	Improved spellchecker
 
-WRKSRC=			${WRKDIR}/hunspell-1.1.5
+WRKSRC=			${WRKDIR}/${DISTNAME:C/-[0-9]+$//}
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-ui
 
 PKGCONFIG_OVERRIDE+=	hunspell.pc.in
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

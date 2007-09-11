@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/25 23:13:17 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/11 17:38:53 thomasklausner Exp $
 bin/example
 bin/hunspell
 bin/munch
@@ -14,6 +14,7 @@ include/hunspell/htypes.hxx
 include/hunspell/hunspell.h
 include/hunspell/hunspell.hxx
 include/hunspell/langnum.hxx
+include/hunspell/phonet.hxx
 include/hunspell/suggestmgr.hxx
 include/munch.h
 include/unmunch.h
