@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/04 19:39:54 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/11 17:45:24 thomasklausner Exp $
 bin/sonata
+${PYSITELIB}/audioscrobbler.py
 ${PYSITELIB}/audioscrobbler.pyc
 ${PYSITELIB}/audioscrobbler.pyo
 ${PYSITELIB}/mmkeys.so
+${PYSITELIB}/mpdclient3.py
 ${PYSITELIB}/mpdclient3.pyc
 ${PYSITELIB}/mpdclient3.pyo
+${PYSITELIB}/sonata.py
 ${PYSITELIB}/sonata.pyc
 ${PYSITELIB}/sonata.pyo
+share/applications/sonata.desktop
 share/locale/cz/LC_MESSAGES/sonata.mo
 share/locale/de/LC_MESSAGES/sonata.mo
 share/locale/es/LC_MESSAGES/sonata.mo
@@ -38,3 +42,4 @@ share/sonata/TODO
 share/sonata/TRANSLATORS
 @dirrm share/sonata
 @comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
