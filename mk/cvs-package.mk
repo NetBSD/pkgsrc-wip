@@ -1,25 +1,16 @@
-# $Id: cvs-package.mk,v 1.21 2007/05/21 11:51:12 rillig Exp $
+# $Id: cvs-package.mk,v 1.22 2007/09/11 21:26:08 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
-# can be created from CVS instead of from released tarballs.
+# can be created from CVS instead of from released tarballs. Whenever a
+# package is fetched from CVS, an archive is created from it and saved
+# in ${DISTDIR}/cvs-packages, to save bandwidth.
 #
-# Package-settable variables:
+# === Package-settable variables ===
 #
 # CVS_REPOSITORIES
 #	A list of unique identifiers. For each of those identifiers, the
 #	following variables define the details of how to access the
 #	CVS repository.
-#
-# CVS_TAG
-#	The default CVS tag that is checked out. May be overridden by
-#	CVS_TAG.${id}.
-#
-#	Default value: today at midnight.
-#
-# CVS_PROJECT
-#	The project name to be used in CVS_ROOT_SOURCEFORGE.
-#
-#	Default: ${PKGBASE}
 #
 # CVS_ROOT.${id}
 #	The CVSROOT for the CVS repository, including anoncvs password,
@@ -37,7 +28,20 @@
 # CVS_TAG.${id}
 #	Overridable CVS tag for a repository.
 #
-# This file defines the following variables:
+#	Default: ${CVS_TAG} (today at midnight)
+#
+# CVS_TAG
+#	The default CVS tag that is checked out. May be overridden by
+#	CVS_TAG.${id}.
+#
+#	Default value: today at midnight.
+#
+# CVS_PROJECT
+#	The project name to be used in CVS_ROOT_SOURCEFORGE.
+#
+#	Default: ${PKGBASE}
+#
+# === Variables defined here ===
 #
 # CVS_ROOT_GNU
 # CVS_ROOT_NONGNU
