@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2007/09/06 22:01:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.29 2007/09/11 17:44:52 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -96,8 +96,10 @@ man/man1/ctags.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
+share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/BABYL
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
+share/emacs/${PKGVERSION}/etc/CONTRIBUTE
 share/emacs/${PKGVERSION}/etc/COOKIES
 share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
@@ -138,22 +140,18 @@ share/emacs/${PKGVERSION}/etc/celibacy.1
 share/emacs/${PKGVERSION}/etc/compilation.txt
 share/emacs/${PKGVERSION}/etc/condom.1
 share/emacs/${PKGVERSION}/etc/copying.paper
-share/emacs/${PKGVERSION}/etc/ctags.1
 share/emacs/${PKGVERSION}/etc/e/README
 share/emacs/${PKGVERSION}/etc/e/eterm-color
 share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/echo.msg
 share/emacs/${PKGVERSION}/etc/edt-user.doc
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
-share/emacs/${PKGVERSION}/etc/emacs.1
 share/emacs/${PKGVERSION}/etc/emacs.bash
 share/emacs/${PKGVERSION}/etc/emacs.csh
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.py
-share/emacs/${PKGVERSION}/etc/emacsclient.1
 share/emacs/${PKGVERSION}/etc/emacstool.1
 share/emacs/${PKGVERSION}/etc/enriched.doc
-share/emacs/${PKGVERSION}/etc/etags.1
 share/emacs/${PKGVERSION}/etc/future-bug
 share/emacs/${PKGVERSION}/etc/gfdl.1
 share/emacs/${PKGVERSION}/etc/gnus-tut.txt
@@ -923,6 +921,8 @@ share/emacs/${PKGVERSION}/lisp/disp-table.el.gz
 share/emacs/${PKGVERSION}/lisp/disp-table.elc
 share/emacs/${PKGVERSION}/lisp/dnd.el.gz
 share/emacs/${PKGVERSION}/lisp/dnd.elc
+share/emacs/${PKGVERSION}/lisp/doc-view.el.gz
+share/emacs/${PKGVERSION}/lisp/doc-view.elc
 share/emacs/${PKGVERSION}/lisp/dos-fns.el.gz
 share/emacs/${PKGVERSION}/lisp/dos-fns.elc
 share/emacs/${PKGVERSION}/lisp/dos-vars.el.gz
