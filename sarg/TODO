@@ -1,7 +1,7 @@
-$Id: TODO,v 1.7 2006/04/25 10:20:25 bubuchka Exp $
+$Id: TODO,v 1.8 2007/09/13 10:24:14 bubuchka Exp $
 
-- Update to sarg-2.1 (some patches against 1.4.1 were provided by
-  Ben Collver in tech-pkg@)
+- Update to sarg-2.2.3.1 (take in account patches for sarg-2.1
+  against 1.4.1 as provided by Ben Collver in tech-pkg@)
 
 - Month sorting was temporary disabled (because not supported by
   my NetBSD-current sort(1) at prime time).
