@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2665 2007/09/11 17:42:57 thomasklausner Exp $
+# $Id: Makefile,v 1.2666 2007/09/13 18:48:31 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -596,6 +596,7 @@ SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
+SUBDIR+=	hunspell-hu_HU
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
 SUBDIR+=	iText
