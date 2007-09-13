@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2666 2007/09/13 18:48:31 hoka_adam Exp $
+# $Id: Makefile,v 1.2667 2007/09/13 19:27:05 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -139,7 +139,6 @@ SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
 SUBDIR+=	bscript
-SUBDIR+=	bsdinstaller
 SUBDIR+=	bsfilter
 SUBDIR+=	bss
 SUBDIR+=	btscanner
@@ -211,9 +210,6 @@ SUBDIR+=	debian_gtk
 SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
-SUBDIR+=	dfuibe_installer
-SUBDIR+=	dfuibe_lua
-SUBDIR+=	dfuife_curses
 SUBDIR+=	di
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
@@ -716,7 +712,6 @@ SUBDIR+=	libcli
 SUBDIR+=	libclucene
 SUBDIR+=	libcm
 SUBDIR+=	libdaemon
-SUBDIR+=	libdfui
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdmx
@@ -734,7 +729,6 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libhttpd
-SUBDIR+=	libinstaller
 SUBDIR+=	libixp
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo

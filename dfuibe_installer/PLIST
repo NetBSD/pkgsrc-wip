@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/01 20:07:31 hoka_adam Exp $
-sbin/dfuibe_installer
-share/dfuibe_installer/cmdnames.conf
-@dirrm share/dfuibe_installer

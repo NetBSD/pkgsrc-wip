@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/02 00:55:59 hoka_adam Exp $
-sbin/dfuife_curses
-share/dfuife_curses/fred.txt
-@dirrm share/dfuife_curses
