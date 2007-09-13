@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/06 22:26:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/13 00:30:09 netcap Exp $
 #
 
 DISTNAME=	sonata-1.2.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.berlios.de/sonata/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://download.berlios.de/sonata/
+HOMEPAGE=	http://sonata.berlios.de/
 COMMENT=	Elegant GTK2 client for the Music Player Daemon
 
 DEPENDS+=	musicpd>0:../../audio/musicpd
