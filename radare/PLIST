@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/29 12:02:56 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/13 09:40:26 poppnk Exp $
 bin/bindiff
 bin/bug
 bin/hasher
@@ -17,6 +17,7 @@ libexec/radare/bin2txt
 libexec/radare/bytediff
 libexec/radare/core
 libexec/radare/dasm
+libexec/radare/dbg-report
 libexec/radare/elf-base-addr
 libexec/radare/elf-dump-header
 libexec/radare/elf-entry-point
@@ -26,6 +27,7 @@ libexec/radare/elf-trace
 libexec/radare/ffftoneg
 libexec/radare/findrawsyms
 libexec/radare/gdl2gml
+libexec/radare/gtkdialog
 libexec/radare/make_symbolmap.sh
 libexec/radare/move
 libexec/radare/net-icmp
@@ -33,10 +35,12 @@ libexec/radare/net-tcp
 libexec/radare/net-udp
 libexec/radare/objdiff
 libexec/radare/objdump-output-beatifier.pl
+libexec/radare/proc-map
 libexec/radare/radaredbg
 libexec/radare/read
 libexec/radare/rfile-foreach
 libexec/radare/spcc
+libexec/radare/start2bin
 libexec/radare/syms
 libexec/radare/syms-dbg-flag
 libexec/radare/syms-dump
@@ -54,6 +58,7 @@ man/man1/rfile.1
 man/man1/rsc.1
 man/man1/xc.1
 man/man1/xrefs.1
+share/doc/radare/code-injection
 share/doc/radare/debug
 share/doc/radare/disassembly
 share/doc/radare/elf-tutorial

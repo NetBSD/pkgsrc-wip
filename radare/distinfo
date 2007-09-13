@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/29 12:02:56 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2007/09/13 09:40:26 poppnk Exp $
 
-SHA1 (radare-0.8.tar.gz) = fcb82e99ec66d11413f3d7b8019f7e26bfaadab5
-RMD160 (radare-0.8.tar.gz) = faf516490b5885e666e56577f48e21f680cf5da9
-Size (radare-0.8.tar.gz) = 149223 bytes
+SHA1 (radare-0.8.6.tar.gz) = d03665df8159fc9e28eaea00128ff8bdc78c205b
+RMD160 (radare-0.8.6.tar.gz) = 549199c01698bfab74ed4470b3192ca04455ee57
+Size (radare-0.8.6.tar.gz) = 176274 bytes
