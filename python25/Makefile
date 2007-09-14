@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/04 06:09:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/14 02:01:50 netcap Exp $
 
 DISTNAME=	Python-2.5.1
 PKGNAME=	python25-2.5.1
@@ -113,7 +113,7 @@ PLIST_SUBST+=	NOSHLIB="@comment "
 .else
 .  include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
-MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
+MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}:Q}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 LIBS+=		${BDB_LIBS}
 PLIST_SUBST+=	BSDDBMODULE=
