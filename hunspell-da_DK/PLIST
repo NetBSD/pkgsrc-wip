@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/14 16:25:23 hoka_adam Exp $
+share/doc/hunspell-da_DK/README_da_DK.txt
+share/hunspell/da_DK.aff
+share/hunspell/da_DK.dic
+@unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
+@dirrm share/doc/hunspell-da_DK
