@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/10 21:34:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/14 06:43:06 cheusov Exp $
 
 DISTNAME=	dictd-1.10.7
 PKGNAME=	libmaa-0.990
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--enable-shared
 
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${PKGDOCDIR}
+INSTALLATION_DIRS+=	${PKGDOCDIR} lib include
 
 EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 
