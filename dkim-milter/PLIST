@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/08/14 13:36:23 jukka Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/09/14 10:38:27 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
@@ -33,6 +33,7 @@ share/doc/dkim-milter/libdkim/dkim_free.html
 share/doc/dkim-milter/libdkim/dkim_get_user_context.html
 share/doc/dkim-milter/libdkim/dkim_getpresult.html
 share/doc/dkim-milter/libdkim/dkim_getpresultstr.html
+share/doc/dkim-milter/libdkim/dkim_getresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getsighdr.html
 share/doc/dkim-milter/libdkim/dkim_getsiglist.html
 share/doc/dkim-milter/libdkim/dkim_getsignature.html
