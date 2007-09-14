@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/05/19 17:22:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/14 06:46:10 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=	POSIX compatible regular expression library
 
 USE_LIBTOOL=		yes
 
-INSTALLATION_DIRS=	include/uxre share/doc/${PKGBASE} lib
+INSTALLATION_DIRS+=	include/uxre share/doc/${PKGBASE} lib
 
 pre-build:
 	cd ${WRKSRC} && \
