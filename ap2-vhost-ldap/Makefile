@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/14 09:44:16 imilh Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/14 13:21:12 imilh Exp $
 
 DISTNAME=	mod-vhost-ldap_1.2.0.orig
 PKGNAME=	ap2-vhost-ldap-1.2.0
@@ -11,7 +11,7 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://packages.qa.debian.org/m/mod-vhost-ldap.html
 COMMENT=	Apache 2.2 module LDAP Virtual Hosts support
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_1.2.0.orig/-1.2.0/}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 NO_CONFIGURE=	yes
 
 APACHE_MODULE_NAME=	mod_vhost_ldap
