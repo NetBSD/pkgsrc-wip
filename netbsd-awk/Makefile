@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/09 08:39:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/14 06:47:56 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20070105
@@ -30,9 +30,7 @@ do-install:
 
 .if ${OPSYS} == "Linux"
 # Linux has no strlcat function
-.include "../../pkgtools/libnbcompat/buildlink3.mk"
-CPPFLAGS+=	-I${LOCALBASE}/include/libnbcompat
-LDFLAGS+=	-lnbcompat
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
