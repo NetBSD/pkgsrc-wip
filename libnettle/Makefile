@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/07/06 20:23:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/14 06:44:49 cheusov Exp $
 
 DISTNAME=	nettle-1.14
 PKGNAME=	lib${DISTNAME}
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-openssl --enable-shared
 
 INFO_FILES=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake m4
 TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
