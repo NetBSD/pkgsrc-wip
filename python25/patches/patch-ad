@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2007/09/14 02:01:50 netcap Exp $
+$NetBSD: patch-ad,v 1.2 2007/09/14 07:39:52 thomasklausner Exp $
 
 --- Modules/_ctypes/libffi/configure.orig	2006-08-14 18:17:41.000000000 +0200
 +++ Modules/_ctypes/libffi/configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2007/09/14 02:01:50 netcap Exp $
  s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
  s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
 -x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
-+amd64-*-netbsd* | amd64-*-freebsd* | x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-netbsd* | x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
  sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
  sh-*-rtems*) TARGET=SH; TARGETDIR=sh;;
  sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
