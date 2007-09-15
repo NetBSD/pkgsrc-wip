@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2007/09/15 07:26:48 netcap Exp $
+
+--- configure.orig	2007-09-12 10:54:21.000000000 +0200
++++ configure
+@@ -7159,7 +7159,7 @@ else
+   enable_dbus=yes
+ fi
+ 
+-if test "x$enable_dbus" == "xyes"; then
++if "x$enable_dbus" == "xyes"; then
+ 
+   succeeded=no
+ 
