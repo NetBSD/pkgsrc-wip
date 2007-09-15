@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/09/15 05:38:38 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/09/15 06:04:19 netcap Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON_TAGLIB_BUILDLINK3_MK:=	${PYTHON_TAGLIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	python-taglib
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}python-taglib
 
 .if ${PYTHON_TAGLIB_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.python-taglib+=	python-taglib>=1.3.3
+BUILDLINK_API_DEPENDS.python-taglib+=	${PYPKGPREFIX}-taglib>=1.3.3
 BUILDLINK_PKGSRCDIR.python-taglib?=	../../wip/py-taglib
 .endif	# PYTHON_TAGLIB_BUILDLINK3_MK
 
