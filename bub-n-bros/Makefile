@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/03/03 10:56:11 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/15 00:19:22 thomasklausner Exp $
 #
 
-DISTNAME=		bub-n-bros-1.1
-PKGREVISION=		1
+DISTNAME=		bubbros-1.6
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bub-n-bros/}
 
@@ -10,13 +9,10 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://bub-n-bros.sourceforge.net/
 COMMENT=		Multiplayer crazy clone of Bubble Bobble
 
-WRKSRC=			${WRKDIR}/bub-n-bros
 PY_PATCHPLIST=		yes
 
 MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
-
-PYTHON_VERSIONS_ACCEPTED= 23 22 
 
 PYTHON_PATCH_SCRIPTS=	pclient-pygame.py
 PYTHON_PATCH_SCRIPTS+=	pclient-slow-X.py
@@ -49,5 +45,5 @@ do-install:
 .include "../../lang/python/application.mk"
 .include "../../devel/py-game/buildlink3.mk"
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
