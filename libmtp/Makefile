@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/12 10:24:18 neimal Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/16 06:50:48 netcap Exp $
 #
 
-DISTNAME=		libmtp-0.0.18
+DISTNAME=		libmtp-0.2.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmtp/}
 
@@ -16,5 +16,6 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libmtp.pc.in
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
