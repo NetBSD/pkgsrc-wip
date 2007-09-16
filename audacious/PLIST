@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/15 07:23:15 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/09/16 06:48:40 netcap Exp $
 bin/audacious
+bin/audtool
+
+include/audacious/audctrl.h
 include/audacious/auddrct.h
 include/audacious/configdb.h
 include/audacious/custom_uri.h
@@ -34,6 +37,9 @@ include/audacious/vfs_buffer.h
 include/audacious/vfs_buffered_file.h
 include/audacious/xconvert.h
 lib/audacious/libaudid3tag.so
+lib/libaudclient.so
+lib/libaudclient.so.1
+lib/libaudclient.so.1.0.0
 lib/pkgconfig/audacious.pc
 lib/pkgconfig/audclient.pc
 man/man1/audacious.1
