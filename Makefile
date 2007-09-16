@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2671 2007/09/16 15:44:33 thomasklausner Exp $
+# $Id: Makefile,v 1.2672 2007/09/16 17:10:30 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -683,7 +683,6 @@ SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	kawa
-SUBDIR+=	kchmviewer
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
