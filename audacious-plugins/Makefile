@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/15 07:24:46 netcap Exp $
+# $NetBSD: Makefile,v 1.19 2007/09/16 15:06:34 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.4.0-dr4
@@ -27,7 +27,7 @@ LDFLAGS.NetBSD+=	-lstdc++ -lm
 LDFLAGS+=		${LIBOSSAUDIO}
 
 # do not use pkgsrc' flac if it is installed
-CFLAGS+=	-I. -I../libflac -Ilibflac
+CFLAGS+=	-I. -I../flacng -Ilibflacng
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 			--disable-coreaudio --disable-projectm \
@@ -110,22 +110,24 @@ CONFIGURE_ARGS+=	--enable-lirc
 .endif
 
 .include "../../wip/audacious/buildlink3.mk"
-.include "../../net/libmms/buildlink3.mk"
-.include "../../multimedia/libnms/buildlink3.mk"
-.include "../../audio/adplug/buildlink3.mk"
-.include "../../audio/faac/buildlink3.mk"
+.include "../../wip/libmtp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libcddb+=		taglib>=1.2.1
+.include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
-.include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
-#.include "../../audio/libsidplay2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../devel/libbinio/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../net/libmms/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
