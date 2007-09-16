@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/21 14:02:28 krub1 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/09/16 21:56:59 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBVOLUME_ID_BUILDLINK3_MK:=	${LIBVOLUME_ID_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libvolume_id
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libvolume_id
 
 .if ${LIBVOLUME_ID_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libvolume_id+=	libvolume_id>=0.71.0
+BUILDLINK_API_DEPENDS.libvolume_id+=	libvolume>=0.71.0
 BUILDLINK_PKGSRCDIR.libvolume_id?=	../../wip/libvolumeid
 .endif	# LIBVOLUME_ID_BUILDLINK3_MK
 
