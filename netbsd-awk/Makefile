@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/14 06:47:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/17 19:58:42 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20070105
@@ -19,6 +19,7 @@ BUILD_TARGET=	a.out
 
 CFLAGS+=	-I.
 LDFLAGS+=	-lm
+
 MAKE_FLAGS+=	YHEADER=yes
 
 post-patch:
@@ -31,6 +32,7 @@ do-install:
 .if ${OPSYS} == "Linux"
 # Linux has no strlcat function
 .include "../../pkgtools/libnbcompat/inplace.mk"
+MAKE_ENV+=	LIBS="${LDFLAGS.nbcompat} ${LDADD.nbcompat}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
