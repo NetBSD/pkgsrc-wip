@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/16 14:46:57 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/09/17 21:43:21 bsadewitz Exp $
 bin/aria2c
-${PKGMANDIR}/man1/aria2c.1
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/aria2c.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/aria2c.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/aria2c.mo
+man/man1/aria2c.1
+share/locale/de/LC_MESSAGES/aria2c.mo
+share/locale/fr/LC_MESSAGES/aria2c.mo
+share/locale/ja/LC_MESSAGES/aria2c.mo
+share/locale/ru/LC_MESSAGES/aria2c.mo
