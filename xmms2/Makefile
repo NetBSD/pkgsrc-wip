@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/06/01 00:19:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2007/09/17 11:49:56 thomasklausner Exp $
 #
 
 DISTNAME=	xmms2-0.2DrJekyll
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	_build_/default/xmms2-client-glib.pc
 
 do-configure:
 	cd ${WRKSRC:Q} && ${PYTHONBIN} ./waf configure \
-	--prefix=${PREFIX} --with-mandir=${PREFIX}/man
+	--prefix=${PREFIX} --with-mandir=${PREFIX}/${PKGMANDIR}
 
 do-build:
 	cd ${WRKSRC:Q} && ${PYTHONBIN} ./waf build

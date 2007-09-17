@@ -1,16 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.6 2007/05/27 17:46:28 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/09/17 11:49:56 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	xmms2
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxmms2}
 BUILDLINK_PACKAGES+=	xmms2
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xmms2
 
-.if !empty(XMMS2_BUILDLINK3_MK:M+)
+.if ${XMMS2_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xmms2+=	xmms2>=0.1DR2.2
 BUILDLINK_PKGSRCDIR.xmms2?=	../../wip/xmms2
 .endif	# XMMS2_BUILDLINK3_MK
@@ -54,4 +55,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
