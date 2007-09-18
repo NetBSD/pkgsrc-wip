@@ -38,6 +38,7 @@ Suggested package updates
 	o mupen64-0.5
 	o ncc-2.7
 	o netwib-5.35.0
+	o opal-2.2.10
 	o openct-0.6.14
 	o osmose-0.8.1
 	o parted-1.8.8
@@ -48,7 +49,8 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o sara-7.0.4a
-	o sdlmame-0.118
+	o sdlmame-0.119
+	o sdlmess-0.118
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o smc-1.0
