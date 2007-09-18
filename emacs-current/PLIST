@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2007/09/11 17:44:52 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.30 2007/09/18 06:34:52 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -153,7 +153,6 @@ share/emacs/${PKGVERSION}/etc/emacs.py
 share/emacs/${PKGVERSION}/etc/emacstool.1
 share/emacs/${PKGVERSION}/etc/enriched.doc
 share/emacs/${PKGVERSION}/etc/future-bug
-share/emacs/${PKGVERSION}/etc/gfdl.1
 share/emacs/${PKGVERSION}/etc/gnus-tut.txt
 share/emacs/${PKGVERSION}/etc/grep.txt
 share/emacs/${PKGVERSION}/etc/images/README
@@ -494,6 +493,7 @@ share/emacs/${PKGVERSION}/etc/images/zoom-out.xpm
 share/emacs/${PKGVERSION}/etc/ms-kermit
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
+share/emacs/${PKGVERSION}/etc/refcards/Makefile
 share/emacs/${PKGVERSION}/etc/refcards/README
 share/emacs/${PKGVERSION}/etc/refcards/calccard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/calccard.tex
