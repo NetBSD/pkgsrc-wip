@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/29 17:43:16 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/19 23:13:53 thomasklausner Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../wip/libavc1394/buildlink3.mk"

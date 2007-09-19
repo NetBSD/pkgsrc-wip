@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2007/09/17 11:49:56 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2007/09/19 23:13:53 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
@@ -33,7 +33,7 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mgnomevfs)
-.  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.  include "../../sysutils/gnome-vfs/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mmodplug)
