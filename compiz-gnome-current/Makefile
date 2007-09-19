@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/15 18:33:16 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/19 23:53:32 thomasklausner Exp $
 #
 
 DISTNAME=	compiz-0.5.0
@@ -53,6 +53,6 @@ PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/control-center/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
