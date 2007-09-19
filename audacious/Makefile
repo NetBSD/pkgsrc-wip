@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/16 06:48:40 netcap Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/19 19:25:05 netcap Exp $
 #
 
 DISTNAME=		audacious-1.4.0-dr4
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2
 
-MAINTAINER=		jfranz@bsdprojects.net
+MAINTAINER=		pkgsrc-users@NetBSD.org	
 HOMEPAGE=		http://audacious-media-player.org/
 COMMENT=		Media player based on BMP and XMMS
 
