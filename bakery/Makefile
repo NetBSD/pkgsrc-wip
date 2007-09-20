@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 15:47:18 obache Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/20 21:03:52 thomasklausner Exp $
 
 DISTNAME=	bakery-2.4.1
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/bakery/2.4/}
 
@@ -19,6 +20,6 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/libglademm/buildlink3.mk"
 .include "../../sysutils/gnome-vfsmm/buildlink3.mk"
-.include "../../textproc/libxml++2/buildlink3.mk"
+.include "../../textproc/libxml++/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/08/10 12:38:49 absd Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/20 21:03:52 thomasklausner Exp $
 #
 
 DISTNAME=		gobby-0.3.0
+PKGREVISION=		1
 CATEGORIES=		editors net
 MASTER_SITES=		http://releases.0x539.de/gobby/
 
@@ -24,5 +25,5 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
-.include "../../textproc/libxml++2/buildlink3.mk"
+.include "../../textproc/libxml++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
