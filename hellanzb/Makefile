@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/25 10:43:09 achemze Exp $
+# $NetBSD: Makefile,v 1.5 2007/09/20 22:55:20 thomasklausner Exp $
 #
 
 DISTNAME=		hellanzb-0.12
@@ -10,7 +10,7 @@ MAINTAINER=		silicon@kalifornia.com
 HOMEPAGE=		http://www.hellanzb.com:8080/trac
 COMMENT=		Command line nntp file grabber
 
-DEPENDS+=	${PYPKGPREFIX}-twisted>=1.3.*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=1.3:../../net/py-twisted
 DEPENDS+=	par2>=0.4:../../archivers/par2
 DEPENDS+=	unrar>=3.5.4:../../archivers/unrar
 
