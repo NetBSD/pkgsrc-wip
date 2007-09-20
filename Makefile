@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2675 2007/09/20 22:54:03 thomasklausner Exp $
+# $Id: Makefile,v 1.2676 2007/09/20 23:53:57 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1168,7 +1168,6 @@ SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Quota
-SUBDIR+=	p5-RPC-XML
 SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-RRDTool-OO
 SUBDIR+=	p5-SQL-Abstract-Limit
