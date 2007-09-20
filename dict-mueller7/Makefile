@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/20 22:45:06 thomasklausner Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -12,7 +12,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mueller-dic.chat.ru/
 COMMENT=	DICTD data for English-Russian dictionary by Mueller
 
-DEPENDS+=	dict-server>=1.9.14*:../../wip/dict-server
+DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
 
 BUILD_DEPENDS+=	dict-server>=1.10.2:../../wip/dict-server
 BUILD_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
