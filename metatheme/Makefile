@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2007/09/20 21:21:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/20 21:37:24 thomasklausner Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/metatheme/0.9/}
 EXTRACT_SUFX=		.tar.bz2

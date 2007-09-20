@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/01/23 22:26:48 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/20 21:37:24 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.1.6
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://monkey-bubble.tuxfamily.org/
 
@@ -14,6 +15,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

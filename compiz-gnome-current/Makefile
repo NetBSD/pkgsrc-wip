@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/09/20 21:21:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/20 21:37:24 thomasklausner Exp $
 #
 
 DISTNAME=	compiz-0.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2
