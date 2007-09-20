@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2007/07/18 08:15:33 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2007/09/20 07:44:39 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scummvm-nightly
-PKG_SUPPORTED_OPTIONS=	scummvm-nightly-cruise scummvm-nightly-drascula scummvm-nightly-lure
-PKG_SUGGESTED_OPTIONS=	scummvm-nightly-cruise scummvm-nightly-drascula scummvm-nightly-lure
+PKG_SUPPORTED_OPTIONS=	scummvm-nightly-cruise scummvm-nightly-drascula
+PKG_SUGGESTED_OPTIONS=	scummvm-nightly-cruise scummvm-nightly-drascula
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,7 +11,4 @@ CONFIGURE_ARGS+=--enable-cruise
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-drascula)
 CONFIGURE_ARGS+=--enable-drascula
-.endif
-.if !empty(PKG_OPTIONS:Mscummvm-nightly-lure)
-CONFIGURE_ARGS+=--enable-lure
 .endif
