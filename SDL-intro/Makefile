@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/19 20:22:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/20 22:44:31 thomasklausner Exp $
 #
 
 DISTNAME=		SDL-intro-1.0
@@ -13,7 +13,7 @@ COMMENT=		Simple DirectMedia Layer introduction (All languages)
 # Note: fix wip to actuall location.
 DEPENDS+=		SDL-intro-cn-1.0:../../wip/SDL-intro-cn
 DEPENDS+=		SDL-intro-de-1.0:../../wip/SDL-intro-de
-DEPENDS+=		SDL-intro-en-1.0:../../devel/SDL-intro-en
+DEPENDS+=		SDL-intro-en-1.0nb1:../../devel/SDL-intro-en
 DEPENDS+=		SDL-intro-es-1.0:../../wip/SDL-intro-es
 DEPENDS+=		SDL-intro-fr-1.0:../../wip/SDL-intro-fr
 DEPENDS+=		SDL-intro-it-1.0:../../wip/SDL-intro-it
