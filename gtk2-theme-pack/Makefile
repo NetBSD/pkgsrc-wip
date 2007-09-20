@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/03 09:22:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/20 22:54:26 thomasklausner Exp $
 #
 
 DISTNAME=	gtk2-theme-pack
@@ -118,7 +118,7 @@ DEPENDS+=	gtk2-engines-bluecurve>=1.0:../../x11/gtk2-engines-bluecurve
 DEPENDS+=	gtk2-engines-dwerg>=0.6:../../wip/gtk2-engines-dwerg
 DEPENDS+=	gtk2-engines-flat>=2.0:../../wip/gtk2-engines-flat
 DEPENDS+=	gtk2-engines-galaxy>=0:../../wip/gtk2-engines-galaxy
-DEPENDS+=	gtk2-engines-magichicken>=1.0.2:../../wip/gtk2-engines-magichicken
+DEPENDS+=	gtk2-engines-magicchicken>=1.0.2:../../wip/gtk2-engines-magicchicken
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
