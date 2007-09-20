@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/10 02:25:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/20 22:30:08 thomasklausner Exp $
 #
 
 DISTNAME=	uffizi.txt
@@ -19,8 +19,6 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=             perl:run
 REPLACE_PERL=           ${DISTNAME}
 NO_BUILD=               yes
-
-PKGNAME=                ${DISTNAME:S/.txt$//}
 
 INSTALLATION_DIRS=      bin
 
