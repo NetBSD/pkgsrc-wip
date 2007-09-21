@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/17 21:19:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=	python-gnucash-0.7.10
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	http://www.parit.ca/projects/pythongnucash/
 

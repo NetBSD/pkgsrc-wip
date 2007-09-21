@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/03/01 19:12:21 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:56 thomasklausner Exp $
 #
 
 DISTNAME=		zapping-0.9.6
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zapping/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,11 +23,11 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
 
-GCONF2_SCHEMAS+=	zapping.schemas
+GCONF_SCHEMAS+=	zapping.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

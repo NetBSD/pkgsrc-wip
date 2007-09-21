@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2007/09/20 21:12:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.26 2007/09/21 13:06:52 thomasklausner Exp $
 
 DISTNAME=	gDesklets-0.26
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ USE_TOOLS+=	gmake pkg-config intltool
 USE_LIBTOOL=	YES
 
 PKGCONFIG_OVERRIDE=	gdesklets-core.pc.in
-GCONF2_SCHEMAS=		gdesklets-display-thumbnail.schemas
+GCONF_SCHEMAS=		gdesklets-display-thumbnail.schemas
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
@@ -31,7 +31,7 @@ SUBST_SED.python=	-e 's|python |${PYTHONBIN} |g'
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gdesklets/Displays
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"

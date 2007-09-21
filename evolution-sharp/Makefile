@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/08/19 20:19:59 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:52 thomasklausner Exp $
 #
 
 DISTNAME=	evolution-sharp-0.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.2/}
 EXTRACT_SUFX=	.tar.bz2

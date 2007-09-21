@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/01/05 22:51:33 mreriksson Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:54 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-syncml-0.82
+PKGREVISION=		1
 
 COMMENT=		SyncML module for Multisync
 

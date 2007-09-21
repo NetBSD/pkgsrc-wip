@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/09/20 21:37:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/21 13:06:50 thomasklausner Exp $
 #
 
 DISTNAME=	ecore-0.9.9.037
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://enlightenment.freedesktop.org/files/
 EXTRACT_SUFX=	.tar.gz

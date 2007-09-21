@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=	silky-0.5.2
+PKGREVISION=	1
 CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=silky/}
 
@@ -20,7 +21,7 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silky
 CONFIGURE_ARGS+=	--with-included-gettext
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/silc-toolkit/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

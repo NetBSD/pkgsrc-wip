@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2007/05/02 02:45:44 dhowland Exp $
+# $NetBSD: Makefile,v 1.18 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=	regexxer-0.9
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 
@@ -19,13 +20,13 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-GCONF2_SCHEMAS=		regexxer.schemas
+GCONF_SCHEMAS=		regexxer.schemas
 
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gconfmm/buildlink3.mk"
 .include "../../devel/libglademm/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/libsigc++1/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

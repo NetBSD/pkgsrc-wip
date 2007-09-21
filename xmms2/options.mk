@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2007/05/27 17:46:28 tnn2 Exp $
+# $NetBSD: options.mk,v 1.10 2007/09/21 13:06:56 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	faad flac gnomevfs modplug ogg pyrex ruby perl
@@ -21,7 +21,7 @@ PLIST_SUBST+=		FLAC="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnomevfs)
-.  include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.  include "../../sysutils/gnome-vfs/buildlink3.mk"
 PLIST_SUBST+=		GNOMEVFS=""
 .else
 PLIST_SUBST+=		GNOMEVFS="@comment "

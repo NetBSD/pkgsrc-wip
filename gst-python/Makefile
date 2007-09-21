@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/07/07 18:13:16 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:53 thomasklausner Exp $
 #
 
 DISTNAME=		gst-python-0.10.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		audio devel
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=		.tar.bz2

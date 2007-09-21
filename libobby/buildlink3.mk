@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/06/08 11:14:27 absd Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2007/09/21 13:06:54 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBOBBY_BUILDLINK3_MK:=	${LIBOBBY_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_PKGSRCDIR.libobby?=	../../wip/libobby
 .endif	# LIBOBBY_BUILDLINK3_MK
 
 .include "../../wip/net6/buildlink3.mk"
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

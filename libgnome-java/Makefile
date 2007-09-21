@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:54 thomasklausner Exp $
 #
 
 DISTNAME=		libgnome-java-2.10.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnome-java/2.10/}
 EXTRACT_SUFX=		.tar.bz2

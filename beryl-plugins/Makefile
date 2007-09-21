@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2007/09/20 21:37:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:50 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-plugins-${BERYL_VERSION}
+PKGREVISION=	2
 CATEGORIES=	wm
 
 COMMENT=	Supported plugins for the Beryl compositor
 
 .include "../../wip/beryl/Makefile.inc"
 
-PKGREVISION=	1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes

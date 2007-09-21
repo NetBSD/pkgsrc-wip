@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:27:58 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:50 thomasklausner Exp $
 #
 
 DISTNAME=		brltty-3.7
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		http://www.mielke.cc/brltty/releases/
 

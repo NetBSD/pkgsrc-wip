@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/01/21 13:38:43 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:53 thomasklausner Exp $
 #
 
 DISTNAME=		granule-1.2.4-1
 PKGNAME=		${DISTNAME:S/-1$//}
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=granule/}
 

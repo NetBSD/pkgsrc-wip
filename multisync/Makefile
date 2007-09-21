@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/10/13 20:56:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:54 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-0.82
+PKGREVISION=		1
 COMMENT=		Modular program to synchronize PIM data
 
 WRKSRC=			${WRKDIR}/multisync-0.82

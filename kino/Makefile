@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/09/19 23:13:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/21 13:06:53 thomasklausner Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
 # XXX or you will download old file with new filename.
 DISTNAME=		kino-0.7.5
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 ## maybe configure should not use old glib?
@@ -37,12 +38,12 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 #.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"

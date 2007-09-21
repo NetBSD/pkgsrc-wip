@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/21 13:06:54 thomasklausner Exp $
 #
 
 DISTNAME=		obby-0.3.0
 PKGNAME=		libobby-0.3.0
+PKGREVISION=		1
 CATEGORIES=		devel net
 MASTER_SITES=		http://releases.0x539.de/obby/
 
@@ -25,6 +26,6 @@ pre-install:
 PLIST_SRC+=		${PKGDIR}/PLIST.common
 
 .include "../../wip/net6/buildlink3.mk"
-.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

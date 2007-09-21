@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:55 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:55 thomasklausner Exp $
 
 DISTNAME=	scribus-${PKGVERSION}
 PKGNAME=	scribus-devel-${PKGVERSION}
 PKGVERSION=	1.3.3.3
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,7 +34,7 @@ DEPENDS+=	ghostscript-esp>=8.0:../../print/ghostscript-esp
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/11/19 11:15:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/21 13:06:52 thomasklausner Exp $
 
 DISTNAME=	gnomebaker-0.5.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomebaker/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +21,7 @@ DEPENDS+=	libgnomeui>=2.8.1:../../devel/libgnomeui
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 

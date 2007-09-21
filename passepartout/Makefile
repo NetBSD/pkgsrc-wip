@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/20 21:03:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=		passepartout-0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		http://www.stacken.kth.se/project/pptout/files/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/07/02 19:04:33 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/21 13:06:49 thomasklausner Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_All_Platforms//}
 WRKSRC=			${WRKDIR}/PyBabelPhish-Install
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2

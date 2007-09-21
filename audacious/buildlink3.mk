@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2007/09/16 06:48:40 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/09/21 13:06:50 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AUDACIOUS_BUILDLINK3_MK:=	${AUDACIOUS_BUILDLINK3_MK}+
@@ -21,7 +21,7 @@ BUILDLINK_DEPMETHOD.audacious?=	build
 .include "../../devel/libmcs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

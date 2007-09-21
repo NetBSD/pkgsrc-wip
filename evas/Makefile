@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2007/09/20 21:37:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/21 13:06:52 thomasklausner Exp $
 #
 
 DISTNAME=	evas-0.9.9.037
 PKGREVISISON=	1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://enlightenment.freedesktop.org/files/
 EXTRACT_SUFX=	.tar.gz

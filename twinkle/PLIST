@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/16 18:48:17 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/21 13:06:56 thomasklausner Exp $
 bin/twinkle
-etc/cups/certs/0
 share/twinkle/providers.csv
 share/twinkle/ringback.wav
 share/twinkle/ringtone.wav
@@ -8,4 +7,3 @@ share/twinkle/twinkle16.png
 share/twinkle/twinkle32.png
 share/twinkle/twinkle48.png
 @dirrm share/twinkle
-@dirrm etc/cups/certs

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2007/09/19 23:13:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=		planner-0.14.2
 
 
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/planner/0.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,17 +32,17 @@ CONFIGURE_ARGS+=	--enable-database=no	# this was still not correct (in code, not
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
-GCONF2_SCHEMAS+=	planner.schemas
+GCONF_SCHEMAS+=	planner.schemas
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
 #.include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../lang/python/application.mk"

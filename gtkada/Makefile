@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2007/06/11 10:50:12 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2007/09/21 13:06:53 thomasklausner Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://libre.act-europe.fr/GtkAda/
 EXTRACT_SUFX=		.tgz
@@ -39,7 +40,7 @@ pre-configure:
 .  include "../../lang/gcc34-ada/buildlink3.mk"
 .endif
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/10/30 22:45:30 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/21 13:06:49 thomasklausner Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_i586//}
 WRKSRC=			${WRKDIR}/Pythonol-Install
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pythonol/}
 EXTRACT_SUFX=		.tar.bz2

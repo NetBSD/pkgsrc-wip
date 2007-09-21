@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/09/20 21:37:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/21 13:06:52 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.7.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/gnome-bluetooth/0.7/
 
@@ -18,10 +18,10 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gnome-bluetooth.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/gob2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

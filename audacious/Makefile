@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2007/09/19 19:25:05 netcap Exp $
+# $NetBSD: Makefile,v 1.12 2007/09/21 13:06:49 thomasklausner Exp $
 #
 
 DISTNAME=		audacious-1.4.0-dr4
 PKGNAME=		${DISTNAME:S/-dr4//}
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2
@@ -34,7 +35,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .include "../../devel/libmcs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

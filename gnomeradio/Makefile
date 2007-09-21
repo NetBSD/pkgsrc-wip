@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/03/06 01:18:00 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:52 thomasklausner Exp $
 #
 
 DISTNAME=		gnomeradio-1.6
+PKGREVISION=		1
 CATEGORIES=		wip audio
 MASTER_SITES=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/packages/
 
@@ -17,9 +18,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
-GCONF2_SCHEMAS+=	gnomeradio.schemas
-GCONF2_SCHEMAS+=	gnomeradio.schemas
+GCONF_SCHEMAS+=	gnomeradio.schemas
+GCONF_SCHEMAS+=	gnomeradio.schemas
 
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

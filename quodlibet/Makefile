@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/03/04 18:35:31 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:55 thomasklausner Exp $
 #
 
 DISTNAME=		quodlibet-0.24
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.sacredchao.net/~piman/software/
 

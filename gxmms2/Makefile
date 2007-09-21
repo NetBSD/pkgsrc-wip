@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2007/05/27 18:46:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2007/09/21 13:06:53 thomasklausner Exp $
 #
 
 DISTNAME=	gxmms2.git-snapshot-3d4b4bc7ad71055dc28b00cf4c99fbdac3e177cb
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	gxmms2-0.6.5git20070428
 #DISTNAME=	gxmms2-0.6.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://git.xmms.se/snapshot.cgi/
 #MASTER_SITES=	http://wejp.k.vu/projects/xmms2/

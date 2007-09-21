@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/01/05 10:11:26 ghen Exp $
+# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:56 thomasklausner Exp $
 #
 
-DISTNAME=		twinkle-0.4.2
+DISTNAME=		twinkle-1.1
+PKGREVISION=		1
 CATEGORIES=		audio chat
 MASTER_SITES=		http://www.xs4all.nl/~mfnboer/twinkle/download/
 
@@ -9,19 +10,25 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.twinklephone.com/
 COMMENT=		Software Phone using the SIP protocol
 
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		have_lrelease=${QTDIR}/bin/lrelease
+# for broken jpeg detection
+CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
 
-CONFIGURE_ARGS+="--without-kde"
+SUBST_CLASSES+=		boost
+SUBST_MESSAGE.boost=	Fix boost library name.
+SUBST_STAGE.boost+=	pre-configure
+SUBST_FILES.boost=	configure
+SUBST_SED.boost+=	-e 's,boost_regex-gcc,boost_regex-mt,'
 
+.include "options.mk"
+
+.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
-## x11/qt3-libs/ is broken
-## cp work/qt-x11-free-3.3.5/lib/qt-mt.pc /usr/pkg/lib/pkgconfig/
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/commoncpp2/buildlink3.mk"

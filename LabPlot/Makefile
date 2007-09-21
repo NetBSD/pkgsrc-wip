@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:29:21 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:49 thomasklausner Exp $
 #
 
 DISTNAME=		LabPlot-1.3.0
+PKGREVISION=		1
 CATEGORIES=		kde graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labplot/}
 
