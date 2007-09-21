@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2007/09/21 16:30:33 thomasklausner Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
-PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		http://linuxdcpp.berlios.de/
 

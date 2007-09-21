@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2007/07/11 22:28:27 larnor Exp $
+# $NetBSD: Makefile,v 1.20 2007/09/21 16:30:33 thomasklausner Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
-PKGREVISION=		9
 CATEGORIES=		net
 MASTER_SITES=		# not defined
 
