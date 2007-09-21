@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2676 2007/09/20 23:53:57 thomasklausner Exp $
+# $Id: Makefile,v 1.2677 2007/09/21 05:14:52 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -412,7 +412,6 @@ SUBDIR+=	goocanvas
 SUBDIR+=	gov2
 SUBDIR+=	gplbasic
 SUBDIR+=	gps
-SUBDIR+=	gpsbabel
 SUBDIR+=	gpsdrive
 SUBDIR+=	grandr
 SUBDIR+=	granule
