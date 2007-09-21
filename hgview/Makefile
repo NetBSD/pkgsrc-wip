@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/21 16:17:04 thomasklausner Exp $
 #
 
 DISTNAME=	hgview-0.9.${HGVIEW_VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
