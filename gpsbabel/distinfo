@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/10 23:14:00 uhabel Exp $
+$NetBSD: distinfo,v 1.2 2007/09/21 05:04:52 marttikuparinen Exp $
 
-SHA1 (gpsbabel-1.3.3.tar.gz) = 1916f9bdc14039f7f1a53487446b726112848d6b
-RMD160 (gpsbabel-1.3.3.tar.gz) = 5a003831640c2ce134ed9c8bcd01a5bb2667e6dd
-Size (gpsbabel-1.3.3.tar.gz) = 3305532 bytes
+SHA1 (gpsbabel-1.3.4.tar.gz) = 9b504ce151bb44b86558cce5c3f727819cdb30c5
+RMD160 (gpsbabel-1.3.4.tar.gz) = 2391f0b3aef271567808edbed6fc2c481d5514ea
+Size (gpsbabel-1.3.4.tar.gz) = 3547058 bytes
+SHA1 (patch-aa) = 06166a96029100d6e5828875d00d7dde1acf90f9
+SHA1 (patch-ab) = 194779944c80cbab89563dad1d7876564bd374df
+SHA1 (patch-ac) = 3d464f3fc7786f1a5dff61e4a3b88b0f358081e7
