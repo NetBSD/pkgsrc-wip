@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2007/09/18 06:34:52 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.31 2007/09/22 06:11:01 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -150,7 +150,6 @@ share/emacs/${PKGVERSION}/etc/emacs.bash
 share/emacs/${PKGVERSION}/etc/emacs.csh
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.py
-share/emacs/${PKGVERSION}/etc/emacstool.1
 share/emacs/${PKGVERSION}/etc/enriched.doc
 share/emacs/${PKGVERSION}/etc/future-bug
 share/emacs/${PKGVERSION}/etc/gnus-tut.txt
@@ -2470,8 +2469,6 @@ share/emacs/${PKGVERSION}/lisp/term/x-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/x-win.elc
 share/emacs/${PKGVERSION}/lisp/term/xterm.el.gz
 share/emacs/${PKGVERSION}/lisp/term/xterm.elc
-share/emacs/${PKGVERSION}/lisp/termdev.el.gz
-share/emacs/${PKGVERSION}/lisp/termdev.elc
 share/emacs/${PKGVERSION}/lisp/terminal.el.gz
 share/emacs/${PKGVERSION}/lisp/terminal.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/artist.el.gz
