@@ -1,11 +1,51 @@
-$NetBSD: patch-ab,v 1.2 2007/08/24 02:48:29 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.3 2007/09/22 04:20:01 bsadewitz Exp $
 
---- pixman-1.pc.in.orig	2007-08-06 16:57:15.000000000 -0400
-+++ pixman-1.pc.in
-@@ -7,5 +7,5 @@ Name: Pixman
- Description: The pixman library (version 1)
- Version: @PACKAGE_VERSION@
- Cflags: -I${includedir}/pixman-1 @DEP_CFLAGS@
--Libs: -L${libdir} -lpixman @DEP_LIBS@
-+Libs: -L${libdir} -lpixman-1 @DEP_LIBS@
+X-Git-Url: http://gitweb.freedesktop.org/?p=pixman.git;a=commitdiff;h=5fc4d5ab1fae8677f5a95f5eb0e4fad3a9e0bf82
+
+compilation: build edge/compose with accessors separately
+
+Simplify the build by creating a new file for pixman-compose and
+pixman-edge built with accessor functions.
+---
+
+--- pixman/Makefile.am.orig	2007-08-06 16:50:46.000000000 -0400
++++ pixman/Makefile.am
+@@ -1,15 +1,17 @@
+ lib_LTLIBRARIES = libpixman-1.la
+ libpixman_1_la_LDFLAGS = -version-info $(LT_VERSION_INFO)
+-libpixman_1_la_LIBADD = @DEP_LIBS@ -lm libpixmanwrapper.la
++libpixman_1_la_LIBADD = @DEP_LIBS@ -lm
+ libpixman_1_la_SOURCES =		\
+ 	pixman.h		\
+ 	pixman-region.c		\
+ 	pixman-private.h	\
+ 	pixman-image.c		\
+ 	pixman-compose.c	\
++	pixman-compose-accessors.c	\
+ 	pixman-pict.c		\
+ 	pixman-utils.c		\
+ 	pixman-edge.c		\
++	pixman-edge-accessors.c		\
+ 	pixman-edge-imp.h	\
+ 	pixman-trap.c		\
+ 	pixman-compute-region.c \
+@@ -18,18 +20,9 @@ libpixman_1_la_SOURCES =		\
+ libpixmanincludedir = $(includedir)/pixman-1/
+ libpixmaninclude_HEADERS = pixman.h
  
+-# wrapper library
+-noinst_LTLIBRARIES = libpixmanwrapper.la
+-libpixmanwrapper_la_SOURCES =	\
+-	pixman-compose.c	\
+-	pixman-edge.c
+-libpixmanwrapper_la_CFLAGS = $(DEP_CFLAGS) -DPIXMAN_FB_ACCESSORS
+-
+-
+-
+ # mmx code
+ if USE_MMX
+-noinst_LTLIBRARIES += libpixman-mmx.la
++noinst_LTLIBRARIES = libpixman-mmx.la
+ libpixman_mmx_la_SOURCES = \
+ 	pixman-mmx.c \
+ 	pixman-mmx.h
