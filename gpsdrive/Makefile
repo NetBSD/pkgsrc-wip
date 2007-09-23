@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/08/19 21:10:26 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2007/09/23 14:19:10 tnn2 Exp $
 #
 
-DISTNAME=		gpsdrive-2.09
-PKGREVISION=		1
+DISTNAME=		gpsdrive-2.10pre4
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gpsdrive.de/gpsdrive.tar/
 
@@ -12,26 +11,31 @@ COMMENT=		GpsDrive is a car (bike, ship, plane) navigation system
 
 DEPENDS+=		wget>=1:../../net/wget
 DEPENDS+=		pcre>=6.6:../../devel/pcre
+DEPENDS+=		p5-libwww>=5.800:../../www/p5-libwww
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_PKGLOCALEDIR=	YES
+USE_LIBTOOL=		YES
+PTHREAD_AUTO_VARS=	YES	# XXX needed by mapnik / boost
+USE_TOOLS+=		gmake msgfmt perl
 
-WRKSRC=			${WRKDIR}/gpsdrive-2.09
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		msgfmt
+# Disabling mysql doesn't seem to work.
+.include "../../mk/mysql.buildlink3.mk"
 
-# XXX make this an option
-CONFIGURE_ARGS+=	--disable-mysql
+#CONFIGURE_ARGS+=	--enable-dbus
 
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
+.include "../../graphics/libart/buildlink3.mk"
+#.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../wip/mapnik/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-#.include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
