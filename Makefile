@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2677 2007/09/21 05:14:52 marttikuparinen Exp $
+# $Id: Makefile,v 1.2678 2007/09/23 13:41:08 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -826,6 +826,7 @@ SUBDIR+=	man
 SUBDIR+=	man-db
 SUBDIR+=	manatee
 SUBDIR+=	map-browse
+SUBDIR+=	mapnik
 SUBDIR+=	mapserver
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
