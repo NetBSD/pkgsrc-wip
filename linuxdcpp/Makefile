@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/21 16:30:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2007/09/23 13:18:45 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
@@ -22,10 +22,6 @@ USE_TOOLS+=		pkg-config
 PTHREAD_OPTS+=		native
 NO_CONFIGURE=		yes
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
-
-# Don't mix use of C99 uint* types with old u_int* types.
-CFLAGS+=		-Du_int8_t=uint8_t -Du_int32_t=uint32_t
-CFLAGS+=		-Du_int64_t=uint64_t 
 
 .include "../../mk/bsd.prefs.mk"
 LDCPP_VERSION!=		${DATE} +%Y%m%d
