@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/25 19:52:59 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/09/24 19:10:53 guigui2 Exp $
 bin/castget
 include/libcastget.h
 lib/libcastget.la
 man/man1/castget.1
 man/man5/castgetrc.5
+share/examples/castget/castgetrc.example
+@dirrm share/examples/castget
