@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/01/06 08:20:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/09/29 21:35:39 cheusov Exp $
 #
 
 DISTNAME=	netbsd-m4-3.1
@@ -20,4 +20,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/nbm4.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/m4 ${PREFIX}/bin/nbm4
 
+#.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
