@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2007/09/22 04:20:01 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.2 2007/09/30 08:34:03 bsadewitz Exp $
 
 --- pixman/pixman.h.orig	2007-08-29 20:57:34.000000000 -0400
 +++ pixman/pixman.h
@@ -11,3 +11,12 @@ $NetBSD: patch-ah,v 1.1 2007/09/22 04:20:01 bsadewitz Exp $
  #  include <inttypes.h>
  #elif defined (_MSC_VER)
  typedef __int8 int8_t;
+@@ -498,7 +498,7 @@ pixman_bool_t   pixman_image_set_filter 
+ void            pixman_image_set_filter_params       (pixman_image_t               *image,
+ 						      pixman_fixed_t               *params,
+ 						      int                           n_params);
+-void		pixman_image_set_source_cliping      (pixman_image_t		   *image,
++void		pixman_image_set_source_clipping     (pixman_image_t		   *image,
+ 						      pixman_bool_t                 source_clipping);
+ void            pixman_image_set_alpha_map           (pixman_image_t               *image,
+ 						      pixman_image_t               *alpha_map,
