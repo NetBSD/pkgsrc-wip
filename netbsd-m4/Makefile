@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/30 18:04:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/09/30 18:07:50 cheusov Exp $
 #
 
 DISTNAME=	netbsd-m4-3.1
@@ -18,7 +18,7 @@ MAKE_ENV+=	MKCATPAGES=no
 post-patch:
 	sed -e 's|m4|nbm4|g' ${WRKSRC}/m4.1 > ${WRKSRC}/nbm4.1
 
-do-build: pre-build
+do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
 	    ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
 	    -f ${MAKE_FILE} ${BUILD_TARGET} LDADD=${LIBS:Q}
