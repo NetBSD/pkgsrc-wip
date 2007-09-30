@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/09/14 14:11:50 poppnk Exp $
+$NetBSD: distinfo,v 1.10 2007/09/30 20:35:40 ondratu Exp $
 
-SHA1 (bluez-utils-3.5.tar.gz) = 20d9d7ffbb37450a417a3aa8ebd01614fd93db4e
-RMD160 (bluez-utils-3.5.tar.gz) = 4d8c41a801d0611d03d0fb58f241ce16876d0226
-Size (bluez-utils-3.5.tar.gz) = 622427 bytes
+SHA1 (bluez-utils-3.19.tar.gz) = 69cf0cc59cac2b37ffcd80e48ba6ff9057de2ae9
+RMD160 (bluez-utils-3.19.tar.gz) = 2507e425e7715846bf22b36e57fbe8787063fbef
+Size (bluez-utils-3.19.tar.gz) = 889841 bytes
