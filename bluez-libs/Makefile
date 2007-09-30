@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/10/28 17:25:20 shattered Exp $
+# $NetBSD: Makefile,v 1.15 2007/09/30 20:30:12 ondratu Exp $
 #
 
-DISTNAME=		bluez-libs-3.5
+DISTNAME=		bluez-libs-3.19
 CATEGORIES=		net
 MASTER_SITES=		http://bluez.sourceforge.net/download/
 
