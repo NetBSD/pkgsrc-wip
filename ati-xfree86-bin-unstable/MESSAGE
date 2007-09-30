@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2007/09/30 22:29:13 briandealwis Exp $
+
+To use the driver you will need to:
+
+(1) Add at least a device section to your XF86Config similar to the
+    example in ${PREFIX}/share/examples/${PKGBASE}/XF86Config.example
+    Please be sure to add ${PREFIX}/lib/modules to your ModulePath.
+
+(2) Symlink ${PREFIX}/etc/ati to /etc/ati.  Failure to do so will result
+    in a watermark on the lower-right part of the screen saying
+    `Testing use only' and `Unsupported hardware'.
+
+Note with 8.40.4: this release may not properly initialize some
+cards and may result in a machine hang.  One work around is to
+first run `initati' (provided in this package) which will initialize
+the card using an previous release of the driver.
+
+Useful websites:
+    http://debian.wgdd.de/temp/fglrx_man/fglrx.4x.html
+    http://ati.cchtml.com
+===========================================================================

@@ -1,6 +1,10 @@
+# $NetBSD: XF86Config.initati,v 1.1 2007/09/30 22:29:13 briandealwis Exp $
+# A minimal XF86Config for initati: just sufficient to start an
+# X session using the older, stable ATI proprietary driver
+# so as to ensure the card is properly initialized.
 Section "Files"
-	ModulePath  "@X11BASE@/lib/modules"
-	ModulePath  "@INITATIDIR@"
+	ModulePath  "@PKGMODULESDIR@"
+	ModulePath  "@X11MODULESDIR@"
 EndSection
 
 Section "Device"

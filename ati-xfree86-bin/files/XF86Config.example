@@ -1,5 +1,5 @@
 # This is not a complete file: you'll need to merge this with
-# your own XF86Config.  But it contains the bits that are necessary
+# your own XF86Config.  But it demonstrates the bits that are necessary
 # to be added or revised.
 #
 # We include three server layouts to demonstrate using the driver
@@ -48,6 +48,7 @@ EndSection
 Section "Files"
 	# ensure the pkgsrc modules directory is found
 	ModulePath  "@PREFIX@/lib/modules"
+	ModulePath  "@X11BASE@/lib/modules"
 EndSection
 
 
@@ -66,10 +67,14 @@ Section "Device"
 	Option "EnablePrivateBackZ" "yes"
 	Option "no_dri"	"on"
 
-	# SWCursor is necessary for multihead on to enable a
-	# real cursor on screen1, but this unfortunately leaves mouse
-	# turds on screen0.  Unfortunately cannot configure the
-	# driver to only use software cursor on particular screens.
+	# ATI driver has a bug with multihead where the cursor
+	# cannot be displayed on the second head.
+	# SWCursor enables a cursor for both heads.
+	# Unfortunately the ATI driver's software cursor 
+	# causes screen corruption (i.e., mouse turds).
+	# Unfortunately the driver cannot be configured to only use
+	# the software cursor on a particular screen.
+	# Uncomment the following if you cannot bear not having a cursor.
 	#Option "SWCursor" "on"
 EndSection
 
@@ -78,7 +83,7 @@ Section "Device"
 	Driver      "fglrx"
 	BusID       "PCI:1:0:0"
 	Screen      1
-	Option "SWCursor" "on" # see comment above
+	#Option "SWCursor" "on" # see comment above
 EndSection
 
 

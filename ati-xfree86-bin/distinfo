@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/15 23:44:32 briandealwis Exp $
+$NetBSD: distinfo,v 1.2 2007/09/30 22:29:12 briandealwis Exp $
 
-SHA1 (ati-driver-installer-8.40.4-x86.x86_64.run) = 6260c8596529eac34fabe3437678afe6e2761490
-RMD160 (ati-driver-installer-8.40.4-x86.x86_64.run) = 8a35e68aa9108186ffd91244209377387b3313e5
-Size (ati-driver-installer-8.40.4-x86.x86_64.run) = 40335704 bytes
+SHA1 (ati-driver-installer-8.38.6-x86.x86_64.run) = a4320c6d3c6716740971c18bbd5e62b0b452cc67
+RMD160 (ati-driver-installer-8.38.6-x86.x86_64.run) = bf2485dfaf1c10b955527ea24a681085d67c7698
+Size (ati-driver-installer-8.38.6-x86.x86_64.run) = 54405244 bytes

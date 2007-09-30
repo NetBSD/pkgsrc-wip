@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/08/22 20:51:54 briandealwis Exp $
+$NetBSD: MESSAGE,v 1.3 2007/09/30 22:29:12 briandealwis Exp $
 
 To use the driver you will need to:
 
@@ -7,12 +7,9 @@ To use the driver you will need to:
     example in ${PREFIX}/share/examples/${PKGBASE}/XF86Config.example
     Please be sure to add ${PREFIX}/lib/modules to your ModulePath.
 
-(2) Symlink ${PREFIX}/etc/ati to /etc/ati.  Failure to do so will result
-    in a watermark on the lower-right part of the screen saying
-    `Testing use only' and `Unsupported hardware'.
-
-Note: some machines may require using `initati' from wip/ati-xfree86-bin-init
-to work-around an initialization issue that may lead to a complete hang.
+Known issues:
+  * no hardware cursor on second head
+  * using software cursor leaves droppings (corruption)
 
 Useful websites:
     http://debian.wgdd.de/temp/fglrx_man/fglrx.4x.html
