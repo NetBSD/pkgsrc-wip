@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/17 19:58:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/01 20:03:47 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20070105
@@ -11,11 +11,14 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	# none
 COMMENT=	NetBSD version of AWK
 
+USE_FEATURES=	nbcompat
 USE_TOOLS+=	bison lex
 MAKE_FILE=	makefile
 BUILD_TARGET=	a.out
 
 .include "../../mk/bsd.prefs.mk"
+
+MAKE_ENV+=	LIBS="${LIBS}"
 
 CFLAGS+=	-I.
 LDFLAGS+=	-lm
@@ -28,11 +31,5 @@ post-patch:
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/nbawk.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/bin/nbawk
-
-.if ${OPSYS} == "Linux"
-# Linux has no strlcat function
-.include "../../pkgtools/libnbcompat/inplace.mk"
-MAKE_ENV+=	LIBS="${LDFLAGS.nbcompat} ${LDADD.nbcompat}"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
