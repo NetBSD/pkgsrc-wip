@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/09/23 17:52:16 ghen Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/10/01 04:22:21 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -346,7 +346,7 @@ share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
 share/doc/dovecot/wiki/Migration.UW.txt
-share/doc/dovecot/wiki/Migration.Vm(2d)pop3d.txt
+share/doc/dovecot/wiki/Migration.Vm-pop3d.txt
 share/doc/dovecot/wiki/Migration.txt
 share/doc/dovecot/wiki/MissingMailboxes.txt
 share/doc/dovecot/wiki/NFS.txt
@@ -395,8 +395,12 @@ share/doc/dovecot/wiki/SystemUsers.txt
 share/doc/dovecot/wiki/TestInstallation.txt
 share/doc/dovecot/wiki/TestPop3Installation.txt
 share/doc/dovecot/wiki/TimeMovedBackwards.txt
+share/doc/dovecot/wiki/Upgrading.1.0.txt
+share/doc/dovecot/wiki/Upgrading.1.1.txt
+share/doc/dovecot/wiki/Upgrading.txt
 share/doc/dovecot/wiki/UpgradingDovecot.txt
 share/doc/dovecot/wiki/UserDatabase.ExtraFields.txt
+share/doc/dovecot/wiki/UserDatabase.NSS.txt
 share/doc/dovecot/wiki/UserDatabase.Prefetch.txt
 share/doc/dovecot/wiki/UserDatabase.Static.txt
 share/doc/dovecot/wiki/UserDatabase.txt
