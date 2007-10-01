@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/10 22:01:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/01 20:53:43 cheusov Exp $
 #
 
 DISTNAME=	netbsd-bsdgrep-20070105
@@ -11,13 +11,16 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
 
+USE_FEATURES=	nbcompat
+
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 MAKE_ENV+=	BINDIR=${PREFIX}/bin
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	MKCATPAGES=no
+MAKE_ENV+=	LDADD=${LIBS:Q}
 
-CFLAGS+=	-D'__RCSID(x)='
+CPPFLAGS+=	-Dlint
 
 post-patch:
 	sed -e 's|grep|nbgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/nbgrep.1

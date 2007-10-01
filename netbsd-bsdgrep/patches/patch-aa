@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/01/05 22:08:37 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/01 20:53:43 cheusov Exp $
 
 --- Makefile.orig	2006-05-16 00:12:21.000000000 +0300
 +++ Makefile
-@@ -2,16 +2,16 @@
+@@ -2,18 +2,18 @@
  
 -PROG=	grep
 +PROG=	nbgrep
@@ -30,4 +30,7 @@ $NetBSD: patch-aa,v 1.1 2007/01/05 22:08:37 cheusov Exp $
 +	nbgrep.1 znbgrep.1	\
 +	nbgrep.1 zenbgrep.1	\
 +	nbgrep.1 zfnbgrep.1
+ 
+-LDADD=  -lz
++LDADD+=  -lz
  
