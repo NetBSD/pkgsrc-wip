@@ -4,11 +4,12 @@
     or __STDC_VERSION__, none of which are defined normally.
     (Required to compile backend/src/Break.cc)
 
-  * figure out how to properly handle the different compilation options:
-    --disable-gnome --disable-gnomemm --disable-kde
-    # --disable-app-gtk --disable-gconf
-    # --without-arts
-    # --enable-dbus
-    # --enable-gnome
-    # --enable-gnomemm
-    # --enable-kde
+  * Test different frontend/backends:
+
+    Tested:
+	PKG_OPTIONS.workrave='gtk gconf'
+	PKG_OPTIONS.workrave='gtk xml'
+
+    Untested:
+	PKG_OPTIONS.workrave='gnome'
+	PKG_OPTIONS.workrave='kde'
