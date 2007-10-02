@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/10/02 20:58:44 briandealwis Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/02 21:07:17 briandealwis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.workrave
 PKG_SUPPORTED_OPTIONS+=		arts dbus debug distributed
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	--disable-gconf
 ###
 .if !empty(PKG_OPTIONS:Mkde)
 CONFIGURE_ARGS+=	--enable-kde
-.  include "../../devel/kdevelop/buildlink3.mk"
+.  include "../../devel/kdesdk3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-kde
 #  must explicitly include glib if no KDE for backends/src/Configurator.cc
