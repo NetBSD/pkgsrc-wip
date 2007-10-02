@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2679 2007/09/23 18:02:46 ghen Exp $
+# $Id: Makefile,v 1.2680 2007/10/02 13:44:37 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -376,6 +376,7 @@ SUBDIR+=	ggz-libggz
 SUBDIR+=	ggz-server
 SUBDIR+=	ghostpcl
 SUBDIR+=	gimmie
+SUBDIR+=	gimp-liquid-rescale
 SUBDIR+=	git
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
