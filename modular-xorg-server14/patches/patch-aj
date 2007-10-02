@@ -1,0 +1,24 @@
+$NetBSD: patch-aj,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+
+--- exa/exa_accel.c.orig	2007-10-01 01:20:36.000000000 -0400
++++ exa/exa_accel.c
+@@ -1187,7 +1187,8 @@ exaFillRegionTiled (DrawablePtr	pDrawabl
+ 	    int dstY = pBox->y1;
+ 	    int tileY;
+ 
+-	    tileY = (dstY - pDrawable->y - pPatOrg->y) % tileHeight;
++	    modulus(dstY - pDrawable->y - pPatOrg->y, tileHeight, tileY);
++
+ 	    while (height > 0) {
+ 		int width = pBox->x2 - pBox->x1;
+ 		int dstX = pBox->x1;
+@@ -1198,7 +1199,8 @@ exaFillRegionTiled (DrawablePtr	pDrawabl
+ 		    h = height;
+ 		height -= h;
+ 
+-		tileX = (dstX - pDrawable->x - pPatOrg->x) % tileWidth;
++		modulus(dstX - pDrawable->x - pPatOrg->x, tileWidth, tileX);
++
+ 		while (width > 0) {
+ 		    int w = tileWidth - tileX;
+ 		    if (w > width)

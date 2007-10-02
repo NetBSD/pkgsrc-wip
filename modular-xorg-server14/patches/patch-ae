@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+
+--- config/dbus-core.c.orig	2007-08-23 15:04:52.000000000 -0400
++++ config/dbus-core.c
+@@ -87,8 +87,10 @@ teardown(void)
+         dbus_connection_unref(bus_info.connection);
+ 
+     RemoveBlockAndWakeupHandlers(block_handler, wakeup_handler, &bus_info);
+-    RemoveGeneralSocket(bus_info.fd);
+-    bus_info.fd = -1;
++    if (bus_info.fd >= 0) {
++        RemoveGeneralSocket(bus_info.fd);
++        bus_info.fd = -1;
++    }
+     bus_info.connection = NULL;
+ 
+     for (hook = bus_info.hooks; hook; hook = hook->next) {

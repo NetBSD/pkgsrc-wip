@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+
+--- Xi/exevents.c.orig	2007-08-23 15:04:52.000000000 -0400
++++ Xi/exevents.c
+@@ -73,6 +73,10 @@ SOFTWARE.
+ #include "dixgrabs.h"	/* CreateGrab() */
+ #include "scrnintstr.h"
+ 
++#ifdef XKB
++#include "xkbsrv.h"
++#endif
++
+ #define WID(w) ((w) ? ((w)->drawable.id) : 0)
+ #define AllModifiersMask ( \
+ 	ShiftMask | LockMask | ControlMask | Mod1Mask | Mod2Mask | \
+@@ -942,7 +946,7 @@ SetModifierMapping(ClientPtr client, Dev
+ }
+ 
+ void
+-SendDeviceMappingNotify(CARD8 request,
++SendDeviceMappingNotify(ClientPtr client, CARD8 request,
+ 			KeyCode firstKeyCode, CARD8 count, DeviceIntPtr dev)
+ {
+     xEvent event;
+@@ -957,6 +961,11 @@ SendDeviceMappingNotify(CARD8 request,
+ 	ev->count = count;
+     }
+ 
++#ifdef XKB
++    if (request == MappingKeyboard || request == MappingModifier)
++        XkbApplyMappingChange(dev, request, firstKeyCode, count, client);
++#endif
++
+     SendEventToAllWindows(dev, DeviceMappingNotifyMask, (xEvent *) ev, 1);
+ }
+ 
+@@ -992,7 +1001,7 @@ ChangeKeyMapping(ClientPtr client,
+     keysyms.map = map;
+     if (!SetKeySymsMap(&k->curKeySyms, &keysyms))
+ 	return BadAlloc;
+-    SendDeviceMappingNotify(MappingKeyboard, firstKeyCode, keyCodes, dev);
++    SendDeviceMappingNotify(client, MappingKeyboard, firstKeyCode, keyCodes, dev);
+     return client->noClientException;
+ }
+ 
