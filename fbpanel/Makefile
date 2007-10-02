@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/06/13 05:42:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2007/10/02 21:22:38 briandealwis Exp $
 #
 
-DISTNAME=		fbpanel-4.9
+DISTNAME=		fbpanel-4.12
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fbpanel/}
 EXTRACT_SUFX=		.tgz
