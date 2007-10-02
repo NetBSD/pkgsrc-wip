@@ -1,14 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+$NetBSD: patch-ae,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
 
---- src/audio.c.orig	2007-06-03 19:43:01.000000000 -0400
-+++ src/audio.c
-@@ -7,9 +7,7 @@
- */
+--- src/common.c.orig	2007-10-01 23:58:40.000000000 -0400
++++ src/common.c
+@@ -122,7 +122,7 @@ unsigned long samples_to_bytes(unsigned 
+ #endif
  
- #include <stdlib.h>
--#include "config.h"
- #include "mpg123.h"
--#include "debug.h"
  
- void audio_info_struct_init(struct audio_info_struct *ai)
+-#if !defined(WIN32) && !defined(GENERIC)
++#if !defined(WIN32) && defined(HAVE_SIGNAL_H)
+ void (*catchsignal(int signum, void(*handler)()))()
  {
+   struct sigaction new_sa;

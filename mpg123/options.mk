@@ -1,83 +1,115 @@
-PKG_OPTIONS_VAR+=	PKG_OPTIONS.mpg123
-PKG_SUPPORTED_OPTIONS+= jack portaudio esound nas sdl
+# $NetBSD: options.mk,v 1.3 2007/10/02 05:29:43 bsadewitz Exp $
+PKG_OPTIONS_VAR=	PKG_OPTIONS.mpg123
+PKG_OPTIONS_SET.audio= jack portaudio esound nas sdl sun
 
-CHECK_BUILTIN.oss:=	yes
-. include "../../mk/oss.builtin.mk"
-CHECK_BUILTIN.oss:=	no
+.include "../../mk/oss.buildlink3.mk"
 
-.if !empty(IS_BUILTIN.oss:M[Yy][Ee][Ss])
-PKG_SUPPORTED_OPTIONS+= oss
-PKG_SUGGESTED_OPTIONS+= oss
+.if !empty(OSS_TYPE:Mnative)
+PKG_OPTIONS_SET.audio+=	oss
+PKG_SUGGESTED_OPTIONS+= mpg123-default-oss
 .endif
+
+PKG_OPTIONS_SET.default=	${PKG_OPTIONS_SET.audio:@.o.@mpg123-default-${.o.}@}
+
+#
+# !!! REDUCTIO AD ABSURDUM WARNING !!!
+#
+# XXX This can result in a duplicate option; this build system should be fixed
+# to make sense!  As of now, we must provide defaults for every scenario.
+#
+PKG_OPTIONS_NONEMPTY_SETS=	audio default
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-PKG_SUPPORTED_OPTIONS+=	mpg123-macosx
-PKG_SUGGESTED_OPTIONS+= mpg123-macosx
-
-.  elif ${OPSYS} == "HPUX"
-PKG_SUPPORTED_OPTIONS+=	mpg123-hpux
-PKG_SUGGESTED_OPTIONS+= alib
-
-.  elif ${OPSYS} == "IRIX"
-PKG_SUPPORTED_OPTIONS+=	mpg123-irix
-PKG_SUGGESTED_OPTIONS+= mpg123-irix
-
-.  elif ${OPSYS} == "Solaris"		# Doesn't work with NetBSD (yet)
-PKG_SUPPORTED_OPTIONS+=	sun
-PKG_SUGGESTED_OPTIONS+= sun
-.endif
+#
+# XXX notyet
+#
+#.if ${OPSYS} == "Darwin"
+#PKG_SUPPORTED_OPTIONS+=	mpg123-macosx
+#PKG_SUGGESTED_OPTIONS+= mpg123-macosx
+#
+#.  elif ${OPSYS} == "HPUX"
+#PKG_SUPPORTED_OPTIONS+=	mpg123-hpux
+#PKG_SUGGESTED_OPTIONS+= alib
+#
+#.  elif ${OPSYS} == "IRIX"
+#PKG_SUPPORTED_OPTIONS+=	mpg123-irix
+#PKG_SUGGESTED_OPTIONS+= mpg123-irix
+#
+#.  elif ${OPSYS} == "Solaris"		# Doesn't work with NetBSD (yet)
+#PKG_SUPPORTED_OPTIONS+=	sun
+#PKG_SUGGESTED_OPTIONS+= sun
+#.endif
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--with-audio=oss
+MPG123_DFLT_OUTPUT=	${PKG_OPTIONS:Mmpg123-default-*:S/mpg123-default-//}
 
-SUBST_CLASSES+=		ossdev
-SUBST_FILES.ossdev=	src/audio_oss.c
-SUBST_STAGE.ossdev=	pre-build
-SUBST_MESSAGE.ossdev=	Setting OSS device.
-SUBST_VARS.ossdev=	DEVOSSAUDIO DEVOSSSOUND
+CONFIGURE_ARGS+=	--with-default-audio=${MPG123_DFLT_OUTPUT}
 
-.  include "../../mk/oss.buildlink3.mk"
+.if !empty(PKG_OPTIONS:Moss) && ${OSS_TYPE} != "none"
+CONFIGURE_ARGS+=	--with-default-audio=oss
+PLIST_SUBST+=		OSS=""
+CONFIGURE_ENV=		HAVE_OSS=""
+
+SUBST_CLASSES+=		oss
+SUBST_FILES.oss=	configure.ac src/output/oss.c src/output/Makefile.am
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Setting OSS device.
+SUBST_VARS.oss=		DEVOSSAUDIO DEVOSSSOUND LIBOSSAUDIO
+.else
+PLIST_SUBST+=		OSS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-CONFIGURE_ARGS+=	--with-audio=jack
-
+PLIST_SUBST+=		JACK=""
+CONFIGURE_ENV+=		HAVE_JACK="yes"
 .  include "../../wip/jack/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_JACK="no"
+PLIST_SUBST+=		JACK="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
-CONFIGURE_ARGS+=	--with-audio=sdl
-
-.  include "../../devel/SDL/buildlink3.mk
+PLIST_SUBST+=		SDL=""
+CONFIGURE_ENV+=		HAVE_SDL="yes"
+.  include "../../devel/SDL/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_SDL="no"
+PLIST_SUBST+=		SDL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mnas)
-CONFIGURE_ARGS+=	--with-audio=nas
-
+PLIST_SUBST+=		NAS=""
+CONFIGURE_ENV+=		HAVE_NAS="yes"
 .  include "../../audio/nas/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_NAS="no"
+PLIST_SUBST+=		NAS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-CONFIGURE_ARGS+=	--with-audio=portaudio
-
+PLIST_SUBST+=		PORTAUDIO=""
+CONFIGURE_ENV+=		HAVE_PORTAUDIO="yes"
 .  include "../../audio/portaudio/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_PORTAUDIO="no"
+PLIST_SUBST+=		PORTAUDIO="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--with-esd
-
+PLIST_SUBST+=		ESD=""
+CONFIGURE_ENV+=		HAVE_ESD="yes"
 .  include "../../audio/esound/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_ESD="no"
+PLIST_SUBST+=		ESD="@comment "
 .endif
 
-.for _opt in ${PKG_OPTIONS}
-CONFIGURE_ARGS+=	--with-audio=${_opt:Q}
-SUBST_VARS.options+=	${_opt:C/mpg123-//:tu}
-.endfor
-
-.for _opt in ${PKG_SUPPORT
-
-.endfor
+.if !empty(PKG_OPTIONS:Msun)
+PLIST_SUBST+=		SUN=""
+CONFIGURE_ENV+=		HAVE_SUN="yes"
+.else
+CONFIGURE_ENV+=		HAVE_SUN="no"
+PLIST_SUBST+=		SUN="@comment "
+.endif

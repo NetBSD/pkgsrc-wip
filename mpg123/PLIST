@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2007/06/29 02:29:23 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
 bin/mpg123
-${PKGMANDIR}/man1/mpg123.1
+lib/mpg123/output_dummy.la
+${OSS}lib/mpg123/output_oss.la
+${JACK}lib/mpg123/output_jack.la
+${PORTAUDIO}lib/mpg123/output_portaudio.la
+${NAS}lib/mpg123/output_nas.la
+${SUN}lib/mpg123/output_sun.la
+${ESD}lib/mpg123/output_esd.la
+man/man1/mpg123.1
+@dirrm lib/mpg123

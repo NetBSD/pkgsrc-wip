@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+$NetBSD: patch-ac,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
 
---- man1/mpg123.1.orig	2007-06-03 19:43:01.000000000 -0400
-+++ man1/mpg123.1
-@@ -1,4 +1,4 @@
--.TH mpg123 1 "1 Jan 2007"
-+.TH mpg123 1 "4 Jun 2007"
- .SH NAME
- mpg123 \- play audio MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)
- .SH SYNOPSIS
+--- autogen.sh.orig	2007-10-01 23:45:35.000000000 -0400
++++ autogen.sh
+@@ -81,4 +81,4 @@ run_cmd automake --add-missing --copy
+ run_cmd autoconf
+ 
+ 
+-$srcdir/configure --enable-debug && echo
++#$srcdir/configure --enable-debug && echo

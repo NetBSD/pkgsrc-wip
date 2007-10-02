@@ -1,3 +1,3 @@
--- Prepare a tarball with upstream merges so I don't have this morass of patches
--- fool dumb configure script into turning off/on options when we actually want
+-- distribution patch instead of SVN?
+-- FIX CONFIGURE SCRIPT!@#!@#
 -- test! test! test! ;)

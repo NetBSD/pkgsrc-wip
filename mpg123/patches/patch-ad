@@ -1,11 +1,29 @@
-$NetBSD: patch-ad,v 1.1 2007/06/29 02:29:24 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
 
---- src/Makefile.am.orig	2007-06-03 19:43:01.000000000 -0400
-+++ src/Makefile.am
-@@ -226,5 +226,5 @@ libcpu_x86_a_SOURCES = \
+--- src/output/Makefile.am.orig	2007-10-02 00:25:37.000000000 -0400
++++ src/output/Makefile.am
+@@ -82,6 +82,7 @@ if HAVE_OSS
+ pkglib_LTLIBRARIES += output_oss.la
+ output_oss_la_SOURCES = oss.c
+ output_oss_la_LDFLAGS = -module -avoid-version
++output_oss_la_LIBADD = @LIBOSSAUDIO@
+ endif
  
- # explicit preprocessing since mingw32 does not honor the big .S
- .S.o:
--	$(CPP) $(CPPFLAGS) $< > $<.s
-+	$(CPP) $(AM_CPPFLAGS) $(DEFAULT_INCLUDES) $(CPPFLAGS) $< > $<.s
- 	$(CCAS) $(CCASFLAGS) -c -o $@ $<.s && rm $<.s
+ if HAVE_PORTAUDIO
+@@ -113,11 +114,11 @@ endif
+ #output_sgi_la_LDFLAGS = -module -avoid-version
+ #endif
+ 
+-if HAVE_SUN
+-pkglib_LTLIBRARIES += output_sun.la
+-output_sun_la_SOURCES = sun.c
+-output_sun_la_LDFLAGS = -module -avoid-version
+-endif
++@SUN@if HAVE_SUN
++@SUN@pkglib_LTLIBRARIES += output_sun.la
++@SUN@output_sun_la_SOURCES = sun.c
++@SUN@output_sun_la_LDFLAGS = -module -avoid-version
++@SUN@endif
+ 
+ #if HAVE_WIN32
+ #pkglib_LTLIBRARIES += output_win32.la
