@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/09/17 21:43:21 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/03 22:06:39 bsadewitz Exp $
 #
 
 DISTNAME=	aria2-0.11.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,10 +26,6 @@ TEST_TARGET=		check
 .include "options.mk"
 
 .include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-[4-9]*)
-CFLAGS+=	-fvisibility-inlines-hidden
-.endif
 
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 BUILDLINK_DEPMETHOD.cppunit?=	build
