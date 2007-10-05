@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/04/23 20:03:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/05 13:41:11 cheusov Exp $
 
 DISTNAME=	sharatype-2.0.5
 PKGNAME=	a2ps-${DISTNAME}
 CATEGORIES=	print
-MASTER_SITES=	http://ftp.45.free.net/pub/fonts/type1/
+MASTER_SITES=	http://ftp.wagner.pp.ru/pub/fonts/type1/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://ftp.45.free.net/pub/fonts/type1/
