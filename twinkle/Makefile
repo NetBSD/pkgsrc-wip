@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/06 22:40:22 othyro Exp $
 #
 
 DISTNAME=		twinkle-1.1
 PKGREVISION=		1
-CATEGORIES=		audio chat
+CATEGORIES=		audio chat net
 MASTER_SITES=		http://www.xs4all.nl/~mfnboer/twinkle/download/
 
 MAINTAINER=		pancake@phreaker.net
@@ -17,10 +17,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		have_lrelease=${QTDIR}/bin/lrelease
 # for broken jpeg detection
 CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.commoncpp2}/include/cc++2
 
 SUBST_CLASSES+=		boost
 SUBST_MESSAGE.boost=	Fix boost library name.
-SUBST_STAGE.boost+=	pre-configure
+SUBST_STAGE.boost=	pre-configure
 SUBST_FILES.boost=	configure
 SUBST_SED.boost+=	-e 's,boost_regex-gcc,boost_regex-mt,'
 
