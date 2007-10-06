@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+$NetBSD: patch-ab,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
 
---- aclocal.m4.orig	2007-08-15 23:34:20.000000000 +1000
+--- aclocal.m4.orig	2007-08-12 09:34:34.000000000 +1000
 +++ aclocal.m4
 @@ -1,7 +1,7 @@
 -# generated automatically by aclocal 1.10 -*- Autoconf -*-
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  
  # AC_PROVIDE_IFELSE(MACRO-NAME, IF-PROVIDED, IF-NOT-PROVIDED)
-@@ -148,7 +143,7 @@ rm="rm -f"
+@@ -148,7 +143,7 @@
  default_ofile=libtool
  can_build_shared=yes
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # which needs '.lib').
  libext=a
  ltmain="$ac_aux_dir/ltmain.sh"
-@@ -168,7 +163,6 @@ test -z "$AR_FLAGS" && AR_FLAGS=cru
+@@ -168,7 +163,6 @@
  test -z "$AS" && AS=as
  test -z "$CC" && CC=cc
  test -z "$LTCC" && LTCC=$CC
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  test -z "$DLLTOOL" && DLLTOOL=dlltool
  test -z "$LD" && LD=ld
  test -z "$LN_S" && LN_S="ln -s"
-@@ -188,10 +182,10 @@ old_postuninstall_cmds=
+@@ -188,10 +182,10 @@
  if test -n "$RANLIB"; then
    case $host_os in
    openbsd*)
@@ -58,7 +58,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      ;;
    esac
    old_archive_cmds="$old_archive_cmds~\$RANLIB \$oldlib"
-@@ -239,9 +233,6 @@ AC_DEFUN([_LT_AC_SYS_COMPILER],
+@@ -239,9 +233,6 @@
  # If no C compiler was specified, use CC.
  LTCC=${LTCC-"$CC"}
  
@@ -68,7 +68,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # Allow CC to be a program name with arguments.
  compiler=$CC
  ])# _LT_AC_SYS_COMPILER
-@@ -270,7 +261,7 @@ cc_basename=`$echo "X$cc_temp" | $Xsed -
+@@ -270,7 +261,7 @@
  AC_DEFUN([_LT_COMPILER_BOILERPLATE],
  [ac_outfile=conftest.$ac_objext
  printf "$lt_simple_compile_test_code" >conftest.$ac_ext
@@ -77,7 +77,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  _lt_compiler_boilerplate=`cat conftest.err`
  $rm conftest*
  ])# _LT_COMPILER_BOILERPLATE
-@@ -283,7 +274,7 @@ $rm conftest*
+@@ -283,7 +274,7 @@
  AC_DEFUN([_LT_LINKER_BOILERPLATE],
  [ac_outfile=conftest.$ac_objext
  printf "$lt_simple_link_test_code" >conftest.$ac_ext
@@ -86,7 +86,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  _lt_linker_boilerplate=`cat conftest.err`
  $rm conftest*
  ])# _LT_LINKER_BOILERPLATE
-@@ -368,8 +359,8 @@ if test "X${echo_test_string+set}" != Xs
+@@ -368,8 +359,8 @@
  # find a string as large as possible, as long as the shell can cope with it
    for cmd in 'sed 50q "[$]0"' 'sed 20q "[$]0"' 'sed 10q "[$]0"' 'sed 2q "[$]0"' 'echo test'; do
      # expected sizes: less than 2Kb, 1Kb, 512 bytes, 16 bytes, ...
@@ -97,7 +97,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
         (test "X$echo_test_string" = "X$echo_test_string") 2>/dev/null
      then
        break
-@@ -538,7 +529,7 @@ x86_64-*linux*|ppc*-*linux*|powerpc*-*li
+@@ -538,7 +529,7 @@
    # Find out which ABI we are using.
    echo 'int i;' > conftest.$ac_ext
    if AC_TRY_EVAL(ac_compile); then
@@ -106,7 +106,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      *32-bit*)
        case $host in
          x86_64-*linux*)
-@@ -589,22 +580,6 @@ x86_64-*linux*|ppc*-*linux*|powerpc*-*li
+@@ -589,22 +580,6 @@
      CFLAGS="$SAVE_CFLAGS"
    fi
    ;;
@@ -129,7 +129,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_PROVIDE_IFELSE([AC_LIBTOOL_WIN32_DLL],
  [*-*-cygwin* | *-*-mingw* | *-*-pw32*)
    AC_CHECK_TOOL(DLLTOOL, dlltool, false)
-@@ -636,7 +611,7 @@ AC_CACHE_CHECK([$1], [$2],
+@@ -636,7 +611,7 @@
     # with a dollar sign (not a hyphen), so the echo should work correctly.
     # The option is referenced via a variable to avoid confusing sed.
     lt_compile=`echo "$ac_compile" | $SED \
@@ -138,7 +138,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
     -e 's: [[^ ]]*conftest\.: $lt_compiler_flag&:; t' \
     -e 's:$: $lt_compiler_flag:'`
     (eval echo "\"\$as_me:__oline__: $lt_compile\"" >&AS_MESSAGE_LOG_FD)
-@@ -647,9 +622,9 @@ AC_CACHE_CHECK([$1], [$2],
+@@ -647,9 +622,9 @@
     if (exit $ac_status) && test -s "$ac_outfile"; then
       # The compiler can only warn and ignore the option if not recognized
       # So say no if there are warnings other than the usual output.
@@ -151,7 +151,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
         $2=yes
       fi
     fi
-@@ -675,13 +650,13 @@ AC_DEFUN([AC_LIBTOOL_LINKER_OPTION],
+@@ -675,13 +650,13 @@
     LDFLAGS="$LDFLAGS $3"
     printf "$lt_simple_link_test_code" > conftest.$ac_ext
     if (eval $ac_link 2>conftest.err) && test -s conftest$ac_exeext; then
@@ -168,7 +168,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
         if diff conftest.exp conftest.er2 >/dev/null; then
           $2=yes
         fi
-@@ -750,42 +725,25 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
+@@ -750,18 +725,12 @@
      elif test -x /usr/sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/usr/sbin/sysctl -n kern.argmax`
      else
@@ -188,14 +188,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    osf*)
      # Dr. Hans Ekkehard Plesser reports seeing a kernel panic running configure
      # due to this test when exec_disable_arg_limit is 1 on Tru64. It is not
-     # nice to cause kernel panics so lets avoid the loop below.
-     # First set a reasonable default.
-     lt_cv_sys_max_cmd_len=16384
--    #
-+    # 
-     if test -x /sbin/sysconfig; then
-       case `/sbin/sysconfig -q proc exec_disable_arg_limit` in
-         *1*) lt_cv_sys_max_cmd_len=-1 ;;
+@@ -775,17 +744,6 @@
        esac
      fi
      ;;
@@ -213,7 +206,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    *)
      # If test is not a shell built-in, we'll probably end up computing a
      # maximum length that is only half of the actual maximum length, but
-@@ -817,7 +775,7 @@ fi
+@@ -817,7 +775,7 @@
  
  
  # _LT_AC_CHECK_DLFCN
@@ -222,7 +215,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([_LT_AC_CHECK_DLFCN],
  [AC_CHECK_HEADERS(dlfcn.h)dnl
  ])# _LT_AC_CHECK_DLFCN
-@@ -825,7 +783,7 @@ AC_DEFUN([_LT_AC_CHECK_DLFCN],
+@@ -825,7 +783,7 @@
  
  # _LT_AC_TRY_DLOPEN_SELF (ACTION-IF-TRUE, ACTION-IF-TRUE-W-USCORE,
  #                           ACTION-IF-FALSE, ACTION-IF-CROSS-COMPILING)
@@ -231,7 +224,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([_LT_AC_TRY_DLOPEN_SELF],
  [AC_REQUIRE([_LT_AC_CHECK_DLFCN])dnl
  if test "$cross_compiling" = yes; then :
-@@ -891,19 +849,17 @@ int main ()
+@@ -891,19 +849,17 @@
        else if (dlsym( self,"_fnord")) status = $lt_dlneed_uscore;
        /* dlclose (self); */
      }
@@ -253,7 +246,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      esac
    else :
      # compilation failed
-@@ -915,7 +871,7 @@ rm -fr conftest*
+@@ -915,7 +871,7 @@
  
  
  # AC_LIBTOOL_DLOPEN_SELF
@@ -262,7 +255,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([AC_LIBTOOL_DLOPEN_SELF],
  [AC_REQUIRE([_LT_AC_CHECK_DLFCN])dnl
  if test "x$enable_dlopen" != xyes; then
-@@ -986,7 +942,7 @@ else
+@@ -986,7 +942,7 @@
      test "x$ac_cv_header_dlfcn_h" = xyes && CPPFLAGS="$CPPFLAGS -DHAVE_DLFCN_H"
  
      save_LDFLAGS="$LDFLAGS"
@@ -271,7 +264,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
      save_LIBS="$LIBS"
      LIBS="$lt_cv_dlopen_libs $LIBS"
-@@ -999,7 +955,7 @@ else
+@@ -999,7 +955,7 @@
      ])
  
      if test "x$lt_cv_dlopen_self" = xyes; then
@@ -280,7 +273,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        AC_CACHE_CHECK([whether a statically linked program can dlopen itself],
      	  lt_cv_dlopen_self_static, [dnl
  	  _LT_AC_TRY_DLOPEN_SELF(
-@@ -1047,7 +1003,7 @@ AC_CACHE_CHECK([if $compiler supports -c
+@@ -1047,7 +1003,7 @@
     # Note that $ac_compile itself does not contain backslashes and begins
     # with a dollar sign (not a hyphen), so the echo should work correctly.
     lt_compile=`echo "$ac_compile" | $SED \
@@ -289,7 +282,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
     -e 's: [[^ ]]*conftest\.: $lt_compiler_flag&:; t' \
     -e 's:$: $lt_compiler_flag:'`
     (eval echo "\"\$as_me:__oline__: $lt_compile\"" >&AS_MESSAGE_LOG_FD)
-@@ -1059,13 +1015,13 @@ AC_CACHE_CHECK([if $compiler supports -c
+@@ -1059,13 +1015,13 @@
     then
       # The compiler can only warn and ignore the option if not recognized
       # So say no if there are warnings
@@ -307,7 +300,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
     $rm conftest*
     # SGI C++ compiler will create directory out/ii_files/ for
     # template instantiation
-@@ -1325,8 +1281,7 @@ cygwin* | mingw* | pw32*)
+@@ -1325,8 +1281,7 @@
        dlpath=`$SHELL 2>&1 -c '\''. $dir/'\''\${base_file}'\''i;echo \$dlname'\''`~
        dldir=$destdir/`dirname \$dlpath`~
        test -d \$dldir || mkdir -p \$dldir~
@@ -317,7 +310,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      postuninstall_cmds='dldll=`$SHELL 2>&1 -c '\''. $file; echo \$dlname'\''`~
        dlpath=$dir/\$dldll~
         $rm \$dlpath'
-@@ -1379,7 +1334,7 @@ darwin* | rhapsody*)
+@@ -1379,7 +1334,7 @@
    soname_spec='${libname}${release}${major}$shared_ext'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
@@ -326,7 +319,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    # Apple's gcc prints 'gcc -print-search-dirs' doesn't operate the same.
    if test "$GCC" = yes; then
      sys_lib_search_path_spec=`$CC -print-search-dirs | tr "\n" "$PATH_SEPARATOR" | sed -e 's/libraries:/@libraries:/' | tr "@" "\n" | grep "^libraries:" | sed -e "s/^libraries://" -e "s,=/,/,g" -e "s,$PATH_SEPARATOR, ,g" -e "s,.*,& /lib /usr/lib /usr/local/lib,g"`
-@@ -1402,17 +1357,22 @@ freebsd1*)
+@@ -1402,17 +1357,22 @@
    dynamic_linker=no
    ;;
  
@@ -357,7 +350,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    version_type=freebsd-$objformat
    case $version_type in
      freebsd-elf*)
-@@ -1434,15 +1394,10 @@ freebsd* | dragonfly*)
+@@ -1434,15 +1394,10 @@
      shlibpath_overrides_runpath=yes
      hardcode_into_libs=yes
      ;;
@@ -374,7 +367,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    esac
    ;;
  
-@@ -1462,7 +1417,7 @@ hpux9* | hpux10* | hpux11*)
+@@ -1462,7 +1417,7 @@
    version_type=sunos
    need_lib_prefix=no
    need_version=no
@@ -383,7 +376,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    ia64*)
      shrext_cmds='.so'
      hardcode_into_libs=yes
-@@ -1502,18 +1457,6 @@ hpux9* | hpux10* | hpux11*)
+@@ -1502,18 +1457,6 @@
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -402,7 +395,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
-@@ -1557,7 +1500,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -1557,7 +1500,7 @@
    ;;
  
  # This must be Linux ELF.
@@ -411,7 +404,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    version_type=linux
    need_lib_prefix=no
    need_version=no
-@@ -1586,7 +1529,7 @@ linux* | k*bsd*-gnu)
+@@ -1586,7 +1529,7 @@
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -420,7 +413,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    version_type=linux
    need_lib_prefix=no
    need_version=no
-@@ -1595,7 +1538,7 @@ netbsdelf*-gnu)
+@@ -1595,7 +1538,7 @@
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=no
    hardcode_into_libs=yes
@@ -429,7 +422,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    ;;
  
  netbsd*)
-@@ -1635,7 +1578,6 @@ nto-qnx*)
+@@ -1635,7 +1578,6 @@
  
  openbsd*)
    version_type=sunos
@@ -437,7 +430,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
    case $host_os in
-@@ -1679,6 +1621,13 @@ osf3* | osf4* | osf5*)
+@@ -1679,6 +1621,13 @@
    sys_lib_dlsearch_path_spec="$sys_lib_search_path_spec"
    ;;
  
@@ -451,7 +444,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  solaris*)
    version_type=linux
    need_lib_prefix=no
-@@ -1704,7 +1653,7 @@ sunos4*)
+@@ -1704,7 +1653,7 @@
    need_version=yes
    ;;
  
@@ -460,7 +453,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    version_type=linux
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
-@@ -1737,29 +1686,6 @@ sysv4*MP*)
+@@ -1737,29 +1686,6 @@
    fi
    ;;
  
@@ -490,7 +483,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  uts4*)
    version_type=linux
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -1773,11 +1699,6 @@ uts4*)
+@@ -1773,11 +1699,6 @@
  esac
  AC_MSG_RESULT([$dynamic_linker])
  test "$dynamic_linker" = no && can_build_shared=no
@@ -502,7 +495,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  ])# AC_LIBTOOL_SYS_DYNAMIC_LINKER
  
  
-@@ -1802,9 +1723,6 @@ if test -f "$ltmain" && test -n "$tagnam
+@@ -1802,9 +1723,6 @@
        AC_MSG_WARN([using `LTCC=$LTCC', extracted from `$ofile'])
      fi
    fi
@@ -512,7 +505,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
    # Extract list of available tagged configurations in $ofile.
    # Note that this assumes the entire list is on one line.
-@@ -1895,7 +1813,7 @@ AC_DEFUN([AC_LIBTOOL_DLOPEN],
+@@ -1895,7 +1813,7 @@
  
  # AC_LIBTOOL_WIN32_DLL
  # --------------------
@@ -521,7 +514,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([AC_LIBTOOL_WIN32_DLL],
  [AC_BEFORE([$0], [AC_LIBTOOL_SETUP])
  ])# AC_LIBTOOL_WIN32_DLL
-@@ -1933,7 +1851,7 @@ AC_ARG_ENABLE([shared],
+@@ -1933,7 +1851,7 @@
  
  # AC_DISABLE_SHARED
  # -----------------
@@ -530,7 +523,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([AC_DISABLE_SHARED],
  [AC_BEFORE([$0],[AC_LIBTOOL_SETUP])dnl
  AC_ENABLE_SHARED(no)
-@@ -2069,7 +1987,7 @@ dnl not every word.  This closes a longs
+@@ -2069,7 +1987,7 @@
        if test -n "$file_magic_test_file"; then
  	case $deplibs_check_method in
  	"file_magic "*)
@@ -539,7 +532,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	  MAGIC_CMD="$lt_cv_path_MAGIC_CMD"
  	  if eval $file_magic_cmd \$file_magic_test_file 2> /dev/null |
  	    $EGREP "$file_magic_regex" > /dev/null; then
-@@ -2179,7 +2097,7 @@ AC_CACHE_VAL(lt_cv_path_LD,
+@@ -2179,7 +2097,7 @@
      if test -f "$ac_dir/$ac_prog" || test -f "$ac_dir/$ac_prog$ac_exeext"; then
        lt_cv_path_LD="$ac_dir/$ac_prog"
        # Check to see if the program is GNU ld.  I'd rather use --version,
@@ -548,7 +541,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        # Break only if it was the GNU/non-GNU ld that we prefer.
        case `"$lt_cv_path_LD" -v 2>&1 </dev/null` in
        *GNU* | *'with BFD'*)
-@@ -2211,7 +2129,7 @@ AC_PROG_LD_GNU
+@@ -2211,7 +2129,7 @@
  AC_DEFUN([AC_PROG_LD_GNU],
  [AC_REQUIRE([AC_PROG_EGREP])dnl
  AC_CACHE_CHECK([if the linker ($LD) is GNU ld], lt_cv_prog_gnu_ld,
@@ -557,7 +550,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  case `$LD -v 2>&1 </dev/null` in
  *GNU* | *'with BFD'*)
    lt_cv_prog_gnu_ld=yes
-@@ -2241,7 +2159,7 @@ reload_cmds='$LD$reload_flag -o $output$
+@@ -2241,7 +2159,7 @@
  case $host_os in
    darwin*)
      if test "$GCC" = yes; then
@@ -566,7 +559,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      else
        reload_cmds='$LD$reload_flag -o $output$reload_objs'
      fi
-@@ -2303,7 +2221,7 @@ darwin* | rhapsody*)
+@@ -2303,7 +2221,7 @@
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -575,7 +568,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      case $host_cpu in
      i*86 )
-@@ -2325,7 +2243,7 @@ gnu*)
+@@ -2325,7 +2243,7 @@
  
  hpux10.20* | hpux11*)
    lt_cv_file_magic_cmd=/usr/bin/file
@@ -584,7 +577,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    ia64*)
      lt_cv_deplibs_check_method='file_magic (s[[0-9]][[0-9]][[0-9]]|ELF-[[0-9]][[0-9]]) shared object file - IA64'
      lt_cv_file_magic_test_file=/usr/lib/hpux32/libc.so
-@@ -2341,11 +2259,6 @@ hpux10.20* | hpux11*)
+@@ -2341,11 +2259,6 @@
    esac
    ;;
  
@@ -596,7 +589,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -2357,11 +2270,11 @@ irix5* | irix6* | nonstopux*)
+@@ -2357,11 +2270,11 @@
    ;;
  
  # This must be Linux ELF.
@@ -610,7 +603,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so\.[[0-9]]+\.[[0-9]]+|_pic\.a)$'
    else
-@@ -2391,11 +2304,15 @@ osf3* | osf4* | osf5*)
+@@ -2391,11 +2304,15 @@
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -627,7 +620,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    case $host_vendor in
    motorola)
      lt_cv_deplibs_check_method='file_magic ELF [[0-9]][[0-9]]*-bit [[ML]]SB (shared object|dynamic lib) M[[0-9]][[0-9]]* Version [[0-9]]'
-@@ -2416,13 +2333,10 @@ sysv4 | sysv4.3*)
+@@ -2416,13 +2333,10 @@
    siemens)
      lt_cv_deplibs_check_method=pass_all
      ;;
@@ -642,7 +635,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    lt_cv_deplibs_check_method=pass_all
    ;;
  esac
-@@ -2442,43 +2356,36 @@ AC_DEFUN([AC_PROG_NM],
+@@ -2442,16 +2356,11 @@
    # Let the user override the test.
    lt_cv_path_NM="$NM"
  else
@@ -651,66 +644,30 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
 -    lt_nm_to_check="$lt_nm_to_check nm"
 -  fi
 -  for lt_tmp_nm in $lt_nm_to_check; do
--    lt_save_ifs="$IFS"; IFS=$PATH_SEPARATOR
+     lt_save_ifs="$IFS"; IFS=$PATH_SEPARATOR
 -    for ac_dir in $PATH /usr/ccs/bin/elf /usr/ccs/bin /usr/ucb /bin; do
--      IFS="$lt_save_ifs"
--      test -z "$ac_dir" && ac_dir=.
--      tmp_nm="$ac_dir/$lt_tmp_nm"
--      if test -f "$tmp_nm" || test -f "$tmp_nm$ac_exeext" ; then
--	# Check to see if the nm accepts a BSD-compat flag.
--	# Adding the `sed 1q' prevents false positives on HP-UX, which says:
--	#   nm: unknown option "B" ignored
--	# Tru64's nm complains that /dev/null is an invalid object file
--	case `"$tmp_nm" -B /dev/null 2>&1 | sed '1q'` in
--	*/dev/null* | *'Invalid file or object type'*)
--	  lt_cv_path_NM="$tmp_nm -B"
-+  lt_save_ifs="$IFS"; IFS=$PATH_SEPARATOR
 +  for ac_dir in $PATH /usr/ccs/bin /usr/ucb /bin; do
-+    IFS="$lt_save_ifs"
-+    test -z "$ac_dir" && ac_dir=.
+       IFS="$lt_save_ifs"
+       test -z "$ac_dir" && ac_dir=.
+-      tmp_nm="$ac_dir/$lt_tmp_nm"
 +    tmp_nm="$ac_dir/${ac_tool_prefix}nm"
-+    if test -f "$tmp_nm" || test -f "$tmp_nm$ac_exeext" ; then
-+      # Check to see if the nm accepts a BSD-compat flag.
-+      # Adding the `sed 1q' prevents false positives on HP-UX, which says:
-+      #   nm: unknown option "B" ignored
-+      # Tru64's nm complains that /dev/null is an invalid object file
-+      case `"$tmp_nm" -B /dev/null 2>&1 | sed '1q'` in
-+      */dev/null* | *'Invalid file or object type'*)
-+	lt_cv_path_NM="$tmp_nm -B"
-+	break
-+        ;;
-+      *)
-+	case `"$tmp_nm" -p /dev/null 2>&1 | sed '1q'` in
-+	*/dev/null*)
-+	  lt_cv_path_NM="$tmp_nm -p"
- 	  break
- 	  ;;
- 	*)
--	  case `"$tmp_nm" -p /dev/null 2>&1 | sed '1q'` in
--	  */dev/null*)
--	    lt_cv_path_NM="$tmp_nm -p"
--	    break
--	    ;;
--	  *)
--	    lt_cv_path_NM=${lt_cv_path_NM="$tmp_nm"} # keep the first match, but
--	    continue # so that we can try to find one that supports BSD flags
--	    ;;
--	  esac
-+	  lt_cv_path_NM=${lt_cv_path_NM="$tmp_nm"} # keep the first match, but
-+	  continue # so that we can try to find one that supports BSD flags
- 	  ;;
+       if test -f "$tmp_nm" || test -f "$tmp_nm$ac_exeext" ; then
+ 	# Check to see if the nm accepts a BSD-compat flag.
+ 	# Adding the `sed 1q' prevents false positives on HP-UX, which says:
+@@ -2473,12 +2382,10 @@
+ 	    continue # so that we can try to find one that supports BSD flags
+ 	    ;;
+ 	  esac
+-	  ;;
  	esac
--      fi
--    done
--    IFS="$lt_save_ifs"
-+      esac
-+    fi
-   done
-+  IFS="$lt_save_ifs"
+       fi
+     done
+     IFS="$lt_save_ifs"
+-  done
    test -z "$lt_cv_path_NM" && lt_cv_path_NM=nm
  fi])
  NM="$lt_cv_path_NM"
-@@ -2510,13 +2417,13 @@ esac
+@@ -2510,13 +2417,13 @@
  # -----------------------------------
  # sets LIBLTDL to the link flags for the libltdl convenience library and
  # LTDLINCL to the include flags for the libltdl header and adds
@@ -731,7 +688,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([AC_LIBLTDL_CONVENIENCE],
  [AC_BEFORE([$0],[AC_LIBTOOL_SETUP])dnl
    case $enable_ltdl_convenience in
-@@ -2535,13 +2442,13 @@ AC_DEFUN([AC_LIBLTDL_CONVENIENCE],
+@@ -2535,13 +2442,13 @@
  # -----------------------------------
  # sets LIBLTDL to the link flags for the libltdl installable library and
  # LTDLINCL to the include flags for the libltdl header and adds
@@ -752,7 +709,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # In the future, this macro may have to be called after AC_PROG_LIBTOOL.
  AC_DEFUN([AC_LIBLTDL_INSTALLABLE],
  [AC_BEFORE([$0],[AC_LIBTOOL_SETUP])dnl
-@@ -2584,7 +2491,7 @@ _LT_AC_SHELL_INIT([tagnames=${tagnames+$
+@@ -2584,7 +2491,7 @@
  ])# _LT_AC_LANG_CXX
  
  # _LT_AC_PROG_CXXCPP
@@ -761,7 +718,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_DEFUN([_LT_AC_PROG_CXXCPP],
  [
  AC_REQUIRE([AC_PROG_CXX])
-@@ -2633,7 +2540,7 @@ _LT_AC_SHELL_INIT([tagnames=${tagnames+$
+@@ -2633,7 +2540,7 @@
  
  
  # AC_LIBTOOL_RC
@@ -770,7 +727,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # enable support for Windows resource files
  AC_DEFUN([AC_LIBTOOL_RC],
  [AC_REQUIRE([LT_AC_PROG_RC])
-@@ -2670,6 +2577,37 @@ _LT_AC_SYS_COMPILER
+@@ -2670,6 +2577,37 @@
  _LT_COMPILER_BOILERPLATE
  _LT_LINKER_BOILERPLATE
  
@@ -808,7 +765,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_LIBTOOL_PROG_COMPILER_NO_RTTI($1)
  AC_LIBTOOL_PROG_COMPILER_PIC($1)
  AC_LIBTOOL_PROG_CC_C_O($1)
-@@ -2678,9 +2616,9 @@ AC_LIBTOOL_PROG_LD_SHLIBS($1)
+@@ -2678,9 +2616,9 @@
  AC_LIBTOOL_SYS_DYNAMIC_LINKER($1)
  AC_LIBTOOL_PROG_LD_HARDCODE_LIBPATH($1)
  AC_LIBTOOL_SYS_LIB_STRIP
@@ -820,7 +777,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_MSG_CHECKING([if libtool supports shared libraries])
  AC_MSG_RESULT([$can_build_shared])
  
-@@ -2689,7 +2627,7 @@ test "$can_build_shared" = "no" && enabl
+@@ -2689,7 +2627,7 @@
  
  # On AIX, shared libraries and static libraries use the same namespace, and
  # are all built from PIC.
@@ -829,7 +786,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  aix3*)
    test "$enable_shared" = yes && enable_static=no
    if test -n "$RANLIB"; then
-@@ -2739,7 +2677,6 @@ _LT_AC_TAGVAR(hardcode_libdir_flag_spec,
+@@ -2739,7 +2677,6 @@
  _LT_AC_TAGVAR(hardcode_libdir_flag_spec_ld, $1)=
  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=
  _LT_AC_TAGVAR(hardcode_minus_L, $1)=no
@@ -837,7 +794,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  _LT_AC_TAGVAR(hardcode_automatic, $1)=no
  _LT_AC_TAGVAR(module_cmds, $1)=
  _LT_AC_TAGVAR(module_expsym_cmds, $1)=
-@@ -2757,7 +2694,7 @@ _LT_AC_TAGVAR(postdeps, $1)=
+@@ -2757,7 +2694,7 @@
  _LT_AC_TAGVAR(compiler_lib_search_path, $1)=
  
  # Source file extension for C++ test sources.
@@ -846,7 +803,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # Object file extension for compiled C++ test sources.
  objext=o
-@@ -2767,7 +2704,7 @@ _LT_AC_TAGVAR(objext, $1)=$objext
+@@ -2767,7 +2704,7 @@
  lt_simple_compile_test_code="int some_variable = 0;\n"
  
  # Code to be used in simple link tests
@@ -855,7 +812,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # ltmain only uses $CC for tagged configurations so make sure $CC is set.
  _LT_AC_SYS_COMPILER
-@@ -2786,12 +2723,12 @@ lt_save_path_LD=$lt_cv_path_LD
+@@ -2786,12 +2723,12 @@
  if test -n "${lt_cv_prog_gnu_ldcxx+set}"; then
    lt_cv_prog_gnu_ld=$lt_cv_prog_gnu_ldcxx
  else
@@ -870,7 +827,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  fi
  test -z "${LDCXX+set}" || LD=$LDCXX
  CC=${CXX-"c++"}
-@@ -2886,7 +2823,6 @@ case $host_os in
+@@ -2886,7 +2823,6 @@
  	    ;;
  	  esac
  	done
@@ -878,7 +835,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        esac
  
        exp_sym_flag='-bexport'
-@@ -2924,7 +2860,6 @@ case $host_os in
+@@ -2924,7 +2860,6 @@
  	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
  	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=
  	fi
@@ -886,7 +843,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        esac
        shared_flag='-shared'
        if test "$aix_use_runtimelinking" = yes; then
-@@ -2956,12 +2891,12 @@ case $host_os in
+@@ -2956,12 +2891,12 @@
        _LT_AC_SYS_LIBPATH_AIX
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-blibpath:$libdir:'"$aix_libpath"
  
@@ -901,7 +858,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        else
  	# Determine the default libpath from the value encoded in an empty executable.
  	_LT_AC_SYS_LIBPATH_AIX
-@@ -2970,26 +2905,16 @@ case $host_os in
+@@ -2970,26 +2905,16 @@
  	# -berok will link without error, but may produce a broken library.
  	_LT_AC_TAGVAR(no_undefined_flag, $1)=' ${wl}-bernotok'
  	_LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-berok'
@@ -933,7 +890,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    chorus*)
      case $cc_basename in
        *)
-@@ -2999,6 +2924,7 @@ case $host_os in
+@@ -2999,6 +2924,7 @@
      esac
      ;;
  
@@ -941,7 +898,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    cygwin* | mingw* | pw32*)
      # _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1) is actually meaningless,
      # as there is no search path for DLLs.
-@@ -3008,7 +2934,7 @@ case $host_os in
+@@ -3008,7 +2934,7 @@
      _LT_AC_TAGVAR(enable_shared_with_static_runtimes, $1)=yes
  
      if $LD --help 2>&1 | grep 'auto-import' > /dev/null; then
@@ -950,7 +907,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        # If the export-symbols file already is a .def file (1st line
        # is EXPORTS), use it as is; otherwise, prepend...
        _LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`$SED 1q $export_symbols`" = xEXPORTS; then
-@@ -3017,13 +2943,13 @@ case $host_os in
+@@ -3017,13 +2943,13 @@
  	echo EXPORTS > $output_objdir/$soname.def;
  	cat $export_symbols >> $output_objdir/$soname.def;
        fi~
@@ -966,7 +923,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
          rhapsody* | darwin1.[[012]])
           _LT_AC_TAGVAR(allow_undefined_flag, $1)='${wl}-undefined ${wl}suppress'
           ;;
-@@ -3061,7 +2987,7 @@ case $host_os in
+@@ -3061,7 +2987,7 @@
            _LT_AC_TAGVAR(archive_cmds, $1)='$CC -r -keep_private_externs -nostdlib -o ${lib}-master.o $libobjs~$CC -dynamiclib $allow_undefined_flag -o $lib ${lib}-master.o $deplibs $compiler_flags -install_name $rpath/$soname $verstring'
          fi
          _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
@@ -975,7 +932,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
            if test "X$lt_int_apple_cc_single_mod" = Xyes ; then
              _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -dynamiclib -single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            else
-@@ -3074,7 +3000,7 @@ case $host_os in
+@@ -3074,7 +3000,7 @@
           output_verbose_link_cmd='echo'
            _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
@@ -984,7 +941,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
            _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
-@@ -3109,7 +3035,7 @@ case $host_os in
+@@ -3109,7 +3035,7 @@
    freebsd-elf*)
      _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
      ;;
@@ -993,18 +950,17 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      _LT_AC_TAGVAR(ld_shlibs, $1)=yes
-@@ -3154,23 +3080,34 @@ case $host_os in
+@@ -3154,22 +3080,33 @@
      ;;
    hpux10*|hpux11*)
      if test $with_gnu_ld = no; then
--      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
++      case "$host_cpu" in
++      hppa*64*)
+       _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
 -      _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
 -
 -      case $host_cpu in
 -      hppa*64*|ia64*)
-+      case "$host_cpu" in
-+      hppa*64*)
-+	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
  	_LT_AC_TAGVAR(hardcode_libdir_flag_spec_ld, $1)='+b $libdir'
 +	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
 +        ;;
@@ -1022,20 +978,19 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
 -    hppa*64*|ia64*)
 +    case "$host_cpu" in
 +    hppa*64*)
-       _LT_AC_TAGVAR(hardcode_direct, $1)=no
-       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-       ;;
-+    ia64*)
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=no
 +      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
++      ;;
++    ia64*)
+       _LT_AC_TAGVAR(hardcode_direct, $1)=no
+       _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +      _LT_AC_TAGVAR(hardcode_minus_L, $1)=yes # Not in the search PATH,
 +					      # but as the default
 +					      # location of the library.
-+      ;;
+       ;;
      *)
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-       _LT_AC_TAGVAR(hardcode_minus_L, $1)=yes # Not in the search PATH,
-@@ -3185,12 +3122,9 @@ case $host_os in
+@@ -3185,12 +3122,9 @@
  	_LT_AC_TAGVAR(ld_shlibs, $1)=no
  	;;
        aCC*)
@@ -1051,7 +1006,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	  ;;
  	*)
  	  _LT_AC_TAGVAR(archive_cmds, $1)='$CC -b ${wl}+h ${wl}$soname ${wl}+b ${wl}$install_libdir -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags'
-@@ -3209,12 +3143,9 @@ case $host_os in
+@@ -3209,12 +3143,9 @@
        *)
  	if test "$GXX" = yes; then
  	  if test $with_gnu_ld = no; then
@@ -1067,7 +1022,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	      ;;
  	    *)
  	      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -nostdlib -fPIC ${wl}+h ${wl}$soname ${wl}+b ${wl}$install_libdir -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags'
-@@ -3228,20 +3159,6 @@ case $host_os in
+@@ -3228,20 +3159,6 @@
  	;;
      esac
      ;;
@@ -1088,7 +1043,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC*)
-@@ -3268,7 +3185,7 @@ case $host_os in
+@@ -3268,7 +3185,7 @@
      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath ${wl}$libdir'
      _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
      ;;
@@ -1097,7 +1052,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      case $cc_basename in
        KCC*)
  	# Kuck and Associates, Inc. (KAI) C++ Compiler
-@@ -3327,7 +3244,7 @@ case $host_os in
+@@ -3327,7 +3244,7 @@
  
  	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}--rpath ${wl}$libdir'
  	_LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}--export-dynamic'
@@ -1106,7 +1061,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
          ;;
        cxx*)
  	# Compaq C++
-@@ -3370,7 +3287,7 @@ case $host_os in
+@@ -3370,7 +3287,7 @@
  	;;
      esac
      ;;
@@ -1115,7 +1070,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
-@@ -3524,6 +3441,19 @@ case $host_os in
+@@ -3524,6 +3441,19 @@
      # FIXME: insert proper C++ library support
      _LT_AC_TAGVAR(ld_shlibs, $1)=no
      ;;
@@ -1135,7 +1090,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    sunos4*)
      case $cc_basename in
        CC*)
-@@ -3546,11 +3476,10 @@ case $host_os in
+@@ -3546,11 +3476,10 @@
      case $cc_basename in
        CC*)
  	# Sun C++ 4.2, 5.x and Centerline C++
@@ -1149,7 +1104,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
  	_LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -3570,7 +3499,15 @@ case $host_os in
+@@ -3570,7 +3499,15 @@
  	esac
  	_LT_AC_TAGVAR(link_all_deplibs, $1)=yes
  
@@ -1166,14 +1121,13 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  	# Archives containing C++ object files must be created using
  	# "CC -xar", where "CC" is the Sun C++ compiler.  This is
-@@ -3616,59 +3553,8 @@ case $host_os in
+@@ -3616,59 +3553,8 @@
  	;;
      esac
      ;;
 -  sysv4*uw2* | sysv5OpenUNIX* | sysv5UnixWare7.[[01]].[[10]]* | unixware7* | sco3.2v5.0.[[024]]*)
 -    _LT_AC_TAGVAR(no_undefined_flag, $1)='${wl}-z,text'
-+  sysv5OpenUNIX8* | sysv5UnixWare7* | sysv5uw[[78]]* | unixware7*)
-     _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
+-    _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
 -    _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 -    runpath_var='LD_RUN_PATH'
 -
@@ -1206,7 +1160,8 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
 -    # names for shared libraries.
 -    _LT_AC_TAGVAR(no_undefined_flag, $1)='${wl}-z,text'
 -    _LT_AC_TAGVAR(allow_undefined_flag, $1)='${wl}-z,nodefs'
--    _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
++  sysv5OpenUNIX8* | sysv5UnixWare7* | sysv5uw[[78]]* | unixware7*)
+     _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
 -    _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 -    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='`test -z "$SCOABSPATH" && echo ${wl}-R,$libdir`'
 -    _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=':'
@@ -1227,7 +1182,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      ;;
    tandem*)
      case $cc_basename in
-@@ -3705,6 +3591,8 @@ AC_LIBTOOL_SYS_HARD_LINK_LOCKS($1)
+@@ -3705,6 +3591,8 @@
  AC_LIBTOOL_PROG_LD_SHLIBS($1)
  AC_LIBTOOL_SYS_DYNAMIC_LINKER($1)
  AC_LIBTOOL_PROG_LD_HARDCODE_LIBPATH($1)
@@ -1236,7 +1191,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  AC_LIBTOOL_CONFIG($1)
  
-@@ -3722,7 +3610,7 @@ lt_cv_prog_gnu_ld=$lt_save_with_gnu_ld
+@@ -3722,7 +3610,7 @@
  ])# AC_LIBTOOL_LANG_CXX_CONFIG
  
  # AC_LIBTOOL_POSTDEP_PREDEP([TAGNAME])
@@ -1245,7 +1200,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # Figure out "hidden" library dependencies from verbose
  # compiler output when linking a shared library.
  # Parse the compiler output and extract the necessary
-@@ -3776,7 +3664,7 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3776,7 +3664,7 @@
    # The `*' in the case matches for architectures that use `case' in
    # $output_verbose_cmd can trigger glob expansion during the loop
    # eval without this substitution.
@@ -1254,7 +1209,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
    for p in `eval $output_verbose_link_cmd`; do
      case $p in
-@@ -3852,37 +3740,13 @@ fi
+@@ -3852,37 +3740,13 @@
  
  $rm -f confest.$objext
  
@@ -1293,7 +1248,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # Ensure that the configuration vars for the C compiler are
  # suitably defined.  Those variables are subsequently used by
  # AC_LIBTOOL_CONFIG to write the compiler configuration to `libtool'.
-@@ -3945,7 +3809,7 @@ test "$can_build_shared" = "no" && enabl
+@@ -3945,7 +3809,7 @@
  
  # On AIX, shared libraries and static libraries use the same namespace, and
  # are all built from PIC.
@@ -1302,7 +1257,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  aix3*)
    test "$enable_shared" = yes && enable_static=no
    if test -n "$RANLIB"; then
-@@ -3966,6 +3830,8 @@ AC_MSG_CHECKING([whether to build static
+@@ -3966,6 +3830,8 @@
  test "$enable_shared" = yes || enable_static=yes
  AC_MSG_RESULT([$enable_static])
  
@@ -1311,7 +1266,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  _LT_AC_TAGVAR(GCC, $1)="$G77"
  _LT_AC_TAGVAR(LD, $1)="$LD"
  
-@@ -3975,6 +3841,8 @@ AC_LIBTOOL_SYS_HARD_LINK_LOCKS($1)
+@@ -3975,6 +3841,8 @@
  AC_LIBTOOL_PROG_LD_SHLIBS($1)
  AC_LIBTOOL_SYS_DYNAMIC_LINKER($1)
  AC_LIBTOOL_PROG_LD_HARDCODE_LIBPATH($1)
@@ -1320,7 +1275,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  AC_LIBTOOL_CONFIG($1)
  
-@@ -4031,6 +3899,8 @@ AC_LIBTOOL_SYS_HARD_LINK_LOCKS($1)
+@@ -4031,6 +3899,8 @@
  AC_LIBTOOL_PROG_LD_SHLIBS($1)
  AC_LIBTOOL_SYS_DYNAMIC_LINKER($1)
  AC_LIBTOOL_PROG_LD_HARDCODE_LIBPATH($1)
@@ -1329,7 +1284,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  AC_LIBTOOL_CONFIG($1)
  
-@@ -4040,7 +3910,7 @@ CC="$lt_save_CC"
+@@ -4040,7 +3910,7 @@
  
  
  # AC_LIBTOOL_LANG_RC_CONFIG
@@ -1338,7 +1293,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # Ensure that the configuration vars for the Windows resource compiler are
  # suitably defined.  Those variables are subsequently used by
  # AC_LIBTOOL_CONFIG to write the compiler configuration to `libtool'.
-@@ -4103,7 +3973,7 @@ if test -f "$ltmain"; then
+@@ -4103,7 +3973,7 @@
    # Now quote all the things that may contain metacharacters while being
    # careful not to overquote the AC_SUBSTed values.  We take copies of the
    # variables and quote the copies for generation of the libtool script.
@@ -1347,7 +1302,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      SED SHELL STRIP \
      libname_spec library_names_spec soname_spec extract_expsyms_cmds \
      old_striplib striplib file_magic_cmd finish_cmds finish_eval \
-@@ -4272,9 +4142,6 @@ AR_FLAGS=$lt_AR_FLAGS
+@@ -4272,9 +4142,6 @@
  # A C compiler.
  LTCC=$lt_LTCC
  
@@ -1357,7 +1312,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # A language-specific compiler.
  CC=$lt_[]_LT_AC_TAGVAR(compiler, $1)
  
-@@ -4635,7 +4502,7 @@ hpux*) # Its linker distinguishes data f
+@@ -4635,7 +4502,7 @@
    lt_cv_sys_global_symbol_to_cdecl="sed -n -e 's/^T .* \(.*\)$/extern int \1();/p' -e 's/^$symcode* .* \(.*\)$/extern char \1;/p'"
    lt_cv_sys_global_symbol_to_c_name_address="sed -n -e 's/^: \([[^ ]]*\) $/  {\\\"\1\\\", (lt_ptr) 0},/p' -e 's/^$symcode* \([[^ ]]*\) \([[^ ]]*\)$/  {\"\2\", (lt_ptr) \&\2},/p'"
    ;;
@@ -1366,7 +1321,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    if test "$host_cpu" = ia64; then
      symcode='[[ABCDGIRSTW]]'
      lt_cv_sys_global_symbol_to_cdecl="sed -n -e 's/^T .* \(.*\)$/extern int \1();/p' -e 's/^$symcode* .* \(.*\)$/extern char \1;/p'"
-@@ -4648,18 +4515,9 @@ irix* | nonstopux*)
+@@ -4648,18 +4515,9 @@
  osf*)
    symcode='[[BCDEGQRST]]'
    ;;
@@ -1386,7 +1341,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  sysv4)
    symcode='[[DFNSTU]]'
    ;;
-@@ -4842,10 +4700,6 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4842,10 +4700,6 @@
        # DJGPP does not support shared libraries at all
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
        ;;
@@ -1397,7 +1352,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      sysv4*MP*)
        if test -d /usr/nec; then
  	_LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=-Kconform_pic
-@@ -4854,7 +4708,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4854,7 +4708,7 @@
      hpux*)
        # PIC is the default for IA64 HP-UX and 64-bit HP-UX, but
        # not for PA HP-UX.
@@ -1406,7 +1361,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        hppa*64*|ia64*)
  	;;
        *)
-@@ -4908,22 +4762,22 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4908,22 +4762,22 @@
  	    ;;
  	esac
  	;;
@@ -1433,7 +1388,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	    hppa*64*|ia64*)
  	      # +Z the default
  	      ;;
-@@ -4936,10 +4790,6 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4936,10 +4790,6 @@
  	    ;;
  	esac
  	;;
@@ -1444,7 +1399,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC*)
-@@ -4951,7 +4801,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4951,7 +4801,7 @@
  	    ;;
  	esac
  	;;
@@ -1453,7 +1408,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	case $cc_basename in
  	  KCC*)
  	    # KAI C++ Compiler
-@@ -4968,7 +4818,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4968,7 +4818,7 @@
  	    # Portland Group C++ compiler.
  	    _LT_AC_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
  	    _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fpic'
@@ -1462,7 +1417,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	    ;;
  	  cxx*)
  	    # Compaq C++
-@@ -4994,7 +4844,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4994,7 +4844,7 @@
  	    ;;
  	esac
  	;;
@@ -1471,7 +1426,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	;;
        osf3* | osf4* | osf5*)
  	case $cc_basename in
-@@ -5019,6 +4869,15 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5019,6 +4869,15 @@
  	;;
        psos*)
  	;;
@@ -1487,7 +1442,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        solaris*)
  	case $cc_basename in
  	  CC*)
-@@ -5060,14 +4919,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5060,14 +4919,7 @@
  	    ;;
  	esac
  	;;
@@ -1503,7 +1458,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	;;
        vxworks*)
  	;;
-@@ -5114,11 +4966,6 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5114,11 +4966,6 @@
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
        ;;
  
@@ -1515,7 +1470,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -5135,7 +4982,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5135,7 +4982,7 @@
      hpux*)
        # PIC is the default for IA64 HP-UX and 64-bit HP-UX, but
        # not for PA HP-UX.
@@ -1524,7 +1479,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        hppa*64*|ia64*)
  	# +Z the default
  	;;
-@@ -5182,7 +5029,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5182,7 +5029,7 @@
        _LT_AC_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
        # PIC is the default for IA64 HP-UX and 64-bit HP-UX, but
        # not for PA HP-UX.
@@ -1533,7 +1488,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        hppa*64*|ia64*)
  	# +Z the default
  	;;
-@@ -5205,19 +5052,19 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5205,19 +5052,19 @@
        _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
        ;;
  
@@ -1556,7 +1511,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
          ;;
        ccc*)
          _LT_AC_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
-@@ -5233,6 +5080,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5233,6 +5080,11 @@
        _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-non_shared'
        ;;
  
@@ -1568,7 +1523,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      solaris*)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
        _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-@@ -5250,7 +5102,7 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5250,7 +5102,7 @@
        _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
        ;;
  
@@ -1577,7 +1532,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        _LT_AC_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
        _LT_AC_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-@@ -5263,12 +5115,6 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5263,12 +5115,6 @@
        fi
        ;;
  
@@ -1590,7 +1545,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      unicos*)
        _LT_AC_TAGVAR(lt_prog_compiler_wl, $1)='-Wl,'
        _LT_AC_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no
-@@ -5301,7 +5147,7 @@ if test -n "$_LT_AC_TAGVAR(lt_prog_compi
+@@ -5301,7 +5147,7 @@
      [_LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
       _LT_AC_TAGVAR(lt_prog_compiler_can_build_shared, $1)=no])
  fi
@@ -1599,7 +1554,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    # For platforms which do not support PIC, -DPIC is meaningless:
    *djgpp*)
      _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)=
-@@ -5310,16 +5156,6 @@ case $host_os in
+@@ -5310,16 +5156,6 @@
      _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)="$_LT_AC_TAGVAR(lt_prog_compiler_pic, $1)ifelse([$1],[],[ -DPIC],[ifelse([$1],[CXX],[ -DPIC],[])])"
      ;;
  esac
@@ -1616,7 +1571,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  ])
  
  
-@@ -5346,9 +5182,6 @@ ifelse([$1],[CXX],[
+@@ -5346,9 +5182,6 @@
    cygwin* | mingw*)
      _LT_AC_TAGVAR(export_symbols_cmds, $1)='$NM $libobjs $convenience | $global_symbol_pipe | $SED -e '\''/^[[BCDGRS]] /s/.* \([[^ ]]*\)/\1 DATA/;/^.* __nm__/s/^.* __nm__\([[^ ]]*\) [[^ ]]*/\1 DATA/;/^I /d;/^[[AITW]] /s/.* //'\'' | sort | uniq > $export_symbols'
    ;;
@@ -1626,7 +1581,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    *)
      _LT_AC_TAGVAR(export_symbols_cmds, $1)='$NM $libobjs $convenience | $global_symbol_pipe | $SED '\''s/.* //'\'' | sort | uniq > $export_symbols'
    ;;
-@@ -5401,10 +5234,6 @@ ifelse([$1],[CXX],[
+@@ -5401,10 +5234,6 @@
        with_gnu_ld=no
      fi
      ;;
@@ -1637,25 +1592,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
    openbsd*)
      with_gnu_ld=no
      ;;
-@@ -5414,7 +5243,7 @@ ifelse([$1],[CXX],[
-   if test "$with_gnu_ld" = yes; then
-     # If archive_cmds runs LD, not CC, wlarc should be empty
-     wlarc='${wl}'
--
-+    
-     # Set some defaults for GNU ld with shared library support. These
-     # are reset later if shared libraries are not supported. Putting them
-     # here allows them to be overridden if necessary.
-@@ -5435,7 +5264,7 @@ ifelse([$1],[CXX],[
-       *\ 2.11.*) ;; # other 2.11 versions
-       *) supports_anon_versioning=yes ;;
-     esac
--
-+    
-     # See if GNU ld supports shared libraries.
-     case $host_os in
-     aix3* | aix4* | aix5*)
-@@ -5489,7 +5318,7 @@ EOF
+@@ -5489,7 +5318,7 @@
        _LT_AC_TAGVAR(export_symbols_cmds, $1)='$NM $libobjs $convenience | $global_symbol_pipe | $SED -e '\''/^[[BCDGRS]] /s/.* \([[^ ]]*\)/\1 DATA/'\'' | $SED -e '\''/^[[AITW]] /s/.* //'\'' | sort | uniq > $export_symbols'
  
        if $LD --help 2>&1 | grep 'auto-import' > /dev/null; then
@@ -1664,7 +1601,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	# If the export-symbols file already is a .def file (1st line
  	# is EXPORTS), use it as is; otherwise, prepend...
  	_LT_AC_TAGVAR(archive_expsym_cmds, $1)='if test "x`$SED 1q $export_symbols`" = xEXPORTS; then
-@@ -5498,37 +5327,22 @@ EOF
+@@ -5498,37 +5327,22 @@
  	  echo EXPORTS > $output_objdir/$soname.def;
  	  cat $export_symbols >> $output_objdir/$soname.def;
  	fi~
@@ -1707,7 +1644,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	  tmp_addflag=' $pic_flag -Mnomain' ;;
  	ecc*,ia64* | icc*,ia64*)		# Intel C compiler on ia64
  	  tmp_addflag=' -i_dynamic' ;;
-@@ -5545,13 +5359,12 @@ EOF
+@@ -5545,13 +5359,12 @@
    $echo "local: *; };" >> $output_objdir/$libname.ver~
  	  $CC -shared'"$tmp_addflag"' $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-version-script ${wl}$output_objdir/$libname.ver -o $lib'
  	fi
@@ -1722,7 +1659,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
  	wlarc=
-@@ -5561,7 +5374,7 @@ EOF
+@@ -5561,7 +5374,7 @@
        fi
        ;;
  
@@ -1731,7 +1668,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        if $LD -v 2>&1 | grep 'BFD 2\.8' > /dev/null; then
  	_LT_AC_TAGVAR(ld_shlibs, $1)=no
  	cat <<EOF 1>&2
-@@ -5582,33 +5395,6 @@ EOF
+@@ -5582,33 +5395,6 @@
        fi
        ;;
  
@@ -1765,7 +1702,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      sunos4*)
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -assert pure-text -Bshareable -o $lib $libobjs $deplibs $linker_flags'
        wlarc=
-@@ -5642,7 +5428,7 @@ _LT_EOF
+@@ -5642,7 +5428,7 @@
        # Note: this linker hardcodes the directories in LIBPATH if there
        # are no directories specified by -L.
        _LT_AC_TAGVAR(hardcode_minus_L, $1)=yes
@@ -1774,7 +1711,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	# Neither direct hardcoding nor static linking is supported with a
  	# broken collect2.
  	_LT_AC_TAGVAR(hardcode_direct, $1)=unsupported
-@@ -5676,7 +5462,6 @@ _LT_EOF
+@@ -5676,7 +5462,6 @@
    	    break
    	  fi
  	  done
@@ -1782,7 +1719,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	esac
  
  	exp_sym_flag='-bexport'
-@@ -5714,7 +5499,6 @@ _LT_EOF
+@@ -5714,7 +5499,6 @@
    	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
    	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=
  	  fi
@@ -1790,21 +1727,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	esac
  	shared_flag='-shared'
  	if test "$aix_use_runtimelinking" = yes; then
-@@ -5727,11 +5511,11 @@ _LT_EOF
-   	# chokes on -Wl,-G. The following line is correct:
- 	  shared_flag='-G'
- 	else
--	  if test "$aix_use_runtimelinking" = yes; then
-+  	if test "$aix_use_runtimelinking" = yes; then
- 	    shared_flag='${wl}-G'
- 	  else
- 	    shared_flag='${wl}-bM:SRE'
--	  fi
-+  	fi
- 	fi
-       fi
- 
-@@ -5745,12 +5529,12 @@ _LT_EOF
+@@ -5745,12 +5529,12 @@
         # Determine the default libpath from the value encoded in an empty executable.
         _LT_AC_SYS_LIBPATH_AIX
         _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-blibpath:$libdir:'"$aix_libpath"
@@ -1819,7 +1742,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	else
  	 # Determine the default libpath from the value encoded in an empty executable.
  	 _LT_AC_SYS_LIBPATH_AIX
-@@ -5759,11 +5543,13 @@ _LT_EOF
+@@ -5759,11 +5543,13 @@
  	  # -berok will link without error, but may produce a broken library.
  	  _LT_AC_TAGVAR(no_undefined_flag, $1)=' ${wl}-bernotok'
  	  _LT_AC_TAGVAR(allow_undefined_flag, $1)=' ${wl}-berok'
@@ -1836,7 +1759,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	fi
        fi
        ;;
-@@ -5802,7 +5588,7 @@ _LT_EOF
+@@ -5802,7 +5588,7 @@
        ;;
  
      darwin* | rhapsody*)
@@ -1845,7 +1768,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
          rhapsody* | darwin1.[[012]])
           _LT_AC_TAGVAR(allow_undefined_flag, $1)='${wl}-undefined ${wl}suppress'
           ;;
-@@ -5831,7 +5617,7 @@ _LT_EOF
+@@ -5831,7 +5617,7 @@
      	output_verbose_link_cmd='echo'
          _LT_AC_TAGVAR(archive_cmds, $1)='$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring'
        _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
@@ -1854,7 +1777,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
        _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
      else
-@@ -5840,7 +5626,7 @@ _LT_EOF
+@@ -5840,7 +5626,7 @@
           output_verbose_link_cmd='echo'
           _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
@@ -1863,7 +1786,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
           _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
-@@ -5881,7 +5667,7 @@ _LT_EOF
+@@ -5881,7 +5667,7 @@
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -1872,13 +1795,12 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-@@ -5904,62 +5690,47 @@ _LT_EOF
+@@ -5904,62 +5690,47 @@
        _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
        ;;
  
 -    hpux10*)
-+    hpux10* | hpux11*)
-       if test "$GCC" = yes -a "$with_gnu_ld" = no; then
+-      if test "$GCC" = yes -a "$with_gnu_ld" = no; then
 -	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared -fPIC ${wl}+h ${wl}$soname ${wl}+b ${wl}$install_libdir -o $lib $libobjs $deplibs $compiler_flags'
 -      else
 -	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -b +h $soname +b $install_libdir -o $lib $libobjs $deplibs $linker_flags'
@@ -1897,7 +1819,8 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
 -      ;;
 -
 -    hpux11*)
--      if test "$GCC" = yes -a "$with_gnu_ld" = no; then
++    hpux10* | hpux11*)
+       if test "$GCC" = yes -a "$with_gnu_ld" = no; then
 -	case $host_cpu in
 -	hppa*64*)
 +	case "$host_cpu" in
@@ -1929,35 +1852,34 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  	esac
        fi
        if test "$with_gnu_ld" = no; then
--	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
++	case "$host_cpu" in
++	hppa*64*)
+ 	_LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
 -	_LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
 -
 -	case $host_cpu in
 -	hppa*64*|ia64*)
-+	case "$host_cpu" in
-+	hppa*64*)
-+	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
  	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec_ld, $1)='+b $libdir'
 +	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
- 	  _LT_AC_TAGVAR(hardcode_direct, $1)=no
- 	  _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
- 	  ;;
-+	ia64*)
-+	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
 +	  _LT_AC_TAGVAR(hardcode_direct, $1)=no
 +	  _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
++	  ;;
++	ia64*)
++	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-L$libdir'
+ 	  _LT_AC_TAGVAR(hardcode_direct, $1)=no
+ 	  _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +
 +	  # hardcode_minus_L: Not really in the search PATH,
 +	  # but as the default location of the library.
 +	  _LT_AC_TAGVAR(hardcode_minus_L, $1)=yes
-+	  ;;
+ 	  ;;
  	*)
 +	  _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}+b ${wl}$libdir'
 +	  _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
  	  _LT_AC_TAGVAR(hardcode_direct, $1)=yes
  	  _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
  
-@@ -5983,7 +5754,7 @@ _LT_EOF
+@@ -5983,7 +5754,7 @@
        _LT_AC_TAGVAR(link_all_deplibs, $1)=yes
        ;;
  
@@ -1966,7 +1888,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
        else
-@@ -6061,6 +5832,14 @@ _LT_EOF
+@@ -6061,6 +5832,14 @@
        _LT_AC_TAGVAR(hardcode_libdir_separator, $1)=:
        ;;
  
@@ -1981,7 +1903,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      solaris*)
        _LT_AC_TAGVAR(no_undefined_flag, $1)=' -z text'
        if test "$GCC" = yes; then
-@@ -6146,45 +5925,36 @@ _LT_EOF
+@@ -6146,45 +5925,36 @@
        fi
        ;;
  
@@ -2048,7 +1970,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
        ;;
  
      uts4*)
-@@ -6202,6 +5972,11 @@ _LT_EOF
+@@ -6202,6 +5972,11 @@
  AC_MSG_RESULT([$_LT_AC_TAGVAR(ld_shlibs, $1)])
  test "$_LT_AC_TAGVAR(ld_shlibs, $1)" = no && can_build_shared=no
  
@@ -2060,7 +1982,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  #
  # Do we need to explicitly link libc?
  #
-@@ -6229,7 +6004,6 @@ x|xyes)
+@@ -6229,7 +6004,6 @@
          libobjs=conftest.$ac_objext
          deplibs=
          wl=$_LT_AC_TAGVAR(lt_prog_compiler_wl, $1)
@@ -2068,7 +1990,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
          compiler_flags=-v
          linker_flags=-v
          verstring=
-@@ -6385,7 +6159,7 @@ SED=$lt_cv_path_SED
+@@ -6385,7 +6159,7 @@
  AC_MSG_RESULT([$SED])
  ])
  
@@ -2077,7 +1999,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  #
  # This file is free software; the Free Software Foundation
  # gives unlimited permission to copy and/or distribute it,
-@@ -6395,29 +6169,14 @@ AC_MSG_RESULT([$SED])
+@@ -6395,29 +6169,14 @@
  # ----------------------------
  # Automake X.Y traces this macro to ensure aclocal.m4 has been
  # generated from the m4 files accompanying Automake X.Y.
@@ -2110,7 +2032,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # AM_AUX_DIR_EXPAND                                         -*- Autoconf -*-
  
-@@ -6474,14 +6233,14 @@ am_aux_dir=`cd $ac_aux_dir && pwd`
+@@ -6474,14 +6233,14 @@
  
  # AM_CONDITIONAL                                            -*- Autoconf -*-
  
@@ -2127,7 +2049,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # AM_CONDITIONAL(NAME, SHELL-CONDITION)
  # -------------------------------------
-@@ -6490,10 +6249,8 @@ AC_DEFUN([AM_CONDITIONAL],
+@@ -6490,10 +6249,8 @@
  [AC_PREREQ(2.52)dnl
   ifelse([$1], [TRUE],  [AC_FATAL([$0: invalid condition: $1])],
  	[$1], [FALSE], [AC_FATAL([$0: invalid condition: $1])])dnl
@@ -2140,7 +2062,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  if $2; then
    $1_TRUE=
    $1_FALSE='#'
-@@ -6507,14 +6264,15 @@ AC_CONFIG_COMMANDS_PRE(
+@@ -6507,14 +6264,15 @@
  Usually this means the macro was only invoked conditionally.]])
  fi])])
  
@@ -2158,7 +2080,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # There are a few dirty hacks below to avoid letting `AC_PROG_CC' be
  # written in clear, in which case automake, when reading aclocal.m4,
-@@ -6542,7 +6300,6 @@ AC_REQUIRE([AM_DEP_TRACK])dnl
+@@ -6542,7 +6300,6 @@
  ifelse([$1], CC,   [depcc="$CC"   am_compiler_list=],
         [$1], CXX,  [depcc="$CXX"  am_compiler_list=],
         [$1], OBJC, [depcc="$OBJC" am_compiler_list='gcc3 gcc'],
@@ -2166,7 +2088,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
         [$1], GCJ,  [depcc="$GCJ"  am_compiler_list='gcc3 gcc'],
                     [depcc="$$1"   am_compiler_list=])
  
-@@ -6608,7 +6365,6 @@ AC_CACHE_CHECK([dependency style of $dep
+@@ -6608,7 +6365,6 @@
         depfile=sub/conftest.Po tmpdepfile=sub/conftest.TPo \
         $SHELL ./depcomp $depcc -c -o sub/conftest.${OBJEXT-o} sub/conftest.c \
           >/dev/null 2>conftest.err &&
@@ -2174,7 +2096,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
         grep sub/conftst6.h sub/conftest.Po > /dev/null 2>&1 &&
         grep sub/conftest.${OBJEXT-o} sub/conftest.Po > /dev/null 2>&1 &&
         ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
-@@ -6661,8 +6417,7 @@ if test "x$enable_dependency_tracking" !
+@@ -6661,8 +6417,7 @@
    AMDEPBACKSLASH='\'
  fi
  AM_CONDITIONAL([AMDEP], [test "x$enable_dependency_tracking" != xno])
@@ -2184,7 +2106,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  ])
  
  # Generate code to set up dependency tracking.              -*- Autoconf -*-
-@@ -6687,9 +6442,8 @@ AC_DEFUN([_AM_OUTPUT_DEPENDENCY_COMMANDS
+@@ -6687,9 +6442,8 @@
    # some people rename them; so instead we look at the file content.
    # Grep'ing the first line is not enough: some people post-process
    # each Makefile.in and add a new line on top of each file to say so.
@@ -2196,7 +2118,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
      dirpart=`AS_DIRNAME("$mf")`
    else
      continue
-@@ -6736,8 +6490,8 @@ AC_DEFUN([AM_OUTPUT_DEPENDENCY_COMMANDS]
+@@ -6736,8 +6490,8 @@
  
  # Do all the work for Automake.                             -*- Autoconf -*-
  
@@ -2207,7 +2129,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  #
  # This file is free software; the Free Software Foundation
  # gives unlimited permission to copy and/or distribute it,
-@@ -6760,20 +6514,16 @@ AC_DEFUN([AM_OUTPUT_DEPENDENCY_COMMANDS]
+@@ -6760,20 +6514,16 @@
  # arguments mandatory, and then we can depend on a new Autoconf
  # release and drop the old call support.
  AC_DEFUN([AM_INIT_AUTOMAKE],
@@ -2224,16 +2146,15 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
 -  AC_SUBST([am__isrc], [' -I$(srcdir)'])_AM_SUBST_NOTMAKE([am__isrc])dnl
 -  # test to see if srcdir already configured
 -  if test -f $srcdir/config.status; then
--    AC_MSG_ERROR([source directory already configured; run "make distclean" there first])
--  fi
 +# test to see if srcdir already configured
 +if test "`cd $srcdir && pwd`" != "`pwd`" &&
 +   test -f $srcdir/config.status; then
-+  AC_MSG_ERROR([source directory already configured; run "make distclean" there first])
+     AC_MSG_ERROR([source directory already configured; run "make distclean" there first])
+-  fi
  fi
  
  # test whether we have cygpath
-@@ -6793,9 +6543,6 @@ m4_ifval([$2],
+@@ -6793,9 +6543,6 @@
   AC_SUBST([PACKAGE], [$1])dnl
   AC_SUBST([VERSION], [$2])],
  [_AM_SET_OPTIONS([$1])dnl
@@ -2243,7 +2164,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
   AC_SUBST([PACKAGE], ['AC_PACKAGE_TARNAME'])dnl
   AC_SUBST([VERSION], ['AC_PACKAGE_VERSION'])])dnl
  
-@@ -6831,10 +6578,6 @@ AC_PROVIDE_IFELSE([AC_PROG_CXX],
+@@ -6831,10 +6578,6 @@
                    [_AM_DEPENDENCIES(CXX)],
                    [define([AC_PROG_CXX],
                            defn([AC_PROG_CXX])[_AM_DEPENDENCIES(CXX)])])dnl
@@ -2254,7 +2175,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  ])
  ])
  
-@@ -6870,7 +6613,7 @@ echo "timestamp for $1" >`AS_DIRNAME([$1
+@@ -6870,7 +6613,7 @@
  # Define $install_sh.
  AC_DEFUN([AM_PROG_INSTALL_SH],
  [AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
@@ -2263,7 +2184,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  AC_SUBST(install_sh)])
  
  # Copyright (C) 2003, 2005  Free Software Foundation, Inc.
-@@ -6894,6 +6637,35 @@ fi
+@@ -6894,6 +6637,35 @@
  rmdir .tst 2>/dev/null
  AC_SUBST([am__leading_dot])])
  
@@ -2299,7 +2220,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  # Check to see how 'make' treats includes.	            -*- Autoconf -*-
  
  # Copyright (C) 2001, 2002, 2003, 2005  Free Software Foundation, Inc.
-@@ -6948,14 +6720,14 @@ rm -f confinc confmf
+@@ -6948,14 +6720,14 @@
  
  # Fake the existence of programs that GNU maintainers use.  -*- Autoconf -*-
  
@@ -2316,7 +2237,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # AM_MISSING_PROG(NAME, PROGRAM)
  # ------------------------------
-@@ -6971,7 +6743,6 @@ AC_SUBST($1)])
+@@ -6971,7 +6743,6 @@
  # If it does, set am_missing_run to use it, otherwise, to nothing.
  AC_DEFUN([AM_MISSING_HAS_RUN],
  [AC_REQUIRE([AM_AUX_DIR_EXPAND])dnl
@@ -2324,7 +2245,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  test x"${MISSING+set}" = xset || MISSING="\${SHELL} $am_aux_dir/missing"
  # Use eval to expand $SHELL
  if eval "$MISSING --run true"; then
-@@ -6982,7 +6753,7 @@ else
+@@ -6982,7 +6753,7 @@
  fi
  ])
  
@@ -2333,7 +2254,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  #
  # This file is free software; the Free Software Foundation
  # gives unlimited permission to copy and/or distribute it,
-@@ -6990,23 +6761,60 @@ fi
+@@ -6990,23 +6761,60 @@
  
  # AM_PROG_MKDIR_P
  # ---------------
@@ -2410,7 +2331,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  
  # Helper functions for option handling.                     -*- Autoconf -*-
  
-@@ -7299,21 +7107,9 @@ dnl Don't test for $cross_compiling = ye
+@@ -7299,21 +7107,9 @@
  if test "$cross_compiling" != no; then
    AC_CHECK_TOOL([STRIP], [strip], :)
  fi

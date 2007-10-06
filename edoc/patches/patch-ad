@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+$NetBSD: patch-ad,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
 
---- configure.ac.orig	2007-08-15 23:34:20.000000000 +1000
+--- configure.ac.orig	2007-08-11 18:50:18.000000000 +1000
 +++ configure.ac
-@@ -71,6 +71,12 @@ DOXYGEN_VANILLA_DIR="$builddir/DOXYGEN_P
+@@ -71,6 +71,12 @@
  tmp_archive="$abs_builddir/tmp_archive"
  
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  #------------------------------------------------------------------------------
  # Setup Doxygen
  #------------------------------------------------------------------------------
-@@ -515,26 +521,44 @@ AM_PATH_PYTHON([2.4])
+@@ -515,26 +521,44 @@
  # aliases use: python$PYTHON_VERSION
  # 
  
@@ -62,7 +62,7 @@ $NetBSD: patch-ad,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
  pythonflags="$pythonflags $temp"
                 
                 
-@@ -543,7 +567,7 @@ pythonflags="$pythonflags $temp"
+@@ -543,7 +567,7 @@
  #------------------------------------------------------------------------------
  AX_CHECK_LIB_WITH([python],
     [AC_LANG_PROGRAM([[#include <Python.h>]], [Py_InitializeEx(0); Py_Finalize();])], 
@@ -71,7 +71,7 @@ $NetBSD: patch-ad,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
     [
        AC_DEFINE([HAVE_LIBPYTHON], 1, [Defined if libpython is usable.])
        
-@@ -1020,3 +1044,5 @@ AC_OUTPUT([
+@@ -1020,3 +1044,5 @@
  
  # @@@Brendon Why do the permissions not get copied across from run_tests.sh.in ?
  chmod a+x ./run_tests.sh

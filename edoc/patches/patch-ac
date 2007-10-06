@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+$NetBSD: patch-ac,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
 
---- config.h.in.orig	2007-08-15 23:34:20.000000000 +1000
+--- config.h.in.orig	2007-08-12 09:34:37.000000000 +1000
 +++ config.h.in
 @@ -231,24 +231,24 @@
     release 3. */
