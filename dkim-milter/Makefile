@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2007/09/14 10:38:27 jukka Exp $
+# $NetBSD: Makefile,v 1.19 2007/10/07 13:27:34 jukka Exp $
 
-DISTNAME=	dkim-milter-2.2.1
+DISTNAME=	dkim-milter-2.3.0
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
@@ -68,8 +68,9 @@ do-install: arlib-install stats-install
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/draft-hoffman-dac-vbr-01.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-overview-05.txt ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-00.txt ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-requirements-04.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-01.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-requirements-05.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-kucherawy-sender-auth-header-07.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/rfc4686.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/rfc4871.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/dkim-filter/dkim-filter.conf.sample ${PREFIX}/share/examples/dkim-milter/dkim-milter.conf.sample

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2007/08/06 19:46:44 jukka Exp $
+$NetBSD: patch-aa,v 1.6 2007/10/07 13:27:34 jukka Exp $
 
---- site.config.m4.dist.orig	2007-08-02 20:20:42.000000000 +0200
-+++ site.config.m4.dist	2007-08-06 21:03:36.000000000 +0200
+--- site.config.m4.dist.orig	2007-09-21 02:16:33.000000000 +0200
++++ site.config.m4.dist	2007-10-07 15:20:23.000000000 +0200
 @@ -17,7 +17,7 @@ dnl libar -- asynchronous resolver libra
  dnl
  dnl If you want to use the asynchronous resolver library, enable this
@@ -22,16 +22,16 @@ $NetBSD: patch-aa,v 1.5 2007/08/06 19:46:44 jukka Exp $
  
  dnl TRE -- Approximate regular expression matching
  dnl
-@@ -84,7 +84,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQU
+@@ -82,7 +82,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_QUER
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_SIGN_HEADERS ')
- dnl APPENDDEF(`confENVDEF', `-D_FFR_SET_REPLY ')
 -dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
 +@STATS@ APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
  
-@@ -100,8 +100,8 @@ dnl
+@@ -98,8 +98,8 @@ dnl
  dnl This must be in the search rules for your compile.  If necessary,
  dnl adjust the paths below and enable the lines by deleting "dnl" from the
  dnl front of them.

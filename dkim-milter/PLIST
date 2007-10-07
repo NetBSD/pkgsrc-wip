@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/09/14 10:38:27 jukka Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/10/07 13:27:34 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
@@ -15,8 +15,9 @@ share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
 share/doc/dkim-milter/draft-hoffman-dac-vbr-01.txt
 share/doc/dkim-milter/draft-ietf-dkim-overview-05.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-00.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-requirements-04.txt
+share/doc/dkim-milter/draft-ietf-dkim-ssp-01.txt
+share/doc/dkim-milter/draft-ietf-dkim-ssp-requirements-05.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-07.txt
 share/doc/dkim-milter/rfc4686.txt
 share/doc/dkim-milter/rfc4871.txt
 share/examples/dkim-milter/dkim-milter.conf.sample
@@ -31,12 +32,15 @@ share/doc/dkim-milter/libdkim/dkim_eoh.html
 share/doc/dkim-milter/libdkim/dkim_eom.html
 share/doc/dkim-milter/libdkim/dkim_free.html
 share/doc/dkim-milter/libdkim/dkim_get_user_context.html
+share/doc/dkim-milter/libdkim/dkim_geterror.html
+share/doc/dkim-milter/libdkim/dkim_getmode.html
 share/doc/dkim-milter/libdkim/dkim_getpresult.html
 share/doc/dkim-milter/libdkim/dkim_getpresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getsighdr.html
 share/doc/dkim-milter/libdkim/dkim_getsiglist.html
 share/doc/dkim-milter/libdkim/dkim_getsignature.html
+share/doc/dkim-milter/libdkim/dkim_handling_t.html
 share/doc/dkim-milter/libdkim/dkim_header.html
 share/doc/dkim-milter/libdkim/dkim_init.html
 share/doc/dkim-milter/libdkim/dkim_lib.html
