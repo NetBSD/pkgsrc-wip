@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
+
+--- src/audio/rtp_telephone_event.cpp.orig	2007-01-07 07:47:34.000000000 +0000
++++ src/audio/rtp_telephone_event.cpp
+@@ -19,6 +19,7 @@
+ #include "cassert"
+ #include "rtp_telephone_event.h"
+ #include <netinet/in.h>
++#include <arpa/inet.h>
+ 
+ void t_rtp_telephone_event::set_event(unsigned char _event) {
+ 	event = _event;

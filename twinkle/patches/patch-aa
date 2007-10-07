@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
+
+--- configure.orig	2007-09-08 14:27:36.000000000 +0000
++++ configure
+@@ -13391,7 +13391,7 @@ cat >>confdefs.h <<_ACEOF
+ _ACEOF
+ 
+ 
+-
++if false; then
+   { echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
+ echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6; }
+   cat >conftest.$ac_ext <<_ACEOF
+@@ -13467,6 +13467,7 @@ echo "$as_me: error:
+    { (exit 1); exit 1; }; }
+ 
+ fi
++fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 

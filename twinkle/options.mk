@@ -1,43 +1,31 @@
-# $NetBSD: options.mk,v 1.1 2007/10/06 22:44:06 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/07 08:38:24 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.twinkle
-PKG_SUPPORTED_OPTIONS=	ilbc kde speex zrtp
+PKG_SUPPORTED_OPTIONS=	ilbc kde speex # zrtp
+PKG_SUGGESTED_OPTIONS=	kde speex
+
 .include "../../mk/bsd.options.mk"
 
-###
-### Support for iLBC
-###
 .if !empty(PKG_OPTIONS:Milbc)
-CONFIGURE_ARGS+=	"--with-ilbc"
-.include                "../../wip/ilbc-rfc3951/buildlink3.mk"
+.include "../../wip/ilbc-rfc3951/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	"--without-ilbc"
+CONFIGURE_ARGS+=	--without-ilbc
 .endif
 
-###
-### Support for KDE
-###
 .if !empty(PKG_OPTIONS:Mkde)
-CONFIGURE_ARGS+=	"--with-kde"
-.include		"../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	"--without-kde"
+CONFIGURE_ARGS+=	--without-kde
 .endif
 
-###
-### Support for Speex
-###
 .if !empty(PKG_OPTIONS:Mspeex)
-CONFIGURE_ARGS+=	"--with-speex"
+.include "../../audio/speex/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	"--without-speex"
+CONFIGURE_ARGS+=	--without-speex
 .endif
 
-###
-### Support for ZRTP
-###
-.if !empty(PKG_OPTIONS:Mzrtp)
-CONFIGURE_ARGS+=	"--with-zrtp"
-.else
-CONFIGURE_ARGS+=	"--without-zrtp"
-.endif
+#.if !empty(PKG_OPTIONS:Mzrtp)
+#BROKEN=		libzrtpcpp not packaged yet.
+#.else
+#CONFIGURE_ARGS+=	--without-zrtp
+#.endif
