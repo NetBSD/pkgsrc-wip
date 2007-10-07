@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-ac,v 1.2 2007/10/07 20:59:32 noud4 Exp $
 
 --- vl.c.orig	2007-07-19 22:00:53.000000000 +0200
 +++ vl.c	2007-07-19 22:23:29.000000000 +0200
 @@ -44,7 +44,7 @@
- #include <netdb.h>
+ #include <arpa/inet.h>
  #ifdef _BSD
  #include <sys/stat.h>
 -#ifndef __APPLE__

@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-aw,v 1.2 2007/10/07 20:59:32 noud4 Exp $
 
 Workaround for x86_64 target, patch from Hubert Feyrer.
 
@@ -12,7 +12,7 @@ diff -u -r1.40 dyngen.c
 @@ -1624,6 +1624,7 @@
                  if(!sym_name)
                      continue;
-                 if (*sym_name && 
+                 if (*sym_name &&
 +                    !strstart(sym_name, "bswap64", NULL) && /* HF hack */
                      !strstart(sym_name, "__op_param", NULL) &&
                      !strstart(sym_name, "__op_jmp", NULL) &&
