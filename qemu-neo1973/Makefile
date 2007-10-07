@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/07 20:58:27 noud4 Exp $
 #
 
-DISTNAME=		qemu-neo1973
-PKGNAME=		qemu-neo1973-1.1.1
+DISTNAME=		qemu-neo1973-3102
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.openmoko.org/
 
@@ -66,8 +65,8 @@ BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
 CFLAGS+=		-fno-stack-protector
 .endif
 
-SUBDIR=		qemu-neo1973
-WRKSRC=		${WRKDIR}/${SUBDIR}
+SUBDIR=		${PKGNAME}
+WRKSRC=		${WRKDIR}/qemu-neo1973
 NO_CHECKSUM=	yes
 
 .include "../../mk/compiler.mk"
@@ -83,7 +82,6 @@ do-fetch:
 		cd ${DISTDIR}; tar -cf ${SUBDIR}.tar ${SUBDIR};gzip ${SUBDIR}.tar; \
 		${RM} -r ${DISTDIR}/${SUBDIR}; \
 	fi
-	# latest fetch: revision 2587.
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/qemu
@@ -103,3 +101,5 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # ln -s /usr/pkg/bin/python2.4  /usr/pkg/bin/python
+# cd /usr/pkg/emul/neo1973; qemu-system-arm -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -show-cursor
+# cd /usr/pkg/emul/neo1973; qemu-system-arm -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -show-cursor -serial telnet:localhost:1200,server
