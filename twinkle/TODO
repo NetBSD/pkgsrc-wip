@@ -1,11 +1,13 @@
 This package does not currently build. It breaks here:
 
-if c++ -DHAVE_CONFIG_H -I. -I. -I../../src -I ../../src -I /usr/pkg/include   -DQT_THREAD_SUPPORT -I/usr/pkg/include/cc++2 -I/usr/pkg/include -I/usr/pkg/qt3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/freetype2 -I/usr/include  -O2 -I/usr/pkg/include -I/usr/pkg/qt3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/freetype2 -I/usr/include -D_GNU_SOURCE -I/usr/pkg/include -MT rtp_telephone_event.o -MD -MP -MF ".deps/rtp_telephone_event.Tpo" -c -o rtp_telephone_event.o rtp_telephone_event.cpp;  then mv -f ".deps/rtp_telephone_event.Tpo" ".deps/rtp_telephone_event.Po"; else rm -f ".deps/rtp_telephone_event.Tpo"; exit 1; fi
-rtp_telephone_event.cpp: In member function `void 
-   t_rtp_telephone_event::set_duration(short unsigned int)':
-rtp_telephone_event.cpp:40: error: `htons' undeclared (first use this function)
-rtp_telephone_event.cpp:40: error: (Each undeclared identifier is reported only 
-   once for each function it appears in.)
-rtp_telephone_event.cpp: In member function `short unsigned int 
-   t_rtp_telephone_event::get_duration() const':
-rtp_telephone_event.cpp:60: error: `ntohs' undeclared (first use this function)
+if c++ -DHAVE_CONFIG_H -I. -I. -I../../src -I ../../src -I /usr/pkg/include   -D
+QT_THREAD_SUPPORT -I/usr/pkg/include/cc++2 -I/usr/pkg/include -I/usr/include -I/
+usr/include/krb5 -I/usr/pkg/qt3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/f
+reetype2  -O2 -I/usr/pkg/include -I/usr/include -I/usr/include/krb5 -I/usr/pkg/q
+t3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/freetype2 -D_GNU_SOURCE -I/usr
+/pkg/include -MT socket.o -MD -MP -MF ".deps/socket.Tpo" -c -o socket.o socket.c
+pp;  then mv -f ".deps/socket.Tpo" ".deps/socket.Po"; else rm -f ".deps/socket.T
+po"; exit 1; fi
+In file included from socket.cpp:22:
+/usr/include/sys/un.h:49: error: 'u_int8_t' is used as a type, but is not 
+   defined as a type.
