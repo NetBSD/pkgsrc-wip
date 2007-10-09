@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2007/09/14 10:38:27 jukka Exp $
+# $NetBSD: options.mk,v 1.8 2007/10/09 18:18:58 jukka Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dkim-milter
 PKG_SUPPORTED_OPTIONS=	inet6 dkim-stats arlib
@@ -43,6 +43,7 @@ arlib-install:
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`; \
 	${INSTALL_LIB} libar/libar.a ${PREFIX}/lib;
 	${INSTALL_MAN} ${WRKSRC}/libar/ar.3 ${PREFIX}/${PKGMANDIR}/man3
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 .else
 PLIST_SUBST+=		WITH_ARLIB='@comment '
 SUBST_SED.libs+=	-e 's|@RESOLVLIB@|resolv bind|g'
