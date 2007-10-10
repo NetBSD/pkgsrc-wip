@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2007/10/10 13:05:40 cheusov Exp $
 #
 
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
@@ -24,6 +24,9 @@ CLISP=		${PREFIX}/bin/clisp
 PKGMGR_SRC=	${WRKDIR}/pkgmanager-${PKGMGR_VERSION}/src
 PKGMGR_LIBDIR=	${PREFIX}/lib/pkgmanager
 PKGMGR_BINDIR=	${PREFIX}/bin
+
+INSTALLATION_DIRS+=	${PKGMGR_BINDIR} ${PKGMGR_LIBDIR} ${PKGMANDIR}/man8
+
 SUBST_CLASSES+=		clocc
 SUBST_STAGE.clocc=	post-patch
 SUBST_FILES.clocc=	clocc/clocc.lisp
