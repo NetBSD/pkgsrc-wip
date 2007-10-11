@@ -1,21 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/12/27 14:26:58 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2007/10/11 16:10:50 emil_s Exp $
 
---- Makefile.orig	2004-12-27 10:14:37.000000000 +0100
+--- Makefile.orig	2006-09-26 16:23:53.000000000 +0000
 +++ Makefile
-@@ -1,13 +1,13 @@
+@@ -1,8 +1,8 @@
  
  # these are set by config
 -CC = g++
--LCFLAGS = -Wall -g -O2
 +CC = $(CXX)
-+LCFLAGS = -Wall -g
- BINDIR = /usr/bin/
- MANDIR = /usr/man/
- NOGNU = /usr/include/nognu
- #
- 
--CFLAGS = $(LCFLAGS) -c
-+CFLAGS+= $(LCFLAGS) -c
- 
- 
- tout: objdir/ncc nccnav/nccnav
+ DESTDIR ?= /usr
+-LCFLAGS = -g -O2
++LCFLAGS = -g
+ BINDIR = ${DESTDIR}/bin
+ MANDIR = ${DESTDIR}/share/man
+ INCLUDEDIR = ${DESTDIR}/include

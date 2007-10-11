@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2007/10/11 16:10:50 emil_s Exp $
+
+--- dbstree.h.orig	2006-07-09 14:05:58.000000000 +0000
++++ dbstree.h
+@@ -3,7 +3,7 @@
+ 	Check dbstree.tex for info.
+ ******************************************************************************/
+ 
+-#include <alloca.h>
++#include "config.h"
+ #ifndef HAVE_DBSTREE
+ #define HAVE_DBSTREE
+ 

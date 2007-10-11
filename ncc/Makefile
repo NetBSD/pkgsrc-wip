@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/09/14 18:16:28 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/11 16:10:50 emil_s Exp $
 #
 
-DISTNAME=		ncc-2.1
+DISTNAME=		ncc-2.7
 CATEGORIES=		devel
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/ncc/
 
@@ -13,6 +13,13 @@ BUILD_TARGET=		tout
 CFLAGS+=		-DNOGNU='"${PREFIX}/share/ncc/nognu"'
 
 USE_LANGUAGES=		c c++
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Fixing hardcoded paths
+SUBST_FILES.prefix=	config.h
+SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objdir/ncc ${PREFIX}/bin
@@ -29,6 +36,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/TROUBLES ${PREFIX}/share/doc/ncc
 	${INSTALL_DATA} ${WRKSRC}/doc/hacking.* ${PREFIX}/share/doc/ncc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ncc
+	${INSTALL_DATA} ${WRKSRC}/doc/nognu ${PREFIX}/include
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
