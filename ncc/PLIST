@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/11 16:10:50 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/11 16:49:30 emil_s Exp $
 bin/ncc
 bin/nccar
 bin/nccc++
 bin/nccld
 bin/nccnav
 bin/nccnavi
-include/nognu
 man/man1/ncc.1
 share/doc/ncc/KEYS.txt
 share/doc/ncc/README

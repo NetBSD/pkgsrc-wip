@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/10/11 16:10:50 emil_s Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/11 16:49:30 emil_s Exp $
 #
 
 DISTNAME=		ncc-2.7
@@ -36,7 +36,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/TROUBLES ${PREFIX}/share/doc/ncc
 	${INSTALL_DATA} ${WRKSRC}/doc/hacking.* ${PREFIX}/share/doc/ncc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ncc
-	${INSTALL_DATA} ${WRKSRC}/doc/nognu ${PREFIX}/include
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
