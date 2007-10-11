@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/11 10:54:11 shindenmorr Exp $
 #
 
-DISTNAME=	gajim-0.11.1
+DISTNAME=	gajim-0.11.2
 PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	http://www.gajim.org/downloads/
@@ -22,9 +22,14 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Makefile src/common/Makefile
 SUBST_SED.paths=	-e 's,/usr/include,${LOCALBASE}/include,g'
 
+SUBST_CLASSES+=		pythonbin
+SUBST_STAGE.pythonbin=	pre-configure
+SUBST_FILES.pythonbin=	src/roster_window.py
+SUBST_SED.pythonbin=	-e 's,@PYTHONBIN@,${PYTHONBIN},'
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	src/gajim.py src/common/configpaths.py src/gtkgui_helpers.py
+SUBST_FILES.prefix=	src/gajim.py src/common/configpaths.py src/gtkgui_helpers.py src/roster_window.py
 SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		abs
@@ -32,8 +37,8 @@ SUBST_STAGE.abs=	pre-configure
 SUBST_FILES.abs=	src/*.py src/common/*.py
 SUBST_SED.abs=		-e 's,^GTKGUI_GLADE.*,GTKGUI_GLADE = "${PREFIX}/share/gajim/src/gtkgui.glade",'
 SUBST_SED.abs+=		-e "s,'\\.\\./data,'${PREFIX}/share/gajim/data,g"
-
-PYTHON_PATCH_SCRIPTS+=	src/gajim.py
+ 
+PYTHON_PATCH_SCRIPTS+=	src/gajim.py src/history_manager.py src/gajim-remote.py
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
@@ -46,13 +51,14 @@ post-install:
 	for i in `find data/emoticons data/iconsets -iname\
 	'*.jpg' -o -iname '*.png' -o -iname '*.py'` ;\
 	do\
-	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/share/gajim/$$i` ;\
-            ${INSTALL_SCRIPT} $$i ${PREFIX}/share/gajim/$$i ;\
+	    ${INSTALL_DATA_DIR} `${DIRNAME} ${PREFIX}/share/gajim/$$i` ;\
+            ${INSTALL_DATA} $$i ${PREFIX}/share/gajim/$$i ;\
 	done
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../databases/py-sqlite2/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

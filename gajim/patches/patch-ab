@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2007/10/11 10:54:11 shindenmorr Exp $
+
+--- src/roster_window.py.orig	2007-09-20 18:31:54.000000000 +0200
++++ src/roster_window.py
+@@ -755,7 +755,7 @@ class RosterWindow:
+ 			else: # user is running svn
+ 				helpers.exec_command('python history_manager.py')
+ 		else: # Unix user
+-			helpers.exec_command('python history_manager.py &')
++			helpers.exec_command('@PYTHONBIN@ @PREFIX@/share/gajim/src/history_manager.py &')
+ 
+ 	def get_and_connect_advanced_menuitem_menu(self, account):
+ 		'''adds FOR ACCOUNT options'''
