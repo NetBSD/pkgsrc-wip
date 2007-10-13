@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1 2007/10/13 20:50:49 martijnb Exp $
+
+--- Makefile.orig	2007-09-18 21:21:20.000000000 +0200
++++ Makefile
+@@ -7,8 +7,9 @@ SYSNAME := $(shell uname -n)
+ VERSION=0.0
+ 
+ # Installation prefix...
+-PREFIX=/usr/local
+-PREFIX=/usr
++#PREFIX=/usr/local
++#PREFIX=/usr
++PREFIX=$(LOCALBASE)
+ 
+ # Pathnames for this package...
+ BIN=$(PREFIX)/bin
+@@ -18,7 +19,7 @@ SHAREHP=$(PREFIX)/share/foo2hp
+ SHAREXQX=$(PREFIX)/share/foo2xqx
+ SHARELAVA=$(PREFIX)/share/foo2lava
+ SHAREQPDL=$(PREFIX)/share/foo2qpdl
+-MANDIR=$(PREFIX)/share/man
++MANDIR=$(PREFIX)/${PKGMANDIR}
+ DOCDIR=$(PREFIX)/share/doc/foo2zjs/
+ 
+ # Pathnames for referenced packages...
+@@ -567,9 +568,9 @@ install-extra:
+ 	    fi; \
+ 	done
+ 
+-MODEL=/usr/share/cups/model
++MODEL=$(PREFIX)/share/cups/model
+ LOCALMODEL=/usr/local/share/cups/model
+-PPD=/usr/share/ppd
++PPD=$(PREFIX)/share/foomatic/ppd
+ install-ppd:
+ 	#
+ 	# Install PPD files for CUPS
+@@ -591,11 +592,11 @@ install-ppd:
+ 	    for ppd in *.ppd; do \
+ 		gzip < $$ppd > $(MODEL)/$$ppd.gz; \
+ 	    done; \
+-	elif [ -d $(LOCALMODEL) ]; then \
+-	    cd PPD; \
+-	    for ppd in *.ppd; do \
+-		gzip < $$ppd > $(LOCALMODEL)/$$ppd.gz; \
+-	    done; \
++#	elif [ -d $(LOCALMODEL) ]; then \
++#	    cd PPD; \
++#	    for ppd in *.ppd; do \
++#		gzip < $$ppd > $(LOCALMODEL)/$$ppd.gz; \
++#	    done; \
+ 	fi
+ 
+ USBDIR=/etc/hotplug/usb

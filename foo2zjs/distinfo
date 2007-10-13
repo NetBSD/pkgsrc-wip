@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2007/10/13 20:50:49 martijnb Exp $
+
+SHA1 (foo2zjs-20071007.tgz) = b0045b3c0f4cc9fec30a94cfb86a8765584cd94d
+RMD160 (foo2zjs-20071007.tgz) = eae780138af98e96426fa3cc7e92d34189fd2fd0
+Size (foo2zjs-20071007.tgz) = 1458152 bytes
+SHA1 (patch-aa) = 42a298cf079962278c778e917e827e740b34a6b3
