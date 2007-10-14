@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/05/29 21:25:41 cosmedbr Exp $
+$NetBSD: distinfo,v 1.5 2007/10/14 12:25:57 hoka_adam Exp $
 
-SHA1 (wmii+ixp-20070516.tgz) = 9f501f23053e15a0161c050d9b7b11ba5fb006c1
-RMD160 (wmii+ixp-20070516.tgz) = 6e5da6c99b77023eb3e85f8d2a77d5f5dba4f2d4
-Size (wmii+ixp-20070516.tgz) = 84114 bytes
-SHA1 (patch-aa) = aac129d24bbdab2817533afcf45aad7c30634d2a
+SHA1 (wmii-20071003.tgz) = c552cefb1c4d69761962e67b43e65b80c7436fe1
+RMD160 (wmii-20071003.tgz) = 0996d7f057b3ffeb7f2ddde9086070456440c635
+Size (wmii-20071003.tgz) = 208918 bytes
+SHA1 (patch-aa) = a47b2caf8b97ce02af2687137ee2b80728a83218

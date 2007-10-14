@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/08/25 18:14:32 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/14 12:25:57 hoka_adam Exp $
 
-DISTNAME=		wmii+ixp-20070516
-PKGNAME=		wmii-20070516
+DISTNAME=		wmii-20071003
+PKGNAME=		${DISTNAME}
 CATEGORIES=		wm
 MASTER_SITES=		http://suckless.org/snaps/
 EXTRACT_SUFX=		.tgz
@@ -16,8 +16,14 @@ NO_CONFIGURE=		yes
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
+# It's broken on NetBSD 4.99.31
+#
+MAKE_JOBS_SAFE=no
+
 .include "../../wip/dmenu/buildlink3.mk"
+.include "../../wip/libixp/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2007/05/29 21:26:27 cosmedbr Exp $
+$NetBSD: patch-aa,v 1.5 2007/10/14 12:25:57 hoka_adam Exp $
 
---- config.mk.orig	2007-05-29 00:13:35.000000000 +0200
+--- config.mk.orig	2007-10-03 07:56:06.000000000 +0200
 +++ config.mk
-@@ -1,22 +1,19 @@
+@@ -1,21 +1,20 @@
  # Customize below to fit your system
  
  # paths
@@ -13,34 +13,40 @@ $NetBSD: patch-aa,v 1.4 2007/05/29 21:26:27 cosmedbr Exp $
 -LIBDIR = ${PREFIX}/lib
 -INCLUDE = ${PREFIX}/include
 +MAN = ${PREFIX}/${PKGMANDIR}
-+ETC = ${PREFIX}/share/examples
++ETC = ${PREFIX}/etc
  
  # Includes and libs
- INCS = -I. -I${ROOT}/include -I${INCLUDE} -I/usr/include
--LIBS = -L/usr/lib -lc
-+LIBS = --lc -lX11
+-INCPATH = .:${ROOT}/include:${INCLUDE}:/usr/include
+-LIBS = -L/usr/lib -lc -L${ROOT}/lib
++INCPATH = .:${ROOT}/include:${INCLUDE}:/usr/include:${PREFIX}/include
++LIBS = --lc -lX11 -L${ROOT}/lib
  
  # Flags
  include ${ROOT}/mk/gcc.mk
- # wmii is IO bound, not CPU bound. Please do not use -O2 here. -O is more than sufficient.
--CFLAGS += 
--LDFLAGS += 
+-CFLAGS += -g -O0 -DIXPlint
+-LDFLAGS += -g ${LIBS}
++#CFLAGS += -g -O0 -DIXPlint
 +CFLAGS += -DVERSION=\"${VERSION}\"
++#LDFLAGS += -g ${LIBS}
 +LDFLAGS += ${LIBS}
  STATIC = -static
+ MKDEP = cpp -M
  
- # Compiler
-@@ -27,10 +24,10 @@ LD = cc
+@@ -27,13 +26,12 @@ LD = cc
  AR = ar crs
- #AR = sh -c 'ar cr "$$@" && ranlib "$$@"'
  
--P9PATHS = /usr/local/plan9 /usr/local/9 /opt/plan9 /opt/9 /usr/plan9 /usr/9
+ AWKPATH = $$(which awk)
+-P9PATHS = ${PLAN9}:"'$${HOME}/plan9'":/usr/local/plan9:/usr/local/9:/opt/plan9:/opt/9:/usr/plan9:/usr/9
 +P9PATHS = ${PREFIX}/plan9 ${PREFIX}/9
  
 -INCX11 = -I/usr/X11R6/include
 -LIBX11 = -L/usr/X11R6/lib -lX11
 +INCX11 = -I${X11BASE}/include
 +LIBX11 = -L${X11BASE}/lib
- LIBIXP = ${ROOT}/libixp/libixp.a
+ LIBICONV = # Leave blank if your libc includes iconv (glibc does)
+-LIBIXP = ${ROOT}/libixp/libixp.a
+-LIBIXP = ${LIBDIR}/libixp.a
++LIBIXP = ${PREFIX}/lib/libixp.a
  
  # Solaris
+ #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
