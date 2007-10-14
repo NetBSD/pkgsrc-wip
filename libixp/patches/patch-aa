@@ -1,31 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/05 18:17:34 kh-p Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/14 12:17:41 hoka_adam Exp $
 
---- config.mk.bak	2006-11-05 19:04:16.000000000 +0100
+--- config.mk.orig	2007-10-13 22:38:56.000000000 +0200
 +++ config.mk
-@@ -4,16 +4,15 @@ VERSION = 0.1
- # Customize below to fit your system
+@@ -7,13 +7,12 @@ IGNORE = \
+ 	libixp_task \
+ 	libixp_rubythread
+ 
+-RUBYINC = -I/usr/local/lib/ruby/1.8/i386-freebsd6
++#RUBYINC = -I/usr/local/lib/ruby/1.8/i386-freebsd6
+ TASKINC = -I${HOME}/libtask
  
  # paths
 -PREFIX = /usr/local
--MANPREFIX = ${PREFIX}/share/man
-+MANPREFIX = ${PREFIX}/man
- 
- # includes and libs
- INCS = -I. -I/usr/include
- LIBS = -L/usr/lib -lc -L.
- 
- # flags
--CFLAGS = -Os ${INCS} -DVERSION=\"${VERSION}\"
--LDFLAGS = ${LIBS}
-+CFLAGS+= ${INCS} -DVERSION=\"${VERSION}\"
-+LDFLAGS+= ${LIBS}
- #CFLAGS = -g -Wall -O2 ${INCS} -DVERSION=\"${VERSION}\"
- #LDFLAGS = -g ${LIBS}
- 
-@@ -26,5 +25,5 @@ LDFLAGS = ${LIBS}
- # compiler and linker
- AR = ar cr
- CC = cc
--LD = ${CC}
-+LD = ${CC:Q}
- RANLIB = ranlib
+ BIN = ${PREFIX}/bin
+-MAN = ${PREFIX}/share/man
++MAN = ${PREFIX}/${PKGMANDIR}
+ ETC = ${PREFIX}/etc
+ LIBDIR = ${PREFIX}/lib
+ INCLUDE = ${PREFIX}/include
