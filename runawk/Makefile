@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/29 11:21:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/14 19:01:23 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.7.0
@@ -20,6 +20,7 @@ DOC_FILES=		README NEWS ChangeLog
 MAKE_FLAGS+=		ROOT=${PREFIX:Q}
 MAKE_FLAGS+=		DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=		WARFLAGS=
+MAKE_FLAGS+=		STDIN_FILENAME=/dev/stdin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/runawk ${DESTDIR}${PREFIX}/bin/
