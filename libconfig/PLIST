@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/14 12:47:25 hoka_adam Exp $
+include/libconfig.h
+include/libconfig.h++
+info/libconfig.info
+lib/libconfig++.la
+lib/libconfig.la
+lib/pkgconfig/libconfig++.pc
+lib/pkgconfig/libconfig.pc
