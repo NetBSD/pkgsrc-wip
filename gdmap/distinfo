@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2006/08/02 18:12:33 dhowland Exp $
+$NetBSD: distinfo,v 1.3 2007/10/16 23:28:32 dhowland Exp $
 
 SHA1 (gdmap-0.7.5.tar.gz) = 22054d5a82123ba210119460b9172ef2fff7c304
 RMD160 (gdmap-0.7.5.tar.gz) = ee02bcc5f8d93e54442fa5d83eb2db16fd65ee6b
 Size (gdmap-0.7.5.tar.gz) = 175869 bytes
 SHA1 (patch-aa) = 41b1ad750fe8c0e02ff21c72633a41848813433e
+SHA1 (patch-ab) = b2e7a609e5b1812d4b3e328b65f5b7fc7a34341d
