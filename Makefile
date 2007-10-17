@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2683 2007/10/13 20:23:43 cetrox Exp $
+# $Id: Makefile,v 1.2684 2007/10/17 11:11:12 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -121,7 +121,6 @@ SUBDIR+=	bincimap
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bison13
-SUBDIR+=	bitmap
 SUBDIR+=	blassic
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
