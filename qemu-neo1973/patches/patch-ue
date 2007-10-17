@@ -1,0 +1,29 @@
+--- usb-linux.c.orig	2007-10-14 20:12:22.000000000 +0200
++++ usb-linux.c	2007-10-14 20:13:44.000000000 +0200
+@@ -23,7 +23,6 @@
+  */
+ #include "vl.h"
+ 
+-#if defined(__linux__)
+ #include <dirent.h>
+ #include <sys/ioctl.h>
+ #include <linux/usbdevice_fs.h>
+@@ -503,18 +510,3 @@
+ {
+     usb_host_scan(NULL, usb_host_info_device);
+ }
+-
+-#else
+-
+-void usb_host_info(void)
+-{
+-    term_printf("USB host devices not supported\n");
+-}
+-
+-/* XXX: modify configure to compile the right host driver */
+-USBDevice *usb_host_device_open(const char *devname)
+-{
+-    return NULL;
+-}
+-
+-#endif

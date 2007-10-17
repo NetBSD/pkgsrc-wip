@@ -1,0 +1,38 @@
+--- configure.orig	2007-10-14 19:59:17.000000000 +0200
++++ configure	2007-10-14 20:03:14.000000000 +0200
+@@ -137,6 +137,7 @@
+ NetBSD)
+ bsd="yes"
+ oss="yes"
++usb="bsd"
+ ;;
+ OpenBSD)
+ bsd="yes"
+@@ -195,6 +196,7 @@
+ if [ "$bsd" = "yes" ] ; then
+   if [ "$darwin" != "yes" ] ; then
+     make="gmake"
++    usb="bsd"
+   fi
+ fi
+ 
+@@ -949,6 +951,19 @@
+   echo "#define _BSD 1" >> $config_h
+ fi
+ 
++# USB host support
++case "$usb" in
++linux)
++  echo "HOST_USB=linux" >> $conig_mak
++;;
++bsd)
++  echo "HOST_USB=bsd" >> $config_mak
++;;
++*)
++  echo "HOST_USB=stub" >> $config_mak
++;;
++esac
++
+ echo "#define CONFIG_UNAME_RELEASE \"$uname_release\"" >> $config_h
+ 
+ if test "$gadgetfs" = "yes" ; then

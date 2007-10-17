@@ -1,0 +1,11 @@
+--- Makefile.target.orig	2007-10-14 20:04:38.000000000 +0200
++++ Makefile.target	2007-10-14 20:04:41.000000000 +0200
+@@ -417,7 +417,7 @@
+ VL_OBJS+= scsi-disk.o cdrom.o lsi53c895a.o
+ 
+ # USB layer
+-VL_OBJS+= usb.o usb-hub.o usb-linux.o usb-hid.o usb-ohci.o usb-msd.o usb-net.o
++VL_OBJS+= usb.o usb-hub.o usb-$(HOST_USB).o usb-hid.o usb-ohci.o usb-msd.o usb-net.o
+ VL_OBJS+= usb-linux-gadget.o usb-bt.o usb-wacom.o
+ 
+ # EEPROM emulation
