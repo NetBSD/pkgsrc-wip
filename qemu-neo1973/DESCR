@@ -12,3 +12,6 @@ good emulation speed, QEMU has two operating modes:
 
     * This package has been changed to use OpenMoko's Qemu emulating
       the Neo1973 phone.
+
+
+Lonnie Mendez's USB forward patch integrated, so in Qemu you can usb_add.
