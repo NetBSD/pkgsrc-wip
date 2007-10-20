@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/10/20 13:03:04 noud4 Exp $
+
+--- src/main.c.orig	2007-09-01 13:18:10.000000000 +0200
++++ src/main.c	2007-09-01 13:19:37.000000000 +0200
+@@ -26,8 +26,13 @@
+ #include <getopt.h>
+ #include <usb.h>
+ #include <errno.h>
++#if __NetBSD__
++#include <machine/bswap.h>
++#include <sys/endian.h>
++#else
+ #include <byteswap.h>
+ #include <endian.h>
++#endif
+ 
+ #include "dfu.h"
+ #include "usb_dfu.h"
+@@ -660,8 +665,12 @@
+ 			transfer_size = page_size;
+ 		} else {
+ #if __BYTE_ORDER == __BIG_ENDIAN
++#if __NetBSD__
++			func_dfu.wTransferSize = bswap16(func_dfu.wTransferSize);
++#else
+ 			func_dfu.wTransferSize = bswap_16(func_dfu.wTransferSize);
+ #endif
++#endif
+ 			transfer_size = func_dfu.wTransferSize;
+ 		}
+ 	}

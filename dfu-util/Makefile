@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1.1.1 2007/10/20 13:03:04 noud4 Exp $
+#
+
+DISTNAME=		dfu-util-3230
+CATEGORIES=		wip
+MASTER_SITES=		http://wiki.openmoko.org/
+SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/dfu-util/
+NO_CHECKSUM=		yes
+
+MAINTAINER=		noud4@home.nl
+HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
+COMMENT=		Host side of the USB DFU protocol
+
+SUBDIR=			${PKGNAME}
+WRKSRC= 		${WRKDIR}/${SUBDIR}
+USE_TOOLS+=		autoconf automake tar
+HAS_CONFIGURE=		YES
+CONFIGURE_ARGS+=	-prefix=${PREFIX}
+CFLAGS+=		-lusb
+
+do-fetch:
+	if [ ! -f ${DISTDIR}/${SUBDIR:Q}.tar.gz ]; then \
+		cd ${DISTDIR:Q}; \
+		svn export -r ${PKGVERSION} ${SVN_REPOSITORY} ${SUBDIR:Q}; \
+		tar -czf ${SUBDIR:Q}.tar.gz ${SUBDIR:Q}; \
+		${RM} -r ${DISTDIR}/${SUBDIR:Q}; \
+	fi
+
+pre-configure:
+	${CHMOD} u+x ${WRKSRC}/autogen.sh
+	cd ${WRKSRC} && ./autogen.sh
+
+.include "../../devel/libusb/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
