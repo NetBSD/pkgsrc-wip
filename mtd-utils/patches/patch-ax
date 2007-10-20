@@ -1,0 +1,27 @@
+$NetBSD: patch-ax,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- rfdformat.c.orig	2006-04-30 22:59:15.000000000 +0200
++++ rfdformat.c	2007-10-20 16:58:13.000000000 +0200
+@@ -26,7 +26,10 @@
+ #include <getopt.h>
+ 
+ #include <mtd/mtd-user.h>
++#if __NetBSD__
++#else
+ #include <linux/types.h>
++#endif
+ 
+ #define PROGRAM "rfdformat"
+ #define VERSION "$Revision 1.0 $"
+@@ -90,7 +93,11 @@
+ 
+ int main(int argc, char *argv[])
+ {
++#if __NetBSD__
++	static const uint8_t magic[] = { 0x93, 0x91 };
++#else
+ 	static const __u8 magic[] = { 0x93, 0x91 };
++#endif
+ 	int fd, block_count, i;
+ 	struct mtd_info_user mtd_info;
+ 	char buf[512];

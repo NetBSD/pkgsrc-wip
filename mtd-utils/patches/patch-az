@@ -1,0 +1,49 @@
+$NetBSD: patch-az,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- include/mtd/inftl-user.h.orig	2007-09-01 11:16:32.000000000 +0200
++++ include/mtd/inftl-user.h	2007-09-01 11:21:24.000000000 +0200
+@@ -60,24 +60,44 @@
+ /* INFTL Media Header */
+ 
+ struct INFTLPartition {
++#if __NetBSD__
++	uint32_t virtualUnits;
++	uint32_t firstUnit;
++	uint32_t lastUnit;
++	uint32_t flags;
++	uint32_t spareUnits;
++	uint32_t Reserved0;
++	uint32_t Reserved1;
++#else
+	__u32 virtualUnits;
+	__u32 firstUnit;
+	__u32 lastUnit;
+	__u32 flags;
+	__u32 spareUnits;
+	__u32 Reserved0;
+	__u32 Reserved1;
++#endif
+ } __attribute__((packed));
+ 
+ struct INFTLMediaHeader {
+ 	char bootRecordID[8];
++#if __NetBSD__
++	uint32_t NoOfBootImageBlocks;
++	uint32_t NoOfBinaryPartitions;
++	uint32_t NoOfBDTLPartitions;
++	uint32_t BlockMultiplierBits;
++	uint32_t FormatFlags;
++	uint32_t OsakVersion;
++	uint32_t PercentUsed;
++#else
+	__u32 NoOfBootImageBlocks;
+	__u32 NoOfBinaryPartitions;
+	__u32 NoOfBDTLPartitions;
+	__u32 BlockMultiplierBits;
+	__u32 FormatFlags;
+	__u32 OsakVersion;
+	__u32 PercentUsed;
++#endif
+ 	struct INFTLPartition Partitions[4];
+ } __attribute__((packed));
+ 

@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- flash_eraseall.c.orig	2006-10-07 17:33:37.000000000 +0200
++++ flash_eraseall.c	2007-08-28 19:10:30.000000000 +0200
+@@ -36,6 +36,10 @@
+ #include <time.h>
+ #include <getopt.h>
+ #include <sys/ioctl.h>
++#if __NetBSD__
++#define loff_t off_t
++#include <sys/param.h>
++#endif
+ #include <sys/mount.h>
+ #include "crc32.h"
+ 
+@@ -54,7 +58,7 @@
+ static void display_help (void);
+ static void display_version (void);
+ static struct jffs2_unknown_node cleanmarker;
+-int target_endian = __BYTE_ORDER;
++int target_endian = _BYTE_ORDER;
+ 
+ int main (int argc, char *argv[])
+ {

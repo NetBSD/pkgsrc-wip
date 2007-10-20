@@ -1,0 +1,46 @@
+$NetBSD: patch-ae,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- sumtool.c.orig	2006-10-07 17:33:37.000000000 +0200
++++ sumtool.c	2007-09-01 11:07:57.000000000 +0200
+@@ -40,11 +40,19 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/param.h>
++#if __NetBSD__
++#else
+ #include <asm/types.h>
++#endif
+ #include <dirent.h>
+ #include <mtd/jffs2-user.h>
++#if __NetBSD__
++#include <sys/endian.h>
++#include <machine/bswap.h>
++#else
+ #include <endian.h>
+ #include <byteswap.h>
++#endif
+ #include <getopt.h>
+ #include "crc32.h"
+ #include "summary.h"
+@@ -73,7 +81,7 @@
+ static uint8_t *file_buffer = NULL;		/* file buffer contains the actual erase block*/
+ static unsigned int file_ofs = 0;		/* position in the buffer */
+ 
+-int target_endian = __BYTE_ORDER;
++int target_endian = _BYTE_ORDER;
+ 
+ static struct option long_options[] = {
+ 	{"output", 1, NULL, 'o'},
+@@ -195,10 +203,10 @@
+ 					perror_msg_and_die("open input file");
+ 				break;
+ 			case 'b':
+-				target_endian = __BIG_ENDIAN;
++				target_endian = _BIG_ENDIAN;
+ 				break;
+ 			case 'l':
+-				target_endian = __LITTLE_ENDIAN;
++				target_endian = _LITTLE_ENDIAN;
+ 				break;
+ 			case 'h':
+ 			case '?':

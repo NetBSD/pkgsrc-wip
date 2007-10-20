@@ -1,0 +1,22 @@
+$NetBSD: patch-ba,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- jittertest/Makefile.orig	2006-10-07 17:33:37.000000000 +0200
++++ jittertest/Makefile	2007-10-07 12:31:47.000000000 +0200
+@@ -1,15 +1,15 @@
+ CC=gcc
+ # uncomment following for performance
+-CCFLAGS=-O3 -Wall -m486 -fomit-frame-pointer
++CCFLAGS=-O3 -Wall -march=i486 -fomit-frame-pointer -D_NETBSD_SOURCE -L/usr/lib
+ 
+ # uncomment following for debugging. Uncomment either this or the one above. Not both.
+ # CCFLAGS=-Wall -g
+ 
+ 
+ all: JitterTest plotJittervsFill
+ 
+ JitterTest: JitterTest.c Makefile
+-	 gcc $(CCFLAGS) -lm JitterTest.c -o JitterTest
++	 gcc $(CCFLAGS) -lm -lpthread JitterTest.c -o JitterTest
+ 
+ plotJittervsFill: plotJittervsFill.c Makefile
+ 	 gcc $(CCFLAGS) plotJittervsFill.c -o plotJittervsFill

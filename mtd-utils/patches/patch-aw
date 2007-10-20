@@ -1,0 +1,87 @@
+$NetBSD: patch-aw,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+
+--- rfddump.c.orig	2006-04-30 22:59:15.000000000 +0200
++++ rfddump.c	2007-10-20 16:55:33.000000000 +0200
+@@ -24,8 +24,12 @@
+ #include <getopt.h>
+ 
+ #include <mtd/mtd-user.h>
++#if __NetBSD__
++#include <mtd_swab.h>
++#else
+ #include <linux/types.h>
+ #include <asm/byteorder.h>
++#endif
+ 
+ /* next is an array of mapping for each corresponding sector */
+ #define RFD_MAGIC		0x9193
+@@ -45,7 +49,11 @@
+ 	int header_sectors;
+ 	int data_sectors;
+ 	int header_size;
++#if __NetBSD__
++	uint16_t *header;
++#else
+ 	__u16 *header;
++#endif
+ 	int sector_count;
+ 	int *sector_map;
+ 	const char *mtd_filename;
+@@ -137,7 +145,11 @@
+ 		return -1;
+ 	}
+ 
++#if __NetBSD__
++	if (le16_to_cpu(rfd->header[0]) != RFD_MAGIC) {
++#else
+ 	if (__le16_to_cpu(rfd->header[0]) != RFD_MAGIC) {
++#endif
+ 		if (rfd->verbose)
+ 			printf("Block #%02d: Magic missing\n", block);
+ 
+@@ -146,7 +158,11 @@
+ 
+ 	sectors =  0;
+ 	for (i=0; i<rfd->data_sectors; i++) {
++#if __NetBSD__
++		uint16_t entry = le16_to_cpu(rfd->header[i + HEADER_MAP_OFFSET]);
++#else
+ 		__u16 entry = __le16_to_cpu(rfd->header[i + HEADER_MAP_OFFSET]);
++#endif
+ 
+ 		if (entry == SECTOR_FREE || entry == SECTOR_DELETED)
+ 			continue;
+@@ -184,7 +200,11 @@
+ 	struct rfd rfd;
+ 	int i, blocks_found;
+ 	int out_fd = 0;
++#if __NetBSD__
++	uint8_t sector[512];
++#else
+ 	__u8 sector[512];
++#endif
+ 	int blank, rc, cylinders;
+ 
+ 	process_options(argc, argv, &rfd);
+@@ -240,13 +260,21 @@
+ 
+ 	rfd.header_sectors =
+                 ((HEADER_MAP_OFFSET + sectors_per_block) *
++#if __NetBSD__
++                  sizeof(uint16_t) + SECTOR_SIZE - 1) / SECTOR_SIZE;
++#else
+                   sizeof(__u16) + SECTOR_SIZE - 1) / SECTOR_SIZE;
++#endif
+ 	rfd.data_sectors = sectors_per_block - rfd.header_sectors;
+ 	cylinders = ((rfd.block_count - 1) * rfd.data_sectors - 1)
+ 		/ SECTORS_PER_TRACK;
+ 	rfd.sector_count = cylinders * SECTORS_PER_TRACK;
+ 	rfd.header_size =
++#if __NetBSD__
++		(HEADER_MAP_OFFSET + rfd.data_sectors) * sizeof(uint16_t);
++#else
+ 		(HEADER_MAP_OFFSET + rfd.data_sectors) * sizeof(__u16);
++#endif
+ 
+ 	rfd.header = malloc(rfd.header_size);
+ 	if (!rfd.header) {
