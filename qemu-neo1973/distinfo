@@ -1,24 +1,25 @@
-$NetBSD: distinfo,v 1.3 2007/10/17 19:21:02 noud4 Exp $
+$NetBSD: distinfo,v 1.4 2007/10/21 19:29:16 noud4 Exp $
 
-SHA1 (qemu-neo1973-3102.tar.gz) = 8235a5ce71a5b283d3f7c0311d998f0048d4a9c1
-RMD160 (qemu-neo1973-3102.tar.gz) = 2f299e9cea29f2a0f150f88d933d82c9fddcbc28
-Size (qemu-neo1973-3102.tar.gz) = 5251330 bytes
+SHA1 (qemu-neo1973-3231.tar.gz) = e31393265213e3598f5f65e71418fc51cc6600b5
+RMD160 (qemu-neo1973-3231.tar.gz) = a2c0508f3b6151fa99198d19dc7316f40fbd579f
+Size (qemu-neo1973-3231.tar.gz) = 2626981 bytes
 SHA1 (patch-aa) = 455575215bad8864da285e1979da9ff7d8476a24
 SHA1 (patch-ac) = 895703d61200250f98978c11ad238db642185b27
 SHA1 (patch-ag) = a410404f1c5be77496eb6e5e343fd220c5339c37
-SHA1 (patch-ak) = aa7e90f346ee906a1bb5077d77693694b8c79a5e
+SHA1 (patch-ak) = d319ae1e94a899038a2d7c9e78be1247997d2a38
 SHA1 (patch-am) = a22a3b23284c377afa8113768d68c8ef40c514f9
 SHA1 (patch-ao) = 5506776eedaa3f8e632197e4e654d5c448f4d774
 SHA1 (patch-au) = 7674469b20c9b19335c1836f28373aabdb60d354
 SHA1 (patch-aw) = 7ea5e86d68a76272cf6ee856b16064896adf1c34
 SHA1 (patch-ax) = 66b060005ecbf9fd0451f7960e81eccbabf959ca
-SHA1 (patch-ay) = e1c4412c95fa3e7c0ca566362229d63732223592
+SHA1 (patch-ay) = bfaa41186814141d56e540bf8d1069e8ba432d87
 SHA1 (patch-ba) = 5d3a6129e7650b7aaee79ecb7fdd28e649a5b688
-SHA1 (patch-bb) = 6c2e27ec1cd82a3c97044e24bdff47fd54f9e97b
-SHA1 (patch-bc) = f8dd87a355e022e7fdac9e4a32a19078a09afde1
-SHA1 (patch-bd) = 31418ceddbbd884791f9fd6fd185dbc5350b9440
-SHA1 (patch-ua) = 3ace98d27eb67967b99ad27c734be4f31e0bb4c6
-SHA1 (patch-ub) = 00ab6bb20772b428b4a2fad36d0afd2d6aca60af
-SHA1 (patch-ue) = 13031af020d658055f943d22fa0e6667ba9a180c
-SHA1 (patch-uf) = 170408c0235767201d6de328c2e41e383db0eecf
-SHA1 (patch-ug) = 3be23caa6ff475c5e29cbad5d0a38662196cdfe3
+SHA1 (patch-bb) = b762467b7f6ce84d26c8f524832c74d9cd894883
+SHA1 (patch-bc) = 9bc0f3bf3b3edeb28aad6d9bae45a9a92b4bfa25
+SHA1 (patch-bd) = 57ae397e669244de01b6d8b7af2659af0b190564
+SHA1 (patch-be) = 37b1fca8419e5ba21b22328c49a2f5288426f0f1
+SHA1 (patch-ua) = 6ebb26ab470cbb5225b548fa7ddbf0944b512156
+SHA1 (patch-ub) = 41bfaa1c8599acffe3cc6a7b718f6547767f428a
+SHA1 (patch-ue) = 8d1d7cd2d7eb91632354791c4b9ca2659a35ef89
+SHA1 (patch-uf) = 8b256345f9af4e491a1301dcc62d9ebd70809b19
+SHA1 (patch-ug) = 54b9223636a3f843d33d78611613f0492659d2fb

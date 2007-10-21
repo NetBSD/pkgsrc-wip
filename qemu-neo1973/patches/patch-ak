@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-ak,v 1.2 2007/10/21 19:29:17 noud4 Exp $
 
 --- Makefile.orig	2007-07-19 22:00:53.000000000 +0200
 +++ Makefile	2007-07-19 22:36:09.000000000 +0200
@@ -11,8 +11,10 @@ $NetBSD: patch-ak,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
 +	$(BSD_INSTALL_MAN_DIR) "$(DESTDIR)$(docdir)"
 +	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
  ifndef CONFIG_WIN32
- 	mkdir -p "$(DESTDIR)$(mandir)/man1"
- 	$(INSTALL) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
+-	mkdir -p "$(DESTDIR)$(mandir)/man1"
+-	$(INSTALL) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
++	$(BSD_INSTALL_MAN_DIR) "$(DESTDIR)$(mandir)/man1"
++	$(BSD_INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
  endif
  
  install: all $(if $(BUILD_DOCS),install-doc)

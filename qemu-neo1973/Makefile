@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2007/10/07 20:58:27 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2007/10/21 19:29:16 noud4 Exp $
 #
 
-DISTNAME=		qemu-neo1973-3102
+DISTNAME=		qemu-neo1973-3231
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.openmoko.org/
+SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/qemu-neo1973
+NO_CHECKSUM=		yes
 
 MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://wiki.openmoko.org/wiki/OpenMoko_under_QEMU
-COMMENT=		QEMU OpenMoko neo1973 phone emulator
+COMMENT=		Qemu OpenMoko Neo1973 phone emulator
 
-CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
 
 USE_TOOLS+=		gmake perl:build
@@ -31,10 +32,17 @@ GCC_REQD+=		3.0
 USE_PKGSRC_GCC= 	yes
 .endif
 
-CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
+NEO1973_PREFIX=		${PREFIX}/${PKGBASE}
+PLIST_SUBST+=		NEO1973_PREFIX=${PKGBASE}
+MESSAGE_SUBST+=		NEO1973_PREFIX=${NEO1973_PREFIX}
+
+CONFIGURE_ARGS+=        --prefix=${NEO1973_PREFIX:Q}
+CONFIGURE_ARGS+=	--interp-prefix=${NEO1973_PREFIX:Q}/share/qemu
 CONFIGURE_ARGS+=	--target-list=arm-softmmu
+CONFIGURE_ENV+=		PKGMANDIR=/${PKGMANDIR}
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.99.[0-9]*)
+CONFIGURE_ENV+=		FORCE_AIO="yes"
+.endif
 
 SUBST_CLASSES+=		snd
 SUBST_STAGE.snd=	post-patch
@@ -48,11 +56,11 @@ SUBST_FILES.smbd=	vl.c
 SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
 SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
 
-SUBST_CLASSES+=		perl
-SUBST_STAGE.perl=	post-patch
-SUBST_FILES.perl=	openmoko/Makefile openmoko/flash.sh
-SUBST_SED.perl=		-e s,@@PREFIX@@,${PREFIX:Q},g
-SUBST_MESSAGE.perl=	Fixing hardcoded paths.
+SUBST_CLASSES+=		moko
+SUBST_STAGE.moko=	post-patch
+SUBST_FILES.moko=	openmoko/Makefile openmoko/flash.sh
+SUBST_SED.moko=		-e s,@@PREFIX@@,${PREFIX:Q},g
+SUBST_MESSAGE.moko=	Fixing OpenMoko paths.
 
 REPLACE_PERL+=		texi2pod.pl
 
@@ -66,8 +74,7 @@ CFLAGS+=		-fno-stack-protector
 .endif
 
 SUBDIR=		${PKGNAME}
-WRKSRC=		${WRKDIR}/qemu-neo1973
-NO_CHECKSUM=	yes
+WRKSRC=		${WRKDIR}/${SUBDIR}
 
 .include "../../mk/compiler.mk"
 
@@ -77,23 +84,22 @@ CONFIGURE_ARGS+=	--disable-gcc-check
 
 do-fetch:
 	if [ ! -f ${DISTDIR}/${SUBDIR:Q}.tar.gz ]; then \
-		${MKDIR} -p ${DISTDIR}/${SUBDIR}; \
-		cd ${DISTDIR}; svn checkout https://svn.openmoko.org/trunk/src/host/qemu-neo1973; \
-		cd ${DISTDIR}; tar -cf ${SUBDIR}.tar ${SUBDIR};gzip ${SUBDIR}.tar; \
-		${RM} -r ${DISTDIR}/${SUBDIR}; \
+		cd ${DISTDIR:Q}; \
+		svn export -r ${PKGVERSION} ${SVN_REPOSITORY} ${SUBDIR:Q}; \
+		tar -czf ${SUBDIR:Q}.tar.gz ${SUBDIR:Q}; \
+		${RM} -r ${DISTDIR}/${SUBDIR:Q}; \
 	fi
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/qemu
+	${MV} ${NEO1973_PREFIX:Q}/bin/qemu-system-arm ${NEO1973_PREFIX:Q}/bin/qemu-neo1973
+	${MV} ${NEO1973_PREFIX:Q}/bin/qemu-img ${NEO1973_PREFIX:Q}/bin/qemu-neo1973-img
+	${LN} -sf ../${PKGBASE}/bin/qemu-neo1973 ${PREFIX:Q}/bin/qemu-neo1973
 
-	${INSTALL_MAN} ${WRKSRC}/qemu.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/qemu-img.1 ${PREFIX}/${PKGMANDIR}/man1
-
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/emul/neo1973/openmoko
-	${INSTALL_DATA} ${WRKSRC}/openmoko/Makefile ${PREFIX:Q}/emul/neo1973/openmoko
-	${INSTALL_SCRIPT} ${WRKSRC}/openmoko/download.sh ${PREFIX:Q}/emul/neo1973/openmoko
-	${INSTALL_DATA} ${WRKSRC}/openmoko/env ${PREFIX:Q}/emul/neo1973/openmoko
-	${INSTALL_SCRIPT} ${WRKSRC}/openmoko/flash.sh ${PREFIX:Q}/emul/neo1973/openmoko
+	${INSTALL_DATA_DIR} ${NEO1973_PREFIX:Q}/libexec/openmoko/
+	${INSTALL_DATA} ${WRKSRC}/openmoko/Makefile ${NEO1973_PREFIX:Q}/libexec/openmoko
+	${INSTALL_SCRIPT} ${WRKSRC}/openmoko/download.sh ${NEO1973_PREFIX:Q}/libexec/openmoko
+	${INSTALL_DATA} ${WRKSRC}/openmoko/env ${NEO1973_PREFIX:Q}/libexec/openmoko
+	${INSTALL_SCRIPT} ${WRKSRC}/openmoko/flash.sh ${NEO1973_PREFIX:Q}/libexec/openmoko
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
@@ -101,5 +107,4 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # ln -s /usr/pkg/bin/python2.4  /usr/pkg/bin/python
-# cd /usr/pkg/emul/neo1973; qemu-system-arm -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -show-cursor
-# cd /usr/pkg/emul/neo1973; qemu-system-arm -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -show-cursor -serial telnet:localhost:1200,server
+# cd /usr/pkg/qemu-neo1973/libexec; ../bin/qemu-neo1973 -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -usbdevice host:07a6:8511 -show-cursor -monitor stdio -serial telnet:localhost:1200,server

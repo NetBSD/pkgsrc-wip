@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-bc,v 1.2 2007/10/21 19:29:17 noud4 Exp $
 
 --- openmoko/env	2007-07-20 19:54:50.000000000 +0200
 +++ openmoko/env.new	2007-07-22 14:37:06.000000000 +0200
@@ -7,9 +7,8 @@ $NetBSD: patch-bc,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
  script_dir="$src_dir/$script_dir_relative"
  uboot_symlink="$src_dir/u-boot.bin"
 -qemu_relative="arm-softmmu/qemu-system-arm -M neo -m 130"
--qemu="$src_dir/$qemu_relative"
-+qemu_relative="qemu-system-arm -M neo -m 130"
-+qemu="$qemu_relative"
++qemu_relative="../bin/qemu-neo1973 -M neo -m 130"
+ qemu="$src_dir/$qemu_relative"
  flash_base=openmoko-flash.base
  flash_image=openmoko-flash.image
  make=make

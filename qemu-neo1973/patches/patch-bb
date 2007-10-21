@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-bb,v 1.2 2007/10/21 19:29:17 noud4 Exp $
 
 --- openmoko/Makefile	2007-07-20 19:54:50.000000000 +0200
 +++ openmoko/Makefile.new	2007-07-20 20:49:33.000000000 +0200
@@ -16,7 +16,7 @@ $NetBSD: patch-bb,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
  
  $(FLASHOVERLAY): $(FLASHIMG)
 -	../qemu-img create -b $^ -f qcow2 $@
-+	qemu-img create -b $^ -f qcow2 $@
++	../../bin/qemu-neo1973-img create -b $^ -f qcow2 $@
  
  clean:
  	rm -rf $(SPLASH) $(SPLASHIMG) $(FLASHIMG) $(FLASHOVERLAY) \
