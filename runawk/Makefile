@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/21 15:38:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/21 15:43:12 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.8.0
@@ -22,6 +22,7 @@ DOC_FILES=		README NEWS ChangeLog
 MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=		DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=		INSTALL="${INSTALL_PROGRAM}"
+MAKE_FLAGS+=		WARFLAGS=
 
 post-install:
 .for i in ${DOC_FILES}
