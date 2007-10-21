@@ -1,11 +1,22 @@
-# $NetBSD: options.mk,v 1.2 2007/05/20 17:21:50 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2007/10/21 16:34:43 adrian_p Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
 PKG_SUPPORTED_OPTIONS=	dbus glib gdbm python gtk python-gtk python-dbus
-# PKG_SUGGESTED_OPTIONS=	dbus
+PKG_SUPPORTED_OPTIONS+=	avahi-howl expat
+PKG_SUGGESTED_OPTIONS=	expat
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Some basic dependencies for avahi:
+###
+### libdaemon + expat = 		avahi-daemon	(default)
+### libdaemon + expat = 		avahi-dnsconfd	(default)
+### avahi-daemon + dbus = 		libavahi-client
+### avahi-daemon + dbus = 		avahi-utils
+### python + python-gtk + python-dbus = avahi-python
+###
 
 ###
 ### Enable py-dbus support (implies python and dbus)
@@ -15,6 +26,7 @@ PKG_OPTIONS+=		python dbus
 .  include "../../lang/python/pyversion.mk"
 .  include "../../sysutils/py-dbus/buildlink3.mk"
 DEPENDS+=		${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 PLIST_SRC+=		${PKGDIR}/PLIST.pydbus
 .else
 CONFIGURE_ARGS+=	--disable-python-dbus
@@ -25,28 +37,39 @@ CONFIGURE_ARGS+=	--disable-python-dbus
 ###
 .if !empty(PKG_OPTIONS:Mpython-gtk)
 PKG_OPTIONS+=		python gtk
-.  include "../../x11/pygtk/buildlink3.mk"
+.  include "../../x11/py-gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pygtk
+.endif
+
+###
+### Enable compatibility layer for HOWL
+###
+.if !empty(PKG_OPTIONS:Mavahi-howl)
+CONFIGURE_ARGS+=	--enable-compat-howl
+.endif
+
+###
+### Enable expat support
+###
+.if !empty(PKG_OPTIONS:Mexpat)
+.  include "../../textproc/expat/buildlink3.mk"
+PLIST_SRC+=		${PKGDIR}/PLIST.expat
+.else
+CONFIGURE_ARGS+=	--disable-expat
 .endif
 
 ###
 ### Enable gtk support (implies glib)
 ### This will get you avahi-discover-standalone
 ###
-#
-# XXX: This looks wrong -- you shouldn't mix gtk2 and gnome1
-# Additionally, gnome-libs has been removed from pkgsrc.
-#
-#.if !empty(PKG_OPTIONS:Mgtk)
-#PKG_OPTIONS+=		glib
-#.  include "../../x11/gtk2/buildlink3.mk"
-#.  include "../../x11/gnome-libs/buildlink3.mk"
-#.  include "../../devel/libglade2/buildlink3.mk"
-#PLIST_SRC+=		${PKGDIR}/PLIST.gtk
-#.else
-#CONFIGURE_ARGS+=	--disable-gtk
-#.endif
+.if !empty(PKG_OPTIONS:Mgtk)
+PKG_OPTIONS+=		glib
+.  include "../../x11/gtk2/buildlink3.mk"
+PLIST_SRC+=		${PKGDIR}/PLIST.gtk
+.else
+CONFIGURE_ARGS+=	--disable-gtk
+.endif
 
 ###
 ### Enable glib support
@@ -95,4 +118,12 @@ CONFIGURE_ARGS+=	--disable-dbus
 .if !empty(PKG_OPTIONS:Mpython) && !empty(PKG_OPTIONS:Mpython-gtk) \
 	&& !empty(PKG_OPTIONS:Mpython-dbus)
 PLIST_SRC+=		${PKGDIR}/PLIST.avahipy
+.endif
+
+###
+### If python, and gdbm are enabled we need py-gdbm as well
+###
+.if !empty(PKG_OPTIONS:Mpython) && !empty(PKG_OPTIONS:Mgdbm)
+DEPENDS+=	${PYPKGPREFIX}-gdbm-[0-9]*:../../databases/py-gdbm
+PLIST_SRC+=	${PKGDIR}/PLIST.pygdbm
 .endif

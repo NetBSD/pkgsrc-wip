@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2007/09/21 13:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/21 16:34:43 adrian_p Exp $
 
 DISTNAME=		avahi-0.6.16
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -21,6 +20,7 @@ USE_PKGINSTALL=		YES
 BUILD_DEFS=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
+USE_LANGUAGES=		c c++
 
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}::Avahi\ user:/nonexistent
 PKG_GROUPS=		${AVAHI_GROUP}
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--with-distro=netbsd
 CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-qt4
 CONFIGURE_ARGS+=	--disable-mono
@@ -68,7 +68,7 @@ post-extract:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/avahi
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avahi
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/services
+	${MKDIR} ${PKG_SYSCONFDIR}/services
 
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-daemon.conf \
 		${PREFIX}/share/examples/avahi
