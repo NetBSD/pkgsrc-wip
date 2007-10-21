@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2007/09/22 06:11:01 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.32 2007/10/21 23:51:50 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -150,6 +150,8 @@ share/emacs/${PKGVERSION}/etc/emacs.bash
 share/emacs/${PKGVERSION}/etc/emacs.csh
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.py
+share/emacs/${PKGVERSION}/etc/emacs2.py
+share/emacs/${PKGVERSION}/etc/emacs3.py
 share/emacs/${PKGVERSION}/etc/enriched.doc
 share/emacs/${PKGVERSION}/etc/future-bug
 share/emacs/${PKGVERSION}/etc/gnus-tut.txt
@@ -2007,6 +2009,8 @@ share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tls.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-compat.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-fish.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-fish.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
@@ -2663,6 +2667,8 @@ share/emacs/${PKGVERSION}/lisp/vc-hooks.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-hooks.elc
 share/emacs/${PKGVERSION}/lisp/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-mcvs.elc
+share/emacs/${PKGVERSION}/lisp/vc-mtn.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-mtn.elc
 share/emacs/${PKGVERSION}/lisp/vc-rcs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-rcs.elc
 share/emacs/${PKGVERSION}/lisp/vc-sccs.el.gz
