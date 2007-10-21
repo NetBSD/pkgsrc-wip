@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/21 15:28:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2007/10/21 15:34:58 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.8.0
@@ -17,13 +17,11 @@ INSTALLATION_DIRS+=	${PKGDOCDIR} bin
 
 DOC_FILES=		README NEWS ChangeLog
 
-MAKE_FLAGS+=		ROOT=${PREFIX:Q}
+MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
 MAKE_FLAGS+=		DESTDIR=${DESTDIR:Q}
-MAKE_FLAGS+=		WARFLAGS=
-MAKE_FLAGS+=		STDIN_FILENAME=/dev/stdin
+MAKE_FLAGS+=		INSTALL="${INSTALL_PROGRAM}"
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/runawk ${DESTDIR}${PREFIX}/bin/
+post-install:
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
 .endfor
