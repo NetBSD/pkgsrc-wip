@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/10/21 15:34:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/21 15:38:30 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.8.0
@@ -9,8 +9,10 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/runawk
 COMMENT=	Wrapper that impelements modules for AWK
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	c
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
+USE_LANGUAGES=		c
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${PKGDOCDIR} bin
