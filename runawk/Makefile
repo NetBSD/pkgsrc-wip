@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/10/21 15:43:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/10/21 16:02:35 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.8.0
@@ -11,7 +11,6 @@ COMMENT=	Wrapper that impelements modules for AWK
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=		c
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
