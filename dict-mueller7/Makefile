@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/20 22:45:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2007/10/22 18:24:38 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -23,7 +23,7 @@ BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils
 
 WRKSRC=		${WRKDIR}/mueller7/usr/local/share/dict
 
-USE_TOOLS+=	gsed perl tar
+USE_TOOLS+=	gsed perl tar bzip2
 
 INSTALLATION_DIRS+=	share/dictd
 
