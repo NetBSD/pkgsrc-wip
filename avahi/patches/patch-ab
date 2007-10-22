@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2007/10/22 07:40:45 adrian_p Exp $
+
+--- avahi-ui/avahi-ui.c.orig	2007-05-09 01:00:14.000000000 +0100
++++ avahi-ui/avahi-ui.c
+@@ -25,6 +25,7 @@
+ 
+ #include <string.h>
+ #include <stdarg.h>
++#include <sys/types.h> 
+ #include <net/if.h>
+ 
+ #include <gtk/gtk.h>
