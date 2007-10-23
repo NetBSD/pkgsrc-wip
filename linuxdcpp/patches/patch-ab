@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2007/10/23 22:21:43 tnn2 Exp $
+
+--- linux/wulformanager.cc.orig	2007-10-13 23:56:55.000000000 +0200
++++ linux/wulformanager.cc
+@@ -84,21 +84,21 @@ WulforManager::WulforManager()
+ 		exit(EXIT_FAILURE);
+ 	}
+ 
+-	guiSem = sem_open("/linuxdcppGuiSem",  O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, 0);
++	guiSem = sem_open("/ldcppGuiSem",  O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, 0);
+ 	if (guiSem == SEM_FAILED)
+ 	{
+ 		perror("Unable to initialize guiSem");
+ 		exit(EXIT_FAILURE);
+ 	}
+-	sem_unlink("/linuxdcppGuiSem");
++	sem_unlink("/ldcppGuiSem");
+ 
+-	clientSem = sem_open("/linuxdcppClientSem",  O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, 0);
++	clientSem = sem_open("/ldcppCliSem",  O_CREAT | O_EXCL, S_IRWXU | S_IRWXG, 0);
+ 	if (clientSem == SEM_FAILED)
+ 	{
+ 		perror("Unable to initialize clientSem");
+ 		exit(EXIT_FAILURE);
+ 	}
+-	sem_unlink("/linuxdcppClientSem");
++	sem_unlink("/ldcppCliSem");
+ 
+ 	if (pthread_create(&clientThread, NULL, &threadFunc_client, (void *)this) != 0)
+ 	{
