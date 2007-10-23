@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/10/17 21:03:43 ghen Exp $
+@comment $NetBSD: PLIST,v 1.13 2007/10/23 17:07:39 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -94,6 +94,7 @@ include/dovecot/src/lib-sql/sql-api.h
 include/dovecot/src/lib-sql/sql-pool.h
 include/dovecot/src/lib-storage/index/cydir/cydir-storage.h
 include/dovecot/src/lib-storage/index/cydir/cydir-sync.h
+include/dovecot/src/lib-storage/index/dbox/dbox-file-maildir.h
 include/dovecot/src/lib-storage/index/dbox/dbox-file.h
 include/dovecot/src/lib-storage/index/dbox/dbox-index.h
 include/dovecot/src/lib-storage/index/dbox/dbox-storage.h
@@ -160,6 +161,7 @@ include/dovecot/src/lib/ioloop-iolist.h
 include/dovecot/src/lib/ioloop-notify-fd.h
 include/dovecot/src/lib/ioloop.h
 include/dovecot/src/lib/iostream-internal.h
+include/dovecot/src/lib/istream-concat.h
 include/dovecot/src/lib/istream-crlf.h
 include/dovecot/src/lib/istream-internal.h
 include/dovecot/src/lib/istream-seekable.h
@@ -308,6 +310,7 @@ share/doc/dovecot/wiki/Design.Processes.txt
 share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
+share/doc/dovecot/wiki/GermanVersion.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
@@ -322,6 +325,7 @@ share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
+share/doc/dovecot/wiki/LocalBadContent.txt
 share/doc/dovecot/wiki/Logging.txt
 share/doc/dovecot/wiki/LoginProcess.txt
 share/doc/dovecot/wiki/MDA.txt
