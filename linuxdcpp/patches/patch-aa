@@ -1,7 +1,33 @@
-$NetBSD: patch-aa,v 1.2 2007/10/23 09:02:10 tnn2 Exp $
+$NetBSD: patch-aa,v 1.3 2007/10/23 09:25:17 tnn2 Exp $
 
 --- SConstruct.orig	2007-10-13 23:56:55.000000000 +0200
 +++ SConstruct
+@@ -44,10 +44,10 @@ def CheckCXXVersion(context, name, major
+ # ----------------------------------------------------------------------
+ 
+ # Parameters are only sticky from scons -> scons install, otherwise they're cleared.
+-if 'install' in COMMAND_LINE_TARGETS:
+-	opts = Options('build/sconf/scache.conf')
+-else:
+-	opts = Options()
++#if 'install' in COMMAND_LINE_TARGETS:
++#	opts = Options('build/sconf/scache.conf')
++#else:
++opts = Options()
+ 
+ opts.AddOptions(
+ 	BoolOption('debug', 'Compile the program with debug information', 0),
+@@ -64,8 +64,8 @@ opts.AddOptions(
+ 
+ env = Environment(ENV = os.environ, options = opts)
+ 
+-env.SConsignFile('build/sconf/.sconsign')
+-opts.Save('build/sconf/scache.conf', env)
++#env.SConsignFile('build/sconf/.sconsign')
++#opts.Save('build/sconf/scache.conf', env)
+ Help(opts.GenerateHelpText(env))
+ 
+ conf = Configure(env,
 @@ -169,7 +169,6 @@ if not 'install' in COMMAND_LINE_TARGETS
  # ----------------------------------------------------------------------
  
