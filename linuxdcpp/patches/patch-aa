@@ -1,19 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2007/08/17 20:34:47 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/23 09:02:10 tnn2 Exp $
 
---- SConstruct.orig	2007-07-07 23:21:06.000000000 +0200
+--- SConstruct.orig	2007-10-13 23:56:55.000000000 +0200
 +++ SConstruct
-@@ -146,6 +146,7 @@ if not 'install' in COMMAND_LINE_TARGETS
- 		print '\tOpenSSL library (libssl) not found'
- 		print '\tNote: You might have the lib but not the headers'
- 		Exit(1)
-+	conf.CheckLibWithHeader('crypto', 'openssl/crypto.h', 'c')
- 
- 	if not conf.CheckHeader('iconv.h'):
- 		Exit(1)
-@@ -160,7 +161,6 @@ if not 'install' in COMMAND_LINE_TARGETS
+@@ -169,7 +169,6 @@ if not 'install' in COMMAND_LINE_TARGETS
  # ----------------------------------------------------------------------
  
- 	env.Append(CXXFLAGS = Split('-I. -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_REENTRANT'))
+ 	env.Append(CXXFLAGS = ['-I.', '-D_GNU_SOURCE', '-D_FILE_OFFSET_BITS=64', '-D_REENTRANT'])
 -	env.Append(LINKFLAGS = ['-Wl,--as-needed'])
  
  	if env.has_key('ICONV_CONST') and env['ICONV_CONST']:
