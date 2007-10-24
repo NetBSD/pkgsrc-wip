@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
+$NetBSD: patch-aa,v 1.2 2007/10/24 13:53:56 jukka Exp $
 
---- config.orig	2007-02-22 03:00:39.000000000 +0100
-+++ config	2007-07-31 18:02:29.000000000 +0200
+--- config.orig	2007-08-01 13:21:35.000000000 +0200
++++ config	2007-10-21 13:18:53.000000000 +0200
 @@ -49,6 +49,7 @@ done
  # First get uname entries that we use below
  
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
  	;;
  
      OpenBSD:*)
-@@ -654,13 +663,18 @@ case "$GUESSOS" in
+@@ -655,13 +664,18 @@ case "$GUESSOS" in
  	;;
    *-*-sunos4)		OUT="sunos-$CC" ;;
  
@@ -49,10 +49,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
 +			OUT="NetBSD-${MACHINE_ARCH}" ;;
 +
    *86*-*-bsdi4)		OUT="BSD-x86-elf"; options="$options no-sse2 -ldl" ;;
--  alpha*-*-*bsd*)	OUT="BSD-generic64; options="$options -DL_ENDIAN" ;;
--  powerpc64-*-*bsd*)	OUT="BSD-generic64; options="$options -DB_ENDIAN" ;;
-+  alpha*-*-*bsd*)	OUT="BSD-generic64"; options="$options -DL_ENDIAN" ;;
-+  powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
+   alpha*-*-*bsd*)	OUT="BSD-generic64"; options="$options -DL_ENDIAN" ;;
+   powerpc64-*-*bsd*)	OUT="BSD-generic64"; options="$options -DB_ENDIAN" ;;
    sparc64-*-*bsd*)	OUT="BSD-sparc64" ;;
    ia64-*-*bsd*)		OUT="BSD-ia64" ;;
    amd64-*-*bsd*)	OUT="BSD-x86_64" ;;
@@ -61,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
  			if [ -L /usr/lib/libc.so ]; then	# [Free|Net]BSD
  			    libc=/usr/lib/libc.so
  			else					# OpenBSD
-@@ -673,6 +687,8 @@ case "$GUESSOS" in
+@@ -674,6 +688,8 @@ case "$GUESSOS" in
  			esac ;;
    *-*-*bsd*)		OUT="BSD-generic32" ;;
  

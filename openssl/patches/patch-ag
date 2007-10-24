@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2007/08/04 20:11:04 tnn2 Exp $
+$NetBSD: patch-ag,v 1.5 2007/10/24 13:53:56 jukka Exp $
 
---- Makefile.shared.orig	2007-08-04 21:41:16.000000000 +0200
-+++ Makefile.shared
-@@ -267,6 +267,11 @@ link_o.alpha-osf1:
+--- Makefile.shared.orig	2007-09-16 16:11:51.000000000 +0200
++++ Makefile.shared	2007-10-21 13:28:51.000000000 +0200
+@@ -273,6 +273,11 @@ link_o.alpha-osf1:
  	@ if ${DETECT_GNU_LD}; then \
  		$(DO_GNU_SO); \
  	else \
@@ -14,7 +14,7 @@ $NetBSD: patch-ag,v 1.4 2007/08/04 20:11:04 tnn2 Exp $
  		SHLIB=lib$(LIBNAME).so; \
  		SHLIB_SUFFIX=; \
  		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
-@@ -276,11 +281,11 @@ link_o.alpha-osf1:
+@@ -282,11 +287,11 @@ link_o.alpha-osf1:
  			SHLIB_HIST="$(LIBVERSION)"; \
  		fi; \
  		SHLIB_SOVER=; \
@@ -22,14 +22,14 @@ $NetBSD: patch-ag,v 1.4 2007/08/04 20:11:04 tnn2 Exp $
 -		NOALLSYMSFLAGS='-none'; \
 +		ALLSYMSFLAGS="$${WL}-all"; \
 +		NOALLSYMSFLAGS="$${WL}-none"; \
- 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared"; \
+ 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared -Wl,-B,symbolic"; \
  		if [ -n "$$SHLIB_HIST" ]; then \
 -			SHAREDFLAGS="$$SHAREDFLAGS -set_version $$SHLIB_HIST"; \
 +			SHAREDFLAGS="$$SHAREDFLAGS $${WL}-set_version$${DELIM}$$SHLIB_HIST"; \
  		fi; \
  	fi; \
  	$(LINK_SO_O)
-@@ -288,6 +293,11 @@ link_a.alpha-osf1:
+@@ -294,6 +299,11 @@ link_a.alpha-osf1:
  	@ if ${DETECT_GNU_LD}; then \
  		$(DO_GNU_SO); \
  	else \
@@ -41,7 +41,7 @@ $NetBSD: patch-ag,v 1.4 2007/08/04 20:11:04 tnn2 Exp $
  		SHLIB=lib$(LIBNAME).so; \
  		SHLIB_SUFFIX=; \
  		SHLIB_HIST=`echo "$(LIBCOMPATVERSIONS)" | cut -d';' -f2 | sed -e 's/ */:/'`; \
-@@ -297,11 +307,11 @@ link_a.alpha-osf1:
+@@ -303,11 +313,11 @@ link_a.alpha-osf1:
  			SHLIB_HIST="$(LIBVERSION)"; \
  		fi; \
  		SHLIB_SOVER=; \
@@ -49,7 +49,7 @@ $NetBSD: patch-ag,v 1.4 2007/08/04 20:11:04 tnn2 Exp $
 -		NOALLSYMSFLAGS='-none'; \
 +		ALLSYMSFLAGS="$${WL}-all"; \
 +		NOALLSYMSFLAGS="$${WL}-none"; \
- 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared"; \
+ 		SHAREDFLAGS="$(CFLAGS) $(SHARED_LDFLAGS) -shared -Wl,-B,symbolic"; \
  		if [ -n "$$SHLIB_HIST" ]; then \
 -			SHAREDFLAGS="$$SHAREDFLAGS -set_version $$SHLIB_HIST"; \
 +			SHAREDFLAGS="$$SHAREDFLAGS $${WL}-set_version$${DELIM}$$SHLIB_HIST"; \
