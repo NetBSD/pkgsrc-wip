@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.3 2007/10/24 07:31:42 bsadewitz Exp $
 
---- configure.ac.orig	2007-10-01 23:51:05.000000000 -0400
+--- configure.ac.orig	2007-10-24 03:31:00.000000000 -0400
 +++ configure.ac
-@@ -499,6 +499,9 @@ case $target in
+@@ -502,6 +502,9 @@ case $target in
  		cpu_type="x86"
  		CFLAGS="-DGENERIC -DNOXFERMEM $CFLAGS"
  	;;
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
    *)
    	AC_MSG_WARN([Unknown target operating system])
      cpu_type="generic_fpu"
-@@ -732,6 +735,9 @@ case $audio_system in
+@@ -769,6 +772,9 @@ case $audio_system in
    	AUDIO_CFLAGS="-I/opt/audio/include"
    	AUDIO_LIBS="-L/opt/audio/lib -lAlib"
    ;;
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
    jack)
    	if test "x$HAVE_JACK" != "xyes" ; then
    		AC_MSG_ERROR( JACK is not available for audio output subsystem. )
-@@ -758,15 +764,6 @@ case $audio_system in
+@@ -795,15 +801,6 @@ case $audio_system in
    os2)
      # Currently unsupported in the new build system
    ;;

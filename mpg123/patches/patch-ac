@@ -1,10 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2007/10/02 05:29:43 bsadewitz Exp $
+$NetBSD: patch-ac,v 1.3 2007/10/24 07:31:42 bsadewitz Exp $
 
---- autogen.sh.orig	2007-10-01 23:45:35.000000000 -0400
+--- autogen.sh.orig	2007-10-24 03:31:00.000000000 -0400
 +++ autogen.sh
-@@ -81,4 +81,4 @@ run_cmd automake --add-missing --copy
- run_cmd autoconf
+@@ -74,7 +74,7 @@ run_cmd() {
+ }
  
  
--$srcdir/configure --enable-debug && echo
+-run_cmd aclocal
 +#$srcdir/configure --enable-debug && echo
+ run_cmd autoheader
+ run_cmd libtoolize --force --copy --ltdl
+ run_cmd automake --add-missing --copy
