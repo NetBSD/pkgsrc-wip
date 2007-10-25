@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/01 20:03:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2007/10/25 09:20:49 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20070105
@@ -21,6 +21,7 @@ BUILD_TARGET=	a.out
 MAKE_ENV+=	LIBS="${LIBS}"
 
 CFLAGS+=	-I.
+CFLAGS+=	-DAWK_FOPEN_MAX=3072
 LDFLAGS+=	-lm
 
 MAKE_FLAGS+=	YHEADER=yes

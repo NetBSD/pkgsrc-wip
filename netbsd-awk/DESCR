@@ -1,1 +1,3 @@
 This is a NetBSD version of awk(1)
+
+Local changes: a number of open files is limited to 3072
