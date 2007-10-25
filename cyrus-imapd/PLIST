@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/21 03:57:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/25 12:36:33 obache Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -17,6 +17,7 @@ cyrus/bin/ctl_mboxlist
 cyrus/bin/cvt_cyrusdb
 cyrus/bin/cyr_dbtool
 cyrus/bin/cyr_expire
+cyrus/bin/cyr_synclog
 cyrus/bin/cyrdump
 cyrus/bin/deliver
 cyrus/bin/fetchnews
@@ -27,6 +28,7 @@ cyrus/bin/ipurge
 cyrus/bin/lmtpd
 cyrus/bin/lmtpproxyd
 cyrus/bin/make_md5
+cyrus/bin/make_sha1
 cyrus/bin/masssievec
 cyrus/bin/master
 cyrus/bin/mbexamine
@@ -75,7 +77,6 @@ include/cyrus/lock.h
 include/cyrus/lsort.h
 include/cyrus/map.h
 include/cyrus/md5.h
-include/cyrus/message_uuid.h
 include/cyrus/mkgmtime.h
 include/cyrus/mpool.h
 include/cyrus/nonblock.h
@@ -123,9 +124,11 @@ man/man8/cyrus-nntpd.8
 man/man8/cyrus-notifyd.8
 man/man8/cyrus-pop3d.8
 man/man8/cyrus-quota.8
+man/man8/cyr_synclog.8
 man/man8/fud.8
 man/man8/ipurge.8
 man/man8/make_md5.8
+man/man8/make_sha1.8
 man/man8/mbexamine.8
 man/man8/mbpath.8
 man/man8/reconstruct.8

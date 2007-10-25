@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/08/21 03:57:52 obache Exp $
+$NetBSD: patch-ab,v 1.3 2007/10/25 12:36:33 obache Exp $
 
---- configure.orig	2007-08-15 17:23:15.000000000 +0000
+--- configure.orig	2007-10-24 18:12:43.000000000 +0000
 +++ configure
-@@ -8768,7 +8768,7 @@ if test $ac_cv_header_db_h = yes; then
+@@ -8769,7 +8769,7 @@ if test $ac_cv_header_db_h = yes; then
  	fi
  
  	saved_LIBS=$LIBS
@@ -11,7 +11,25 @@ $NetBSD: patch-ab,v 1.2 2007/08/21 03:57:52 obache Exp $
            do
  	    LIBS="$saved_LIBS -l$dbname"
  	    cat >conftest.$ac_ext <<_ACEOF
-@@ -14771,7 +14771,11 @@ echo "${ECHO_T}$ac_cv_header_gssapi_gssa
+@@ -9480,7 +9480,7 @@ fi
+ 
+ done
+ 
+-	if test "$ac_cv_header_pcreposix_h" == "yes"; then
++	if test "$ac_cv_header_pcreposix_h" = "yes"; then
+ 		LIBS="$LIBS -lpcre -lpcreposix";
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -9488,7 +9488,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 	else
+-		if test "$ac_cv_header_rxposix_h" == "yes"; then
++		if test "$ac_cv_header_rxposix_h" = "yes"; then
+ 			LIBS="$LIBS -lrx"
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -14796,7 +14796,11 @@ echo "${ECHO_T}$ac_cv_header_gssapi_gssa
  
  fi
  if test $ac_cv_header_gssapi_gssapi_h = yes; then
@@ -24,7 +42,7 @@ $NetBSD: patch-ab,v 1.2 2007/08/21 03:57:52 obache Exp $
  else
    { echo "$as_me:$LINENO: WARNING: Disabling GSSAPI - no include files found" >&5
  echo "$as_me: WARNING: Disabling GSSAPI - no include files found" >&2;}; gssapi=no
-@@ -16718,6 +16722,7 @@ elif test "${with_perl}" != "no"; then
+@@ -16743,6 +16747,7 @@ elif test "${with_perl}" != "no"; then
      EXTRA_SUBDIRS="${EXTRA_SUBDIRS} perl"
      PERL_SUBDIRS="imap"
      PERL="${with_perl}"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/04/14 15:30:50 obache Exp $
+$NetBSD: patch-ac,v 1.2 2007/10/25 12:36:33 obache Exp $
 
---- imap/Makefile.in.orig	2007-01-09 17:41:35.000000000 +0000
+--- imap/Makefile.in.orig	2007-10-18 18:48:02.000000000 +0000
 +++ imap/Makefile.in
-@@ -182,6 +182,9 @@ mupdate_err.c: mupdate_err.et
+@@ -181,6 +181,9 @@ mupdate_err.c: mupdate_err.et
  
  mupdate_err.h: mupdate_err.c
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/04/14 15:30:50 obache Exp $
  ### Services
  idled: idled.o mutex_fake.o libimap.a $(DEPLIBS)
  	$(CC) $(LDFLAGS) -o idled \
-@@ -216,16 +219,16 @@ imapd.quant: $(IMAPDOBJS) mutex_fake.o l
+@@ -215,16 +218,16 @@ imapd.quant: $(IMAPDOBJS) mutex_fake.o l
  
  mupdate: mupdate.o mupdate-slave.o mupdate-client.o mutex_pthread.o tls.o \
  	libimap.a $(DEPLIBS)
