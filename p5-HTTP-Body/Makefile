@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2007/10/26 07:48:48 jgoamakf Exp $
 
-DISTNAME=	HTTP-Body-0.6
+DISTNAME=	HTTP-Body-0.9
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/C/CH/CHANSEN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Body/
