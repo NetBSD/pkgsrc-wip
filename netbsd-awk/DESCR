@@ -1,3 +1,6 @@
 This is a NetBSD version of awk(1)
 
-Local changes: a number of open files is limited to 3072
+Major changes from original nawk:
+  - fixed: serious bug with regular expression, NetBSD PR/33392
+  - tolower/toupper functions support multibyte charsets, NetBSD PR/36394
+  - there is no hardcoded limit on number of open files, NetBSD PR/37205

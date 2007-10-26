@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/10/25 09:20:49 cheusov Exp $
+$NetBSD: distinfo,v 1.5 2007/10/26 08:30:40 cheusov Exp $
 
-SHA1 (netbsd-awk-20070105.tar.bz2) = 91fa0b0a0b2d8a0a4e3a103f475719f4b13e0ca9
-RMD160 (netbsd-awk-20070105.tar.bz2) = 3fdbe33a1e754f03fb9cb692abdfd458e6f205f8
-Size (netbsd-awk-20070105.tar.bz2) = 54586 bytes
+SHA1 (netbsd-awk-20071026.tar.bz2) = 7eab7c68e0c438d9b5daa686d26284ca1e765713
+RMD160 (netbsd-awk-20071026.tar.bz2) = 94b985f586375e25104a2e75314d45ac68029f04
+Size (netbsd-awk-20071026.tar.bz2) = 55185 bytes
 SHA1 (patch-aa) = c641fce39e3ac84d54c5ef0d66cb9c5de7ff8695
 SHA1 (patch-ab) = 7fb58eadae612bbbd260c21482938c1e58e62644
-SHA1 (patch-ac) = 25b7d0713de5540df07fd64fb5b183d97d33bc72
