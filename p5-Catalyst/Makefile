@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2007/07/13 17:14:43 absd Exp $
+# $NetBSD: Makefile,v 1.21 2007/10/26 09:17:44 jgoamakf Exp $
 
-PKGVERSION=	5.7006
+PKGVERSION=	5.7011
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
 PKGNAME=	p5-Catalyst-${PKGVERSION}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-module/Catalyst/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MR/MRAMBERG/}
 
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Data-Visitor>=0.02:../../wip/p5-Data-Visitor
 DEPENDS+=	{perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
 DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
-DEPENDS+=	p5-HTTP-Body>=0.5:../../wip/p5-HTTP-Body
+DEPENDS+=	p5-HTTP-Body>=0.9:../../wip/p5-HTTP-Body
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../wip/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
