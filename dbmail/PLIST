@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/08 12:59:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/10/27 15:35:43 obache Exp $
 ${MYSQL}lib/dbmail/libmysql.la
 ${PGSQL}lib/dbmail/libpgsql.la
 ${SQLITE}lib/dbmail/libsqlite.la

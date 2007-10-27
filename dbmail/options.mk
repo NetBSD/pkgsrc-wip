@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/09/08 12:59:40 obache Exp $
+# $NetBSD: options.mk,v 1.2 2007/10/27 15:35:43 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	sieve ldap

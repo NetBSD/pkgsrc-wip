@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbmailimapd.sh,v 1.1.1.1 2007/09/08 12:59:40 obache Exp $
+# $NetBSD: dbmailimapd.sh,v 1.2 2007/10/27 15:35:43 obache Exp $
 #
 
 # PROVIDE: dbmailimap mail

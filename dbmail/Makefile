@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/08 12:59:40 obache Exp $
+# $NetBSD: Makefile,v 1.2 2007/10/27 15:35:43 obache Exp $
 #
 
 DISTNAME=		dbmail-2.2.5
