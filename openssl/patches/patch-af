@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
+$NetBSD: patch-af,v 1.2 2007/10/28 12:12:23 jukka Exp $
 
---- Makefile.org.orig	2006-06-09 17:42:08.000000000 +0200
-+++ Makefile.org	2007-07-31 17:31:41.000000000 +0200
+--- Makefile.org.orig	2007-04-24 01:49:54.000000000 +0200
++++ Makefile.org	2007-10-28 12:44:05.000000000 +0100
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
  # Do not edit this manually. Use Configure --openssldir=DIR do change this!
@@ -19,7 +19,24 @@ $NetBSD: patch-af,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
  MAN1=1
  MAN3=3
  MANSUFFIX=
-@@ -473,7 +474,7 @@ dist:   
+@@ -140,6 +141,7 @@ SHARED_CRYPTO=libcrypto$(SHLIB_EXT)
+ SHARED_SSL=libssl$(SHLIB_EXT)
+ SHARED_LIBS=
+ SHARED_LIBS_LINK_EXTS=
++LIBRPATH=$(INSTALLTOP)/lib
+ SHARED_LDFLAGS=
+ 
+ GENERAL=        Makefile
+@@ -172,7 +174,7 @@ BUILDENV=	PLATFORM='${PLATFORM}' PROCESS
+ 		CC='${CC}' CFLAG='${CFLAG}' 			\
+ 		AS='${CC}' ASFLAG='${CFLAG} -c'			\
+ 		AR='${AR}' PERL='${PERL}' RANLIB='${RANLIB}'	\
+-		SDIRS='${SDIRS}' LIBRPATH='${INSTALLTOP}/lib'	\
++		SDIRS='${SDIRS}' LIBRPATH='${LIBRPATH}'		\
+ 		INSTALL_PREFIX='${INSTALL_PREFIX}'		\
+ 		INSTALLTOP='${INSTALLTOP}' OPENSSLDIR='${OPENSSLDIR}'	\
+ 		MAKEDEPEND='$$$${TOP}/util/domd $$$${TOP} -MD ${MAKEDEPPROG}' \
+@@ -473,7 +475,7 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) -e $(BUILDENV) pem.h; $(MAKE) clean)
  
@@ -28,7 +45,7 @@ $NetBSD: patch-af,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
  
  install_sw:
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
-@@ -481,9 +482,7 @@ install_sw:
+@@ -481,9 +483,7 @@ install_sw:
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib/engines \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib/pkgconfig \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
@@ -39,7 +56,7 @@ $NetBSD: patch-af,v 1.1.1.1 2007/08/02 23:02:05 jukka Exp $
  	@set -e; headerlist="$(EXHEADER)"; for i in $$headerlist;\
  	do \
  	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl/$$i; \
-@@ -553,35 +552,53 @@ install_docs:
+@@ -553,35 +553,53 @@ install_docs:
  	set -e; for i in doc/apps/*.pod; do \
  		fn=`basename $$i .pod`; \
  		sec=`$(PERL) util/extract-section.pl 1 < $$i`; \
