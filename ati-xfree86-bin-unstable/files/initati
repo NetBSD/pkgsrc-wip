@@ -23,6 +23,7 @@ XFree86 -xf86config "${XF86CONFIG}" \
 pid=$!
 sleep 5
 kill $pid
+wait $pid	# ensures lock file was removed
 
 # this was necessary once or twice
 if [ -t 1 ]; then
