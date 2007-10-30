@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2007/09/22 04:20:01 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2007/10/30 07:06:04 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PIXMAN_BUILDLINK3_MK:=	${PIXMAN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	pixman
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pixman
 
 .if ${PIXMAN_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.9.5
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.9.6
 BUILDLINK_PKGSRCDIR.pixman?=	../../wip/pixman
 .endif	# PIXMAN_BUILDLINK3_MK
 
