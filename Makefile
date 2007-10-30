@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2684 2007/10/17 11:11:12 tnn2 Exp $
+# $Id: Makefile,v 1.2685 2007/10/30 10:07:17 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -52,7 +52,6 @@ SUBDIR+=	aida
 SUBDIR+=	aircrack
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
-SUBDIR+=	alephone
 SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	alsa-lib
