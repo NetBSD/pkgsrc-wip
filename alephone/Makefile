@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/10/26 11:22:52 christtrekker Exp $
+# $NetBSD: Makefile,v 1.9 2007/10/30 03:53:50 christtrekker Exp $
 #
 
 DISTNAME=	AlephOne-20071020
@@ -18,6 +18,9 @@ COMMENT=	Classic 2.5D FPS game engine, updated to use SDL
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c++
 USE_LANGUAGES+=	c
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/AlephOne
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
