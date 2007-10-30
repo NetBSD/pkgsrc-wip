@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/26 16:54:53 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/10/30 10:03:01 thomasklausner Exp $
 bin/alephone
 share/AlephOne/Fonts
 share/AlephOne/MML/Interface_Rects.mml
@@ -34,6 +34,8 @@ share/AlephOne/Themes/Default/thumb_bc.bmp
 share/AlephOne/Themes/Default/thumb_c.bmp
 share/AlephOne/Themes/Default/thumb_t.bmp
 share/AlephOne/Themes/Default/thumb_tc.bmp
+share/doc/AlephOne/README
+@dirrm share/doc/AlephOne
 @dirrm share/AlephOne/Themes/Default
 @dirrm share/AlephOne/Themes
 @dirrm share/AlephOne/MML
