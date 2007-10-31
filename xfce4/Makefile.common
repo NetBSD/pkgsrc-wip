@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.21 2007/04/17 14:06:14 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.22 2007/10/31 08:35:10 marttikuparinen Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
+LICENSE=		gnu-gpl-v2
 
 XFCE4_VERSION=		4.4.1
 
