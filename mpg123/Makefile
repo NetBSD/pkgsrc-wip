@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/10/24 07:45:48 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/02 17:36:04 bsadewitz Exp $
 #
 
 DISTNAME=	mpg123-snapshot-${MPG123_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	local
 MASTER_SITES=	http://mpg123.orgis.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -52,11 +52,11 @@ SUBST_MESSAGE.sun=	Enabling/disabling sun audio.
 #
 # XXX Why did I need to do this?
 #
-SUBST_CLASSES+=		ltdl
-SUBST_STAGE.ltdl=	post-configure
-SUBST_FILES.ltdl=	Makefile src/Makefile src/output/Makefile
-SUBST_SED.ltdl=		-e 's,\-lltdl,${PKGSRC_LIBLTDL},'
-SUBST_MESSAGE.ltdl=	Fixing libltdl brokenness.
+#SUBST_CLASSES+=		ltdl
+#SUBST_STAGE.ltdl=	post-configure
+#SUBST_FILES.ltdl=	Makefile src/Makefile src/output/Makefile
+#SUBST_SED.ltdl=		-e 's,\-lltdl,${PKGSRC_LIBLTDL},'
+#SUBST_MESSAGE.ltdl=	Fixing libltdl brokenness.
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v --install

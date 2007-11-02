@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/10/02 18:02:33 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.5 2007/11/02 17:36:04 bsadewitz Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpg123
 PKG_OPTIONS_SET.audio= jack portaudio esound nas sdl sun
 
@@ -56,7 +56,8 @@ SUBST_CLASSES+=		oss
 SUBST_FILES.oss=	configure.ac src/output/oss.c src/output/Makefile.am
 SUBST_STAGE.oss=	pre-configure
 SUBST_MESSAGE.oss=	Setting OSS device.
-SUBST_VARS.oss=		DEVOSSAUDIO DEVOSSSOUND LIBOSSAUDIO
+SUBST_VARS.oss=		DEVOSSAUDIO DEVOSSSOUND
+CONFIGURE_ENV+=		OSS_LIBS=${LIBOSSAUDIO:Q}
 .else
 PLIST_SUBST+=		OSS="@comment "
 .endif
