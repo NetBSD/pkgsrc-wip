@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/10/26 08:30:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2007/11/02 22:29:31 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20071026
@@ -18,7 +18,7 @@ BUILD_TARGET=	a.out
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_ENV+=	LIBS="${LIBS}"
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 CFLAGS+=	-I.
 LDFLAGS+=	-lm
