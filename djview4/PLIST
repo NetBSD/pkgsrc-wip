@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 01:36:09 pmatias Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/03 17:21:47 pmatias Exp $
 bin/djview4
 lib/netscape/plugins/nsdejavu.so
 man/man1/djview4.1
@@ -10,4 +10,4 @@ share/djvu/djview4/djview_fr.qm
 share/djvu/djview4/djview_uk.qm
 @dirrm share/djvu/djview4/desktop
 @dirrm share/djvu/djview4
-@dirrm lib/netscape/plugins
+@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
