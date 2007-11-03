@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2007/10/23 09:25:17 tnn2 Exp $
+$NetBSD: patch-aa,v 1.4 2007/11/03 13:11:12 tnn2 Exp $
 
---- SConstruct.orig	2007-10-13 23:56:55.000000000 +0200
+--- SConstruct.orig	2007-10-28 21:41:46.000000000 +0100
 +++ SConstruct
 @@ -44,10 +44,10 @@ def CheckCXXVersion(context, name, major
  # ----------------------------------------------------------------------
@@ -17,9 +17,9 @@ $NetBSD: patch-aa,v 1.3 2007/10/23 09:25:17 tnn2 Exp $
  
  opts.AddOptions(
  	BoolOption('debug', 'Compile the program with debug information', 0),
-@@ -64,8 +64,8 @@ opts.AddOptions(
- 
- env = Environment(ENV = os.environ, options = opts)
+@@ -86,8 +86,8 @@ if os.environ.has_key('LDFLAGS'):
+ if os.environ.has_key('CFLAGS'):
+ 	conf.env['CFLAGS'] = os.environ['CFLAGS'].split()
  
 -env.SConsignFile('build/sconf/.sconsign')
 -opts.Save('build/sconf/scache.conf', env)
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.3 2007/10/23 09:25:17 tnn2 Exp $
 +#opts.Save('build/sconf/scache.conf', env)
  Help(opts.GenerateHelpText(env))
  
- conf = Configure(env,
+ # ----------------------------------------------------------------------
 @@ -169,7 +169,6 @@ if not 'install' in COMMAND_LINE_TARGETS
  # ----------------------------------------------------------------------
  
