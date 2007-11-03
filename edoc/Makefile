@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/03 11:31:10 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -15,6 +15,8 @@ COMMENT=		Compile time C++ exception analysis/documentation tool
 
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
+
+USE_LIBTOOL=		yes
 
 #@@@Brendon Fortran should not be used but requested that i add it as the
 # configure script seems to check for f77
