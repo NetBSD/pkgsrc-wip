@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/16 01:44:28 bjcosta Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/03 02:25:52 bjcosta Exp $
 bin/edc-arch
 bin/edoc
 bin/start_edoc
@@ -265,7 +265,6 @@ edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/crtend.o
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/crtendS.o
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/README
-edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/arpa/nameser_compat.h
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/dev/vinum/vinumio.h
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/emmintrin.h
 edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/float.h
@@ -332,6 +331,13 @@ edoc_patched/libexec/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/
 edoc_patched/man/man1/doxygen.1
 edoc_patched/man/man1/doxytag.1
 edoc_patched/man/man1/doxywizard.1
+edoc_patched/man/man1/cpp.1
+edoc_patched/man/man1/g++.1
+edoc_patched/man/man1/gcc.1
+edoc_patched/man/man1/gcov.1
+edoc_patched/man/man7/fsf-funding.7
+edoc_patched/man/man7/gfdl.7
+edoc_patched/man/man7/gpl.7
 edoc_patched/share/locale/be/LC_MESSAGES/cpplib.mo
 edoc_patched/share/locale/ca/LC_MESSAGES/cpplib.mo
 edoc_patched/share/locale/da/LC_MESSAGES/cpplib.mo
@@ -426,38 +432,64 @@ share/${PKGNAME}/eh/eds/__init__.pyo
 @dirrm share/${PKGNAME}
 @dirrm include/${PKGNAME}/EDocBFD
 @dirrm include/${PKGNAME}/EDoc
+@dirrm edoc_patched/man/man1
+@dirrm edoc_patched/man/man7
+@dirrm edoc_patched/man
 @dirrm edoc_patched/share/locale/vi/LC_MESSAGES
+@dirrm edoc_patched/share/locale/vi
 @dirrm edoc_patched/share/locale/tr/LC_MESSAGES
+@dirrm edoc_patched/share/locale/tr
 @dirrm edoc_patched/share/locale/sv/LC_MESSAGES
+@dirrm edoc_patched/share/locale/sv
 @dirrm edoc_patched/share/locale/rw/LC_MESSAGES
+@dirrm edoc_patched/share/locale/rw
 @dirrm edoc_patched/share/locale/nl/LC_MESSAGES
+@dirrm edoc_patched/share/locale/nl
 @dirrm edoc_patched/share/locale/ja/LC_MESSAGES
+@dirrm edoc_patched/share/locale/ja
 @dirrm edoc_patched/share/locale/fr/LC_MESSAGES
+@dirrm edoc_patched/share/locale/fr
 @dirrm edoc_patched/share/locale/es/LC_MESSAGES
+@dirrm edoc_patched/share/locale/es
 @dirrm edoc_patched/share/locale/el/LC_MESSAGES
+@dirrm edoc_patched/share/locale/el
 @dirrm edoc_patched/share/locale/de/LC_MESSAGES
+@dirrm edoc_patched/share/locale/de
 @dirrm edoc_patched/share/locale/da/LC_MESSAGES
+@dirrm edoc_patched/share/locale/da
 @dirrm edoc_patched/share/locale/ca/LC_MESSAGES
+@dirrm edoc_patched/share/locale/ca
 @dirrm edoc_patched/share/locale/be/LC_MESSAGES
+@dirrm edoc_patched/share/locale/be
+@dirrm edoc_patched/share/locale
+@dirrm edoc_patched/share
 @dirrm edoc_patched/libexec/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/install-tools
 @dirrm edoc_patched/libexec/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1
+@dirrm edoc_patched/libexec/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}
+@dirrm edoc_patched/libexec/gcc
+@dirrm edoc_patched/libexec
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/install-tools/include
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/install-tools
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/sys
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/netinet
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/dev/vinum
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/dev
-@dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include/arpa
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1/include
 @dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/4.0.1
+@dirrm edoc_patched/lib/gcc/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}
+@dirrm edoc_patched/lib/gcc
 @dirrm edoc_patched/lib
 @dirrm edoc_patched/info
 @dirrm edoc_patched/include/c++/4.0.1/tr1
 @dirrm edoc_patched/include/c++/4.0.1/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/bits/stdc++.h.gch
 @dirrm edoc_patched/include/c++/4.0.1/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}/bits
+@dirrm edoc_patched/include/c++/4.0.1/${MACHINE_ARCH}-unknown-${LOWER_OPSYS}elf${OS_VERSION}
 @dirrm edoc_patched/include/c++/4.0.1/ext
 @dirrm edoc_patched/include/c++/4.0.1/debug
 @dirrm edoc_patched/include/c++/4.0.1/bits
 @dirrm edoc_patched/include/c++/4.0.1/backward
 @dirrm edoc_patched/include/c++/4.0.1
+@dirrm edoc_patched/include/c++
+@dirrm edoc_patched/include
 @dirrm edoc_patched/bin
+@dirrm edoc_patched

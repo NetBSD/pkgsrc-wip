@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
+$NetBSD: patch-am,v 1.3 2007/11/03 02:25:52 bjcosta Exp $
 
 --- src/libs/EDoc/Makefile.in.orig	2007-08-12 09:34:39.000000000 +1000
 +++ src/libs/EDoc/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
  install_sh_SCRIPT = $(install_sh) -c
-@@ -88,30 +92,25 @@
+@@ -88,30 +92,25 @@ am_libEDoc_0_1_0_la_OBJECTS = libEDoc_0_
  	libEDoc_0_1_0_la-StdErrFunctionProgress.lo \
  	libEDoc_0_1_0_la-ProgressBar.lo libEDoc_0_1_0_la-utils.lo
  libEDoc_0_1_0_la_OBJECTS = $(am_libEDoc_0_1_0_la_OBJECTS)
@@ -71,7 +71,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  SOURCES = $(libEDoc_0_1_0_la_SOURCES)
  DIST_SOURCES = $(libEDoc_0_1_0_la_SOURCES)
  libdataDATA_INSTALL = $(INSTALL_DATA)
-@@ -124,6 +123,8 @@
+@@ -124,6 +123,8 @@ CTAGS = ctags
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  ACLOCAL = @ACLOCAL@
  ALLOCA = @ALLOCA@
@@ -80,7 +80,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  AMTAR = @AMTAR@
  AR = @AR@
  AUTOCONF = @AUTOCONF@
-@@ -146,6 +147,30 @@
+@@ -146,6 +147,30 @@ DEPDIR = @DEPDIR@
  DH_MAKE = @DH_MAKE@
  DOXYGEN_PAPER_SIZE = @DOXYGEN_PAPER_SIZE@
  DOXYGEN_SUBDIR = @DOXYGEN_SUBDIR@
@@ -111,7 +111,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  DX_CONFIG = @DX_CONFIG@
  DX_DOCDIR = @DX_DOCDIR@
  DX_DOT = @DX_DOT@
-@@ -178,8 +203,14 @@
+@@ -178,8 +203,14 @@ EXEEXT = @EXEEXT@
  F77 = @F77@
  FFLAGS = @FFLAGS@
  GCC_SUBDIR = @GCC_SUBDIR@
@@ -128,7 +128,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -199,8 +230,10 @@
+@@ -199,8 +230,10 @@ LIBS = @LIBS@
  LIBTOOL = @LIBTOOL@
  LN_S = @LN_S@
  LTLIBOBJS = @LTLIBOBJS@
@@ -140,7 +140,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  OBJEXT = @OBJEXT@
  PACKAGE = @PACKAGE@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
-@@ -227,12 +260,26 @@
+@@ -227,12 +260,26 @@ VERSION = @VERSION@
  XMLTO = @XMLTO@
  abs_builddir = @abs_builddir@
  abs_srcdir = @abs_srcdir@
@@ -169,7 +169,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  am__include = @am__include@
  am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
-@@ -244,12 +291,8 @@
+@@ -244,12 +291,8 @@ build_alias = @build_alias@
  build_cpu = @build_cpu@
  build_os = @build_os@
  build_vendor = @build_vendor@
@@ -182,7 +182,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  edoc_patched_prefix = @edoc_patched_prefix@
  exec_prefix = @exec_prefix@
  host = @host@
-@@ -257,33 +300,26 @@
+@@ -257,33 +300,26 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
@@ -216,7 +216,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  lib_LTLIBRARIES = libEDoc-0.1.0.la
  MAINTAINERCLEANFILES = Makefile.in
  HEADER_DIR = $(top_srcdir)/src/include
-@@ -396,7 +432,7 @@
+@@ -396,7 +432,7 @@ all: all-am
  
  .SUFFIXES:
  .SUFFIXES: .cpp .lo .o .obj
@@ -225,7 +225,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@for dep in $?; do \
  	  case '$(am__configure_deps)' in \
  	    *$$dep*) \
-@@ -421,9 +457,9 @@
+@@ -421,9 +457,9 @@ Makefile: $(srcdir)/Makefile.in $(top_bu
  $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
@@ -237,7 +237,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  EDoc.pc: $(top_builddir)/config.status $(srcdir)/EDoc.pc.in
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
-@@ -431,7 +467,7 @@
+@@ -431,7 +467,7 @@ EDoc-ver.pc: $(top_builddir)/config.stat
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
  install-libLTLIBRARIES: $(lib_LTLIBRARIES)
  	@$(NORMAL_INSTALL)
@@ -246,7 +246,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
  	  if test -f $$p; then \
  	    f=$(am__strip_dir) \
-@@ -442,7 +478,7 @@
+@@ -442,7 +478,7 @@ install-libLTLIBRARIES: $(lib_LTLIBRARIE
  
  uninstall-libLTLIBRARIES:
  	@$(NORMAL_UNINSTALL)
@@ -255,7 +255,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	  p=$(am__strip_dir) \
  	  echo " $(LIBTOOL) --mode=uninstall rm -f '$(DESTDIR)$(libdir)/$$p'"; \
  	  $(LIBTOOL) --mode=uninstall rm -f "$(DESTDIR)$(libdir)/$$p"; \
-@@ -457,7 +493,7 @@
+@@ -457,7 +493,7 @@ clean-libLTLIBRARIES:
  	  rm -f "$${dir}/so_locations"; \
  	done
  libEDoc-0.1.0.la: $(libEDoc_0_1_0_la_OBJECTS) $(libEDoc_0_1_0_la_DEPENDENCIES) 
@@ -264,7 +264,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -499,258 +535,262 @@
+@@ -499,258 +535,262 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libEDoc_0_1_0_la-utils.Plo@am__quote@
  
  .cpp.o:
@@ -630,7 +630,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(libdata_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f=$(am__strip_dir) \
-@@ -767,7 +807,7 @@
+@@ -767,7 +807,7 @@ uninstall-libdataDATA:
  	done
  install-pkgconfigDATA: $(pkgconfig_DATA)
  	@$(NORMAL_INSTALL)
@@ -639,7 +639,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(pkgconfig_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f=$(am__strip_dir) \
-@@ -784,7 +824,7 @@
+@@ -784,7 +824,7 @@ uninstall-pkgconfigDATA:
  	done
  install-libEDoc_0_1_0_laHEADERS: $(libEDoc_0_1_0_la_HEADERS)
  	@$(NORMAL_INSTALL)
@@ -648,7 +648,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(libEDoc_0_1_0_la_HEADERS)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f=$(am__strip_dir) \
-@@ -849,21 +889,23 @@
+@@ -849,21 +889,23 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  
  distdir: $(DISTFILES)
@@ -684,7 +684,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
  	      cp -pR $(srcdir)/$$file $(distdir)$$dir || exit 1; \
  	    fi; \
-@@ -879,7 +921,7 @@
+@@ -879,7 +921,7 @@ check: check-am
  all-am: Makefile $(LTLIBRARIES) $(DATA) $(HEADERS)
  installdirs:
  	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(libdatadir)" "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(libEDoc_0_1_0_ladir)"; do \
@@ -693,7 +693,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	done
  install: install-am
  install-exec: install-exec-am
-@@ -915,7 +957,7 @@
+@@ -915,7 +957,7 @@ distclean: distclean-am
  	-rm -rf ./$(DEPDIR)
  	-rm -f Makefile
  distclean-am: clean-am distclean-compile distclean-generic \
@@ -702,7 +702,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  dvi: dvi-am
  
-@@ -932,20 +974,12 @@
+@@ -932,20 +974,12 @@ install-data-am: install-libEDoc_0_1_0_l
  	@$(NORMAL_INSTALL)
  	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
  
@@ -723,7 +723,7 @@ $NetBSD: patch-am,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  installcheck-am:
  
  maintainer-clean: maintainer-clean-am
-@@ -966,29 +1000,25 @@
+@@ -966,29 +1000,25 @@ ps: ps-am
  
  ps-am:
  

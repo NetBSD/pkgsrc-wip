@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
+$NetBSD: patch-al,v 1.3 2007/11/03 02:25:52 bjcosta Exp $
 
 --- src/apps/edoc/Makefile.in.orig	2007-08-12 09:34:38.000000000 +1000
 +++ src/apps/edoc/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
  install_sh_SCRIPT = $(install_sh) -c
-@@ -58,30 +62,25 @@
+@@ -58,30 +62,25 @@ edoc_OBJECTS = $(am_edoc_OBJECTS)
  edoc_DEPENDENCIES = $(top_builddir)/src/libs/EDocBFD/libEDocBFD-@PACKAGE_VERSION@.la \
  	$(top_builddir)/src/libs/EDocPy/libEDocPy.la \
  	$(top_builddir)/src/libs/EDoc/libEDoc-@PACKAGE_VERSION@.la
@@ -71,7 +71,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  SOURCES = $(edoc_SOURCES)
  DIST_SOURCES = $(edoc_SOURCES)
  ETAGS = etags
-@@ -89,6 +88,8 @@
+@@ -89,6 +88,8 @@ CTAGS = ctags
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  ACLOCAL = @ACLOCAL@
  ALLOCA = @ALLOCA@
@@ -80,7 +80,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  AMTAR = @AMTAR@
  AR = @AR@
  AUTOCONF = @AUTOCONF@
-@@ -111,6 +112,30 @@
+@@ -111,6 +112,30 @@ DEPDIR = @DEPDIR@
  DH_MAKE = @DH_MAKE@
  DOXYGEN_PAPER_SIZE = @DOXYGEN_PAPER_SIZE@
  DOXYGEN_SUBDIR = @DOXYGEN_SUBDIR@
@@ -111,7 +111,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  DX_CONFIG = @DX_CONFIG@
  DX_DOCDIR = @DX_DOCDIR@
  DX_DOT = @DX_DOT@
-@@ -143,8 +168,14 @@
+@@ -143,8 +168,14 @@ EXEEXT = @EXEEXT@
  F77 = @F77@
  FFLAGS = @FFLAGS@
  GCC_SUBDIR = @GCC_SUBDIR@
@@ -128,7 +128,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -164,8 +195,10 @@
+@@ -164,8 +195,10 @@ LIBS = @LIBS@
  LIBTOOL = @LIBTOOL@
  LN_S = @LN_S@
  LTLIBOBJS = @LTLIBOBJS@
@@ -140,7 +140,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  OBJEXT = @OBJEXT@
  PACKAGE = @PACKAGE@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
-@@ -192,12 +225,26 @@
+@@ -192,12 +225,26 @@ VERSION = @VERSION@
  XMLTO = @XMLTO@
  abs_builddir = @abs_builddir@
  abs_srcdir = @abs_srcdir@
@@ -169,7 +169,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  am__include = @am__include@
  am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
-@@ -209,12 +256,8 @@
+@@ -209,12 +256,8 @@ build_alias = @build_alias@
  build_cpu = @build_cpu@
  build_os = @build_os@
  build_vendor = @build_vendor@
@@ -182,7 +182,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  edoc_patched_prefix = @edoc_patched_prefix@
  exec_prefix = @exec_prefix@
  host = @host@
-@@ -222,33 +265,26 @@
+@@ -222,33 +265,26 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
@@ -216,7 +216,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  MAINTAINERCLEANFILES = Makefile.in
  edoc_CPPFLAGS = \
     -I$(top_builddir) \
-@@ -280,7 +316,7 @@
+@@ -280,7 +316,7 @@ all: all-am
  
  .SUFFIXES:
  .SUFFIXES: .cpp .lo .o .obj
@@ -225,7 +225,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@for dep in $?; do \
  	  case '$(am__configure_deps)' in \
  	    *$$dep*) \
-@@ -305,13 +341,13 @@
+@@ -305,13 +341,13 @@ Makefile: $(srcdir)/Makefile.in $(top_bu
  $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
@@ -242,7 +242,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(bin_PROGRAMS)'; for p in $$list; do \
  	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
  	  if test -f $$p \
-@@ -355,7 +391,7 @@
+@@ -355,7 +391,7 @@ installcheck-binPROGRAMS: $(bin_PROGRAMS
  	done; rm -f c$${pid}_.???; exit $$bad
  edoc$(EXEEXT): $(edoc_OBJECTS) $(edoc_DEPENDENCIES) 
  	@rm -f edoc$(EXEEXT)
@@ -251,7 +251,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -368,64 +404,64 @@
+@@ -368,64 +404,64 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/edoc-main.Po@am__quote@
  
  .cpp.o:
@@ -334,7 +334,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  @AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='CheckingDict.cpp' object='edoc-CheckingDict.obj' libtool=no @AMDEPBACKSLASH@
  @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(edoc_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o edoc-CheckingDict.obj `if test -f 'CheckingDict.cpp'; then $(CYGPATH_W) 'CheckingDict.cpp'; else $(CYGPATH_W) '$(srcdir)/CheckingDict.cpp'; fi`
-@@ -436,6 +472,10 @@
+@@ -436,6 +472,10 @@ mostlyclean-libtool:
  clean-libtool:
  	-rm -rf .libs _libs
  
@@ -345,7 +345,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
  	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
  	unique=`for i in $$list; do \
-@@ -485,21 +525,22 @@
+@@ -485,21 +525,22 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  
  distdir: $(DISTFILES)
@@ -380,7 +380,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
  	      cp -pR $(srcdir)/$$file $(distdir)$$dir || exit 1; \
  	    fi; \
-@@ -515,7 +556,7 @@
+@@ -515,7 +556,7 @@ check: check-am
  all-am: Makefile $(PROGRAMS)
  installdirs:
  	for dir in "$(DESTDIR)$(bindir)"; do \
@@ -389,7 +389,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	done
  install: install-am
  install-exec: install-exec-am
-@@ -550,7 +591,7 @@
+@@ -550,7 +591,7 @@ distclean: distclean-am
  	-rm -rf ./$(DEPDIR)
  	-rm -f Makefile
  distclean-am: clean-am distclean-compile distclean-generic \
@@ -398,7 +398,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  dvi: dvi-am
  
-@@ -564,20 +605,12 @@
+@@ -564,20 +605,12 @@ info-am:
  
  install-data-am:
  
@@ -419,7 +419,7 @@ $NetBSD: patch-al,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  installcheck-am: installcheck-binPROGRAMS
  
  maintainer-clean: maintainer-clean-am
-@@ -598,23 +631,20 @@
+@@ -598,23 +631,20 @@ ps: ps-am
  
  ps-am:
  

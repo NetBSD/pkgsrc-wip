@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.1 2007/10/06 09:40:39 bjcosta Exp $
+$NetBSD: patch-at,v 1.2 2007/11/03 02:25:52 bjcosta Exp $
 
 --- scripts/spatch.sh.orig	2007-06-09 06:47:42.000000000 +1000
 +++ scripts/spatch.sh
-@@ -23,11 +23,22 @@
+@@ -23,11 +23,22 @@ Usage()
     echo "Usage: $0 --apply-patch <patch-data-dir-src> [--overwrite] <source-dir-to-patch>"
  }
  

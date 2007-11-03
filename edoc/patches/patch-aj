@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
+$NetBSD: patch-aj,v 1.3 2007/11/03 02:25:52 bjcosta Exp $
 
 --- src/apps/Makefile.in.orig	2007-08-12 09:34:38.000000000 +1000
 +++ src/apps/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
  install_sh_SCRIPT = $(install_sh) -c
-@@ -51,19 +55,18 @@
+@@ -51,19 +55,18 @@ SOURCES =
  DIST_SOURCES =
  RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
  	html-recursive info-recursive install-data-recursive \
@@ -55,7 +55,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  AMTAR = @AMTAR@
  AR = @AR@
  AUTOCONF = @AUTOCONF@
-@@ -86,6 +89,30 @@
+@@ -86,6 +89,30 @@ DEPDIR = @DEPDIR@
  DH_MAKE = @DH_MAKE@
  DOXYGEN_PAPER_SIZE = @DOXYGEN_PAPER_SIZE@
  DOXYGEN_SUBDIR = @DOXYGEN_SUBDIR@
@@ -86,7 +86,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  DX_CONFIG = @DX_CONFIG@
  DX_DOCDIR = @DX_DOCDIR@
  DX_DOT = @DX_DOT@
-@@ -118,8 +145,14 @@
+@@ -118,8 +145,14 @@ EXEEXT = @EXEEXT@
  F77 = @F77@
  FFLAGS = @FFLAGS@
  GCC_SUBDIR = @GCC_SUBDIR@
@@ -103,7 +103,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -139,8 +172,10 @@
+@@ -139,8 +172,10 @@ LIBS = @LIBS@
  LIBTOOL = @LIBTOOL@
  LN_S = @LN_S@
  LTLIBOBJS = @LTLIBOBJS@
@@ -115,7 +115,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  OBJEXT = @OBJEXT@
  PACKAGE = @PACKAGE@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
-@@ -167,12 +202,26 @@
+@@ -167,12 +202,26 @@ VERSION = @VERSION@
  XMLTO = @XMLTO@
  abs_builddir = @abs_builddir@
  abs_srcdir = @abs_srcdir@
@@ -144,7 +144,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  am__include = @am__include@
  am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
-@@ -184,12 +233,8 @@
+@@ -184,12 +233,8 @@ build_alias = @build_alias@
  build_cpu = @build_cpu@
  build_os = @build_os@
  build_vendor = @build_vendor@
@@ -157,7 +157,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  edoc_patched_prefix = @edoc_patched_prefix@
  exec_prefix = @exec_prefix@
  host = @host@
-@@ -197,39 +242,32 @@
+@@ -197,39 +242,32 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
@@ -198,7 +198,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@for dep in $?; do \
  	  case '$(am__configure_deps)' in \
  	    *$$dep*) \
-@@ -254,9 +292,9 @@
+@@ -254,9 +292,9 @@ Makefile: $(srcdir)/Makefile.in $(top_bu
  $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
@@ -210,7 +210,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
  mostlyclean-libtool:
-@@ -265,6 +303,10 @@
+@@ -265,6 +303,10 @@ mostlyclean-libtool:
  clean-libtool:
  	-rm -rf .libs _libs
  
@@ -221,7 +221,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  # This directory's subdirectories are mostly independent; you can cd
  # into them and run `make' without going through this Makefile.
  # To change the values of `make' variables: instead of editing Makefiles,
-@@ -296,7 +338,8 @@
+@@ -296,7 +338,8 @@ $(RECURSIVE_TARGETS):
  	  $(MAKE) $(AM_MAKEFLAGS) "$$target-am" || exit 1; \
  	fi; test -z "$$fail"
  
@@ -231,7 +231,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@failcom='exit 1'; \
  	for f in x $$MAKEFLAGS; do \
  	  case $$f in \
-@@ -397,21 +440,22 @@
+@@ -397,21 +440,22 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  
  distdir: $(DISTFILES)
@@ -266,7 +266,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
  	      cp -pR $(srcdir)/$$file $(distdir)$$dir || exit 1; \
  	    fi; \
-@@ -425,7 +469,7 @@
+@@ -425,7 +469,7 @@ distdir: $(DISTFILES)
  	list='$(DIST_SUBDIRS)'; for subdir in $$list; do \
  	  if test "$$subdir" = .; then :; else \
  	    test -d "$(distdir)/$$subdir" \
@@ -275,7 +275,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    || exit 1; \
  	    distdir=`$(am__cd) $(distdir) && pwd`; \
  	    top_distdir=`$(am__cd) $(top_distdir) && pwd`; \
-@@ -433,8 +477,6 @@
+@@ -433,8 +477,6 @@ distdir: $(DISTFILES)
  	      $(MAKE) $(AM_MAKEFLAGS) \
  	        top_distdir="$$top_distdir" \
  	        distdir="$$distdir/$$subdir" \
@@ -284,7 +284,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	        distdir) \
  	      || exit 1; \
  	  fi; \
-@@ -475,7 +517,8 @@
+@@ -475,7 +517,8 @@ clean-am: clean-generic clean-libtool mo
  
  distclean: distclean-recursive
  	-rm -f Makefile
@@ -294,7 +294,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  dvi: dvi-recursive
  
-@@ -489,20 +532,12 @@
+@@ -489,20 +532,12 @@ info-am:
  
  install-data-am:
  
@@ -315,7 +315,7 @@ $NetBSD: patch-aj,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  installcheck-am:
  
  maintainer-clean: maintainer-clean-recursive
-@@ -521,24 +556,22 @@
+@@ -521,24 +556,22 @@ ps: ps-recursive
  
  ps-am:
  

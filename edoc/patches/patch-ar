@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
+$NetBSD: patch-ar,v 1.3 2007/11/03 02:25:52 bjcosta Exp $
 
 --- src/scripts/Makefile.in.orig	2007-08-12 09:34:39.000000000 +1000
 +++ src/scripts/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
  install_sh_SCRIPT = $(install_sh) -c
-@@ -57,6 +61,8 @@
+@@ -57,6 +61,8 @@ DIST_SOURCES =
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  ACLOCAL = @ACLOCAL@
  ALLOCA = @ALLOCA@
@@ -38,7 +38,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  AMTAR = @AMTAR@
  AR = @AR@
  AUTOCONF = @AUTOCONF@
-@@ -79,6 +85,30 @@
+@@ -79,6 +85,30 @@ DEPDIR = @DEPDIR@
  DH_MAKE = @DH_MAKE@
  DOXYGEN_PAPER_SIZE = @DOXYGEN_PAPER_SIZE@
  DOXYGEN_SUBDIR = @DOXYGEN_SUBDIR@
@@ -69,7 +69,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  DX_CONFIG = @DX_CONFIG@
  DX_DOCDIR = @DX_DOCDIR@
  DX_DOT = @DX_DOT@
-@@ -111,8 +141,14 @@
+@@ -111,8 +141,14 @@ EXEEXT = @EXEEXT@
  F77 = @F77@
  FFLAGS = @FFLAGS@
  GCC_SUBDIR = @GCC_SUBDIR@
@@ -86,7 +86,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -132,8 +168,10 @@
+@@ -132,8 +168,10 @@ LIBS = @LIBS@
  LIBTOOL = @LIBTOOL@
  LN_S = @LN_S@
  LTLIBOBJS = @LTLIBOBJS@
@@ -98,7 +98,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  OBJEXT = @OBJEXT@
  PACKAGE = @PACKAGE@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
-@@ -160,12 +198,26 @@
+@@ -160,12 +198,26 @@ VERSION = @VERSION@
  XMLTO = @XMLTO@
  abs_builddir = @abs_builddir@
  abs_srcdir = @abs_srcdir@
@@ -127,7 +127,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  am__include = @am__include@
  am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
-@@ -177,12 +229,8 @@
+@@ -177,12 +229,8 @@ build_alias = @build_alias@
  build_cpu = @build_cpu@
  build_os = @build_os@
  build_vendor = @build_vendor@
@@ -140,7 +140,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  edoc_patched_prefix = @edoc_patched_prefix@
  exec_prefix = @exec_prefix@
  host = @host@
-@@ -190,39 +238,32 @@
+@@ -190,39 +238,32 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
@@ -181,7 +181,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@for dep in $?; do \
  	  case '$(am__configure_deps)' in \
  	    *$$dep*) \
-@@ -247,15 +288,15 @@
+@@ -247,15 +288,15 @@ Makefile: $(srcdir)/Makefile.in $(top_bu
  $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
@@ -200,7 +200,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(bin_SCRIPTS)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  if test -f $$d$$p; then \
-@@ -293,6 +334,10 @@
+@@ -293,6 +334,10 @@ mostlyclean-libtool:
  
  clean-libtool:
  	-rm -rf .libs _libs
@@ -211,7 +211,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  tags: TAGS
  TAGS:
  
-@@ -301,21 +346,22 @@
+@@ -301,21 +346,22 @@ CTAGS:
  
  
  distdir: $(DISTFILES)
@@ -246,7 +246,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
  	      cp -pR $(srcdir)/$$file $(distdir)$$dir || exit 1; \
  	    fi; \
-@@ -331,7 +377,7 @@
+@@ -331,7 +377,7 @@ check: check-am
  all-am: Makefile $(SCRIPTS)
  installdirs:
  	for dir in "$(DESTDIR)$(bindir)"; do \
@@ -255,7 +255,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	done
  install: install-am
  install-exec: install-exec-am
-@@ -364,7 +410,7 @@
+@@ -364,7 +410,7 @@ clean-am: clean-generic clean-libtool mo
  
  distclean: distclean-am
  	-rm -f Makefile
@@ -264,7 +264,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  dvi: dvi-am
  
-@@ -378,20 +424,12 @@
+@@ -378,20 +424,12 @@ info-am:
  
  install-data-am:
  
@@ -285,7 +285,7 @@ $NetBSD: patch-ar,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  installcheck-am: installcheck-binSCRIPTS
  
  maintainer-clean: maintainer-clean-am
-@@ -410,22 +448,18 @@
+@@ -410,22 +448,18 @@ ps: ps-am
  
  ps-am:
  

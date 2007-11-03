@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
+$NetBSD: patch-ag,v 1.3 2007/11/03 02:25:52 bjcosta Exp $
 
 --- docs/manual/Makefile.in.orig	2007-08-12 09:34:38.000000000 +1000
 +++ docs/manual/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
  install_sh_SCRIPT = $(install_sh) -c
-@@ -56,6 +60,8 @@
+@@ -56,6 +60,8 @@ MANS = $(man_MANS)
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  ACLOCAL = @ACLOCAL@
  ALLOCA = @ALLOCA@
@@ -38,7 +38,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  AMTAR = @AMTAR@
  AR = @AR@
  AUTOCONF = @AUTOCONF@
-@@ -78,6 +84,30 @@
+@@ -78,6 +84,30 @@ DEPDIR = @DEPDIR@
  DH_MAKE = @DH_MAKE@
  DOXYGEN_PAPER_SIZE = @DOXYGEN_PAPER_SIZE@
  DOXYGEN_SUBDIR = @DOXYGEN_SUBDIR@
@@ -69,7 +69,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  DX_CONFIG = @DX_CONFIG@
  DX_DOCDIR = @DX_DOCDIR@
  DX_DOT = @DX_DOT@
-@@ -110,8 +140,14 @@
+@@ -110,8 +140,14 @@ EXEEXT = @EXEEXT@
  F77 = @F77@
  FFLAGS = @FFLAGS@
  GCC_SUBDIR = @GCC_SUBDIR@
@@ -86,7 +86,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  INSTALL_DATA = @INSTALL_DATA@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_SCRIPT = @INSTALL_SCRIPT@
-@@ -131,8 +167,10 @@
+@@ -131,8 +167,10 @@ LIBS = @LIBS@
  LIBTOOL = @LIBTOOL@
  LN_S = @LN_S@
  LTLIBOBJS = @LTLIBOBJS@
@@ -98,7 +98,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  OBJEXT = @OBJEXT@
  PACKAGE = @PACKAGE@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
-@@ -159,12 +197,26 @@
+@@ -159,12 +197,26 @@ VERSION = @VERSION@
  XMLTO = @XMLTO@
  abs_builddir = @abs_builddir@
  abs_srcdir = @abs_srcdir@
@@ -127,7 +127,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  am__include = @am__include@
  am__leading_dot = @am__leading_dot@
  am__quote = @am__quote@
-@@ -176,12 +228,8 @@
+@@ -176,12 +228,8 @@ build_alias = @build_alias@
  build_cpu = @build_cpu@
  build_os = @build_os@
  build_vendor = @build_vendor@
@@ -140,7 +140,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  edoc_patched_prefix = @edoc_patched_prefix@
  exec_prefix = @exec_prefix@
  host = @host@
-@@ -189,33 +237,26 @@
+@@ -189,33 +237,26 @@ host_alias = @host_alias@
  host_cpu = @host_cpu@
  host_os = @host_os@
  host_vendor = @host_vendor@
@@ -174,7 +174,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  man_MANS = edoc.1
  EXTRA_DIST = edoc.xml \
     edoc.1 \
-@@ -225,7 +266,7 @@
+@@ -225,7 +266,7 @@ EXTRA_DIST = edoc.xml \
  all: all-am
  
  .SUFFIXES:
@@ -183,7 +183,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@for dep in $?; do \
  	  case '$(am__configure_deps)' in \
  	    *$$dep*) \
-@@ -250,9 +291,9 @@
+@@ -250,9 +291,9 @@ Makefile: $(srcdir)/Makefile.in $(top_bu
  $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
@@ -195,7 +195,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  
  mostlyclean-libtool:
-@@ -260,9 +301,13 @@
+@@ -260,9 +301,13 @@ mostlyclean-libtool:
  
  clean-libtool:
  	-rm -rf .libs _libs
@@ -210,7 +210,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	@list='$(man1_MANS) $(dist_man1_MANS) $(nodist_man1_MANS)'; \
  	l2='$(man_MANS) $(dist_man_MANS) $(nodist_man_MANS)'; \
  	for i in $$l2; do \
-@@ -313,21 +358,22 @@
+@@ -313,21 +358,22 @@ CTAGS:
  
  
  distdir: $(DISTFILES)
@@ -245,7 +245,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	    if test -d $(srcdir)/$$file && test $$d != $(srcdir); then \
  	      cp -pR $(srcdir)/$$file $(distdir)$$dir || exit 1; \
  	    fi; \
-@@ -343,7 +389,7 @@
+@@ -343,7 +389,7 @@ check: check-am
  all-am: Makefile $(MANS)
  installdirs:
  	for dir in "$(DESTDIR)$(man1dir)"; do \
@@ -254,7 +254,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  	done
  install: install-am
  install-exec: install-exec-am
-@@ -375,7 +421,7 @@
+@@ -375,7 +421,7 @@ clean-am: clean-generic clean-libtool mo
  
  distclean: distclean-am
  	-rm -f Makefile
@@ -263,7 +263,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  
  dvi-am:
  
-@@ -385,20 +431,12 @@
+@@ -385,20 +431,12 @@ info-am:
  
  install-data-am: install-man
  
@@ -284,7 +284,7 @@ $NetBSD: patch-ag,v 1.2 2007/10/06 12:50:52 bjcosta Exp $
  installcheck-am:
  
  maintainer-clean: maintainer-clean-am
-@@ -413,23 +451,20 @@
+@@ -413,23 +451,20 @@ pdf-am:
  
  ps-am:
  
