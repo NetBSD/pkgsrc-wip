@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+
+--- build/rules.mk.orig	2007-09-27 13:23:19.000000000 -0300
++++ build/rules.mk
+@@ -167,9 +167,9 @@ lc_install:
+ 	done
+ 
+ etc_install:
+-	$(INSTALLDIR) $(ETCDIR)
++	$(INSTALLDIR) $(EXAMPLEDIR)
+ 	for i in $(ETC); do \
+-		$(INSTALL) -m $(DATA_MODE) $$i $(ETCDIR); \
++		$(INSTALL) -m $(DATA_MODE) $$i $(EXAMPLEDIR); \
+ 	done
+ 
+ # Dependencies

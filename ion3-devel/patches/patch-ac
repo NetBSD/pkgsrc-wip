@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+
+--- etc/Makefile.orig	2007-09-27 13:23:19.000000000 -0300
++++ etc/Makefile
+@@ -24,5 +24,4 @@ include $(TOPDIR)/build/rules.mk
+ ######################################
+ 
+ _install: etc_install
+-	rm -f $(ETCDIR)/look.lua
+-	ln -s look_newviolet.lua $(ETCDIR)/look.lua
++	ln -sf look_newviolet.lua $(EXAMPLEDIR)/look.lua
