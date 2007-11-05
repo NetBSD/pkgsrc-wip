@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2007/11/04 19:01:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/05 19:07:01 cheusov Exp $
 #
 
 DISTNAME=	lincity-ng-1.1.1
 CATEGORIES=	games
-MASTER_SITES=	http://prdownload.berlios.de/lincity-ng/
+MASTER_SITES=	http://download.berlios.de/lincity-ng/ \
+               http://download2.berlios.de/lincity-ng/
+
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@tut.by
