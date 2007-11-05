@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/05 08:22:26 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/11/05 08:41:50 cheusov Exp $
 bin/tkabber
 share/doc/tkabber/AUTHORS
 share/doc/tkabber/COPYING
@@ -28,11 +28,50 @@ share/examples/tkabber/xrdb/light.xrdb
 share/examples/tkabber/xrdb/lighthouse.xrdb
 share/examples/tkabber/xrdb/ocean-deep.xrdb
 share/examples/tkabber/xrdb/teopetuk.xrdb
+share/examples/tkabber/xrdb/warm.xrdb
 share/examples/tkabber/tools/howto.txt
 share/examples/tkabber/tools/jbot
 share/examples/tkabber/tools/jsend.tcl
 share/examples/tkabber/tools/rssbot
 share/examples/tkabber/tools/rssbot.tcl
+share/tkabber/balloon.tcl
+share/tkabber/browser.tcl
+share/tkabber/chats.tcl
+share/tkabber/configdir.tcl
+share/tkabber/custom.tcl
+share/tkabber/datagathering.tcl
+share/tkabber/default.tcl
+share/tkabber/disco.tcl
+share/tkabber/filetransfer.tcl
+share/tkabber/filters.tcl
+share/tkabber/gpgme.tcl
+share/tkabber/hooks.tcl
+share/tkabber/iface.tcl
+share/tkabber/iq.tcl
+share/tkabber/itemedit.tcl
+share/tkabber/jidlink.tcl
+share/tkabber/joingrdialog.tcl
+share/tkabber/login.tcl
+share/tkabber/messages.tcl
+share/tkabber/muc.tcl
+share/tkabber/negotiate.tcl
+share/tkabber/pixmaps.tcl
+share/tkabber/plugins.tcl
+share/tkabber/presence.tcl
+share/tkabber/privacy.tcl
+share/tkabber/pubsub.tcl
+share/tkabber/register.tcl
+share/tkabber/richtext.tcl
+share/tkabber/roster.tcl
+share/tkabber/search.tcl
+share/tkabber/si.tcl
+share/tkabber/splash.tcl
+share/tkabber/Tclx.tcl
+share/tkabber/tkabber.tcl
+share/tkabber/trans.tcl
+share/tkabber/userinfo.tcl
+share/tkabber/utils.tcl
+share/tkabber/xmppmime.tcl
 share/tkabber/emoticons/default/FaceIronic.gif
 share/tkabber/emoticons/default/FaceStartled.gif
 share/tkabber/emoticons/default/FaceStraight.gif
@@ -389,3 +428,55 @@ share/tkabber/trans/es.msg
 share/tkabber/trans/pl.msg
 share/tkabber/trans/ru.msg
 share/tkabber/trans/uk.msg
+@dirrm share/doc/tkabber
+@dirrm share/examples/tkabber/configs
+@dirrm share/examples/tkabber/tclCarbonNotification-1.0.0
+@dirrm share/examples/tkabber/tools
+@dirrm share/examples/tkabber/xrdb
+@dirrm share/examples/tkabber/tools
+@dirrm share/examples/tkabber
+@dirrm share/tkabber/emoticons/default
+@dirrm share/tkabber/emoticons
+@dirrm share/tkabber/ifacetk
+@dirrm share/tkabber/jabberlib-tclxml/tclxml
+@dirrm share/tkabber/jabberlib-tclxml
+@dirrm share/tkabber/mclistbox
+@dirrm share/tkabber/msgs
+@dirrm share/tkabber/pixmaps/default/docking
+@dirrm share/tkabber/pixmaps/default/roster
+@dirrm share/tkabber/pixmaps/default/services
+@dirrm share/tkabber/pixmaps/default/tkabber
+@dirrm share/tkabber/pixmaps/default
+@dirrm share/tkabber/pixmaps/default-blue/docking
+@dirrm share/tkabber/pixmaps/default-blue/roster
+@dirrm share/tkabber/pixmaps/default-blue
+@dirrm share/tkabber/pixmaps/feather16/docking
+@dirrm share/tkabber/pixmaps/feather16/roster
+@dirrm share/tkabber/pixmaps/feather16/services
+@dirrm share/tkabber/pixmaps/feather16/tkabber
+@dirrm share/tkabber/pixmaps/feather16
+@dirrm share/tkabber/pixmaps/feather22/roster
+@dirrm share/tkabber/pixmaps/feather22
+@dirrm share/tkabber/pixmaps/stars/docking
+@dirrm share/tkabber/pixmaps/stars/roster
+@dirrm share/tkabber/pixmaps/stars/services
+@dirrm share/tkabber/pixmaps/stars/tkabber
+@dirrm share/tkabber/pixmaps/stars
+@dirrm share/tkabber/pixmaps
+@dirrm share/tkabber/plugins/chat
+@dirrm share/tkabber/plugins/filetransfer
+@dirrm share/tkabber/plugins/general
+@dirrm share/tkabber/plugins/iq
+@dirrm share/tkabber/plugins/jidlink
+@dirrm share/tkabber/plugins/richtext
+@dirrm share/tkabber/plugins/roster
+@dirrm share/tkabber/plugins/search
+@dirrm share/tkabber/plugins/si
+@dirrm share/tkabber/plugins/unix
+@dirrm share/tkabber/plugins/windows
+@dirrm share/tkabber/plugins
+@dirrm share/tkabber/sounds/default
+@dirrm share/tkabber/sounds/psi
+@dirrm share/tkabber/sounds
+@dirrm share/tkabber/trans
+@dirrm share/tkabber
