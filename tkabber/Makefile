@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/08/25 11:21:32 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/05 08:22:26 cheusov Exp $
 #
 
-DISTNAME=	tkabber-0.9.9
+DISTNAME=	tkabber-0.10.0
 CATEGORIES=	chat
-MASTER_SITES=	http://jabberstudio.rediris.es/tkabber/
+MASTER_SITES=	http://files.jabber.ru/tkabber/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tkabber.jabber.ru/en/
@@ -22,16 +22,15 @@ DOCDIR=		${PREFIX}/share/doc/tkabber
 INSTALLATION_DIRS+=	${EGDIR} ${DATADIR} ${DOCDIR}
 
 # XXX this is also in the tkabber's Makefile
-SUBDIRS=	emoticons-tkabber \
-		aniemoteicons    \
+SUBDIRS=	emoticons \
 		ifacetk           \
-		plugins           \
 		jabberlib-tclxml  \
-		pixmaps           \
-		sounds            \
-		textundo          \
+		mclistbox         \
 		msgs              \
-		mclistbox-1.02
+		pixmaps           \
+		plugins           \
+		sounds            \
+		trans
 
 EXTRA_FILES=	AUTHORS README COPYING INSTALL ChangeLog
 
