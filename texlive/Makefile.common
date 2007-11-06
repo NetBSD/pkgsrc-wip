@@ -1,0 +1,5 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2007/11/06 06:54:52 airhead Exp $
+
+TEXLIVE_VERSION=	2007
+
+EXTRACT_SUFX=		.tar.bz2
