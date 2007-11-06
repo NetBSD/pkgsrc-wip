@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.22 2007/09/11 21:26:08 rillig Exp $
+# $Id: cvs-package.mk,v 1.23 2007/11/06 14:24:41 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -98,9 +98,9 @@ PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_REPOSITORIES must be set."
 CVS_REPOSITORIES?=	# none
 .endif
 
-.for _repo_ in ${CVS_REPOSITORIES}
-.  if !defined(CVS_ROOT.${_repo_})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${_repo_:Q}" must be set."
+.for r in ${CVS_REPOSITORIES}
+.  if !defined(CVS_ROOT.${r})
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT.${r} must be set."
 .  endif
 .endfor
 
@@ -113,7 +113,7 @@ USE_TOOLS+=		date
 _CVS_RSH=		ssh
 _CVS_CMD=		cvs
 _CVS_ENV=		# empty
-_CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE:Q}
+_CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
 _CVS_FLAGS=		-Q
 _CVS_CHECKOUT_FLAGS=	-P
@@ -128,49 +128,49 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 # Generation of repository-specific variables
 #
 
-.for _repo_ in ${CVS_REPOSITORIES}
-CVS_MODULE.${_repo_}?=		${_repo_}
-.  if defined(CVS_TAG.${_repo_})
-_CVS_TAG_FLAG.${_repo_}=	-r${CVS_TAG.${_repo_}}
-_CVS_TAG.${_repo_}=		${CVS_TAG.${_repo_}}
+.for r in ${CVS_REPOSITORIES}
+CVS_MODULE.${r}?=		${r}
+.  if defined(CVS_TAG.${r})
+_CVS_TAG_FLAG.${r}=	-r${CVS_TAG.${r}}
+_CVS_TAG.${r}=		${CVS_TAG.${r}}
 .  elif defined(CVS_TAG)
-_CVS_TAG_FLAG.${_repo_}=	-r${CVS_TAG}
-_CVS_TAG.${_repo_}=		${CVS_TAG}
+_CVS_TAG_FLAG.${r}=	-r${CVS_TAG}
+_CVS_TAG.${r}=		${CVS_TAG}
 .  else
-_CVS_TAG_FLAG.${_repo_}=	-D${_CVS_TODAY}T00:00+0
-_CVS_TAG.${_repo_}=		${_CVS_TODAY:Q}
+_CVS_TAG_FLAG.${r}=	-D${_CVS_TODAY}T00:00+0
+_CVS_TAG.${r}=		${_CVS_TODAY:Q}
 .  endif
-_CVS_DISTFILE.${_repo_}=	${PKGBASE}-${CVS_MODULE.${_repo_}}-${_CVS_TAG.${_repo_}}.tar.gz
+_CVS_DISTFILE.${r}=	${PKGBASE}-${CVS_MODULE.${r}}-${_CVS_TAG.${r}}.tar.gz
 .endfor
 
 pre-extract: do-cvs-extract
 
 .PHONY: do-cvs-extract
 do-cvs-extract:
-.for _repo_ in ${CVS_REPOSITORIES}
+.for r in ${CVS_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
-	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ]; then	\
-	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
-	  ${PAX} -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q}; \
+	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ]; then		\
+	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
+	  ${PAX} -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q};	\
 	  exit 0;							\
 	fi;								\
-	case ${CVS_ROOT.${_repo_}:Q} in					\
+	case ${CVS_ROOT.${r}:Q} in					\
 	  :pserver:*)							\
-	    [ -f ${_CVS_PASSFILE:Q} ] || ${TOUCH} ${_CVS_PASSFILE:Q};	\
-	    ${STEP_MSG} "Logging in to "${CVS_ROOT.${_repo_}:Q}".";	\
+	    [ -f ${_CVS_PASSFILE} ] || ${TOUCH} ${_CVS_PASSFILE};	\
+	    ${STEP_MSG} "Logging in to "${CVS_ROOT.${r}:Q}".";		\
 	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS} 		\
-		-d ${CVS_ROOT.${_repo_}:Q} login			\
+		-d ${CVS_ROOT.${r}:Q} login				\
 	  ;;								\
 	  *) ;;								\
 	esac;								\
-	${STEP_MSG} "Downloading "${CVS_MODULE.${_repo_}:Q}" from "${CVS_ROOT.${_repo_}:Q}"."; \
+	${STEP_MSG} "Downloading "${CVS_MODULE.${r}:Q}" from "${CVS_ROOT.${r}:Q}"."; \
 	${SETENV} ${_CVS_ENV}						\
-	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${_repo_}:Q}		\
-	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${_repo_}:Q} \
-	      -d ${_repo_:Q} ${CVS_MODULE.${_repo_}:Q};			\
-	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${_repo_}:Q}"."; \
+	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${r}:Q}		\
+	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${r}:Q}	\
+	      -d ${r} ${CVS_MODULE.${r}:Q};				\
+	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${_repo_}:Q} ${_repo_:Q}
+	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ${r}
 .endfor
 
 .endif
