@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/07 23:57:53 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/06 02:18:22 dhowland Exp $
 #
 
 DISTNAME=		opendchub-0.7.15
@@ -9,9 +9,32 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://opendchub.sourceforge.net/
 COMMENT=		Open source Direct Connect hub software
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
+# only works for systems with cap_set_proc() support
+CONFIGURE_ARGS+=	--enable-switch_user
 
 USE_TOOLS+=		gmake
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+
+INSTALLATION_DIRS+=	share/examples share/doc
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/Samplescripts/functestbot.plz \
+		${DESTDIR:Q}${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/Samplescripts/subtestbot.plz \
+		${DESTDIR:Q}${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/Documentation/configfiles \
+		${DESTDIR:Q}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/Documentation/general \
+		${DESTDIR:Q}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/Documentation/scriptdoc \
+		${DESTDIR:Q}${DOCDIR:Q}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
