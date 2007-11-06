@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/20 22:34:34 asau Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/06 19:17:18 asau Exp $
 #
 
 DISTNAME=		ecl-0.9i
@@ -19,7 +19,6 @@ CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-USE_DESTDIR=		full
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
