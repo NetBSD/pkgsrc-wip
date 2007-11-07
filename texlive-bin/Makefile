@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/07 19:13:58 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2007/11/07 19:17:08 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -15,7 +15,7 @@ CONFLICTS+=	teTeX-bin-[0-9]*
 CONFLICTS+=	teTeX2-bin-[0-9]*
 CONFLICTS+=	teTeX3-bin-[0-9]*
 
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
