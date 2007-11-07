@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/07 19:12:45 airhead Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/07 19:13:58 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -45,8 +45,6 @@ CONFIGURE_ARGS+=--without-texi2html
 
 .include "../../wip/texlive/Makefile.common"
 .include "options.mk"
-
-# XXX TODO: Xm header not found
 
 .include "../../mk/tex.buildlink3.mk"  # XXX
 .include "../../graphics/freetype2/buildlink3.mk"
