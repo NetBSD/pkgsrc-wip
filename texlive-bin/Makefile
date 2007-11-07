@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/06 06:53:47 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/07 19:12:45 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -19,6 +19,8 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+INFO_FILES=	yes
 
 CONFIGURE_ENV+=	GNUMAKE=gmake
 
