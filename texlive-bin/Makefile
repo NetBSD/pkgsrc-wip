@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/07 19:17:08 airhead Exp $
+# $NetBSD: Makefile,v 1.5 2007/11/07 19:18:44 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=--without-texi2html
 .include "../../wip/texlive/Makefile.common"
 .include "options.mk"
 
-.include "../../mk/tex.buildlink3.mk"  # XXX
+#.include "../../mk/tex.buildlink3.mk"  # XXX
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
