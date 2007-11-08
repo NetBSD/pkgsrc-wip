@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/11/05 00:25:10 asau Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/08 18:03:46 asau Exp $
 #
 
 DISTNAME=	chicken-2.732
@@ -21,7 +21,18 @@ UNLIMIT_RESOURCES=	datasize
 OWN_DIRS+=	${PREFIX}/lib/chicken
 OWN_DIRS+=	${PREFIX}/lib/chicken/3
 
-MAKE_VARS=	PLATFORM=bsd PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
+# PLATFORM detection:
+PLATFORM=	${"${OPSYS}"=="NetBSD":?bsd:}
+PLATFORM+=	${"${OPSYS}"=="DragonFly":?bsd:}
+PLATFORM+=	${"${OPSYS}"=="FreeBSD":?bsd:}
+PLATFORM+=	${"${OPSYS}"=="Linux":?linux:}
+PLATFORM+=	${"${OPSYS}"=="Darwin":?macosx:}
+PLATFORM+=	${"${OPSYS}"=="SunOS":?solaris:}
+#PLATFORM+=	${"${OPSYS}"=="Interix":?*****:}
+# possible choices left: mingw-msys mingw cygwin cross-linux-mingw
+# PKG_FAIL_REASON=	"${OPSYS} is not supported"
+
+MAKE_VARS=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
 MAKE_VARS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/man/man1
 
 do-build:
