@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: linuxigd.sh,v 1.3 2006/10/14 15:09:00 thomasklausner Exp $
+# $NetBSD: linuxigd.sh,v 1.4 2007/11/08 05:09:33 obache Exp $
 #
 # PROVIDE: linuxidg
 # REQUIRE: ipnat
+# KEYWORD: shutdown
 #
 # set linuxigd_flags="ext_if int_if" in rc.conf
 
