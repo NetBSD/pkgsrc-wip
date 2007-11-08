@@ -2,13 +2,9 @@ An open source implementation of the Sender ID specification as defined by the
 Internet Engineering Task Force's (IETF).
 
 The Sender ID proposal includes three different specifications:
-draft-ietf-marid-core-03
-draft-ietf-marid-protocol-02
-draft-ietf-marid-submitter-03
-
-sid-milter implements the -core and -protocol specifications. -submitter
-requires an optional SMTP extension that would be implemented in the sendmail
-MTA.
+draft-lyon-senderid-core-01.txt
+draft-lyon-senderid-pra-01.txt
+draft-schlitt-spf-classic-02.txt
 
 This implementation is part of the Sendmail Messaging Integrity program, a
 comprehensive testing initiative designed to gather real-world usage data by

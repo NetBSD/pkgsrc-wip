@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2006/04/21 07:31:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2007/11/08 23:25:31 adrian_p Exp $
+#
 
-DISTNAME=	sid-milter-0.2.5
+DISTNAME=	sid-milter-0.2.14
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
-MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://www.sendmail.net/sid-milter/
+MAINTAINER=	pettai@nordu.net
+HOMEPAGE=	http://sid-milter.sourceforge.net/
 COMMENT=	Open source implementation of the Sender ID specification
 
 DEPENDS+=	sendmail>=8.13.0:../../mail/sendmail
@@ -14,7 +15,7 @@ BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
 
 USE_BUILTIN.libmilter=	NO
-LICENSE=		no-profit
+LICENSE=		sendmail-open-source-license
 USE_TOOLS+=		gm4
 MAKE_ENV+=		M4=${M4:Q}
 PTHREAD_OPTS+=		require
@@ -33,25 +34,28 @@ SUBST_MESSAGE.libs=	Fixing paths.
 .include "../../mk/pthread.buildlink3.mk"
 
 post-extract:
-	@${CP} ${FILESDIR}/sid-filter.m4 ${WRKSRC}/sid-filter/Makefile.m4
+	${CP} ${FILESDIR}/sid-filter.m4 ${WRKSRC}/sid-filter/Makefile.m4
 
 do-build:
-	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build)
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA_DIR} ${SIDDOC}
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat3/
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat8/
 
 	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a ${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 ${PREFIX}/${PKGMANDIR}/cat3/
+	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 \
+		${PREFIX}/${PKGMANDIR}/cat3/
 	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
 		${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
 		${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/sid-milter
-	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${PREFIX}/share/doc/sid-milter
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/sid-milter
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/sid-milter
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/sid-milter
+	${INSTALL_DATA} ${WRKSRC}/README ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${SIDDOC}
 
 .include "../../mk/bsd.pkg.mk"
 

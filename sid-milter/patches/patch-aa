@@ -1,0 +1,166 @@
+$NetBSD: patch-aa,v 1.3 2007/11/08 23:25:31 adrian_p Exp $
+
+--- sid-filter/sid-filter.c.orig	2006-07-21 00:28:09.000000000 +0200
++++ sid-filter/sid-filter.c
+@@ -1928,11 +1928,11 @@ mlfi_eom(SMFICTX *ctx)
+ {
+ 	sfsistat ret;
+ 	int status;
+-	int sid_result;
+-	int spf_result;
++	int sid_result, spf_result, auth_result;
+ 	int reason;
+ 	Context sic;
+ 	const char *hostname;
++        char *auth_type, *auth_author, *auth_ssf, *auth_authen;
+ 	const char *expl;
+ 	char *badaddr;
+ 	char *which;
+@@ -1964,6 +1964,13 @@ mlfi_eom(SMFICTX *ctx)
+ 	if (hostname == NULL)
+ 		hostname = HOSTUNKNOWN;
+ 
++	auth_authen = smfi_getsymval(ctx, "{auth_authen}");
++	auth_type = smfi_getsymval(ctx, "{auth_type}");
++	auth_ssf = smfi_getsymval(ctx, "{auth_ssf}");
++	auth_author = smfi_getsymval(ctx, "{auth_author}");
++
++        auth_result = auth_authen != NULL && strlen(auth_authen) != 0;
++
+ 	/* assume we're accepting */
+ 	ret = SMFIS_ACCEPT;
+ 
+@@ -1986,7 +1993,7 @@ mlfi_eom(SMFICTX *ctx)
+ 	snprintf(pra, sizeof pra, "%s@%s", sic->ctx_local, sic->ctx_domain);
+ 	status = sid_marid_check(sic, SM_SCOPE_PRA, ip, pra, &sid_result,
+ 	                         &reason, &expl);
+-	if (status != 0)
++	if (!auth_result && status != 0)
+ 	{
+ 		if (dolog)
+ 		{
+@@ -2020,7 +2027,7 @@ mlfi_eom(SMFICTX *ctx)
+ 	/* construct the status header's content */
+ 	sm_strlcpy(prahdr, sic->ctx_pra->hdr_hdr, sizeof prahdr);
+ 	sid_lowercase(prahdr);
+-	snprintf(stathdr, sizeof stathdr, "%s %s=%s; sender-id=", hostname,
++	snprintf(stathdr, sizeof stathdr, "%s header.%s=%s; sender-id=", hostname,
+ 	         prahdr, pra);
+ 	sid_stat_header(sid_result, reason, expl, stathdr, sizeof stathdr);
+ 
+@@ -2028,12 +2035,56 @@ mlfi_eom(SMFICTX *ctx)
+ 	sid_stat_header(sid_result, reason, expl, sid_errmsg,
+ 	                sizeof sid_errmsg);
+ 
++        /*
++        **  Put the status header in place.
++        */
++ 
++        if (!auth_result && stathdr[0] != '\0' &&
++            smfi_insheader(ctx, 1, AUTHRESULTSHDR, stathdr) != MI_SUCCESS)
++        {
++                if (dolog)
++                {
++                        syslog(LOG_ERR, "%s smfi_insheader() failed",
++                               sic->ctx_jobid);
++                }
++ 
++                sid_msgcleanup(ctx);
++                return SMFIS_TEMPFAIL;
++        }
++ 
++        snprintf(stathdr, sizeof stathdr, "%s smtp.mail=%s", hostname, sic->ctx_sender != NULL && strlen(sic->ctx_sender) != 0 ? sic->ctx_sender : pra /*FIXME*/);
++ 
++        /*
++        **  Run the SMTP authentication test
++        */
++ 
++        if (auth_result) {
++            sm_strlcat(stathdr, "; auth=", sizeof stathdr);
++ 
++            /* positive = pass, 0 = neutral, negative = fail (not used) */
++ 
++            sm_strlcat(stathdr, auth_result > 0 ? "pass" : "fail", sizeof stathdr);
++ 
++            /* plain, cram-md5, etc... */
++ 
++            if (auth_type != NULL && strlen(auth_type) != 0) {
++                sm_strlcat(stathdr, " (", sizeof stathdr);
++                sm_strlcat(stathdr, auth_type, sizeof stathdr);
++                if (auth_ssf != NULL && atoi(auth_ssf) > 1) {
++                    sm_strlcat(stathdr, " ", sizeof stathdr);
++                    sm_strlcat(stathdr, auth_ssf, sizeof stathdr);
++                    sm_strlcat(stathdr, " bits", sizeof stathdr);
++                }
++                sm_strlcat(stathdr, ")", sizeof stathdr);
++            }
++        }
++
+ 	/*
+ 	**  Run the "SPF classic" query if the envelope sender wasn't
+ 	**  empty.
+ 	*/
+ 
+-	if (sic->ctx_sender[0] != '\0')
++        if (!auth_result && sic->ctx_sender[0] != '\0')
+ 	{
+ 		expl = NULL;
+ 		status = sid_marid_check(sic, SM_SCOPE_SPF, ip,
+@@ -2083,6 +2134,23 @@ mlfi_eom(SMFICTX *ctx)
+ 	}
+ 
+ 	/*
++	**  Put the status header in place.
++	*/
++
++	if (stathdr[0] != '\0' &&
++	    smfi_insheader(ctx, 1, AUTHRESULTSHDR, stathdr) != MI_SUCCESS)
++	{
++		if (dolog)
++		{
++			syslog(LOG_ERR, "%s smfi_insheader() failed",
++			       sic->ctx_jobid);
++		}
++
++		sid_msgcleanup(ctx);
++		return SMFIS_TEMPFAIL;
++	}
++
++	/*
+ 	**  Identify the filter, if requested.
+ 	*/
+ 
+@@ -2110,24 +2178,6 @@ mlfi_eom(SMFICTX *ctx)
+ 		}
+ 	}
+ 
+-	/*
+-	**  Put the status header in place.
+-	*/
+-
+-	if (stathdr[0] != '\0' &&
+-	    smfi_insheader(ctx, 1, AUTHRESULTSHDR, stathdr) != MI_SUCCESS)
+-	{
+-		if (dolog)
+-		{
+-			syslog(LOG_ERR, "%s %s() failed",
+-			       sic->ctx_jobid, ADDHEADERFUNCNAME);
+-		}
+-
+-		sid_msgcleanup(ctx);
+-		return SMFIS_TEMPFAIL;
+-	}
+-
+-
+ 	sid_msgcleanup(ctx);
+ 
+ 	switch (rlevel)
+@@ -2216,6 +2266,8 @@ mlfi_eom(SMFICTX *ctx)
+ 		}
+ 		break;
+ 	}
++        if (auth_result > 0)
++            ret = SMFIS_ACCEPT;
+ 
+ 	if (ret == SMFIS_REJECT && !testmode)
+ 	{
