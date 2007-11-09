@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/09/28 05:38:27 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2007/11/09 03:01:23 bsadewitz Exp $
 #
 
-DISTNAME=	xkeyboard-config-1.0
-PKGREVISION=	1
+DISTNAME=	xkeyboard-config-1.1
 CATEGORIES=	x11
 MASTER_SITES=	http://xlibs.freedesktop.org/xkbdesc/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +23,7 @@ BUILD_DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${PREFIX}/share/X11/xkb
+CONFIGURE_ARGS+=	--without-xkbcomp-symlink
 
 .include "../../converters/libiconv/buildlink3.mk"
 
