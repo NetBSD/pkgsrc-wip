@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2007/10/31 08:35:10 marttikuparinen Exp $
+# $NetBSD: Makefile.common,v 1.23 2007/11/09 06:13:52 marttikuparinen Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
 EXTRACT_SUFX=		.tar.bz2
@@ -8,6 +8,7 @@ HOMEPAGE=		http://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
 XFCE4_VERSION=		4.4.1
+BROKEN=			Please use pkgsrc instead of pkgsrc-wip for now
 
 # Do NOT put a PKGREVISION statement in this file!
 
