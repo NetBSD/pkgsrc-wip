@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2686 2007/11/04 16:01:11 tnn2 Exp $
+# $Id: Makefile,v 1.2687 2007/11/09 02:24:29 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1086,6 +1086,7 @@ SUBDIR+=	p5-Catalyst-View-Mason
 SUBDIR+=	p5-Catalyst-View-TT
 SUBDIR+=	p5-Class-Accessor-Chained
 SUBDIR+=	p5-Class-C3
+SUBDIR+=	p5-Class-C3-XS
 SUBDIR+=	p5-Class-DBI-AsForm
 SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
