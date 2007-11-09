@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/11/07 19:18:44 airhead Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/09 19:29:19 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
 
 CONFIGURE_ARGS+=--without-texinfo
 CONFIGURE_ARGS+=--without-texi2html
+CONFIGURE_ARGS+=--disable-multiplatform
 
 .include "../../wip/texlive/Makefile.common"
 .include "options.mk"
