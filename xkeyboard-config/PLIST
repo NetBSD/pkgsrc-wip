@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/28 05:38:27 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/11/09 05:26:43 bsadewitz Exp $
 share/X11/xkb/compat.dir
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
@@ -15,6 +15,7 @@ share/X11/xkb/compat/level5
 share/X11/xkb/compat/misc
 share/X11/xkb/compat/mousekeys
 share/X11/xkb/compat/norepeat
+share/X11/xkb/compat/olpc
 share/X11/xkb/compat/pc
 share/X11/xkb/compat/pc98
 share/X11/xkb/compat/xfree86
@@ -115,6 +116,9 @@ share/X11/xkb/rules/base.xml
 share/X11/xkb/rules/sgi
 share/X11/xkb/rules/sun
 share/X11/xkb/rules/sun.xml
+share/X11/xkb/rules/xfree86
+share/X11/xkb/rules/xfree86.lst
+share/X11/xkb/rules/xfree86.xml
 share/X11/xkb/rules/xfree98
 share/X11/xkb/rules/xkb.dtd
 share/X11/xkb/rules/xorg
@@ -145,6 +149,7 @@ share/X11/xkb/symbols/ca
 share/X11/xkb/symbols/capslock
 share/X11/xkb/symbols/cd
 share/X11/xkb/symbols/ch
+share/X11/xkb/symbols/cn
 share/X11/xkb/symbols/compose
 share/X11/xkb/symbols/cs
 share/X11/xkb/symbols/ctrl
@@ -168,6 +173,7 @@ share/X11/xkb/symbols/fujitsu_vndr/us
 share/X11/xkb/symbols/gb
 share/X11/xkb/symbols/ge
 share/X11/xkb/symbols/gh
+share/X11/xkb/symbols/gn
 share/X11/xkb/symbols/gr
 share/X11/xkb/symbols/group
 share/X11/xkb/symbols/hp_vndr/us
@@ -185,6 +191,7 @@ share/X11/xkb/symbols/jp
 share/X11/xkb/symbols/keypad
 share/X11/xkb/symbols/kg
 share/X11/xkb/symbols/kh
+share/X11/xkb/symbols/kpdl
 share/X11/xkb/symbols/kr
 share/X11/xkb/symbols/kz
 share/X11/xkb/symbols/la
@@ -288,7 +295,6 @@ share/X11/xkb/types/level5
 share/X11/xkb/types/mousekeys
 share/X11/xkb/types/numpad
 share/X11/xkb/types/pc
-share/X11/xkb/xkbcomp
 @dirrm share/X11/xkb/types
 @dirrm share/X11/xkb/symbols/xfree68_vndr
 @dirrm share/X11/xkb/symbols/sun_vndr
