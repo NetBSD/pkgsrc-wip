@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2007/11/10 22:33:21 zul_ Exp $
+
+--- src/screen.h.orig	2007-10-27 13:03:44.000000000 +0200
++++ src/screen.h
+@@ -5,14 +5,12 @@
+ 
+ #if HAVE_NCURSESW_NCURSES_H
+ # include <ncursesw/ncurses.h>
+-# include <ncursesw/panel.h>
+ #elif HAVE_NCURSES_NCURSES_H
+ # include <ncurses/ncurses.h>
+-# include <ncurses/panel.h>
+ #else
+ # include <ncurses.h>
+-# include <panel.h>
+ #endif
++#include <panel.h>
+ 
+ #ifdef WITH_ASPELL
+ void spellcheck_init(void);

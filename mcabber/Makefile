@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2007/08/01 02:13:15 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/10 22:33:21 zul_ Exp $
 
-DISTNAME=		mcabber-0.9.3
+DISTNAME=		mcabber-0.9.4
 CATEGORIES=		chat
 MASTER_SITES=		http://www.lilotux.net/~mikael/mcabber/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -27,8 +27,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mcabber
 	${INSTALL_DATA} ${WRKSRC}/mcabberrc.example ${PREFIX}/share/examples/mcabber/mcabberrc
 
+.include "options.mk"
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
