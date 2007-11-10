@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/09 19:29:19 airhead Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/10 19:47:55 airhead Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -6,6 +6,7 @@ DISTNAME=	texlive_base-${TEXLIVE_VERSION}-src
 WRKSRC=		${WRKDIR}/texlive_base-${TEXLIVE_VERSION}
 CATEGORIES=	print
 MASTER_SITES=	http://students.dec.bournemouth.ac.uk/ebarrett/texlive/distfiles/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/

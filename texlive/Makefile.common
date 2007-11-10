@@ -1,5 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2007/11/06 06:54:52 airhead Exp $
+# $NetBSD: Makefile.common,v 1.2 2007/11/10 19:47:55 airhead Exp $
 
 TEXLIVE_VERSION=	2007
+# Update PKG_REVISION when this is updated
+TEXLIVE_GENERATION=	g0
 
-EXTRACT_SUFX=		.tar.bz2
+# This can most likely just be added to the default
+# list of acceptable licenses since texlive includes
+# only libre software
+LICENSE=		texlive-license
+LICENSE_FILE=		LICENSE
