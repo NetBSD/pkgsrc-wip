@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/11/11 01:34:02 pmatias Exp $
+
+--- configure.orig	2004-07-13 00:33:36.000000000 -0300
++++ configure
+@@ -19419,6 +19419,7 @@ or sabcmd (from sablotron) at:
+    fi
+ fi
+ 
++unset SCI  # Getting $SCI from buildlink doesn't work properly.
+ # test if SCI is defined. If not,
+ # test if scilab is in path, then get SCI from scilab -nw.
+ if test -z $SCI; then
+@@ -19476,9 +19477,7 @@ fi
+ CPPFLAGS="$CPPFLAGS -I${SCIDIR}/routines"
+ 
+ 
+-if test "x$prefix"  = xNONE; then
+-   prefix="${SCIDIR}/contrib/sip"
+-fi
++prefix="${SCIDIR}/contrib/sip"
+ TOOLBOXDIR=$prefix
+ 
+ 
+@@ -20785,7 +20784,7 @@ _ACEOF
+ else
+ 
+ cat >>confdefs.h <<\_ACEOF
+-#define MAGICK_DEFAULT_COMPRESSION_QUALITY UndefinedCompressionQuality
++#define MAGICK_DEFAULT_COMPRESSION_QUALITY UndefinedCompression
+ _ACEOF
+ 
+ fi
