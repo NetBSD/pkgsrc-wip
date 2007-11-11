@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/10/23 17:07:39 ghen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/11/11 19:35:32 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -115,6 +115,8 @@ include/dovecot/src/lib-storage/index/mbox/mbox-lock.h
 include/dovecot/src/lib-storage/index/mbox/mbox-md5.h
 include/dovecot/src/lib-storage/index/mbox/mbox-storage.h
 include/dovecot/src/lib-storage/index/mbox/mbox-sync-private.h
+include/dovecot/src/lib-storage/index/raw/raw-storage.h
+include/dovecot/src/lib-storage/index/raw/raw-sync.h
 include/dovecot/src/lib-storage/list/index-mailbox-list.h
 include/dovecot/src/lib-storage/list/mailbox-list-fs.h
 include/dovecot/src/lib-storage/list/mailbox-list-maildir.h
@@ -433,6 +435,7 @@ share/examples/rc.d/dovecot
 @dirrm lib/dovecot
 @dirrm include/dovecot/src/pop3
 @dirrm include/dovecot/src/lib-storage/list
+@dirrm include/dovecot/src/lib-storage/index/raw
 @dirrm include/dovecot/src/lib-storage/index/mbox
 @dirrm include/dovecot/src/lib-storage/index/maildir
 @dirrm include/dovecot/src/lib-storage/index/dbox
