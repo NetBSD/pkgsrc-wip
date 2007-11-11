@@ -1,3 +1,1 @@
 Need to add otr and aspell to the list of know options
-otr doesn't compile well due to libotr package bug (I think, it misses to
-do the link with the libgrypt include and lib in .buildlink).
