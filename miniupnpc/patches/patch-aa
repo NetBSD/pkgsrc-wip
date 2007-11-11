@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/11/11 15:00:26 pmatias Exp $
+
+--- Makefile.orig	2007-10-16 13:08:09.000000000 -0200
++++ Makefile
+@@ -15,6 +15,7 @@ CFLAGS = -O -Wall -DNDEBUG
+ INSTALL = install
+ #following libs are needed on Solaris
+ #LDLIBS=-lsocket -lnsl -lresolv
++RM = rm
+ 
+ SRCS = igd_desc_parse.c miniupnpc.c minixml.c minisoap.c miniwget.c \
+        upnpc.c upnpcommands.c upnpreplyparse.c testminixml.c \
+@@ -34,9 +35,10 @@ SONAME = $(SHAREDLIBRARY).1
+ EXECUTABLES = upnpc-static upnpc-shared \
+               testminixml minixmlvalid testupnpreplyparse
+ 
+-INSTALLPREFIX ?= $(PREFIX)/usr
++INSTALLPREFIX ?= $(PREFIX)
+ INSTALLDIRINC = $(INSTALLPREFIX)/include/miniupnpc
+ INSTALLDIRLIB = $(INSTALLPREFIX)/lib
++INSTALLDIRBIN = $(INSTALLPREFIX)/bin
+ 
+ .PHONY:	install clean depend all installpythonmodule
+ 
+@@ -59,12 +61,12 @@ clean:
+ 
+ install:	$(LIBRARY) $(SHAREDLIBRARY)
+ 	$(INSTALL) -d $(INSTALLDIRINC)
+-	$(INSTALL) --mode=644 $(HEADERS) $(INSTALLDIRINC)
++	$(INSTALL) -m 644 $(HEADERS) $(INSTALLDIRINC)
+ 	$(INSTALL) -d $(INSTALLDIRLIB)
+-	$(INSTALL) --mode=644 $(LIBRARY) $(INSTALLDIRLIB)
+-	$(INSTALL) --mode=644 $(SHAREDLIBRARY) $(INSTALLDIRLIB)/$(SONAME)
+-	#ln --symbolic $(INSTALLDIRLIB)/$(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
+-	ln --symbolic $(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
++	$(INSTALL) -m 644 $(LIBRARY) $(INSTALLDIRLIB)
++	$(INSTALL) -m 644 $(SHAREDLIBRARY) $(INSTALLDIRLIB)/$(SONAME)
++	ln -s $(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
++	$(INSTALL) -m 755 upnpc-static $(INSTALLDIRBIN)/upnpc
+ 
+ cleaninstall:
+ 	$(RM) -r $(INSTALLDIRINC)

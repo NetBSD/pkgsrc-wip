@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/11 15:00:26 pmatias Exp $
+bin/upnpc
+include/miniupnpc/igd_desc_parse.h
+include/miniupnpc/miniupnpc.h
+include/miniupnpc/miniwget.h
+include/miniupnpc/upnpcommands.h
+include/miniupnpc/upnpreplyparse.h
+lib/libminiupnpc.a
+lib/libminiupnpc.so
+lib/libminiupnpc.so.1
+@dirrm include/miniupnpc
