@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2687 2007/11/09 02:24:29 jgoamakf Exp $
+# $Id: Makefile,v 1.2688 2007/11/11 01:37:22 pmatias Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -219,6 +219,7 @@ SUBDIR+=	ding
 SUBDIR+=	directfb
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
+SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
@@ -627,6 +628,7 @@ SUBDIR+=	interbase-docs
 SUBDIR+=	interchange
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
+SUBDIR+=	ion3-devel
 SUBDIR+=	ipfm
 SUBDIR+=	ipmitools
 SUBDIR+=	ipsvd
@@ -709,6 +711,7 @@ SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libadplug
+SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libatomic_ops
@@ -1508,6 +1511,7 @@ SUBDIR+=	simgear
 SUBDIR+=	simplec
 SUBDIR+=	sipp
 SUBDIR+=	siproxd
+SUBDIR+=	siptoolbox
 SUBDIR+=	sis
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
