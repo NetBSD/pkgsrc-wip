@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/09/14 18:11:35 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/12 19:47:40 kheinz Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-nox11-${OCTAVE_VER}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
-		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/bleeding-edge/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/bleeding-edge/
 EXTRACT_SUFX=	.tar.bz2
