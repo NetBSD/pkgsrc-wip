@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/08/06 19:21:16 ahallmann Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/12 18:11:40 kheinz Exp $
 
 VERS=		4.3.4
 PKGNAME=	hylafax-${VERS}
 DISTNAME=	hylafax-${VERS}
 CATEGORIES=	comms
 MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
-MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/ \
-                ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
+MASTER_SITES_RELEASE=	ftp://ftp.hylafax.org/source/
 
 .if empty(VERS:M[0-9].[0-9].[0-9]rc[0-9])
 MASTER_SITES=	${MASTER_SITES_RELEASE}
