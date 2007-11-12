@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2007/08/23 14:09:39 obache Exp $
+# $NetBSD: Makefile,v 1.8 2007/11/12 10:52:33 obache Exp $
 
-DISTNAME=		gmediaserver-0.12.0
+DISTNAME=		gmediaserver-0.13.0
 CATEGORIES=		multimedia net
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gmediaserver/
 
@@ -13,11 +13,19 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_PKGLOCALEDIR=	yes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFIGURE_ARGS+=	--with-id3lib=${BUILDLINK_PREFIX.id3lib:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv:Q}
 CONFIGURE_ARGS+=	--with-libupnp=${BUILDLINK_PREFIX.libupnp:Q}
 
 RCD_SCRIPTS=		gmediaserver
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OS_VERSION:R} <= 4
+LIBS+=			-lz
+.endif
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
