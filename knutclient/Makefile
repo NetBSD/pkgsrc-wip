@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/12 03:15:00 jdwhite Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/12 11:34:42 absd Exp $
 #
 
 DISTNAME=		knutclient-0.9.3
@@ -11,6 +11,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.knut.noveradsl.cz/knutclient/
 COMMENT=		KDE Client for NUT
+
+USE_LANGUAGES=               c++
 
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
