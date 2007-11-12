@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/11/10 19:47:55 airhead Exp $
+# $NetBSD: Makefile,v 1.8 2007/11/12 21:45:09 thomasklausner Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -56,5 +56,8 @@ CONFIGURE_ARGS+=--disable-multiplatform
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
