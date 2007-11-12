@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/15 00:19:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/12 21:46:48 thomasklausner Exp $
 #
 
 DISTNAME=		bubbros-1.6
@@ -14,13 +14,11 @@ PY_PATCHPLIST=		yes
 MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
 
-PYTHON_PATCH_SCRIPTS=	pclient-pygame.py
-PYTHON_PATCH_SCRIPTS+=	pclient-slow-X.py
-PYTHON_PATCH_SCRIPTS+=	pclient-xshm.py
 PYTHON_PATCH_SCRIPTS+=	bubbob/bb.py
 PYTHON_PATCH_SCRIPTS+=	bubbob/doc/bonus-doc.py
 PYTHON_PATCH_SCRIPTS+=	display/pclient.py
 PYTHON_PATCH_SCRIPTS+=	display/playback.py
+PYTHON_PATCH_SCRIPTS+=	http2/sf/bb12.py
 
 PAX_SUBST=	-s ',*/setup.py,,' -s ',*/setup.py.pre,,'
 
