@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2007/10/24 09:38:35 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.34 2007/11/12 21:45:54 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -71,6 +71,7 @@ info/pcl-cvs
 info/pgg
 info/rcirc
 info/reftex
+info/remember
 info/sc
 info/ses
 info/sieve
@@ -155,6 +156,8 @@ share/emacs/${PKGVERSION}/etc/emacs3.py
 share/emacs/${PKGVERSION}/etc/enriched.doc
 share/emacs/${PKGVERSION}/etc/future-bug
 share/emacs/${PKGVERSION}/etc/gnus-tut.txt
+share/emacs/${PKGVERSION}/etc/gnus/gnus-setup.ast
+share/emacs/${PKGVERSION}/etc/gnus/news-server.ast
 share/emacs/${PKGVERSION}/etc/grep.txt
 share/emacs/${PKGVERSION}/etc/images/README
 share/emacs/${PKGVERSION}/etc/images/attach.pbm
@@ -241,6 +244,7 @@ share/emacs/${PKGVERSION}/etc/images/gnus/kill-group.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/kill-group.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/mail-reply.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/mail-reply.xpm
+share/emacs/${PKGVERSION}/etc/images/gnus/mail_send.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/next-ur.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/next-ur.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/post.pbm
@@ -426,8 +430,34 @@ share/emacs/${PKGVERSION}/etc/images/smilies/evil.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/forced.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/frown.pbm
 share/emacs/${PKGVERSION}/etc/images/smilies/frown.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/blink.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/braindamaged.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/cry.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/dead.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/evil.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/forced.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/frown.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/grin.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/indifferent.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/reverse-smile.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/sad.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/smile.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/grayscale/wry.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/grin.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/indifferent.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/blink.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/braindamaged.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/cry.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/dead.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/evil.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/forced.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/frown.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/grin.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/indifferent.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/reverse-smile.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/sad.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/smile.xpm
+share/emacs/${PKGVERSION}/etc/images/smilies/medium/wry.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/sad.pbm
 share/emacs/${PKGVERSION}/etc/images/smilies/sad.xpm
 share/emacs/${PKGVERSION}/etc/images/smilies/smile.pbm
@@ -1052,8 +1082,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lmenu.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lmenu.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/lselect.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/lselect.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lucid.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lucid.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.el.gz
@@ -1326,6 +1354,8 @@ share/emacs/${PKGVERSION}/lisp/fringe.el.gz
 share/emacs/${PKGVERSION}/lisp/fringe.elc
 share/emacs/${PKGVERSION}/lisp/generic-x.el.gz
 share/emacs/${PKGVERSION}/lisp/generic-x.elc
+share/emacs/${PKGVERSION}/lisp/gnus/assistant.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/assistant.elc
 share/emacs/${PKGVERSION}/lisp/gnus/binhex.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/binhex.elc
 share/emacs/${PKGVERSION}/lisp/gnus/canlock.el.gz
@@ -1340,6 +1370,10 @@ share/emacs/${PKGVERSION}/lisp/gnus/dns.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/dns.elc
 share/emacs/${PKGVERSION}/lisp/gnus/earcon.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/earcon.elc
+share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.elc
+share/emacs/${PKGVERSION}/lisp/gnus/encrypt.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/encrypt.elc
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.elc
 share/emacs/${PKGVERSION}/lisp/gnus/format-spec.el.gz
@@ -1356,6 +1390,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-audio.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-audio.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-bcklg.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-bcklg.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-bookmark.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-bookmark.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cache.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-cite.el.gz
@@ -1380,8 +1416,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-ems.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-ems.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-gl.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-gl.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-int.el.gz
@@ -1440,8 +1474,14 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-win.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-win.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.elc
+share/emacs/${PKGVERSION}/lisp/gnus/hashcash.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/hashcash.elc
 share/emacs/${PKGVERSION}/lisp/gnus/hex-util.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/hex-util.elc
+share/emacs/${PKGVERSION}/lisp/gnus/hmac-def.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/hmac-def.elc
+share/emacs/${PKGVERSION}/lisp/gnus/hmac-md5.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/hmac-md5.elc
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ietf-drums.el.gz
@@ -1458,6 +1498,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/mail-source.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mail-source.elc
 share/emacs/${PKGVERSION}/lisp/gnus/mailcap.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/mailcap.elc
+share/emacs/${PKGVERSION}/lisp/gnus/md4.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/md4.elc
 share/emacs/${PKGVERSION}/lisp/gnus/message.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/message.elc
 share/emacs/${PKGVERSION}/lisp/gnus/messcompat.el.gz
@@ -1552,6 +1594,10 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnweb.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnwfm.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnwfm.elc
+share/emacs/${PKGVERSION}/lisp/gnus/ntlm.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/ntlm.elc
+share/emacs/${PKGVERSION}/lisp/gnus/password.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/password.elc
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.elc
 share/emacs/${PKGVERSION}/lisp/gnus/qp.el.gz
@@ -1566,6 +1612,14 @@ share/emacs/${PKGVERSION}/lisp/gnus/rfc2104.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2104.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.elc
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-cram.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-cram.elc
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-digest.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-digest.elc
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-ntlm.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/sasl-ntlm.elc
+share/emacs/${PKGVERSION}/lisp/gnus/sasl.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/sasl.elc
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.elc
 share/emacs/${PKGVERSION}/lisp/gnus/sha1.el.gz
@@ -1578,12 +1632,16 @@ share/emacs/${PKGVERSION}/lisp/gnus/sieve.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/sieve.elc
 share/emacs/${PKGVERSION}/lisp/gnus/smiley.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/smiley.elc
+share/emacs/${PKGVERSION}/lisp/gnus/smime-ldap.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/smime-ldap.elc
 share/emacs/${PKGVERSION}/lisp/gnus/smime.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/smime.elc
 share/emacs/${PKGVERSION}/lisp/gnus/spam-report.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/spam-report.elc
 share/emacs/${PKGVERSION}/lisp/gnus/spam-stat.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/spam-stat.elc
+share/emacs/${PKGVERSION}/lisp/gnus/spam-wash.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/spam-wash.elc
 share/emacs/${PKGVERSION}/lisp/gnus/spam.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/spam.elc
 share/emacs/${PKGVERSION}/lisp/gnus/starttls.el.gz
@@ -2058,6 +2116,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/iso-swed.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/keyswap.el
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lazy-lock.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/lselect.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/lselect.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mlsupport.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mlsupport.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ooutline.el.gz
@@ -2076,10 +2136,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/sc.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/sun-curs.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/sun-curs.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/sun-fns.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/sun-fns.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.el.gz
@@ -2448,8 +2504,6 @@ share/emacs/${PKGVERSION}/lisp/term/pc-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/pc-win.elc
 share/emacs/${PKGVERSION}/lisp/term/rxvt.el.gz
 share/emacs/${PKGVERSION}/lisp/term/rxvt.elc
-share/emacs/${PKGVERSION}/lisp/term/sun-mouse.el.gz
-share/emacs/${PKGVERSION}/lisp/term/sun-mouse.elc
 share/emacs/${PKGVERSION}/lisp/term/sun.el.gz
 share/emacs/${PKGVERSION}/lisp/term/sun.elc
 share/emacs/${PKGVERSION}/lisp/term/sup-mouse.el.gz
@@ -2549,6 +2603,10 @@ share/emacs/${PKGVERSION}/lisp/textmodes/reftex-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex-vars.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/remember-diary.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/remember-diary.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/remember.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/remember.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/spell.el.gz
@@ -2752,6 +2810,8 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${PKGVERSION}/etc/images/tree-widget/folder
 @dirrm share/emacs/${PKGVERSION}/etc/images/tree-widget/default
 @dirrm share/emacs/${PKGVERSION}/etc/images/tree-widget
+@dirrm share/emacs/${PKGVERSION}/etc/images/smilies/medium
+@dirrm share/emacs/${PKGVERSION}/etc/images/smilies/grayscale
 @dirrm share/emacs/${PKGVERSION}/etc/images/smilies
 @dirrm share/emacs/${PKGVERSION}/etc/images/mail
 @dirrm share/emacs/${PKGVERSION}/etc/images/low-color
@@ -2760,6 +2820,7 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${PKGVERSION}/etc/images/gnus
 @dirrm share/emacs/${PKGVERSION}/etc/images/ezimage
 @dirrm share/emacs/${PKGVERSION}/etc/images
+@dirrm share/emacs/${PKGVERSION}/etc/gnus
 @dirrm share/emacs/${PKGVERSION}/etc/e
 @dirrm share/emacs/${PKGVERSION}/etc
 @dirrm share/emacs/${PKGVERSION}
