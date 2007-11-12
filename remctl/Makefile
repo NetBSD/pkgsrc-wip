@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/21 01:26:08 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/12 00:05:43 jakllsch Exp $
 
-DISTNAME=	remctl-2.7
+DISTNAME=	remctl-2.11
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
