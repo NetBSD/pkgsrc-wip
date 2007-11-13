@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2690 2007/11/12 04:12:41 jdwhite Exp $
+# $Id: Makefile,v 1.2691 2007/11/13 21:27:25 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -88,7 +88,6 @@ SUBDIR+=	arla-3.99.14
 SUBDIR+=	artemis
 SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin
-SUBDIR+=	ati-xfree86-bin-init
 SUBDIR+=	audacious
 SUBDIR+=	audacious-plugins
 SUBDIR+=	audacity-devel
@@ -561,7 +560,6 @@ SUBDIR+=	heirloom-tar
 SUBDIR+=	heirloom-tcopy
 SUBDIR+=	heirloom-tee
 SUBDIR+=	heirloom-time
-SUBDIR+=	heirloom-toolchest
 SUBDIR+=	heirloom-touch
 SUBDIR+=	heirloom-tr
 SUBDIR+=	heirloom-tsort
@@ -1115,7 +1113,6 @@ SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
-SUBDIR+=	p5-Email-Date
 SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Email-LocalDelivery
 SUBDIR+=	p5-Encode-Detect
@@ -1290,7 +1287,6 @@ SUBDIR+=	pmars
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
 SUBDIR+=	pointless
-SUBDIR+=	policyd-weight
 SUBDIR+=	policykit
 SUBDIR+=	polipo
 SUBDIR+=	pop-before-smtp
