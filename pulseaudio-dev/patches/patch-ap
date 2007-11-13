@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- libpulse-mainloop-glib.pc.in.orig	2007-11-12 20:16:04.000000000 -0500
++++ libpulse-mainloop-glib.pc.in
+@@ -6,6 +6,7 @@ includedir=${prefix}/include
+ Name: libpulse-mainloop-glib
+ Description: GLIB 2.0 Main Loop Wrapper for PulseAudio
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lpulse-mainloop-glib @PTHREAD_LIBS@
+-Cflags: -D_REENTRANT -I${includedir}
++Libs: -L${libdir} -lpulse-mainloop-glib
++Cflags: @PTHREAD_CPPFLAGS@ -I${includedir}
+ Requires: libpulse glib-2.0
++Libs.private: @PTHREAD_LDFLAGS@ @PTHREAD_LIBS@

@@ -1,0 +1,76 @@
+$NetBSD: patch-al,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- src/pulsecore/ffmpeg/resample2.c.orig	2007-11-12 18:03:02.000000000 -0500
++++ src/pulsecore/ffmpeg/resample2.c
+@@ -235,29 +235,29 @@ void av_resample_compensate(AVResampleCo
+  */
+ int av_resample(AVResampleContext *c, short *dst, short *src, int *consumed, int src_size, int dst_size, int update_ctx){
+     int dst_index, i;
+-    int index= c->index;
++    int idx= c->index;
+     int frac= c->frac;
+     int dst_incr_frac= c->dst_incr % c->src_incr;
+     int dst_incr=      c->dst_incr / c->src_incr;
+     int compensation_distance= c->compensation_distance;
+ 
+   if(compensation_distance == 0 && c->filter_length == 1 && c->phase_shift==0){
+-        int64_t index2= ((int64_t)index)<<32;
++        int64_t idx2= ((int64_t)idx)<<32;
+         int64_t incr= (1LL<<32) * c->dst_incr / c->src_incr;
+-        dst_size= FFMIN(dst_size, (src_size-1-index) * (int64_t)c->src_incr / c->dst_incr);
++        dst_size= FFMIN(dst_size, (src_size-1-idx) * (int64_t)c->src_incr / c->dst_incr);
+ 
+         for(dst_index=0; dst_index < dst_size; dst_index++){
+-            dst[dst_index] = src[index2>>32];
+-            index2 += incr;
++            dst[dst_index] = src[idx2>>32];
++            idx2 += incr;
+         }
+         frac += dst_index * dst_incr_frac;
+-        index += dst_index * dst_incr;
+-        index += frac / c->src_incr;
++        idx += dst_index * dst_incr;
++        idx += frac / c->src_incr;
+         frac %= c->src_incr;
+   }else{
+     for(dst_index=0; dst_index < dst_size; dst_index++){
+-        FELEM *filter= c->filter_bank + c->filter_length*(index & c->phase_mask);
+-        int sample_index= index >> c->phase_shift;
++        FELEM *filter= c->filter_bank + c->filter_length*(idx & c->phase_mask);
++        int sample_index= idx >> c->phase_shift;
+         FELEM2 val=0;
+ 
+         if(sample_index < 0){
+@@ -286,10 +286,10 @@ int av_resample(AVResampleContext *c, sh
+ #endif
+ 
+         frac += dst_incr_frac;
+-        index += dst_incr;
++        idx += dst_incr;
+         if(frac >= c->src_incr){
+             frac -= c->src_incr;
+-            index++;
++            idx++;
+         }
+ 
+         if(dst_index + 1 == compensation_distance){
+@@ -299,8 +299,8 @@ int av_resample(AVResampleContext *c, sh
+         }
+     }
+   }
+-    *consumed= FFMAX(index, 0) >> c->phase_shift;
+-    if(index>=0) index &= c->phase_mask;
++    *consumed= FFMAX(idx, 0) >> c->phase_shift;
++    if(idx>=0) idx &= c->phase_mask;
+ 
+     if(compensation_distance){
+         compensation_distance -= dst_index;
+@@ -308,7 +308,7 @@ int av_resample(AVResampleContext *c, sh
+     }
+     if(update_ctx){
+         c->frac= frac;
+-        c->index= index;
++        c->index= idx;
+         c->dst_incr= dst_incr_frac + c->src_incr*dst_incr;
+         c->compensation_distance= compensation_distance;
+     }

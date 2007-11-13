@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- src/pulse/xmalloc.h.orig	2007-11-11 23:35:20.000000000 -0500
++++ src/pulse/xmalloc.h
+@@ -34,6 +34,10 @@
+  * Memory allocation functions.
+  */
+ 
++#if defined(HAVE_POSIX_MEMALIGN) && defined(POSIX_MEMALIGN_IN_JEMALLOC)
++int 	posix_memalign(void **memptr, size_t alignment, size_t size);
++#endif
++
+ PA_C_DECL_BEGIN
+ 
+ /** Allocate the specified number of bytes, just like malloc() does. However, in case of OOM, terminate */

@@ -1,0 +1,112 @@
+$NetBSD: patch-ah,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- src/Makefile.am.orig	2007-11-12 21:57:45.000000000 -0500
++++ src/Makefile.am
+@@ -173,7 +173,7 @@ if HAVE_AVAHI
+ bin_PROGRAMS += pabrowse
+ endif
+ 
+-bin_SCRIPTS = esdcompat
++@BUILD_PADSP@bin_SCRIPTS = esdcompat
+ 
+ pacat_SOURCES = utils/pacat.c
+ pacat_LDADD = $(AM_LDADD) libpulse.la
+@@ -235,9 +235,9 @@ noinst_PROGRAMS = \
+ 		flist-test \
+ 		asyncq-test \
+ 		asyncmsgq-test \
+-		queue-test \
+-		rtpoll-test \
+-		sig2str-test \
++		queue-test 
++@BUILD_RTPOLL_TEST@noinst_PROGRAMS += rtpoll-test
++noinst_PROGRAMS +=		sig2str-test \
+ 		resampler-test \
+ 		smoother-test \
+ 		mix-test \
+@@ -316,10 +316,10 @@ queue_test_CFLAGS = $(AM_CFLAGS)
+ queue_test_LDADD = $(AM_LDADD) libpulsecore.la
+ queue_test_LDFLAGS = $(AM_LDFLAGS) $(BINLDFLAGS)
+ 
+-rtpoll_test_SOURCES = tests/rtpoll-test.c
+-rtpoll_test_CFLAGS = $(AM_CFLAGS)
+-rtpoll_test_LDADD = $(AM_LDADD) libpulsecore.la
+-rtpoll_test_LDFLAGS = $(AM_LDFLAGS) $(BINLDFLAGS)
++@BUILD_RTPOLL_TEST@rtpoll_test_SOURCES = tests/rtpoll-test.c
++@BUILD_RTPOLL_TEST@rtpoll_test_CFLAGS = $(AM_CFLAGS)
++@BUILD_RTPOLL_TEST@rtpoll_test_LDADD = $(AM_LDADD) libpulsecore.la
++@BUILD_RTPOLL_TEST@rtpoll_test_LDFLAGS = $(AM_LDFLAGS) $(BINLDFLAGS)
+ 
+ mcalign_test_SOURCES = tests/mcalign-test.c
+ mcalign_test_CFLAGS = $(AM_CFLAGS)
+@@ -570,18 +570,18 @@ libpulse_mainloop_glib_la_LDFLAGS = -ver
+ #         OSS emulation           #
+ ###################################
+ 
+-if HAVE_OSS
++@BUILD_PADSP@if HAVE_OSS
+ 
+-lib_LTLIBRARIES += libpulsedsp.la
++@BUILD_PADSP@lib_LTLIBRARIES += libpulsedsp.la
+ 
+-bin_SCRIPTS += utils/padsp
++@BUILD_PADSP@bin_SCRIPTS += utils/padsp
+ 
+-endif
++@BUILD_PADSP@endif
+ 
+-libpulsedsp_la_SOURCES = utils/padsp.c
+-libpulsedsp_la_CFLAGS = $(AM_CFLAGS)
+-libpulsedsp_la_LIBADD = $(AM_LIBADD) libpulse.la
+-libpulsedsp_la_LDFLAGS = -avoid-version
++@BUILD_PADSP@libpulsedsp_la_SOURCES = utils/padsp.c
++@BUILD_PADSP@libpulsedsp_la_CFLAGS = $(AM_CFLAGS)
++@BUILD_PADSP@libpulsedsp_la_LIBADD = $(AM_LIBADD) libpulse.la
++@BUILD_PADSP@libpulsedsp_la_LDFLAGS = -avoid-version
+ 
+ ###################################
+ #      Speex Resampler            #
+@@ -1294,11 +1294,11 @@ module_x11_xsmp_la_LIBADD = $(AM_LIBADD)
+ 
+ liboss_util_la_SOURCES = modules/oss-util.c modules/oss-util.h
+ liboss_util_la_LDFLAGS = -avoid-version
+-liboss_util_la_LIBADD = libpulsecore.la
++liboss_util_la_LIBADD = libpulsecore.la ${LIBOSSAUDIO}
+ 
+ module_oss_la_SOURCES = modules/module-oss.c
+ module_oss_la_LDFLAGS = -module -avoid-version
+-module_oss_la_LIBADD = $(AM_LIBADD) libiochannel.la liboss-util.la libpulsecore.la
++module_oss_la_LIBADD = $(AM_LIBADD) libiochannel.la liboss-util.la libpulsecore.la ${LIBOSSAUDIO}
+ 
+ # ALSA
+ 
+@@ -1447,8 +1447,8 @@ bt_proximity_helper_LDFLAGS = $(AM_LDFLA
+ ###################################
+ 
+ suid: pulseaudio .libs/lt-pulseaudio
+-	chown root $^
+-	chmod u+s $^
++#	chown root $^
++#	chmod u+s $^
+ 
+ CLEANFILES = esdcompat client.conf default.pa daemon.conf
+ 
+@@ -1476,9 +1476,9 @@ daemon.conf: daemon/daemon.conf.in Makef
+ 		-e 's,@PA_DEFAULT_CONFIG_FILE\@,$(DEFAULT_CONFIG_DIR),g' < $< > $@
+ 
+ install-exec-hook:
+-	chown root $(DESTDIR)$(bindir)/pulseaudio ; true
+-	chmod u+s $(DESTDIR)$(bindir)/pulseaudio
+-	chmod u+s $(DESTDIR)$(pulselibexecdir)/bt-proximity-helper
++#	chown root $(DESTDIR)$(bindir)/pulseaudio ; true
++#	chmod u+s $(DESTDIR)$(bindir)/pulseaudio
++#	chmod u+s $(DESTDIR)$(pulselibexecdir)/bt-proximity-helper
+ 	ln -sf pacat $(DESTDIR)$(bindir)/parec
+ 	rm -f $(DESTDIR)$(modlibexecdir)/*.a
+ 	rm -f $(DESTDIR)$(libdir)/libpulsedsp.a
+@@ -1506,4 +1506,4 @@ update-map-file:
+ 	  echo "*;" ; \
+ 	  echo "};" ) > $(srcdir)/map-file
+ 
+-.PHONY: utils/padsp
++@BUILD_PADSP@.PHONY: utils/padsp

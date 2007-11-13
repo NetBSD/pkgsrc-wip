@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- libpulse.pc.in.orig	2007-11-12 20:16:04.000000000 -0500
++++ libpulse.pc.in
+@@ -6,5 +6,6 @@ includedir=${prefix}/include
+ Name: libpulse
+ Description: Client Interface to PulseAudio
+ Version: @PACKAGE_VERSION@
+-Libs: -L${libdir} -lpulse @PTHREAD_LIBS@
+-Cflags: -D_REENTRANT -I${includedir}
++Libs: -L${libdir} -lpulse
++Cflags: @PTHREAD_CPPFLAGS@ -I${includedir}
++Libs.private: @PTHREAD_LDFLAGS@ @PTHREAD_LIBS@

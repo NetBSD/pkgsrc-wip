@@ -1,0 +1,168 @@
+$NetBSD: patch-ag,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+
+--- src/utils/padsp.c.orig	2007-11-11 23:35:04.000000000 -0500
++++ src/utils/padsp.c
+@@ -1449,12 +1449,19 @@ static int real_open(const char *filenam
+         LOAD_OPEN_FUNC();
+         return _open(filename, flags, mode);
+     }
+-
++#ifdef DEVOSSSOUND
++    if (dsp_cloak_enable() && (strcmp(filename, DEVOSSSOUND) == 0 || strcmp(filename, "/dev/adsp") == 0))
++#else
+     if (dsp_cloak_enable() && (strcmp(filename, "/dev/dsp") == 0 || strcmp(filename, "/dev/adsp") == 0))
++#endif
+         r = dsp_open(flags, &_errno);
+     else if (mixer_cloak_enable() && strcmp(filename, "/dev/mixer") == 0)
+         r = mixer_open(flags, &_errno);
++#ifdef DEVOSSSNDSTAT
++    else if (sndstat_cloak_enable() && strcmp(filename, DEVOSSSNDSTAT) == 0)
++#else
+     else if (sndstat_cloak_enable() && strcmp(filename, "/dev/sndstat") == 0)
++#endif
+         r = sndstat_open(flags, &_errno);
+     else {
+         function_exit();
+@@ -2379,9 +2386,17 @@ int access(const char *pathname, int mod
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": access(%s)\n", pathname);
+ 
++#if defined(DEVOSSSOUND)
++    if (strcmp(pathname, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(pathname, "/dev/dsp") != 0 &&
++#endif
+         strcmp(pathname, "/dev/adsp") != 0 &&
++#if defined(DEVOSSSNDSTAT)
++        strcmp(pathname, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(pathname, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(pathname, "/dev/mixer") != 0) {
+         LOAD_ACCESS_FUNC();
+         return _access(pathname, mode);
+@@ -2411,9 +2426,17 @@ int stat(const char *pathname, struct st
+         return -1;
+     }
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(pathname, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(pathname, "/dev/dsp") != 0 &&
++#endif
+         strcmp(pathname, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(pathname, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(pathname, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(pathname, "/dev/mixer") != 0) {
+         debug(DEBUG_LEVEL_VERBOSE, __FILE__": stat(%s)\n", pathname);
+         LOAD_STAT_FUNC();
+@@ -2471,9 +2494,16 @@ int stat64(const char *pathname, struct 
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": stat64(%s)\n", pathname);
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(pathname, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(pathname, "/dev/dsp") != 0 &&
+         strcmp(pathname, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(pathname, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(pathname, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(pathname, "/dev/mixer") != 0) {
+         LOAD_STAT64_FUNC();
+         return _stat64(pathname, buf);
+@@ -2515,9 +2545,17 @@ int open64(const char *filename, int fla
+         va_end(args);
+     }
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(filename, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(filename, "/dev/dsp") != 0 &&
++#endif
+         strcmp(filename, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(filename, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(filename, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(filename, "/dev/mixer") != 0) {
+         LOAD_OPEN64_FUNC();
+         return _open64(filename, flags, mode);
+@@ -2538,9 +2576,17 @@ int __xstat(int ver, const char *pathnam
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": __xstat(%s)\n", pathname);
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(pathname, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(pathname, "/dev/dsp") != 0 &&
++#endif
+         strcmp(pathname, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(pathname, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(pathname, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(pathname, "/dev/mixer") != 0) {
+         LOAD_XSTAT_FUNC();
+         return ___xstat(ver, pathname, buf);
+@@ -2564,9 +2610,17 @@ int __xstat64(int ver, const char *pathn
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": __xstat64(%s)\n", pathname);
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(pathname, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(pathname, "/dev/dsp") != 0 &&
++#endif
+         strcmp(pathname, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(pathname, "/dev/sndstat") != 0 &&
++#else
+         strcmp(pathname, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(pathname, "/dev/mixer") != 0) {
+         LOAD_XSTAT64_FUNC();
+         return ___xstat64(ver, pathname, buf);
+@@ -2591,9 +2645,17 @@ FILE* fopen(const char *filename, const 
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": fopen(%s)\n", filename);
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(filename, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(filename, "/dev/dsp") != 0 &&
++#endif
+         strcmp(filename, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(filename, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(filename, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(filename, "/dev/mixer") != 0) {
+         LOAD_FOPEN_FUNC();
+         return _fopen(filename, mode);
+@@ -2632,9 +2694,17 @@ FILE *fopen64(const char *filename, cons
+ 
+     debug(DEBUG_LEVEL_VERBOSE, __FILE__": fopen64(%s)\n", filename);
+ 
++#ifdef DEVOSSSOUND
++    if (strcmp(filename, DEVOSSSOUND) != 0 &&
++#else
+     if (strcmp(filename, "/dev/dsp") != 0 &&
++#endif
+         strcmp(filename, "/dev/adsp") != 0 &&
++#ifdef DEVOSSSNDSTAT
++        strcmp(filename, DEVOSSSNDSTAT) != 0 &&
++#else
+         strcmp(filename, "/dev/sndstat") != 0 &&
++#endif
+         strcmp(filename, "/dev/mixer") != 0) {
+         LOAD_FOPEN64_FUNC();
+         return _fopen64(filename, mode);
