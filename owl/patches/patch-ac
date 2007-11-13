@@ -1,4 +1,4 @@
-# $NetBSD: patch-ac,v 1.1 2007/11/13 09:51:16 jdwhite Exp $
+$NetBSD: patch-ac,v 1.2 2007/11/13 10:04:09 jdwhite Exp $
 
 --- libfaim/rxhandlers.c.orig	2007-11-13 02:44:49.000000000 -0600
 +++ libfaim/rxhandlers.c	2007-11-13 02:48:39.000000000 -0600
