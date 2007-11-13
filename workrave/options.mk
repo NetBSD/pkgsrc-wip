@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/10/02 21:07:17 briandealwis Exp $
+# $NetBSD: options.mk,v 1.3 2007/11/13 19:15:24 briandealwis Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.workrave
 PKG_SUPPORTED_OPTIONS+=		arts dbus debug distributed
@@ -32,6 +32,9 @@ PKG_OPTIONS_GROUP.backends=	xml gconf gnome kde
 CONFIGURE_ARGS+=	--enable-app-gtk
 .  include "../../x11/gtk2/buildlink3.mk"
 .  include "../../x11/gtkmm/buildlink3.mk"
+.  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXt/buildlink3.mk"
+.  include "../../x11/libXmu/buildlink3.mk"
 #XXX .  include "../../devel/glibmm/buildlink3.mk"
 #XXX .  include "../../devel/libsigc++/buildlink3.mk"
 .else

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/13 18:58:35 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/13 19:15:24 briandealwis Exp $
 bin/workrave
 share/examples/workrave/sound/events/workrave.soundlist
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/workrave.mo
@@ -22,6 +22,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/workrave.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/workrave.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/workrave.mo
