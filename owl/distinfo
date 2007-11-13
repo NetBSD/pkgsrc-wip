@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/09 06:18:29 jdwhite Exp $
+$NetBSD: distinfo,v 1.2 2007/11/13 09:51:16 jdwhite Exp $
 
 SHA1 (owl-2.1.11.tar.gz) = e12e7cbcdf67a0795e19ee251ce43d7654699b0a
 RMD160 (owl-2.1.11.tar.gz) = 90c60dc9ce435ab373b4627189c4d621744e6454
 Size (owl-2.1.11.tar.gz) = 429846 bytes
-SHA1 (patch-aa) = 894dbc42756404d24accfadd08e7cc18b66c9afb
-SHA1 (patch-ab) = 4bffb7b04b0329f861ed79562502ccfade744152
+SHA1 (patch-aa) = 50b16b04c3fa3167118985a42b5cca35d35cb568
+SHA1 (patch-ab) = e9e55b3ee003bdec4f8b503369fbc0dfa6882ff6
+SHA1 (patch-ac) = aa938931333253fa52acf60f79d16117a6823a02
