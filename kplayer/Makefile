@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2007/11/13 21:38:05 shattered Exp $
 #
 
-DISTNAME=		kplayer-0.6.0
-PKGREVISION=		1
+DISTNAME=		kplayer-0.6.3
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kplayer/}
 EXTRACT_SUFX=		.tar.bz2
