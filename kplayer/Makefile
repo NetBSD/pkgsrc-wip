@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/11/13 21:38:05 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/14 06:16:35 thomasklausner Exp $
 #
 
 DISTNAME=		kplayer-0.6.3
@@ -17,6 +17,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf automake perl
 AUTOMAKE_OVERRIDE=	no
+#LICENSE=		gnu-gpl-v3
 
 pre-configure:
 	cd ${WRKSRC} && gmake -f Makefile.dist
