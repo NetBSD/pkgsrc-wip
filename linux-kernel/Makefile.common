@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/12/05 22:27:46 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2007/11/14 23:20:40 hoka_adam Exp $
 
 LINUX_VERSION=		2.6.6
 
@@ -24,7 +24,9 @@ PATCHDIR?=		${.CURDIR}/../../wip/linux-kernel/patches
 FILESDIR=		${.CURDIR}/../../wip/linux-kernel/files
 
 .include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=	IPV6_READY
+
+.include "options.mk"
 
 # This configure is also needed for the linux-kernel-headers package
 # so that include/linux/autoconf.h is generated.
@@ -33,7 +35,7 @@ do-configure:
 	cd ${WRKSRC} && \
 	yes "" | ${GMAKE} config && \
 	${CAT} ${FILESDIR}/extra-configs >> .config
-.if defined(USE_INET6) && (${USE_INET6} == "YES")
+.if !empty(PKG_OPTIONS:Minet6)
 	echo "CONFIG_IPV6=y" >> ${WRKSRC}/.config
 .endif
 	cd ${WRKSRC} && yes "" | ${GMAKE} oldconfig && \
