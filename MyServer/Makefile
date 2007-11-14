@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/11/14 22:42:59 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/14 23:01:30 hoka_adam Exp $
 #
 
 DISTNAME=		MyServer-src-0.8.5
@@ -11,7 +11,7 @@ MAINTAINER=		bartosz@atom.eu.org
 HOMEPAGE=		http://www.myserverproject.net/
 COMMENT=		Powerful and easy to configure web server
 
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		IPV6_READY
 BUILD_DEFS+=		VARBASE
 
 USE_PKGLOCALEDIR=	yes
