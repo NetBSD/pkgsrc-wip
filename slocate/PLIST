@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/31 09:37:34 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/11/16 15:43:57 hoka_adam Exp $
 bin/locate
 bin/slocate
 bin/updatedb
-man/man1/locate.1.gz
-man/man1/slocate.1.gz
-man/man1/updatedb.1.gz
+man/man1/locate.1
+man/man1/slocate.1
+man/man1/updatedb.1
+@dirrm var/slocate
