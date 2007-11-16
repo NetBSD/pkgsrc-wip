@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2007/11/16 15:43:57 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.9 2007/11/16 15:52:37 hoka_adam Exp $
 #
 
 DISTNAME=		slocate-2.7
 CATEGORIES=		sysutils
-MASTER_SITES=		http://slocate.trakker.ca/files/
+MASTER_SITES=	http://slocate.trakker.ca/files/
+PKGREVISION=	1
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://slocate.trakker.ca/
@@ -12,7 +13,7 @@ COMMENT=		Secure Locate
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=			gmake
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/var
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/etc
 
