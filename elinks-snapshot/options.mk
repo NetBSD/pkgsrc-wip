@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/04/17 20:24:48 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.4 2007/11/17 23:56:59 adrian_p Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey finger gopher
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--without-spidermonkey
 CONFIGURE_ARGS+=	--disable-sm-scripting
 .endif
 
-.if !empty (PKG_OPTIONS:Mssl)
+.if !empty(PKG_OPTIONS:Mssl)
 
 .include "../../security/openssl/buildlink3.mk"
 
