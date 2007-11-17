@@ -1,31 +1,29 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/12 22:25:30 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/17 19:50:23 hoka_adam Exp $
 #
 
-VERSION=	20070511
-DISTNAME=	hu_HU
-PKGNAME=	hunspell-${DISTNAME}-${VERSION}
+VERSION=	1.2.2
+DICTNAME=	hu_HU
+PKGNAME=	hunspell-${DISTNAME}
+DISTNAME=	${DICTNAME}-${VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	http://ftp.services.openoffice.org/pub/OpenOffice.org/contrib/dictionaries/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=magyarispell/}
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://wiki.services.openoffice.org/wiki/Dictionaries
 COMMENT=	Hungarian dictionaries for hunspell
 
-DIST_SUBDIR=	hunspell-dictionaries/${DISTNAME}-${VERSION}
-# don't want -L
-EXTRACT_OPTS_ZIP=	-aqo
-
-WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DISTNAME}
+INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DICTNAME}
 
 do-build:
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.* ${PREFIX}/share/hunspell
-	${INSTALL_DATA} ${WRKSRC}/README_${DISTNAME}.txt \
-		${PREFIX}/share/doc/hunspell-${DISTNAME}
+	${INSTALL_DATA} ${WRKSRC}/${DICTNAME}_u8_gen_alias.aff ${PREFIX}/share/hunspell/${DICTNAME}-utf8.aff
+	${INSTALL_DATA} ${WRKSRC}/${DICTNAME}_u8_gen_alias.dic ${PREFIX}/share/hunspell/${DICTNAME}-utf8.dic
+	${INSTALL_DATA} ${WRKSRC}/${DICTNAME}_gen_alias.aff ${PREFIX}/share/hunspell/${DICTNAME}.aff
+	${INSTALL_DATA} ${WRKSRC}/${DICTNAME}_gen_alias.dic ${PREFIX}/share/hunspell/${DICTNAME}.dic
+	${INSTALL_DATA} ${WRKSRC}/README_${DICTNAME}.txt \
+		${PREFIX}/share/doc/hunspell-${DICTNAME}
 
 .include "../../mk/bsd.pkg.mk"
