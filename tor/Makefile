@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/09/07 03:04:38 netcap Exp $
+# $NetBSD: Makefile,v 1.14 2007/11/17 11:02:06 netcap Exp $
 #
 
-DISTNAME=		tor-0.2.0.6-alpha
+DISTNAME=		tor-0.2.0.12-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
@@ -12,22 +12,34 @@ COMMENT=		Anonymizing overlay network for TCP (pre-release)
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_LANGUAGES+=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		CPP=${CPP:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+
+TEST_TARGET=		check
 
 TOR_USER?=		tor
 TOR_GROUP?=		tor
 PKG_HOME?=		${VARBASE}/chroot/tor
+BUILD_DEFS+=		VARBASE
+PKG_SYSCONFSUBDIR=	tor
+
+PKG_GROUPS_VARS+=	TOR_GROUP
+PKG_USERS_VARS+=	TOR_USER
 
 RCD_SCRIPTS=		tor
+RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
 PKG_GROUPS=		${TOR_GROUP}
 PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
+PKG_HOME.${TOR_USER}=   ${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
-OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0755
+OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-BUILD_DEFS+=		VARBASE
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
@@ -43,24 +55,12 @@ CHECK_PORTABILITY_SKIP+=contrib/*
 CFLAGS+=		-c99
 .endif
 
-post-patch:
-	${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'		\
-		-e 's|@PREFIX@|${PREFIX}|g' 				\
-		-e 's|@PKG_HOME@|${PKG_HOME}|g'				\
-		-e 's|@TOR_USER@|${TOR_USER}|g'				\
-		-e 's|@TOR_GROUP@|${TOR_GROUP}|g'			\
-		-e 's|@RCD_SCRIPTS_SHELL@|'${RCD_SCRIPTS_SHELL:Q}'|g'	\
-		${FILESDIR}/tor.sh > ${WRKSRC}/tor.pkgsrc.rc
-
 post-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/tor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
-	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 # XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
@@ -70,4 +70,10 @@ USE_BUILTIN.libevent=	no
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
+## We include this after other b3.mk files since we use PTHREAD_TYPE.
+##
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
