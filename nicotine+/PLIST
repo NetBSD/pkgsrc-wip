@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/07/23 01:54:45 netcap Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/17 08:07:12 netcap Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
 ${PYSITELIB}/pynicotine/ConfigParser.py
@@ -37,9 +37,6 @@ ${PYSITELIB}/pynicotine/gtkgui/frame.pyo
 ${PYSITELIB}/pynicotine/gtkgui/glade2py.py
 ${PYSITELIB}/pynicotine/gtkgui/glade2py.pyc
 ${PYSITELIB}/pynicotine/gtkgui/glade2py.pyo
-${PYSITELIB}/pynicotine/gtkgui/icondata.py
-${PYSITELIB}/pynicotine/gtkgui/icondata.pyc
-${PYSITELIB}/pynicotine/gtkgui/icondata.pyo
 ${PYSITELIB}/pynicotine/gtkgui/imagedata.py
 ${PYSITELIB}/pynicotine/gtkgui/imagedata.pyc
 ${PYSITELIB}/pynicotine/gtkgui/imagedata.pyo
@@ -61,9 +58,6 @@ ${PYSITELIB}/pynicotine/gtkgui/settings_glade.pyo
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.py
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.pyc
 ${PYSITELIB}/pynicotine/gtkgui/settingswindow.pyo
-${PYSITELIB}/pynicotine/gtkgui/systraywin32.py
-${PYSITELIB}/pynicotine/gtkgui/systraywin32.pyc
-${PYSITELIB}/pynicotine/gtkgui/systraywin32.pyo
 ${PYSITELIB}/pynicotine/gtkgui/ticker.py
 ${PYSITELIB}/pynicotine/gtkgui/ticker.pyc
 ${PYSITELIB}/pynicotine/gtkgui/ticker.pyo
