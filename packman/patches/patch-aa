@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2007/11/17 19:55:42 koifren Exp $
+--- packman.pl	2007-11-17 21:45:13.000000000 +0200
++++ packman.pl	2007-11-17 21:49:16.000000000 +0200
+@@ -56,7 +56,7 @@
+ our $PKG_DB = '/var/db/pkg';
+ our $TMP_FILE = '/tmp/packman.tmp';
+ our $DEBUG = 'no';
+-our $PSEPAR = "\t\n";		# " " to obtain pkgmanager output; "\t\n" is also interesting
++our $PSEPAR = "\n\t";		# " " to obtain pkgmanager output; "\n\t" is also interesting
+ our $LOGFILE = '/tmp/packman.log';
+ our $PKG_SUMMARY = '/var/tmp';	# $PKG_SUMMARY directory
+ our $fetch_summary = 'yes';

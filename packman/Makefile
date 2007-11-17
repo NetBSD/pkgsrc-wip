@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/11/17 19:41:21 koifren Exp $
+# $NetBSD: Makefile,v 1.6 2007/11/17 19:55:42 koifren Exp $
 
 DISTNAME=	packman-0.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://kefren.netbsd.ro/
 
