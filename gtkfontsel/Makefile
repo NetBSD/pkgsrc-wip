@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:17 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/17 14:41:57 netcap Exp $
 #
 
 DISTNAME=	gtkfontsel_1.1.orig
@@ -18,5 +18,4 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.orig/ # Debian is strange
 USE_LANGUAGES=	c
 
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
