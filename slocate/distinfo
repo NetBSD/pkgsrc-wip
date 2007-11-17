@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:41 rillig Exp $
+$NetBSD: distinfo,v 1.4 2007/11/17 14:36:51 hoka_adam Exp $
 
-SHA1 (slocate-2.7.tar.gz) = b5de4668b61b137f3f5fa9f17b334f56b9424f90
-RMD160 (slocate-2.7.tar.gz) = 0aa08da7b958be5c8fec7c4655e42373d8faf2cc
-Size (slocate-2.7.tar.gz) = 87240 bytes
-SHA1 (patch-aa) = 43fb7f678ea16aa68709852c2e88adafbf7d8d01
-SHA1 (patch-ab) = f007ae8c388a70859b62f2f68f72b135eebb9d86
-SHA1 (patch-ac) = 8efd4aa191cae7bdf9403d1ee803fbd0da81a762
-SHA1 (patch-ad) = 5a18f696b7d55b2cb5259f4ea8f2665953a4dcf1
+SHA1 (slocate-3.1.tar.gz) = e427552664385b86931b7626c26bd95ae5f9f085
+RMD160 (slocate-3.1.tar.gz) = d3b1e818cc35ce8e87ec1b0764f6b2145a319e13
+Size (slocate-3.1.tar.gz) = 37748 bytes
+SHA1 (patch-ae) = bc8758e5e33e64da2b692add7da6c2f30a3b6f94
+SHA1 (patch-af) = c9d8c064c1c082f8839829210111e6f77f865b2e
