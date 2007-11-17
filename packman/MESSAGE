@@ -1,6 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/06/12 20:21:51 koifren Exp $
+$NetBSD: MESSAGE,v 1.2 2007/11/17 19:41:21 koifren Exp $
 
-This program is in alpha stage. Don't expect it to work properly.
+This program is in beta stage.
+While it probably do its job, don't expect it to work 100% properly.
 
 ===========================================================================

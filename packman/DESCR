@@ -1,3 +1,4 @@
 Yet another package 'manager'. Written in a boring weekend as a
 pkgmanager clone wannabe but not using common lisp. Full of errors,
-bugs and mosquitos.
+bugs and mosquitos. Support for binary packages added although this
+is not well tested.
