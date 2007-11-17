@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/17 15:50:52 jeremy-c-reed Exp $
+bin/gnash
+bin/gparser
+bin/gprocessor
+bin/gtk-gnash
+lib/gnash/libgnashamf.la
+lib/gnash/libgnashbackend.la
+lib/gnash/libgnashbase.la
+lib/gnash/libgnashgeo.la
+lib/gnash/libgnashserver.la
+man/man1/gnash.1
+share/gnash/GnashG.png
+share/gnash/gnash_128_96.ico
+share/locale/cs/gnash.mo
+share/locale/de/gnash.mo
+share/locale/es/gnash.mo
+share/locale/fr/gnash.mo
+share/locale/it/gnash.mo
+@dirrm share/gnash
+@dirrm lib/gnash
