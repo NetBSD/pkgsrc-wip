@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2691 2007/11/13 21:27:25 shattered Exp $
+# $Id: Makefile,v 1.2692 2007/11/17 10:05:11 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -709,13 +709,11 @@ SUBDIR+=	leo
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
-SUBDIR+=	libadplug
 SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libatomic_ops
 SUBDIR+=	libavc1394
-SUBDIR+=	libbinio
 SUBDIR+=	libbtctl
 SUBDIR+=	libcli
 SUBDIR+=	libclucene
@@ -741,14 +739,11 @@ SUBDIR+=	libixp
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
-SUBDIR+=	libmcs
-SUBDIR+=	libmms
 SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
 SUBDIR+=	libneural
 SUBDIR+=	libnjb
-SUBDIR+=	libnms
 SUBDIR+=	libobby
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libopensync-plugin-moto
