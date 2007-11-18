@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/10/11 10:54:11 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/18 10:34:38 netcap Exp $
 #
 
-DISTNAME=	gajim-0.11.2
-PKGREVISION=	2
+DISTNAME=	gajim-0.11.3
 CATEGORIES=	chat python
 MASTER_SITES=	http://www.gajim.org/downloads/
 
@@ -37,7 +36,7 @@ SUBST_STAGE.abs=	pre-configure
 SUBST_FILES.abs=	src/*.py src/common/*.py
 SUBST_SED.abs=		-e 's,^GTKGUI_GLADE.*,GTKGUI_GLADE = "${PREFIX}/share/gajim/src/gtkgui.glade",'
 SUBST_SED.abs+=		-e "s,'\\.\\./data,'${PREFIX}/share/gajim/data,g"
- 
+
 PYTHON_PATCH_SCRIPTS+=	src/gajim.py src/history_manager.py src/gajim-remote.py
 
 .include "../../mk/bsd.prefs.mk"

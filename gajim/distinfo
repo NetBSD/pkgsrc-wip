@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/10/11 10:54:11 shindenmorr Exp $
+$NetBSD: distinfo,v 1.6 2007/11/18 10:34:38 netcap Exp $
 
-SHA1 (gajim-0.11.2.tar.gz) = 2869bff89df38f109a23915a4fb9a88840c59379
-RMD160 (gajim-0.11.2.tar.gz) = 2dfd21750ccaf753066e920affa2e07016788ad6
-Size (gajim-0.11.2.tar.gz) = 3883045 bytes
+SHA1 (gajim-0.11.3.tar.gz) = 05bb10476dc8d4b00f47c338e9d94097158fc236
+RMD160 (gajim-0.11.3.tar.gz) = 0cfd21e3e74d24a604fac25cffd1ce9954554dbc
+Size (gajim-0.11.3.tar.gz) = 3933538 bytes
 SHA1 (patch-ab) = 76a3debeb12808cbe0f95f1cf5d2eae146b56907
 SHA1 (patch-ac) = f7a17101be806e0a9fbafea9781ad6a2adb51a7b
 SHA1 (patch-ad) = 722339249be24112ae94cd49309b1c213d7899bb

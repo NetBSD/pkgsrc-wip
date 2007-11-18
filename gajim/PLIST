@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/10/11 10:54:11 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/11/18 10:34:38 netcap Exp $
 bin/gajim
 lib/gajim/gtkspell.la
 lib/gajim/idle.la
@@ -206,6 +206,7 @@ share/locale/be@latin/LC_MESSAGES/gajim.mo
 share/locale/bg/LC_MESSAGES/gajim.mo
 share/locale/br/LC_MESSAGES/gajim.mo
 share/locale/cs/LC_MESSAGES/gajim.mo
+share/locale/da/LC_MESSAGES/gajim.mo
 share/locale/de/LC_MESSAGES/gajim.mo
 share/locale/el/LC_MESSAGES/gajim.mo
 share/locale/en_GB/LC_MESSAGES/gajim.mo
