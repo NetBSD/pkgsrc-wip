@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2007/11/18 10:27:28 rillig Exp $
+
+--- pam-polkit-console/pam-polkit-console.c.orig	2007-03-08 18:28:42.000000000 +0100
++++ pam-polkit-console/pam-polkit-console.c	2007-11-18 11:26:07.000000000 +0100
+@@ -40,7 +40,7 @@
+ #include <stdarg.h>
+ 
+ #include <security/pam_modules.h>
+-#include <security/_pam_macros.h>
++#include <security/pam_appl.h>
+ #ifdef HAVE_PAM_MODUTIL_H
+ #include <security/pam_modutil.h>
+ #endif
