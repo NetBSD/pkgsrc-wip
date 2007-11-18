@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/11/18 01:07:02 hoka_adam Exp $
+
+SHA1 (joe-3.1jupp8.cpio.gz) = 936a8be8db6b372b42bd9869dadc2765f946fe5b
+RMD160 (joe-3.1jupp8.cpio.gz) = bbcc42ff82fd7a47feb51579864a487f31ca3a91
+Size (joe-3.1jupp8.cpio.gz) = 401340 bytes
+SHA1 (patch-aa) = 71365adaa5500a21d856f3f44a03325bc376460a
