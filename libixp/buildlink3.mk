@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/10/14 12:17:41 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2007/11/18 01:15:47 zul_ Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBIXP_BUILDLINK3_MK:=	${LIBIXP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libixp
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libixp
 
 .if ${LIBIXP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libixp+=	libixp>=20071013
+BUILDLINK_API_DEPENDS.libixp+=	libixp>=0.4
 BUILDLINK_PKGSRCDIR.libixp?=	../../wip/libixp
 BUILDLINK_DEPMETHOD.libixp?=    build
 .endif	# LIBIXP_BUILDLINK3_MK
