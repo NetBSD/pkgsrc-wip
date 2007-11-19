@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2007/11/12 21:45:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.35 2007/11/19 07:01:22 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -791,6 +791,8 @@ share/emacs/${PKGVERSION}/lisp/calc/calc-map.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-map.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-math.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-math.elc
+share/emacs/${PKGVERSION}/lisp/calc/calc-menu.el.gz
+share/emacs/${PKGVERSION}/lisp/calc/calc-menu.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-misc.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-misc.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-mode.el.gz
@@ -1018,6 +1020,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/byte-run.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/byte-run.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/bytecomp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/bytecomp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/check-declare.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/check-declare.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/checkdoc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/checkdoc.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-compat.el.gz
@@ -1354,8 +1358,6 @@ share/emacs/${PKGVERSION}/lisp/fringe.el.gz
 share/emacs/${PKGVERSION}/lisp/fringe.elc
 share/emacs/${PKGVERSION}/lisp/generic-x.el.gz
 share/emacs/${PKGVERSION}/lisp/generic-x.elc
-share/emacs/${PKGVERSION}/lisp/gnus/assistant.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/assistant.elc
 share/emacs/${PKGVERSION}/lisp/gnus/binhex.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/binhex.elc
 share/emacs/${PKGVERSION}/lisp/gnus/canlock.el.gz
