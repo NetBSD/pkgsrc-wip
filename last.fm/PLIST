@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/19 22:02:45 netcap Exp $
+bin/last.fm
+share/last.fm/LastFMHelper
+share/last.fm/last.fm
+share/last.fm/last.fm.app
+share/last.fm/last.fm.dist
+share/last.fm/libLastFmTools.la
+share/last.fm/services/.libs/libsrv_httpinput.la
+share/last.fm/services/.libs/libsrv_itunesdevice.la
+share/last.fm/services/.libs/libsrv_mp3transcode.la
+share/last.fm/services/debug/.libs/libsrv_rtaudioplayback_debug.la
+share/last.fm/services/debug/libsrv_rtaudioplayback_debug.la
+share/last.fm/services/lastfm.protocol
+share/last.fm/services/libsrv_httpinput.la
+share/last.fm/services/libsrv_itunesdevice.la
+share/last.fm/services/libsrv_mp3transcode.la
+share/last.fm/services/lastfm.protocol
+share/services/lastfm.protocol
+@dirrm share/services
+@dirrm share/last.fm/services/debug/.libs
+@dirrm share/last.fm/services/debug
+@dirrm share/last.fm/services/.libs
+@dirrm share/last.fm/services
+@dirrm share/last.fm
