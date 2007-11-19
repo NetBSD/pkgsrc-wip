@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/24 09:57:57 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.10 2007/11/19 14:18:10 marttikuparinen Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -17,6 +17,8 @@ REQD_DIRS+=		${EGDIR}
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
+
+.include "options.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"

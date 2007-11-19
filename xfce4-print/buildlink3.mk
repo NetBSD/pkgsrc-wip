@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2007/04/11 14:12:58 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2007/11/19 14:18:10 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PRINT_BUILDLINK3_MK:=	${XFCE4_PRINT_BUILDLINK3_MK}+
@@ -21,5 +21,12 @@ BUILDLINK_PKGSRCDIR.xfce4-print?=	../../wip/xfce4-print
 .include "../../wip/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+
+pkgbase := xfce4-print
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.xfce4-print:Mcups)
+.  include "../../print/cups/buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

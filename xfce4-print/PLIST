@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/04/11 14:12:58 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.14 2007/11/19 14:18:10 marttikuparinen Exp $
 ${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint4
 bin/xfprint4-manager
@@ -12,6 +12,7 @@ include/xfce4/libxfprint/printing-system.h
 lib/libxfprint.la
 lib/pkgconfig/xfprint-1.0.pc
 lib/xfce4/mcs-plugins/xfprint_plugin.la
+${CUPS}lib/xfce4/xfprint-plugins/cups_plugin.la
 share/applications/xfce-xfprint-settings.desktop
 share/applications/xfprint-manager.desktop
 share/applications/xfprint.desktop
