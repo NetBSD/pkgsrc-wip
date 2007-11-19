@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2007/09/15 03:32:21 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/19 12:48:59 marttikuparinen Exp $
 #
 
-DISTNAME=	libmowgli-0.4.0
+DISTNAME=	libmowgli-0.5.0
 CATEGORIES=	devel
 MASTER_SITES=	http://distfiles.atheme.org/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://sacredspiral.co.uk/~nenolod/mowgli/
+HOMEPAGE=	http://atheme.org/projects/mowgli.shtml
 COMMENT=	Development framework for C (like GLib)
 
 GNU_CONFIGURE=	yes

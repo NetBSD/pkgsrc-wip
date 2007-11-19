@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/09/15 02:46:04 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/11/19 12:48:59 marttikuparinen Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMOWGLI_BUILDLINK3_MK:=	${LIBMOWGLI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libmowgli
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmowgli
 
 .if ${LIBMOWGLI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libmowgli+=	libmowgli>=0.4.0
+BUILDLINK_API_DEPENDS.libmowgli+=	libmowgli>=0.5.0
 BUILDLINK_PKGSRCDIR.libmowgli?=	../../wip/mowgli
 .endif	# LIBMOWGLI_BUILDLINK3_MK
 
