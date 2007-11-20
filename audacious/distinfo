@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/09/15 07:23:15 netcap Exp $
+$NetBSD: distinfo,v 1.5 2007/11/20 08:00:50 marttikuparinen Exp $
 
-SHA1 (audacious-1.4.0-dr4.tbz2) = 0f24d16675abec1b5154948e551e63d76f5f9112
-RMD160 (audacious-1.4.0-dr4.tbz2) = 57f644f5b8bf4ff4ac8bf66ca49422ed5d7c1099
-Size (audacious-1.4.0-dr4.tbz2) = 1253003 bytes
+SHA1 (audacious-1.4.2.tbz2) = 999c7cf18c5d0521e924a21493e1841aec9621fb
+RMD160 (audacious-1.4.2.tbz2) = ff8018eb41f990d7fef7cbf5f97b4dcd9b057122
+Size (audacious-1.4.2.tbz2) = 1333069 bytes

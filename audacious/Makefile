@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.12 2007/09/21 13:06:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/11/20 08:00:50 marttikuparinen Exp $
 #
 
-DISTNAME=		audacious-1.4.0-dr4
-PKGNAME=		${DISTNAME:S/-dr4//}
-PKGREVISION=		1
+DISTNAME=		audacious-1.4.2
+#PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org	
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://audacious-media-player.org/
 COMMENT=		Media player based on BMP and XMMS
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool pkg-config
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES=		c c++
 USE_DIRS+=		xdg-1.4
 
 CONFIGURE_ARGS+=	--enable-chardet --enable-nls
