@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2007/01/24 08:25:36 lkundrak Exp $
+$NetBSD: patch-ag,v 1.5 2007/11/20 05:56:10 bsadewitz Exp $
 
---- include/grub/mm.h.orig	2006-04-25 22:08:31.000000000 +0200
+--- include/grub/mm.h.orig	2007-07-21 19:32:22.000000000 -0400
 +++ include/grub/mm.h
-@@ -34,6 +34,7 @@ void *EXPORT_FUNC(grub_malloc) (grub_siz
+@@ -33,6 +33,7 @@ void *EXPORT_FUNC(grub_malloc) (grub_siz
  void EXPORT_FUNC(grub_free) (void *ptr);
  void *EXPORT_FUNC(grub_realloc) (void *ptr, grub_size_t size);
  void *EXPORT_FUNC(grub_memalign) (grub_size_t align, grub_size_t size);

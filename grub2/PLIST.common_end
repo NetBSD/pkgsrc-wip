@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.common_end,v 1.1 2007/11/20 05:56:10 bsadewitz Exp $
+sbin/grub2-install
+sbin/grub2-mkdevicemap
+sbin/grub2-probe
+sbin/grub2-setup
+sbin/update-grub2
+share/examples/grub2/00_header
+share/examples/grub2/10_hurd
+share/examples/grub2/10_linux
+share/examples/grub2/README
+@dirrm share/examples/grub2

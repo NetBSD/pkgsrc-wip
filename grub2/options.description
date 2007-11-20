@@ -1,4 +1,0 @@
-grub-emu	Include memory manager debugging
-grub-mm-debug	Build and install the `grub-emu' debugging utility
-
-

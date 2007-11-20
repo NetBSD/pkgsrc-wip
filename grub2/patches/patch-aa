@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2007/01/24 08:25:36 lkundrak Exp $
+$NetBSD: patch-aa,v 1.5 2007/11/20 05:56:10 bsadewitz Exp $
 
---- INSTALL.orig	2006-01-03 18:58:02.000000000 +0100
-+++ INSTALL
-@@ -15,6 +15,7 @@ configuring the GRUB.
- * GNU Make
- * GNU Bison
- * GNU binutils 2.9.1.0.23 or later
-+* GNU Glibc or argp-standalone
- * Other standard GNU/Unix tools
- * LZO 1.02 or later
+--- conf/i386-pc.mk.orig	2007-11-18 01:41:45.000000000 -0500
++++ conf/i386-pc.mk
+@@ -835,7 +835,7 @@ grub_emu-grub_emu_init.o: grub_emu_init.
+ -include grub_emu-grub_emu_init.d
  
+ 
+-grub_emu_LDFLAGS = $(LIBCURSES)
++grub_emu_LDFLAGS = $(LIBCURSES) ${LIBARGP}
+ 
+ # Scripts.
+ sbin_SCRIPTS = grub-install
