@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.21 2007/09/21 13:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2007/11/20 08:05:57 marttikuparinen Exp $
 #
 
-DISTNAME=		audacious-plugins-1.4.0-dr4
-PKGNAME=		${DISTNAME:S/-dr4//}
-PKGREVISION=		1
+DISTNAME=		audacious-plugins-1.4.1
+#PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
-EXTRACT_SUFX=		.tbz2
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://audacious-media-player.org/
 COMMENT=		Plugins for Audacious media player
 
 GNU_CONFIGURE=		yes
-USE_TOOLS=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 USE_LIBTOOL=		yes
 
 # From audio/bmp/Makefile:
@@ -40,7 +39,7 @@ PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Marts)
-.	include "../../audio/arts/buildlink3.mk"
+.  include "../../audio/arts/buildlink3.mk"
 PLIST_SUBST+=		ARTS=""
 .else
 CONFIGURE_ARGS+=	--disable-arts
@@ -48,7 +47,7 @@ PLIST_SUBST+=		ARTS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
-.	include "../../audio/esound/buildlink3.mk"
+.  include "../../audio/esound/buildlink3.mk"
 PLIST_SUBST+=		ESD=""
 .else
 CONFIGURE_ARGS+=	--disable-esd
@@ -60,7 +59,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-.	include "../../audio/jack/buildlink3.mk"
+.  include "../../audio/jack/buildlink3.mk"
 PLIST_SUBST+=		JACK=""
 .else
 CONFIGURE_ARGS+=	--disable-jack
@@ -76,7 +75,7 @@ PLIST_SUBST+=		MIDI="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulse)
-.	include "../../wip/pulseaudio/buildlink3.mk"
+.  include "../../wip/pulseaudio/buildlink3.mk"
 PLIST_SUBST+=		PULSE=""
 .else
 CONFIGURE_ARGS+=	--disable-pulse
@@ -87,38 +86,36 @@ PLIST_SUBST+=		PULSE="@comment "
 
 .if ${OPSYS} == "NetBSD"
 RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
-CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND:Q}                 \
-                        --with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}   \
-                        --with-cdda-dir=/cdrom/
-PLIST_SUBST+=          OSS=""
-PLIST_SUBST+=          SUN=""
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}			\
+			--with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}	\
+			--with-cdda-dir=/cdrom/
+PLIST_SUBST+=		OSS=""
+PLIST_SUBST+=		SUN="@comment "
 .elif ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=          OSS=""
-PLIST_SUBST+=          SUN="@comment "
+PLIST_SUBST+=		OSS=""
+PLIST_SUBST+=		SUN="@comment "
 .elif ${OPSYS} == "DragonFly"
-PLIST_SUBST+=          OSS=""
-PLIST_SUBST+=          SUN="@comment "
+PLIST_SUBST+=		OSS=""
+PLIST_SUBST+=		SUN="@comment "
 .elif ${OPSYS} == "SunOS"
-PLIST_SUBST+=          OSS="@comment "
-PLIST_SUBST+=          SUN=""
+PLIST_SUBST+=		OSS="@comment "
+PLIST_SUBST+=		SUN=""
 .elif ${OPSYS} == "Linux"
-.	include	"../../wip/alsa-lib/buildlink3.mk"
+.  include	"../../wip/alsa-lib/buildlink3.mk"
 PKG_SUPPORTED_OPTIONS+= lirc
-.	if !empty(PKG_OPTIONS:Mlirc)
+.  if !empty(PKG_OPTIONS:Mlirc)
 CONFIGURE_ARGS+=	--enable-lirc
-.		include "../../wip/lirc/buildlink3.mk"
-.	endif
+.    include "../../wip/lirc/buildlink3.mk"
+.  endif
 .endif
 
 .include "../../wip/audacious/buildlink3.mk"
 .include "../../wip/libmtp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libcddb+=		taglib>=1.2.1
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-BUILDLINK_API_DEPENDS.taglib+=		taglib>=1.4
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"

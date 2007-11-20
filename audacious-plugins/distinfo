@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2007/09/18 08:20:41 thomasklausner Exp $
+$NetBSD: distinfo,v 1.8 2007/11/20 08:05:57 marttikuparinen Exp $
 
-SHA1 (audacious-plugins-1.4.0-dr4.tbz2) = 409280c6ff7df989ef7072ff935a3fd3a3febf5a
-RMD160 (audacious-plugins-1.4.0-dr4.tbz2) = fbce3bcb9efc7dc505e832252d2a6cf4891f38e6
-Size (audacious-plugins-1.4.0-dr4.tbz2) = 2330563 bytes
-SHA1 (patch-aa) = f76aa89087afc9beab594add208e7a9b2714f196
-SHA1 (patch-ab) = 53b881fdf4610f4cf69462eaeb379fc5e24519ce
+SHA1 (audacious-plugins-1.4.1.tgz) = 4110e39ee80617aa9c877a1fb6ff8453ee9eb6f5
+RMD160 (audacious-plugins-1.4.1.tgz) = 68d19f758bb5f2c300a8257f0413b01d623dcde2
+Size (audacious-plugins-1.4.1.tgz) = 3164510 bytes
+SHA1 (patch-aa) = 127c66025b45807e3f46a54a7aa925e0d81204ac
