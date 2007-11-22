@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2693 2007/11/21 19:21:00 shindenmorr Exp $
+# $Id: Makefile,v 1.2694 2007/11/22 01:01:10 geeohgeegeeoh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1109,6 +1109,7 @@ SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
+SUBDIR+=	p5-Exception-Base
 SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Email-LocalDelivery
 SUBDIR+=	p5-Encode-Detect
