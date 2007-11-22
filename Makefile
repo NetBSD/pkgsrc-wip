@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2697 2007/11/22 01:49:56 geeohgeegeeoh Exp $
+# $Id: Makefile,v 1.2698 2007/11/22 01:58:18 geeohgeegeeoh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1175,6 +1175,7 @@ SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-RRDTool-OO
+SUBDIR+=	p5-Scope-Guard
 SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Spread
