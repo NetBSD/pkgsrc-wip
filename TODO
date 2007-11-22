@@ -2,10 +2,13 @@ Suggested package updates
 
 	o aircrack-ng-0.9.1
 	o avahi-0.6.21
+	o awesome-2.0rc1
 	o bub-n-bros-1.6
+	o ccrtp-1.5.2
 	o cdogs-0.4
 	o chora-2.0.1
 	o cinelerra-2.1
+	o commoncpp2-1.5.9
 	o d4x-2.5.7.1
 	o directfb-1.0.0
 	o ecasound-2.4.6
@@ -30,7 +33,8 @@ Suggested package updates
 	o kplayer-0.6.3
 	o libgksu-2.0.4
 	o lincity-ng-1.1.2
-	o linphone-1.7.1
+	o linphone-2.0.0
+	o mcabber-0.9.5
 	o mixxx-1.5.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
@@ -50,8 +54,8 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o sara-7.0.4a
-	o sdlmame-0.119
-	o sdlmess-0.118
+	o sdlmame-0.121
+	o sdlmess-0.120
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o smc-1.2
@@ -65,7 +69,7 @@ Suggested package updates
 	o toppler-1.1.3
 	o tripwire-2.4.0.1
 	o txt2tags-2.3.2
-	o uade-2.07
+	o uade-2.08
 	o uqm-0.6.0
 	o xaralx-bin-0.7.1692
 	o xinetd-2.3.14
