@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2695 2007/11/22 01:21:35 geeohgeegeeoh Exp $
+# $Id: Makefile,v 1.2696 2007/11/22 01:39:47 geeohgeegeeoh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1155,6 +1155,7 @@ SUBDIR+=	p5-Math-IntervalSearch
 SUBDIR+=	p5-Module-Find
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
+SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-DBus
