@@ -1,0 +1,3 @@
+lightweight exception mechanism, cheaper than Exception::Class
+
+http://search.cpan.org/src/DEXTER/Exception-Base-0.13/README
