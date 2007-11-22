@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2696 2007/11/22 01:39:47 geeohgeegeeoh Exp $
+# $Id: Makefile,v 1.2697 2007/11/22 01:49:56 geeohgeegeeoh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1084,6 +1084,7 @@ SUBDIR+=	p5-Catalyst-Plugin-XMLRPC
 SUBDIR+=	p5-Catalyst-View-Mason
 SUBDIR+=	p5-Catalyst-View-TT
 SUBDIR+=	p5-Class-Accessor-Chained
+SUBDIR+=	p5-Class-Accessor-Grouped
 SUBDIR+=	p5-Class-C3
 SUBDIR+=	p5-Class-C3-Componentised
 SUBDIR+=	p5-Class-C3-XS
