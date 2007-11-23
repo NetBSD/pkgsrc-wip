@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/07/13 07:38:03 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/23 09:15:56 bartoszkuzma Exp $
 #
 
-DISTNAME=	Net-DBus-0.33.4
+DISTNAME=	Net-DBus-0.33.5
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	wip sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
