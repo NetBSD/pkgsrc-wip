@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2007/09/10 05:01:38 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.18 2007/11/24 08:42:38 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
-PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,11 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/xorg
 COMMENT=	OpenGL library that renders using GLX or DRI
 
-PATCH_SITES=	http://bahar.aydogan.net/~blair/
-PATCHFILES=	mesalib-7.0-master.patch
-PATCH_DIST_STRIP=	-p2
-
-MESA_VERSION=	7.0.1
+MESA_VERSION=	7.0.2
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	makedepend gmake
@@ -28,13 +23,15 @@ DRI_MODULE_DIR?=	lib/dri
 BUILD_DEFS+=		DRI_MODULE_DIR
 PLIST_SUBST+=		DRI_MODULE_DIR=${DRI_MODULE_DIR}
 
+MESA_HZ?=		100
+
 GL_HEADERS=	gl.h gl_mangle.h glext.h glx.h glx_mangle.h glxext.h
 GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
-DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM  -fno-strict-aliasing
-CFLAGS.NetBSD+=-D_REENTRANT
+DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM
+CFLAGS.NetBSD+=-D_REENTRANT -DHZ=${MESA_HZ:Q}
 PKGSRC_PICFLAGS=-fPIC -DPIC
 
 .include "subst.mk"
