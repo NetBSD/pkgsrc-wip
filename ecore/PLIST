@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/29 12:51:35 grzela1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/24 16:19:53 netcap Exp $
 bin/ecore-config
 bin/ecore_config
 include/Ecore.h
@@ -9,7 +9,7 @@ include/Ecore_Data.h
 include/Ecore_Desktop.h
 include/Ecore_Evas.h
 include/Ecore_File.h
-include/Ecore_I${LOWER_VENDOR}.h
+include/Ecore_Ipc.h
 include/Ecore_Job.h
 include/Ecore_Txt.h
 include/Ecore_X.h
@@ -22,9 +22,9 @@ lib/libecore_dbus.la
 lib/libecore_desktop.la
 lib/libecore_evas.la
 lib/libecore_file.la
-lib/libecore_i${LOWER_VENDOR}.la
+lib/libecore_ipc.la
 lib/libecore_job.la
 lib/libecore_txt.la
 lib/libecore_x.la
-lib/pkgconfig/ecore.${LOWER_VENDOR}
+lib/pkgconfig/ecore.pc
 share/aclocal/ecore.m4

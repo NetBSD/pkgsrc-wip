@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/29 11:58:35 grzela1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/24 16:19:53 netcap Exp $
 include/Eet.h
 lib/libeet.la
-lib/pkgconfig/eet.${LOWER_VENDOR}
+lib/pkgconfig/eet.pc

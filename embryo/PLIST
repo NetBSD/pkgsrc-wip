@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/29 17:55:06 grzela1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/11/24 16:19:53 netcap Exp $
 bin/embryo-config
 bin/embryo_cc
 include/Embryo.h
 lib/libembryo.la
-lib/pkgconfig/embryo.${LOWER_VENDOR}
+lib/pkgconfig/embryo.pc
 share/embryo/include/default.inc
 @dirrm share/embryo/include
 @dirrm share/embryo
