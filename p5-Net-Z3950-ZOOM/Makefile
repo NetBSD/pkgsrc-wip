@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/25 03:37:30 philnelson Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/25 07:27:47 rillig Exp $
 
 DISTNAME=		Net-Z3950-ZOOM-1.20
 PKGNAME=		p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=		Perl extension for talking to Z39.50 servers
 
 DEPENDS+=     p5-Event>=1.06:../../devel/p5-Event
 DEPENDS+=     p5-MARC-Record>=2.0.0:../../wip/p5-MARC-Record
-
+BUILDLINK_API_DEPENDS.yaz+=	yaz>=2.1.50
 
 PERL5_PACKLIST=	auto/Net/Z3950/ZOOM/.packlist
 
