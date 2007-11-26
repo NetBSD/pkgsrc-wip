@@ -1,25 +1,27 @@
-# $NetBSD: Makefile,v 1.6 2007/11/26 17:53:59 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/26 22:59:46 hoka_adam Exp $
 #
 
 VERSION=		2.0-rc1
 DISTNAME=		awesome-${VERSION}
+PKGNAME=		${DISTNAME:S/0-/0/}
+PKGREVISION=	1
 CATEGORIES=		wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 
-MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://awesome.naquadah.org/
-COMMENT=	Tiling window manager based on dwm
+MAINTAINER=		adam.hoka@gmail.com
+HOMEPAGE=		http://awesome.naquadah.org/
+COMMENT=		Tiling window manager based on dwm
 
 USE_LANGUAGES=	c99
 USE_TOOLS+=		pkg-config
 
-SUBST_CLASSES+=		man
-SUBST_FILES.man=	awesome.1
-SUBST_SED.man=	-e 's,VERSION,${VERSION},'
-SUBST_STAGE.man=	pre-install
-
 EGDIR=			${PREFIX}/share/examples/awesome
 MESSAGE_SUBST+=	EGDIR=${EGDIR}/awesomerc
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	awesome.1
+SUBST_SED.man=		-e 's,VERSION,${VERSION},'
+SUBST_STAGE.man=	pre-install
 
 pre-install:
 	strip ${WRKDIR}/awesome
