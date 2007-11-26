@@ -1,3 +1,6 @@
-This is libConfuse, a library for parsing configuration files. It was
-called libcfg before, but was changed to not confuse with other
-similar libraries.
+libConfuse is a configuration file parser library,
+licensed under the terms of the LGPL, and written in C.
+
+The goal of libConfuse is not to be the configuration file parser library with
+a gazillion of features.
+Instead, it aims to be easy to use and quick to integrate with your code.

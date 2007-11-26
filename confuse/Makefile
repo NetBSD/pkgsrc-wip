@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/26 02:11:00 hoka_adam Exp $
 #
 
 DISTNAME=		confuse-2.5
 CATEGORIES=		devel
-MASTER_SITES=		http://download.savannah.gnu.org/releases/confuse/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/confuse/
 
-MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://download.savannah.gnu.org/releases/confuse/
-COMMENT=		A library to parse configuration files
+MAINTAINER=	adam.hoka@gmail.com
+HOMEPAGE=	http://download.savannah.gnu.org/releases/confuse/
+COMMENT=	Configuration file parser library
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+USE_TOOLS+=			pkg-config
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	libconfuse.pc.in
+INSTALLATION_DIRS=		lib include
 
 .include "../../mk/bsd.pkg.mk"
