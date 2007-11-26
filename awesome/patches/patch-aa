@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.3 2007/11/26 17:41:20 hoka_adam Exp $
+
+--- config.mk.orig	2007-11-25 23:13:13.000000000 +0100
++++ config.mk
+@@ -8,19 +8,15 @@ RELEASE = "Bumping Toaster"
+ LAYOUTS = layouts/tile.c layouts/floating.c layouts/max.c
+ 
+ # paths
+-PREFIX = /usr/local
+-MANPREFIX = ${PREFIX}/share/man
++MANPREFIX = ${PREFIX}/${MANPATH}/man1
+ 
+-X11INC = /usr/include/X11
+-X11LIB = /usr/lib/X11
++X11INC = ${X11BASE}
++X11LIB = ${X11BASE}
+ 
+ # includes and libs
+ INCS = -I. -I/usr/include -I${X11INC} `pkg-config --cflags libconfuse xft cairo`
+ LIBS = -L/usr/lib -lc -L${X11LIB} -lX11 `pkg-config --libs libconfuse xft cairo` -lXext -lXrandr -lXinerama
+ 
+ # flags
+-CFLAGS = -fgnu89-inline -std=gnu99 -ggdb3 -pipe -Wall -Wextra -W -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings -Wsign-compare -Wunused -Wuninitialized -Winit-self -Wpointer-arith -Wredundant-decls -Wno-format-zero-length -Wmissing-prototypes -Wmissing-format-attribute -Wmissing-noreturn -O3 ${INCS} -DVERSION=\"${VERSION}\" -DRELEASE=\"${RELEASE}\"
+-LDFLAGS = -ggdb3 ${LIBS}
+-
+-# compiler and linker
+-CC = cc
++CFLAGS = ${INCS} -DVERSION=\"${VERSION}\" -DRELEASE=\"${RELEASE}\"
++LDFLAGS = ${LIBS}

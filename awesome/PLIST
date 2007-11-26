@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.4 2007/11/26 17:41:20 hoka_adam Exp $
+bin/awesome
+bin/awesome-client
+man/man1/awesome.1
+share/examples/awesome/awesomerc
+@dirrm share/examples/awesome
