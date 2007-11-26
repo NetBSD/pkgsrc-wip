@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/11/26 17:50:08 schnoebe Exp $
+
+--- src/psi_profiles.cpp.orig	2007-10-14 09:00:53.000000000 -0500
++++ src/psi_profiles.cpp
+@@ -546,7 +546,11 @@ void UserProfile::reset()
+ 	prefs.clNewHeadings = false;
+ 	prefs.outlineHeadings = false;
+ 
++#ifdef __NetBSD__
++	prefs.player = "audioplay";
++#else
+ 	prefs.player = "play";
++#endif
+ 	prefs.noAwaySound = FALSE;
+ 
+ 	prefs.onevent[eMessage]    = ApplicationInfo::resourcesDir() + "/sound/chat2.wav";

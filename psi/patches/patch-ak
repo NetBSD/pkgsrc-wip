@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2007/11/26 17:50:08 schnoebe Exp $
+
+--- iris/xmpp-core/jid.cpp.orig	2007-10-14 09:00:50.000000000 -0500
++++ iris/xmpp-core/jid.cpp
+@@ -23,7 +23,7 @@
+ #include <QApplication>
+ #include <QByteArray>
+ #include <QHash>
+-#include <libidn/stringprep.h>
++#include <stringprep.h>
+ 
+ 
+ using namespace XMPP;

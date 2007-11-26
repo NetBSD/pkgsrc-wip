@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/11/26 17:50:08 schnoebe Exp $
+
+--- iris/xmpp-core/connector.cpp.orig	2007-10-14 09:00:50.000000000 -0500
++++ iris/xmpp-core/connector.cpp
+@@ -36,7 +36,7 @@
+ #include <QList>
+ #include <QUrl>
+ #include "safedelete.h"
+-#include <libidn/idna.h>
++#include <idna.h>
+ 
+ #ifdef NO_NDNS
+ #include <q3dns.h>
