@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/11/24 16:19:53 netcap Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/11/26 13:11:35 netcap Exp $
 bin/evas-config
 include/Evas.h
 include/Evas_Engine_Buffer.h
@@ -8,6 +8,7 @@ lib/evas/modules/engines/buffer/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/engines/software_generic/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/engines/software_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/engines/xrender_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/evas/modules/loaders/edb/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/eet/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/gif/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/jpeg/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -15,6 +16,7 @@ lib/evas/modules/loaders/png/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/svg/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/tiff/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/loaders/xpm/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/evas/modules/savers/edb/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/savers/eet/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/savers/jpeg/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/savers/png/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -22,16 +24,20 @@ lib/evas/modules/savers/tiff/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/libevas.la
 lib/pkgconfig/evas.pc
 @dirrm lib/evas/modules/savers/tiff/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/evas/modules/savers/tiff
 @dirrm lib/evas/modules/savers/png/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/savers/png
 @dirrm lib/evas/modules/savers/jpeg/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/savers/jpeg
 @dirrm lib/evas/modules/savers/eet/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/savers/eet
+@dirrm lib/evas/modules/savers/edb/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/evas/modules/savers/edb
 @dirrm lib/evas/modules/savers
 @dirrm lib/evas/modules/loaders/xpm/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/loaders/xpm
 @dirrm lib/evas/modules/loaders/tiff/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/tiff
 @dirrm lib/evas/modules/loaders/svg/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/loaders/svg
 @dirrm lib/evas/modules/loaders/png/${LOWER_OPSYS}elf-${MACHINE_ARCH}
@@ -42,6 +48,8 @@ lib/pkgconfig/evas.pc
 @dirrm lib/evas/modules/loaders/gif
 @dirrm lib/evas/modules/loaders/eet/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/loaders/eet
+@dirrm lib/evas/modules/loaders/edb/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/evas/modules/loaders/edb
 @dirrm lib/evas/modules/loaders
 @dirrm lib/evas/modules/engines/xrender_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/engines/xrender_x11
@@ -53,3 +61,4 @@ lib/pkgconfig/evas.pc
 @dirrm lib/evas/modules/engines/buffer
 @dirrm lib/evas/modules/engines
 @dirrm lib/evas/modules
+@dirrm lib/evas

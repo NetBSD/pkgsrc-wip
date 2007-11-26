@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/09/21 13:06:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2007/11/26 13:11:35 netcap Exp $
 #
 
 DISTNAME=	evas-0.9.9.037
@@ -20,6 +20,7 @@ DEPENDS+=	librsvg>=2.16.1:../../graphics/librsvg
 DEPENDS+=	libungif>=4.1.4:../../graphics/libungif
 DEPENDS+=	freetype2>=2.3.4:../../graphics/freetype2
 .include	"../../wip/eet/buildlink3.mk"
+.include	"../../databases/edb/buildlink3.mk"
 .include	"../../graphics/librsvg/buildlink3.mk"
 .include	"../../graphics/libungif/buildlink3.mk"
 .include	"../../graphics/freetype2/buildlink3.mk"
