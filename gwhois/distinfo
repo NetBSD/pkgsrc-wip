@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/12 19:19:08 mj_turner Exp $
+$NetBSD: distinfo,v 1.2 2007/11/27 12:44:08 netcap Exp $
 
-SHA1 (gwhois_20070403.tar.gz) = 36765679c2f8562468a7da075df51432d7e1305a
-RMD160 (gwhois_20070403.tar.gz) = c29f0d4cd7cfebc2c499963bd74fb863d37285cd
-Size (gwhois_20070403.tar.gz) = 31273 bytes
+SHA1 (gwhois_20070926.tar.gz) = ba1d7cf76f13ab071b8e74df09594169e7c5f10e
+RMD160 (gwhois_20070926.tar.gz) = 3145a873a5bc20b202e4188a73f6c9a188aed908
+Size (gwhois_20070926.tar.gz) = 31587 bytes

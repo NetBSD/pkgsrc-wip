@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/12 19:19:08 mj_turner Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/27 12:44:08 netcap Exp $
 
-DISTNAME=			gwhois_20070403
+DISTNAME=			gwhois_20070926
 PKGNAME=			${DISTNAME:S/_/-/g}
 CATEGORIES=			net
 MASTER_SITES=			http://gwhois.de/gwhois/
@@ -17,7 +17,7 @@ REPLACE_PERL+=			gwhois
 DEPENDS+=			p5-libwww>=5.4:../../www/p5-libwww
 DEPENDS+=			lynx-[0-9]*:../../www/lynx
 
-WRKSRC=				${WRKDIR}/${PKGNAME}
+WRKSRC=				${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=		share/${PKGBASE} ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=			fix-paths
