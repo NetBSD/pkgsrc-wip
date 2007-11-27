@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/26 17:50:08 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2007/11/27 20:42:14 schnoebe Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
 
-DIST_SUBDIR=	${DISTNAME}-20060806-1
+DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -39,12 +39,19 @@ CONFIGURE_ARGS+=	--with-openssl-lib=${BUILDLINK_PREFIX.openssl}/lib
 # LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
 # 		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
 # 		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
+LANG_FILES= psi_ru.qm
 
-# .for l in ${LANG_FILES}
-# SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
-# .endfor
+.for l in ${LANG_FILES}
+SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
+.endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
+
+post-install:
+	# install the translations
+.for f in ${LANG_FILES}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
+.endfor
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
