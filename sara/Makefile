@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/01/13 19:00:17 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2007/11/27 14:21:39 netcap Exp $
 #
 
-DISTNAME=		sara-5.0.5b
+DISTNAME=		sara-7.4.4
 CATEGORIES=		security
 MASTER_SITES=		http://www-arc.com/sara/downloads/
 EXTRACT_SUFX=		.tgz
@@ -18,6 +18,14 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
+EGDIR=		${PREFIX}/share/examples/sara
+EGFILES=	htm.cf paths.pl paths.sh ports programs sara.cf \
+		services version.pl xml.cf
+
+.for f in ${EGFILES}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
 SUBST_CLASSES+=	grp
 SUBST_STAGE.grp= post-patch
 SUBST_FILES.grp= src/misc/rex.c src/nfs-chk/nfs-chk.c
@@ -33,7 +41,7 @@ SUBST_SED.fping= -e 's,: $$(PROG),:,g'
 SUBST_CLASSES+= path
 SUBST_STAGE.path= pre-install
 SUBST_FILES.path= sara perl/* perllib/* bin/* html/*.pl
-SUBST_SED.path = -e 's,config\/,${PREFIX}/etc/sara/,g'
+SUBST_SED.path = -e 's,config\/,${EGDIR}/,g'
 SUBST_SED.path+= -e 's,perl.*\/,${PREFIX}/share/sara/,g'
 SUBST_SED.path+= -e 's,rules/,${PREFIX}/share/sara/rules/,g'
 SUBST_SED.path+= -e 's,`pwd`,\"${PREFIX}/share/sara/\",g'
@@ -43,15 +51,17 @@ SUBST_CLASSES+= defpath
 SUBST_STAGE.defpath=post-build
 SUBST_FILES.defpath=config/paths.pl
 SUBST_SED.defpath = -e 's,\"bin/,\"${PREFIX}/bin/,g'
-SUBST_SED.defpath+= -e 's,config,${PREFIX}/etc/sara/,g'
+SUBST_SED.defpath+= -e 's,config,${EGDIR}/,g'
 
-REPLACE_PERL=	bin/get_targets bin/faux_fping sara add_user bin/*.sara* bin/*.sara.ext perl/html.pl perl/contrib/* plugins/*.pi bin/fwping
+REPLACE_PERL=	bin/get_targets bin/faux_fping sara add_user \
+	bin/*.sara* bin/*.sara.ext perl/*.pl perl/contrib/* html/*.pl \
+	html/docs/*.pl plugins/*.pi bin/fwping
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sara ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/sara.8  ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/sara/
-	${INSTALL_DATA} ${WRKSRC}/config/* ${PREFIX}/etc/sara/
+	${INSTALL_MAN} ${WRKSRC}/docs/sara.8  ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA_DIR} ${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/config/* ${EGDIR}/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/
 	${INSTALL_DATA} ${WRKSRC}/perl/*.pl ${PREFIX}/share/sara/
 	${INSTALL_DATA} ${WRKSRC}/perllib/getopts.pl ${PREFIX}/share/sara/
@@ -64,10 +74,9 @@ do-install:
 	nfs-chk irix-telnet rcmd rex safe_finger tcp_scan timeout udp_scan
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${bin} ${PREFIX}/bin/
 .endfor
-	#${PAX} -rwppm ${WRKSRC}/rules/* ${PREFIX}/share/sara/rules/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/rules/
-	${CP} -rf ${WRKSRC}/rules/* ${PREFIX}/share/sara/rules/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/html/
-	${CP} -rf ${WRKSRC}/html/* ${PREFIX}/share/sara/html/
+	cd ${WRKSRC}/rules && ${PAX} -rwppm . ${PREFIX}/share/sara/rules/
+	cd ${WRKSRC}/html && ${PAX} -rwppm . ${PREFIX}/share/sara/html/
 
 .include "../../mk/bsd.pkg.mk"
