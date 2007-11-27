@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 2007/03/09 21:29:42 briandealwis Exp $
+$NetBSD: patch-an,v 1.2 2007/11/27 00:11:58 heidnes Exp $
 
---- deploy/src/plugin/share/adapter/ns7/CNS7Adapter_PluginServiceProvider.cpp.orig	2007-02-28 16:42:51.000000000 -0600
-+++ deploy/src/plugin/share/adapter/ns7/CNS7Adapter_PluginServiceProvider.cpp	2007-02-28 16:43:31.000000000 -0600
+--- deploy/src/plugin/share/adapter/ns7/CNS7Adapter_PluginServiceProvider.cpp.orig	2007-10-26 16:27:25.000000000 +0200
++++ deploy/src/plugin/share/adapter/ns7/CNS7Adapter_PluginServiceProvider.cpp
 @@ -27,6 +27,7 @@
  #include "nsIJVMManager.h"
  #include "nsILiveconnect.h"
@@ -10,7 +10,7 @@ $NetBSD: patch-an,v 1.1 2007/03/09 21:29:42 briandealwis Exp $
  #include "nsIJVMAuthTools.h"
  #include "CNSAdapter_JVMManager.h"
  #include "CNSAdapter_PluginManager.h"
-@@ -64,6 +65,16 @@
+@@ -64,6 +65,16 @@ static JD_DEFINE_CID(jIBrowserAuthentica
  static JD_DEFINE_CID(jIBrowserAuthenticatorCID, IBROWSERAUTHENTICATOR_IID);
  
  

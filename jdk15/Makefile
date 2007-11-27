@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.16 2007/08/19 18:19:36 ghen Exp $
+# $NetBSD: Makefile,v 1.17 2007/11/27 00:11:58 heidnes Exp $
 
 JDK_VERSION=		1.5.0
-JDK_PATCHSET_VERSION=	4
+JDK_UPDATE=		13
+JDK_PATCHSET_VERSION=	7
+JDK_VERSION_STRING=	b05-jrl-25_sep_2007
 
-DISTNAME=		jdk-1_5_0-src-scsl
-PKGNAME=		jdk15-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
+DISTNAME=		jdk-${JDK_VERSION:S/./_/g}_${JDK_UPDATE}
+PKGNAME=	jdk15-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
 CATEGORIES=		lang java
-MASTER_SITES=		# http://www.sun.com/software/java2/download.html
-# 			  http://www.eyesbeyond.com/freebsddom/java/jdk15.html
+MASTER_SITES+=		# http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
+MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk15.html
 EXTRACT_SUFX=		.zip
-DISTFILES=		${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
+DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=		Java Development Kit ${JDK_VERSION}
 
-BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+# BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+# BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
 RESTRICTED=		Redistribution of source or binaries permitted only by license terms
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-LICENSE=		scsl23-license
+LICENSE=		sun-jrl-16-license
 
 USE_TOOLS+=		gmake m4 patch
 USE_LANGUAGES=		c c++
@@ -33,7 +35,7 @@ PLIST_SRC=		PLIST.common
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
 BUILD_TARGET=		all # added to below
-BUILD_DIRS=		${WRKSRC}/control/make
+BUILD_DIRS=		control/make
 CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
@@ -68,9 +70,11 @@ MAKE_ENV+=		JAVA_HOME=
 MAKE_ENV+=		CLASSPATH=
 MAKE_ENV+=		ALT_MOTIF_DIR=${MOTIFBASE:Q}
 MAKE_ENV+=		DEV_ONLY=YES
-MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:M*:Q}
+MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
+
+# MAKE_ENV+=		WRAPPER_DEBUG=yes
 
 .if empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=		DONT_ENABLE_IPV6=YES
@@ -80,27 +84,27 @@ MAKE_ENV+=		DONT_ENABLE_IPV6=YES
 BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 
-SCSL_SRCFILE=		jdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
-SCSL_BINFILE=		jdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
+JRL_SRCFILE=		${DISTNAME}-fcs-src-${JDK_VERSION_STRING}.jar
+JRL_BINFILE=		${DISTNAME}-fcs-bin-${JDK_VERSION_STRING}.jar
 PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 
-SCSL_DOWNLOAD=		http://wwws.sun.com/software/java2/download.html
-PATCH_DOWNLOAD=		http://www.eyesbeyond.com/freebsddom/java/JDK15SCSLConfirm.html
+JRL_DOWNLOAD=	http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
+PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 
-JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
-JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
+JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
+# JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
-INTERACTIVE_STAGE=	fetch
+INTERACTIVE_STAGE+=	fetch
 FETCH_MESSAGE+= " The source and patches for the Java (tm) 2 SDK require"
-FETCH_MESSAGE+= " a Sun Community Source Licensing account, and cannot be"
+FETCH_MESSAGE+= " a Sun Java Research License, and cannot be"
 FETCH_MESSAGE+= " fetched automatically."
 FETCH_MESSAGE+= ""
-FETCH_MESSAGE+= " Please download the JDK 5.0 SCSL Source (${SCSL_SRCFILE})"
-FETCH_MESSAGE+= " and SCSL Binaries (${SCSL_BINFILE}) for J2SE from:"
-FETCH_MESSAGE+= "       ${SCSL_DOWNLOAD}"
+FETCH_MESSAGE+= " Please download the JDK 5.0 JRL Source (${JRL_SRCFILE})"
+FETCH_MESSAGE+= " and JRL Binaries (${JRL_BINFILE}) for J2SE from:"
+FETCH_MESSAGE+= "       ${JRL_DOWNLOAD}"
 FETCH_MESSAGE+= " and place them as:"
-FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_SRCFILE}"
-FETCH_MESSAGE+= "       ${DISTDIR}/${SCSL_BINFILE}"
+FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_SRCFILE}"
+FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_BINFILE}"
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Please download the BSD JDK 1.5 Patchset ${JDK_PATCHSET_VERSION}"
 FETCH_MESSAGE+= " (${PATCHSETFILE}) from:"
@@ -108,7 +112,7 @@ FETCH_MESSAGE+= "      ${PATCH_DOWNLOAD}"
 FETCH_MESSAGE+= " and place it as:"
 FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
 FETCH_MESSAGE+= ""
-FETCH_MESSAGE+= " Then resume this build by running '${MAKE}' again."
+FETCH_MESSAGE+= " Then resume this build by running '"${MAKE:Q}"' again."
 
 MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
@@ -142,6 +146,27 @@ PLIST_SRC+=		PLIST.common_end
 
 post-extract:
 	${CHMOD} -R u+w ${WRKSRC}
+	@done=true; \
+	if [ ! -f ${WRKDIR}/control/make/Makefile ]; then \
+		done=false; \
+		${ECHO} "The Sun JRL source has not been extracted"; \
+	fi; \
+	if [ ! -f ${WRKDIR}/j2se/src/share/lib/cmm/PYCC.pf ]; then \
+		done=false; \
+		${ECHO} "The Sun JRL binaries have not been extracted"; \
+	fi; \
+	if ! $$done; then \
+		${ECHO} ""; \
+		${ECHO} "The Sun JRL source and binaries need to be"; \
+		${ECHO} "extracted manually via a java click-through"; \
+		${ECHO} "license acceptance."; \
+		${ECHO} ""; \
+		${ECHO} "Please use an existing java installation and run"; \
+		${ECHO} "	java -jar ${DISTDIR}/${JRL_SRCFILE}"; \
+		${ECHO} "	java -jar ${DISTDIR}/${JRL_BINFILE}"; \
+		${ECHO} "and extract the files into ${WRKDIR}"; \
+		exit 1; \
+	fi
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -p0 -E -s <jdk15.patches

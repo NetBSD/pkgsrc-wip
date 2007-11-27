@@ -3,8 +3,8 @@ and usable natively on NetBSD/i386 by Greg Lewis and a host of others.
 
 ===== From the patchset README:
 
-This is a set of source code patches for the JDK 1.5.0 SCSL source.
-The resulting JDK should be considered to be BETA quality and use in
+This is a set of source code patches for the JDK 1.5.0 Update 13 JRL source.
+The resulting JDK should be suitable for most uses, although using it in
 a production environment is at your own risk.  Please note that this
 patchset only provides support for recent versions of FreeBSD, NetBSD
 and OpenBSD.  The patchset is available at
