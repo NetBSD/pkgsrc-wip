@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/08 18:03:46 asau Exp $
+# $NetBSD: Makefile,v 1.3 2007/11/28 21:46:57 asau Exp $
 #
 
 DISTNAME=	chicken-2.732
@@ -21,25 +21,26 @@ UNLIMIT_RESOURCES=	datasize
 OWN_DIRS+=	${PREFIX}/lib/chicken
 OWN_DIRS+=	${PREFIX}/lib/chicken/3
 
+.include "../../mk/bsd.prefs.mk"
+
 # PLATFORM detection:
-PLATFORM=	${"${OPSYS}"=="NetBSD":?bsd:}
-PLATFORM+=	${"${OPSYS}"=="DragonFly":?bsd:}
-PLATFORM+=	${"${OPSYS}"=="FreeBSD":?bsd:}
-PLATFORM+=	${"${OPSYS}"=="Linux":?linux:}
-PLATFORM+=	${"${OPSYS}"=="Darwin":?macosx:}
-PLATFORM+=	${"${OPSYS}"=="SunOS":?solaris:}
-#PLATFORM+=	${"${OPSYS}"=="Interix":?*****:}
+.if (${OPSYS} == "NetBSD") || (${OPSYS} == "DragonFly") || (${OPSYS} == "FreeBSD")
+PLATFORM=	bsd
+.elif ${OPSYS} == "Linux"
+PLATFORM=	linux
+.elif ${OPSYS} == "Darwin"
+PLATFORM=	macosx
+.elif ${OPSYS} == "SunOS"
+PLATFORM=	solaris
+.else
+#PLATFORM+=	${OPSYS} == "Interix"
 # possible choices left: mingw-msys mingw cygwin cross-linux-mingw
-# PKG_FAIL_REASON=	"${OPSYS} is not supported"
+PKG_FAIL_REASON=	"${OPSYS} is not supported"
+.endif
 
-MAKE_VARS=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
-MAKE_VARS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/man/man1
+MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
+MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/man/man1
 
-do-build:
-	cd ${WRKSRC:Q} && ${MAKE_PROGRAM} ${MAKE_VARS}
-post-build:
-	cd ${WRKSRC:Q} && ${MAKE_PROGRAM} ${MAKE_VARS} chicken.info
-do-install:
-	cd ${WRKSRC:Q} && ${MAKE_PROGRAM} ${MAKE_VARS} install
+BUILD_TARGET=	all chicken.info
 
 .include "../../mk/bsd.pkg.mk"
