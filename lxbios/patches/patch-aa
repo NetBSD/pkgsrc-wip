@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/11/29 17:08:23 jakllsch Exp $
+
+--- Makefile.orig	2007-11-29 02:35:14.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@
+ PROJECT = lxbios
+ CC = gcc
+ CFLAGS = -O2 -W -Wall
+-LDFLAGS =
++LDFLAGS = ${LDLIBS}
+ OBJS = common.o compute_ip_checksum.o hexdump.o cmos_lowlevel.o \
+        reg_expr.o layout.o layout_file.o lbtable.o cmos_ops.o input_file.o \
+        opts.o lxbios.o

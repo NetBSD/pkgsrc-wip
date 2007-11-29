@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/29 17:08:23 jakllsch Exp $
+man/man8/lxbios.8
+sbin/lxbios
