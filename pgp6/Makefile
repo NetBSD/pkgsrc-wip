@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/08/03 17:15:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.14 2007/11/29 09:09:53 thomasklausner Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -14,6 +14,7 @@ COMMENT=		Public-key encryption and digital signature utilities (v6)
 
 WRKSRC=			${WRKDIR}/pgpsrc
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 BUILD_TARGET=		headers all
@@ -27,7 +28,7 @@ CPPFLAGS+=		-D__unix__
 
 # The DISTFILE is doubly packed.
 post-extract:
-	cd ${WRKDIR} && extract_file=pgpsrc658unix.tar.gz && ${EXTRACT_CMD.tar.gz}
+	cd ${WRKDIR} && extract_file=pgpsrc658unix.tar.gz && ${EXTRACT_CMD}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/clients/pgp/cmdline/pgp ${PREFIX}/bin/pgp6
