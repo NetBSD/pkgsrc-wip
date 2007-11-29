@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/11/29 17:01:00 jakllsch Exp $
+
+--- Makefile.orig	2007-11-29 00:51:28.000000000 +0000
++++ Makefile
+@@ -16,7 +16,7 @@ OS_ARCH	= $(shell uname)
+ ifeq ($(OS_ARCH), SunOS)
+ LDFLAGS = -lpci -lz
+ else
+-LDFLAGS = -lpci -lz -static 
++LDFLAGS = -lpci -lz -static ${LDLIBS}
+ STRIP_ARGS = -s
+ endif
+ 

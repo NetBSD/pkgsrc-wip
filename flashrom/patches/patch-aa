@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/11/29 17:01:00 jakllsch Exp $
+
+--- flashrom.c.orig	2007-11-29 00:36:06.000000000 +0000
++++ flashrom.c
+@@ -38,6 +38,9 @@
+ #include <sys/psw.h>
+ #include <asm/sunddi.h>
+ #endif
++#if defined(__NetBSD__)
++#include <machine/sysarch.h>
++#endif
+ #include "flash.h"
+ 
+ char *chip_to_probe = NULL;
