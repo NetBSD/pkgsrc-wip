@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/21 13:09:17 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2007/11/29 01:03:35 rillig Exp $
 #
 
 PKGVERSION=		1.68
@@ -37,7 +37,7 @@ post-patch:
 	${RM} ${WRKDIR}/yaws
 	${RM} -Rf ${WRKSRC}/www/.xvpics
 	${RM} -Rf ${WRKSRC}/www/testdir
-	${FIND} ${WRKSRC} -name \*.orig -or -name .empty | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -name \*.orig -o -name .empty | ${XARGS} ${RM}
 
 post-configure:
 	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
