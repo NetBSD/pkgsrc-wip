@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2699 2007/11/26 17:52:28 schnoebe Exp $
+# $Id: Makefile,v 1.2700 2007/11/30 10:23:18 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1593,6 +1593,7 @@ SUBDIR+=	tcptrack
 SUBDIR+=	tcpxtract
 SUBDIR+=	tde
 SUBDIR+=	teamspeak
+SUBDIR+=	teapot
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
 SUBDIR+=	testdisk
