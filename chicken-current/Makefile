@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2007/11/28 21:46:57 asau Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/01 17:23:10 asau Exp $
 #
 
 DISTNAME=	chicken-2.732
 CATEGORIES=	lang
 MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2007/11/04/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	asau@users.sourceforge.net, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
 COMMENT=	Scheme to C compiler, handling R5RS
 
@@ -15,6 +15,7 @@ USE_TOOLS+=	gmake makeinfo
 USE_LIBTOOL=	yes
 UNLIMIT_RESOURCES=	datasize
 
+# FIXME: is it needed still? (asau)
 # Avoid an ICE in gcc2 on sparc64
 #CONFIGURE_ENV+=	F77=${FALSE:Q}
 
