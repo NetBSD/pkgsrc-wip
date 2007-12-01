@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/05/01 01:36:17 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/01 18:04:01 jeremy-c-reed Exp $
 #
 
-DISTNAME=	libxcb-1.0
-PKGREVISION=	4
+DISTNAME=	libxcb-1.1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -46,10 +45,10 @@ PKGCONFIG_OVERRIDE+=	xcb.pc.in
 # libXdmcp is optional; adds support for XDM-AUTHORIZATION-1 in
 # addition to MIT-MAGIC-COOKIE-1.
 
+BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.1
 .include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../wip/libpthread-stubs/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
-
 
 .include "../../mk/bsd.pkg.mk"
