@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2007/10/21 10:58:57 jukka Exp $
+# $NetBSD: Makefile,v 1.22 2007/12/01 12:26:01 jukka Exp $
 
-DISTNAME=	dkim-milter-2.3.2
+DISTNAME=	dkim-milter-2.4.0
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
@@ -41,7 +41,7 @@ SUBST_SED.rename=	-e 's|dkim-filter|dkim-milter|g'
 SUBST_MESSAGE.rename=	Renaming dkim-filter to dkim-milter
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
-			sbin share/doc/dkim-milter/libdkim \
+			bin sbin share/doc/dkim-milter/libdkim \
 			share/examples/dkim-milter
 
 EGDIR=			${PREFIX}/share/examples/dkim-milter
@@ -58,21 +58,26 @@ do-install: arlib-install stats-install
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`; \
 	${INSTALL_PROGRAM} dkim-filter/dkim-filter ${PREFIX}/sbin/dkim-milter; \
 	${INSTALL_LIB} libdkim/libdkim.a ${PREFIX}/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/dkim-filter/dkim-genkey.sh ${PREFIX}/bin/dkim-genkey
 	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-filter.conf.5 ${PREFIX}/${PKGMANDIR}/man5/dkim-milter.conf.5
 	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-filter.8 ${PREFIX}/${PKGMANDIR}/man8/dkim-milter.8
+	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-genkey.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-testkey.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-testssp.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-hoffman-dac-vbr-01.txt ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-overview-05.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-hoffman-dac-vbr-02.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-deployment-00.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-overview-07.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-01.txt ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-ietf-dkim-ssp-requirements-05.txt ${PREFIX}/share/doc/dkim-milter
-	${INSTALL_DATA} ${WRKSRC}/draft-kucherawy-sender-auth-header-08.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/draft-kucherawy-sender-auth-header-09.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/rfc4686.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/rfc4871.txt ${PREFIX}/share/doc/dkim-milter
+	${INSTALL_DATA} ${WRKSRC}/rfc5016.txt ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/dkim-filter/dkim-filter.conf.sample ${PREFIX}/share/examples/dkim-milter/dkim-milter.conf.sample
 	cd ${WRKSRC}/libdkim/docs; for file in *.html; do \
 	${INSTALL_DATA} $$file ${PREFIX}/share/doc/dkim-milter/libdkim; done

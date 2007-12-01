@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2007/10/21 10:58:57 jukka Exp $
+@comment $NetBSD: PLIST,v 1.11 2007/12/01 12:26:01 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
 man/man5/dkim-milter.conf.5
+man/man8/dkim-genkey.8
 man/man8/dkim-milter.8
+man/man8/dkim-testkey.8
+man/man8/dkim-testssp.8
 ${WITH_STATS}man/man8/dkim-stats.8
+bin/dkim-genkey
 sbin/dkim-milter
 ${WITH_STATS}sbin/dkim-stats
 share/doc/dkim-milter/FEATURES
@@ -13,13 +17,14 @@ share/doc/dkim-milter/KNOWNBUGS
 share/doc/dkim-milter/LICENSE
 share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
-share/doc/dkim-milter/draft-hoffman-dac-vbr-01.txt
-share/doc/dkim-milter/draft-ietf-dkim-overview-05.txt
+share/doc/dkim-milter/draft-hoffman-dac-vbr-02.txt
+share/doc/dkim-milter/draft-ietf-dkim-deployment-00.txt
+share/doc/dkim-milter/draft-ietf-dkim-overview-07.txt
 share/doc/dkim-milter/draft-ietf-dkim-ssp-01.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-requirements-05.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-08.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-09.txt
 share/doc/dkim-milter/rfc4686.txt
 share/doc/dkim-milter/rfc4871.txt
+share/doc/dkim-milter/rfc5016.txt
 share/examples/dkim-milter/dkim-milter.conf.sample
 share/examples/rc.d/dkim-milter
 share/doc/dkim-milter/libdkim/dkim.html
@@ -30,10 +35,15 @@ share/doc/dkim-milter/libdkim/dkim_cbstat.html
 share/doc/dkim-milter/libdkim/dkim_close.html
 share/doc/dkim-milter/libdkim/dkim_eoh.html
 share/doc/dkim-milter/libdkim/dkim_eom.html
+share/doc/dkim-milter/libdkim/dkim_flush_cache.html
 share/doc/dkim-milter/libdkim/dkim_free.html
 share/doc/dkim-milter/libdkim/dkim_get_user_context.html
+share/doc/dkim-milter/libdkim/dkim_getcachestats.html
+share/doc/dkim-milter/libdkim/dkim_getdomain.html
 share/doc/dkim-milter/libdkim/dkim_geterror.html
+share/doc/dkim-milter/libdkim/dkim_gethandlingstr.html
 share/doc/dkim-milter/libdkim/dkim_getmode.html
+share/doc/dkim-milter/libdkim/dkim_getpolicystr.html
 share/doc/dkim-milter/libdkim/dkim_getpresult.html
 share/doc/dkim-milter/libdkim/dkim_getpresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getresultstr.html
@@ -44,6 +54,7 @@ share/doc/dkim-milter/libdkim/dkim_handling_t.html
 share/doc/dkim-milter/libdkim/dkim_header.html
 share/doc/dkim-milter/libdkim/dkim_init.html
 share/doc/dkim-milter/libdkim/dkim_lib.html
+share/doc/dkim-milter/libdkim/dkim_minbody.html
 share/doc/dkim-milter/libdkim/dkim_ohdrs.html
 share/doc/dkim-milter/libdkim/dkim_options.html
 share/doc/dkim-milter/libdkim/dkim_param_t.html

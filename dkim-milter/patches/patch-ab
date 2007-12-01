@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2007/10/21 10:58:58 jukka Exp $
+$NetBSD: patch-ab,v 1.5 2007/12/01 12:26:01 jukka Exp $
 
---- dkim-filter/Makefile.m4.orig	2007-10-19 20:16:40.000000000 +0200
-+++ dkim-filter/Makefile.m4	2007-10-21 12:51:31.000000000 +0200
+--- dkim-filter/Makefile.m4.orig	2007-10-31 20:00:07.000000000 +0100
++++ dkim-filter/Makefile.m4	2007-12-01 12:51:26.000000000 +0100
 @@ -9,7 +9,9 @@ include(confBUILDTOOLSDIR`/M4/switch.m4'
  define(`confMT', `TRUE')
  define(`confREQUIRE_LIBSM', `true')
@@ -11,5 +11,5 @@ $NetBSD: patch-ab,v 1.4 2007/10/21 10:58:58 jukka Exp $
 +define(`confLDOPTS', `${LDFLAGS}')
 +@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
  
- bldPUSH_SMLIB(`sm')
+ ifdef(`bld_USE_ARLIB', `bldPUSH_SMLIB(`ar')', `')
  
