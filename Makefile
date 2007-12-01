@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2700 2007/11/30 10:23:18 hfath Exp $
+# $Id: Makefile,v 1.2701 2007/12/01 00:02:33 uhabel Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1033,6 +1033,7 @@ SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-B-Keywords
 SUBDIR+=	p5-Bit-Vector-Minimal
+SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Application-Plugin-TT
 SUBDIR+=	p5-CGI-Simple
