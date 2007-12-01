@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2702 2007/12/01 08:28:20 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2703 2007/12/01 22:13:34 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -96,6 +96,7 @@ SUBDIR+=	autoproject
 SUBDIR+=	avahi
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
+SUBDIR+=	awesome
 SUBDIR+=	awflwm
 SUBDIR+=	axe
 SUBDIR+=	axel
