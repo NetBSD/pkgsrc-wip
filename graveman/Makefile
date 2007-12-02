@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/02 02:44:31 hoka_adam Exp $
 #
 
-DISTNAME=		graveman-0.3.12-4
-PKGREVISION=		1
+DISTNAME=		graveman-0.3.12-5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://graveman.tuxfamily.org/sources/
 EXTRACT_SUFX=		.tar.bz2
