@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2007/12/02 22:19:54 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.5 2007/12/02 23:12:10 adrian_p Exp $
 #
 
 DISTNAME=		dhcp-3.1.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://ftp.isc.org/isc/dhcp/ \
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/dhcp/
 
+.include "../../mk/bsd.prefs.mk"
+
 HAS_CONFIGURE=		yes
 DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_SYSLOG_LEVEL?=	1
@@ -17,6 +19,7 @@ PKG_SYSCONFSUBDIR=	dhcp
 USE_TOOLS+=		nroff
 
 FILESDIR=		${.CURDIR}/../isc-dhcp/files
+PATCHDIR=		${.CURDIR}/../isc-dhcp/patches
 EGDIR=			${PREFIX}/share/examples/isc-dhcp-${COMPONENT}
 BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_SYSLOG_LEVEL
 
