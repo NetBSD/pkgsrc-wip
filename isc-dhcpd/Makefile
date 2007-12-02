@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/02 18:34:10 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/02 22:19:54 adrian_p Exp $
 #
 
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Server
@@ -6,8 +6,6 @@ COMPONENT=	server
 SUBDIR=		omapip dhcpctl server
 
 CONF_FILES+=	${EGDIR}/dhcpd.conf ${PKG_SYSCONFDIR}/dhcpd.conf
-
-DEPENDS+=	isc-dhcp-base-3.0.6:../../wip/isc-dhcp
 
 RCD_SCRIPTS=	isc_dhcpd
 MAN_FILES=	man1/omshell.1 man3/dhcpctl.3 man3/omapi.3 man3/omshell.3 \
@@ -19,4 +17,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/server/dhcpd.conf ${EGDIR}
 
 .include "../../wip/isc-dhcp/Makefile.common"
+.include "../../wip/isc-dhcp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
