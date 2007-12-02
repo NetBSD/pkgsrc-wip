@@ -1,15 +1,11 @@
-# $NetBSD: Makefile.common,v 1.2 2007/12/02 18:45:22 adrian_p Exp $
+# $NetBSD: Makefile.common,v 1.3 2007/12/02 21:08:26 adrian_p Exp $
 #
 
 DISTNAME=		dhcp-3.0.6
 PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/ \
-			http://ftp.isc.org/isc/dhcp/dhcp-3.0-history/ \
-			http://archive.progeny.com/isc/dhcp/ \
-			ftp://ftp.freenet.de/pub/ftp.isc.org/isc/dhcp/ \
-			ftp://ftp2.tw.freebsd.org/isc/dhcp/ \
-			http://public.planetmirror.com/pub/isc/dhcp/
+MASTER_SITES=		http://ftp.isc.org/isc/dhcp/ \
+			http://ftp.isc.org/isc/dhcp/dhcp-3.0-history/
 
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/dhcp/
