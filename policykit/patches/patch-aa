@@ -1,14 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/03/09 08:23:57 ondratu Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/02 21:01:02 ondratu Exp $
 
---- Makefile.in.orig	2007-03-08 21:55:20.000000000 +0100
-+++ Makefile.in
-@@ -222,7 +222,8 @@ target_alias = @target_alias@
+--- data/Makefile.in.orig	2007-09-25 22:36:32.000000000 +0200
++++ data/Makefile.in
+@@ -189,11 +189,11 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- SUBDIRS = libpolkit pam-polkit-console polkitd doc tools privileges
 -pamdir = $(sysconfdir)/pam.d
-+#pamdir = $(sysconfdir)/pam.d
 +pamdir = $(prefix)/share/examples/policykit
- pam_DATA = policy-kit
+ pam_DATA = polkit
  pkgconfigdir = $(libdir)/pkgconfig
- pkgconfig_DATA = polkit.pc
+ pkgconfig_DATA = polkit.pc polkit-dbus.pc polkit-grant.pc
+-confdir = $(sysconfdir)/PolicyKit
++confdir = $(prefix)/share/examples/policykit
+ conf_DATA = PolicyKit.conf
+ dtddir = $(datadir)/PolicyKit
+ dtd_DATA = config.dtd
