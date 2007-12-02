@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/04/29 12:50:22 grzela1 Exp $
+$NetBSD: distinfo,v 1.5 2007/12/02 14:50:13 hoka_adam Exp $
 
-SHA1 (evas-0.9.9.037.tar.gz) = d041ddb49c8f143527a961e12a1b297fd6a30005
-RMD160 (evas-0.9.9.037.tar.gz) = 4e74d617ccc119b8a4afaec2f8c2938c55d64171
-Size (evas-0.9.9.037.tar.gz) = 933225 bytes
+SHA1 (evas-0.9.9.041.tar.gz) = f99d6791f80538f141d100213c1709bb10f9cf1b
+RMD160 (evas-0.9.9.041.tar.gz) = 45c0d7e25e7e25f9fe601e950307d12a70fa5fe7
+Size (evas-0.9.9.041.tar.gz) = 1049826 bytes
+

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2007/04/29 17:55:06 grzela1 Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/02 14:50:13 hoka_adam Exp $
 #
 
-DISTNAME=	embryo-0.9.1.037
+DISTNAME=	embryo-0.9.1.041
+PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://enlightenment.freedesktop.org/files/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2007-08-26/
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	grzela@seculture.com
