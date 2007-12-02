@@ -1,0 +1,62 @@
+# $NetBSD: Makefile.common,v 1.1 2007/12/02 18:34:09 adrian_p Exp $
+#
+
+DISTNAME=		dhcp-3.0.6
+PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/ \
+			http://ftp.isc.org/isc/dhcp/dhcp-3.0-history/ \
+			http://archive.progeny.com/isc/dhcp/ \
+			ftp://ftp.freenet.de/pub/ftp.isc.org/isc/dhcp/ \
+			ftp://ftp2.tw.freebsd.org/isc/dhcp/ \
+			http://public.planetmirror.com/pub/isc/dhcp/
+
+MAINTAINER=		adrianp@NetBSD.org
+HOMEPAGE=		http://www.isc.org/sw/dhcp/
+
+HAS_CONFIGURE=		yes
+DHCP_HOME?=		${VARBASE}/db/isc-dhcp
+DHCP_SYSLOG_LEVEL?=	1
+PKG_SYSCONFSUBDIR=	dhcp
+USE_TOOLS+=		nroff
+
+FILESDIR=		${.CURDIR}/../isc-dhcp/files
+EGDIR=			${PREFIX}/share/examples/isc-dhcp-${COMPONENT}
+BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_SYSLOG_LEVEL
+
+#MAN_FILES=		man1/omshell.1 man3/dhcpctl.3 man3/omapi.3 \
+#			man3/omshell.3 man5/dhcp-eval.5 man5/dhcp-options.5 \
+#			man5/dhcpd.conf.5 man5/dhcpd.leases.5 \
+#			man8/dhcpd.8 man8/dhcrelay.8
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=       pre-configure
+SUBST_MESSAGE.conf=	Fixing configuration files.
+SUBST_FILES.conf=	includes/site.h
+SUBST_SED.conf=		-e 's|@@DHCP_SYSLOG_LEVEL@@|${DHCP_SYSLOG_LEVEL}|g'
+SUBST_SED.conf+=	-e 's|@@VARBASE@@|${VARBASE}|g'
+SUBST_SED.conf+=	-e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|g'
+SUBST_SED.conf+=	-e 's|@@PREFIX@@|${PREFIX}|g'
+
+post-extract:
+	${CAT} ${FILESDIR}/site.h >> ${WRKSRC}/includes/site.h
+
+pre-configure:
+	${SED} \
+		-e 's|@@CC@@|${CC:Q}|g' \
+		-e 's|@@CFLAGS@@|${CFLAGS:Q}|g' \
+		-e 's|@@VARBASE@@|${VARBASE}|g' \
+		-e 's|@@SYSCONFDIR@@|${PKG_SYSCONFDIR}|g' \
+		-e 's|@@PREFIX@@|${PREFIX}|g' \
+		-e 's|@@PKGMANDIR@@|${PKGMANDIR}|g' \
+		${FILESDIR}/site.conf >> ${WRKSRC}/site.conf
+
+do-install:
+.	for d in ${SUBDIR}
+		cd ${WRKSRC}/work.`${WRKSRC}/configure --print-sysname`/${d} \
+			&& ${SETENV} ${MAKE_ENV} ${MAKE} install
+.	endfor
+
+.	for m in ${MAN_FILES}
+		${CHMOD} ${MANMODE} ${PREFIX}/${PKGMANDIR}/${m}
+.	endfor

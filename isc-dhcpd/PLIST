@@ -1,32 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:59 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/02 18:34:10 adrian_p Exp $
 bin/omshell
-include/dhcpctl.h
-include/isc-dhcp/boolean.h
-include/isc-dhcp/dst.h
-include/isc-dhcp/int.h
-include/isc-dhcp/lang.h
-include/isc-dhcp/list.h
-include/isc-dhcp/result.h
-include/isc-dhcp/types.h
-include/omapip/alloc.h
-include/omapip/buffer.h
-include/omapip/omapip.h
 lib/libdhcpctl.a
 lib/libomapi.a
 man/man1/omshell.1
 man/man3/dhcpctl.3
 man/man3/omapi.3
 man/man3/omshell.3
-man/man5/dhcp-eval.5
-man/man5/dhcp-options.5
 man/man5/dhcpd.conf.5
 man/man5/dhcpd.leases.5
 man/man8/dhcpd.8
-man/man8/dhcrelay.8
 sbin/dhcpd
-sbin/dhcrelay
-share/doc/isc-dhcpd/README
+share/examples/isc-dhcp-server/dhcpd.conf
 share/examples/rc.d/isc_dhcpd
-@dirrm share/doc/isc-dhcpd
-@dirrm include/omapip
-@dirrm include/isc-dhcp
+@dirrm share/examples/isc-dhcp-server

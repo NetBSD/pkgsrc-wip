@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2007/12/02 18:34:10 adrian_p Exp $
+$NetBSD: distinfo,v 1.1 2007/12/02 18:34:10 adrian_p Exp $
 
 SHA1 (dhcp-3.0.6.tar.gz) = 204e509580d57d0cfff23529274612ca8c710efb
 RMD160 (dhcp-3.0.6.tar.gz) = 6b7dbad413f83f9bce4ed92a8abc60394a06c6ad
