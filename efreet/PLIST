@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/02 14:53:40 hoka_adam Exp $
+lib/libefreet.so
+lib/libefreet.la
+lib/libefreet.a
+lib/libefreet_mime.so
+lib/libefreet_mime.la
+lib/libefreet_mime.a
+include/efreet/Efreet.h
+include/efreet/efreet_base.h
+include/efreet/efreet_desktop.h
+include/efreet/efreet_icon.h
+include/efreet/efreet_ini.h
+include/efreet/efreet_menu.h
+include/efreet/efreet_utils.h
+include/efreet/Efreet_Mime.h
+share/efreet/test/test.ini
+share/efreet/test/long.ini
+share/efreet/test/test.desktop
+share/efreet/test/test_type.desktop
+share/efreet/test/test.menu
+share/efreet/test/test_menu_slash_bad.menu
+share/efreet/test/entry.png
+share/efreet/test/entry
+share/efreet/test/preferences.menu
+share/efreet/test/sub/test.desktop 
+bin/efreet_alloc
+bin/efreet_menu_alloc
+bin/efreet_test
+bin/efreet_spec_test
+bin/efreet_cache_test
+lib/pkgconfig/efreet.pc
+lib/pkgconfig/efreet-mime.pc
+@dirrm include/efreet
+@dirrm share/efreet/test/sub
+@dirrm share/efreet/test
+@dirrm share/efreet
