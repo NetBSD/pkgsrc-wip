@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/02 22:02:04 ondratu Exp $
+
+--- configure.orig	2007-10-30 16:22:47.000000000 +0100
++++ configure
+@@ -3428,7 +3428,7 @@ else
+   enable_recall=yes
+ fi
+ 
+- if test x$enable_recall == xyes; then
++ if test x$enable_recall = xyes; then
+   BUILD_RECALL_TRUE=
+   BUILD_RECALL_FALSE='#'
+ else
+@@ -3444,7 +3444,7 @@ else
+   enable_video=yes
+ fi
+ 
+- if test x$enable_video == xyes; then
++ if test x$enable_video = xyes; then
+   BUILD_VIDEO_TRUE=
+   BUILD_VIDEO_FALSE='#'
+ else
+@@ -3460,7 +3460,7 @@ else
+   enable_keymaps=yes
+ fi
+ 
+- if test x$enable_keymaps == xyes; then
++ if test x$enable_keymaps = xyes; then
+   BUILD_KEYMAPS_TRUE=
+   BUILD_KEYMAPS_FALSE='#'
+ else
+@@ -3476,7 +3476,7 @@ else
+   enable_killswitch_dell_wlan=yes
+ fi
+ 
+- if test x$enable_killswitch_dell_wlan == xyes; then
++ if test x$enable_killswitch_dell_wlan = xyes; then
+   BUILD_KILLSWITCH_DELL_WLAN_TRUE=
+   BUILD_KILLSWITCH_DELL_WLAN_FALSE='#'
+ else
+@@ -3492,7 +3492,7 @@ else
+   enable_killswitch_dell_bluetooth=yes
+ fi
+ 
+- if test x$enable_killswitch_dell_bluetooth == xyes; then
++ if test x$enable_killswitch_dell_bluetooth = xyes; then
+   BUILD_KILLSWITCH_DELL_BLUETOOTH_TRUE=
+   BUILD_KILLSWITCH_DELL_BLUETOOTH_FALSE='#'
+ else
+@@ -3508,7 +3508,7 @@ else
+   enable_killswitch_sony_bluetooth=yes
+ fi
+ 
+- if test x$enable_killswitch_sony_bluetooth == xyes; then
++ if test x$enable_killswitch_sony_bluetooth = xyes; then
+   BUILD_KILLSWITCH_SONY_BLUETOOTH_TRUE=
+   BUILD_KILLSWITCH_SONY_BLUETOOTH_FALSE='#'
+ else
+@@ -3524,7 +3524,7 @@ else
+   enable_killswitch_ipw_wlan=yes
+ fi
+ 
+- if test x$enable_killswitch_ipw_wlan == xyes; then
++ if test x$enable_killswitch_ipw_wlan = xyes; then
+   BUILD_KILLSWITCH_IPW_WLAN_TRUE=
+   BUILD_KILLSWITCH_IPW_WLAN_FALSE='#'
+ else
