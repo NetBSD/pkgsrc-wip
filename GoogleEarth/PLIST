@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/18 13:43:30 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/12/02 04:38:14 tnn2 Exp $
 GoogleEarth/ImporterGlobalSettings.ini
 GoogleEarth/ImporterUISettings.ini
 GoogleEarth/PCOptimizations.ini
@@ -384,17 +384,26 @@ GoogleEarth/resources/bs.country/startinglocation.kml
 GoogleEarth/resources/bt.country/startinglocation.kml
 GoogleEarth/resources/building.png
 GoogleEarth/resources/bus.png
+GoogleEarth/resources/button-dis-leftendcap-flat.png
 GoogleEarth/resources/button-dis-leftendcap.png
+GoogleEarth/resources/button-dis-repeating-flat.png
 GoogleEarth/resources/button-dis-repeating.png
+GoogleEarth/resources/button-dis-rightendcap-flat.png
 GoogleEarth/resources/button-dis-rightendcap.png
+GoogleEarth/resources/button-md-leftendcap-flat.png
 GoogleEarth/resources/button-md-leftendcap.png
+GoogleEarth/resources/button-md-repeating-flat.png
 GoogleEarth/resources/button-md-repeating.png
+GoogleEarth/resources/button-md-rightendcap-flat.png
 GoogleEarth/resources/button-md-rightendcap.png
 GoogleEarth/resources/button-mo-leftendcap.png
 GoogleEarth/resources/button-mo-repeating.png
 GoogleEarth/resources/button-mo-rightendcap.png
+GoogleEarth/resources/button-normal-leftendcap-flat.png
 GoogleEarth/resources/button-normal-leftendcap.png
+GoogleEarth/resources/button-normal-repeating-flat.png
 GoogleEarth/resources/button-normal-repeating.png
+GoogleEarth/resources/button-normal-rightendcap-flat.png
 GoogleEarth/resources/button-normal-rightendcap.png
 GoogleEarth/resources/bv.country/startinglocation.kml
 GoogleEarth/resources/bw.country/startinglocation.kml
