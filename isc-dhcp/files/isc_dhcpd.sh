@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcpd.sh,v 1.1 2007/12/02 18:34:10 adrian_p Exp $
+# $NetBSD: isc_dhcpd.sh,v 1.2 2007/12/02 23:15:42 adrian_p Exp $
 #
 
 # PROVIDE: dhcpd
@@ -15,7 +15,7 @@ name="dhcpd"
 rcvar="isc_dhcpd"
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/isc-dhcp/${name}.pid"
-required_files="@PKG_SYSCONFDIR@/dhcp/${name}.conf @DHCP_HOME@/${name}.leases"
+required_files="@PKG_SYSCONFDIR@/${name}.conf @DHCP_HOME@/${name}.leases"
 start_precmd="isc_dhcpd_precmd"
 
 isc_dhcpd_precmd()
