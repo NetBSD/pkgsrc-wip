@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/03/09 08:40:45 ondratu Exp $
+$NetBSD: patch-ab,v 1.2 2007/12/02 21:19:23 ondratu Exp $
 
---- Makefile.in.orig	2006-09-12 01:25:33.000000000 +0200
+--- Makefile.in.orig	2007-09-25 21:08:30.000000000 +0200
 +++ Makefile.in
-@@ -312,7 +312,8 @@ SUBDIRS = libhal libhal-storage partutil
+@@ -236,7 +236,7 @@ SUBDIRS = libhal libhal-storage partutil
  
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = hal.pc hal-storage.pc
 -dbusdir = $(DBUS_SYS_DIR)
-+#dbusdir = $(DBUS_SYS_DIR)
 +dbusdir = $(prefix)/share/examples/hal
  dist_dbus_DATA = hal.conf
  MAINTAINERCLEANFILES = ChangeLog
- DISTCLEANFILES = hal.pc hal-storage.pc intltool-extract intltool-merge intltool-update
+ DISTCLEANFILES = hal.pc hal-storage.pc

@@ -1,24 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/09 08:40:44 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/02 21:19:23 ondratu Exp $
 bin/hal-device
-bin/hal-device-manager
+bin/hal-disable-polling
 bin/hal-find-by-capability
 bin/hal-find-by-property
 bin/hal-get-property
+bin/hal-is-caller-locked-out
+bin/hal-lock
 bin/hal-set-property
 bin/lshal
 include/hal/libhal.h
 include/hal/libhal-storage.h
+@comment this addons could not be build, so this could be generate dynamicle
 libexec/hald-addon-acpi
-libexec/hald-addon-acpi-buttons-toshiba
 libexec/hald-addon-cpufreq
 libexec/hald-addon-hid-ups
-libexec/hald-addon-keyboard
+libexec/hald-addon-input
+libexec/hald-addon-macbook-backlight
 libexec/hald-addon-macbookpro-backlight
 libexec/hald-addon-pmu
 libexec/hald-addon-storage
 libexec/hald-addon-usb-csr
+libexec/hald-generate-fdi-cache
 libexec/hald-probe-hiddev
+libexec/hald-probe-ieee1394-unit
 libexec/hald-probe-input
+libexec/hald-probe-net-bluetooth
 libexec/hald-probe-pc-floppy
 libexec/hald-probe-printer
 libexec/hald-probe-serial
@@ -26,16 +32,22 @@ libexec/hald-probe-smbios
 libexec/hald-probe-storage
 libexec/hald-probe-volume
 libexec/hald-runner
+libexec/hal-ipw-killswitch-${LOWER_OPSYS}
 libexec/hal-storage-cleanup-all-mountpoints
 libexec/hal-storage-cleanup-mountpoint
 libexec/hal-storage-closetray
 libexec/hal-storage-eject
 libexec/hal-storage-mount
 libexec/hal-storage-unmount
+libexec/hal-system-power-pm-is-supported
 libexec/hal-system-power-pmu
+libexec/hal-system-sonypic
+lib/hal/scripts/hal-functions
 lib/hal/scripts/hal-luks-remove
 lib/hal/scripts/hal-luks-setup
 lib/hal/scripts/hal-luks-teardown
+lib/hal/scripts/hal-system-killswitch-get-power
+lib/hal/scripts/hal-system-killswitch-set-power
 lib/hal/scripts/hal-system-lcd-get-brightness
 lib/hal/scripts/hal-system-lcd-set-brightness
 lib/hal/scripts/hal-system-power-hibernate
@@ -43,136 +55,79 @@ lib/hal/scripts/hal-system-power-reboot
 lib/hal/scripts/hal-system-power-set-power-save
 lib/hal/scripts/hal-system-power-shutdown
 lib/hal/scripts/hal-system-power-suspend
-lib/hal/scripts/${LOWER_OPSYS}/hal-luks-remove-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-luks-setup-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-luks-teardown-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-lcd-get-brightness-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-lcd-set-brightness-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-hibernate-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-reboot-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-set-power-save-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-shutdown-${LOWER_OPSYS}
-lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-suspend-${LOWER_OPSYS}
+lib/hal/scripts/hal-system-power-suspend-hybrid
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-luks-remove-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-luks-setup-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-luks-teardown-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-killswitch-get-power-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-killswitch-set-power-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-lcd-get-brightness-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-lcd-set-brightness-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-hibernate-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-reboot-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-set-power-save-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-shutdown-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-suspend-hybrid-${LOWER_OPSYS}
+${SS}lib/hal/scripts/${LOWER_OPSYS}/hal-system-power-suspend-${LOWER_OPSYS}
 lib/libhal.la
 lib/libhal-storage.la
 lib/pkgconfig/hal.pc
 lib/pkgconfig/hal-storage.pc
+man/man1/hal-disable-polling.1
+man/man1/hal-find-by-capability.1
+man/man1/hal-find-by-property.1
+man/man1/hal-get-property.1
+man/man1/hal-is-caller-locked-out.1
+man/man1/hal-lock.1
+man/man1/hal-set-property.1
+man/man1/lshal.1
+man/man8/hald.8
 sbin/hald
-share/doc/${PKGNAME}/conf/match-cardreader.fdi
-share/doc/${PKGNAME}/conf/match-USB-camera.fdi
-share/doc/${PKGNAME}/conf/match-USB-mp3-player.fdi
-share/doc/${PKGNAME}/conf/storage-non-fixed.fdi
-share/doc/${PKGNAME}/conf/storage-policy-examples.fdi
-share/doc/${PKGNAME}/conf/storage-skip-all.fdi
 share/examples/hal/hal.conf
-share/examples/hal/hal-power-cpufreq.privilege
-share/examples/hal/hal-power-hibernate.privilege
-share/examples/hal/hal-power-poweroff.privilege
-share/examples/hal/hal-power-reboot.privilege
-share/examples/hal/hal-power-suspend.privilege
-share/examples/hal/hal-storage-fixed-mount-all-options.privilege
-share/examples/hal/hal-storage-fixed-mount.privilege
-share/examples/hal/hal-storage-removable-mount-all-options.privilege
-share/examples/hal/hal-storage-removable-mount.privilege
 share/examples/hal/90-hal.rules
 share/examples/rc.d/hald
-share/gtk-doc/html/hal/hal.devhelp
-share/gtk-doc/html/hal/hal.devhelp2
-share/gtk-doc/html/hal/hal-libhal.html
-share/gtk-doc/html/hal/hal-libhal-storage.html
-share/gtk-doc/html/hal/home.png
-share/gtk-doc/html/hal/ch01.html
-share/gtk-doc/html/hal/ch02.html
-share/gtk-doc/html/hal/index.html
-share/gtk-doc/html/hal/index.sgml
-share/gtk-doc/html/hal/left.png
-share/gtk-doc/html/hal/right.png
-share/gtk-doc/html/hal/style.css
-share/gtk-doc/html/hal/up.png
-share/hal/device-manager/Const.py
-share/hal/device-manager/Const.pyc
-share/hal/device-manager/Const.pyo
-share/hal/device-manager/DeviceManager.py
-share/hal/device-manager/DeviceManager.pyc
-share/hal/device-manager/DeviceManager.pyo
-share/hal/device-manager/Device.py
-share/hal/device-manager/Device.pyc
-share/hal/device-manager/Device.pyo
-share/hal/device-manager/fdo-logo.png
-share/hal/device-manager/GtkAttributesFacade.py
-share/hal/device-manager/GtkAttributesFacade.pyc
-share/hal/device-manager/GtkAttributesFacade.pyo
-share/hal/device-manager/hal-abstract.png
-share/hal/device-manager/hal-audio.png
-share/hal/device-manager/hal-bus-pci.png
-share/hal/device-manager/hal-bus-usb.png
-share/hal/device-manager/hal-camera.png
-share/hal/device-manager/hal-cat-cardbus.png
-share/hal/device-manager/hal-cat-keyboard.png
-share/hal/device-manager/hal-cat-mouse.png
-share/hal/device-manager/hal-cdrom.png
-share/hal/device-manager/hal-computer.png
-share/hal/device-manager/hal-device-manager.glade
-share/hal/device-manager/hal-flash.png
-share/hal/device-manager/hal-floppy.png
-share/hal/device-manager/hal-harddisk.png
-share/hal/device-manager/hal-network.png
-share/hal/device-manager/hal-serial-port.png
-share/hal/device-manager/hal-unknown.png
-share/hal/device-manager/hal-video.png
-share/hal/device-manager/LibGladeApplication.py
-share/hal/device-manager/LibGladeApplication.pyc
-share/hal/device-manager/LibGladeApplication.pyo
-share/hal/device-manager/Representation.py
-share/hal/device-manager/Representation.pyc
-share/hal/device-manager/Representation.pyo
+share/gtk-doc/html/libhal/home.png
+share/gtk-doc/html/libhal/index.html
+share/gtk-doc/html/libhal/index.sgml
+share/gtk-doc/html/libhal/ix01.html
+share/gtk-doc/html/libhal/left.png
+share/gtk-doc/html/libhal/libhal.devhelp
+share/gtk-doc/html/libhal/libhal.devhelp2
+share/gtk-doc/html/libhal/libhal-libhal.html
+share/gtk-doc/html/libhal/license.html
+share/gtk-doc/html/libhal/right.png
+share/gtk-doc/html/libhal/rn01.html
+share/gtk-doc/html/libhal-storage/home.png
+share/gtk-doc/html/libhal-storage/index.html
+share/gtk-doc/html/libhal-storage/index.sgml
+share/gtk-doc/html/libhal-storage/ix01.html
+share/gtk-doc/html/libhal-storage/left.png
+share/gtk-doc/html/libhal-storage/libhal-storage.devhelp
+share/gtk-doc/html/libhal-storage/libhal-storage.devhelp2
+share/gtk-doc/html/libhal-storage/libhal-storage-libhal-storage.html
+share/gtk-doc/html/libhal-storage/license.html
+share/gtk-doc/html/libhal-storage/right.png
+share/gtk-doc/html/libhal-storage/rn01.html
+share/gtk-doc/html/libhal-storage/style.css
+share/gtk-doc/html/libhal-storage/up.png
+share/gtk-doc/html/libhal-storage/version.xml
+share/gtk-doc/html/libhal/style.css
+share/gtk-doc/html/libhal/up.png
 share/hal/fdi/fdi.dtd
-share/hal/fdi/fdi.rng
-share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi
-share/hal/fdi/information/10freedesktop/10-cd-dvd-burner.fdi
-share/hal/fdi/information/10freedesktop/10-usb-card-readers.fdi
-share/hal/fdi/information/10freedesktop/10-usb-music-players.fdi
-share/hal/fdi/information/10freedesktop/10-usb-pda.fdi
-share/hal/fdi/information/10freedesktop/10-usb-zip-drives.fdi
-share/hal/fdi/information/10freedesktop/10-wireless-mice.fdi
-share/hal/fdi/policy/10osvendor/10-keyboard-policy.fdi
+share/hal/fdi/policy/10osvendor/10-cpufreq.fdi
+share/hal/fdi/policy/10osvendor/10-input-policy.fdi
 share/hal/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
+share/hal/fdi/policy/10osvendor/10-macbook-backlight.fdi
+share/hal/fdi/policy/10osvendor/10-macbookpro-utils.fdi
 share/hal/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
-share/hal/fdi/policy/10osvendor/10-toshiba-buttons.fdi
+share/hal/fdi/policy/10osvendor/10-rfkill-switch.fdi
+share/hal/fdi/policy/10osvendor/10-usbcsr-mice.fdi
+share/hal/fdi/policy/10osvendor/10-x11-input.fdi
 share/hal/fdi/policy/10osvendor/15-storage-luks.fdi
 share/hal/fdi/policy/10osvendor/20-storage-methods.fdi
-share/hal/fdi/preprobe/10osvendor/10-ide-drives.fdi
-share/locale/ca/LC_MESSAGES/hal.mo
-share/locale/cs/LC_MESSAGES/hal.mo
-share/locale/da/LC_MESSAGES/hal.mo
-share/locale/de/LC_MESSAGES/hal.mo
-share/locale/el/LC_MESSAGES/hal.mo
-share/locale/es/LC_MESSAGES/hal.mo
-share/locale/eu/LC_MESSAGES/hal.mo
-share/locale/fi/LC_MESSAGES/hal.mo
-share/locale/fr/LC_MESSAGES/hal.mo
-share/locale/hu/LC_MESSAGES/hal.mo
-share/locale/it/LC_MESSAGES/hal.mo
-share/locale/ja/LC_MESSAGES/hal.mo
-share/locale/km/LC_MESSAGES/hal.mo
-share/locale/ko/LC_MESSAGES/hal.mo
-share/locale/lt/LC_MESSAGES/hal.mo
-share/locale/nb/LC_MESSAGES/hal.mo
-share/locale/nl/LC_MESSAGES/hal.mo
-share/locale/pa/LC_MESSAGES/hal.mo
-share/locale/pl/LC_MESSAGES/hal.mo
-share/locale/pt_BR/LC_MESSAGES/hal.mo
-share/locale/pt/LC_MESSAGES/hal.mo
-share/locale/ru/LC_MESSAGES/hal.mo
-share/locale/sl_SI/LC_MESSAGES/hal.mo
-share/locale/tr/LC_MESSAGES/hal.mo
-share/locale/uk/LC_MESSAGES/hal.mo
-share/locale/zh_CN/LC_MESSAGES/hal.mo
-share/locale/zh_TW/LC_MESSAGES/hal.mo
-@dirrm share/locale/sl_SI/LC_MESSAGES
-@dirrm share/locale/sl_SI
 @exec ${MKDIR} %D/share/hal/fdi/preprobe/20thirdparty
 @dirrm share/hal/fdi/preprobe/20thirdparty
+@exec ${MKDIR} %D/share/hal/fdi/preprobe/10osvendor
 @dirrm share/hal/fdi/preprobe/10osvendor
 @dirrm share/hal/fdi/preprobe
 @exec ${MKDIR} %D/share/hal/fdi/policy/20thirdparty
@@ -181,14 +136,14 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm share/hal/fdi/policy
 @exec ${MKDIR} %D/share/hal/fdi/information/20thirdparty
 @dirrm share/hal/fdi/information/20thirdparty
+@exec ${MKDIR} %D/share/hal/fdi/information/10freedesktop
 @dirrm share/hal/fdi/information/10freedesktop
 @dirrm share/hal/fdi/information
 @dirrm share/hal/fdi
-@dirrm share/hal/device-manager
 @dirrm share/hal
-@dirrm share/gtk-doc/html/hal
-@dirrm share/doc/${PKGNAME}/conf
-@dirrm share/doc/${PKGNAME}
+@dirrm share/gtk-doc/html/libhal-storage
+@dirrm share/gtk-doc/html/libhal
+@dirrm share/examples/hal
 @dirrm lib/hal/scripts/${LOWER_OPSYS}
 @dirrm lib/hal/scripts
 @dirrm lib/hal

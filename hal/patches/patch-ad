@@ -1,14 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/03/09 08:40:45 ondratu Exp $
+$NetBSD: patch-ad,v 1.2 2007/12/02 21:19:23 ondratu Exp $
 
---- tools/linux/Makefile.in.orig	2006-09-12 01:25:33.000000000 +0200
+--- tools/linux/Makefile.in.orig	2007-09-25 21:08:30.000000000 +0200
 +++ tools/linux/Makefile.in
-@@ -282,7 +282,8 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
+@@ -228,7 +228,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
 -udevrulesdir = $(sysconfdir)/udev/rules.d
-+#udevrulesdir = $(sysconfdir)/udev/rules.d
 +udevrulesdir = $(prefix)/share/examples/hal
  udevrules_DATA = 90-hal.rules
- scriptdir = $(libdir)/hal/scripts/linux
- script_SCRIPTS = \
+ AM_CPPFLAGS = \
+ 	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" \

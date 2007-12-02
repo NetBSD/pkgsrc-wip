@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/09 08:40:44 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/02 21:19:23 ondratu Exp $
 #
 
-DISTNAME=	hal-0.5.8
+DISTNAME=	hal-0.5.10
 CATEGORIES=	sysutils
-MASTER_SITES=	http://people.freedesktop.org/~david/dist/
+MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/hal
@@ -24,9 +24,11 @@ PKG_USERS=		${HAL_USER}:${HAL_GROUP}
 CONFIGURE_ARGS+=	--with-os-type=${LOWER_VENDOR}
 CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
 CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
-CONFIGURE_ARGS+=	--with-pid-file=/var/run/hald.pid
-CONFIGURE_ARGS+=	--with-socket-dir=/var
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--with-pid-file=${VARBASE}run/hald.pid
+CONFIGURE_ARGS+=	--with-socket-dir=${VARBASE}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids
+CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
 
 PKGCONFIG_OVERRIDE+=	hal.pc.in
 PKGCONFIG_OVERRIDE+=	hal-storage.pc.in
@@ -34,23 +36,34 @@ PKGCONFIG_OVERRIDE+=	hal-storage.pc.in
 RCD_SCRIPTS+=		hald
 
 DBUS_DIR=		${PKG_SYSCONFDIR}/dbus-1/system.d
-POLICYKIT_DIR=		${PKG_SYSCONFDIR}/PolicyKit/privilege.d
-UDEV_RULES_DIR?=	/etc/udev/rules.d
 
-BUILD_DEFS+=		HAL_USER HAL_GROUP UDEV_RULES_DIR
+BUILD_DEFS+=		HAL_USER HAL_GROUP UDEV_RULES_DIR VARBASE
+
+.include "options.mk"
 
 EGDIR=			${PREFIX}/share/examples/hal
 CONF_FILES=		${EGDIR}/hal.conf ${DBUS_DIR}/hal.conf
-CONF_FILES+=		${EGDIR}/hal-power-cpufreq.privilege ${POLICYKIT_DIR}/hal-power-cpufreq.privilege
-CONF_FILES+=		${EGDIR}/hal-power-hibernate.privilege ${POLICYKIT_DIR}/hal-power-hibernate.privilege
-CONF_FILES+=		${EGDIR}/hal-power-poweroff.privilege ${POLICYKIT_DIR}/hal-power-poweroff.privilege
-CONF_FILES+=		${EGDIR}/hal-power-reboot.privilege ${POLICYKIT_DIR}/hal-power-reboot.privilege
-CONF_FILES+=		${EGDIR}/hal-power-suspend.privilege ${POLICYKIT_DIR}/hal-power-suspend.privilege
-CONF_FILES+=		${EGDIR}/hal-storage-fixed-mount-all-options.privilege ${POLICYKIT_DIR}/hal-storage-fixed-mount-all-options.privilege
-CONF_FILES+=		${EGDIR}/hal-storage-fixed-mount.privilege ${POLICYKIT_DIR}/hal-storage-fixed-mount.privilege
-CONF_FILES+=		${EGDIR}/hal-storage-removable-mount-all-options.privilege ${POLICYKIT_DIR}/hal-storage-removable-mount-all-options.privilege
-CONF_FILES+=		${EGDIR}/hal-storage-removable-mount.privilege ${POLICYKIT_DIR}/hal-storage-removable-mount.privilege
+
+.if ${OPSYS} == "Linux"
+
+# i can't get OS_VERSION as number :( so it could be easer way
+# in if clause
+MAJOR_OS_VERSION=	${OS_VERSION:S/${OS_VERSION:C/^[0-9]*\.[0-9]*//}//}
+MINOR_OS_VERSION=	${OS_VERSION:C/^[0-9]*\.[0-9]*\.//:C/[^0-9].*//}
+
+# works only with kernel 2.6.15 or higher
+.	if ${MAJOR_OS_VERSION} < 2.6 || (${MAJOR_OS_VERSION} == 2.6 && ${MINOR_OS_VERSION} < 15)
+ONLY_FOR_PLATFORM=	Linux>=-2.6.15-*
+.	endif
+
+# SS like System Script
+PLIST_SUBST+=	SS=
+
+UDEV_RULES_DIR?=	/etc/udev/rules.d
 CONF_FILES+=		${EGDIR}/90-hal.rules ${UDEV_RULES_DIR}/90-hal.rules
+.else
+PLIST_SUBST+=	SS=@comment 
+.endif
 
 CHECK_PORTABILITY_SKIP+= configure tools/hal-system-power-reboot
 CHECK_PORTABILITY_SKIP+= tools/linux/hal-system-power-suspend-linux
@@ -58,25 +71,9 @@ CHECK_PORTABILITY_SKIP+= tools/hal-system-power-shutdown
 CHECK_PORTABILITY_SKIP+= tools/hal-system-power-hibernate
 CHECK_PORTABILITY_SKIP+= tools/hal-system-power-suspend
 
-PYTHON_PATCH_SCRIPTS+=	tools/device-manager/hal-device-manager.in
-
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../wip/policykit/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "volume_id.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# i can't get OS_VERSION as number :( so it could be easer way
-# in if clause
-MAJOR_OS_VERSION=	${OS_VERSION:S/${OS_VERSION:C/^[0-9]*\.[0-9]*//}//}
-MINOR_OS_VERSION=	${OS_VERSION:C/^[0-9]*\.[0-9]*\.//:C/[^0-9].*//}
-
-# It is possible to run hal on solaris and freebsd systems, may be
-# on NetBSD too ??
-.if ${OPSYS} != "Linux" || ${MAJOR_OS_VERSION} < 2.6 || \
-	(${MAJOR_OS_VERSION} == 2.6 && ${MINOR_OS_VERSION} < 15)
-ONLY_FOR_PLATFORM=	Linux>=-2.6.15-*
-.endif
