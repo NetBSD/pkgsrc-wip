@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2704 2007/12/02 18:39:50 adrian_p Exp $
+# $Id: Makefile,v 1.2705 2007/12/02 22:06:48 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -465,6 +465,7 @@ SUBDIR+=	gxmms2
 SUBDIR+=	haddock
 SUBDIR+=	hal
 SUBDIR+=	hal-dev
+SUBDIR+=	hal-info
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
