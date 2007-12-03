@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2705 2007/12/02 22:06:48 ondratu Exp $
+# $Id: Makefile,v 1.2706 2007/12/03 17:39:24 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -602,6 +602,7 @@ SUBDIR+=	hunspell-hr_HR
 SUBDIR+=	hunspell-hu_HU
 SUBDIR+=	hunspell-nl_NL
 SUBDIR+=	hunspell-ny_MW
+SUBDIR+=	hydrogen-current
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
 SUBDIR+=	iText
