@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2007/12/03 22:30:19 nocker Exp $
+
+--- Assemblers/68kasm/codegen.c.orig	2007-11-19 17:58:49.000000000 +0100
++++ Assemblers/68kasm/codegen.c	2007-11-19 17:59:06.000000000 +0100
+@@ -95,7 +95,7 @@
+ 		case PCDisp	: return 0x3A; break;
+ 		case PCIndex	: return 0x3B; break;
+ 		case Immediate	: return 0x3C; break;
+-		default		: printf("INVALID EFFECTIVE ADDRESSING MODE!\n"); exit (0);
++		default		: printf("INVALID EFFECTIVE ADDRESSING MODE!\n"); exit();
+ 		}
+ }
+ 
