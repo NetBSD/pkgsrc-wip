@@ -1,0 +1,5 @@
+This is an emulator of the Freescale ColdFire 68k microprocessor.
+Is manufactured for embedded systems development by Freescale
+Semiconductor (formerly the semiconductor sector of Motorola).
+It can do just about everything in the ColdFire 5206 chip and
+on the eval board now.
