@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2007/11/26 22:59:46 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/03 17:49:25 hoka_adam Exp $
 #
 
-VERSION=		2.0-rc1
+VERSION=		2.0-rc2
 DISTNAME=		awesome-${VERSION}
 PKGNAME=		${DISTNAME:S/0-/0/}
-PKGREVISION=	1
 CATEGORIES=		wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 
@@ -30,7 +29,7 @@ pre-install:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/awesome ${PREFIX}/bin/awesome
 	${INSTALL_PROGRAM} ${WRKSRC}/awesome-client ${PREFIX}/bin/awesome-client
-	${INSTALL_MAN} ${WRKSRC}/awesome.1 ${PREFIX}/${PKGMANDIR}/man1/awesome.1
+#	${INSTALL_MAN} ${WRKSRC}/awesome.1 ${PREFIX}/${PKGMANDIR}/man1/awesome.1
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
