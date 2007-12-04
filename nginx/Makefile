@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/04 17:36:17 ghen Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/04 17:47:12 ghen Exp $
 
 DISTNAME=		nginx-0.5.33
 CATEGORIES=		www
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	--pid-path=${VARBASE}/run/nginx.pid
 CONFIGURE_ARGS+=	--error-log-path=${NGINX_LOGDIR}/error.log
 CONFIGURE_ARGS+=	--http-log-path=${NGINX_LOGDIR}/access.log
 CONFIGURE_ARGS+=	--with-mail
-CONFIGURE_ARGS+=	--with-mail_ssl_module
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +52,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${EGDIR}/html/index.html
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "options.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
