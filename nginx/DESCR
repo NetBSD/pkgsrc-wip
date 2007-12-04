@@ -1,7 +1,10 @@
-nginx [engine x] is a HTTP server and IMAP/POP3 proxy server written by Igor
-Sysoev.
-It has been running on many heavily loaded Russian sites for more than two
-years.
-The sources are licensed under the BSD-like license.
+nginx (pronounced "engine X") is a lightweight web (HTTP) server/reverse proxy
+and mail (IMAP/POP3) proxy written by Igor Sysoev.
 
-Check http://nginx.net/
+nginx has been running for more than three years on many heavily loaded Russian
+sites including Rambler (RamblerMedia.com).  In March 2007 about 20% of all
+Russian virtual hosts were served or proxied by nginx.  According to Google
+Online Security Blog nginx serves or proxies about 4% of all Internet virtual
+hosts, although Netcraft shows much less percent.
+
+The sources are licensed under a BSD-like license.
