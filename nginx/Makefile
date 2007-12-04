@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/12/04 17:30:02 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/04 17:36:17 ghen Exp $
 
 DISTNAME=		nginx-0.5.33
 CATEGORIES=		www
@@ -24,17 +24,15 @@ CONFIGURE_ARGS+=	--with-mail_ssl_module
 
 PKG_SYSCONFSUBDIR=	nginx
 NGINX_LOGDIR?=		${VARBASE}/log/nginx
-EGDIR=			${PREFIX}/share/examples/nginx
 
-CONF_FILES=		${EGDIR:Q}/conf/fastcgi_params ${PKG_SYSCONFDIR:Q}/fastcgi_params
-CONF_FILES+=		${EGDIR:Q}/conf/koi-utf ${PKG_SYSCONFDIR:Q}/koi-utf
-CONF_FILES+=		${EGDIR:Q}/conf/koi-win ${PKG_SYSCONFDIR:Q}/koi-win
-CONF_FILES+=		${EGDIR:Q}/conf/mime.types ${PKG_SYSCONFDIR:Q}/mime.types
-CONF_FILES+=		${EGDIR:Q}/conf/nginx.conf ${PKG_SYSCONFDIR:Q}/nginx.conf
-CONF_FILES+=		${EGDIR:Q}/conf/win-utf ${PKG_SYSCONFDIR:Q}/win-utf
+EGDIR=			${PREFIX}/share/examples/nginx
+EGFILES=		fastcgi_params koi-utf koi-win mime.types nginx.conf win-utf
+
+.for file in ${EGFILES}
+CONF_FILES+=		${EGDIR:Q}/conf/${file} ${PKG_SYSCONFDIR}/${file}
+.endfor
 
 INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
-
 OWN_DIRS=		${NGINX_LOGDIR}
 
 BUILD_DEFS+=		PKG_SYSCONFBASE NGINX_LOGDIR VARBASE
@@ -48,15 +46,12 @@ SUBST_SED.paths=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,%%NGINX_LOGDIR%%,${NGINX_LOGDIR},g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${PREFIX}/sbin/
-	${INSTALL_DATA} ${WRKSRC}/conf/fastcgi_params ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/koi-utf ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/koi-win ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/mime.types ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/nginx.conf ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/conf/win-utf ${EGDIR}/conf/
-	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${EGDIR}/html/
-	${INSTALL_DATA} ${WRKSRC}/html/index.html ${EGDIR}/html/
+	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${PREFIX}/sbin/nginx
+.for file in ${EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/conf/${file} ${EGDIR}/conf/${file}
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${EGDIR}/html/50x.html
+	${INSTALL_DATA} ${WRKSRC}/html/index.html ${EGDIR}/html/index.html
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
