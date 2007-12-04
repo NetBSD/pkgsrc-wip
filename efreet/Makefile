@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/04 04:17:23 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/04 18:20:10 netcap Exp $
 #
 
 DISTNAME=	efreet-0.0.3.006
@@ -14,7 +14,5 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
 
-DEPENDS+=       ecore>=0.9.9.041:../../wip/ecore
 .include        "../../wip/ecore/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
