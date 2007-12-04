@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2706 2007/12/03 17:39:24 netcap Exp $
+# $Id: Makefile,v 1.2707 2007/12/04 03:54:16 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -256,6 +256,7 @@ SUBDIR+=	ecasound
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
 SUBDIR+=	ecore
+SUBDIR+=	edbus
 SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	edoc
