@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/04 03:50:24 netcap Exp $
+bin/e_dbus_hal
+bin/e_dbus_nm
+bin/e_dbus_notification_daemon
+bin/e_dbus_notify
+bin/e_dbus_test
+bin/e_dbus_test_client
+include/E_DBus.h
+include/E_Hal.h
+include/E_Nm.h
+include/E_Notification_Daemon.h
+include/E_Notify.h
+lib/libedbus.la
+lib/libehal.la
+lib/libenm.la
+lib/libenotify.la
+lib/pkgconfig/edbus.pc
+lib/pkgconfig/ehal.pc

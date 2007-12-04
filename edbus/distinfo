@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/12/04 03:50:24 netcap Exp $
+
+SHA1 (e_dbus-0.1.0.003.tar.gz) = 876f163472a215b60344ceed82b104ec035bb85f
+RMD160 (e_dbus-0.1.0.003.tar.gz) = 9e49ce9045d927ca91099262693b2f6575965253
+Size (e_dbus-0.1.0.003.tar.gz) = 359915 bytes
