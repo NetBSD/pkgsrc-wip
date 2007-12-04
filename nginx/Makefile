@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2007/12/04 17:25:49 ghen Exp $
-#
+# $NetBSD: Makefile,v 1.12 2007/12/04 17:30:02 ghen Exp $
 
-DISTNAME=		nginx-0.5.20
+DISTNAME=		nginx-0.5.33
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
