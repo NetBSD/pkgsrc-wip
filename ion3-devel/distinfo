@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2007/11/12 14:50:28 pmatias Exp $
+$NetBSD: distinfo,v 1.3 2007/12/04 19:56:32 pmatias Exp $
 
-SHA1 (ion-3rc-20071109.tar.gz) = 709d99b524e25fc190038959191dbaeb306a9a2d
-RMD160 (ion-3rc-20071109.tar.gz) = b89b725ec1f508161e30126c26f8494bd7ccfd28
-Size (ion-3rc-20071109.tar.gz) = 646945 bytes
+SHA1 (ion-3rc-20071130.tar.gz) = c9da40de4f522350bb366a037e34f00585f5acbe
+RMD160 (ion-3rc-20071130.tar.gz) = 236d0b28db141858363e5b3c241d7ecff8cd4860
+Size (ion-3rc-20071130.tar.gz) = 649204 bytes
 SHA1 (patch-aa) = 83b1c6dae87ac6b0874a7f865abd651e734fd543
 SHA1 (patch-ab) = e6cb9a5c5b3566da1bd5f9eae57befc24eb6bc5a
 SHA1 (patch-ac) = e9668f96a42d34f9b9f77e3ca61e435b9aafbc86

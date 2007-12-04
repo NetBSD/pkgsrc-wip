@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/11/12 14:39:56 pmatias Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/04 19:56:32 pmatias Exp $
 #
 
-DISTNAME=	ion-3rc-20071109
-PKGNAME=	ion3-20071109
+DISTNAME=	ion-3rc-20071130
+PKGNAME=	ion3-20071130
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/
 
