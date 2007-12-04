@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/09 05:26:43 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/04 20:21:54 jeremy-c-reed Exp $
 #
 
 DISTNAME=	xkeyboard-config-1.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://xlibs.freedesktop.org/xkbdesc/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software_2fXKeyboardConfig
+HOMEPAGE=	http://www.freedesktop.org/wiki/Software/XKeyboardConfig
 COMMENT=	X Keyboard Configuration Database
 
 PKG_DESTDIR_SUPPORT=	user-destdir
