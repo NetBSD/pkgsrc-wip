@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/08 18:30:49 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/04 16:09:44 ghen Exp $
 #
 
 DISTNAME=		nginx-0.5.20
@@ -30,6 +30,8 @@ CONF_FILES=		${EGDIR:Q}/nginx.conf ${PKG_SYSCONFDIR:Q}/nginx.conf
 CONF_FILES+=		${EGDIR:Q}/mime.types ${PKG_SYSCONFDIR:Q}/mime.types
 
 BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
+
+BUILD_TARGET=		build
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
