@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2007/11/26 13:11:35 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2007/12/04 04:17:23 netcap Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EVAS_BUILDLINK3_MK:=	${EVAS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	evas
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}evas
 
 .if ${EVAS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.evas+=	evas>=0.9.9.037
+BUILDLINK_API_DEPENDS.evas+=	evas>=0.9.9.041
 BUILDLINK_PKGSRCDIR.evas?=	../../wip/evas
 .endif	# EVAS_BUILDLINK3_MK
 
@@ -21,5 +21,7 @@ BUILDLINK_PKGSRCDIR.evas?=	../../wip/evas
 .include	"../../graphics/librsvg/buildlink3.mk"
 .include	"../../graphics/libungif/buildlink3.mk"
 .include	"../../graphics/freetype2/buildlink3.mk"
+.include        "../../graphics/png/buildlink3.mk"
+.include        "../../graphics/tiff/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

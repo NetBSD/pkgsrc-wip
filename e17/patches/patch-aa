@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2007/12/04 04:17:23 netcap Exp $
+
+--- src/bin/e.h.orig	2007-08-15 14:28:17.000000000 +0200
++++ src/bin/e.h
+@@ -16,6 +16,10 @@
+ #define _FILE_OFFSET_BITS  64
+ #endif
+ 
++#ifndef _POSIX_HOST_NAME_MAX
++#define _POSIX_HOST_NAME_MAX 255
++#endif
++
+ #ifdef __linux__
+ #include <features.h>
+ #endif

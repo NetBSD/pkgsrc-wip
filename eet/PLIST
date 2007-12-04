@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/02 14:50:13 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/04 04:17:22 netcap Exp $
 include/Eet.h
 lib/libeet.la
 lib/libeet.a
 lib/pkgconfig/eet.pc
 lib/libeet.so.0.9.10
 lib/libeet.so.0
-lib/libeet.so	
+lib/libeet.so

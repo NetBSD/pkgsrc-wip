@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2007/04/29 17:55:06 grzela1 Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2007/12/04 04:17:22 netcap Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EMBRYO_BUILDLINK3_MK:=	${EMBRYO_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	embryo
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}embryo
 
 .if ${EMBRYO_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.embryo+=	embryo>=0.9.1.037
+BUILDLINK_API_DEPENDS.embryo+=	embryo>=0.9.1.041
 BUILDLINK_PKGSRCDIR.embryo?=	../../wip/embryo
 .endif	# EMBRYO_BUILDLINK3_MK
 
