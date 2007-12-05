@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2007/12/04 18:55:51 netcap Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/05 06:29:49 netcap Exp $
 #
 
 DISTNAME=	edje-0.5.0.041
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2007-08-26/
+MASTER_SITES=   http://www.yazzy.org/pkgsrc/e17/ \
+                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/

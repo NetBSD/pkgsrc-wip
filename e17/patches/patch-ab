@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2007/12/05 06:29:49 netcap Exp $
+--- data/etc/sysactions.conf.orig	2007-12-04 18:31:27.000000000 +0100
++++ data/etc/sysactions.conf	2007-12-04 18:32:19.000000000 +0100
+@@ -45,12 +45,13 @@
+ 
+ action:   halt      /sbin/shutdown -h now
+ action:   reboot    /sbin/shutdown -r now
+-action:   suspend   /etc/acpi/sleep.sh force
+-action:   hibernate /etc/acpi/hibernate.sh force
++action:   suspend   /usr/sbin/apm -z
++action:   hibernate /usr/sbin/apm -S
+ 
+ # root is allowed to do anything - but it needs to be here explicitly anyway
+ user:     root      allow: *
+ # members of operator, staff and admin groups should be able to do all
++group:    wheel	    allow: *
+ group:    operator  allow: *
+ group:    staff     allow: *
+ group:    admin     allow: *

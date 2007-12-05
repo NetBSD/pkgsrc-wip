@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2007/12/04 04:17:23 netcap Exp $
+@comment $NetBSD: PLIST,v 1.9 2007/12/05 06:29:49 netcap Exp $
 include/Evas.h
 include/Evas_Engine_Buffer.h
+include/Evas_Engine_SDL.h
 include/Evas_Engine_Software_X11.h
 include/Evas_Engine_XRender_X11.h
 lib/evas/modules/engines/buffer/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.so
@@ -9,6 +10,9 @@ lib/evas/modules/engines/buffer/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.a
 lib/evas/modules/engines/software_generic/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.so
 lib/evas/modules/engines/software_generic/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/engines/software_generic/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.a
+lib/evas/modules/engines/software_sdl/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.a
+lib/evas/modules/engines/software_sdl/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/evas/modules/engines/software_sdl/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.so
 lib/evas/modules/engines/software_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.so
 lib/evas/modules/engines/software_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/evas/modules/engines/software_x11/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.a
@@ -58,6 +62,7 @@ lib/libevas.so
 lib/libevas.la
 lib/libevas.a
 lib/pkgconfig/evas.pc
+lib/pkgconfig/evas-software-sdl.pc
 lib/pkgconfig/evas-software-x11.pc
 lib/pkgconfig/evas-software-buffer.pc
 lib/pkgconfig/evas-xrender-x11.pc
@@ -97,6 +102,8 @@ lib/pkgconfig/evas-xrender-x11.pc
 @dirrm lib/evas/modules/engines/software_generic
 @dirrm lib/evas/modules/engines/buffer/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/evas/modules/engines/buffer
+@dirrm lib/evas/modules/engines/software_sdl/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/evas/modules/engines/software_sdl
 @dirrm lib/evas/modules/engines
 @dirrm lib/evas/modules
 @dirrm lib/evas

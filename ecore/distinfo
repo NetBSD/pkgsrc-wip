@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/12/04 04:17:23 netcap Exp $
+$NetBSD: distinfo,v 1.7 2007/12/05 06:29:49 netcap Exp $
 
-SHA1 (ecore-0.9.9.041.tar.gz) = 9f878a79fe29bf0aa8abf64e2a9ff573da2e0e99
-RMD160 (ecore-0.9.9.041.tar.gz) = a343859101ccec5d7e4088dc11d885991b312da8
-Size (ecore-0.9.9.041.tar.gz) = 822370 bytes
+SHA1 (ecore-0.9.9.041.tar.gz) = 6c96821bf95fbeeb4099db9317ee1f53106dd9b1
+RMD160 (ecore-0.9.9.041.tar.gz) = 0c61751afcb3e9c826bc0324e1b0669e2afe4d09
+Size (ecore-0.9.9.041.tar.gz) = 4818554 bytes

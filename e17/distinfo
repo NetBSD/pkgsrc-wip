@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2007/12/04 04:17:23 netcap Exp $
+$NetBSD: distinfo,v 1.4 2007/12/05 06:29:49 netcap Exp $
 
-SHA1 (enlightenment-0.16.999.041.tar.gz) = 4cc3e7e6a60649d16f5319e4218c81c748159c2d
-RMD160 (enlightenment-0.16.999.041.tar.gz) = a7d333c97709504628c7cc575a7afda4800a8082
-Size (enlightenment-0.16.999.041.tar.gz) = 33189272 bytes
-SHA1 (patch-aa) = 250a7f07615f79bc8c6c01d704e18eca47adbc36
+SHA1 (e17-0.16.999.041.tar.gz) = 3205e5e47dd21c5d4f01948a30547757f8a97bbb
+RMD160 (e17-0.16.999.041.tar.gz) = 1b7866cb3596b7deaf1e0f68654cd36cfc3f2bd8
+Size (e17-0.16.999.041.tar.gz) = 33974211 bytes
+SHA1 (patch-aa) = faf4c355b3f008b025fcbf435577cedb48cbd6f6
+SHA1 (patch-ab) = 2cb3a755e7303c64ab5297ee351095cf241db431
+SHA1 (patch-ac) = 25a812cd87c22ce40561667e306645381bbe1c28

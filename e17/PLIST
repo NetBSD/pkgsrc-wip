@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/04 04:17:23 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/05 06:29:49 netcap Exp $
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
@@ -7,7 +7,6 @@ bin/enlightenment_remote
 bin/enlightenment_start
 bin/enlightenment_sys
 bin/enlightenment_thumb
-etc/enlightenment/sysactions.conf
 include/enlightenment/e.h
 include/enlightenment/e_about.h
 include/enlightenment/e_actions.h
@@ -79,6 +78,12 @@ include/enlightenment/e_module.h
 include/enlightenment/e_mouse.h
 include/enlightenment/e_moveresize.h
 include/enlightenment/e_msg.h
+include/enlightenment/e_msgbus.h
+include/enlightenment/e_fm_hal.h
+include/enlightenment/e_config_data.h
+include/enlightenment/e_intl_data.h
+include/enlightenment/e_toolbar.h
+include/enlightenment/e_int_toolbar_config.h
 include/enlightenment/e_obj_dialog.h
 include/enlightenment/e_object.h
 include/enlightenment/e_order.h
@@ -327,6 +332,8 @@ share/enlightenment/data/input_methods/uim.imc
 share/enlightenment/data/other/applications.tar.gz
 share/enlightenment/data/other/efm_favorites.tar.gz
 share/enlightenment/data/other/icon_example.tar.gz
+share/enlightenment/data/other/desktop_files.tar.gz
+share/enlightenment/data/other/desktop_order.tar.gz
 share/enlightenment/data/themes/default.edj
 share/enlightenment/doc/FDO.txt
 share/enlightenment/doc/cache.txt
@@ -458,6 +465,7 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/clock
 @dirrm lib/enlightenment/modules/battery/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/battery
+@dirrm lib/enlightenment/modules/msgbus_lang
 @dirrm lib/enlightenment/modules
 @dirrm lib/enlightenment
 @dirrm include/enlightenment

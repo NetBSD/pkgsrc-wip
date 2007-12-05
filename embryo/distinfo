@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/12/04 04:17:22 netcap Exp $
+$NetBSD: distinfo,v 1.7 2007/12/05 06:29:49 netcap Exp $
 
-SHA1 (embryo-0.9.1.041.tar.gz) = ab0da4fa0e18e0f64fb7a9aab688c9c319ba787c
-RMD160 (embryo-0.9.1.041.tar.gz) = 7f78a2edf50141a6479d57432a5e95daaa329235
-Size (embryo-0.9.1.041.tar.gz) = 470925 bytes
+SHA1 (embryo-0.9.1.041.tar.gz) = ba9a29fad780cce89e0e82fb655a502cf0d95f22
+RMD160 (embryo-0.9.1.041.tar.gz) = 1dbd82dc5c429722996dc02b21882d40a31f89e3
+Size (embryo-0.9.1.041.tar.gz) = 1814725 bytes
