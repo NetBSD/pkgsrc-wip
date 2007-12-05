@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/08/04 02:48:04 obache Exp $
+$NetBSD: distinfo,v 1.4 2007/12/05 05:36:32 obache Exp $
 
-SHA1 (Net-Amazon-0.43.tar.gz) = caf3eb8b369226571cfdc386a2a6203ee466480b
-RMD160 (Net-Amazon-0.43.tar.gz) = d731091b4b10796d4ee80a5e1eb3bb10ebec3942
-Size (Net-Amazon-0.43.tar.gz) = 166037 bytes
+SHA1 (Net-Amazon-0.46.tar.gz) = 657affa2ea0189ceb862e1fd26a38cb66eed3781
+RMD160 (Net-Amazon-0.46.tar.gz) = e072a24b1dd6e2380d703a7a342e8052aca41ded
+Size (Net-Amazon-0.46.tar.gz) = 150669 bytes
