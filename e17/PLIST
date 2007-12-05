@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/05 06:29:49 netcap Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/05 21:44:29 netcap Exp $
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
 bin/enlightenment_imc
+bin/enlightenment_init
 bin/enlightenment_remote
 bin/enlightenment_start
 bin/enlightenment_sys
@@ -21,6 +22,7 @@ include/enlightenment/e_color.h
 include/enlightenment/e_color_class.h
 include/enlightenment/e_color_dialog.h
 include/enlightenment/e_config.h
+include/enlightenment/e_config_data.h
 include/enlightenment/e_config_dialog.h
 include/enlightenment/e_configure.h
 include/enlightenment/e_confirm_dialog.h
@@ -42,6 +44,7 @@ include/enlightenment/e_filereg.h
 include/enlightenment/e_flowlayout.h
 include/enlightenment/e_fm.h
 include/enlightenment/e_fm_custom.h
+include/enlightenment/e_fm_hal.h
 include/enlightenment/e_fm_mime.h
 include/enlightenment/e_fm_prop.h
 include/enlightenment/e_fm_shared.h
@@ -63,7 +66,9 @@ include/enlightenment/e_int_config_modules.h
 include/enlightenment/e_int_gadcon_config.h
 include/enlightenment/e_int_menus.h
 include/enlightenment/e_int_shelf_config.h
+include/enlightenment/e_int_toolbar_config.h
 include/enlightenment/e_intl.h
+include/enlightenment/e_intl_data.h
 include/enlightenment/e_ipc.h
 include/enlightenment/e_ipc_codec.h
 include/enlightenment/e_ipc_handlers.h
@@ -79,11 +84,6 @@ include/enlightenment/e_mouse.h
 include/enlightenment/e_moveresize.h
 include/enlightenment/e_msg.h
 include/enlightenment/e_msgbus.h
-include/enlightenment/e_fm_hal.h
-include/enlightenment/e_config_data.h
-include/enlightenment/e_intl_data.h
-include/enlightenment/e_toolbar.h
-include/enlightenment/e_int_toolbar_config.h
 include/enlightenment/e_obj_dialog.h
 include/enlightenment/e_object.h
 include/enlightenment/e_order.h
@@ -111,6 +111,7 @@ include/enlightenment/e_theme.h
 include/enlightenment/e_theme_about.h
 include/enlightenment/e_thumb.h
 include/enlightenment/e_tlist.h
+include/enlightenment/e_toolbar.h
 include/enlightenment/e_user.h
 include/enlightenment/e_utils.h
 include/enlightenment/e_widget.h
@@ -278,6 +279,9 @@ lib/enlightenment/modules/ibox/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/layout/e-module-layout.edj
 lib/enlightenment/modules/layout/module.desktop
 lib/enlightenment/modules/layout/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/msgbus_lang/e-module-msgbus_lang.edj
+lib/enlightenment/modules/msgbus_lang/module.desktop
+lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/pager/e-module-pager.edj
 lib/enlightenment/modules/pager/module.desktop
 lib/enlightenment/modules/pager/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -293,6 +297,9 @@ lib/enlightenment/modules/winlist/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/wizard/e-module-wizard.edj
 lib/enlightenment/modules/wizard/module.desktop
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_000.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_010.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_020.la
 lib/enlightenment/preload/e_precache.la
 share/enlightenment/AUTHORS
 share/enlightenment/COPYING
@@ -329,16 +336,16 @@ share/enlightenment/data/init/default.edj
 share/enlightenment/data/input_methods/iiimf.imc
 share/enlightenment/data/input_methods/scim.imc
 share/enlightenment/data/input_methods/uim.imc
-share/enlightenment/data/other/applications.tar.gz
-share/enlightenment/data/other/efm_favorites.tar.gz
-share/enlightenment/data/other/icon_example.tar.gz
 share/enlightenment/data/other/desktop_files.tar.gz
 share/enlightenment/data/other/desktop_order.tar.gz
+share/enlightenment/data/other/efm_favorites.tar.gz
+share/enlightenment/data/other/icon_example.tar.gz
 share/enlightenment/data/themes/default.edj
 share/enlightenment/doc/FDO.txt
 share/enlightenment/doc/cache.txt
 share/enlightenment/doc/documentation.html
 share/enlightenment/doc/enlightenment.png
+share/examples/enlightenment/sysactions.conf
 share/locale/bg/LC_MESSAGES/enlightenment.mo
 share/locale/ca/LC_MESSAGES/enlightenment.mo
 share/locale/de/LC_MESSAGES/enlightenment.mo
@@ -351,8 +358,10 @@ share/locale/ko/LC_MESSAGES/enlightenment.mo
 share/locale/pt_BR/LC_MESSAGES/enlightenment.mo
 share/locale/ru/LC_MESSAGES/enlightenment.mo
 share/locale/sl/LC_MESSAGES/enlightenment.mo
+share/locale/zh_TW/LC_MESSAGES/enlightenment.mo
 share/xsessions/enlightenment.desktop
 @dirrm share/xsessions
+@dirrm share/examples/enlightenment
 @dirrm share/enlightenment/doc
 @dirrm share/enlightenment/data/themes
 @dirrm share/enlightenment/data/other
@@ -375,6 +384,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/start
 @dirrm lib/enlightenment/modules/pager/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/pager
+@dirrm lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/msgbus_lang
 @dirrm lib/enlightenment/modules/layout/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/layout
 @dirrm lib/enlightenment/modules/ibox/${LOWER_OPSYS}elf-${MACHINE_ARCH}
@@ -465,8 +476,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/clock
 @dirrm lib/enlightenment/modules/battery/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/battery
-@dirrm lib/enlightenment/modules/msgbus_lang
 @dirrm lib/enlightenment/modules
 @dirrm lib/enlightenment
 @dirrm include/enlightenment
+@exec ${MKDIR} %D/etc/enlightenment
 @dirrm etc/enlightenment

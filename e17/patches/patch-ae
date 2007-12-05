@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2007/12/05 21:44:29 netcap Exp $
+
+--- data/etc/Makefile.in.orig	2007-12-05 20:35:16.000000000 +0100
++++ data/etc/Makefile.in
+@@ -212,7 +212,6 @@ x_libs = @x_libs@
+ MAINTAINERCLEANFILES = Makefile.in
+ filesdir = $(sysconfdir)/enlightenment
+ files_DATA = \
+-sysactions.conf
+ 
+ EXTRA_DIST = $(files_DATA)
+ all: all-am
