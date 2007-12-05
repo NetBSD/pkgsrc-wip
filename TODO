@@ -14,7 +14,7 @@ Suggested package updates
 	o ecasound-2.4.6
 	o editline-20070831.2.10
 	o electricsheep-2.6.3
-	o emelfm2-0.3.5
+	o emelfm2-0.3.6
 	o endeavour-2.8.4
 	o fakenes-0.5.7
 	o firebird-2.0.3
@@ -29,6 +29,7 @@ Suggested package updates
 	o grisbi-0.5.8
 	o guichan-0.7.1
 	o hu-go-2.11
+	o ion3-devel-20071130
 	o kino-1.0.0
 	o kplayer-0.6.3
 	o libgksu-2.0.4
