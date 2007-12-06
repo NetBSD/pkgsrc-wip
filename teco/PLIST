@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/06 17:41:49 asau Exp $
+bin/tecoc
+share/teco/upcase.tec
+share/teco/change.tes
+share/teco/date.tes
+share/teco/detab.tes
+share/teco/dir.tes
+share/teco/makprnt.tes
+share/teco/squ.tes
+share/teco/unsqu.tes
+share/teco/change.tec
+share/teco/checkqr.tec
+share/teco/date.tec
+share/teco/detab.tec
+share/teco/dir.tec
+share/teco/lowcase.tec
+share/teco/makprnt.tec
+share/teco/squ.tec
+share/teco/sub.tec
+share/teco/tstbsl.tec
+share/teco/tstcss.tec
+share/teco/tstequ.tec
+share/teco/tsto.tec
+share/teco/tstqr.tec
+share/teco/tstsrc.tec
+share/teco/tst.tec
+share/teco/unsqu.tec
+share/doc/teco/readme.1st
+share/doc/teco/readme.lnx
+share/doc/teco/changes.txt
+share/doc/teco/aaout.txt
+share/doc/teco/problems.txt
+share/doc/teco/video.txt
+share/doc/teco/teco.doc
+share/doc/teco/wchart.txt
+@dirrm share/doc/teco
+@dirrm share/teco
