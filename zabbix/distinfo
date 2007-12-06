@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/06 23:55:54 asau Exp $
+$NetBSD: distinfo,v 1.1.1.2 2007/12/06 23:57:07 asau Exp $
 
-SHA1 (clisp-2.43.tar.bz2) = 85e3e8f626b31dfb158100e631ea17bf48364fad
-RMD160 (clisp-2.43.tar.bz2) = 3088132543c920e02b482c9031742ba34f2fe017
-Size (clisp-2.43.tar.bz2) = 8143871 bytes
-SHA1 (patch-ai) = 8291cfd4c27cbb22d5a72168cdb21c6d26400f54
-SHA1 (patch-aj) = 37af4382519ddb21587006789165ba1173e17577
-SHA1 (patch-ak) = d9bdea2e480e8ea5fbe7e703dfce62fe47b9b7e7
-SHA1 (patch-al) = 90ec5cc5028dba1ecda7d499def88303cbff2d2a
+SHA1 (zabbix-1.4.2.tar.gz) = 35365cb7fc2525b91b75d0eaa8e3541b5196ff98
+RMD160 (zabbix-1.4.2.tar.gz) = d95e9553dd2daa109db7b7990899f5e7c132a668
+Size (zabbix-1.4.2.tar.gz) = 3302530 bytes
+SHA1 (patch-aa) = a5148496462d8afc9c2bdf9094a25be836129c55
