@@ -1,32 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/04 22:08:35 yazzy Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2007/12/06 03:30:52 netcap Exp $
 #
 
 DISTNAME=	esmart-0.9.0.011
-PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.yazzy.org/pkgsrc/e17/
-EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=   http://www.yazzy.org/pkgsrc/e17/ \
+                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
-COMMENT=	A collection of evas smart objects.
+COMMENT=	Collection of evas smart objects
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-USE_TOOLS=	pkg-config
-DEPENDS+=	ecore>=0.9.9.041:../../wip/ecore
-DEPENDS+=	epsilon>=0.3.0:../../wip/epsilon
-DEPENDS+=	jpeg>=6:../../graphics/jpeg
-DEPENDS+=	libltdl>=1.5.24:../../devel/libltdl
-DEPENDS+=	imlib2>=1.4.0:../../graphics/imlib2
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS=	gmake pkg-config
 
-CONFIGURE_ARGS=	--with-edje-cc=${PREFIX}/bin/edje_cc
+CONFIGURE_ARGS=		--with-edje-cc=${PREFIX}/bin/edje_cc
 
-.include	"../../wip/ecore/buildlink3.mk"
-.include	"../../wip/edje/buildlink3.mk"
-.include	"../../wip/epsilon/buildlink3.mk"
-.include	"../../graphics/jpeg/buildlink3.mk"
-.include	"../../graphics/imlib2/buildlink3.mk"
-.include	"../../devel/libltdl/buildlink3.mk"
-
+.include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/edje/buildlink3.mk"
+.include "../../wip/epsilon/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
