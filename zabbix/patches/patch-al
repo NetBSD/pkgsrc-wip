@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2007/12/06 23:55:54 asau Exp $
+
+--- ffcall/callback/trampoline_r/Makefile.in.orig	2006-04-28 11:10:31.000000000 +0300
++++ ffcall/callback/trampoline_r/Makefile.in
+@@ -124,7 +124,7 @@ libtrampoline.la : $(OBJECTS)
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	if [ ! -d $(includedir) ] ; then mkdir $(includedir) ; fi
+-	$(INSTALL_DATA) trampoline_r.h $(includedir)/trampoline_r.h
++	$(TOOLS_PLATFORM.install) -c -m 644 trampoline_r.h $(includedir)/trampoline_r.h
+ 
+ install : all force
+ 	if [ ! -d $(DESTDIR)$(prefix) ] ; then mkdir $(DESTDIR)$(prefix) ; fi
