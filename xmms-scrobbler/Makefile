@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/04/24 15:24:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/06 06:34:58 netcap Exp $
 #
 
-DISTNAME=	xmms-scrobbler_0.3.8.1.orig
+DISTNAME=	xmms-scrobbler_0.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xmms-scrobbler/}
@@ -13,8 +13,10 @@ COMMENT=	XMMS plugin for the last.fm music community
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
+CONFIGURE_ARGS+=	--disable-bmp-plugin
 
 .include "../../audio/musicbrainz/buildlink3.mk"
+.include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
