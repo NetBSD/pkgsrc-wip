@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2709 2007/12/06 17:49:59 asau Exp $
+# $Id: Makefile,v 1.2710 2007/12/06 17:50:59 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1605,6 +1605,7 @@ SUBDIR+=	tcpxtract
 SUBDIR+=	tde
 SUBDIR+=	teamspeak
 SUBDIR+=	teapot
+SUBDIR+=	teco
 SUBDIR+=	tendra
 SUBDIR+=	tenmado
 SUBDIR+=	testdisk
