@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/12/05 06:29:49 netcap Exp $
+$NetBSD: patch-aa,v 1.3 2007/12/07 18:52:21 netcap Exp $
 
 --- src/bin/e.h.orig	2007-09-25 16:26:36.000000000 +0200
 +++ src/bin/e.h
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2007/12/05 06:29:49 netcap Exp $
  #include "config.h"
  
 +#ifndef _POSIX_HOST_NAME_MAX
-+#ifdef _SYS_PARAM_H_
++#ifdef MAXHOSTNAMELEN
 +#define _POSIX_HOST_NAME_MAX MAXHOSTNAMELEN
 +#else
 +#define _POSIX_HOST_NAME_MAX 256
