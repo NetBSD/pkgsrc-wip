@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/01 17:23:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/07 18:07:12 asau Exp $
 #
 
 DISTNAME=	chicken-2.732
@@ -39,6 +39,7 @@ PLATFORM=	solaris
 PKG_FAIL_REASON=	"${OPSYS} is not supported"
 .endif
 
+MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
 MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/man/man1
 
