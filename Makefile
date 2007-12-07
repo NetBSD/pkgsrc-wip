@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2710 2007/12/06 17:50:59 asau Exp $
+# $Id: Makefile,v 1.2711 2007/12/07 20:38:41 briandealwis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1241,6 +1241,7 @@ SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdfedit
 SUBDIR+=	pdftk
+SUBDIR+=	pdf2svg
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
