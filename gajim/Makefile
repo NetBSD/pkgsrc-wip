@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2007/11/18 10:34:38 netcap Exp $
+# $NetBSD: Makefile,v 1.11 2007/12/07 22:14:08 netcap Exp $
 #
 
-DISTNAME=	gajim-0.11.3
+DISTNAME=	gajim-0.11.4
 CATEGORIES=	chat python
 MASTER_SITES=	http://www.gajim.org/downloads/
 
