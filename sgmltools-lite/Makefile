@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2006/12/20 23:43:49 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.12 2007/12/08 01:57:56 lexort Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
+PKGREVISION=	1
 CATEGORIES=	net www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sgmltools-lite/}
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://sgmltools-lite.sourceforge.net/
 COMMENT=	Friendly Python interface to SGML software
 
@@ -20,13 +21,21 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV=	PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	sgml
-CONFIGURE_ARGS+=	--with-etcsgml=${PKG_SYSCONFDIR:Q}
+EGDIR=			${LOCALBASE}/share/examples/sgmltools-lite
+CONFIGURE_ARGS+=	--with-etcsgml=${EGDIR}
 CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share
 
 PYTHON_VERSIONS_ACCEPTED=	23 22 21 20
+
+# Avoid using -s on /usr/pkg/bin/sgmltools
 _STRIPFLAG_INSTALL=
 
 SGML_CATALOGS=	${PKG_SYSCONFDIR}/catalog
+
+CONF_FILES=	${EGDIR}/aliases ${PKG_SYSCONFDIR}/aliases
+CONF_FILES+=	${EGDIR}/catalog ${PKG_SYSCONFDIR}/catalog
+CONF_FILES+=	${EGDIR}/catalog.rh62 ${PKG_SYSCONFDIR}/catalog.rh62
+CONF_FILES+=	${EGDIR}/catalog.suse ${PKG_SYSCONFDIR}/catalog.suse
 
 pre-configure:
 
@@ -40,7 +49,7 @@ pre-configure:
 
 post-install:
 
-	${INSTALL_DATA} ${WRKDIR}/catalog ${PKG_SYSCONFDIR}
+	${INSTALL_DATA} ${WRKDIR}/catalog ${EGDIR}
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../lang/python/application.mk"
