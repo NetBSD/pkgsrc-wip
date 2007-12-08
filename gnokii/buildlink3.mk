@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/02/02 13:04:00 koifren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/12/08 16:13:11 shattered Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNOKII_BUILDLINK3_MK:=	${GNOKII_BUILDLINK3_MK}+
@@ -17,7 +17,6 @@ BUILDLINK_PKGSRCDIR.gnokii?=	../../wip/gnokii
 .endif	# GNOKII_BUILDLINK3_MK
 
 .include "../../devel/libusb/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.3 2007/06/24 10:00:40 shattered Exp $
+$NetBSD: patch-ad,v 1.4 2007/12/08 16:13:11 shattered Exp $
 
---- include/gnokii.h.orig	2006-06-18 17:02:00.000000000 +0000
+--- include/gnokii.h.orig	2007-11-24 11:31:01.000000000 +0000
 +++ include/gnokii.h
 @@ -44,7 +44,7 @@ extern "C" {
- #if defined(__linux__) || defined(__GLIBC__)
+ #if defined(__linux__) || defined(__GLIBC__) || defined(__CYGWIN__)
  #  include <stdint.h>
  #  include <sys/time.h>
 -#elif defined(__svr4__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__MACH__)
