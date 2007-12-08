@@ -1,4 +1,4 @@
-#define _PATH_DHCPD_CONF "@@SYSCONFDIR@@/dhcp/dhcpd.conf"
+#define _PATH_DHCPD_CONF "@@SYSCONFDIR@@/dhcpd.conf"
 #define _PATH_DHCPD_PID "@@VARBASE@@/run/isc-dhcp/isc-dhcpd.pid"
 #define _PATH_DHCPD_DB "@@VARBASE@@/db/isc-dhcp/dhcpd.leases"
 #define _PATH_DHCLIENT_DB "@@VARBASE@@/db/isc-dhcp/dhclient.leases"
