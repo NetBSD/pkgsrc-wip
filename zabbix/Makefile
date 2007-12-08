@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.2 2007/12/06 23:57:07 asau Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/08 11:40:42 asau Exp $
 
 DISTNAME=	zabbix-1.4.2
-#PKGREVISION=	#
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
