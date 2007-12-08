@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/20 08:00:50 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/08 22:20:04 netcap Exp $
 bin/audacious
 bin/audtool
 include/audacious/audctrl.h
@@ -300,6 +300,7 @@ share/locale/cy/LC_MESSAGES/audacious.mo
 share/locale/de/LC_MESSAGES/audacious.mo
 share/locale/el/LC_MESSAGES/audacious.mo
 share/locale/es/LC_MESSAGES/audacious.mo
+share/locale/et/LC_MESSAGES/audacious.mo
 share/locale/fi/LC_MESSAGES/audacious.mo
 share/locale/fr/LC_MESSAGES/audacious.mo
 share/locale/hi/LC_MESSAGES/audacious.mo

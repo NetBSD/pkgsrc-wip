@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/11/20 08:00:50 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.14 2007/12/08 22:20:04 netcap Exp $
 #
 
-DISTNAME=		audacious-1.4.2
+DISTNAME=		audacious-1.4.4
 #PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/

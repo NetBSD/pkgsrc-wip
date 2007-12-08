@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/11/20 08:00:50 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2007/12/08 22:20:04 netcap Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AUDACIOUS_BUILDLINK3_MK:=	${AUDACIOUS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	audacious
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}audacious
 
 .if ${AUDACIOUS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.audacious+=	audacious>=1.4.2
+BUILDLINK_API_DEPENDS.audacious+=	audacious>=1.4.4
 BUILDLINK_PKGSRCDIR.audacious?=	../../wip/audacious
 BUILDLINK_DEPMETHOD.audacious?=	build
 .endif	# AUDACIOUS_BUILDLINK3_MK
