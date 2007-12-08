@@ -1,5 +1,5 @@
-$Id: TODO,v 1.1.1.1 2007/12/06 23:57:07 asau Exp $
+$Id: TODO,v 1.2 2007/12/08 11:37:15 asau Exp $
 
 1. Install documentation.
 2. Install sample configuration files.
-3. Provide options.
+3. Options: provide sane default values.
