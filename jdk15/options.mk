@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2007/06/12 17:36:12 briandealwis Exp $
+# $NetBSD: options.mk,v 1.8 2007/12/08 01:32:35 heidnes Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
-PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin
+PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin inet6
 PKG_SUGGESTED_OPTIONS=		jdk15-plugin
 PKG_OPTIONS_LEGACY_VARS+=	JDK15_USE_JCE:jdk15-jce
 

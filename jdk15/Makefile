@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/11/27 00:11:58 heidnes Exp $
+# $NetBSD: Makefile,v 1.18 2007/12/08 01:32:35 heidnes Exp $
 
 JDK_VERSION=		1.5.0
 JDK_UPDATE=		13
@@ -105,6 +105,15 @@ FETCH_MESSAGE+= "       ${JRL_DOWNLOAD}"
 FETCH_MESSAGE+= " and place them as:"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_SRCFILE}"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_BINFILE}"
+.if !empty(PKG_OPTIONS:Mjdk15-jce)
+FETCH_MESSAGE+= ""
+FETCH_MESSAGE+= " Additionally, for the Java Cryptography Extension"
+FETCH_MESSAGE+= " please download jce_policy-1_5_0.zip from"
+FETCH_MESSAGE+= "   http://java.sun.com/javase/downloads/index_jdk5.jsp"
+FETCH_MESSAGE+= " via the link named Java Cryptography Extension (JCE)"
+FETCH_MESSAGE+= " Unlimited Strength Jurisdiction Policy Files 5.0"
+FETCH_MESSAGE+= " and place it in ${DISTDIR}"
+.endif
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Please download the BSD JDK 1.5 Patchset ${JDK_PATCHSET_VERSION}"
 FETCH_MESSAGE+= " (${PATCHSETFILE}) from:"
