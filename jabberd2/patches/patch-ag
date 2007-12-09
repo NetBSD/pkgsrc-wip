@@ -1,0 +1,76 @@
+$NetBSD: patch-ag,v 1.8 2007/12/09 07:13:23 schnoebe Exp $
+
+--- etc/c2s.xml.in.orig	2007-10-31 03:54:47.000000000 -0500
++++ etc/c2s.xml.in
+@@ -6,7 +6,7 @@
+   <!-- The process ID file. comment this out if you don't need to know
+        to know the process ID from outside the process (eg for control
+        scripts) -->
+-  <pidfile>@localstatedir@/jabberd/pid/c2s.pid</pidfile>
++       <pidfile>@PIDDIR@/c2s.pid</pidfile>
+ 
+   <!-- Router connection configuration -->
+   <router>
+@@ -28,7 +28,7 @@
+          If this is commented out, or the file can't be read, no attempt
+          will be made to establish an encrypted channel with the router. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
+ 
+     <!-- Router connection retry -->
+@@ -61,7 +61,7 @@
+     
+     <!-- If logging to file, this is the filename of the logfile -->
+     <!--
+-    <file>@localstatedir@/jabberd/log/c2s.log</file>
++    <file>@LOGDIR@/c2s.log</file>
+     -->
+   </log>
+ 
+@@ -117,7 +117,7 @@
+     <id register-enable='true'>localhost</id>
+     <!-- or
+     <id realm='company'
+-        pemfile='@sysconfdir@/server.pem'
++        pemfile='@SSLCERTS@/server.pem'
+         verify-mode='7'
+         require-starttls='true'
+         register-enable='true'
+@@ -156,7 +156,7 @@
+          use STARTTLS over the standard XMPP port 5222 then you
+          MUST specify the pemfile in the 'id' tag above. -->
+     <!--
+-    <pemfile>@sysconfdir@/server.pem</pemfile>
++    <pemfile>@SSLCERTS@/server.pem</pemfile>
+     -->
+ 
+     <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
+@@ -384,7 +384,7 @@
+     <!-- SQLite driver configuration -->
+     <sqlite>
+       <!-- Database name -->
+-      <dbname>@localstatedir@/jabberd/db/sqlite.db</dbname>
++      <dbname>@DBDIR@/sqlite.db</dbname>
+ 
+       <!-- Transacation support. If this is commented out, transactions
+            will be disabled. This might make database accesses faster,
+@@ -398,7 +398,7 @@
+     <!-- Berkeley DB module configuration -->
+     <db>
+       <!-- Directory to store database files under -->
+-      <path>@localstatedir@/jabberd/db</path>
++      <path>@DBDIR@</path>
+       
+       <!-- Synchronize the database to disk after each write. If you
+            disable this, database accesses may be faster, but data may
+@@ -462,7 +462,7 @@
+     <!-- Pipe module configuration -->
+     <pipe>
+       <!-- Program to execute -->
+-      <exec>@bindir@/pipe-auth.pl</exec>
++      <exec>@BINDIR@/pipe-auth.pl</exec>
+     </pipe>
+ 
+   </authreg>
