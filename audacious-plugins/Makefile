@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/12/08 22:20:04 netcap Exp $
+# $NetBSD: Makefile,v 1.24 2007/12/09 10:05:20 netcap Exp $
 #
 
 DISTNAME=		audacious-plugins-1.4.2
@@ -37,7 +37,7 @@ CFLAGS+=	-I. -I../flacng -Ilibflacng
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 			--disable-coreaudio --disable-projectm \
-			--disable-sid
+			--disable-sid --disable-gnomeshortcuts
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
@@ -96,7 +96,7 @@ CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}			\
 			--with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}	\
 			--with-cdda-dir=/cdrom/
 PLIST_SUBST+=		OSS=""
-PLIST_SUBST+=		SUN="@comment "
+PLIST_SUBST+=		SUN=""
 .elif ${OPSYS} == "FreeBSD"
 PLIST_SUBST+=		OSS=""
 PLIST_SUBST+=		SUN="@comment "
@@ -132,6 +132,7 @@ CONFIGURE_ARGS+=	--enable-lirc
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../net/libmms/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
