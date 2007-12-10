@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/11/11 19:35:32 ghen Exp $
+@comment $NetBSD: PLIST,v 1.15 2007/12/10 14:19:40 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -206,7 +206,7 @@ include/dovecot/src/lib/strfuncs.h
 include/dovecot/src/lib/unichar.h
 include/dovecot/src/lib/unix-socket-create.h
 include/dovecot/src/lib/unlink-directory.h
-include/dovecot/src/lib/unlink-lockfiles.h
+include/dovecot/src/lib/unlink-old-files.h
 include/dovecot/src/lib/utc-mktime.h
 include/dovecot/src/lib/utc-offset.h
 include/dovecot/src/lib/var-expand.h
