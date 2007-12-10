@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/12/10 09:06:13 netcap Exp $
+
+SHA1 (POSIX-strptime-0.08.tar.gz) = 3c49dec21369f29e43b62005dd23214a7e37cd83
+RMD160 (POSIX-strptime-0.08.tar.gz) = be9b675ec08c260e19b230099c9dddaf779fdb46
+Size (POSIX-strptime-0.08.tar.gz) = 32430 bytes
