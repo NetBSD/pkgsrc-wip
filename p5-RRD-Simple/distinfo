@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/06 20:39:52 uhabel Exp $
+$NetBSD: distinfo,v 1.2 2007/12/10 00:21:57 uhabel Exp $
 
-SHA1 (RRD-Simple-1.40.tar.gz) = 6e255238116d1b98f20d2740b00a70d99f3d9dcc
-RMD160 (RRD-Simple-1.40.tar.gz) = bb354722aeed9da02da2b1992791ed86e81697e1
-Size (RRD-Simple-1.40.tar.gz) = 249475 bytes
+SHA1 (RRD-Simple-1.43.tar.gz) = f3f042c949a6106b3b260a8261c50bb92bc818cd
+RMD160 (RRD-Simple-1.43.tar.gz) = da5bdf062eabe531d08c7c98dd82252a271bc0f0
+Size (RRD-Simple-1.43.tar.gz) = 257626 bytes
