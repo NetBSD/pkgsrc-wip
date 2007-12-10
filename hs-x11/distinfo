@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/05/18 12:28:30 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2007/12/10 16:47:42 emil_s Exp $
 
-SHA1 (X11-1.2.tar.gz) = 8421eb37481d7dc127c69919a0f76bccd4e01f20
-RMD160 (X11-1.2.tar.gz) = 5d63ea72e38f137a5f1e5458b8e7af781c66e2c0
-Size (X11-1.2.tar.gz) = 68616 bytes
+SHA1 (X11-1.4.0.tar.gz) = 8bd26e814519d980c334351151604103f012f9e7
+RMD160 (X11-1.4.0.tar.gz) = 95f9147f3fee68bdd0c393851b9bd16e3ce3745d
+Size (X11-1.4.0.tar.gz) = 85583 bytes

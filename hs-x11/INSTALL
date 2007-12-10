@@ -5,12 +5,12 @@ GHCVERSION=@GHCVERSION@
 case ${STAGE} in
     POST-INSTALL)
         echo 'name: X11
-version: 1.2
+version: ${PKGVERSION}
 license: BSD3
-copyright: Alastair Reid, 1999-2003
-maintainer: <libraries@haskell.org>
+copyright: Alastair Reid, 1999-2003, libraries@haskell.org 2003-2007
+maintainer: Don Stewart <dons@galois.com>
 stability:
-homepage:
+homepage: http://darcs.haskell.org/X11
 package-url:
 description: A Haskell binding to the X11 graphics library.
              .
@@ -26,23 +26,23 @@ exposed-modules: Graphics.X11 Graphics.X11.Types Graphics.X11.Xlib
                  Graphics.X11.Xlib.Event Graphics.X11.Xlib.Font
                  Graphics.X11.Xlib.Misc Graphics.X11.Xlib.Region
                  Graphics.X11.Xlib.Screen Graphics.X11.Xlib.Types
-                 Graphics.X11.Xlib.Window
+                 Graphics.X11.Xlib.Window Graphics.X11.Xlib.Image
+                 Graphics.X11.Xlib.Extras Graphics.X11.Xinerama
 hidden-modules:
-import-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1
-library-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1
-hs-libraries: HSX11-1.2
+import-dirs: ${PREFIX}/lib/X11-1.2.2/ghc-${GHCVERSION}
+library-dirs: ${PREFIX}/lib/X11-1.2.2/ghc-${GHCVERSION}
+hs-libraries: HSX11-${PKGVERSION}
 extra-libraries: X11
 extra-ghci-libraries:
-include-dirs: /usr/pkg/lib/X11-1.2/ghc-6.6.1/include
-includes: HsXlib.h
+include-dirs: ${PREFIX}/lib/X11-1.2.2/ghc-${GHCVERSION}/include
+includes: HsXlib.h HsXlib.h XlibExtras.h
 depends: base-2.1.1
 hugs-options:
-cc-options:
-ld-options: -L/usr/X11R6/lib
+cc-options: -I${PREFIX}/include -I/usr/include
+ld-options: -L${PREFIX}/lib -L/usr/lib -Wl -R/usr/lib -R${PREFIX}/lib
 framework-dirs:
 frameworks:
-haddock-interfaces: /usr/pkg/share/X11-1.2/doc/html/X11.haddock
-haddock-html: /usr/pkg/share/X11-1.2/doc/html' | /usr/pkg/bin/ghc-pkg update -
+haddock-interfaces: ${PREFIX}/share/X11-${PKGVERSION}/doc/html/X11.haddock
+haddock-html: ${PREFIX}/share/X11-${PKGVERSION}/doc/html' | ${PREFIX}/bin/ghc-pkg update -
         ;;
 esac
-

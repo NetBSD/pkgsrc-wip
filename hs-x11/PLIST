@@ -1,24 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/18 12:28:30 emil_s Exp $
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Types.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Atom.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Color.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Context.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Display.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Event.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Font.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Misc.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Region.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Screen.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Types.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib/Window.hi
-lib/X11-${PKGVERSION}/ghc-6.6.1/HSX11-${PKGVERSION}.o
-lib/X11-${PKGVERSION}/ghc-6.6.1/include/HsXlib.h
-lib/X11-${PKGVERSION}/ghc-6.6.1/libHSX11-${PKGVERSION}.a
-@dirrm lib/X11-${PKGVERSION}/ghc-6.6.1/include
-@dirrm lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11/Xlib
-@dirrm lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics/X11
-@dirrm lib/X11-${PKGVERSION}/ghc-6.6.1/Graphics
-@dirrm lib/X11-${PKGVERSION}/ghc-6.6.1
+@comment $NetBSD: PLIST,v 1.2 2007/12/10 16:47:42 emil_s Exp $
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Types.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xinerama.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Atom.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Color.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Context.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Display.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Event.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Extras.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Font.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Image.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Misc.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Region.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Screen.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Types.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib/Window.hi
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/HSX11-${PKGVERSION}.o
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include/HsXlib.h
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include/XlibExtras.h
+lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/libHSX11-${PKGVERSION}.a
+@dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include
+@dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib
+@dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11
+@dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics
+@dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}
 @dirrm lib/X11-${PKGVERSION}
