@@ -1,36 +1,45 @@
-# $NetBSD: Makefile,v 1.2 2007/05/23 11:24:45 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/10 17:01:35 emil_s Exp $
 #
 
 DISTNAME=	xmonad-${VERSION}
 CATEGORIES=	wm
-MASTER_SITES=	http://hackage.haskell.org/packages/archive/xmonad/
+MASTER_SITES=	http://hackage.haskell.org/packages/archive/xmonad/${VERSION}/
 
 MAINTAINER=	emil@math.su.se
 HOMEPAGE=	http://xmonad.org/
 COMMENT=	Minimalist tiling window manager for X
 
-USE_LANGUAGES+=	c
+USE_LANGUAGES=	c
 
-VERSION=		0.1
+GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
+GHCVERSION=		${GHCVERSION_cmd:sh}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		GHCVERSION=${GHCVERSION}
+FILES_SUBST+=		PKGVERSION=${PKGVERSION}
+PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
+
+CONFIGURE_ARGS+=	--ghc
+CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
+CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+
+VERSION=		0.5
+
 
 do-configure:
-	cd ${WRKSRC:Q} &&						\
-        runhaskell -cpp Setup.lhs configure				\
-          --ghc								\
-          --prefix=${PREFIX:Q}						\
-          --with-compiler=${PREFIX:Q}/bin/ghc				\
-          --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+	cd ${WRKSRC} &&						\
+	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs build
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
 
 do-install:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs install
 
 
-#.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/cabal/buildlink3.mk"
 .include "../../wip/hs-x11-extras/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
