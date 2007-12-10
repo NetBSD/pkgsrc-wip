@@ -7,8 +7,8 @@ case ${STAGE} in
         echo 'name: Cabal
 version: ${PKGVERSION}
 license: BSD3
-copyright: 2003-2005, Isaac Jones
-maintainer: Isaac Jones <ijones@syntaxpolice.org>
+copyright: 2003-2006, Isaac Jones
+maintainer: cabal-devel@haskell.org
 stability:
 homepage: http://www.haskell.org/cabal/
 package-url:
@@ -22,34 +22,41 @@ description: The Haskell Common Architecture for Building Applications and
 category: Distribution
 author: Isaac Jones <ijones@syntaxpolice.org>
 exposed: True
-exposed-modules: Distribution.Compat.ReadP Distribution.Compiler
-                 Distribution.Extension Distribution.InstalledPackageInfo
-                 Distribution.License Distribution.Make Distribution.Program
-                 Distribution.Package Distribution.PackageDescription
-                 Distribution.ParseUtils Distribution.PreProcess
-                 Distribution.PreProcess.Unlit Distribution.Setup
-                 Distribution.Simple Distribution.Simple.Build
-                 Distribution.Simple.Configure Distribution.Simple.GHCPackageConfig
-                 Distribution.Simple.Install Distribution.Simple.LocalBuildInfo
-                 Distribution.Simple.Register Distribution.Simple.SrcDist
-                 Distribution.Simple.Utils Distribution.Compat.FilePath
-                 Distribution.Version Language.Haskell.Extension
-hidden-modules: Distribution.GetOpt Distribution.Compat.Directory
-                Distribution.Compat.Exception Distribution.Compat.RawSystem
-import-dirs: /usr/pkg/lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}
-library-dirs: /usr/pkg/lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}
+exposed-modules: Distribution.Compiler Distribution.Extension
+                 Distribution.Setup Distribution.InstalledPackageInfo
+                 Distribution.License Distribution.Make Distribution.Package
+                 Distribution.PackageDescription Distribution.Configuration
+                 Distribution.ParseUtils Distribution.Simple
+                 Distribution.Simple.Build Distribution.Simple.Compiler
+                 Distribution.Simple.Configure Distribution.Simple.GHC
+                 Distribution.Simple.GHC.Makefile
+                 Distribution.Simple.GHC.PackageConfig Distribution.Simple.Haddock
+                 Distribution.Simple.Hugs Distribution.Simple.Install
+                 Distribution.Simple.InstallDirs Distribution.Simple.JHC
+                 Distribution.Simple.LocalBuildInfo Distribution.Simple.NHC
+                 Distribution.Simple.PreProcess Distribution.Simple.PreProcess.Unlit
+                 Distribution.Simple.Program Distribution.Simple.Register
+                 Distribution.Simple.Setup Distribution.Simple.SetupWrapper
+                 Distribution.Simple.SrcDist Distribution.Simple.Utils
+                 Distribution.System Distribution.Verbosity Distribution.Version
+                 Distribution.Compat.ReadP Language.Haskell.Extension
+hidden-modules: Distribution.GetOpt Distribution.Compat.Map
+                Distribution.Compat.Directory Distribution.Compat.Exception
+                Distribution.Compat.RawSystem Distribution.Compat.TempFile
+import-dirs: ${PREFIX}/lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}
+library-dirs: ${PREFIX}/lib/Cabal-${PKGVERSION}/ghc-${GHCVERSION}
 hs-libraries: HSCabal-${PKGVERSION}
 extra-libraries:
 extra-ghci-libraries:
 include-dirs:
 includes:
-depends: base-1.0
+depends: base-2.1.1 filepath-1.0
 hugs-options:
 cc-options:
 ld-options:
 framework-dirs:
 frameworks:
-haddock-interfaces:
-haddock-html:' | ghc-pkg update -
+haddock-interfaces: ${PREFIX}/share/doc/Cabal-${PKGVERSION}/html/Cabal.haddock
+haddock-html: ${PREFIX}/share/doc/Cabal-${PKGVERSION}/html' | ghc-pkg update -
         ;;
 esac

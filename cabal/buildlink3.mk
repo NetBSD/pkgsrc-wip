@@ -1,6 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:02 jeremy-c-reed Exp $
-
-BUILDLINK_DEPMETHOD.cabal?=	build
+# $NetBSD: buildlink3.mk,v 1.3 2007/12/10 16:43:58 emil_s Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CABAL_BUILDLINK3_MK:=	${CABAL_BUILDLINK3_MK}+
@@ -13,10 +11,11 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncabal}
 BUILDLINK_PACKAGES+=	cabal
 
 .if !empty(CABAL_BUILDLINK3_MK:M+)
+BUILDLINK_DEPMETHOD.cabal?=	build
 BUILDLINK_API_DEPENDS.cabal+=	cabal>=1.1.3
 BUILDLINK_PKGSRCDIR.cabal?=	../../wip/cabal
 .endif	# CABAL_BUILDLINK3_MK
 
 .include "../../lang/ghc/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:= ${BUILDLINK_DEPTH:S/+$//}

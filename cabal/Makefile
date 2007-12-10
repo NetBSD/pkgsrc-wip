@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/10 16:43:58 emil_s Exp $
 #
 
-DISTNAME=		cabal-1.1.4
+DISTNAME=		cabal-1.2.2.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/cabal/release/${DISTNAME}/
 
@@ -14,10 +14,15 @@ MAKE_FILE=		GNUmakefile
 
 GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
 GHCVERSION=		${GHCVERSION_cmd:sh}
-FILES_SUBST+=		PREFIX=${PREFIX:Q}
-FILES_SUBST+=		GHCVERSION=${GHCVERSION:Q}
-FILES_SUBST+=		PKGVERSION=${PKGVERSION:Q}
-PLIST_SUBST+=		GHCVERSION=${GHCVERSION:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		GHCVERSION=${GHCVERSION}
+FILES_SUBST+=		PKGVERSION=${PKGVERSION}
+PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
+
+CONFIGURE_ARGS+=	--ghc
+CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
+CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 CHECK_FILES_SKIP+=	lib/ghc-${GHCVERSION}/package.conf.old
 
@@ -25,18 +30,14 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 
 do-configure:
-	cd ${WRKSRC:Q} &&						\
-	runhaskell -cpp Setup.lhs configure					\
-	  --ghc								\
-	  --prefix=${PREFIX:Q}						\
-	  --with-compiler=${PREFIX:Q}/bin/ghc				\
-	  --with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
+	cd ${WRKSRC} &&						\
+	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs build
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
 
 do-install:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs install
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}/pkg-spec-html
