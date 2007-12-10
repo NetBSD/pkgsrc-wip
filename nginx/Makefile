@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/12/04 17:47:12 ghen Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/10 20:11:00 ghen Exp $
 
 DISTNAME=		nginx-0.5.33
 CATEGORIES=		www
@@ -30,6 +30,8 @@ EGFILES=		fastcgi_params koi-utf koi-win mime.types nginx.conf win-utf
 .for file in ${EGFILES}
 CONF_FILES+=		${EGDIR:Q}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
+
+RCD_SCRIPTS=		nginx
 
 INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
 OWN_DIRS=		${NGINX_LOGDIR}
