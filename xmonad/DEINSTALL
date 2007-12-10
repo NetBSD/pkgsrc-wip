@@ -1,0 +1,7 @@
+PKGVERSION=@PKGVERSION@
+
+case ${STAGE} in 
+    POST-DEINSTALL)
+    ghc-pkg unregister xmonad-${PKGVERSION}
+    ;;
+esac
