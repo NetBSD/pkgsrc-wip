@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/06 20:42:33 uhabel Exp $
+$NetBSD: distinfo,v 1.2 2007/12/10 00:32:40 uhabel Exp $
 
-SHA1 (RRDTool-OO-0.17.tar.gz) = 4d443086a6b5760d722017097f0649160aa43b6d
-RMD160 (RRDTool-OO-0.17.tar.gz) = 1d904c978e191f1ff1d2f665ec6e3e21ab4d2249
-Size (RRDTool-OO-0.17.tar.gz) = 29015 bytes
+SHA1 (RRDTool-OO-0.19.tar.gz) = 8d1a057fe66e85b8facd30a8eaddfdc6bd1c2238
+RMD160 (RRDTool-OO-0.19.tar.gz) = a3d9904c9a8a42e9550a0e6ac7aa1de860602e83
+Size (RRDTool-OO-0.19.tar.gz) = 31999 bytes
