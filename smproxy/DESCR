@@ -1,0 +1,2 @@
+smproxy is a simple proxy used to allow a session manager, such as xsm, manage
+X11 apps that do not use the X Session Management Protocol (XSMP).
