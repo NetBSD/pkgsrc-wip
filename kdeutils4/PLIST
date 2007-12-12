@@ -1,0 +1,355 @@
+@comment $NetBSD: PLIST,v 1.2 2007/12/12 10:32:53 mwdavies Exp $
+bin/ark
+bin/kcalc
+bin/kcharselect
+bin/kdessh
+bin/kdf
+bin/kfloppy
+bin/kgpg
+bin/khexedit
+bin/kjots
+bin/kregexpeditor
+bin/ktimer
+bin/kwalletmanager
+bin/kwikdisk
+bin/superkaramba
+bin/sweeper
+include/kmultiformlistbox.h
+include/kmultiformlistboxentry.h
+include/kmultiformlistboxfactory.h
+include/kwidgetstreamer.h
+lib/kde4/kcm_kdf.so
+lib/kde4/kcm_kwallet.so
+lib/kde4/kcm_thinkpad.so
+lib/kde4/kded_kmilod.so
+lib/kde4/kerfuffle_bk.so
+lib/kde4/kmilo_asus.so
+lib/kde4/kmilo_thinkpad.so
+lib/kde4/libarkpart.so
+lib/kde4/libkbytearrayedit.so
+lib/kde4/libkregexpeditorgui.so
+lib/kde4/liboktetapart.so
+lib/libkdeinit4_kcalc.so
+lib/libkerfuffle.so
+lib/libkerfuffle.so.4
+lib/libkerfuffle.so.4.0.0
+lib/libkmilo.so
+lib/libkmilo.so.4
+lib/libkmilo.so.4.0.0
+lib/libkregexpeditorcommon.so
+lib/libkregexpeditorcommon.so.4
+lib/libkregexpeditorcommon.so.4.0.0
+lib/liboktetacore.so
+lib/liboktetacore.so.4
+lib/liboktetacore.so.4.0.0
+lib/liboktetagui.so
+lib/liboktetagui.so.4
+lib/liboktetagui.so.4.0.0
+lib/libsuperkaramba.so
+lib/libsuperkaramba.so.4
+lib/libsuperkaramba.so.4.0.0
+share/applications/kde4/KCharSelect.desktop
+share/applications/kde4/KFloppy.desktop
+share/applications/kde4/Kjots.desktop
+share/applications/kde4/ark.desktop
+share/applications/kde4/kcalc.desktop
+share/applications/kde4/kdf.desktop
+share/applications/kde4/kgpg.desktop
+share/applications/kde4/khexedit.desktop
+share/applications/kde4/kregexpeditor.desktop
+share/applications/kde4/ktimer.desktop
+share/applications/kde4/kwalletmanager-kwalletd.desktop
+share/applications/kde4/kwalletmanager.desktop
+share/applications/kde4/kwikdisk.desktop
+share/applications/kde4/superkaramba.desktop
+share/applications/kde4/sweeper.desktop
+share/dbus-1/interfaces/org.kde.kgpg.Key.xml
+share/dbus-1/interfaces/org.kde.kmilod.xml
+share/dbus-1/interfaces/org.kde.superkaramba.xml
+share/dbus-1/interfaces/org.kde.sweeper.xml
+share/doc/kde/HTML/en/KRegExpEditor/altn.png
+share/doc/kde/HTML/en/KRegExpEditor/altntool.png
+share/doc/kde/HTML/en/KRegExpEditor/anychar.png
+share/doc/kde/HTML/en/KRegExpEditor/anychartool.png
+share/doc/kde/HTML/en/KRegExpEditor/begline.png
+share/doc/kde/HTML/en/KRegExpEditor/boundarytools.png
+share/doc/kde/HTML/en/KRegExpEditor/characters.png
+share/doc/kde/HTML/en/KRegExpEditor/charactertool.png
+share/doc/kde/HTML/en/KRegExpEditor/common
+share/doc/kde/HTML/en/KRegExpEditor/compound.png
+share/doc/kde/HTML/en/KRegExpEditor/compoundtool.png
+share/doc/kde/HTML/en/KRegExpEditor/endline.png
+share/doc/kde/HTML/en/KRegExpEditor/index.cache.bz2
+share/doc/kde/HTML/en/KRegExpEditor/index.docbook
+share/doc/kde/HTML/en/KRegExpEditor/linestartendtool.png
+share/doc/kde/HTML/en/KRegExpEditor/lookaheadtools.png
+share/doc/kde/HTML/en/KRegExpEditor/neglookahead.png
+share/doc/kde/HTML/en/KRegExpEditor/nonwordboundary.png
+share/doc/kde/HTML/en/KRegExpEditor/poslookahead.png
+share/doc/kde/HTML/en/KRegExpEditor/repeat.png
+share/doc/kde/HTML/en/KRegExpEditor/repeattool.png
+share/doc/kde/HTML/en/KRegExpEditor/select.png
+share/doc/kde/HTML/en/KRegExpEditor/text.png
+share/doc/kde/HTML/en/KRegExpEditor/texttool.png
+share/doc/kde/HTML/en/KRegExpEditor/theEditor.png
+share/doc/kde/HTML/en/KRegExpEditor/wordboundary.png
+share/doc/kde/HTML/en/ark/common
+share/doc/kde/HTML/en/ark/index.cache.bz2
+share/doc/kde/HTML/en/ark/index.docbook
+share/doc/kde/HTML/en/ark/man-ark.1.docbook
+share/doc/kde/HTML/en/kcalc/commands.docbook
+share/doc/kde/HTML/en/kcalc/common
+share/doc/kde/HTML/en/kcalc/index.cache.bz2
+share/doc/kde/HTML/en/kcalc/index.docbook
+share/doc/kde/HTML/en/kcharselect/common
+share/doc/kde/HTML/en/kcharselect/index.cache.bz2
+share/doc/kde/HTML/en/kcharselect/index.docbook
+share/doc/kde/HTML/en/kdf/common
+share/doc/kde/HTML/en/kdf/index.cache.bz2
+share/doc/kde/HTML/en/kdf/index.docbook
+share/doc/kde/HTML/en/kdf/kdf.png
+share/doc/kde/HTML/en/kdf/kdf_config.png
+share/doc/kde/HTML/en/kfloppy/common
+share/doc/kde/HTML/en/kfloppy/index.cache.bz2
+share/doc/kde/HTML/en/kfloppy/index.docbook
+share/doc/kde/HTML/en/kgpg/common
+share/doc/kde/HTML/en/kgpg/editor.png
+share/doc/kde/HTML/en/kgpg/index.cache.bz2
+share/doc/kde/HTML/en/kgpg/index.docbook
+share/doc/kde/HTML/en/kgpg/keygen.png
+share/doc/kde/HTML/en/kgpg/keymanage.png
+share/doc/kde/HTML/en/kgpg/keyprop.png
+share/doc/kde/HTML/en/kgpg/keys.png
+share/doc/kde/HTML/en/kgpg/keyserver.png
+share/doc/kde/HTML/en/kgpg/kicker.png
+share/doc/kde/HTML/en/kgpg/options.png
+share/doc/kde/HTML/en/khexedit/common
+share/doc/kde/HTML/en/khexedit/index.cache.bz2
+share/doc/kde/HTML/en/khexedit/index.docbook
+share/doc/kde/HTML/en/khexedit/khexedit1.png
+share/doc/kde/HTML/en/kjots/common
+share/doc/kde/HTML/en/kjots/index.cache.bz2
+share/doc/kde/HTML/en/kjots/index.docbook
+share/doc/kde/HTML/en/ktimer/common
+share/doc/kde/HTML/en/ktimer/index.cache.bz2
+share/doc/kde/HTML/en/ktimer/index.docbook
+share/doc/kde/HTML/en/kwallet/common
+share/doc/kde/HTML/en/kwallet/edit1.png
+share/doc/kde/HTML/en/kwallet/edit2.png
+share/doc/kde/HTML/en/kwallet/edit3.png
+share/doc/kde/HTML/en/kwallet/index.cache.bz2
+share/doc/kde/HTML/en/kwallet/index.docbook
+share/doc/kde/HTML/en/kwallet/kwalletmanager.png
+share/doc/kde/HTML/en/kwallet/ox22-action-wallet_closed.png
+share/doc/kde/HTML/en/kwallet/ox22-action-wallet_open.png
+share/doc/kde/HTML/en/kwallet/password1.png
+share/doc/kde/HTML/en/kwallet/password2.png
+share/doc/kde/HTML/en/superkaramba/common
+share/doc/kde/HTML/en/superkaramba/index.cache.bz2
+share/doc/kde/HTML/en/superkaramba/index.docbook
+share/icons/hicolor/128x128/apps/kdf.png
+share/icons/hicolor/128x128/apps/kfloppy.png
+share/icons/hicolor/128x128/apps/kregexpeditor.png
+share/icons/hicolor/128x128/apps/ktimer.png
+share/icons/hicolor/128x128/apps/kwalletmanager.png
+share/icons/hicolor/128x128/apps/kwalletmanager2.png
+share/icons/hicolor/128x128/apps/kwikdisk.png
+share/icons/hicolor/128x128/apps/superkaramba.png
+share/icons/hicolor/16x16/apps/kcalc.png
+share/icons/hicolor/16x16/apps/kcharselect.png
+share/icons/hicolor/16x16/apps/kdf.png
+share/icons/hicolor/16x16/apps/kfloppy.png
+share/icons/hicolor/16x16/apps/kgpg.png
+share/icons/hicolor/16x16/apps/khexedit.png
+share/icons/hicolor/16x16/apps/kjots.png
+share/icons/hicolor/16x16/apps/kregexpeditor.png
+share/icons/hicolor/16x16/apps/ktimer.png
+share/icons/hicolor/16x16/apps/kwalletmanager.png
+share/icons/hicolor/16x16/apps/kwalletmanager2.png
+share/icons/hicolor/16x16/apps/kwikdisk.png
+share/icons/hicolor/16x16/apps/superkaramba.png
+share/icons/hicolor/22x22/apps/kcalc.png
+share/icons/hicolor/22x22/apps/kdf.png
+share/icons/hicolor/22x22/apps/kfloppy.png
+share/icons/hicolor/22x22/apps/kgpg.png
+share/icons/hicolor/22x22/apps/kjots.png
+share/icons/hicolor/22x22/apps/kregexpeditor.png
+share/icons/hicolor/22x22/apps/kwalletmanager.png
+share/icons/hicolor/22x22/apps/kwikdisk.png
+share/icons/hicolor/22x22/apps/superkaramba.png
+share/icons/hicolor/32x32/apps/kcalc.png
+share/icons/hicolor/32x32/apps/kcharselect.png
+share/icons/hicolor/32x32/apps/kdf.png
+share/icons/hicolor/32x32/apps/kfloppy.png
+share/icons/hicolor/32x32/apps/kgpg.png
+share/icons/hicolor/32x32/apps/khexedit.png
+share/icons/hicolor/32x32/apps/kjots.png
+share/icons/hicolor/32x32/apps/kregexpeditor.png
+share/icons/hicolor/32x32/apps/ktimer.png
+share/icons/hicolor/32x32/apps/kwalletmanager.png
+share/icons/hicolor/32x32/apps/kwalletmanager2.png
+share/icons/hicolor/32x32/apps/kwikdisk.png
+share/icons/hicolor/32x32/apps/superkaramba.png
+share/icons/hicolor/48x48/apps/kcalc.png
+share/icons/hicolor/48x48/apps/kcharselect.png
+share/icons/hicolor/48x48/apps/kdf.png
+share/icons/hicolor/48x48/apps/kfloppy.png
+share/icons/hicolor/48x48/apps/kgpg.png
+share/icons/hicolor/48x48/apps/khexedit.png
+share/icons/hicolor/48x48/apps/kjots.png
+share/icons/hicolor/48x48/apps/kregexpeditor.png
+share/icons/hicolor/48x48/apps/ktimer.png
+share/icons/hicolor/48x48/apps/kwalletmanager.png
+share/icons/hicolor/48x48/apps/kwalletmanager2.png
+share/icons/hicolor/48x48/apps/kwikdisk.png
+share/icons/hicolor/48x48/apps/superkaramba.png
+share/icons/hicolor/64x64/apps/kcalc.png
+share/icons/hicolor/64x64/apps/kdf.png
+share/icons/hicolor/64x64/apps/kfloppy.png
+share/icons/hicolor/64x64/apps/kjots.png
+share/icons/hicolor/64x64/apps/kregexpeditor.png
+share/icons/hicolor/64x64/apps/kwalletmanager.png
+share/icons/hicolor/64x64/apps/kwalletmanager2.png
+share/icons/hicolor/64x64/apps/kwikdisk.png
+share/icons/hicolor/64x64/apps/superkaramba.png
+share/icons/hicolor/scalable/apps/kcalc.svgz
+share/icons/hicolor/scalable/apps/superkaramba.svgz
+share/icons/oxygen/16x16/apps/kcmdf.png
+share/icons/oxygen/22x22/apps/kcmdf.png
+share/icons/oxygen/32x32/apps/kcmdf.png
+share/kde/apps/ark/ark_part.rc
+share/kde/apps/ark/arkui.rc
+share/kde/apps/kcalc/kcalcui.rc
+share/kde/apps/kcalc/scienceconstants.xml
+share/kde/apps/kcharselect/kcharselectui.rc
+share/kde/apps/kconf_update/kcalcrc.upd
+share/kde/apps/kconf_update/kcharselect.upd
+share/kde/apps/kdf/kdfui.rc
+share/kde/apps/kdf/pics/delete.png
+share/kde/apps/kdf/pics/tick.png
+share/kde/apps/kgpg/icons/oxygen/16x16/actions/kgpg_key1.png
+share/kde/apps/kgpg/icons/oxygen/16x16/actions/kgpg_key2.png
+share/kde/apps/kgpg/icons/oxygen/16x16/actions/kgpg_key3.png
+share/kde/apps/kgpg/icons/oxygen/16x16/actions/kgpg_key4.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_edit.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_export.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_gen.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_identity.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_import.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_info.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_photo.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_show.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_sign.png
+share/kde/apps/kgpg/icons/oxygen/22x22/actions/kgpg_term.png
+share/kde/apps/kgpg/keysmanager.rc
+share/kde/apps/kgpg/kgpg.rc
+share/kde/apps/kgpg/pics/kgpg_anim.gif
+share/kde/apps/kgpg/pics/kgpg_blank.png
+share/kde/apps/kgpg/pics/kgpg_docked.gif
+share/kde/apps/kgpg/pics/kgpg_docked.png
+share/kde/apps/kgpg/pics/kgpg_fill.png
+share/kde/apps/kgpg/tips
+share/kde/apps/khexedit/khexeditui.rc
+share/kde/apps/khexedit/pics/hexdrag.png
+share/kde/apps/khexedit/pics/hexmask.png
+share/kde/apps/khexedit/pics/hexwrite.png
+share/kde/apps/kjots/kjotsui.rc
+share/kde/apps/kjots/pics/filedel.png
+share/kde/apps/kregexpeditor/predefined/general/anything.regexp
+share/kde/apps/kregexpeditor/predefined/general/spaces.regexp
+share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions/folder_closed.png
+share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions/folder_open.png
+share/kde/apps/kwalletmanager/kwalleteditor.rc
+share/kde/apps/kwalletmanager/kwalletmanager.rc
+share/kde/apps/oktetapart/oktetapartui.rc
+share/kde/apps/superkaramba/superkarambaui.rc
+share/kde/apps/sweeper/sweeperui.rc
+share/kde/autostart/kgpg.desktop
+share/kde/config.kcfg/ark.kcfg
+share/kde/config.kcfg/kcalc.kcfg
+share/kde/config.kcfg/kgpg.kcfg
+share/kde/config.kcfg/kjots.kcfg
+share/kde/config/superkaramba.knsrc
+share/kde4/services/ServiceMenus/encryptfile.desktop
+share/kde4/services/ServiceMenus/encryptfolder.desktop
+share/kde4/services/ServiceMenus/floppy_format.desktop
+share/kde4/services/ark_part.desktop
+share/kde4/services/kbytearrayedit.desktop
+share/kde4/services/kcmdf.desktop
+share/kde4/services/kded/kmilod.desktop
+share/kde4/services/kerfuffle_bk.desktop
+share/kde4/services/kmilo/kmilo_asus.desktop
+share/kde4/services/kmilo/kmilo_thinkpad.desktop
+share/kde4/services/kregexpeditorgui.desktop
+share/kde4/services/kwalletconfig.desktop
+share/kde4/services/kwalletmanager_show.desktop
+share/kde4/services/oktetapart.desktop
+share/kde4/services/thinkpad.desktop
+share/kde4/servicetypes/kerfufflePlugin.desktop
+share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
+@dirrm share/kde4/servicetypes/kmilo
+@comment in kde: @dirrm share/kde4/servicetypes
+@dirrm share/kde4/services/kmilo
+@comment in kde: @dirrm share/kde4/services/kded
+@dirrm share/kde4/services/ServiceMenus
+@comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
+@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/apps/sweeper
+@dirrm share/kde/apps/superkaramba
+@dirrm share/kde/apps/oktetapart
+@dirrm share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions
+@dirrm share/kde/apps/kwalletmanager/icons/oxygen/22x22
+@dirrm share/kde/apps/kwalletmanager/icons/oxygen
+@dirrm share/kde/apps/kwalletmanager/icons
+@dirrm share/kde/apps/kwalletmanager
+@dirrm share/kde/apps/kregexpeditor/predefined/general
+@dirrm share/kde/apps/kregexpeditor/predefined
+@dirrm share/kde/apps/kregexpeditor
+@dirrm share/kde/apps/kjots/pics
+@dirrm share/kde/apps/kjots
+@dirrm share/kde/apps/khexedit/pics
+@dirrm share/kde/apps/khexedit
+@dirrm share/kde/apps/kgpg/pics
+@dirrm share/kde/apps/kgpg/icons/oxygen/22x22/actions
+@dirrm share/kde/apps/kgpg/icons/oxygen/22x22
+@dirrm share/kde/apps/kgpg/icons/oxygen/16x16/actions
+@dirrm share/kde/apps/kgpg/icons/oxygen/16x16
+@dirrm share/kde/apps/kgpg/icons/oxygen
+@dirrm share/kde/apps/kgpg/icons
+@dirrm share/kde/apps/kgpg
+@dirrm share/kde/apps/kdf/pics
+@dirrm share/kde/apps/kdf
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcharselect
+@dirrm share/kde/apps/kcalc
+@dirrm share/kde/apps/ark
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/oxygen/32x32/apps
+@comment in kde: @dirrm share/icons/oxygen/22x22/apps
+@comment in kde: @dirrm share/icons/oxygen/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/superkaramba
+@dirrm share/doc/kde/HTML/en/kwallet
+@dirrm share/doc/kde/HTML/en/ktimer
+@dirrm share/doc/kde/HTML/en/kjots
+@dirrm share/doc/kde/HTML/en/khexedit
+@dirrm share/doc/kde/HTML/en/kgpg
+@dirrm share/doc/kde/HTML/en/kfloppy
+@dirrm share/doc/kde/HTML/en/kdf
+@dirrm share/doc/kde/HTML/en/kcharselect
+@dirrm share/doc/kde/HTML/en/kcalc
+@dirrm share/doc/kde/HTML/en/ark
+@dirrm share/doc/kde/HTML/en/KRegExpEditor
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/dbus-1/interfaces
+@comment in kde: @dirrm share/applications/kde4
+@comment in kde: @dirrm lib/kde4
