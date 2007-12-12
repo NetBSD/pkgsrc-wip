@@ -1,0 +1,17 @@
+$NetBSD: patch-bf,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+
+--- ksysguard/ksysguardd/NetBSD/ProcessList.c.orig	2007-02-19 22:51:48.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/ProcessList.c
+@@ -20,10 +20,11 @@
+ 
+ */
+ 
+-#include <config.h>
++#include <config-workspace.h>
+ 
+ #include <ctype.h>
+ #include <dirent.h>
++#include <errno.h>
+ #include <pwd.h>
+ #include <stdio.h>
+ #include <stdlib.h>

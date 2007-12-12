@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+
+--- ksysguard/ksysguardd/NetBSD/diskstat.c.orig	2007-02-19 22:51:48.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/diskstat.c
+@@ -18,7 +18,7 @@
+ 
+ */
+ 
+-#include <config.h>
++#include <config-workspace.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>

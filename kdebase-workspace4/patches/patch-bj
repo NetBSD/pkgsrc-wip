@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+
+--- ksysguard/ksysguardd/NetBSD/logfile.c.orig	2007-12-05 00:14:07.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/logfile.c
+@@ -18,7 +18,7 @@
+ 
+ */
+ 
+-#include <config.h>
++#include <config-workspace.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>

@@ -1,0 +1,27 @@
+$NetBSD: patch-bh,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+
+--- ksysguard/ksysguardd/NetBSD/netdev.c.orig	2006-10-26 15:12:41.000000000 +1300
++++ ksysguard/ksysguardd/NetBSD/netdev.c
+@@ -269,12 +269,12 @@ void exitNetDev(void) {
+   NDreg(0);
+ }
+ 
+-void updateNetDev(void) {
++int updateNetDev(void) {
+   NetDevInfo *p, *q;
+   int n;
+ 
+   if (-1==(n = readSys(0)))
+-    return;
++    return (0);
+ 
+   NetDevCnt = n;
+   /*fixme: assumes the interfaces are in the same order each time */
+@@ -289,6 +289,7 @@ void updateNetDev(void) {
+ 
+     }
+   }
++	return (0);
+ }
+ 
+ void checkNetDev(void) {
