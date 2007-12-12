@@ -1,0 +1,144 @@
+@comment $NetBSD: PLIST,v 1.2 2007/12/12 10:37:46 mwdavies Exp $
+bin/kfilereplace
+bin/klinkstatus
+lib/kde4/klinkstatuspart.so
+lib/kde4/libkfilereplacepart.so
+share/applications/kde4/kfilereplace.desktop
+share/applications/kde4/klinkstatus.desktop
+share/dbus-1/interfaces/org.kde.kfilereplace.xml
+share/dbus-1/interfaces/org.kdewebdev.klinkstatus.ISearchManager.xml
+share/doc/kde/HTML/en/kfilereplace/addstringsdialog_window.png
+share/doc/kde/HTML/en/kfilereplace/backup_option.png
+share/doc/kde/HTML/en/kfilereplace/casesensitive_option.png
+share/doc/kde/HTML/en/kfilereplace/command_option.png
+share/doc/kde/HTML/en/kfilereplace/common
+share/doc/kde/HTML/en/kfilereplace/edit.png
+share/doc/kde/HTML/en/kfilereplace/edit_add.png
+share/doc/kde/HTML/en/kfilereplace/edit_remove.png
+share/doc/kde/HTML/en/kfilereplace/eraser.png
+share/doc/kde/HTML/en/kfilereplace/filereplace.png
+share/doc/kde/HTML/en/kfilereplace/filesearch.png
+share/doc/kde/HTML/en/kfilereplace/filesimulate.png
+share/doc/kde/HTML/en/kfilereplace/index.cache.bz2
+share/doc/kde/HTML/en/kfilereplace/index.docbook
+share/doc/kde/HTML/en/kfilereplace/invert.png
+share/doc/kde/HTML/en/kfilereplace/kfr_standalone_main_window_1.png
+share/doc/kde/HTML/en/kfilereplace/optionsdialog_main_window_1.png
+share/doc/kde/HTML/en/kfilereplace/optionsdialog_main_window_2.png
+share/doc/kde/HTML/en/kfilereplace/project.png
+share/doc/kde/HTML/en/kfilereplace/projectdialog_main_window_1.png
+share/doc/kde/HTML/en/kfilereplace/projectdialog_main_window_2.png
+share/doc/kde/HTML/en/kfilereplace/recursive_option.png
+share/doc/kde/HTML/en/kfilereplace/regularexpression_option.png
+share/doc/kde/HTML/en/kfilereplace/report_example.png
+share/doc/kde/HTML/en/kfilereplace/results_view.png
+share/doc/kde/HTML/en/kfilereplace/stop.png
+share/doc/kde/HTML/en/kfilereplace/strings_view.png
+share/doc/kde/HTML/en/kfilereplace/toolbar.png
+share/doc/kde/HTML/en/kfilereplace/unsortedList.png
+share/doc/kde/HTML/en/kimagemapeditor/common
+share/doc/kde/HTML/en/kimagemapeditor/index.cache.bz2
+share/doc/kde/HTML/en/kimagemapeditor/index.docbook
+share/doc/kde/HTML/en/klinkstatus/common
+share/doc/kde/HTML/en/klinkstatus/index.cache.bz2
+share/doc/kde/HTML/en/klinkstatus/index.docbook
+share/doc/kde/HTML/en/klinkstatus/screenshot.png
+share/doc/kde/HTML/en/kxsldbg/1downarrow.png
+share/doc/kde/HTML/en/kxsldbg/breakpoints_window.png
+share/doc/kde/HTML/en/kxsldbg/callstack.docbook
+share/doc/kde/HTML/en/kxsldbg/callstack_window.png
+share/doc/kde/HTML/en/kxsldbg/common
+share/doc/kde/HTML/en/kxsldbg/configure.png
+share/doc/kde/HTML/en/kxsldbg/configure_window.png
+share/doc/kde/HTML/en/kxsldbg/credits.docbook
+share/doc/kde/HTML/en/kxsldbg/entities.docbook
+share/doc/kde/HTML/en/kxsldbg/entities_window.png
+share/doc/kde/HTML/en/kxsldbg/exit.png
+share/doc/kde/HTML/en/kxsldbg/glossary.docbook
+share/doc/kde/HTML/en/kxsldbg/index.cache.bz2
+share/doc/kde/HTML/en/kxsldbg/index.docbook
+share/doc/kde/HTML/en/kxsldbg/kxsldbg_configure.docbook
+share/doc/kde/HTML/en/kxsldbg/kxsldbg_inspector.docbook
+share/doc/kde/HTML/en/kxsldbg/kxsldbg_mainwindow.docbook
+share/doc/kde/HTML/en/kxsldbg/kxsldbg_tools.docbook
+share/doc/kde/HTML/en/kxsldbg/main_window.png
+share/doc/kde/HTML/en/kxsldbg/next.png
+share/doc/kde/HTML/en/kxsldbg/publicid_window.png
+share/doc/kde/HTML/en/kxsldbg/run.png
+share/doc/kde/HTML/en/kxsldbg/sources.docbook
+share/doc/kde/HTML/en/kxsldbg/sources_window.png
+share/doc/kde/HTML/en/kxsldbg/step.png
+share/doc/kde/HTML/en/kxsldbg/systemid_window.png
+share/doc/kde/HTML/en/kxsldbg/templates.docbook
+share/doc/kde/HTML/en/kxsldbg/templates_window.png
+share/doc/kde/HTML/en/kxsldbg/variables.docbook
+share/doc/kde/HTML/en/kxsldbg/variables_window.png
+share/doc/kde/HTML/en/kxsldbg/walk_window.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_break.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_data.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_delete.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_enable.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_output.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_refresh.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_source.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_stepdown.png
+share/doc/kde/HTML/en/kxsldbg/xsldbg_stepup.png
+share/doc/kde/HTML/en/xsldbg/commands.docbook
+share/doc/kde/HTML/en/xsldbg/common
+share/doc/kde/HTML/en/xsldbg/credits.docbook
+share/doc/kde/HTML/en/xsldbg/index.cache.bz2
+share/doc/kde/HTML/en/xsldbg/index.docbook
+share/doc/kde/HTML/en/xsldbg/introduction.docbook
+share/doc/kde/HTML/en/xsldbg/usage.docbook
+share/icons/hicolor/128x128/apps/klinkstatus.png
+share/icons/hicolor/16x16/apps/klinkstatus.png
+share/icons/hicolor/22x22/apps/kfilereplace.png
+share/icons/hicolor/22x22/apps/klinkstatus.png
+share/icons/hicolor/32x32/apps/kfilereplace.png
+share/icons/hicolor/32x32/apps/klinkstatus.png
+share/icons/hicolor/48x48/apps/kfilereplace.png
+share/icons/hicolor/48x48/apps/klinkstatus.png
+share/icons/hicolor/64x64/apps/klinkstatus.png
+share/kde/apps/kfilereplace/kfilereplaceui.rc
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/backup_option.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/casesensitive_option.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/command_option.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/filesimulate.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/invert.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/recursive_option.png
+share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/regularexpression_option.png
+share/kde/apps/kfilereplacepart/kfilereplacepartui.rc
+share/kde/apps/klinkstatus/klinkstatus_shell.rc
+share/kde/apps/klinkstatus/styles/results_stylesheet.xsl
+share/kde/apps/klinkstatuspart/klinkstatus_part.rc
+share/kde/apps/klinkstatuspart/pics/304.png
+share/kde4/services/kfilereplacepart.desktop
+share/kde4/services/klinkstatus_part.desktop
+@comment in kde: @dirrm share/kde4/services
+@dirrm share/kde/apps/klinkstatuspart/pics
+@dirrm share/kde/apps/klinkstatuspart
+@dirrm share/kde/apps/klinkstatus/styles
+@dirrm share/kde/apps/klinkstatus
+@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22
+@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg
+@dirrm share/kde/apps/kfilereplacepart/icons
+@dirrm share/kde/apps/kfilereplacepart
+@dirrm share/kde/apps/kfilereplace
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/xsldbg
+@dirrm share/doc/kde/HTML/en/kxsldbg
+@dirrm share/doc/kde/HTML/en/klinkstatus
+@dirrm share/doc/kde/HTML/en/kimagemapeditor
+@dirrm share/doc/kde/HTML/en/kfilereplace
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/dbus-1/interfaces
+@comment in kde: @dirrm share/applications/kde4
+@comment in kde: @dirrm lib/kde4
