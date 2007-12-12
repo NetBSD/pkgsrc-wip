@@ -1,0 +1,2 @@
+Build issues: same QButtonGroup issue as kdebase-workspace.
+   Also appears to include a QT3 header.
