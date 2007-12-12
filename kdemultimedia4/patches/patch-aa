@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2007/12/12 04:02:34 mwdavies Exp $
+
+--- libkcompactdisc/wmlib/cdda.c.orig	2007-12-09 13:52:33.000000000 +1300
++++ libkcompactdisc/wmlib/cdda.c
+@@ -76,7 +76,7 @@ struct auheader {
+ };
+ 
+ /* had to change #ifdef to #if   -> see wm_cdda.h */
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ /* Phungus not with htonl on FreeBSD */
+ #include <sys/param.h>
+ #else
