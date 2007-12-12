@@ -1,3 +1,4 @@
+# $NetBSD: options.mk,v 1.3 2007/12/12 10:07:25 absd Exp $
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix
 PKG_SUPPORTED_OPTIONS+=		zabbix-server zabbix-agent
 PKG_SUPPORTED_OPTIONS+=		pgsql sqlite mysql
