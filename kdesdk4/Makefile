@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 04:14:25 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/12 10:43:25 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -20,6 +20,6 @@ BUILD_MAKE_FLAGS+= VERBOSE=1
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
-#.include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kdebase-workspace4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
