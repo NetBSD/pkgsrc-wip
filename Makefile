@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2718 2007/12/12 05:09:17 mwdavies Exp $
+# $Id: Makefile,v 1.2719 2007/12/12 21:29:36 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1640,7 +1640,6 @@ SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tftp-hpa
-SUBDIR+=	thaixfonts
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	thunderbird-bin
