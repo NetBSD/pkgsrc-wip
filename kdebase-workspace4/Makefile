@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/12 10:20:13 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -14,6 +14,7 @@ BUILD_MAKE_FLAGS+= VERBOSE=1
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/qimageblitz/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"

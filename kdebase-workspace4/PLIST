@@ -1,0 +1,1120 @@
+@comment $NetBSD: PLIST,v 1.2 2007/12/12 10:20:13 mwdavies Exp $
+bin/genkdmconf
+bin/kaccess
+bin/kapplymousetheme
+bin/kblankscrn.kss
+bin/kcminit
+bin/kcminit_startup
+bin/kcontroledit
+bin/kdeinstallktheme
+bin/kdm
+bin/kdmctl
+bin/kdostartupconfig4
+bin/khotkeys
+bin/klipper
+bin/kmenuedit
+bin/krandom.kss
+bin/krandrtray
+bin/krdb
+bin/krunner
+bin/krunner_lock
+bin/ksmserver
+bin/ksplashsimple
+bin/ksplashx
+bin/ksplashx_scale
+bin/kstartupconfig4
+bin/ksysguard
+bin/ksysguardd
+bin/ksystraycmd
+bin/ktip
+bin/kwin
+bin/kwin_killer_helper
+bin/kwin_rules_dialog
+bin/kxkb
+bin/plasma
+bin/plasmaengineexplorer
+bin/plasmoidviewer
+bin/solidshell
+bin/startkde
+bin/systemsettings
+include/KDE/Plasma/AbstractRunner
+include/KDE/Plasma/Applet
+include/KDE/Plasma/AppletBrowser
+include/KDE/Plasma/ConfigXml
+include/KDE/Plasma/Containment
+include/KDE/Plasma/DataContainer
+include/KDE/Plasma/DataEngine
+include/KDE/Plasma/DataEngineManager
+include/KDE/Plasma/GLApplet
+include/KDE/Plasma/Package
+include/KDE/Plasma/PackageMetadata
+include/KDE/Plasma/PackageStructure
+include/KDE/Plasma/Phase
+include/KDE/Plasma/Plasma
+include/KDE/Plasma/ScriptEngine
+include/KDE/Plasma/SearchContext
+include/KDE/Plasma/SearchMatch
+include/KDE/Plasma/Svg
+include/KDE/Plasma/Theme
+include/KDE/Plasma/UiLoader
+include/KDE/Plasma/View
+include/kcommondecoration.h
+include/kdecoration.h
+include/kdecorationfactory.h
+include/kgreeterplugin.h
+include/kscreensaver.h
+include/kscreensaver_vroot.h
+include/ksgrd/SensorAgent.h
+include/ksgrd/SensorClient.h
+include/ksgrd/SensorManager.h
+include/ksgrd/SensorShellAgent.h
+include/ksgrd/SensorSocketAgent.h
+include/ksysguard/ProcessFilter.h
+include/ksysguard/ProcessModel.h
+include/ksysguard/ksysguardprocesslist.h
+include/ksysguard/process.h
+include/ksysguard/processes.h
+include/kwineffects.h
+include/kwinglobals.h
+include/kworkspace/kwindowlistmenu.h
+include/kworkspace/kworkspace.h
+include/plasma/abstractrunner.h
+include/plasma/animator.h
+include/plasma/applet.h
+include/plasma/appletbrowser.h
+include/plasma/configxml.h
+include/plasma/containment.h
+include/plasma/corona.h
+include/plasma/datacontainer.h
+include/plasma/dataengine.h
+include/plasma/dataenginemanager.h
+include/plasma/glapplet.h
+include/plasma/layouts/borderlayout.h
+include/plasma/layouts/boxlayout.h
+include/plasma/layouts/flowlayout.h
+include/plasma/layouts/freelayout.h
+include/plasma/layouts/hboxlayout.h
+include/plasma/layouts/layout.h
+include/plasma/layouts/layoutanimator.h
+include/plasma/layouts/layoutitem.h
+include/plasma/layouts/nodelayout.h
+include/plasma/layouts/vboxlayout.h
+include/plasma/package.h
+include/plasma/packagemetadata.h
+include/plasma/packagestructure.h
+include/plasma/phase.h
+include/plasma/plasma.h
+include/plasma/plasma_export.h
+include/plasma/scriptengine.h
+include/plasma/searchcontext.h
+include/plasma/searchmatch.h
+include/plasma/shadowitem_p.h
+include/plasma/svg.h
+include/plasma/taskmanager.h
+include/plasma/theme.h
+include/plasma/uiloader.h
+include/plasma/view.h
+include/plasma/widgets/checkbox.h
+include/plasma/widgets/flash.h
+include/plasma/widgets/icon.h
+include/plasma/widgets/label.h
+include/plasma/widgets/lineedit.h
+include/plasma/widgets/meter.h
+include/plasma/widgets/progressbar.h
+include/plasma/widgets/pushbutton.h
+include/plasma/widgets/radiobutton.h
+include/plasma/widgets/signalplotter.h
+include/plasma/widgets/widget.h
+include/solid/control/authentication.h
+include/solid/control/bluetoothinputdevice.h
+include/solid/control/bluetoothinterface.h
+include/solid/control/bluetoothmanager.h
+include/solid/control/bluetoothremotedevice.h
+include/solid/control/bluetoothsecurity.h
+include/solid/control/ifaces/authentication.h
+include/solid/control/ifaces/bluetoothinputdevice.h
+include/solid/control/ifaces/bluetoothinterface.h
+include/solid/control/ifaces/bluetoothmanager.h
+include/solid/control/ifaces/bluetoothremotedevice.h
+include/solid/control/ifaces/network.h
+include/solid/control/ifaces/networkinterface.h
+include/solid/control/ifaces/networkmanager.h
+include/solid/control/ifaces/powermanager.h
+include/solid/control/ifaces/wirelessnetwork.h
+include/solid/control/network.h
+include/solid/control/networking.h
+include/solid/control/networkinterface.h
+include/solid/control/networkmanager.h
+include/solid/control/powermanager.h
+include/solid/control/singletondefs.h
+include/solid/control/solid_control_export.h
+include/solid/control/wirelessnetwork.h
+lib/kconf_update_bin/khotkeys_update
+lib/kconf_update_bin/kwin_update_default_rules
+lib/kconf_update_bin/kwin_update_window_settings
+lib/kde4/ion_bbcukmet.so
+lib/kde4/ion_envcan.so
+lib/kde4/ion_noaa.so
+lib/kde4/kcm_access.so
+lib/kde4/kcm_accessibility.so
+lib/kde4/kcm_background.so
+lib/kde4/kcm_bell.so
+lib/kde4/kcm_clock.so
+lib/kde4/kcm_colors.so
+lib/kde4/kcm_display.so
+lib/kde4/kcm_energy.so
+lib/kde4/kcm_fonts.so
+lib/kde4/kcm_input.so
+lib/kde4/kcm_kdm.so
+lib/kde4/kcm_keyboard.so
+lib/kde4/kcm_keyboard_layout.so
+lib/kde4/kcm_keys.so
+lib/kde4/kcm_khotkeys.so
+lib/kde4/kcm_ksplashthemes.so
+lib/kde4/kcm_kthememanager.so
+lib/kde4/kcm_kwin4_effect_builtins.so
+lib/kde4/kcm_kwincompositing.so
+lib/kde4/kcm_kwindecoration.so
+lib/kde4/kcm_kwindesktop.so
+lib/kde4/kcm_kwinoptions.so
+lib/kde4/kcm_kwinrules.so
+lib/kde4/kcm_launch.so
+lib/kde4/kcm_randr.so
+lib/kde4/kcm_screensaver.so
+lib/kde4/kcm_smserver.so
+lib/kde4/kcm_solid.so
+lib/kde4/kcm_style.so
+lib/kde4/kcm_xinerama.so
+lib/kde4/kded_khotkeys.so
+lib/kde4/kded_networkstatus.so
+lib/kde4/kgreet_classic.so
+lib/kde4/kgreet_winbind.so
+lib/kde4/krunner_bookmarksrunner.so
+lib/kde4/krunner_calculatorrunner.so
+lib/kde4/krunner_searchrunner.so
+lib/kde4/krunner_webshortcuts.so
+lib/kde4/kstyle_keramik_config.so
+lib/kde4/kwin3_b2.so
+lib/kde4/kwin3_kde2.so
+lib/kde4/kwin3_keramik.so
+lib/kde4/kwin3_laptop.so
+lib/kde4/kwin3_modernsys.so
+lib/kde4/kwin3_oxygen.so
+lib/kde4/kwin3_plastik.so
+lib/kde4/kwin3_quartz.so
+lib/kde4/kwin3_redmond.so
+lib/kde4/kwin3_web.so
+lib/kde4/kwin4_effect_builtins.so
+lib/kde4/kwin_b2_config.so
+lib/kde4/kwin_kde2_config.so
+lib/kde4/kwin_keramik_config.so
+lib/kde4/kwin_modernsys_config.so
+lib/kde4/kwin_plastik_config.so
+lib/kde4/kwin_quartz_config.so
+lib/kde4/libexec/kcheckpass
+lib/kde4/libexec/kdm_config
+lib/kde4/libexec/kdm_greet
+lib/kde4/libexec/krootimage
+lib/kde4/libexec/test_kcm_xinerama
+lib/kde4/plasma_animator_default.so
+lib/kde4/plasma_applet_battery.so
+lib/kde4/plasma_applet_clock.so
+lib/kde4/plasma_applet_devicenotifier.so
+lib/kde4/plasma_applet_dig_clock.so
+lib/kde4/plasma_applet_launcher.so
+lib/kde4/plasma_applet_lockout.so
+lib/kde4/plasma_applet_pager.so
+lib/kde4/plasma_applet_systemtray.so
+lib/kde4/plasma_applet_tasks.so
+lib/kde4/plasma_applet_url.so
+lib/kde4/plasma_containment_desktop.so
+lib/kde4/plasma_containment_panel.so
+lib/kde4/plasma_engine_dict.so
+lib/kde4/plasma_engine_filebrowser.so
+lib/kde4/plasma_engine_hotplug.so
+lib/kde4/plasma_engine_mouse.so
+lib/kde4/plasma_engine_places.so
+lib/kde4/plasma_engine_powermanagement.so
+lib/kde4/plasma_engine_soliddevice.so
+lib/kde4/plasma_engine_tasks.so
+lib/kde4/plasma_engine_time.so
+lib/kde4/plasma_engine_weather.so
+lib/kde4/plasma_scriptengine_qscript.so
+lib/kde4/plugins/designer/ksysguardwidgets.so
+lib/kde4/solid_fakebluetooth.so
+lib/kde4/solid_fakenet.so
+lib/kde4/solid_hal_power.so
+lib/libkdecorations.so
+lib/libkdecorations.so.4
+lib/libkdecorations.so.4.0.0
+lib/libkdeinit4_kaccess.so
+lib/libkdeinit4_kcminit.so
+lib/libkdeinit4_kcminit_startup.so
+lib/libkdeinit4_kcontroledit.so
+lib/libkdeinit4_khotkeys.so
+lib/libkdeinit4_klipper.so
+lib/libkdeinit4_kmenuedit.so
+lib/libkdeinit4_krunner.so
+lib/libkdeinit4_ksmserver.so
+lib/libkdeinit4_ksysguard.so
+lib/libkdeinit4_kwin.so
+lib/libkdeinit4_kwin_rules_dialog.so
+lib/libkdeinit4_kxkb.so
+lib/libkdeinit4_plasma.so
+lib/libkscreensaver.so
+lib/libkscreensaver.so.5
+lib/libkscreensaver.so.5.0.0
+lib/libksgrd.so
+lib/libksgrd.so.4
+lib/libksgrd.so.4.0.0
+lib/libkwineffects.so
+lib/libkwineffects.so.1
+lib/libkwineffects.so.1.0.0
+lib/libkworkspace.so
+lib/libkworkspace.so.4
+lib/libkworkspace.so.4.0.0
+lib/libplasma.so
+lib/libplasma.so.1
+lib/libplasma.so.1.0.0
+lib/libprocesscore.so
+lib/libprocesscore.so.4
+lib/libprocesscore.so.4.0.0
+lib/libprocessui.so
+lib/libprocessui.so.4
+lib/libprocessui.so.4.0.0
+lib/libsolidcontrol.so
+lib/libsolidcontrol.so.4
+lib/libsolidcontrol.so.4.0.0
+lib/libsolidcontrolifaces.so
+lib/libsolidcontrolifaces.so.4
+lib/libsolidcontrolifaces.so.4.0.0
+lib/libtaskmanager.so
+lib/libtaskmanager.so.4
+lib/libtaskmanager.so.4.0.0
+lib/libweather_ion.so
+lib/libweather_ion.so.4
+lib/libweather_ion.so.4.0.0
+share/applications/kde4/klipper.desktop
+share/applications/kde4/kmenuedit.desktop
+share/applications/kde4/krandrtray.desktop
+share/applications/kde4/ksysguard.desktop
+share/applications/kde4/ktip.desktop
+share/applications/kde4/systemsettings.desktop
+share/dbus-1/interfaces/org.freedesktop.ScreenSaver.xml
+share/dbus-1/interfaces/org.kde.KSMServerInterface.xml
+share/dbus-1/interfaces/org.kde.KWin.xml
+share/dbus-1/interfaces/org.kde.krunner.App.xml
+share/dbus-1/interfaces/org.kde.krunner.Interface.xml
+share/dbus-1/interfaces/org.kde.screensaver.xml
+share/desktop-directories/kde-development-translation.directory
+share/desktop-directories/kde-development-webdevelopment.directory
+share/desktop-directories/kde-development.directory
+share/desktop-directories/kde-editors.directory
+share/desktop-directories/kde-edu-languages.directory
+share/desktop-directories/kde-edu-mathematics.directory
+share/desktop-directories/kde-edu-miscellaneous.directory
+share/desktop-directories/kde-edu-science.directory
+share/desktop-directories/kde-edu-tools.directory
+share/desktop-directories/kde-education.directory
+share/desktop-directories/kde-games-arcade.directory
+share/desktop-directories/kde-games-board.directory
+share/desktop-directories/kde-games-card.directory
+share/desktop-directories/kde-games-kids.directory
+share/desktop-directories/kde-games-roguelikes.directory
+share/desktop-directories/kde-games-strategy.directory
+share/desktop-directories/kde-games.directory
+share/desktop-directories/kde-graphics.directory
+share/desktop-directories/kde-internet-terminal.directory
+share/desktop-directories/kde-internet.directory
+share/desktop-directories/kde-main.directory
+share/desktop-directories/kde-more.directory
+share/desktop-directories/kde-multimedia.directory
+share/desktop-directories/kde-office.directory
+share/desktop-directories/kde-science.directory
+share/desktop-directories/kde-settingsmenu.directory
+share/desktop-directories/kde-system-terminal.directory
+share/desktop-directories/kde-system.directory
+share/desktop-directories/kde-toys.directory
+share/desktop-directories/kde-unknown.directory
+share/desktop-directories/kde-utilities-accessibility.directory
+share/desktop-directories/kde-utilities-desktop.directory
+share/desktop-directories/kde-utilities-file.directory
+share/desktop-directories/kde-utilities-peripherals.directory
+share/desktop-directories/kde-utilities-pim.directory
+share/desktop-directories/kde-utilities-xutils.directory
+share/desktop-directories/kde-utilities.directory
+share/doc/kde/HTML/en/kdm/common
+share/doc/kde/HTML/en/kdm/index.cache.bz2
+share/doc/kde/HTML/en/kdm/index.docbook
+share/doc/kde/HTML/en/kdm/kdmrc-ref.docbook
+share/doc/kde/HTML/en/kinfocenter/common
+share/doc/kde/HTML/en/kinfocenter/devices/common
+share/doc/kde/HTML/en/kinfocenter/devices/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/devices/index.docbook
+share/doc/kde/HTML/en/kinfocenter/dma/common
+share/doc/kde/HTML/en/kinfocenter/dma/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/dma/index.docbook
+share/doc/kde/HTML/en/kinfocenter/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/index.docbook
+share/doc/kde/HTML/en/kinfocenter/interrupts/common
+share/doc/kde/HTML/en/kinfocenter/interrupts/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/interrupts/index.docbook
+share/doc/kde/HTML/en/kinfocenter/ioports/common
+share/doc/kde/HTML/en/kinfocenter/ioports/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/ioports/index.docbook
+share/doc/kde/HTML/en/kinfocenter/memory/common
+share/doc/kde/HTML/en/kinfocenter/memory/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/memory/index.docbook
+share/doc/kde/HTML/en/kinfocenter/nics/common
+share/doc/kde/HTML/en/kinfocenter/nics/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/nics/index.docbook
+share/doc/kde/HTML/en/kinfocenter/opengl/common
+share/doc/kde/HTML/en/kinfocenter/opengl/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/opengl/index.docbook
+share/doc/kde/HTML/en/kinfocenter/partitions/common
+share/doc/kde/HTML/en/kinfocenter/partitions/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/partitions/index.docbook
+share/doc/kde/HTML/en/kinfocenter/pci/common
+share/doc/kde/HTML/en/kinfocenter/pci/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/pci/index.docbook
+share/doc/kde/HTML/en/kinfocenter/pcmcia/common
+share/doc/kde/HTML/en/kinfocenter/pcmcia/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/pcmcia/index.docbook
+share/doc/kde/HTML/en/kinfocenter/processor/common
+share/doc/kde/HTML/en/kinfocenter/processor/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/processor/index.docbook
+share/doc/kde/HTML/en/kinfocenter/protocols/common
+share/doc/kde/HTML/en/kinfocenter/protocols/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/protocols/index.docbook
+share/doc/kde/HTML/en/kinfocenter/samba/common
+share/doc/kde/HTML/en/kinfocenter/samba/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/samba/index.docbook
+share/doc/kde/HTML/en/kinfocenter/scsi/common
+share/doc/kde/HTML/en/kinfocenter/scsi/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/scsi/index.docbook
+share/doc/kde/HTML/en/kinfocenter/sound/common
+share/doc/kde/HTML/en/kinfocenter/sound/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/sound/index.docbook
+share/doc/kde/HTML/en/kinfocenter/usb/common
+share/doc/kde/HTML/en/kinfocenter/usb/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/usb/index.docbook
+share/doc/kde/HTML/en/kinfocenter/xserver/common
+share/doc/kde/HTML/en/kinfocenter/xserver/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/xserver/index.docbook
+share/doc/kde/HTML/en/klipper/common
+share/doc/kde/HTML/en/klipper/index.cache.bz2
+share/doc/kde/HTML/en/klipper/index.docbook
+share/doc/kde/HTML/en/klipper/screenshot.png
+share/doc/kde/HTML/en/kmenuedit/common
+share/doc/kde/HTML/en/kmenuedit/done.png
+share/doc/kde/HTML/en/kmenuedit/index.cache.bz2
+share/doc/kde/HTML/en/kmenuedit/index.docbook
+share/doc/kde/HTML/en/kmenuedit/itemname.png
+share/doc/kde/HTML/en/kmenuedit/kmenueditmain.png
+share/doc/kde/HTML/en/kmenuedit/new.png
+share/doc/kde/HTML/en/kmenuedit/selecticon.png
+share/doc/kde/HTML/en/kmenuedit/selectinternet.png
+share/doc/kde/HTML/en/ksysguard/common
+share/doc/kde/HTML/en/ksysguard/index.cache.bz2
+share/doc/kde/HTML/en/ksysguard/index.docbook
+share/doc/kde/HTML/en/kxkb/common
+share/doc/kde/HTML/en/kxkb/index.cache.bz2
+share/doc/kde/HTML/en/kxkb/index.docbook
+share/doc/kde/HTML/en/plasma/common
+share/doc/kde/HTML/en/plasma/index.cache.bz2
+share/doc/kde/HTML/en/plasma/index.docbook
+share/icons/hicolor/128x128/apps/ksplash.png
+share/icons/hicolor/128x128/apps/ktip.png
+share/icons/hicolor/16x16/apps/khotkeys.png
+share/icons/hicolor/16x16/apps/kmenuedit.png
+share/icons/hicolor/16x16/apps/ksplash.png
+share/icons/hicolor/16x16/apps/ktip.png
+share/icons/hicolor/16x16/apps/kxkb.png
+share/icons/hicolor/22x22/apps/kmenuedit.png
+share/icons/hicolor/22x22/apps/ksplash.png
+share/icons/hicolor/22x22/apps/ktip.png
+share/icons/hicolor/32x32/apps/khotkeys.png
+share/icons/hicolor/32x32/apps/kmenuedit.png
+share/icons/hicolor/32x32/apps/ksplash.png
+share/icons/hicolor/32x32/apps/ktip.png
+share/icons/hicolor/32x32/apps/kxkb.png
+share/icons/hicolor/48x48/apps/kmenuedit.png
+share/icons/hicolor/48x48/apps/ksplash.png
+share/icons/hicolor/48x48/apps/ktip.png
+share/icons/hicolor/48x48/apps/kxkb.png
+share/icons/hicolor/64x64/apps/ksplash.png
+share/icons/hicolor/64x64/apps/ktip.png
+share/icons/hicolor/scalable/apps/ktip.svgz
+share/icons/oxygen/128x128/apps/kcmkwm.png
+share/icons/oxygen/16x16/apps/computer.png
+share/icons/oxygen/16x16/apps/daemon.png
+share/icons/oxygen/16x16/apps/kcmkwm.png
+share/icons/oxygen/16x16/apps/kdeapp.png
+share/icons/oxygen/16x16/apps/kernel.png
+share/icons/oxygen/16x16/apps/ksysguardd.png
+share/icons/oxygen/16x16/apps/kwin.png
+share/icons/oxygen/16x16/apps/running.png
+share/icons/oxygen/16x16/apps/shell.png
+share/icons/oxygen/16x16/apps/unknownapp.png
+share/icons/oxygen/16x16/apps/waiting.png
+share/icons/oxygen/22x22/apps/kcmkwm.png
+share/icons/oxygen/32x32/apps/kcmkwm.png
+share/icons/oxygen/32x32/apps/kwin.png
+share/icons/oxygen/48x48/apps/kcmkwm.png
+share/icons/oxygen/48x48/apps/kwin.png
+share/icons/oxygen/64x64/apps/kcmkwm.png
+share/icons/oxygen/scalable/apps/kcmkwm.svgz
+share/icons/oxygen/scalable/apps/kwin.svgz
+share/kde/apps/cmake/modules/FindLibXKlavier.cmake
+share/kde/apps/cmake/modules/FindPAM.cmake
+share/kde/apps/cmake/modules/FindRAW1394.cmake
+share/kde/apps/cmake/modules/FindSensors.cmake
+share/kde/apps/cmake/modules/UnixAuth.cmake
+share/kde/apps/color-schemes/Blue Deep.colors
+share/kde/apps/color-schemes/Chrome.colors
+share/kde/apps/color-schemes/Desert Night.colors
+share/kde/apps/color-schemes/Desert.colors
+share/kde/apps/color-schemes/Evening Lilac.colors
+share/kde/apps/color-schemes/Honeycomb.colors
+share/kde/apps/color-schemes/Midnight Meadow.colors
+share/kde/apps/color-schemes/Rocky Coast.colors
+share/kde/apps/color-schemes/Rose.colors
+share/kde/apps/color-schemes/Steel.colors
+share/kde/apps/color-schemes/Stone Orchid.colors
+share/kde/apps/color-schemes/Terra.colors
+share/kde/apps/color-schemes/Water Orchid.colors
+share/kde/apps/color-schemes/Wonton Soup.colors
+share/kde/apps/desktoptheme/default/colors
+share/kde/apps/desktoptheme/default/dialogs/background.svg
+share/kde/apps/desktoptheme/default/dialogs/shutdowndlg.svg
+share/kde/apps/desktoptheme/default/dialogs/shutdowndlgbuttonglow.svg
+share/kde/apps/desktoptheme/default/widgets/analog_meter.svg
+share/kde/apps/desktoptheme/default/widgets/background.svg
+share/kde/apps/desktoptheme/default/widgets/bar_meter_horizontal.svg
+share/kde/apps/desktoptheme/default/widgets/bar_meter_vertical.svg
+share/kde/apps/desktoptheme/default/widgets/battery-oxygen.svg
+share/kde/apps/desktoptheme/default/widgets/battery.svg
+share/kde/apps/desktoptheme/default/widgets/clock.svg
+share/kde/apps/desktoptheme/default/widgets/connection-established.svg
+share/kde/apps/desktoptheme/default/widgets/iconbutton.svg
+share/kde/apps/desktoptheme/default/widgets/panel-background.svg
+share/kde/apps/desktoptheme/default/widgets/plot-background.svg
+share/kde/apps/desktoptheme/default/widgets/toolbox-button.svg
+share/kde/apps/desktoptheme/metadata.desktop
+share/kde/apps/doc/kdm/README
+share/kde/apps/doc/kdm/greeter.dtd
+share/kde/apps/kaccess/kaccess.notifyrc
+share/kde/apps/kcminput/cursor_large_black.pcf.gz
+share/kde/apps/kcminput/cursor_large_white.pcf.gz
+share/kde/apps/kcminput/cursor_small_white.pcf.gz
+share/kde/apps/kcminput/pics/mouse_lh.png
+share/kde/apps/kcminput/pics/mouse_rh.png
+share/kde/apps/kcmkeys/kde3.kksrc
+share/kde/apps/kcmkeys/kde4.kksrc
+share/kde/apps/kcmkeys/mac4.kksrc
+share/kde/apps/kcmkeys/unix3.kksrc
+share/kde/apps/kcmkeys/win3.kksrc
+share/kde/apps/kcmkeys/win4.kksrc
+share/kde/apps/kcmkeys/wm3.kksrc
+share/kde/apps/kconf_update/convertShortcuts.pl
+share/kde/apps/kconf_update/kaccel.upd
+share/kde/apps/kconf_update/kcmdisplayrc.upd
+share/kde/apps/kconf_update/khotkeys_32b1_update.upd
+share/kde/apps/kconf_update/konqueror_gestures_kde321_update.upd
+share/kde/apps/kconf_update/ksmserver.upd
+share/kde/apps/kconf_update/kwin.upd
+share/kde/apps/kconf_update/kwin3_plugin.pl
+share/kde/apps/kconf_update/kwin3_plugin.upd
+share/kde/apps/kconf_update/kwin_focus1.sh
+share/kde/apps/kconf_update/kwin_focus1.upd
+share/kde/apps/kconf_update/kwin_focus2.sh
+share/kde/apps/kconf_update/kwin_focus2.upd
+share/kde/apps/kconf_update/kwin_fsp_workarounds_1.upd
+share/kde/apps/kconf_update/kwin_on_off.upd
+share/kde/apps/kconf_update/kwiniconify.upd
+share/kde/apps/kconf_update/kwinsticky.upd
+share/kde/apps/kconf_update/kwinupdatewindowsettings.upd
+share/kde/apps/kconf_update/mouse_cursor_theme.upd
+share/kde/apps/kconf_update/move_session_config.sh
+share/kde/apps/kconf_update/on-off_to_true-false.sh
+share/kde/apps/kconf_update/pluginlibFix.pl
+share/kde/apps/kcontrol/pics/anchor.png
+share/kde/apps/kcontrol/pics/energybig.png
+share/kde/apps/kcontrol/pics/lo-energy.png
+share/kde/apps/kcontrol/pics/logo.png
+share/kde/apps/kcontrol/pics/mini-world.png
+share/kde/apps/kcontrol/pics/monitor.png
+share/kde/apps/kcontroledit/icons/crystalsvg/22x22/actions/menu_new.png
+share/kde/apps/kcontroledit/icons/crystalsvg/22x22/actions/menu_new_sep.png
+share/kde/apps/kcontroledit/icons/crystalsvg/32x32/actions/menu_new.png
+share/kde/apps/kcontroledit/icons/crystalsvg/32x32/actions/menu_new_sep.png
+share/kde/apps/kcontroledit/kcontroleditui.rc
+share/kde/apps/kdewizard/pics/wizard_small.png
+share/kde/apps/kdewizard/tips
+share/kde/apps/kdisplay/app-defaults/AAAAAAGeneral.ad
+share/kde/apps/kdisplay/app-defaults/AAAMotif.ad
+share/kde/apps/kdisplay/app-defaults/AAATk.ad
+share/kde/apps/kdisplay/app-defaults/AAAXaw.ad
+share/kde/apps/kdisplay/app-defaults/AcroRead.ad
+share/kde/apps/kdisplay/app-defaults/Editres.ad
+share/kde/apps/kdisplay/app-defaults/Emacs.ad
+share/kde/apps/kdisplay/app-defaults/GV.ad
+share/kde/apps/kdisplay/app-defaults/ML.ad
+share/kde/apps/kdisplay/app-defaults/Nedit.ad
+share/kde/apps/kdisplay/app-defaults/Netscape.ad
+share/kde/apps/kdisplay/app-defaults/RVPlayer.ad
+share/kde/apps/kdisplay/app-defaults/WPerfect.ad
+share/kde/apps/kdisplay/app-defaults/XCalc.ad
+share/kde/apps/kdisplay/app-defaults/XOsview.ad
+share/kde/apps/kdisplay/app-defaults/XTerm.ad
+share/kde/apps/kdisplay/app-defaults/XV.ad
+share/kde/apps/kdisplay/app-defaults/Xawtv.ad
+share/kde/apps/kdisplay/app-defaults/Xdvi.ad
+share/kde/apps/kdisplay/app-defaults/Xpdf.ad
+share/kde/apps/kdisplay/color-schemes/AtlasGreen.kcsrc
+share/kde/apps/kdisplay/color-schemes/BeOS.kcsrc
+share/kde/apps/kdisplay/color-schemes/BlackOnWhite.kcsrc
+share/kde/apps/kdisplay/color-schemes/BlueSlate.kcsrc
+share/kde/apps/kdisplay/color-schemes/CDE.kcsrc
+share/kde/apps/kdisplay/color-schemes/DarkBlue.kcsrc
+share/kde/apps/kdisplay/color-schemes/DesertRed.kcsrc
+share/kde/apps/kdisplay/color-schemes/DigitalCDE.kcsrc
+share/kde/apps/kdisplay/color-schemes/EveX.kcsrc
+share/kde/apps/kdisplay/color-schemes/KDEOne.kcsrc
+share/kde/apps/kdisplay/color-schemes/KDETwo.kcsrc
+share/kde/apps/kdisplay/color-schemes/Keramik.kcsrc
+share/kde/apps/kdisplay/color-schemes/KeramikEmerald.kcsrc
+share/kde/apps/kdisplay/color-schemes/KeramikWhite.kcsrc
+share/kde/apps/kdisplay/color-schemes/MediaPeach.kcsrc
+share/kde/apps/kdisplay/color-schemes/Next.kcsrc
+share/kde/apps/kdisplay/color-schemes/PaleGray.kcsrc
+share/kde/apps/kdisplay/color-schemes/Plastik.kcsrc
+share/kde/apps/kdisplay/color-schemes/PointReyesGreen.kcsrc
+share/kde/apps/kdisplay/color-schemes/Pumpkin.kcsrc
+share/kde/apps/kdisplay/color-schemes/SolarisCDE.kcsrc
+share/kde/apps/kdisplay/color-schemes/Storm.kcsrc
+share/kde/apps/kdisplay/color-schemes/System.kcsrc
+share/kde/apps/kdisplay/color-schemes/WhiteOnBlack.kcsrc
+share/kde/apps/kdisplay/color-schemes/Windows2000.kcsrc
+share/kde/apps/kdisplay/color-schemes/Windows95.kcsrc
+share/kde/apps/kdisplay/color-schemes/WindowsXP.kcsrc
+share/kde/apps/kdisplay/color-schemes/YellowOnBlue.kcsrc
+share/kde/apps/kdm/faces/.default.face.icon
+share/kde/apps/kdm/faces/root.face.icon
+share/kde/apps/kdm/pics/kdelogo-crystal.png
+share/kde/apps/kdm/pics/kdelogo.png
+share/kde/apps/kdm/pics/shutdown.jpg
+share/kde/apps/kdm/pics/users/default1.png
+share/kde/apps/kdm/pics/users/default2.png
+share/kde/apps/kdm/pics/users/default3.png
+share/kde/apps/kdm/pics/users/root1.png
+share/kde/apps/kdm/sessions/9wm.desktop
+share/kde/apps/kdm/sessions/aewm++.desktop
+share/kde/apps/kdm/sessions/aewm.desktop
+share/kde/apps/kdm/sessions/afterstep.desktop
+share/kde/apps/kdm/sessions/amaterus.desktop
+share/kde/apps/kdm/sessions/amiwm.desktop
+share/kde/apps/kdm/sessions/asclassic.desktop
+share/kde/apps/kdm/sessions/blackbox.desktop
+share/kde/apps/kdm/sessions/cde.desktop
+share/kde/apps/kdm/sessions/ctwm.desktop
+share/kde/apps/kdm/sessions/cwwm.desktop
+share/kde/apps/kdm/sessions/enlightenment.desktop
+share/kde/apps/kdm/sessions/evilwm.desktop
+share/kde/apps/kdm/sessions/fluxbox.desktop
+share/kde/apps/kdm/sessions/flwm.desktop
+share/kde/apps/kdm/sessions/fvwm.desktop
+share/kde/apps/kdm/sessions/fvwm95.desktop
+share/kde/apps/kdm/sessions/gnome.desktop
+share/kde/apps/kdm/sessions/golem.desktop
+share/kde/apps/kdm/sessions/icewm.desktop
+share/kde/apps/kdm/sessions/ion.desktop
+share/kde/apps/kdm/sessions/kde.desktop
+share/kde/apps/kdm/sessions/larswm.desktop
+share/kde/apps/kdm/sessions/lwm.desktop
+share/kde/apps/kdm/sessions/matchbox.desktop
+share/kde/apps/kdm/sessions/metacity.desktop
+share/kde/apps/kdm/sessions/mwm.desktop
+share/kde/apps/kdm/sessions/olvwm.desktop
+share/kde/apps/kdm/sessions/olwm.desktop
+share/kde/apps/kdm/sessions/openbox.desktop
+share/kde/apps/kdm/sessions/oroborus.desktop
+share/kde/apps/kdm/sessions/phluid.desktop
+share/kde/apps/kdm/sessions/pwm.desktop
+share/kde/apps/kdm/sessions/qvwm.desktop
+share/kde/apps/kdm/sessions/ratpoison.desktop
+share/kde/apps/kdm/sessions/sapphire.desktop
+share/kde/apps/kdm/sessions/sawfish.desktop
+share/kde/apps/kdm/sessions/twm.desktop
+share/kde/apps/kdm/sessions/ude.desktop
+share/kde/apps/kdm/sessions/vtwm.desktop
+share/kde/apps/kdm/sessions/w9wm.desktop
+share/kde/apps/kdm/sessions/waimea.desktop
+share/kde/apps/kdm/sessions/wm2.desktop
+share/kde/apps/kdm/sessions/wmaker.desktop
+share/kde/apps/kdm/sessions/xfce.desktop
+share/kde/apps/kdm/sessions/xfce4.desktop
+share/kde/apps/kdm/themes/circles/KdmGreeterTheme.desktop
+share/kde/apps/kdm/themes/circles/background.svg
+share/kde/apps/kdm/themes/circles/circles.xml
+share/kde/apps/kdm/themes/circles/flower.png
+share/kde/apps/kdm/themes/circles/help.png
+share/kde/apps/kdm/themes/circles/options.png
+share/kde/apps/kdm/themes/circles/screenshot.png
+share/kde/apps/khotkeys/kde32b1.khotkeys
+share/kde/apps/khotkeys/konqueror_gestures_kde321.khotkeys
+share/kde/apps/kicker/applets/ksysguardapplet.desktop
+share/kde/apps/kmenuedit/icons/crystalsvg/22x22/actions/menu_new.png
+share/kde/apps/kmenuedit/icons/crystalsvg/22x22/actions/menu_new_sep.png
+share/kde/apps/kmenuedit/icons/crystalsvg/32x32/actions/menu_new.png
+share/kde/apps/kmenuedit/icons/crystalsvg/32x32/actions/menu_new_sep.png
+share/kde/apps/kmenuedit/kmenueditui.rc
+share/kde/apps/ksmserver/pics/shutdownkonq.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/background.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/description.txt
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon1.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon1_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon2.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon2_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon3.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon3_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon4.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon4_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon5.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon5_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon6.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon6_anim.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon7.png
+share/kde/apps/ksplash/Themes/Default/1600x1200/icon7_anim.png
+share/kde/apps/ksplash/Themes/Default/Preview.png
+share/kde/apps/ksplash/Themes/Default/Theme.rc
+share/kde/apps/ksplash/Themes/None/Theme.rc
+share/kde/apps/ksplash/Themes/Simple/Preview.png
+share/kde/apps/ksplash/Themes/Simple/Theme.rc
+share/kde/apps/ksplash/Themes/SimpleSmall/Preview.png
+share/kde/apps/ksplash/Themes/SimpleSmall/Theme.rc
+share/kde/apps/ksysguard/KSysGuardApplet.xml
+share/kde/apps/ksysguard/ProcessTable.sgrd
+share/kde/apps/ksysguard/SystemLoad.sgrd
+share/kde/apps/ksysguard/ksysguard.notifyrc
+share/kde/apps/ksysguard/ksysguardui.rc
+share/kde/apps/kthememanager/themes/HighContrastDark-big/HighContrastDark-big.preview.png
+share/kde/apps/kthememanager/themes/HighContrastDark-big/HighContrastDark-big.xml
+share/kde/apps/kthememanager/themes/HighContrastDark/HighContrastDark.preview.png
+share/kde/apps/kthememanager/themes/HighContrastDark/HighContrastDark.xml
+share/kde/apps/kthememanager/themes/HighContrastLight-big/HighContrastLight-big.preview.png
+share/kde/apps/kthememanager/themes/HighContrastLight-big/HighContrastLight-big.xml
+share/kde/apps/kthememanager/themes/HighContrastLight/HighContrastLight.preview.png
+share/kde/apps/kthememanager/themes/HighContrastLight/HighContrastLight.xml
+share/kde/apps/kthememanager/themes/KDE_Classic/KDE_Classic.preview.png
+share/kde/apps/kthememanager/themes/KDE_Classic/KDE_Classic.xml
+share/kde/apps/kthememanager/themes/Keramik/Keramik.preview.png
+share/kde/apps/kthememanager/themes/Keramik/Keramik.xml
+share/kde/apps/kthememanager/themes/Plastik/Plastik.preview.png
+share/kde/apps/kthememanager/themes/Plastik/Plastik.xml
+share/kde/apps/kthememanager/themes/Platinum/Platinum.preview.png
+share/kde/apps/kthememanager/themes/Platinum/Platinum.xml
+share/kde/apps/kthememanager/themes/Redmond/Redmond.preview.png
+share/kde/apps/kthememanager/themes/Redmond/Redmond.xml
+share/kde/apps/kthememanager/themes/Sunshine/Sunshine.preview.png
+share/kde/apps/kthememanager/themes/Sunshine/Sunshine.xml
+share/kde/apps/kthememanager/themes/YellowOnBlue-big/YellowOnBlue-big.preview.png
+share/kde/apps/kthememanager/themes/YellowOnBlue-big/YellowOnBlue-big.xml
+share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.preview.png
+share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.xml
+share/kde/apps/kwin/b2.desktop
+share/kde/apps/kwin/blur-render.frag
+share/kde/apps/kwin/blur-render.vert
+share/kde/apps/kwin/blur.frag
+share/kde/apps/kwin/blur.vert
+share/kde/apps/kwin/circle-edgy.png
+share/kde/apps/kwin/circle.png
+share/kde/apps/kwin/default_rules/fsp_workarounds_1.kwinrules
+share/kde/apps/kwin/default_rules/plasma_desktop_containment.kwinrules
+share/kde/apps/kwin/explosion-end.png
+share/kde/apps/kwin/explosion-start.png
+share/kde/apps/kwin/explosion.frag
+share/kde/apps/kwin/explosion.vert
+share/kde/apps/kwin/invert.frag
+share/kde/apps/kwin/invert.vert
+share/kde/apps/kwin/kde2.desktop
+share/kde/apps/kwin/keramik.desktop
+share/kde/apps/kwin/kwin.notifyrc
+share/kde/apps/kwin/laptop.desktop
+share/kde/apps/kwin/lookingglass.frag
+share/kde/apps/kwin/lookingglass.vert
+share/kde/apps/kwin/modernsystem.desktop
+share/kde/apps/kwin/oxygenclient.desktop
+share/kde/apps/kwin/plastik.desktop
+share/kde/apps/kwin/quartz.desktop
+share/kde/apps/kwin/redmond.desktop
+share/kde/apps/kwin/shadow-texture.png
+share/kde/apps/kwin/sharpen.frag
+share/kde/apps/kwin/sharpen.vert
+share/kde/apps/kwin/trackmouse.png
+share/kde/apps/kwin/web.desktop
+share/kde/apps/plasmoidviewer/checker.png
+share/kde/apps/solid/actions/test-predicate-openinwindow.desktop
+share/kde/apps/solidfakebluetoothbackend/fakebluetooth.xml
+share/kde/apps/solidfakenetbackend/fakenetworking.xml
+share/kde/apps/systemsettings/systemsettingsui.rc
+share/kde/autostart/khotkeys.desktop
+share/kde/autostart/klipper.desktop
+share/kde/autostart/krunner.desktop
+share/kde/autostart/ktip.desktop
+share/kde/autostart/plasma.desktop
+share/kde/config.kcfg/klaunch.kcfg
+share/kde/config.kcfg/kscreensaversettings.kcfg
+share/kde/config.kcfg/kwin.kcfg
+share/kde/config/background.knsrc
+share/kde/config/kdm.knsrc
+share/kde/config/kdm/README
+share/kde/config/kdm/Xreset
+share/kde/config/kdm/Xsession
+share/kde/config/kdm/Xsetup
+share/kde/config/kdm/Xstartup
+share/kde/config/kdm/Xwilling
+share/kde/config/kdm/backgroundrc
+share/kde/config/kdm/kdmrc
+share/kde/wallpapers/All-Good-People-1.jpg
+share/kde/wallpapers/All-Good-People-1.jpg.desktop
+share/kde/wallpapers/Chicken-Songs-2.jpg
+share/kde/wallpapers/Chicken-Songs-2.jpg.desktop
+share/kde/wallpapers/No-Ones-Laughing-3.jpg
+share/kde/wallpapers/No-Ones-Laughing-3.jpg.desktop
+share/kde/wallpapers/Time-For-Lunch-2.jpg
+share/kde/wallpapers/Time-For-Lunch-2.jpg.desktop
+share/kde/wallpapers/Totally-New-Product-1.jpg
+share/kde/wallpapers/Totally-New-Product-1.jpg.desktop
+share/kde/wallpapers/Won-Ton-Soup-3.jpg
+share/kde/wallpapers/Won-Ton-Soup-3.jpg.desktop
+share/kde/wallpapers/alta-badia.jpg
+share/kde/wallpapers/alta-badia.jpg.desktop
+share/kde/wallpapers/andes-venezolanos.svgz
+share/kde/wallpapers/andes-venezolanos.svgz.desktop
+share/kde/wallpapers/aurora.svgz
+share/kde/wallpapers/aurora.svgz.desktop
+share/kde/wallpapers/blue-bend.jpg
+share/kde/wallpapers/blue-bend.jpg.desktop
+share/kde/wallpapers/celtic.svgz
+share/kde/wallpapers/celtic.svgz.desktop
+share/kde/wallpapers/default_blue.jpg
+share/kde/wallpapers/default_blue.jpg.desktop
+share/kde/wallpapers/default_gears.jpg
+share/kde/wallpapers/default_gears.jpg.desktop
+share/kde/wallpapers/floating-leaves.jpg
+share/kde/wallpapers/floating-leaves.jpg.desktop
+share/kde/wallpapers/globe.svgz
+share/kde/wallpapers/globe.svgz.desktop
+share/kde/wallpapers/here-gear.svgz
+share/kde/wallpapers/here-gear.svgz.desktop
+share/kde/wallpapers/kde_box.png
+share/kde/wallpapers/kde_box.png.desktop
+share/kde/wallpapers/konqui.svgz
+share/kde/wallpapers/konqui.svgz.desktop
+share/kde/wallpapers/lineart.svgz
+share/kde/wallpapers/lineart.svgz.desktop
+share/kde/wallpapers/moon.svgz
+share/kde/wallpapers/moon.svgz.desktop
+share/kde/wallpapers/plasma-default.png
+share/kde/wallpapers/plasma-default.png.desktop
+share/kde/wallpapers/seaofconero.jpg
+share/kde/wallpapers/seaofconero.jpg.desktop
+share/kde/wallpapers/soft-green.jpg
+share/kde/wallpapers/soft-green.jpg.desktop
+share/kde/wallpapers/stelvio.jpg
+share/kde/wallpapers/stelvio.jpg.desktop
+share/kde/wallpapers/sunshine-after-the-rain.jpg
+share/kde/wallpapers/sunshine-after-the-rain.jpg.desktop
+share/kde/wallpapers/triplegears.jpg
+share/kde/wallpapers/triplegears.jpg.desktop
+share/kde4/services/ScreenSavers/kblank.desktop
+share/kde4/services/ScreenSavers/krandom.desktop
+share/kde4/services/accessibility.desktop
+share/kde4/services/bell.desktop
+share/kde4/services/clock.desktop
+share/kde4/services/colors.desktop
+share/kde4/services/desktop.desktop
+share/kde4/services/display.desktop
+share/kde4/services/energy.desktop
+share/kde4/services/fonts.desktop
+share/kde4/services/installktheme.desktop
+share/kde4/services/ion-bbcukmet.desktop
+share/kde4/services/ion-envcan.desktop
+share/kde4/services/ion-noaa.desktop
+share/kde4/services/kaccess.desktop
+share/kde4/services/kcm_solid.desktop
+share/kde4/services/kcmaccess.desktop
+share/kde4/services/kcmlaunch.desktop
+share/kde4/services/kcmsmserver.desktop
+share/kde4/services/kded/khotkeys.desktop
+share/kde4/services/kded/networkstatus.desktop
+share/kde4/services/kdm.desktop
+share/kde4/services/keyboard.desktop
+share/kde4/services/keyboard_layout.desktop
+share/kde4/services/keys.desktop
+share/kde4/services/khotkeys.desktop
+share/kde4/services/ksplashthememgr.desktop
+share/kde4/services/kthememanager.desktop
+share/kde4/services/kwin/blur.desktop
+share/kde4/services/kwin/boxswitch.desktop
+share/kde4/services/kwin/demo_taskbarthumbnail.desktop
+share/kde4/services/kwin/desktopgrid.desktop
+share/kde4/services/kwin/desktopgrid_config.desktop
+share/kde4/services/kwin/dialogparent.desktop
+share/kde4/services/kwin/diminactive.desktop
+share/kde4/services/kwin/diminactive_config.desktop
+share/kde4/services/kwin/explosion.desktop
+share/kde4/services/kwin/fade.desktop
+share/kde4/services/kwin/fallapart.desktop
+share/kde4/services/kwin/invert.desktop
+share/kde4/services/kwin/invert_config.desktop
+share/kde4/services/kwin/login.desktop
+share/kde4/services/kwin/logout.desktop
+share/kde4/services/kwin/lookingglass.desktop
+share/kde4/services/kwin/lookingglass_config.desktop
+share/kde4/services/kwin/magnifier.desktop
+share/kde4/services/kwin/magnifier_config.desktop
+share/kde4/services/kwin/maketransparent.desktop
+share/kde4/services/kwin/maketransparent_config.desktop
+share/kde4/services/kwin/minimizeanimation.desktop
+share/kde4/services/kwin/mousemark.desktop
+share/kde4/services/kwin/mousemark_config.desktop
+share/kde4/services/kwin/presentwindows.desktop
+share/kde4/services/kwin/presentwindows_config.desktop
+share/kde4/services/kwin/scalein.desktop
+share/kde4/services/kwin/shadow.desktop
+share/kde4/services/kwin/shadow_config.desktop
+share/kde4/services/kwin/sharpen.desktop
+share/kde4/services/kwin/sharpen_config.desktop
+share/kde4/services/kwin/showfps.desktop
+share/kde4/services/kwin/showpaint.desktop
+share/kde4/services/kwin/thumbnailaside.desktop
+share/kde4/services/kwin/thumbnailaside_config.desktop
+share/kde4/services/kwin/trackmouse.desktop
+share/kde4/services/kwin/trackmouse_config.desktop
+share/kde4/services/kwin/zoom.desktop
+share/kde4/services/kwin/zoom_config.desktop
+share/kde4/services/kwinactions.desktop
+share/kde4/services/kwinadvanced.desktop
+share/kde4/services/kwincompositing.desktop
+share/kde4/services/kwindecoration.desktop
+share/kde4/services/kwinfocus.desktop
+share/kde4/services/kwinmoving.desktop
+share/kde4/services/kwinoptions.desktop
+share/kde4/services/kwinrules.desktop
+share/kde4/services/mouse.desktop
+share/kde4/services/plasma-animator-default.desktop
+share/kde4/services/plasma-applet-analogclock.desktop
+share/kde4/services/plasma-applet-devicenotifier.desktop
+share/kde4/services/plasma-applet-digitalclock.desktop
+share/kde4/services/plasma-applet-launcher.desktop
+share/kde4/services/plasma-applet-lockout.desktop
+share/kde4/services/plasma-applet-systemtray.desktop
+share/kde4/services/plasma-applet-url.desktop
+share/kde4/services/plasma-battery-default.desktop
+share/kde4/services/plasma-containment-desktop.desktop
+share/kde4/services/plasma-containment-panel.desktop
+share/kde4/services/plasma-dataengine-dict.desktop
+share/kde4/services/plasma-dataengine-filebrowser.desktop
+share/kde4/services/plasma-dataengine-hotplug.desktop
+share/kde4/services/plasma-dataengine-mouse.desktop
+share/kde4/services/plasma-dataengine-places.desktop
+share/kde4/services/plasma-dataengine-powermanagement.desktop
+share/kde4/services/plasma-dataengine-soliddevice.desktop
+share/kde4/services/plasma-dataengine-tasks.desktop
+share/kde4/services/plasma-dataengine-time.desktop
+share/kde4/services/plasma-dataengine-weather.desktop
+share/kde4/services/plasma-pager-default.desktop
+share/kde4/services/plasma-runner-bookmarks.desktop
+share/kde4/services/plasma-runner-calculator.desktop
+share/kde4/services/plasma-runner-search.desktop
+share/kde4/services/plasma-runner-webshortcuts.desktop
+share/kde4/services/plasma-scriptengine-qscript.desktop
+share/kde4/services/plasma-tasks-default.desktop
+share/kde4/services/randr.desktop
+share/kde4/services/screensaver.desktop
+share/kde4/services/settings-about-me.desktop
+share/kde4/services/settings-accessibility.desktop
+share/kde4/services/settings-advanced-user-settings.desktop
+share/kde4/services/settings-advanced.desktop
+share/kde4/services/settings-appearance.desktop
+share/kde4/services/settings-bluetooth.desktop
+share/kde4/services/settings-computer-administration.desktop
+share/kde4/services/settings-desktop.desktop
+share/kde4/services/settings-general.desktop
+share/kde4/services/settings-keyboard-and-mouse.desktop
+share/kde4/services/settings-look-and-feel.desktop
+share/kde4/services/settings-network-and-connectivity.desktop
+share/kde4/services/settings-network-settings.desktop
+share/kde4/services/settings-notifications.desktop
+share/kde4/services/settings-personal.desktop
+share/kde4/services/settings-regional-and-language.desktop
+share/kde4/services/settings-sharing.desktop
+share/kde4/services/settings-system.desktop
+share/kde4/services/settings-window-behaviour.desktop
+share/kde4/services/solidbackends/solid_fakebluetooth.desktop
+share/kde4/services/solidbackends/solid_fakenet.desktop
+share/kde4/services/solidbackends/solid_hal_power.desktop
+share/kde4/services/style.desktop
+share/kde4/services/xinerama.desktop
+share/kde4/servicetypes/kwineffect.desktop
+share/kde4/servicetypes/plasma-animator.desktop
+share/kde4/servicetypes/plasma-applet.desktop
+share/kde4/servicetypes/plasma-dataengine.desktop
+share/kde4/servicetypes/plasma-runner.desktop
+share/kde4/servicetypes/plasma-scriptengine.desktop
+share/kde4/servicetypes/screensaver.desktop
+share/kde4/servicetypes/solidbluetoothmanager.desktop
+share/kde4/servicetypes/solidnetworkmanager.desktop
+share/kde4/servicetypes/solidpowermanager.desktop
+share/kde4/servicetypes/systemsettingscategory.desktop
+share/kde4/servicetypes/weather_ion.desktop
+share/sounds/pop.wav
+@comment in xdg-dirs: @dirrm share/sounds
+@comment in kde: @dirrm share/kde4/servicetypes
+@dirrm share/kde4/services/solidbackends
+@dirrm share/kde4/services/kwin
+@comment in kde: @dirrm share/kde4/services/kded
+@dirrm share/kde4/services/ScreenSavers
+@comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde/wallpapers
+@exec ${MKDIR} %D/share/kde/config/kdm/sessions
+@dirrm share/kde/config/kdm/sessions
+@dirrm share/kde/config/kdm
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
+@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/apps/systemsettings
+@dirrm share/kde/apps/solidfakenetbackend
+@dirrm share/kde/apps/solidfakebluetoothbackend
+@dirrm share/kde/apps/solid/actions
+@dirrm share/kde/apps/solid
+@dirrm share/kde/apps/plasmoidviewer
+@dirrm share/kde/apps/kwin/default_rules
+@dirrm share/kde/apps/kwin
+@dirrm share/kde/apps/kthememanager/themes/YellowOnBlue-big
+@dirrm share/kde/apps/kthememanager/themes/YellowOnBlue
+@dirrm share/kde/apps/kthememanager/themes/Sunshine
+@dirrm share/kde/apps/kthememanager/themes/Redmond
+@dirrm share/kde/apps/kthememanager/themes/Platinum
+@dirrm share/kde/apps/kthememanager/themes/Plastik
+@dirrm share/kde/apps/kthememanager/themes/Keramik
+@dirrm share/kde/apps/kthememanager/themes/KDE_Classic
+@dirrm share/kde/apps/kthememanager/themes/HighContrastLight-big
+@dirrm share/kde/apps/kthememanager/themes/HighContrastLight
+@dirrm share/kde/apps/kthememanager/themes/HighContrastDark-big
+@dirrm share/kde/apps/kthememanager/themes/HighContrastDark
+@dirrm share/kde/apps/kthememanager/themes
+@dirrm share/kde/apps/kthememanager
+@dirrm share/kde/apps/ksysguard
+@dirrm share/kde/apps/ksplash/Themes/SimpleSmall
+@dirrm share/kde/apps/ksplash/Themes/Simple
+@dirrm share/kde/apps/ksplash/Themes/None
+@dirrm share/kde/apps/ksplash/Themes/Default/1600x1200
+@dirrm share/kde/apps/ksplash/Themes/Default
+@dirrm share/kde/apps/ksplash/Themes
+@dirrm share/kde/apps/ksplash
+@dirrm share/kde/apps/ksmserver/pics
+@dirrm share/kde/apps/ksmserver
+@dirrm share/kde/apps/kmenuedit/icons/crystalsvg/32x32/actions
+@dirrm share/kde/apps/kmenuedit/icons/crystalsvg/32x32
+@dirrm share/kde/apps/kmenuedit/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/kmenuedit/icons/crystalsvg/22x22
+@dirrm share/kde/apps/kmenuedit/icons/crystalsvg
+@dirrm share/kde/apps/kmenuedit/icons
+@dirrm share/kde/apps/kmenuedit
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@dirrm share/kde/apps/khotkeys
+@dirrm share/kde/apps/kdm/themes/circles
+@dirrm share/kde/apps/kdm/themes
+@dirrm share/kde/apps/kdm/sessions
+@dirrm share/kde/apps/kdm/pics/users
+@dirrm share/kde/apps/kdm/pics
+@dirrm share/kde/apps/kdm/faces
+@dirrm share/kde/apps/kdm
+@dirrm share/kde/apps/kdisplay/color-schemes
+@dirrm share/kde/apps/kdisplay/app-defaults
+@dirrm share/kde/apps/kdisplay
+@dirrm share/kde/apps/kdewizard/pics
+@dirrm share/kde/apps/kdewizard
+@dirrm share/kde/apps/kcontroledit/icons/crystalsvg/32x32/actions
+@dirrm share/kde/apps/kcontroledit/icons/crystalsvg/32x32
+@dirrm share/kde/apps/kcontroledit/icons/crystalsvg/22x22/actions
+@dirrm share/kde/apps/kcontroledit/icons/crystalsvg/22x22
+@dirrm share/kde/apps/kcontroledit/icons/crystalsvg
+@dirrm share/kde/apps/kcontroledit/icons
+@dirrm share/kde/apps/kcontroledit
+@comment in kde: @dirrm share/kde/apps/kcontrol/pics
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcmkeys
+@dirrm share/kde/apps/kcminput/pics
+@dirrm share/kde/apps/kcminput
+@dirrm share/kde/apps/kaccess
+@dirrm share/kde/apps/doc/kdm
+@dirrm share/kde/apps/doc
+@dirrm share/kde/apps/desktoptheme/default/widgets
+@dirrm share/kde/apps/desktoptheme/default/dialogs
+@dirrm share/kde/apps/desktoptheme/default
+@dirrm share/kde/apps/desktoptheme
+@dirrm share/kde/apps/color-schemes
+@comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/oxygen/scalable/apps
+@comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/48x48/apps
+@comment in kde: @dirrm share/icons/oxygen/32x32/apps
+@comment in kde: @dirrm share/icons/oxygen/22x22/apps
+@comment in kde: @dirrm share/icons/oxygen/16x16/apps
+@comment in kde: @dirrm share/icons/oxygen/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/plasma
+@dirrm share/doc/kde/HTML/en/kxkb
+@dirrm share/doc/kde/HTML/en/ksysguard
+@dirrm share/doc/kde/HTML/en/kmenuedit
+@dirrm share/doc/kde/HTML/en/klipper
+@dirrm share/doc/kde/HTML/en/kinfocenter/xserver
+@dirrm share/doc/kde/HTML/en/kinfocenter/usb
+@dirrm share/doc/kde/HTML/en/kinfocenter/sound
+@dirrm share/doc/kde/HTML/en/kinfocenter/scsi
+@dirrm share/doc/kde/HTML/en/kinfocenter/samba
+@dirrm share/doc/kde/HTML/en/kinfocenter/protocols
+@dirrm share/doc/kde/HTML/en/kinfocenter/processor
+@dirrm share/doc/kde/HTML/en/kinfocenter/pcmcia
+@dirrm share/doc/kde/HTML/en/kinfocenter/pci
+@dirrm share/doc/kde/HTML/en/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/en/kinfocenter/opengl
+@dirrm share/doc/kde/HTML/en/kinfocenter/nics
+@dirrm share/doc/kde/HTML/en/kinfocenter/memory
+@dirrm share/doc/kde/HTML/en/kinfocenter/ioports
+@dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
+@dirrm share/doc/kde/HTML/en/kinfocenter/dma
+@dirrm share/doc/kde/HTML/en/kinfocenter/devices
+@dirrm share/doc/kde/HTML/en/kinfocenter
+@dirrm share/doc/kde/HTML/en/kdm
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in xdg-dirs: @dirrm share/desktop-directories
+@comment in kde: @dirrm share/dbus-1/interfaces
+@comment in kde: @dirrm share/applications/kde4
+@comment in kde: @dirrm lib/kde4/plugins/designer
+@comment in kde: @dirrm lib/kde4/libexec
+@comment in kde: @dirrm lib/kde4
+@dirrm lib/kconf_update_bin
+@dirrm include/solid/control/ifaces
+@dirrm include/solid/control
+@dirrm include/solid
+@dirrm include/plasma/widgets
+@dirrm include/plasma/layouts
+@dirrm include/plasma
+@dirrm include/kworkspace
+@dirrm include/ksysguard
+@dirrm include/ksgrd
+@dirrm include/KDE/Plasma
+@comment in kde: @dirrm include/KDE
