@@ -1,4 +1,4 @@
-# $NetBSD: kde4.mk,v 1.1.1.1 2007/12/12 03:03:57 mwdavies Exp $
+# $NetBSD: kde4.mk,v 1.2 2007/12/12 09:57:15 mwdavies Exp $
 #
 # This Makefile fragment is included by packages that use the KDE4
 # configure-and-build process.
@@ -23,6 +23,7 @@ CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR:Q}
 CMAKE_ARGS+=	-DINFO_INSTALL_DIR=${PREFIX}/${PKGINFODIR}
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
 
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.3.2nb4
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.3.2nb1
 .include "../../x11/qt4-tools/buildlink3.mk"
