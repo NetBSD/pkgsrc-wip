@@ -1,1 +1,2 @@
-Fix build: Same QButtonGroup issue as kdebase-workspace4
+Check through kde3 patches - see which are still relevant
+look at optional bits.
