@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2007/12/12 03:25:44 mwdavies Exp $
+
+--- kcontrol/menus/CMakeLists.txt.orig	2007-12-07 01:45:22.000000000 +1300
++++ kcontrol/menus/CMakeLists.txt
+@@ -4,5 +4,5 @@
+ ########### install files ###############
+ 
+ install( FILES kde-information.menu
+-    DESTINATION ${SYSCONF_INSTALL_DIR}/xdg/menus/)
++    DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/kdebase-runtime4/)
+ install( FILES kde-information.directory  DESTINATION  ${XDG_DIRECTORY_INSTALL_DIR} )
