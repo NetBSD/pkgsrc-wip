@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/12/12 02:47:59 mwdavies Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+QIMAGEBLITZ_BUILDLINK3_MK:=	${QIMAGEBLITZ_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	qimageblitz
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqimageblitz}
+BUILDLINK_PACKAGES+=	qimageblitz
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}qimageblitz
+
+.if ${QIMAGEBLITZ_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.qimageblitz+=	qimageblitz>=20071203
+BUILDLINK_PKGSRCDIR.qimageblitz?=	../../wip/qimageblitz
+.endif	# QIMAGEBLITZ_BUILDLINK3_MK
+
+.include "../../x11/qt4-libs/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
