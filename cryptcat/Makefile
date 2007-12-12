@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/21 10:08:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/12 21:31:31 shattered Exp $
 #
 
 DISTNAME=		cryptcat-unix-1.2.1
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptcat/}
 EXTRACT_SUFX=		.tar
 
 MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://farm9.org/Cryptcat/
+HOMEPAGE=		http://sourceforge.net/projects/cryptcat/
 COMMENT=		Standard netcat enhanced with twofish encryption.
 
 USE_TOOLS+=		gmake
