@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 04:02:34 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/12 19:26:04 mwdavies Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -8,19 +8,7 @@ COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
 BUILD_MAKE_FLAGS+= VERBOSE=1
 
-#REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
-
-#REPLACE_PERL+= \
-#	khelpcenter/searchhandlers/khc_docbookdig.pl.cmake \
-#	khelpcenter/searchhandlers/khc_htdig.pl.cmake \
-#	khelpcenter/searchhandlers/khc_htsearch.pl \
-#	khelpcenter/searchhandlers/khc_mansearch.pl \
-#	kioslave/info/kde-info2html
-
-#CONF_FILES+=	${PREFIX}/share/examples/kdebase-runtime4/kde-information.menu \
-#                ${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
-
-#INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+REPLACE_PERL+=	kscd/workman2cddb.pl
 
 .include "../../wip/kde4/kde4.mk"
 

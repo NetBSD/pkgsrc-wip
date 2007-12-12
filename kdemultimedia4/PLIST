@@ -1,0 +1,147 @@
+@comment $NetBSD: PLIST,v 1.2 2007/12/12 19:26:04 mwdavies Exp $
+bin/juk
+bin/kmix
+bin/kmixctrl
+bin/kscd
+bin/workman2cddb.pl
+include/libkcddb/cdinfo.h
+include/libkcddb/cdinfodialog.h
+include/libkcddb/client.h
+include/libkcddb/configbase.h
+include/libkcddb/genres.h
+include/libkcddb/kcddb.h
+include/libkcddb/kcddb_export.h
+include/libkcddb/kcddbconfig.h
+include/libkcompactdisc/kcompactdisc.h
+lib/kde4/kcm_cddb.so
+lib/kde4/kmix_panelapplet.so
+lib/libkcddb.so
+lib/libkcddb.so.4
+lib/libkcddb.so.4.0.0
+lib/libkcompactdisc.so
+lib/libkcompactdisc.so.4
+lib/libkcompactdisc.so.4.0.0
+lib/libkdeinit4_kmix.so
+lib/libkdeinit4_kmixctrl.so
+share/applications/kde4/juk.desktop
+share/applications/kde4/kmix.desktop
+share/applications/kde4/kscd.desktop
+share/dbus-1/interfaces/org.kde.KMix.xml
+share/dbus-1/interfaces/org.kde.juk.collection.xml
+share/dbus-1/interfaces/org.kde.juk.player.xml
+share/dbus-1/interfaces/org.kde.juk.search.xml
+share/doc/kde/HTML/en/juk/common
+share/doc/kde/HTML/en/juk/history-playlist.png
+share/doc/kde/HTML/en/juk/index.cache.bz2
+share/doc/kde/HTML/en/juk/index.docbook
+share/doc/kde/HTML/en/juk/juk-adv-search.png
+share/doc/kde/HTML/en/juk/juk-file-renamer.png
+share/doc/kde/HTML/en/juk/juk-main.png
+share/doc/kde/HTML/en/juk/juk-tag-guesser.png
+share/doc/kde/HTML/en/juk/normal-playlist.png
+share/doc/kde/HTML/en/juk/search-playlist.png
+share/doc/kde/HTML/en/juk/toolbar.png
+share/doc/kde/HTML/en/kmix/common
+share/doc/kde/HTML/en/kmix/index.cache.bz2
+share/doc/kde/HTML/en/kmix/index.docbook
+share/doc/kde/HTML/en/kmix/kmix-channel-playback.png
+share/doc/kde/HTML/en/kmix/kmix-channel-record.png
+share/doc/kde/HTML/en/kmix/kmix-channel-switches.png
+share/doc/kde/HTML/en/kmix/kmix-window.png
+share/doc/kde/HTML/en/kscd/common
+share/doc/kde/HTML/en/kscd/index.cache.bz2
+share/doc/kde/HTML/en/kscd/index.docbook
+share/doc/kde/HTML/en/kscd/kscd.png
+share/doc/kde/HTML/en/kscd/kscd11.png
+share/doc/kde/HTML/en/kscd/kscd12.png
+share/doc/kde/HTML/en/kscd/kscd13.png
+share/doc/kde/HTML/en/kscd/kscd14.png
+share/doc/kde/HTML/en/kscd/kscd16.png
+share/doc/kde/HTML/en/kscd/kscd18.png
+share/doc/kde/HTML/en/kscd/kscd19.png
+share/doc/kde/HTML/en/kscd/kscd2.png
+share/doc/kde/HTML/en/kscd/kscd3.png
+share/doc/kde/HTML/en/kscd/kscd5.png
+share/doc/kde/HTML/en/kscd/kscd6.png
+share/doc/kde/HTML/en/kscd/kscd9.png
+share/doc/kde/HTML/en/kscd/kscdannounc.png
+share/icons/hicolor/128x128/apps/juk.png
+share/icons/hicolor/128x128/apps/kmix.png
+share/icons/hicolor/128x128/apps/kscd.png
+share/icons/hicolor/16x16/apps/juk.png
+share/icons/hicolor/16x16/apps/kmix.png
+share/icons/hicolor/16x16/apps/kscd.png
+share/icons/hicolor/32x32/apps/juk.png
+share/icons/hicolor/32x32/apps/kmix.png
+share/icons/hicolor/32x32/apps/kscd.png
+share/icons/hicolor/48x48/apps/juk.png
+share/icons/hicolor/48x48/apps/kmix.png
+share/icons/hicolor/48x48/apps/kscd.png
+share/icons/hicolor/64x64/apps/juk.png
+share/icons/hicolor/64x64/apps/kmix.png
+share/icons/hicolor/64x64/apps/kscd.png
+share/kde/apps/juk/jukui-rtl.rc
+share/kde/apps/juk/jukui.rc
+share/kde/apps/juk/pics/playing.png
+share/kde/apps/juk/pics/splash.png
+share/kde/apps/juk/pics/yahoo_credit.png
+share/kde/apps/kconf_update/kcmcddb-emailsettings.upd
+share/kde/apps/kicker/applets/kmixapplet.desktop
+share/kde/apps/kmix/kmixui.rc
+share/kde/apps/kmix/pics/kmixdocked.png
+share/kde/apps/kmix/pics/kmixdocked_error.png
+share/kde/apps/kmix/pics/kmixdocked_mute.png
+share/kde/apps/kmix/pics/mix_ac97.png
+share/kde/apps/kmix/pics/mix_audio.png
+share/kde/apps/kmix/pics/mix_bass.png
+share/kde/apps/kmix/pics/mix_cd.png
+share/kde/apps/kmix/pics/mix_digital.png
+share/kde/apps/kmix/pics/mix_ext.png
+share/kde/apps/kmix/pics/mix_headphone.png
+share/kde/apps/kmix/pics/mix_microphone.png
+share/kde/apps/kmix/pics/mix_midi.png
+share/kde/apps/kmix/pics/mix_recmon.png
+share/kde/apps/kmix/pics/mix_record.png
+share/kde/apps/kmix/pics/mix_surround.png
+share/kde/apps/kmix/pics/mix_treble.png
+share/kde/apps/kmix/pics/mix_unknown.png
+share/kde/apps/kmix/pics/mix_video.png
+share/kde/apps/kmix/pics/mix_volume.png
+share/kde/apps/kmix/profiles/ALSA.default.xml
+share/kde/apps/kmix/profiles/OSS.default.xml
+share/kde/apps/profiles/kscd.profile.xml
+share/kde/autostart/restore_kmix_volumes.desktop
+share/kde/config.kcfg/kscd.kcfg
+share/kde/config.kcfg/libkcddb.kcfg
+share/kde4/services/ServiceMenus/audiocd_play.desktop
+share/kde4/services/ServiceMenus/jukservicemenu.desktop
+share/kde4/services/kmixctrl_restore.desktop
+share/kde4/services/libkcddb.desktop
+@dirrm share/kde4/services/ServiceMenus
+@comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/apps/profiles
+@dirrm share/kde/apps/kmix/profiles
+@dirrm share/kde/apps/kmix/pics
+@dirrm share/kde/apps/kmix
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/juk/pics
+@dirrm share/kde/apps/juk
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/kscd
+@dirrm share/doc/kde/HTML/en/kmix
+@dirrm share/doc/kde/HTML/en/juk
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/dbus-1/interfaces
+@comment in kde: @dirrm share/applications/kde4
+@comment in kde: @dirrm lib/kde4
+@dirrm include/libkcompactdisc
+@dirrm include/libkcddb
