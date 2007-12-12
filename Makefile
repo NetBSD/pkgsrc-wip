@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2716 2007/12/11 22:45:23 dvol Exp $
+# $Id: Makefile,v 1.2717 2007/12/12 05:06:58 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -694,6 +694,25 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
+SUBDIR+=	kde4-dirs
+SUBDIR+=	kdeaccessibility4
+SUBDIR+=	kdeadmin4
+SUBDIR+=	kdeartwork4
+SUBDIR+=	kdebase-runtime4
+SUBDIR+=	kdebase-workspace4
+SUBDIR+=	kdebase4
+SUBDIR+=	kdeedu4
+SUBDIR+=	kdegames4
+SUBDIR+=	kdegraphics4
+SUBDIR+=	kdelibs4
+SUBDIR+=	kdemultimedia4
+SUBDIR+=	kdenetwork4
+SUBDIR+=	kdepim4
+SUBDIR+=	kdepimlibs4
+SUBDIR+=	kdesdk4
+SUBDIR+=	kdetoys4
+SUBDIR+=	kdeutils4
+SUBDIR+=	kdewebdev4
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
