@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/12/09 07:13:22 schnoebe Exp $
+# $NetBSD: Makefile,v 1.38 2007/12/13 03:39:09 schnoebe Exp $
 #
 
 DISTNAME=		jabberd-2.1.19
@@ -62,8 +62,8 @@ EGDIR=			${PREFIX}/share/examples/jabberd
 FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
 			router-users.xml router-filter.xml s2s.xml	\
 			sm.xml
-DBFILES=		db-setup.mysql db-setup.pgsql db-update.mysql	\
-			db-setup-status.mysql db-setup.sqlite
+DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
+			db-update.mysql	db-setup.sqlite
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
