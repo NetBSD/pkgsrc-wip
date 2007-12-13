@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2007/03/23 21:35:23 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.3 2007/12/13 22:21:48 rillig Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jack
 PKG_SUPPORTED_OPTIONS=	sndfile portaudio readline
-PKG_SUGGESTED_OPTIONS=	sndfile portaudio	# this will be changed when
-						# the package is ready.
+PKG_SUGGESTED_OPTIONS=	sndfile portaudio
+# the above line will be changed when the package is ready.
 
 CHECK_BUILTIN.readline:= yes
 .include "../../devel/readline/builtin.mk"
