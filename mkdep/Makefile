@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/13 22:23:10 rillig Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -10,15 +10,13 @@ MAINTAINER=		reed@reedmedia.net
 COMMENT=		Fast mkdep
 
 NO_CHECKSUM=		yes
-NO_CONFIGURE=		YES
+USE_FEATURES=		nbcompat
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkdep ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/mkdep.1 ${PREFIX}/${PKGMANDIR}/man1/
-
-.include "../../pkgtools/libnbcompat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
