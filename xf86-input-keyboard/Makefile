@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/06 21:59:56 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/13 15:51:54 rillig Exp $
 
 DISTNAME=	xf86-input-keyboard-1.2.1
 CATEGORIES=	x11
@@ -14,12 +14,10 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
-BUILDLINK_API_DEPENDS+=	modular-xorg-server>=1.3.99.0:../../wip/modular-xorg-server
+BUILD_DEPENDS+=		modular-xorg-server>=1.4:../../wip/modular-xorg-server14
 
 .include "../../x11/inputproto/buildlink3.mk"
-.include "../../x11/randrproto/buildlink3.mk"
-.include "../../wip/modular-xorg-server/buildlink3.mk"
 .include "../../x11/kbproto/buildlink3.mk"
+.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
