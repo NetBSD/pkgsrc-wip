@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/20 20:13:38 leuzi Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/13 22:19:44 rillig Exp $
 bin/gnomebaker
 share/applications/gnomebaker.desktop
 share/gnome/help/gnomebaker/C/figures/gnomebaker-blank-cdrw.png
@@ -134,4 +134,3 @@ share/omf/gnomebaker/gnomebaker-C.omf
 @dirrm share/gnomebaker
 @dirrm share/gnome/help/gnomebaker/C/figures
 @dirrm share/gnome/help/gnomebaker/C
-@dirrm share/applications
