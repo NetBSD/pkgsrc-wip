@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2007/12/13 22:22:23 rillig Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -23,6 +23,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../x11/control-center/buildlink3.mk"
+.include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
