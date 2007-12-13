@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/30 04:27:11 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/13 15:58:49 rillig Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
@@ -78,7 +78,7 @@ DEPENDS+=		xkbdata-[0-9]*:../../x11/xkbdata
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 #BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.4.2 # Either now or coming
-							  # soon.
+#							  # soon.
 
 DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
 

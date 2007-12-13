@@ -1,3 +1,5 @@
+$NetBSD: patch-cp,v 1.3 2007/12/13 15:58:49 rillig Exp $
+
 From: Michel DÃ¤nzer <michel@tungstengraphics.com>
 Date: Mon, 11 Jun 2007 07:23:19 +0000 (+0200)
 Subject: DRI: Fix build warning.
