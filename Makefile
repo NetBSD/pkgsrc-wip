@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2720 2007/12/12 22:35:33 adrian_p Exp $
+# $Id: Makefile,v 1.2721 2007/12/15 04:05:38 dvol Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -37,6 +37,7 @@ SUBDIR+=	SDL-intro-jp
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	Siesta
+SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	WEPCrack
