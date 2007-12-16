@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2007/12/16 19:49:57 mwdavies Exp $
+
+--- kmplot/kmplot/parser.cpp.orig	2007-12-14 23:10:57.000000000 +1300
++++ kmplot/kmplot/parser.cpp
+@@ -100,9 +100,13 @@ ScalarFunction Parser::scalarFunctions[ 
+ 	{"floor", 0, floor},				// round down to nearest integer
+ 	{"ceil", 0, ceil},					// round up to nearest integer
+ 	{"round", 0, round},				// round to nearest integer
++#ifndef __NetBSD__
+ 	{"gamma", 0, tgamma},			// gamma function
++#endif
+ 	{"lgamma", 0, lgamma},			// log-gamma function
++#ifndef __NetBSD__
+ 	{"factorial", 0, factorial},		// factorial
++#endif
+ 	
+ 	// legendre
+ 	{"P_0", 0, legendre0},				// lengedre polynomial (n=0)
+@@ -1333,9 +1337,11 @@ double larcsin(double x) {
+ double larctan(double x) {
+ 	return atan(x) / Parser::radiansPerAngleUnit();
+ }
++#ifndef __NetBSD__
+ double factorial( double x ) {
+ 	return tgamma(x+1);
+ }
++#endif
+ double legendre0( double ) {
+ 	return 1.0;
+ }

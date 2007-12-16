@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2007/12/16 19:49:57 mwdavies Exp $
+
+--- kstars/kstars/htmesh/SpatialGeneral.h.orig	2007-12-15 01:12:26.000000000 +1300
++++ kstars/kstars/htmesh/SpatialGeneral.h
+@@ -80,7 +80,7 @@ typedef unsigned long long	uint64;
+ 
+ // emulate the standard bool type where not supported by compiler
+ 
+-#  if !defined(SXGENERAL_H) && !defined(__sgi) && !defined(__linux__) && !defined(_WIN32) && !defined(__FreeBSD__)
++#  if !defined(SXGENERAL_H) && !defined(__sgi) && !defined(__linux__) && !defined(_WIN32) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #    ifdef __unix__
+ /*
+  * The following ifndef must ALWAYS be present since C++ may use
