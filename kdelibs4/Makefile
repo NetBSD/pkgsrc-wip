@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 03:17:10 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/16 19:55:05 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -24,6 +24,19 @@ REPLACE_PERL+= \
 	kdeui/preparetips
 
 CHECK_PORTABILITY_SKIP+=kate/tests/highlight.sh
+
+SUBST_CLASSES+=			kdelibsfix
+SUBST_STAGE.kdelibsfix=		pre-configure
+SUBST_MESSAGE.kdelibsfix=	Fixing hardcoded paths.
+SUBST_FILES.kdelibsfix= \
+	kde3support/kdeui/k3sconfig.cpp \
+	kio/kssl/kopenssl.cpp
+SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
+
+#.if ${OPSYS} == "NetBSD"
+## make sure zone.tab is installed
+#DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
+#.endif
 
 .include "../../wip/kde4/kde4.mk"
 

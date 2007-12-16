@@ -1,0 +1,175 @@
+$NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
+
+--- kio/kssl/kopenssl.cpp.orig	2007-11-21 23:48:08.000000000 +1300
++++ kio/kssl/kopenssl.cpp
+@@ -237,7 +237,7 @@ void KOpenSSLProxy::destroy() {
+    delete x;
+ }
+ 
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ #include <QtCore/QDir>
+ #include <QtCore/QString>
+ #include <QtCore/QStringList>
+@@ -260,10 +260,20 @@ static QString findMostRecentLib(QString
+        for (QStringList::Iterator it = l.begin(); it != l.end(); ++it) {
+                QString numberpart = (*it).mid(s);
+                uint endmaj = numberpart.indexOf('.');
+-               if (endmaj == -1)
+-                       continue;
+                bool ok;
+-               int maj = numberpart.left(endmaj).toInt(&ok);
++               int maj;
++	       if (endmaj == -1) {
++		      int maj = numberpart.toInt(&ok);
++                      if (!ok)
++			      continue;
++                      if (maj <= bestmaj)
++		              continue;
++                      bestmaj = maj;
++                      bestmin = -1;
++		      best = (*it);
++		      continue;
++               }
++	       maj = numberpart.left(endmaj).toInt(&ok);
+                if (!ok)
+                        continue;
+                int min = numberpart.mid(endmaj+1).toInt(&ok);
+@@ -296,54 +306,23 @@ KOpenSSLProxy::KOpenSSLProxy()
+    if (!upath.isEmpty())
+       libpaths << upath;
+ 
+-#ifdef Q_OS_WIN
+-    d->cryptoLib = new KLibrary("libeay32.dll");
+-    if (!d->cryptoLib->load()) {
+-       delete d->cryptoLib;
+-       d->cryptoLib = 0;
+-    }
+-#elif defined(__OpenBSD__)
+-   {
+-   QString libname = findMostRecentLib("/usr/lib" KDELIBSUFF, "crypto");
+-   if (!libname.isNull()) {
+-         d->cryptoLib = new KLibrary(libname);
+-         d->cryptoLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);
+-         if (!d->cryptoLib->load()) {
+-             delete d->cryptoLib;
+-             d->cryptoLib = 0;
+-         }
+-   }
+-   }
+-#elif defined(__CYGWIN__)
+-   libpaths << "/usr/bin/"
+-   		<< "/usr/local/bin"
+-   		<< "/usr/local/openssl/bin"
+-   		<< "/opt/openssl/bin"
+-   		<< "/opt/kde3/bin"
+-   		<< "";
+-
+-   libnamess << "cygssl-0.9.7.dll"
+-		 << "cygssl.dll"
+-		 << "libssl.dll"
+-		 << "";
+-
+-   libnamesc << "cygcrypto.dll"
+-		 << "libcrypto.dll"
+-		 << "";
+-#else
+    libpaths
+-            #ifdef _AIX
++#ifdef _AIX
+             << "/opt/freeware/lib/"
+-	    #endif
++#endif
+ 	    << "/usr/lib" KDELIBSUFF "/"
++	    << "@LOCALBASE@/lib/"
++#if !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
+ 	    << "/usr/ssl/lib" KDELIBSUFF "/"
+ 	    << "/usr/local/lib" KDELIBSUFF "/"
+             << "/usr/local/openssl/lib" KDELIBSUFF "/"
+             << "/usr/local/ssl/lib" KDELIBSUFF "/"
+ 	    << "/opt/openssl/lib" KDELIBSUFF "/"
+ 	    << "/lib" KDELIBSUFF "/"
++#endif
+             << "";
+ 
++#if !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
+ // FIXME: #define here for the various OS types to optimize
+    libnamess
+ 	     #ifdef hpux
+@@ -383,6 +362,17 @@ KOpenSSLProxy::KOpenSSLProxy()
+    for (QStringList::Iterator it = libpaths.begin();
+                               it != libpaths.end();
+                               ++it) {
++#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
++      QString libname = findMostRecentLib(*it, "crypto");
++      if (!libname.isNull()) {
++         d->cryptoLib = new KLibrary(libname);
++         d->cryptoLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);
++         if (!d->cryptoLib->load()) {
++             delete d->cryptoLib;
++             d->cryptoLib = 0;
++         }
++      }
++#else
+       for (QStringList::Iterator shit = libnamesc.begin();
+                                  shit != libnamesc.end();
+                                  ++shit) {
+@@ -405,6 +395,7 @@ KOpenSSLProxy::KOpenSSLProxy()
+              d->cryptoLib = 0;
+          }
+       }
++#endif
+       if (d->cryptoLib) break;
+    }
+ 
+@@ -534,28 +525,20 @@ KOpenSSLProxy::KOpenSSLProxy()
+ #endif
+    }
+ 
+-#ifdef Q_OS_WIN
+-    d->sslLib = new KLibrary("ssleay32.dll");
+-    if (!d->sslLib->load()) {
+-       delete d->sslLib;
+-       d->sslLib = 0;
+-    }
+-#elif defined(__OpenBSD__)
+-   {
+-   QString libname = findMostRecentLib("/usr/lib", "ssl");
+-   if (!libname.isNull()) {
+-         d->sslLib = new KLibrary(libname);
+-         d->sslLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);
+-         if (!d->sslLib->load()) {
+-             delete d->sslLib;
+-             d->sslLib = 0;
+-         }
+-   }
+-   }
+-#else
+    for (QStringList::Iterator it = libpaths.begin();
+                               it != libpaths.end();
+                               ++it) {
++#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++      QString libname = findMostRecentLib(*it, "ssl");
++      if (!libname.isNull()) {
++	    d->sslLib = new KLibrary(libname);
++	    d->sslLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);
++	    if (!d->sslLib->load()) {
++	        delete d->sslLib;
++		d->sslLib = 0;
++	    }
++      }
++#else
+       for (QStringList::Iterator shit = libnamess.begin();
+                                  shit != libnamess.end();
+                                  ++shit) {
+@@ -577,9 +560,9 @@ KOpenSSLProxy::KOpenSSLProxy()
+              d->sslLib = 0;
+          }
+       }
++#endif
+       if (d->sslLib) break;
+    }
+-#endif
+ 
+    if (d->sslLib) {
+ #ifdef KSSL_HAVE_SSL
