@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/03/09 14:50:27 obache Exp $
+$NetBSD: distinfo,v 1.3 2007/12/17 07:29:03 obache Exp $
 
-SHA1 (pop-before-smtp-1.41.tar.gz) = 1069fb22c7f861e82d8254df7b4d82fb99aad1dc
-RMD160 (pop-before-smtp-1.41.tar.gz) = 46c69f073433a3f957b5d34481b6e5a00b58ae79
-Size (pop-before-smtp-1.41.tar.gz) = 39944 bytes
+SHA1 (pop-before-smtp-1.42.tar.gz) = a65eb094e7adf5845a0411ce6eafb2255889c6b6
+RMD160 (pop-before-smtp-1.42.tar.gz) = 03103a84d9ef0fc29a4faa8bfbb323d7adb55d55
+Size (pop-before-smtp-1.42.tar.gz) = 40612 bytes
