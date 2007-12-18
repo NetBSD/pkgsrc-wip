@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.23 2007/11/06 14:24:41 rillig Exp $
+# $Id: cvs-package.mk,v 1.24 2007/12/18 12:31:24 rillig Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -129,7 +129,7 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 #
 
 .for r in ${CVS_REPOSITORIES}
-CVS_MODULE.${r}?=		${r}
+CVS_MODULE.${r}?=	${r}
 .  if defined(CVS_TAG.${r})
 _CVS_TAG_FLAG.${r}=	-r${CVS_TAG.${r}}
 _CVS_TAG.${r}=		${CVS_TAG.${r}}
@@ -145,8 +145,7 @@ _CVS_DISTFILE.${r}=	${PKGBASE}-${CVS_MODULE.${r}}-${_CVS_TAG.${r}}.tar.gz
 
 pre-extract: do-cvs-extract
 
-.PHONY: do-cvs-extract
-do-cvs-extract:
+do-cvs-extract: .PHONY
 .for r in ${CVS_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
 	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ]; then		\
