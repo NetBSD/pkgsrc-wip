@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/12/18 09:38:17 ahallmann Exp $
+
+--- freedup.h.orig	2007-12-18 10:13:34.000000000 +0100
++++ freedup.h
+@@ -12,7 +12,7 @@
+  * for no hash comparison #undef MD5SUM
+  */
+ #else
+-# if !defined(_AIX)
++# if !defined(_AIX) && !defined(__NetBSD__)
+ #  include <linux/stat.h>
+ # endif
+ # define HASHCHAR	' '
