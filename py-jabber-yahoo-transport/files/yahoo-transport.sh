@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: yahoo-transport.sh,v 1.1.1.1 2006/04/17 02:30:38 schnoebe Exp $
+# $NetBSD: yahoo-transport.sh,v 1.2 2007/12/18 00:27:34 schnoebe Exp $
 #
 #   startup script for the Yahoo transport for Jabber
 #
@@ -12,10 +12,10 @@ name="yahoo_transport"
 rcvar=$name
 command=@PREFIX@/@TRANSPORTDIR@/yahoo.py
 command_interpreter="@PYTHONBIN@"
-required_files="@PKG_SYSCONFDIR@/yahoo-transport.ini"
-yahoo_user="@JABBERD_USER@"
-pidfile="@JABBERD_PIDDIR@/${name}.pid"
-logfile="@JABBERD_LOGDIR@/${name}.log"
+required_files="@PKG_SYSCONFDIR@/yahoo-transport.xml"
+yahoo_transport_user="@JABBER_USER@"
+pidfile="@JABBER_PIDDIR@/yahoo-transport.pid"
+logfile="@JABBER_LOGDIR@/yahoo-transport.log"
 command_args=""
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
@@ -25,8 +25,8 @@ export PID
 
 ensure_piddir()
 {
-	mkdir -p @JABBERD_PIDDIR@
-	chown @JABBERD_USER@ @JABBERD_PIDDIR@
+	mkdir -p @JABBER_PIDDIR@ @JABBER_LOGDIR@
+	chown @JABBER_USER@ @JABBER_PIDDIR@ @JABBER_LOGDIR@
 }
 
 remove_pidfile()

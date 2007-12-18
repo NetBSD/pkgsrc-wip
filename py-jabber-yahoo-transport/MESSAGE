@@ -1,31 +1,37 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/05/06 02:00:33 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.4 2007/12/18 00:27:34 schnoebe Exp $
 
 You will need to customize the following file to get yahoo-transport
 to work with jabber:
 
-	${PKG_SYSCONFDIR}/yahoo-transport.ini
+	${PKG_SYSCONFDIR}/yahoo-transport.xml
 
 Quick start for jabberd2:
 
 	Verify and update the following fields in
-	${PKG_SYSCONFDIR}/yahoo-transport.ini:
+	${PKG_SYSCONFDIR}/yahoo-transport.xml:
 
-	Hostname		--  Set to the public name of the service
+	<jid></jid>		--  Set to the public name of the service
 				    ex: yahoo.jabber.example
-	Server
-				--  Set to the hostname or IP address
-				    of the main jabber server
-	Secret			--  should be set to the legacy components
+	<mainServer></mainServer>
+				--  Set to the IP address of the main
+				    jabber server
+	<mainServerJID></mainServerJID>
+				--  Set to the JID of the main server
+				    (typically, something like
+				     jabber.domain.example.)
+	<secret></secret>	--  should be set to the legacy components
 				    shared secret in jabber2's router.xml
 				    (look for <secret>...</secret> in
 				    router.xml)
 				    Alternatively, the password when
 				    using SASL component authentication.
 				    (see router-users.xml for jabber2)
-	ServerUser		--  Set to the SASL user name to be used
+	<saslUsername></saslUsername>
+			   	--  Set to the SASL user name to be used
 				    to authenticate.  If not defined,
 				    jabber2's legacy component
-				    connection is used.
+				    connection is used.  If defined,
+				    <useRouteWrap/> should also be defined.
 
 ===========================================================================
