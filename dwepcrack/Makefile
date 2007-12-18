@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/29 13:19:22 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/18 18:54:53 shattered Exp $
 
 DISTNAME=	dwepcrack-0.4
 CATEGORIES=	security
 MASTER_SITES=	http://www.unix-labs.org/pub/source/dwepcrack/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.dachb0den.com/projects/dwepcrack.html
+HOMEPAGE=	http://web.archive.org/web/20070322102507/http://www.dachb0den.com/projects/dwepcrack.html
 COMMENT=	dwepcrack uses varioius methods to extract WEP keys
 
 NO_CONFIGURE=	YES
