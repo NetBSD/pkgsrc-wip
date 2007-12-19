@@ -51,12 +51,18 @@ fi
 TAG=2007Q3
 
 OPERATING_SYSTEM=`uname -s`
-##OS_VERSION=`uname -r`
-## TODO: select this
-OS_VERSION=4.0
 PLATFORM=`uname -p` # should I use -m?
 PKG_ADMIN=/usr/sbin/pkg_admin
 PKG_SUFX=.tgz	# includes the period
+
+# TODO: maybe use sh-builtin getopts
+# TODO: maybe have a ~/.pkg_get/rc config file with this too?
+if [ "$1" = "-r" -a -n "$2" ] ; then
+	OS_VERSION="${2}"
+	shift 2
+else
+	OS_VERSION=`uname -r`
+fi
 
 # http://www.netbsd.org/docs/pkgsrc/ftp-layout.html#ftp-packages
 #  ftp://ftp.NetBSD.org/pub/pkgsrc/packages/$OPSYS/$ARCH/$OSVER_$TAG

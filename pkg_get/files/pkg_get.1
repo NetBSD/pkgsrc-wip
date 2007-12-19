@@ -23,6 +23,7 @@
 .Sh SYNOPSIS
 .Nm
 .\" TODO
+.Op Fl r Ar release 
 .Ar command
 .Op Ar package-name
 .Pp
@@ -46,7 +47,14 @@ shell script so it can be portable and lightweight for many platforms.
 .\" TODO: document what happens with partial or keyword matches
 .\"	  for package names?
 .\"
-.\" The options are as follows:
+The options are as follows:
+.Bl -tag -width indent
+.It Fl r Ar release
+Specify an alternative release version.
+The default is from
+``uname -r''.
+.El
+.Pp
 .\"
 The available commands are listed below.
 .Bl -tag -width Cm
