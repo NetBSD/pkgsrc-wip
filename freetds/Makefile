@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/31 03:45:30 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/19 09:18:39 rillig Exp $
 #
 # To use this package to track FreeTDS snapshots, just do:
 #
@@ -22,7 +22,7 @@ COMMENT=	LGPL'd implementation of Sybase's db-lib/ct-lib/ODBC libs
 
 # We don't care about the distfile checksum for FreeTDS snapshots.
 NO_CHECKSUM=		yes
-WRKSRC_cmd=		${LS} -1d ${WRKDIR:Q}/${PKGNAME_NOREV:C/alpha.*//}.dev.* 2>/dev/null || echo ${WRKDIR:Q}/nonexistent
+WRKSRC_cmd=		echo ${WRKDIR}/freetds-*
 WRKSRC=			${WRKSRC_cmd:sh}
 
 USE_LIBTOOL=		yes
