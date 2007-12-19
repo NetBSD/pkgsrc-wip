@@ -48,22 +48,22 @@ shell script so it can be portable and lightweight for many platforms.
 .\"
 The available commands are listed below.
 .Bl -tag -width Cm
-.It Cm update
-Fetches
-.Xr pkg_summary 5
-database.
-.It Cm uptodate
-Checks if an installed package is up-to-date versus database.
+.It Cm check
+Checks if all installed packages are up-to-date.
 .It Cm depends
 Lists dependencies (and if already installed).
 .It Cm download
 Download single package.
 .It Cm downloadall
 Download with dependencies unless already installed.
-.It Cm check
-Checks if all installed packages are up-to-date.
 .It Cm install
 Download (if needed) with dependencies and install.
+.It Cm update
+Fetches
+.Xr pkg_summary 5
+database.
+.It Cm uptodate
+Checks if an installed package is up-to-date versus database.
 .El
 .Sh FILES
 .Bl -tag -width ~/.pkg_get/ -compact
