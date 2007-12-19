@@ -43,6 +43,8 @@ It is written in
 .Xr sh 1
 shell script so it can be portable and lightweight for many platforms.
 .Pp
+.\" TODO: document what happens with partial or keyword matches
+.\"	  for package names?
 .\"
 .\" The options are as follows:
 .\"
@@ -58,10 +60,24 @@ Download single package.
 Download with dependencies unless already installed.
 .It Cm install
 Download (if needed) with dependencies and install.
+.It Cm installdepends
+NOT IMPLEMENTED YET.
+Download (if needed) and install dependencies but not dependent.
+.It Cm list
+NOT IMPLEMENTED YET.
+List available packages.
+.It Cm show
+NOT IMPLEMENTED YET.
+.\" TODO: Maybe could be used for searching also?
+Show details for a package from database.
 .It Cm update
 Fetches
 .Xr pkg_summary 5
 database.
+.It Cm upgrade
+NOT IMPLEMENTED YET.
+Intelligently upgrade an individual package.
+Only upgrade dependencies if required.
 .It Cm uptodate
 Checks if an installed package is up-to-date versus database.
 .El
