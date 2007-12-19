@@ -1,0 +1,89 @@
+.\"
+.\" Copyright (c) 2007 Jeremy C. Reed <reed@reedmedia.net>
+.\" 
+.\" Permission to use, copy, modify, and/or distribute this software for any 
+.\" purpose with or without fee is hereby granted, provided that the above 
+.\" copyright notice and this permission notice appear in all copies.
+.\" 
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR AND CONTRIBUTORS DISCLAIM 
+.\" ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED 
+.\" WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL AUTHOR AND 
+.\" CONTRIBUTORS BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL 
+.\" DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR 
+.\" PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS 
+.\" ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF 
+.\" THIS SOFTWARE.
+.\"
+.Dd December 19, 2007
+.Dt pkg_get 1
+.Os
+.Sh NAME
+.Nm pkg_get
+.Nd package manager for installing packages
+.Sh SYNOPSIS
+.Nm
+.\" TODO
+.Ar command
+.Op Ar package-name
+.Pp
+.Sh DESCRIPTION
+The
+.Nm
+utility provides a front-end to the pkgsrc package management tools.
+It is used with binary, ready-to-use packages and
+not with pkgsrc build-from-source infrastracture.
+.Pp
+It can download the
+.Xr pkg_summary 5
+database.
+It then uses that
+to check what is installed, download packages, and install.
+.Pp
+It is written in
+.Xr sh 1
+shell script so it can be portable and lightweight for many platforms.
+.Pp
+.\"
+.\" The options are as follows:
+.\"
+The available commands are listed below.
+.Bl -tag -width Cm
+.It Cm update
+Fetches
+.Xr pkg_summary 5
+database.
+.It Cm uptodate
+Checks if an installed package is up-to-date versus database.
+.It Cm depends
+Lists dependencies (and if already installed).
+.It Cm download
+Download single package.
+.It Cm downloadall
+Download with dependencies unless already installed.
+.It Cm check
+Checks if all installed packages are up-to-date.
+.It Cm install
+Download (if needed) with dependencies and install.
+.El
+.Sh FILES
+.Bl -tag -width ~/.pkg_get/ -compact
+.It Pa ~/.pkg_get/
+Location where the
+.Xr pkg_summary 5
+databases and downloaded packages are saved.
+The directory layout corresponds with the official pkgsrc FTP layout.
+.\" TODO point to URL describing layout or man page?
+.El
+.Sh SEE ALSO
+.Xr pkg_add 1 ,
+.Xr pkg_info 1 ,
+.Xr pkg_summary 5 ,
+.Xr packages 7
+.\"
+.Sh HISTORY
+The
+.Nm
+command is based on ideas from the ``YUM'' tool for RPMs
+and Debian's ``apt-get''.
+This is a lot smaller and is meant to stay simple.
+.Pp
