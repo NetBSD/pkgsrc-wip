@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/09/10 06:10:45 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/20 16:45:53 bsadewitz Exp $
 #
 
 DISTNAME=	openbsd-input-ws-1.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xenocara.org/src/
 
@@ -16,7 +17,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 
-.include "../../wip/modular-xorg-server/buildlink3.mk"
+.include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
