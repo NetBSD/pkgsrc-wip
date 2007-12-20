@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.8 2007/12/03 17:49:25 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.9 2007/12/20 22:13:40 hoka_adam Exp $
 #
 
-VERSION=		2.0-rc2
+VERSION=		2.0
 DISTNAME=		awesome-${VERSION}
-PKGNAME=		${DISTNAME:S/0-/0/}
 CATEGORIES=		wm
-MASTER_SITES=	http://awesome.naquadah.org/download/
+MASTER_SITES=		http://awesome.naquadah.org/download/
 
 MAINTAINER=		adam.hoka@gmail.com
 HOMEPAGE=		http://awesome.naquadah.org/
 COMMENT=		Tiling window manager based on dwm
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=		c99
 USE_TOOLS+=		pkg-config
 
 EGDIR=			${PREFIX}/share/examples/awesome
-MESSAGE_SUBST+=	EGDIR=${EGDIR}/awesomerc
+MESSAGE_SUBST+=		EGDIR=${EGDIR}/awesomerc
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	awesome.1
@@ -30,6 +29,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/awesome ${PREFIX}/bin/awesome
 	${INSTALL_PROGRAM} ${WRKSRC}/awesome-client ${PREFIX}/bin/awesome-client
 #	${INSTALL_MAN} ${WRKSRC}/awesome.1 ${PREFIX}/${PKGMANDIR}/man1/awesome.1
+#
+# XXX Manpages are currently provided in an unacceptable form. 
+#
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
