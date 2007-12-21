@@ -1,6 +1,10 @@
-$Id: TODO,v 1.3 2007/12/12 21:49:05 asau Exp $
+$Id: TODO,v 1.4 2007/12/21 20:08:27 asau Exp $
 
-1. Install documentation.
 2. Install sample configuration files.
 3. Options: provide sane default values.
 4. Check for hard-coded pathes.
+5. Fix PostreSQL scripts.
+6. Fix rc scripts.
+7. "Internal pkglint error: SCST_CONT: rest=$f ${DESTDIR}${EGDIR}/$f"
+8. "make print-PLIST" problem: httpconf -> htt${...}onf.
+9. Check curl requirement, it seems to be non-optional.
