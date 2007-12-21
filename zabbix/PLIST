@@ -1,6 +1,271 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2007/12/06 23:57:07 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/21 20:00:01 asau Exp $
 sbin/zabbix_agent
 sbin/zabbix_agentd
 sbin/zabbix_get
 sbin/zabbix_sender
 sbin/zabbix_server
+share/doc/zabbix/AUTHORS
+share/doc/zabbix/COPYING
+share/doc/zabbix/FAQ
+share/doc/zabbix/INSTALL
+share/doc/zabbix/NEWS
+share/doc/zabbix/README
+share/doc/zabbix/manual.pdf
+share/examples/rc.d/zabbix_agentd
+share/examples/rc.d/zabbix_server
+share/examples/zabbix/zabbix_agent.conf
+share/examples/zabbix/zabbix_agentd.conf
+share/examples/zabbix/zabbix_server.conf
+share/examples/zabbix/zabbix_trapper.conf
+share/zabbix/data/data.sql
+share/zabbix/data/images_mysql.sql
+share/zabbix/data/images_oracle.sql
+share/zabbix/data/images_pgsql.sql
+share/zabbix/data/images_sqlite3.sql
+share/zabbix/frontends/php/acknow.php
+share/zabbix/frontends/php/actionconf.php
+share/zabbix/frontends/php/actions.php
+share/zabbix/frontends/php/audio/trigger_off.wav
+share/zabbix/frontends/php/audio/trigger_on.wav
+share/zabbix/frontends/php/audio/trigger_on_average.wav
+share/zabbix/frontends/php/audio/trigger_on_disaster.wav
+share/zabbix/frontends/php/audio/trigger_on_high.wav
+share/zabbix/frontends/php/audio/trigger_on_warning.wav
+share/zabbix/frontends/php/audit.php
+share/zabbix/frontends/php/chart.php
+share/zabbix/frontends/php/chart2.php
+share/zabbix/frontends/php/chart3.php
+share/zabbix/frontends/php/chart4.php
+share/zabbix/frontends/php/chart5.php
+share/zabbix/frontends/php/chart_sla.php
+share/zabbix/frontends/php/charts.php
+share/zabbix/frontends/php/conf/COPYING
+share/zabbix/frontends/php/config.php
+share/zabbix/frontends/php/create/data.sql
+share/zabbix/frontends/php/create/mysql.sql
+share/zabbix/frontends/php/css.css
+share/zabbix/frontends/php/discovery.php
+share/zabbix/frontends/php/discoveryconf.php
+share/zabbix/frontends/php/events.php
+share/zabbix/frontends/php/exp_imp.php
+share/zabbix/frontends/php/graphs.php
+share/zabbix/frontends/php/history.php
+share/zabbix/frontends/php/hostprofiles.php
+share/zabbix/frontends/php/hosts.php
+share/zabbix/frontends/php/httpconf.php
+share/zabbix/frontends/php/httpdetails.php
+share/zabbix/frontends/php/httpmon.php
+share/zabbix/frontends/php/image.php
+share/zabbix/frontends/php/images/flash/zbxclock.swf
+share/zabbix/frontends/php/images/general/closed.gif
+share/zabbix/frontends/php/images/general/error_small.gif
+share/zabbix/frontends/php/images/general/help.gif
+share/zabbix/frontends/php/images/general/inst_completed.gif
+share/zabbix/frontends/php/images/general/inst_current.gif
+share/zabbix/frontends/php/images/general/inst_step.gif
+share/zabbix/frontends/php/images/general/opened.gif
+share/zabbix/frontends/php/images/general/sortdown.gif
+share/zabbix/frontends/php/images/general/sortdown_off.gif
+share/zabbix/frontends/php/images/general/sortup.gif
+share/zabbix/frontends/php/images/general/sortup_off.gif
+share/zabbix/frontends/php/images/general/tick.png
+share/zabbix/frontends/php/images/general/tree/I.gif
+share/zabbix/frontends/php/images/general/tree/L.gif
+share/zabbix/frontends/php/images/general/tree/O.gif
+share/zabbix/frontends/php/images/general/tree/T.gif
+share/zabbix/frontends/php/images/general/tree/X.gif
+share/zabbix/frontends/php/images/general/tree/Xc.gif
+share/zabbix/frontends/php/images/general/tree/Y.gif
+share/zabbix/frontends/php/images/general/tree/Yc.gif
+share/zabbix/frontends/php/images/general/tree/point.gif
+share/zabbix/frontends/php/images/general/warning_small.gif
+share/zabbix/frontends/php/images/general/zabbix.png
+share/zabbix/frontends/php/images/gradients/blink1.gif
+share/zabbix/frontends/php/images/gradients/blink2.gif
+share/zabbix/frontends/php/images/gradients/button.gif
+share/zabbix/frontends/php/images/gradients/menu_not_active.gif
+share/zabbix/frontends/php/images/gradients/table_head.gif
+share/zabbix/frontends/php/images/gradients/table_head2.gif
+share/zabbix/frontends/php/images/sysmaps/Hub.png
+share/zabbix/frontends/php/images/sysmaps/Hub_small.png
+share/zabbix/frontends/php/images/sysmaps/Network.png
+share/zabbix/frontends/php/images/sysmaps/Network_small.png
+share/zabbix/frontends/php/images/sysmaps/Notebook.png
+share/zabbix/frontends/php/images/sysmaps/Notebook_small.png
+share/zabbix/frontends/php/images/sysmaps/Phone.png
+share/zabbix/frontends/php/images/sysmaps/Phone_small.png
+share/zabbix/frontends/php/images/sysmaps/Printer.png
+share/zabbix/frontends/php/images/sysmaps/Printer_small.png
+share/zabbix/frontends/php/images/sysmaps/README
+share/zabbix/frontends/php/images/sysmaps/Router.png
+share/zabbix/frontends/php/images/sysmaps/Router_small.png
+share/zabbix/frontends/php/images/sysmaps/Satellite.png
+share/zabbix/frontends/php/images/sysmaps/Satellite_small.png
+share/zabbix/frontends/php/images/sysmaps/Server.png
+share/zabbix/frontends/php/images/sysmaps/Server_small.png
+share/zabbix/frontends/php/images/sysmaps/UPS.png
+share/zabbix/frontends/php/images/sysmaps/UPS_small.png
+share/zabbix/frontends/php/images/sysmaps/Workstation.png
+share/zabbix/frontends/php/images/sysmaps/Workstation_small.png
+share/zabbix/frontends/php/images/sysmaps/old/Hub.png
+share/zabbix/frontends/php/images/sysmaps/old/Notebook.png
+share/zabbix/frontends/php/images/sysmaps/old/Printer.png
+share/zabbix/frontends/php/images/sysmaps/old/Router.png
+share/zabbix/frontends/php/images/sysmaps/old/Server.png
+share/zabbix/frontends/php/images/sysmaps/old/Workstation.png
+share/zabbix/frontends/php/include/.htaccess
+share/zabbix/frontends/php/include/acknow.inc.php
+share/zabbix/frontends/php/include/actions.inc.php
+share/zabbix/frontends/php/include/audit.inc.php
+share/zabbix/frontends/php/include/classes/.htaccess
+share/zabbix/frontends/php/include/classes/cbutton.inc.php
+share/zabbix/frontends/php/include/classes/ccheckbox.inc.php
+share/zabbix/frontends/php/include/classes/ccolor.inc.php
+share/zabbix/frontends/php/include/classes/ccombobox.inc.php
+share/zabbix/frontends/php/include/classes/cfile.inc.php
+share/zabbix/frontends/php/include/classes/cflash.inc.php
+share/zabbix/frontends/php/include/classes/cflashclock.mod.php
+share/zabbix/frontends/php/include/classes/cform.inc.php
+share/zabbix/frontends/php/include/classes/cformtable.inc.php
+share/zabbix/frontends/php/include/classes/chelp.inc.php
+share/zabbix/frontends/php/include/classes/chostsinfo.mod.php
+share/zabbix/frontends/php/include/classes/ciframe.inc.php
+share/zabbix/frontends/php/include/classes/cimg.inc.php
+share/zabbix/frontends/php/include/classes/clink.inc.php
+share/zabbix/frontends/php/include/classes/clist.inc.php
+share/zabbix/frontends/php/include/classes/cmap.inc.php
+share/zabbix/frontends/php/include/classes/cpumenu.inc.php
+share/zabbix/frontends/php/include/classes/cserverinfo.mod.php
+share/zabbix/frontends/php/include/classes/cspan.inc.php
+share/zabbix/frontends/php/include/classes/ctable.inc.php
+share/zabbix/frontends/php/include/classes/ctableinfo.inc.php
+share/zabbix/frontends/php/include/classes/ctag.inc.php
+share/zabbix/frontends/php/include/classes/ctextarea.inc.php
+share/zabbix/frontends/php/include/classes/ctextbox.inc.php
+share/zabbix/frontends/php/include/classes/ctree.inc.php
+share/zabbix/frontends/php/include/classes/ctriggerinfo.mod.php
+share/zabbix/frontends/php/include/classes/cvar.inc.php
+share/zabbix/frontends/php/include/classes/graph.inc.php
+share/zabbix/frontends/php/include/config.inc.php
+share/zabbix/frontends/php/include/copt.lib.php
+share/zabbix/frontends/php/include/db.inc.php
+share/zabbix/frontends/php/include/defines.inc.php
+share/zabbix/frontends/php/include/discovery.inc.php
+share/zabbix/frontends/php/include/events.inc.php
+share/zabbix/frontends/php/include/export.inc.php
+share/zabbix/frontends/php/include/forms.inc.php
+share/zabbix/frontends/php/include/graphs.inc.php
+share/zabbix/frontends/php/include/hosts.inc.php
+share/zabbix/frontends/php/include/html.inc.php
+share/zabbix/frontends/php/include/httptest.inc.php
+share/zabbix/frontends/php/include/images.inc.php
+share/zabbix/frontends/php/include/import.inc.php
+share/zabbix/frontends/php/include/items.inc.php
+share/zabbix/frontends/php/include/js.inc.php
+share/zabbix/frontends/php/include/locales.inc.php
+share/zabbix/frontends/php/include/locales/cn_zh.inc.php
+share/zabbix/frontends/php/include/locales/de_de.inc.php
+share/zabbix/frontends/php/include/locales/en_gb.inc.php
+share/zabbix/frontends/php/include/locales/fr_fr.inc.php
+share/zabbix/frontends/php/include/locales/it_it.inc.php
+share/zabbix/frontends/php/include/locales/ja_jp.inc.php
+share/zabbix/frontends/php/include/locales/lv_lv.inc.php
+share/zabbix/frontends/php/include/locales/nl_nl.inc.php
+share/zabbix/frontends/php/include/locales/ru_ru.inc.php
+share/zabbix/frontends/php/include/locales/sp_sp.inc.php
+share/zabbix/frontends/php/include/locales/sv_se.inc.php
+share/zabbix/frontends/php/include/maps.inc.php
+share/zabbix/frontends/php/include/media.inc.php
+share/zabbix/frontends/php/include/nodes.inc.php
+share/zabbix/frontends/php/include/page_footer.php
+share/zabbix/frontends/php/include/page_header.php
+share/zabbix/frontends/php/include/perm.inc.php
+share/zabbix/frontends/php/include/profiles.inc.php
+share/zabbix/frontends/php/include/screens.inc.php
+share/zabbix/frontends/php/include/services.inc.php
+share/zabbix/frontends/php/include/setup.inc.php
+share/zabbix/frontends/php/include/triggers.inc.php
+share/zabbix/frontends/php/include/users.inc.php
+share/zabbix/frontends/php/include/validate.inc.php
+share/zabbix/frontends/php/index.php
+share/zabbix/frontends/php/instal.php
+share/zabbix/frontends/php/items.php
+share/zabbix/frontends/php/js/common.js
+share/zabbix/frontends/php/js/cookies.js
+share/zabbix/frontends/php/js/menu.js
+share/zabbix/frontends/php/js/services.js
+share/zabbix/frontends/php/js/showhint.js
+share/zabbix/frontends/php/js/tree.js
+share/zabbix/frontends/php/latest.php
+share/zabbix/frontends/php/map.php
+share/zabbix/frontends/php/maps.php
+share/zabbix/frontends/php/media_types.php
+share/zabbix/frontends/php/nodes.php
+share/zabbix/frontends/php/overview.php
+share/zabbix/frontends/php/popup.php
+share/zabbix/frontends/php/popup_gitem.php
+share/zabbix/frontends/php/popup_httpstep.php
+share/zabbix/frontends/php/popup_media.php
+share/zabbix/frontends/php/popup_right.php
+share/zabbix/frontends/php/popup_trexpr.php
+share/zabbix/frontends/php/popup_users.php
+share/zabbix/frontends/php/popup_usrgrp.php
+share/zabbix/frontends/php/profile.php
+share/zabbix/frontends/php/queue.php
+share/zabbix/frontends/php/report1.php
+share/zabbix/frontends/php/report2.php
+share/zabbix/frontends/php/report3.php
+share/zabbix/frontends/php/report4.php
+share/zabbix/frontends/php/report5.php
+share/zabbix/frontends/php/screenconf.php
+share/zabbix/frontends/php/screenedit.php
+share/zabbix/frontends/php/screens.php
+share/zabbix/frontends/php/services.php
+share/zabbix/frontends/php/services_form.php
+share/zabbix/frontends/php/setup.php
+share/zabbix/frontends/php/srv_status.php
+share/zabbix/frontends/php/sysmap.php
+share/zabbix/frontends/php/sysmaps.php
+share/zabbix/frontends/php/tr_comments.php
+share/zabbix/frontends/php/tr_events.php
+share/zabbix/frontends/php/tr_status.php
+share/zabbix/frontends/php/triggers.php
+share/zabbix/frontends/php/users.php
+share/zabbix/frontends/php/vtext.php
+share/zabbix/schema/mysql.sql
+share/zabbix/schema/oracle.sql
+share/zabbix/schema/postgresql.sql
+share/zabbix/schema/sqlite.sql
+share/zabbix/upgrades/Makefile
+share/zabbix/upgrades/Makefile.am
+share/zabbix/upgrades/Makefile.in
+share/zabbix/upgrades/dbpatches/1.4/mysql/patch.sql
+share/zabbix/upgrades/dbpatches/1.4/oracle/patch.sql
+share/zabbix/upgrades/dbpatches/1.4/postgresql/patch.sql
+@dirrm share/zabbix/upgrades/dbpatches/1.4/postgresql
+@dirrm share/zabbix/upgrades/dbpatches/1.4/oracle
+@dirrm share/zabbix/upgrades/dbpatches/1.4/mysql
+@dirrm share/zabbix/upgrades/dbpatches/1.4
+@dirrm share/zabbix/upgrades/dbpatches
+@dirrm share/zabbix/upgrades
+@dirrm share/zabbix/schema
+@dirrm share/zabbix/frontends/php/js
+@dirrm share/zabbix/frontends/php/include/locales
+@dirrm share/zabbix/frontends/php/include/classes
+@dirrm share/zabbix/frontends/php/include
+@dirrm share/zabbix/frontends/php/images/sysmaps/old
+@dirrm share/zabbix/frontends/php/images/sysmaps
+@dirrm share/zabbix/frontends/php/images/gradients
+@dirrm share/zabbix/frontends/php/images/general/tree
+@dirrm share/zabbix/frontends/php/images/general
+@dirrm share/zabbix/frontends/php/images/flash
+@dirrm share/zabbix/frontends/php/images
+@dirrm share/zabbix/frontends/php/create
+@dirrm share/zabbix/frontends/php/conf
+@dirrm share/zabbix/frontends/php/audio
+@dirrm share/zabbix/frontends/php
+@dirrm share/zabbix/frontends
+@dirrm share/zabbix/data
+@dirrm share/zabbix
+@dirrm share/examples/zabbix
+@dirrm share/doc/zabbix

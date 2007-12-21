@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/12/12 21:48:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/21 20:00:01 asau Exp $
 
 DISTNAME=	zabbix-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+CONFIGURATION_FILES=	zabbix_agent.conf zabbix_agentd.conf zabbix_server.conf zabbix_trapper.conf
 
 PKG_SYSCONFSUBDIR=	zabbix
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -53,6 +55,38 @@ SUBST_SED.fix-paths+=		-e 's,"@HOMEDIR@,"${ZBXHOME},g'
 SUBST_SED.fix-paths+=		-e 's,"@CONFDIR@,"${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-paths+=		-e 's,"@SCRIPTDIR@,"${PREFIX}/libexec/${PKGNAME_NOREV},g'
 SUBST_SED.fix-paths+=		-e 's,"@PIDDIR@,"${VARBASE}/run,g'
+
+OWN_DIRS+=	share/zabbix share/zabbix/data share/zabbix/schema share/examples/zabbix share/doc/zabbix
+
+RCD_SCRIPTS=	zabbix_agentd zabbix_server
+.for script in ${RCD_SCRIPTS}
+RCD_SCRIPT_SRC.${script}=	${WRKSRC}/misc/init.d/freebsd/${script}
+.endfor
+
+# necessary SQL scripts
+SQL_SCRIPTS_DIR=	${WRKSRC}/create
+SQL_SCRIPTS+=	data/data.sql
+SQL_SCRIPTS+=	data/images_oracle.sql data/images_pgsql.sql
+SQL_SCRIPTS+=	data/images_mysql.sql data/images_sqlite3.sql
+SQL_SCRIPTS+=	schema/oracle.sql schema/postgresql.sql
+SQL_SCRIPTS+=	schema/mysql.sql schema/sqlite.sql
+
+post-install:
+.for d in ${OWN_DIRS}
+	mkdir ${DESTDIR}${PREFIX}/$d
+.endfor
+# documentation
+	${INSTALL_DATA} ${WRKSRC}/docs/"ZABBIX Manual v1.4 rev 9.pdf" ${DESTDIR}${PREFIX}/share/doc/zabbix/manual.pdf
+.for f in ${CONFIGURATION_FILES}
+	${INSTALL_DATA} ${WRKSRC}/misc/conf/$f ${DESTDIR}${EGDIR}/$f
+.endfor
+.for f in ${SQL_SCRIPTS}
+	${INSTALL_DATA} ${SQL_SCRIPTS_DIR}/$f ${DESTDIR}${PREFIX}/share/zabbix/$f
+.endfor
+.for f in AUTHORS COPYING FAQ INSTALL NEWS README
+	${INSTALL_DATA} ${WRKSRC}/$f ${DESTDIR}${PREFIX}/share/doc/zabbix/$f
+.endfor
+	cd ${WRKSRC}; pax -rw frontends upgrades ${DESTDIR}${PREFIX}/share/zabbix/
 
 .include "options.mk"
 
