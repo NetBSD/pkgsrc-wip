@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/21 10:29:25 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/21 10:34:43 bartoszkuzma Exp $
 #
 
 DISTNAME=	expiretable-0.6
@@ -14,6 +14,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-* OpenBSD-[4-9]*-*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/expiretable ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/expiretable.1 ${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/expiretable.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
