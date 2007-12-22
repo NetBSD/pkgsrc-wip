@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+$NetBSD: patch-ba,v 1.2 2007/12/22 18:50:53 mwdavies Exp $
 
---- libs/ksysguard/processcore/processes_netbsd_p.cpp.orig	2007-12-04 23:00:45.000000000 +1300
+--- libs/ksysguard/processcore/processes_netbsd_p.cpp.orig	2007-12-20 22:02:51.000000000 +0000
 +++ libs/ksysguard/processcore/processes_netbsd_p.cpp
-@@ -0,0 +1,306 @@
+@@ -0,0 +1,323 @@
 +/*  This file is part of the KDE project
 +    Copyright (C) 2007 Manolo Valdes <nolis71cu@gmail.com>
 +
@@ -58,6 +58,23 @@ $NetBSD: patch-ba,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
 +      inline void readProcStatm(struct kinfo_proc *p, Process *process);
 +      inline bool readProcCmdline(long pid, Process *process);
 +    };
++
++#ifndef _SC_NPROCESSORS_ONLN
++long int KSysGuard::ProcessesLocal::numberProcessorCores()
++{
++    int mib[2];
++    int ncpu;
++    size_t len;
++
++    mib[0] = CTL_HW;
++    mib[1] = HW_NCPU;
++    len = sizeof(ncpu);
++
++    if (sysctl(mib, 2, &ncpu, &len, NULL, 0) == -1 || !len)
++        return 1;
++    return len;
++}
++#endif  
 +
 +bool ProcessesLocal::Private::readProc(long pid, struct kinfo_proc *p)
 +{

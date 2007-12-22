@@ -1,0 +1,18 @@
+$NetBSD: patch-bk,v 1.1 2007/12/22 18:50:53 mwdavies Exp $
+
+--- libs/ksysguard/processcore/processes_local_p.h.orig	2007-11-28 13:28:46.000000000 +0000
++++ libs/ksysguard/processcore/processes_local_p.h
+@@ -48,7 +48,12 @@ namespace KSysGuard
+ 	virtual long long totalPhysicalMemory();
+ 	virtual bool setIoNiceness(long pid, int priorityClass, int priority);
+ 	virtual bool supportsIoNiceness();
+-	virtual long numberProcessorCores() { return sysconf(_SC_NPROCESSORS_ONLN); } //This should work on any posix system
++	virtual long numberProcessorCores()
++#ifdef _SC_NPROCESSORS_ONLN
++	{ return sysconf(_SC_NPROCESSORS_ONLN); } // Should work on any recent posix system
++#else
++	;
++#endif
+ 	virtual void updateAllProcesses() { emit processesUpdated(); } //For local machine, there is no delay
+ 
+       private:
