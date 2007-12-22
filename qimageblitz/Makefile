@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 02:47:59 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/22 18:41:16 mwdavies Exp $
 
 DISTNAME=	qimageblitz-${BLITZ_SNAP_VERSION}
 CATEGORIES=	x11
@@ -30,4 +30,5 @@ pre-configure:
 
 
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
