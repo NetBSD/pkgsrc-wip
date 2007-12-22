@@ -1,0 +1,26 @@
+$NetBSD: patch-ad,v 1.1 2007/12/22 21:13:18 mwdavies Exp $
+
+--- kdm/config.def.orig	2007-12-06 03:12:43.000000000 +1300
++++ kdm/config.def
+@@ -74,6 +74,12 @@
+ #else
+ # define DEF_SERVER_CMD XBINDIR "/X"
+ #endif
++
++#if defined(__NetBSD__) && !defined(__powerpc__)
++# define DEF_SERVER_ARGS "-nolisten tcp vt05"
++#else
++# define DEF_SERVER_ARGS "-nolisten tcp"
++#endif
+ </code>
+ 
+ # The contents of this section are copied mostly verbatim to the
+@@ -1361,7 +1367,7 @@ Key: ServerArgsLocal
+ Type: string
+ Default: ""
+ User: core
+-Instance: :*/"-nolisten tcp"
++Instance: :*/DEF_SERVER_ARGS
+ Comment: &
+ Description:
+  Additional arguments for the &X-Server;s for local sessions.

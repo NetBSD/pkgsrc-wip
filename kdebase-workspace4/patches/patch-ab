@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2007/12/22 21:13:18 mwdavies Exp $
+
+--- kdm/kfrontend/CMakeLists.txt.orig	2007-12-23 08:20:52.000000000 +1300
++++ kdm/kfrontend/CMakeLists.txt
+@@ -111,5 +111,5 @@ build_confci()
+ 
+ ## use 'GENKDMCONF_FLAGS=... make install' to override
+ install(CODE "
+-exec_program(${CMAKE_CURRENT_BINARY_DIR}/genkdmconf ARGS --in \$DESTDIR${CONFIG_INSTALL_DIR}/kdm --no-in-notice --face-src ${CMAKE_CURRENT_SOURCE_DIR}/pics \$GENKDMCONF_FLAGS)
++exec_program(${CMAKE_CURRENT_BINARY_DIR}/genkdmconf ARGS --in \$DESTDIR${CONFIG_INSTALL_DIR}/kdm --no-in-notice --face-src ${CMAKE_CURRENT_SOURCE_DIR}/pics --no-old \$GENKDMCONF_FLAGS)
+ ")
