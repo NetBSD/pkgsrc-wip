@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/12 10:20:13 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/22 18:57:53 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ BUILD_MAKE_FLAGS+= VERBOSE=1
 #REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
 
 #REPLACE_PERL+= \
+
+.include "options.mk"
 
 .include "../../wip/kde4/kde4.mk"
 
