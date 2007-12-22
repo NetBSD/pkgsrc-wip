@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/16 19:55:05 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/22 21:24:48 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -33,10 +33,12 @@ SUBST_FILES.kdelibsfix= \
 	kio/kssl/kopenssl.cpp
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
 
-#.if ${OPSYS} == "NetBSD"
-## make sure zone.tab is installed
-#DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
-#.endif
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# make sure zone.tab is installed
+DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
+.endif
 
 .include "../../wip/kde4/kde4.mk"
 
