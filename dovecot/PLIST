@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/12/10 14:19:40 ghen Exp $
+@comment $NetBSD: PLIST,v 1.16 2007/12/22 16:18:21 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -312,7 +312,6 @@ share/doc/dovecot/wiki/Design.Processes.txt
 share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
-share/doc/dovecot/wiki/GermanVersion.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
@@ -327,7 +326,6 @@ share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
-share/doc/dovecot/wiki/LocalBadContent.txt
 share/doc/dovecot/wiki/Logging.txt
 share/doc/dovecot/wiki/LoginProcess.txt
 share/doc/dovecot/wiki/MDA.txt
@@ -374,6 +372,7 @@ share/doc/dovecot/wiki/PasswordDatabase.txt
 share/doc/dovecot/wiki/PerformanceTuning.txt
 share/doc/dovecot/wiki/Plugins.Convert.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
+share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
@@ -404,7 +403,6 @@ share/doc/dovecot/wiki/TimeMovedBackwards.txt
 share/doc/dovecot/wiki/Upgrading.1.0.txt
 share/doc/dovecot/wiki/Upgrading.1.1.txt
 share/doc/dovecot/wiki/Upgrading.txt
-share/doc/dovecot/wiki/UpgradingDovecot.txt
 share/doc/dovecot/wiki/UserDatabase.ExtraFields.txt
 share/doc/dovecot/wiki/UserDatabase.NSS.txt
 share/doc/dovecot/wiki/UserDatabase.Prefetch.txt
