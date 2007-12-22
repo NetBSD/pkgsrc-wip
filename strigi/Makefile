@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/12 02:36:14 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/22 18:42:34 mwdavies Exp $
 
 DISTNAME=	strigi-0.5.7
 CATEGORIES=	sysutils
@@ -23,5 +23,6 @@ pre-configure:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
