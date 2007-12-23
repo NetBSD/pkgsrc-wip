@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/11/17 11:02:06 netcap Exp $
+# $NetBSD: Makefile,v 1.15 2007/12/23 01:06:14 netcap Exp $
 #
 
-DISTNAME=		tor-0.2.0.12-alpha
+DISTNAME=		tor-0.2.0.13-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
