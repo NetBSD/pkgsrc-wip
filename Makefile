@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2724 2007/12/21 10:32:39 bartoszkuzma Exp $
+# $Id: Makefile,v 1.2725 2007/12/23 01:35:04 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -759,6 +759,7 @@ SUBDIR+=	libgksu
 SUBDIR+=	libgksuui
 SUBDIR+=	libglade-java
 SUBDIR+=	libgnome-java
+SUBDIR+=	libgnugetopt
 SUBDIR+=	libgrass5
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
