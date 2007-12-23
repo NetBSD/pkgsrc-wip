@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/11/02 22:12:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2007/12/23 21:38:17 cheusov Exp $
 #
 
-DISTNAME=	runawk-0.8.1
+DISTNAME=	runawk-0.9.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/}
 
@@ -14,14 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${PKGDOCDIR} bin
+INSTALLATION_DIRS+=	${PKGDOCDIR} bin share/runawk
 
 DOC_FILES=		README NEWS ChangeLog
 
 MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
-MAKE_FLAGS+=		DESTDIR=${DESTDIR:Q}
-MAKE_FLAGS+=		INSTALL=${INSTALL_PROGRAM:Q}
-MAKE_FLAGS+=		WARFLAGS=
 
 post-install:
 .for i in ${DOC_FILES}

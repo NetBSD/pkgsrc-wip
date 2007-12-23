@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/29 11:21:07 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/23 21:38:17 cheusov Exp $
 bin/runawk
+man/man1/runawk.1
 share/doc/${PKGBASE}/ChangeLog
 share/doc/${PKGBASE}/NEWS
 share/doc/${PKGBASE}/README
+share/runawk/abs.awk
+share/runawk/alt_assert.awk
+share/runawk/max.awk
+share/runawk/min.awk
