@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/23 01:53:02 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/23 19:25:59 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -6,11 +6,21 @@ COMMENT=	XXX for the KDE 4 integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
+DISTFILES+=	NetBSD-flag-1.0.png
+SITES.Daemon.png=	${MASTER_SITE_LOCAL}
+SITES.Daemon.README=	${MASTER_SITE_LOCAL}
+SITES.NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
+
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-#REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
+USE_TOOLS+=		mkfontdir bdftopcf
 
-#REPLACE_PERL+= \
+FONTS_DIRS.x11+=	${PREFIX}/share/kde/fonts/override
+REQD_DIRS+=		${PREFIX}/share/kde/fonts
+REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
 RCD_SCRIPTS=		kdm
 
@@ -21,12 +31,29 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
 
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
+
+ICONDIR=		share/icons
+
+post-install:
+	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag-1.0.png \
+		${DESTDIR}${PREFIX}/${ICONDIR}/NetBSD-flag.png
+	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${DESTDIR}${PREFIX}/${ICONDIR}
+	${INSTALL_DATA} ${DISTDIR}/Daemon.README \
+		${DESTDIR}${PREFIX}/share/doc/kde/HTML/en/kdm
+.if ${OPSYS} == "NetBSD"
+	@# NetBSD Advertisement O:-)
+	cd ${PREFIX}/share/kde/config/kdm;				\
+	${SED} -e 's|^\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
+                kdmrc > ${WRKDIR}/kdmrc.ad;				\
+	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
+.endif
 
 .include "../../wip/kde4/kde4.mk"
 

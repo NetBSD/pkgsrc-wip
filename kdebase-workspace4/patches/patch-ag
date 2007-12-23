@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 2007/12/23 19:25:59 mwdavies Exp $
+
+--- startkde.cmake.orig	2007-12-23 21:40:06.000000000 +1300
++++ startkde.cmake
+@@ -219,11 +219,11 @@ usr_fdir=$HOME/.fonts
+ 
+ if test -n "$KDEDIRS"; then
+   kdedirs_first=`echo "$KDEDIRS"|sed -e 's/:.*//'`
+-  sys_odir=$kdedirs_first/share/fonts/override
+-  sys_fdir=$kdedirs_first/share/fonts
++  sys_odir=$kdedirs_first/share/kde/fonts/override
++  sys_fdir=$kdedirs_first/share/kde/fonts
+ else
+-  sys_odir=$KDEDIR/share/fonts/override
+-  sys_fdir=$KDEDIR/share/fonts
++  sys_odir=$KDEDIR/share/kde/fonts/override
++  sys_fdir=$KDEDIR/share/kde/fonts
+ fi
+ 
+ # We run mkfontdir on the user's font dirs (if we have permission) to pick
