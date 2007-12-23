@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/12/23 21:38:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2007/12/23 21:59:02 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.9.0
@@ -18,7 +18,7 @@ INSTALLATION_DIRS+=	${PKGDOCDIR} bin share/runawk
 
 DOC_FILES=		README NEWS ChangeLog
 
-MAKE_FLAGS+=		PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=		PREFIX=${PREFIX}
 
 post-install:
 .for i in ${DOC_FILES}
