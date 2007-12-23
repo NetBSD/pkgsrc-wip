@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 03:17:11 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/23 21:04:06 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -3759,7 +3759,7 @@ share/mime/packages/kde.xml
 @dirrm lib/kde4/plugins/imageformats
 @dirrm include/threadweaver
 @dirrm include/sonnet
-@dirrm include/solid
+@comment in kde: @dirrm include/solid
 @dirrm include/phonon/experimental
 @dirrm include/phonon
 @dirrm include/kunittest

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 03:25:44 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/23 21:04:06 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -7261,8 +7261,8 @@ share/sounds/usb_out.ogg
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kstyle/themes
-@dirrm share/kde/apps/kstyle
+@comment in kde: @dirrm share/kde/apps/kstyle/themes
+@comment in kde: @dirrm share/kde/apps/kstyle
 @dirrm share/kde/apps/kio_thumbnail/pics
 @dirrm share/kde/apps/kio_thumbnail
 @dirrm share/kde/apps/kio_man
@@ -7386,7 +7386,7 @@ share/sounds/usb_out.ogg
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/examples/kdebase-runtime4
 @dirrm share/emoticons/kde4
-@dirrm share/emoticons
+@comment in kde: @dirrm share/emoticons
 @dirrm share/doc/kde/HTML/en/knetattach
 @dirrm share/doc/kde/HTML/en/kioslave
 @dirrm share/doc/kde/HTML/en/khelpcenter/visualdict

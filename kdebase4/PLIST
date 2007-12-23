@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 03:29:40 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/23 21:04:06 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -852,7 +852,7 @@ share/kde4/servicetypes/uasprovider.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @dirrm share/kde4/services/useragentstrings
 @comment in kde: @dirrm share/kde4/services/kded
-@dirrm share/kde4/services/ServiceMenus
+@comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/templates/.source
 @comment in kde: @dirrm share/kde/templates
@@ -869,7 +869,7 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/konqueror/icons/crystalsvg
 @dirrm share/kde/apps/konqueror/icons
 @dirrm share/kde/apps/konqueror/about
-@dirrm share/kde/apps/konqueror
+@comment in kde: @dirrm share/kde/apps/konqueror
 @dirrm share/kde/apps/konqsidebartng/websidebar
 @comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/web
@@ -887,9 +887,9 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/konqiconview
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/keditbookmarks
-@dirrm share/kde/apps/kdm/pics/users
-@dirrm share/kde/apps/kdm/pics
-@dirrm share/kde/apps/kdm
+@comment in kde: @dirrm share/kde/apps/kdm/pics/users
+@comment in kde: @dirrm share/kde/apps/kdm/pics
+@comment in kde: @dirrm share/kde/apps/kdm
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcmcss

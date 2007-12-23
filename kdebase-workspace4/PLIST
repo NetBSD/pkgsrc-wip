@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/23 19:45:29 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2007/12/23 21:04:06 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -997,7 +997,7 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/solid
 @dirrm share/kde/apps/plasmoidviewer
 @dirrm share/kde/apps/kwin/default_rules
-@dirrm share/kde/apps/kwin
+@comment in kde: @dirrm share/kde/apps/kwin
 @dirrm share/kde/apps/kthememanager/themes/YellowOnBlue-big
 @dirrm share/kde/apps/kthememanager/themes/YellowOnBlue
 @dirrm share/kde/apps/kthememanager/themes/Sunshine
@@ -1034,10 +1034,10 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kdm/themes/circles
 @dirrm share/kde/apps/kdm/themes
 @dirrm share/kde/apps/kdm/sessions
-@dirrm share/kde/apps/kdm/pics/users
-@dirrm share/kde/apps/kdm/pics
+@comment in kde: @dirrm share/kde/apps/kdm/pics/users
+@comment in kde: @dirrm share/kde/apps/kdm/pics
 @dirrm share/kde/apps/kdm/faces
-@dirrm share/kde/apps/kdm
+@comment in kde: @dirrm share/kde/apps/kdm
 @dirrm share/kde/apps/kdisplay/color-schemes
 @dirrm share/kde/apps/kdisplay/app-defaults
 @dirrm share/kde/apps/kdisplay
@@ -1058,10 +1058,10 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kaccess
 @dirrm share/kde/apps/doc/kdm
 @dirrm share/kde/apps/doc
-@dirrm share/kde/apps/desktoptheme/default/widgets
+@comment in kde: @dirrm share/kde/apps/desktoptheme/default/widgets
 @dirrm share/kde/apps/desktoptheme/default/dialogs
-@dirrm share/kde/apps/desktoptheme/default
-@dirrm share/kde/apps/desktoptheme
+@comment in kde: @dirrm share/kde/apps/desktoptheme/default
+@comment in kde: @dirrm share/kde/apps/desktoptheme
 @dirrm share/kde/apps/color-schemes
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @comment in kde: @dirrm share/kde/apps
@@ -1115,7 +1115,7 @@ share/sounds/pop.wav
 @dirrm lib/kconf_update_bin
 @dirrm include/solid/control/ifaces
 @dirrm include/solid/control
-@dirrm include/solid
+@comment in kde: @dirrm include/solid
 @dirrm include/plasma/widgets
 @dirrm include/plasma/layouts
 @dirrm include/plasma

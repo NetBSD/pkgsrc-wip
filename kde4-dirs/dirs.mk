@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1.1.1 2007/12/12 03:09:28 mwdavies Exp $
+# $NetBSD: dirs.mk,v 1.2 2007/12/23 21:04:06 mwdavies Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -10,6 +10,7 @@ _USE_XDG_DIRS=	1.2
 KDE4_DIRS=	include/KDE
 KDE4_DIRS+=	include/dom
 KDE4_DIRS+=	include/kparts
+KDE4_DIRS+=	include/solid
 # KDE4_DIRS+=	lib/kconf_update_bin
 KDE4_DIRS+=	lib/kde4
 KDE4_DIRS+=	lib/kde4/libexec
@@ -47,11 +48,15 @@ KDE4_DIRS+=	share/icons/${color}/${size}/${dir}
 .endfor
 
 KDE4_DIRS+=	share/dbus-1/interfaces
+KDE4_DIRS+=	share/emoticons
 
 KDE4_DIRS+=	share/kde
 KDE4_DIRS+=	share/kde/apps
 KDE4_DIRS+=	share/kde/apps/cmake
 KDE4_DIRS+=	share/kde/apps/cmake/modules
+KDE4_DIRS+=	share/kde/apps/desktoptheme
+KDE4_DIRS+=	share/kde/apps/desktoptheme/default
+KDE4_DIRS+=	share/kde/apps/desktoptheme/default/widgets
 KDE4_DIRS+=	share/kde/apps/katepart
 KDE4_DIRS+=	share/kde/apps/katepart/syntax
 KDE4_DIRS+=	share/kde/apps/kcm_componentchooser
@@ -60,13 +65,22 @@ KDE4_DIRS+=	share/kde/apps/kcontrol
 KDE4_DIRS+=	share/kde/apps/kcontrol/pics
 KDE4_DIRS+=	share/kde/apps/kdesktop
 KDE4_DIRS+=	share/kde/apps/kdesktop/programs
+KDE4_DIRS+=	share/kde/apps/kdm
+KDE4_DIRS+=	share/kde/apps/kdm/pics
+KDE4_DIRS+=	share/kde/apps/kdm/pics/users
 KDE4_DIRS+=	share/kde/apps/khtml
 KDE4_DIRS+=	share/kde/apps/khtml/kpartplugins
 KDE4_DIRS+=	share/kde/apps/kicker
 KDE4_DIRS+=	share/kde/apps/kicker/applets
+KDE4_DIRS+=	share/kde/apps/konqueror
 KDE4_DIRS+=	share/kde/apps/konqsidebartng
 KDE4_DIRS+=	share/kde/apps/konqsidebartng/virtual_folders
 KDE4_DIRS+=	share/kde/apps/konqsidebartng/virtual_folders/services
+KDE4_DIRS+=	share/kde/apps/kstyle
+KDE4_DIRS+=	share/kde/apps/kstyle/themes
+KDE4_DIRS+=	share/kde/apps/kwin
+KDE4_DIRS+=	share/kde/apps/kworldclock
+KDE4_DIRS+=	share/kde/apps/kworldclock/maps
 KDE4_DIRS+=	share/kde/autostart
 KDE4_DIRS+=	share/kde/config
 #KDE4_DIRS+=	share/kde/config/magic
@@ -76,6 +90,7 @@ KDE4_DIRS+=	share/kde/templates/.source
 KDE4_DIRS+=	share/kde/wallpapers
 KDE4_DIRS+=	share/kde4
 KDE4_DIRS+=	share/kde4/services
+KDE4_DIRS+=	share/kde4/services/ServiceMenus
 KDE4_DIRS+=	share/kde4/services/kded
 KDE4_DIRS+=	share/kde4/services/kresources
 KDE4_DIRS+=	share/kde4/servicetypes
