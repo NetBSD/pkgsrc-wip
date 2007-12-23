@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/12 10:20:13 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/23 01:53:02 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -423,6 +423,7 @@ share/doc/kde/HTML/en/kxkb/index.docbook
 share/doc/kde/HTML/en/plasma/common
 share/doc/kde/HTML/en/plasma/index.cache.bz2
 share/doc/kde/HTML/en/plasma/index.docbook
+share/examples/kdebase-workspace4/ksysguarddrc
 share/icons/hicolor/128x128/apps/ksplash.png
 share/icons/hicolor/128x128/apps/ktip.png
 share/icons/hicolor/16x16/apps/khotkeys.png
@@ -1075,6 +1076,7 @@ share/sounds/pop.wav
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/examples/kdebase-workspace4
 @dirrm share/doc/kde/HTML/en/plasma
 @dirrm share/doc/kde/HTML/en/kxkb
 @dirrm share/doc/kde/HTML/en/ksysguard

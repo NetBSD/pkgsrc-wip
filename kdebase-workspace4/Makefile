@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/22 21:13:18 mwdavies Exp $
+# $NetBSD: Makefile,v 1.5 2007/12/23 01:53:02 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -11,6 +11,15 @@ COMMENT=	XXX for the KDE 4 integrated X11 desktop
 #REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
 
 #REPLACE_PERL+= \
+
+RCD_SCRIPTS=		kdm
+
+CONF_FILES=		${PREFIX}/share/kde/config/kdm/kdmrc \
+			${PKG_SYSCONFDIR}/kdm/kdmrc
+OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
+
+CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
+			${PKG_SYSCONFDIR}/ksysguarddrc
 
 .include "options.mk"
 
