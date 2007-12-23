@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/23 01:53:02 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/23 19:45:29 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -343,6 +343,7 @@ share/desktop-directories/kde-utilities-peripherals.directory
 share/desktop-directories/kde-utilities-pim.directory
 share/desktop-directories/kde-utilities-xutils.directory
 share/desktop-directories/kde-utilities.directory
+share/doc/kde/HTML/en/kdm/Daemon.README
 share/doc/kde/HTML/en/kdm/common
 share/doc/kde/HTML/en/kdm/index.cache.bz2
 share/doc/kde/HTML/en/kdm/index.docbook
@@ -424,6 +425,9 @@ share/doc/kde/HTML/en/plasma/common
 share/doc/kde/HTML/en/plasma/index.cache.bz2
 share/doc/kde/HTML/en/plasma/index.docbook
 share/examples/kdebase-workspace4/ksysguarddrc
+share/examples/rc.d/kdm
+share/icons/Daemon.png
+share/icons/NetBSD-flag.png
 share/icons/hicolor/128x128/apps/ksplash.png
 share/icons/hicolor/128x128/apps/ktip.png
 share/icons/hicolor/16x16/apps/khotkeys.png
