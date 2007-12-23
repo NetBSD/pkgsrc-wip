@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/23 19:46:59 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/23 18:07:30 tnn2 Exp $
 
-DISTNAME=	xf86-video-ati-6.7.191
+DISTNAME=	xf86-video-ati-6.7.197
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
