@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/12/23 21:59:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2007/12/23 23:55:47 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.9.0
@@ -14,11 +14,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	${PKGDOCDIR} bin share/runawk
+
+AUTO_MKDIRS=		yes
 
 DOC_FILES=		README NEWS ChangeLog
 
-MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_ENV+=		PREFIX=${PREFIX}
+MAKE_ENV+=		MKCATPAGES=no
 
 post-install:
 .for i in ${DOC_FILES}
