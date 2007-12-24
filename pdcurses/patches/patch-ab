@@ -1,0 +1,675 @@
+$NetBSD: patch-ab,v 1.1 2007/12/24 16:33:18 bsadewitz Exp $
+
+--- x11/Makefile.in.orig	2007-01-07 23:17:23.000000000 -0500
++++ x11/Makefile.in
+@@ -21,44 +21,50 @@ PDCURSES_X11_H		=$(osdir)/pdcx11.h
+ 
+ SHLPRE		= @SHLPRE@
+ SHLPST		= @SHLPST@
+-LD_RXLIB1	= @LD_RXLIB1@
++LD_RXLIB1	= 
+ LD_RXLIB2	= @MH_XLIBS@ @MH_EXTRA_LIBS@ -lc
+ 
+ CFLAGS		= @CFLAGS@
+ 
+ CPPFLAGS	= @DEFS@ -DXCURSES @SYS_DEFS@ -I$(PDCURSES_HOME)
+ 
+-BUILD		= @CC@ -c $(CFLAGS) $(CPPFLAGS) @MH_XINC_DIR@
++PROGBUILD	= ${LIBTOOL} --mode=link ${CC} -o \${.TARGET} \$(CFLAGS) \$(CPPFLAGS) @MH_XINC_DIR@ \${.IMPSRC}
++BUILD		= ${LIBTOOL} --mode=compile ${CC} -o $@ -c $< $(CFLAGS) $(CPPFLAGS) @MH_XINC_DIR@
+ DYN_BUILD	= @O2SAVE@ $(BUILD) @DYN_COMP@ @CC2O@
+ 
+-LINK		= @PURIFY@ @CC@
++LINK		= ${LIBTOOL} --mode=link ${CC}
+ #LDFLAGS	= $(LIB_DEPS) @LDFLAGS@ @LIBS@ @MH_XLIBS@ @MH_EXTRA_LIBS@
+-LDFLAGS		= $(LIBCURSES) @LDFLAGS@ @LIBS@ @MH_XLIBS@ @MH_EXTRA_LIBS@
++LTLDFLAGS	= @LIBS@ @MH_XLIBS@ @MH_EXTRA_LIBS@
++LDFLAGS		= $(LIBCURSES) @LIBS@ @MH_XLIBS@ @MH_EXTRA_LIBS@
+ 
+ RANLIB		= @RANLIB@
+ 
+-LIBCURSES	= libXCurses.a
+-LIBPANEL	= libpanel.a
++LIBCURSES	= libXCurses.la
++LIBPANEL	= libxpanel.la
+ 
+ LIB_DEPS        = -L$(PDCURSES_HOME)/x11 -lXCurses
+-PANEL_LIB       = -L$(PDCURSES_HOME)/x11 -lpanel
++PANEL_LIB       = -L$(PDCURSES_HOME)/x11 -lxpanel
+ 
+-PDCLIBS		= $(LIBCURSES) $(LIBPANEL) @SHL_TARGETS@
++PDCLIBS		= $(LIBCURSES) $(LIBPANEL)
+ 
+ DEMOS		= firework newdemo ptest rain testcurs tuidemo worm xmas
+-DEMOOBJS	= firework.o newdemo.o ptest.o rain.o testcurs.o tui.o \
+-tuidemo.o worm.o xmas.o
++DEMOOBJS	= firework.lo newdemo.lo ptest.lo rain.lo testcurs.lo tui.lo \
++tuidemo.lo worm.lo xmas.lo
+ 
+ SHLFILE		= XCurses
+ 
+ ################################################################################
+-all:	$(PDCLIBS) $(DEMOS)
++###
++### XXXbjs: The demos are being a royal pain to link.  They're not really
++###	    important.  If you wish to fix this, by all means, please do so.
++###
++all:	$(PDCLIBS) # $(DEMOS) 
+ 
+ install:
+ 	echo Does nothing at the moment
+ 
+ clean:
+-	-rm -rf *.o *.sho trace $(PDCLIBS) $(DEMOS)
++	-rm -rf *.lo trace $(PDCLIBS) $(DEMOS)
+ 
+ demos:	$(DEMOS)
+ 
+@@ -71,469 +77,224 @@ realclean: distclean
+ 
+ #------------------------------------------------------------------------
+ 
+-LIBOBJS = addch.o addchstr.o addstr.o attr.o beep.o bkgd.o border.o \
+-clear.o color.o delch.o deleteln.o deprec.o getch.o getstr.o getyx.o \
+-inch.o inchstr.o initscr.o inopts.o insch.o insstr.o instr.o kernel.o \
+-keyname.o mouse.o move.o outopts.o overlay.o pad.o printw.o refresh.o \
+-scanw.o scr_dump.o scroll.o slk.o termattr.o terminfo.o touch.o util.o \
+-window.o debug.o
+-
+-PDCOBJS = pdcclip.o pdcdisp.o pdcgetsc.o pdckbd.o pdcscrn.o pdcsetsc.o \
+-pdcutil.o pdcx11.o x11.o sb.o ScrollBox.o
+-
+-PANOBJS = panel.o
+-
+-LIBSHOBJS = $(LIBOBJS:.o=.sho)
+-PDCSHOBJS = $(PDCOBJS:.o=.sho)
+-
+-SHOFILES = $(LIBSHOBJS) $(PDCSHOBJS)
++LIBOBJS = addch.lo addchstr.lo addstr.lo attr.lo beep.lo bkgd.lo border.lo \
++clear.lo color.lo delch.lo deleteln.lo deprec.lo getch.lo getstr.lo getyx.lo \
++inch.lo inchstr.lo initscr.lo inopts.lo insch.lo insstr.lo instr.lo kernel.lo \
++keyname.lo mouse.lo move.lo outopts.lo overlay.lo pad.lo printw.lo refresh.lo \
++scanw.lo scr_dump.lo scroll.lo slk.lo termattr.lo terminfo.lo touch.lo util.lo \
++window.lo debug.lo
++
++PDCOBJS = pdcclip.lo pdcdisp.lo pdcgetsc.lo pdckbd.lo pdcscrn.lo pdcsetsc.lo \
++pdcutil.lo pdcx11.lo x11.lo sb.lo ScrollBox.lo
++PANOBJS = panel.lo
+ 
+ $(LIBCURSES) : $(LIBOBJS) $(PDCOBJS)
+-	ar rv $@ $?
+-	-$(RANLIB) $@
++	${LIBTOOL} --mode=link ${CC} -o $@ -rpath ${PREFIX}/lib ${LTLDFLAGS} ${CFLAGS} $?
+ 
+ $(LIBPANEL) : $(PANOBJS)
+-	ar rv $@ $?
+-	-$(RANLIB) $@
+-
+-$(SHLPRE)$(SHLFILE)$(SHLPST) : $(SHOFILES)
+-#	cp $(srcdir)/../win32/curses.def ./cygwin.def
+-	$(LD_RXLIB1) $(RXPACKEXPORTS) -o $@ $(SHOFILES) $(LD_RXLIB2)
++	${LIBTOOL} --mode=link ${CC} -o $@ -rpath ${PREFIX}/lib ${LDFLAGS} ${CFLAGS} $?
+ 
+-$(LIBOBJS) $(PDCOBJS) $(PANOBJS) $(SHOFILES) : $(PDCURSES_HEADERS)
+-$(PDCOBJS) $(PDCSHOBJS) : $(PDCURSES_X11_H)
++$(LIBOBJS) $(PDCOBJS) $(PANOBJS) : $(PDCURSES_HEADERS)
++$(PDCOBJS) : $(PDCURSES_X11_H)
+ $(DEMOOBJS) : $(PDCURSES_CURSES_H)
+ $(DEMOS) : $(LIBCURSES)
+-terminfo.o terminfo.sho: $(TERM_HEADER)
++terminfo.lo: $(TERM_HEADER)
+ 
+-addch.o: $(srcdir)/addch.c
++addch.lo: $(srcdir)/addch.c
+ 	$(BUILD) $(srcdir)/addch.c
+ 
+-addchstr.o: $(srcdir)/addchstr.c
++addchstr.lo: $(srcdir)/addchstr.c
+ 	$(BUILD) $(srcdir)/addchstr.c
+ 
+-addstr.o: $(srcdir)/addstr.c
++addstr.lo: $(srcdir)/addstr.c
+ 	$(BUILD) $(srcdir)/addstr.c
+ 
+-attr.o: $(srcdir)/attr.c
++attr.lo: $(srcdir)/attr.c
+ 	$(BUILD) $(srcdir)/attr.c
+ 
+-beep.o: $(srcdir)/beep.c
++beep.lo: $(srcdir)/beep.c
+ 	$(BUILD) $(srcdir)/beep.c
+ 
+-bkgd.o: $(srcdir)/bkgd.c
++bkgd.lo: $(srcdir)/bkgd.c
+ 	$(BUILD) $(srcdir)/bkgd.c
+ 
+-border.o: $(srcdir)/border.c
++border.lo: $(srcdir)/border.c
+ 	$(BUILD) $(srcdir)/border.c
+ 
+-clear.o: $(srcdir)/clear.c
++clear.lo: $(srcdir)/clear.c
+ 	$(BUILD) $(srcdir)/clear.c
+ 
+-color.o: $(srcdir)/color.c
++color.lo: $(srcdir)/color.c
+ 	$(BUILD) $(srcdir)/color.c
+ 
+-delch.o: $(srcdir)/delch.c
++delch.lo: $(srcdir)/delch.c
+ 	$(BUILD) $(srcdir)/delch.c
+ 
+-deleteln.o: $(srcdir)/deleteln.c
++deleteln.lo: $(srcdir)/deleteln.c
+ 	$(BUILD) $(srcdir)/deleteln.c
+ 
+-deprec.o: $(srcdir)/deprec.c
++deprec.lo: $(srcdir)/deprec.c
+ 	$(BUILD) $(srcdir)/deprec.c
+ 
+-getch.o: $(srcdir)/getch.c
++getch.lo: $(srcdir)/getch.c
+ 	$(BUILD) $(srcdir)/getch.c
+ 
+-getstr.o: $(srcdir)/getstr.c
++getstr.lo: $(srcdir)/getstr.c
+ 	$(BUILD) $(srcdir)/getstr.c
+ 
+-getyx.o: $(srcdir)/getyx.c
++getyx.lo: $(srcdir)/getyx.c
+ 	$(BUILD) $(srcdir)/getyx.c
+ 
+-inch.o: $(srcdir)/inch.c
++inch.lo: $(srcdir)/inch.c
+ 	$(BUILD) $(srcdir)/inch.c
+ 
+-inchstr.o: $(srcdir)/inchstr.c
++inchstr.lo: $(srcdir)/inchstr.c
+ 	$(BUILD) $(srcdir)/inchstr.c
+ 
+-initscr.o: $(srcdir)/initscr.c
++initscr.lo: $(srcdir)/initscr.c
+ 	$(BUILD) $(srcdir)/initscr.c
+ 
+-inopts.o: $(srcdir)/inopts.c
++inopts.lo: $(srcdir)/inopts.c
+ 	$(BUILD) $(srcdir)/inopts.c
+ 
+-insch.o: $(srcdir)/insch.c
++insch.lo: $(srcdir)/insch.c
+ 	$(BUILD) $(srcdir)/insch.c
+ 
+-insstr.o: $(srcdir)/insstr.c
++insstr.lo: $(srcdir)/insstr.c
+ 	$(BUILD) $(srcdir)/insstr.c
+ 
+-instr.o: $(srcdir)/instr.c
++instr.lo: $(srcdir)/instr.c
+ 	$(BUILD) $(srcdir)/instr.c
+ 
+-kernel.o: $(srcdir)/kernel.c
++kernel.lo: $(srcdir)/kernel.c
+ 	$(BUILD) $(srcdir)/kernel.c
+ 
+-keyname.o: $(srcdir)/keyname.c
++keyname.lo: $(srcdir)/keyname.c
+ 	$(BUILD) $(srcdir)/keyname.c
+ 
+-mouse.o: $(srcdir)/mouse.c
++mouse.lo: $(srcdir)/mouse.c
+ 	$(BUILD) $(srcdir)/mouse.c
+ 
+-move.o: $(srcdir)/move.c
++move.lo: $(srcdir)/move.c
+ 	$(BUILD) $(srcdir)/move.c
+ 
+-outopts.o: $(srcdir)/outopts.c
++outopts.lo: $(srcdir)/outopts.c
+ 	$(BUILD) $(srcdir)/outopts.c
+ 
+-overlay.o: $(srcdir)/overlay.c
++overlay.lo: $(srcdir)/overlay.c
+ 	$(BUILD) $(srcdir)/overlay.c
+ 
+-pad.o: $(srcdir)/pad.c
++pad.lo: $(srcdir)/pad.c
+ 	$(BUILD) $(srcdir)/pad.c
+ 
+-printw.o: $(srcdir)/printw.c
++printw.lo: $(srcdir)/printw.c
+ 	$(BUILD) $(srcdir)/printw.c
+ 
+-refresh.o: $(srcdir)/refresh.c
++refresh.lo: $(srcdir)/refresh.c
+ 	$(BUILD) $(srcdir)/refresh.c
+ 
+-scanw.o: $(srcdir)/scanw.c
++scanw.lo: $(srcdir)/scanw.c
+ 	$(BUILD) $(srcdir)/scanw.c
+ 
+-scr_dump.o: $(srcdir)/scr_dump.c
++scr_dump.lo: $(srcdir)/scr_dump.c
+ 	$(BUILD) $(srcdir)/scr_dump.c
+ 
+-scroll.o: $(srcdir)/scroll.c
++scroll.lo: $(srcdir)/scroll.c
+ 	$(BUILD) $(srcdir)/scroll.c
+ 
+-slk.o: $(srcdir)/slk.c
++slk.lo: $(srcdir)/slk.c
+ 	$(BUILD) $(srcdir)/slk.c
+ 
+-termattr.o: $(srcdir)/termattr.c
++termattr.lo: $(srcdir)/termattr.c
+ 	$(BUILD) $(srcdir)/termattr.c
+ 
+-terminfo.o: $(srcdir)/terminfo.c
++terminfo.lo: $(srcdir)/terminfo.c
+ 	$(BUILD) $(srcdir)/terminfo.c
+ 
+-touch.o: $(srcdir)/touch.c
++touch.lo: $(srcdir)/touch.c
+ 	$(BUILD) $(srcdir)/touch.c
+ 
+-util.o: $(srcdir)/util.c
++util.lo: $(srcdir)/util.c
+ 	$(BUILD) $(srcdir)/util.c
+ 
+-window.o: $(srcdir)/window.c
++window.lo: $(srcdir)/window.c
+ 	$(BUILD) $(srcdir)/window.c
+ 
+-debug.o: $(srcdir)/debug.c
++debug.lo: $(srcdir)/debug.c
+ 	$(BUILD) $(srcdir)/debug.c
+ 
+ 
+-pdcclip.o: $(osdir)/pdcclip.c
++pdcclip.lo: $(osdir)/pdcclip.c
+ 	$(BUILD) $(osdir)/pdcclip.c
+ 
+-pdcdisp.o: $(osdir)/pdcdisp.c
++pdcdisp.lo: $(osdir)/pdcdisp.c
+ 	$(BUILD) $(osdir)/pdcdisp.c
+ 
+-pdcgetsc.o: $(osdir)/pdcgetsc.c
++pdcgetsc.lo: $(osdir)/pdcgetsc.c
+ 	$(BUILD) $(osdir)/pdcgetsc.c
+ 
+-pdckbd.o: $(osdir)/pdckbd.c
++pdckbd.lo: $(osdir)/pdckbd.c
+ 	$(BUILD) $(osdir)/pdckbd.c
+ 
+-pdcscrn.o: $(osdir)/pdcscrn.c
++pdcscrn.lo: $(osdir)/pdcscrn.c
+ 	$(BUILD) $(osdir)/pdcscrn.c
+ 
+-pdcsetsc.o: $(osdir)/pdcsetsc.c
++pdcsetsc.lo: $(osdir)/pdcsetsc.c
+ 	$(BUILD) $(osdir)/pdcsetsc.c
+ 
+-pdcutil.o: $(osdir)/pdcutil.c
++pdcutil.lo: $(osdir)/pdcutil.c
+ 	$(BUILD) $(osdir)/pdcutil.c
+ 
+-pdcx11.o: $(osdir)/pdcx11.c
++pdcx11.lo: $(osdir)/pdcx11.c
+ 	$(BUILD) $(osdir)/pdcx11.c
+ 
+-ScrollBox.o: $(osdir)/ScrollBox.c
++ScrollBox.lo: $(osdir)/ScrollBox.c
+ 	$(BUILD) $(osdir)/ScrollBox.c
+ 
+-sb.o: $(osdir)/sb.c
++sb.lo: $(osdir)/sb.c
+ 	$(BUILD) $(osdir)/sb.c
+ 
+-x11.o: $(osdir)/x11.c
++x11.lo: $(osdir)/x11.c
+ 	$(BUILD) $(osdir)/x11.c
+ 
+ #------------------------------------------------------------------------
+ 
+-panel.o: $(pandir)/panel.c $(PDCURSES_HOME)/panel.h
++panel.lo: $(pandir)/panel.c $(PDCURSES_HOME)/panel.h
+ 	$(BUILD) $(pandir)/panel.c
+ 
+ #------------------------------------------------------------------------
+ 
+-addch.sho: $(srcdir)/addch.c
+-	$(DYN_BUILD) $(srcdir)/addch.c
+-	@SAVE2O@
+-
+-addchstr.sho: $(srcdir)/addchstr.c
+-	$(DYN_BUILD) $(srcdir)/addchstr.c
+-	@SAVE2O@
+-
+-addstr.sho: $(srcdir)/addstr.c
+-	$(DYN_BUILD) $(srcdir)/addstr.c
+-	@SAVE2O@
+-
+-attr.sho: $(srcdir)/attr.c
+-	$(DYN_BUILD) $(srcdir)/attr.c
+-	@SAVE2O@
+-
+-beep.sho: $(srcdir)/beep.c
+-	$(DYN_BUILD) $(srcdir)/beep.c
+-	@SAVE2O@
+-
+-bkgd.sho: $(srcdir)/bkgd.c
+-	$(DYN_BUILD) $(srcdir)/bkgd.c
+-	@SAVE2O@
+-
+-border.sho: $(srcdir)/border.c
+-	$(DYN_BUILD) $(srcdir)/border.c
+-	@SAVE2O@
+-
+-clear.sho: $(srcdir)/clear.c
+-	$(DYN_BUILD) $(srcdir)/clear.c
+-	@SAVE2O@
+-
+-color.sho: $(srcdir)/color.c
+-	$(DYN_BUILD) $(srcdir)/color.c
+-	@SAVE2O@
+-
+-delch.sho: $(srcdir)/delch.c
+-	$(DYN_BUILD) $(srcdir)/delch.c
+-	@SAVE2O@
+-
+-deleteln.sho: $(srcdir)/deleteln.c
+-	$(DYN_BUILD) $(srcdir)/deleteln.c
+-	@SAVE2O@
+-
+-deprec.sho: $(srcdir)/deprec.c
+-	$(DYN_BUILD) $(srcdir)/deprec.c
+-	@SAVE2O@
+-
+-getch.sho: $(srcdir)/getch.c
+-	$(DYN_BUILD) $(srcdir)/getch.c
+-	@SAVE2O@
+-
+-getstr.sho: $(srcdir)/getstr.c
+-	$(DYN_BUILD) $(srcdir)/getstr.c
+-	@SAVE2O@
+-
+-getyx.sho: $(srcdir)/getyx.c
+-	$(DYN_BUILD) $(srcdir)/getyx.c
+-	@SAVE2O@
+-
+-inch.sho: $(srcdir)/inch.c
+-	$(DYN_BUILD) $(srcdir)/inch.c
+-	@SAVE2O@
+-
+-inchstr.sho: $(srcdir)/inchstr.c
+-	$(DYN_BUILD) $(srcdir)/inchstr.c
+-	@SAVE2O@
+-
+-initscr.sho: $(srcdir)/initscr.c
+-	$(DYN_BUILD) $(srcdir)/initscr.c
+-	@SAVE2O@
+-
+-inopts.sho: $(srcdir)/inopts.c
+-	$(DYN_BUILD) $(srcdir)/inopts.c
+-	@SAVE2O@
+-
+-insch.sho: $(srcdir)/insch.c
+-	$(DYN_BUILD) $(srcdir)/insch.c
+-	@SAVE2O@
+-
+-insstr.sho: $(srcdir)/insstr.c
+-	$(DYN_BUILD) $(srcdir)/insstr.c
+-	@SAVE2O@
+-
+-instr.sho: $(srcdir)/instr.c
+-	$(DYN_BUILD) $(srcdir)/instr.c
+-	@SAVE2O@
+-
+-kernel.sho: $(srcdir)/kernel.c
+-	$(DYN_BUILD) $(srcdir)/kernel.c
+-	@SAVE2O@
+-
+-keyname.sho: $(srcdir)/keyname.c
+-	$(DYN_BUILD) $(srcdir)/keyname.c
+-	@SAVE2O@
+-
+-mouse.sho: $(srcdir)/mouse.c
+-	$(DYN_BUILD) $(srcdir)/mouse.c
+-	@SAVE2O@
+-
+-move.sho: $(srcdir)/move.c
+-	$(DYN_BUILD) $(srcdir)/move.c
+-	@SAVE2O@
+-
+-outopts.sho: $(srcdir)/outopts.c
+-	$(DYN_BUILD) $(srcdir)/outopts.c
+-	@SAVE2O@
+-
+-overlay.sho: $(srcdir)/overlay.c
+-	$(DYN_BUILD) $(srcdir)/overlay.c
+-	@SAVE2O@
+-
+-pad.sho: $(srcdir)/pad.c
+-	$(DYN_BUILD) $(srcdir)/pad.c
+-	@SAVE2O@
+-
+-printw.sho: $(srcdir)/printw.c
+-	$(DYN_BUILD) $(srcdir)/printw.c
+-	@SAVE2O@
+-
+-refresh.sho: $(srcdir)/refresh.c
+-	$(DYN_BUILD) $(srcdir)/refresh.c
+-	@SAVE2O@
+-
+-scanw.sho: $(srcdir)/scanw.c
+-	$(DYN_BUILD) $(srcdir)/scanw.c
+-	@SAVE2O@
+-
+-scr_dump.sho: $(srcdir)/scr_dump.c
+-	$(DYN_BUILD) $(srcdir)/scr_dump.c
+-	@SAVE2O@
+-
+-scroll.sho: $(srcdir)/scroll.c
+-	$(DYN_BUILD) $(srcdir)/scroll.c
+-	@SAVE2O@
+-
+-slk.sho: $(srcdir)/slk.c
+-	$(DYN_BUILD) $(srcdir)/slk.c
+-	@SAVE2O@
+-
+-termattr.sho: $(srcdir)/termattr.c
+-	$(DYN_BUILD) $(srcdir)/termattr.c
+-	@SAVE2O@
+-
+-terminfo.sho: $(srcdir)/terminfo.c
+-	$(DYN_BUILD) $(srcdir)/terminfo.c
+-	@SAVE2O@
+-
+-touch.sho: $(srcdir)/touch.c
+-	$(DYN_BUILD) $(srcdir)/touch.c
+-	@SAVE2O@
+-
+-util.sho: $(srcdir)/util.c
+-	$(DYN_BUILD) $(srcdir)/util.c
+-	@SAVE2O@
+-
+-window.sho: $(srcdir)/window.c
+-	$(DYN_BUILD) $(srcdir)/window.c
+-	@SAVE2O@
+-
+-debug.sho: $(srcdir)/debug.c
+-	$(DYN_BUILD) $(srcdir)/debug.c
+-	@SAVE2O@
+-
+-
+-pdcclip.sho: $(osdir)/pdcclip.c
+-	$(DYN_BUILD) $(osdir)/pdcclip.c
+-	@SAVE2O@
+-
+-pdcdisp.sho: $(osdir)/pdcdisp.c
+-	$(DYN_BUILD) $(osdir)/pdcdisp.c
+-	@SAVE2O@
+-
+-pdcgetsc.sho: $(osdir)/pdcgetsc.c
+-	$(DYN_BUILD) $(osdir)/pdcgetsc.c
+-	@SAVE2O@
+-
+-pdckbd.sho: $(osdir)/pdckbd.c
+-	$(DYN_BUILD) $(osdir)/pdckbd.c
+-	@SAVE2O@
+-
+-pdcscrn.sho: $(osdir)/pdcscrn.c
+-	$(DYN_BUILD) $(osdir)/pdcscrn.c
+-	@SAVE2O@
+-
+-pdcsetsc.sho: $(osdir)/pdcsetsc.c
+-	$(DYN_BUILD) $(osdir)/pdcsetsc.c
+-	@SAVE2O@
+-
+-pdcutil.sho: $(osdir)/pdcutil.c
+-	$(DYN_BUILD) $(osdir)/pdcutil.c
+-	@SAVE2O@
+-
+-pdcx11.sho: $(osdir)/pdcx11.c
+-	$(DYN_BUILD) $(osdir)/pdcx11.c
+-	@SAVE2O@
+-
+-ScrollBox.sho: $(osdir)/ScrollBox.c
+-	$(DYN_BUILD) $(osdir)/ScrollBox.c
+-	@SAVE2O@
+-
+-sb.sho: $(osdir)/sb.c
+-	$(DYN_BUILD) $(osdir)/sb.c
+-	@SAVE2O@
+-
+-x11.sho: $(osdir)/x11.c
+-	$(DYN_BUILD) $(osdir)/x11.c
+-	@SAVE2O@
+-
+ #------------------------------------------------------------------------
+ 
+-firework: firework.o
+-	$(LINK) firework.o -o $@ $(LDFLAGS)
+-
+-newdemo: newdemo.o
+-	$(LINK) newdemo.o -o $@ $(LDFLAGS)
+-
+-ptest: ptest.o $(LIBPANEL)
+-#	$(LINK) ptest.o -o $@ $(PANEL_LIB) $(LDFLAGS)
+-	$(LINK) ptest.o -o $@ $(LIBPANEL) $(LDFLAGS)
+-
+-rain: rain.o
+-	$(LINK) rain.o -o $@ $(LDFLAGS)
+-
+-testcurs: testcurs.o
+-	$(LINK) testcurs.o -o $@ $(LDFLAGS)
+-
+-tuidemo: tuidemo.o tui.o
+-	$(LINK) tui.o tuidemo.o -o $@ $(LDFLAGS)
+-
+-worm: worm.o
+-	$(LINK) worm.o -o $@ $(LDFLAGS)
+-
+-xmas: xmas.o
+-	$(LINK) xmas.o -o $@ $(LDFLAGS)
+-
++firework: $(demodir)/rain.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-firework.o: $(demodir)/firework.c
+-	$(BUILD) $(demodir)/firework.c
++newdemo: $(demodir)/newdemo.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-newdemo.o: $(demodir)/newdemo.c
+-	$(BUILD) $(demodir)/newdemo.c
++ptest: $(demodir)/newdemo.c $(LIBPANEL) $(PDCURSES_HOME)/panel.h
++	${PROGBUILD} $(PANEL_LIB) $(LTLDFLAGS)
+ 
+-ptest.o: $(demodir)/ptest.c $(PDCURSES_HOME)/panel.h
+-	$(BUILD) $(demodir)/ptest.c
++rain: $(demodir)/rain.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-rain.o: $(demodir)/rain.c
+-	$(BUILD) $(demodir)/rain.c
++testcurs: $(demodir)/testcurs.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-testcurs.o: $(demodir)/testcurs.c
+-	$(BUILD) $(demodir)/testcurs.c
++tui: $(demodir)/tui.c $(demodir)/tui.h
++	${PROGBUILD} ${LTLDFLAGS}
+ 
+-tui.o: $(demodir)/tui.c $(demodir)/tui.h
+-	$(BUILD) $(demodir)/tui.c
++tuidemo: $(demodir)/tui.c $(demodir)/tuidemo.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-tuidemo.o: $(demodir)/tuidemo.c
+-	$(BUILD) $(demodir)/tuidemo.c
++worm: $(demodir)/worm.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-worm.o: $(demodir)/worm.c
+-	$(BUILD) $(demodir)/worm.c
++xmas: $(demodir)/xmas.c
++	${PROGBUILD} $(LTLDFLAGS)
+ 
+-xmas.o: $(demodir)/xmas.c
+-	$(BUILD) $(demodir)/xmas.c
+ 
++.if 0
+ #
+ # This section provides for compiling and linking the
+ # ncurses test programs.
+@@ -545,30 +306,30 @@ NCURSES_TESTS	= bs gdc hanoi knight tclo
+ ncurses_tests: $(NCURSES_TESTS)
+ 
+ ncurses_clean:
+-	-rm -f *.o trace $(NCURSES_TESTS)
++	-rm -f *.lo trace $(NCURSES_TESTS)
+ 
+ NCFLAGS		= -I. -I$(ncurses_testdir)
+ 
+-bs: bs.o $(LIBCURSES)
+-	$(LINK) bs.o -o $@ $(LDFLAGS)
++bs: bs.lo $(LIBCURSES)
++	$(LINK) bs.lo -o $@ $(LDFLAGS)
+ 
+-gdc: gdc.o $(LIBCURSES)
+-	$(LINK) gdc.o -o $@ $(LDFLAGS)
++gdc: gdc.lo $(LIBCURSES)
++	$(LINK) gdc.lo -o $@ $(LDFLAGS)
+ 
+-hanoi: hanoi.o $(LIBCURSES)
+-	$(LINK) hanoi.o -o $@ $(LDFLAGS)
++hanoi: hanoi.lo $(LIBCURSES)
++	$(LINK) hanoi.lo -o $@ $(LDFLAGS)
+ 
+-knight: knight.o $(LIBCURSES)
+-	$(LINK) knight.o -o $@ $(LDFLAGS)
++knight: knight.lo $(LIBCURSES)
++	$(LINK) knight.lo -o $@ $(LDFLAGS)
+ 
+-tclock: tclock.o $(LIBCURSES)
+-	$(LINK) tclock.o -o $@ $(LDFLAGS) -lm
++tclock: tclock.lo $(LIBCURSES)
++	$(LINK) tclock.lo -o $@ $(LDFLAGS) -lm
+ 
+-view: view.o $(LIBCURSES)
+-	$(LINK) view.o -o $@ $(LDFLAGS)
++view: view.lo $(LIBCURSES)
++	$(LINK) view.lo -o $@ $(LDFLAGS)
+ 
+-ncurses: ncurses.o $(LIBCURSES) $(LIBPANEL)
+-	$(LINK) ncurses.o -o $@ $(LIBPANEL) $(LDFLAGS)
++ncurses: ncurses.lo $(LIBCURSES) $(LIBPANEL)
++	$(LINK) ncurses.lo -o $@ $(LIBPANEL) $(LDFLAGS)
+ 
+ bs.o: $(ncurses_testdir)/bs.c $(PDCURSES_CURSES_H)
+ 	$(BUILD) $(NCFLAGS) $(ncurses_testdir)/bs.c
+@@ -590,3 +351,4 @@ view.o: $(ncurses_testdir)/view.c $(PDCU
+ 
+ ncurses.o: $(ncurses_testdir)/ncurses.c $(PDCURSES_CURSES_H)
+ 	$(BUILD) $(NCFLAGS) $(ncurses_testdir)/ncurses.c
++.endif

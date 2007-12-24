@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2007/12/24 16:33:18 bsadewitz Exp $
+
+SHA1 (PDCurses-3.1.tar.gz) = 55c65f4afcfe20031b03e9fafd110514f174bfb7
+RMD160 (PDCurses-3.1.tar.gz) = 2efb6dcc6bfc174ae8deb31d1abaed8fbdadbc43
+Size (PDCurses-3.1.tar.gz) = 310798 bytes
+SHA1 (patch-aa) = 8b7d8b161f599831b9f94037f39b3059373e7784
+SHA1 (patch-ab) = e1a865e41f03be22097e385fe0d82411a243d310
