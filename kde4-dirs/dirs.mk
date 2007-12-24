@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2007/12/24 01:22:53 mwdavies Exp $
+# $NetBSD: dirs.mk,v 1.4 2007/12/24 02:49:08 mwdavies Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -91,6 +91,7 @@ KDE4_DIRS+=	share/kde/templates/.source
 KDE4_DIRS+=	share/kde/wallpapers
 KDE4_DIRS+=	share/kde4
 KDE4_DIRS+=	share/kde4/services
+KDE4_DIRS+=	share/kde4/services/ScreenSavers
 KDE4_DIRS+=	share/kde4/services/ServiceMenus
 KDE4_DIRS+=	share/kde4/services/kded
 KDE4_DIRS+=	share/kde4/services/kresources

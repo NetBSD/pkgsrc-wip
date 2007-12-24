@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/12/23 21:04:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2007/12/24 02:49:08 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -981,7 +981,7 @@ share/sounds/pop.wav
 @dirrm share/kde4/services/solidbackends
 @dirrm share/kde4/services/kwin
 @comment in kde: @dirrm share/kde4/services/kded
-@dirrm share/kde4/services/ScreenSavers
+@comment in kde: @dirrm share/kde4/services/ScreenSavers
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/wallpapers
 @exec ${MKDIR} %D/share/kde/config/kdm/sessions
