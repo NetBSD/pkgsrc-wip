@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/23 21:04:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/24 01:21:37 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -23,12 +23,14 @@ lib/kde4/kcm_kwallet.so
 lib/kde4/kcm_thinkpad.so
 lib/kde4/kded_kmilod.so
 lib/kde4/kerfuffle_bk.so
+lib/kde4/kerfuffle_libzip.so
 lib/kde4/kmilo_asus.so
 lib/kde4/kmilo_thinkpad.so
 lib/kde4/libarkpart.so
 lib/kde4/libkbytearrayedit.so
 lib/kde4/libkregexpeditorgui.so
 lib/kde4/liboktetapart.so
+lib/kde4/plasma_applet_skapplet.so
 lib/libkdeinit4_kcalc.so
 lib/libkerfuffle.so
 lib/libkerfuffle.so.4
@@ -278,12 +280,14 @@ share/kde4/services/kbytearrayedit.desktop
 share/kde4/services/kcmdf.desktop
 share/kde4/services/kded/kmilod.desktop
 share/kde4/services/kerfuffle_bk.desktop
+share/kde4/services/kerfuffle_libzip.desktop
 share/kde4/services/kmilo/kmilo_asus.desktop
 share/kde4/services/kmilo/kmilo_thinkpad.desktop
 share/kde4/services/kregexpeditorgui.desktop
 share/kde4/services/kwalletconfig.desktop
 share/kde4/services/kwalletmanager_show.desktop
 share/kde4/services/oktetapart.desktop
+share/kde4/services/plasma-skapplet-default.desktop
 share/kde4/services/thinkpad.desktop
 share/kde4/servicetypes/kerfufflePlugin.desktop
 share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
@@ -322,7 +326,7 @@ share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kdf/pics
 @dirrm share/kde/apps/kdf
 @comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/kcharselect
+@comment in kde: @dirrm share/kde/apps/kcharselect
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/ark
 @comment in kde: @dirrm share/kde/apps
