@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/12/12 03:17:11 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2007/12/24 08:18:09 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -29,7 +29,7 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../sysutils/fam/buildlink3.mk"
+.include "../../mk/fam.buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
