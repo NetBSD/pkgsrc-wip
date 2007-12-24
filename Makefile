@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2726 2007/12/23 11:58:01 netcap Exp $
+# $Id: Makefile,v 1.2727 2007/12/24 02:03:35 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1153,6 +1153,7 @@ SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Geo-Distance
 SUBDIR+=	p5-Getopt-ArgvFile
+SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
