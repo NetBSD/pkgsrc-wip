@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2007/12/24 16:33:18 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/24 18:52:00 bsadewitz Exp $
+bin/xcurses-config
 include/xcurses.h
 include/xcurses/curses.h
 include/xcurses/curspriv.h
 include/xcurses/panel.h
+include/xcurses/term.h
 include/xpanel.h
 lib/libXCurses.la
 lib/libxpanel.la
