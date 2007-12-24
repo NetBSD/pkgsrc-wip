@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 03:20:30 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2007/12/24 08:00:36 mwdavies Exp $
 include/gpgme++/context.h
 include/gpgme++/data.h
 include/gpgme++/decryptionresult.h
@@ -761,8 +761,8 @@ share/kde4/services/smtp.protocol
 share/kde4/services/smtps.protocol
 share/kde4/servicetypes/kresources_manager.desktop
 share/kde4/servicetypes/kresources_plugin.desktop
-@dirrm share/kde4/services/kresources/kcal
-@dirrm share/kde4/services/kresources/kabc
+@comment in kde: @dirrm share/kde4/services/kresources/kcal
+@comment in kde: @dirrm share/kde4/services/kresources/kabc
 @dirrm share/kde/apps/libical/zoneinfo/Pacific
 @dirrm share/kde/apps/libical/zoneinfo/Indian
 @dirrm share/kde/apps/libical/zoneinfo/Europe
