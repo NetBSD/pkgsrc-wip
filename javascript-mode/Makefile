@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/12/30 12:52:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/24 20:55:32 cheusov Exp $
 
 DISTNAME=	javascript-2.0b7.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}javascript-mode-2.0b7
@@ -17,13 +17,13 @@ SRCS=		javascript.el
 
 do-build:
 .for f in ${SRCS}
-	${EMACS_BIN:Q} --no-init-file --no-site-file -batch	\
+	${EMACS_BIN} --no-init-file --no-site-file -batch	\
 	      -f batch-byte-compile ${WRKSRC}/${f}
 .endfor
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-	   ${EMACS_LISPPREFIX:Q}
+	   ${EMACS_LISPPREFIX}
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
