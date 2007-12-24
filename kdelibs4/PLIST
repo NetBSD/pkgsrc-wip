@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/23 21:04:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/24 01:22:53 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -3751,7 +3751,7 @@ share/mime/packages/kde.xml
 @dirrm share/kde/apps/kdeui
 @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcm_phonon
-@dirrm share/kde/apps/kcharselect
+@comment in kde: @dirrm share/kde/apps/kcharselect
 @dirrm share/kde/apps/kcertpart
 @dirrm share/kde/apps/katepart/jscript
 @dirrm share/kde/apps/LICENSES
