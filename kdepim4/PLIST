@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/23 21:04:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/25 20:59:15 mwdavies Exp $
 bin/akonadi
 bin/akonadi_control
 bin/akonadi_ical_resource
@@ -337,6 +337,7 @@ lib/kde4/korg_thisdayinhistory.so
 lib/kde4/korg_yearprint.so
 lib/kde4/korganizerpart.so
 lib/kde4/kpartsdesignerplugin.so
+lib/kde4/kpilot_conduit_keyring.so
 lib/kde4/kpilot_conduit_memofile.so
 lib/kde4/kpilot_conduit_notepad.so
 lib/kde4/kpilot_conduit_null.so
@@ -1370,6 +1371,7 @@ share/kde/config.kcfg/customtemplates_kfg.kcfg
 share/kde/config.kcfg/egroupware.kcfg
 share/kde/config.kcfg/groupwise.kcfg
 share/kde/config.kcfg/kalarmconfig.kcfg
+share/kde/config.kcfg/keyringconduit.kcfg
 share/kde/config.kcfg/kmail.kcfg
 share/kde/config.kcfg/kmobiletools_devices.kcfg
 share/kde/config.kcfg/knoteconfig.kcfg
@@ -1482,6 +1484,7 @@ share/kde4/services/korganizer_configmain.desktop
 share/kde4/services/korganizer_configplugins.desktop
 share/kde4/services/korganizer_configtime.desktop
 share/kde4/services/korganizer_configviews.desktop
+share/kde4/services/kpilot-conduit-keyring.desktop
 share/kde4/services/kpilot_config.desktop
 share/kde4/services/kresources/alarms/local.desktop
 share/kde4/services/kresources/alarms/localdir.desktop
@@ -1544,8 +1547,8 @@ share/kde4/servicetypes/korgprintplugin.desktop
 share/kde4/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @dirrm share/kde4/services/kresources/knotes
-@dirrm share/kde4/services/kresources/kcal
-@dirrm share/kde4/services/kresources/kabc
+@comment in kde: @dirrm share/kde4/services/kresources/kcal
+@comment in kde: @dirrm share/kde4/services/kresources/kabc
 @dirrm share/kde4/services/kresources/alarms
 @comment in kde: @dirrm share/kde4/services/kresources
 @dirrm share/kde4/services/korganizer
