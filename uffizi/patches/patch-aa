@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2007/12/25 23:16:41 cherrymathew Exp $
+
+--- uffizi.txt.orig	2007-12-25 22:13:52.000000000 +0000
++++ uffizi.txt
+@@ -1014,12 +1014,19 @@ sub myimgsize {
+   }
+ }
+ 
++sub include_file {
++  my ($filename) = @_;
++  open (IN, "<$filename") || die "Template error: could not find file included with __INCLUDEFILE:$filename";
++  my $contents = join ('', <IN>); close IN;
++  return $contents;
++}
+ 
+ sub fill_tmpl {
+   my ($tmpl, $opts) = @_;
+   my $out = $tmpl;
+ 
+   1 while $out =~ s!__TEMPLATE:([_a-zA-Z0-9]+)__! $template{$1} !xgs;
++  1 while $out =~ s!__INCLUDEFILE:[\"\']([_a-zA-Z0-9\./]+)[\"\']! include_file ($1); !xgse;
+ 
+   # conditionals
+   if ($out =~ /<__COND_IF_/) {
