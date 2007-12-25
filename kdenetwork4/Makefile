@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/12 11:38:06 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/25 21:01:22 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -20,6 +20,7 @@ REPLACE_PERL+= \
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
