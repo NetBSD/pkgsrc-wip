@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/26 15:23:05 netcap Exp $
+bin/oorexx-config
+bin/rexx
+bin/rexx.cat
+bin/rexx.img
+bin/rexxc
+bin/rxdelipc
+bin/rxftp.cls
+bin/rxmigrate
+bin/rxqueue
+bin/rxregexp.cls
+bin/rxsubcom
+include/rexx.h
+lib/ooRexx/librexx.la
+lib/ooRexx/librexxapi.la
+lib/ooRexx/librexxutil.la
+lib/ooRexx/librxmath.la
+lib/ooRexx/librxregexp.la
+lib/ooRexx/librxsock.la
+man/man1/rexx.1
+man/man1/rexxc.1
+man/man1/rxmigrate.1
+man/man1/rxqueue.1
+man/man1/rxsubcom.1
+share/ooRexx/ccreply.rex
+share/ooRexx/complex.rex
+share/ooRexx/factor.rex
+share/ooRexx/greply.rex
+share/ooRexx/guess.rex
+share/ooRexx/ktguard.rex
+share/ooRexx/makestring.rex
+share/ooRexx/month.rex
+share/ooRexx/pipe.rex
+share/ooRexx/properties.rex
+share/ooRexx/qdate.rex
+share/ooRexx/qtime.rex
+share/ooRexx/readme
+share/ooRexx/rexx.csh
+share/ooRexx/rexx.sh
+share/ooRexx/rexxcps.rex
+share/ooRexx/rexxtry.rex
+share/ooRexx/semcls.rex
+share/ooRexx/stack.rex
+share/ooRexx/usecomp.rex
+share/ooRexx/usepipe.rex
+@dirrm share/ooRexx
+@dirrm lib/ooRexx
