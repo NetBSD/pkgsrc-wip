@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/12/25 23:16:41 cherrymathew Exp $
+$NetBSD: distinfo,v 1.3 2007/12/26 15:53:51 cherrymathew Exp $
 
 SHA1 (uffizi.txt) = 205a893b3c6483954afd62febe93728b23418169
 RMD160 (uffizi.txt) = 0569899bdc3d2bbe30a717c95e7427f8a3303b69
 Size (uffizi.txt) = 37302 bytes
-SHA1 (patch-aa) = bb0df8809bf31294f70a4831d1e4257b9c37647c
+SHA1 (patch-aa) = 83bdf73787ec9e64cad3a9ee2290dd770280ecd1
