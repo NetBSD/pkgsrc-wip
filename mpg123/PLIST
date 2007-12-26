@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/02 17:36:04 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.4 2007/12/26 17:31:40 bsadewitz Exp $
 bin/mpg123
 include/mpg123.h
 lib/libmpg123.la
 lib/mpg123/output_dummy.la
-lib/mpg123/output_oss.la
+lib/pkgconfig/libmpg123.pc
 man/man1/mpg123.1
 @dirrm lib/mpg123

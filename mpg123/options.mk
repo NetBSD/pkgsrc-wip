@@ -1,116 +1,41 @@
-# $NetBSD: options.mk,v 1.5 2007/11/02 17:36:04 bsadewitz Exp $
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mpg123
-PKG_OPTIONS_SET.audio= jack portaudio esound nas sdl sun
-
-.include "../../mk/oss.buildlink3.mk"
-
-.if !empty(OSS_TYPE:Mnative)
-PKG_OPTIONS_SET.audio+=	oss
-PKG_SUGGESTED_OPTIONS+= mpg123-default-oss
-.endif
-
-PKG_OPTIONS_SET.default=	${PKG_OPTIONS_SET.audio:@.o.@mpg123-default-${.o.}@}
-
-#
-# !!! REDUCTIO AD ABSURDUM WARNING !!!
-#
-# XXX This can result in a duplicate option; this build system should be fixed.
-# As of now, we must provide defaults for every scenario.
-#
-PKG_OPTIONS_NONEMPTY_SETS=	audio default
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-#
-# XXX notyet
-#
-#.if ${OPSYS} == "Darwin"
-#PKG_SUPPORTED_OPTIONS+=	mpg123-macosx
-#PKG_SUGGESTED_OPTIONS+= mpg123-macosx
-#
-#.  elif ${OPSYS} == "HPUX"
-#PKG_SUPPORTED_OPTIONS+=	mpg123-hpux
-#PKG_SUGGESTED_OPTIONS+= alib
-#
-#.  elif ${OPSYS} == "IRIX"
-#PKG_SUPPORTED_OPTIONS+=	mpg123-irix
-#PKG_SUGGESTED_OPTIONS+= mpg123-irix
-#
-#.  elif ${OPSYS} == "Solaris"		# Doesn't work with NetBSD (yet)
-#PKG_SUPPORTED_OPTIONS+=	sun
-#PKG_SUGGESTED_OPTIONS+= sun
-#.endif
+MPG123_OPTIONS.fpu=	generic_fixed generic_fpu generic_nofpu
+
+PKG_OPTIONS_GROUP.i386=		x86_dither
+PKG_OPTIONS_GROUP.powerpc=	altivec
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	${MACHINE_ARCH} 
+
+PKG_SUPPORTED_OPTIONS+=		mpg123-no-fifo
+PKG_SUGGESTED_OPTIONS.${MACHINE_ARCH}?=	generic_fpu
+PKG_SUGGESTED_OPTIONS.arm=		generic_fixed
+PKG_SUGGESTED_OPTIONS.arm32=		generic_fixed
+PKG_SUGGESTED_OPTIONS.i386=		x86_dither
+PKG_SUGGESTED_OPTIONS.powerpc=		altivec
+
+.if defined(PKG_OPTIONS_GROUP.${MACHINE_ARCH})
+PKG_OPTIONS_GROUP.fpu=		${MPG123_OPTIONS.fpu}
+PKG_OPTIONS_OPTIONAL_GROUPS+=	fpu
+.else
+PKG_OPTIONS_SET.fpu=		${MPG123_OPTIONS.fpu}
+PKG_OPTIONS_NONEMPTY_SETS+=	${MPG123_OPTIONS.fpu}
+.endif
+
+PKG_SUGGESTED_OPTIONS=	${PKG_SUGGESTED_OPTIONS.${MACHINE_ARCH}}
 
 .include "../../mk/bsd.options.mk"
 
-MPG123_DFLT_OUTPUT=	${PKG_OPTIONS:Mmpg123-default-*:S/mpg123-default-//}
-
-CONFIGURE_ARGS+=	--with-default-audio=${MPG123_DFLT_OUTPUT}
-
-.if !empty(PKG_OPTIONS:Moss) && ${OSS_TYPE} != "none"
-CONFIGURE_ARGS+=	--with-default-audio=oss
-PLIST_SUBST+=		OSS=""
-CONFIGURE_ENV=		HAVE_OSS=""
-
-SUBST_CLASSES+=		oss
-SUBST_FILES.oss=	configure.ac src/output/oss.c src/output/Makefile.am
-SUBST_STAGE.oss=	pre-configure
-SUBST_MESSAGE.oss=	Setting OSS device.
-SUBST_VARS.oss=		DEVOSSAUDIO DEVOSSSOUND
-CONFIGURE_ENV+=		OSS_LIBS=${LIBOSSAUDIO:Q}
-.else
-PLIST_SUBST+=		OSS="@comment "
+.if !empty(PKG_OPTIONS:Mgeneric_*)
+CONFIGURE_ARGS+=	--with-cpu=${PKG_OPTIONS:Mgeneric_*)
+.elif defined(PKG_OPTIONS_GROUP.${MACHINE_ARCH})
+CONFIGURE_ARGS+=	--with-cpu=${PKG_OPTIONS_GROUP.${MACHINE_ARCH}:@.o.@${PKG_OPTIONS:M${.o.}}@}
 .endif
 
-.if !empty(PKG_OPTIONS:Mjack)
-PLIST_SUBST+=		JACK=""
-CONFIGURE_ENV+=		HAVE_JACK="yes"
-.  include "../../wip/jack/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mmpg123-no-fifo)
+CONFIGURE_ARGS+=	--enable-fifo=no
 .else
-CONFIGURE_ENV+=		HAVE_JACK="no"
-PLIST_SUBST+=		JACK="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Msdl)
-PLIST_SUBST+=		SDL=""
-CONFIGURE_ENV+=		HAVE_SDL="yes"
-.  include "../../devel/SDL/buildlink3.mk"
-.else
-CONFIGURE_ENV+=		HAVE_SDL="no"
-PLIST_SUBST+=		SDL="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mnas)
-PLIST_SUBST+=		NAS=""
-CONFIGURE_ENV+=		HAVE_NAS="yes"
-.  include "../../audio/nas/buildlink3.mk"
-.else
-CONFIGURE_ENV+=		HAVE_NAS="no"
-PLIST_SUBST+=		NAS="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mportaudio)
-PLIST_SUBST+=		PORTAUDIO=""
-CONFIGURE_ENV+=		HAVE_PORTAUDIO="yes"
-.  include "../../audio/portaudio/buildlink3.mk"
-.else
-CONFIGURE_ENV+=		HAVE_PORTAUDIO="no"
-PLIST_SUBST+=		PORTAUDIO="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mesound)
-PLIST_SUBST+=		ESD=""
-CONFIGURE_ENV+=		HAVE_ESD="yes"
-.  include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ENV+=		HAVE_ESD="no"
-PLIST_SUBST+=		ESD="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Msun)
-PLIST_SUBST+=		SUN=""
-CONFIGURE_ENV+=		HAVE_SUN="yes"
-.else
-CONFIGURE_ENV+=		HAVE_SUN="no"
-PLIST_SUBST+=		SUN="@comment "
+CONFIGURE_ARGS+=	--enable-fifo=yes
 .endif

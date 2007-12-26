@@ -1,68 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2007/11/02 17:36:04 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/26 17:31:40 bsadewitz Exp $
 #
 
-DISTNAME=	mpg123-snapshot-${MPG123_VERSION}
-PKGREVISION=	2
-CATEGORIES=	local
-MASTER_SITES=	http://mpg123.orgis.org/download/
-EXTRACT_SUFX=	.tar.bz2
+PKGNAME=	${DISTNAME:C/[[:alnum:]]*/&-base/}
 
-MAINTAINER=	blair.sadewitz@gmail.com
-HOMEPAGE=	http://mpg123.orgis.org/download/
-COMMENT=        Command-line player for mpeg layer 1, 2 and 3 audio
+PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
 
-CONFLICTS+=	mpg123{,nas,esound}-[0-9]*
+MPG123_SUBDIRS=		src doc
+MPG123_SUBDIRS.src=	output libmpg123
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+MPG123_MODULE=		dummy
+MAKE_ENV+=		MPG123_PROGRAM=mpg123
+MAKE_ENV+=		EXTRA_INSTALL_TARGETS="install-exec-am install-data-am"
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes 		# XXX just barely! ;)
-USE_TOOLS+=	pkg-config
-USE_TOOLS+=	automake
-
-WRKSRC=			${WRKDIR}/mpg123
-
-SVN_REPOSITORIES=       mpg123
-SVN_ROOT.mpg123=        svn://orgis.org/mpg123/trunk
-SVN_MODULE.mpg123=      mpg123
-
-#
-# XXX need to convert various CPU-specific configurations from audio/mpg123
-#
-CONFIGURE_ARGS+=	--with-cpu=x86_dither
-CFLAGS+=		-DDONT_CATCH_SIGNALS	# XXX very-alpha code AFAIK
-
-PKGSRC_LIBLTDL=		${BUILDLINK_PREFIX.libltdl}/lib/libltdl.la
-
-.include "../../wip/mk/svn-package.mk"
-
-.include "../../mk/bsd.prefs.mk"
-MPG123_VERSION!=${DATE} +%Y%m%d
-
-#
-# XXX Temporary workaround until the sun driver works on NetBSD (at least).
-#
-SUN=			${"${OPSYS:Msolaris}":?:\#}
-SUBST_CLASSES+=		sun
-SUBST_STAGE.sun=	pre-configure
-SUBST_VARS.sun=		SUN
-SUBST_FILES.sun=	src/output/Makefile.am
-SUBST_MESSAGE.sun=	Enabling/disabling sun audio.
-
-#
-# XXX Why did I need to do this?
-#
-#SUBST_CLASSES+=		ltdl
-#SUBST_STAGE.ltdl=	post-configure
-#SUBST_FILES.ltdl=	Makefile src/Makefile src/output/Makefile
-#SUBST_SED.ltdl=		-e 's,\-lltdl,${PKGSRC_LIBLTDL},'
-#SUBST_MESSAGE.ltdl=	Fixing libltdl brokenness.
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -v --install
+MPG123_BUILDING_BASE=	# defined
 
 .include "options.mk"
 
-.include "../../devel/libltdl/convenience.mk"
+.include "Makefile.common"
 
 .include "../../mk/bsd.pkg.mk"
