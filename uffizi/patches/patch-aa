@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/12/25 23:16:41 cherrymathew Exp $
+$NetBSD: patch-aa,v 1.2 2007/12/26 16:00:52 cherrymathew Exp $
 
 --- uffizi.txt.orig	2007-12-25 22:13:52.000000000 +0000
 +++ uffizi.txt
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/25 23:16:41 cherrymathew Exp $
    my $out = $tmpl;
  
    1 while $out =~ s!__TEMPLATE:([_a-zA-Z0-9]+)__! $template{$1} !xgs;
-+  1 while $out =~ s!__INCLUDEFILE:[\"\']([_a-zA-Z0-9\./]+)[\"\']! include_file ($1); !xgse;
++  1 while $out =~ s!__INCLUDEFILE:[\"\']([_a-zA-Z0-9\./\-]+)[\"\']! include_file ($1); !xgse;
  
    # conditionals
    if ($out =~ /<__COND_IF_/) {
