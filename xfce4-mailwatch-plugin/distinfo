@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2007/12/27 17:43:01 hoka_adam Exp $
+
+SHA1 (xfce4-mailwatch-plugin-1.0.1.tar.bz2) = 6444dbbbf86ef7fb492bacfd2a8b292da41568f8
+RMD160 (xfce4-mailwatch-plugin-1.0.1.tar.bz2) = 73e538eed99cd5d04255ff16ffa1bf47c3ab254b
+Size (xfce4-mailwatch-plugin-1.0.1.tar.bz2) = 646502 bytes
+SHA1 (patch-aa) = 617041a807ea76052704210e28f59beb9cd0760a
+SHA1 (patch-ab) = 41282ced902a429185f60de8629979e59a2fe590
+SHA1 (patch-ac) = 12951dbaa297ee9d91066793671ff63743442679

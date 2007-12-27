@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2007/12/27 17:43:01 hoka_adam Exp $
+
+--- panel-plugin/mailwatch-mailbox-imap.c.orig	2007-12-26 19:00:29.000000000 +0000
++++ panel-plugin/mailwatch-mailbox-imap.c
+@@ -209,7 +209,7 @@ imap_get_sockaddr(XfceMailwatchIMAPMailb
+                   const gchar *service, struct sockaddr_in *addr)
+ {
+     struct addrinfo hints = { 0, PF_INET, SOCK_STREAM, IPPROTO_TCP,
+-            sizeof(struct sockaddr_in), NULL, NULL, NULL };
++            0, NULL, NULL, NULL };
+     GError *error = NULL;
+         
+     TRACE("entering (%s, %s, %p)", host, service, addr);
