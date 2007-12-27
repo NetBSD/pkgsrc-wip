@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2728 2007/12/26 15:36:43 netcap Exp $
+# $Id: Makefile,v 1.2729 2007/12/27 17:46:00 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1762,6 +1762,7 @@ SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-extras
 SUBDIR+=	xfce4-gtk2-engine
 SUBDIR+=	xfce4-icon-theme
+SUBDIR+=	xfce4-mailwatch-plugin
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
 SUBDIR+=	xfce4-mixer
