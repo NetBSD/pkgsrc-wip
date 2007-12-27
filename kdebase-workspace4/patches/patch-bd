@@ -1,8 +1,16 @@
-$NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+$NetBSD: patch-bd,v 1.2 2007/12/27 19:43:05 mwdavies Exp $
 
 --- ksysguard/ksysguardd/NetBSD/Memory.c.orig	2006-10-26 15:12:41.000000000 +1300
 +++ ksysguard/ksysguardd/NetBSD/Memory.c
-@@ -45,8 +45,11 @@
+@@ -21,7 +21,6 @@
+ */
+ 
+ #include <fcntl.h>
+-#include <kvm.h>
+ #include <limits.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -45,29 +44,25 @@
  static size_t Total = 0;
  static size_t MFree = 0;
  static size_t Used = 0;
@@ -16,7 +24,8 @@ $NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
  static size_t STotal = 0;
  static size_t SFree = 0;
  static size_t SUsed = 0;
-@@ -55,19 +58,18 @@ static kvm_t *kd;
+-static kvm_t *kd;
+ 
  void
  initMemory(struct SensorModul* sm)
  {
@@ -26,11 +35,9 @@ $NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
 -	
 -	if ((kd = kvm_openfiles(nlistf, memf, NULL, O_RDONLY, buf)) == NULL) {
 -		log_error("kvm_openfiles()");
-+	if ((kd = kvm_open(NULL, NULL, NULL, KVM_NO_FILES, "kvm_open")) == NULL) {
-+		log_error("kvm_open()");
- 		return;
- 	}
- 
+-		return;
+-	}
+-
          registerMonitor("mem/physical/free", "integer", printMFree, printMFreeInfo, sm);
  	registerMonitor("mem/physical/used", "integer", printUsed, printUsedInfo, sm);
 -	registerMonitor("mem/physical/buf", "integer", printBuffers, printBuffersInfo, sm);
@@ -43,7 +50,15 @@ $NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
  	registerMonitor("mem/swap/free", "integer", printSwapFree, printSwapFreeInfo, sm);
  	registerMonitor("mem/swap/used", "integer", printSwapUsed, printSwapUsedInfo, sm);
  }
-@@ -83,7 +85,6 @@ updateMemory(void)
+@@ -75,7 +70,6 @@ initMemory(struct SensorModul* sm)
+ void
+ exitMemory(void)
+ {
+-	kvm_close(kd);
+ }
+ 
+ int
+@@ -83,7 +77,6 @@ updateMemory(void)
  {
  
  #define ARRLEN(X) (sizeof(X)/sizeof(X[0]))
@@ -51,7 +66,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
    size_t len;
    
    {
-@@ -95,35 +96,23 @@ updateMemory(void)
+@@ -95,35 +88,23 @@ updateMemory(void)
    }
   
    {
@@ -99,7 +114,7 @@ $NetBSD: patch-bd,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
      }
    }
    return 0;
-@@ -154,27 +143,63 @@ printUsedInfo(const char* cmd)
+@@ -154,27 +135,63 @@ printUsedInfo(const char* cmd)
  }
  
  void
