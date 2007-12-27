@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2007/11/27 20:42:14 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2007/12/27 16:43:44 schnoebe Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jdolecek@NetBSD.org
+MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
+
+DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
@@ -25,12 +28,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--qtdir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=	--with-aspell-inc=${BUILDLINK_PREFIX.aspell}/include
-CONFIGURE_ARGS+=	--with-aspell-lib=${BUILDLINK_PREFIX.aspell}/lib
-CONFIGURE_ARGS+=	--with-openssl-inc=${BUILDLINK_PREFIX.openssl}/include
-CONFIGURE_ARGS+=	--with-openssl-lib=${BUILDLINK_PREFIX.openssl}/lib
-
-
 
 #
 # LANG_FILES left for when the translations get released in a few weeks
@@ -47,16 +44,23 @@ SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
 
+.include "options.mk"
+
 post-install:
+	# remove some files that shouldn't be there,
+	# install some files where they should be installed
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/psi
+	${RM} ${PREFIX}/share/psi/README
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/psi
+	${RM} ${PREFIX}/share/psi/COPYING
 	# install the translations
 .for f in ${LANG_FILES}
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
 .endfor
 
-.include "../../textproc/aspell/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.3.2
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.3.2
