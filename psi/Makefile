@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/27 16:43:44 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/27 22:05:40 schnoebe Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
@@ -26,6 +26,7 @@ CONFIG_SHELL=	${SH}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--qtdir=${QTDIR:Q}
+CONFIGURE_ARGS+=	--disable-bundled-qca
 CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 
@@ -63,6 +64,4 @@ post-install:
 .include "../../security/qca2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.3.2
 .include "../../x11/qt4-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.3.2
-.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
