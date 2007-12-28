@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1 2007/12/28 03:56:32 bsadewitz Exp $
+
+--- jlibtool.c.orig	2007-12-27 22:26:35.000000000 -0500
++++ jlibtool.c
+@@ -14,7 +14,13 @@
+  * limitations under the License.
+  */
+ 
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/config.h>
++#include <nbcompat/cdefs.h>
++#include <nbcompat/stdio.h>
++#else
+ #include <stdio.h>
++#endif
+ #include <string.h>
+ #include <stdlib.h>
+ #include <sys/stat.h>
+@@ -168,10 +174,6 @@
+ #error Unsupported platform: Please add defines for SHELL_CMD etc. for your platform.
+ #endif
+ 
+-#ifdef NEED_SNPRINTF
+-#include <stdarg.h>
+-#endif
+-
+ #ifdef __EMX__
+ #include <process.h>
+ #endif
+@@ -282,7 +284,7 @@ typedef struct {
+ void add_rpath(count_chars *cc, const char *path);
+ #endif
+ 
+-#if defined(NEED_SNPRINTF)
++#if 0 /* defined(NEED_SNPRINTF) */
+ /* Write at most n characters to the buffer in str, return the
+  * number of chars written or -1 if the buffer would have been
+  * overflowed.
+@@ -497,7 +499,7 @@ int run_command(command_t *cmd_data, cou
+  * print configuration
+  * shlibpath_var is used in configure.
+  */
+-void print_config()
++void print_config(void)
+ {
+ #ifdef LD_RUN_PATH
+     printf("runpath_var=%s\n", LD_RUN_PATH);
+@@ -1646,11 +1648,12 @@ void link_fixup(command_t *c)
+             push_count_chars(c->shared_opts.normal, c->module_name.normal);
+         }
+         else {
+-            char *tmp;
+             push_count_chars(c->shared_opts.normal, c->shared_name.normal);
+ #ifdef DYNAMIC_INSTALL_NAME
+             push_count_chars(c->shared_opts.normal, DYNAMIC_INSTALL_NAME);
+ 
++            char *tmp;
++
+             tmp = (char*)malloc(PATH_MAX);
+             strcat(tmp, c->install_path);
+             strcat(tmp, strrchr(c->shared_name.normal, '/'));

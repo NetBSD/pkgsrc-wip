@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2007/12/28 03:56:32 bsadewitz Exp $
+bin/jlibtool
