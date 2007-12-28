@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/12/26 17:31:40 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2007/12/28 02:54:36 bsadewitz Exp $
 #
 
-PKGNAME=	${DISTNAME:C/[[:alnum:]]*/&-base/}
+PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
+COMMENT=	MPEG layer 1, 2, and 3 audio player
 
 PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
 
@@ -17,5 +18,8 @@ MPG123_BUILDING_BASE=	# defined
 .include "options.mk"
 
 .include "Makefile.common"
+
+#post-extract:
+#	${RUN} cp ${FILESDIR}/debug.c ${WRKSRC}/src/libmpg123
 
 .include "../../mk/bsd.pkg.mk"

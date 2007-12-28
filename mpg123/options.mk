@@ -1,4 +1,8 @@
+# $NetBSD: options.mk,v 1.7 2007/12/28 02:54:36 bsadewitz Exp $
+#
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpg123
+PKG_SUPPORTED_OPTIONS=		mpg123-no-fifo
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -7,9 +11,8 @@ MPG123_OPTIONS.fpu=	generic_fixed generic_fpu generic_nofpu
 PKG_OPTIONS_GROUP.i386=		x86_dither
 PKG_OPTIONS_GROUP.powerpc=	altivec
 
-PKG_OPTIONS_OPTIONAL_GROUPS=	${MACHINE_ARCH} 
+PKG_OPTIONS_OPTIONAL_GROUPS=	${MACHINE_ARCH}
 
-PKG_SUPPORTED_OPTIONS+=		mpg123-no-fifo
 PKG_SUGGESTED_OPTIONS.${MACHINE_ARCH}?=	generic_fpu
 PKG_SUGGESTED_OPTIONS.arm=		generic_fixed
 PKG_SUGGESTED_OPTIONS.arm32=		generic_fixed
