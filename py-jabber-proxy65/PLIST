@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/29 01:00:26 schnoebe Exp $
+${PYSITELIB}/proxy65/__init__.py
+${PYSITELIB}/proxy65/__init__.pyc
+${PYSITELIB}/proxy65/__init__.pyo
+${PYSITELIB}/proxy65/proxy65.py
+${PYSITELIB}/proxy65/proxy65.pyc
+${PYSITELIB}/proxy65/proxy65.pyo
+${PYSITELIB}/proxy65/socks5.py
+${PYSITELIB}/proxy65/socks5.pyc
+${PYSITELIB}/proxy65/socks5.pyo
+${PYSITELIB}/proxy65/plugins.tml
+@dirrm ${PYSITELIB}/proxy65
