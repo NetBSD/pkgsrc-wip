@@ -1,62 +1,54 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/20 22:34:34 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2007/12/29 18:24:04 asau Exp $
 bin/ecl
 bin/ecl-config
-info/ecl.info
-info/ecldev.info
+include/ecl/bytecodes.h
+include/ecl/config.h
+include/ecl/configpre.h
+include/ecl/cs.h
+include/ecl/ecl-cmp.h
+include/ecl/ecl-inl.h
+include/ecl/ecl.h
+include/ecl/eval.h
+include/ecl/external.h
+include/ecl/gc/gc.h
+include/ecl/gc/gc_config_macros.h
+include/ecl/gc/gc_local_alloc.h
+include/ecl/gc/gc_mark.h
+include/ecl/gc/gc_pthread_redirects.h
+include/ecl/gc/gc_typed.h
+include/ecl/gc/leak_detector.h
+include/ecl/gc/private/cord_pos.h
+include/ecl/gc/private/darwin_semaphore.h
+include/ecl/gc/private/darwin_stop_world.h
+include/ecl/gc/private/dbg_mlc.h
+include/ecl/gc/private/gc_hdrs.h
+include/ecl/gc/private/gc_locks.h
+include/ecl/gc/private/gc_pmark.h
+include/ecl/gc/private/gc_priv.h
+include/ecl/gc/private/gcconfig.h
+include/ecl/gc/private/pthread_stop_world.h
+include/ecl/gc/private/pthread_support.h
+include/ecl/gc/private/solaris_threads.h
+include/ecl/gc/private/specific.h
+include/ecl/gmp.h
+include/ecl/internal.h
+include/ecl/number.h
+include/ecl/object.h
+include/ecl/page.h
+include/ecl/stacks.h
+include/ecl/unify.h
 lib/ecl/BUILD-STAMP
 lib/ecl/asdf.fas
 lib/ecl/cmp.fas
 lib/ecl/defsystem.fas
 lib/ecl/dpp
-lib/ecl/ecl/bytecodes.h
-lib/ecl/ecl/config.h
-lib/ecl/ecl/configpre.h
-lib/ecl/ecl/cs.h
-lib/ecl/ecl/ecl-cmp.h
-lib/ecl/ecl/ecl-inl.h
-lib/ecl/ecl/ecl.h
-lib/ecl/ecl/eval.h
-lib/ecl/ecl/external.h
-lib/ecl/ecl/gc/gc.h
-lib/ecl/ecl/gc/gc_config_macros.h
-lib/ecl/ecl/gc/gc_local_alloc.h
-lib/ecl/ecl/gc/gc_mark.h
-lib/ecl/ecl/gc/gc_pthread_redirects.h
-lib/ecl/ecl/gc/gc_typed.h
-lib/ecl/ecl/gc/leak_detector.h
-lib/ecl/ecl/gc/private/cord_pos.h
-lib/ecl/ecl/gc/private/darwin_semaphore.h
-lib/ecl/ecl/gc/private/darwin_stop_world.h
-lib/ecl/ecl/gc/private/dbg_mlc.h
-lib/ecl/ecl/gc/private/gc_hdrs.h
-lib/ecl/ecl/gc/private/gc_locks.h
-lib/ecl/ecl/gc/private/gc_pmark.h
-lib/ecl/ecl/gc/private/gc_priv.h
-lib/ecl/ecl/gc/private/gcconfig.h
-lib/ecl/ecl/gc/private/pthread_stop_world.h
-lib/ecl/ecl/gc/private/pthread_support.h
-lib/ecl/ecl/gc/private/solaris_threads.h
-lib/ecl/ecl/gc/private/specific.h
-lib/ecl/ecl/gmp.h
-lib/ecl/ecl/include.h
-lib/ecl/ecl/internal.h
-lib/ecl/ecl/lwp.h
-lib/ecl/ecl/number.h
-lib/ecl/ecl/object.h
-lib/ecl/ecl/page.h
-lib/ecl/ecl/stacks.h
-lib/ecl/ecl/unify.h
 lib/ecl/ecl_min
 lib/ecl/help.doc
-lib/ecl/libecl.so
 lib/ecl/rt.fas
+lib/ecl/serve-event.fas
 lib/ecl/sockets.fas
-man/man1/ecl-config.1
-man/man1/ecl.1
-share/doc/ecl/Copyright
-share/doc/ecl/LGPL
-@dirrm share/doc/ecl
-@dirrm lib/ecl/ecl/gc/private
-@dirrm lib/ecl/ecl/gc
-@dirrm lib/ecl/ecl
+lib/libecl.so
 @dirrm lib/ecl
+@dirrm include/ecl/gc/private
+@dirrm include/ecl/gc
+@dirrm include/ecl
