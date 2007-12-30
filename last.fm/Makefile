@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/19 22:02:45 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2007/12/30 21:45:19 netcap Exp $
 #
 
-PKGNAME=	last.fm-1.3.2.13
 DISTNAME=	${PKGNAME}.src
+PKGNAME=	last.fm-1.3.2.13
 CATEGORIES=	audio net
 MASTER_SITES=	http://cdn.last.fm/client/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,34 +11,36 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.last.fm/
 COMMENT=	Official last.fm radio player
 
-BROKEN=		Needs some more love
+BROKEN=		FIXME: I build fine now, but fail to load some libs.
 WRKSRC=		${WRKDIR}/last.fm-1.3.2.13
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS=	make
+USE_TOOLS+=	gmake
 
 QMAKE=		${QTDIR}/bin/qmake
-DATADIR=	${PREFIX}/share/last.fm
+LFMDATA=	${PREFIX}/share/last.fm
 
-post-patch:
-	${SED} -e 's|linux\*|unix|g' ${WRKSRC}/src/src.pro
+SUBST_CLASSES+=			rundir
+SUBST_MESSAGE.rundir=		Correcting rundir.
+SUBST_STAGE.rundir=		post-build
+SUBST_FILES.rundir=		bin/last.fm
+SUBST_SED.rundir=		-e 's|^RUNDIR.*|RUNDIR=${LFMDATA}|'
 
 do-build:
 	cd ${WRKSRC} && \
 		${QMAKE} -config release -after "CONFIG-=debug" && ${MAKE_ENV} make
 	cd ${WRKSRC}/src/output/RtAudio && \
-	${SETENV} ${CONFIGURE_ENV} ${QMAKE} -spec netbsd-g++ && ${MAKE_ENV} make
-	cp ${WRKSRC}/bin/last.fm ${WRKSRC}/bin/last.fm.dist
-	${SED} -e"s|^RUNDIR.*|RUNDIR=${DATADIR}|" \
-		${WRKSRC}/bin/last.fm.dist > ${WRKSRC}/bin/last.fm
+	env ${CONFIGURE_ENV} ${QMAKE} -spec netbsd-g++ && env ${MAKE_ENV} make
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/last.fm ${PREFIX}/bin/last.fm
-.for d in ${DATADIR} ${DATADIR}/data ${PREFIX}/share/services
-	${INSTALL_DATA_DIR} ${d}
-.endfor
-	${INSTALL_DATA} ${FILESDIR}/lastfm.protocol ${PREFIX}/share/services
-	cd ${WRKSRC}/bin && ${PAX} -rwpp . ${DATADIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/last.fm ${LOCALBASE}/bin/last.fm
+	${INSTALL_LIB_DIR} ${LOCALBASE}/lib/last.fm
+	cd ${WRKSRC}/bin/.libs && pax -rwpp . ${LOCALBASE}/lib/last.fm
+	${INSTALL_DATA_DIR} ${LFMDATA}
+	${INSTALL_DATA_DIR} ${LFMDATA}/data
+	${INSTALL_DATA_DIR} ${LFMDATA}/services
+	${INSTALL_DATA} ${FILESDIR}/lastfm.protocol ${LFMDATA}/services
+	cd ${WRKSRC}/bin && pax -rwpp . ${LFMDATA}/
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
