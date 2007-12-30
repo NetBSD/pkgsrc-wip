@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/24 02:49:08 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2007/12/30 00:02:41 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -774,6 +774,7 @@ share/kde/config.kcfg/kwin.kcfg
 share/kde/config/background.knsrc
 share/kde/config/kdm.knsrc
 share/kde/config/kdm/README
+share/kde/config/kdm/Xaccess
 share/kde/config/kdm/Xreset
 share/kde/config/kdm/Xsession
 share/kde/config/kdm/Xsetup

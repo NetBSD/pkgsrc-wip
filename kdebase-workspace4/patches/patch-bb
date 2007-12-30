@@ -1,8 +1,16 @@
-$NetBSD: patch-bb,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+$NetBSD: patch-bb,v 1.2 2007/12/30 00:02:41 mwdavies Exp $
 
 --- ksysguard/gui/ksgrd/SensorManager.cc.orig	2007-10-27 03:37:36.000000000 +1300
 +++ ksysguard/gui/ksgrd/SensorManager.cc
-@@ -87,6 +87,11 @@ void SensorManager::retranslate()
+@@ -78,6 +78,7 @@ void SensorManager::retranslate()
+   mDict.insert( QLatin1String( "user" ), i18n( "User Load" ) );
+   mDict.insert( QLatin1String( "sys" ), i18n( "System Load" ) );
+   mDict.insert( QLatin1String( "wait" ), i18n( "Waiting" ) );
++  mDict.insert( QLatin1String( "interrupt" ), i18n( "Interrupt Load" ) );
+   mDict.insert( QLatin1String( "TotalLoad" ), i18n( "Total Load" ) );
+   mDict.insert( QLatin1String( "mem" ), i18n( "Memory" ) );
+   mDict.insert( QLatin1String( "physical" ), i18n( "Physical Memory" ) );
+@@ -87,6 +88,12 @@ void SensorManager::retranslate()
    mDict.insert( QLatin1String( "used" ), i18n( "Used Memory" ) );
    mDict.insert( QLatin1String( "application" ), i18n( "Application Memory" ) );
    mDict.insert( QLatin1String( "free" ), i18n( "Free Memory" ) );
@@ -11,6 +19,7 @@ $NetBSD: patch-bb,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
 +  mDict.insert( QLatin1String( "wired" ), i18n( "Wired Memory" ) );
 +  mDict.insert( QLatin1String( "execpages" ), i18n( "Exec Pages" ) );
 +  mDict.insert( QLatin1String( "filepages" ), i18n( "File Pages" ) );
++  mDict.insert( QLatin1String( "anonpages" ), i18n( "Anon Pages" ) );
    mDict.insert( QLatin1String( "pscount" ), i18n( "Process Count" ) );
    mDict.insert( QLatin1String( "ps" ), i18n( "Process Controller" ) );
    mDict.insert( QLatin1String( "disk" ), i18n( "Disk Throughput" ) );

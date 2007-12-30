@@ -1,8 +1,8 @@
-$NetBSD: patch-be,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+$NetBSD: patch-be,v 1.2 2007/12/30 00:02:41 mwdavies Exp $
 
 --- ksysguard/ksysguardd/NetBSD/Memory.h.orig	2006-10-26 15:12:41.000000000 +1300
 +++ ksysguard/ksysguardd/NetBSD/Memory.h
-@@ -31,10 +31,16 @@ void printMFree(const char* cmd);
+@@ -31,13 +31,28 @@ void printMFree(const char* cmd);
  void printMFreeInfo(const char* cmd);
  void printUsed(const char* cmd);
  void printUsedInfo(const char* cmd);
@@ -20,6 +20,18 @@ $NetBSD: patch-be,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
 +void printExecpagesInfo(const char* cmd);
 +void printFilepages(const char* cmd);
 +void printFilepagesInfo(const char* cmd);
++void printAnonpages(const char* cmd);
++void printAnonpagesInfo(const char* cmd);
  void printSwapUsed(const char* cmd);
  void printSwapUsedInfo(const char* cmd);
  void printSwapFree(const char* cmd);
+ void printSwapFreeInfo(const char* cmd);
+ 
++void printAppl(const char* cmd);
++void printApplInfo(const char* cmd);
++void printBuffers(const char* cmd);
++void printBuffersInfo(const char* cmd);
++void printCached(const char* cmd);
++void printCachedInfo(const char* cmd);
++
+ #endif

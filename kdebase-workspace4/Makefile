@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/12/23 19:25:59 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/30 00:02:41 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -30,6 +30,11 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 
 CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
+
+REPLACE_PERL+= \
+	kcontrol/keys/convertShortcuts.pl \
+	kwin/data/kwin3_plugin.pl \
+	kwin/data/pluginlibFix.pl
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

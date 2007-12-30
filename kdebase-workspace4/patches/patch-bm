@@ -1,0 +1,13 @@
+$NetBSD: patch-bm,v 1.1 2007/12/30 00:02:41 mwdavies Exp $
+
+--- ksysguard/gui/ksysguard.cc.orig	2007-12-06 03:12:43.000000000 +1300
++++ ksysguard/gui/ksysguard.cc
+@@ -494,7 +494,7 @@ void TopLevel::setSwapInfo( long used, l
+   else {
+     msg = i18n( " Swap: %1 / %2 " ,
+                 KGlobal::locale()->formatByteSize( used*1024 ),
+-                KGlobal::locale()->formatByteSize( free*1024) );
++                KGlobal::locale()->formatByteSize( ((double) free) * 1024 ) );
+   }
+ 
+   sbSwapTotal->setText( msg );
