@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2729 2007/12/27 17:46:00 hoka_adam Exp $
+# $Id: Makefile,v 1.2730 2007/12/30 08:31:12 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1700,6 +1700,7 @@ SUBDIR+=	util-linux
 SUBDIR+=	vcdgear
 SUBDIR+=	vche
 SUBDIR+=	vdesk
+SUBDIR+=	vidalia
 SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer
