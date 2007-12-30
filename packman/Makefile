@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2007/11/17 19:55:42 koifren Exp $
+# $NetBSD: Makefile,v 1.7 2007/12/30 18:41:26 koifren Exp $
 
-DISTNAME=	packman-0.0.4
-PKGREVISION=	2
+DISTNAME=	packman-0.0.5
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://kefren.netbsd.ro/
+MASTER_SITES=	http://kefren.ngnetworks.ro/
 
 MAINTAINER=	kefren@ngnetworks.ro
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Perl wip/pkgmanager clone
-
-WRKSRC=		work
 
 USE_TOOLS+=	perl:run
 
@@ -17,6 +14,6 @@ USE_LANGUAGES=	# empty
 
 do-build:
 do-install:
-	cp ${WRKDIR}/packman.pl ${LOCALBASE}/bin
+	cp ${WRKSRC}/packman.pl ${LOCALBASE}/bin
 
 .include "../../mk/bsd.pkg.mk"
