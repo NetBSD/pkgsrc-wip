@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/30 00:02:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2007/12/31 22:33:43 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -164,6 +164,7 @@ lib/kde4/kcm_colors.so
 lib/kde4/kcm_display.so
 lib/kde4/kcm_energy.so
 lib/kde4/kcm_fonts.so
+lib/kde4/kcm_info.so
 lib/kde4/kcm_input.so
 lib/kde4/kcm_kdm.so
 lib/kde4/kcm_keyboard.so
@@ -179,11 +180,13 @@ lib/kde4/kcm_kwindesktop.so
 lib/kde4/kcm_kwinoptions.so
 lib/kde4/kcm_kwinrules.so
 lib/kde4/kcm_launch.so
+lib/kde4/kcm_nic.so
 lib/kde4/kcm_randr.so
 lib/kde4/kcm_screensaver.so
 lib/kde4/kcm_smserver.so
 lib/kde4/kcm_solid.so
 lib/kde4/kcm_style.so
+lib/kde4/kcm_usb.so
 lib/kde4/kcm_xinerama.so
 lib/kde4/kded_khotkeys.so
 lib/kde4/kded_networkstatus.so
@@ -521,6 +524,7 @@ share/kde/apps/kcmkeys/unix3.kksrc
 share/kde/apps/kcmkeys/win3.kksrc
 share/kde/apps/kcmkeys/win4.kksrc
 share/kde/apps/kcmkeys/wm3.kksrc
+share/kde/apps/kcmusb/usb.ids
 share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/kaccel.upd
 share/kde/apps/kconf_update/kcmdisplayrc.upd
@@ -840,19 +844,24 @@ share/kde4/services/accessibility.desktop
 share/kde4/services/bell.desktop
 share/kde4/services/clock.desktop
 share/kde4/services/colors.desktop
+share/kde4/services/devices.desktop
 share/kde4/services/desktop.desktop
+share/kde4/services/dma.desktop
 share/kde4/services/display.desktop
 share/kde4/services/energy.desktop
 share/kde4/services/fonts.desktop
 share/kde4/services/installktheme.desktop
+share/kde4/services/interrupts.desktop
 share/kde4/services/ion-bbcukmet.desktop
 share/kde4/services/ion-envcan.desktop
 share/kde4/services/ion-noaa.desktop
+share/kde4/services/ioports.desktop
 share/kde4/services/kaccess.desktop
 share/kde4/services/kcm_solid.desktop
 share/kde4/services/kcmaccess.desktop
 share/kde4/services/kcmlaunch.desktop
 share/kde4/services/kcmsmserver.desktop
+share/kde4/services/kcmusb.desktop
 share/kde4/services/kded/khotkeys.desktop
 share/kde4/services/kded/networkstatus.desktop
 share/kde4/services/kdm.desktop
@@ -909,7 +918,12 @@ share/kde4/services/kwinfocus.desktop
 share/kde4/services/kwinmoving.desktop
 share/kde4/services/kwinoptions.desktop
 share/kde4/services/kwinrules.desktop
+share/kde4/services/memory.desktop
 share/kde4/services/mouse.desktop
+share/kde4/services/nic.desktop
+share/kde4/services/opengl.desktop
+share/kde4/services/partitions.desktop
+share/kde4/services/pci.desktop
 share/kde4/services/plasma-animator-default.desktop
 share/kde4/services/plasma-applet-analogclock.desktop
 share/kde4/services/plasma-applet-devicenotifier.desktop
@@ -938,8 +952,10 @@ share/kde4/services/plasma-runner-search.desktop
 share/kde4/services/plasma-runner-webshortcuts.desktop
 share/kde4/services/plasma-scriptengine-qscript.desktop
 share/kde4/services/plasma-tasks-default.desktop
+share/kde4/services/processor.desktop
 share/kde4/services/randr.desktop
 share/kde4/services/screensaver.desktop
+share/kde4/services/scsi.desktop
 share/kde4/services/settings-about-me.desktop
 share/kde4/services/settings-accessibility.desktop
 share/kde4/services/settings-advanced-user-settings.desktop
@@ -962,8 +978,10 @@ share/kde4/services/settings-window-behaviour.desktop
 share/kde4/services/solidbackends/solid_fakebluetooth.desktop
 share/kde4/services/solidbackends/solid_fakenet.desktop
 share/kde4/services/solidbackends/solid_hal_power.desktop
+share/kde4/services/sound.desktop
 share/kde4/services/style.desktop
 share/kde4/services/xinerama.desktop
+share/kde4/services/xserver.desktop
 share/kde4/servicetypes/kwineffect.desktop
 share/kde4/servicetypes/plasma-animator.desktop
 share/kde4/servicetypes/plasma-applet.desktop
@@ -1053,6 +1071,7 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kcontroledit
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmkeys
 @dirrm share/kde/apps/kcminput/pics
 @dirrm share/kde/apps/kcminput

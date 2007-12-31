@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1 2007/12/31 22:33:43 mwdavies Exp $
+
+--- kcontrol/infocenter/info/config-infocenter.h.cmake.orig	2007-06-27 22:45:19.000000000 +1200
++++ kcontrol/infocenter/info/config-infocenter.h.cmake
+@@ -24,3 +24,7 @@
+ 
+ /* Define to 1 if you have the <Alib.h> header file. */
+ #cmakedefine HAVE_ALIB_H 1
++
++/* Define to 1 if you have statvfs */
++#cmakedefine HAVE_STATVFS 1
++
