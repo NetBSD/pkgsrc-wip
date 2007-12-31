@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/03/18 21:34:05 cosmedbr Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/31 22:12:13 hoka_adam Exp $
 
 DISTNAME=		slock-0.6
 CATEGORIES=		x11
+PKGREVISION=		1
 MASTER_SITES=		http://suckless.org/download/
 
 MAINTAINER=		cosmedbr@users.sourceforge.net
@@ -16,5 +17,5 @@ NO_CONFIGURE=		yes
 CFLAGS+=-DHAVE_SHADOW_H
 .endif
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
