@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/12/23 23:55:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2007/12/31 09:38:28 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.9.0
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	share/runawk share/doc/runawk
 
 DOC_FILES=		README NEWS ChangeLog
 
