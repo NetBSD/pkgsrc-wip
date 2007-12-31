@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/09/20 22:55:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2007/12/31 23:16:19 achemze Exp $
 #
 
-DISTNAME=		hellanzb-0.12
+DISTNAME=		hellanzb-0.13
 CATEGORIES=		news
-MASTER_SITES=		http://www.hellanzb.com/distfiles/ 
+MASTER_SITES=		http://www.hellanzb.com/distfiles/
 DISTFILES=		${DISTNAME}.tar.gz
 
 MAINTAINER=		silicon@kalifornia.com
