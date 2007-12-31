@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/11/19 12:48:59 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2007/12/31 19:12:41 netcap Exp $
 #
 
-DISTNAME=	libmowgli-0.5.0
+DISTNAME=	libmowgli-0.6.0
 CATEGORIES=	devel
 MASTER_SITES=	http://distfiles.atheme.org/
 EXTRACT_SUFX=	.tgz
