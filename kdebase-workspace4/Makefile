@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/30 00:02:41 mwdavies Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/01 11:29:11 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -39,10 +39,14 @@ REPLACE_PERL+= \
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-SUBST_CLASSES+=		paths
+SUBST_CLASSES+=		paths qtpath
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
+
+SUBST_FILES.qtpath=	startkde.cmake
+SUBST_SED.qtpath=	-e 's,/usr/pkg/qt4,${QTDIR},g'
+SUBST_STAGE.qtpath=	post-patch
 
 ICONDIR=		share/icons
 
