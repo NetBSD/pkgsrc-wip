@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/01 11:11:29 mwdavies Exp $
 
 --- plasma/dataengines/soliddevice/soliddeviceengine.cpp.orig	2007-12-05 10:39:44.000000000 +1300
 +++ plasma/dataengines/soliddevice/soliddeviceengine.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/12/12 03:35:23 mwdavies Exp $
      //determine the free space available on the device
      const char *path=mountPoint.toAscii().constData();
  
-+#ifdef ST_RDONLY
++#ifdef HAVE_STATVFS
 +    struct statvfs fs_obj;
 +    if (statvfs(path,&fs_obj) < 0){
 +        return -1;
