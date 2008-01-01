@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2008/01/01 10:52:54 mwdavies Exp $
+
+--- config.h.cmake.orig	2007-05-03 20:48:35.000000000 +1200
++++ config.h.cmake
+@@ -44,6 +44,9 @@
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #cmakedefine HAVE_SYS_STAT_H 1
+ 
++/* Define to 1 if you have the <machine/endian.h> header file. */
++#cmakedefine HAVE_MACHINE_ENDIAN_H 1
++
+ /* define if you have TagLib */
+ #cmakedefine HAVE_TAGLIB 1
+ 

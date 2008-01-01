@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/01/01 10:52:54 mwdavies Exp $
+
+--- cmake/modules/FindCdparanoia.cmake.orig	2006-10-26 15:28:58.000000000 +1300
++++ cmake/modules/FindCdparanoia.cmake
+@@ -17,7 +17,7 @@ FIND_PROGRAM(CDPARANOIA_EXECUTABLE NAMES
+ #    PATHS /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin
+ )
+ 
+-FIND_PATH(CDPARANOIA_INCLUDE_DIR cdda_interface.h
++FIND_PATH(CDPARANOIA_INCLUDE_DIR cdparanoia/cdda_interface.h
+ # /usr/include and /usr/local/include are also searched automatically, Alex
+ #    /usr/include /usr/local/include
+ )

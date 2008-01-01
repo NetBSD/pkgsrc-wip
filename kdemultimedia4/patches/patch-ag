@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2008/01/01 10:52:54 mwdavies Exp $
+
+--- kioslave/audiocd/audiocd.cpp.orig	2007-10-08 20:42:19.000000000 +1300
++++ kioslave/audiocd/audiocd.cpp
+@@ -27,8 +27,8 @@
+ #include <kdemacros.h>
+ extern "C"
+ {
+-	#include <cdda_interface.h>
+-	#include <cdda_paranoia.h>
++	#include <cdparanoia/cdda_interface.h>
++	#include <cdparanoia/cdda_paranoia.h>
+ 	void paranoiaCallback(long, int);
+ 
+ 	KDE_EXPORT int kdemain(int argc, char ** argv);
