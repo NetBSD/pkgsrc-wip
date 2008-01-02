@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2732 2008/01/02 12:02:35 marttikuparinen Exp $
+# $Id: Makefile,v 1.2733 2008/01/02 13:38:16 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1537,6 +1537,7 @@ SUBDIR+=	shaper
 SUBDIR+=	shed
 SUBDIR+=	shoutcast
 SUBDIR+=	showmesh
+SUBDIR+=	shttpd
 SUBDIR+=	sic
 SUBDIR+=	sid-milter
 SUBDIR+=	siege
