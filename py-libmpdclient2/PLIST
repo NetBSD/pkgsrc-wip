@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/02 14:07:32 netcap Exp $
+${PYSITELIB}/mpdclient2.py
+${PYSITELIB}/mpdclient2.pyc
+${PYSITELIB}/mpdclient2.pyo
