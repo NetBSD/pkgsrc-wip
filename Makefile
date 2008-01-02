@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2733 2008/01/02 13:38:16 marttikuparinen Exp $
+# $Id: Makefile,v 1.2734 2008/01/02 14:09:50 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1402,6 +1402,7 @@ SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kyra
+SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-mysqldb-docs
