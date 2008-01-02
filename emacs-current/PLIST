@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2007/12/16 16:46:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.38 2008/01/02 23:03:06 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2606,6 +2606,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/which-func.el.gz
