@@ -1,0 +1,4 @@
+SHTTPD is a lightweight, easy to use web server. Ideal for web developers,
+web-based software demos (like PHP, Perl etc), quick file sharing. It also
+can be used as a library that provides web server functionality, to create
+web interface for C/C++ applications.
