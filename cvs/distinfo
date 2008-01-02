@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/02 11:38:48 marttikuparinen Exp $
-
-SHA1 (cvs-1.11.22.tar.gz) = 2a364c0659c0f7549b7bb4c4ea8fc0ac8c1d4ec9
-RMD160 (cvs-1.11.22.tar.gz) = d2a5d744c643e14dc02acdefa79790fe4a44f813
-Size (cvs-1.11.22.tar.gz) = 3463528 bytes
