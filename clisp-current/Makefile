@@ -1,0 +1,77 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 13:41:58 asau Exp $
+#
+
+DISTNAME=	clisp-2.43
+PKGNAME=	clisp-2.43 # needed because of cvs-package.mk
+CATEGORIES=	lang
+MASTER_SITES=	#
+
+MAINTAINER=	asau@users.sourceforge.net
+HOMEPAGE=	http://clisp.cons.org/
+COMMENT=	CLISP, a Common Lisp implementation
+
+CONFLICTS+=	clisp-[0-9]*
+
+CVS_REPOSITORIES=	clisp
+CVS_ROOT.clisp=		:pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp
+WRKSRC=		${WRKDIR}/clisp
+
+# Sparc64 has assembler code problems, see
+# http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
+NOT_FOR_PLATFORM=	*-*-sparc64
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# CLISP doesn't work with jemalloc, which is default in current
+MODULES+=		--with-gmalloc
+.endif
+
+.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
+MODULES+=		--disable-mmap
+.endif
+
+USE_TOOLS+=		dvipdf gmake
+USE_PKGLOCALEDIR=	YES
+BUILD_DIRS=		src
+#CONFIGURE_DIRS=		. modules/i18n
+# modules/syscalls modules/pcre modules/rawsock \
+#			modules/readline modules/wildcard modules/zlib
+#			modules/readline modules/regexp modules/wildcard modules/zlib
+#CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
+GNU_CONFIGURE=		YES
+#USE_CONFIGURE=		YES
+UNLIMIT_RESOURCES=	stacksize
+USE_LIBTOOL=		YES
+USE_GNU_READLINE=	YES
+#MODULES+=		--with-module=pcre --with-module=rawsock
+#MODULES+=		--with-module=wildcard --with-module=zlib
+CONFIGURE_ARGS+=	${MODULES}
+TEST_TARGET=		check
+MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
+MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
+MAKE_JOBS_SAFE=		no
+
+#post-configure:
+#	cd ${WRKSRC}/src && \
+#	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
+#		--with-dynamic-ffi --fsstnd=netbsd ${MODULES} >Makefile
+
+#pre-build:
+#	cd ${WRKSRC}/src/avcall && ${MAKE}
+#	cd ${WRKSRC}/src/callback && ${MAKE}
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
+.include "../../devel/libsigsegv/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
+.include "../../devel/zlib/buildlink3.mk"
+
+.include "../../wip/mk/cvs-package.mk"
+.include "../../mk/bsd.pkg.mk"
