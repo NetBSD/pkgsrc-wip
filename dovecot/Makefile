@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/01/03 14:00:55 ghen Exp $
+# $NetBSD: Makefile,v 1.35 2008/01/03 14:06:59 ghen Exp $
 
 DISTNAME=		dovecot-1.1.beta13
 PKGNAME=		${DISTNAME:S/.beta/beta/}
@@ -46,6 +46,8 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	dovecot-example.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	pre-configure
+
+BUILD_DEFS+=		VARBASE
 
 post-build:
 	${SED} "s|/etc/ssl/|${SSLDIR}/|" ${WRKSRC}/dovecot-example.conf \
