@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/03 01:40:54 hoka_adam Exp $
+include/sidplay/Buffer.h
+include/sidplay/SidTune.h
+include/sidplay/SmartPtr.h
+include/sidplay/c64env.h
+include/sidplay/component.h
+include/sidplay/event.h
+include/sidplay/sid2types.h
+include/sidplay/sidbuilder.h
+include/sidplay/sidconfig.h
+include/sidplay/sidendian.h
+include/sidplay/sidint.h
+include/sidplay/sidplay2.h
+include/sidplay/sidtypes.h
+include/sidplay/sidusage.h
+lib/libsidplay2.la
+lib/pkgconfig/libsidplay2.pc
+@dirrm include/sidplay
