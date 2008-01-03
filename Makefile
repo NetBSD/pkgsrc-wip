@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2736 2008/01/03 15:07:30 asau Exp $
+# $Id: Makefile,v 1.2737 2008/01/03 18:11:45 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -843,7 +843,6 @@ SUBDIR+=	ltrace
 SUBDIR+=	lua-pgsql
 SUBDIR+=	lua50
 SUBDIR+=	lua50-compat51
-SUBDIR+=	lua50-posix
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
