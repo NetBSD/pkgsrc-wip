@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2734 2008/01/02 14:09:50 netcap Exp $
+# $Id: Makefile,v 1.2735 2008/01/03 05:42:13 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -784,6 +784,7 @@ SUBDIR+=	libpcap-latest
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
+SUBDIR+=	libsidplay2
 SUBDIR+=	libspf2
 SUBDIR+=	libssh2
 SUBDIR+=	libticables
@@ -1484,6 +1485,7 @@ SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
+SUBDIR+=	resid-builder
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
