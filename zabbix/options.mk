@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/12/12 21:40:58 asau Exp $
+# $NetBSD: options.mk,v 1.5 2008/01/03 08:48:57 asau Exp $
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix
 PKG_SUPPORTED_OPTIONS+=		zabbix-server zabbix-agent
 PKG_SUPPORTED_OPTIONS+=		pgsql sqlite mysql
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--with-mysql
 .include "../../mk/mysql.buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mcurl)
+.if !empty(PKG_OPTIONS:Mcurl) || !empty(PKG_OPTIONS:Mzabbix-server)
 CONFIGURE_ARGS+=	--with-libcurl
 .include "../../www/curl/buildlink3.mk"
 .endif

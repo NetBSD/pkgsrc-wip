@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2007/12/21 20:00:01 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/03 08:48:56 asau Exp $
 
-DISTNAME=	zabbix-1.4.2
-PKGREVISION=	3
+DISTNAME=	zabbix-1.4.4
+PKGREVISION=	#
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	asau@users.sourceforge.net
 HOMEPAGE=	http://www.zabbix.com/
 COMMENT=	Network monitoring tool
 
@@ -27,6 +27,7 @@ CONF_FILES=		${EGDIR}/zabbix_agent.conf ${PKG_SYSCONFDIR}/zabbix_agent.conf
 CONF_FILES+=		${EGDIR}/zabbix_agentd.conf ${PKG_SYSCONFDIR}/zabbix_agentd.conf
 CONF_FILES+=		${EGDIR}/zabbix_server.conf ${PKG_SYSCONFDIR}/zabbix_server.conf
 CONF_FILES+=		${EGDIR}/zabbix_trapper.conf ${PKG_SYSCONFDIR}/zabbix_trapper.conf
+INSTALLATION_DIRS+=	${EGDIR}
 
 # ZABBIX user account
 ZBXUSER?=		zabbix
@@ -76,7 +77,7 @@ post-install:
 	mkdir ${DESTDIR}${PREFIX}/$d
 .endfor
 # documentation
-	${INSTALL_DATA} ${WRKSRC}/docs/"ZABBIX Manual v1.4 rev 9.pdf" ${DESTDIR}${PREFIX}/share/doc/zabbix/manual.pdf
+	${INSTALL_DATA} ${WRKSRC}/docs/"ZABBIX Manual v1.4 rev 12.pdf" ${DESTDIR}${PREFIX}/share/doc/zabbix/manual.pdf
 .for f in ${CONFIGURATION_FILES}
 	${INSTALL_DATA} ${WRKSRC}/misc/conf/$f ${DESTDIR}${EGDIR}/$f
 .endfor
