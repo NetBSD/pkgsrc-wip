@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 13:41:58 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/03 17:50:57 asau Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -48,6 +48,7 @@ USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 #MODULES+=		--with-module=pcre --with-module=rawsock
 #MODULES+=		--with-module=wildcard --with-module=zlib
+CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	${MODULES}
 TEST_TARGET=		check
 MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
@@ -68,7 +69,7 @@ MAKE_JOBS_SAFE=		no
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+#.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
