@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/01/01 05:14:57 netcap Exp $
+# $NetBSD: Makefile,v 1.27 2008/01/03 02:03:17 hoka_adam Exp $
 #
 
 DISTNAME=		audacious-plugins-1.4.4
@@ -36,58 +36,10 @@ CFLAGS+=	-I. -I../flacng -Ilibflacng
 
 CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 			--disable-coreaudio --disable-projectm \
-			--disable-sid --disable-gnomeshortcuts
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
-PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Marts)
-.  include "../../audio/arts/buildlink3.mk"
-PLIST_SUBST+=		ARTS=""
-.else
-CONFIGURE_ARGS+=	--disable-arts
-PLIST_SUBST+=		ARTS="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mesound)
-.  include "../../audio/esound/buildlink3.mk"
-PLIST_SUBST+=		ESD=""
-.else
-CONFIGURE_ARGS+=	--disable-esd
-PLIST_SUBST+=		ESD="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mjack)
-.  include "../../audio/jack/buildlink3.mk"
-PLIST_SUBST+=		JACK=""
-.else
-CONFIGURE_ARGS+=	--disable-jack
-PLIST_SUBST+=		JACK="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mmidi)
-BUILD_DEPENDS+=		timidity>=0:../../audio/timidity
-PLIST_SUBST+=		MIDI=""
-.else
-CONFIGURE_ARGS+=	--disable-timidity
-PLIST_SUBST+=		MIDI="@comment "
-.endif
-
-.if !empty(PKG_OPTIONS:Mpulse)
-.  include "../../wip/pulseaudio/buildlink3.mk"
-PLIST_SUBST+=		PULSE=""
-.else
-CONFIGURE_ARGS+=	--disable-pulse
-PLIST_SUBST+=		PULSE="@comment "
-.endif
+			--disable-gnomeshortcuts
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
 RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
