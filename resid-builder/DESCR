@@ -1,0 +1,7 @@
+reSID is a reverse engineered software emulation of the MOS6581 SID.
+This chip was used in the Commodore 64 computer.
+
+This is a snapshot from libSIDPlay2 CVS combined with some
+portability fixes and patches to make sure it builds at least
+on various Linux distributions, Solaris 9 (you need gcc3, etc)
+and NetBSD. These improvements have made by ccr/TNSP.
