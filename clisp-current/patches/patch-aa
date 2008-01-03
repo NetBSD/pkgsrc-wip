@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/01/03 14:03:39 asau Exp $
+
+Don't use cache file to avoid trailing space problem.
+
+--- src/makemake.in.orig	2008-01-03 03:37:15.000000000 +0300
++++ src/makemake.in	2008-01-03 03:38:10.000000000 +0300
+@@ -3396,7 +3396,7 @@
+ echotab "      if test \"\$\${ac_cv_env_CFLAGS_set}\" = set; then CFLAGS=\"\$\${ac_cv_env_CFLAGS_value}\"; export CFLAGS; fi; \\"
+ # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
+ # is bash, config.cache may be unparsable with sh on Solaris
+-echotab "      \$(SHELL) ./configure --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
++echotab "      \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
+ echotab "    else \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
+ echotab "    fi ) ;\\"
+ echotab "fi"
