@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/31 16:59:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/04 10:28:25 cheusov Exp $
 
 DISTNAME=	dictd-1.10.10
 PKGNAME=	libmaa-1.0.0
@@ -13,6 +13,7 @@ COMMENT=	Provides a few data structures and helpful functions
 WRKSRC=			${WRKDIR}/${DISTNAME}/libmaa
 BUILD_TARGET=		lib
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
