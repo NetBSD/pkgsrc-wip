@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/04 16:12:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/04 21:36:07 asau Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -22,16 +22,7 @@ NOT_FOR_PLATFORM=	*-*-sparc64
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-# CLISP doesn't work with jemalloc, which is default in current
-CONFIGURE_ARGS+=	--with-gmalloc
-.endif
-
-.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-mmap
-.endif
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		dvipdf gmake
 USE_PKGLOCALEDIR=	YES
@@ -48,6 +39,17 @@ MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 #MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_JOBS_SAFE=		no
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# CLISP doesn't work with jemalloc, which is default in current
+CONFIGURE_ARGS+=	--with-gmalloc
+.endif
+
+.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-mmap
+.endif
 
 .include "options.mk"
 
