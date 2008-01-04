@@ -1,1 +1,73 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/03 13:41:58 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/04 23:43:44 asau Exp $
+bin/clisp
+lib/${PKGNAME}/base/calls.o
+lib/${PKGNAME}/base/gettext.o
+lib/${PKGNAME}/base/libnoreadline.a
+lib/${PKGNAME}/base/lisp.a
+lib/${PKGNAME}/base/lisp.run
+lib/${PKGNAME}/base/lispinit.mem
+lib/${PKGNAME}/base/localcharset.o
+lib/${PKGNAME}/base/makevars
+lib/${PKGNAME}/base/modules.h
+lib/${PKGNAME}/base/modules.o
+lib/${PKGNAME}/base/regexi.o
+lib/${PKGNAME}/base/regexp.dvi
+lib/${PKGNAME}/base/uniname.o
+lib/${PKGNAME}/base/width.o
+lib/${PKGNAME}/clisp-link
+lib/${PKGNAME}/data/Symbol-Table.text
+lib/${PKGNAME}/data/UnicodeDataFull.txt
+lib/${PKGNAME}/full/calls.o
+lib/${PKGNAME}/full/gettext.o
+lib/${PKGNAME}/full/libnoreadline.a
+lib/${PKGNAME}/full/lisp.a
+lib/${PKGNAME}/full/lisp.run
+lib/${PKGNAME}/full/lispinit.mem
+lib/${PKGNAME}/full/localcharset.o
+lib/${PKGNAME}/full/makevars
+lib/${PKGNAME}/full/modules.h
+lib/${PKGNAME}/full/modules.o
+lib/${PKGNAME}/full/regexi.o
+lib/${PKGNAME}/full/regexp.dvi
+lib/${PKGNAME}/full/uniname.o
+lib/${PKGNAME}/full/width.o
+lib/${PKGNAME}/linkkit/clisp.h
+lib/${PKGNAME}/linkkit/modprep.lisp
+lib/${PKGNAME}/linkkit/modules.c
+man/man1/clisp.1
+share/doc/${PKGNAME}/ANNOUNCE
+share/doc/${PKGNAME}/CLOS-guide.txt
+share/doc/${PKGNAME}/COPYRIGHT
+share/doc/${PKGNAME}/GNU-GPL
+share/doc/${PKGNAME}/LISP-tutorial.txt
+share/doc/${PKGNAME}/MAGIC.add
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README.de
+share/doc/${PKGNAME}/README.es
+share/doc/${PKGNAME}/SUMMARY
+share/doc/${PKGNAME}/clisp.1
+share/doc/${PKGNAME}/clisp.dvi
+share/doc/${PKGNAME}/clisp.html
+share/doc/${PKGNAME}/clisp.pdf
+share/doc/${PKGNAME}/clisp.png
+share/doc/${PKGNAME}/clisp.ps
+share/doc/${PKGNAME}/editors.txt
+share/doc/${PKGNAME}/impnotes.css
+share/doc/${PKGNAME}/impnotes.html
+share/emacs/site-lisp/clhs.el
+share/emacs/site-lisp/clisp-coding.el
+share/emacs/site-lisp/clisp-ffi.el
+share/emacs/site-lisp/clisp-indent.el
+share/emacs/site-lisp/clisp-indent.lisp
+share/vim/vimfiles/after/syntax/lisp.vim
+@dirrm share/vim/vimfiles/after/syntax
+@dirrm share/vim/vimfiles/after
+@dirrm share/vim/vimfiles
+@dirrm share/vim
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/linkkit
+@dirrm lib/${PKGNAME}/full
+@dirrm lib/${PKGNAME}/data
+@dirrm lib/${PKGNAME}/base
+@dirrm lib/${PKGNAME}
