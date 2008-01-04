@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/03 17:50:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/04 12:25:46 asau Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -36,13 +36,8 @@ MODULES+=		--disable-mmap
 USE_TOOLS+=		dvipdf gmake
 USE_PKGLOCALEDIR=	YES
 BUILD_DIRS=		src
-#CONFIGURE_DIRS=		. modules/i18n
-# modules/syscalls modules/pcre modules/rawsock \
-#			modules/readline modules/wildcard modules/zlib
-#			modules/readline modules/regexp modules/wildcard modules/zlib
-#CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
+#CONFIGURE_ENV+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
-#USE_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
@@ -55,14 +50,6 @@ MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_JOBS_SAFE=		no
 
-#post-configure:
-#	cd ${WRKSRC}/src && \
-#	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
-#		--with-dynamic-ffi --fsstnd=netbsd ${MODULES} >Makefile
-
-#pre-build:
-#	cd ${WRKSRC}/src/avcall && ${MAKE}
-#	cd ${WRKSRC}/src/callback && ${MAKE}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
