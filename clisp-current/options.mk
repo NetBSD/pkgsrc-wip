@@ -1,4 +1,4 @@
-$NetBSD: options.mk,v 1.2 2008/01/04 15:27:48 asau Exp $
+$NetBSD: options.mk,v 1.3 2008/01/04 16:12:29 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clisp-current
 
@@ -26,6 +26,3 @@ CONFIGURE_ARGS+=	--with-module=postgresql
 CONFIGURE_ARGS+=	--with-module=gdbm
 .include "../../databases/gdbm/buildlink3.mk"
 .endif
-
-
-CONFIGURE_ARGS+=	${MODULES}
