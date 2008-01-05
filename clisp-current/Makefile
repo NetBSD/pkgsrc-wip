@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/01/05 01:04:20 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/05 01:20:21 asau Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--fsstnd=bsd
 CONFIGURE_ARGS+=	--without-included-regex
 TEST_TARGET=		check
 MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
-#MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
+MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_JOBS_SAFE=		no
 
