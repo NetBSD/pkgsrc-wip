@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2739 2008/01/04 06:09:06 kristerw Exp $
+# $Id: Makefile,v 1.2740 2008/01/05 19:05:36 cetrox Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -59,6 +59,7 @@ SUBDIR+=	alive
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
+SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	aoi
 SUBDIR+=	aols-freetds
