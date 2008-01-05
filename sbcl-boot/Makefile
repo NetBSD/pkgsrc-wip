@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/05 00:07:16 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/05 01:37:25 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.9
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jonb@NetBSD.org
+MAINTAINER=		asau@users.sourceforge.net
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
@@ -46,12 +46,12 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
 #SBCL_BOOT_SYSTEM=	"openmcl --batch"	# OpenMCL
 #SBCL_BOOT_SYSTEM=	sbcl			# SBCL
 
-.if defined(SBCL_BOOT_SYSTEM) && ${SBCL_BOOT_SYSTEM} == clisp
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
-.endif
-
+# This package is meant for bootstrap using CLISP:
 .if !defined(SBCL_BOOT_SYSTEM)
-PKG_FAIL_REASON+=	"Sorry, need a Common Lisp system.  See Makefile for details."
+SBCL_BOOT_SYSTEM=	clisp
+.endif
+.if ${SBCL_BOOT_SYSTEM} == clisp
+BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 .endif
 
 post-patch:
