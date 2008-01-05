@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2740 2008/01/05 19:05:36 cetrox Exp $
+# $Id: Makefile,v 1.2741 2008/01/05 21:42:26 martijnb Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -334,6 +334,7 @@ SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
+SUBDIR+=	foo2zjs
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
 SUBDIR+=	fprobe
