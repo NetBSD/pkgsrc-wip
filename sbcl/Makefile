@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/05 03:37:43 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/05 03:53:16 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.13
@@ -47,13 +47,15 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
 #SBCL_BOOT_SYSTEM=	"openmcl --batch"	# OpenMCL
 #SBCL_BOOT_SYSTEM=	sbcl			# SBCL
 
+.if !defined(SBCL_BOOT_SYSTEM)
+SBCL_BOOT_SYSTEM=	sbcl
+# Get bootstrap version:
+BUILD_DEPENDS+=		sbcl-[0-9]*:../sbcl-boot
+.endif
 .if defined(SBCL_BOOT_SYSTEM) && ${SBCL_BOOT_SYSTEM} == clisp
-BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+PKG_FAIL_REASON+=	"Sorry, it doesn't work with CLISP."
 .endif
 
-.if !defined(SBCL_BOOT_SYSTEM)
-PKG_FAIL_REASON+=	"Sorry, need a Common Lisp system.  See Makefile for details."
-.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
