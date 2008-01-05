@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/05 00:07:16 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/05 05:54:31 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -92,6 +92,7 @@ lib/sbcl/sb-cltl2/sb-cltl2.fasl
 lib/sbcl/sb-cltl2/test-passed
 lib/sbcl/sb-cltl2/tests.fasl
 lib/sbcl/sb-cltl2/tests.lisp
+lib/sbcl/sb-cover/.cvsignore
 lib/sbcl/sb-cover/CVS/Repository
 lib/sbcl/sb-cover/CVS/Root
 lib/sbcl/sb-cover/CVS/Entries
@@ -101,8 +102,10 @@ lib/sbcl/sb-cover/Makefile
 lib/sbcl/sb-cover/sb-cover.asd
 lib/sbcl/sb-cover/tests.lisp
 lib/sbcl/sb-cover/cover.fasl
-lib/sbcl/sb-cover/tests-passed
+lib/sbcl/sb-cover/test-passed
 lib/sbcl/sb-cover/sb-cover.fasl
+lib/sbcl/sb-cover/test-data-1.lisp
+lib/sbcl/sb-cover/test-data-2.lisp
 lib/sbcl/sb-executable/sb-executable.fasl
 lib/sbcl/sb-grovel/.cvsignore
 lib/sbcl/sb-grovel/CVS/Entries
