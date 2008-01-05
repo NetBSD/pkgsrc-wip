@@ -1,0 +1,140 @@
+$NetBSD: patch-aa,v 1.5 2008/01/05 17:02:02 cetrox Exp $
+--- configure.orig	2007-12-24 18:35:51.000000000 -0300
++++ configure	2008-01-02 22:52:06.000000000 -0300
+@@ -1751,7 +1751,7 @@
+ 
+ 
+ 
+-if test "$enable_debug" == "yes" ; then
++if test "$enable_debug" = "yes" ; then
+     DEBUG="yes"
+ else
+     DEBUG="no"
+@@ -1764,7 +1764,7 @@
+ 
+ 
+ 
+-if test "$enable_static" == "yes" ; then
++if test "$enable_static" = "yes" ; then
+     STATIC="yes"
+ else
+     STATIC="no"
+@@ -1916,7 +1916,7 @@
+ 
+ OLDV=`expr $VERSION \< 8.4`
+ 
+-if test "x${version_ok}" == "xyes" -a $OLDV == 1; then
++if test "x${version_ok}" = "xyes" -a $OLDV = 1; then
+     { { echo "$as_me:$LINENO: error: Your current Tcl/Tk installation has a version number of $VERSION. The minimal version required for aMSN to run is Tcl/Tk 8.4" >&5
+ echo "$as_me: error: Your current Tcl/Tk installation has a version number of $VERSION. The minimal version required for aMSN to run is Tcl/Tk 8.4" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -2846,7 +2846,7 @@
+ 
+ 
+ CC_INSTALLED=`which $CC`
+-if test "x${CC_INSTALLED}" == "x"; then
++if test "x${CC_INSTALLED}" = "x"; then
+     { { echo "$as_me:$LINENO: error: You need a C compiler (gcc) to compiler aMSN. Please install gcc and try again" >&5
+ echo "$as_me: error: You need a C compiler (gcc) to compiler aMSN. Please install gcc and try again" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3218,7 +3218,7 @@
+ 
+ 
+ CXX_INSTALLED=`which $CXX`
+-if test "x${CXX_INSTALLED}" == "x"; then
++if test "x${CXX_INSTALLED}" = "x"; then
+      { { echo "$as_me:$LINENO: error: You need a C++ compiler (g++) to compiler aMSN. Please install g++ and try again" >&5
+ echo "$as_me: error: You need a C++ compiler (g++) to compiler aMSN. Please install g++ and try again" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3297,7 +3297,7 @@
+ 
+ 				if  test "x${TCL_INC_DIR}" != "x" -o "x${TCL_INC_SPEC}" != "x" \
+ 					-o "x${TCL_INCLUDE_DIR}" != "x" -o "x${TCL_INCLUDE_SPEC}" != "x"; then
+-				if test "x${TCL_VERSION}" == "x${VERSION}" ; then
++				if test "x${TCL_VERSION}" = "x${VERSION}" ; then
+ 				TCL_LIB_DIR=`cd $i; pwd`
+ 				break;
+ 				fi
+@@ -3354,15 +3354,15 @@
+ 	TCL_INC_DIR=$TCL_INCLUDE_SPEC
+ 	fi
+ 
+-	if test "x${TCL_INC_DIR}" == "x"; then
++	if test "x${TCL_INC_DIR}" = "x"; then
+ 	TCL_INC_DIR=$TCL_INCLUDE_DIR
+ 	fi
+ 
+-	if test "x${TCL_INC_DIR}" == "x" -a -f ${TCL_PREFIX}/include/tcl.h; then
++	if test "x${TCL_INC_DIR}" = "x" -a -f ${TCL_PREFIX}/include/tcl.h; then
+ 	TCL_INC_DIR=${TCL_PREFIX}/include
+ 	fi
+ 
+-	if test "x${TCL_INC_DIR}" == "x"; then
++	if test "x${TCL_INC_DIR}" = "x"; then
+ 	{ { echo "$as_me:$LINENO: error: You dot not have a devel package of Tcl" >&5
+ echo "$as_me: error: You dot not have a devel package of Tcl" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3376,7 +3376,7 @@
+ 	TCL_INC_SPEC=$TCL_INC_DIR
+ 
+ 	framework=`echo "${TCL_BASE}" | grep -- "-framework"`
+-	if test "x${framework}" == "x"; then
++	if test "x${framework}" = "x"; then
+ 	TCL_LIB_SPEC="-L${TCL_LIB_DIR} -l${TCL_BASE}"
+ 	fi
+ 	TCL_STUB_LIB_SPEC="-L${TCL_LIB_DIR} -l${TCL_STUB_BASE}"
+@@ -3446,7 +3446,7 @@
+ 
+ 		if  test "x${TK_INC_DIR}" != "x" -o "x${TK_INC_SPEC}" != "x" \
+ 				-o "x${TK_INCLUDE_DIR}" != "x" -o "x${TK_INCLUDE_SPEC}" != "x"; then
+-				if test "x${TK_VERSION}" == "x${VERSION}"; then
++				if test "x${TK_VERSION}" = "x${VERSION}"; then
+ 			TK_LIB_DIR=`cd $i; pwd`
+ 			break;
+ 			fi
+@@ -3494,15 +3494,15 @@
+ 	TK_INC_DIR=$TK_INCLUDE_SPEC
+ 	fi
+ 
+-	if test "x${TK_INC_DIR}" == "x"; then
++	if test "x${TK_INC_DIR}" = "x"; then
+ 	TK_INC_DIR=$TK_INCLUDE_DIR
+ 	fi
+ 
+-	if test "x${TK_INC_DIR}" == "x" -a -f ${TK_PREFIX}/include/tk.h; then
++	if test "x${TK_INC_DIR}" = "x" -a -f ${TK_PREFIX}/include/tk.h; then
+ 	TK_INC_DIR=${TK_PREFIX}/include
+ 	fi
+ 
+-	if test "x${TK_INC_DIR}" == "x"; then
++	if test "x${TK_INC_DIR}" = "x"; then
+ 	{ { echo "$as_me:$LINENO: error: You dot not have a devel package of Tk" >&5
+ echo "$as_me: error: You dot not have a devel package of Tk" >&2;}
+    { (exit 1); exit 1; }; }
+@@ -3531,7 +3531,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lstdc++  $LIBS"
++LIBS="-lstdc++ -lm $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5150,7 +5150,7 @@
+ echo "${ECHO_T}\"Could not find X11 devel package" >&6; }
+ fi
+ 
+-if test "$FOUND_OS" == "solaris"; then
++if test "$FOUND_OS" = "solaris"; then
+ 	# If possible, build webcam support.  Otherwise, default to
+ 	# Linux for other goodies.
+ 	{ echo "$as_me:$LINENO: checking for grep that handles long lines and -e" >&5
+@@ -6987,6 +6987,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
