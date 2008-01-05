@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/10/13 20:50:49 martijnb Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/05 21:39:02 martijnb Exp $
 #
 
-DISTNAME=	foo2zjs-20071007
+DISTNAME=	foo2zjs-20080105
 CATEGORIES=	wip
 MASTER_SITES=	http://www.stack.nl/~martijnb/foo2zjs/
 EXTRACT_SUFX=	.tgz
