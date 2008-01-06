@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/18 12:23:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/06 20:00:22 cheusov Exp $
 #
 
 DISTNAME=		xmms-cdread-0.14a
@@ -12,6 +12,7 @@ COMMENT=		XMMS input plugin that reads audio data from CDs
 NOT_FOR_PLATFORM=	Interix-*-* NetBSD-*-*
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 DOC_FILES=		AUTHORS ChangeLog COPYING NEWS README
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
