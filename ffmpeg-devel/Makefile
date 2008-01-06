@@ -13,7 +13,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+#PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	gmake texi2html pod2man libtool
