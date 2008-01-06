@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2008/01/06 13:22:17 netcap Exp $
+
+--- ffcall/callback/Makefile.in.orig	2007-12-05 19:26:04.000000000 +0100
++++ ffcall/callback/Makefile.in
+@@ -68,9 +68,9 @@ libcallback.la : vacall_r/libvacall.la t
+ install-lib : all force
+ 	cd @subdir@; $(MAKE) install-lib libdir='$(libdir)' includedir='$(includedir)'
+ 	mkdir -p $(libdir)
+-	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libcallback.la $(libdir)/libcallback.la
++	$(LIBTOOL_INSTALL) $(TOOLS_PLATFORM.install) -c -m 644 libcallback.la $(libdir)/libcallback.la
+ 	mkdir -p $(includedir)
+-	$(INSTALL_DATA) callback.h $(includedir)/callback.h
++	$(TOOLS_PLATFORM.install) -c -m 644 callback.h $(includedir)/callback.h
+ 
+ install : force
+ 	cd @subdir@; $(MAKE) install

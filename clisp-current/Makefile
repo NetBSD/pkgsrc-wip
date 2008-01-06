@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/01/05 01:20:21 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/06 13:22:17 netcap Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -32,12 +32,18 @@ GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
-CONFIGURE_ARGS+=	--fsstnd=bsd
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-dynamic-ffi
+CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
+CONFIGURE_ARGS+=	--with-gettext
+CONFIGURE_ARGS+=	--with-readline
 TEST_TARGET=		check
 MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
+MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -59,8 +65,7 @@ BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/ffcall/buildlink3.mk"
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/bsd.pkg.mk"

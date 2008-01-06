@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/01/06 13:22:17 netcap Exp $
+
+--- ffcall/callback/trampoline_r/Makefile.in.orig	2007-12-05 19:26:04.000000000 +0100
++++ ffcall/callback/trampoline_r/Makefile.in
+@@ -124,7 +124,7 @@ libtrampoline.la : $(OBJECTS)
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	mkdir -p $(includedir)
+-	$(INSTALL_DATA) trampoline_r.h $(includedir)/trampoline_r.h
++	$(TOOLS_PLATFORM.install) -c -m 644 trampoline_r.h $(includedir)/trampoline_r.h
+ 
+ install : all force
+ 	mkdir -p $(DESTDIR)$(prefix)

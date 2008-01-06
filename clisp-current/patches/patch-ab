@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/01/06 13:22:17 netcap Exp $
+
+--- ffcall/avcall/Makefile.in.orig	2007-12-05 20:12:20.000000000 +0100
++++ ffcall/avcall/Makefile.in
+@@ -156,9 +156,9 @@ libavcall.la : $(OBJECTS)
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	mkdir -p $(libdir)
+-	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libavcall.la $(libdir)/libavcall.la
++	$(LIBTOOL_INSTALL) $(TOOLS_PLATFORM.install) -c -m 644 libavcall.la $(libdir)/libavcall.la
+ 	mkdir -p $(includedir)
+-	$(INSTALL_DATA) avcall.h $(includedir)/avcall.h
++	$(TOOLS_PLATFORM.install) -c -m 644 avcall.h $(includedir)/avcall.h
+ 
+ install : all force
+ 	mkdir -p $(DESTDIR)$(prefix)
