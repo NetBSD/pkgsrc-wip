@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/05 03:37:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/06 12:35:17 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -12,7 +12,6 @@ lib/sbcl/asdf-install/defpackage.fasl
 lib/sbcl/asdf-install/defpackage.lisp
 lib/sbcl/asdf-install/installer.fasl
 lib/sbcl/asdf-install/installer.lisp
-lib/sbcl/asdf-install/installer.lisp.dist
 lib/sbcl/asdf-install/installer.lisp.orig
 lib/sbcl/asdf-install/test-passed
 lib/sbcl/asdf/asdf.fasl
@@ -92,26 +91,19 @@ lib/sbcl/sb-cltl2/sb-cltl2.fasl
 lib/sbcl/sb-cltl2/test-passed
 lib/sbcl/sb-cltl2/tests.fasl
 lib/sbcl/sb-cltl2/tests.lisp
+lib/sbcl/sb-cover/.cvsignore
 lib/sbcl/sb-cover/CVS/Repository
 lib/sbcl/sb-cover/CVS/Root
 lib/sbcl/sb-cover/CVS/Entries
 lib/sbcl/sb-cover/sb-cover.texinfo
 lib/sbcl/sb-cover/cover.lisp
 lib/sbcl/sb-cover/Makefile
-lib/sbcl/sb-cover/test-output/cover-index.html
-lib/sbcl/sb-cover/test-output/_usr_pkgsrc_local_sbcl-9_work_sbcl-1_0_6_contrib_sb-cover_test-data-2_lisp.html
-lib/sbcl/sb-cover/test-output/_stuff_sbcl_contrib_sb-cover_test-data-1_lisp.html
-lib/sbcl/sb-cover/test-output/_stuff_sbcl_contrib_sb-cover_test-data-2_lisp.html
-lib/sbcl/sb-cover/test-output/_usr_pkgsrc_local_sbcl-9_work_sbcl-1_0_6_contrib_sb-cover_test-data-1_lisp.html
 lib/sbcl/sb-cover/sb-cover.asd
 lib/sbcl/sb-cover/test-data-1.lisp
 lib/sbcl/sb-cover/test-data-2.lisp
 lib/sbcl/sb-cover/tests.lisp
 lib/sbcl/sb-cover/cover.fasl
-lib/sbcl/sb-cover/tests.fasl
 lib/sbcl/sb-cover/sb-cover.fasl
-lib/sbcl/sb-cover/test-data-1.fasl
-lib/sbcl/sb-cover/test-data-2.fasl
 lib/sbcl/sb-cover/test-passed
 lib/sbcl/sb-executable/sb-executable.fasl
 lib/sbcl/sb-grovel/.cvsignore
@@ -169,6 +161,7 @@ lib/sbcl/sb-posix/posix-tests.fasl
 lib/sbcl/sb-posix/posix-tests.lisp
 lib/sbcl/sb-posix/sb-posix.asd
 lib/sbcl/sb-posix/sb-posix.fasl
+lib/sbcl/sb-posix/sb-posix.texinfo
 lib/sbcl/sb-posix/test-lab
 lib/sbcl/sb-posix/test-passed
 lib/sbcl/sb-rotate-byte/.cvsignore
@@ -270,6 +263,8 @@ share/doc/sbcl/SUPPORT
 @dirrm lib/sbcl/sb-grovel/CVS
 @dirrm lib/sbcl/sb-grovel
 @dirrm lib/sbcl/sb-executable
+@dirrm lib/sbcl/sb-cover/CVS
+@dirrm lib/sbcl/sb-cover
 @dirrm lib/sbcl/sb-cltl2/CVS
 @dirrm lib/sbcl/sb-cltl2
 @dirrm lib/sbcl/sb-bsd-sockets/CVS
