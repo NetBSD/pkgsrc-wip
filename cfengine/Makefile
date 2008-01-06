@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2007/11/17 10:26:00 cheusov Exp $
-# $Id: Makefile,v 1.11 2007/11/17 10:26:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/06 13:31:57 cheusov Exp $
+# $Id: Makefile,v 1.12 2008/01/06 13:31:57 cheusov Exp $
 
 .include "Makefile.common"
 
@@ -18,6 +18,8 @@ BUILD_DEFS+=		IPV6_READY
 
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4:Q}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 share/examples/cfengine
 
 RCD_SCRIPTS=		cfexecd cfservd cfenvd
 
@@ -47,9 +49,7 @@ BUILDLINK_DEPMETHOD.openssl=build
 .endif
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX:Q}/man/man8
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/*.8 ${PREFIX:Q}/man/man8
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/cfengine
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/*.8 ${PREFIX:Q}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC:Q}/inputs/*.example \
 		${PREFIX:Q}/share/examples/cfengine/
 	${INSTALL_DATA_DIR} ${VARBASE:Q}/cfengine/inputs
