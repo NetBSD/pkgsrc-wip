@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/31 09:38:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/06 11:30:00 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.9.0
@@ -21,6 +21,7 @@ DOC_FILES=		README NEWS ChangeLog
 
 MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MKCATPAGES=no
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 post-install:
 .for i in ${DOC_FILES}
