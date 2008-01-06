@@ -1,54 +1,54 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/06 13:22:17 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/06 20:52:16 netcap Exp $
 bin/clisp
-lib/${PKGNAME}/base/calls.o
-lib/${PKGNAME}/base/gettext.o
-lib/${PKGNAME}/base/libnoreadline.a
-lib/${PKGNAME}/base/lisp.a
-lib/${PKGNAME}/base/lisp.run
-lib/${PKGNAME}/base/lispinit.mem
-lib/${PKGNAME}/base/localcharset.o
-lib/${PKGNAME}/base/makevars
-lib/${PKGNAME}/base/modules.h
-lib/${PKGNAME}/base/modules.o
-lib/${PKGNAME}/base/readline.o
-lib/${PKGNAME}/base/regexi.o
-lib/${PKGNAME}/base/regexp.dvi
-lib/${PKGNAME}/base/uniname.o
-lib/${PKGNAME}/base/width.o
-lib/${PKGNAME}/clisp-link
-lib/${PKGNAME}/data/Symbol-Table.text
-lib/${PKGNAME}/data/UnicodeDataFull.txt
-${bdb}lib/${PKGNAME}/full/bdb.o
-lib/${PKGNAME}/full/calls.o
-${mit-clx}lib/${PKGNAME}/full/clx.o
-${new-clx}lib/${PKGNAME}/full/clx.o
-${pcre}lib/${PKGNAME}/full/cpcre.o
-${fastcgi}lib/${PKGNAME}/full/fastcgi.o
-${fastcgi}lib/${PKGNAME}/full/fastcgi_wrappers.o
-lib/${PKGNAME}/full/gettext.o
-${gdbm}lib/${PKGNAME}/full/gdbm.o
-${gtk2}lib/${PKGNAME}/full/gtk.o
-lib/${PKGNAME}/full/libnoreadline.a
-lib/${PKGNAME}/full/lisp.a
-lib/${PKGNAME}/full/lisp.run
-lib/${PKGNAME}/full/lispinit.mem
-lib/${PKGNAME}/full/localcharset.o
-lib/${PKGNAME}/full/makevars
-lib/${PKGNAME}/full/modules.h
-lib/${PKGNAME}/full/modules.o
-${pgsql}lib/${PKGNAME}/full/postgresql.o
-${rawsock}lib/${PKGNAME}/full/rawsock.o
-lib/${PKGNAME}/full/readline.o
-lib/${PKGNAME}/full/regexi.o
-lib/${PKGNAME}/full/regexp.dvi
-lib/${PKGNAME}/full/uniname.o
-lib/${PKGNAME}/full/width.o
-${wildcard}lib/${PKGNAME}/full/wildcard.dvi
-${wildcard}lib/${PKGNAME}/full/wildcard.o
-${zlib}lib/${PKGNAME}/full/zlib.o
-lib/${PKGNAME}/linkkit/clisp.h
-lib/${PKGNAME}/linkkit/modprep.lisp
-lib/${PKGNAME}/linkkit/modules.c
+lib/clisp/base/calls.o
+lib/clisp/base/gettext.o
+lib/clisp/base/libnoreadline.a
+lib/clisp/base/lisp.a
+lib/clisp/base/lisp.run
+lib/clisp/base/lispinit.mem
+lib/clisp/base/localcharset.o
+lib/clisp/base/makevars
+lib/clisp/base/modules.h
+lib/clisp/base/modules.o
+lib/clisp/base/readline.o
+lib/clisp/base/regexi.o
+lib/clisp/base/regexp.dvi
+lib/clisp/base/uniname.o
+lib/clisp/base/width.o
+lib/clisp/clisp-link
+lib/clisp/data/Symbol-Table.text
+lib/clisp/data/UnicodeDataFull.txt
+${bdb}lib/clisp/full/bdb.o
+lib/clisp/full/calls.o
+${mit-clx}lib/clisp/full/clx.o
+${new-clx}lib/clisp/full/clx.o
+${pcre}lib/clisp/full/cpcre.o
+${fastcgi}lib/clisp/full/fastcgi.o
+${fastcgi}lib/clisp/full/fastcgi_wrappers.o
+lib/clisp/full/gettext.o
+${gdbm}lib/clisp/full/gdbm.o
+${gtk2}lib/clisp/full/gtk.o
+lib/clisp/full/libnoreadline.a
+lib/clisp/full/lisp.a
+lib/clisp/full/lisp.run
+lib/clisp/full/lispinit.mem
+lib/clisp/full/localcharset.o
+lib/clisp/full/makevars
+lib/clisp/full/modules.h
+lib/clisp/full/modules.o
+${pgsql}lib/clisp/full/postgresql.o
+${rawsock}lib/clisp/full/rawsock.o
+lib/clisp/full/readline.o
+lib/clisp/full/regexi.o
+lib/clisp/full/regexp.dvi
+lib/clisp/full/uniname.o
+lib/clisp/full/width.o
+${wildcard}lib/clisp/full/wildcard.dvi
+${wildcard}lib/clisp/full/wildcard.o
+${zlib}lib/clisp/full/zlib.o
+lib/clisp/linkkit/clisp.h
+lib/clisp/linkkit/modprep.lisp
+lib/clisp/linkkit/modules.c
 man/man1/clisp.1
 share/${PKGNAME}/emacs/clhs.el
 share/${PKGNAME}/emacs/clisp-coding.el
@@ -93,8 +93,8 @@ share/locale/ru/LC_MESSAGES/clisplow.mo
 @dirrm share/doc/${PKGNAME}
 @dirrm share/${PKGNAME}/vim
 @dirrm share/${PKGNAME}/emacs
-@dirrm lib/${PKGNAME}/linkkit
-@dirrm lib/${PKGNAME}/full
-@dirrm lib/${PKGNAME}/data
-@dirrm lib/${PKGNAME}/base
-@dirrm lib/${PKGNAME}
+@dirrm lib/clisp/linkkit
+@dirrm lib/clisp/full
+@dirrm lib/clisp/data
+@dirrm lib/clisp/base
+@dirrm lib/clisp
