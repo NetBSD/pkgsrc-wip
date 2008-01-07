@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/07 02:31:49 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/07 10:24:26 netcap Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -33,7 +33,6 @@ UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-dynamic-ffi
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
