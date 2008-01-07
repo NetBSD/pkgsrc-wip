@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+$NetBSD: patch-ac,v 1.2 2008/01/07 20:37:08 pmatias Exp $
 
---- etc/Makefile.orig	2007-09-27 13:23:19.000000000 -0300
+--- etc/Makefile.orig	2008-01-03 16:24:17.000000000 -0200
 +++ etc/Makefile
 @@ -24,5 +24,4 @@ include $(TOPDIR)/build/rules.mk
  ######################################

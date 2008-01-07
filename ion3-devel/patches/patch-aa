@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/07 20:37:08 pmatias Exp $
 
---- system.mk.orig	2007-09-27 13:23:35.000000000 -0300
+--- system.mk.orig	2008-01-03 16:24:31.000000000 -0200
 +++ system.mk
-@@ -7,7 +7,7 @@
- ## Installation paths
- ##
+@@ -8,7 +8,7 @@
  
+ # Installation path prefix. Unless you know what you're doing, the default
+ # of /usr/local is likely the correct choice.
 -PREFIX=/usr/local
 +PREFIX=@PREFIX@
  
  # Unless you are creating a package conforming to some OS's standards, you
  # probably do not want to modify the following directories:
-@@ -15,11 +15,12 @@ PREFIX=/usr/local
+@@ -16,11 +16,12 @@ PREFIX=/usr/local
  # Main binaries
  BINDIR=$(PREFIX)/bin
  # Configuration .lua files
@@ -25,16 +25,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
  # Some documents
  DOCDIR=$(PREFIX)/share/doc/ion3
  # Nothing at the moment
-@@ -47,7 +48,7 @@ LOCALEDIR=$(PREFIX)/share/locale
- #PRELOAD_MODULES=1
+@@ -50,7 +51,7 @@ LOCALEDIR=$(PREFIX)/share/locale
  
- # Flags to link with libdl.
+ # Flags to link with libdl. Even if PRELOAD_MODULES=1, you may need this
+ # setting (for e.g. Lua, when not instructed by pkg-config).
 -DL_LIBS=-ldl
 +DL_LIBS=
  
  
  ##
-@@ -56,8 +57,8 @@ DL_LIBS=-ldl
+@@ -59,8 +60,8 @@ DL_LIBS=-ldl
  
  # If you have installed Lua 5.1 from the official tarball without changing
  # paths, this should do it.
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
  LUA_INCLUDES = -I$(LUA_DIR)/include
  LUA=$(LUA_DIR)/bin/lua
  LUAC=$(LUA_DIR)/bin/luac
-@@ -78,7 +79,7 @@ X11_PREFIX=/usr/X11R6
+@@ -82,7 +83,7 @@ X11_PREFIX=/usr/X11R6
  # SunOS/Solaris
  #X11_PREFIX=/usr/openwin
  
@@ -54,12 +54,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
  X11_INCLUDES=-I$(X11_PREFIX)/include
  
  # XFree86 libraries up to 4.3.0 have a bug that can cause a segfault.
-@@ -112,7 +113,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
+@@ -110,7 +111,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
  #DEFINES += -DCF_NO_LOCALE -DCF_NO_GETTEXT
  
- # On some other systems you may something like this:
+ # On some other systems you may need to explicitly link against libintl.
 -#EXTRA_LIBS += -lintl
 +EXTRA_LIBS += -lintl
- #EXTRA_INCLUDES +=
- 
- # clock_gettime for monotonic time
+ # You may also need to give the location of its headers. The following
+ # should work on Mac OS X (which needs the above option as well) with
+ # macports.

@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+$NetBSD: patch-ad,v 1.2 2008/01/07 20:37:08 pmatias Exp $
 
---- pwm/Makefile.orig	2007-09-27 13:23:20.000000000 -0300
+--- pwm/Makefile.orig	2008-01-03 16:24:17.000000000 -0200
 +++ pwm/Makefile
-@@ -69,5 +69,5 @@ _install:
- 	$(INSTALL) -m $(BIN_MODE) pwm3 $(BINDIR)
+@@ -73,5 +73,5 @@ _install:
+ 	$(INSTALLBIN) pwm3 $(BINDIR)
  	$(INSTALLDIR) $(PWM_ETCDIR)
  	for i in $(ETC); do \
 -		$(INSTALL) -m $(DATA_MODE) $$i $(PWM_ETCDIR); \

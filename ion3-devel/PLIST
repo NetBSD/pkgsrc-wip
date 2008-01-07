@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 01:50:07 pmatias Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/07 20:37:08 pmatias Exp $
 bin/ion3
 bin/pwm3
 lib/ion3/bin/ion-completefile
@@ -10,6 +10,7 @@ lib/ion3/lc/ioncore_ext.lc
 lib/ion3/lc/ioncore_luaext.lc
 lib/ion3/lc/ioncore_menudb.lc
 lib/ion3/lc/ioncore_misc.lc
+lib/ion3/lc/ioncore_quasiact.lc
 lib/ion3/lc/ioncore_tabnum.lc
 lib/ion3/lc/ioncore_wd.lc
 lib/ion3/lc/ioncore_winprops.lc
