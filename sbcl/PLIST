@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/06 12:35:17 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/07 02:49:08 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -162,7 +162,6 @@ lib/sbcl/sb-posix/posix-tests.lisp
 lib/sbcl/sb-posix/sb-posix.asd
 lib/sbcl/sb-posix/sb-posix.fasl
 lib/sbcl/sb-posix/sb-posix.texinfo
-lib/sbcl/sb-posix/test-lab
 lib/sbcl/sb-posix/test-passed
 lib/sbcl/sb-rotate-byte/.cvsignore
 lib/sbcl/sb-rotate-byte/CVS/Entries
