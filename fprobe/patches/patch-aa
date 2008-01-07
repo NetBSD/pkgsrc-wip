@@ -1,17 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2008/01/06 01:29:00 christian_gall Exp $
+$NetBSD: patch-aa,v 1.2 2008/01/07 13:32:40 christian_gall Exp $
 
---- src/fprobe.c.orig	2005-01-30 09:43:35.000000000 +0100
+--- src/fprobe.c.orig	2008-01-07 11:31:05.000000000 +0100
 +++ src/fprobe.c
-@@ -546,7 +546,12 @@ int put_into(struct Flow *flow, int flag
- 				&& (flown->sizeF >= flown->sizeP)) {
- 				/* All fragments received - flow reassembled */
- 				*flowpp = flown->next;
-+#if 0
-+				/* Do not unlock this mutex now, since it is unlocked later.
-+				 * Unlocking a mutex twice may lead to undefined behaviour and
-+				 * may generate a fatal error on some platforms */
- 				pthread_mutex_unlock(&flows_mutex[h]);
-+#endif
- #if ((DEBUG) & DEBUG_I)
- 				flows_total--;
- 				flows_fragmented--;
+@@ -561,6 +561,7 @@ int put_into(struct Flow *flow, int flag
+ 						, logbuf
+ #endif
+ 					);
++				pthread_mutex_lock(&flows_mutex[h]);
+ 			}
+ 		}
+ 		if (flag == MOVE_INTO) mem_free(flow);

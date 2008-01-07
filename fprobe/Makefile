@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/01/06 01:28:59 christian_gall Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/07 13:32:39 christian_gall Exp $
 #
 
 DISTNAME=		fprobe-1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fprobe/}
 EXTRACT_SUFX=		.tar.bz2
