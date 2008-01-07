@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/08/02 23:02:04 jukka Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/07 16:41:14 jukka Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
-
-.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	openssl
@@ -14,8 +12,15 @@ BUILDLINK_PACKAGES+=	openssl
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openssl
 
 .if !empty(OPENSSL_BUILDLINK3_MK:M+)
+
+.  include "../../mk/bsd.fast.prefs.mk"
+
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6m
-BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=0.9.8e
+.  if defined(USE_FEATURES.openssl) && !empty(USE_FEATURES.openssl:Mthreads)
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=0.9.7inb4
+.  else
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=0.9.7inb1
+.  endif
 #XXX FIXME when in pkgsrc...
 BUILDLINK_PKGSRCDIR.openssl?=	../../wip/openssl
 
