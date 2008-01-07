@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/24 08:00:36 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/01/07 09:55:17 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -725,7 +725,7 @@ share/kde4/servicetypes/kateplugin.desktop
 @dirrm share/kde/apps/kapptemplate/appframework/no-exe
 @dirrm share/kde/apps/kapptemplate/appframework
 @dirrm share/kde/apps/kapptemplate
-@dirrm share/kde/apps/kabc/formats
+@comment in kde: @dirrm share/kde/apps/kabc/formats
 @dirrm share/kde/apps/cervisiapart
 @dirrm share/kde/apps/cervisia
 @comment in kde: @dirrm share/kde/apps

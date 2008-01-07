@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/24 08:00:36 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/07 09:55:17 mwdavies Exp $
 include/gpgme++/context.h
 include/gpgme++/data.h
 include/gpgme++/decryptionresult.h
@@ -778,8 +778,8 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @dirrm share/kde/apps/libical/zoneinfo/Africa
 @dirrm share/kde/apps/libical/zoneinfo
 @dirrm share/kde/apps/libical
-@dirrm share/kde/apps/kabc/formats
-@dirrm share/kde/apps/kabc
+@comment in kde: @dirrm share/kde/apps/kabc/formats
+@comment in kde: @dirrm share/kde/apps/kabc
 @dirrm lib/gpgmepp
 @dirrm include/syndication/rss2
 @dirrm include/syndication/rdf
