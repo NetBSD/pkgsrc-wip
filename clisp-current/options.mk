@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2008/01/07 02:31:49 asau Exp $
+# $NetBSD: options.mk,v 1.7 2008/01/07 02:37:10 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
-PKG_SUPPORTED_OPTIONS+=		ffcall	# this option is essential for others to work
+# this option is essential for some others to work:
+PKG_SUPPORTED_OPTIONS+=		ffcall
+
 PKG_SUPPORTED_OPTIONS+=		pgsql gdbm bdb pcre rawsock pari fastcgi wildcard gtk2 zlib
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
@@ -21,7 +23,7 @@ PLIST_SUBST+=	${module}="@comment "
 .endif
 .endfor
 
-# ffcall is require for other options
+# ffcall is required for other options to work
 .if !empty(PKG_OPTIONS:Mpgsql)
 PKG_OPTIONS+=	ffcall
 .endif
@@ -42,6 +44,7 @@ CONFIGURE_ARGS+=	--with-module=gdbm
 .endif
 
 .if !empty(PKG_OPTIONS:Mbdb)
+# it requires version 4, not anything older
 CONFIGURE_ARGS+=	--with-module=berkeley-db
 .  include "../../databases/db4/buildlink3.mk"
 CPPFLAGS+=	-I${PREFIX}/include/db4
