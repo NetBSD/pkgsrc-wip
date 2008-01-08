@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2007/11/13 21:38:05 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/01/08 11:46:55 shattered Exp $
 bin/kplayer
 lib/kde3/libkplayerpart.la
+share/applications/kde/kplayer.desktop
 share/doc/kde/HTML/da/kplayer/basics.docbook
 share/doc/kde/HTML/da/kplayer/commands.docbook
 share/doc/kde/HTML/da/kplayer/common
@@ -33,6 +34,7 @@ share/doc/kde/HTML/en/kplayer/device-add.png
 share/doc/kde/HTML/en/kplayer/device-properties-advanced.png
 share/doc/kde/HTML/en/kplayer/device-properties-audio.png
 share/doc/kde/HTML/en/kplayer/device-properties-general.png
+share/doc/kde/HTML/en/kplayer/device-properties-subtitles.png
 share/doc/kde/HTML/en/kplayer/device-properties-video.png
 share/doc/kde/HTML/en/kplayer/dvd-bear.png
 share/doc/kde/HTML/en/kplayer/howto-bug-reporting.docbook
@@ -85,6 +87,7 @@ share/doc/kde/HTML/es/kplayer/basics.docbook
 share/doc/kde/HTML/es/kplayer/commands.docbook
 share/doc/kde/HTML/es/kplayer/common
 share/doc/kde/HTML/es/kplayer/configuration.docbook
+share/doc/kde/HTML/es/kplayer/dvd-bear.png
 share/doc/kde/HTML/es/kplayer/howto-bug-reporting.docbook
 share/doc/kde/HTML/es/kplayer/howto-compilation.docbook
 share/doc/kde/HTML/es/kplayer/howto-configuration.docbook
@@ -125,6 +128,8 @@ share/doc/kde/HTML/es/kplayer/settings-subtitles.png
 share/doc/kde/HTML/es/kplayer/settings-video.png
 share/doc/kde/HTML/es/kplayer/settings-volume.png
 share/doc/kde/HTML/es/kplayer/settings.docbook
+share/doc/kde/HTML/es/kplayer/shortcuts-configure.png
+share/doc/kde/HTML/es/kplayer/shortcuts-define.png
 share/doc/kde/HTML/it/kplayer/basics.docbook
 share/doc/kde/HTML/it/kplayer/commands.docbook
 share/doc/kde/HTML/it/kplayer/common
@@ -228,6 +233,11 @@ share/icons/hicolor/64x64/apps/kplayer.png
 share/icons/locolor/16x16/apps/kplayer.png
 share/icons/locolor/22x22/apps/kplayer.png
 share/icons/locolor/32x32/apps/kplayer.png
+share/kde/apps/konqueror/servicemenus/kplayer-actions.desktop
+share/kde/apps/konqueror/servicemenus/kplayer-directory.desktop
+share/kde/apps/konqueror/servicemenus/kplayer-next.desktop
+share/kde/apps/konqueror/servicemenus/kplayer-play-queue.desktop
+share/kde/apps/kplayer/COPYING
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/brightness.png
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/contrast.png
 share/kde/apps/kplayer/icons/hicolor/16x16/actions/fileopen.png
@@ -345,7 +355,6 @@ share/locale/zh_CN/LC_MESSAGES/kplayer.mo
 @dirrm share/kde/apps/kplayer/icons
 @dirrm share/kde/apps/kplayer
 @comment in kde: @dirrm share/kde/apps
-@dirrm share/kde/applnk/Multimedia
 @dirrm share/doc/kde/HTML/sv/kplayer
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/pt/kplayer
