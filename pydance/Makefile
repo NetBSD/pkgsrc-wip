@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/01/08 17:18:04 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2008/01/08 17:28:20 shattered Exp $
 #
 
 DISTNAME=		pydance-1.0.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://offload1.icculus.org/pyddr/
 
