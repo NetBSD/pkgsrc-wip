@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/01/07 10:24:26 netcap Exp $
+# $NetBSD: options.mk,v 1.9 2008/01/08 17:06:58 netcap Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS+=		pgsql gdbm bdb pcre rawsock pari fastcgi wildcard gtk2 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
 PKG_OPTIONS_GROUP.x11-bindings=	mit-clx new-clx
 
-PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock
+PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock zlib
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -24,7 +24,7 @@ PLIST_SUBST+=	${option}="@comment "
 .endfor
 
 # ffcall is required for other options to work
-.if !empty(PKG_OPTIONS:Mpgsql)
+.if !empty(PKG_OPTIONS:Mpgsql) && empty(PKG_OPTIONS:Mffcall)
 PKG_OPTIONS+=	ffcall
 .endif
 
@@ -73,11 +73,13 @@ CONFIGURE_ARGS+=	--with-module=fastcgi
 .if !empty(PKG_OPTIONS:Mnew-clx)
 CONFIGURE_ARGS+=	--with-module=clx/new-clx
 .  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXau/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmit-clx)
 CONFIGURE_ARGS+=	--with-module=clx/mit-clx
 .  include "../../x11/libX11/buildlink3.mk"
+.  include "../../x11/libXau/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
