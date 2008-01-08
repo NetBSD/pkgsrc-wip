@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/28 21:27:18 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/08 17:18:04 shattered Exp $
 bin/findbpm
 bin/pydance
 man/man1/findbpm.1
@@ -343,7 +343,6 @@ share/games/pydance/themes/gfx/64x64/vividesque.zip
 share/games/pydance/ui.py
 share/games/pydance/util.py
 @dirrm share/examples/pydance
-@dirrm share/games/pydance/songs
 @dirrm share/games/pydance/sound
 @dirrm share/games/pydance/images
 @dirrm share/games/pydance/themes/gfx/48x48/default

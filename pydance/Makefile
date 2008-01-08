@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/25 15:44:54 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/08 17:18:04 shattered Exp $
 #
 
 DISTNAME=		pydance-1.0.3
@@ -21,7 +21,7 @@ PYTHON_PATCH_SCRIPTS=	pydance.py
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup.py
-	mkdir ${EXAMPLESDIR:Q}
+	mkdir ${EXAMPLESDIR}
 	sed s,@PREFIX@,${PREFIX}, < ${WRKSRC}/pydance.posix.cfg > ${EXAMPLESDIR}/pydance.cfg
 
 .include "../../lang/python/application.mk"
