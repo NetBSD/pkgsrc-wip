@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/06/20 19:29:15 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/08 17:13:10 shattered Exp $
 #
 
 DISTNAME=		jbmgen-1.1.0
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		audio ruby
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbmgen/}
 
@@ -10,9 +11,8 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://jbmgen.sourceforge.net/
 COMMENT=		Archos Gmini playlist generator
 
-NO_BUILD=	yes
-REPLACE_RUBY_DIRS=	${WRKSRC}/.
-REPLACE_FILE_PAT=	jbmgen
+NO_BUILD=		yes
+REPLACE_RUBY=		jbmgen
 JBMGEN_FILES=		BinaryStuff.rb Dictionary.rb FileEntry.rb JBMFile.rb \
 			Path.rb Pointable.rb TreeNode.rb TreeNodeTypes.rb \
 			mp3info.rb
@@ -33,4 +33,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/jbmgen ${PREFIX}/bin
 
 .include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
