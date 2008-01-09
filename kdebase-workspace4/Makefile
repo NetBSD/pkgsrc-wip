@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/01/01 11:29:11 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/09 02:19:31 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -30,6 +30,8 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 
 CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
+CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/systemsettingsrc \
+			${PKG_SYSCONFDIR}/systemsettingsrc
 
 REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \

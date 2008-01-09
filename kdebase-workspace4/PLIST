@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/12/31 22:33:43 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/09 02:19:31 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -428,6 +428,7 @@ share/doc/kde/HTML/en/plasma/common
 share/doc/kde/HTML/en/plasma/index.cache.bz2
 share/doc/kde/HTML/en/plasma/index.docbook
 share/examples/kdebase-workspace4/ksysguarddrc
+share/examples/kdebase-workspace4/systemsettingsrc
 share/examples/rc.d/kdm
 share/icons/Daemon.png
 share/icons/NetBSD-flag.png

@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2008/01/09 02:19:31 mwdavies Exp $
+
+--- systemsettings/CMakeLists.txt.orig	2008-01-05 12:55:18.000000000 +1300
++++ systemsettings/CMakeLists.txt
+@@ -26,7 +26,7 @@ INSTALL( TARGETS systemsettings DESTINAT
+ ########### install files ###############
+ 
+ install( FILES systemsettings.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
+-install( FILES systemsettingsrc DESTINATION ${SYSCONF_INSTALL_DIR} )
++install( FILES systemsettingsrc DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/kdebase-workspace4 )
+ install( FILES systemsettingsui.rc DESTINATION ${DATA_INSTALL_DIR}/systemsettings )
+ 
+ 
