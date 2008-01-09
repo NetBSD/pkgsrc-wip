@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/08/19 18:19:36 ghen Exp $
+# $NetBSD: Makefile,v 1.36 2008/01/09 11:03:45 ghen Exp $
 
 JDK_VERSION=	1.4.2
 JDK_PATCHSET_VERSION=	8
@@ -18,6 +18,8 @@ COMMENT=		Java Development Kit 1.4.2
 
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Redistribution of source or binaries permitted only by license terms
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -167,17 +169,17 @@ post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${JAVA_HOME}
-	${INSTALL_DATA_DIR} ${JAVA_HOME}/jre/.systemPrefs
-	${TOUCH} ${JAVA_HOME}/jre/.systemPrefs/.system.lock
-	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.system.lock
-	${TOUCH} ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
-	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs
+	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
+	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
+	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
+	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
 	${INSTALL_DATA} ${FILESDIR}/cacerts \
-		${JAVA_HOME}/jre/lib/security/cacerts
+		${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
-#		${JAVA_HOME}/jre/javaws/cacerts
+#		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
