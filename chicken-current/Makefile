@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/07 18:07:12 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/09 11:18:53 netcap Exp $
 #
 
 DISTNAME=	chicken-2.732
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake makeinfo
 USE_LIBTOOL=	yes
+INFO_FILES=	yes
 UNLIMIT_RESOURCES=	datasize
 
 # FIXME: is it needed still? (asau)
