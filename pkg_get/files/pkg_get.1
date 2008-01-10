@@ -25,7 +25,7 @@
 .\" TODO
 .Op Fl r Ar release 
 .Ar command
-.Op Ar package-name
+.Op Ar package
 .Pp
 .Sh DESCRIPTION
 The
@@ -58,23 +58,27 @@ The default is from
 .\"
 The available commands are listed below.
 .Bl -tag -width Cm
-.It Cm check
+.It Cm check Ar package
+Checks if an installed package is up-to-date.
+Also checks if dependency files (e.g. libraries) exist.
+.It Cm checkall
 Checks if all installed packages are up-to-date.
-.It Cm depends
+Also checks if dependency files (e.g. libraries) exist.
+.It Cm depends Ar package
 Lists dependencies (and if already installed).
-.It Cm download
+.It Cm download Ar package
 Download single package.
-.It Cm downloadall
+.It Cm downloadall Ar package
 Download with dependencies unless already installed.
-.It Cm install
+.It Cm install Ar package
 Download (if needed) with dependencies and install.
-.It Cm installdepends
+.It Cm installdepends Ar package
 NOT IMPLEMENTED YET.
 Download (if needed) and install dependencies but not dependent.
 .It Cm list
 NOT IMPLEMENTED YET.
 List available packages.
-.It Cm show
+.It Cm show Ar package
 NOT IMPLEMENTED YET.
 .\" TODO: Maybe could be used for searching also?
 Show details for a package from database.
@@ -82,10 +86,17 @@ Show details for a package from database.
 Fetches
 .Xr pkg_summary 5
 database.
-.It Cm upgrade
+.It Cm upgrade Ar package
 NOT IMPLEMENTED YET.
 Intelligently upgrade an individual package.
 Only upgrade dependencies if required.
+.It Cm upgradeall
+NOT IMPLEMENTED YET. MAYBE RENAME THIS. OR MAYBE UPGRADE ALL AND
+NOT JUST USER-INSTALLED.
+Intelligently upgrade all user-installed installed packages.
+Automatically installed packages (as dependencies of other packages) are not
+upgraded.
+Only upgrades dependencies if required.
 .It Cm uptodate
 Checks if an installed package is up-to-date versus database.
 .El
