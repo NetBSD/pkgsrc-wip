@@ -36,7 +36,8 @@ if [ -z "$1" ] ; then
   echo 'depends -- lists dependencies (and if already installed)'
   echo download -- download single package
   echo downloadall -- download with dependencies unless already installed
-  echo check -- checks if all installed packages are up-to-date
+  echo check -- checks if an installed package is up-to-date
+  echo checkall -- checks if all installed packages are up-to-date
   echo 'install -- download (if needed) with dependencies and install'
 # TODO:
 #  echo 'show -- show details for a package from database'
@@ -99,11 +100,15 @@ fi
 #  grep ^PKGPATH=${pkgpath}$ ${CONFIG_DIR}/pkg_summary
 #done
 
+# TODO: this is broken
+# maybe use check for single and checkall to replaceall
+# and get rid of uptodate
 uptodate()
 {
 # TODO: use shell substitution instead
   p=`echo ${1} | sed -e 's,^\(.*\)-[^-]*$,\1,'`
   v=`echo ${1} | sed -e 's,^.*-\([^-]*\)$,\1,'`
+#echo   /usr/sbin/pkg_info -q -e "${p}>=${v}"
   /usr/sbin/pkg_info -q -e "${p}>=${v}" && return 0
   return 1
 }
@@ -318,6 +323,16 @@ if [ "$1" = "downloadall" -a -n "$2" ] ; then
 fi
 
 if [ "$1" = "check" ] ; then
+	if checkpkg "${2}" ; then
+		echo "${2} is not in the available database."
+	fi
+	result=`/usr/sbin/pkg_info -e "${2}"`
+	if [ $? -eq 1 ] ; then 
+		echo "${2} is not installed."
+	fi
+fi
+
+if [ "$1" = "checkall" ] ; then
 	/usr/sbin/pkg_info -a | cut -d " " -f 1 | while read pkg ; do
 		if checkpkg ${pkg} ; then
 			echo "Installed ${pkg} is not in the available database."
