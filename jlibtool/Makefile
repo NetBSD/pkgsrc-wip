@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/12/28 03:56:32 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/10 07:26:41 bsadewitz Exp $
 #
 
 DISTNAME=	jlibtool-1.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES+=		snprintf
+
+AUTO_MKDIRS=		yes
 
 do-extract:
 .   if !exists(${WRKSRC})
