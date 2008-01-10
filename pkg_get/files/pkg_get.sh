@@ -120,13 +120,15 @@ printdepends()
 
 	case "${1}" in
 	*[\*\?=\>\<\[]*)		# if package name contains pattern
-		existing=`echo ${1} | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
+		existing=`echo "${1}" | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
 #echo in pattern 1>&2
 		;;
 	*)
 		existing="${1}"
 		;;
 	esac
+
+#echo 1 is $1 and existing is $existing 1>&2
 
 #echo grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary
 	grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary | while read line ; do
@@ -177,7 +179,7 @@ download()
 
 	case "${1}" in
 	*[\*\?=\>\<\[]*)		# if package name contains pattern
-		existing=`echo ${1} | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
+		existing=`echo "${1}" | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
 #echo in pattern 1>&2
 		;;
 	*)
@@ -303,6 +305,7 @@ downloadall()
   # first get first package
   download "${1}"
   # and then get dependencies
+#echo printdepends "${1}*"
   printdepends "${1}*" | cut -d " " -f 4 | sort -u -f | while read _value ; do
 #echo "depends on $_value"
 
