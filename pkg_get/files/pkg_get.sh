@@ -313,7 +313,12 @@ downloadall()
 	if [ $? -eq 1 ] ; then
 		download "${_value}"
 	else
-		echo "$result (${_value}) is already installed, not downloaded."
+		echo -n "$result (${_value}) is already installed"
+		if [ -f "${result}${PKG_SUFX}" ] ; then
+			echo " and also already downloaded in ${CONFIG_DIR}/"
+		else
+			echo ", not downloaded."
+		fi
 	fi
   done
 
