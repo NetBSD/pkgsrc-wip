@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2008/01/10 21:09:36 cheusov Exp $
+lib/dbd/libdbdsqlite.la
