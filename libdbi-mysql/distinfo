@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2008/01/10 20:48:18 cheusov Exp $
+
+SHA1 (libdbi-drivers-0.8.2-1.tar.gz) = bc59ec84f93310674d5203e77661b580d54e1f73
+RMD160 (libdbi-drivers-0.8.2-1.tar.gz) = efa90eb9196566c5cba2cbb73cb93c506ce79622
+Size (libdbi-drivers-0.8.2-1.tar.gz) = 930395 bytes
