@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/01 10:52:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/01/10 00:47:27 mwdavies Exp $
 bin/juk
 bin/kmix
 bin/kmixctrl
@@ -17,7 +17,6 @@ include/libkcompactdisc/kcompactdisc.h
 lib/kde4/kcm_audiocd.so
 lib/kde4/kcm_cddb.so
 lib/kde4/kio_audiocd.so
-lib/kde4/kmix_panelapplet.so
 lib/kde4/libaudiocd_encoder_flac.so
 lib/kde4/libaudiocd_encoder_lame.so
 lib/kde4/libaudiocd_encoder_vorbis.so
@@ -98,7 +97,6 @@ share/kde/apps/juk/pics/yahoo_credit.png
 share/kde/apps/kconf_update/audiocd.upd
 share/kde/apps/kconf_update/kcmcddb-emailsettings.upd
 share/kde/apps/kconf_update/upgrade-metadata.sh
-share/kde/apps/kicker/applets/kmixapplet.desktop
 share/kde/apps/kmix/kmixui.rc
 share/kde/apps/kmix/pics/kmixdocked.png
 share/kde/apps/kmix/pics/kmixdocked_error.png
@@ -141,7 +139,6 @@ share/kde4/services/libkcddb.desktop
 @dirrm share/kde/apps/kmix/profiles
 @dirrm share/kde/apps/kmix/pics
 @dirrm share/kde/apps/kmix
-@comment in kde: @dirrm share/kde/apps/kicker/applets
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/juk/pics
 @dirrm share/kde/apps/juk
