@@ -112,17 +112,22 @@ printdepends()
 {
 	unset justname
 	unset depends
-# TODO what if this is a dependency without a > like  dash instead?
-	existing="${1%>*}"
-	if [ "${existing}" = "${1}" ] ; then
-# TODO: maybe should use a "case" to check for ">"?
-		existing=`echo ${1} | sed -e 's,^\([^[]*\)-[0-9[].*$,\1,'`
-	fi
-#echo grep -A 500 "^PKGNAME=${existing}-[0-9]" ${CONFIG_DIR}/pkg_summary
-	grep -A 500 "^PKGNAME=${existing}-[0-9]" ${CONFIG_DIR}/pkg_summary | while read line ; do
+
+	case "${1}" in
+	*[\*\?=\>\<\[]*)		# if package name contains pattern
+		existing=`echo ${1} | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
+#echo in pattern 1>&2
+		;;
+	*)
+		existing="${1}"
+		;;
+	esac
+
+#echo grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary
+	grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary | while read line ; do
 		var=${line%%=*}
 		value=${line#*=}
-#echo line is "$line" var is "$var" and value is "$value"
+#echo line is "$line" var is "$var" and value is "$value" 1>&2
 
 #		if [ -z "${line}" ] ; then
 #		# blank line between records
@@ -132,9 +137,9 @@ printdepends()
 		case $var in
 
 		PKGNAME)
-#echo			if ${PKG_ADMIN} pmatch "${1}" "${value}"
+#echo			if ${PKG_ADMIN} pmatch "${1}" "${value}" 1>&2
 			if ${PKG_ADMIN} pmatch "${1}" "${value}" ; then
-#echo here
+#echo here 1>&2
 				pkgname="${value}"
 				justname=${value%-*}
 				version=${value##*-}
@@ -164,26 +169,35 @@ download()
 	cd ${CONFIG_DIR}
 	unset justname
 	unset depends
-	existing=${1%>*}
-	if [ "${existing}" = "${1}" ] ; then
-# TODO: maybe should use a "case" to check for ">"?
-		existing=`echo ${1} | sed -e 's,^\([^[]*\)-[0-9[].*$,\1,'`
-	fi
-	grep -A 500 "^PKGNAME=${existing}-[0-9]" ${CONFIG_DIR}/pkg_summary | while read line ; do
+
+	case "${1}" in
+	*[\*\?=\>\<\[]*)		# if package name contains pattern
+		existing=`echo ${1} | sed -e 's,^\([^][>=*?<]*\).*$,\1,'`
+#echo in pattern 1>&2
+		;;
+	*)
+		existing="${1}"
+		;;
+	esac
+
+#echo 1 is $1 and existing is $existing 1>&2
+	grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary | while read line ; do
 		var=${line%%=*}
 		value=${line#*=}
 
 		case $var in
 
 		PKGNAME)
-#echo			if ${PKG_ADMIN} pmatch "${existing}-[0-9]*" "${value}"
-			if ${PKG_ADMIN} pmatch "${existing}-[0-9]*" "${value}" ; then
+#echo			if ${PKG_ADMIN} pmatch "${existing}*" "${value}" 1>&2
+			if ${PKG_ADMIN} pmatch "${existing}*" "${value}" ; then
+#echo HERE 1>&2
 				pkgname="${value}"
 				if [ -f "${pkgname}${PKG_SUFX}" ] ; then
 					echo "${pkgname} is already downloaded in ${CONFIG_DIR}/"
 				else
 					ftp "${DOWNLOAD_URL}/${pkgname}${PKG_SUFX}"
 				fi
+				return
 			fi
 			;;
 		esac
@@ -197,7 +211,7 @@ checkpkg()
 {
 	justname=
 	existing=${1%-*}
-	grep -A 500 "^PKGNAME=${existing}-[0-9]" ${CONFIG_DIR}/pkg_summary | {
+	grep -A 500 "^PKGNAME=${existing}" ${CONFIG_DIR}/pkg_summary | {
 	while read line ; do
 
 		var=${line%%=*}
@@ -206,7 +220,7 @@ checkpkg()
 		case $var in
 
 		PKGNAME)
-			if ${PKG_ADMIN} pmatch "${existing}-[0-9]*" "${value}" ; then
+			if ${PKG_ADMIN} pmatch "${existing}*" "${value}" ; then
 				pkgname=$value
 				justname=${value%-*}
 				version=${value##*-}
@@ -230,9 +244,15 @@ checkpkg()
 
 #		if [ -z "${var}" ] ; then
 		if [ "${justname}" = "${existing}" -a -z "${var}" ] ; then
-			result=`/usr/sbin/pkg_info -e "${justname}>=${version}"`
+#echo /usr/sbin/pkg_info -e "${justname}-${version}" 1>&2
+			result=`/usr/sbin/pkg_info -e "${justname}-${version}"`
 			if [ $? -eq 1 ] ; then 
-				echo "Available $pkgname is newer than installed $1"
+				result=`/usr/sbin/pkg_info -e "${justname}>${version}"`
+				if [ $? -eq 1 ] ; then 
+					echo "Available $pkgname is newer than installed $1"
+				else
+					echo "Installed $1 is newer than available $pkgname"
+				fi
 			else
 				echo "Installed $1 is up to date."
 			fi
@@ -257,7 +277,7 @@ fi
 # show the dependencies
 # NOTE: this turns the argument into a package pattern -[0-9]*
 if [ "$1" = "depends" -a -n "$2" ] ; then
-  printdepends "${2}-[0-9]*" | sort -u -f | while read _pkgname _depends _on _value ; do
+  printdepends "${2}*" | sort -u -f | while read _pkgname _depends _on _value ; do
 	echo -n "$_pkgname depends on $_value"
 	result=`/usr/sbin/pkg_info -e "${_value}"`
 	if [ $? -eq 1 ] ; then
@@ -278,7 +298,7 @@ downloadall()
   # first get first package
   download "${1}"
   # and then get dependencies
-  printdepends "${1}-[0-9]*" | cut -d " " -f 4 | sort -u -f | while read _value ; do
+  printdepends "${1}*" | cut -d " " -f 4 | sort -u -f | while read _value ; do
 #echo "depends on $_value"
 
 	result=`/usr/sbin/pkg_info -e "${_value}"`
