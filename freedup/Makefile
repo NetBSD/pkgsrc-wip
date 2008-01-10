@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/18 09:38:17 ahallmann Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/10 09:20:48 ahallmann Exp $
 #
 
 DISTNAME=	freedup-1.3-1-src
@@ -22,6 +22,6 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths+= 	pre-configure
 SUBST_MESSAGE.fix-paths+= 	Fixing absolute paths.
 SUBST_FILES.fix-paths=		freedup.h
-SUBST_SED.fix-paths=		-e 's,/usr/bin/,${PREFIX}/bin/g,g'
+SUBST_SED.fix-paths=		-e 's,/usr/bin/,${PREFIX}/bin/${GNU_PROGRAM_PREFIX:Q},g'
 
 .include "../../mk/bsd.pkg.mk"
