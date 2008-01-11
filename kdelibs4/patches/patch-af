@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2008/01/11 20:41:25 mwdavies Exp $
+
+--- ConfigureChecks.cmake.orig	2008-01-05 13:00:42.000000000 +1300
++++ ConfigureChecks.cmake
+@@ -157,6 +157,9 @@ if (UNIX)
+     endif (CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME MATCHES Darwin OR CMAKE_SYSTEM_NAME MATCHES GNU/FreeBSD)
+     if (HAVE_UTMPX)
+       set(utmp utmpx)
++      if (login_in_libutil)
++        check_library_exists(util loginx "" HAVE_LOGINX)
++      endif (login_in_libutil)
+     else (HAVE_UTMPX)
+       set(utmp utmp)
+     endif (HAVE_UTMPX)

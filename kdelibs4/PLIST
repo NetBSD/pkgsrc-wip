@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/24 01:22:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/01/11 20:41:25 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1146,7 +1146,6 @@ include/kio/previewjob.h
 include/kio/renamedialog.h
 include/kio/renamedialogplugin.h
 include/kio/renamedlg.h
-include/kio/safesite.h
 include/kio/scheduler.h
 include/kio/sessiondata.h
 include/kio/skipdialog.h
@@ -1699,6 +1698,7 @@ share/kde/apps/cmake/modules/FindKDEWIN32.cmake
 share/kde/apps/cmake/modules/FindKDEWIN_Packager.cmake
 share/kde/apps/cmake/modules/FindKNepomuk.cmake
 share/kde/apps/cmake/modules/FindKdcraw.cmake
+share/kde/apps/cmake/modules/FindKdeMultimedia.cmake
 share/kde/apps/cmake/modules/FindKdepim.cmake
 share/kde/apps/cmake/modules/FindKdepimLibs.cmake
 share/kde/apps/cmake/modules/FindKexiv2.cmake
@@ -1752,6 +1752,7 @@ share/kde/apps/cmake/modules/MacroAddCompileFlags.cmake
 share/kde/apps/cmake/modules/MacroAddFileDependencies.cmake
 share/kde/apps/cmake/modules/MacroAddLinkFlags.cmake
 share/kde/apps/cmake/modules/MacroAdditionalCleanFiles.cmake
+share/kde/apps/cmake/modules/MacroAppendIf.cmake
 share/kde/apps/cmake/modules/MacroBoolTo01.cmake
 share/kde/apps/cmake/modules/MacroEnsureOutOfSourceBuild.cmake
 share/kde/apps/cmake/modules/MacroEnsureVersion.cmake
@@ -1961,7 +1962,6 @@ share/kde/apps/kdeui/about/kde_infopage_rtl.css
 share/kde/apps/kdeui/about/top-left.png
 share/kde/apps/kdeui/about/top-middle.png
 share/kde/apps/kdeui/pics/aboutkde.png
-share/kde/apps/kdeui/pics/ktip-background.png
 share/kde/apps/kdeui/pics/ktip-bulb.png
 share/kde/apps/kdewidgets/pics/k3iconview.png
 share/kde/apps/kdewidgets/pics/k3listview.png
@@ -2017,6 +2017,9 @@ share/kde/apps/khtml/khtml_browser.rc
 share/kde/apps/kjava/kjava.jar
 share/kde/apps/kjava/kjava.policy
 share/kde/apps/kjava/pluginsinfo
+share/kde/apps/knewstuff/pics/ghns.png
+share/kde/apps/knewstuff/pics/ghns_star.png
+share/kde/apps/knewstuff/pics/ghns_star_gray.png
 share/kde/apps/ksgmltools2/customization/README
 share/kde/apps/ksgmltools2/customization/af/catalog
 share/kde/apps/ksgmltools2/customization/af/entities/fdl-notice.docbook
@@ -3738,6 +3741,8 @@ share/mime/packages/kde.xml
 @dirrm share/kde/apps/ksgmltools2/customization/af
 @dirrm share/kde/apps/ksgmltools2/customization
 @dirrm share/kde/apps/ksgmltools2
+@dirrm share/kde/apps/knewstuff/pics
+@dirrm share/kde/apps/knewstuff
 @dirrm share/kde/apps/kjava
 @dirrm share/kde/apps/khtml/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/khtml/icons/crystalsvg/22x22

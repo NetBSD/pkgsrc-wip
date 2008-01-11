@@ -1,0 +1,28 @@
+$NetBSD: patch-ah,v 1.1 2008/01/11 20:41:25 mwdavies Exp $
+
+--- kpty/kpty.cpp.orig	2008-01-05 13:00:20.000000000 +1300
++++ kpty/kpty.cpp
+@@ -457,7 +457,11 @@ void KPty::login(const char *user, const
+ # endif
+ 
+ # ifdef HAVE_LOGIN
++#  ifdef HAVE_LOGINX
++    ::loginx(&l_struct);
++#  else
+     ::login(&l_struct);
++#  endif
+ # else
+ #  ifdef HAVE_STRUCT_UTMP_UT_TYPE
+     l_struct.ut_type = USER_PROCESS;
+@@ -505,7 +509,11 @@ void KPty::logout()
+     }
+ # endif
+ # ifdef HAVE_LOGIN
++#  ifdef HAVE_LOGINX
++    ::logoutx(str_ptr, 0, DEAD_PROCESS);
++#  else
+     ::logout(str_ptr);
++#  endif
+ # else
+ #  ifdef HAVE_UTMPX
+     struct utmpx l_struct, *ut;
