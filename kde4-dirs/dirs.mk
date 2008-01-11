@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.6 2008/01/07 09:55:17 mwdavies Exp $
+# $NetBSD: dirs.mk,v 1.7 2008/01/11 20:21:19 mwdavies Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -54,6 +54,7 @@ KDE4_DIRS+=	share/kde
 KDE4_DIRS+=	share/kde/apps
 KDE4_DIRS+=	share/kde/apps/cmake
 KDE4_DIRS+=	share/kde/apps/cmake/modules
+KDE4_DIRS+=	share/kde/apps/color-schemes
 KDE4_DIRS+=	share/kde/apps/desktoptheme
 KDE4_DIRS+=	share/kde/apps/desktoptheme/default
 KDE4_DIRS+=	share/kde/apps/desktoptheme/default/widgets
