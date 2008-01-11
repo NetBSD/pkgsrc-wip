@@ -1,32 +1,15 @@
-# $NetBSD: Makefile.kde4,v 1.1.1.1 2007/12/12 03:03:57 mwdavies Exp $
+# $NetBSD: Makefile.kde4,v 1.2 2008/01/11 20:34:04 mwdavies Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
 # settings).
 
-MASTER_SITE_KDE_DEVEL+=       \
-        ftp://ftp.kde.org/pub/kde/unstable/ \
-        http://ftp.scarlet.be/pub/kde/unstable/ \
-        ftp://www.t.ring.gr.jp/pub/X/kde/unstable/ \
-        http://www.t.ring.gr.jp/archives/X/kde/unstable/ \
-        ftp://ftp.kddlabs.co.jp/pub/X/kde/unstable/ \
-        ftp://ftp.planetmirror.com.au/pub/kde/unstable/ \
-        http://public.planetmirror.com/pub/kde/unstable/ \
-        http://mirrors.isc.org/pub/kde/unstable/ \
-        ftp://ftp.oregonstate.edu/pub/kde/unstable/ \
-        ftp://ftp.gtlib.cc.gatech.edu/pub/kde/unstable/ \
-        ftp://kde.mirrors.tds.net/pub/kde/unstable/ \
-        ftp://gd.tuwien.ac.at/kde/unstable/ \
-        ftp://ftp.solnet.ch/mirror/KDE/unstable/ \
-        ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/unstable/ \
-        ftp://mirrors.dotsrc.org/kde/unstable/ \
-        ftp://ftp.fi.muni.cz/pub/kde/unstable/
-
 CATEGORIES+=	kde
-_KDE_VERSION=	3.97.0
-MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE_DEVEL:=3.97/src/kde-i18n/}
-MASTER_SITES?=	${MASTER_SITE_KDE_DEVEL:=3.97/src/}
+_KDE_VERSION=	4.0.0
+MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=4.0.0/src/kde-l10n/}
+MASTER_SITES?=	${MASTER_SITE_KDE:=4.0.0/src/}
 EXTRACT_SUFX?=	.tar.bz2
+PKGNAME?=	${DISTNAME:S/-4/4-4/}
 
 MAINTAINER?=	markd@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
