@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/12 10:27:03 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/11 21:09:15 mwdavies Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -128,12 +128,8 @@ share/kde/apps/kpackage/pics/slack.png
 share/kde/apps/kpackage/pics/snew.png
 share/kde/apps/kpackage/pics/supdated.png
 share/kde/apps/kpackage/pics/tick.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/add_group.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/add_user.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/delete_group.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/delete_user.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/edit_group.png
-share/kde/apps/kuser/icons/oxygen/22x22/actions/edit_user.png
+share/kde/apps/kuser/icons/oxygen/22x22/actions/user-group-delete.png
+share/kde/apps/kuser/icons/oxygen/22x22/actions/user-group-properties.png
 share/kde/apps/kuser/kuserui.rc
 share/kde/apps/kuser/pics/group.png
 share/kde/apps/kuser/pics/user.png

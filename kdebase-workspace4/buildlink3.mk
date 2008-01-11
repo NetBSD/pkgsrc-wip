@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/12/12 10:21:02 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/11 21:02:34 mwdavies Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 KDEBASE_WORKSPACE_BUILDLINK3_MK:=	${KDEBASE_WORKSPACE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	kdebase-workspace
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdebase-workspace
 
 .if ${KDEBASE_WORKSPACE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.kdebase-workspace+=	kdebase-workspace>=3.97.0
+BUILDLINK_API_DEPENDS.kdebase-workspace+=	kdebase-workspace4>=4.0.0
 BUILDLINK_PKGSRCDIR.kdebase-workspace?=	../../wip/kdebase-workspace4
 .endif	# KDEBASE_WORKSPACE_BUILDLINK3_MK
 
