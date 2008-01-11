@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 03:58:35 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/11 21:16:53 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -6,6 +6,7 @@ bin/kolourpaint4
 bin/kruler
 bin/ksnapshot
 bin/okular
+bin/xf86gammacfg
 include/okular/core/action.h
 include/okular/core/annotations.h
 include/okular/core/area.h
@@ -15,7 +16,6 @@ include/okular/core/fontinfo.h
 include/okular/core/form.h
 include/okular/core/generator.h
 include/okular/core/global.h
-include/okular/core/observer.h
 include/okular/core/okular_export.h
 include/okular/core/page.h
 include/okular/core/pagesize.h
@@ -31,6 +31,7 @@ include/okular/interfaces/printinterface.h
 lib/kde4/gsthumbnail.so
 lib/kde4/gvpart.so
 lib/kde4/kcm_kamera.so
+lib/kde4/kcm_kgamma.so
 lib/kde4/kio_kamera.so
 lib/kde4/kscanplugin.so
 lib/kde4/okularGenerator_comicbook.so
@@ -136,37 +137,55 @@ share/doc/kde/HTML/en/ksnapshot/preview.png
 share/doc/kde/HTML/en/ksnapshot/window.png
 share/doc/kde/HTML/en/okular/common
 share/doc/kde/HTML/en/okular/configure.png
+share/doc/kde/HTML/en/okular/embedded-files-bar.png
 share/doc/kde/HTML/en/okular/index.cache.bz2
 share/doc/kde/HTML/en/okular/index.docbook
-share/icons/hicolor/128x128/apps/okular.png
 share/icons/hicolor/16x16/apps/kcolorchooser.png
+share/icons/hicolor/16x16/apps/kgamma.png
 share/icons/hicolor/16x16/apps/kolourpaint4.png
 share/icons/hicolor/16x16/apps/kruler.png
 share/icons/hicolor/16x16/apps/ksnapshot.png
-share/icons/hicolor/16x16/apps/okular.png
 share/icons/hicolor/22x22/apps/kcolorchooser.png
 share/icons/hicolor/22x22/apps/kolourpaint4.png
 share/icons/hicolor/22x22/apps/kruler.png
 share/icons/hicolor/22x22/apps/ksnapshot.png
-share/icons/hicolor/22x22/apps/okular.png
+share/icons/hicolor/32x32/apps/kgamma.png
 share/icons/hicolor/32x32/apps/kolourpaint4.png
 share/icons/hicolor/32x32/apps/kruler.png
 share/icons/hicolor/32x32/apps/ksnapshot.png
-share/icons/hicolor/32x32/apps/okular.png
+share/icons/hicolor/48x48/apps/kgamma.png
 share/icons/hicolor/48x48/apps/kolourpaint4.png
 share/icons/hicolor/48x48/apps/kruler.png
 share/icons/hicolor/48x48/apps/ksnapshot.png
-share/icons/hicolor/48x48/apps/okular.png
-share/icons/hicolor/64x64/apps/okular.png
 share/icons/hicolor/scalable/apps/kolourpaint4.svgz
 share/icons/hicolor/scalable/apps/ksnapshot.svgz
-share/icons/hicolor/scalable/apps/okular.svgz
+share/icons/oxygen/128x128/apps/gwenview.png
+share/icons/oxygen/128x128/apps/kruler.png
 share/icons/oxygen/16x16/actions/palette_color.png
 share/icons/oxygen/16x16/actions/palette_gray.png
 share/icons/oxygen/16x16/actions/palette_halftone.png
 share/icons/oxygen/16x16/actions/palette_lineart.png
+share/icons/oxygen/16x16/apps/gwenview.png
+share/icons/oxygen/16x16/apps/kruler.png
+share/icons/oxygen/22x22/apps/gwenview.png
+share/icons/oxygen/22x22/apps/kruler.png
+share/icons/oxygen/32x32/apps/gwenview.png
+share/icons/oxygen/32x32/apps/kruler.png
+share/icons/oxygen/48x48/apps/gwenview.png
+share/icons/oxygen/48x48/apps/kruler.png
+share/icons/oxygen/64x64/apps/gwenview.png
+share/icons/oxygen/64x64/apps/kruler.png
+share/icons/oxygen/scalable/apps/gwenview.svgz
+share/icons/oxygen/scalable/apps/kruler.svgz
 share/kde/apps/gvpart/gvpart.rc
 share/kde/apps/gwenview/gwenviewui.rc
+share/kde/apps/kgamma/pics/background.png
+share/kde/apps/kgamma/pics/cmyscale.png
+share/kde/apps/kgamma/pics/darkgrey.png
+share/kde/apps/kgamma/pics/greyscale.png
+share/kde/apps/kgamma/pics/lightgrey.png
+share/kde/apps/kgamma/pics/midgrey.png
+share/kde/apps/kgamma/pics/rgbscale.png
 share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_brush.png
 share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_color_eraser.png
 share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_color_picker.png
@@ -283,9 +302,6 @@ share/kde/apps/okular/pics/checkmark.png
 share/kde/apps/okular/pics/circle.png
 share/kde/apps/okular/pics/comment.png
 share/kde/apps/okular/pics/cross.png
-share/kde/apps/okular/pics/ghns.png
-share/kde/apps/okular/pics/ghns_star.png
-share/kde/apps/okular/pics/ghns_star_gray.png
 share/kde/apps/okular/pics/help.png
 share/kde/apps/okular/pics/insert.png
 share/kde/apps/okular/pics/key.png
@@ -295,12 +311,14 @@ share/kde/apps/okular/pics/paragraph.png
 share/kde/apps/okular/pics/rightarrow.png
 share/kde/apps/okular/pics/rightpointer.png
 share/kde/apps/okular/pics/star.png
-share/kde/apps/okular/pics/tool_eraser.png
-share/kde/apps/okular/pics/tool_hl_orange.png
-share/kde/apps/okular/pics/tool_hl_pink.png
+share/kde/apps/okular/pics/tool-note-inline.png
+share/kde/apps/okular/pics/tool-note.png
+share/kde/apps/okular/pics/tool_ellipse_okular.png
 share/kde/apps/okular/pics/tool_hl_yellow.png
 share/kde/apps/okular/pics/tool_ink_green.png
+share/kde/apps/okular/pics/tool_line_okular.png
 share/kde/apps/okular/pics/tool_note.png
+share/kde/apps/okular/pics/tool_polygon_okular.png
 share/kde/apps/okular/pics/uparrow.png
 share/kde/apps/okular/pics/upleftarrow.png
 share/kde/apps/okular/shell.rc
@@ -312,6 +330,7 @@ share/kde4/services/camera.protocol
 share/kde4/services/gsthumbnail.desktop
 share/kde4/services/gvpart.desktop
 share/kde4/services/kamera.desktop
+share/kde4/services/kgamma.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
 share/kde4/services/libokularGenerator_fb.desktop
@@ -358,10 +377,19 @@ share/kde4/servicetypes/okularGenerator.desktop
 @dirrm share/kde/apps/kolourpaint4/icons/hicolor
 @dirrm share/kde/apps/kolourpaint4/icons
 @dirrm share/kde/apps/kolourpaint4
+@dirrm share/kde/apps/kgamma/pics
+@dirrm share/kde/apps/kgamma
 @dirrm share/kde/apps/gwenview
 @dirrm share/kde/apps/gvpart
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/icons/oxygen/scalable/apps
+@comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/48x48/apps
+@comment in kde: @dirrm share/icons/oxygen/32x32/apps
+@comment in kde: @dirrm share/icons/oxygen/22x22/apps
+@comment in kde: @dirrm share/icons/oxygen/16x16/apps
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps

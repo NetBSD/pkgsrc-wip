@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2008/01/11 21:21:19 mwdavies Exp $
+
+--- ConfigureChecks.cmake.orig	2008-01-05 13:02:15.000000000 +1300
++++ ConfigureChecks.cmake
+@@ -17,7 +17,7 @@ macro_bool_to_01(X11_XShm_FOUND  HAVE_XS
+ 
+ MACRO_PUSH_REQUIRED_VARS()
+ SET(CMAKE_REQUIRED_INCLUDES ${CMAKE_REQUIRED_INCLUDES} /usr/include/cdda)
+-check_struct_member("struct cdrom_drive" "ioctl_device_name" "cdda_interface.h" CDDA_IOCTL_DEVICE_EXISTS)
++check_struct_member("struct cdrom_drive" "ioctl_device_name" "cdparanoia/cdda_interface.h" CDDA_IOCTL_DEVICE_EXISTS)
+ MACRO_POP_REQUIRED_VARS()
+ macro_bool_to_01(CDDA_IOCTL_DEVICE_EXISTS HAVE_CDDA_IOCTL_DEVICE)
+ 

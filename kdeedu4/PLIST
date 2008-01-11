@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/16 19:49:56 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/11 21:13:32 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/indi_celestron_gps
@@ -56,14 +56,22 @@ include/libkiten/kitenEdit.h
 include/libkiten/kromajiedit.h
 include/libkiten/libkitenexport.h
 include/libkiten/wordType.h
+include/marble/AbstractLayer.h
+include/marble/AbstractLayerContainer.h
+include/marble/AbstractLayerData.h
+include/marble/AbstractLayerInterface.h
 include/marble/AbstractScanlineTextureMapper.h
 include/marble/AutoSettings.h
+include/marble/BoundingBox.h
 include/marble/ClipPainter.h
 include/marble/CompassFloatItem.h
 include/marble/CrossHairFloatItem.h
 include/marble/DeferredFlag.h
 include/marble/FlatScanlineTextureMapper.h
-include/marble/GeoPoint.h
+include/marble/GeoDataFeature.h
+include/marble/GeoDataObject.h
+include/marble/GeoDataPlacemark.h
+include/marble/GeoDataPoint.h
 include/marble/GeoPolygon.h
 include/marble/GlobeScanlineTextureMapper.h
 include/marble/GridMap.h
@@ -91,6 +99,7 @@ include/marble/PlaceMarkManager.h
 include/marble/PlaceMarkPainter.h
 include/marble/Quaternion.h
 include/marble/ScreenPolygon.h
+include/marble/Serializable.h
 include/marble/TextureColorizer.h
 include/marble/TextureTile.h
 include/marble/TileCache.h
@@ -105,7 +114,7 @@ include/marble/VisiblePlaceMark.h
 include/marble/XmlHandler.h
 include/marble/global.h
 include/marble/marble_export.h
-lib/kde4/libkigpart.so
+lib/kde4/kigpart.so
 lib/kde4/libmarble_part.so
 lib/libSatLib.so
 lib/libSatLib.so.4
@@ -124,8 +133,8 @@ lib/libmarblewidget.so
 lib/libmarblewidget.so.4
 lib/libmarblewidget.so.4.0.0
 lib/libsbigudrv.so
+lib/libsbigudrv.so.1
 lib/libsbigudrv.so.1.0.0
-lib/libsbigudrv.so.4
 lib/libscience.so
 lib/libscience.so.4
 lib/libscience.so.4.0.0
@@ -203,7 +212,6 @@ share/doc/kde/HTML/en/kanagram/kanagram-hint.png
 share/doc/kde/HTML/en/kanagram/kanagram.png
 share/doc/kde/HTML/en/kanagram/newstuff-dialog.png
 share/doc/kde/HTML/en/kanagram/newstuff-settings.png
-share/doc/kde/HTML/en/kanagram/standard-fonts.png
 share/doc/kde/HTML/en/kanagram/vocab-editor.png
 share/doc/kde/HTML/en/kanagram/vocab-settings.png
 share/doc/kde/HTML/en/kbruch/checked.png
@@ -448,6 +456,25 @@ share/doc/kde/HTML/en/kturtle/programming-reference.docbook
 share/doc/kde/HTML/en/kturtle/translator-guide.docbook
 share/doc/kde/HTML/en/kturtle/using-kturtle.docbook
 share/doc/kde/HTML/en/kturtle/wrapping.png
+share/doc/kde/HTML/en/kwordquiz/common
+share/doc/kde/HTML/en/kwordquiz/index.cache.bz2
+share/doc/kde/HTML/en/kwordquiz/index.docbook
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-characters.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-appearance.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-characters.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-editor.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-quiz.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-languages.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-print-exam.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-print-flashcard.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-print-list.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-print-type.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-rowscolumns.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-sort.png
+share/doc/kde/HTML/en/kwordquiz/kwq-editor.png
+share/doc/kde/HTML/en/kwordquiz/kwq-flashcard.png
+share/doc/kde/HTML/en/kwordquiz/kwq-multiple.png
+share/doc/kde/HTML/en/kwordquiz/kwq-qanda.png
 share/doc/kde/HTML/en/marble/common
 share/doc/kde/HTML/en/marble/index.cache.bz2
 share/doc/kde/HTML/en/marble/index.docbook
@@ -524,6 +551,8 @@ share/icons/hicolor/128x128/apps/kpercentage.png
 share/icons/hicolor/128x128/apps/kstars.png
 share/icons/hicolor/128x128/apps/ktouch.png
 share/icons/hicolor/128x128/apps/kturtle.png
+share/icons/hicolor/128x128/apps/kwordquiz.png
+share/icons/hicolor/128x128/apps/marble.png
 share/icons/hicolor/128x128/mimetypes/application-x-kig.png
 share/icons/hicolor/16x16/apps/blinken.png
 share/icons/hicolor/16x16/apps/kalgebra.png
@@ -538,6 +567,8 @@ share/icons/hicolor/16x16/apps/kpercentage.png
 share/icons/hicolor/16x16/apps/kstars.png
 share/icons/hicolor/16x16/apps/ktouch.png
 share/icons/hicolor/16x16/apps/kturtle.png
+share/icons/hicolor/16x16/apps/kwordquiz.png
+share/icons/hicolor/16x16/apps/marble.png
 share/icons/hicolor/16x16/mimetypes/application-x-kig.png
 share/icons/hicolor/22x22/apps/blinken.png
 share/icons/hicolor/22x22/apps/kalzium.png
@@ -550,6 +581,8 @@ share/icons/hicolor/22x22/apps/klettres.png
 share/icons/hicolor/22x22/apps/kpercentage.png
 share/icons/hicolor/22x22/apps/ktouch.png
 share/icons/hicolor/22x22/apps/kturtle.png
+share/icons/hicolor/22x22/apps/kwordquiz.png
+share/icons/hicolor/22x22/apps/marble.png
 share/icons/hicolor/22x22/mimetypes/application-x-kig.png
 share/icons/hicolor/32x32/apps/blinken.png
 share/icons/hicolor/32x32/apps/kalgebra.png
@@ -564,6 +597,8 @@ share/icons/hicolor/32x32/apps/kpercentage.png
 share/icons/hicolor/32x32/apps/kstars.png
 share/icons/hicolor/32x32/apps/ktouch.png
 share/icons/hicolor/32x32/apps/kturtle.png
+share/icons/hicolor/32x32/apps/kwordquiz.png
+share/icons/hicolor/32x32/apps/marble.png
 share/icons/hicolor/32x32/mimetypes/application-x-kig.png
 share/icons/hicolor/48x48/apps/blinken.png
 share/icons/hicolor/48x48/apps/kalgebra.png
@@ -578,6 +613,8 @@ share/icons/hicolor/48x48/apps/kpercentage.png
 share/icons/hicolor/48x48/apps/kstars.png
 share/icons/hicolor/48x48/apps/ktouch.png
 share/icons/hicolor/48x48/apps/kturtle.png
+share/icons/hicolor/48x48/apps/kwordquiz.png
+share/icons/hicolor/48x48/apps/marble.png
 share/icons/hicolor/48x48/mimetypes/application-x-kig.png
 share/icons/hicolor/64x64/apps/blinken.png
 share/icons/hicolor/64x64/apps/kalgebra.png
@@ -588,6 +625,7 @@ share/icons/hicolor/64x64/apps/khangman.png
 share/icons/hicolor/64x64/apps/kig.png
 share/icons/hicolor/64x64/apps/kstars.png
 share/icons/hicolor/64x64/apps/kturtle.png
+share/icons/hicolor/64x64/apps/marble.png
 share/icons/hicolor/64x64/mimetypes/application-x-kig.png
 share/icons/hicolor/scalable/apps/blinken.svgz
 share/icons/hicolor/scalable/apps/kalzium.svgz
@@ -601,23 +639,67 @@ share/icons/hicolor/scalable/apps/kstars.svgz
 share/icons/hicolor/scalable/apps/ktouch.svgz
 share/icons/hicolor/scalable/apps/kturtle.svgz
 share/icons/hicolor/scalable/mimetypes/application-x-kig.svgz
+share/icons/oxygen/128x128/apps/kanagram.png
+share/icons/oxygen/128x128/apps/kbruch.png
+share/icons/oxygen/128x128/apps/kgeography.png
+share/icons/oxygen/128x128/apps/khangman.png
+share/icons/oxygen/128x128/apps/klettres.png
+share/icons/oxygen/128x128/apps/kpercentage.png
+share/icons/oxygen/128x128/apps/kstars.png
+share/icons/oxygen/128x128/apps/kwordquiz.png
 share/icons/oxygen/128x128/apps/parley.png
+share/icons/oxygen/16x16/apps/kanagram.png
+share/icons/oxygen/16x16/apps/kbruch.png
+share/icons/oxygen/16x16/apps/kgeography.png
+share/icons/oxygen/16x16/apps/khangman.png
+share/icons/oxygen/16x16/apps/klettres.png
+share/icons/oxygen/16x16/apps/kpercentage.png
+share/icons/oxygen/16x16/apps/kstars.png
+share/icons/oxygen/16x16/apps/kwordquiz.png
 share/icons/oxygen/16x16/apps/parley.png
-share/icons/oxygen/32x32/actions/kbruch_exercise_common.png
-share/icons/oxygen/32x32/actions/kbruch_exercise_compare.png
-share/icons/oxygen/32x32/actions/kbruch_exercise_conversion.png
-share/icons/oxygen/32x32/actions/kbruch_exercise_factorisation.png
+share/icons/oxygen/22x22/apps/kanagram.png
+share/icons/oxygen/22x22/apps/kbruch.png
+share/icons/oxygen/22x22/apps/kgeography.png
+share/icons/oxygen/22x22/apps/khangman.png
+share/icons/oxygen/22x22/apps/klettres.png
+share/icons/oxygen/22x22/apps/kpercentage.png
+share/icons/oxygen/22x22/apps/kstars.png
+share/icons/oxygen/22x22/apps/kwordquiz.png
+share/icons/oxygen/32x32/apps/kanagram.png
+share/icons/oxygen/32x32/apps/kbruch.png
+share/icons/oxygen/32x32/apps/kgeography.png
+share/icons/oxygen/32x32/apps/khangman.png
+share/icons/oxygen/32x32/apps/klettres.png
+share/icons/oxygen/32x32/apps/kpercentage.png
+share/icons/oxygen/32x32/apps/kstars.png
+share/icons/oxygen/32x32/apps/kwordquiz.png
 share/icons/oxygen/32x32/apps/parley.png
+share/icons/oxygen/48x48/apps/kanagram.png
+share/icons/oxygen/48x48/apps/kbruch.png
+share/icons/oxygen/48x48/apps/kgeography.png
+share/icons/oxygen/48x48/apps/khangman.png
+share/icons/oxygen/48x48/apps/klettres.png
+share/icons/oxygen/48x48/apps/kpercentage.png
+share/icons/oxygen/48x48/apps/kstars.png
+share/icons/oxygen/48x48/apps/kwordquiz.png
 share/icons/oxygen/48x48/apps/parley.png
-share/icons/oxygen/64x64/actions/kbruch_exercise_common.png
-share/icons/oxygen/64x64/actions/kbruch_exercise_compare.png
-share/icons/oxygen/64x64/actions/kbruch_exercise_conversion.png
-share/icons/oxygen/64x64/actions/kbruch_exercise_factorisation.png
+share/icons/oxygen/64x64/apps/kanagram.png
+share/icons/oxygen/64x64/apps/kbruch.png
+share/icons/oxygen/64x64/apps/kgeography.png
+share/icons/oxygen/64x64/apps/khangman.png
+share/icons/oxygen/64x64/apps/klettres.png
+share/icons/oxygen/64x64/apps/kpercentage.png
+share/icons/oxygen/64x64/apps/kstars.png
+share/icons/oxygen/64x64/apps/kwordquiz.png
 share/icons/oxygen/64x64/apps/parley.png
-share/icons/oxygen/scalable/actions/kbruch_exercise_common.svgz
-share/icons/oxygen/scalable/actions/kbruch_exercise_compare.svgz
-share/icons/oxygen/scalable/actions/kbruch_exercise_conversion.svgz
-share/icons/oxygen/scalable/actions/kbruch_exercise_factorisation.svgz
+share/icons/oxygen/scalable/apps/kanagram.svgz
+share/icons/oxygen/scalable/apps/kbruch.svgz
+share/icons/oxygen/scalable/apps/kgeography.svgz
+share/icons/oxygen/scalable/apps/khangman.svgz
+share/icons/oxygen/scalable/apps/klettres.svgz
+share/icons/oxygen/scalable/apps/kpercentage.svgz
+share/icons/oxygen/scalable/apps/kstars.svgz
+share/icons/oxygen/scalable/apps/kwordquiz.svgz
 share/icons/oxygen/scalable/apps/parley.svgz
 share/kde/apps/blinken/README.packagers
 share/kde/apps/blinken/fonts/steve.ttf
@@ -934,6 +1016,18 @@ share/kde/apps/kanagram/images/kanagram.svg
 share/kde/apps/kanagram/sounds/chalk.ogg
 share/kde/apps/kanagram/sounds/right.ogg
 share/kde/apps/kanagram/sounds/wrong.ogg
+share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_common.png
+share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_compare.png
+share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_conversion.png
+share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_factorisation.png
+share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_common.png
+share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_compare.png
+share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_conversion.png
+share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_factorisation.png
+share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_common.svgz
+share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_compare.svgz
+share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_conversion.svgz
+share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_factorisation.svgz
 share/kde/apps/kbruch/kbruchui.rc
 share/kde/apps/kgeography/afghanistan.kgm
 share/kde/apps/kgeography/afghanistan.png
@@ -1562,7 +1656,6 @@ share/kde/apps/kig/icons/hicolor/22x22/actions/line.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/linebyvector.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/locus.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/mirrorpoint.png
-share/kde/apps/kig/icons/hicolor/22x22/actions/move.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/paint.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/parabolabtp.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/parallel.png
@@ -1592,6 +1685,7 @@ share/kde/apps/kig/icons/hicolor/22x22/actions/testcontains.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/testdistance.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/testorthogonal.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/testparallel.png
+share/kde/apps/kig/icons/hicolor/22x22/actions/transform-move.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/translation.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/triangle.png
 share/kde/apps/kig/icons/hicolor/22x22/actions/vector.png
@@ -1644,7 +1738,6 @@ share/kde/apps/kig/icons/hicolor/32x32/actions/line.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/linebyvector.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/locus.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/mirrorpoint.png
-share/kde/apps/kig/icons/hicolor/32x32/actions/move.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/paint.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/parabolabtp.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/parallel.png
@@ -1674,6 +1767,7 @@ share/kde/apps/kig/icons/hicolor/32x32/actions/testcontains.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/testdistance.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/testorthogonal.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/testparallel.png
+share/kde/apps/kig/icons/hicolor/32x32/actions/transform-move.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/translation.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/triangle.png
 share/kde/apps/kig/icons/hicolor/32x32/actions/vector.png
@@ -1725,7 +1819,6 @@ share/kde/apps/kig/icons/hicolor/scalable/actions/line.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/linebyvector.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/locus.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/mirrorpoint.svgz
-share/kde/apps/kig/icons/hicolor/scalable/actions/move.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/paint.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/parabolabtp.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/parallel.svgz
@@ -1755,6 +1848,7 @@ share/kde/apps/kig/icons/hicolor/scalable/actions/testcontains.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/testdistance.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/testorthogonal.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/testparallel.svgz
+share/kde/apps/kig/icons/hicolor/scalable/actions/transform-move.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/translation.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/triangle.svgz
 share/kde/apps/kig/icons/hicolor/scalable/actions/vector.svgz
@@ -1877,27 +1971,27 @@ share/kde/apps/klettres/fr/syllab/ad-6.ogg
 share/kde/apps/klettres/fr/syllab/ad-7.ogg
 share/kde/apps/klettres/fr/syllab/ad-8.ogg
 share/kde/apps/klettres/fr/syllab/ad-9.ogg
-share/kde/apps/klettres/icons/crystalsvg/128x128/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/128x128/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/128x128/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/16x16/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/16x16/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/16x16/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/22x22/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/22x22/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/22x22/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/32x32/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/32x32/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/32x32/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/48x48/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/48x48/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/48x48/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/64x64/actions/klettres_desert.png
-share/kde/apps/klettres/icons/crystalsvg/64x64/actions/klettres_grownup.png
-share/kde/apps/klettres/icons/crystalsvg/64x64/actions/klettres_kids.png
-share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_desert.svgz
-share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_grownup.svgz
-share/kde/apps/klettres/icons/crystalsvg/scalable/actions/klettres_kids.svgz
+share/kde/apps/klettres/icons/hicolor/128x128/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/128x128/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/128x128/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/16x16/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/16x16/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/16x16/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/22x22/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/22x22/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/22x22/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/32x32/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/32x32/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/32x32/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/48x48/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/48x48/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/48x48/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/64x64/actions/klettres_desert.png
+share/kde/apps/klettres/icons/hicolor/64x64/actions/klettres_grownup.png
+share/kde/apps/klettres/icons/hicolor/64x64/actions/klettres_kids.png
+share/kde/apps/klettres/icons/hicolor/scalable/actions/klettres_desert.svgz
+share/kde/apps/klettres/icons/hicolor/scalable/actions/klettres_grownup.svgz
+share/kde/apps/klettres/icons/hicolor/scalable/actions/klettres_kids.svgz
 share/kde/apps/klettres/klettresui.rc
 share/kde/apps/klettres/nds.txt
 share/kde/apps/klettres/pics/desert/klettres_desert.svg
@@ -1964,11 +2058,6 @@ share/kde/apps/kstars/fitsviewer.rc
 share/kde/apps/kstars/geomap.png
 share/kde/apps/kstars/glossary.xml
 share/kde/apps/kstars/histogram.png
-share/kde/apps/kstars/icons/crystalsvg/128x128/actions/kstars_geo.png
-share/kde/apps/kstars/icons/crystalsvg/16x16/actions/kstars_geo.png
-share/kde/apps/kstars/icons/crystalsvg/32x32/actions/kstars_geo.png
-share/kde/apps/kstars/icons/crystalsvg/48x48/actions/kstars_geo.png
-share/kde/apps/kstars/icons/crystalsvg/64x64/actions/kstars_geo.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_cbound.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_clines.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_cnames.png
@@ -1978,11 +2067,45 @@ share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_horizon.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_mw.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_planets.png
 share/kde/apps/kstars/icons/hicolor/22x22/actions/kstars_stars.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_clines.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_cnames.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_deepsky.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_grid.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_horizon.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_mw.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_planets.png
+share/kde/apps/kstars/icons/hicolor/32x32/actions/kstars_stars.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_clines.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_cnames.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_deepsky.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_grid.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_horizon.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_mw.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_planets.png
+share/kde/apps/kstars/icons/hicolor/48x48/actions/kstars_stars.png
 share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_advanced.png
 share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_catalog.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_cbound.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_clines.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_cnames.png
 share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_colors.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_deepsky.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_grid.png
 share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_guides.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_horizon.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_mw.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_planets.png
 share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_solarsystem.png
+share/kde/apps/kstars/icons/hicolor/64x64/actions/kstars_stars.png
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_cbound.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_clines.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_cnames.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_deepsky.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_grid.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_horizon.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_mw.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_planets.svgz
+share/kde/apps/kstars/icons/hicolor/scalable/actions/kstars_stars.svgz
 share/kde/apps/kstars/image_url.dat
 share/kde/apps/kstars/info_url.dat
 share/kde/apps/kstars/jupiter.B0.vsop
@@ -2233,6 +2356,7 @@ share/kde/apps/ktouch/german.number.ktouch.xml
 share/kde/apps/ktouch/german2.ktouch.xml
 share/kde/apps/ktouch/german3.ktouch.xml
 share/kde/apps/ktouch/he.keyboard
+share/kde/apps/ktouch/he.keyboard.xml
 share/kde/apps/ktouch/hu.keyboard
 share/kde/apps/ktouch/hungarian.ktouch.xml
 share/kde/apps/ktouch/hungarian_expert.ktouch.xml
@@ -2304,7 +2428,6 @@ share/kde/apps/kwordquiz/examples/example.kvtml
 share/kde/apps/kwordquiz/examples/fill_in_the_blank.kvtml
 share/kde/apps/kwordquiz/examples/french_verbs.kvtml
 share/kde/apps/kwordquiz/examples/us_states_and_capitals.kvtml
-share/kde/apps/kwordquiz/icons/hicolor/128x128/apps/kwordquiz.png
 share/kde/apps/kwordquiz/icons/hicolor/128x128/mimetypes/kwordquiz_doc.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/dontknow.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/hint.png
@@ -2313,7 +2436,6 @@ share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/repeat.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/restart.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/shuffle.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/actions/sort_incr.png
-share/kde/apps/kwordquiz/icons/hicolor/16x16/apps/kwordquiz.png
 share/kde/apps/kwordquiz/icons/hicolor/16x16/mimetypes/kwordquiz_doc.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/dontknow.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/hint.png
@@ -2322,7 +2444,6 @@ share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/repeat.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/restart.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/shuffle.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/actions/sort_incr.png
-share/kde/apps/kwordquiz/icons/hicolor/22x22/apps/kwordquiz.png
 share/kde/apps/kwordquiz/icons/hicolor/22x22/mimetypes/kwordquiz_doc.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/dontknow.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/hint.png
@@ -2332,9 +2453,7 @@ share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/repeat.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/restart.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/shuffle.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/actions/sort_incr.png
-share/kde/apps/kwordquiz/icons/hicolor/32x32/apps/kwordquiz.png
 share/kde/apps/kwordquiz/icons/hicolor/32x32/mimetypes/kwordquiz_doc.png
-share/kde/apps/kwordquiz/icons/hicolor/48x48/apps/kwordquiz.png
 share/kde/apps/kwordquiz/icons/hicolor/48x48/mimetypes/kwordquiz_doc.png
 share/kde/apps/kwordquiz/icons/oxygen/128x128/actions/answer.png
 share/kde/apps/kwordquiz/icons/oxygen/128x128/actions/check.png
@@ -2804,6 +2923,7 @@ share/kde/apps/marble/data/svg/compass.svg
 share/kde/apps/marble/data/svg/marble-logo-72dpi.png
 share/kde/apps/marble/data/svg/marble-logo.png
 share/kde/apps/marble/data/svg/marble-logo.svg
+share/kde/apps/marble/marble.knsrc
 share/kde/apps/marble/marbleui.rc
 share/kde/apps/marble_part/marble_part.rc
 share/kde/apps/parley/examples/sample-de.kvtml
@@ -2931,22 +3051,17 @@ share/kde4/services/marble_part.desktop
 @dirrm share/kde/apps/kwordquiz/icons/oxygen/128x128
 @dirrm share/kde/apps/kwordquiz/icons/oxygen
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/48x48/mimetypes
-@dirrm share/kde/apps/kwordquiz/icons/hicolor/48x48/apps
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/48x48
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/apps/kwordquiz/icons/hicolor/32x32/apps
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/32x32
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/22x22/mimetypes
-@dirrm share/kde/apps/kwordquiz/icons/hicolor/22x22/apps
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/22x22
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/16x16/mimetypes
-@dirrm share/kde/apps/kwordquiz/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/16x16/actions
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/16x16
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/128x128/mimetypes
-@dirrm share/kde/apps/kwordquiz/icons/hicolor/128x128/apps
 @dirrm share/kde/apps/kwordquiz/icons/hicolor/128x128
 @dirrm share/kde/apps/kwordquiz/icons/hicolor
 @dirrm share/kde/apps/kwordquiz/icons
@@ -2956,22 +3071,17 @@ share/kde4/services/marble_part.desktop
 @dirrm share/kde/apps/kvtml
 @dirrm share/kde/apps/kturtle
 @dirrm share/kde/apps/ktouch
+@dirrm share/kde/apps/kstars/icons/hicolor/scalable/actions
+@dirrm share/kde/apps/kstars/icons/hicolor/scalable
 @dirrm share/kde/apps/kstars/icons/hicolor/64x64/actions
 @dirrm share/kde/apps/kstars/icons/hicolor/64x64
+@dirrm share/kde/apps/kstars/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/kstars/icons/hicolor/48x48
+@dirrm share/kde/apps/kstars/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kstars/icons/hicolor/32x32
 @dirrm share/kde/apps/kstars/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/kstars/icons/hicolor/22x22
 @dirrm share/kde/apps/kstars/icons/hicolor
-@dirrm share/kde/apps/kstars/icons/crystalsvg/64x64/actions
-@dirrm share/kde/apps/kstars/icons/crystalsvg/64x64
-@dirrm share/kde/apps/kstars/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/kstars/icons/crystalsvg/48x48
-@dirrm share/kde/apps/kstars/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/kstars/icons/crystalsvg/32x32
-@dirrm share/kde/apps/kstars/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/kstars/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kstars/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/kstars/icons/crystalsvg/128x128
-@dirrm share/kde/apps/kstars/icons/crystalsvg
 @dirrm share/kde/apps/kstars/icons
 @dirrm share/kde/apps/kstars
 @dirrm share/kde/apps/kpercentage/story
@@ -2981,21 +3091,21 @@ share/kde4/services/marble_part.desktop
 @dirrm share/kde/apps/klettres/pics/kids
 @dirrm share/kde/apps/klettres/pics/desert
 @dirrm share/kde/apps/klettres/pics
-@dirrm share/kde/apps/klettres/icons/crystalsvg/scalable/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/scalable
-@dirrm share/kde/apps/klettres/icons/crystalsvg/64x64/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/64x64
-@dirrm share/kde/apps/klettres/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/48x48
-@dirrm share/kde/apps/klettres/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/32x32
-@dirrm share/kde/apps/klettres/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/22x22
-@dirrm share/kde/apps/klettres/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/16x16
-@dirrm share/kde/apps/klettres/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/klettres/icons/crystalsvg/128x128
-@dirrm share/kde/apps/klettres/icons/crystalsvg
+@dirrm share/kde/apps/klettres/icons/hicolor/scalable/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/scalable
+@dirrm share/kde/apps/klettres/icons/hicolor/64x64/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/64x64
+@dirrm share/kde/apps/klettres/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/48x48
+@dirrm share/kde/apps/klettres/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/32x32
+@dirrm share/kde/apps/klettres/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/22x22
+@dirrm share/kde/apps/klettres/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/16x16
+@dirrm share/kde/apps/klettres/icons/hicolor/128x128/actions
+@dirrm share/kde/apps/klettres/icons/hicolor/128x128
+@dirrm share/kde/apps/klettres/icons/hicolor
 @dirrm share/kde/apps/klettres/icons
 @dirrm share/kde/apps/klettres/fr/syllab
 @dirrm share/kde/apps/klettres/fr/alpha
@@ -3038,6 +3148,14 @@ share/kde4/services/marble_part.desktop
 @dirrm share/kde/apps/kgeography/flags/australia
 @dirrm share/kde/apps/kgeography/flags
 @dirrm share/kde/apps/kgeography
+@dirrm share/kde/apps/kbruch/icons/oxygen/scalable/actions
+@dirrm share/kde/apps/kbruch/icons/oxygen/scalable
+@dirrm share/kde/apps/kbruch/icons/oxygen/64x64/actions
+@dirrm share/kde/apps/kbruch/icons/oxygen/64x64
+@dirrm share/kde/apps/kbruch/icons/oxygen/32x32/actions
+@dirrm share/kde/apps/kbruch/icons/oxygen/32x32
+@dirrm share/kde/apps/kbruch/icons/oxygen
+@dirrm share/kde/apps/kbruch/icons
 @dirrm share/kde/apps/kbruch
 @dirrm share/kde/apps/kanagram/sounds
 @dirrm share/kde/apps/kanagram/images
@@ -3078,6 +3196,7 @@ share/kde4/services/marble_part.desktop
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22/apps
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
 @comment in kde: @dirrm share/icons/oxygen/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
@@ -3097,6 +3216,7 @@ share/kde4/services/marble_part.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/parley
 @dirrm share/doc/kde/HTML/en/marble
+@dirrm share/doc/kde/HTML/en/kwordquiz
 @dirrm share/doc/kde/HTML/en/kturtle
 @dirrm share/doc/kde/HTML/en/ktouch
 @dirrm share/doc/kde/HTML/en/kstars

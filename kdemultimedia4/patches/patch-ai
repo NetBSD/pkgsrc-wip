@@ -1,18 +1,20 @@
-$NetBSD: patch-ai,v 1.1 2008/01/01 10:52:54 mwdavies Exp $
+$NetBSD: patch-ai,v 1.2 2008/01/11 21:21:19 mwdavies Exp $
 
---- kioslave/audiocd/plugins/lame/encoderlame.cpp.orig	2007-08-29 21:56:50.000000000 +1200
+--- kioslave/audiocd/plugins/lame/encoderlame.cpp.orig	2008-01-05 13:02:15.000000000 +1300
 +++ kioslave/audiocd/plugins/lame/encoderlame.cpp
-@@ -17,7 +17,13 @@
- */
- 
- #include <config.h>
-+#ifdef HAVE_MACHINE_ENDIAN_H
-+#include <machine/endian.h>
+@@ -27,11 +27,13 @@
+ #else
+ #ifdef HAVE_MACHINE_ENDIAN_H
+ #include <machine/endian.h>
+-#define __BYTE_ORDER _BYTE_ORDER
+-#define __LITTLE_ENDIAN _LITTLE_ENDIAN
+ #endif
+ #endif
+ #endif
++#if !defined(__BYTE_ORDER) && defined(_BYTE_ORDER)
 +#define __BYTE_ORDER _BYTE_ORDER
 +#define __LITTLE_ENDIAN _LITTLE_ENDIAN
-+#else
- #include <endian.h>
 +#endif
+ 
  #include "encoderlame.h"
  #include "audiocd_lame_encoder.h"
- 
