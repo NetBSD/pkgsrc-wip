@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/12/12 03:20:30 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/11 20:47:01 mwdavies Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEPIMLIBS_BUILDLINK3_MK:=	${KDEPIMLIBS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	kdepimlibs
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdepimlibs
 
 .if ${KDEPIMLIBS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.kdepimlibs+=	kdepimlibs>=3.96.1
+BUILDLINK_API_DEPENDS.kdepimlibs+=	kdepimlibs4>=4.0.0
 BUILDLINK_PKGSRCDIR.kdepimlibs?=	../../wip/kdepimlibs4
 .endif	# KDEPIMLIBS_BUILDLINK3_MK
 
