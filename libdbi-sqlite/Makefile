@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/01/10 21:09:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/11 22:43:16 cheusov Exp $
 #
 
 DISTNAME=	libdbi-drivers-0.8.2-1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://libdbi-drivers.sourceforge.net/
-COMMENT=	sqlite driver for libdbi, a database abstraction
+COMMENT=	SQLite driver for libdbi, a database abstraction
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
