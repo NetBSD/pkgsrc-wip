@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/11 07:16:03 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/11 08:50:02 asau Exp $
 #
 
 DISTNAME=		fricas-1.0.1-full
@@ -18,11 +18,13 @@ GNU_CONFIGURE=		yes
 #USE_LIBTOOL=		yes
 #CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
 USE_TOOLS+=		gmake gawk makeinfo
+BUILD_DEPENDS+=		noweb:../../devel/noweb
 #INFO_FILES=		yes
 
 USE_GNU_CONFIGURE_HOST=	no
+
 CONFIGURE_ARGS+=	--with-lisp=clisp --with-x=no
-BUILD_DEPENDS+=		clisp:../../lang/clisp
+BUILD_DEPENDS+=		clisp>=2.41:../../lang/clisp
 #CONFIGURE_ARGS+=	--with-lisp=sbcl --with-x=no
 
 USE_DESTDIR=		full
