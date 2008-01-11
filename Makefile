@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2744 2008/01/11 10:47:27 kristerw Exp $
+# $Id: Makefile,v 1.2745 2008/01/11 10:55:49 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -228,7 +228,6 @@ SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
-SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dnswalk
@@ -769,7 +768,6 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libhttpd
-SUBDIR+=	libixp
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
@@ -995,7 +993,6 @@ SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
-SUBDIR+=	oak
 SUBDIR+=	octave-nox11
 SUBDIR+=	ode
 SUBDIR+=	omniORB
