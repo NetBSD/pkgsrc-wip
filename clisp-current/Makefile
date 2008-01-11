@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/01/07 10:24:26 netcap Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/11 19:32:16 netcap Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -6,7 +6,7 @@ PKGNAME=	clisp-2.43 # needed because of cvs-package.mk
 CATEGORIES=	lang
 MASTER_SITES=	#
 
-MAINTAINER=	asau@users.sourceforge.net
+MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
