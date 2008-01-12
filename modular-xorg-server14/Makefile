@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/12 21:36:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/12 22:08:25 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.4
 PKGNAME=	modular-${DISTNAME}
@@ -67,7 +67,7 @@ BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.4
 BUILDLINK_API_DEPENDS.libxf86dga+=	libXxf86dga>=1.0.2
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.3
 BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.1
-BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
+BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.2
 
 post-extract:
 	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
