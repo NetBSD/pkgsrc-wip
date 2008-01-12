@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2745 2008/01/11 10:55:49 kristerw Exp $
+# $Id: Makefile,v 1.2746 2008/01/12 21:53:25 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1310,7 +1310,6 @@ SUBDIR+=	pike-core
 SUBDIR+=	pike-gdbm
 SUBDIR+=	pike-mime
 SUBDIR+=	pinball
-SUBDIR+=	pixman
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_fake
