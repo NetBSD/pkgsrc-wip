@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:30 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2008/01/12 23:34:12 thomasklausner Exp $
 #
 
 DISTNAME=		uniqueidentifier-0.2
@@ -12,7 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gborg.postgresql.org/project/uniqueidentifier/projdisplay.php
 COMMENT=		Allows PostgreSQL databases to use Global Unique Identifier (GUID)
 
-DEPENDS=		postgresql74-server>=7.4.1:../../databases/postgresql74-server
+DEPENDS=		postgresql82-server>=8.2:../../databases/postgresql82-server
 
 WRKSRC=			${PGSQL_CONTRIBSRC}/${DISTNAME:S/-0.2//}
 USE_TOOLS+=		gmake
