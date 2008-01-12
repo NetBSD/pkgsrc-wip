@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/13 21:25:15 absd Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/12 23:30:13 thomasklausner Exp $
 #
 
 DISTNAME=	AxKit-1.6.2
@@ -26,12 +26,8 @@ DEPENDS+=	p5-XML-Sablotron>=0.40:../../textproc/p5-XML-Sablotron
 DEPENDS+=	p5-Perl-Tidy>=20031021:../../devel/p5-Perl-Tidy
 
 .include "../../lang/perl5/module.mk"
-
 .include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	${BUILDLINK_API_DEPENDS.libxml2}
-
 .include "../../www/ap-perl/buildlink3.mk"
-DEPENDS+=	${BUILDLINK_API_DEPENDS.ap-perl}
 
 PERL5_PACKLIST=		auto/AxKit/.packlist
 
