@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/01/12 22:53:40 christian_gall Exp $
+
+--- softflowd.8.orig	2008-01-12 02:58:04.000000000 +0100
++++ softflowd.8
+@@ -188,6 +188,8 @@ This implies the 
+ and
+ .Fl 6
+ flags and turns on additional debugging output.
++.It Fl P
++Don't put the interface into promiscuous mode.
+ .It Fl h
+ Displays commandline usage information.
+ .It Fl L Ar hoplimit

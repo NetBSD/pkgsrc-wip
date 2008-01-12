@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/01/12 22:53:40 christian_gall Exp $
+
+--- softflowd.h.orig	2008-01-12 03:09:48.000000000 +0100
++++ softflowd.h
+@@ -34,7 +34,7 @@
+ # define PRIVDROP_USER		"nobody"
+ #endif
+ 
+-#define PRIVDROP_CHROOT_DIR	"/var/empty"
++#define PRIVDROP_CHROOT_DIR	"/var/chroot/softflowd"
+ 
+ /*
+  * Capture length for libpcap: Must fit the link layer header, plus 

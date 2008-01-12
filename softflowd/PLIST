@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2008/01/12 22:53:40 christian_gall Exp $
+man/man8/softflowctl.8
+man/man8/softflowd.8
+sbin/softflowctl
+sbin/softflowd
