@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/12 23:33:31 thomasklausner Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -18,7 +18,7 @@ DEPENDS+=		plotutils>=2.4.1:../../graphics/plotutils
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		freetype2>=2.1:../../graphics/freetype2
 DEPENDS+=		Mesa>=6.0:../../graphics/Mesa
-DEPENDS+=		ghostscript-gnu>=7.0:../../print/ghostscript-gnu
+DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
 
 USE_PKGLOCALEDIR=	yes
 
