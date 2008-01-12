@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/12 21:36:48 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.4
 PKGNAME=	modular-${DISTNAME}
@@ -87,7 +87,7 @@ pre-patch:
 # for GLX we already have the Mesa source
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
-.include "../../wip/pixman/buildlink3.mk"
+.include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
