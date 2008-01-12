@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/01/12 15:02:03 shattered Exp $
+$NetBSD: distinfo,v 1.6 2008/01/12 15:08:17 shattered Exp $
 
 SHA1 (pydance-1.0.3.tar.gz) = 62a3d11560a54b6e59427731f7843d5d7edeaf91
 RMD160 (pydance-1.0.3.tar.gz) = 8ce95c891174961176c11882f26f51baae531d55
@@ -6,4 +6,4 @@ Size (pydance-1.0.3.tar.gz) = 6531541 bytes
 SHA1 (patch-aa) = 0f75ddba339cee66702315c1671c27411f546bc4
 SHA1 (patch-ab) = 453d56b5dcbdbeb5bfe91343bce0a8a3525ded15
 SHA1 (patch-ac) = 03e3cd5e3a2c5bd2c80453422a863548764e2156
-SHA1 (patch-ad) = 8a403c973bfcae6637d7b2e74a70a1932484c3c0
+SHA1 (patch-ad) = eced930951395d3e714741252e7893ec7d2ec830
