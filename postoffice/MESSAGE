@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2006/10/03 15:14:00 elge Exp $
+$NetBSD: MESSAGE,v 1.6 2008/01/12 14:09:46 shattered Exp $
 
 - Run	mv ${SYSCONFBASE}/mailer.conf ${SYSCONFBASE}/mailer.conf.sendmail
 	cp ${PREFIX}/share/examples/postoffice/mailer.conf ${SYSCONFBASE}/mailer.conf
