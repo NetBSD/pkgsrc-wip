@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:37 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/12 23:20:56 thomasklausner Exp $
 #
 
 CATEGORIES=	databases math
@@ -11,7 +11,7 @@ COMMENT=	Generic R database interface
 R_PKGNAME=	Rdbi
 R_PKGVER=	0.1-2
 
-DEPENDS+=	postgresql74-lib>=7.4.3:../../databases/postgresql74-lib
+DEPENDS+=	postgresql82-client>=8.2.0:../../databases/postgresql82-client
 
 WRKSRC=		${WRKDIR}/Rdbi
 
