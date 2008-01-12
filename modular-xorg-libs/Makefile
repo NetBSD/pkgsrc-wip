@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/11/10 18:08:25 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/12 23:27:28 thomasklausner Exp $
 
 # probably a meta package is not needed
 # could just install the libX11 and others
@@ -27,10 +27,10 @@ DEPENDS+=	libXinerama>=1.0.1:../../x11/libXinerama
 DEPENDS+=	libXmu>=1.0.0:../../x11/libXmu
 DEPENDS+=	libXp>=1.0.0:../../x11/libXp
 DEPENDS+=	libXt>=0.99.2:../../x11/libXt
-DEPENDS+=	libXxf86misc>=1.0.0:../../wip/libXxf86misc
-DEPENDS+=	libXxf86vm>=1.0.0:../../wip/libXxf86vm
+DEPENDS+=	libXxf86misc>=1.0.0:../../x11/libXxf86misc
+DEPENDS+=	libXxf86vm>=1.0.0:../../x11/libXxf86vm
 DEPENDS+=	libxkbfile>=0.99.1:../../x11/libxkbfile
-DEPENDS+=	libxkbui>=1.0.1:../../wip/libxkbui
+DEPENDS+=	libxkbui>=1.0.1:../../x11/libxkbui
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
