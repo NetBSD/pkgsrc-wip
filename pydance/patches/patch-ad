@@ -1,3 +1,7 @@
+$NetBSD: patch-ad,v 1.2 2008/01/12 15:02:03 shattered Exp $
+
+Ignore StepMania mines in simfiles.  From #pyddr@freenode.
+
 --- fileparsers.py.orig      2005-04-04 16:49:22.000000000 -0400
 +++ fileparsers.py  2007-02-24 17:26:30.000000000 -0500
 @@ -597,19 +597,28 @@
