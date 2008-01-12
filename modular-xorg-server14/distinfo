@@ -1,21 +1,15 @@
-$NetBSD: distinfo,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+$NetBSD: distinfo,v 1.2 2008/01/12 23:00:05 tnn2 Exp $
 
 SHA1 (MesaLib-7.0.1.tar.bz2) = deb1002cf377ba8bd9407bd3cf573f8c8be31671
 RMD160 (MesaLib-7.0.1.tar.bz2) = b44fd8ebffd17aa72c3b6cca1c2924e66787aa78
 Size (MesaLib-7.0.1.tar.bz2) = 3343538 bytes
-SHA1 (xorg-server-1.4.tar.bz2) = 3aa6327f4def4d33ce2a8d6d7587295db231ab6d
-RMD160 (xorg-server-1.4.tar.bz2) = 74a274c880a9508be26b76acdb504a8e88b63a46
-Size (xorg-server-1.4.tar.bz2) = 6179392 bytes
-SHA1 (patch-aa) = 7d87ef1071616cfe6ce1ee2b0f3e90359058a26f
+SHA1 (xorg-server-1.4.0.90.tar.bz2) = 7c492ac32bd83b521f5c016e4728fccf9cba55db
+RMD160 (xorg-server-1.4.0.90.tar.bz2) = 181b3c682710265df3c6ed30e164be9290f1f39e
+Size (xorg-server-1.4.0.90.tar.bz2) = 6315011 bytes
 SHA1 (patch-ab) = 7f4fda050d8a7af1aee0269dfb9ade92e4ee3b6a
-SHA1 (patch-ac) = cf686e5b76ab1f536672443285efe924926cb74c
-SHA1 (patch-ad) = 06ebf43eb8ead93663c475146ea38dcb35be4535
-SHA1 (patch-ae) = ae56f6197ac6d5f755b28b3bd9ee9955fe7666e6
-SHA1 (patch-af) = 02af84772acf9beac41ffc1e8f3c94738ab7a9ab
+SHA1 (patch-af) = f865559ca63f1d519fdd8aa8f244dd2c80ff1b16
 SHA1 (patch-ag) = e2acfaf0b0fe0ca16287a18d7f179a091633ad13
 SHA1 (patch-ah) = 4afbd7ac17515a2c9b41a7f51fb3696486bc272b
-SHA1 (patch-ai) = 36a60e5c0c7e0a50286c7ceee73b07cd040e2a3d
-SHA1 (patch-aj) = ebece2bd083e0ff5318e3a401f1b9768f181f5d0
 SHA1 (patch-ak) = bdb81b72d900c8612a530a34c8b6c8f4edaa858f
 SHA1 (patch-al) = 6d48679b09d5e0835201c2a7761c03d508d6c6fc
 SHA1 (patch-am) = c1ed9fce2a55bc663d7d8e93d5e762c2fdaa89a9
@@ -24,7 +18,6 @@ SHA1 (patch-ao) = c83ca5f79a059b393c6c5dfeeddf10c99eb1141e
 SHA1 (patch-ap) = 0f703d617a5412e4c3ba01eb346593aa2860ef9c
 SHA1 (patch-aq) = 231c2ea5ead1d104963a8367b84661d50aeef520
 SHA1 (patch-ar) = 40e67373e6f058903038c89f4eeaa94aafa8d92d
-SHA1 (patch-as) = 8912104b5d726fc811a72e657ad6ba69fd854a2b
 SHA1 (patch-at) = e32658e964ef61b39372b0d19ed1b0223f65d57a
 SHA1 (patch-au) = 076e95933c45dd0f8f56f80a299b5dbb751e13ba
 SHA1 (patch-av) = eb5b0ffc3f88bef85c3a1d0e3b44c772f6170f33
