@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2748 2008/01/12 22:58:38 christian_gall Exp $
+# $Id: Makefile,v 1.2749 2008/01/12 23:26:19 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -877,7 +877,6 @@ SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
 SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
-SUBDIR+=	mim
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
 SUBDIR+=	mingw
