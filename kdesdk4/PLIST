@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/07 09:55:17 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/01/13 19:16:22 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -92,7 +92,6 @@ lib/kde4/katetabbarextensionplugin.so
 lib/kde4/katetextfilterplugin.so
 lib/kde4/kcal_bugzilla.so
 lib/kde4/kded_ksvnd.so
-lib/kde4/kickermenu_kate.so
 lib/kde4/kio_svn.so
 lib/kde4/libcervisiapart.so
 lib/kde4/libkuiviewerpart.so
@@ -107,6 +106,8 @@ lib/libkdeinit4_cervisia.so
 lib/libkdeinit4_cvsaskpass.so
 lib/libkdeinit4_cvsservice.so
 lib/libkdeinit4_kate.so
+lib/libkompareinterface.so
+lib/libkompareinterface.so.4
 lib/strigi/strigila_diff.so
 lib/strigi/strigita_ts.so
 man/man1/cervisia.1
@@ -189,6 +190,7 @@ share/doc/kde/HTML/en/kcachegrind/index.docbook
 share/doc/kde/HTML/en/kdesvn-build/common
 share/doc/kde/HTML/en/kdesvn-build/index.cache.bz2
 share/doc/kde/HTML/en/kdesvn-build/index.docbook
+share/doc/kde/HTML/en/kompare/index.cache.bz2
 share/doc/kde/HTML/en/umbrello/activity-diagram.png
 share/doc/kde/HTML/en/umbrello/add-remove-languages.png
 share/doc/kde/HTML/en/umbrello/aggregation.png
@@ -458,10 +460,9 @@ share/kde/apps/kbugbuster/pics/bars.png
 share/kde/apps/kbugbuster/pics/logo.png
 share/kde/apps/kbugbuster/pics/tools.png
 share/kde/apps/kbugbuster/pics/top-right.png
-share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/fromrec.png
+share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/move.png
 share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/percent.png
-share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/recrec.png
-share/kde/apps/kcachegrind/icons/hicolor/16x16/actions/torec.png
+share/kde/apps/kcachegrind/icons/hicolor/22x22/actions/move.png
 share/kde/apps/kcachegrind/icons/hicolor/22x22/actions/percent.png
 share/kde/apps/kcachegrind/icons/hicolor/32x32/actions/percent.png
 share/kde/apps/kcachegrind/kcachegrindui.rc
@@ -471,7 +472,8 @@ share/kde/apps/kconf_update/cervisia-normalize_cvsroot.pl
 share/kde/apps/kconf_update/cervisia.upd
 share/kde/apps/kconf_update/change_colors.pl
 share/kde/apps/kconf_update/kate-2.4.upd
-share/kde/apps/kicker/menuext/katesessionmenu.desktop
+share/kde/apps/kompare/komparepartui.rc
+share/kde/apps/kompare/kompareui.rc
 share/kde/apps/kuiviewer/kuiviewerui.rc
 share/kde/apps/kuiviewerpart/kuiviewer_part.rc
 share/kde/apps/umbrello/common.ent
@@ -680,8 +682,7 @@ share/kde4/servicetypes/kateplugin.desktop
 @dirrm share/kde/apps/umbrello
 @dirrm share/kde/apps/kuiviewerpart
 @dirrm share/kde/apps/kuiviewer
-@dirrm share/kde/apps/kicker/menuext
-@comment in kde: @dirrm share/kde/apps/kicker
+@dirrm share/kde/apps/kompare
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/32x32
@@ -747,6 +748,7 @@ share/kde4/servicetypes/kateplugin.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/umbrello
+@dirrm share/doc/kde/HTML/en/kompare
 @dirrm share/doc/kde/HTML/en/kdesvn-build
 @dirrm share/doc/kde/HTML/en/kcachegrind
 @dirrm share/doc/kde/HTML/en/kbugbuster
