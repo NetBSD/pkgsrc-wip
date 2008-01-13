@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2008/01/13 10:32:52 bsadewitz Exp $
+bin/pmk
+bin/pmkinstall
+bin/pmkpc
+bin/pmkscan
+bin/pmksetup
+man/man1/pmk.1
+man/man1/pmkinstall.1
+man/man1/pmkpc.1
+man/man1/pmkscan.1
+man/man5/pmk.conf.5
+man/man5/pmkfile.5
+man/man5/pmksyntax.5
+man/man5/scanfile.5
+man/man8/pmksetup.8
+share/pmk/pmkcfgtool.dat
+share/pmk/pmkcomp.dat
+share/pmk/pmkcpu.dat
+share/pmk/pmkscan.dat
+@dirrm share/pmk

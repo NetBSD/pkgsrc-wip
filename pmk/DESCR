@@ -1,0 +1,22 @@
+The Pre Make Kit project is a toolkit providing a collection of tools
+aimed to ease a lot of stages in project development. It provides a
+scanner that generate template source components such as configuration
+file or makefile. It also provides a dependency checker that sets up
+templates files depending on the system components (such as auto* tools
+or similar projects). For portability purpose, a BSD like install
+program is also part of the kit.
+
+The project aims the following goals :
+- opensource (BSD licensed)
+- portability (ISO C, POSIX, compatibility layer)
+- speed and memory lighweight (compiled C binaries)
+- security (replace scripts by data files, priviledge separation)
+- simplicity of use (generation tools, few basic instructions)
+- dependency low cost (only needs a POSIX shell and a C compiler)
+
+The provided tools are:
+- pmksetup: static data gathering tool
+- pmk: dependency checker
+- pmkscan: source scanner and build file generator
+- pmkinstall: BSD like install program
+- pmkpc: pkg-config compatible tool
