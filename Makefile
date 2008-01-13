@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2750 2008/01/13 05:50:09 claytonk Exp $
+# $Id: Makefile,v 1.2751 2008/01/13 13:25:59 plunky Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -971,6 +971,7 @@ SUBDIR+=	net6
 SUBDIR+=	netbsd-awk
 SUBDIR+=	netbsd-bsdgrep
 SUBDIR+=	netbsd-m4
+SUBDIR+=	netbt-hcidump
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
