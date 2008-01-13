@@ -13,6 +13,8 @@ o Add this line to x11/modular-xorg-server/buildlink3.mk:
 
 .include "../../x11/pixman/buildlink3.mk"
 
+o install wip/renderproto
+
 o You should now be able to build wip/modular-xorg-server14,
   x11/xf86-input-keyboard, x11/xf86-input-mouse and x11/xf86-video-*
 
