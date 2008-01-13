@@ -1,0 +1,25 @@
+$NetBSD: patch-ba,v 1.1 2008/01/13 05:02:24 tnn2 Exp $
+
+--- hw/xfree86/os-support/bsd/alpha_video.c.orig	2007-12-07 03:38:42.000000000 +0100
++++ hw/xfree86/os-support/bsd/alpha_video.c
+@@ -41,7 +41,9 @@
+ #  include <machine/sysarch.h>
+ #endif
+ 
++#ifndef __NetBSD__
+ #include "xf86Axp.h"
++#endif
+ 
+ #include "xf86_OSlib.h"
+ #include "xf86OSpriv.h"
+@@ -56,9 +58,8 @@
+ #define MAP_FAILED ((caddr_t)-1)
+ #endif
+ 
+-axpDevice bsdGetAXP(void);
+-
+ #ifndef __NetBSD__
++axpDevice bsdGetAXP(void);
+ extern unsigned long dense_base(void);
+ 
+ static int axpSystem = -1;

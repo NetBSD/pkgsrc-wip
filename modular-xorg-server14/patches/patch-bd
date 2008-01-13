@@ -1,0 +1,12 @@
+$NetBSD: patch-bd,v 1.1 2008/01/13 05:02:24 tnn2 Exp $
+
+--- configure.orig	2008-01-13 02:10:29.000000000 +0100
++++ configure
+@@ -26177,6 +26177,7 @@ case $host_cpu in
+ 	ALPHA_VIDEO=yes
+ 	case $host_os in
+ 		*netbsd*)
++		SYS_LIBS=-lalpha
+ cat >>confdefs.h <<\_ACEOF
+ #define USE_ALPHA_PIO 1
+ _ACEOF

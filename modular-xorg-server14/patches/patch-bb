@@ -1,0 +1,35 @@
+$NetBSD: patch-bb,v 1.1 2008/01/13 05:02:24 tnn2 Exp $
+
+--- hw/xfree86/os-support/bsd/bsd_axp.c.orig	2007-11-06 15:37:26.000000000 +0100
++++ hw/xfree86/os-support/bsd/bsd_axp.c
+@@ -7,13 +7,17 @@
+ #include "os.h"
+ #include "xf86.h"
+ #include "xf86Priv.h"
++#ifndef __NetBSD__
+ #include "xf86Axp.h"
++#endif
+ #include <sys/param.h>
+ #include "xf86_OSlib.h"
+ #include <stdio.h>
+ #include <sys/sysctl.h>
+ 
++#ifndef __NetBSD__
+ axpDevice bsdGetAXP(void);
++#endif
+ 
+ /*
+  * BSD does a very nice job providing system information to
+@@ -23,6 +27,7 @@ axpDevice bsdGetAXP(void);
+  * ourselves.
+  */
+ 
++#ifndef __NetBSD__
+ typedef struct {
+ 	char *name;
+ 	int type;
+@@ -70,3 +75,4 @@ bsdGetAXP(void)
+ 			return axpList[i].type;
+ 	}
+ }	
++#endif

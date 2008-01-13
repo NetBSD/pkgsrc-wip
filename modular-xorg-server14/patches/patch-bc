@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2008/01/13 05:02:24 tnn2 Exp $
+
+--- hw/xfree86/loader/xf86sym.c.orig	2007-12-07 03:38:42.000000000 +0100
++++ hw/xfree86/loader/xf86sym.c
+@@ -959,7 +959,7 @@ _X_HIDDEN void *xfree86LookupTab[] = {
+     SYMFUNC(_alpha_inb)
+     SYMFUNC(_alpha_inw)
+     SYMFUNC(_alpha_inl)
+-# else
++# elsif !defined(__NetBSD__)
+     SYMFUNC(outw)
+     SYMFUNC(outb)
+     SYMFUNC(outl)
