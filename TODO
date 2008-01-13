@@ -17,7 +17,7 @@ Suggested package updates
 	o fakenes-0.5.7
 	o firebird-2.0.3
 	o gambas2-2.0
-	o geant-4.9.0p1
+	o geant-4.9.1
 	o gforge-4.5.11
 	o gimmie-0.2.8
 	o globulation2-0.9.1
@@ -44,6 +44,7 @@ Suggested package updates
 	o passepartout-0.7.0
 	o pike-7.6.112
 	o py-PyPE-2.8.8
+	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-1.0
 	o rdup-0.5.2
