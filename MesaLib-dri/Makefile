@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/11/24 08:42:38 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.19 2008/01/13 10:59:01 bsadewitz Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +13,7 @@ COMMENT=	OpenGL library that renders using GLX or DRI
 MESA_VERSION=	7.0.2
 
 NO_CONFIGURE=	yes
-USE_TOOLS+=	makedepend gmake
+USE_TOOLS+=	makedepend gmake pkg-config
 USE_LIBTOOL+=	yes
 
 PKG_DESTDIR_SUPPORT=user-destdir
@@ -31,7 +32,7 @@ GL_HEADERS+=	osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 
 DRI_CFLAGS+=	-DPTHREADS -DUSE_XSHM
-CFLAGS.NetBSD+=-D_REENTRANT -DHZ=${MESA_HZ:Q}
+CFLAGS.NetBSD+=-D_REENTRANT -DHZ=${MESA_HZ:Q} -DHAVE_POSIX_MEMALIGN
 PKGSRC_PICFLAGS=-fPIC -DPIC
 
 .include "subst.mk"
@@ -54,6 +55,9 @@ post-extract:
 	${CP}	${WRKSRC}/configs/freebsd     ${WRKSRC}/configs/netbsd
 	${CP}	${WRKSRC}/configs/freebsd-dri-x86 ${WRKSRC}/configs/netbsd-dri-x86
 	${CP}	${WRKSRC}/configs/freebsd-dri-amd64 ${WRKSRC}/configs/netbsd-dri-amd64
+	${CP} 	${FILESDIR}/gen_matypes.awk ${WRKSRC}/src/mesa/x86
+	${CP} 	${FILESDIR}/gen_matypes.sh ${WRKSRC}/src/mesa/x86
+	${CHMOD} a+x ${WRKSRC}/src/mesa/x86/gen_matypes.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL

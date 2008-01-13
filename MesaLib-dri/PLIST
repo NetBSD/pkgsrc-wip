@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/07 03:07:09 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/01/13 10:59:01 bsadewitz Exp $
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
@@ -16,6 +16,7 @@ ${dri-i915}${DRI_MODULE_DIR}/i915_dri.so
 ${dri-i965}${DRI_MODULE_DIR}/i965_dri.so
 ${dri-mach64}${DRI_MODULE_DIR}/mach64_dri.so
 ${dri-mga}${DRI_MODULE_DIR}/mga_dri.so
+${dri-nouveau}${DRI_MODULE_DIR}/dri_nouveau.so
 ${dri-r128}${DRI_MODULE_DIR}/r128_dri.so
 ${dri-r200}${DRI_MODULE_DIR}/r200_dri.so
 ${dri-r300}${DRI_MODULE_DIR}/r300_dri.so

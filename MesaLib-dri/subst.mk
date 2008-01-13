@@ -1,3 +1,4 @@
+# $NetBSD: subst.mk,v 1.12 2008/01/13 10:59:01 bsadewitz Exp $
 
 SUBST_CLASSES+=		fix-conf
 SUBST_STAGE.fix-conf=	pre-patch
@@ -18,15 +19,12 @@ SUBST_SED.fix-conf+=	-e 's,g++,${CXX},g'
 SUBST_SED.fix-conf+=	-e 's,OPT_FLAGS = .*,OPT_FLAGS = ${CFLAGS},g'
 SUBST_SED.fix-conf+=	-e 's,SRC_DIRS = .*,SRC_DIRS = glx/x11 mesa glw,g'
 SUBST_SED.fix-conf+=	-e 's,^\(MKDEP_OPTIONS.*\),\1 -- -I${PREFIX}/include --,'
-#SUBST_SED.fix-conf+=	-e 's,-ffast-math,,g'
 SUBST_SED.fix-conf+=	-e 's,^\(DRI_DIRS.*\\\),,g'
 SUBST_SED.fix-conf+=	-e 's,\(unichrome.*\),,g'
 SUBST_SED.fix-conf+=	-e 's,-l$$(GL_LIB),-lGL,g'
-#SUBST_SED.fix-conf+=	-e 's,-L,-R,g'
 SUBST_SED.fix-conf+=	-e 's,-fPIC,,g'
 SUBST_SED.fix-conf+=	-e 's,-DPIC,,g'
 SUBST_SED.fix-conf+=	-e 's|^DRI_DRIVER_INSTALL_DIR.*|DRI_DRIVER_INSTALL_DIR = ${PREFIX}/${DRI_MODULE_DIR}|'
-#SUBST_SED.fix-conf+=	-e 's,ASM_FLAGS =.*,,g'
 
 SUBST_CLASSES+=		fix-pthread
 SUBST_STAGE.fix-pthread= pre-patch
