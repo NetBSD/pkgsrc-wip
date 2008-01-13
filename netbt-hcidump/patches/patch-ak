@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+
+--- src/Makefile.orig	2008-01-11 22:27:55.000000000 +0000
++++ src/Makefile
+@@ -0,0 +1,17 @@
++.PATH: ../parser
++
++PROG=	hcidump
++MAN=	hcidump.8
++
++BINDIR=	${PREFIX}/bin
++MANDIR=	${PREFIX}/man
++
++SRCS=	hcidump.c bt_lib.c hci_lib.c 				\
++	avctp.c avdtp.c bnep.c bpa.c capi.c cmtp.c csr.c	\
++	ericsson.c hci.c hcrp.c hidp.c l2cap.c lmp.c obex.c	\
++	parser.c ppp.c rfcomm.c sdp.c tcpip.c
++
++CPPFLAGS+=	-I..
++LDADD+=		-lbluetooth
++
++.include <bsd.prog.mk>

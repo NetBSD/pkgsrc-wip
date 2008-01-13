@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+
+--- parser/hci.c.orig	2007-08-09 07:24:07.000000000 +0100
++++ parser/hci.c
+@@ -3166,7 +3166,7 @@ static inline void vendor_dump(int level
+ 	if (p_filter(FILT_HCI))
+ 		return;
+ 
+-	if (frm->dev_id == HCI_DEV_NONE) {
++	if (frm->dev_id == NULL) {
+ 		uint16_t device = btohs(htons(get_u16(frm)));
+ 		uint16_t proto = btohs(htons(get_u16(frm)));
+ 		uint16_t type = btohs(htons(get_u16(frm)));

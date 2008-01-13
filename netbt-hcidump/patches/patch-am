@@ -1,0 +1,108 @@
+$NetBSD: patch-am,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+
+--- src/hci_lib.c.orig	2008-01-11 22:27:54.000000000 +0000
++++ src/hci_lib.c
+@@ -68,6 +68,7 @@ static char *hci_bit2str(hci_map *m, uns
+ 	return str;
+ }
+ 
++#if 0
+ static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
+ {
+ 	char *t, *ptr;
+@@ -91,6 +92,7 @@ static int hci_str2bit(hci_map *map, cha
+ 
+ 	return set;
+ }
++#endif
+ 
+ static char *hci_uint2str(hci_map *m, unsigned int val) 
+ {
+@@ -111,6 +113,7 @@ static char *hci_uint2str(hci_map *m, un
+ 	return str;
+ }
+ 
++#if 0
+ static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
+ {
+ 	char *t, *ptr;
+@@ -193,6 +196,7 @@ char *hci_dflagstostr(uint32_t flags)
+ 	} 	
+ 	return str;
+ }
++#endif
+ 
+ /* HCI packet type mapping */
+ static hci_map pkt_type_map[] = {
+@@ -214,6 +218,7 @@ static hci_map pkt_type_map[] = {
+ 	{ NULL }
+ };
+ 
++#if 0
+ static hci_map sco_ptype_map[] = {
+ 	{ "HV1",   0x0001   },
+ 	{ "HV2",   0x0002   },
+@@ -227,12 +232,14 @@ static hci_map sco_ptype_map[] = {
+ 	{ "3-EV5", HCI_3EV5 },
+ 	{ NULL }
+ };
++#endif
+ 
+ char *hci_ptypetostr(unsigned int ptype)
+ {
+ 	return hci_bit2str(pkt_type_map, ptype);
+ }
+ 
++#if 0
+ int hci_strtoptype(char *str, unsigned int *val)
+ {
+ 	return hci_str2bit(pkt_type_map, str, val);
+@@ -247,6 +254,7 @@ int hci_strtoscoptype(char *str, unsigne
+ {
+ 	return hci_str2bit(sco_ptype_map, str, val);
+ }
++#endif
+ 
+ /* Link policy mapping */
+ static hci_map link_policy_map[] = {
+@@ -263,6 +271,7 @@ char *hci_lptostr(unsigned int lp)
+ 	return hci_bit2str(link_policy_map, lp);
+ }
+ 
++#if 0
+ int hci_strtolp(char *str, unsigned int *val)
+ {
+ 	return hci_str2bit(link_policy_map, str, val);
+@@ -546,6 +555,7 @@ char *hci_commandstostr(uint8_t *command
+ 
+ 	return str;
+ }
++#endif
+ 
+ /* Version mapping */
+ static hci_map ver_map[] = {
+@@ -562,16 +572,19 @@ char *hci_vertostr(unsigned int ver)
+ 	return hci_uint2str(ver_map, ver);
+ }
+ 
++#if 0
+ int hci_strtover(char *str, unsigned int *ver)
+ {
+ 	return hci_str2uint(ver_map, str, ver);
+ }
++#endif
+ 
+ char *lmp_vertostr(unsigned int ver)
+ {
+ 	return hci_uint2str(ver_map, ver);
+ }
+ 
++#if 0
+ int lmp_strtover(char *str, unsigned int *ver)
+ {
+ 	return hci_str2uint(ver_map, str, ver);
+@@ -2430,3 +2443,4 @@ int hci_remote_name(int dd, const bdaddr
+ {
+ 	return hci_read_remote_name(dd, bdaddr, len, name, to);
+ }
++#endif
