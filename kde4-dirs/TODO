@@ -1,2 +1,0 @@
-determine the full set of dirs.  Then split into a bit that is shared with
-kde3-dirs and a bit for kde4 (like gnome{,1,2}-dirs).

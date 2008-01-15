@@ -1,1 +1,0 @@
-Fix build: NetBSD portability issues - no tgamma()
