@@ -63,6 +63,7 @@ Investigate package Nepomuk
 
 Possibly make some of the existing dependencies optional.
 
+libtidy needs to be shared lib for amd64 (probably other ports)
 
 Does this work with native X11?  Only tried with modular-xorg.
 Does this work on netBSD < 4.0?
