@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2751 2008/01/13 13:25:59 plunky Exp $
+# $Id: Makefile,v 1.2752 2008/01/15 23:27:47 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1491,7 +1491,6 @@ SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
-SUBDIR+=	renderproto
 SUBDIR+=	resid-builder
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
