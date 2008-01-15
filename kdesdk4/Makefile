@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/12 12:59:07 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/15 11:03:16 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -32,6 +32,7 @@ REPLACE_PERL+= \
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
 .include "../../devel/libiberty/buildlink3.mk"

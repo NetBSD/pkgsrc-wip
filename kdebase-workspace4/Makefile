@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/11 21:02:34 mwdavies Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/15 11:01:15 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -66,6 +66,7 @@ post-install:
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
 
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
 .include "../../devel/libusb/buildlink3.mk"

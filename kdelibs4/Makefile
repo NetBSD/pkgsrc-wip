@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/24 08:18:09 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/15 10:58:20 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -42,6 +42,7 @@ SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
 DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
 .endif
 
+BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../wip/kde4/kde4.mk"
 
 # Soprano
