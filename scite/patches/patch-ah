@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.5 2007/06/20 17:31:33 loic-hoguin Exp $
+$NetBSD: patch-ah,v 1.6 2008/01/16 18:23:50 loic-hoguin Exp $
 
---- scite/gtk/makefile.orig	2006-02-13 06:27:08.000000000 +0000
+--- scite/gtk/makefile.orig	2007-09-10 12:24:35.000000000 +0200
 +++ scite/gtk/makefile
 @@ -45,7 +45,7 @@ pixmapdir=$(datadir)/pixmaps
  bindir=$(prefix)/bin
@@ -15,17 +15,17 @@ $NetBSD: patch-ah,v 1.5 2007/06/20 17:31:33 loic-hoguin Exp $
  
  #CXXFLAGS= -g -DGTK -DSCI_LEXER -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" -Wwrite-strings
  INCLUDEDIRS=-I ../../scintilla/include -I ../src
--CXXBASEFLAGS=-W -Wall -pedantic -Os -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS)
-+CXXBASEFLAGS=-W -Wall -pedantic -Os -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(CPPFLAGS) $(INCLUDEDIRS)
+-CXXBASEFLAGS=-W -Wall -Wno-char-subscripts -pedantic -Os -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(INCLUDEDIRS)
++CXXBASEFLAGS=-W -Wall -Wno-char-subscripts -pedantic -Os -DGTK -DSCI_LEXER -DPIXMAP_PATH=\"$(pixmapdir)\" -DSYSCONF_PATH=\"$(SYSCONF_PATH)\" $(CPPFLAGS) $(INCLUDEDIRS)
  
  ifdef DEBUG
  CXXTFLAGS=-DDEBUG -g $(CXXBASEFLAGS)
 @@ -103,7 +103,7 @@ COMPLIB=../../scintilla/bin/scintilla.a
- $(PROG): SciTEGTK.o FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o Exporters.o \
- MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
- 	$(COMPLIB) $(LUA_OBJS)
--	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ $(CONFIGLIB)
-+	$(CC) `$(CONFIGTHREADS)` -DGTK $^ -o $@ -L/usr/lib $(CONFIGLIB)
+ $(PROG): SciTEGTK.o FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o \
+ PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
+ 	JobQueue.o GTKMutex.o $(COMPLIB) $(LUA_OBJS)
+-	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB)
++	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--version-script lua.vers -DGTK $^ -o $@ -L/usr/lib $(CONFIGLIB)
  
  # Automatically generate header dependencies with "make deps"
  include deps.mak

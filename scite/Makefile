@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2007/06/20 17:31:33 loic-hoguin Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/16 18:23:50 loic-hoguin Exp $
 
-DISTNAME=		scite174
-PKGNAME=		scite-1.74
+DISTNAME=		scite175
+PKGNAME=		scite-1.75
 #PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}

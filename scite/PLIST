@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/06/20 17:31:33 loic-hoguin Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/01/16 18:23:50 loic-hoguin Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
@@ -21,6 +21,7 @@ share/scite/SciTEImage.html
 share/scite/SciTELexer.html
 share/scite/SciTELua.html
 share/scite/SciTERegEx.html
+share/scite/abaqus.properties
 share/scite/abbrev.properties
 share/scite/ada.properties
 share/scite/asm.properties
@@ -66,6 +67,7 @@ share/scite/pov.properties
 share/scite/ps.properties
 share/scite/purebasic.properties
 share/scite/python.properties
+share/scite/r.properties
 share/scite/rebol.properties
 share/scite/ruby.properties
 share/scite/scriptol.properties
