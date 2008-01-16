@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/01/16 13:00:35 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/16 13:41:47 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.11
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
@@ -46,6 +47,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
+CONFIGURE_ARGS+=	--enable-idled
 CONFIGURE_ARGS+=	--enable-listext
 CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
@@ -91,22 +93,6 @@ CPPFLAGS+=		-I${COMERRBASE}/include/krb5
 CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
 .else
 CONFIGURE_ARGS+=	--with-com-err=yes
-.endif
-
-# CYRUS_IDLE selects the method used to implement IMAP IDLE.  Valid values
-# are "poll", "idled" or "no".  The default is "poll".
-#
-CYRUS_IDLE?=		poll
-BUILD_DEFS+=		CYRUS_IDLE
-.if (${CYRUS_IDLE} != "poll") && (${CYRUS_IDLE} != "idled") && \
-    (${CYRUS_IDLE} != "no")
-PKG_FAIL_REASON+=	"CYRUS_IDLE must be poll, idled or no"
-.endif
-CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE:Q}
-.if ${CYRUS_IDLE} == "idled"
-PLIST_SUBST+=		IDLED=
-.else
-PLIST_SUBST+=		IDLED="@comment "
 .endif
 
 MAKE_ENV+=		PERL=${PERL5:Q}
