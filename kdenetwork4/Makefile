@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/25 21:01:22 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/16 20:02:48 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -9,6 +9,8 @@ CONFLICTS=	kopete-[0-9]*
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 
 REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
