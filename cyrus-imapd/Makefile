@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/12/11 00:47:31 obache Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/16 13:00:35 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.11
 CATEGORIES=	mail
@@ -11,6 +11,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://cyrusimap.web.cmu.edu/imapd/
 COMMENT=	Cyrus IMAP server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -19,7 +21,7 @@ BDB_ACCEPTED=		db4 db3
 
 BUILD_DEFS+=		VARBASE
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+CHECK_PORTABILITY_SKIP=	configure.lineno
 
 .include "../../mk/bsd.prefs.mk"
 
