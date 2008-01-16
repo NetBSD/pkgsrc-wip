@@ -21,10 +21,6 @@ does Avahi give us?
 
 Optional? libsbmclient support.
 
-Update xine-lib to 1.1.9 and check what happens to build (as that is the lowest version it supports).
-
-Investigate XCB.  It wants libxine compiled with that option.  How to achieve?
-
 Investigate package BlueZ (linux bluetooth, how linuxy is it?)
 Investigate package NetworkManager
 Investigate package lm-sensors
@@ -52,7 +48,7 @@ Investigate package DjVuLibre
 Investigate package QtTapioca
 Investigate package Decibel
 
-Explicitly disable xmms support (enable optionally?)
+Optionally enable xmms support in kopete?
 
 Investigate libvncserver
 
