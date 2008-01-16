@@ -1,0 +1,5 @@
+There's a bug with pointer movement. The pointer tends to warp to the
+left edge of the screen when text is scrolling in an application.
+This is reproducable by e.g. generating continous rapidly scrolling
+text in x11/mrxvt, or by scrolling in firefox with the pgup/pgdn buttons
+while moving the pointer.

@@ -3,17 +3,9 @@
 To use the 1.4 series server with current pkgsrc, you must perform some
 changes in pkgsrc first:
 
-o Update xf86-input-keyboard from 1.2.0 to 1.2.2.
-
-  This is done by editing the DISTNAME line in
-  x11/xf86-input-keyboard/Makefile
-  Then go to x11/xf86-input-keyboard and run make fetch; make distinfo
-
 o Add this line to x11/modular-xorg-server/buildlink3.mk:
 
 .include "../../x11/pixman/buildlink3.mk"
-
-o install wip/renderproto
 
 o You should now be able to build wip/modular-xorg-server14,
   x11/xf86-input-keyboard, x11/xf86-input-mouse and x11/xf86-video-*
