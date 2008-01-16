@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2007/10/24 13:53:56 jukka Exp $
+$NetBSD: patch-ag,v 1.6 2008/01/16 10:07:05 tnn2 Exp $
 
 --- Makefile.shared.orig	2007-09-16 16:11:51.000000000 +0200
 +++ Makefile.shared	2007-10-21 13:28:51.000000000 +0200
@@ -8,7 +8,7 @@ $NetBSD: patch-ag,v 1.5 2007/10/24 13:53:56 jukka Exp $
  	else \
 +		if ($(CC) -v 2>&1 | grep gcc) > /dev/null; then \
 +			WL="-Wl,"; DELIM=","; \
-+		else \ 
++		else \
 +			WL=""; DELIM=" "; \
 +		fi; \
  		SHLIB=lib$(LIBNAME).so; \
