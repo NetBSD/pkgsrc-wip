@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/22 21:08:51 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/16 19:58:35 mwdavies Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -9,6 +9,7 @@ COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
 DEPENDS+=	htdig>=3.2.0:../../www/htdig-devel
+DEPENDS+=	xine-xcb>=1.1.9:../../wip/xine-xcb
 
 SUBST_CLASSES+=		htdig paths
 SUBST_STAGE.htdig=	post-patch
@@ -38,6 +39,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../wip/libxcb/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 
