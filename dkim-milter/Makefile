@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/07 17:09:33 jukka Exp $
+# $NetBSD: Makefile,v 1.25 2008/01/17 08:38:31 tnn2 Exp $
 
 DISTNAME=	dkim-milter-2.4.2
 #PKGREVISION=	1
@@ -85,9 +85,7 @@ do-install: arlib-install stats-install
 	${INSTALL_DATA} $$file ${PREFIX}/share/doc/dkim-milter/libdkim; done
 
 .include "options.mk"
-# XXX this should be switched once OpenSSL >=0.9.8 is in pkgsrc
-.include "../../wip/openssl/buildlink3.mk"
-#.include "../../security/openssl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
