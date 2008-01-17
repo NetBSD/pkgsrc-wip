@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.darwin,v 1.2 2008/01/14 20:17:38 adrian_p Exp $
-lib/libcrypto.${SHLIB_VERSION}.dylib
-lib/libcrypto.dylib
-lib/libssl.${SHLIB_VERSION}.dylib
-lib/libssl.dylib
