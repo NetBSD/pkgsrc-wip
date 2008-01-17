@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/01/17 16:41:12 schnoebe Exp $
+# $NetBSD: Makefile,v 1.41 2008/01/17 16:52:29 schnoebe Exp $
 #
 
 DISTNAME=		jabberd-2.1.21
@@ -32,8 +32,7 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
-CONFIGURE_ARGS+=	--enable-fs
-CONFIGURE_ARGS+=	--enable-sasl=gsasl
+CONFIGURE_ARGS+=	--enable-sasl=gsasl	# gsasl is no longer optional
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -109,6 +108,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
 .endfor
 
+.include "../../security/gsasl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/gsasl/buildlink3.mk"
