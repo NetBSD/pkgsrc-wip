@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2007/12/13 03:40:20 schnoebe Exp $
+# $NetBSD: Makefile,v 1.40 2008/01/17 16:41:12 schnoebe Exp $
 #
 
-DISTNAME=		jabberd-2.1.19
+DISTNAME=		jabberd-2.1.21
 # PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
-COMMENT=		Instant messaging server (version 2.1)
+COMMENT=		XMPP (Jabber) instant messaging server
 
 CONFLICTS=		jabberd-[0-9]*
 
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
+CONFIGURE_ARGS+=	--enable-fs
+CONFIGURE_ARGS+=	--enable-sasl=gsasl
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -109,6 +111,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../security/gsasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
