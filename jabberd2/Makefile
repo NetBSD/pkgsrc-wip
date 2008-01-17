@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/01/17 16:52:29 schnoebe Exp $
+# $NetBSD: Makefile,v 1.42 2008/01/17 17:01:56 schnoebe Exp $
 #
 
 DISTNAME=		jabberd-2.1.21
@@ -79,11 +79,11 @@ OWN_DIRS_PERMS+=	${f} ${JABBERD_USER} ${JABBERD_GROUP} 770
 
 post-extract:
 .for f in ${FILES}
-	@mv ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
+	mv ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
 
 pre-configure:
-.for f in ${FILES} # jabberd.cfg
+.for f in ${FILES}
 	sed								\
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
