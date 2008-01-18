@@ -1,8 +1,9 @@
-# $Id: Makefile,v 1.4 2007/02/04 01:04:22 christian_gall Exp $
-# $NetBSD: Makefile,v 1.4 2007/02/04 01:04:22 christian_gall Exp $
+# $Id: Makefile,v 1.5 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:10 tnn2 Exp $
 
 DISTNAME=	mod_auth_imap2-2.2.0
 PKGNAME=	ap2-auth-imap-2.2.0
+PKGREVISION=	1
 CATEGORIES=	www mail
 MASTER_SITES=	http://ben.brillat.net/files/projects/mod_auth_imap2/
 

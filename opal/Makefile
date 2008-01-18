@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/08/05 06:34:18 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/18 04:30:16 tnn2 Exp $
 #
 
 DISTNAME=		opal-v2_2_4-src
 PKGNAME=		opal-2.2.4
+PKGREVISION=		1
 CATEGORIES=		net comms
 MASTER_SITES+=		http://www.voxgratia.org/releases/
 EXTRACT_SUFX=		-tar.gz

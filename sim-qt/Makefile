@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/06/13 08:19:03 ondratu Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:17 tnn2 Exp $
 #
 
 DISTNAME=		sim-0.9.3
 PKGNAME=		sim-qt-0.9.3
+PKGREVISION=		1
 CATEGORIES=		chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sim-icq/}
 

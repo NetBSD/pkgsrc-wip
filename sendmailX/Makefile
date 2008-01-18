@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/10/29 08:32:55 shattered Exp $
+# $NetBSD: Makefile,v 1.21 2008/01/18 04:30:17 tnn2 Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 

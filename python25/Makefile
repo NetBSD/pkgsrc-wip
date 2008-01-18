@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/09/14 02:01:50 netcap Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:16 tnn2 Exp $
 
 DISTNAME=	Python-2.5.1
 PKGNAME=	python25-2.5.1
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.5.1/ \
 		http://www.python.org/ftp/python/2.5.1/

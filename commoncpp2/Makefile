@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/09/08 16:45:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/18 04:30:11 tnn2 Exp $
 #
 
 DISTNAME=		commoncpp2-1.5.7
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/commonc++/
 

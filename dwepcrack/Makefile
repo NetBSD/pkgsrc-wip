@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/12/18 18:54:53 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:12 tnn2 Exp $
 
 DISTNAME=	dwepcrack-0.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.unix-labs.org/pub/source/dwepcrack/
 

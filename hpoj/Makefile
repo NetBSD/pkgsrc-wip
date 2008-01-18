@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/18 04:30:14 tnn2 Exp $
 #
 
 DISTNAME=		hpoj-0.91
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hpoj/}
 EXTRACT_SUFX=		.tgz

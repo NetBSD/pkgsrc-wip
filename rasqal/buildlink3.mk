@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/08/24 09:43:28 krub1 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/18 04:30:17 tnn2 Exp $
 
 RASQAL_BUILDLINK3_MK:=	${RASQAL_BUILDLINK3_MK}+
 
@@ -12,6 +12,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}rasqal
 
 .if ${RASQAL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.rasqal+=	rasqal>=0.9.14
+BUILDLINK_ABI_DEPENDS.rasqal?=	rasqal>=0.9.14nb1
 BUILDLINK_PKGSRCDIR.rasqal?=	../../wip/rasqal
 .endif	# RASQAL_BUILDLINK3_MK
 

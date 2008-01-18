@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/01/26 14:48:13 lkundrak Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:10 tnn2 Exp $
 
 DISTNAME=	mod_auth_pam-2.0-1.1.1
 PKGNAME=	ap2-auth-pam-1.1.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pam.sourceforge.net/mod_auth_pam/dist/
 # Even though it is on sourceforge, it is in web pages repository!

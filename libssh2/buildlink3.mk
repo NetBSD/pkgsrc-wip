@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/08/22 06:58:59 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2008/01/18 04:30:15 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBSSH2_BUILDLINK3_MK:=	${LIBSSH2_BUILDLINK3_MK}+
@@ -15,6 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libssh2
 
 .if ${LIBSSH2_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libssh2+=	libssh2>=0.17
+BUILDLINK_ABI_DEPENDS.libssh2?=	libssh2>=0.17nb1
 BUILDLINK_PKGSRCDIR.libssh2?=	../../wip/libssh2
 
 pkgbase:=	libssh2

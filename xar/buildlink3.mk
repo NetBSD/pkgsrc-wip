@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/12/02 17:22:52 dhowland Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/01/18 04:30:18 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAR_BUILDLINK3_MK:=	${XAR_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xar
 
 .if ${XAR_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xar+=	xar>=1.4
+BUILDLINK_ABI_DEPENDS.xar?=	xar>=1.4nb1
 BUILDLINK_PKGSRCDIR.xar?=	../../wip/xar
 .endif	# XAR_BUILDLINK3_MK
 

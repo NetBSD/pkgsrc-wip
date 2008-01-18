@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/18 03:42:43 dvol Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
 #
 
 PKGNAME=	GNUMail-pgp-1.1.2
 DISTNAME=	GNUMail-1.1.2
+PKGREVISION=	1
 CATEGORIES=	mail security gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 

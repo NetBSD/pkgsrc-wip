@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:37 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:10 tnn2 Exp $
 #
 
 DISTNAME=		afflib-1.6.31
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.afflib.org/downloads/
 

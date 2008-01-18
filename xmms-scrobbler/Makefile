@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2007/12/06 06:34:58 netcap Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/18 04:30:18 tnn2 Exp $
 #
 
 DISTNAME=	xmms-scrobbler_0.4.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xmms-scrobbler/}
 

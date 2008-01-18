@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/18 04:30:12 tnn2 Exp $
 #
 
 DISTNAME=	endeavour-2.7.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://wolfpack.twu.net/users/wolfpack/
 EXTRACT_SUFX=	.tgz

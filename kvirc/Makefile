@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/07/07 19:36:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/01/18 04:30:15 tnn2 Exp $
 #
 
 DISTNAME=		kvirc-3.2.3
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ftp.kvirc.net/pub/kvirc/snapshots/source/
 EXTRACT_SUFX=		.tar.bz2

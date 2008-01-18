@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/09/14 13:21:12 imilh Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:11 tnn2 Exp $
 
 DISTNAME=	mod-vhost-ldap_1.2.0.orig
 PKGNAME=	ap2-vhost-ldap-1.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/mod-vhost-ldap/}
 

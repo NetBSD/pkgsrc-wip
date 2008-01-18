@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:18 tnn2 Exp $
 
 DISTNAME=		xrdp-0.3.2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xrdp/}
 

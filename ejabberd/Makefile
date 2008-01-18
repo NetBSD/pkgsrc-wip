@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/03/29 21:31:37 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:12 tnn2 Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-1.1.3
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.jabber.ru/files/ejabberd/ \
 		http://www.process-one.net/en/projects/ejabberd/download/${PKGVERSION}/

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/01 15:13:40 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:17 tnn2 Exp $
 
 DISTNAME=	wrcs-0.99.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wrcs/}
 

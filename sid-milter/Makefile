@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/11/08 23:25:31 adrian_p Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/18 04:30:17 tnn2 Exp $
 #
 
 DISTNAME=	sid-milter-0.2.14
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 

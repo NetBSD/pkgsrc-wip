@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/03/01 19:12:17 shattered Exp $
+# $NetBSD: Makefile,v 1.17 2008/01/18 04:30:13 tnn2 Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
 PKGNAME=	${DISTNAME:S/GNU/gnu/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.ovmj.org/GNUnet/download/
 EXTRACT_SUFX=	.tar.bz2

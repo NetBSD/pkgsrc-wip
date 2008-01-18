@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/12/02 17:22:04 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:18 tnn2 Exp $
 #
 
 DISTNAME=		xar-1.4
+PKGREVISION=		1
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.opendarwin.org/projects/xar/
 

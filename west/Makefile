@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:17 tnn2 Exp $
 #
 
 DISTNAME=		west_0.9
 PKGNAME=		west-0.9
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=west/}
 EXTRACT_SUFX=		.tgz

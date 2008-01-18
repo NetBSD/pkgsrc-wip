@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/05/01 14:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:16 tnn2 Exp $
 #
 
 DISTNAME=		pam_pkcs11-0.5.3
 PKGNAME=		pam-pkcs11-0.5.3
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/pam_pkcs11/
 

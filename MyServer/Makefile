@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/11/14 23:01:30 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/18 04:30:10 tnn2 Exp $
 #
 
 DISTNAME=		MyServer-src-0.8.5
 PKGNAME=		${DISTNAME:S/src-//}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=myserver/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/13 20:08:02 dvol Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
 #
 
 DISTNAME=	GSCommander-0.1
+PKGREVISION=	1
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	http://www.nice.ch/~phip/
 

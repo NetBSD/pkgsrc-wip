@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/19 09:18:39 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:13 tnn2 Exp $
 #
 # To use this package to track FreeTDS snapshots, just do:
 #
@@ -12,6 +12,7 @@
 PKGNAME=	freetds-0.64alpha1
 
 DISTNAME=	freetds-current
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/current/
 EXTRACT_SUFX=	.tgz

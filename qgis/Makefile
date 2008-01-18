@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/09/14 19:05:59 dhowland Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/18 04:30:16 tnn2 Exp $
 #
 
 DISTNAME=		qgis-0.7.4
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qgis/}
 

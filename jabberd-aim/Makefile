@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/24 10:30:24 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:14 tnn2 Exp $
 
 DISTNAME=	aim-transport-stable-20040131
 PKGNAME=	jabberd-aim-20040131
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://aim-transport.jabberstudio.org/
 

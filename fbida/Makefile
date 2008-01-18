@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:13 tnn2 Exp $
 #
 
 DISTNAME=		fbida-2.03
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://dl.bytesex.org/releases/fbida/
 

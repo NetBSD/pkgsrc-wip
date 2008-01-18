@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2007/03/01 19:12:21 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/18 04:30:18 tnn2 Exp $
 
 DISTNAME=		xmoto-0.2.2-src
 PKGNAME=		xmoto-0.2.2
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmoto/}
 

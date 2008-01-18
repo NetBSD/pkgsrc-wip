@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2008/01/10 20:48:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:15 tnn2 Exp $
 #
 
 DISTNAME=	libdbi-drivers-0.8.2-1
 PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-mysql/}
+PKGREVISION=	1
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
 

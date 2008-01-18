@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/04/08 22:14:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2008/01/18 04:30:14 tnn2 Exp $
 #
 
 DISTNAME=		jc-1.2.3
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 

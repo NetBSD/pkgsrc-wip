@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/08/04 09:54:46 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/18 04:30:15 tnn2 Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 LIBGTKSOURCEVIEWMM_BUILDLINK3_MK:=	${LIBGTKSOURCEVIEWMM_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgtksourceviewmm
 
 .if ${LIBGTKSOURCEVIEWMM_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libgtksourceviewmm+=	libgtksourceviewmm>=0.3.1
+BUILDLINK_ABI_DEPENDS.libgtksourceviewmm?=	libgtksourceviewmm>=0.3.1nb2
 BUILDLINK_PKGSRCDIR.libgtksourceviewmm?=	../../wip/libgtksourceviewmm
 .endif	# LIBGTKSOURCEVIEWMM_BUILDLINK3_MK
 

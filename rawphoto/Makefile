@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/21 13:06:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/18 04:30:17 tnn2 Exp $
 
 DISTNAME=	rawphoto.c
 PKGNAME=	rawphoto-1.1.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 EXTRACT_SUFX=

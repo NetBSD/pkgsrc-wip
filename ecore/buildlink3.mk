@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/12/05 06:29:49 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2008/01/18 04:30:12 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ECORE_BUILDLINK3_MK:=	${ECORE_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ecore
 
 .if ${ECORE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ecore+=	ecore>=0.9.9.041
+BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=0.9.9.041nb4
 BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 .endif	# ECORE_BUILDLINK3_MK
 

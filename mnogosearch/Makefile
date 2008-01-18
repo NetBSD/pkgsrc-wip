@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:47 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/18 04:30:16 tnn2 Exp $
 
 DISTNAME=	mnogosearch-3.1.21
+PKGREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.mnogosearch.org/Download/
 

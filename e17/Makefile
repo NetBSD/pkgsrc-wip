@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2007/12/05 21:44:29 netcap Exp $
+# $NetBSD: Makefile,v 1.9 2008/01/18 04:30:12 tnn2 Exp $
 #
 
 DISTNAME=	e17-0.16.999.041
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=   http://www.yazzy.org/pkgsrc/e17/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/11/25 07:27:47 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:16 tnn2 Exp $
 
 DISTNAME=		Net-Z3950-ZOOM-1.20
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MI/MIRK/}
 
