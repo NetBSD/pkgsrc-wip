@@ -1,0 +1,20 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/01/18 07:11:22 thomasklausner Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+P2KMOTO_BUILDLINK3_MK:=	${P2KMOTO_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	p2kmoto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Np2kmoto}
+BUILDLINK_PACKAGES+=	p2kmoto
+
+.if ${P2KMOTO_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.p2kmoto+=	p2kmoto>=0.1rc1
+BUILDLINK_PKGSRCDIR.p2kmoto?=	../../wip/p2kmoto
+.endif	# P2KMOTO_BUILDLINK3_MK
+
+.include "../../devel/libusb/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
