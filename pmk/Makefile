@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/01/13 10:32:52 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/18 14:58:15 cheusov Exp $
 #
 
 DISTNAME=	pmk-0.10.3
@@ -30,6 +30,8 @@ CONFIGURE_ENV+=		CLDFLAGS=${LDFLAGS:S/-Wl,//g:M*:Q}
 
 MAKE_ENV+=		DESTDIR=${DESTDIR:Q}
 MAKE_ENV+=		PREMAKE=${PKGBASE:Q}
+
+MAKEFLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 PMK_USER?=		_pmk
 PMK_GROUP?=		_pmk
