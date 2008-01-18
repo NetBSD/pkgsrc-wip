@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/01/18 23:34:01 hoka_adam Exp $
+
+--- Makefile.orig	2008-01-09 18:30:03.000000000 +0100
++++ Makefile
+@@ -13,7 +13,7 @@ CLEANFILES=	version.h dhcpcd.8
+ BINDIR=		${PREFIX}/sbin
+ 
+ # Needed for crappy Linux headers :/
+-CSTD=		gnu99
++#CSTD=		gnu99
+ 
+ MK=		mk
+ include ${MK}/os.mk

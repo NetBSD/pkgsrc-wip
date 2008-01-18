@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/18 23:34:01 hoka_adam Exp $
+sbin/dhcpcd
+man/man8/dhcpcd.8
+share/examples/rc.d/dhcpcd
