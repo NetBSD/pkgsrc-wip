@@ -1,3 +1,1 @@
-$Id: TODO,v 1.1.1.1 2007/12/06 17:41:49 asau Exp $
-
-- Fix canonical tty mode, it should be non-canonical.
+$Id: TODO,v 1.2 2008/01/18 21:59:58 asau Exp $
