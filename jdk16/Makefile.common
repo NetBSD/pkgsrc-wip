@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/01/19 08:19:05 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/01/19 09:49:27 tnn2 Exp $
 
 CATEGORIES=		lang java
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -23,7 +23,6 @@ BUILD_TARGET=		all # added to below
 BUILD_DIRS=		control/make
 CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
-MOTIF_TYPE=		openmotif
 UNLIMIT_RESOURCES=	datasize
 
 INTERACTIVE_STAGE+=	fetch

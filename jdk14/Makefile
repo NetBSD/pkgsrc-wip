@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/01/19 08:19:04 tnn2 Exp $
+# $NetBSD: Makefile,v 1.38 2008/01/19 09:49:27 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -23,6 +23,8 @@ PLIST_SRC=		PLIST.common
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 DragonFly-*-i386
 
 .include "../../mk/bsd.prefs.mk"
+
+MOTIF_TYPE=		openmotif
 
 JVM_HOME=		${LOCALBASE}/java/jdk-1.4.2
 JAVA_HOME=		${JVM_HOME}
