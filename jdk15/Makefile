@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/01/19 06:45:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2008/01/19 06:54:57 tnn2 Exp $
 
 JDK_VERSION=		1.5.0
 JDK_UPDATE=		13
@@ -165,16 +165,16 @@ post-extract:
 	@echo "=> continue. Press ENTER now to continue or CTRL-C at any time"
 	@echo "=> to abort."
 	@sh -c 'read ANS'
-	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-bin-b05-jrl-25_sep_2007.jar LICENSE
+	cd ${WRKSRC} && unzip ${JRL_BINFILE} LICENSE
 	more ${WRKSRC}/LICENSE
 	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
 	rm -f ${WRKSRC}/LICENSE
-	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-src-b05-jrl-25_sep_2007.jar LICENSE
+	cd ${WRKSRC} && unzip ${JRL_SRCFILE} LICENSE
 	more ${WRKSRC}/LICENSE
 	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
-	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-bin-b05-jrl-25_sep_2007.jar X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
+	cd ${WRKSRC} && unzip ${JRL_BINFILE} X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
 	rm -f ${WRKSRC}/X_X
-	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-src-b05-jrl-25_sep_2007.jar X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
+	cd ${WRKSRC} && unzip ${JRL_SRCFILE} X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -p0 -E -s <jdk15.patches
