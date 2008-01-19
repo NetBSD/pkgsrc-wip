@@ -1,4 +1,4 @@
-# $NetBSD: license-extract.mk,v 1.1 2008/01/19 09:49:27 tnn2 Exp $
+# $NetBSD: license-extract.mk,v 1.2 2008/01/19 14:49:09 tnn2 Exp $
 
 post-extract:
 	@${CHMOD} -R u+w ${WRKSRC}
@@ -10,12 +10,9 @@ post-extract:
 	@echo "=> continue. Press ENTER now to continue or CTRL-C at any time"
 	@echo "=> to abort."
 	@sh -c 'read ANS'
-	cd ${WRKSRC} && unzip ${JRL_BINFILE} LICENSE
-	more ${WRKSRC}/LICENSE
+	cd ${WRKSRC} && unzip -p ${JRL_SRCFILE} LICENSE | more
 	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
-	rm -f ${WRKSRC}/LICENSE
-	cd ${WRKSRC} && unzip ${JRL_SRCFILE} LICENSE
-	more ${WRKSRC}/LICENSE
+	cd ${WRKSRC} && unzip -p ${JRL_BINFILE} LICENSE | more
 	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
 	cd ${WRKSRC} && unzip ${JRL_BINFILE} X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
 	rm -f ${WRKSRC}/X_X
