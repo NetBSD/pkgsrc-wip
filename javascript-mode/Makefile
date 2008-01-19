@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/24 20:55:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/19 12:53:31 obache Exp $
 
 DISTNAME=	javascript-2.0b7.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}javascript-mode-2.0b7
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://web.comhem.se/~u34308910/emacs.html
+#HOMEPAGE=	http://www.brgeight.se/
 COMMENT=	Javascript major mode for Emacs
 
 NO_CONFIGURE=	yes
