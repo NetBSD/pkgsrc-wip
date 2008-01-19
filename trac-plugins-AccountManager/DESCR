@@ -1,0 +1,10 @@
+The AccountManager offers several features for managing user accounts:
+
+    * allow users to register new accounts
+    * login via an HTML form instead of using HTTP authentication
+    * allow existing users to change their passwords or delete their accounts
+
+These features are new in the plugin for Trac 0.10.
+
+    * send a new password to users who've forgotten their password
+    * administration of user accounts
