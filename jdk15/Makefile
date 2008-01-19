@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/08 01:32:35 heidnes Exp $
+# $NetBSD: Makefile,v 1.19 2008/01/19 06:45:51 tnn2 Exp $
 
 JDK_VERSION=		1.5.0
 JDK_UPDATE=		13
@@ -153,29 +153,28 @@ DEINSTALL_TEMPLATES+=   ${PKGDIR}/DEINSTALL.tmpl
 
 PLIST_SRC+=		PLIST.common_end
 
+INTERACTIVE_STAGE+=	extract
+
 post-extract:
-	${CHMOD} -R u+w ${WRKSRC}
-	@done=true; \
-	if [ ! -f ${WRKDIR}/control/make/Makefile ]; then \
-		done=false; \
-		${ECHO} "The Sun JRL source has not been extracted"; \
-	fi; \
-	if [ ! -f ${WRKDIR}/j2se/src/share/lib/cmm/PYCC.pf ]; then \
-		done=false; \
-		${ECHO} "The Sun JRL binaries have not been extracted"; \
-	fi; \
-	if ! $$done; then \
-		${ECHO} ""; \
-		${ECHO} "The Sun JRL source and binaries need to be"; \
-		${ECHO} "extracted manually via a java click-through"; \
-		${ECHO} "license acceptance."; \
-		${ECHO} ""; \
-		${ECHO} "Please use an existing java installation and run"; \
-		${ECHO} "	java -jar ${DISTDIR}/${JRL_SRCFILE}"; \
-		${ECHO} "	java -jar ${DISTDIR}/${JRL_BINFILE}"; \
-		${ECHO} "and extract the files into ${WRKDIR}"; \
-		exit 1; \
-	fi
+	@${CHMOD} -R u+w ${WRKSRC}
+	@cp ${FILESDIR}/x_x2zip.c ${WRKSRC}
+	@cd ${WRKSRC} && ${CC} -o x_x2zip x_x2zip.c
+	@echo ""
+	@echo "=> You will now be shown two licenses. If you accept the terms"
+	@echo "=> of each license agreement, type "yes" followed by ENTER to"
+	@echo "=> continue. Press ENTER now to continue or CTRL-C at any time"
+	@echo "=> to abort."
+	@sh -c 'read ANS'
+	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-bin-b05-jrl-25_sep_2007.jar LICENSE
+	more ${WRKSRC}/LICENSE
+	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
+	rm -f ${WRKSRC}/LICENSE
+	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-src-b05-jrl-25_sep_2007.jar LICENSE
+	more ${WRKSRC}/LICENSE
+	@sh -c 'echo -n "=> Do you accept the terms of the license agreement? "; read ANS; if [ "$$ANS" != "yes" ]; then exit 1; fi'
+	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-bin-b05-jrl-25_sep_2007.jar X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
+	rm -f ${WRKSRC}/X_X
+	cd ${WRKSRC} && unzip jdk-1_5_0_13-fcs-src-b05-jrl-25_sep_2007.jar X_X && ./x_x2zip 'YES I ACCEPT THE CLICK THROUGH LICENSE.  '  X_X && unzip X_X.zip
 
 pre-patch:
 	cd ${WRKSRC} && ${PATCH} -p0 -E -s <jdk15.patches
