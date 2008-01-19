@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+
+--- deploy/make/common/Defs-bsd.gmk.orig	2008-01-19 11:43:19.000000000 +0100
++++ deploy/make/common/Defs-bsd.gmk
+@@ -23,8 +23,8 @@ HEAD           = $(USRBIN_PATH)head
+ JUMP_EXE       = $(BIN_DIR)/javaws
+ CLASSPATH_SEP  = $(CLASSPATH_SEPARATOR)
+ PATH_SEP       = /
+-X11DIR         = /usr/X11R6
+-LOCALDIR       = /usr/local
++X11DIR         = %%X11BASE%%
++LOCALDIR       = %%LOCALBASE%%
+ ifneq ($(OS_VENDOR), NetBSD)
+ LIBS           = -L$(X11DIR)/lib -lX11 -L$(LOCALDIR)/lib -liconv
+ else

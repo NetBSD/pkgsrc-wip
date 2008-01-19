@@ -1,0 +1,6 @@
+# $NetBSD: INSTALL.tmpl,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	${PREFIX}/bin/jdk16-java -Xshare:dump;;
+esac

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+
+--- j2se/make/sun/xawt/Makefile.orig	2008-01-19 11:43:21.000000000 +0100
++++ j2se/make/sun/xawt/Makefile
+@@ -123,7 +123,7 @@ ifeq ($(PLATFORM), linux)
+ endif
+ 
+ ifeq ($(PLATFORM), bsd)
+-  CPPFLAGS += -I/usr/X11R6/include/X11/extensions -I$(MOTIF_DIR)/include -I$(OPENWIN_HOME)/include
++  CPPFLAGS += -I%%X11BASE%%/include/X11/extensions -I$(MOTIF_DIR)/include -I$(OPENWIN_HOME)/include
+ endif
+ 
+ ifeq ($(PLATFORM), solaris)

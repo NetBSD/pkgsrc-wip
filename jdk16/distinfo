@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+
+SHA1 (bsd-jdk16-patches-3.tar.bz2) = 7f62e4d9b6302cea1d7fb555583186ecf4fdbe67
+RMD160 (bsd-jdk16-patches-3.tar.bz2) = fd70b80f59d0a6e418a3e2cf6c6cba39fedcd8ed
+Size (bsd-jdk16-patches-3.tar.bz2) = 948424 bytes
+SHA1 (jce_policy-6.zip) = 7b1b021bd63152b93a16c96bb3a64f0e685fc425
+RMD160 (jce_policy-6.zip) = 6f45ce5f3c067e186554f79b3f1a61e4d7d22aae
+Size (jce_policy-6.zip) = 9101 bytes
+SHA1 (jdk-6u3-fcs-bin-b05-jrl-24_sep_2007.jar) = c61b568062715b1470bd6fc1e55fa81be73488c5
+RMD160 (jdk-6u3-fcs-bin-b05-jrl-24_sep_2007.jar) = 7f1bc2bf8f06f2cb69a0f7c0b02df6bfab36727d
+Size (jdk-6u3-fcs-bin-b05-jrl-24_sep_2007.jar) = 2116124 bytes
+SHA1 (jdk-6u3-fcs-src-b05-jrl-24_sep_2007.jar) = 12a98da07d8234059a6edaffa6059eff2637e461
+RMD160 (jdk-6u3-fcs-src-b05-jrl-24_sep_2007.jar) = 792449c735ae2f1e454e90bdd3405bb248b5e404
+Size (jdk-6u3-fcs-src-b05-jrl-24_sep_2007.jar) = 116791442 bytes
+SHA1 (patch-ae) = 2a3b258bb79d40a88caf6e561bdac088fff7a997
+SHA1 (patch-ag) = ba00a9ed191f0c836a44607ea46d6206d5654fd4
+SHA1 (patch-ah) = 2d46ae91f5f3ac4c58a07ea588f333851944bf71
+SHA1 (patch-aj) = 4b9201e88a8603ce77969f81a12476093525746a
+SHA1 (patch-ak) = 52d7f338d5877d39ff85d72f6a2b69a1e94a6cd2
+SHA1 (patch-al) = e2992b3bc39fe0e837ffd23436b4026f2244119a
+SHA1 (patch-am) = 126d721e47cafa49f9a960390dccb9936a791232
+SHA1 (patch-aq) = a068d9b47f1116e7f8251d070dddd20e8cd4113b
+SHA1 (patch-ba) = 78dcbaed6331d425aeb1772dbe7c846d097ac253
