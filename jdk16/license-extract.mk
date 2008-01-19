@@ -1,8 +1,8 @@
-# $NetBSD: license-extract.mk,v 1.2 2008/01/19 14:49:09 tnn2 Exp $
+# $NetBSD: license-extract.mk,v 1.3 2008/01/19 15:26:35 tnn2 Exp $
 
 post-extract:
 	@${CHMOD} -R u+w ${WRKSRC}
-	@cp ${PKGSRCDIR}/wip/jdk15/files/x_x2zip.c ${WRKSRC}
+	@cp ${PKGSRCDIR}/wip/jdk16/files/x_x2zip.c ${WRKSRC}
 	@cd ${WRKSRC} && ${CC} -o x_x2zip x_x2zip.c
 	@echo ""
 	@echo "=> You will now be shown two licenses. If you accept the terms"

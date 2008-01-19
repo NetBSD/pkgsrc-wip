@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/01/19 09:49:27 tnn2 Exp $
+# $NetBSD: Makefile,v 1.23 2008/01/19 15:26:35 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -22,10 +22,6 @@ WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
-
-.include "../../mk/bsd.prefs.mk"
-
-MOTIF_TYPE=openmotif
 
 JVM_HOME=		${LOCALBASE}/java/jdk-${JDK_VERSION}
 JAVA_HOME=		${JVM_HOME}
@@ -160,7 +156,6 @@ do-install:
 #		${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
-.include "../../mk/motif.buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

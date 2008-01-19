@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2008/01/19 09:49:27 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/01/19 15:26:35 tnn2 Exp $
 
 CATEGORIES=		lang java
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -26,3 +26,14 @@ CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 UNLIMIT_RESOURCES=	datasize
 
 INTERACTIVE_STAGE+=	fetch
+
+.include "../../mk/bsd.prefs.mk"
+
+MOTIF_TYPE=		openmotif
+.include "../../mk/motif.buildlink3.mk"
+
+GCC_REQD+=		3.0
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
+USE_PKGSRC_GCC=		yes
+.endif
+.include "../../mk/compiler.mk"
