@@ -1,44 +1,26 @@
-# $NetBSD: Makefile,v 1.36 2008/01/09 11:03:45 ghen Exp $
+# $NetBSD: Makefile,v 1.37 2008/01/19 08:19:04 tnn2 Exp $
 
-JDK_VERSION=	1.4.2
+.include "../../wip/jdk16/Makefile.common"
+
+JDK_VERSION=		1.4.2
 JDK_PATCHSET_VERSION=	8
 SUN_LINUX_JDK_VERSION=	1.4.2
 
 DISTNAME=		j2sdk-1_4_2-src-scsl
 PKGNAME=		jdk14-${JDK_VERSION}.${JDK_PATCHSET_VERSION}
-CATEGORIES=		lang java
-MASTER_SITES=		# http://www.sun.com/software/java2/download.html
-#			http://www.eyesbeyond.com/freebsddom/java/jdk14.html
-EXTRACT_SUFX=		.zip
+MASTER_SITES+=		# http://www.sun.com/software/java2/download.html
+MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk14.html
 DISTFILES=		${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=		Java Development Kit 1.4.2
 
-BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-RESTRICTED=		Redistribution of source or binaries permitted only by license terms
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		scsl23-license
 
-USE_TOOLS+=		gmake m4
-USE_LANGUAGES=		c c++
 EXTRACT_CMD_OPTS.zip=	-a -q
 WRKSRC=			${WRKDIR}
-PLIST_SRC=	PLIST.common
+PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 DragonFly-*-i386
-
-BUILD_TARGET=		all # added to below
-BUILD_DIRS=		${WRKSRC}/control/make
-CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,10 +47,6 @@ PKG_FAIL_REASON=	"Please mount /emul/linux/proc (fstype procfs, options linux)."
 PKG_FAIL_REASON=	"Please mount /compat/linux/proc (fstype linprocfs)."
 .endif
 
-MOTIF_TYPE=		openmotif
-
-UNLIMIT_RESOURCES=	datasize
-
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}
 MAKE_FLAGS+=		ALT_DEVTOOLS_PATH=${LOCALBASE}/bin
@@ -94,31 +72,22 @@ PATCH_DOWNLOAD=		http://www.eyesbeyond.com/freebsddom/java/JDK14SCSLConfirm.html
 JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
-.if !exists(${DISTDIR}/${SCSL_SRCFILE}) ||	\
-	 !exists(${DISTDIR}/${SCSL_BINFILE}) ||	\
-	 !exists(${DISTDIR}/${PATCHSETFILE})
-INTERACTIVE_STAGE=	fetch
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================================"; \
-	${ECHO} ; \
-	${ECHO} " The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"; \
-	${ECHO} " containing the Java(tm) 2 SDK, Standard Edition must be fetched"; \
-	${ECHO} " into:"; \
-	${ECHO} "	${DISTDIR}/${SCSL_SRCFILE}"; \
-	${ECHO} " and:"; \
-	${ECHO} "	${DISTDIR}/${SCSL_BINFILE}"; \
-	${ECHO} " from (choose the Download link for Java[tm] 2 SDK 1.4.2):"; \
-	${ECHO} "	${SCSL_DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} " This requires a Sun Community Source Licensing account."; \
-	${ECHO} ; \
-	${ECHO} " Also, the file ${PATCHSETFILE} must be fetched into:"; \
-	${ECHO} "	${DISTDIR}/${PATCHSETFILE}"; \
-	${ECHO} " from:"; \
-	${ECHO} "	${PATCH_DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} "======================================================================"
-.endif
+FETCH_MESSAGE+="The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"
+FETCH_MESSAGE+="containing the Java(tm) 2 SDK, Standard Edition must be fetched"
+FETCH_MESSAGE+="into:"
+FETCH_MESSAGE+="	${DISTDIR}/${SCSL_SRCFILE}"
+FETCH_MESSAGE+="and:"
+FETCH_MESSAGE+="	${DISTDIR}/${SCSL_BINFILE}"
+FETCH_MESSAGE+=""
+FETCH_MESSAGE+="from (choose the Download link for Java[tm] 2 SDK 1.4.2):"
+FETCH_MESSAGE+="	${SCSL_DOWNLOAD}"
+FETCH_MESSAGE+="This requires a Sun Community Source Licensing account."
+FETCH_MESSAGE+=""
+FETCH_MESSAGE+="Also, the file ${PATCHSETFILE} must be fetched into:"
+FETCH_MESSAGE+="	${DISTDIR}/${PATCHSETFILE}"
+FETCH_MESSAGE+=""
+FETCH_MESSAGE+="from:"
+FETCH_MESSAGE+="	${PATCH_DOWNLOAD}"
 
 MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}

@@ -1,0 +1,29 @@
+# $NetBSD: Makefile.common,v 1.1 2008/01/19 08:19:05 tnn2 Exp $
+
+CATEGORIES=		lang java
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.eyesbeyond.com/freebsddom/java/
+EXTRACT_SUFX=		.zip
+
+BUILD_DEPENDS+=         unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=         zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+RESTRICTED=		Redistribution of source or binaries permitted only by license terms
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake m4
+
+BUILD_TARGET=		all # added to below
+BUILD_DIRS=		control/make
+CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
+
+MOTIF_TYPE=		openmotif
+UNLIMIT_RESOURCES=	datasize
+
+INTERACTIVE_STAGE+=	fetch

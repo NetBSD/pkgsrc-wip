@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2008/01/19 06:54:57 tnn2 Exp $
+# $NetBSD: Makefile,v 1.21 2008/01/19 08:19:05 tnn2 Exp $
+
+.include "../../wip/jdk16/Makefile.common"
 
 JDK_VERSION=		1.5.0
 JDK_UPDATE=		13
@@ -7,36 +9,19 @@ JDK_VERSION_STRING=	b05-jrl-25_sep_2007
 
 DISTNAME=		jdk-${JDK_VERSION:S/./_/g}_${JDK_UPDATE}
 PKGNAME=	jdk15-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
-CATEGORIES=		lang java
 MASTER_SITES+=		# http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk15.html
-EXTRACT_SUFX=		.zip
 DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.eyesbeyond.com/freebsddom/java/
 COMMENT=		Java Development Kit ${JDK_VERSION}
 
-# BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-# BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-
-RESTRICTED=		Redistribution of source or binaries permitted only by license terms
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		sun-jrl-16-license
 
-USE_TOOLS+=		gmake m4 patch
-USE_LANGUAGES=		c c++
+USE_TOOLS+=		patch
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
-
-BUILD_TARGET=		all # added to below
-BUILD_DIRS=		control/make
-CHECK_SHLIBS=		no # scripts set LD_LIBRARY_PATH
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,10 +41,6 @@ JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
 MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
 #.endif
-
-MOTIF_TYPE=		openmotif
-
-UNLIMIT_RESOURCES=	datasize
 
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}
@@ -94,7 +75,6 @@ PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
-INTERACTIVE_STAGE+=	fetch
 FETCH_MESSAGE+= " The source and patches for the Java (tm) 2 SDK require"
 FETCH_MESSAGE+= " a Sun Java Research License, and cannot be"
 FETCH_MESSAGE+= " fetched automatically."
