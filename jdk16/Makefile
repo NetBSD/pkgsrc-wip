@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/19 15:26:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/20 02:07:37 obache Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -152,17 +152,17 @@ post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${JAVA_HOME}
-	${INSTALL_DATA_DIR} ${JAVA_HOME}/jre/.systemPrefs
-	${TOUCH} ${JAVA_HOME}/jre/.systemPrefs/.system.lock
-	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.system.lock
-	${TOUCH} ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
-	${CHMOD} 644 ${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs
+	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
+	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
+	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
+	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
 #	${INSTALL_DATA} ${FILESDIR}/cacerts \
-#		${JAVA_HOME}/jre/lib/security/cacerts
+#		${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
-#		${JAVA_HOME}/jre/javaws/cacerts
+#		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
 
 MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${PREFIX}/include
 BUILDLINK_DEPMETHOD.cups?=	build
