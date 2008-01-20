@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2756 2008/01/18 07:18:31 thomasklausner Exp $
+# $Id: Makefile,v 1.2757 2008/01/20 14:26:17 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -694,6 +694,7 @@ SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jdk14
 SUBDIR+=	jdk15
+SUBDIR+=	jdk16
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jetty
 SUBDIR+=	jgloss
