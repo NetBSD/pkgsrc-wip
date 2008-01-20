@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/01/20 00:31:01 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/01/20 03:53:06 tnn2 Exp $
 
 CATEGORIES=		lang java
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -31,6 +31,8 @@ INTERACTIVE_STAGE+=	fetch
 
 MOTIF_TYPE=		openmotif
 .include "../../mk/motif.buildlink3.mk"
+
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-deprecated
 
 #GCC_REQD+=		3.0
 #.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
