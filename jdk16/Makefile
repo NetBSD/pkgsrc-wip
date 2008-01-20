@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/20 15:23:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/20 17:16:16 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -26,19 +26,8 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 JAVA_NAME=		jdk16
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
-# Let an installed version of this package bootstrap a later version
-# (skips having to reinstall sun-jdk16 again)
-#
-#.if exists(${JVM_HOME}/LICENSE)
-#BUILD_DEPENDS+=		jdk16>=1
-#MAKE_ENV+=		ALT_BOOTDIR=${JVM_HOME}
-#.else
-BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-6
-#.endif
-
-#For bootstrapping with wip/jdk15
-#MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.5.0
+BUILD_DEPENDS+=		jdk15>=1:../../wip/jdk15
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.5.0
 
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}
@@ -146,10 +135,6 @@ do-install:
 	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
 	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
 	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.systemRootModFile
-#	${INSTALL_DATA} ${FILESDIR}/cacerts \
-#		${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
-#	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
-#		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
 
 # XXX work around linker errors / HPI crashes
 # fixme, for the love of god.
