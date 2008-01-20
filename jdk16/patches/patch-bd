@@ -1,0 +1,28 @@
+$NetBSD: patch-bd,v 1.1 2008/01/20 09:36:41 tnn2 Exp $
+
+--- j2se/make/sun/splashscreen/Makefile.orig	2008-01-20 09:22:48.000000000 +0100
++++ j2se/make/sun/splashscreen/Makefile
+@@ -46,15 +46,17 @@ CFLAGS += -DSPLASHSCREEN
+ ifneq ($(PLATFORM), windows)
+   CFLAGS += -DWITH_X11
+   ifeq ($(PLATFORM), bsd)
+-    ifeq ($(OS_VENDOR), NetBSD)
+-      ICONV_DIR = /usr/pkg
+-    else
+-      ICONV_DIR = /usr/local
+-    endif
+     CPPFLAGS += -I$(OPENWIN_HOME)/include \
+                 -I$(OPENWIN_HOME)/include/X11/extensions \
+ 		-I$(ICONV_DIR)/include
+-    OTHER_LDLIBS += -L$(OPENWIN_LIB) -lX11 -lXext -L$(ICONV_DIR)/lib -liconv $(LIBM) -pthread
++    OTHER_LDLIBS += -L$(OPENWIN_LIB) -lX11 -lXext
++    ifneq ($(OS_VENDOR), NetBSD)
++      ICONV_DIR = /usr/local
++      OTHER_LDLIBS += -L$(ICONV_DIR)/lib -liconv
++    else
++      OTHER_LDLIBS += -Wl,-R$(OPENWIN_LIB)
++    endif
++    OTHER_LDLIBS += $(LIBM) -pthread
+   else
+     CPPFLAGS += -I$(OPENWIN_HOME)/include -I$(OPENWIN_HOME)/include/X11/extensions
+     OTHER_LDLIBS += -L$(OPENWIN_LIB) -lX11 -lXext $(LIBM) -lpthread
