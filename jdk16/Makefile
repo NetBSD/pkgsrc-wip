@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/20 02:07:37 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/20 02:44:51 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -36,8 +36,8 @@ JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 #BUILD_DEPENDS+=		jdk16>=1
 #MAKE_ENV+=		ALT_BOOTDIR=${JVM_HOME}
 #.else
-BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
+BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
+MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-6
 #.endif
 
 #For bootstrapping with wip/jdk15
