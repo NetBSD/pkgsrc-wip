@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/20 02:44:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/20 14:04:55 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -62,6 +62,17 @@ MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
 MAKE_ENV+=		DONT_ENABLE_IPV6=YES
 .endif
 
+.if empty(PKG_OPTIONS:Mdebug)
+MAKE_ENV+=		SKIP_DEBUG_BUILD=true
+.else
+MAKE_ENV+=		SKIP_DEBUG_BUILD=false
+.endif
+
+.if empty(PKG_OPTIONS:Mfastdebug)
+MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=true
+.else
+MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=false
+.endif
 
 BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
@@ -163,6 +174,14 @@ do-install:
 #		${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
 #		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
+
+# XXX work around linker errors / HPI crashes
+# fixme, for the love of god.
+GROSS_HACKS+=	--param max-inline-insns-single=20000 \
+		--param large-function-growth=20000 \
+		--param inline-unit-growth=20000
+_WRAP_EXTRA_ARGS.CC+=   ${GROSS_HACKS}
+_WRAP_EXTRA_ARGS.CXX+=  ${GROSS_HACKS}
 
 MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${PREFIX}/include
 BUILDLINK_DEPMETHOD.cups?=	build

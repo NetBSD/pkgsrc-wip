@@ -1,0 +1,43 @@
+$NetBSD: patch-be,v 1.1 2008/01/20 14:04:55 tnn2 Exp $
+
+--- deploy/make/common/Release.gmk.orig	2008-01-20 13:34:14.000000000 +0100
++++ deploy/make/common/Release.gmk
+@@ -178,12 +178,14 @@ deploy-jre-image::
+ 	@#
+ 	@# Copy the script L10N message files into the JRE image directory
+ 	@#
++    ifeq ($(BUILD_PLUGIN), true)
+ 	if [ -d $(LIBDIR) ]; then \
+ 	    $(MKDIR) -p $(TMP_DEPLOY_IMAGE_DIR)/lib; \
+ 	    $(CD) $(LIBDIR); \
+ 	    $(TAR) cf - `$(FIND) . -name 'sunw_java_plugin.mo' -print` | \
+ 	    ($(CD) $(TMP_DEPLOY_IMAGE_DIR)/lib; $(TAR) xf -); \
+ 	fi
++    endif
+ 	@# Now take care of the deploy common so
+ 	if [ -f $(DEPLOY_COMMON_LIB) ]; then \
+ 	   $(CP) $(DEPLOY_COMMON_LIB) $(TMP_DEPLOY_IMAGE_DIR)/lib/$(LIBARCH)/; \
+@@ -233,11 +235,14 @@ deploy-jre-image::
+ 	done ;
+      endif
+ 	@# Now take care of the javaws-image
++     ifeq ($(BUILD_PLUGIN), true)
++	@# fixme breakage
+ 	$(MKDIR) -p $(TMP_DEPLOY_IMAGE_DIR)/lib
+ 	$(MKDIR) -p $(TMP_DEPLOY_IMAGE_DIR)/bin
+ 	$(CP) -Rf $(IMAGE_DIR)/lib/javaws.jar $(TMP_DEPLOY_IMAGE_DIR)/lib
+ 	$(CP) -Rf $(IMAGE_DIR)/lib/deploy $(TMP_DEPLOY_IMAGE_DIR)/lib
+ 	$(CP) -Rf $(IMAGE_DIR)/lib/security $(TMP_DEPLOY_IMAGE_DIR)/lib
++     endif
+   ifneq ($(PLATFORM), windows)
+ 	if [ -r $(IMAGE_DIR) ]; then \
+ 	  $(CP) -Rf $(IMAGE_DIR)/bin $(TMP_DEPLOY_IMAGE_DIR); \
+@@ -314,7 +319,7 @@ deploy-jdk-image::
+ 	$(CP) $(DEMODIR)/applets.html $(JDK_IMAGE_DIR)/demo
+ 	$(CP) -r -f $(DEMODIR)/plugin $(JDK_IMAGE_DIR)/demo
+ 	@# Javaws sample
+-	$(CP) -r -f $(IMAGE_DIR)/sample $(JDK_IMAGE_DIR)
++#	$(CP) -r -f $(IMAGE_DIR)/sample $(JDK_IMAGE_DIR)
+ 	@# Done with the JDK
+ 
+ 

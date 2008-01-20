@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+# $NetBSD: options.mk,v 1.2 2008/01/20 14:04:55 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk16
-PKG_SUPPORTED_OPTIONS=		jdk16-jce inet6 # jdk16-plugin
+PKG_SUPPORTED_OPTIONS=		jdk16-jce inet6 debug fastdebug # jdk16-plugin
 PKG_SUGGESTED_OPTIONS=		# jdk16-plugin 
 PKG_OPTIONS_LEGACY_VARS+=	JDK16_USE_JCE:jdk16-jce
 

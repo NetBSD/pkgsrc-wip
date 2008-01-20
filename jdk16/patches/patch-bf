@@ -1,0 +1,17 @@
+$NetBSD: patch-bf,v 1.1 2008/01/20 14:04:55 tnn2 Exp $
+
+--- deploy/make/Makefile.orig	2008-01-20 13:34:14.000000000 +0100
++++ deploy/make/Makefile
+@@ -47,10 +47,10 @@ all:: build
+ build: $(ALL_DEPLOY_TARGETS)
+ 
+ javaws: sanity-javaws
+-	$(CD) $(DEPLOY_TOPDIR)/make/javaws ; $(MAKE) installer-int
++#	$(CD) $(DEPLOY_TOPDIR)/make/javaws ; $(MAKE) installer-int
+ 
+ javaws-all: sanity-javaws
+-	$(CD) $(DEPLOY_TOPDIR)/make/javaws ; $(MAKE) installer-int sample apidoc
++#	$(CD) $(DEPLOY_TOPDIR)/make/javaws ; $(MAKE) installer-int sample apidoc
+ 
+ plugin-all: sanity-plugin
+    ifeq ($(BUILD_PLUGIN), true)
