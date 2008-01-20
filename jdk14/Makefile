@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/01/19 15:26:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.40 2008/01/20 15:23:08 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -22,10 +22,7 @@ PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 DragonFly-*-i386
 
-JVM_HOME=		${LOCALBASE}/java/jdk-1.4.2
-JAVA_HOME=		${JVM_HOME}
 JAVA_NAME=		jdk14
-JAVA_UNLIMIT=		datasize
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
 # Let an installed version of this package bootstrap a later version
@@ -56,9 +53,6 @@ MAKE_ENV+=		ALT_MOTIF_DIR=${MOTIFBASE:Q}
 MAKE_ENV+=		DEV_ONLY=YES
 MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
-
-BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 
 SCSL_SRCFILE=		j2sdk-${JDK_VERSION:S/./_/g}-src-scsl.zip
 SCSL_BINFILE=		j2sdk-${JDK_VERSION:S/./_/g}-bin-scsl.zip
@@ -112,8 +106,6 @@ SUBST_STAGE.cr=		post-extract
 SUBST_FILES.cr=		jdk14.patches
 SUBST_SED.cr=		-e 's,,,'
 
-BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
-
 # Needed to get dynamically linked programs to work
 .if !defined(LD_LIBRARY_PATH) || empty(LD_LIBRARY_PATH)
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/control/build/bsd-i586/lib/i386:${WRKSRC}/control/build/bsd-i586/lib/i386/server
@@ -151,5 +143,4 @@ do-install:
 .include "../../mk/java-env.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

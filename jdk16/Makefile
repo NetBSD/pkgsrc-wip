@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/20 14:04:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/20 15:23:09 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -23,10 +23,7 @@ PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
-JVM_HOME=		${LOCALBASE}/java/jdk-${JDK_VERSION}
-JAVA_HOME=		${JVM_HOME}
 JAVA_NAME=		jdk16
-JAVA_UNLIMIT=		datasize
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
 # Let an installed version of this package bootstrap a later version
@@ -57,25 +54,6 @@ MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
-
-.if empty(PKG_OPTIONS:Minet6)
-MAKE_ENV+=		DONT_ENABLE_IPV6=YES
-.endif
-
-.if empty(PKG_OPTIONS:Mdebug)
-MAKE_ENV+=		SKIP_DEBUG_BUILD=true
-.else
-MAKE_ENV+=		SKIP_DEBUG_BUILD=false
-.endif
-
-.if empty(PKG_OPTIONS:Mfastdebug)
-MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=true
-.else
-MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=false
-.endif
-
-BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 
 JRL_SRCFILE=		${DISTNAME}-fcs-src-${JDK_VERSION_STRING}.jar
 JRL_BINFILE=		${DISTNAME}-fcs-bin-${JDK_VERSION_STRING}.jar
@@ -136,12 +114,10 @@ SUBST_SED.paths=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
 SUBST_SED.paths+=	-e 's,%%X11BASE%%,${X11BASE},g'
 SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
-BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
-
 .include "options.mk"
 
-INSTALL_TEMPLATES+=     ${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATES+=   ${PKGDIR}/DEINSTALL.tmpl
+INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
+DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
 
 PLIST_SRC+=		PLIST.common_end
 
@@ -180,8 +156,8 @@ do-install:
 GROSS_HACKS+=	--param max-inline-insns-single=20000 \
 		--param large-function-growth=20000 \
 		--param inline-unit-growth=20000
-_WRAP_EXTRA_ARGS.CC+=   ${GROSS_HACKS}
-_WRAP_EXTRA_ARGS.CXX+=  ${GROSS_HACKS}
+_WRAP_EXTRA_ARGS.CC+=	${GROSS_HACKS}
+_WRAP_EXTRA_ARGS.CXX+=	${GROSS_HACKS}
 
 MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${PREFIX}/include
 BUILDLINK_DEPMETHOD.cups?=	build
