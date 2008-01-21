@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/12/12 02:36:14 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/01/21 00:23:23 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 STRIGI_BUILDLINK3_MK:=	${STRIGI_BUILDLINK3_MK}+
@@ -14,6 +14,9 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}strigi
 .if ${STRIGI_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.7
 BUILDLINK_PKGSRCDIR.strigi?=	../../wip/strigi
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/strigi$$/ \
+				{ print "@comment in strigi: " $$0; next; }
 .endif	# STRIGI_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
