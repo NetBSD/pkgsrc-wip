@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/05 01:45:50 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/22 10:08:30 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.9
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		Steel Bank Common Lisp (SBCL), for bootstrap using CLISP
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-[2-9]*-i386
 # It should be possible to have SBCL working on amd64, powerpc,
 # sparc, alpha, mips, and HPPA hardware also, but they probably
 # need a bit of porting work done in SBCL itself.
