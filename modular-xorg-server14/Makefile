@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/12 23:00:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/22 13:49:55 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.4.0.90
 PKGNAME=	modular-${DISTNAME}
@@ -57,8 +57,7 @@ CONFIGURE_ENV+=	APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 
 BUILD_DEFS+=		VARBASE
 
-# -wip
-DEPENDS+=		xkeyboard-config-[0-9]*:../../wip/xkeyboard-config
+DEPENDS+=		xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 #DEPENDS+=		xkbdata-[0-9]*:../../x11/xkbdata
 
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
