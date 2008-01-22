@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/10/14 12:25:57 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/01/22 11:34:56 tnn2 Exp $
 
 DISTNAME=		wmii-20071003
 PKGNAME=		${DISTNAME}
@@ -20,8 +20,8 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 #
 MAKE_JOBS_SAFE=no
 
-.include "../../wip/dmenu/buildlink3.mk"
-.include "../../wip/libixp/buildlink3.mk"
+.include "../../x11/dmenu/buildlink3.mk"
+.include "../../devel/libixp/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
