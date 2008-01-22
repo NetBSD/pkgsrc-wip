@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2759 2008/01/22 12:41:18 tnn2 Exp $
+# $Id: Makefile,v 1.2760 2008/01/22 13:41:36 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1594,7 +1594,6 @@ SUBDIR+=	sdlmess
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
-SUBDIR+=	sessreg
 SUBDIR+=	sex
 SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
@@ -1830,7 +1829,6 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdm
-SUBDIR+=	xf86-input-keyboard
 SUBDIR+=	xf86-video-ati
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
@@ -1865,7 +1863,6 @@ SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
 SUBDIR+=	xine-xcb
 SUBDIR+=	xinetd
-SUBDIR+=	xkeyboard-config
 SUBDIR+=	xlsfonts
 SUBDIR+=	xmail
 SUBDIR+=	xmim
