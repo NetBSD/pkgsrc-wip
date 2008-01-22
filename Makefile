@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2757 2008/01/20 14:26:17 tnn2 Exp $
+# $Id: Makefile,v 1.2758 2008/01/22 07:14:27 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -220,6 +220,7 @@ SUBDIR+=	debian_x11
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
+SUBDIR+=	dhcpcd
 SUBDIR+=	di
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
@@ -862,6 +863,7 @@ SUBDIR+=	lirc
 SUBDIR+=	listres
 SUBDIR+=	lives
 SUBDIR+=	lletters
+SUBDIR+=	llvm
 SUBDIR+=	lmarbles
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logrotate
@@ -1734,6 +1736,8 @@ SUBDIR+=	toppler
 SUBDIR+=	tops-bin
 SUBDIR+=	tor
 SUBDIR+=	tr2latex
+SUBDIR+=	trac-plugins-AccountManager
+SUBDIR+=	trac-plugins-WebAdmin
 SUBDIR+=	traceroute-nanog
 SUBDIR+=	trayer
 SUBDIR+=	treetool
