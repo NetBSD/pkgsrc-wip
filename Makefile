@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2761 2008/01/23 00:40:59 netcap Exp $
+# $Id: Makefile,v 1.2762 2008/01/23 12:26:18 anielski Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1219,6 +1219,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Log-Log4perl
+SUBDIR+=    p5-Mail-SPF
 SUBDIR+=	p5-MARC-Charset
 SUBDIR+=	p5-MARC-Record
 SUBDIR+=	p5-MARC-XML
@@ -1236,6 +1237,7 @@ SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-Delicious
+SUBDIR+=    p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-Net-Z3950-ZOOM
