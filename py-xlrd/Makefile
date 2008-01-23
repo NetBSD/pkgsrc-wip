@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 08:03:35 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/23 08:36:04 obache Exp $
 #
 
 DISTNAME=		xlrd-0.6.1
@@ -12,12 +12,13 @@ MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.lexicon.net/sjmachin/xlrd.htm
 COMMENT=		Python library to extract data from Microsoft Excel spread sheet files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 PYDISTUTILSPKG=		yes
-PYSETUPINSTALLARGS=	-q bdist_egg
 
 post-install:
-	chmod go-w ${PREFIX}/bin/runxlrd.py
+	chmod go-w ${DESTDIR}${PREFIX}/bin/runxlrd.py
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
