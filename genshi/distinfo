@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/01/23 07:54:50 obache Exp $
+
+SHA1 (Genshi-0.4.4.tar.gz) = 9993dcc4d0e209092341f6e7a5c853a028a70eba
+RMD160 (Genshi-0.4.4.tar.gz) = f12d19cbe8387280e079774612e6d439fc5f384b
+Size (Genshi-0.4.4.tar.gz) = 284080 bytes
