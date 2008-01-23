@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2008/01/08 17:06:58 netcap Exp $
+# $NetBSD: options.mk,v 1.10 2008/01/23 08:25:08 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -10,7 +10,16 @@ PKG_SUPPORTED_OPTIONS+=		pgsql gdbm bdb pcre rawsock pari fastcgi wildcard gtk2 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
 PKG_OPTIONS_GROUP.x11-bindings=	mit-clx new-clx
 
+PKG_SUPPORTED_OPTIONS+=		gmalloc
+
 PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock zlib
+
+# CLISP doesn't work with jemalloc:
+.if ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=		gmalloc
+.elif ${OPSYS} == "FreeBSD" && !empty(OS_VERSION:N[0-6].*)
+PKG_SUGGESTED_OPTIONS+=		gmalloc
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -22,6 +31,10 @@ PLIST_SUBST+=	${option}=""
 PLIST_SUBST+=	${option}="@comment "
 .endif
 .endfor
+
+.if !empty(PKG_OPTIONS:Mgmalloc)
+CONFIGURE_ARGS+=	--with-gmalloc
+.endif
 
 # ffcall is required for other options to work
 .if !empty(PKG_OPTIONS:Mpgsql) && empty(PKG_OPTIONS:Mffcall)

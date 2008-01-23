@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/01/11 19:32:16 netcap Exp $
+# $NetBSD: Makefile,v 1.13 2008/01/23 08:25:08 asau Exp $
 #
 
 DISTNAME=	clisp-2.43
@@ -46,11 +46,6 @@ MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-# CLISP doesn't work with jemalloc, which is default in current
-CONFIGURE_ARGS+=	--with-gmalloc
-.endif
 
 .if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-mmap
