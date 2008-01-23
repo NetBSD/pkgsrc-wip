@@ -1,0 +1,24 @@
+# $Id: Makefile,v 1.1 2008/01/23 12:23:24 anielski Exp $
+#
+
+DISTNAME=       Net-DNS-Resolver-Programmable-v0.003
+PKGNAME=        p5-Net-DNS-Resolver-Programmable-0.003
+CATEGORIES=     net perl5
+MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=Net/}
+
+MAINTAINER=     aniou@smutek.pl
+HOMEPAGE=       http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/
+COMMENT=        A Net::DNS::Resolver descendant class for offline emulation of DNS
+
+DEPENDS+=       p5-version-[0-9]*:../../devel/p5-version
+DEPENDS+=       p5-Net-DNS:../../net/p5-Net-DNS
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+PERL5_MODULE_TYPE= Module::Build
+
+USE_LANGUAGES=  # empty
+PERL5_PACKLIST= auto/Net/DNS/Resolver/Programmable/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
+
