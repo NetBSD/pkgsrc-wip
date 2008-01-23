@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2760 2008/01/22 13:41:36 tnn2 Exp $
+# $Id: Makefile,v 1.2761 2008/01/23 00:40:59 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1738,6 +1738,7 @@ SUBDIR+=	tr2latex
 SUBDIR+=	trac-plugins-AccountManager
 SUBDIR+=	trac-plugins-WebAdmin
 SUBDIR+=	traceroute-nanog
+SUBDIR+=	trackballs
 SUBDIR+=	trayer
 SUBDIR+=	treetool
 SUBDIR+=	treeview
