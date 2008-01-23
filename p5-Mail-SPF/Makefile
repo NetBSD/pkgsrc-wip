@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2008/01/23 12:24:24 anielski Exp $
+# $Id: Makefile,v 1.2 2008/01/23 12:33:03 anielski Exp $
 #
 
 DISTNAME=       Mail-SPF-v2.005
@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=     aniou@smutek.pl
 HOMEPAGE=       http://search.cpan.org/~jmehnle/Mail-SPF-v2.005/
-COMMENT=        A Perl implementation of the Sender Policy Framework
+COMMENT=        Perl implementation of the Sender Policy Framework
 
 BUILD_DEPENDS+= p5-Net-DNS-Resolver-Programmable:../../wip/p5-Net-DNS-Resolver-Programmable
 BUILD_DEPENDS+= p5-Test-Simple:../../devel/p5-Test-Simple
@@ -28,7 +28,7 @@ SUBST_MESSAGE.fix=      Fixing hardcoded spfd path
 REPLACE_INTERPRETER+=   perl
 REPLACE.perl.old=       .*/bin/perl
 REPLACE.perl.new=       ${PREFIX}/bin/perl
-REPLACE_FILES.perl=     sbin/spfd      
+REPLACE_FILES.perl=     sbin/spfd
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PERL5_MODULE_TYPE= Module::Build
@@ -38,4 +38,3 @@ PERL5_PACKLIST= auto/Mail/SPF/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-

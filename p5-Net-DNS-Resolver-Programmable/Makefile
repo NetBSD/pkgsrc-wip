@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.1 2008/01/23 12:23:24 anielski Exp $
+# $Id: Makefile,v 1.2 2008/01/23 12:33:55 anielski Exp $
 #
 
 DISTNAME=       Net-DNS-Resolver-Programmable-v0.003
@@ -8,7 +8,7 @@ MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=     aniou@smutek.pl
 HOMEPAGE=       http://search.cpan.org/dist/Net-DNS-Resolver-Programmable/
-COMMENT=        A Net::DNS::Resolver descendant class for offline emulation of DNS
+COMMENT=        Net::DNS::Resolver descendant class for offline emulation of DNS
 
 DEPENDS+=       p5-version-[0-9]*:../../devel/p5-version
 DEPENDS+=       p5-Net-DNS:../../net/p5-Net-DNS
@@ -21,4 +21,3 @@ PERL5_PACKLIST= auto/Net/DNS/Resolver/Programmable/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-
