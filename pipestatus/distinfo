@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2008/01/24 22:15:12 cheusov Exp $
+
+SHA1 (pipestatus-0.4.0.tar.gz) = 8d65778f52060a3bdd8f8fcbf65b8f1db8213acf
+RMD160 (pipestatus-0.4.0.tar.gz) = c7db4f37f413396fa8a15d723707dae1bfdb9dc2
+Size (pipestatus-0.4.0.tar.gz) = 5358 bytes
