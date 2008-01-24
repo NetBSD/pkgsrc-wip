@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/24 03:15:36 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.11
 PKGREVISION=	2
@@ -52,10 +52,9 @@ CONFIGURE_ARGS+=	--enable-listext
 CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--enable-replication
-CONFIGURE_ARGS+=	--without-ucdsnmp
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
-PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap zephyr
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap snmp zephyr
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mkerberos)
@@ -91,13 +90,18 @@ CONFIGURE_ARGS+=	--without-ldap
 PLIST_SUBST+=		LDAP="@comment "
 .endif
 
+.if !empty(PKG_OPTIONS:Msnmp)
+.  include "../../net/net-snmp/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
+.else
+CONFIGURE_ARGS+=	--without-snmp
+.endif
+
 .if !empty(PKG_OPTIONS:Mzephyr)
 .  include "../../chat/zephyr/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zephyr=${BUILDLINK_PREFIX.zephyr}
-PLIST_SUBST+=		LDAP=
 .else
 CONFIGURE_ARGS+=	--without-zephyr
-PLIST_SUBST+=		LDAP="@comment "
 .endif
 
 .if exists(/usr/bin/compile_et)
