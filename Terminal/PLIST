@@ -1,33 +1,32 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/12 01:54:42 dvol Exp $
-share/GNUstep/System/Applications/Terminal.app/Resources/DefaultTerminalServices.svcs
-share/GNUstep/System/Applications/Terminal.app/Resources/English.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/French.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/German.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Hungarian.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Info-gnustep.plist
-share/GNUstep/System/Applications/Terminal.app/Resources/Norwegian.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Russian.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Spanish.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Swedish.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/Terminal.desktop
-share/GNUstep/System/Applications/Terminal.app/Resources/Terminal.tiff
-share/GNUstep/System/Applications/Terminal.app/Resources/Turkish.lproj/Localizable.strings
-share/GNUstep/System/Applications/Terminal.app/Resources/cursor_filled.tiff
-share/GNUstep/System/Applications/Terminal.app/Resources/cursor_inverted.tiff
-share/GNUstep/System/Applications/Terminal.app/Resources/cursor_line.tiff
-share/GNUstep/System/Applications/Terminal.app/Resources/cursor_stroked.tiff
-share/GNUstep/System/Applications/Terminal.app/Terminal
-share/GNUstep/System/Applications/Terminal.app/library_paths.openapp
-share/GNUstep/System/Applications/Terminal.app/stamp.make
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Turkish.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Swedish.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Spanish.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Russian.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Norwegian.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/Hungarian.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/German.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/French.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources/English.lproj
-@dirrm share/GNUstep/System/Applications/Terminal.app/Resources
-@dirrm share/GNUstep/System/Applications/Terminal.app
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Applications
+@comment $NetBSD: PLIST,v 1.2 2008/01/24 18:13:54 hoka_adam Exp $
+share/GNUstep/Local/Applications/Terminal.app/Resources/DefaultTerminalServices.svcs
+share/GNUstep/Local/Applications/Terminal.app/Resources/English.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/French.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/German.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Hungarian.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Info-gnustep.plist
+share/GNUstep/Local/Applications/Terminal.app/Resources/Norwegian.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Russian.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Spanish.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Swedish.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/Terminal.desktop
+share/GNUstep/Local/Applications/Terminal.app/Resources/Terminal.tiff
+share/GNUstep/Local/Applications/Terminal.app/Resources/Turkish.lproj/Localizable.strings
+share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_filled.tiff
+share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_inverted.tiff
+share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_line.tiff
+share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_stroked.tiff
+share/GNUstep/Local/Applications/Terminal.app/Terminal
+share/GNUstep/Local/Applications/Terminal.app/stamp.make
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Turkish.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Swedish.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Spanish.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Russian.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Norwegian.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/Hungarian.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/German.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/French.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources/English.lproj
+@dirrm share/GNUstep/Local/Applications/Terminal.app/Resources
+@dirrm share/GNUstep/Local/Applications/Terminal.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
