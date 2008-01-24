@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2008/01/22 22:16:36 schnoebe Exp $
+# $NetBSD: Makefile,v 1.45 2008/01/24 22:53:08 schnoebe Exp $
 #
 
 DISTNAME=		jabberd-2.1.22
 CATEGORIES=		chat
+PKGREVISION=		1
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -59,12 +60,16 @@ PKG_USERS=		${JABBERD_USER}:${JABBERD_GROUP}
 
 BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
+DOCDIR=			${PREFIX}/share/doc/jabberd
 
 FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
 			router-users.xml router-filter.xml s2s.xml	\
 			sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite
+DOCFILES=		PROTOCOL README UPGRADE ChangeLog
+
+INSTALLATION_DIRS=      bin share/examples/jabberd share/doc/jabberd
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -106,6 +111,9 @@ post-install:
 .endfor
 .for f in ${FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+.endfor
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 
 .include "../../security/gsasl/buildlink3.mk"
