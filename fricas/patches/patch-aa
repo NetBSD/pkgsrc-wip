@@ -1,0 +1,12 @@
+Revealed on FreeBSD 6.2: <malloc.h> must be <stdlib.h>.
+
+--- src/lib/cfuns-c.c.orig	Thu Jan 24 11:16:40 2008
++++ src/lib/cfuns-c.c	Thu Jan 24 11:16:48 2008
+@@ -38,7 +38,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include "axiom-c-macros.h"
+-#include <malloc.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
