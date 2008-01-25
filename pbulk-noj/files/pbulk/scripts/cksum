@@ -1,0 +1,13 @@
+#!@SH@
+
+. @PBULK_CONFIG@
+
+set -e
+
+echo "Building SHA512..."
+cd ${packages}
+{
+	echo "All/pkg_summary.bz2"
+	echo "All/pkg_summary.gz"
+	sed 's|^\(.*\)$|All/\1'"${pkg_suffix}|" < ${loc}/success
+} | sort | xargs ${digest} SHA512 | ${bzip2} -c > SHA512.bz2
