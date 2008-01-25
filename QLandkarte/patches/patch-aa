@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/01/25 21:16:15 guigui2 Exp $
+
+--- src/CToolViewLog.cpp.orig	2007-09-20 20:24:20.000000000 +0200
++++ src/CToolViewLog.cpp
+@@ -122,7 +122,9 @@ void CToolViewLog::slotPosition(const CG
+         lblErrorHoriz->setText(QString("\261%1m").arg(pvt.eph/2,0,'f',0));
+         lblErrorVert->setText(QString("\261%1m").arg(pvt.epv/2,0,'f',0));
+         lblSpeed->setText(QString("%1km/h").arg(speed_km_h, 0, 'f', 1));
+-        lblHeading->setText(QString("%1\260T").arg(nearbyintf(heading),3,'f',0,'0'));
++        // XXX this is a bad hack
++        //lblHeading->setText(QString("%1\260T").arg(nearbyintf(heading),3,'f',0,'0'));
++        lblHeading->setText(QString("%1\260T").arg((int)heading+0.5,3,'f',0,'0'));
+         lblTime->setText(t.toString());
+     }
+     else{

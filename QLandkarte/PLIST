@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/25 21:16:15 guigui2 Exp $
+bin/QLandkarte
+lib/QLandkarte/libEmap.la
+lib/QLandkarte/libEtrexLegend.la
+lib/QLandkarte/libEtrexLegendC.la
+lib/QLandkarte/libEtrexLegendCx.la
+lib/QLandkarte/libEtrexVentureCx.so
+lib/QLandkarte/libEtrexVentureHC.so
+lib/QLandkarte/libEtrexVista.so
+lib/QLandkarte/libEtrexVistaC.so
+lib/QLandkarte/libEtrexVistaCx.so
+lib/QLandkarte/libEtrexVistaHCx.so
+lib/QLandkarte/libGPSMap60CS.so
+lib/QLandkarte/libGPSMap60CSx.la
+lib/QLandkarte/libGPSMap60Cx.so
+lib/QLandkarte/libGPSMap76CS.so
+lib/QLandkarte/libGPSMap76CSx.so
+lib/QLandkarte/libGPSMap76Cx.so
+lib/QLandkarte/libNMEA.la
+lib/QLandkarte/libNMEATcp.la
+lib/QLandkarte/libwhatGarmin.la
+@dirrm lib/QLandkarte
