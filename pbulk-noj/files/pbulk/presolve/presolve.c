@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.1 2008/01/25 20:25:09 cheusov Exp $ */
+/* $NetBSD: presolve.c,v 1.2 2008/01/25 21:38:50 cheusov Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -119,6 +119,8 @@ main(int argc, char **argv)
 		if (resolve_entry(&pkgs[i]))
 			ret = 1;
 	}
+
+	ret = 0; /* Resolving failure is not critical anymore :-P */
 
 	if (ret == 0)
 		write_entries();
