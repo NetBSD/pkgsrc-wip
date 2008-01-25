@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2008/01/25 20:25:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/25 21:13:41 cheusov Exp $
 
-DISTNAME=	pbulk-0.23
+DISTNAME=	pbulk-noj-20080125.0.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Modular bulk build framework
+
+CONFLICTS+=	pbulk-[0-9]*:../../pkgtools/pbulk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -39,9 +41,10 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/report scripts/scan scripts/scan-client-start scripts/upload \
 	scripts/compute-packages.awk scripts/create-broken-graph.awk \
 	scripts/create-report-html.awk scripts/create-report-txt.awk \
-	scripts/create-report.awk
-SUBST_VARS.tools=	AWK BZIP2 DIGEST GZIP_CMD IDENT MAIL_CMD NEATO \
-			PBULK_CONFIG PKG_INFO PREFIX SH TAR TARGET_MAKE
+	scripts/create-report.awk scripts/summary scripts/cksum
+SUBST_VARS.tools=	AWK BZIP2 DIGEST GZIP_CMD IDENT MAKE MAIL_CMD NEATO \
+			PBULK_CONFIG PKG_INFO PREFIX SH TAR TARGET_MAKE \
+			PKG_SUFX			
 
 CONF_FILES+=	share/examples/pbulk/pbulk.conf ${PKG_SYSCONFDIR}/pbulk.conf
 

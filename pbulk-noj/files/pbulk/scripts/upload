@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: upload,v 1.1 2008/01/25 20:25:10 cheusov Exp $
+# $NetBSD: upload,v 1.2 2008/01/25 21:13:41 cheusov Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -42,6 +42,7 @@ cd ${packages}
 	    echo "+ SHA512.bz2"
 	echo "+ All/pkg_summary.bz2"
 	echo "+ All/pkg_summary.gz"
+	export pkg_suffix
 	${packages_script} ${loc}
 	echo "- *"
 } | sort | ${rsync} --exclude-from=- ${pkg_rsync_args} . ${pkg_rsync_target}

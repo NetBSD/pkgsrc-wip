@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.1 2008/01/25 20:25:10 cheusov Exp $
+# $NetBSD: pkg-up-to-date,v 1.2 2008/01/25 21:13:41 cheusov Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -34,7 +34,7 @@
 
 set -e
 
-pkg="${packages}/All/$1.tgz"
+pkg="${packages}/All/$1${pkg_suffix}"
 [ -f ${pkg} ]
 
 ${external_pkg_info} -qb ${pkg} | sed 's/:/ /' | while read file file_id; do
@@ -60,5 +60,5 @@ ${external_pkg_info} -qN ${pkg} | while read dep; do
 		fi
 	done
 	[ $found = 1 ]
-	[ "${packages}/All/${dep}.tgz" -nt "${pkg}" ] && exit 1
+	[ "${packages}/All/${dep}${pkg_suffix}" -nt "${pkg}" ] && exit 1
 done

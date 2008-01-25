@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/25 20:25:09 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/25 21:13:41 cheusov Exp $
 bin/bulkbuild
 bin/pbulk-build
 bin/pbulk-resolve
 bin/pbulk-scan
 libexec/pbulk/build
 libexec/pbulk/build-client-start
+libexec/pbulk/cksum
 libexec/pbulk/client-clean
 libexec/pbulk/compute-packages
 libexec/pbulk/create-broken-graph
@@ -17,6 +18,7 @@ libexec/pbulk/pre-build
 libexec/pbulk/report
 libexec/pbulk/scan
 libexec/pbulk/scan-client-start
+libexec/pbulk/summary
 libexec/pbulk/upload
 man/cat1/pbulk-build.0
 man/cat1/pbulk-resolve.0

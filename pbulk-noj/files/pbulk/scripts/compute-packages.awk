@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: compute-packages.awk,v 1.1 2008/01/25 20:25:09 cheusov Exp $
+# $NetBSD: compute-packages.awk,v 1.2 2008/01/25 21:13:41 cheusov Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -67,7 +67,7 @@ BEGIN {
 				print "+ " cat "/"
 				printed_cats[cat] = cat
 			}
-			print "+ " cat "/" pkg ".tgz"
+			print "+ " cat "/" pkg ENVIRON ["pkg_suffix"]
 		}
 	}
 }
