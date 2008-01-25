@@ -1,0 +1,12 @@
+#!@SH@
+# $NetBSD: bulkbuild,v 1.1 2008/01/25 20:25:09 cheusov Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+${script_phase_pre_build}
+${script_phase_scan}
+${script_phase_build}
+${script_phase_report}
+${script_phase_upload}

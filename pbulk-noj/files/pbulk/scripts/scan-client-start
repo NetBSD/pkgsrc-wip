@@ -1,0 +1,10 @@
+#!@SH@
+# $NetBSD: scan-client-start,v 1.1 2008/01/25 20:25:10 cheusov Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+for client in ${scan_clients}; do
+	ssh $client "${pscan_prepare} && ${pscan} -c ${master_port_scan} -M ${make} ${pkgsrc}" &
+done
