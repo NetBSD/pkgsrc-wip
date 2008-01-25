@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/22 10:52:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/25 21:42:19 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.13
@@ -23,6 +23,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 #USE_CONFIGURE=yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # Bootstrap section.
