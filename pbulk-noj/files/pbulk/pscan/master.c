@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.1 2008/01/25 20:25:09 cheusov Exp $ */
+/* $NetBSD: master.c,v 1.2 2008/01/25 21:20:58 cheusov Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -204,6 +204,7 @@ master_mode(const char *master_port, const char *start_script)
 	struct event listen_event;
 	struct sockaddr_in dst;
 	int fd;
+	int one = 1;
 
 	LIST_INIT(&active_peers);
 	LIST_INIT(&inactive_peers);
@@ -220,6 +221,8 @@ master_mode(const char *master_port, const char *start_script)
 	if (ioctl(fd, FIOCLEX, NULL) == -1)
 		err(1, "Could not set close-on-exec flag");
 #endif
+	if (setsockopt (fd, SOL_SOCKET, SO_REUSEADDR, &one, sizeof (one)) == -1)
+		err(1, "Could not setsockopt");
 	if (bind(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
 		err(1, "Could not bind socket");
 	if (listen(fd, 5) == -1)
