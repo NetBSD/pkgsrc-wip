@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2007/09/10 23:20:51 airhead Exp $
+$NetBSD: distinfo,v 1.3 2008/01/26 09:21:34 asau Exp $
 
-SHA1 (lemon.c) = 0ab4cca47950da4dc04cf957db0c0ed54b464aa9
-RMD160 (lemon.c) = 5d97d22570f9d8b85a50cb5a3edd79767e566cdc
-Size (lemon.c) = 139865 bytes
-SHA1 (lempar.c) = 8f998bf8d08e2123149c2cc5d0597cd5d5d1abdd
-RMD160 (lempar.c) = 50e1499a0fb2f58528d5fe63557f4dc3ed8a472e
-Size (lempar.c) = 25555 bytes
+SHA1 (lemon.c) = 5d1731de7eb31238e42ff424c0c78efb4a7be635
+RMD160 (lemon.c) = 341d7070f18ba75b2d2585944e25faf3a8766fdf
+Size (lemon.c) = 141115 bytes
+SHA1 (lempar.c) = ac41fdc42337c0831fa4c7c848801dccb3fbdd4d
+RMD160 (lempar.c) = 9ebb7be2e68bc46aae070a9067ccbb12500f03a1
+Size (lempar.c) = 25370 bytes

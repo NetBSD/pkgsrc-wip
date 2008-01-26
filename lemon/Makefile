@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/09/13 23:38:38 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2008/01/26 09:21:34 asau Exp $
 
 PKGNAME=	lemon-1.0
 DISTNAME=	lemon.c
+PKGREVISION=	1
 EXTRACT_SUFX=
 WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
