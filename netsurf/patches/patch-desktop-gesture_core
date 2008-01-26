@@ -1,0 +1,17 @@
+$NetBSD: patch-desktop-gesture_core,v 1.1.1.1 2008/01/26 04:42:52 hoka_adam Exp $
+
+--- desktop/gesture_core.c.orig	2007-08-12 00:07:51.000000000 +0200
++++ desktop/gesture_core.c
+@@ -26,6 +26,12 @@
+ #include <math.h>
+ #include <stdlib.h>
+ 
++/* XXX Im pretty sure this could be solved properly */
++#if defined(__NetBSD__)
++#include <limits.h>
++#define INFINITY        ULLONG_MAX
++#endif
++
+ /** A gesture as used by the recognition machinery */
+ struct _internal_gesture {
+ 	struct _internal_gesture *next; /**< The next gesture in the list */
