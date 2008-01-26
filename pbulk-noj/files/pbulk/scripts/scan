@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.1 2008/01/25 20:25:10 cheusov Exp $
+# $NetBSD: scan,v 1.2 2008/01/26 11:26:08 cheusov Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -82,8 +82,7 @@ else
 	done
 
 	if [ -s ${loc}/missing ]; then
-		echo "Unresolvable dependencies found, exiting:"
+		echo "Unresolvable dependencies found:"
 		cat ${loc}/missing
-		exit 1
 	fi
 fi
