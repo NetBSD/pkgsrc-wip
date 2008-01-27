@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/01/26 09:21:34 asau Exp $
+$NetBSD: distinfo,v 1.4 2008/01/27 14:10:54 airhead Exp $
 
-SHA1 (lemon.c) = 5d1731de7eb31238e42ff424c0c78efb4a7be635
-RMD160 (lemon.c) = 341d7070f18ba75b2d2585944e25faf3a8766fdf
-Size (lemon.c) = 141115 bytes
-SHA1 (lempar.c) = ac41fdc42337c0831fa4c7c848801dccb3fbdd4d
-RMD160 (lempar.c) = 9ebb7be2e68bc46aae070a9067ccbb12500f03a1
-Size (lempar.c) = 25370 bytes
+SHA1 (sqlite-3.5.2.tar.gz) = e347b7040c0da586468811f78c3bc4111f33fc19
+RMD160 (sqlite-3.5.2.tar.gz) = fb5d8af8ab6c0c3b21493a114bdfec789319fc3f
+Size (sqlite-3.5.2.tar.gz) = 2487615 bytes
