@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/26 04:42:52 hoka_adam Exp $
+$NetBSD: distinfo,v 1.2 2008/01/27 14:01:30 hoka_adam Exp $
 
 SHA1 (netsurf-1.1-src.tar.gz) = a6a3d6b22258d37f9248ab2d6732375e46622ed1
 RMD160 (netsurf-1.1-src.tar.gz) = 8fb5f401bccedec2c0e7da38a945751dd67affed
 Size (netsurf-1.1-src.tar.gz) = 987786 bytes
-SHA1 (patch-css-cssh) = 205b8c7ea7744e142e14f70133dfd56c841e0a48
 SHA1 (patch-desktop-gesture_core) = 2eae2565c8d56977c972849fc92d3ce8a56fe773
 SHA1 (patch-desktop-netsurf) = e1b9bed5ac2f19f5350935f908bf83a215f96aba
 SHA1 (patch-image-mng) = 21c91854794ddf263c1ffc10d1aece7f7cac9da1
 SHA1 (patch-netsurf) = 07dd275051923e64bddcb6936dda46b57eecdf7a
+SHA1 (patch-parsery) = 50fbcf5cf52fd2e2c11958475f235f3a9d0fc3bd
