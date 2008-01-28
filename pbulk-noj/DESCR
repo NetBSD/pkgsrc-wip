@@ -9,11 +9,11 @@ And I disagree with author's vision how MY bulk builds should be done.
 Fixed PRs:
   pkg/36985 pbulk doesn't like .tbz (bzip2) extension
             for binary pkgsrc packages
-  pkg/37002 pkgtools/pbulk  libexec/scan utility fails on Linux
+  pkg/37002 libexec/scan utility fails on Linux
             (already fixed differently in pkgtools/pbulk?)
-  pkg/37100 pkgtools/pbulk: scan stage fails on Linux
+  pkg/37100 scan stage fails on Linux
             (not really fixed, but not critical anymore)
-  pkg/37139 pkgtools/pbulk report subcomponent should quote
+  pkg/37139 report subcomponent should quote
             recipient's email addres
   pkg/37539 more modules for pkgtools/pbulk
   pkg/37700 pbulk's resolve stage stops the bulk build
