@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/28 22:19:03 dvol Exp $
 #
 
 PKGNAME=	TextEdit-4.0
 DISTNAME=	textedit.app_4.0.orig
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors gnustep
 MASTER_SITES=	http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/t/textedit.app/
 
