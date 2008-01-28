@@ -3,7 +3,7 @@ Mostly the same as pkgtools/pbulk.
 Because author of pbulk doesn't give me a clever explanation why he
 declines a number of my proposals for pbulk I've made a decision to
 fork it :-(. No, I have no plan to heavily develop it - I dislike its
-overbloated design. I just need it to make bulk builds in parallel.
+overbloated design. I just need it to run bulk builds in parallel.
 And I disagree with author's vision how MY bulk builds should be done.
 I'll sync pbulk-noj with pbulk periodically.
 
