@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/01/28 21:30:19 bsadewitz Exp $
+
+--- jackd/Makefile.in.orig	2008-01-12 09:13:19.000000000 -0500
++++ jackd/Makefile.in
+@@ -616,7 +616,7 @@ uninstall-man: uninstall-man1
+ 
+ jack_md5.h: jackd
+ @STRIPPED_JACKD_TRUE@	strip -R .note -R .comment .libs/jackd
+-	echo "#define JACKD_MD5_SUM \"`md5sum .libs/jackd | awk '{print $$1}'`\"" > jack_md5.h
++	echo "#define JACKD_MD5_SUM \"`${DIGEST} md5 .libs/jackd | awk '{print $$4}'`\"" > jack_md5.h
+ 
+ dist-hook:
+ 	rm -f $(distdir)/jack_md5.h

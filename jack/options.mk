@@ -1,81 +1,40 @@
-# $NetBSD: options.mk,v 1.3 2007/12/13 22:21:48 rillig Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jack
-PKG_SUPPORTED_OPTIONS=	sndfile portaudio readline
-PKG_SUGGESTED_OPTIONS=	sndfile portaudio
-# the above line will be changed when the package is ready.
+PKG_SUPPORTED_OPTIONS=	portaudio sndfile
+PKG_SUGGESTED_OPTIONS=	sndfile
 
-CHECK_BUILTIN.readline:= yes
-.include "../../devel/readline/builtin.mk"
-CHECK_BUILTIN.readline:= no
+.include "../../mk/bsd.fast.prefs.mk"
 
-.if defined(USE_BUILTIN.readline) && !empty(USE_BUILTIN.readline:M[Yy][Ee][Ss])
-PKG_SUGGESTED_OPTIONS+=	readline
-.endif
+PKG_OPTIONS_OPTIONAL_GROUPS=	${MACHINE_ARCH}
 
-CHECK_BUILTIN.oss:= yes
-.include "../../mk/oss.builtin.mk"
-CHECK_BUILTIN.oss:= no
+PKG_OPTIONS_GROUP.powerpc= 	altivec
+PKG_OPTIONS_GROUP.i386= 	simd
 
-.if defined(USE_BUILTIN.oss)
-PKG_SUPPORTED_OPTIONS+= oss
-PKG_SUGGESTED_OPTIONS+= oss
-.endif
 
 .include "../../mk/bsd.options.mk"
 
-.if (PKG_SUPPORTED_OPTIONS:Moss) && !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+= --enable-oss
-LIBS+=		${LIBOSSAUDIO}
-PLIST_SUBST+=	OSS=""
-CPPFLAGS+= -DOSS_DRIVER_DEF_DEV="\"${DEVOSSAUDIO}\""
-
-.include "../../mk/oss.buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mportaudio)
+.  include "../../audio/portaudio-devel/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --disable-oss
-PLIST_SUBST+=	OSS="@comment "
+CONFIGURE_ARGS+=	--disable-portaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Msndfile)
-CONFIGURE_ARGS+= --enable-sndfile
-PLIST_SUBST+=	SNDFILE=""
-
-.include "../../audio/libsndfile/buildlink3.mk"
+PLIST_SUBST+=	LIBSNDFILE=""
+.  include "../../audio/libsndfile/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --disable-sndfile
-PLIST_SUBST+=	SNDFILE="@comment "
+PLIST_SUBST+=	LIBSNDFILE="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mportaudio)
-CONFIGURE_ARGS+= --enable-portaudio
-PLIST_SUBST+=	PORTAUDIO=""
-
-.include "../../audio/portaudio/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Msimd)
+CONFIGURE_ARGS+=	--enable-dynsimd
 .else
-CONFIGURE_ARGS+= --disable-portaudio
-PLIST_SUBST+=	PORTAUDIO="@comment "
+CONFIGURE_ARGS+=	--disable-dynsimd
+CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-sse
 .endif
 
-.if !empty(PKG_OPTIONS:Mreadline)
-PLIST_SUBST+=	JACK_TRANS=""
-BROKEN_READLINE_DETECTION=	yes
-
-.include "../../devel/readline/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Maltivec)
+CONFIGURE_ARGS+=	--enable-altivec
 .else
-PLIST_SUBST+=	JACK_TRANS="@comment "
+CONFIGURE_ARGS+=	--disable-altivec
 .endif
-
-#.if !empty(PKG_OPTIONS:Mfreebob)
-#CONFIGURE_ARGS+= --enable-freebob
-
-#.include "../../audio/freebob/buildlink3.mk"
-#.else
-CONFIGURE_ARGS+= --disable-freebob	# XXX disable for now
-#.endif
-
-#.if !empty(PKG_OPTIONS:Malsa)
-CONFIGURE_ARGS+= --enable-alsa
-
-#.include "../../audio/alsa/buildlink3.mk"
-#.else
-CONFIGURE_ARGS+= --disable-alsa		# XXX disable for now
-#.endif

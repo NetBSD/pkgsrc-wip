@@ -1,13 +1,16 @@
-$NetBSD: patch-af,v 1.1 2007/03/21 20:21:07 bsadewitz Exp $
+$NetBSD: patch-af,v 1.2 2008/01/28 21:30:19 bsadewitz Exp $
 
---- libjack/midiport.c.orig	2006-12-16 07:50:17.000000000 -0500
+--- libjack/midiport.c.orig	2008-01-12 09:12:43.000000000 -0500
 +++ libjack/midiport.c
-@@ -77,7 +77,7 @@ jack_midi_event_get(jack_midi_event_t *e
+@@ -78,7 +78,11 @@ jack_midi_event_get(jack_midi_event_t *e
  		(jack_midi_port_info_private_t *) port_buffer;
  	
  	if (event_idx >= info->event_count)
--		return ENODATA;
++#if defined(__NetBSD__) || defined(__OpenBSD__)
 +		return ENOMSG;
++#else
+ 		return ENODATA;
++#endif
  	
  	port_event = (jack_midi_port_internal_event_t *) (info + 1);
  	port_event += event_idx;

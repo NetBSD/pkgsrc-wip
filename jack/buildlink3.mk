@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2007/12/13 22:21:48 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/01/28 21:30:19 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JACK_BUILDLINK3_MK:=	${JACK_BUILDLINK3_MK}+
@@ -12,8 +12,10 @@ BUILDLINK_PACKAGES+=	jack
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jack
 
 .if ${JACK_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.jack+=	jack>=0.103.0
-BUILDLINK_PKGSRCDIR.jack?=	../../wip/jack
+BUILDLINK_API_DEPENDS.jack+=	jack>=0.109.0
+BUILDLINK_PKGSRCDIR.jack?=	../../local/jack
 .endif	# JACK_BUILDLINK3_MK
+
+.include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,12 +1,20 @@
-$NetBSD: patch-ad,v 1.1 2007/03/21 20:21:07 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.2 2008/01/28 21:30:19 bsadewitz Exp $
 
---- drivers/oss/oss_driver.h.orig	2006-05-25 22:45:26.000000000 -0400
-+++ drivers/oss/oss_driver.h
-@@ -34,7 +34,6 @@
- #include <jack/jack.h>
+--- libjack/client.c.orig	2008-01-12 09:12:43.000000000 -0500
++++ libjack/client.c
+@@ -1731,6 +1731,7 @@ jack_activate (jack_client_t *client)
+ {
+ 	jack_request_t req;
  
++#if defined(__gnu_linux__)
+ 	/* we need to scribble on our stack to ensure that its memory
+ 	 * pages are actually mapped (more important for mlockall(2)
+ 	 * usage in jack_start_thread())
+@@ -1742,6 +1743,7 @@ jack_activate (jack_client_t *client)
+ 	for (i = 0; i < JACK_THREAD_STACK_TOUCH; i++) {
+ 		buf[i] = (char) (i & 0xff);
+ 	}
++#endif
  
--#define OSS_DRIVER_DEF_DEV	"/dev/dsp"
- #define OSS_DRIVER_DEF_FS	48000
- #define OSS_DRIVER_DEF_BLKSIZE	1024
- #define OSS_DRIVER_DEF_NPERIODS	2
+ 	if (client->control->type == ClientInternal ||
+ 	    client->control->type == ClientDriver) {

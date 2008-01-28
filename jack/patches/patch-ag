@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/01/28 21:30:19 bsadewitz Exp $
+
+--- drivers/oss/Makefile.in.orig	2008-01-12 09:13:19.000000000 -0500
++++ drivers/oss/Makefile.in
+@@ -58,7 +58,7 @@ am__strip_dir = `echo $$p | sed -e 's|^.
+ am__installdirs = "$(DESTDIR)$(plugindir)"
+ pluginLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(plugin_LTLIBRARIES)
+-jack_oss_la_LIBADD =
++jack_oss_la_LIBADD = ${LIBOSSAUDIO}
+ am_jack_oss_la_OBJECTS = oss_driver.lo
+ jack_oss_la_OBJECTS = $(am_jack_oss_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)

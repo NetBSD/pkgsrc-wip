@@ -1,17 +1,43 @@
-$NetBSD: patch-ac,v 1.1 2007/03/21 20:21:07 bsadewitz Exp $
+$NetBSD: patch-ac,v 1.2 2008/01/28 21:30:19 bsadewitz Exp $
 
---- example-clients/lsp.c.orig	2006-12-16 07:50:12.000000000 -0500
-+++ example-clients/lsp.c
-@@ -119,10 +119,10 @@ main (int argc, char *argv[])
- 	ports = jack_get_ports (client, NULL, NULL, 0);
+--- jackd/engine.c.orig	2008-01-12 09:12:44.000000000 -0500
++++ jackd/engine.c
+@@ -474,7 +474,7 @@ jack_resize_port_segment (jack_engine_t 
  
- 	for (i = 0; ports[i]; ++i) {
--		printf ("%s\n", ports[i]);
--
- 		jack_port_t *port = jack_port_by_name (client, ports[i]);
+ 	jack_engine_place_port_buffers (engine, ptid, one_buffer, size, nports, engine->control->buffer_size);
  
-+		printf ("%s\n", ports[i]);
-+
- 		if (show_con) {
- 			if ((connections = jack_port_get_all_connections (client, jack_port_by_name(client, ports[i]))) != 0) {
- 				for (j = 0; connections[j]; j++) {
+-#ifdef USE_MLOCK
++#if defined(USE_MLOCK) && defined(__gnu_linux__)
+ 	if (engine->control->real_time) {
+ 
+ 	/* Although we've called mlockall(CURRENT|FUTURE), the
+@@ -934,7 +934,11 @@ static int
+ jack_start_watchdog (jack_engine_t *engine)
+ {
+ 	int watchdog_priority = engine->rtpriority + 10;
++#ifndef __OpenBSD__
+ 	int max_priority = sched_get_priority_max (SCHED_FIFO);
++#else
++	int max_priority = -1;
++#endif
+ 
+ 	if ((max_priority != -1) &&
+ 	    (max_priority < watchdog_priority))
+@@ -1462,7 +1466,7 @@ jack_server_thread (void *arg)
+ 				    (engine, pfd[i].fd)) {
+ 					jack_error ("could not handle external"
+ 						    " client request");
+-#ifdef JACK_USE_MACH_THREADS
++#if defined(POLLIN_ON_CLOSE)
+                                     /* poll is implemented using
+ 				       select (see the macosx/fakepoll
+ 				       code). When the socket is closed
+@@ -1475,7 +1479,7 @@ jack_server_thread (void *arg)
+ 				       and remove the client.
+                                     */
+                                     jack_client_disconnect(engine, pfd[i].fd);
+-#endif /* JACK_USE_MACH_THREADS */
++#endif /* POLLIN_ON_CLOSE */
+ 				}
+ 			}
+ 		}
