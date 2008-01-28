@@ -1,19 +1,19 @@
-pbulk is the modular bulk build framework for pkgsrc.
+Mostly the same as pkgtools/pbulk.
 
-This package contains:
+Because author of pbulk doesn't give me a clever explanation why he
+declines a number of my proposals for pbulk I've made a decision to
+fork it :-(. No, I have no plan to heavily develop it - I dislike its
+overbloated design. I just need it to make bulk builds in parallel.
+And I disagree with author's vision how MY bulk builds should be done.
 
-- pbulk-scan, a program to scan the entire pkgsrc tree
-  or a list of directories therein for packages and
-  dependencies. Distributed operation using a master/client
-  mode is supported.
-
-- pbulk-resolve, a program to resolve the dependencies
-  from the output of pbulk-scan
-
-- pbulk-build, the build scheduler. Distributed builds via TCP
-  are supported.
-
-- bulkbuild and related scripts to implement full and limited
-  bulk builds on top of those programs.
-
-The pbulk framework is considered experimental.
+Fixed PRs:
+  pkg/36985 pbulk doesn't like .tbz (bzip2) extension
+            for binary pkgsrc packages
+  pkg/37002 pkgtools/pbulk  libexec/scan utility fails on Linux
+            (already fixed differently in pkgtools/pbulk?)
+  pkg/37100 pkgtools/pbulk: scan stage fails on Linux
+            (not really fixed, but not critical anymore)
+  pkg/37139 pkgtools/pbulk report subcomponent should quote
+            recipient's email addres
+  pkg/37539 more modules for pkgtools/pbulk
+  pkg/37700 pbulk's resolve stage stops the bulk build
