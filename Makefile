@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2764 2008/01/29 10:34:48 tnn2 Exp $
+# $Id: Makefile,v 1.2765 2008/01/29 17:05:45 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1239,6 +1239,7 @@ SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-PcapUtils
+SUBDIR+=        p5-Net-SMTP-TLS
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-Net-Z3950-ZOOM
 SUBDIR+=	p5-News-Newsrc
