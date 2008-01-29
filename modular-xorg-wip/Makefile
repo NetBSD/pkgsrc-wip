@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/01/12 23:28:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2008/01/29 10:34:48 tnn2 Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-wip-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/fonts/
 DISTFILES=	# empty
@@ -13,8 +13,6 @@ COMMENT=	Modular Xorg wip package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	sessreg-[0-9]*:../../wip/sessreg
-DEPENDS+=	xdm-[0-9]*:../../wip/xdm
 DEPENDS+=	xlsfonts-[0-9]*:../../wip/xlsfonts
 DEPENDS+=	xvidtune-[0-9]*:../../wip/xvidtune
 
