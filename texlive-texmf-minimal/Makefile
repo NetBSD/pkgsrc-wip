@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/10 19:44:42 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2008/01/29 10:54:59 tnn2 Exp $
 #
 
 PKGNAME=	texlive-texmf-minimal-${TEXLIVE_VERSION}
@@ -17,6 +17,8 @@ CONFLICTS+=	teTeX2-texmf-[0-9]*
 CONFLICTS+=	teTeX3-texmf-[0-9]*
 CONFLICTS+=	texlive-texmf-full-[0-9]*
 
+USE_TOOLS+=	chown
+
 # Is this necessary?
 SUBST_CLASSES+=		fmtutil
 SUBST_MESSAGE.fmtutil=	Tweaking fmtutil.cnf
@@ -33,9 +35,9 @@ pre-install:
 
 do-install:
 	cp -R ${WRKSRC}/texmf ${PREFIX}/share
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf
 	cp -R ${WRKSRC}/texmf-dist ${PREFIX}/share
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf-dist
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf-dist
 
 .include "../../wip/texlive/Makefile.common"
 
