@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2007/11/26 15:40:58 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2008/01/29 02:26:55 hoka_adam Exp $
 #
 
-DISTNAME=		confuse-2.5
-PKGREVISION=	1
+DISTNAME=		confuse-2.6
 CATEGORIES=		devel
-MASTER_SITES=	http://download.savannah.gnu.org/releases/confuse/
+MASTER_SITES=	http://bzero.se/confuse/
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://download.savannah.gnu.org/releases/confuse/
 COMMENT=	Configuration file parser library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=			pkg-config
