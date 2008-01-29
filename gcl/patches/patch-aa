@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2008/01/17 08:54:15 asau Exp $
+$NetBSD: patch-aa,v 1.3 2008/01/29 14:46:23 asau Exp $
 
---- NetBSD.h-orig	2008-01-17 11:51:22.000000000 +0300
-+++ NetBSD.h	2008-01-17 11:51:30.000000000 +0300
+--- h/NetBSD.h-orig	2008-01-17 11:51:22.000000000 +0300
++++ h/NetBSD.h	2008-01-17 11:51:30.000000000 +0300
 @@ -29,9 +29,9 @@
      Modified gcl-1.1 for NetBSD 1.0Beta (static linked)
  
