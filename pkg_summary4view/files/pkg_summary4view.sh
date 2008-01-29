@@ -40,6 +40,10 @@ NF == 0 {
 	next
 }
 
+/^PKGNAME=/ {
+	print "-----------------------------------------------------------"
+}
+
 {
 	#
 	field = $0
@@ -54,10 +58,11 @@ NF == 0 {
 			print field ":"
 		}
 
-		printf "        "
+		printf "    "
 	}else{
 		printf "%s:", field
-		spaces(20-length(field))
+		if ($0 !~ /^( |\t)*$/)
+			spaces(16-length(field))
 	}
 
 	#
