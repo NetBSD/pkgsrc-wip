@@ -1,0 +1,4 @@
+pkg_summary4view converts package summary (pkg_info -X) to the format
+easily read by human but still easily parsable by standard UNIX
+utilities.  An empty line separates packages. Lines consisting of only
+one space character separate multiline sections from others.
