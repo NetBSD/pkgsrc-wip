@@ -47,7 +47,7 @@ summary_data2summary (){
     }
 
     BEGIN {
-	descr_msg = normalize("description:")
+	descr_msg = normalize("description")
     }
 
     $1 == "prefix" {
