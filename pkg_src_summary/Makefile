@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/01/29 00:22:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/29 19:07:40 cheusov Exp $
 
-DISTNAME=	pkg_src_summary-0.4
+DISTNAME=	pkg_src_summary-0.4.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
