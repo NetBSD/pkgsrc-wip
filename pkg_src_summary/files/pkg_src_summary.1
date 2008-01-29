@@ -1,0 +1,37 @@
+.\"	$NetBSD: pkg_src_summary.1,v 1.1 2008/01/29 00:08:11 cheusov Exp $
+.\"
+.\" Copyright (c) 2008 by Aleksey Cheusov (cheusov@tut.by)
+.\" Absolutely no warranty.
+.\"
+.Dd Jan 29, 2008
+.Dt PKG_SRC_SUMMARY 1
+.Sh NAME
+.Nm pkg_src_summary
+.Nd build summary information for source packages
+.Sh SYNOPSIS
+.Nm
+.Op Ar category1/pkg1 category2/pkg2 ...
+.Sh DESCRIPTION
+.Nm
+builds summary information about source packages specified in
+arguments or read from stdin (one package per line).  Format of this
+summary information is the same as used in pkg_summary.gz built from
+binary packages. Fields (PKGNAME, PKGPATH, DEPENDS etc.) are very
+similar but not fully the same.
+.Sh ENVIRONMENT
+.Bd -literal
+.Bl -tag -width Cm
+.It Cm PKGSRCDIR
+pkgsrc root directory, defaults to /usr/pkgsrc
+.It Cm MAKE
+path to pkgsrc friendly make utility, defaults to make
+.El
+.Ed
+.Sh EXAMPLES
+.Bd -literal
+pkg_src_summary wip/dict-server wip/dict-mueller7 x11/dictem
+echo wip/dict-server wip/dict-mueller7 x11/dictem | pkg_src_summary
+.Ed
+.Sh AUTHOR
+.An Aleksey Cheusov
+.Aq cheusov@tut.by
