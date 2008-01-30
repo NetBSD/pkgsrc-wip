@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2767 2008/01/30 16:02:50 tnn2 Exp $
+# $Id: Makefile,v 1.2768 2008/01/30 17:15:17 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1428,7 +1428,6 @@ SUBDIR+=	py-Protocols-docs
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
-SUBDIR+=	py-Quotient
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-SciPy
