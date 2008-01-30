@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/02 08:48:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/30 15:11:47 tnn2 Exp $
 
 # Notes to package maintainers:
 #
@@ -7,6 +7,8 @@
 # Updating this package does not automatically necessitate bumping
 # PKGTOOLS_REQD in bsd.pkg.mk. Do so if and only if there is a critical
 # change in the pkg_* tools that pkgsrc relies on for proper operation.
+
+BROKEN=			pen.c:211: error: storage size of 'buf' isn't known
 
 DISTNAME=		pkg_install-${VERSION}
 PKGREVISION=		2
