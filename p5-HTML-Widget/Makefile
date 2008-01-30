@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/07 06:39:02 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2008/01/30 07:42:37 tnn2 Exp $
 
 DISTNAME=		HTML-Widget-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,9 @@ COMMENT=		HTML Widget And Validation Framework
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+DEPENDS+=		p5-Module-Pluggable-Fast>=0.18:../../wip/p5-Module-Pluggable-Fast
+DEPENDS+=		p5-Class-Data-Accessor>=0.04001:../../wip/p5-Class-Data-Accessor
+DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 DEPENDS+=		p5-HTML-Tree>=3.19.01:../../www/p5-HTML-Tree
 DEPENDS+=		p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=		p5-Class-Accessor-Chained>=0.01:../../wip/p5-Class-Accessor-Chained
