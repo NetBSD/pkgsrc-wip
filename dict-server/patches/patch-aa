@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.8 2008/01/31 17:46:41 cheusov Exp $
+
+--- dictfmt.c.orig	2008-01-31 19:31:00.649252536 +0200
++++ dictfmt.c
+@@ -655,12 +655,21 @@ static void fmt_test_nonascii (const cha
+ 
+ static void fmt_newheadword( const char *word )
+ {
+-   static char prev[1024] = "";
++   static char *prev      = NULL;
++   static size_t prev_len = 0;
++   size_t word_len        = 0;
++
+    static int  start = 0;
+    static int  end;
+    char *      sep   = NULL;
+    char *      p;
+ 
++   if (!prev){
++      prev_len = 1000;
++      prev = xmalloc (prev_len);
++      prev [0] = 0;
++   }
++
+    if (fmt_newheadword_special (word))
+       return;
+ 
+@@ -680,7 +688,14 @@ static void fmt_newheadword( const char 
+    }
+ 
+    if (word) {
+-      strlcpy(prev, word, sizeof (prev));
++      /* copy word to prev */
++      word_len = strlen (word);
++      if (word_len > prev_len){
++	 prev_len = word_len;
++	 prev = xrealloc (prev, word_len + 1);
++      }
++
++      strcpy(prev, word);
+       start = end;
+    }
+ 
