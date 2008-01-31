@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/14 16:15:30 hoka_adam Exp $
-share/doc/hunspell-bg_BG/README_bg_BG.txt
-share/hunspell/bg_BG.aff
-share/hunspell/bg_BG.dic
+@comment $NetBSD: PLIST,v 1.2 2008/01/31 05:19:40 hoka_adam Exp $
+share/doc/hunspell-${DISTNAME}/README_${DISTNAME}.txt
+share/hunspell/${DISTNAME}.aff
+share/hunspell/${DISTNAME}.dic
 @unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
-@dirrm share/doc/hunspell-bg_BG
+@dirrm share/doc/hunspell-${DISTNAME}

@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1 2008/01/31 05:19:40 hoka_adam Exp $
+
+# used by wip/hunspell-*/Makefile
+#
+# Hunspell dictionary template for fetching from OpenOffice.org
+# It's only in this directory because this comes first in the english alphabet.
+# Should be moved to textproc/hunspell when pulled to pkgsrc.
+
+PKGNAME=	hunspell-${DISTNAME}-${VERSION}
+CATEGORIES=	textproc
+MASTER_SITES=	http://ftp.services.openoffice.org/pub/OpenOffice.org/contrib/dictionaries/
+HOMEPAGE=	http://wiki.services.openoffice.org/wiki/Dictionaries
+
+EXTRACT_SUFX=	.zip
+USE_LANGUAGES=	# none
+NO_BUILD=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}
+EXTRACT_OPTS_ZIP=	-aqo # We don't want -L
+DIST_SUBDIR=		hunspell-dictionaries/${DISTNAME}-${VERSION}
+
+PLIST_SUBST+=           DISTNAME=${DISTNAME}
+
+INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DISTNAME}
+
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.* ${DESTDIR}${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/README_${DISTNAME}.txt \
+		${DESTDIR}${PREFIX}/share/doc/hunspell-${DISTNAME}
