@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/01/31 05:19:40 hoka_adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/01/31 06:00:24 hoka_adam Exp $
 
 # used by wip/hunspell-*/Makefile
 #
@@ -29,3 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.* ${DESTDIR}${PREFIX}/share/hunspell
 	${INSTALL_DATA} ${WRKSRC}/README_${DISTNAME}.txt \
 		${DESTDIR}${PREFIX}/share/doc/hunspell-${DISTNAME}
+
+.include "../../textproc/hunspell/buildlink3.mk"
