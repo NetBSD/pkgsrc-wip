@@ -32,6 +32,8 @@ BEGIN {
 	special ["PLIST"]       = 0
 	special ["PROVIDES"]    = 0
 	special ["REQUIRES"]    = 0
+
+	offset = 16
 }
 
 NF == 0 {
@@ -53,7 +55,20 @@ NF == 0 {
 	sub(/^[^=]*=/, "")
 
 	#
-	if (field in special) {
+	if (field == "DEPENDS" || field == "BUILD_DEPENDS"){
+		printf "%s:", field
+		if ($0 !~ /^( |\t)*$/)
+			spaces(offset - length(field) - 1)
+
+		print $1
+
+		for (i=2; i <= NF; ++i){
+			spaces(offset)
+			print $i
+		}
+
+		next
+	}else if (field in special) {
 		if (field != prev_field) {
 			print field ":"
 		}
@@ -62,7 +77,7 @@ NF == 0 {
 	}else{
 		printf "%s:", field
 		if ($0 !~ /^( |\t)*$/)
-			spaces(16-length(field))
+			spaces(offset - length(field) - 1)
 	}
 
 	#
