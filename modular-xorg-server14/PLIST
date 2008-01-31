@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/10/02 17:03:42 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/01/31 17:07:40 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -187,7 +187,6 @@ lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
 lib/xorg/modules/fonts/libfreetype.la
-lib/xorg/modules/fonts/libtype1.la
 lib/xorg/modules/libafb.la
 lib/xorg/modules/libcfb.la
 lib/xorg/modules/libcfb32.la
