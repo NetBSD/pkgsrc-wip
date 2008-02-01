@@ -1,4 +1,8 @@
-$NetBSD: patch-aq,v 1.1 2007/07/31 05:01:39 bsadewitz Exp $
+$NetBSD: patch-aq,v 1.2 2008/02/01 09:00:28 rillig Exp $
+
+Fixed warnings from the portability checks:
+- test(1) doesn't need to know the == operator.
+- $RANDOM is not required by POSIX.
 
 --- Tools/faqwiz/move-faqwiz.sh.orig	2002-03-18 03:56:23.000000000 -0500
 +++ Tools/faqwiz/move-faqwiz.sh
