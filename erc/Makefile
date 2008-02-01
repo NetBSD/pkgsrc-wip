@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/07/31 23:22:45 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/01 17:06:16 netcap Exp $
 #
 
-DISTNAME=	erc-5.2
+DISTNAME=	erc-5.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNU:=erc/}
 
