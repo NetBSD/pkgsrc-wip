@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2768 2008/01/30 17:15:17 tnn2 Exp $
+# $Id: Makefile,v 1.2769 2008/02/01 04:16:04 jdwhite Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1767,6 +1767,7 @@ SUBDIR+=	umix
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
+SUBDIR+=	ups-nut
 SUBDIR+=	uptimed
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
