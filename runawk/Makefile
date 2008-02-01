@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/01/23 20:02:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2008/02/01 19:44:00 cheusov Exp $
 #
 
-DISTNAME=	runawk-0.10.0
+DISTNAME=	runawk-0.10.1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/}
 
