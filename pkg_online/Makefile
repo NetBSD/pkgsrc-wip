@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2008/02/02 00:38:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/02 19:35:57 cheusov Exp $
 #
 
 DISTNAME=	pkg_online-0.2.0
-CATEGORIES=	wip
+CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://mova.org:~/public_html/pub/pkg_online/
+HOMEPAGE=	http://mova.org/~/public_html/pub/pkg_online/
 COMMENT=	Client/Server search in pkgsrc packages
 
 DEPENDS+=	dict-server>=1.10.10nb2:../../wip/dict-server
