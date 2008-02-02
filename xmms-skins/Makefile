@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/05/17 08:00:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/02 19:47:47 cheusov Exp $
 
 DISTNAME=	xmms-skins-0.10
 CATEGORIES=	meta-pkgs audio
@@ -18,10 +18,8 @@ DEPENDS+=	xmms-skin-${skin}-[0-9]*:../../wip/xmms-skin-${skin}
 .endfor
 
 EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-NO_MTREE=	yes
+
+META_PACKAGE=	yes
 
 do-install:	# empty
 
