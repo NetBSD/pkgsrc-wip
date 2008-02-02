@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2769 2008/02/01 04:16:04 jdwhite Exp $
+# $Id: Makefile,v 1.2770 2008/02/02 12:30:30 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -416,6 +416,7 @@ SUBDIR+=	glulxe
 SUBDIR+=	glut
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
+SUBDIR+=        gmp-ecm
 SUBDIR+=	gnash
 SUBDIR+=	gnocky
 SUBDIR+=	gnokii
