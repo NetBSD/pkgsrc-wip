@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/10/03 15:14:59 milosn Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
 
 --- configure.orig	2006-03-21 23:42:05.000000000 +0000
 +++ configure
@@ -40,6 +40,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/10/03 15:14:59 milosn Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
+@@ -42959,7 +42963,7 @@ echo "$as_me: WARNING: GStreamer install
+ 
+ 
+ 
+-        if test "x$GST_INSPECT" == "x"; then
++        if test "x$GST_INSPECT" = "x"; then
+             # Extract the first word of "gst-inspect", so it can be a program name with args.
+ set dummy gst-inspect; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -44788,7 +44792,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
 @@ -45354,7 +45358,7 @@ EOF
        ;;
  

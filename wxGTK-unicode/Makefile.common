@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/10/03 15:14:59 milosn Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/02/02 23:57:47 shattered Exp $
 
 DISTNAME=		wxGTK-2.6.3
 PKGNAME=		wxGTK-unicode-2.6.3
@@ -54,4 +54,4 @@ USE_TOOLS+=		gawk:pkgsrc
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+#include "../../mk/x11.buildlink3.mk"
