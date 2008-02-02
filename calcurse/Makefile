@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/03 14:17:05 zul_ Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/02 18:26:07 jdwhite Exp $
 
-DISTNAME=		calcurse-1.5
+DISTNAME=		calcurse-1.9
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp2.culot.org/culot/
 
 
-MAINTAINER=		zul@netbsd-fr.org
+MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://culot.org/calcurse/
-COMMENT=		Text-based personnal organizer
+COMMENT=		Text-based personal organizer
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
