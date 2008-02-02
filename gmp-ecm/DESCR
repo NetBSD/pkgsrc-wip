@@ -1,0 +1,3 @@
+GMP-ECM  is an efficient implementation of ECM
+(Elliptic Curve Method for Integer Factorization)
+using the GNU MP library.
