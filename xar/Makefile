@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/02 00:46:03 dhowland Exp $
 #
 
-DISTNAME=		xar-1.4
-PKGREVISION=		1
+DISTNAME=		xar-1.5.2
 CATEGORIES=		archivers
-MASTER_SITES=		http://www.opendarwin.org/projects/xar/
+MASTER_SITES=		http://xar.googlecode.com/files/
 
 MAINTAINER=		dhowland@users.sourceforge.net
-HOMEPAGE=		http://www.opendarwin.org/projects/xar/
+HOMEPAGE=		http://code.google.com/p/xar/
 COMMENT=		The eXtensible ARchiver
 
 GNU_CONFIGURE=		yes

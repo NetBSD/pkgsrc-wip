@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/02 17:00:57 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/02 00:46:03 dhowland Exp $
 bin/xar
 include/xar/xar.h
+lib/libxar.a
+lib/libxar.la
 lib/libxar.so
 lib/libxar.so.1
 man/man1/xar.1
