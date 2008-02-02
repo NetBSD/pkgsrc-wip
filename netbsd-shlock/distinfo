@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2008/02/02 13:58:24 cheusov Exp $
-
-SHA1 (netbsd-shlock-4.0.tar.bz2) = 9128635bf8148ec91609327fb5981846e7af1404
-RMD160 (netbsd-shlock-4.0.tar.bz2) = 0220c02be645d3a9567dad9679d91d2352055353
-Size (netbsd-shlock-4.0.tar.bz2) = 5865 bytes
