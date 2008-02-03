@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/28 07:19:42 uhabel Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/03 16:23:58 tnn2 Exp $
 #
 
 DISTNAME=	xtrlock_2.0-12
@@ -21,5 +21,6 @@ do-install:
 	${INSTALL} -m 4775 ${WRKSRC}/xtrlock ${PREFIX}/bin/xtrlock
 	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/${PKGMANDIR}/man1/xtrlock.1
 
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
