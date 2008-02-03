@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/03 15:18:35 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/03 18:10:32 shattered Exp $
 
 DISTNAME=	wxPython-src-2.6.3.3
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.6.3.3
@@ -20,7 +20,7 @@ CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
 # non unicode version
 CONFLICTS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 
 WXARG=	WXPORT=gtk2 \
 	WX_CONFIG=${BUILDLINK_PREFIX.wxGTK-unicode}/bin/wx-config \
@@ -37,6 +37,7 @@ PYBINMODULE=	yes
 PLIST_SUBST+=            GTKVER=2
 
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../wip/wxGTK-unicode/buildlink3.mk"
 .include "../../wip/wxGTK-contrib-unicode/buildlink3.mk"
