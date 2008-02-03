@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 02:01:06 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/03 11:55:34 hoka_adam Exp $
 #
 
 DISTNAME=	resid-builder-1.0.1+20060528.ccr
@@ -12,7 +12,7 @@ COMMENT=	reSID-builder snapshot from ccr/TNSP
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	make
+USE_TOOLS+=	make pkg-config
 USE_LIBTOOL=	yes
 
 # I know it's dirty...
