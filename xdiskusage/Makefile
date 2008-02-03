@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/09/14 19:19:11 dhowland Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/03 17:08:37 tnn2 Exp $
 #
 
 DISTNAME=		xdiskusage-1.48
@@ -15,5 +15,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../x11/fltk/buildlink3.mk"
-
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
