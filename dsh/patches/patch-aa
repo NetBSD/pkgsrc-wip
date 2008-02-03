@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/02/03 12:00:08 shindenmorr Exp $
+
+--- Makefile.in.orig	2008-02-03 11:35:13.000000000 +0100
++++ Makefile.in
+@@ -226,7 +226,7 @@ program_transform_name = @program_transf
+ psdir = @psdir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-sysconfdir = @sysconfdir@
++sysconfdir = @prefix@/share/examples/dsh
+ target_alias = @target_alias@
+ dsh_SOURCES = dsh.c linkedlist.c parameter.c dsh.h linkedlist.h parameter.h gettext.h
+ original_man = dsh.1 dsh.conf.5 
