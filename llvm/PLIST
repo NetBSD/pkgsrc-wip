@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/18 16:27:15 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/03 19:33:04 hoka_adam Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -18,6 +18,8 @@ bin/llvm-stub
 bin/llvm-upgrade
 bin/llvm2cpp
 bin/llvmc
+bin/gccas
+bin/gccld
 bin/opt
 docs/llvm/html.tar.gz
 docs/llvm/html/AliasAnalysis.html
