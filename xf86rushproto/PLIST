@@ -1,1 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2007/01/23 17:39:13 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/03 17:03:59 tnn2 Exp $
+include/X11/extensions/xf86rush.h
+include/X11/extensions/xf86rushstr.h
+lib/pkgconfig/xf86rushproto.pc
+@comment @dirrm include/X11/extensions
