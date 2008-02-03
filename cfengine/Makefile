@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2008/02/03 14:24:07 tnn2 Exp $
-# $Id: Makefile,v 1.14 2008/02/03 14:24:07 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2008/02/03 14:34:14 tnn2 Exp $
+# $Id: Makefile,v 1.15 2008/02/03 14:34:14 tnn2 Exp $
 
 .include "Makefile.common"
 
@@ -31,7 +31,7 @@ RCD_SCRIPTS=		cfexecd cfservd cfenvd
 # But other platforms i.e. Solaris need this.
 
 USE_TOOLS+=		flex yacc perl:run
-REPLACE_PERL+=		sbin/cfdoc
+REPLACE_PERL+=		contrib/cfdoc
 
 .if (empty(PKG_OPTIONS:Mcfengine-pthread))
 CONFIGURE_ARGS+= --without-pthreads
