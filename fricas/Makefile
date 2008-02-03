@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/12 10:50:50 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/03 10:58:05 asau Exp $
 #
 
 PKGNAME=		fricas-1.0.1
@@ -18,7 +18,7 @@ COMMENT=		FriCAS is an advanced computer algebra system.
 GNU_CONFIGURE=		yes
 #USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake gawk makeinfo
-BUILD_DEPENDS+=		noweb:../../devel/noweb
+BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 #INFO_FILES=		yes
 
 USE_GNU_CONFIGURE_HOST=	no
