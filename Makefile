@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2774 2008/02/03 17:25:08 hoka_adam Exp $
+# $Id: Makefile,v 1.2775 2008/02/03 17:34:15 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1015,6 +1015,7 @@ SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
+SUBDIR+=	netsurf
 SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwox
