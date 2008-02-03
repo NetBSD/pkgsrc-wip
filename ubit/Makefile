@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/12 17:47:40 dauphing Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/03 17:50:13 tnn2 Exp $
 
 #DISTNAME=	ubit-5.0.4
 DISTNAME=	ubit-5.5.0
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--with-gl-prefix=${LOCALBASE}
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
