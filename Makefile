@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2772 2008/02/03 16:49:31 tnn2 Exp $
+# $Id: Makefile,v 1.2773 2008/02/03 17:06:29 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -624,8 +624,14 @@ SUBDIR+=	hunspell-bg_BG
 SUBDIR+=	hunspell-ca_ES
 SUBDIR+=	hunspell-cs_CZ
 SUBDIR+=	hunspell-da_DK
+SUBDIR+=	hunspell-fo_FO
+SUBDIR+=	hunspell-ga_IE
+SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
 SUBDIR+=	hunspell-hu_HU
+SUBDIR+=	hunspell-lt_LT
+SUBDIR+=	hunspell-mg_MG
+SUBDIR+=	hunspell-ms_MY
 SUBDIR+=	hunspell-nl_NL
 SUBDIR+=	hunspell-ny_MW
 SUBDIR+=	hydrogen-current
