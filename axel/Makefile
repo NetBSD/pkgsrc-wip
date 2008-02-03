@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/05 23:33:14 alchow Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/03 14:56:10 tnn2 Exp $
 #
 
 DISTNAME=		axel-1.0b
@@ -21,6 +21,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/axel ${PREFIX:Q}/bin/
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC:Q}/axelrc.example ${EGDIR}
-	${INSTALL_MAN} ${WRKSRC:Q}/axel.1 ${PREFIX:Q}/man/man1/
+	${INSTALL_MAN} ${WRKSRC:Q}/axel.1 ${PREFIX:Q}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
