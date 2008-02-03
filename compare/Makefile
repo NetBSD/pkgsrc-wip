@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/03 14:13:46 tnn2 Exp $
 #
 
 DISTNAME=		compare-1.11
@@ -10,6 +10,8 @@ HOMEPAGE=		ftp://ftp.berlios.de/pub/compare/AN-1.11
 COMMENT=		Fast binary comparision between two files
 
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/compare/OBJ/*/compare ${PREFIX}/bin/
