@@ -1,2 +1,3 @@
 * add rc script
 * group SED expressions instead of one expr by class. (-e s,foo,bar, -e s,bob,alice,g)
+Should use CONF_FILES and PKGSYSCONFDIR

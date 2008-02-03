@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/03 23:56:25 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/03 15:30:40 tnn2 Exp $
 #
 
 DISTNAME=		and-1.2.0
@@ -13,6 +13,7 @@ COMMENT=		Auto nice daemon
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c
 BUILD_TARGET=		default
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

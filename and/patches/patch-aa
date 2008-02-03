@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2008/02/03 15:30:40 tnn2 Exp $
+
+--- Makefile.orig	2008-02-03 16:25:51.000000000 +0100
++++ Makefile
+@@ -23,10 +23,10 @@
+ # given below.
+ #
+ PREFIX=/usr/pkg
+-INSTALL_ETC=$(PREFIX)/etc
++INSTALL_ETC=$(PREFIX)/share/examples/and
+ #/etc/init.d
+ INSTALL_SBIN=$(PREFIX)/sbin
+-INSTALL_MAN=$(PREFIX)/man
++INSTALL_MAN=$(PREFIX)/$(PKGMANDIR)
+ 
+ # typical OpenBSD or FreeBSD configuration
+ #PREFIX=/usr/pkg

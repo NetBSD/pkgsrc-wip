@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/18 22:11:41 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/03 15:30:40 tnn2 Exp $
 man/man5/and.conf.5
 man/man5/and.priorities.5
 man/man8/and.8
 sbin/and
+share/examples/and/and.conf
+share/examples/and/and.priorities
+@dirrm share/examples/and
