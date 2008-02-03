@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/18 23:34:01 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/03 12:20:02 hoka_adam Exp $
 #
 
 DISTNAME=	dhcpcd-3.1.9
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c99
 
 MAKE_ENV+=	INFODIR=${PREFIX}/var/db
-MAKE_ENV+=	MANPREFIX=${PREFIX}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man
 
 RCD_SCRIPTS+=	dhcpcd
 
