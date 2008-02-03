@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 14:29:58 tnn2 Exp $
 #
 
 DISTNAME=		gromacs-3.2.1
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-fftw
 
 .include "../../math/fftw2/buildlink3.mk"
-.include "../../x11/lesstif/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/lesstif/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
