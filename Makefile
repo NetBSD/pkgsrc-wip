@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2770 2008/02/02 12:30:30 athaba Exp $
+# $Id: Makefile,v 1.2771 2008/02/03 15:42:40 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1091,6 +1091,7 @@ SUBDIR+=	outguess
 SUBDIR+=	owl
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
+SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Apache-AuthenNTLM
