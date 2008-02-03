@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/09 05:33:24 hoka_adam Exp $
-
-SHA1 (stegdetect-0.6.tar.gz) = c303bde8afe411d58e57b92af014703dfa04a913
-RMD160 (stegdetect-0.6.tar.gz) = 7db7310bc37cd6d38c73ca641649bedde305cae4
-Size (stegdetect-0.6.tar.gz) = 1269001 bytes
