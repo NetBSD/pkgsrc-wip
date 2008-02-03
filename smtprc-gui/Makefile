@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 16:53:11 tnn2 Exp $
 
 .include "../../wip/smtprc/Makefile.common"
 
@@ -11,7 +11,7 @@ DEPENDS+=	p5-Tk>=800.024:../../x11/p5-Tk
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-USE_PERL5=	YES
+USE_TOOLS+=	perl
 
 PKGDIR=		${.CURDIR}/../../wip/smtprc
 PLIST_SRC=	${.CURDIR}/PLIST

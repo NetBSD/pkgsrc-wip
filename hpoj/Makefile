@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/01/18 04:30:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/03 16:53:11 tnn2 Exp $
 #
 
 DISTNAME=		hpoj-0.91
@@ -16,8 +16,7 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 # The ptal-cups script require bash
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 
-USE_TOOLS+=		gmake
-USE_PERL5=		YES
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \

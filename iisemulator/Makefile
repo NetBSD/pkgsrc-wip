@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/03 16:53:11 tnn2 Exp $
 
 DISTNAME=	iisemulator-0.95
 CATEGORIES=	net www
@@ -9,7 +9,7 @@ HOMEPAGE=	http://sourceforge.net/projects/iisemul8/
 COMMENT=	IIS emulator
 
 IISEMUL8=	${PREFIX}/share/iisemulator
-USE_PERL5=	YES
+USE_TOOLS+=	perl
 REPLACE_PERL=	iisemul8.pl
 
 DOC_FILES=	AUTHORS COPYING README BUGS TODO CHANGES

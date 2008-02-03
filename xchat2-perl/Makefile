@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/06 12:37:25 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/03 16:53:12 tnn2 Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--disable-python
 
-USE_PERL5=	YES
+USE_TOOLS+=	perl
 REPLACE_PERL=	plugins/perl/sample_script.pl plugins/perl/ignore.pl
 
 .include "../../lang/perl5/buildlink3.mk"

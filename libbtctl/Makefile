@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/08 01:05:27 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/03 16:53:11 tnn2 Exp $
 #
 
 DISTNAME=		libbtctl-0.6.0
@@ -9,14 +9,12 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
 COMMENT=		GObject Bluetooth controller
 
-USE_TOOLS=gmake
+USE_TOOLS+=		gmake perl
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libbtctl.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/mono/libbtctl/libbtctl-sharp.pc.in
-
-USE_PERL5=YES
 
 GNU_CONFIGURE=		yes
 

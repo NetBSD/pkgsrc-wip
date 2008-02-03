@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/08/23 13:45:53 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 16:53:12 tnn2 Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Configurable XML formatter, Perl version
 
 CONFLICTS+=		xmlformat-ruby-[0-9]*
 
-USE_PERL5=		run
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		xmlformat.pl
 
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/01 14:20:07 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/03 16:53:11 tnn2 Exp $
 #
 
 DISTNAME=		ile-0.4
@@ -11,7 +11,7 @@ COMMENT=		Email notifier component for jabber
 
 DEPENDS=		p5-Net-Jabber>=1.26:../../chat/p5-Net-Jabber
 
-USE_PERL5=		YES
+USE_TOOLS+=		perl
 REPLACE_PERL=	${WRKSRC}/ile.pl
 
 do-build:

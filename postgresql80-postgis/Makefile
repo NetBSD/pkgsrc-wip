@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/03 16:53:11 tnn2 Exp $
 #
 
 VERSION=		1.0.3
@@ -24,7 +24,7 @@ PATCHDIR=		${.CURDIR}/../../databases/postgresql80/patches
 MASTER_SITES+=	${PGSQL_SITES:=source/v${DIST_VERS}/}
 MASTER_SITES+=	http://postgis.refractions.net/download/
 
-USE_PERL5=		YES
+USE_TOOLS+=		perl
 
 PGSQL_VERSION_REQD=	80
 

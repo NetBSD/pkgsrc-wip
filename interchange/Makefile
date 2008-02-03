@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/03 16:53:11 tnn2 Exp $
 #
 
 DISTNAME=	interchange-5.2.1
@@ -39,7 +39,7 @@ MESSAGE_SUBST+=	ICUSER=${INTERCHANGE_USER}	\
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PERL5=	# defined
+USE_TOOLS+=		perl
 
 # Interchange User name (user id owning/running the daemon)
 INTERCHANGE_USER?=interchg
