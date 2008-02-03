@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/04 16:19:36 akihabara Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/03 14:19:38 tnn2 Exp $
 
 DISTNAME=	clockspeed-0.62
 CATEGORIES=	time
@@ -26,7 +26,7 @@ SYS_CMDS=	${CMDDIR}/clockspeed ${CMDDIR}/clockadd
 CONF_FILES=	${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
 
 INSTALLATION_DIRS= ${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 \
-		${PKGMANDIR}/man8 ${EGDIR} bin
+		${PKGMANDIR}/man8 ${EGDIR} bin sbin
 
 post-extract:
 	${CP} ${.CURDIR}/files/leapsecs.dat ${WRKSRC}
