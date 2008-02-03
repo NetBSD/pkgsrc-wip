@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 07:31:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 16:58:44 tnn2 Exp $
 #
 
 DISTNAME=		xgobi
@@ -47,4 +47,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data_xgvis/${EXA} ${PREFIX}/share/examples/${PKGNAME}/data_xgvis
 .endfor
 
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
