@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/02 16:09:22 hoka_adam Exp $
-
-SHA1 (compat-5.1r5.tar.gz) = 9c263af490ade39a16041752439896c657494593
-RMD160 (compat-5.1r5.tar.gz) = 46067be16204ac73a2975b926948d3ed3c28deeb
-Size (compat-5.1r5.tar.gz) = 2977 bytes
-SHA1 (patch-aa) = a8e1206b831f9c926a9ec7f9c97ba39900c4f837
