@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/08/27 15:00:00 obache Exp $
+$NetBSD: patch-aa,v 1.3 2008/02/03 02:59:44 obache Exp $
 
---- Makefile.orig	2006-05-24 07:16:36.000000000 +0900
+--- Makefile.orig	2006-05-23 22:16:36.000000000 +0000
 +++ Makefile
 @@ -1,43 +1,39 @@
 -PREFIX=/usr
@@ -53,12 +53,12 @@ $NetBSD: patch-aa,v 1.2 2006/08/27 15:00:00 obache Exp $
 -	install upnpd $(PREFIX)/sbin
 -	install upnpd.8 $(PREFIX)/share/man/man8
 -	if [ ! -f /etc/upnpd.conf ]; then install etc/upnpd.conf /etc; fi
-+	${BSD_INSTALL_DATA_DIR} -d ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_DATA} etc/gatedesc.xml ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_DATA} etc/dummy.xml ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_DATA} etc/ligd.gif ${PREFIX}/etc/linuxigd
-+	${BSD_INSTALL_PROGRAM} upnpd $(PREFIX)/sbin
-+	${BSD_INSTALL_MAN} upnpd.8 $(PREFIX)/$(PKGMANDIR)/man8
-+	${BSD_INSTALL_DATA} etc/upnpd.conf ${PREFIX}/share/examples
++	${BSD_INSTALL_DATA_DIR} -d ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gatedesc.xml ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateconnSCPD.xml  ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/gateicfgSCPD.xml ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/dummy.xml ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_DATA} etc/ligd.gif ${DESTDIR}${PREFIX}/etc/linuxigd
++	${BSD_INSTALL_PROGRAM} upnpd ${DESTDIR}$(PREFIX)/sbin
++	${BSD_INSTALL_MAN} upnpd.8 ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man8
++	${BSD_INSTALL_DATA} etc/upnpd.conf ${DESTDIR}${PREFIX}/share/examples
