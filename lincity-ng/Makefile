@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/05 19:07:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/03 10:40:15 cheusov Exp $
 #
 
 DISTNAME=	lincity-ng-1.1.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-#MAKE_PROGRAM=	jam
+USE_TOOLS+=	pkg-config
 
 do-build:
 	cd ${WRKSRC} && jam
