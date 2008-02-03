@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/09 05:33:24 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/03 13:56:32 hoka_adam Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
@@ -8,7 +8,6 @@ bin/stegcompare
 bin/stegdeimage
 bin/stegdetect
 bin/wrjpgcom
-bin/xsteg
 man/man1/cjpeg.1
 man/man1/djpeg.1
 man/man1/file.1

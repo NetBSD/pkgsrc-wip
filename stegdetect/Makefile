@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/09 05:33:24 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/03 13:56:32 hoka_adam Exp $
 #
 
 DISTNAME=		stegdetect-0.6
@@ -12,9 +12,9 @@ COMMENT=		Steganography detection and break tool
 USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}/man
 
-GCC_REQD+=      3.0
+.include "../../mk/bsd.prefs.mk"
 
 # Segfaults when compiled with GCC4
 #
@@ -26,5 +26,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/stegbreak
 	${INSTALL_DATA} ${FILESDIR}/rules.ini ${PREFIX}/share/stegbreak
 
-.include "../../x11/gtk/buildlink3.mk"
+# X11 support is pretty useless and needs gtk1.
+#
+#.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
