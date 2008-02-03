@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:57 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/03 18:18:27 tnn2 Exp $
 #
 
 DISTNAME=		tinycobol-0.61
@@ -19,9 +19,6 @@ USE_TOOLS+=		gmake bison
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../databases/db/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
