@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/01/23 08:25:08 asau Exp $
+# $NetBSD: options.mk,v 1.11 2008/02/03 09:42:15 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -6,13 +6,14 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 PKG_SUPPORTED_OPTIONS+=		ffcall
 
 PKG_SUPPORTED_OPTIONS+=		pgsql gdbm bdb pcre rawsock pari fastcgi wildcard gtk2 zlib
+PKG_SUPPORTED_OPTIONS+=		readline
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	x11-bindings
 PKG_OPTIONS_GROUP.x11-bindings=	mit-clx new-clx
 
 PKG_SUPPORTED_OPTIONS+=		gmalloc
 
-PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock zlib
+PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock readline zlib
 
 # CLISP doesn't work with jemalloc:
 .if ${OPSYS} == "NetBSD"
@@ -110,3 +111,9 @@ CONFIGURE_ARGS+=	--with-module=zlib
 BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
 .endif
+
+#.if !empty(PKG_OPTIONS:Mreadline)
+USE_GNU_READLINE=	YES
+CONFIGURE_ARGS+=	--with-readline
+.include "../../devel/readline/buildlink3.mk"
+#.endif
