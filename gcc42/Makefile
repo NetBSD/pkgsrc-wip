@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2007/05/08 09:42:39 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/03 12:46:53 hoka_adam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}-${SNAP_DATE}
 PKGNAME=	gcc42-${GCC_VERSION}
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	ftp://gcc.gnu.org/pub/gcc/prerelease-4.2.0-20070501/
+MASTER_SITES=	http://gcc.site2nd.org/gcc/prerelease-4.2.0-20070501/ \
+		http://gcc.cybermirror.org/prerelease-4.2.0-20070501/
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://gcc.gnu.org/
