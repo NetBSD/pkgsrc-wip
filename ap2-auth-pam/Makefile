@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 15:20:32 tnn2 Exp $
 
 DISTNAME=	mod_auth_pam-2.0-1.1.1
 PKGNAME=	ap2-auth-pam-1.1.1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://pam.sourceforge.net/mod_auth_pam/
 COMMENT=	Apache2 module for PAM authentification
 
 APACHE_MODULE_NAME=	mod_auth_pam
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
 EGDIR=		${PREFIX}/share/examples/mod_auth_pam
