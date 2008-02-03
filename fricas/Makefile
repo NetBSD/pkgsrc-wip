@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/03 10:58:05 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/03 11:12:37 asau Exp $
 #
 
 PKGNAME=		fricas-1.0.1
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	--with-lisp=clisp --with-x=no
 BUILD_DEPENDS+=		clisp>=2.41:../../lang/clisp
 #CONFIGURE_ARGS+=	--with-lisp=sbcl --with-x=no
 
-USE_DESTDIR=		full
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
