@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/10 14:16:04 krub1 Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/04 23:14:39 tnn2 Exp $
 
 DISTNAME=		libvolume-0.77
 CATEGORIES=		sysutils
@@ -15,8 +15,9 @@ MAKE_ENV=       	E=${ECHO_MSG:Q} RANLIB=${RANLIB:Q} AR=${AR:Q} Q=@ \
 # Linux has UDEV
 NOT_FOR_PLATFORM=	Linux-*-*
 
+INSTALLATION_DIRS=	include lib lib/pkgconfig
+
 do-install:
-	${INSTALL_LIB_DIR} ${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/libvolume_id.pc ${PREFIX}/lib/pkgconfig/libvolume_id.pc
 	${INSTALL_DATA} ${WRKSRC}/libvolume_id.h ${PREFIX}/include/libvolume_id.h
 	${INSTALL_DATA} ${WRKSRC}/libvolume_id.a ${PREFIX}/lib/libvolume_id.a
