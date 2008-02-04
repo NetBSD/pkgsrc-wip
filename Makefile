@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2777 2008/02/04 17:29:02 schnoebe Exp $
+# $Id: Makefile,v 1.2778 2008/02/04 21:29:07 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1049,6 +1049,7 @@ SUBDIR+=	openca
 SUBDIR+=	openct
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
+SUBDIR+=	openmpi
 SUBDIR+=	openoffice2-bin-af
 SUBDIR+=	openoffice2-bin-be-BY
 SUBDIR+=	openoffice2-bin-bg
@@ -1312,6 +1313,7 @@ SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-podlators
 SUBDIR+=	packman
+SUBDIR+=	paexec
 SUBDIR+=	pal
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pam-pkcs11
@@ -1322,6 +1324,7 @@ SUBDIR+=	parted
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	pbbuttonsd
+SUBDIR+=	pbulk-noj
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsx
 SUBDIR+=	pdb2ldif
@@ -1372,12 +1375,17 @@ SUBDIR+=	pike-core
 SUBDIR+=	pike-gdbm
 SUBDIR+=	pike-mime
 SUBDIR+=	pinball
+SUBDIR+=	pipestatus
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get
+SUBDIR+=	pkg_install-testing
+SUBDIR+=	pkg_online
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
+SUBDIR+=	pkg_src_summary
+SUBDIR+=	pkg_summary4view
 SUBDIR+=	pkg_update_summary
 SUBDIR+=	pkgmanager
 SUBDIR+=	planner
@@ -1925,6 +1933,7 @@ SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
 SUBDIR+=	xvidtune
 SUBDIR+=	xxdiff
+SUBDIR+=	xxkb
 SUBDIR+=	xyssl
 SUBDIR+=	yabause
 SUBDIR+=	yafray
