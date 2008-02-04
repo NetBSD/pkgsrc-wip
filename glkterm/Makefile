@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:27:54 dillo Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/04 21:04:31 tnn2 Exp $
 #
 
 DISTNAME=	glkterm-078
@@ -18,6 +18,8 @@ INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 WRKSRC=		${WRKDIR}/glkterm
 USE_LIBTOOL=	yes
 UNWRAP_FILES+=	Make.glkterm
+
+INSTALLATION_DIRS=	lib
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
