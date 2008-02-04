@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2776 2008/02/03 19:25:09 hoka_adam Exp $
+# $Id: Makefile,v 1.2777 2008/02/04 17:29:02 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -658,7 +658,7 @@ SUBDIR+=	im
 SUBDIR+=	imapsync
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
-SUBDIR+=	interchange
+# SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
 SUBDIR+=	ion3-devel
