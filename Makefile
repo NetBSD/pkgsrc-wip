@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2781 2008/02/05 20:06:13 koifren Exp $
+# $Id: Makefile,v 1.2782 2008/02/05 20:46:24 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -327,6 +327,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	ffmpeg-snapshot
+SUBDIR+=	ficl
 SUBDIR+=	filepp
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
