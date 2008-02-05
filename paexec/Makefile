@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/01/24 20:54:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/05 10:14:16 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.6.0
@@ -12,6 +12,7 @@ COMMENT=	Parallel executor, distributes tasks over network
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
+USE_BSD_MAKEFILE=	yes
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PKGEGDIR=		${PREFIX}/share/examples/${PKGBASE}
