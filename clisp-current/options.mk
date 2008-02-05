@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/02/03 09:42:15 asau Exp $
+# $NetBSD: options.mk,v 1.12 2008/02/05 14:23:16 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -112,8 +112,8 @@ BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
 .endif
 
-#.if !empty(PKG_OPTIONS:Mreadline)
+.if !empty(PKG_OPTIONS:Mreadline)
 USE_GNU_READLINE=	YES
 CONFIGURE_ARGS+=	--with-readline
 .include "../../devel/readline/buildlink3.mk"
-#.endif
+.endif

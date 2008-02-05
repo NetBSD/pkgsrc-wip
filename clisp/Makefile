@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/03 09:48:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/05 14:20:58 asau Exp $
 #
 
 DISTNAME=	clisp-2.44
@@ -27,12 +27,10 @@ BUILD_DIRS=		src
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
-USE_GNU_READLINE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
-CONFIGURE_ARGS+=	--with-readline
 TEST_TARGET=		check
 MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
@@ -53,7 +51,6 @@ CONFIGURE_ARGS+=	--disable-mmap
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
