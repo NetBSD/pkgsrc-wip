@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/01/24 22:53:08 schnoebe Exp $
+# $NetBSD: Makefile,v 1.46 2008/02/05 11:55:35 tnn2 Exp $
 #
 
 DISTNAME=		jabberd-2.1.22
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 CONFIGURE_ARGS+=	--with-sasl=gsasl	# only GNU sasl is
-						# really supported
+#						  really supported
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
