@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/02 00:38:32 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/05 22:35:33 cheusov Exp $
 bin/pkg_online_client
 bin/pkg_online_client.env
 bin/pkg_online_find
@@ -7,5 +7,6 @@ bin/pkg_online_server.env
 bin/pkg_summary2all
 bin/pkg_summary2field-index
 bin/pkg_summary2info
-bin/pkg_summary2pkgname_to_onelineinfo
+bin/pkg_summary2shortinfo
+bin/pkg_summary2onelineinfo
 share/doc/pkg_online/README
