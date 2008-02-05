@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/05 10:39:41 shattered Exp $
+
+SHA1 (smstools3-3.0.10.tar.gz) = 86a77b250dd4d1519161aa551a69146068f3ac31
+RMD160 (smstools3-3.0.10.tar.gz) = 04aef3ddf345038138b76dd1fd68c2b0d72e5cfe
+Size (smstools3-3.0.10.tar.gz) = 210913 bytes
+SHA1 (patch-aa) = d6fcad9fb3f1ba82165be8733fcaf0c51f69d649
