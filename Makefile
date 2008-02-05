@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2779 2008/02/05 10:43:12 shattered Exp $
+# $Id: Makefile,v 1.2780 2008/02/05 16:38:03 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1049,7 +1049,6 @@ SUBDIR+=	openca
 SUBDIR+=	openct
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
-SUBDIR+=	openmpi
 SUBDIR+=	openoffice2-bin-af
 SUBDIR+=	openoffice2-bin-be-BY
 SUBDIR+=	openoffice2-bin-bg
@@ -1380,7 +1379,6 @@ SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get
-SUBDIR+=	pkg_install-testing
 SUBDIR+=	pkg_online
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
@@ -1934,7 +1932,6 @@ SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
 SUBDIR+=	xvidtune
 SUBDIR+=	xxdiff
-SUBDIR+=	xxkb
 SUBDIR+=	xyssl
 SUBDIR+=	yabause
 SUBDIR+=	yafray
