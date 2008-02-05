@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/08/19 20:19:59 kristerw Exp $
-#
+# $NetBSD: Makefile,v 1.5 2008/02/05 17:53:17 koifren Exp $
 
-DISTNAME=	monodoc-0.13
+DISTNAME=	monodoc-1.2.6
 CATEGORIES=	devel
-MASTER_SITES=	http://www.go-mono.org/archive/
+MASTER_SITES=	http://go-mono.com/sources/monodoc/
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Documentation for the Mono class libraries
 
