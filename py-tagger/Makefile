@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/16 12:45:22 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/06 19:09:50 shattered Exp $
 #
 
 DISTNAME=		pytagger-0.5
@@ -14,7 +14,8 @@ COMMENT=		ID3v1 and ID3v2 tag library in Python
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
+PYTHON_VERSIONS_INCOMPATIBLE=\
+			15 20 21 22
 
 .include "../../lang/python/extension.mk"
 
