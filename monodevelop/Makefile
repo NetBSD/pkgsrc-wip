@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/02/05 18:07:55 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/06 10:39:38 koifren Exp $
 
 DISTNAME=	monodevelop-0.18.1
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ COMMENT=	IDE for C# and other .NET languages
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:run bash
 EXTRACT_USING=	gtar
+MAKE_JOBS_SAFE=	no
 
 USE_DIRS+=	xdg-1.4
 
@@ -20,6 +21,7 @@ REPLACE_BASH+=	src/addins/MonoDevelop.Autotools/templates/configure.template
 REPLACE_BASH+=	contrib/extract_makefile_variable.sh
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../wip/mono/buildlink3.mk"
 .include "../../wip/mono-addins/buildlink3.mk"
 .include "../../wip/monodoc/buildlink3.mk"
