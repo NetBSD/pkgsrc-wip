@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/11/03 12:07:25 airhead Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/06 19:48:47 shattered Exp $
 #
 
 DISTNAME=	mutella-0.4.5
@@ -11,6 +11,7 @@ COMMENT=	Console mode Gnutella client with optional HTTP interface
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_LANGUAGES=		c++
 
 PTHREAD_OPTS+=		require
 
