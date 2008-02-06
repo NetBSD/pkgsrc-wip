@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/01/11 21:07:52 mwdavies Exp $
+$NetBSD: distinfo,v 1.3 2008/02/06 11:40:05 mwdavies Exp $
 
-SHA1 (kdeaccessibility-4.0.0.tar.bz2) = 8f3767b26e65ad832c465d11065b2bbc2dba4494
-RMD160 (kdeaccessibility-4.0.0.tar.bz2) = 1d96611de5151055a4375dd3be3dabd94cc1c91e
-Size (kdeaccessibility-4.0.0.tar.bz2) = 6368445 bytes
+SHA1 (kdeaccessibility-4.0.1.tar.bz2) = bbe64669e8f4106e2c8533032a72df24700cf6aa
+RMD160 (kdeaccessibility-4.0.1.tar.bz2) = dd75b112440520d9197d2e66ae6fac87946abf57
+Size (kdeaccessibility-4.0.1.tar.bz2) = 6368878 bytes
