@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/05 22:35:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/06 11:00:06 cheusov Exp $
 #
 
 DISTNAME=	pkg_online-0.3.0
@@ -19,6 +19,8 @@ DEPENDS+=	netcat-[0-9]*:../../net/netcat
 INSTALLATION_DIRS+=	share/doc/pkg_online
 
 USE_LANGUAGES=		# none
+USE_BSD_MAKEFILE=	yes
+
 NO_BUILD=		yes
 
 .include "../../mk/bsd.pkg.mk"
