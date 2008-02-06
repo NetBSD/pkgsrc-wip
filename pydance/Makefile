@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/08 17:28:20 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/06 19:11:31 shattered Exp $
 #
 
 DISTNAME=		pydance-1.0.3
@@ -18,6 +18,8 @@ DEPENDS+=		${PYPKGPREFIX}-game>=1.6:../../devel/py-game
 EXAMPLESDIR=		${PREFIX}/share/examples/pydance
 CONF_FILES+=		${EXAMPLESDIR}/pydance.cfg ${PKG_SYSCONFDIR}/pydance.cfg
 PYTHON_PATCH_SCRIPTS=	pydance.py
+PYTHON_VERSIONS_INCOMPATIBLE=\
+			15 20 21 22
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup.py
