@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/11 20:52:36 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/02/06 11:45:02 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -4554,6 +4554,9 @@ share/icons/oxygen/64x64/status/security-high.png
 share/icons/oxygen/64x64/status/security-low.png
 share/icons/oxygen/64x64/status/security-medium.png
 share/icons/oxygen/64x64/status/user-trash-full.png
+share/icons/oxygen/8x8/emblems/emblem-important.png
+share/icons/oxygen/8x8/emblems/emblem-link.png
+share/icons/oxygen/8x8/emblems/emblem-mounted.png
 share/icons/oxygen/index.theme
 share/icons/oxygen/scalable/actions/application-exit.svgz
 share/icons/oxygen/scalable/actions/archive-extract.svgz
@@ -5508,9 +5511,6 @@ share/icons/oxygen/scalable/emblems/emblem-favorite.svgz
 share/icons/oxygen/scalable/emblems/emblem-important.svgz
 share/icons/oxygen/scalable/emblems/emblem-mounted.svgz
 share/icons/oxygen/scalable/emblems/emblem-symbolic-link.svgz
-share/icons/oxygen/scalable/emblems/small/11x11/emblem-important.svgz
-share/icons/oxygen/scalable/emblems/small/11x11/emblem-link.svgz
-share/icons/oxygen/scalable/emblems/small/11x11/emblem-mounted.svgz
 share/icons/oxygen/scalable/emblems/small/16x16/emblem-important.svgz
 share/icons/oxygen/scalable/emblems/small/16x16/emblem-link.svgz
 share/icons/oxygen/scalable/emblems/small/16x16/emblem-mounted.svgz
@@ -7292,7 +7292,6 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/kde/apps/khelpcenter/plugins
 @dirrm share/kde/apps/khelpcenter
 @dirrm share/kde/apps/kde
-@comment in kde: @dirrm share/kde/apps/kcontrol
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
@@ -7324,7 +7323,6 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/icons/oxygen/scalable/emblems/small/8x8
 @dirrm share/icons/oxygen/scalable/emblems/small/22x22
 @dirrm share/icons/oxygen/scalable/emblems/small/16x16
-@dirrm share/icons/oxygen/scalable/emblems/small/11x11
 @dirrm share/icons/oxygen/scalable/emblems/small
 @comment in kde: @dirrm share/icons/oxygen/scalable/emblems
 @dirrm share/icons/oxygen/scalable/devices/small/64x64
@@ -7350,6 +7348,8 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/icons/oxygen/scalable/actions/small
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
 @comment in kde: @dirrm share/icons/oxygen/scalable
+@dirrm share/icons/oxygen/8x8/emblems
+@dirrm share/icons/oxygen/8x8
 @comment in kde: @dirrm share/icons/oxygen/64x64/status
 @comment in kde: @dirrm share/icons/oxygen/64x64/places
 @comment in kde: @dirrm share/icons/oxygen/64x64/mimetypes
