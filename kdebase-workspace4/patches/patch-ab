@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2008/01/11 21:02:34 mwdavies Exp $
+$NetBSD: patch-ab,v 1.4 2008/02/06 11:49:00 mwdavies Exp $
 
---- kdm/kfrontend/CMakeLists.txt.orig	2008-01-05 12:55:45.000000000 +1300
+--- kdm/kfrontend/CMakeLists.txt.orig	2008-01-31 12:52:00.000000000 +1300
 +++ kdm/kfrontend/CMakeLists.txt
-@@ -113,5 +113,5 @@ build_confci()
- set(KDM_PATH "$ENV{DESTDIR}${CONFIG_INSTALL_DIR}/kdm")
- set(FACE_SRC_PATH "${CMAKE_CURRENT_SOURCE_DIR}/pics")
+@@ -111,5 +111,5 @@ build_confci()
+ 
+ ## use 'GENKDMCONF_FLAGS=... make install' to override
  install(CODE "
--exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in '${KDM_PATH}' --no-in-notice --face-src '${FACE_SRC_PATH}' \$GENKDMCONF_FLAGS)
-+exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in '${KDM_PATH}' --no-in-notice --face-src '${FACE_SRC_PATH}' --no-old --no-backup \$GENKDMCONF_FLAGS)
+-exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in \\\"\\\$DESTDIR${CONFIG_INSTALL_DIR}/kdm\\\" --no-in-notice --face-src \\\"${CMAKE_CURRENT_SOURCE_DIR}/pics\\\" \\\$GENKDMCONF_FLAGS)
++exec_program(\"${CMAKE_CURRENT_BINARY_DIR}/genkdmconf\" ARGS --in \\\"\\\$DESTDIR${CONFIG_INSTALL_DIR}/kdm\\\" --no-in-notice --no-old --no-backup --face-src \\\"${CMAKE_CURRENT_SOURCE_DIR}/pics\\\" \\\$GENKDMCONF_FLAGS)
  ")

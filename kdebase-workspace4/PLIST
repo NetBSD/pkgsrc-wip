@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/01/11 21:02:34 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/02/06 11:49:00 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -66,6 +66,7 @@ include/KDE/Plasma/UiLoader
 include/KDE/Plasma/View
 include/kcommondecoration.h
 include/kdecoration.h
+include/kdecorationbridge.h
 include/kdecorationfactory.h
 include/kgreeterplugin.h
 include/kscreensaver.h
@@ -83,6 +84,9 @@ include/ksysguard/processes.h
 include/kwinconfig.h
 include/kwineffects.h
 include/kwinglobals.h
+include/kwinglutils.h
+include/kwinglutils_funcs.h
+include/kwinshadereffect.h
 include/kworkspace/kwindowlistmenu.h
 include/kworkspace/kworkspace.h
 include/plasma/abstractrunner.h
@@ -551,6 +555,7 @@ share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/kaccel.upd
 share/kde/apps/kconf_update/kcmdisplayrc.upd
 share/kde/apps/kconf_update/khotkeys_32b1_update.upd
+share/kde/apps/kconf_update/khotkeys_printscreen.upd
 share/kde/apps/kconf_update/konqueror_gestures_kde321_update.upd
 share/kde/apps/kconf_update/ksmserver.upd
 share/kde/apps/kconf_update/kwin.upd
@@ -679,6 +684,7 @@ share/kde/apps/kfontinst/kfontviewpart.rc
 share/kde/apps/kfontview/kfontviewui.rc
 share/kde/apps/khotkeys/kde32b1.khotkeys
 share/kde/apps/khotkeys/konqueror_gestures_kde321.khotkeys
+share/kde/apps/khotkeys/printscreen.khotkeys
 share/kde/apps/kicker/applets/ksysguardapplet.desktop
 share/kde/apps/kmenuedit/icons/crystalsvg/22x22/actions/menu_new.png
 share/kde/apps/kmenuedit/icons/crystalsvg/22x22/actions/menu_new_sep.png

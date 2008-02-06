@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/11 20:41:25 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/06 11:58:06 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -586,6 +586,7 @@ include/KDE/KPluginLoader
 include/KDE/KPluginSelector
 include/KDE/KPopupFrame
 include/KDE/KPreviewWidgetBase
+include/KDE/KPrintPreview
 include/KDE/KProcess
 include/KDE/KProgressDialog
 include/KDE/KPropertiesDialog
@@ -2400,6 +2401,7 @@ share/kde/apps/ksgmltools2/customization/ko/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/ko/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/ko/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/ko/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/ko/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/ko/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/ko/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/ko/lang.entities
