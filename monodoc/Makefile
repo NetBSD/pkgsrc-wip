@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/05 17:53:17 koifren Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/06 10:26:28 koifren Exp $
 
 DISTNAME=	monodoc-1.2.6
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ COMMENT=	Documentation for the Mono class libraries
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	monodoc.pc.in
 GNU_CONFIGURE=		yes
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../x11/gtk2-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
