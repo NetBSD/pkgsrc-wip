@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/17 17:49:34 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/06 16:46:07 briandealwis Exp $
 bin/fbpanel
 man/man1/fbpanel.1
 share/fbpanel/default
@@ -6,6 +6,7 @@ share/fbpanel/pager
 share/fbpanel/images/bottom-left.xpm
 share/fbpanel/images/bottom-right.xpm
 share/fbpanel/images/default.xpm
+share/fbpanel/images/dclock_glyphs.png
 share/fbpanel/images/gnome-applications.png
 share/fbpanel/images/gnome-devel.svg
 share/fbpanel/images/gnome-emacs.svg
@@ -23,6 +24,7 @@ share/fbpanel/images/mozilla-firefox.svg
 share/fbpanel/images/star.png
 share/fbpanel/images/top-left.xpm
 share/fbpanel/images/top-right.xpm
+${CPUPLUGIN}share/fbpanel/plugins/cpu.so
 share/fbpanel/plugins/dclock.so
 share/fbpanel/plugins/deskno.so
 share/fbpanel/plugins/deskno2.so
@@ -34,6 +36,7 @@ share/fbpanel/plugins/pager.so
 share/fbpanel/plugins/separator.so
 share/fbpanel/plugins/space.so
 share/fbpanel/plugins/taskbar.so
+share/fbpanel/plugins/tclock.so
 share/fbpanel/plugins/test.so
 share/fbpanel/plugins/tray.so
 share/fbpanel/plugins/wincmd.so

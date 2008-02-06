@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/10/02 21:22:38 briandealwis Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/06 16:46:07 briandealwis Exp $
 #
 
 DISTNAME=		fbpanel-4.12
@@ -17,8 +17,10 @@ HAS_CONFIGURE=		yes
 
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--cpu=on
+PLIST_SUBST+=   	CPUPLUGIN=""
 .else
 CONFIGURE_ARGS+=	--cpu=off
+PLIST_SUBST+=   	CPUPLUGIN="@comment "
 .endif
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
