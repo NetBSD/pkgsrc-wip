@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+
+
+*** matherr.c.orig	Mon Sep  2 02:54:35 1996
+--- matherr.c	Sat Apr  6 23:55:20 2002
+***************
+*** 204,210 ****
+  thing on bsd43_vax
+  */
+  
+! #ifdef	 BSD43_VAX
+  
+  #include <errno.h>
+  
+--- 204,210 ----
+  thing on bsd43_vax
+  */
+  
+! #if defined(BSD43_VAX) || defined(__vax__)
+  
+  #include <errno.h>
+  

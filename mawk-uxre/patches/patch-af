@@ -1,0 +1,32 @@
+$NetBSD: patch-af,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+
+--- configure.in.orig	1995-10-16 14:25:00.000000000 +0200
++++ configure.in
+@@ -32,10 +32,20 @@ dnl
+ dnl
+ AC_INIT(mawk.h)
+ builtin(include,mawk.ac.m4)
++
+ GET_USER_DEFAULTS
+ PROG_CC_NO_MINUS_G_NONSENSE
+ AC_PROG_CPP
+ NOTSET_THEN_DEFAULT(CFLAGS,-O)
++
++AC_ARG_WITH(local-regexp,
++[  --with-local-regexp             use the mawk's regexp engine],
++[
++if test "x${withval}" = xyes; then
++    CFLAGS="$CFLAGS -DLOCAL_REGEXP"
++fi
++])
++
+ LOOK_FOR_MATH_LIBRARY
+ WHICH_YACC
+ COMPILER_ATTRIBUTES
+@@ -45,5 +55,6 @@ CHECK_FUNCTIONS(memcpy,strchr,strerror,v
+ FPRINTF_IN_STDIO
+ FIND_OR_COMPUTE_MAX__INT
+ DREADED_FPE_TESTS
++
+ DO_CONFIG_H
+ AC_OUTPUT(Makefile)

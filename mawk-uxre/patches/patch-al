@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+
+--- rexp/regexp.c.orig	2008-02-06 21:46:49.000000000 +0200
++++ rexp/regexp.c
+@@ -0,0 +1,12 @@
++#ifdef LOCAL_REGEXP
++#		include "rexp.c"
++#		include "rexp0.c"
++#		include "rexp1.c"
++#		include "rexp2.c"
++#		include "rexp3.c"
++#		include "rexp4.c"
++#		include "rexpdb.c"
++#else
++#		include "rexp4.c"
++#		include "regexp_system.c"
++#endif

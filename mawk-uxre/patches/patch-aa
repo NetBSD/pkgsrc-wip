@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+
+--- Makefile.in.orig	1996-02-01 07:05:40.000000000 +0200
++++ Makefile.in
+@@ -6,7 +6,7 @@ SHELL=/bin/sh
+ CC = @CC@
+ 
+ CFLAGS =   @CFLAGS@
+-
++LDFLAGS = @LDFLAGS@
+ MATHLIB = @MATHLIB@
+ 
+ YACC = @YACC@ 
+@@ -25,17 +25,13 @@ O=parse.o scan.o memory.o main.o hash.o 
+   fin.o files.o  scancode.o matherr.o  fcall.o version.o\
+   missing.o
+ 
+-REXP_O=rexp/rexp.o rexp/rexp0.o rexp/rexp1.o rexp/rexp2.o\
+-    rexp/rexp3.o 
+-
+-REXP_C=rexp/rexp.c rexp/rexp0.c rexp/rexp1.c rexp/rexp2.c\
+-    rexp/rexp3.c 
+-
++REXP_O=rexp/regexp.o
++REXP_C=rexp/regexp.c
+ 
+ mawk_and_test :  mawk  mawk_test  fpe_test
+ 
+ mawk : $(O)  rexp/.done
+-	$(CC) $(CFLAGS) -o mawk $(O) $(REXP_O) $(MATHLIB) 
++	$(CC) $(LDFLAGS) -o mawk $(O) $(REXP_O) $(MATHLIB) 
+ 
+ mawk_test :  mawk  # test that we have a sane mawk
+ 	@cp mawk test/mawk

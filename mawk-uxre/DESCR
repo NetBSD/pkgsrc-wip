@@ -1,0 +1,6 @@
+Patched version of Mike Brennan's awk clone.
+Unlike original mawk it better supports
+POSIX regexp (at least it support character classes)
+and supports utf-8.
+For this to work the external regular expression
+library is used - libuxre
