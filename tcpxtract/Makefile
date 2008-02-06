@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/19 16:51:39 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/06 19:33:59 shattered Exp $
 #
 
 DISTNAME=		tcpxtract-1.0.1
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR}/tcpxtract.conf\""
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/share/examples/tcpxtract
 
-CONF_FILES+=		${PREFIX}/share/examples/tcpxtract.conf ${PKG_SYSCONFDIR}/tcpxtract.conf
+CONF_FILES+=		${PREFIX}/share/examples/tcpxtract/tcpxtract.conf ${PKG_SYSCONFDIR}/tcpxtract.conf
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
