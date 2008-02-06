@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/01/11 21:26:39 mwdavies Exp $
+$NetBSD: distinfo,v 1.3 2008/02/06 12:05:25 mwdavies Exp $
 
-SHA1 (kdetoys-4.0.0.tar.bz2) = a3591b9014772b2f19cbd38296f64038e05ef7c0
-RMD160 (kdetoys-4.0.0.tar.bz2) = 7b4aac990f0898a28e78ee3eebb5dcd02ce1e48a
-Size (kdetoys-4.0.0.tar.bz2) = 2238797 bytes
+SHA1 (kdetoys-4.0.1.tar.bz2) = 423c5a2f6cabfed50532d8f497f2561f4bd2b18c
+RMD160 (kdetoys-4.0.1.tar.bz2) = 8bc9bc20cf16bae0ff274dd8150fddd773feea12
+Size (kdetoys-4.0.1.tar.bz2) = 2238961 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/13 19:16:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/02/06 12:04:13 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -43,6 +43,7 @@ bin/kdelnk2desktop.py
 bin/kdemangen.pl
 bin/kdesvn-build
 bin/kio_svn_helper
+bin/kompare
 bin/kuiviewer
 bin/makeobj
 bin/memprof2calltree
@@ -60,6 +61,7 @@ bin/svn-clean
 bin/svn2dist
 bin/svnbackport
 bin/svnchangesince
+bin/svnforwardport
 bin/svngettags
 bin/svnintegrate
 bin/svnlastchange
@@ -94,6 +96,8 @@ lib/kde4/kcal_bugzilla.so
 lib/kde4/kded_ksvnd.so
 lib/kde4/kio_svn.so
 lib/kde4/libcervisiapart.so
+lib/kde4/libkomparenavtreepart.so
+lib/kde4/libkomparepart.so
 lib/kde4/libkuiviewerpart.so
 lib/kde4/quithumbnail.so
 lib/libantlr.so
@@ -106,8 +110,11 @@ lib/libkdeinit4_cervisia.so
 lib/libkdeinit4_cvsaskpass.so
 lib/libkdeinit4_cvsservice.so
 lib/libkdeinit4_kate.so
+lib/libkomparedialogpages.so
+lib/libkomparediff2.so
 lib/libkompareinterface.so
 lib/libkompareinterface.so.4
+lib/libkompareinterface.so.4.0.0
 lib/strigi/strigila_diff.so
 lib/strigi/strigita_ts.so
 man/man1/cervisia.1
@@ -116,6 +123,7 @@ share/applications/kde4/kapptemplate.desktop
 share/applications/kde4/kate.desktop
 share/applications/kde4/kbugbuster.desktop
 share/applications/kde4/kcachegrind.desktop
+share/applications/kde4/kompare.desktop
 share/applications/kde4/kuiviewer.desktop
 share/applications/kde4/umbrello.desktop
 share/dbus-1/interfaces/org.kde.cervisia.cvsjob.xml
