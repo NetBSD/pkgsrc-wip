@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/26 00:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/07 13:48:35 tnn2 Exp $
 
 DISTNAME=	pbulk-noj-20080126.3.0
 CATEGORIES=	pkgtools
@@ -19,7 +19,7 @@ NO_CHECKSUM=	YES
 
 USE_FEATURES=	nbcompat
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
-		mail:run tar:run
+		mail:run tar:run groff nroff
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/05 10:14:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/07 13:48:35 tnn2 Exp $
 #
 
 DISTNAME=	paexec-0.6.0
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PKGEGDIR=		${PREFIX}/share/examples/${PKGBASE}

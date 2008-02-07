@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/02/05 10:13:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2008/02/07 13:48:35 tnn2 Exp $
 #
 
 DISTNAME=	runawk-0.10.1
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		groff nroff
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
