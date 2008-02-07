@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/01/24 22:53:08 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/02/07 05:35:42 schnoebe Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -51,7 +51,7 @@ man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
 share/doc/jabberd/README
-share/doc/jabberd/PROTOCOL
+share/doc/jabberd/README.protocol
 share/doc/jabberd/UPGRADE
 share/doc/jabberd/ChangeLog
 share/examples/jabberd/c2s.xml

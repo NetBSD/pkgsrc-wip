@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2008/02/05 11:55:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.47 2008/02/07 05:35:42 schnoebe Exp $
 #
 
-DISTNAME=		jabberd-2.1.22
+DISTNAME=		jabberd-2.1.23
 CATEGORIES=		chat
-PKGREVISION=		1
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -32,8 +31,8 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
-CONFIGURE_ARGS+=	--with-sasl=gsasl	# only GNU sasl is
-#						  really supported
+# only GNU sasl is really supported
+CONFIGURE_ARGS+=	--with-sasl=gsasl
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -67,7 +66,7 @@ FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
 			sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite
-DOCFILES=		PROTOCOL README UPGRADE ChangeLog
+DOCFILES=		README.protocol README UPGRADE ChangeLog
 
 INSTALLATION_DIRS=      bin share/examples/jabberd share/doc/jabberd
 

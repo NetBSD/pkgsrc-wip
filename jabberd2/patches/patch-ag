@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.9 2008/01/17 16:41:12 schnoebe Exp $
+$NetBSD: patch-ag,v 1.10 2008/02/07 05:35:42 schnoebe Exp $
 
---- etc/c2s.xml.in.orig	2008-01-08 04:23:48.000000000 -0600
+--- etc/c2s.xml.in.orig	2008-02-03 08:23:09.000000000 -0600
 +++ etc/c2s.xml.in
 @@ -5,7 +5,7 @@
  
@@ -29,16 +29,16 @@ $NetBSD: patch-ag,v 1.9 2008/01/17 16:41:12 schnoebe Exp $
      -->
    </log>
  
-@@ -116,7 +116,7 @@
-     <id register-enable='true'>localhost</id>
+@@ -118,7 +118,7 @@
+     <id register-enable='true'>localhost.localdomain</id>
      <!-- or
-     <id realm='company'
+     <id realm='company.int'
 -        pemfile='@sysconfdir@/server.pem'
 +        pemfile='@SSLCERTS@/server.pem'
          verify-mode='7'
          require-starttls='true'
          register-enable='true'
-@@ -155,7 +155,7 @@
+@@ -157,7 +157,7 @@
           use STARTTLS over the standard XMPP port 5222 then you
           MUST specify the pemfile in the 'id' tag above. -->
      <!--
@@ -47,7 +47,16 @@ $NetBSD: patch-ag,v 1.9 2008/01/17 16:41:12 schnoebe Exp $
      -->
  
      <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
-@@ -391,7 +391,7 @@
+@@ -284,7 +284,7 @@
+   <stats>
+     <!-- file containing count of packets that went through -->
+     <!--
+-    <packet>@localstatedir@/jabberd/stats/c2s.packets</packet>
++    <packet>@LOGDIR@/c2s.packets</packet>
+     -->
+   </stats>
+ 
+@@ -393,7 +393,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -56,7 +65,7 @@ $NetBSD: patch-ag,v 1.9 2008/01/17 16:41:12 schnoebe Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
-@@ -405,7 +405,7 @@
+@@ -407,7 +407,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -65,7 +74,7 @@ $NetBSD: patch-ag,v 1.9 2008/01/17 16:41:12 schnoebe Exp $
  
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -533,7 +533,7 @@
+@@ -535,7 +535,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
