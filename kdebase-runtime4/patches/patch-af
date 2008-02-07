@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/12/22 21:08:52 mwdavies Exp $
+$NetBSD: patch-af,v 1.2 2008/02/07 12:12:28 mwdavies Exp $
 
---- khelpcenter/searchhandlers/khc_docbookdig.pl.cmake.orig	2007-12-23 08:43:00.000000000 +1300
+$NetBSD: patch-af,v 1.2 2008/02/07 12:12:28 mwdavies Exp $
+
+--- khelpcenter/searchhandlers/khc_docbookdig.pl.cmake.orig	2008-01-31 12:51:37.000000000 +1300
 +++ khelpcenter/searchhandlers/khc_docbookdig.pl.cmake
 @@ -26,8 +26,8 @@ use strict;
  
@@ -8,9 +10,9 @@ $NetBSD: patch-af,v 1.1 2007/12/22 21:08:52 mwdavies Exp $
  
 -my $htdigdata = "/srv/www/htdig/common/";
 -my $htdigbin = "/usr/bin";
-+my $htdigdata = "${CMAKE_INSTALL_PREFIX}/share/htdig/common/";
-+my $htdigbin = "${CMAKE_INSTALL_PREFIX}/bin";
- my $kdeprefix = "${CMAKE_INSTALL_PREFIX}";
++my $htdigdata = "@CMAKE_INSTALL_PREFIX@/share/htdig/common/";
++my $htdigbin = "@CMAKE_INSTALL_PREFIX@/bin";
+ my $kdeprefix = "@CMAKE_INSTALL_PREFIX@";
  chomp $kdeprefix;
  
 @@ -89,7 +89,7 @@ $ENV{ PATH } = '/bin:/usr/bin';
