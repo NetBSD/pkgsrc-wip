@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/03 08:48:56 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/07 17:50:00 asau Exp $
 
 DISTNAME=	zabbix-1.4.4
 PKGREVISION=	#
@@ -14,6 +14,7 @@ COMMENT=	Network monitoring tool
 GNU_CONFIGURE=	YES
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		makeinfo
 
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
