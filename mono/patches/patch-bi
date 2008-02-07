@@ -1,5 +1,5 @@
 --- mono/metadata/filewatcher.c.orig	2008-02-07 08:47:39.000000000 +0200
-+++ mono/metadata/filewatcher.c	2008-02-07 08:49:28.000000000 +0200
++++ mono/metadata/filewatcher.c	2008-02-07 08:52:21.000000000 +0200
 @@ -44,9 +44,6 @@
  gint
  ves_icall_System_IO_FSW_SupportsFSW (void)
@@ -10,7 +10,7 @@
  	MonoDl *fam_module;
  	int lib_used = 4; /* gamin */
  	int inotify_instance;
-@@ -70,12 +67,20 @@
+@@ -70,15 +67,22 @@
  	}
  
  	if (fam_module == NULL)
@@ -30,4 +30,7 @@
 +#endif
  
  	return lib_used;
- #endif
+-#endif
+ }
+ 
+ /* Almost copied from fam.h. Weird, I know */
