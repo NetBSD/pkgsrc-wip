@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2782 2008/02/05 20:46:24 asau Exp $
+# $Id: Makefile,v 1.2783 2008/02/07 08:09:16 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -899,6 +899,7 @@ SUBDIR+=	mapnik
 SUBDIR+=	mapserver
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
+SUBDIR+=	mawk-uxre
 SUBDIR+=	mc-mp
 SUBDIR+=	mcabber
 SUBDIR+=	mcast-tools
