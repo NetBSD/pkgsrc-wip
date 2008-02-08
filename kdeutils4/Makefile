@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/06 12:06:29 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/08 16:46:20 absd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -11,6 +11,7 @@ COMMENT=	Utilities for the KDE integrated X11 desktop
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
