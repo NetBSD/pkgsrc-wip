@@ -1,3 +1,4 @@
+$NetBSD: patch-bh,v 1.2 2008/02/08 10:35:17 koifren Exp $
 --- mcs/class/Managed.Windows.Forms/build-csproj.orig	2008-02-07 08:44:48.000000000 +0200
 +++ mcs/class/Managed.Windows.Forms/build-csproj	2008-02-07 08:44:59.000000000 +0200
 @@ -177,7 +177,7 @@

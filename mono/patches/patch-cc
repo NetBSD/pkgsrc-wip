@@ -1,3 +1,4 @@
+$NetBSD: patch-cc,v 1.2 2008/02/08 10:35:17 koifren Exp $
 --- mono/mini/mini-amd64.h.orig	2008-02-05 23:55:50.000000000 +0200
 +++ mono/mini/mini-amd64.h	2008-02-05 23:51:38.000000000 +0200
 @@ -220,7 +220,7 @@ typedef struct {

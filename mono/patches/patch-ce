@@ -1,3 +1,4 @@
+$NetBSD: patch-ce,v 1.2 2008/02/08 10:35:17 koifren Exp $
 --- mcs/class/System/System.Net.Sockets/Socket.cs.orig	2008-02-08 11:30:11.000000000 +0200
 +++ mcs/class/System/System.Net.Sockets/Socket.cs	2008-02-08 11:33:32.000000000 +0200
 @@ -1452,7 +1452,7 @@

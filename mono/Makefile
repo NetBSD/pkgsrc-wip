@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/05 22:09:14 koifren Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/08 10:35:17 koifren Exp $
 
 DISTNAME=	mono-1.2.6
 CATEGORIES=	lang
@@ -35,6 +35,7 @@ UNLIMIT_RESOURCES=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 UNLIMIT_RESOURCES+=	memorysize
 
+PKGCONFIG_OVERRIDE+=	data/cecil.pc.in
 PKGCONFIG_OVERRIDE+=	data/dotnet.pc.in
 PKGCONFIG_OVERRIDE+=	data/mint.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-cairo.pc.in
@@ -70,15 +71,17 @@ CONF_FILES+=	${EGDIR}/2.0/machine.config \
 
 TEST_TARGET=	check
 
-post-patch: substpcprefix
-# replace relative prefix in pkgconfig files
-substpcprefix:
-.for f in ${PKGCONFIG_OVERRIDE}
-	(cd ${WRKSRC}; \
-	 ${SED} 's|$${pcfiledir}/../..|@prefix@|g' <${f} >${f}.tmp; \
-	 ${MV} ${f}.tmp ${f} \
-	)
-.endfor
+SUBST_CLASSES+=			fix-prefix
+SUBST_STAGE.fix-prefix=		post-patch
+SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
+SUBST_FILES.fix-prefix=		${PKGCONFIG_OVERRIDE}
+SUBST_SED.fix-prefix=		-e 's,$${pcfiledir}/../..,\@prefix\@,g'
+
+SUBST_CLASSES+=			fix-mcs
+SUBST_STAGE.fix-mcs=		post-patch
+SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
+SUBST_FILES.fix-mcs=		mcs/build/config-default.make
+SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
