@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/04/14 01:53:36 ishit Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/09 21:27:38 ishit Exp $
 #
 
-DISTNAME=		polipo-1.0.0
+DISTNAME=		polipo-1.0.3
 CATEGORIES=		www wip
 MASTER_SITES=		http://www.pps.jussieu.fr/~jch/software/files/polipo/
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -12,6 +12,16 @@ USE_TOOLS+=	makeinfo install-info
 
 BUILD_DEFS+=	VARBASE
 
+# POLIPO_USER?=		polipo
+# POLIPO_GROUP?=		polipo
+# PKG_USERS_VARS+=	POLIPO_USER
+# PKG_GROUPS_VARS+=	POLIPO_GROUP
+
+RCD_SCRIPTS=	polipo
+
+MAKE_DIRS=		${VARBASE}/cache/polipo
+# OWN_DIRS_PERMS+=        ${VARBASE}/cache/polipo ${POLIPO_USER} ${POLIPO_GROUP} 0750
+
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
@@ -21,6 +31,9 @@ SUBST_SED.fix-paths+=		-e 's,/var/cache,${VARBASE}/cache,g'
 SUBST_SED.fix-paths+=		-e 's,/etc/polipo,${PKG_SYSCONFDIR}/polipo,g'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/polipo/www etc/polipo
+
+# PKG_GROUPS=	${POLIPO_GROUP}
+# PKG_USERS=	${POLIPO_USER}:${POLIPO_GROUP}::polipo\ user
 
 post-build:
 	${CP} ${WRKSRC}/polipo.man ${WRKSRC}/polipo.1
