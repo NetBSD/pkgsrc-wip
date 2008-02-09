@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/02/09 17:02:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/09 18:53:09 cheusov Exp $
 
-DISTNAME=	pkg_src_summary-0.5.0
+DISTNAME=	pkg_src_summary-0.6.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,22 +9,19 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Builds summary information for source packages
 
+USE_BSD_MAKEFILE=	yes
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
+WRKSRC=		${.CURDIR}/files
 USE_LANGUAGES=	# empty
 NO_CHECKSUM=	YES
 NO_BUILD=	YES
 
-MAN1DIR=		${PREFIX}/${PKGMANDIR}/man1
+MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
+MAKE_ENV+=	MKCATPAGES=no
 
-INSTALLATION_DIRS=	bin ${MAN1DIR}
-
-do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/pkg_src_summary \
-		${DESTDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${FILESDIR}/pkg_src_summary.1 ${DESTDIR}${MAN1DIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
