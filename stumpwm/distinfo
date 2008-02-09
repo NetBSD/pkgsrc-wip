@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/07 10:27:57 netcap Exp $
+$NetBSD: distinfo,v 1.2 2008/02/09 16:08:05 netcap Exp $
 
 SHA1 (cl-ppcre.tar.gz) = 4e2fb7e7bf732cbb07b0a87bab5b5d107b48ff69
 RMD160 (cl-ppcre.tar.gz) = 2b308153af31386bcd566e9cd2e63ac509b76e8a
 Size (cl-ppcre.tar.gz) = 171687 bytes
-SHA1 (stumpwm-0.0.6-git080103.tar.gz) = b3ecf8317b33916c3f5baf7745a0e5df01f9dbd6
-RMD160 (stumpwm-0.0.6-git080103.tar.gz) = 9357d995069d2dd411aac05109d713a19f2490a6
-Size (stumpwm-0.0.6-git080103.tar.gz) = 1020251 bytes
-SHA1 (patch-aa) = 44c82b7a417465b6dd9c12c1cff8aba4ea15bd9e
+SHA1 (stumpwm-0.9.1.tgz) = 31e82f86d6a8a0017f99f8a03741b87fbbf73e7a
+RMD160 (stumpwm-0.9.1.tgz) = 5afc30cbeb1fe791e0a97d512821b32fd88ba31d
+Size (stumpwm-0.9.1.tgz) = 410576 bytes
