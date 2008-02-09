@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/09 18:15:43 ishit Exp $
 
-DISTNAME=	mathopd-1.5p5
+DISTNAME=	mathopd-1.5p6
 CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
@@ -8,10 +8,14 @@ MAINTAINER=	ishit@users.sourceforge.jp
 HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 
-MATHOPD_GROUP=	www
-MATHOPD_USER=	www
-
 .include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS=	VARBASE EXTRA_OBJS MATHOPD_USER MATHOPD_GROUP
+
+MATHOPD_USER?=		mathopd
+MATHOPD_GROUP?=		mathopd
+PKG_USERS_VARS+=        MATHOPD_USER
+PKG_GROUPS_VARS+=       MATHOPD_GROUP
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 EGDIR=		${PREFIX}/share/examples/mathopd
@@ -19,13 +23,26 @@ DOCDIR=		${PREFIX}/share/doc/mathopd
 CONF_FILES=	${EGDIR}/mathopd.conf ${PKG_SYSCONFDIR}/mathopd.conf
 RCD_SCRIPTS=	mathopd
 
-MAKE_DIRS=	${PREFIX}/share/mathopd
+MAKE_DIRS=		${VARBASE}/log/mathopd
 OWN_DIRS_PERMS+=	${VARBASE}/log/mathopd ${MATHOPD_USER} ${MATHOPD_GROUP} 0755
 
 PKG_GROUPS=	${MATHOPD_GROUP}
 PKG_USERS=	${MATHOPD_USER}:${MATHOPD_GROUP}::mathopd\ user
 
 DOCS=	CHANGES cgi.txt config.txt running.txt sample.cfg syntax.txt
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=          Makefile
+SUBST_FILES.fix-paths+=         ../doc/sample.cfg
+SUBST_SED.fix-paths=            -e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-paths+=           -e 's,/var/mathopd/pid,${VARBASE}/run/mathopd.pid,g'
+SUBST_SED.fix-paths+=           -e 's,/var/mathopd/log,${VARBASE}/log/mathopd/access_log,g'
+SUBST_SED.fix-paths+=           -e 's,/var/mathopd/errorlog,${VARBASE}/log/mathopd/error_log,g'
+SUBST_SED.fix-paths+=           -e 's,/var/mathopd/childlog,${VARBASE}/log/mathopd/child_log,g'
+SUBST_SED.fix-paths+=           -e 's,/home/boland/\*,${PREFIX}/share/httpd/htdocs/\*,g'
+SUBST_SED.fix-paths+=           -e 's,/home/boland/cgi-bin,${PREFIX}/libexec/cgi-bin,g'
 
 .if ${OPSYS} == "NetBSD"
 CPPFLAGS+=	-DHAVE_VFORK
@@ -34,27 +51,24 @@ CPPFLAGS+=	-DHAVE_VFORK
 .if ${OPSYS} == "Linux"
 CPPFLAGS+=	-DHAVE_CRYPT_H
 CPPFLAGS+=	-DLINUX_SENDFILE
+CPPFLAGS+=	-D_FILE_OFFSET_BITS=64
+EXTRA_OBJS+=	sendfile.o
 .endif
 
 .if ${OPSYS} == "FreeBSD"
 CPPFLAGS+=	-DFREEBSD_SENDFILE
+EXTRA_OBJS+=	sendfile.o
 .endif
 
 .if ${OPSYS} == "SunOS"
-CPPFLAGS+=	-DNEED_INET_ATON
+CPPFLAGS+=	-D_FILE_OFFSET_BITS=64
 CPPFLAGS+=	-DHAVE_CRYPT_H
 .endif
 
 pre-configure:
 .if ${OPSYS} == "SunOS"
-	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
-	@${SED} -e 's!LDADD=	-lcrypt!LDADD=	-lsocket -lnsl!' \
-	< ${WRKSRC}/Makefile.patched \
-	> ${WRKSRC}/Makefile
-.endif
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD"
-	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
-	@${SED} -e 's!util.c stub.c!util.c sendfile.c stub.c!' \
+	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.patched
+	${SED} -e 's!LIBS = -lcrypt!LIBS = -lsocket -lnsl -lresolv!' \
 	< ${WRKSRC}/Makefile.patched \
 	> ${WRKSRC}/Makefile
 .endif
