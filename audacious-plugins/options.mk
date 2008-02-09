@@ -1,3 +1,5 @@
+# $NetBSD: options.mk,v 1.2 2008/02/09 21:27:52 shattered Exp $
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi pulse sid
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:16:56 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/02/09 21:27:52 shattered Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AOLSERVER4_BUILDLINK3_MK:=	${AOLSERVER4_BUILDLINK3_MK}+

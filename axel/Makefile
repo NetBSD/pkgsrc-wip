@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/02/03 14:56:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/09 21:27:52 shattered Exp $
 #
 
 DISTNAME=		axel-1.0b
-CATEGORIES=		wip
+CATEGORIES=		net
 MASTER_SITES=		http://wilmer.gaast.net/downloads/
 
 MAINTAINER=		alchow@users.sourceforge.net
