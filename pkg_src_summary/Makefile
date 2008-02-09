@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/01/29 19:07:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/09 17:02:56 cheusov Exp $
 
-DISTNAME=	pkg_src_summary-0.4.1
+DISTNAME=	pkg_src_summary-0.5.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,8 +23,8 @@ MAN1DIR=		${PREFIX}/${PKGMANDIR}/man1
 INSTALLATION_DIRS=	bin ${MAN1DIR}
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/pkg_src_summary.sh \
-		${DESTDIR}${PREFIX}/bin/pkg_src_summary
+	${INSTALL_SCRIPT} ${FILESDIR}/pkg_src_summary \
+		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${FILESDIR}/pkg_src_summary.1 ${DESTDIR}${MAN1DIR}
 
 .include "../../mk/bsd.pkg.mk"
