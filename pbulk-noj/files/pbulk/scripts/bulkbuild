@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: bulkbuild,v 1.2 2008/01/25 21:13:41 cheusov Exp $
+# $NetBSD: bulkbuild,v 1.3 2008/02/09 16:04:28 cheusov Exp $
 
 . @PBULK_CONFIG@
 
@@ -10,5 +10,6 @@ ${script_phase_scan}
 ${script_phase_build}
 ${script_phase_summary}
 ${script_phase_cksum}
+${script_phase_upload_logs}
+${script_phase_upload_pkgs}
 ${script_phase_report}
-${script_phase_upload}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/07 13:48:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/09 16:04:28 cheusov Exp $
 
 DISTNAME=	pbulk-noj-20080126.3.0
 CATEGORIES=	pkgtools
@@ -9,7 +9,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Modular bulk build framework
 
-CONFLICTS+=	pbulk-[0-9]*:../../pkgtools/pbulk
+CONFLICTS+=	pbulk-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -44,7 +44,7 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/create-report.awk scripts/summary scripts/cksum
 SUBST_VARS.tools=	AWK BZIP2 DIGEST GZIP_CMD IDENT MAKE MAIL_CMD NEATO \
 			PBULK_CONFIG PKG_INFO PREFIX SH TAR TARGET_MAKE \
-			PKG_SUFX			
+			PKG_SUFX
 
 CONF_FILES+=	share/examples/pbulk/pbulk.conf ${PKG_SYSCONFDIR}/pbulk.conf
 
@@ -58,7 +58,7 @@ USE_BSD_MAKEFILE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
-	${CP} -r ${FILESDIR}/pbulk ${WRKDIR}
+	cp -r ${FILESDIR}/pbulk ${WRKDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pbulk.conf ${DESTDIR}${PREFIX}/share/examples/pbulk/pbulk.conf
