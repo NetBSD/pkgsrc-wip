@@ -29,8 +29,8 @@ if test -z "$PKGSRCDIR"; then
     PKGSRCDIR=/usr/pkgsrc
 fi
 
-if test -z "$MAKE"; then
-    MAKE=make
+if test -z "$BMAKE"; then
+    BMAKE=make
 fi
 
 ############################################################
@@ -80,7 +80,7 @@ summary_data2summary (){
 
 cd_and_print_summary_data (){
     # $1 - pkgpath
-    ( cd $1 && ${MAKE} print-summary-data; ) > "$tmpfn";
+    ( cd $1 && ${BMAKE} print-summary-data; ) > "$tmpfn";
 }
 
 generate_summary (){
