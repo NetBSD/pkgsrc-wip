@@ -40,7 +40,7 @@ function check (){
 		return 1
 	}
 
-	# trye replacements...
+	# try replacements...
 	while (match(pkgname, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
 		left  = substr(pkgname, 1, RSTART-1)
 		right = substr(pkgname, RSTART+RLENGTH)
@@ -50,6 +50,9 @@ function check (){
 			# yes!
 			varname = substr(pkgname, RSTART + 2, RLENGTH - 3)
 			if (! (varname in var)){
+				return 0
+			}
+			if (varname in badvar){
 				return 0
 			}
 			pkgname = left var[varname] right
@@ -63,6 +66,9 @@ function check (){
 		sub(/^[^:]+:S\//, "", repl)
 
 		if (! (varname in var)){
+			return 0
+		}
+		if (varname in badvar){
 			return 0
 		}
 #		print "left=" left
@@ -126,18 +132,19 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 			continue
 		}
 
-		if (cond_cnt > 0){
-			# conditional assignments are not remembered
-			continue
-		}
-
 		if (match ($1, /^[[:alnum:]_.]+[?]?=/)) {
 			varname = $1
 			sub(/[?]?=.*$/, "", varname)
 
 			sub(/^[^=]+=/, "", $0)
-			var [varname] = trim($0)
-#			print varname " ---> " var [varname]
+			if (varname in var){
+				# double assignment? -> badvar
+				badvar [varname] = 1
+			}else if (cond_cnt == 0){
+				# conditional assignments are not remembered
+				var [varname] = trim($0)
+#				print varname " ---> " var [varname]
+			}
 			continue
 		}
 
@@ -158,6 +165,7 @@ BEGIN {
 		process_include(".", last_fn)
 		print_name_and_path()
 		delete var
+		delete badvar
 	}
 
 	exit 0
