@@ -4,11 +4,6 @@ BEGIN {
 	good_pkgname_re = "^[^${}()]+$" #"^[[:alnum:]_-]+-[[:digit:]]+([.][[:digit:]]+)*$"
 }
 
-function init_vars (){
-	delete var
-	cond_cnt = 0
-}
-
 # output format:
 #    for success:
 #       + <SPACE> pkgname+pkgrevision <SPACE> Makefile
@@ -114,7 +109,8 @@ function trim (s){
 
 function process_include (fn, inc,              ret, cond_cnt, varname){
 	sub(/\/[^\/]+$/, "", fn)
-	fn = fn "/" inc
+	if (inc !~ /^\//)
+		fn = fn "/" inc
 
 #	print "incl:" fn
 
@@ -152,48 +148,17 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 			process_include(fn, substr($2, 2, length($2)-2))
 		}
 	}
+
+	close(fn)
 }
 
-last_fn != FILENAME {
-	if (last_fn != ""){
+BEGIN {
+	for (i=1; i < ARGC; ++i){
+		last_fn = ARGV [i]
+		process_include(".", last_fn)
 		print_name_and_path()
-		init_vars()
+		delete var
 	}
 
-	last_fn = FILENAME
-}
-
-$1 == ".if" {
-	++cond_cnt
-	next
-}
-
-$1 == ".endif" {
-	--cond_cnt
-	next
-}
-
-cond_cnt > 0 {
-	next
-}
-
-$1 == ".include" &&
-$2 !~ /buildlink3.mk"$/ && $2 !~ /^"[.][.]\/[.][.]\/mk/ {
-	process_include(FILENAME, substr($2, 2, length($2)-2))
-}
-
-match ($1, /^[[:alnum:]_.]+[?]?=/) {
-	varname = $1
-	sub(/[?]?=.*$/, "", varname)
-
-	sub(/^[^=]+=/, "", $0)
-	var [varname] = trim($0)
-#	print varname " ---> " var [varname]
-	next
-}
-
-END {
-	if (last_fn != ""){
-		print_name_and_path()
-	}
+	exit 0
 }
