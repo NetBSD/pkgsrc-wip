@@ -159,14 +159,11 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 	close(fn)
 }
 
-BEGIN {
-	for (i=1; i < ARGC; ++i){
-		last_fn = ARGV [i]
-		process_include(".", last_fn)
-		print_name_and_path()
-		delete var
-		delete badvar
-	}
+{
+	last_fn = $1
+	process_include(".", last_fn)
+	print_name_and_path()
 
-	exit 0
+	delete var
+	delete badvar
 }
