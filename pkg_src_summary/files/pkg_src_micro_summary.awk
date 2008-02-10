@@ -146,7 +146,7 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 		}
 
 		if ($1 == ".include" &&
-			$2 !~ /buildlink3.mk"$/) # && $2 !~ /^"[.][.]\/[.][.]\/mk/)
+			$2 !~ /buildlink3.mk"$/ && $2 !~ /^"[.][.]\/[.][.]\/mk/)
 		{
 			# recursive .include processing
 			process_include(fn, substr($2, 2, length($2)-2))
@@ -178,7 +178,7 @@ cond_cnt > 0 {
 }
 
 $1 == ".include" &&
-$2 !~ /buildlink3.mk"$/ { #&& $2 !~ /^"[.][.]\/[.][.]\/mk/ {
+$2 !~ /buildlink3.mk"$/ && $2 !~ /^"[.][.]\/[.][.]\/mk/ {
 	process_include(FILENAME, substr($2, 2, length($2)-2))
 }
 
