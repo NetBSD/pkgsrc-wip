@@ -6,6 +6,7 @@ BEGIN {
 
 function init_vars (){
 	delete var
+	cond_cnt = 0
 }
 
 function print_name_and_path (){
@@ -98,6 +99,8 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 	sub(/\/[^\/]+$/, "", fn)
 	fn = fn "/" inc
 
+#	print "incl:" fn
+
 	cond_cnt = 0
 	while ((ret = getline < fn) > 0){
 		if ($1 == ".if") {
@@ -129,7 +132,7 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 		}
 
 		if ($1 == ".include" &&
-			$2 !~ /^"[.][.]\/[.][.]\/mk/ && $2 !~ /buildlink3.mk"$/)
+			$2 !~ /buildlink3.mk"$/) # && $2 !~ /^"[.][.]\/[.][.]\/mk/)
 		{
 			process_include(fn, substr($2, 2, length($2)-2))
 		}
@@ -155,12 +158,12 @@ $1 == ".endif" {
 	next
 }
 
-#cond_cnt > 0 {
-#	next
-#}
+cond_cnt > 0 {
+	next
+}
 
 $1 == ".include" &&
-$2 !~ /^"[.][.]\/[.][.]\/mk/ && $2 !~ /buildlink3.mk"$/ {
+$2 !~ /buildlink3.mk"$/ { #&& $2 !~ /^"[.][.]\/[.][.]\/mk/ {
 	process_include(FILENAME, substr($2, 2, length($2)-2))
 }
 
