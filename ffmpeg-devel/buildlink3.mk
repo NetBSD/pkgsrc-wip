@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/01/07 00:29:18 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2008/02/10 11:04:32 shattered Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FFMPEG_BUILDLINK3_MK:=	${FFMPEG_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=20071004
 BUILDLINK_PKGSRCDIR.ffmpeg?=	../../wip/ffmpeg-devel
 .endif	# FFMPEG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

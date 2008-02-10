@@ -1,5 +1,5 @@
---- themer/main.c.orig	Sun Oct 29 18:57:14 2006
-+++ themer/main.c	Sun Oct 29 23:09:37 2006
+$NetBSD: patch-aa,v 1.2 2008/02/10 11:04:32 shattered Exp $
+
 --- themer/main.c.orig	2007-02-23 07:18:10.000000000 -0500
 +++ themer/main.c
 @@ -7,6 +7,105 @@

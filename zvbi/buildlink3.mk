@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:41 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/02/10 11:04:33 shattered Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZVBI_BUILDLINK3_MK:=	${ZVBI_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.zvbi?=	../../wip/zvbi
 
 .include "../../textproc/libunicode/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

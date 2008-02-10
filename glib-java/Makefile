@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/31 21:37:32 poppnk Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/10 11:04:32 shattered Exp $
 #
 
 DISTNAME=		glib-java-0.2.5
@@ -10,6 +10,7 @@ HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		Glib bindings for Java
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--without-gcj-compile JAVAC="javac"
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/01/05 17:02:02 cetrox Exp $
+$NetBSD: patch-aa,v 1.6 2008/02/10 11:04:31 shattered Exp $
 --- configure.orig	2007-12-24 18:35:51.000000000 -0300
 +++ configure	2008-01-02 22:52:06.000000000 -0300
 @@ -1751,7 +1751,7 @@
@@ -129,12 +129,3 @@ $NetBSD: patch-aa,v 1.5 2008/01/05 17:02:02 cetrox Exp $
  	# If possible, build webcam support.  Otherwise, default to
  	# Linux for other goodies.
  	{ echo "$as_me:$LINENO: checking for grep that handles long lines and -e" >&5
-@@ -6987,6 +6987,8 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;

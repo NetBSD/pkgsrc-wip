@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/16 14:13:42 krub1 Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/02/10 11:04:32 shattered Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 USBIDS_BUILDLINK3_MK:=	${USBIDS_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}usbids
 
 .if ${USBIDS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.usbids+=	usbids>=10032007
-BUILDLINK_PKGSRCDIR.usbids?=	../../misc/usbids
+BUILDLINK_PKGSRCDIR.usbids?=	../../wip/usbids
 .endif	# USBIDS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

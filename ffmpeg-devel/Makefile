@@ -1,22 +1,21 @@
-# $NetBSD:
+# $NetBSD: Makefile,v 1.11 2008/02/10 11:04:32 shattered Exp $
 
-DISTVERSION=	2007-10-04
-PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
-
-CATEGORIES=	multimedia
-
-MASTER_SITES=	${MASTER_SITE_FREEBSD}
 DISTNAME=	ffmpeg-${DISTVERSION}
+PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
 
+DISTVERSION=	2007-10-04
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
-USE_TOOLS+=	gmake texi2html pod2man libtool
+USE_LIBTOOL=	YES
+USE_TOOLS+=	gmake texi2html pod2man
 
 CONFLICTS+=	ffmpeg-devel-[0-9]*
 
@@ -28,7 +27,7 @@ SUBST_FILES.conf=	ffserver.c
 SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
 SUBST_MESSAGE.conf=	Fixing configuration path.
 
-PLIST_SRC+=             ${PKGDIR}/PLIST
+PLIST_SRC+=	${PKGDIR}/PLIST
 
 CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/28 17:25:21 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/10 11:04:33 shattered Exp $
 #
 
 DISTNAME=		zvbi-0.2.16
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		putwchar
 SUBST_STAGE.putwchar=	post-extract
 SUBST_MESSAGE.putwchar=	Renaming conflicting function putwchar.
 SUBST_FILES.putwchar=	test/glyph.c test/unicode.c
-SUBST_SED.putwchar=	s/putwchar/my_putwchar/
+SUBST_SED.putwchar=	-e s/putwchar/my_putwchar/
 
 .include "../../textproc/libunicode/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
