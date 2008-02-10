@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/02/09 21:27:38 ishit Exp $
+$NetBSD: distinfo,v 1.3 2008/02/10 16:48:03 ishit Exp $
 
-SHA1 (polipo-1.0.3.tar.gz) = 9cc780b9d8b0ad09b6ebbd71a87194f3373f1fae
-RMD160 (polipo-1.0.3.tar.gz) = 297b67d302ce12e85f7f3c4b29a2dd79379edbdd
-Size (polipo-1.0.3.tar.gz) = 180349 bytes
+SHA1 (polipo-1.0.4.tar.gz) = ba562906d125a6bf72dc36c2d078147d40cf8722
+RMD160 (polipo-1.0.4.tar.gz) = 31739c5a5958c136ad452e877636b9f26343684f
+Size (polipo-1.0.4.tar.gz) = 180487 bytes
 SHA1 (patch-aa) = eb4986c0698bbe6e944b54d49a5cf31ceb530c06
