@@ -22,6 +22,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 set -e
+. pipestatus
 
 ############################################################
 # user settable variables
@@ -36,83 +37,60 @@ fi
 ############################################################
 cd $PKGSRCDIR
 
-tmpfn=/tmp/pkgdirs2info.$$
-trap 'rm -f $tmpfn' 0 1 2 15
+tmpfn=/tmp/pkg_src_micro_summary.$$
+trap "rm -rf $tmpfn" 0 1 2 15
+
+mkdir -m 700 $tmpfn
 
 ############################################################
-summary_data2summary (){
-    awk '
-    function normalize (w){
-	return toupper(w)
-    }
 
-    BEGIN {
-	descr_msg = normalize("description")
-    }
+# running helper
+helper_out=$tmpfn/helper_out.txt
 
-    $1 == "prefix" {
-	next
-    }
-
-    $1 == "index" {
-	next
-    }
-
-    $1 == "descr" {
-	fn = $3
-	while (0 < ret = (getline < fn)){
-	    print descr_msg "=" $0
-	}
-	if (ret < 0){
-	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
-	    exit 1
-	}
-	next
-    }
-
-    NF > 0 {
-	hdr = (normalize($1) "=")
-	$1 = $2 = ""
-
-	print hdr substr($0, 3)
-    }'
-}
-
-cd_and_print_summary_data (){
-    # $1 - pkgpath
-    ( cd $1 && ${BMAKE} print-summary-data; ) > "$tmpfn";
-}
-
-generate_summary (){
-    # general information
-    if cd_and_print_summary_data $1 > "$tmpfn"; then
-	pkgname=`awk '$1 == "index" {print $3}' "$tmpfn"`
-	pkgpath=`awk '$1 == "index" {print $2}' "$tmpfn"`
-	echo "PKGNAME=$pkgname"
-	echo "PKGPATH=$pkgpath"
-	cat "$tmpfn" | summary_data2summary
-
-	# not expanding PLIST yet
-	plist_fn=$1/PLIST
-	if test -f $plist_fn; then
-	    awk '/^[^@]/ {print "PLIST=" $0}' $plist_fn
-	fi
-
-	echo '' # empty line - separator 
+list_pkgs (){
+    if test $# -ne 0; then
+	# processing arguments
+	for pkgpath in "$@"; do
+	    echo $pkgpath
+	done
     else
-	printf "Bad package %s, skipped" "$1" 1>&2
+	cat
     fi
 }
 
-############################################################
-if test $# -eq 0; then
-    # processing stdin
-    while read pkgpath; do
-	generate_summary "$pkgpath"
-    done
-else
-    # processing arguments
-    for pkgpath in "$@"; do
-	generate_summary "$pkgpath"
-    done
-fi
+append_Makefile (){
+    awk '{print $1 "/Makefile"}'
+}
+
+runpipe \
+    list_pkgs "$@" '|' \
+    append_Makefile '|' \
+    pkg_src_micro_summary.awk > "$helper_out"
+
+# `+' to micro_summary (fast!)
+awk '
+/^[+]/ {
+   pkgpath = $3
+   sub(/\/[^\/]*$/, "", pkgpath)
+   printf "PKGNAME=%s\nPKGPATH=%s\n\n", $2, pkgpath
+}' "$helper_out"
+
+# `-' to micro_summary (slo-o-o-ow!)
+make_out=$tmpfn/make_out.txt
+awk '
+/^[-]/ {
+   pkgpath = $NF
+   sub(/\/[^\/]*$/, "", pkgpath)
+   print pkgpath
+}' "$helper_out" |
+while read pkgpath; do
+    if ( cd $pkgpath && $BMAKE show-var VARNAME=PKGNAME &&
+	echo PKGPATH=$pkgpath ) > "$make_out"
+    then
+	printf "PKGNAME="
+	cat "$make_out"
+	echo ''
+    else
+	printf "Bad package %s, skipped" "$pkgpath\n" 1>&2
+    fi
+done
