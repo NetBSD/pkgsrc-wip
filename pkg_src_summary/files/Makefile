@@ -8,10 +8,10 @@ INST_DIR?=	${INSTALL} -d
 
 ############################################################
 
+.include "Makefile.version"
+
 SCRIPTS=	pkg_src_summary
 MAN=		pkg_src_summary.1
-
-VERSION=	0.6.0
 
 BIRTHDAY=	2008-01-28
 
