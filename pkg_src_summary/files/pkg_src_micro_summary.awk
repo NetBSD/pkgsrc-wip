@@ -1,7 +1,7 @@
 #!/usr/bin/awk -f
 
 BEGIN {
-	pkgname_re = "^[^${}()]+$" #"^[[:alnum:]_-]+-[[:digit:]]+([.][[:digit:]]+)*$"
+	good_pkgname_re = "^[^${}()]+$" #"^[[:alnum:]_-]+-[[:digit:]]+([.][[:digit:]]+)*$"
 }
 
 function init_vars (){
@@ -9,51 +9,59 @@ function init_vars (){
 	cond_cnt = 0
 }
 
+# output format:
+#    for success:
+#       + <SPACE> pkgname+pkgrevision <SPACE> Makefile
+#    for failure:
+#       - <SPACE> pkgname <SPACE> distname <SPACE> Makefile
 function print_name_and_path (){
 	if (check()){
+		if (pkgrevision != ""){
+			pkgname = pkgname "nb" pkgrevision
+		}
 		print "+", pkgname, last_fn
 	}else{
 		print "-", pkgname, distname, last_fn
 	}
 }
 
+# try to get a real PKGNAME...
 function check (){
 	# fast checks
-#	if (doubtful_inc){
-		# paranoia!
-#		print "-", pkgname, distname, last_fn
-#		return
-#	}
 	pkgname     = var ["PKGNAME"]
 	distname    = var ["DISTNAME"]
 	pkgrevision = var ["PKGREVISION"]
 
+	# distname -> pkgname?
 	if (distname != "" && pkgname == ""){
 		pkgname = distname
 	}
+	# both - empty?
 	if (pkgname == ""){
 		return 0
 	}
-	if (pkgname ~ pkgname_re){
+	# is pkgname already good?
+	if (pkgname ~ good_pkgname_re){
 		return 1
 	}
 
-#	print "pkgname=" pkgname
-#	print "distname=" distname
-	fflush()
+	# trye replacements...
 	while (match(pkgname, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
 		left  = substr(pkgname, 1, RSTART-1)
 		right = substr(pkgname, RSTART+RLENGTH)
 
+		# ${VARNAME} found?
 		if (pkgname !~ /:S\//){
+			# yes!
 			varname = substr(pkgname, RSTART + 2, RLENGTH - 3)
 			if (! (varname in var)){
 				return 0
 			}
-			pkgname = left var [varname] right
+			pkgname = left var[varname] right
 			continue
 		}
 
+		# ${VARNAME:S/old_substr/new_substr/} found!
 		repl  = substr(pkgname, RSTART + 2, RLENGTH - 4)
 		varname = repl
 		sub(/:.*$/, "", varname)
@@ -71,16 +79,25 @@ function check (){
 		match(repl, "/")
 		old_string = substr(repl, 1, RSTART-1)
 		new_string = substr(repl, RSTART+1)
-		if (old_string ~ /[$^\[\]\\]/)
-			return 0
 
+		# complex old_string?
+		if (old_string ~ /[$^\[\]\\]/){
+			# yes!
+			return 0
+		}
+
+		# string to regexp
 		gsub(/[?{}|()*+.]/, "[&]", old_string)
+
+		# old_string to new_string
 		sub(old_string, new_string, var [varname])
-		pkgname = left var [varname] right
+
+		#
+		pkgname = left var[varname] right
 	}
 
 	# final check
-	if (pkgname ~ pkgname_re){
+	if (pkgname ~ good_pkgname_re){
 		return 1
 	}
 
@@ -114,26 +131,24 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 		}
 
 		if (cond_cnt > 0){
+			# conditional assignments are not remembered
 			continue
 		}
 
-#		print $0
-
-		if (match ($0, /^[[:alnum:]_.]+[?]?=/)) {
-#			print "$0=" $0
-			varname = $0
+		if (match ($1, /^[[:alnum:]_.]+[?]?=/)) {
+			varname = $1
 			sub(/[?]?=.*$/, "", varname)
-#			print "varname=" varname
 
 			sub(/^[^=]+=/, "", $0)
 			var [varname] = trim($0)
-#			print varname " ---> " trim($0)
+#			print varname " ---> " var [varname]
 			continue
 		}
 
 		if ($1 == ".include" &&
 			$2 !~ /buildlink3.mk"$/) # && $2 !~ /^"[.][.]\/[.][.]\/mk/)
 		{
+			# recursive .include processing
 			process_include(fn, substr($2, 2, length($2)-2))
 		}
 	}
@@ -167,8 +182,13 @@ $2 !~ /buildlink3.mk"$/ { #&& $2 !~ /^"[.][.]\/[.][.]\/mk/ {
 	process_include(FILENAME, substr($2, 2, length($2)-2))
 }
 
-match ($0, /^[[:alnum:]_.]+=/) {
-	var [substr($1, 1, RLENGTH - 1)] = trim(substr($0, RLENGTH + 1))
+match ($1, /^[[:alnum:]_.]+[?]?=/) {
+	varname = $1
+	sub(/[?]?=.*$/, "", varname)
+
+	sub(/^[^=]+=/, "", $0)
+	var [varname] = trim($0)
+#	print varname " ---> " var [varname]
 	next
 }
 
