@@ -40,7 +40,7 @@ function check (){
 #	print "pkgname=" pkgname
 #	print "distname=" distname
 	fflush()
-	while (match(pkgname, /[$][{][[:upper:]_]+(:S\/.*\/.*\/)?[}]/)){
+	while (match(pkgname, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
 		left  = substr(pkgname, 1, RSTART-1)
 		right = substr(pkgname, RSTART+RLENGTH)
 
@@ -116,7 +116,7 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 
 #		print $0
 
-		if (match ($0, /^[[:upper:]_]+[?]?=/)) {
+		if (match ($0, /^[[:alnum:]_.]+[?]?=/)) {
 #			print "$0=" $0
 			varname = $0
 			sub(/[?]?=.*$/, "", varname)
@@ -164,7 +164,7 @@ $2 !~ /^"[.][.]\/[.][.]\/mk/ && $2 !~ /buildlink3.mk"$/ {
 	process_include(FILENAME, substr($2, 2, length($2)-2))
 }
 
-match ($0, /^[[:upper:]_]+=/) {
+match ($0, /^[[:alnum:]_.]+=/) {
 	var [substr($1, 1, RLENGTH - 1)] = trim(substr($0, RLENGTH + 1))
 	next
 }
