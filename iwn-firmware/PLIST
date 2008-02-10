@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/10 00:29:37 h2m Exp $
+libdata/if_iwn/LICENSE.iwlwifi-4965-ucode
+libdata/if_iwn/README.iwlwifi-4965-ucode
+libdata/if_iwn/iwlwifi-4965.ucode
+@dirrm libdata/if_iwn
