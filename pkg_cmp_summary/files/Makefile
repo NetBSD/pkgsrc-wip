@@ -8,10 +8,10 @@ INST_DIR?=	${INSTALL} -d
 
 ############################################################
 
+.include "Makefile.version"
+
 SCRIPTS=	pkg_cmp_summary
 MAN=		pkg_cmp_summary.1
-
-VERSION=	0.2.0
 
 BIRTHDAY=	2008-02-11
 
