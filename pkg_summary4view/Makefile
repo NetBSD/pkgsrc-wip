@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.2 2008/01/29 19:56:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/10 20:46:10 cheusov Exp $
 
-DISTNAME=	pkg_summary4view-0.9.0
+.include "../../wip/pkg_summary4view/files/Makefile.version"
+
+DISTNAME=	pkg_summary4view-${VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
-COMMENT=	Builds summary information for source packages
+COMMENT=	Convert summary information to human readable format
+
+USE_BSD_MAKEFILE=	yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
+WRKSRC=		${.CURDIR}/files
 USE_LANGUAGES=	# empty
-NO_CHECKSUM=	YES
-NO_BUILD=	YES
+NO_CHECKSUM=	yes
+NO_BUILD=	yes
 
-MAN1DIR=		${PREFIX}/${PKGMANDIR}/man1
+MAN1DIR=	${PKGMANDIR}/man1
+MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
+MAKE_ENV+=	MKCATPAGES=no
 
 INSTALLATION_DIRS=	bin ${MAN1DIR}
-
-do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/pkg_summary4view.sh \
-		${DESTDIR}${PREFIX}/bin/pkg_summary4view
-	${INSTALL_MAN} ${FILESDIR}/pkg_summary4view.1 ${DESTDIR}${MAN1DIR}
 
 .include "../../mk/bsd.pkg.mk"
