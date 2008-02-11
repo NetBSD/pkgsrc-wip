@@ -31,74 +31,73 @@ BEGIN {
 #    for failure:
 #       - <SPACE> pkgname <SPACE> distname <SPACE> Makefile
 function print_name_and_path (){
-	if (check()){
-		if (pkgrevision != ""){
-			pkgname = pkgname "nb" pkgrevision
-		}
-		print "+", pkgname, last_fn
-	}else{
-		print "-", pkgname, distname, last_fn
+	pkgname = ""
+
+	if (! ("PKGNAME" in badvar)){
+		if ("PKGNAME" in var)
+			pkgname = check("PKGNAME")
+		else if ("DISTNAME" in var)
+			pkgname = check("DISTNAME")
 	}
+
+	if (pkgname == ""){
+		print "-", var ["PKGNAME"], var ["DISTNAME"], last_fn
+		return
+	}
+
+	pkgrevision = ""
+	if ("PKGREVISION" in var){
+		pkgrevision = "nb" var ["PKGREVISION"]
+	}
+	print "+", pkgname pkgrevision , last_fn
 }
 
 # try to get a real PKGNAME...
-function check (){
+function check (variable,
+
+				value,left,right,subvarname,subvalue,repl,old_string,new_string)
+{
 	# fast checks
-	pkgname     = var ["PKGNAME"]
-	distname    = var ["DISTNAME"]
-	pkgrevision = var ["PKGREVISION"]
 
 	# PKGNAME was assigned more than once, i.e. badname?
-	if ("PKGNAME" in badvar)
-		return 0
+	if (variable in badvar)
+		return ""
 
-	# distname -> pkgname?
-	if (distname != "" && pkgname == ""){
-		if ("DISTNAME" in badvar)
-			return 0
-
-		pkgname = distname
-	}
-	# both - empty?
-	if (pkgname == ""){
-		return 0
-	}
-	# is pkgname already good?
-	if (pkgname ~ good_pkgname_re){
-		return 1
-	}
+	value = var [variable]
+	# not set?
+	if (value == "")
+		return ""
 
 	# try replacements...
-	while (match(pkgname, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
-		left  = substr(pkgname, 1, RSTART-1)
-		right = substr(pkgname, RSTART+RLENGTH)
+	while (match(value, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
+		left  = substr(value, 1, RSTART-1)
+		right = substr(value, RSTART+RLENGTH)
 
 		# ${VARNAME} found?
-		if (pkgname !~ /:S\//){
+		if (value !~ /:S\//){
 			# yes!
-			varname = substr(pkgname, RSTART + 2, RLENGTH - 3)
-			if (! (varname in var)){
-				return 0
+			subvarname = substr(value, RSTART + 2, RLENGTH - 3)
+			subvalue = check(subvarname)
+
+			if (subvalue == ""){
+				return ""
 			}
-			if (varname in badvar){
-				return 0
-			}
-			pkgname = left var[varname] right
+
+			value = left subvalue right
 			continue
 		}
 
 		# ${VARNAME:S/old_substr/new_substr/} found!
-		repl  = substr(pkgname, RSTART + 2, RLENGTH - 4)
-		varname = repl
-		sub(/:.*$/, "", varname)
+		repl  = substr(value, RSTART + 2, RLENGTH - 4)
+		subvarname = repl
+		sub(/:.*$/, "", subvarname)
 		sub(/^[^:]+:S\//, "", repl)
 
-		if (! (varname in var)){
-			return 0
+		subvalue = check(subvarname)
+		if (subvalue == ""){
+			return ""
 		}
-		if (varname in badvar){
-			return 0
-		}
+
 #		print "left=" left
 #		print "right=" right
 #		print "varname=" varname
@@ -111,27 +110,27 @@ function check (){
 
 		# complex old_string?
 		if (old_string ~ /[$^\[\]\\]/){
-			# yes!
-			return 0
+			# yes :-(
+			return ""
 		}
 
 		# string to regexp
 		gsub(/[?{}|()*+.]/, "[&]", old_string)
 
 		# old_string to new_string
-		sub(old_string, new_string, var [varname])
+		sub(old_string, new_string, subvalue)
 #		print "result of substritution: var [" varname "]=" var [varname]
 		#
-		pkgname = left var[varname] right
+		value = left subvalue right
 	}
 
 	# final check
-	if (pkgname ~ good_pkgname_re){
-		return 1
+	if (value ~ good_pkgname_re){
+		return value
 	}
 
 	# :-(
-	return 0
+	return ""
 }
 
 function trim (s){
