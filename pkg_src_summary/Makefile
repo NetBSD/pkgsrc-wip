@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/02/10 21:51:12 cheusov Exp $
-
-.include "../../wip/pkg_src_summary/files/Makefile.version"
+# $NetBSD: Makefile,v 1.7 2008/02/11 23:48:54 cheusov Exp $
 
 DISTNAME=	pkg_src_summary-${VERSION}
-
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,6 +8,10 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Builds summary information for source packages
+
+DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
+
+.include "../../wip/pkg_src_summary/files/Makefile.version"
 
 USE_BSD_MAKEFILE=	yes
 USE_LANGUAGES=	# empty

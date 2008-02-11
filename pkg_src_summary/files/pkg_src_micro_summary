@@ -65,7 +65,7 @@ append_Makefile (){
 runpipe \
     list_pkgs "$@" '|' \
     append_Makefile '|' \
-    pkg_src_micro_summary.awk > "$helper_out"
+    pkg_src_fetch_var > "$helper_out"
 
 # `+' to micro_summary (fast!)
 awk '

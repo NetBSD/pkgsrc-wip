@@ -1,4 +1,4 @@
-#!/usr/bin/env runawk
+#!/usr/bin/awk -f
 
 # Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
 #
