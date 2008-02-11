@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2008/01/02 23:03:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.39 2008/02/11 11:58:24 obache Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -11,12 +11,6 @@ bin/rcs-checkin
 info/ada-mode
 info/autotype
 info/calc
-info/calc-1
-info/calc-2
-info/calc-3
-info/calc-4
-info/calc-5
-info/calc-6
 info/ccmode
 info/cl
 info/dbus
@@ -25,47 +19,20 @@ info/ebrowse
 info/ediff
 info/efaq
 info/eintr
-info/eintr-1
-info/eintr-2
-info/eintr-3
 info/elisp
-info/elisp-1
-info/elisp-10
-info/elisp-11
-info/elisp-2
-info/elisp-3
-info/elisp-4
-info/elisp-5
-info/elisp-6
-info/elisp-7
-info/elisp-8
-info/elisp-9
 info/emacs
-info/emacs-1
-info/emacs-2
-info/emacs-3
-info/emacs-4
-info/emacs-5
-info/emacs-6
-info/emacs-7
 info/emacs-mime
+info/epa
 info/erc
 info/eshell
 info/eudc
 info/flymake
 info/forms
 info/gnus
-info/gnus-1
-info/gnus-2
-info/gnus-3
-info/gnus-4
-info/gnus-5
 info/idlwave
 info/info
 info/message
 info/mh-e
-info/mh-e-1
-info/mh-e-2
 info/newsticker
 info/nxml-mode
 info/org
@@ -99,6 +66,7 @@ man/man1/ctags.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
+share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/BABYL
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
@@ -109,6 +77,7 @@ share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
+share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.2
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -131,6 +100,7 @@ share/emacs/${PKGVERSION}/etc/NEWS.19
 share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
 share/emacs/${PKGVERSION}/etc/NEWS.22
+share/emacs/${PKGVERSION}/etc/NEWS.unicode
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
@@ -141,6 +111,138 @@ share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
 share/emacs/${PKGVERSION}/etc/WHY-FREE
 share/emacs/${PKGVERSION}/etc/celibacy.1
+share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-13.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-14.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-15.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-16.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-2.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-3.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-4.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-5.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-6.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-7.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-8.map
+share/emacs/${PKGVERSION}/etc/charsets/8859-9.map
+share/emacs/${PKGVERSION}/etc/charsets/ALTERNATIVNYJ.map
+share/emacs/${PKGVERSION}/etc/charsets/BIG5-1.map
+share/emacs/${PKGVERSION}/etc/charsets/BIG5-2.map
+share/emacs/${PKGVERSION}/etc/charsets/BIG5-HKSCS.map
+share/emacs/${PKGVERSION}/etc/charsets/BIG5.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-1.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-2.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-3.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-4.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-5.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-6.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-7.map
+share/emacs/${PKGVERSION}/etc/charsets/CNS-F.map
+share/emacs/${PKGVERSION}/etc/charsets/CP10007.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1125.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1250.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1251.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1252.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1253.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1254.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1255.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1256.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1257.map
+share/emacs/${PKGVERSION}/etc/charsets/CP1258.map
+share/emacs/${PKGVERSION}/etc/charsets/CP720.map
+share/emacs/${PKGVERSION}/etc/charsets/CP737.map
+share/emacs/${PKGVERSION}/etc/charsets/CP775.map
+share/emacs/${PKGVERSION}/etc/charsets/CP858.map
+share/emacs/${PKGVERSION}/etc/charsets/CP932-2BYTE.map
+share/emacs/${PKGVERSION}/etc/charsets/CP949-2BYTE.map
+share/emacs/${PKGVERSION}/etc/charsets/EBCDICUK.map
+share/emacs/${PKGVERSION}/etc/charsets/EBCDICUS.map
+share/emacs/${PKGVERSION}/etc/charsets/GB180302.map
+share/emacs/${PKGVERSION}/etc/charsets/GB180304.map
+share/emacs/${PKGVERSION}/etc/charsets/GB2312.map
+share/emacs/${PKGVERSION}/etc/charsets/GBK.map
+share/emacs/${PKGVERSION}/etc/charsets/HP-ROMAN8.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM037.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM038.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM1004.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM1026.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM1047.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM256.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM273.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM274.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM275.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM277.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM278.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM280.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM281.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM284.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM285.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM290.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM297.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM420.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM423.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM424.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM437.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM500.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM850.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM851.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM852.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM855.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM856.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM857.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM860.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM861.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM862.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM863.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM864.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM865.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM866.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM868.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM869.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM870.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM871.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM874.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM875.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM880.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM891.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM903.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM904.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM905.map
+share/emacs/${PKGVERSION}/etc/charsets/IBM918.map
+share/emacs/${PKGVERSION}/etc/charsets/JISC6226.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX0201.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX0208.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX0212.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX2131.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX2132.map
+share/emacs/${PKGVERSION}/etc/charsets/JISX213A.map
+share/emacs/${PKGVERSION}/etc/charsets/JOHAB.map
+share/emacs/${PKGVERSION}/etc/charsets/KA-ACADEMY.map
+share/emacs/${PKGVERSION}/etc/charsets/KA-PS.map
+share/emacs/${PKGVERSION}/etc/charsets/KOI-8.map
+share/emacs/${PKGVERSION}/etc/charsets/KOI8-R.map
+share/emacs/${PKGVERSION}/etc/charsets/KOI8-T.map
+share/emacs/${PKGVERSION}/etc/charsets/KOI8-U.map
+share/emacs/${PKGVERSION}/etc/charsets/KSC5601.map
+share/emacs/${PKGVERSION}/etc/charsets/KSC5636.map
+share/emacs/${PKGVERSION}/etc/charsets/MACINTOSH.map
+share/emacs/${PKGVERSION}/etc/charsets/MIK.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-ethiopic.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-ipa.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-is13194.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-lviscii.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-sisheng.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-tibetan.map
+share/emacs/${PKGVERSION}/etc/charsets/MULE-uviscii.map
+share/emacs/${PKGVERSION}/etc/charsets/NEXTSTEP.map
+share/emacs/${PKGVERSION}/etc/charsets/PTCP154.map
+share/emacs/${PKGVERSION}/etc/charsets/README
+share/emacs/${PKGVERSION}/etc/charsets/TIS-620.map
+share/emacs/${PKGVERSION}/etc/charsets/VISCII.map
+share/emacs/${PKGVERSION}/etc/charsets/VSCII-2.map
+share/emacs/${PKGVERSION}/etc/charsets/VSCII.map
+share/emacs/${PKGVERSION}/etc/charsets/stdenc.map
+share/emacs/${PKGVERSION}/etc/charsets/symbol.map
 share/emacs/${PKGVERSION}/etc/compilation.txt
 share/emacs/${PKGVERSION}/etc/condom.1
 share/emacs/${PKGVERSION}/etc/copying.paper
@@ -326,10 +428,10 @@ share/emacs/${PKGVERSION}/etc/images/icons/emacs256_mac.png
 share/emacs/${PKGVERSION}/etc/images/icons/emacs32_mac.png
 share/emacs/${PKGVERSION}/etc/images/icons/emacs48_mac.png
 share/emacs/${PKGVERSION}/etc/images/icons/emacs512_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs_16.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs_24.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs_32.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs_48.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/index.pbm
 share/emacs/${PKGVERSION}/etc/images/index.xpm
 share/emacs/${PKGVERSION}/etc/images/info.pbm
@@ -793,6 +895,8 @@ share/emacs/${PKGVERSION}/leim/quail/ZIRANMA.el.gz
 share/emacs/${PKGVERSION}/leim/quail/ZIRANMA.elc
 share/emacs/${PKGVERSION}/leim/quail/ZOZY.el.gz
 share/emacs/${PKGVERSION}/leim/quail/ZOZY.elc
+share/emacs/${PKGVERSION}/leim/quail/arabic.el.gz
+share/emacs/${PKGVERSION}/leim/quail/arabic.elc
 share/emacs/${PKGVERSION}/leim/quail/croatian.el.gz
 share/emacs/${PKGVERSION}/leim/quail/croatian.elc
 share/emacs/${PKGVERSION}/leim/quail/cyril-jis.el.gz
@@ -1346,6 +1450,22 @@ share/emacs/${PKGVERSION}/lisp/emulation/ws-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/ws-mode.elc
 share/emacs/${PKGVERSION}/lisp/env.el.gz
 share/emacs/${PKGVERSION}/lisp/env.elc
+share/emacs/${PKGVERSION}/lisp/epa-dired.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-dired.elc
+share/emacs/${PKGVERSION}/lisp/epa-file.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-file.elc
+share/emacs/${PKGVERSION}/lisp/epa-mail.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-mail.elc
+share/emacs/${PKGVERSION}/lisp/epa-setup.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-setup.elc
+share/emacs/${PKGVERSION}/lisp/epa.el.gz
+share/emacs/${PKGVERSION}/lisp/epa.elc
+share/emacs/${PKGVERSION}/lisp/epg-config.el.gz
+share/emacs/${PKGVERSION}/lisp/epg-config.elc
+share/emacs/${PKGVERSION}/lisp/epg-package-info.el.gz
+share/emacs/${PKGVERSION}/lisp/epg-package-info.elc
+share/emacs/${PKGVERSION}/lisp/epg.el.gz
+share/emacs/${PKGVERSION}/lisp/epg.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-autoaway.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-autoaway.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-backend.el.gz
@@ -1376,6 +1496,8 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-join.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-join.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-lang.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-lang.elc
+share/emacs/${PKGVERSION}/lisp/erc/erc-list.el.gz
+share/emacs/${PKGVERSION}/lisp/erc/erc-list.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-log.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-log.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-match.el.gz
@@ -1842,12 +1964,13 @@ share/emacs/${PKGVERSION}/lisp/international/ccl.el.gz
 share/emacs/${PKGVERSION}/lisp/international/ccl.elc
 share/emacs/${PKGVERSION}/lisp/international/characters.el.gz
 share/emacs/${PKGVERSION}/lisp/international/characters.elc
-share/emacs/${PKGVERSION}/lisp/international/code-pages.el.gz
-share/emacs/${PKGVERSION}/lisp/international/code-pages.elc
+share/emacs/${PKGVERSION}/lisp/international/charprop.el
 share/emacs/${PKGVERSION}/lisp/international/codepage.el.gz
 share/emacs/${PKGVERSION}/lisp/international/codepage.elc
+share/emacs/${PKGVERSION}/lisp/international/cp51932.el
 share/emacs/${PKGVERSION}/lisp/international/encoded-kb.el.gz
 share/emacs/${PKGVERSION}/lisp/international/encoded-kb.elc
+share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
 share/emacs/${PKGVERSION}/lisp/international/fontset.elc
 share/emacs/${PKGVERSION}/lisp/international/isearch-x.el.gz
@@ -1868,13 +1991,6 @@ share/emacs/${PKGVERSION}/lisp/international/kkc.el.gz
 share/emacs/${PKGVERSION}/lisp/international/kkc.elc
 share/emacs/${PKGVERSION}/lisp/international/latexenc.el.gz
 share/emacs/${PKGVERSION}/lisp/international/latexenc.elc
-share/emacs/${PKGVERSION}/lisp/international/latin-1.el
-share/emacs/${PKGVERSION}/lisp/international/latin-2.el
-share/emacs/${PKGVERSION}/lisp/international/latin-3.el
-share/emacs/${PKGVERSION}/lisp/international/latin-4.el
-share/emacs/${PKGVERSION}/lisp/international/latin-5.el
-share/emacs/${PKGVERSION}/lisp/international/latin-8.el
-share/emacs/${PKGVERSION}/lisp/international/latin-9.el
 share/emacs/${PKGVERSION}/lisp/international/latin1-disp.el.gz
 share/emacs/${PKGVERSION}/lisp/international/latin1-disp.elc
 share/emacs/${PKGVERSION}/lisp/international/mule-cmds.el.gz
@@ -1890,24 +2006,26 @@ share/emacs/${PKGVERSION}/lisp/international/ogonek.el.gz
 share/emacs/${PKGVERSION}/lisp/international/ogonek.elc
 share/emacs/${PKGVERSION}/lisp/international/quail.el.gz
 share/emacs/${PKGVERSION}/lisp/international/quail.elc
-share/emacs/${PKGVERSION}/lisp/international/subst-big5.el.gz
-share/emacs/${PKGVERSION}/lisp/international/subst-big5.elc
-share/emacs/${PKGVERSION}/lisp/international/subst-gb2312.el.gz
-share/emacs/${PKGVERSION}/lisp/international/subst-gb2312.elc
-share/emacs/${PKGVERSION}/lisp/international/subst-jis.el.gz
-share/emacs/${PKGVERSION}/lisp/international/subst-jis.elc
-share/emacs/${PKGVERSION}/lisp/international/subst-ksc.el.gz
-share/emacs/${PKGVERSION}/lisp/international/subst-ksc.elc
+share/emacs/${PKGVERSION}/lisp/international/robin.el.gz
+share/emacs/${PKGVERSION}/lisp/international/robin.elc
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.el.gz
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.elc
-share/emacs/${PKGVERSION}/lisp/international/ucs-tables.el.gz
-share/emacs/${PKGVERSION}/lisp/international/ucs-tables.elc
-share/emacs/${PKGVERSION}/lisp/international/utf-16.el.gz
-share/emacs/${PKGVERSION}/lisp/international/utf-16.elc
+share/emacs/${PKGVERSION}/lisp/international/uni-bidi.el
+share/emacs/${PKGVERSION}/lisp/international/uni-category.el
+share/emacs/${PKGVERSION}/lisp/international/uni-combining.el
+share/emacs/${PKGVERSION}/lisp/international/uni-comment.el
+share/emacs/${PKGVERSION}/lisp/international/uni-decimal.el
+share/emacs/${PKGVERSION}/lisp/international/uni-decomposition.el
+share/emacs/${PKGVERSION}/lisp/international/uni-digit.el
+share/emacs/${PKGVERSION}/lisp/international/uni-lowercase.el
+share/emacs/${PKGVERSION}/lisp/international/uni-mirrored.el
+share/emacs/${PKGVERSION}/lisp/international/uni-name.el
+share/emacs/${PKGVERSION}/lisp/international/uni-numeric.el
+share/emacs/${PKGVERSION}/lisp/international/uni-old-name.el
+share/emacs/${PKGVERSION}/lisp/international/uni-titlecase.el
+share/emacs/${PKGVERSION}/lisp/international/uni-uppercase.el
 share/emacs/${PKGVERSION}/lisp/international/utf-7.el.gz
 share/emacs/${PKGVERSION}/lisp/international/utf-7.elc
-share/emacs/${PKGVERSION}/lisp/international/utf-8.el.gz
-share/emacs/${PKGVERSION}/lisp/international/utf-8.elc
 share/emacs/${PKGVERSION}/lisp/isearch-multi.el.gz
 share/emacs/${PKGVERSION}/lisp/isearch-multi.elc
 share/emacs/${PKGVERSION}/lisp/isearch.el.gz
@@ -1926,6 +2044,8 @@ share/emacs/${PKGVERSION}/lisp/kermit.el.gz
 share/emacs/${PKGVERSION}/lisp/kermit.elc
 share/emacs/${PKGVERSION}/lisp/kmacro.el.gz
 share/emacs/${PKGVERSION}/lisp/kmacro.elc
+share/emacs/${PKGVERSION}/lisp/language/burmese.el
+share/emacs/${PKGVERSION}/lisp/language/cham.el
 share/emacs/${PKGVERSION}/lisp/language/china-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/china-util.elc
 share/emacs/${PKGVERSION}/lisp/language/chinese.el.gz
@@ -1956,6 +2076,7 @@ share/emacs/${PKGVERSION}/lisp/language/japan-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/japan-util.elc
 share/emacs/${PKGVERSION}/lisp/language/japanese.el
 share/emacs/${PKGVERSION}/lisp/language/kannada.el
+share/emacs/${PKGVERSION}/lisp/language/khmer.el
 share/emacs/${PKGVERSION}/lisp/language/knd-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/knd-util.elc
 share/emacs/${PKGVERSION}/lisp/language/korea-util.el.gz
@@ -1970,6 +2091,7 @@ share/emacs/${PKGVERSION}/lisp/language/mlm-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/mlm-util.elc
 share/emacs/${PKGVERSION}/lisp/language/romanian.el
 share/emacs/${PKGVERSION}/lisp/language/slovak.el
+share/emacs/${PKGVERSION}/lisp/language/tai-viet.el
 share/emacs/${PKGVERSION}/lisp/language/tamil.el
 share/emacs/${PKGVERSION}/lisp/language/thai-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/thai-util.elc
@@ -1982,6 +2104,8 @@ share/emacs/${PKGVERSION}/lisp/language/tibetan.el.gz
 share/emacs/${PKGVERSION}/lisp/language/tibetan.elc
 share/emacs/${PKGVERSION}/lisp/language/tml-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/tml-util.elc
+share/emacs/${PKGVERSION}/lisp/language/tv-util.el.gz
+share/emacs/${PKGVERSION}/lisp/language/tv-util.elc
 share/emacs/${PKGVERSION}/lisp/language/utf-8-lang.el
 share/emacs/${PKGVERSION}/lisp/language/viet-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/viet-util.elc
@@ -1990,6 +2114,8 @@ share/emacs/${PKGVERSION}/lisp/language/vietnamese.elc
 share/emacs/${PKGVERSION}/lisp/ldefs-boot.el
 share/emacs/${PKGVERSION}/lisp/ledit.el.gz
 share/emacs/${PKGVERSION}/lisp/ledit.elc
+share/emacs/${PKGVERSION}/lisp/linum.el.gz
+share/emacs/${PKGVERSION}/lisp/linum.elc
 share/emacs/${PKGVERSION}/lisp/loaddefs.el
 share/emacs/${PKGVERSION}/lisp/loadhist.el.gz
 share/emacs/${PKGVERSION}/lisp/loadhist.elc
@@ -2327,6 +2453,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/lselect.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lselect.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mlsupport.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/mlsupport.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/ooutline.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/ooutline.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
@@ -2347,8 +2475,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/x-apollo.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/x-apollo.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${PKGVERSION}/lisp/outline.el.gz
@@ -2466,6 +2592,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-awk.el.gz
@@ -2616,10 +2744,14 @@ share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/xscheme.elc
 share/emacs/${PKGVERSION}/lisp/ps-bdf.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-bdf.elc
+share/emacs/${PKGVERSION}/lisp/ps-def.el.gz
+share/emacs/${PKGVERSION}/lisp/ps-def.elc
 share/emacs/${PKGVERSION}/lisp/ps-mule.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-mule.elc
 share/emacs/${PKGVERSION}/lisp/ps-print.el.gz
 share/emacs/${PKGVERSION}/lisp/ps-print.elc
+share/emacs/${PKGVERSION}/lisp/ps-samp.el.gz
+share/emacs/${PKGVERSION}/lisp/ps-samp.elc
 share/emacs/${PKGVERSION}/lisp/recentf.el.gz
 share/emacs/${PKGVERSION}/lisp/recentf.elc
 share/emacs/${PKGVERSION}/lisp/rect.el.gz
@@ -2776,6 +2908,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org.el.gz
@@ -2993,6 +3127,20 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
+share/icons/hicolor/16x16/apps/emacs.png
+share/icons/hicolor/24x24/apps/emacs.png
+share/icons/hicolor/32x32/apps/emacs.png
+share/icons/hicolor/48x48/apps/emacs.png
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/emacs/${PKGVERSION}/site-lisp
 @dirrm share/emacs/${PKGVERSION}/lisp/url
 @dirrm share/emacs/${PKGVERSION}/lisp/textmodes
@@ -3029,6 +3177,15 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${PKGVERSION}/etc/images/smilies
 @dirrm share/emacs/${PKGVERSION}/etc/images/mail
 @dirrm share/emacs/${PKGVERSION}/etc/images/low-color
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons
 @dirrm share/emacs/${PKGVERSION}/etc/images/gud
 @dirrm share/emacs/${PKGVERSION}/etc/images/gnus
@@ -3036,8 +3193,10 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/${PKGVERSION}/etc/images
 @dirrm share/emacs/${PKGVERSION}/etc/gnus
 @dirrm share/emacs/${PKGVERSION}/etc/e
+@dirrm share/emacs/${PKGVERSION}/etc/charsets
 @dirrm share/emacs/${PKGVERSION}/etc
 @dirrm share/emacs/${PKGVERSION}
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/emacs/${PKGVERSION}
 @dirrm libexec/emacs
