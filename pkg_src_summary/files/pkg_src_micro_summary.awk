@@ -48,8 +48,15 @@ function check (){
 	distname    = var ["DISTNAME"]
 	pkgrevision = var ["PKGREVISION"]
 
+	# PKGNAME was assigned more than once, i.e. badname?
+	if ("PKGNAME" in badvar)
+		return 0
+
 	# distname -> pkgname?
 	if (distname != "" && pkgname == ""){
+		if ("DISTNAME" in badvar)
+			return 0
+
 		pkgname = distname
 	}
 	# both - empty?
@@ -153,9 +160,9 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 			continue
 		}
 
-		if (match ($1, /^[[:alnum:]_.]+[?]?=/)) {
+		if (match ($1, /^[[:alnum:]_.]+[?:]?=/)) {
 			varname = $1
-			sub(/[?]?=.*$/, "", varname)
+			sub(/[?:]?=.*$/, "", varname)
 
 			sub(/^[^=]+=/, "", $0)
 			$0 = trim($0)
