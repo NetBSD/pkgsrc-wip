@@ -69,7 +69,7 @@ function check (variable,
 		return ""
 
 	# try replacements...
-	while (match(value, /[$][{][[:alnum:]_.]+(:S\/.*\/.*\/)?[}]/)){
+	while (match(value, /[$][{][[:alnum:]_.]+(:S\/[^\/]*\/[^\/]*\/)?[}]/)){
 		left  = substr(value, 1, RSTART-1)
 		right = substr(value, RSTART+RLENGTH)
 
