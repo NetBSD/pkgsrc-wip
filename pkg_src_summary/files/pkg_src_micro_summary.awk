@@ -1,4 +1,4 @@
-#!/usr/bin/awk -f
+#!/usr/bin/env runawk
 
 # Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
 #
@@ -120,7 +120,7 @@ function check (){
 
 		# old_string to new_string
 		sub(old_string, new_string, var [varname])
-
+#		print "result of substritution: var [" varname "]=" var [varname]
 		#
 		pkgname = left var[varname] right
 	}
@@ -141,14 +141,13 @@ function trim (s){
 	return s
 }
 
-function process_include (fn, inc,              ret, cond_cnt, varname){
+function process_include (fn, inc, cond_cnt,              ret,varname){
 	sub(/\/[^\/]+$/, "", fn)
 	if (inc !~ /^\//)
 		fn = fn "/" inc
 
 #	print "incl:" fn
 
-	cond_cnt = 0
 	while ((ret = getline < fn) > 0){
 		if ($1 == ".if") {
 			++cond_cnt
@@ -182,7 +181,12 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 			$2 !~ /buildlink3.mk"$/ && $2 !~ /^"[.][.]\/[.][.]\/mk/)
 		{
 			# recursive .include processing
-			process_include(fn, substr($2, 2, length($2)-2))
+			if (cond_cnt > 0)
+				new_cnt = 10000 # unbalanced .if/.endif? who knows
+			else
+				new_cnt = 0
+
+			process_include(fn, substr($2, 2, length($2)-2), new_cnt)
 		}
 	}
 
@@ -191,7 +195,7 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 
 {
 	last_fn = $1
-	process_include(".", last_fn)
+	process_include(".", last_fn, 0)
 	print_name_and_path()
 
 	delete var
