@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1.1.1 2007/09/23 17:49:59 ghen Exp $
+$NetBSD: patch-ag,v 1.2 2008/02/11 20:17:32 ghen Exp $
 
---- src/deliver/deliver.c.orig	2006-11-02 21:03:30.000000000 +0100
+--- src/deliver/deliver.c.orig	2008-01-20 13:54:08.000000000 +0100
 +++ src/deliver/deliver.c
-@@ -30,7 +30,7 @@
+@@ -41,7 +41,7 @@
+ #include <syslog.h>
  
  #define DEFAULT_CONFIG_FILE SYSCONFDIR"/dovecot.conf"
- #define DEFAULT_AUTH_SOCKET_PATH PKG_RUNDIR"/auth-master"
 -#define DEFAULT_SENDMAIL_PATH "/usr/lib/sendmail"
 +#define DEFAULT_SENDMAIL_PATH "/usr/sbin/sendmail"
  #define DEFAULT_ENVELOPE_SENDER "MAILER-DAEMON"

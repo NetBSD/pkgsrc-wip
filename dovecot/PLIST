@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/01/03 14:00:55 ghen Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/02/11 20:17:31 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -131,6 +131,7 @@ include/dovecot/src/lib-storage/mail-storage.h
 include/dovecot/src/lib-storage/mailbox-list-private.h
 include/dovecot/src/lib-storage/mailbox-list.h
 include/dovecot/src/lib-storage/mailbox-tree.h
+include/dovecot/src/lib/aqueue.h
 include/dovecot/src/lib/array-decl.h
 include/dovecot/src/lib/array.h
 include/dovecot/src/lib/backtrace-string.h
@@ -171,6 +172,7 @@ include/dovecot/src/lib/istream-tee.h
 include/dovecot/src/lib/istream.h
 include/dovecot/src/lib/lib-signals.h
 include/dovecot/src/lib/lib.h
+include/dovecot/src/lib/llist.h
 include/dovecot/src/lib/macros.h
 include/dovecot/src/lib/md4.h
 include/dovecot/src/lib/md5.h
@@ -186,8 +188,8 @@ include/dovecot/src/lib/ostream-internal.h
 include/dovecot/src/lib/ostream.h
 include/dovecot/src/lib/primes.h
 include/dovecot/src/lib/printf-format-fix.h
+include/dovecot/src/lib/priorityq.h
 include/dovecot/src/lib/process-title.h
-include/dovecot/src/lib/queue.h
 include/dovecot/src/lib/randgen.h
 include/dovecot/src/lib/read-full.h
 include/dovecot/src/lib/restrict-access.h
