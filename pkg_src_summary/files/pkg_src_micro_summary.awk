@@ -167,10 +167,10 @@ function process_include (fn, inc,              ret, cond_cnt, varname){
 			sub(/^[^=]+=/, "", $0)
 			$0 = trim($0)
 
-			if ((varname in var) && var [varname] != $0){
+			if (cond_cnt != 0 || (varname in var) && var [varname] != $0){
 				# double assignment? -> badvar
 				badvar [varname] = 1
-			}else if (cond_cnt == 0){
+			}else{
 				# conditional assignments are not remembered
 				var [varname] = $0
 #				print varname " ---> " var [varname]
