@@ -91,6 +91,6 @@ while read pkgpath; do
 	cat "$make_out"
 	echo ''
     else
-	printf "Bad package %s, skipped" "$pkgpath\n" 1>&2
+	printf "Bad package %s, skipped\n" "$pkgpath" 1>&2
     fi
 done
