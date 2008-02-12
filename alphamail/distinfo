@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/12 11:36:29 shattered Exp $
+
+SHA1 (alphamail-1.0.44.tar.gz) = c45c09da9acc56f974fe314f6cd0d1d4e92ad683
+RMD160 (alphamail-1.0.44.tar.gz) = 6f033b51328e6d31ff9d768e00bccce42024c1f5
+Size (alphamail-1.0.44.tar.gz) = 1820218 bytes
+SHA1 (patch-aa) = c2aef91e89d5bca1e43a037983fac3ca404ef901
+SHA1 (patch-ab) = 4896c0cf9e43d26dc9332fee7cfef7ff1f0a19e2
+SHA1 (patch-ac) = a5e21c79b640884dd1d601576dfb0a9d23f1c5f9
+SHA1 (patch-ad) = e8cf09a562cbbce39e1bce93a3c2e00b4045503e
