@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:57 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/12 18:22:03 h2m Exp $
 #
 
-DISTNAME=		typespeed-0.5.3
+DISTNAME=		typespeed-0.6.4
 PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://tobias.eyedacor.org/typespeed/
@@ -11,19 +11,15 @@ HOMEPAGE=		http://tobias.eyedacor.org/typespeed/
 COMMENT=		Game to measure your typing speed, with network mode
 
 USE_LANGUAGES=		c
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 SUBST_CLASSES+=		man-paths
 SUBST_STAGE.man-paths=	pre-patch
-SUBST_FILES.man-paths=	typespeed.6
+SUBST_FILES.man-paths=	man/typespeed.6
 SUBST_SED.man-paths=	-e 's|/etc/|${PREFIX}/etc/|g'
 SUBST_SED.man-paths+=	-e 's|/usr/local|${PREFIX}|g'
-SUBST_MESSAGE.man-paths=	Adjusting paths in the game's man page
-
-SUBST_CLASSES+=		prefixpath
-SUBST_STAGE.prefixpath=	post-patch
-SUBST_FILES.prefixpath=	Makefile
-SUBST_SED.prefixpath=	-e 's|/usr/local|${PREFIX}|g'
-SUBST_MESSAGE.prefixpath=	Adjusting prefix path
+SUBST_MESSAGE.man-paths=	Adjusting path in the game's man page
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

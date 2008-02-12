@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2006/10/09 14:12:01 h2m Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/12 18:22:03 h2m Exp $
 
---- Makefile.orig	2006-09-09 12:07:45.000000000 +0200
-+++ Makefile
-@@ -11,7 +11,7 @@ datarootdir = $(prefix)/share
- datadir = $(datarootdir)
- sysconfdir = $(prefix)/etc
- localstatedir = $(prefix)/var
--mandir = $(datarootdir)/man
-+mandir = $(prefix)/man
- man6dir = $(mandir)/man6
- srcdir = .
+--- src/misc.c.orig	2007-11-29 22:40:09.000000000 +0100
++++ src/misc.c
+@@ -38,6 +38,7 @@
+ #include <curses.h>
+ #include <ctype.h>
+ #include <errno.h>
++#include <stdarg.h>
  
+ #ifdef HAVE_STDLIB_H
+ 	#include <stdlib.h>

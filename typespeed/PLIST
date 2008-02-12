@@ -1,17 +1,27 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/09 14:12:01 h2m Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/02/12 18:22:03 h2m Exp $
 bin/typespeed
+etc/typespeedrc
 man/man6/typespeed.6
-share/typespeed/words.dos
-share/typespeed/words.dut
-share/typespeed/words.eng
-share/typespeed/words.fin
-share/typespeed/words.fra
-share/typespeed/words.ger
-share/typespeed/words.ita
-share/typespeed/words.portuguese
-share/typespeed/words.prog
-share/typespeed/words.spanish
-share/typespeed/words.thai
-share/typespeed/words.unix
-@dirrm share/typespeed
-@unexec echo Please delete var/games/typespeed, which holds the high scores, if you do not need them any longer.
+share/doc/typespeed/README
+share/typespeed/rules/rule.classic
+share/typespeed/rules/rule.training
+share/typespeed/rules/template
+share/typespeed/words/words.csharp
+share/typespeed/words/words.csharp_with_operators
+share/typespeed/words/words.dos
+share/typespeed/words/words.dut
+share/typespeed/words/words.eng
+share/typespeed/words/words.esp
+share/typespeed/words/words.fin
+share/typespeed/words/words.fra
+share/typespeed/words/words.ger
+share/typespeed/words/words.ita
+share/typespeed/words/words.por
+share/typespeed/words/words.prog
+share/typespeed/words/words.tha
+share/typespeed/words/words.unix
+var/games/typespeed.score
+@dirrm var/games
+@dirrm share/typespeed/words
+@dirrm share/typespeed/rules
+@dirrm share/doc/typespeed
