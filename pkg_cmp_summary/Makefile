@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/10 21:22:23 cheusov Exp $
-
-.include "../../wip/pkg_cmp_summary/files/Makefile.version"
+# $NetBSD: Makefile,v 1.3 2008/02/12 19:26:34 cheusov Exp $
 
 DISTNAME=	pkg_cmp_summary-${VERSION}
 CATEGORIES=	pkgtools
@@ -10,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Compares two package summary files (pkg_summary.txt format)
+
+.include "../../wip/pkg_cmp_summary/files/Makefile.version"
 
 USE_BSD_MAKEFILE=	yes
 

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/10 21:33:07 cheusov Exp $
-
-.include "../../wip/pkg_update_summary/files/Makefile.version"
+# $NetBSD: Makefile,v 1.7 2008/02/12 19:28:04 cheusov Exp $
 
 DISTNAME=	pkg_update_summary-${VERSION}
 CATEGORIES=	pkgtools
@@ -10,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Efficiently updates pkg_summary.gz file
+
+.include "../../wip/pkg_update_summary/files/Makefile.version"
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		gzip:run
