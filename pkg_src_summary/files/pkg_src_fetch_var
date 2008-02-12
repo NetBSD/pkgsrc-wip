@@ -33,7 +33,7 @@ BEGIN {
 function print_name_and_path (){
 	pkgname = ""
 
-	if (! ("PKGNAME" in badvar)){
+	if (read_error == 0 && ! ("PKGNAME" in badvar)){
 		if ("PKGNAME" in var)
 			pkgname = check("PKGNAME")
 		else if ("DISTNAME" in var)
@@ -140,10 +140,18 @@ function trim (s){
 	return s
 }
 
+function dirname (fn){
+	if (sub(/\/[^\/]+$/, "", fn))
+		return fn
+	else
+		return "."
+}
+
 function process_include (fn, inc, cond_cnt,              ret,varname){
-	sub(/\/[^\/]+$/, "", fn)
-	if (inc !~ /^\//)
-		fn = fn "/" inc
+	if (inc ~ /^\//)
+		fn = inc
+	else
+		fn = dirname(fn) "/" inc
 
 #	print "incl:" fn
 
@@ -185,15 +193,23 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 			else
 				new_cnt = 0
 
-			process_include(fn, substr($2, 2, length($2)-2), new_cnt)
+			inc = substr($2, 2, length($2)-2)
+			sub(/[$][{][.]CURDIR[}]/, top_dir, inc)
+			process_include(fn, inc, new_cnt)
 		}
 	}
 
 	close(fn)
+
+	if (ret < 0){
+		read_error = 1
+	}
 }
 
 {
 	last_fn = $1
+	top_dir = dirname(last_fn)
+	read_error = 0
 	process_include(".", last_fn, 0)
 	print_name_and_path()
 
