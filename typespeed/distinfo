@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/02/12 18:22:03 h2m Exp $
+$NetBSD: distinfo,v 1.4 2008/02/12 22:11:37 h2m Exp $
 
 SHA1 (typespeed-0.6.4.tar.gz) = e2383b746d20262282b0357a8954c9d3a734a911
 RMD160 (typespeed-0.6.4.tar.gz) = b857333a5f9e07e54f49d94eaed66555a17cce0e
 Size (typespeed-0.6.4.tar.gz) = 250596 bytes
 SHA1 (patch-aa) = 8cba5a6384a01e2d043c2c1110c4d7bf432fc17e
 SHA1 (patch-ab) = aaff7a55ff6e166bbd0caec55531c86b03884e36
+SHA1 (patch-ac) = 96be626abc25817cca43867798228a5d656c3484
