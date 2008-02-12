@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/12 10:50:59 shattered Exp $
+
+SHA1 (Crypt-CAST5-0.05.tar.gz) = 9093a4971236ef0a6cbb70077067c50afbe185c0
+RMD160 (Crypt-CAST5-0.05.tar.gz) = 0803dbfac9bb87996801311bf43f8c8d76be54f1
+Size (Crypt-CAST5-0.05.tar.gz) = 26021 bytes
