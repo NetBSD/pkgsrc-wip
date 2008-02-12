@@ -156,7 +156,7 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 #	print "incl:" fn
 
 	while ((ret = getline < fn) > 0){
-		if ($1 == ".if") {
+		if ($1 ~ /^[.]if/) {
 			++cond_cnt
 			continue
 		}
