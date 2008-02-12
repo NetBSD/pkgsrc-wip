@@ -100,7 +100,7 @@ generate_summary (){
 
 	echo '' # empty line - separator 
     else
-	printf "Bad package %s, skipped" "$1" 1>&2
+	printf "Bad package %s, skipped\n" "$1" 1>&2
     fi
 }
 
