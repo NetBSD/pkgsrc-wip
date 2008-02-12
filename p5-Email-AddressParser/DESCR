@@ -1,0 +1,5 @@
+Near drop-in replacement for the regex parsing of Email::Address, which
+has serious issues for production use (exponential to infinite computation
+time in some cases). It uses code from Mark Crispin's c-client library
+to implement the parsing. The resulting parser is much more stable than
+the regex-based version of Email::Address.

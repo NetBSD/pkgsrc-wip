@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/12 10:56:18 shattered Exp $
+
+SHA1 (Email-AddressParser-0.04.tar.gz) = 34c4b5be0943196440a7660d721051798f14320c
+RMD160 (Email-AddressParser-0.04.tar.gz) = 731349272e9ecfa32e633b714097cad9850b7c37
+Size (Email-AddressParser-0.04.tar.gz) = 39598 bytes
