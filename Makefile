@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2788 2008/02/13 21:50:38 pmatias Exp $
+# $Id: Makefile,v 1.2789 2008/02/13 22:29:28 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -57,6 +57,7 @@ SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	alex
 SUBDIR+=	alive
+SUBDIR+=	alphamail
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
@@ -657,6 +658,7 @@ SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	im
 SUBDIR+=	imapsync
+SUBDIR+=	imgseek
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
 # SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
@@ -1179,6 +1181,7 @@ SUBDIR+=	p5-Class-ISA
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Config-Any
+SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-PasswdMD5
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-DBIx-Class
@@ -1190,9 +1193,11 @@ SUBDIR+=	p5-Data-Random
 SUBDIR+=	p5-Data-Visitor
 SUBDIR+=	p5-Date-Range
 SUBDIR+=	p5-Devel-Profiler
+SUBDIR+=	p5-Email-AddressParser
 SUBDIR+=	p5-Email-FolderType
 SUBDIR+=	p5-Email-LocalDelivery
 SUBDIR+=	p5-Encode-Detect
+SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exception-Base
 SUBDIR+=	p5-Exporter-Lite
@@ -1285,6 +1290,7 @@ SUBDIR+=	p5-Test-MockObject
 SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
 SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Text-ASCIITable
+SUBDIR+=	p5-Text-Aspell
 SUBDIR+=	p5-Text-CHM
 SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-EtText
@@ -1304,6 +1310,7 @@ SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
+SUBDIR+=	p5-Unicode-Collate
 SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-MapUTF8
 SUBDIR+=	p5-Unicode-Normalize
