@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/02/08 17:22:12 koifren Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/13 13:10:50 koifren Exp $
 
 DISTNAME=	monodevelop-0.18.1
 CATEGORIES=	devel
 MASTER_SITES=	http://go-mono.com/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.monodevelop.com/
 COMMENT=	IDE for C\# and other .NET languages
 

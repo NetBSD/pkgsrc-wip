@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2008/02/06 10:26:28 koifren Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/13 13:10:50 koifren Exp $
 
-DISTNAME=	monodoc-1.2.6
+DISTNAME=	monodoc-${MONO_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://go-mono.com/sources/monodoc/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Documentation for the Mono class libraries
+
+.include "../../wip/mono/Makefile.common"
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	monodoc.pc.in

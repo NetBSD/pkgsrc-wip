@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2008/02/08 10:35:17 koifren Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/13 13:10:50 koifren Exp $
 
-DISTNAME=	mono-1.2.6
+DISTNAME=	mono-${MONO_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
+
+.include "../../wip/mono/Makefile.common"
 
 # XXX please test
 NOT_FOR_PLATFORM=	NetBSD-1.[0-5]*-*
@@ -88,5 +90,4 @@ SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},g'
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
