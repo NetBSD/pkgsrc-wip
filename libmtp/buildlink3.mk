@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/09/16 06:50:48 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/02/13 06:29:29 netcap Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBMTP_BUILDLINK3_MK:=	${LIBMTP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libmtp
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmtp
 
 .if ${LIBMTP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=0.2.1
+BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=0.2.5
 BUILDLINK_PKGSRCDIR.libmtp?=	../../wip/libmtp
 .endif	# LIBMTP_BUILDLINK3_MK
 
