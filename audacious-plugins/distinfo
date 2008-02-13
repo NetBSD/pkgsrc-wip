@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2008/01/01 05:14:57 netcap Exp $
+$NetBSD: distinfo,v 1.12 2008/02/13 17:02:28 netcap Exp $
 
-SHA1 (audacious-plugins-1.4.4.tgz) = 157e760e8b7731dd548fe988a99706e4893e4c05
-RMD160 (audacious-plugins-1.4.4.tgz) = 2625263c76f806d99973d6726a5e794b550778c8
-Size (audacious-plugins-1.4.4.tgz) = 3174204 bytes
+SHA1 (audacious-plugins-1.4.5.tgz) = 9ee0244526f7a2c6bc48f8ca903f4604a1155b43
+RMD160 (audacious-plugins-1.4.5.tgz) = 6aeca88ce90082f4c028e43f2b572398cce7b056
+Size (audacious-plugins-1.4.5.tgz) = 3176785 bytes

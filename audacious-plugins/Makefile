@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.30 2008/02/13 17:02:28 netcap Exp $
 #
 
-DISTNAME=		audacious-plugins-1.4.4
+DISTNAME=		audacious-plugins-1.4.5
 #PKGREVISION=		1
 PKGREVISION=		1
 CATEGORIES=		audio
