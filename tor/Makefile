@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/01/18 04:30:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.19 2008/02/13 17:41:45 netcap Exp $
 #
 
-DISTNAME=		tor-0.2.0.15-alpha
+DISTNAME=		tor-0.2.0.19-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
@@ -43,9 +43,9 @@ OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
-				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
+				${PKG_SYSCONFDIR}/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
-				${PKG_SYSCONFDIR}/tor/torrc
+				${PKG_SYSCONFDIR}/torrc
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
