@@ -1,0 +1,46 @@
+.\"	$NetBSD: pkg_src_update_summary.1,v 1.1 2008/02/14 19:37:41 cheusov Exp $
+.\"
+.\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
+.\" Absolutely no warranty.
+.\"
+.Dd Jan 29, 2008
+.Dt PKG_SRC_UPDATE_SUMMARY 1
+.Sh NAME
+.Nm pkg_src_update_summary
+.Nd Incrementally updates source packages summary
+.Sh SYNOPSIS
+.Nm
+.Op Ar summary_filename
+.Sh DESCRIPTION
+.Nm
+incrementally updates source packages summary about all packages in
+pkgsrc source tree.
+Algorithm. 1) pkg_src_update_summary quickly obtains micro summary
+information about all packages
+from pkgsrc source tree, "micro" means PKGNAME and PKGPATH fields only.
+2) comparing summary_filename and micro summary collected in step 1
+by PKGNAME field.
+3) copying summary from summary_filename about unchanged packages.
+4) collecting full summary information about all changed and new packages.
+5) new summary = 3+4
+.Sh ENVIRONMENT
+.Bd -literal
+.Bl -tag -width Cm
+.It Cm PKGSRCDIR
+pkgsrc root directory, defaults to /usr/pkgsrc
+.It Cm BMAKE
+path to pkgsrc friendly make utility, defaults to make
+.El
+.Ed
+.Sh EXAMPLES
+.Bd -literal
+pkg_src_update_summary /usr/pkgsrc/pkg_src_summary.txt
+.Ed
+.Sh SEE ALSO
+.Xr pkg_src_summary 1 ,
+.Xr pkg_src_micro_summary 1 ,
+.Xr pkg_cmp_summary 1 ,
+.Xr pkg_info 1 ,
+.Sh AUTHOR
+.An Aleksey Cheusov
+.Aq vle@gmx.net
