@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/14 12:21:07 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/14 13:31:12 marttikuparinen Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-2.0.0-rc1
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-erlang=${BUILDLINK_PREFIX.erlang}
 
 CONFIGURE_DIRS+=	src
-BUILD_DIRS+=	src
+BUILD_DIRS+=		src
 
 WRKSRC=		${WRKDIR}/ejabberd-2.0.0
 
@@ -48,13 +48,13 @@ FILES_SUBST+=	EGDIR=${EGDIR}
 
 RCD_SCRIPTS=	ejabberd
 
-
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
 BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_SPOOLDIR EJABBERD_TRANSDIR
 BUILD_DEFS+=		EJABBERD_EXDIR
 PKG_SYSCONFSUBDIR=	ejabberd
 
 .include "../../mk/bsd.prefs.mk"
+
 EJABBERD_USER=		ejabberd
 EJABBERD_GROUP=		ejabberd
 EJABBERD_PIDDIR=	var/run/ejabberd
