@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/26 18:30:30 athaba Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/14 13:41:49 athaba Exp $
 #
 
 DISTNAME=	Net-SMTP-TLS-0.12
@@ -8,7 +8,7 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AW/AWESTHOLM/
 
 MAINTAINER=	athaba@inode.at
 HOMEPAGE=	http://search.cpan.org/~awestholm/Net-SMTP-TLS-0.12/
-COMMENT=	Net::SMTP::TLS - An SMTP client supporting TLS and AUTH
+COMMENT=	An SMTP clien module supporting TLS and AUTH
 
 DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64>=0:../../converters/p5-MIME-Base64
