@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/02/14 20:56:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/14 21:03:34 cheusov Exp $
 
 DISTNAME=	pkg_src_update_summary-${VERSION}
 CATEGORIES=	pkgtools
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Builds summary information for source packages
 
 DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
+DEPENDS+=	pkg_src_summary-[0-9]*:../../wip/pkg_src_summary
+DEPENDS+=	pkg_cmp_summary-[0-9]*:../../wip/pkg_cmp_summary
 
 .include "../../wip/pkg_src_update_summary/files/Makefile.version"
 
