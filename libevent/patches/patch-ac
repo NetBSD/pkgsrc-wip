@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/02/14 15:23:15 athaba Exp $
+
+--- test/regress.gen.h.orig	2007-12-22 23:05:46.000000000 +0100
++++ test/regress.gen.h
+@@ -6,6 +6,16 @@
+ #define ___REGRESS_RPC_
+ 
+ #include <stdint.h>
++#include "config.h"
++
++#ifdef HAVE_STDINT_H
++#  include <stdint.h>
++#elif defined(HAVE_INTTYPES_H)
++#  include <inttypes.h>
++#else
++#  error No inttypes.h or stdint.h to give integer types
++#endif
++
+ #define EVTAG_HAS(msg, member) ((msg)->member##_set == 1)
+ #define EVTAG_ASSIGN(msg, member, args...) (*(msg)->base->member##_assign)(msg, ## args)
+ #define EVTAG_GET(msg, member, args...) (*(msg)->base->member##_get)(msg, ## args)

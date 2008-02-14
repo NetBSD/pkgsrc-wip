@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/14 15:23:15 athaba Exp $
+bin/event_r${LOWER_VENDOR}gen.py
+include/evdns.h
+include/event-config.h
+include/event.h
+include/evhttp.h
+include/evr${LOWER_VENDOR}.h
+include/evutil.h
+lib/libevent.la
+lib/libevent_core.la
+lib/libevent_extra.la
+man/man3/evdns.3
+man/man3/event.3

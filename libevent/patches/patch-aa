@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/02/14 15:23:15 athaba Exp $
+
+--- event_rpcgen.py.orig	2007-12-18 04:02:14.000000000 +0100
++++ event_rpcgen.py
+@@ -1305,8 +1305,14 @@ def HeaderPreamble(name):
+         '#define %s\n\n' ) % (
+         name, guard, guard)
+ 
+-    # insert stdint.h - let's hope everyone has it
+-    pre += '#include <stdint.h>\n'
++    pre += ('#include "config.h"\n'
++            '#ifdef HAVE_STDINT_H\n'
++            '#  include <stdint.h>\n'
++            '#elif defined(HAVE_INTTYPES_H)\n'
++            '#  include <inttypes.h>\n'
++            '#else\n'
++            '#  error No inttypes.h or stdint.h to give integer types\n'
++            '#endif\n' )
+ 
+     for statement in headerdirect:
+         pre += '%s\n' % statement
