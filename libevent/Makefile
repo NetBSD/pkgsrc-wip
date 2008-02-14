@@ -1,8 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/14 15:23:15 athaba Exp $
-#
+# $NetBSD: Makefile,v 1.2 2008/02/14 19:07:35 athaba Exp $
+# Warning taken from devel/libevent:
+# WARNING: updating this package (as of the 1.1/1.2 releases) means
+# updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
+# bump of all first-level dependents.  This is because the shlib
+# name contains the exact libevent release number, preventing it
+# from being ABI compatible across releases until this is fixed.
+# [tvierling 20070210]
 
 DISTNAME=	libevent-1.4.1-beta
-PKGNAME=	${DISTNAME:S/-alpha//}
+PKGNAME=	${DISTNAME:S/-beta//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 
@@ -14,8 +21,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	verify
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS=	libevent-[0-9]*
 
 LIBS.SunOS+=	-lnsl -lresolv
 
