@@ -124,42 +124,39 @@ pkg_src_micro_summary < $allpkgs_fn >$micsum_fn
 cmp_fn=$tmp_dir/cmp
 pkg_cmp_summary $summary $micsum_fn >$cmp_fn
 
-# skipping removed and repeated packages (- and <NUM>)
-rem_pkgs_fn=$tmp_dir/rempkgs
-awk '$1 ~ /^[-0-9]/ {print $2}' $cmp_fn > $rem_pkgs_fn
+# copying summary about unchanged packages
+eq_pkgs_fn=$tmp_dir/eqpkgs
+awk '$1 ~ /^[=]/ {print $2}' $cmp_fn > $eq_pkgs_fn
 
-skip_removed_pkgs (){
-awk -v rem_pkgs_fn=$rem_pkgs_fn '
+copy_eq_pkgs (){
+awk -v eq_pkgs_fn=$eq_pkgs_fn '
 BEGIN {
-   while (0 < (ret = getline < rem_pkgs_fn)){
-      rem_pkgs [$1] = 1
+   while (0 < (ret = getline < eq_pkgs_fn)){
+      eq_pkgs [$1] = 1
    }
 
    if (ret < 0){
-      printf "readoing error from" rem_pkgs_fn > "/dev/stderr"
+      printf "reading error from" eq_pkgs_fn > "/dev/stderr"
    }
 }
 
 $0 ~ /^PKGNAME=/ {
    pkgbase = substr($0, 9)
    sub(/-[^-]+$/, "", pkgbase)
-   skip = (pkgbase in rem_pkgs)
+   interesting = (pkgbase in eq_pkgs)
 }
 
-!skip {
+interesting {
    print
 }
-
 ' "$@"
 }
 
-skip_removed_pkgs $summary > $new_summary
+copy_eq_pkgs $summary > $new_summary
 
 # add new/updated/changed packages
-changed_pkgs_fn=$tmp_dir/chained_pkgs
+changed_pkgs_fn=$tmp_dir/changed_pkgs
 awk '$1 ~ /^[+<>?0-9]/ {print $2}' $cmp_fn > $changed_pkgs_fn
-
-pkgpath_fn=$tmp_dir/pkgpaths
 
 extract_pkgpath (){
 awk -v changed_pkgs_fn=$changed_pkgs_fn '
@@ -185,9 +182,11 @@ $0 ~ /^PKGPATH=/ && interesting {
 ' "$@"
 }
 
+pkgpath_fn=$tmp_dir/pkgpaths
 extract_pkgpath $micsum_fn > $pkgpath_fn
+
 pkg_src_summary < $pkgpath_fn >> $new_summary
 
-#
+# result
 echo done
 sleep 100
