@@ -1,0 +1,10 @@
+pkg_src_update_summary incrementally updates summary about all
+packages in pkgsrc source tree.
+
+Algorithm. 1) pkg_src_update_summary quickly obtains micro summary
+information about all packages from pkgsrc source tree, "micro" means
+PKGNAME and PKGPATH fields only.  2) comparing summary_filename and
+micro summary collected in step 1 by PKGNAME field.  3) copying
+summary from summary_filename about unchanged packages.  4) collecting
+full summary information about all changed and new packages.  5) new
+summary = 3+4
