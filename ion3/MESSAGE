@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/02/14 12:23:34 tnn2 Exp $
+
+If this package is older than 28 days, it may not be the latest version of
+Ion3. The author does not support old and/or obsoleted versions.
+Please send any bug reports to the pkgsrc maintainer, not the author.
+===========================================================================
