@@ -1,0 +1,20 @@
+It's suggested to run fdm as non privileged user, else
+create an ad-hoc user as in the following example:
+
+   # useradd -d /nonexistent -s /sbin/nologin -g=uid -u 30 _fdm
+
+You can start a new configuration file by writing only
+few lines (no filtering):
+
+   set maximum-size 128M
+   action "maildrop" pipe "/usr
+   account ....
+   match all action "maildrop"
+
+Also you may want to run it every half hour or so. To
+do it just add the following line to the crontab(5):
+
+*/30    *       *       *       *       /usr/local/bin/fdm -l fetch
+
+Read more to the fdm(1) and fdm.conf(5) manual pages.
+
