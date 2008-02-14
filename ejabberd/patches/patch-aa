@@ -1,29 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/11/30 05:48:06 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/14 12:21:08 sebpierrel Exp $
 
---- src/Makefile.in.orig	2006-04-01 10:06:36.000000000 -0600
-+++ src/Makefile.in
-@@ -34,12 +34,12 @@ BEAMS = $(SOURCES:.erl=.beam)
+# pkgsrc 
+
+--- src/Makefile.in.orig	2008-01-16 12:33:27.000000000 +0200
++++ src/Makefile.in	2008-02-11 13:38:21.000000000 +0200
+@@ -50,13 +50,13 @@
  
- DESTDIR = 
+ DESTDIR =
  
--EJABBERDDIR = $(DESTDIR)@prefix@/var/lib/ejabberd
-+EJABBERDDIR = $(DESTDIR)@prefix@/lib/erlang/lib/@DISTNAME@
+ EJABBERDDIR = $(DESTDIR)@prefix@/var/lib/ejabberd
  BEAMDIR = $(EJABBERDDIR)/ebin
  PRIVDIR = $(EJABBERDDIR)/priv
  SODIR = $(PRIVDIR)/lib
  MSGSDIR = $(PRIVDIR)/msgs
 -LOGDIR = $(DESTDIR)@prefix@/var/log/ejabberd
-+LOGDIR = $(DESTDIR)/@JABBERD_LOGDIR@
 -ETCDIR = $(DESTDIR)@prefix@/etc/ejabberd
++LOGDIR = $(DESTDIR)/@JABBERD_LOGDIR@
 +ETCDIR = $(DESTDIR)/@PKG_SYSCONFDIR@
+ SBINDIR = $(DESTDIR)@prefix@/sbin
  
- ASN_FLAGS = -bber_bin +der +compact_bit_string +optimize +noobj
-@@ -82,7 +82,7 @@ install: all
- 	install -d $(MSGSDIR)
- 	install -m 644 msgs/*.msg $(MSGSDIR)
- 	install -d $(ETCDIR)
--	install -b -m 644 ejabberd.cfg.example $(ETCDIR)/ejabberd.cfg
-+	install -b -m 644 ejabberd.cfg.example @EGDIR@
- 	install -d $(LOGDIR)
- 
- clean: clean-recursive clean-local
+ ifeq ($(shell uname),Darwin)

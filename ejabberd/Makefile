@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/14 12:21:07 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
-DISTNAME=	ejabberd-1.1.3
-PKGREVISION=	1
+DISTNAME=	ejabberd-2.0.0-rc1
+PKGNAME=	ejabberd-2.0.0rc1
+#PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.jabber.ru/files/ejabberd/ \
-		http://www.process-one.net/en/projects/ejabberd/download/${PKGVERSION}/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0-rc1/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://ejabberd.jabber.ru/
+HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 
 CONFLICTS+=	jabberd2-[0-9]*
@@ -36,45 +36,84 @@ CONFIGURE_ARGS+=	--with-erlang=${BUILDLINK_PREFIX.erlang}
 
 CONFIGURE_DIRS+=	src
 BUILD_DIRS+=	src
-# WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-MAKE_ENV=	PKGVERSION=${PKGVERSION:Q}
-PLIST_SUBST+=	DISTNAME=${DISTNAME:Q} PKGBASE=${PKGBASE:Q}
+WRKSRC=		${WRKDIR}/ejabberd-2.0.0
 
-FILES_SUBST+=	DISTNAME=${DISTNAME:Q} PKGBASE=${PKGBASE:Q}
-FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-FILES_SUBST+=	EGDIR=${EGDIR:Q}
+MAKE_ENV=	PKGVERSION=${PKGVERSION}
+PLIST_SUBST+=	DISTNAME=${DISTNAME} PKGBASE=${PKGBASE}
+
+FILES_SUBST+=	DISTNAME=${DISTNAME} PKGBASE=${PKGBASE}
+FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=	EGDIR=${EGDIR}
 
 RCD_SCRIPTS=	ejabberd
 
-.include "../../wip/jabberd/transports.mk"
+
+BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
+BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_SPOOLDIR EJABBERD_TRANSDIR
+BUILD_DEFS+=		EJABBERD_EXDIR
+PKG_SYSCONFSUBDIR=	ejabberd
+
+.include "../../mk/bsd.prefs.mk"
+EJABBERD_USER=		ejabberd
+EJABBERD_GROUP=		ejabberd
+EJABBERD_PIDDIR=	var/run/ejabberd
+EJABBERD_LOGDIR=	var/log/ejabberd
+EJABBERD_LIBDIR=	var/lib/ejabberd
+EJABBERD_SPOOLDIR=	var/lib/ejabberd/db
+EJABBERD_TRANSDIR=	libexec/ejabber-transports
+EJABBERD_EXDIR=		share/examples/ejabber
+
+OWN_DIRS+=		${EJABBERD_PIDDIR}
+OWN_DIRS+=		${EJABBERD_LOGDIR}
+OWN_DIRS+=		${EJABBERD_LIBDIR}
+OWN_DIRS+=		${EJABBERD_SPOOLDIR}
+
+FILES_SUBST+=		JABBERD_USER=${EJABBERD_USER}
+#FILES_SUBST+=		EJABBERD_GROUP=${EJABBERD_GROUP}
+#FILES_SUBST+=		EJABBERD_PIDDIR=${EJABBERD_PIDDIR}
+FILES_SUBST+=		JABBERD_LOGDIR=${EJABBERD_LOGDIR}
+FILES_SUBST+=		JABBERD_SPOOLDIR=${EJABBERD_SPOOLDIR}
+#FILES_SUBST+=		EJABBERD_TRANSDIR=${EJABBERD_TRANSDIR}
+
+PLIST_SUBST+=		EJABBERD_EXDIR=${EJABBERD_EXDIR}
+
+PKG_GROUPS+=		${EJABBERD_GROUP}
+PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
+
+EGDIR=		${PREFIX}/${EJABBERD_EXDIR}
+
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}/api
+INSTALLATION_DIRS+=	${EGDIR}
 
 CONF_FILES=	${EGDIR}/ejabberd.inetrc ${PKG_SYSCONFDIR}/ejabberd.inetrc
 CONF_FILES+=	${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
 CONF_FILES+=	${EGDIR}/ejabberd.defaults ${PKG_SYSCONFDIR}/ejabberd.defaults
 
+.for d in ${OWN_DIRS}
+OWN_DIRS_PERMS+=	${d} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
+.endfor
+
 post-install:
-#	${INSTALL_SCRIPT} ${WRKDIR}/ejabberd ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/ejabberdctl ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/ejabberd.defaults ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/ejabberd.cfg.example ${EGDIR}/ejabberd.cfg
 	${INSTALL_DATA} ${FILESDIR}/ejabberd.inetrc ${EGDIR}
 
-#	${FIND} ${PREFIX}/lib/erlang/lib/${DISTNAME} -type f -print0 | ${XARGS} -0 ${CHMOD} ${SHAREMODE}
-#	${FIND} ${PREFIX}/lib/erlang/lib/${DISTNAME} -type f -print0 | ${XARGS} -0 ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${DISTNAME}
+	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${DISTNAME}
+	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${PREFIX}/share/doc/${DISTNAME}
+	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${PREFIX}/share/doc/${DISTNAME}/api
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${DISTNAME}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/${DISTNAME}
-	# don't really need the make file, do we?
-	${RM} ${PREFIX}/share/doc/${DISTNAME}/Makefile
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Makefile.in
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
 
 .include "../../converters/libiconv/buildlink3.mk"

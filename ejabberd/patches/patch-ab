@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/11/30 05:48:06 schnoebe Exp $
+$NetBSD: patch-ab,v 1.2 2008/02/14 12:21:08 sebpierrel Exp $
 
---- src/mod_last.erl.orig
-+++ src/mod_last.erl
-@@ -102,7 +102,16 @@
+# taken from v1.1.3 NetBSD pkg
+
+--- src/mod_last.erl.orig	2008-01-16 12:33:27.000000000 +0200
++++ src/mod_last.erl	2008-02-11 13:46:13.000000000 +0200
+@@ -133,7 +133,16 @@
  		  sub_el = [{xmlelement, "query",
  			     [{"xmlns", ?NS_LAST},
  			      {"seconds", integer_to_list(Sec)}],

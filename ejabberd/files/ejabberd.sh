@@ -1,10 +1,17 @@
-#! @RC_SCRIPTS_SHELL@
+#!/bin/sh
+#
+# $NetBSD: ejabberd.sh,v 1.2 2008/02/14 12:21:08 sebpierrel Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
-
+#
 # PROVIDE: ejabberd
 # REQUIRE: DAEMON
 # BEFORE: LOGIN
 # KEYWORD: shutdown
+
+if [ -f /etc/rc.subr ]
+then
+        . /etc/rc.subr
+fi
 
 name="ejabberd"
 rcvar=${name}
@@ -18,12 +25,12 @@ status_cmd="ejabberd_status"
 stop_cmd="ejabberd_stop"
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:@PREFIX@/bin:@PREFIX@/sbin
-EJABBERD=@PREFIX@/bin/ejabberd
-EJABBERDCTL=@PREFIX@/bin/ejabberdctl
+EJABBERD=@PREFIX@/sbin/ejabberd
+EJABBERDCTL=@PREFIX@/sbin/ejabberdctl
 
 ejabberd_status()
 {
-    su $ejabberd_user -c "$EJABBERDCTL ejabberd@`hostname -s` status >/dev/null"
+    su -m $ejabberd_user -c "$EJABBERDCTL status >/dev/null"
 }
 
 ejabberd_start()
@@ -33,7 +40,7 @@ ejabberd_start()
 	echo " already running."
 	exit 1
     else
-	su $ejabberd_user -c "$EJABBERD -noshell -detached"
+	su -m $ejabberd_user -c "$EJABBERDCTL start"
     fi
     echo "$name."
 }
@@ -41,7 +48,7 @@ ejabberd_start()
 ejabberd_stop()
 {
     echo -n "Stopping $name: "
-    if su $ejabberd_user -c "$EJABBERDCTL ejabberd@`hostname -s` stop"; then
+    if su -m $ejabberd_user -c "$EJABBERDCTL stop"; then
 	cnt=0
         while ejabberd_status; do
             cnt=`expr $cnt + 1`
@@ -62,7 +69,7 @@ ejabberd_reload()
 {
     echo -n "Restarting $name: "
     if ejabberd_status; then
-        su $ejabberd_user -c "$EJABBERDCTL ejabberd@`hostname -s` restart"
+        su -m $ejabberd_user -c "$EJABBERDCTL restart"
     else
         ejabberd_start
     fi
