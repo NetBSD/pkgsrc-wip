@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2789 2008/02/13 22:29:28 shattered Exp $
+# $Id: Makefile,v 1.2790 2008/02/14 15:30:17 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -793,6 +793,7 @@ SUBDIR+=	libdmx
 SUBDIR+=	libdrm
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
+SUBDIR+=	libevent
 SUBDIR+=	libgadu
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgksu
