@@ -1,0 +1,193 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+. pipestatus
+
+############################################################
+# user settable variables
+if test -z "$PKGSRCDIR"; then
+    PKGSRCDIR=/usr/pkgsrc
+fi
+
+if test -z "$BMAKE"; then
+    BMAKE=make
+fi
+
+############################################################
+usage (){
+    cat <<EOF
+pkg_src_update_summary - efficiently updates
+package summary from pkgsrc/ tree (pkg_info -X format)
+
+usage: pkg_src_update_summary summary_file
+EOF
+}
+
+if test $# -ne 1; then
+    usage
+    exit 1
+fi
+
+summary=$1
+shift
+
+############################################################
+cd $PKGSRCDIR
+
+new_summary=$summary.new
+
+tmp_dir="/tmp/pkg_src_update_summary.$$"
+trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+############################################################
+#### get all available packages
+
+enrich_Makefile (){
+    cat <<EOF
+.PHONY: my-show-var
+my-show-var:
+	@echo \${\${VARNAME}:Q}
+EOF
+
+    cat Makefile
+}
+
+get_SUBDIR (){
+    subdir_fn=$tmp_dir/subdirs
+    runpipe0 \
+	enrich_Makefile '|' \
+	${BMAKE} -f - my-show-var VARNAME=SUBDIR > $subdir_fn
+    cat $subdir_fn
+}
+
+prepand (){
+    awk -v prefix="$1" '{print prefix $0}'
+}
+
+list_all_packages (){
+    categories="`get_SUBDIR`"
+    for c in $categories; do
+	(
+	    cd $c &&
+	    runpipe_re '0 0 (0|141)' \
+		get_SUBDIR '|' \
+		space_to_NL '|' \
+		prepand "$c/"
+	)
+    done
+}
+
+space_to_NL () {
+    tr ' ' '
+'
+}
+
+allpkgs_fn=$tmp_dir/allpkgs
+list_all_packages | head -100 > $allpkgs_fn
+
+############################################################
+#### process packages
+
+# micro_summary
+if ! test -f $summary; then
+    runpipe0 cat $allpkgs_fn '|' pkg_src_summary > $summary
+    exit $?
+fi
+
+# micro summary
+micsum_fn=$tmp_dir/micsum
+pkg_src_micro_summary < $allpkgs_fn >$micsum_fn
+
+# summary against microsummary
+cmp_fn=$tmp_dir/cmp
+pkg_cmp_summary $summary $micsum_fn >$cmp_fn
+
+# skipping removed and repeated packages (- and <NUM>)
+rem_pkgs_fn=$tmp_dir/rempkgs
+awk '$1 ~ /^[-0-9]/ {print $2}' $cmp_fn > $rem_pkgs_fn
+
+skip_removed_pkgs (){
+awk -v rem_pkgs_fn=$rem_pkgs_fn '
+BEGIN {
+   while (0 < (ret = getline < rem_pkgs_fn)){
+      rem_pkgs [$1] = 1
+   }
+
+   if (ret < 0){
+      printf "readoing error from" rem_pkgs_fn > "/dev/stderr"
+   }
+}
+
+$0 ~ /^PKGNAME=/ {
+   pkgbase = substr($0, 9)
+   sub(/-[^-]+$/, "", pkgbase)
+   skip = (pkgbase in rem_pkgs)
+}
+
+!skip {
+   print
+}
+
+' "$@"
+}
+
+skip_removed_pkgs $summary > $new_summary
+
+# add new/updated/changed packages
+changed_pkgs_fn=$tmp_dir/chained_pkgs
+awk '$1 ~ /^[+<>?0-9]/ {print $2}' $cmp_fn > $changed_pkgs_fn
+
+pkgpath_fn=$tmp_dir/pkgpaths
+
+extract_pkgpath (){
+awk -v changed_pkgs_fn=$changed_pkgs_fn '
+BEGIN {
+   while (0 < (ret = getline < changed_pkgs_fn)){
+      pkgs [$1] = 1
+   }
+
+   if (ret < 0){
+      printf "readoing error from" changed_pkgs_fn > "/dev/stderr"
+   }
+}
+
+$0 ~ /^PKGNAME=/ {
+   pkgbase = substr($0, 9)
+   sub(/-[^-]+$/, "", pkgbase)
+   interesting = (pkgbase in pkgs)
+}
+
+$0 ~ /^PKGPATH=/ && interesting {
+   print substr($0, 9)
+}
+' "$@"
+}
+
+extract_pkgpath $micsum_fn > $pkgpath_fn
+pkg_src_summary < $pkgpath_fn >> $new_summary
+
+#
+echo done
+sleep 100
