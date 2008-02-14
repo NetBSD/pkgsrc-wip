@@ -166,6 +166,10 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 			continue
 		}
 
+		if ($1 == ".undef"){
+			badvar [$2] = 1
+		}
+
 		if (match ($1, /^[[:alnum:]_.]+[?:]?=/)) {
 			varname = $1
 			sub(/[?:]?=.*$/, "", varname)
