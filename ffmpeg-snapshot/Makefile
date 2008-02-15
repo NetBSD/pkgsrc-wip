@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/04 14:18:24 cetrox Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/15 13:20:21 cetrox Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
@@ -28,10 +28,7 @@ REPLACE_PERL+=	doc/texi2pod.pl
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
-USE_LIBTOOL=	YES
-
-CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
-		${PKG_SYSCONFDIR}/ffserver.conf
+#USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 

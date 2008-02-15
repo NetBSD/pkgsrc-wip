@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2007/03/27 23:51:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/02/15 13:20:22 cetrox Exp $
 bin/ffmpeg
 bin/ffserver
 include/ffmpeg/adler32.h
 include/ffmpeg/avcodec.h
+include/ffmpeg/avdevice.h
 include/ffmpeg/avformat.h
 include/ffmpeg/avio.h
+include/ffmpeg/avstring.h
 include/ffmpeg/avutil.h
 include/ffmpeg/base64.h
 include/ffmpeg/common.h
+include/ffmpeg/crc.h
 include/ffmpeg/fifo.h
-include/ffmpeg/integer.h
 include/ffmpeg/intfloat_readwrite.h
 include/ffmpeg/log.h
 include/ffmpeg/lzo.h
@@ -20,14 +22,15 @@ include/ffmpeg/opt.h
 include/ffmpeg/random.h
 include/ffmpeg/rational.h
 include/ffmpeg/rgb2rgb.h
-include/ffmpeg/rtp.h
 include/ffmpeg/rtsp.h
 include/ffmpeg/rtspcodes.h
+include/ffmpeg/sha1.h
 include/ffmpeg/swscale.h
-lib/libavcodec.la
-lib/libavformat.la
-lib/libavutil.la
-lib/libswscale.la
+lib/libavcodec.a
+lib/libavdevice.a
+lib/libavformat.a
+lib/libavutil.a
+lib/libswscale.a
 lib/pkgconfig/libavcodec.pc
 lib/pkgconfig/libavformat.pc
 lib/pkgconfig/libavutil.pc

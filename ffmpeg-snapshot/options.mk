@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.6 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: options.mk,v 1.7 2008/02/15 13:20:22 cetrox Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg-snapshot
-PKG_SUPPORTED_OPTIONS=	old-dist mmx i686 gsm mp3lame libogg xvid vorbis faad \
+PKG_SUPPORTED_OPTIONS=	old-dist mmx i686 gsm mp3lame xvid vorbis faad \
 			faad faac x264 a52
-PKG_SUGGESTED_OPTIONS=	mp3lame libogg a52
+PKG_SUGGESTED_OPTIONS=	mp3lame a52 faad i686 mmx xvid
 
 .include "../../mk/bsd.options.mk"
 
@@ -29,13 +29,8 @@ CONFIGURE_ARGS+=	--enable-libmp3lame
 .include "../../audio/lame/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibogg)
-CONFIGURE_ARGS+=	--enable-libogg
-.include "../../multimedia/libogg/buildlink3.mk"
-.endif
-
 .if !empty(PKG_OPTIONS:Mxvid)
-CONFIGURE_ARGS+=	--enable-xvid
+CONFIGURE_ARGS+=	--enable-libxvid
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .endif
 
@@ -55,7 +50,7 @@ CONFIGURE_ARGS+=	--enable-libfaac
 .endif
 
 .if !empty(PKG_OPTIONS:Mx264)
-CONFIGURE_ARGS+=	--enable-x264
+CONFIGURE_ARGS+=	--enable-libx264
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .endif
 
