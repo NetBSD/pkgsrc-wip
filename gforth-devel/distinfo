@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/15 20:13:11 asau Exp $
+
+SHA1 (gforth-0.6.9-20070604.tar.gz) = 1d5679b9fcd967c2062e487341ee6f273059a3b1
+RMD160 (gforth-0.6.9-20070604.tar.gz) = 8169467b11cd43058fd70d56984c64a809af8f6f
+Size (gforth-0.6.9-20070604.tar.gz) = 2251214 bytes
+SHA1 (patch-aa) = eec728a00359672d984f91c8d557d229370933b6
