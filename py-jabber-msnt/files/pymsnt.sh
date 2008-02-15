@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pymsnt.sh,v 1.6 2006/02/21 20:30:06 schnoebe Exp $
+# $NetBSD: pymsnt.sh,v 1.7 2008/02/15 14:22:10 sebpierrel Exp $
 #
 #   startup script for the PyMSNt MSN transport for Jabber
 #
@@ -13,16 +13,16 @@ rcvar=$name
 command=@PREFIX@/bin/PyMSNt
 command_interpreter="@PYTHONBIN@"
 command_args="-b"	# background/daemonize
-pymsnt_user="@JABBERD_USER@"
-pidfile="@JABBERD_PIDDIR@/${name}.pid"
-logfile="@JABBERD_LOGDIR@/${name}.log"
+pymsnt_user="@JABBER_USER@"
+pidfile="@JABBER_PIDDIR@/${name}.pid"
+logfile="@JABBER_LOGDIR@/${name}.log"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 
 ensure_piddir()
 {
-	mkdir -p @JABBERD_PIDDIR@
-	chown @JABBERD_USER@ @JABBERD_PIDDIR@
+	mkdir -p @JABBER_PIDDIR@
+	chown @JABBER_USER@ @JABBER_PIDDIR@
 }
 
 remove_pidfile()
