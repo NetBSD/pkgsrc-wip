@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2008/02/11 11:58:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.40 2008/02/15 11:14:34 obache Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -78,6 +78,7 @@ share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.2
+share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.3
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -1456,14 +1457,10 @@ share/emacs/${PKGVERSION}/lisp/epa-file.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-file.elc
 share/emacs/${PKGVERSION}/lisp/epa-mail.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-mail.elc
-share/emacs/${PKGVERSION}/lisp/epa-setup.el.gz
-share/emacs/${PKGVERSION}/lisp/epa-setup.elc
 share/emacs/${PKGVERSION}/lisp/epa.el.gz
 share/emacs/${PKGVERSION}/lisp/epa.elc
 share/emacs/${PKGVERSION}/lisp/epg-config.el.gz
 share/emacs/${PKGVERSION}/lisp/epg-config.elc
-share/emacs/${PKGVERSION}/lisp/epg-package-info.el.gz
-share/emacs/${PKGVERSION}/lisp/epg-package-info.elc
 share/emacs/${PKGVERSION}/lisp/epg.el.gz
 share/emacs/${PKGVERSION}/lisp/epg.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-autoaway.el.gz
@@ -2284,7 +2281,8 @@ share/emacs/${PKGVERSION}/lisp/net/ange-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/ange-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/browse-url.el.gz
 share/emacs/${PKGVERSION}/lisp/net/browse-url.elc
-share/emacs/${PKGVERSION}/lisp/net/dbus.el
+share/emacs/${PKGVERSION}/lisp/net/dbus.el.gz
+share/emacs/${PKGVERSION}/lisp/net/dbus.elc
 share/emacs/${PKGVERSION}/lisp/net/dig.el.gz
 share/emacs/${PKGVERSION}/lisp/net/dig.elc
 share/emacs/${PKGVERSION}/lisp/net/dns.el.gz
