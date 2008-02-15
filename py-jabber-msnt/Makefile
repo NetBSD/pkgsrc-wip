@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2008/02/15 03:09:06 schnoebe Exp $
+# $NetBSD: Makefile,v 1.22 2008/02/15 03:12:53 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
-MASTER_SITES=		http://delx.cjb.net/pymsnt/tarballs/
+MASTER_SITES=		http://delx.net.au/projects/pymsnt/tarballs/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://delx.cjb.net/pymsnt/
+HOMEPAGE=		http://delx.net.au/projects/pymsnt
 COMMENT=		Transport connecting Jabber to the MSN network
 
 #
