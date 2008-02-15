@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
+$NetBSD: patch-aa,v 1.3 2008/02/15 14:37:52 sebpierrel Exp $
 
 --- config_example.xml.orig	2006-03-05 19:38:25.000000000 -0600
 +++ config_example.xml
@@ -7,12 +7,12 @@ $NetBSD: patch-aa,v 1.2 2006/05/06 02:37:14 schnoebe Exp $
  	<!-- The location of the spool directory.. if relative, relative to -->
  	<!-- this directory.  Do not include the jid of the transport. -->
 -	<spooldir>.</spooldir>
-+	<spooldir>@JABBERD_SPOOLDIR@</spooldir>
++	<spooldir>@JABBER_SPOOLDIR@</spooldir>
  
  	<!-- The location of the PID file.. if relative, relative to this dir. -->
  	<!-- Comment out if you do not want a pid file -->
 -	<pid>PyICQt.pid</pid>
-+	<pid>@JABBERD_PIDDIR@/pyicqt.pid</pid>
++	<pid>@JABBER_PIDDIR@/pyicqt.pid</pid>
  
  	<!-- The IP address of the main Jabberd server -->
  	<mainServer>127.0.0.1</mainServer>

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pyaimt.sh,v 1.2 2006/04/15 04:10:02 schnoebe Exp $
+# $NetBSD: pyaimt.sh,v 1.3 2008/02/15 14:40:58 sebpierrel Exp $
 #
 #   startup script for the PyAIMt AOL transport for Jabber
 #   uses the twistd application engine
@@ -14,17 +14,17 @@ rcvar=$name
 command=@PREFIX@/bin/PyAIMt
 command_interpreter="@PYTHONBIN@"
 required_files="@PKG_SYSCONFDIR@/pyaimt.xml"
-pyaimt_user="@JABBERD_USER@"
-pidfile="@JABBERD_PIDDIR@/${name}.pid"
-logfile="@JABBERD_LOGDIR@/${name}.log"
+pyaimt_user="@JABBER_USER@"
+pidfile="@JABBER_PIDDIR@/${name}.pid"
+logfile="@JABBER_LOGDIR@/${name}.log"
 command_args="-b -l ${logfile}"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 
 ensure_piddir()
 {
-	mkdir -p @JABBERD_PIDDIR@
-	chown @JABBERD_USER@ @JABBERD_PIDDIR@
+	mkdir -p @JABBER_PIDDIR@
+	chown @JABBER_USER@ @JABBER_PIDDIR@
 }
 
 remove_pidfile()
