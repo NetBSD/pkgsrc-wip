@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/12/20 01:06:57 schnoebe Exp $
-${TRANSPORTDIR}/.svn/entries
+@comment $NetBSD: PLIST,v 1.10 2008/02/15 03:09:06 schnoebe Exp $
 ${TRANSPORTDIR}/data/defaultJabberAvatar.png
 ${TRANSPORTDIR}/data/defaultMSNAvatar.png
 ${TRANSPORTDIR}/src/avatar.py
@@ -18,7 +17,6 @@ ${TRANSPORTDIR}/src/legacy/__init__.py
 ${TRANSPORTDIR}/src/legacy/glue.py
 ${TRANSPORTDIR}/src/legacy/msn/__init__.py
 ${TRANSPORTDIR}/src/legacy/msn/msn.py
-${TRANSPORTDIR}/src/legacy/msn/msnft.py
 ${TRANSPORTDIR}/src/legacy/msn/msnp11chl.py
 ${TRANSPORTDIR}/src/legacy/msn/msnw.py
 ${TRANSPORTDIR}/src/legacy/msn/test_msn.py
@@ -28,7 +26,6 @@ ${TRANSPORTDIR}/src/misciq.py
 ${TRANSPORTDIR}/src/register.py
 ${TRANSPORTDIR}/src/session.py
 ${TRANSPORTDIR}/src/socks5.py
-${TRANSPORTDIR}/src/svninfo.py
 ${TRANSPORTDIR}/src/throttle.py
 ${TRANSPORTDIR}/src/twistfix/README
 ${TRANSPORTDIR}/src/twistfix/__init__.py
@@ -63,5 +60,4 @@ share/examples/rc.d/pymsnt
 @dirrm ${TRANSPORTDIR}/src/twistfix
 @dirrm ${TRANSPORTDIR}/src
 @dirrm ${TRANSPORTDIR}/data
-@dirrm ${TRANSPORTDIR}/.svn
 @dirrm ${TRANSPORTDIR}

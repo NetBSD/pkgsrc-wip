@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2007/07/24 15:52:37 schnoebe Exp $
+# $NetBSD: Makefile,v 1.21 2008/02/15 03:09:06 schnoebe Exp $
 
-DISTNAME=		pymsnt-0.11.2
+DISTNAME=		pymsnt-0.11.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://delx.cjb.net/pymsnt/tarballs/
@@ -51,8 +51,7 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
 	cd ${WRKSRC} && \
 	for i in `find src data \\( \\( -type f -name '*.orig' -o \
-		    -type d -name .svn \\) -prune \\) -o -type f -print` \
-		.svn/entries ;\
+		    -type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\

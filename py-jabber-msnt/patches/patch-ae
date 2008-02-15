@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2007/04/07 18:45:55 schnoebe Exp $
+$NetBSD: patch-ae,v 1.5 2008/02/15 03:09:06 schnoebe Exp $
 
---- src/main.py.orig	2006-10-17 23:40:55.000000000 -0500
+--- src/main.py.orig	2008-02-08 07:55:07.000000000 -0600
 +++ src/main.py
-@@ -37,7 +37,7 @@ twistfix.main()
+@@ -30,7 +30,7 @@ twistfix.main()
  # Must load config before everything else
  import config
  import xmlconfig
@@ -11,38 +11,3 @@ $NetBSD: patch-ae,v 1.4 2007/04/07 18:45:55 schnoebe Exp $
  configOptions = {}
  opts, args = getopt.getopt(sys.argv[1:], "bc:o:dDgtlp:h", ["background", "config=", "option=", "debug", "Debug", "garbage", "traceback", "log=", "pid=", "help"])
  for o, v in opts:
-@@ -332,14 +332,14 @@ class App:
- 		if config.pid and os.name != "posix":
- 			config.pid = ""
- 		if config.pid:
--			twistd.checkPID(config.pid)
-+			_twistd_unix.checkPID(config.pid)
- 
- 		# Do any auto-update stuff
- 		housekeep.init()
- 		
- 		# Daemonise the process and write the PID file
- 		if config.background and os.name == "posix":
--			twistd.daemonize()
-+			_twistd_unix.daemonize()
- 		if config.pid:
- 			self.writePID()
- 
-@@ -369,7 +369,7 @@ class App:
- 		# Keep the transport running for another 3 seconds
- 		def cb(ignored=None):
- 			if config.pid:
--				twistd.removePID(config.pid)
-+				_twistd_unix.removePID(config.pid)
- 		d = Deferred()
- 		d.addCallback(cb)
- 		reactor.callLater(3.0, d.callback, None)
-@@ -390,7 +390,7 @@ if os.name == "posix":
- 	# Set SIGHUP to reload the config file & close & open debug file
- 	signal.signal(signal.SIGHUP, SIGHUPstuff)
- 	# Load some scripts for PID and daemonising
--	from twisted.scripts import twistd
-+	from twisted.scripts import _twistd_unix
- 
- 
- def main():
