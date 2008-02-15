@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2007/07/24 16:18:25 schnoebe Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/15 14:09:38 sebpierrel Exp $
 
 DISTNAME=		pyicq-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
-MASTER_SITES=		http://www.blathersource.org/download.php/pyicq-t/
+MASTER_SITES=		http://pyicqt.googlecode.com/files/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://pyicq-t.blathersource.org/
+HOMEPAGE=		http://code.google.com/p/pyicqt/
 COMMENT=		Transport connecting Jabber to the ICQ IM network
 
 #

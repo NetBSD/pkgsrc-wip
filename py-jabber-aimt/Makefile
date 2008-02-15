@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2007/07/24 15:56:59 schnoebe Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/15 14:09:38 sebpierrel Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
-MASTER_SITES=		http://www.blathersource.org/download.php/pyaim-t/
+MASTER_SITES=		http://pyaimt.googlecode.com/files/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://pyaim-t.blathersource.org/
+HOMEPAGE=		http://code.google.com/p/pyaimt/
 COMMENT=		Transport connecting Jabber to the AOL IM network
 
 #
