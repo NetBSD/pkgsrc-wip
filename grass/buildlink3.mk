@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/02/16 01:29:09 lexort Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GRASS_BUILDLINK3_MK:=	${GRASS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	grass
 
 .if !empty(GRASS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.grass+=	grass>=6.0.0
-BUILDLINK_ABI_DEPENDS.grass?=	grass>=6.0.2nb1
+BUILDLINK_ABI_DEPENDS.grass?=	grass>=6.0.2nb2
 BUILDLINK_PKGSRCDIR.grass?=	../../wip/grass
 .endif	# GRASS_BUILDLINK3_MK
 

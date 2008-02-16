@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/16 01:29:08 lexort Exp $
 #
 
 VERSION=		1.0.3
 PKGNAME=		postgresql80-postgis-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		databases geography
 
 MAINTAINER=		mchittur@cs.nmsu.edu

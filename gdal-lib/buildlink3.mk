@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/08/24 18:48:22 brook1 Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/02/16 01:29:08 lexort Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDAL_LIB_BUILDLINK3_MK:=	${GDAL_LIB_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gdal-lib
 
 .if !empty(GDAL_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=1.3.1
+BUILDLINK_ABI_DEPENDS.gdal-lib?=	gdal-lib>=1.3.1nb1
 BUILDLINK_PKGSRCDIR.gdal-lib?=	../../geography/gdal-lib
 .endif	# GDAL_LIB_BUILDLINK3_MK
 
