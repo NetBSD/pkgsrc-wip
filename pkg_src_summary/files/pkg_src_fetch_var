@@ -158,8 +158,8 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 	while ((ret = getline < fn) > 0){
 		sub(/^[ \t]+/, "")
 
-		if ($1 ~ /[[:alnum:]_.]+$/ && $2 ~ /=/){
-			sub(/  +/, "")
+		if ($1 ~ /^[[:alnum:]_.]+$/ && $2 ~ /=/){
+			sub(/[ \t]+/, "")
 		}
 
 		if ($1 ~ /[[:alnum:]_.]+[!+?]=/){
