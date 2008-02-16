@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2791 2008/02/14 19:03:12 koifren Exp $
+# $Id: Makefile,v 1.2792 2008/02/16 19:42:43 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1393,6 +1393,7 @@ SUBDIR+=	pkg_online
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
 SUBDIR+=	pkg_src_summary
+SUBDIR+=	pkg_src_update_summary
 SUBDIR+=	pkg_summary4view
 SUBDIR+=	pkg_update_summary
 SUBDIR+=	pkgmanager
