@@ -21,6 +21,78 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+############################################################
+# dewey function
+BEGIN {
+	__dewey_maxf = 9 # 8(YYYYMMDD) + 1
+	for (i=0; i <= 26; ++i){
+		# I don't know anything about EBCDIC :-P :-)
+		char2dotver [sprintf("%c", 97 + i)] = "." i+1
+	}
+}
+
+function chars (n, c,            s){
+	s = ""
+
+	while (n-- > 0){
+		s = s c
+	}
+
+	return s
+}
+
+function dewey2str (ver,        left,right,sym,num,last){
+	ver = "." ver
+
+	gsub(/alpha/, "A", ver)
+	gsub(/beta/, "B", ver)
+	gsub(/rc/, "C", ver)
+	gsub(/pre/, "C", ver)
+	gsub(/nb/, "Z", ver)
+	gsub(/pl/, ".", ver)
+
+	if (ver ~ /[qwertyuiopasdfghjklzxcvbnm]$/){
+		last = substr(ver, length(ver), 1)
+		ver = substr(ver, 1, length(ver)-1) char2dotver [last]
+	}
+
+	gsub(/[.]/, "Y" chars(__dewey_maxf, " ") ".", ver)
+
+	while (match(ver, /[ABCZ.][0-9]+/)){
+		left  = substr(ver, 1, RSTART-1)
+		sym   = substr(ver, RSTART, 1)
+		num   = substr(ver, RSTART+1, RLENGTH-1)
+		right = substr(ver, RSTART+RLENGTH)
+
+		num = sprintf("%" __dewey_maxf "s", num)
+
+		if (sym == ".")
+			ver = left "Y" num right
+		else
+			ver = left sym num right
+	}
+
+	return substr(ver "Y", __dewey_maxf + 2)
+}
+
+function cmp_dewey (ver1, ver2,             s1,s2){
+	if (ver1 == ver2){
+		return "="
+	}
+
+	s1 = dewey2str(ver1)
+	s2 = dewey2str(ver2)
+
+	if (s1 < s2)
+		return "<"
+	else if (s1 > s2)
+		return ">"
+	else
+		return "="
+}
+
+############################################################
+# file reading
 BEGIN {
 	last_fn    = ""
 	first_file = 1
@@ -39,58 +111,6 @@ last_fn != FILENAME {
 	}
 
 	last_fn = FILENAME
-}
-
-function cmp_vers (ver1, ver2,           i,arr1,arr2,rev1,rev2,cnt1,cnt2){
-	# nb[0-9]+ suffix
-	if (match(ver1, /nb[0-9]+$/)){
-		rev1 = substr(ver1, RSTART + 2)
-		ver1 = substr(ver1, 1, RSTART - 1)
-	}
-	rev1 += 0
-
-	if (match(ver2, /nb[0-9]+$/)){
-		rev2 = substr(ver2, RSTART + 2)
-		ver2 = substr(ver2, 1, RSTART - 1)
-	}
-	rev2 += 0
-
-	# different in revisions only
-	if (ver1 == ver2){
-		if (rev1 < rev2){
-			return "<"
-		}
-		if (rev1 > rev2){
-			return ">"
-		}
-
-		return "="
-	}
-
-	# split into components
-	cnt1 = split(ver1, arr1, /[.]/)
-	cnt2 = split(ver2, arr2, /[.]/)
-
-	# incompable?
-	if (cnt1 != cnt2)
-		return "?"
-
-	# compare by components
-	for (i=1; i <= cnt1; ++i){
-		if (arr1 [i] ~ /^[0-9]+$/ && arr2 [i] ~ /^[0-9]+$/){
-			arr1 [i] += 0
-			arr2 [i] += 0
-
-			if (arr1 [i] < arr2 [i])
-				return "<"
-			if (arr1 [i] > arr2 [i])
-				return ">"
-		}else if (arr1 [i] != arr2 [i]){
-			return "?"
-		}
-	}
-
-	return "="
 }
 
 $0 ~ /^PKGNAME=/ {
@@ -129,7 +149,7 @@ $0 ~ /^PKGNAME=/ {
 		}
 
 		ver1 = names [pkgbase]
-		res = cmp_vers(ver1, ver)
+		res = cmp_dewey(ver1, ver)
 		print res, pkgbase, ver1, ver
 	}
 
