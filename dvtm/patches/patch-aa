@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/02/16 23:43:05 leot1990 Exp $
+
+--- config.mk.orig	2008-02-09 19:37:23.000000000 +0100
++++ config.mk
+@@ -3,16 +3,14 @@ VERSION = 0.4
+ 
+ # Customize below to fit your system
+ 
+-PREFIX = /usr/local
+-MANPREFIX = ${PREFIX}/share/man
++MANPREFIX = ${PREFIX}/${PKGMANDIR}
+ 
+ INCS = -I. -I/usr/include -I/usr/local/include 
+-LIBS = -lc -lutil -lncurses
+-LIBS_UTF8 = -lc -lutil -lncursesw
++LIBS = -lc -lutil -lncursesw -L/usr/lib -L${PREFIX}/lib
+ 
+-CFLAGS = -std=c99 -Os ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
+-LDFLAGS = -L/usr/lib -L/usr/local/lib ${LIBS}
++CFLAGS += ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
++LDFLAGS += ${LIBS}
+ 
+ DEBUG_CFLAGS = -std=c99 -O0 -g -ggdb ${INCS} -Wall -DVERSION=\"${VERSION}\"
+ 
+-CC = cc
++#CC = cc
