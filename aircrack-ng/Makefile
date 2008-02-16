@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2007/08/19 10:37:02 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/16 19:23:13 tnn2 Exp $
 #
 
-DISTNAME=		aircrack-ng-0.9.1
+DISTNAME=		aircrack-ng-0.9.2
 CATEGORIES=		security
 MASTER_SITES=		http://download.aircrack-ng.org/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://www.aircrack-ng.org/
 COMMENT=		Tools for auditing wireless networks
 
