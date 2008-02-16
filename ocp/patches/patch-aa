@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/02/16 23:31:39 shattered Exp $
+
+--- configure.orig	2006-12-15 20:30:51.000000000 +0000
++++ configure
+@@ -3842,7 +3842,7 @@ fi
+ { echo "$as_me:$LINENO: checking gcc version" >&5
+ echo $ECHO_N "checking gcc version... $ECHO_C" >&6; }
+ cc_version=`( $CC -dumpversion ) 2>&1`
+-if test "$?" -gt 0 || test x$cc_version == x; then
++if test "$?" -gt 0 || test x$cc_version = x; then
+ 	{ { echo "$as_me:$LINENO: error: not found" >&5
+ echo "$as_me: error: not found" >&2;}
+    { (exit 1); exit 1; }; }

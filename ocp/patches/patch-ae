@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/02/16 23:31:39 shattered Exp $
+
+--- stuff/Makefile.orig	2008-01-14 18:49:12.000000000 +0000
++++ stuff/Makefile
+@@ -22,7 +22,7 @@ else
+ poutput_so=console.o poutput-curses.o $(LINUX_OBJ) poutput-keyboard.o pfonts.o poutput.o
+ endif
+ poutput$(LIB_SUFFIX): $(poutput_so)
+-	$(CC) $(SHARED_FLAGS) $(LINUX_LIBS) -o $@ $^ -lncurses $(X11_LIBS)
++	$(CC) $(SHARED_FLAGS) $(LDFLAGS) $(LINUX_LIBS) -o $@ $^ -lncurses $(X11_LIBS)
+ 
+ hardware_so=timer.o irq.o hardware.o freq.o
+ hardware$(LIB_SUFFIX): $(hardware_so)

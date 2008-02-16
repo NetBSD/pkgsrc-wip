@@ -1,0 +1,80 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/16 23:31:39 shattered Exp $
+bin/ocp
+bin/${PKGNAME}
+lib/${PKGNAME}/arctar.so
+lib/${PKGNAME}/arczip.so
+lib/${PKGNAME}/aytype.so
+lib/${PKGNAME}/compat.so
+lib/${PKGNAME}/cphelper.so
+lib/${PKGNAME}/cphlpif.so
+lib/${PKGNAME}/cpiface.so
+lib/${PKGNAME}/devi.so
+lib/${PKGNAME}/devpdisk.so
+lib/${PKGNAME}/devpnone.so
+lib/${PKGNAME}/devposs.so
+lib/${PKGNAME}/devsnone.so
+lib/${PKGNAME}/devsoss.so
+lib/${PKGNAME}/devwmix.so
+lib/${PKGNAME}/devwmixf.so
+lib/${PKGNAME}/devwnone.so
+lib/${PKGNAME}/framelock.so
+lib/${PKGNAME}/fstypes.so
+lib/${PKGNAME}/hardware.so
+lib/${PKGNAME}/keyhelp.so
+lib/${PKGNAME}/libocp.so
+lib/${PKGNAME}/load669.so
+lib/${PKGNAME}/loadams.so
+lib/${PKGNAME}/loaddmf.so
+lib/${PKGNAME}/loadmdl.so
+lib/${PKGNAME}/loadmtm.so
+lib/${PKGNAME}/loadokt.so
+lib/${PKGNAME}/loadptm.so
+lib/${PKGNAME}/loads3m.so
+lib/${PKGNAME}/loadult.so
+lib/${PKGNAME}/mchasm.so
+lib/${PKGNAME}/mcpbase.so
+lib/${PKGNAME}/medialib.so
+lib/${PKGNAME}/mixclip.so
+lib/${PKGNAME}/pfilesel.so
+lib/${PKGNAME}/playay.so
+lib/${PKGNAME}/playgmd.so
+lib/${PKGNAME}/playgmi.so
+lib/${PKGNAME}/playit.so
+lib/${PKGNAME}/playmp2.so
+lib/${PKGNAME}/playogg.so
+lib/${PKGNAME}/playwav.so
+lib/${PKGNAME}/playxm.so
+lib/${PKGNAME}/plrbase.so
+lib/${PKGNAME}/poutput.so
+lib/${PKGNAME}/sets.so
+lib/${PKGNAME}/smpbase.so
+share/doc/${PKGNAME}/html/configuration.html
+share/doc/${PKGNAME}/html/faq.html
+share/doc/${PKGNAME}/html/fileselector.html
+share/doc/${PKGNAME}/html/index.html
+share/doc/${PKGNAME}/html/install.html
+share/doc/${PKGNAME}/html/mdz.html
+share/doc/${PKGNAME}/html/player.html
+share/doc/${PKGNAME}/html/plugin.html
+share/doc/${PKGNAME}/html/specialdrive.html
+share/doc/${PKGNAME}/html/starting.html
+share/doc/${PKGNAME}/html/support.html
+share/doc/${PKGNAME}/html/wap.html
+info/ocp.info.gz
+share/${PKGNAME}/AUTHORS
+share/${PKGNAME}/BUGS
+share/${PKGNAME}/COPYING
+share/${PKGNAME}/CREDITS
+share/${PKGNAME}/KEYBOARD_REMAPS
+share/${PKGNAME}/SUID
+share/${PKGNAME}/TODO
+share/${PKGNAME}/data/ocp.pak
+share/${PKGNAME}/etc/ocp.ini
+@exec ${MKDIR} %D/share/ocp/ultradir
+@dirrm share/ocp/ultradir
+@dirrm share/ocp
+@dirrm share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}
+@exec ${MKDIR} %D/lib/${PKGNAME}/autoload
+@dirrm lib/${PKGNAME}/autoload
+@dirrm lib/${PKGNAME}
