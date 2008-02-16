@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2008/01/29 14:46:23 asau Exp $
+$NetBSD: patch-aa,v 1.4 2008/02/16 18:52:20 asau Exp $
 
---- h/NetBSD.h-orig	2008-01-17 11:51:22.000000000 +0300
-+++ h/NetBSD.h	2008-01-17 11:51:30.000000000 +0300
+--- h/NetBSD.h.orig	1999-12-07 01:44:02.000000000 +0300
++++ h/NetBSD.h	2008-02-16 21:42:28.000000000 +0300
 @@ -29,9 +29,9 @@
      Modified gcl-1.1 for NetBSD 1.0Beta (static linked)
  
@@ -14,13 +14,26 @@ $NetBSD: patch-aa,v 1.3 2008/01/29 14:46:23 asau Exp $
  
  #define ADDITIONAL_FEATURES \
  		     ADD_FEATURE("386BSD");\
-@@ -80,6 +80,9 @@
+@@ -79,12 +79,16 @@
+ /* begin setup alternate signal stack */
  #define SIG_STACK_SIZE SIGSTKSZ
  #define SETUP_SIG_STACK \
- { static struct sigaltstack estack ; \
-+  /* copied from powerpc-macosx.h -- ASau */ \
-+static double estack_buf [SIG_STACK_SIZE];             \
-+bzero(estack_buf, sizeof(estack_buf));                 \
-   estack.ss_size = sizeof(estack_buf) ; \
-   estack.ss_flags = 0; \
-   estack.ss_base = (char *) &estack_buf[SIG_STACK_SIZE-1]; \
+-{ static struct sigaltstack estack ; \
+-  estack.ss_size = sizeof(estack_buf) ; \
+-  estack.ss_flags = 0; \
+-  estack.ss_base = (char *) &estack_buf[SIG_STACK_SIZE-1]; \
+-  if (sigaltstack(&estack, (struct sigaltstack *)0) < 0) \
+-               perror("sigaltstack");} \
++	{ static stack_t estack ; /* in <sys/sigtypes.h> */		\
++		/* copied from powerpc-macosx.h -- ASau */		\
++		static double estack_buf [SIG_STACK_SIZE];		\
++		bzero(estack_buf, sizeof(estack_buf));			\
++		estack.ss_size = sizeof(estack_buf) ;			\
++		estack.ss_flags = 0;					\
++		estack.ss_sp = (char *) &estack_buf[SIG_STACK_SIZE-1];	\
++		if (sigaltstack(&estack, (stack_t *)0) < 0)		\
++			perror("sigaltstack");				\
++	}								\
+ 
+ /* end setup signal stack  */
+ 
