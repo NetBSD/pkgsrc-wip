@@ -1,19 +1,30 @@
-$NetBSD: patch-aa,v 1.4 2008/02/16 18:52:20 asau Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/16 21:02:47 asau Exp $
 
 --- h/NetBSD.h.orig	1999-12-07 01:44:02.000000000 +0300
-+++ h/NetBSD.h	2008-02-16 21:42:28.000000000 +0300
-@@ -29,9 +29,9 @@
-     Modified gcl-1.1 for NetBSD 1.0Beta (static linked)
++++ h/NetBSD.h	2008-02-16 23:40:01.000000000 +0300
+@@ -30,8 +30,8 @@
  
  */
--
-+#include <sys/signal.h>
+ 
 +#include <signal.h>
  #include "bsd.h"
 -/*#include "386.h" /* NOT if you want this to work on 386bsd!!!*/
  
  #define ADDITIONAL_FEATURES \
  		     ADD_FEATURE("386BSD");\
+@@ -55,8 +55,10 @@
+ #undef LISTEN_FOR_INPUT		/* default in bsd.h is loser in 386bsd */
+ 
+ #define LISTEN_FOR_INPUT(fp) \
+-  if((fp)->_r <=0 && (c=0,ioctl((fp)->_file, FIONREAD, &c),c<=0)) \
+-  return 0;
++	do {	int c;						\
++		if((fp)->_r <=0 && (c=0,ioctl((fp)->_file, FIONREAD, &c),c<=0)) \
++			return 0;				\
++	} while(0)
+ 
+ /* end listen for input */
+ 
 @@ -79,12 +79,16 @@
  /* begin setup alternate signal stack */
  #define SIG_STACK_SIZE SIGSTKSZ
