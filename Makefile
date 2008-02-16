@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2792 2008/02/16 19:42:43 cheusov Exp $
+# $Id: Makefile,v 1.2793 2008/02/16 19:43:31 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1387,6 +1387,7 @@ SUBDIR+=	pinball
 SUBDIR+=	pipestatus
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
+SUBDIR+=	pkg_cmp_summary
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get
 SUBDIR+=	pkg_online
