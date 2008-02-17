@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/02/17 22:16:30 bsadewitz Exp $
+
+--- liblo.pc.in.orig	2007-03-21 19:48:37.000000000 -0400
++++ liblo.pc.in
+@@ -6,5 +6,5 @@ includedir=@includedir@
+ Name: liblo
+ Version: @PACKAGE_VERSION@
+ Description: A lightweight OSC server/client library
+-Libs: -L${libdir} -llo -lpthread
+-Cflags: -I${includedir}
++Libs: -L${libdir} -llo @PTHREAD_LDFLAGS@ @PTHREAD_LIBS@
++Cflags: -I${includedir} @PTHREAD_CFLAGS@
