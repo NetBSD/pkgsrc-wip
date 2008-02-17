@@ -1,3 +1,4 @@
+* Add DESTDIR support
 * Add ncurses and ncursesw options (options.mk)
 * madtty.c isn't very portable and doesn't understand the ``If it works,
-  it should work everywhere'' principle.
+  it should work everywhere'' principle
