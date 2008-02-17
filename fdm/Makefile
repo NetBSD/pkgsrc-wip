@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/17 15:36:55 smoppy Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/17 15:51:40 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
@@ -31,9 +31,9 @@ SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 ##
 # Options
 ##
-PKG_OPTIONS_VAR=                PKG_OPTIONS.fdm
-PKG_SUPPORTED_OPTIONS=          pcre
-PKG_SUGGESTED_OPTIONS=		pcre
+PKG_OPTIONS_VAR=	PKG_OPTIONS.fdm
+PKG_SUPPORTED_OPTIONS=	pcre
+PKG_SUGGESTED_OPTIONS=	pcre
 
 # Options handling framework
 .include "../../mk/bsd.options.mk"
