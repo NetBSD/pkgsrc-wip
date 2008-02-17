@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2795 2008/02/17 00:22:51 shattered Exp $
+# $Id: Makefile,v 1.2796 2008/02/17 13:26:28 smoppy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -325,6 +325,7 @@ SUBDIR+=	fasta
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
+SUBDIR+=	fdm
 SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	ffmpeg-snapshot
