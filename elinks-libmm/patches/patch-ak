@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2008/02/17 03:30:10 bsadewitz Exp $
+
+--- src/util/Makefile.orig	2008-02-16 18:45:03.000000000 -0500
++++ src/util/Makefile
+@@ -30,6 +30,7 @@ OBJS = \
+  error.o \
+  file.o \
+  hash.o \
++ malloca.o \
+  memlist.o \
+  memory.o \
+  secsave.o \
