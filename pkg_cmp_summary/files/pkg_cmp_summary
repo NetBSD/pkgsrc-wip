@@ -51,9 +51,11 @@ function dewey2str (ver,        left,right,sym,num,last){
 	gsub(/nb/, "Z", ver)
 	gsub(/pl/, ".", ver)
 
-	if (ver ~ /[qwertyuiopasdfghjklzxcvbnm]$/){
-		last = substr(ver, length(ver), 1)
-		ver = substr(ver, 1, length(ver)-1) char2dotver [last]
+	if (match(ver, /[qwertyuiopasdfghjklzxcvbnm]($|Z)/)){
+		last = substr(ver, RSTART, 1)
+		ver = substr(ver, 1, RSTART-1) \
+		      char2dotver [last] \
+		      substr(ver, RSTART+1)
 	}
 
 	gsub(/[.]/, "Y" chars(__dewey_maxf, " ") ".", ver)
