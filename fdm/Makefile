@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/14 13:37:13 smoppy Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/17 15:36:55 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fdm/}
 
-MANTAINER=	smoppy@gmail.com
+MAINTAINER=	smoppy@gmail.com
 HOMEPAGE=	http://fdm.sourceforge.net/
 COMMENT=	Mail fetching, filtering and delivering program
 
@@ -13,11 +13,20 @@ NO_CONFIGURE=	yes
 ##
 # Some fix (avoid patches)
 ##
-SUBST_CLASSES+=			fix-makefile
-SUBST_STAGE.fix-makefile=	pre-build
-SUBST_MESSAGE.fix-makefile=	Fixing Makefile..
-SUBST_FILES.fix-makefile=	Makefile
-SUBST_SED.fix-makefile=		-e 's/-I-/-iquote/'
+
+# Makefile
+SUBST_CLASSES=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing Makefile..
+SUBST_FILES.makefile=	Makefile
+SUBST_SED.makefile=	-e 's/-I-/-iquote/'
+
+# Paths
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-build
+SUBST_MESSAGE.paths=	Fixing paths..
+SUBST_FILES.paths=	fdm.h fdm.1 fdm.conf.5 MANUAL examples/f-terbeck.conf
+SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 
 ##
 # Options
@@ -34,6 +43,9 @@ PKG_SUGGESTED_OPTIONS=		pcre
 .include "../../devel/pcre/buildlink3.mk"
 CFLAGS=	-Dpcre
 .endif
+
+INSTALLATION_DIRS=	bin share/examples ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+CONF_FILES=		${PKG_SYSCONFDIR}/fdm.conf
 
 # Shared examples directory
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}

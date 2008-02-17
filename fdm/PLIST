@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/14 13:37:13 smoppy Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/17 15:36:55 smoppy Exp $
 bin/fdm
 man/man1/fdm.1
 man/man5/fdm.conf.5
@@ -9,4 +9,3 @@ share/examples/fdm/n-marriott.conf
 share/examples/fdm/t-ulmer.conf
 share/examples/fdm/w-maier.conf
 @dirrm share/examples/fdm
-@dirrm etc/fdm.conf

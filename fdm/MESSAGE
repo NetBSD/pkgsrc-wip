@@ -1,3 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2008/02/17 15:36:55 smoppy Exp $
+
 It's suggested to run fdm as non privileged user, else
 create an ad-hoc user as in the following example:
 
@@ -17,4 +20,4 @@ do it just add the following line to the crontab(5):
 */30    *       *       *       *       /usr/local/bin/fdm -l fetch
 
 Read more to the fdm(1) and fdm.conf(5) manual pages.
-
+===========================================================================
