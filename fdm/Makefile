@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/17 15:51:40 smoppy Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/18 15:39:22 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
@@ -17,14 +17,15 @@ NO_CONFIGURE=	yes
 # Makefile
 SUBST_CLASSES=		makefile
 SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing Makefile..
+SUBST_MESSAGE.makefile=	Fixing distribution Makefile..
 SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile=	-e 's/-I-/-iquote/'
+SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 
 # Paths
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build
-SUBST_MESSAGE.paths=	Fixing paths..
+SUBST_MESSAGE.paths=	Fixing common paths..
 SUBST_FILES.paths=	fdm.h fdm.1 fdm.conf.5 MANUAL examples/f-terbeck.conf
 SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 
@@ -44,19 +45,18 @@ PKG_SUGGESTED_OPTIONS=	pcre
 CFLAGS=	-Dpcre
 .endif
 
-INSTALLATION_DIRS=	bin share/examples ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-CONF_FILES=		${PKG_SYSCONFDIR}/fdm.conf
-
 # Shared examples directory
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
+INSTALLATION_DIRS=	bin share/examples ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+CONF_FILES=		${PKG_SYSCONFDIR}/fdm.conf
+
 # Copy the configuration file
-CONF_FILES=	${EGDIR}/fdm.conf ${PKG_SYSCONFDIR}/fdm.conf
+CONF_FILES=	${EGDIR}/fdm.conf.sample ${PKG_SYSCONFDIR}/fdm.conf
 
 # Sample configuration files
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/fdm.conf ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/fdm.conf ${EGDIR}/fdm.conf.sample
 	${INSTALL_DATA} ${WRKSRC}/examples/* ${EGDIR}
 
 .include "../../databases/tdb/buildlink3.mk"
