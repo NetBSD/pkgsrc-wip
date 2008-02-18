@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pyicqt.sh,v 1.3 2008/02/15 14:37:52 sebpierrel Exp $
+# $NetBSD: pyicqt.sh,v 1.4 2008/02/18 21:24:57 sebpierrel Exp $
 #
 #   startup script for the PyICQt IM transport for Jabber
 #   uses the twistd application engine
@@ -17,7 +17,7 @@ command="@PREFIX@/bin/PyICQt"
 pyicqt_user="@JABBER_USER@"
 pidfile="@JABBER_PIDDIR@/${name}.pid"
 logfile="@JABBER_LOGDIR@/${name}.log"
-command_args="-b -l ${logfile}"
+command_args="-l ${logfile} -c @PKG_SYSCONFDIR@/pyicqt.xml &"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 
@@ -40,5 +40,5 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	@SU@ ${pyicqt_user} -c "${command} ${pyicqt_flags} ${command_args}"
+	@SU@ -m ${pyicqt_user} -c "${command} ${pyicqt_flags} ${command_args}"
 fi

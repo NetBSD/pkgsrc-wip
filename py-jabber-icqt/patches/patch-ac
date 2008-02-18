@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/05/06 16:21:44 schnoebe Exp $
+$NetBSD: patch-ac,v 1.2 2008/02/18 21:24:57 sebpierrel Exp $
+
+start from the installation directory
 
 --- PyICQt.py.orig	2006-03-06 13:12:26.000000000 -0600
 +++ PyICQt.py

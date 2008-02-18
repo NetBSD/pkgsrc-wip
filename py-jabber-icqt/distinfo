@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2008/02/15 14:37:52 sebpierrel Exp $
+$NetBSD: distinfo,v 1.7 2008/02/18 21:24:57 sebpierrel Exp $
 
-SHA1 (pyicq-t-0.8a.tar.gz) = 098fda4c8afaeb71c3ef110bb5a9aca017025b00
-RMD160 (pyicq-t-0.8a.tar.gz) = 5465ea279caf4a7f3024969060a42fb3ee79ad70
-Size (pyicq-t-0.8a.tar.gz) = 163112 bytes
-SHA1 (patch-aa) = dbaef2edd60fd7996dd50cdeb4d324eab7ebe446
-SHA1 (patch-ab) = 9580ffd88484c3a19697223e47e9764a7a6be905
-SHA1 (patch-ac) = fa60c20c7efc0a537f4b9b3469de20e76ab6a03d
+SHA1 (pyicq-t-0.8b.tar.gz) = 134491ff38b4b5dbba1cff9f69ae2ebf7baef43f
+RMD160 (pyicq-t-0.8b.tar.gz) = be6ced1c07d91c9ec5f277c9440d341211fc5ee0
+Size (pyicq-t-0.8b.tar.gz) = 164765 bytes
+SHA1 (patch-aa) = 20380de4db720a39f8c0e3dc559637e77a7a5363
+SHA1 (patch-ab) = 029b2aba5a9e4b71bd3919cd645fafd27144d393
+SHA1 (patch-ac) = 168b5d888a48c0d7a31ea47f94b60d8eb4adb2b6
 SHA1 (patch-ad) = 3a33367273a1f0d6d0fc87bdb99f16a447ed6152

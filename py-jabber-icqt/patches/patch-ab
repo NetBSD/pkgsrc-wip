@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2007/06/23 00:43:25 schnoebe Exp $
+$NetBSD: patch-ab,v 1.5 2008/02/18 21:24:57 sebpierrel Exp $
+
+pkg path
 
 --- src/main.py.orig	2007-06-03 20:10:36.000000000 -0500
 +++ src/main.py
@@ -17,38 +19,3 @@ $NetBSD: patch-ab,v 1.4 2007/06/23 00:43:25 schnoebe Exp $
  profilelog = None
  options = {}
  daemonizeme = False
-@@ -89,7 +91,7 @@ if os.name == "posix":
- 	import signal
- 	signal.signal(signal.SIGHUP, reloadConfig)
- 	# Load scripts for PID and daemonizing
--	from twisted.scripts import twistd
-+	from twisted.scripts import _twistd_unix
- 
- selectWarning = "Unable to install any good reactors (kqueue, cf, epoll, poll).\nWe fell back to using select. You may have scalability problems.\nThis reactor will not support more than 1024 connections +at a time.  You may silence this message by choosing 'select' or 'default' as your reactor in the transport config."
- if config.reactor and len(config.reactor) > 0:
-@@ -390,14 +392,14 @@ class App:
- 		if config.pid and os.name != "posix":
- 			config.pid = ""
- 		if config.pid:
--			twistd.checkPID(config.pid)
-+			_twistd_unix.checkPID(config.pid)
- 
- 		# Do any auto-update stuff
- 		xdb.housekeep()
- 
- 		# Daemonise the process and write the PID file
- 		if daemonizeme and os.name == "posix":
--			twistd.daemonize()
-+			_twistd_unix.daemonize()
- 		if config.pid:
- 			self.writePID()
- 
-@@ -431,7 +433,7 @@ class App:
- 		self.transportSvc.removeMe()
- 		def cb(ignored=None):
- 			if config.pid:
--				twistd.removePID(config.pid)
-+				_twistd_unix.removePID(config.pid)
- 		d = Deferred()
- 		d.addCallback(cb)
- 		reactor.callLater(3.0, d.callback, None)
