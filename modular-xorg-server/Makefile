@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/02/18 09:17:54 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/18 10:23:44 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.4.0.90
 PKGNAME=	modular-${DISTNAME}
@@ -66,8 +66,8 @@ BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.4.2
 
 post-extract: dri-post-extract
 	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
-	${RM} ${WRKDIR}/Mesa-7.0.2/src/mesa/Makefile.orig
-	${RM} ${WRKDIR}/Mesa-7.0.2/docs/README.MINGW32.orig
+	${RM} -f ${WRKDIR}/Mesa-7.0.2/src/mesa/Makefile.orig
+	${RM} -f ${WRKDIR}/Mesa-7.0.2/docs/README.MINGW32.orig
 
 .include "options.mk"
 
