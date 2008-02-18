@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/04/29 16:15:17 dhowland Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/02/18 03:01:24 dhowland Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_KAA_METADATA_BUILDLINK3_MK:=	${PY_KAA_METADATA_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-kaa-metadata
 
 .if ${PY_KAA_METADATA_BUILDLINK3_MK} == "+"
 .include "../../lang/python/pyversion.mk"
-BUILDLINK_API_DEPENDS.py-kaa-metadata+=	${PYPKGPREFIX}-kaa-metadata>=0.6.1
+BUILDLINK_API_DEPENDS.py-kaa-metadata+=	${PYPKGPREFIX}-kaa-metadata>=0.7.2
 BUILDLINK_PKGSRCDIR.py-kaa-metadata?=	../../wip/py-kaa-metadata
 .endif	# PY_KAA_METADATA_BUILDLINK3_MK
 
