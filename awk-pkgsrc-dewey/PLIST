@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2008/02/18 09:20:19 cheusov Exp $
+share/runawk/pkgsrc-dewey.awk
