@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/29 16:14:08 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/18 03:00:33 dhowland Exp $
 #
 
-DISTNAME=		kaa-imlib2-0.2.1
+DISTNAME=		kaa-imlib2-0.2.3
 PKGNAME=                ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freevo/}

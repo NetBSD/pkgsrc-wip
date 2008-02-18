@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/29 16:14:08 dhowland Exp $
+$NetBSD: distinfo,v 1.2 2008/02/18 03:00:33 dhowland Exp $
 
-SHA1 (kaa-imlib2-0.2.1.tar.gz) = 48db1e9add467e2164bd68998061164f3257c851
-RMD160 (kaa-imlib2-0.2.1.tar.gz) = 921e2b87751dc0724af8485de71618f8af305600
-Size (kaa-imlib2-0.2.1.tar.gz) = 29808 bytes
+SHA1 (kaa-imlib2-0.2.3.tar.gz) = 870c66358c8c9f08416b01b6232a6037655dac3d
+RMD160 (kaa-imlib2-0.2.3.tar.gz) = 21ee968a7895825a176d3683acabdaeecc673d2c
+Size (kaa-imlib2-0.2.3.tar.gz) = 30671 bytes
