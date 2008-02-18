@@ -1,4 +1,4 @@
-#!/usr/bin/awk -f
+#!/usr/bin/env runawk
 
 # Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
 #
@@ -22,76 +22,8 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ############################################################
-# dewey function
-BEGIN {
-	__dewey_maxf = 9 # 8(YYYYMMDD) + 1
-	for (i=0; i <= 26; ++i){
-		# I don't know anything about EBCDIC :-P :-)
-		char2dotver [sprintf("%c", 97 + i)] = "." i+1
-	}
-}
 
-function chars (n, c,            s){
-	s = ""
-
-	while (n-- > 0){
-		s = s c
-	}
-
-	return s
-}
-
-function dewey2str (ver,        left,right,sym,num,last){
-	ver = "." ver
-
-	gsub(/alpha/, "A", ver)
-	gsub(/beta/, "B", ver)
-	gsub(/rc/, "C", ver)
-	gsub(/pre/, "C", ver)
-	gsub(/nb/, "Z", ver)
-	gsub(/pl/, ".", ver)
-
-	if (match(ver, /[qwertyuiopasdfghjklzxcvbnm]($|Z)/)){
-		last = substr(ver, RSTART, 1)
-		ver = substr(ver, 1, RSTART-1) \
-		      char2dotver [last] \
-		      substr(ver, RSTART+1)
-	}
-
-	gsub(/[.]/, "Y" chars(__dewey_maxf, " ") ".", ver)
-
-	while (match(ver, /[ABCZ.][0-9]+/)){
-		left  = substr(ver, 1, RSTART-1)
-		sym   = substr(ver, RSTART, 1)
-		num   = substr(ver, RSTART+1, RLENGTH-1)
-		right = substr(ver, RSTART+RLENGTH)
-
-		num = sprintf("%" __dewey_maxf "s", num)
-
-		if (sym == ".")
-			ver = left "Y" num right
-		else
-			ver = left sym num right
-	}
-
-	return substr(ver "Y", __dewey_maxf + 2)
-}
-
-function cmp_dewey (ver1, ver2,             s1,s2){
-	if (ver1 == ver2){
-		return "="
-	}
-
-	s1 = dewey2str(ver1)
-	s2 = dewey2str(ver2)
-
-	if (s1 < s2)
-		return "<"
-	else if (s1 > s2)
-		return ">"
-	else
-		return "="
-}
+#use "pkgsrc-dewey.awk"
 
 ############################################################
 # file reading
@@ -151,7 +83,7 @@ $0 ~ /^PKGNAME=/ {
 		}
 
 		ver1 = names [pkgbase]
-		res = cmp_dewey(ver1, ver)
+		res = dewey_cmp(ver1, ver)
 		print res, pkgbase, ver1, ver
 	}
 
