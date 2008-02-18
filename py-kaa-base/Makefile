@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/29 16:10:42 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/18 02:59:37 dhowland Exp $
 #
 
-DISTNAME=		kaa-base-0.1.3
+DISTNAME=		kaa-base-0.3.0
 PKGNAME=                ${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freevo/}

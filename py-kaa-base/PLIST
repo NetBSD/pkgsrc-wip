@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/29 16:10:42 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/18 02:59:37 dhowland Exp $
 ${PYSITELIB}/kaa/__init__.py
 ${PYSITELIB}/kaa/__init__.pyc
 ${PYSITELIB}/kaa/__init__.pyo
 ${PYSITELIB}/kaa/_objectrow.so
+${PYSITELIB}/kaa/_utils.so
 ${PYSITELIB}/kaa/config.py
 ${PYSITELIB}/kaa/config.pyc
 ${PYSITELIB}/kaa/config.pyo
@@ -67,6 +68,12 @@ ${PYSITELIB}/kaa/notifier/event.pyo
 ${PYSITELIB}/kaa/notifier/jobserver.py
 ${PYSITELIB}/kaa/notifier/jobserver.pyc
 ${PYSITELIB}/kaa/notifier/jobserver.pyo
+${PYSITELIB}/kaa/notifier/main.py
+${PYSITELIB}/kaa/notifier/main.pyc
+${PYSITELIB}/kaa/notifier/main.pyo
+${PYSITELIB}/kaa/notifier/nf_thread.py
+${PYSITELIB}/kaa/notifier/nf_thread.pyc
+${PYSITELIB}/kaa/notifier/nf_thread.pyo
 ${PYSITELIB}/kaa/notifier/nf_wrapper.py
 ${PYSITELIB}/kaa/notifier/nf_wrapper.pyc
 ${PYSITELIB}/kaa/notifier/nf_wrapper.pyo
@@ -88,9 +95,15 @@ ${PYSITELIB}/kaa/notifier/pynotifier/nf_generic.pyo
 ${PYSITELIB}/kaa/notifier/pynotifier/nf_gtk.py
 ${PYSITELIB}/kaa/notifier/pynotifier/nf_gtk.pyc
 ${PYSITELIB}/kaa/notifier/pynotifier/nf_gtk.pyo
+${PYSITELIB}/kaa/notifier/pynotifier/nf_twisted.py
+${PYSITELIB}/kaa/notifier/pynotifier/nf_twisted.pyc
+${PYSITELIB}/kaa/notifier/pynotifier/nf_twisted.pyo
 ${PYSITELIB}/kaa/notifier/pynotifier/version.py
 ${PYSITELIB}/kaa/notifier/pynotifier/version.pyc
 ${PYSITELIB}/kaa/notifier/pynotifier/version.pyo
+${PYSITELIB}/kaa/notifier/reactor.py
+${PYSITELIB}/kaa/notifier/reactor.pyc
+${PYSITELIB}/kaa/notifier/reactor.pyo
 ${PYSITELIB}/kaa/notifier/sockets.py
 ${PYSITELIB}/kaa/notifier/sockets.pyc
 ${PYSITELIB}/kaa/notifier/sockets.pyo
