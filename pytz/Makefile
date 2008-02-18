@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/23 07:51:48 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/18 13:34:18 obache Exp $
 #
 
 DISTNAME=	pytz-2007k
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://pypi.python.org/packages/source/p/pytz/
+HOMEPAGE=	http://pytz.sourceforge.net/
 COMMENT=	World Timezone Definitions for Python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
