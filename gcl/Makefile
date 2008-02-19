@@ -1,27 +1,22 @@
-# $NetBSD: Makefile.common,v 1.8 2008/02/19 13:04:48 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2008/02/19 19:14:44 asau Exp $
 
-DISTNAME?=		gcl-2.6.7
-CATEGORIES?=		lang
-MASTER_SITES?=		${MASTER_SITE_GNU:=gcl/}
+DISTNAME=		gcl-2.6.7
+CATEGORIES=		lang
+MASTER_SITES=		${MASTER_SITE_GNU:=gcl/}
 
-MAINTAINER?=		tech-pkg@NetBSD.org
-HOMEPAGE?=		http://www.gnu.org/software/gcl/gcl.html
-COMMENT?=		GNU Common Lisp
+MAINTAINER=		asau@inbox.ru
+HOMEPAGE=		http://www.gnu.org/software/gcl/gcl.html
+COMMENT=		GNU Common Lisp
 
-USE_PKGLOCALEDIR?=	yes
+USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
-USE_LIBTOOL?=		yes
-LIBTOOL_OVERRIDE?=	${WRKSRC}/libtool
-GNU_CONFIGURE?=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GNU_CONFIGURE=		yes
 MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
 USE_TOOLS+=		makeinfo
 #GCC_REQD=		3
-
-DISTINFO_FILE?=		${.CURDIR}/../gcl/distinfo
-COMMON_FILESDIR?=	${.CURDIR}/../gcl/files
-PATCHDIR?=		${.CURDIR}/../gcl/patches
 
 #CONFIGURE_ARGS+=	--enable-locbfd --disable-statsysbfd
 CONFIGURE_ARGS+=	--disable-locbfd --disable-statsysbfd --enable-custreloc
@@ -38,3 +33,4 @@ CONFIGURE_ARGS+=--enable-machine=NetBSD
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
