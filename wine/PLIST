@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
-bin/bin2res
+@comment $NetBSD: PLIST,v 1.2 2008/02/19 04:11:58 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec

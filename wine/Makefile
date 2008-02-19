@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/19 04:11:58 asau Exp $
 
 DISTNAME=	wine-0.9.55
 #PKGREVISION=	1
@@ -38,7 +38,7 @@ LIBS+=			${LDFLAGS}
 .include "options.mk"
 
 post-install:
-.for tool in bin2res fnt2bdf
+.for tool in fnt2bdf
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
 		${PREFIX}/bin
 .endfor
