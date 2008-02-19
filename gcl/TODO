@@ -1,8 +1,6 @@
-$Id: TODO,v 1.1.1.1 2003/11/27 16:23:17 mpasternak Exp $
+$Id: TODO,v 1.2 2008/02/19 14:34:19 asau Exp $
 
-Thu Nov 27 17:20:43 CET 2003
-
-- make it compile on NetBSD. On Linux it will propably work
-- make PLIST
-
-	-- dotz@irc.pl
+1. Make it use DESTDIR.
+2. Fix installation dirs and PLIST accordingly.
+3. Make it compile on FreeBSD.
+4. Make it compile on NetBSD.
