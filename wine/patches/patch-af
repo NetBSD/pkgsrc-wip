@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
+$NetBSD: patch-af,v 1.2 2008/02/19 04:09:21 asau Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2007-05-11 19:35:02.000000000 +0200
-+++ dlls/ntdll/signal_i386.c
-@@ -167,7 +167,7 @@ typedef struct trapframe SIGCONTEXT;
+--- dlls/ntdll/signal_i386.c.orig	2008-02-08 18:44:36.000000000 +0300
++++ dlls/ntdll/signal_i386.c	2008-02-19 02:55:19.000000000 +0300
+@@ -198,7 +198,7 @@
  
  #endif /* bsdi */
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -290,6 +290,43 @@ typedef ucontext_t SIGCONTEXT;
+@@ -331,6 +331,46 @@
  
  #endif /* __APPLE__ */
  
@@ -42,6 +42,9 @@ $NetBSD: patch-af,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
 +#define EIP_sig(context)	(*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
 +#define ESP_sig(context)	(*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_ESP]))
 +
++#define FPU_sig(context)	((FLOATING_SAVE_AREA*)&((context)->uc_mcontext.__fpregs.__fp_reg_set.__fpchip_state))
++#define FPUX_sig(context)	((XMM_SAVE_AREA32 *)&((context)->uc_mcontext.__fpregs.__fp_reg_set.__fp_xmm_state))
++
 +#define TRAP_sig(context)	((context)->uc_mcontext.__gregs[_REG_TRAPNO])
 +#define ERROR_sig(context)	((context)->uc_mcontext.__gregs[_REG_ERR])
 +
@@ -55,7 +58,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
  WINE_DEFAULT_DEBUG_CHANNEL(seh);
  
  typedef int (*wine_signal_handler)(unsigned int sig);
-@@ -322,8 +359,13 @@ enum i386_trap_code
+@@ -365,8 +405,13 @@
      TRAP_x86_PAGEFLT    = T_PAGEFLT,    /* Page fault */
      TRAP_x86_ARITHTRAP  = T_ARITHTRAP,  /* Floating point exception */
      TRAP_x86_ALIGNFLT   = T_ALIGNFLT,   /* Alignment check exception */
@@ -69,7 +72,7 @@ $NetBSD: patch-af,v 1.1.1.1 2008/02/18 20:21:02 asau Exp $
  #else
      TRAP_x86_DIVIDE     = 0,   /* Division by zero exception */
      TRAP_x86_TRCTRAP    = 1,   /* Single-step exception */
-@@ -1385,7 +1427,11 @@ BOOL SIGNAL_Init(void)
+@@ -1512,7 +1557,11 @@
  #endif  /* HAVE_SIGALTSTACK */
  
      sig_act.sa_mask = server_block_set;
