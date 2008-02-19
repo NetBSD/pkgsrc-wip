@@ -1,1 +1,138 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/27 16:23:17 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/19 13:04:48 asau Exp $
+bin/gcl
+info../doc/gcl-si.dvi
+info../doc/gcl-si/Available-Symbols.html
+info../doc/gcl-si/Bignums.html
+info../doc/gcl-si/C-Interface.html
+info../doc/gcl-si/Characters.html
+info../doc/gcl-si/Command-Line.html
+info../doc/gcl-si/Compilation.html
+info../doc/gcl-si/Compiler-Definitions.html
+info../doc/gcl-si/Debugging.html
+info../doc/gcl-si/Doc.html
+info../doc/gcl-si/Environment.html
+info../doc/gcl-si/Function-and-Variable-Index.html
+info../doc/gcl-si/GCL-Specific.html
+info../doc/gcl-si/Inititialization.html
+info../doc/gcl-si/Iteration-and-Tests.html
+info../doc/gcl-si/Lists.html
+info../doc/gcl-si/Low-Level-Debug-Functions.html
+info../doc/gcl-si/Low-Level-X-Interface.html
+info../doc/gcl-si/Miscellaneous.html
+info../doc/gcl-si/Numbers.html
+info../doc/gcl-si/Operating-System-Definitions.html
+info../doc/gcl-si/Operating-System.html
+info../doc/gcl-si/Regular-Expressions.html
+info../doc/gcl-si/Sequences-and-Arrays-and-Hash-Tables.html
+info../doc/gcl-si/Source-Level-Debugging-in-Emacs.html
+info../doc/gcl-si/Special-Forms-and-Functions.html
+info../doc/gcl-si/Streams-and-Reading.html
+info../doc/gcl-si/Structures.html
+info../doc/gcl-si/Symbols.html
+info../doc/gcl-si/System-Definitions.html
+info../doc/gcl-si/Type.html
+info../doc/gcl-si/User-Interface.html
+info../doc/gcl-si/index.html
+info../doc/gcl-tk.dvi
+info../doc/gcl-tk/Argument-Lists.html
+info../doc/gcl-tk/Common-Features-of-Widgets.html
+info../doc/gcl-tk/Control.html
+info../doc/gcl-tk/General.html
+info../doc/gcl-tk/Getting-Started.html
+info../doc/gcl-tk/Introduction.html
+info../doc/gcl-tk/Linked-Variables.html
+info../doc/gcl-tk/Lisp-Functions-Invoked-from-Graphics.html
+info../doc/gcl-tk/Return-Values.html
+info../doc/gcl-tk/Widgets.html
+info../doc/gcl-tk/after.html
+info../doc/gcl-tk/bind.html
+info../doc/gcl-tk/button.html
+info../doc/gcl-tk/canvas.html
+info../doc/gcl-tk/checkbutton.html
+info../doc/gcl-tk/destroy.html
+info../doc/gcl-tk/entry.html
+info../doc/gcl-tk/exit.html
+info../doc/gcl-tk/focus.html
+info../doc/gcl-tk/frame.html
+info../doc/gcl-tk/grab.html
+info../doc/gcl-tk/index.html
+info../doc/gcl-tk/label.html
+info../doc/gcl-tk/listbox.html
+info../doc/gcl-tk/lower.html
+info../doc/gcl-tk/menu.html
+info../doc/gcl-tk/menubutton.html
+info../doc/gcl-tk/message.html
+info../doc/gcl-tk/option.html
+info../doc/gcl-tk/options.html
+info../doc/gcl-tk/pack.html
+info../doc/gcl-tk/pack_002dold.html
+info../doc/gcl-tk/place.html
+info../doc/gcl-tk/radiobutton.html
+info../doc/gcl-tk/raise.html
+info../doc/gcl-tk/scale.html
+info../doc/gcl-tk/scrollbar.html
+info../doc/gcl-tk/selection.html
+info../doc/gcl-tk/send.html
+info../doc/gcl-tk/text.html
+info../doc/gcl-tk/tk.html
+info../doc/gcl-tk/tk_002ddialog.html
+info../doc/gcl-tk/tk_002dlistbox_002dsingle_002dselect.html
+info../doc/gcl-tk/tk_002dmenu_002dbar.html
+info../doc/gcl-tk/tkconnect.html
+info../doc/gcl-tk/tkerror.html
+info../doc/gcl-tk/tkvars.html
+info../doc/gcl-tk/tkwait.html
+info../doc/gcl-tk/toplevel.html
+info../doc/gcl-tk/update.html
+info../doc/gcl-tk/winfo.html
+info../doc/gcl-tk/wm.html
+info/gcl-si.info
+info/gcl-tk.info
+info/gcl-tk.info-1
+info/gcl-tk.info-2
+infodir
+lib/${PKGNAME}/cmpnew/gcl_cmpmain.lsp
+lib/${PKGNAME}/cmpnew/gcl_cmpopt.lsp
+lib/${PKGNAME}/cmpnew/gcl_collectfn.lsp
+lib/${PKGNAME}/cmpnew/gcl_collectfn.o
+lib/${PKGNAME}/cmpnew/gcl_lfun_list.lsp
+lib/${PKGNAME}/h/cmpinclude.h
+lib/${PKGNAME}/info/gcl-si.info
+lib/${PKGNAME}/info/gcl-tk.info
+lib/${PKGNAME}/info/gcl-tk.info-1
+lib/${PKGNAME}/info/gcl-tk.info-2
+lib/${PKGNAME}/lsp/gcl_auto_new.lsp
+lib/${PKGNAME}/lsp/gcl_autoload.lsp
+lib/${PKGNAME}/lsp/gcl_export.lsp
+lib/${PKGNAME}/lsp/gcl_gprof.lsp
+lib/${PKGNAME}/lsp/gcl_info.o
+lib/${PKGNAME}/lsp/gcl_profile.lsp
+lib/${PKGNAME}/unixport/init_gcl.lsp
+lib/${PKGNAME}/unixport/libgcl.a
+lib/${PKGNAME}/unixport/libgclp.a
+lib/${PKGNAME}/unixport/rsym
+lib/${PKGNAME}/unixport/saved_gcl
+share/emacs/site-lisp/gcl/add-default.el
+share/emacs/site-lisp/gcl/ansi-doc.el
+share/emacs/site-lisp/gcl/dbl.el
+share/emacs/site-lisp/gcl/default.el
+share/emacs/site-lisp/gcl/default.el.prev
+share/emacs/site-lisp/gcl/doc-to-texi.el
+share/emacs/site-lisp/gcl/gcl.el
+share/emacs/site-lisp/gcl/man1-to-texi.el
+share/emacs/site-lisp/gcl/smart-complete.el
+share/emacs/site-lisp/gcl/sshell.el
+@dirrm share/emacs/site-lisp/gcl
+@dirrm lib/${PKGNAME}/unixport
+@dirrm lib/${PKGNAME}/pcl
+@dirrm lib/${PKGNAME}/lsp
+@dirrm lib/${PKGNAME}/info
+@dirrm lib/${PKGNAME}/h
+@dirrm lib/${PKGNAME}/gcl-tk/demos
+@dirrm lib/${PKGNAME}/gcl-tk
+@dirrm lib/${PKGNAME}/cmpnew
+@dirrm lib/${PKGNAME}/clcs
+@dirrm info../doc/gcl-tk
+@dirrm info../doc/gcl-si
+@dirrm info../doc
+@dirrm info..
