@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/10/26 22:20:24 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/19 17:28:33 thomasklausner Exp $
 
---- common/unzip.h.orig	2006-02-14 05:47:17.000000000 +0100
+--- common/unzip.h.orig	2008-02-19 17:13:43.000000000 +0000
 +++ common/unzip.h
-@@ -73,6 +73,10 @@ extern "C" {
- 
+@@ -79,6 +79,10 @@ extern "C" {
  #include <zlib.h>
+ #endif
  
 +#ifndef OF
 +#define OF(X)	X
