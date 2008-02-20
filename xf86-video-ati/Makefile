@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/12/23 18:07:30 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/20 17:58:06 bsadewitz Exp $
 
-DISTNAME=	xf86-video-ati-6.7.197
+DISTNAME=	xf86-video-ati-6.8.0
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,28 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
+###
+### XXX there must be a way to do this properly ... just can't think of it
+###
+XSERVER_DEPENDS!=	pkg_info -QREQUIRES modular-xorg-server
+
+.if !empty(XSERVER_DEPENDS:M*pixman*)
+.include "../../wip/modular-xorg-server/buildlink3.mk"
+.else
 .include "../../x11/modular-xorg-server/buildlink3.mk"
+.endif
+###
+### XXX "Hey, Xorg, leave our pack alone!"
+###	( to the tune of "Another Brick in the Wall" by Pink Floyd)
+###
+### Please, oh please, override our compiler-provided
+### structure alignment!  We are all blithering idiots!
+### Plus, if it isn't __exactly__ like Linux, it's broken,
+### right?
+.if ${OPSYS} != "Linux" # XXX If I wanted to sink to their level, this
+			#     would not be here.  Alas, I won't.
+BUILDLINK_TRANSFORM+=	rm-optarg:-DFGL_LINUX
+.endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"

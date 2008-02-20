@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/23 19:46:59 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/20 17:58:06 bsadewitz Exp $
 lib/xorg/modules/drivers/ati_drv.la
-lib/xorg/modules/drivers/atimisc_drv.la
+lib/xorg/modules/drivers/mach64_drv.la
 lib/xorg/modules/drivers/r128_drv.la
 lib/xorg/modules/drivers/radeon_drv.la
 lib/xorg/modules/multimedia/theatre200_drv.la
