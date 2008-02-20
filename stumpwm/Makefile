@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/02/13 01:53:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/20 03:27:03 netcap Exp $
 #
 
-DISTNAME=		stumpwm-0.9.1
-PKGREVISION=		1
+DISTNAME=		stumpwm-0.9.2
+#PKGREVISION=		1
 CATEGORIES=		wm
 DISTFILES=		${DISTNAME}.tgz cl-ppcre.tar.gz
 SITES.${DISTNAME}.tgz=	http://download.savannah.nongnu.org/releases/stumpwm/
