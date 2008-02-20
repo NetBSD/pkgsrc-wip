@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2008/02/15 11:14:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.41 2008/02/20 09:11:37 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -78,7 +78,6 @@ share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.2
-share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.3
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -737,6 +736,8 @@ share/emacs/${PKGVERSION}/etc/nxml/1D100-1D1FF.el
 share/emacs/${PKGVERSION}/etc/nxml/1D400-1D7FF.el
 share/emacs/${PKGVERSION}/etc/nxml/E0000-E007F.el
 share/emacs/${PKGVERSION}/etc/nxml/README
+share/emacs/${PKGVERSION}/etc/nxml/test-invalid.xml
+share/emacs/${PKGVERSION}/etc/nxml/test-valid.xml
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
 share/emacs/${PKGVERSION}/etc/refcards/Makefile
@@ -2418,8 +2419,6 @@ share/emacs/${PKGVERSION}/lisp/nxml/rng-valid.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/rng-valid.elc
 share/emacs/${PKGVERSION}/lisp/nxml/rng-xsd.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/rng-xsd.elc
-share/emacs/${PKGVERSION}/lisp/nxml/test.invalid.xml
-share/emacs/${PKGVERSION}/lisp/nxml/test.valid.xml
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.elc
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.el.gz
