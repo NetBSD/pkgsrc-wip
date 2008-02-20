@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/19 19:14:44 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/20 03:39:23 asau Exp $
 
 DISTNAME=		gcl-2.6.7
 CATEGORIES=		lang
@@ -29,6 +29,12 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
 .if ${OPSYS}=="NetBSD"
 CONFIGURE_ARGS+=--enable-machine=NetBSD
+.endif
+
+# Require GCC 3
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
+GCC_REQD+=		3.0
+USE_PKGSRC_GCC=		yes
 .endif
 
 .include "../../devel/readline/buildlink3.mk"
