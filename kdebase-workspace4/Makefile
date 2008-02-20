@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/02/06 11:49:00 mwdavies Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/20 19:19:25 drochner Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -51,6 +51,14 @@ SUBST_SED.qtpath=	-e 's,/usr/pkg/qt4,${QTDIR},g'
 SUBST_STAGE.qtpath=	post-patch
 
 ICONDIR=		share/icons
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+RT_LIB_SCHED=	rt
+.else
+RT_LIB_SCHED=	# empty
+.endif
+CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
 
 post-install:
 	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag-1.0.png \
