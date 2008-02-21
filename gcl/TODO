@@ -1,6 +1,5 @@
-$Id: TODO,v 1.2 2008/02/19 14:34:19 asau Exp $
+$Id: TODO,v 1.3 2008/02/21 09:59:24 asau Exp $
 
 1. Make it use DESTDIR.
 2. Fix installation dirs and PLIST accordingly.
-3. Make it compile on FreeBSD.
 4. Make it compile on NetBSD.
