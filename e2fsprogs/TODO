@@ -1,0 +1,4 @@
+$Id: TODO,v 1.6 2008/02/21 05:40:39 tnn2 Exp $
+
+I split out com_err related files to a wip/com_err package.
+That package still conflicts with kerberos packages.
