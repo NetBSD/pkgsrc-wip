@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2801 2008/02/21 16:44:26 pmatias Exp $
+# $Id: Makefile,v 1.2802 2008/02/21 21:17:59 pmatias Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -51,6 +51,7 @@ SUBDIR+=	admsmb
 SUBDIR+=	aeneas
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
+SUBDIR+=	agg
 SUBDIR+=	aida
 SUBDIR+=	aircrack
 SUBDIR+=	aircrack-ng
