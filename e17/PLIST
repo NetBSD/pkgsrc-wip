@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/12/05 21:44:29 netcap Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/02/21 23:56:48 shindenmorr Exp $
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
@@ -92,6 +92,7 @@ include/enlightenment/e_path.h
 include/enlightenment/e_place.h
 include/enlightenment/e_pointer.h
 include/enlightenment/e_popup.h
+include/enlightenment/e_powersave.h
 include/enlightenment/e_prefix.h
 include/enlightenment/e_remember.h
 include/enlightenment/e_resist.h
@@ -197,6 +198,9 @@ lib/enlightenment/modules/conf_icon_theme/${LOWER_OPSYS}elf-${MACHINE_ARCH}/modu
 lib/enlightenment/modules/conf_imc/e-module-conf_imc.edj
 lib/enlightenment/modules/conf_imc/module.desktop
 lib/enlightenment/modules/conf_imc/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/conf_interaction/e-module-conf_interaction.edj
+lib/enlightenment/modules/conf_interaction/module.desktop
+lib/enlightenment/modules/conf_interaction/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/conf_intl/e-module-conf_intl.edj
 lib/enlightenment/modules/conf_intl/module.desktop
 lib/enlightenment/modules/conf_intl/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -279,9 +283,6 @@ lib/enlightenment/modules/ibox/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/layout/e-module-layout.edj
 lib/enlightenment/modules/layout/module.desktop
 lib/enlightenment/modules/layout/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
-lib/enlightenment/modules/msgbus_lang/e-module-msgbus_lang.edj
-lib/enlightenment/modules/msgbus_lang/module.desktop
-lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/pager/e-module-pager.edj
 lib/enlightenment/modules/pager/module.desktop
 lib/enlightenment/modules/pager/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -291,6 +292,7 @@ lib/enlightenment/modules/start/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/temperature/e-module-temperature.edj
 lib/enlightenment/modules/temperature/module.desktop
 lib/enlightenment/modules/temperature/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/temperature/${LOWER_OPSYS}elf-${MACHINE_ARCH}/tempget
 lib/enlightenment/modules/winlist/e-module-winlist.edj
 lib/enlightenment/modules/winlist/module.desktop
 lib/enlightenment/modules/winlist/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -350,7 +352,10 @@ share/locale/bg/LC_MESSAGES/enlightenment.mo
 share/locale/ca/LC_MESSAGES/enlightenment.mo
 share/locale/de/LC_MESSAGES/enlightenment.mo
 share/locale/eo/LC_MESSAGES/enlightenment.mo
+share/locale/es/LC_MESSAGES/enlightenment.mo
+share/locale/fi/LC_MESSAGES/enlightenment.mo
 share/locale/fr/LC_MESSAGES/enlightenment.mo
+share/locale/fr_CH/LC_MESSAGES/enlightenment.mo
 share/locale/hu/LC_MESSAGES/enlightenment.mo
 share/locale/it/LC_MESSAGES/enlightenment.mo
 share/locale/ja/LC_MESSAGES/enlightenment.mo
@@ -358,6 +363,7 @@ share/locale/ko/LC_MESSAGES/enlightenment.mo
 share/locale/pt_BR/LC_MESSAGES/enlightenment.mo
 share/locale/ru/LC_MESSAGES/enlightenment.mo
 share/locale/sl/LC_MESSAGES/enlightenment.mo
+share/locale/zh_CN/LC_MESSAGES/enlightenment.mo
 share/locale/zh_TW/LC_MESSAGES/enlightenment.mo
 share/xsessions/enlightenment.desktop
 @dirrm share/xsessions

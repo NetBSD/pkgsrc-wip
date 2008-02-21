@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2007/12/05 06:29:48 netcap Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/21 23:56:48 shindenmorr Exp $
 #
 
-DISTNAME=	eet-0.9.10.041
-PKGREVISION=	3
+DISTNAME=	eet-0.9.10.042
 CATEGORIES=	misc
-MASTER_SITES=	http://www.yazzy.org/pkgsrc/e17/ \
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
+		http://www.yazzy.org/pkgsrc/e17/ \
 		http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
