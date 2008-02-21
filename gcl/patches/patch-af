@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1 2008/02/21 14:58:50 asau Exp $
+
+Fix installation dirs.
+
+--- info/makefile.orig	Thu Feb 21 13:34:48 2008
++++ info/makefile	Thu Feb 21 13:39:23 2008
+@@ -71,13 +71,13 @@
+ 
+ install: $(GCL_DVI) $(GCL_HTML)
+ 	mkdir -p $(DESTDIR)${INFO_DIR}
+-	[ -f $(DESTDIR)$(INFO_DIR)dir ] || touch $(DESTDIR)$(INFO_DIR)dir
+-	grep gcl-si $(DESTDIR)${INFO_DIR}dir >/dev/null 2>&1 || \
+-	echo "* GCL Doc: (gcl-si.info).	GNU Common Lisp specific Documentation." >> $(DESTDIR)${INFO_DIR}dir
+-	grep gcl-tk $(DESTDIR)${INFO_DIR}dir >/dev/null 2>&1 || \
+-	echo "* GCL TK Doc: (gcl-tk.info).	TK window GCL interface." >> $(DESTDIR)${INFO_DIR}dir
+-	grep gcl.info $(DESTDIR)${INFO_DIR}dir >/dev/null 2>&1 || \
+-	echo "* GCL Ansi Doc: (gcl.info).  Ansi Common Lisp Specification." >> $(DESTDIR)${INFO_DIR}dir
++	[ -f $(DESTDIR)$(INFO_DIR)/dir ] || touch $(DESTDIR)$(INFO_DIR)/dir
++	grep gcl-si $(DESTDIR)${INFO_DIR}/dir >/dev/null 2>&1 || \
++	echo "* GCL Doc: (gcl-si.info).	GNU Common Lisp specific Documentation." >> $(DESTDIR)${INFO_DIR}/dir
++	grep gcl-tk $(DESTDIR)${INFO_DIR}/dir >/dev/null 2>&1 || \
++	echo "* GCL TK Doc: (gcl-tk.info).	TK window GCL interface." >> $(DESTDIR)${INFO_DIR}/dir
++	grep gcl.info $(DESTDIR)${INFO_DIR}/dir >/dev/null 2>&1 || \
++	echo "* GCL Ansi Doc: (gcl.info).  Ansi Common Lisp Specification." >> $(DESTDIR)${INFO_DIR}/dir
+ 	-cp *.info* $(DESTDIR)${INFO_DIR}
+ #	-mkdir -p $(DESTDIR)$(INFO_DIR)../doc/gcl-doc/gcl.html
+ #	-mkdir -p $(DESTDIR)$(INFO_DIR)../doc/gcl-doc/gcl-si.html
+@@ -88,10 +88,10 @@
+ #	-cp gcl/* $(DESTDIR)$(INFO_DIR)../doc/gcl-doc/gcl.html
+ #	-cp gcl-si/* $(DESTDIR)$(INFO_DIR)../doc/gcl-doc/gcl-si.html
+ #	-cp gcl-tk/* $(DESTDIR)$(INFO_DIR)../doc/gcl-doc/gcl-tk.html
+-	-mkdir -p $(DESTDIR)$(INFO_DIR)../doc
++	-mkdir -p $(DESTDIR)$(PREFIX)/share/doc/gcl
+ #	-cp -r gcl-si gcl gcl-tk $(DESTDIR)$(INFO_DIR)../doc
+-	-cp -r gcl-si gcl-tk $(DESTDIR)$(INFO_DIR)../doc
+-	-cp *dvi $(DESTDIR)$(INFO_DIR)../doc
++	-cp -r gcl-si gcl-tk $(DESTDIR)$(PREFIX)/share/doc/gcl
++	-cp *dvi $(DESTDIR)$(PREFIX)/share/doc/gcl
+ 
+ FILE=gcl-si.texi
+ srcs:
