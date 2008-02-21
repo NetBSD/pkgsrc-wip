@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/18 15:39:22 smoppy Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/21 16:48:45 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
@@ -19,7 +19,7 @@ SUBST_CLASSES=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing distribution Makefile..
 SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile=	-e 's/-I-/-iquote/'
+SUBST_SED.makefile=	-e 's/-I-//'
 SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 
 # Paths
