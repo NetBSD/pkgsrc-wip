@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/03 13:31:25 takasan-tt Exp $
-
---- Makefile.in	Sat Sep  4 22:29:12 1999
-+++ Makefile.in	Tue Mar 21 23:07:50 2000
-@@ -89,3 +89,3 @@
- EXTRA_DIST = INSTALL.generic $(PACKAGE)-$(VERSION).lsm
--SUBDIRS = po intl lib man src
-+SUBDIRS = lib man src
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

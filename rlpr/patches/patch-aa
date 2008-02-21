@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.2 2004/02/28 00:47:45 rillig Exp $
-
---- src/rlpq.c.orig	Sun Dec 13 19:21:22 1998
-+++ src/rlpq.c	Sat Apr 10 18:39:54 1999
-@@ -19,2 +19,3 @@
- #include <pwd.h>
-+#include <stdio.h>
- #include <stdlib.h>
