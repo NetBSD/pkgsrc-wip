@@ -1,5 +1,4 @@
-$Id: TODO,v 1.3 2008/02/21 09:59:24 asau Exp $
+$Id: TODO,v 1.4 2008/02/21 18:00:10 asau Exp $
 
-1. Make it use DESTDIR.
-2. Fix installation dirs and PLIST accordingly.
 4. Make it compile on NetBSD.
+5. Check DESTDIR, since it was treated unconventionally.
