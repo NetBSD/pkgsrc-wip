@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2008/02/21 06:56:34 bsadewitz Exp $
+
+--- src/radeon_driver.c.orig	2008-02-13 12:26:21.000000000 -0500
++++ src/radeon_driver.c
+@@ -4906,6 +4906,17 @@ Bool RADEONEnterVT(int scrnIndex, int fl
+     /* Makes sure the engine is idle before doing anything */
+     RADEONWaitForIdleMMIO(pScrn);
+ 
++    if (info->IsMobility && !IS_AVIVO_VARIANT) {
++        if (xf86ReturnOptValBool(info->Options, OPTION_DYNAMIC_CLOCKS, FALSE)) {
++	    RADEONSetDynamicClock(pScrn, 1);
++        } else {
++	    RADEONSetDynamicClock(pScrn, 0);
++        }
++    }
++
++    if (IS_R300_VARIANT || IS_RV100_VARIANT)
++	RADEONForceSomeClocks(pScrn);
++
+     pScrn->vtSema = TRUE;
+     for (i = 0; i < xf86_config->num_crtc; i++) {
+ 	xf86CrtcPtr	crtc = xf86_config->crtc[i];
