@@ -1,5 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/05 19:47:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/21 18:28:21 asau Exp $
 bin/ficl
+include/ficl.h
+include/ficlcompatibility.h
+include/ficllocal.h
+include/ficlplatform/alpha.h
+include/ficlplatform/ansi.h
+include/ficlplatform/unix.h
+include/ficlplatform/win32.h
+include/ficltokens.h
+lib/libficl.a
+lib/libficl.so
+lib/libficl.so.${PKGVERSION}
 share/ficl/contrib/xclasses/readme.txt
 share/ficl/contrib/xclasses/xclasses.py
 share/ficl/doc/api.html
@@ -76,3 +87,4 @@ share/ficl/test/vocab.fr
 @dirrm share/ficl/contrib/xclasses
 @dirrm share/ficl/contrib
 @dirrm share/ficl
+@dirrm include/ficlplatform
