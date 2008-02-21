@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/21 16:51:39 smoppy Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/21 23:46:46 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
@@ -8,7 +8,8 @@ MAINTAINER=	smoppy@gmail.com
 HOMEPAGE=	http://fdm.sourceforge.net/
 COMMENT=	Mail fetching, filtering and delivering program
 
-NO_CONFIGURE=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+NO_CONFIGURE=		yes
 
 ##
 # Some fix (avoid patches)
@@ -22,8 +23,10 @@ SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile=	-e 's/-I-//'
 SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 
-# Unprivileged owner/group
+# Preferences handling framework
 .include "../../mk/bsd.prefs.mk"
+
+# Unprivileged owner/group
 .if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
 .endif
@@ -51,19 +54,17 @@ PKG_SUGGESTED_OPTIONS=	pcre
 CFLAGS=	-Dpcre
 .endif
 
-# Shared examples directory
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-
+##
+# Installation directories and configuration files
+##
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS=	bin share/examples ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
-CONF_FILES=		${PKG_SYSCONFDIR}/fdm.conf
-
-# Copy the configuration file
-CONF_FILES=	${EGDIR}/fdm.conf.sample ${PKG_SYSCONFDIR}/fdm.conf
+CONF_FILES=		${EGDIR}/fdm.conf.sample ${PKG_SYSCONFDIR}/fdm.conf
 
 # Sample configuration files
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/fdm.conf ${EGDIR}/fdm.conf.sample
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/fdm.conf ${DESTDIR}${EGDIR}/fdm.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${EGDIR}
 
 .include "../../databases/tdb/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
