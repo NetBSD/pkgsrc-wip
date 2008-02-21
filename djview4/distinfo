@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2007/11/17 14:48:36 pmatias Exp $
+$NetBSD: distinfo,v 1.3 2008/02/21 17:48:21 pmatias Exp $
 
-SHA1 (djview4-4.2-2.tar.gz) = 7b9a81e21a1fe902d8156f6136351b44f9a82366
-RMD160 (djview4-4.2-2.tar.gz) = 33f7d75d6a7638d7a6bbb70732fa2768b249bee9
-Size (djview4-4.2-2.tar.gz) = 732543 bytes
+SHA1 (djview4-4.3.tar.gz) = 26cc6c587f6f38764e30f3a2c960c81eca2bfd9f
+RMD160 (djview4-4.3.tar.gz) = 8a91eb288fb7ff4521ac830f75589a91a8756445
+Size (djview4-4.3.tar.gz) = 780019 bytes
 SHA1 (patch-aa) = 3bb84be25240ed8d68eedea87478907a441d9dee
 SHA1 (patch-ab) = 71ecc5cb1f0c7a6bce006eeaad8e7387d4aa6e24
