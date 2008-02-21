@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/20 12:15:38 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/21 09:47:09 asau Exp $
 
 DISTNAME=		gcl-2.6.7
 CATEGORIES=		lang
@@ -21,9 +21,10 @@ USE_TOOLS+=		makeinfo
 #CONFIGURE_ARGS+=	--enable-locbfd --disable-statsysbfd
 CONFIGURE_ARGS+=	--disable-locbfd --disable-statsysbfd --enable-custreloc
 CONFIGURE_ARGS+=	--enable-emacsdir=${PREFIX}/share/emacs/site-lisp/gcl
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--enable-infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--enable-tclconfig=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--enable-tkconfig=${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ARGS+=	--enable-emacsdir=${PREFIX}/share/emacs/site-lisp/gcl
 
 .include "../../mk/bsd.prefs.mk"
 
