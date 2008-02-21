@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/02/21 16:28:25 pmatias Exp $
+
+--- ../ghc-6.4.2/ghc/rts/package.conf.in.orig	2005-12-15 20:44:56.000000000 -0200
++++ ../ghc-6.4.2/ghc/rts/package.conf.in
+@@ -65,7 +65,7 @@ depends:	 	
+ hugs-options:
+ cc-options:
+ 
+-ld-options:
++ld-options: "-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib",
+ #ifdef LEADING_UNDERSCORE
+            "-u", "_GHCziBase_Izh_static_info"
+          , "-u", "_GHCziBase_Czh_static_info"
