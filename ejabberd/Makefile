@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2008/02/14 13:31:12 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/21 16:21:18 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
-DISTNAME=	ejabberd-2.0.0-rc1
-PKGNAME=	ejabberd-2.0.0rc1
+DISTNAME=	ejabberd-2.0.0
 #PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0-rc1/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0/
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.ejabberd.im/
@@ -36,8 +35,6 @@ CONFIGURE_ARGS+=	--with-erlang=${BUILDLINK_PREFIX.erlang}
 
 CONFIGURE_DIRS+=	src
 BUILD_DIRS+=		src
-
-WRKSRC=		${WRKDIR}/ejabberd-2.0.0
 
 MAKE_ENV=	PKGVERSION=${PKGVERSION}
 PLIST_SUBST+=	DISTNAME=${DISTNAME} PKGBASE=${PKGBASE}
