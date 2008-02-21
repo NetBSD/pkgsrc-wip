@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2798 2008/02/21 04:52:06 tnn2 Exp $
+# $Id: Makefile,v 1.2799 2008/02/21 05:24:36 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -158,7 +158,6 @@ SUBDIR+=	cabot
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	castget
-SUBDIR+=	cawf
 SUBDIR+=	cb2bib
 SUBDIR+=	ccid
 SUBDIR+=	ccrtp
@@ -262,7 +261,6 @@ SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
 SUBDIR+=	e16menuedit
 SUBDIR+=	e17
-SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
@@ -656,7 +654,6 @@ SUBDIR+=	iksemel
 SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
-SUBDIR+=	im
 SUBDIR+=	imapsync
 SUBDIR+=	imgseek
 SUBDIR+=	imonc
@@ -872,7 +869,6 @@ SUBDIR+=	linuxigd
 SUBDIR+=	linuxigd-current
 SUBDIR+=	linuxtv-dvb-apps
 SUBDIR+=	lirc
-SUBDIR+=	listres
 SUBDIR+=	lives
 SUBDIR+=	lletters
 SUBDIR+=	llvm
@@ -1578,7 +1574,6 @@ SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rlab
-SUBDIR+=	rlpr
 SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rosegarden-current
@@ -1836,7 +1831,6 @@ SUBDIR+=	wmmp
 SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	words
-SUBDIR+=	worker
 SUBDIR+=	workrave
 SUBDIR+=	wrcs
 SUBDIR+=	wsmake
