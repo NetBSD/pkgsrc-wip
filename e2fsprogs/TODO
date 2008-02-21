@@ -1,4 +1,0 @@
-$Id: TODO,v 1.4 2004/03/04 19:13:41 jeremy-c-reed Exp $
-
-I split out com_err related files to a wip/com_err package.
-That package still conflicts with kerberos packages.

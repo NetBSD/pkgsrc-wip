@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2005/04/16 21:35:27 jeremy-c-reed Exp $
-man/man8/fsck.8
-sbin/fsck
