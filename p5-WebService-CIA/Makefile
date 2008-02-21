@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/26 07:53:59 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/21 17:09:10 netcap Exp $
 #
 
-DISTNAME=		WebService-CIA-1.0
+DISTNAME=		WebService-CIA-1.4
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/I/IM/IMALPASS/}
