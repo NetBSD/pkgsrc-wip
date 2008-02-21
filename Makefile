@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2799 2008/02/21 05:24:36 tnn2 Exp $
+# $Id: Makefile,v 1.2800 2008/02/21 05:49:18 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -261,6 +261,7 @@ SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
 SUBDIR+=	e16menuedit
 SUBDIR+=	e17
+SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
