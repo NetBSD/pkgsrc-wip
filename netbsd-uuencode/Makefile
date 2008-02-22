@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/22 19:34:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/22 20:05:34 cheusov Exp $
 #
 
 DISTNAME=	netbsd-uuencode-4.0
@@ -18,9 +18,18 @@ BUILD_DIRS=	${DISTNAME} ${DISTNAME:S/encode/decode/}
 
 HOMEPAGE=	# none
 
-#USE_FEATURES=		nbcompat
+USE_FEATURES=		getprogname setprogname
+
 USE_BSD_MAKEFILE=	yes
 
 MAKE_ENV+=	MKCATPAGES=no
+
+CPPFLAGS+=	-Dlint
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+MAKE_ENV+=	LDADD=-lresolv
+.endif
 
 .include "../../mk/bsd.pkg.mk"
