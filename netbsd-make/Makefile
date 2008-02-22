@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/02/16 12:47:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/22 20:39:26 cheusov Exp $
 #
 
 DISTNAME=	bmake-20080215
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 BOOTSTRAP_ARGS=		-q -o ${OPSYS} --prefix=${PREFIX} \
 			--with-default-sys-path=${makesyspath} \
-			--mksrc none --sysconfdir=${PKG_SYSCONFDIR:Q}
+			--mksrc none --sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,7 +40,7 @@ do-configure:
 
 do-build:
 	cd ${WRKDIR} && \
-		${SETENV} ${MAKE_ENV} ${SH} ./bmake/boot-strap ${BOOTSTRAP_ARGS}
+		set ${MAKE_ENV} ${SH} ./bmake/boot-strap ${BOOTSTRAP_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin/nbmake
