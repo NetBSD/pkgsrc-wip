@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/22 21:32:53 pmatias Exp $
+bin/dumpshm
+bin/gnash
+bin/gprocessor
+bin/soldumper
+lib/gnash/libgnashamf.la
+lib/gnash/libgnashbase.la
+lib/gnash/libgnashmedia.la
+lib/gnash/libgnashserver.la
+man/man1/cygnal.1
+man/man1/dumpshm.1
+man/man1/gnash.1
+man/man1/gprocessor.1
+man/man1/soldumper.1
+share/gnash/GnashG.png
+share/gnash/doc/gnash/C/actionscript.xml
+share/gnash/doc/gnash/C/gnash.xml
+share/gnash/doc/gnash/C/images/car_crash.png
+share/gnash/doc/gnash/C/images/rtmp.png
+share/gnash/gnash_128_96.ico
+share/locale/cs/LC_MESSAGES/gnash.mo
+share/locale/de/LC_MESSAGES/gnash.mo
+share/locale/es/LC_MESSAGES/gnash.mo
+share/locale/fr/LC_MESSAGES/gnash.mo
+share/locale/it/LC_MESSAGES/gnash.mo
+@dirrm share/gnash/doc/gnash/C/images
+@dirrm share/gnash/doc/gnash/C
+@dirrm share/gnash/doc/gnash
+@dirrm share/gnash/doc
+@dirrm share/gnash
+@dirrm lib/gnash
