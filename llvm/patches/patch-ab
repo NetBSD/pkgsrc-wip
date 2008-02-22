@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/01/18 16:27:15 hoka_adam Exp $
+$NetBSD: patch-ab,v 1.2 2008/02/22 16:35:00 thomasklausner Exp $
 
 Author: dpatel
 Date: Thu Sep 20 18:01:50 2007
@@ -7,10 +7,9 @@ New Revision: 42178
 Log:
 Don't increment invalid iterator.
 
-==============================================================================
---- lib/Transforms/Scalar/LoopIndexSplit.cpp (original)
-+++ lib/Transforms/Scalar/LoopIndexSplit.cpp Thu Sep 20 18:01:50 2007
-@@ -928,8 +928,9 @@
+--- lib/Transforms/Scalar/LoopIndexSplit.cpp.orig	2007-09-14 05:08:12.000000000 +0000
++++ lib/Transforms/Scalar/LoopIndexSplit.cpp
+@@ -717,8 +717,9 @@ void LoopIndexSplit::removeBlocks(BasicB
    while (!WorkList.empty()) {
      BasicBlock *BB = WorkList.back(); WorkList.pop_back();
      for(BasicBlock::iterator BBI = BB->begin(), BBE = BB->end(); 

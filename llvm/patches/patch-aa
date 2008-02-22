@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/01/18 16:27:15 hoka_adam Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/22 16:35:00 thomasklausner Exp $
 
 Author: lattner
 Date: Fri Sep 21 13:30:39 2007
@@ -7,10 +7,9 @@ New Revision: 42205
 Log:
 #ifdef out unsafe tracing code, which fixes PR1689
 
-==============================================================================
---- lib/ExecutionEngine/Interpreter/Execution.cpp (original)
-+++ lib/ExecutionEngine/Interpreter/Execution.cpp Fri Sep 21 13:30:39 2007
-@@ -1338,20 +1338,6 @@
+--- lib/ExecutionEngine/Interpreter/Execution.cpp.orig	2007-08-23 05:15:32.000000000 +0000
++++ lib/ExecutionEngine/Interpreter/Execution.cpp
+@@ -1338,20 +1338,6 @@ void Interpreter::callFunction(Function 
    StackFrame.VarArgs.assign(ArgVals.begin()+i, ArgVals.end());
  }
  
@@ -31,7 +30,7 @@ Log:
  
  void Interpreter::run() {
    while (!ECStack.empty()) {
-@@ -1364,12 +1350,28 @@
+@@ -1364,12 +1350,28 @@ void Interpreter::run() {
  
      DOUT << "About to interpret: " << I;
      visit(I);   // Dispatch to one of the visit* methods...

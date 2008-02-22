@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2008/02/22 16:35:00 thomasklausner Exp $
+
+--- Makefile.rules.orig	2007-07-23 08:20:46.000000000 +0000
++++ Makefile.rules
+@@ -525,11 +525,6 @@ ObjectsBC := $(BaseNameSources:%=$(ObjDi
+ # in the file so they get built before dependencies
+ #---------------------------------------------------------
+ 
+-$(PROJ_bindir): $(PROJ_bindir)/.dir
+-$(PROJ_libdir): $(PROJ_libdir)/.dir
+-$(PROJ_includedir): $(PROJ_includedir)/.dir
+-$(PROJ_etcdir): $(PROJ_etcdir)/.dir
+-
+ # To create other directories, as needed, and timestamp their creation
+ %/.dir:
+ 	$(Verb) $(MKDIR) $* > /dev/null
+@@ -642,7 +637,9 @@ install-local::
+ uninstall-local::
+ 	$(Echo) UnInstall circumvented with NO_INSTALL
+ else
+-install-local:: $(PROJ_etcdir) $(CONFIG_FILES)
++PROJ_etcdir=${PREFIX}/share/examples/llvm
++install-local:: $(CONFIG_FILES)
++	$(MKDIR) ${PROJ_etcdir}
+ 	$(Echo) Installing Configuration Files To $(PROJ_etcdir)
+ 	$(Verb)for file in $(CONFIG_FILES); do \
+           if test -f $(PROJ_OBJ_DIR)/$${file} ; then \

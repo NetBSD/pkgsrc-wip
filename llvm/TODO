@@ -1,7 +1,0 @@
-=> Checking file-check results for llvm-2.1
-ERROR: ************************************************************
-ERROR: The following files are in /usr/pkg but not in the PLIST:
-ERROR:         /usr/pkg/bin/.dir
-ERROR:         /usr/pkg/etc/llvm/.dir
-ERROR:         /usr/pkg/lib/.dir
-*** Error code 1
