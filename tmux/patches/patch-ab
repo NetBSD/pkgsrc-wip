@@ -1,0 +1,20 @@
+--- Makefile.orig	2008-02-23 15:21:17.000000000 +0100
++++ Makefile	2008-02-23 15:22:03.000000000 +0100
+@@ -29,7 +29,7 @@
+       cmd-switch-client.c
+ 
+ CC?= cc
+-INCDIRS+= -I. -I- -I/usr/local/include
++INCDIRS+= -I. -I/usr/local/include
+ CFLAGS+= -DBUILD="\"$(VERSION) ($(DATE))\"" -DMETA="'${META}'"
+ .ifdef PROFILE
+ # Don't use ccache
+@@ -61,7 +61,7 @@
+ CFLAGS+= -DUSE_LIBUTIL_H
+ .endif
+ 
+-OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
++OBJS= ${SRCS:S/.c/.o/:S/.y/.o/} compat/strtonum.c
+ 
+ DISTDIR= ${PROG}-${VERSION}
+ DISTFILES= *.[chyl] Makefile GNUmakefile *.[1-9] NOTES TODO \
