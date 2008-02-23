@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/16 23:43:05 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/23 17:41:34 leot1990 Exp $
 #
 
 DISTNAME=	dvtm-0.4
@@ -17,5 +17,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dvtm ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/dvtm.1 ${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/ncursesw/buildlink3.mk"
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"

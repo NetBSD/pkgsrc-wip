@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/16 23:43:05 leot1990 Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/23 17:41:34 leot1990 Exp $
 
---- config.mk.orig	2008-02-09 19:37:23.000000000 +0100
+--- config.mk.orig	2008-02-06 17:30:25.000000000 +0100
 +++ config.mk
-@@ -3,16 +3,14 @@ VERSION = 0.4
+@@ -3,16 +3,13 @@ VERSION = 0.4
  
  # Customize below to fit your system
  
@@ -13,7 +13,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/16 23:43:05 leot1990 Exp $
  INCS = -I. -I/usr/include -I/usr/local/include 
 -LIBS = -lc -lutil -lncurses
 -LIBS_UTF8 = -lc -lutil -lncursesw
-+LIBS = -lc -lutil -lncursesw -L/usr/lib -L${PREFIX}/lib
++LIBS = -lc -lutil -lncurses -L/usr/lib -L${PREFIX}/lib
++LIBS_UTF8 = -lc -lutil -lncursesw -L/usr/lib -L${PREFIX}/lib
  
 -CFLAGS = -std=c99 -Os ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
 -LDFLAGS = -L/usr/lib -L/usr/local/lib ${LIBS}
@@ -21,6 +22,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/16 23:43:05 leot1990 Exp $
 +LDFLAGS += ${LIBS}
  
  DEBUG_CFLAGS = -std=c99 -O0 -g -ggdb ${INCS} -Wall -DVERSION=\"${VERSION}\"
- 
+-
 -CC = cc
-+#CC = cc
