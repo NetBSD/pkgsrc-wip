@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/19 22:11:26 hfath Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/23 04:47:03 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -16,6 +16,7 @@ INN_DATA_DIR?=		/var/news
 CONFLICTS+=		nntpclnt-[0-9]* \
 			inn-[1-9].*
 RCD_SCRIPTS=		actived
+USE_TOOLS+=		perl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/c-news/Makefile.common"
@@ -48,7 +49,6 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
 DEINSTALL_SRC=		${WRKDIR}/DEINSTALL
 INSTALL_SRC=		${WRKDIR}/INSTALL
-RCD_SCRIPTS=		actived.sh
 
 BUILD_DEFS+=		INN_DATA_DIR
 
