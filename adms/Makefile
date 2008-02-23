@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/23 12:48:36 tqcla Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/23 13:00:35 tqcla Exp $
 #
 
 DISTNAME=	  adms-2.2.8
 CATEGORIES=	  cad
 MASTER_SITES=	  ${MASTER_SITE_SOURCEFORGE:=mot-adms/}
+SUBDIR+=	  adms
 
 MAINTAINER=	  10.50@free.fr
 HOMEPAGE=	  http://mot-adms.sourceforge.net/

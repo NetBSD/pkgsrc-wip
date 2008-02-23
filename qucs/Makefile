@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/23 12:24:47 tqcla Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/23 12:59:26 tqcla Exp $
 #
 
 DISTNAME=	qucs-0.0.13
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qucs/}
+SUBDIR+=	qucs
 
 MAINTAINER=	10.50@free.fr
 HOMEPAGE=	http://qucs.sourceforge.net/
