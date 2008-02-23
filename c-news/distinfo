@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/04/23 18:25:50 hfath Exp $
+$NetBSD: distinfo,v 1.5 2008/02/23 03:45:12 hfath Exp $
 
 SHA1 (c-news/c-news.tar.Z) = fee33ba349ab42a547b48fc6f8427c374817dd8d
 RMD160 (c-news/c-news.tar.Z) = 5f222302bea9c145d438fd1edd7366cd69ce5c30
@@ -64,3 +64,5 @@ SHA1 (patch-ag) = 6e0a1705d7761c9681d998f5bc90fca94e3ca089
 SHA1 (patch-ah) = 5c47d58bba636e220c40654c9ee0b1916af9ccf2
 SHA1 (patch-ai) = 263e2d0be194b8dbdf14d2fa4e989a4320c505f3
 SHA1 (patch-aj) = a122932f53840ae994572b70cb2a772bb08c1cef
+SHA1 (patch-ak) = 456394d2a2bf543109ad67ff5f35f947ec69b697
+SHA1 (patch-al) = 13f29f6dfcf6bcaff41cad5712511f496bef742b
