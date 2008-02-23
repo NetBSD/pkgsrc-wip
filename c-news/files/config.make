@@ -38,7 +38,7 @@ UPDATE=$(CONF)/update.sym ../libcnews.a
 LIBCMP=$(CONF)/libcmp ../libcnews.a
 
 # misc configuration bits
-SPACEFOR=statfs
+SPACEFOR=@CNEWSDFTYPE@
 DOSPACEFOR=dospacefor
 QUEUELEN=tay
 UID=@CNEWSUID@

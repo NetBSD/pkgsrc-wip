@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/23 03:53:30 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.funet.fi/pub/unix/news/cnews/ \
@@ -30,7 +31,7 @@ MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=	http://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
 
-CONFLICTS+=	nntpclnt-[0-9]* inn*
+CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 
 WRKSRC=		${WRKDIR}
 PKG_USERS=	news:news::Internet\ News:${CNEWSDATA:Q}:${SH:Q}
@@ -40,21 +41,27 @@ PKG_SYSCONFDIR.c-news=	${CNEWSDATA}/etc
 
 EGDIR=		${PREFIX}/share/examples/c-news
 
-
 .include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0123].*))
+DEPENDS+=	uucp-[1-9]*:../../net/uucp
+.endif
+
+USE_TOOLS+=	perl:run
+REPLACE_PERL+=	${PGPVERIFY:Q}
 
 .if (${OPSYS} == "SunOS")
 # groff & pic
-BUILD_DEPENDS+=	groff:../../textproc/groff
+USE_TOOLS+=	groff
 PIC?=		gpic
 NROFF?=		groff -Tascii -mtty-char
 .else
+USE_TOOLS+=	nroff
 PIC?=		pic
 NROFF?=		nroff -Tascii
 .endif
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-CONFLICTS=	inn-[1-9]*
 MAKE_FILE=	makefile
 DIST_SUBDIR=	${DISTNAME}
 
@@ -73,12 +80,8 @@ NOTEBOOK=	locking.more makefiles.more locking.ps makefiles.ps
 
 PGPVERIFY?=	pgpverify-1.12
 
-.if (${OPSYS} == "SunOS")
-FILES_SUBST_SED+=	"-e s!statfs!statvfs!g"
-.endif
-
 pre-patch:
-	@${CP} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${PGPVERIFY:Q} ${WRKSRC:Q}/${PGPVERIFY:Q}
+	${CP} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/${PGPVERIFY:Q} ${WRKSRC:Q}/${PGPVERIFY:Q}
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
@@ -90,9 +93,10 @@ pre-configure:
 	${CP}  ${FILESDIR:Q}/makeinc ${WRKDIR:Q}/conf/makeinc
 	${CP}  ${FILESDIR:Q}/makefile.notebook ${WRKDIR:Q}/notebook/makefile
 
-# One of the tests does not work correctly if we are in a union-mounted
-# directory.
-post-build:     build-doc # regression
+# One of the regression tests does not work correctly if we are in
+# a union-mounted directory. In that case, build with something like
+# "env WRKOBJDIR=/var/tmp make".
+post-build:     build-doc  # regression
 
 .PHONY: regression
 regression:
