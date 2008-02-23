@@ -1,0 +1,25 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/02/23 03:40:21 hfath Exp $
+
+   The documentation that comes with C News has been installed under
+   ${PREFIX}/share/doc/cnews.
+
+   If this is an update, the spool and config directories under
+   ${CNEWSARTS} and ${CNEWSCTL} are untouched.
+
+   If this is a fresh install, sample config files have been installed
+   in ${PREFIX}/share/examples/cnews and copied to ${CNEWSCTL}.
+
+   Especially edit:
+
+	mailname, whoami, organization, mailpaths, sys, readnews.ctl,
+	postdefltgroup, localgroups and sys
+
+   to suit your local system and news topology. Check that you have
+   valid aliases in report.ctl, so any problem can be reported by
+   mail.
+
+   C News itself does not handle NNTP. Install the news/nnrpd package
+   in addition.
+
+===========================================================================
