@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/13 22:19:51 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/23 11:40:37 thomasklausner Exp $
 #
 
 DISTNAME=		imgSeek-0.8.6
@@ -14,6 +14,7 @@ COMMENT=		Photo collection manager and viewer
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt3-modules/buildlink3.mk"
