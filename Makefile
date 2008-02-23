@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2804 2008/02/23 00:17:18 pmatias Exp $
+# $Id: Makefile,v 1.2805 2008/02/23 15:28:06 smoppy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -400,7 +400,7 @@ SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-libggz
 SUBDIR+=	ggz-server
-SUBDIR+=    ghc
+SUBDIR+=	ghc
 SUBDIR+=	ghostpcl
 SUBDIR+=	gimmie
 SUBDIR+=	git
@@ -881,6 +881,7 @@ SUBDIR+=	llvm
 SUBDIR+=	lmarbles
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logrotate
+SUBDIR+=	logfmon
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
@@ -1757,6 +1758,7 @@ SUBDIR+=	tkabber
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
 SUBDIR+=	tmw
+SUBDIR+=	tmux
 SUBDIR+=	topless
 SUBDIR+=	toppler
 SUBDIR+=	tops-bin
