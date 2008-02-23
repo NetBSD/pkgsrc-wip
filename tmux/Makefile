@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/23 14:36:41 smoppy Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/23 15:21:50 smoppy Exp $
 
 DISTNAME=	tmux-0.1
 CATEGORIES=	misc
@@ -10,14 +10,6 @@ COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
 NO_CONFIGURE=	yes
 USE_NCURSES=	# uses ncurses internals
-
-# Preferences handling framework
-.include "../../mk/bsd.prefs.mk"
-
-# Unprivileged owner/group
-.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
-SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
-.endif
 
 # compat/strtonum.c: replace "tmux.h" with "../tmux.h"
 SUBST_CLASSES+=		header
