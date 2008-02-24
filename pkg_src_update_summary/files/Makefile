@@ -10,7 +10,7 @@ INST_DIR?=	${INSTALL} -d
 
 .include "Makefile.version"
 
-SCRIPTS=	pkg_src_update_summary
+SCRIPTS=	pkg_src_update_summary pkg_list_all_pkgs
 MAN=		pkg_src_update_summary.1
 
 BIRTHDAY=	2008-02-15

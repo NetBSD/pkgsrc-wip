@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/14 20:56:18 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/24 13:35:50 cheusov Exp $
+bin/pkg_list_all_pkgs
 bin/pkg_src_update_summary
 man/man1/pkg_src_update_summary.1
