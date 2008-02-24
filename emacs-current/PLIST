@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2008/02/20 09:11:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.42 2008/02/24 21:29:47 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -100,7 +100,6 @@ share/emacs/${PKGVERSION}/etc/NEWS.19
 share/emacs/${PKGVERSION}/etc/NEWS.20
 share/emacs/${PKGVERSION}/etc/NEWS.21
 share/emacs/${PKGVERSION}/etc/NEWS.22
-share/emacs/${PKGVERSION}/etc/NEWS.unicode
 share/emacs/${PKGVERSION}/etc/NXML-NEWS
 share/emacs/${PKGVERSION}/etc/ORDERS
 share/emacs/${PKGVERSION}/etc/PROBLEMS
@@ -2038,6 +2037,8 @@ share/emacs/${PKGVERSION}/lisp/jka-cmpr-hook.el.gz
 share/emacs/${PKGVERSION}/lisp/jka-cmpr-hook.elc
 share/emacs/${PKGVERSION}/lisp/jka-compr.el.gz
 share/emacs/${PKGVERSION}/lisp/jka-compr.elc
+share/emacs/${PKGVERSION}/lisp/json.el.gz
+share/emacs/${PKGVERSION}/lisp/json.elc
 share/emacs/${PKGVERSION}/lisp/kermit.el.gz
 share/emacs/${PKGVERSION}/lisp/kermit.elc
 share/emacs/${PKGVERSION}/lisp/kmacro.el.gz
@@ -2053,9 +2054,6 @@ share/emacs/${PKGVERSION}/lisp/language/cyril-util.elc
 share/emacs/${PKGVERSION}/lisp/language/cyrillic.el.gz
 share/emacs/${PKGVERSION}/lisp/language/cyrillic.elc
 share/emacs/${PKGVERSION}/lisp/language/czech.el
-share/emacs/${PKGVERSION}/lisp/language/devan-util.el.gz
-share/emacs/${PKGVERSION}/lisp/language/devan-util.elc
-share/emacs/${PKGVERSION}/lisp/language/devanagari.el
 share/emacs/${PKGVERSION}/lisp/language/english.el
 share/emacs/${PKGVERSION}/lisp/language/ethio-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/ethio-util.elc
@@ -2073,24 +2071,18 @@ share/emacs/${PKGVERSION}/lisp/language/indian.elc
 share/emacs/${PKGVERSION}/lisp/language/japan-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/japan-util.elc
 share/emacs/${PKGVERSION}/lisp/language/japanese.el
-share/emacs/${PKGVERSION}/lisp/language/kannada.el
 share/emacs/${PKGVERSION}/lisp/language/khmer.el
-share/emacs/${PKGVERSION}/lisp/language/knd-util.el.gz
-share/emacs/${PKGVERSION}/lisp/language/knd-util.elc
 share/emacs/${PKGVERSION}/lisp/language/korea-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/korea-util.elc
 share/emacs/${PKGVERSION}/lisp/language/korean.el
 share/emacs/${PKGVERSION}/lisp/language/lao-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/lao-util.elc
 share/emacs/${PKGVERSION}/lisp/language/lao.el
-share/emacs/${PKGVERSION}/lisp/language/malayalam.el
 share/emacs/${PKGVERSION}/lisp/language/misc-lang.el
-share/emacs/${PKGVERSION}/lisp/language/mlm-util.el.gz
-share/emacs/${PKGVERSION}/lisp/language/mlm-util.elc
 share/emacs/${PKGVERSION}/lisp/language/romanian.el
+share/emacs/${PKGVERSION}/lisp/language/sinhala.el
 share/emacs/${PKGVERSION}/lisp/language/slovak.el
 share/emacs/${PKGVERSION}/lisp/language/tai-viet.el
-share/emacs/${PKGVERSION}/lisp/language/tamil.el
 share/emacs/${PKGVERSION}/lisp/language/thai-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/thai-util.elc
 share/emacs/${PKGVERSION}/lisp/language/thai-word.el.gz
@@ -2100,8 +2092,6 @@ share/emacs/${PKGVERSION}/lisp/language/tibet-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/tibet-util.elc
 share/emacs/${PKGVERSION}/lisp/language/tibetan.el.gz
 share/emacs/${PKGVERSION}/lisp/language/tibetan.elc
-share/emacs/${PKGVERSION}/lisp/language/tml-util.el.gz
-share/emacs/${PKGVERSION}/lisp/language/tml-util.elc
 share/emacs/${PKGVERSION}/lisp/language/tv-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/tv-util.elc
 share/emacs/${PKGVERSION}/lisp/language/utf-8-lang.el
@@ -2727,6 +2717,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/simula.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/simula.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/sql.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/sql.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/sym-comp.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/sym-comp.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
