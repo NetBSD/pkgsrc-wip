@@ -1,24 +1,17 @@
-# $NetBSD: options.mk,v 1.1 2008/02/23 17:39:49 leot1990 Exp $
+# $NetBSD: options.mk,v 1.2 2008/02/24 13:52:43 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dvtm
-PKG_OPTIONS_REQUIRED_GROUPS=	curses
-PKG_OPTIONS_GROUP.curses=	ncurses ncursesw
-PKG_SUGGESTED_OPTIONS=		ncursesw
+PKG_SUPPORTED_OPTIONS=		wide-curses
+PKG_SUGGESTED_OPTIONS=		# empty
+PKG_LEGACY_OPTS+=		ncursesw:wide-curses
 
 .include "../../mk/bsd.options.mk"
 
-
-# Option-handling
-
-##
-## Curses lib to use
-##
-.if !empty(PKG_OPTIONS:Mncurses)
-.include "../../devel/ncurses/buildlink3.mk"
 USE_NCURSES=	yes	# mouse extensions (not X/Open Curses compliant)
-.endif
 
-.if !empty(PKG_OPTIONS:Mncursesw)
+.if !empty(PKG_OPTIONS:Mwide-curses)
 .include "../../devel/ncursesw/buildlink3.mk"
 MAKE_FLAGS+=	unicode
+.else
+.include "../../devel/ncurses/buildlink3.mk"
 .endif
