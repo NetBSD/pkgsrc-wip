@@ -89,7 +89,7 @@ with_pkgpath && $0 ~ /^PKGPATH=/ {
 NF == 0 {
 	# option PKGPATH
 	if (with_pkgpath){
-		pkgname = pkgpath ":" pkgname
+		pkgname = pkgpath " " pkgname
 	}
 
 	# ver
