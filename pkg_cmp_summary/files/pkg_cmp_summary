@@ -26,8 +26,37 @@
 #use "pkgsrc-dewey.awk"
 
 ############################################################
-# file reading
+function usage (){
+	printf "\
+pkg_cmp_summary - compares two summary files\n\
+usage: pkg_cmp_summary -h\n\
+       pkg_cmp_summary [-p] summary1 summary2\n\
+OPTIONS:\n\
+  -h|--help            display this help\n\
+  -p|--with-pkgpath    use pkgpath:pkgbase pair for identifing a package\n\
+" > "/dev/stderr"
+}
+
 BEGIN {
+	if (ARGV [1] ~ /^(-h|--help)$/){
+		usage()
+		exit 0
+	}
+	if (ARGV [1] ~ /^(-p|--with-pkgpath)$/){
+		with_pkgpath = 1
+		ARGV [1] = ""
+
+		if (ARGC != 4){
+			usage()
+			exit 1
+		}
+	}else{
+		if (ARGC != 3){
+			usage()
+			exit 1
+		}
+	}
+
 	last_fn    = ""
 	first_file = 1
 }
@@ -49,6 +78,19 @@ last_fn != FILENAME {
 
 $0 ~ /^PKGNAME=/ {
 	pkgname = trim(substr($0, 9))
+	next
+}
+
+with_pkgpath && $0 ~ /^PKGPATH=/ {
+	pkgpath = trim(substr($0, 9))
+	next
+}
+
+NF == 0 {
+	# option PKGPATH
+	if (with_pkgpath){
+		pkgname = pkgpath ":" pkgname
+	}
 
 	# ver
 	ver = pkgname
