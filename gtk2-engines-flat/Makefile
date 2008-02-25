@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/05/25 20:14:34 ekamperi Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/25 17:51:42 tnn2 Exp $
 
 DISTNAME=		gtk2flat-default
 PKGNAME=		gtk2-engines-flat-2.0
@@ -12,7 +12,7 @@ COMMENT=		Flat theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.4
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 
 .include "../../x11/gtk2/buildlink3.mk"

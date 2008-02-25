@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/03 09:22:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/25 17:54:25 tnn2 Exp $
 
 DISTNAME=		dwerg-default-${DWERG_VERSION}
 DWERG_VERSION=		0.8
@@ -14,7 +14,7 @@ COMMENT=		Theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.4
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 
 .include "../../x11/gtk2/buildlink3.mk"

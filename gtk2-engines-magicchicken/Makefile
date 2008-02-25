@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/20 22:52:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/25 17:54:25 tnn2 Exp $
 
 DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
 PKGNAME=		gtk2-engines-magicchicken-1.1.1
@@ -11,7 +11,7 @@ COMMENT=		MagicChicken theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.4
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
 WRKSRC=                 ${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
 
