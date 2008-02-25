@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/25 13:12:09 sebpierrel Exp $
-etc/ejabberd/inetrc
+@comment $NetBSD: PLIST,v 1.8 2008/02/25 13:13:44 sebpierrel Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
 lib/erlang/lib/${DISTNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${DISTNAME}/ebin/XmppAddr.beam

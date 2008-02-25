@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/02/25 13:08:27 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/25 13:13:44 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-2.0.0
@@ -78,7 +78,9 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}/api
 INSTALLATION_DIRS+=	${EGDIR}
 
-CONF_FILES=	${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
+CONF_FILES=	${EGDIR}/ejabberd.cfg
+CONF_FILES+=	${PKG_SYSCONFDIR}/ejabberd.cfg
+CONF_FILES+=	${PKG_SYSCONFDIR}/inetrc
 
 .for d in ${OWN_DIRS}
 OWN_DIRS_PERMS+=	${d} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
