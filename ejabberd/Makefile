@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/02/25 12:57:05 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/25 13:08:27 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-2.0.0
@@ -58,7 +58,6 @@ EJABBERD_GROUP=		ejabberd
 EJABBERD_PIDDIR=	${VARBASE}/run/ejabberd
 EJABBERD_LOGDIR=	${VARBASE}/log/ejabberd
 EJABBERD_DB=		${VARBASE}/spool/ejabberd
-EJABBERD_TRANSDIR=	libexec/ejabber-transports
 EJABBERD_EXDIR=		share/examples/ejabberd
 
 OWN_DIRS+=		${EJABBERD_PIDDIR}
