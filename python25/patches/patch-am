@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
+$NetBSD: patch-am,v 1.3 2008/02/25 13:41:18 tnn2 Exp $
 
---- setup.py.orig	2007-02-14 07:53:41.000000000 -0500
+--- setup.py.orig	2008-02-05 00:41:02.000000000 +0100
 +++ setup.py
 @@ -15,7 +15,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
@@ -30,7 +30,7 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -532,9 +538,7 @@ class PyBuildExt(build_ext):
+@@ -533,9 +539,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -41,18 +41,14 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -599,259 +603,45 @@ class PyBuildExt(build_ext):
-         # implementation independent wrapper for these; dumbdbm.py provides
-         # similar functionality (but slower of course) implemented in Python.
+@@ -608,269 +612,51 @@ class PyBuildExt(build_ext):
+         # a release.  Most open source OSes come with one or more
+         # versions of BerkeleyDB already installed.
  
--        # Sleepycat Berkeley DB interface.  http://www.sleepycat.com
--        #
--        # This requires the Sleepycat DB code. The supported versions
--        # are set below.  Visit http://www.sleepycat.com/ to download
--        # a release.  Most open source OSes come with one or more
--        # versions of BerkeleyDB already installed.
--
 -        max_db_ver = (4, 5)
+-        # NOTE: while the _bsddb.c code links against BerkeleyDB 4.6.x
+-        # we leave that version disabled by default as it has proven to be
+-        # quite a buggy library release on many platforms.
 -        min_db_ver = (3, 3)
 -        db_setup_debug = False   # verbose debug prints from this script?
 -
@@ -69,7 +65,7 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -            '/sw/include/db3',
 -        ]
 -        # 4.x minor number specific paths
--        for x in (0,1,2,3,4,5):
+-        for x in range(max_db_ver[1]+1):
 -            db_inc_paths.append('/usr/include/db4%d' % x)
 -            db_inc_paths.append('/usr/include/db4.%d' % x)
 -            db_inc_paths.append('/usr/local/BerkeleyDB.4.%d/include' % x)
@@ -92,7 +88,7 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -        for dn in inc_dirs:
 -            std_variants.append(os.path.join(dn, 'db3'))
 -            std_variants.append(os.path.join(dn, 'db4'))
--            for x in (0,1,2,3,4):
+-            for x in range(max_db_ver[1]+1):
 -                std_variants.append(os.path.join(dn, "db4%d"%x))
 -                std_variants.append(os.path.join(dn, "db4.%d"%x))
 -            for x in (2,3):
@@ -105,21 +101,14 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -        db_ver_inc_map = {}
 -
 -        class db_found(Exception): pass
--        try:
--            # See whether there is a Sleepycat header in the standard
--            # search path.
++        class Notfound(Exception): pass
+         try:
+             # See whether there is a Sleepycat header in the standard
+             # search path.
 -            for d in inc_dirs + db_inc_paths:
 -                f = os.path.join(d, "db.h")
 -                if db_setup_debug: print "db: looking for db.h in", f
-+            # check if need to use the db_185.h compat header
-+            bsddb185_define_macros=[]
-+            if bdb_type == "db2" or  bdb_type == "db3" or bdb_type == "db4":
-+                bsddb185_define_macros=[('HAVE_DB_185_H',1)]
-+                dblib_dir = [os.environ['PY_BDB_LIBDIRS']]
-+            else:
-+                # check if db_incs/db.h really is db 1.85
-+                f = "%s/db.h" % db_incs[0]
-                 if os.path.exists(f):
+-                if os.path.exists(f):
 -                    f = open(f).read()
 -                    m = re.search(r"#define\WDB_VERSION_MAJOR\W(\d+)", f)
 -                    if m:
@@ -128,19 +117,22 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -                        db_minor = int(m.group(1))
 -                        db_ver = (db_major, db_minor)
 -
+-                        # Avoid 4.6 prior to 4.6.21 due to a BerkeleyDB bug
+-                        if db_ver == (4, 6):
+-                            m = re.search(r"#define\WDB_VERSION_PATCH\W(\d+)", f)
+-                            db_patch = int(m.group(1))
+-                            if db_patch < 21:
+-                                print "db.h:", db_ver, "patch", db_patch,
+-                                print "being ignored (4.6.x must be >= 4.6.21)"
+-                                continue
+-
 -                        if ( (not db_ver_inc_map.has_key(db_ver)) and
 -                           (db_ver <= max_db_ver and db_ver >= min_db_ver) ):
 -                            # save the include directory with the db.h version
 -                            # (first occurrance only)
 -                            db_ver_inc_map[db_ver] = d
 -                            print "db.h: found", db_ver, "in", d
-+                    data = open(f).read()
-+                    m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
-+                    if m is None:
-+                        # check for 1.85 compat header
-+                        if os.path.exists("%s/db_185.h" % db_incs[0]):
-+                            bsddb185_define_macros=[('HAVE_DB_185_H',1)]
-                         else:
+-                        else:
 -                            # we already found a header for this library version
 -                            if db_setup_debug: print "db.h: ignoring", d
 -                    else:
@@ -198,10 +190,13 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -            if db_setup_debug: print "db: no appropriate library found"
 -            db_incs = None
 -            dblibs = []
--            dblib_dir = None
--
++            bdb_type = os.environ['PY_BDB_TYPE']
++            db_incs = [os.environ['PY_BDB_INCDIRS']]
+             dblib_dir = None
++            dblibs = None
+ 
 -        # The sqlite interface
--        sqlite_setup_debug = True   # verbose debug prints from this script?
+-        sqlite_setup_debug = False # verbose debug prints from this script?
 -
 -        # We hunt for #define SQLITE_VERSION "n.n.n"
 -        # We need to find >= sqlite version 3.0.8
@@ -270,8 +265,7 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -                sqlite_defines.append(('MODULE_NAME', '"sqlite3"'))
 -            else:
 -                sqlite_defines.append(('MODULE_NAME', '\\"sqlite3\\"'))
-+                            raise NotFound
- 
+-
 -
 -            if sys.platform == 'darwin':
 -                # In every directory on the search path search for a dynamic
@@ -280,7 +274,12 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -                # This way a staticly linked custom sqlite gets picked up
 -                # before the dynamic library in /usr/lib.
 -                sqlite_extra_link_args = ('-Wl,-search_paths_first',)
--            else:
++            # check if need to use the db_185.h compat header
++            bsddb185_define_macros=[]
++            if bdb_type == "db2" or  bdb_type == "db3" or bdb_type == "db4":
++                bsddb185_define_macros=[('HAVE_DB_185_H',1)]
++                dblib_dir = [os.environ['PY_BDB_LIBDIRS']]
+             else:
 -                sqlite_extra_link_args = ()
 -
 -            exts.append(Extension('_sqlite3', sqlite_srcs,
@@ -298,8 +297,13 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -        # accidentally building this module with a later version of the
 -        # underlying db library.  May BSD-ish Unixes incorporate db 1.85
 -        # symbols into libc and place the include file in /usr/include.
+-        #
+-        # If the better bsddb library can be built (db_incs is defined)
+-        # we do not build this one.  Otherwise this build will pick up
+-        # the more recent berkeleydb's db.h file first in the include path
+-        # when attempting to compile and it will fail.
 -        f = "/usr/include/db.h"
--        if os.path.exists(f):
+-        if os.path.exists(f) and not db_incs:
 -            data = open(f).read()
 -            m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
 -            if m is not None:
@@ -313,7 +317,17 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 -                                          libraries=libraries))
 -                else:
 -                    exts.append(Extension('bsddb185', ['bsddbmodule.c']))
-+            class Notfound(Exception): pass
++                # check if db_incs/db.h really is db 1.85
++                f = "%s/db.h" % db_incs[0]
++                if os.path.exists(f):
++                    data = open(f).read()
++                    m = re.search(r"#s*define\s+HASHVERSION\s+2\s*", data)
++                    if m is None:
++                        # check for 1.85 compat header
++                        if os.path.exists("%s/db_185.h" % db_incs[0]):
++                            bsddb185_define_macros=[('HAVE_DB_185_H',1)]
++                        else:
++                            raise NotFound
 +            try:
 +                bltransform = os.environ['PY_BDB_TRANSFORM']
 +                m = re.search(r"l:db:(db.)\s*", bltransform)
@@ -329,15 +343,14 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
 +                                   include_dirs=db_incs,
 +                                   define_macros=bsddb185_define_macros,
 +                                   libraries=dblibs))
-+	else:
-+             bdb_type = os.environ['PY_BDB_TYPE']
-+             db_incs = [os.environ['PY_BDB_INCDIRS']]
++        except:
++             db_incs = None
++             dblibs = []
 +             dblib_dir = None
-+             dblibs = None
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -864,6 +654,13 @@ class PyBuildExt(build_ext):
+@@ -883,6 +669,13 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -351,7 +364,7 @@ $NetBSD: patch-am,v 1.2 2008/02/03 18:22:05 shattered Exp $
              elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
                    and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
-@@ -1516,8 +1313,8 @@ def main():
+@@ -1535,8 +1328,8 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install

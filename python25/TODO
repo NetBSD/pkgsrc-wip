@@ -1,5 +1,17 @@
--- Darwin, HP/UX [... others?]  Darwin now has dlopen() support ... see docs.
--- I don't know which modules should be disabled, but there are new ones.
+* Darwin, HP/UX [... others?]  Darwin now has dlopen() support ... see docs.
+* I don't know which modules should be disabled, but there are new ones.
 Please audit this list.
--- pkgsrc framework
--- PLISTs
+* pkgsrc framework
+* PLISTs
+
+* The setup.py script rejects db4 versions older than 4.6 by default
+   since Python-2.5.2, because older are said to be "buggy".
+   We have patched away the check in patch-am, but maybe we need to revisit it?
+
+* IN.py is no longer installed, why?
+
+* db 1.85 handling seems to do the wrong thing, PLIST problem(?)
+
+* make it not install "egg files" when installing 3rdparty python modules
+
+* before we import it to pkgsrc, someone should run the test suite

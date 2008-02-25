@@ -1,26 +1,26 @@
-$NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.2 2008/02/25 13:41:18 tnn2 Exp $
 
---- Modules/_cursesmodule.c.orig	2007-03-06 15:46:26.000000000 -0500
+--- Modules/_cursesmodule.c.orig	2008-01-26 15:03:51.000000000 +0100
 +++ Modules/_cursesmodule.c
-@@ -317,17 +317,9 @@ Window_OneArgNoReturnFunction(wattroff, 
- Window_OneArgNoReturnFunction(wattrset, attr_t, "l;attr")
+@@ -314,17 +314,11 @@ Window_NoArg2TupleReturnFunction(getpary
+ 
  Window_OneArgNoReturnFunction(clearok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(idlok, int, "i;True(1) or False(0)")
 -#if defined(__NetBSD__)
--Window_OneArgNoReturnVoidFunction(keypad, int, "i;True(1) or False(0)")
+ Window_OneArgNoReturnVoidFunction(keypad, int, "i;True(1) or False(0)")
 -#else
  Window_OneArgNoReturnFunction(keypad, int, "i;True(1) or False(0)")
 -#endif
  Window_OneArgNoReturnFunction(leaveok, int, "i;True(1) or False(0)")
 -#if defined(__NetBSD__)
--Window_OneArgNoReturnVoidFunction(nodelay, int, "i;True(1) or False(0)")
+ Window_OneArgNoReturnVoidFunction(nodelay, int, "i;True(1) or False(0)")
 -#else
  Window_OneArgNoReturnFunction(nodelay, int, "i;True(1) or False(0)")
 -#endif
  Window_OneArgNoReturnFunction(notimeout, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(scrollok, int, "i;True(1) or False(0)")
  Window_OneArgNoReturnFunction(winsdelln, int, "i;nlines")
-@@ -788,11 +780,7 @@ PyCursesWindow_GetKey(PyCursesWindowObje
+@@ -827,11 +821,7 @@ PyCursesWindow_GetKey(PyCursesWindowObje
    } else if (rtn<=255)
      return Py_BuildValue("c", rtn);
    else
@@ -32,7 +32,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
  }
  
  static PyObject *
-@@ -1976,7 +1964,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
+@@ -2039,7 +2029,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
  }
  #endif /* HAVE_CURSES_IS_TERM_RESIZED */
  
@@ -40,7 +40,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -1995,7 +1982,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+@@ -2058,7 +2047,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
  
    return PyString_FromString((knp == NULL) ? "" : (char *)knp);
  }
@@ -48,7 +48,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
  
  static PyObject *  
  PyCurses_KillChar(PyObject *self)  
-@@ -2540,9 +2526,7 @@ static PyMethodDef PyCurses_methods[] = 
+@@ -2603,9 +2591,7 @@ static PyMethodDef PyCurses_methods[] = 
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
    {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
  #endif
@@ -58,7 +58,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
    {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS}, 
    {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS}, 
    {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2651,9 +2635,7 @@ init_curses(void)
+@@ -2714,9 +2700,7 @@ init_curses(void)
  	SetDictInt("A_DIM",		A_DIM);
  	SetDictInt("A_BOLD",		A_BOLD);
  	SetDictInt("A_ALTCHARSET",	A_ALTCHARSET);
@@ -68,7 +68,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
  	SetDictInt("A_PROTECT",         A_PROTECT);
  	SetDictInt("A_CHARTEXT",        A_CHARTEXT);
  	SetDictInt("A_COLOR",           A_COLOR);
-@@ -2725,7 +2707,6 @@ init_curses(void)
+@@ -2788,7 +2772,6 @@ init_curses(void)
  	  int key;
  	  char *key_n;
  	  char *key_n2;
@@ -76,7 +76,7 @@ $NetBSD: patch-ah,v 1.1 2007/07/31 05:01:38 bsadewitz Exp $
  	  for (key=KEY_MIN;key < KEY_MAX; key++) {
  	    key_n = (char *)keyname(key);
  	    if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2753,7 +2734,6 @@ init_curses(void)
+@@ -2816,7 +2799,6 @@ init_curses(void)
  	    if (key_n2 != key_n)
  	      free(key_n2);
  	  }
