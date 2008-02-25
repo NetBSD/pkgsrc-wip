@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/16 23:31:39 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/25 16:18:05 shattered Exp $
 
 DISTNAME=		ocp-0.1.15
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://stian.lunafish.org/ocp/
 EXTRACT_SUFX=		.tar.bz2
