@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/25 11:42:54 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/25 12:57:05 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-2.0.0
@@ -48,6 +48,7 @@ RCD_SCRIPTS=	ejabberd
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
 BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB EJABBERD_TRANSDIR
 BUILD_DEFS+=		EJABBERD_EXDIR
+BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
 
 .include "../../mk/bsd.prefs.mk"
