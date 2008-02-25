@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2806 2008/02/25 11:48:35 smoppy Exp $
+# $Id: Makefile,v 1.2807 2008/02/25 18:13:38 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -127,7 +127,6 @@ SUBDIR+=	bin86
 SUBDIR+=	bincimap
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
-SUBDIR+=	bison13
 SUBDIR+=	blassic
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
@@ -1425,7 +1424,6 @@ SUBDIR+=	ppr
 SUBDIR+=	premake
 SUBDIR+=	procps
 SUBDIR+=	progreiserfs
-SUBDIR+=	prothon
 SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
