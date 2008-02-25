@@ -1,4 +1,4 @@
-# $NetBSD: patch-ae,v 1.1 2008/02/25 11:42:55 sebpierrel Exp $
+$NetBSD: patch-ae,v 1.2 2008/02/25 13:04:25 sebpierrel Exp $
 
 Keep thing tidy (nothing under /usr/pkg/var )
 
