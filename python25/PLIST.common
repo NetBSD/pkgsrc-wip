@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2008/02/25 14:07:50 netcap Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2008/02/25 14:31:41 tnn2 Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}-config
@@ -1543,7 +1543,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
+${BSDDBMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bz2.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
