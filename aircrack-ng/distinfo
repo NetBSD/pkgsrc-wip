@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/02/16 19:23:13 tnn2 Exp $
+$NetBSD: distinfo,v 1.6 2008/02/25 11:12:40 tnn2 Exp $
 
-SHA1 (aircrack-ng-0.9.2.tar.gz) = ab2c924ca839cf694d622f0774c430010c8ab0a3
-RMD160 (aircrack-ng-0.9.2.tar.gz) = b37ef5ea8892f876a596998ec36967ce6aea0d36
-Size (aircrack-ng-0.9.2.tar.gz) = 840118 bytes
+SHA1 (aircrack-ng-0.9.3.tar.gz) = b2f671324d056408b83d32eb1ab6061b7fa87ac5
+RMD160 (aircrack-ng-0.9.3.tar.gz) = 29c7d454da26167fb24e5a0f2b6eeeddc98e697d
+Size (aircrack-ng-0.9.3.tar.gz) = 1031441 bytes
 SHA1 (patch-aa) = 08fab75081991dab158b41dc4669f6add9162c53
 SHA1 (patch-ab) = 653965b8d91d2484fcc60c288c1ece99799b9440
