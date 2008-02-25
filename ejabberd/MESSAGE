@@ -1,12 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/11/30 05:48:06 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2008/02/25 11:42:54 sebpierrel Exp $
 
 You will need to customize the following files to configure ejabberd for
 local use:
 
-    ${PKG_SYSCONFDIR}/ejabberd.defaults
-    ${PKG_SYSCONFDIR}/ejabberd.inetrc
     ${PKG_SYSCONFDIR}/ejabberd.cfg
+
+Note: this package includes an unofficial patch to support multiples listeners
+on the same port number, which enables IPv4 and IPv6 concurrently. 
 
 Quick start for ejabberd:
 

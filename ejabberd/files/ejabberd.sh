@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ejabberd.sh,v 1.2 2008/02/14 12:21:08 sebpierrel Exp $
+# $NetBSD: ejabberd.sh,v 1.3 2008/02/25 11:42:55 sebpierrel Exp $
 # $FreeBSD: ejabberd.sh.in,v 1.1 2005/08/28 15:51:48 vsevolod Exp $
 #
 # PROVIDE: ejabberd
@@ -25,7 +25,6 @@ status_cmd="ejabberd_status"
 stop_cmd="ejabberd_stop"
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:@PREFIX@/bin:@PREFIX@/sbin
-EJABBERD=@PREFIX@/sbin/ejabberd
 EJABBERDCTL=@PREFIX@/sbin/ejabberdctl
 
 ejabberd_status()

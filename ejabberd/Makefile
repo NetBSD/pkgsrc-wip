@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/21 16:21:18 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/25 11:42:54 sebpierrel Exp $
 # FreeBSD Id: Makefile,v 1.9 2005/11/09 07:48:10 pav Exp
 
 DISTNAME=	ejabberd-2.0.0
@@ -46,7 +46,7 @@ FILES_SUBST+=	EGDIR=${EGDIR}
 RCD_SCRIPTS=	ejabberd
 
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
-BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_SPOOLDIR EJABBERD_TRANSDIR
+BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB EJABBERD_TRANSDIR
 BUILD_DEFS+=		EJABBERD_EXDIR
 PKG_SYSCONFSUBDIR=	ejabberd
 
@@ -54,39 +54,31 @@ PKG_SYSCONFSUBDIR=	ejabberd
 
 EJABBERD_USER=		ejabberd
 EJABBERD_GROUP=		ejabberd
-EJABBERD_PIDDIR=	var/run/ejabberd
-EJABBERD_LOGDIR=	var/log/ejabberd
-EJABBERD_LIBDIR=	var/lib/ejabberd
-EJABBERD_SPOOLDIR=	var/lib/ejabberd/db
+EJABBERD_PIDDIR=	${VARBASE}/run/ejabberd
+EJABBERD_LOGDIR=	${VARBASE}/log/ejabberd
+EJABBERD_DB=		${VARBASE}/spool/ejabberd
 EJABBERD_TRANSDIR=	libexec/ejabber-transports
-EJABBERD_EXDIR=		share/examples/ejabber
+EJABBERD_EXDIR=		share/examples/ejabberd
 
 OWN_DIRS+=		${EJABBERD_PIDDIR}
 OWN_DIRS+=		${EJABBERD_LOGDIR}
-OWN_DIRS+=		${EJABBERD_LIBDIR}
-OWN_DIRS+=		${EJABBERD_SPOOLDIR}
+OWN_DIRS+=		${EJABBERD_DB}
 
 FILES_SUBST+=		JABBERD_USER=${EJABBERD_USER}
-#FILES_SUBST+=		EJABBERD_GROUP=${EJABBERD_GROUP}
-#FILES_SUBST+=		EJABBERD_PIDDIR=${EJABBERD_PIDDIR}
 FILES_SUBST+=		JABBERD_LOGDIR=${EJABBERD_LOGDIR}
-FILES_SUBST+=		JABBERD_SPOOLDIR=${EJABBERD_SPOOLDIR}
-#FILES_SUBST+=		EJABBERD_TRANSDIR=${EJABBERD_TRANSDIR}
 
 PLIST_SUBST+=		EJABBERD_EXDIR=${EJABBERD_EXDIR}
 
 PKG_GROUPS+=		${EJABBERD_GROUP}
 PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
 
-EGDIR=		${PREFIX}/${EJABBERD_EXDIR}
+EGDIR=			${PREFIX}/${EJABBERD_EXDIR}
 
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}/api
 INSTALLATION_DIRS+=	${EGDIR}
 
-CONF_FILES=	${EGDIR}/ejabberd.inetrc ${PKG_SYSCONFDIR}/ejabberd.inetrc
-CONF_FILES+=	${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
-CONF_FILES+=	${EGDIR}/ejabberd.defaults ${PKG_SYSCONFDIR}/ejabberd.defaults
+CONF_FILES=	${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
 
 .for d in ${OWN_DIRS}
 OWN_DIRS_PERMS+=	${d} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
@@ -94,9 +86,7 @@ OWN_DIRS_PERMS+=	${d} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/ejabberd.defaults ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/ejabberd.cfg.example ${EGDIR}/ejabberd.cfg
-	${INSTALL_DATA} ${FILESDIR}/ejabberd.inetrc ${EGDIR}
 
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${DISTNAME}
 	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${DISTNAME}
@@ -108,10 +98,13 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Makefile.in
+SUBST_FILES.paths+=	src/ejabberdctl.template
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_DB@,${EJABBERD_DB},g'
 SUBST_SED.paths+=	-e 's,@DISTNAME@,${DISTNAME},g'
+SUBST_SED.paths+=	-e 's,@EJABBERD_VARDIR@,${VARBASE},g'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/erlang/buildlink3.mk"
