@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2805 2008/02/23 15:28:06 smoppy Exp $
+# $Id: Makefile,v 1.2806 2008/02/25 11:48:35 smoppy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -881,7 +881,6 @@ SUBDIR+=	llvm
 SUBDIR+=	lmarbles
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logrotate
-SUBDIR+=	logfmon
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
