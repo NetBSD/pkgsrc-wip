@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2007/05/16 21:26:30 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/02/26 19:30:28 cheusov Exp $
 
 CATEGORIES=		audio
 MASTER_SITES=		http://www.xmms.org/files/Skins/
@@ -7,10 +7,13 @@ MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		http://www.xmms.org/skins.php
 COMMENT=		Skin for XMMS
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		xmms>=1.2.0:../../audio/xmms
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+NO_EXTRACT=		yes
 
 WRKSRC=			${WRKDIR}
 
@@ -18,8 +21,5 @@ SKIN_DIR=		${PREFIX}/share/xmms/Skins
 
 INSTALLATION_DIRS+=	${SKIN_DIR}
 
-do-extract:
-	cp ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}
-
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}${EXTRACT_SUFX} ${SKIN_DIR}
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${DESTDIR}${SKIN_DIR}
