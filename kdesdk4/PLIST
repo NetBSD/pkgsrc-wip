@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/06 12:04:13 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/02/26 16:13:33 thomasklausner Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -198,7 +198,15 @@ share/doc/kde/HTML/en/kcachegrind/index.docbook
 share/doc/kde/HTML/en/kdesvn-build/common
 share/doc/kde/HTML/en/kdesvn-build/index.cache.bz2
 share/doc/kde/HTML/en/kdesvn-build/index.docbook
+share/doc/kde/HTML/en/kompare/common
 share/doc/kde/HTML/en/kompare/index.cache.bz2
+share/doc/kde/HTML/en/kompare/index.docbook
+share/doc/kde/HTML/en/kompare/settings-diff1.png
+share/doc/kde/HTML/en/kompare/settings-diff2.png
+share/doc/kde/HTML/en/kompare/settings-diff3.png
+share/doc/kde/HTML/en/kompare/settings-diff4.png
+share/doc/kde/HTML/en/kompare/settings-view1.png
+share/doc/kde/HTML/en/kompare/settings-view2.png
 share/doc/kde/HTML/en/umbrello/activity-diagram.png
 share/doc/kde/HTML/en/umbrello/add-remove-languages.png
 share/doc/kde/HTML/en/umbrello/aggregation.png
@@ -233,28 +241,34 @@ share/doc/kde/HTML/en/umbrello/uml_basics.docbook
 share/doc/kde/HTML/en/umbrello/use-case-diagram.png
 share/doc/kde/HTML/en/umbrello/working_with_umbrello.docbook
 share/icons/hicolor/128x128/apps/kbugbuster.png
+share/icons/hicolor/128x128/apps/kompare.png
 share/icons/hicolor/128x128/apps/umbrello.png
 share/icons/hicolor/16x16/apps/cervisia.png
 share/icons/hicolor/16x16/apps/kbugbuster.png
+share/icons/hicolor/16x16/apps/kompare.png
 share/icons/hicolor/16x16/apps/kuiviewer.png
 share/icons/hicolor/16x16/apps/umbrello.png
 share/icons/hicolor/16x16/mimetypes/umbrellofile.png
 share/icons/hicolor/22x22/apps/cervisia.png
 share/icons/hicolor/22x22/apps/kbugbuster.png
+share/icons/hicolor/22x22/apps/kompare.png
 share/icons/hicolor/22x22/apps/umbrello.png
 share/icons/hicolor/32x32/apps/cervisia.png
 share/icons/hicolor/32x32/apps/kbugbuster.png
 share/icons/hicolor/32x32/apps/kcachegrind.png
+share/icons/hicolor/32x32/apps/kompare.png
 share/icons/hicolor/32x32/apps/kuiviewer.png
 share/icons/hicolor/32x32/apps/umbrello.png
 share/icons/hicolor/32x32/mimetypes/umbrellofile.png
 share/icons/hicolor/48x48/apps/cervisia.png
 share/icons/hicolor/48x48/apps/kbugbuster.png
 share/icons/hicolor/48x48/apps/kcachegrind.png
+share/icons/hicolor/48x48/apps/kompare.png
 share/icons/hicolor/48x48/apps/kuiviewer.png
 share/icons/hicolor/48x48/apps/umbrello.png
 share/icons/hicolor/64x64/apps/kbugbuster.png
 share/icons/hicolor/64x64/apps/umbrello.png
+share/icons/hicolor/scalable/apps/kompare.svgz
 share/icons/hicolor/scalable/apps/umbrello.svgz
 share/icons/oxygen/128x128/actions/svn_add.png
 share/icons/oxygen/128x128/actions/svn_branch.png
@@ -670,6 +684,8 @@ share/kde4/services/katesymbolviewer.desktop
 share/kde4/services/katetabbarextension.desktop
 share/kde4/services/katetextfilter.desktop
 share/kde4/services/kded/ksvnd.desktop
+share/kde4/services/komparenavtreepart.desktop
+share/kde4/services/komparepart.desktop
 share/kde4/services/kresources/kcal/bugzilla.desktop
 share/kde4/services/kuiviewer_part.desktop
 share/kde4/services/svn+file.protocol
@@ -678,6 +694,8 @@ share/kde4/services/svn+https.protocol
 share/kde4/services/svn+ssh.protocol
 share/kde4/services/svn.protocol
 share/kde4/servicetypes/kateplugin.desktop
+share/kde4/servicetypes/komparenavigationpart.desktop
+share/kde4/servicetypes/kompareviewpart.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services/kresources/kcal
 @comment in kde: @dirrm share/kde4/services/kded
