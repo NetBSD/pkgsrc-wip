@@ -1,0 +1,41 @@
+# $NetBSD: pkgsrc-indirect,v 1.1 2008/02/26 06:47:37 bsadewitz Exp $
+
+include $(TOP)/configs/pkgsrc
+
+CONFIG_NAME= 	pkgsrc-indirect
+
+DEFINES=\
+ 	-DPTHREADS -DGLX_INDIRECT_RENDERING -DHAVE_ALIAS -D_REENTRANT
+CFLAGS+=\
+ 	$(WARN_FLAGS) $(COPTS) -Wmissing-prototypes -Wall \
+  	$(ASM_FLAGS) $(X11_INCLUDES)
+CXXFLAGS+=\
+ 	$(WARN_FLAGS) $(COPTS) -Wall $(ASM_FLAGS)
+
+ASM_SOURCES?= 	# defined
+
+EXPAT_INCLUDES= `$(PKG_CONFIG) --cflags expat`
+LIBEXPAT= 	`$(PKG_CONFIG) --libs expat`
+LIBDRM_CFLAGS= 	`$(PKG_CONFIG) --cflags libdrm`
+LIBDRM_LIB= 	`$(PKG_CONFIG) --libs libdrm`
+#PCIACCESS_CFLAGS= 	`$(PKG_CONFIG) --cflags pciaccess`
+#PCIACCESS_LIBS= 	`$(PKG_CONFIG) --cflags pciaccess`
+
+DRI_LIB_DEPS?=\
+ 	-lm $(LIBEXPAT) $(LIBDRM_LIB)
+GL_LIB_DEPS=\
+ 	 -lX11 -lXext -lXxf86vm -lXdamage \
+ 	 -lXfixes -lm $(LIBDRM_LIB)
+GLUT_LIB_DEPS=\
+ 	-L$(TOP)/$(LIB_DIR) -lGLU -lGL \
+ 	-lX11 -lXmu -lXt -lXi -lm
+GLW_LIB_DEPS=\
+ 	 -lGL -lXt -lX11
+
+SRC_DIRS= 	glx/x11 mesa glw
+DRIVER_DIRS= 	dri
+PROGRAM_DIRS=	# defined 
+WINDOW_SYSTEM=	dri
+
+DRI_DIRS?= 	i810 i915 i965 mach64 mga r128 r200  \
+		r300 radeon tdfx unichrome savage sis
