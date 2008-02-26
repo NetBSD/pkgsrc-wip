@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2008/02/16 01:29:09 lexort Exp $
+# $NetBSD: Makefile,v 1.16 2008/02/26 16:27:18 netcap Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
 PKGREVISION=		2
 CATEGORIES=		geography
-MASTER_SITES=		http://cvs.gis.umn.edu/dist/
+MASTER_SITES=		http://download.osgeo.org/mapserver/ \
+			http://cvs.gis.umn.edu/dist/
 
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://mapserver.gis.umn.edu/
