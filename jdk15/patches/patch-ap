@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1 2007/03/09 21:29:42 briandealwis Exp $
+$NetBSD: patch-ap,v 1.2 2008/02/27 05:20:52 tnn2 Exp $
 
---- deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp.orig	2004-10-19 13:04:26.000000000 -0600
-+++ deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp	2007-02-28 17:02:40.000000000 -0600
-@@ -139,7 +139,7 @@
+--- deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp.orig	2008-02-27 03:38:28.000000000 +0100
++++ deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp
+@@ -139,7 +139,7 @@ CNSAdapter_JVMManager::GetCurrentThread(
  
      nsresult res = JD_OK;
      
@@ -11,11 +11,11 @@ $NetBSD: patch-ap,v 1.1 2007/03/09 21:29:42 briandealwis Exp $
      res = m_pThreadManager->GetCurrentThread(&pPluginThread);
  
      if (NS_SUCCEEDED(res) && pPluginThread)
-@@ -169,7 +169,7 @@
+@@ -169,7 +169,7 @@ CNSAdapter_JVMManager::PostEvent(JDThrea
      if (spRunnable == NULL)
  	return JD_ERROR_OUT_OF_MEMORY;
  
--    return m_pThreadManager->PostEvent(threadID, spRunnable, async);
+-    return m_pThreadManager->PostEvent((unsigned long)threadID, spRunnable, async);
 +    return m_pThreadManager->PostEvent((PRThread*)threadID, spRunnable, async);
  }
  

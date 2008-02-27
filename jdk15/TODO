@@ -15,6 +15,3 @@
 
   * Stole INSTALL.tmpl and DEINSTALL.tmpl from sun-jre15 -- but these
     don't seem to be executed.
-
-  * Add a note about fetching the jce policy distribution file when
-    jdk15-jce option activated.

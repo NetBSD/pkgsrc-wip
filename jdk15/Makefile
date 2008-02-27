@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2008/01/20 15:23:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.26 2008/02/27 05:20:51 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
 JDK_VERSION=		1.5.0
 JDK_UPDATE=		13
-JDK_PATCHSET_VERSION=	7
+# If updating, please check if patch-ar is still needed. (introduced in patch8)
+JDK_PATCHSET_VERSION=	8
 JDK_VERSION_STRING=	b05-jrl-25_sep_2007
 
 DISTNAME=		jdk-${JDK_VERSION:S/./_/g}_${JDK_UPDATE}
@@ -26,16 +27,26 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 JAVA_NAME=		jdk15
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
-# Let an installed version of this package bootstrap a later version
-# (skips having to reinstall sun-jdk15 again)
-#
-#.if exists(${JVM_HOME}/LICENSE)
-#BUILD_DEPENDS+=		jdk15>=1
-#MAKE_ENV+=		ALT_BOOTDIR=${JVM_HOME}
-#.else
+.if exists(${LOCALBASE}/java/jdk-1.6.0/bin/javac) && defined(NOT_YET)
+BUILD_DEPENDS+=		jdk16>=1
+MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/jdk-1.6.0
+.elif exists(${LOCALBASE}/java/jdk-1.5.0/bin/javac)
+#don't depend on my myself
+#BUILD_DEPENDS+=	jdk15>=1
+MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/jdk-1.5.0
+.elif exists(${LOCALBASE}/java/sun-6/bin/javac) && defined(NOT_YET)
+BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
+MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-6
+.else
 BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
 MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
-#.endif
+.endif
+
+.if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime)
+PKG_FAIL_REASON=	"If bootstrapping with Linux JDK,"
+PKG_FAIL_REASON+=	"then /emul/linux/proc must be mounted. Run:"
+PKG_FAIL_REASON+=	"mount -o linux -t procfs /dev/null /emul/linux/proc"
+.endif
 
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}

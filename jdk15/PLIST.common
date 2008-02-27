@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2007/11/27 00:11:58 heidnes Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2008/02/27 05:20:52 tnn2 Exp $
 bin/jdk15-appletviewer
 bin/jdk15-jar
 bin/jdk15-java
@@ -880,7 +880,6 @@ java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libjsig.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libjsound.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libmanagement.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libmlib_image.so
-java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libnative_chmod.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libnet.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libnio.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/librmi.so
@@ -888,6 +887,7 @@ java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libunpack.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libverify.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/libzip.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/motif21/libmawt.so
+java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/motif21/libXm.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/native_threads/libhpi.so
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/server/Xusage.txt
 java/jdk-1.5.0/jre/lib/${MACHINE_ARCH}/server/libjsig.so

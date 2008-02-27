@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/12/03 14:41:03 absd Exp $
+$NetBSD: distinfo,v 1.7 2008/02/27 05:20:52 tnn2 Exp $
 
-SHA1 (bsd-jdk15-patches-7.tar.bz2) = 3ca0c0cc06c34f68da258e87e7cc5093813b60f7
-RMD160 (bsd-jdk15-patches-7.tar.bz2) = 54875cf87015ac9a63dbcd4e15254c7aeb48b6c8
-Size (bsd-jdk15-patches-7.tar.bz2) = 778641 bytes
+SHA1 (bsd-jdk15-patches-8.tar.bz2) = d79d11da85629933530e64ad53ab3319c626a090
+RMD160 (bsd-jdk15-patches-8.tar.bz2) = 36efc84ca89f11e7a3cd51511656164a22d5e7b6
+Size (bsd-jdk15-patches-8.tar.bz2) = 795972 bytes
 SHA1 (jce_policy-1_5_0.zip) = f0e887b91b4499142285633e65c5710c3a133a16
 RMD160 (jce_policy-1_5_0.zip) = eb12d0333c3ddbbba57a0e825a6891a75ec485c0
 Size (jce_policy-1_5_0.zip) = 8826 bytes
@@ -26,5 +26,6 @@ SHA1 (patch-al) = c4213a76eed62ce25b7a7ce7a594cbb100e597bd
 SHA1 (patch-am) = b5ada7467faacb99847260793dc9675e31b05132
 SHA1 (patch-an) = 131efa89c7a4623a2aa56238f27b336a5c5cda4e
 SHA1 (patch-ao) = 331f0ebcc03382cf44ad6c4ea3d1f40b2409907e
-SHA1 (patch-ap) = c08c8465b28051e4c268afb81aa4aae030dd0745
+SHA1 (patch-ap) = e9288fdd092e5015ac116f3b4fd76a946a625380
 SHA1 (patch-aq) = 84e71786c7c399646cd4bc964cffb27dcfedac2c
+SHA1 (patch-ar) = bcacdff75fd31ec3d75df0ac420b5c30b3713c6d
