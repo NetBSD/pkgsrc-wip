@@ -1,35 +1,36 @@
-# $NetBSD: Makefile,v 1.7 2008/02/21 23:46:46 smoppy Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/27 17:50:55 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fdm/}
 
-MAINTAINER=	smoppy@gmail.com
+MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://fdm.sourceforge.net/
 COMMENT=	Mail fetching, filtering and delivering program
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 
-##
-# Some fix (avoid patches)
-##
+# Preferences handling framework
+.include "../../mk/bsd.prefs.mk"
+
+# Unprivileged owner/group
+# NOTE: this statement has been put here (and this way) in order
+#       to avoid a stupid SUBST block related pkglint(1) warning.
+.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+UNPRIV_MATCH=		-g bin -o root
+UNPRIV_SUBST=		-o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}
+.endif
 
 # Makefile
 SUBST_CLASSES=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing distribution Makefile..
-SUBST_FILES.makefile=	Makefile
-SUBST_SED.makefile=	-e 's/-I-//'
+SUBST_FILES.makefile=	${MAKE_FILE}
+SUBST_SED.makefile=	-e 's/ -I-//'
 SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
-
-# Preferences handling framework
-.include "../../mk/bsd.prefs.mk"
-
-# Unprivileged owner/group
-.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
-SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
-.endif
+# This may not replace anything
+SUBST_SED.makefile+=	-e 's/${UNPRIV_MATCH}/${UNPRIV_SUBST}/g'
 
 # Paths
 SUBST_CLASSES+=		paths

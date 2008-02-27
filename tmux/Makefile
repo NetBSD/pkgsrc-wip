@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/23 15:21:50 smoppy Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/27 17:51:31 smoppy Exp $
 
 DISTNAME=	tmux-0.1
 CATEGORIES=	misc
@@ -9,7 +9,7 @@ HOMEPAGE=	http://tmux.sourceforge.net/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
 NO_CONFIGURE=	yes
-USE_NCURSES=	# uses ncurses internals
+USE_NCURSES=	yes
 
 # compat/strtonum.c: replace "tmux.h" with "../tmux.h"
 SUBST_CLASSES+=		header
