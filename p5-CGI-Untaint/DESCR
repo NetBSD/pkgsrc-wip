@@ -1,0 +1,14 @@
+Dealing with large web based applications with multiple forms is a minefield.
+It's often hard enough to ensure you validate all your input at all, without
+having to worry about doing it in a consistent manner. If any of the validation
+rules change, you often have to alter them in many different places.
+And, if you want to operate taint-safe, then you're just adding even
+more headaches.
+
+This module provides a simple, convenient, abstracted and extensible manner
+for validating and untainting the input from web forms.
+
+You simply create a handler with a hash of your parameters (usually $q->Vars),
+and then iterate over the fields you wish to extract, performing whatever
+validations you choose.
+The resulting variable is guaranteed not only to be valid, but also untainted
