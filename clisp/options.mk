@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2008/02/05 14:20:58 asau Exp $
+# $NetBSD: options.mk,v 1.3 2008/02/27 06:49:16 asau Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
+PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
 # this option is essential for some others to work:
 PKG_SUPPORTED_OPTIONS+=		ffcall
