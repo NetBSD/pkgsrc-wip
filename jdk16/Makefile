@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/27 13:22:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/27 20:41:24 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -116,8 +116,6 @@ INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
 DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
 
 PLIST_SRC+=		PLIST.common_end
-
-INTERACTIVE_STAGE+=	extract
 
 .include "../../wip/jdk16/license-extract.mk"
 
