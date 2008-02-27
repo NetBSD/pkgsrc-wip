@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/02/26 12:04:44 obache Exp $
+# $NetBSD: options.mk,v 1.4 2008/02/27 14:22:20 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=	--without-carbon
 .include "../../graphics/libotf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-#.include "../../devel/m17n-lib/buildlink3.mk"
+.include "../../devel/m17n-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-font-backend
 .  else
 CONFIGURE_ARGS+=	--disable-font-backend
