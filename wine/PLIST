@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/19 04:11:58 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/27 21:18:09 hoka_adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -976,6 +976,62 @@ share/wine/fonts/vgasysr.fon
 share/wine/fonts/vgasyst.fon
 share/wine/generic.ppd
 share/wine/wine.inf
+include/wine/windows/bcrypt.h
+include/wine/windows/bits.h
+include/wine/windows/bits.idl
+include/wine/windows/bitsmsg.h
+include/wine/windows/d3dx8.h
+include/wine/windows/d3dx8math.h
+include/wine/windows/d3dx8math.inl
+include/wine/windows/d3dx8mesh.h
+include/wine/windows/d3dx9.h
+include/wine/windows/d3dx9core.h
+include/wine/windows/d3dx9math.h
+include/wine/windows/d3dx9math.inl
+include/wine/windows/ddk/mountmgr.h
+include/wine/windows/ddk/winddiui.h
+include/wine/windows/dimm.h
+include/wine/windows/dimm.idl
+include/wine/windows/errorrep.h
+include/wine/windows/i_cryptasn1tls.h
+include/wine/windows/imnact.h
+include/wine/windows/imnact.idl
+include/wine/windows/imnxport.h
+include/wine/windows/imnxport.idl
+include/wine/windows/intshcut.h
+include/wine/windows/isguids.h
+include/wine/windows/midles.h
+include/wine/windows/mimeole.h
+include/wine/windows/mimeole.idl
+include/wine/windows/oleacc.h
+include/wine/windows/oleacc.idl
+include/wine/windows/rpcasync.h
+include/wine/windows/wfext.h
+include/wine/windows/winhttp.h
+lib/wine/actxprxy.dll.so
+lib/wine/ctapi32.dll.so
+lib/wine/d3dx9_36.dll.so
+lib/wine/inetcomm.dll.so
+lib/wine/libcredui.def
+lib/wine/libcryptnet.def
+lib/wine/libinetcomm.def
+lib/wine/libmsvcr71.def
+lib/wine/mountmgr.sys.so
+lib/wine/mscat32.dll.so
+lib/wine/msimtf.dll.so
+lib/wine/msvcirt.dll.so
+lib/wine/msvcr71.dll.so
+lib/wine/olethk32.dll.so
+lib/wine/propsys.dll.so
+lib/wine/qmgr.dll.so
+lib/wine/qmgrprxy.dll.so
+lib/wine/svchost.exe.so
+lib/wine/wmi.dll.so
+man/de.UTF-8/man1/wine.1
+man/fr.UTF-8/man1/wine.1
+man/fr.UTF-8/man1/wineserver.1
+share/wine/fonts/tahoma.ttf
+share/wine/fonts/tahomabd.ttf
 @dirrm share/wine/fonts
 @dirrm share/wine
 @comment in xdg-dirs: @dirrm share/applications
