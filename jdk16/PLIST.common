@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2008/01/20 14:04:55 tnn2 Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2008/02/27 13:22:39 tnn2 Exp $
 bin/jdk16-appletviewer
 bin/jdk16-jar
 bin/jdk16-java
@@ -1616,7 +1616,6 @@ java/jdk-1.6.0/jre/lib/cmm/LINEAR_RGB.pf
 java/jdk-1.6.0/jre/lib/cmm/PYCC.pf
 java/jdk-1.6.0/jre/lib/cmm/sRGB.pf
 java/jdk-1.6.0/jre/lib/content-types.properties
-java/jdk-1.6.0/jre/lib/ct.sym
 java/jdk-1.6.0/jre/lib/ext/dnsns.jar
 java/jdk-1.6.0/jre/lib/ext/localedata.jar
 java/jdk-1.6.0/jre/lib/ext/meta-index
@@ -1665,8 +1664,6 @@ java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libjsig.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libjsound.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libmanagement.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libmlib_image.so
-java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libnative_chmod.so
-java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libnative_chmod_g.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libnet.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libnio.so
 java/jdk-1.6.0/jre/lib/${MACHINE_ARCH}/libnpt.so

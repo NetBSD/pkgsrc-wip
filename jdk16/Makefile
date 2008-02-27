@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/01/20 17:16:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/27 13:22:39 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
 JDK_VERSION=		1.6.0
 JDK_UPDATE=		3
-JDK_PATCHSET_VERSION=	3
+JDK_PATCHSET_VERSION=	4
 JDK_VERSION_STRING=	b05-jrl-24_sep_2007
 
 DISTNAME=		jdk-6u${JDK_UPDATE}
@@ -21,13 +21,20 @@ USE_TOOLS+=		patch
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
+# XXX actually requires -current due to use of getpeereid()
+ONLY_FOR_PLATFORM=	NetBSD-[4-9]*-i386
 
 JAVA_NAME=		jdk16
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
+.if exists(${LOCALBASE}/java/jdk-1.6.0/bin/javac)
+# don't depend on myself
+#BUILD_DEPENDS+=	jdk16>=1:../../wip/jdk16
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.6.0
+.else
 BUILD_DEPENDS+=		jdk15>=1:../../wip/jdk15
 MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.5.0
+.endif
 
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}
@@ -144,7 +151,7 @@ GROSS_HACKS+=	--param max-inline-insns-single=20000 \
 _WRAP_EXTRA_ARGS.CC+=	${GROSS_HACKS}
 _WRAP_EXTRA_ARGS.CXX+=	${GROSS_HACKS}
 
-MAKE_ENV+=	ALT_CUPS_HEADERS_PATH=${PREFIX}/include
+MAKE_ENV+=			ALT_CUPS_HEADERS_PATH=${PREFIX}/include
 BUILDLINK_DEPMETHOD.cups?=	build
 .include "../../print/cups/buildlink3.mk"
 

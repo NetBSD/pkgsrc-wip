@@ -1,19 +1,21 @@
-$NetBSD: patch-ag,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+$NetBSD: patch-ag,v 1.2 2008/02/27 13:22:39 tnn2 Exp $
 
---- j2se/make/common/Defs-bsd.gmk.orig	2008-01-19 11:43:21.000000000 +0100
+--- j2se/make/common/Defs-bsd.gmk.orig	2008-02-27 06:50:26.000000000 +0100
 +++ j2se/make/common/Defs-bsd.gmk
-@@ -214,6 +214,10 @@ endif
- LDFLAGS_OPT     =
- LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
- LDFLAGS_COMMON += -Wl,-soname=$(LIB_PREFIX)$(LIBRARY).$(LIBRARY_SUFFIX)
-+ifeq ($(TRUE_PLATFORM), NetBSD)
+@@ -215,8 +215,11 @@ ifdef LIBRARY
+ #XXXBSD: neither FreeBSD or OpenBSD support $ORIGIN in the rpath
+   ifeq ($(OS_VENDOR),NetBSD)
+     LDFLAGS_COMMON += -Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN
+-    LDFLAGS_COMMON += -Xlinker -rpath -Xlinker /usr/pkg/lib
++    LDFLAGS_COMMON += -Xlinker -rpath -Xlinker %%LOCALBASE%%/lib
+     LDFLAGS_COMMON += $(LD_RUNPATH_EXTRAS:%=-Xlinker -z -Xlinker origin -Xlinker -rpath -Xlinker \$$ORIGIN/%)
++### XXX These two might no longer be needed
 +LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH)
 +LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)
-+endif
- LDFLAGS_DBG     =
+   endif
+ endif
  
- #
-@@ -249,6 +253,10 @@ LD_MAPFILE_FLAG = -Xlinker --version-scr
+@@ -276,6 +279,10 @@ LD_MAPFILE_FLAG = -Xlinker --version-scr
  #
  VM_NAME         = server
  JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME) -ljvm
@@ -24,7 +26,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
  JAVALIB         = -ljava $(JVMLIB)
  
  #
-@@ -298,7 +306,7 @@ override LIBSOCKET               =
+@@ -332,7 +339,7 @@ override LIBSOCKET               =
  override LIBTHREAD               =
  override MOOT_PRIORITIES         = true
  override NO_INTERRUPTIBLE_IO     = false
