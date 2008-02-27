@@ -1,2 +1,5 @@
-NetBSD-4.99.54/amd64:
+$Id: TODO,v 1.2 2008/02/27 08:32:33 asau Exp $
+
+* Make it run on NetBSD
+* NetBSD-4.99.54/amd64:
 actxprxy_servprov_p.c:272:2: error: #error Currently only Wine and WIN32 are supported.
