@@ -1,0 +1,2 @@
+NetBSD-4.99.54/amd64:
+actxprxy_servprov_p.c:272:2: error: #error Currently only Wine and WIN32 are supported.
