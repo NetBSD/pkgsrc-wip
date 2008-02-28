@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/02/27 06:49:16 asau Exp $
+# $NetBSD: options.mk,v 1.4 2008/02/28 15:50:01 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -26,11 +26,11 @@ PKG_SUGGESTED_OPTIONS+=		gmalloc
 .include "../../mk/bsd.options.mk"
 
 .for option in ${PKG_SUPPORTED_OPTIONS}
-.if !empty(PKG_OPTIONS:M${option})
+.  if !empty(PKG_OPTIONS:M${option})
 PLIST_SUBST+=	${option}=""
-.else
+.  else
 PLIST_SUBST+=	${option}="@comment "
-.endif
+.  endif
 .endfor
 
 .if !empty(PKG_OPTIONS:Mgmalloc)
@@ -43,7 +43,7 @@ PKG_OPTIONS+=	ffcall
 .endif
 
 .if !empty(PKG_OPTIONS:Mffcall)
-CONFIGURE_ARGS+=        --with-dynamic-ffi
+CONFIGURE_ARGS+=	--with-dynamic-ffi
 .  include "../../devel/ffcall/buildlink3.mk"
 .endif
 
@@ -108,7 +108,7 @@ CONFIGURE_ARGS+=	--with-module=wildcard
 
 .if !empty(PKG_OPTIONS:Mzlib)
 CONFIGURE_ARGS+=	--with-module=zlib
-BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
 .endif
 
