@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/28 15:56:53 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/28 19:45:43 tnn2 Exp $
 #
 
 DISTNAME=	clisp-2.44.1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
-
-CONFLICTS+=	clisp-[0-9]*
 
 # Sparc64 has assembler code problems, see
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
