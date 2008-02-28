@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/02/17 19:44:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/28 19:06:09 cheusov Exp $
 #
 
-DISTNAME=	paexec-0.6.0
+DISTNAME=	paexec-0.7.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
 
