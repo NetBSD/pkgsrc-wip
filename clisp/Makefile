@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/27 06:55:20 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/28 15:56:53 tnn2 Exp $
 #
 
 DISTNAME=	clisp-2.44.1
@@ -23,7 +23,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		dvipdf gmake
 USE_PKGLOCALEDIR=	YES
 BUILD_DIRS=		src
-#CONFIGURE_ENV+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
@@ -32,7 +31,6 @@ CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
 TEST_TARGET=		check
-MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
@@ -49,8 +47,8 @@ CONFIGURE_ARGS+=	--disable-mmap
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
