@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/02/03 14:22:21 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/28 12:48:04 asau Exp $
 #
 
-DISTNAME=	chicken-2.732
+DISTNAME=	chicken-3.0.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2007/11/04/
+MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2008/02/27/
 
 MAINTAINER=	asau@users.sourceforge.net, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
@@ -41,9 +41,10 @@ PKG_FAIL_REASON=	"${OPSYS} is not supported"
 .endif
 
 MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
-MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}${PREFIX:Q}
-MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
+MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR} INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 
 BUILD_TARGET=	all chicken.info
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
