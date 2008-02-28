@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/28 09:48:12 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/28 11:53:31 asau Exp $
 #
 
 DISTNAME=		ecl-0.9j
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/index.html
 COMMENT=		Embeddable Common Lisp
 
