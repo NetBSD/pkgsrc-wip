@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/29 18:24:04 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/28 09:48:12 asau Exp $
 #
 
 DISTNAME=		ecl-0.9j
@@ -10,6 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ecls.sourceforge.net/index.html
 COMMENT=		Embeddable Common Lisp
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
+
 WRKSRC=			${WRKDIR}/${DISTNAME}-build/
 
 USE_PKGLOCALEDIR=	yes
@@ -19,14 +22,7 @@ CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-MAKE_JOBS_SAFE=		no
-
 post-extract:
 	${MKDIR} ${WRKSRC}
-post-install:
-	${INSTALL_DATA_DIR} share/doc/${PKGNAME}/html
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/*
 
 .include "../../mk/bsd.pkg.mk"
