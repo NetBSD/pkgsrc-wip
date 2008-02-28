@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/26 04:42:52 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/28 15:33:36 hoka_adam Exp $
 bin/netsurf
 share/netsurf/nsgtk
-share/netsurf/!NetSurf/Docs/en/images
 share/netsurf/!NetSurf/Docs/libcurl,b60
 share/netsurf/!NetSurf/Docs/about,faf
 share/netsurf/!NetSurf/Docs/openssl,695
