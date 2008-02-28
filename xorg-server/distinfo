@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/19 23:12:48 jeremy-c-reed Exp $
-
-SHA1 (xorg-server-1.1.99.903.tar.bz2) = e63ebbd368ca0f962de2f1e6a7720473e12f2d9b
-RMD160 (xorg-server-1.1.99.903.tar.bz2) = f6039cab1f233d2785b147e0963ccb90dcd735cd
-Size (xorg-server-1.1.99.903.tar.bz2) = 5980396 bytes
-SHA1 (patch-ab) = 2703d3786503407dc6d1b9a429c23233d719efdb
-SHA1 (patch-ad) = 39c3bede8d20962cfbf751667ad15e81aa81ef56
