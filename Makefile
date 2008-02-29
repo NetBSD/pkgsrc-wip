@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2811 2008/02/29 00:41:56 tnn2 Exp $
+# $Id: Makefile,v 1.2812 2008/02/29 15:29:24 pmatias Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -402,6 +402,7 @@ SUBDIR+=	gdhcpd
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
+SUBDIR+=	geany
 SUBDIR+=	genshi
 SUBDIR+=	geos
 SUBDIR+=	gfontview
