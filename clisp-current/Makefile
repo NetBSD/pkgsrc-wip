@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/02/03 09:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/29 19:06:32 asau Exp $
 #
 
 DISTNAME=	clisp-2.44
@@ -10,8 +10,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
-CONFLICTS+=	clisp-[0-9]*
-
 CVS_REPOSITORIES=	clisp
 CVS_ROOT.clisp=		:pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp
 WRKSRC=		${WRKDIR}/clisp
@@ -19,6 +17,7 @@ WRKSRC=		${WRKDIR}/clisp
 # Sparc64 has assembler code problems, see
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
 NOT_FOR_PLATFORM=	*-*-sparc64
+NOT_FOR_PLATFORM+=	*-*-arm
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
@@ -31,7 +30,6 @@ BUILD_DIRS=		src
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
