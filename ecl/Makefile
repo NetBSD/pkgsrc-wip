@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/28 11:53:31 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/29 08:29:28 asau Exp $
 #
 
 DISTNAME=		ecl-0.9j
@@ -22,7 +22,12 @@ CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
+CONFIGURE_ARGS+=	--enable-boehm=system
+CONFIGURE_ARGS+=	--with-system-gmp
+
 post-extract:
 	${MKDIR} ${WRKSRC}
 
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
