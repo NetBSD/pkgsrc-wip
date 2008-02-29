@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/06 02:18:22 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/29 05:12:40 dhowland Exp $
 #
 
 DISTNAME=		opendchub-0.7.15
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 # only works for systems with cap_set_proc() support
 CONFIGURE_ARGS+=	--enable-switch_user
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
