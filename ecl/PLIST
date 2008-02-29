@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/29 18:24:04 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/02/29 08:58:33 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -10,27 +10,6 @@ include/ecl/ecl-inl.h
 include/ecl/ecl.h
 include/ecl/eval.h
 include/ecl/external.h
-include/ecl/gc/gc.h
-include/ecl/gc/gc_config_macros.h
-include/ecl/gc/gc_local_alloc.h
-include/ecl/gc/gc_mark.h
-include/ecl/gc/gc_pthread_redirects.h
-include/ecl/gc/gc_typed.h
-include/ecl/gc/leak_detector.h
-include/ecl/gc/private/cord_pos.h
-include/ecl/gc/private/darwin_semaphore.h
-include/ecl/gc/private/darwin_stop_world.h
-include/ecl/gc/private/dbg_mlc.h
-include/ecl/gc/private/gc_hdrs.h
-include/ecl/gc/private/gc_locks.h
-include/ecl/gc/private/gc_pmark.h
-include/ecl/gc/private/gc_priv.h
-include/ecl/gc/private/gcconfig.h
-include/ecl/gc/private/pthread_stop_world.h
-include/ecl/gc/private/pthread_support.h
-include/ecl/gc/private/solaris_threads.h
-include/ecl/gc/private/specific.h
-include/ecl/gmp.h
 include/ecl/internal.h
 include/ecl/number.h
 include/ecl/object.h
@@ -49,6 +28,7 @@ lib/ecl/serve-event.fas
 lib/ecl/sockets.fas
 lib/libecl.so
 @dirrm lib/ecl
+@exec ${MKDIR} %D/include/ecl/gc/private
 @dirrm include/ecl/gc/private
 @dirrm include/ecl/gc
 @dirrm include/ecl
