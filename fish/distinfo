@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/30 20:20:54 hugor Exp $
+$NetBSD: distinfo,v 1.2 2008/02/29 14:59:32 hoka_adam Exp $
 
-SHA1 (fish-1.21.12.tar.bz2) = 8ab4da3ffc4acb5cd56e395bdbef83eb6c8cf8ab
-RMD160 (fish-1.21.12.tar.bz2) = b8172eee345fe84959acc88f242742bcf1018e50
-Size (fish-1.21.12.tar.bz2) = 706246 bytes
+SHA1 (fish-1.23.0.tar.gz) = 544941184c8de2a6a2a926c7c315f866f4890ade
+RMD160 (fish-1.23.0.tar.gz) = 9bad6ce2894cdb868b5f98a113602c067e944d64
+Size (fish-1.23.0.tar.gz) = 1100071 bytes
