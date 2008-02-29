@@ -1,38 +1,41 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/17 13:49:26 dhowland Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/29 05:03:30 dhowland Exp $
 
---- Makefile.orig	2006-08-16 08:38:47.000000000 -0400
+--- Makefile.orig	2006-12-29 05:16:08.000000000 -0500
 +++ Makefile
-@@ -4,7 +4,7 @@
+@@ -6,7 +6,7 @@
  
- # Can be: "linux", "macosx"
+ # Can be: "linux", "macosx", "xmingw" or "mingw32"
  #SYSTEM		:= "macosx"
 -#SYSTEM		:= "linux"
 +SYSTEM		:= "linux"
+ #SYSTEM		:= "xmingw"
+ #SYSTEM		:= "mingw32"
  
- # Can be either: sdlmixer, nomix or oldmix
- # sdlmixer is recommended, as you get proper music and sounds =)
-@@ -13,15 +13,15 @@ SOUND_CODE	:= "sdlmixer"
+@@ -17,8 +17,8 @@ SOUND_CODE	:= "sdlmixer"
  #SOUND_CODE	:= "oldmix"
  
  # Destdir is where the base dir where everything is installed
--DESTDIR		:= ../dist/
+-DESTDIR		:= ../dist
 -#DESTDIR 	:= /
-+#DESTDIR		:= ../dist/
++#DESTDIR		:= ../dist
 +DESTDIR 	:= /
  
+ DATA		:= ../data
+ #DATA		:= /path/to/where/data/is/unpacked/
+@@ -26,9 +26,9 @@ DATA		:= ../data
  # Prefix is the *actual* base directory
  # Bindir is where the cdogs binary is placed
  # Datadir is where the data is
--PREFIX		:= /usr/local/
--BINDIR		:= $(PREFIX)/games/bin/
--DATADIR		:= $(PREFIX)/share/games/cdogs/
-+#PREFIX		:= /usr/local/
-+BINDIR		:= $(PREFIX)/bin/
-+DATADIR		:= $(PREFIX)/share/cdogs/
+-PREFIX		:= /usr/local
+-BINDIR		:= $(PREFIX)/games/bin
+-DATADIR		:= $(PREFIX)/share/games/cdogs
++#PREFIX		:= /usr/local
++BINDIR		:= $(PREFIX)/bin
++DATADIR		:= $(PREFIX)/share/cdogs
+ DOCDIR		:= $(PREFIX)/share/doc/cdogs
  
  # The following are for a self-contained install
- #PREFIX		:= .
-@@ -35,14 +35,14 @@ DATADIR		:= $(PREFIX)/share/games/cdogs/
+@@ -45,15 +45,15 @@ DOCDIR		:= $(PREFIX)/share/doc/cdogs
  
  CF_OPTIMISE	+= -O2
  
@@ -43,19 +46,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/08/17 13:49:26 dhowland Exp $
  
  # Set to 1 for debugging
  DEBUG=0
+ DEBUG_PROFILE=0
  
  ### Change this to yes, once you are ready
 -I_AM_CONFIGURED=no
 +I_AM_CONFIGURED=yes
  
- ###  Some logic to work out things
- 
-@@ -133,7 +133,7 @@ help:
- cdogs: $(dogs_OBJS) $(EXTRA_OBJS)
- 	@echo "Linking..."
- 	@$(CC) $(dogs_OBJS) $(EXTRA_OBJS) -o cdogs $(LDFLAGS)
--	@[ "$(DEBUG)" == "0" ] && $(STRIP) -s cdogs
-+##	@[ "$(DEBUG)" == "0" ] && $(STRIP) -s cdogs
- 	@echo "Now type 'make install' as root!"
- 
- # editor: $(dogsed_OBJS)
+ # Name of the cdogs binary (probably doesn't need to be changed)
+ CDOGS=cdogs
