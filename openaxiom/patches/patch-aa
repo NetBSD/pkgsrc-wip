@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/01 11:31:59 asau Exp $
+
+CLISP breaks at non-ASCII
+
+--- src/lisp/core.lisp.in.orig	2008-02-15 09:41:52.000000000 +0300
++++ src/lisp/core.lisp.in	2008-03-01 12:53:13.000000000 +0300
+@@ -1,4 +1,4 @@
+-;; Ô Emacs, this is a -*- Lisp -*- file, despite apperance
++;; Emacs, this is a -*- Lisp -*- file, despite apperance
+ ;; 
+ ;; Copyright (c) 1991-2002, The Numerical ALgorithms Group Ltd.
+ ;; All rights reserved.
