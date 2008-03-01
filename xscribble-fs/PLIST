@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/01 10:40:02 cubidou Exp $
-bin/xscribble
-share/examples/xscribble/digits.cl
-share/examples/xscribble/letters.cl
-share/examples/xscribble/punc.cl
-@dirrm share/examples/xscribble
