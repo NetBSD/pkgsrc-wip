@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 12:49:08 virtus Exp $
-bin/vcdgear
-bin/vcdgear16
-share/doc/vcdgear/CREDITS
-share/doc/vcdgear/FAQ
-share/doc/vcdgear/HISTORY
-share/doc/vcdgear/MANUAL
-share/doc/vcdgear/WHATSNEW
-@dirrm share/doc/vcdgear
