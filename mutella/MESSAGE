@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/05/20 17:31:38 airhead Exp $
-
-	The http interface is disabled by default.
-	Please refer to the documentation for information about
-	enabling it.
-
-===========================================================================

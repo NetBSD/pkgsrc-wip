@@ -1,6 +1,0 @@
-Check if things need to be done for the POSIX Pthread check. GCC now warns it
-is assuming non-POSIX pthread implementation.
-
-Also, see what is going on with the readline, and why the patches are necessary.
-I don't have any readline knowledge, so I'd be grateful if someone would take
-a look at it.
