@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/01 14:38:19 asau Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/01 14:39:13 asau Exp $
 #
 
 DISTNAME=		axel-1.0b
@@ -8,6 +8,8 @@ MASTER_SITES=		http://wilmer.gaast.net/downloads/
 MAINTAINER=		alchow@users.sourceforge.net
 HOMEPAGE=		http://wilmer.gaast.net/downloads/
 COMMENT=		HTTP/FTP download accelerator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
