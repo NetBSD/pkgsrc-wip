@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2813 2008/03/01 12:47:43 asau Exp $
+# $Id: Makefile,v 1.2814 2008/03/01 12:48:22 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -184,7 +184,7 @@ SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
 SUBDIR+=	clhep
 SUBDIR+=	clips
-SUBDIR+=	clisp
+#SUBDIR+=	clisp
 SUBDIR+=	clisp-current
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
