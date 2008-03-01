@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2815 2008/03/01 12:53:36 hoka_adam Exp $
+# $Id: Makefile,v 1.2816 2008/03/01 13:20:26 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1002,7 +1002,7 @@ SUBDIR+=	muscle-pam
 SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musepack
-SUBDIR+=	mutella
+#SUBDIR+=	mutella		# abandoned
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
