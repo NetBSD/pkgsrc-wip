@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/01 14:32:00 asau Exp $
 #
 
 DISTNAME=	avida-2.0b1
@@ -16,11 +16,12 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 pre-configure:
-	${ECHO} DESTDIR=${LOCALBASE}/share/avida >> ${WRKSRC}/doc/Makefile.in; \
-	${ECHO} DESTDIR=${LOCALBASE}/share/avida >> ${WRKSRC}/doc/glossary/Makefile.in;
+	${ECHO} DESTDIR=${PREFIX}/share/avida >> ${WRKSRC}/doc/Makefile.in; \
+	${ECHO} DESTDIR=${PREFIX}/share/avida >> ${WRKSRC}/doc/glossary/Makefile.in;
 
 post-install:
-	${MV} ${LOCALBASE}/work ${LOCALBASE}/avida-2.0b1
-	${LN} -s ${LOCALBASE}/avida-2.0b1/primitive ${LOCALBASE}/bin/primitive
+	${MV} ${PREFIX}/work ${PREFIX}/avida-2.0b1
+	${LN} -s ${PREFIX}/avida-2.0b1/primitive ${PREFIX}/bin/primitive
+
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
