@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/29 21:06:03 hoka_adam Exp $
-share/doc/hunspell-${DICTNAME}/README_${DICTNAME}.txt
-share/hunspell/${DICTNAME}.aff
-share/hunspell/${DICTNAME}-utf8.aff
-share/hunspell/${DICTNAME}.dic
-share/hunspell/${DICTNAME}-utf8.dic
-@unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
-@dirrm share/doc/hunspell-${DICTNAME}
