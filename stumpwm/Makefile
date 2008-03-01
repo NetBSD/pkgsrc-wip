@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/29 20:23:44 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/01 16:42:13 netcap Exp $
 #
 
 DISTNAME=		stumpwm-0.9.2
@@ -17,12 +17,12 @@ HAS_CONFIGURE=		yes
 INFO_FILES=		yes
 INSTALL_UNSTRIPPED=	yes
 
-# clisp needs sigsegv, iconv, readline, gettext and esp. X11 bindings:
-# PKG_OPTIONS.clisp-current+= new-clx
+# Note: clisp needs sigsegv, iconv, readline, gettext and esp. X11 bindings:
+# PKG_OPTIONS.clisp+= new-clx # should be packaged seperately.
 DEPENDS+=		clisp>=2.42:../../lang/clisp
 CONFIGURE_ARGS=		--with-lisp=clisp
-CONFIGURE_ARGS+=	--with-ppcre=`basename ${WRKDIR}/cl-ppcre-*`
 CONFIGURE_ARGS+=	--with-clisp=${PREFIX}/bin/clisp
+CONFIGURE_ARGS+=	--with-ppcre=${WRKDIR}/`basename ${WRKDIR}/cl-ppcre-*`
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
