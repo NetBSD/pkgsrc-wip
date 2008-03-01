@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/01 13:54:43 asau Exp $
 #
 
 DISTNAME=		afflib-1.6.31
@@ -10,15 +10,17 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.afflib.org/downloads/
 COMMENT=		Advanced Forensic Format library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES= c++
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/aimage/aimage ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/aimage/ident ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/aimage/aimage ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/aimage/ident ${DESTDIR}${PREFIX}/bin
 	for tool in afcat afcompare afconvert affix afinfo afsegment afstats afxml ; do \
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/$$tool ${PREFIX}/bin ; done
-	${INSTALL_DATA} ${WRKSRC}/lib/libafflib.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/afflib.h ${PREFIX}/include
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/$$tool ${DESTDIR}${PREFIX}/bin ; done
+	${INSTALL_DATA} ${WRKSRC}/lib/libafflib.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/lib/afflib.h ${DESTDIR}${PREFIX}/include
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

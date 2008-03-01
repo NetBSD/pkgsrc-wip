@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/10/23 12:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/01 14:10:17 asau Exp $
 #
 
 DISTNAME=	ArgoUML-0.14
@@ -13,6 +13,8 @@ COMMENT=	UML design tool environment with cognitive support
 DEPENDS+=	xerces-j>=1.4.4:../../textproc/xerces-j
 DEPENDS+=	jakarta-log4j>=1.2.8:../../wip/jakarta-log4j
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_JAVA=		run
 NO_BUILD=		yes
 WRKSRC=		${WRKDIR}
@@ -24,12 +26,12 @@ do-configure:
 		${FILESDIR}/argouml > ${WRKSRC}/argouml
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/argouml
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java/argouml
 	for f in antlrall argouml gef i18n nsuml ocl-argo; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/$${f}.jar ${PREFIX}/lib/java/argouml; \
+		${INSTALL_DATA} ${WRKSRC}/$${f}.jar ${DESTDIR}${PREFIX}/lib/java/argouml; \
 	done
-	${INSTALL_SCRIPT} ${WRKSRC}/argouml ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/argouml ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/x11.buildlink3.mk"
