@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 11:23:11 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/01 23:47:04 hoka_adam Exp $
 
-DISTNAME=	DBD-ODBC-1.13
-PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
+DISTNAME=		DBD-ODBC-1.13
+PKGNAME=		p5-${DISTNAME}
+CATEGORIES=		databases perl5
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBD/}
 
-MAINTAINER=	geeogeegeeoh@users.sourceforge.net
-COMMENT=	DBD module interfacing the ODBC databases
+MAINTAINER=		geeogeegeeoh@users.sourceforge.net
+COMMENT=		DBD module interfacing the ODBC databases
 
-DEPENDS+=	p5-DBI-*:../../databases/p5-DBI
-DEPENDS+=	unixodbc-*:../../databases/unixodbc
+DEPENDS+=		p5-DBI-*:../../databases/p5-DBI
+DEPENDS+=		unixodbc-*:../../databases/unixodbc
 
-MAKE_PARAMS+=	-o ${PREFIX}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_PARAMS+=		-o ${PREFIX}
 
 PERL5_PACKLIST=		auto/DBD/ODBC/.packlist
 
