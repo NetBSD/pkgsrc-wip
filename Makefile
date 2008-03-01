@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2814 2008/03/01 12:48:22 asau Exp $
+# $Id: Makefile,v 1.2815 2008/03/01 12:53:36 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -647,7 +647,6 @@ SUBDIR+=	hunspell-fo_FO
 SUBDIR+=	hunspell-ga_IE
 SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
-SUBDIR+=	hunspell-hu_HU
 SUBDIR+=	hunspell-lt_LT
 SUBDIR+=	hunspell-mg_MG
 SUBDIR+=	hunspell-ms_MY
