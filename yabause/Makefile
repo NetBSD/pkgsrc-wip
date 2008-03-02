@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2007/12/23 14:49:27 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/02 15:54:46 hoka_adam Exp $
 
-DISTNAME=	yabause-0.9.2
+DISTNAME=	yabause-0.9.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yabause/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yabause.sourceforge.net/
 COMMENT=	Sega Saturn system emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
