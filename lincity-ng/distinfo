@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/11/04 19:01:29 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2008/03/02 15:13:20 hoka_adam Exp $
 
-SHA1 (lincity-ng-1.1.1.tar.bz2) = e88aa0f1dda53bbff98a43d9f59fe6c373d564b4
-RMD160 (lincity-ng-1.1.1.tar.bz2) = 00b92ddc994bcfe628303cb51415ea2fc4d148a5
-Size (lincity-ng-1.1.1.tar.bz2) = 29567908 bytes
+SHA1 (lincity-ng-1.1.2.tar.bz2) = b2bd7f2e058ada133b452d9dddd8def0f2dbbaeb
+RMD160 (lincity-ng-1.1.2.tar.bz2) = e2cd3c3ab40d2238a2ba3fd15eba316da4eb3a6e
+Size (lincity-ng-1.1.2.tar.bz2) = 29567088 bytes

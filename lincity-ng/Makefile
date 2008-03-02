@@ -1,23 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2008/02/03 10:40:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/02 15:13:20 hoka_adam Exp $
 #
 
-DISTNAME=	lincity-ng-1.1.1
-CATEGORIES=	games
-MASTER_SITES=	http://download.berlios.de/lincity-ng/ \
-               http://download2.berlios.de/lincity-ng/
+VERSION=		1.1.2
+DISTNAME=		lincity-ng-${VERSION}
+CATEGORIES=		games
+MASTER_SITES=		http://download.berlios.de/lincity-ng/ \
+			http://download2.berlios.de/lincity-ng/
 
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://prdownload.berlios.de/lincity-ng/
-COMMENT=	City Simulation Game
+MAINTAINER=		cheusov@tut.by
+HOMEPAGE=		http://prdownload.berlios.de/lincity-ng/
+COMMENT=		City Simulation Game
 
-BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
+BUILD_DEPENDS+=		jam-[0-9]*:../../devel/jam
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=		pkg-config
+
+PLIST_SUBST+=		VERSION=${VERSION}
 
 do-build:
 	cd ${WRKSRC} && jam

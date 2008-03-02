@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2007/11/04 19:01:29 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/02 15:13:20 hoka_adam Exp $
 bin/lincity-ng
 share/applications/lincity-ng.desktop
-share/doc/lincity-ng-1.1.1/COPYING
-share/doc/lincity-ng-1.1.1/COPYING-data.txt
-share/doc/lincity-ng-1.1.1/COPYING-fonts.txt
-share/doc/lincity-ng-1.1.1/README
-share/doc/lincity-ng-1.1.1/RELNOTES
-share/doc/lincity-ng-1.1.1/TODO
-share/doc/lincity-ng-1.1.1/lincityconfig.xml
-share/doc/lincity-ng-1.1.1/userconfig.xml
+share/doc/lincity-ng-${VERSION}/COPYING
+share/doc/lincity-ng-${VERSION}/COPYING-data.txt
+share/doc/lincity-ng-${VERSION}/COPYING-fonts.txt
+share/doc/lincity-ng-${VERSION}/README
+share/doc/lincity-ng-${VERSION}/RELNOTES
+share/doc/lincity-ng-${VERSION}/TODO
+share/doc/lincity-ng-${VERSION}/lincityconfig.xml
+share/doc/lincity-ng-${VERSION}/userconfig.xml
 share/lincity-ng/colour.pal
 share/lincity-ng/fonts/fixed.ttf
 share/lincity-ng/fonts/sans.ttf
