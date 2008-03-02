@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/01/03 08:48:57 asau Exp $
+# $NetBSD: options.mk,v 1.6 2008/03/02 13:00:13 hoka_adam Exp $
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix
 PKG_SUPPORTED_OPTIONS+=		zabbix-server zabbix-agent
 PKG_SUPPORTED_OPTIONS+=		pgsql sqlite mysql
@@ -54,7 +54,8 @@ CONFIGURE_ARGS+=	--with-net-snmp
 #.endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-CONFIGURE_ARGS+=	--with-ldap
+.include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client:Q}
 .endif
 
 .if !empty(PKG_OPTIONS:Mzabbix-static)
