@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2818 2008/03/01 17:05:23 hoka_adam Exp $
+# $Id: Makefile,v 1.2819 2008/03/02 00:49:32 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1845,7 +1845,6 @@ SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vixie-cron
 SUBDIR+=	vkeybd
-SUBDIR+=	vlc
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmsbackup
 SUBDIR+=	vncselector
