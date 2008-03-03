@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/03/03 21:59:31 cheusov Exp $
+$NetBSD: distinfo,v 1.8 2008/03/03 23:20:50 cheusov Exp $
 
-SHA1 (runawk-0.12.0.tar.gz) = 5f74ec0d9fdfa172ce5cd1c12a7c451849b6dd3b
-RMD160 (runawk-0.12.0.tar.gz) = 843c45c0b683175934c01c248ee5b3b73ed372e2
-Size (runawk-0.12.0.tar.gz) = 26069 bytes
+SHA1 (runawk-0.12.1.tar.gz) = 916ca52b4dc3eeddee8b0c78365c28b793be8615
+RMD160 (runawk-0.12.1.tar.gz) = 26682e935b72fb43e81e0707432431f741599d55
+Size (runawk-0.12.1.tar.gz) = 26098 bytes
