@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2819 2008/03/02 00:49:32 hoka_adam Exp $
+# $Id: Makefile,v 1.2820 2008/03/03 00:58:11 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -10,7 +10,7 @@ SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	Mesa
-SUBDIR+=	MesaLib
+#SUBDIR+=	MesaLib
 SUBDIR+=	MesaLib-dri
 SUBDIR+=	MyServer
 SUBDIR+=	OpenGLUT
