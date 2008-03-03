@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.8 2008/03/03 04:18:41 bsadewitz Exp $
+# $NetBSD: Makefile.lib,v 1.9 2008/03/03 05:55:21 bsadewitz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -68,10 +68,10 @@ post-install: install-headers
 
 .PHONY: install-headers
 install-headers:
-	${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL && \
-	for hdr in "${MESA_HEADERS}"; do \
-	    if [ -f "$$hdr" ]; then \
-		${INSTALL_DATA} ${WRKSRC}/include/GL/$$hdr \
-		    ${DESTDIR}${PREFIX}/include/GL; \
-	    fi; \
-	done
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
+.for hdr in ${MESA_HEADERS}
+	if [ -f ${WRKSRC}/include/GL/${hdr:Q} ]; then \
+	    ${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr:Q} \
+	    ${DESTDIR}${PREFIX}/include/GL; \
+	fi; 
+.endfor
