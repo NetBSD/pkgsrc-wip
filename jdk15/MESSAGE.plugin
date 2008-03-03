@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.plugin,v 1.1 2007/06/12 17:36:12 briandealwis Exp $
+$NetBSD: MESSAGE.plugin,v 1.2 2008/03/03 00:59:41 hoka_adam Exp $
 
 If you have built the Mozilla browser plugin, you must create a symlink to
 
@@ -8,4 +8,14 @@ If you have built the Mozilla browser plugin, you must create a symlink to
 in the ${LOCALBASE}/lib/${MOZILLA}/plugins/ dir, for any ${MOZILLA} package
 (firefox, firefox-gtk1, seamonkey, seamonkey-gtk1) you want to use the plugin
 with.
+
+There may be problems loading Java applets if you have ipv6 support enabled.
+The workaround is to disable ipv6 for java applets:
+
+1. Go to the Java control panel (${JAVA_HOME}/bin/ControlPanel)
+2. Go to the 'Java' tab and click 'View' under 'Java Applet Runtime Settings'
+3. In the 'Java Runtime Parameters' box, paste the following line in:
+
+-Djava.net.preferIPv6Addresses=false -Djava.net.preferIPv4Stack=true
+
 ===========================================================================
