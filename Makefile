@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2820 2008/03/03 00:58:11 tnn2 Exp $
+# $Id: Makefile,v 1.2821 2008/03/03 01:08:56 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -9,7 +9,7 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
-SUBDIR+=	Mesa
+#SUBDIR+=	Mesa
 #SUBDIR+=	MesaLib
 SUBDIR+=	MesaLib-dri
 SUBDIR+=	MyServer
@@ -428,9 +428,9 @@ SUBDIR+=	glimmerm
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
-SUBDIR+=	glu
+#SUBDIR+=	glu
 SUBDIR+=	glulxe
-SUBDIR+=	glut
+#SUBDIR+=	glut
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmp-ecm
@@ -1375,7 +1375,7 @@ SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pekwm-nightly
-SUBDIR+=	perl59
+#SUBDIR+=	perl59
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
 #SUBDIR+=	php-doc			# not a package
