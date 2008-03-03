@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2008/03/03 05:55:02 bsadewitz Exp $
+# $NetBSD: hacks.mk,v 1.5 2008/03/03 06:06:00 bsadewitz Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -23,13 +23,16 @@ post-wrapper:
 .if !empty(CC_VERSION:Mgcc-[34]*)
 PKG_HACKS+= 	 	no-strict-aliasing
 CFLAGS+= 	 	-fno-strict-aliasing
+CXXFLAGS+= 	 	-fno-strict-aliasing
 PKG_HACKS+=		gcc-fast-math
 CFLAGS+= 	 	-ffast-math
+CXXFLAGS+= 	 	-ffast-math
 .endif
 
 .if !empty(PKG_OPTIONS:Mdri) && !empty(CC_VERSION:Mgcc-[4-9]*)
 PKG_HACKS+= 	 	gcc-hidden-visibility
 CFLAGS+=	 	-fvisibility=hidden
+CXXFLAGS+= 	 	-fvisibility=hidden
 .endif
 
 .endif
