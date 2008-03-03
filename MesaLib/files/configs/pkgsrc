@@ -1,4 +1,4 @@
-# $NetBSD: pkgsrc,v 1.1 2008/02/26 06:47:37 bsadewitz Exp $
+# $NetBSD: pkgsrc,v 1.2 2008/03/03 03:58:55 bsadewitz Exp $
 
 include $(TOP)/configs/default
 
@@ -11,6 +11,8 @@ CFLAGS+= 	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
  	 	$(DEFINES) $(X11_INCLUDES)
 CXXFLAGS+= 	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
  	 	$(DEFINES) $(X11_INCLUDES)
+
+LDFLAGS+= 	-L${TOP}/${LIB_DIR}/
 
 GLUT_CFLAGS= 	-fexceptions
 APP_LIB_DEPS= 	-l$(GLUT_LIB) -l$(GLU_LIB) -l$(GL_LIB) \
