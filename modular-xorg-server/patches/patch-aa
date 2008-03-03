@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/02/18 09:17:55 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.6 2008/03/03 03:11:11 bsadewitz Exp $
 
 X-Git-Url: http://gitweb.freedesktop.org/?p=mesa/mesa.git;a=commitdiff;h=42108629e80c4ad39da80dca1853c20fd65ad22c
 
@@ -11,8 +11,8 @@ attempt for this failed (see https://bugs.freedesktop.org/show_bug.cgi?id=9264)
 and this allows compiz to work with drivers that support
 GL_EXT_framebuffer_object.
 
---- ../Mesa-7.0.2/src/glx/x11/glcontextmodes.c.orig	2007-06-21 18:10:54.000000000 -0400
-+++ ../Mesa-7.0.2/src/glx/x11/glcontextmodes.c
+--- ../Mesa-7.0.3-rc2/src/glx/x11/glcontextmodes.c.orig	2007-06-21 18:10:54.000000000 -0400
++++ ../Mesa-7.0.3-rc2/src/glx/x11/glcontextmodes.c
 @@ -333,7 +333,8 @@ _gl_get_context_mode_data(const __GLcont
  	*value_return = mode->bindToTextureRgba;
  	return 0;
