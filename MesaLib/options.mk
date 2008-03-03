@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/02/26 06:47:36 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.3 2008/03/03 02:20:23 tnn2 Exp $
 
 .  include "../../mk/bsd.fast.prefs.mk"
 
@@ -14,6 +14,7 @@
     
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS= 	dri
+PKG_SUGGESTED_OPTIONS=	dri # doesn't build without this option
 
 .include "../../mk/bsd.options.mk"
 
