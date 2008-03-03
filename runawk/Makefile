@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2008/02/10 17:37:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/03 21:59:31 cheusov Exp $
 #
 
-DISTNAME=	runawk-0.10.1
+DISTNAME=	runawk-0.12.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/}
 
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
+TEST_TARGET=		test
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
