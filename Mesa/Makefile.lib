@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.6 2008/03/03 03:20:41 bsadewitz Exp $
+# $NetBSD: Makefile.lib,v 1.7 2008/03/03 04:13:21 bsadewitz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -63,3 +63,15 @@ pre-patch:
 
 post-patch:
 	${CP} ${.CURDIR}/../MesaLib/files/configs/[a-z]* ${WRKSRC}/configs
+
+post-install: install-headers
+
+.PHONY: install-headers
+install-headers:
+${RUN} ${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL && \
+	for hdr in "${MESA_HEADERS}"; do \
+	    if [ -f "$$hdr" ]; then \
+ 	 	${BSD_INSTALL_DATA} ${WRKSRC}/include/GL/$$hdr \
+		    ${DESTDIR}${PREFIX}/include/GL; \
+	    fi; \
+	done
