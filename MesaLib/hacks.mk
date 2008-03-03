@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2008/02/26 06:47:36 bsadewitz Exp $
+# $NetBSD: hacks.mk,v 1.4 2008/03/03 05:55:02 bsadewitz Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -17,11 +17,19 @@ post-wrapper:
 .include "../../mk/compiler.mk"
 ###
 ### Ordinarily, this is defined by the build.  However, in pkgsrc,
-### policy dictates that we do it here.
+### policy dictates that we do it here.  Let's trust a semi-modern
+### gcc with -ffast-math for now.
 ###
 .if !empty(CC_VERSION:Mgcc-[34]*)
 PKG_HACKS+= 	 	no-strict-aliasing
 CFLAGS+= 	 	-fno-strict-aliasing
+PKG_HACKS+=		gcc-fast-math
+CFLAGS+= 	 	-ffast-math
+.endif
+
+.if !empty(PKG_OPTIONS:Mdri) && !empty(CC_VERSION:Mgcc-[4-9]*)
+PKG_HACKS+= 	 	gcc-hidden-visibility
+CFLAGS+=	 	-fvisibility=hidden
 .endif
 
 .endif

@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2008/02/26 06:47:37 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.4 2008/03/03 05:55:02 bsadewitz Exp $
 
 --- src/mesa/drivers/dri/glcore/Makefile.orig	2007-09-28 20:43:28.000000000 -0400
 +++ src/mesa/drivers/dri/glcore/Makefile
@@ -17,12 +17,12 @@ $NetBSD: patch-ah,v 1.3 2008/02/26 06:47:37 bsadewitz Exp $
  .c.o:
 -	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES) $< -o $@
 +	$(LIBTOOL) --mode=compile --tag=CC \
-+		$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES) $< -o $(@:.o=.lo)
++		$(CC) -c -prefer-pic $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES) $< -o $(@:.o=.lo)
  
  .S.o:
 -	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES)  $< -o $@
 +	$(LIBTOOL) --mode=compile --tag=CC \
-+		$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES) $< -o $(@:.o=.lo)
++		$(CC) -c -prefer-pic $(INCLUDE_DIRS) $(CFLAGS) $(DEFINES) $< -o $(@:.o=.lo)
  
  
  ##### TARGETS #####
