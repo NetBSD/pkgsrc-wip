@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2822 2008/03/03 02:26:59 tnn2 Exp $
+# $Id: Makefile,v 1.2823 2008/03/03 15:33:59 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -807,7 +807,7 @@ SUBDIR+=	libdbi-sqlite
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdmx
-SUBDIR+=	libdrm
+#SUBDIR+=	libdrm
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libevent
