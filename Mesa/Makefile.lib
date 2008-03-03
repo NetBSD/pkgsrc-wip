@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.4 2008/02/28 13:25:22 bsadewitz Exp $
+# $NetBSD: Makefile.lib,v 1.5 2008/03/03 02:19:19 tnn2 Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -62,4 +62,4 @@ pre-patch:
 	 done
 
 post-patch:
-	${CP} ${.CURDIR}/../MesaLib/files/configs/* ${WRKSRC}/configs
+	${CP} -R ${.CURDIR}/../MesaLib/files/configs/* ${WRKSRC}/configs
