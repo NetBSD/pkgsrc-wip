@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2821 2008/03/03 01:08:56 tnn2 Exp $
+# $Id: Makefile,v 1.2822 2008/03/03 02:26:59 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -9,9 +9,9 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
-#SUBDIR+=	Mesa
-#SUBDIR+=	MesaLib
-SUBDIR+=	MesaLib-dri
+SUBDIR+=	Mesa
+SUBDIR+=	MesaLib
+#SUBDIR+=	MesaLib-dri
 SUBDIR+=	MyServer
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
@@ -428,9 +428,9 @@ SUBDIR+=	glimmerm
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
-#SUBDIR+=	glu
+SUBDIR+=	glu
 SUBDIR+=	glulxe
-#SUBDIR+=	glut
+SUBDIR+=	glut
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmp-ecm
@@ -955,7 +955,6 @@ SUBDIR+=	modular-xorg-libs
 SUBDIR+=	modular-xorg-macros
 SUBDIR+=	modular-xorg-server
 SUBDIR+=	modular-xorg-server-mesa653
-SUBDIR+=	modular-xorg-server14
 SUBDIR+=	modular-xorg-utils
 SUBDIR+=	modular-xorg-wip
 SUBDIR+=	moe
