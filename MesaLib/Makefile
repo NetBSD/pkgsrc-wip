@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 04:14:40 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 04:36:47 bsadewitz Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 COMMENT=	Graphics library similar to SGI's OpenGL
-
 
 MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h	\
 		osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
@@ -34,17 +33,8 @@ post-extract:
 	@ for fn in ${RM_PATCH_BACKUP_DIRS}; do \
 		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
 	 done
-	
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
-	cd ${WRKSRC}/include/GL; for hdr in				\
-	do								\
-		${INSTALL_DATA} $${hdr} ${DESTDIR}${PREFIX}/include/GL;	\
-	done
-.endif
 
 .include "../../mk/bsd.pkg.mk"
