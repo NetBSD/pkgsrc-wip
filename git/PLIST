@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/23 23:22:32 dillo Exp $
-bin/git
+@comment $NetBSD: PLIST,v 1.2 2008/03/04 12:46:12 hoka_adam Exp $
+bin/glkgit
