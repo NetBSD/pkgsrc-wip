@@ -1,4 +1,4 @@
-$Id: TODO,v 1.6 2007/03/29 19:54:46 shindenmorr Exp $
+$Id: TODO,v 1.7 2008/03/04 11:39:46 koifren Exp $
 
 Fix installation - mainly done.
 
@@ -15,3 +15,8 @@ should be divided in Makefile and Makefile.common and package should
 be split in "firebird" and "firebird-super".
 
 	-- dotz@irc.pl
+
+Update package in order to fix multiple vulnerabilities. Reference:
+http://secunia.com/advisories/28596/
+
+	-- kefren@netbsd.org
