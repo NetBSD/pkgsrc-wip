@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/03/04 13:29:43 asau Exp $
+# $NetBSD: options.mk,v 1.4 2008/03/04 21:24:03 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -28,8 +28,10 @@ PLIST_SUBST+=	FASL=${FASL:Q}
 # X11
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x=yes
+CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:Q}
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-x=no
 .endif
