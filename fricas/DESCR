@@ -1,13 +1,8 @@
 FriCAS is a fork of Axiom.
 
-The basic goal of FriCAS is create a free advanced world-class CAS.
-FriCAS builds on Axiom codebase. Currently (September 2007) FriCAS
-algebra library is largest and most advanced free general purpose
-computer algebra system -- this gives a good foundation to build
-on.  Additionaly, FriCAS algebra library is written in a high
-level strongly typed langage (Spad), which allows natural expression
-of mathematical algorithms.  This makes FriCAS easier to understand
-and extend.
+FriCAS algebra library is written in a high level strongly typed
+language (Spad), which allows natural expression of mathematical
+algorithms.
 
 FriCAS uses lightweight developement methodology.  Compared to Axiom
 FriCAS is significantly restructured -- it is more portable and fixed
