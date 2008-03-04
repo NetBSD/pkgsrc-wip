@@ -1,5 +1,5 @@
-==========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/02/09 21:27:52 shattered Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.4 2008/03/04 22:44:45 shattered Exp $
 
 To use this package as a replacement for graphics/MesaLib, simply copy
 the replacement buildlink3.mk file in this directory to
@@ -12,4 +12,4 @@ weren't running it?).
 
 If you have trouble, please email me at blair.sadewitz@gmail.com and I 
 will endeavor to help you.
-==========================================================================
+===========================================================================
