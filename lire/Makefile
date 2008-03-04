@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/04 21:56:43 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/04 23:41:36 thomasklausner Exp $
 #
 
 DISTNAME=	lire-2.0.2.99.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.logreport.org/pub/cvs-snapshots/
 #LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	airhead@users.sf.net
-HOMEPAGE=	http://download.logreport.org/pub/cvs-snapshots/
+HOMEPAGE=	http://www.logreport.org/lire.html
 COMMENT=	Log analyzing tool
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
