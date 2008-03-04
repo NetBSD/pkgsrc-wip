@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/03/04 13:29:43 asau Exp $
+
+--- Makefile.in.orig	Fri Feb 22 22:15:13 2008
++++ Makefile.in	Tue Mar  4 15:31:36 2008
+@@ -112,8 +112,8 @@
+ 	@chmod +x ${COMMAND}
+ 	rm -f $(DESTDIR)$(bindir)/fricas
+ 	@mkdir -p $(DESTDIR)$(bindir)
+-	$(INSTALL_PROGRAM) $(COMMAND) $(DESTDIR)$(bindir)/fricas
+-	$(INSTALL_PROGRAM) $(COMMAND) $(DESTDIR)$(bindir)/axiom
++	$(INSTALL_SCRIPT) $(COMMAND) $(DESTDIR)$(bindir)/fricas
++	$(INSTALL_SCRIPT) $(COMMAND) $(DESTDIR)$(bindir)/axiom
+ 	@echo 79 Axiom installation finished.
+ 
+ 

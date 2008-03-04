@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/03/04 13:29:43 asau Exp $
+
+--- src/hyper/Makefile.in.orig	2008-01-24 17:50:58.000000000 +0200
++++ src/hyper/Makefile.in	2008-01-24 17:51:14.000000000 +0200
+@@ -204,8 +204,8 @@
+ 
+ 
+ $(axiom_target_bindir)/htsearch: ${OUTLIB}/htsearch ${OUTLIB}/presea
+-	@ $(INSTALL_PROGRAM) ${OUTLIB}/htsearch $(axiom_target_bindir)
+-	@ $(INSTALL_PROGRAM) ${OUTLIB}/presea $(axiom_target_bindir)
++	@ $(INSTALL_SCRIPT) ${OUTLIB}/htsearch $(axiom_target_bindir)
++	@ $(INSTALL_SCRIPT) ${OUTLIB}/presea $(axiom_target_bindir)
+ 
+ 
+ $(axiom_target_bindir)/hypertex$(EXEEXT): $(hypertex_objects) $(hypertex_DEPENDENCIES)
