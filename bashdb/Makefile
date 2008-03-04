@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 22:46:41 shattered Exp $
 #
 
 DISTNAME=		bashdb-3.1-0.06
@@ -6,7 +6,7 @@ PKGNAME=		bashdb-3.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bashdb/}
 
-MAINTAINER=		splitscreen@users.sourceforg.net
+MAINTAINER=		splitscreen@users.sourceforge.net
 HOMEPAGE=		http://sourceforge.net/projects/bashdb/
 COMMENT=		The Bash debugger project
 
