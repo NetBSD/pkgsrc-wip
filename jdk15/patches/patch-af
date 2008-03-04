@@ -1,8 +1,26 @@
-$NetBSD: patch-af,v 1.2 2007/11/27 00:11:58 heidnes Exp $
+$NetBSD: patch-af,v 1.3 2008/03/04 15:43:54 tnn2 Exp $
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2005-09-07 10:16:01.000000000 +0200
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2008-03-03 18:07:27.000000000 +0100
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
-@@ -508,7 +508,7 @@ void os::init_system_properties_values()
+@@ -59,6 +59,17 @@
+ # define pthread_main_np() 0
+ #endif
+ 
++/*
++ * XXX I have no idea why this is suddently needed.
++ * It built fine on NetBSD 4.99.54 and then began failing on 4.99.55.
++ * This definition usually lives in:
++ *   hotspot/src/share/vm/utilities/globalDefinitions.hpp
++ * But doesn't seem to be picked up anymore.
++ */
++#ifdef bool
++#undef bool
++#endif
++#define bool jint
+ #ifndef timespecsub
+ #define	timespecsub(tsp, usp, vsp)					\
+ 	do {								\
+@@ -508,7 +519,7 @@ void os::init_system_properties_values()
  #define getenv(n) ::getenv(n)
  
  #ifndef DEFAULT_LD_LIBRARY_PATH
