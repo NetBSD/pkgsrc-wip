@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/01 14:13:17 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/05 19:05:42 asau Exp $
 #
 #
 
@@ -28,9 +28,9 @@ post-patch:
 	${CP} -f ${FILESDIR}/Makefile ${WRKSRC}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mopac7/sample
-	${CP} ${WRKSRC}/test_* ${PREFIX}/share/mopac7/sample
-	${CP} -pR ${WRKDIR}/mopac7-man ${PREFIX}/share/mopac7
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mopac7/sample
+	${CP} ${WRKSRC}/test_* ${DESTDIR}${PREFIX}/share/mopac7/sample
+	${CP} -pR ${WRKDIR}/mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
 
 # "g77" can not be used for external function
 
