@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/05 20:10:00 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/05 20:18:08 asau Exp $
 #
 
 DISTNAME=		xgobi
@@ -16,32 +16,32 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=		src
 USE_IMAKE=		yes
 
-INSTALLATION_DIRS=	man man/man1 bin
+INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man1 bin
 
 do-install:
-.for PROGRAM in xgobi xgvis
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${PROGRAM} ${DESTDIR}${PREFIX}/bin
+.for program in xgobi xgvis
+	${INSTALL_PROGRAM} ${WRKSRC}/src/${program} ${DESTDIR}${PREFIX}/bin
 .endfor
-.for MAN in xgobi.1 xgvis.1
-	${INSTALL_DATA} ${WRKSRC}/manpages/${MAN} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for man in xgobi.1 xgvis.1
+	${INSTALL_DATA} ${WRKSRC}/manpages/${man} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
-.for DOC in Changes Readme.install Readme.S Copyright
-	${INSTALL_DATA} ${WRKSRC}/${DOC} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
+.for doc in Changes Readme.install Readme.S Copyright
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/HELP
-.for DOC in *
-	${INSTALL_DATA} ${WRKSRC}/help/${DOC} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/HELP
+.for doc in *
+	${INSTALL_DATA} ${WRKSRC}/help/${doc} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/HELP
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}
 	${INSTALL_DATA} ${WRKSRC}/XGobi.ex ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgobi
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgvis
-.for EXA in *
-	${INSTALL_DATA} ${WRKSRC}/data_xgobi/${EXA} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgobi
+.for exa in *
+	${INSTALL_DATA} ${WRKSRC}/data_xgobi/${exa} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgobi
 .endfor
-.for EXA in *
-	${INSTALL_DATA} ${WRKSRC}/data_xgvis/${EXA} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgvis
+.for exa in *
+	${INSTALL_DATA} ${WRKSRC}/data_xgvis/${exa} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgvis
 .endfor
 
 .include "../../x11/libX11/buildlink3.mk"
