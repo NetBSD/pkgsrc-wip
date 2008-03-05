@@ -37,12 +37,42 @@ fi
 ############################################################
 usage (){
     cat <<EOF
-pkg_src_update_summary - efficiently updates
-package summary from pkgsrc/ tree (pkg_info -X format)
+pkg_src_update_summary - incrementally updates
+package summary from pkgsrc/ tree (pkg_summary(5) format)
 
-usage: pkg_src_update_summary summary_file
+usage: pkg_src_update_summary [OPTIONS] summary_file
+OPTIONS:
+  -h|--help              display this help message
+  -f|--file <filename>   obtain package names from
+                         a specified file, - for stdin
 EOF
 }
+
+pkgs_fn=''
+
+while test $# -ne 1; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-f|--file)
+	    pkgs_fn="$2"
+	    shift;;
+	--file=*|-f=*)
+	    pkgs_fn="`printf '%s\n' \"$1\" | sed 's,^[^=]*=,,'`";;
+	-f*)
+	    pkgs_fn="`printf '%s\n' \"$1\" | cut -b3-`";;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done
 
 if test $# -ne 1; then
     usage
@@ -63,7 +93,11 @@ mkdir -m 700 "$tmp_dir"
 
 allpkgs_fn=$tmp_dir/allpkgs
 
-pkg_list_all_pkgs > $allpkgs_fn
+if test "$pkgs_fn"; then
+    awk '{sub(/#.*/, "")} NF > 0 {print $1}' $pkgs_fn > $allpkgs_fn
+else
+    pkg_list_all_pkgs > $allpkgs_fn
+fi
 
 ############################################################
 #### process packages
