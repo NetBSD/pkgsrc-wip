@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/03/04 21:24:03 asau Exp $
+# $NetBSD: options.mk,v 1.5 2008/03/05 08:04:45 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -36,7 +36,7 @@ CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:Q}
 CONFIGURE_ARGS+=	--with-x=no
 .endif
 
-.for opt in clisp sbcl
+.for opt in clisp sbcl x11
 .if !empty(PKG_OPTIONS:M${opt})
 PLIST_SUBST+=	${opt}=""
 .else
