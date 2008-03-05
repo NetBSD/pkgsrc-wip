@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/01 17:18:30 asau Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/05 19:46:42 asau Exp $
 #
 
 DISTNAME=		xgobi
@@ -52,5 +52,6 @@ do-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
