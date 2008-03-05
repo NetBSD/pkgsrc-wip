@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/04 23:41:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/05 18:59:04 airhead Exp $
 #
 
 DISTNAME=	lire-2.0.2.99.2
@@ -19,7 +19,7 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl:run
 
 SUBST_CLASSES+=		3pm
 SUBST_STAGE.3pm=	pre-configure
