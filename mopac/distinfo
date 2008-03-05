@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/03/01 14:13:17 hoka_adam Exp $
+$NetBSD: distinfo,v 1.4 2008/03/05 19:10:51 asau Exp $
 
 SHA1 (mopac7-linux.diff.gz) = 50ce608ab611d5bd533ffa6a08a41a37ffb58b65
 RMD160 (mopac7-linux.diff.gz) = 8a62d6536491c99493178cc544482dac9a3a6600
@@ -11,3 +11,4 @@ RMD160 (mopac7.tar.Z) = 9eabb1f0d81d4fdb7a633ca2367a984a69f84c4f
 Size (mopac7.tar.Z) = 606379 bytes
 SHA1 (patch-aa) = 8ef8e1dd8cc1b61cd24dfad27b2aec276d3ac4be
 SHA1 (patch-ab) = 03ca5e6df0d5f871feb4998af9bb94b3876a06ea
+SHA1 (patch-ac) = ea4a2b814d0340a10dcd6fdc442be36c976c21f8
