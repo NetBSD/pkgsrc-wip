@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/05 19:46:42 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/05 20:02:02 asau Exp $
 #
 
 DISTNAME=		xgobi
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_IMAKE=		yes
+
+INSTALLATION_DIRS=	man man/man1 bin
 
 do-configure:
 	cd ${WRKSRC}/src; \
