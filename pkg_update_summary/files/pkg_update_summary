@@ -52,7 +52,7 @@ pkgs2summary (){
 
 get_all_pkgs (){
     if ! ls -1t "$bin_pkg_dir" | grep '[.]t[gb]z$'; then
-	# in order to ignore grep's an exit status in case
+	# in order to ignore grep's exit status in case
 	# binary packages directory is empty
 	true
     fi
