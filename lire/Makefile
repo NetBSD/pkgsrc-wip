@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/05 18:59:04 airhead Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/05 19:04:28 airhead Exp $
 #
 
 DISTNAME=	lire-2.0.2.99.2
@@ -22,6 +22,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run
 
 SUBST_CLASSES+=		3pm
+SUBST_MESSAGE.3pm=	Fixing manpage section 3 extensions
 SUBST_STAGE.3pm=	pre-configure
 SUBST_SED.3pm=		-e "s,\\.3pm,\\.3,g"
 SUBST_SED.3pm+=		-e "s,--section=3pm,--section=3,g"
