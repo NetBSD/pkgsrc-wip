@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2826 2008/03/04 22:01:42 airhead Exp $
+# $Id: Makefile,v 1.2827 2008/03/05 16:21:15 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -431,6 +431,7 @@ SUBDIR+=	globulation2
 SUBDIR+=	glu
 SUBDIR+=	glulxe
 SUBDIR+=	glut
+SUBDIR+=	glx-utils
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmp-ecm
@@ -506,7 +507,6 @@ SUBDIR+=	gune
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwhois
 SUBDIR+=	gxmms2
-SUBDIR+=	glx-utils
 SUBDIR+=	haddock
 SUBDIR+=	hal
 SUBDIR+=	hal-dev
@@ -646,6 +646,7 @@ SUBDIR+=	hunspell-cs_CZ
 SUBDIR+=	hunspell-da_DK
 SUBDIR+=	hunspell-fo_FO
 SUBDIR+=	hunspell-ga_IE
+SUBDIR+=	hunspell-id_ID
 SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
 SUBDIR+=	hunspell-lt_LT
@@ -771,6 +772,7 @@ SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	kstart
+SUBDIR+=	ktorrent3
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kylix-openedition
@@ -924,6 +926,7 @@ SUBDIR+=	mcabber
 SUBDIR+=	mcast-tools
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
+SUBDIR+=	mcpp
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
 SUBDIR+=	memdump
@@ -1067,6 +1070,7 @@ SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openal-soft
+SUBDIR+=	openaxiom
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbsd-input-ws
