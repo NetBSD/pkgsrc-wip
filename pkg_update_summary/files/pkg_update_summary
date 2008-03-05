@@ -51,7 +51,11 @@ pkgs2summary (){
 }
 
 get_all_pkgs (){
-    ls -1t "$bin_pkg_dir" | grep '[.]t[gb]z$'
+    if ! ls -1t "$bin_pkg_dir" | grep '[.]t[gb]z$'; then
+	# in order to ignore grep's an exit status in case
+	# binary packages directory is empty
+	true
+    fi
 }
 
 get_updated_pkgs (){
