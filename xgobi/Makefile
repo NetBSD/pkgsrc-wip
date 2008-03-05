@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/05 20:02:02 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/05 20:10:00 asau Exp $
 #
 
 DISTNAME=		xgobi
@@ -13,17 +13,10 @@ COMMENT=		Data Visualization Systems for viewing high-dimensional data
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
+CONFIGURE_DIRS=		src
 USE_IMAKE=		yes
 
 INSTALLATION_DIRS=	man man/man1 bin
-
-do-configure:
-	cd ${WRKSRC}/src; \
-	${XMKMF}
-
-do-build:
-	cd ${WRKSRC}/src; \
-	make
 
 do-install:
 .for PROGRAM in xgobi xgvis
