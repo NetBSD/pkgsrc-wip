@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/02/29 08:29:28 asau Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/05 08:17:25 asau Exp $
 #
 
 DISTNAME=		ecl-0.9j
@@ -13,12 +13,12 @@ COMMENT=		Embeddable Common Lisp
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=			${WRKDIR}/${DISTNAME}-build/
+#WRKSRC=			${WRKDIR}/${DISTNAME}-build/
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
+#CONFIGURE_SCRIPT=	../${DISTNAME}/src/configure
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 

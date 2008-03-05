@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2008/03/05 08:17:25 asau Exp $
+
+Don't install directories for bundled GC, unless needed.
+
+--- src/Makefile.in.orig	Tue Dec 25 22:49:45 2007
++++ src/Makefile.in	Wed Mar  5 10:46:45 2008
+@@ -127,14 +127,15 @@
+ 	# Here we would use the option -s but the install program in sourceforge-solaris
+ 	# is broken.
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir) $(DESTDIR)$(libdir) \
+-	  $(DESTDIR)$(ecldir) $(DESTDIR)$(includedir)
++	  $(DESTDIR)$(ecldir) $(DESTDIR)$(includedir) \
++	  $(DESTDIR)$(includedir)/ecl
+ 	for i in $(TARGETS); do \
+ 	  $(INSTALL_PROGRAM) $$i $(DESTDIR)$(bindir); \
+ 	done;
+-	$(mkinstalldirs) $(DESTDIR)$(includedir)/ecl/gc/private
+ 	sed '/-CUT-/,$$d' ./ecl/config.h > ./ecl/config-install.h
+ 	$(INSTALL_DATA) ./ecl/*.h $(DESTDIR)$(includedir)/ecl
+ 	if (echo $(SUBDIRS) | grep gc); then \
++	  $(mkinstalldirs) $(DESTDIR)$(includedir)/ecl/gc/private \
+ 	  $(INSTALL_DATA) ./ecl/gc/*.h $(DESTDIR)$(includedir)/ecl/gc; \
+ 	  $(INSTALL_DATA) ./ecl/gc/private/*.h $(DESTDIR)$(includedir)/ecl/gc/private; \
+ 	fi
