@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/06 11:45:02 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:22:04 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -521,6 +521,7 @@ share/icons/oxygen/128x128/actions/system-log-out.png
 share/icons/oxygen/128x128/actions/system-restart.png
 share/icons/oxygen/128x128/actions/system-run.png
 share/icons/oxygen/128x128/actions/system-search.png
+share/icons/oxygen/128x128/actions/system-shutdown.png
 share/icons/oxygen/128x128/actions/system-suspend-hibernate.png
 share/icons/oxygen/128x128/actions/system-suspend.png
 share/icons/oxygen/128x128/actions/system-switch-user.png
@@ -1167,6 +1168,7 @@ share/icons/oxygen/16x16/actions/system-log-out.png
 share/icons/oxygen/16x16/actions/system-restart.png
 share/icons/oxygen/16x16/actions/system-run.png
 share/icons/oxygen/16x16/actions/system-search.png
+share/icons/oxygen/16x16/actions/system-shutdown.png
 share/icons/oxygen/16x16/actions/system-suspend-hibernate.png
 share/icons/oxygen/16x16/actions/system-suspend.png
 share/icons/oxygen/16x16/actions/system-switch-user.png
@@ -1936,6 +1938,7 @@ share/icons/oxygen/22x22/actions/system-log-out.png
 share/icons/oxygen/22x22/actions/system-restart.png
 share/icons/oxygen/22x22/actions/system-run.png
 share/icons/oxygen/22x22/actions/system-search.png
+share/icons/oxygen/22x22/actions/system-shutdown.png
 share/icons/oxygen/22x22/actions/system-suspend-hibernate.png
 share/icons/oxygen/22x22/actions/system-suspend.png
 share/icons/oxygen/22x22/actions/system-switch-user.png
@@ -2727,6 +2730,7 @@ share/icons/oxygen/32x32/actions/system-log-out.png
 share/icons/oxygen/32x32/actions/system-restart.png
 share/icons/oxygen/32x32/actions/system-run.png
 share/icons/oxygen/32x32/actions/system-search.png
+share/icons/oxygen/32x32/actions/system-shutdown.png
 share/icons/oxygen/32x32/actions/system-suspend-hibernate.png
 share/icons/oxygen/32x32/actions/system-suspend.png
 share/icons/oxygen/32x32/actions/system-switch-user.png
@@ -3496,6 +3500,7 @@ share/icons/oxygen/48x48/actions/system-log-out.png
 share/icons/oxygen/48x48/actions/system-restart.png
 share/icons/oxygen/48x48/actions/system-run.png
 share/icons/oxygen/48x48/actions/system-search.png
+share/icons/oxygen/48x48/actions/system-shutdown.png
 share/icons/oxygen/48x48/actions/system-suspend-hibernate.png
 share/icons/oxygen/48x48/actions/system-suspend.png
 share/icons/oxygen/48x48/actions/system-switch-user.png
@@ -4096,6 +4101,7 @@ share/icons/oxygen/64x64/actions/system-log-out.png
 share/icons/oxygen/64x64/actions/system-restart.png
 share/icons/oxygen/64x64/actions/system-run.png
 share/icons/oxygen/64x64/actions/system-search.png
+share/icons/oxygen/64x64/actions/system-shutdown.png
 share/icons/oxygen/64x64/actions/system-suspend-hibernate.png
 share/icons/oxygen/64x64/actions/system-suspend.png
 share/icons/oxygen/64x64/actions/system-switch-user.png

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/02/06 11:42:45 mwdavies Exp $
+$NetBSD: distinfo,v 1.4 2008/03/06 11:19:09 mwdavies Exp $
 
-SHA1 (kdeartwork-4.0.1.tar.bz2) = 3a9975e13e239dba7e94506fbdd1775b851e730a
-RMD160 (kdeartwork-4.0.1.tar.bz2) = 527b6074d92bc19525c4ab82f079658fcd36fd5b
-Size (kdeartwork-4.0.1.tar.bz2) = 42283420 bytes
+SHA1 (kdeartwork-4.0.2.tar.bz2) = eb73e96ed94024c0db21daec6aeb5d62c6e43982
+RMD160 (kdeartwork-4.0.2.tar.bz2) = b8ccaa8ca1a1f2f51973aa88de20d0100f85b966
+Size (kdeartwork-4.0.2.tar.bz2) = 42284962 bytes
