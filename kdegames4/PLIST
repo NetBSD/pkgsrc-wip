@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/11 21:15:11 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:37:34 mwdavies Exp $
 bin/bovo
 bin/katomic
 bin/kbattleship
@@ -913,6 +913,7 @@ share/kde/apps/kjumpingcube/pics/default.desktop
 share/kde/apps/kjumpingcube/pics/default.svg
 share/kde/apps/klines/klinesui.rc
 share/kde/apps/klines/themes/crystal.desktop
+share/kde/apps/klines/themes/crystal.png
 share/kde/apps/klines/themes/default.desktop
 share/kde/apps/klines/themes/default_preview.png
 share/kde/apps/klines/themes/klines.svgz
