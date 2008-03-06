@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/10 16:50:45 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/06 17:46:32 emil_s Exp $
 #
 
 DISTNAME=	X11-extras-${VERSION}
@@ -14,15 +14,32 @@ GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
 GHCVERSION=		${GHCVERSION_cmd:sh}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		GHCVERSION=${GHCVERSION}
-FILES_SUBST+=		PKGVERSION=${PKGVERSION}
+FILES_SUBST+=		PKGVERSION=${VERSION}
+FILES_SUBST+=		XINCLUDES=${XINCLUDES}
+FILES_SUBST+=		XLIBRARIES=${XLIBRARIES}
 PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
 
 CONFIGURE_ARGS+=	--ghc
 CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
 CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=	--configure-option="--x-includes=${XINCLUDES}"
+CONFIGURE_ARGS+=	--configure-option="--x-libraries=${XLIBRARIES}"
+
+
+.if ${X11_TYPE} == "modular"
+XINCLUDES=		${BUILDLINK_PREFIX.libX11}/include
+XLIBRARIES+=		${BUILDLINK_PREFIX.libX11}/lib
+.else
+XINCLUDES=		${X11BASE}/include
+XLIBRARIES=		${X11BASE}/lib
+.endif
+
+CONFIGURE_ARGS+=	--configure-option="--without-xinerama"
 
 CHECK_FILES_SKIP+=	lib/ghc-${GHCVERSION}/package.conf.old
 
@@ -30,16 +47,18 @@ VERSION=		0.4
 
 do-configure:
 	cd ${WRKSRC} &&						\
-	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
+	runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
 
 do-build:
 	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
 
 do-install:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs install
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs copy
 
 
+.include "../../wip/cabal/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
+.include "../../x11/xineramaproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
