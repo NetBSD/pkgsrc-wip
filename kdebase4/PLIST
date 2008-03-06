@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/06 11:51:07 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:32:20 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -30,11 +30,14 @@ lib/kde4/dolphinpart.so
 lib/kde4/kcm_css.so
 lib/kde4/kcm_filetypes.so
 lib/kde4/kcm_history.so
+lib/kde4/kcm_info.so
 lib/kde4/kcm_kio.so
 lib/kde4/kcm_konq.so
 lib/kde4/kcm_konqhtml.so
 lib/kde4/kcm_kurifilt.so
+lib/kde4/kcm_nic.so
 lib/kde4/kcm_performance.so
+lib/kde4/kcm_usb.so
 lib/kde4/kcm_useraccount.so
 lib/kde4/kded_favicons.so
 lib/kde4/kded_konqy_preloader.so
@@ -118,6 +121,60 @@ share/doc/kde/HTML/en/kfind/common
 share/doc/kde/HTML/en/kfind/index.cache.bz2
 share/doc/kde/HTML/en/kfind/index.docbook
 share/doc/kde/HTML/en/kfind/man-kfind.1.docbook
+share/doc/kde/HTML/en/kinfocenter/common
+share/doc/kde/HTML/en/kinfocenter/devices/common
+share/doc/kde/HTML/en/kinfocenter/devices/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/devices/index.docbook
+share/doc/kde/HTML/en/kinfocenter/dma/common
+share/doc/kde/HTML/en/kinfocenter/dma/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/dma/index.docbook
+share/doc/kde/HTML/en/kinfocenter/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/index.docbook
+share/doc/kde/HTML/en/kinfocenter/interrupts/common
+share/doc/kde/HTML/en/kinfocenter/interrupts/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/interrupts/index.docbook
+share/doc/kde/HTML/en/kinfocenter/ioports/common
+share/doc/kde/HTML/en/kinfocenter/ioports/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/ioports/index.docbook
+share/doc/kde/HTML/en/kinfocenter/memory/common
+share/doc/kde/HTML/en/kinfocenter/memory/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/memory/index.docbook
+share/doc/kde/HTML/en/kinfocenter/nics/common
+share/doc/kde/HTML/en/kinfocenter/nics/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/nics/index.docbook
+share/doc/kde/HTML/en/kinfocenter/opengl/common
+share/doc/kde/HTML/en/kinfocenter/opengl/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/opengl/index.docbook
+share/doc/kde/HTML/en/kinfocenter/partitions/common
+share/doc/kde/HTML/en/kinfocenter/partitions/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/partitions/index.docbook
+share/doc/kde/HTML/en/kinfocenter/pci/common
+share/doc/kde/HTML/en/kinfocenter/pci/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/pci/index.docbook
+share/doc/kde/HTML/en/kinfocenter/pcmcia/common
+share/doc/kde/HTML/en/kinfocenter/pcmcia/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/pcmcia/index.docbook
+share/doc/kde/HTML/en/kinfocenter/processor/common
+share/doc/kde/HTML/en/kinfocenter/processor/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/processor/index.docbook
+share/doc/kde/HTML/en/kinfocenter/protocols/common
+share/doc/kde/HTML/en/kinfocenter/protocols/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/protocols/index.docbook
+share/doc/kde/HTML/en/kinfocenter/samba/common
+share/doc/kde/HTML/en/kinfocenter/samba/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/samba/index.docbook
+share/doc/kde/HTML/en/kinfocenter/scsi/common
+share/doc/kde/HTML/en/kinfocenter/scsi/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/scsi/index.docbook
+share/doc/kde/HTML/en/kinfocenter/sound/common
+share/doc/kde/HTML/en/kinfocenter/sound/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/sound/index.docbook
+share/doc/kde/HTML/en/kinfocenter/usb/common
+share/doc/kde/HTML/en/kinfocenter/usb/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/usb/index.docbook
+share/doc/kde/HTML/en/kinfocenter/xserver/common
+share/doc/kde/HTML/en/kinfocenter/xserver/index.cache.bz2
+share/doc/kde/HTML/en/kinfocenter/xserver/index.docbook
 share/doc/kde/HTML/en/konqueror/basics.docbook
 share/doc/kde/HTML/en/konqueror/bookmarks.docbook
 share/doc/kde/HTML/en/konqueror/browser.docbook
@@ -616,6 +673,7 @@ share/kde/apps/kappfinder/apps/Utilities/oclock.desktop
 share/kde/apps/kappfinder/apps/Utilities/xgnokii.desktop
 share/kde/apps/kbookmark/directory_bookmarkbar.desktop
 share/kde/apps/kcmcss/template.css
+share/kde/apps/kcmusb/usb.ids
 share/kde/apps/kconf_update/favicons.upd
 share/kde/apps/kconf_update/kfmclient_3_2.upd
 share/kde/apps/kconf_update/kfmclient_3_2_update.sh
@@ -785,17 +843,22 @@ share/kde4/services/ServiceMenus/konsolehere.desktop
 share/kde4/services/cache.desktop
 share/kde4/services/cookies.desktop
 share/kde4/services/desktoppath.desktop
+share/kde4/services/devices.desktop
+share/kde4/services/dma.desktop
 share/kde4/services/dolphinpart.desktop
 share/kde4/services/ebrowsing.desktop
 share/kde4/services/filebehavior.desktop
 share/kde4/services/filebrowser.desktop
 share/kde4/services/filepreviews.desktop
 share/kde4/services/filetypes.desktop
+share/kde4/services/interrupts.desktop
+share/kde4/services/ioports.desktop
 share/kde4/services/kcm_useraccount.desktop
 share/kde4/services/kcmcss.desktop
 share/kde4/services/kcmhistory.desktop
 share/kde4/services/kcmkonqyperformance.desktop
 share/kde4/services/kcmperformance.desktop
+share/kde4/services/kcmusb.desktop
 share/kde4/services/kded/favicons.desktop
 share/kde4/services/kded/konqy_preloader.desktop
 share/kde4/services/kded/kwrited.desktop
@@ -813,9 +876,17 @@ share/kde4/services/konqueror.desktop
 share/kde4/services/konsole-script.desktop
 share/kde4/services/konsolepart.desktop
 share/kde4/services/lanbrowser.desktop
+share/kde4/services/memory.desktop
 share/kde4/services/netpref.desktop
+share/kde4/services/nic.desktop
+share/kde4/services/opengl.desktop
+share/kde4/services/partitions.desktop
+share/kde4/services/pci.desktop
+share/kde4/services/processor.desktop
 share/kde4/services/proxy.desktop
+share/kde4/services/scsi.desktop
 share/kde4/services/smb.desktop
+share/kde4/services/sound.desktop
 share/kde4/services/useragent.desktop
 share/kde4/services/useragentstrings/firefox15oncurrent.desktop
 share/kde4/services/useragentstrings/firefox20oncurrent.desktop
@@ -841,6 +912,7 @@ share/kde4/services/useragentstrings/safari12.desktop
 share/kde4/services/useragentstrings/safari20.desktop
 share/kde4/services/useragentstrings/w3moncurrent.desktop
 share/kde4/services/useragentstrings/wgetoncurrent.desktop
+share/kde4/services/xserver.desktop
 share/kde4/servicetypes/findpart.desktop
 share/kde4/servicetypes/konqaboutpage.desktop
 share/kde4/servicetypes/konqpopupmenuplugin.desktop
@@ -888,6 +960,7 @@ share/kde4/servicetypes/uasprovider.desktop
 @comment in kde: @dirrm share/kde/apps/kdm/pics/users
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @comment in kde: @dirrm share/kde/apps/kconf_update
+@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmcss
 @dirrm share/kde/apps/kbookmark
 @dirrm share/kde/apps/kappfinder/apps/Utilities/XUtilities
@@ -957,6 +1030,24 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/konsole
 @dirrm share/doc/kde/HTML/en/konqueror
+@dirrm share/doc/kde/HTML/en/kinfocenter/xserver
+@dirrm share/doc/kde/HTML/en/kinfocenter/usb
+@dirrm share/doc/kde/HTML/en/kinfocenter/sound
+@dirrm share/doc/kde/HTML/en/kinfocenter/scsi
+@dirrm share/doc/kde/HTML/en/kinfocenter/samba
+@dirrm share/doc/kde/HTML/en/kinfocenter/protocols
+@dirrm share/doc/kde/HTML/en/kinfocenter/processor
+@dirrm share/doc/kde/HTML/en/kinfocenter/pcmcia
+@dirrm share/doc/kde/HTML/en/kinfocenter/pci
+@dirrm share/doc/kde/HTML/en/kinfocenter/partitions
+@dirrm share/doc/kde/HTML/en/kinfocenter/opengl
+@dirrm share/doc/kde/HTML/en/kinfocenter/nics
+@dirrm share/doc/kde/HTML/en/kinfocenter/memory
+@dirrm share/doc/kde/HTML/en/kinfocenter/ioports
+@dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
+@dirrm share/doc/kde/HTML/en/kinfocenter/dma
+@dirrm share/doc/kde/HTML/en/kinfocenter/devices
+@dirrm share/doc/kde/HTML/en/kinfocenter
 @dirrm share/doc/kde/HTML/en/kfind
 @dirrm share/doc/kde/HTML/en/dolphin
 @comment in kde: @dirrm share/doc/kde/HTML/en

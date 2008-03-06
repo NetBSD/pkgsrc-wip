@@ -1,0 +1,9 @@
+$NetBSD: patch-ab,v 1.1 2008/03/06 11:32:20 mwdavies Exp $
+
+--- apps/ConfigureChecks.cmake.orig	2008-03-02 16:20:32.000000000 +1300
++++ apps/ConfigureChecks.cmake
+@@ -9,3 +9,4 @@ include(CheckTypeSize)
+ include(CheckCXXSourceCompiles)
+ 
+ check_function_exists(getpeereid  HAVE_GETPEEREID) # kdesu
++check_function_exists(statvfs HAVE_STATVFS) # kinfocenter
