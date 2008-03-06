@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2829 2008/03/06 06:13:22 ficovh Exp $
+# $Id: Makefile,v 1.2830 2008/03/06 16:26:16 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -321,6 +321,7 @@ SUBDIR+=	epplets
 SUBDIR+=	epsilon
 SUBDIR+=	eq-xmms
 SUBDIR+=	erc
+SUBDIR+=	es40
 SUBDIR+=	esdl
 SUBDIR+=	esmart
 SUBDIR+=	ethtool
@@ -645,9 +646,9 @@ SUBDIR+=	hunspell-cs_CZ
 SUBDIR+=	hunspell-da_DK
 SUBDIR+=	hunspell-fo_FO
 SUBDIR+=	hunspell-ga_IE
-SUBDIR+=	hunspell-id_ID
 SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
+SUBDIR+=	hunspell-id_ID
 SUBDIR+=	hunspell-lt_LT
 SUBDIR+=	hunspell-mg_MG
 SUBDIR+=	hunspell-ms_MY
@@ -1587,6 +1588,7 @@ SUBDIR+=	qimageblitz
 SUBDIR+=	qinx
 SUBDIR+=	qjackctl
 SUBDIR+=	qn-x11
+SUBDIR+=	qpsmtpd
 SUBDIR+=	qtre
 SUBDIR+=	qucs
 SUBDIR+=	quickie
@@ -1991,22 +1993,6 @@ SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zvbi
-<<<<<<< Makefile
-SUBDIR+=	p5-Maypole
-SUBDIR+=	p5-CGI-Untaint
-SUBDIR+=	p5-CGI-Untaint-Email
-SUBDIR+=	p5-CGI-Untaint-Date
-SUBDIR+=	p5-Class-DBI-Relationship
-SUBDIR+=	p5-Class-DBI-Relationship
-SUBDIR+=	p5-Class-DBI-Pager
-SUBDIR+=	p5-Template-Plugin-Class
-SUBDIR+=	p5-Test-MockModule
-SUBDIR+=	p5-File-MMagic-XS
-SUBDIR+=	qpsmtpd
-
-
-=======
->>>>>>> 1.2828
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
