@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/10 16:47:42 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/03/06 17:44:04 emil_s Exp $
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11.hi
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Types.hi
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xinerama.hi
@@ -20,6 +20,8 @@ lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/HSX11-${PKGVERSION}.o
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include/HsXlib.h
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include/XlibExtras.h
 lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/libHSX11-${PKGVERSION}.a
+share/doc/X11-${PKGVERSION}/LICENSE
+@dirrm share/doc/X11-${PKGVERSION}
 @dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/include
 @dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11/Xlib
 @dirrm lib/X11-${PKGVERSION}/ghc-${GHCVERSION}/Graphics/X11
