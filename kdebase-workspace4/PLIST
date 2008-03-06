@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/02/06 11:49:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/03/06 11:29:50 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -180,7 +180,6 @@ lib/kde4/kcm_display.so
 lib/kde4/kcm_energy.so
 lib/kde4/kcm_fontinst.so
 lib/kde4/kcm_fonts.so
-lib/kde4/kcm_info.so
 lib/kde4/kcm_input.so
 lib/kde4/kcm_kdm.so
 lib/kde4/kcm_keyboard.so
@@ -196,13 +195,11 @@ lib/kde4/kcm_kwindesktop.so
 lib/kde4/kcm_kwinoptions.so
 lib/kde4/kcm_kwinrules.so
 lib/kde4/kcm_launch.so
-lib/kde4/kcm_nic.so
 lib/kde4/kcm_randr.so
 lib/kde4/kcm_screensaver.so
 lib/kde4/kcm_smserver.so
 lib/kde4/kcm_solid.so
 lib/kde4/kcm_style.so
-lib/kde4/kcm_usb.so
 lib/kde4/kcm_xinerama.so
 lib/kde4/kded_khotkeys.so
 lib/kde4/kded_networkstatus.so
@@ -385,60 +382,6 @@ share/doc/kde/HTML/en/kdm/index.cache.bz2
 share/doc/kde/HTML/en/kdm/index.docbook
 share/doc/kde/HTML/en/kdm/kdmrc-ref.docbook
 share/doc/kde/HTML/en/kdm/theme-ref.docbook
-share/doc/kde/HTML/en/kinfocenter/common
-share/doc/kde/HTML/en/kinfocenter/devices/common
-share/doc/kde/HTML/en/kinfocenter/devices/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/devices/index.docbook
-share/doc/kde/HTML/en/kinfocenter/dma/common
-share/doc/kde/HTML/en/kinfocenter/dma/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/dma/index.docbook
-share/doc/kde/HTML/en/kinfocenter/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/index.docbook
-share/doc/kde/HTML/en/kinfocenter/interrupts/common
-share/doc/kde/HTML/en/kinfocenter/interrupts/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/interrupts/index.docbook
-share/doc/kde/HTML/en/kinfocenter/ioports/common
-share/doc/kde/HTML/en/kinfocenter/ioports/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/ioports/index.docbook
-share/doc/kde/HTML/en/kinfocenter/memory/common
-share/doc/kde/HTML/en/kinfocenter/memory/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/memory/index.docbook
-share/doc/kde/HTML/en/kinfocenter/nics/common
-share/doc/kde/HTML/en/kinfocenter/nics/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/nics/index.docbook
-share/doc/kde/HTML/en/kinfocenter/opengl/common
-share/doc/kde/HTML/en/kinfocenter/opengl/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/opengl/index.docbook
-share/doc/kde/HTML/en/kinfocenter/partitions/common
-share/doc/kde/HTML/en/kinfocenter/partitions/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/partitions/index.docbook
-share/doc/kde/HTML/en/kinfocenter/pci/common
-share/doc/kde/HTML/en/kinfocenter/pci/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/pci/index.docbook
-share/doc/kde/HTML/en/kinfocenter/pcmcia/common
-share/doc/kde/HTML/en/kinfocenter/pcmcia/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/pcmcia/index.docbook
-share/doc/kde/HTML/en/kinfocenter/processor/common
-share/doc/kde/HTML/en/kinfocenter/processor/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/processor/index.docbook
-share/doc/kde/HTML/en/kinfocenter/protocols/common
-share/doc/kde/HTML/en/kinfocenter/protocols/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/protocols/index.docbook
-share/doc/kde/HTML/en/kinfocenter/samba/common
-share/doc/kde/HTML/en/kinfocenter/samba/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/samba/index.docbook
-share/doc/kde/HTML/en/kinfocenter/scsi/common
-share/doc/kde/HTML/en/kinfocenter/scsi/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/scsi/index.docbook
-share/doc/kde/HTML/en/kinfocenter/sound/common
-share/doc/kde/HTML/en/kinfocenter/sound/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/sound/index.docbook
-share/doc/kde/HTML/en/kinfocenter/usb/common
-share/doc/kde/HTML/en/kinfocenter/usb/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/usb/index.docbook
-share/doc/kde/HTML/en/kinfocenter/xserver/common
-share/doc/kde/HTML/en/kinfocenter/xserver/index.cache.bz2
-share/doc/kde/HTML/en/kinfocenter/xserver/index.docbook
 share/doc/kde/HTML/en/klipper/common
 share/doc/kde/HTML/en/klipper/index.cache.bz2
 share/doc/kde/HTML/en/klipper/index.docbook
@@ -517,7 +460,6 @@ share/icons/oxygen/scalable/apps/preferences-desktop-font-installer.svgz
 share/icons/oxygen/scalable/mimetypes/fonts-package.svgz
 share/kde/apps/cmake/modules/FindLibXKlavier.cmake
 share/kde/apps/cmake/modules/FindPAM.cmake
-share/kde/apps/cmake/modules/FindRAW1394.cmake
 share/kde/apps/cmake/modules/FindSensors.cmake
 share/kde/apps/cmake/modules/UnixAuth.cmake
 share/kde/apps/color-schemes/Honeycomb.colors
@@ -550,7 +492,6 @@ share/kde/apps/kcminput/cursor_large_white.pcf.gz
 share/kde/apps/kcminput/cursor_small_white.pcf.gz
 share/kde/apps/kcminput/pics/mouse_lh.png
 share/kde/apps/kcminput/pics/mouse_rh.png
-share/kde/apps/kcmusb/usb.ids
 share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/kaccel.upd
 share/kde/apps/kconf_update/kcmdisplayrc.upd
@@ -925,26 +866,21 @@ share/kde4/services/bell.desktop
 share/kde4/services/clock.desktop
 share/kde4/services/colors.desktop
 share/kde4/services/desktop.desktop
-share/kde4/services/devices.desktop
 share/kde4/services/display.desktop
-share/kde4/services/dma.desktop
 share/kde4/services/energy.desktop
 share/kde4/services/fontinst.desktop
 share/kde4/services/fonts.desktop
 share/kde4/services/fonts.protocol
 share/kde4/services/fontthumbnail.desktop
 share/kde4/services/installktheme.desktop
-share/kde4/services/interrupts.desktop
 share/kde4/services/ion-bbcukmet.desktop
 share/kde4/services/ion-envcan.desktop
 share/kde4/services/ion-noaa.desktop
-share/kde4/services/ioports.desktop
 share/kde4/services/kaccess.desktop
 share/kde4/services/kcm_solid.desktop
 share/kde4/services/kcmaccess.desktop
 share/kde4/services/kcmlaunch.desktop
 share/kde4/services/kcmsmserver.desktop
-share/kde4/services/kcmusb.desktop
 share/kde4/services/kded/khotkeys.desktop
 share/kde4/services/kded/networkstatus.desktop
 share/kde4/services/kdm.desktop
@@ -1002,12 +938,7 @@ share/kde4/services/kwinfocus.desktop
 share/kde4/services/kwinmoving.desktop
 share/kde4/services/kwinoptions.desktop
 share/kde4/services/kwinrules.desktop
-share/kde4/services/memory.desktop
 share/kde4/services/mouse.desktop
-share/kde4/services/nic.desktop
-share/kde4/services/opengl.desktop
-share/kde4/services/partitions.desktop
-share/kde4/services/pci.desktop
 share/kde4/services/plasma-animator-default.desktop
 share/kde4/services/plasma-applet-analogclock.desktop
 share/kde4/services/plasma-applet-devicenotifier.desktop
@@ -1037,10 +968,8 @@ share/kde4/services/plasma-runner-locations.desktop
 share/kde4/services/plasma-runner-webshortcuts.desktop
 share/kde4/services/plasma-scriptengine-qscript.desktop
 share/kde4/services/plasma-tasks-default.desktop
-share/kde4/services/processor.desktop
 share/kde4/services/randr.desktop
 share/kde4/services/screensaver.desktop
-share/kde4/services/scsi.desktop
 share/kde4/services/settings-about-me.desktop
 share/kde4/services/settings-accessibility.desktop
 share/kde4/services/settings-advanced-user-settings.desktop
@@ -1064,10 +993,8 @@ share/kde4/services/settings-window-behaviour.desktop
 share/kde4/services/solidbackends/solid_fakebluetooth.desktop
 share/kde4/services/solidbackends/solid_fakenet.desktop
 share/kde4/services/solidbackends/solid_hal_power.desktop
-share/kde4/services/sound.desktop
 share/kde4/services/style.desktop
 share/kde4/services/xinerama.desktop
-share/kde4/services/xserver.desktop
 share/kde4/servicetypes/kwineffect.desktop
 share/kde4/servicetypes/plasma-animator.desktop
 share/kde4/servicetypes/plasma-applet.desktop
@@ -1213,7 +1140,6 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kcontroledit
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcminput/pics
 @dirrm share/kde/apps/kcminput
 @dirrm share/kde/apps/kaccess
@@ -1255,24 +1181,6 @@ share/sounds/pop.wav
 @dirrm share/doc/kde/HTML/en/ksysguard
 @dirrm share/doc/kde/HTML/en/kmenuedit
 @dirrm share/doc/kde/HTML/en/klipper
-@dirrm share/doc/kde/HTML/en/kinfocenter/xserver
-@dirrm share/doc/kde/HTML/en/kinfocenter/usb
-@dirrm share/doc/kde/HTML/en/kinfocenter/sound
-@dirrm share/doc/kde/HTML/en/kinfocenter/scsi
-@dirrm share/doc/kde/HTML/en/kinfocenter/samba
-@dirrm share/doc/kde/HTML/en/kinfocenter/protocols
-@dirrm share/doc/kde/HTML/en/kinfocenter/processor
-@dirrm share/doc/kde/HTML/en/kinfocenter/pcmcia
-@dirrm share/doc/kde/HTML/en/kinfocenter/pci
-@dirrm share/doc/kde/HTML/en/kinfocenter/partitions
-@dirrm share/doc/kde/HTML/en/kinfocenter/opengl
-@dirrm share/doc/kde/HTML/en/kinfocenter/nics
-@dirrm share/doc/kde/HTML/en/kinfocenter/memory
-@dirrm share/doc/kde/HTML/en/kinfocenter/ioports
-@dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
-@dirrm share/doc/kde/HTML/en/kinfocenter/dma
-@dirrm share/doc/kde/HTML/en/kinfocenter/devices
-@dirrm share/doc/kde/HTML/en/kinfocenter
 @dirrm share/doc/kde/HTML/en/kdm
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in xdg-dirs: @dirrm share/desktop-directories
