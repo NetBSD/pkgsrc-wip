@@ -1,11 +1,7 @@
-PREFIX=@PREFIX@
-PKGVERSION=@PKGVERSION@
-GHCVERSION=@GHCVERSION@
-
 case ${STAGE} in
     POST-INSTALL)
         echo 'name: xmonad
-version: ${PKGVERSION}
+version: @PKGVERSION@
 license: BSD3
 copyright:
 maintainer: xmonad@haskell.org
@@ -27,20 +23,20 @@ exposed: True
 exposed-modules: XMonad XMonad.Main XMonad.Core XMonad.Config
                  XMonad.Layout XMonad.ManageHook XMonad.Operations XMonad.StackSet
 hidden-modules:
-import-dirs: ${PREFIX}/lib/xmonad-${PKGVERSION}/ghc-${GHCVERSION}
-library-dirs: ${PREFIX}/lib/xmonad-${PKGVERSION}/ghc-${GHCVERSION}
-hs-libraries: HSxmonad-${PKGVERSION}
+import-dirs: @PREFIX@/lib/xmonad-@PKGVERSION@/ghc-@GHCVERSION@
+library-dirs: @PREFIX@/lib/xmonad-@PKGVERSION@/ghc-@GHCVERSION@
+hs-libraries: HSxmonad-@PKGVERSION@
 extra-libraries:
 extra-ghci-libraries:
 include-dirs:
 includes:
-depends: base-2.1.1 X11-1.4.0 mtl-1.0.1 unix-2.1
+depends: base-2.1.1 X11-1.4.1 mtl-1.0.1 unix-2.1
 hugs-options:
 cc-options:
 ld-options:
 framework-dirs:
 frameworks:
-haddock-interfaces: ${PREFIX}/share/doc/xmonad-${PKGVERSION}/html/xmonad.haddock
-haddock-html: ${PREFIX}/share/doc/xmonad-${PKGVERSION}/html' | ${PREFIX}/bin/ghc-pkg update -
+haddock-interfaces: @PREFIX@/share/doc/xmonad-@PKGVERSION@/html/xmonad.haddock
+haddock-html: @PREFIX@/share/doc/xmonad-@PKGVERSION@/html' | @PREFIX@/bin/ghc-pkg update -
            ;;
 esac

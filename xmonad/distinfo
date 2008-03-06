@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/12/10 17:01:35 emil_s Exp $
+$NetBSD: distinfo,v 1.3 2008/03/06 17:48:48 emil_s Exp $
 
-SHA1 (xmonad-0.5.tar.gz) = acea831a6da485ad996c8bda7a67f1acbd70d3fa
-RMD160 (xmonad-0.5.tar.gz) = 8e39d8a2ad8e8d16006bdcd1f645d6a31be721f8
-Size (xmonad-0.5.tar.gz) = 48853 bytes
+SHA1 (xmonad-0.6.tar.gz) = e2221b80e03cd0997cb841e85ac893d6daf6dfb0
+RMD160 (xmonad-0.6.tar.gz) = 53513fceedd7979ea2dbfa882e737a0ddd9bbe80
+Size (xmonad-0.6.tar.gz) = 49635 bytes

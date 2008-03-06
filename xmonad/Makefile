@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/10 17:01:35 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/06 17:48:48 emil_s Exp $
 #
 
 DISTNAME=	xmonad-${VERSION}
@@ -15,7 +15,7 @@ GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
 GHCVERSION=		${GHCVERSION_cmd:sh}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		GHCVERSION=${GHCVERSION}
-FILES_SUBST+=		PKGVERSION=${PKGVERSION}
+FILES_SUBST+=		PKGVERSION=${VERSION}
 PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
 
 CONFIGURE_ARGS+=	--ghc
@@ -23,18 +23,17 @@ CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
 CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-VERSION=		0.5
+VERSION=		0.6
 
 
 do-configure:
-	cd ${WRKSRC} &&						\
-	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
+	cd ${WRKSRC} &&	runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
 
 do-build:
 	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
 
 do-install:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs install
+	cd ${WRKSRC} && runhaskell -cpp Setup.lhs copy
 
 
 .include "../../wip/cabal/buildlink3.mk"
