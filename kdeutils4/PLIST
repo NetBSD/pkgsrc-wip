@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/11 21:29:04 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/03/06 11:57:27 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -162,8 +162,6 @@ share/icons/oxygen/32x32/apps/kcmdf.png
 share/kde/apps/ark/ark_part.rc
 share/kde/apps/ark/arkui.rc
 share/kde/apps/kcalc/kcalcui.rc
-share/kde/apps/kcalc/pics/math_cbrt.png
-share/kde/apps/kcalc/pics/math_sqrt.png
 share/kde/apps/kcalc/scienceconstants.xml
 share/kde/apps/kcharselect/kcharselectui.rc
 share/kde/apps/kconf_update/kcalcrc.upd
@@ -283,7 +281,6 @@ share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/apps/kdf
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps/kcharselect
-@dirrm share/kde/apps/kcalc/pics
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/ark
 @comment in kde: @dirrm share/kde/apps
