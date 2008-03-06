@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/03/06 14:54:08 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EPEG_BUILDLINK3_MK:=	${EPEG_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}epeg
 
 .if ${EPEG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.epeg+=	epeg>=0.9.0.011
-BUILDLINK_ABI_DEPENDS.epeg?=	epeg>=0.9.0.011nb1
+BUILDLINK_ABI_DEPENDS.epeg?=	epeg>=0.9.0.011nb2
 BUILDLINK_PKGSRCDIR.epeg?=	../../wip/epeg
 .endif	# EPEG_BUILDLINK3_MK
 

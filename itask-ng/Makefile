@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/21 23:47:04 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/06 14:54:09 thomasklausner Exp $
 #
 
 DISTNAME=	itask-ng-0.2.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://itask-module.googlecode.com/files/
 

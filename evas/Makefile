@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/02/21 23:56:48 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/06 14:54:08 thomasklausner Exp $
 #
 
 DISTNAME=	evas-0.9.9.042
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=   http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.yazzy.org/pkgsrc/e17/ \

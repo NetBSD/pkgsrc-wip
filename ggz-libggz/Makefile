@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/26 17:12:11 mrohrer Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/06 14:54:08 thomasklausner Exp $
 #
 
 DISTNAME=	libggz-0.0.14
 PKGNAME=	ggz-libggz-0.0.14
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14/
 

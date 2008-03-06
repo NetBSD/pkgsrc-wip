@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/06 14:54:09 thomasklausner Exp $
 
 DISTNAME=	linphone-1.3.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://simon.morlat.free.fr/download/1.3.x/source/
 

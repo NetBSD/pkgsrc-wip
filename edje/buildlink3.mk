@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2008/03/06 14:54:08 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EDJE_BUILDLINK3_MK:=	${EDJE_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}edje
 
 .if ${EDJE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.edje+=	edje>=0.5.0.041
-BUILDLINK_ABI_DEPENDS.edje?=	edje>=0.5.0.041nb3
+BUILDLINK_ABI_DEPENDS.edje?=	edje>=0.5.0.042nb1
 BUILDLINK_PKGSRCDIR.edje?=	../../wip/edje
 .endif	# EDJE_BUILDLINK3_MK
 

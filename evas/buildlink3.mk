@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/03/06 14:54:08 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EVAS_BUILDLINK3_MK:=	${EVAS_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}evas
 
 .if ${EVAS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.evas+=	evas>=0.9.9.041
-BUILDLINK_ABI_DEPENDS.evas?=	evas>=0.9.9.041nb4
+BUILDLINK_ABI_DEPENDS.evas?=	evas>=0.9.9.042nb1
 BUILDLINK_PKGSRCDIR.evas?=	../../wip/evas
 .endif	# EVAS_BUILDLINK3_MK
 

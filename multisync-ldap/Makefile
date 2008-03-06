@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/06 14:54:09 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-ldap-0.82
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		LDAP module for Multisync
 

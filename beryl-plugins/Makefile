@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/06 14:54:07 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-plugins-${BERYL_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	wm
 
 COMMENT=	Supported plugins for the Beryl compositor

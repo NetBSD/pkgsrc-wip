@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/06 14:54:09 thomasklausner Exp $
 #
 
 DISTNAME=		groku-0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		http://digitalssg.net/debian/
 

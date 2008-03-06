@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/24 05:01:56 shindenmorr Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/03/06 14:54:08 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.13.
 # XXX After this file has been verified as correct, the comment lines
@@ -23,6 +23,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}e17
 
 .if ${E17_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.e17+=	e17>=0.16.999.042
+BUILDLINK_ABI_DEPENDS.e17?=	e17>=0.16.999.042nb1
 BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
 .endif	# E17_BUILDLINK3_MK
 

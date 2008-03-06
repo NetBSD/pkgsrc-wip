@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/04 20:25:14 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/06 14:54:09 thomasklausner Exp $
 #
 
 DISTNAME=	mpdscribble-0.2.12
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.frob.nl/projects/scribble/
 

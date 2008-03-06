@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/06 14:54:08 thomasklausner Exp $
 #
 
 DISTNAME=	e_dbus-0.01
 PKGNAME=	${DISTNAME:S/_//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=   http://www.yazzy.org/pkgsrc/e17/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/

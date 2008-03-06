@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/02/21 23:56:48 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/06 14:54:08 thomasklausner Exp $
 #
 
 DISTNAME=	ecore-0.9.9.042
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=   http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.yazzy.org/pkgsrc/e17/ \

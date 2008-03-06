@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/01/18 04:30:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/06 14:54:09 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.1.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		http://monkey-bubble.tuxfamily.org/
 

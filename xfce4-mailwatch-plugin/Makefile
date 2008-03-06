@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/27 17:43:01 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/06 14:54:10 thomasklausner Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=  1.0.1
 
 DISTNAME=	xfce4-mailwatch-plugin-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://spuriousinterrupt.org/files/mailwatch/
 EXTRACT_SUFX=	.tar.bz2
