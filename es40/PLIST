@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/06 16:10:11 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/06 18:36:10 tnn2 Exp $
 bin/es40
+share/es40/vgabios-0.6a.debug.bin
+share/examples/es40/es40-netbsd.cfg
 share/examples/es40/es40.cfg
 @dirrm share/examples/es40
+@dirrm share/es40

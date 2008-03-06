@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/06 16:10:11 tnn2 Exp $
+$NetBSD: distinfo,v 1.2 2008/03/06 18:36:10 tnn2 Exp $
 
 SHA1 (es40_018_src.zip) = 2db170949893c914bb22f4c91a58c1908bccdebe
 RMD160 (es40_018_src.zip) = c53a75407f4a82985bc400914d2900b033f3500a
 Size (es40_018_src.zip) = 488704 bytes
+SHA1 (vgabios-0.6a.debug.bin) = 84993522b43ed9159753e0814f0734b1c73f8983
+RMD160 (vgabios-0.6a.debug.bin) = c853dd6c2a626eb58c99d0956957a9d99018cc95
+Size (vgabios-0.6a.debug.bin) = 39936 bytes
 SHA1 (patch-aa) = be76f224702dc2737f1cb437f4219ac019fdfafa
-SHA1 (patch-ab) = 89967242144b753fba0e859f89962ef4ec369683
