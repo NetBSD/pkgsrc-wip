@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/03/06 16:10:11 tnn2 Exp $
+$NetBSD: MESSAGE,v 1.2 2008/03/06 16:31:57 tnn2 Exp $
 
-Please copy ${PREFIX}/share/examples/es40.cfg to a writable directory,
+Please copy ${PREFIX}/share/examples/es40/es40.cfg to a writable directory,
 adapt it to your needs and run es40 from that directory.
 Otherwise the emulator will greet you with a coredump.
 ===========================================================================
