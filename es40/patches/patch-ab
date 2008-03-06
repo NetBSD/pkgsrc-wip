@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/03/06 16:10:12 tnn2 Exp $
+
+--- es40.cfg.orig	2008-03-04 20:58:36.000000000 +0100
++++ es40.cfg
+@@ -169,7 +169,7 @@ sys0 = tsunami 
+ // 30 = 1GB
+ // 31 = 2GB
+ //
+-  memory.bits = 30;
++  memory.bits = 27;
+ 
+   cpu0 = ev68cb
+   {

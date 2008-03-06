@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/06 16:10:11 tnn2 Exp $
+bin/es40
+share/examples/es40/es40.cfg
+@dirrm share/examples/es40

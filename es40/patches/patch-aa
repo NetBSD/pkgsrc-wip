@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/06 16:10:12 tnn2 Exp $
+
+--- Makefile.orig	2008-03-04 20:58:12.000000000 +0100
++++ Makefile
+@@ -124,7 +124,7 @@ LD = g++
+ #  -O3   -- optimize at level 3
+ #  -mtune=<cpu>   -- cpu is one of:  generic, core2, athlon64, pentium4, etc
+ #
+-CTUNINGFLAGS = -O3 -mtune=generic 
++CTUNINGFLAGS:= ${CFLAGS} -O3
+ 
+ #
+ # CDEBUGFLAGS - turn on debugging in ES40
+@@ -151,7 +151,7 @@ CTUNINGFLAGS = -O3 -mtune=generic 
+ #   -DDEBUG_DMA         Turn on debugging for DMA controller
+ #   -DDEBUG_BACKTRACE   Turn on backtrace dump on SIGSEGV
+ #
+-CDEBUGFLAGS = -g -DHIDE_COUNTER -DDEBUG_BACKTRACE
++CDEBUGFLAGS = -g -DHIDE_COUNTER # -DDEBUG_BACKTRACE
+ 
+ #
+ # ES40 Options
+@@ -192,7 +192,7 @@ endif
+ 
+ CFLAGS =  -I. -I..  \
+ 	$(CDEBUGFLAGS) $(CTUNINGFLAGS) $(OPTIONS) $(COPTIONFLAGS)
+-LDFLAGS = $(LDOPTIONFLAGS)
++LDFLAGS+= $(LDOPTIONFLAGS)
+ 
+ IDB_CFLAGS = -DIDB 
+ LSM_CFLAGS = -DIDB -DLS_MASTER

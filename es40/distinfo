@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/06 16:10:11 tnn2 Exp $
+
+SHA1 (es40_018_src.zip) = 2db170949893c914bb22f4c91a58c1908bccdebe
+RMD160 (es40_018_src.zip) = c53a75407f4a82985bc400914d2900b033f3500a
+Size (es40_018_src.zip) = 488704 bytes
+SHA1 (patch-aa) = be76f224702dc2737f1cb437f4219ac019fdfafa
+SHA1 (patch-ab) = 89967242144b753fba0e859f89962ef4ec369683
