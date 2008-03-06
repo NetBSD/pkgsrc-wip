@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/26 17:44:09 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/03/06 11:34:46 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/indi_celestron_gps
@@ -132,9 +132,6 @@ lib/libkiten.so.4.0.0
 lib/libmarblewidget.so
 lib/libmarblewidget.so.4
 lib/libmarblewidget.so.4.0.0
-lib/libsbigudrv.so
-lib/libsbigudrv.so.1
-lib/libsbigudrv.so.1.0.0
 lib/libscience.so
 lib/libscience.so.4
 lib/libscience.so.4.0.0
@@ -451,11 +448,9 @@ share/doc/kde/HTML/en/kturtle/index.cache.bz2
 share/doc/kde/HTML/en/kturtle/index.docbook
 share/doc/kde/HTML/en/kturtle/mainwindow.png
 share/doc/kde/HTML/en/kturtle/mainwindow_flower_nrs.png
-share/doc/kde/HTML/en/kturtle/print.png
 share/doc/kde/HTML/en/kturtle/programming-reference.docbook
 share/doc/kde/HTML/en/kturtle/translator-guide.docbook
 share/doc/kde/HTML/en/kturtle/using-kturtle.docbook
-share/doc/kde/HTML/en/kturtle/wrapping.png
 share/doc/kde/HTML/en/kwordquiz/common
 share/doc/kde/HTML/en/kwordquiz/index.cache.bz2
 share/doc/kde/HTML/en/kwordquiz/index.docbook
