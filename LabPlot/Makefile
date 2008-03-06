@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/06 12:24:28 asau Exp $
 #
 
-DISTNAME=		LabPlot-1.3.0
-PKGREVISION=		2
-CATEGORIES=		kde graphics math
+DISTNAME=	LabPlot-1.6.0.1-2
+CATEGORIES=	kde graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labplot/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/
 COMMENT=	Data analysis and visualisation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
+USE_LANGUAGES+=	c++
+
+WRKSRC=		${WRKDIR}/LabPlot-1.6.0.1
 
 CONFIGURE_ARGS+= --enable-gsl
 CONFIGURE_ARGS+= --enable-fftw

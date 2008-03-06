@@ -1,60 +1,374 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/27 10:02:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/06 12:24:28 asau Exp $
 bin/LabPlot
+bin/labplot
+bin/qdelaunay
 lib/libLabPlot.la
 lib/libLabPlotcephes.la
+lib/libLabPlotnetCDF.la
+lib/libLabPlotqwtplot3d.la
+man/man1/LabPlot.1
+man/man1/labplot.1
+share/applications/kde/LabPlot.desktop
+share/doc/kde/HTML/br/LabPlot/index.docbook
+share/doc/kde/HTML/br/LabPlot/small_pics
+share/doc/kde/HTML/br/labplot
 share/doc/kde/HTML/de/LabPlot/index.docbook
 share/doc/kde/HTML/de/LabPlot/small_pics
+share/doc/kde/HTML/de/labplot
 share/doc/kde/HTML/en/LabPlot/index.docbook
 share/doc/kde/HTML/en/LabPlot/small_pics/3d-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/VTK-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/analysis-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/audio-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/axeslabel-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/bar-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/csi-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/exponential_fit-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/fft-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/fileinfo_netcdf-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/fit-small.png
-share/doc/kde/HTML/en/LabPlot/small_pics/grass-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/hist-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/image-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/konqueror-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/labplot-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/log-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/logfit-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/marker-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/multiplot-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/objects-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/pie-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/polar-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/qsa-green.png
+share/doc/kde/HTML/en/LabPlot/small_pics/qsa-import.png
+share/doc/kde/HTML/en/LabPlot/small_pics/qsa-plot.png
+share/doc/kde/HTML/en/LabPlot/small_pics/qsa-session.png
+share/doc/kde/HTML/en/LabPlot/small_pics/qwt3d-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/rydberg-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/sfi-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/spreadsheet-small.png
 share/doc/kde/HTML/en/LabPlot/small_pics/surface-small.png
-share/doc/kde/HTML/en/LabPlot/small_pics/surface2-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/surface${PKGVERSION}-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/surfacestyle-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/ternary-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/texlabel-small.png
+share/doc/kde/HTML/en/LabPlot/small_pics/worksheet-small.png
+share/doc/kde/HTML/en/labplot
+share/doc/kde/HTML/fr/LabPlot/index.docbook
+share/doc/kde/HTML/fr/LabPlot/small_pics
+share/doc/kde/HTML/fr/labplot
+share/doc/kde/HTML/it/LabPlot/index.docbook
+share/doc/kde/HTML/it/LabPlot/small_pics
+share/doc/kde/HTML/it/labplot
+share/doc/kde/HTML/nl/LabPlot/index.docbook
+share/doc/kde/HTML/nl/LabPlot/small_pics
+share/doc/kde/HTML/nl/labplot
+share/doc/kde/HTML/pl/LabPlot/index.docbook
+share/doc/kde/HTML/pl/LabPlot/small_pics
+share/doc/kde/HTML/pl/labplot
+share/doc/kde/HTML/sv/LabPlot/index.docbook
+share/doc/kde/HTML/sv/LabPlot/small_pics
+share/doc/kde/HTML/sv/labplot
+share/icons/hicolor/16x16/apps/LabPlot.png
+share/icons/hicolor/16x16/mimetypes/lpl.png
+share/icons/hicolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/apps/LabPlot.png
+share/icons/hicolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/mimetypes/lpl.png
+share/icons/hicolor/3${PKGVERSION}x3${PKGVERSION}/apps/LabPlot.png
+share/icons/hicolor/3${PKGVERSION}x3${PKGVERSION}/mimetypes/lpl.png
 share/icons/hicolor/48x48/apps/LabPlot.png
 share/icons/hicolor/48x48/mimetypes/lpl.png
+share/icons/hicolor/64x64/apps/LabPlot.png
 share/icons/hicolor/64x64/mimetypes/lpl.png
 share/icons/locolor/16x16/apps/LabPlot.png
 share/icons/locolor/16x16/mimetypes/lpl.png
-share/icons/locolor/32x32/apps/LabPlot.png
-share/icons/locolor/32x32/mimetypes/lpl.png
-share/kde/applnk/Applications/LabPlot.desktop
-share/kde/apps/LabPlot/3d.lpl
+share/icons/locolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/apps/LabPlot.png
+share/icons/locolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/mimetypes/lpl.png
+share/icons/locolor/3${PKGVERSION}x3${PKGVERSION}/apps/LabPlot.png
+share/icons/locolor/3${PKGVERSION}x3${PKGVERSION}/mimetypes/lpl.png
+share/kde/apps/LabPlot/3d.lml.gz
 share/kde/apps/LabPlot/LabPlotui.rc
-share/kde/apps/LabPlot/analysis.lpl
-share/kde/apps/LabPlot/axeslabel.lpl
-share/kde/apps/LabPlot/exponential_fit.lpl
-share/kde/apps/LabPlot/fft.lpl
-share/kde/apps/LabPlot/fit.lpl
-share/kde/apps/LabPlot/grass.lpl
-share/kde/apps/LabPlot/hist.lpl
-share/kde/apps/LabPlot/image.lpl
-share/kde/apps/LabPlot/log.lpl
-share/kde/apps/LabPlot/multiplot.lpl
-share/kde/apps/LabPlot/objects.lpl
+share/kde/apps/LabPlot/analysis.lml.gz
+share/kde/apps/LabPlot/attribute.qs
+share/kde/apps/LabPlot/audio.lml.gz
+share/kde/apps/LabPlot/axesdialog.qs
+share/kde/apps/LabPlot/axeslabel.lml.gz
+share/kde/apps/LabPlot/bar.lml.gz
+share/kde/apps/LabPlot/colormaps/3D.MAP
+share/kde/apps/LabPlot/colormaps/4ZEBBOW.MAP
+share/kde/apps/LabPlot/colormaps/4ZEBBOWX.MAP
+share/kde/apps/LabPlot/colormaps/560SEL.MAP
+share/kde/apps/LabPlot/colormaps/ALTERN.MAP
+share/kde/apps/LabPlot/colormaps/ANENOME.MAP
+share/kde/apps/LabPlot/colormaps/Autumn.map
+share/kde/apps/LabPlot/colormaps/BANDW.MAP
+share/kde/apps/LabPlot/colormaps/BASIC.MAP
+share/kde/apps/LabPlot/colormaps/BBR001.MAP
+share/kde/apps/LabPlot/colormaps/BGOLD.MAP
+share/kde/apps/LabPlot/colormaps/BLEND1.MAP
+share/kde/apps/LabPlot/colormaps/BLEND3.MAP
+share/kde/apps/LabPlot/colormaps/BLEND4.MAP
+share/kde/apps/LabPlot/colormaps/BLEND8.MAP
+share/kde/apps/LabPlot/colormaps/BLUEIN.MAP
+share/kde/apps/LabPlot/colormaps/BLUEOUT.MAP
+share/kde/apps/LabPlot/colormaps/BLUES.MAP
+share/kde/apps/LabPlot/colormaps/BLUORNG.MAP
+share/kde/apps/LabPlot/colormaps/BP.MAP
+share/kde/apps/LabPlot/colormaps/BPG.MAP
+share/kde/apps/LabPlot/colormaps/BRASS.MAP
+share/kde/apps/LabPlot/colormaps/BRITE.MAP
+share/kde/apps/LabPlot/colormaps/BRWG.MAP
+share/kde/apps/LabPlot/colormaps/BWB.MAP
+share/kde/apps/LabPlot/colormaps/Beach.map
+share/kde/apps/LabPlot/colormaps/CARAMEL.MAP
+share/kde/apps/LabPlot/colormaps/CHINA.MAP
+share/kde/apps/LabPlot/colormaps/CHROMA.MAP
+share/kde/apps/LabPlot/colormaps/CHROMA${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/CHROMA3.MAP
+share/kde/apps/LabPlot/colormaps/CLOUDS.MAP
+share/kde/apps/LabPlot/colormaps/COLDFIRE.MAP
+share/kde/apps/LabPlot/colormaps/COLORS.MAP
+share/kde/apps/LabPlot/colormaps/COOL.MAP
+share/kde/apps/LabPlot/colormaps/COPPER.MAP
+share/kde/apps/LabPlot/colormaps/DRAGON.MAP
+share/kde/apps/LabPlot/colormaps/DW.MAP
+share/kde/apps/LabPlot/colormaps/Darkest.map
+share/kde/apps/LabPlot/colormaps/FIRE${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/FIRESTRM.MAP
+share/kde/apps/LabPlot/colormaps/FRCOAST.MAP
+share/kde/apps/LabPlot/colormaps/Flash.map
+share/kde/apps/LabPlot/colormaps/GAMMA1.MAP
+share/kde/apps/LabPlot/colormaps/GAMMA${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/GLASS.MAP
+share/kde/apps/LabPlot/colormaps/GLASSES1.MAP
+share/kde/apps/LabPlot/colormaps/GREEN.MAP
+share/kde/apps/LabPlot/colormaps/GREENIN.MAP
+share/kde/apps/LabPlot/colormaps/GREENOUT.MAP
+share/kde/apps/LabPlot/colormaps/GREY.MAP
+share/kde/apps/LabPlot/colormaps/Globule.map
+share/kde/apps/LabPlot/colormaps/Grange.map
+share/kde/apps/LabPlot/colormaps/Green-Grass.map
+share/kde/apps/LabPlot/colormaps/HAWAII.MAP
+share/kde/apps/LabPlot/colormaps/HAYSTACK.MAP
+share/kde/apps/LabPlot/colormaps/HORNS.MAP
+share/kde/apps/LabPlot/colormaps/INDIGO.MAP
+share/kde/apps/LabPlot/colormaps/Its-late.map
+share/kde/apps/LabPlot/colormaps/JELLYFSH.MAP
+share/kde/apps/LabPlot/colormaps/JFAN.MAP
+share/kde/apps/LabPlot/colormaps/JSTRIPE.MAP
+share/kde/apps/LabPlot/colormaps/JUTEBLUE.MAP
+share/kde/apps/LabPlot/colormaps/JUTEMAP.MAP
+share/kde/apps/LabPlot/colormaps/JUTEMAP${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/KAHKI.MAP
+share/kde/apps/LabPlot/colormaps/LACE.MAP
+share/kde/apps/LabPlot/colormaps/LANDSCAP.MAP
+share/kde/apps/LabPlot/colormaps/LIGHT.MAP
+share/kde/apps/LabPlot/colormaps/LITE.MAP
+share/kde/apps/LabPlot/colormaps/LITNIN1.MAP
+share/kde/apps/LabPlot/colormaps/LONGS.MAP
+share/kde/apps/LabPlot/colormaps/LYAPUNOV.MAP
+share/kde/apps/LabPlot/colormaps/Lake.map
+share/kde/apps/LabPlot/colormaps/Lava.map
+share/kde/apps/LabPlot/colormaps/MASTS.MAP
+share/kde/apps/LabPlot/colormaps/MED.MAP
+share/kde/apps/LabPlot/colormaps/METAL.MAP
+share/kde/apps/LabPlot/colormaps/MIST.MAP
+share/kde/apps/LabPlot/colormaps/Max.map
+share/kde/apps/LabPlot/colormaps/NEON.MAP
+share/kde/apps/LabPlot/colormaps/NEW1.MAP
+share/kde/apps/LabPlot/colormaps/NEW${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/OSB.MAP
+share/kde/apps/LabPlot/colormaps/Ocean.map
+share/kde/apps/LabPlot/colormaps/Oranje.map
+share/kde/apps/LabPlot/colormaps/PALE.MAP
+share/kde/apps/LabPlot/colormaps/PEACH.MAP
+share/kde/apps/LabPlot/colormaps/PUMPKIN.MAP
+share/kde/apps/LabPlot/colormaps/PVLAND.MAP
+share/kde/apps/LabPlot/colormaps/Prima.map
+share/kde/apps/LabPlot/colormaps/RAINBOW.MAP
+share/kde/apps/LabPlot/colormaps/RAINBOW${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/RAINBOW3.MAP
+share/kde/apps/LabPlot/colormaps/RAINBOW4.MAP
+share/kde/apps/LabPlot/colormaps/RAINBOW5.MAP
+share/kde/apps/LabPlot/colormaps/RAINBOW7.MAP
+share/kde/apps/LabPlot/colormaps/RBOW.MAP
+share/kde/apps/LabPlot/colormaps/RBY.MAP
+share/kde/apps/LabPlot/colormaps/REDIN.MAP
+share/kde/apps/LabPlot/colormaps/REDOUT.MAP
+share/kde/apps/LabPlot/colormaps/ROSE1.MAP
+share/kde/apps/LabPlot/colormaps/ROYAL.MAP
+share/kde/apps/LabPlot/colormaps/RW.MAP
+share/kde/apps/LabPlot/colormaps/RYB1.MAP
+share/kde/apps/LabPlot/colormaps/Regal.map
+share/kde/apps/LabPlot/colormaps/Rose-Petals.map
+share/kde/apps/LabPlot/colormaps/SEA.MAP
+share/kde/apps/LabPlot/colormaps/SMOOTH.MAP
+share/kde/apps/LabPlot/colormaps/SPIRAL.MAP
+share/kde/apps/LabPlot/colormaps/STORM.MAP
+share/kde/apps/LabPlot/colormaps/Score.map
+share/kde/apps/LabPlot/colormaps/Smooth${PKGVERSION}.map
+share/kde/apps/LabPlot/colormaps/Spume.map
+share/kde/apps/LabPlot/colormaps/Sunshine.map
+share/kde/apps/LabPlot/colormaps/TOPO.MAP
+share/kde/apps/LabPlot/colormaps/TOPO${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/TROPIC.MAP
+share/kde/apps/LabPlot/colormaps/TURQOISE.MAP
+share/kde/apps/LabPlot/colormaps/Touch-of-Blues.map
+share/kde/apps/LabPlot/colormaps/UNKNOWN.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO${PKGVERSION}.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO3.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO4.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO5.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO6.MAP
+share/kde/apps/LabPlot/colormaps/VOLCANO7.MAP
+share/kde/apps/LabPlot/colormaps/VOOON.MAP
+share/kde/apps/LabPlot/colormaps/WILD.MAP
+share/kde/apps/LabPlot/colormaps/WINE.MAP
+share/kde/apps/LabPlot/colormaps/WORLD.MAP
+share/kde/apps/LabPlot/colormaps/WYBR.MAP
+share/kde/apps/LabPlot/colormaps/Waltz.map
+share/kde/apps/LabPlot/colormaps/YELPURP1.MAP
+share/kde/apps/LabPlot/colormaps/YGB.MAP
+share/kde/apps/LabPlot/colormaps/YOOLS.MAP
+share/kde/apps/LabPlot/colormaps/Zaoud.map
+share/kde/apps/LabPlot/colormaps/_standard.map
+share/kde/apps/LabPlot/datadialog.qs
+share/kde/apps/LabPlot/error-plot.qs
+share/kde/apps/LabPlot/exponential_fit.lml.gz
+share/kde/apps/LabPlot/export.qs
+share/kde/apps/LabPlot/fft.lml.gz
+share/kde/apps/LabPlot/fit.lml.gz
+share/kde/apps/LabPlot/fit.qs
+share/kde/apps/LabPlot/function.qs
+share/kde/apps/LabPlot/hist.lml.gz
+share/kde/apps/LabPlot/image.lml.gz
+share/kde/apps/LabPlot/import-binary.qs
+share/kde/apps/LabPlot/import-opj.qs
+share/kde/apps/LabPlot/import.qs
+share/kde/apps/LabPlot/import${PKGVERSION}.qs
+share/kde/apps/LabPlot/labplot.png
+share/kde/apps/LabPlot/labplot.qs
+share/kde/apps/LabPlot/legend.qs
+share/kde/apps/LabPlot/log.lml.gz
+share/kde/apps/LabPlot/logfit.lml.gz
+share/kde/apps/LabPlot/marker.lml.gz
+share/kde/apps/LabPlot/multiplot.lml.gz
+share/kde/apps/LabPlot/objects.lml.gz
+share/kde/apps/LabPlot/objects.qs
 share/kde/apps/LabPlot/penguin.png
-share/kde/apps/LabPlot/pie.lpl
-share/kde/apps/LabPlot/rydberg.lpl
-share/kde/apps/LabPlot/surface.lpl
-share/kde/apps/LabPlot/surface2.lpl
-share/kde/locale/de/LC_MESSAGES/LabPlot.mo
-share/kde/locale/fr/LC_MESSAGES/LabPlot.mo
+share/kde/apps/LabPlot/pie.lml.gz
+share/kde/apps/LabPlot/plot.qs
+share/kde/apps/LabPlot/polar.lml.gz
+share/kde/apps/LabPlot/qsa-icons/d_class.png
+share/kde/apps/LabPlot/qsa-icons/d_editcopy.png
+share/kde/apps/LabPlot/qsa-icons/d_editcut.png
+share/kde/apps/LabPlot/qsa-icons/d_editdelete.png
+share/kde/apps/LabPlot/qsa-icons/d_editpaste.png
+share/kde/apps/LabPlot/qsa-icons/d_filenew.png
+share/kde/apps/LabPlot/qsa-icons/d_fileopen.png
+share/kde/apps/LabPlot/qsa-icons/d_filesave.png
+share/kde/apps/LabPlot/qsa-icons/d_function.png
+share/kde/apps/LabPlot/qsa-icons/d_help.png
+share/kde/apps/LabPlot/qsa-icons/d_play.png
+share/kde/apps/LabPlot/qsa-icons/d_playprev.png
+share/kde/apps/LabPlot/qsa-icons/d_project.png
+share/kde/apps/LabPlot/qsa-icons/d_redo.png
+share/kde/apps/LabPlot/qsa-icons/d_searchfind.png
+share/kde/apps/LabPlot/qsa-icons/d_stop.png
+share/kde/apps/LabPlot/qsa-icons/d_undo.png
+share/kde/apps/LabPlot/qsa-icons/editcopy.png
+share/kde/apps/LabPlot/qsa-icons/editcut.png
+share/kde/apps/LabPlot/qsa-icons/editdelete.png
+share/kde/apps/LabPlot/qsa-icons/editpaste.png
+share/kde/apps/LabPlot/qsa-icons/filenew.png
+share/kde/apps/LabPlot/qsa-icons/fileopen.png
+share/kde/apps/LabPlot/qsa-icons/filesave.png
+share/kde/apps/LabPlot/qsa-icons/function.png
+share/kde/apps/LabPlot/qsa-icons/help.png
+share/kde/apps/LabPlot/qsa-icons/object.png
+share/kde/apps/LabPlot/qsa-icons/play.png
+share/kde/apps/LabPlot/qsa-icons/playprev.png
+share/kde/apps/LabPlot/qsa-icons/project.png
+share/kde/apps/LabPlot/qsa-icons/qsa.png
+share/kde/apps/LabPlot/qsa-icons/redo.png
+share/kde/apps/LabPlot/qsa-icons/script.png
+share/kde/apps/LabPlot/qsa-icons/scriptnew.png
+share/kde/apps/LabPlot/qsa-icons/scriptobject.png
+share/kde/apps/LabPlot/qsa-icons/searchfind.png
+share/kde/apps/LabPlot/qsa-icons/splash.png
+share/kde/apps/LabPlot/qsa-icons/stop.png
+share/kde/apps/LabPlot/qsa-icons/undo.png
+share/kde/apps/LabPlot/qwt.lml.gz
+share/kde/apps/LabPlot/result.qs
+share/kde/apps/LabPlot/rydberg.lml.gz
+share/kde/apps/LabPlot/session.qs
+share/kde/apps/LabPlot/shosho.qs
+share/kde/apps/LabPlot/shosho${PKGVERSION}.qs
+share/kde/apps/LabPlot/simple.qs
+share/kde/apps/LabPlot/spreadsheet.qs
+share/kde/apps/LabPlot/surface-image.qs
+share/kde/apps/LabPlot/surface-plot.qs
+share/kde/apps/LabPlot/surface.lml.gz
+share/kde/apps/LabPlot/surface${PKGVERSION}.lml.gz
+share/kde/apps/LabPlot/surfacestyle.lml.gz
+share/kde/apps/LabPlot/ternary.lml.gz
+share/kde/apps/LabPlot/ternary.qs
+share/kde/apps/LabPlot/texlabel.lml.gz
+share/kde/apps/LabPlot/title.qs
+share/kde/apps/LabPlot/ylog.qs
+share/kde/mimelnk/application/x-lml.desktop
 share/kde/mimelnk/application/x-lpl.desktop
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/mimelnk
+@dirrm share/kde/apps/LabPlot/qsa-icons
+@dirrm share/kde/apps/LabPlot/colormaps
 @dirrm share/kde/apps/LabPlot
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
+@comment in kde: @dirrm share/icons/locolor/3${PKGVERSION}x3${PKGVERSION}/mimetypes
+@comment in kde: @dirrm share/icons/locolor/3${PKGVERSION}x3${PKGVERSION}/apps
+@comment in kde: @dirrm share/icons/locolor/3${PKGVERSION}x3${PKGVERSION}
+@comment in kde: @dirrm share/icons/locolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/mimetypes
+@comment in kde: @dirrm share/icons/locolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/apps
+@comment in kde: @dirrm share/icons/locolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}
+@comment in kde: @dirrm share/icons/locolor/16x16/mimetypes
+@comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/icons/locolor/16x16
+@comment in kde: @dirrm share/icons/locolor
+@dirrm share/icons/hicolor/64x64/mimetypes
+@dirrm share/icons/hicolor/64x64/apps
+@dirrm share/icons/hicolor/64x64
+@dirrm share/icons/hicolor/48x48/mimetypes
+@dirrm share/icons/hicolor/48x48/apps
+@dirrm share/icons/hicolor/48x48
+@dirrm share/icons/hicolor/3${PKGVERSION}x3${PKGVERSION}/mimetypes
+@dirrm share/icons/hicolor/3${PKGVERSION}x3${PKGVERSION}/apps
+@dirrm share/icons/hicolor/3${PKGVERSION}x3${PKGVERSION}
+@dirrm share/icons/hicolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/mimetypes
+@dirrm share/icons/hicolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}/apps
+@dirrm share/icons/hicolor/${PKGVERSION}${PKGVERSION}x${PKGVERSION}${PKGVERSION}
+@dirrm share/icons/hicolor/16x16/mimetypes
+@dirrm share/icons/hicolor/16x16/apps
+@dirrm share/icons/hicolor/16x16
+@dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@dirrm share/doc/kde/HTML/sv/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/sv
+@dirrm share/doc/kde/HTML/pl/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/pl
+@dirrm share/doc/kde/HTML/nl/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/nl
+@dirrm share/doc/kde/HTML/it/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/it
+@dirrm share/doc/kde/HTML/fr/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/en/LabPlot/small_pics
 @dirrm share/doc/kde/HTML/en/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/de/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/de
+@dirrm share/doc/kde/HTML/br/LabPlot
+@comment in kde: @dirrm share/doc/kde/HTML/br
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
+@comment in kde: @dirrm share/applications/kde
+@comment in xdg-dirs: @dirrm share/applications
