@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/12/12 03:17:11 mwdavies Exp $
+$NetBSD: patch-ab,v 1.2 2008/03/06 11:45:48 mwdavies Exp $
 
---- kinit/autostart.cpp.orig	2007-12-10 23:58:21.000000000 +1300
+--- kinit/autostart.cpp.orig	2008-02-28 00:58:51.000000000 +1300
 +++ kinit/autostart.cpp
-@@ -38,7 +38,7 @@ AutoStart::AutoStart()
-   : m_phase(-1), m_phasedone(false)
- {
+@@ -40,7 +40,7 @@ AutoStart::AutoStart()
    m_startList = new AutoStartList;
--  KGlobal::dirs()->addResourceType("autostart", 0, "share/autostart");
-+  KGlobal::dirs()->addResourceType("autostart", 0, "share/kde/autostart");
+   KGlobal::dirs()->addResourceType("xdgconf-autostart", NULL, "autostart/"); // xdg ones
+   KGlobal::dirs()->addResourceType("autostart", "xdgconf-autostart", "/"); // merge them
+-  KGlobal::dirs()->addResourceType("autostart", 0, "share/autostart"); // KDE ones are higher priority
++  KGlobal::dirs()->addResourceType("autostart", 0, "share/kde/autostart"); // KDE ones are higher priority
  }
  
  AutoStart::~AutoStart()

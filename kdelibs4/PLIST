@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/06 11:58:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/03/06 11:45:48 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1416,6 +1416,7 @@ include/kxmlguibuilder.h
 include/kxmlguiclient.h
 include/kxmlguifactory.h
 include/kxmlguiwindow.h
+include/kxutils.h
 include/kxyselector.h
 include/kzip.h
 include/netwm.h
@@ -1658,6 +1659,84 @@ lib/libsolid.so.4.0.0
 lib/libthreadweaver.so
 lib/libthreadweaver.so.4
 lib/libthreadweaver.so.4.0.0
+man/man1/checkXML.1
+man/man1/kde4-config.1
+man/man7/kdeoptions.7
+man/man7/qtoptions.7
+man/man8/kbuildsycoca4.8
+share/dbus-1/interfaces/org.kde.KCookieServer.xml
+share/dbus-1/interfaces/org.kde.KDirNotify.xml
+share/dbus-1/interfaces/org.kde.KHTMLPart.xml
+share/dbus-1/interfaces/org.kde.KIMIface.xml
+share/dbus-1/interfaces/org.kde.KLauncher.xml
+share/dbus-1/interfaces/org.kde.KMediaPlayer.xml
+share/dbus-1/interfaces/org.kde.KSpeech.xml
+share/dbus-1/interfaces/org.kde.KWallet.xml
+share/dbus-1/interfaces/org.kde.KdedGlobalAccel.xml
+share/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
+share/dbus-1/interfaces/org.kde.Solid.Networking.Client.xml
+share/dbus-1/interfaces/org.kde.UiServer.xml
+share/dbus-1/interfaces/org.kde.UiServerCallbacks.xml
+share/dbus-1/interfaces/org.kde.kded.xml
+share/doc/kde/HTML/en/common/1.png
+share/doc/kde/HTML/en/common/10.png
+share/doc/kde/HTML/en/common/2.png
+share/doc/kde/HTML/en/common/3.png
+share/doc/kde/HTML/en/common/4.png
+share/doc/kde/HTML/en/common/5.png
+share/doc/kde/HTML/en/common/6.png
+share/doc/kde/HTML/en/common/7.png
+share/doc/kde/HTML/en/common/8.png
+share/doc/kde/HTML/en/common/9.png
+share/doc/kde/HTML/en/common/artistic-license.html
+share/doc/kde/HTML/en/common/block_title_bottom.png
+share/doc/kde/HTML/en/common/block_title_mid.png
+share/doc/kde/HTML/en/common/block_title_top.png
+share/doc/kde/HTML/en/common/bottom-left.png
+share/doc/kde/HTML/en/common/bottom-middle.png
+share/doc/kde/HTML/en/common/bottom-right.png
+share/doc/kde/HTML/en/common/bsd-license.html
+share/doc/kde/HTML/en/common/doxygen.css
+share/doc/kde/HTML/en/common/favicon.ico
+share/doc/kde/HTML/en/common/fdl-license
+share/doc/kde/HTML/en/common/fdl-license.html
+share/doc/kde/HTML/en/common/fdl-notice.html
+share/doc/kde/HTML/en/common/footer.html
+share/doc/kde/HTML/en/common/gpl-license
+share/doc/kde/HTML/en/common/gpl-license.html
+share/doc/kde/HTML/en/common/header.html
+share/doc/kde/HTML/en/common/kde-default.css
+share/doc/kde/HTML/en/common/kde_logo_bg.png
+share/doc/kde/HTML/en/common/lgpl-license
+share/doc/kde/HTML/en/common/lgpl-license.html
+share/doc/kde/HTML/en/common/mainfooter.html
+share/doc/kde/HTML/en/common/mainheader.html
+share/doc/kde/HTML/en/common/qpl-license.html
+share/doc/kde/HTML/en/common/tabs.css
+share/doc/kde/HTML/en/common/top-kde.jpg
+share/doc/kde/HTML/en/common/top-left.jpg
+share/doc/kde/HTML/en/common/top-left.png
+share/doc/kde/HTML/en/common/top-middle.png
+share/doc/kde/HTML/en/common/top-right-konqueror.png
+share/doc/kde/HTML/en/common/top-right.jpg
+share/doc/kde/HTML/en/common/top.jpg
+share/doc/kde/HTML/en/common/x11-license.html
+share/doc/kde/HTML/en/common/xml.dcl
+share/doc/kde/HTML/en/sonnet/common
+share/doc/kde/HTML/en/sonnet/index.cache.bz2
+share/doc/kde/HTML/en/sonnet/index.docbook
+share/examples/kdelibs4/applications.menu
+share/icons/hicolor/16x16/actions/presence_away.png
+share/icons/hicolor/16x16/actions/presence_offline.png
+share/icons/hicolor/16x16/actions/presence_online.png
+share/icons/hicolor/16x16/actions/presence_unknown.png
+share/icons/hicolor/32x32/actions/presence_away.png
+share/icons/hicolor/32x32/actions/presence_offline.png
+share/icons/hicolor/32x32/actions/presence_online.png
+share/icons/hicolor/32x32/actions/presence_unknown.png
+share/icons/hicolor/48x48/actions/presence_away.png
+share/icons/hicolor/48x48/actions/presence_offline.png
+share/icons/hicolor/48x48/actions/presence_online.png
 share/kde/apps/LICENSES/ARTISTIC
 share/kde/apps/LICENSES/BSD
 share/kde/apps/LICENSES/GPL_V2
@@ -2615,11 +2694,30 @@ share/kde/apps/ksgmltools2/customization/sr/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/sr/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/sr/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/sr/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/sr/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/sr/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/sr/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/sr/lang.entities
 share/kde/apps/ksgmltools2/customization/sr/strings.entities
 share/kde/apps/ksgmltools2/customization/sr/user.entities
+share/kde/apps/ksgmltools2/customization/sr@latin/catalog
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/fdl-notice.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/gpl-notice.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/help-menu.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/install-compile.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/install-intro.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/lgpl-notice.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/report-bugs.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underArtisticLicense.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underBSDLicense.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underFDL.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underLGPL.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/underX11License.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/entities/update-doc.docbook
+share/kde/apps/ksgmltools2/customization/sr@latin/lang.entities
+share/kde/apps/ksgmltools2/customization/sr@latin/strings.entities
+share/kde/apps/ksgmltools2/customization/sr@latin/user.entities
 share/kde/apps/ksgmltools2/customization/sv/catalog
 share/kde/apps/ksgmltools2/customization/sv/entities/fdl-notice.docbook
 share/kde/apps/ksgmltools2/customization/sv/entities/gpl-notice.docbook
@@ -2638,6 +2736,24 @@ share/kde/apps/ksgmltools2/customization/sv/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/sv/lang.entities
 share/kde/apps/ksgmltools2/customization/sv/strings.entities
 share/kde/apps/ksgmltools2/customization/sv/user.entities
+share/kde/apps/ksgmltools2/customization/th/catalog
+share/kde/apps/ksgmltools2/customization/th/entities/fdl-notice.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/gpl-notice.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/help-menu.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/install-compile.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/install-intro.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/lgpl-notice.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/report-bugs.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underArtisticLicense.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underBSDLicense.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underFDL.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underLGPL.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/underX11License.docbook
+share/kde/apps/ksgmltools2/customization/th/entities/update-doc.docbook
+share/kde/apps/ksgmltools2/customization/th/lang.entities
+share/kde/apps/ksgmltools2/customization/th/strings.entities
+share/kde/apps/ksgmltools2/customization/th/user.entities
 share/kde/apps/ksgmltools2/customization/tr/catalog
 share/kde/apps/ksgmltools2/customization/tr/entities/fdl-notice.docbook
 share/kde/apps/ksgmltools2/customization/tr/entities/gpl-notice.docbook
@@ -2734,6 +2850,7 @@ share/kde/apps/ksgmltools2/customization/xsl/ru.xml
 share/kde/apps/ksgmltools2/customization/xsl/sk.xml
 share/kde/apps/ksgmltools2/customization/xsl/sl.xml
 share/kde/apps/ksgmltools2/customization/xsl/sr.xml
+share/kde/apps/ksgmltools2/customization/xsl/sr@latin.xml
 share/kde/apps/ksgmltools2/customization/xsl/sv.xml
 share/kde/apps/ksgmltools2/customization/xsl/zh_tw.xml
 share/kde/apps/ksgmltools2/customization/xx/catalog
@@ -3457,79 +3574,6 @@ share/kde/config/kdebugrc
 share/kde/config/kdxspreviewrc
 share/kde/config/ksslcalist
 share/kde/config/ui/ui_standards.rc
-share/dbus-1/interfaces/org.kde.KCookieServer.xml
-share/dbus-1/interfaces/org.kde.KDirNotify.xml
-share/dbus-1/interfaces/org.kde.KHTMLPart.xml
-share/dbus-1/interfaces/org.kde.KIMIface.xml
-share/dbus-1/interfaces/org.kde.KLauncher.xml
-share/dbus-1/interfaces/org.kde.KMediaPlayer.xml
-share/dbus-1/interfaces/org.kde.KSpeech.xml
-share/dbus-1/interfaces/org.kde.KWallet.xml
-share/dbus-1/interfaces/org.kde.KdedGlobalAccel.xml
-share/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
-share/dbus-1/interfaces/org.kde.Solid.Networking.Client.xml
-share/dbus-1/interfaces/org.kde.UiServer.xml
-share/dbus-1/interfaces/org.kde.UiServerCallbacks.xml
-share/dbus-1/interfaces/org.kde.kded.xml
-share/doc/kde/HTML/en/common/1.png
-share/doc/kde/HTML/en/common/10.png
-share/doc/kde/HTML/en/common/2.png
-share/doc/kde/HTML/en/common/3.png
-share/doc/kde/HTML/en/common/4.png
-share/doc/kde/HTML/en/common/5.png
-share/doc/kde/HTML/en/common/6.png
-share/doc/kde/HTML/en/common/7.png
-share/doc/kde/HTML/en/common/8.png
-share/doc/kde/HTML/en/common/9.png
-share/doc/kde/HTML/en/common/artistic-license.html
-share/doc/kde/HTML/en/common/block_title_bottom.png
-share/doc/kde/HTML/en/common/block_title_mid.png
-share/doc/kde/HTML/en/common/block_title_top.png
-share/doc/kde/HTML/en/common/bottom-left.png
-share/doc/kde/HTML/en/common/bottom-middle.png
-share/doc/kde/HTML/en/common/bottom-right.png
-share/doc/kde/HTML/en/common/bsd-license.html
-share/doc/kde/HTML/en/common/doxygen.css
-share/doc/kde/HTML/en/common/favicon.ico
-share/doc/kde/HTML/en/common/fdl-license
-share/doc/kde/HTML/en/common/fdl-license.html
-share/doc/kde/HTML/en/common/fdl-notice.html
-share/doc/kde/HTML/en/common/footer.html
-share/doc/kde/HTML/en/common/gpl-license
-share/doc/kde/HTML/en/common/gpl-license.html
-share/doc/kde/HTML/en/common/header.html
-share/doc/kde/HTML/en/common/kde-default.css
-share/doc/kde/HTML/en/common/kde_logo_bg.png
-share/doc/kde/HTML/en/common/lgpl-license
-share/doc/kde/HTML/en/common/lgpl-license.html
-share/doc/kde/HTML/en/common/mainfooter.html
-share/doc/kde/HTML/en/common/mainheader.html
-share/doc/kde/HTML/en/common/qpl-license.html
-share/doc/kde/HTML/en/common/tabs.css
-share/doc/kde/HTML/en/common/top-kde.jpg
-share/doc/kde/HTML/en/common/top-left.jpg
-share/doc/kde/HTML/en/common/top-left.png
-share/doc/kde/HTML/en/common/top-middle.png
-share/doc/kde/HTML/en/common/top-right-konqueror.png
-share/doc/kde/HTML/en/common/top-right.jpg
-share/doc/kde/HTML/en/common/top.jpg
-share/doc/kde/HTML/en/common/x11-license.html
-share/doc/kde/HTML/en/common/xml.dcl
-share/doc/kde/HTML/en/sonnet/common
-share/doc/kde/HTML/en/sonnet/index.cache.bz2
-share/doc/kde/HTML/en/sonnet/index.docbook
-share/examples/kdelibs4/applications.menu
-share/icons/hicolor/16x16/actions/presence_away.png
-share/icons/hicolor/16x16/actions/presence_offline.png
-share/icons/hicolor/16x16/actions/presence_online.png
-share/icons/hicolor/16x16/actions/presence_unknown.png
-share/icons/hicolor/32x32/actions/presence_away.png
-share/icons/hicolor/32x32/actions/presence_offline.png
-share/icons/hicolor/32x32/actions/presence_online.png
-share/icons/hicolor/32x32/actions/presence_unknown.png
-share/icons/hicolor/48x48/actions/presence_away.png
-share/icons/hicolor/48x48/actions/presence_offline.png
-share/icons/hicolor/48x48/actions/presence_online.png
 share/kde4/services/crypto.desktop
 share/kde4/services/data.protocol
 share/kde4/services/file.protocol
@@ -3623,18 +3667,15 @@ share/kde4/servicetypes/qimageio_plugin.desktop
 share/kde4/servicetypes/renamedialogplugin.desktop
 share/kde4/servicetypes/sonnetspeller.desktop
 share/locale/all_languages
-man/man1/checkXML.1
-man/man1/kde4-config.1
-man/man7/kdeoptions.7
-man/man7/qtoptions.7
-man/man8/kbuildsycoca4.8
 share/mime/packages/kde.xml
-@comment shared-mime-info @dirrm share/mime/packages
+@comment in shared-mime-info: @dirrm share/mime/packages
+@comment in kde: @dirrm share/kde4/servicetypes
 @dirrm share/kde4/services/qimageioplugins
-@dirrm share/examples/kdelibs4
-@dirrm share/doc/kde/HTML/en/sonnet
+@comment in kde: @dirrm share/kde4/services/kded
+@comment in kde: @dirrm share/kde4/services
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/proxyscout
 @dirrm share/kde/apps/phonon
 @dirrm share/kde/apps/libphonon
@@ -3670,8 +3711,12 @@ share/mime/packages/kde.xml
 @dirrm share/kde/apps/ksgmltools2/customization/uk
 @dirrm share/kde/apps/ksgmltools2/customization/tr/entities
 @dirrm share/kde/apps/ksgmltools2/customization/tr
+@dirrm share/kde/apps/ksgmltools2/customization/th/entities
+@dirrm share/kde/apps/ksgmltools2/customization/th
 @dirrm share/kde/apps/ksgmltools2/customization/sv/entities
 @dirrm share/kde/apps/ksgmltools2/customization/sv
+@dirrm share/kde/apps/ksgmltools2/customization/sr@latin/entities
+@dirrm share/kde/apps/ksgmltools2/customization/sr@latin
 @dirrm share/kde/apps/ksgmltools2/customization/sr/entities
 @dirrm share/kde/apps/ksgmltools2/customization/sr
 @dirrm share/kde/apps/ksgmltools2/customization/sl/entities
@@ -3751,19 +3796,38 @@ share/mime/packages/kde.xml
 @dirrm share/kde/apps/khtml/icons/crystalsvg
 @dirrm share/kde/apps/khtml/icons
 @dirrm share/kde/apps/khtml/css
+@comment in kde: @dirrm share/kde/apps/khtml
 @dirrm share/kde/apps/kdewidgets/pics
 @dirrm share/kde/apps/kdewidgets
 @dirrm share/kde/apps/kdeui/pics
 @dirrm share/kde/apps/kdeui/about
 @dirrm share/kde/apps/kdeui
-@dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcm_phonon
+@comment in kde: @dirrm share/kde/apps/kcm_componentchooser
 @comment in kde: @dirrm share/kde/apps/kcharselect
 @dirrm share/kde/apps/kcertpart
+@comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/kde/apps/katepart/jscript
+@comment in kde: @dirrm share/kde/apps/katepart
+@comment in kde: @dirrm share/kde/apps/cmake/modules
 @dirrm share/kde/apps/LICENSES
+@comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/examples/kdelibs4
+@dirrm share/doc/kde/HTML/en/sonnet
+@comment in kde: @dirrm share/doc/kde/HTML/en/common
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/dbus-1/interfaces
 @dirrm lib/kde4/plugins/phonon_platform
 @dirrm lib/kde4/plugins/imageformats
+@comment in kde: @dirrm lib/kde4/plugins/designer
+@comment in kde: @dirrm lib/kde4/plugins
+@comment in kde: @dirrm lib/kde4/libexec
+@comment in kde: @dirrm lib/kde4
 @dirrm include/threadweaver
 @dirrm include/sonnet
 @comment in kde: @dirrm include/solid
@@ -3775,6 +3839,7 @@ share/mime/packages/kde.xml
 @dirrm include/kross/ui
 @dirrm include/kross/core
 @dirrm include/kross
+@comment in kde: @dirrm include/kparts
 @dirrm include/knewstuff2/ui
 @dirrm include/knewstuff2/core
 @dirrm include/knewstuff2
@@ -3782,6 +3847,7 @@ share/mime/packages/kde.xml
 @dirrm include/kio
 @dirrm include/khexedit
 @dirrm include/kdesu
+@comment in kde: @dirrm include/dom
 @dirrm include/dnssd
 @dirrm include/KDE/khtml
 @dirrm include/KDE/ThreadWeaver
@@ -3805,3 +3871,4 @@ share/mime/packages/kde.xml
 @dirrm include/KDE/DOM
 @dirrm include/KDE/DNSSD
 @dirrm include/KDE/ConversionCheck
+@comment in kde: @dirrm include/KDE
