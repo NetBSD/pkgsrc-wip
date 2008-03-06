@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2828 2008/03/06 02:43:25 tnn2 Exp $
+# $Id: Makefile,v 1.2829 2008/03/06 06:13:22 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1991,6 +1991,22 @@ SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zvbi
+<<<<<<< Makefile
+SUBDIR+=	p5-Maypole
+SUBDIR+=	p5-CGI-Untaint
+SUBDIR+=	p5-CGI-Untaint-Email
+SUBDIR+=	p5-CGI-Untaint-Date
+SUBDIR+=	p5-Class-DBI-Relationship
+SUBDIR+=	p5-Class-DBI-Relationship
+SUBDIR+=	p5-Class-DBI-Pager
+SUBDIR+=	p5-Template-Plugin-Class
+SUBDIR+=	p5-Test-MockModule
+SUBDIR+=	p5-File-MMagic-XS
+SUBDIR+=	qpsmtpd
+
+
+=======
+>>>>>>> 1.2828
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
