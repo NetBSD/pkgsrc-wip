@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/27 08:26:23 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/07 20:37:39 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.15
@@ -55,9 +55,6 @@ PKG_FAIL_REASON+=	"Please set SBCL_BOOT_SYSTEM=sbcl in mk.conf"
 .elif defined(SBCL_BOOT_SYSTEM) && ${SBCL_BOOT_SYSTEM} == sbcl
 # Get bootstrap version:
 BUILD_DEPENDS+=		sbcl-[0-9]*:../sbcl-boot
-.endif
-.if defined(SBCL_BOOT_SYSTEM) && ${SBCL_BOOT_SYSTEM} == clisp
-PKG_FAIL_REASON+=	"Sorry, it doesn't work with CLISP."
 .endif
 
 

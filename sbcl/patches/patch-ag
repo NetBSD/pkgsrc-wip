@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2008/03/07 20:37:39 asau Exp $
+
+CLISP bootstrap from Josh Elsasser, part 3.
+
+--- src/cold/compile-cold-sbcl.lisp.orig	Thu Jul 14 09:30:41 2005
++++ src/cold/compile-cold-sbcl.lisp	Wed Feb 27 14:49:18 2008
+@@ -16,7 +16,9 @@
+ 
+ (defvar *target-object-file-names*)
+ 
+-(let ((reversed-target-object-file-names nil))
++(let ((reversed-target-object-file-names nil)
++      #+clisp
++      (custom:*suppress-check-redefinition* t))
+   (do-stems-and-flags (stem flags)
+     (unless (position :not-target flags)
+       (push (target-compile-stem stem
