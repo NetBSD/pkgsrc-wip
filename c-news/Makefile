@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/02/23 03:53:30 hfath Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/07 19:35:14 tnn2 Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -9,8 +9,7 @@ MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.redcom.ru/pub/unix/usenet/c-news/ \
 		ftp://ftp.dinoex.org/pub/c-news/
 EXTRACT_SUFX=	.tar.Z
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		pgpverify-1.12
+DISTFILES=	${DEFAULT_DISTFILES} pgpverify-1.12
 
 PATCH_SITES=	ftp://ftp.lan-ks.de/pub/c-news/ \
 		ftp://ftp.dinoex.org/pub/c-news/

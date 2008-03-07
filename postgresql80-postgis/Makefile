@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/16 01:29:08 lexort Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/07 19:35:15 tnn2 Exp $
 #
 
 VERSION=		1.0.3
@@ -30,7 +30,7 @@ USE_TOOLS+=		perl
 PGSQL_VERSION_REQD=	80
 
 # Add postgis to the postgresql distfile
-DISTFILES+=		postgis-${VERSION}.tar.gz ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=		${DEFAULT_DISTFILES} postgis-${VERSION}.tar.gz
 
 # Only build the postgis contribted source
 BUILD_DIRS=		${WRKSRC}/contrib/postgis-${VERSION}

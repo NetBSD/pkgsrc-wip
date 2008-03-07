@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/30 20:26:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/07 19:35:14 tnn2 Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -6,8 +6,7 @@ PKGNAME=		${DISTNAME:S/BNR2beta/bnr2/}
 CATEGORIES=		news
 MASTER_SITES=		http://www.bnr2.org/
 EXTRACT_SUFX=		.tgz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			libborqt-6.9.0-qt2.3.so.tgz
+DISTFILES=		${DEFAULT_DISTFILES} libborqt-6.9.0-qt2.3.so.tgz
 
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.bnr2.org/

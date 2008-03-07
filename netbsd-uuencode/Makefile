@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/02/22 20:05:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/07 19:35:15 tnn2 Exp $
 #
 
 DISTNAME=	netbsd-uuencode-4.0
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	http://mova.org/~cheusov/pub/netbsd-tools/
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME:S/encode/decode/}${EXTRACT_SUFX}
+DISTFILES=	${DEFAULT_DISTFILES} ${DISTNAME:S/encode/decode/}${EXTRACT_SUFX}
 
 MAINTAINER=	cheusov@tut.by
 COMMENT=	NetBSD version of uuencode and uudecode utils

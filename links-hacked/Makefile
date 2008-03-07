@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 04:30:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/07 19:35:14 tnn2 Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/
 EXTRACT_SUFX=	.tgz
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} links-fonts-new${EXTRACT_SUFX}
+DISTFILES=	{DEFAULT_DISTFILES} links-fonts-new${EXTRACT_SUFX}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/

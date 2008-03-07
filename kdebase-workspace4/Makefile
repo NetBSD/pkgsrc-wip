@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/02/20 19:19:25 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/07 19:35:15 tnn2 Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -6,7 +6,7 @@ COMMENT=	XXX for the KDE 4 integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
+DISTFILES=	${DEFAULT_DISTFILES} Daemon.png Daemon.README
 DISTFILES+=	NetBSD-flag-1.0.png
 SITES.Daemon.png=	${MASTER_SITE_LOCAL}
 SITES.Daemon.README=	${MASTER_SITE_LOCAL}

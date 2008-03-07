@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/15 14:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/07 19:35:15 tnn2 Exp $
 #
 
 DISTNAME=		uqm-0.3-source
@@ -7,8 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sc2/}
 EXTRACT_SUFX=		.tgz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		uqm-0.3-content.zip
+DISTFILES=		${DEFAULT_DISTFILES} uqm-0.3-content.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sc2.sourceforge.net/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/07 18:01:10 asau Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/07 19:35:15 tnn2 Exp $
 #
 #
 
@@ -7,7 +7,7 @@ PKGNAME=		mopac-7.0
 CATEGORIES=		biology
 MASTER_SITES=		http://server.ccl.net/cca/software/LINUX/mopac7/
 EXTRACT_SUFX=		.tar.Z
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mopac7-man.tar.gz
+DISTFILES=		${DEFAULT_DISTFILES} mopac7-man.tar.gz
 
 PATCH_SITES=		http://server.ccl.net/cca/software/LINUX/mopac7/old-version-95.06.21/
 PATCHFILES=		mopac7-linux.diff.gz

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2006/08/25 20:30:46 dhowland Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/07 19:35:14 tnn2 Exp $
 
 DISTNAME=		abuse_sdl-0.7.0
 PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.labyrinth.net.au/~trandor/abuse/files/
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} frabs210_unix.src.tar.bz2
+DISTFILES=		${DEFAULT_DISTFILES} frabs210_unix.src.tar.bz2
 
 MAINTAINER=		snj@pobox.com
 HOMEPAGE=		http://www.labyrinth.net.au/~trandor/abuse/
