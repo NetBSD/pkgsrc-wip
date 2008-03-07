@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: portmap.sh,v 1.1 2004/01/04 02:34:04 jeremy-c-reed Exp $
+# $NetBSD: portmap.sh,v 1.2 2008/03/07 23:31:57 jeremy-c-reed Exp $
 #
 
 # PROVIDE: portmap
@@ -11,7 +11,6 @@
 name="portmap"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
 
 load_rc_config $name
 run_rc_command "$1"
