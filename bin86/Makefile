@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2008/02/03 14:54:36 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/07 23:56:58 jeremy-c-reed Exp $
 
 DISTNAME=		bin86-0.16.17
 CATEGORIES=		devel
-MASTER_SITES=		http://homepage.ntlworld.com/robert.debath/dev86/
+MASTER_SITES=		http://homepage.ntlworld.com/robert.debath/dev86/ \
+			http://www.debath.co.uk/dev86/bin86-0.16.17.tar.gz
 
 MAINTAINER=		reed@reedmedia.net
+HOMEPAGE=		http://www.debath.co.uk/
 COMMENT=		Simple assembler and linker for x86 machine code
 
 # devel/bcc also provides as86 and ld86
