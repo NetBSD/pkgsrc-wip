@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/16 16:06:58 jeremy-c-reed Exp $
-share/dict/words
-share/dict/linux.words
-share/doc/words/README.linux.words
-share/doc/words/README${PKGVERSION}.linux.words
-@dirrm share/doc/words
-@dirrm share/dict
