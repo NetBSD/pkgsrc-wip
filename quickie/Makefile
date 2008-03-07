@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/08 04:18:14 samott Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/07 22:58:55 tnn2 Exp $
 
 DISTNAME=	quickie-1.1
 CATEGORIES=	www
 MASTER_SITES=	http://${PKGBASE}.sourceforge.net/ \
 		http://mirror.inerd.com/FreeBSD/distfiles/${PKGBASE}/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}.pdf
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=	${DEFAULT_DISTFILES} ${DISTNAME}.pdf
+EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 HOMEPAGE=	http://${PKGBASE}.sourceforge.net/
 

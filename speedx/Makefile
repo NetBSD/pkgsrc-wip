@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/07/22 04:42:34 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/07 22:58:55 tnn2 Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=speedx/}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mercrain.s3m.zip
+DISTFILES=	${DEFAULT_DISTFILES} mercrain.s3m.zip
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://medernac.home.cern.ch/medernac/SpeedX/index_en.html
