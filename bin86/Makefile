@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/07 23:56:58 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/07 23:57:58 jeremy-c-reed Exp $
 
 DISTNAME=		bin86-0.16.17
 CATEGORIES=		devel
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.debath.co.uk/
 COMMENT=		Simple assembler and linker for x86 machine code
 
 # devel/bcc also provides as86 and ld86
-CONFLICTS=		bcc-*
+CONFLICTS=		bcc-[0-9]*
 
 USE_TOOLS+=		gmake
 
