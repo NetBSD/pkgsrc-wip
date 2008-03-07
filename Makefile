@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2831 2008/03/06 17:46:17 tnn2 Exp $
+# $Id: Makefile,v 1.2832 2008/03/07 03:35:36 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -338,7 +338,7 @@ SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
 SUBDIR+=	fdm
-SUBDIR+=	festival-gaim
+#SUBDIR+=	festival-gaim
 SUBDIR+=	ffmpeg-devel
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	ficl
