@@ -1,5 +1,0 @@
-Wed Nov 29 23:42:36 CST 2006
-    *	create dependency packages for 
-	*   postgres
-	*   mysql
-	*   the crypto module(s)

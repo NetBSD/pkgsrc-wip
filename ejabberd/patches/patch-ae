@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2008/02/25 13:04:25 sebpierrel Exp $
+$NetBSD: patch-ae,v 1.3 2008/03/07 10:02:21 marttikuparinen Exp $
 
-Keep thing tidy (nothing under /usr/pkg/var )
+Keep things tidy (nothing under /usr/pkg/var)
 
 --- src/ejabberdctl.template.orig	2008-02-22 16:42:12.000000000 +0200
 +++ src/ejabberdctl.template	2008-02-22 17:45:01.000000000 +0200
