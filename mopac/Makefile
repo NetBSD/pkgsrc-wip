@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/07 19:35:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/07 21:15:35 tnn2 Exp $
 #
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		http://server.ccl.net/cca/software/LINUX/mopac7/
 EXTRACT_SUFX=		.tar.Z
 DISTFILES=		${DEFAULT_DISTFILES} mopac7-man.tar.gz
 
-PATCH_SITES=		http://server.ccl.net/cca/software/LINUX/mopac7/old-version-95.06.21/
+PATCH_SITES=		${MASTER_SITES:=old-version-95.06.21/}
 PATCHFILES=		mopac7-linux.diff.gz
 PATCH_DIST_STRIP=	-p1
 
@@ -29,8 +29,9 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mopac7/sample
-	cd ${WRKSRC} && ${PAX} -wr test_* ${DESTDIR}${PREFIX}/share/mopac7/sample
-	cd ${WRKSRC} && ${PAX} -wr mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
+	cd ${WRKSRC} && ${PAX} -wr test_* \
+	  ${DESTDIR}${PREFIX}/share/mopac7/sample
+	cd ${WRKDIR} && ${PAX} -wr mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
 
 # "g77" can not be used for external function
 
