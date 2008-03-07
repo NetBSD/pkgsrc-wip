@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/07 10:17:46 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/07 11:43:05 rsmarples Exp $
 #
 
 DISTNAME=		openresolv-1.5
@@ -12,6 +12,7 @@ COMMENT=		Framework for managing /etc/resolv.conf
 
 USE_LANGUAGES=		# none
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_SYSCONFSUBDIR=	resolvconf
 EGDIR=			${PREFIX}/share/examples/resolvconf
 
