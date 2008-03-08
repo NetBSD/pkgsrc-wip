@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:01 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/08 00:35:13 jeremy-c-reed Exp $
 
-DISTNAME=		lilo-22.5.9
+DISTNAME=		lilo-22.8.src
+PKGNAME=		${DISTNAME:S/.src//}
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/}
+MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/} \
+			http://home.san.rr.com/johninsd/pub/linux/lilo/
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://lilo.go.dyndns.org/
@@ -12,20 +14,21 @@ COMMENT=		Generic boot loader for Linux
 # Build untested on other operating systems.
 ONLY_FOR_PLATFORM=	Linux-*-*
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
+
 # Don't force perl for extra tool -- maybe a MESSAGE?
 #USE_PERL5=		YES
 
 # bin86 builds under Linux but not NetBSD, and
 # bcc builds under NetBSD, but not Linux -- both need to be fixed
 #BUILD_DEPENDS+=		bcc>=95.3.12:../../devel/bcc
-BUILD_DEPENDS+=		bin86>=0.16.9:../../wip/bin86
+# bcc is old and doesn't have -v switch to indicate version
+BUILD_DEPENDS+=		bin86>=0.16.10:../../wip/bin86
+#BUILD_DEPENDS+=		dev86>=0.16.10:../../devel/dev86
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		ROOT=${PREFIX:Q}
-MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-PKGMANDIR?=		man
-MAKE_ENV+=		PKGMANDIR+=${PKGMANDIR}
 
 MAKE_COMMAND=		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
