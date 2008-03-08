@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/03/20 18:34:33 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/08 19:19:49 jeremy-c-reed Exp $
 
 DISTNAME=	util-linux-2.12r
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
 		http://www.kernel.org/pub/linux/utils/util-linux/ \
@@ -13,6 +14,8 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
 MAINTAINER=	reed@reedmedia.net
 #HOMEPAGE
 COMMENT=	Miscellaneous essential utilities for Linux systems
+
+CONFLICTS=	ddate-[0-9]*
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
 
