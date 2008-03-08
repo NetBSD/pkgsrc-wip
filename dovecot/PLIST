@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/02/17 19:36:30 ghen Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/03/08 10:26:08 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -75,6 +75,7 @@ include/dovecot/src/lib-index/mailbox-list-index-private.h
 include/dovecot/src/lib-index/mailbox-list-index.h
 include/dovecot/src/lib-mail/istream-header-filter.h
 include/dovecot/src/lib-mail/mail-types.h
+include/dovecot/src/lib-mail/mbox-from.h
 include/dovecot/src/lib-mail/message-address.h
 include/dovecot/src/lib-mail/message-date.h
 include/dovecot/src/lib-mail/message-decoder.h
@@ -110,7 +111,6 @@ include/dovecot/src/lib-storage/index/maildir/maildir-sync.h
 include/dovecot/src/lib-storage/index/maildir/maildir-uidlist.h
 include/dovecot/src/lib-storage/index/mbox/istream-raw-mbox.h
 include/dovecot/src/lib-storage/index/mbox/mbox-file.h
-include/dovecot/src/lib-storage/index/mbox/mbox-from.h
 include/dovecot/src/lib-storage/index/mbox/mbox-lock.h
 include/dovecot/src/lib-storage/index/mbox/mbox-md5.h
 include/dovecot/src/lib-storage/index/mbox/mbox-storage.h
@@ -146,6 +146,7 @@ include/dovecot/src/lib/env-util.h
 include/dovecot/src/lib/failures.h
 include/dovecot/src/lib/fd-close-on-exec.h
 include/dovecot/src/lib/fd-set-nonblock.h
+include/dovecot/src/lib/fdatasync-path.h
 include/dovecot/src/lib/fdpass.h
 include/dovecot/src/lib/file-cache.h
 include/dovecot/src/lib/file-copy.h
@@ -303,6 +304,7 @@ share/doc/dovecot/wiki/CommandLine.txt
 share/doc/dovecot/wiki/CompilingSource.txt
 share/doc/dovecot/wiki/Debugging.Authentication.txt
 share/doc/dovecot/wiki/Debugging.ProcessTracing.txt
+share/doc/dovecot/wiki/Debugging.Rawlog.txt
 share/doc/dovecot/wiki/Debugging.Thunderbird.txt
 share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
