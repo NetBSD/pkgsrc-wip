@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2008/03/08 23:07:32 tnn2 Exp $
+$NetBSD: patch-ag,v 1.6 2008/03/08 23:31:56 tnn2 Exp $
 
---- src/glut/glx/Makefile.orig	2008-02-25 21:44:01.000000000 -0500
+--- src/glut/glx/Makefile.orig	2007-11-20 16:12:22.000000000 +0100
 +++ src/glut/glx/Makefile
 @@ -80,9 +80,8 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
@@ -9,25 +9,27 @@ $NetBSD: patch-ag,v 1.5 2008/03/08 23:07:32 tnn2 Exp $
 -	$(CC) -c -I$(TOP)/include $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) $<
 -
 -
-+ 	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c -I$(TOP)/include \
-+ 	 	$(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) -o $(@:.o=.lo) $<
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c -I$(TOP)/include \
++	  $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) -o $(@:.o=.lo) $<
  
  ##### TARGETS #####
  
-@@ -91,9 +90,10 @@ default: $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NA
+@@ -91,10 +90,11 @@ default: $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NA
  
  # Make the library
  $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
 -	$(TOP)/bin/mklib -o $(GLUT_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
 -		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
 -		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		$(GLUT_LIB_DEPS) $(OBJECTS)
 +	$(LIBTOOL) --mode=link $(CC) \
 +	  -o $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME:.so=.la) $(LDFLAGS) \
-+	  -rpath $(PREFIX)/lib $(GLUT_LIB_DEPS) $(OBJECTS:.o=.lo) \
++	  -rpath $(PREFIX)/lib $(GLUT_LIB_DEPS) \
 +	  -version-info $(GLUT_MAJOR):$(GLUT_MINOR):$(GLUT_TINY) \
- 		$(GLUT_LIB_DEPS) $(OBJECTS)
++		$(GLUT_LIB_DEPS) $(OBJECTS:.o=.lo)
  
  
+ # glut pkgconfig file
 @@ -106,13 +106,15 @@ glut.pc: glut.pc.in
  	$(pcedit) $< > $@
  
