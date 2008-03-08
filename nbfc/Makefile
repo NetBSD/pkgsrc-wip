@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2006/11/11 13:26:33 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/08 20:13:49 dhowland Exp $
 #
 
 DISTNAME=		nbfc-0.1
 CATEGORIES=		lang
-MASTER_SITES=		http://koeln.ccc.de/prozesse/zombies/brainfuck/
+MASTER_SITES=		http://koeln.ccc.de/ablage/brainfuck/
 
 MAINTAINER=		thomaspfaff@users.sourceforge.net
-HOMEPAGE=		http://koeln.ccc.de/prozesse/zombies/brainfuck/
+HOMEPAGE=		http://koeln.ccc.de/ablage/brainfuck/
 COMMENT=		Nbfc - the "new brainfuck compiler"
 
 WRKSRC=			${WRKDIR}/nbfc-0.1
