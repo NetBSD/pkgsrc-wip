@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2008/03/08 18:02:00 tnn2 Exp $
+
+--- src/gui/lang/Makefile.in.orig	2008-03-08 18:26:36.000000000 +0100
++++ src/gui/lang/Makefile.in
+@@ -465,16 +465,16 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ 
+ twinkle_nl.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
+-	lrelease twinkle_nl.ts
++	$(have_lrelease) twinkle_nl.ts
+ 
+ twinkle_de.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
+-	lrelease twinkle_de.ts
++	$(have_lrelease) twinkle_de.ts
+ 
+ twinkle_cs.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
+-	lrelease twinkle_cs.ts
++	$(have_lrelease) twinkle_cs.ts
+ 
+ twinkle_fr.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
+-	lrelease twinkle_fr.ts
++	$(have_lrelease) twinkle_fr.ts
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/21 13:06:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/03/08 18:02:00 tnn2 Exp $
 bin/twinkle
+share/twinkle/lang/twinkle_cs.qm
+share/twinkle/lang/twinkle_de.qm
+share/twinkle/lang/twinkle_fr.qm
+share/twinkle/lang/twinkle_nl.qm
 share/twinkle/providers.csv
 share/twinkle/ringback.wav
 share/twinkle/ringtone.wav
 share/twinkle/twinkle16.png
 share/twinkle/twinkle32.png
 share/twinkle/twinkle48.png
+@dirrm share/twinkle/lang
 @dirrm share/twinkle

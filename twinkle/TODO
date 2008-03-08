@@ -1,13 +1,1 @@
-This package does not currently build. It breaks here:
-
-if c++ -DHAVE_CONFIG_H -I. -I. -I../../src -I ../../src -I /usr/pkg/include   -D
-QT_THREAD_SUPPORT -I/usr/pkg/include/cc++2 -I/usr/pkg/include -I/usr/include -I/
-usr/include/krb5 -I/usr/pkg/qt3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/f
-reetype2  -O2 -I/usr/pkg/include -I/usr/include -I/usr/include/krb5 -I/usr/pkg/q
-t3/include -DGLX_GLXEXT_LEGACY -I/usr/pkg/include/freetype2 -D_GNU_SOURCE -I/usr
-/pkg/include -MT socket.o -MD -MP -MF ".deps/socket.Tpo" -c -o socket.o socket.c
-pp;  then mv -f ".deps/socket.Tpo" ".deps/socket.Po"; else rm -f ".deps/socket.T
-po"; exit 1; fi
-In file included from socket.cpp:22:
-/usr/include/sys/un.h:49: error: 'u_int8_t' is used as a type, but is not 
-   defined as a type.
+Test if it actually works.
