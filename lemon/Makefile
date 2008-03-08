@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/27 14:10:53 airhead Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/08 19:31:17 asau Exp $
 
 PKGNAME=	lemon-1.0
 DISTNAME=	sqlite-3.5.2
@@ -14,13 +14,15 @@ COMMENT=	Simple LALR(1) parser generator
 CONFIGURE=			no
 CHECK_PORTABILITY_SKIP+=	configure
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-build: lemon
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tool/lemon ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tool/lemon ${DESTDIR}${PREFIX}/bin
 	# This probably should be fixed by patching the searchpath
 	# and putting it in ${PREFIX}/share/lemon or sth
-	${INSTALL_DATA} ${WRKSRC}/tool/lempar.c ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/tool/lempar.c ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
 
