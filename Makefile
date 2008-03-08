@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2835 2008/03/08 08:03:40 rsmarples Exp $
+# $Id: Makefile,v 1.2836 2008/03/08 14:31:44 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -64,7 +64,6 @@ SUBDIR+=	alphamail
 SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
-SUBDIR+=	amsn
 SUBDIR+=	and
 SUBDIR+=	aoi
 SUBDIR+=	aols-freetds

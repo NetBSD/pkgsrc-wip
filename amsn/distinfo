@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2008/02/10 11:04:31 shattered Exp $
-
-SHA1 (amsn-0.97.tar.gz) = 745af1a87223f7d35864ab41f7c7f2abc53400b5
-RMD160 (amsn-0.97.tar.gz) = c6037ef472ea9788b08bf729d3c46408dd0bc368
-Size (amsn-0.97.tar.gz) = 10887653 bytes
-SHA1 (patch-aa) = 1f72cc980d3b0f8641bfdebb87cbf47368d07c93
-SHA1 (patch-ab) = ec37e56ecb8074ae1e1477f44548a0a15915167d
