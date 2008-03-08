@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2833 2008/03/07 20:43:29 asau Exp $
+# $Id: Makefile,v 1.2834 2008/03/08 00:58:53 jeremy-c-reed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -128,7 +128,6 @@ SUBDIR+=	beryl-plugins
 SUBDIR+=	beryl-settings
 SUBDIR+=	beryl-settings-bindings
 SUBDIR+=	beryl-settings-simple
-SUBDIR+=	bin86
 SUBDIR+=	bincimap
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
@@ -865,7 +864,6 @@ SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4util
 SUBDIR+=	libzrtpcpp
 SUBDIR+=	lidia
-SUBDIR+=	lilo
 SUBDIR+=	lincity-ng
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
@@ -1445,7 +1443,6 @@ SUBDIR+=	policykit
 SUBDIR+=	polipo
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
-SUBDIR+=	portmap
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postgresql80-postgis
@@ -1875,7 +1872,6 @@ SUBDIR+=	wmitime
 SUBDIR+=	wmmp
 SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
-SUBDIR+=	words
 SUBDIR+=	workrave
 SUBDIR+=	wrcs
 SUBDIR+=	wsmake
