@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/05 16:07:21 hfath Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/08 19:09:11 hfath Exp $
 
 DISTNAME=	tsm-5.2.2
 CATEGORIES=	sysutils
@@ -31,6 +31,11 @@ RPM2PKG_STRIP=		0
 RPM2PKG_STAGE=		do-install
 
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+PLIST_SUBST+=		EMULDIR=${EMULDIR:Q}
+PLIST_SUBST+=		TSMCLIENTSUBDIR=${TSMCLIENTSUBDIR:Q}
+
+TSM_LOCALE=		${PKG_SYSCONFDIR}/en_US
+CHECK_FILES_SKIP+=	${TSM_LOCALE}
 
 TSMCLIENTSUBDIR=	opt/tivoli/tsm/client
 
@@ -46,6 +51,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EG_DIR}
 	${INSTALL_DATA} ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.*.smp ${EG_DIR}
 	${INSTALL_DATA} ${FILESDIR}/tsm_daily.sh ${EG_DIR}
-	${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
+	${RM} -f ${PKG_SYSCONFDIR}/en_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${TSM_LOCALE}
 
 .include "../../mk/bsd.pkg.mk"
