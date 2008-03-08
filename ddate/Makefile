@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/08 14:33:56 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/08 18:25:21 shindenmorr Exp $
 
 DISTNAME=	util-linux-2.12r
 VERSION=	2.12r
@@ -13,7 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 HOMEPAGE=		http://freshmeat.net/projects/util-linux/
 COMMENT=		The enhanced Discordian date program
 GNU_CONFIGURE=		yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
+CONFLICTS+=		util-linux-[0-9]*
 
 DOCDIR=		${PREFIX}/share/doc/ddate
 
