@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/14 10:26:58 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/08 19:29:06 hfath Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
@@ -17,7 +17,7 @@ PKG_SYSCONFSUBDIR?=	l2tpd
 DOCDIR=		${PREFIX}/share/doc/l2tpd
 EGDIR=		${PREFIX}/share/examples/l2tpd
 CONF_FILES=	${EGDIR:Q}/l2tpd.conf.sample ${PKG_SYSCONFDIR:Q}/l2tpd.conf
-CONF_FILES+=	${EGDIR:Q}/l2tpd-secrets.sample ${PKG_SYSCONFDIR:Q}/l2tpd-secrets
+CONF_FILES+=	${EGDIR:Q}/l2tp-secrets.sample ${PKG_SYSCONFDIR:Q}/l2tpd-secrets
 
 CFLAGS+=	-DPREFIX=\"${PREFIX:Q}\" -DSANITY
 
