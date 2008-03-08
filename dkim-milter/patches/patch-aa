@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2007/12/01 12:26:01 jukka Exp $
+$NetBSD: patch-aa,v 1.8 2008/03/08 11:16:28 jukka Exp $
 
---- site.config.m4.dist.orig	2007-11-01 18:36:17.000000000 +0100
-+++ site.config.m4.dist	2007-12-01 12:50:02.000000000 +0100
-@@ -24,7 +24,7 @@ dnl libar -- asynchronous resolver libra
+--- site.config.m4.dist.orig	2008-02-25 20:39:16.000000000 +0100
++++ site.config.m4.dist	2008-03-08 12:07:11.000000000 +0100
+@@ -40,7 +40,7 @@ dnl libar -- asynchronous resolver libra
  dnl
  dnl If you want to use the asynchronous resolver library, enable this
  dnl next line by deleting the "dnl" at the front of it.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2007/12/01 12:26:01 jukka Exp $
  dnl 
  dnl libar normally uses res_init() or res_ninit() to load the contents
  dnl of resolv.conf for its use.  If neither of these work on your system
-@@ -69,8 +69,8 @@ dnl
+@@ -85,8 +85,8 @@ dnl
  dnl DKIM requires several algorithms provided by this library.  You must
  dnl have v0.9.8 or later for SHA256 support.  If necessary, enable these
  dnl lines by deleting "dnl" from the front of them and edit paths as needed.
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.7 2007/12/01 12:26:01 jukka Exp $
  
  dnl TRE -- Approximate regular expression matching
  dnl
-@@ -98,7 +98,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REPL
+@@ -116,7 +116,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REPL
  dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECTOR_HEADER ')
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.7 2007/12/01 12:26:01 jukka Exp $
  dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
  
-@@ -114,8 +114,8 @@ dnl
+@@ -132,8 +132,8 @@ dnl
  dnl This must be in the search rules for your compile.  If necessary,
  dnl adjust the paths below and enable the lines by deleting "dnl" from the
  dnl front of them.

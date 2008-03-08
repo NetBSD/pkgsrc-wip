@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2007/12/01 12:26:01 jukka Exp $
+$NetBSD: patch-ab,v 1.6 2008/03/08 11:16:28 jukka Exp $
 
---- dkim-filter/Makefile.m4.orig	2007-10-31 20:00:07.000000000 +0100
-+++ dkim-filter/Makefile.m4	2007-12-01 12:51:26.000000000 +0100
-@@ -9,7 +9,9 @@ include(confBUILDTOOLSDIR`/M4/switch.m4'
- define(`confMT', `TRUE')
- define(`confREQUIRE_LIBSM', `true')
+--- dkim-filter/Makefile.m4.orig	2008-03-05 20:29:36.000000000 +0100
++++ dkim-filter/Makefile.m4	2008-03-08 12:06:41.000000000 +0100
+@@ -24,7 +24,9 @@ define(`confUSE_DB', `TRUE')
+ ifdef(`confUSE_DB', `
+ APPENDDEF(`confENVDEF', `-DUSE_DB')', `')
  
 -APPENDDEF(`confLIBS', `-lssl -lcrypto')
 +APPENDDEF(`confLIBS', `-lssl -lcrypto @PTHREAD_LDFLAGS@ ')
