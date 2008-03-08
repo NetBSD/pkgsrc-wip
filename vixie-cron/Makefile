@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/16 18:41:15 ondratu Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/08 18:20:41 jeremy-c-reed Exp $
 
 DISTNAME=		cron_4.1
 PKGNAME=		vixie-cron-4.1
@@ -9,10 +9,15 @@ EXTRACT_SUFX=		.shar
 MAINTAINER=		reed@reedmedia.net
 COMMENT=		Execute and maintain scheduled commands
 
-#WRKSRC=			${WRKDIR}
-EXTRACT_CMD=	${MKDIR} ${WRKSRC} && cd ${WRKSRC} && ${CAT} ${DOWNLOADED_DISTFILE} | ${SH}
-MAKE_ENV+=		DESTDIR=${PREFIX:Q}
+SPECIAL_PERMS+=		bin/crontab ${SETUID_ROOT_PERMS}
+PKG_DESTDIR_SUPPORT=    user-destdir
+
+# Don't extract into WRKDIR because rc.d script is replaced with binary
+EXTRACT_CMD=   ${MKDIR} ${WRKSRC} && cd ${WRKSRC} && ${CAT} $$extract_file | ${SH}
 
 RCD_SCRIPTS=		cron
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 sbin
 
 .include "../../mk/bsd.pkg.mk"
