@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/08 00:35:13 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/08 00:36:30 jeremy-c-reed Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGNAME=		${DISTNAME:S/.src//}
@@ -29,8 +29,6 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		ROOT=${PREFIX:Q}
-
-MAKE_COMMAND=		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 CONF_FILES=		${PREFIX}/share/lilo/lilo.conf.example	${PKG_SYSCONFDIR}/lilo.conf
 
