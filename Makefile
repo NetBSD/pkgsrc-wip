@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2834 2008/03/08 00:58:53 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.2835 2008/03/08 08:03:40 rsmarples Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1110,6 +1110,7 @@ SUBDIR+=	openoffice2-bin-tn
 SUBDIR+=	openoffice2-bin-ts
 SUBDIR+=	openoffice2-bin-xh
 SUBDIR+=	openoffice2-bin-zu
+SUBDIR+=	openresolv
 SUBDIR+=	opensc
 SUBDIR+=	openscep
 SUBDIR+=	opentracker-current
