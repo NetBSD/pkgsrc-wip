@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2008/03/08 17:07:39 asau Exp $
+$NetBSD: distinfo,v 1.4 2008/03/08 17:18:02 asau Exp $
 
 SHA1 (de-en.txt.gz) = 13e232960b6cf773ea2e8ac77875739480fd0edf
 RMD160 (de-en.txt.gz) = 9ba480976644d1aabeb9368765198e4890b215c9
 Size (de-en.txt.gz) = 2812254 bytes
-SHA1 (ding-1.4.tar.gz) = 5e738ee2c2eb2bc57012bec68e88c5973796cf24
-RMD160 (ding-1.4.tar.gz) = 5a090defdd30b58b1163330954074f27fb487a0b
-Size (ding-1.4.tar.gz) = 2325538 bytes
+SHA1 (ding-1.5.tar.gz) = eb4e1549eaa1ddae0a52785d7eaeaab1ce2076e3
+RMD160 (ding-1.5.tar.gz) = 3623b52c37edfc0d458bd8fcdb0e7d5809a66497
+Size (ding-1.5.tar.gz) = 2870192 bytes
 SHA1 (patch-aa) = ff7e8f655444fce934ea7e1f1fa2e9e061a78eac

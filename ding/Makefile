@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/03/08 16:59:52 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/08 17:18:02 asau Exp $
 
-DISTNAME=	ding-1.4
+DISTNAME=	ding-1.5
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/	\
 		ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/de-en/
-DISTFILES=	ding-1.4.tar.gz		\
+DISTFILES=	ding-1.5.tar.gz		\
 		de-en.txt.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
