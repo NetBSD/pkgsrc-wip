@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/08 14:40:08 jukka Exp $
 
 DISTNAME=	dk-milter-0.6.0
 PKGREVISION=	1
@@ -16,6 +16,7 @@ MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter
 USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	post-patch
@@ -46,18 +47,18 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`; \
-	${INSTALL_PROGRAM} dk-filter/dk-filter ${PREFIX}/sbin/dk-milter; \
-	${INSTALL_LIB} libdk/libdk.a ${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-filter.8 ${PREFIX}/${PKGMANDIR}/man8/dk-milter.8
-	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/rfc4870.txt ${PREFIX}/share/doc/dk-milter
+	${INSTALL_PROGRAM} dk-filter/dk-filter ${DESTDIR}${PREFIX}/sbin/dk-milter; \
+	${INSTALL_LIB} libdk/libdk.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-filter.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/dk-milter.8
+	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/rfc4870.txt ${DESTDIR}${PREFIX}/share/doc/dk-milter
 	cd ${WRKSRC}/libdk/docs; for file in *.html; do \
-	${INSTALL_DATA} $$file ${PREFIX}/share/doc/dk-milter/libdk; done
+	${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/share/doc/dk-milter/libdk; done
 
 .include "options.mk"
 .include "../../security/openssl/buildlink3.mk"
