@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2836 2008/03/08 14:31:44 tnn2 Exp $
+# $Id: Makefile,v 1.2837 2008/03/08 17:53:42 dhowland Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -628,7 +628,6 @@ SUBDIR+=	hellanzb
 SUBDIR+=	help2man
 SUBDIR+=	heroes
 SUBDIR+=	hgview
-SUBDIR+=	highlight
 SUBDIR+=	hping3
 SUBDIR+=	hplip
 SUBDIR+=	hpoj
