@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/10/02 15:57:13 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/08 19:59:54 jakllsch Exp $
 #
 
-DISTNAME=	libhdhomerun_20070914
+DISTNAME=	libhdhomerun_20080305
 PKGNAME=	${DISTNAME:S/libhdhomerun_/hdhomerun_config-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.silicondust.com/hdhomerun/
