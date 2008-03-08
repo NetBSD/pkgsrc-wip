@@ -1,38 +1,36 @@
-$NetBSD: patch-aa,v 1.5 2007/10/14 12:25:57 hoka_adam Exp $
+$NetBSD: patch-aa,v 1.6 2008/03/08 19:42:27 tnn2 Exp $
 
---- config.mk.orig	2007-10-03 07:56:06.000000000 +0200
+--- config.mk.orig	2008-01-21 21:44:34.000000000 +0100
 +++ config.mk
-@@ -1,21 +1,20 @@
+@@ -1,21 +1,18 @@
  # Customize below to fit your system
  
- # paths
+ # Paths
 -PREFIX = /usr/local
- BIN = ${PREFIX}/bin
--MAN = ${PREFIX}/share/man
--ETC = ${PREFIX}/etc
--LIBDIR = ${PREFIX}/lib
--INCLUDE = ${PREFIX}/include
-+MAN = ${PREFIX}/${PKGMANDIR}
-+ETC = ${PREFIX}/etc
+   BIN = $(PREFIX)/bin
+-  MAN = $(PREFIX)/share/man
+-  ETC = $(PREFIX)/etc
+-  LIBDIR = $(PREFIX)/lib
+-  INCLUDE = $(PREFIX)/include
++  MAN = ${PREFIX}/${PKGMANDIR}
++  ETC = ${PKG_SYSCONFBASE}
  
  # Includes and libs
--INCPATH = .:${ROOT}/include:${INCLUDE}:/usr/include
--LIBS = -L/usr/lib -lc -L${ROOT}/lib
+-INCPATH = .:$(ROOT)/include:$(INCLUDE):/usr/include
+-LIBS = -L/usr/lib -lc -L$(ROOT)/lib
 +INCPATH = .:${ROOT}/include:${INCLUDE}:/usr/include:${PREFIX}/include
-+LIBS = --lc -lX11 -L${ROOT}/lib
++LIBS = -lc -lX11 -L${ROOT}/lib
  
  # Flags
- include ${ROOT}/mk/gcc.mk
--CFLAGS += -g -O0 -DIXPlint
--LDFLAGS += -g ${LIBS}
-+#CFLAGS += -g -O0 -DIXPlint
-+CFLAGS += -DVERSION=\"${VERSION}\"
-+#LDFLAGS += -g ${LIBS}
+ include $(ROOT)/mk/gcc.mk
+-CFLAGS += $(DEBUGCFLAGS) -O0
+-LDFLAGS += -g $(LIBS)
++CFLAGS += -DVERSION=\"${VERSION}\" -DIXPlint
 +LDFLAGS += ${LIBS}
+ SOLDFLAGS += $(LDFLAGS)
  STATIC = -static
- MKDEP = cpp -M
  
-@@ -27,13 +26,12 @@ LD = cc
+@@ -26,12 +23,12 @@ LD = cc
  AR = ar crs
  
  AWKPATH = $$(which awk)
@@ -44,9 +42,8 @@ $NetBSD: patch-aa,v 1.5 2007/10/14 12:25:57 hoka_adam Exp $
 +INCX11 = -I${X11BASE}/include
 +LIBX11 = -L${X11BASE}/lib
  LIBICONV = # Leave blank if your libc includes iconv (glibc does)
--LIBIXP = ${ROOT}/libixp/libixp.a
--LIBIXP = ${LIBDIR}/libixp.a
-+LIBIXP = ${PREFIX}/lib/libixp.a
+-LIBIXP = $(ROOT)/lib/libixp.a
++LIBIXP = ${ROOT}/lib/libixp.a # XXX make this ${PREFIX}
  
- # Solaris
- #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
+ # Operating System Configurations
+ 

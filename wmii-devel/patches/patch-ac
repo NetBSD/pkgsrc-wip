@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/03/08 19:42:27 tnn2 Exp $
+
+--- cmd/wmii9menu.c.orig	2008-01-21 21:44:34.000000000 +0100
++++ cmd/wmii9menu.c
+@@ -38,6 +38,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <stdarg.h>
+ #include <X11/Xutil.h>
+ #include <util.h>
+ 
