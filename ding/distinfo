@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2007/01/13 23:46:40 shattered Exp $
+$NetBSD: distinfo,v 1.3 2008/03/08 17:07:39 asau Exp $
 
-SHA1 (de-en.txt.gz) = cdf24e02a261adcaa24500403c2efe1638c6201a
-RMD160 (de-en.txt.gz) = 2887ad2760eaf4802b99460a6d0f758f6b16a2cd
-Size (de-en.txt.gz) = 2268859 bytes
+SHA1 (de-en.txt.gz) = 13e232960b6cf773ea2e8ac77875739480fd0edf
+RMD160 (de-en.txt.gz) = 9ba480976644d1aabeb9368765198e4890b215c9
+Size (de-en.txt.gz) = 2812254 bytes
 SHA1 (ding-1.4.tar.gz) = 5e738ee2c2eb2bc57012bec68e88c5973796cf24
 RMD160 (ding-1.4.tar.gz) = 5a090defdd30b58b1163330954074f27fb487a0b
 Size (ding-1.4.tar.gz) = 2325538 bytes
