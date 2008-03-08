@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/08 18:20:41 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/08 18:39:21 jeremy-c-reed Exp $
 
 DISTNAME=		cron_4.1
 PKGNAME=		vixie-cron-4.1
@@ -19,5 +19,8 @@ RCD_SCRIPTS=		cron
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/man8 sbin
+OWN_DIRS+=		${VARBASE}/cron
+BUILD_DEFS+=		VARBASE
+CPPFLAGS+=		-DCRONDIR=\"${VARBASE:Q}/cron\"
 
 .include "../../mk/bsd.pkg.mk"
