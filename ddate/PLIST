@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/01 12:39:01 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 14:33:57 shindenmorr Exp $
 bin/ddate
 man/man1/ddate.1
-share/doc/ddate/README
+share/doc/ddate/ddate.doc
 @dirrm share/doc/ddate
