@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/02 12:51:10 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/08 16:14:13 leot1990 Exp $
 #
 
 DISTNAME=	dvtm-0.4
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c99
 
-NO_CONFIGURE=   yes
+NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
