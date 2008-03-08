@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/02/28 12:48:04 asau Exp $
+$NetBSD: distinfo,v 1.3 2008/03/08 18:06:10 asau Exp $
 
-SHA1 (chicken-3.0.0.tar.gz) = a6261a980b711c0fefc902cbd9803769b0be2e11
-RMD160 (chicken-3.0.0.tar.gz) = 617fac14be6570ccf3d2d44225b67a23cf89bc09
-Size (chicken-3.0.0.tar.gz) = 3062680 bytes
+SHA1 (chicken-3.0.0.tar.gz) = b3aedf2df1b214cfa12490a4086cc35cb70b810b
+RMD160 (chicken-3.0.0.tar.gz) = 568a3822bb4325fa56220be7aa0d0fbed50d5168
+Size (chicken-3.0.0.tar.gz) = 3062637 bytes
