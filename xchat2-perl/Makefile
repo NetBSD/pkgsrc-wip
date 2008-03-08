@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/03 16:53:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/08 18:42:37 tnn2 Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -6,27 +6,24 @@ PKGNAME=	${DISTNAME:S/-/-perl-/}
 
 COMMENT=	Perl scripting plugin for xchat
 
-DEPENDS+=	xchat>=2.0.0:../../chat/xchat
+INSTALLATION_DIRS=	share/examples/xchat share/doc/xchat
+DEPENDS+=		xchat>=2.0.0:../../chat/xchat
 
-BUILD_DIRS?=	${WRKSRC}/plugins/perl
+BUILD_DIRS=		plugins/perl
 
 CONFIGURE_ARGS+=	--disable-gtkfe
 CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--disable-python
 
-USE_TOOLS+=	perl
-REPLACE_PERL=	plugins/perl/sample_script.pl plugins/perl/ignore.pl
+USE_TOOLS+=		perl
+REPLACE_PERL=		plugins/perl/alt_completion.pl
 
 .include "../../lang/perl5/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xchat
-	${INSTALL_SCRIPT} ${WRKSRC}/plugins/perl/sample_script.pl \
+	${INSTALL_SCRIPT} ${WRKSRC}/plugins/perl/alt_completion.pl \
 		${PREFIX}/share/examples/xchat
-	${INSTALL_SCRIPT} ${WRKSRC}/plugins/perl/ignore.pl \
-		${PREFIX}/share/examples/xchat
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/plugins/perl/xchat2-perl.html \
 		${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/plugins/perl/xchat2-perldocs.html \

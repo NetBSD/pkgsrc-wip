@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 00:10:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 18:42:37 tnn2 Exp $
 lib/xchat/plugins/perl.la
-share/examples/xchat/sample_script.pl
-share/examples/xchat/ignore.pl
 share/doc/xchat/xchat2-perl.html
 share/doc/xchat/xchat2-perldocs.html
+share/examples/xchat/alt_completion.pl
 @dirrm share/examples/xchat
-@dirrm share/doc/xchat
+@comment in xchat @dirrm share/doc/xchat
+@unexec ${RMDIR} %D/lib/xchat/plugins 2>/dev/null || ${TRUE}
