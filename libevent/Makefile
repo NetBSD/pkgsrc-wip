@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/28 17:24:52 athaba Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/08 18:05:32 athaba Exp $
 # Warning taken from devel/libevent:
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -9,6 +9,7 @@
 
 DISTNAME=	libevent-1.4.2-rc
 PKGNAME=	${DISTNAME:S/-rc//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
 

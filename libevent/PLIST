@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/14 15:23:15 athaba Exp $
-bin/event_r${LOWER_VENDOR}gen.py
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 18:05:32 athaba Exp $
+bin/event_rpcgen.py
 include/evdns.h
 include/event-config.h
 include/event.h
 include/evhttp.h
-include/evr${LOWER_VENDOR}.h
+include/evrpc.h
 include/evutil.h
 lib/libevent.la
 lib/libevent_core.la
