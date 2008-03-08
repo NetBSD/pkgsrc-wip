@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/09/28 22:45:45 elge Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/08 15:24:09 shattered Exp $
 bin/ndbm
 bin/runq
 libexec/authexpire
@@ -13,6 +13,7 @@ man/man5/postoffice.cf.5
 man/man5/smtpauth.5
 man/man7/greylist.7
 man/man7/mailaddr.7
+man/man7/usermap.7
 man/man8/authexpire.8
 man/man8/postoffice.8
 man/man8/sendmail.8

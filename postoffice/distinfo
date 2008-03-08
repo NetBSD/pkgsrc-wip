@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/10/03 12:58:51 elge Exp $
+$NetBSD: distinfo,v 1.5 2008/03/08 15:24:09 shattered Exp $
 
-SHA1 (postoffice-1.3.4.tar.gz) = 198a7166b729604e38f822f5a110661343906485
-RMD160 (postoffice-1.3.4.tar.gz) = b1470ff0d64da59960aebdd938260631e83c8d71
-Size (postoffice-1.3.4.tar.gz) = 86031 bytes
-SHA1 (patch-aa) = 9c2130d4673e4e9e33fc249aa8c85015ecb8c3fc
+SHA1 (postoffice-1.4.6.tar.gz) = 1be50a631aea56e51445ca1b35d3e769e5ca2cd7
+RMD160 (postoffice-1.4.6.tar.gz) = 98c5fd16851ce96c470f149dd75625fe086d5a6a
+Size (postoffice-1.4.6.tar.gz) = 100585 bytes
+SHA1 (patch-aa) = cb14ca975d52841e1dba0f0af4addd2c32691e24

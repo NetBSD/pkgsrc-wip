@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2006/10/03 15:14:00 elge Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/08 15:24:09 shattered Exp $
 #
 
-DISTNAME=		postoffice-1.3.4
+DISTNAME=		postoffice-1.4.6
 CATEGORIES=		mail
-MASTER_SITES=		http://www.tsfr.org/~orc/Code/postoffice/
+MASTER_SITES=		http://www.pell.portland.or.us/~orc/Code/postoffice/
 
 MAINTAINER=		pbraun@nethence.com
-HOMEPAGE=		http://www.tsfr.org/~orc/Code/postoffice/
+HOMEPAGE=		http://www.pell.portland.or.us/~orc/Code/postoffice/
 COMMENT=		Simple greylist, auth, milter, virtual hosts mbox capable SMTP server
 
 HAS_CONFIGURE=		yes
@@ -22,27 +22,28 @@ BUILD_DEFS+=		POSTOFFICE_GREYLIST
 BUILD_DEFS+=		POSTOFFICE_MILTER
 BUILD_DEFS+=		POSTOFFICE_TCPWRAPPERS
 BUILD_DEFS+=		POSTOFFICE_VIRTUAL
+BUILD_DEFS+=		VARBASE
 
 .if defined(POSTOFFICE_TCPWRAPPERS) && !empty(POSTOFFICE_TCPWRAPPERS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-tcpwrappers
-.  endif
+.endif
 .if defined(POSTOFFICE_GREYLIST) && !empty(POSTOFFICE_GREYLIST:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-greylist
-.  endif
+.endif
 .if defined(POSTOFFICE_AUTH) && !empty(POSTOFFICE_AUTH:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-auth
-.  endif
+.endif
 .if defined(POSTOFFICE_MILTER) && !empty(POSTOFFICE_MILTER:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-milter
-.  endif
+.endif
 .if defined(POSTOFFICE_VIRTUAL) && !empty(POSTOFFICE_VIRTUAL:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-vhost=${SYSCONFBASE}/virtual \
+CONFIGURE_ARGS+=	--with-vhost=${PKG_SYSCONFBASE}/virtual \
 			--with-vspool=${VARBASE}/spool/virtual \
 			--with-vuser=mail
-.  endif
+.endif
 
 post-install:
-	${SED} -e 's:@PREFIX@:${PREFIX}:' \
+	sed -e 's:@PREFIX@:${PREFIX}:' \
 	${FILESDIR}/mailer.conf \
 	> ${PREFIX}/share/examples/postoffice/mailer.conf
 	${INSTALL_DATA} ${FILESDIR}/postoffice.cf ${PREFIX}/share/examples/postoffice/
