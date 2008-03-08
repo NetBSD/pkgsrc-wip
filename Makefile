@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2839 2008/03/08 18:59:15 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.2840 2008/03/08 20:31:01 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -920,7 +920,6 @@ SUBDIR+=	mathopd
 SUBDIR+=	mawk-uxre
 SUBDIR+=	mc-mp
 SUBDIR+=	mcabber
-SUBDIR+=	mcast-tools
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mcpp
@@ -1235,7 +1234,6 @@ SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GD-Barcode
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Geo-Distance
-SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
