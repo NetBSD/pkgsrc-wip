@@ -1,8 +1,14 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
+$NetBSD: patch-ac,v 1.2 2008/03/08 11:30:44 hoka_adam Exp $
 
---- vmsbackup.c.orig	Mon Sep 12 18:15:29 1988
+--- vmsbackup.c.orig	1988-09-12 17:15:29.000000000 +0000
 +++ vmsbackup.c
-@@ -80,7 +80,7 @@
+@@ -76,11 +76,13 @@
+  */
+ #include    <stdio.h>
+ #include    <ctype.h>
++#include    <stdlib.h>
++#include    <strings.h>
+ 
  #include    <sys/ioctl.h>
  #include    <sys/types.h>
  #ifdef REMOTE
@@ -11,7 +17,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
  #include    <sys/stat.h>
  #endif
  #include    <sys/mtio.h>
-@@ -149,7 +149,7 @@ struct bsa {
+@@ -88,7 +90,7 @@
+ 
+ #ifdef pyr
+ #define SWAP
+-#endif pyr
++#endif /* pyr */
+ 
+ #ifdef sun
+ #define SWAP
+@@ -149,7 +151,7 @@ struct bsa {
  #ifdef    STREAM
  char    *def_tapefile = "/dev/rts8";
  #else
@@ -20,7 +35,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
  #endif
  char    *tapefile;
  
-@@ -219,7 +219,7 @@ openfile(fn)
+@@ -198,7 +200,7 @@ int    vfcsize;
+ 
+ #ifdef    NEWD
+ FILE    *lf;
+-#endif    NEWD
++#endif /* NEWD */
+ 
+ int    fd;        /* tape file descriptor */
+ int     cflag, dflag, eflag, sflag, tflag, vflag, wflag, xflag;
+@@ -219,7 +221,7 @@ openfile(fn)
  char    *fn;
  {
      char    ufn[256];
@@ -29,7 +53,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
      char    *p, *q, s, *ext;
      int    procf;
  
-@@ -266,10 +266,11 @@ char    *fn;
+@@ -266,10 +268,11 @@ char    *fn;
      }
      if(!eflag && procf) procf = typecmp(++ext);
      if(procf && wflag) {
@@ -39,7 +63,25 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/04/20 15:14:16 cjep Exp $
 -        gets(ans);
 -        if(*ans != 'y') procf = NULL;
 +        ans = fgetc(stdin);
-+        if(ans != 'y') procf = NULL;
++        if(ans != 'y') procf = 0;
      }
      if(procf)
          /* open the file for writing */
+@@ -448,7 +451,7 @@ unsigned short    rsize;
+                 fprintf(lf, "reclen = %d\n", reclen);
+                 fprintf(lf, "i = %d\n", i);
+                 fprintf(lf, "rsize = %d\n", rsize);
+-#endif    NEWD
++#endif /* NEWD */
+                 fix = reclen;
+                 i += 2;
+                 if (recfmt == FAB_dol_C_VFC) {
+@@ -833,7 +836,7 @@ char    *argv[];
+ #ifdef    NEWD
+     /* close debug file */
+     fclose(lf);
+-#endif    NEWD
++#endif /* NEWD */
+ 
+     /* exit cleanly */
+     exit(0);
