@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/03/05 13:16:49 absd Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 23:58:15 tnn2 Exp $
 bin/ktorrent
 bin/ktupnptest
 include/libbtcore/bcodec/bdecoder.h
@@ -7,9 +7,36 @@ include/libbtcore/bcodec/bnode.h
 include/libbtcore/bcodec/value.h
 include/libbtcore/btcore_export.h
 include/libbtcore/btversion.h
+include/libbtcore/datachecker/datachecker.h
 include/libbtcore/datachecker/datacheckerlistener.h
+include/libbtcore/datachecker/datacheckerthread.h
+include/libbtcore/datachecker/multidatachecker.h
+include/libbtcore/datachecker/singledatachecker.h
+include/libbtcore/dht/announcetask.h
+include/libbtcore/dht/database.h
+include/libbtcore/dht/dht.h
+include/libbtcore/dht/dhtbase.h
+include/libbtcore/dht/dhttrackerbackend.h
+include/libbtcore/dht/kbucket.h
+include/libbtcore/dht/kclosestnodessearch.h
+include/libbtcore/dht/key.h
+include/libbtcore/dht/node.h
+include/libbtcore/dht/nodelookup.h
+include/libbtcore/dht/pack.h
+include/libbtcore/dht/rpccall.h
+include/libbtcore/dht/rpcmsg.h
+include/libbtcore/dht/rpcserver.h
+include/libbtcore/dht/task.h
+include/libbtcore/dht/taskmanager.h
 include/libbtcore/diskio/cache.h
+include/libbtcore/diskio/cachefile.h
+include/libbtcore/diskio/chunk.h
 include/libbtcore/diskio/chunkmanager.h
+include/libbtcore/diskio/dndfile.h
+include/libbtcore/diskio/movedatafilesjob.h
+include/libbtcore/diskio/multifilecache.h
+include/libbtcore/diskio/preallocationthread.h
+include/libbtcore/diskio/singlefilecache.h
 include/libbtcore/interfaces/chunkdownloadinterface.h
 include/libbtcore/interfaces/exitoperation.h
 include/libbtcore/interfaces/ipblockinginterface.h
@@ -17,31 +44,63 @@ include/libbtcore/interfaces/logmonitorinterface.h
 include/libbtcore/interfaces/monitorinterface.h
 include/libbtcore/interfaces/peerinterface.h
 include/libbtcore/interfaces/peersource.h
+include/libbtcore/interfaces/piecedownloader.h
 include/libbtcore/interfaces/queuemanagerinterface.h
 include/libbtcore/interfaces/torrentfileinterface.h
 include/libbtcore/interfaces/torrentinterface.h
 include/libbtcore/interfaces/trackerslist.h
+include/libbtcore/migrate/cachemigrate.h
+include/libbtcore/migrate/ccmigrate.h
+include/libbtcore/migrate/migrate.h
+include/libbtcore/mse/bigint.h
+include/libbtcore/mse/encryptedauthenticate.h
+include/libbtcore/mse/encryptedserverauthenticate.h
+include/libbtcore/mse/functions.h
+include/libbtcore/mse/rc4encryptor.h
 include/libbtcore/mse/streamsocket.h
 include/libbtcore/net/address.h
+include/libbtcore/net/bufferedsocket.h
+include/libbtcore/net/downloadthread.h
+include/libbtcore/net/networkthread.h
 include/libbtcore/net/portlist.h
 include/libbtcore/net/socket.h
+include/libbtcore/net/socketgroup.h
 include/libbtcore/net/socketmonitor.h
+include/libbtcore/net/socks.h
+include/libbtcore/net/speed.h
+include/libbtcore/net/uploadthread.h
+include/libbtcore/peer/authenticate.h
+include/libbtcore/peer/authenticatebase.h
 include/libbtcore/peer/authenticationmonitor.h
+include/libbtcore/peer/chunkcounter.h
+include/libbtcore/peer/packetreader.h
+include/libbtcore/peer/packetwriter.h
+include/libbtcore/peer/peer.h
+include/libbtcore/peer/peerdownloader.h
 include/libbtcore/peer/peerid.h
 include/libbtcore/peer/peermanager.h
+include/libbtcore/peer/peeruploader.h
+include/libbtcore/peer/serverauthenticate.h
+include/libbtcore/peer/utpex.h
+include/libbtcore/torrent/advancedchokealgorithm.h
 include/libbtcore/torrent/choker.h
 include/libbtcore/torrent/globals.h
 include/libbtcore/torrent/ipblocklist.h
+include/libbtcore/torrent/peersourcemanager.h
 include/libbtcore/torrent/server.h
+include/libbtcore/torrent/statsfile.h
 include/libbtcore/torrent/timeestimator.h
 include/libbtcore/torrent/torrent.h
 include/libbtcore/torrent/torrentcontrol.h
 include/libbtcore/torrent/torrentcreator.h
 include/libbtcore/torrent/torrentfile.h
+include/libbtcore/torrent/uploader.h
 include/libbtcore/tracker/httptracker.h
 include/libbtcore/tracker/tracker.h
+include/libbtcore/tracker/udptracker.h
 include/libbtcore/tracker/udptrackersocket.h
 include/libbtcore/util/array.h
+include/libbtcore/util/autorotatelogjob.h
 include/libbtcore/util/bitset.h
 include/libbtcore/util/constants.h
 include/libbtcore/util/error.h
@@ -53,6 +112,7 @@ include/libbtcore/util/ptrmap.h
 include/libbtcore/util/sha1hash.h
 include/libbtcore/util/sha1hashgen.h
 include/libbtcore/util/timer.h
+include/libbtcore/util/urlencoder.h
 include/libbtcore/util/waitjob.h
 lib/kde4/ktbwschedulerplugin.so
 lib/kde4/ktinfowidgetplugin.so
@@ -96,7 +156,6 @@ share/icons/hicolor/64x64/actions/ktupnp.png
 share/icons/hicolor/64x64/apps/ktorrent.png
 share/icons/hicolor/64x64/mimetypes/torrent.png
 share/icons/hicolor/64x64/places/ktprefdownloads.png
-share/icons/hicolor/icon-theme.cache
 share/kde/apps/cmake/modules/FindBTCore.cmake
 share/kde/apps/ktorrent/FLAGS_LICENCE
 share/kde/apps/ktorrent/GeoIP-LICENSE.txt
@@ -416,15 +475,23 @@ share/kde4/servicetypes/ktorrentplugin.desktop
 share/locale/ar/LC_MESSAGES/ktorrent.mo
 share/locale/be/LC_MESSAGES/ktorrent.mo
 share/locale/bg/LC_MESSAGES/ktorrent.mo
+share/locale/ca/LC_MESSAGES/ktorrent.mo
+share/locale/da/LC_MESSAGES/ktorrent.mo
 share/locale/de/LC_MESSAGES/ktorrent.mo
 share/locale/el/LC_MESSAGES/ktorrent.mo
+share/locale/en_GB/LC_MESSAGES/ktorrent.mo
 share/locale/eo/LC_MESSAGES/ktorrent.mo
 share/locale/es/LC_MESSAGES/ktorrent.mo
 share/locale/et/LC_MESSAGES/ktorrent.mo
 share/locale/eu/LC_MESSAGES/ktorrent.mo
+share/locale/fi/LC_MESSAGES/ktorrent.mo
 share/locale/fr/LC_MESSAGES/ktorrent.mo
 share/locale/ga/LC_MESSAGES/ktorrent.mo
+share/locale/gl/LC_MESSAGES/ktorrent.mo
+share/locale/hu/LC_MESSAGES/ktorrent.mo
+share/locale/it/LC_MESSAGES/ktorrent.mo
 share/locale/ja/LC_MESSAGES/ktorrent.mo
+share/locale/km/LC_MESSAGES/ktorrent.mo
 share/locale/lt/LC_MESSAGES/ktorrent.mo
 share/locale/nb/LC_MESSAGES/ktorrent.mo
 share/locale/nds/LC_MESSAGES/ktorrent.mo
@@ -436,23 +503,62 @@ share/locale/pt/LC_MESSAGES/ktorrent.mo
 share/locale/pt_BR/LC_MESSAGES/ktorrent.mo
 share/locale/ru/LC_MESSAGES/ktorrent.mo
 share/locale/se/LC_MESSAGES/ktorrent.mo
+share/locale/sk/LC_MESSAGES/ktorrent.mo
 share/locale/sr/LC_MESSAGES/ktorrent.mo
 share/locale/sv/LC_MESSAGES/ktorrent.mo
+share/locale/tr/LC_MESSAGES/ktorrent.mo
+share/locale/uk/LC_MESSAGES/ktorrent.mo
 share/locale/zh_CN/LC_MESSAGES/ktorrent.mo
 share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
+@comment in kde: @dirrm share/kde4/servicetypes
+@comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @dirrm share/kde/apps/ktorrent/www/mobile
 @dirrm share/kde/apps/ktorrent/www/default
 @dirrm share/kde/apps/ktorrent/www/coldmilk
 @dirrm share/kde/apps/ktorrent/www
 @dirrm share/kde/apps/ktorrent
+@comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps/cmake
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/places
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
+@comment in kde: @dirrm lib/kde4
 @dirrm include/libbtcore/util
 @dirrm include/libbtcore/tracker
 @dirrm include/libbtcore/torrent
 @dirrm include/libbtcore/peer
 @dirrm include/libbtcore/net
 @dirrm include/libbtcore/mse
+@dirrm include/libbtcore/migrate
 @dirrm include/libbtcore/interfaces
 @dirrm include/libbtcore/diskio
+@dirrm include/libbtcore/dht
 @dirrm include/libbtcore/datachecker
 @dirrm include/libbtcore/bcodec
 @dirrm include/libbtcore
