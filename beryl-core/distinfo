@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/25 08:22:46 dauphing Exp $
+$NetBSD: distinfo,v 1.2 2008/03/08 12:50:30 shattered Exp $
 
-SHA1 (beryl-core-0.2.1.tar.gz) = c0adb27048f7bc506156d3d35917620af4a6eae4
-RMD160 (beryl-core-0.2.1.tar.gz) = 31bea70c77afb9fccf883cebecb56040f85beac7
-Size (beryl-core-0.2.1.tar.gz) = 622668 bytes
+SHA1 (beryl-core-0.2.1.tar.bz2) = 31c491caffd3defe3f099efd665554216bf66dfe
+RMD160 (beryl-core-0.2.1.tar.bz2) = db90507385fd696cf19d4d141e2385d72ed18bab
+Size (beryl-core-0.2.1.tar.bz2) = 470173 bytes
 SHA1 (patch-aa) = ad92188332e857fe40ebdf8ba58cc04b1db6fe60
