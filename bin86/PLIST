@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:43:34 rillig Exp $
-bin/as86
-bin/ld86
-bin/nm86
-bin/objdump86
-bin/size86
-man/man1/as86.1
-man/man1/ld86.1
