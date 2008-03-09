@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/07 20:37:39 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/09 00:02:20 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.15
@@ -20,9 +20,10 @@ ONLY_FOR_PLATFORM+=	FreeBSD-[2-9]*-i386
 
 USE_TOOLS+=		gmake gtar:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #USE_CONFIGURE=yes
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,15 +31,13 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/
 # Bootstrap section.
 #
 # SBCL needs an existing Common Lisp system to build it...
-# Currently allowed systems are CLisp, CMUCL, OpenMCL, and SBCL itself.
+# Currently allowed systems are CLISP, CMUCL, OpenMCL, and SBCL itself.
 #
-#  Note that CLisp 2.39nb1 worked two or three times when testing
+#  Note that CLISP 2.39nb1 worked two or three times when testing
 #  this package and it failed to build SBCL twice.  It is also at
 #  least twice as slow as using SBCL when building on an i386 platform.
 #
-#  I have never been able to get CLisp to build on a SPARC system, so
-#  I had to cross build when trying to port SBCL to NetBSD/sparc.
-#  I have reports that CLisp will build on PowerPC platforms, but is
+#  I have reports that CLISP will build on PowerPC platforms, but is
 #  unable to build SBCL.
 #
 #  If SBCL is installed in an unusual place when trying to build this
@@ -77,6 +76,6 @@ post-build:
 	cd ${WRKSRC} && ${RM} -rf contrib/sb-cover/test-output contrib/sb-cover/tests.fasl contrib/sb-cover/test-data-*.fasl
 
 do-install:
-	cd ${WRKSRC} && INSTALL_ROOT=${PREFIX} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
+	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
 
 .include "../../mk/bsd.pkg.mk"
