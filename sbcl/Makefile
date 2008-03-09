@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/09 00:02:20 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/09 00:07:41 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.15
@@ -72,8 +72,8 @@ SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh "${SBCL_BOOT_SYSTEM}"
-post-build:
-	cd ${WRKSRC} && ${RM} -rf contrib/sb-cover/test-output contrib/sb-cover/tests.fasl contrib/sb-cover/test-data-*.fasl
+#post-build:
+#	cd ${WRKSRC} && ${RM} -rf contrib/sb-cover/test-output contrib/sb-cover/tests.fasl contrib/sb-cover/test-data-*.fasl
 
 do-install:
 	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
