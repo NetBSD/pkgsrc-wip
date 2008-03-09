@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/28 13:25:22 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/09 13:14:39 tnn2 Exp $
 
 PKGNAME=	Mesa-${MESA_PKGVERSION}
 MASTER_SITES=	# empty
@@ -12,7 +12,7 @@ CONFLICTS=	Mesa-glx-[0-9]*
 USE_LANGUAGES=		# empty
 NO_CHECKSUM=		yes
 NO_BUILD=		yes
-NO_CONFIGURE= 	 	yes
+NO_CONFIGURE=		yes
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		# empty (meta-package)
 

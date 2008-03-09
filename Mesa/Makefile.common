@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2008/02/28 13:25:22 bsadewitz Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/03/09 13:14:39 tnn2 Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -15,18 +15,18 @@ MASTER_SITES=	http://www.mesa3d.org/beta/
 #	graphics/MesaDemos
 #	graphics/glx-utils
 #
-MESA_VERSION=	7.0.3-rc2
-MESA_PKGVERSION= ${MESA_VERSION:S/-rc/rc/}
+MESA_VERSION=		7.0.3-rc2
+MESA_PKGVERSION=	${MESA_VERSION:S/-rc/rc/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.mesa3d.org/
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.mesa3d.org/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
-BUILDING_MESA=	yes
-NO_CONFIGURE=   yes
-DIST_SUBDIR=	Mesa-${MESA_VERSION}
+WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
+BUILDING_MESA=		yes
+NO_CONFIGURE=		yes
+DIST_SUBDIR=		Mesa-${MESA_VERSION}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

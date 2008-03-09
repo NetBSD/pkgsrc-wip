@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.9 2008/03/03 05:55:21 bsadewitz Exp $
+# $NetBSD: Makefile.lib,v 1.10 2008/03/09 13:14:39 tnn2 Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -20,19 +20,19 @@ USE_TOOLS+=		gmake makedepend pkg-config
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
 
-MAKE_ENV+= 	 	MAKE=${GMAKE:Q}
+MAKE_ENV+=		MAKE=${GMAKE:Q}
 
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 
 MESA_HZ?=	100
-MAKE_ENV+= 	MESA_HZ=${MESA_HZ:Q}
+MAKE_ENV+=	MESA_HZ=${MESA_HZ:Q}
 .if ${OPSYS} == "NetBSD" && exists(/sbin/sysctl)
 tmphz=\
 	${sysctl kern.clockrate || ${TRUE}\
 	:L:sh:ts,:S/,//gW:C/([^[0-9]]*)(=|[^ hz])*([^[0-9])//g:M[0-9]*}
 .  if !empty(tmphz) && (${tmphz} > 50) && (${tmphz} < 2001)
-MESA_HZ= 	${tmphz}
+MESA_HZ=	${tmphz}
 .  endif
 .endif
 ###
@@ -45,7 +45,7 @@ BUILD_TARGET=		sunos5
 .    else
 BUILD_TARGET=		sunos5-gcc
 .    endif
-.  else	# i386
+.  else # i386
 BUILD_TARGET?=		pkgsrc
 .  endif
 .elif ${OPSYS} == "Interix"
@@ -73,5 +73,5 @@ install-headers:
 	if [ -f ${WRKSRC}/include/GL/${hdr:Q} ]; then \
 	    ${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr:Q} \
 	    ${DESTDIR}${PREFIX}/include/GL; \
-	fi; 
+	fi;
 .endfor
