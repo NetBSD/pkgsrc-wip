@@ -35,25 +35,6 @@ $(MOPAC):     	SIZES $(OBJS)
 		$(F77) $(FFLAGS) $(OBJS) -o $@
 		@echo "done"
 
-clean:
-	 	$(RM) $(OBJS) *.trace core
-
-cleandepend:
-		$(RM) $(SIZEDEPEND) *.trace core
-
-cleanall:	clean
-		$(RM) $(MOPAC)
-
-deinstall:
-		$(RM) $(BINDIR)/$(MOPAC) $(BINDIR)/$(MOPACSHELL)
-
-install:
-		strip $(MOPAC)
-		chmod 755 $(MOPAC) $(MOPACSHELL)
-		chown $(OWNER) $(MOPAC) $(MOPACSHELL)
-		cp -p  $(MOPAC) $(BINDIR)/$(MOPAC)
-		cp -p  $(MOPACSHELL) $(BINDIR)/$(MOPACSHELL)
-
 $(SIZEDEPEND):	$(HDRS) 
 
 ###
