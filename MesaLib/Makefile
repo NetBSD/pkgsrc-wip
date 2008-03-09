@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 05:55:02 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/09 12:46:54 tnn2 Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 COMMENT=	Graphics library similar to SGI's OpenGL
 
-MESA_HEADERS=\
- 		gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h\
+MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h \
 		osmesa.h xmesa.h xmesa_x.h xmesa_xf86.h
-
 
 .include "../../wip/Mesa/Makefile.lib"
 
@@ -26,8 +24,8 @@ PKGSRC_MAKE_ENV+=	PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 MAKE_ENV+=	CROSS_COMPILING=yes
 .endif
 
-RM_PATCH_BACKUP_DIRS= 	docs src/mesa src/glut/glx \
- 	 	 	progs/demos progs/xdemos progs/glsl
+RM_PATCH_BACKUP_DIRS=	docs src/mesa src/glut/glx \
+			progs/demos progs/xdemos progs/glsl
 post-extract:
 	${CP} ${FILESDIR}/gen_matypes.awk ${WRKSRC}/src/mesa/x86
 	${CP} ${FILESDIR}/gen_matypes.sh ${WRKSRC}/src/mesa/x86

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 06:02:04 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/09 12:46:54 tnn2 Exp $
 
 PKGNAME=	glu-${MESA_PKGVERSION}
 COMMENT=	GLU polygon tessellation facility for Mesa
@@ -6,7 +6,7 @@ COMMENT=	GLU polygon tessellation facility for Mesa
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
-MESA_HEADERS= 	glu.h glu_mangle.h
+MESA_HEADERS=	glu.h glu_mangle.h
 
 .include "../../wip/Mesa/Makefile.lib"
 
