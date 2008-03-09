@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/09 01:16:51 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/09 21:10:15 hoka_adam Exp $
 
 PKGNAME=		abuse_sdl-0.7.1
 DISTNAME=		${PKGNAME:S/_sdl//}
@@ -16,18 +16,22 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS+=	--program-suffix=-sdl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CPPFLAGS+=		-DPREFIX=\"${PREFIX:Q}\"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/sdlport/setup.cpp
-SUBST_SED.path=		-e 's,/var/games,${PREFIX}/share/abuse,g'
+SUBST_SED.path=		-e 's,/var/games/abuse,${PREFIX}/share/abuse_sdl,g'
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/abuse
-	cd ${DESTDIR}${PREFIX:Q}/share/abuse && \
-		(${CP} -R ${WRKDIR:Q}/abuse-frabs-2.11/* . && \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/abuse_sdl
+	cd ${DESTDIR}${PREFIX}/share/abuse_sdl && \
+		(${CP} -R ${WRKDIR}/abuse-frabs-2.11/* . && \
 		${CHOWN} -R ${SHAREOWN} . && ${CHGRP} -R ${SHAREGRP} . && \
 		${FIND} . -type f -exec ${CHMOD} ${SHAREMODE} '{}' ';' && \
 		${FIND} . -name '*.exe' -exec rm -f '{}' ';' && \

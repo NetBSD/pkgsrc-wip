@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/03/09 21:10:15 hoka_adam Exp $
+
+--- Makefile.in.orig	2008-03-02 20:25:05.000000000 +0000
++++ Makefile.in
+@@ -201,7 +201,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = src
+ man_MANS = abuse.6
+-datafiledir = $(datadir)/games/abuse
++datafiledir = $(datadir)/abuse_sdl
+ datafile_DATA = abuse.bmp abuse.lsp abuse.png
+ EXTRA_DIST = bootstrap abuse.6 abuse.bmp abuse.lsp abuse.png
+ all: config.h
