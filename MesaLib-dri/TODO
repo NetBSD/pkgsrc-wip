@@ -1,8 +1,0 @@
---Libtoolize driver build?  Libtoolize mklib instead?
---Integrate Interix/LP64/etc patches from graphics/MesaLib(?)
---Seperate out libGL, dri drivers, and perhaps libGLw into their own packages.
---solidify changes and eliminate subst.mk.
---update other packages in pkgsrc-wip for 7.0
---Maintain distribution patchset, ultimately intended for our mirror sites,
-to track changes on the GIT 7.0 branch between releases.  This will simplify
-the patches in MesaLib/patches quite a bit.
