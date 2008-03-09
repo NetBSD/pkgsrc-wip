@@ -1,3 +1,0 @@
-: not yet tested on anything but 1.6ZD/i386
-: find a way to let GHOSTPCL_USE_X11 default depend on the presence
-  of /usr/X11R6
