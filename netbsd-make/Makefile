@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/22 20:39:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/09 11:39:38 cheusov Exp $
 #
 
 DISTNAME=	bmake-20080215
@@ -40,7 +40,7 @@ do-configure:
 
 do-build:
 	cd ${WRKDIR} && \
-		set ${MAKE_ENV} ${SH} ./bmake/boot-strap ${BOOTSTRAP_ARGS}
+		env ${MAKE_ENV} ${SH} ./bmake/boot-strap ${BOOTSTRAP_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin/nbmake
