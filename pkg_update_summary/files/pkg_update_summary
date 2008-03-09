@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 
 # Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
 #
@@ -20,6 +20,8 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
 
 if test -z "$PKG_INFO_CMD"; then
     PKG_INFO_CMD=pkg_info
@@ -104,14 +106,28 @@ filter_unchanged (){
 
 	FS = "="
     }
-    $1 == "PKGNAME", NF == 0 {
+    NF > 0, NF == 0 {
+	if (accu == "")
+	    accu = $0
+	else
+	    accu = accu "\n" $0
+
 	if ($1 == "PKGNAME"){
-	    keep = ($2 in keep_array)
+	    pkgname = $2
+	    next
 	}
 
-	if (keep){
-	    print $0
+	if (NF > 0){
+	    next
 	}
+
+        keep = (pkgname in keep_array)
+
+	if (keep){
+	    print accu
+	}
+
+	accu = ""
     }
     ' "$@"
 }
