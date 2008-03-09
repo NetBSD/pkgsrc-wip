@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/12 19:28:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/09 03:51:51 cheusov Exp $
 
 DISTNAME=	pkg_update_summary-${VERSION}
 CATEGORIES=	pkgtools
@@ -8,6 +8,9 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Efficiently updates pkg_summary.gz file
+
+DEPENDS+=	runawk>=0.12.1*:../../wip/runawk
+DEPENDS+=	awk-pkgsrc-dewey-[0-9]*:../../wip/awk-pkgsrc-dewey
 
 .include "../../wip/pkg_update_summary/files/Makefile.version"
 

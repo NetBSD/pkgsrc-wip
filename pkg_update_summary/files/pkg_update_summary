@@ -23,6 +23,37 @@
 
 set -e
 
+usage (){
+    cat 1>&2 <<EOF
+pkg_update_summary - updates pkg_update efficiently
+
+usage: pkg_update_summary [OPTIONS] summary_file bin_pkg_dir [decomp comp]
+OPTIONS:
+  -h|--help      display this help message
+  -r|--refresh   keeps only latest version for each pkgpath:pkgbase pair
+EOF
+}
+
+refresh=cat
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-r|--refresh)
+	    refresh=pkg_refresh_summary;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done
+
 if test -z "$PKG_INFO_CMD"; then
     PKG_INFO_CMD=pkg_info
 fi
@@ -42,7 +73,7 @@ elif $TEST_CMD $# -eq 4; then
     uncompress="$3"
     compress="$4"
 else
-    echo 'usage: pkg_update_summary <summary_file> <bin_pkg_dir> [uncompress compress]' 1>&2
+    usage
     exit 1
 fi
 
@@ -155,12 +186,12 @@ if $TEST_CMD -f "$summary_file"; then
     {
 	$uncompress "$summary_file" | filter_unchanged "$tmp2"
 	echo "$updated" | pkgs2summary 
-    } | $compress > "$tmp1"
+    } | $refresh | $compress > "$tmp1"
 
     show_debugging_info
 else
     get_all_pkgs |
-    pkgs2summary | $compress > "$tmp1"
+    pkgs2summary | $refresh | $compress > "$tmp1"
 fi
 
 if $TEST_CMD -z "$TRACE"; then
