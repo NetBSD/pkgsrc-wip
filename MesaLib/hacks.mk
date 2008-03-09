@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2008/03/03 06:08:24 bsadewitz Exp $
+# $NetBSD: hacks.mk,v 1.7 2008/03/09 01:00:37 tnn2 Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -28,8 +28,11 @@ CFLAGS+= 	 	-ffast-math
 .endif
 
 .if !empty(CC_VERSION:Mgcc-[4-9]*)
+# Don't hide symbols for glut by default, it doesn't know how to unhide them.
+.  if empty(PKGNAME:M*glut*)
 PKG_HACKS+= 	 	gcc-hidden-visibility
 CFLAGS+=	 	-fvisibility=hidden
+.  endif
 .endif
 
 .endif
