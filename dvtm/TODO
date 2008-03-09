@@ -1,2 +1,0 @@
-* madtty.c isn't very portable and doesn't understand the ``If it works,
-  it should work everywhere'' principle
