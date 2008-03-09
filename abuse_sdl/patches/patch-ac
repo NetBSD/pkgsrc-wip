@@ -1,19 +1,21 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/05/19 19:47:19 blef Exp $
+$NetBSD: patch-ac,v 1.2 2008/03/09 01:16:51 hoka_adam Exp $
 
---- src/sdlport/setup.cpp.orig	Sat Dec 14 21:00:32 2002
-+++ src/sdlport/setup.cpp	Mon May 12 15:12:22 2003
-@@ -363,8 +363,12 @@
- 		// Check if we already have a savegame directory
- 		if( (fd = fopen( savedir, "r" )) == NULL )
- 		{
--			// FIXME: Add some error checking here
--			mkdir( savedir, S_IRUSR | S_IWUSR | S_IXUSR );
-+			savedir[strlen(savedir) - 1] = '\0';
-+			if (mkdir( savedir, S_IRUSR | S_IWUSR | S_IXUSR )) {
-+				perror("mkdir");
-+				exit(1);
-+			}
-+			savedir[strlen(savedir)] = '/';
- 		}
- 		else
- 		{
+--- src/sdlport/setup.cpp.orig	2008-03-02 19:42:24.000000000 +0000
++++ src/sdlport/setup.cpp
+@@ -380,8 +380,14 @@ void setup( int argc, char **argv )
+         // Check if we already have a savegame directory
+         if( (fd = fopen( savedir, "r" )) == NULL )
+         {
+-            // FIXME: Add some error checking here
+-            mkdir( savedir, S_IRUSR | S_IWUSR | S_IXUSR );
++
++	savedir[strlen(savedir) - 1] = '\0';
++	if (mkdir( savedir, S_IRUSR | S_IWUSR | S_IXUSR )) {
++	perror("Can't create savedir");
++	exit(1);
++	}
++	savedir[strlen(savedir)] = '/';
++
+         }
+         else
+         {

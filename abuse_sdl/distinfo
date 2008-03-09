@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:08 rillig Exp $
+$NetBSD: distinfo,v 1.5 2008/03/09 01:16:51 hoka_adam Exp $
 
-SHA1 (abuse_sdl-0.7.0.tar.bz2) = c6283d263fabeef143f7af81946519cdea704a94
-RMD160 (abuse_sdl-0.7.0.tar.bz2) = 7129ebbab11502902d435341cb3833ca99aff3e8
-Size (abuse_sdl-0.7.0.tar.bz2) = 525618 bytes
-SHA1 (frabs210_unix.src.tar.bz2) = 12ba7e44fa624d63bc449f1ec6a760edae53fad4
-RMD160 (frabs210_unix.src.tar.bz2) = cd4d3c4e372e9e111f0ff4e9da53310a89e512c7
-Size (frabs210_unix.src.tar.bz2) = 3666744 bytes
-SHA1 (patch-aa) = 389ba743eb0751fcc32d4dece4cf16f78b49412c
-SHA1 (patch-ab) = 097b99233dc13264172f7cb7b945427156abea64
-SHA1 (patch-ac) = 1631afe6de8490128a6946e015f6104594d1d936
-SHA1 (patch-ad) = d6c3286aede6abfe1c002d8fdf71d2c0560cfbb3
+SHA1 (abuse-0.7.1.tar.gz) = 07c22b306954eab1e0bf4a8a7441ae00fc107729
+RMD160 (abuse-0.7.1.tar.gz) = 6602d77157064e0a728e55caa63b045f713be790
+Size (abuse-0.7.1.tar.gz) = 719285 bytes
+SHA1 (abuse-frabs-2.11.tar.gz) = 2699f2f4cefc5e529eec808e8208aad796de36de
+RMD160 (abuse-frabs-2.11.tar.gz) = 96ea6ef031d10ba02e070eb7d2acdbc85025024f
+Size (abuse-frabs-2.11.tar.gz) = 4819133 bytes
