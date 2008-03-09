@@ -1,4 +1,5 @@
-$Id: TODO,v 1.1.1.1 2004/05/27 16:02:03 xtraeme Exp $
+$Id: TODO,v 1.2 2008/03/09 01:05:18 hoka_adam Exp $
 
 	o Fix some crashes when closing the gui.
+		-I cant see it -- ahoka
 	o Build packages for the plugins.
