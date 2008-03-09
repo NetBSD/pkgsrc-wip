@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2842 2008/03/09 15:11:59 roelants Exp $
+# $Id: Makefile,v 1.2843 2008/03/09 18:23:09 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -260,7 +260,6 @@ SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
-SUBDIR+=	dvtm
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen
@@ -959,7 +958,6 @@ SUBDIR+=	modular-xorg-wip
 SUBDIR+=	moe
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
-SUBDIR+=	mopac
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
 SUBDIR+=	mowgli
@@ -1971,7 +1969,6 @@ SUBDIR+=	xtrlock
 SUBDIR+=	xvidtune
 SUBDIR+=	xxdiff
 SUBDIR+=	xyssl
-SUBDIR+=	yabause
 SUBDIR+=	yafray
 SUBDIR+=	yamcha
 SUBDIR+=	yaws
