@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 01:28:19 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/09 03:20:08 tnn2 Exp $
 #
 
 DISTNAME=		ypserv-2.9
@@ -11,7 +11,7 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.linux-nis.org/nis/ypserv/
 COMMENT=		NIS (YP) Server
 
-DEPENDS+=		portmap>=4:../../wip/portmap
+DEPENDS+=		portmap>=4:../../net/portmap
 # rc.d scripts use domainname from yp-tools or net-tools
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
 
