@@ -124,7 +124,7 @@ filter_unchanged (){
         keep = (pkgname in keep_array)
 
 	if (keep){
-	    print accu "\n"
+	    print accu
 	}
 
 	accu = ""
