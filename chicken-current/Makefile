@@ -1,32 +1,30 @@
-# $NetBSD: Makefile,v 1.11 2008/03/10 18:43:31 asau Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/10 22:38:14 tnn2 Exp $
 #
 
 DISTNAME=	chicken-3.0.0
 CATEGORIES=	lang
 MASTER_SITES=	http://chicken.wiki.br/releases/
 
-MAINTAINER=	asau@users.sourceforge.net, airhead@users.sourceforge.net
+MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
 COMMENT=	Scheme to C compiler, handling R5RS
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake makeinfo
-USE_LIBTOOL=	yes
-INFO_FILES=	yes
+INFO_FILES=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake makeinfo
 UNLIMIT_RESOURCES=	datasize
 
-# FIXME: is it needed still? (asau)
-# Avoid an ICE in gcc2 on sparc64
-#CONFIGURE_ENV+=	F77=${FALSE:Q}
+INSTALLATION_DIRS=	share/chicken
+OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/3
 
-OWN_DIRS+=	${PREFIX}/lib/chicken
-OWN_DIRS+=	${PREFIX}/lib/chicken/3
+BUILD_TARGET=		all chicken.info
 
 .include "../../mk/bsd.prefs.mk"
 
 # PLATFORM detection:
-.if (${OPSYS} == "NetBSD") || (${OPSYS} == "DragonFly") || (${OPSYS} == "FreeBSD")
+.if !empty(OPSYS:M*BSD)
 PLATFORM=	bsd
 .elif ${OPSYS} == "Linux"
 PLATFORM=	linux
@@ -41,13 +39,13 @@ PKG_FAIL_REASON=	"${OPSYS} is not supported"
 .endif
 
 MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
+# Need to have these in MAKE_FLAGS, MAKE_ENV is not enough due to the
+# way the build system overrides them.
 MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
-MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR} INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
+MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
+MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
 
-INSTALLATION_DIRS+=	share/chicken
-
-BUILD_TARGET=	all chicken.info
 TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
