@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/07 19:35:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/10 20:48:00 asau Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -24,26 +24,28 @@ SUBST_MESSAGE.prefix=	Fixing prefixes.
 SUBST_FILES.prefix=	bnr2
 SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 post-extract:
 	${CP} ${FILESDIR}/bnr2 ${WRKSRC}/bnr2
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/bnr2
-	${INSTALL} ${WRKSRC}/bin/BNR2 ${PREFIX}/lib/bnr2/
-	${INSTALL} ${WRKSRC}/lib/libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/
-	${LN} -s -f libborqt-6.9.0-qt2.3.so ${PREFIX}/lib/bnr2/libborqt-6.9-qt2.3.so
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bnr2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/bnr2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/themes/bnr2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/themes/bnr2/Luna
-	${INSTALL_DATA_DIR} ${PREFIX}/share/themes/bnr2/Silver
-	${INSTALL_DATA} ${WRKSRC}/icon/BNR2a.png ${PREFIX}/share/icons/bnr2/
-	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${PREFIX}/share/doc/bnr2/
-	${INSTALL_DATA} ${WRKSRC}/docs/shutdown-readme.txt ${PREFIX}/share/doc/bnr2/
-	${INSTALL_DATA} ${WRKSRC}/docs/BNR-readme.txt ${PREFIX}/share/doc/bnr2/
-	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Luna/* ${PREFIX}/share/themes/bnr2/Luna/
-	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Silver/* ${PREFIX}/share/themes/bnr2/Silver/
-	${INSTALL_SCRIPT} ${WRKSRC}/bnr2 ${PREFIX}/bin/
-	${LN} -s -f ${PREFIX}/share/themes/bnr2/ ${PREFIX}/lib/bnr2/Themes
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/lib/bnr2
+	${INSTALL} ${WRKSRC}/bin/BNR2 ${DESDIR}${PREFIX}/lib/bnr2/
+	${INSTALL} ${WRKSRC}/lib/libborqt-6.9.0-qt2.3.so ${DESDIR}${PREFIX}/lib/bnr2/
+	${LN} -s -f libborqt-6.9.0-qt2.3.so ${DESDIR}${PREFIX}/lib/bnr2/libborqt-6.9-qt2.3.so
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/doc/bnr2
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/icons/bnr2
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/themes/bnr2
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/themes/bnr2/Luna
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/themes/bnr2/Silver
+	${INSTALL_DATA} ${WRKSRC}/icon/BNR2a.png ${DESDIR}${PREFIX}/share/icons/bnr2/
+	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESDIR}${PREFIX}/share/doc/bnr2/
+	${INSTALL_DATA} ${WRKSRC}/docs/shutdown-readme.txt ${DESDIR}${PREFIX}/share/doc/bnr2/
+	${INSTALL_DATA} ${WRKSRC}/docs/BNR-readme.txt ${DESDIR}${PREFIX}/share/doc/bnr2/
+	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Luna/* ${DESDIR}${PREFIX}/share/themes/bnr2/Luna/
+	${INSTALL_DATA} ${WRKSRC}/bin/Themes/Silver/* ${DESDIR}${PREFIX}/share/themes/bnr2/Silver/
+	${INSTALL_SCRIPT} ${WRKSRC}/bnr2 ${DESDIR}${PREFIX}/bin/
+	${LN} -s -f ${DESDIR}${PREFIX}/share/themes/bnr2/ ${DESDIR}${PREFIX}/lib/bnr2/Themes
 
 .include "../../mk/bsd.pkg.mk"

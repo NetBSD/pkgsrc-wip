@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/20 13:36:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/10 20:44:43 asau Exp $
 #
 
 DISTNAME=		bmap-1.0.17
@@ -11,13 +11,15 @@ COMMENT=			Forensic tool to perform low-level operations on ext2 filesystems
 
 USE_TOOLS+= gmake
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bmap ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/slacker ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/man/man2/libbmap.2 ${PREFIX}/${PKGMANDIR}/man2/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bmap
-	${INSTALL_DATA} ${WRKSRC}/bmap.sgml ${PREFIX}/share/doc/bmap/
-	${INSTALL_DATA} ${WRKSRC}/bmap-invoke.sgml ${PREFIX}/share/doc/bmap/
-	${INSTALL_DATA} ${WRKSRC}/slacker-invoke.sgml ${PREFIX}/share/doc/bmap/
+	${INSTALL_PROGRAM} ${WRKSRC}/bmap ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/slacker ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/man/man2/libbmap.2 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man2/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/bmap
+	${INSTALL_DATA} ${WRKSRC}/bmap.sgml ${DESTDIR}${PREFIX}/share/doc/bmap/
+	${INSTALL_DATA} ${WRKSRC}/bmap-invoke.sgml ${DESTDIR}${PREFIX}/share/doc/bmap/
+	${INSTALL_DATA} ${WRKSRC}/slacker-invoke.sgml ${DESTDIR}${PREFIX}/share/doc/bmap/
 
 .include "../../mk/bsd.pkg.mk"
