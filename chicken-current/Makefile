@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/10 22:38:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/10 23:14:17 tnn2 Exp $
 #
 
 DISTNAME=	chicken-3.0.0
@@ -45,7 +45,9 @@ MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
+MAKE_FLAGS+=	USE_HOST_PCRE=yes
 
 TEST_TARGET=	check
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
