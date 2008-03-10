@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/05 20:03:39 smoppy Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/10 16:15:07 smoppy Exp $
 
 DISTNAME=	fdm-1.4
 CATEGORIES=	mail
@@ -12,7 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 
 # Makefile
-SUBST_CLASSES=		makefile
+SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing distribution Makefile..
 SUBST_FILES.makefile=	${MAKE_FILE}

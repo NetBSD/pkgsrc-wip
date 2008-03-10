@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/18 15:39:22 smoppy Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/10 16:15:07 smoppy Exp $
 bin/fdm
 man/man1/fdm.1
 man/man5/fdm.conf.5
-share/examples/fdm/fdm.conf.sample
 share/examples/fdm/f-terbeck.conf
+share/examples/fdm/fdm.conf.sample
 share/examples/fdm/g-lando.conf
 share/examples/fdm/n-marriott.conf
 share/examples/fdm/t-ulmer.conf
