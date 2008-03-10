@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/10 15:55:36 smoppy Exp $
+sbin/logfmon
+man/man8/logfmon.8
+man/man5/logfmon.conf.5

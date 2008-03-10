@@ -1,0 +1,4 @@
+Logfmon monitors a set of log files and processes messages based on a set of
+regexps. When a message matches, a command may be executed or the message may
+be ignored. Messages that are unmatched are batched together and emailed every
+so often.
