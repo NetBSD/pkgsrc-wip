@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/11/12 21:46:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/10 21:00:18 asau Exp $
 #
 
 DISTNAME=		bubbros-1.6
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bub-n-bros/}
 MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://bub-n-bros.sourceforge.net/
 COMMENT=		Multiplayer crazy clone of Bubble Bobble
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 
@@ -36,9 +38,9 @@ do-build:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/games/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/games/${PKGBASE}
 	cd ${WRKSRC} && ${PAX} ${PAX_SUBST} \
-		-rwpe . ${PREFIX}/games/${PKGBASE}
+		-rwpe . ${DESDIR}${PREFIX}/games/${PKGBASE}
 
 .include "../../lang/python/application.mk"
 .include "../../devel/py-game/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/04/12 06:48:13 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/10 20:54:45 asau Exp $
 
 DISTNAME=	bsfilter-1.0.15
 CATEGORIES=	mail
@@ -14,19 +14,21 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXAMPLESDIR=	${PREFIX}/share/examples/bsfilter
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bsfilter/bsfilter ${PREFIX}/bin/bsfilter
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bsfilter/bsfilter ${DESDIR}${PREFIX}/bin/bsfilter
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
 .for f in bsfilter.conf.sample dot-qmail.sample
-	${INSTALL_DATA} ${FILESDIR}/${f} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${FILESDIR}/${f} ${DESTDIR}${EXAMPLESDIR}
 .endfor
 .for d in mda/maildrop mda/procmail mua/mew3 mua/mew4
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}/${d}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}/${d}
 	${FIND} ${WRKSRC}/${d} -type f -print |			\
         while read f; do					\
-                ${INSTALL_DATA} $$f ${EXAMPLESDIR}/${d};	\
+                ${INSTALL_DATA} $$f ${DESTDIR}${EXAMPLESDIR}/${d};	\
         done
 .endfor
 

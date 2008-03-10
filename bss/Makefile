@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:15 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/10 20:56:59 asau Exp $
 #
 
 DISTNAME=		bss-0.6
@@ -22,12 +22,14 @@ do-build:
 
 DOC_FILES=${WRKSRC}/doc/* ${WRKSRC}/README
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/bss ${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/bss ${DESTDIR:Q}${PREFIX:Q}/bin
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/replay_packet/replay_l2cap_packet \
-		${PREFIX:Q}/bin/
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/bss/
-	${INSTALL_DATA} ${DOC_FILES} ${PREFIX:Q}/share/doc/bss/
+		${DESTDIR:Q}${PREFIX:Q}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR:Q}${PREFIX:Q}/share/doc/bss/
+	${INSTALL_DATA} ${DOC_FILES} ${DESTDIR:Q}${PREFIX:Q}/share/doc/bss/
 
 .include "../../wip/bluez-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
