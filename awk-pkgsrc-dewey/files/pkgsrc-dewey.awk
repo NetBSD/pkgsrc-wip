@@ -5,6 +5,7 @@ BEGIN {
 	for (i=0; i <= 26; ++i){
 		# I don't know anything about EBCDIC :-P :-)
 		__dewey_char2dotver [sprintf("%c", 97 + i)] = "." i+1
+		__dewey_char2dotver [sprintf("%c", 65 + i)] = "." i+1
 	}
 }
 
@@ -21,23 +22,23 @@ function __dewey_chars (n, c,            s){
 function __dewey2str (ver,        left,right,sym,num,last){
 	ver = "." ver
 
-	gsub(/alpha/, "A", ver)
-	gsub(/beta/, "B", ver)
-	gsub(/rc/, "C", ver)
-	gsub(/pre/, "C", ver)
-	gsub(/nb/, "Z", ver)
-	gsub(/pl/, ".", ver)
+	gsub(/alpha/, "\057", ver) # A
+	gsub(/beta/, "\060", ver)  # B
+	gsub(/rc/, "\061", ver)    # C
+	gsub(/pre/, "\061", ver)   # C
+	gsub(/nb/, "\063", ver)    # Z
+	gsub(/pl/, ".", ver)       # .
 
-	if (match(ver, /[qwertyuiopasdfghjklzxcvbnm]($|Z)/)){
+	if (match(ver, /[qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM]($|\063)/)){
 		last = substr(ver, RSTART, 1)
 		ver = substr(ver, 1, RSTART-1) \
 		      __dewey_char2dotver [last] \
 		      substr(ver, RSTART+1)
 	}
 
-	gsub(/[.]/, "Y" __dewey_chars(__dewey_maxf, " ") ".", ver)
+	gsub(/[.]/, "\062" __dewey_chars(__dewey_maxf, " ") ".", ver) # Y
 
-	while (match(ver, /[ABCZ.][0-9]+/)){
+	while (match(ver, /[\057\060\061\063.][0-9]+/)){
 		left  = substr(ver, 1, RSTART-1)
 		sym   = substr(ver, RSTART, 1)
 		num   = substr(ver, RSTART+1, RLENGTH-1)
@@ -46,12 +47,12 @@ function __dewey2str (ver,        left,right,sym,num,last){
 		num = sprintf("%" __dewey_maxf "s", num)
 
 		if (sym == ".")
-			ver = left "Y" num right
+			ver = left "\062" num right # Y
 		else
 			ver = left sym num right
 	}
 
-	return substr(ver, __dewey_maxf + 2) "Y"
+	return substr(ver, __dewey_maxf + 2) "\062" # Y
 }
 
 function dewey_cmp (ver1, ver2,             s1,s2){
