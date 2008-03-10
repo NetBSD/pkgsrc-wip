@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/10 08:55:14 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/10 08:56:55 marttikuparinen Exp $
 
 DISTNAME=	ejabberd-2.0.0
 #PKGREVISION=	1
@@ -14,9 +14,8 @@ CONFLICTS+=	jabberd-[0-9]*
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-# much prefer to be explicit about the configure settings
-# rather than depending on the defaults to continue to be sane or same
-# between versions
+# much prefer to be explicit about the configure settings rather than
+# depending on the defaults to continue to be sane or same between versions
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-mod_irc
 CONFIGURE_ARGS+=	--enable-mod_muc
