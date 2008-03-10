@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2008/02/24 21:29:47 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.43 2008/03/10 10:41:41 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -269,6 +269,8 @@ share/emacs/${PKGVERSION}/etc/images/attach.pbm
 share/emacs/${PKGVERSION}/etc/images/attach.xpm
 share/emacs/${PKGVERSION}/etc/images/back-arrow.pbm
 share/emacs/${PKGVERSION}/etc/images/back-arrow.xpm
+share/emacs/${PKGVERSION}/etc/images/bookmark_add.pbm
+share/emacs/${PKGVERSION}/etc/images/bookmark_add.xpm
 share/emacs/${PKGVERSION}/etc/images/cancel.pbm
 share/emacs/${PKGVERSION}/etc/images/cancel.xpm
 share/emacs/${PKGVERSION}/etc/images/close.pbm
@@ -421,16 +423,17 @@ share/emacs/${PKGVERSION}/etc/images/help.xpm
 share/emacs/${PKGVERSION}/etc/images/home.pbm
 share/emacs/${PKGVERSION}/etc/images/home.xpm
 share/emacs/${PKGVERSION}/etc/images/icons/README
-share/emacs/${PKGVERSION}/etc/images/icons/emacs16_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs24_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs256_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs32_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs48_mac.png
-share/emacs/${PKGVERSION}/etc/images/icons/emacs512_mac.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/128x128/apps/emacs.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps/emacs22.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24/apps/emacs22.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps/emacs22.png
 share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps/emacs22.png
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps/emacs.svg
+share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/mimetypes/emacs-document.svg
 share/emacs/${PKGVERSION}/etc/images/index.pbm
 share/emacs/${PKGVERSION}/etc/images/index.xpm
 share/emacs/${PKGVERSION}/etc/images/info.pbm
@@ -1128,6 +1131,7 @@ share/emacs/${PKGVERSION}/lisp/calendar/cal-iso.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-iso.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-julian.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-julian.elc
+share/emacs/${PKGVERSION}/lisp/calendar/cal-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/calendar/cal-mayan.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/cal-mayan.elc
 share/emacs/${PKGVERSION}/lisp/calendar/cal-menu.el.gz
@@ -1827,6 +1831,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnmail.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnmail.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnmaildir.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnmaildir.elc
+share/emacs/${PKGVERSION}/lisp/gnus/nnmairix.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/nnmairix.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnmbox.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnmbox.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnmh.el.gz
@@ -3116,10 +3122,16 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
+share/icons/hicolor/128x128/apps/emacs.png
 share/icons/hicolor/16x16/apps/emacs.png
+share/icons/hicolor/16x16/apps/emacs22.png
 share/icons/hicolor/24x24/apps/emacs.png
+share/icons/hicolor/24x24/apps/emacs22.png
 share/icons/hicolor/32x32/apps/emacs.png
+share/icons/hicolor/32x32/apps/emacs22.png
 share/icons/hicolor/48x48/apps/emacs.png
+share/icons/hicolor/48x48/apps/emacs22.png
+share/icons/hicolor/scalable/apps/emacs.svg
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
@@ -3166,6 +3178,9 @@ share/icons/hicolor/48x48/apps/emacs.png
 @dirrm share/emacs/${PKGVERSION}/etc/images/smilies
 @dirrm share/emacs/${PKGVERSION}/etc/images/mail
 @dirrm share/emacs/${PKGVERSION}/etc/images/low-color
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/mimetypes
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/scalable
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48/apps
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/48x48
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/32x32/apps
@@ -3174,6 +3189,8 @@ share/icons/hicolor/48x48/apps/emacs.png
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/24x24
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16/apps
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/16x16
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/128x128/apps
+@dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor/128x128
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons/hicolor
 @dirrm share/emacs/${PKGVERSION}/etc/images/icons
 @dirrm share/emacs/${PKGVERSION}/etc/images/gud
