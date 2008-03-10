@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2008/02/11 11:58:24 obache Exp $
+# $NetBSD: Makefile,v 1.33 2008/03/10 16:00:54 obache Exp $
 #
 
 DISTNAME=	emacs-23.0.60
-PKGNAME=	emacs-23.0.60 # needed because of cvs-package.mk
+PKGNAME=	emacs-23.0.60
+PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
 CATEGORIES=	editors
 MASTER_SITES=	#
 
@@ -52,7 +53,7 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} $
 
 # build PATH in the dumped emacs is not a problem
 CHECK_WRKREF_SKIP+=	bin/emacs
-CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION}
+CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 
 FILESDIR=	${.CURDIR}/../../editors/emacs/files
 
