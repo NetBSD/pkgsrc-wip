@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2843 2008/03/09 18:23:09 tnn2 Exp $
+# $Id: Makefile,v 1.2844 2008/03/10 09:05:04 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -282,7 +282,6 @@ SUBDIR+=	edoc
 SUBDIR+=	eet
 SUBDIR+=	efreet
 SUBDIR+=	eic
-SUBDIR+=	ejabberd
 SUBDIR+=	ejourn
 SUBDIR+=	ekg2
 SUBDIR+=	electricsheep
