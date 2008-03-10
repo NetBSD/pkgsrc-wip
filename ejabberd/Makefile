@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/07 10:02:21 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/10 08:55:14 marttikuparinen Exp $
 
 DISTNAME=	ejabberd-2.0.0
 #PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 
-CONFLICTS+=	jabberd2-[0-9]*
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=	yes
