@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/10 15:05:32 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/10 18:43:31 asau Exp $
 #
 
 DISTNAME=	chicken-3.0.0
@@ -43,6 +43,9 @@ PKG_FAIL_REASON=	"${OPSYS} is not supported"
 MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR} INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
+MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
+
+INSTALLATION_DIRS+=	share/chicken
 
 BUILD_TARGET=	all chicken.info
 TEST_TARGET=	check
