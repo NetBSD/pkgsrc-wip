@@ -1,4 +1,5 @@
 Suggested package updates
+=========================
 
 	o argouml-0.24
 	o avahi-0.6.22
@@ -75,3 +76,12 @@ Suggested package updates
 	o xaralx-bin-0.7.1692
 	o xinetd-2.3.14
 	o zinf-2.2.5
+
+Suggested infrastructure improvements
+=====================================
+
+	o Support cached distfiles in {hg,svn}-package.mk.
+
+	o Support using cached distfiles for 'tool update' instead
+	  of checking out the whole repository again, in
+	  {cvs,hg,svn}-package.mk.
