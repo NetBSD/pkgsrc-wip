@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/09/14 18:42:38 dhowland Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/11 00:22:45 tnn2 Exp $
 #
 
 DISTNAME=	awflwm-0.0
@@ -18,5 +18,6 @@ CXXFLAGS+=	-DFLTK_1_0_COMPAT
 USE_LANGUAGES=	c c++
 
 .include "../../x11/fltk/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
