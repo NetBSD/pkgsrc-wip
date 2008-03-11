@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/10 03:28:26 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/11 22:51:05 hoka_adam Exp $
 #
 
 DISTNAME=		Firebird-2.0.3.12981-1
@@ -18,8 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 #RCD_SCRIPTS=            000.firebird.sh
-#CONFIGURE_SCRIPT=	./autogen.sh
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/firebird
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/firebird
 USE_TOOLS+=		gm4:run gmake autoheader autoconf chgrp chown
 
 # FBUSER	username of the database administrator
@@ -39,11 +38,13 @@ PKG_GECOS.${FBUSER}=    Firebird Database Administrator
 PKG_HOME.${FBUSER}=     ${FBHOME}
 PKG_SHELL.${FBUSER}=    ${SH}
 
-LDFLAGS+= ${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF
-LDFLAGS+= ${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird \
+			${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/intl
 
 INSTALLATION_DIRS+=	bin share/examples/firebird firebird/help \
-			include lib/firebird lib/firebird/UDF share/doc/firebird
+			include lib/firebird lib/firebird/intl \
+			lib/firebird/UDF share/doc/firebird
 
 BUILDDIR=		${WRKSRC}/gen/firebird
 
@@ -65,7 +66,7 @@ do-install:
 
 	${INSTALL_LIB} ${BUILDDIR}/lib/* ${DESTDIR}${PREFIX}/lib/firebird
 
-	${INSTALL_LIB} ${BUILDDIR}/intl/libfbintl.so ${DESTDIR}${PREFIX}/lib/firebird
+	${INSTALL_LIB} ${BUILDDIR}/intl/libfbintl.so ${DESTDIR}${PREFIX}/lib/firebird/intl
 	${INSTALL_LIB} ${BUILDDIR}/UDF/* ${DESTDIR}${PREFIX}/lib/firebird/UDF
 	${INSTALL_LIB} ${BUILDDIR}/../../extern/icu/source/lib/* ${DESTDIR}${PREFIX}/lib/firebird
 

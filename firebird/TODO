@@ -1,6 +1,4 @@
-$Id: TODO,v 1.7 2008/03/04 11:39:46 koifren Exp $
-
-Fix installation - mainly done.
+$Id: TODO,v 1.8 2008/03/11 22:51:05 hoka_adam Exp $
 
 These comments were for the 1.5 version of the package:
 
@@ -8,6 +6,8 @@ Install appropriate destination (/usr/pkg/bin, etc...) instead of
 ${PREFIX}/firebird.
 
 	-- nel@soraneko.com
+		
+		Almost done -- Adam Hoka
 
 Firebird can be compiled as "classic" and "super" version -- I have
 no idea how do they differ; I think, when it is ready, Makefile
@@ -16,7 +16,13 @@ be split in "firebird" and "firebird-super".
 
 	-- dotz@irc.pl
 
+		The classic is forking and superserver is threaded.
+			-- Adam Hoka
+
 Update package in order to fix multiple vulnerabilities. Reference:
 http://secunia.com/advisories/28596/
 
 	-- kefren@netbsd.org
+
+	"The vulnerabilities are fixed in version 2.1 RC1."
+		It's still 2.0, but maybe I will do an early update.

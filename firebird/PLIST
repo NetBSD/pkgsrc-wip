@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/03/10 03:28:26 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/03/11 22:51:05 hoka_adam Exp $
 bin/blrtable
 bin/build_file
 bin/codes
@@ -42,7 +42,7 @@ lib/firebird/libfbclient.so.${PKGVERSION}
 lib/firebird/libfbembed.so
 lib/firebird/libfbembed.so.2
 lib/firebird/libfbembed.so.${PKGVERSION}
-lib/firebird/libfbintl.so
+lib/firebird/intl/libfbintl.so
 lib/firebird/libfbstatic.a
 lib/firebird/libib_util.so
 lib/firebird/libicudata.so
@@ -51,6 +51,18 @@ lib/firebird/libicudata.so.30.0
 lib/firebird/libicui18n.so
 lib/firebird/libicui18n.so.30
 lib/firebird/libicui18n.so.30.0
+lib/firebird/libicuio.so
+lib/firebird/libicuio.so.30
+lib/firebird/libicuio.so.30.0
+lib/firebird/libicule.so
+lib/firebird/libicule.so.30
+lib/firebird/libicule.so.30.0
+lib/firebird/libiculx.so
+lib/firebird/libiculx.so.30
+lib/firebird/libiculx.so.30.0
+lib/firebird/libicutu.so
+lib/firebird/libicutu.so.30
+lib/firebird/libicutu.so.30.0
 lib/firebird/libicuuc.so
 lib/firebird/libicuuc.so.30
 lib/firebird/libicuuc.so.30.0
@@ -184,5 +196,6 @@ share/examples/firebird/udf/udflib.def
 @dirrm share/doc/firebird/license
 @dirrm share/doc/firebird
 @dirrm lib/firebird/UDF
+@dirrm lib/firebird
 @dirrm firebird/help
 @dirrm firebird
