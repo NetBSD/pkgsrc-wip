@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.3 2006/12/02 16:59:09 dhowland Exp $
+$NetBSD: distinfo,v 1.4 2008/03/11 02:36:59 dhowland Exp $
 
-SHA1 (endeavour-2.7.3.tgz) = 944223ba9ec36eb3e4fc56f0a9e0e32a8e17f2be
-RMD160 (endeavour-2.7.3.tgz) = c7a61f705971b760041a97b4811e3f1d56ee0356
-Size (endeavour-2.7.3.tgz) = 3381081 bytes
+SHA1 (endeavour-2.8.5.tgz) = 2104e82a4e9af1fad3ac266877eadd0920783475
+RMD160 (endeavour-2.8.5.tgz) = 7b591eded1e441cc48deb14a75ac99ec7bf823ba
+Size (endeavour-2.8.5.tgz) = 3790745 bytes
 SHA1 (patch-aa) = 0c9853e0de122c2ac69ee2e609d68c6dafc1186d
 SHA1 (patch-ab) = 48f5a09a0c6598237d5da92ec7fd5cec1c3f76d7
-SHA1 (patch-ac) = c07b3414a18493aeee82336378041137004da466
-SHA1 (patch-ad) = c072af35c9fd9ac37cf41d5e39e06f5588e89c10
-SHA1 (patch-ae) = 5537563969bb417db864014a8302c4a6674d6750
+SHA1 (patch-ac) = 48dd7e1e3f6f934b5e0e7b5ec727e07d09159fc9
+SHA1 (patch-ad) = 52f15a1b1f7302b8a89eabe2eb3c8d30ead8a00e
+SHA1 (patch-ae) = d8efa00126fc7736ce7ae2980a6f16f3b61df5eb
 SHA1 (patch-af) = 0dfc121d884c9dfc993f4adb1584bd59426fedf6
 SHA1 (patch-ag) = e9f20a428458a87c3ef297c3ef4337f840342354
-SHA1 (patch-ah) = 30d9246409aab7c6859136a1361395d377cf87f1
-SHA1 (patch-ai) = f5fb9a5caf0f7878c20911eac774fba0631c9d66
+SHA1 (patch-ai) = 55815794abb75ad399c8faf21bbb341f6643809f
+SHA1 (patch-aj) = 97079275eb65586936b1ee28d64eb2976378a125
+SHA1 (patch-ak) = aac65b6b0ea732a6dac61bc6655a3924e8283f27
+SHA1 (patch-al) = 26e103303cd4ae94c16b36d10542a9fc81f244e8

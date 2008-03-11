@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/11 02:36:59 dhowland Exp $
 #
 
-DISTNAME=	endeavour-2.7.3
-PKGREVISION=	1
+DISTNAME=	endeavour-2.8.5
+#PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://wolfpack.twu.net/users/wolfpack/
+MASTER_SITES=	http://www.battlefieldlinux.com/wolfpack/packages/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	dhowland@users.sourceforge.net
-HOMEPAGE=	http://wolfpack.twu.net/Endeavour2/
+HOMEPAGE=	http://www.battlefieldlinux.com/wolfpack/Endeavour2/
 COMMENT=	File manager and image browser
 
 DEPENDS+=	e2fsprogs>=1.32:../../sysutils/e2fsprogs
