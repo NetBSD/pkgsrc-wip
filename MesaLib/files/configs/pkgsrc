@@ -1,21 +1,36 @@
-# $NetBSD: pkgsrc,v 1.3 2008/03/03 06:13:21 bsadewitz Exp $
+# $NetBSD: pkgsrc,v 1.4 2008/03/11 05:27:38 tnn2 Exp $
 
 include $(TOP)/configs/default
 
-CONFIG_NAME= 	pkgsrc
+CONFIG_NAME=	pkgsrc
 
-DEFINES= 	-DPTHREADS -DUSE_XSHM -DHZ=$(MESA_HZ)
-X11_INCLUDES= 	-I$(X11BASE)/include
+DEFINES=	-DPTHREADS -DUSE_XSHM -DHZ=$(MESA_HZ)
+X11_INCLUDES=	-I$(X11BASE)/include
 
-CFLAGS+= 	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
- 	 	$(DEFINES) $(X11_INCLUDES)
-CXXFLAGS+= 	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
- 	 	$(DEFINES) $(X11_INCLUDES)
+CFLAGS+=	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
+		$(DEFINES) $(X11_INCLUDES)
+CXXFLAGS+=	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
+		$(DEFINES) $(X11_INCLUDES)
 
-LDFLAGS+= 	-L${TOP}/${LIB_DIR}/
+LIBTOOL?=	libtool
 
-GLUT_CFLAGS= 	-fexceptions
-APP_LIB_DEPS= 	-l$(GLUT_LIB) -l$(GLU_LIB) -l$(GL_LIB) \
- 	 	-lXext -lXmu -lXi -lX11 -lm
+GLUT_CFLAGS=	-fexceptions # XXX gcc
+GL_LIB_DEPS=\
+	$(EXTRA_LIB_PATH) -lX11 -lXext -lm $(PTHREAD_STUBLIB)
+OSMESA_LIB_DEPS=\
+	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la
+GLU_LIB_DEPS=\
+	-lGL -lm
+GLUT_LIB_DEPS=\
+	-lGLU -lGL -lX11 -lXmu -lXt -lXi -lm
+GLW_LIB_DEPS=\
+	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la -lXt -lX11
 
-SRC_DIRS= 	glx/x11 mesa glw glu glut/glx
+# XXX this is wrong, revisit when doing MesaDemos
+APP_LIB_DEPS=	$(TOP)/$(LIB_DIR)/lib$(GLUT_LIB).la \
+		$(TOP)/$(LIB_DIR)/lib$(GLU_LIB).la \
+		$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la \
+		-lXext -lXmu -lXi -lX11 -lm
+
+SRC_DIRS=	mesa glw glu glut/glx
+DRIVER_DIRS=	x11 osmesa

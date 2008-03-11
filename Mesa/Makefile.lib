@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.10 2008/03/09 13:14:39 tnn2 Exp $
+# $NetBSD: Makefile.lib,v 1.11 2008/03/11 05:27:38 tnn2 Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -75,3 +75,11 @@ install-headers:
 	    ${DESTDIR}${PREFIX}/include/GL; \
 	fi;
 .endfor
+
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_FILES.fix-paths=          src/*.c
+SUBST_FILES.fix-paths+=         scripts/*.sh
+SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'

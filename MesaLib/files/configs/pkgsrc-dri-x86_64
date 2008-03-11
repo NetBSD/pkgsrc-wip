@@ -1,9 +1,9 @@
-# $NetBSD: pkgsrc-dri-x86_64,v 1.1 2008/02/26 06:47:37 bsadewitz Exp $
+# $NetBSD: pkgsrc-dri-x86_64,v 1.2 2008/03/11 05:27:38 tnn2 Exp $
 
 include $(TOP)/configs/pkgsrc-dri
 
-CONFIG_NAME= 	pkgsrc-dri-x86_64
+CONFIG_NAME=	pkgsrc-dri-x86_64
 
-ASM_FLAGS= 	-DUSE_X86_64_ASM
-ASM_SOURCES= 	$(X86-64_SOURCES)
+ASM_FLAGS=	-DUSE_X86_64_ASM
+ASM_SOURCES=	$(X86-64_SOURCES)
 ASM_API=	$(X86-64_API)

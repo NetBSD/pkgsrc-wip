@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/09 12:46:54 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/11 05:27:38 tnn2 Exp $
 
 PKGNAME=	glut-${MESA_PKGVERSION}
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
@@ -17,9 +17,6 @@ BUILDLINK_API_DEPENDS.glu+=	glu>=${MESA_PKGVERSION}
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../wip/glu/buildlink3.mk"
-
-# XXX why is this needed?
-CPPFLAGS+=	-I../../../include
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/mesa src/glu src/glx src/glw progs

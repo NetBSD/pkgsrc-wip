@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/03 05:55:02 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/03/11 05:27:38 tnn2 Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -15,6 +15,7 @@ include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
 lib/libGL.la
 lib/libGLw.la
+${NODRI}lib/libOSMesa.la
 ${DRI}lib/dri/i810_dri.la
 ${DRI}lib/dri/i915_dri.la
 ${DRI}lib/dri/i965_dri.la

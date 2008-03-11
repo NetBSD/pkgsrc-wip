@@ -1,2 +1,0 @@
-The libtool files (.la) for MesaLib, glu and glut seem to get spurious
--L../lib entries. Need to eliminate these.
