@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/03/12 17:49:55 tnn2 Exp $
+
+--- test/Makefile.in.orig	2008-02-29 00:46:44.000000000 +0100
++++ test/Makefile.in
+@@ -62,7 +62,7 @@ host_triplet = @host@
+ check_PROGRAMS = imagediff$(EXEEXT) png-flatten$(EXEEXT) \
+ 	$(am__EXEEXT_13) $(am__EXEEXT_14)
+ EXTRA_PROGRAMS = $(am__EXEEXT_11) $(am__EXEEXT_12)
+-@HAVE_PTHREAD_TRUE@am__append_11 = -lpthread
++@HAVE_PTHREAD_TRUE@am__append_11 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_12 = pdf2png
+ @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_13 = svg2png
+ subdir = test
