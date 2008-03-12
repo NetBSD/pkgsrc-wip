@@ -1,8 +1,6 @@
-$Id: TODO,v 1.1.1.1 2008/02/02 16:36:40 asau Exp $
+$Id: TODO,v 1.2 2008/03/12 18:12:39 asau Exp $
 
 1. List BLAS and FFTW 3 as dependencies.
 2. Fix incorrect configuration for readline, it uses readline unconditionally.
 3. Fix -ldl, it is ignored using hack currently.
-4. "about.c:116: error: too many arguments to function 'gdk_pixbuf_new_from_file'"
-No idea what's that. Report upstream.
-(Delist gdk-pixbuf as no longer dependency?)
+5. Delist gdk-pixbuf as no longer dependency?

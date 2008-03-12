@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/02 16:36:40 asau Exp $
+$NetBSD: distinfo,v 1.2 2008/03/12 18:12:39 asau Exp $
 
-SHA1 (gretl-1.7.1.tar.bz2) = 427d4b7f95e7ce6fa5f3e6edc73f3a885048168a
-RMD160 (gretl-1.7.1.tar.bz2) = fac615136468ac82e0e68b5caec340aae1a35f57
-Size (gretl-1.7.1.tar.bz2) = 4748191 bytes
+SHA1 (gretl-1.7.3.tar.bz2) = 62df100e320b16ccd79be6b6244f81386d7dde55
+RMD160 (gretl-1.7.3.tar.bz2) = 47b37f13b572113372b2a998b46f33ede1c725d0
+Size (gretl-1.7.3.tar.bz2) = 4808500 bytes
