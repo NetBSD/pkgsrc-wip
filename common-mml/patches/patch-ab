@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/03/12 05:20:07 bsadewitz Exp $
+
+--- src/Makefile.in.orig	2006-08-21 06:22:05.000000000 -0400
++++ src/Makefile.in
+@@ -25,19 +25,25 @@ SRCS = $(OBJS:%.o=%.c)
+ all: version.h $(TARGET) 
+ 
+ $(TARGET): $(OBJS)
+-	$(AR) r $(TARGET) $(OBJS)
+-	$(RANLIB) $(TARGET)
++	$(LIBTOOL) --mode=link $(CC) $(.ALLSRC:.o=.lo) -o $(.TARGET:.a=.la) \
++		-rpath $(PREFIX)/lib -version-number 1:2:18
+ 
+ version.h: ../VERSION
+ 	sed -e 's/.*/#define CCL_VERSION "v&"/' $? > version.h
+ 
+ install: all
+-	$(INSTALL) $(TARGET) @prefix@/lib/$(TARGET)
+-	for header in *.h; do $(INSTALL) $$header @prefix@/include/common/$(header); done
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(TARGET:.a=.la) \
++		@prefix@/lib/$(TARGET)
++	for header in *.h; do \
++		$(BSD_INSTALL_DATA) $$header \
++			@prefix@/include/common/$(header); \
++		done
+ 
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(INC) -c $<
++	$(LIBTOOL) --mode=compile --tag=CC \
++		$(CC) $(CFLAGS) $(INC) -c $(.IMPSRC) -o $(.TARGET:.o=.lo)
++
+ 
+ clean:
+ 	-rm -f $(OBJS) version.h $(TARGET) tags 
