@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2007/06/01 00:18:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/03/12 08:58:33 thomasklausner Exp $
 bin/xmms2
 bin/xmms2-et
 bin/xmms2-launcher
+bin/xmms2-mlib-updater
 bin/xmms2d
 include/xmms2/xmms/xmms_bindata.h
 include/xmms2/xmms/xmms_config.h
@@ -125,6 +126,7 @@ man/man1/xmms2.1.gz
 man/man1/xmms2d.1.gz
 share/xmms2/mind.in.a.box-lament_snipplet.ogg
 share/xmms2/scripts/startup.d/xmms2-et-launcher.sh
+share/xmms2/scripts/startup.d/xmms2-mlib-updater.sh
 @dirrm share/xmms2/scripts/startup.d
 @dirrm share/xmms2/scripts
 @dirrm share/xmms2
