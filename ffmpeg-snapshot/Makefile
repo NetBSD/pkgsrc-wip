@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/15 13:20:21 cetrox Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/12 07:52:33 thomasklausner Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
@@ -17,13 +17,16 @@ NO_CHECKSUM=	yes
 
 CONFIGURE_ARGS+=	--enable-gpl
 CONFIGURE_ARGS+=	--enable-memalign-hack
-CONFIGURE_ARGS+=	--enable-swscaler
+CONFIGURE_ARGS+=	--enable-swscale
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 CONFLICTS+=	ffmpeg-devel-[0-9]*
 CONFLICTS+=	ffmpeg-[0-9]*
 
+# XXX: doesn't work?
+PKGCONFIG_OVERRIDE=	libavutil.pc libavcodec.pc libavformat.pc \
+			libavdevice.pc libswscale.pc
 REPLACE_PERL+=	doc/texi2pod.pl
 
 USE_LANGUAGES=	c c++
