@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2845 2008/03/12 07:35:29 thomasklausner Exp $
+# $Id: Makefile,v 1.2846 2008/03/12 23:06:11 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -158,6 +158,7 @@ SUBDIR+=	c2hs
 SUBDIR+=	cabal
 SUBDIR+=	cabocha
 SUBDIR+=	cabot
+SUBDIR+=	cairo
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	castget
@@ -686,7 +687,6 @@ SUBDIR+=	iwn-firmware
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd2
-SUBDIR+=	jack
 SUBDIR+=	jack-devel
 SUBDIR+=	jacorb-lib
 SUBDIR+=	jad
@@ -890,6 +890,7 @@ SUBDIR+=	lletters
 SUBDIR+=	llvm
 SUBDIR+=	lmarbles
 SUBDIR+=	lmtp2nntp
+SUBDIR+=	logfmon-devel
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
