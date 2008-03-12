@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $Id: import-package.sh,v 1.1 2008/03/12 18:02:24 tnn2 Exp $
+# $Id: import-package.sh,v 1.2 2008/03/12 18:16:35 tnn2 Exp $
 #
 # Script designed to make initial imports into wip easier.
 #
@@ -72,3 +72,13 @@ read ANS
 if [ "${ANS}" = "y" ]; then
   CVS_RSH=ssh cvs -d ${CVSROOT} import -m "$(cat ${MSG} | grep -v '^CVS:.*$')" ${ROOTDIR}${PKGPATH} ${TAGS}
 fi
+
+echo ${DASH70}
+echo "If the import went OK, move away the ${CATEGORY}/${PACKAGE} directory"
+echo "and run \"cvs update -dPA ${PACKAGE}\" in ${CATEGORY} to complete"
+echo "the import. If you got conflict errors, just cvs add the"
+echo "conflicting files and cvs commit them."
+echo ""
+echo "Don't forget to add the package to ${CATEGORY}/Makefile and remove"
+echo "it from the TODO list."
+echo ""
