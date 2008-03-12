@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/03/12 05:27:58 bsadewitz Exp $
+
+--- auddev.c.orig	2006-02-13 13:29:49.000000000 -0500
++++ auddev.c
+@@ -129,12 +129,12 @@ audio_if_t audio_if_table[] = {
+                 netbsd_audio_set_ogain,
+                 netbsd_audio_get_ogain,
+                 netbsd_audio_loopback,
+-                netbsd_audio_oport_set,
+-                netbsd_audio_oport_get,
++                netbsd_audio_set_oport,
++                netbsd_audio_get_oport,
+                 netbsd_audio_oport_details,
+                 netbsd_audio_oport_count,
+-                netbsd_audio_iport_set,
+-                netbsd_audio_iport_get,
++                netbsd_audio_set_iport,
++                netbsd_audio_get_iport,
+                 netbsd_audio_iport_details,
+                 netbsd_audio_iport_count,
+                 netbsd_audio_is_ready,
+@@ -270,7 +270,7 @@ audio_if_t audio_if_table[] = {
+                 alsa_audio_supports
+         },
+ #endif /* HAVE_ALSA_AUDIO */
+-#ifdef HAVE_OSS_AUDIO
++#if defined(HAVE_OSS_AUDIO) && !defined(__NetBSD__)
+         {
+                 oss_audio_init,
+                 NULL,

@@ -1,0 +1,159 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/12 05:27:58 bsadewitz Exp $
+
+--- Makefile.in.orig	2007-05-10 13:06:19.000000000 -0400
++++ Makefile.in
+@@ -36,6 +36,8 @@ G728_LIB       = @G728_LIB@
+ 
+ WBS_CODEC_OBJ = codec_wbs.o cx_wbs.o
+ 
++LIBEXT ?= .la
++
+ prefix      = @prefix@
+ exec_prefix = @exec_prefix@
+ bindir      = @bindir@
+@@ -57,7 +59,8 @@ CODEC_OBJS   = codec.o codec_state.o cod
+ 
+ SNDFILE_OBJS = sndfile.o sndfile_au.o sndfile_raw.o sndfile_wav.o
+ 
+-MEDIALIBS    = libuclaudio.a libuclcodec.a libuclsndfile.a 
++MEDIALIBS    = \
++	libuclaudio.la #libuclcodec$(LIBEXT) libuclsndfile$(LIBEXT)
+ 
+ CHANNEL_OBJS = channel.o channel_types.o cc_vanilla.o cc_rdncy.o cc_layered.o
+ 
+@@ -88,46 +91,57 @@ INSTALL_OBJS = ui_installer.o installer.
+ 
+ all: version.h sdr2.plugin.S02.audio.rtp.-.$(RATVER) $(RATVER).spec $(RATVER) $(RATVER)-ui $(RATVER)-media $(RATVER)-kill rat Makefile
+ 
+-libuclaudio.a: $(AUDIO_OBJS)
+-	$(AR) r $@ $(AUDIO_OBJS)
+-	$(RANLIB) $@
+-
+-libuclcodec.a: $(CODEC_OBJS)
+-	$(AR) r $@ $(CODEC_OBJS)
+-	$(RANLIB) $@
+-
+-libuclsndfile.a: $(SNDFILE_OBJS)
+-	$(AR) r $@ $(SNDFILE_OBJS)
+-	$(RANLIB) $@
+-
++libuclaudio$(LIBEXT): $(AUDIO_OBJS) $(CODEC_OBJS) $(SNDFILE_OBJS)
++	$(LIBTOOL) --mode=link $(CC) $(.ALLSRC:.o=.lo) -o $(.TARGET) \
++		-version-number 4:4:1 -rpath $(PREFIX)/lib
++
++#libuclcodec$(LIBEXT): $(CODEC_OBJS)
++#	$(LIBTOOL) --mode=link $(CC) $(.ALLSRC:.o=.lo) -o $(.TARGET) \
++#		-version-number 4:4:1 -rpath $(PREFIX)/lib
++#
++#libuclsndfile$(LIBEXT): $(SNDFILE_OBJS)
++#	$(LIBTOOL) --mode=link $(CC) $(.ALLSRC:.o=.lo) -o $(.TARGET) \
++#		-version-number 4:4:1 -rpath $(PREFIX)/lib
++#
+ $(RATVER)-kill: rat-kill.o
+-	$(CC) $(CFLAGS) rat-kill.o $(COMMON_LIB) $(LIBS) -o $(RATVER)-kill
++	$(LIBTOOL) --mode=link --tag=CC \
++		$(CC) $(CFLAGS) rat-kill.lo $(COMMON_LIB) $(LIBS) \
++		-o $(RATVER)-kill
+ 
+ $(RATVER)-media: $(CHANNEL_OBJS) $(TOY_OBJS) $(MEDIA_OBJS) $(MEDIALIBS) $(EXTERNAL_DEP)
+-	$(CC) $(CFLAGS) $(CHANNEL_OBJS) $(TOY_OBJS) $(MEDIA_OBJS) $(MEDIALIBS) $(COMMON_LIB) $(AUD_LIB) $(LIBS) $(G728_LIB) -o $(RATVER)-media
++	$(LIBTOOL) --mode=link \
++		$(CC) $(CFLAGS) $(CHANNEL_OBJS:.o=.lo) $(TOY_OBJS:.o=.lo) \
++		$(MEDIA_OBJS:.o=.lo) $(MEDIALIBS) $(COMMON_LIB) $(AUD_LIB) $(LIBS) $(G728_LIB) -o $(RATVER)-media
+ 
+ $(RATVER)-ui: $(TCL_OBJS) $(UI_OBJS) $(EXTERNAL_DEP)
+-	$(CC) $(CFLAGS) $(TCL_OBJS) $(UI_OBJS) $(COMMON_LIB)  $(TCL_LIB) $(TK_LIB) $(X_LIB) $(LIBS) -o $(RATVER)-ui 
++	$(LIBTOOL) --mode=link \
++		$(CC) $(CFLAGS) $(TCL_OBJS:.o=.lo) $(UI_OBJS:.o=.lo) \
++		$(COMMON_LIB) $(TCL_LIB) $(TK_LIB) $(X_LIB) $(LIBS) \
++		-o $(RATVER)-ui 
+ 
+ $(RATVER): $(CTRL_OBJS) $(EXTERNAL_DEP)
+-	$(CC) $(CFLAGS) $(CTRL_OBJS) $(COMMON_LIB) $(LIBS) -o $(RATVER)
++	$(LIBTOOL) --mode=link \
++		$(CC) $(CFLAGS) $(CTRL_OBJS:.o=.lo) $(COMMON_LIB) \
++		$(LIBS) -o $(RATVER)
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(X_CFLAGS) $(INCLUDE) -c $<
++	$(LIBTOOL) --mode=compile --tag=CC \
++		$(CC) $(CFLAGS) $(X_CFLAGS) $(INCLUDE) \
++		-c $(.IMPSRC) -o $(.TARGET:.o=.lo)
+ 
+ $(TCL_OBJS): $(TCL_SRCS)
+ 
+ ui_transcoder.c: ui_transcoder.tcl tcl2c/tcl2c
+-	cat ui_transcoder.tcl | tcl2c/tcl2c ui_transcoder > ui_transcoder.c
++	cat ui_transcoder.tcl | $(LIBTOOL) --mode=execute tcl2c/tcl2c ui_transcoder > ui_transcoder.c
+ 
+ ui_audiotool.c: uicomponent_bargraph.tcl uicomponent_chart.tcl uicomponent_help.tcl asfilebox.tcl ui_audiotool.tcl tcl2c/tcl2c
+-	cat uicomponent_bargraph.tcl uicomponent_chart.tcl uicomponent_help.tcl asfilebox.tcl ui_audiotool.tcl | tcl2c/tcl2c ui_audiotool > ui_audiotool.c
++	cat uicomponent_bargraph.tcl uicomponent_chart.tcl uicomponent_help.tcl asfilebox.tcl ui_audiotool.tcl | $(LIBTOOL) --mode=execute tcl2c/tcl2c ui_audiotool > ui_audiotool.c
+ 
+ ui_installer.c: ui_installer.tcl tcl2c/tcl2c
+-	cat ui_installer.tcl | tcl2c/tcl2c ui_installer > ui_installer.c
++	cat ui_installer.tcl | $(LIBTOOL) --mode=execute tcl2c/tcl2c ui_installer > ui_installer.c
+ 
+ tcl2c/tcl2c: tcl2c/tcl2c.c
+-	$(CC) -o tcl2c/tcl2c tcl2c/tcl2c.c
++	$(LIBTOOL) --mode=link $(CC) -o tcl2c/tcl2c tcl2c/tcl2c.c
+ 
+ version.h: VERSION
+ 	@${ECHO} "Generating version.h"
+@@ -160,19 +174,30 @@ clean:
+ 	-rm -f tcl2c/tcl2c sdr2.plugin.S02.audio.rtp.-.$(RATVER) $(RATVER).spec
+ 	-rm -f bin2c bin2c.o binaries.c $(INSTALL_OBJS) $(RATVER)-installer
+ 	-rm -f rat $(RATVER)-media $(RATVER)-ui $(RATVER)
++	-rm -rf .libs *.lo
+ 
+ distclean: clean
+ 	-rm -rf config.cache config.log config.status ratconf.h Makefile
+ 	-rm -rf core core-$(RATVER)-media core-$(RATVER)-ui
+ 
+ install: all
+-	./install-sh -m 555 -c rat             $(bindir)
+-	./install-sh -m 555 -c $(RATVER)       $(bindir)
+-	./install-sh -m 555 -c $(RATVER)-kill  $(bindir)/rat-kill
+-	./install-sh -m 555 -c $(RATVER)-media $(bindir)
+-	./install-sh -m 555 -c $(RATVER)-ui    $(bindir)
+-	./install-sh -m 444 -c man/man1/rat.1  $(mandir)/man1/rat.1
+-	./install-sh -m 444 -c sdr2.plugin.S02.audio.rtp.-.$(RATVER) $(sysconfdir)/sdr/plugins
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)/$(bindir)
++	$(BSD_INSTALL_SCRIPT) rat $(DESTDIR)$(bindir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) \
++		$(RATVER) $(DESTDIR)$(bindir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) \
++		$(RATVER)-kill  $(DESTDIR)$(bindir)/rat-kill
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) \
++		$(RATVER)-media $(DESTDIR)$(bindir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) \
++		$(RATVER)-ui $(DESTDIR)$(bindir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man1
++	$(BSD_INSTALL_MAN) man/man1/rat.1 $(DESTDIR)$(mandir)/man1/rat.1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(EGDIR)/sdr/plugins
++	$(BSD_INSTALL_DATA) sdr2.plugin.S02.audio.rtp.-.$(RATVER) $(DESTDIR)$(EGDIR)/sdr/plugins
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) libuclaudio.la \
++		$(DESTDIR)$(PREFIX)/lib
+ 
+ installer: $(RATVER)-installer
+ 	mkdir release
+@@ -183,13 +208,15 @@ installer: $(RATVER)-installer
+ 	rm -rf release
+ 
+ $(RATVER)-installer: $(INSTALL_OBJS)
+-	$(CC) $(CFLAGS) $(INSTALL_OBJS)  $(TCL_LIB) $(TK_LIB) $(X_LIB) $(LIBS) -o $(RATVER)-installer
++	$(LIBTOOL) --mode=link \
++		$(CC) $(CFLAGS) $(INSTALL_OBJS:.o=.lo)  $(TCL_LIB) $(TK_LIB) \
++		$(X_LIB) $(LIBS) -o $(RATVER)-installer
+ 
+ binaries.c: $(RATVER)-$(OSTYPE).tar.gz bin2c
+-	./bin2c $(RATVER)-$(OSTYPE).tar.gz > binaries.c
++	$(LIBTOOL) --mode=execute ./bin2c $(RATVER)-$(OSTYPE).tar.gz > binaries.c
+ 
+ bin2c: bin2c.o
+-	$(CC) bin2c.o -o bin2c
++	$(LIBTOOL) --mode=link $(CC) bin2c.o -o bin2c
+ 
+ etags:
+ 	etags ../common/src/*.[ch] *.[ch]

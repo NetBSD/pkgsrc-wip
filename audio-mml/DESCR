@@ -1,0 +1,8 @@
+Rat allows users to conduct host-to-host or multihost audio
+teleconferences over an internet.
+
+This package contains development sources.  The build has
+been modified to install a libtool library (of the code normally
+built only into "convenience" libraries) and headers.  I did this
+mostly as a convience for myself and others wishing to use this
+for NetBSD audio in other applications.
