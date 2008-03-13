@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# TODO: verify file size of tarball
+# TODO: download to tmp file and move over when successful
+# TODO: check if ${CONFIG_DIR}/pkg_summary exists and fail if not
+
 # Copyright (c) 2007 Jeremy C. Reed <reed@reedmedia.net>
 # 
 # Permission to use, copy, modify, and/or distribute this software for any 
@@ -39,6 +43,7 @@ if [ -z "$1" ] ; then
   echo check -- checks if an installed package is up-to-date
   echo checkall -- checks if all installed packages are up-to-date
   echo 'install -- download (if needed) with dependencies and install'
+  echo 'upgrade -- download (if needed) with dependencies and upgrade existing'
 # TODO:
 #  echo 'show -- show details for a package from database'
 #  echo 'installdepends -- install (and download) dependencies but not dependent'
@@ -49,7 +54,8 @@ fi
 ## TODO: downloadall apache will fetch multiple apache packages
 
 # TODO: where should I record the tag?
-TAG=2007Q3
+#TAG=2007Q3
+TAG=2007Q4
 
 OPERATING_SYSTEM=`uname -s`
 PLATFORM=`uname -p` # should I use -m?
@@ -354,5 +360,12 @@ fi
 if [ "$1" = "install" -a -n "$2" ] ; then
   downloadall "${2}"
   pkg_add "${CONFIG_DIR}/${2}"
+fi
 
+# same as install but uses -uu
+# TODO: this is not very intelligent as it doesn't consider other existing
+# before it tries to upgrade
+if [ "$1" = "upgrade" -a -n "$2" ] ; then
+  downloadall "${2}"
+  pkg_add -uu "${CONFIG_DIR}/${2}"
 fi

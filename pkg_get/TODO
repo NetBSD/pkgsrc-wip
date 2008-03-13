@@ -1,8 +1,6 @@
-handle when dependency has multiple versions, for example:
+rename to pkg instead of pkg_get
 
-sudo pkg_get install scmgit
-... downloaded both tk-8.3.4nb3.tgz and tk-8.4.15.tgz
-and also both versions of tcl.
-wasted downloads
-installs fine though
+have it check if libraries are installed before installing
 
+have install check dependencies are up-to-date first (instead
+of having pkg_add handle that).
