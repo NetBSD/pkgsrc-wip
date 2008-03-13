@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/11 22:51:05 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/03/13 20:36:07 hoka_adam Exp $
 bin/blrtable
 bin/build_file
 bin/codes
@@ -31,41 +31,19 @@ include/ib_util.h
 include/ibase.h
 include/iberror.h
 include/perf.h
-lib/firebird/UDF/fbudf.so
-lib/firebird/UDF/fbudf.sql
-lib/firebird/UDF/ib_udf.so
-lib/firebird/UDF/ib_udf.sql
-lib/firebird/libeditline.a
-lib/firebird/libfbclient.so
-lib/firebird/libfbclient.so.2
-lib/firebird/libfbclient.so.${PKGVERSION}
-lib/firebird/libfbembed.so
-lib/firebird/libfbembed.so.2
-lib/firebird/libfbembed.so.${PKGVERSION}
-lib/firebird/intl/libfbintl.so
-lib/firebird/libfbstatic.a
-lib/firebird/libib_util.so
-lib/firebird/libicudata.so
-lib/firebird/libicudata.so.30
-lib/firebird/libicudata.so.30.0
-lib/firebird/libicui18n.so
-lib/firebird/libicui18n.so.30
-lib/firebird/libicui18n.so.30.0
-lib/firebird/libicuio.so
-lib/firebird/libicuio.so.30
-lib/firebird/libicuio.so.30.0
-lib/firebird/libicule.so
-lib/firebird/libicule.so.30
-lib/firebird/libicule.so.30.0
-lib/firebird/libiculx.so
-lib/firebird/libiculx.so.30
-lib/firebird/libiculx.so.30.0
-lib/firebird/libicutu.so
-lib/firebird/libicutu.so.30
-lib/firebird/libicutu.so.30.0
-lib/firebird/libicuuc.so
-lib/firebird/libicuuc.so.30
-lib/firebird/libicuuc.so.30.0
+lib/libfbclient.so
+lib/libfbclient.so.2
+lib/libfbclient.so.${PKGVERSION}
+lib/libfbembed.so
+lib/libfbembed.so.2
+lib/libfbembed.so.${PKGVERSION}
+lib/libfbstatic.a
+lib/libib_util.so
+libexec/firebird/intl/libfbintl.so
+libexec/firebird/udf/fbudf.so
+libexec/firebird/udf/fbudf.sql
+libexec/firebird/udf/ib_udf.so
+libexec/firebird/udf/ib_udf.sql
 share/doc/firebird/Firebird-2.0-QuickStart.pdf
 share/doc/firebird/Firebird_conf.txt
 share/doc/firebird/README.NTSecurity
@@ -195,7 +173,8 @@ share/examples/firebird/udf/udflib.def
 @dirrm share/doc/firebird/sql.extensions
 @dirrm share/doc/firebird/license
 @dirrm share/doc/firebird
-@dirrm lib/firebird/UDF
-@dirrm lib/firebird
+@dirrm libexec/firebird/udf
+@dirrm libexec/firebird/intl
+@dirrm libexec/firebird
 @dirrm firebird/help
 @dirrm firebird

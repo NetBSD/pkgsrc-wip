@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/11 22:51:05 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.21 2008/03/13 20:36:07 hoka_adam Exp $
 #
 
 DISTNAME=		Firebird-2.0.3.12981-1
@@ -18,8 +18,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 #RCD_SCRIPTS=            000.firebird.sh
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/firebird
-USE_TOOLS+=		gm4:run gmake autoheader autoconf chgrp chown
+#CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/firebird
+CONFIGURE_ARGS+=	--with-editline
+#USE_TOOLS+=		gm4:run gmake autoheader autoconf chgrp chown aclocal
+USE_TOOLS+=		autoconf automake gmake aclocal autoheader gm4 chown chgrp
 
 # FBUSER	username of the database administrator
 # FBGROUP	group of the database administrator
@@ -43,13 +45,24 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF \
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/intl
 
 INSTALLATION_DIRS+=	bin share/examples/firebird firebird/help \
-			include lib/firebird lib/firebird/intl \
-			lib/firebird/UDF share/doc/firebird
+			include libexec/firebird libexec/firebird/intl \
+			libexec/firebird/udf share/doc/firebird lib
 
 BUILDDIR=		${WRKSRC}/gen/firebird
 
 pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} autogen.sh
+	${CP} ${PREFIX}/share/aclocal/libtool.m4 ${WRKSRC}/aclocal.m4 # FIXME
+	cd ${WRKSRC} && libtoolize --copy --force
+	cd ${WRKSRC} && aclocal -I m4
+	cd ${WRKSRC} && autoheader
+	cd ${WRKSRC} && autoconf
+
+post-extract:
+	${RM} -rf ${WRKSRC}/extern/icu
+
+post-patch:
+	${MKDIR} ${WRKSRC}/m4
+	${CP} ${FILESDIR}/*.m4 ${WRKSRC}/m4
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILDDIR}/bin/* ${DESTDIR}${PREFIX}/bin
@@ -64,16 +77,17 @@ do-install:
 
 	${INSTALL_DATA} ${BUILDDIR}/include/*.h ${DESTDIR}${PREFIX}/include
 
-	${INSTALL_LIB} ${BUILDDIR}/lib/* ${DESTDIR}${PREFIX}/lib/firebird
+	${INSTALL_LIB} ${BUILDDIR}/lib/* ${DESTDIR}${PREFIX}/lib
 
-	${INSTALL_LIB} ${BUILDDIR}/intl/libfbintl.so ${DESTDIR}${PREFIX}/lib/firebird/intl
-	${INSTALL_LIB} ${BUILDDIR}/UDF/* ${DESTDIR}${PREFIX}/lib/firebird/UDF
-	${INSTALL_LIB} ${BUILDDIR}/../../extern/icu/source/lib/* ${DESTDIR}${PREFIX}/lib/firebird
+	${INSTALL_LIB} ${BUILDDIR}/intl/libfbintl.so ${DESTDIR}${PREFIX}/libexec/firebird/intl
+	${INSTALL_LIB} ${BUILDDIR}/UDF/* ${DESTDIR}${PREFIX}/libexec/firebird/udf
 
 	# Copy the sql-declarations into the UDF-directory
-	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/ib_udf.sql ${DESTDIR}${PREFIX}/lib/firebird/UDF
-	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/fbudf/fbudf.sql ${DESTDIR}${PREFIX}/lib/firebird/UDF
+	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/ib_udf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
+	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/fbudf/fbudf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
 
 	cp -R ${BUILDDIR}/../../doc/*  ${DESTDIR}${PREFIX}/share/doc/firebird/
 
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
