@@ -1,0 +1,19 @@
+$NetBSD: patch-wip-aa,v 1.1.1.1 2008/03/13 05:45:15 tnn2 Exp $
+
+--- security/manager/ssl/src/nsNSSComponent.cpp.orig	2008-02-27 07:31:13.000000000 +0100
++++ security/manager/ssl/src/nsNSSComponent.cpp
+@@ -1055,12 +1055,14 @@ static void setOCSPOptions(nsIPrefBranch
+   }
+   PRBool ocspRequired;
+   pref->GetBoolPref("security.OCSP.require", &ocspRequired);
++#if 0 /* XXXwip, linker error */
+   if (ocspRequired) {
+     CERT_SetOCSPFailureMode(ocspMode_FailureIsVerificationFailure);
+   }
+   else {
+     CERT_SetOCSPFailureMode(ocspMode_FailureIsNotAVerificationFailure);
+   }
++#endif
+ }
+ 
+ nsresult

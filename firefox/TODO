@@ -1,0 +1,17 @@
+- Investigate python and cairo dependencies
+- Fix SDK installation
+
+Patch status relative to firefox-2.0
+------------------------------------
+Obsolete patches(?):
+da dt af ag ah ai aj ak al an ao aq aw by cd cq
+ch ci cj ck cl cm cn db dc dd dw ec
+
+Patches that someone with clue needs to look at:
+bz ca
+
+Patches that had to be updated to apply cleanly:
+aa ab ac ba ap ed de
+
+Patches that should be revisited, because they are wrong:
+wip-aa wip-ab wip-ac wip-ad

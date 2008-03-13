@@ -1,0 +1,260 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/13 05:45:14 tnn2 Exp $
+bin/${MOZILLA}
+@comment begin PROGRAMS
+lib/${MOZILLA}/${MOZILLA_BIN}
+lib/${MOZILLA}/mangle
+lib/${MOZILLA}/mozilla-xremote-client
+lib/${MOZILLA}/nsinstall
+lib/${MOZILLA}/regxpcom
+lib/${MOZILLA}/shlibsign
+lib/${MOZILLA}/xpcshell
+@comment lib/${MOZILLA}/xpicleanup
+lib/${MOZILLA}/xpidl
+lib/${MOZILLA}/xpt_dump
+lib/${MOZILLA}/xpt_link
+@comment end PROGRAMS
+@comment begin SCRIPTS
+@comment lib/${MOZILLA}/firefox-config
+@comment end SCRIPTS
+@comment begin DSO
+lib/${MOZILLA}/components/libbrowsercomps.${SO_SUFFIX}
+lib/${MOZILLA}/components/libbrowserdirprovider.${SO_SUFFIX}
+lib/${MOZILLA}/components/libimgicon.${SO_SUFFIX}
+@comment libfreebl
+lib/${MOZILLA}/libmozjs.${SO_SUFFIX}
+lib/${MOZILLA}/libnspr4.${SO_SUFFIX}
+lib/${MOZILLA}/libnss3.${SO_SUFFIX}
+lib/${MOZILLA}/libnssckbi.${SO_SUFFIX}
+lib/${MOZILLA}/libnssdbm3.${SO_SUFFIX}
+lib/${MOZILLA}/libnssutil3.${SO_SUFFIX}
+lib/${MOZILLA}/libplc4.${SO_SUFFIX}
+lib/${MOZILLA}/libplds4.${SO_SUFFIX}
+lib/${MOZILLA}/libsmime3.${SO_SUFFIX}
+lib/${MOZILLA}/libsoftokn3.${SO_SUFFIX}
+lib/${MOZILLA}/libsqlite3.${SO_SUFFIX}
+lib/${MOZILLA}/libssl3.${SO_SUFFIX}
+lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
+lib/${MOZILLA}/libxul.${SO_SUFFIX}
+lib/${MOZILLA}/plugins/libunixprintplugin.${SO_SUFFIX}
+@comment end DSO
+@comment begin PKGCONFIG
+@comment lib/pkgconfig/firefox-gtkmozembed.pc
+@comment lib/pkgconfig/firefox-js.pc
+@comment lib/pkgconfig/firefox-nspr.pc
+@comment lib/pkgconfig/firefox-nss.pc
+@comment lib/pkgconfig/firefox-plugin.pc
+@comment lib/pkgconfig/firefox-xpcom.pc
+@comment end PKGCONFIG
+@comment begin DATA
+lib/${MOZILLA}/application.ini
+lib/${MOZILLA}/LICENSE
+lib/${MOZILLA}/README.txt
+lib/${MOZILLA}/browserconfig.properties
+lib/${MOZILLA}/chrome/browser.jar
+lib/${MOZILLA}/chrome/browser.manifest
+@comment lib/${MOZILLA}/chrome/chromelist.txt
+lib/${MOZILLA}/chrome/classic.jar
+lib/${MOZILLA}/chrome/classic.manifest
+lib/${MOZILLA}/chrome/comm.jar
+lib/${MOZILLA}/chrome/comm.manifest
+lib/${MOZILLA}/chrome/en-US.jar
+lib/${MOZILLA}/chrome/en-US.manifest
+lib/${MOZILLA}/chrome/icons/default/default16.png
+lib/${MOZILLA}/chrome/icons/default/default32.png
+lib/${MOZILLA}/chrome/icons/default/default48.png
+lib/${MOZILLA}/chrome/installed-chrome.txt
+lib/${MOZILLA}/chrome/pippki.jar
+lib/${MOZILLA}/chrome/pippki.manifest
+lib/${MOZILLA}/chrome/reporter.jar
+lib/${MOZILLA}/chrome/reporter.manifest
+lib/${MOZILLA}/chrome/toolkit.jar
+lib/${MOZILLA}/chrome/toolkit.manifest
+lib/${MOZILLA}/components/FeedConverter.js
+lib/${MOZILLA}/components/FeedProcessor.js
+lib/${MOZILLA}/components/FeedWriter.js
+lib/${MOZILLA}/components/WebContentConverter.js
+lib/${MOZILLA}/components/fuelApplication.js
+lib/${MOZILLA}/components/jsconsole-clhandler.js
+lib/${MOZILLA}/components/nsAddonRepository.js
+lib/${MOZILLA}/components/nsBlocklistService.js
+lib/${MOZILLA}/components/nsBrowserContentHandler.js
+lib/${MOZILLA}/components/nsBrowserGlue.js
+lib/${MOZILLA}/components/nsContentDispatchChooser.js
+lib/${MOZILLA}/components/nsContentPrefService.js
+lib/${MOZILLA}/components/nsDefaultCLH.js
+lib/${MOZILLA}/components/nsDownloadManagerUI.js
+lib/${MOZILLA}/components/nsExtensionManager.js
+lib/${MOZILLA}/components/nsFilePicker.js
+lib/${MOZILLA}/components/nsHandlerService.js
+lib/${MOZILLA}/components/nsHelperAppDlg.js
+lib/${MOZILLA}/components/nsLivemarkService.js
+lib/${MOZILLA}/components/nsLoginInfo.js
+lib/${MOZILLA}/components/nsLoginManager.js
+lib/${MOZILLA}/components/nsLoginManagerPrompter.js
+lib/${MOZILLA}/components/nsMicrosummaryService.js
+lib/${MOZILLA}/components/nsPlacesTransactionsService.js
+lib/${MOZILLA}/components/nsProxyAutoConfig.js
+lib/${MOZILLA}/components/nsSafebrowsingApplication.js
+lib/${MOZILLA}/components/nsSearchService.js
+lib/${MOZILLA}/components/nsSearchSuggestions.js
+lib/${MOZILLA}/components/nsSessionStartup.js
+lib/${MOZILLA}/components/nsSessionStore.js
+lib/${MOZILLA}/components/nsSetDefaultBrowser.js
+lib/${MOZILLA}/components/nsSidebar.js
+lib/${MOZILLA}/components/nsTaggingService.js
+lib/${MOZILLA}/components/nsTryToClose.js
+lib/${MOZILLA}/components/nsURLFormatter.js
+lib/${MOZILLA}/components/nsUpdateService.js
+lib/${MOZILLA}/components/nsUrlClassifierLib.js
+lib/${MOZILLA}/components/nsUrlClassifierListManager.js
+lib/${MOZILLA}/components/nsWebHandlerApp.js
+lib/${MOZILLA}/components/pluginGlue.js
+lib/${MOZILLA}/components/storage-Legacy.js
+lib/${MOZILLA}/components/txEXSLTRegExFunctions.js
+@comment XXX does this belong here?
+lib/${MOZILLA}/components/browser.xpt
+lib/${MOZILLA}/defaults/autoconfig/platform.js
+lib/${MOZILLA}/defaults/autoconfig/prefcalls.js
+lib/${MOZILLA}/defaults/pref/channel-prefs.js
+lib/${MOZILLA}/defaults/pref/firefox-branding.js
+lib/${MOZILLA}/defaults/pref/firefox-l10n.js
+lib/${MOZILLA}/defaults/pref/firefox.js
+lib/${MOZILLA}/defaults/pref/reporter.js
+lib/${MOZILLA}/defaults/profile/bookmarks.html
+lib/${MOZILLA}/defaults/profile/chrome/userChrome-example.css
+lib/${MOZILLA}/defaults/profile/chrome/userContent-example.css
+lib/${MOZILLA}/defaults/profile/localstore.rdf
+lib/${MOZILLA}/defaults/profile/mimeTypes.rdf
+lib/${MOZILLA}/defaults/profile/prefs.js
+lib/${MOZILLA}/dictionaries/en-US.aff
+lib/${MOZILLA}/dictionaries/en-US.dic
+@comment XXX what
+lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+lib/${MOZILLA}/firefox
+lib/${MOZILLA}/greprefs/all.js
+lib/${MOZILLA}/greprefs/security-prefs.js
+lib/${MOZILLA}/greprefs/xpinstall.js
+lib/${MOZILLA}/icons/document.png
+lib/${MOZILLA}/icons/mozicon128.png
+lib/${MOZILLA}/icons/mozicon16.xpm
+lib/${MOZILLA}/icons/mozicon50.xpm
+@comment lib/${MOZILLA}/init.d/README
+@comment libfreebl.chk
+lib/${MOZILLA}/libsoftokn3.chk
+lib/${MOZILLA}/modules/DownloadUtils.jsm
+lib/${MOZILLA}/modules/ISO8601DateUtils.jsm
+lib/${MOZILLA}/modules/JSON.jsm
+lib/${MOZILLA}/modules/Microformats.js
+lib/${MOZILLA}/modules/PluralForm.jsm
+lib/${MOZILLA}/modules/XPCOMUtils.jsm
+lib/${MOZILLA}/modules/distribution.js
+lib/${MOZILLA}/old-homepage-default.properties
+lib/${MOZILLA}/platform.ini
+lib/${MOZILLA}/res/EditorOverride.css
+lib/${MOZILLA}/res/arrow.gif
+lib/${MOZILLA}/res/arrowd.gif
+lib/${MOZILLA}/res/broken-image.gif
+lib/${MOZILLA}/res/charsetData.properties
+lib/${MOZILLA}/res/charsetalias.properties
+lib/${MOZILLA}/res/contenteditable.css
+lib/${MOZILLA}/res/designmode.css
+lib/${MOZILLA}/res/dtd/mathml.dtd
+lib/${MOZILLA}/res/dtd/xhtml11.dtd
+lib/${MOZILLA}/res/entityTables/html40Latin1.properties
+lib/${MOZILLA}/res/entityTables/html40Special.properties
+lib/${MOZILLA}/res/entityTables/html40Symbols.properties
+lib/${MOZILLA}/res/entityTables/htmlEntityVersions.properties
+lib/${MOZILLA}/res/entityTables/mathml20.properties
+lib/${MOZILLA}/res/entityTables/transliterate.properties
+lib/${MOZILLA}/res/fonts/mathfont.properties
+lib/${MOZILLA}/res/fonts/mathfontSTIXNonUnicode.properties
+lib/${MOZILLA}/res/fonts/mathfontSTIXSize1.properties
+lib/${MOZILLA}/res/fonts/mathfontStandardSymbolsL.properties
+lib/${MOZILLA}/res/fonts/mathfontUnicode.properties
+lib/${MOZILLA}/res/forms.css
+lib/${MOZILLA}/res/grabber.gif
+lib/${MOZILLA}/res/hiddenWindow.html
+lib/${MOZILLA}/res/html/folder.png
+lib/${MOZILLA}/res/html.css
+lib/${MOZILLA}/res/langGroups.properties
+lib/${MOZILLA}/res/language.properties
+lib/${MOZILLA}/res/loading-image.gif
+lib/${MOZILLA}/res/mathml.css
+lib/${MOZILLA}/res/quirk.css
+lib/${MOZILLA}/res/svg.css
+lib/${MOZILLA}/res/table-add-column-after-active.gif
+lib/${MOZILLA}/res/table-add-column-after-hover.gif
+lib/${MOZILLA}/res/table-add-column-after.gif
+lib/${MOZILLA}/res/table-add-column-before-active.gif
+lib/${MOZILLA}/res/table-add-column-before-hover.gif
+lib/${MOZILLA}/res/table-add-column-before.gif
+lib/${MOZILLA}/res/table-add-row-after-active.gif
+lib/${MOZILLA}/res/table-add-row-after-hover.gif
+lib/${MOZILLA}/res/table-add-row-after.gif
+lib/${MOZILLA}/res/table-add-row-before-active.gif
+lib/${MOZILLA}/res/table-add-row-before-hover.gif
+lib/${MOZILLA}/res/table-add-row-before.gif
+lib/${MOZILLA}/res/table-remove-column-active.gif
+lib/${MOZILLA}/res/table-remove-column-hover.gif
+lib/${MOZILLA}/res/table-remove-column.gif
+lib/${MOZILLA}/res/table-remove-row-active.gif
+lib/${MOZILLA}/res/table-remove-row-hover.gif
+lib/${MOZILLA}/res/table-remove-row.gif
+lib/${MOZILLA}/res/ua.css
+lib/${MOZILLA}/res/unixcharset.properties
+lib/${MOZILLA}/res/viewsource.css
+lib/${MOZILLA}/searchplugins/amazondotcom.xml
+lib/${MOZILLA}/searchplugins/answers.xml
+lib/${MOZILLA}/searchplugins/creativecommons.xml
+lib/${MOZILLA}/searchplugins/eBay.xml
+lib/${MOZILLA}/searchplugins/google.xml
+lib/${MOZILLA}/searchplugins/wikipedia.xml
+lib/${MOZILLA}/searchplugins/yahoo.xml
+lib/${MOZILLA}/updater
+lib/${MOZILLA}/updater.ini
+@comment end DATA
+@comment begin XXXwip figure out if these should really be installed
+@comment lib/${MOZILLA}/.autoreg
+@comment lib/${MOZILLA}/plugins/libnullplugin.so
+@comment lib/${MOZILLA}/removed-files
+@comment lib/${MOZILLA}/run-mozilla.sh
+@comment end XXXwip
+@comment begin INCLUDE
+@comment end INCLUDE
+@comment begin INCLUDE-PUBLIC
+@comment end INCLUDE-PUBLIC
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
+@unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
+@unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
+@comment begin DIRS
+@dirrm lib/${MOZILLA}/searchplugins
+@dirrm lib/${MOZILLA}/res/throbber
+@dirrm lib/${MOZILLA}/res/samples
+@dirrm lib/${MOZILLA}/res/html
+@dirrm lib/${MOZILLA}/res/fonts
+@dirrm lib/${MOZILLA}/res/entityTables
+@dirrm lib/${MOZILLA}/res/dtd
+@dirrm lib/${MOZILLA}/res
+@dirrm lib/${MOZILLA}/plugins
+@dirrm lib/${MOZILLA}/init.d
+@dirrm lib/${MOZILLA}/icons
+@dirrm lib/${MOZILLA}/greprefs
+@dirrm lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
+@dirrm lib/${MOZILLA}/extensions/inspector@mozilla.org/defaults/preferences
+@dirrm lib/${MOZILLA}/extensions/inspector@mozilla.org/defaults
+@dirrm lib/${MOZILLA}/extensions/inspector@mozilla.org/components
+@dirrm lib/${MOZILLA}/extensions/inspector@mozilla.org/chrome
+@dirrm lib/${MOZILLA}/extensions/inspector@mozilla.org
+@dirrm lib/${MOZILLA}/extensions
+@dirrm lib/${MOZILLA}/dictionaries
+@dirrm lib/${MOZILLA}/defaults/profile/chrome
+@dirrm lib/${MOZILLA}/defaults/profile
+@dirrm lib/${MOZILLA}/defaults/pref
+@dirrm lib/${MOZILLA}/defaults/autoconfig
+@dirrm lib/${MOZILLA}/defaults
+@dirrm lib/${MOZILLA}/components
+@dirrm lib/${MOZILLA}/chrome/icons/default
+@dirrm lib/${MOZILLA}/chrome/icons
+@dirrm lib/${MOZILLA}/chrome
+@dirrm lib/${MOZILLA}
+@comment end DIRS
