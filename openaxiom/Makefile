@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/01 11:31:59 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/14 14:25:23 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.1.0
@@ -22,18 +22,15 @@ USE_LANGUAGES+=		fortran
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 #INFO_FILES=		yes
 
-USE_GNU_CONFIGURE_HOST=	no
+#USE_GNU_CONFIGURE_HOST=	no
 
 #TARGET_SYSTEM!=		../../mk/gnu-config/config.guess
 #PLIST_SUBST+=		TARGET_SYSTEM=${TARGET_SYSTEM}
 
-# The only officially supported for now, GCL:
-#BUILD_DEPENDS+=		gcl>=2.6.7:../../lang/gcl
-CONFIGURE_ARGS+=	--with-lisp=clisp --with-x=no
-CONFIGURE_ARGS+=	AXIOM_LISP=/usr/pkg/bin/clisp
-CONFIGURE_ENV+=		AXIOM_LISP=/usr/pkg/bin/clisp
-#BUILD_DEPENDS+=	clisp>=2.41:../../lang/clisp
-#CONFIGURE_ARGS+=	--with-lisp=sbcl --with-x=no
+.include "options.mk"
+
+pre-configure:
+	cd ${WRKSRC} && ${RUN} ./build-setup.sh
 
 # I need to figure out, why it fails with pkgsrc's version:
 do-configure:
