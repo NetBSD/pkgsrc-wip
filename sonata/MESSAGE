@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/09/13 00:30:09 netcap Exp $
-If you encounter a silly error message like "Unlocking unlocked mutex.", this
-is probably a bug in the Python pthreads implementation. Setting the environment
-variable PTHREAD_DIAGASSERT to "A" (ignore errors) makes it work fine for the
-time being.
-===========================================================================
