@@ -5,7 +5,7 @@
  # Type: string
  #
 -#RootDirectory =
-+#RootDirectory = /var/db/firebird
++#RootDirectory = %%FBHOME%%
  
  
  # ----------------------------
@@ -14,7 +14,7 @@
  # Type: string (special format)
  #
 -#UdfAccess = Restrict UDF
-+UdfAccess = Restrict ${PREFIX}/libexec/firebird/udf
++UdfAccess = Restrict %%PREFIX%%/libexec/firebird/udf
  
  
  # ----------------------------

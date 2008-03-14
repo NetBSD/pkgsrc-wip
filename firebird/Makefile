@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/13 20:36:07 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/14 04:35:15 hoka_adam Exp $
 #
 
 DISTNAME=		Firebird-2.0.3.12981-1
@@ -18,8 +18,11 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 #RCD_SCRIPTS=            000.firebird.sh
-#CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/firebird
 CONFIGURE_ARGS+=	--with-editline
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+			--libexecdir=${PREFIX}/libexec \
+			--datarootdir=${PREFIX}/${FBHOME}
+
 #USE_TOOLS+=		gm4:run gmake autoheader autoconf chgrp chown aclocal
 USE_TOOLS+=		autoconf automake gmake aclocal autoheader gm4 chown chgrp
 
@@ -31,14 +34,17 @@ USE_TOOLS+=		autoconf automake gmake aclocal autoheader gm4 chown chgrp
 
 FBUSER?=		firebird
 FBGROUP?=		firebird
-FBHOME?=		${PREFIX}/${FBUSER}
+FBHOME?=		firebird
 BUILD_DEFS+=		FBHOME
 
 PKG_GROUPS=             ${FBGROUP}
 PKG_USERS=              ${FBUSER}:${FBGROUP}
 PKG_GECOS.${FBUSER}=    Firebird Database Administrator
-PKG_HOME.${FBUSER}=     ${FBHOME}
+PKG_HOME.${FBUSER}=     ${PREFIX}/${FBHOME}
 PKG_SHELL.${FBUSER}=    ${SH}
+
+PLIST_SUBST+=		FBHOME=${FBHOME}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF \
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird \
@@ -46,9 +52,25 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF \
 
 INSTALLATION_DIRS+=	bin share/examples/firebird firebird/help \
 			include libexec/firebird libexec/firebird/intl \
-			libexec/firebird/udf share/doc/firebird lib
+			libexec/firebird/udf share/doc/firebird lib ${PKG_SYSCONFDIR}
 
+EGDIR=			${PREFIX}/share/examples/firebird
 BUILDDIR=		${WRKSRC}/gen/firebird
+PKG_SYSCONFSUBDIR=	${FBHOME}
+
+SUBST_CLASSES+=		prefix fbdir
+
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Fixing paths in configuration files: PREFIX
+SUBST_FILES.prefix=	builds/install/misc/firebird.conf
+SUBST_SED.prefix=	-e "s|%%PREFIX%%|${PREFIX}|"
+
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Fixing paths in configuration files: FBHOME
+SUBST_FILES.prefix=	builds/install/misc/firebird.conf
+SUBST_SED.prefix=	-e "s|%%FBHOME%%|${PREFIX}/${FBHOME}|"
+
+CONF_FILES+=		${EGDIR}/firebird.conf ${PKG_SYSCONFDIR}/firebird.conf
 
 pre-configure:
 	${CP} ${PREFIX}/share/aclocal/libtool.m4 ${WRKSRC}/aclocal.m4 # FIXME
@@ -59,6 +81,7 @@ pre-configure:
 
 post-extract:
 	${RM} -rf ${WRKSRC}/extern/icu
+	${RM} -rf ${WRKSRC}/extern/readline
 
 post-patch:
 	${MKDIR} ${WRKSRC}/m4
@@ -67,13 +90,13 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${BUILDDIR}/bin/* ${DESTDIR}${PREFIX}/bin
 
-	cp -R ${BUILDDIR}/examples/*  ${DESTDIR}${PREFIX}/share/examples/firebird
+	${CP} -R ${BUILDDIR}/examples/*  ${DESTDIR}${EGDIR}/
 
-	#copyIfExists $BuiltFBDir/help/help.gbak $DestDir/firebird/help
-	${INSTALL_DATA} ${BUILDDIR}/help/help.fdb ${DESTDIR}${PREFIX}/firebird/help
+	#copyIfExists $BuiltFBDir/help/help.gbak $DestDir/${PREFIX}/${FBHOME}/help
+	${INSTALL_DATA} ${BUILDDIR}/help/help.fdb ${DESTDIR}${PREFIX}/${FBHOME}/help
 
-	${INSTALL_DATA} ${BUILDDIR}/firebird.msg ${DESTDIR}${PREFIX}/firebird/firebird.msg
-	${INSTALL_DATA} ${BUILDDIR}/security2.fdb ${DESTDIR}${PREFIX}/firebird/security2.fdb.sample
+	${INSTALL_DATA} ${BUILDDIR}/firebird.msg ${DESTDIR}${PREFIX}/${FBHOME}/firebird.msg
+	${INSTALL_DATA} ${BUILDDIR}/security2.fdb ${DESTDIR}${PREFIX}/${FBHOME}/security2.fdb.sample
 
 	${INSTALL_DATA} ${BUILDDIR}/include/*.h ${DESTDIR}${PREFIX}/include
 
@@ -86,7 +109,9 @@ do-install:
 	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/ib_udf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
 	${INSTALL_DATA} ${BUILDDIR}/../../src/extlib/fbudf/fbudf.sql ${DESTDIR}${PREFIX}/libexec/firebird/udf
 
-	cp -R ${BUILDDIR}/../../doc/*  ${DESTDIR}${PREFIX}/share/doc/firebird/
+	${CP} -R ${BUILDDIR}/../../doc/*  ${DESTDIR}${PREFIX}/share/doc/firebird/
+
+	${INSTALL_DATA} ${WRKSRC}/gen/firebird/misc/*.conf ${DESTDIR}${EGDIR}
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

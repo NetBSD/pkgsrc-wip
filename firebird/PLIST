@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/03/13 20:36:07 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/03/14 04:35:15 hoka_adam Exp $
 bin/blrtable
 bin/build_file
 bin/codes
@@ -23,9 +23,9 @@ bin/isql
 bin/isql_static
 bin/nbackup
 bin/qli
-firebird/firebird.msg
-firebird/help/help.fdb
-firebird/security2.fdb.sample
+${FBHOME}/firebird.msg
+${FBHOME}/help/help.fdb
+${FBHOME}/security2.fdb.sample
 include/blr.h
 include/ib_util.h
 include/ibase.h
@@ -144,6 +144,8 @@ share/examples/firebird/dyn/dyn4.e
 share/examples/firebird/dyn/dyn5.e
 share/examples/firebird/dyn/dynfull.e
 share/examples/firebird/empbuild/employee.fdb
+share/examples/firebird/fbintl.conf
+share/examples/firebird/firebird.conf
 share/examples/firebird/functions.c
 share/examples/firebird/include/align.h
 share/examples/firebird/include/example.h
@@ -176,5 +178,5 @@ share/examples/firebird/udf/udflib.def
 @dirrm libexec/firebird/udf
 @dirrm libexec/firebird/intl
 @dirrm libexec/firebird
-@dirrm firebird/help
-@dirrm firebird
+@dirrm ${FBHOME}/help
+@dirrm ${FBHOME}
