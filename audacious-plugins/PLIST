@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/01/03 02:03:17 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/03/14 20:37:53 netcap Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
@@ -21,6 +21,7 @@ lib/audacious/Input/alac.so
 lib/audacious/Input/cdaudio-ng.so
 lib/audacious/Input/console.so
 lib/audacious/Input/cuesheet.so
+lib/audacious/Input/demac.so
 lib/audacious/Input/flacng.so
 lib/audacious/Input/madplug.so
 lib/audacious/Input/metronom.so
@@ -29,11 +30,11 @@ lib/audacious/Input/musepack.so
 lib/audacious/Input/sexypsf.so
 ${SID}lib/audacious/Input/sid.so
 ${MIDI}lib/audacious/Input/libtimidity.so
+lib/audacious/Input/sndfile.so
 lib/audacious/Input/tonegen.so
 lib/audacious/Input/tta.so
 lib/audacious/Input/vorbis.so
 lib/audacious/Input/vtx.so
-lib/audacious/Input/wav.so
 lib/audacious/Input/wavpack.so
 lib/audacious/Input/wma.so
 lib/audacious/Output/OSS.so
@@ -92,6 +93,7 @@ share/locale/ca/LC_MESSAGES/audacious-plugins.mo
 share/locale/cs/LC_MESSAGES/audacious-plugins.mo
 share/locale/cy/LC_MESSAGES/audacious-plugins.mo
 share/locale/de/LC_MESSAGES/audacious-plugins.mo
+share/locale/et/LC_MESSAGES/audacious-plugins.mo
 share/locale/fr/LC_MESSAGES/audacious-plugins.mo
 share/locale/ja/LC_MESSAGES/audacious-plugins.mo
 share/locale/ro/LC_MESSAGES/audacious-plugins.mo

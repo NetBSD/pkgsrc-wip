@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/08 22:20:04 netcap Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/03/14 20:37:53 netcap Exp $
 bin/audacious
 bin/audtool
 include/audacious/audctrl.h
@@ -34,15 +34,17 @@ include/audacious/util.h
 include/audacious/vfs.h
 include/audacious/vfs_buffer.h
 include/audacious/vfs_buffered_file.h
-include/audacious/xconvert.h
-lib/audacious/libaudid3tag.so
-lib/audacious/libaudid3tag.so.1
-lib/audacious/libaudid3tag.so.1.0.0
+include/libSAD/common.h
+include/libSAD/dither.h
+include/libSAD/libSAD.h
 lib/libaudclient.so
 lib/libaudclient.so.1
 lib/libaudclient.so.1.0.0
-lib/pkgconfig/audacious.pc
-lib/pkgconfig/audclient.pc
+lib/libaudid3tag.so
+lib/libaudid3tag.so.1
+lib/libaudid3tag.so.1.0.0
+lib/pkgconfig/audacious.${LOWER_VENDOR}
+lib/pkgconfig/audclient.${LOWER_VENDOR}
 man/man1/audacious.1
 man/man1/audtool.1
 share/applications/audacious.desktop
@@ -260,8 +262,6 @@ share/audacious/Skins/TinyPlayer/text.png
 share/audacious/Skins/TinyPlayer/titlebar.png
 share/audacious/Skins/TinyPlayer/viscolor.txt
 share/audacious/Skins/TinyPlayer/volume.png
-share/audacious/glade/fileinfo.glade
-share/audacious/glade/prefswin.glade
 share/audacious/images/about-logo.png
 share/audacious/images/appearance.png
 share/audacious/images/audacious_eq.xpm
@@ -269,25 +269,15 @@ share/audacious/images/audacious_player.xpm
 share/audacious/images/audacious_playlist.xpm
 share/audacious/images/audio.png
 share/audacious/images/connectivity.png
-share/audacious/images/eq.png
-share/audacious/images/info.png
-share/audacious/images/menu_invert_playlist.png
+share/audacious/images/menu_playlist.png
+share/audacious/images/menu_plugin.png
 share/audacious/images/menu_queue_toggle.png
 share/audacious/images/menu_randomize_playlist.png
-share/audacious/images/menu_remove_dups.png
-share/audacious/images/menu_remove_unavail.png
-share/audacious/images/menu_select_all.png
-share/audacious/images/menu_select_invert.png
-share/audacious/images/menu_select_none.png
-share/audacious/images/menu_sort_artist.png
-share/audacious/images/menu_sort_filename.png
-share/audacious/images/menu_sort_pathfile.png
-share/audacious/images/menu_sort_title.png
 share/audacious/images/mouse.png
-share/audacious/images/pl.png
-share/audacious/images/play.png
+share/audacious/images/playback.png
 share/audacious/images/playlist.png
 share/audacious/images/plugins.png
+share/audacious/images/replay_gain.png
 share/audacious/ui/carbon-menubar.ui
 share/audacious/ui/equalizer.ui
 share/audacious/ui/mainwin.ui
@@ -329,7 +319,6 @@ share/pixmaps/audacious.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/audacious/ui
 @dirrm share/audacious/images
-@dirrm share/audacious/glade
 @dirrm share/audacious/Skins/TinyPlayer
 @dirrm share/audacious/Skins/Refugee
 @dirrm share/audacious/Skins/Osmosis
@@ -358,5 +347,5 @@ share/pixmaps/audacious.png
 @dirrm share/audacious/Skins
 @dirrm share/audacious
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/audacious
+@dirrm include/libSAD
 @dirrm include/audacious

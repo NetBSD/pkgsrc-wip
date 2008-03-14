@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/02/13 17:02:28 netcap Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/14 20:37:53 netcap Exp $
 #
 
-DISTNAME=		audacious-1.4.6
-#PKGREVISION=		1
+DISTNAME=		audacious-1.5.0
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tbz2
@@ -34,11 +33,11 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .include "../../devel/libmcs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
