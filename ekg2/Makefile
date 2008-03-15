@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/15 16:24:55 shindenmorr Exp $
 #
 
 DISTNAME=	ekg2-0.1.1
@@ -11,6 +11,7 @@ MAINTAINER=	shinden@linux.pl
 HOMEPAGE=	http://pl.ekg2.org/
 COMMENT=	Multi-protocol communicator - gg, jabber, irc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
