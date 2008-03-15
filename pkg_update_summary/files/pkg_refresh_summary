@@ -133,6 +133,7 @@ BEGIN {
 function update_skip (){
    if (pkgname != "" && pkgpath != ""){
       skip = ! ((pkgpath ":" pkgname) in keep)
+
       if (skip == 0){
          print accu
       }
@@ -143,7 +144,7 @@ skip == 1 && NF > 0 {
    next
 }
 
-skip == 0 {
+skip == 0 && NF > 0 {
    print $0
    next
 }
@@ -166,6 +167,10 @@ $1 == "PKGPATH" {
 }
 
 NF == 0 {
+   if (skip == 0){
+      print ""
+   }
+
    accu = pkgname = pkgpath = ""
    skip = -1
 }
