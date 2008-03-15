@@ -54,6 +54,11 @@ while test $# -ne 0; do
     shift
 done
 
+if test -z "$PKG_SUFX"; then
+    PKG_SUFX=.tgz
+fi
+PKG_SUFX_RE="`echo $PKG_SUFX | sed 's,[.],[.],g'`"
+
 if test -z "$PKG_INFO_CMD"; then
     PKG_INFO_CMD=pkg_info
 fi
@@ -84,7 +89,7 @@ pkgs2summary (){
 }
 
 get_all_pkgs (){
-    if ! ls -1t "$bin_pkg_dir" | grep '[.]t[gb]z$'; then
+    if ! ls -1t "$bin_pkg_dir" | grep "$PKG_SUFX_RE"'$'; then
 	# in order to ignore grep's exit status in case
 	# binary packages directory is empty
 	true
@@ -124,10 +129,10 @@ filter_unchanged (){
     pkgs_fn=$1
     shift
 
-    awk -v pkgs_fn="$pkgs_fn" '
+    awk -v pkgs_fn="$pkgs_fn" -v PKG_SUFX_RE="$PKG_SUFX_RE" '
     BEGIN {
 	while (0 < (ret = getline < pkgs_fn)){
-	    sub(/[.]t[bg]z$/, "")
+	    sub(PKG_SUFX_RE "$", "")
 	    keep_array [$1] = ""
 	}
 	if (ret < 0){
@@ -172,7 +177,7 @@ show_debugging_info (){
 	printf "\n\nkept packages : \n\n"; cat "$tmp2"
 
 	printf "\n\nremoved packages : \n\n"
-	{ echo "$all" | sed 's/[.]t[gb]z$//'
+	{ echo "$all" | sed 's/[.][^.]*$//'
 	    sed -n 's/^PKGNAME=//p' "$summary_file"
 	} | subtract
     fi
