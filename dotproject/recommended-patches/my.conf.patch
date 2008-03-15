@@ -1,0 +1,35 @@
+--- /usr/pkg/share/examples/mysql/my-medium.cnf	2007-10-09 15:03:34.000000000 +0200
++++ /etc/my.cnf	2008-03-11 19:18:32.000000000 +0100
+@@ -17,15 +17,15 @@
+ # The following options will be passed to all MySQL clients
+ [client]
+ #password	= your_password
+-port		= @MYSQL_TCP_PORT@
+-socket		= @MYSQL_UNIX_ADDR@
++#port		= @MYSQL_TCP_PORT@
++#socket		= @MYSQL_UNIX_ADDR@
+ 
+ # Here follows entries for some specific programs
+ 
+ # The MySQL server
+ [mysqld]
+-port		= @MYSQL_TCP_PORT@
+-socket		= @MYSQL_UNIX_ADDR@
++#port		= @MYSQL_TCP_PORT@
++#socket		= @MYSQL_UNIX_ADDR@
+ skip-locking
+ key_buffer = 16M
+ max_allowed_packet = 1M
+@@ -131,6 +131,12 @@
+ #innodb_flush_log_at_trx_commit = 1
+ #innodb_lock_wait_timeout = 50
+ 
++#aha
++query_cache_size = 61440
++query_cache_type = 1
++
++#aha
++
+ [mysqldump]
+ quick
+ max_allowed_packet = 16M
