@@ -127,31 +127,46 @@ BEGIN {
    }
 
    FS = "="
+   skip = -1 # -1 - unknown, 0 - false, 1 - true
 }
 
-NF > 1, NF == 0 {
+function update_skip (){
+   if (pkgname != "" && pkgpath != ""){
+      skip = ! ((pkgpath ":" pkgname) in keep)
+      if (skip == 0){
+         print accu
+      }
+   }
+}
+
+skip == 1 && NF > 0 {
+   next
+}
+
+skip == 0 {
+   print $0
+   next
+}
+
+skip == -1 {
    if (accu == "")
       accu = $0
    else
       accu = accu "\n" $0
+}
 
-   if ($1 == "PKGNAME"){
-      pkgname = $2
-      next
-   }
-   if ($1 == "PKGPATH"){
-      pkgpath = $2
-      next
-   }
+$1 == "PKGNAME" {
+   pkgname = $2
+   update_skip()
+}
 
-   if (NF > 0){
-      next
-   }
+$1 == "PKGPATH" {
+   pkgpath = $2
+   update_skip()
+}
 
-   if ((pkgpath ":" pkgname) in keep){
-      print accu
-   }
-
+NF == 0 {
    accu = pkgname = pkgpath = ""
+   skip = -1
 }
 ' "$@" $tmp_fn
