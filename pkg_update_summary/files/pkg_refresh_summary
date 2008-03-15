@@ -126,13 +126,18 @@ BEGIN {
       keep [pair] = 1
    }
 
-   FS = "="
-   skip = -1 # -1 - unknown, 0 - false, 1 - true
+   SUBSEP = ":"
+   FS     = "="
+   skip   = -1 # -1 - unknown, 0 - false, 1 - true
 }
 
 function update_skip (){
    if (pkgname != "" && pkgpath != ""){
-      skip = ! ((pkgpath ":" pkgname) in keep)
+      skip = !((pkgpath ":" pkgname) in keep)
+
+      if ((pkgpath ":" pkgname) in processed){
+         skip = 1
+      }
 
       if (skip == 0){
          print accu
@@ -167,6 +172,8 @@ $1 == "PKGPATH" {
 }
 
 NF == 0 {
+   processed [pkgpath, pkgname] = 1
+
    if (skip == 0){
       print ""
    }
