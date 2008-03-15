@@ -1,4 +1,4 @@
-$Id: TODO,v 1.6 2008/01/03 15:11:23 asau Exp $
+$Id: TODO,v 1.7 2008/03/15 00:39:14 obache Exp $
 
 2. Install sample configuration files.
 3. Options: provide sane default values.
@@ -7,3 +7,6 @@ $Id: TODO,v 1.6 2008/01/03 15:11:23 asau Exp $
 6. Fix rc scripts.
 8. "make print-PLIST" problem: httpconf -> htt${...}onf.
 9. Check curl requirement, it seems to be non-optional.
+
+DoS from remote:
+http://secunia.com/advisories/29383/
