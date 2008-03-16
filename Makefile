@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2850 2008/03/16 08:47:16 thomasklausner Exp $
+# $Id: Makefile,v 1.2851 2008/03/16 10:30:51 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1021,6 +1021,7 @@ SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	neb-wipe
 SUBDIR+=	nehe-opengl-tutorials
+SUBDIR+=	nemo
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
