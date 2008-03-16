@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/08/06 19:47:29 jukka Exp $
+$NetBSD: distinfo,v 1.6 2008/03/16 12:47:30 jukka Exp $
 
-SHA1 (dk-milter-0.6.0.tar.gz) = 4ee16bdf8f11c040e0a4db62ca84c1e3dae53492
-RMD160 (dk-milter-0.6.0.tar.gz) = aabc4fa34c4f6b3e03b39260471da5e91736b930
-Size (dk-milter-0.6.0.tar.gz) = 350417 bytes
+SHA1 (dk-milter-1.0.0.tar.gz) = c5bcc17c008ea25d5cb49aff2f9b9d699dd5ad74
+RMD160 (dk-milter-1.0.0.tar.gz) = d9ae89f05a247dab63d12297b94e4e3d3481b697
+Size (dk-milter-1.0.0.tar.gz) = 359694 bytes
 SHA1 (patch-aa) = b5d55642518f6ee4653ce97e7aa46b99043280b3
 SHA1 (patch-ab) = 43ecaeda136b9267a4a2164e7125946d47e3685b
 SHA1 (patch-ac) = 4a65218ffa02f998a6e697f622ea765446cb43cb
