@@ -1,0 +1,14 @@
+Build fails with:
+
+Making all in Tao.OpenGl
+gmcs -debug -target:library -out:Tao.OpenGl-pre.dll   -r:../../Tao/Tao.OpenGl.ExtensionLoader/Tao.OpenGl.ExtensionLoader.dll ./AssemblyInfo.cs   ./Gl.cs                         ./ContextGl.cs
+MONO_PATH=../../Tao/Tao.OpenGl.ExtensionLoader:. mono --debug ../../Tao/Tao.GlPostProcess/Tao.GlPostProcess.exe   Tao.OpenGl.dll "./Tao.OpenGl.snk"  Tao.OpenGl.Gl Tao.OpenGl.ContextGl
+
+Unhandled Exception: System.IO.FileNotFoundException: Could not load file or assembly 'Tao.OpenGl.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'Tao.OpenGl.dll'
+  at (wrapper managed-to-native) System.Reflection.Assembly:LoadFrom (string,bool)
+  at System.Reflection.Assembly.LoadFrom (System.String assemblyFile) [0x00000] in /scratch/lang/mono/work/mono-1.2.6/mcs/class/corlib/System.Reflection/Assembly.cs:437
+  at Tao.GlPostProcess.Main (System.String[] args) [0x00074] in /scratch/graphics/f-spot/work/f-spot-0.4.2/Tao/Tao.GlPostProcess/GlPostProcess.cs:66
+
+PLIST not filled in yet.
+
