@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/03/01 11:50:13 hoka_adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/03/16 22:53:14 hoka_adam Exp $
 
 # used by wip/hunspell-*/Makefile
 #
@@ -21,11 +21,13 @@ WRKSRC=			${WRKDIR}
 EXTRACT_OPTS_ZIP=	-aqo # We don't want -L
 DIST_SUBDIR=		hunspell-dictionaries/${DISTNAME}-${VERSION}
 
+PLIST_SRC=		../../wip/hunspell-af_ZA/PLIST.common
 PLIST_SUBST+=           DISTNAME=${DISTNAME}
 
 INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-${DISTNAME}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.* ${DESTDIR}${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.aff ${DESTDIR}${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.dic ${DESTDIR}${PREFIX}/share/hunspell
 	${INSTALL_DATA} ${WRKSRC}/README_${DISTNAME}.txt \
 		${DESTDIR}${PREFIX}/share/doc/hunspell-${DISTNAME}
