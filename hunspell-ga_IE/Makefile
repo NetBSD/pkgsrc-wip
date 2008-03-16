@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/31 05:12:14 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/16 19:41:31 hoka_adam Exp $
 
 VERSION=	20071029
 DISTNAME=	ga_IE
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Irish dictionary for hunspell
 
 .include "../../wip/hunspell-af_ZA/Makefile.common"

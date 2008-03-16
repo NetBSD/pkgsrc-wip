@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/16 17:07:11 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/16 19:41:31 hoka_adam Exp $
 
 VERSION=		20080308
 DICTNAME=		fr_FR-1990
@@ -8,7 +8,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://dico.savant.free.fr/_download/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		adam.hoka@gmail.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dico.savant.free.fr/index.php
 COMMENT=		French (1990 Reform) dictionary for hunspell
 

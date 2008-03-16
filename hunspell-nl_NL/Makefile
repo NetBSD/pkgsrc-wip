@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/02/03 12:27:01 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/16 19:41:31 hoka_adam Exp $
 
 VERSION=	20070607
 DISTNAME=	nl_NL
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Dutch dictionary for hunspell
 
 .include "../../wip/hunspell-af_ZA/Makefile.common"
