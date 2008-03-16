@@ -1,0 +1,8 @@
+Nemo is a new way of managing files, or rather not manage files.
+Currently it's a cross between a calendar and a file browser with
+labels.
+
+In the default view, files are displayed by date of last change
+instead of the typical hierarchical view.
+
+Nemo is a free/open source GTK application written in C#.

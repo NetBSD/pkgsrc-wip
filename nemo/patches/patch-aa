@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/16 10:21:10 thomasklausner Exp $
+
+--- Makefile.orig	2008-02-14 13:15:36.000000000 +0000
++++ Makefile
+@@ -1,10 +1,10 @@
+ PRG = nemo.exe
+ 
+-PREFIX=/usr
++PREFIX?=/usr
+ 
+ all:
+ 	make -C po/
+-	gmcs -debug -unsafe dbus/*.cs broker/*.cs metadata/MetadataStore.cs common/*.cs gtk/*.cs uicommon/*.cs gtk-gui/*.cs -resource:images/no-preview.png,no-preview.png -resource:images/close.png,close.png -resource:images/zip.png,zip.png -resource:images/stock_about.png,stock_about.png -resource:images/image-x-generic.png,image-x-generic.png -resource:images/pdf.png,pdf.png -resource:images/text-html.png,text-html.png -resource:images/text-x-generic.png,text-x-generic.png -resource:images/dot.png,dot.png -resource:images/video-x-generic.png,video-x-generic.png -resource:images/x-office-document.png,x-office-document.png -resource:images/x-office-presentation.png,x-office-presentation.png -resource:images/x-office-spreadsheet.png,x-office-spreadsheet.png -resource:images/starred_right.png,starred_right.png -resource:images/big_star.png,big_star.png -resource:images/blue_guy.png,blue_guy.png -resource:images/blue_guy_med.png,blue_guy_med.png -resource:images/small_blue_guy.png,small_blue_guy.png -r:System.Data -r:Mono.Data.Sqlite -r:Mono.Posix -r:Mono.Cairo -pkg:gtk-sharp-2.0 -pkg:gnome-sharp-2.0 -pkg:stetic -out:$(PRG)
++	gmcs -debug -unsafe dbus/*.cs broker/*.cs metadata/MetadataStore.cs common/*.cs gtk/*.cs uicommon/*.cs gtk-gui/*.cs -resource:images/no-preview.png,no-preview.png -resource:images/close.png,close.png -resource:images/zip.png,zip.png -resource:images/stock_about.png,stock_about.png -resource:images/image-x-generic.png,image-x-generic.png -resource:images/pdf.png,pdf.png -resource:images/text-html.png,text-html.png -resource:images/text-x-generic.png,text-x-generic.png -resource:images/dot.png,dot.png -resource:images/video-x-generic.png,video-x-generic.png -resource:images/x-office-document.png,x-office-document.png -resource:images/x-office-presentation.png,x-office-presentation.png -resource:images/x-office-spreadsheet.png,x-office-spreadsheet.png -resource:images/starred_right.png,starred_right.png -resource:images/big_star.png,big_star.png -resource:images/blue_guy.png,blue_guy.png -resource:images/blue_guy_med.png,blue_guy_med.png -resource:images/small_blue_guy.png,small_blue_guy.png -r:System.Data -r:Mono.Data.Sqlite -r:Mono.Posix -r:Mono.Cairo -pkg:gtk-sharp-2.0 -pkg:gnome-sharp-2.0 -out:$(PRG)
+ 
+ clean:
+ 	@if test -f $(PRG); then rm $(PRG); fi
+@@ -12,14 +12,17 @@ clean:
+ install: $(PRG)
+ 	make -C po install
+ 	@sed -e "s|\@PREFIX\@|$(PREFIX)|g" < nemo.desktop.in > nemo.desktop
+-	install -D nemo.desktop $(DESTDIR)$(PREFIX)/share/applications/nemo.desktop
++	install -d $(DESTDIR)$(PREFIX)/share/applications
++	install -m 444 nemo.desktop $(DESTDIR)$(PREFIX)/share/applications/nemo.desktop
+ #	@sed -e "s|\@PREFIX\@|$(PREFIX)|g" < nemo-autostart.desktop.in > nemo-autostart.desktop
+ #	install -D nemo-autostart.desktop $(DESTDIR)$(PREFIX)/share/gnome/autostart/nemo.desktop
+-	install -D images/blue_guy.png $(DESTDIR)$(PREFIX)/share/nemo/nemo.png
+-	install -D images/no-preview.png $(DESTDIR)$(PREFIX)/share/nemo/no-preview.png
+-	install -D $(PRG) $(DESTDIR)$(PREFIX)/bin/$(PRG)
++	install -d $(DESTDIR)$(PREFIX)/share/nemo
++	install -m 444 images/blue_guy.png $(DESTDIR)$(PREFIX)/share/nemo/nemo.png
++	install -m 444 images/no-preview.png $(DESTDIR)$(PREFIX)/share/nemo/no-preview.png
++	install -d $(DESTDIR)$(PREFIX)/bin
++	install $(PRG) $(DESTDIR)$(PREFIX)/bin/$(PRG)
+ 	@sed -e "s|\@PREFIX\@|$(PREFIX)|g" < nemo.in > nemo
+-	install -D nemo $(DESTDIR)$(PREFIX)/bin/nemo
++	install nemo $(DESTDIR)$(PREFIX)/bin/nemo
+ #	@sed -e "s|\@PREFIX\@|$(PREFIX)|g" < nemo-hidden.in > nemo-hidden
+ #	install -D nemo-hidden $(DESTDIR)$(PREFIX)/bin/nemo-hidden
+ #	@rm nemo nemo-hidden nemo.desktop nemo-autostart.desktop

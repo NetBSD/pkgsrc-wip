@@ -1,0 +1,11 @@
+Starts up fine, but exits again immediately with:
+
+Unhandled Exception: System.Exception: Unable to open the session message bus. ---> System.ArgumentNullException: Argument cannot be null.
+Parameter name: address
+  at NDesk.DBus.Bus.Open (System.String address) [0x00000]
+  at NDesk.DBus.Bus.get_Session () [0x00000] --- End of inner exception stack trace ---
+
+  at NDesk.DBus.Bus.get_Session () [0x00000]
+  at Nemo.Tracker..ctor (Boolean reindex) [0x00000]
+  at MainWindow..ctor (Boolean reindex, Boolean hidden) [0x00000]
+  at Nemo.MainClass.Main (System.String[] args) [0x00000]
