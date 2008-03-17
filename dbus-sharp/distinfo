@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/17 18:31:22 koifren Exp $
+
+SHA1 (dbus-sharp-0.5.2.tar.gz) = 61c5379090cbef4e24f4cf1ad2c106f829d6eae5
+RMD160 (dbus-sharp-0.5.2.tar.gz) = 69f71f52074a5212e27bece2988b3f5c68242728
+Size (dbus-sharp-0.5.2.tar.gz) = 44348 bytes
+SHA1 (patch-aa) = c6fa7cab43b3947260fe33772cf5c467a80dd451
