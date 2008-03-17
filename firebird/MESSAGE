@@ -1,17 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/03/14 04:35:15 hoka_adam Exp $
+$NetBSD: MESSAGE,v 1.4 2008/03/17 18:57:48 hoka_adam Exp $
 
 default kernel values related semaphore is too small to use firebird.
 
 ** Change them before building firebird package **
 ** If not, build process may fail **
 
-I use following values:
+You can use the following values in a custom kernel:
 
 options         SEMMNI=256      # number of semaphore identifiers
 options         SEMMNS=512      # number of semaphores in system
 options         SEMUME=256      # max number of undo entries per process
 options         SHMMAXPGS=4096  # 2048 pages is the default
+
+Or use sysctl to set the same options.
 
 If you want to use firebird from inetd, use the following:
 
