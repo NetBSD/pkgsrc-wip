@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/03/17 21:16:08 koifren Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+DBUS_SHARP_BUILDLINK3_MK:=	${DBUS_SHARP_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	dbus-sharp
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndbus-sharp}
+BUILDLINK_PACKAGES+=	dbus-sharp
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}dbus-sharp
+
+.if ${DBUS_SHARP_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.dbus-sharp+=	dbus-sharp>=0.5.2
+BUILDLINK_PKGSRCDIR.dbus-sharp?=	../../wip/dbus-sharp
+.endif	# DBUS_SHARP_BUILDLINK3_MK
+
+.include "../../lang/mono/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
