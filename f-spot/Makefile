@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/16 14:45:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/17 21:20:05 koifren Exp $
 #
 
 DISTNAME=	f-spot-0.4.2
@@ -12,9 +12,15 @@ COMMENT=	Full-featured personal photo management application
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config bash:run
+
+MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	f-spot.pc.in
+
+REPLACE_BASH+=	icon-theme-installer
+REPLACE_BASH+=	src/f-spot.in
+REPLACE_BASH+=	tools/f-spot-import
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
@@ -29,4 +35,5 @@ PKGCONFIG_OVERRIDE+=	f-spot.pc.in
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../wip/ndesk-dbus-glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

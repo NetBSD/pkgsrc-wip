@@ -1,66 +1,21 @@
-PLIST not filled in yet, since:
+ * Check and most probably fix PLIST
 
-Build fails with (missing dbus-sharp dependency?):
+ * Make it run. Now it fails like this:
 
-gmcs -debug -target:library -out:GalleryExport.dll ./GalleryExport.cs ./GalleryRemote.cs -r:../../src/f-spot.exe -r:../../src/FSpot.Core.dll -r:../../src/FSpot.Utils.dll -r:../../semweb/SemWeb.dll -r:Mono.Posix -pkg:gtk-sharp-2.0 -pkg:glade-sharp-2.0  -resource:./GalleryExport.addin.xml -resource:./GalleryExport.glade
-./GalleryExport.cs(459,36): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(642,36): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(643,36): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(521,42): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(527,83): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(530,92): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(533,83): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(536,92): warning CS0612: `Gtk.OptionMenu' is obsolete
-./GalleryExport.cs(686,103): warning CS0612: `Gtk.OptionMenu' is obsolete
+(/usr/pkg/lib/f-spot/f-spot.exe:6839): GLib-GObject-CRITICAL **: gtype.c:2242: initialization assertion failed, use IA__g_type_init() prior to this function
 
-** (/usr/pkg/lib/mono/2.0/gmcs.exe:11703): WARNING **: The following assembly referenced from /scratch/wip/f-spot/work/f-spot-0.4.2/src/f-spot.exe could not be loaded:
-     Assembly:   NDesk.DBus    (assemblyref_index=9)
-     Version:    1.0.0.0
-     Public Key: (none)
-The assembly was not found in the Global Assembly Cache, a path listed in the MONO_PATH environment variable, or in the location of the executing assembly (/scratch/wip/f-spot/work/f-spot-0.4.2/src/).
+(/usr/pkg/lib/f-spot/f-spot.exe:6839): GLib-GObject-CRITICAL **: g_object_new: assertion `G_TYPE_IS_OBJECT (object_type)' failed
 
+(/usr/pkg/lib/f-spot/f-spot.exe:6839): GLib-GObject-CRITICAL **: g_object_ref: assertion `G_IS_OBJECT (object)' failed
+Stacktrace:
 
-** (/usr/pkg/lib/mono/2.0/gmcs.exe:11703): WARNING **: Could not load file or assembly 'NDesk.DBus, Version=1.0.0.0, Culture=neutral' or one of its dependencies.
-Exception caught by the compiler while compiling:
-   Block that caused the problem begin at: ./GalleryExport.cs(718,30):
-                     Block being compiled: [./GalleryExport.cs(749,37):,./GalleryExport.cs(757,33):]
-System.TypeLoadException: Could not load type 'FSpot.Core' from assembly 'f-spot, Version=0.4.2.0, Culture=neutral'.
-Internal compiler error at ./GalleryExport.cs(718,30):: exception caught while emitting MethodBuilder [GalleryExport::Upload]
-
-Unhandled Exception: System.TypeLoadException: Could not load type 'FSpot.Core' from assembly 'f-spot, Version=0.4.2.0, Culture=neutral'.
-  at (wrapper managed-to-native) System.MonoType:GetMethodsByName (string,System.Reflection.BindingFlags,bool,System.Type)
-  at System.MonoType.GetMethods (BindingFlags bindingAttr) [0x00000]
-  at Mono.CSharp.MemberCache.AddMethods (BindingFlags bf, System.Type type) [0x00000]
-  at Mono.CSharp.MemberCache.AddMethods (System.Type type) [0x00000]
-  at Mono.CSharp.MemberCache..ctor (IMemberContainer container) [0x00000]
-  at Mono.CSharp.TypeHandle..ctor (System.Type type) [0x00000]
-  at Mono.CSharp.TypeHandle.GetTypeHandle (System.Type t) [0x00000]
-  at Mono.CSharp.TypeHandle.GetMemberCache (System.Type t) [0x00000]
-  at Mono.CSharp.TypeManager.MemberLookup_FindMembers (System.Type t, MemberTypes mt, BindingFlags bf, System.String name, System.Boolean& used_cache) [0x00000]
-  at Mono.CSharp.TypeManager.RealMemberLookup (System.Type invocation_type, System.Type qualifier_type, System.Type queried_type, MemberTypes mt, BindingFlags original_bf, System.String name, IList almost_match) [0x00000]
-  at Mono.CSharp.TypeManager.MemberLookup (System.Type invocation_type, System.Type qualifier_type, System.Type queried_type, MemberTypes mt, BindingFlags original_bf, System.String name, IList almost_match) [0x00000]
-  at Mono.CSharp.Expression.MemberLookup (System.Type container_type, System.Type qualifier_type, System.Type queried_type, System.String name, MemberTypes mt, BindingFlags bf, Location loc) [0x00000]
-  at Mono.CSharp.Expression.MemberLookup (System.Type container_type, System.Type qualifier_type, System.Type queried_type, System.String name, Location loc) [0x00000]
-  at Mono.CSharp.MemberAccess.DoResolve (Mono.CSharp.EmitContext ec, Mono.CSharp.Expression right_side) [0x00000]
-  at Mono.CSharp.MemberAccess.DoResolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec, ResolveFlags flags) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Binary.DoResolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec, ResolveFlags flags) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Binary.DoResolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec, ResolveFlags flags) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Binary.DoResolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec, ResolveFlags flags) [0x00000]
-  at Mono.CSharp.Expression.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Expression.ResolveBoolean (Mono.CSharp.EmitContext ec, Mono.CSharp.Expression e, Location loc) [0x00000]
-  at Mono.CSharp.If.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Block.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Try.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Block.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Block.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.While.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Block.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.Block.Resolve (Mono.CSharp.EmitContext ec) [0x00000]
-  at Mono.CSharp.EmitContext.ResolveTopBlock (Mono.CSharp.EmitContext anonymous_method_host, Mono.CSharp.ToplevelBlock block, Mono.CSharp.Parameters ip, IMethodData md, System.Boolean& unreachable) [0x00000]
+  at (wrapper managed-to-native) GConf.Client.gconf_client_get_default () <0x0000e>
+  at (wrapper managed-to-native) GConf.Client.gconf_client_get_default () <0xffffffff>
+  at GConf.Client..ctor () <0x0007a>
+  at FSpot.GConfPreferenceBackend.get_Client () <0x00047>
+  at FSpot.GConfPreferenceBackend.AddNotify (string,FSpot.NotifyChangedHandler) <0x0006d>
+  at FSpot.Preferences.get_Backend () <0x000dd>
+  at FSpot.Preferences.Get (string) <0x000a8>
+  at FSpot.Driver.Main (string[]) <0x0013c>
+  at (wrapper runtime-invoke) FSpot.Driver.runtime_invoke_int_string[] (object,intptr,intptr,intptr) <0xffffffff>
+Abort trap
