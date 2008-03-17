@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2008/03/17 21:54:23 koifren Exp $
+--- src/main.cs.orig	2008-03-17 23:35:57.000000000 +0200
++++ src/main.cs	2008-03-17 23:41:19.000000000 +0200
+@@ -43,7 +43,9 @@
+ 		bool view = false;
+ 		bool slideshow = false;
+ 		string import_uri = null;
+-		
++
++		Gtk.Application.Init();
++
+ 		FSpot.Global.PhotoDirectory = (string) Preferences.Get(Preferences.STORAGE_PATH);
+ 
+ 		for (int i = 0; i < args.Length && !shutdown; i++) {

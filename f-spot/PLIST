@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/17 21:20:05 koifren Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/03/17 21:54:23 koifren Exp $
 bin/f-spot
 bin/f-spot-import
 bin/f-spot-sqlite-upgrade
@@ -306,7 +306,6 @@ share/omf/f-spot/f-spot-sv.omf
 @dirrm share/gnome/help/f-spot/C/figures
 @dirrm share/gnome/help/f-spot/C
 @dirrm share/gnome/help/f-spot
-@dirrm share/gnome/help
 @dirrm share/f-spot/icons/hicolor/scalable/status
 @dirrm share/f-spot/icons/hicolor/scalable/emblems
 @dirrm share/f-spot/icons/hicolor/scalable/apps
