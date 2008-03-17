@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/06/08 21:42:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/17 00:14:46 tnn2 Exp $
 #
 
-DISTNAME=	netwox-5.16.0-src
-PKGNAME=	netwox-5.16.0
+DISTNAME=	netwox-5.35.0-src
+PKGNAME=	netwox-5.35.0
 CATEGORIES=	security net
 MASTER_SITES=	http://www.laurentconstantin.com/common/netw/netwox/download/v5/
 EXTRACT_SUFX=	.tgz
@@ -16,10 +16,11 @@ HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./genemake
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-post-patch:
-	@${CP} ${WRKSRC}/config.dat ${WRKSRC}/config.dat.new
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' \
-		< ${WRKSRC}/config.dat.new > ${WRKSRC}/config.dat
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		config.dat
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

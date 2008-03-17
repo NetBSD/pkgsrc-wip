@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:32 rillig Exp $
+$NetBSD: distinfo,v 1.3 2008/03/17 00:14:46 tnn2 Exp $
 
-SHA1 (netwib-5.16.0-src.tgz) = 6ef8db0e581941e76a3fd6a7b2d9b027fd2ef6df
-RMD160 (netwib-5.16.0-src.tgz) = 77d34dcb80791edab1b520d7581dcd2a46702872
-Size (netwib-5.16.0-src.tgz) = 583359 bytes
-SHA1 (patch-aa) = b0c31d00ad97e73f9173cc0ee5ef2839203e8fe2
+SHA1 (netwib-5.35.0-src.tgz) = 88d6eefff13dff4919649912242e069e53acd007
+RMD160 (netwib-5.35.0-src.tgz) = d970c018b995a690a7eebdb1e91ad9a6dcfb3b2c
+Size (netwib-5.35.0-src.tgz) = 626164 bytes
