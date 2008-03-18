@@ -1,0 +1,5 @@
+distbb - distributed bulk build framework for pkgsrc
+
+Main features:
+   - different packages can be built on different machines or chroots
+   - ???
