@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2008/03/18 19:58:13 koifren Exp $
+
+To enable using System.Drawing or Windows.Forms, the folliwng packages
+will need to be installed:
+
+    libgdiplus  Implementation of the GDI+ API
+===========================================================================
