@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/16 10:21:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/18 00:53:15 tnn2 Exp $
 #
 
 DISTNAME=	nemo-0.2.1
@@ -19,5 +19,5 @@ USE_TOOLS+=	gmake msgfmt pkg-config
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

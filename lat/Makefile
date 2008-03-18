@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/17 09:20:47 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/18 00:51:48 tnn2 Exp $
 #
 
 DISTNAME=		lat-1.2.3
@@ -20,7 +20,7 @@ USE_DIRS+=		xdg-1.4 \
 
 PKGCONFIG_OVERRIDE+=	desktop/lat-plugins.pc.in
 
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
