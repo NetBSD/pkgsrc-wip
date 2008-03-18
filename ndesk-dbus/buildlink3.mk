@@ -1,21 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/03/17 21:16:08 koifren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/03/18 14:57:25 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-DBUS_SHARP_BUILDLINK3_MK:=	${DBUS_SHARP_BUILDLINK3_MK}+
+NDESK_DBUS_BUILDLINK3_MK:=	${NDESK_DBUS_BUILDLINK3_MK}+
 
 .if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	dbus-sharp
+BUILDLINK_DEPENDS+=	ndesk-dbus
 .endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndbus-sharp}
-BUILDLINK_PACKAGES+=	dbus-sharp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}dbus-sharp
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nndesk-dbus}
+BUILDLINK_PACKAGES+=	ndesk-dbus
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ndesk-dbus
 
-.if ${DBUS_SHARP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.dbus-sharp+=	dbus-sharp>=0.5.2
-BUILDLINK_PKGSRCDIR.dbus-sharp?=	../../wip/dbus-sharp
-.endif	# DBUS_SHARP_BUILDLINK3_MK
-
-.include "../../lang/mono/buildlink3.mk"
+.if ${NDESK_DBUS_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.ndesk-dbus+=	ndesk-dbus>=0.6.1a
+BUILDLINK_PKGSRCDIR.ndesk-dbus?=	../../wip/ndesk-dbus
+.endif	# NDESK_DBUS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
