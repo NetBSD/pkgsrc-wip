@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/17 18:57:48 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/18 00:18:32 hoka_adam Exp $
 #
 
 DISTNAME=		Firebird-2.0.3.12981-1
@@ -7,7 +7,7 @@ CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		nel@soraneko.com
+MAINTAINER=		nel@soraneko.com, adam.hoka@gmail.com
 HOMEPAGE=		http://www.firebirdsql.org/
 COMMENT=		SQL database, opensource version of InterBase
 
@@ -45,6 +45,10 @@ PKG_SHELL.${FBUSER}=    ${SH}
 
 PLIST_SUBST+=		FBHOME=${FBHOME}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
+
+FILES_SUBST+=		FBHOME=${FBHOME:Q}
+FILES_SUBST+=		FBUSER=${FBUSER:Q}
+FILES_SUBST+=		FBGROUP=${FBGROUP:Q}
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird/UDF \
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib/firebird \

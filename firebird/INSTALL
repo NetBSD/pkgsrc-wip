@@ -1,0 +1,38 @@
+FBHOME="@FBHOME@"
+FBUSER="@FBUSER@"
+FBGROUP="@FBGROUP@"
+
+case ${STAGE} in
+POST-INSTALL)
+
+cd ${PKG_PREFIX}/${FBHOME} || exit
+
+# Lock files
+
+echo $PWD
+
+for i in isc_init1 isc_lock1 isc_event1
+do
+       FileName=$i.`hostname`
+       touch $FileName
+       chmod ug=rw,o= $FileName || exit
+       chown ${FBUSER}:${FBGROUP} $FileName || exit
+done
+
+touch firebird.log
+chown ${FBUSER}:${FBGROUP} firebird.log || exit
+chmod ug=rw,o= firebird.log || exit
+chmod a=r firebird.msg || exit
+#chown root:wheel *.sample || exit
+chmod ug=r,o= *.sample || exit
+
+# make databases writable by firebird only
+# local database connections are not a good idea
+#chmod ug=rw,o= examples/*.fdb || exit
+#chmod ug=rw,o= help/*.fdb || exit
+
+# install the samples if they don't exist
+[ -f security2.fdb ] || install -o ${FBUSER} -g ${FBGROUP} -m 660 security2.fdb.sample security2.fdb
+
+	;;
+esac
