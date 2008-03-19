@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/19 20:20:11 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/19 20:36:41 asau Exp $
 
 DISTNAME=	mpich2-1.0.7rc1
 CATEGORIES=	parallel
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI-2 implementation from Univ. of Chicago
+
+CONFLICTS=	musicpd-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
