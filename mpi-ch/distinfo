@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/19 20:20:11 asau Exp $
+
+SHA1 (mpich2-1.0.7rc1.tar.gz) = f8ef59470e699f2afac1c813912a8eb816c1e957
+RMD160 (mpich2-1.0.7rc1.tar.gz) = 7eaf7c7d2af57acdf9fa973305ce9f7368b8bd75
+Size (mpich2-1.0.7rc1.tar.gz) = 16276275 bytes
+SHA1 (patch-aa) = e2f05565ac5a1e54f95bd238ade5551ebb5b2aca
+SHA1 (patch-ab) = 904c244fb3273dd1c38e0083c443f9a9c9d7e27e
