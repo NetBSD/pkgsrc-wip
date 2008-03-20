@@ -1,8 +1,6 @@
-# $NetBSD: options.mk,v 1.6 2008/03/11 05:27:38 tnn2 Exp $
+# $NetBSD: options.mk,v 1.7 2008/03/20 20:29:23 bsadewitz Exp $
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	# Added to below
-
-.include "../../mk/bsd.fast.prefs.mk"
 
 # Assembler code build configurations
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"

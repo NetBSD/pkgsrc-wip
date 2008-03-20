@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.11 2008/03/11 05:27:38 tnn2 Exp $
+# $NetBSD: Makefile.lib,v 1.12 2008/03/20 20:29:23 bsadewitz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -15,15 +15,17 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makedepend pkg-config
-#MAKE_JOBS_SAFE=		no
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
 
+COPTS?= 	 	# empty
+COPTS+= 	 	-prefer-pic 	# Make sure to build PIC libraries.
+
 MAKE_ENV+=		MAKE=${GMAKE:Q}
+MAKE_ENV+=		COPTS=${COPTS:M*:Q}
 
 .include "../../mk/compiler.mk"
-.include "../../mk/bsd.prefs.mk"
 
 MESA_HZ?=	100
 MAKE_ENV+=	MESA_HZ=${MESA_HZ:Q}

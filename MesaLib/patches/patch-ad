@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2008/03/03 04:19:54 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.5 2008/03/20 20:29:23 bsadewitz Exp $
 
 --- src/mesa/Makefile.orig	2007-12-03 14:00:21.000000000 -0500
 +++ src/mesa/Makefile
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.4 2008/03/03 04:19:54 bsadewitz Exp $
  .c.o:
 -	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
 +	$(LIBTOOL) --mode=compile --tag=CC \
-+	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $(@:.o=.lo)
++	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $(@:.o=.lo)
  
  .cpp.o:
 -	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
@@ -24,7 +24,7 @@ $NetBSD: patch-ad,v 1.4 2008/03/03 04:19:54 bsadewitz Exp $
  
  .S.o:
 +	$(LIBTOOL) --mode=compile --tag=CC \
- 	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
+ 	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $@
  
  
 @@ -51,13 +54,14 @@ beos: depend subdirs libmesa.a
