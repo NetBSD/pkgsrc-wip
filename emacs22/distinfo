@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/06/09 09:48:27 thomasklausner Exp $
-
-SHA1 (emacs-22.1.tar.gz) = 327664173eabe5db49d4e7e4a4b1794577af902e
-RMD160 (emacs-22.1.tar.gz) = da5360871db8b1d473ff7f0b0937ee6c278c0b19
-Size (emacs-22.1.tar.gz) = 38172226 bytes
