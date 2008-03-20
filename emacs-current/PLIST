@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2008/03/12 08:11:25 makoto Exp $
+@comment $NetBSD: PLIST,v 1.46 2008/03/20 13:26:43 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1148,6 +1148,8 @@ share/emacs/${PKGVERSION}/lisp/calendar/calendar.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/calendar.elc
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/diary-lib.elc
+share/emacs/${PKGVERSION}/lisp/calendar/diary-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/calendar/hol-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.el.gz
 share/emacs/${PKGVERSION}/lisp/calendar/holidays.elc
 share/emacs/${PKGVERSION}/lisp/calendar/icalendar.el.gz
@@ -2905,6 +2907,10 @@ share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.el.gz
