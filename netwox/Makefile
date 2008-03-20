@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/17 00:14:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/20 16:24:08 tnn2 Exp $
 #
 
 DISTNAME=	netwox-5.35.0-src
@@ -21,6 +21,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		config.dat
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-paths=		-e 's,/man$$,/${PKGMANDIR},g'
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
