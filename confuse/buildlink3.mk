@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/11/26 02:11:00 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/03/20 22:31:45 hoka_adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CONFUSE_BUILDLINK3_MK:=	${CONFUSE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	confuse
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}confuse
 
 .if ${CONFUSE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.confuse+=	confuse>=2.5
+BUILDLINK_API_DEPENDS.confuse+=	confuse>=2.6
 BUILDLINK_PKGSRCDIR.confuse?=	../../wip/confuse
 .endif	# CONFUSE_BUILDLINK3_MK
 
