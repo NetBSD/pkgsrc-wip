@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/18 00:51:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/20 04:16:30 tnn2 Exp $
 #
 
 DISTNAME=		lat-1.2.3
@@ -11,7 +11,7 @@ COMMENT=		LDAP Administration Tool written in Mono
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config perl gmake msgfmt
+USE_TOOLS+=		pkg-config gmake msgfmt intltool
 USE_LANGUAGES=		# empty -> its csharp
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
