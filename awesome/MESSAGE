@@ -1,12 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2007/12/03 17:49:25 hoka_adam Exp $
-
-To use awesome, you need an ~/.awesomerc file. You can use the example:
-
-  ${EGDIR}
+$NetBSD: MESSAGE,v 1.5 2008/03/21 15:48:54 hoka_adam Exp $
 
 WARNING:
-  If you upgrade awesome from 1.x, please replace your old config
-  with the example .awesomerc because the old one will not work!
+  If you upgrade from older versions, please backup your old config file
+  because it may be incompatible with the new format!
 
 ===========================================================================

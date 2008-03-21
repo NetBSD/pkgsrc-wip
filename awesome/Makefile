@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/12/20 22:13:40 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/21 15:48:54 hoka_adam Exp $
 #
 
-VERSION=		2.0
-DISTNAME=		awesome-${VERSION}
+DISTNAME=		awesome-2.2-rc4
+PKGNAME=		${DISTNAME:S/-rc/rc/}
 CATEGORIES=		wm
 MASTER_SITES=		http://awesome.naquadah.org/download/
 
@@ -10,28 +10,19 @@ MAINTAINER=		adam.hoka@gmail.com
 HOMEPAGE=		http://awesome.naquadah.org/
 COMMENT=		Tiling window manager based on dwm
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=		yes
+
 USE_LANGUAGES=		c99
 USE_TOOLS+=		pkg-config
 
 EGDIR=			${PREFIX}/share/examples/awesome
 MESSAGE_SUBST+=		EGDIR=${EGDIR}/awesomerc
 
-SUBST_CLASSES+=		man
-SUBST_FILES.man=	awesome.1
-SUBST_SED.man=		-e 's,VERSION,${VERSION},'
-SUBST_STAGE.man=	pre-install
-
-pre-install:
-	strip ${WRKDIR}/awesome
-	strip ${WRKDIR}/awesome-client
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/awesome ${PREFIX}/bin/awesome
-	${INSTALL_PROGRAM} ${WRKSRC}/awesome-client ${PREFIX}/bin/awesome-client
-#	${INSTALL_MAN} ${WRKSRC}/awesome.1 ${PREFIX}/${PKGMANDIR}/man1/awesome.1
-#
-# XXX Manpages are currently provided in an unacceptable form. 
-#
+BUILD_DEPENDS+= 	asciidoc>=8.2.5:../../textproc/asciidoc
+BUILD_DEPENDS+= 	xmlto>=0.0.18:../../textproc/xmlto
+BUILD_DEPENDS+= 	docbook-xsl>=1.73.2:../../textproc/docbook-xsl
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
