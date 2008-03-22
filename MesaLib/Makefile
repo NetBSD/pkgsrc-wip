@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/20 20:29:23 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/22 02:41:16 tnn2 Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 COMMENT=	Graphics library similar to SGI's OpenGL
@@ -8,8 +8,10 @@ MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h glx_mangle.h \
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
-    ${MACHINE_ARGH} == "alpha" 
+    ${MACHINE_ARCH} == "alpha" 
 CFLAGS+= 	-D__GLX_ALIGN64
 .endif
 
