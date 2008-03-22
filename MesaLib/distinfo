@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2008/03/20 20:29:23 bsadewitz Exp $
+$NetBSD: distinfo,v 1.11 2008/03/22 14:32:59 tnn2 Exp $
 
 SHA1 (Mesa-7.0.3-rc2/MesaDemos-7.0.3-rc2.tar.gz) = 4b37c831a602724c22e65e3d830ecb36cb8ebb6a
 RMD160 (Mesa-7.0.3-rc2/MesaDemos-7.0.3-rc2.tar.gz) = b97c8f56914176ae2f777ebcefde1149265c60c4
@@ -12,18 +12,18 @@ Size (Mesa-7.0.3-rc2/MesaLib-7.0.3-rc2.tar.gz) = 4476164 bytes
 SHA1 (patch-aa) = 6db543357cfe41fe1ab1fc16d823ff61d3e8646b
 SHA1 (patch-ab) = ab6c3eb50f2e8091aeca30f92f55e02661c099e9
 SHA1 (patch-ac) = ed3ec49ea2aacf231bbcb38093f3dc01a0cb2468
-SHA1 (patch-ad) = fa96844b1350945fa2af81905f85d06c771e5695
+SHA1 (patch-ad) = 8b0bb7cf68b9ab79fc67bd5ddb2ca4acd37babb7
 SHA1 (patch-ae) = e1c37a279cf3fc78d7eb43e392abbb40d3419a5f
-SHA1 (patch-af) = 37d1fd728265ebdf71e535d1be8528d9dc878215
-SHA1 (patch-ag) = 3adab21850bae2bdc690033a90cba066bb98c01c
-SHA1 (patch-ah) = 8c425be63d9ef9ea32c9ad763a02d3a9318a57b1
-SHA1 (patch-ai) = 3135f32328314b5b9bacf4de4d0352f2c525d3a4
+SHA1 (patch-af) = da03d949c3105bc548b4c6c762e8a787a995aa94
+SHA1 (patch-ag) = 9010c8c90a43a37bbc5766957e25536ac67e55b5
+SHA1 (patch-ah) = 3e60a700697f200fb2819f9270a37ad4a5cfa695
+SHA1 (patch-ai) = 171a27e6e4a5ed92c6c2355283179e2091031a79
 SHA1 (patch-aj) = 124bcd7b8e55113a0cdfd017dcf250d5c29aed68
 SHA1 (patch-ak) = 74a1ffa426de7720a771c1d94aecb7bde17fd26c
 SHA1 (patch-al) = b734af278352de120b704025ff2e9ac127e5ec7f
 SHA1 (patch-am) = 744f13b6a2fc79746bcacecf11461e78de7bf1ef
 SHA1 (patch-an) = ab1a5606226198b25e43920a48d0985b69f865c2
 SHA1 (patch-ao) = d5086862fb820c2f79966a41712ce056fdc25f44
-SHA1 (patch-at) = 6d09db63e8d58b3841970765f0033e250c9ac7f8
+SHA1 (patch-at) = 4b3d95a116734ad8951816e042b497f638c4cf6b
 SHA1 (patch-au) = 6ce0d6236e5fb9f53db3bcb388b328ab0e132907
 SHA1 (patch-cb) = 35fac1854877361a60293daf9a5a1f88a64d5b00

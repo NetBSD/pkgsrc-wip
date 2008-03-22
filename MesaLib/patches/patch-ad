@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2008/03/20 20:29:23 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.6 2008/03/22 14:32:59 tnn2 Exp $
 
---- src/mesa/Makefile.orig	2007-12-03 14:00:21.000000000 -0500
+--- src/mesa/Makefile.orig	2007-12-03 20:00:21.000000000 +0100
 +++ src/mesa/Makefile
-@@ -8,18 +8,21 @@ include sources
+@@ -8,19 +8,22 @@ include sources
  
  GL_MAJOR = 1
  GL_MINOR = 5
@@ -23,10 +23,12 @@ $NetBSD: patch-ad,v 1.5 2008/03/20 20:29:23 bsadewitz Exp $
 +	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $(@:.o=.lo)
  
  .S.o:
+-	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
 +	$(LIBTOOL) --mode=compile --tag=CC \
- 	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $@
++	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $(@:.o=.lo)
  
  
+ # Figure out what to make here
 @@ -51,13 +54,14 @@ beos: depend subdirs libmesa.a
  # Linux DRI drivers
  
