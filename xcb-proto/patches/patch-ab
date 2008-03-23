@@ -1,0 +1,190 @@
+$NetBSD: patch-ab,v 1.1 2008/03/23 19:00:16 bsadewitz Exp $
+
+--- src/xproto.xml.orig	2008-03-23 14:56:55.000000000 -0400
++++ src/xproto.xml
+@@ -27,36 +27,36 @@ authorization from the authors.
+ -->
+ <xcb header="xproto">
+   <!-- Core protocol types -->
+-  
++ 
+   <struct name="CHAR2B">
+     <field type="CARD8" name="byte1" />
+     <field type="CARD8" name="byte2" />
+   </struct>
+-  
++ 
+   <xidtype name="WINDOW" />
+-  
++ 
+   <xidtype name="PIXMAP" />
+-  
++ 
+   <xidtype name="CURSOR" />
+-  
++ 
+   <xidtype name="FONT" />
+-  
++ 
+   <xidtype name="GCONTEXT" />
+-  
++ 
+   <xidtype name="COLORMAP" />
+-  
++ 
+   <xidtype name="ATOM" />
+-  
++ 
+   <xidunion name="DRAWABLE">
+     <type>WINDOW</type>
+     <type>PIXMAP</type>
+   </xidunion>
+-  
++ 
+   <xidunion name="FONTABLE">
+     <type>FONT</type>
+     <type>GCONTEXT</type>
+   </xidunion>
+-  
++ 
+   <typedef oldname="CARD32" newname="VISUALID" />
+ 
+   <typedef oldname="CARD32" newname="TIMESTAMP" />
+@@ -225,7 +225,7 @@ authorization from the authors.
+   </struct>
+ 
+   <!-- Core event types -->
+-  
++ 
+   <enum name="ModMask">
+     <item name="Shift">  <bit>0</bit></item>
+     <item name="Lock">   <bit>1</bit></item>
+@@ -635,7 +635,7 @@ authorization from the authors.
+     <item name="Colormap">        <bit>13</bit></item>
+     <item name="Cursor">          <bit>14</bit></item>
+   </enum>
+-  
++ 
+   <enum name="BackPixmap">
+     <item name="None">          <value>0</value></item>
+     <item name="ParentRelative"><value>1</value></item>
+@@ -715,7 +715,7 @@ authorization from the authors.
+                 value-mask-name="value_mask"
+                 value-list-name="value_list" />
+   </request>
+-  
++ 
+   <enum name="MapState">
+     <item name="Unmapped">  <value>0</value></item>
+     <item name="Unviewable"><value>1</value></item>
+@@ -753,7 +753,7 @@ authorization from the authors.
+     <pad bytes="1" />
+     <field type="WINDOW" name="window" />
+   </request>
+-  
++ 
+   <enum name="SetMode">
+     <item name="Insert"><value>0</value></item>
+     <item name="Delete"><value>1</value></item>
+@@ -791,7 +791,7 @@ authorization from the authors.
+     <pad bytes="1" />
+     <field type="WINDOW" name="window" />
+   </request>
+-  
++ 
+   <enum name="ConfigWindow">
+     <item name="X">          <bit>0</bit></item>
+     <item name="Y">          <bit>1</bit></item>
+@@ -801,7 +801,7 @@ authorization from the authors.
+     <item name="Sibling">    <bit>5</bit></item>
+     <item name="StackMode">  <bit>6</bit></item>
+   </enum>
+-  
++ 
+   <enum name="StackMode">
+     <item name="Above">   <value>0</value></item>
+     <item name="Below">   <value>1</value></item>
+@@ -882,7 +882,7 @@ authorization from the authors.
+       </list>
+     </reply>
+   </request>
+-  
++ 
+   <enum name="PropMode">
+     <item name="Replace"><value>0</value></item>
+     <item name="Prepend"><value>1</value></item>
+@@ -913,7 +913,7 @@ authorization from the authors.
+     <field type="WINDOW" name="window" />
+     <field type="ATOM" name="property" />
+   </request>
+-  
++ 
+   <enum name="GetPropertyType">
+     <item name="Any"><value>0</value></item>
+   </enum>
+@@ -1366,7 +1366,7 @@ authorization from the authors.
+     <pad bytes="1" />
+     <field type="PIXMAP" name="pixmap" />
+   </request>
+-  
++ 
+   <enum name="GC">
+     <item name="Function">          <bit>0</bit></item>
+     <item name="PlaneMask">         <bit>1</bit></item>
+@@ -1543,7 +1543,7 @@ authorization from the authors.
+     <field type="CARD16" name="height" />
+     <field type="CARD32" name="bit_plane" />
+   </request>
+-  
++ 
+   <enum name="CoordMode">
+     <item name="Origin">  <value>0</value></item>
+     <item name="Previous"><value>1</value></item>
+@@ -1625,7 +1625,7 @@ authorization from the authors.
+     <field type="GCONTEXT" name="gc" />
+     <list type="ARC" name="arcs" />
+   </request>
+-  
++ 
+   <enum name="ImageFormat">
+     <item name="XYBitmap"><value>0</value></item>
+     <item name="XYPixmap"><value>1</value></item>
+@@ -1849,7 +1849,7 @@ authorization from the authors.
+     <field type="BYTE" name="flags" />
+     <pad bytes="1" />
+   </struct>
+-  
++ 
+   <request name="StoreColors" opcode="89" combine-adjacent="true">
+     <pad bytes="1" />
+     <field type="COLORMAP" name="cmap" />
+@@ -1954,7 +1954,7 @@ authorization from the authors.
+   <enum name="QueryShapeOf">
+     <item name="LargestCursor"> <value>0</value></item>
+     <item name="FastestTile">   <value>1</value></item>
+-    <item name="FastestStipple"><value>2</value></item>    
++    <item name="FastestStipple"><value>2</value></item>   
+   </enum>
+ 
+   <request name="QueryBestSize" opcode="97">
+@@ -2014,10 +2014,7 @@ authorization from the authors.
+       <field type="BYTE" name="keysyms_per_keycode" />
+       <pad bytes="24" />
+       <list type="KEYSYM" name="keysyms">
+-        <op op="*">
+-          <fieldref>length</fieldref>
+-          <value>4</value>
+-        </op>
++        <fieldref>length</fieldref>
+       </list>
+     </reply>
+   </request>
+@@ -2235,7 +2232,7 @@ authorization from the authors.
+       </list>
+     </reply>
+   </request>
+-  
++ 
+   <enum name="MapIndex">
+     <item name="Shift">  <value>0</value></item>
+     <item name="Lock">   <value>1</value></item>

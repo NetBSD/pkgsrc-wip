@@ -1,0 +1,73 @@
+$NetBSD: patch-ac,v 1.1 2008/03/23 19:00:16 bsadewitz Exp $
+
+--- src/xv.xml.orig	2008-03-23 14:57:25.000000000 -0400
++++ src/xv.xml
+@@ -36,11 +36,11 @@ authorization from the authors.
+     <xidtype name="ENCODING" />
+ 
+     <enum name="Type">
+-        <item name="InputMask"><value>0x00000001</value></item>
+-        <item name="OutputMask"><value>0x00000002</value></item>
+-        <item name="VideoMask"><value>0x00000004</value></item>
+-        <item name="StillMask"><value>0x00000008</value></item>
+-        <item name="ImageMask"><value>0x00000010</value></item>
++        <item name="InputMask"><bit>0</bit></item>
++        <item name="OutputMask"><bit>1</bit></item>
++        <item name="VideoMask"><bit>2</bit></item>
++        <item name="StillMask"><bit>3</bit></item>
++        <item name="ImageMask"><bit>4</bit></item>
+     </enum>
+ 
+     <enum name="ImageFormatInfoType">
+@@ -54,10 +54,10 @@ authorization from the authors.
+     </enum>
+ 
+     <enum name="AttributeFlag">
+-        <item name="Gettable"><value>0x01</value></item>
+-        <item name="Settable"><value>0x02</value></item>
++        <item name="Gettable"><bit>0</bit></item>
++        <item name="Settable"><bit>1</bit></item>
+     </enum>
+-    
++   
+     <struct name="Rational">
+         <field type="INT32" name="numerator" />
+         <field type="INT32" name="denominator" />
+@@ -116,7 +116,7 @@ authorization from the authors.
+         </list>
+         <!-- Some XPointer "obdata" for SHM use-->
+     </struct>
+-    
++   
+     <struct name="AttributeInfo">
+         <field type="CARD32" name="flags" />
+         <field type="INT32" name="min" />
+@@ -187,8 +187,8 @@ authorization from the authors.
+         <field type="ATOM" name="attribute" />
+         <field type="INT32" name="value" />
+     </event>
+-    
+-    
++   
++   
+     <!-- Requests -->
+     <request name="QueryExtension" opcode="0">
+         <reply>
+@@ -306,7 +306,7 @@ authorization from the authors.
+     </request>
+ 
+     <request name="SelectPortNotify" opcode="11">
+-        <field type="DRAWABLE" name="drawable" />
++        <field type="PORT" name="port" />
+         <field type="BOOL" name="onoff" />
+     </request>
+ 
+@@ -402,7 +402,7 @@ authorization from the authors.
+         <field type="CARD16" name="drw_h" />
+         <field type="CARD16" name="width" />
+         <field type="CARD16" name="height" />
+-	<list type="CARD8" name="data" />
++        <list type="CARD8" name="data" />
+     </request>
+ 
+     <request name="ShmPutImage" opcode="19">
