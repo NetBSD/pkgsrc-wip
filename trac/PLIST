@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 08:00:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/23 02:37:43 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -78,7 +78,6 @@ ${PYSITELIB}/trac/env.pyo
 ${PYSITELIB}/trac/htdocs/README
 ${PYSITELIB}/trac/htdocs/asc.png
 ${PYSITELIB}/trac/htdocs/attachment.png
-${PYSITELIB}/trac/htdocs/basic-workflow.png
 ${PYSITELIB}/trac/htdocs/changeset.png
 ${PYSITELIB}/trac/htdocs/closedticket.png
 ${PYSITELIB}/trac/htdocs/collapsed.png
@@ -111,6 +110,8 @@ ${PYSITELIB}/trac/htdocs/extlink.gif
 ${PYSITELIB}/trac/htdocs/feed.png
 ${PYSITELIB}/trac/htdocs/file.png
 ${PYSITELIB}/trac/htdocs/folder.png
+${PYSITELIB}/trac/htdocs/guide/basic-workflow.png
+${PYSITELIB}/trac/htdocs/guide/original-workflow.png
 ${PYSITELIB}/trac/htdocs/ics.png
 ${PYSITELIB}/trac/htdocs/imggrid.png
 ${PYSITELIB}/trac/htdocs/js/blame.js
@@ -128,7 +129,6 @@ ${PYSITELIB}/trac/htdocs/loading.gif
 ${PYSITELIB}/trac/htdocs/lock-locked.png
 ${PYSITELIB}/trac/htdocs/milestone.png
 ${PYSITELIB}/trac/htdocs/newticket.png
-${PYSITELIB}/trac/htdocs/original-workflow.png
 ${PYSITELIB}/trac/htdocs/parent.png
 ${PYSITELIB}/trac/htdocs/python.png
 ${PYSITELIB}/trac/htdocs/topbar_gradient.png
@@ -483,6 +483,7 @@ ${PYSITELIB}/trac/wiki/default-pages/TracInterfaceCustomization
 ${PYSITELIB}/trac/wiki/default-pages/TracLinks
 ${PYSITELIB}/trac/wiki/default-pages/TracLogging
 ${PYSITELIB}/trac/wiki/default-pages/TracModPython
+${PYSITELIB}/trac/wiki/default-pages/TracNavigation
 ${PYSITELIB}/trac/wiki/default-pages/TracNotification
 ${PYSITELIB}/trac/wiki/default-pages/TracPermissions
 ${PYSITELIB}/trac/wiki/default-pages/TracPlugins
@@ -544,6 +545,7 @@ share/examples/trac/bugzilla2trac.py
 share/examples/trac/checkwiki.py
 share/examples/trac/emailfilter.py
 share/examples/trac/htdigest.py
+share/examples/trac/htpasswd.py
 share/examples/trac/migrateticketmodel.py
 share/examples/trac/rpm/installscript
 share/examples/trac/rpm/makerpm
