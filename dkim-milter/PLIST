@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/03/08 11:16:28 jukka Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/03/23 13:06:53 jukka Exp $
 ${WITH_ARLIB}lib/libar.a
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
@@ -23,7 +23,7 @@ share/doc/dkim-milter/draft-hoffman-dac-vbr-02.txt
 share/doc/dkim-milter/draft-ietf-dkim-deployment-01.txt
 share/doc/dkim-milter/draft-ietf-dkim-overview-09.txt
 share/doc/dkim-milter/draft-ietf-dkim-ssp-03.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-12.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-14.txt
 share/doc/dkim-milter/rfc4686.txt
 share/doc/dkim-milter/rfc4871.txt
 share/doc/dkim-milter/rfc5016.txt
