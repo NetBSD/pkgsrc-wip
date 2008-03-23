@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2008/03/22 14:02:17 koifren Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/23 21:36:46 koifren Exp $
 
-DISTNAME=	packman-0.0.6
+DISTNAME=	packman-0.0.7
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://kefren.ngnetworks.ro/
 
