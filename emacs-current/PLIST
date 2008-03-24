@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2008/03/20 13:26:43 makoto Exp $
+@comment $NetBSD: PLIST,v 1.47 2008/03/24 05:10:42 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2474,6 +2474,18 @@ share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
+share/emacs/${PKGVERSION}/lisp/org/org-export-latex.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-export-latex.elc
+share/emacs/${PKGVERSION}/lisp/org/org-irc.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-irc.elc
+share/emacs/${PKGVERSION}/lisp/org/org-mac-message.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-mac-message.elc
+share/emacs/${PKGVERSION}/lisp/org/org-mouse.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-mouse.elc
+share/emacs/${PKGVERSION}/lisp/org/org-publish.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-publish.elc
+share/emacs/${PKGVERSION}/lisp/org/org.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org.elc
 share/emacs/${PKGVERSION}/lisp/outline.el.gz
 share/emacs/${PKGVERSION}/lisp/outline.elc
 share/emacs/${PKGVERSION}/lisp/paren.el.gz
@@ -2905,18 +2917,6 @@ share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/org.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/org.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/page-ext.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/page-ext.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/page.el.gz
