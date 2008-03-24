@@ -1,6 +1,6 @@
-# $NetBSD: pkgsrc-dri-x86_64,v 1.2 2008/03/11 05:27:38 tnn2 Exp $
+# $NetBSD: pkgsrc-dri-x86_64,v 1.3 2008/03/24 21:04:09 bsadewitz Exp $
 
-include $(TOP)/configs/pkgsrc-dri
+include $(TOP)/configs/pkgsrc-dri$(MESA_CONFIG_SUFX)
 
 CONFIG_NAME=	pkgsrc-dri-x86_64
 

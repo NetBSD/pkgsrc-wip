@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.12 2008/03/20 20:29:23 bsadewitz Exp $
+# $NetBSD: Makefile.lib,v 1.13 2008/03/24 21:04:09 bsadewitz Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -21,6 +21,12 @@ DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
 
 COPTS?= 	 	# empty
 COPTS+= 	 	-prefer-pic 	# Make sure to build PIC libraries.
+
+.if ${PKG_BUILD_OPTIONS.libX11:Mxcb} != ""
+MAKE_ENV+=		USE_XCB=yes
+.else
+MAKE_ENV+=		USE_XCB=no
+.endif
 
 MAKE_ENV+=		MAKE=${GMAKE:Q}
 MAKE_ENV+=		COPTS=${COPTS:M*:Q}

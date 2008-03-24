@@ -1,11 +1,15 @@
-# $NetBSD: pkgsrc,v 1.4 2008/03/11 05:27:38 tnn2 Exp $
+# $NetBSD: pkgsrc,v 1.5 2008/03/24 21:04:09 bsadewitz Exp $
 
 include $(TOP)/configs/default
 
+ifeq ($(USE_XCB), yes)
+include $(TOP)/configs/xcb-defs
+endif
+
 CONFIG_NAME=	pkgsrc
 
-DEFINES=	-DPTHREADS -DUSE_XSHM -DHZ=$(MESA_HZ)
-X11_INCLUDES=	-I$(X11BASE)/include
+DEFINES=	-DPTHREADS -DUSE_XSHM -DHZ=$(MESA_HZ) $(XCB_DEFS)
+X11_INCLUDES=	-I$(X11BASE)/include $(XCB_X11_INCLUDES)
 
 CFLAGS+=	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
 		$(DEFINES) $(X11_INCLUDES)
@@ -16,7 +20,7 @@ LIBTOOL?=	libtool
 
 GLUT_CFLAGS=	-fexceptions # XXX gcc
 GL_LIB_DEPS=\
-	$(EXTRA_LIB_PATH) -lX11 -lXext -lm $(PTHREAD_STUBLIB)
+	$(EXTRA_LIB_PATH) -lX11 $(XCB_GL_LIB_DEPS) -lXext -lm $(PTHREAD_STUBLIB)
 OSMESA_LIB_DEPS=\
 	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la
 GLU_LIB_DEPS=\

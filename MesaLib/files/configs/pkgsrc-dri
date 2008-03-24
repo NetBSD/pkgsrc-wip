@@ -1,13 +1,17 @@
-# $NetBSD: pkgsrc-dri,v 1.3 2008/03/20 20:29:23 bsadewitz Exp $
+# $NetBSD: pkgsrc-dri,v 1.4 2008/03/24 21:04:09 bsadewitz Exp $
 
 include $(TOP)/configs/pkgsrc
+
+ifeq ($(USE_XCB), yes)
+include $(TOP)/configs/xcb-defs
+endif
 
 CONFIG_NAME= 	pkgsrc-dri
 
 DEFINES=\
 	-DPTHREADS -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER \
 	-DGLX_DIRECT_RENDERING -DGLX_INDIRECT_RENDERING \
-	-DHAVE_ALIAS -D_REENTRANT
+	-DHAVE_ALIAS -D_REENTRANT $(XCB_DEFS)
 CFLAGS+=\
 	$(WARN_FLAGS) -Wmissing-prototypes -Wall \
 	$(ASM_FLAGS) $(X11_INCLUDES)
@@ -25,7 +29,8 @@ DRI_LIB_DEPS?=\
 	-lm -lexpat -ldrm
 GL_LIB_DEPS=\
 	-lX11 -lXext -lXxf86vm -lXdamage \
-	-lXfixes -lm $(LIBDRM_LIB)
+	-lXfixes -lm $(LIBDRM_LIB) \
+	$(XCB_GL_LIB_DEPS)
 
 SRC_DIRS=	glx/x11 mesa glw
 DRIVER_DIRS=	dri
