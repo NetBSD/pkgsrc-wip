@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/12 21:24:51 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/24 20:43:54 shattered Exp $
 
 DISTNAME=	alphamail-1.0.44
 PKGREVISION=	1
@@ -33,7 +33,7 @@ DEPENDS+=	p5-Encode-IMAPUTF7>=1.00:../../wip/p5-Encode-IMAPUTF7
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
-# NetBSD 4.0 make segfaults at install time
+# NetBSD 4.0 make segfaults at install time -- PR 37684?
 USE_TOOLS+=	gmake
 PTHREAD_AUTO_VARS=	yes
 
