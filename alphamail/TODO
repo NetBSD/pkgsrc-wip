@@ -1,4 +1,2 @@
 - requires modified www/p5-Apache-AuthCookie (one that depends on apache 2)
 - NetBSD 4.0 make crashes at install time; use GNU make 
-- diagnose https://sourceforge.net/tracker/?func=detail&atid=904932&aid=1802558&group_id=183361
-
