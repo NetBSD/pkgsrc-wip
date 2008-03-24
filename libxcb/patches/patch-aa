@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/03/24 21:09:00 bsadewitz Exp $
+
+--- configure.ac.orig	2007-11-04 18:17:11.000000000 -0500
++++ configure.ac
+@@ -31,7 +31,7 @@ AC_SUBST(HTML_CHECK_RESULT)
+ 
+ # Checks for pkg-config packages
+ PKG_CHECK_MODULES(XCBPROTO, xcb-proto >= 1.1)
+-NEEDED="pthread-stubs xau >= 0.99.2"
++NEEDED="xau >= 0.99.2"
+ PKG_CHECK_MODULES(NEEDED, $NEEDED)
+ 
+ have_xdmcp="no"

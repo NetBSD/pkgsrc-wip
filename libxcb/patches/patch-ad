@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2008/03/24 21:09:00 bsadewitz Exp $
+
+--- xcb.pc.in.orig	2006-11-24 05:42:54.000000000 -0500
++++ xcb.pc.in
+@@ -8,5 +8,5 @@ Description: X-protocol C Binding
+ Version: @PACKAGE_VERSION@
+ Requires.private: @NEEDED@
+ Libs: -L${libdir} -lxcb
+-Libs.private: @LIBS@
+-Cflags: -I${includedir}
++Libs.private: @LIBS@ @XTHREADLIB@
++Cflags: -I${includedir} @XTHREAD_CFLAGS@
