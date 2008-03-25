@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/03/14 20:37:53 netcap Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/03/25 15:13:20 thomasklausner Exp $
 bin/audacious
 bin/audtool
 include/audacious/audctrl.h
@@ -43,8 +43,8 @@ lib/libaudclient.so.1.0.0
 lib/libaudid3tag.so
 lib/libaudid3tag.so.1
 lib/libaudid3tag.so.1.0.0
-lib/pkgconfig/audacious.${LOWER_VENDOR}
-lib/pkgconfig/audclient.${LOWER_VENDOR}
+lib/pkgconfig/audacious.pc
+lib/pkgconfig/audclient.pc
 man/man1/audacious.1
 man/man1/audtool.1
 share/applications/audacious.desktop
