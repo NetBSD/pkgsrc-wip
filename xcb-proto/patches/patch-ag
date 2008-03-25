@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2008/03/25 20:50:15 bsadewitz Exp $
+
+--- src/xproto.xml.orig	2006-11-20 04:59:48.000000000 -0500
++++ src/xproto.xml
+@@ -2014,10 +2014,7 @@ authorization from the authors.
+       <field type="BYTE" name="keysyms_per_keycode" />
+       <pad bytes="24" />
+       <list type="KEYSYM" name="keysyms">
+-        <op op="*">
+-          <fieldref>length</fieldref>
+-          <value>4</value>
+-        </op>
++        <fieldref>length</fieldref>
+       </list>
+     </reply>
+   </request>

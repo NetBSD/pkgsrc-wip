@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/25 14:32:05 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/25 20:50:15 bsadewitz Exp $
 lib/pkgconfig/xcb-proto.pc
 share/xcb/bigreq.xml
 share/xcb/composite.xml
@@ -19,8 +19,10 @@ share/xcb/xevie.xml
 share/xcb/xf86dri.xml
 share/xcb/xfixes.xml
 share/xcb/xinerama.xml
+share/xcb/xinput.xml
 share/xcb/xprint.xml
 share/xcb/xproto.xml
+share/xcb/xselinux.xml
 share/xcb/xtest.xml
 share/xcb/xv.xml
 share/xcb/xvmc.xml
