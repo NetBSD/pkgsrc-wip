@@ -1,0 +1,36 @@
+$NetBSD: patch-ae,v 1.1 2008/03/25 20:51:34 bsadewitz Exp $
+
+--- src/xcb_auth.c.orig	2006-11-24 05:42:54.000000000 -0500
++++ src/xcb_auth.c
+@@ -93,6 +93,7 @@ static Xauth *get_authptr(struct sockadd
+     family = FamilyLocal; /* 256 */
+     switch(sockname->sa_family)
+     {
++#ifdef AF_INET6
+     case AF_INET6:
+         addr = (char *) SIN6_ADDR(sockname);
+         addrlen = sizeof(*SIN6_ADDR(sockname));
+@@ -104,6 +105,7 @@ static Xauth *get_authptr(struct sockadd
+         }
+         addr += 12;
+         /* if v4-mapped, fall through. */
++#endif
+     case AF_INET:
+         if(!addr)
+             addr = (char *) &((struct sockaddr_in *)sockname)->sin_addr;
+@@ -179,6 +181,7 @@ static int compute_auth(xcb_auth_info_t 
+ 	    APPEND(info->data, j, si->sin_port);
+ 	}
+ 	break;
++#ifdef AF_INET6
+         case AF_INET6:
+             /*block*/ {
+             struct sockaddr_in6 *si6 = (struct sockaddr_in6 *) sockname;
+@@ -199,6 +202,7 @@ static int compute_auth(xcb_auth_info_t 
+             }
+         }
+         break;
++#endif
+         case AF_UNIX:
+             /*block*/ {
+ 	    uint32_t fakeaddr = htonl(0xffffffff - next_nonce());
