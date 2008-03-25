@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/03/24 21:08:59 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/25 20:49:06 bsadewitz Exp $
 #
 
 DISTNAME=	libxcb-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config automake
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 CONFIGURE_ARGS+=	--disable-doxygen
@@ -52,20 +52,35 @@ BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.1
 
 .include "../../mk/pthread.buildlink3.mk"
 
+###
+### XXX Adding this here for redundancy--it very well may not be necessary.
+###	However, I don't think it could hurt much.  We don't include
+###	PTHREAD_CFLAGS because it could be -pthread.  My intention here
+###	is mainly to pass down the appropriate flags should something
+###	go awry.
+###
 XTHREADLIB=${${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}:L:M*}
 
 .if empty(PTHREAD_CPPFLAGS)
-XTHREAD_CFLAGS=	-D_REENTRANT
+XTHREAD_CFLAGS=	-D_REENTRANT 		# XXX Is this OK?
 .else
-XTHREAD_CFLAGS=	${PTHREAD_CFLAGS}
+XTHREAD_CPPFLAGS=	${PTHREAD_CPPFLAGS}
 .endif
 
 SUBST_CLASSES+=		pc
 SUBST_FILES.pc=		xcb.pc.in
 SUBST_MESSAGE.pc=	Configuring threading in xcb.pc.in.
 SUBST_STAGE.pc=		pre-configure
-SUBST_VARS.pc=		XTHREADLIB XTHREAD_CFLAGS
+SUBST_VARS.pc=		XTHREADLIB XTHREAD_CPPFLAGS
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -v -i -f
+
+###
+### XXX needed to build from scratch, but we're patching right now
+###	so it's not needed (nor should it ever be, really).
+###
+#.include "../../devel/gperf/buildlink3.mk"
 .include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"

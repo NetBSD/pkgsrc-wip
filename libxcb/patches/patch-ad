@@ -1,12 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2008/03/24 21:09:00 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.2 2008/03/25 20:49:06 bsadewitz Exp $
 
---- xcb.pc.in.orig	2006-11-24 05:42:54.000000000 -0500
-+++ xcb.pc.in
-@@ -8,5 +8,5 @@ Description: X-protocol C Binding
- Version: @PACKAGE_VERSION@
- Requires.private: @NEEDED@
- Libs: -L${libdir} -lxcb
--Libs.private: @LIBS@
--Cflags: -I${includedir}
-+Libs.private: @LIBS@ @XTHREADLIB@
-+Cflags: -I${includedir} @XTHREAD_CFLAGS@
+--- src/c-client.xsl.orig	2007-11-04 20:13:32.000000000 -0500
++++ src/c-client.xsl
+@@ -407,6 +407,8 @@ authorization from the authors.
+         <doc> * The parameter @p e supplied to this function must be NULL if</doc>
+         <doc> * <xsl:value-of select="xcb:xcb-prefix(@name)" />_unchecked(). is used.</doc>
+         <doc> * Otherwise, it stores the error if any.</doc>
++        <doc> *</doc>
++        <doc> * The returned value must be freed by the caller using free().</doc>
+         <doc> */</doc>
+         <field type="xcb_connection_t *" name="c" />
+         <field name="cookie">

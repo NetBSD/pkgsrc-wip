@@ -1,13 +1,354 @@
-$NetBSD: patch-ac,v 1.1 2008/03/24 21:09:00 bsadewitz Exp $
+$NetBSD: patch-ac,v 1.2 2008/03/25 20:49:06 bsadewitz Exp $
 
---- configure.orig	2007-11-04 20:30:20.000000000 -0500
-+++ configure
-@@ -20302,7 +20302,7 @@ else
- echo "${ECHO_T}yes" >&6; }
- 	:
- fi
--NEEDED="pthread-stubs xau >= 0.99.2"
-+NEEDED="xau >= 0.99.2"
+--- src/Makefile.am.orig	2006-11-24 05:42:54.000000000 -0500
++++ src/Makefile.am
+@@ -1,98 +1,15 @@
+ lib_LTLIBRARIES = libxcb.la \
+-                  libxcb-xlib.la \
+-                  libxcb-composite.la \
+-                  libxcb-damage.la \
+-                  libxcb-dpms.la \
+-                  libxcb-glx.la \
+-                  libxcb-randr.la \
+-                  libxcb-record.la \
+-                  libxcb-render.la \
+-                  libxcb-res.la \
+-                  libxcb-screensaver.la \
+-                  libxcb-shape.la \
+-                  libxcb-shm.la \
+-                  libxcb-sync.la \
+-                  libxcb-xevie.la \
+-                  libxcb-xf86dri.la \
+-                  libxcb-xfixes.la \
+-		  libxcb-xinerama.la \
+-                  libxcb-xprint.la \
+-                  libxcb-xtest.la \
+-                  libxcb-xv.la \
+-                  libxcb-xvmc.la
++                  libxcb-xlib.la
  
- pkg_failed=no
- { echo "$as_me:$LINENO: checking for NEEDED" >&5
+ EXTHEADERS =	xproto.h \
+ 		bigreq.h \
+-		composite.h \
+-		damage.h \
+-		dpms.h \
+-		glx.h \
+-		randr.h \
+-		record.h \
+-		render.h \
+-		res.h \
+-		screensaver.h \
+-		shape.h \
+-		shm.h \
+-		sync.h \
+-		xc_misc.h \
+-		xevie.h \
+-		xf86dri.h \
+-		xfixes.h \
+-		xinerama.h \
+-		xprint.h \
+-		xtest.h \
+-		xv.h \
+-		xvmc.h
++		xc_misc.h
+ EXTSOURCES =	xproto.c \
+ 		bigreq.c \
+-		composite.c \
+-		damage.c \
+-		dpms.c \
+-		glx.c \
+-		randr.c \
+-		record.c \
+-		render.c \
+-		res.c \
+-		screensaver.c \
+-		shape.c \
+-		shm.c \
+-		sync.c \
+-		xc_misc.c \
+-		xevie.c \
+-		xf86dri.c \
+-		xfixes.c \
+-		xinerama.c \
+-		xprint.c \
+-		xtest.c \
+-		xv.c \
+-		xvmc.c
++		xc_misc.c
+ EXTENSION_XML = xproto.xml \
+ 		bigreq.xml \
+-		composite.xml \
+-		damage.xml \
+-		dpms.xml \
+-		glx.xml \
+-		randr.xml \
+-		record.xml \
+-		render.xml \
+-		res.xml \
+-		screensaver.xml \
+-		shape.xml \
+-		shm.xml \
+-		sync.xml \
+-		xc_misc.xml \
+-		xevie.xml \
+-		xf86dri.xml \
+-		xfixes.xml \
+-		xinerama.xml \
+-		xprint.xml \
+-		xtest.xml \
+-		xvmc.xml \
+-		xv.xml
+-
+-xcbinclude_HEADERS = xcb.h xcbext.h xcbxlib.h $(EXTHEADERS)
+-noinst_HEADERS = xcbint.h
++		xc_misc.xml
+ 
+ AM_CFLAGS = $(CWARNFLAGS) $(NEEDED_CFLAGS) $(XDMCP_CFLAGS)
+ libxcb_la_LIBADD = $(NEEDED_LIBS) $(XDMCP_LIBS)
+@@ -110,9 +27,6 @@ libxcb_la_SOURCES = \
+ #   and age to 0.
+ libxcb_la_LDFLAGS = -version-info 1:0:0
+ 
+-BUILT_SOURCES = $(EXTSOURCES) $(EXTHEADERS)
+-CLEANFILES = $(EXTSOURCES) $(EXTHEADERS) $(EXTENSION_XML)
+-
+ XCB_LIBS = libxcb.la
+ 
+ libxcb_xlib_la_LDFLAGS = -version-info 0:0:0
+@@ -121,85 +35,233 @@ libxcb_xlib_la_SOURCES = xcb_xlib.c
+ 
+ # FIXME: find a way to autogenerate this from the XML files.
+ 
++if BUILD_COMPOSITE
++lib_LTLIBRARIES += libxcb-composite.la
++EXTHEADERS += composite.h
++EXTSOURCES += composite.c
++EXTENSION_XML += composite.xml
+ libxcb_composite_la_LDFLAGS = -version-info 0:0:0
+ libxcb_composite_la_LIBADD = $(XCB_LIBS)
+ libxcb_composite_la_SOURCES = composite.c composite.h
++endif
+ 
++if BUILD_DAMAGE
++lib_LTLIBRARIES += libxcb-damage.la
++EXTHEADERS += damage.h
++EXTSOURCES += damage.c
++EXTENSION_XML += damage.xml
+ libxcb_damage_la_LDFLAGS = -version-info 0:0:0
+ libxcb_damage_la_LIBADD = $(XCB_LIBS)
+ libxcb_damage_la_SOURCES = damage.c damage.h
++endif
+ 
++if BUILD_DPMS
++lib_LTLIBRARIES += libxcb-dpms.la
++EXTHEADERS += dpms.h
++EXTSOURCES += dpms.c
++EXTENSION_XML += dpms.xml
+ libxcb_dpms_la_LDFLAGS = -version-info 0:0:0
+ libxcb_dpms_la_LIBADD = $(XCB_LIBS)
+ libxcb_dpms_la_SOURCES = dpms.c dpms.h
++endif
+ 
++if BUILD_GLX
++lib_LTLIBRARIES += libxcb-glx.la
++EXTHEADERS += glx.h
++EXTSOURCES += glx.c
++EXTENSION_XML += glx.xml
+ libxcb_glx_la_LDFLAGS = -version-info 0:0:0
+ libxcb_glx_la_LIBADD = $(XCB_LIBS)
+ libxcb_glx_la_SOURCES = glx.c glx.h
++endif
+ 
++if BUILD_RANDR
++lib_LTLIBRARIES += libxcb-randr.la
++EXTHEADERS += randr.h
++EXTSOURCES += randr.c
++EXTENSION_XML += randr.xml
+ libxcb_randr_la_LDFLAGS = -version-info 0:0:0
+ libxcb_randr_la_LIBADD = $(XCB_LIBS)
+ libxcb_randr_la_SOURCES = randr.c randr.h
++endif
+ 
++if BUILD_RECORD
++lib_LTLIBRARIES += libxcb-record.la
++EXTHEADERS += record.h
++EXTSOURCES += record.c
++EXTENSION_XML += record.xml
+ libxcb_record_la_LDFLAGS = -version-info 0:0:0
+ libxcb_record_la_LIBADD = $(XCB_LIBS)
+ libxcb_record_la_SOURCES = record.c record.h
++endif
+ 
++if BUILD_RENDER
++lib_LTLIBRARIES += libxcb-render.la
++EXTHEADERS += render.h
++EXTSOURCES += render.c
++EXTENSION_XML += render.xml
+ libxcb_render_la_LDFLAGS = -version-info 0:0:0
+ libxcb_render_la_LIBADD = $(XCB_LIBS)
+ libxcb_render_la_SOURCES = render.c render.h
++endif
+ 
++if BUILD_RES
++lib_LTLIBRARIES += libxcb-res.la
++EXTHEADERS += res.h
++EXTSOURCES += res.c
++EXTENSION_XML += res.xml
+ libxcb_res_la_LDFLAGS = -version-info 0:0:0
+ libxcb_res_la_LIBADD = $(XCB_LIBS)
+ libxcb_res_la_SOURCES = res.c res.h
++endif
+ 
++if BUILD_SCREENSAVER
++lib_LTLIBRARIES += libxcb-screensaver.la
++EXTHEADERS += screensaver.h
++EXTSOURCES += screensaver.c
++EXTENSION_XML += screensaver.xml
+ libxcb_screensaver_la_LDFLAGS = -version-info 0:0:0
+ libxcb_screensaver_la_LIBADD = $(XCB_LIBS)
+ libxcb_screensaver_la_SOURCES = screensaver.c screensaver.h
++endif
+ 
++if BUILD_SHAPE
++lib_LTLIBRARIES += libxcb-shape.la
++EXTHEADERS += shape.h
++EXTSOURCES += shape.c
++EXTENSION_XML += shape.xml
+ libxcb_shape_la_LDFLAGS = -version-info 0:0:0
+ libxcb_shape_la_LIBADD = $(XCB_LIBS)
+ libxcb_shape_la_SOURCES = shape.c shape.h
++endif
+ 
++if BUILD_SHM
++lib_LTLIBRARIES += libxcb-shm.la
++EXTHEADERS += shm.h
++EXTSOURCES += shm.c
++EXTENSION_XML += shm.xml
+ libxcb_shm_la_LDFLAGS = -version-info 0:0:0
+ libxcb_shm_la_LIBADD = $(XCB_LIBS)
+ libxcb_shm_la_SOURCES = shm.c shm.h
++endif
+ 
++if BUILD_SYNC
++lib_LTLIBRARIES += libxcb-sync.la
++EXTHEADERS += sync.h
++EXTSOURCES += sync.c
++EXTENSION_XML += sync.xml
+ libxcb_sync_la_LDFLAGS = -version-info 0:0:0
+ libxcb_sync_la_LIBADD = $(XCB_LIBS)
+ libxcb_sync_la_SOURCES = sync.c sync.h
++endif
+ 
++if BUILD_XEVIE
++lib_LTLIBRARIES += libxcb-xevie.la
++EXTHEADERS += xevie.h
++EXTSOURCES += xevie.c
++EXTENSION_XML += xevie.xml
+ libxcb_xevie_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xevie_la_LIBADD = $(XCB_LIBS)
+ libxcb_xevie_la_SOURCES = xevie.c xevie.h
++endif
+ 
++if BUILD_XF86DRI
++lib_LTLIBRARIES += libxcb-xf86dri.la
++EXTHEADERS += xf86dri.h
++EXTSOURCES += xf86dri.c
++EXTENSION_XML += xf86dri.xml
+ libxcb_xf86dri_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xf86dri_la_LIBADD = $(XCB_LIBS)
+ libxcb_xf86dri_la_SOURCES = xf86dri.c xf86dri.h
++endif
+ 
++if BUILD_XFIXES
++lib_LTLIBRARIES += libxcb-xfixes.la
++EXTHEADERS += xfixes.h
++EXTSOURCES += xfixes.c
++EXTENSION_XML += xfixes.xml
+ libxcb_xfixes_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xfixes_la_LIBADD = $(XCB_LIBS)
+ libxcb_xfixes_la_SOURCES = xfixes.c xfixes.h
++endif
++
++if BUILD_XINERAMA
++lib_LTLIBRARIES += libxcb-xinerama.la
++EXTHEADERS += xinerama.h
++EXTSOURCES += xinerama.c
++EXTENSION_XML += xinerama.xml
++libxcb_xinerama_la_LDFLAGS = -version-info 0:0:0
++libxcb_xinerama_la_LIBADD = $(XCB_LIBS)
++libxcb_xinerama_la_SOURCES = xinerama.c xinerama.h
++endif
+ 
++if BUILD_XINPUT
++lib_LTLIBRARIES += libxcb-xinput.la
++EXTHEADERS += xinput.h
++EXTSOURCES += xinput.c
++EXTENSION_XML += xinput.xml
++libxcb_xinput_la_LDFLAGS = -version-info 0:0:0
++libxcb_xinput_la_LIBADD = $(XCB_LIBS)
++libxcb_xinput_la_SOURCES = xinput.c xinput.h
++endif
++
++if BUILD_XPRINT
++lib_LTLIBRARIES += libxcb-xprint.la
++EXTHEADERS += xprint.h
++EXTSOURCES += xprint.c
++EXTENSION_XML += xprint.xml
+ libxcb_xprint_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xprint_la_LIBADD = $(XCB_LIBS)
+ libxcb_xprint_la_SOURCES = xprint.c xprint.h
++endif
+ 
++if BUILD_SELINUX
++lib_LTLIBRARIES += libxcb-xselinux.la
++EXTHEADERS += xselinux.h
++EXTSOURCES += xselinux.c
++EXTENSION_XML += xselinux.xml
++libxcb_xselinux_la_LDFLAGS = -version-info 0:0:0
++libxcb_xselinux_la_LIBADD = $(XCB_LIBS)
++libxcb_xselinux_la_SOURCES = xselinux.c xselinux.h
++endif
++
++if BUILD_XTEST
++lib_LTLIBRARIES += libxcb-xtest.la
++EXTHEADERS += xtest.h
++EXTSOURCES += xtest.c
++EXTENSION_XML += xtest.xml
+ libxcb_xtest_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xtest_la_LIBADD = $(XCB_LIBS)
+ libxcb_xtest_la_SOURCES = xtest.c xtest.h
++endif
+ 
++if BUILD_XV
++lib_LTLIBRARIES += libxcb-xv.la
++EXTHEADERS += xv.h
++EXTSOURCES += xv.c
++EXTENSION_XML += xv.xml
+ libxcb_xv_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xv_la_LIBADD = $(XCB_LIBS)
+ libxcb_xv_la_SOURCES = xv.c xv.h
++endif
+ 
++if BUILD_XVMC
++lib_LTLIBRARIES += libxcb-xvmc.la
++EXTHEADERS += xvmc.h
++EXTSOURCES += xvmc.c
++EXTENSION_XML += xvmc.xml
+ libxcb_xvmc_la_LDFLAGS = -version-info 0:0:0
+ libxcb_xvmc_la_LIBADD = $(XCB_LIBS)
+ libxcb_xvmc_la_SOURCES = xvmc.c xvmc.h
++endif
+ 
+-libxcb_xinerama_la_LDFLAGS = -version-info 0:0:0
+-libxcb_xinerama_la_LIBADD = $(XCB_LIBS)
+-libxcb_xinerama_la_SOURCES = xinerama.c xinerama.h
++
++
++xcbinclude_HEADERS = xcb.h xcbext.h xcbxlib.h $(EXTHEADERS)
++noinst_HEADERS = xcbint.h
++
++BUILT_SOURCES = $(EXTSOURCES) $(EXTHEADERS)
++CLEANFILES = $(EXTSOURCES) $(EXTHEADERS) $(EXTENSION_XML)
+ 
+ $(EXTHEADERS) $(EXTSOURCES): c-client.xsl
+ 
