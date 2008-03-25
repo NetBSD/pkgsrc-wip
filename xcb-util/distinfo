@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2008/03/25 20:41:29 bsadewitz Exp $
+
+SHA1 (xcb-util-0.2pl0.tar.bz2) = 6a2e01569babf43ce5b1b068a81593e6a199ac9a
+RMD160 (xcb-util-0.2pl0.tar.bz2) = 55f500b223054f94bbd510b3c5e8afc878fa980f
+Size (xcb-util-0.2pl0.tar.bz2) = 268249 bytes

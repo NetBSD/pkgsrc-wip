@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1 2008/03/25 20:41:29 bsadewitz Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+XCB_UTIL_BUILDLINK3_MK:=	${XCB_UTIL_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	xcb-util
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxcb-util}
+BUILDLINK_PACKAGES+=	xcb-util
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xcb-util
+
+.if ${XCB_UTIL_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.xcb-util+=	xcb-util>=0.2pl0
+BUILDLINK_PKGSRCDIR.xcb-util?=	../../wip/xcb-util
+.endif	# XCB_UTIL_BUILDLINK3_MK
+
+.include "../../wip/libxcb/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
