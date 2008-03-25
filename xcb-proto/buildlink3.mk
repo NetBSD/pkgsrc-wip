@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/25 14:32:05 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/03/25 20:51:02 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XCB_PROTO_BUILDLINK3_MK:=	${XCB_PROTO_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xcb-proto
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xcb-proto
 
 .if ${XCB_PROTO_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.0
+BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.1
 BUILDLINK_PKGSRCDIR.xcb-proto?=	../../wip/xcb-proto
 BUILDLINK_DEPMETHOD.xcb-proto?=	build
 .endif	# XCB_PROTO_BUILDLINK3_MK
