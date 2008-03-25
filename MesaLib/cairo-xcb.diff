@@ -1,0 +1,31 @@
+Index: Makefile
+===================================================================
+RCS file: /cvsroot/pkgsrc/graphics/cairo/Makefile,v
+retrieving revision 1.59
+diff -u -b -r1.59 Makefile
+--- Makefile	12 Mar 2008 20:48:11 -0000	1.59
++++ Makefile	25 Mar 2008 01:43:39 -0000
+@@ -16,7 +16,7 @@
+ USE_TOOLS+=		pkg-config
+ PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-backend.pc.in
+ GNU_CONFIGURE=		yes
+-CONFIGURE_ARGS+=	--disable-xcb
++
+ CONFIGURE_ARGS+=	--enable-glitz
+ CONFIGURE_ARGS+=	--enable-pdf
+ CONFIGURE_ARGS+=	--enable-ps
+@@ -38,6 +38,14 @@
+ 
+ TEST_TARGET=			check
+ 
++.include "../../x11/libX11/buildlink3.mk"
++
++.if !empty(PKG_BUILD_OPTIONS.libX11:U:Mxcb)
++CONFIGURE_ARGS+=	--enable-xcb
++.else
++CONFIGURE_ARGS+=	--disable-xcb
++.endif
++
+ .include "../../devel/zlib/buildlink3.mk"
+ .include "../../fonts/fontconfig/buildlink3.mk"
+ .include "../../graphics/freetype2/buildlink3.mk"
