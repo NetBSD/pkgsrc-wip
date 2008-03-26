@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/03/26 02:34:05 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/03/26 02:34:55 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ pkgbase := cairo
 pkgbase := libX11
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.libX11:Mxcb)
+.if !empty(PKG_BUILD_OPTIONS.libX11:U:Mxcb)
 .include "../../wip/xcb-util/buildlink3.mk"
 .endif
 
