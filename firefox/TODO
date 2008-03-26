@@ -12,6 +12,3 @@ bz ca
 
 Patches that had to be updated to apply cleanly:
 aa ab ac ba ap ed de
-
-Patches that should be revisited, because they are wrong:
-wip-aa wip-ab wip-ac wip-ad
