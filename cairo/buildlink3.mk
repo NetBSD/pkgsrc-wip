@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/03/12 18:52:05 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/03/26 02:34:05 bsadewitz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -23,6 +23,12 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 
 pkgbase := cairo
 .include "../../mk/pkg-build-options.mk"
+pkgbase := libX11
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libX11:Mxcb)
+.include "../../wip/xcb-util/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS.cairo:Mx11)
 .include "../../x11/libXrender/buildlink3.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/03/12 17:58:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/26 02:34:05 bsadewitz Exp $
 
-DISTNAME=	cairo-1.5.12
+DISTNAME=	cairo-1.5.14
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
@@ -16,7 +16,17 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-backend.pc.in
 GNU_CONFIGURE=		yes
+
+.include "../../x11/libX11/buildlink3.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.libX11:U:Mxcb)
+CONFIGURE_ARGS+=	--enable-xcb
+PLIST_SUBST+=		XCB=""
+.include "../../wip/xcb-util/buildlink3.mk"
+.else
 CONFIGURE_ARGS+=	--disable-xcb
+PLIST_SUBST+=		XCB="@comment "
+.endif
 CONFIGURE_ARGS+=	--enable-glitz
 CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps

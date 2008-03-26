@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/12 17:58:47 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/26 02:34:05 bsadewitz Exp $
 ${CARBON}include/cairo/cairo-atsui.h
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -8,6 +8,8 @@ include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
 ${CARBON}include/cairo/cairo-quartz.h
 include/cairo/cairo-svg.h
+${XCB}include/cairo/cairo-xcb.h
+${XCB}include/cairo/cairo-xcb-xrender.h
 ${X11}include/cairo/cairo-xlib-xrender.h
 ${X11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
@@ -20,6 +22,7 @@ lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
 ${CARBON}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-svg.pc
+${XCB}lib/pkgconfig/cairo-xcb.pc
 ${X11}lib/pkgconfig/cairo-xlib-xrender.pc
 ${X11}lib/pkgconfig/cairo-xlib.pc
 lib/pkgconfig/cairo.pc
