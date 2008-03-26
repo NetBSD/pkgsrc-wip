@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/26 01:11:07 obache Exp $
+man/man8/tw_cli.8
+sbin/tw_cli

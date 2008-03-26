@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/26 01:11:07 obache Exp $
+
+SHA1 (tw_cli-freebsd-x86-9.5.0.1.tgz) = e964863b253b8bf8546fe01fe30b2f6c329fc3d2
+RMD160 (tw_cli-freebsd-x86-9.5.0.1.tgz) = e3808b3245d35bdb68a00b813b17874b130c5592
+Size (tw_cli-freebsd-x86-9.5.0.1.tgz) = 706413 bytes
+SHA1 (tw_cli-freebsd-x86_64-9.5.0.1.tgz) = 6221a49ff046e83c78c70d816ecbb59a8e0e0416
+RMD160 (tw_cli-freebsd-x86_64-9.5.0.1.tgz) = 5f380914a2c308a79a981e6d29c930d4800b63ef
+Size (tw_cli-freebsd-x86_64-9.5.0.1.tgz) = 718494 bytes
+SHA1 (tw_cli-linux-x86-9.5.0.1.tgz) = 423e32d780c399cf97138fae26cf5c6ffbf6081d
+RMD160 (tw_cli-linux-x86-9.5.0.1.tgz) = 306020dcb229c125e1b07fb54aec9ea5f5928d6c
+Size (tw_cli-linux-x86-9.5.0.1.tgz) = 866213 bytes
+SHA1 (tw_cli-linux-x86_64-9.5.0.1.tgz) = e4f1e81a81f04db1b1ae7573e9d38f1a551f3762
+RMD160 (tw_cli-linux-x86_64-9.5.0.1.tgz) = 058593d451cba246a5e7658734e510214078ea81
+Size (tw_cli-linux-x86_64-9.5.0.1.tgz) = 895959 bytes
