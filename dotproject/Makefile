@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/26 06:51:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/26 13:24:29 thomasklausner Exp $
 #
 
 DISTNAME=	dotproject-2.1.1
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 # This package needs PHP4 and mysql4.
 # Even so ports to PHP5 and mysql5 are on the way, they can't be considered stable.  (as of march 2008)
 
-MYSQL_VERSIONS_ACCEPTED= 50
+MYSQL_VERSIONS_ACCEPTED= 41
 
 # base on PHP 4.x package
 DEPENDS+=	php-4.4.*:../../www/php4
