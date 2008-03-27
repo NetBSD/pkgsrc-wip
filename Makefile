@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2861 2008/03/27 18:58:59 rootcho Exp $
+# $Id: Makefile,v 1.2862 2008/03/27 23:07:59 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1848,6 +1848,7 @@ SUBDIR+=	uschedule
 SUBDIR+=	ushare
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
+SUBDIR+=	vamps
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vidalia
