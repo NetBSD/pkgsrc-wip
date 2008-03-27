@@ -1,0 +1,19 @@
+Vamps was written to make cheap backups of DVDs under Linux. Back in
+2003 Metakine published the source code of their M2Requantiser module.
+The idea was to make use of this great piece of software to create a
+transcoder for Linux for shrinking the content of a DVD9. This would
+enable backups on cheap single layer DVDRs (double layer burners weren't
+even available that time). The Metakine requantizer is pretty fast and
+so Vamps was designed not to break this outstanding performance.
+
+Vamps builds a wrapper around the requantizer to extract the elementary
+MPEG2 video stream from the DVD's program stream, feed it through the
+requantizer and finally re-pack it into the program stream again.
+Besides this, Vamps allows to select audio and subtitle streams that
+should be copied into the output stream.  This gives another small gain
+of disk space, since unwanted streams may be discarded.
+
+Summed up, Vamps is only a very basic, but nevertheless essential tool
+to transcode DVD videos to a smaller size. Vamps does not need to write
+temporary data files, which is a major pro. Vamps is very fast. The
+downside is, that Vamps is not capable to make DVD backups on its own.

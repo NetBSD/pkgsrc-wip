@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/03/27 23:05:01 rhialto Exp $
+
+--- play_cell/Makefile.orig	2006-04-15 09:42:37.000000000 +0200
++++ play_cell/Makefile	2008-03-26 17:13:45.000000000 +0100
+@@ -19,6 +19,7 @@
+ CC         = gcc
+ CFLAGS    ?= -pipe -O2 -fomit-frame-pointer
+ CFLAGS    += -Wall -W
++CFLAGS    += -I ${PREFIX}/include
+ LDFLAGS   += -s
+ #LDFLAGS  += -static
+ LOADLIBES += -ldvdread
