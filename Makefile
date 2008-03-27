@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2860 2008/03/26 01:12:57 obache Exp $
+# $Id: Makefile,v 1.2861 2008/03/27 18:58:59 rootcho Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1053,6 +1053,7 @@ SUBDIR+=	netsurf
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
+SUBDIR+=	nginx-devel
 SUBDIR+=	nicotine+
 SUBDIR+=	ninvaders
 SUBDIR+=	nnrpd
