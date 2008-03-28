@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/03/05 13:16:49 absd Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/28 02:47:18 tnn2 Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 CATEGORIES=	net kde
@@ -10,6 +10,8 @@ KTORRENT_VER=	3.0.0
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://ktorrent.org/
 COMMENT=	Graphical BitTorrent client for KDE4
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=      	yes
 USE_LANGUAGES=		c c++
