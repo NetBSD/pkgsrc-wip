@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/13 05:45:14 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/28 03:49:54 tnn2 Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -236,6 +236,7 @@ lib/${MOZILLA}/updater.ini
 @dirrm lib/${MOZILLA}/res/dtd
 @dirrm lib/${MOZILLA}/res
 @dirrm lib/${MOZILLA}/plugins
+@dirrm lib/${MOZILLA}/modules
 @dirrm lib/${MOZILLA}/init.d
 @dirrm lib/${MOZILLA}/icons
 @dirrm lib/${MOZILLA}/greprefs
