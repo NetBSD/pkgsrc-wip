@@ -114,11 +114,11 @@ pkg_src_micro_summary < $allpkgs_fn >$micsum_fn
 
 # summary against microsummary
 cmp_fn=$tmp_dir/cmp
-pkg_cmp_summary $summary $micsum_fn >$cmp_fn
+pkg_cmp_summary -p $summary $micsum_fn > $cmp_fn
 
 # copying summary about unchanged packages
 eq_pkgs_fn=$tmp_dir/eqpkgs
-awk '$1 ~ /^[=]/ {print $2}' $cmp_fn > $eq_pkgs_fn
+awk '$1 ~ /^[=]/ {print $2 ":" $3}' $cmp_fn > $eq_pkgs_fn # pkgpath:pkgbase
 
 copy_eq_pkgs (){
 awk -v eq_pkgs_fn=$eq_pkgs_fn '
@@ -130,16 +130,62 @@ BEGIN {
    if (ret < 0){
       printf "reading error from" eq_pkgs_fn > "/dev/stderr"
    }
+
+   SUBSEP = ":"
+   FS     = "="
+   skip   = -1 # -1 - unknown, 0 - false, 1 - true
 }
 
-$0 ~ /^PKGNAME=/ {
-   pkgbase = substr($0, 9)
+function update_skip (){
+   if (pkgbase != "" && pkgpath != ""){
+      skip = !((pkgpath ":" pkgbase) in eq_pkgs)
+
+      if ((pkgpath ":" pkgbase) in processed){
+         skip = 1
+      }
+
+      if (skip == 0){
+         print accu
+      }
+   }
+}
+
+skip == 1 && NF > 0 {
+   next
+}
+
+skip == 0 && NF > 0 {
+   print $0
+   next
+}
+
+skip == -1 {
+   if (accu == "")
+      accu = $0
+   else
+      accu = accu "\n" $0
+}
+
+$1 == "PKGNAME" {
+   pkgbase = $2
    sub(/-[^-]+$/, "", pkgbase)
-   interesting = (pkgbase in eq_pkgs)
+   update_skip()
 }
 
-interesting {
-   print
+$1 == "PKGPATH" {
+   pkgpath = $2
+   update_skip()
+}
+
+NF == 0 {
+   processed [pkgpath, pkgname] = 1
+
+   if (skip == 0){
+      print ""
+   }
+
+   accu = pkgbase = pkgpath = ""
+   skip = -1
 }
 ' "$@"
 }
@@ -148,7 +194,7 @@ copy_eq_pkgs $summary > $new_summary
 
 # add new/updated/changed packages
 changed_pkgs_fn=$tmp_dir/changed_pkgs
-awk '$1 ~ /^[+<>?0-9]/ {print $2}' $cmp_fn > $changed_pkgs_fn
+awk '$1 ~ /^[+<>?0-9]/ {print $2 ":" $3}' $cmp_fn > $changed_pkgs_fn
 
 extract_pkgpath (){
 awk -v changed_pkgs_fn=$changed_pkgs_fn '
@@ -158,18 +204,29 @@ BEGIN {
    }
 
    if (ret < 0){
-      printf "readoing error from" changed_pkgs_fn > "/dev/stderr"
+      printf "reading error from" changed_pkgs_fn > "/dev/stderr"
    }
+
+   SUBSEP = ":"
+   FS     = "="
 }
 
-$0 ~ /^PKGNAME=/ {
-   pkgbase = substr($0, 9)
+$1 == "PKGNAME" {
+   pkgbase = $2
    sub(/-[^-]+$/, "", pkgbase)
-   interesting = (pkgbase in pkgs)
 }
 
-$0 ~ /^PKGPATH=/ && interesting {
-   print substr($0, 9)
+$1 == "PKGPATH" {
+   pkgpath = $2
+}
+
+pkgpath != "" && pkgbase != "" {
+   interesting = ((pkgpath ":" pkgbase) in pkgs)
+}
+
+NF == 0 && interesting {
+   print pkgpath
+   pkgbase = pkgpath = ""
 }
 ' "$@"
 }
