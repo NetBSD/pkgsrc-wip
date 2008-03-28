@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/03/08 17:56:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/28 22:12:31 cheusov Exp $
 #
 
 DISTNAME=	netbsd-uuencode-4.0
+PKGREVISION=	1
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	http://mova.org/~cheusov/pub/netbsd-tools/
 EXTRACT_SUFX=	.tar.bz2
