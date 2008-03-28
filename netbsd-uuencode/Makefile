@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/28 22:12:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/28 22:18:24 cheusov Exp $
 #
 
 DISTNAME=	netbsd-uuencode-4.0
@@ -19,7 +19,6 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		${DISTNAME} ${DISTNAME:S/encode/decode/}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-USE_FEATURES=		getprogname setprogname
 USE_BSD_MAKEFILE=	yes
 
 MAKE_ENV+=		MKCATPAGES=no
