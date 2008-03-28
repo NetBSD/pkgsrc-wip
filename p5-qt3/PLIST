@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/28 00:04:43 rhialto Exp $
+bin/puic
+lib/libsmokeqt.la
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt.pod
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/GlobalSpace.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/attributes.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/constants.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/debug.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/enumerations.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/isa.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/properties.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/signals.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt/slots.pm
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Qt/.packlist
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Qt/Qt.bs
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Qt/Qt.so
+lib/perl5/vendor_perl/bin/pqtapi
+lib/perl5/vendor_perl/bin/pqtsh
+lib/perl5/vendor_perl/man/man3/Qt.3
+share/PerlQt-3
+share/PerlQt-3/css
+share/PerlQt-3/css/pod.css
+share/PerlQt-3/en
+share/PerlQt-3/en/index.html
+share/PerlQt-3/en/Makefile
+share/PerlQt-3/en/PerlQt.pod
+share/PerlQt-3/fr
+share/PerlQt-3/fr/index.html
+share/PerlQt-3/fr/Makefile
+share/PerlQt-3/fr/PerlQt.pod
+share/PerlQt-3/images
+share/PerlQt-3/images/pqtsh.png
+share/PerlQt-3/images/ex1.png
+share/PerlQt-3/images/ex2.png
+@dirrm lib/perl5/vendor_perl/man/man3
+@dirrm lib/perl5/vendor_perl/bin
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Qt
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
+@exec ${MKDIR} %D/lib/perl5/site_perl/bin
+@dirrm lib/perl5/site_perl/bin
+@exec ${MKDIR} %D/lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Qt
+@exec ${MKDIR} %D/lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Qt
