@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/28 15:18:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/28 20:48:09 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.1.3
@@ -17,6 +17,7 @@ DEPENDS+=	pkg_update_summary>=0.8.0:../../wip/pkg_update_summary
 DEPENDS+=	paexec>=0.8.0:../../wip/paexec
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	nail-[0-9]*:../../mail/nail
+DEPENDS+=	shlock-[0-9]*:../../pkgtools/shlock
 
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes
