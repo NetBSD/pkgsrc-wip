@@ -190,7 +190,9 @@ if $TEST_CMD -f "$summary_file"; then
 
     {
 	$uncompress "$summary_file" | filter_unchanged "$tmp2"
-	echo "$updated" | pkgs2summary 
+	if test -n "$updated"; then
+	    echo "$updated" | pkgs2summary
+	fi
     } | $refresh | $compress > "$tmp1"
 
     show_debugging_info
