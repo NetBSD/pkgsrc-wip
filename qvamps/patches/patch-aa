@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/03/28 00:53:50 rhialto Exp $
+
+This message from swig appears to be harmless:
+    ifo_read.i:49: Error: Syntax error in input(1).
+
+--- Makefile.orig	2006-05-02 21:17:13.000000000 +0200
++++ Makefile	2008-03-27 22:55:04.000000000 +0100
+@@ -20,10 +20,10 @@
+ PLINC      = $(shell perl -e \
+ 	       'use Config; print "$$Config{archlibexp}/CORE\n";')
+ PLARCH     = $(shell perl -e 'use Config; print "$$Config{archname}\n";')
+-PLCFLAGS   = $(shell perl -e 'use Config; print "$$Config{ccflags}\n";')
++PLCFLAGS   = $(shell perl -e 'use Config; print "$$Config{ccflags} $$Config{cccdlflags}\n";')
+ 
+ CC         = gcc
+-CFLAGS    ?= -pipe -O2 -fomit-frame-pointer -fpic
++CFLAGS     = -pipe -O2 -fomit-frame-pointer
+ CFLAGS    += -I $(PLINC) $(PLCFLAGS) -Wall -W -Wno-strict-aliasing \
+ 	       -Wno-unused-function -Wno-unused-variable \
+ 	       -Wno-unused-parameter
+@@ -67,7 +67,7 @@
+ 		@rm -f $@.tmp
+ 
+ %.msgs:		%.pm
+-		./fakelupd.pl $* $^ > $@
++		perl ./fakelupd.pl $* $^ > $@
+ 
+ %.qm:		%.ts
+ 		$(LRELEASE) -verbose $< -qm $@
+@@ -84,7 +84,7 @@
+ 		$(CC) $(SOLDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
+ 
+ libdvdread_wrap.c LibDvdRead.pm:	libdvdread.i ifo_read.i ignores.i
+-		$(SWIG) $(SWIGFLAGS) $<
++		-$(SWIG) $(SWIGFLAGS) $<
+ 
+ ifo_read.i:	ifo_read.c
+ 		$(CC) -E -P $< > $@
