@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $Id: import-package.sh,v 1.2 2008/03/12 18:16:35 tnn2 Exp $
+# $Id: import-package.sh,v 1.3 2008/03/28 02:51:46 tnn2 Exp $
 #
 # Script designed to make initial imports into wip easier.
 #
@@ -9,7 +9,7 @@
 # It will automatically create a nice import message based on DESCR
 # and PKGNAME, set up the CVS tags correctly and autodetect what CVSROOT
 # to use. It also shows you what files will be imported, reminds you
-# to run pkglint(1) and asks for for confirmation before doing anything.
+# to run pkglint(1) and asks for confirmation before doing anything.
 
 [ -n "${MKTEMP}" ] || MKTEMP=mktemp
 [ -n "${EDITOR}" ] || EDITOR=vi
@@ -28,7 +28,7 @@ PKGPATH=${CATEGORY}/${PACKAGE}
 CVSROOT=$(cat ../CVS/Root)
 USER=$(echo ${CVSROOT} | sed -e 's/@.*$//' -e 's/^.*://')
 USER_UPPER="$(echo ${USER} | tr '[a-z]' '[A-Z]')"
-MSG="$(mktemp -t import-package.XXXXXXXX)"
+MSG="$(${MKTEMP} -t import-package.XXXXXXXX)"
 echo "Please wait while determining PKGNAME and DESCR_SRC."
 PKGNAME="$(${MAKE} show-var VARNAME=PKGNAME)"
 DESCR_SRC="$(${MAKE} show-var VARNAME=DESCR_SRC) /dev/null"
@@ -74,7 +74,7 @@ if [ "${ANS}" = "y" ]; then
 fi
 
 echo ${DASH70}
-echo "If the import went OK, move away the ${CATEGORY}/${PACKAGE} directory"
+echo "If the import went OK, move away the ${PKGPATH} directory"
 echo "and run \"cvs update -dPA ${PACKAGE}\" in ${CATEGORY} to complete"
 echo "the import. If you got conflict errors, just cvs add the"
 echo "conflicting files and cvs commit them."
