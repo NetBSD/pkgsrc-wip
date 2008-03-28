@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2863 2008/03/28 00:06:31 rhialto Exp $
+# $Id: Makefile,v 1.2864 2008/03/28 00:59:11 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1600,6 +1600,7 @@ SUBDIR+=	qpsmtpd
 SUBDIR+=	qtre
 SUBDIR+=	qucs
 SUBDIR+=	quickie
+SUBDIR+=	qvamps
 SUBDIR+=	quodlibet
 SUBDIR+=	r8s
 SUBDIR+=	radare
