@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/06 21:36:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/29 23:12:11 cheusov Exp $
 #
 
 DISTNAME=	mawk-1.3.3
@@ -7,11 +7,13 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/mawk/
 
 MAINTAINER=	cheusov@tut.by
-COMMENT=	Mike Brennan's fast awk clone
+COMMENT=	awk clone by Mike Brennan
 
-USE_TOOLS+=	autoconf213
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+USE_TOOLS+=		autoconf213
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 bin
 
 BUILD_TARGET=		mawk_and_test
 
