@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/17 21:54:23 koifren Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/29 14:40:24 thomasklausner Exp $
 bin/f-spot
 bin/f-spot-import
 bin/f-spot-sqlite-upgrade
@@ -282,7 +282,7 @@ share/omf/f-spot/f-spot-oc.omf
 share/omf/f-spot/f-spot-pt_BR.omf
 share/omf/f-spot/f-spot-sv.omf
 @dirrm share/omf/f-spot
-@dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
@@ -306,6 +306,7 @@ share/omf/f-spot/f-spot-sv.omf
 @dirrm share/gnome/help/f-spot/C/figures
 @dirrm share/gnome/help/f-spot/C
 @dirrm share/gnome/help/f-spot
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/f-spot/icons/hicolor/scalable/status
 @dirrm share/f-spot/icons/hicolor/scalable/emblems
 @dirrm share/f-spot/icons/hicolor/scalable/apps
@@ -341,5 +342,8 @@ share/omf/f-spot/f-spot-sv.omf
 @dirrm share/f-spot/icons/hicolor
 @dirrm share/f-spot/icons
 @dirrm share/f-spot
+@dirrm share/applications/screensavers
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm libexec/gnome-screensaver
 @dirrm lib/f-spot/extensions
 @dirrm lib/f-spot
