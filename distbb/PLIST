@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2008/03/18 21:47:11 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/30 00:43:16 cheusov Exp $
 bin/distbb
-libexec/distbb/distbb_build
-libexec/distbb/distbb_common
-libexec/distbb/distbb_gen_report
-libexec/distbb/distbb_init
-libexec/distbb/distbb_lock
-libexec/distbb/distbb_report
-libexec/distbb/distbb_slave
-libexec/distbb/distbb_slave_test
-libexec/distbb/distbb_upload_logs
-libexec/distbb/distbb_upload_pkgs
+libexec/distbb/common
+libexec/distbb/lock
+libexec/distbb/slave
+libexec/distbb/slave_test
+libexec/distbb/stage_build
+libexec/distbb/stage_gen_report
+libexec/distbb/stage_init
+libexec/distbb/stage_report
+libexec/distbb/stage_upload_logs
+libexec/distbb/stage_upload_pkgs
 share/distbb/distbb.conf
