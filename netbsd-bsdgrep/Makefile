@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/10/01 20:53:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/30 13:31:05 cheusov Exp $
 #
 
 DISTNAME=	netbsd-bsdgrep-20070105
@@ -11,14 +11,14 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
 
-USE_FEATURES=	nbcompat
+PKG_DESTDIR_SUPPORT=	user-destdir
+USE_BSD_MAKEFILE=	yes
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
-MAKE_ENV+=	BINDIR=${PREFIX}/bin
-MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+USE_FEATURES=		nbcompat
+
 MAKE_ENV+=	MKCATPAGES=no
-MAKE_ENV+=	LDADD=${LIBS:Q}
 
 CPPFLAGS+=	-Dlint
 
