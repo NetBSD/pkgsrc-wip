@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2007/12/15 21:13:41 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/03/30 13:12:54 cheusov Exp $
 
 DISTNAME=	dictd-1.10.10
 
@@ -8,3 +8,5 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
+
+PKG_DESTDIR_SUPPORT=    user-destdir

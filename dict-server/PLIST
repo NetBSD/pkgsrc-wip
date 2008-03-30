@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/18 17:00:01 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/30 13:12:54 cheusov Exp $
 bin/dictfmt
 bin/dictfmt_index2suffix
 bin/dictfmt_index2word
@@ -11,21 +11,21 @@ man/man1/dictunformat.1
 man/man1/dictzip.1
 man/man8/dictd.8
 sbin/dictd
-share/doc/${PKGBASE}/COPYING
-share/doc/${PKGBASE}/INSTALL
-share/doc/${PKGBASE}/NEWS
-share/doc/${PKGBASE}/README
-share/examples/${PKGBASE}/dictd.conf
-share/examples/${PKGBASE}/dictd1.conf
-share/examples/${PKGBASE}/dictd2.conf
-share/examples/${PKGBASE}/dictd3.conf
-share/examples/${PKGBASE}/dictd4.conf
-share/examples/${PKGBASE}/dictd_complex.conf
-share/examples/${PKGBASE}/dictd_mime.conf
-share/examples/${PKGBASE}/dictd_plugin_dbi.conf
-share/examples/${PKGBASE}/dictd_site.txt
-share/examples/${PKGBASE}/dictd_virtual.conf
+share/doc/dict-server/COPYING
+share/doc/dict-server/INSTALL
+share/doc/dict-server/NEWS
+share/doc/dict-server/README
+share/examples/dict-server/dictd.conf
+share/examples/dict-server/dictd1.conf
+share/examples/dict-server/dictd2.conf
+share/examples/dict-server/dictd3.conf
+share/examples/dict-server/dictd4.conf
+share/examples/dict-server/dictd_complex.conf
+share/examples/dict-server/dictd_mime.conf
+share/examples/dict-server/dictd_plugin_dbi.conf
+share/examples/dict-server/dictd_site.txt
+share/examples/dict-server/dictd_virtual.conf
 share/examples/rc.d/dictd
-@dirrm share/doc/${PKGBASE}
-@dirrm share/examples/${PKGBASE}
+@dirrm share/doc/dict-server
+@dirrm share/examples/dict-server
 @dirrm share/dictd

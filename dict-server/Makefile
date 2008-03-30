@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/02/01 22:29:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/30 13:12:54 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -47,7 +47,7 @@ INSTALL_TARGET=	install.dictd install.dictzip install.dictfmt
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
-INSTALLATION_DIRS+=	share/dictd ${EGDIR} ${PKGDOCDIR}
+AUTO_MKDIRS=	yes
 
 CONF_FILES=	${EGDIR}/dictd.conf \
 		${PKG_SYSCONFDIR}/dictd.conf
@@ -59,13 +59,12 @@ EXTRA_EXAMPLES_FILES=	dictd1.conf dictd2.conf \
 			dictd_site.txt dictd_virtual.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${.CURDIR}/files/dictd.conf ${EGDIR}/
+	${INSTALL_DATA} ${.CURDIR}/files/dictd.conf ${DESTDIR}${EGDIR}/
 .for i in ${EXTRA_DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PKGDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PKGDOCDIR}
 .endfor
 .for i in ${EXTRA_EXAMPLES_FILES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/${i} ${DESTDIR}${EGDIR}
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
