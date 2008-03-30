@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/10 21:21:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/30 13:02:17 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -8,6 +8,8 @@ COMMENT=	Dictionary Service Protocol client
 USE_TOOLS+=		gmake yacc lex
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--disable-plugin
