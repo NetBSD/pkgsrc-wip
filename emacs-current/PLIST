@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2008/03/24 05:10:42 makoto Exp $
+@comment $NetBSD: PLIST,v 1.48 2008/03/30 01:26:23 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2587,6 +2587,8 @@ share/emacs/${PKGVERSION}/lisp/play/zone.el.gz
 share/emacs/${PKGVERSION}/lisp/play/zone.elc
 share/emacs/${PKGVERSION}/lisp/printing.el.gz
 share/emacs/${PKGVERSION}/lisp/printing.elc
+share/emacs/${PKGVERSION}/lisp/proced.el.gz
+share/emacs/${PKGVERSION}/lisp/proced.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ada-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ada-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ada-prj.el.gz
