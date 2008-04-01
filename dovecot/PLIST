@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/03/08 10:26:08 ghen Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/04/01 18:47:56 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -63,7 +63,6 @@ include/dovecot/src/lib-imap/imap-quote.h
 include/dovecot/src/lib-imap/imap-util.h
 include/dovecot/src/lib-index/mail-cache-private.h
 include/dovecot/src/lib-index/mail-cache.h
-include/dovecot/src/lib-index/mail-hash.h
 include/dovecot/src/lib-index/mail-index-private.h
 include/dovecot/src/lib-index/mail-index-sync-private.h
 include/dovecot/src/lib-index/mail-index-transaction-private.h
