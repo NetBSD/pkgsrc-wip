@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/19 12:15:44 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/01 14:54:48 tnn2 Exp $
 
 DISTNAME=	mono-tools-${MONO_VERSION}
 CATEGORIES=	devel
@@ -21,6 +21,6 @@ MAKE_JOBS_SAFE=		no
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/mono/buildlink3.mk"
-.include "../../wip/monodoc/buildlink3.mk"
+.include "../../lang/monodoc/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
