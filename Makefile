@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2866 2008/04/01 00:05:41 tnn2 Exp $
+# $Id: Makefile,v 1.2867 2008/04/02 03:56:17 netcap Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1677,6 +1677,7 @@ SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shaper
 SUBDIR+=	shed
+SUBDIR+=	shell-fm
 SUBDIR+=	shoutcast
 SUBDIR+=	showmesh
 SUBDIR+=	shttpd
