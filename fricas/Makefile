@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/03/05 21:01:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/02 13:29:36 asau Exp $
 #
 
-DISTNAME=		fricas-1.0.2-full
-PKGNAME=		${DISTNAME:C/-full$//}
+DISTNAME=		fricas-1.0.99
+PKGNAME=		${DISTNAME}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,12 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	fricas
+SVN_ROOT.fricas=	https://fricas.svn.sourceforge.net/svnroot/fricas/trunk
+SVN_MODULE.fricas=	fricas
+
+WRKSRC=			${WRKDIR}/fricas
 
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
@@ -29,4 +34,5 @@ MAKE_JOBS_SAFE=		no
 
 .include "options.mk"
 
+.include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
