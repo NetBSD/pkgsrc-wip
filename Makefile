@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2867 2008/04/02 03:56:17 netcap Exp $
+# $Id: Makefile,v 1.2868 2008/04/02 14:52:20 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1415,7 +1415,6 @@ SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-sk
 SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
-SUBDIR+=	php-fcgi
 SUBDIR+=	php-mode
 SUBDIR+=	php-recode
 SUBDIR+=	php-suhosin
