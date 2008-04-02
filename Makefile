@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2868 2008/04/02 14:52:20 tnn2 Exp $
+# $Id: Makefile,v 1.2869 2008/04/02 18:34:57 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -903,6 +903,7 @@ SUBDIR+=	llvm
 SUBDIR+=	lmarbles
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logfmon-devel
+SUBDIR+=	logjam
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
