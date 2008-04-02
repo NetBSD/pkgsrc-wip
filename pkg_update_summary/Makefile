@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/09 03:51:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/02 15:37:47 cheusov Exp $
 
 DISTNAME=	pkg_update_summary-${VERSION}
 CATEGORIES=	pkgtools
@@ -11,6 +11,7 @@ COMMENT=	Efficiently updates pkg_summary.gz file
 
 DEPENDS+=	runawk>=0.12.1*:../../wip/runawk
 DEPENDS+=	awk-pkgsrc-dewey-[0-9]*:../../wip/awk-pkgsrc-dewey
+DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
 
 .include "../../wip/pkg_update_summary/files/Makefile.version"
 

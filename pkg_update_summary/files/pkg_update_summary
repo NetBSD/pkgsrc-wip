@@ -22,6 +22,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 set -e
+. pipestatus
 
 usage (){
     cat 1>&2 <<EOF
@@ -89,11 +90,9 @@ pkgs2summary (){
 }
 
 get_all_pkgs (){
-    if ! ls -1t "$bin_pkg_dir" | grep "$PKG_SUFX_RE"'$'; then
-	# in order to ignore grep's exit status in case
-	# binary packages directory is empty
-	true
-    fi
+    # in order to ignore grep's exit status in case
+    # binary packages directory is empty
+    runpipe_re '0 [01]' ls -1t "$bin_pkg_dir" '|' grep "$PKG_SUFX_RE"'$'
 }
 
 get_updated_pkgs (){
@@ -107,11 +106,15 @@ get_updated_pkgs (){
     done
 }
 
-subtract (){
-    cat "$@" |
-    LC_ALL=C sort |
-    LC_ALL=C uniq -c |
+print_uniq (){
     awk '$1 == 1 {print $2}'
+}
+
+subtract (){
+    runpipe0 \
+	env LC_ALL=C sort "$@" '|' \
+	env LC_ALL=C uniq -c '|' \
+	print_uniq
 }
 
 get_unchanged_pkgs (){
@@ -183,22 +186,30 @@ show_debugging_info (){
     fi
 }
 
-if $TEST_CMD -f "$summary_file"; then
+update_summary (){
     updated="`get_updated_pkgs`"
     all="`get_all_pkgs`"
     get_unchanged_pkgs > "$tmp2"
 
-    {
-	$uncompress "$summary_file" | filter_unchanged "$tmp2"
-	if test -n "$updated"; then
-	    echo "$updated" | pkgs2summary
-	fi
-    } | $refresh | $compress > "$tmp1"
+    runpipe0 $uncompress "$summary_file" '|' filter_unchanged "$tmp2"
+    if test -n "$updated"; then
+	runpipe0 echo "$updated" '|' pkgs2summary
+    fi
+}
+
+if $TEST_CMD -f "$summary_file"; then
+    runpipe0 \
+	update_summary '|' \
+	$refresh '|' \
+	$compress > "$tmp1"
 
     show_debugging_info
 else
-    get_all_pkgs |
-    pkgs2summary | $refresh | $compress > "$tmp1"
+    runpipe0 \
+	get_all_pkgs '|' \
+	pkgs2summary '|' \
+	$refresh '|' \
+	$compress > "$tmp1"
 fi
 
 if $TEST_CMD -z "$TRACE"; then
