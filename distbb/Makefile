@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/04/02 16:26:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/02 21:42:02 cheusov Exp $
 #
 
-DISTNAME=	distbb-0.4.0
+DISTNAME=	distbb-0.5.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/distbb/
 
@@ -23,6 +23,9 @@ DEPENDS+=	netbsd-uuencode>=4.0nb1:../../wip/netbsd-uuencode
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes
 
-INSTALLATION_DIRS+=	bin share/distbb libexec/distbb
+EGDIR=			${PREFIX}/share/examples/distbb
+MAKE_FLAGS+=		EGDIR=${EGDIR}
+
+INSTALLATION_DIRS+=	bin ${EGDIR} libexec/distbb
 
 .include "../../mk/bsd.pkg.mk"
