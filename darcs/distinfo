@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/02/22 15:46:02 pmatias Exp $
+$NetBSD: distinfo,v 1.9 2008/04/02 14:01:47 pmatias Exp $
 
-SHA1 (darcs-2.0.0pre3.tar.gz) = ccdebfc064bc5868090646a9b27445ed3c70f98e
-RMD160 (darcs-2.0.0pre3.tar.gz) = 91ecf7b55191ab0c7027fa225be2a27523921616
-Size (darcs-2.0.0pre3.tar.gz) = 1223869 bytes
+SHA1 (darcs-2.0.0rc1.tar.gz) = 704fe8c9e6bd5ee6d888a5a62d912bc4be8be4fb
+RMD160 (darcs-2.0.0rc1.tar.gz) = 733c271577770b7d3b03f203e30e08385f1aabbe
+Size (darcs-2.0.0rc1.tar.gz) = 1758711 bytes
