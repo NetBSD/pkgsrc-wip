@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/11 15:00:26 pmatias Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/02 13:45:03 pmatias Exp $
 #
 
-DISTNAME=	miniupnpc-1.0-RC11
-PKGNAME=	miniupnpc-1.0nb11
+DISTNAME=	miniupnpc-1.0
 CATEGORIES=	net
 MASTER_SITES=	http://miniupnp.tuxfamily.org/files/
 
