@@ -1,0 +1,4 @@
+Shell.FM is a lightweight and interactive console based player
+for lastfm:// radio streams.
+Some patches were shamelessly ripped off Guillaume Pinot's
+port to OpenBSD.

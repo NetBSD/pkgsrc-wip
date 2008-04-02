@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
+
+--- src/include/portability.h.orig	2008-04-02 05:14:41.000000000 +0200
++++ src/include/portability.h
+@@ -0,0 +1,17 @@
++#include "config.h"
++#include <string.h>
++#include <sys/wait.h>
++
++#ifndef HAVE_STRNDUP
++char *strndup(const char *str, size_t len);
++#endif
++
++/* NetBSD lacks these. */
++
++#ifndef WCONTINUED
++#define WCONTINUED	4		/* Report a job control continued process. */	
++#endif
++
++#ifndef WIFCONTINUED
++#define WIFCONTINUED(x) (x == 0x13)	/* 0x13 == SIGCONT */
++#endif
