@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/03/07 19:35:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/02 18:50:19 schnoebe Exp $
 
-PSI_VERSION=	0.11
+PSI_VERSION=	0.12-RC2
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,7 +36,7 @@ CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 # LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
 # 		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
 # 		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
-LANG_FILES= psi_ru.qm
+LANG_FILES=
 
 .for l in ${LANG_FILES}
 SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
