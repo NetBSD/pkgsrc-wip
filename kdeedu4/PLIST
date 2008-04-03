@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/30 08:25:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/03 11:01:07 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/indi_celestron_gps
@@ -776,6 +776,7 @@ share/kde/apps/kalzium/data/iconsets/school/2.svg
 share/kde/apps/kalzium/data/iconsets/school/20.svg
 share/kde/apps/kalzium/data/iconsets/school/21.svg
 share/kde/apps/kalzium/data/iconsets/school/24.svg
+share/kde/apps/kalzium/data/iconsets/school/25.svg
 share/kde/apps/kalzium/data/iconsets/school/26.svg
 share/kde/apps/kalzium/data/iconsets/school/27.svg
 share/kde/apps/kalzium/data/iconsets/school/28.svg
