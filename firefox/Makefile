@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/28 02:42:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/03 00:31:13 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -20,10 +20,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 # Pull in standard firefox build framework, and override some things below
 .include "../../www/firefox/Makefile-firefox.common"
 
-MASTER_SITES=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/3.0b5-candidates/rc2/
 MOZ_VER=		3.0b5
-PKGNAME=		firefox-${MOZ_VER}rc2
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 
