@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:22:04 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/03 10:29:39 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -1115,7 +1115,7 @@ share/icons/oxygen/16x16/actions/help-hint.png
 share/icons/oxygen/16x16/actions/insert-image.png
 share/icons/oxygen/16x16/actions/insert-table.png
 share/icons/oxygen/16x16/actions/insert-text.png
-share/icons/oxygen/16x16/actions/knewstuff.png
+share/icons/oxygen/16x16/actions/khotnewstuff.png
 share/icons/oxygen/16x16/actions/list-add-font.png
 share/icons/oxygen/16x16/actions/list-add-user.png
 share/icons/oxygen/16x16/actions/list-add.png
@@ -2677,7 +2677,7 @@ share/icons/oxygen/32x32/actions/help-hint.png
 share/icons/oxygen/32x32/actions/insert-image.png
 share/icons/oxygen/32x32/actions/insert-table.png
 share/icons/oxygen/32x32/actions/insert-text.png
-share/icons/oxygen/32x32/actions/knewstuff.png
+share/icons/oxygen/32x32/actions/khotnewstuff.png
 share/icons/oxygen/32x32/actions/list-add-font.png
 share/icons/oxygen/32x32/actions/list-add-user.png
 share/icons/oxygen/32x32/actions/list-add.png
@@ -4085,7 +4085,7 @@ share/icons/oxygen/64x64/actions/go-next.png
 share/icons/oxygen/64x64/actions/go-previous.png
 share/icons/oxygen/64x64/actions/go-top.png
 share/icons/oxygen/64x64/actions/go-up.png
-share/icons/oxygen/64x64/actions/knewstuff.png
+share/icons/oxygen/64x64/actions/khotnewstuff.png
 share/icons/oxygen/64x64/actions/list-remove.png
 share/icons/oxygen/64x64/actions/mail-forward.png
 share/icons/oxygen/64x64/actions/mail-mark-task.png
