@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2008/02/03 12:46:53 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/03 07:16:14 hoka_adam Exp $
 #
 
-DISTNAME=	gcc-${GCC_VERSION}-${SNAP_DATE}
+DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc42-${GCC_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	http://gcc.site2nd.org/gcc/prerelease-4.2.0-20070501/ \
-		http://gcc.cybermirror.org/prerelease-4.2.0-20070501/
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://gcc.gnu.org/
-COMMENT=	This is the GCC 4.2.0 compiler (pre-release)
+COMMENT=	This is the GCC 4.2.3 compiler
 
-GCC_VERSION=		4.2.0
-SNAP_DATE=		20070501
+GCC_VERSION=		4.2.3
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
