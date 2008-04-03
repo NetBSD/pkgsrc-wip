@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2008/04/03 21:23:48 smoppy Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/03 22:32:33 smoppy Exp $
 #
 
 PKGNAME=	logfmon-1.0.1
 DISTNAME=	logfmon
 CATEGORIES=	sysutils
+
 MASTER_SITES=	#
+DISTFILES=	#
 
 MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://logfmon.sourceforge.net/
@@ -17,16 +19,13 @@ CVS_ROOT.logfmon=	${CVS_ROOT_SOURCEFORGE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		yacc
 
-# Makefile
+# Makefile things
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
-SUBST_MESSAGE.makefile=	Fixing distribution Makefile..
+SUBST_MESSAGE.makefile=	Fixing the Makefile..
 SUBST_FILES.makefile=	${MAKE_FILE}
-SUBST_SED.makefile+=	-e 's/$${PREFIX}/$${DESTDIR}$${PREFIX}/'
-SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${BINOWN} -g ${BINGRP}/'
-SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
-SUBST_SED.makefile+=	-e 's/DEBUG=//'	# No debug
-SUBST_SED.makefile+=	-e 's/ -I-//'	# Obsolete with GCC 4
+SUBST_SED.makefile=	-e 's/DEBUG=//'	# No debug
+SUBST_SED.makefile=	-e 's/ -I-//'	# Obsolete with GCC 4
 
 # Configuration path
 SUBST_CLASSES+=		conf
@@ -37,5 +36,9 @@ SUBST_SED.conf=		-e "s,/etc,${PKG_SYSCONFDIR},"
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
-.include "../../wip/mk/cvs-package.mk"
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	INSTALLBIN=${INSTALL_PROGRAM:Q}
+INSTALL_MAKE_FLAGS+=	INSTALLMAN=${INSTALL_MAN:Q}
+
 .include "../../mk/bsd.pkg.mk"
+.include "../../wip/mk/cvs-package.mk"
