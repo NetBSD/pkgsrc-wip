@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/03/06 11:45:48 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/03 10:21:17 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -408,47 +408,6 @@ include/KDE/KInputDialog
 include/KDE/KIntNumInput
 include/KDE/KIntSpinBox
 include/KDE/KIntValidator
-include/KDE/KJS/CString
-include/KDE/KJS/Collector
-include/KDE/KJS/Completion
-include/KDE/KJS/DeclaredFunctionImp
-include/KDE/KJS/Error
-include/KDE/KJS/ExecState
-include/KDE/KJS/FunctionImp
-include/KDE/KJS/HashEntry
-include/KDE/KJS/Identifier
-include/KDE/KJS/Interpreter
-include/KDE/KJS/JSCell
-include/KDE/KJS/JSImmediate
-include/KDE/KJS/JSLock
-include/KDE/KJS/JSObject
-include/KDE/KJS/JSValue
-include/KDE/KJS/List
-include/KDE/KJS/Lookup
-include/KDE/KJS/PropertyMap
-include/KDE/KJS/PropertyNameArray
-include/KDE/KJS/PropertySlot
-include/KDE/KJS/ProtectedPtr
-include/KDE/KJS/ScopeChain
-include/KDE/KJS/ScopeChainIterator
-include/KDE/KJS/ScopeChainNode
-include/KDE/KJS/UChar
-include/KDE/KJS/UCharReference
-include/KDE/KJS/UString
-include/KDE/KJSEmbed/Constructor
-include/KDE/KJSEmbed/Engine
-include/KDE/KJSEmbed/Enumerator
-include/KDE/KJSEmbed/Method
-include/KDE/KJSEmbed/ObjectBinding
-include/KDE/KJSEmbed/ObjectFactory
-include/KDE/KJSEmbed/ProxyBinding
-include/KDE/KJSEmbed/QObjectBinding
-include/KDE/KJSEmbed/QWidgetBinding
-include/KDE/KJSEmbed/SlotBinding
-include/KDE/KJSEmbed/StaticBinding
-include/KDE/KJSEmbed/StaticConstructor
-include/KDE/KJSEmbed/VariantBinding
-include/KDE/KJSEmbed/VariantFactory
 include/KDE/KJob
 include/KDE/KJobUiDelegate
 include/KDE/KKeySequenceWidget
@@ -485,22 +444,12 @@ include/KDE/KMultiTabBar
 include/KDE/KMultiTabBarButton
 include/KDE/KMultiTabBarTab
 include/KDE/KNFSShare
-include/KDE/KNS/Action
 include/KDE/KNS/Author
-include/KDE/KNS/Button
 include/KDE/KNS/Category
 include/KDE/KNS/Engine
 include/KDE/KNS/Entry
-include/KDE/KNS/EntryHandler
-include/KDE/KNS/EntryLoader
-include/KDE/KNS/Feed
 include/KDE/KNS/Installation
 include/KDE/KNS/KTranslatable
-include/KDE/KNS/Provider
-include/KDE/KNS/ProviderDialog
-include/KDE/KNS/ProviderHandler
-include/KDE/KNS/ProviderLoader
-include/KDE/KNS/UploadDialog
 include/KDE/KNSBookmarkExporter
 include/KDE/KNSBookmarkExporterImpl
 include/KDE/KNSBookmarkImporter
@@ -620,7 +569,6 @@ include/KDE/KServiceType
 include/KDE/KServiceTypeProfile
 include/KDE/KServiceTypeTrader
 include/KDE/KSessionManager
-include/KDE/KSettings/ComponentsDialog
 include/KDE/KSettings/Dialog
 include/KDE/KSettings/Dispatcher
 include/KDE/KSettings/PluginPage
@@ -677,7 +625,6 @@ include/KDE/KTextEditor/Document
 include/KDE/KTextEditor/Editor
 include/KDE/KTextEditor/EditorChooser
 include/KDE/KTextEditor/Factory
-include/KDE/KTextEditor/HighlightingInterface
 include/KDE/KTextEditor/MarkInterface
 include/KDE/KTextEditor/ModificationInterface
 include/KDE/KTextEditor/Plugin
@@ -780,7 +727,6 @@ include/KDE/Phonon/EffectDescriptionModel
 include/KDE/Phonon/EffectParameter
 include/KDE/Phonon/EffectWidget
 include/KDE/Phonon/Experimental/AudioDataOutput
-include/KDE/Phonon/Experimental/OverlayApi
 include/KDE/Phonon/Experimental/VideoDataOutput
 include/KDE/Phonon/Experimental/VideoFrame
 include/KDE/Phonon/Experimental/Visualization
@@ -802,9 +748,6 @@ include/KDE/Phonon/VolumeFaderEffect
 include/KDE/Phonon/VolumeFaderInterface
 include/KDE/Phonon/VolumeSlider
 include/KDE/PtyProcess
-include/KDE/SafeSite/Agent
-include/KDE/SafeSite/Report
-include/KDE/SafeSite/ServiceInfo
 include/KDE/Solid/AcAdapter
 include/KDE/Solid/AudioInterface
 include/KDE/Solid/Battery
@@ -1845,6 +1788,7 @@ share/kde/apps/cmake/modules/MacroPushRequiredVars.cmake
 share/kde/apps/cmake/modules/NepomukMacros.cmake
 share/kde/apps/cmake/modules/UsePkgConfig.cmake
 share/kde/apps/cmake/modules/Win32Macros.cmake
+share/kde/apps/cmake/modules/cmake-modules-styleguide.txt
 share/kde/apps/cmake/modules/config-alsa.h.cmake
 share/kde/apps/cmake/modules/kde4_cmake_uninstall.cmake.in
 share/kde/apps/cmake/modules/kde4_exec_via_sh.cmake
@@ -3821,6 +3765,8 @@ share/mime/packages/kde.xml
 @dirrm share/doc/kde/HTML/en/sonnet
 @comment in kde: @dirrm share/doc/kde/HTML/en/common
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @dirrm lib/kde4/plugins/phonon_platform
 @dirrm lib/kde4/plugins/imageformats
@@ -3852,7 +3798,6 @@ share/mime/packages/kde.xml
 @dirrm include/KDE/khtml
 @dirrm include/KDE/ThreadWeaver
 @dirrm include/KDE/Solid
-@dirrm include/KDE/SafeSite
 @dirrm include/KDE/Phonon/Experimental
 @dirrm include/KDE/Phonon
 @dirrm include/KDE/KWallet
@@ -3863,8 +3808,6 @@ share/mime/packages/kde.xml
 @dirrm include/KDE/KNetwork
 @dirrm include/KDE/KNS
 @dirrm include/KDE/KMediaPlayer
-@dirrm include/KDE/KJSEmbed
-@dirrm include/KDE/KJS
 @dirrm include/KDE/KIO
 @dirrm include/KDE/KHE
 @dirrm include/KDE/KAccelGen
