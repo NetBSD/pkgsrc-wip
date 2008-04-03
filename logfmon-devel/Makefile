@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/10 16:11:00 smoppy Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/03 21:23:48 smoppy Exp $
 #
 
 PKGNAME=	logfmon-1.0.1
@@ -10,8 +10,8 @@ MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://logfmon.sourceforge.net/
 COMMENT=	Log file monitor
 
-CVS_REPOSITORIES=	logfmon
 CVS_PROJECT=		logfmon
+CVS_REPOSITORIES=	${CVS_PROJECT}
 CVS_ROOT.logfmon=	${CVS_ROOT_SOURCEFORGE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -27,6 +27,13 @@ SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${BINOWN} -g ${BINGRP}/'
 SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 SUBST_SED.makefile+=	-e 's/DEBUG=//'	# No debug
 SUBST_SED.makefile+=	-e 's/ -I-//'	# Obsolete with GCC 4
+
+# Configuration path
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-build
+SUBST_MESSAGE.conf=	Fixing configuration path..
+SUBST_FILES.conf=	logfmon.h logfmon.conf.5 logfmon.8
+SUBST_SED.conf=		-e "s,/etc,${PKG_SYSCONFDIR},"
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
