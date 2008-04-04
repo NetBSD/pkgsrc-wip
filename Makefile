@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2869 2008/04/02 18:34:57 rhialto Exp $
+# $Id: Makefile,v 1.2870 2008/04/04 14:05:43 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1091,6 +1091,7 @@ SUBDIR+=	openct
 SUBDIR+=	opendchub
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
+SUBDIR+=	openttd
 SUBDIR+=	openoffice2-bin-af
 SUBDIR+=	openoffice2-bin-be-BY
 SUBDIR+=	openoffice2-bin-bg
