@@ -1,7 +1,0 @@
-- Can I combine the automatic packlist
-    PERL5_PACKLIST= auto/Qt/.packlist
-  with some extra files?
-  
-- I'm sure the perl version (5.8.0) doesn't belong in
-  the PLIST.
-- 

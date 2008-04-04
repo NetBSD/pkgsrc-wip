@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/28 00:04:43 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 10:44:50 rhialto Exp $
 
 PKGNAME=		p5-qt3-3.009b2
 DISTNAME=		PerlQt-3.009-b2
@@ -20,7 +20,7 @@ USE_LIBTOOL=		YES
 PERL5_CONFIGURE_DIRS+=	. PerlQt
 
 # There is more than just in the perl module's packlist
-#PERL5_PACKLIST= auto/Qt/.packlist
+PERL5_PACKLIST=		auto/Qt/.packlist
 
 # Build-time only:
 BUILDLINK_DEPMETHOD.kdelibs=    build
