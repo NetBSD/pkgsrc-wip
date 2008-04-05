@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.1 2008/04/05 10:14:15 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.2 2008/04/05 10:37:17 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -20,13 +20,9 @@ or anything else.
 Actually PKGNAME fields are compared only.
 All PKGNAMEs are checked, i.e. versions are compared and
 presense is checked.
-
 Format of the results:
-
   <R> <PKGBASE> <VER1> <VER2>
-
 where R is
-
   -     present in the first file but absent in the second one (disappears)
   +     absent in the first file but present in the second one (appears/new)
   <NUM> more than one package with the same PKGBASE is in the first file
@@ -34,11 +30,9 @@ where R is
   <     second file contains more recent version (upgrade is possible)
   >     first file contains earlier version (downgrade is possible)
   ?     versions are incomparable (e.g. 1.2.3 vs. 20080101)
-
 PKGBASE is PKGNAME with version stripped,
 VER1 and VER2 are package versions. VER2 is present only if
    R is `<' or `>'
-
 .Sh AUTHOR
 .An Aleksey Cheusov
 .Aq vle@gmx.net
