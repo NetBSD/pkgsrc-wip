@@ -1,5 +1,6 @@
 distbb - distributed bulk build framework for pkgsrc
 
-Main features:
-   - different packages can be built on different machines or chroots
-   - ???
+Key features:
+   - several packages can be built at the same time on different
+     machines of chroots
+   - ready for DESTDIR bulk builds
