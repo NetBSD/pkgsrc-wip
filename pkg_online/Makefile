@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/02/21 23:10:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/05 10:29:07 cheusov Exp $
 #
 
 DISTNAME=	pkg_online-0.3.1
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
 
@@ -11,8 +12,7 @@ COMMENT=	Client/Server search in pkgsrc packages
 
 DEPENDS+=	dict-server>=1.10.10nb2:../../wip/dict-server
 DEPENDS+=	dict-client>=1.10.9:../../wip/dict-client
-DEPENDS+=	pkg_src_summary-[0-9]*:../../wip/pkg_src_summary
-DEPENDS+=	pkg_summary4view-[0-9]*:../../wip/pkg_summary4view
+DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
 DEPENDS+=	netcat-[0-9]*:../../net/netcat
 
