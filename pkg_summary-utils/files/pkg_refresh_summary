@@ -1,0 +1,185 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+usage (){
+    cat 1>&2 <<EOF
+pkg_refresh_summary - refresh pkg_summary, that is
+for each pkgpath:pkgbase pair present in summary it outputs
+an information about only the newest version
+
+usage: pkg_refresh_summary [OPTIONS] [files...]
+OPTIONS:
+  -h|--help      display this help message
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done
+
+############################################################
+
+tmp_dir="/tmp/pkg_refresh_summary.$$"
+trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+############################################################
+if test $# -eq 0; then
+    # copy stdin to temporary file and then use it
+    tmp_fn=$tmp_dir/tmp
+    cat > $tmp_fn
+fi
+
+newest_fn=$tmp_dir/newest
+
+runawk -e '
+#use "pkgsrc-dewey.awk"
+
+BEGIN {
+   FS = "="
+}
+
+$1 == "PKGNAME" {
+   pkgbase = $2
+   sub(/-[^-]*$/, "", pkgbase)
+
+   pkgver = $2
+   sub(/^.*-/, "", pkgver)
+
+   next
+}
+
+$1 == "PKGPATH" {
+   pkgpath = $2
+   next
+}
+
+NF == 0 && pkgpath != "" && pkgbase != "" {
+   pair = pkgpath ":" pkgbase
+
+   if (!(pair in pkgbase2ver) ||
+      dewey_cmp(pkgbase2ver [pair], pkgver) == "<")
+   {
+      pkgbase2ver [pair] = pkgver
+   }
+
+   pkgbase2path [pair] = pkgpath
+
+   pkgpath = pkgbase = ""
+}
+
+END {
+   for (p in pkgbase2ver){
+      pkgbase = p
+      sub(/^.*:/, "", pkgbase)
+
+      print pkgbase2path [p], pkgbase "-" pkgbase2ver [p]
+   }
+}
+' "$@" $tmp_fn > $newest_fn
+
+export newest_fn
+
+runawk -e '
+#use "xgetline.awk"
+
+BEGIN {
+   newest_fn = ENVIRON ["newest_fn"]
+
+   while (xgetline0(newest_fn)){
+      pair = $1 ":" $2
+      keep [pair] = 1
+   }
+
+   SUBSEP = ":"
+   FS     = "="
+   skip   = -1 # -1 - unknown, 0 - false, 1 - true
+}
+
+function update_skip (){
+   if (pkgname != "" && pkgpath != ""){
+      skip = !((pkgpath ":" pkgname) in keep)
+
+      if ((pkgpath ":" pkgname) in processed){
+         skip = 1
+      }
+
+      if (skip == 0){
+         print accu
+      }
+   }
+}
+
+skip == 1 && NF > 0 {
+   next
+}
+
+skip == 0 && NF > 0 {
+   print $0
+   next
+}
+
+skip == -1 {
+   if (accu == "")
+      accu = $0
+   else
+      accu = accu "\n" $0
+}
+
+$1 == "PKGNAME" {
+   pkgname = $2
+   update_skip()
+}
+
+
+$1 == "PKGPATH" {
+   pkgpath = $2
+   update_skip()
+}
+
+NF == 0 {
+   processed [pkgpath, pkgname] = 1
+
+   if (skip == 0){
+      print ""
+   }
+
+   accu = pkgname = pkgpath = ""
+   skip = -1
+}
+' "$@" $tmp_fn

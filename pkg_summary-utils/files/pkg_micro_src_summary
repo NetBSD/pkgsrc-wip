@@ -1,0 +1,96 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+. pipestatus
+
+############################################################
+# user settable variables
+if test -z "$PKGSRCDIR"; then
+    PKGSRCDIR=/usr/pkgsrc
+fi
+
+if test -z "$BMAKE"; then
+    BMAKE=make
+fi
+
+############################################################
+cd $PKGSRCDIR
+
+tmpfn=/tmp/pkg_src_micro_summary.$$
+trap "rm -rf $tmpfn" 0 1 2 15
+
+mkdir -m 700 $tmpfn
+
+############################################################
+
+# running helper
+helper_out=$tmpfn/helper_out.txt
+
+list_pkgs (){
+    if test $# -ne 0; then
+	# processing arguments
+	for pkgpath in "$@"; do
+	    echo $pkgpath
+	done
+    else
+	cat
+    fi
+}
+
+append_Makefile (){
+    awk '{print $1 "/Makefile"}'
+}
+
+runpipe \
+    list_pkgs "$@" '|' \
+    append_Makefile '|' \
+    pkg_src_fetch_var > "$helper_out"
+
+# `+' to micro_summary (fast!)
+awk '
+/^[+]/ {
+   pkgpath = $3
+   sub(/\/[^\/]*$/, "", pkgpath)
+   printf "PKGNAME=%s\nPKGPATH=%s\n\n", $2, pkgpath
+}' "$helper_out"
+
+# `-' to micro_summary (slo-o-o-ow!)
+make_out=$tmpfn/make_out.txt
+awk '
+/^[-]/ {
+   pkgpath = $NF
+   sub(/\/[^\/]*$/, "", pkgpath)
+   print pkgpath
+}' "$helper_out" |
+while read pkgpath; do
+    if ( cd $pkgpath && $BMAKE show-var VARNAME=PKGNAME &&
+	echo PKGPATH=$pkgpath ) > "$make_out"
+    then
+	printf "PKGNAME="
+	cat "$make_out"
+	echo ''
+    else
+	printf "Bad package %s, skipped\n" "$pkgpath" 1>&2
+    fi
+done
