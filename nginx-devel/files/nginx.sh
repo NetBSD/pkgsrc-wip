@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nginx.sh,v 1.1.1.1 2008/03/27 18:54:57 rootcho Exp $
+# $NetBSD: nginx.sh,v 1.2 2008/04/05 00:42:18 rootcho Exp $
 #
 # PROVIDE: nginx
 # REQUIRE: DAEMON
