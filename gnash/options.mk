@@ -1,60 +1,101 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/11/17 15:50:52 jeremy-c-reed Exp $
+# $NetBSD: options.mk,v 1.2 2008/04/05 03:53:15 pmatias Exp $
 #
 
+#
 # see http://www.gnu.org/software/gnash/manual/gnash.html#codedepend
+#
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.gnash
-PKG_SUPPORTED_OPTIONS=		klash mitshm
-PKG_OPTIONS_OPTIONAL_GROUPS=	gnash-gui gnash-renderer gnash-media
-PKG_OPTIONS_GROUP.gnash-gui=	gtk kde sdl # qt aqua riscos fltk2 fb all
-PKG_OPTIONS_GROUP.gnash-renderer=	opengl cairo # agg
-PKG_OPTIONS_GROUP.gnash-media=	gstreamer ffmpeg mad
-PKG_SUGGESTED_OPTIONS+=         cairo gtk mad
+PKG_OPTIONS_VAR=		        PKG_OPTIONS.gnash
+PKG_SUPPORTED_OPTIONS=		    gtk kde agg opengl cairo mitshm
+PKG_OPTIONS_OPTIONAL_GROUPS=    gnash-media
+PKG_OPTIONS_GROUP.gnash-media=  ffmpeg gstreamer mad
+PKG_SUGGESTED_OPTIONS+=         gtk agg gstreamer mitshm
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mcairo)
-# TODO: check this -- maybe this is needed if gtk is the gui no matter what?
-CONFIGURE_ARGS+=	--enable-renderer=cairo
+###
+### Select GUIs.
+###
+.if !empty(PKG_OPTIONS:Mgtk)
+GNASH_GUIS += gtk
+PLIST_SRC+=		${PKGDIR}/PLIST.gtk
+.include "../../x11/gtk2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mklash)
-PLIST_SRC+=		${PKGDIR}/PLIST.klash
+.if !empty(PKG_OPTIONS:Mkde)
+GNASH_GUIS += kde
+PLIST_SRC+=		${PKGDIR}/PLIST.kde
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
-CONFIGURE_ARGS+=	--datadir="${PREFIX}/share"
-CONFIGURE_ARGS+=	\
-	--with-plugindir=${PREFIX}/share/gnash/plugins
-CONFIGURE_ARGS+=	--enable-klash
-.else
-CONFIGURE_ARGS+=	--disable-klash
-#CONFIGURE_ARGS+=	--disable-plugin
 .endif
 
+CONFIGURE_ARGS += --enable-gui=${GNASH_GUIS:tW:S/ /,/}
+
+###
+### Select renderers.
+###
+.if !empty(PKG_OPTIONS:Magg)
+GNASH_RENDERS += agg
+.include "../../wip/agg/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mopengl)
+GNASH_RENDERS += ogl
+.include "../../x11/glproto/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mgtk)
-# TODO: another PLIST entry for gtk-gnash
-CONFIGURE_ARGS+=	--enable-gui=gtk
 .include "../../graphics/gtkglext/buildlink3.mk"
-# glib, atk, pango, cairo, gtk2, gtkglext.
+.endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mcairo)
+GNASH_RENDERS += cairo
+.include "../../graphics/cairo/buildlink3.mk"
+.endif
+
+CONFIGURE_ARGS += --enable-renderer=${GNASH_RENDERS:tW:S/ /,/}
+
+###
+### Select a media handler
+###
+.if !empty(PKG_OPTIONS:Mffmpeg)
+CONFIGURE_ARGS += --enable-media=ffmpeg
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
+# is ffmpeg-devel buildlink broken? we need all that:
+.include "../../audio/faac/buildlink3.mk"
+.include "../../audio/lame/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
+# --------------------------------------------------
+.endif
+
+.if !empty(PKG_OPTIONS:Mgstreamer)
+CONFIGURE_ARGS += --enable-media=gst --enable-gstreamer
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+# see http://bjacques.org/gst-plugins
+DEPENDS += gst-plugins0.10-base-[0-9]*:../../multimedia/gst-plugins0.10-base
+DEPENDS += gst-plugins0.10-oss-[0-9]*:../../audio/gst-plugins0.10-oss
+DEPENDS += gst-fluendo-mp3-0.10.[0-9]*:../../audio/gst-plugins0.10-fluendo-mp3
+DEPENDS += gst-ffmpeg-0.10.[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
+DEPENDS += gst-plugins0.10-gnomevfs-[0-9]*:../../sysutils/gst-plugins0.10-gnomevfs
+DEPENDS += gst-plugins0.10-x11-[0-9]*:../../x11/gst-plugins0.10-x11
 .endif
 
 .if !empty(PKG_OPTIONS:Mmad)
-CONFIGURE_ARGS+=        --enable-media=mad
+CONFIGURE_ARGS += --enable-mad
 .include "../../audio/libmad/buildlink3.mk"
-# this needs SDL even if using GTK as user interface
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .endif
 
+###
+### MIT-SHM Support.
+###
 .if !empty(PKG_OPTIONS:Mmitshm)
-# check this -- maybe this is the default
-CONFIGURE_ARGS+=	--enable-mit-shm
+CONFIGURE_ARGS += --enable-mit-shm
+.else
+CONFIGURE_ARGS += --disable-mit-shm
 .endif
-
-.if !empty(PKG_OPTIONS:Mopengl)
-CONFIGURE_ARGS+=	--enable-renderer=opengl
-.endif
-
-# NOTES:
-# --disable-nsapi to disable Firefox plugin
-# agg uses libagg from http://www.antigrain.com

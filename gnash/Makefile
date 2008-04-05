@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/05 03:53:15 pmatias Exp $
 #
 
-DISTNAME=		gnash-0.8.1
-PKGREVISION=		1
+DISTNAME=		gnash-0.8.2
 CATEGORIES=		multimedia
-MASTER_SITES=		${MASTER_SITE_GNU:=gnash/0.8.1/}
+MASTER_SITES=		${MASTER_SITE_GNU:=gnash/0.8.2/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		matias@dotbsd.org
 HOMEPAGE=		http://www.gnashdev.org/
-#HOMEPAGE=		http://www.gnu.org/software/gnash/
 COMMENT=		GPL Flash movie player
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -27,6 +25,9 @@ CONFIG_SHELL=		${TOOLS_BASH}
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+post-install:
+	cp ${WRKSRC}/plugin/.libs/libgnashplugin.so ${PREFIX}/lib/firefox/plugins || ${TRUE}
+
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -35,7 +36,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
