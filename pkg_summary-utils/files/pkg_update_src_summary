@@ -110,7 +110,7 @@ fi
 
 # micro summary
 micsum_fn=$tmp_dir/micsum
-pkg_src_micro_summary < $allpkgs_fn >$micsum_fn
+pkg_micro_src_summary < $allpkgs_fn >$micsum_fn
 
 # summary against microsummary
 cmp_fn=$tmp_dir/cmp
