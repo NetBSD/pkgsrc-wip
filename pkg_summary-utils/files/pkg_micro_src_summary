@@ -37,7 +37,7 @@ fi
 ############################################################
 cd $PKGSRCDIR
 
-tmpfn=/tmp/pkg_src_micro_summary.$$
+tmpfn=/tmp/pkg_micro_src_summary.$$
 trap "rm -rf $tmpfn" 0 1 2 15
 
 mkdir -m 700 $tmpfn

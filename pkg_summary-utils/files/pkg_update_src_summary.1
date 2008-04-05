@@ -1,12 +1,12 @@
-.\"	$NetBSD: pkg_update_src_summary.1,v 1.1 2008/04/05 10:14:15 cheusov Exp $
+.\"	$NetBSD: pkg_update_src_summary.1,v 1.2 2008/04/05 10:32:53 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
 .Dd Jan 29, 2008
-.Dt PKG_SRC_UPDATE_SUMMARY 1
+.Dt PKG_UPDATE_SRC_SUMMARY 1
 .Sh NAME
-.Nm pkg_src_update_summary
+.Nm pkg_update_src_summary
 .Nd incrementally updates source packages summary
 .Sh SYNOPSIS
 .Nm
@@ -16,7 +16,7 @@
 .Nm
 incrementally updates source packages summary about all packages in
 pkgsrc source tree.
-Algorithm. 1) pkg_src_update_summary quickly obtains micro summary
+Algorithm. 1) pkg_update_src_summary quickly obtains micro summary
 information about all packages
 from pkgsrc source tree, "micro" means PKGNAME and PKGPATH fields only.
 2) comparing summary_filename and micro summary collected in step 1
@@ -43,7 +43,7 @@ path to pkgsrc friendly make utility, defaults to make
 .Ed
 .Sh EXAMPLES
 .Bd -literal
-pkg_src_update_summary /usr/pkgsrc/pkg_src_summary.txt
+pkg_update_src_summary /usr/pkgsrc/pkg_src_summary.txt
 .Ed
 .Sh SEE ALSO
 .Xr pkg_summary 5 ,

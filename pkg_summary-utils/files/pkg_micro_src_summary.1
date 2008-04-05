@@ -1,12 +1,12 @@
-.\"	$NetBSD: pkg_micro_src_summary.1,v 1.1 2008/04/05 10:14:15 cheusov Exp $
+.\"	$NetBSD: pkg_micro_src_summary.1,v 1.2 2008/04/05 10:32:53 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
 .Dd Jan 29, 2008
-.Dt PKG_SRC_MICRO_SUMMARY 1
+.Dt PKG_MICRO_SRC_SUMMARY 1
 .Sh NAME
-.Nm pkg_src_micro_summary
+.Nm pkg_micro_src_summary
 .Nd build summary information for source packages
 .Sh SYNOPSIS
 .Nm
@@ -23,7 +23,7 @@ works DRAMMATICALLY faster than pkg_src_summary in most cases.  This
 is possible because special hack is used (only when it is possible!)
 to fetch PKGNAME instead of running make. And for ~90% of all packages
 (pkgsrc + wip) it is possible to use this hack. So
-pkg_src_micro_summary works approximately 10 times faster than
+pkg_micro_src_summary works approximately 10 times faster than
 pkg_src_summary.
 .Sh ENVIRONMENT
 .Bd -literal
@@ -36,8 +36,8 @@ path to pkgsrc friendly make utility, defaults to make
 .Ed
 .Sh EXAMPLES
 .Bd -literal
-pkg_src_micro_summary wip/dict-server wip/dict-mueller7 x11/xxkb
-printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_src_micro_summary
+pkg_micro_src_summary wip/dict-server wip/dict-mueller7 x11/xxkb
+printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_micro_src_summary
 .Ed
 .Sh SEE ALSO
 .Xr pkg_src_summary 1 ,

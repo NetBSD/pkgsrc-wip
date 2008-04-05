@@ -37,10 +37,10 @@ fi
 ############################################################
 usage (){
     cat <<EOF
-pkg_src_update_summary - incrementally updates
+pkg_update_src_summary - incrementally updates
 package summary from pkgsrc/ tree (pkg_summary(5) format)
 
-usage: pkg_src_update_summary [OPTIONS] summary_file
+usage: pkg_update_src_summary [OPTIONS] summary_file
 OPTIONS:
   -h|--help              display this help message
   -f|--file <filename>   obtain package names from
@@ -87,7 +87,7 @@ cd $PKGSRCDIR
 
 new_summary=$summary.new
 
-tmp_dir="/tmp/pkg_src_update_summary.$$"
+tmp_dir="/tmp/pkg_update_src_summary.$$"
 trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
 mkdir -m 700 "$tmp_dir"
 
