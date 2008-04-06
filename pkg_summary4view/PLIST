@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/29 19:31:46 cheusov Exp $
-bin/pkg_summary4view
-man/man1/pkg_summary4view.1
