@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/17 17:58:48 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/06 21:45:11 gschwarz Exp $
 
-DISTNAME=	archimedes-0.1.4
+DISTNAME=	archimedes-0.7.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=archimedes/}
 EXTRACT_SUFX=	.tar.bz2
