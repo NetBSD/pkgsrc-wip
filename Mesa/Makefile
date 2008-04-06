@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2008/03/24 21:06:36 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/06 22:26:41 bsadewitz Exp $
 
 PKGNAME=	Mesa-${MESA_PKGVERSION}
-PKGREVISION=	2
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
