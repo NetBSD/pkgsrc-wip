@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/08 15:49:56 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/06 00:24:29 shindenmorr Exp $
 #
 
 DISTNAME=	itask-ng-0.2.4
@@ -12,7 +12,7 @@ COMMENT=	Application launcher and taskbar for e17
 
 PKG_DESTDIR_SUPPORT=    	user-destdir
 
-BUILD_DEPENDS+=			gettext-m4:../../devel/gettext-m4
+BUILD_DEPENDS+=			gettext-m4-[0-9]*:../../devel/gettext-m4
 WRKSRC=				${WRKDIR}/itask-ng
 USE_TOOLS+=			autoconf automake gmake msgfmt pkg-config
 USE_LIBTOOL=			yes
