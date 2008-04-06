@@ -1,4 +1,4 @@
-# $NetBSD: pkgsrc-dri,v 1.4 2008/03/24 21:04:09 bsadewitz Exp $
+# $NetBSD: pkgsrc-dri,v 1.5 2008/04/06 22:22:34 bsadewitz Exp $
 
 include $(TOP)/configs/pkgsrc
 
@@ -10,7 +10,7 @@ CONFIG_NAME= 	pkgsrc-dri
 
 DEFINES=\
 	-DPTHREADS -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER \
-	-DGLX_DIRECT_RENDERING -DGLX_INDIRECT_RENDERING \
+	-DGLX_DIRECT_RENDERING -DGLX_INDIRECT_RENDERING -DHZ=$(MESA_HZ) \
 	-DHAVE_ALIAS -D_REENTRANT $(XCB_DEFS)
 CFLAGS+=\
 	$(WARN_FLAGS) -Wmissing-prototypes -Wall \
