@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/10 19:06:08 cheusov Exp $
-bin/pkg_cmp_summary
-man/man1/pkg_cmp_summary.1
