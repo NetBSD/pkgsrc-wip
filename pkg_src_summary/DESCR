@@ -1,2 +1,0 @@
-pkg_src_summary builds the summary information about source packages
-in format similar to that used in pkg_summary.gz (pkg_info -X)
