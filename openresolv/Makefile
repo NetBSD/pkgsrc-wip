@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/03/07 11:43:05 rsmarples Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 09:20:36 rsmarples Exp $
 #
 
-DISTNAME=		openresolv-1.5
+DISTNAME=		openresolv-1.5.1
 CATEGORIES=		net
 MASTER_SITES=		http://roy.marples.name/openresolv/
 EXTRACT_SUFX=		.tar.bz2
