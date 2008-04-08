@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/04/08 19:46:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/08 20:14:16 cheusov Exp $
 
-DISTNAME=	dictd-1.10.10
-PKGNAME=	libmaa-1.0.0
+DISTNAME=	dictd-1.10.11
+PKGNAME=	libmaa-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
