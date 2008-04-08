@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/10 20:33:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/08 19:46:15 cheusov Exp $
 
 DISTNAME=	dictd-1.10.10
 PKGNAME=	libmaa-1.0.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Provides a few data structures and helpful functions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/libmaa
 BUILD_TARGET=		lib
@@ -25,7 +27,7 @@ EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 post-install:
 	set -e; \
 	for i in ${EXTRA_DOC_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/"$${i}" ${PKGDOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/"$${i}" ${DESTDIR}${PKGDOCDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
