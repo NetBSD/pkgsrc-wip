@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/30 13:02:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/08 19:44:25 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -10,9 +10,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-
-CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--disable-plugin
 
 BUILD_TARGET=		dict
 INSTALL_TARGET=		install.dict
