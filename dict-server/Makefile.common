@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2008/03/30 13:12:54 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/04/08 19:39:40 cheusov Exp $
 
-DISTNAME=	dictd-1.10.10
+DISTNAME=	dictd-1.10.11
 
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
