@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2007/01/21 09:36:40 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/08 20:19:55 gschwarz Exp $
 
 DISTNAME=	imonc-20010125
 CATEGORIES=	net
-MASTER_SITES=	http://www.fli4l.de/fileadmin/downloadzaehler.php?file=3.0.2/
-DISTFILES=	fli4l-3.0.2.tar.gz
+MASTER_SITES=	http://www.fli4l.de/fileadmin/downloadzaehler.php?file=3.2.0/
+DISTFILES=	fli4l-3.2.0.tar.gz
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.fli4l.de/
 COMMENT=	Command-line version of the fli4l monitoring tool
 
-WRKSRC=		${WRKDIR}/fli4l-3.0.2/unix
+WRKSRC=		${WRKDIR}/fli4l-3.2.0/unix
 NO_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
