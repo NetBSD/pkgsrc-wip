@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/11/11 11:31:06 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/09 19:05:15 gschwarz Exp $
 
 DISTNAME=	uqwk-2.21
 CATEGORIES=	news
@@ -9,17 +9,8 @@ HOMEPAGE=	http://www.xs4all.nl/~js/warez/
 COMMENT=	Tool to collect news and mail packets for offline reading
 
 GNU_CONFIGURE=	YES
+USE_FEATURES+=	regcomp
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-.include "../../mk/bsd.prefs.mk"
-.if !empty(LOWER_OPSYS:Mirix5*)
-# needs regex.h
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
-SUBST_CLASSES+=		 regex_h
-SUBST_STAGE.regex_h=	post-patch
-SUBST_FILES.regex_h=	score.c
-SUBST_SED.regex_h=	-e "s,<regex\\.h>,<nbcompat/regex.h>,"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
