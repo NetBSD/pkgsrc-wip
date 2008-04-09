@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2008/04/09 09:16:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2008/04/09 09:29:38 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dictd/dict-server/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 COMMENT=	Dictionary Service Protocol server
 
@@ -13,10 +13,7 @@ USE_TOOLS+=		gmake yacc lex m4:run
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--disable-plugin
-CONFIGURE_ARGS+=	--disable-shared
-CONFIGURE_ARGS+=	--with-local-libmaa
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/dictd
 
 MESSAGE_SUBST+=		VARBASE="${VARBASE}"
@@ -40,7 +37,6 @@ RCD_SCRIPTS=		dictd
 
 # for -L /var/log/dictd/<filename_or_pattern>
 OWN_DIRS_PERMS=	${VARBASE}/log/dictd dictd dictd 0750
-
 
 BUILD_TARGET=	dictd dictzip dictfmt
 
@@ -69,5 +65,5 @@ post-install:
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
-
+.include "../../wip/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
