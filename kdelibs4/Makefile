@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/06 11:58:06 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/09 20:58:14 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -7,6 +7,8 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+CONFLICTS+=	kdelibs-[0-9]*
 
 CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDELibsDependencies.cmake
 CMAKE_MODULE_PATH_OVERRIDE+=	kjsembed/qtonly/CMakeLists.txt
