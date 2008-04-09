@@ -1,0 +1,8 @@
+Version 0.4.1, by Aleksey Cheusov, Wed,  9 Apr 2008 23:14:03 +0300
+
+   ADDED: -f|--fields=<fields> option to pkg_src_fetc_var
+   clean-ups
+
+Version 0.4.0, by Aleksey Cheusov
+
+   first publicly available release (with name pkg_summary-utils)
