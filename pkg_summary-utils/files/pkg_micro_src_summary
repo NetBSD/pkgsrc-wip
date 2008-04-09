@@ -27,11 +27,11 @@ set -e
 ############################################################
 # user settable variables
 if test -z "$PKGSRCDIR"; then
-    PKGSRCDIR=/usr/pkgsrc
+    export PKGSRCDIR=/usr/pkgsrc # export - for pkg_src_fetch_var
 fi
 
 if test -z "$BMAKE"; then
-    BMAKE=make
+    export BMAKE=make
 fi
 
 ############################################################
@@ -41,6 +41,47 @@ tmpfn=/tmp/pkg_micro_src_summary.$$
 trap "rm -rf $tmpfn" 0 1 2 15
 
 mkdir -m 700 $tmpfn
+
+usage (){
+    cat 1>&2 <<EOF
+pkg_micro_src_summary - builds micro summary information
+about source packages
+
+usage: pkg_micro_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
+OPTIONS:
+  -h|--help              display this help message
+  -f|--fields <filename>
+  -f|--fields=<filename> fields to be included too summary,
+                         PKGNAME and PKGPATH by default
+EOF
+}
+
+############################################################
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-f|--fields)
+	    fields="$2"
+	    shift;;
+	-f=|--fields=)
+	    fields="$(echo $1 | cut -f2 -d=)";;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+if test -z "$fields"; then
+    fields='PKGNAME PKGPATH'
+fi
 
 ############################################################
 
@@ -58,36 +99,39 @@ list_pkgs (){
     fi
 }
 
-append_Makefile (){
-    awk '{print $1 "/Makefile"}'
-}
-
 runpipe \
     list_pkgs "$@" '|' \
-    append_Makefile '|' \
     pkg_src_fetch_var > "$helper_out"
 
 # `+' to micro_summary (fast!)
-awk '
+awk -F'\t' '
 /^[+]/ {
-   pkgpath = $3
-   sub(/\/[^\/]*$/, "", pkgpath)
-   printf "PKGNAME=%s\nPKGPATH=%s\n\n", $2, pkgpath
+   printf "PKGNAME=%s\nPKGPATH=%s\n\n", $2, $3
 }' "$helper_out"
 
 # `-' to micro_summary (slo-o-o-ow!)
+enrich_Makefile (){
+    cat <<EOF
+.PHONY: my-show-vars
+my-show-vars:
+.for VARNAME in \${VARNAMES}
+	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
+.endfor
+
+.include "./Makefile"
+EOF
+}
+
 make_out=$tmpfn/make_out.txt
-awk '
+awk -F'\t' '
 /^[-]/ {
-   pkgpath = $NF
-   sub(/\/[^\/]*$/, "", pkgpath)
-   print pkgpath
+   print $NF
 }' "$helper_out" |
 while read pkgpath; do
-    if ( cd $pkgpath && $BMAKE show-var VARNAME=PKGNAME &&
-	echo PKGPATH=$pkgpath ) > "$make_out"
+    if ( cd $pkgpath &&
+	    enrich_Makefile |
+	    $BMAKE -f - my-show-vars VARNAMES="$fields" ) > "$make_out"
     then
-	printf "PKGNAME="
 	cat "$make_out"
 	echo ''
     else

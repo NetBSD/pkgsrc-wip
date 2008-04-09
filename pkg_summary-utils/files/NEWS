@@ -1,3 +1,16 @@
+Version 0.4.2, by Aleksey Cheusov, Wed,  9 Apr 2008 00:34:58 +0300
+
+   pkg_src_fetch_var:
+      - read PKGPATHs instead of Makefile filenames.
+        In order to Makefiles from PKGPATH, PKGSRCDIR environment
+        variable is used (/usr/pkgsrc by default).
+      - TAB character is used as a fields separator instead of SPC
+
+   pkg_micro_src_summary:
+      - added options: -h|--help|-f|--fields
+        -f|--fields is for specifying fields to be included
+        to the summary, PKGNAME and PKGPATH by default
+
 Version 0.4.1, by Aleksey Cheusov, Wed,  9 Apr 2008 23:14:03 +0300
 
    ADDED: -f|--fields=<fields> option to pkg_src_fetc_var

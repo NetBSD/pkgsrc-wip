@@ -23,9 +23,9 @@
 
 # output format:
 #    for success:
-#       + <SPACE> FIELD1 <SPACE> FIELD2 ... Makefile
+#       + <SPACE> FIELD1 <SPACE> FIELD2 ...
 #    for failure:
-#       - <SPACE> <...brbrbr...> Makefile
+#       - <SPACE> RAW_FIELD1 <SPACE> RAW_FIELD2 ... PKGPATH
 #    PKGNAME means PKGNAME[nbPKGREVISION]
 
 BEGIN {
@@ -54,7 +54,7 @@ function get_var_value (varname,                 value, pkgrev){
 		}
 		return value pkgrev
 	}else if (varname == "PKGPATH"){
-		return last_fn
+		return pkgpath
 	}else{
 		if (read_error == 0 && ! (varname in badvar)){
 			return check("PKGNAME")
@@ -66,6 +66,7 @@ function get_var_value (varname,                 value, pkgrev){
 }
 
 BEGIN {
+	# options and fields
 	for (i=1; i <= ARGC; ++i){
 		if (ARGV [i] == "--fields" || ARGV [i] == "-f"){
 			fields = ARGV [i+1]
@@ -85,19 +86,24 @@ BEGIN {
 		fields = "PKGNAME PKGPATH"
 
 	varnames_count = split(fields, varnames)
+
+	# pkgsrcdir
+	pkgsrcdir = ENVIRON ["PKGSRCDIR"]
+	if (pkgsrcdir == "")
+		pkgsrcdir = "/usr/pkgsrc"
 }
 
 function print_bad_vars (               j){
 	for (j=1; j <= varnames_count; ++j){
-		printf " %s", var [varnames [j]]
+		printf "\t%s", var [varnames [j]]
 	}
-	printf " %s", last_fn
+	printf "\t%s", pkgpath
 	printf "\n"
 }
 
 function print_good_vars (               j){
 	for (j=1; j <= varnames_count; ++j){
-		printf " %s", good_var [varnames [j]]
+		printf "\t%s", good_var [varnames [j]]
 	}
 	printf "\n"
 }
@@ -294,7 +300,9 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 }
 
 {
-	last_fn = $1
+	pkgpath = $1
+	last_fn = pkgsrcdir "/" $1 "/Makefile"
+
 	top_dir = dirname(last_fn)
 	read_error = 0
 	process_include(".", last_fn, 0)
