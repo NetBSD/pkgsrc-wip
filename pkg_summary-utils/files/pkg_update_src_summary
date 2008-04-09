@@ -36,7 +36,7 @@ fi
 
 ############################################################
 usage (){
-    cat <<EOF
+    cat 1>&2 <<EOF
 pkg_update_src_summary - incrementally updates
 package summary from pkgsrc/ tree (pkg_summary(5) format)
 
