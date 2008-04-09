@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.10 2008/04/09 09:16:32 cheusov Exp $
+
+--- libmaa/Makefile.in.orig	2008-04-09 11:39:14.671986771 +0300
++++ libmaa/Makefile.in
+@@ -77,14 +77,14 @@ all: $(LIBS) $(EXES) $(TESTS)
+ 	(cd doc && $(MAKE) $@) || exit 1;
+ 
+ install: $(LIBS)
+-	mkdir -p $(libdir) && \
++	mkdir -p $(DESTDIR)$(libdir) && \
+ 	   $(LIBTOOL) --mode=install $(INSTALL) -c libmaa.la $(DESTDIR)$(libdir)
+-	mkdir -p $(includedir) && \
++	mkdir -p $(DESTDIR)$(includedir) && \
+ 	   $(INSTALL_DATA) -m 644 ${srcdir}/maa.h $(DESTDIR)$(includedir)
+ 
+ uninstall:
+-	rm -f $(includedir)/maa.h
+-	$(LIBTOOL) --mode=uninstall rm -f $(libdir)/libmaa.la
++	rm -f $(DESTDIR)$(includedir)/maa.h
++	$(LIBTOOL) --mode=uninstall rm -f $(DESTDIR)$(libdir)/libmaa.la
+ 
+ tests: $(TESTS)
+ 	@for i in $(TESTS); do \

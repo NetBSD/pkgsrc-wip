@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.7 2008/04/08 19:39:40 cheusov Exp $
-
+# $NetBSD: Makefile.common,v 1.8 2008/04/09 09:16:32 cheusov Exp $
+# used by wip/dict-server/Makefile
+# used by wip/dict-client/Makefile
+# used by wip/libmaa/Makefile
 DISTNAME=	dictd-1.10.11
 
-CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://www.dict.org/
+MAINTAINER?=		cheusov@tut.by
+HOMEPAGE=		http://www.dict.org/
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
