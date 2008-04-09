@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/11 19:49:05 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/09 09:53:25 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -10,7 +10,8 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sdict.com/
 COMMENT=	SDict conversion tools
 
-USE_TOOLS+=	gzip tar
+USE_TOOLS+=		gzip tar
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 #DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
@@ -49,7 +50,7 @@ do-extract:
 do-install:
 	set -e; \
 	cd ${WRKSRC}; \
-	${INSTALL_SCRIPT} bin/sdict-tools.plx ${SDICT_BINDIR}; \
-	${INSTALL_DATA} lib/Sdict.pm ${SDICT_LIBDIR}
+	${INSTALL_SCRIPT} bin/sdict-tools.plx ${DESTDIR}${SDICT_BINDIR}; \
+	${INSTALL_DATA} lib/Sdict.pm ${DESTDIR}${SDICT_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
