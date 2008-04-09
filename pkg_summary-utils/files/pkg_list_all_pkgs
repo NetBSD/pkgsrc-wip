@@ -50,9 +50,9 @@ enrich_Makefile (){
 .PHONY: my-show-var
 my-show-var:
 	@echo \${\${VARNAME}:Q}
-EOF
 
-    cat Makefile
+.include "./Makefile"
+EOF
 }
 
 get_SUBDIR (){
