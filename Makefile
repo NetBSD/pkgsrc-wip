@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2870 2008/04/04 14:05:43 hoka_adam Exp $
+# $Id: Makefile,v 1.2871 2008/04/09 10:24:49 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -241,7 +241,7 @@ SUBDIR+=	dict-server
 SUBDIR+=	ding
 SUBDIR+=	dir2ogg
 SUBDIR+=	directfb
-#SUBDIR+=	distbb		# has no distfile?
+SUBDIR+=	distbb
 SUBDIR+=	distella
 SUBDIR+=	diveintopython
 SUBDIR+=	djview4
@@ -1435,16 +1435,12 @@ SUBDIR+=	pinball
 SUBDIR+=	pipestatus
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
-SUBDIR+=	pkg_cmp_summary
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
 SUBDIR+=	pkg_online
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
-SUBDIR+=	pkg_src_summary
-SUBDIR+=	pkg_src_update_summary
-SUBDIR+=	pkg_summary4view
-SUBDIR+=	pkg_update_summary
+SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
 SUBDIR+=	planner
 SUBDIR+=	plod
