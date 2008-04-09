@@ -1,6 +1,18 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/25 21:16:15 guigui2 Exp $
+$NetBSD: distinfo,v 1.2 2008/04/09 19:05:06 guigui2 Exp $
 
-SHA1 (QLandkarte.2007.12.22.tar.gz) = c76d5a679f2a03a51eb1817dd2e19eb25ea61562
-RMD160 (QLandkarte.2007.12.22.tar.gz) = 2f266d745551fe8c2514c0c34930264b886eea34
-Size (QLandkarte.2007.12.22.tar.gz) = 2248166 bytes
-SHA1 (patch-aa) = 40d420d940e762171ca594b384d065c297139cb1
+SHA1 (QLandkarte-0.7.1.tar.gz) = 6e5d12f77386863f268489d9833b266943bac6b6
+RMD160 (QLandkarte-0.7.1.tar.gz) = a06271538d051b50ba1f3b1503e5eac1a7c35410
+Size (QLandkarte-0.7.1.tar.gz) = 2277793 bytes
+SHA1 (patch-aa) = 8a58f66cbc68cb5dd4316fccdd41868ff5fddb61
+SHA1 (patch-ab) = 8932654d0ec6ee9e5ce51b2e28b5c983b8d9036c
+SHA1 (patch-ac) = c16b7ffd5aa430ac3b3b9e5f08d84fdbe2eec8aa
+SHA1 (patch-ad) = de6cf0a3840de1010b0709314de87aa8fd053392
+SHA1 (patch-ae) = 2f5450458f5a143ff96b7f2b91a71136e9200a42
+SHA1 (patch-af) = c9a26a434059df2e6f4e0247aaa348d780c5a6c7
+SHA1 (patch-ag) = 3024d3fb97a83a484bbfa3e7ff385c02984d808a
+SHA1 (patch-ah) = 334521bb8f2e6e831f1f67edac4b16c3a36fe400
+SHA1 (patch-ai) = 52a0f82dfb68ac363305ce1ea172623f8ab4e82d
+SHA1 (patch-aj) = 156e24eb76a35b8ffa3c145ebb6f1f66165f78e1
+SHA1 (patch-ak) = 9d906330e188003ae5af7c0c73dee696dca9e637
+SHA1 (patch-al) = 42fe519ed8dbe8a587c1ddae3f0f5b6888bfecad
+SHA1 (patch-am) = d6449db75209e192c3733c90e2001329cb60f900

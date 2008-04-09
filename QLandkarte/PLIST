@@ -1,22 +1,41 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/25 21:16:15 guigui2 Exp $
-bin/QLandkarte
-lib/QLandkarte/libEmap.la
-lib/QLandkarte/libEtrexLegend.la
-lib/QLandkarte/libEtrexLegendC.la
-lib/QLandkarte/libEtrexLegendCx.la
-lib/QLandkarte/libEtrexVentureCx.so
-lib/QLandkarte/libEtrexVentureHC.so
-lib/QLandkarte/libEtrexVista.so
-lib/QLandkarte/libEtrexVistaC.so
-lib/QLandkarte/libEtrexVistaCx.so
-lib/QLandkarte/libEtrexVistaHCx.so
-lib/QLandkarte/libGPSMap60CS.so
-lib/QLandkarte/libGPSMap60CSx.la
-lib/QLandkarte/libGPSMap60Cx.so
-lib/QLandkarte/libGPSMap76CS.so
-lib/QLandkarte/libGPSMap76CSx.so
-lib/QLandkarte/libGPSMap76Cx.so
-lib/QLandkarte/libNMEA.la
-lib/QLandkarte/libNMEATcp.la
-lib/QLandkarte/libwhatGarmin.la
-@dirrm lib/QLandkarte
+@comment $NetBSD: PLIST,v 1.2 2008/04/09 19:05:06 guigui2 Exp $
+bin/qlandkarte
+lib/qlandkarte/libEmap.la
+lib/qlandkarte/libEtrexH.la
+lib/qlandkarte/libEtrexLegend.la
+lib/qlandkarte/libEtrexLegendC.la
+lib/qlandkarte/libEtrexLegendCx.la
+lib/qlandkarte/libEtrexLegendHCx.so
+lib/qlandkarte/libEtrexVentureCx.so
+lib/qlandkarte/libEtrexVentureHC.so
+lib/qlandkarte/libEtrexVista.so
+lib/qlandkarte/libEtrexVistaC.so
+lib/qlandkarte/libEtrexVistaCx.so
+lib/qlandkarte/libEtrexVistaHCx.so
+lib/qlandkarte/libGPSMap60CS.so
+lib/qlandkarte/libGPSMap60CSx.la
+lib/qlandkarte/libGPSMap60Cx.so
+lib/qlandkarte/libGPSMap76CS.so
+lib/qlandkarte/libGPSMap76CSx.so
+lib/qlandkarte/libGPSMap76Cx.so
+lib/qlandkarte/libNMEA.la
+lib/qlandkarte/libNMEATcp.la
+lib/qlandkarte/libwhatGarmin.la
+lib/qlandkarte/plugins/libEmap.la
+lib/qlandkarte/plugins/libEtrexH.la
+lib/qlandkarte/plugins/libEtrexLegend.la
+lib/qlandkarte/plugins/libEtrexLegendC.la
+lib/qlandkarte/plugins/libEtrexLegendCx.la
+lib/qlandkarte/plugins/libGPSMap60CSx.la
+lib/qlandkarte/plugins/libNMEA.la
+lib/qlandkarte/plugins/libNMEATcp.la
+lib/qlandkarte/plugins/libwhatGarmin.la
+share/applications/qlandkarte.desktop
+share/man/qlandkarte.1
+share/menu/qlandkarte.menu
+@dirrm share/menu
+@dirrm share/man
+@dirrm share/applications
+@dirrm lib/qlandkarte/plugins/.libs
+@dirrm lib/qlandkarte/plugins
+@dirrm lib/qlandkarte

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/25 21:16:15 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/09 19:05:06 guigui2 Exp $
 #
 
-DISTNAME=	QLandkarte.2007.12.22
-PKGNAME=	QLandkarte-0.6.0
+DISTNAME=	QLandkarte-0.7.1
 
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qlandkarte/}
@@ -11,35 +10,24 @@ MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://qlandkarte.sourceforge.net/
 COMMENT=	QLandkarte is a Garmin GPS data visualization and managing tool
 
-WRKSRC=		${WRKDIR}/QLandkarte
 USE_LANGUAGES=	c++
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=yes
+USE_TOOLS+=	perl
 
-SUBST_CLASSES+=		fix
-SUBST_STAGE.fix=	post-patch
-SUBST_MESSAGE.fix=	Fixing hardcoded paths
-SUBST_FILES.fix=	common
-SUBST_SED.fix=		-e "s,\\/usr\\/lib\\/qlandkarte,${PREFIX}\\/lib\\/QLandkarte,g"
+CONFIGURE_ARGS= --with-qt-dir=${PREFIX}/qt4 \
+                --with-extra-libs=${PREFIX}/lib \
+                --with-extra-includes=${PREFIX}/include \
+                --enable-release
 
-SUBST_CLASSES+=		fix2
-SUBST_STAGE.fix2=	post-patch
-SUBST_MESSAGE.fix2=	Fixing hardcoded paths
-SUBST_FILES.fix2=	src/src.pro
-SUBST_SED.fix2=		-e "s,\\/usr,${PREFIX},g"
-
-SUBST_CLASSES+=         fix3
-SUBST_STAGE.fix3=       post-patch
-SUBST_MESSAGE.fix3=     Fixing hardcoded paths
-SUBST_FILES.fix3=       src/src.pro
-SUBST_SED.fix3=         -e "s,\\../bin,\\../src,g"
-
-do-configure:
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake -unix PREFIX=${PREFIX} QLandkarte.pro
-
-#do-install:
-#	${INSTALL_SCRIPT} ${WRKSRC}/bin/QLandkarte ${PREFIX}/bin
-
+pre-configure:
+	perl -pi -e 's,\/usr,${PREFIX},g'\
+		${WRKSRC}/src/src.pro
+	perl -pi -e 's,!!QLANDKARTE_BINDIR!!,${PREFIX}/bin,g' \
+                ${WRKSRC}/src/src.pro
+	perl -pi -e 's,\$$\$$\{QLANDKARTE_LIBDIR\},\
+                ${PREFIX}/lib/qlandkarte,g' \
+                ${WRKSRC}/src/device/*/*.pro
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
