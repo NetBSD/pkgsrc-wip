@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2871 2008/04/09 10:24:49 cheusov Exp $
+# $Id: Makefile,v 1.2872 2008/04/10 02:03:57 hitscan Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1267,6 +1267,7 @@ SUBDIR+=	p5-HTTP-Request-AsCGI
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-Jcode
+SUBDIR+=	p5-JavaScript-SpiderMonkey
 SUBDIR+=	p5-Lingua-EN-Inflect-Number
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
