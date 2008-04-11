@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/04 10:42:59 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/11 15:58:55 rhialto Exp $
 
 DISTNAME=		qvamps-0.98
 CATEGORIES=		multimedia
@@ -14,6 +14,14 @@ USE_TOOLS+=		perl
 ALL_ENV+=		LUPDATE=${BUILDLINK_PREFIX.qt3-tools}/qt3/bin/lupdate
 ALL_ENV+=		LRELEASE=${BUILDLINK_PREFIX.qt3-tools}/qt3/bin/lrelease
 ALL_ENV+=		LOADLIBES="-ldvdread -Wl,-R${BUILDLINK_PREFIX.libdvdread}/lib"
+
+SUBST_CLASSES+=		etc
+SUBST_STAGE.etc=	post-patch
+SUBST_MESSAGE.etc=	Patching configuration file directory
+SUBST_SED.etc=		s=/usr/share/qvamps/etc=${PKG_SYSCONFDIR}/qvamps=
+SUBST_FILES.etc=	QVamps.pm
+
+MAKE_DIRS=		${PKG_SYSCONFDIR}/qvamps
 
 DEPENDS+=		vamps-[0-9]*:../../wip/vamps
 DEPENDS+=		dvdauthor-[0-9]*:../../multimedia/dvdauthor
