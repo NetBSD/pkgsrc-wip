@@ -32,6 +32,7 @@ existing tools:
 
     pkg_update_summary:
 
-new tools:
+tools to be created:
 
-    pkg_grep_summary - for powerful grepping 
+    pkg_grep_summary - for powerful grepping in pkg_summary(5) not per line
+                       but per package
