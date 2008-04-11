@@ -1,0 +1,37 @@
+existing tools:
+
+    pkg_cmp_summary:
+
+    pkg_list_all_pkgs:
+       man page
+       add -h|--help option
+
+    pkg_micro_src_summary:
+       - should fallback 'pkg_src_summary -f' (also to not
+                            duplicate paexec-related code)
+       add -h|--help option
+
+    pkg_refresh_summary:
+       man page
+
+    pkg_src_fetch_var:
+       man page
+       add -h|-help option
+
+    pkg_src_summary:
+       add -h|--help option
+       -f|--fields <fields>     - fields to be generated
+       'make print-summary-data' -> 'make show-vars VARNAMES=...'
+       - distributed summary building using wip/paexec
+
+    pkg_summary4view:
+       add -h|--help option
+
+    pkg_update_src_summary:
+       add -h|--help option
+
+    pkg_update_summary:
+
+new tools:
+
+    pkg_grep_summary - for powerful grepping 
