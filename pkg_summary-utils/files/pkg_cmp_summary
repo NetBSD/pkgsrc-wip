@@ -33,7 +33,7 @@ usage: pkg_cmp_summary -h\n\
        pkg_cmp_summary [-p] summary1 summary2\n\
 OPTIONS:\n\
   -h|--help            display this help\n\
-  -p|--with-pkgpath    use pkgpath:pkgbase pair for identifing a package\n\
+  -p|--with-pkgpath    use PKGPATH:PKGBASE pair for identifing a package\n\
 " > "/dev/stderr"
 }
 

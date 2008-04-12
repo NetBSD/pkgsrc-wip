@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_update_summary.1,v 1.2 2008/04/12 16:05:00 cheusov Exp $
+.\"	$NetBSD: pkg_update_summary.1,v 1.3 2008/04/12 16:52:45 cheusov Exp $
 .\"
 .\" Copyright (c) 2007 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -35,6 +35,14 @@ removes from
 the information about packages removed from 
 .Ar bin_pkg_dir
 directory.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl h
+display help message
+.It Fl r
+only newest versions for each PKGPATH:PKGBASE pair is kept in summary
+.El
 .Sh ENVIRONMENT
 .Bd -literal
 .Bl -tag -width Cm
