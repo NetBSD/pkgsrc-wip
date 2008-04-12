@@ -19,6 +19,7 @@ SCRIPTS+=	pkg_update_summary
 MAN=		pkg_cmp_summary.1 pkg_micro_src_summary.1
 MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
+MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 
 BIRTHDAY=	2008-04-06
 

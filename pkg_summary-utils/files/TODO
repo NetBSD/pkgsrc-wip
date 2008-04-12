@@ -3,7 +3,6 @@ existing tools:
     pkg_cmp_summary:
 
     pkg_list_all_pkgs:
-       man page
        add -h|--help option
 
     pkg_micro_src_summary:
@@ -12,7 +11,6 @@ existing tools:
        add -h|--help option
 
     pkg_refresh_summary:
-       man page
 
     pkg_src_fetch_var:
        man page

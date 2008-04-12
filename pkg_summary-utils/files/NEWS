@@ -1,3 +1,9 @@
+Version 0.4.3, by Aleksey Cheusov, Sat, 12 Apr 2008 18:00:50 +0300
+
+   added:
+      - pkg_list_all_pkgs.1
+      - pkg_refresh_summary.1
+
 Version 0.4.2, by Aleksey Cheusov, Wed,  9 Apr 2008 00:34:58 +0300
 
    pkg_src_fetch_var:
