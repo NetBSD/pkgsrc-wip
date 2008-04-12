@@ -85,12 +85,13 @@ cd_and_print_summary_data (){
 
 generate_summary (){
     # general information
-    if cd_and_print_summary_data $1 > "$tmpfn"; then
+    if cd_and_print_summary_data $1 > "$tmpfn" &&
+	cat "$tmpfn" | summary_data2summary;
+    then
 	pkgname=`awk '$1 == "index" {print $3}' "$tmpfn"`
 	pkgpath=`awk '$1 == "index" {print $2}' "$tmpfn"`
 	echo "PKGNAME=$pkgname"
 	echo "PKGPATH=$pkgpath"
-	cat "$tmpfn" | summary_data2summary
 
 	# not expanding PLIST yet
 	plist_fn=$1/PLIST
