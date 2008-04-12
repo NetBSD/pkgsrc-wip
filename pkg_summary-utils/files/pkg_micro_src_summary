@@ -35,8 +35,6 @@ if test -z "$BMAKE"; then
 fi
 
 ############################################################
-cd $PKGSRCDIR
-
 tmpfn=/tmp/pkg_micro_src_summary.$$
 trap "rm -rf $tmpfn" 0 1 2 15
 
@@ -84,6 +82,7 @@ if test -z "$fields"; then
 fi
 
 ############################################################
+cd $PKGSRCDIR
 
 # running helper
 helper_out=$tmpfn/helper_out.txt
