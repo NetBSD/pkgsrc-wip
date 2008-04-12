@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.3 2008/04/05 10:40:50 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.4 2008/04/12 16:05:00 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -15,9 +15,9 @@
 .Nm
 builds summary information about source packages specified in
 arguments or read from stdin (one package per line).  Format of this
-summary information is the same as used in pkg_summary.gz built from
-binary packages. Fields (PKGNAME, PKGPATH, DEPENDS etc.) are very
-similar but not fully the same.
+summary information is the same as used in pkg_summary(5) built from
+binary packages. List of fields (PKGNAME, PKGPATH, DEPENDS etc.) is
+very similar but not fully the same.
 .Sh ENVIRONMENT
 .Bd -literal
 .Bl -tag -width Cm
@@ -33,8 +33,9 @@ pkg_src_summary wip/dict-server wip/dict-mueller7 wip/dict-client
 printf 'wip/dict-server\\nwip/dict-client\\n' | pkg_src_summary
 .Ed
 .Sh SEE ALSO
-.Xr pkg_micro_src_summary 1 ,
+.Xr pkg_summary 5 ,
 .Xr pkg_info 1 ,
+.Xr pkg_micro_src_summary 1 ,
 .Sh AUTHOR
 .An Aleksey Cheusov
 .Aq vle@gmx.net

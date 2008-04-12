@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_refresh_summary.1,v 1.1 2008/04/12 15:06:02 cheusov Exp $
+.\"	$NetBSD: pkg_refresh_summary.1,v 1.2 2008/04/12 16:05:00 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -10,11 +10,11 @@
 .Nd refreshes the pkg_summary
 .Sh SYNOPSIS
 .Nm
-.Op Ar files ...
+.Op Ar summary files ...
 .Sh DESCRIPTION
 .Nm
 refreshes pkg_summary, that is
-for each pkgpath:pkgbase pair present in summary it outputs
+for each PKGPATH:PKGBASE pair present in summary it outputs
 the information only about newest version.
 .Pp
 The options are as follows:

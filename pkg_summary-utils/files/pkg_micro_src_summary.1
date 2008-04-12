@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_micro_src_summary.1,v 1.3 2008/04/09 21:41:22 cheusov Exp $
+.\"	$NetBSD: pkg_micro_src_summary.1,v 1.4 2008/04/12 16:05:00 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -16,16 +16,16 @@
 .Nm
 builds micro summary information about source packages specified in
 arguments or read from stdin (one package per line).  The word micro
-means that only PKGNAME and PKGPATH fields are generated. Format of
-this summary is the same as used in pkg_summary.gz built from binary
-packages. Fields (PKGNAME, PKGPATH, DEPENDS etc.) are very similar but
-not fully the same. The main advantage of this utility is that is
-works DRAMMATICALLY faster than pkg_src_summary in most cases.  This
-is possible because special hack is used (only when it is possible!)
-to fetch PKGNAME instead of running make. And for ~90% of all packages
-(pkgsrc + wip) it is possible to use this hack. So
-pkg_micro_src_summary works approximately 10 times faster than
-pkg_src_summary.
+means that only PKGNAME and PKGPATH fields (by default) are
+generated. Format of this summary is the same as used in
+pkg_summary(5) built from binary packages. The main advantage of this
+utility is that is works DRAMMATICALLY faster than pkg_src_summary(1)
+in most cases.  This is possible because special hack is used (only
+when it is possible!) to fetch variables values instead of running
+make. And for ~90% of all packages (pkgsrc + wip) it is possible to
+use this hack and fallback to make for other ~10%. As a result
+pkg_micro_src_summary works approximately 10 times faster than using
+make for all packages.
 .Pp
 The options are as follows:
 .Bl -tag -width indent
