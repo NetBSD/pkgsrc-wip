@@ -35,10 +35,11 @@ if test -z "$BMAKE"; then
 fi
 
 ############################################################
-tmpfn=/tmp/pkg_micro_src_summary.$$
-trap "rm -rf $tmpfn" 0 1 2 15
+tmpdir=/tmp/pkg_micro_src_summary.$$
+trap "rm -rf $tmpdir" 0 1 2 15
+mkdir -m 700 $tmpdir
 
-mkdir -m 700 $tmpfn
+errsfn=$tmpdir/errors.txt
 
 usage (){
     cat 1>&2 <<EOF
@@ -85,7 +86,7 @@ fi
 cd $PKGSRCDIR
 
 # running helper
-helper_out=$tmpfn/helper_out.txt
+helper_out=$tmpdir/helper_out.txt
 
 list_pkgs (){
     if test $# -ne 0; then
@@ -121,7 +122,7 @@ my-show-vars:
 EOF
 }
 
-make_out=$tmpfn/make_out.txt
+make_out=$tmpdir/make_out.txt
 awk -F'\t' '
 /^[-]/ {
    print $NF
@@ -129,11 +130,14 @@ awk -F'\t' '
 while read pkgpath; do
     if ( cd $pkgpath &&
 	    enrich_Makefile |
-	    $BMAKE -f - my-show-vars VARNAMES="$fields" ) > "$make_out"
+	    $BMAKE -f - my-show-vars VARNAMES="$fields" ) \
+		2>"$errsfn" > "$make_out"
     then
 	cat "$make_out"
 	echo ''
     else
+	printf ' ------------------\n' 1>&2
 	printf "Bad package %s, skipped\n" "$pkgpath" 1>&2
+	cat "$errsfn" 1>&2
     fi
 done

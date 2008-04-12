@@ -36,8 +36,12 @@ fi
 ############################################################
 cd $PKGSRCDIR
 
-tmpfn=/tmp/pkgdirs2info.$$
-trap 'rm -f $tmpfn' 0 1 2 15
+tmp_dir="/tmp/pkg_src_summary.$$"
+trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+tmpfn=$tmp_dir/pkgdirs2info.txt
+errsfn=$tmp_dir/errors.txt
 
 ############################################################
 summary_data2summary (){
@@ -85,8 +89,8 @@ cd_and_print_summary_data (){
 
 generate_summary (){
     # general information
-    if cd_and_print_summary_data $1 > "$tmpfn" &&
-	cat "$tmpfn" | summary_data2summary;
+    if cd_and_print_summary_data $1 > "$tmpfn" 2>"$errsfn" &&
+	cat "$tmpfn" | summary_data2summary 2>>"$errsfn";
     then
 	pkgname=`awk '$1 == "index" {print $3}' "$tmpfn"`
 	pkgpath=`awk '$1 == "index" {print $2}' "$tmpfn"`
@@ -101,7 +105,9 @@ generate_summary (){
 
 	echo '' # empty line - separator 
     else
+	printf ' ------------------\n' 1>&2
 	printf "Bad package %s, skipped\n" "$1" 1>&2
+	cat "$errsfn" 1>&2
     fi
 }
 
