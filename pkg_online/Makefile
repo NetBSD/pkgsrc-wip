@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/04/05 10:29:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/13 11:05:59 cheusov Exp $
 #
 
-DISTNAME=	pkg_online-0.3.1
-PKGREVISION=	1
+DISTNAME=	pkg_online-0.3.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
 
