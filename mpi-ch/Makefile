@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/13 15:15:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/13 16:38:25 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -15,4 +15,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
