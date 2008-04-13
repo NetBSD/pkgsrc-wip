@@ -1,1 +1,5 @@
-Open source MPI-2 implementation from Univ. of Chicago.
+MPICH is a freely available, portable implementation of MPI and MPI-2
+standard message-passing interface.
+
+Documentation on installing and using MPICH is available, as well as
+manual pages for the routines and commands.
