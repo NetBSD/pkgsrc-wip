@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/20 13:03:04 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2008/04/13 12:23:20 noud4 Exp $
 
-SHA1 (dfu-util-3230.tar.gz) = d0d5f1464bceab018b1b666fcecc67f0d9eb5002
-RMD160 (dfu-util-3230.tar.gz) = 1487caebbfa8d29ee6a64ce2fa1ebc4d889a06d7
-Size (dfu-util-3230.tar.gz) = 20420 bytes
+SHA1 (dfu-util-4351.tar.gz) = 9f200ef0b0765b41512157e74b58d6af2eb6a311
+RMD160 (dfu-util-4351.tar.gz) = 225f92e76ebbe13acb61f5e108212167a5b242b4
+Size (dfu-util-4351.tar.gz) = 22073 bytes
 SHA1 (patch-aa) = e11ccf4df2585c0974599b60d46b5267d0a7b955
-SHA1 (patch-ab) = 04e17fab6b3dd8e466152275dbfc53b097dfe1e4
+SHA1 (patch-ab) = 79527e6d07c137d96c20b20c98f7ca471a60f7c8
