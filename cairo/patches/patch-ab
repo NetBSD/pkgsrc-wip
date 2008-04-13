@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/03/12 17:49:55 tnn2 Exp $
+$NetBSD: patch-ab,v 1.2 2008/04/13 10:37:15 tnn2 Exp $
 
---- test/Makefile.in.orig	2008-02-29 00:46:44.000000000 +0100
+--- test/Makefile.in.orig	2008-04-11 23:33:42.000000000 +0200
 +++ test/Makefile.in
-@@ -62,7 +62,7 @@ host_triplet = @host@
+@@ -59,7 +59,7 @@ host_triplet = @host@
+ @CAIRO_HAS_PDF_SURFACE_TRUE@@CAIRO_HAS_PS_SURFACE_TRUE@@CAIRO_HAS_SVG_SURFACE_TRUE@am__append_10 = fallback-resolution$(EXEEXT)
  check_PROGRAMS = imagediff$(EXEEXT) png-flatten$(EXEEXT) \
- 	$(am__EXEEXT_13) $(am__EXEEXT_14)
- EXTRA_PROGRAMS = $(am__EXEEXT_11) $(am__EXEEXT_12)
+ 	$(am__EXEEXT_1) $(am__EXEEXT_2)
 -@HAVE_PTHREAD_TRUE@am__append_11 = -lpthread
 +@HAVE_PTHREAD_TRUE@am__append_11 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_12 = pdf2png

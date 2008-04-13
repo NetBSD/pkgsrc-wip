@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/03/26 05:35:35 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/13 10:37:14 tnn2 Exp $
 
-DISTNAME=	cairo-1.5.12
+DISTNAME=	cairo-1.6.4
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://cairographics.org/
@@ -21,12 +21,10 @@ CONFIGURE_ARGS+=	--enable-glitz
 CONFIGURE_ARGS+=	--enable-pdf
 CONFIGURE_ARGS+=	--enable-ps
 
+PLIST_VARS+=		carbon
 .if exists(/System/Library/Frameworks/Carbon.framework)
 CONFIGURE_ARGS+=	--enable-quartz
 CONFIGURE_ARGS+=	--enable-atsui
-PLIST_SUBST+=		CARBON=
-.else
-PLIST_SUBST+=		CARBON="@comment "
 .endif
 
 .include "../../graphics/cairo/options.mk"
