@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/10/21 19:29:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/13 12:29:48 noud4 Exp $
 #
 
-DISTNAME=		qemu-neo1973-3231
+DISTNAME=		qemu-neo1973-4351
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.openmoko.org/
 SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/qemu-neo1973
@@ -107,4 +107,4 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 # ln -s /usr/pkg/bin/python2.4  /usr/pkg/bin/python
-# cd /usr/pkg/qemu-neo1973/libexec; ../bin/qemu-neo1973 -M neo -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -usbdevice host:07a6:8511 -show-cursor -monitor stdio -serial telnet:localhost:1200,server
+# cd /usr/pkg/qemu-neo1973/libexec; ../bin/qemu-neo1973  openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -show-cursor -monitor stdio -M gta01 -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -usbdevice host:07a6:8511 -show-cursor -monitor stdio -usbdevice keyboard -serial telnet:localhost:1200,server

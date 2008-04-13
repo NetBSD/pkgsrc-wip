@@ -1,8 +1,8 @@
-$NetBSD: patch-ug,v 1.2 2007/10/21 19:29:17 noud4 Exp $
+$NetBSD: patch-ug,v 1.3 2008/04/13 12:29:48 noud4 Exp $
 
 --- /dev/null	2007-10-14 19:58:41.000000000 +0200
 +++ usb-bsd.c	2007-10-14 20:17:02.000000000 +0200
-@@ -0,0 +1,600 @@
+@@ -0,0 +1,602 @@
 +/*
 + * BSD host USB redirector
 + *
@@ -29,7 +29,9 @@ $NetBSD: patch-ug,v 1.2 2007/10/21 19:29:17 noud4 Exp $
 + * THE SOFTWARE.
 + */
 +
-+#include "vl.h"
++#include "qemu-common.h"
++#include "hw/usb.h"
++#include "console.h"
 +
 +/* usb.h declares these */
 +#undef USB_SPEED_HIGH

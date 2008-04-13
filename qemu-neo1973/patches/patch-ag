@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-ag,v 1.2 2008/04/13 12:29:48 noud4 Exp $
 
---- configure.orig	2007-07-19 22:00:54.000000000 +0200
-+++ configure	2007-07-19 23:00:55.000000000 +0200
+--- configure.orig	2008-01-15 00:24:21.000000000 +0100
++++ configure	2007-12-27 22:54:21.000000000 +0100
 @@ -29,7 +29,7 @@
  make="make"
  install="install"
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
      cpu="powerpc"
    ;;
    mips)
-@@ -126,6 +126,12 @@
+@@ -141,6 +141,12 @@
      kqemu="yes"
  fi
  ;;
@@ -33,21 +33,52 @@ $NetBSD: patch-ag,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
  NetBSD)
  bsd="yes"
  oss="yes"
-@@ -743,7 +749,7 @@
+@@ -495,6 +501,16 @@
+     fi
+ fi
  
- echo "prefix=$prefix" >> $config_mak
- echo "bindir=\${prefix}$binsuffix" >> $config_mak
--echo "mandir=\${prefix}$mansuffix" >> $config_mak
-+echo "mandir=\${prefix}$PKGMANDIR" >> $config_mak
- echo "datadir=\${prefix}$datasuffix" >> $config_mak
- echo "docdir=\${prefix}$docsuffix" >> $config_mak
- echo "#define CONFIG_QEMU_SHAREDIR \"$prefix$datasuffix\"" >> $config_h
-@@ -812,6 +818,8 @@
- if test "$mingw32" = "yes" ; then
-   echo "CONFIG_WIN32=yes" >> $config_mak
-   echo "#define CONFIG_WIN32 1" >> $config_h
++# Check for stack protector
++cat > $TMPC <<EOF
++extern int foo;
++EOF
++if "$cc" -o $TMPE $TMPC -fno-stack-protector 2> /dev/null ; then
++  stack_protector_present="yes"
++else
++  stack_protector_present="no"
++fi
++
+ #
+ # Solaris specific configure tool chain decisions
+ #
+@@ -697,7 +713,7 @@
+   if test -z "$prefix" ; then
+       prefix="/usr/local"
+   fi
+-  mansuffix="/share/man"
++  mansuffix="/$PKGMANDIR"
+   datasuffix="/share/qemu"
+   docsuffix="/share/doc/qemu"
+   binsuffix="/bin"
+@@ -908,6 +924,11 @@
+ EOF
+   if $cc -o $TMPE $TMPC 2> /dev/null ; then
+     echo "#define HAVE_BYTESWAP_H 1" >> $config_h
 +elif test -f "/usr/include/machine/bswap.h" ; then
 +  echo "#define HAVE_MACHINE_BSWAP_H 1" >> $config_h
- else
-   cat > $TMPC << EOF
- #include <byteswap.h>
++fi
++if test "$dragonfly" = "yes" ; then
++  echo "CONFIG_DRAGONFLY=yes" >> $config_mak
+   fi
+ fi
+ if test "$darwin" = "yes" ; then
+@@ -1032,6 +1053,10 @@
+   echo "#define _BSD 1" >> $config_h
+ fi
+ 
++if [ "$stack_protector_present" = "yes" ] ; then
++  echo "STACK_PROTECTOR_PRESENT=yes" >> $config_mak
++fi
++
+ echo "#define CONFIG_UNAME_RELEASE \"$uname_release\"" >> $config_h
+ 
+ if test "$gadgetfs" = "yes" ; then

@@ -1,9 +1,9 @@
-$NetBSD: patch-be,v 1.1 2007/10/21 19:30:46 noud4 Exp $
+$NetBSD: patch-be,v 1.2 2008/04/13 12:29:48 noud4 Exp $
 
 --- configure.orig	2007-10-14 19:59:17.000000000 +0200
 +++ configure	2007-10-14 20:03:14.000000000 +0200
-@@ -319,6 +319,10 @@
-     AIOLIBS="-lrt"
+@@ -348,6 +350,10 @@
+     AIOLIBS="-lrt -lpthread"
  fi
  
 +if [ "$FORCE_AIO" = "yes" ]; then 

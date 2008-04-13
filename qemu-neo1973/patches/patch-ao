@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
+$NetBSD: patch-ao,v 1.2 2008/04/13 12:29:48 noud4 Exp $
 
---- audio/mixeng.c.orig	2007-07-19 22:00:44.000000000 +0200
-+++ audio/mixeng.c	2007-07-19 23:06:40.000000000 +0200
-@@ -144,56 +144,64 @@
+--- audio/mixeng.c.orig	2008-01-06 20:38:41.000000000 +0100
++++ audio/mixeng.c	2007-12-18 20:56:45.000000000 +0100
+@@ -145,56 +145,64 @@
  #undef IN_T
  #undef SHIFT
  
@@ -21,7 +21,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
 -                conv_natural_uint8_t_to_mono,
 -                conv_natural_uint16_t_to_mono,
 -                conv_natural_uint32_t_to_mono
-+		NBglue(conv_natural_, uint8_t, _to_mono), 
++                NBglue(conv_natural_, uint8_t, _to_mono),
 +                NBglue(conv_natural_, uint16_t, _to_mono),
 +                NBglue(conv_natural_, uint32_t, _to_mono)
              },
@@ -31,7 +31,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
 -                conv_swap_uint32_t_to_mono,
 +                NBglue(conv_natural_, uint8_t, _to_mono),
 +                NBglue(conv_swap_, uint16_t, _to_mono),
-+                NBglue(conv_swap_, uint32_t, _to_mono)
++                NBglue(conv_swap_, uint32_t, _to_mono),
              }
          },
          {
@@ -41,7 +41,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
 -                conv_natural_int32_t_to_mono
 +                NBglue(conv_natural_, int8_t, _to_mono),
 +                NBglue(conv_natural_, int16_t, _to_mono),
-+                NBglue(conv_natural_, int32_t, _to_mono)
++                NBglue(conv_natural_, int32_t, _to_mono),
              },
              {
 -                conv_natural_int8_t_to_mono,
@@ -87,11 +87,11 @@ $NetBSD: patch-ao,v 1.1.1.1 2007/07/31 18:18:57 noud4 Exp $
 -                conv_swap_int32_t_to_stereo,
 +                NBglue(conv_natural_, int8_t, _to_stereo),
 +                NBglue(conv_swap_, int16_t, _to_stereo),
-+                NBglue(conv_swap_, int32_t, _to_stereo)
++                NBglue(conv_swap_, int32_t, _to_stereo),
              }
          }
      }
-@@ -203,52 +211,52 @@
+@@ -204,52 +212,52 @@
      {
          {
              {
