@@ -42,6 +42,7 @@ mkdir -m 700 "$tmp_dir"
 
 tmpfn=$tmp_dir/pkgdirs2info.txt
 errsfn=$tmp_dir/errors.txt
+summaryfn=$tmp_dir/summary.txt
 
 ############################################################
 summary_data2summary (){
@@ -79,7 +80,7 @@ summary_data2summary (){
 	$1 = $2 = ""
 
 	print hdr substr($0, 3)
-    }'
+    }' "$@"
 }
 
 cd_and_print_summary_data (){
@@ -90,12 +91,14 @@ cd_and_print_summary_data (){
 generate_summary (){
     # general information
     if cd_and_print_summary_data $1 > "$tmpfn" 2>"$errsfn" &&
-	cat "$tmpfn" | summary_data2summary 2>>"$errsfn";
+	summary_data2summary "$tmpfn" 2>>"$errsfn" > "$summaryfn";
     then
 	pkgname=`awk '$1 == "index" {print $3}' "$tmpfn"`
 	pkgpath=`awk '$1 == "index" {print $2}' "$tmpfn"`
 	echo "PKGNAME=$pkgname"
 	echo "PKGPATH=$pkgpath"
+
+	cat "$summaryfn"
 
 	# not expanding PLIST yet
 	plist_fn=$1/PLIST

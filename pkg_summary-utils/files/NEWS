@@ -1,3 +1,8 @@
+Version 0.4.6, by Aleksey Cheusov, Sun, 13 Apr 2008 14:56:41 +0300
+
+   fix for pkg_summary4view: doesn't depend on input fields order.
+   fix for pkg_src_summary: PKGNAME and PKGPATH are printed first.
+
 Version 0.4.5, by Aleksey Cheusov, Sat, 13 Apr 2008 00:43:22 +0300
 
    Both pkg_micro_src_summary and pkg_src_summary generate

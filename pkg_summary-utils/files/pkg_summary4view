@@ -21,10 +21,12 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-function spaces (n){
+function spaces (n,            ret){
+	ret = ""
 	while (n-- > 0){
-		printf " "
+		ret = ret " "
 	}
+	return ret
 }
 
 BEGIN {
@@ -38,12 +40,16 @@ BEGIN {
 
 NF == 0 {
 	print
-	last_field = ""
+	last_field    = ""
+	printf "%s", accu
+	accu = ""
+	to_be_printed = 0
 	next
 }
 
 /^PKGNAME=/ {
 	print "-----------------------------------------------------------"
+	to_be_printed = 1
 }
 
 {
@@ -56,28 +62,28 @@ NF == 0 {
 
 	#
 	if (field == "DEPENDS" || field == "BUILD_DEPENDS"){
-		printf "%s:", field
+		accu = accu field ":"
 		if ($0 !~ /^( |\t)*$/)
-			spaces(offset - length(field) - 1)
+			accu = accu spaces(offset - length(field) - 1)
 
-		print $1
+		accu = accu $1 "\n"
 
 		for (i=2; i <= NF; ++i){
-			spaces(offset)
-			print $i
+			accu = accu spaces(offset)
+			accu = accu $i "\n"
 		}
 
 		next
 	}else if (field in special) {
 		if (field != prev_field) {
-			print field ":"
+			accu = accu field ":"
 		}
 
-		printf "    "
+		accu = accu "    "
 	}else{
-		printf "%s:", field
+		accu = accu field ":"
 		if ($0 !~ /^( |\t)*$/)
-			spaces(offset - length(field) - 1)
+			accu = accu spaces(offset - length(field) - 1)
 	}
 
 	#
@@ -85,5 +91,9 @@ NF == 0 {
 }
 
 {
-	print $0
+	accu = accu $0 "\n"
+	if (to_be_printed){
+		printf "%s", accu
+		accu = ""
+	}
 }
