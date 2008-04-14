@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 14:01:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/14 19:58:51 cheusov Exp $
 
 DISTNAME=	er-dict-gtk-0.23
 PKGNAME=	dict-est-rus-0.23
@@ -22,7 +22,7 @@ do-configure:
 
 do-build:
 	cd ${WRKSRC} && sh build_estonian_et_ru && \
-	${LOCALBASE}/bin/dictzip *.dict
+	${PREFIX}/bin/dictzip *.dict
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.dict.dz ${WRKSRC}/*.index \
