@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2873 2008/04/12 07:56:07 thomasklausner Exp $
+# $Id: Makefile,v 1.2874 2008/04/14 23:33:56 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -356,6 +356,7 @@ SUBDIR+=	flexdump
 SUBDIR+=	fltk2
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
+SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fontedit
