@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/16 10:21:10 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2008/04/15 13:22:41 thomasklausner Exp $
 
-SHA1 (nemo-0.2.1.tar.bz2) = 4ce2086faa8f88563a43fc1fc6e967cbbbd69bf0
-RMD160 (nemo-0.2.1.tar.bz2) = 6212fe3c26368f5911432396f475f140119c7011
-Size (nemo-0.2.1.tar.bz2) = 138561 bytes
-SHA1 (patch-aa) = dfde75d62ed43ffc511bd9eae3ef3ab2e57fc55e
-SHA1 (patch-ab) = 837d9a2c733ec4535a83cd9d11efe81a42277f84
-SHA1 (patch-ac) = d7847e1d8051b4913514b560cdf577dd6d09546f
+SHA1 (nemo-0.2.2.tar.bz2) = f784bfc54abcdf509a6a6bb83243807ab2015cd4
+RMD160 (nemo-0.2.2.tar.bz2) = 6c413c3a1350b79fcc5fde4b1b6f73ca307ac397
+Size (nemo-0.2.2.tar.bz2) = 343732 bytes

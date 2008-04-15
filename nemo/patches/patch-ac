@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/03/16 10:21:10 thomasklausner Exp $
-
---- nemo.in.orig	2008-02-14 13:15:36.000000000 +0000
-+++ nemo.in
-@@ -1,3 +1,3 @@
- #!/bin/bash
- 
--exec -a nemo /usr/bin/mono @PREFIX@/bin/nemo.exe
-+exec -a nemo mono @PREFIX@/bin/nemo.exe

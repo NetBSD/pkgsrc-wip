@@ -1,11 +1,32 @@
-Starts up fine, but exits again immediately with:
+Start with ``dbus-launch nemo''.
 
-Unhandled Exception: System.Exception: Unable to open the session message bus. ---> System.ArgumentNullException: Argument cannot be null.
-Parameter name: address
-  at NDesk.DBus.Bus.Open (System.String address) [0x00000]
-  at NDesk.DBus.Bus.get_Session () [0x00000] --- End of inner exception stack trace ---
+Dumps core with:
+reindex: False, first run False
+watching dir /home/wiz
+Stacktrace:
 
-  at NDesk.DBus.Bus.get_Session () [0x00000]
-  at Nemo.Tracker..ctor (Boolean reindex) [0x00000]
-  at MainWindow..ctor (Boolean reindex, Boolean hidden) [0x00000]
-  at Nemo.MainClass.Main (System.String[] args) [0x00000]
+  at (wrapper managed-to-native) Mono.Unix.Native.Syscall.sys_strerror_r (int,System.Text.StringBuilder,ulong) <0x0000e>
+  at (wrapper managed-to-native) Mono.Unix.Native.Syscall.sys_strerror_r (int,System.Text.StringBuilder,ulong) <0xffffffff>
+  at Mono.Unix.Native.Syscall.strerror_r (Mono.Unix.Native.Errno,System.Text.StringBuilder,ulong) <0x00048>
+  at Mono.Unix.Native.Syscall.strerror_r (Mono.Unix.Native.Errno,System.Text.StringBuilder) <0x00046>
+  at Mono.Unix.ErrorMarshal.strerror_r (Mono.Unix.Native.Errno) <0x0009e>
+  at Mono.Unix.ErrorMarshal..cctor () <0x00086>
+  at (wrapper runtime-invoke) Mono.Unix.UnixEncoding.runtime_invoke_void (object,intptr,intptr,intptr) <0xffffffff>
+  at Mono.Unix.UnixMarshal.GetErrorDescription (Mono.Unix.Native.Errno) <0xffffffff>
+  at Mono.Unix.UnixMarshal.GetErrorDescription (Mono.Unix.Native.Errno) <0x00015>
+  at Mono.Unix.UnixMarshal.CreateExceptionForError (Mono.Unix.Native.Errno) <0x00037>
+  at Mono.Unix.UnixMarshal.CreateExceptionForLastError () <0x00023>
+  at Mono.Unix.UnixMarshal.ThrowExceptionForLastError () <0x00010>
+  at Mono.Unix.UnixMarshal.ThrowExceptionForLastErrorIf (int) <0x0001a>
+  at NDesk.DBus.Transports.UnixNativeTransport.WriteBsdCred () <0x0019b>
+  at NDesk.DBus.Transports.UnixNativeTransport.WriteCred () <0x00020>
+  at NDesk.DBus.Connection.Authenticate () <0x00025>
+  at NDesk.DBus.Connection..ctor (string) <0x00149>
+  at NDesk.DBus.Bus..ctor (string) <0x00025>
+  at NDesk.DBus.Bus.Open (string) <0x000a3>
+  at NDesk.DBus.Bus.get_Session () <0x0009f>
+  at Nemo.Tracker..ctor (bool) <0x0010a>
+  at MainWindow..ctor (bool,bool) <0x0056c>
+  at Nemo.MainClass.Main (string[]) <0x001d1>
+  at (wrapper runtime-invoke) Nemo.MainClass.runtime_invoke_void_string[] (object,intptr,intptr,intptr) <0xffffffff>
+Abort trap (core dumped)
