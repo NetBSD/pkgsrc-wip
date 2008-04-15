@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/15 20:21:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/15 20:42:42 asau Exp $
 bin/check_callstack
 bin/clog2_join
 bin/clog2_print
@@ -45,17 +45,6 @@ bin/mpif77
 bin/mpirun
 bin/mpirun.py
 bin/parkill
-etc/mpe_callstack_ldflags.conf
-etc/mpe_f77env.conf
-etc/mpe_f77env.conf.in
-etc/mpe_help.conf
-etc/mpe_help.conf.in
-etc/mpe_log.conf
-etc/mpe_log_postlib.conf
-etc/mpe_mpicheck.conf
-etc/mpe_mpilog.conf
-etc/mpe_mpitrace.conf
-etc/mpe_nolog.conf
 include/clog_commset.h
 include/clog_const.h
 include/clog_inttypes.h
@@ -787,6 +776,17 @@ share/doc/${PKGNAME}/install.pdf
 share/doc/${PKGNAME}/logging.pdf
 share/doc/${PKGNAME}/smpd_pmi.pdf
 share/doc/${PKGNAME}/user.pdf
+share/${PKGNAME}/examples/mpe_callstack_ldflags.conf
+share/${PKGNAME}/examples/mpe_f77env.conf
+share/${PKGNAME}/examples/mpe_f77env.conf.in
+share/${PKGNAME}/examples/mpe_help.conf
+share/${PKGNAME}/examples/mpe_help.conf.in
+share/${PKGNAME}/examples/mpe_log.conf
+share/${PKGNAME}/examples/mpe_log_postlib.conf
+share/${PKGNAME}/examples/mpe_mpicheck.conf
+share/${PKGNAME}/examples/mpe_mpilog.conf
+share/${PKGNAME}/examples/mpe_mpitrace.conf
+share/${PKGNAME}/examples/mpe_nolog.conf
 share/${PKGNAME}/examples/mpicc.conf
 share/${PKGNAME}/examples/mpicxx.conf
 share/${PKGNAME}/examples/mpif77.conf
