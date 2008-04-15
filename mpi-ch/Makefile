@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/15 13:44:26 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/15 19:32:16 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -15,7 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
 
-USE_TOOLS+=	perl:run
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
+
+USE_TOOLS+=		perl:run
 
 REPLACE_PYTHON+=	src/pm/mpd/test/test1.py
 REPLACE_PYTHON+=	src/pm/mpd/test/test2.py
