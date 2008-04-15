@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/15 19:32:16 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/15 20:21:14 asau Exp $
 bin/check_callstack
 bin/clog2_join
 bin/clog2_print
@@ -56,9 +56,6 @@ etc/mpe_mpicheck.conf
 etc/mpe_mpilog.conf
 etc/mpe_mpitrace.conf
 etc/mpe_nolog.conf
-etc/mpicc.conf
-etc/mpicxx.conf
-etc/mpif77.conf
 include/clog_commset.h
 include/clog_const.h
 include/clog_inttypes.h
@@ -790,6 +787,9 @@ share/doc/${PKGNAME}/install.pdf
 share/doc/${PKGNAME}/logging.pdf
 share/doc/${PKGNAME}/smpd_pmi.pdf
 share/doc/${PKGNAME}/user.pdf
+share/${PKGNAME}/examples/mpicc.conf
+share/${PKGNAME}/examples/mpicxx.conf
+share/${PKGNAME}/examples/mpif77.conf
 share/${PKGNAME}/examples_collchk/Makefile
 share/${PKGNAME}/examples_collchk/Makefile.in
 share/${PKGNAME}/examples_collchk/composite.c
@@ -826,6 +826,7 @@ share/${PKGNAME}/examples_logging/pthread_sendrecv_user.c
 share/${PKGNAME}/examples_logging/srtest.c
 @dirrm share/${PKGNAME}/examples_logging
 @dirrm share/${PKGNAME}/examples_collchk
+@dirrm share/${PKGNAME}/examples
 @dirrm share/${PKGNAME}
 @dirrm share/doc/${PKGNAME}/html/www4
 @dirrm share/doc/${PKGNAME}/html/www3
