@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/04/16 09:43:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/16 09:45:59 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.6.2
@@ -21,7 +21,7 @@ USE_BSD_MAKEFILE=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/distbb
-DOCDIR=			${PREFIX}/share/distbb
+DOCDIR=			${PREFIX}/share/doc/distbb
 
 DOCFILES=		README NEWS #TODO
 
