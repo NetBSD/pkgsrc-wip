@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 22:42:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/16 12:13:42 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.8.0
@@ -19,10 +19,7 @@ PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PKGEGDIR=		${PREFIX}/share/examples/${PKGBASE}
 EGLIST=			cc_wrapper all_substr toupper
 
-INSTALLATION_DIRS+=	${PKGDOCDIR} ${PKGEGDIR}
-.for d in ${EGLIST}
-INSTALLATION_DIRS+=	${PKGEGDIR}/${d}
-.endfor
+AUTO_MKDIRS=		yes
 
 DOC_FILES=		README NEWS ChangeLog
 
