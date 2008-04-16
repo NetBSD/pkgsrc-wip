@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/13 12:07:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/16 09:43:04 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.6.2
@@ -23,11 +23,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 EGDIR=			${PREFIX}/share/examples/distbb
 DOCDIR=			${PREFIX}/share/distbb
 
+DOCFILES=		README NEWS #TODO
+
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
 INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR} libexec/distbb
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
