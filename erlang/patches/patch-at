@@ -1,0 +1,51 @@
+$NetBSD: patch-at,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+
+Do we need this wrapper?
+
+--- erts/emulator/hipe/hipe_x86_signal.c.orig	2008-02-05 08:37:54.000000000 -0500
++++ erts/emulator/hipe/hipe_x86_signal.c
+@@ -171,7 +171,7 @@ static void do_init(void)
+ #define INIT()	do { if( !init_done() ) do_init(); } while(0)
+ #endif /* __DARWIN__ */
+ 
+-#if !defined(__GLIBC__) && !defined(__DARWIN__)
++#if !defined(__GLIBC__) && !defined(__DARWIN__) && !defined(__NetBSD__)
+ /*
+  * Assume Solaris/x86 2.8.
+  * There is a number of sigaction() procedures in libc:
+@@ -207,6 +207,7 @@ static void do_init(void)
+ #define INIT()	do { if( !init_done() ) do_init(); } while(0)
+ #endif	/* not glibc or darwin */
+ 
++#if !defined(__NetBSD__)
+ /*
+  * This is our wrapper for sigaction(). sigaction() can be called before
+  * hipe_signal_init() has been executed, especially when threads support
+@@ -229,7 +230,7 @@ static int my_sigaction(int signum, cons
+     }
+     return __next_sigaction(signum, act, oldact);
+ }
+-
++#endif
+ /*
+  * This overrides the C library's core sigaction() procedure, catching
+  * all its internal calls.
+@@ -244,7 +245,7 @@ int __SIGACTION(int signum, const struct
+ /*
+  * This catches the application's own sigaction() calls.
+  */
+-#if !defined(__DARWIN__)
++#if !defined(__DARWIN__) && !defined(__NetBSD__)
+ int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)
+ {
+     return my_sigaction(signum, act, oldact);
+@@ -302,7 +303,9 @@ void hipe_signal_init(void)
+     struct sigaction sa;
+     int i;
+ 
++#ifndef __NetBSD__
+     INIT();
++#endif
+ 
+     hipe_sigaltstack_init();
+ 

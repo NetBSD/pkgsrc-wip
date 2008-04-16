@@ -1,0 +1,34 @@
+$NetBSD: patch-ar,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+
+--- erts/configure.orig	2008-02-05 14:02:47.000000000 -0500
++++ erts/configure
+@@ -10574,7 +10574,7 @@ fi
+ 
+ 
+ 
+-if test "x$enable_sctp" == "xyes" ; then
++if test "x$enable_sctp" = "xyes" ; then
+     echo "$as_me:$LINENO: checking for netinet/sctp.h" >&5
+ echo $ECHO_N "checking for netinet/sctp.h... $ECHO_C" >&6
+ if test "${ac_cv_header_netinet_sctp_h+set}" = set; then
+@@ -19134,7 +19134,7 @@ static __inline__ int check_fpe(double f
+ 
+ #endif
+ 
+-#if (defined(__linux__) && (defined(__i386__) || defined(__x86_64__) || defined(__sparc__) || defined(__powerpc__))) || (defined(__DARWIN__) && (defined(__i386__) || defined(__x86_64__) || defined(__ppc__))) || (defined(__FreeBSD__) && (defined(__i386__) || defined(__x86_64__))) || (defined(__OpenBSD__) && defined(__x86_64__)) || (defined(__sun__) && defined(__x86_64__))
++#if (defined(__linux__) && (defined(__i386__) || defined(__x86_64__) || defined(__sparc__) || defined(__powerpc__))) || (defined(__DARWIN__) && (defined(__i386__) || defined(__x86_64__) || defined(__ppc__))) || (defined(__FreeBSD__) && (defined(__i386__) || defined(__x86_64__))) || ((defined(__OpenBSD__) || defined(__NetBSD__)) && defined(__x86_64__)) || (defined(__sun__) && defined(__x86_64__))
+ 
+ #if defined(__linux__) && defined(__i386__)
+ #include <asm/sigcontext.h>
+@@ -19228,6 +19228,11 @@ static void fpe_sig_action(int sig, sigi
+     struct fxsave64 *fxsave = uc->sc_fpstate;
+     fxsave->fx_mxcsr = 0x1F80;
+     fxsave->fx_fsw &= ~0xFF;
++#elif defined(__NetBSD__) && defined(__x86_64__)
++    mcontext_t *mc = &uc->uc_mcontext;
++    struct fxsave64 *fxsave = (struct fxsave64 *)&mc->__fpregs;
++    fxsave->fx_mxcsr = 0x1F80;
++    fxsave->fx_fsw &= ~0xFF;
+ #elif defined(__sun__) && defined(__x86_64__)
+     mcontext_t *mc = &uc->uc_mcontext;
+     struct fpchip_state *fpstate = &mc->fpregs.fp_reg_set.fpchip_state;

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+
+Build all .java files.
+
+--- make/otp.mk.in.orig	2007-06-11 13:01:44.000000000 +0000
++++ make/otp.mk.in
+@@ -166,7 +166,7 @@ endif
+ 
+ 
+ $(JAVA_DEST_ROOT)$(JAVA_CLASS_SUBDIR)%.class: %.java
+-	CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) $<
++	CLASSPATH=$(CLASSPATH) $(JAVA) $(JAVA_OPTIONS) -d $(JAVA_DEST_ROOT) *.java
+ 
+ # ----------------------------------------------------
+ #	Emacs byte code compiling
