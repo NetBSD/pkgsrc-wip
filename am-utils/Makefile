@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/04/09 09:51:19 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/16 20:42:31 cheusov Exp $
 #
 
 DISTNAME=	am-utils-6.1.5
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.am-utils.org/pub/am-utils/ \
                 ftp://ftp.cs.umn.edu/pub/am-utils \
