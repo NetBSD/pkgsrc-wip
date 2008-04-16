@@ -1,1 +1,3 @@
 Add OPTIONs for --with-{ldap,hesiod,nmbd}
+
+Version 6.1.5 have security issue, CVE-2008-1078.
