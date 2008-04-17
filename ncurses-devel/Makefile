@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/16 23:28:43 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/17 14:59:25 lexort Exp $
 
 #.include "Makefile.common"
 
@@ -6,7 +6,7 @@ COMMENT=	CRT screen handling and optimization package
 
 INSTALLATION_DIRS+=	share/examples
 
-.if ${OPSYS} == "SunOS"
+.if defined(OPSYS) && ${OPSYS} == "SunOS"
 # misc/screen  installs screen, screen-bce and screen-s
 # so we need to remove these  here to avoid a conflict.
 # this means we also remove the entries which have a
