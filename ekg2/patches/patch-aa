@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.4 2008/04/17 16:15:59 shindenmorr Exp $
+
+--- plugins/rc/inputs.c.orig	2008-04-17 18:10:58.000000000 +0200
++++ plugins/rc/inputs.c
+@@ -5,6 +5,7 @@
+ #ifndef NO_POSIX_SYSTEM
+ #include <arpa/inet.h>
+ #include <netinet/in.h>
++#include <sys/socket.h>
+ #include <sys/un.h>
+ #endif
+ 
