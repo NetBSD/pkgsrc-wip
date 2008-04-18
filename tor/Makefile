@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/14 20:49:08 netcap Exp $
+# $NetBSD: Makefile,v 1.21 2008/04/18 08:13:34 thomasklausner Exp $
 #
 
 DISTNAME=		tor-0.2.0.21-rc
@@ -61,6 +61,7 @@ post-install:
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
+	-${RMDIR} ${PREFIX}/etc/tor/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 # XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin

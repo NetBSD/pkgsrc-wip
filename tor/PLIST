@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/17 11:02:06 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/18 08:13:34 thomasklausner Exp $
 bin/tor
 bin/tor-gencert
 bin/tor-resolve
 bin/torify
+man/man1/tor-gencert.1
 man/man1/tor-resolve.1
 man/man1/tor.1
 man/man1/torify.1
