@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/18 21:19:58 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/18 21:24:50 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -8,7 +8,9 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
-CONFLICTS=	musicpd-[0-9]* mpich-[0-9]*
+CONFLICTS+=	musicpd-[0-9]*	# installs bin/mpd
+CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
+CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
