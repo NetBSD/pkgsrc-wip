@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2008/04/19 18:17:26 gschwarz Exp $
+
+--- src/dns_answer.c.orig	2008-04-19 19:02:34.000000000 +0200
++++ src/dns_answer.c	2008-04-19 19:05:43.000000000 +0200
+@@ -1324,6 +1324,9 @@
+ # endif
+ 
+ # ifdef ENABLE_IPV6
++#  ifndef IPV6_RECVPKTINFO
++#   define IPV6_RECVPKTINFO IPV6_PKTINFO /* needed e.g. on Darwin */
++#  endif
+ 	if (!run_ipv4) {
+ 		if (setsockopt(sock,SOL_IPV6,IPV6_RECVPKTINFO,&so,sizeof(so))!=0) {
+ 			log_error("Could not set options on udp socket: %s",strerror(errno));

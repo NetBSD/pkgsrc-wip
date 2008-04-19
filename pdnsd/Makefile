@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/06/30 19:44:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/19 18:17:26 gschwarz Exp $
 
-DISTNAME=	pdnsd-1.2.5-par
+DISTNAME=	pdnsd-1.2.6-par
 PKGNAME=	${DISTNAME:S/-par//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
@@ -43,6 +43,15 @@ RCD_SCRIPTS=		pdnsd
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
 			share/examples/pdnsd
 
-OWN_DIRS_PERMS+=	${VARBASE}/cache/pdnsd ${PDNSD_USER} ${PDNSD_GROUP} 755
+.if exists("${VARBASE}/cache")
+PDNSDCACHE=		"${VARBASE}/cache/pdnsd"
+.elif exists("${VARBASE}/run")
+PDNSDCACHE=		"${VARBASE}/run/pdnsd"
+.else
+PDNSDCACHE=		"${VARBASE}/pdnsd"
+.endif
+
+OWN_DIRS_PERMS+=	"${PDNSDCACHE}" ${PDNSD_USER} ${PDNSD_GROUP} 755
+CONFIGURE_ARGS+=	--with-cachedir="${PDNSDCACHE}"
 
 .include "../../mk/bsd.pkg.mk"
