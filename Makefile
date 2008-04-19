@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2875 2008/04/16 06:12:33 marttikuparinen Exp $
+# $Id: Makefile,v 1.2876 2008/04/19 21:47:20 mj_turner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -690,6 +690,7 @@ SUBDIR+=	interbase-docs
 # SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
+SUBDIR+=	iodine
 SUBDIR+=	ion3
 SUBDIR+=	ipfm
 SUBDIR+=	ipmitools
