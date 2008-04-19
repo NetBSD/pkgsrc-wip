@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/19 20:34:24 mj_turner Exp $
 
-DISTNAME=			gwhois_20070926
+DISTNAME=			gwhois_20080219.1
 PKGNAME=			${DISTNAME:S/_/-/g}
-PKGREVISION=			1
 CATEGORIES=			net
 MASTER_SITES=			http://gwhois.de/gwhois/
 
-MAINTAINER=			mj@turner.org.za
+MAINTAINER=			mj@mjturner.net
 HOMEPAGE=			http://gwhois.de/gwhois/
 COMMENT=			Flexible whois client and proxy
 
