@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/19 21:43:31 mj_turner Exp $
+bin/iodine
+man/man8/iodine.8
+sbin/iodined
+share/iodine/CHANGELOG
+share/iodine/README
+@dirrm share/iodine

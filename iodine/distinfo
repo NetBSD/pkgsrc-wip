@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/19 21:43:31 mj_turner Exp $
+
+SHA1 (iodine-0.4.1.tar.gz) = a1d4cf3bbc98ec302a754db2a0fd475a48d88f52
+RMD160 (iodine-0.4.1.tar.gz) = c53d269afcbb33546ae0b2b6333f52daec7ffde3
+Size (iodine-0.4.1.tar.gz) = 33551 bytes
