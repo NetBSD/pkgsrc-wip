@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/09/02 12:05:39 gschwarz Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/19 15:46:55 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.login.com/pub/software/traceroute/
+MASTER_SITES+=	http://gd.tuwien.ac.at/infosys/network/tools/traceroute/
 DISTFILES=	traceroute.c
 DIST_SUBDIR=	traceroute-nanog
 
@@ -15,6 +16,7 @@ MAINTAINER=	schwarz@NetBSD.org
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
+USE_FEATURES+=	snprintf
 
 TRN_EXTRALIBS=
 
@@ -44,9 +46,6 @@ CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=	-Dsocklen_t=int
-# needs snprintf()
-.include "../../pkgtools/libnbcompat/buildlink3.mk"
-TRN_EXTRALIBS+=	${BUILDLINK_LDADD.libnbcompat}
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
