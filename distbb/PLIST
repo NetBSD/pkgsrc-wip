@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/16 09:45:59 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/19 08:20:23 cheusov Exp $
 bin/distbb
 libexec/distbb/common
 libexec/distbb/lock
@@ -12,4 +12,5 @@ libexec/distbb/stage_upload_logs
 libexec/distbb/stage_upload_pkgs
 share/doc/distbb/NEWS
 share/doc/distbb/README
+share/doc/distbb/TODO
 share/examples/distbb/distbb.conf
