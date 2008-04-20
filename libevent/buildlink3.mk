@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/04/13 18:48:35 athaba Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/04/20 11:01:48 tnn2 Exp $
+
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBEVENT_BUILDLINK3_MK:=	${LIBEVENT_BUILDLINK3_MK}+
 
