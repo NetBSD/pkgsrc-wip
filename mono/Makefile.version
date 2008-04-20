@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.version,v 1.1.1.1 2008/03/18 19:32:18 koifren Exp $
-
-MONO_VERSION=	1.9
