@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/03 00:31:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/21 11:34:24 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -10,8 +10,7 @@ INSTALLATION_DIRS=	lib/pkgconfig
 
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.5.12
-.include "../../wip/cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.4
 .include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
