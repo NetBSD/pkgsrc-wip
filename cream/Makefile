@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/05/22 13:53:47 dhowland Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/21 02:36:16 dhowland Exp $
 #
 
-DISTNAME=		cream-0.39beta2
+DISTNAME=		cream-0.41
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cream/}
 

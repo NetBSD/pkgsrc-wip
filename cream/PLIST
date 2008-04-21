@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2007/05/22 13:53:47 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/21 02:36:16 dhowland Exp $
 bin/cream
 share/applications/cream.desktop
 share/icons/cream/cream.ico
 share/icons/cream/cream.png
 share/icons/cream/cream.svg
-share/vim/${VIM_SUBDIR}/cream/EasyHtml.vim
 share/vim/${VIM_SUBDIR}/cream/EnhancedCommentify.vim
 share/vim/${VIM_SUBDIR}/cream/Rndm.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-colorinvert.vim
@@ -23,6 +22,7 @@ share/vim/${VIM_SUBDIR}/cream/addons/cream-debinary.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-email-formatter.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-email-munge.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-encrypt-algorithmic.vim
+share/vim/${VIM_SUBDIR}/cream/addons/cream-encrypt-gpg.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-encrypt-h4x0r.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-encrypt-hexme.vim
 share/vim/${VIM_SUBDIR}/cream/addons/cream-encrypt-rot13.vim
@@ -101,6 +101,7 @@ share/vim/${VIM_SUBDIR}/cream/cream-colors-chocolateliquor.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-dawn.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-default.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-inkpot.vim
+share/vim/${VIM_SUBDIR}/cream/cream-colors-matrix.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-navajo-night.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-navajo.vim
 share/vim/${VIM_SUBDIR}/cream/cream-colors-night.vim
