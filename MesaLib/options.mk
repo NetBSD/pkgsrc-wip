@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2008/04/22 21:49:57 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.10 2008/04/22 22:42:07 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -68,5 +68,5 @@ PLIST.nodri=	# empty
 MESA_EXECMEM_HEAPSIZE?=	10485760
 .if !empty(PKG_OPTIONS:Mmesa-execmem-mmap)
 CFLAGS+=	-DMESA_EXECMEM_MMAP
-CFLAGS+=	-DEXEC_HEAP_SIZE=${MESA_EXECMEM_HEAP_SIZE:M[0-9]*:Q}
+CFLAGS+=	-DEXEC_HEAP_SIZE=${MESA_EXECMEM_HEAPSIZE:M[0-9]*:Q}
 .  endif
