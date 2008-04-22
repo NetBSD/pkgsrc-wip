@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/04/22 21:36:38 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.9 2008/04/22 21:49:57 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -70,4 +70,3 @@ MESA_EXECMEM_HEAPSIZE?=	10485760
 CFLAGS+=	-DMESA_EXECMEM_MMAP
 CFLAGS+=	-DEXEC_HEAP_SIZE=${MESA_EXECMEM_HEAP_SIZE:M[0-9]*:Q}
 .  endif
-.endif
