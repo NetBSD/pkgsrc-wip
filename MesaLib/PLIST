@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/03/11 05:27:38 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/22 21:36:38 bsadewitz Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -15,22 +15,22 @@ include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
 lib/libGL.la
 lib/libGLw.la
-${NODRI}lib/libOSMesa.la
-${DRI}lib/dri/i810_dri.la
-${DRI}lib/dri/i915_dri.la
-${DRI}lib/dri/i965_dri.la
-${DRI}lib/dri/mach64_dri.la
-${DRI}lib/dri/mga_dri.la
-${DRI}lib/dri/r128_dri.la
-${DRI}lib/dri/r200_dri.la
-${DRI}lib/dri/r300_dri.la
-${DRI}lib/dri/radeon_dri.la
-${DRI}lib/dri/savage_dri.la
-${DRI}lib/dri/sis_dri.la
-${DRI}lib/dri/tdfx_dri.la
-${DRI}lib/dri/unichrome_dri.la
+${PLIST.nodri}lib/libOSMesa.la
+${PLIST.dri}lib/dri/i810_dri.la
+${PLIST.dri}lib/dri/i915_dri.la
+${PLIST.dri}lib/dri/i965_dri.la
+${PLIST.dri}lib/dri/mach64_dri.la
+${PLIST.dri}lib/dri/mga_dri.la
+${PLIST.dri}lib/dri/r128_dri.la
+${PLIST.dri}lib/dri/r200_dri.la
+${PLIST.dri}lib/dri/r300_dri.la
+${PLIST.dri}lib/dri/radeon_dri.la
+${PLIST.dri}lib/dri/savage_dri.la
+${PLIST.dri}lib/dri/sis_dri.la
+${PLIST.dri}lib/dri/tdfx_dri.la
+${PLIST.dri}lib/dri/unichrome_dri.la
 lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
-${DRI}@dirrm lib/dri
-${DRI}@dirrm lib
+${PLIST.dri}@dirrm lib/dri
+${PLIST.dri}@dirrm lib
 @dirrm include/GL
