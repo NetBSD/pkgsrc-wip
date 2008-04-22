@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2007/04/14 15:30:49 obache Exp $
+$NetBSD: patch-ah,v 1.2 2008/04/22 01:45:43 obache Exp $
 
---- perl/Makefile.in.orig	2003-10-22 18:50:17.000000000 +0000
+--- perl/Makefile.in.orig	2008-04-04 12:47:07.000000000 +0000
 +++ perl/Makefile.in
-@@ -82,7 +82,7 @@ all::
+@@ -84,7 +84,7 @@ all::
  			   BDB_LIB="$(BDB_LIB)" BDB_INC="$(BDB_INC)" \
  			   OPENSSL_LIB="$(OPENSSL_LIB)" OPENSSL_INC="$(OPENSSL_INC)" \
  			   SASL_LIB="$(SASL_LIB)" SASL_INC="$(SASL_INC)" CC="$(CC)" \

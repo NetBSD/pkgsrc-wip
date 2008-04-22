@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2007/04/14 15:30:49 obache Exp $
+$NetBSD: patch-aj,v 1.2 2008/04/22 01:45:43 obache Exp $
 
---- perl/sieve/lib/request.c.orig	2003-02-13 20:15:53.000000000 +0000
+--- perl/sieve/lib/request.c.orig	2008-04-04 12:47:21.000000000 +0000
 +++ perl/sieve/lib/request.c
-@@ -51,7 +51,9 @@
+@@ -52,7 +52,9 @@
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <sys/ipc.h>

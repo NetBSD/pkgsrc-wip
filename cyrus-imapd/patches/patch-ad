@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/04/14 15:30:50 obache Exp $
+$NetBSD: patch-ad,v 1.2 2008/04/22 01:45:43 obache Exp $
 
---- imap/cvt_cyrusdb.c.orig	2006-11-30 17:11:17.000000000 +0000
+--- imap/cvt_cyrusdb.c.orig	2008-03-24 17:09:16.000000000 +0000
 +++ imap/cvt_cyrusdb.c
-@@ -60,7 +60,9 @@
+@@ -59,7 +59,9 @@
  #include <syslog.h>
  
  #include <sys/ipc.h>

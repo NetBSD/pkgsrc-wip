@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1.1.1 2007/04/14 15:30:50 obache Exp $
+$NetBSD: patch-am,v 1.2 2008/04/22 01:45:43 obache Exp $
 
---- tools/config2header.orig	2006-11-30 17:11:25.000000000 +0000
+--- tools/config2header.orig	2008-03-24 20:25:22.000000000 +0000
 +++ tools/config2header
-@@ -77,6 +77,14 @@ while ($#ARGV >= 0) {
+@@ -79,6 +79,14 @@ while ($#ARGV >= 0) {
  
  my $use_gcc_extension = ($CC and $CC eq 'gcc');
  

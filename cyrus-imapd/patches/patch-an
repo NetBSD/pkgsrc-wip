@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.4 2007/12/11 00:47:31 obache Exp $
+$NetBSD: patch-an,v 1.5 2008/04/22 01:45:43 obache Exp $
 
---- imap/tls.c.orig	2007-11-28 11:51:27.000000000 +0000
+--- imap/tls.c.orig	2008-04-15 17:58:08.000000000 +0000
 +++ imap/tls.c
-@@ -220,7 +220,7 @@ static RSA *tmp_rsa_cb(SSL * s __attribu
+@@ -223,7 +223,7 @@ static RSA *tmp_rsa_cb(SSL * s __attribu
      return (rsa_tmp);
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-an,v 1.4 2007/12/11 00:47:31 obache Exp $
  /* Logic copied from OpenSSL apps/s_server.c: give the TLS context
   * DH params to work with DHE-* cipher suites. Hardcoded fallback
   * in case no DH params in tls_key_file or tls_cert_file.
-@@ -728,7 +728,7 @@ int     tls_init_serverengine(const char
+@@ -735,7 +735,7 @@ int     tls_init_serverengine(const char
      }
      SSL_CTX_set_tmp_rsa_callback(s_ctx, tmp_rsa_cb);
  
