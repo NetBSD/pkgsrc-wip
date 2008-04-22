@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2879 2008/04/21 11:32:39 tnn2 Exp $
+# $Id: Makefile,v 1.2880 2008/04/22 17:23:52 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -820,7 +820,6 @@ SUBDIR+=	libdmx
 #SUBDIR+=	libdrm			# we have x11/libdrm, is this obsolete?
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
-SUBDIR+=	libevent
 SUBDIR+=	libgadu
 SUBDIR+=	libgeotiff
 SUBDIR+=	libgksu
