@@ -8,7 +8,7 @@ Suggested package updates
 	o cdogs-0.4
 	o chora-2.0.1
 	o cinelerra-2.1
-	o commoncpp2-1.6.1
+	o commoncpp2-1.6.2
 	o d4x-2.5.7.1
 	o directfb-1.0.0
 	o ecasound-2.4.6
@@ -33,11 +33,12 @@ Suggested package updates
 	o kino-1.0.0
 	o libgadu-1.8.0
 	o libgksu-2.0.4
+	o libmtp-0.2.6.1
 	o linphone-2.1.1
 	o lives-0.9.8.9
 	o llvm-2.2
 	o man-1.6f
-	o mcabber-0.9.6
+	o mcabber-0.9.7
 	o mixxx-1.5.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
