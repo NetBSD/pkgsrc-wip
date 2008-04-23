@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/23 22:13:06 thomasklausner Exp $
 #
 
 DISTNAME=		tilda-0.09.2
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 
+.include "../../devel/confuse/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
-.include "../../wip/confuse/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
