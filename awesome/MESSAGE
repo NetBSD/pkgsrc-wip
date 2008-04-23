@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.6 2008/04/14 18:17:41 hoka_adam Exp $
-
-WARNING:
-  If you upgrade from older versions, please backup and recreate your old
-  config file because it may be incompatible with the new format!
-
-===========================================================================

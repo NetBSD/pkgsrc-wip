@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2880 2008/04/22 17:23:52 tnn2 Exp $
+# $Id: Makefile,v 1.2881 2008/04/23 22:14:41 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -106,7 +106,6 @@ SUBDIR+=	autoproject
 SUBDIR+=	avahi
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
-SUBDIR+=	awesome
 SUBDIR+=	awflwm
 SUBDIR+=	awk-pkgsrc-dewey
 SUBDIR+=	axe
@@ -191,7 +190,6 @@ SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
 SUBDIR+=	compiz-gnome-current
-SUBDIR+=	confuse
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	courierpassd
