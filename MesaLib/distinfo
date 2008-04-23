@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.13 2008/04/22 21:36:38 bsadewitz Exp $
+$NetBSD: distinfo,v 1.14 2008/04/23 17:45:42 tnn2 Exp $
 
-SHA1 (Mesa-7.0.3/MesaDemos-7.0.3.tar.gz) = 24d59e874c9ecee10b571a87a9d19addb5ee50c5
-RMD160 (Mesa-7.0.3/MesaDemos-7.0.3.tar.gz) = 4130aeeab942efb0df7bafdc477af90b5bba75d6
-Size (Mesa-7.0.3/MesaDemos-7.0.3.tar.gz) = 1656449 bytes
-SHA1 (Mesa-7.0.3/MesaGLUT-7.0.3.tar.gz) = d5e95ae462babd8c988e552ffc555b727e3a40d6
-RMD160 (Mesa-7.0.3/MesaGLUT-7.0.3.tar.gz) = a9f2e818153401c5aa58917996a5869300fcc590
-Size (Mesa-7.0.3/MesaGLUT-7.0.3.tar.gz) = 477665 bytes
-SHA1 (Mesa-7.0.3/MesaLib-7.0.3.tar.gz) = cc3dd5754db17136308cb15fd950877e2686ede9
-RMD160 (Mesa-7.0.3/MesaLib-7.0.3.tar.gz) = c0c177e48eec28359b2631bda6bc84e004bba24d
-Size (Mesa-7.0.3/MesaLib-7.0.3.tar.gz) = 4523260 bytes
+SHA1 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = c8dfef08f3b3f7abc70d99e16a35b0bbc1af4f8a
+RMD160 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 22917fbab3987e1d60d46321e1a77d5cbdd3800c
+Size (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 1342158 bytes
+SHA1 (Mesa-7.0.3/MesaGLUT-7.0.3.tar.bz2) = ce263120bfa258d6cf791c21d506ea215e806b5f
+RMD160 (Mesa-7.0.3/MesaGLUT-7.0.3.tar.bz2) = 9cf615868d540d3121b1219b0395f5f268e407cd
+Size (Mesa-7.0.3/MesaGLUT-7.0.3.tar.bz2) = 329421 bytes
+SHA1 (Mesa-7.0.3/MesaLib-7.0.3.tar.bz2) = 49b92094a25f189b411f393174ee666e73dddf36
+RMD160 (Mesa-7.0.3/MesaLib-7.0.3.tar.bz2) = 1672be9d235f19c779c42ea4f443995b1844c836
+Size (Mesa-7.0.3/MesaLib-7.0.3.tar.bz2) = 3389327 bytes
 SHA1 (patch-aa) = 6db543357cfe41fe1ab1fc16d823ff61d3e8646b
 SHA1 (patch-ab) = ab6c3eb50f2e8091aeca30f92f55e02661c099e9
 SHA1 (patch-ac) = ed3ec49ea2aacf231bbcb38093f3dc01a0cb2468
