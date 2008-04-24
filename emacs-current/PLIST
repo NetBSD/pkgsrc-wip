@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2008/04/09 23:29:09 makoto Exp $
+@comment $NetBSD: PLIST,v 1.50 2008/04/24 10:41:24 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2265,6 +2265,8 @@ share/emacs/${PKGVERSION}/lisp/midnight.el.gz
 share/emacs/${PKGVERSION}/lisp/midnight.elc
 share/emacs/${PKGVERSION}/lisp/minibuf-eldef.el.gz
 share/emacs/${PKGVERSION}/lisp/minibuf-eldef.elc
+share/emacs/${PKGVERSION}/lisp/minibuffer.el.gz
+share/emacs/${PKGVERSION}/lisp/minibuffer.elc
 share/emacs/${PKGVERSION}/lisp/misc.el.gz
 share/emacs/${PKGVERSION}/lisp/misc.elc
 share/emacs/${PKGVERSION}/lisp/mouse-copy.el.gz
@@ -3162,6 +3164,7 @@ share/icons/hicolor/scalable/mimetypes/emacs-document.svg
 @dirrm share/emacs/${PKGVERSION}/lisp/term
 @dirrm share/emacs/${PKGVERSION}/lisp/progmodes
 @dirrm share/emacs/${PKGVERSION}/lisp/play
+@dirrm share/emacs/${PKGVERSION}/lisp/org
 @dirrm share/emacs/${PKGVERSION}/lisp/obsolete
 @dirrm share/emacs/${PKGVERSION}/lisp/nxml
 @dirrm share/emacs/${PKGVERSION}/lisp/net
