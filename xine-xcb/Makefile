@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/01/16 19:56:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/24 12:32:32 thomasklausner Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -15,15 +15,15 @@ BUILD_DIRS=	${WRKSRC}/src/video_out
 CONFIGURE_ARGS+= --with-xcb
 CONFIGURE_ARGS+= --without-x
 
-INSTALLATION_DIRS=	lib/xine/plugins/${XINE_LIB_VER}
+INSTALLATION_DIRS=	lib/xine/plugins/${XINE_MOD_DIR_VER}
 
 do-install:
 	cd ${WRKSRC}/src/video_out && \
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
-		xineplug_vo_out_xcbshm.la ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_LIB_VER}
+		xineplug_vo_out_xcbshm.la ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}
 	cd ${WRKSRC}/src/video_out && \
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
-		xineplug_vo_out_xcbxv.la ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_LIB_VER}
+		xineplug_vo_out_xcbxv.la ${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}
 
 .include "../../wip/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
