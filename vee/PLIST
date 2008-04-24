@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/24 13:10:47 cherrymathew Exp $
+bin/vee
+share/vee/sample-config/dot.veerc
+share/vee/sample-custom-format/vee-custom.sh
+share/vee/sample-filters/vee-filtermanager.pl
+share/vee/sample-filters/vee-filter.sh
+share/vee/sample-filters/vee-filter.pl
+share/vee/INSTALL
+@dirrm share/vee/sample-config
+@dirrm share/vee/sample-custom-format
+@dirrm share/vee/sample-filters
+@dirrm share/vee/utils
+@dirrm share/vee

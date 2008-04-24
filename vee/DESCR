@@ -1,0 +1,5 @@
+Vee is a command line blog tool that is very portable across Unix
+systems. It provides an interactive as well as a batch interface to
+maintain a log of entries. Formatting is done using a module
+architecture that allows a high degree of customization. There are
+minimal flags and no set up is required.
