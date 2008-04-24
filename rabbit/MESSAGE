@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/04/24 13:11:18 obache Exp $
+You can install the following packages for feature improvement.
+	www/mimetex:			for writing TeX in RD
+	print/ghostscritp:		for reading EPS
+	graphics/ruby-gnome2-rsvg:	for beautiful scaling SVG
+	devel/ruby-gettext:		for displaying localized messages
+	print/enscript and textproc/ruby-htree:
+					source code hilight
+===========================================================================

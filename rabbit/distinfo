@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/24 13:11:18 obache Exp $
+
+SHA1 (rabbit-0.5.6.tar.gz) = f2c7de6d15971991def7da9dfe9d6467e09756ec
+RMD160 (rabbit-0.5.6.tar.gz) = 48da3d1d0c2421f329d093f59213027dcc3a86a7
+Size (rabbit-0.5.6.tar.gz) = 3625219 bytes
