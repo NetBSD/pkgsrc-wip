@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/07/29 00:20:34 cherrymathew Exp $
+$NetBSD: distinfo,v 1.2 2008/04/24 12:26:54 cherrymathew Exp $
 
 SHA1 (nanoblogger-3.3.tar.gz) = 4600a9fe50f4572755499a389715fc7b5eb6d474
 RMD160 (nanoblogger-3.3.tar.gz) = 2d960a128aac1676c308e37de5cce07aacef6674
 Size (nanoblogger-3.3.tar.gz) = 82302 bytes
-SHA1 (patch-aa) = 272046fa46b0430a4f10c4c483f8288f8bec8c68
