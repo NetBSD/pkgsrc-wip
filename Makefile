@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2882 2008/04/25 11:12:52 marttikuparinen Exp $
+# $Id: Makefile,v 1.2883 2008/04/25 17:19:52 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1536,7 +1536,6 @@ SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
-SUBDIR+=	py-psyco
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-scipy_distutils
