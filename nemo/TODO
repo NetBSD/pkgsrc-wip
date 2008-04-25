@@ -1,3 +1,0 @@
-* Start with ``dbus-launch nemo''. (wiz)
-* Fix `nemo' startup script (make it use dbus-launch, and modify shabang shell) (kefren)
-
