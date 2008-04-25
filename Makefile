@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2881 2008/04/23 22:14:41 thomasklausner Exp $
+# $Id: Makefile,v 1.2882 2008/04/25 11:12:52 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -87,6 +87,8 @@ SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-vhost-ldap
 SUBDIR+=	ap2-zeroconf
+SUBDIR+=	ap22-authn-sasl
+SUBDIR+=	ap22-authnz-external
 SUBDIR+=	apachebench2
 SUBDIR+=	apstget
 SUBDIR+=	archimedes
