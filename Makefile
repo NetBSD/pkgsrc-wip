@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2883 2008/04/25 17:19:52 tnn2 Exp $
+# $Id: Makefile,v 1.2884 2008/04/26 01:06:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -409,10 +409,8 @@ SUBDIR+=	geos
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth-devel
-SUBDIR+=	ggz-client-libs
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
-SUBDIR+=	ggz-libggz
 SUBDIR+=	ggz-server
 #SUBDIR+=	ghc		# same as lang/ghc
 SUBDIR+=	gimmie
