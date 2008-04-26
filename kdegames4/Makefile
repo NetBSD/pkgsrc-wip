@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/06 11:54:41 mwdavies Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/26 13:40:11 mwdavies Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
 CATEGORIES=	games
@@ -24,6 +24,7 @@ BUILD_MAKE_FLAGS+= VERBOSE=1
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
