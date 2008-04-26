@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2884 2008/04/26 01:06:06 thomasklausner Exp $
+# $Id: Makefile,v 1.2885 2008/04/26 09:40:07 koifren Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -219,7 +219,6 @@ SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	db1
 SUBDIR+=	dbf
-SUBDIR+=	dbus-sharp
 SUBDIR+=	ddate
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
@@ -1028,8 +1027,6 @@ SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
 SUBDIR+=	ncc
 #SUBDIR+=	ncurses-devel	# missing Makefile.common
-SUBDIR+=	ndesk-dbus
-SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
 SUBDIR+=	neb-wipe
