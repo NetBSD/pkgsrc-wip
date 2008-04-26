@@ -41,6 +41,7 @@ mkdir -m 700 $tmpdir
 
 errsfn=$tmpdir/errors.txt
 
+############################################################
 usage (){
     cat 1>&2 <<EOF
 pkg_micro_src_summary - builds micro summary information
@@ -55,7 +56,6 @@ OPTIONS:
 EOF
 }
 
-############################################################
 while test $# -ne 0; do
     case "$1" in
 	-h|--help)
