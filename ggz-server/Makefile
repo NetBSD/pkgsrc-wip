@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/05 15:36:07 mrohrer Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/26 01:06:28 thomasklausner Exp $
 #
 
 DISTNAME=	ggz-server-0.0.14
-CATEGORIES=	wip
+CATEGORIES=	games
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14/
 
 MAINTAINER=	mrohrer@users.sourceforge.net
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+= --enable-debug-gdb
 
-.include "../../wip/ggz-libggz/buildlink3.mk"
+.include "../../games/libggz/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../net/howl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
