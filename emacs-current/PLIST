@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2008/04/24 10:41:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.51 2008/04/26 15:13:21 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2608,6 +2608,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-align.el.gz
