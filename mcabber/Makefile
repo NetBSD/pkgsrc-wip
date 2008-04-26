@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2008/02/02 11:59:05 zul_ Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/26 12:28:53 zul_ Exp $
 
-DISTNAME=		mcabber-0.9.6
+DISTNAME=		mcabber-0.9.7
 CATEGORIES=		chat
 MASTER_SITES=		http://www.lilotux.net/~mikael/mcabber/files/
 EXTRACT_SUFX=		.tar.bz2
 
 
-MAINTAINER=		degroote@netbsd.org
+MAINTAINER=		degroote@NetBSD.org
 HOMEPAGE=		http://www.lilotux.net/~mikael/mcabber/
 COMMENT=		Jabber console client
 
