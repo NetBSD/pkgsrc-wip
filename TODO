@@ -15,7 +15,7 @@ Suggested package updates
 	o editline-20070831.2.10
 	o electricsheep-2.6.3
 	o emelfm2-0.3.6
-	o endeavour-2.9.1
+	o endeavour-2.9.2
 	o fakenes-0.5.7
 	o firebird-2.0.3
 	o gambas2-2.5
@@ -27,7 +27,7 @@ Suggested package updates
 	o gnunet-0.7.3
 	o grass-6.2.3
 	o grisbi-0.5.8
-	o guichan-0.8.0
+	o guichan-0.8.1
 	o hu-go-2.11
 	o ion3-devel-20080414
 	o kino-1.0.0
@@ -38,7 +38,6 @@ Suggested package updates
 	o lives-0.9.8.9
 	o llvm-2.2
 	o man-1.6f
-	o mcabber-0.9.7
 	o mixxx-1.5.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
