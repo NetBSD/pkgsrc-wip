@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/04/13 12:29:48 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/27 10:05:16 noud4 Exp $
 #
 
-DISTNAME=		qemu-neo1973-4351
+DISTNAME=		qemu-neo1973-4400
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.openmoko.org/
 SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/qemu-neo1973

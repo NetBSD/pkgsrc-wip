@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/04/13 12:29:48 noud4 Exp $
+$NetBSD: distinfo,v 1.6 2008/04/27 10:05:16 noud4 Exp $
 
-SHA1 (qemu-neo1973-4351.tar.gz) = 815001e26fc96e3f309c573a18d3c065e8c358f0
-RMD160 (qemu-neo1973-4351.tar.gz) = 5560eec25cc901ab93117d6c02cd0acacf4d632d
-Size (qemu-neo1973-4351.tar.gz) = 3184032 bytes
+SHA1 (qemu-neo1973-4400.tar.gz) = a458a6116cc666a0bf61472c50ad16be0ceea0f8
+RMD160 (qemu-neo1973-4400.tar.gz) = 1184c69bf11d73b29d16ccdf8638ac97801d6e98
+Size (qemu-neo1973-4400.tar.gz) = 3184024 bytes
 SHA1 (patch-aa) = 455575215bad8864da285e1979da9ff7d8476a24
 SHA1 (patch-ab) = e9789a5526f4dc06993053601d53ce7358f0cbb4
 SHA1 (patch-ac) = 895703d61200250f98978c11ad238db642185b27
