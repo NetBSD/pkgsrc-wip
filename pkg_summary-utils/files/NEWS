@@ -1,3 +1,43 @@
+Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
+
+   Lots of tasks from TODO are implemented.
+
+   pkg_src_fetch_var:
+      - minor fixes in comments
+      - new options -h|--help for use message
+      - new options -f|--fields|-v|--vars for specifying a list of fields
+        to be generated. By default PKGNAME and PKPATH
+        are generated as earlier versions did.
+
+        Example:
+          echo 'wip/distbb' | \
+          pkg_src_fetch_var -f='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS'
+
+      - bmake '+=' operator is also supported
+
+   pkg_src_summary:
+      - new options -h|--help for use message
+      - new options -f|--fields for specifying a list of fields
+        to be generated. By default PKGNAME and PKPATH
+        are generated as earlier versions did.
+      - 'print-summary-data' pkgsrc target is not used anymore.
+        Instead, variable's values are obtained directly by bmake.
+
+        Side effect/incompatibility: NOTFOR and ONLYFOR are set to
+        <empty_string> instead of 'any' string in case
+        NOT_FOR_PLATFORM and ONLY_FOR_PLATFORM are not specified.
+
+   pkg_micro_src_summary:
+      - new options -f|--fields for specifying a list of fields
+        to be generated. By default PKGNAME and PKPATH
+        are generated as earlier versions did.
+
+        Example:
+          pkg_micro_src_summary -f 'PKGNAME PKGPATH DEPENDS BUILD_DEPENDS' \
+                                   lang/lua wip/distbb
+      - In case pkg_src_fetch_var failes pkg_micro_src_summary fallbacks
+        to pkg_src_summary.
+
 Version 0.4.6, by Aleksey Cheusov, Sun, 13 Apr 2008 14:56:41 +0300
 
    fix for pkg_summary4view: doesn't depend on input fields order.

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.4 2008/04/12 16:05:00 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.5 2008/04/27 11:40:50 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -18,6 +18,17 @@ arguments or read from stdin (one package per line).  Format of this
 summary information is the same as used in pkg_summary(5) built from
 binary packages. List of fields (PKGNAME, PKGPATH, DEPENDS etc.) is
 very similar but not fully the same.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl h
+display help message
+.It Fl f Ar fields
+A list of fields (separated by space character) to be generated. By
+default the following fields are generated: PKGNAME, PKGPATH, DEPENDS,
+BUILD_DEPENDS, CONFLICTS, HOMEPAGE, COMMENT, LICENSE, ONLYFOR, NOTFOR,
+MAINTAINER, CATEGORIES, DESCRIPTION (multiline), PLIST(multiline).
+.El
 .Sh ENVIRONMENT
 .Bd -literal
 .Bl -tag -width Cm

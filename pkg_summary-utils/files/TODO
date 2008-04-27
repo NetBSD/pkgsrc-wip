@@ -6,20 +6,13 @@ existing tools:
        add -h|--help option
 
     pkg_micro_src_summary:
-       - should fallback 'pkg_src_summary -f' (also to not
-                            duplicate paexec-related code)
-       add -h|--help option
 
     pkg_refresh_summary:
 
     pkg_src_fetch_var:
        man page
-       add -h|-help option
 
     pkg_src_summary:
-       add -h|--help option
-       -f|--fields <fields>     - fields to be generated
-       'make print-summary-data' -> 'make show-vars VARNAMES=...'
        - distributed summary building using wip/paexec
 
     pkg_summary4view:

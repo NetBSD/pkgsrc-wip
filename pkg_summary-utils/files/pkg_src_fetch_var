@@ -23,9 +23,9 @@
 
 # output format:
 #    for success:
-#       + <SPACE> FIELD1 <SPACE> FIELD2 ...
+#       + <TAB> FIELD1 <TAB> FIELD2 ...FIELD-N
 #    for failure:
-#       - <SPACE> RAW_FIELD1 <SPACE> RAW_FIELD2 ... PKGPATH
+#       - <TAB> RAW_FIELD1 <TAB> RAW_FIELD2 ... RAW_FIELD-N PKGPATH
 #    PKGNAME means PKGNAME[nbPKGREVISION]
 
 BEGIN {
@@ -57,7 +57,7 @@ function get_var_value (varname,                 value, pkgrev){
 		return pkgpath
 	}else{
 		if (read_error == 0 && ! (varname in badvar)){
-			return check("PKGNAME")
+			return check(varname)
 		}else{
 			error = 1
 			return "<badvalue>"
@@ -65,16 +65,36 @@ function get_var_value (varname,                 value, pkgrev){
 	}
 }
 
+function usage (){
+	printf "\
+pkg_src_fetch_var - hack for obtaining variable values from package,\n\
+   (partially(!!!) emulates bmake)\n\
+\n\
+usage: pkg_src_fetch_var [OPTIONS] [files...]\n\
+OPTIONS:\n\
+  -h|--help                           display this help message\n\
+  -v|-f|--vars|--fields <varnames>\n\
+  -v|-f|--vars|--fields=<varnames>    list of variable names\n\
+                                      separated by space.\n\
+               PKGNAME and PKGPATH are fetched by default\n\
+PKGPATHs are read from files or stdin, one PKGPATH per line\n\
+" > "/dev/stderr"
+}
+
 BEGIN {
 	# options and fields
 	for (i=1; i <= ARGC; ++i){
-		if (ARGV [i] == "--fields" || ARGV [i] == "-f"){
+		if (ARGV [i] ~ /^(--help|-h)$/){
+			usage()
+			exit 0
+		}
+		if (ARGV [i] ~ /^(--fields|-f|--vars|-v)$/){
 			fields = ARGV [i+1]
 			ARGV [i+1] = ARGV [i] = ""
 			++i
 			continue
 		}
-		if (ARGV [i] ~ /^(--fields|-f)/){
+		if (ARGV [i] ~ /^(--fields|-f|--vars|-v)/){
 			fields = ARGV [i]
 			sub(/^[^=]*=/, "", fields)
 			ARGV [i] = ""
@@ -272,6 +292,24 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 			}else{
 				# conditional assignments are not remembered
 				var [varname] = $0
+#				print varname " ---> " var [varname]
+			}
+			continue
+		}
+
+		if (match ($1, /^[[:alnum:]_.]+[+]=/)) {
+			varname = $1
+			sub(/[+]=.*$/, "", varname)
+
+			sub(/^[^=]+=/, "", $0)
+			$0 = trim($0)
+
+			if (cond_cnt != 0){
+				# double assignment? -> badvar
+				badvar [varname] = 1
+			}else{
+				# conditional assignments are not remembered
+				var [varname] = (var [varname] " " $0)
 #				print varname " ---> " var [varname]
 			}
 			continue

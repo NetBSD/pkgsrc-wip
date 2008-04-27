@@ -34,6 +34,59 @@ if test -z "$BMAKE"; then
 fi
 
 ############################################################
+usage (){
+    cat 1>&2 <<EOF
+pkg_src_summary - builds summary information
+about source packages
+
+usage: pkg_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
+OPTIONS:
+  -h|--help              display this help message
+  -f|--fields <filename>
+  -f|--fields=<filename> fields to be included too summary,
+                         by default FULL summary is generated
+EOF
+}
+
+# list of fields for default pkg_src_summary
+fields='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST'
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-f|--fields)
+	    fields="$2"
+	    shift;;
+	-f=*|--fields=*)
+	    fields="$(echo $1 | cut -f2 -d=)";;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+if echo "$fields" | grep DESCRIPTION > /dev/null; then
+    field_descr=1
+fi
+if echo "$fields" | grep PLIST > /dev/null; then
+    field_plist=1
+fi
+fields="`echo $fields |
+   awk '{gsub(/PLIST/, \"\")
+         gsub(/ONLYFOR/, \"ONLY_FOR_PLATFORM\")
+         gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
+         gsub(/DESCRIPTION/, \"DESCR_SRC\")
+         print}'`"
+
+############################################################
 cd $PKGSRCDIR
 
 tmp_dir="/tmp/pkg_src_summary.$$"
@@ -45,28 +98,12 @@ errsfn=$tmp_dir/errors.txt
 summaryfn=$tmp_dir/summary.txt
 
 ############################################################
-summary_data2summary (){
-    awk '
-    function normalize (w){
-	return toupper(w)
-    }
-
-    BEGIN {
-	descr_msg = normalize("description")
-    }
-
-    $1 == "prefix" {
-	next
-    }
-
-    $1 == "index" {
-	next
-    }
-
-    $1 == "descr" {
-	fn = $3
+enrich_summary (){
+    awk -F= '
+    $1 == "DESCR_SRC" {
+	fn = $2
 	while (0 < ret = (getline < fn)){
-	    print descr_msg "=" $0
+	    print "DESCRIPTION=" $0
 	}
 	if (ret < 0){
 	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
@@ -74,37 +111,47 @@ summary_data2summary (){
 	}
 	next
     }
-
-    NF > 0 {
-	hdr = (normalize($1) "=")
-	$1 = $2 = ""
-
-	print hdr substr($0, 3)
+    {
+	gsub(/ONLY_FOR_PLATFORM/, "ONLYFOR")
+	gsub(/NOT_FOR_PLATFORM/, "NOTFOR")
+	print
     }' "$@"
 }
 
-cd_and_print_summary_data (){
+enrich_Makefile (){
+    cat <<EOF
+.PHONY: my-show-vars
+my-show-vars:
+.for VARNAME in \${VARNAMES}
+	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
+.endfor
+
+.include "./Makefile"
+EOF
+}
+
+cd_and_print_summary (){
     # $1 - pkgpath
-    ( cd $1 && ${BMAKE} print-summary-data; ) > "$tmpfn";
+    ( cd $1 && enrich_Makefile |
+	${BMAKE} -f - my-show-vars VARNAMES="$fields" ) > "$tmpfn" || return 1
+
+    enrich_summary "$tmpfn" >"$summaryfn" || return 1
+
+    # not expanding PLIST yet
+    if test "$field_plist"; then
+	plist_fn=$1/PLIST
+	if test -f $plist_fn; then
+	    awk '/^[^@]/ {print "PLIST=" $0}' $plist_fn \
+		>>"$summaryfn" || return 1
+	fi
+    fi
 }
 
 generate_summary (){
     # general information
-    if cd_and_print_summary_data $1 > "$tmpfn" 2>"$errsfn" &&
-	summary_data2summary "$tmpfn" 2>>"$errsfn" > "$summaryfn";
+    if cd_and_print_summary $1 2>"$errsfn"
     then
-	pkgname=`awk '$1 == "index" {print $3}' "$tmpfn"`
-	pkgpath=`awk '$1 == "index" {print $2}' "$tmpfn"`
-	echo "PKGNAME=$pkgname"
-	echo "PKGPATH=$pkgpath"
-
 	cat "$summaryfn"
-
-	# not expanding PLIST yet
-	plist_fn=$1/PLIST
-	if test -f $plist_fn; then
-	    awk '/^[^@]/ {print "PLIST=" $0}' $plist_fn
-	fi
 
 	echo '' # empty line - separator 
     else

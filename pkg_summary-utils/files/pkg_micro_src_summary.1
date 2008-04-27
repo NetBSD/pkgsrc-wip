@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_micro_src_summary.1,v 1.4 2008/04/12 16:05:00 cheusov Exp $
+.\"	$NetBSD: pkg_micro_src_summary.1,v 1.5 2008/04/27 11:40:50 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -32,8 +32,12 @@ The options are as follows:
 .It Fl h
 display help message
 .It Fl f Ar fields
-a list of fields to be included to the summary separated
-by space character
+A list of fields (separated by space character) to be generated. By
+default the following fields are generated: PKGNAME, PKGPATH.  Fields
+here are actually Makefile's variable names and should be fetchable by
+pkg_src_fetch_var from Makefile itself, for example, DEPENDS,
+BUILD_DEPENDS, COMMENT etc., but not PLIST, DESCRIPTION, GZIP_CMD or
+similar.
 .El
 .Sh ENVIRONMENT
 .Bd -literal
