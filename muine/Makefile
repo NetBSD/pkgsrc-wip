@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/03/17 22:54:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/27 09:21:35 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://muine.gooeylinux.org/
 
