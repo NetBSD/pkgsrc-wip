@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2008/04/09 20:58:14 mwdavies Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/27 04:06:11 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/ \
+		http://mirrors.isc.org/pub/kde/security_patches/
+PATCHFILES=	post-kde-4.0.3-khtml.diff
 
 .include "../../wip/kde4/Makefile.kde4"
 
