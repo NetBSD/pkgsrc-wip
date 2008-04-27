@@ -26,7 +26,7 @@ set -e
 
 usage (){
     cat 1>&2 <<EOF
-pkg_update_summary - updates pkg_update efficiently
+pkg_update_summary - updates pkg_summary(5) efficiently
 
 usage: pkg_update_summary [OPTIONS] summary_file bin_pkg_dir [decomp comp]
 OPTIONS:
