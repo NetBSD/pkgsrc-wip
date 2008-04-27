@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.gtk,v 1.1.1.1 2008/02/22 21:32:53 pmatias Exp $
-bin/gtk-gnash
-lib/firefox/plugins/libgnashplugin.so

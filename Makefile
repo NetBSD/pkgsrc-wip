@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2885 2008/04/26 09:40:07 koifren Exp $
+# $Id: Makefile,v 1.2886 2008/04/27 06:46:53 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -54,7 +54,6 @@ SUBDIR+=	admsmb
 SUBDIR+=	aeneas
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
-SUBDIR+=	agg
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
@@ -432,8 +431,6 @@ SUBDIR+=	glx-utils
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmp-ecm
-SUBDIR+=	gnash
-SUBDIR+=	gnash-devel
 SUBDIR+=	gnocky
 SUBDIR+=	gnokii
 SUBDIR+=	gnomad2
