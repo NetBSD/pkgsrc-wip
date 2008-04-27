@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/13 12:28:29 noud4 Exp $
+$NetBSD: distinfo,v 1.2 2008/04/27 10:30:23 noud4 Exp $
 
-SHA1 (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080404-om-gta01.rootfs.jffs2) = 5309ce2f4e33b881c6decbd5723051fb8672e118
-RMD160 (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080404-om-gta01.rootfs.jffs2) = 851d27b6ebd336443789f7568bf04994404a5fcb
-Size (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080404-om-gta01.rootfs.jffs2) = 48644096 bytes
+SHA1 (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080424-om-gta01.rootfs.jffs2) = e609f0ad83f8b815f10ab80ed892a08008516f9a
+RMD160 (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080424-om-gta01.rootfs.jffs2) = 8bacccd8d51d341f04b3c33946b3f550f8ceabff
+Size (Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080424-om-gta01.rootfs.jffs2) = 49758208 bytes
 SHA1 (u-boot-gta01bv4-1.3.1+svnr4297+gitb29661fc1151077776454288051bc9a488351ce8-r3.bin) = c529c05d272b03f1e1ec9d9bdc9625a0e3c7805f
 RMD160 (u-boot-gta01bv4-1.3.1+svnr4297+gitb29661fc1151077776454288051bc9a488351ce8-r3.bin) = 7b1120af5fbe886326c2ea6bb2042623ad53ae68
 Size (u-boot-gta01bv4-1.3.1+svnr4297+gitb29661fc1151077776454288051bc9a488351ce8-r3.bin) = 218884 bytes
-SHA1 (uImage-2.6.24+svnr4301-r4251-r5-om-gta01.bin) = d09acf7b0f949e6671dd22d66fdfc29a0fb7e847
-RMD160 (uImage-2.6.24+svnr4301-r4251-r5-om-gta01.bin) = c3272bc54479b13e6f81310ebeb24e62c8a60349
-Size (uImage-2.6.24+svnr4301-r4251-r5-om-gta01.bin) = 1763156 bytes
+SHA1 (uImage-2.6.24+git20080424-r0-om-gta01.bin) = dd5c412fa9421f44cfcf56370cff56badd9d8cad
+RMD160 (uImage-2.6.24+git20080424-r0-om-gta01.bin) = 9e94a742b0a05f06b5335ff45acb11be9c35b0eb
+Size (uImage-2.6.24+git20080424-r0-om-gta01.bin) = 1767048 bytes
