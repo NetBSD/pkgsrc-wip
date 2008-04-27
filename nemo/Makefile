@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/04/27 09:21:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/27 23:10:01 thomasklausner Exp $
 #
 
 DISTNAME=	nemo-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.iola.dk/nemo/downloads/
 EXTRACT_SUFX=	.tar.bz2
