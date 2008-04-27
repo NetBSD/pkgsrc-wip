@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/27 20:02:29 asau Exp $
+bin/cpi
+bin/ibcast-test
+bin/matmat
+bin/matmatlog
+bin/matvec
+bin/monte
+bin/nbodypipe
+bin/oned
+bin/pi
+bin/pi3
+bin/pit
+bin/twod
