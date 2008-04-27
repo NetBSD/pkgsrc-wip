@@ -11,7 +11,7 @@ Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
 
         Example:
           echo 'wip/distbb' | \
-          pkg_src_fetch_var -f='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS'
+          pkg_src_fetch_var -f='PKGNAME PKGPATH COMMENT MAINTAINER'
 
       - bmake '+=' operator is also supported
 
@@ -33,7 +33,7 @@ Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
         are generated as earlier versions did.
 
         Example:
-          pkg_micro_src_summary -f 'PKGNAME PKGPATH DEPENDS BUILD_DEPENDS' \
+          pkg_micro_src_summary -f 'PKGNAME PKGPATH COMMENT MAINTAINER' \
                                    lang/lua wip/distbb
       - In case pkg_src_fetch_var failes pkg_micro_src_summary fallbacks
         to pkg_src_summary.
