@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/12 07:55:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/27 09:01:02 koifren Exp $
 #
 
 DISTNAME=	OdfConverter--src-1.1
@@ -21,6 +21,8 @@ BUILD_DIRS+=	source/Presentation/Converter
 BUILD_DIRS+=	source/Spreadsheet/Converter
 BUILD_DIRS+=	source/AdditionalTools/zlib123/contrib/minizip
 BUILD_DIRS+=	source/Shell/OdfConverterTest
+
+MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	share/doc/OdfConverter
 
