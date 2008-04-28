@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/29 08:58:33 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/28 20:35:47 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -28,7 +28,4 @@ lib/ecl/serve-event.fas
 lib/ecl/sockets.fas
 lib/libecl.so
 @dirrm lib/ecl
-@exec ${MKDIR} %D/include/ecl/gc/private
-@dirrm include/ecl/gc/private
-@dirrm include/ecl/gc
 @dirrm include/ecl
