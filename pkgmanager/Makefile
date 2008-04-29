@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/10/10 13:05:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.21 2008/04/29 21:20:38 cheusov Exp $
 #
 
 DISTNAME=	pkgmanager-${PKGMGR_VERSION}
@@ -64,18 +64,18 @@ do-build: prepare-clocc
 		${PKGMGR_SRC:Q}/compile-all.lisp ${PKGMGR_SRC:Q}
 
 do-install:
-	${INSTALL_DATA_DIR} /etc/pkgmanager/
-	${INSTALL_DATA_DIR} ${PKGMGR_LIBDIR}
-	${INSTALL_DATA} ${WRKDIR}/init.mem ${PKGMGR_LIBDIR}/init.mem
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/run.lisp ${PKGMGR_LIBDIR}/run.lisp
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/packages.fas ${PKGMGR_LIBDIR}/packages.fas
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-except.fas ${PKGMGR_LIBDIR}/pkgmgr-except.fas
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-print.fas ${PKGMGR_LIBDIR}/pkgmgr-print.fas
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-util.fas ${PKGMGR_LIBDIR}/pkgmgr-util.fas
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-pkgdb.fas ${PKGMGR_LIBDIR}/pkgmgr-pkgdb.fas
-	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmanager.fas ${PKGMGR_LIBDIR}/pkgmanager.fas
+	${INSTALL_DATA_DIR} ${DESTDIR}/etc/pkgmanager/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKGMGR_LIBDIR}
+	${INSTALL_DATA} ${WRKDIR}/init.mem ${DESTDIR}${PKGMGR_LIBDIR}/init.mem
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/run.lisp ${DESTDIR}${PKGMGR_LIBDIR}/run.lisp
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/packages.fas ${DESTDIR}${PKGMGR_LIBDIR}/packages.fas
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-except.fas ${DESTDIR}${PKGMGR_LIBDIR}/pkgmgr-except.fas
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-print.fas ${DESTDIR}${PKGMGR_LIBDIR}/pkgmgr-print.fas
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-util.fas ${DESTDIR}${PKGMGR_LIBDIR}/pkgmgr-util.fas
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmgr-pkgdb.fas ${DESTDIR}${PKGMGR_LIBDIR}/pkgmgr-pkgdb.fas
+	${INSTALL_DATA} ${PKGMGR_SRC:Q}/pkgmanager.fas ${DESTDIR}${PKGMGR_LIBDIR}/pkgmanager.fas
 	${INSTALL_SCRIPT} ${PKGMGR_SRC:Q}/pkgmanager-wrapper.sh \
-		${PKGMGR_BINDIR}/pkgmanager
-	${INSTALL_MAN} ${PKGMGR_SRC:Q}/pkgmanager.8 ${PREFIX}/${PKGMANDIR}/man8
+		${DESTDIR}${PKGMGR_BINDIR}/pkgmanager
+	${INSTALL_MAN} ${PKGMGR_SRC:Q}/pkgmanager.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
