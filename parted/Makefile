@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/08 22:14:04 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/30 17:22:50 shattered Exp $
 #
 
 DISTNAME=		parted-1.6.23
@@ -8,6 +8,8 @@ MASTER_SITES=		http://ftp.gnu.org/gnu/parted/
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.gnu.org/software/parted/parted.html
 COMMENT=		Create, destroy, resize, check, and copy partitions and file systems
+
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
