@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/01 18:04:02 hoka_adam Exp $
+
+SHA1 (WebKit-r32698.tar.bz2) = 07065e1cc6bf8617e79446dccc890ad7d2436580
+RMD160 (WebKit-r32698.tar.bz2) = 822f805eb374bd0bd7070999d37fdc68958674d9
+Size (WebKit-r32698.tar.bz2) = 9360232 bytes
+SHA1 (patch-aa) = a89653a6cee06a6573fd8111c0dd35f887782337
+SHA1 (patch-ab) = 19d9ac9a362a8c41025775bc60634dc1e5c3c28c
