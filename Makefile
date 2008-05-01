@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2888 2008/04/27 20:03:45 asau Exp $
+# $Id: Makefile,v 1.2889 2008/05/01 16:53:46 koifren Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1010,6 +1010,7 @@ SUBDIR+=	musepack
 SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
+SUBDIR+=	mwf-designer
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
 SUBDIR+=	mysqltcl
