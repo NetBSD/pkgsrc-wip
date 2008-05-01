@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/28 16:53:06 koifren Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/01 23:19:44 thomasklausner Exp $
 #
 
 DISTNAME=	f-spot-0.4.2
@@ -36,6 +36,7 @@ REPLACE_BASH+=	tools/f-spot-import
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
+.include "../../x11/gnome-desktop-sharp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
