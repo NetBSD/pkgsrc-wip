@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2008/04/30 14:37:32 makoto Exp $
+@comment $NetBSD: PLIST,v 1.53 2008/05/02 11:09:24 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1461,6 +1461,8 @@ share/emacs/${PKGVERSION}/lisp/env.el.gz
 share/emacs/${PKGVERSION}/lisp/env.elc
 share/emacs/${PKGVERSION}/lisp/epa-dired.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-dired.elc
+share/emacs/${PKGVERSION}/lisp/epa-file-hook.el.gz
+share/emacs/${PKGVERSION}/lisp/epa-file-hook.elc
 share/emacs/${PKGVERSION}/lisp/epa-file.el.gz
 share/emacs/${PKGVERSION}/lisp/epa-file.elc
 share/emacs/${PKGVERSION}/lisp/epa-mail.el.gz
@@ -2766,8 +2768,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/mixal-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/mixal-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/modula2.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/modula2.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-hlp.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-hlp.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-mod.el.gz
