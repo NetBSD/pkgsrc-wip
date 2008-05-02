@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/01 18:04:02 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/02 00:58:34 hoka_adam Exp $
 #
 
 DISTNAME=	WebKit-r32698
@@ -17,15 +17,19 @@ BROKEN=		I couldn't build this yet so it lack PLIST,\
 		and report success or failure. :)
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	libtool flex bison gmake perl:build \
-		automake autoconf autoheader libtoolize aclocal
+USE_LIBTOOL=	yes
+USE_TOOLS+=	flex bison gmake perl:build \
+		automake autoconf autoheader libtoolize \
+		aclocal pkg-config
 
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-webkit-target=x11 \
 			--enable-svg \
-			--enable-icon-database
+			--enable-icon-database \
+			--with-http-backend=curl \
+			--with-font-backend=pango
 
 REPLACE_PERL+=	JavaScriptCore/kjs/create_hash_table \
 		JavaScriptCore/pcre/dftables \
@@ -48,8 +52,8 @@ pre-configure:
 
 .include "../../x11/gtk2/buildlink3.mk"
 # XXX http backends, optionise this (?)
-#.include "../../www/curl/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+#.include "../../net/libsoup24/buildlink3.mk"
 #
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
@@ -57,4 +61,5 @@ pre-configure:
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
