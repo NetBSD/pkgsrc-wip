@@ -5,11 +5,12 @@ pkg_src_summary        - create a full pkg_src_summary
                          for given (in PKGPATH form) packages
 pkg_micro_src_summary  - create a micro pkg_src_summary
                          for given (in PKGPATH form) packages
+pkg_cmp_summary        - compare two summary files, i.e. packages
+                         are compared by their versions
 pkg_update_summary     - updates pkg_summary(5) by analysing the modification
                          time of binary packages and pkg_summary(5) file
 pkg_update_src_summary - efficiently updates pkg_src_summary for all
                          packages in pkgsrc tree
 pkg_summary4view       - convert a summary file to human readable format
-pkg_cmp_summary        - compare two summary files
 pkg_refresh_summary    - output an information about latest/newest version
                          of packages
