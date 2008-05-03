@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:31 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/03 13:40:18 jeremy-c-reed Exp $
 #
 
 DISTNAME=		xspread3.1.1c
@@ -39,5 +39,6 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/xspread/
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
