@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/04/23 17:52:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/03 16:46:20 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.4.0.90
-PKGREVISION= 	2
+PKGREVISION= 	3
 PKGNAME=	modular-${DISTNAME}
 CATEGORIES=	x11
-MASTER_SITES=	http://www.NetBSD.org/~bjs/distfiles/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
