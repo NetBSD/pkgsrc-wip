@@ -1,0 +1,3 @@
+* don't try to install share/GNUstep/Local/Tools/oolite
+* install FreeDesktop/*
+* install Doc/*
