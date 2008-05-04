@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/03/30 13:20:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/04 21:22:48 cheusov Exp $
 #
 
-DISTNAME=	pipestatus-0.4.0
+DISTNAME=	pipestatus-0.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pipestatus/}
 
