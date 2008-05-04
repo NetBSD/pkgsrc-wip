@@ -85,7 +85,7 @@ fi
 
 cd "$bin_pkg_dir"
 
-# do not run the command when there are NO input on stdin
+# do not run the command when there is NO input on stdin
 xargs_bsdstyle (){
     awk -v cmd="xargs $*" '{print $0 | cmd}'
 }
