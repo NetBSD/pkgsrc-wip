@@ -85,8 +85,13 @@ fi
 
 cd "$bin_pkg_dir"
 
+# do not run the command when there are NO input on stdin
+xargs_bsdstyle (){
+    awk -v cmd="xargs $*" '{print $0 | cmd}'
+}
+
 pkgs2summary (){
-    xargs $PKG_INFO_CMD -X
+    xargs_bsdstyle $PKG_INFO_CMD -X
 }
 
 get_all_pkgs (){

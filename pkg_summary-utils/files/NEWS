@@ -1,3 +1,16 @@
+Version 0.5.1, by Aleksey Cheusov, Mon,  5 May 2008 01:00:43 +0300
+
+   FIXED: pkg_update_summary fails under Linux, Solaris, Interix and
+   probably other OSes when there are no binary packages in a specified
+   directory.  This happens because xargs works differently on
+   NetBSD/FreeBSD and Linux/Solaris/Interix. In NetBSD/FreeBSD xargs's
+   command is NOT run at all when there is no input, while on L/S/I it is
+   run once without arguments and (pkg_info -X in our case) fails.
+
+   DESCR improved
+
+   Minor fixes in documentation ans NEWS
+
 Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
 
    Lots of tasks from TODO are implemented.
