@@ -1,3 +1,0 @@
-This package provides the source code for a generic USB CCID
-(Chip/Smart Card Interface Devices) driver. See [1] for the USB CCID
-specifications from the USB working group.
