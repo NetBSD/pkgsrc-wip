@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/04/01 18:47:56 ghen Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/05/05 08:44:32 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -289,6 +289,7 @@ share/doc/dovecot/wiki/Authentication.Caching.txt
 share/doc/dovecot/wiki/Authentication.Kerberos.txt
 share/doc/dovecot/wiki/Authentication.MasterUsers.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.DigestMD5.txt
+share/doc/dovecot/wiki/Authentication.Mechanisms.NTLM.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.Winbind.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.txt
 share/doc/dovecot/wiki/Authentication.MultipleDatabases.txt
@@ -317,7 +318,10 @@ share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
+share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
@@ -347,12 +351,15 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
+share/doc/dovecot/wiki/ManageSieve.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
+share/doc/dovecot/wiki/Migration.BincIMAP.txt
 share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
+share/doc/dovecot/wiki/Migration.Teapop.txt
 share/doc/dovecot/wiki/Migration.UW.txt
 share/doc/dovecot/wiki/Migration.Vm-pop3d.txt
 share/doc/dovecot/wiki/Migration.txt
@@ -381,8 +388,6 @@ share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.txt
-share/doc/dovecot/wiki/PopBSMTPAndDovecot.txt
-share/doc/dovecot/wiki/PopRelay.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
 share/doc/dovecot/wiki/QuickConfiguration.txt
 share/doc/dovecot/wiki/Quota.Dict.txt
@@ -391,7 +396,6 @@ share/doc/dovecot/wiki/Quota.FS.txt
 share/doc/dovecot/wiki/Quota.Maildir.txt
 share/doc/dovecot/wiki/Quota.New.txt
 share/doc/dovecot/wiki/Quota.txt
-share/doc/dovecot/wiki/Rootless.txt
 share/doc/dovecot/wiki/RunningDovecot.txt
 share/doc/dovecot/wiki/SSL.CertificateClientImporting.txt
 share/doc/dovecot/wiki/SSL.CertificateCreation.txt
