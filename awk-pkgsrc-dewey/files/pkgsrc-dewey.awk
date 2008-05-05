@@ -1,5 +1,6 @@
 ############################################################
-# dewey function
+# dewey functions
+
 BEGIN {
 	__dewey_maxf = 9 # 8(YYYYMMDD) + 1
 	for (i=0; i <= 26; ++i){
@@ -26,7 +27,7 @@ function __dewey2str (ver,        left,right,sym,num,last){
 	gsub(/beta/, "\073", ver)  # B
 	gsub(/rc/, "\074", ver)    # C
 	gsub(/pre/, "\074", ver)   # C
-	gsub(/nb/, "\076", ver)    # Z
+	gsub(/nb/, "\076", ver)    # Y
 	gsub(/pl/, ".", ver)       # .
 
 	if (match(ver, /[qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM]($|\076)/)){
@@ -36,7 +37,7 @@ function __dewey2str (ver,        left,right,sym,num,last){
 		      substr(ver, RSTART+1)
 	}
 
-	gsub(/[.]/, "\075" __dewey_chars(__dewey_maxf, " ") ".", ver) # Y
+	gsub(/[.]/, "\100" __dewey_chars(__dewey_maxf, " ") ".", ver) # Z
 
 	while (match(ver, /[\072\073\074\076.][0-9]+/)){
 		left  = substr(ver, 1, RSTART-1)
@@ -47,12 +48,12 @@ function __dewey2str (ver,        left,right,sym,num,last){
 		num = sprintf("%" __dewey_maxf "s", num)
 
 		if (sym == ".")
-			ver = left "\075" num right # Y
+			ver = left "\100" num right # Z
 		else
 			ver = left sym num right
 	}
 
-	return substr(ver, __dewey_maxf + 2) "\075" # Y
+	return substr(ver, __dewey_maxf + 2) "\075" # X
 }
 
 function dewey_cmp (ver1, ver2,             s1,s2){

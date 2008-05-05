@@ -31,6 +31,11 @@ install-dirs:
 .endif
 
 ############################################################
+.PHONY : test
+test:
+	runawk tests.awk < tests.txt
+
+############################################################
 
 .sinclude "Makefile.cvsdist"
 
