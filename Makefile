@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2889 2008/05/01 16:53:46 koifren Exp $
+# $Id: Makefile,v 1.2890 2008/05/06 17:12:53 rootcho Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1050,6 +1050,7 @@ SUBDIR+=	netsurf
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
+SUBDIR+=	nginx
 SUBDIR+=	nginx-devel
 SUBDIR+=	nicotine+
 SUBDIR+=	ninvaders
