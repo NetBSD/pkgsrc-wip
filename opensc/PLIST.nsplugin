@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.nsplugin,v 1.1 2008/05/06 13:29:33 htepper Exp $
+lib/opensc-signer.la
+lib/firefox/plugins/opensc-signer.so

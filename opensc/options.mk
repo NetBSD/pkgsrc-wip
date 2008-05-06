@@ -1,22 +1,27 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/11/24 03:17:14 udontknow Exp $
+# $NetBSD: options.mk,v 1.2 2008/05/06 13:29:33 htepper Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
-PKG_SUPPORTED_OPTIONS=	ccid-pinpad assuan pcsc-lite
-PKG_SUGGESTED_OPTIONS=	ccid-pinpad assuan
+PKG_SUPPORTED_OPTIONS=	nsplugin openct pcsc-lite
+PKG_SUGGESTED_OPTIONS=	nsplugin pcsc-lite
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mccid-pinpad)
-CONFIGURE_ARGS+=	--enable-ccid-pinpad
-.else
-CONFIGURE_ARGS+=	--enable-ccid-pinpad=no
-.endif
-
-.if !empty(PKG_OPTIONS:Massuan)
+.if !empty(PKG_OPTIONS:Mnsplugin)
 .include "../../security/libassuan/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../security/pinentry/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-nsplugin
+CONFIGURE_ARGS+=	--with-plugin-dir=/usr/pkg/lib/firefox/plugins
+CONFIGURE_ARGS+=	--with-pinentry=/usr/pkg/bin/pinentry
+PLIST_SRC+=		${PKGDIR}/PLIST.nsplugin
+.else
+CONFIGURE_ARGS+=	--disable-nsplugin
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
-.include "../../wip/pcsc-lite/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenct)
+.include "../../wip/openct/buildlink3.mk"
 .endif
