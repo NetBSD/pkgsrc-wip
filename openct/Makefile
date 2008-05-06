@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/06 13:21:23 htepper Exp $
 
-DISTNAME=	openct-0.6.6
-CATEGORIES=	security
-MASTER_SITES=	http://www.opensc-project.org/files/openct/
+DISTNAME=		openct-0.6.14
+CATEGORIES=		security
+MASTER_SITES=		http://www.opensc-project.org/files/openct/
 
-MAINTAINER=		evaldo@gardenali.biz
-HOMEPAGE=	http://www.opensc-project.org/openct/
+MAINTAINER=		hasso@estpak.ee
+HOMEPAGE=		http://www.opensc-project.org/openct/
 COMMENT=		Smart Card Reader drivers and middleware
 
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 .include "options.mk"
 
