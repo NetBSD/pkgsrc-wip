@@ -21,14 +21,42 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# usage: pkg_grep_summary <FIELD> <CONDITION>
-# examples:
-#   pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
-#         < /srv/pkgsrc/pkg_src_summary.txt
-#   pkg_grep_summary 'DEPENDS' '$2 ~ /pkg_summary/' \
-#         < /srv/pkgsrc/pkg_src_summary.txt
-
 set -e
+
+usage (){
+    cat 1>&2 <<EOF
+pkg_grep_summary - grep pkg_summary(5) input from stdin
+using awk condition
+
+usage: pkg_grep_summary <FIELD> <AWK_CONDITION>
+
+examples:
+  pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
+        < /srv/pkgsrc/packages/pkg_summary.txt
+  pkg_grep_summary 'PKGPATH' '$2 ~ /^lang\//' \
+        < /srv/pkgsrc/packages/pkg_summary.txt
+  pkg_grep_summary 'DEPENDS' '$2 ~ /libX/' \
+        < /srv/pkgsrc/pkg_src_summary.txt
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done
+
 test $# -eq 2
 
 field=$1
