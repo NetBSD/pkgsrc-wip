@@ -25,18 +25,19 @@ set -e
 
 usage (){
     cat 1>&2 <<EOF
-pkg_grep_summary - grep pkg_summary(5) input from stdin
-using awk condition
+pkg_grep_summary - grep pkg_summary(5) input (stdin) using AWK
+condition, entire summaries of found packages are output, that is
+pkg_grep_summary is not per-line but per-package search tool.
 
 usage: pkg_grep_summary <FIELD> <AWK_CONDITION>
 
 examples:
   pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
-        < /srv/pkgsrc/packages/pkg_summary.txt
+        < /usr/pkgsrc/packages/pkg_summary.txt
   pkg_grep_summary 'PKGPATH' '$2 ~ /^lang\//' \
-        < /srv/pkgsrc/packages/pkg_summary.txt
+        < /usr/pkgsrc/packages/pkg_summary.txt
   pkg_grep_summary 'DEPENDS' '$2 ~ /libX/' \
-        < /srv/pkgsrc/pkg_src_summary.txt
+        < /usr/pkgsrc/pkg_src_summary.txt
 EOF
 }
 
