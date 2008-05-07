@@ -25,11 +25,15 @@ set -e
 
 usage (){
     cat 1>&2 <<EOF
-pkg_grep_summary - grep pkg_summary(5) input (stdin) using AWK
-condition, entire summaries of found packages are output, that is
-pkg_grep_summary is not per-line but per-package search tool.
+pkg_grep_summary - output summaries about packages that matches
+the specified condition.
 
-usage: pkg_grep_summary <FIELD> <AWK_CONDITION>
+usage: pkg_grep_summary [OPTIONS] <FIELD> <AWK_CONDITION>
+  <FIELD>         - PKGNAME, PKGPATH, DEPENDS etc.
+  <AWK_CONDITION> - boolean expression written in AWK language
+
+OPTIONS:
+  -h|--help        display this message
 
 examples:
   pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
