@@ -21,70 +21,56 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# usage: pkg_grep_summary <TRUE_EXPR> [<FALSE_EXPR>]
-# example:
-#   pkg_grep_summary \
-#      '$1 == "PKGPATH" && $2 ~ /judy/' \
-#      '$1 == "PKGPATH" && $2 !~ /judy/' < \
-#           /srv/pkgsrc/pkg_src_summary.txt
+# usage: pkg_grep_summary <FIELD> <CONDITION>
+# examples:
+#   pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
+#         < /srv/pkgsrc/pkg_src_summary.txt
+#   pkg_grep_summary 'DEPENDS' '$2 ~ /pkg_summary/' \
+#         < /srv/pkgsrc/pkg_src_summary.txt
 
 set -e
-test $# -le 2
+test $# -eq 2
 
-true_condition="$1"
+field=$1
+true_condition="$2"
+shift
 shift
 
-false_condition=0
-if test $# -eq 1; then
-    false_condition="$1"
-    shift
-fi
-
-awk '
+awk -v field="$field" '
 BEGIN {
    FS     = "="
    skip   = -1 # -1 - unknown, 0 - false, 1 - true
+   count  = 0
 }
 
 function update_skip (){
-   if ('"$true_condition"'){
-      skip = 0
+   skip = !('"$true_condition"')
 
-      if (skip == 0){
-         print accu
+   if (skip == 0){
+      for (i=0; i < count; ++i){
+         print accu [i]
       }
    }
-   if ('"$false_condition"'){
-      skip = 1
 
-      if (skip == 0){
-         print accu
-      }
-   }
+   delete accu
+   count = 0
 }
 
-{
-   n = NF
-}
-
-skip != 1 && n > 0 {
-   update_skip()
-}
-
-skip == 1 && n > 0 {
+skip == 1 && NF > 0 {
    next
 }
 
-skip == 0 && n > 0 {
+$1 == field {
+   update_skip()
+}
+
+skip == 0 && NF > 0 {
    print $0
    next
 }
 
-skip == -1 {
-   if (accu == "")
-      accu = $0
-   else
-      accu = accu "\n" $0
+skip == -1 && NF > 0 {
+   accu [count++] = $0
 }
 
 NF == 0 {
@@ -92,7 +78,8 @@ NF == 0 {
       print ""
    }
 
-   accu = ""
+   delete accu
+   count = 0
    skip = -1
 }
 '
