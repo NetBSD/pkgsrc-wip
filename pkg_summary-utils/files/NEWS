@@ -1,3 +1,8 @@
+Version 0.6.0, by Aleksey Cheusov, Wed,  7 May 2008 21:53:35 +0300
+
+   NEW tool: pkg_grep_summary
+     Run 'pkg_grep_summary -h' for a documentation.
+
 Version 0.5.1, by Aleksey Cheusov, Mon,  5 May 2008 01:00:43 +0300
 
    FIXED: pkg_update_summary fails under Linux, Solaris, Interix and
