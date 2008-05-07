@@ -1,3 +1,9 @@
+Version 0.6.1, by Aleksey Cheusov, Wed,  7 May 2008 23:07:00 +0300
+
+   README file added. There are available a few examples how to use
+   all these tools separately and together . You can use it as a
+   titorial.
+
 Version 0.6.0, by Aleksey Cheusov, Wed,  7 May 2008 21:53:35 +0300
 
    NEW tool: pkg_grep_summary

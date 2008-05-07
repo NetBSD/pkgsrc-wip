@@ -3,6 +3,7 @@
 PREFIX?=/usr/local
 BINDIR?=${PREFIX}/bin
 MANDIR?=${PREFIX}/man
+DOCDIR=${PREFIX}/share/doc/pkg_summary-utils
 
 INST_DIR?=	${INSTALL} -d
 
@@ -21,7 +22,10 @@ MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 
-BIRTHDAY=	2008-04-06
+FILES=		README
+FILESDIR=	${DOCDIR}
+
+BIRTHDATE=	2008-04-06
 
 PROJECTNAME=	pkg_summary-utils
 
@@ -29,6 +33,7 @@ PROJECTNAME=	pkg_summary-utils
 .PHONY: install-dirs
 install-dirs:
 	$(INST_DIR) ${DESTDIR}${BINDIR}
+	$(INST_DIR) ${DESTDIR}${DOCDIR}
 .if "$(MKMAN)" != "no"
 	$(INST_DIR) ${DESTDIR}${MANDIR}/man1
 .if "$(MKCATPAGES)" != "no"
