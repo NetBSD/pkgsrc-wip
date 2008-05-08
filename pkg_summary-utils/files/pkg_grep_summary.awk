@@ -23,7 +23,9 @@ grep_summary__skip == 1 && NF > 0 {
 }
 
 ($1 == grep_summary__field) || ("" == grep_summary__field) {
-	update_skip()
+	if (grep_summary__skip == -1){
+		update_skip()
+	}
 }
 
 grep_summary__skip == 0 && NF > 0 {

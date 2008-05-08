@@ -133,16 +133,6 @@ BEGIN {
 }
 
 function grep_summary__condition (           pkgpath, pkgname){
-   if (grep_summary__skip == 0 || grep_summary__skip == 1){
-      return !grep_summary__skip
-   }
-
-#   if (!("PKGPATH" in grep_summary__fields) ||
-#       !("PKGNAME" in grep_summary__fields))
-#   {
-#      return -1
-#   }
-
    pkgpath = grep_summary__fields ["PKGPATH"]
    pkgname = grep_summary__fields ["PKGNAME"]
 
