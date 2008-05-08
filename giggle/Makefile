@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/06 20:54:29 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/08 15:52:35 guigui2 Exp $
 #
 
 DISTNAME=		giggle-0.4
@@ -6,8 +6,8 @@ CATEGORIES=		devel
 MASTER_SITES=		http://ftp.imendio.com/pub/imendio/giggle/src/
 
 MAINTAINER=		netbsd@guigui2.net
-HOMEPAGE=		http://ftp.imendio.com/pub/imendio/giggle/src/
-COMMENT=		GTK2 graphical frontend to git source code management
+HOMEPAGE=		http://developer.imendio.com/projects/giggle/
+COMMENT=		GTK2 graphical frontend to git SCM tool
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
