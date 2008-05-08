@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/21 11:34:24 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/08 17:01:00 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -13,6 +13,7 @@ CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.4
 .include "../../databases/sqlite3/buildlink3.mk"
 
+PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
