@@ -70,54 +70,18 @@ done
 test $# -eq 2
 
 field=$1
-true_condition="$2"
+condition="$2"
 shift
 shift
 
-awk -v field="$field" '
+runawk -e '
+#use "pkg_grep_summary.awk"
+
 BEGIN {
-   FS     = "="
-   skip   = -1 # -1 - unknown, 0 - false, 1 - true
-   count  = 0
+   grep_summary__field="'"$field"'"
 }
 
-function update_skip (){
-   skip = !('"$true_condition"')
-
-   if (skip == 0){
-      for (i=0; i < count; ++i){
-         print accu [i]
-      }
-   }
-
-   delete accu
-   count = 0
-}
-
-skip == 1 && NF > 0 {
-   next
-}
-
-$1 == field {
-   update_skip()
-}
-
-skip == 0 && NF > 0 {
-   print $0
-   next
-}
-
-skip == -1 && NF > 0 {
-   accu [count++] = $0
-}
-
-NF == 0 {
-   if (skip == 0){
-      print ""
-   }
-
-   delete accu
-   count = 0
-   skip = -1
+function grep_summary__condition (){
+   return '"$condition"'
 }
 '

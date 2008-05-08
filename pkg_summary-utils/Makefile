@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/05/05 13:20:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/08 11:01:22 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -37,7 +36,8 @@ MAN1DIR=	${PKGMANDIR}/man1
 
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
 MAKE_ENV+=	MKCATPAGES=no
+MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 
-INSTALLATION_DIRS+=	bin ${MAN1DIR}
+INSTALLATION_DIRS+=	bin ${MAN1DIR} share/doc/pkg_summary-utils
 
 .include "../../mk/bsd.pkg.mk"
