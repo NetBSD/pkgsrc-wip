@@ -117,69 +117,32 @@ export newest_fn
 
 runawk -e '
 #use "xgetline.awk"
+#use "pkg_grep_summary.awk"
 
 BEGIN {
    newest_fn = ENVIRON ["newest_fn"]
 
+   FS = " "
    while (xgetline0(newest_fn)){
       pair = $1 ":" $2
       keep [pair] = 1
    }
 
-   SUBSEP = ":"
-   FS     = "="
-   skip   = -1 # -1 - unknown, 0 - false, 1 - true
+   grep_summary__field = ""
+   FS = "="
 }
 
-function update_skip (){
-   if (pkgname != "" && pkgpath != ""){
-      skip = !((pkgpath ":" pkgname) in keep)
+function grep_summary__condition (           pkgpath, pkgname){
+   pkgpath = grep_summary__fields ["PKGPATH"]
+   pkgname = grep_summary__fields ["PKGNAME"]
 
-      if ((pkgpath ":" pkgname) in processed){
-         skip = 1
-      }
-
-      if (skip == 0){
-         print accu
-      }
-   }
-}
-
-skip == 1 && NF > 0 {
-   next
-}
-
-skip == 0 && NF > 0 {
-   print $0
-   next
-}
-
-skip == -1 {
-   if (accu == "")
-      accu = $0
-   else
-      accu = accu "\n" $0
-}
-
-$1 == "PKGNAME" {
-   pkgname = $2
-   update_skip()
-}
-
-
-$1 == "PKGPATH" {
-   pkgpath = $2
-   update_skip()
-}
-
-NF == 0 {
-   processed [pkgpath, pkgname] = 1
-
-   if (skip == 0){
-      print ""
+   if (((pkgpath ":" pkgname) in keep) &&
+      !((pkgpath ":" pkgname) in processed))
+   {
+      processed [pkgpath ":" pkgname] = 1
+      return 1
    }
 
-   accu = pkgname = pkgpath = ""
-   skip = -1
+   return 0
 }
 ' "$@" $tmp_fn

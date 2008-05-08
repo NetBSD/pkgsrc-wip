@@ -31,6 +31,10 @@ skip == 0 && NF > 0 {
 	next
 }
 
+{
+	grep_summary__fields [$1] = $2
+}
+
 skip == -1 && NF > 0 {
 	accu [count++] = $0
 }
@@ -41,6 +45,7 @@ NF == 0 {
 	}
 
 	delete accu
+	delete grep_summary__fields
 	count = 0
 	skip = -1
 }
