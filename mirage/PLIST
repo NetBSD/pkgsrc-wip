@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/29 19:27:34 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/08 13:15:13 guigui2 Exp $
 bin/mirage
 ${PYSITELIB}/imgfuncs.so
 ${PYSITELIB}/mirage.pyc
 ${PYSITELIB}/mirage.pyo
+${PYSITELIB}/mirage.py
 ${PYSITELIB}/xmouse.so
 share/locale/cs/LC_MESSAGES/mirage.mo
 share/locale/de/LC_MESSAGES/mirage.mo
@@ -12,3 +13,15 @@ share/locale/hu/LC_MESSAGES/mirage.mo
 share/locale/it/LC_MESSAGES/mirage.mo
 share/locale/pl/LC_MESSAGES/mirage.mo
 share/locale/ru/LC_MESSAGES/mirage.mo
+share/applications/mirage.desktop
+share/mirage/CHANGELOG
+share/mirage/COPYING
+share/mirage/README
+share/mirage/TODO
+share/mirage/TRANSLATORS
+share/mirage/mirage_blank.png
+share/mirage/stock_fullscreen.png
+share/mirage/stock_leave-fullscreen.png
+share/mirage/stock_shuffle.png
+share/pixmaps/mirage.png
+@dirrm share/mirage
