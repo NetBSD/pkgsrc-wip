@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:32:20 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/05/09 22:34:02 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -18,7 +18,6 @@ bin/nspluginviewer
 include/knewmenu.h
 include/konq_defaults.h
 include/konq_events.h
-include/konq_filetip.h
 include/konq_fileundomanager.h
 include/konq_menuactions.h
 include/konq_operations.h
@@ -59,7 +58,7 @@ lib/kde4/libkonsolepart.so
 lib/kde4/libnsplugin.so
 lib/libdolphinprivate.so
 lib/libdolphinprivate.so.4
-lib/libdolphinprivate.so.4.0.0
+lib/libdolphinprivate.so.${PKGVERSION}
 lib/libkdeinit4_keditbookmarks.so
 lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_kinfocenter.so
@@ -71,10 +70,10 @@ lib/libkonq.so.5
 lib/libkonq.so.5.0.0
 lib/libkonqsidebarplugin.so
 lib/libkonqsidebarplugin.so.4
-lib/libkonqsidebarplugin.so.4.0.0
+lib/libkonqsidebarplugin.so.${PKGVERSION}
 lib/libkonquerorprivate.so
 lib/libkonquerorprivate.so.4
-lib/libkonquerorprivate.so.4.0.0
+lib/libkonquerorprivate.so.${PKGVERSION}
 share/applications/kde4/Home.desktop
 share/applications/kde4/dolphin.desktop
 share/applications/kde4/kappfinder.desktop
@@ -442,6 +441,10 @@ share/kde/apps/dolphin/icons/oxygen/32x32/actions/view-file-columns.png
 share/kde/apps/dolphin/icons/oxygen/48x48/actions/view-file-columns.png
 share/kde/apps/dolphin/icons/oxygen/scalable/actions/view-file-columns.svgz
 share/kde/apps/dolphinpart/dolphinpart.rc
+share/kde/apps/dolphinpart/kpartplugins/kremoteencodingplugin.desktop
+share/kde/apps/dolphinpart/kpartplugins/kremoteencodingplugin.rc
+share/kde/apps/dolphinpart/kpartplugins/kshellcmdplugin.desktop
+share/kde/apps/dolphinpart/kpartplugins/kshellcmdplugin.rc
 share/kde/apps/kappfinder/apps/Development/Forte.desktop
 share/kde/apps/kappfinder/apps/Development/assistant.desktop
 share/kde/apps/kappfinder/apps/Development/ddd.desktop
@@ -719,14 +722,6 @@ share/kde/apps/kinfocenter/about/kinfocenter.css
 share/kde/apps/kinfocenter/about/main.html
 share/kde/apps/kinfocenter/about/top-right-kinfocenter.png
 share/kde/apps/kinfocenter/kinfocenterui.rc
-share/kde/apps/konqiconview/kpartplugins/kremoteencodingplugin.desktop
-share/kde/apps/konqiconview/kpartplugins/kremoteencodingplugin.rc
-share/kde/apps/konqiconview/kpartplugins/kshellcmdplugin.desktop
-share/kde/apps/konqiconview/kpartplugins/kshellcmdplugin.rc
-share/kde/apps/konqlistview/kpartplugins/kremoteencodingplugin.desktop
-share/kde/apps/konqlistview/kpartplugins/kremoteencodingplugin.rc
-share/kde/apps/konqlistview/kpartplugins/kshellcmdplugin.desktop
-share/kde/apps/konqlistview/kpartplugins/kshellcmdplugin.rc
 share/kde/apps/konqsidebartng/add/virtualfolderadd.desktop
 share/kde/apps/konqsidebartng/add/webmodule_add.desktop
 share/kde/apps/konqsidebartng/dirtree/bookmarks_module.desktop
@@ -949,10 +944,6 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/konqsidebartng/dirtree
 @dirrm share/kde/apps/konqsidebartng/add
 @comment in kde: @dirrm share/kde/apps/konqsidebartng
-@dirrm share/kde/apps/konqlistview/kpartplugins
-@dirrm share/kde/apps/konqlistview
-@dirrm share/kde/apps/konqiconview/kpartplugins
-@dirrm share/kde/apps/konqiconview
 @dirrm share/kde/apps/kinfocenter/about
 @dirrm share/kde/apps/kinfocenter
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
@@ -984,6 +975,7 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/kappfinder/apps/Development
 @dirrm share/kde/apps/kappfinder/apps
 @dirrm share/kde/apps/kappfinder
+@dirrm share/kde/apps/dolphinpart/kpartplugins
 @dirrm share/kde/apps/dolphinpart
 @dirrm share/kde/apps/dolphin/icons/oxygen/scalable/actions
 @dirrm share/kde/apps/dolphin/icons/oxygen/scalable
