@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/11 21:23:57 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/05/09 22:51:16 mwdavies Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -138,19 +138,19 @@ lib/libiris_kopete.so.1
 lib/libiris_kopete.so.1.0.0
 lib/libkgetcore.so
 lib/libkgetcore.so.4
-lib/libkgetcore.so.4.0.0
+lib/libkgetcore.so.${PKGVERSION}
 lib/libkopete.so
 lib/libkopete.so.4
-lib/libkopete.so.4.0.0
+lib/libkopete.so.${PKGVERSION}
 lib/libkopete_msn_shared.so
 lib/libkopete_msn_shared.so.4
-lib/libkopete_msn_shared.so.4.0.0
+lib/libkopete_msn_shared.so.${PKGVERSION}
 lib/libkopete_oscar.so
 lib/libkopete_oscar.so.4
-lib/libkopete_oscar.so.4.0.0
+lib/libkopete_oscar.so.${PKGVERSION}
 lib/libkopete_videodevice.so
 lib/libkopete_videodevice.so.4
-lib/libkopete_videodevice.so.4.0.0
+lib/libkopete_videodevice.so.${PKGVERSION}
 lib/libkopeteaddaccountwizard.so
 lib/libkopeteaddaccountwizard.so.1
 lib/libkopeteaddaccountwizard.so.1.0.0
@@ -1524,8 +1524,6 @@ share/sounds/Kopete_User_is_Online.ogg
 @dirrm share/kde/apps/kopete/icons/crystalsvg
 @dirrm share/kde/apps/kopete/icons
 @dirrm share/kde/apps/kopete
-@comment in kde: @dirrm share/kde/apps/konqueror
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/kget/pics
 @dirrm share/kde/apps/kget
@@ -1561,7 +1559,6 @@ share/sounds/Kopete_User_is_Online.ogg
 @dirrm share/doc/kde/HTML/en/kopete
 @dirrm share/doc/kde/HTML/en/knewsticker
 @dirrm share/doc/kde/HTML/en/kget
-@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
