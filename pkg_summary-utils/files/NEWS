@@ -1,3 +1,10 @@
+Version 0.6.2, by Aleksey Cheusov
+
+   grepping functionality of pkg_grep_summary has been moved to a
+   separate file pkg_grep_summary.awk.  Similar code fragments found
+   in pkg_refresh_summary and pkg_update_src_summary use
+   pkg_grep_summary.awk now.
+
 Version 0.6.1, by Aleksey Cheusov, Wed,  7 May 2008 23:07:00 +0300
 
    README file added. There are available a few examples how to use
