@@ -216,11 +216,12 @@ if test "$PSS_SLAVES"; then
     fi
 
     environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
+    qfields="`echo $fields | sed 's, ,\\\ ,g'`"
 
     runpipe0 \
 	packages2stdout "$@" '|' \
 	paexec -l -n "$PSS_SLAVES" $PSS_TRANSPORT \
-	   -c "env $environ $0 -s -f '$fields'" > "$tempsummaryfn"
+	   -c "env $environ $0 -s -f '$qfields'" > "$tempsummaryfn"
 
     restore_order < "$tempsummaryfn"
 
