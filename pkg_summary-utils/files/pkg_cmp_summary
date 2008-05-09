@@ -97,17 +97,14 @@ NF == 0 {
 	if (FILENAME == file1){
 		# first file!
 		if (pkgbase in names){
-			if (! (pkgbase in duplicates))
-				duplicates [pkgbase] = 1
-
-			++duplicates [pkgbase]
+			duplicates [pkgbase] += 1
 		}else{
 			names [pkgbase] = ver
 		}
 	}else{
+		# second file!
 		present [pkgbase] = 0
 
-		# second file!
 		if (pkgbase in duplicates){
 			next
 		}
@@ -131,7 +128,7 @@ END {
 			print "-", pkgbase, names [pkgbase]
 			delete duplicates [pkgbase]
 		}else if (pkgbase in duplicates){
-			print duplicates [pkgbase], pkgbase
+			print duplicates [pkgbase]+1, pkgbase
 		}
 	}
 }
