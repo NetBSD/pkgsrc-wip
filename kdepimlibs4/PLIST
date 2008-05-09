@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/07 09:55:17 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/05/09 22:25:40 mwdavies Exp $
 include/gpgme++/context.h
 include/gpgme++/data.h
 include/gpgme++/decryptionresult.h
@@ -284,48 +284,50 @@ lib/libgpgme++.so
 lib/libgpgme++.so.1.0.0
 lib/libkabc.so
 lib/libkabc.so.4
-lib/libkabc.so.4.0.0
+lib/libkabc.so.${PKGVERSION}
 lib/libkabc_file_core.so
 lib/libkabc_file_core.so.4
-lib/libkabc_file_core.so.4.0.0
+lib/libkabc_file_core.so.${PKGVERSION}
 lib/libkblog.so
 lib/libkblog.so.4
-lib/libkblog.so.4.0.0
+lib/libkblog.so.${PKGVERSION}
 lib/libkcal.so
 lib/libkcal.so.4
-lib/libkcal.so.4.0.0
+lib/libkcal.so.${PKGVERSION}
 lib/libkimap.so
 lib/libkimap.so.4
-lib/libkimap.so.4.0.0
+lib/libkimap.so.${PKGVERSION}
 lib/libkldap.so
 lib/libkldap.so.4
-lib/libkldap.so.4.0.0
+lib/libkldap.so.${PKGVERSION}
 lib/libkmime.so
 lib/libkmime.so.4
-lib/libkmime.so.4.0.0
+lib/libkmime.so.${PKGVERSION}
 lib/libkpimidentities.so
 lib/libkpimidentities.so.4
-lib/libkpimidentities.so.4.0.0
+lib/libkpimidentities.so.${PKGVERSION}
 lib/libkpimutils.so
 lib/libkpimutils.so.4
-lib/libkpimutils.so.4.0.0
+lib/libkpimutils.so.${PKGVERSION}
 lib/libkresources.so
 lib/libkresources.so.4
-lib/libkresources.so.4.0.0
+lib/libkresources.so.${PKGVERSION}
 lib/libktnef.so
 lib/libktnef.so.4
-lib/libktnef.so.4.0.0
+lib/libktnef.so.${PKGVERSION}
 lib/libkxmlrpcclient.so
 lib/libkxmlrpcclient.so.4
-lib/libkxmlrpcclient.so.4.0.0
+lib/libkxmlrpcclient.so.${PKGVERSION}
 lib/libmailtransport.so
 lib/libmailtransport.so.4
-lib/libmailtransport.so.4.0.0
+lib/libmailtransport.so.${PKGVERSION}
 lib/libqgpgme.so
 lib/libqgpgme.so.1.0.0
 lib/libsyndication.so
 lib/libsyndication.so.4
-lib/libsyndication.so.4.0.0
+lib/libsyndication.so.${PKGVERSION}
+share/dbus-1/interfaces/org.kde.KResourcesManager.xml
+share/dbus-1/interfaces/org.kde.pim.IdentityManager.xml
 share/kde/apps/cmake/modules/CheckTimezone.cmake
 share/kde/apps/cmake/modules/FindGpgme.cmake
 share/kde/apps/cmake/modules/FindLdap.cmake
@@ -735,8 +737,6 @@ share/kde/apps/libical/zoneinfo/Pacific/Wallis.ics
 share/kde/apps/libical/zoneinfo/zones.tab
 share/kde/config.kcfg/mailtransport.kcfg
 share/kde/config.kcfg/pimemoticons.kcfg
-share/dbus-1/interfaces/org.kde.KResourcesManager.xml
-share/dbus-1/interfaces/org.kde.pim.IdentityManager.xml
 share/kde4/services/imap4.protocol
 share/kde4/services/imaps.protocol
 share/kde4/services/kcm_mailtransport.desktop
@@ -761,8 +761,12 @@ share/kde4/services/smtp.protocol
 share/kde4/services/smtps.protocol
 share/kde4/servicetypes/kresources_manager.desktop
 share/kde4/servicetypes/kresources_plugin.desktop
+@comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services/kresources/kcal
 @comment in kde: @dirrm share/kde4/services/kresources/kabc
+@comment in kde: @dirrm share/kde4/services/kresources
+@comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/libical/zoneinfo/Pacific
 @dirrm share/kde/apps/libical/zoneinfo/Indian
 @dirrm share/kde/apps/libical/zoneinfo/Europe
@@ -778,8 +782,13 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @dirrm share/kde/apps/libical/zoneinfo/Africa
 @dirrm share/kde/apps/libical/zoneinfo
 @dirrm share/kde/apps/libical
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps/kabc/formats
 @comment in kde: @dirrm share/kde/apps/kabc
+@comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/dbus-1/interfaces
+@comment in kde: @dirrm lib/kde4
 @dirrm lib/gpgmepp
 @dirrm include/syndication/rss2
 @dirrm include/syndication/rdf

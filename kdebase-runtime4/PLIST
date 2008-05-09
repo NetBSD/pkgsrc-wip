@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/03 10:29:39 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/05/09 22:28:49 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
 bin/kde-open
+bin/kde4
 bin/kde4-menu
 bin/kdebugdialog
 bin/kfile4
@@ -32,10 +33,12 @@ lib/kde4/kcm_kded.so
 lib/kde4/kcm_kdnssd.so
 lib/kde4/kcm_knotify.so
 lib/kde4/kcm_locale.so
+lib/kde4/kcm_nepomuk.so
 lib/kde4/kcm_phononxine.so
 lib/kde4/kcm_samba.so
 lib/kde4/kded_kpasswdserver.so
 lib/kde4/kded_ktimezoned.so
+lib/kde4/kded_nepomukserver.so
 lib/kde4/kded_remotedirnotify.so
 lib/kde4/kded_soliduiserver.so
 lib/kde4/kio_about.so
@@ -81,6 +84,7 @@ lib/kde4/textthumbnail.so
 lib/libkdeinit4_kcmshell4.so
 lib/libkdeinit4_khelpcenter.so
 lib/libkdeinit4_kuiserver.so
+lib/strigi/strigiindex_sopranobackend.so
 man/man1/kdesu.1
 share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
@@ -6396,12 +6400,14 @@ share/kde4/services/imagethumbnail.desktop
 share/kde4/services/info.protocol
 share/kde4/services/ioslaveinfo.desktop
 share/kde4/services/kcm_kdnssd.desktop
+share/kde4/services/kcm_nepomuk.desktop
 share/kde4/services/kcm_phononxine.desktop
 share/kde4/services/kcmcgi.desktop
 share/kde4/services/kcmkded.desktop
 share/kde4/services/kcmnotify.desktop
 share/kde4/services/kded/kpasswdserver.desktop
 share/kde4/services/kded/ktimezoned.desktop
+share/kde4/services/kded/nepomukserver.desktop
 share/kde4/services/kded/remotedirnotify.desktop
 share/kde4/services/kded/soliduiserver.desktop
 share/kde4/services/khelpcenter.desktop
@@ -7477,6 +7483,7 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4/plugins/styles
 @comment in kde: @dirrm lib/kde4/libexec
 @comment in kde: @dirrm lib/kde4
