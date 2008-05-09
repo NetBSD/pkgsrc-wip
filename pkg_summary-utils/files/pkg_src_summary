@@ -54,7 +54,9 @@ EOF
 }
 
 # list of fields for default pkg_src_summary
-fields='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST'
+if test -z "$PSS_FIELDS"; then
+    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST'
+fi
 
 while test $# -ne 0; do
     case "$1" in
@@ -62,10 +64,10 @@ while test $# -ne 0; do
 	    usage
 	    exit 0;;
 	-f|--fields)
-	    fields="$2"
+	    PSS_FIELDS="$2"
 	    shift;;
 	-f=*|--fields=*)
-	    fields="$(echo $1 | cut -f2 -d=)";;
+	    PSS_FIELDS="$(echo $1 | cut -f2 -d=)";;
 	-s|--slave-mode)
 	    slave=1;;
 	--)
@@ -80,13 +82,13 @@ while test $# -ne 0; do
     shift
 done
 
-if echo "$fields" | grep DESCRIPTION > /dev/null; then
+if echo "$PSS_FIELDS" | grep DESCRIPTION > /dev/null; then
     field_descr=1
 fi
-if echo "$fields" | grep PLIST > /dev/null; then
+if echo "$PSS_FIELDS" | grep PLIST > /dev/null; then
     field_plist=1
 fi
-varnames="`echo $fields |
+varnames="`echo $PSS_FIELDS |
    awk '{gsub(/PLIST/, \"\")
          gsub(/ONLYFOR/, \"ONLY_FOR_PLATFORM\")
          gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
@@ -216,7 +218,7 @@ if test "$PSS_SLAVES"; then
     fi
 
     environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
-    qfields="`echo $fields | sed 's, ,\\\ ,g'`"
+    qfields="`echo $PSS_FIELDS | sed 's, ,\\\ ,g'`"
 
     runpipe0 \
 	packages2stdout "$@" '|' \
