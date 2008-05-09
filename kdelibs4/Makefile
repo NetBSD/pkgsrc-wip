@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2008/04/27 04:06:11 mwdavies Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/09 22:23:07 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
-PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/ \
-		http://mirrors.isc.org/pub/kde/security_patches/
-PATCHFILES=	post-kde-4.0.3-khtml.diff
+#PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/ \
+#		http://mirrors.isc.org/pub/kde/security_patches/
+#PATCHFILES=	post-kde-4.0.3-khtml.diff
 
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
-
-CONFLICTS+=	kdelibs-[0-9]*
 
 CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDELibsDependencies.cmake
 CMAKE_MODULE_PATH_OVERRIDE+=	kjsembed/qtonly/CMakeLists.txt
@@ -51,21 +49,17 @@ DEPENDS+=		zonetab-[0-9]*:../../time/zonetab
 BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../wip/kde4/kde4.mk"
 
-# Soprano
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../wip/strigi/buildlink3.mk"
-# .include "../../audio/libaudiofile/buildlink3.mk"
+.include "../../wip/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
-# .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-# .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-# .include "../../graphics/tiff/buildlink3.mk"
 
 # Avahi ? rather than mDNSResponder
 .include "../../net/mDNSResponder/buildlink3.mk"
@@ -75,7 +69,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-# .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

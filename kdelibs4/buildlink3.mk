@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/01/18 04:30:14 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/05/09 22:23:07 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -19,6 +19,7 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../wip/strigi/buildlink3.mk"
+.include "../../wip/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

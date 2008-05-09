@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.10 2008/04/27 04:06:11 mwdavies Exp $
+$NetBSD: distinfo,v 1.11 2008/05/09 22:23:07 mwdavies Exp $
 
-SHA1 (kdelibs-4.0.3.tar.bz2) = b8e055f7f8fc883e52c3f65e1923020db69e596f
-RMD160 (kdelibs-4.0.3.tar.bz2) = cbc28bd0784dc575728296c0e87bbea5cc064cf6
-Size (kdelibs-4.0.3.tar.bz2) = 9069118 bytes
-SHA1 (post-kde-4.0.3-khtml.diff) = c08f374abc2f44cd1ece01881b510ef83241f186
-RMD160 (post-kde-4.0.3-khtml.diff) = 348782a28e75435c4b36548879d2d8d243fc0436
-Size (post-kde-4.0.3-khtml.diff) = 739 bytes
+SHA1 (kdelibs-4.0.4.tar.bz2) = 2d8e98a2ffdd1fb5b160a9facfb7f493af48b934
+RMD160 (kdelibs-4.0.4.tar.bz2) = 4ec08b749c0a3e24a81d2df6f3ec83c468a97d42
+Size (kdelibs-4.0.4.tar.bz2) = 9073446 bytes
 SHA1 (patch-aa) = 21d84c488efcba05056b8fe0c0ae851bef1be989
 SHA1 (patch-ab) = aec1140bef01199f067b079c30d95fea1814839d
 SHA1 (patch-ac) = 9012bfedaa791fa12a098da4a7d9cc2103167206
