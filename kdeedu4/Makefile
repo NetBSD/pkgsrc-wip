@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/06 11:53:20 mwdavies Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/09 22:41:18 mwdavies Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -9,6 +9,7 @@ COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
 CMAKE_ARGS+=	-DBUILD_kmplot:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_SBIG:BOOL=OFF
 
 USE_GNU_READLINE=	yes
 BROKEN_READLINE_DETECTION=	yes

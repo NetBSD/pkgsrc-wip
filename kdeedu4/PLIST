@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/03 11:01:07 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/09 22:41:18 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/indi_celestron_gps
@@ -118,26 +118,26 @@ lib/kde4/kigpart.so
 lib/kde4/libmarble_part.so
 lib/libSatLib.so
 lib/libSatLib.so.4
-lib/libSatLib.so.4.0.0
+lib/libSatLib.so.${PKGVERSION}
 lib/libhtmesh.a
 lib/libkdeeduui.so
 lib/libkdeeduui.so.4
-lib/libkdeeduui.so.4.0.0
+lib/libkdeeduui.so.${PKGVERSION}
 lib/libkeduvocdocument.so
 lib/libkeduvocdocument.so.4
-lib/libkeduvocdocument.so.4.0.0
+lib/libkeduvocdocument.so.${PKGVERSION}
 lib/libkiten.so
 lib/libkiten.so.4
-lib/libkiten.so.4.0.0
+lib/libkiten.so.${PKGVERSION}
 lib/libmarblewidget.so
 lib/libmarblewidget.so.4
-lib/libmarblewidget.so.4.0.0
+lib/libmarblewidget.so.${PKGVERSION}
 lib/libsbigudrv.so
 lib/libsbigudrv.so.1
 lib/libsbigudrv.so.1.0.0
 lib/libscience.so
 lib/libscience.so.4
-lib/libscience.so.4.0.0
+lib/libscience.so.${PKGVERSION}
 share/applications/kde4/blinken.desktop
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalzium.desktop
