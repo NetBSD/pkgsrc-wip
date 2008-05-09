@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/06 11:37:34 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/05/09 22:43:40 mwdavies Exp $
 bin/bovo
 bin/katomic
 bin/kbattleship
@@ -118,22 +118,22 @@ include/libkdegames_export.h
 include/libkmahjongg_export.h
 lib/libkdegames.so
 lib/libkdegames.so.4
-lib/libkdegames.so.4.0.0
+lib/libkdegames.so.${PKGVERSION}
 lib/libkggzgames.so
 lib/libkggzgames.so.4
-lib/libkggzgames.so.4.0.0
+lib/libkggzgames.so.${PKGVERSION}
 lib/libkggzmod.so
 lib/libkggzmod.so.4
-lib/libkggzmod.so.4.0.0
+lib/libkggzmod.so.${PKGVERSION}
 lib/libkggznet.so
 lib/libkggznet.so.4
-lib/libkggznet.so.4.0.0
+lib/libkggznet.so.${PKGVERSION}
 lib/libkmahjongglib.so
 lib/libkmahjongglib.so.4
-lib/libkmahjongglib.so.4.0.0
+lib/libkmahjongglib.so.${PKGVERSION}
 lib/libkolfprivate.so
 lib/libkolfprivate.so.4
-lib/libkolfprivate.so.4.0.0
+lib/libkolfprivate.so.${PKGVERSION}
 share/applications/kde4/KGoldrunner.desktop
 share/applications/kde4/bovo.desktop
 share/applications/kde4/katomic.desktop
