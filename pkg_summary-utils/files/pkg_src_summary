@@ -58,6 +58,10 @@ if test -z "$PSS_FIELDS"; then
     PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST'
 fi
 
+if test -z "$PSS_PPERS"; then
+    PSS_PPERS=10
+fi
+
 while test $# -ne 0; do
     case "$1" in
 	-h|--help)
@@ -172,7 +176,7 @@ generate_summary (){
 }
 
 ############################################################
-packages2stdout (){
+packages2stdout__1per_line (){
     if test $# -eq 0; then
 	# processing stdin
 	cat 
@@ -184,6 +188,22 @@ packages2stdout (){
     fi
 }
 
+packages2stdout (){
+    packages2stdout__1per_line |
+    awk -v pss_ppers=$PSS_PPERS '
+    {
+        printf " %s", $0
+    }
+    (NR % pss_ppers) == 0 {
+        printf "\n"
+    }
+    END {
+        if ((NR % pss_ppers) != 0){
+            printf "\n"
+        }
+    }'
+}
+
 process_one_by_one (){
     if test "$slave"; then
 	prepand="awk '"'{print " " $0}'"'"
@@ -191,8 +211,10 @@ process_one_by_one (){
 	prepand=cat
     fi
 
-    while read pkgpath; do
-	generate_summary "$pkgpath" | eval $prepand
+    while read pkgpaths; do
+	for pkgpath in $pkgpaths; do
+	    generate_summary "$pkgpath" | eval $prepand
+	done
 
 	if test "$slave"; then
 	    echo '' # for paexec
@@ -230,6 +252,8 @@ if test "$PSS_SLAVES"; then
 elif test "$slave"; then
     process_one_by_one
 else
+    PSS_PPERS=1 # one package per line for local running
+
     runpipe0 \
 	packages2stdout "$@" '|' \
 	process_one_by_one
