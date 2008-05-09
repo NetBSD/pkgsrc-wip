@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/24 09:16:35 krub1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/09 21:58:13 mwdavies Exp $
 bin/rasqal-config
 bin/roqet
 include/rasqal.h
@@ -25,6 +25,7 @@ share/gtk-doc/html/rasqal/rasqal-section-query.html
 share/gtk-doc/html/rasqal/rasqal-section-triple.html
 share/gtk-doc/html/rasqal/rasqal-section-triples-source.html
 share/gtk-doc/html/rasqal/rasqal-section-variable.html
+share/gtk-doc/html/rasqal/rasqal-section-xsd.html
 share/gtk-doc/html/rasqal/rasqal.devhelp
 share/gtk-doc/html/rasqal/rasqal.devhelp2
 share/gtk-doc/html/rasqal/rasqal.html
