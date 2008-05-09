@@ -6,7 +6,10 @@ BEGIN {
 }
 
 function update_skip (){
-	grep_summary__skip = !(grep_summary__condition())
+	grep_summary__skip = grep_summary__condition()
+	if (grep_summary__skip == 0 || grep_summary__skip == 1){
+		grep_summary__skip = !grep_summary__skip
+	}
 
 	if (grep_summary__skip == 0){
 		for (i=0; i < count; ++i){
