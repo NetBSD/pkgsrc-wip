@@ -23,6 +23,8 @@
 
 set -e
 
+. pipestatus
+
 ############################################################
 # user settable variables
 if test -z "$PKGSRCDIR"; then
@@ -39,12 +41,15 @@ usage (){
 pkg_src_summary - builds summary information
 about source packages
 
-usage: pkg_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
+usage:
+  pkg_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
+  pkg_src_summary -s [OPTIONS]
 OPTIONS:
   -h|--help              display this help message
   -f|--fields <filename>
   -f|--fields=<filename> fields to be included too summary,
                          by default FULL summary is generated
+  -s|--slave-mode        ready for use as paexec slave/remote program
 EOF
 }
 
@@ -61,6 +66,8 @@ while test $# -ne 0; do
 	    shift;;
 	-f=*|--fields=*)
 	    fields="$(echo $1 | cut -f2 -d=)";;
+	-s|--slave-mode)
+	    slave=1;;
 	--)
 	    shift
 	    break;;
@@ -79,7 +86,7 @@ fi
 if echo "$fields" | grep PLIST > /dev/null; then
     field_plist=1
 fi
-fields="`echo $fields |
+varnames="`echo $fields |
    awk '{gsub(/PLIST/, \"\")
          gsub(/ONLYFOR/, \"ONLY_FOR_PLATFORM\")
          gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
@@ -96,6 +103,7 @@ mkdir -m 700 "$tmp_dir"
 tmpfn=$tmp_dir/pkgdirs2info.txt
 errsfn=$tmp_dir/errors.txt
 summaryfn=$tmp_dir/summary.txt
+tempsummaryfn=$tmp_dir/temp_summary.txt
 
 ############################################################
 enrich_summary (){
@@ -133,7 +141,7 @@ EOF
 cd_and_print_summary (){
     # $1 - pkgpath
     ( cd $1 && enrich_Makefile |
-	${BMAKE} -f - my-show-vars VARNAMES="$fields" ) > "$tmpfn" || return 1
+	${BMAKE} -f - my-show-vars VARNAMES="$varnames" ) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1
 
@@ -162,14 +170,56 @@ generate_summary (){
 }
 
 ############################################################
-if test $# -eq 0; then
-    # processing stdin
+packages2stdout (){
+    if test $# -eq 0; then
+	# processing stdin
+	cat 
+    else
+	# processing arguments
+	for pkgpath in "$@"; do
+	    echo "$pkgpath"
+	done
+    fi
+}
+
+process_one_by_one (){
+    if test "$slave"; then
+	prepand="awk '"'{print " " $0}'"'"
+    else
+	prepand=cat
+    fi
+
     while read pkgpath; do
-	generate_summary "$pkgpath"
+	generate_summary "$pkgpath" | eval $prepand
+
+	if test "$slave"; then
+	    echo '' # for paexec
+	fi
     done
+}
+
+restore_order (){
+    runpipe0 sort -k1,1n '|' sed 's/^[0-9]*..//'
+}
+
+if test "$PSS_SLAVES"; then
+    if test "$PSS_TRANSPORT"; then
+	PSS_TRANSPORT="-t $PSS_TRANSPORT"
+    fi
+
+    environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
+
+    runpipe0 \
+	packages2stdout "$@" '|' \
+	paexec -l -n "$PSS_SLAVES" $PSS_TRANSPORT \
+	   -c "env $environ $0 -s -f '$fields'" > "$tempsummaryfn"
+
+    restore_order < "$tempsummaryfn"
+
+elif test "$slave"; then
+    process_one_by_one
 else
-    # processing arguments
-    for pkgpath in "$@"; do
-	generate_summary "$pkgpath"
-    done
+    runpipe0 \
+	packages2stdout "$@" '|' \
+	process_one_by_one
 fi
