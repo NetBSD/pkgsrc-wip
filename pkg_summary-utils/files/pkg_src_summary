@@ -198,8 +198,16 @@ process_one_by_one (){
     done
 }
 
+add_NR (){
+    awk '{print NR, $0}'
+}
+
+rem_two_first_tokens (){
+    awk '{$1 = $2 = ""; print substr($0, 3)}'
+}
+
 restore_order (){
-    runpipe0 sort -k1,1n '|' sed 's/^[0-9]*..//'
+    runpipe0 add_NR '|' sort -k2n -k1n '|' rem_two_first_tokens
 }
 
 if test "$PSS_SLAVES"; then
