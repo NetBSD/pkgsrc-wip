@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/11 21:11:05 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/09 22:38:46 mwdavies Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -11261,6 +11261,7 @@ share/kde4/services/ScreenSavers/KLorenz.desktop
 share/kde4/services/ScreenSavers/KPendulum.desktop
 share/kde4/services/ScreenSavers/KPolygon.desktop
 share/kde4/services/ScreenSavers/KRotation.desktop
+share/kde4/services/ScreenSavers/KScience.desktop
 share/kde4/services/ScreenSavers/KSlideshow.desktop
 share/kde4/services/ScreenSavers/KSolarWinds.desktop
 share/kde4/services/ScreenSavers/KSwarm.desktop
@@ -11593,30 +11594,25 @@ share/sounds/KDE_Startup_new.wav
 @comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
 @comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/filesystems
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/devices
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/icons/crystalsvg/64x64/actions
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/status
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/filesystems
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/devices
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/icons/crystalsvg/48x48/actions
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/status
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/filesystems
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/devices
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
 @comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/filesystems
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/devices
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
 @comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/status
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/mimetypes
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/filesystems
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/devices
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
