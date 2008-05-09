@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/02/26 16:13:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/09 22:52:25 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -102,10 +102,10 @@ lib/kde4/libkuiviewerpart.so
 lib/kde4/quithumbnail.so
 lib/libantlr.so
 lib/libantlr.so.4
-lib/libantlr.so.4.0.0
+lib/libantlr.so.${PKGVERSION}
 lib/libkateinterfaces.so
 lib/libkateinterfaces.so.4
-lib/libkateinterfaces.so.4.0.0
+lib/libkateinterfaces.so.${PKGVERSION}
 lib/libkdeinit4_cervisia.so
 lib/libkdeinit4_cvsaskpass.so
 lib/libkdeinit4_cvsservice.so
@@ -114,7 +114,7 @@ lib/libkomparedialogpages.so
 lib/libkomparediff2.so
 lib/libkompareinterface.so
 lib/libkompareinterface.so.4
-lib/libkompareinterface.so.4.0.0
+lib/libkompareinterface.so.${PKGVERSION}
 lib/strigi/strigila_diff.so
 lib/strigi/strigita_ts.so
 man/man1/cervisia.1
