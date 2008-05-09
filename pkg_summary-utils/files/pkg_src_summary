@@ -237,10 +237,12 @@ restore_order (){
 if test "$PSS_SLAVES"; then
     if test "$PSS_TRANSPORT"; then
 	PSS_TRANSPORT="-t $PSS_TRANSPORT"
+	qfields="`echo $PSS_FIELDS | sed 's, ,\\\ ,g'`"
+    else
+	qfields="$PSS_FIELDS"
     fi
 
     environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
-    qfields="`echo $PSS_FIELDS | sed 's, ,\\\ ,g'`"
 
     runpipe0 \
 	packages2stdout "$@" '|' \
