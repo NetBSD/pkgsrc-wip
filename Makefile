@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2891 2008/05/09 20:24:08 shattered Exp $
+# $Id: Makefile,v 1.2892 2008/05/09 22:08:34 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1610,6 +1610,7 @@ SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	redfang
+SUBDIR+=	redland
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
@@ -1717,6 +1718,7 @@ SUBDIR+=	snes9express
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
 SUBDIR+=	songwrite
+SUBDIR+=	soprano
 SUBDIR+=	soundtracker
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
