@@ -23,7 +23,7 @@ MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 
-FILES=		README pkg_grep_summary.awk
+FILES=		README NEWS TODO pkg_grep_summary.awk
 
 FILESDIR=			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk=	${AWKMODDIR}

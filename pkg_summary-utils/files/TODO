@@ -13,7 +13,6 @@ existing tools:
        man page
 
     pkg_src_summary:
-       - distributed summary building using wip/paexec
 
     pkg_summary4view:
        add -h|--help option
