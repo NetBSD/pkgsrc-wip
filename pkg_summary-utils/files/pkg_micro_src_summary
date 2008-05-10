@@ -51,7 +51,7 @@ usage: pkg_micro_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
 OPTIONS:
   -h|--help              display this help message
   -f|--fields <filename>
-  -f|--fields=<filename> fields to be included too summary,
+  -f|--fields=<filename> fields to be included to summary,
                          PKGNAME and PKGPATH by default
 EOF
 }
