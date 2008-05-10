@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.5 2008/04/27 11:40:50 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.6 2008/05/10 11:31:06 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -36,12 +36,27 @@ MAINTAINER, CATEGORIES, DESCRIPTION (multiline), PLIST(multiline).
 pkgsrc root directory, defaults to /usr/pkgsrc
 .It Cm BMAKE
 path to pkgsrc friendly make utility, defaults to make
+.It Cm PSS_SLAVES
+Space separated list of remote hosts or +<Number> for distributed
+summary generation. If case of +<Number>, <Number> local processes
+are run, this is useful for SMP machines.
+.It Cm PSS_TRANSPORT
+Transport program like ssh or rsh to communicate with remote/slave hosts.
+.It Cm PSS_PPERS
+A number of packages per slave that are built at once, defaults to 10.
 .El
 .Ed
 .Sh EXAMPLES
 .Bd -literal
 pkg_src_summary wip/dict-server wip/dict-mueller7 wip/dict-client
 printf 'wip/dict-server\\nwip/dict-client\\n' | pkg_src_summary
+env BMAKE=/usr/pkg/bin/bmake \\ 
+    PSS_SLAVES='host1 host2' \\ 
+    PSS_TRANSPORT=/usr/bin/ssh \\ 
+    /usr/pkg/bin/pkg_src_summary \\ 
+           -f 'PKGNAME PKGPATH DEPENDS BUILD_DEPENDS' \\ 
+           < /tmp/packages.txt \\ 
+pkg_list_all_pkgs | env PSS_SLAVES='+6' pkg_src_summary
 .Ed
 .Sh SEE ALSO
 .Xr pkg_summary 5 ,

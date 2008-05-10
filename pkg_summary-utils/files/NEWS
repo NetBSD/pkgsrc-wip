@@ -1,3 +1,26 @@
+Version 0.7.0, by Aleksey Cheusov, Sat, 10 May 2008 12:43:07 +0300
+
+   pkg_src_summary is now "distributed" tool, i.e. it can build
+   src_summary using several processes or machines. 
+      Examples:
+
+      # for SMP machine
+      env PSS_SLAVES=+5 pkg_src_summary ...
+
+      # for machines in a network
+      env PSS_SLAVES='host1 host2 host3' \
+          PSS_PPERS=5 \
+          PSS_TRANSPORT=/usr/bin/ssh pkg_src_summary ...
+
+      PSS_PPERS variable sets a number of packages per slave that
+      are built at once, defaults to 10.
+
+   pkg_src_summary: PSS_FIELDS overrides the default
+   list of generated fields
+
+   pkg_update_src_summary: -i|--fields options specify a list of
+   generated fields.
+
 Version 0.6.2, by Aleksey Cheusov
 
    grepping functionality of pkg_grep_summary has been moved to a
