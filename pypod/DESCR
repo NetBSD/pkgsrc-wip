@@ -1,0 +1,11 @@
+pypod is Python library and script for managing iPod metadata. It is
+similar in scope the gnupod (written in Perl) and is designed to work
+well with other programs that generate iPod metadata.
+
+Features:
+    * 100% pure Python
+    * full read/write support for the iTunesDB file format
+    * support for gtkpod-style extended metadata
+    * support for gnupod-style extended metadata
+    * support for reading Rhythmbox music database
+    * full ID3v2 support via any one of the ID3 liraries for Python
