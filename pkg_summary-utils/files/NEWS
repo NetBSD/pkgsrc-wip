@@ -1,3 +1,26 @@
+Version 0.8.0, by Aleksey Cheusov
+
+   FIXED: pkg_src_summary pkgpath
+
+   pkg_summary4view:
+
+      DESCRIPTION, PLIST, PROVIDES and REQUIRES fields now look
+      better. "FIELD_NAME:" is not followed by any data on the same
+      line.  Data are displayed on the next lines.
+
+      Multilined DEPENDS field (pkg_summary(5) from binary packages)
+      now looks nicer - just like in case pkg_src_summary
+
+      CONFLICTS field is processed just like DEPENDS
+
+      Fields with values (DEPENDS - noe dependancies, NOTFOR - no
+      restrictions etc.) are not output at all.
+
+   pkg_src_summary:
+
+      added option -p|--make-plist for using 'bmake plist'
+      instead 'cat PLIST'. @directives are removed.
+
 Version 0.7.0, by Aleksey Cheusov, Sat, 10 May 2008 12:43:07 +0300
 
    pkg_src_summary is now "distributed" tool, i.e. it can build
