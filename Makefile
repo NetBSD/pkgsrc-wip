@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2893 2008/05/10 13:43:28 leot1990 Exp $
+# $Id: Makefile,v 1.2894 2008/05/11 14:42:19 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -445,6 +445,7 @@ SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
 SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
+SUBDIR+=	gnupod
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gobby
 SUBDIR+=	godura
