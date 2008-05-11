@@ -189,7 +189,7 @@ packages2stdout__1per_line (){
 }
 
 packages2stdout (){
-    packages2stdout__1per_line |
+    packages2stdout__1per_line "$@" |
     awk -v pss_ppers=$PSS_PPERS '
     {
         printf " %s", $0
