@@ -76,7 +76,7 @@ NF == 0 {
 		next
 	}else if (field in special) {
 		if (field != prev_field) {
-			accu = accu field ":"
+			accu = accu field ":\n"
 		}
 
 		accu = accu "    "
