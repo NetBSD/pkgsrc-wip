@@ -64,6 +64,11 @@ NF == 0 {
 	#
 	sub(/^[^=]*=/, "")
 
+	if (NF == 0){
+		prev_field = field
+		next
+	}
+
 	#
 	if (field in depends_like){
 		if (field != prev_field) {
