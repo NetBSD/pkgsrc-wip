@@ -62,9 +62,15 @@ NF == 0 {
 
 	#
 	if (field == "DEPENDS" || field == "BUILD_DEPENDS"){
-		accu = accu field ":"
-		if ($0 !~ /^( |\t)*$/)
-			accu = accu spaces(offset - length(field) - 1)
+		if (field != prev_field) {
+			field1 = field ":"
+			accu = accu field1
+		}else{
+			field1 = ""
+		}
+
+		if (NF > 0)
+			accu = accu spaces(offset - length(field1))
 
 		accu = accu $1 "\n"
 
@@ -73,6 +79,7 @@ NF == 0 {
 			accu = accu $i "\n"
 		}
 
+		prev_field = field
 		next
 	}else if (field in special) {
 		if (field != prev_field) {
