@@ -35,6 +35,10 @@ BEGIN {
 	special ["PROVIDES"]    = 0
 	special ["REQUIRES"]    = 0
 
+	depends_like ["BUILD_DEPENDS"] = 0
+	depends_like ["DEPENDS"]       = 0
+	depends_like ["CONFLICTS"]     = 0
+
 	offset = 16
 }
 
@@ -61,7 +65,7 @@ NF == 0 {
 	sub(/^[^=]*=/, "")
 
 	#
-	if (field == "DEPENDS" || field == "BUILD_DEPENDS"){
+	if (field in depends_like){
 		if (field != prev_field) {
 			field1 = field ":"
 			accu = accu field1
