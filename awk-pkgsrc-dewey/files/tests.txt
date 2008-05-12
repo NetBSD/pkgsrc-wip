@@ -25,3 +25,5 @@
 1.1b 1.1B =
 1.1stable 1.1StAbLe =
 1.1A 1.1.a =
+1.1 1_1 =
+1.stable2.3 1_stable2_3 =

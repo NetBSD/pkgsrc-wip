@@ -28,6 +28,7 @@ function __dewey2str (ver,        left,right,sym,num,last){
 	gsub(/PRE/, "\074", ver)   # C
 	gsub(/NB/, "\076", ver)    # Y
 	gsub(/PL/, ".", ver)       # .
+	gsub(/_/, ".", ver)        # .
 
 	if (match(ver, /[QWERTYUIOPASDFGHJKLZXCVBNM]($|\076)/)){
 		last = substr(ver, RSTART, 1)
