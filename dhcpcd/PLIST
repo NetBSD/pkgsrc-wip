@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/18 23:34:01 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/12 15:49:33 rsmarples Exp $
 sbin/dhcpcd
+man/man5/dhcpcd.conf.5
 man/man8/dhcpcd.8
+man/man8/dhcpcd.sh.8
+share/examples/dhcpcd/dhcpcd.sh
+share/examples/dhcpcd/dhcpcd.conf
+share/examples/dhcpcd/dhcpcd-exit-hook.d/ntp.sh
 share/examples/rc.d/dhcpcd
+@dirrm share/examples/dhcpcd/dhcpcd-exit-hook.d
+@dirrm share/examples/dhcpcd
