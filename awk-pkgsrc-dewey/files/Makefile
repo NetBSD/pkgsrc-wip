@@ -1,7 +1,8 @@
 ############################################################
 
-PREFIX?=/usr/local
-AWKMODDIR?=${PREFIX}/share/awk
+PREFIX?=	/usr/local
+AWKMODDIR?=	${PREFIX}/share/awk
+DOCDIR=		${PREFIX}/share/doc/awk-pkgsrc-dewey
 
 INST_DIR?=	${INSTALL} -d
 
@@ -9,20 +10,22 @@ INST_DIR?=	${INSTALL} -d
 
 .include "Makefile.version"
 
-FILES=		pkgsrc-dewey.awk
+FILES=		NEWS pkgsrc-dewey.awk
 
 FILESDIR=	${AWKMODDIR}
+FILESDIR_NEWS=	${DOCDIR}
 
 MKMAN=		no
 
-BIRTHDAY=	2008-02-20
+BIRTHDATE=	2008-02-20
 
-PROJECTNAME=	pkg_cmp_summary
+PROJECTNAME=	awk-pkgsrc-dewey
 
 ############################################################
 .PHONY: install-dirs
 install-dirs:
-	$(INST_DIR) ${DESTDIR}${BINDIR}
+	$(INST_DIR) ${DESTDIR}${DOCDIR}
+	$(INST_DIR) ${DESTDIR}${AWKMODDIR}
 .if "$(MKMAN)" != "no"
 	$(INST_DIR) ${DESTDIR}${MANDIR}/man1
 .if "$(MKCATPAGES)" != "no"
