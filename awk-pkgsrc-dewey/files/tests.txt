@@ -24,3 +24,4 @@
 1.1beta1 1.1BETA1 =
 1.1b 1.1B =
 1.1stable 1.1StAbLe =
+1.1A 1.1.a =

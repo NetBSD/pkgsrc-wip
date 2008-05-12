@@ -36,6 +36,7 @@ function __dewey2str (ver,        left,right,sym,num,last){
 		      substr(ver, RSTART+1)
 	}
 
+	gsub(/[.][.]+/, ".", ver)
 	gsub(/[.]/, "\100" __dewey_chars(__dewey_maxf, " ") ".", ver) # Z
 
 	while (match(ver, /[\072\073\074\076.][0-9]+/)){
