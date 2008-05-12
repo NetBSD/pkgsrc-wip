@@ -5,7 +5,6 @@ BEGIN {
 	__dewey_maxf = 9 # 8(YYYYMMDD) + 1
 	for (i=0; i <= 26; ++i){
 		# I don't know anything about EBCDIC :-P :-)
-		__dewey_char2dotver [sprintf("%c", 97 + i)] = "." i+1
 		__dewey_char2dotver [sprintf("%c", 65 + i)] = "." i+1
 	}
 }
@@ -21,16 +20,16 @@ function __dewey_chars (n, c,            s){
 }
 
 function __dewey2str (ver,        left,right,sym,num,last){
-	ver = "." ver
+	ver = "." toupper(ver)
 
-	gsub(/alpha/, "\072", ver) # A
-	gsub(/beta/, "\073", ver)  # B
-	gsub(/rc/, "\074", ver)    # C
-	gsub(/pre/, "\074", ver)   # C
-	gsub(/nb/, "\076", ver)    # Y
-	gsub(/pl/, ".", ver)       # .
+	gsub(/ALPHA/, "\072", ver) # A
+	gsub(/BETA/, "\073", ver)  # B
+	gsub(/RC/, "\074", ver)    # C
+	gsub(/PRE/, "\074", ver)   # C
+	gsub(/NB/, "\076", ver)    # Y
+	gsub(/PL/, ".", ver)       # .
 
-	if (match(ver, /[qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM]($|\076)/)){
+	if (match(ver, /[QWERTYUIOPASDFGHJKLZXCVBNM]($|\076)/)){
 		last = substr(ver, RSTART, 1)
 		ver = substr(ver, 1, RSTART-1) \
 		      __dewey_char2dotver [last] \
