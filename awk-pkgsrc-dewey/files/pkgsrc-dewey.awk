@@ -3,9 +3,9 @@
 
 BEGIN {
 	__dewey_maxf = 9 # 8(YYYYMMDD) + 1
-	for (i=0; i <= 26; ++i){
+	for (i=0; i < 26; ++i){
 		# I don't know anything about EBCDIC :-P :-)
-		__dewey_char2dotver [sprintf("%c", 65 + i)] = "." i+1
+		__dewey_char2dotver [sprintf("%c", 65 + i)] = "." i+1 "."
 	}
 }
 
@@ -30,7 +30,7 @@ function __dewey2str (ver,        left,right,sym,num,last){
 	gsub(/PL/, ".", ver)       # .
 	gsub(/_/, ".", ver)        # .
 
-	if (match(ver, /[QWERTYUIOPASDFGHJKLZXCVBNM]($|\076)/)){
+	while (match(ver, /[QWERTYUIOPASDFGHJKLZXCVBNM]/)){
 		last = substr(ver, RSTART, 1)
 		ver = substr(ver, 1, RSTART-1) \
 		      __dewey_char2dotver [last] \
@@ -38,6 +38,9 @@ function __dewey2str (ver,        left,right,sym,num,last){
 	}
 
 	gsub(/[.][.]+/, ".", ver)
+	sub(/[.]$/, "", ver)
+	sub(/[.]\076/, "\076", ver)
+
 	gsub(/[.]/, "\100" __dewey_chars(__dewey_maxf, " ") ".", ver) # Z
 
 	while (match(ver, /[\072\073\074\076.][0-9]+/)){
