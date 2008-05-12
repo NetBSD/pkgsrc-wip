@@ -19,8 +19,21 @@ function __dewey_chars (n, c,            s){
 	return s
 }
 
+function __remove_leading0 (ver,     tmp){
+	if (match(ver, /[0-9]+/)){
+		tmp = substr(ver, RSTART, RLENGTH)
+		sub(/^0+/, "", tmp)
+		return \
+		   substr(ver, 1, RSTART-1) \
+		   tmp \
+		   __remove_leading0(substr(ver, RSTART+RLENGTH))
+	}else{
+		return ver
+	}
+}
+
 function __dewey2str (ver,        left,right,sym,num,last){
-	ver = "." toupper(ver)
+	ver = "." __remove_leading0(toupper(ver))
 
 	gsub(/ALPHA/, "\072", ver) # A
 	gsub(/BETA/, "\073", ver)  # B
