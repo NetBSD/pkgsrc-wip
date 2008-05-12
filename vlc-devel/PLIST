@@ -1,9 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/07 17:43:03 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/12 16:03:56 hoka_adam Exp $
 bin/cvlc
 ${PLIST.qt}bin/qvlc
 bin/rvlc
 bin/vlc
 bin/vlc-config
+${PLIST.qt}lib/vlc/gui/libqt4_plugin.la
+${PLIST.faad}lib/vlc/codec/libfaad_plugin.a
+${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
+${PLIST.faad}lib/vlc/codec/libfaad_plugin.so
+${PLIST.dbus}lib/vlc/control/libdbus_plugin.a
+${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
+${PLIST.dbus}lib/vlc/control/libdbus_plugin.so
+${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.a
+${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
+${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.so
+${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.a
+${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
+${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.so
 include/vlc/common.h
 include/vlc/deprecated.h
 include/vlc/libvlc.h
@@ -150,7 +163,6 @@ lib/vlc/demux/libvobsub_plugin.la
 lib/vlc/demux/libvoc_plugin.la
 lib/vlc/demux/libwav_plugin.la
 lib/vlc/demux/libxa_plugin.la
-${PLIST.qt}lib/vlc/gui/libqt4_plugin.la
 lib/vlc/meta_engine/libfolder_plugin.la
 lib/vlc/meta_engine/libid3tag_plugin.la
 lib/vlc/meta_engine/libtaglib_plugin.la

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/07 17:37:53 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/12 16:03:56 hoka_adam Exp $
 #
 
 DISTNAME=	vlc-snapshot-${VLC_SNAPSHOT_DATE}
 PKGNAME=	${DISTNAME:S/snapshot/devel/}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://nightlies.videolan.org/build/source/trunk-${VLC_SNAPSHOT_DATE}-${VLC_SNAPSHOT_TIME}/
 EXTRACT_SUFX=	.tar.bz2
@@ -77,11 +78,13 @@ DEFAULT_FONT?=		${X11BASE}/lib/X11/fonts/TTF/DejaVuSans.ttf
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_FILES.oss+=	modules/access/v4l/v4l.c
+SUBST_FILES.oss+=	modules/access/v4l.c
 SUBST_FILES.oss+=	modules/access/v4l2/v4l2.c
 SUBST_FILES.oss+=	modules/audio_output/oss.c
 SUBST_FILES.oss+=	modules/gui/pda/pda_interface.c
 SUBST_FILES.oss+=	modules/gui/pda/pda.glade
+SUBST_FILES.oss+=	test/libvlc/media_list.c
+SUBST_FILES.oss+=	po/*.po
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 SUBST_CLASSES+=         fnt
@@ -100,7 +103,6 @@ PLIST.vcd=		yes
 CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
 
-.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
@@ -113,6 +115,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 
+.include "../../net/liblive/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
