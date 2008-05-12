@@ -18,9 +18,11 @@ existing tools:
        add -h|--help option
 
     pkg_update_src_summary:
-       add -h|--help option
+       added -p|--make-plist option similar to that of pkg_src_summary
 
     pkg_update_summary:
 
     pkg_grep_summary:
        man page
+
+ANY IDEAS? LET ME KNOW
