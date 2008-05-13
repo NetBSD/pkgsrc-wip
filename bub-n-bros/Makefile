@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/10 21:00:18 asau Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/13 13:03:55 thomasklausner Exp $
 #
 
 DISTNAME=		bubbros-1.6
@@ -12,6 +12,7 @@ COMMENT=		Multiplayer crazy clone of Bubble Bobble
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
+PYTHON_VERSIONS_INCOMPATIBLE+=	25
 
 MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
