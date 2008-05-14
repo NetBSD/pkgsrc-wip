@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/02/19 04:11:58 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/14 13:59:11 asau Exp $
 
-DISTNAME=	wine-0.9.55
+DISTNAME=	wine-1.0-rc1
 #PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 ONLY_FOR_PLATFORM+=	*-*-x86_64
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c
