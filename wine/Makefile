@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/14 13:59:11 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/14 16:44:55 asau Exp $
 
 DISTNAME=	wine-1.0-rc1
 #PKGREVISION=	1
@@ -42,7 +42,7 @@ LIBS+=			${LDFLAGS}
 post-install:
 .for tool in fnt2bdf
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 .endfor
 
 .include "../../audio/esound/buildlink3.mk"
