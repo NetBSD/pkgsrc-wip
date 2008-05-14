@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/01/17 16:41:12 schnoebe Exp $
+# $NetBSD: options.mk,v 1.3 2008/05/14 03:22:09 schnoebe Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
-PKG_OPTIONS_REQUIRED_GROUPS=	auth storage
+PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
 # Authentication backend
 PKG_OPTIONS_GROUP.auth=		auth-mysql auth-pgsql auth-sqlite
 PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
@@ -10,10 +10,26 @@ PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
 PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
 # SASL implementation
+PKG_OPTIONS_GROUP.sasl=		sasl-cyrus sasl-gnu sasl-scod
+# debugging
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite
+PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite sasl-cyrus
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Msasl-cyrus)
+CONFIGURE_ARGS+=	--with-sasl=cyrus
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msasl-gnu)
+CONFIGURE_ARGS+=	--with-sasl=gsasl
+.include "../../security/gsasl/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msasl-scod)
+CONFIGURE_ARGS+=	--with-sasl=scod
+.endif
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
 SUBST_CLASSES+=		fixdb
@@ -78,4 +94,5 @@ CONFIGURE_ARGS+=	--disable-pam
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--enable-developer
 .endif

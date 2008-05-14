@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/05/05 15:50:12 schnoebe Exp $
+# $NetBSD: Makefile,v 1.49 2008/05/14 03:22:09 schnoebe Exp $
 #
 
 DISTNAME=		jabberd-2.1.24.1
@@ -32,7 +32,16 @@ CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 # only GNU sasl is really supported
-CONFIGURE_ARGS+=	--with-sasl=gsasl
+# CONFIGURE_ARGS+=	--with-sasl=gsasl
+
+.if (${MACHINE_ARCH} == alpha)
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+MAKE_ENV+=		CFLAGS=${CFLAGS:M*:C/-O./-O1/:Q}
+.endif
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -115,7 +124,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 
-.include "../../security/gsasl/buildlink3.mk"
+# .include "../../security/gsasl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/gsasl/buildlink3.mk"
