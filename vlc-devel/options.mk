@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/05/12 16:03:56 hoka_adam Exp $
+# $NetBSD: options.mk,v 1.3 2008/05/14 18:36:00 hoka_adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		qt debug faad arts dbus # skins <- seems broken
-PKG_SUGGESTED_OPTIONS=		qt debug dbus # skins
+PKG_SUGGESTED_OPTIONS=		qt
 
 .include "../../mk/bsd.options.mk"
 
