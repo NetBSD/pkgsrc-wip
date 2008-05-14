@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/14 18:39:12 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/05/14 23:44:27 hoka_adam Exp $
 bin/cvlc
 ${PLIST.qt}bin/qvlc
 bin/rvlc
@@ -496,11 +496,14 @@ share/vlc/vlc48x48.png
 @dirrm share/vlc/osdmenu/dvd/unselect
 @dirrm share/vlc/osdmenu/dvd/selection
 @dirrm share/vlc/osdmenu/dvd/selected
+@dirrm share/vlc/osdmenu/dvd
 @dirrm share/vlc/osdmenu/default/volume
 @dirrm share/vlc/osdmenu/default/selection
 @dirrm share/vlc/osdmenu/default/selected
 @dirrm share/vlc/osdmenu/default
 @dirrm share/vlc/osdmenu
+@dirrm share/vlc/skins2/fonts
+@dirrm share/vlc/skins2
 @dirrm share/vlc/http/requests
 @dirrm share/vlc/http/old/vlm
 @dirrm share/vlc/http/old/admin
@@ -510,12 +513,6 @@ share/vlc/vlc48x48.png
 @dirrm share/vlc/http/dialogs
 @dirrm share/vlc/http
 @dirrm share/vlc
-@dirrm share/locale/tet/LC_MESSAGES
-@dirrm share/locale/tet
-@dirrm share/locale/my/LC_MESSAGES
-@dirrm share/locale/my
-@dirrm share/locale/fur/LC_MESSAGES
-@dirrm share/locale/co/LC_MESSAGES
 @dirrm share/doc/vlc
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/vlc/visualization
