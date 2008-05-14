@@ -1,0 +1,65 @@
+$NetBSD: patch-aa,v 1.1 2008/05/14 18:39:12 hoka_adam Exp $
+
+--- configure.ac.orig	2008-05-07 00:03:26.000000000 +0200
++++ configure.ac
+@@ -1,4 +1,4 @@
+-dnl Autoconf settings for vlc
++nl Autoconf settings for vlc
+ 
+ AC_INIT(vlc,0.9.0-git)
+ VERSION_MAJOR="0"
+@@ -1929,15 +1929,15 @@ if test "${enable_live555}" != "no"; the
+     CPPFLAGS="${CPPFLAGS_save}"
+     AC_LANG_POP(C++)
+   else
+-    AC_MSG_CHECKING(for liveMedia/libliveMedia.a in ${with_live555_tree})
++    AC_MSG_CHECKING(for libliveMedia.a in ${with_live555_tree})
+     real_live555_tree="`cd ${with_live555_tree} 2>/dev/null && pwd`"
+     if test -z "${real_live555_tree}"; then
+       dnl  The given directory can't be found
+       AC_MSG_RESULT(no)
+       AC_MSG_ERROR([cannot cd to ${with_live555_tree}])
+     fi
+-    if test -f "${real_live555_tree}/liveMedia/libliveMedia.a"; then
+-      AC_MSG_RESULT(${real_live555_tree}/liveMedia/libliveMedia.a)
++    if test -f "${real_live555_tree}/lib/libliveMedia.a"; then
++      AC_MSG_RESULT(${real_live555_tree}/lib/libliveMedia.a)
+ 
+       VLC_ADD_PLUGIN([live555])
+ 
+@@ -1946,15 +1946,17 @@ if test "${enable_live555}" != "no"; the
+         VLC_ADD_LIBS([live555],[-lws2_32])
+       fi
+ 
+-      VLC_ADD_LIBS([live555],[-L${real_live555_tree}/liveMedia -lliveMedia])
+-      VLC_ADD_LIBS([live555],[-L${real_live555_tree}/BasicUsageEnvironment -lBasicUsageEnvironment])
+-      VLC_ADD_LIBS([live555],[-L${real_live555_tree}/groupsock -lgroupsock])
+-      VLC_ADD_LIBS([live555],[-L${real_live555_tree}/UsageEnvironment -lUsageEnvironment])
+-
+-      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/BasicUsageEnvironment/include])
+-      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/groupsock/include])
+-      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/liveMedia/include])
+-      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/UsageEnvironment/include ])
++      VLC_ADD_LIBS([live555],[-L${real_live555_tree}/lib])
++      VLC_ADD_LIBS([live555],[-lliveMedia])
++      VLC_ADD_LIBS([live555],[-lBasicUsageEnvironment])
++      VLC_ADD_LIBS([live555],[-lgroupsock])
++      VLC_ADD_LIBS([live555],[-lUsageEnvironment])
++
++      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/include/liblive/liveMedia])
++      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/include/liblive/groupsock])
++      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/include/liblive/liveMedia])
++      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/include/liblive/UsageEnvironment])
++      VLC_ADD_CXXFLAGS([live555],[-I${real_live555_tree}/include/liblive/BasicUsageEnvironment])
+       if test "${SYS}" = "solaris"; then
+         VLC_ADD_CXXFLAGS([live555],[-DSOLARIS])
+       fi
+@@ -1962,7 +1964,7 @@ if test "${enable_live555}" != "no"; the
+       dnl  The given live555 wasn't built
+         AC_MSG_RESULT(no)
+       if test "${enable_live555}" = "yes"; then
+-        AC_MSG_ERROR([cannot find ${real_live555_tree}/liveMedia/libliveMedia.a, make sure you compiled live555 in ${with_live555_tree}])
++        AC_MSG_ERROR([cannot find ${real_live555_tree}/lib/libliveMedia.a, make sure you compiled live555 in ${with_live555_tree}])
+       fi	
+     fi
+   fi

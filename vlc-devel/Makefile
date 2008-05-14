@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/05/12 16:03:56 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/14 18:39:12 hoka_adam Exp $
 #
 
 DISTNAME=	vlc-snapshot-${VLC_SNAPSHOT_DATE}
 PKGNAME=	${DISTNAME:S/snapshot/devel/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://nightlies.videolan.org/build/source/trunk-${VLC_SNAPSHOT_DATE}-${VLC_SNAPSHOT_TIME}/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ COMMENT=	VLC media player development snapshot
 CONFLICTS=	vlc-[0-9]* vlc07-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config autoconf
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
@@ -38,7 +38,6 @@ BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
-CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-gnutls
@@ -49,6 +48,9 @@ CONFIGURE_ARGS+=	--disable-dca
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-flac
+
+CONFIGURE_ARGS+=	--enable-live555
+CONFIGURE_ARGS+=	--with-live555-tree=${BUILDLINK_PREFIX.liblive}
 
 INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/http/images \
@@ -103,6 +105,9 @@ PLIST.vcd=		yes
 CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
 
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
@@ -115,6 +120,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 
+.include "../../devel/libebml/buildlink3.mk"
 .include "../../net/liblive/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

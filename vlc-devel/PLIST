@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/12 16:03:56 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/05/14 18:39:12 hoka_adam Exp $
 bin/cvlc
 ${PLIST.qt}bin/qvlc
 bin/rvlc
@@ -17,6 +17,9 @@ ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.so
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.a
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.so
+lib/vlc/demux/liblive555_plugin.a
+lib/vlc/demux/liblive555_plugin.la
+lib/vlc/demux/liblive555_plugin.so
 include/vlc/common.h
 include/vlc/deprecated.h
 include/vlc/libvlc.h
