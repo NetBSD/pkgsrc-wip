@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/12 17:43:00 asau Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/14 12:06:00 asau Exp $
 #
 
 DISTNAME=	clisp-2.45
@@ -11,7 +11,7 @@ HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
 CVS_REPOSITORIES=	clisp
-CVS_ROOT.clisp=		:pserver:anonymous@clisp.cvs.sourceforge.net:/cvsroot/clisp
+CVS_ROOT.clisp=		:pserver:anonymous:@clisp.cvs.sourceforge.net:/cvsroot/clisp
 WRKSRC=		${WRKDIR}/clisp
 
 # Sparc64 has assembler code problems, see
