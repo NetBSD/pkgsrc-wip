@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/15 16:32:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/15 16:46:45 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.11.0
@@ -27,7 +27,7 @@ DOCFILES=		README NEWS TODO
 
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
-INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR} libexec/distbb
+INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR} libexec/distbb share/distbb
 
 post-install:
 .for f in ${DOCFILES}
