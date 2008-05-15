@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/29 14:40:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/15 13:32:53 thomasklausner Exp $
 bin/f-spot
 bin/f-spot-import
 bin/f-spot-sqlite-upgrade
@@ -40,6 +40,7 @@ lib/f-spot/libgphoto2-sharp.dll
 lib/f-spot/libgphoto2-sharp.dll.config
 lib/pkgconfig/f-spot.pc
 libexec/gnome-screensaver/f-spot-screensaver
+share/applications/f-spot-import.desktop
 share/applications/f-spot-view.desktop
 share/applications/f-spot.desktop
 share/applications/screensavers/f-spot-screensaver.desktop
@@ -265,6 +266,7 @@ share/locale/pt/LC_MESSAGES/f-spot.mo
 share/locale/pt_BR/LC_MESSAGES/f-spot.mo
 share/locale/ru/LC_MESSAGES/f-spot.mo
 share/locale/rw/LC_MESSAGES/f-spot.mo
+share/locale/sk/LC_MESSAGES/f-spot.mo
 share/locale/sr/LC_MESSAGES/f-spot.mo
 share/locale/sr@Latn/LC_MESSAGES/f-spot.mo
 share/locale/sv/LC_MESSAGES/f-spot.mo
