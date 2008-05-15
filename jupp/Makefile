@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/02/03 12:21:10 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/15 22:26:43 hoka_adam Exp $
 #
 
-DISTNAME=	joe-3.1jupp8.cpio
-PKGNAME=	jupp-3.1.8
+DISTNAME=	joe-3.1jupp9.cpio
+PKGNAME=	jupp-3.1.9
 CATEGORIES=	editors
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
-				http://pub.allbsd.org/MirOS/dist/jupp/
+		http://pub.allbsd.org/MirOS/dist/jupp/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	adam.hoka@gmail.com
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	mksh-[0-9]*:../../shells/mksh
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=    --sysconfdir=${PREFIX:Q}/share/examples
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/share/examples
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
