@@ -20,7 +20,7 @@ function __dewey_chars (n, c,            s){
 }
 
 function __remove_leading0 (ver,     tmp){
-	if (match(ver, /[0-9]+/)){
+	if (match(ver, /0[0-9]+/)){
 		tmp = substr(ver, RSTART, RLENGTH)
 		sub(/^0+/, "", tmp)
 		return \
