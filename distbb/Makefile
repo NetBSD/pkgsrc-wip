@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2008/05/15 16:46:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/16 16:42:02 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.11.0
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/distbb/
 
@@ -9,7 +10,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/
 COMMENT=	DISTributed Bulk Build tool for pkgsrc
 
-DEPENDS+=	pkg_summary-utils>=0.8.0nb2:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.8.0nb3:../../wip/pkg_summary-utils
 DEPENDS+=	paexec>=0.8.0:../../wip/paexec
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	shlock-[0-9]*:../../pkgtools/shlock
