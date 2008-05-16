@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/05/05 19:30:54 guigui2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/16 22:54:59 guigui2 Exp $
 #
 
-DISTNAME=	dir2ogg-0.11.4
+DISTNAME=	dir2ogg-0.11.5
 CATEGORIES=	audio
 MASTER_SITES=	http://jak-linux.org/projects/dir2ogg/0.11/
 
