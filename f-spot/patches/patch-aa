@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2008/03/17 21:54:23 koifren Exp $
---- src/main.cs.orig	2008-03-17 23:35:57.000000000 +0200
-+++ src/main.cs	2008-03-17 23:41:19.000000000 +0200
-@@ -43,7 +43,9 @@
+$NetBSD: patch-aa,v 1.2 2008/05/16 10:34:36 thomasklausner Exp $
+--- src/main.cs.orig	2008-04-30 14:49:37.000000000 +0200
++++ src/main.cs
+@@ -68,7 +68,9 @@ public class Driver {
  		bool view = false;
  		bool slideshow = false;
  		string import_uri = null;
@@ -9,6 +9,6 @@ $NetBSD: patch-aa,v 1.1 2008/03/17 21:54:23 koifren Exp $
 +
 +		Gtk.Application.Init();
 +
- 		FSpot.Global.PhotoDirectory = (string) Preferences.Get(Preferences.STORAGE_PATH);
- 
- 		for (int i = 0; i < args.Length && !shutdown; i++) {
+ 		// Debug GdkPixbuf critical warnings
+ 		//LogFunc logFunc = new GLib.LogFunc (GLib.Log.PrintTraceLogFunction);
+ 		//Log.SetLogHandler ("GdkPixbuf", GLib.LogLevelFlags.Critical, logFunc);
