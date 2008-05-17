@@ -1,8 +1,23 @@
-$NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
+$NetBSD: patch-ac,v 1.2 2008/05/17 02:50:55 mwdavies Exp $
 
---- kio/kssl/kopenssl.cpp.orig	2007-11-21 23:48:08.000000000 +1300
+--- kio/kssl/kopenssl.cpp.orig.save	2008-05-01 22:15:25.000000000 +1200
 +++ kio/kssl/kopenssl.cpp
-@@ -237,7 +237,7 @@ void KOpenSSLProxy::destroy() {
+@@ -97,9 +97,14 @@ static int  (*K_BIO_write) (BIO *b, cons
+ static int (*K_PEM_ASN1_write_bio) (int (*)(),const char *,BIO *,char *,
+                                    const EVP_CIPHER *,unsigned char *,int ,
+                                             pem_password_cb *, void *) = 0L;
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ static ASN1_METHOD* (*K_X509_asn1_meth) (void) = 0L;
+ static int (*K_ASN1_i2d_fp)(int (*)(),FILE *,unsigned char *) = 0L;
+ static int (*K_i2d_ASN1_HEADER)(ASN1_HEADER *, unsigned char **) = 0L;
++#else
++static int (*K_ASN1_item_i2d_fp)(ASN1_ITEM *,FILE *,unsigned char *) = 0L;
++static ASN1_ITEM *K_NETSCAPE_X509_it = 0L;
++#endif
+ static int (*K_X509_print_fp)  (FILE *, X509*) = 0L;
+ static int (*K_i2d_PKCS12)  (PKCS12*, unsigned char**) = 0L;
+ static int (*K_i2d_PKCS12_fp)  (FILE *, PKCS12*) = 0L;
+@@ -237,7 +242,7 @@ void KOpenSSLProxy::destroy() {
     delete x;
  }
  
@@ -11,7 +26,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
  #include <QtCore/QDir>
  #include <QtCore/QString>
  #include <QtCore/QStringList>
-@@ -260,10 +260,20 @@ static QString findMostRecentLib(QString
+@@ -260,10 +265,20 @@ static QString findMostRecentLib(QString
         for (QStringList::Iterator it = l.begin(); it != l.end(); ++it) {
                 QString numberpart = (*it).mid(s);
                 uint endmaj = numberpart.indexOf('.');
@@ -35,7 +50,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
                 if (!ok)
                         continue;
                 int min = numberpart.mid(endmaj+1).toInt(&ok);
-@@ -296,54 +306,23 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -296,54 +311,23 @@ KOpenSSLProxy::KOpenSSLProxy()
     if (!upath.isEmpty())
        libpaths << upath;
  
@@ -81,7 +96,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
 -	    #endif
 +#endif
  	    << "/usr/lib" KDELIBSUFF "/"
-+	    << "@LOCALBASE@/lib/"
++	    << "/usr/pkg/lib/"
 +#if !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
  	    << "/usr/ssl/lib" KDELIBSUFF "/"
  	    << "/usr/local/lib" KDELIBSUFF "/"
@@ -96,7 +111,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -383,6 +362,17 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -383,6 +367,17 @@ KOpenSSLProxy::KOpenSSLProxy()
     for (QStringList::Iterator it = libpaths.begin();
                                it != libpaths.end();
                                ++it) {
@@ -114,7 +129,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -405,6 +395,7 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -405,6 +400,7 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->cryptoLib = 0;
           }
        }
@@ -122,7 +137,22 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
        if (d->cryptoLib) break;
     }
  
-@@ -534,28 +525,20 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -441,9 +437,14 @@ KOpenSSLProxy::KOpenSSLProxy()
+       K_BIO_ctrl = (long (*) (BIO *,int,long,void *)) d->cryptoLib->resolveFunction("BIO_ctrl");
+       K_BIO_write = (int (*) (BIO *b, const void *data, int len)) d->cryptoLib->resolveFunction("BIO_write");
+       K_PEM_ASN1_write_bio = (int (*)(int (*)(), const char *,BIO*, char*, const EVP_CIPHER *, unsigned char *, int, pem_password_cb *, void *)) d->cryptoLib->resolveFunction("PEM_ASN1_write_bio");
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+       K_X509_asn1_meth = (ASN1_METHOD* (*)(void)) d->cryptoLib->resolveFunction("X509_asn1_meth");
+       K_ASN1_i2d_fp = (int (*)(int (*)(), FILE*, unsigned char *)) d->cryptoLib->resolveFunction("ASN1_i2d_fp");
+       K_i2d_ASN1_HEADER = (int (*)(ASN1_HEADER *, unsigned char **)) d->cryptoLib->resolveFunction("i2d_ASN1_HEADER");
++#else
++      K_ASN1_item_i2d_fp = (int (*)(ASN1_ITEM *, FILE*, unsigned char *)) _cryptoLib->symbol("ASN1_item_i2d_fp");
++      K_NETSCAPE_X509_it = (ASN1_ITEM *) _cryptoLib->symbol("NETSCAPE_X509_it");
++#endif
+       K_X509_print_fp = (int (*)(FILE*, X509*)) d->cryptoLib->resolveFunction("X509_print_fp");
+       K_i2d_PKCS12 = (int (*)(PKCS12*, unsigned char**)) d->cryptoLib->resolveFunction("i2d_PKCS12");
+       K_i2d_PKCS12_fp = (int (*)(FILE *, PKCS12*)) d->cryptoLib->resolveFunction("i2d_PKCS12_fp");
+@@ -534,28 +535,20 @@ KOpenSSLProxy::KOpenSSLProxy()
  #endif
     }
  
@@ -162,7 +192,7 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -577,9 +560,9 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -577,9 +570,9 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->sslLib = 0;
           }
        }
@@ -173,3 +203,26 @@ $NetBSD: patch-ac,v 1.1 2007/12/16 19:55:05 mwdavies Exp $
  
     if (d->sslLib) {
  #ifdef KSSL_HAVE_SSL
+@@ -997,6 +990,8 @@ int KOpenSSLProxy::PEM_write_bio_X509(BI
+ }
+ 
+ 
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
++
+ ASN1_METHOD *KOpenSSLProxy::X509_asn1_meth(void) {
+    if (K_X509_asn1_meth) return (K_X509_asn1_meth)();
+    else return 0L;
+@@ -1008,6 +1003,13 @@ int KOpenSSLProxy::ASN1_i2d_fp(FILE *out
+         return (K_ASN1_i2d_fp)((int (*)())K_i2d_ASN1_HEADER, out, x);
+    else return -1;
+ }
++#else
++int KOpenSSLProxy::ASN1_i2d_fp(FILE *out,unsigned char *x) {
++   if (K_ASN1_item_i2d_fp && K_NETSCAPE_X509_it)
++        return (K_ASN1_item_i2d_fp)(K_NETSCAPE_X509_it, out, x);
++   else return -1;
++}
++#endif
+ 
+ 
+ int KOpenSSLProxy::X509_print(FILE *fp, X509 *x) {
