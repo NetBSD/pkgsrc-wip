@@ -1,0 +1,56 @@
+# $NetBSD: Makefile,v 1.9 2008/05/18 13:51:47 asau Exp $
+#
+
+DISTNAME=	clisp-2.45
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
+#EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	asau@inbox.ru
+HOMEPAGE=	http://clisp.cons.org/
+COMMENT=	CLISP, a Common Lisp implementation
+
+# Sparc64 has assembler code problems, see
+# http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
+NOT_FOR_PLATFORM=	*-*-sparc64
+NOT_FOR_PLATFORM+=	*-*-arm
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
+
+CONFIGURE_DIRS=		.
+BUILD_DIRS=		src
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		dvipdf #gmake
+UNLIMIT_RESOURCES=	stacksize
+
+CONFIGURE_ARGS+=	--fsstnd=netbsd
+CONFIGURE_ARGS+=	--without-included-regex
+CONFIGURE_ARGS+=	--with-gettext
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGNAME}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+#CONFIGURE_ARGS+=	--elispdir="${PREFIX}/share/${PKGNAME}/emacs"
+#CONFIGURE_ARGS+=	--vimdir="${PREFIX}/share/${PKGNAME}/vim"
+
+TEST_TARGET=		check
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-mmap
+.endif
+
+.include "options.mk"
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
+.include "../../devel/libsigsegv/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"
