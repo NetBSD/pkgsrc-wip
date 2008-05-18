@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/05/18 12:51:28 asau Exp $
+
+--- configure.orig	2007-12-13 00:56:58.000000000 +0100
++++ configure
+@@ -171,6 +171,8 @@ do
+   else
+ 
+     case "$arg" in
++      --with-x | --x-includes=* | --x-libs=* | --x-libraries=*)
++        ;; # src/configure doesn't grok these options
+ 
+       --build | --buil | --bui | --bu)
+         do_config=1
