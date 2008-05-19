@@ -1,4 +1,5 @@
 - Fix SDK installation
+- Need to provide pkg-config files
 
 Patch status relative to firefox-2.0
 ------------------------------------
