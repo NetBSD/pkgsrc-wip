@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/14 16:49:30 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/19 13:56:58 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -9,6 +9,7 @@ bin/regsvr32
 bin/uninstaller
 bin/widl
 bin/wine
+bin/wine-pthread
 bin/wineboot
 bin/winebrowser
 bin/winebuild
