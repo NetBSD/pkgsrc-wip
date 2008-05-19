@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/05/12 15:49:33 rsmarples Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/19 09:28:20 rsmarples Exp $
 #
 
-DISTNAME=		dhcpcd-4.0.0-beta2
-PKGNAME=		dhcpcd-4.0.0beta2
+DISTNAME=		dhcpcd-4.0.0-beta3
+PKGNAME=		dhcpcd-4.0.0beta3
 CATEGORIES=		net
 MASTER_SITES=		http://roy.marples.name/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,8 +17,6 @@ USE_LANGUAGES=		c99
 EGDIR=			${PREFIX}/share/examples/dhcpcd
 SYSDIR=			${PKG_SYSCONFDIR}/dhcpcd
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man
-# Work around a beta2 bug - this will be fixed in beta3 or later.
-BUILD_TARGET=		all man
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 
 # Install the main configuration file and script
