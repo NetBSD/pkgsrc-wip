@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/19 11:07:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/19 14:59:01 thomasklausner Exp $
 #
 
 DISTNAME=	nicotine+-1.2.9
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
 .endif
+DEPENDS+=	${PYPKGPREFIX}-GeoIP>=0:../../net/py-GeoIP
 
 PYTHON_VERSIONS_ACCEPTED=	25 24 23 22
 PY_PATCHPLIST=	yes
