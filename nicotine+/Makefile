@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/17 08:07:12 netcap Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/19 11:07:39 thomasklausner Exp $
 #
 
 DISTNAME=	nicotine+-1.2.9
@@ -11,25 +11,25 @@ HOMEPAGE=	http://www.nicotine-plus.org/
 COMMENT=	Client for the SoulSeek, a peer-to-peer network for music
 
 CONFLICTS=	nicotine-[0-9]*
-WRKSRC=		${WRKDIR}/${DISTNAME}/
 USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
+DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
+.if ${MACHINE_ARCH} == "i386"
+DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
+.endif
+
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 22
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
+REPLACE_PYTHON=	pynicotine/gtkgui/glade2py.py
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	setup.py
 SUBST_SED.man=		-e 's|"share", "man",|"man",|g'
 
-DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
-
-.if ${MACHINE_ARCH} == "i386"
-DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
-.endif
-
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
