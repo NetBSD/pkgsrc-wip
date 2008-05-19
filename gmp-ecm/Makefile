@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/02/02 16:22:41 athaba Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/19 21:35:18 athaba Exp $
 #
 
 PKGNAME=	gmp-${DISTNAME}
-DISTNAME=	ecm-6.1.3
-PKGREVISION=	1
+DISTNAME=	ecm-6.2
 CATEGORIES=	math
-MASTER_SITES=	http://gforge.inria.fr/frs/download.php/2752/
+MASTER_SITES=	http://gforge.inria.fr/frs/download.php/4663/
 
 MAINTAINER=	athaba@inode.at
 HOMEPAGE=	http://ecm.gforge.inria.fr/
