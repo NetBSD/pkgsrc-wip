@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/17 17:51:53 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/19 15:05:39 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -27,9 +27,6 @@ DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 DISTINFO_FILE=		${.CURDIR}/../../wip/firefox/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/firefox/patches
 
-# XXX The reason for the whole .PHONY parade below is to avoid target
-# conflicts with www/firefox/Makefile*common.
-
 # Need this to be able to reuse existing firefox pkgsrc infrastructure
 # Note that we don't currently install the SDK.
 pre-configure: create-dummy-c-sdk
@@ -52,29 +49,16 @@ post-build: stage-package
 stage-package:
 	cd ${WRKSRC}/browser/installer && \
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} stage-package
+	cp ${WRKSRC}/dist/firefox/components/browser.xpt \
+	   ${WRKSRC}/dist/bin/components/browser.xpt
 
-# Manually install some files. needs to be integrated into PLIST handling.
-do-install: install-fix
-.PHONY: install-fix
-install-fix:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${MOZILLA}/modules
-	set -e; for m in DownloadUtils.jsm ISO8601DateUtils.jsm \
-	  JSON.jsm Microformats.js PluralForm.jsm XPCOMUtils.jsm \
-	  distribution.js; do \
-	    ${INSTALL_DATA} ${WRKSRC}/dist/firefox/modules/$$m \
-	      ${DESTDIR}${PREFIX}/lib/${MOZILLA}/modules; \
-	  done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${MOZILLA}/components
-	${INSTALL_DATA} ${WRKSRC}/dist/firefox/components/browser.xpt \
-	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/components
-
+INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
 
 # Can't use system PNG because it doesn't have APNG support?
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--with-system-png=*}
+CONFIGURE_ARGS+=	--without-system-png
 # Override www/firefox's idea of toolkit
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--enable-default-toolkit=*}
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-# Is this useful?
+# Is dbus support useful for anything?
 CONFIGURE_ARGS+=	--disable-dbus
 
 .include "../../mk/bsd.pkg.mk"
