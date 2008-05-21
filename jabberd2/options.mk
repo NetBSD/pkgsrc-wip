@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/05/14 03:26:03 schnoebe Exp $
+# $NetBSD: options.mk,v 1.5 2008/05/21 22:32:59 schnoebe Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -16,6 +16,8 @@ PKG_SUPPORTED_OPTIONS+=		debug
 PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite sasl-gnu
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	db ldap mysql pam pgsql sqlite
 
 .if !empty(PKG_OPTIONS:Msasl-cyrus)
 CONFIGURE_ARGS+=	--with-sasl=cyrus
@@ -38,57 +40,51 @@ SUBST_FILES.fixdb=	storage/Makefile.in
 SUBST_SED.fixdb=	-e "s|@DB_LIBS@||g"
 BUILDLINK_TRANSFORM+=	rm:-ldb
 BDB_ACCEPTED=		db4
-PLIST_SUBST+=		DB_OPT=
+PLIST.db=		yes
 CONFIGURE_ARGS+=	--enable-db
 .  include "../../mk/bdb.buildlink3.mk"
 .else
-PLIST_SUBST+=		DB_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-db
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-mysql) || !empty(PKG_OPTIONS:Mstorage-mysql)
-PLIST_SUBST+=		MYSQL_OPT=
+PLIST.mysql=		yes
 CONFIGURE_ARGS+=	--enable-mysql
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 .  include "../../mk/mysql.buildlink3.mk"
 .else
-PLIST_SUBST+=		MYSQL_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-pgsql) || !empty(PKG_OPTIONS:Mstorage-pgsql)
-PLIST_SUBST+=		PGSQL_OPT=
+PLIST.pgsql=		yes
 CONFIGURE_ARGS+=	--enable-pgsql
 .  include "../../mk/pgsql.buildlink3.mk"
 .else
-PLIST_SUBST+=		PGSQL_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-pgsql
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-sqlite) || !empty(PKG_OPTIONS:Mstorage-sqlite)
-PLIST_SUBST+=		SQLITE_OPT=
+PLIST.sqlite=		yes
 CONFIGURE_ARGS+=	--enable-sqlite
 .  include "../../databases/sqlite3/buildlink3.mk"
 .else
-PLIST_SUBST+=		SQLITE_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-sqlite
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-ldap)
-PLIST_SUBST+=		LDAP_OPT=
+PLIST.ldap=		yes
 CONFIGURE_ARGS+=	--enable-ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
 .else
-PLIST_SUBST+=		LDAP_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-pam)
-PLIST_SUBST+=		PAM_OPT=
+PLIST.pam=		yes
 CONFIGURE_ARGS+=	--enable-pam
 .  include "../../mk/pam.buildlink3.mk"
 .else
-PLIST_SUBST+=		PAM_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-pam
 .endif
 
