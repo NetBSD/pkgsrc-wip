@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/14 16:44:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/21 20:14:10 asau Exp $
 
 DISTNAME=	wine-1.0-rc1
 #PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	adam@NetBSD.org
+MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.winehq.com/
 COMMENT=	Free implementation of Windows on Unix (still alpha)
 
