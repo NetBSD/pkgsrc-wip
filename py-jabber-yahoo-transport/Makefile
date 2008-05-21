@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2007/12/18 00:27:34 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/21 20:16:54 schnoebe Exp $
 
 DISTNAME=		yahoo-transport-0.4
+PKGREVISION=		1
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=		chat python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmpppy/}
+
+PATCH_SITES=		http://www.devdots.com/files/
+PATCHFILES=		status.patch
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://xmpppy.sourceforge.net/
