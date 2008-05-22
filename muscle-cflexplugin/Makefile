@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/22 16:05:04 tnn2 Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-cflexplugin-1.1.5
@@ -34,5 +34,4 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/src/libcryptoflex.la ${CONTLIBDIR}
 
 .include "../../wip/libmusclecard/buildlink3.mk"
-.include "../../wip/pcsc-lite/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
