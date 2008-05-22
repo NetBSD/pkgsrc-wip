@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/17 16:21:01 xtraeme Exp $
-bin/csv2pdb
-bin/pdb2csv
-share/palm-db-tools/manual.txt
-@dirrm share/palm-db-tools
