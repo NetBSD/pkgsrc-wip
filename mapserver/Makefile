@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/02/26 16:27:18 netcap Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/22 15:11:04 tnn2 Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -13,7 +13,7 @@ COMMENT=		Environment for building spatially enabled Internet apps
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-PGSQL_VERSIONS_ACCEPTED?=	80
+PGSQL_VERSIONS_ACCEPTED?=	81
 
 CONFIGURE_ARGS+=	--with-curl-config		\
 			--with-tiff			\
@@ -65,7 +65,9 @@ do-install:
 .include "../../misc/proj/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
-.include "../../wip/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
+#.include "../../geography/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
+# XXX no bl3.mk?
+DEPENDS+=	postgresql${PGSQL_VERSION}-postgis-[0-9]*:../../geography/postgresql${PGSQL_VERSION}-postgis
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/php4/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
