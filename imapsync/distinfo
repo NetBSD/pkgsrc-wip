@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/09 13:32:39 ahallmann Exp $
-
-SHA1 (imapsync-1.219.tgz) = 020e2f779c325c803fe06a4724147e3c653f67d6
-RMD160 (imapsync-1.219.tgz) = a3131531c9a1d66b323a167af24408e2feb6b703
-Size (imapsync-1.219.tgz) = 122080 bytes
-SHA1 (patch-aa) = 672364e91e56de078c79ec1b79edcc17a0ece036
