@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/01/12 23:33:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/22 16:11:57 tnn2 Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -24,9 +24,10 @@ USE_PKGLOCALEDIR=	yes
 
 INSTALL_TARGET=		${INSTALL} install-modules
 
+.include "../../lang/python/application.mk"
+
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python22/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
