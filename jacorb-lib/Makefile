@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/22 15:59:50 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/22 16:01:03 tnn2 Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
@@ -26,7 +26,6 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/lib/jacorb.jar  ${PREFIX}/lib/java/JacORB.jar
 	@${INSTALL_DATA} ${WRKSRC}/lib/idl.jar  ${PREFIX}/lib/java/IDL.jar
 
-.include "../../lang/sun-jdk13/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
