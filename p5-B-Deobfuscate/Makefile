@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/23 18:24:23 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/22 21:23:00 tnn2 Exp $
 
 DISTNAME=	B-Deobfuscate-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/B-Deobfuscate/
 COMMENT=	Extension to B::Deparse for use in de-obfuscating source code
 
 DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
-DEPENDS+=	p5-B-Keywords>=0.03:../../wip/p5-B-Keywords
+DEPENDS+=	p5-B-Keywords>=0.03:../../devel/p5-B-Keywords
 
 PERL5_PACKLIST=	auto/B/Deobfuscate/.packlist
 

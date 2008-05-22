@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/14 01:28:14 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/22 21:23:01 tnn2 Exp $
 
 .include "../../mail/squirrelmail/plugin.mk"
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.squirrelmail.org/plugin_view.php?id=26
 COMMENT=	Allows users to change their LDAP password from SquirrelMail
 
 DEPENDS+=	sm-compatibility>=1.3:../../wip/sm-compatibility
-DEPENDS+=	php-ldap>=4.1.1:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.1.1:../../databases/php-ldap
 
 CONF_FILES=	${FULL_PLUGIN_DIR}/config.php.sample \
 		${FULL_PLUGIN_DIR}/config.php

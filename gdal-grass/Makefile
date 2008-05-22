@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/16 01:29:09 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/22 21:23:00 tnn2 Exp $
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
@@ -21,7 +21,7 @@ BUILD_TARGET=		default
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=    ${GRASS_HOME}/lib
 
-.include "../../wip/gdal-lib/buildlink3.mk"
+.include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../wip/grass/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2 2008/01/23 12:33:03 anielski Exp $
+# $Id: Makefile,v 1.3 2008/05/22 21:23:01 tnn2 Exp $
 #
 
 DISTNAME=       Mail-SPF-v2.005
@@ -10,14 +10,14 @@ MAINTAINER=     aniou@smutek.pl
 HOMEPAGE=       http://search.cpan.org/~jmehnle/Mail-SPF-v2.005/
 COMMENT=        Perl implementation of the Sender Policy Framework
 
-BUILD_DEPENDS+= p5-Net-DNS-Resolver-Programmable:../../wip/p5-Net-DNS-Resolver-Programmable
-BUILD_DEPENDS+= p5-Test-Simple:../../devel/p5-Test-Simple
+BUILD_DEPENDS+= p5-Net-DNS-Resolver-Programmable-[0-9]*:../../wip/p5-Net-DNS-Resolver-Programmable
+BUILD_DEPENDS+= p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
 DEPENDS+=       p5-version-[0-9]*:../../devel/p5-version
-DEPENDS+=       p5-Error:../../devel/p5-Error
+DEPENDS+=       p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=       p5-NetAddr-IP>=4.000:../../net/p5-NetAddr-IP
 DEPENDS+=       p5-Net-DNS>=0.58:../../net/p5-Net-DNS
-DEPENDS+=       p5-URI:../../www/p5-URI
+DEPENDS+=       p5-URI-[0.9]*:../../www/p5-URI
 
 SUBST_CLASSES+=         fix
 SUBST_STAGE.fix=        pre-configure

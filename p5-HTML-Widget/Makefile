@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/30 07:42:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 21:23:00 tnn2 Exp $
 
 DISTNAME=		HTML-Widget-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		p5-Class-Data-Accessor>=0.04001:../../wip/p5-Class-Data-Accessor
 DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 DEPENDS+=		p5-HTML-Tree>=3.19.01:../../www/p5-HTML-Tree
 DEPENDS+=		p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
-DEPENDS+=		p5-Class-Accessor-Chained>=0.01:../../wip/p5-Class-Accessor-Chained
+DEPENDS+=		p5-Class-Accessor-Chained>=0.01:../../devel/p5-Class-Accessor-Chained
 DEPENDS+=		p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=		p5-Test-MockObject>=1.02:../../wip/p5-Test-MockObject
 DEPENDS+=		p5-Email-Valid>=0.15:../../mail/p5-Email-Valid

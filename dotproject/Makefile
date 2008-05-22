@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/26 13:24:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 21:23:00 tnn2 Exp $
 #
 
 DISTNAME=	dotproject-2.1.1
@@ -29,7 +29,7 @@ DEPENDS+=	php4-gd-4.4.*:../../graphics/php-gd
 DEPENDS+=	php4-zlib-4.4.*:../../archivers/php-zlib
 DEPENDS+=	php4-mysql-4.4.*:../../databases/php-mysql
 DEPENDS+=	php4-pdflib-4.4.*:../../print/php-pdflib
-DEPENDS+=	mysql4-server-4.1.*:../../databases/mysql4-server
+DEPENDS+=	mysql4-server>=4.1:../../databases/mysql4-server
 
 
 META_PACKAGE=	yes
