@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2897 2008/05/22 11:08:06 tnn2 Exp $
+# $Id: Makefile,v 1.2898 2008/05/22 12:07:42 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -9,8 +9,6 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
-SUBDIR+=	Mesa
-SUBDIR+=	MesaLib
 SUBDIR+=	MyServer
 SUBDIR+=	OdfConverter
 SUBDIR+=	OpenGLUT
@@ -410,7 +408,6 @@ SUBDIR+=	gforth-devel
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
-#SUBDIR+=	ghc		# same as lang/ghc
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	git
@@ -425,10 +422,7 @@ SUBDIR+=	glimmerm
 SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
-SUBDIR+=	glu
 SUBDIR+=	glulxe
-SUBDIR+=	glut
-SUBDIR+=	glx-utils
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmediaserver
 SUBDIR+=	gmp-ecm
@@ -1580,7 +1574,6 @@ SUBDIR+=	pynfo
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
-SUBDIR+=	python25
 SUBDIR+=	pytz
 SUBDIR+=	pywm
 SUBDIR+=	pyzor

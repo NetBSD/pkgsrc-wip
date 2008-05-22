@@ -1,9 +1,0 @@
-# $NetBSD: pkgsrc-dri-x86_64,v 1.3 2008/03/24 21:04:09 bsadewitz Exp $
-
-include $(TOP)/configs/pkgsrc-dri$(MESA_CONFIG_SUFX)
-
-CONFIG_NAME=	pkgsrc-dri-x86_64
-
-ASM_FLAGS=	-DUSE_X86_64_ASM
-ASM_SOURCES=	$(X86-64_SOURCES)
-ASM_API=	$(X86-64_API)
