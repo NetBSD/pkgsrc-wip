@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/22 16:02:39 tnn2 Exp $
 
 DISTNAME=		libmusclecard-1.3.3
 CATEGORIES=		security
@@ -15,5 +15,5 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-muscledropdir=${PREFIX}/lib/pcsc-lite/drivers
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-.include "../../wip/pcsc-lite/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

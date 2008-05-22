@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:46 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/05/22 16:02:39 tnn2 Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMUSCLECARD_BUILDLINK3_MK:=	${LIBMUSCLECARD_BUILDLINK3_MK}+
@@ -15,6 +15,6 @@ BUILDLINK_API_DEPENDS.libmusclecard+=	libmusclecard>=1.2.9
 BUILDLINK_PKGSRCDIR.libmusclecard?=	../../wip/libmusclecard
 .endif	# LIBMUSCLECARD_BUILDLINK3_MK
 
-.include "../../wip/pcsc-lite/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
