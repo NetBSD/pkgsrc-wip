@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/01 14:10:17 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/22 16:47:08 tnn2 Exp $
 #
 
 DISTNAME=	ArgoUML-0.14
@@ -10,7 +10,8 @@ MAINTAINER=	hdp@cs.nmsu.edu
 HOMEPAGE=	http://argouml.tigris.org/
 COMMENT=	UML design tool environment with cognitive support
 
-DEPENDS+=	xerces-j>=1.4.4:../../textproc/xerces-j
+#DEPENDS+=	xerces-j>=1.4.4:../../textproc/xerces-j
+DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
 DEPENDS+=	jakarta-log4j>=1.2.8:../../wip/jakarta-log4j
 
 PKG_DESTDIR_SUPPORT=	user-destdir
