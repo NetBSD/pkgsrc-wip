@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/10/21 16:34:43 adrian_p Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
@@ -86,7 +86,7 @@ CONFIGURE_ARGS+=	--disable-glib
 ###
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PLIST_SRC+=		${PKGDIR}/PLIST.python
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 .else

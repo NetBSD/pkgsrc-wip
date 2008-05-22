@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/18 13:34:18 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:48 tnn2 Exp $
 #
 
 DISTNAME=	pytz-2007k
@@ -14,8 +14,6 @@ COMMENT=	World Timezone Definitions for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

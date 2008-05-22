@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:39 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/22 15:38:48 tnn2 Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -14,7 +14,7 @@ COMMENT=		Action game, featuring cars, races and Tux the Penguin
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23 22
+PYTHON_VERSIONS_ACCEPTED=	23
 
 DEPENDS+=		${PYPKGPREFIX}-Py2Play>=0.1.6:../../wip/py-Py2Play
 DEPENDS+=		${PYPKGPREFIX}-Soya>=0.6.1:../../wip/py-Soya

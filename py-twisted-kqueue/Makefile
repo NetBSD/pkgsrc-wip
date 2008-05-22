@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/01 19:12:20 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:47 tnn2 Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-twisted-kqueue-2.0
@@ -10,7 +10,6 @@ MAINTAINER=	milos.negovanovic@googlemail.com
 COMMENT=	Python interface to kqueue, suitable for Twisted
 
 PYDISTUTILSPKG= # defined
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
 # need to get definition of PKG_HAVE_KQUEUE
 .include "../../mk/bsd.prefs.mk"

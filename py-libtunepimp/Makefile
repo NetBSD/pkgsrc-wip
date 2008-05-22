@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/06/24 06:34:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:47 tnn2 Exp $
 
 DISTNAME=	libtunepimp-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python bindings for TunePimp library.
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
 

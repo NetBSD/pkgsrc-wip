@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/22 15:38:48 tnn2 Exp $
 
 DISTNAME=	scribus-${PKGVERSION}
 PKGNAME=	scribus-devel-${PKGVERSION}
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q} \
 			--with-extra-libs=${LOCALBASE}/lib \
 			--with-extra-includes=${LOCALBASE}/include
 
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 CONFIGURE_ARGS+=	--with-pythondir=${LOCALBASE:Q}
 
 DEPENDS+=	ghostscript-esp>=8.0:../../print/ghostscript-esp

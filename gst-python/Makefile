@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
 #
 
 DISTNAME=		gst-python-0.10.4
@@ -14,7 +14,7 @@ COMMENT=		Python bindings for GStreamer
 
 DEPENDS+=		${PYPKGPREFIX}-libxml2>=0.0:../../textproc/py-libxml2
 
-PYTHON_VERSIONS_ACCEPTED=	23 24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PY_PATCHPLIST=		YES
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

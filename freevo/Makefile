@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/02/18 03:07:37 dhowland Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/22 15:38:46 tnn2 Exp $
 #
 
 DISTNAME=		freevo-1.7.6
@@ -18,8 +18,6 @@ DEPENDS+=		${PYPKGPREFIX}-elementtree>=0:../../textproc/py-elementtree
 
 PYDISTUTILSPKG=		yes
 USE_PKGLOCALEDIR=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 CHECK_PORTABILITY_SKIP+=	boot/freevo
 CHECK_PORTABILITY_SKIP+=	contrib/suse/freevo.daily

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/11 14:20:09 mj_turner Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/22 15:38:47 tnn2 Exp $
 #
 
 DISTNAME=	iCalendar-1.2
@@ -13,8 +13,6 @@ COMMENT=	Python parser/generator for iCalendar files, as per RFC2445
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 # Install documentation manually
 post-install:

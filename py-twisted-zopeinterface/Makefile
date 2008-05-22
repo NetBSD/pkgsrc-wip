@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/04 19:11:06 milosn Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:47 tnn2 Exp $
 .include "../../wip/py-twisted-core/version.mk"
 
 ZI_VERSION=	3.3.0
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/zope.interface-${ZI_VERSION}
 DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.4:../../textproc/py-xml
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
 CONFLICTS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:35 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/22 15:38:48 tnn2 Exp $
 #
 
 DISTNAME=		willow-1.4
@@ -13,7 +13,7 @@ COMMENT=		Content-filtering proxy server
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23 22
+PYTHON_VERSIONS_ACCEPTED=	23
 
 post-patch:
 	${CP} ${WRKSRC}/setup.cfg ${WRKSRC}/setup.cfg.pkgsrc

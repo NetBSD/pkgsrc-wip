@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/03 18:10:32 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:48 tnn2 Exp $
 
 DISTNAME=	wxPython-src-2.6.3.3
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.6.3.3
@@ -19,8 +19,6 @@ CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
 
 # non unicode version
 CONFLICTS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*
-
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
 
 WXARG=	WXPORT=gtk2 \
 	WX_CONFIG=${BUILDLINK_PREFIX.wxGTK-unicode}/bin/wx-config \

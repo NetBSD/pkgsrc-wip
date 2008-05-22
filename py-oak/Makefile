@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:33 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/22 15:38:47 tnn2 Exp $
 #
 
 DISTNAME=		oak-1.2
@@ -16,7 +16,7 @@ PYDISTUTILSPKG=		yes
 #
 # TODO: I am not sure about non- versions
 #
-PYTHON_VERSIONS_ACCEPTED=	23 22
+PYTHON_VERSIONS_ACCEPTED=	23
 
 post-patch:
 	${CP} ${WRKSRC}/setup.cfg ${WRKSRC}/setup.cfg.pkgsrc

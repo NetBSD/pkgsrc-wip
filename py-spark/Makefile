@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/08/13 23:33:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/22 15:38:47 tnn2 Exp $
 #
 
 DISTNAME=		spark-0.6.1
@@ -12,7 +12,7 @@ COMMENT=		Scanning, Parsing, and Rewriting Kit for Python
 
 NO_BUILD=	YES
 PY_PATCHPLIST=	YES
-PYTHON_VERSIONS_ACCEPTED=    23 22
+PYTHON_VERSIONS_ACCEPTED=    23
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark

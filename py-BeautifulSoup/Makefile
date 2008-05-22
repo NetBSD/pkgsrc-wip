@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/08 18:15:24 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
 #
 
 DISTNAME=		BeautifulSoup-3.0.5
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.crummy.com/software/BeautifulSoup/
 COMMENT=		HTML and XML parser for Python
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=       25 24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

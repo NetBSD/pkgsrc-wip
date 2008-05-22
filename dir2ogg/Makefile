@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/16 22:54:59 guigui2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/22 15:38:46 tnn2 Exp $
 #
 
 DISTNAME=	dir2ogg-0.11.5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://jak-linux.org/projects/dir2ogg
 COMMENT=	Command-line {wav,mp3,m4a} to ogg converter
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

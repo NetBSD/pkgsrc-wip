@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/11 11:31:05 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:48 tnn2 Exp $
 
 TZ_VERSION=	2006g
 DISTNAME=	pytz-${TZ_VERSION}
@@ -12,7 +12,6 @@ HOMEPAGE=	http://pytz.sourceforge.net/
 COMMENT=	Python interface to Olson tz database
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

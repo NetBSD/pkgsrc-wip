@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:49 tnn2 Exp $
 
 DISTNAME=			txt2tags-2.3
 CATEGORIES=			textproc
@@ -10,7 +10,7 @@ HOMEPAGE=			http://txt2tags.sourceforge.net/
 COMMENT=			Text formatting and conversion tool
 
 PYTHON_PATCH_SCRIPTS=		txt2tags
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 NO_BUILD=			yes
 

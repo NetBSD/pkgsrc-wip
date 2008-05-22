@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/04 20:33:29 scode Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
 
 DISTNAME=	cvs20hg-0.0.0_20061004
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	peter.schuller@infidyne.com
 HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/cvs20hg/
 COMMENT=	CVS->Mercurial conversion tool
 
-PYTHON_VERSIONS_ACCEPTED=24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	# yes
 
 DEPENDS+=	${PYPKGPREFIX}-rcsparse-0.0.0_20061004:../../wip/py-rcsparse

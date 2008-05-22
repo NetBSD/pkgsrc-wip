@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/08 13:52:16 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/22 15:38:48 tnn2 Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -19,8 +19,6 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's|/usr/bin|${LOCALBASE}/bin|g'
 SUBST_SED.setup+=	-e 's|/usr/X11R6|${X11BASE}|g'
 SUBST_SED.setup+=	-e 's|/usr/lib|${LOCALBASE}/lib|g'
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

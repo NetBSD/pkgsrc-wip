@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/05/19 14:59:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/22 15:38:46 tnn2 Exp $
 #
 
 DISTNAME=	nicotine+-1.2.9
@@ -20,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
 .endif
 DEPENDS+=	${PYPKGPREFIX}-GeoIP>=0:../../net/py-GeoIP
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 22
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
 REPLACE_PYTHON=	pynicotine/gtkgui/glade2py.py

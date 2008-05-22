@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/19 20:24:41 mj_turner Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:47 tnn2 Exp $
 
 DISTNAME=	httplib2-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Comprehensive http client library for Python
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 # Install README manually
 post-install:
