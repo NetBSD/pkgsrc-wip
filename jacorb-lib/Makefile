@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:45 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/22 15:59:50 tnn2 Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
@@ -14,7 +14,6 @@ BUILD_DEPENDS+=               apache-ant>=1.5.3.1:../../devel/apache-ant
 
 WRKSRC=		${WRKDIR}/JacORB_${DIST_VERSION}
 
-PKG_JVMS_ACCEPTED+=	sun-jdk13
 PKG_JVMS_ACCEPTED+=	sun-jdk14
 DIST_VERSION=		1_4_1
 PKG_VERSION=		1.4.1
