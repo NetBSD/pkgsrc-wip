@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/05/22 21:23:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/22 22:48:12 tnn2 Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.moregroupware.de/
 COMMENT=	Web based GroupWare system
 
 DEPENDS+=	php4-curl>=4.3.4:../../www/php-curl
-DEPENDS+=	mysql4-server>=4.0.0:../../databases/mysql4-server
+DEPENDS+=	mysql-server>=4.0.0:../../databases/mysql4-server
 DEPENDS+=	php4-ldap>=4.3.4:../../databases/php-ldap
 DEPENDS+=	php4-mysql>=4.3.4:../../databases/php-mysql
 DEPENDS+=	php4-gd>=4.3.4:../../graphics/php-gd
