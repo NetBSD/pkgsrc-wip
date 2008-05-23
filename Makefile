@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2900 2008/05/22 21:23:00 tnn2 Exp $
+# $Id: Makefile,v 1.2901 2008/05/23 08:36:54 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -242,7 +242,7 @@ SUBDIR+=	diveintopython
 SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
-SUBDIR+=	dmd-bin
+#SUBDIR+=	dmd-bin
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dnswalk
@@ -652,8 +652,8 @@ SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
-SUBDIR+=	icc
-SUBDIR+=	icc8
+#SUBDIR+=	icc
+#SUBDIR+=	icc8
 SUBDIR+=	icecast
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
@@ -765,7 +765,7 @@ SUBDIR+=	kstart
 SUBDIR+=	ktorrent3
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
-SUBDIR+=	kylix-openedition
+#SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
@@ -859,7 +859,7 @@ SUBDIR+=	links1
 SUBDIR+=	linphone
 SUBDIR+=	linux-acl
 SUBDIR+=	linux-attr
-SUBDIR+=	linux-ch
+#SUBDIR+=	linux-ch
 SUBDIR+=	linux-chprofessional
 SUBDIR+=	linux-hotplug
 SUBDIR+=	linux-kbd
@@ -1954,7 +1954,7 @@ SUBDIR+=	xmms-xmp
 SUBDIR+=	xmms2
 SUBDIR+=	xmonad
 SUBDIR+=	xmoto
-SUBDIR+=	xpde
+#SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
