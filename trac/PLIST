@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/23 02:37:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/05/23 15:47:24 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -33,6 +33,9 @@ ${PYSITELIB}/trac/admin/templates/admin_milestones.html
 ${PYSITELIB}/trac/admin/templates/admin_perms.html
 ${PYSITELIB}/trac/admin/templates/admin_plugins.html
 ${PYSITELIB}/trac/admin/templates/admin_versions.html
+${PYSITELIB}/trac/admin/templates/deploy_trac.cgi
+${PYSITELIB}/trac/admin/templates/deploy_trac.fcgi
+${PYSITELIB}/trac/admin/templates/deploy_trac.wsgi
 ${PYSITELIB}/trac/admin/web_ui.py
 ${PYSITELIB}/trac/admin/web_ui.pyc
 ${PYSITELIB}/trac/admin/web_ui.pyo
@@ -120,6 +123,8 @@ ${PYSITELIB}/trac/htdocs/js/expand_dir.js
 ${PYSITELIB}/trac/htdocs/js/folding.js
 ${PYSITELIB}/trac/htdocs/js/ie_pre7_hacks.js
 ${PYSITELIB}/trac/htdocs/js/jquery.js
+${PYSITELIB}/trac/htdocs/js/keyboard_nav.js
+${PYSITELIB}/trac/htdocs/js/noconflict.js
 ${PYSITELIB}/trac/htdocs/js/query.js
 ${PYSITELIB}/trac/htdocs/js/search.js
 ${PYSITELIB}/trac/htdocs/js/suggest.js
@@ -220,9 +225,29 @@ ${PYSITELIB}/trac/templates/layout.html
 ${PYSITELIB}/trac/templates/macros.cs
 ${PYSITELIB}/trac/templates/macros.html
 ${PYSITELIB}/trac/templates/macros.rss
+${PYSITELIB}/trac/templates/page_index.html
+${PYSITELIB}/trac/templates/theme.html
 ${PYSITELIB}/trac/test.py
 ${PYSITELIB}/trac/test.pyc
 ${PYSITELIB}/trac/test.pyo
+${PYSITELIB}/trac/tests/functional/__init__.py
+${PYSITELIB}/trac/tests/functional/__init__.pyc
+${PYSITELIB}/trac/tests/functional/__init__.pyo
+${PYSITELIB}/trac/tests/functional/better_twill.py
+${PYSITELIB}/trac/tests/functional/better_twill.pyc
+${PYSITELIB}/trac/tests/functional/better_twill.pyo
+${PYSITELIB}/trac/tests/functional/compat.py
+${PYSITELIB}/trac/tests/functional/compat.pyc
+${PYSITELIB}/trac/tests/functional/compat.pyo
+${PYSITELIB}/trac/tests/functional/testcases.py
+${PYSITELIB}/trac/tests/functional/testcases.pyc
+${PYSITELIB}/trac/tests/functional/testcases.pyo
+${PYSITELIB}/trac/tests/functional/testenv.py
+${PYSITELIB}/trac/tests/functional/testenv.pyc
+${PYSITELIB}/trac/tests/functional/testenv.pyo
+${PYSITELIB}/trac/tests/functional/tester.py
+${PYSITELIB}/trac/tests/functional/tester.pyc
+${PYSITELIB}/trac/tests/functional/tester.pyo
 ${PYSITELIB}/trac/ticket/__init__.py
 ${PYSITELIB}/trac/ticket/__init__.pyc
 ${PYSITELIB}/trac/ticket/__init__.pyo
@@ -553,6 +578,7 @@ share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-post-commit-hook.cmd
 share/examples/trac/trac-pre-commit-hook
+share/examples/trac/workflow/._migrate_original_to_basic.py
 share/examples/trac/workflow/README
 share/examples/trac/workflow/enterprise-workflow.ini
 share/examples/trac/workflow/migrate_original_to_basic.py
@@ -561,6 +587,9 @@ share/examples/trac/workflow/showworkflow
 share/examples/trac/workflow/simple-workflow.ini
 share/examples/trac/workflow/trivial-workflow.ini
 share/examples/trac/workflow/workflow_parser.py
+@dirrm share/examples/trac/workflow
+@dirrm share/examples/trac/rpm
+@dirrm share/examples/trac
 @dirrm ${PYSITELIB}/trac/wiki/templates
 @dirrm ${PYSITELIB}/trac/wiki/default-pages
 @dirrm ${PYSITELIB}/trac/wiki
@@ -575,6 +604,8 @@ share/examples/trac/workflow/workflow_parser.py
 @dirrm ${PYSITELIB}/trac/ticket/workflows
 @dirrm ${PYSITELIB}/trac/ticket/templates
 @dirrm ${PYSITELIB}/trac/ticket
+@dirrm ${PYSITELIB}/trac/tests/functional
+@dirrm ${PYSITELIB}/trac/tests
 @dirrm ${PYSITELIB}/trac/templates
 @dirrm ${PYSITELIB}/trac/search/templates
 @dirrm ${PYSITELIB}/trac/search
@@ -582,6 +613,7 @@ share/examples/trac/workflow/workflow_parser.py
 @dirrm ${PYSITELIB}/trac/prefs
 @dirrm ${PYSITELIB}/trac/mimeview
 @dirrm ${PYSITELIB}/trac/htdocs/js
+@dirrm ${PYSITELIB}/trac/htdocs/guide
 @dirrm ${PYSITELIB}/trac/htdocs/css
 @dirrm ${PYSITELIB}/trac/htdocs
 @dirrm ${PYSITELIB}/trac/db
@@ -589,6 +621,3 @@ share/examples/trac/workflow/workflow_parser.py
 @dirrm ${PYSITELIB}/trac/admin
 @dirrm ${PYSITELIB}/trac
 @dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm share/examples/trac/workflow
-@dirrm share/examples/trac/rpm
-@dirrm share/examples/trac
