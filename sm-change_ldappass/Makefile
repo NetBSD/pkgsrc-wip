@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/22 21:23:01 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/23 10:32:35 tnn2 Exp $
 
 .include "../../mail/squirrelmail/plugin.mk"
 
@@ -15,4 +15,5 @@ DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.1.1:../../databases/php-ldap
 CONF_FILES=	${FULL_PLUGIN_DIR}/config.php.sample \
 		${FULL_PLUGIN_DIR}/config.php
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
