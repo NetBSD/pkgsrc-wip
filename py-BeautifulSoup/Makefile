@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=		BeautifulSoup-3.0.5
-PKGNAME=                ${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.crummy.com/software/BeautifulSoup/download/ \
 			http://gentoo.osuosl.org/distfiles/ \

@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.8 2007/11/14 23:20:40 hoka_adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/05/24 15:34:11 tnn2 Exp $
+# used by wip/linux-kernel-headers/Makefile
 
 LINUX_VERSION=		2.6.6
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/05/21 22:32:59 schnoebe Exp $
+# $NetBSD: options.mk,v 1.6 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-sasl=cyrus
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Msasl-gnu) 
+.if !empty(PKG_OPTIONS:Msasl-gnu)
 CONFIGURE_ARGS+=	--with-sasl=gsasl
 .include "../../security/gsasl/buildlink3.mk"
 .endif

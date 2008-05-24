@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/30 13:26:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:12 tnn2 Exp $
 #
 
 DISTNAME=	netbsd-m4-3.1
@@ -11,7 +11,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	# none
 COMMENT=	NetBSD version of M4
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_FEATURES=		nbcompat
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

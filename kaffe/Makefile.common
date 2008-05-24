@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.26 2006/10/29 08:32:45 shattered Exp $
+# $NetBSD: Makefile.common,v 1.27 2008/05/24 15:34:11 tnn2 Exp $
+# used by wip/kaffe-x11/Makefile
 
 DISTNAME=     kaffe-1.1.7
 PKGNAME=      ${DISTNAME:S/-rc/rc/}

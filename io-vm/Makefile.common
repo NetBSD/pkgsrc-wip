@@ -1,4 +1,6 @@
-# $Id: Makefile.common,v 1.3 2005/11/03 10:56:12 rillig Exp $
+# $Id: Makefile.common,v 1.4 2008/05/24 15:34:11 tnn2 Exp $
+# used by wip/io-server/Makefile
+# used by wip/io-vm/Makefile
 
 CATEGORIES=		lang
 MASTER_SITES=		http://io.urbanape.com/release/ \

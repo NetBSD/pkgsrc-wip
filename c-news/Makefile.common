@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.4 2008/02/23 03:53:30 hfath Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/05/24 15:34:08 tnn2 Exp $
+# used by wip/nnrpd/Makefile
 
 CNEWSBIN?=	${PREFIX}/cnews
 CNEWSDATA?=	/var/news

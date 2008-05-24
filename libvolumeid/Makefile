@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2008/02/04 23:14:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:11 tnn2 Exp $
 
 DISTNAME=		libvolume-0.77
 CATEGORIES=		sysutils
-MASTER_SITES=           http://www.coris.org.uk/mrk/pkgsrc/
+MASTER_SITES=		http://www.coris.org.uk/mrk/pkgsrc/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mkirby@NetBSD.org
 HOMEPAGE=		http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 COMMENT=		Provides file system information for a given volume device
 
-MAKE_ENV=       	E=${ECHO_MSG:Q} RANLIB=${RANLIB:Q} AR=${AR:Q} Q=@ \
+MAKE_ENV=	E=${ECHO_MSG:Q} RANLIB=${RANLIB:Q} AR=${AR:Q} Q=@ \
                 	CC=${CC:Q} prefix=${PREFIX}
 
 # Linux has UDEV

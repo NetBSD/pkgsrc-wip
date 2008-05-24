@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/18 00:18:32 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/24 15:34:10 tnn2 Exp $
 #
 
 DISTNAME=		Firebird-2.0.3.12981-1
@@ -37,11 +37,11 @@ FBGROUP?=		firebird
 FBHOME?=		firebird
 BUILD_DEFS+=		FBHOME
 
-PKG_GROUPS=             ${FBGROUP}
-PKG_USERS=              ${FBUSER}:${FBGROUP}
-PKG_GECOS.${FBUSER}=    Firebird Database Administrator
-PKG_HOME.${FBUSER}=     ${PREFIX}/${FBHOME}
-PKG_SHELL.${FBUSER}=    ${SH}
+PKG_GROUPS=		${FBGROUP}
+PKG_USERS=		${FBUSER}:${FBGROUP}
+PKG_GECOS.${FBUSER}=	Firebird Database Administrator
+PKG_HOME.${FBUSER}=	${PREFIX}/${FBHOME}
+PKG_SHELL.${FBUSER}=	${SH}
 
 PLIST_SUBST+=		FBHOME=${FBHOME}
 MESSAGE_SUBST+=		PREFIX=${PREFIX}

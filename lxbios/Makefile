@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/29 17:08:23 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 DISTNAME=	lxbios-${LXBIOS_SNAP_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=   #empty
+MASTER_SITES=	#empty
 
 MAINTAINER=	jakllsch@kollasch.net
 HOMEPAGE=	http://linuxbios.org/Lxbios
@@ -16,8 +16,8 @@ USE_TOOLS+= date
 
 USE_LANGUAGES+= c
 
-SVN_REPOSITORIES=       lxbios
-SVN_TAG=                {${LXBIOS_TAG}}
+SVN_REPOSITORIES=	lxbios
+SVN_TAG=		{${LXBIOS_TAG}}
 SVN_ROOT.lxbios=	svn://linuxbios.org/repos/trunk/util/lxbios
 SVN_MODULE.lxbios=	lxbios
 
@@ -26,7 +26,7 @@ pre-build:
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
 #Not Tested.
 #ONLY_FOR_PLATFORM+=     Linux-*-i386 Linux-*-x86_64
@@ -37,18 +37,18 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+= iopl
-SUBST_FILES.iopl+=      cmos_lowlevel.c
-SUBST_MESSAGE.iopl=     fixing iopl
-SUBST_STAGE.iopl=       pre-configure
+SUBST_FILES.iopl+=	cmos_lowlevel.c
+SUBST_MESSAGE.iopl=	fixing iopl
+SUBST_STAGE.iopl=	pre-configure
 SUBST_SED.iopl+= -e 's,i386_iopl,${MACHINE_ARCH}_iopl,g'
 
-MAKE_ENV+=      LDLIBS=-l${MACHINE_ARCH}
+MAKE_ENV+=	LDLIBS=-l${MACHINE_ARCH}
 
 .endif
 
 BUILD_TARGET= lxbios
 
-YESTERDAY!=     	expr `date +%s` - 86399
+YESTERDAY!=	expr `date +%s` - 86399
 LXBIOS_TAG!=		${DATE} +%Y%m%d
 LXBIOS_SNAP_VERSION!=		${DATE} -r ${YESTERDAY} +%Y%m%d
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	cvsnt-2.5.03.2382
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.cvsnt.org/
 COMMENT=	CVSNT is advanced multiplatform version control system
 
-CONFLICTS=      cvs-[0-9]*
+CONFLICTS=	cvs-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

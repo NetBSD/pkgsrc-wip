@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2006/05/05 22:30:14 jeremy-c-reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/05/24 15:34:14 tnn2 Exp $
 #
+# used by wip/xpdq/Makefile
 
 DISTNAME=		pdq-2.2.1
 CATEGORIES=		print

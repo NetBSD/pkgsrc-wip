@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/13 09:23:22 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:16 tnn2 Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
-XFCE4_VERSION=  0.5.1
+XFCE4_VERSION=	0.5.1
 
 DISTNAME=	xfce4-mount-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils

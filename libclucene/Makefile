@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/22 18:06:31 krub1 Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:11 tnn2 Exp $
 
 DISTNAME=		clucene-core-0.9.20
 PKGNAME=		lib${DISTNAME:S/-core-/-/}
@@ -13,6 +13,6 @@ COMMENT=		Text search engine written in C++
 USE_TOOLS+=	 gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=    yes
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"

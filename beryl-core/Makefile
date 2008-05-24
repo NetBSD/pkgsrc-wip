@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/21 13:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:08 tnn2 Exp $
 #
 
 DISTNAME=	beryl-core-0.2.1
@@ -15,15 +15,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=     perl
-USE_TOOLS+=     gettext-tools
-USE_TOOLS+=     intltool
+USE_TOOLS+=	perl
+USE_TOOLS+=	gettext-tools
+USE_TOOLS+=	intltool
 USE_LIBTOOL+=	yes
 
 
-PKGCONFIG_OVERRIDE+=    beryl.pc.in
-PKGCONFIG_OVERRIDE+=    berylsettings.pc.in
-PKGCONFIG_OVERRIDE+=    libberyldecoration/libberyldecoration.pc.in
+PKGCONFIG_OVERRIDE+=	beryl.pc.in
+PKGCONFIG_OVERRIDE+=	berylsettings.pc.in
+PKGCONFIG_OVERRIDE+=	libberyldecoration/libberyldecoration.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.beryl
 PKG_SUPPORTED_OPTIONS=	gnome

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	ecore-0.9.9.042
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=   http://download.enlightenment.org/snapshots/2008-01-25/ \
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.yazzy.org/pkgsrc/e17/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+= 	--disable-openssl \
+CONFIGURE_ARGS+=	--disable-openssl \
 		 	--disable-ecore-directfb \
 			--enable-ecore-evas-x11-16 \
 			--enable-ecore-desktop \

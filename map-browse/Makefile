@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:12 tnn2 Exp $
 
 DISTNAME=		map-browse-1.1
-WRKSRC=                 ${WRKDIR}/map-browse
+WRKSRC=			${WRKDIR}/map-browse
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.olib.org/~rkr/mud/software/map-browse/
 

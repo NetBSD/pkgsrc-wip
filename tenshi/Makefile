@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/18 15:24:21 jessepeterson Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=	tenshi-0.10
@@ -20,7 +20,7 @@ CONF_FILES=	${PREFIX}/${EGDIR}/tenshi.conf ${PKG_SYSCONFDIR}/tenshi.conf
 BUILD_DEFS+=	VARBASE
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${EGDIR}
 
-SUBST_CLASSES+= 	tenshi
+SUBST_CLASSES+=	tenshi
 SUBST_STAGE.tenshi=	do-configure
 SUBST_FILES.tenshi=	tenshi
 SUBST_SED.tenshi=	-e 's,/usr/bin/perl,${PERL5},g'

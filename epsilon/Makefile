@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	epsilon-0.3.0.011
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=   http://www.yazzy.org/pkgsrc/e17/ \
+MASTER_SITES=	http://www.yazzy.org/pkgsrc/e17/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org

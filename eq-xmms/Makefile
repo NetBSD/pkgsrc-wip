@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/13 20:22:04 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	eq-xmms-0.7
@@ -12,8 +12,8 @@ COMMENT=	Equalizer plugin for XMMS not just for MP3
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-mmx
-CONFIGURE_ARGS+=        --enable-sse
-CONFIGURE_ARGS+=        --enable-sse2
+CONFIGURE_ARGS+=	--enable-sse
+CONFIGURE_ARGS+=	--enable-sse2
 CONFIGURE_ARGS+=	--enable-sse-filters
 USE_LIBTOOL=		yes
 #USE_TOOLS+=		gmake

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/03 09:55:15 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:13 tnn2 Exp $
 #
 
 DISTNAME=	Lingua-EN-Inflect-Number-1.1
 PKGNAME=	p5-${DISTNAME}
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
-MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SI/SIMON/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SI/SIMON/}
 #MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SI/SIMON/
 
 MAINTAINER=	jfranz@bsdprojects.net

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/01 22:51:22 briandealwis Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=		workrave-1.8.5
@@ -9,15 +9,15 @@ MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://www.workrave.org/
 COMMENT=		Wrist break reminder program for prevention of RSI
 
-USE_LIBTOOL=            YES
+USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=             gmake pkg-config intltool
+USE_TOOLS+=		gmake pkg-config intltool
 USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+= 	--docdir="${PREFIX}/share/doc/${PKGBASE}"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--docdir="${PREFIX}/share/doc/${PKGBASE}"
 
 # Under NetBSD, /usr/include/wchar.h requires either _ISOC99_SOURCE or
 # _NETBSD_SOURCE to be defined to include definitions for vfwscanf, vswscanf,

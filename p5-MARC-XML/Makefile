@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/25 03:28:38 philnelson Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:13 tnn2 Exp $
 
 DISTNAME=		MARC-XML-0.87
 PKGNAME=		p5-MARC-XML-0.87
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-MARC-Record>=2.0.0:../../wip/p5-MARC-Record
 DEPENDS+=	p5-XML-SAX>=0.16:../../textproc/p5-XML-SAX
-DEPENDS+=       p5-MARC-Charset>=0.98:../../wip/p5-MARC-Charset
+DEPENDS+=	p5-MARC-Charset>=0.98:../../wip/p5-MARC-Charset
 
 PERL5_PACKLIST=	auto/MARC-XML/.packlist
 

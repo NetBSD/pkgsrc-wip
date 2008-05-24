@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/25 04:46:08 philnelson Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:11 tnn2 Exp $
 
 DISTNAME=	koha-2.2.9
 #PKGREVISION=	0
@@ -32,7 +32,7 @@ DEPENDS+=	p5-MARC-Charset>=0.98:../../wip/p5-MARC-Charset
 DEPENDS+=	p5-Net-Z3950-ZOOM>=1.20:../../wip/p5-Net-Z3950-ZOOM
 DEPENDS+=	p5-PDF-Reuse-Barcode>=0.05:../../wip/p5-PDF-Reuse-Barcode
 
-USE_TOOLS+= 	perl:run
+USE_TOOLS+=	perl:run
 
 REPLACE_PERL+=	modules/C4/Date.pm
 REPLACE_PERL+=	modules/C4/test.pl

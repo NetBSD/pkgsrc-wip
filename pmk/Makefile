@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 14:58:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=	pmk-0.10.3
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	-p ${PREFIX}
 ### XXX Do we want the "privsep user"?
 ###
 #CONFIGURE_ARGS+=	-U ${PMK_USER}
-CONFIGURE_SCRIPT= 	pmkcfg.sh
+CONFIGURE_SCRIPT=	pmkcfg.sh
 
 CONFIGURE_ENV+=		SYSCONFDIR=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFSUBDIR:Q}

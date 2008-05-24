@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=		sim-0.9.3
@@ -38,6 +38,6 @@ post-configure:
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt3-tools+=       qt3-tools>=3.3.5nb6
+BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

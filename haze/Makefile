@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/08 23:13:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
 #
 
 DISTNAME=	haze
@@ -10,7 +10,7 @@ MAINTAINER=	haaaad@gmail.com,elad@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/~elad/
 COMMENT=	Offer a system to generate binary updates for NetBSD
 
-WRKSRC= 	${WRKDIR}/haze
+WRKSRC=	${WRKDIR}/haze
 
 INSTALLATION_DIRS= sbin
 

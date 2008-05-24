@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/24 05:30:58 jkuittinen Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:12 tnn2 Exp $
 #
 
 DISTNAME=	milkytracker-0.90.80
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 
-INSTALLATION_DIRS+= 	${DESTDIR}${PREFIX}/share/doc/milkytracker
+INSTALLATION_DIRS+=	${DESTDIR}${PREFIX}/share/doc/milkytracker
 INSTALLATION_DIRS+=	${DESTDIR]${PREFIX}/share/examples/milkytracker
 
 DOCDIR=			${DESTDIR}${PREFIX}/share/doc/milkytracker

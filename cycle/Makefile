@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/13 05:46:23 claytonk Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	cycle-0.3.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cycle/}
 EXTRACT_SUFX=	.tar.bz2
-NO_BUILD=       yes
-PYTHON_PATCH_SCRIPTS=   cycle.py
+NO_BUILD=	yes
+PYTHON_PATCH_SCRIPTS=	cycle.py
 
 MAINTAINER=	ckoeni@gmail.com
 HOMEPAGE=	http://cycle.sourceforge.net/

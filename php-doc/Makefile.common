@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/12/15 17:30:39 mpasternak Exp $
-# $Id: Makefile.common,v 1.1.1.1 2003/12/15 17:30:39 mpasternak Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/05/24 15:34:14 tnn2 Exp $
+# $Id: Makefile.common,v 1.2 2008/05/24 15:34:14 tnn2 Exp $
+# used by wip/php-doc/Makefile.template
 
 PHP_DOC_LANG?=		en
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:08 tnn2 Exp $
 #
 
 DISTNAME=	aria2-0.11.3
@@ -32,7 +32,7 @@ BUILDLINK_DEPMETHOD.cppunit?=	build
 .  include "../../devel/cppunit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-xmltest
-.endif	
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

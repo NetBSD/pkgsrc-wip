@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/25 12:43:04 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:13 tnn2 Exp $
 #
 
 DISTNAME=	HTML-WebMake-2.4
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@pkgsrc.org
 HOMEPAGE=	http://webmake.sourceforge.net/devel/
 COMMENT=	WebMake is a simple web site management system
 
-PERL5_PACKLIST=         auto/HTML/WebMake/.packlist
+PERL5_PACKLIST=		auto/HTML/WebMake/.packlist
 
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-Text-EtText-[0-9]*:../../wip/p5-Text-EtText

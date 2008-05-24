@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2008/01/20 15:23:09 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:11 tnn2 Exp $
+# used by wip/jdk14/Makefile
+# used by wip/jdk15/Makefile
+# used by wip/jdk16/Makefile
 
 CATEGORIES=		lang java
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -30,7 +33,7 @@ UNLIMIT_RESOURCES=	datasize
 
 INTERACTIVE_STAGE+=	fetch
 
-BUILDLINK_PASSTHRU_DIRS+=       ${JAVA_HOME}
+BUILDLINK_PASSTHRU_DIRS+=	${JAVA_HOME}
 BUILDLINK_PASSTHRU_DIRS+=	${JVM_HOME}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/jre/lib/i386/server
 

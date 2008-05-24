@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/21 23:56:48 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	eet-0.9.10.042
@@ -12,7 +12,7 @@ HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Distribution Container Library and Tools
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=    yes
+USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
 
 .include "../../graphics/jpeg/buildlink3.mk"

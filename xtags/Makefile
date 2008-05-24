@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/10 19:37:59 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:16 tnn2 Exp $
 #
 
 DISTNAME=	xtags-0.5
@@ -20,8 +20,8 @@ SUBST_MESSAGE.makefile=	Fixing config.mk...
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
-SUBST_SED.makefile+=    -e 's,^CFLAGS =,CFLAGS +=,g'
-SUBST_SED.makefile+=    -e 's,^LDFLAGS =,LDFLAGS +=,g'
+SUBST_SED.makefile+=	-e 's,^CFLAGS =,CFLAGS +=,g'
+SUBST_SED.makefile+=	-e 's,^LDFLAGS =,LDFLAGS +=,g'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

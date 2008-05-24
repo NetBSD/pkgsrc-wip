@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.2 2006/02/03 00:40:53 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/05/24 15:34:12 tnn2 Exp $
+# used by wip/mplayer/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 

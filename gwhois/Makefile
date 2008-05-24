@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/19 20:34:24 mj_turner Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:10 tnn2 Exp $
 
 DISTNAME=			gwhois_20080219.1
 PKGNAME=			${DISTNAME:S/_/-/g}
@@ -21,9 +21,9 @@ WRKSRC=				${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=		share/${PKGBASE} ${PKGMANDIR}/man1
 
 SUBST_CLASSES+=			fix-paths
-SUBST_MESSAGE.fix-paths= 	Fixing paths
-SUBST_FILES.fix-paths= 		gwhois
-SUBST_FILES.fix-paths+= 	gwhois.1
+SUBST_MESSAGE.fix-paths=	Fixing paths
+SUBST_FILES.fix-paths=	gwhois
+SUBST_FILES.fix-paths+=	gwhois.1
 SUBST_SED.fix-paths+=		-e 's,/etc/gwhois,${PREFIX}/share/gwhois,g'
 SUBST_STAGE.fix-paths=		post-patch
 

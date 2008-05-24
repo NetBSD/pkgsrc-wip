@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/28 02:47:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:11 tnn2 Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 CATEGORIES=	net kde
@@ -13,7 +13,7 @@ COMMENT=	Graphical BitTorrent client for KDE4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_CMAKE=      	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		awk msgfmt pkg-config perl
 

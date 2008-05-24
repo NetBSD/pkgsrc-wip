@@ -1,4 +1,36 @@
-# $NetBSD: Makefile.common,v 1.6 2008/05/22 22:48:12 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:13 tnn2 Exp $
+# used by wip/openoffice2-bin-af/Makefile
+# used by wip/openoffice2-bin-be-BY/Makefile
+# used by wip/openoffice2-bin-bg/Makefile
+# used by wip/openoffice2-bin-bn/Makefile
+# used by wip/openoffice2-bin-br/Makefile
+# used by wip/openoffice2-bin-cs/Makefile
+# used by wip/openoffice2-bin-cy/Makefile
+# used by wip/openoffice2-bin-da/Makefile
+# used by wip/openoffice2-bin-de/Makefile
+# used by wip/openoffice2-bin-el/Makefile
+# used by wip/openoffice2-bin-et/Makefile
+# used by wip/openoffice2-bin-fi/Makefile
+# used by wip/openoffice2-bin-fr/Makefile
+# used by wip/openoffice2-bin-ga/Makefile
+# used by wip/openoffice2-bin-it/Makefile
+# used by wip/openoffice2-bin-km/Makefile
+# used by wip/openoffice2-bin-lo/Makefile
+# used by wip/openoffice2-bin-mk/Makefile
+# used by wip/openoffice2-bin-nb/Makefile
+# used by wip/openoffice2-bin-ne/Makefile
+# used by wip/openoffice2-bin-nl/Makefile
+# used by wip/openoffice2-bin-nn/Makefile
+# used by wip/openoffice2-bin-nr/Makefile
+# used by wip/openoffice2-bin-sk/Makefile
+# used by wip/openoffice2-bin-sl/Makefile
+# used by wip/openoffice2-bin-st/Makefile
+# used by wip/openoffice2-bin-sv/Makefile
+# used by wip/openoffice2-bin-th/Makefile
+# used by wip/openoffice2-bin-tn/Makefile
+# used by wip/openoffice2-bin-ts/Makefile
+# used by wip/openoffice2-bin-xh/Makefile
+# used by wip/openoffice2-bin-zu/Makefile
 
 PKGNAME=		openoffice2-bin-${LANGUAGE}-${OO_RELEASE}
 CATEGORIES=		misc

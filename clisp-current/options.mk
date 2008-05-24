@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2008/02/05 14:23:16 asau Exp $
+# $NetBSD: options.mk,v 1.13 2008/05/24 15:34:09 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -43,7 +43,7 @@ PKG_OPTIONS+=	ffcall
 .endif
 
 .if !empty(PKG_OPTIONS:Mffcall)
-CONFIGURE_ARGS+=        --with-dynamic-ffi
+CONFIGURE_ARGS+=	--with-dynamic-ffi
 .  include "../../devel/ffcall/buildlink3.mk"
 .endif
 
@@ -108,7 +108,7 @@ CONFIGURE_ARGS+=	--with-module=wildcard
 
 .if !empty(PKG_OPTIONS:Mzlib)
 CONFIGURE_ARGS+=	--with-module=zlib
-BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
 .include "../../devel/zlib/buildlink3.mk"
 .endif
 

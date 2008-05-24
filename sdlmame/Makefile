@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/06/18 13:07:34 absd Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=		sdlmame0116u1
@@ -17,9 +17,9 @@ RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=             gmake
-UNLIMIT_RESOURCES=      datasize
-MAKE_FILE=              makefile
+USE_TOOLS+=		gmake
+UNLIMIT_RESOURCES=	datasize
+MAKE_FILE=		makefile
 LICENSE=		mame-license
 
 .if ${MACHINE_ARCH:Mi386}
@@ -46,10 +46,10 @@ MAKE_FLAGS+=	X86_MPIS3_DRC=${X86_MIPS3_DRC:Q}
 MAKE_FLAGS+=	X86_PPC_DRC=${X86_PPC_DRC:Q}
 
 # Pragma once is not needed, and creates warnings/errors on gcc
-SUBST_CLASSES+=         pragma
-SUBST_STAGE.pragma=     pre-configure
-SUBST_FILES.pragma=     src/*.h src/*/*.h
-SUBST_SED.pragma=       -e "s|\#pragma once||g"
+SUBST_CLASSES+=		pragma
+SUBST_STAGE.pragma=	pre-configure
+SUBST_FILES.pragma=	src/*.h src/*/*.h
+SUBST_SED.pragma=	-e "s|\#pragma once||g"
 
 do-install:
 	for prg in chdman jedutil mame romcmp; \

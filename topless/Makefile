@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/03 18:01:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=	topless-1.52
@@ -17,5 +17,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/topless ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/topless.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-		
+
 .include "../../mk/bsd.pkg.mk"

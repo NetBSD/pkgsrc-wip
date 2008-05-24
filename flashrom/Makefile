@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/29 17:01:00 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:10 tnn2 Exp $
 #
 
 DISTNAME=	flashrom-${FLASHROM_SNAP_VERSION}
@@ -14,8 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+= gmake
 USE_TOOLS+= date
 
-SVN_REPOSITORIES=       flashrom
-SVN_TAG=                {${FLASHROM_TAG}}
+SVN_REPOSITORIES=	flashrom
+SVN_TAG=		{${FLASHROM_TAG}}
 SVN_ROOT.flashrom=	svn://linuxbios.org/repos/trunk/util/flashrom
 SVN_MODULE.flashrom=	flashrom
 
@@ -25,8 +25,8 @@ pre-build:
 
 .include "../../mk/bsd.prefs.mk"
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-x86_64
-ONLY_FOR_PLATFORM+=     Linux-*-i386 Linux-*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-i386 Linux-*-x86_64
 
 .include "../../wip/mk/svn-package.mk"
 
@@ -48,7 +48,7 @@ SUBST_MESSAGE.iopl=	fixing iopl
 SUBST_STAGE.iopl=	pre-configure
 SUBST_SED.iopl+= -e 's,iopl,${MACHINE_ARCH}_iopl,g'
 
-MAKE_ENV+=      LDLIBS=-l${MACHINE_ARCH}
+MAKE_ENV+=	LDLIBS=-l${MACHINE_ARCH}
 
 SUBST_CLASSES+=	lseek
 SUBST_FILES.lseek=	flashrom.c chipset_enable.c
@@ -58,7 +58,7 @@ SUBST_SED.lseek+= -e 's,off64_t,off_t,g'
 SUBST_SED.lseek+= -e 's,lseek64,lseek,g'
 .endif
 
-YESTERDAY!=     	expr `date +%s` - 86399
+YESTERDAY!=	expr `date +%s` - 86399
 FLASHROM_TAG!=		${DATE} +%Y%m%d
 FLASHROM_SNAP_VERSION!=		${DATE} -r ${YESTERDAY} +%Y%m%d
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/02 13:45:03 pmatias Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:12 tnn2 Exp $
 #
 
 DISTNAME=	miniupnpc-1.0
@@ -9,6 +9,6 @@ MAINTAINER=	matias@dotbsd.org
 HOMEPAGE=	http://miniupnp.tuxfamily.org/files/
 COMMENT=	Client and library for UPnP IGD services
 
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 
 .include "../../mk/bsd.pkg.mk"

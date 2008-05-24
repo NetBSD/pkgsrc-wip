@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/03 22:30:18 nocker Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:08 tnn2 Exp $
 
 DISTNAME=	bsvc-2.1
 CATEGORIES=	emulators
@@ -9,16 +9,16 @@ MAINTAINER=	nocker.bk@gmail.com
 HOMEPAGE=	http://www.bradfordmott.com/bsvc/index.html
 COMMENT=	Extensible hardware simulation framework with MC68K support
 
-DEPENDS+=       tk>=8.4:../../x11/tk
+DEPENDS+=	tk>=8.4:../../x11/tk
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_LANGUAGES=	c
 USE_LANGUAGES+=	c++
 MAKE_ENV+=	WRKSRC=${WRKSRC}
 MAKE_ENV+=	PROJECT_BASE=${PREFIX}
-DOCDIR=         ${PREFIX}/share/doc/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 DOCWRKDIR=	${WRKDIR}/${DISTNAME}/doc
-EGDIR=          ${PREFIX}/share/examples/${PKGBASE}
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 EGWRKDIR=	${WRKDIR}/${DISTNAME}/samples
 
 SUBST_CLASSES+=			fix-exit
@@ -31,18 +31,18 @@ SUBST_CLASSES+=			fix-old-cpp
 SUBST_STAGE.fix-old-cpp=	pre-configure
 SUBST_MESSAGE.fix-old-cpp=	Fixing old C++ code.
 SUBST_FILES.fix-old-cpp=	${WRKSRC}/*/*.cxx
-SUBST_FILES.fix-old-cpp+=       ${WRKSRC}/*/*.hxx
-SUBST_FILES.fix-old-cpp+=       ${WRKSRC}/*/*/*.cxx
-SUBST_FILES.fix-old-cpp+=       ${WRKSRC}/*/*/*.cxx
+SUBST_FILES.fix-old-cpp+=	${WRKSRC}/*/*.hxx
+SUBST_FILES.fix-old-cpp+=	${WRKSRC}/*/*/*.cxx
+SUBST_FILES.fix-old-cpp+=	${WRKSRC}/*/*/*.cxx
 SUBST_SED.fix-old-cpp=		-e 's/iostream\.h/iostream/; s/strstream\.h/strstream/; s/fstream\.h/fstream/'
 
-SUBST_CLASSES+=                 fix-make
-SUBST_STAGE.fix-make=           pre-configure
-SUBST_MESSAGE.fix-make=         Fixing make declaration.
-SUBST_FILES.fix-make=           ${WRKSRC}/Makefile
+SUBST_CLASSES+=			fix-make
+SUBST_STAGE.fix-make=		pre-configure
+SUBST_MESSAGE.fix-make=		Fixing make declaration.
+SUBST_FILES.fix-make=		${WRKSRC}/Makefile
 SUBST_FILES.fix-make+=		${WRKSRC}/*/Makefile
-SUBST_FILES.fix-make+=          ${WRKSRC}/*/*/Makefile
-SUBST_SED.fix-make=             -e 's/make/$$\(MAKE\)/g'
+SUBST_FILES.fix-make+=		${WRKSRC}/*/*/Makefile
+SUBST_SED.fix-make=		-e 's/make/$$\(MAKE\)/g'
 
 pre-patch:
 	cp ${WRKSRC}/Makefile.Linux ${WRKSRC}/Makefile

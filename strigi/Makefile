@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/20 15:14:11 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:14 tnn2 Exp $
 
 DISTNAME=	strigi-0.5.7
 CATEGORIES=	sysutils
@@ -15,9 +15,9 @@ USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
-RT_LIB_SCHED=           -lrt
+RT_LIB_SCHED=		-lrt
 .else
-RT_LIB_SCHED=           # empty
+RT_LIB_SCHED=		# empty
 .endif
 
 .if !empty(RT_LIB_SCHED)

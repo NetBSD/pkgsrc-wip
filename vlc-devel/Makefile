@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/14 18:39:12 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=	vlc-snapshot-${VLC_SNAPSHOT_DATE}
@@ -89,7 +89,7 @@ SUBST_FILES.oss+=	test/libvlc/media_list.c
 SUBST_FILES.oss+=	po/*.po
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
-SUBST_CLASSES+=         fnt
+SUBST_CLASSES+=		fnt
 SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2006/10/12 21:13:40 shattered Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/05/24 15:34:08 tnn2 Exp $
 #
+# used by wip/ap2-evasive/Makefile
 
 DISTNAME=		mod_evasive_1.10.1
 CATEGORIES=		security

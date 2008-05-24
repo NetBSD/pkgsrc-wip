@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/08 22:41:04 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:11 tnn2 Exp $
 
 DISTNAME=	hydrogen-0.9.3
 PKGNAME=	${DISTNAME:S/-/-current-/}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
-USE_DIRS+=      xdg-1.4
+USE_DIRS+=	xdg-1.4
 LDFLAGS+=	-lossaudio
 
 CONFIGURE_ARGS+=	--disable-alsa

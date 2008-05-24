@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/05 00:42:18 rootcho Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/24 15:34:13 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	ssl pcre
 .if !empty(PKG_OPTIONS:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mail_ssl_module
-CONFIGURE_ARGS+=        --with-http_ssl_module
+CONFIGURE_ARGS+=	--with-http_ssl_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcre)

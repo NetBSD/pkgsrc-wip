@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2006/08/23 18:39:42 brook1 Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/05/24 15:34:10 tnn2 Exp $
 #
+# used by wip/gdal-grass/Makefile
 
 # Required for dependent packages (e.g., geography/qgis) to find grass
 

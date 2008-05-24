@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/13 09:40:26 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=	radare-0.8.6
@@ -12,7 +12,7 @@ COMMENT=	advanced commandline hexadecimal editor
 USE_LANGUAGES=	c perl
 
 USE_TOOLS=	gmake
-USE_GNU_READLINE=       YES
+USE_GNU_READLINE=	YES
 GNU_CONFIGURE=	yes
 
 .include "options.mk"

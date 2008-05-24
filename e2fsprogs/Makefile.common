@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.common,v 1.16 2008/02/21 05:40:39 tnn2 Exp $
-# $Id: Makefile.common,v 1.16 2008/02/21 05:40:39 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.17 2008/05/24 15:34:09 tnn2 Exp $
+# $Id: Makefile.common,v 1.17 2008/05/24 15:34:09 tnn2 Exp $
 #
+# used by wip/com_err/Makefile
+# used by wip/e2fsprogs/Makefile
+# used by wip/libuuid/Makefile
 
 # XXX When changing, be sure to run "make makesum" in libuuid directory too.
 E2FSPROGS_VERSION=	1.36

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/10 09:20:48 ahallmann Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
 #
 
 DISTNAME=	freedup-1.3-1-src
@@ -19,8 +19,8 @@ MAKE_ENV+=	MAN_DIR=${PREFIX:Q}/${PKGMANDIR}
 DEPENDS+= coreutils>=6.9:../../sysutils/coreutils
 
 SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths+= 	pre-configure
-SUBST_MESSAGE.fix-paths+= 	Fixing absolute paths.
+SUBST_STAGE.fix-paths+=	pre-configure
+SUBST_MESSAGE.fix-paths+=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		freedup.h
 SUBST_SED.fix-paths=		-e 's,/usr/bin/,${PREFIX}/bin/${GNU_PROGRAM_PREFIX:Q},g'
 

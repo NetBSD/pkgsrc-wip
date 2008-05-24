@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/18 19:45:13 milleoiseaux Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	dzen2-0.8.5
@@ -9,7 +9,7 @@ MAINTAINER=	pikapika@8-0.net
 HOMEPAGE=	http://gotmor.googlepages.com/
 COMMENT=	General purpose messaging and notification program
 
-NO_CONFIGURE=           yes
+NO_CONFIGURE=		yes
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/05/03 16:46:20 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/24 15:34:12 tnn2 Exp $
 
 DISTNAME=	xorg-server-1.4.0.90
-PKGREVISION= 	3
+PKGREVISION=	3
 PKGNAME=	modular-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/

@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.5 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/05/24 15:34:14 tnn2 Exp $
+# used by wip/smtprc-gui/Makefile
 
 DISTNAME=	smtprc-0.9.7
 PKGNAME=	smtprc-0.9.7b

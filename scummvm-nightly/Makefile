@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/02/19 22:34:27 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/24 15:34:14 tnn2 Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -37,7 +37,7 @@ YESTERDAY!=	expr `date +%s` - 86399
 SCM_VER!=	${DATE} -r ${YESTERDAY} +%Y%m%d
 SCM_TAG!=	${DATE} +%Y%m%d
 
-BUILDLINK_API_DEPENDS.zlib+=    zlib>=1.2.0.4
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/fluidsynth/buildlink3.mk"

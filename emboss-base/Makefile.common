@@ -1,4 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2006/08/14 14:02:50 dhowland Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/05/24 15:34:09 tnn2 Exp $
+# used by wip/emboss-domainatrix/Makefile
+# used by wip/emboss-emnu/Makefile
+# used by wip/emboss-hmmer/Makefile
+# used by wip/emboss-meme/Makefile
+# used by wip/emboss-mse/Makefile
+# used by wip/emboss-phylip/Makefile
+# used by wip/emboss-topo/Makefile
 
 CATEGORIES=		biology
 MASTER_SITES=		ftp://emboss.open-bio.org/pub/EMBOSS/old/2.9.0/

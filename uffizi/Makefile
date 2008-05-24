@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/12/28 17:46:20 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=	uffizi.txt
 PKGNAME=	uffizi-0.7
 CATEGORIES=	www graphics perl5
 MASTER_SITES=	http://jmason.org/software/uffizi/
-EXTRACT_SUFX=   #
+EXTRACT_SUFX=	#
 
 MAINTAINER=	cherrymathew@users.sourceforge.net
 HOMEPAGE=	http://jmason.org/software/uffizi/
@@ -16,11 +16,11 @@ DEPENDS+=	jhead-[0-9]*:../../graphics/jhead
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=             perl:run
-REPLACE_PERL=           ${DISTNAME}
-NO_BUILD=               yes
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		${DISTNAME}
+NO_BUILD=		yes
 
-INSTALLATION_DIRS=      bin
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PKGBASE}

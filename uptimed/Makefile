@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/02/28 09:46:33 lkundrak Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=		uptimed-0.3.10
 CATEGORIES=		sysutils
 MASTER_SITES=		http://podgorny.cz/uptimed/releases/
-EXTRACT_SUFX=   	.tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		joe@joe.cz
 HOMEPAGE=		http://podgorny.cz/uptimed/
@@ -18,7 +18,7 @@ EGDIR=			share/examples/${PKGBASE}
 INSTALLATION_DIRS=	bin sbin lib ${PKGMANDIR}/man2 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/examples/rc.d ${EGDIR}
 
-RCD_SCRIPTS=            uptimed
+RCD_SCRIPTS=		uptimed
 CONF_FILES=		${EGDIR}/uptimed.conf-dist ${PKG_SYSCONFDIR}/uptimed.conf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/03/25 20:41:29 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=	xcb-util-0.2pl0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE= 	http://xcb.freedesktop.org/
+HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	XCB Utilities
 
 PKG_DESTDIR_SUPPORT=	user-destdir

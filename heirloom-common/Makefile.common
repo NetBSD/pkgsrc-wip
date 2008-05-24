@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.6 2008/01/10 20:39:05 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:10 tnn2 Exp $
+# used by wip/libuxre/Makefile
 
 HEIRLOOM_VER=	070715
 # used by wip/heirloom-common/Makefile.prog.common

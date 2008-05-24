@@ -1,4 +1,24 @@
-# $NetBSD: Makefile.common,v 1.3 2008/02/26 19:38:24 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.4 2008/05/24 15:34:16 tnn2 Exp $
+# used by wip/xmms-skin-AdamAmp/Makefile
+# used by wip/xmms-skin-Chaos/Makefile
+# used by wip/xmms-skin-CherryBest/Makefile
+# used by wip/xmms-skin-Cobalt/Makefile
+# used by wip/xmms-skin-CoolBlue/Makefile
+# used by wip/xmms-skin-Cracked/Makefile
+# used by wip/xmms-skin-Eclipse/Makefile
+# used by wip/xmms-skin-Fire/Makefile
+# used by wip/xmms-skin-HelixSawfish/Makefile
+# used by wip/xmms-skin-LinuxDotCom/Makefile
+# used by wip/xmms-skin-MarbleX/Makefile
+# used by wip/xmms-skin-NoerdAmp-SE/Makefile
+# used by wip/xmms-skin-Plume/Makefile
+# used by wip/xmms-skin-Sword/Makefile
+# used by wip/xmms-skin-UltrafinaSEM/Makefile
+# used by wip/xmms-skin-VegetalBlues/Makefile
+# used by wip/xmms-skin-WinampX/Makefile
+# used by wip/xmms-skin-m2n/Makefile
+# used by wip/xmms-skin-maXMMS/Makefile
+# used by wip/xmms-skin-nixamp/Makefile
 
 CATEGORIES=		audio
 MASTER_SITES=		http://www.xmms.org/files/Skins/

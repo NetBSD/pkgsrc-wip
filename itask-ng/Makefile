@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/06 00:24:29 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 DISTNAME=	itask-ng-0.2.4
@@ -10,7 +10,7 @@ MAINTAINER=	shinden@linux.pl
 HOMEPAGE=	http://itask-module.googlecode.com/files/
 COMMENT=	Application launcher and taskbar for e17
 
-PKG_DESTDIR_SUPPORT=    	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=			gettext-m4-[0-9]*:../../devel/gettext-m4
 WRKSRC=				${WRKDIR}/itask-ng

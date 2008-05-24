@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/01 14:30:09 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=		dfu-util-4412
@@ -14,7 +14,7 @@ COMMENT=		Host side of the USB DFU protocol
 BUILD_DEPENDS+=		subversion-base>=1.4.2:../../devel/subversion-base
 
 SUBDIR=			${PKGNAME}
-WRKSRC= 		${WRKDIR}/${SUBDIR}
+WRKSRC=	${WRKDIR}/${SUBDIR}
 USE_TOOLS+=		autoconf automake tar
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	-prefix=${PREFIX}

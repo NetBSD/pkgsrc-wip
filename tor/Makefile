@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/04/18 08:13:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/24 15:34:15 tnn2 Exp $
 #
 
 DISTNAME=		tor-0.2.0.21-rc
@@ -34,7 +34,7 @@ RCD_SCRIPTS=		tor
 RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
 PKG_GROUPS=		${TOR_GROUP}
 PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
-PKG_HOME.${TOR_USER}=   ${PKG_HOME}
+PKG_HOME.${TOR_USER}=	${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700

@@ -1,8 +1,9 @@
 #
-# $NetBSD: Makefile.common,v 1.5 2005/02/16 22:24:25 airhead Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/05/24 15:34:14 tnn2 Exp $
 #
 # Common Makefile for packages that are installed using scsh-install-lib
 #
+# used by wip/sunterlib/Makefile
 
 #
 # XXX: This should actually be moved to shells/scsh/Makefile.common or

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/06 14:54:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:12 tnn2 Exp $
 #
 
 PKGNAME=		multisync-syncml-0.82
@@ -10,7 +10,7 @@ WRKSRC=			${WRKDIR}/multisync-0.82/plugins/syncml_plugin/
 
 DEPENDS+=		multisync>=0.82:../../wip/multisync
 BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
-USE_TOOLS+=             aclocal autoconf autoheader automake
+USE_TOOLS+=		aclocal autoconf autoheader automake
 
 pre-configure:
 	cd ${WRKSRC}/../.. && \

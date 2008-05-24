@@ -1,5 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/05/24 15:34:12 tnn2 Exp $
 #
+# used by wip/multisync/Makefile
+# used by wip/multisync-backup/Makefile
+# used by wip/multisync-ldap/Makefile
+# used by wip/multisync-opie/Makefile
+# used by wip/multisync-palm/Makefile
+# used by wip/multisync-syncml/Makefile
 
 DISTNAME=		multisync-0.82-1
 PKGREVISION=		1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/04 15:15:09 pmatias Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 DISTNAME=	ion-3-20080411
@@ -32,20 +32,20 @@ PKG_SYSCONFSUBDIR=	ion3
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Setting prefix paths.
-SUBST_FILES.fix-paths=          system.mk
-SUBST_SED.fix-paths=            -e 's,@PREFIX@,${PREFIX},g'
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Setting prefix paths.
+SUBST_FILES.fix-paths=		system.mk
+SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-SUBST_CLASSES+=                 remove-dl
-SUBST_STAGE.remove-dl=          pre-configure
-SUBST_MESSAGE.remove-dl=        Removing dl link.
-SUBST_FILES.remove-dl=          system.mk
-SUBST_SED.remove-dl=            -e 's,-ldl,,g'
+SUBST_CLASSES+=			remove-dl
+SUBST_STAGE.remove-dl=		pre-configure
+SUBST_MESSAGE.remove-dl=	Removing dl link.
+SUBST_FILES.remove-dl=		system.mk
+SUBST_SED.remove-dl=		-e 's,-ldl,,g'
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"

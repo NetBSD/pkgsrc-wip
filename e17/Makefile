@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2008/03/06 14:54:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.042
 PKGNAME=	e17-0.16.999.042
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=   http://download.enlightenment.org/snapshots/2008-01-25/ \
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.yazzy.org/pkgsrc/e17/ \
-                http://jfranz.users.bsdprojects.net/pkgsrc/e17/ 
+                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -16,7 +16,7 @@ COMMENT=	Enlightenment Window Manager, Development Release
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config automake autoconf
-USE_DIRS+=      xdg-1.4
+USE_DIRS+=	xdg-1.4
 
 EGDIR=		${PREFIX}/share/examples/enlightenment
 CONF_FILES=	${EGDIR}/sysactions.conf \
@@ -29,8 +29,8 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${EGDIR}
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.e17
-PKG_SUPPORTED_OPTIONS=  dbus
+PKG_OPTIONS_VAR=	PKG_OPTIONS.e17
+PKG_SUPPORTED_OPTIONS=	dbus
 
 .include "../../mk/bsd.options.mk"
 

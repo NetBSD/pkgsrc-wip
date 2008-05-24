@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/06 14:54:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:08 tnn2 Exp $
 #
 
 DISTNAME=	beryl-plugins-${BERYL_VERSION}
@@ -13,9 +13,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=     perl
-USE_TOOLS+=     gettext-tools
-USE_TOOLS+=     intltool
+USE_TOOLS+=	perl
+USE_TOOLS+=	gettext-tools
+USE_TOOLS+=	intltool
 USE_LIBTOOL+=	yes
 
 .include "../../wip/beryl-core/buildlink3.mk"

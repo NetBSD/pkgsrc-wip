@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2007/07/16 14:46:57 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.3 2008/05/24 15:34:08 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
-PKG_OPTIONS_GROUP.tls= 		gnutls ssl
-PKG_OPTIONS_GROUP.asyncns= 	libares libcares
+PKG_OPTIONS_GROUP.tls=	gnutls ssl
+PKG_OPTIONS_GROUP.asyncns=	libares libcares
 
-PKG_OPTIONS_REQUIRED_GROUPS= 	tls asyncns
+PKG_OPTIONS_REQUIRED_GROUPS=	tls asyncns
 
 PKG_SUPPORTED_OPTIONS+=		aria2-metalink
 PKG_SUGGESTED_OPTIONS+=		ssl libcares aria2-metalink

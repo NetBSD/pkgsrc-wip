@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/11/13 23:32:17 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:14 tnn2 Exp $
 #
 
 DISTNAME=	pulseaudio-${PULSE_SNAP_VERSION}
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 SPECIAL_PERMS+=		bin/pulseaudio ${SUID_ROOT_PERMS}
 
-NO_SRC_ON_FTP=  	# empty
+NO_SRC_ON_FTP=	# empty
 NO_SRC_ON_CDROM=	# empty
 
 AUTOMAKE_REQD=		1.10
@@ -66,9 +66,9 @@ PULSE_VERSION=		0.9
 
 REPLACE_SH=		bootstrap.sh autogen.sh
 
-SVN_REPOSITORIES=       pulseaudio
-SVN_TAG=                {${PULSE_TAG}}
-SVN_ROOT.pulseaudio=    svn://svn.0pointer.de/pulseaudio/trunk
+SVN_REPOSITORIES=	pulseaudio
+SVN_TAG=		{${PULSE_TAG}}
+SVN_ROOT.pulseaudio=	svn://svn.0pointer.de/pulseaudio/trunk
 SVN_MODULE.pulseaudio=	pulseaudio
 
 .include "../../mk/bsd.prefs.mk"
@@ -85,7 +85,7 @@ USE_FEATURES.pulseaudio+=rtsignals # XXX SIGRT{MIN,MAX}--any others here?
 MISSING_FEATURES+=	rtsignals
 .endif
 
-.if defined(MISSING_FEATURES) 
+.if defined(MISSING_FEATURES)
 .  if !empty(MISSING_FEATURES:Moss-dsp)
 BUILD_PADSP=		\#
 .  else
@@ -111,7 +111,7 @@ SUBST_CLASSES+=		pa_feat
 SUBST_FILES.pa_feat=	src/Makefile.am
 SUBST_STAGE.pa_feat=	pre-configure
 SUBST_MESSAGE.pa_feat=	Disabling build of padsp and/or rtpoll test.
-SUBST_VARS.pa_feat=	BUILD_PADSP BUILD_RTPOLL_TEST 
+SUBST_VARS.pa_feat=	BUILD_PADSP BUILD_RTPOLL_TEST
 
 SUBST_CLASSES+=		pa_pc
 SUBST_FILES.pa_pc=	*.pc.in
@@ -132,7 +132,7 @@ SUBST_SED.pa_pc+=	-e 's,@PTHREAD_LIBS@,,'
 PULSE_CPPFLAGS+=	-DPOSIX_MEMALIGN_IN_JEMALLOC
 .endif
 
-YESTERDAY!=     	expr `date +%s` - 86399
+YESTERDAY!=	expr `date +%s` - 86399
 PULSE_TAG!=		${DATE} +%Y%m%d
 PULSE_SNAP_VERSION!=		${DATE} -r ${YESTERDAY} +%Y%m%d
 

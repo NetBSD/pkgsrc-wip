@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/02 21:19:23 ondratu Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
 #
 
 DISTNAME=	hal-0.5.10
@@ -62,7 +62,7 @@ PLIST_SUBST+=	SS=
 UDEV_RULES_DIR?=	/etc/udev/rules.d
 CONF_FILES+=		${EGDIR}/90-hal.rules ${UDEV_RULES_DIR}/90-hal.rules
 .else
-PLIST_SUBST+=	SS=@comment 
+PLIST_SUBST+=	SS=@comment
 .endif
 
 CHECK_PORTABILITY_SKIP+= configure tools/hal-system-power-reboot

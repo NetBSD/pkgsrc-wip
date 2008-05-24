@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.rpm,v 1.1 2007/09/04 17:00:46 ghen Exp $
+# $NetBSD: Makefile.rpm,v 1.2 2008/05/24 15:34:13 tnn2 Exp $
 
 # This package installs from an RPM directly into "/usr" on a Linux
 # system, which can't be managed by pkgsrc.
 #
-NOT_FOR_PLATFORMS=      Linux-*-*
+NOT_FOR_PLATFORMS=	Linux-*-*
 
 EMUL_MODULES.linux=	x11
 EMUL_REQD=		suse>=7.3

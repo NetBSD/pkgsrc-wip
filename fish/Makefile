@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/29 14:59:32 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
 #
 DISTNAME=		fish-1.23.0
 CATEGORIES=		shells
@@ -12,7 +12,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	 --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+= 	--without-xsel
+CONFIGURE_ARGS+=	--without-xsel
 USE_NCURSES=		yes
 USE_TOOLS+=		gmake
 

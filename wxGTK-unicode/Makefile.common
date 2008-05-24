@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.4 2008/03/01 12:03:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/05/24 15:34:15 tnn2 Exp $
+# used by wip/wxGTK-contrib-unicode/Makefile
 
 DISTNAME=		wxGTK-2.6.3
 PKGNAME=		wxGTK-unicode-2.6.3

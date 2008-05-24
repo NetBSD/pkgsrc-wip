@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:09 tnn2 Exp $
 #
 
 DISTNAME=	castget-1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Command-line RSS enclosures dowloader
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=             gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 
 EGDIR+=		${PREFIX}/share/examples/castget
 

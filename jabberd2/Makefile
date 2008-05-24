@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/05/14 03:22:09 schnoebe Exp $
+# $NetBSD: Makefile,v 1.50 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 DISTNAME=		jabberd-2.1.24.1
@@ -77,7 +77,7 @@ DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite
 DOCFILES=		README.protocol README UPGRADE ChangeLog
 
-INSTALLATION_DIRS=      bin share/examples/jabberd share/doc/jabberd
+INSTALLATION_DIRS=	bin share/examples/jabberd share/doc/jabberd
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}

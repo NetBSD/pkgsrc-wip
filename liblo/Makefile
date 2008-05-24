@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/17 22:16:29 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:11 tnn2 Exp $
 #
 
 DISTNAME=	liblo-0.24
@@ -12,9 +12,9 @@ COMMENT=	Lightweight Open Sound Control implementation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	 	yes
-USE_LIBTOOL=	 	yes
-USE_TOOLS+=	 	pkg-config
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 
 CFLAGS+=		${PTHREAD_CFLAGS}
 PKGCONFIG_OVERRIDE+=	liblo.pc.in

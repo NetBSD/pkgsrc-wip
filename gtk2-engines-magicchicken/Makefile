@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/25 17:54:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
 
 DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
 PKGNAME=		gtk2-engines-magicchicken-1.1.1
@@ -13,7 +13,7 @@ USE_LIBTOOL=		YES
 USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
-WRKSRC=                 ${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
+WRKSRC=			${WRKDIR}/gtk2-engines-magicchicken-1.1.1.orig
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

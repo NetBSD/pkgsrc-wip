@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.7 2007/09/30 20:30:12 ondratu Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/05/24 15:34:08 tnn2 Exp $
+# used by wip/bluez-hcidump/Makefile
+# used by wip/bluez-utils/Makefile
+# used by wip/java-jbluez/Makefile
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 
