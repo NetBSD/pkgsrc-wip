@@ -1,4 +1,4 @@
-$Id: patch-aa,v 1.1.1.2 2008/05/24 15:39:02 jkuittinen Exp $
+$NetBSD: patch-aa,v 1.1.1.3 2008/05/24 15:52:09 jkuittinen Exp $
 
 --- src/milkyplay/drivers/jack/AudioDriver_JACK.cpp.orig	2008-02-17 22:12:31.000000000 +0200
 +++ src/milkyplay/drivers/jack/AudioDriver_JACK.cpp
