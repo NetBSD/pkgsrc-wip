@@ -1,0 +1,9 @@
+$NetBSD: TODO,v 1.1.1.1 2008/05/24 05:30:58 jkuittinen Exp $
+
+- JACK testing
+- ALSA support for Linux builds
+- Testing on platforms other than NetBSD. MilkyTracker is using a GNU
+  configure script, but will happily work without things like 'ranlib'
+
+tmpnam() will no longer be used in future releases, so there's no immediate
+need to patch it in pkgsrc.
