@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2901 2008/05/23 08:36:54 tnn2 Exp $
+# $Id: Makefile,v 1.2902 2008/05/24 22:33:08 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -943,10 +943,7 @@ SUBDIR+=	mksend
 SUBDIR+=	mlmmj
 SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
-SUBDIR+=	modular-xorg-macros
 SUBDIR+=	modular-xorg-server
-SUBDIR+=	modular-xorg-utils
-SUBDIR+=	modular-xorg-wip
 SUBDIR+=	moe
 SUBDIR+=	molmol
 SUBDIR+=	monkey-bubble
