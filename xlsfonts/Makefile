@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/03/12 08:34:03 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 22:31:41 tnn2 Exp $
 #
 
 DISTNAME=	xlsfonts-1.0.2
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com

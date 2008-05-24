@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/17 20:38:36 larnor Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 22:31:41 tnn2 Exp $
 #
 
 DISTNAME=		xclipboard-1.0.1
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		lars.nordlund@hem.utfors.se

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/04/03 13:32:36 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 22:31:41 tnn2 Exp $
 #
 
 DISTNAME=	xcursor-themes-1.0.1
 CATEGORIES=	x11 graphics
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/data/
+MASTER_SITES=	${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com
