@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/25 21:23:34 thomasklausner Exp $
 #
 
 DISTNAME=	pekwm-cvs
@@ -7,7 +7,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://pekwm.org/files/source/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pekwm.org/trac
 COMMENT=	Window manager based on aewm++ (CVS version)
 
