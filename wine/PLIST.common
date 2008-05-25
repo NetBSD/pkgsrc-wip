@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/19 13:56:58 asau Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2008/05/25 17:16:04 hoka_adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -9,7 +9,7 @@ bin/regsvr32
 bin/uninstaller
 bin/widl
 bin/wine
-bin/wine-pthread
+@comment bin/wine-pthread
 bin/wineboot
 bin/winebrowser
 bin/winebuild
@@ -633,7 +633,7 @@ lib/wine/fusion.dll.so
 lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
 lib/wine/gdiplus.dll.so
-${WINE_OPENGL}lib/wine/glu32.dll.so
+${PLIST.opengl}lib/wine/glu32.dll.so
 lib/wine/gphoto2.ds.so
 lib/wine/gpkcsp.dll.so
 lib/wine/hal.dll.so
@@ -709,7 +709,7 @@ lib/wine/libdxerr9.a
 lib/wine/libdxguid.a
 lib/wine/libgdi32.def
 lib/wine/libgdiplus.def
-${WINE_OPENGL}lib/wine/libglu32.def
+${PLIST.opengl}lib/wine/libglu32.def
 lib/wine/libhid.def
 lib/wine/libhlink.def
 lib/wine/libicmp.def
@@ -751,7 +751,7 @@ lib/wine/libolecli32.def
 lib/wine/liboledlg.def
 lib/wine/libolepro32.def
 lib/wine/libolesvr32.def
-${WINE_OPENGL}lib/wine/libopengl32.def
+${PLIST.opengl}lib/wine/libopengl32.def
 lib/wine/libpdh.def
 lib/wine/libpowrprof.def
 lib/wine/libpsapi.def
@@ -788,7 +788,7 @@ lib/wine/libuxtheme.def
 lib/wine/libvdmdbg.def
 lib/wine/libversion.def
 lib/wine/libwinecrt0.a
-${WINE_OPENGL}lib/wine/libwined3d.def
+${PLIST.opengl}lib/wine/libwined3d.def
 lib/wine/libwinedos.def
 lib/wine/libwininet.def
 lib/wine/libwinmm.def
@@ -881,7 +881,7 @@ lib/wine/olesvr.dll16
 lib/wine/olesvr32.dll.so
 lib/wine/olethk32.dll.so
 lib/wine/oleview.exe.so
-${WINE_OPENGL}lib/wine/opengl32.dll.so
+${PLIST.opengl}lib/wine/opengl32.dll.so
 lib/wine/pdh.dll.so
 lib/wine/powrprof.dll.so
 lib/wine/printui.dll.so
@@ -981,7 +981,7 @@ lib/wine/winebrowser.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
 lib/wine/winecoreaudio.drv.so
-${WINE_OPENGL}lib/wine/wined3d.dll.so
+${PLIST.opengl}lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedevice.exe.so
 lib/wine/winedos.dll.so
@@ -998,7 +998,7 @@ lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
 lib/wine/wineps16.drv16
 lib/wine/winevdm.exe.so
-lib/wine/winex11.drv.so
+${PLIST.x11}lib/wine/winex11.drv.so
 lib/wine/wing.dll16
 lib/wine/wing32.dll.so
 lib/wine/winhelp.exe.so
@@ -1043,51 +1043,51 @@ man/man1/wmc.1
 man/man1/wrc.1
 share/aclocal/wine.m4
 share/applications/wine.desktop
-share/wine/fonts/coue1255.fon
-share/wine/fonts/coue1256.fon
-share/wine/fonts/coue1257.fon
-share/wine/fonts/coure.fon
-share/wine/fonts/couree.fon
-share/wine/fonts/coureg.fon
-share/wine/fonts/courer.fon
-share/wine/fonts/couret.fon
-share/wine/fonts/cvgasys.fon
-share/wine/fonts/hvgasys.fon
-share/wine/fonts/jsmalle.fon
-share/wine/fonts/jvgasys.fon
-share/wine/fonts/marlett.ttf
-share/wine/fonts/smae1255.fon
-share/wine/fonts/smae1256.fon
-share/wine/fonts/smae1257.fon
-share/wine/fonts/smalle.fon
-share/wine/fonts/smallee.fon
-share/wine/fonts/smalleg.fon
-share/wine/fonts/smaller.fon
-share/wine/fonts/smallet.fon
-share/wine/fonts/ssee1255.fon
-share/wine/fonts/ssee1256.fon
-share/wine/fonts/ssee1257.fon
-share/wine/fonts/ssee874.fon
-share/wine/fonts/sserife.fon
-share/wine/fonts/sserifee.fon
-share/wine/fonts/sserifeg.fon
-share/wine/fonts/sserifer.fon
-share/wine/fonts/sserifet.fon
-share/wine/fonts/svgasys.fon
-share/wine/fonts/tahoma.ttf
-share/wine/fonts/tahomabd.ttf
-share/wine/fonts/vgas1255.fon
-share/wine/fonts/vgas1256.fon
-share/wine/fonts/vgas1257.fon
-share/wine/fonts/vgas874.fon
-share/wine/fonts/vgasys.fon
-share/wine/fonts/vgasyse.fon
-share/wine/fonts/vgasysg.fon
-share/wine/fonts/vgasysr.fon
-share/wine/fonts/vgasyst.fon
+${PLIST.x11}share/wine/fonts/coue1255.fon
+${PLIST.x11}share/wine/fonts/coue1256.fon
+${PLIST.x11}share/wine/fonts/coue1257.fon
+${PLIST.x11}share/wine/fonts/coure.fon
+${PLIST.x11}share/wine/fonts/couree.fon
+${PLIST.x11}share/wine/fonts/coureg.fon
+${PLIST.x11}share/wine/fonts/courer.fon
+${PLIST.x11}share/wine/fonts/couret.fon
+${PLIST.x11}share/wine/fonts/cvgasys.fon
+${PLIST.x11}share/wine/fonts/hvgasys.fon
+${PLIST.x11}share/wine/fonts/jsmalle.fon
+${PLIST.x11}share/wine/fonts/jvgasys.fon
+${PLIST.x11}share/wine/fonts/marlett.ttf
+${PLIST.x11}share/wine/fonts/smae1255.fon
+${PLIST.x11}share/wine/fonts/smae1256.fon
+${PLIST.x11}share/wine/fonts/smae1257.fon
+${PLIST.x11}share/wine/fonts/smalle.fon
+${PLIST.x11}share/wine/fonts/smallee.fon
+${PLIST.x11}share/wine/fonts/smalleg.fon
+${PLIST.x11}share/wine/fonts/smaller.fon
+${PLIST.x11}share/wine/fonts/smallet.fon
+${PLIST.x11}share/wine/fonts/ssee1255.fon
+${PLIST.x11}share/wine/fonts/ssee1256.fon
+${PLIST.x11}share/wine/fonts/ssee1257.fon
+${PLIST.x11}share/wine/fonts/ssee874.fon
+${PLIST.x11}share/wine/fonts/sserife.fon
+${PLIST.x11}share/wine/fonts/sserifee.fon
+${PLIST.x11}share/wine/fonts/sserifeg.fon
+${PLIST.x11}share/wine/fonts/sserifer.fon
+${PLIST.x11}share/wine/fonts/sserifet.fon
+${PLIST.x11}share/wine/fonts/svgasys.fon
+${PLIST.x11}share/wine/fonts/tahoma.ttf
+${PLIST.x11}share/wine/fonts/tahomabd.ttf
+${PLIST.x11}share/wine/fonts/vgas1255.fon
+${PLIST.x11}share/wine/fonts/vgas1256.fon
+${PLIST.x11}share/wine/fonts/vgas1257.fon
+${PLIST.x11}share/wine/fonts/vgas874.fon
+${PLIST.x11}share/wine/fonts/vgasys.fon
+${PLIST.x11}share/wine/fonts/vgasyse.fon
+${PLIST.x11}share/wine/fonts/vgasysg.fon
+${PLIST.x11}share/wine/fonts/vgasysr.fon
+${PLIST.x11}share/wine/fonts/vgasyst.fon
 share/wine/generic.ppd
 share/wine/wine.inf
-@dirrm share/wine/fonts
+${PLIST.x11}@dirrm share/wine/fonts
 @dirrm share/wine
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm man/fr.UTF-8/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/21 20:14:10 asau Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/25 17:16:04 hoka_adam Exp $
 
 DISTNAME=	wine-1.0-rc1
 #PKGREVISION=	1
@@ -7,9 +7,9 @@ MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	asau@inbox.ru
+MAINTAINER=	asau@inbox.ru adam.hoka@gmail.com
 HOMEPAGE=	http://www.winehq.com/
-COMMENT=	Free implementation of Windows on Unix (still alpha)
+COMMENT=	Free implementation of the Windows(tm) runtime on POSIX
 
 BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
@@ -39,33 +39,27 @@ LIBS+=			${LDFLAGS}
 
 .include "options.mk"
 
+# Wine can be buggy with GCC version 4.
+#
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-4*)
+
+.include "../../lang/gcc34/buildlink3.mk"
+
+pre-configure:
+	@echo "GCC 4.x detected, falling back to GCC 3.4!"
+.	include "../../lang/gcc34/preconfigure.mk"
+
+.endif
+
 post-install:
 .for tool in fnt2bdf
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
 		${DESTDIR}${PREFIX}/bin
 .endfor
 
-.include "../../audio/esound/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/lcms/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
