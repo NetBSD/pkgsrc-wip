@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/04/29 04:52:52 akihabara Exp $
+$NetBSD: distinfo,v 1.2 2008/05/25 12:28:16 akihabara Exp $
 
-SHA1 (ipsvd-0.12.1.tar.gz) = 9478f2e4f4e4522824b97dbc0e7e563b184c2295
-RMD160 (ipsvd-0.12.1.tar.gz) = 84878b3bba8aedb43ca9b93c8f75c8c8da76035a
-Size (ipsvd-0.12.1.tar.gz) = 76516 bytes
+SHA1 (ipsvd-0.14.0.tar.gz) = b43fe1c8ed6d75c6e143ef7e667cf37b54ec3d47
+RMD160 (ipsvd-0.14.0.tar.gz) = 3607622df2009ef23906be7639458e4cca8d3a09
+Size (ipsvd-0.14.0.tar.gz) = 77903 bytes
