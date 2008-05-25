@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/25 13:19:45 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
 
-MAINTAINER=	dillo@NetBSD.org
+OWNER=		dillo@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 
