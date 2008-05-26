@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 13:14:43 asau Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/26 13:42:26 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -19,38 +19,38 @@ USE_LANGUAGES=		c c++ fortran
 
 PKG_SYSCONFSUBDIR=	mpich
 
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
-CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
 USE_TOOLS+=		perl:run
 
 REPLACE_PYTHON+=	src/pm/mpd/*.py src/pm/mpd/test/*.py
 
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_callstack_ldflags.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_callstack_ldflags.conf \
 			${PKG_SYSCONFDIR}/mpe_callstack_ldflags.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_f77env.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_f77env.conf \
 			${PKG_SYSCONFDIR}/mpe_f77env.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_help.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_help.conf \
 			${PKG_SYSCONFDIR}/mpe_help.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_log.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_log.conf \
 			${PKG_SYSCONFDIR}/mpe_log.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_log_postlib.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_log_postlib.conf \
 			${PKG_SYSCONFDIR}/mpe_log_postlib.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_mpicheck.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpicheck.conf \
 			${PKG_SYSCONFDIR}/mpe_mpicheck.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_mpilog.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpilog.conf \
 			${PKG_SYSCONFDIR}/mpe_mpilog.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_mpitrace.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpitrace.conf \
 			${PKG_SYSCONFDIR}/mpe_mpitrace.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpe_nolog.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_nolog.conf \
 			${PKG_SYSCONFDIR}/mpe_nolog.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpicc.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
 			${PKG_SYSCONFDIR}/mpicc.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpicxx.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
-CONF_FILES+=		share/${PKGNAME}/examples/mpif77.conf \
+CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
 .include "../../lang/python/application.mk"
