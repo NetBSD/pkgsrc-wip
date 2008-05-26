@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/18 21:24:50 asau Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 11:32:14 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -17,9 +17,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
 
+PKG_SYSCONFSUBDIR=	mpich
+
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
+CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR}
 
 USE_TOOLS+=		perl:run
 
