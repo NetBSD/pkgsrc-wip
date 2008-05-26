@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/05/26 13:42:26 asau Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 17:53:00 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -13,6 +13,8 @@ CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
