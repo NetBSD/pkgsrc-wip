@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/20 22:54:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=	gtk2-theme-pack
@@ -123,6 +123,7 @@ DEPENDS+=	gtk2-engines-magicchicken>=1.0.2:../../wip/gtk2-engines-magicchicken
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
+USE_TOOLS+=		pax
 USE_DIRS+=		xdg-1.4
 
 # clean up a bit. remove .xvpics (GIMP and xv thumbnail directories) and

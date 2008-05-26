@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/05 01:32:00 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=	NaturalDocs-1.35
@@ -16,6 +16,7 @@ PERL5_REQD+=	5.5
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
+USE_TOOLS+=	pax
 
 NDDIR=		${PREFIX}/NaturalDocs
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:34 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 13:59:46 tnn2 Exp $
 #
 
 DISTNAME=		visionegg-0.9.9-demo
@@ -11,14 +11,15 @@ HOMEPAGE=		http://visionegg.sourceforge.net/
 COMMENT=		Documentation for py-visionegg in HTML format
 
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 
 PY_VE_DOC_DIR=		${PREFIX}/share/doc/${PKGNAME}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PY_VE_DOC_DIR}
-	cd ${WRKSRC}/doc/visionegg && ${PAX} -rw -pe * ${PY_VE_DOC_DIR}
+	cd ${WRKSRC}/doc/visionegg && pax -rw -pe * ${PY_VE_DOC_DIR}
 	${INSTALL_DATA_DIR} ${PY_VE_DOC_DIR}/reference
-	cd ${WRKSRC}/doc/reference/html && ${PAX} -rw -pe * \
+	cd ${WRKSRC}/doc/reference/html && pax -rw -pe * \
 		${PY_VE_DOC_DIR}/reference
 
 .include "../../mk/bsd.pkg.mk"

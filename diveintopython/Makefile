@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:41 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=		diveintopython-html-5.4
@@ -15,13 +15,14 @@ COMMENT=		Free book for experienced Python programmers
 HTMLDIR=		share/doc/diveintopython
 DOC_SRCDIR=		${WRKSRC}
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-NO_BUILD=	yes
+NO_BUILD=		yes
 NO_CONFIGURE=		yes
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${DOC_SRCDIR} && ${PAX} -rw -pp * ${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR} && pax -rw -pp * ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}

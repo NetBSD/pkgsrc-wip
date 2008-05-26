@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/07/02 19:04:35 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=		manual-split
@@ -14,11 +14,12 @@ COMMENT=		Latest documentation for MySQL database server
 HTMLDIR=	share/doc/${PKGNAME}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 NO_BUILD=	yes
+USE_TOOLS+=	pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKSRC} && ${PAX} -rw -pe manual_* ${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC} && pax -rw -pe manual_* ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/12/19 13:32:01 ghen Exp $
+# $NetBSD: options.mk,v 1.5 2008/05/26 13:59:44 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk14
 PKG_SUPPORTED_OPTIONS=		jdk14-jce jdk14-plugin inet6
@@ -14,7 +14,7 @@ PKG_OPTIONS_LEGACY_VARS+=	JDK14_USE_JCE:jdk14-jce
 DISTFILES+=			jce_policy-1_4_2.zip
 PLIST_SRC+=			PLIST.jce
 post-build:
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
+	cd ${WRKDIR}/jce ; pax -rw -pe . ${JDKIMAGEDIR}/jre/lib/security
 .endif
 
 ###

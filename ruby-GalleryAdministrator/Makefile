@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/10 07:49:59 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:46 tnn2 Exp $
 #
 
 DISTNAME=	gallery-0.0.8
@@ -13,8 +13,9 @@ COMMENT=	CGI and mail interface for [RAA:RubyPhoto] and zphoto
 DEPENDS+=	{${RUBY_PKGPREFIX}-imlib2>=0.4.3,${RUBY_PKGPREFIX}-RMagick>=1.8.1}:../../wip/ruby-imlib2
 DEPENDS+=	{${RUBY_PKGPREFIX}-uconv-[0-9]*,${RUBY_PKGPREFIX}-iconv-[0-9]*}:../../converters/ruby-uconv
 
-USE_RUBY=	yes
 NO_BUILD=	yes
+USE_TOOLS+=	pax
+USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rubyphoto.rb interface/admin.rb interface/mail_admin.rb \
 		sample/counter.rb sample/initgallery.rb \
@@ -28,7 +29,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${RUBY_DOCDIR:Q}/gallery
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR:Q}/gallery
-	cd ${WRKSRC:Q}/sample && ${PAX} -rw -pp * ${RUBY_EXAMPLESDIR:Q}/gallery
+	cd ${WRKSRC:Q}/sample && pax -rw -pp * ${RUBY_EXAMPLESDIR:Q}/gallery
 	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.en/.svn
 	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.ja/.svn
 	${RM} -r ${RUBY_EXAMPLESDIR:Q}/gallery/templates/.ja.i/.svn

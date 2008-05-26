@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/16 16:08:38 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc3
@@ -13,6 +13,7 @@ COMMENT=	Light weight yet full featured multilingual webmail
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php
 
 NO_BUILD=	yes
+USE_TOOLS+=	pax
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
@@ -49,10 +50,10 @@ pre-install:
 do-install:
 	${INSTALL_DATA_DIR} ${ILOHAMAIL_DIR}
 	${INSTALL_DATA_DIR} ${ILOHAMAIL_DOC_DIR}
-	cd ${WRKSRC}/IlohaMail && ${PAX} -r -w data include index.html lang \
+	cd ${WRKSRC}/IlohaMail && pax -r -w data include index.html lang \
 		source ${ILOHAMAIL_DIR}
-	cd ${WRKSRC}/IlohaMail && ${PAX} -r -w conf ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -r -w COPYING INSTALL Manual MySQL README \
+	cd ${WRKSRC}/IlohaMail && pax -r -w conf ${EGDIR}
+	cd ${WRKSRC} && pax -r -w COPYING INSTALL Manual MySQL README \
 		RELEASE_NOTES THEMES TODO UPGRADING ${ILOHAMAIL_DOC_DIR}
 	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${ILOHAMAIL_DIR}
 

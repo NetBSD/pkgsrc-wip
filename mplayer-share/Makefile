@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/21 07:31:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 13:59:45 tnn2 Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,7 @@ DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
+USE_TOOLS+=	pax
 
 CVS_REPOSITORIES=	mplayer
 CVS_ROOT.mplayer=	:pserver:anonymous:@mplayerhq.hu:/cvsroot/mplayer
@@ -28,7 +29,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${PREFIX}/share/mplayer
 	(cd ${WRKSRC}/DOCS && \
-		${PAX} -rwpppm * ${PREFIX}/share/mplayer/DOCS); \
+		pax -rwpppm * ${PREFIX}/share/mplayer/DOCS); \
 	${FIND} ${PREFIX}/share/mplayer/DOCS -type d -exec ${CHMOD} \
      		${PKGDIRMODE} \{\} \;
 	${FIND} ${PREFIX}/share/mplayer/DOCS -type f -exec ${CHMOD} \

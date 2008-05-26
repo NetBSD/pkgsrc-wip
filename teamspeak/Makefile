@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/10 13:48:06 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 DISTNAME=		ts2_client_rc2_2032
@@ -12,6 +12,7 @@ HOMEPAGE=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/
 COMMENT=		Talk to other people over the internet
 
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 LICENSE=		fee-based-commercial-use
 
 SUBST_CLASSES+=		ts
@@ -28,7 +29,7 @@ do-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${TS_BASEDIR}
-	cd ${TS_SRCDIR} && ${PAX} -rw . ${TS_BASEDIR}
+	cd ${TS_SRCDIR} && pax -rw . ${TS_BASEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/teamspeak.sh ${PREFIX}/bin/teamspeak
 
 .include "../../mk/bsd.pkg.mk"

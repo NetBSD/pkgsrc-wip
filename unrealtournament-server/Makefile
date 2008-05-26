@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 DISTNAME=	ut-server-436
@@ -14,10 +14,11 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
 
 BUILD_DIRS=		# empty
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/UnrealTournament-server
-	cd ${WRKSRC} && ${PAX} -rw -pm . ${PREFIX}/UnrealTournament-server
+	cd ${WRKSRC} && pax -rw -pm . ${PREFIX}/UnrealTournament-server
 	cd ${PREFIX}/UnrealTournament-server && \
 		${LN} -s -f libSDL-1.1.so.0 libSDL-1.2.so.0
 

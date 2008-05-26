@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/06 05:58:55 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/26 13:59:46 tnn2 Exp $
 #
 
 DISTNAME=	qpsmtpd-0.40
@@ -17,13 +17,14 @@ DEPENDS+=	p5-MIME-Base64>=0:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-DNS>=0.39:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
-INSTALLATION_DIRS=  share/examples/qpsmtpd/
+USE_TOOLS+=	pax
 
+INSTALLATION_DIRS=	share/examples/qpsmtpd/
 
 PERL5_PACKLIST=	auto/qpsmtpd/.packlist
 
 post-install:
-	cd ${WRKSRC}/plugins/ && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/examples/qpsmtpd
+	cd ${WRKSRC}/plugins/ && pax -rw . ${DESTDIR}${PREFIX}/share/examples/qpsmtpd
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/10 07:47:52 obache Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:46 tnn2 Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -12,6 +12,7 @@ COMMENT=	Imlib2 bindings for Ruby
 
 VER=		0.5.2
 
+USE_TOOLS+=		pax
 REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 RUBY_HAS_ARCHLIB=	yes
 RUBY_REQD=		1.8.0
@@ -24,7 +25,7 @@ DOCS=		AUTHORS COPYING ChangeLog README TODO
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/imlib2
-	cd ${WRKSRC}/examples && ${PAX} -rw -pp -pm . ${RUBY_EXAMPLESDIR}/imlib2
+	cd ${WRKSRC}/examples && pax -rw -pp -pm . ${RUBY_EXAMPLESDIR}/imlib2
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/imlib2
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/imlib2

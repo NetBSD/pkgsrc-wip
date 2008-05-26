@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/30 21:45:19 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=	${PKGNAME}.src
@@ -15,7 +15,7 @@ BROKEN=		FIXME: I build fine now, but fail to load some libs.
 WRKSRC=		${WRKDIR}/last.fm-1.3.2.13
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 QMAKE=		${QTDIR}/bin/qmake
 LFMDATA=	${PREFIX}/share/last.fm

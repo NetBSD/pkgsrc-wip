@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/11/29 01:03:35 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 PKGVERSION=		1.68
@@ -13,7 +13,7 @@ COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
 
 BUILD_DEFS+=		VARBASE
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pax
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/yaws
@@ -55,7 +55,7 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/doc/yaws.pdf ${DOCDIR}
 
-	cd ${WRKSRC}/www && ${PAX} -rw . ${WWWDIR}
+	cd ${WRKSRC}/www && pax -rw . ${WWWDIR}
 
 	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${PREFIX}/${PKGMANDIR}/man5

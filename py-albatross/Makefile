@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/14 01:28:10 jlamwww Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 13:59:46 tnn2 Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -12,6 +12,7 @@ COMMENT=	Toolkit for Stateful Web Applications
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
+USE_TOOLS+=	pax
 
 RUNTIME_DIR?=	/var/run/albatross
 LOGDIR?=	/var/log/albatross
@@ -62,7 +63,7 @@ PYTHON_PATCH_SCRIPTS+=	samples/tree3/tree.py
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	cd ${WRKSRC}/samples && ${FIND} . -type f \! -name \.cvsignore \
-		-print | ${PAX} -rw -pp -pm ${EXAMPLEDIR}
+		-print | pax -rw -pp -pm ${EXAMPLEDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

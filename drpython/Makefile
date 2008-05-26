@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/30 22:45:30 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=		drpython-2.1.9
@@ -12,6 +12,7 @@ COMMENT=		Source code editor, written in Python, for Python
 
 NO_CONFIGURE=
 NO_BUILD=
+USE_TOOLS+=		pax
 
 DRPYTHON_DIR=		share/drpython
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC

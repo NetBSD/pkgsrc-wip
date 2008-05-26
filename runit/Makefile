@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/25 12:31:52 akihabara Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 13:59:46 tnn2 Exp $
 
 DISTNAME=	runit-1.9.0
 CATEGORIES=	sysutils
@@ -13,6 +13,7 @@ CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 PKGEXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
 
+USE_TOOLS+=		pax
 DJB_ERRNO_HACK=		NO
 DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
@@ -28,7 +29,7 @@ INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man/*.8 ${PREFIX}/${PKGMANDIR}/man8
-	cd ${WRKSRC}/etc && ${PAX} -rwppm . ${PKGEXAMPLEDIR}
+	cd ${WRKSRC}/etc && pax -rwppm . ${PKGEXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${PKGDOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${PKGDOCDIR}
 

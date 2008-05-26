@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/27 17:37:15 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=		CoreReferenceJS15
@@ -17,11 +17,12 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKDIR} && ${PAX} -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
+	cd ${WRKDIR} && pax -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
 	${CHMOD} -R go-w ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \

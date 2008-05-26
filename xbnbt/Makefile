@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/08/30 18:26:57 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:47 tnn2 Exp $
 
 DISTNAME=	xbnbt-81b.3.5
 CATEGORIES=	net
@@ -12,7 +12,7 @@ COMMENT=	Alternative BitTorrent tracker written in C++
 WRKSRC=		${WRKDIR}/xbnbt/bnbt/src
 
 USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 MAKE_FILE=	makefile
 BUILD_TARGET+=	bnbt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/19 16:51:20 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -11,10 +11,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-unix.mcs.anl.gov/~gawor/ldap/
 COMMENT=		Java based LDAP browser and editor
 
+NO_CONFIGURE=		yes
 USE_JAVA=		run
 USE_JAVA2=		yes
-
-NO_CONFIGURE=		yes
+USE_TOOLS+=		pax
 
 LBE_DIR=		${PREFIX}/lib/ldapbrowser
 
@@ -26,7 +26,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${LBE_DIR}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${LBE_DIR}
+	cd ${WRKSRC} && pax -rwp ma . ${LBE_DIR}
 	${LN} -s ${LBE_DIR}/lbe.sh ${PREFIX}/bin/lbe
 
 .include "../../mk/java-vm.mk"

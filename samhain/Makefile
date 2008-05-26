@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/08 09:31:31 moubctez Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:46 tnn2 Exp $
 
 DISTNAME=	samhain_signed-2.4.4
 PKGNAME=	samhain-2.4.4
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 RCD_SCRIPTS=	samhain
 EGDIR=		${PREFIX}/share/examples/samhain
 CONF_FILES=	${EGDIR}/samhainrc ${PKG_SYSCONFDIR}/samhainrc
+USE_TOOLS+=	pax
 
 CONFIGURE_ARGS+=	--with-config-file=${PREFIX}/etc/samhainrc
 CONFIGURE_ARGS+=	--with-data-file=${PREFIX}/etc/samhain.db

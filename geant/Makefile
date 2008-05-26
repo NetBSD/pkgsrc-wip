@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 11:50:59 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=	geant4.8.1.p01
@@ -13,7 +13,7 @@ COMMENT=	Toolkit for the simulation of the passage of particles through matter
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 MAKE_FILE=	GNUmakefile
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	# empty

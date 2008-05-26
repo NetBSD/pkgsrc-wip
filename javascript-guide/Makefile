@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/03 16:43:12 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=		CoreGuideJS15
@@ -16,6 +16,7 @@ RESTRICTED=		I am not sure if we can redistribute it
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}

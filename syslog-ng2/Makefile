@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 PKGVERSION=	2.0.0
@@ -14,7 +14,7 @@ COMMENT=	Syslog-ng embodies the next generation of logging systems
 
 CONFLICTS=	syslog-ng-[0-9]*
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config pax
 
 GNU_CONFIGURE=	yes
 
@@ -33,7 +33,7 @@ SUBST_MESSAGE.conf=	Fixing configuration file paths.
 
 pre-build:
 	cd ${WRKSRC}/doc/reference && \
-		${PAX} -O -zrf ${WRKSRC}/doc/reference/syslog-ng.html.tar.gz
+		pax -O -zrf ${WRKSRC}/doc/reference/syslog-ng.html.tar.gz
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

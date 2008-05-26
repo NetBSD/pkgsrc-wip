@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/01 19:12:19 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -23,7 +23,7 @@ HOMEPAGE=		http://nehe.gamedev.net/
 COMMENT=		OpenGL tutorials from NeHe.gamedev.net - ${NEHE_OPENGL_TUT_FLAVOUR} versions
 
 DIST_SUBDIR=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 RESTRICTED=		I am not sure if we can redistribute it
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -66,7 +66,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${NEHE_OPENGL_TUT_DIR}
-	cd ${WRKSRC} && ${PAX} -rw -pe [Ll]esson* ${PREFIX}/${NEHE_OPENGL_TUT_DIR}
+	cd ${WRKSRC} && pax -rw -pe [Ll]esson* ${PREFIX}/${NEHE_OPENGL_TUT_DIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} ${NEHE_OPENGL_TUT_DIR} -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${NEHE_OPENGL_TUT_DIR} -type d -print | \

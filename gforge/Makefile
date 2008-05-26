@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/12 21:13:41 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 13:59:44 tnn2 Exp $
 
 DISTNAME=	gforge-3.1
 PKGREVISION=	2
@@ -66,7 +66,7 @@ SUBST_SED.crontabs=	-e "s|~/alexandria|${BACKENDDIR}|g"
 
 REPLACE_BASH+=		utils/decode_images.sh
 REPLACE_BASH+=		backend/shell/apache.sh
-USE_TOOLS+=		bash:run
+USE_TOOLS+=		bash:run pax
 
 do-build:
 
@@ -75,9 +75,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/contrib/autoconf/local.inc.in \
 		${ETCDIR}/local.inc-dist
-	cd ${WRKSRC} && ${PAX} -wr common contrib db www ${DATADIR}
-	cd ${WRKSRC} && ${PAX} -wr backend cronjobs monitor utils ${BACKENDDIR}
-	cd ${WRKSRC}/docs && ${PAX} -wr * ${DOCDIR}
+	cd ${WRKSRC} && pax -wr common contrib db www ${DATADIR}
+	cd ${WRKSRC} && pax -wr backend cronjobs monitor utils ${BACKENDDIR}
+	cd ${WRKSRC}/docs && pax -wr * ${DOCDIR}
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

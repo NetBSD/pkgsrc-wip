@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:44 tnn2 Exp $
 
 DISTNAME=	hydrogen-0.9.3
 PKGNAME=	${DISTNAME:S/-/-current-/}
@@ -12,7 +12,7 @@ COMMENT=	Real time drum machine/sequencer
 CONFLICTS+=	hydrogen-[0-9]* libhydrogen-[0-9]*
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 GNU_CONFIGURE=	yes
 USE_DIRS+=	xdg-1.4
 LDFLAGS+=	-lossaudio
@@ -33,7 +33,7 @@ DEPENDS+=	liblrdf>0:../../textproc/liblrdf
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} hydrogen hydrogenPlayer ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/hydrogen/data
-	cd ${WRKSRC}/data && ${PAX} -rwpp . ${PREFIX}/share/hydrogen/data
+	cd ${WRKSRC}/data && pax -rwpp . ${PREFIX}/share/hydrogen/data
 	${INSTALL_LIB_DIR} ${PREFIX}/lib/hydrogen/plugins
 	cd ${WRKSRC}/plugins/wasp && ${INSTALL_LIB} *.so ${PREFIX}/lib/hydrogen/plugins
 	${INSTALL_MAN} ${WRKSRC}/data/doc/man/C/hydrogen.1 ${PREFIX}/${PKGMANDIR}/man1

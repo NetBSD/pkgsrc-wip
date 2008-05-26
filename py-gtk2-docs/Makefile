@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 16:51:33 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 13:59:46 tnn2 Exp $
 #
 
 DISTNAME=		py-gtk2-docs
@@ -15,6 +15,7 @@ COMMENT=		Tutorial and reference manual for PyGTK 2.0
 
 NO_BUILD=	# yes, certainly
 NO_CONFIGURE=	# heck, why not!
+USE_TOOLS+=	pax
 
 HTMLDIR=	share/doc/${DISTNAME}
 DOC_SRCDIR=	${WRKSRC}
@@ -23,7 +24,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${DOC_SRCDIR} && ${PAX} -rw -pe pygtk* ${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR} && pax -rw -pe pygtk* ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}

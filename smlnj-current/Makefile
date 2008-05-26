@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/25 12:31:09 pulahti Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -30,7 +30,7 @@ SML_VERSION=	110.59
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 SML_BASE=	${PREFIX}/lib/smlnj
 SML_LIBDIR=	${SML_BASE}/lib
@@ -91,7 +91,7 @@ do-build:
 # 3. install links to executables in $PREFIX/bin
 do-install:
 	${INSTALL_DATA_DIR} ${SML_BASE}
-	cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${SML_BASE}
+	cd ${WRKDIR} && pax -rw -pam bin lib ${SML_BASE}
 	cd ${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
 
 .include "../../mk/bsd.pkg.mk"

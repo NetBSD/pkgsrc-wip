@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.dataset,v 1.4 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile.dataset,v 1.5 2008/05/26 13:59:44 tnn2 Exp $
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dataset
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dataset/geography
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dataset/geography/${PKGNAME}
 	cd ${WRKSRC} &&							      \
-		${PAX} -rw . ${PREFIX}/share/dataset/geography/${PKGNAME}/
+		pax -rw . ${PREFIX}/share/dataset/geography/${PKGNAME}/

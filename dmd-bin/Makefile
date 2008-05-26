@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/30 22:45:30 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:44 tnn2 Exp $
 #
 
 DISTNAME=		dmd
@@ -13,6 +13,8 @@ COMMENT=		The D Programming Language from Digital Mars
 
 LINUX_BINPKG_FMT=	plain
 HTMLDIR=		share/doc/${PKGNAME}
+
+USE_TOOLS+=		pax
 
 do-install:
 	#

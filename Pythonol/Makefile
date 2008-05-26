@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/22 16:49:23 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/26 13:59:43 tnn2 Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -20,7 +20,7 @@ PY_PATCHPLIST=		yes
 
 TARGET_DIR=		${PREFIX}/${PYSITELIB}/Pythonol
 SCRIPTNAME=		${PREFIX}/bin/pythonol
-USE_TOOLS+=		printf
+USE_TOOLS+=		printf pax
 
 do-build:
 	${RM} -r ${WRKSRC:Q}/sqlite

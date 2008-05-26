@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/01/20 15:23:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.41 2008/05/26 13:59:44 tnn2 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -129,7 +129,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
-	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
+	cd ${JDKIMAGEDIR} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs
 	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
 	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock

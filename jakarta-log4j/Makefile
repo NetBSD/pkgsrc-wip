@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/29 17:43:16 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 13:59:44 tnn2 Exp $
 
 DISTNAME=	jakarta-log4j-1.2.8
 CATEGORIES=	www
@@ -11,15 +11,16 @@ COMMENT=	Logging facility for Java
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_JAVA=	run
+USE_TOOLS+=	pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/dist/lib/log4j-1.2.8.jar ${PREFIX}/lib/java/log4j.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jakarta-log4j
-	cd ${WRKSRC}/docs && ${PAX} -rwpe . ${PREFIX}/share/doc/java/jakarta-log4j
+	cd ${WRKSRC}/docs && pax -rwpe . ${PREFIX}/share/doc/java/jakarta-log4j
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/java/jakarta-log4j/COPYRIGHT
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/jakarta-log4j
-	cd ${WRKSRC}/examples && ${PAX} -rwpe . ${PREFIX}/share/examples/java/jakarta-log4j
+	cd ${WRKSRC}/examples && pax -rwpe . ${PREFIX}/share/examples/java/jakarta-log4j
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/23 13:18:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 13:59:45 tnn2 Exp $
 
 DISTNAME=		linuxdcpp
 PKGNAME=		linuxdcpp-${LDCPP_VERSION}
@@ -17,7 +17,7 @@ CVS_MODULE.linuxdcpp=	linuxdcpp
 
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.4
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config pax
 
 PTHREAD_OPTS+=		native
 NO_CONFIGURE=		yes
@@ -39,8 +39,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp
 	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/glade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/pixmaps
-	cd ${WRKSRC}/glade && ${PAX} -rw *.glade ${PREFIX}/share/linuxdcpp/glade
-	cd ${WRKSRC}/pixmaps && ${PAX} -rw *.png ${PREFIX}/share/linuxdcpp/pixmaps
+	cd ${WRKSRC}/glade && pax -rw *.glade ${PREFIX}/share/linuxdcpp/glade
+	cd ${WRKSRC}/pixmaps && pax -rw *.png ${PREFIX}/share/linuxdcpp/pixmaps
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/compiler.mk"

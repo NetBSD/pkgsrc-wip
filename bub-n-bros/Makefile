@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/13 13:03:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 13:59:43 tnn2 Exp $
 #
 
 DISTNAME=		bubbros-1.6
@@ -16,6 +16,8 @@ PYTHON_VERSIONS_INCOMPATIBLE+=	25
 
 MAKE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
+
+USE_TOOLS+=		pax
 
 PYTHON_PATCH_SCRIPTS+=	bubbob/bb.py
 PYTHON_PATCH_SCRIPTS+=	bubbob/doc/bonus-doc.py
@@ -40,7 +42,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/games/${PKGBASE}
-	cd ${WRKSRC} && ${PAX} ${PAX_SUBST} \
+	cd ${WRKSRC} && pax ${PAX_SUBST} \
 		-rwpe . ${DESDIR}${PREFIX}/games/${PKGBASE}
 
 .include "../../lang/python/application.mk"

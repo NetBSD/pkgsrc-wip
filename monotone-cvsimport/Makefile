@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/03/26 04:07:11 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/26 13:59:45 tnn2 Exp $
 #
 
 DISTNAME=	monotone-cvsimport-20080325
@@ -18,7 +18,7 @@ GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 UNLIMIT_RESOURCES+=	datasize
-USE_TOOLS+=		gmake makeinfo msgfmt xgettext msgmerge
+USE_TOOLS+=		gmake makeinfo msgfmt xgettext msgmerge pax
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 

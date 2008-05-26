@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2008/01/20 15:23:09 tnn2 Exp $
+# $NetBSD: options.mk,v 1.10 2008/05/26 13:59:45 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin inet6
@@ -19,7 +19,7 @@ MAKE_ENV+=		DONT_ENABLE_IPV6=YES
 DISTFILES+=	jce_policy-1_5_0.zip
 PLIST_SRC+=	PLIST.jce
 post-build:
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pp . ${JDKIMAGEDIR}/jre/lib/security
+	cd ${WRKDIR}/jce ; pax -rw -pp . ${JDKIMAGEDIR}/jre/lib/security
 .endif
 
 

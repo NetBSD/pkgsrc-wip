@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/05/26 13:59:45 tnn2 Exp $
 # used by wip/jdk14/Makefile
 # used by wip/jdk15/Makefile
 # used by wip/jdk16/Makefile
@@ -20,7 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake m4
+USE_TOOLS+=		gmake m4 pax
 
 BUILD_TARGET=		all # added to below
 BUILD_DIRS=		control/make

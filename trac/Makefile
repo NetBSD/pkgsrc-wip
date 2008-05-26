@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/23 15:47:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 13:59:47 tnn2 Exp $
 #
 
 DISTNAME=	Trac-0.11rc1
@@ -14,6 +14,7 @@ COMMENT=	Integrated SCM, wiki, issue tracker and project environment
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.4.1:../../wip/genshi
 

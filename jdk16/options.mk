@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/01/20 15:23:09 tnn2 Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/26 13:59:45 tnn2 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk16
 PKG_SUPPORTED_OPTIONS=		jdk16-jce inet6 debug fastdebug # jdk16-plugin
@@ -32,7 +32,7 @@ MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=false
 DISTFILES+=	jce_policy-6.zip
 PLIST_SRC+=	PLIST.jce
 post-build:
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pp . ${JDKIMAGEDIR}/jre/lib/security
+	cd ${WRKDIR}/jce ; pax -rw -pp . ${JDKIMAGEDIR}/jre/lib/security
 .endif
 
 
