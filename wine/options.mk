@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/05/25 17:16:04 hoka_adam Exp $
+# $NetBSD: options.mk,v 1.3 2008/05/26 20:58:51 hoka_adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups opengl sane ssl dbus x11 esound
@@ -13,7 +13,7 @@ PLIST_VARS+=	x11 opengl
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-.include "../../databases/openldap-client/buildlink3.mk"    
+.include "../../databases/openldap-client/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ldap
 .endif

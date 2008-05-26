@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/05/25 17:16:04 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 20:58:51 hoka_adam Exp $
 
 DISTNAME=	wine-1.0-rc1
+# Remove this after release!
+PKGNAME=	${DISTNAME:S/0-/0/}
 #PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
@@ -47,7 +49,7 @@ LIBS+=			${LDFLAGS}
 .include "../../lang/gcc34/buildlink3.mk"
 
 pre-configure:
-	@echo "GCC 4.x detected, falling back to GCC 3.4!"
+	${ECHO} "GCC 4.x detected, falling back to GCC 3.4!"
 .	include "../../lang/gcc34/preconfigure.mk"
 
 .endif

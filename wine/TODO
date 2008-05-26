@@ -1,5 +1,6 @@
-$Id: TODO,v 1.3 2008/05/25 17:16:04 hoka_adam Exp $
+$Id: TODO,v 1.4 2008/05/26 20:58:51 hoka_adam Exp $
 
+* FIX BUILDLINK3!
 * Make it run on NetBSD
 * Send patches upstream!
 * NetBSD-4.99.54/amd64:
