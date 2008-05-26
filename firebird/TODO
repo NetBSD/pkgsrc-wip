@@ -1,13 +1,19 @@
-$Id: TODO,v 1.8 2008/03/11 22:51:05 hoka_adam Exp $
+$Id: TODO,v 1.9 2008/05/26 14:21:34 hoka_adam Exp $
+
+-----------
+Investigate and fix this:
+-----------
+In file included from ../src/jrd/dsc.cpp:29:
+../src/jrd/../jrd/common.h:354:2: error: #error Please add support for other ports
+../src/jrd/../jrd/../jrd/../jrd/RecordNumber.h:34: error: 'QUADCONST' was not declared in this scope
+../src/jrd/../jrd/../jrd/../jrd/RecordNumber.h:35: error: 'QUADCONST' was not declared in this scope
+../src/jrd/../jrd/../jrd/../jrd/RecordNumber.h: In member function 'bool RecordNumber::checkNumber(USHORT, USHORT) const':
+../src/jrd/../jrd/../jrd/../jrd/RecordNumber.h:162: error: 'QUADCONST' was not declared in this scope
+../src/jrd/../jrd/gds_proto.h: At global scope:
+../src/jrd/../jrd/gds_proto.h:37: warning: large integer implicitly truncated to unsigned type
+------------
 
 These comments were for the 1.5 version of the package:
-
-Install appropriate destination (/usr/pkg/bin, etc...) instead of
-${PREFIX}/firebird.
-
-	-- nel@soraneko.com
-		
-		Almost done -- Adam Hoka
 
 Firebird can be compiled as "classic" and "super" version -- I have
 no idea how do they differ; I think, when it is ready, Makefile
