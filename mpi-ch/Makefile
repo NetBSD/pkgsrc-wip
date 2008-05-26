@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 11:32:14 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 13:14:43 asau Exp $
 
 DISTNAME=	mpich2-1.0.7
 CATEGORIES=	parallel
@@ -20,9 +20,9 @@ USE_LANGUAGES=		c c++ fortran
 PKG_SYSCONFSUBDIR=	mpich
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
-CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR}
 
 USE_TOOLS+=		perl:run
 
