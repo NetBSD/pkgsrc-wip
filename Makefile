@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2902 2008/05/24 22:33:08 tnn2 Exp $
+# $Id: Makefile,v 1.2903 2008/05/27 16:57:35 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1547,6 +1547,7 @@ SUBDIR+=	pynfo
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
+SUBDIR+=	pysolfc
 SUBDIR+=	pytz
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
@@ -1639,6 +1640,7 @@ SUBDIR+=	sdlmess
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
+SUBDIR+=	service
 SUBDIR+=	sex
 SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
@@ -1698,7 +1700,6 @@ SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	speex-devel
 SUBDIR+=	spfmilter
-SUBDIR+=	sqlitebrowser
 SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
 SUBDIR+=	squirrelmail-compatibility
