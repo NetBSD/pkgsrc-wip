@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/27 13:28:59 hoka_adam Exp $
+bin/service
