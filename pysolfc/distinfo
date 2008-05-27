@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2008/05/27 11:24:02 gduzan Exp $
+
+SHA1 (PySolFC-1.1.tar.bz2) = 5ff4d8c7f238c5dab6122e916aeae2de2d945123
+RMD160 (PySolFC-1.1.tar.bz2) = 2aa02c07294270281d5a685eb6b19086c85a7171
+Size (PySolFC-1.1.tar.bz2) = 3667355 bytes
+SHA1 (PySolFC-Cardsets-1.1.tar.bz2) = d0342409c8a21b146a9aa9016df017c8064696bc
+RMD160 (PySolFC-Cardsets-1.1.tar.bz2) = 070a1918d53882f472b4b2f6c2b79b78e2bd4007
+Size (PySolFC-Cardsets-1.1.tar.bz2) = 27894386 bytes
+SHA1 (patch-aa) = 5a5ba738a2bdb4abc5fbc966e0eae5c6eb7fd9af
