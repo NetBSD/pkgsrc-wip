@@ -1,7 +1,8 @@
-$Id: TODO,v 1.4 2008/05/26 20:58:51 hoka_adam Exp $
+$Id: TODO,v 1.5 2008/05/27 09:07:57 asau Exp $
 
 * FIX BUILDLINK3!
 * Make it run on NetBSD
 * Send patches upstream!
 * NetBSD-4.99.54/amd64:
 actxprxy_servprov_p.c:272:2: error: #error Currently only Wine and WIN32 are supported.
+* Recheck x11 and other options after update to 1.0 RC2.

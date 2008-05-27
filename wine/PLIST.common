@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2008/05/25 17:16:04 hoka_adam Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2008/05/27 09:07:57 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -27,7 +27,6 @@ bin/winepath
 bin/wineprefixcreate
 bin/wineserver
 bin/wineshelllink
-bin/winhelp
 bin/wmc
 bin/wrc
 include/wine/debug.h
@@ -1001,7 +1000,8 @@ lib/wine/winevdm.exe.so
 ${PLIST.x11}lib/wine/winex11.drv.so
 lib/wine/wing.dll16
 lib/wine/wing32.dll.so
-lib/wine/winhelp.exe.so
+lib/wine/winhelp.exe16
+lib/wine/winhlp32.exe.so
 lib/wine/winhttp.dll.so
 lib/wine/wininet.dll.so
 lib/wine/winmm.dll.so
