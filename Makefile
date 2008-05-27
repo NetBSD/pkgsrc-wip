@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2903 2008/05/27 16:57:35 tnn2 Exp $
+# $Id: Makefile,v 1.2904 2008/05/27 18:29:20 shindenmorr Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1538,7 +1538,6 @@ SUBDIR+=	py-xdg
 SUBDIR+=	py-xlrd
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
-SUBDIR+=	pycrypto
 SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pygments
