@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2905 2008/05/28 11:18:47 guigui2 Exp $
+# $Id: Makefile,v 1.2906 2008/05/28 12:09:38 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1362,6 +1362,7 @@ SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pekwm-nightly
 #SUBDIR+=	perl59			# broken, breaks bulk build badly.
+SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
 #SUBDIR+=	php-doc			# not a package
