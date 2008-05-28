@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/04 20:25:14 guigui2 Exp $
-bin/mpdscribble
-man/man1/mpdscribble.1
