@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/28 16:19:07 rhialto Exp $
 
 PKGNAME=		p5-qt3-3.009b2
 DISTNAME=		PerlQt-3.009-b2
@@ -11,6 +11,7 @@ CATEGORIES=		x11
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://perlqt.sourceforge.net/
 
+USE_LANGUAGES+=		c
 USE_LANGUAGES+=		c++
 USE_TOOLS+=		perl
 USE_TOOLS+=		gmake
