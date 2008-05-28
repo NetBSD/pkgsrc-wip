@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/08 15:52:35 guigui2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/28 00:10:13 guigui2 Exp $
 #
 
 DISTNAME=		giggle-0.4
@@ -13,6 +13,9 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl gmake
 USE_DIRS+=		xdg-1.4
+
+DEPENDS+=		scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
