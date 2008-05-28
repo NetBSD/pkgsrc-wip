@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/05/28 09:59:29 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/05/28 17:22:36 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -40,6 +40,7 @@ share/chicken/tcp.exports
 share/chicken/utils.exports
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/chicken.pdf
 share/doc/${PKGNAME}/html/accessing-external-objects.html
 share/doc/${PKGNAME}/html/acknowledgements.html
 share/doc/${PKGNAME}/html/basic-mode-of-operation.html
