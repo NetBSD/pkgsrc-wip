@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/05/01 10:50:33 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/05/28 09:59:29 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -26,6 +26,7 @@ share/chicken/eval.exports
 share/chicken/extras.exports
 share/chicken/library.exports
 share/chicken/lolevel.exports
+share/chicken/ports.exports
 share/chicken/posix.exports
 share/chicken/regex.exports
 share/chicken/scheduler.exports
@@ -70,6 +71,7 @@ share/doc/${PKGNAME}/html/unit-extras.html
 share/doc/${PKGNAME}/html/unit-library.html
 share/doc/${PKGNAME}/html/unit-lolevel.html
 share/doc/${PKGNAME}/html/unit-match.html
+share/doc/${PKGNAME}/html/unit-ports.html
 share/doc/${PKGNAME}/html/unit-posix.html
 share/doc/${PKGNAME}/html/unit-regex.html
 share/doc/${PKGNAME}/html/unit-srfi-1.html
