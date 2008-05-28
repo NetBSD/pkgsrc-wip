@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.24 2007/12/18 12:31:24 rillig Exp $
+# $Id: cvs-package.mk,v 1.25 2008/05/28 13:07:08 tnn2 Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -108,7 +108,7 @@ PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT.${r} must be set."
 # Internal variables
 #
 
-USE_TOOLS+=		date
+USE_TOOLS+=		date pax
 
 _CVS_RSH=		ssh
 _CVS_CMD=		cvs
@@ -150,7 +150,7 @@ do-cvs-extract: .PHONY
 	${RUN} cd ${WRKDIR};						\
 	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
-	  ${PAX} -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q};	\
+	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q};	\
 	  exit 0;							\
 	fi;								\
 	case ${CVS_ROOT.${r}:Q} in					\
@@ -169,7 +169,7 @@ do-cvs-extract: .PHONY
 	      -d ${r} ${CVS_MODULE.${r}:Q};				\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	${PAX} -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ${r}
+	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ${r}
 .endfor
 
 .endif
