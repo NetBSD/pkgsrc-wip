@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/14 12:06:00 asau Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/28 10:27:50 asau Exp $
 #
 
 DISTNAME=	clisp-2.45
@@ -23,23 +23,27 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		dvipdf gmake
-USE_PKGLOCALEDIR=	YES
+MAKE_JOBS_SAFE=		no
+
+CONFIGURE_DIRS=		.
+USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure--host=..." => cross-building
 BUILD_DIRS=		src
-#CONFIGURE_ENV+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
-UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		dvipdf
+UNLIMIT_RESOURCES=	stacksize
+
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
-TEST_TARGET=		check
-MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
 MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
-MAKE_JOBS_SAFE=		no
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
