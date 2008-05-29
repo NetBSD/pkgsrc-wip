@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/11 00:46:54 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/29 18:01:17 tnn2 Exp $
 #
 
 DISTNAME=	cpdup-1.07
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://apollo.backplane.com/FreeSrc/
 COMMENT=	Designed to make exact mirrors of directory trees
+
+NOT_FOR_PLATFORM=	*-*-x86_64 *-*-alpha *-*-sparc64
 
 WRKSRC=	${WRKDIR}/cpdup
 
