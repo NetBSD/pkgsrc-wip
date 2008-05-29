@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/01 14:27:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/29 17:44:15 tnn2 Exp $
 #
 
 DISTNAME=		atftp-0.7
@@ -12,9 +12,11 @@ HOMEPAGE=		http://freshmeat.net/projects/atftp/
 COMMENT=		Advanced TFTP client and server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/atftp ${DESTDIR}${PREFIX}/bin
