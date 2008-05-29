@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/18 03:00:10 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/29 18:43:10 tnn2 Exp $
+bin/dumb2wav
 bin/dumbout
 bin/dumbplay
 include/aldumb.h

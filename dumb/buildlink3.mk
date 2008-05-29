@@ -1,20 +1,21 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:17:09 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/05/29 18:43:10 tnn2 Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DUMB_BUILDLINK3_MK:=	${DUMB_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	dumb
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndumb}
 BUILDLINK_PACKAGES+=	dumb
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}dumb
 
-.if !empty(DUMB_BUILDLINK3_MK:M+)
+.if ${DUMB_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.dumb+=	dumb>=0.9.2
 BUILDLINK_PKGSRCDIR.dumb?=	../../wip/dumb
 .endif	# DUMB_BUILDLINK3_MK
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../devel/allegro/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
