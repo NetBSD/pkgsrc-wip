@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2008/03/30 00:21:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/29 21:26:42 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.12.1
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/}
 
@@ -25,8 +26,6 @@ DOC_FILES=		README NEWS ChangeLog
 MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-
-MAKE_FLAGS+=		WARNS=0
 
 post-install:
 .for i in ${DOC_FILES}
