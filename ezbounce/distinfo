@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/09/12 23:18:47 samott Exp $
+$NetBSD: distinfo,v 1.6 2008/05/29 19:38:32 tnn2 Exp $
 
-SHA1 (ezbounce-1.04c.tar.gz) = 9770609f4575a6e09173d2132f2a66f536956a86
-RMD160 (ezbounce-1.04c.tar.gz) = b5c35757a5b6cfab26177f3dcadd3aa0d1e3caac
-Size (ezbounce-1.04c.tar.gz) = 192630 bytes
+SHA1 (ezbounce-1.99.14.tar.gz) = 1dda6ca2a20f1f3b83c1268c919b55fb8f86f2f3
+RMD160 (ezbounce-1.99.14.tar.gz) = 275ac1a18264a3d302d9086bdbfcf6df86acb6b1
+Size (ezbounce-1.99.14.tar.gz) = 428628 bytes

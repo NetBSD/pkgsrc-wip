@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.20 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/29 19:38:32 tnn2 Exp $
 #
 
-DISTNAME=	ezbounce-1.04c
-PKGREVISION=	1
+DISTNAME=	ezbounce-1.99.14
 CATEGORIES=	chat
-MASTER_SITES=	http://druglord.freelsd.org/ezbounce/		\
-		http://www.shellcentral.com/downloads/files/	\
-		http://ezbounce.dc-team.com/
+MASTER_SITES=	http://www.linuxftw.com/ezbounce/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://druglord.freelsd.org/ezbounce/
+HOMEPAGE=	http://www.linuxftw.com/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
 
-GNU_CONFIGURE=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-ssl
@@ -31,16 +29,20 @@ RCD_SCRIPTS=		ezbounce
 
 CONF_FILES=	${EGDIR}/ezbounce.conf.default ${PKG_SYSCONFDIR}/ezbounce.conf
 
+INSTALLATION_DIRS+=	${EGDIR} ${DOCDIR} sbin
+
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR} ${DOCDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/ezbounce ${WRKSRC}/mdidentd/mdidentd \
-		${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/ezbchk ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/ezb.conf ${EGDIR}/ezbounce.conf.default
-	${INSTALL_DATA} ${WRKSRC}/misc/ezbounce.1 ${PREFIX}/${PKGMANDIR}/man1
+	  ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/ezbchk ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/ezb.conf \
+	  ${DESTDIR}${EGDIR}/ezbounce.conf.default
+	${INSTALL_DATA} ${WRKSRC}/misc/ezbounce.1 \
+	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	( cd ${WRKSRC} && for f in README* TODO CHANGES sample.conf sample.MOTD; do \
-		${INSTALL_DATA} $$f ${DOCDIR}; \
+		${INSTALL_DATA} $$f ${DESTDIR}${DOCDIR}; \
 	done )
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
