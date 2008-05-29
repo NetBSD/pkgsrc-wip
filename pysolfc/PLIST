@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/05/27 11:24:02 gduzan Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/29 02:16:56 gduzan Exp $
 ${PKGMANDIR}/man6/pysol.6
 ${PYSITELIB}/pysollib/__init__.py
 ${PYSITELIB}/pysollib/__init__.pyc
@@ -619,6 +619,10 @@ ${PYSITELIB}/pysollib/wizardutil.py
 ${PYSITELIB}/pysollib/wizardutil.pyc
 ${PYSITELIB}/pysollib/wizardutil.pyo
 bin/pysol
+share/locale/ru/LC_MESSAGES/pysol.mo
+share/locale/ru_RU/LC_MESSAGES/pysol.mo
+share/pixmaps/pysol.xbm
+share/pixmaps/pysol.xpm
 share/PySolFC/cardset-2000/01c.gif
 share/PySolFC/cardset-2000/01d.gif
 share/PySolFC/cardset-2000/01h.gif
