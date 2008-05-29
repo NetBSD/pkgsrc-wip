@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:05 rillig Exp $
+$NetBSD: distinfo,v 1.5 2008/05/29 17:27:10 tnn2 Exp $
 
 SHA1 (openglut-0.6.3.tar.bz2) = 263eaa340056d403e7fccc2cf54e6e919636d2e3
 RMD160 (openglut-0.6.3.tar.bz2) = be2297b515a2f0673d87a5cc34e5607c3c4d22b7
 Size (openglut-0.6.3.tar.bz2) = 437426 bytes
 SHA1 (patch-aa) = 555d701fc45ac2ebe23283045141f833daace7af
+SHA1 (patch-ab) = 29d3ca2248949e7c690a181f18d2c28be9231505
