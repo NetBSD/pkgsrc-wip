@@ -1,4 +1,5 @@
-Fails to compile with:
-./scmlit -fr4rstest.scm -e'(test-sc4)(test-cont)(test-delay)(gc)' \
--e '(or (null? errs) (quit 1))'
-ERROR: Wrong number of args given #<CLOSURE (optstring) (let* ((opt (getopt (string-appen ...
+$Id: TODO,v 1.2 2008/05/29 22:20:55 asau Exp $
+
+1. PLISTs.
+2. PREFIX is hardcoded ("/usr/pkg" currently).
+3. Options.
