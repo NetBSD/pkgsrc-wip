@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2907 2008/05/29 09:09:36 asau Exp $
+# $Id: Makefile,v 1.2908 2008/05/29 12:27:06 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -884,7 +884,6 @@ SUBDIR+=	lletters
 SUBDIR+=	llvm
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logfmon-devel
-SUBDIR+=	logjam
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
@@ -923,6 +922,7 @@ SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
 SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
+SUBDIR+=	milkytracker
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
 SUBDIR+=	ming
