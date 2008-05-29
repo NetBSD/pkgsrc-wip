@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2910 2008/05/29 17:52:58 tnn2 Exp $
+# $Id: Makefile,v 1.2911 2008/05/29 18:06:36 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -193,7 +193,6 @@ SUBDIR+=	copytape
 SUBDIR+=	courierpassd
 SUBDIR+=	cpdup
 SUBDIR+=	cpphs
-SUBDIR+=	crafty
 SUBDIR+=	cream
 SUBDIR+=	crfpp
 SUBDIR+=	crm114
