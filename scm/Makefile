@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2006/05/19 16:51:36 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/29 22:18:15 asau Exp $
 #
 
-DISTNAME=	scm5d6
+DISTNAME=	scm-5e5
 #
 # Convert the version number as follows 5d6 -> 5.4.6, where the d is
 # changed to a 4, representing the 4th letter.
 #
-PKGNAME=	scm-5.4.6
+PKGNAME=	scm-5.5.5
 WRKSRC=		${WRKDIR}/scm
 CATEGORIES=	lang
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
@@ -17,6 +17,8 @@ HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM.html
 COMMENT=	Portable scheme interpreter
 
 DEPENDS+=	slib>=2.4.4:../../devel/slib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 
@@ -59,9 +61,9 @@ post-build:
 	cd ${WRKSRC} && ${SH} ./buildscm.sh
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/slibcat ${PREFIX}/share/scm
+	${INSTALL_DATA} ${WRKSRC}/slibcat ${DESTDIR}${PREFIX}/share/scm
 .for file in ${SCM_INFO}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/${PKGINFODIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${PKGINFODIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
