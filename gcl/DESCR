@@ -1,8 +1,0 @@
-GCL is the official Common Lisp for the GNU project. Its design makes use of
-the system's C compiler to compile to native object code, providing for both
-good performance and facile portability. GCL currently compiles itself and
-the primary free software Lisp applications, Maxima and ACL2, on eleven
-GNU/Linux architectures (x86 powerpc s390 sparc arm alpha ia64 hppa m68k
-mips mipsel), Windows, Sparc Solaris, and FreeBSD. On most platforms, GCL
-can load native object code modules directly into its lisp core, where they
-are preserved in any custom lisp images produced via the save-system call.

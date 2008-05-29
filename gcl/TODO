@@ -1,4 +1,0 @@
-$Id: TODO,v 1.4 2008/02/21 18:00:10 asau Exp $
-
-4. Make it compile on NetBSD.
-5. Check DESTDIR, since it was treated unconventionally.
