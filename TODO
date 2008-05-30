@@ -2,6 +2,8 @@ Suggested package updates
 =========================
 
 	o argouml-0.24
+	o audacious-1.5.1
+	o audacious-plugins-1.5.1
 	o avahi-0.6.22
 	o bub-n-bros-1.6
 	o ccrtp-1.6.1
@@ -14,9 +16,9 @@ Suggested package updates
 	o ecasound-2.4.6
 	o editline-20070831.2.10
 	o electricsheep-2.6.3
-	o emelfm2-0.3.6
-	o endeavour-2.9.2
-	o f-spot-0.4.3.1
+	o emelfm2-0.4.1
+	o endeavour-2.9.3
+	o f-spot-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.0.3
 	o gambas2-2.6
@@ -28,6 +30,7 @@ Suggested package updates
 	o gnunet-0.7.3
 	o grass-6.2.3
 	o grisbi-0.5.8
+	o gtypist-2.8
 	o guichan-0.8.1
 	o hu-go-2.11
 	o kino-1.0.0
