@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/03 10:09:06 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/30 12:19:58 absd Exp $
 
 DISTNAME=	DBIx-Class-Schema-Loader-0.03009
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Dynamic definition of a DBIx::Class::Schema
 DEPENDS+=	p5-DBIx-Class>=0.05006:../../wip/p5-DBIx-Class
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Lingua-EN-Inflect>=1.89:../../textproc/p5-Lingua-EN-Inflect
-DEPENDS+=   p5-Lingua-EN-Inflect-Number>=1.1:../../wip/p5-Lingua-EN-Inflect-Number
+DEPENDS+=   p5-Lingua-EN-Inflect-Number>=1.1:../../textproc/p5-Lingua-EN-Inflect-Number
 DEPENDS+=	p5-Text-Balanced>=0:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Accessor>=0.02:../../wip/p5-Class-Data-Accessor

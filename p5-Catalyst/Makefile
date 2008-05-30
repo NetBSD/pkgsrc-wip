@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/10/26 09:17:44 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/30 12:19:58 absd Exp $
 
 PKGVERSION=	5.7011
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
@@ -10,6 +10,8 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst/
 COMMENT=	The Elegant MVC Web Application Framework
 PERL5_REQD+=	5.8.1
+
+CONFLICTS+=	p5-Catalyst-Runtime
 
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-CGI-Simple>=0:../../wip/p5-CGI-Simple
@@ -30,7 +32,7 @@ DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
-DEPENDS+=	p5-Text-SimpleTable>=0.03:../../wip/p5-Text-SimpleTable
+DEPENDS+=	p5-Text-SimpleTable>=0.03:../../textproc/p5-Text-SimpleTable
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
