@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2911 2008/05/29 18:06:36 tnn2 Exp $
+# $Id: Makefile,v 1.2912 2008/05/30 12:43:42 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1131,7 +1131,6 @@ SUBDIR+=	p5-CGI-Untaint-Date
 SUBDIR+=	p5-CGI-Untaint-Email
 SUBDIR+=	p5-CLASS
 SUBDIR+=	p5-CPANPLUS
-SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Mmap
 SUBDIR+=	p5-Catalyst
 SUBDIR+=	p5-Catalyst-Action-RenderView
@@ -1233,7 +1232,6 @@ SUBDIR+=	p5-HTTP-Request-AsCGI
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-JavaScript-SpiderMonkey
-SUBDIR+=	p5-Lingua-EN-Inflect-Number
 SUBDIR+=	p5-Lingua-PT-Stemmer
 SUBDIR+=	p5-Lingua-Stem
 SUBDIR+=	p5-Lingua-Stem-Fr
@@ -1309,7 +1307,6 @@ SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-EtText
 SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Text-Hatena
-SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Text-Trim
 SUBDIR+=	p5-Text-VimColor
 SUBDIR+=	p5-Tie-Array-Sorted
