@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/06/24 10:04:31 shattered Exp $
-
-SHA1 (lam-7.1.3.tar.bz2) = 4a583308c0442eb46f4fd0abe7e26ea3e1fd4adb
-RMD160 (lam-7.1.3.tar.bz2) = e0de240380d2275090bad0f0f57ac3a54b6d9f96
-Size (lam-7.1.3.tar.bz2) = 7862204 bytes
-SHA1 (patch-aa) = 19d1647eaf9a68aa9f9af78bb30d87c1995ab60a

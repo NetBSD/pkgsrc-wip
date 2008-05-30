@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2912 2008/05/30 12:43:42 tnn2 Exp $
+# $Id: Makefile,v 1.2913 2008/05/30 13:15:27 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -766,7 +766,7 @@ SUBDIR+=	kxmleditor
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
-SUBDIR+=	lammpi
+#SUBDIR+=	lammpi	# LAM/MPI is deprecated, use OpenMPI instead
 SUBDIR+=	last.fm
 SUBDIR+=	lat
 SUBDIR+=	lcrack
