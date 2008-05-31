@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/31 16:18:58 pmatias Exp $
+bin/trayion
+man/man1/trayion.1

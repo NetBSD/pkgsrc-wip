@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/05/31 16:18:58 pmatias Exp $
+
+--- Rules.make.orig	2008-05-27 16:36:55.000000000 -0300
++++ Rules.make
+@@ -10,4 +10,4 @@ X11_PREFIX = /usr/X11R6
+ #
+ # X compiler and linker flags.
+ X11CFLAGS = -I${X11_PREFIX}/include
+-X11LDFLAGS = -L${X11_PREFIX}/lib -lX11
++X11LDFLAGS = -L${X11_PREFIX}/lib -R${X11_PREFIX}/lib -lX11

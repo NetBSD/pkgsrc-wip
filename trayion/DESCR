@@ -1,0 +1,11 @@
+Trayion is an external systray application suitable for
+using with Ion3.
+
+It behaves like a Window Maker dockapp, so it can be
+redirected into the Ion3 statusbar. It implements
+FreeDesktop (XEmbed) trayicon protocol, so it can
+show trayicons from Qt4 and gtk2 applications.
+
+Trayion was based in wmsystray 0.1.1, by Matthew
+Reppert, but was modified to be better suited to the
+Ion3 statusbar.
