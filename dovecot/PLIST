@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/05/05 08:44:32 ghen Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/05/31 11:33:58 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -100,6 +100,7 @@ include/dovecot/src/lib-storage/index/dbox/dbox-index.h
 include/dovecot/src/lib-storage/index/dbox/dbox-storage.h
 include/dovecot/src/lib-storage/index/dbox/dbox-sync.h
 include/dovecot/src/lib-storage/index/index-mail.h
+include/dovecot/src/lib-storage/index/index-sort-private.h
 include/dovecot/src/lib-storage/index/index-sort.h
 include/dovecot/src/lib-storage/index/index-storage.h
 include/dovecot/src/lib-storage/index/index-sync-changes.h
@@ -390,11 +391,11 @@ share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
 share/doc/dovecot/wiki/QuickConfiguration.txt
+share/doc/dovecot/wiki/Quota.1.1.txt
 share/doc/dovecot/wiki/Quota.Dict.txt
 share/doc/dovecot/wiki/Quota.Dirsize.txt
 share/doc/dovecot/wiki/Quota.FS.txt
 share/doc/dovecot/wiki/Quota.Maildir.txt
-share/doc/dovecot/wiki/Quota.New.txt
 share/doc/dovecot/wiki/Quota.txt
 share/doc/dovecot/wiki/RunningDovecot.txt
 share/doc/dovecot/wiki/SSL.CertificateClientImporting.txt
