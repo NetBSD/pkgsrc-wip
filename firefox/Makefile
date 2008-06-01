@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/19 15:05:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/01 02:03:38 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -27,8 +27,18 @@ DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 DISTINFO_FILE=		${.CURDIR}/../../wip/firefox/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/firefox/patches
 
+post-extract: copy-pkgconfig
+.PHONY: copy-pkgconfig
+copy-pkgconfig:
+	cp ${.CURDIR}/../../wip/firefox/files/*.pc ${WRKSRC:Q}/build/unix
+
+SUBST_CLASSES+=		fix-pc
+SUBST_STAGE.fix-pc=	pre-configure
+SUBST_MESSAGE.fix-pc=	Substituting prefix in pkg-config files.
+SUBST_FILES.fix-pc+=	build/unix/*.pc
+SUBST_SED.fix-pc=	-e 's,@PREFIX@,${PREFIX},g'
+
 # Need this to be able to reuse existing firefox pkgsrc infrastructure
-# Note that we don't currently install the SDK.
 pre-configure: create-dummy-c-sdk
 .PHONY: create-dummy-c-sdk
 create-dummy-c-sdk:
