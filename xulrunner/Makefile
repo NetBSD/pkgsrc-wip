@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/01 13:29:42 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/01 15:22:33 tnn2 Exp $
 #
 
 DISTNAME=	xulrunner_1.9~rc1.orig
@@ -36,13 +36,15 @@ PKGCONFIG_OVERRIDE+=	xulrunner/installer/libxul-embedding.pc.in
 
 CONFIGURE_ARGS+=	--enable-application=xulrunner
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
-CONFIGURE_ARGS+=	--enable-crypto --enable-default-toolkit=gtk2
-CONFIGURE_ARGS+=	--disable-gnomevfs --disable-gnomeui --enable-svg
-CONFIGURE_ARGS+=	--enable-svg-renderer=cairo --enable-system-cairo
-CONFIGURE_ARGS+=	--enable-mathml --enable-xinerama
-CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads --enable-xft
-CONFIGURE_ARGS+=	--disable-debug --enable-default-toolkit=cairo-gtk2
+CONFIGURE_ARGS+=	--disable-debug --enable-crypto
+CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
+CONFIGURE_ARGS+=	--disable-gnomevfs --disable-gnomeui
 CONFIGURE_ARGS+=	--disable-dbus --disable-javaxpcom
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+CONFIGURE_ARGS+=	--enable-svg --enable-mathml
+CONFIGURE_ARGS+=	--enable-system-cairo --enable-system-lcms
+CONFIGURE_ARGS+=	--with-system-jpeg
+CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
@@ -54,6 +56,20 @@ ye-olde-rm-hack:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
+post-install:
+	cd ${WRKSRC}/dist/include && \
+	  ${INSTALL_DATA} $$(find . ! -type d -print) \
+	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
+	cd ${WRKSRC}/dist/idl && \
+	  ${INSTALL_DATA} $$(find . ! -type d -print) \
+	  ${DESTDIR}${PREFIX}/share/idl/xulrunner/unstable
+	cd ${WRKSRC}/dist/sdk/idl && \
+	  ${INSTALL_DATA} $$(find . ! -type d -print) \
+	  ${DESTDIR}${PREFIX}/share/idl/xulrunner/stable
+	
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
