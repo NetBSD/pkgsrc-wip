@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2913 2008/05/30 13:15:27 asau Exp $
+# $Id: Makefile,v 1.2914 2008/06/01 13:32:27 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1780,6 +1780,7 @@ SUBDIR+=	trac-plugins-excelviewer
 SUBDIR+=	traceroute-nanog
 SUBDIR+=	trackballs
 SUBDIR+=	trayer
+SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeview
 SUBDIR+=	tripwire2
@@ -1956,6 +1957,7 @@ SUBDIR+=	xspread
 SUBDIR+=	xtags
 SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
+SUBDIR+=	xulrunner
 SUBDIR+=	xvidtune
 SUBDIR+=	xxdiff
 SUBDIR+=	xyssl
