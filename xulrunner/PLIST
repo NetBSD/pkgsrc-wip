@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/01 16:41:10 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/06/01 17:12:13 tnn2 Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -2469,6 +2469,12 @@ lib/pkgconfig/libxul-embedding-unstable.pc
 lib/pkgconfig/libxul-embedding.pc
 lib/pkgconfig/libxul-unstable.pc
 lib/pkgconfig/libxul.pc
+lib/pkgconfig/mozilla-gtkmozembed-embedding.pc
+lib/pkgconfig/mozilla-gtkmozembed.pc
+lib/pkgconfig/mozilla-js.pc
+lib/pkgconfig/mozilla-nspr.pc
+lib/pkgconfig/mozilla-nss.pc
+lib/pkgconfig/mozilla-plugin.pc
 lib/xulrunner/LICENSE
 lib/xulrunner/README.txt
 lib/xulrunner/chrome/classic.jar
@@ -2754,6 +2760,31 @@ lib/xulrunner/xpt_link
 lib/xulrunner/xulrunner
 lib/xulrunner/xulrunner-bin
 lib/xulrunner/xulrunner-stub
+lib/xulrunner-devel/bin
+lib/xulrunner-devel/idl
+lib/xulrunner-devel/include
+lib/xulrunner-devel/lib
+lib/xulrunner-devel/sdk/idl
+lib/xulrunner-devel/sdk/include
+lib/xulrunner-devel/sdk/lib/libcrmf.a
+lib/xulrunner-devel/sdk/lib/libembed_base_s.a
+lib/xulrunner-devel/sdk/lib/libembed_base_standalone.a
+lib/xulrunner-devel/sdk/lib/libmozjs.so
+lib/xulrunner-devel/sdk/lib/libmozreg_s.a
+lib/xulrunner-devel/sdk/lib/libnspr4.so
+lib/xulrunner-devel/sdk/lib/libnss.a
+lib/xulrunner-devel/sdk/lib/libnssutil.a
+lib/xulrunner-devel/sdk/lib/libplc4.so
+lib/xulrunner-devel/sdk/lib/libplds4.so
+lib/xulrunner-devel/sdk/lib/libsmime.a
+lib/xulrunner-devel/sdk/lib/libsoftokn.a
+lib/xulrunner-devel/sdk/lib/libssl.a
+lib/xulrunner-devel/sdk/lib/libunicharutil_external_s.a
+lib/xulrunner-devel/sdk/lib/libxpcom.so
+lib/xulrunner-devel/sdk/lib/libxpcomglue.a
+lib/xulrunner-devel/sdk/lib/libxpcomglue_s.a
+lib/xulrunner-devel/sdk/lib/libxul.so
+lib/xulrunner-devel/xpcom-config.h
 share/idl/xulrunner/stable/domstubs.idl
 share/idl/xulrunner/stable/mozIJSSubScriptLoader.idl
 share/idl/xulrunner/stable/nsIASN1Object.idl
@@ -4041,7 +4072,6 @@ share/idl/xulrunner/unstable/xpcjsid.idl
 @dirrm share/idl/xulrunner/unstable
 @dirrm share/idl/xulrunner/stable
 @dirrm share/idl/xulrunner
-@dirrm share/idl
 @dirrm lib/xulrunner/res/html
 @dirrm lib/xulrunner/res/fonts
 @dirrm lib/xulrunner/res/entityTables
