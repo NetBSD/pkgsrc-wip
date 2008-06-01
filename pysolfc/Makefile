@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/05/27 11:24:02 gduzan Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/01 15:46:07 thomasklausner Exp $
 #
 
 DISTNAME=	PySolFC-1.1
@@ -11,6 +11,9 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	gary@duzan.org
 HOMEPAGE=	http://pysolfc.sourceforge.net/
 COMMENT=	Python solitaire game collection
+
+DEPENDS+=	${PYPKGPREFIX}-imagingtk>=1.1:../../graphics/py-imagingtk
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.1:../../x11/py-gtk2
 
 CONFLICTS=	pysol-[0-9]*
 
@@ -25,8 +28,7 @@ CARDSETS=	PySolFC-Cardsets-1.1
 
 PYDISTUTILSPKG=	yes
 
-DEPENDS+=	${PYPKGPREFIX}-imagingtk>=1.1:../../graphics/py-imagingtk
-DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.1:../../x11/py-gtk2
+INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -48,8 +50,6 @@ PLIST_SUBST+=	PKGMANDIR="${PKGMANDIR}"
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/pysol.6 ${PREFIX}/${PKGMANDIR}/man6
 
-#INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
-#
 #do-install:
 #	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" \
 #		-e "s|python|${PYTHONBIN}|" \
