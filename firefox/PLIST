@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/01 02:03:38 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/01 03:08:39 tnn2 Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -690,6 +690,7 @@ include/${MOZILLA}/nspr/plgetopt.h
 include/${MOZILLA}/nspr/plresolv.h
 include/${MOZILLA}/nspr/plstr.h
 include/${MOZILLA}/js/fdlibm.h
+include/${MOZILLA}/js/js.msg
 include/${MOZILLA}/js/jsautocfg.h
 include/${MOZILLA}/js/jsautokw.h
 include/${MOZILLA}/js/jsapi.h
@@ -718,9 +719,11 @@ include/${MOZILLA}/js/jsmath.h
 include/${MOZILLA}/js/jsnum.h
 include/${MOZILLA}/js/jsobj.h
 include/${MOZILLA}/js/jsopcode.h
+include/${MOZILLA}/js/jsopcode.tbl
 include/${MOZILLA}/js/jsotypes.h
 include/${MOZILLA}/js/jsparse.h
 include/${MOZILLA}/js/jsprf.h
+include/${MOZILLA}/js/jsproto.tbl
 include/${MOZILLA}/js/jsprvtd.h
 include/${MOZILLA}/js/jspubtd.h
 include/${MOZILLA}/js/jsregexp.h
@@ -952,6 +955,8 @@ include/${MOZILLA}/xpcom/nsXPCOMCIDInternal.h
 include/${MOZILLA}/xpcom/nsXPCOM.h
 include/${MOZILLA}/xpcom/nsXPCOMCID.h
 include/${MOZILLA}/xpcom/xpcom-config.h
+include/${MOZILLA}/xpcom/xptcstubsdecl.inc
+include/${MOZILLA}/xpcom/xptcstubsdef.inc
 include/${MOZILLA}/string/nsAString.h
 include/${MOZILLA}/string/nsAlgorithm.h
 include/${MOZILLA}/string/nsCharTraits.h
@@ -2516,12 +2521,14 @@ include/${MOZILLA}/autoconfig/nsIAutoConfig.h
 include/${MOZILLA}/autoconfig/nsIReadConfig.h
 include/${MOZILLA}/system-pref/nsSystemPrefService.h
 include/${MOZILLA}/system-pref/nsSystemPrefLog.h
+include/${MOZILLA}/gtkembedmoz/gtkmozembed_glue.cpp
 include/${MOZILLA}/gtkembedmoz/gtkmozembed.h
 include/${MOZILLA}/gtkembedmoz/gtkmozembed_internal.h
 include/${MOZILLA}/nss/ciferfam.h
 include/${MOZILLA}/nss/base64.h
 include/${MOZILLA}/nss/nssb64t.h
 include/${MOZILLA}/nss/nssb64.h
+include/${MOZILLA}/nss/nssck.api
 include/${MOZILLA}/nss/nsslocks.h
 include/${MOZILLA}/nss/nssilock.h
 include/${MOZILLA}/nss/nssilckt.h
