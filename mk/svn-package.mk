@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.5 2007/11/16 05:53:59 bsadewitz Exp $
+# $Id: svn-package.mk,v 1.6 2008/06/02 08:38:22 asau Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -88,8 +88,7 @@ do-svn-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${SVN_CERTS:Q} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
 .endif
 .for _repo_ in ${SVN_REPOSITORIES}
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	cd ${WRKDIR};							\
+	${RUN} cd ${WRKDIR};						\
 	${SETENV} ${_SVN_ENV}						\
 		${_SVN_CMD} checkout ${_SVN_CHECKOUT_FLAGS}		\
 			-r ${SVN_TAG.${_repo_}:Q}			\
