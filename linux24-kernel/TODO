@@ -35,3 +35,5 @@ look at default /boot/config-2.2.20-idepci
 
 # cp -i arch/i386/boot/bzImage /bzImage.-- with kernel-version- or other name
 #   maybe copy to boot directory (as lilo also knows it)
+
+- This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2008-2136, CVE-2008-2137).
