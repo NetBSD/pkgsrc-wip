@@ -25,3 +25,4 @@ some manpages and example fdprm have hard-coded paths
 # this doesn't install sln binary, but does install sln manpage
 # sln is also in glibc-2.2.5
 
+- This package has known vulnerabilities, please investigate and fix if possible (See: CVE-2007-5191).
