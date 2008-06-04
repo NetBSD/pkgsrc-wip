@@ -7,3 +7,5 @@ need Makefile to replace the config file for manpages and scripts too
 is USE_PKGLOCALEDIR required?
 
 make this platform specific
+
+- This package has known vulnerabilities, please investigate and fix if possible (see: CVE-2007-3852).
