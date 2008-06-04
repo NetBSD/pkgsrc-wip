@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.4 2006/10/22 19:21:32 anthony_mallet Exp $
+$NetBSD: distinfo,v 1.5 2008/06/04 21:22:58 tonnerre Exp $
 
-SHA1 (omniORB-4.1.0-beta2.tar.gz) = 34cf7230ebb6216f98b91de664884f68912f4407
-RMD160 (omniORB-4.1.0-beta2.tar.gz) = 40bb985c513fbcc83d53ccb0f80e2f6805c772dc
-Size (omniORB-4.1.0-beta2.tar.gz) = 2906825 bytes
+SHA1 (omniORB-4.1.2.tar.gz) = 6c5f7bd4c82865f921a8a9bec1e3f57dfb529eeb
+RMD160 (omniORB-4.1.2.tar.gz) = faf72e6bd775a2640530a188f31e0b0474626488
+Size (omniORB-4.1.2.tar.gz) = 3202157 bytes
 SHA1 (patch-aa) = d89023f2d875f20ab44f2c72caccf1d89420eff2
 SHA1 (patch-ab) = 2ab34c303d6ebd15104aa2720b297de9bc74e153
-SHA1 (patch-ac) = 43e54aa4c1818b8020e676f2cda031cd1cdfa457
+SHA1 (patch-ac) = 1ad84c9a748c97ba797fdce2223651fa52f2f684
 SHA1 (patch-ad) = ea3009b39fda6addf47a064f5df518135e44b789
-SHA1 (patch-ae) = 0e3f30a89bf4543f2dd33bc54eb798973d22ee8e
-SHA1 (patch-af) = f565e9f72de40361bf726840daf5ce6d455e5e89
+SHA1 (patch-ae) = 87bd20235c52417fedf8f2db6480d160e9a5ae38
 SHA1 (patch-ag) = 85d2d8fd4a6156aebdfccb7bd117d6c7d335c8f6

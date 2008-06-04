@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/10/22 19:21:32 anthony_mallet Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/04 21:22:58 tonnerre Exp $
 #
 
-PKGNAME=		omniORB-4.1.0.2
-DISTNAME=		omniORB-4.1.0-beta2
+PKGNAME=		omniORB-4.1.2
+DISTNAME=		omniORB-4.1.2
 CATEGORIES=		devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omniorb/}
 
