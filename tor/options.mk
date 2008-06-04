@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/11/17 11:02:06 netcap Exp $
+# $NetBSD: options.mk,v 1.2 2008/06/04 18:49:38 athaba Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	threads
@@ -6,6 +6,7 @@ PKG_SUPPORTED_OPTIONS=	threads
 .if !empty(PTHREAD_TYPE:Mnative)
 PKG_SUGGESTED_OPTIONS+=	threads
 .endif
+
 .include "../../mk/bsd.options.mk"
 
 
