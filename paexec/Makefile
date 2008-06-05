@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/04/16 12:13:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/05 20:46:54 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.8.0
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
 
@@ -27,6 +28,19 @@ MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+SUPPORTED_SYSTEM=	0
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
+SUPPORTED_SYSTEM=	1
+.endif
+
+.if ${SUPPORTED_SYSTEM} == "0"
+CPPFLAGS+=		-DNO_PORTABHACKS_H=1 -DHAVE_CONFIG_H=1
+pre-build:
+	echo '#include <getopt.h>' > ${WRKSRC}/config.h
+.endif
+
 post-install:
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
@@ -45,6 +59,10 @@ post-install:
 		${DESTDIR}${PKGEGDIR}/cc_wrapper/
 	${INSTALL_DATA} ${WRKSRC}/examples/cc_wrapper/func*.c \
 		${DESTDIR}${PKGEGDIR}/cc_wrapper/
+
+.if ${SUPPORTED_SYSTEM} == "0"
+.include "../../pkgtools/libnbcompat/inplace.mk"
+.endif
 
 .include "../../wip/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
