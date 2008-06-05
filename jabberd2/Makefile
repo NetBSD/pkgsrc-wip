@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.51 2008/06/05 23:41:20 schnoebe Exp $
 #
 
-DISTNAME=		jabberd-2.1.24.1
+DISTNAME=		jabberd-2.2.0
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -54,7 +54,7 @@ BUILD_DEFS+=		VARBASE JABBERD_USER JABBERD_GROUP
 BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR JABBERD_DBDIR
 
 PKG_SYSCONFSUBDIR=	jabberd
-RCD_SCRIPTS=		jabberd c2s sm resolver router s2s
+RCD_SCRIPTS=		jabberd c2s sm router s2s
 JABBERD_USER?=		jabberd
 JABBERD_GROUP?=		jabberd
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
@@ -70,11 +70,11 @@ BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
 DOCDIR=			${PREFIX}/share/doc/jabberd
 
-FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
+FILES=			jabberd.cfg c2s.xml router.xml	\
 			router-users.xml router-filter.xml s2s.xml	\
 			sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
-			db-update.mysql	db-setup.sqlite
+			db-update.mysql	db-setup.sqlite db-update.sqlite
 DOCFILES=		README.protocol README UPGRADE ChangeLog
 
 INSTALLATION_DIRS=	bin share/examples/jabberd share/doc/jabberd
@@ -125,6 +125,7 @@ post-install:
 .endfor
 
 # .include "../../security/gsasl/buildlink3.mk"
+.include "../../wip/udns/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/gsasl/buildlink3.mk"

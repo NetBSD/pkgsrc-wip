@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2008/05/21 22:32:59 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/06/05 23:41:20 schnoebe Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
 bin/pipe-auth.pl
-bin/resolver
 bin/router
 bin/s2s
 bin/sm
@@ -46,7 +45,6 @@ ${PLIST.pgsql}lib/jabberd/storage_pgsql.la
 ${PLIST.sqlite}lib/jabberd/storage_sqlite.la
 man/man8/c2s.8
 man/man8/jabberd.8
-man/man8/resolver.8
 man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
@@ -60,8 +58,8 @@ share/examples/jabberd/db-setup.mysql
 share/examples/jabberd/db-setup.pgsql
 share/examples/jabberd/db-setup.sqlite
 share/examples/jabberd/db-update.mysql
+share/examples/jabberd/db-update.sqlite
 share/examples/jabberd/jabberd.cfg
-share/examples/jabberd/resolver.xml
 share/examples/jabberd/roster.xml
 share/examples/jabberd/router-filter.xml
 share/examples/jabberd/router-users.xml
@@ -70,7 +68,6 @@ share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
 share/examples/rc.d/c2s
 share/examples/rc.d/jabberd
-share/examples/rc.d/resolver
 share/examples/rc.d/router
 share/examples/rc.d/s2s
 share/examples/rc.d/sm
