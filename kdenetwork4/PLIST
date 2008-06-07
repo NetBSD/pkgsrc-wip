@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/05/09 22:51:16 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/07 21:18:41 mwdavies Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -138,19 +138,19 @@ lib/libiris_kopete.so.1
 lib/libiris_kopete.so.1.0.0
 lib/libkgetcore.so
 lib/libkgetcore.so.4
-lib/libkgetcore.so.${PKGVERSION}
+lib/libkgetcore.so.4.0.4
 lib/libkopete.so
 lib/libkopete.so.4
-lib/libkopete.so.${PKGVERSION}
+lib/libkopete.so.4.0.4
 lib/libkopete_msn_shared.so
 lib/libkopete_msn_shared.so.4
-lib/libkopete_msn_shared.so.${PKGVERSION}
+lib/libkopete_msn_shared.so.4.0.4
 lib/libkopete_oscar.so
 lib/libkopete_oscar.so.4
-lib/libkopete_oscar.so.${PKGVERSION}
+lib/libkopete_oscar.so.4.0.4
 lib/libkopete_videodevice.so
 lib/libkopete_videodevice.so.4
-lib/libkopete_videodevice.so.${PKGVERSION}
+lib/libkopete_videodevice.so.4.0.4
 lib/libkopeteaddaccountwizard.so
 lib/libkopeteaddaccountwizard.so.1
 lib/libkopeteaddaccountwizard.so.1.0.0

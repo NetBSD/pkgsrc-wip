@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/05/09 22:31:32 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/06/07 21:18:41 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -87,6 +87,7 @@ include/kwinglobals.h
 include/kwinglutils.h
 include/kwinglutils_funcs.h
 include/kwinshadereffect.h
+include/kwinxrenderutils.h
 include/kworkspace/kwindowlistmenu.h
 include/kworkspace/kworkspace.h
 include/plasma/abstractrunner.h
@@ -267,7 +268,7 @@ lib/kde4/solid_fakenet.so
 lib/kde4/solid_hal_power.so
 lib/libkdecorations.so
 lib/libkdecorations.so.4
-lib/libkdecorations.so.${PKGVERSION}
+lib/libkdecorations.so.4.0.4
 lib/libkdeinit4_kaccess.so
 lib/libkdeinit4_kcminit.so
 lib/libkdeinit4_kcminit_startup.so
@@ -284,46 +285,46 @@ lib/libkdeinit4_kxkb.so
 lib/libkdeinit4_plasma.so
 lib/libkfontinst.so
 lib/libkfontinst.so.4
-lib/libkfontinst.so.${PKGVERSION}
+lib/libkfontinst.so.4.0.4
 lib/libkfontinstui.so
 lib/libkfontinstui.so.4
-lib/libkfontinstui.so.${PKGVERSION}
+lib/libkfontinstui.so.4.0.4
 lib/libkscreensaver.so
 lib/libkscreensaver.so.5
 lib/libkscreensaver.so.5.0.0
 lib/libksgrd.so
 lib/libksgrd.so.4
-lib/libksgrd.so.${PKGVERSION}
+lib/libksgrd.so.4.0.4
 lib/libkwineffects.so
 lib/libkwineffects.so.1
 lib/libkwineffects.so.1.0.0
 lib/libkwinnvidiahack.so
 lib/libkwinnvidiahack.so.4
-lib/libkwinnvidiahack.so.${PKGVERSION}
+lib/libkwinnvidiahack.so.4.0.4
 lib/libkworkspace.so
 lib/libkworkspace.so.4
-lib/libkworkspace.so.${PKGVERSION}
+lib/libkworkspace.so.4.0.4
 lib/libplasma.so
 lib/libplasma.so.1
 lib/libplasma.so.1.0.0
 lib/libprocesscore.so
 lib/libprocesscore.so.4
-lib/libprocesscore.so.${PKGVERSION}
+lib/libprocesscore.so.4.0.4
 lib/libprocessui.so
 lib/libprocessui.so.4
-lib/libprocessui.so.${PKGVERSION}
+lib/libprocessui.so.4.0.4
 lib/libsolidcontrol.so
 lib/libsolidcontrol.so.4
-lib/libsolidcontrol.so.${PKGVERSION}
+lib/libsolidcontrol.so.4.0.4
 lib/libsolidcontrolifaces.so
 lib/libsolidcontrolifaces.so.4
-lib/libsolidcontrolifaces.so.${PKGVERSION}
+lib/libsolidcontrolifaces.so.4.0.4
 lib/libtaskmanager.so
 lib/libtaskmanager.so.4
-lib/libtaskmanager.so.${PKGVERSION}
+lib/libtaskmanager.so.4.0.4
 lib/libweather_ion.so
 lib/libweather_ion.so.4
-lib/libweather_ion.so.${PKGVERSION}
+lib/libweather_ion.so.4.0.4
 lib/strigi/strigita_font.so
 share/applications/kde4/kfontview.desktop
 share/applications/kde4/klipper.desktop
@@ -549,12 +550,29 @@ share/kde/apps/kdisplay/app-defaults/Xdvi.ad
 share/kde/apps/kdisplay/app-defaults/Xpdf.ad
 share/kde/apps/kdm/faces/.default.face.icon
 share/kde/apps/kdm/faces/root.face.icon
+share/kde/apps/kdm/patterns/fish.desktop
+share/kde/apps/kdm/patterns/fish.png
+share/kde/apps/kdm/patterns/flowers.desktop
+share/kde/apps/kdm/patterns/flowers.png
+share/kde/apps/kdm/patterns/night-rock.desktop
+share/kde/apps/kdm/patterns/night-rock.jpg
+share/kde/apps/kdm/patterns/pavement.desktop
+share/kde/apps/kdm/patterns/pavement.png
+share/kde/apps/kdm/patterns/rattan.desktop
+share/kde/apps/kdm/patterns/rattan.png
+share/kde/apps/kdm/patterns/stonewall2.desktop
+share/kde/apps/kdm/patterns/stonewall2.png
+share/kde/apps/kdm/patterns/triangles.desktop
+share/kde/apps/kdm/patterns/triangles.png
 share/kde/apps/kdm/pics/kdelogo.png
 share/kde/apps/kdm/pics/shutdown.jpg
 share/kde/apps/kdm/pics/users/default1.png
 share/kde/apps/kdm/pics/users/default2.png
 share/kde/apps/kdm/pics/users/default3.png
 share/kde/apps/kdm/pics/users/root1.png
+share/kde/apps/kdm/programs/xearth.desktop
+share/kde/apps/kdm/programs/xglobe.desktop
+share/kde/apps/kdm/programs/xplanet.desktop
 share/kde/apps/kdm/sessions/9wm.desktop
 share/kde/apps/kdm/sessions/aewm++.desktop
 share/kde/apps/kdm/sessions/aewm.desktop
@@ -1123,8 +1141,10 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kdm/themes/circles
 @dirrm share/kde/apps/kdm/themes
 @dirrm share/kde/apps/kdm/sessions
+@dirrm share/kde/apps/kdm/programs
 @comment in kde: @dirrm share/kde/apps/kdm/pics/users
 @comment in kde: @dirrm share/kde/apps/kdm/pics
+@dirrm share/kde/apps/kdm/patterns
 @dirrm share/kde/apps/kdm/faces
 @comment in kde: @dirrm share/kde/apps/kdm
 @dirrm share/kde/apps/kdisplay/app-defaults

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/05/09 22:28:49 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:41 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -1176,6 +1176,7 @@ share/icons/oxygen/16x16/actions/system-shutdown.png
 share/icons/oxygen/16x16/actions/system-suspend-hibernate.png
 share/icons/oxygen/16x16/actions/system-suspend.png
 share/icons/oxygen/16x16/actions/system-switch-user.png
+share/icons/oxygen/16x16/actions/tab-close-other.png
 share/icons/oxygen/16x16/actions/tab-close.png
 share/icons/oxygen/16x16/actions/tab-detach.png
 share/icons/oxygen/16x16/actions/tab-duplicate.png
@@ -1946,6 +1947,7 @@ share/icons/oxygen/22x22/actions/system-shutdown.png
 share/icons/oxygen/22x22/actions/system-suspend-hibernate.png
 share/icons/oxygen/22x22/actions/system-suspend.png
 share/icons/oxygen/22x22/actions/system-switch-user.png
+share/icons/oxygen/22x22/actions/tab-close-other.png
 share/icons/oxygen/22x22/actions/tab-close.png
 share/icons/oxygen/22x22/actions/tab-detach.png
 share/icons/oxygen/22x22/actions/tab-duplicate.png
@@ -2738,6 +2740,7 @@ share/icons/oxygen/32x32/actions/system-shutdown.png
 share/icons/oxygen/32x32/actions/system-suspend-hibernate.png
 share/icons/oxygen/32x32/actions/system-suspend.png
 share/icons/oxygen/32x32/actions/system-switch-user.png
+share/icons/oxygen/32x32/actions/tab-close-other.png
 share/icons/oxygen/32x32/actions/tab-close.png
 share/icons/oxygen/32x32/actions/tab-detach.png
 share/icons/oxygen/32x32/actions/tab-duplicate.png
@@ -3508,6 +3511,7 @@ share/icons/oxygen/48x48/actions/system-shutdown.png
 share/icons/oxygen/48x48/actions/system-suspend-hibernate.png
 share/icons/oxygen/48x48/actions/system-suspend.png
 share/icons/oxygen/48x48/actions/system-switch-user.png
+share/icons/oxygen/48x48/actions/tab-close-other.png
 share/icons/oxygen/48x48/actions/tab-close.png
 share/icons/oxygen/48x48/actions/tab-detach.png
 share/icons/oxygen/48x48/actions/tab-duplicate.png
@@ -5127,6 +5131,7 @@ share/icons/oxygen/scalable/actions/system-search.svgz
 share/icons/oxygen/scalable/actions/system-suspend-hibernate.svgz
 share/icons/oxygen/scalable/actions/system-suspend.svgz
 share/icons/oxygen/scalable/actions/system-switch-user.svgz
+share/icons/oxygen/scalable/actions/tab-close-other.svgz
 share/icons/oxygen/scalable/actions/tab-close.svgz
 share/icons/oxygen/scalable/actions/tab-detach.svgz
 share/icons/oxygen/scalable/actions/tab-duplicate.svgz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/05/09 22:48:28 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:41 mwdavies Exp $
 bin/juk
 bin/kmix
 bin/kmixctrl
@@ -23,13 +23,13 @@ lib/kde4/libaudiocd_encoder_vorbis.so
 lib/kde4/libaudiocd_encoder_wav.so
 lib/libaudiocdplugins.so
 lib/libaudiocdplugins.so.4
-lib/libaudiocdplugins.so.${PKGVERSION}
+lib/libaudiocdplugins.so.4.0.4
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.${PKGVERSION}
+lib/libkcddb.so.4.0.4
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.${PKGVERSION}
+lib/libkcompactdisc.so.4.0.4
 lib/libkdeinit4_kmix.so
 lib/libkdeinit4_kmixctrl.so
 share/applications/kde4/juk.desktop

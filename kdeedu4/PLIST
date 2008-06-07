@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/05/09 22:41:18 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/06/07 21:18:41 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/indi_celestron_gps
@@ -118,26 +118,26 @@ lib/kde4/kigpart.so
 lib/kde4/libmarble_part.so
 lib/libSatLib.so
 lib/libSatLib.so.4
-lib/libSatLib.so.${PKGVERSION}
+lib/libSatLib.so.4.0.4
 lib/libhtmesh.a
 lib/libkdeeduui.so
 lib/libkdeeduui.so.4
-lib/libkdeeduui.so.${PKGVERSION}
+lib/libkdeeduui.so.4.0.4
 lib/libkeduvocdocument.so
 lib/libkeduvocdocument.so.4
-lib/libkeduvocdocument.so.${PKGVERSION}
+lib/libkeduvocdocument.so.4.0.4
 lib/libkiten.so
 lib/libkiten.so.4
-lib/libkiten.so.${PKGVERSION}
+lib/libkiten.so.4.0.4
 lib/libmarblewidget.so
 lib/libmarblewidget.so.4
-lib/libmarblewidget.so.${PKGVERSION}
+lib/libmarblewidget.so.4.0.4
 lib/libsbigudrv.so
 lib/libsbigudrv.so.1
 lib/libsbigudrv.so.1.0.0
 lib/libscience.so
 lib/libscience.so.4
-lib/libscience.so.${PKGVERSION}
+lib/libscience.so.4.0.4
 share/applications/kde4/blinken.desktop
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalzium.desktop
@@ -2313,6 +2313,7 @@ share/kde/apps/kstars/wzdownload.png
 share/kde/apps/kstars/wzgeo.png
 share/kde/apps/kstars/wzscope.png
 share/kde/apps/kstars/wzstars.png
+share/kde/apps/ktouch/ar.keyboard.xml
 share/kde/apps/ktouch/be.keyboard
 share/kde/apps/ktouch/bg.keyboard
 share/kde/apps/ktouch/bulgarian.ktouch.xml
@@ -2353,12 +2354,14 @@ share/kde/apps/ktouch/es2.keyboard
 share/kde/apps/ktouch/espanol.ktouch.xml
 share/kde/apps/ktouch/espanol2.ktouch.xml
 share/kde/apps/ktouch/fi.keyboard
+share/kde/apps/ktouch/fi.keyboard.xml
 share/kde/apps/ktouch/finnish.ktouch.xml
 share/kde/apps/ktouch/finnish_for_kids.ktouch.xml
 share/kde/apps/ktouch/fr.keyboard
 share/kde/apps/ktouch/fr.keyboard.xml
 share/kde/apps/ktouch/fr_a.keyboard
 share/kde/apps/ktouch/fr_ch.keyboard
+share/kde/apps/ktouch/fr_ch.keyboard.xml
 share/kde/apps/ktouch/french.ktouch.xml
 share/kde/apps/ktouch/french2.ktouch.xml
 share/kde/apps/ktouch/german.ktouch.xml

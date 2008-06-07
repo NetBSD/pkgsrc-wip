@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/05/09 22:55:40 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:42 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -27,13 +27,13 @@ lib/kde4/plasma_applet_skapplet.so
 lib/libkdeinit4_kcalc.so
 lib/libkerfuffle.so
 lib/libkerfuffle.so.4
-lib/libkerfuffle.so.${PKGVERSION}
+lib/libkerfuffle.so.4.0.4
 lib/libkmilo.so
 lib/libkmilo.so.4
-lib/libkmilo.so.${PKGVERSION}
+lib/libkmilo.so.4.0.4
 lib/libsuperkaramba.so
 lib/libsuperkaramba.so.4
-lib/libsuperkaramba.so.${PKGVERSION}
+lib/libsuperkaramba.so.4.0.4
 share/applications/kde4/KCharSelect.desktop
 share/applications/kde4/KFloppy.desktop
 share/applications/kde4/Kjots.desktop
