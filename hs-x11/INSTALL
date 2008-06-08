@@ -32,7 +32,7 @@ extra-libraries: X11
 extra-ghci-libraries:
 include-dirs: @PREFIX@/lib/X11-@PKGVERSION@/ghc-@GHCVERSION@/include
 includes: HsXlib.h HsXlib.h XlibExtras.h
-depends: base-2.1.1
+depends: base-3.0.1.0
 hugs-options:
 cc-options: -I@XINCLUDES@
 ld-options: -L@XLIBRARIES@ -R@XLIBRARIES@

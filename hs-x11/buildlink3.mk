@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/03/06 17:44:04 emil_s Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/06/08 17:46:32 zul_ Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HS_X11_BUILDLINK3_MK:=	${HS_X11_BUILDLINK3_MK}+
@@ -13,11 +13,10 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-x11
 
 .if ${HS_X11_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-x11?=	build
-BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11>=1.4
+BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11>=1.4.1
 BUILDLINK_PKGSRCDIR.hs-x11?=	../../wip/hs-x11
 .endif	# HS_X11_BUILDLINK3_MK
 
-.include "../../wip/cabal/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
