@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/06/08 12:34:54 cheusov Exp $
 # used by wip/libuxre/Makefile
+# used by wip/heirloom-common/Makefile.prog.common
 
 HEIRLOOM_VER=	070715
-# used by wip/heirloom-common/Makefile.prog.common
 DISTNAME=	heirloom-${HEIRLOOM_VER}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heirloom/}
 EXTRACT_SUFX=	.tar.bz2
