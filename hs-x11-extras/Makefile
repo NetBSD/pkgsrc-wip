@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/06 17:46:32 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/08 17:47:45 zul_ Exp $
 #
 
 DISTNAME=	X11-extras-${VERSION}
@@ -56,7 +56,6 @@ do-install:
 	cd ${WRKSRC} && runhaskell -cpp Setup.lhs copy
 
 
-.include "../../wip/cabal/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
