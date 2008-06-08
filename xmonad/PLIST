@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/10 17:01:35 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/08 23:42:41 zul_ Exp $
 bin/xmonad
+lib/ghc-${GHCVERSION}/package.conf
+lib/ghc-${GHCVERSION}/package.conf.old
 lib/${PKGNAME}/ghc-${GHCVERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config.hi
@@ -15,3 +17,4 @@ share/doc/${PKGNAME}/LICENSE
 @dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad
 @dirrm lib/${PKGNAME}/ghc-${GHCVERSION}
 @dirrm lib/${PKGNAME}
+@dirrm lib/ghc-${GHCVERSION}

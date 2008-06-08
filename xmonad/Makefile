@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/08 17:49:30 zul_ Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/08 23:42:41 zul_ Exp $
 #
 
 DISTNAME=	xmonad-${VERSION}
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
 CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-VERSION=		0.6
+VERSION=		0.7
 
 
 do-configure:
