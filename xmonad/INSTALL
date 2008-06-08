@@ -30,7 +30,7 @@ extra-libraries:
 extra-ghci-libraries:
 include-dirs:
 includes:
-depends: base-2.1.1 X11-1.4.1 mtl-1.0.1 unix-2.1
+depends: base-3.0.1.0 X11-1.4.1 mtl-1.1.0.0 unix-2.3.0.0
 hugs-options:
 cc-options:
 ld-options:
