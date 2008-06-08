@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/05 20:46:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/08 19:19:39 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.8.0
@@ -18,7 +18,6 @@ TEST_TARGET=		test
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PKGEGDIR=		${PREFIX}/share/examples/${PKGBASE}
-EGLIST=			cc_wrapper all_substr toupper
 
 AUTO_MKDIRS=		yes
 
@@ -38,7 +37,7 @@ SUPPORTED_SYSTEM=	1
 .if ${SUPPORTED_SYSTEM} == "0"
 CPPFLAGS+=		-DNO_PORTABHACKS_H=1 -DHAVE_CONFIG_H=1
 pre-build:
-	echo '#include <getopt.h>' > ${WRKSRC}/config.h
+	${ECHO} '#include <getopt.h>' > ${WRKSRC}/config.h
 .endif
 
 post-install:
