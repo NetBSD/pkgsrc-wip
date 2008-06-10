@@ -1,0 +1,3 @@
+netclasses is an asynchronous networking library that works on OS X natively,
+and any of the multitude of platforms supported by GNUstep. You've never seen
+an easier way to put together network applications!
