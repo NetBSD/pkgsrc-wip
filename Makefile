@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2918 2008/06/10 10:06:24 hoka_adam Exp $
+# $Id: Makefile,v 1.2919 2008/06/10 12:23:34 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1733,6 +1733,7 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
+SUBDIR+=	talksoup
 SUBDIR+=	tagtool
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
