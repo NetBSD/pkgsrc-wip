@@ -1,0 +1,78 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+############################################################
+# user settable variables
+if test -z "$CKSUM"; then
+    CKSUM=cksum
+fi
+
+############################################################
+usage (){
+    cat 1>&2 <<EOF
+cvs_checksum - analyses CVS/Entries file and print a checksum of
+               cvs file names and their revisions.
+
+usage:
+  cvs_checksum [OPTIONS] [cvsdirs ...]
+OPTIONS:
+  -h|--help       display this help message
+  -l|--list       list CVS files names with their revisions
+                  instead of their checksum
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-l|--list)
+	    list_only=1;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+if test "$list_only"; then
+    for i in "$@"; do
+	efn=$i/CVS/Entries
+	if test -r "$efn"; then
+	    awk -F/ -v d="$i" '$1 == "" {print d "/" $2, $3}' "$efn"
+
+	    subdirs="`awk -F/ -v d="$i" '$1 == "D" && NF > 1 {print d "/" $2}' "$efn" `"
+	    $0 -l $subdirs
+	else
+	    echo "$i/CVS/Entries files is not readable" 1>&2
+	    exit 1
+	fi
+    done
+else
+    $0 -l "$@" | env LC_ALL=C sort | $CKSUM
+fi
