@@ -163,6 +163,7 @@ cd_and_print_summary (){
     if test "$field_plist"; then
 	plist_fn=$1/PLIST
 	if test "$make_plist"; then
+	    rm -f "$real_plistfn" || return 1
 	    ( cd $1 && ${BMAKE} plist PLIST="$real_plistfn" ) 1>&2 || return 1
 	     prepand_PLIST "$real_plistfn" >> "$summaryfn" || return 1
 	elif test -f $plist_fn; then
