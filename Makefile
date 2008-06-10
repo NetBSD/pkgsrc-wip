@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2917 2008/06/08 23:59:57 zul_ Exp $
+# $Id: Makefile,v 1.2918 2008/06/10 10:06:24 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1020,6 +1020,7 @@ SUBDIR+=	netbsd-m4
 SUBDIR+=	netbsd-make
 SUBDIR+=	netbsd-uuencode
 SUBDIR+=	netbt-hcidump
+SUBDIR+=	netclasses
 SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
