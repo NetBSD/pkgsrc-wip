@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2008/04/24 10:41:24 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.8 2008/06/11 14:35:39 thomasklausner Exp $
 
---- configure.orig	2008-04-18 17:48:03.000000000 +0200
+--- configure.orig	2008-06-10 15:19:18.000000000 +0000
 +++ configure
 @@ -1847,7 +1847,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
@@ -11,19 +11,3 @@ $NetBSD: patch-ab,v 1.7 2008/04/24 10:41:24 thomasklausner Exp $
  
  
  
-@@ -24052,13 +24052,13 @@ cat >>confdefs.h <<\_ACEOF
- #define USE_X_TOOLKIT 1
- _ACEOF
- 
--  if test "${USE_X_TOOLKIT}" == "LUCID"; then
-+  if test "${USE_X_TOOLKIT}" = "LUCID"; then
- 
- cat >>confdefs.h <<\_ACEOF
- #define USE_LUCID 1
- _ACEOF
- 
--  elif test "${USE_X_TOOLKIT}" == "MOTIF"; then
-+  elif test "${USE_X_TOOLKIT}" = "MOTIF"; then
- 
- cat >>confdefs.h <<\_ACEOF
- #define USE_MOTIF 1
