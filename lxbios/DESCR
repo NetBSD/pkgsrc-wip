@@ -1,4 +1,0 @@
-Lxbios is a utility for reading/writing LinuxBIOS parameters and
-displaying information from the LinuxBIOS table in CMOS.
-
-The program works only on x86-based systems that use LinuxBIOS.
