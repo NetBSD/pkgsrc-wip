@@ -1,0 +1,59 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/06/13 17:48:58 jakllsch Exp $
+#
+
+DISTNAME=	nvramtool-${NVRAMTOOL_SNAP_VERSION}
+CATEGORIES=	sysutils
+MASTER_SITES=	#empty
+
+MAINTAINER=	jakllsch@kollasch.net
+HOMEPAGE=	http://www.coreboot.org/Nvramtool
+COMMENT=	Coreboot CMOS NVRAM manipulation utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+= gmake
+USE_TOOLS+= date
+
+USE_LANGUAGES+= c
+
+SVN_REPOSITORIES=	nvramtool
+SVN_TAG=		{${NVRAMTOOL_TAG}}
+SVN_ROOT.nvramtool=	svn://coreboot.org/repos/trunk/util/nvramtool
+SVN_MODULE.nvramtool=	nvramtool
+
+pre-build:
+	${CP} ${FILESDIR}/pio.h ${WRKSRC}
+
+.include "../../mk/bsd.prefs.mk"
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+
+#Not Tested.
+#ONLY_FOR_PLATFORM+=     Linux-*-i386 Linux-*-x86_64
+
+.include "../../wip/mk/svn-package.mk"
+
+WRKSRC=			${WRKDIR}/${PKGBASE}
+
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+= iopl
+SUBST_FILES.iopl+=	cmos_lowlevel.c
+SUBST_MESSAGE.iopl=	fixing iopl
+SUBST_STAGE.iopl=	pre-configure
+SUBST_SED.iopl+= -e 's,i386_iopl,${MACHINE_ARCH}_iopl,g'
+
+MAKE_ENV+=	LDLIBS=-l${MACHINE_ARCH}
+
+.endif
+
+BUILD_TARGET= nvramtool
+
+YESTERDAY!=	expr `date +%s` - 86399
+NVRAMTOOL_TAG!=		${DATE} +%Y%m%d
+NVRAMTOOL_SNAP_VERSION!=		${DATE} -r ${YESTERDAY} +%Y%m%d
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/nvramtool ${PREFIX}/sbin/nvramtool
+	${INSTALL_MAN} ${WRKSRC}/nvramtool.1 ${PREFIX}/${PKGMANDIR}/man8/nvramtool.8
+
+.include "../../mk/bsd.pkg.mk"
