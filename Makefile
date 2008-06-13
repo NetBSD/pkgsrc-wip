@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2921 2008/06/13 16:27:51 jakllsch Exp $
+# $Id: Makefile,v 1.2922 2008/06/13 17:50:47 jakllsch Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1041,6 +1041,7 @@ SUBDIR+=	nos-tun
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nvidia-freebsd
+SUBDIR+=	nvramtool
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
 SUBDIR+=	ocp
