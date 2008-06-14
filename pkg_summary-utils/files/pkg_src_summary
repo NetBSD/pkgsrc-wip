@@ -153,7 +153,7 @@ varnames="`echo $PSS_FIELDS |
 cd $PKGSRCDIR
 
 tmp_dir="/tmp/pkg_src_summary.$$"
-trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
+trap "rm -rf $tmp_dir" 0 1 2 15
 mkdir -m 700 "$tmp_dir"
 
 tmpfn=$tmp_dir/pkgdirs2info.txt
@@ -299,16 +299,16 @@ restore_order (){
     runpipe0 add_NR '|' sort -k2n -k1n '|' rem_two_first_tokens
 }
 
+############################################################
+# direct packages
 partial_summary_fn=$tmp_dir/partial_summary.txt
 
 if test "$PSS_SLAVES"; then
     if test "$PSS_TRANSPORT"; then
 	PSS_TRANSPORT="-t $PSS_TRANSPORT"
-	qfields="`echo $PSS_FIELDS | sed 's, ,\\\ ,g'`"
-    else
-	qfields="$PSS_FIELDS"
     fi
 
+    qfields="$(echo $PSS_FIELDS | sed 's| |,|g')"
     environ="PSS_SLAVES= BMAKE=$BMAKE CKSUM=$CKSUM PKGSRCDIR=$PKGSRCDIR"
 
     runpipe0 \
@@ -317,9 +317,9 @@ if test "$PSS_SLAVES"; then
 	   -c "env $environ $0 -s -f '$qfields'" > "$tempsummaryfn"
 
     restore_order < "$tempsummaryfn" > "$partial_summary_fn"
-
 elif test "$slave"; then
-    process_one_by_one > "$partial_summary_fn"
+    process_one_by_one
+    exit 0
 else
     PSS_PPERS=1 # one package per line for local running
 
@@ -327,6 +327,9 @@ else
 	packages2stdout $pkgpaths '|' \
 	process_one_by_one > "$partial_summary_fn"
 fi
+
+############################################################
+# dependancies
 
 export PSS_FIELDS
 
@@ -374,6 +377,7 @@ while test -n "${with_dep}${with_bdep}"; do
     ' "$partial_summary_fn" > "$extra_deps_fn"
 
     if test -s "$extra_deps_fn"; then
+#	echo "inside! pkg_src_summary $make_plist < \"$extra_deps_fn\" >> \"$partial_summary_fn\"" 1>&2
 	pkg_src_summary $make_plist \
 	    < "$extra_deps_fn" >> "$partial_summary_fn"
 	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
