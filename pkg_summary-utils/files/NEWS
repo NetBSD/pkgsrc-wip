@@ -1,4 +1,4 @@
-Version 0.10.0, by Aleksey Cheusov, Sat, 14 Jun 2008 NN:NN:NN +0300
+Version 0.10.0, by Aleksey Cheusov, Sat, 14 Jun 2008 13:30:04 +0300
 
    added: pkg_summary-utils(7) that describes what pkg_summary-utils
    project is. All tools refer to it in its manual pages and
