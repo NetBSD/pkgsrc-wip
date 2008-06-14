@@ -1,3 +1,24 @@
+Version 0.9.0, by Aleksey Cheusov, Sat, 14 Jun 2008 10:38:55 +0300
+
+   ADDED: CVS_CHECKSUM field to pkg_src_summary. This gives a way to
+   compare two pkgsrc trees by comparing their pkg_src_summaries
+   comparing not only an information about package versions but also
+   an information about CVS files and their revisions.
+
+      new script added: 'cvs_checksum' that analyses local cvs
+      repository and lists all files in it with their revisions and,
+      optionally, calculates a checksum for all this. Run
+      'cvs_checksum -h' for more information. CKSUM environment
+      variable sets a checksum program, by default, standard 'cksum'.
+
+      pkg_src_summary can generate new field: CVS_CHECKSUM, a checksum
+      calculated by 'cvs_checksum' program for a package. By default 
+      CVS_CHECKSUM is NOT generated.
+
+      'pkg_cmp_summary -c' prints '!' (this means "not equal") for
+      packages with the same versions but different CVS_CHECKSUM provided
+      that CVS_CHECKSUM is set in both compared packages.
+
 Version 0.8.0, by Aleksey Cheusov
 
    FIXED: pkg_src_summary pkgpath

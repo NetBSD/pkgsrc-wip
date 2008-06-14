@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.4 2008/04/27 11:40:50 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.5 2008/06/14 07:41:36 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -30,10 +30,12 @@ Format of the results:
   <     second file contains newer version
   >     second file contains earlier version
   ?     versions are incomparable (incorrect version, for example)
+  !     versions are not equal (versions themselves are the same but
+           CVS_CHECKSUMs are different)
 .
  PKGBASE is PKGNAME with version stripped,
-VER1 and VER2 are package versions. VER2 is present only if
-   R is `<' or `>'. PKGPATH appears in output if -p option is specified.
+VER1 and VER2 are package versions.
+PKGPATH appears in output if -p option is specified.
 .Pp
 The options are as follows:
 .Bl -tag -width indent
@@ -42,6 +44,8 @@ display help message
 .It Fl p
 use PKGPATH:PKGBASE pair for identifing a package, by default only PKGBASE
 is used to identify the package.
+.It Fl c
+use CVS_CHECKSUM field for comparing in addition to PKGNAME (and PKGPATH)
 .El
 .Sh AUTHOR
 .An Aleksey Cheusov

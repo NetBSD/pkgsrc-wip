@@ -56,7 +56,7 @@ EOF
 
 # list of fields for default pkg_src_summary
 if test -z "$PSS_FIELDS"; then
-    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST'
+    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST' # CVS_CHECKSUM'
 fi
 
 if test -z "$PSS_PPERS"; then
@@ -95,8 +95,12 @@ fi
 if echo "$PSS_FIELDS" | grep PLIST > /dev/null; then
     field_plist=1
 fi
+if echo "$PSS_FIELDS" | grep CVS_CHECKSUM > /dev/null; then
+    field_cvs_checksum=1
+fi
 varnames="`echo $PSS_FIELDS |
    awk '{gsub(/PLIST/, \"\")
+         gsub(/CVS_CHECKSUM/, \"\")
          gsub(/ONLYFOR/, \"ONLY_FOR_PLATFORM\")
          gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
          gsub(/DESCRIPTION/, \"DESCR_SRC\")
@@ -158,6 +162,13 @@ cd_and_print_summary (){
 	${BMAKE} -f - my-show-vars VARNAMES="$varnames" ) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1
+
+    # CVS_CHECKSUM
+    if test "$field_cvs_checksum"; then
+	cvs_checksum $1 > "$tmpfn" || return 1
+	read cksum < "$tmpfn" || return 1
+	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
+    fi
 
     # not expanding PLIST yet
     if test "$field_plist"; then
@@ -253,7 +264,7 @@ if test "$PSS_SLAVES"; then
 	qfields="$PSS_FIELDS"
     fi
 
-    environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
+    environ="PSS_SLAVES= BMAKE=$BMAKE CKSUM=$CKSUM PKGSRCDIR=$PKGSRCDIR"
 
     runpipe0 \
 	packages2stdout "$@" '|' \

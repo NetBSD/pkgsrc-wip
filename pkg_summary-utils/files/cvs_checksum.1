@@ -1,0 +1,48 @@
+.\"	$NetBSD: cvs_checksum.1,v 1.1 2008/06/14 07:41:36 cheusov Exp $
+.\"
+.\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
+.\" Absolutely no warranty.
+.\"
+.Dd Jan 29, 2008
+.Dt CVS_CHECKSUM 1
+.Sh NAME
+.Nm cvs_checksum
+.Nd outputs a checksum of all files with their revisions
+from the working directory
+.Sh SYNOPSIS
+.Nm
+.Op Ar cvsdirs ...
+.Sh DESCRIPTION
+.Nm
+analyses CVS/Entries file and (with -l option) outputs a list of all
+files with their revisions in the working CVS directory. By default
+checksum is output.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl h
+display help message
+.It Fl l
+List of files with their revisions are output
+.El
+.Sh ENVIRONMENT
+.Bd -literal
+.Bl -tag -width Cm
+.It Cm CKSUM
+problem for calculating a checksum, By default
+the standard utility cksum is used.
+.El
+.Ed
+.Sh EXAMPLES
+.Bd -literal
+cvs_checksum /usr/src/bin/sh
+cvs_checksum -l /usr/pkgsrc/devel/libjudy /usr/pkgsrc/x11/xxkb
+env CKSUM=md5 cvs_checksum /usr/src/bin/sh
+.Ed
+.Sh SEE ALSO
+.Xr cvs 1 ,
+.Xr cksum 1 ,
+.Xr md5 1
+.Sh AUTHOR
+.An Aleksey Cheusov
+.Aq vle@gmx.net
