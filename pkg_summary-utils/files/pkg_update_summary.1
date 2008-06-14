@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_update_summary.1,v 1.3 2008/04/12 16:52:45 cheusov Exp $
+.\"	$NetBSD: pkg_update_summary.1,v 1.4 2008/06/14 10:27:35 cheusov Exp $
 .\"
 .\" Copyright (c) 2007 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -59,6 +59,9 @@ Path to pkg_info command, defaults to 'pkg_info'
 pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All
 pkg_update_summary /dir/pkg_summary.gz /dir 'gzip -dc' 'gzip -c'
 .Ed
+.Sh SEE ALSO
+.Xr pkg_summary-utils 7 ,
+.Xr pkg_summary 5
 .Sh AUTHOR
 .An Aleksey Cheusov
 .Aq vle@gmx.net

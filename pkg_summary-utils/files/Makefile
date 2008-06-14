@@ -24,6 +24,7 @@ MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 MAN+=		cvs_checksum.1
+MAN+=		pkg_summary-utils.7
 
 FILES=		README NEWS TODO pkg_grep_summary.awk
 
@@ -42,8 +43,10 @@ install-dirs:
 	$(INST_DIR) ${DESTDIR}${AWKMODDIR}
 .if "$(MKMAN)" != "no"
 	$(INST_DIR) ${DESTDIR}${MANDIR}/man1
+	$(INST_DIR) ${DESTDIR}${MANDIR}/man7
 .if "$(MKCATPAGES)" != "no"
 	$(INST_DIR) ${DESTDIR}${MANDIR}/cat1
+	$(INST_DIR) ${DESTDIR}${MANDIR}/cat7
 .endif
 .endif
 
