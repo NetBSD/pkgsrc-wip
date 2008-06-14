@@ -1,3 +1,12 @@
+Version 0.11.0, by Aleksey Cheusov, Sat, 14 Jun 2008 15:33:06 +0300
+
+   pkg_src_summary:
+
+      -d, -D and -A options for generating summary of the specified
+      packages and their dependancies.  -d is for DEPENDS
+      dependancies, -D is for BUILD_DEPENDS and -A is for both. See
+      pkg_src_summary(1) for details.
+
 Version 0.10.0, by Aleksey Cheusov, Sat, 14 Jun 2008 13:30:04 +0300
 
    added: pkg_summary-utils(7) that describes what pkg_summary-utils

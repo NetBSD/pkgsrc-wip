@@ -52,10 +52,13 @@ OPTIONS:
                          to be included to summary,
                          by default FULL summary is generated
   -s|--slave-mode        ready for use as paexec slave/remote program
-  -a|--add-fields <fields>     add the specified fields to the list
+  -a|--add-fields <fields>  add the specified fields to the list
                                of default ones
-  -r|--rem-fields <fields>     remove the specified fields from the list
+  -r|--rem-fields <fields>  remove the specified fields from the list
                                of default ones
+  -d|--with-deps      also generates summary for dependancies (DEPENDS)
+  -D|--with-bdeps     also generates summary for dependancies (BUILD_DEPENDS)
+  -A|--with-alldeps   implies -d and -D
 EOF
 }
 
@@ -104,7 +107,14 @@ process_options (){
 	    -s|--slave-mode)
 		slave=1;;
 	    -p|--make-plist)
-		make_plist=1;;
+		make_plist='-p';;
+	    -d|--with-deps)
+		with_dep=1;;
+	    -D|--with-bdeps)
+		with_bdep=1;;
+	    -A|--with-alldeps)
+		with_dep=1
+		with_bdep=1;;
 	    --)
 		shift
 		break;;
@@ -206,7 +216,7 @@ cd_and_print_summary (){
     # not expanding PLIST yet
     if test "$field_plist"; then
 	plist_fn=$1/PLIST
-	if test "$make_plist"; then
+	if test -n "$make_plist"; then
 	    rm -f "$real_plistfn" || return 1
 	    ( cd $1 && ${BMAKE} plist PLIST="$real_plistfn" ) 1>&2 || return 1
 	     prepand_PLIST "$real_plistfn" >> "$summaryfn" || return 1
@@ -289,6 +299,8 @@ restore_order (){
     runpipe0 add_NR '|' sort -k2n -k1n '|' rem_two_first_tokens
 }
 
+partial_summary_fn=$tmp_dir/partial_summary.txt
+
 if test "$PSS_SLAVES"; then
     if test "$PSS_TRANSPORT"; then
 	PSS_TRANSPORT="-t $PSS_TRANSPORT"
@@ -304,14 +316,70 @@ if test "$PSS_SLAVES"; then
 	paexec -l -n "$PSS_SLAVES" $PSS_TRANSPORT \
 	   -c "env $environ $0 -s -f '$qfields'" > "$tempsummaryfn"
 
-    restore_order < "$tempsummaryfn"
+    restore_order < "$tempsummaryfn" > "$partial_summary_fn"
 
 elif test "$slave"; then
-    process_one_by_one
+    process_one_by_one > "$partial_summary_fn"
 else
     PSS_PPERS=1 # one package per line for local running
 
     runpipe0 \
 	packages2stdout $pkgpaths '|' \
-	process_one_by_one
+	process_one_by_one > "$partial_summary_fn"
 fi
+
+export PSS_FIELDS
+
+extra_deps_fn=$tmp_dir/extra_deps.txt
+
+processed_pkgs_fn=$tmp_dir/processed_pkgs.txt
+awk -F= '$1 == "PKGPATH" {print $2}' \
+    < "$partial_summary_fn" > "$processed_pkgs_fn"
+
+while test -n "${with_dep}${with_bdep}"; do
+    awk -v with_dep=$with_dep -v with_bdep=$with_bdep \
+	-v processed_pkgs_fn=$processed_pkgs_fn '
+    BEGIN {
+	while (0 < (ret = (getline < processed_pkgs_fn))){
+	    processed_pkgs [$0] = 1
+	}
+	if (ret){
+	    print "reading error" > "/dev/stderr"
+	    exit (1)
+	}
+    }
+    /^PKGPATH=/ {
+	pkgpaths [substr($0, 9)] = 1
+	next
+    }
+    /^DEPENDS=/ && with_dep {
+	$0 = substr($0, 9)
+	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
+	for (i=1; i <= NF; ++i) depends [$i] = 1
+	next
+    }
+    /^BUILD_DEPENDS=/ && with_bdep {
+	$0 = substr($0, 15)
+	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
+	for (i=1; i <= NF; ++i) depends [$i] = 1
+	next
+    }
+    END {
+	for (d in depends){
+	    if (! (d in pkgpaths) && ! (d in processed_pkgs)){
+		print d
+	    }
+	}
+    }
+    ' "$partial_summary_fn" > "$extra_deps_fn"
+
+    if test -s "$extra_deps_fn"; then
+	pkg_src_summary $make_plist \
+	    < "$extra_deps_fn" >> "$partial_summary_fn"
+	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
+    else
+	break
+    fi
+done
+
+cat "$partial_summary_fn"
