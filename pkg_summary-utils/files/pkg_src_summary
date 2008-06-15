@@ -304,16 +304,12 @@ restore_order (){
 partial_summary_fn=$tmp_dir/partial_summary.txt
 
 if test "$PSS_SLAVES"; then
-    if test "$PSS_TRANSPORT"; then
-	PSS_TRANSPORT="-t $PSS_TRANSPORT"
-    fi
-
     qfields="$(echo $PSS_FIELDS | sed 's| |,|g')"
     environ="PSS_SLAVES= BMAKE=$BMAKE CKSUM=$CKSUM PKGSRCDIR=$PKGSRCDIR"
 
     runpipe0 \
 	packages2stdout $pkgpaths '|' \
-	paexec -l -n "$PSS_SLAVES" $PSS_TRANSPORT \
+	paexec -l -n "$PSS_SLAVES" -t "$PSS_TRANSPORT" \
 	   -c "env $environ $0 -s -f '$qfields'" > "$tempsummaryfn"
 
     restore_order < "$tempsummaryfn" > "$partial_summary_fn"
