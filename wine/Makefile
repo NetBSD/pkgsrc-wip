@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/06/10 10:19:24 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/16 13:10:16 asau Exp $
 
-DISTNAME=	wine-1.0-rc4
+DISTNAME=	wine-1.0-rc5
 # Remove this after release!
 PKGNAME=	${DISTNAME:S/0-/0/}
 #PKGREVISION=	1
