@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/11 15:32:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/17 20:44:04 cheusov Exp $
 #
 
 DISTNAME=	pkg_online-0.4.0
@@ -9,13 +9,15 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=	Client/Server search in pkgsrc packages
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	dict-server>=1.10.10nb2:../../wip/dict-server
 DEPENDS+=	dict-client>=1.10.9:../../wip/dict-client
 DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
 DEPENDS+=	netcat-[0-9]*:../../net/netcat
 
-INSTALLATION_DIRS+=	share/doc/pkg_online
+INSTALLATION_DIRS+=	share/doc/pkg_online bin
 
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes
