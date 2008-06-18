@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/06/16 13:10:16 asau Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/18 11:06:36 asau Exp $
 
-DISTNAME=	wine-1.0-rc5
-# Remove this after release!
+DISTNAME=	wine-1.0
 PKGNAME=	${DISTNAME:S/0-/0/}
-#PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://ibiblio.org/pub/linux/system/emulators/wine/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/}
