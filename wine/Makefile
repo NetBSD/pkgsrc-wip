@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/18 11:06:36 asau Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/18 11:46:04 asau Exp $
 
 DISTNAME=	wine-1.0
 PKGNAME=	${DISTNAME:S/0-/0/}
@@ -39,18 +39,17 @@ LIBS+=			${LDFLAGS}
 
 .include "options.mk"
 
-# Wine can be buggy with GCC version 4.
+# Sample code how to fall back to particular GCC version:
 #
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4*)
-
-.include "../../lang/gcc34/buildlink3.mk"
-
-pre-configure:
-	${ECHO} "GCC 4.x detected, falling back to GCC 3.4!"
-.	include "../../lang/gcc34/preconfigure.mk"
-
-.endif
+# .include "../../mk/compiler.mk"
+# .if !empty(CC_VERSION:Mgcc-4*)
+#
+# .include "../../lang/gcc34/buildlink3.mk"
+#
+# pre-configure:
+# 	${ECHO} "GCC 4.x detected, falling back to GCC 3.4!"
+# .	include "../../lang/gcc34/preconfigure.mk"
+# .endif
 
 post-install:
 .for tool in fnt2bdf
