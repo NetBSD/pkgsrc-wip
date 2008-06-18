@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2923 2008/06/14 17:32:02 adrian_p Exp $
+# $Id: Makefile,v 1.2924 2008/06/18 03:51:14 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -358,6 +358,7 @@ SUBDIR+=	fonttosfnt
 SUBDIR+=	foo2zjs
 SUBDIR+=	foomatic-db
 SUBDIR+=	foomatic-db-engine
+SUBDIR+=	fortunes-it
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
 SUBDIR+=	freedict-tools-xsl
