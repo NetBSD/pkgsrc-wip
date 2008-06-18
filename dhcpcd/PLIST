@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/12 15:49:33 rsmarples Exp $
-sbin/dhcpcd
+@comment $NetBSD: PLIST,v 1.3 2008/06/18 10:30:33 rsmarples Exp $
+libexec/dhcpcd-hooks/01-test
+libexec/dhcpcd-hooks/10-mtu
+libexec/dhcpcd-hooks/20-resolv.conf
+libexec/dhcpcd-hooks/30-hostname
+libexec/dhcpcd-hooks/50-ntp.conf
+libexec/dhcpcd-run-hooks
 man/man5/dhcpcd.conf.5
+man/man8/dhcpcd-run-hooks.8
 man/man8/dhcpcd.8
-man/man8/dhcpcd.sh.8
-share/examples/dhcpcd/dhcpcd.sh
-share/examples/dhcpcd/dhcpcd.conf
-share/examples/dhcpcd/dhcpcd-exit-hook.d/ntp.sh
+sbin/dhcpcd
+share/examples/dhcpcd.conf
 share/examples/rc.d/dhcpcd
-@dirrm share/examples/dhcpcd/dhcpcd-exit-hook.d
-@dirrm share/examples/dhcpcd
+@dirrm libexec/dhcpcd-hooks
