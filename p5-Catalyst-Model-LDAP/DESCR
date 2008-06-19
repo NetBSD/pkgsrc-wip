@@ -1,0 +1,4 @@
+This is the "Net::LDAP" model class. It's built on top of the Catalyst Model
+Framework.
+
+WWW: http://search.cpan.org/dist/Catalyst-Model-LDAP/
