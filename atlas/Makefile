@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/27 19:01:03 asau Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/19 19:16:02 asau Exp $
 
 DISTNAME=	atlas3.8.1
 CATEGORIES=	math
@@ -9,8 +9,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://math-atlas.sourceforge.net/
 COMMENT=	Automatically Tuned Linear Algebra Software
 
-BROKEN=		Doesn't follow PREFIX
-#PKG_DESTDIR_SUPPORT=	user-destdir	# to be done
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ATLAS
 HAS_CONFIGURE=	yes
@@ -21,6 +20,8 @@ USE_LANGUAGES=	c fortran
 
 CONFIGURE_DIRS=		${WRKSRC}/obj
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
+CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
+CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
 CONFIGURE_ARGS+=	-v 9 -b 32
 
 TEST_TARGET=	check
