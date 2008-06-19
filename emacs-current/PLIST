@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2008/06/11 14:35:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.56 2008/06/19 08:14:21 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2336,16 +2336,16 @@ share/emacs/${PKGVERSION}/lisp/net/net-utils.el.gz
 share/emacs/${PKGVERSION}/lisp/net/net-utils.elc
 share/emacs/${PKGVERSION}/lisp/net/netrc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/netrc.elc
-share/emacs/${PKGVERSION}/lisp/net/newsticker-backend.el.gz
-share/emacs/${PKGVERSION}/lisp/net/newsticker-backend.elc
-share/emacs/${PKGVERSION}/lisp/net/newsticker-plainview.el.gz
-share/emacs/${PKGVERSION}/lisp/net/newsticker-plainview.elc
-share/emacs/${PKGVERSION}/lisp/net/newsticker-reader.el.gz
-share/emacs/${PKGVERSION}/lisp/net/newsticker-reader.elc
-share/emacs/${PKGVERSION}/lisp/net/newsticker-ticker.el.gz
-share/emacs/${PKGVERSION}/lisp/net/newsticker-ticker.elc
-share/emacs/${PKGVERSION}/lisp/net/newsticker-treeview.el.gz
-share/emacs/${PKGVERSION}/lisp/net/newsticker-treeview.elc
+share/emacs/${PKGVERSION}/lisp/net/newst-backend.el.gz
+share/emacs/${PKGVERSION}/lisp/net/newst-backend.elc
+share/emacs/${PKGVERSION}/lisp/net/newst-plainview.el.gz
+share/emacs/${PKGVERSION}/lisp/net/newst-plainview.elc
+share/emacs/${PKGVERSION}/lisp/net/newst-reader.el.gz
+share/emacs/${PKGVERSION}/lisp/net/newst-reader.elc
+share/emacs/${PKGVERSION}/lisp/net/newst-ticker.el.gz
+share/emacs/${PKGVERSION}/lisp/net/newst-ticker.elc
+share/emacs/${PKGVERSION}/lisp/net/newst-treeview.el.gz
+share/emacs/${PKGVERSION}/lisp/net/newst-treeview.elc
 share/emacs/${PKGVERSION}/lisp/net/newsticker.el.gz
 share/emacs/${PKGVERSION}/lisp/net/newsticker.elc
 share/emacs/${PKGVERSION}/lisp/net/ntlm.el.gz
@@ -2502,6 +2502,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-faces.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-faces.elc
 share/emacs/${PKGVERSION}/lisp/org/org-gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-gnus.elc
+share/emacs/${PKGVERSION}/lisp/org/org-id.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-id.elc
 share/emacs/${PKGVERSION}/lisp/org/org-info.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-info.elc
 share/emacs/${PKGVERSION}/lisp/org/org-irc.el.gz
