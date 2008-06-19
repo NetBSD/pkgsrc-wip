@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/07/06 06:29:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/19 09:19:46 thomasklausner Exp $
 
-PKGNAME=		crm114-20070320
-DISTNAME=		${PKGNAME}-BlameBaltar.src
+PKGNAME=		crm114-20070810
+DISTNAME=		${PKGNAME}-BlameTheSegfault.src
 CATEGORIES=		mail
 
 MAINTAINER=		bsd@cs.ubc.ca
