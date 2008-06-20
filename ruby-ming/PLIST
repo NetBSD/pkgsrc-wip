@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/26 03:09:37 obache Exp $
-${RUBY_SITEARCHLIBDIR}/ming/mingc.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/ming/ming.rb
+@comment $NetBSD: PLIST,v 1.5 2008/06/20 12:10:16 obache Exp $
+${RUBY_VENDORARCHLIB}/ming/mingc.${RUBY_DLEXT}
+${RUBY_VENDORLIB}/ming/ming.rb
 ${RUBY_EXAMPLESDIR}/ming/common/Impact.fdb
 ${RUBY_EXAMPLESDIR}/ming/common/Verdana.fdb
 ${RUBY_EXAMPLESDIR}/ming/common/alpha.dbl
@@ -234,5 +234,5 @@ ${RUBY_EXAMPLESDIR}/ming/version8/setTabIndex.rb
 @dirrm ${RUBY_EXAMPLESDIR}/ming/level1
 @dirrm ${RUBY_EXAMPLESDIR}/ming/common
 @dirrm ${RUBY_EXAMPLESDIR}/ming
-@dirrm ${RUBY_SITELIBDIR}/ming
-@dirrm ${RUBY_SITEARCHLIBDIR}/ming
+@dirrm ${RUBY_VENDORLIB}/ming
+@dirrm ${RUBY_VENDORARCHLIB}/ming
