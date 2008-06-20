@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/16 18:54:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 17:15:59 asau Exp $
 
 DISTNAME=	openmpi-1.2.6
 CATEGORIES=	parallel
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
+USE_LIBTOOL=		yes
 
 CONFIGURE_ENV+=	NM=/usr/bin/nm
 
