@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 03:02:14 obache Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.pablotron.org/download/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.pablotron.org/software/imlib2-ruby/
 COMMENT=	Imlib2 bindings for Ruby
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 VER=		0.5.2
 
@@ -24,14 +26,14 @@ INSTALL_TARGET=	site-install
 DOCS=		AUTHORS COPYING ChangeLog README TODO
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/imlib2
-	cd ${WRKSRC}/examples && pax -rw -pp -pm . ${RUBY_EXAMPLESDIR}/imlib2
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/imlib2
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/imlib2
+	cd ${WRKSRC}/examples && pax -rw -pp -pm . ${DESTDIR}${RUBY_EXAMPLESDIR}/imlib2
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/imlib2
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/imlib2
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/imlib2
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/imlib2/api
-	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${RUBY_DOCDIR}/imlib2/api
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/imlib2/api
+	cd ${WRKSRC}/doc && ${PAX} -rw -pp -pm . ${DESTDIR}${RUBY_DOCDIR}/imlib2/api
 	${RUBY_GENERATE_PLIST}
 
 BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2

@@ -1,95 +1,95 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/09 13:08:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/20 03:03:20 obache Exp $
 bin/rubyphoto.rb
-${RUBY_SITELIBDIR}/rubyphoto.rb
-${RUBY_SITELIBDIR}/gallery/gallery.rb
-${RUBY_SITELIBDIR}/gallery/fileutils.rb
-${RUBY_SITELIBDIR}/gallery/mail-administrator.rb
-${RUBY_SITELIBDIR}/gallery/cgi-administrator.rb
-${RUBY_SITELIBDIR}/gallery/config.rb
-${RUBY_SITELIBDIR}/gallery/mail-lib.rb
-${RUBY_SITELIBDIR}/gallery/base-administrator.rb
-${RUBY_SITELIBDIR}/gallery/.ja.i/image_admin.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/admin.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/add.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/header.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/login.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/error.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/user_admin.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/footer.erb
-${RUBY_SITELIBDIR}/gallery/.ja.i/messages.rb
-${RUBY_SITELIBDIR}/gallery/.ja.i/gallery_admin.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/.ja.i
-${RUBY_SITELIBDIR}/gallery/.en/messages.rb
-@dirrm ${RUBY_SITELIBDIR}/gallery/.en
-${RUBY_SITELIBDIR}/gallery/mail.en/header.erb
-${RUBY_SITELIBDIR}/gallery/mail.en/admin.erb
-${RUBY_SITELIBDIR}/gallery/mail.en/error.erb
-${RUBY_SITELIBDIR}/gallery/mail.en/footer.erb
-${RUBY_SITELIBDIR}/gallery/mail.en/messages.rb
-${RUBY_SITELIBDIR}/gallery/mail.en/mail.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/mail.en
-${RUBY_SITELIBDIR}/gallery/html/image_admin.erb
-${RUBY_SITELIBDIR}/gallery/html/login.erb
-${RUBY_SITELIBDIR}/gallery/html/header.erb
-${RUBY_SITELIBDIR}/gallery/html/admin.erb
-${RUBY_SITELIBDIR}/gallery/html/add.erb
-${RUBY_SITELIBDIR}/gallery/html/error.erb
-${RUBY_SITELIBDIR}/gallery/html/gallery_admin.erb
-${RUBY_SITELIBDIR}/gallery/html/admin_menu.erb
-${RUBY_SITELIBDIR}/gallery/html/mail_info.erb
-${RUBY_SITELIBDIR}/gallery/html/footer.erb
-${RUBY_SITELIBDIR}/gallery/html/show_message.erb
-${RUBY_SITELIBDIR}/gallery/html/user_admin.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/html
-${RUBY_SITELIBDIR}/gallery/config/shared_config.erb
-${RUBY_SITELIBDIR}/gallery/config/config.erb
-${RUBY_SITELIBDIR}/gallery/config/album_config.erb
-${RUBY_SITELIBDIR}/gallery/config/image_config.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/config
-${RUBY_SITELIBDIR}/gallery/theme_html/admin.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/add.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/image_admin.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/header.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/login.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/error.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/gallery_admin.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/mail_info.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/footer.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/show_message.erb
-${RUBY_SITELIBDIR}/gallery/theme_html/user_admin.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/theme_html
-${RUBY_SITELIBDIR}/gallery/.ja/messages.rb
-@dirrm ${RUBY_SITELIBDIR}/gallery/.ja
-${RUBY_SITELIBDIR}/gallery/mail.ja/admin.erb
-${RUBY_SITELIBDIR}/gallery/mail.ja/header.erb
-${RUBY_SITELIBDIR}/gallery/mail.ja/error.erb
-${RUBY_SITELIBDIR}/gallery/mail.ja/footer.erb
-${RUBY_SITELIBDIR}/gallery/mail.ja/messages.rb
-${RUBY_SITELIBDIR}/gallery/mail.ja/mail.erb
-@dirrm ${RUBY_SITELIBDIR}/gallery/mail.ja
-@dirrm ${RUBY_SITELIBDIR}/gallery
-${RUBY_SITELIBDIR}/findbin/abspath.rb
-${RUBY_SITELIBDIR}/findbin/findbin.rb
-@dirrm ${RUBY_SITELIBDIR}/findbin
-${RUBY_SITELIBDIR}/rubyphoto/imagemagick.rb
-${RUBY_SITELIBDIR}/rubyphoto/rmagick.rb
-${RUBY_SITELIBDIR}/rubyphoto/xmlparser.rb
-${RUBY_SITELIBDIR}/rubyphoto/config.rb
-${RUBY_SITELIBDIR}/rubyphoto/album.rb
-${RUBY_SITELIBDIR}/rubyphoto/utils.rb
-${RUBY_SITELIBDIR}/rubyphoto/image_processor.rb
-${RUBY_SITELIBDIR}/rubyphoto/rexmlparser.rb
-${RUBY_SITELIBDIR}/rubyphoto/baseparser.rb
-${RUBY_SITELIBDIR}/rubyphoto/image_cat.rb
-${RUBY_SITELIBDIR}/rubyphoto/photo.rb
-${RUBY_SITELIBDIR}/rubyphoto/xmlscanner.rb
-${RUBY_SITELIBDIR}/rubyphoto/template.rb
-${RUBY_SITELIBDIR}/rubyphoto/rubyphoto.rb
-${RUBY_SITELIBDIR}/rubyphoto/imlib.rb
-@dirrm ${RUBY_SITELIBDIR}/rubyphoto
-${RUBY_SITELIBDIR}/webutils/realtime-counter.rb
-${RUBY_SITELIBDIR}/webutils/realtime-counter.rjs
-@dirrm ${RUBY_SITELIBDIR}/webutils
+${RUBY_VENDORLIB}/rubyphoto.rb
+${RUBY_VENDORLIB}/gallery/gallery.rb
+${RUBY_VENDORLIB}/gallery/fileutils.rb
+${RUBY_VENDORLIB}/gallery/mail-administrator.rb
+${RUBY_VENDORLIB}/gallery/cgi-administrator.rb
+${RUBY_VENDORLIB}/gallery/config.rb
+${RUBY_VENDORLIB}/gallery/mail-lib.rb
+${RUBY_VENDORLIB}/gallery/base-administrator.rb
+${RUBY_VENDORLIB}/gallery/.ja.i/image_admin.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/admin.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/add.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/header.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/login.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/error.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/user_admin.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/footer.erb
+${RUBY_VENDORLIB}/gallery/.ja.i/messages.rb
+${RUBY_VENDORLIB}/gallery/.ja.i/gallery_admin.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/.ja.i
+${RUBY_VENDORLIB}/gallery/.en/messages.rb
+@dirrm ${RUBY_VENDORLIB}/gallery/.en
+${RUBY_VENDORLIB}/gallery/mail.en/header.erb
+${RUBY_VENDORLIB}/gallery/mail.en/admin.erb
+${RUBY_VENDORLIB}/gallery/mail.en/error.erb
+${RUBY_VENDORLIB}/gallery/mail.en/footer.erb
+${RUBY_VENDORLIB}/gallery/mail.en/messages.rb
+${RUBY_VENDORLIB}/gallery/mail.en/mail.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/mail.en
+${RUBY_VENDORLIB}/gallery/html/image_admin.erb
+${RUBY_VENDORLIB}/gallery/html/login.erb
+${RUBY_VENDORLIB}/gallery/html/header.erb
+${RUBY_VENDORLIB}/gallery/html/admin.erb
+${RUBY_VENDORLIB}/gallery/html/add.erb
+${RUBY_VENDORLIB}/gallery/html/error.erb
+${RUBY_VENDORLIB}/gallery/html/gallery_admin.erb
+${RUBY_VENDORLIB}/gallery/html/admin_menu.erb
+${RUBY_VENDORLIB}/gallery/html/mail_info.erb
+${RUBY_VENDORLIB}/gallery/html/footer.erb
+${RUBY_VENDORLIB}/gallery/html/show_message.erb
+${RUBY_VENDORLIB}/gallery/html/user_admin.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/html
+${RUBY_VENDORLIB}/gallery/config/shared_config.erb
+${RUBY_VENDORLIB}/gallery/config/config.erb
+${RUBY_VENDORLIB}/gallery/config/album_config.erb
+${RUBY_VENDORLIB}/gallery/config/image_config.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/config
+${RUBY_VENDORLIB}/gallery/theme_html/admin.erb
+${RUBY_VENDORLIB}/gallery/theme_html/add.erb
+${RUBY_VENDORLIB}/gallery/theme_html/image_admin.erb
+${RUBY_VENDORLIB}/gallery/theme_html/header.erb
+${RUBY_VENDORLIB}/gallery/theme_html/login.erb
+${RUBY_VENDORLIB}/gallery/theme_html/error.erb
+${RUBY_VENDORLIB}/gallery/theme_html/gallery_admin.erb
+${RUBY_VENDORLIB}/gallery/theme_html/mail_info.erb
+${RUBY_VENDORLIB}/gallery/theme_html/footer.erb
+${RUBY_VENDORLIB}/gallery/theme_html/show_message.erb
+${RUBY_VENDORLIB}/gallery/theme_html/user_admin.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/theme_html
+${RUBY_VENDORLIB}/gallery/.ja/messages.rb
+@dirrm ${RUBY_VENDORLIB}/gallery/.ja
+${RUBY_VENDORLIB}/gallery/mail.ja/admin.erb
+${RUBY_VENDORLIB}/gallery/mail.ja/header.erb
+${RUBY_VENDORLIB}/gallery/mail.ja/error.erb
+${RUBY_VENDORLIB}/gallery/mail.ja/footer.erb
+${RUBY_VENDORLIB}/gallery/mail.ja/messages.rb
+${RUBY_VENDORLIB}/gallery/mail.ja/mail.erb
+@dirrm ${RUBY_VENDORLIB}/gallery/mail.ja
+@dirrm ${RUBY_VENDORLIB}/gallery
+${RUBY_VENDORLIB}/findbin/abspath.rb
+${RUBY_VENDORLIB}/findbin/findbin.rb
+@dirrm ${RUBY_VENDORLIB}/findbin
+${RUBY_VENDORLIB}/rubyphoto/imagemagick.rb
+${RUBY_VENDORLIB}/rubyphoto/rmagick.rb
+${RUBY_VENDORLIB}/rubyphoto/xmlparser.rb
+${RUBY_VENDORLIB}/rubyphoto/config.rb
+${RUBY_VENDORLIB}/rubyphoto/album.rb
+${RUBY_VENDORLIB}/rubyphoto/utils.rb
+${RUBY_VENDORLIB}/rubyphoto/image_processor.rb
+${RUBY_VENDORLIB}/rubyphoto/rexmlparser.rb
+${RUBY_VENDORLIB}/rubyphoto/baseparser.rb
+${RUBY_VENDORLIB}/rubyphoto/image_cat.rb
+${RUBY_VENDORLIB}/rubyphoto/photo.rb
+${RUBY_VENDORLIB}/rubyphoto/xmlscanner.rb
+${RUBY_VENDORLIB}/rubyphoto/template.rb
+${RUBY_VENDORLIB}/rubyphoto/rubyphoto.rb
+${RUBY_VENDORLIB}/rubyphoto/imlib.rb
+@dirrm ${RUBY_VENDORLIB}/rubyphoto
+${RUBY_VENDORLIB}/webutils/realtime-counter.rb
+${RUBY_VENDORLIB}/webutils/realtime-counter.rjs
+@dirrm ${RUBY_VENDORLIB}/webutils
 ${RUBY_DOCDIR}/gallery/COPYING_for_RubyPhoto
 ${RUBY_DOCDIR}/gallery/README.en
 ${RUBY_DOCDIR}/gallery/README.ja
