@@ -1,37 +1,37 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/11 15:26:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/20 04:48:35 obache Exp $
 bin/rgettext
 bin/rmsgfmt
 bin/rmsgmerge
-${RUBY_SITELIBDIR}/gettext.rb
-${RUBY_SITELIBDIR}/gettext/active_record.rb
-${RUBY_SITELIBDIR}/gettext/cgi.rb
-${RUBY_SITELIBDIR}/gettext/container.rb
-${RUBY_SITELIBDIR}/gettext/erb.rb
-${RUBY_SITELIBDIR}/gettext/iconv.rb
-${RUBY_SITELIBDIR}/gettext/mo.rb
-${RUBY_SITELIBDIR}/gettext/parser/active_record.rb
-${RUBY_SITELIBDIR}/gettext/parser/erb.rb
-${RUBY_SITELIBDIR}/gettext/parser/glade.rb
-${RUBY_SITELIBDIR}/gettext/parser/ruby.rb
-${RUBY_SITELIBDIR}/gettext/poparser.rb
-${RUBY_SITELIBDIR}/gettext/rails.rb
-${RUBY_SITELIBDIR}/gettext/rails_compat.rb
-${RUBY_SITELIBDIR}/gettext/rgettext.rb
-${RUBY_SITELIBDIR}/gettext/rmsgfmt.rb
-${RUBY_SITELIBDIR}/gettext/rmsgmerge.rb
-${RUBY_SITELIBDIR}/gettext/string.rb
-${RUBY_SITELIBDIR}/gettext/textdomain.rb
-${RUBY_SITELIBDIR}/gettext/textdomainmanager.rb
-${RUBY_SITELIBDIR}/gettext/utils.rb
-${RUBY_SITELIBDIR}/gettext/version.rb
-${RUBY_SITELIBDIR}/locale.rb
-${RUBY_SITELIBDIR}/locale/base.rb
-${RUBY_SITELIBDIR}/locale/cgi.rb
-${RUBY_SITELIBDIR}/locale/jruby.rb
-${RUBY_SITELIBDIR}/locale/object.rb
-${RUBY_SITELIBDIR}/locale/posix.rb
-${RUBY_SITELIBDIR}/locale/win32.rb
-${RUBY_SITELIBDIR}/locale/win32_table.rb
+${RUBY_VENDORLIB}/gettext.rb
+${RUBY_VENDORLIB}/gettext/active_record.rb
+${RUBY_VENDORLIB}/gettext/cgi.rb
+${RUBY_VENDORLIB}/gettext/container.rb
+${RUBY_VENDORLIB}/gettext/erb.rb
+${RUBY_VENDORLIB}/gettext/iconv.rb
+${RUBY_VENDORLIB}/gettext/mo.rb
+${RUBY_VENDORLIB}/gettext/parser/active_record.rb
+${RUBY_VENDORLIB}/gettext/parser/erb.rb
+${RUBY_VENDORLIB}/gettext/parser/glade.rb
+${RUBY_VENDORLIB}/gettext/parser/ruby.rb
+${RUBY_VENDORLIB}/gettext/poparser.rb
+${RUBY_VENDORLIB}/gettext/rails.rb
+${RUBY_VENDORLIB}/gettext/rails_compat.rb
+${RUBY_VENDORLIB}/gettext/rgettext.rb
+${RUBY_VENDORLIB}/gettext/rmsgfmt.rb
+${RUBY_VENDORLIB}/gettext/rmsgmerge.rb
+${RUBY_VENDORLIB}/gettext/string.rb
+${RUBY_VENDORLIB}/gettext/textdomain.rb
+${RUBY_VENDORLIB}/gettext/textdomainmanager.rb
+${RUBY_VENDORLIB}/gettext/utils.rb
+${RUBY_VENDORLIB}/gettext/version.rb
+${RUBY_VENDORLIB}/locale.rb
+${RUBY_VENDORLIB}/locale/base.rb
+${RUBY_VENDORLIB}/locale/cgi.rb
+${RUBY_VENDORLIB}/locale/jruby.rb
+${RUBY_VENDORLIB}/locale/object.rb
+${RUBY_VENDORLIB}/locale/posix.rb
+${RUBY_VENDORLIB}/locale/win32.rb
+${RUBY_VENDORLIB}/locale/win32_table.rb
 share/locale/bs/LC_MESSAGES/rails.mo
 share/locale/bs/LC_MESSAGES/rgettext.mo
 share/locale/ca/LC_MESSAGES/rails.mo
@@ -78,6 +78,6 @@ share/locale/zh/LC_MESSAGES/rails.mo
 share/locale/zh/LC_MESSAGES/rgettext.mo
 share/locale/zh_TW/LC_MESSAGES/rails.mo
 share/locale/zh_TW/LC_MESSAGES/rgettext.mo
-@dirrm ${RUBY_SITELIBDIR}/locale
-@dirrm ${RUBY_SITELIBDIR}/gettext/parser
-@dirrm ${RUBY_SITELIBDIR}/gettext
+@dirrm ${RUBY_VENDORLIB}/locale
+@dirrm ${RUBY_VENDORLIB}/gettext/parser
+@dirrm ${RUBY_VENDORLIB}/gettext
