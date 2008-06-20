@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/08 15:44:07 obache Exp $
-${RUBY_SITELIBDIR}/RMagick.rb
-${RUBY_SITEARCHLIBDIR}/RMagick2.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/rvg/clippath.rb
-${RUBY_SITELIBDIR}/rvg/container.rb
-${RUBY_SITELIBDIR}/rvg/deep_equal.rb
-${RUBY_SITELIBDIR}/rvg/describable.rb
-${RUBY_SITELIBDIR}/rvg/embellishable.rb
-${RUBY_SITELIBDIR}/rvg/misc.rb
-${RUBY_SITELIBDIR}/rvg/paint.rb
-${RUBY_SITELIBDIR}/rvg/pathdata.rb
-${RUBY_SITELIBDIR}/rvg/rvg.rb
-${RUBY_SITELIBDIR}/rvg/stretchable.rb
-${RUBY_SITELIBDIR}/rvg/stylable.rb
-${RUBY_SITELIBDIR}/rvg/text.rb
-${RUBY_SITELIBDIR}/rvg/transformable.rb
-${RUBY_SITELIBDIR}/rvg/units.rb
+@comment $NetBSD: PLIST,v 1.6 2008/06/20 04:35:03 obache Exp $
+${RUBY_VENDORLIB}/RMagick.rb
+${RUBY_VENDORARCHLIB}/RMagick2.${RUBY_DLEXT}
+${RUBY_VENDORLIB}/rvg/clippath.rb
+${RUBY_VENDORLIB}/rvg/container.rb
+${RUBY_VENDORLIB}/rvg/deep_equal.rb
+${RUBY_VENDORLIB}/rvg/describable.rb
+${RUBY_VENDORLIB}/rvg/embellishable.rb
+${RUBY_VENDORLIB}/rvg/misc.rb
+${RUBY_VENDORLIB}/rvg/paint.rb
+${RUBY_VENDORLIB}/rvg/pathdata.rb
+${RUBY_VENDORLIB}/rvg/rvg.rb
+${RUBY_VENDORLIB}/rvg/stretchable.rb
+${RUBY_VENDORLIB}/rvg/stylable.rb
+${RUBY_VENDORLIB}/rvg/text.rb
+${RUBY_VENDORLIB}/rvg/transformable.rb
+${RUBY_VENDORLIB}/rvg/units.rb
 ${RUBY_DOCDIR}/RMagick/.rmagick
 ${RUBY_DOCDIR}/RMagick/InitialCoords.rb.html
 ${RUBY_DOCDIR}/RMagick/NewCoordSys.rb.html
@@ -731,4 +731,4 @@ ${RUBY_EXAMPLESDIR}/RMagick/vignette.rb
 @dirrm ${RUBY_DOCDIR}/RMagick/ex
 @dirrm ${RUBY_DOCDIR}/RMagick/css
 @dirrm ${RUBY_DOCDIR}/RMagick
-@dirrm ${RUBY_SITELIBDIR}/rvg
+@dirrm ${RUBY_VENDORLIB}/rvg
