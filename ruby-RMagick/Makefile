@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 04:35:02 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/22 00:58:15 obache Exp $
 
-DISTNAME=	RMagick-2.5.0
+DISTNAME=	RMagick-2.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/38050/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/38607/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rmagick.rubyforge.org/
@@ -25,6 +24,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/RMagick
 	cd ${WRKSRC}/examples && \
 		pax -rw -pp -pm . ${DESTDIR}${RUBY_EXAMPLESDIR}/RMagick
+
+BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.3.0
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
