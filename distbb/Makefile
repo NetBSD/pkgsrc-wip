@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2008/06/18 20:18:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/22 19:57:17 cheusov Exp $
 #
 
-DISTNAME=	distbb-0.14.0
+DISTNAME=	distbb-0.15.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/distbb/
 
