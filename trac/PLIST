@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/23 15:47:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/06/23 16:02:39 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -527,11 +527,12 @@ ${PYSITELIB}/trac/wiki/default-pages/TracTimeline
 ${PYSITELIB}/trac/wiki/default-pages/TracUnicode
 ${PYSITELIB}/trac/wiki/default-pages/TracUpgrade
 ${PYSITELIB}/trac/wiki/default-pages/TracWiki
-${PYSITELIB}/trac/wiki/default-pages/TracWikiMacros
+${PYSITELIB}/trac/wiki/default-pages/WikiMacros
 ${PYSITELIB}/trac/wiki/default-pages/TracWorkflow
 ${PYSITELIB}/trac/wiki/default-pages/WikiDeletePage
 ${PYSITELIB}/trac/wiki/default-pages/WikiFormatting
 ${PYSITELIB}/trac/wiki/default-pages/WikiHtml
+${PYSITELIB}/trac/wiki/default-pages/WikiMacros
 ${PYSITELIB}/trac/wiki/default-pages/WikiNewPage
 ${PYSITELIB}/trac/wiki/default-pages/WikiPageNames
 ${PYSITELIB}/trac/wiki/default-pages/WikiProcessors
@@ -578,7 +579,6 @@ share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-post-commit-hook.cmd
 share/examples/trac/trac-pre-commit-hook
-share/examples/trac/workflow/._migrate_original_to_basic.py
 share/examples/trac/workflow/README
 share/examples/trac/workflow/enterprise-workflow.ini
 share/examples/trac/workflow/migrate_original_to_basic.py
