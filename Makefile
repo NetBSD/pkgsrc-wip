@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2928 2008/06/23 15:09:35 jsonn Exp $
+# $Id: Makefile,v 1.2929 2008/06/23 15:13:42 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1022,7 +1022,6 @@ SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
 SUBDIR+=	netrik
-SUBDIR+=	netsurf
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
