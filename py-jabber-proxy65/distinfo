@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/29 01:00:26 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2008/06/23 21:23:12 schnoebe Exp $
 
-SHA1 (pyaim-t-0.8a.tar.gz) = ef98a3a161e151706ad80481aefc3c14eb01c9f8
-RMD160 (pyaim-t-0.8a.tar.gz) = ddc6485dc481cd97f1db3ceaa485387ba4669e56
-Size (pyaim-t-0.8a.tar.gz) = 165035 bytes
+SHA1 (Proxy65-1.1.1.tar.gz) = e4deb0f90d5ef11d1201200458793e18144dd906
+RMD160 (Proxy65-1.1.1.tar.gz) = e8d2f4038ad77c374f1c3f4b6f658b7c42a3ec17
+Size (Proxy65-1.1.1.tar.gz) = 9088 bytes
