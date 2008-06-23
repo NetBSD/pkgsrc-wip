@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 07:54:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/23 16:02:06 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,7 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/genshi/__init__.py
 ${PYSITELIB}/genshi/__init__.pyc
 ${PYSITELIB}/genshi/__init__.pyo
+${PYSITELIB}/genshi/_speedups.so
 ${PYSITELIB}/genshi/builder.py
 ${PYSITELIB}/genshi/builder.pyc
 ${PYSITELIB}/genshi/builder.pyo
@@ -24,6 +25,9 @@ ${PYSITELIB}/genshi/filters/html.pyo
 ${PYSITELIB}/genshi/filters/i18n.py
 ${PYSITELIB}/genshi/filters/i18n.pyc
 ${PYSITELIB}/genshi/filters/i18n.pyo
+${PYSITELIB}/genshi/filters/transform.py
+${PYSITELIB}/genshi/filters/transform.pyc
+${PYSITELIB}/genshi/filters/transform.pyo
 ${PYSITELIB}/genshi/input.py
 ${PYSITELIB}/genshi/input.pyc
 ${PYSITELIB}/genshi/input.pyo
