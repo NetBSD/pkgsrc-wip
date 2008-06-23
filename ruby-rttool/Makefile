@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/24 12:57:53 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/23 23:13:03 obache Exp $
 
 DISTNAME=	rttool-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.rubyist.net/~rubikitch/archive/
 
@@ -17,6 +18,7 @@ BUILDLINK_DEPMETHOD.${RUBY_PKGPREFIX}-rdtool= full
 
 VERSION=		1.0.2
 USE_RUBY_SETUP=		yes
+CONFIGURE_ARGS+=	--site-ruby=${PREFIX}/${RUBY_VENDORLIB}
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin/rt ${WRKSRC}/lib/rt
 HTMLDOCS=		rttool.en.html rttool.ja.html
 DOCS=			rttool.en.rd rttool.ja.rd
