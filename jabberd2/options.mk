@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2008/05/24 15:34:11 tnn2 Exp $
-#
+# $NetBSD: options.mk,v 1.7 2008/06/24 10:09:53 moubctez Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
@@ -21,12 +20,12 @@ PLIST_VARS+=	db ldap mysql pam pgsql sqlite
 
 .if !empty(PKG_OPTIONS:Msasl-cyrus)
 CONFIGURE_ARGS+=	--with-sasl=cyrus
-.include "../../security/cyrus-sasl/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msasl-gnu)
 CONFIGURE_ARGS+=	--with-sasl=gsasl
-.include "../../security/gsasl/buildlink3.mk"
+.  include "../../security/gsasl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msasl-scod)
@@ -34,14 +33,10 @@ CONFIGURE_ARGS+=	--with-sasl=scod
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
-SUBST_CLASSES+=		fixdb
-SUBST_STAGE.fixdb=	post-configure
-SUBST_FILES.fixdb=	storage/Makefile.in
-SUBST_SED.fixdb=	-e "s|@DB_LIBS@||g"
-BUILDLINK_TRANSFORM+=	rm:-ldb
-BDB_ACCEPTED=		db4
-PLIST.db=		yes
 CONFIGURE_ARGS+=	--enable-db
+PLIST.db=		yes
+BDB_ACCEPTED=		db4
+BUILDLINK_TRANSFORM+=	l:db:db4
 .  include "../../mk/bdb.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-db
