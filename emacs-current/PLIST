@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2008/06/19 08:14:21 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.57 2008/06/24 12:01:20 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -41,6 +41,7 @@ info/pgg
 info/rcirc
 info/reftex
 info/remember
+info/sasl
 info/sc
 info/ses
 info/sieve
@@ -3007,6 +3008,8 @@ share/emacs/${PKGVERSION}/lisp/textmodes/reftex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/reftex.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/remember.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/remember.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/rst.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/rst.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/spell.el.gz
@@ -3111,16 +3114,20 @@ share/emacs/${PKGVERSION}/lisp/url/url-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-vars.elc
 share/emacs/${PKGVERSION}/lisp/url/url.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url.elc
-share/emacs/${PKGVERSION}/lisp/url/vc-dav.el.gz
-share/emacs/${PKGVERSION}/lisp/url/vc-dav.elc
 share/emacs/${PKGVERSION}/lisp/userlock.el.gz
 share/emacs/${PKGVERSION}/lisp/userlock.elc
+share/emacs/${PKGVERSION}/lisp/vc-annotate.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-annotate.elc
 share/emacs/${PKGVERSION}/lisp/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-arch.elc
 share/emacs/${PKGVERSION}/lisp/vc-bzr.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-bzr.elc
 share/emacs/${PKGVERSION}/lisp/vc-cvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-cvs.elc
+share/emacs/${PKGVERSION}/lisp/vc-dav.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-dav.elc
+share/emacs/${PKGVERSION}/lisp/vc-dir.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-dir.elc
 share/emacs/${PKGVERSION}/lisp/vc-dispatcher.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-dispatcher.elc
 share/emacs/${PKGVERSION}/lisp/vc-git.el.gz
