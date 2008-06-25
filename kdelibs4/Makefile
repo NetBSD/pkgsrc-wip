@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/09 22:23:07 mwdavies Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/25 09:18:48 absd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -9,6 +9,8 @@ COMMENT=	Support libraries for the KDE integrated X11 desktop
 #PATCHFILES=	post-kde-4.0.3-khtml.diff
 
 .include "../../wip/kde4/Makefile.kde4"
+
+CONFLICTS=	kdelibs-[0-9]*
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
