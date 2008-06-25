@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/06/25 04:27:59 schnoebe Exp $
+
+--- Makefile.orig	2007-06-08 15:19:48.000000000 -0500
++++ Makefile
+@@ -1,8 +1,14 @@
+ 
+ CC:=gcc
++
++# MYSQL_CFLAGS:= -DHAVE_MYSQL
++# MYSQL_LIBS:=$(shell mysql_config --libs)
++# MYSQL_OBJS:= mysql.o
++
++
+ CFLAGS:=$(CFLAGS) -O2 -Wall -I../../lib -I../include `pkg-config --cflags glib-2.0` -D_JCOMP -D_REENTRANT -DLIBIDN
+ #CFLAGS:=$(CFLAGS) -O2 -Wall -I../../lib -I../include `pkg-config --cflags glib-2.0` -D_JCOMP -D_REENTRANT -DLIBIDN -DHAVE_MYSQL
+-LIBS:=$(LIBS) -ljcomp -lm `pkg-config --libs glib-2.0` `pkg-config --libs gthread-2.0` -lexpat -lidn `mysql_config --libs`
++LIBS:=$(LIBS) -ljcomp -lm `pkg-config --libs glib-2.0` `pkg-config --libs gthread-2.0` -lexpat -lidn $(MYSQL_LIBS)
+ LDFLAGS:=-L.
+ 
+ # Debug/Experimental
+@@ -11,7 +17,7 @@ LDFLAGS:=-L.
+ #LIBS:=$(LIBS) -lmemusage
+ #LIBS:=$(LIBS) -lmcheck
+ 
+-conference_OBJECTS=libjcomp.a conference.o conference_room.o conference_user.o utils.o xdata.o admin.o roles.o xdb.o hash.o iq.o main.o mysql.o 
++conference_OBJECTS=libjcomp.a conference.o conference_room.o conference_user.o utils.o xdata.o admin.o roles.o xdb.o hash.o iq.o main.o $(MYSQL_OBJS)
+ 
+ all: mu-conference
+ 
+@@ -19,8 +25,8 @@ mu-conference: $(conference_OBJECTS)
+ 	$(CC) $(CFLAGS) $(MCFLAGS) -o mu-conference $(conference_OBJECTS) $(LDFLAGS) $(LIBS)
+ 
+ libjcomp.a:
+-	cd jabberd ; make 
+-	cd jcomp ; make lib
++	cd jabberd ; $(MAKE) 
++	cd jcomp ; $(MAKE) lib
+ 
+ static: $(conference_OBJECTS)
+ 
+@@ -28,5 +34,5 @@ single: $(conference_OBJECTS)
+ 
+ clean:
+ 	rm -f $(conference_OBJECTS) mu-conference *~
+-	cd jcomp ; make clean
+-	cd jabberd ; make clean
++	cd jcomp ; $(MAKE) clean
++	cd jabberd ; $(MAKE) clean
