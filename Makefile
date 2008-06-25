@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2929 2008/06/23 15:13:42 jsonn Exp $
+# $Id: Makefile,v 1.2930 2008/06/25 11:23:44 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1454,7 +1454,6 @@ SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
-SUBDIR+=	py-SciPy
 SUBDIR+=	py-Soya
 SUBDIR+=	py-albatross
 SUBDIR+=	py-aspell
@@ -1466,7 +1465,6 @@ SUBDIR+=	py-divmod-epsilon
 SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
-SUBDIR+=	py-f2py2e
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-gdata
 SUBDIR+=	py-generateDS
@@ -1488,7 +1486,10 @@ SUBDIR+=	py-kyra
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtunepimp
+SUBDIR+=	py-matplotlib
+SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mysqldb-docs
+SUBDIR+=	py-numpy
 SUBDIR+=	py-oak
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
@@ -1496,7 +1497,7 @@ SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rlcompleter2
-SUBDIR+=	py-scipy_distutils
+SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-snmp
@@ -1518,7 +1519,6 @@ SUBDIR+=	py-twisted-runner
 SUBDIR+=	py-twisted-web
 SUBDIR+=	py-twisted-words
 SUBDIR+=	py-twisted-zopeinterface
-SUBDIR+=	py-tz
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
@@ -1540,7 +1540,6 @@ SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pysolfc
-SUBDIR+=	pytz
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
