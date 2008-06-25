@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2008/06/25 21:09:37 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/25 21:28:48 cherrymathew Exp $
 #
 
 DISTNAME=	sid-1.10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tendra.org/releases/sid/
 
-MAINTAINER=	pkgsr-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tendra.org/wiki/SID
 COMMENT=	SID (Syntax Improving Device) is an LL(1) parser generator
 
-BUILD_DEPENDS+=         libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xml>=4.2nb4:../../textproc/docbook-xml
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
+
 USE_TOOLS+=	perl
 
 .include "../../mk/bsd.pkg.mk"
