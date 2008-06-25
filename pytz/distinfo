@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/23 07:49:20 obache Exp $
-
-SHA1 (pytz-2007k.tar.gz) = f586d4a8690c87bd46a5fcd4ce74bb986fdf4c41
-RMD160 (pytz-2007k.tar.gz) = a4ac42a7e8da3eff868d6d35d107de31ca509c9b
-Size (pytz-2007k.tar.gz) = 221990 bytes
