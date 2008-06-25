@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2008/03/05 13:16:50 absd Exp $
+$NetBSD: distinfo,v 1.2 2008/06/25 09:17:05 absd Exp $
 
-SHA1 (ktorrent-3.0.0.tar.bz2) = e5c9807141dd60794447a2d424a0513319949980
-RMD160 (ktorrent-3.0.0.tar.bz2) = 67a25748ca64cc3784ac78453955fed9246dc8e4
-Size (ktorrent-3.0.0.tar.bz2) = 1917047 bytes
+SHA1 (ktorrent-3.1beta2.tar.bz2) = 69695365a8f4df04edb46fa24f6fecda7cd13716
+RMD160 (ktorrent-3.1beta2.tar.bz2) = 15127f31cf020a10bd44a238545f051a369750da
+Size (ktorrent-3.1beta2.tar.bz2) = 2259009 bytes
