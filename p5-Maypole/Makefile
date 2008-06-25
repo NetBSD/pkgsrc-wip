@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/27 03:18:02 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/25 09:20:58 absd Exp $
 #
 
 DISTNAME=	Maypole-2.121
@@ -10,20 +10,20 @@ MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/T/TE/TEEJAY/
 COMMENT=	Maypole - MVC web application framework
 
-DEPENDS+=	p5-CGI-Simple>=0:../../wip/p5-CGI-Simple
+DEPENDS+=	p5-CGI-Simple>=0:../../www/p5-CGI-Simple
 DEPENDS+=	p5-CGI-Untaint>=1.26:../../wip/p5-CGI-Untaint
 DEPENDS+=	p5-Class-DBI>=0.96:../../databases/p5-Class-DBI
 DEPENDS+=	p5-Class-DBI-AbstractSearch>=0:../../databases/p5-Class-DBI-AbstractSearch
-DEPENDS+=	p5-Class-DBI-Loader>=0.02:../../wip/p5-Class-DBI-Loader
-DEPENDS+=	p5-Class-DBI-Loader-Relationship>=0:../../wip/p5-Class-DBI-Loader-Relationship
-DEPENDS+=	p5-Class-DBI-Pager>=0:../../wip/p5-Class-DBI-Pager
-DEPENDS+=	p5-Class-DBI-Plugin-RetrieveAll>=0:../../wip/p5-Class-DBI-Plugin-RetrieveAll
-DEPENDS+=	p5-Class-DBI-Plugin-Type>=0:../../wip/p5-Class-DBI-Plugin-Type
-DEPENDS+=	p5-Class-DBI-SQLite>=0.08:../../wip/p5-Class-DBI-SQLite
+DEPENDS+=	p5-Class-DBI-Loader>=0.02:../../devel/p5-Class-DBI-Loader
+DEPENDS+=	p5-Class-DBI-Loader-Relationship>=0:../../devel/p5-Class-DBI-Loader-Relationship
+DEPENDS+=	p5-Class-DBI-Pager>=0:../../devel/p5-Class-DBI-Pager
+DEPENDS+=	p5-Class-DBI-Plugin-RetrieveAll>=0:../../devel/p5-Class-DBI-Plugin-RetrieveAll
+DEPENDS+=	p5-Class-DBI-Plugin-Type>=0:../../devel/p5-Class-DBI-Plugin-Type
+DEPENDS+=	p5-Class-DBI-SQLite>=0.08:../../devel/p5-Class-DBI-SQLite
 DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 DEPENDS+=	p5-File-MMagic-XS>=0.08:../../wip/p5-File-MMagic-XS
 DEPENDS+=	p5-HTML-Tree>=0:../../www/p5-HTML-Tree
-DEPENDS+=	p5-HTTP-Body>=0.5:../../wip/p5-HTTP-Body
+DEPENDS+=	p5-HTTP-Body>=0.5:../../www/p5-HTTP-Body
 DEPENDS+=	p5-Template-Plugin-Class>=0:../../wip/p5-Template-Plugin-Class
 DEPENDS+=	p5-Test-MockModule>=0:../../wip/p5-Test-MockModule
 DEPENDS+=	p5-UNIVERSAL-moniker>=0:../../devel/p5-UNIVERSAL-moniker

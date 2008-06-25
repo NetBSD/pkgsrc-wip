@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/22 21:23:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/25 09:20:58 absd Exp $
 
 DISTNAME=		HTML-Widget-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -12,13 +12,13 @@ COMMENT=		HTML Widget And Validation Framework
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-Module-Pluggable-Fast>=0.18:../../wip/p5-Module-Pluggable-Fast
-DEPENDS+=		p5-Class-Data-Accessor>=0.04001:../../wip/p5-Class-Data-Accessor
+DEPENDS+=		p5-Class-Data-Accessor>=0.04001:../../devel/p5-Class-Data-Accessor
 DEPENDS+=		p5-Test-NoWarnings>=0.084:../../devel/p5-Test-NoWarnings
 DEPENDS+=		p5-HTML-Tree>=3.19.01:../../www/p5-HTML-Tree
 DEPENDS+=		p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=		p5-Class-Accessor-Chained>=0.01:../../devel/p5-Class-Accessor-Chained
 DEPENDS+=		p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
-DEPENDS+=		p5-Test-MockObject>=1.02:../../wip/p5-Test-MockObject
+DEPENDS+=		p5-Test-MockObject>=1.02:../../devel/p5-Test-MockObject
 DEPENDS+=		p5-Email-Valid>=0.15:../../mail/p5-Email-Valid
 DEPENDS+=		p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 

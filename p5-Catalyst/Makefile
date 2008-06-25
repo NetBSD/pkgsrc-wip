@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/05/30 12:19:58 absd Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/25 09:20:57 absd Exp $
 
 PKGVERSION=	5.7011
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
@@ -14,7 +14,7 @@ PERL5_REQD+=	5.8.1
 CONFLICTS+=	p5-Catalyst-Runtime
 
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
-DEPENDS+=	p5-CGI-Simple>=0:../../wip/p5-CGI-Simple
+DEPENDS+=	p5-CGI-Simple>=0:../../www/p5-CGI-Simple
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
@@ -23,9 +23,9 @@ DEPENDS+=	p5-Data-Visitor>=0.02:../../wip/p5-Data-Visitor
 DEPENDS+=	{perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
 DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
-DEPENDS+=	p5-HTTP-Body>=0.9:../../wip/p5-HTTP-Body
+DEPENDS+=	p5-HTTP-Body>=0.9:../../www/p5-HTTP-Body
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
-DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../wip/p5-HTTP-Request-AsCGI
+DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-Pluggable>=3.01:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
@@ -35,12 +35,12 @@ DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../textproc/p5-Text-SimpleTable
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
-DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../wip/p5-Tree-Simple-VisitorFactory
+DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-Module-Install>=0.54:../../devel/p5-Module-Install
 DEPENDS+=	p5-YAML>=0.55:../../textproc/p5-YAML
-BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../wip/p5-Test-MockObject
+BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../devel/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist

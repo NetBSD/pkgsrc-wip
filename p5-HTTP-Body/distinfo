@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/10/26 07:48:48 jgoamakf Exp $
-
-SHA1 (HTTP-Body-0.9.tar.gz) = 0a253a912a9bdd077400931a459cf612612559a2
-RMD160 (HTTP-Body-0.9.tar.gz) = 6921221e2a6b2f127c87473191aa884144824af1
-Size (HTTP-Body-0.9.tar.gz) = 9440 bytes

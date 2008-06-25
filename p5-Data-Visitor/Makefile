@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/05 16:58:03 absd Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/25 09:20:58 absd Exp $
 
 DISTNAME=	Data-Visitor-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-Visitor/
 COMMENT=	Visitor style traversal of Perl data structures
 
 BUILD_DEPENDS+= {perl>=5.7.1,p5-Test-Simple-[0-9]*}:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-use-ok>=0:../../wip/p5-Test-use-ok
-BUILD_DEPENDS+=	p5-Test-MockObject>=1.04:../../wip/p5-Test-MockObject
+BUILD_DEPENDS+=	p5-Test-use-ok>=0:../../devel/p5-Test-use-ok
+BUILD_DEPENDS+=	p5-Test-MockObject>=1.04:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 
 PERL5_MODULE_TYPE=	Module::Build
