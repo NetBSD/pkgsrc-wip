@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/25 11:11:17 mwdavies Exp $
 #
 
 DISTNAME=	Babel-0.9.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../wip/pytz
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
