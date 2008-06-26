@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/04 21:24:46 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/26 18:20:51 asau Exp $
 bin/axiom
 bin/fricas
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/A1AGG-.${FASL}
@@ -323,6 +323,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSAGG2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSCINT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSERIES.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSFUN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSINT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSPECF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FSPRMELT.${FASL}
@@ -694,6 +695,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OREPCTO.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ORESUP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OREUP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ORTHPOL.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OSGROUP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OSI.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OUT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/OUTFORM.${FASL}
@@ -950,6 +952,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SRAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SRAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SRDCMPK.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SREGSET.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SRING.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SRNG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STACK.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STAGG.${FASL}
@@ -1190,9 +1194,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/asq
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/axiom
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/clef
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/htadd
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/htsearch
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/hypertex
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/presea
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/sman
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/viewAlone
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/doc/spadhelp/ACPLOT.help
@@ -2792,6 +2794,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/solverad.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/sortpak.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/space.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/special.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/special2.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/sregset.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/ssolve.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/stream.spad.pamphlet
@@ -2835,7 +2838,6 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/xlpoly.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/xpoly.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/ystream.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/zerodim.spad.pamphlet
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/timestamp
 @dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra
 @dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/src
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugProblemNumericPage32.VIEW
