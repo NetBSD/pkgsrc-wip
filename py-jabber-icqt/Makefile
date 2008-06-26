@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/23 19:00:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/26 02:25:57 schnoebe Exp $
 
 DISTNAME=		pyicq-t-0.8b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -58,6 +58,7 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
 	cd ${WRKSRC} && \
 	for i in `find src data tools \\( \\( -type f -name '*.orig' -o \
+			-type f -name '*.orig_dist' -o \
 			-type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
