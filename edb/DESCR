@@ -1,0 +1,5 @@
+This is a database conveneince library base on db 2.7.7 from
+http://www.sleepycat.com (see src/LICENSE for license details). It is
+intended to make accessing database information portable, easy, fast and
+efficient as well as bypass the proplem of libdb continuously changing
+formats.
