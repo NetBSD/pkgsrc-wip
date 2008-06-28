@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2008/06/28 08:32:53 tnn2 Exp $
-lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
