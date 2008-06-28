@@ -1,0 +1,4 @@
+Perl Interface to mod_ssl functions.
+
+Apache2::ModSSL adds a few functions that are exported from mod_ssl
+to the Apache2::Connection class.
