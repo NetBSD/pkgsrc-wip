@@ -1,1 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/25 04:27:59 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/28 03:24:05 schnoebe Exp $
+bin/mu-conference
+share/doc/muc/ChangeLog
+share/doc/muc/FAQ
+share/doc/muc/README
+share/doc/muc/TODO
+share/doc/muc/XEP0045_SUPPORT
+share/examples/jabber/muc-default.xml
+share/examples/jabber/style.css
+share/examples/rc.d/muc
+@dirrm share/doc/muc

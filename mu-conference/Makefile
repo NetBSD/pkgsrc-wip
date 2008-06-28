@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/25 04:27:59 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/28 03:24:05 schnoebe Exp $
 #
 
 DISTNAME=		mu-conference_0.7
@@ -20,43 +20,44 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 # USE_TOOLS+=		gmake pax pkg-config
 USE_TOOLS+=		pkg-config
 
-PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		muc
 
 .include "../../wip/jabberd/transports.mk"
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		JABBERD_LOGDIR JABBERD_PIDDIR
-JABBERD_USER?=		jabberd
-PKG_USERS_VARS+=	JABBERD_USER
+BUILD_DEFS+=		JABBER_LOGDIR JABBER_PIDDIR
+PKG_USERS_VARS+=	JABBER_USER
 
-FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
-FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
+FILES_SUBST+=		JABBER_PIDDIR=${JABBER_PIDDIR:Q}
+FILES_SUBST+=		JABBER_USER=${JABBER_USER:Q}
 
-EGDIR=			${PREFIX}/share/examples/jabberd
-CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR:Q}/muc-jcr.xml
+EGDIR=			${PREFIX}/${JABBER_EXDIR}
+CONF_FILES+=		${EGDIR}/muc-default.xml ${PKG_SYSCONFDIR:Q}/muc.xml
 
-INSTALLATION_DIRS=	bin share/examples/jabberd
+DOCDIR=			${PREFIX}/share/doc/muc
+DOCFILES=		ChangeLog README FAQ TODO XEP0045_SUPPORT
 
-# post-extract:
-# 	@${MV} ${XMLCONFIG:Q} ${XMLCONFIG:Q}.in
+INSTALLATION_DIRS=	bin ${JABBER_EXDIR} share/doc/muc
 
-# pre-configure:
-# 	@${SED}	-e 's|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g' \
-# 		-e 's|\(<pidfile>\).|\1${JABBERD_PIDDIR}|g' \
-# 		-e 's|\(<spool>\).|\1${JABBERD_SPOOLDIR}|g' \
-# 		${XMLCONFIG:Q}.in > ${XMLCONFIG:Q}
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/mu-conference ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC:Q}/../muc-default.xml \
+						${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC:Q}/../style.css \
+						${DESTDIR}${EGDIR}
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC:Q}/../${f} ${DESTDIR}${DOCDIR}
+.endfor
 
-# pre-build:
-# 	cd ${WRKDIR:Q} && pax -rw -pe ${DISTNAME:Q} ${WRKSRC:Q}
 
-# post-build:
-# 	${CP} ${WRKSRC:Q}/src/main.c ${WRKSRC:Q}/src/jcomp.mk ${SUBWRKSRC:Q}
-# 	cd ${SUBWRKSRC:Q} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
-
-# do-install:
-# 	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${DESTDIR}${PREFIX}/bin
-# 	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${DESTDIR}${EGDIR}
+# clean up path info
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Localizing Paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	../muc-default.xml
+SUBST_SED.paths+=	-e 's,@JABBER_SPOOLDIR@,${JABBER_SPOOLDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
