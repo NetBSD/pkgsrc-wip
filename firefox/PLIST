@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/06/01 03:08:39 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/28 06:49:27 tnn2 Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -38,12 +38,12 @@ lib/${MOZILLA}/libxul.${SO_SUFFIX}
 lib/${MOZILLA}/plugins/libunixprintplugin.${SO_SUFFIX}
 @comment end DSO
 @comment begin PKGCONFIG
-lib/pkgconfig/firefox-js.pc
-lib/pkgconfig/firefox-libxul.pc
-lib/pkgconfig/firefox-nspr.pc
-lib/pkgconfig/firefox-nss.pc
-lib/pkgconfig/firefox-plugin.pc
-lib/pkgconfig/firefox-xpcom.pc
+lib/pkgconfig/firefox3-js.pc
+lib/pkgconfig/firefox3-libxul.pc
+lib/pkgconfig/firefox3-nspr.pc
+lib/pkgconfig/firefox3-nss.pc
+lib/pkgconfig/firefox3-plugin.pc
+lib/pkgconfig/firefox3-xpcom.pc
 @comment end PKGCONFIG
 @comment begin DATA
 lib/${MOZILLA}/application.ini
@@ -2697,9 +2697,9 @@ include/${MOZILLA}/fuel/fuelIApplication.h
 @dirrm include/${MOZILLA}/morkreader
 @dirrm include/${MOZILLA}/necko
 @dirrm include/${MOZILLA}/nkcache
-@dirrm include/${MOZILLA}/nspr
 @dirrm include/${MOZILLA}/nspr/obsolete
 @dirrm include/${MOZILLA}/nspr/private
+@dirrm include/${MOZILLA}/nspr
 @dirrm include/${MOZILLA}/nss
 @dirrm include/${MOZILLA}/obsolete
 @dirrm include/${MOZILLA}/oji
