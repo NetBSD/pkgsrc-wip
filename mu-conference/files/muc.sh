@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: muc.sh,v 1.1.1.1 2008/06/25 04:27:59 schnoebe Exp $
+# $NetBSD: muc.sh,v 1.2 2008/06/28 03:34:47 schnoebe Exp $
 #
 # PROVIDE: muc
 # REQUIRE: DAEMON
@@ -14,16 +14,16 @@ rcvar=$name
 command="@PREFIX@/bin/mu-conference"
 required_files="@PKG_SYSCONFDIR@/${name}.xml"
 extra_commands="reload"
-muc_user="@JABBERD_USER@"
+muc_user="@JABBER_USER@"
 command_args="-c ${required_files} > /dev/null 2>&1 &"
-pidfile="@JABBERD_PIDDIR@/`basename ${command}`.pid"
+pidfile="@JABBER_PIDDIR@/`basename ${command}`.pid"
 stop_postcmd="remove_pidfile"
 start_precmd="ensure_piddir"
 
 ensure_piddir()
 {
-	mkdir -p @JABBERD_PIDDIR@
-	chown @JABBERD_USER@ @JABBERD_PIDDIR@
+	mkdir -p @JABBER_PIDDIR@
+	chown @JABBER_USER@ @JABBER_PIDDIR@
 }
 
 remove_pidfile()
