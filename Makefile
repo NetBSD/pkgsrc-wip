@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2931 2008/06/28 10:09:30 tnn2 Exp $
+# $Id: Makefile,v 1.2932 2008/06/28 11:39:42 hoka_adam Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -246,6 +246,7 @@ SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
+SUBDIR+=	docker
 SUBDIR+=	doorman
 SUBDIR+=	dotproject
 SUBDIR+=	dpic
