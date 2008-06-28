@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2932 2008/06/28 11:39:42 hoka_adam Exp $
+# $Id: Makefile,v 1.2933 2008/06/28 22:50:21 tonnerre Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1115,6 +1115,7 @@ SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Apache-AuthenNTLM
+SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
