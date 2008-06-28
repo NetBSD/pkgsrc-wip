@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/22 09:35:03 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/28 08:32:53 tnn2 Exp $
 
 MOZILLA=		firefox
 COMMENT=		Lightweight gecko-based web browser
@@ -61,6 +61,15 @@ stage-package:
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} stage-package
 	cp ${WRKSRC}/dist/firefox/components/browser.xpt \
 	   ${WRKSRC}/dist/bin/components/browser.xpt
+
+# Install libjemalloc.so which is needed on Linux.
+.if ${OPSYS} == "Linux"
+post-install: install-libjemalloc
+.PHONY: install-libjemalloc
+install-libjemalloc:
+	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.so \
+	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
+.endif
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
 
