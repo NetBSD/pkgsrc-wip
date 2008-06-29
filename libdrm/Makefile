@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/06/02 05:55:40 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/29 08:54:37 moubctez Exp $
 #
 
 DISTNAME=		libdrm-${LIBDRM_DISTVERSION}.${LIBDRM_PATCHLEVEL}
 CATEGORIES=		x11 graphics
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/bjs/distfiles/
+MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=		.tar.bz2
 
 LIBDRM_PATCHLEVEL=	0
