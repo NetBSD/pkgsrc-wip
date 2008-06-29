@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2008/05/28 09:59:29 asau Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/29 21:26:27 asau Exp $
 #
 
-DISTNAME=	chicken-3.2.5
+DISTNAME=	chicken-3.3.1
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2008/05/26/
+MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2008/06/29/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/
@@ -24,7 +24,7 @@ BUILD_TARGET=		all chicken.info
 .include "../../mk/bsd.prefs.mk"
 
 # PLATFORM detection:
-.if !empty(OPSYS:M*BSD)
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 PLATFORM=	bsd
 .elif ${OPSYS} == "Linux"
 PLATFORM=	linux
