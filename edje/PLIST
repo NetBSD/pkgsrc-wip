@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/02 14:50:13 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/29 21:31:11 shindenmorr Exp $
 bin/edje_cc
 bin/edje_decc
 bin/edje_recc
 include/Edje.h
+include/Edje_Edit.h
 lib/libedje.la
 lib/pkgconfig/edje.pc
 share/edje/include/edje.inc

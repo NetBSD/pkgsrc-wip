@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2008/02/21 23:56:48 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/29 21:36:21 shindenmorr Exp $
+.lockfile
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
@@ -101,7 +102,9 @@ include/enlightenment/e_scrollframe.h
 include/enlightenment/e_sha1.h
 include/enlightenment/e_shelf.h
 include/enlightenment/e_signals.h
+include/enlightenment/e_slidecore.h
 include/enlightenment/e_slider.h
+include/enlightenment/e_slidesel.h
 include/enlightenment/e_spectrum.h
 include/enlightenment/e_startup.h
 include/enlightenment/e_stolen.h
@@ -125,6 +128,7 @@ include/enlightenment/e_widget_csel.h
 include/enlightenment/e_widget_cslider.h
 include/enlightenment/e_widget_desk_preview.h
 include/enlightenment/e_widget_entry.h
+include/enlightenment/e_widget_flist.h
 include/enlightenment/e_widget_font_preview.h
 include/enlightenment/e_widget_framelist.h
 include/enlightenment/e_widget_frametable.h
@@ -146,6 +150,7 @@ include/enlightenment/e_xinerama.h
 include/enlightenment/e_zone.h
 lib/enlightenment/modules/battery/e-module-battery.edj
 lib/enlightenment/modules/battery/module.desktop
+lib/enlightenment/modules/battery/${LOWER_OPSYS}elf-${MACHINE_ARCH}/batget
 lib/enlightenment/modules/battery/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/clock/e-module-clock.edj
 lib/enlightenment/modules/clock/module.desktop
@@ -258,6 +263,9 @@ lib/enlightenment/modules/conf_window_focus/${LOWER_OPSYS}elf-${MACHINE_ARCH}/mo
 lib/enlightenment/modules/conf_window_manipulation/e-module-conf_winmanip.edj
 lib/enlightenment/modules/conf_window_manipulation/module.desktop
 lib/enlightenment/modules/conf_window_manipulation/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/conf_window_remembers/e-module-conf_window_remembers.edj
+lib/enlightenment/modules/conf_window_remembers/module.desktop
+lib/enlightenment/modules/conf_window_remembers/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/conf_winlist/e-module-conf_winlist.edj
 lib/enlightenment/modules/conf_winlist/module.desktop
 lib/enlightenment/modules/conf_winlist/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -280,9 +288,6 @@ lib/enlightenment/modules/ibar/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/ibox/e-module-ibox.edj
 lib/enlightenment/modules/ibox/module.desktop
 lib/enlightenment/modules/ibox/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
-lib/enlightenment/modules/layout/e-module-layout.edj
-lib/enlightenment/modules/layout/module.desktop
-lib/enlightenment/modules/layout/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/pager/e-module-pager.edj
 lib/enlightenment/modules/pager/module.desktop
 lib/enlightenment/modules/pager/${LOWER_OPSYS}elf-${MACHINE_ARCH}/module.la
@@ -303,6 +308,7 @@ lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_000.la
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_010.la
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}elf-${MACHINE_ARCH}/page_020.la
 lib/enlightenment/preload/e_precache.la
+lib/pkgconfig/enlightenment.pc
 share/enlightenment/AUTHORS
 share/enlightenment/COPYING
 share/enlightenment/data/backgrounds/Blue_Sky_Tree.edj
@@ -367,6 +373,7 @@ share/locale/zh_CN/LC_MESSAGES/enlightenment.mo
 share/locale/zh_TW/LC_MESSAGES/enlightenment.mo
 share/xsessions/enlightenment.desktop
 @dirrm share/xsessions
+@dirrm share/locale/fr_CH/LC_MESSAGES
 @dirrm share/examples/enlightenment
 @dirrm share/enlightenment/doc
 @dirrm share/enlightenment/data/themes
@@ -390,10 +397,9 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/start
 @dirrm lib/enlightenment/modules/pager/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/pager
+@exec ${MKDIR} %D/lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/msgbus_lang
-@dirrm lib/enlightenment/modules/layout/${LOWER_OPSYS}elf-${MACHINE_ARCH}
-@dirrm lib/enlightenment/modules/layout
 @dirrm lib/enlightenment/modules/ibox/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/ibox
 @dirrm lib/enlightenment/modules/ibar/${LOWER_OPSYS}elf-${MACHINE_ARCH}
@@ -408,6 +414,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/cpufreq
 @dirrm lib/enlightenment/modules/conf_winlist/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_winlist
+@dirrm lib/enlightenment/modules/conf_window_remembers/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/conf_window_remembers
 @dirrm lib/enlightenment/modules/conf_window_manipulation/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_window_manipulation
 @dirrm lib/enlightenment/modules/conf_window_focus/${LOWER_OPSYS}elf-${MACHINE_ARCH}
@@ -446,6 +454,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/conf_keybindings
 @dirrm lib/enlightenment/modules/conf_intl/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_intl
+@dirrm lib/enlightenment/modules/conf_interaction/${LOWER_OPSYS}elf-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/conf_interaction
 @dirrm lib/enlightenment/modules/conf_imc/${LOWER_OPSYS}elf-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_imc
 @dirrm lib/enlightenment/modules/conf_icon_theme/${LOWER_OPSYS}elf-${MACHINE_ARCH}

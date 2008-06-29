@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/29 21:34:31 shindenmorr Exp $
 #
 
-DISTNAME=	eet-0.9.10.042
+DISTNAME=	eet-1.0.1
 CATEGORIES=	misc
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
 		http://www.yazzy.org/pkgsrc/e17/ \
 		http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 

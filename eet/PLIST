@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2007/12/05 06:29:48 netcap Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/06/29 21:34:31 shindenmorr Exp $
+.lockfile
 bin/eet
 include/Eet.h
 lib/libeet.la
-lib/libeet.a
 lib/pkgconfig/eet.pc
-lib/libeet.so.0.9.10
-lib/libeet.so.0
-lib/libeet.so

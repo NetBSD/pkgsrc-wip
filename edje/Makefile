@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/29 21:31:11 shindenmorr Exp $
 #
 
-DISTNAME=	edje-0.5.0.042
-PKGREVISION=	1
+DISTNAME=	edje-0.9.9.043
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
 		http://www.yazzy.org/pkgsrc/e17/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
