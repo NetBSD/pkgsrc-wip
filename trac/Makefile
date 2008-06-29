@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/23 16:02:39 obache Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/29 00:43:45 obache Exp $
 #
 
 DISTNAME=	Trac-0.11
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-DEPENDS+=	${PYPKGPREFIX}-genshi>=0.4.1:../../wip/genshi
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../wip/genshi
 
 REPLACE_PYTHON=	cgi-bin/trac.cgi cgi-bin/trac.fcgi
 REPLACE_PYTHON+=contrib/*.py contrib/*-hook contrib/workflow/*.py
