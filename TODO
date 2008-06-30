@@ -3,12 +3,13 @@ Suggested package updates
 
 	o argouml-0.24
 	o audacious-1.5.1
-	o audacious-plugins-1.6.1
+	o audacious-plugins-1.5.1
 	o avahi-0.6.22
 	o bub-n-bros-1.6
 	o ccrtp-1.6.1
 	o cdogs-0.4
 	o chora-2.0.1
+	o chromium-0.9.13
 	o cinelerra-2.1
 	o commoncpp2-1.6.2
 	o d4x-2.5.7.1
@@ -62,7 +63,7 @@ Suggested package updates
 	o rdup-0.6.0
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.16.1
+	o rsyslog-3.16.2
 	o sdlmess-0.125
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
