@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2008/06/26 02:25:57 schnoebe Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/30 02:17:13 schnoebe Exp $
 
 DISTNAME=		pyicq-t-0.8b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyicqt.googlecode.com/files/
 
 PATCH_SITES=		http://maxim.modum.by/
 PATCHFILES=		pyicqt-allow-md5-v3.patch
 PATCH_DIST_STRIP.pyicqt-allow-md5-v3.patch=	-p1
+PATCHFILES+=		pyicq08b-senducs2.patch
+PATCH_DIST_STRIP.pyicq08b-senducs2.patch=	-R
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyicqt/
