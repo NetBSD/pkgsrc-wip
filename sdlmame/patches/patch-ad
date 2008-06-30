@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.3 2007/05/09 19:07:59 dillo Exp $
+$NetBSD: patch-ad,v 1.4 2008/06/30 10:11:12 dillo Exp $
 
---- src/osd/sdl/sdlfile.c.orig	2007-05-03 18:09:34.000000000 +0200
+--- src/osd/sdl/sdlfile.c.orig	2008-03-10 23:40:14.000000000 +0000
 +++ src/osd/sdl/sdlfile.c
 @@ -252,7 +252,7 @@ file_error osd_read(osd_file *file, void
  {
- 	UINT32 result;
+ 	ssize_t result;
  
 -#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD)
 +#if defined(SDLMAME_DARWIN) || defined(SDLMAME_FREEBSD) || defined(__NetBSD__)
  	result = pread(file->handle, buffer, count, offset);
- 	if (!result)
+ 	if (result < 0)
  #elif defined(SDLMAME_WIN32) || defined(SDLMAME_NO64BITIO) || defined(SDLMAME_OS2)
 @@ -280,7 +280,7 @@ file_error osd_write(osd_file *file, con
  {

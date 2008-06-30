@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2007/05/09 19:07:59 dillo Exp $
+$NetBSD: patch-aa,v 1.5 2008/06/30 10:11:12 dillo Exp $
 
---- makefile.orig	2007-04-27 16:14:59.000000000 +0200
+--- makefile.orig	2008-05-05 12:44:38.000000000 +0000
 +++ makefile
-@@ -64,10 +64,10 @@ SUBARCH = unix
- # DEBUG = 1    
-  
+@@ -105,10 +105,10 @@ endif
+ # PROFILER = 1
+ 
  # uncomment next line to use DRC MIPS3 engine
 -X86_MIPS3_DRC = 1
 +# X86_MIPS3_DRC = 1
@@ -13,18 +13,9 @@ $NetBSD: patch-aa,v 1.4 2007/05/09 19:07:59 dillo Exp $
 -X86_PPC_DRC = 1
 +# X86_PPC_DRC = 1
  
- #-------------------------------------------------
- # specify build options; see each option below 
-@@ -78,7 +78,7 @@ X86_PPC_DRC = 1
- # ATHLON = 1
- # I686 = 1
- # P4 = 1
--PM = 1
-+# PM = 1
- # AMD64 = 1
- # G4 = 1
- # G5 = 1
-@@ -183,9 +183,9 @@ EXE = .exe
+ # uncomment next line to build using unix-style libsdl on Mac OS X
+ # (vs. the native framework port).  Normal users should not enable this.
+@@ -200,9 +200,9 @@ BUILD_EXE = $(EXE)
  endif
  
  # compiler, linker and utilities
@@ -32,80 +23,94 @@ $NetBSD: patch-aa,v 1.4 2007/05/09 19:07:59 dillo Exp $
 -CC = @gcc
 -LD = @gcc
 +#AR = @ar
-+#CC = @cc
-+#LD = @cc
- MD = -mkdir
++#CC = @gcc
++#LD = @gcc
+ MD = -mkdir$(EXE)
  RM = @rm -f
  
-@@ -201,7 +201,7 @@ MESS=1
+@@ -226,7 +226,7 @@ NAME = $(TARGET)$(SUBTARGET)
  endif
  
- # by default, don't compile for a specific target CPU
--NAME = $(PREFIX)$(TARGET)
-+NAME = $(TARGET)
- ARCH = 
+ # fullname is prefix+name+suffix+debugsuffix
+-FULLNAME = $(PREFIX)$(NAME)$(SUFFIX)$(DEBUGSUFFIX)
++FULLNAME = $(NAME)$(SUFFIX)$(DEBUGSUFFIX)
  
- # architecture-specific builds get extra options
-@@ -263,15 +263,7 @@ SRC = src
- # compile-time definitions
- #-------------------------------------------------
+ # add an EXE suffix to get the final emulator name
+ EMULATOR = $(FULLNAME)$(EXE)
+@@ -263,9 +263,9 @@ endif
+ DEFS += -DINLINE="static __inline__"
  
--ifdef PPC
--DEFS = -DPPC_ASM -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1 -Dbool=int
--else
--ifdef PTR64
--DEFS = -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
--else
--DEFS = -DX86_ASM -DLSB_FIRST -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
+ # define LSB_FIRST if we are a little-endian target
+-ifndef BIGENDIAN
+-DEFS += -DLSB_FIRST
 -endif
--endif
-+DEFS = ${PKG_DEFS} -DINLINE="static __inline__" -Dasm=__asm__ -DPI=M_PI -Dstrnicmp=strncasecmp -D_scalb=scalb -DCRLF=2 -DGL_GLEXT_PROTOTYPES=1
++#ifndef BIGENDIAN
++#DEFS += -DLSB_FIRST
++#endif
  
+ # define PTR64 if we are a 64-bit target
  ifdef PTR64
- DEFS += -DPTR64
-@@ -325,26 +317,26 @@ CFLAGS += $(ARCH) \
- 	-Wformat-security \
- 	-Wwrite-strings
+@@ -289,7 +289,7 @@ ifdef PROFILER
+ DEFS += -DMAME_PROFILER
+ endif
  
--ifneq ($(SUBARCH),os2)
+-
++DEFS += -DPI=M_PI ${PKG_DEFS}
+ 
+ #-------------------------------------------------
+ # compile flags
+@@ -328,19 +328,19 @@ CFLAGS += -pg
+ endif
+ 
+ # this warning is not supported on the os2 compilers
+-ifneq ($(TARGETOS),os2)
 -CFLAGS += -Wdeclaration-after-statement
 -endif
-+#ifneq ($(SUBARCH),os2)
++#ifneq ($(TARGETOS),os2)
 +#CFLAGS += -Wdeclaration-after-statement
 +#endif
  
- ifneq ($(OPTIMIZE),0)
- CFLAGS += -DNDEBUG $(ARCH) -fno-strict-aliasing
- endif
- 
+ # add the optimization flag
 -CFLAGS += -O$(OPTIMIZE)
 +#CFLAGS += -O$(OPTIMIZE)
  
- # extra options needed *only* for the osd files
- CFLAGSOSDEPEND = $(CFLAGS)
+ # if we are optimizing, include optimization options
+ # and make all errors into warnings
+ ifneq ($(OPTIMIZE),0)
+ CFLAGS += $(ARCHOPTS) -fno-strict-aliasing
+ ifneq ($(TARGETOS),os2)
+-CFLAGS += -Werror
++#CFLAGS += -Werror
+ endif
+ endif
  
--LDFLAGS = -WO
-+#LDFLAGS = -WO
+@@ -389,13 +389,13 @@ LDFLAGS += -pg
+ endif
  
--ifdef SYMBOLS
--LDFLAGS = 
--else
+ # strip symbols and other metadata in non-symbols and non profiling builds
+-ifndef SYMBOLS
+-ifndef PROFILE
+-ifneq ($(TARGETOS),macosx)
 -LDFLAGS += -s
 -endif
-+#ifdef SYMBOLS
-+#LDFLAGS = 
-+#else
+-endif
+-endif
++#ifndef SYMBOLS
++#ifndef PROFILE
++#ifneq ($(TARGETOS),macosx)
 +#LDFLAGS += -s
 +#endif
++#endif
++#endif
  
+ # output a map file (emulator only)
  ifdef MAP
- MAPFLAGS = -Wl,-Map,$(NAME).map
-@@ -494,7 +486,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
+@@ -544,7 +544,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
  # always recompile the version string
  	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
  	@echo Linking $@...
--	$(LD) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
-+	$(CC) $(LDFLAGS) $(MAINLDFLAGS) $^ $(LIBS) -o $@ $(MAPFLAGS)
+-	$(LD) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@
  
- #-------------------------------------------------
- # generic rules
+ endif
+ 

@@ -1,11 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2007/05/09 19:07:59 dillo Exp $
+$NetBSD: patch-ag,v 1.4 2008/06/30 10:11:12 dillo Exp $
 
---- src/osd/sdl/sdl.mak.orig	2007-04-27 17:16:56.000000000 +0200
+--- src/osd/sdl/sdl.mak.orig	2008-03-10 23:40:14.000000000 +0000
 +++ src/osd/sdl/sdl.mak
-@@ -128,5 +128,5 @@ TESTKEYSOBJS = \
+@@ -307,7 +307,7 @@ TESTKEYSOBJS = \
  
- testkeys$(EXE): $(TESTKEYSOBJS) 
+ testkeys$(EXE): $(TESTKEYSOBJS) $(LIBUTIL)
  	@echo Linking $@...
 -	$(LD) $(LDFLAGS) $^ $(SDLMAIN) $(SDLOBJ)/strconv.o $(LIBS) -o $@
 +	$(CC) $(LDFLAGS) $^ $(SDLMAIN) $(LIBS) -o $@
  	
+ testlib:
+ 	-echo LIBS: $(LIBS)

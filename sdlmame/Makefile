@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/30 10:11:12 dillo Exp $
 #
 
-DISTNAME=		sdlmame0116u1
-PKGNAME=		sdlmame-0.116u1
+# Don't update to 0.XXXuN, those are development snapshots.
+DISTNAME=		sdlmame0125
+PKGNAME=		sdlmame-0.125
 CATEGORIES=		emulators
 MASTER_SITES=		http://rbelmont.mameworld.info/
 EXTRACT_SUFX=		.zip
@@ -10,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://rbelmont.mameworld.info/?page_id=163
 COMMENT=		Multiple Arcade Machine Emulator, SDL port
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		xmame-[0-9]*
 
@@ -33,6 +36,10 @@ X86_PPC_DRC =
 .if ${MACHINE_ARCH:Mppc}
 PKG_DEFS+=	-DPPC_ASM
 .endif
+# XXX: PTR64
+.if ${MACHINE_ARCH:Mx86_64}
+PKG_DEFS+=	-DPTR64
+.endif
 
 .  include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN:Mlittle}
@@ -40,7 +47,6 @@ PKG_DEFS+=	-DLSB_FIRST
 .endif
 
 PKG_DEFS+=	-DSDLMAME_NO64BITIO
-# XXX: PTR64
 MAKE_FLAGS+=	PKG_DEFS=${PKG_DEFS:Q}
 MAKE_FLAGS+=	X86_MPIS3_DRC=${X86_MIPS3_DRC:Q}
 MAKE_FLAGS+=	X86_PPC_DRC=${X86_PPC_DRC:Q}
@@ -51,16 +57,19 @@ SUBST_STAGE.pragma=	pre-configure
 SUBST_FILES.pragma=	src/*.h src/*/*.h
 SUBST_SED.pragma=	-e "s|\#pragma once||g"
 
+DOCDIR=	share/doc/sdlmame
+INSTALLATION_DIRS=	bin ${DOCDIR}
+
 do-install:
+	set -e; \
 	for prg in chdman jedutil mame romcmp; \
 	do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$prg ${LOCALBASE}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/"$$prg" ${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdlmame
-	${INSTALL_DATA} ${WRKSRC}/SDLMAME.txt ${PREFIX}/share/doc/sdlmame
-	${INSTALL_DATA} ${WRKSRC}/docs/license.txt ${PREFIX}/share/doc/sdlmame
-	${INSTALL_DATA} ${WRKSRC}/docs/mame.txt ${PREFIX}/share/doc/sdlmame
-	${INSTALL_DATA} ${WRKSRC}/docs/windows.txt ${PREFIX}/share/doc/sdlmame
+	${INSTALL_DATA} ${WRKSRC}/SDLMAME.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/license.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/mame.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/windows.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

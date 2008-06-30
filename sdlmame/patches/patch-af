@@ -1,26 +1,8 @@
-$NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
+$NetBSD: patch-af,v 1.4 2008/06/30 10:11:12 dillo Exp $
 
---- src/tools/tools.mak.orig	2007-05-06 18:50:35.000000000 +0200
+--- src/tools/tools.mak.orig	2008-05-05 12:41:46.000000000 +0000
 +++ src/tools/tools.mak
-@@ -49,7 +49,7 @@ FILE2STROBJS = \
- 
- $(FILE2STR): $(FILE2STROBJS) $(LIBOCORE)
- 	@echo Linking $@...
--	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
-+	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
- 
- 
- 
-@@ -62,7 +62,7 @@ PNG2BDCOBJS = \
- 
- $(PNG2BDC): $(PNG2BDCOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
- 	@echo Linking $@...
--	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
-+	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
- 
- 
- 
-@@ -75,7 +75,7 @@ ROMCMPOBJS = \
+@@ -42,7 +42,7 @@ ROMCMPOBJS = \
  
  romcmp$(EXE): $(ROMCMPOBJS) $(LIBUTIL) $(ZLIB) $(EXPAT) $(LIBOCORE)
  	@echo Linking $@...
@@ -29,7 +11,7 @@ $NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
  
  
  
-@@ -89,7 +89,7 @@ CHDMANOBJS = \
+@@ -56,7 +56,7 @@ CHDMANOBJS = \
  
  chdman$(EXE): $(VERSIONOBJ) $(CHDMANOBJS) $(LIBUTIL) $(ZLIB) $(EXPAT) $(LIBOCORE)
  	@echo Linking $@...
@@ -38,7 +20,7 @@ $NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
  
  
  
-@@ -102,7 +102,7 @@ JEDUTILOBJS = \
+@@ -69,7 +69,7 @@ JEDUTILOBJS = \
  
  jedutil$(EXE): $(JEDUTILOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
  	@echo Linking $@...
@@ -47,7 +29,7 @@ $NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
  
  
  
-@@ -115,7 +115,7 @@ MAKEMETAOBJS = \
+@@ -82,7 +82,7 @@ MAKEMETAOBJS = \
  
  makemeta$(EXE): $(MAKEMETAOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
  	@echo Linking $@...
@@ -56,7 +38,7 @@ $NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
  
  
  
-@@ -128,7 +128,7 @@ REGREPOBJS = \
+@@ -95,7 +95,7 @@ REGREPOBJS = \
  
  regrep$(EXE): $(REGREPOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
  	@echo Linking $@...
@@ -65,9 +47,18 @@ $NetBSD: patch-af,v 1.3 2007/05/09 19:07:59 dillo Exp $
  
  
  
-@@ -141,4 +141,4 @@ SRCCLEANOBJS = \
+@@ -108,7 +108,7 @@ SRCCLEANOBJS = \
  
  srcclean$(EXE): $(SRCCLEANOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
+ 	@echo Linking $@...
+-	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ 
+ 
+@@ -121,4 +121,4 @@ SRC2HTMLOBJS = \
+ 
+ src2html$(EXE): $(SRC2HTMLOBJS) $(LIBUTIL) $(LIBOCORE) $(ZLIB) $(EXPAT)
  	@echo Linking $@...
 -	$(LD) $(LDFLAGS) $^ $(LIBS) -o $@
 +	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
