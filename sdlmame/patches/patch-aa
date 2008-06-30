@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/06/30 10:11:12 dillo Exp $
+$NetBSD: patch-aa,v 1.6 2008/06/30 12:02:57 thomasklausner Exp $
 
 --- makefile.orig	2008-05-05 12:44:38.000000000 +0000
 +++ makefile
@@ -15,6 +15,19 @@ $NetBSD: patch-aa,v 1.5 2008/06/30 10:11:12 dillo Exp $
  
  # uncomment next line to build using unix-style libsdl on Mac OS X
  # (vs. the native framework port).  Normal users should not enable this.
+@@ -127,10 +127,10 @@ X86_PPC_DRC = 1
+ # BIGENDIAN = 1
+ 
+ # uncomment next line to build expat as part of MAME build
+-BUILD_EXPAT = 1
++#BUILD_EXPAT = 1
+ 
+ # uncomment next line to build zlib as part of MAME build
+-BUILD_ZLIB = 1
++#BUILD_ZLIB = 1
+ 
+ # uncomment next line to include the symbols
+ # SYMBOLS = 1
 @@ -200,9 +200,9 @@ BUILD_EXE = $(EXE)
  endif
  
@@ -37,25 +50,12 @@ $NetBSD: patch-aa,v 1.5 2008/06/30 10:11:12 dillo Exp $
  
  # add an EXE suffix to get the final emulator name
  EMULATOR = $(FULLNAME)$(EXE)
-@@ -263,9 +263,9 @@ endif
- DEFS += -DINLINE="static __inline__"
- 
- # define LSB_FIRST if we are a little-endian target
--ifndef BIGENDIAN
--DEFS += -DLSB_FIRST
--endif
-+#ifndef BIGENDIAN
-+#DEFS += -DLSB_FIRST
-+#endif
- 
- # define PTR64 if we are a 64-bit target
- ifdef PTR64
 @@ -289,7 +289,7 @@ ifdef PROFILER
  DEFS += -DMAME_PROFILER
  endif
  
 -
-+DEFS += -DPI=M_PI ${PKG_DEFS}
++DEFS += -DPI=M_PI
  
  #-------------------------------------------------
  # compile flags
