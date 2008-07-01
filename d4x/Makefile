@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/01 19:44:30 shattered Exp $
 #
 
 DISTNAME=		d4x-2.5.6
@@ -25,7 +25,7 @@ LIBCOMPAT=	-lcompat
 LIBCOMPAT=	# none?
 .endif
 
-MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q} LIBCOMPAT=${LIBCOMPAT:Q}
+MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO} LIBCOMPAT=${LIBCOMPAT}
 
 #include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
