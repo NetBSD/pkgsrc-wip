@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2934 2008/06/29 07:39:49 asau Exp $
+# $Id: Makefile,v 1.2935 2008/07/01 14:54:06 tonnerre Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1288,6 +1288,7 @@ SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-Scope-Guard
 SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Spread
+SUBDIR+=	p5-Startup
 SUBDIR+=	p5-String-Similarity
 SUBDIR+=	p5-Sub-Override
 SUBDIR+=	p5-Task-Catalyst
