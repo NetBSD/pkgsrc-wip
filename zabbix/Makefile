@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/02 21:57:21 asau Exp $
 
 DISTNAME=	zabbix-1.4.4
 PKGREVISION=	#
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
 
-MAINTAINER=	asau@users.sourceforge.net
+MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 HOMEPAGE=	http://www.zabbix.com/
 COMMENT=	Network monitoring tool
 
