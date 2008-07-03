@@ -1,0 +1,214 @@
+.\" $NetBSD: audit-system.8,v 1.1.1.1 2008/07/03 21:55:40 adrian_p Exp $
+.\"
+.\"
+.Dd October 6, 2006
+.Os
+.Dt AUDIT-SYSTEM 8
+.Sh NAME
+.Nm audit-system
+.Nd show vulnerabilities in system, utilities and libraries
+.Sh SYNOPSIS
+.Nm
+.Op Fl dv
+.Sh DESCRIPTION
+The
+.Nm
+program compares the programs, utilities, libraries and kernel with the
+.Pa system-vulnerabilities
+file and reports any known security issues to standard output.
+This output contains the name and version of the vulnerable component, the
+type of vulnerability, and a URL for further information for each
+vulnerability.
+.Pp
+The following flags are supported:
+.Bl -tag -width Ar
+.It Fl d
+.Nm
+will attempt to download the vulnerabilities
+file before scanning
+the system for vulnerabilities.
+.It Fl v
+Set verbose mode.
+.Nm
+will warn when the system vulnerabilities file is more than a week old.
+.El
+.Pp
+The
+.Nm
+program downloads this file from
+.Pa ftp://ftp.NetBSD.org/pub/NetBSD/misc/agc/audit-system/system-vulnerabilities
+using
+.Xr ftp 1 .
+This vulnerabilities file documents all known security issues in
+.Nx
+the system
+and is kept up-to-date by the
+.Nx
+security-officer team.
+.Pp
+Each line lists the component and vulnerable versions, the type of exploit,
+and an Internet address for further information:
+.Bl -item
+.It
+.Aq package pattern
+.Aq type
+.Aq url
+.El
+.Pp
+The type of exploit can be any text, although
+some common types of exploits listed are:
+.Bl -bullet -compact -offset indent
+.It
+cross-site-html
+.It
+cross-site-scripting
+.It
+denial-of-service
+.It
+file-permissions
+.It
+local-access
+.It
+local-code-execution
+.It
+local-file-read
+.It
+local-file-removal
+.It
+local-file-write
+.It
+local-root-file-view
+.It
+local-root-shell
+.It
+local-symlink-race
+.It
+local-user-file-view
+.It
+local-user-shell
+.It
+privacy-leak
+.It
+remote-code-execution
+.It
+remote-command-inject
+.It
+remote-file-creation
+.It
+remote-file-read
+.It
+remote-file-view
+.It
+remote-file-write
+.It
+remote-key-theft
+.It
+remote-root-access
+.It
+remote-root-shell
+.It
+remote-script-inject
+.It
+remote-server-admin
+.It
+remote-use-of-secret
+.It
+remote-user-access
+.It
+remote-user-file-view
+.It
+remote-user-shell
+.It
+unknown
+.It
+weak-authentication
+.It
+weak-encryption
+.It
+weak-ssl-authentication
+.El
+.Pp
+By default, the vulnerabilities file is stored in the
+/etc
+directory.
+This can be changed by defining the environment variable
+.Ev SYSVULNDIR
+to the directory containing the vulnerabilities file.
+.Sh EXIT STATUS
+.Ex -std audit-packages
+.Sh ENVIRONMENT
+These variables can also be defined in the
+/etc/audit-system.conf
+file.
+.Pp
+.Bl -tag -width SYSVULNDIR
+.It Ev SYSVULNDIR
+Specifies the directory containing the
+.Pa system-vulnerabilities
+file.
+.It Ev FETCH_ARGS
+Specifies optional arguments for the ftp client.
+.It Ev FETCH_PROTO
+Specifies the protocol to use when fetching the 
+.Pa system-vulnerabilities
+file. Currently supports only http and ftp. The default is ftp.
+.El
+.Sh FILES
+/etc/system-vulnerabilities
+.Pp
+/etc/audit-system.conf
+.Sh EXAMPLES
+The
+.Nm
+utility can be run via
+.Xr cron 8
+(or with
+.Nx Ap s
+.Pa /etc/security.local
+daily security script).
+.Pp
+export FETCH_PROTO="http"
+.Pp
+.Sh DIAGNOSTICS
+The following errors can occur:
+.Bl -tag -width 10n
+.It Checksum mismatch
+The vulnerabilities file has been corrupted.
+Run
+.Nm -d .
+.It Missing vulnerabilities file
+The vulnerabilities file could not be found.
+Run
+.Nm -d .
+.It \&No checksum algorithm found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm -d .
+.It \&No checksum found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm -d .
+.It \&No file format version found
+The vulnerabilities file is too old or incomplete.
+Run
+.Nm -d .
+.It Unsupported file format version
+The vulnerabilities file is too old or too new.
+If it's too old, run
+.Nm -d .
+If it's too new, update the
+.Nm
+utility.
+.El
+.Sh SEE ALSO
+.Xr ftp 1 ,
+.Xr audit-packages pkgsrc ,
+.Xr audit-system.conf 5 ,
+.Sh HISTORY
+The
+.Nm
+command was originally implemented and added to
+.Nx
+by
+.An Alistair Crooks
+on October 6, 2006.

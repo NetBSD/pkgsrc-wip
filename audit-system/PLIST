@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/03 21:55:39 adrian_p Exp $
+bin/audit-get-ident
+bin/audit-get-mtime
+bin/audit-get-objdump
+bin/audit-system
