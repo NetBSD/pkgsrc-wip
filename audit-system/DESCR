@@ -3,3 +3,5 @@ kernel with the system-vulnerabilities file and reports any known security
 issues to standard output.  This output contains the name and version of
 the vulnerable component, the type of vulnerability, and a URL for further
 information for each vulnerability.
+
+NOTE: For NetBSD only.

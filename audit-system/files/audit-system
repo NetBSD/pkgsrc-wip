@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-system,v 1.1.1.1 2008/07/03 21:55:40 adrian_p Exp $
+# $NetBSD: audit-system,v 1.2 2008/07/04 20:11:44 adrian_p Exp $
 #
 # Copyright (c) 2008 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -31,22 +31,12 @@
 #
 
 AWK=@AWK@
-CHMOD=/bin/chmod
-CKSUM=/usr/bin/cksum
-MKDIR=/bin/mkdir
-FIND=/usr/bin/find
-FTP=/usr/bin/ftp
-MV=/bin/mv
-RM=/bin/rm
-
-ERR_DOWNLOAD="Please run $0 -d."
-ERR_UPGRADE="Please upgrade audit-system to the newest version."
-
-: ${SYSVULNDIR=/var/db}
-: ${FETCH_PROTO=ftp}
-: ${FTP=ftp}
-
-FTP_ARGS="-o"
+CHMOD=@CHMOD@
+CKSUM="@CKSUM@"
+MKDIR="@MKDIR@"
+FIND=@FIND@
+MV=@MV@
+RM=@RM@
 
 FORMAT_MAJOR=1
 FORMAT_MINOR=0
@@ -57,189 +47,177 @@ usage() {
         argv0="${1##*/}"
         cat <<EOF
 $2
-Usage: $argv0 [-dv]
-    -d : Run download-vulnerability-list before anything else.
+Usage: $argv0 [-duv]
+    -d : Download the system-vulnerabilities file before anything else
+    -u : Download the system-vulnerabilities file only
     -v : Verbose mode
 EOF
         exit 1
 }
 
-# script directory
-scriptdir="/usr/sbin"
-
-# use a non-null errmsg to indicate that something went wrong
-errmsg=""
-errsolution=""
-
-# check the integrity of the file
-check_integrity() {
-	recordedsum=$(${AWK} '$1 == "#CHECKSUM" { print $3 }' $1)
-	recordedalg=$(${AWK} '$1 == "#CHECKSUM" { print $2 }' $1)
-	case "$recordedsum" in
-	"")	errmsg="No checksum found in $2"
-		errsolution="$ERR_DOWNLOAD"
-		;;
-	*)	case "$recordedalg" in
-		"")	errmsg="No checksum algorithm found in $2"
-			errsolution="$ERR_DOWNLOAD"
-			;;
-		*)	calcsum=$(${AWK} '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' $1 | ${CKSUM} -a $recordedalg)
-			if [ "$recordedsum" != "$calcsum" ]; then
-				errmsg="Checksum mismatch - recorded $recordedalg checksum \"$recordedsum\", calculated checksum \"$calcsum\""
-				errsolution="$ERR_DOWNLOAD"
-			fi
-			;;
-		esac
-		;;
-	esac
-}
-
-# if we have any configuration information, then read it
-settingsmsg=""
-if [ -r /etc/audit-system.conf ]; then
-        settingsmsg="Reading settings from /etc/audit-system.conf"
-        . /etc/audit-system.conf
-fi
-
-#vulsource="${FETCH_PROTO}://ftp.NetBSD.org/pub/NetBSD/audit-system/system-vulnerabilities" # XXX
-vulsource="${FETCH_PROTO}://ftp.NetBSD.org/pub/NetBSD/misc/agc/audit-system/system-vulnerabilities"
-vuls="${SYSVULNDIR}/system-vulnerabilities"
-newvullist=system-vulnerabilities.$$
+# set some defaults
+: ${SYSVULNDIR=@SYSVULNDIR@}
+: ${FETCH_PROTO=http}
+: ${FETCH_TOOL=@FETCH_TOOL@}
+: ${FETCH_TOOL_ARGS="-o"}
+scriptdir="@SCRIPT_DIR@"
+download=no
+download_only=no
+verbose=no
+neednew=no
 
 # process any command line arguments
-download=no
-verbose=no
 while [ $# -gt 0 ]; do
         case "$1" in
         -d)     download=yes ;;
+        -u)     download_only=yes ;;
         -v)     verbose=yes ;;
         *)	usage "$0" "Unknown option $1"
         esac
         shift
 done
 
-# if we're verbose, tell the user what we already did
-case $verbose in
-yes)    case "$settingsmsg" in
-        "")     ;;
-        *)      echo "$settingsmsg"
-                ;;
-        esac
-        ;;
+# check for incompatible command line options
+if [ "x${download}" = "xyes" -a "x${download_only}" = "xyes" ]; then
+	echo "ERROR: Invalid command line options specified"
+	exit 1
+fi
+
+# if we have any configuration information, then read it
+if [ -r @PKG_SYSCONFDIR@/audit-system.conf ]; then
+	if [ "x${verbose}" = "xyes" ]; then
+        	echo "Reading settings from @PKG_SYSCONFDIR@/audit-system.conf"
+	fi
+        . @PKG_SYSCONFDIR@/audit-system.conf
+fi
+
+# check FETCH_PROTO is sane
+case ${FETCH_PROTO} in
+http) 	;;
+ftp)	;;
+*)	echo "ERROR: Unsupported FETCH_PROTO specified"
+	exit 1
+	;;
 esac
+
+# setup what we know is sane so far
+#vulsource="${FETCH_PROTO}://ftp.NetBSD.org/pub/NetBSD/misc/agc/audit-system/system-vulnerabilities"
+vulsource="${FETCH_PROTO}://localhost/system-vulnerabilities"
+vuls="${SYSVULNDIR}/system-vulnerabilities"
+newvullist="${SYSVULNDIR}/system-vulnerabilities.$$"
 
 # try to download the system vulnerability list, as requested
 # the integrity of the list is checked below
 # so just issue a warning if there was a failure
-case "$download" in
-yes)    if [ ! -d ${SYSVULNDIR}/. ]; then
-		echo "Creating ${SYSVULNDIR}"
-		${MKDIR} -p ${SYSVULNDIR} || (echo "Can't create ${SYSVULNDIR}" 1>&2; exit 1)
-	fi
-	case ${FETCH_PROTO} in
-	http) 	;;
-	ftp)	;;
-	*)	echo "Unknown FETCH_PROTO specified - Only http and ftp are currently supported."
-		exit 1
-		;;
-	esac
+if [ "x${download}" = "xyes" -o "x${download_only}" = "xyes" ]; then
 
-	(cd ${SYSVULNDIR}
-	${FTP} ${FTP_ARGS} "${newvullist}" "${vulsource}"
+	# check we can get to ${SYSVULNDIR}
+	if [ ! -d ${SYSVULNDIR}/. ]; then
+		echo "Creating ${SYSVULNDIR}"
+		${MKDIR} ${SYSVULNDIR}
+	fi
+	echo audit-system > ${SYSVULNDIR}/.cookie
+	if [ -f ${SYSVULNDIR}/.cookie ]; then
+		${RM} ${SYSVULNDIR}/.cookie
+	else
+		echo "ERROR: Unable to write to ${SYSVULNDIR}"
+		exit 1
+	fi
+
+	# get the file
+	${FETCH_TOOL} ${FETCH_TOOL_ARGS} "${newvullist}" "${vulsource}"
 
 	# see if we got a file
 	if [ ! -f "${newvullist}" ]; then
-		echo "***WARNING*** Download of vulnerabilities file failed" 1>&2
+		echo "ERROR: Download of vulnerabilities file failed"
 		exit 1
 	fi
 
 	# see if the file got damaged while it was being downloaded
-	check_integrity "${newvullist}" "downloaded vulnerability list"
-	case "$errmsg" in
-	"")	;;
-	*)	echo "$errmsg" 1>&2
+	recordedsum=$(${AWK} '$1 == "#CHECKSUM" { print $3 }' ${newvullist})
+	recordedalg=$(${AWK} '$1 == "#CHECKSUM" { print $2 }' ${newvullist})
+
+	if [ "x${recordedsum}" = "x" -o "x${recordedalg}" = "x" ]; then
+		echo "ERROR: Error in downloading"
 		${RM} -f "${newvullist}"
 		exit 1
-		;;
-	esac
+	fi
+	
+	calcsum=$(${AWK} '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' ${newvullist} | ${CKSUM} ${recordedalg})
+	if [ "x${recordedsum}" != "x${calcsum}" ]; then
+		echo "ERROR: Checksum mismatch"
+		${RM} -f "${newvullist}"
+		exit 1
+	fi
 
 	# test to see if file has been changed
-	neednew=false
-	if [ -f "$vuls" ]; then
-		oldsum=$(${AWK} '$1 == "#CHECKSUM" { print $3 }' "$vuls")
-		if [ "$oldsum" != "$calcsum" ]; then
-			neednew=true
+	if [ -f "${vuls}" ]; then
+		oldsum=$(${AWK} '$1 == "#CHECKSUM" { print $3 }' "${vuls}")
+		if [ "x${oldsum}" != "x${calcsum}" ]; then
+			neednew=yes
 		fi
 	else
-		neednew=true
+		neednew=yes
 	fi
 
 	# if we need the new file, move it into position
-	if $neednew; then
+	if [ "x${neednew}" = "xyes" ]; then
 		echo "System vulnerabilities file has been updated"
-		${CHMOD} a+r ${newvullist}
-		${MV} -f ${newvullist} "$vuls"
+		${CHMOD} a+r "${newvullist}"
+		${MV} -f "${newvullist}" "${vuls}"
 	else
 		echo "No change from existing system vulnerabilities file"
-		${RM} -f ${newvullist}
-	fi)
-esac
+		${RM} -f "${newvullist}"
+	fi
+fi
 
-errmsg=""
+# if download_only was specified then we end here
+if [ "x${download_only}" = "xyes" ]; then
+	exit 0
+fi
 
-# check for missing vulnerabilities file
-if [ ! -f "$vuls" ]; then
-        errmsg="Missing vulnerabilities file $vuls"
-        errsolution="$ERR_DOWNLOAD"
+# check for missing vulnerabilities file before we continue
+if [ ! -f "${vuls}" ]; then
+	echo "ERROR: Missing system vulnerabilities file"
+	exit 1
 fi
 
 # check for old vulnerabilities file if we're being verbose
-case "$errmsg" in
-"")     case "$verbose" in
-        # XXX: quote vuls
-        yes)    [ -n "$(${FIND} $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..." ;;
-        esac
-        ;;
-esac
+if [ "x${verbose}" = "xyes" ]; then
+        if [ -n "$(${FIND} ${vuls} -ctime +7)" ]; then
+		echo "WARNING: system vulnerabilites file is more than a week old"
+	fi
+fi
 
 # check format version of vulnerabilities file
-case "$errmsg" in
-"")     file_major=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[1]; exit; }' "$vuls")
-        file_minor=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[2]; exit; }' "$vuls")
-        file_teeny=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[3]; exit; }' "$vuls")
-        if [ -z "$file_teeny" ] ; then
-                file_teeny=0
-        fi
-        if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]; then
-                errmsg="No file format version found in $vuls"
-                errsolution="$ERR_DOWNLOAD"
-        elif [ "$file_major" -ne "$FORMAT_MAJOR" -o "$file_minor" -gt "$FORMAT_MINOR" ]; then
-                errmsg="Unsupported file format version $file_major.$file_minor${file_teeny:+.${file_teeny}} in $vuls (supported version: $FORMAT_MAJOR.$FORM
-AT_MINOR.$FORMAT_TEENY)."
-                if [ "$file_major" -le "$FORMAT_MAJOR" -o
-                     \( "$file_major" -eq "$FORMAT_MAJOR" -a
-                        "$file_minor" -lt "$FORMAT_MINOR" \) ]; then
-                        errsolution="$ERR_DOWNLOAD"
-                else
-                        errsolution="$ERR_UPGRADE"
-                fi
-        fi
-        ;;
-esac
+file_major=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[1]; exit; }' "${vuls}")
+file_minor=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[2]; exit; }' "${vuls}")
+file_teeny=$(${AWK} '/^#[ \t]*FORMAT/ { split($NF, a, "\\."); print a[3]; exit; }' "${vuls}")
+
+if [ -z "${file_teeny}" ] ; then
+	file_teeny=0
+fi
+
+if [ "x$file_major" = "x" -o "x$file_minor" = "x" ]; then
+	echo "ERROR: Error in downloading"
+	exit 1
+fi
+
+if [ "${file_major}" -ne "${FORMAT_MAJOR}" -o "${file_minor}" -gt "${FORMAT_MINOR}" ]; then
+	errmsg="Unsupported file format version"
+	if [ "${file_major}" -le "${FORMAT_MAJOR}" -o
+	   \( "${file_major}" -eq "${FORMAT_MAJOR}" -a
+	   "${file_minor}" -lt "${FORMAT_MINOR}" \) ]; then
+		errsolution="$ERR_DOWNLOAD"
+	else
+		errsolution="$ERR_UPGRADE"
+	fi
+fi
 
 # check integrity of vulnerabilities file
 check_integrity "$vuls" "$vuls"
 
-# if we have found an error, then complain and exit
-case "$errmsg" in
-"")     ;;
-*)      echo "***ERROR*** $errmsg" 1>&2
-        echo "*** $errsolution" 1>&2
-        exit 1
-        ;;
-esac
-
-${AWK} -v scriptdir="$scriptdir" '
+${AWK} -v scriptdir="${scriptdir}" '
 /^#.*/	{ next }
 {
 	cmd = sprintf("v=$(%s/audit-%s %s) && test -e %s && test $v -lt %s && echo %c%s (version $v before %s) could have a %s vulnerability (severity %s) - see %s%c",

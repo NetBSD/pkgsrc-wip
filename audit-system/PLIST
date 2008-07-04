@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/03 21:55:39 adrian_p Exp $
-bin/audit-get-ident
-bin/audit-get-mtime
-bin/audit-get-objdump
-bin/audit-system
+@comment $NetBSD: PLIST,v 1.2 2008/07/04 20:11:44 adrian_p Exp $
+sbin/audit-get-ident
+sbin/audit-get-mtime
+sbin/audit-get-objdump
+sbin/audit-system
+share/examples/audit-system/audit-system.conf
+@dirrm share/examples/audit-system

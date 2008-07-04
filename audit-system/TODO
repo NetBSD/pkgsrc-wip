@@ -1,7 +1,7 @@
 - Enable ONLY_FOR_PLATFORM
+- Check the paths for tools
 - Move scripts off to their own directory e.g. ${PREFIX}/share/audit-system ?
 - Merge all audit-get-* into one file and just .source it ?
-- Split audit-system into download-xxx-list and audit-system e.g. audit-packages
 - Update man page
 - Install man page
 - Create basic system-vulnerabilities file to test with (e.g. just 2008 issues)
