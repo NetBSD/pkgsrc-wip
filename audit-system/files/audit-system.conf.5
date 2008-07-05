@@ -1,0 +1,46 @@
+.\" $NetBSD: audit-system.conf.5,v 1.1 2008/07/05 19:07:21 adrian_p Exp $
+.\"
+.\"
+.Dd July 4, 2008
+.Os
+.Dt AUDIT-SYSTEM.CONF 8
+.Sh NAME
+.Nm audit-system.conf
+.Nd configuration file for
+.Xr audit-system 5 .
+.Sh DESCRIPTION
+The following options are supported by
+.Nm
+.Pp
+.Bl -tag -width Ar
+.It FETCH_PROTO
+.Nm
+will attempt to download the vulnerabilities
+file using the named protocol.  Currently only 'http' and 'ftp' are supported.
+.It SYSVULNDIR
+The directory that
+.Nm
+will use to store the
+.Pa system-vulnerabilities
+file in.
+.It FETCH_TOOL
+The tool that will be used to download the 
+.Pa system-vulnerabilities
+file.
+.It FETCH_TOOL_ARGS
+Options for FETCH_TOOL
+.El
+.Pp
+.Sh FILES
+@SYSVULNDIR@/system-vulnerabilities
+.Pp
+@PKG_SYSCONFDIR@/audit-system.conf
+.Pp
+.Sh SEE ALSO
+.Xr audit-system 5
+.Sh HISTORY
+The
+.Nm
+command was originally implemented by
+.An Alistair Crooks
+on October 6, 2006.

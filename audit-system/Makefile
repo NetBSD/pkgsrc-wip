@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/07/04 20:11:44 adrian_p Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/05 19:07:21 adrian_p Exp $
 #
 
 DISTNAME=	audit-system-0.01
-CATEGORIES=	pkgtools
+CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
@@ -20,7 +20,7 @@ USE_LANGUAGES=	# none
 #ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 AS_FILES=	audit-get-ident audit-get-mtime audit-get-objdump audit-system \
-		audit-system.8 audit-system.conf
+		audit-system.8 audit-system.conf audit-system.conf.5
 EGDIR=		${PREFIX}/share/examples/audit-system
 SYSVULNDIR=	${VARBASE}/db
 SCRIPT_DIR=	${PREFIX}/sbin
@@ -41,8 +41,7 @@ FTP?=		/usr/bin/ftp
 
 SUBST_CLASSES+=		tools
 SUBST_STAGE.tools=	post-configure
-SUBST_FILES.tools+=	audit-get-ident audit-get-mtime audit-get-objdump
-SUBST_FILES.tools+=	audit-system audit-system.conf
+SUBST_FILES.tools+=	${AS_FILES}
 SUBST_SED.tools=	-e "s|@AWK@|${AWK}|g"
 SUBST_SED.tools+=	-e "s|@SH@|${SH}|g"
 SUBST_SED.tools+=	-e "s|@CP@|${CP}|g"
@@ -75,5 +74,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-mtime ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-objdump ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/audit-system ${PREFIX}/sbin
+
+	${INSTALL_MAN} ${WRKSRC}/audit-system.8 \
+		${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/audit-system.conf.5 \
+		${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../mk/bsd.pkg.mk"

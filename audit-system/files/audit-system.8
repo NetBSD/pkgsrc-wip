@@ -1,7 +1,7 @@
-.\" $NetBSD: audit-system.8,v 1.1.1.1 2008/07/03 21:55:40 adrian_p Exp $
+.\" $NetBSD: audit-system.8,v 1.2 2008/07/05 19:07:21 adrian_p Exp $
 .\"
 .\"
-.Dd October 6, 2006
+.Dd July 4, 2008
 .Os
 .Dt AUDIT-SYSTEM 8
 .Sh NAME
@@ -9,7 +9,7 @@
 .Nd show vulnerabilities in system, utilities and libraries
 .Sh SYNOPSIS
 .Nm
-.Op Fl dv
+.Op Fl duv
 .Sh DESCRIPTION
 The
 .Nm
@@ -27,6 +27,11 @@ The following flags are supported:
 will attempt to download the vulnerabilities
 file before scanning
 the system for vulnerabilities.
+.It Fl u
+.Nm
+will only download the
+.Pa system-vulnerabilities
+file
 .It Fl v
 Set verbose mode.
 .Nm
@@ -38,7 +43,7 @@ The
 program downloads this file from
 .Pa ftp://ftp.NetBSD.org/pub/NetBSD/misc/agc/audit-system/system-vulnerabilities
 using
-.Xr ftp 1 .
+.Xr @FETCH_TOOL@ 1 .
 This vulnerabilities file documents all known security issues in
 .Nx
 the system
@@ -129,34 +134,17 @@ weak-ssl-authentication
 .El
 .Pp
 By default, the vulnerabilities file is stored in the
-/etc
+@SYSVULNDIR@
 directory.
 This can be changed by defining the environment variable
 .Ev SYSVULNDIR
 to the directory containing the vulnerabilities file.
 .Sh EXIT STATUS
-.Ex -std audit-packages
-.Sh ENVIRONMENT
-These variables can also be defined in the
-/etc/audit-system.conf
-file.
-.Pp
-.Bl -tag -width SYSVULNDIR
-.It Ev SYSVULNDIR
-Specifies the directory containing the
-.Pa system-vulnerabilities
-file.
-.It Ev FETCH_ARGS
-Specifies optional arguments for the ftp client.
-.It Ev FETCH_PROTO
-Specifies the protocol to use when fetching the 
-.Pa system-vulnerabilities
-file. Currently supports only http and ftp. The default is ftp.
-.El
+.Ex -std audit-system
 .Sh FILES
-/etc/system-vulnerabilities
+@SYSVULNDIR@/system-vulnerabilities
 .Pp
-/etc/audit-system.conf
+@PKG_SYSCONFDIR@/audit-system.conf
 .Sh EXAMPLES
 The
 .Nm
@@ -167,39 +155,6 @@ utility can be run via
 .Pa /etc/security.local
 daily security script).
 .Pp
-export FETCH_PROTO="http"
-.Pp
-.Sh DIAGNOSTICS
-The following errors can occur:
-.Bl -tag -width 10n
-.It Checksum mismatch
-The vulnerabilities file has been corrupted.
-Run
-.Nm -d .
-.It Missing vulnerabilities file
-The vulnerabilities file could not be found.
-Run
-.Nm -d .
-.It \&No checksum algorithm found
-The vulnerabilities file is too old or incomplete.
-Run
-.Nm -d .
-.It \&No checksum found
-The vulnerabilities file is too old or incomplete.
-Run
-.Nm -d .
-.It \&No file format version found
-The vulnerabilities file is too old or incomplete.
-Run
-.Nm -d .
-.It Unsupported file format version
-The vulnerabilities file is too old or too new.
-If it's too old, run
-.Nm -d .
-If it's too new, update the
-.Nm
-utility.
-.El
 .Sh SEE ALSO
 .Xr ftp 1 ,
 .Xr audit-packages pkgsrc ,
@@ -207,8 +162,6 @@ utility.
 .Sh HISTORY
 The
 .Nm
-command was originally implemented and added to
-.Nx
-by
+command was originally implemented by
 .An Alistair Crooks
 on October 6, 2006.
