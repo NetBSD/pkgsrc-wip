@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-system,v 1.3 2008/07/05 19:07:21 adrian_p Exp $
+# $NetBSD: audit-system,v 1.4 2008/07/05 20:00:30 adrian_p Exp $
 #
 # Copyright (c) 2008 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -32,7 +32,7 @@
 
 AWK=@AWK@
 CHMOD=@CHMOD@
-CKSUM="@CKSUM@"
+CKSUM=@CKSUM@
 MKDIR="@MKDIR@"
 FIND=@FIND@
 MV=@MV@
@@ -57,7 +57,7 @@ EOF
 
 # set some defaults
 : ${SYSVULNDIR=@SYSVULNDIR@}
-: ${FETCH_PROTO=http}
+: ${FETCH_PROTO=ftp}
 : ${FETCH_TOOL=@FETCH_TOOL@}
 : ${FETCH_TOOL_ARGS="-o"}
 scriptdir="@SCRIPT_DIR@"
@@ -80,7 +80,7 @@ check_integrity()
 		exit 1
 	fi
 	
-	calcsum=$(${AWK} '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' $1 | ${CKSUM} ${recordedalg})
+	calcsum=$(${AWK} '$1 == "#CHECKSUM" || /\$NetBSD.*/ { next } { print }' $1 | ${CKSUM} -a ${recordedalg})
 	if [ "x${recordedsum}" != "x${calcsum}" ]; then
 		echo "ERROR: Checksum mismatch"
 		${RM} -f "$1"
@@ -132,7 +132,7 @@ esac
 
 # setup what we know is sane so far
 #vulsource="${FETCH_PROTO}://ftp.NetBSD.org/pub/NetBSD/misc/agc/audit-system/system-vulnerabilities"
-vulsource="${FETCH_PROTO}://localhost/system-vulnerabilities"
+vulsource="${FETCH_PROTO}://localhost/pub/NetBSD/system-vulnerabilities"
 vuls="${SYSVULNDIR}/system-vulnerabilities"
 newvullist="${SYSVULNDIR}/system-vulnerabilities.$$"
 

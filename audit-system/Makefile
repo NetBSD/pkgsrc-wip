@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/05 19:07:21 adrian_p Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/05 20:00:30 adrian_p Exp $
 #
 
 DISTNAME=	audit-system-0.01
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 NO_MTREE=	yes
 USE_LANGUAGES=	# none
 
-#ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 AS_FILES=	audit-get-ident audit-get-mtime audit-get-objdump audit-system \
 		audit-system.8 audit-system.conf audit-system.conf.5
@@ -35,8 +35,7 @@ MAKE_DIRS=	${SYSVULNDIR}
 
 STAT?=		/usr/bin/stat
 OBJDUMP?=	/usr/bin/objdump
-#CKSUM?=	/usr/bin/cksum -a
-CKSUM?=		/usr/pkg/bin/digest
+CKSUM?=		/usr/bin/cksum
 FTP?=		/usr/bin/ftp
 
 SUBST_CLASSES+=		tools
