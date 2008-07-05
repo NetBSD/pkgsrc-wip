@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/06/29 21:36:21 shindenmorr Exp $
-.lockfile
+@comment $NetBSD: PLIST,v 1.8 2008/07/05 14:05:37 shindenmorr Exp $
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
