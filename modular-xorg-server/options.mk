@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/05/03 16:46:20 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.5 2008/07/05 23:44:08 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	dbus dri inet6
+PKG_SUPPORTED_OPTIONS=	dri inet6 #dbus
 # remove after 2007Q4
 PKG_OPTIONS_LEGACY_OPTS=glx:dri
 .if defined(PKG_OPTIONS.xorg-server)
@@ -11,19 +11,20 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xorg-server us
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdbus)
-CONFIGURE_ARGS+=	--enable-dbus
-.  include "../../sysutils/dbus/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-dbus
-.endif
+#.if !empty(PKG_OPTIONS:Mdbus)
+#CONFIGURE_ARGS+=	--enable-config-dbus
+#.  include "../../sysutils/dbus/buildlink3.mk"
+#.else
+CONFIGURE_ARGS+=	--disable-config-dbus
+#.endif
 
 .if !empty(PKG_OPTIONS:Mdri)
 .include "mesaconfig.mk"
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		MesaLib-7.0.3.tar.bz2
+#DIST_SUBDIR=		Mesa-7.0.3
 SITES.MesaLib-7.0.3.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-PATCHFILES=		Mesa-7.0.3-001 Mesa-7.0.3-002
+PATCHFILES=		Mesa-7.0.3-001 Mesa-7.0.3-002 Mesa-7.0.3-003
 PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
 PATCH_DIST_ARGS+=	-d ${WRKDIR}/Mesa-7.0.3 -f -V nil -b .orig_dist -p1 || ${TRUE}
 MESA_SRC=		${WRKDIR}/Mesa-7.0.3
@@ -40,14 +41,13 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 # the newer ones.
 #BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
-PLIST_SUBST+=		USE_DRI=""
+PLIST_VARS+=		dri
 
 dri-post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 
 .else
 CONFIGURE_ARGS+=	--disable-glx
-PLIST_SUBST+=		USE_DRI="@comment "
 
 dri-post-extract:
 	@${DO_NADA}

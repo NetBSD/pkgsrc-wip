@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.5 2008/05/03 16:46:20 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.6 2008/07/05 23:44:09 bsadewitz Exp $
 
---- hw/xfree86/os-support/bus/xf86Sbus.h.orig	2008-04-30 03:37:43.000000000 -0400
+--- hw/xfree86/os-support/bus/xf86Sbus.h.orig	2008-06-06 06:03:10.000000000 -0400
 +++ hw/xfree86/os-support/bus/xf86Sbus.h
 @@ -38,6 +38,8 @@
  #include <sys/openpromio.h>

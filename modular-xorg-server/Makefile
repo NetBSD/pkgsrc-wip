@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/05 23:44:08 bsadewitz Exp $
 
-DISTNAME=	xorg-server-1.4.0.90
-PKGREVISION=	3
+DISTNAME=	xorg-server-1.4.2.0
 PKGNAME=	modular-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+#MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
 
 SPECIAL_PERMS+=	bin/Xorg ${SETUID_ROOT_PERMS}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=		bjs@NetBSD.org
-COMMENT=	Xorg X11 Server from modular X.org X11
+COMMENT=		Xorg X11 Server from modular X.org X11
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -27,6 +27,8 @@ XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
+WRKSRC=			${WRKDIR}/xorg-server-1.4.2
+
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--disable-dmx
@@ -40,14 +42,19 @@ CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
 .endif
 CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM}
-
-
+CONFIGURE_ARGS+=	--with-vendor-web="http://www.pkgsrc.org/" 
+CONFIGURE_ARGS+=	--disable-config-hal 
+CONFIGURE_ARGS+=	--disable-xorgcfg 
+CONFIGURE_ARGS+=	--disable-xprint 
+CONFIGURE_ARGS+=	--disable-dmx 
+CONFIGURE_ARGS+=	--disable-xephyr 
+CONFIGURE_ARGS+=	--disable-kdrive 
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-xorg
+CONFIGURE_ARGS+=	--with-xorgcfg
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 
 DEPENDS+=		xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
-
 
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
@@ -69,6 +76,7 @@ post-extract: dri-post-extract
 	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
 	${RM} -f ${WRKDIR}/Mesa-7.0.2/src/mesa/Makefile.orig
 	${RM} -f ${WRKDIR}/Mesa-7.0.2/docs/README.MINGW32.orig
+	${CP} ${FILESDIR}/prim_x86_gcc.h ${WRKSRC}/hw/xfree86/x86emu/x86emu/
 
 .include "options.mk"
 

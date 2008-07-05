@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/05/03 16:46:20 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/05 23:44:08 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -19,20 +19,11 @@ include/xorg/BT.h
 include/xorg/IBM.h
 include/xorg/TI.h
 include/xorg/XIstubs.h
-include/xorg/afb.h
 include/xorg/assyntax.h
 include/xorg/atKeynames.h
 include/xorg/bstore.h
 include/xorg/bstorestr.h
 include/xorg/bt829.h
-include/xorg/cfb.h
-include/xorg/cfb16.h
-include/xorg/cfb32.h
-include/xorg/cfb8_16.h
-include/xorg/cfb8_32.h
-include/xorg/cfbmap.h
-include/xorg/cfbmskbits.h
-include/xorg/cfbunmap.h
 include/xorg/closestr.h
 include/xorg/closure.h
 include/xorg/colormap.h
@@ -73,9 +64,6 @@ include/xorg/hotplug.h
 include/xorg/i2c_def.h
 include/xorg/input.h
 include/xorg/inputstr.h
-include/xorg/mfb.h
-include/xorg/mfbmap.h
-include/xorg/mfbunmap.h
 include/xorg/mi.h
 include/xorg/mibank.h
 include/xorg/mibstore.h
@@ -134,8 +122,6 @@ include/xorg/xaa.h
 include/xorg/xaaWrapper.h
 include/xorg/xaalocal.h
 include/xorg/xaarop.h
-include/xorg/xf1bpp.h
-include/xorg/xf4bpp.h
 include/xorg/xf86.h
 include/xorg/xf86Crtc.h
 include/xorg/xf86Cursor.h
@@ -179,21 +165,17 @@ include/xorg/xvmcext.h
 lib/X11/Cards
 lib/X11/Options
 lib/pkgconfig/xorg-server.pc
-${USE_DRI}lib/xorg/modules/extensions/libGLcore.la
+${PLIST.dri}lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
-${USE_DRI}lib/xorg/modules/extensions/libglx.la
+${PLIST.dri}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
 lib/xorg/modules/fonts/libfreetype.la
-lib/xorg/modules/libafb.la
-lib/xorg/modules/libcfb.la
-lib/xorg/modules/libcfb32.la
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfb.la
 lib/xorg/modules/libint10.la
-lib/xorg/modules/libmfb.la
 lib/xorg/modules/libpcidata.la
 lib/xorg/modules/libscanpci.la
 lib/xorg/modules/libshadow.la
@@ -202,10 +184,6 @@ lib/xorg/modules/libvbe.la
 lib/xorg/modules/libvgahw.la
 lib/xorg/modules/libwfb.la
 lib/xorg/modules/libxaa.la
-lib/xorg/modules/libxf1bpp.la
-lib/xorg/modules/libxf4bpp.la
-lib/xorg/modules/libxf8_16bpp.la
-lib/xorg/modules/libxf8_32bpp.la
 lib/xorg/modules/linux/libfbdevhw.la
 lib/xorg/modules/multimedia/bt829_drv.la
 lib/xorg/modules/multimedia/fi1236_drv.la
