@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/29 21:34:31 shindenmorr Exp $
-.lockfile
+@comment $NetBSD: PLIST,v 1.10 2008/07/05 14:06:43 shindenmorr Exp $
 bin/eet
 include/Eet.h
 lib/libeet.la
