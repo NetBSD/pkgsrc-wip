@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:30 rillig Exp $
+$NetBSD: distinfo,v 1.5 2008/07/06 12:20:03 makoto Exp $
 
-SHA1 (w32api-3.1.tar.gz) = 85f2f5e04f73de430bf655c62b0d6ac70a27341c
-RMD160 (w32api-3.1.tar.gz) = e0aeb417956e9fd0faac296694efff0558706a34
-Size (w32api-3.1.tar.gz) = 1523310 bytes
+SHA1 (w32api-3.11.tar.gz) = 0969cde19c3a85012b4924cb49cf2e9ef3d1b6df
+RMD160 (w32api-3.11.tar.gz) = 8e1df4c12313299d429a88c0e76e4e0d460acdc4
+Size (w32api-3.11.tar.gz) = 1628397 bytes
