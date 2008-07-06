@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2008/06/24 12:01:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.58 2008/07/06 12:05:52 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -350,6 +350,8 @@ share/emacs/${PKGVERSION}/etc/images/gnus/gnntg.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnntg.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus-pointer.xbm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus-pointer.xpm
+share/emacs/${PKGVERSION}/etc/images/gnus/gnus.png
+share/emacs/${PKGVERSION}/etc/images/gnus/gnus.svg
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus.xbm
 share/emacs/${PKGVERSION}/etc/images/gnus/gnus.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/important.xpm
@@ -594,6 +596,8 @@ share/emacs/${PKGVERSION}/etc/images/sort-row-ascending.xpm
 share/emacs/${PKGVERSION}/etc/images/spell.pbm
 share/emacs/${PKGVERSION}/etc/images/spell.xpm
 share/emacs/${PKGVERSION}/etc/images/splash.pbm
+share/emacs/${PKGVERSION}/etc/images/splash.png
+share/emacs/${PKGVERSION}/etc/images/splash.svg
 share/emacs/${PKGVERSION}/etc/images/splash.xpm
 share/emacs/${PKGVERSION}/etc/images/splash8.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/README
@@ -923,7 +927,6 @@ share/emacs/${PKGVERSION}/leim/quail/greek.el.gz
 share/emacs/${PKGVERSION}/leim/quail/greek.elc
 share/emacs/${PKGVERSION}/leim/quail/hangul.el.gz
 share/emacs/${PKGVERSION}/leim/quail/hangul.elc
-share/emacs/${PKGVERSION}/leim/quail/hangul3.el
 share/emacs/${PKGVERSION}/leim/quail/hanja-jis.el.gz
 share/emacs/${PKGVERSION}/leim/quail/hanja-jis.elc
 share/emacs/${PKGVERSION}/leim/quail/hanja.el.gz
@@ -2214,7 +2217,6 @@ share/emacs/${PKGVERSION}/lisp/mail/unrmail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/unrmail.elc
 share/emacs/${PKGVERSION}/lisp/mail/uudecode.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/uudecode.elc
-share/emacs/${PKGVERSION}/lisp/mail/vms-pmail.el
 share/emacs/${PKGVERSION}/lisp/makesum.el.gz
 share/emacs/${PKGVERSION}/lisp/makesum.elc
 share/emacs/${PKGVERSION}/lisp/man.el.gz
@@ -2479,6 +2481,9 @@ share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vms-patch.el
+share/emacs/${PKGVERSION}/lisp/obsolete/vms-pmail.el
+share/emacs/${PKGVERSION}/lisp/obsolete/vmsproc.el
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${PKGVERSION}/lisp/org/org-agenda.el.gz
@@ -3153,8 +3158,6 @@ share/emacs/${PKGVERSION}/lisp/vcursor.elc
 share/emacs/${PKGVERSION}/lisp/version.el
 share/emacs/${PKGVERSION}/lisp/view.el.gz
 share/emacs/${PKGVERSION}/lisp/view.elc
-share/emacs/${PKGVERSION}/lisp/vms-patch.el
-share/emacs/${PKGVERSION}/lisp/vmsproc.el
 share/emacs/${PKGVERSION}/lisp/vt-control.el.gz
 share/emacs/${PKGVERSION}/lisp/vt-control.elc
 share/emacs/${PKGVERSION}/lisp/vt100-led.el.gz
