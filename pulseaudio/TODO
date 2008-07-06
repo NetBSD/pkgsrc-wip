@@ -10,4 +10,6 @@
 --Use CONF_FILES framework
 --And more.
 
+-- This package has a known vulnerability, please investigate and fix if possible. (see: http://aluigi.altervista.org/adv/pulsex-adv.txt)
+
 At least it works now!
