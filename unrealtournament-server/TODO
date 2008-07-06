@@ -8,3 +8,5 @@ Apart from that, this package works fine on NetBSD.
 
 files/ contains some 3rd-party addons which may or may not be
 useful.
+
+-- This package has a known vulnerability, please investigate and fix if possible. (see: http://aluigi.altervista.org/adv/unrwebdos-adv.txt and http://secunia.com/advisories/26506/)
