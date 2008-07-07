@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/19 13:39:13 yomram Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/07 21:56:01 hoka_adam Exp $
 
 DISTNAME=	fbpager-0.1.4
 CATEGORIES=	wm x11
@@ -9,11 +9,13 @@ HOMEPAGE=	http://fluxbox.org/fbpager/
 COMMENT=	Fluxbox pager with transparency and mouse gestures
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fbpager
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/fbpager/
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
