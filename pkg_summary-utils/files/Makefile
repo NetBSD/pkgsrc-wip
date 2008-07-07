@@ -19,7 +19,8 @@ SCRIPTS+=	pkg_update_src_summary pkg_summary4view
 SCRIPTS+=	pkg_update_summary pkg_grep_summary
 SCRIPTS+=	cvs_checksum
 
-MAN=		pkg_cmp_summary.1 pkg_micro_src_summary.1
+MAN=		pkg_cmp_summary.1 pkg_grep_summary.1
+MAN+= 		pkg_micro_src_summary.1
 MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1

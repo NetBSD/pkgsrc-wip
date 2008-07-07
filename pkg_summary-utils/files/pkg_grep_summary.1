@@ -1,0 +1,50 @@
+.\"	$NetBSD: pkg_grep_summary.1,v 1.1 2008/07/07 14:25:26 cheusov Exp $
+.\"
+.\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
+.\" Absolutely no warranty.
+.\"
+.Dd Jan 29, 2008
+.Dt PKG_GREP_SUMMARY 1
+.Sh NAME
+.Nm pkg_grep_summary
+.Nd matching program for pkgsrc packages summary
+.Sh SYNOPSIS
+.Nm
+.Op Ar OPTIONS
+.Sh DESCRIPTION
+.Nm
+outputs a summary information about packages that matches
+the specified condition.
+In other words, pkg_grep_summary is a search tool
+somewhat similar to
+grep
+,
+PKGSRCDIR/pkglocate
+,
+pkg_find
+etc. but it is multifield
+searcher and is fast because it uses summaries instead
+of pkgsrc packages source tree.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl h
+display help message
+.El
+.Sh EXAMPLES
+.Bd -literal
+  pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \\
+        < /usr/pkgsrc/packages/pkg_summary.txt
+  pkg_grep_summary 'PKGPATH' '$2 ~ /^lang\\//' \\
+        < /usr/pkgsrc/packages/pkg_summary.txt
+  pkg_grep_summary 'DEPENDS' '$2 ~ /libX/' \\
+        < /usr/pkgsrc/pkg_src_summary.txt
+  pkg_grep_summary 'COMMENT' 'toupper($2) ~ /DNS/' \\
+        < /usr/pkgsrc/pkg_src_summary.txt
+.Ed
+.Sh SEE ALSO
+.Xr pkg_summary-utils 7
+.Xr pkg_summary 5
+.Sh AUTHOR
+.An Aleksey Cheusov
+.Aq vle@gmx.net

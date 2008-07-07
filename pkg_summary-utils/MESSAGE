@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/07/07 14:25:26 cheusov Exp $
+If you want to build a source summary (pkg_src_summary)
+using several parallel processes or several machines,
+install wip/paexec package. paexec>=0.9.0 is needed.
+===========================================================================

@@ -27,25 +27,22 @@ usage (){
     cat 1>&2 <<EOF
 pkg_grep_summary - output summaries about packages that matches
 the specified condition.
-In other words, pkg_grep_summary is a search tool,
-just like PKGSRCDIR/pkglocate, pkg_find etc. but it is multifield
-searcher and is fast because it uses summaries.
 
-usage: pkg_grep_summary [OPTIONS] <FIELD> <AWK_CONDITION>
+USAGE: pkg_grep_summary [OPTIONS] <FIELD> <AWK_CONDITION>
   <FIELD>         - PKGNAME, PKGPATH, DEPENDS etc.
   <AWK_CONDITION> - boolean expression written in AWK language
 
 OPTIONS:
   -h|--help        display this message
 
-examples:
-  pkg_grep_summary 'PKGNAME' '$2 ~ /judy/' \
+EXAMPLES:
+  pkg_grep_summary 'PKGNAME' '\$2 ~ /judy/' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'PKGPATH' '$2 ~ /^lang\//' \
+  pkg_grep_summary 'PKGPATH' '\$2 ~ /^lang\//' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'DEPENDS' '$2 ~ /libX/' \
+  pkg_grep_summary 'DEPENDS' '\$2 ~ /libX/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
-  pkg_grep_summary 'COMMENT' 'toupper($2) ~ /DNS/' \
+  pkg_grep_summary 'COMMENT' 'toupper(\$2) ~ /DNS/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
 EOF
 }
