@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2007/01/13 22:18:04 shattered Exp $
+$NetBSD: distinfo,v 1.3 2008/07/08 16:17:46 bsadewitz Exp $
 
-SHA1 (help2man-1.33.1.tar.gz) = 7c94663169aa5df5b732d32dafe34e0090ca8f46
-RMD160 (help2man-1.33.1.tar.gz) = 3da10ebaf228d454c249178a24f715286ed803fe
-Size (help2man-1.33.1.tar.gz) = 75293 bytes
-SHA1 (patch-Makefile.in) = b3c399d8ac1ab19ba26a14619cca143a76a51a6c
-SHA1 (patch-hacklocaledir.c) = fc636f5c68f0d1d3ffb088a3960e739209f15053
+SHA1 (help2man-1.36.4.tar.gz) = f3ffd89d50ee158589f2d0ccdc476d2ac3ebff70
+RMD160 (help2man-1.36.4.tar.gz) = 1c2e18f86c2d689dbc4bbc1d85e60a2273308c42
+Size (help2man-1.36.4.tar.gz) = 85630 bytes
+SHA1 (patch-aa) = d285c85af63fe4477203a532814b0d22f3710191
+SHA1 (patch-ab) = 0f37b43ee53dfad50de340082c8b1684fb18b8c5
+SHA1 (patch-ac) = 71ddc4490430f972b3be44049117edfb0d314daa

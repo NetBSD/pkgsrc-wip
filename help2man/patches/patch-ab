@@ -1,7 +1,7 @@
-$NetBSD: patch-hacklocaledir.c,v 1.1.1.1 2004/05/10 15:13:13 arved Exp $
---- hacklocaledir.c.orig	Tue Jul  8 14:23:53 2003
-+++ hacklocaledir.c	Mon May 10 14:03:36 2004
-@@ -40,12 +40,21 @@
+$NetBSD: patch-ab,v 1.1 2008/07/08 16:17:46 bsadewitz Exp $
+--- hacklocaledir.c.orig	2003-07-08 10:23:53.000000000 -0400
++++ hacklocaledir.c
+@@ -40,12 +40,21 @@ int __open(char const *path, int flags, 
      static size_t matchlen;
      char *newpath = 0;
      int r;
