@@ -1,0 +1,2 @@
+
+This package does not build on NetBSD due to portability issues with va_copy.
