@@ -1,0 +1,2 @@
+* Update to 3.35 in order to fix a security bug described at:
+  http://article.gmane.org/gmane.linux.bluez.devel/15809/
