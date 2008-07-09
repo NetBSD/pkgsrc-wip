@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/02 13:36:31 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/09 16:31:03 christtrekker Exp $
 bin/ar65
 bin/ca65
 bin/ca65html
@@ -212,9 +212,6 @@ lib/cc65/tgi/c128-vdc.tgi
 lib/cc65/tgi/c64-hi.tgi
 lib/cc65/tgi/geos-tgi.tgi
 lib/cc65/tgi/lynx-160-102-16.tgi
-packages/All/${PKGNAME}.tgz
-packages/cross/${PKGNAME}.tgz
-packages/lang/${PKGNAME}.tgz
 share/doc/cc65/apple2.cfg
 share/doc/cc65/atari.cfg
 share/doc/cc65/atari.mac
@@ -250,10 +247,6 @@ share/doc/cc65/supervision64.cfg
 share/doc/cc65/supervision.cfg
 share/doc/cc65/vic20.cfg
 @dirrm share/doc/cc65
-@dirrm packages/lang
-@dirrm packages/cross
-@dirrm packages/All
-@dirrm packages
 @dirrm lib/cc65/tgi
 @dirrm lib/cc65/ser
 @dirrm lib/cc65/mou
