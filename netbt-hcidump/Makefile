@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/09 18:47:22 plunky Exp $
 
-DISTNAME=		netbt-hcidump-1.40
+DISTNAME=		netbt-hcidump-1.42
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bluez.sourceforge.net/download/
-DISTFILES=		bluez-hcidump-1.40.tar.gz	\
-			bluez-libs-3.24.tar.gz
+DISTFILES=		bluez-hcidump-1.42.tar.gz	\
+			bluez-libs-3.35.tar.gz
 
 MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://www.bluez.org/
-COMMENT=		Bluetooth packet analyzer
+COMMENT=		Bluetooth packet analyzer (netbt version)
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
 CONFLICTS+=		hcidump-[0-9]* bluez-hcidump-[0-9]*
 
 INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
-WRKSRC=			${WRKDIR}/bluez-hcidump-1.40
-LIBSRC=			${WRKDIR}/bluez-libs-3.24
+WRKSRC=			${WRKDIR}/bluez-hcidump-1.42
+LIBSRC=			${WRKDIR}/bluez-libs-3.35
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hcidump
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -29,7 +29,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 CPPFLAGS+=		-DINET6
 .endif
 
-CPPFLAGS+=	-DVERSION=\""1.40-netbt"\"
+CPPFLAGS+=	-DVERSION=\""1.42-netbt"\"
 
 post-extract:
 	mkdir ${WRKSRC}/bluetooth
