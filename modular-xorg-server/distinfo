@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2008/07/05 23:44:08 bsadewitz Exp $
+$NetBSD: distinfo,v 1.17 2008/07/10 16:17:19 bsadewitz Exp $
 
 SHA1 (Mesa-7.0.3-001) = 32725fd4632d51495253b06786b3f0e743d11dbd
 RMD160 (Mesa-7.0.3-001) = 92b1e1d3eb3932a419c6d1fb9e7b96ef5c32fd1a
@@ -22,6 +22,7 @@ SHA1 (patch-af) = 2a5e199b7c75a6c26c33a5aca00e1744d7023b92
 SHA1 (patch-ag) = 93975b0c5da0534624951ff53d506efe59fb93e9
 SHA1 (patch-ah) = 699c289e2245a8ded47887fdcf5a66446669afb4
 SHA1 (patch-ai) = d8227b90b84b7c04a1814f3090476dbe0bb1f8c4
+SHA1 (patch-aj) = 6cefadeb9fbd731ce6b1c68d987de33c6eb652e6
 SHA1 (patch-ak) = 20b62798fd6f4ea173f827a5e122cf95f4673983
 SHA1 (patch-ma) = 1910d3d6192c88520568203e9e17fff78f8935f6
 SHA1 (patch-mb) = c4540c1b69ec2d6bf238fcc6a59493327d568cc9

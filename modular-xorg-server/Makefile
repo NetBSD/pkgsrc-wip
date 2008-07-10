@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/07/05 23:44:08 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/10 16:17:19 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.4.2.0
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 #MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
@@ -49,6 +50,7 @@ CONFIGURE_ARGS+=	--disable-xprint
 CONFIGURE_ARGS+=	--disable-dmx 
 CONFIGURE_ARGS+=	--disable-xephyr 
 CONFIGURE_ARGS+=	--disable-kdrive 
+CONFIGURE_ARGS+=	--enable-builtin-fonts
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-xorg
 CONFIGURE_ARGS+=	--with-xorgcfg
