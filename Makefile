@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2937 2008/07/03 21:56:55 adrian_p Exp $
+# $Id: Makefile,v 1.2938 2008/07/11 03:09:59 dillo Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -223,6 +223,7 @@ SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
 #SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
+SUBDIR+=	desmume
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
