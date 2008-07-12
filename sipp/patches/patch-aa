@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
+$NetBSD: patch-aa,v 1.5 2008/07/12 15:08:48 gschwarz Exp $
 
---- Makefile.orig	2004-09-20 15:30:03.000000000 +0000
-+++ Makefile
-@@ -28,14 +28,6 @@ OBJ= xp_parser.o scenario.o screen.o cal
- # Include directories
- INCDIR= -I.
+--- Makefile.orig	2008-04-11 14:26:37.000000000 +0200
++++ Makefile	2008-07-12 16:35:34.000000000 +0200
+@@ -29,15 +29,6 @@
+ OBJ= xp_parser.o message.o scenario.o screen.o call.o comp.o sipp.o stat.o \
+      actions.o variables.o infile.o deadcall.o task.o socketowner.o listener.o
  
 -# Libraries directories
 -LIBDIR_linux=
@@ -13,11 +13,12 @@ $NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
 -LIBDIR_tru64=
 -LIBDIR_SunOS=
 -LIBDIR_Cygwin=
+-LIBDIR_Darwin=
 -
  # Archive file created in your home directory when building the archive target
  # ARCHIVE= $(HOME)/$(OUTPUT).tgz
  ARCHIVE= $(OUTPUT).tgz
-@@ -47,99 +39,16 @@ TOCLEAN= sipp_errors.log sipp_messages.l
+@@ -49,102 +40,9 @@
  
  ###################################################################
  # Generic Rules
@@ -32,24 +33,27 @@ $NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
 -SYSTEM_OSF1=tru64
 -SYSTEM_SunOS=SunOS
 -SYSTEM_CYGWIN=Cygwin
+-SYSTEM_Darwin=Darwin
 -SYSTEM=$(SYSTEM_$(OSNAME))
 -
 -# C compiler
--CC_hpux=aCC 
--CC_linux=cc  
+-CC_hpux=aCC
+-CC_linux=gcc  
 -CC_freebsd=cc  
 -CC_tru64=cc  
 -CC_SunOS=gcc
 -CC_Cygwin=cc  
+-CC_Darwin=cc  
 -CC=$(CC_$(SYSTEM))
 -
 -# C++ compiler mapping
 -CPP_hpux=aCC  
--CPP_linux=gcc  
+-CPP_linux=g++  
 -CPP_freebsd=g++  
 -CPP_tru64=cxx  
--CPP_SunOS=gcc
+-CPP_SunOS=g++
 -CPP_Cygwin=g++  
+-CPP_Darwin=g++  
 -CPP=$(CPP_$(SYSTEM))
 -
 -#Model specific flags
@@ -60,25 +64,30 @@ $NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
 -MFLAGS_i586=
 -MFLAGS_i486=
 -MFLAGS_i386=
+-MFLAGS_ppc=
 -MFLAGS=$(MFLAGS_$(MODELNAME))
 -
 -#C Compiler Flags
--CFLAGS_hpux=-D__HPUX
--CFLAGS_linux=-D__LINUX -pthread
+-# supress warning #829 (Implicit conversion of string literal to
+-#'char *' is deprecated) since this is both common and harmless
+-CFLAGS_hpux=-D__HPUX -DPROTOTYPES +W829
+-CFLAGS_linux=-D__LINUX -pthread 
 -CFLAGS_freebsd=-D__LINUX -pthread
 -CFLAGS_tru64=-D__OSF1 -pthread
--CFLAGS_SunOS=-g
--CFLAGS_Cygwin=-D__CYGWIN
--CFLAGS=$(CFLAGS_$(SYSTEM)) -D__3PCC__
+-CFLAGS_SunOS=${DEBUG_FLAGS} -D__SUNOS
+-CFLAGS_Cygwin=-D__CYGWIN -Dsocklen_t=int
+-CFLAGS_Darwin=-D__DARWIN
+-CFLAGS=$(CFLAGS_$(SYSTEM)) $(VERINFO) $(TLS) $(PCAPPLAY) $(EXTRACFLAGS)
 -
 -#C++ Compiler Flags
--CPPFLAGS_hpux=-AA -mt -D__HPUX 
--CPPFLAGS_linux=-D__LINUX -pthread
+-CPPFLAGS_hpux=-AA -mt -D__HPUX -D_INCLUDE_LONGLONG -DNOMACROS +W829  
+-CPPFLAGS_linux=-D__LINUX -pthread 
 -CPPFLAGS_freebsd=-D__LINUX -pthread
 -CPPFLAGS_tru64=-D__OSF1 -pthread
--CPPFLAGS_SunOS=-g
--CPPFLAGS_Cygwin=-D__CYGWIN
--CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) -D__3PCC__
+-CPPFLAGS_SunOS=${DEBUG_FLAGS} -D__SUNOS
+-CPPFLAGS_Cygwin=-D__CYGWIN -Dsocklen_t=int
+-CPPFLAGS_Darwin=-D__DARWIN
+-CPPFLAGS=$(CPPFLAGS_$(SYSTEM)) $(VERINFO) $(TLS) $(PCAPPLAY) $(EXTRACPPFLAGS)
 -
 -#Linker mapping
 -CCLINK_hpux=aCC
@@ -87,53 +96,64 @@ $NetBSD: patch-aa,v 1.4 2006/06/03 18:25:47 gschwarz Exp $
 -CCLINK_tru64=cxx
 -CCLINK_SunOS=gcc
 -CCLINK_Cygwin=g++
+-CCLINK_Darwin=g++
 -CCLINK=$(CCLINK_$(SYSTEM))
 -
- #Linker Flags
+-#Linker Flags
 -LFLAGS_hpux=-AA -mt
 -LFLAGS_linux=
 -LFLAGS_freebsd=
 -LFLAGS_tru64=
--LFLAGS_SunOS=
+-LFLAGS_SunOS=-mt ${DEBUG_FLAGS}
 -LFLAGS_Cygwin=
--LFLAGS=$(LFLAGS_$(SYSTEM))
+-LFLAGS_Darwin=
+-LFLAGS=$(LFLAGS_$(SYSTEM)) $(EXTRALFLAGS)
 -
 -#Link Libraries
--LIBS_linux= -ldl -lpthread -lcurses -lstdc++
--LIBS_hpux= -lcurses
+-LIBS_linux= -ldl -lpthread -lncurses -lstdc++ -lm -L /usr/local/lib -L /usr/lib -L /usr/lib64
+-LIBS_hpux= -lcurses -lpthread -L /opt/openssl/lib -L /usr/local/lib
 -LIBS_tru64= -lcurses -lpthread
--LIBS_freebsd= -lcurses -pthread
--LIBS_SunOS= -lcurses -lpthread -lnsl -lsocket -lstdc++ -ldl
--LIBS_Cygwin= -lcurses -lpthread -lstdc++ 
--LIBS=$(LIBS_$(SYSTEM))
+-LIBS_freebsd= -lcurses -pthread -L /usr/local/lib
+-LIBS_SunOS= -lcurses -lpthread -lnsl -lsocket -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic -lm -ldl -L /usr/local/ssl/lib/
+-LIBS_Cygwin= -lcurses -lpthread -lstdc++ -L /usr/lib/WpdPack/Lib
+-LIBS_Darwin= -lcurses
+-LIBS=$(LIBS_$(SYSTEM)) $(EXTRALIBS)
 +LDFLAGS+=	${PTHREAD_LDFLAGS} ${DL_FLAGS}
 +LIBS.SunOS=	-lnsl -lsocket
 +LIBS+=		-lncurses ${PTHREAD_LIBS} ${LIBS.${OPSYS}} ${DL_LIBS}
  
- # Operating system detection rule
+ # Include directories
+ INCDIR_linux=-I. -I/usr/include/openssl
+@@ -159,8 +57,7 @@
+ -include local.mk
+ 
+ # Building without TLS and authentication (no openssl pre-requisite)
 -all:
--	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m` $(OUTPUT)
+-	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` $(OUTPUT)
 +all: ${OUTPUT}
  
- $(OUTPUT): $(OBJ)
+ # Building with TLS and authentication
+ ossl:
+@@ -186,7 +83,7 @@
+ 	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` OBJ_TLS="auth.o sslinit.o sslthreadsafe.o  milenage.o rijndael.o" TLS_LIBS="-lssl -lcrypto" TLS="-D_USE_OPENSSL -DOPENSSL_NO_KRB5"  OBJ_PCAPPLAY="send_packets.o prepare_pcap.o" PCAPPLAY_LIBS="-lwpcap" PCAPPLAY="-DPCAPPLAY" $(OUTPUT)
+ 
+ $(OUTPUT): $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ)
 -	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
--	$(DEBUG_FLAGS) -o $@ $(OBJ) $(LIBS)
-+	$(CXX) $(LDFLAGS) $(DEBUG_FLAGS) -o $@ $(OBJ) $(LIBS)
++	$(CXX) $(LFLAGS) \
+ 	$(DEBUG_FLAGS) -o $@ $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ) $(LIBS) $(TLS_LIBS) $(PCAPPLAY_LIBS) $(EXTRAENDLIBS)
  
  debug:
- 	DEBUG_FLAGS="-g -pg" ; export DEBUG_FLAGS ; make all
-@@ -163,11 +72,11 @@ archive:
+@@ -217,10 +114,10 @@
  *.o: *.h *.hpp
  
  .C.o:
--	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
-+	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
+-	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
  
  .cpp.o:
--	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
-+	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
+-	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
  
  .c.o:
--	$(CC) $(CFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $*.o $<
-+	$(CC) $(CFLAGS) $(DEBUG_FLAGS) $(INCDIR) -c -o $@ $<
- 
+-	$(CC) $(CFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
++	$(CC) $(CFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
