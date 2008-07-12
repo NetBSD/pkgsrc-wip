@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2008/07/12 18:15:24 gschwarz Exp $
+
+--- weakksa.c.orig	2008-07-12 19:19:57.000000000 +0200
++++ weakksa.c	2008-07-12 19:20:45.000000000 +0200
+@@ -154,13 +154,11 @@
+          (x == (B / 2) + 2 && y == (N - 1) - x) : 0))
+         {
+           for(j = 0; j < samples[B].len; j++)
+-            if(memcmp(samples[B].s[j].iv, iv, IV_SIZE) == 0)
+-              goto fail;
+-
++            if(memcmp(samples[B].s[j].iv, iv, IV_SIZE) != 0)
++	{
+           memcpy(samples[B].s[samples[B].len].iv, iv, IV_SIZE);
+           samples[B].s[samples[B].len++].byte = iv[4] ^ 0xaa;
+-
+-          fail:
++	}
+         }
+       }
+     }

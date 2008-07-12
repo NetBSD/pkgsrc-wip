@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/07/12 18:15:24 gschwarz Exp $
+
+--- wordfile.c.orig	2008-07-12 19:26:33.000000000 +0200
++++ wordfile.c	2008-07-12 19:27:14.000000000 +0200
+@@ -37,6 +37,7 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <signal.h>
+ #include <sys/types.h>
