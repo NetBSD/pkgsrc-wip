@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/12 10:54:43 hoka_adam Exp $
 #
 
 DISTNAME=	vlc-snapshot-${VLC_SNAPSHOT_DATE}
@@ -38,7 +38,6 @@ BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
-CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--with-ffmpeg-zlib
