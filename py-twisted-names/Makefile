@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2007/02/04 19:26:04 milosn Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/12 00:26:11 milosn Exp $
 .include "../../wip/py-twisted-core/version.mk"
 
-NAMES_VERSION=	0.4.0
-DISTNAME=	Twisted-${TWISTED_VERSION}
-PKGNAME=	${PYPKGPREFIX}-twisted-names-${NAMES_VERSION}
+DISTNAME=	TwistedNames-${TWISTED_VERSION}
+PKGNAME=	${PYPKGPREFIX}-twisted-names-${TWISTED_VERSION}
 CATEGORIES=	net python
-MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/2.5/
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Names/8.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://www.twistedmatrix.com/
 COMMENT=	DNS implementation for Twisted
 
-WRKSRC=		${WRKDIR}/Twisted-${TWISTED_VERSION}/TwistedNames-${NAMES_VERSION}
-
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=8.1.0:../../wip/py-twisted-core
 
 PYDISTUTILSPKG=		yes
 
