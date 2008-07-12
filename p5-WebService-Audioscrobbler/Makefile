@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/25 09:20:59 absd Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/12 23:52:22 tonnerre Exp $
 #
 
 DISTNAME=	WebService-Audioscrobbler-0.07
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.audioscrobbler.net/data/webservices/
 COMMENT=	Interface to the Audioscrobbler WebService API (aka Last.FM)
 
 DEPENDS+=	p5-CLASS>=0:../../wip/p5-CLASS
-DEPENDS+=	p5-Class-Data-Accessor>=0:../../devel/p5-Class-Data-Accessor
+DEPENDS+=	p5-Class-Data-Accessor>=0:../../wip/p5-Class-Data-Accessor
 DEPENDS+=	p5-Cache-Cache>=0:../../devel/p5-Cache-Cache
 DEPENDS+=	p5-UNIVERSAL-require>=0:../../devel/p5-UNIVERSAL-require
 

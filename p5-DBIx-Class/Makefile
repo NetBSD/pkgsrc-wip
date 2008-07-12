@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/25 09:20:58 absd Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/12 23:52:22 tonnerre Exp $
 
 DISTNAME=	DBIx-Class-0.07005
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-SQL-Abstract>=1.20:../../databases/p5-SQL-Abstract
 DEPENDS+=	p5-SQL-Abstract-Limit>=0.11:../../databases/p5-SQL-Abstract-Limit
 DEPENDS+=	p5-Class-C3>=0.13:../../devel/p5-Class-C3
 DEPENDS+=	p5-Storable>=0:../../devel/p5-Storable
-DEPENDS+=	p5-Class-Data-Accessor>=0.01:../../devel/p5-Class-Data-Accessor
+DEPENDS+=	p5-Class-Data-Accessor>=0.01:../../wip/p5-Class-Data-Accessor
 DEPENDS+=	p5-Carp-Clan>=0:../../devel/p5-Carp-Clan
 DEPENDS+=	p5-DBI>=1.40:../../databases/p5-DBI
 BUILD_DEPENDS+=	p5-DBD-SQLite>=1.11:../../databases/p5-DBD-SQLite
