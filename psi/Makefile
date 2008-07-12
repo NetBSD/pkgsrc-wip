@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/04/02 18:50:19 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/12 04:53:00 schnoebe Exp $
 
-PSI_VERSION=	0.12-RC2
+PSI_VERSION=	0.12-RC4
 DISTNAME=	psi-${PSI_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
