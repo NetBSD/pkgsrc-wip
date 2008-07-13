@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- Makefile.orig	2008-07-13 11:59:59.000000000 +0200
++++ Makefile	2008-07-13 12:05:28.000000000 +0200
+@@ -1,5 +1,5 @@
+ #Makefile
+-CPP=c++
++#CPP=c++
+ OPT=-O
+ WARN=-Wall -W -Wno-long-long -Wno-unused -ansi
+ CFLAG=$(OPT) $(WARN) -DQT_THREAD_SUPPORT -D_REENTRANT
+@@ -8,8 +8,8 @@
+ MOC=$(QTDIR)/bin/moc
+ INC=-I./ -I$(QTDIR)/include -Istests/ -Ibnf/ -Icert_test
+ 
+-MLIB=$(CPP) $(CFLAG) $(INC) -c
+-MPROG=$(CPP) $(CFLAG) $(INC) *.o stests/*.o bnf/*.o cert_test/*.o $(LIBS)
++MLIB=$(CXX) $(CXXFLAGS) $(INC) -c
++MPROG=$(CXX) $(CXXFLAGS) $(INC) *.o stests/*.o bnf/*.o cert_test/*.o $(LIBS)
+ 
+ OBJS=qsipb_packetview.o sipb_sendrecv_udp.o sipb_addfun.o\
+      sipb_sendrecv_tcp.o sipb_transport.o sipb_ipaddr.o\

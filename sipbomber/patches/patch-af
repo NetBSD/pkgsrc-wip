@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- bnf/Makefile.orig	2008-07-13 12:24:30.000000000 +0200
++++ bnf/Makefile	2008-07-13 12:26:59.000000000 +0200
+@@ -1,5 +1,5 @@
+ #Makefile
+-CPP=c++
++#CPP=c++
+ OPT=-O
+ WARN=-Wall -W -Wno-long-long -Wno-unused -Werror -ansi
+ CFLAG=$(OPT) $(WARN) -DQT_THREAD_SUPPORT -D_REENTRANT
+@@ -8,7 +8,7 @@
+ MOC=$(QTDIR)bin/moc
+ INC=-I./
+ 
+-MLIB=$(CPP) $(CFLAG) $(INC) -c
++MLIB=$(CXX) $(CXXFLAGS) $(INC) -c
+ MPROG=$(CPP) $(CFLAG) $(INC) *.o stests/*.o bnf/*.o $(LIBS)
+ 
+ OBJS=bnf_parsval.o bnf_rule.o bnf_ruleitem.o bnf_ruleparser.o bnf_parser.o
+@@ -18,6 +18,6 @@
+ .cpp.o:
+ 	$(MLIB) $< -o $@
+ bnf_createbr:
+-	$(CPP) $(CFLAG) bnf_createbr.cpp -o bnf_createbr
++	$(CXX) $(CXXFLAGS) bnf_createbr.cpp -o bnf_createbr
+ clean:
+ 	rm -f core a.out *.o *.a bnf_createbr

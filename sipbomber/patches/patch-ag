@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- cert_test/Makefile.orig	2008-07-13 12:28:01.000000000 +0200
++++ cert_test/Makefile	2008-07-13 12:28:44.000000000 +0200
+@@ -1,5 +1,5 @@
+ #Makefile
+-CPP=c++
++#CPP=c++
+ OPT=-O
+ WARN=-Wall -W -Wno-long-long -Wno-unused -ansi
+ CFLAG=$(OPT) $(WARN) -DQT_THREAD_SUPPORT -D_REENTRANT
+@@ -8,7 +8,7 @@
+ MOC=$(QTDIR)/bin/moc
+ INC=-I./ -I$(QTDIR)/include -I../stests/ -I../bnf/ -I../
+ 
+-MLIB=$(CPP) $(CFLAG) $(INC) -c
++MLIB=$(CXX) $(CXXFLAGS) $(INC) -c
+ MPROG=$(CPP) $(CFLAG) $(INC) *.o stests/*.o bnf/*.o $(LIBS)
+ 
+ OBJS=sipbct_pdu.o sipbst_cert.o

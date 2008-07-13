@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- stests/Makefile.orig	2006-09-21 18:06:43.000000000 +0200
++++ stests/Makefile	2008-07-13 12:57:05.000000000 +0200
+@@ -1,5 +1,5 @@
+ #Makefile
+-CPP=c++
++#CPP=c++
+ OPT=-O
+ WARN=-Wall -W -Wno-long-long -Wno-unused -ansi
+ CFLAG=$(OPT) $(WARN) -DQT_THREAD_SUPPORT -D_REENTRANT
+@@ -8,8 +8,8 @@
+ MOC=$(QTDIR)/bin/moc
+ INC=-I../ -I$(QTDIR)/include -I../bnf -I./ -I../cert_test
+ 
+-MLIB=$(CPP) $(CFLAG) $(INC) -c
+-MPROG=$(CPP) $(CFLAG) $(INC) *.o stests/*.o bnf/*.o $(LIBS)
++MLIB=$(CXX) $(CXXFLAGS) $(INC) -c
++MPROG=$(CXX) $(CXXFLAGS) $(INC) *.o stests/*.o bnf/*.o $(LIBS)
+ 
+ OBJS=sipb_stest.o sipbst_sendrecv.o sipbst_garbage.o sipbst_random.o\
+  sipb_stests.o \
+@@ -24,6 +24,6 @@
+ .cpp.o:
+ 	$(MLIB) $< -o $@
+ .c.o:
+-	gcc -c $< -o $@
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+ clean:
+ 	rm -f core a.out *.o *.a sipb_main

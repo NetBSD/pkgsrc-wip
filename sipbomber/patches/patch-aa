@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- sipb_netfun.cpp.orig	2008-07-13 01:21:43.000000000 +0200
++++ sipb_netfun.cpp	2008-07-13 01:22:11.000000000 +0200
+@@ -10,7 +10,6 @@
+ #include <sys/socket.h>
+ #include <sys/poll.h>
+ #include <sys/ioctl.h>
+-#include <linux/sockios.h>
+ #include <errno.h>
+ #include <string.h>
+ #include <string>

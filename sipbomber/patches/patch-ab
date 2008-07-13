@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+
+--- sipb_sendrecv_tcp.cpp.orig	2008-07-13 01:19:33.000000000 +0200
++++ sipb_sendrecv_tcp.cpp	2008-07-13 01:20:15.000000000 +0200
+@@ -10,7 +10,11 @@
+ #include <sys/socket.h>
+ #include <sys/poll.h>
+ #include <sys/ioctl.h>
++#ifdef __linux__
+ #include <linux/sockios.h>
++#else
++#define SIOCINQ FIONREAD
++#endif
+ #include <errno.h>
+ #include <string.h>
+ #include <string>
