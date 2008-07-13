@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.1 2008/03/07 20:37:39 asau Exp $
+$NetBSD: patch-ah,v 1.2 2008/07/13 05:17:37 asau Exp $
 
 CLISP bootstrap from Josh Elsasser, part 4.
 
---- build-order.lisp-expr.orig	Sun Dec  9 06:37:22 2007
-+++ build-order.lisp-expr	Wed Feb 27 14:12:28 2008
-@@ -367,16 +367,12 @@
+--- build-order.lisp-expr.orig	2008-06-04 16:39:38.000000000 +0400
++++ build-order.lisp-expr	2008-07-13 08:40:22.000000000 +0400
+@@ -369,16 +369,12 @@
   ;; defining types
   ("src/compiler/parse-lambda-list")
  
@@ -23,3 +23,12 @@ CLISP bootstrap from Josh Elsasser, part 4.
  
   ;; SB!XC:DEFTYPE is needed in order to compile late-type
   ;; in the host Common Lisp, and in order to run, it needs
+@@ -412,7 +408,7 @@
+  ;; "code/late-type", and SB!XC:TYPEP, defined in "code/cross-type",
+  ;; and SPECIALIZE-ARRAY-TYPE, defined in "compiler/generic/vm-type",
+  ;; and SB!XC:PROCLAIM, defined in "src/compiler/proclaim"
+- ("src/code/defstruct")
++ ("src/code/defstruct" #+clisp :ignore-failure-p)
+  ("src/code/target-defstruct" :not-host)
+ 
+  ;; ALIEN-VALUE has to be defined as a class (done by DEFSTRUCT
