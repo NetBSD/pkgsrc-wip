@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 22:31:41 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/13 12:06:43 tnn2 Exp $
 
-DISTNAME=	xf86-video-ati-6.8.0
-PKGREVISION=	1
+DISTNAME=	xf86-video-ati-6.9.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,18 +25,6 @@ XSERVER_DEPENDS!=	pkg_info -QREQUIRES modular-xorg-server
 .include "../../wip/modular-xorg-server/buildlink3.mk"
 .else
 .include "../../x11/modular-xorg-server/buildlink3.mk"
-.endif
-###
-### XXX "Hey, Xorg, leave our pack alone!"
-###	( to the tune of "Another Brick in the Wall" by Pink Floyd)
-###
-### Please, oh please, override our compiler-provided
-### structure alignment!  We are all blithering idiots!
-### Plus, if it isn't __exactly__ like Linux, it's broken,
-### right?
-.if ${OPSYS} != "Linux" # XXX If I wanted to sink to their level, this
-			#     would not be here.  Alas, I won't.
-BUILDLINK_TRANSFORM+=	rm-optarg:-DFGL_LINUX
 .endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
