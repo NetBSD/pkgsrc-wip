@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/02 18:50:19 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/13 00:50:32 schnoebe Exp $
 bin/psi
 share/doc/psi/COPYING
 share/doc/psi/README
@@ -10,6 +10,7 @@ share/icons/hicolor/48x48/apps/psi.png
 share/icons/hicolor/64x64/apps/psi.png
 share/psi/certs/README
 share/psi/certs/startcom_ca.crt
+share/psi/certs/startcom_ca_new.crt
 share/psi/iconsets/emoticons/default/angry.png
 share/psi/iconsets/emoticons/default/bat.png
 share/psi/iconsets/emoticons/default/beer.png
