@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/07/13 05:17:37 asau Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/13 22:43:30 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.18
@@ -81,5 +81,8 @@ post-build:
 
 do-install:
 	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
+
+do-test:
+	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
 
 .include "../../mk/bsd.pkg.mk"
