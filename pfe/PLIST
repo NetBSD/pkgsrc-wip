@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/28 12:02:45 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/13 05:26:52 asau Exp $
 bin/pfe
 bin/pfe-config
 bin/pfe-config-forth
@@ -141,7 +141,7 @@ lib/pfe-forth/testmodule2.la
 lib/pfe-forth/toolbelt.la
 lib/pfe-forth/zchar.la
 lib/pfe/testmodule1.la
-lib/pkgconfig/pfe.${LOWER_VENDOR}
+lib/pkgconfig/pfe.pc
 man/man1/pfe-config.1
 share/pfe/lib/arrays.4th
 share/pfe/lib/defer-is.4th
