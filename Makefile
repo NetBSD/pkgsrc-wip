@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2939 2008/07/13 12:18:59 leot1990 Exp $
+# $Id: Makefile,v 1.2940 2008/07/14 05:12:27 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1879,7 +1879,6 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xclipboard
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
-SUBDIR+=	xf86-video-ati
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
