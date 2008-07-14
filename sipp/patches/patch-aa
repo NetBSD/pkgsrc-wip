@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/07/12 15:08:48 gschwarz Exp $
+$NetBSD: patch-aa,v 1.6 2008/07/14 22:02:13 gschwarz Exp $
 
 --- Makefile.orig	2008-04-11 14:26:37.000000000 +0200
 +++ Makefile	2008-07-12 16:35:34.000000000 +0200
@@ -148,11 +148,11 @@ $NetBSD: patch-aa,v 1.5 2008/07/12 15:08:48 gschwarz Exp $
  
  .C.o:
 -	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
-+	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
  
  .cpp.o:
 -	$(CPP) $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
-+	$(CXX) $(CPPFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
++	$(CXX) $(CXXFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
  
  .c.o:
 -	$(CC) $(CFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
