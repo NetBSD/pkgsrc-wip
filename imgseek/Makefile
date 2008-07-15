@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/15 07:26:06 thomasklausner Exp $
 #
 
 DISTNAME=		imgSeek-0.8.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.imgseek.net/
 COMMENT=		Photo collection manager and viewer
+
+PYTHON_VERSIONS_ACCEPTED=	24
 
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=		yes
