@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2006/04/25 08:29:52 bubuchka Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/15 17:07:14 bubuchka Exp $
 
 DISTNAME=		sarg-2.0.9
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
-MAINTAINER=		mishka@apk.od.ua
+MAINTAINER=		mishka@NetBSD.org
 HOMEPAGE=		http://sarg.sourceforge.net/sarg.php
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
