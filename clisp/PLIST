@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/18 13:51:47 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/07/15 07:59:37 tnn2 Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -93,6 +93,7 @@ share/locale/ru/LC_MESSAGES/clisplow.mo
 @dirrm share/doc/${PKGNAME}
 @dirrm share/${PKGNAME}/vim
 @dirrm share/${PKGNAME}/emacs
+@dirrm share/${PKGNAME}
 @dirrm lib/clisp/linkkit
 @dirrm lib/clisp/full
 @dirrm lib/clisp/data
