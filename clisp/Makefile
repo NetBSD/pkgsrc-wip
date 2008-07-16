@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2008/07/02 20:42:25 asau Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/16 20:18:00 asau Exp $
 #
 
-DISTNAME=	clisp-2.46
-CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
-#EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		clisp-2.46
+CATEGORIES=		lang
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
+#EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://clisp.cons.org/
-COMMENT=	CLISP, a Common Lisp implementation
+MAINTAINER=		asau@inbox.ru
+HOMEPAGE=		http://clisp.cons.org/
+COMMENT=		CLISP, a Common Lisp implementation
 
 # Sparc64 has assembler code problems, see
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
