@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2942 2008/07/16 04:57:14 phonohawk Exp $
+# $Id: Makefile,v 1.2943 2008/07/16 05:07:17 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -275,6 +275,7 @@ SUBDIR+=	e3
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
+SUBDIR+=	ecb
 SUBDIR+=	eciadsl-usermode
 SUBDIR+=	ecl
 SUBDIR+=	ecore
