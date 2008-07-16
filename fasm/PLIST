@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/16 23:19:45 athaba Exp $
+bin/fasm
