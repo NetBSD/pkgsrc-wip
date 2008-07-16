@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/23 02:42:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/16 13:20:12 obache Exp $
 bin/pygmentize
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,6 +36,9 @@ ${PYSITELIB}/pygments/formatters/bbcode.pyo
 ${PYSITELIB}/pygments/formatters/html.py
 ${PYSITELIB}/pygments/formatters/html.pyc
 ${PYSITELIB}/pygments/formatters/html.pyo
+${PYSITELIB}/pygments/formatters/img.py
+${PYSITELIB}/pygments/formatters/img.pyc
+${PYSITELIB}/pygments/formatters/img.pyo
 ${PYSITELIB}/pygments/formatters/latex.py
 ${PYSITELIB}/pygments/formatters/latex.pyc
 ${PYSITELIB}/pygments/formatters/latex.pyo
@@ -126,6 +129,9 @@ ${PYSITELIB}/pygments/styles/autumn.pyo
 ${PYSITELIB}/pygments/styles/borland.py
 ${PYSITELIB}/pygments/styles/borland.pyc
 ${PYSITELIB}/pygments/styles/borland.pyo
+${PYSITELIB}/pygments/styles/bw.py
+${PYSITELIB}/pygments/styles/bw.pyc
+${PYSITELIB}/pygments/styles/bw.pyo
 ${PYSITELIB}/pygments/styles/colorful.py
 ${PYSITELIB}/pygments/styles/colorful.pyc
 ${PYSITELIB}/pygments/styles/colorful.pyo

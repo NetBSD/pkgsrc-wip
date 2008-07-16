@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/23 02:42:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/16 13:20:12 obache Exp $
 #
 
-DISTNAME=	Pygments-0.9
+DISTNAME=	Pygments-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	textproc python
