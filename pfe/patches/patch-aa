@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2008/07/16 22:09:46 asau Exp $
+
+--- doc/Makefile.in.orig	Mon May 12 03:46:47 2008
++++ doc/Makefile.in	Wed May 28 17:01:04 2008
+@@ -211,7 +211,7 @@
+ # --------------------------------------------------------- NEW DBK STYLE
+ SORRY = "Sorry, the doc build system had been missing xmlg from xmlg.sf.net"
+ pfe_words_OPT = 
+-PYRUN = $(PYTHONFLAGS) python $(PYTHONOPTIONS)
++PYRUN = $(PYTHONFLAGS) $(PYTHON) $(PYTHONOPTIONS)
+ datehead = <hr><table border="0" width="100%"><tr><td> \
+     <a href="mailto:guidod@gmx.de?subject=$(PACKAGE):">guidod@gmx.de</a> \
+     </td><td align="right">
+@@ -552,8 +552,9 @@
+ pfe-manual.docbook : pfe-wordsets.docbook $(DBK) $(DBK_EXTRA)
+ 	sed -e "s|../doc/|$(srcdir)/|" $(srcdir)/doc-index.dbk   \
+ 	> doc-index.docbook
+-	sed -e "s|../doc/|$(srcdir)/|" $(srcdir)/pfe-manual.dbk  \
++	sed -e "s|../doc/|$(srcdir)/|" \
+ 	-e 's|"[^"]*/doc-index.dbk"|"doc-index.docbook"|' \
++	$(srcdir)/pfe-manual.dbk  \
+ 	> pfe-manual.docbook
+ pfe-manual/index.html : pfe-manual.docbook
+ 	- test ! -d pfe-manual  || mkdir pfe-manual; rm pfe-manual/*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/10 07:07:42 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/16 22:09:46 asau Exp $
 
 DISTNAME=	pfe-0.33.69
 CATEGORIES=	lang
@@ -16,4 +16,10 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-regs
 USE_TOOLS+=	perl pkg-config
 
+BUILD_TARGET=	all doc
+INSTALL_TARGET=	install install-doc
+
+BUILD_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto	# documentation
+
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
