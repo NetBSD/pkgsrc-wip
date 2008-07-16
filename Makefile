@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2941 2008/07/14 09:30:40 tnn2 Exp $
+# $Id: Makefile,v 1.2942 2008/07/16 04:57:14 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -168,6 +168,7 @@ SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
+SUBDIR+=	cedet
 SUBDIR+=	cfengine
 SUBDIR+=	chbg
 SUBDIR+=	chicken-current
