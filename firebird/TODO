@@ -1,4 +1,4 @@
-$Id: TODO,v 1.9 2008/05/26 14:21:34 hoka_adam Exp $
+$Id: TODO,v 1.10 2008/07/16 13:57:43 obache Exp $
 
 -----------
 Investigate and fix this:
@@ -27,6 +27,7 @@ be split in "firebird" and "firebird-super".
 
 Update package in order to fix multiple vulnerabilities. Reference:
 http://secunia.com/advisories/28596/
+http://secunia.com/advisories/31064/
 
 	-- kefren@netbsd.org
 
