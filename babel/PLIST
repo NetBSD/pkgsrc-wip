@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 07:53:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/16 13:24:37 obache Exp $
 bin/pybabel
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -64,9 +64,6 @@ ${PYSITELIB}/babel/localedata/bg_BG.dat
 ${PYSITELIB}/babel/localedata/bn.dat
 ${PYSITELIB}/babel/localedata/bn_BD.dat
 ${PYSITELIB}/babel/localedata/bn_IN.dat
-${PYSITELIB}/babel/localedata/bo.dat
-${PYSITELIB}/babel/localedata/bo_CN.dat
-${PYSITELIB}/babel/localedata/bo_IN.dat
 ${PYSITELIB}/babel/localedata/bs.dat
 ${PYSITELIB}/babel/localedata/bs_BA.dat
 ${PYSITELIB}/babel/localedata/byn.dat
@@ -76,11 +73,6 @@ ${PYSITELIB}/babel/localedata/ca_ES.dat
 ${PYSITELIB}/babel/localedata/cch.dat
 ${PYSITELIB}/babel/localedata/cch_NG.dat
 ${PYSITELIB}/babel/localedata/cop.dat
-${PYSITELIB}/babel/localedata/cop_Arab.dat
-${PYSITELIB}/babel/localedata/cop_Arab_EG.dat
-${PYSITELIB}/babel/localedata/cop_Arab_US.dat
-${PYSITELIB}/babel/localedata/cop_EG.dat
-${PYSITELIB}/babel/localedata/cop_US.dat
 ${PYSITELIB}/babel/localedata/cs.dat
 ${PYSITELIB}/babel/localedata/cs_CZ.dat
 ${PYSITELIB}/babel/localedata/cy.dat
@@ -112,6 +104,8 @@ ${PYSITELIB}/babel/localedata/en_BE.dat
 ${PYSITELIB}/babel/localedata/en_BW.dat
 ${PYSITELIB}/babel/localedata/en_BZ.dat
 ${PYSITELIB}/babel/localedata/en_CA.dat
+${PYSITELIB}/babel/localedata/en_Dsrt.dat
+${PYSITELIB}/babel/localedata/en_Dsrt_US.dat
 ${PYSITELIB}/babel/localedata/en_GB.dat
 ${PYSITELIB}/babel/localedata/en_GU.dat
 ${PYSITELIB}/babel/localedata/en_HK.dat
@@ -126,6 +120,7 @@ ${PYSITELIB}/babel/localedata/en_NZ.dat
 ${PYSITELIB}/babel/localedata/en_PH.dat
 ${PYSITELIB}/babel/localedata/en_PK.dat
 ${PYSITELIB}/babel/localedata/en_SG.dat
+${PYSITELIB}/babel/localedata/en_Shaw.dat
 ${PYSITELIB}/babel/localedata/en_TT.dat
 ${PYSITELIB}/babel/localedata/en_UM.dat
 ${PYSITELIB}/babel/localedata/en_US.dat
@@ -165,6 +160,7 @@ ${PYSITELIB}/babel/localedata/fa_IR.dat
 ${PYSITELIB}/babel/localedata/fi.dat
 ${PYSITELIB}/babel/localedata/fi_FI.dat
 ${PYSITELIB}/babel/localedata/fil.dat
+${PYSITELIB}/babel/localedata/fil_PH.dat
 ${PYSITELIB}/babel/localedata/fo.dat
 ${PYSITELIB}/babel/localedata/fo_FO.dat
 ${PYSITELIB}/babel/localedata/fr.dat
@@ -174,6 +170,7 @@ ${PYSITELIB}/babel/localedata/fr_CH.dat
 ${PYSITELIB}/babel/localedata/fr_FR.dat
 ${PYSITELIB}/babel/localedata/fr_LU.dat
 ${PYSITELIB}/babel/localedata/fr_MC.dat
+${PYSITELIB}/babel/localedata/fr_SN.dat
 ${PYSITELIB}/babel/localedata/fur.dat
 ${PYSITELIB}/babel/localedata/fur_IT.dat
 ${PYSITELIB}/babel/localedata/ga.dat
@@ -192,6 +189,7 @@ ${PYSITELIB}/babel/localedata/gv_GB.dat
 ${PYSITELIB}/babel/localedata/ha.dat
 ${PYSITELIB}/babel/localedata/ha_Arab.dat
 ${PYSITELIB}/babel/localedata/ha_Arab_NG.dat
+${PYSITELIB}/babel/localedata/ha_Arab_SD.dat
 ${PYSITELIB}/babel/localedata/ha_GH.dat
 ${PYSITELIB}/babel/localedata/ha_Latn.dat
 ${PYSITELIB}/babel/localedata/ha_Latn_GH.dat
@@ -199,6 +197,7 @@ ${PYSITELIB}/babel/localedata/ha_Latn_NE.dat
 ${PYSITELIB}/babel/localedata/ha_Latn_NG.dat
 ${PYSITELIB}/babel/localedata/ha_NE.dat
 ${PYSITELIB}/babel/localedata/ha_NG.dat
+${PYSITELIB}/babel/localedata/ha_SD.dat
 ${PYSITELIB}/babel/localedata/haw.dat
 ${PYSITELIB}/babel/localedata/haw_US.dat
 ${PYSITELIB}/babel/localedata/he.dat
@@ -219,12 +218,14 @@ ${PYSITELIB}/babel/localedata/ig.dat
 ${PYSITELIB}/babel/localedata/ig_NG.dat
 ${PYSITELIB}/babel/localedata/ii.dat
 ${PYSITELIB}/babel/localedata/ii_CN.dat
+${PYSITELIB}/babel/localedata/in.dat
 ${PYSITELIB}/babel/localedata/is.dat
 ${PYSITELIB}/babel/localedata/is_IS.dat
 ${PYSITELIB}/babel/localedata/it.dat
 ${PYSITELIB}/babel/localedata/it_CH.dat
 ${PYSITELIB}/babel/localedata/it_IT.dat
 ${PYSITELIB}/babel/localedata/iu.dat
+${PYSITELIB}/babel/localedata/iw.dat
 ${PYSITELIB}/babel/localedata/ja.dat
 ${PYSITELIB}/babel/localedata/ja_JP.dat
 ${PYSITELIB}/babel/localedata/ka.dat
@@ -236,8 +237,10 @@ ${PYSITELIB}/babel/localedata/kam_KE.dat
 ${PYSITELIB}/babel/localedata/kcg.dat
 ${PYSITELIB}/babel/localedata/kcg_NG.dat
 ${PYSITELIB}/babel/localedata/kfo.dat
-${PYSITELIB}/babel/localedata/kfo_NG.dat
+${PYSITELIB}/babel/localedata/kfo_CI.dat
 ${PYSITELIB}/babel/localedata/kk.dat
+${PYSITELIB}/babel/localedata/kk_Cyrl.dat
+${PYSITELIB}/babel/localedata/kk_Cyrl_KZ.dat
 ${PYSITELIB}/babel/localedata/kk_KZ.dat
 ${PYSITELIB}/babel/localedata/kl.dat
 ${PYSITELIB}/babel/localedata/kl_GL.dat
@@ -254,14 +257,8 @@ ${PYSITELIB}/babel/localedata/kpe_GN.dat
 ${PYSITELIB}/babel/localedata/kpe_LR.dat
 ${PYSITELIB}/babel/localedata/ku.dat
 ${PYSITELIB}/babel/localedata/ku_Arab.dat
-${PYSITELIB}/babel/localedata/ku_IQ.dat
-${PYSITELIB}/babel/localedata/ku_IR.dat
 ${PYSITELIB}/babel/localedata/ku_Latn.dat
-${PYSITELIB}/babel/localedata/ku_Latn_IQ.dat
-${PYSITELIB}/babel/localedata/ku_Latn_IR.dat
-${PYSITELIB}/babel/localedata/ku_Latn_SY.dat
 ${PYSITELIB}/babel/localedata/ku_Latn_TR.dat
-${PYSITELIB}/babel/localedata/ku_SY.dat
 ${PYSITELIB}/babel/localedata/ku_TR.dat
 ${PYSITELIB}/babel/localedata/kw.dat
 ${PYSITELIB}/babel/localedata/kw_GB.dat
@@ -281,7 +278,13 @@ ${PYSITELIB}/babel/localedata/mk_MK.dat
 ${PYSITELIB}/babel/localedata/ml.dat
 ${PYSITELIB}/babel/localedata/ml_IN.dat
 ${PYSITELIB}/babel/localedata/mn.dat
+${PYSITELIB}/babel/localedata/mn_CN.dat
+${PYSITELIB}/babel/localedata/mn_Cyrl.dat
+${PYSITELIB}/babel/localedata/mn_Cyrl_MN.dat
 ${PYSITELIB}/babel/localedata/mn_MN.dat
+${PYSITELIB}/babel/localedata/mn_Mong.dat
+${PYSITELIB}/babel/localedata/mn_Mong_CN.dat
+${PYSITELIB}/babel/localedata/mo.dat
 ${PYSITELIB}/babel/localedata/mr.dat
 ${PYSITELIB}/babel/localedata/mr_IN.dat
 ${PYSITELIB}/babel/localedata/ms.dat
@@ -294,12 +297,14 @@ ${PYSITELIB}/babel/localedata/my_MM.dat
 ${PYSITELIB}/babel/localedata/nb.dat
 ${PYSITELIB}/babel/localedata/nb_NO.dat
 ${PYSITELIB}/babel/localedata/ne.dat
+${PYSITELIB}/babel/localedata/ne_IN.dat
 ${PYSITELIB}/babel/localedata/ne_NP.dat
 ${PYSITELIB}/babel/localedata/nl.dat
 ${PYSITELIB}/babel/localedata/nl_BE.dat
 ${PYSITELIB}/babel/localedata/nl_NL.dat
 ${PYSITELIB}/babel/localedata/nn.dat
 ${PYSITELIB}/babel/localedata/nn_NO.dat
+${PYSITELIB}/babel/localedata/no.dat
 ${PYSITELIB}/babel/localedata/nr.dat
 ${PYSITELIB}/babel/localedata/nr_ZA.dat
 ${PYSITELIB}/babel/localedata/nso.dat
@@ -326,6 +331,7 @@ ${PYSITELIB}/babel/localedata/pt.dat
 ${PYSITELIB}/babel/localedata/pt_BR.dat
 ${PYSITELIB}/babel/localedata/pt_PT.dat
 ${PYSITELIB}/babel/localedata/ro.dat
+${PYSITELIB}/babel/localedata/ro_MD.dat
 ${PYSITELIB}/babel/localedata/ro_RO.dat
 ${PYSITELIB}/babel/localedata/root.dat
 ${PYSITELIB}/babel/localedata/ru.dat
@@ -342,6 +348,8 @@ ${PYSITELIB}/babel/localedata/sh.dat
 ${PYSITELIB}/babel/localedata/sh_BA.dat
 ${PYSITELIB}/babel/localedata/sh_CS.dat
 ${PYSITELIB}/babel/localedata/sh_YU.dat
+${PYSITELIB}/babel/localedata/si.dat
+${PYSITELIB}/babel/localedata/si_LK.dat
 ${PYSITELIB}/babel/localedata/sid.dat
 ${PYSITELIB}/babel/localedata/sid_ET.dat
 ${PYSITELIB}/babel/localedata/sk.dat
@@ -374,9 +382,10 @@ ${PYSITELIB}/babel/localedata/sr_ME.dat
 ${PYSITELIB}/babel/localedata/sr_RS.dat
 ${PYSITELIB}/babel/localedata/sr_YU.dat
 ${PYSITELIB}/babel/localedata/ss.dat
+${PYSITELIB}/babel/localedata/ss_SZ.dat
 ${PYSITELIB}/babel/localedata/ss_ZA.dat
-${PYSITELIB}/babel/localedata/ssy.dat
 ${PYSITELIB}/babel/localedata/st.dat
+${PYSITELIB}/babel/localedata/st_LS.dat
 ${PYSITELIB}/babel/localedata/st_ZA.dat
 ${PYSITELIB}/babel/localedata/sv.dat
 ${PYSITELIB}/babel/localedata/sv_FI.dat
@@ -391,6 +400,8 @@ ${PYSITELIB}/babel/localedata/ta_IN.dat
 ${PYSITELIB}/babel/localedata/te.dat
 ${PYSITELIB}/babel/localedata/te_IN.dat
 ${PYSITELIB}/babel/localedata/tg.dat
+${PYSITELIB}/babel/localedata/tg_Cyrl.dat
+${PYSITELIB}/babel/localedata/tg_Cyrl_TJ.dat
 ${PYSITELIB}/babel/localedata/tg_TJ.dat
 ${PYSITELIB}/babel/localedata/th.dat
 ${PYSITELIB}/babel/localedata/th_TH.dat
@@ -399,21 +410,24 @@ ${PYSITELIB}/babel/localedata/ti_ER.dat
 ${PYSITELIB}/babel/localedata/ti_ET.dat
 ${PYSITELIB}/babel/localedata/tig.dat
 ${PYSITELIB}/babel/localedata/tig_ER.dat
+${PYSITELIB}/babel/localedata/tl.dat
 ${PYSITELIB}/babel/localedata/tn.dat
 ${PYSITELIB}/babel/localedata/tn_ZA.dat
 ${PYSITELIB}/babel/localedata/to.dat
 ${PYSITELIB}/babel/localedata/to_TO.dat
 ${PYSITELIB}/babel/localedata/tr.dat
 ${PYSITELIB}/babel/localedata/tr_TR.dat
+${PYSITELIB}/babel/localedata/trv.dat
 ${PYSITELIB}/babel/localedata/ts.dat
 ${PYSITELIB}/babel/localedata/ts_ZA.dat
 ${PYSITELIB}/babel/localedata/tt.dat
 ${PYSITELIB}/babel/localedata/tt_RU.dat
 ${PYSITELIB}/babel/localedata/ug.dat
+${PYSITELIB}/babel/localedata/ug_Arab.dat
+${PYSITELIB}/babel/localedata/ug_Arab_CN.dat
+${PYSITELIB}/babel/localedata/ug_CN.dat
 ${PYSITELIB}/babel/localedata/uk.dat
 ${PYSITELIB}/babel/localedata/uk_UA.dat
-${PYSITELIB}/babel/localedata/und.dat
-${PYSITELIB}/babel/localedata/und_ZZ.dat
 ${PYSITELIB}/babel/localedata/ur.dat
 ${PYSITELIB}/babel/localedata/ur_IN.dat
 ${PYSITELIB}/babel/localedata/ur_PK.dat
@@ -433,8 +447,6 @@ ${PYSITELIB}/babel/localedata/vi_VN.dat
 ${PYSITELIB}/babel/localedata/wal.dat
 ${PYSITELIB}/babel/localedata/wal_ET.dat
 ${PYSITELIB}/babel/localedata/wo.dat
-${PYSITELIB}/babel/localedata/wo_Arab.dat
-${PYSITELIB}/babel/localedata/wo_Arab_SN.dat
 ${PYSITELIB}/babel/localedata/wo_Latn.dat
 ${PYSITELIB}/babel/localedata/wo_Latn_SN.dat
 ${PYSITELIB}/babel/localedata/wo_SN.dat
@@ -447,6 +459,8 @@ ${PYSITELIB}/babel/localedata/zh_CN.dat
 ${PYSITELIB}/babel/localedata/zh_HK.dat
 ${PYSITELIB}/babel/localedata/zh_Hans.dat
 ${PYSITELIB}/babel/localedata/zh_Hans_CN.dat
+${PYSITELIB}/babel/localedata/zh_Hans_HK.dat
+${PYSITELIB}/babel/localedata/zh_Hans_MO.dat
 ${PYSITELIB}/babel/localedata/zh_Hans_SG.dat
 ${PYSITELIB}/babel/localedata/zh_Hant.dat
 ${PYSITELIB}/babel/localedata/zh_Hant_HK.dat
@@ -472,6 +486,9 @@ ${PYSITELIB}/babel/messages/extract.pyo
 ${PYSITELIB}/babel/messages/frontend.py
 ${PYSITELIB}/babel/messages/frontend.pyc
 ${PYSITELIB}/babel/messages/frontend.pyo
+${PYSITELIB}/babel/messages/jslexer.py
+${PYSITELIB}/babel/messages/jslexer.pyc
+${PYSITELIB}/babel/messages/jslexer.pyo
 ${PYSITELIB}/babel/messages/mofile.py
 ${PYSITELIB}/babel/messages/mofile.pyc
 ${PYSITELIB}/babel/messages/mofile.pyo
