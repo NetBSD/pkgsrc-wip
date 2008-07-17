@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2947 2008/07/17 14:48:27 phonohawk Exp $
+# $Id: Makefile,v 1.2948 2008/07/17 16:33:49 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1774,6 +1774,7 @@ SUBDIR+=	traceroute-nanog
 SUBDIR+=	trackballs
 SUBDIR+=	trayer
 SUBDIR+=	trayion
+SUBDIR+=	tree
 SUBDIR+=	treetool
 SUBDIR+=	treeview
 SUBDIR+=	tripwire2
