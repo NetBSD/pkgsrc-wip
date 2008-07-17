@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2946 2008/07/17 00:20:20 phonohawk Exp $
+# $Id: Makefile,v 1.2947 2008/07/17 14:48:27 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -411,6 +411,7 @@ SUBDIR+=	gforth-devel
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
+SUBDIR+=	ghc
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	git
