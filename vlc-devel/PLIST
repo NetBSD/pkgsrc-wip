@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/14 23:44:27 hoka_adam Exp $
-bin/cvlc
-${PLIST.qt}bin/qvlc
-bin/rvlc
-bin/vlc
-bin/vlc-config
-${PLIST.qt}lib/vlc/gui/libqt4_plugin.la
+@comment $NetBSD: PLIST,v 1.5 2008/07/17 12:51:32 hoka_adam Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.a
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.so
@@ -17,10 +11,12 @@ ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.so
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.a
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.so
-lib/vlc/demux/liblive555_plugin.a
-lib/vlc/demux/liblive555_plugin.la
-lib/vlc/demux/liblive555_plugin.so
-include/vlc/common.h
+${PLIST.qt}bin/qvlc
+${PLIST.qt}lib/vlc/gui/libqt4_plugin.la
+bin/cvlc
+bin/rvlc
+bin/vlc
+bin/vlc-wrapper
 include/vlc/deprecated.h
 include/vlc/libvlc.h
 include/vlc/libvlc_events.h
@@ -29,23 +25,54 @@ include/vlc/libvlc_structures.h
 include/vlc/libvlc_vlm.h
 include/vlc/mediacontrol.h
 include/vlc/mediacontrol_structures.h
+include/vlc/plugins/vlc_access.h
+include/vlc/plugins/vlc_acl.h
+include/vlc/plugins/vlc_aout.h
 include/vlc/plugins/vlc_arrays.h
+include/vlc/plugins/vlc_bits.h
+include/vlc/plugins/vlc_block.h
+include/vlc/plugins/vlc_block_helper.h
+include/vlc/plugins/vlc_charset.h
+include/vlc/plugins/vlc_codec.h
 include/vlc/plugins/vlc_common.h
 include/vlc/plugins/vlc_config.h
+include/vlc/plugins/vlc_config_cat.h
 include/vlc/plugins/vlc_configuration.h
+include/vlc/plugins/vlc_demux.h
+include/vlc/plugins/vlc_epg.h
+include/vlc/plugins/vlc_es.h
+include/vlc/plugins/vlc_es_out.h
+include/vlc/plugins/vlc_events.h
+include/vlc/plugins/vlc_filter.h
+include/vlc/plugins/vlc_gcrypt.h
+include/vlc/plugins/vlc_httpd.h
+include/vlc/plugins/vlc_image.h
+include/vlc/plugins/vlc_input.h
 include/vlc/plugins/vlc_main.h
+include/vlc/plugins/vlc_md5.h
 include/vlc/plugins/vlc_messages.h
+include/vlc/plugins/vlc_meta.h
 include/vlc/plugins/vlc_modules.h
-include/vlc/plugins/vlc_modules_macros.h
 include/vlc/plugins/vlc_mtime.h
 include/vlc/plugins/vlc_objects.h
+include/vlc/plugins/vlc_playlist.h
+include/vlc/plugins/vlc_plugin.h
+include/vlc/plugins/vlc_rand.h
+include/vlc/plugins/vlc_services_discovery.h
+include/vlc/plugins/vlc_sout.h
+include/vlc/plugins/vlc_stream.h
+include/vlc/plugins/vlc_strings.h
 include/vlc/plugins/vlc_threads.h
-include/vlc/plugins/vlc_threads_funcs.h
+include/vlc/plugins/vlc_url.h
 include/vlc/plugins/vlc_variables.h
+include/vlc/plugins/vlc_vlm.h
+include/vlc/plugins/vlc_vout.h
+include/vlc/plugins/vlc_window.h
+include/vlc/plugins/vlc_xml.h
 include/vlc/vlc.h
-lib/libvlc-control.la
 lib/libvlc.la
-lib/pkgconfig/vlc-control.pc
+lib/libvlccore.la
+lib/pkgconfig/libvlc.pc
 lib/pkgconfig/vlc-plugin.pc
 lib/vlc/access/libaccess_directory_plugin.la
 lib/vlc/access/libaccess_fake_plugin.la
@@ -68,6 +95,7 @@ lib/vlc/access_filter/libaccess_filter_timeshift_plugin.la
 lib/vlc/access_output/libaccess_output_dummy_plugin.la
 lib/vlc/access_output/libaccess_output_file_plugin.la
 lib/vlc/access_output/libaccess_output_http_plugin.la
+lib/vlc/access_output/libaccess_output_rtmp_plugin.la
 lib/vlc/access_output/libaccess_output_udp_plugin.la
 lib/vlc/audio_filter/liba52tofloat32_plugin.la
 lib/vlc/audio_filter/liba52tospdif_plugin.la
@@ -84,6 +112,7 @@ lib/vlc/audio_filter/libmono_plugin.la
 lib/vlc/audio_filter/libmpgatofixed32_plugin.la
 lib/vlc/audio_filter/libnormvol_plugin.la
 lib/vlc/audio_filter/libparam_eq_plugin.la
+lib/vlc/audio_filter/libscaletempo_plugin.la
 lib/vlc/audio_filter/libsimple_channel_mixer_plugin.la
 lib/vlc/audio_filter/libspatializer_plugin.la
 lib/vlc/audio_filter/libtrivial_channel_mixer_plugin.la
@@ -98,6 +127,7 @@ lib/vlc/audio_output/liboss_plugin.la
 lib/vlc/codec/liba52_plugin.la
 lib/vlc/codec/libadpcm_plugin.la
 lib/vlc/codec/libaraw_plugin.la
+lib/vlc/codec/libavcodec_plugin.la
 lib/vlc/codec/libcc_plugin.la
 lib/vlc/codec/libcdg_plugin.la
 lib/vlc/codec/libcinepak_plugin.la
@@ -106,7 +136,6 @@ lib/vlc/codec/libcvdsub_plugin.la
 lib/vlc/codec/libdts_plugin.la
 lib/vlc/codec/libdvbsub_plugin.la
 lib/vlc/codec/libfake_plugin.la
-lib/vlc/codec/libffmpeg_plugin.la
 lib/vlc/codec/libflac_plugin.la
 lib/vlc/codec/liblibmpeg2_plugin.la
 lib/vlc/codec/liblpcm_plugin.la
@@ -128,17 +157,20 @@ lib/vlc/control/libhttp_plugin.la
 lib/vlc/control/libmotion_plugin.la
 lib/vlc/control/librc_plugin.la
 lib/vlc/control/libshowintf_plugin.la
+lib/vlc/control/libsignals_plugin.la
 lib/vlc/control/libtelnet_plugin.la
 lib/vlc/demux/liba52sys_plugin.la
 lib/vlc/demux/libaiff_plugin.la
 lib/vlc/demux/libasf_plugin.la
 lib/vlc/demux/libau_plugin.la
+lib/vlc/demux/libavformat_plugin.la
 lib/vlc/demux/libavi_plugin.la
 lib/vlc/demux/libdemux_cdg_plugin.la
 lib/vlc/demux/libdemuxdump_plugin.la
 lib/vlc/demux/libdtssys_plugin.la
 lib/vlc/demux/libflacsys_plugin.la
 lib/vlc/demux/libh264_plugin.la
+lib/vlc/demux/liblive555_plugin.la
 lib/vlc/demux/libm4a_plugin.la
 lib/vlc/demux/libm4v_plugin.la
 lib/vlc/demux/libmjpeg_plugin.la
@@ -156,6 +188,7 @@ lib/vlc/demux/libpva_plugin.la
 lib/vlc/demux/librawdv_plugin.la
 lib/vlc/demux/librawvid_plugin.la
 lib/vlc/demux/libreal_plugin.la
+lib/vlc/demux/librtp_plugin.la
 lib/vlc/demux/libsmf_plugin.la
 lib/vlc/demux/libsubtitle_plugin.la
 lib/vlc/demux/libts_plugin.la
@@ -180,8 +213,8 @@ lib/vlc/misc/libmemcpy_plugin.la
 lib/vlc/misc/libmemcpymmx_plugin.la
 lib/vlc/misc/libmemcpymmxext_plugin.la
 lib/vlc/misc/libosd_parser_plugin.la
-lib/vlc/misc/libprofile_parser_plugin.la
 lib/vlc/misc/libscreensaver_plugin.la
+lib/vlc/misc/libstats_plugin.la
 lib/vlc/misc/libvod_rtsp_plugin.la
 lib/vlc/misc/libxml_plugin.la
 lib/vlc/misc/libxtag_plugin.la
@@ -215,7 +248,6 @@ lib/vlc/stream_out/libstream_out_mosaic_bridge_plugin.la
 lib/vlc/stream_out/libstream_out_rtp_plugin.la
 lib/vlc/stream_out/libstream_out_standard_plugin.la
 lib/vlc/stream_out/libstream_out_transcode_plugin.la
-lib/vlc/video_chroma/libchroma_chain_plugin.la
 lib/vlc/video_chroma/libgrey_yuv_plugin.la
 lib/vlc/video_chroma/libi420_rgb_mmx_plugin.la
 lib/vlc/video_chroma/libi420_rgb_plugin.la
@@ -233,6 +265,8 @@ lib/vlc/video_filter/libalphamask_plugin.la
 lib/vlc/video_filter/libblend_plugin.la
 lib/vlc/video_filter/libblendbench_plugin.la
 lib/vlc/video_filter/libbluescreen_plugin.la
+lib/vlc/video_filter/libcanvas_plugin.la
+lib/vlc/video_filter/libchain_plugin.la
 lib/vlc/video_filter/libclone_plugin.la
 lib/vlc/video_filter/libcolorthres_plugin.la
 lib/vlc/video_filter/libcrop_plugin.la
@@ -254,8 +288,10 @@ lib/vlc/video_filter/libmotiondetect_plugin.la
 lib/vlc/video_filter/libnoise_plugin.la
 lib/vlc/video_filter/libosdmenu_plugin.la
 lib/vlc/video_filter/libpanoramix_plugin.la
+lib/vlc/video_filter/libpostproc_plugin.la
 lib/vlc/video_filter/libpsychedelic_plugin.la
 lib/vlc/video_filter/libpuzzle_plugin.la
+lib/vlc/video_filter/libremoteosd_plugin.la
 lib/vlc/video_filter/libripple_plugin.la
 lib/vlc/video_filter/librotate_plugin.la
 lib/vlc/video_filter/librss_plugin.la
@@ -263,6 +299,7 @@ lib/vlc/video_filter/librv32_plugin.la
 lib/vlc/video_filter/libscale_plugin.la
 lib/vlc/video_filter/libseamcarving_plugin.la
 lib/vlc/video_filter/libsharpen_plugin.la
+lib/vlc/video_filter/libswscale_plugin.la
 lib/vlc/video_filter/libtransform_plugin.la
 lib/vlc/video_filter/libwall_plugin.la
 lib/vlc/video_filter/libwave_plugin.la
@@ -324,6 +361,7 @@ share/locale/ru/LC_MESSAGES/vlc.mo
 share/locale/sk/LC_MESSAGES/vlc.mo
 share/locale/sl/LC_MESSAGES/vlc.mo
 share/locale/sq/LC_MESSAGES/vlc.mo
+share/locale/sr/LC_MESSAGES/vlc.mo
 share/locale/sv/LC_MESSAGES/vlc.mo
 share/locale/tet/LC_MESSAGES/vlc.mo
 share/locale/th/LC_MESSAGES/vlc.mo
@@ -491,6 +529,9 @@ share/vlc/vlc48x48-christmas.png
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
 @dirrm share/vlc/utils
+@exec ${MKDIR} %D/share/vlc/skins2/fonts
+@dirrm share/vlc/skins2/fonts
+@dirrm share/vlc/skins2
 @dirrm share/vlc/osdmenu/minimal
 @dirrm share/vlc/osdmenu/dvd/volume
 @dirrm share/vlc/osdmenu/dvd/unselect
@@ -502,8 +543,6 @@ share/vlc/vlc48x48.png
 @dirrm share/vlc/osdmenu/default/selected
 @dirrm share/vlc/osdmenu/default
 @dirrm share/vlc/osdmenu
-@dirrm share/vlc/skins2/fonts
-@dirrm share/vlc/skins2
 @dirrm share/vlc/http/requests
 @dirrm share/vlc/http/old/vlm
 @dirrm share/vlc/http/old/admin
@@ -513,6 +552,10 @@ share/vlc/vlc48x48.png
 @dirrm share/vlc/http/dialogs
 @dirrm share/vlc/http
 @dirrm share/vlc
+@dirrm share/locale/tet/LC_MESSAGES
+@dirrm share/locale/my/LC_MESSAGES
+@dirrm share/locale/fur/LC_MESSAGES
+@dirrm share/locale/co/LC_MESSAGES
 @dirrm share/doc/vlc
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/vlc/visualization

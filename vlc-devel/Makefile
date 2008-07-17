@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2008/07/12 10:54:43 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/17 12:51:32 hoka_adam Exp $
 #
 
-DISTNAME=	vlc-snapshot-${VLC_SNAPSHOT_DATE}
+DISTNAME=	vlc-snapshot-${D}
 PKGNAME=	${DISTNAME:S/snapshot/devel/}
-PKGREVISION=	2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://nightlies.videolan.org/build/source/trunk-${VLC_SNAPSHOT_DATE}-${VLC_SNAPSHOT_TIME}/
+MASTER_SITES=	http://nightlies.videolan.org/build/source/trunk-${D}-${T}/
 EXTRACT_SUFX=	.tar.bz2
 
-VLC_SNAPSHOT_DATE=	20080507
-VLC_SNAPSHOT_TIME=	0014
+D=	20080716	# Snapshot date
+T=	0008		# Snapshot time
 
-MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://nightlies.videolan.org/build/source/trunk-20080507-0014/
+MAINTAINER=	ahoka@NetBSD.org
+HOMEPAGE=	http://nightlies.videolan.org/
 COMMENT=	VLC media player development snapshot
 
 CONFLICTS=	vlc-[0-9]* vlc07-[0-9]*
@@ -25,7 +24,7 @@ PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 USE_DIRS+=		xdg-1.4
 
-WRKSRC=			${WRKDIR}/vlc-0.9.0-git
+WRKSRC=			${WRKDIR}/vlc-0.9.0-test3
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -47,9 +46,9 @@ CONFIGURE_ARGS+=	--disable-dca
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-flac
-
 CONFIGURE_ARGS+=	--enable-live555
-CONFIGURE_ARGS+=	--with-live555-tree=${BUILDLINK_PREFIX.liblive}
+
+MAKE_ARGS+=		PKGSRCVERSION=${PKGNAME:Q}
 
 INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/http/images \
@@ -68,6 +67,9 @@ INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/osdmenu/dvd/selection \
 			${PREFIX}/share/vlc/skins2 \
 			${PREFIX}/share/vlc/skins2/fonts
+
+pre-configure:
+	set -e; cd ${WRKSRC}; autoconf
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -103,9 +105,6 @@ PLIST.vcd=		yes
 .if ${X11_TYPE} == "modular"
 CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
