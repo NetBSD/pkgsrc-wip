@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2945 2008/07/17 00:17:41 phonohawk Exp $
+# $Id: Makefile,v 1.2946 2008/07/17 00:20:20 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -927,6 +927,7 @@ SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
 SUBDIR+=	milkytracker
 SUBDIR+=	mime-support
+SUBDIR+=	mic-paren
 SUBDIR+=	min12xxw
 SUBDIR+=	ming
 SUBDIR+=	mingw
