@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2008/07/17 14:45:25 phonohawk Exp $
+
+--- rts/package.conf.in.orig	2007-12-10 16:11:32.000000000 -0200
++++ rts/package.conf.in
+@@ -73,7 +73,7 @@ depends:	 	
+ hugs-options:
+ cc-options:
+ 
+-ld-options:
++ld-options: "-Wl","-R@PREFIX@/lib","-L@PREFIX@/lib",
+ #ifdef LEADING_UNDERSCORE
+            "-u", "_base_GHCziBase_Izh_static_info"
+          , "-u", "_base_GHCziBase_Czh_static_info"
