@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2008/07/06 12:05:52 makoto Exp $
+@comment $NetBSD: PLIST,v 1.59 2008/07/18 08:10:37 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -81,6 +81,7 @@ share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
+share/emacs/${PKGVERSION}/etc/Emacs.clr
 share/emacs/${PKGVERSION}/etc/FTP
 share/emacs/${PKGVERSION}/etc/GNU
 share/emacs/${PKGVERSION}/etc/GNUS-NEWS
@@ -2405,6 +2406,10 @@ share/emacs/${PKGVERSION}/lisp/newcomment.el.gz
 share/emacs/${PKGVERSION}/lisp/newcomment.elc
 share/emacs/${PKGVERSION}/lisp/novice.el.gz
 share/emacs/${PKGVERSION}/lisp/novice.elc
+share/emacs/${PKGVERSION}/lisp/ns-carbon-compat.el.gz
+share/emacs/${PKGVERSION}/lisp/ns-carbon-compat.elc
+share/emacs/${PKGVERSION}/lisp/ns-grabenv.el.gz
+share/emacs/${PKGVERSION}/lisp/ns-grabenv.elc
 share/emacs/${PKGVERSION}/lisp/nxml/TODO
 share/emacs/${PKGVERSION}/lisp/nxml/nxml-enc.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/nxml-enc.elc
@@ -2912,6 +2917,8 @@ share/emacs/${PKGVERSION}/lisp/term/lk201.el
 share/emacs/${PKGVERSION}/lisp/term/mac-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/mac-win.elc
 share/emacs/${PKGVERSION}/lisp/term/news.el
+share/emacs/${PKGVERSION}/lisp/term/ns-win.el.gz
+share/emacs/${PKGVERSION}/lisp/term/ns-win.elc
 share/emacs/${PKGVERSION}/lisp/term/pc-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/pc-win.elc
 share/emacs/${PKGVERSION}/lisp/term/rxvt.el.gz
