@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/07/17 14:45:25 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/18 05:29:43 phonohawk Exp $
 
 DISTNAME=	ghc-6.8.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/6.8.3/
 DISTFILES=	${DISTNAME}-src.tar.bz2 \
@@ -93,7 +94,9 @@ pre-configure:
 pre-build:
 	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
 
+.include "../../audio/openal/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
