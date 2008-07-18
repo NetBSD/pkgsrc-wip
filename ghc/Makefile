@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/18 08:45:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/18 10:11:44 phonohawk Exp $
 
 DISTNAME=	ghc-6.8.3
 PKGREVISION=	3
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--with-ghc=${WRKDIR}/ghc-6.4.2/ghc/compiler/ghc-inplace
 
 pre-configure:
 	cd ${WRKDIR}/ghc-6.4.2 && \
-		./distrib/hc-build --enable-hc-boot-unregisterised
+		${ENV} ${CONFIGURE_ENV} ./distrib/hc-build --enable-hc-boot-unregisterised ${CONFIGURE_ARGS}
 
 .elif ${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "powerpc"
 
@@ -95,6 +95,7 @@ pre-build:
 	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
 
 .include "../../audio/openal/buildlink3.mk"
+.include "../../audio/freealut/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
