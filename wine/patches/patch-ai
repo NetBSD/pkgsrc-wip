@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.3 2008/07/18 06:50:43 asau Exp $
+
+--- include/winternl.h.orig	2005-11-11 09:56:44.000000000 +0100
++++ include/winternl.h
+@@ -22,6 +22,7 @@
+ #define __WINE_WINTERNL_H
+ 
+ #include <windef.h>
++#include <stdarg.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {

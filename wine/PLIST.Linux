@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Linux,v 1.3 2008/07/18 06:50:42 asau Exp $
+bin/wine-pthread
+bin/wine-kthread
+bin/wine-preloader
