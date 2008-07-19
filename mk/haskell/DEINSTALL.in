@@ -1,0 +1,10 @@
+# -*- sh -*-
+# $NetBSD: DEINSTALL.in,v 1.1 2008/07/19 07:50:00 phonohawk Exp $
+#
+DISTNAME="@DISTNAME@"
+
+case ${STAGE} in 
+    POST-DEINSTALL)
+        ghc-pkg unregister ${DISTNAME};
+        ;;
+esac

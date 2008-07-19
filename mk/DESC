@@ -1,4 +1,4 @@
-$Id: DESC,v 1.5 2004/08/27 07:53:04 bubuchka Exp $
+$Id: DESC,v 1.6 2008/07/19 07:50:00 phonohawk Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -18,10 +18,24 @@ win32.pkg.mk	- this is winpkgsrc base makefile; it is a base of all
 		  packages, that are cross-compiled with mingw32. Do not
 		  use it with normal packages by any means.
 
+
 rcd.mk          - this file is intended to determine if build system
 		  have an rc.d framework, or not. In case if there
 		  is no such one, it will be installed from pkgsrc
 		  by dependency.
 
+
 postgresql.mk	- improvement for current postgresql-* packages; should reside
 		  in databases/postgresql/ directory and not mk.
+
+
+haskell.mk - generalised .mk file for Haskell Cabal packages.
+
+           Why:
+           - Cabal packages use their own build system named Cabal, so
+             it needs specialised targets like do-configure, do-build
+             and do-install.
+           - Cabal packages needs to be "registered" after
+             installation, and "unregistered" after
+             uninstallation. Look how wip/cabal/INSTALL handles this:
+             it should really be automated.

@@ -1,0 +1,11 @@
+# -*- sh -*-
+# $NetBSD: INSTALL.in,v 1.1 2008/07/19 07:50:00 phonohawk Exp $
+#
+HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
+HASKELL_PKG_DESCR_FILE="@HASKELL_PKG_DESCR_FILE@"
+
+case ${STAGE} in
+    POST-INSTALL)
+        ${HASKELL_PKG_BIN} register ${HASKELL_PKG_DESCR_FILE};
+        ;;
+esac
