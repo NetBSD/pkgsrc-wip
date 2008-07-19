@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/02 14:01:47 pmatias Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/19 08:44:49 phonohawk Exp $
 
 DISTNAME=		darcs-2.0.0rc1
 CATEGORIES=		devel scm
@@ -19,3 +19,6 @@ GNU_CONFIGURE=		yes
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# To avoid Darwin problem
+CPP_PRECOMP_FLAGS=
