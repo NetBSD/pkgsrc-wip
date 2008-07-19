@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2951 2008/07/19 08:44:49 phonohawk Exp $
+# $Id: Makefile,v 1.2952 2008/07/19 08:58:12 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -8,6 +8,7 @@ SUBDIR+=	FileManip
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
+SUBDIR+=	HsHyperEstraier
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	MyServer
