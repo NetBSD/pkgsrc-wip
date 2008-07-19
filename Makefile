@@ -1,9 +1,10 @@
-# $Id: Makefile,v 1.2948 2008/07/17 16:33:49 phonohawk Exp $
+# $Id: Makefile,v 1.2949 2008/07/19 07:55:28 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	Chinput
+SUBDIR+=	FileManip
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
