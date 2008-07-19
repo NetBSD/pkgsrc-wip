@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:32 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/19 21:53:41 athaba Exp $
 #
 
-DISTNAME=		buildbot-0.3.5
+DISTNAME=		buildbot-0.7.7
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
-MASTER_SITES=		http://cesnet.dl.sourceforge.net/sourceforge/buildbot/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=buildbot/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://buildbot.sourceforge.net/

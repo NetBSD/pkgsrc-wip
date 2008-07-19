@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/08 05:26:20 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2008/07/19 21:53:41 athaba Exp $
 
-SHA1 (buildbot-0.3.5.tar.gz) = bfc03c597d786264c81ed50ef063e3f4e0fac792
-Size (buildbot-0.3.5.tar.gz) = 217357 bytes
+SHA1 (buildbot-0.7.7.tar.gz) = 47201c3e0d98f7b4a2bc5a4d959ebdc1be0634d7
+RMD160 (buildbot-0.7.7.tar.gz) = 4ff3fa7e9b3fef26c85f716de231e5241768a7a6
+Size (buildbot-0.7.7.tar.gz) = 1109613 bytes
