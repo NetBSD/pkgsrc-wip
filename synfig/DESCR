@@ -1,0 +1,5 @@
+synfig is a vector based 2D animation renderer. It is designed to be
+capable of producing feature-film quality animation.
+
+This package contains the command-line renderer, the GUI animation
+editor is in synfigstudio.
