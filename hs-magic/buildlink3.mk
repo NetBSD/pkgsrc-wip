@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/20 08:08:08 phonohawk Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+HS_MAGIC_BUILDLINK3_MK:=	${HS_MAGIC_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	hs-magic
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-magic}
+BUILDLINK_PACKAGES+=	hs-magic
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-magic
+
+.if ${HS_MAGIC_BUILDLINK3_MK} == "+"
+BUILDLINK_DEPMETHOD.hs-magic?=	build
+BUILDLINK_API_DEPENDS.hs-magic+=	hs-magic>=1.0.7
+BUILDLINK_PKGSRCDIR.hs-magic?=	../../wip/hs-magic
+.endif	# HS_MAGIC_BUILDLINK3_MK
+
+.include "../../sysutils/file/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

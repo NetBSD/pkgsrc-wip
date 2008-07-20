@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 08:08:08 phonohawk Exp $
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/HSmagic-${PKGVERSION}.o
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/Data.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/Init.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/Operations.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/Types.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/TypesLL.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic/Utils.hi
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/libHSmagic-${PKGVERSION}.a
+lib/magic-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/magic-${PKGVERSION}/COPYING
+@dirrm share/doc/magic-${PKGVERSION}
+@dirrm lib/magic-${PKGVERSION}/${HASKELL_VERSION}/Magic
+@dirrm lib/magic-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/magic-${PKGVERSION}
