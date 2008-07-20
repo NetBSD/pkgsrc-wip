@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/20 15:43:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/20 18:20:24 phonohawk Exp $
 #
 
 DISTNAME=	synfig-0.61.08
@@ -13,12 +13,12 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=			pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	synfig.pc.in
 
 .include "options.mk"
 
-.include "../../devel/libltdl/convenience.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
