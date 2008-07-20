@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/20 06:51:10 phonohawk Exp $
+
+SHA1 (curl-1.3.2.1.tar.gz) = 6e7af4c479ea739168f8fdbbd7503edbf9ba0639
+RMD160 (curl-1.3.2.1.tar.gz) = c29a59bc528cd9f1958d1ee93bc4e920248b4b62
+Size (curl-1.3.2.1.tar.gz) = 43661 bytes

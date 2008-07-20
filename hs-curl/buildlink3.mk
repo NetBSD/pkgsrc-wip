@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/20 06:51:10 phonohawk Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+HS_CURL_BUILDLINK3_MK:=	${HS_CURL_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	hs-curl
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-curl}
+BUILDLINK_PACKAGES+=	hs-curl
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-curl
+
+.if ${HS_CURL_BUILDLINK3_MK} == "+"
+BUILDLINK_DEPMETHOD.hs-curl?=	build
+BUILDLINK_API_DEPENDS.hs-curl+=	hs-curl>=1.3.2.1
+BUILDLINK_PKGSRCDIR.hs-curl?=	../../wip/hs-curl
+.endif	# HS_CURL_BUILDLINK3_MK
+
+.include "../../www/curl/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

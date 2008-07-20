@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 06:51:10 phonohawk Exp $
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/HScurl-${PKGVERSION}.o
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Code.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Debug.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Easy.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Info.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Opts.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Post.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl/Types.hi
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/libHScurl-${PKGVERSION}.a
+lib/curl-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/curl-${PKGVERSION}/LICENSE
+@dirrm share/doc/curl-${PKGVERSION}
+@dirrm lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network/Curl
+@dirrm lib/curl-${PKGVERSION}/${HASKELL_VERSION}/Network
+@dirrm lib/curl-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/curl-${PKGVERSION}
