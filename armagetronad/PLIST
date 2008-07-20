@@ -1,5 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/03 22:23:02 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/20 13:39:22 hoka_adam Exp $
 bin/armagetronad
+etc/games/armagetronad/aiplayers.cfg
+etc/games/armagetronad/default.cfg
+etc/games/armagetronad/examples/breakfast_in_hell.cfg
+etc/games/armagetronad/examples/cvs_test/fortress_complete.cfg
+etc/games/armagetronad/examples/cvs_test/fortress_physics.cfg
+etc/games/armagetronad/examples/cvs_test/fortress_politics.cfg
+etc/games/armagetronad/examples/cvs_test/fortress_scoring.cfg
+etc/games/armagetronad/examples/cvs_test/sumo_complete.cfg
+etc/games/armagetronad/examples/death_zone.cfg
+etc/games/armagetronad/examples/fortress_soccer.cfg
+etc/games/armagetronad/examples/single_use_turbo.cfg
+etc/games/armagetronad/master.srv
+etc/games/armagetronad/rc.config
+etc/games/armagetronad/settings.cfg
+etc/games/armagetronad/settings_dedicated.cfg
+etc/games/armagetronad/settings_visual.cfg
 share/doc/games/armagetronad/html/bugs.html
 share/doc/games/armagetronad/html/changelog.html
 share/doc/games/armagetronad/html/commands.html
