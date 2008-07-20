@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2957 2008/07/20 06:52:02 phonohawk Exp $
+# $Id: Makefile,v 1.2958 2008/07/20 07:01:39 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -660,6 +660,7 @@ SUBDIR+=	hunspell-nl_NL
 SUBDIR+=	hunspell-ny_MW
 SUBDIR+=	hunspell-ru_RU
 SUBDIR+=	hunspell-sv_SE
+SUBDIR+=	hxt
 SUBDIR+=	hydrogen-current
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
