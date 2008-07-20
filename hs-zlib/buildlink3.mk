@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/20 07:11:57 phonohawk Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+HS_ZLIB_BUILDLINK3_MK:=	${HS_ZLIB_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	hs-zlib
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-zlib}
+BUILDLINK_PACKAGES+=	hs-zlib
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-zlib
+
+.if ${HS_ZLIB_BUILDLINK3_MK} == "+"
+BUILDLINK_DEPMETHOD.hs-zlib?=	build
+BUILDLINK_API_DEPENDS.hs-zlib+=	hs-zlib>=0.4.0.4
+BUILDLINK_PKGSRCDIR.hs-zlib?=	../../wip/hs-zlib
+.endif	# HS_ZLIB_BUILDLINK3_MK
+
+.include "../../devel/zlib/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
