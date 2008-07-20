@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2959 2008/07/20 07:12:39 phonohawk Exp $
+# $Id: Makefile,v 1.2960 2008/07/20 07:50:22 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -13,6 +13,7 @@ SUBDIR+=	HsOpenSSL
 SUBDIR+=	HsSVN
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
+SUBDIR+=	Lucu
 SUBDIR+=	MyServer
 SUBDIR+=	OdfConverter
 SUBDIR+=	OpenGLUT
