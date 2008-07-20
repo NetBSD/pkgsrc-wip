@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 13:59:43 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/20 10:24:22 tnn2 Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -25,7 +25,7 @@ EMUL_MODULES.linux=	fontconfig glx gtk2
 
 NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
 
-GE_VERSION=		4.3.7204.836
+GE_VERSION=		4.3.7284.3916
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-installer
 DIST_SUBDIR=		${PKGNAME_NOREV}
