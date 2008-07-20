@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 06:12:51 phonohawk Exp $
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base16.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base32.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base32Hex.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base64.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base64Url.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base85.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/DataEncoding.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Uu.hi
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/HSdataenc-${PKGVERSION}.o
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/libHSdataenc-${PKGVERSION}.a
+lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/dataenc-${PKGVERSION}/COPYING.LESSER
+@dirrm share/doc/dataenc-${PKGVERSION}
+@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary
+@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec
+@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/dataenc-${PKGVERSION}

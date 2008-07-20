@@ -1,0 +1,2 @@
+Data encoding library currently providing Uuencode, Base64, Base64Url,
+Base32, Base32Hex, Base16, and Base85.
