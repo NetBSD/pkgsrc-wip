@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 05:58:41 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Config.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Error.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem/DirEntry.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem/PathChange.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem/Revision.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem/Root.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem/Transaction.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Hash.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Pool.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Repository.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Stream.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Stream/Pipe.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/String.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Types.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/include/HsSVN.h
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/COPYING
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/include
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Stream
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
