@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 06:27:40 phonohawk Exp $
+bin/tagsoup
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/Download.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Entity.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Match.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Parser.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Render.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Tree.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup/Type.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML/TagSoup
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/HTML
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
