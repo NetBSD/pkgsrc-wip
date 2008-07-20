@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.1 2008/07/19 07:50:00 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.2 2008/07/20 05:56:00 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -129,7 +129,8 @@ _CABAL_SETUP_SCRIPT=	Setup.*hs
 # Define configure target.
 do-configure:
 	cd ${WRKSRC} && \
-		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} configure ${CONFIGURE_ARGS}
+		${SETENV} ${CONFIGURE_ENV} \
+			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} configure ${CONFIGURE_ARGS}
 
 # Define build target.
 do-build:
