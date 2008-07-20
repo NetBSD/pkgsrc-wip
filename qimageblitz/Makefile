@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/20 23:15:42 absd Exp $
 
 DISTNAME=	qimageblitz-${BLITZ_SNAP_VERSION}
 CATEGORIES=	x11
@@ -14,6 +14,8 @@ SVN_TAG=		{${BLITZ_TAG}}
 SVN_ROOT.qimageblitz=    svn://anonsvn.kde.org/home/kde/trunk/kdesupport/qimageblitz/
 SVN_MODULE.qimageblitz=  qimageblitz
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/mk/svn-package.mk"
 
@@ -27,7 +29,6 @@ BUILD_MAKE_FLAGS+= VERBOSE=1
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
