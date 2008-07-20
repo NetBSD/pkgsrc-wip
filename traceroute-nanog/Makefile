@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/19 15:46:55 gschwarz Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/20 21:44:59 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
@@ -36,8 +36,10 @@ CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
 .endif
 .endif
+
 .if ${OPSYS} == "Linux"
 TRN_EXTRALIBS+=	-lresolv
+CPPFLAGS+=	-DSTRING
 .endif
 
 .if ${OPSYS} == "Darwin"
