@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2008/07/10 22:48:20 athaba Exp $
+# $NetBSD: Makefile,v 1.26 2008/07/20 17:48:40 athaba Exp $
 #
 
-DISTNAME=		tor-0.2.0.29-rc
-PKGNAME=		${DISTNAME:S/-rc//}
+DISTNAME=		tor-0.2.0.30
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
 MAINTAINER=		athaba@inode.at
 HOMEPAGE=		http://tor.eff.org/
-COMMENT=		Anonymizing overlay network for TCP (pre-release)
+COMMENT=		Anonymizing overlay network for TCP
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,7 +60,7 @@ post-install:
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
-	${RMDIR} ${PREFIX}/etc/tor/tor
+	-${RMDIR} ${PREFIX}/etc/tor/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 # XXX the pkgsrc libevent builtin.mk does not detect the version of a builtin
