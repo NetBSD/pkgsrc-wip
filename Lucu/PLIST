@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 07:49:50 phonohawk Exp $
+bin/lucu-implant-file
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Abortion.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Authorization.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Chunk.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Config.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/ContentCoding.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/DefaultPage.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/ETag.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Format.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Headers.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/HttpVersion.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Httpd.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Interaction.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/MIMEType.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/MIMEType/DefaultExtensionMap.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/MIMEType/Guess.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/MultipartForm.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Parser.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Parser/Http.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Postprocess.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Preprocess.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/RFC1123DateTime.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Request.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/RequestReader.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Resource.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Resource/Tree.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Response.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/ResponseWriter.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/StaticFile.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/COPYING
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Resource
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/Parser
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu/MIMEType
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP/Lucu
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/HTTP
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
