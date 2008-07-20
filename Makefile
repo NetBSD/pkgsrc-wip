@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2955 2008/07/20 06:14:27 phonohawk Exp $
+# $Id: Makefile,v 1.2956 2008/07/20 06:28:34 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1729,6 +1729,7 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
+SUBDIR+=	tagsoup
 SUBDIR+=	tagtool
 SUBDIR+=	talksoup
 SUBDIR+=	taskbar
