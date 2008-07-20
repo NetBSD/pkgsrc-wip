@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/20 13:55:36 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/07/20 15:43:34 phonohawk Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SYNFIG_BUILDLINK3_MK:=	${SYNFIG_BUILDLINK3_MK}+
@@ -16,6 +16,9 @@ BUILDLINK_API_DEPENDS.synfig+=	synfig>=0.61.08
 BUILDLINK_PKGSRCDIR.synfig?=	../../wip/synfig
 .endif	# SYNFIG_BUILDLINK3_MK
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../textproc/libxml++/buildlink3.mk"
 .include "../../wip/ETL/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
