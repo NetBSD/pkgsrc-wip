@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/06 09:23:55 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/20 23:34:44 absd Exp $
 
 DISTNAME=	Catalyst-Plugin-ConfigLoader-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Load Catalyst config from YAML file
 PERL5_REQD+=	5.8.0
 
 DEPENDS+=	p5-Catalyst>=2.99:../../wip/p5-Catalyst
-DEPENDS+=	p5-Config-Any>=0.04:../../wip/p5-Config-Any
+DEPENDS+=	p5-Config-Any>=0.04:../../devel/p5-Config-Any
 BUILD_DEPENDS+=	p5-Module-Build>=0.2:../../devel/p5-Module-Build
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/ConfigLoader/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/24 20:43:54 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/20 23:34:43 absd Exp $
 
 DISTNAME=	alphamail-1.0.44
 PKGREVISION=	1
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Apache-Session>=1.6:../../www/p5-Apache-Session
 DEPENDS+=	p5-MIME-tools>=5.4:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MIME-Types>=1.16:../../mail/p5-MIME-Types
 DEPENDS+=	p5-HTML-Parser>=3.45:../../www/p5-HTML-Parser
-DEPENDS+=	p5-Log-Log4perl>=0.47:../../wip/p5-Log-Log4perl
+DEPENDS+=	p5-Log-Log4perl>=0.47:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-Unicode-String>=2.0:../../converters/p5-Unicode-String
 DEPENDS+=	p5-Unicode-Collate>=0.52:../../wip/p5-Unicode-Collate
 DEPENDS+=	p5-Crypt-CBC>=2.14:../../security/p5-Crypt-CBC

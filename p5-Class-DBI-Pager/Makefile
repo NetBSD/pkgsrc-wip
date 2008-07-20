@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/27 03:18:02 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/20 23:34:44 absd Exp $
 #
 
 DISTNAME=	Class-DBI-Pager-0.08
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/
 COMMENT=	Class::DBI::Pager - Pager utility for Class::DBI
 
 DEPENDS+=	p5-Class-DBI>=0.9:../../databases/p5-Class-DBI
-DEPENDS+=	p5-Data-Page>=0.13:../../wip/p5-Data-Page
+DEPENDS+=	p5-Data-Page>=0.13:../../devel/p5-Data-Page
 DEPENDS+=	p5-Exporter-Lite>=0.01:../../wip/p5-Exporter-Lite
 
 PERL5_PACKLIST=	auto/Class/DBI/Pager/.packlist

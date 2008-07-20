@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:50 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/20 23:34:44 absd Exp $
 
 DISTNAME=	Class-DBI-Sweet-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-DBI-Sweet/
 COMMENT=	Extra sweet features for Class::DBI
 
 DEPENDS+=	p5-Class-DBI>=0.96:../../databases/p5-Class-DBI
-DEPENDS+=	p5-Data-Page>=0:../../wip/p5-Data-Page
+DEPENDS+=	p5-Data-Page>=0:../../devel/p5-Data-Page
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-SQL-Abstract>=1.17:../../databases/p5-SQL-Abstract

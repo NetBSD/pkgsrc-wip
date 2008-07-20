@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/25 09:20:57 absd Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/20 23:34:43 absd Exp $
 
 PKGVERSION=	5.7011
 DISTNAME=	Catalyst-Runtime-${PKGVERSION}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
-DEPENDS+=	p5-Data-Visitor>=0.02:../../wip/p5-Data-Visitor
+DEPENDS+=	p5-Data-Visitor>=0.02:../../devel/p5-Data-Visitor
 DEPENDS+=	{perl>=5.4.0,p5-CGI>=3.06}:../../www/p5-CGI
 DEPENDS+=	p5-File-Modified>=0:../../devel/p5-File-Modified
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
