@@ -28,7 +28,7 @@ Suggested package updates
 	o globulation2-0.9.3
 	o gnokii-0.6.26
 	o gnome-commander-1.2.6
-	o gnunet-0.8.0
+	o gnunet-0.8.0a
 	o grass-6.2.3
 	o grisbi-0.5.8
 	o gtypist-2.8.1
@@ -38,6 +38,7 @@ Suggested package updates
 	o kino-1.0.0
 	o libgksu-2.0.4
 	o libmtp-0.2.6.1
+	o libxcb-1.1.90.1
 	o linphone-2.1.1
 	o lives-0.9.9.1
 	o llvm-2.2
@@ -63,7 +64,8 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.18.0
-	o sdlmess-0.125
+	o sdlmame-0.126
+	o sdlmess-0.126
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o siege-2.67
@@ -83,6 +85,7 @@ Suggested package updates
 	o uade-2.11
 	o uqm-0.6.0
 	o xaralx-bin-0.7.1692
+	o xcb-proto-1.2
 	o xinetd-2.3.14
 	o zinf-2.2.5
 
