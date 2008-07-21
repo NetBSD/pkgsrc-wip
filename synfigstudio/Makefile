@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/21 01:05:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/21 03:00:34 phonohawk Exp $
 #
 
 DISTNAME=	synfigstudio-0.61.08
@@ -19,6 +19,10 @@ USE_TOOLS+=			gmake
 USE_DIRS+=			xdg-1.4
 
 GCONF2_SCHEMAS+=	synfigstudio-thumbnailer.schemas
+
+USE_TOOLS+=	automake
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libsigc++/buildlink3.mk"

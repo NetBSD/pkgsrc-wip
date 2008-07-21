@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/21 01:05:11 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2008/07/21 03:00:34 phonohawk Exp $
 
 SHA1 (synfigstudio-0.61.08.tar.gz) = bbf5e9d5923804ef514a81444fce09ca4d1006f3
 RMD160 (synfigstudio-0.61.08.tar.gz) = 954fa1050dd20c0f72aed1914528bbdfb4ba53d6
 Size (synfigstudio-0.61.08.tar.gz) = 1204766 bytes
+SHA1 (patch-aa) = d427710fdaf5db9acf2870df46fe491b30eb339b
+SHA1 (patch-ab) = ea82744926f88bdef7b2d902ed69d4d7d23936eb
