@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/25 09:20:57 absd Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/21 02:39:55 ficovh Exp $
 #
 
 DISTNAME=	Class-DBI-Loader-Relationship-1.2
@@ -10,7 +10,7 @@ MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SI/SIMON/
 COMMENT=	Easier relationship specification in CDBI::L
 
-DEPENDS+=	p5-Class-DBI-Loader>=0:../../devel/p5-Class-DBI-Loader
+DEPENDS+=	p5-Class-DBI-Loader>=0:../p5-Class-DBI-Loader
 DEPENDS+=	p5-Lingua-EN-Inflect-Number>=1:../../textproc/p5-Lingua-EN-Inflect-Number
 
 PERL5_PACKLIST=	auto/Class/DBI/Loader/Relationship/.packlist
