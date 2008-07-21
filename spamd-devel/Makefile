@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/09 05:05:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/21 12:01:30 tnn2 Exp $
 
 DISTNAME=		spamd-20070531
 PKGREVISION=		1
@@ -71,5 +71,5 @@ do-install:
 #	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamlogd/spamlogd ${PREFIX}/libexec
 	${INSTALL_DATA} ${WRKSRC}/etc/mail/spamd.conf ${PREFIX}/share/examples/spamd
 
-.include "../../security/pflkm/buildlink3.mk"
+.include "../../mk/pf.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
