@@ -1,70 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2007/09/17 19:58:42 cheusov Exp $
+$NetBSD: patch-aa,v 1.4 2008/07/22 17:04:03 cheusov Exp $
 
---- makefile.orig	2006-07-26 00:25:55.000000000 +0300
+--- makefile.orig	2008-05-25 17:51:49.000000000 +0300
 +++ makefile
-@@ -22,15 +22,15 @@
- # THIS SOFTWARE.
- # ****************************************************************/
+@@ -52,7 +52,7 @@ SHIP = README FIXES $(SOURCE) ytab[ch].b
+ 	vcvars32.bat buildwin.bat awk.1
  
--CFLAGS = -g
--CFLAGS = -O2
--CFLAGS =
--
--CC = gcc -Wall -g -Wwrite-strings
--CC = gcc -Wall -g
--CC = /opt/SUNWspro/bin/cc
--CC = /opt/pure/purify/purify cc
--CC = cc
-+#CFLAGS = -g
-+#CFLAGS = -O2
-+#CFLAGS =
-+
-+#CC = gcc -Wall -g -Wwrite-strings
-+#CC = gcc -Wall -g
-+#CC = /opt/SUNWspro/bin/cc
-+#CC = /opt/pure/purify/purify cc
-+#CC = cc
- 
- YACC = bison -y
- YACC = yacc
-@@ -38,7 +38,7 @@ YFLAGS = -d
- 
- OFILES = b.o main.o parse.o proctab.o tran.o lib.o run.o lex.o
- 
--SOURCE = awk.h ytab.c ytab.h proto.h awkgram.y lex.c b.c main.c \
-+SOURCE = awk.h awkgram.c awkgram.h proto.h awkgram.y lex.c b.c main.c \
- 	maketab.c parse.c lib.c run.c tran.c proctab.c missing95.c
- 
- LISTING = awk.h proto.h awkgram.y lex.c b.c main.c maketab.c parse.c \
-@@ -47,22 +47,22 @@ LISTING = awk.h proto.h awkgram.y lex.c 
- SHIP = README FIXES $(SOURCE) ytab[ch].bak makefile makefile.win \
- 	vcvars32.bat buildwin.bat mac.code awk.1
- 
--a.out:	ytab.o $(OFILES)
+ a.out:	ytab.o $(OFILES)
 -	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC)  -lm
-+a.out:	awkgram.o $(OFILES)
-+	$(CC) $(CFLAGS) awkgram.o $(OFILES) $(ALLOC) $(LDFLAGS) $(LIBS) -lm
++	$(CC) $(CFLAGS) ytab.o $(OFILES) $(ALLOC) -lm $(LDFLAGS) $(LIBS)
  
--$(OFILES):	awk.h ytab.h proto.h
-+$(OFILES):	awk.h awkgram.h proto.h
+ $(OFILES):	awk.h ytab.h proto.h
  
--ytab.o:	awk.h proto.h awkgram.y
-+awkgram.o:	awk.h proto.h awkgram.y
- 	$(YACC) $(YFLAGS) awkgram.y
--	mv y.tab.c ytab.c
--	mv y.tab.h ytab.h
--	$(CC) $(CFLAGS) -c ytab.c
-+	mv y.tab.c awkgram.c
-+	mv y.tab.h awkgram.h
-+	$(CC) $(CFLAGS) -c awkgram.c
- 
- proctab.c:	maketab
- 	./maketab >proctab.c
- 
--maketab:	ytab.h maketab.c
--	$(CC) $(CFLAGS) maketab.c -o maketab
-+maketab:	awkgram.h maketab.c
-+	$(CC) $(CFLAGS) maketab.c -o maketab $(LDFLAGS)
- 
- bundle:
- 	@cp ytab.h ytabh.bak
