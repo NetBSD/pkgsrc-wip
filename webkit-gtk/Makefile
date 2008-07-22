@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/22 18:43:50 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/22 19:13:54 hoka_adam Exp $
 #
 
 DISTNAME=	WebKit-r35249
@@ -20,9 +20,7 @@ USE_TOOLS+=	bison gmake perl:build \
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--with-webkit-target=x11 \
-			--enable-svg \
-			--enable-icon-database \
+CONFIGURE_ARGS+=	--with-target=x11 \
 			--with-http-backend=curl \
 			--with-font-backend=freetype
 
@@ -49,6 +47,7 @@ pre-configure:
 .include "../../x11/libXt/buildlink3.mk"
 # XXX http backends, soup should be newer to use (reasons to use it?)
 .include "../../www/curl/buildlink3.mk"
+# Needs newer
 #.include "../../net/libsoup24/buildlink3.mk"
 # Any reason to use pango?
 #.include "../../devel/pango/buildlink3.mk"
