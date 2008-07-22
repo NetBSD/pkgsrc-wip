@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2966 2008/07/21 01:10:02 phonohawk Exp $
+# $Id: Makefile,v 1.2967 2008/07/22 21:20:45 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -938,11 +938,11 @@ SUBDIR+=	menumaker
 SUBDIR+=	metalog
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
+SUBDIR+=	mic-paren
 SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
 SUBDIR+=	milkytracker
 SUBDIR+=	mime-support
-SUBDIR+=	mic-paren
 SUBDIR+=	min12xxw
 SUBDIR+=	ming
 SUBDIR+=	mingw
