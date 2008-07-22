@@ -1,8 +1,6 @@
-- It doesnt build for NetBSD at me. (https://bugs.webkit.org/show_bug.cgi?id=18442)
-- Doesnt accept soup, why?
-
-
 - Optionise curl/soup -- which one to be default? /I guess soup. ~ahoka/
 - Optionise FreeType/Pango -- which one to be default? /latter? ~ahoka/
 - SVG support, optionised?
 - html5 stuff - should wait to be default?
+
+- should be webkit instead of webkit-gtk

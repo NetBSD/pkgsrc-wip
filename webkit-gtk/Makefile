@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/05/02 00:58:34 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/22 18:43:50 hoka_adam Exp $
 #
 
-DISTNAME=	WebKit-r32698
-#DISTNAME=	WebKit-r30549 # FreeBSD's version
+DISTNAME=	WebKit-r35249
+PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/}
 CATEGORIES=	www gtk2
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,14 +11,9 @@ MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://webkit.org/
 COMMENT=	gtk2 port of the WebKit browser engine
 
-# remove if you can construct a PLIST, please.
-BROKEN=		I couldn't build this yet so it lack PLIST,\
-		but remove this line and try if you can\
-		and report success or failure. :)
-
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	flex bison gmake perl:build \
+USE_TOOLS+=	bison gmake perl:build \
 		automake autoconf autoheader libtoolize \
 		aclocal pkg-config
 
@@ -29,7 +24,7 @@ CONFIGURE_ARGS+=	--with-webkit-target=x11 \
 			--enable-svg \
 			--enable-icon-database \
 			--with-http-backend=curl \
-			--with-font-backend=pango
+			--with-font-backend=freetype
 
 REPLACE_PERL+=	JavaScriptCore/kjs/create_hash_table \
 		JavaScriptCore/pcre/dftables \
@@ -51,15 +46,20 @@ pre-configure:
 	cd ${WRKSRC} && ${SHELL} autogen.sh
 
 .include "../../x11/gtk2/buildlink3.mk"
-# XXX http backends, optionise this (?)
+.include "../../x11/libXt/buildlink3.mk"
+# XXX http backends, soup should be newer to use (reasons to use it?)
 .include "../../www/curl/buildlink3.mk"
 #.include "../../net/libsoup24/buildlink3.mk"
-#
+# Any reason to use pango?
+#.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+# NetBSD's flex is not suitable.
+.include "../../devel/flex/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
