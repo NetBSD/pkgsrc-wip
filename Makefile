@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2967 2008/07/22 21:20:45 tnn2 Exp $
+# $Id: Makefile,v 1.2968 2008/07/23 06:22:54 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1731,6 +1731,7 @@ SUBDIR+=	talksoup
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
+SUBDIR+=	tcl
 SUBDIR+=	tcmplex-panteltje
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
