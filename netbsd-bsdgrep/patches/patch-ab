@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2007/10/01 20:53:43 cheusov Exp $
+$NetBSD: patch-ab,v 1.2 2008/07/23 10:10:35 cheusov Exp $
 
 --- file.c.orig	2006-05-16 00:12:21.000000000 +0300
 +++ file.c
-@@ -39,6 +39,9 @@ __RCSID("$NetBSD: file.c,v 1.2 2006/05/1
+@@ -39,6 +39,13 @@ __RCSID("$NetBSD: file.c,v 1.2 2006/05/1
  #include <stdlib.h>
  #include <zlib.h>
  
-+char *
-+fgetln(FILE * stream, size_t * len);
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/config.h>    /* needed for the other headers */
++#include <nbcompat/cdefs.h>     /* needed for the other headers */
++#include <nbcompat/stdio.h>
++#include <nbcompat/stdlib.h>
++#endif
 +
  #include "grep.h"
  
