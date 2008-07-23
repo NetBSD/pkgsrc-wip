@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/23 11:02:32 hoka_adam Exp $
+bin/midori
+share/applications/midori.desktop
+share/locale/de/LC_MESSAGES/midori.mo
+share/locale/fr/LC_MESSAGES/midori.mo
+share/locale/pl/LC_MESSAGES/midori.mo
+share/locale/sv/LC_MESSAGES/midori.mo
