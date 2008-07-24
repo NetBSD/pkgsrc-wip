@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2008/07/18 08:10:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.60 2008/07/24 12:29:00 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -34,6 +34,7 @@ info/info
 info/message
 info/mh-e
 info/newsticker
+info/ns-emacs
 info/nxml-mode
 info/org
 info/pcl-cvs
@@ -600,7 +601,6 @@ share/emacs/${PKGVERSION}/etc/images/splash.pbm
 share/emacs/${PKGVERSION}/etc/images/splash.png
 share/emacs/${PKGVERSION}/etc/images/splash.svg
 share/emacs/${PKGVERSION}/etc/images/splash.xpm
-share/emacs/${PKGVERSION}/etc/images/splash8.xpm
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/README
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/close.png
 share/emacs/${PKGVERSION}/etc/images/tree-widget/default/close.xpm
@@ -2286,6 +2286,8 @@ share/emacs/${PKGVERSION}/lisp/minibuffer.el.gz
 share/emacs/${PKGVERSION}/lisp/minibuffer.elc
 share/emacs/${PKGVERSION}/lisp/misc.el.gz
 share/emacs/${PKGVERSION}/lisp/misc.elc
+share/emacs/${PKGVERSION}/lisp/misearch.el.gz
+share/emacs/${PKGVERSION}/lisp/misearch.elc
 share/emacs/${PKGVERSION}/lisp/mouse-copy.el.gz
 share/emacs/${PKGVERSION}/lisp/mouse-copy.elc
 share/emacs/${PKGVERSION}/lisp/mouse-drag.el.gz
@@ -2406,10 +2408,6 @@ share/emacs/${PKGVERSION}/lisp/newcomment.el.gz
 share/emacs/${PKGVERSION}/lisp/newcomment.elc
 share/emacs/${PKGVERSION}/lisp/novice.el.gz
 share/emacs/${PKGVERSION}/lisp/novice.elc
-share/emacs/${PKGVERSION}/lisp/ns-carbon-compat.el.gz
-share/emacs/${PKGVERSION}/lisp/ns-carbon-compat.elc
-share/emacs/${PKGVERSION}/lisp/ns-grabenv.el.gz
-share/emacs/${PKGVERSION}/lisp/ns-grabenv.elc
 share/emacs/${PKGVERSION}/lisp/nxml/TODO
 share/emacs/${PKGVERSION}/lisp/nxml/nxml-enc.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/nxml-enc.elc
@@ -2909,6 +2907,8 @@ share/emacs/${PKGVERSION}/lisp/term/AT386.el
 share/emacs/${PKGVERSION}/lisp/term/README
 share/emacs/${PKGVERSION}/lisp/term/apollo.el
 share/emacs/${PKGVERSION}/lisp/term/bobcat.el
+share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
+share/emacs/${PKGVERSION}/lisp/term/common-win.elc
 share/emacs/${PKGVERSION}/lisp/term/cygwin.el
 share/emacs/${PKGVERSION}/lisp/term/internal.el
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el
