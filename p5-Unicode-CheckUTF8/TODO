@@ -1,0 +1,3 @@
+FIX:
+pkg_delete: cannot remove non-existent directory `/usr/pkg/lib/perl5/vendor_perl/5.8.0/Unicode/CheckUTF8'\nthis packing list is incorrect - ignoring delete request
+

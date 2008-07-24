@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/24 11:01:44 cryonator Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/07/24 17:13:42 cryonator Exp $
 lib/perl5/vendor_perl/man/man3/Unicode::CheckUTF8.3
-@dirrm lib/perl5/vendor_perl/5.8.0/${LOWER_OPSYS}-thread-multi-2level/auto/Unicode/CheckUTF8
+@dirrm ${PERL5_SUB_INSTALLVENDORLIB}/Unicode/CheckUTF8
