@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/24 10:47:25 cryonator Exp $
+
+SHA1 (Unicode-CheckUTF8-1.01.tar.gz) = fe0fbb044236e76d7ff18eb75c899a4610f8610c
+RMD160 (Unicode-CheckUTF8-1.01.tar.gz) = 3cf8181970bca945d82d4a736b2961a5f790e9a7
+Size (Unicode-CheckUTF8-1.01.tar.gz) = 25245 bytes
