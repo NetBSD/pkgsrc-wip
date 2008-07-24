@@ -1,0 +1,4 @@
+# $NetBSD: Makefile.version,v 1.1.1.1 2008/07/24 19:29:35 egavilan Exp $
+
+TCL_PKGSRC_VERSION=	8.5
+TCL_PKGSRC_PATCHLEVEL=	8.5.3
