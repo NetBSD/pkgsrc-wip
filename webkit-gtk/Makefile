@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/07/22 19:13:54 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/24 13:46:29 hoka_adam Exp $
 #
-
-DISTNAME=	WebKit-r35249
-PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/}
+# pkg-config says 1.0.2, let's combine it with the revision
+# to give a sane version number.
+#
+DISTNAME=	WebKit-r35289
+PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.2./}
 CATEGORIES=	www gtk2
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +17,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison gmake perl:build \
 		automake autoconf autoheader libtoolize \
-		aclocal pkg-config
+		aclocal pkg-config bash:build
 
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes

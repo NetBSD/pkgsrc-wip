@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/07/23 15:46:25 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/07/24 13:46:29 hoka_adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WEBKIT_BUILDLINK3_MK:=	${WEBKIT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	webkit-gtk
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}webkit-gtk
 
 .if ${WEBKIT_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=r35249
+BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=1.0.2.35289
 BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../wip/webkit-gtk
 .endif	# WEBKIT_BUILDLINK3_MK
 
