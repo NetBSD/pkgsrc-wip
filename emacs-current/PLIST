@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2008/07/24 12:29:00 makoto Exp $
+@comment $NetBSD: PLIST,v 1.61 2008/07/25 16:10:30 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2050,8 +2050,6 @@ share/emacs/${PKGVERSION}/lisp/international/uni-titlecase.el
 share/emacs/${PKGVERSION}/lisp/international/uni-uppercase.el
 share/emacs/${PKGVERSION}/lisp/international/utf-7.el.gz
 share/emacs/${PKGVERSION}/lisp/international/utf-7.elc
-share/emacs/${PKGVERSION}/lisp/isearch-multi.el.gz
-share/emacs/${PKGVERSION}/lisp/isearch-multi.elc
 share/emacs/${PKGVERSION}/lisp/isearch.el.gz
 share/emacs/${PKGVERSION}/lisp/isearch.elc
 share/emacs/${PKGVERSION}/lisp/isearchb.el.gz
@@ -2402,6 +2400,8 @@ share/emacs/${PKGVERSION}/lisp/net/trampver.el.gz
 share/emacs/${PKGVERSION}/lisp/net/trampver.elc
 share/emacs/${PKGVERSION}/lisp/net/webjump.el.gz
 share/emacs/${PKGVERSION}/lisp/net/webjump.elc
+share/emacs/${PKGVERSION}/lisp/net/xesam.el.gz
+share/emacs/${PKGVERSION}/lisp/net/xesam.elc
 share/emacs/${PKGVERSION}/lisp/net/zeroconf.el.gz
 share/emacs/${PKGVERSION}/lisp/net/zeroconf.elc
 share/emacs/${PKGVERSION}/lisp/newcomment.el.gz
