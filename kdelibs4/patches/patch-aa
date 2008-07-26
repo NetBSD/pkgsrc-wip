@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/12 03:17:11 mwdavies Exp $
+$NetBSD: patch-aa,v 1.2 2008/07/26 22:39:29 mwdavies Exp $
 
---- kded/CMakeLists.txt.orig	2007-11-14 13:18:21.000000000 +1300
+--- kded/CMakeLists.txt.orig	2008-05-21 23:07:34.000000000 +1200
 +++ kded/CMakeLists.txt
-@@ -66,7 +66,7 @@ install(TARGETS kdontchangethehostname D
+@@ -67,7 +67,7 @@ install(TARGETS kdontchangethehostname D
  
  ########### install files ###############
  
 -install( FILES applications.menu  DESTINATION  ${SYSCONF_INSTALL_DIR}/xdg/menus )
 +install( FILES applications.menu  DESTINATION  ${CMAKE_INSTALL_PREFIX}/share/examples/kdelibs4 )
- install( FILES kdedmodule.desktop  DESTINATION  ${SERVICETYPES_INSTALL_DIR} )
- install( FILES kded.upd  DESTINATION  ${DATA_INSTALL_DIR}/kconf_update )
+ install( FILES kdedmodule.desktop DESTINATION  ${SERVICETYPES_INSTALL_DIR} )
+ install( FILES kded.upd           DESTINATION  ${DATA_INSTALL_DIR}/kconf_update )
  
