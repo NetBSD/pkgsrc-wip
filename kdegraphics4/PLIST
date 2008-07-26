@@ -1,12 +1,37 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/07 21:18:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/26 23:01:28 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
-bin/kolourpaint4
+bin/kolourpaint
 bin/kruler
 bin/ksnapshot
 bin/okular
 bin/xf86gammacfg
+include/libkdcraw/dcrawbinary.h
+include/libkdcraw/dcrawinfocontainer.h
+include/libkdcraw/dcrawsettingswidget.h
+include/libkdcraw/kdcraw.h
+include/libkdcraw/libkdcraw_export.h
+include/libkdcraw/rawdecodingsettings.h
+include/libkdcraw/rawfiles.h
+include/libkdcraw/version.h
+include/libkexiv2/kexiv2.h
+include/libkexiv2/libkexiv2_export.h
+include/libkexiv2/version.h
+include/libkipi/imagecollection.h
+include/libkipi/imagecollectionselector.h
+include/libkipi/imagecollectionshared.h
+include/libkipi/imageinfo.h
+include/libkipi/imageinfoshared.h
+include/libkipi/interface.h
+include/libkipi/libkipi_export.h
+include/libkipi/plugin.h
+include/libkipi/pluginloader.h
+include/libkipi/uploadwidget.h
+include/libkipi/version.h
+include/libksane/ksane.h
+include/libksane/libksane_export.h
+include/libksane/version.h
 include/okular/core/action.h
 include/okular/core/annotations.h
 include/okular/core/area.h
@@ -34,7 +59,7 @@ lib/kde4/gvpart.so
 lib/kde4/kcm_kamera.so
 lib/kde4/kcm_kgamma.so
 lib/kde4/kio_kamera.so
-lib/kde4/kscanplugin.so
+lib/kde4/ksaneplugin.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_dvi.so
 lib/kde4/okularGenerator_fb.so
@@ -47,18 +72,36 @@ lib/kde4/okularGenerator_xps.so
 lib/kde4/okularpart.so
 lib/kde4/svgpart.so
 lib/libgwenviewlib.so
-lib/libgwenviewlib.so.1
-lib/libgwenviewlib.so.1.0.0
-lib/libkolourpaint4_lgpl.so
-lib/libkolourpaint4_lgpl.so.4
-lib/libkolourpaint4_lgpl.so.4.0.4
+lib/libgwenviewlib.so.4
+lib/libgwenviewlib.so.4.1.0
+lib/libkdcraw.so
+lib/libkdcraw.so.5
+lib/libkdcraw.so.5.0.0
+lib/libkdcraw5/CAMERALIST
+lib/libkdcraw5/kdcraw
+lib/libkexiv2.so
+lib/libkexiv2.so.6
+lib/libkexiv2.so.6.0.0
+lib/libkipi.so
+lib/libkipi.so.5
+lib/libkipi.so.5.0.0
+lib/libkolourpaint_lgpl.so
+lib/libkolourpaint_lgpl.so.4
+lib/libkolourpaint_lgpl.so.4.1.0
+lib/libksane.so
+lib/libksane.so.0
+lib/libksane.so.0.1.1
 lib/libokularcore.so
 lib/libokularcore.so.1
-lib/libokularcore.so.1.0.0
+lib/libokularcore.so.1.1.0
+lib/pkgconfig/libkdcraw.pc
+lib/pkgconfig/libkexiv2.pc
+lib/pkgconfig/libkipi.pc
+lib/pkgconfig/libksane.pc
 lib/strigi/strigita_dvi.so
 share/applications/kde4/gwenview.desktop
 share/applications/kde4/kcolorchooser.desktop
-share/applications/kde4/kolourpaint4.desktop
+share/applications/kde4/kolourpaint.desktop
 share/applications/kde4/kruler.desktop
 share/applications/kde4/ksnapshot.desktop
 share/applications/kde4/okular.desktop
@@ -74,10 +117,7 @@ share/applications/kde4/okularApplication_xps.desktop
 share/dbus-1/interfaces/org.kde.ksnapshot.xml
 share/doc/kde/HTML/en/gwenview/browse_mode.png
 share/doc/kde/HTML/en/gwenview/common
-share/doc/kde/HTML/en/gwenview/dock_grip.png
-share/doc/kde/HTML/en/gwenview/docked_windows.docbook
-share/doc/kde/HTML/en/gwenview/external_tools.docbook
-share/doc/kde/HTML/en/gwenview/external_tools_dialog.png
+share/doc/kde/HTML/en/gwenview/fullscreen_mode.png
 share/doc/kde/HTML/en/gwenview/index.cache.bz2
 share/doc/kde/HTML/en/gwenview/index.docbook
 share/doc/kde/HTML/en/gwenview/interface.docbook
@@ -88,58 +128,58 @@ share/doc/kde/HTML/en/gwenview/view_mode.png
 share/doc/kde/HTML/en/kamera/common
 share/doc/kde/HTML/en/kamera/index.cache.bz2
 share/doc/kde/HTML/en/kamera/index.docbook
-share/doc/kde/HTML/en/kolourpaint4/brush_shapes.png
-share/doc/kde/HTML/en/kolourpaint4/color_box.png
-share/doc/kde/HTML/en/kolourpaint4/common
-share/doc/kde/HTML/en/kolourpaint4/eraser_shapes.png
-share/doc/kde/HTML/en/kolourpaint4/fcc_std_text.png
-share/doc/kde/HTML/en/kolourpaint4/fcc_trans_text.png
-share/doc/kde/HTML/en/kolourpaint4/fill_color_similarity.png
-share/doc/kde/HTML/en/kolourpaint4/fill_style.png
-share/doc/kde/HTML/en/kolourpaint4/image_balance.png
-share/doc/kde/HTML/en/kolourpaint4/image_emboss.png
-share/doc/kde/HTML/en/kolourpaint4/image_flatten.png
-share/doc/kde/HTML/en/kolourpaint4/image_flip.png
-share/doc/kde/HTML/en/kolourpaint4/image_invert.png
-share/doc/kde/HTML/en/kolourpaint4/image_reduce_colors.png
-share/doc/kde/HTML/en/kolourpaint4/image_resize_scale.png
-share/doc/kde/HTML/en/kolourpaint4/image_rotate.png
-share/doc/kde/HTML/en/kolourpaint4/image_skew.png
-share/doc/kde/HTML/en/kolourpaint4/image_soften_sharpen.png
-share/doc/kde/HTML/en/kolourpaint4/index.cache.bz2
-share/doc/kde/HTML/en/kolourpaint4/index.docbook
-share/doc/kde/HTML/en/kolourpaint4/kolourpaint-main.png
-share/doc/kde/HTML/en/kolourpaint4/line_width.png
-share/doc/kde/HTML/en/kolourpaint4/lines_30_45_deg.png
-share/doc/kde/HTML/en/kolourpaint4/lines_30_deg.png
-share/doc/kde/HTML/en/kolourpaint4/lines_45_deg.png
-share/doc/kde/HTML/en/kolourpaint4/rotate_image_30.png
-share/doc/kde/HTML/en/kolourpaint4/rotate_selection_30.png
-share/doc/kde/HTML/en/kolourpaint4/selections_opaque_transparent.png
-share/doc/kde/HTML/en/kolourpaint4/spraycan_patterns.png
-share/doc/kde/HTML/en/kolourpaint4/text_zoom_grid.png
-share/doc/kde/HTML/en/kolourpaint4/tool_brush.png
-share/doc/kde/HTML/en/kolourpaint4/tool_color_picker.png
-share/doc/kde/HTML/en/kolourpaint4/tool_color_washer.png
-share/doc/kde/HTML/en/kolourpaint4/tool_curve.png
-share/doc/kde/HTML/en/kolourpaint4/tool_ellipse.png
-share/doc/kde/HTML/en/kolourpaint4/tool_elliptical_selection.png
-share/doc/kde/HTML/en/kolourpaint4/tool_eraser.png
-share/doc/kde/HTML/en/kolourpaint4/tool_flood_fill.png
-share/doc/kde/HTML/en/kolourpaint4/tool_free_form_selection.png
-share/doc/kde/HTML/en/kolourpaint4/tool_line.png
-share/doc/kde/HTML/en/kolourpaint4/tool_pen.png
-share/doc/kde/HTML/en/kolourpaint4/tool_polygon.png
-share/doc/kde/HTML/en/kolourpaint4/tool_polyline.png
-share/doc/kde/HTML/en/kolourpaint4/tool_polystar.png
-share/doc/kde/HTML/en/kolourpaint4/tool_rect_selection.png
-share/doc/kde/HTML/en/kolourpaint4/tool_rectangle.png
-share/doc/kde/HTML/en/kolourpaint4/tool_rectangles.png
-share/doc/kde/HTML/en/kolourpaint4/tool_rounded_rectangle.png
-share/doc/kde/HTML/en/kolourpaint4/tool_selections.png
-share/doc/kde/HTML/en/kolourpaint4/tool_spraycan.png
-share/doc/kde/HTML/en/kolourpaint4/tool_text.png
-share/doc/kde/HTML/en/kolourpaint4/view_thumbnails.png
+share/doc/kde/HTML/en/kolourpaint/brush_shapes.png
+share/doc/kde/HTML/en/kolourpaint/color_box.png
+share/doc/kde/HTML/en/kolourpaint/common
+share/doc/kde/HTML/en/kolourpaint/eraser_shapes.png
+share/doc/kde/HTML/en/kolourpaint/fcc_std_text.png
+share/doc/kde/HTML/en/kolourpaint/fcc_trans_text.png
+share/doc/kde/HTML/en/kolourpaint/fill_color_similarity.png
+share/doc/kde/HTML/en/kolourpaint/fill_style.png
+share/doc/kde/HTML/en/kolourpaint/image_balance.png
+share/doc/kde/HTML/en/kolourpaint/image_emboss.png
+share/doc/kde/HTML/en/kolourpaint/image_flatten.png
+share/doc/kde/HTML/en/kolourpaint/image_flip.png
+share/doc/kde/HTML/en/kolourpaint/image_invert.png
+share/doc/kde/HTML/en/kolourpaint/image_reduce_colors.png
+share/doc/kde/HTML/en/kolourpaint/image_resize_scale.png
+share/doc/kde/HTML/en/kolourpaint/image_rotate.png
+share/doc/kde/HTML/en/kolourpaint/image_skew.png
+share/doc/kde/HTML/en/kolourpaint/image_soften_sharpen.png
+share/doc/kde/HTML/en/kolourpaint/index.cache.bz2
+share/doc/kde/HTML/en/kolourpaint/index.docbook
+share/doc/kde/HTML/en/kolourpaint/kolourpaint-main.png
+share/doc/kde/HTML/en/kolourpaint/line_width.png
+share/doc/kde/HTML/en/kolourpaint/lines_30_45_deg.png
+share/doc/kde/HTML/en/kolourpaint/lines_30_deg.png
+share/doc/kde/HTML/en/kolourpaint/lines_45_deg.png
+share/doc/kde/HTML/en/kolourpaint/rotate_image_30.png
+share/doc/kde/HTML/en/kolourpaint/rotate_selection_30.png
+share/doc/kde/HTML/en/kolourpaint/selections_opaque_transparent.png
+share/doc/kde/HTML/en/kolourpaint/spraycan_patterns.png
+share/doc/kde/HTML/en/kolourpaint/text_zoom_grid.png
+share/doc/kde/HTML/en/kolourpaint/tool_brush.png
+share/doc/kde/HTML/en/kolourpaint/tool_color_picker.png
+share/doc/kde/HTML/en/kolourpaint/tool_color_washer.png
+share/doc/kde/HTML/en/kolourpaint/tool_curve.png
+share/doc/kde/HTML/en/kolourpaint/tool_ellipse.png
+share/doc/kde/HTML/en/kolourpaint/tool_elliptical_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_eraser.png
+share/doc/kde/HTML/en/kolourpaint/tool_flood_fill.png
+share/doc/kde/HTML/en/kolourpaint/tool_free_form_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_line.png
+share/doc/kde/HTML/en/kolourpaint/tool_pen.png
+share/doc/kde/HTML/en/kolourpaint/tool_polygon.png
+share/doc/kde/HTML/en/kolourpaint/tool_polyline.png
+share/doc/kde/HTML/en/kolourpaint/tool_polystar.png
+share/doc/kde/HTML/en/kolourpaint/tool_rect_selection.png
+share/doc/kde/HTML/en/kolourpaint/tool_rectangle.png
+share/doc/kde/HTML/en/kolourpaint/tool_rectangles.png
+share/doc/kde/HTML/en/kolourpaint/tool_rounded_rectangle.png
+share/doc/kde/HTML/en/kolourpaint/tool_selections.png
+share/doc/kde/HTML/en/kolourpaint/tool_spraycan.png
+share/doc/kde/HTML/en/kolourpaint/tool_text.png
+share/doc/kde/HTML/en/kolourpaint/view_thumbnails.png
 share/doc/kde/HTML/en/kruler/common
 share/doc/kde/HTML/en/kruler/index.cache.bz2
 share/doc/kde/HTML/en/kruler/index.docbook
@@ -153,45 +193,63 @@ share/doc/kde/HTML/en/okular/configure.png
 share/doc/kde/HTML/en/okular/embedded-files-bar.png
 share/doc/kde/HTML/en/okular/index.cache.bz2
 share/doc/kde/HTML/en/okular/index.docbook
+share/icons/hicolor/128x128/apps/gwenview.png
+share/icons/hicolor/128x128/apps/kdcraw.png
+share/icons/hicolor/128x128/apps/kipi.png
+share/icons/hicolor/128x128/apps/kruler.png
+share/icons/hicolor/128x128/apps/okular.png
+share/icons/hicolor/16x16/actions/black-white.png
+share/icons/hicolor/16x16/actions/color.png
+share/icons/hicolor/16x16/actions/gray-scale.png
+share/icons/hicolor/16x16/apps/gwenview.png
 share/icons/hicolor/16x16/apps/kcolorchooser.png
 share/icons/hicolor/16x16/apps/kgamma.png
-share/icons/hicolor/16x16/apps/kolourpaint4.png
+share/icons/hicolor/16x16/apps/kipi.png
+share/icons/hicolor/16x16/apps/kolourpaint.png
 share/icons/hicolor/16x16/apps/kruler.png
 share/icons/hicolor/16x16/apps/ksnapshot.png
+share/icons/hicolor/16x16/apps/okular.png
+share/icons/hicolor/22x22/apps/gwenview.png
 share/icons/hicolor/22x22/apps/kcolorchooser.png
-share/icons/hicolor/22x22/apps/kolourpaint4.png
+share/icons/hicolor/22x22/apps/kipi.png
+share/icons/hicolor/22x22/apps/kolourpaint.png
 share/icons/hicolor/22x22/apps/kruler.png
 share/icons/hicolor/22x22/apps/ksnapshot.png
+share/icons/hicolor/22x22/apps/okular.png
+share/icons/hicolor/32x32/apps/gwenview.png
+share/icons/hicolor/32x32/apps/kdcraw.png
 share/icons/hicolor/32x32/apps/kgamma.png
-share/icons/hicolor/32x32/apps/kolourpaint4.png
+share/icons/hicolor/32x32/apps/kipi.png
+share/icons/hicolor/32x32/apps/kolourpaint.png
 share/icons/hicolor/32x32/apps/kruler.png
 share/icons/hicolor/32x32/apps/ksnapshot.png
+share/icons/hicolor/32x32/apps/okular.png
+share/icons/hicolor/48x48/apps/gwenview.png
+share/icons/hicolor/48x48/apps/kdcraw.png
 share/icons/hicolor/48x48/apps/kgamma.png
-share/icons/hicolor/48x48/apps/kolourpaint4.png
+share/icons/hicolor/48x48/apps/kipi.png
+share/icons/hicolor/48x48/apps/kolourpaint.png
 share/icons/hicolor/48x48/apps/kruler.png
 share/icons/hicolor/48x48/apps/ksnapshot.png
-share/icons/hicolor/scalable/apps/kolourpaint4.svgz
+share/icons/hicolor/48x48/apps/okular.png
+share/icons/hicolor/64x64/apps/gwenview.png
+share/icons/hicolor/64x64/apps/kdcraw.png
+share/icons/hicolor/64x64/apps/kruler.png
+share/icons/hicolor/64x64/apps/okular.png
+share/icons/hicolor/scalable/apps/gwenview.svgz
+share/icons/hicolor/scalable/apps/kolourpaint.svgz
+share/icons/hicolor/scalable/apps/kruler.svgz
 share/icons/hicolor/scalable/apps/ksnapshot.svgz
-share/icons/oxygen/128x128/apps/gwenview.png
-share/icons/oxygen/128x128/apps/kruler.png
-share/icons/oxygen/16x16/actions/palette_color.png
-share/icons/oxygen/16x16/actions/palette_gray.png
-share/icons/oxygen/16x16/actions/palette_halftone.png
-share/icons/oxygen/16x16/actions/palette_lineart.png
-share/icons/oxygen/16x16/apps/gwenview.png
-share/icons/oxygen/16x16/apps/kruler.png
-share/icons/oxygen/22x22/apps/gwenview.png
-share/icons/oxygen/22x22/apps/kruler.png
-share/icons/oxygen/32x32/apps/gwenview.png
-share/icons/oxygen/32x32/apps/kruler.png
-share/icons/oxygen/48x48/apps/gwenview.png
-share/icons/oxygen/48x48/apps/kruler.png
-share/icons/oxygen/64x64/apps/gwenview.png
-share/icons/oxygen/64x64/apps/kruler.png
-share/icons/oxygen/scalable/apps/gwenview.svgz
-share/icons/oxygen/scalable/apps/kruler.svgz
+share/icons/hicolor/scalable/apps/okular.svgz
+share/kde/apps/cmake/modules/FindKSane.cmake
 share/kde/apps/cmake/modules/FindOkular.cmake
+share/kde/apps/gvpart/gvpart-gwenview.rc
 share/kde/apps/gvpart/gvpart.rc
+share/kde/apps/gwenview/cursors/zoom.png
+share/kde/apps/gwenview/fullscreenthemes/blackglass/checked.png
+share/kde/apps/gwenview/fullscreenthemes/blackglass/scroll-left.png
+share/kde/apps/gwenview/fullscreenthemes/blackglass/scroll-right.png
+share/kde/apps/gwenview/fullscreenthemes/blackglass/style.css
 share/kde/apps/gwenview/gwenviewui.rc
 share/kde/apps/kgamma/pics/background.png
 share/kde/apps/kgamma/pics/cmyscale.png
@@ -200,117 +258,124 @@ share/kde/apps/kgamma/pics/greyscale.png
 share/kde/apps/kgamma/pics/lightgrey.png
 share/kde/apps/kgamma/pics/midgrey.png
 share/kde/apps/kgamma/pics/rgbscale.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_brush.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_color_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_color_picker.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_curve.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_ellipse.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_elliptical_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_flood_fill.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_free_form_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_line.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_pen.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_polygon.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_polyline.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_rect_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_rounded_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_spraycan.png
-share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions/tool_text.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_brush.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_color_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_color_picker.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_curve.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_ellipse.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_elliptical_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_flood_fill.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_free_form_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_line.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_pen.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_polygon.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_polyline.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_rect_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_rounded_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_spraycan.png
-share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions/tool_text.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_brush.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_color_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_color_picker.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_curve.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_ellipse.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_elliptical_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_flood_fill.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_free_form_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_line.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_pen.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_polygon.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_polyline.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_rect_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_rounded_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_spraycan.png
-share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions/tool_text.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_brush.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_color_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_color_picker.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_curve.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_ellipse.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_elliptical_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_eraser.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_flood_fill.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_free_form_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_line.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_pen.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_polygon.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_polyline.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_rect_selection.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_rounded_rectangle.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_spraycan.png
-share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions/tool_text.png
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_brush.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_color_eraser.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_color_picker.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_curve.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_ellipse.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_elliptical_selection.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_eraser.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_flood_fill.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_free_form_selection.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_line.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_pen.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_polygon.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_polyline.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_rect_selection.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_rectangle.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_rounded_rectangle.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_spraycan.svgz
-share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions/tool_text.svgz
-share/kde/apps/kolourpaint4/kolourpaint4ui.rc
-share/kde/apps/kolourpaint4/pics/color_transparent_26x26.png
-share/kde/apps/kolourpaint4/pics/colorbutton_swap_16x16.png
-share/kde/apps/kolourpaint4/pics/image_rotate_anticlockwise.png
-share/kde/apps/kolourpaint4/pics/image_rotate_clockwise.png
-share/kde/apps/kolourpaint4/pics/image_skew_horizontal.png
-share/kde/apps/kolourpaint4/pics/image_skew_vertical.png
-share/kde/apps/kolourpaint4/pics/option_opaque.png
-share/kde/apps/kolourpaint4/pics/option_transparent.png
-share/kde/apps/kolourpaint4/pics/resize.png
-share/kde/apps/kolourpaint4/pics/scale.png
-share/kde/apps/kolourpaint4/pics/smooth_scale.png
-share/kde/apps/kolourpaint4/pics/tool_spraycan_17x17.png
-share/kde/apps/kolourpaint4/pics/tool_spraycan_29x29.png
-share/kde/apps/kolourpaint4/pics/tool_spraycan_9x9.png
+share/kde/apps/kipi/data/kipi-plugins_logo.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/hicolor/16x16/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_color_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/hicolor/22x22/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_color_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/hicolor/32x32/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_brush.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_color_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_color_picker.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_curve.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_ellipse.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_elliptical_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_eraser.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_flood_fill.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_free_form_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_line.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_pen.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_polygon.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_polyline.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_rect_selection.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_rounded_rectangle.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_spraycan.png
+share/kde/apps/kolourpaint/icons/hicolor/48x48/actions/tool_text.png
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_brush.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_color_eraser.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_color_picker.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_curve.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_ellipse.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_elliptical_selection.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_eraser.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_flood_fill.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_free_form_selection.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_line.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_pen.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_polygon.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_polyline.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_rect_selection.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_rectangle.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_rounded_rectangle.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_spraycan.svgz
+share/kde/apps/kolourpaint/icons/hicolor/scalable/actions/tool_text.svgz
+share/kde/apps/kolourpaint/kolourpaintui.rc
+share/kde/apps/kolourpaint/pics/color_transparent_26x26.png
+share/kde/apps/kolourpaint/pics/colorbutton_swap_16x16.png
+share/kde/apps/kolourpaint/pics/image_rotate_anticlockwise.png
+share/kde/apps/kolourpaint/pics/image_rotate_clockwise.png
+share/kde/apps/kolourpaint/pics/image_skew_horizontal.png
+share/kde/apps/kolourpaint/pics/image_skew_vertical.png
+share/kde/apps/kolourpaint/pics/option_opaque.png
+share/kde/apps/kolourpaint/pics/option_transparent.png
+share/kde/apps/kolourpaint/pics/resize.png
+share/kde/apps/kolourpaint/pics/scale.png
+share/kde/apps/kolourpaint/pics/smooth_scale.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_17x17.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_29x29.png
+share/kde/apps/kolourpaint/pics/tool_spraycan_9x9.png
 share/kde/apps/kruler/kruler.notifyrc
 share/kde/apps/kruler/pics/kruler-east.png
 share/kde/apps/kruler/pics/kruler-north.png
 share/kde/apps/kruler/pics/kruler-south.png
 share/kde/apps/kruler/pics/kruler-west.png
 share/kde/apps/kruler/sounds/move.wav
+share/kde/apps/libkdcraw/profiles/adobergb.icm
+share/kde/apps/libkdcraw/profiles/applergb.icm
+share/kde/apps/libkdcraw/profiles/prophoto.icm
+share/kde/apps/libkdcraw/profiles/srgb-d65.icm
+share/kde/apps/libkdcraw/profiles/srgb.icm
+share/kde/apps/libkdcraw/profiles/widegamut.icm
 share/kde/apps/okular/part.rc
 share/kde/apps/okular/pics/checkmark.png
 share/kde/apps/okular/pics/circle.png
@@ -321,12 +386,15 @@ share/kde/apps/okular/pics/insert.png
 share/kde/apps/okular/pics/key.png
 share/kde/apps/okular/pics/newparagraph.png
 share/kde/apps/okular/pics/note.png
+share/kde/apps/okular/pics/paperclip.png
 share/kde/apps/okular/pics/paragraph.png
+share/kde/apps/okular/pics/pushpin.png
 share/kde/apps/okular/pics/rightarrow.png
 share/kde/apps/okular/pics/rightpointer.png
 share/kde/apps/okular/pics/star.png
 share/kde/apps/okular/pics/tool-note-inline.png
 share/kde/apps/okular/pics/tool-note.png
+share/kde/apps/okular/pics/tool-stamp.png
 share/kde/apps/okular/pics/tool_ellipse_okular.png
 share/kde/apps/okular/pics/tool_hl_yellow.png
 share/kde/apps/okular/pics/tool_ink_green.png
@@ -340,11 +408,13 @@ share/kde/apps/okular/tools.xml
 share/kde/apps/svgpart/svgpart.rc
 share/kde/config.kcfg/okular.kcfg
 share/kde/config/okular.knsrc
+share/kde4/services/ServiceMenus/slideshow.desktop
 share/kde4/services/camera.protocol
 share/kde4/services/gsthumbnail.desktop
 share/kde4/services/gvpart.desktop
 share/kde4/services/kamera.desktop
 share/kde4/services/kgamma.desktop
+share/kde4/services/ksane_scan_service.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
 share/kde4/services/libokularGenerator_fb.desktop
@@ -364,64 +434,72 @@ share/kde4/services/okularPoppler.desktop
 share/kde4/services/okularTiff.desktop
 share/kde4/services/okularXps.desktop
 share/kde4/services/okular_part.desktop
-share/kde4/services/scanservice.desktop
 share/kde4/services/svgpart.desktop
+share/kde4/servicetypes/kipiplugin.desktop
 share/kde4/servicetypes/okularGenerator.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
+@comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/svgpart
 @dirrm share/kde/apps/okular/pics
 @dirrm share/kde/apps/okular
+@dirrm share/kde/apps/libkdcraw/profiles
+@dirrm share/kde/apps/libkdcraw
 @dirrm share/kde/apps/kruler/sounds
 @dirrm share/kde/apps/kruler/pics
 @dirrm share/kde/apps/kruler
-@dirrm share/kde/apps/kolourpaint4/pics
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/scalable
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/48x48
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/32x32
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/22x22
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor/16x16
-@dirrm share/kde/apps/kolourpaint4/icons/hicolor
-@dirrm share/kde/apps/kolourpaint4/icons
-@dirrm share/kde/apps/kolourpaint4
+@dirrm share/kde/apps/kolourpaint/pics
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16
+@dirrm share/kde/apps/kolourpaint/icons/hicolor
+@dirrm share/kde/apps/kolourpaint/icons
+@dirrm share/kde/apps/kolourpaint
+@dirrm share/kde/apps/kipi/data
+@dirrm share/kde/apps/kipi
 @dirrm share/kde/apps/kgamma/pics
 @dirrm share/kde/apps/kgamma
+@dirrm share/kde/apps/gwenview/fullscreenthemes/blackglass
+@dirrm share/kde/apps/gwenview/fullscreenthemes
+@dirrm share/kde/apps/gwenview/cursors
 @dirrm share/kde/apps/gwenview
 @dirrm share/kde/apps/gvpart
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/oxygen/scalable/apps
-@comment in kde: @dirrm share/icons/oxygen/64x64/apps
-@comment in kde: @dirrm share/icons/oxygen/48x48/apps
-@comment in kde: @dirrm share/icons/oxygen/32x32/apps
-@comment in kde: @dirrm share/icons/oxygen/22x22/apps
-@comment in kde: @dirrm share/icons/oxygen/16x16/apps
-@comment in kde: @dirrm share/icons/oxygen/16x16/actions
-@comment in kde: @dirrm share/icons/oxygen/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/okular
 @dirrm share/doc/kde/HTML/en/ksnapshot
 @dirrm share/doc/kde/HTML/en/kruler
-@dirrm share/doc/kde/HTML/en/kolourpaint4
+@dirrm share/doc/kde/HTML/en/kolourpaint
 @dirrm share/doc/kde/HTML/en/kamera
 @dirrm share/doc/kde/HTML/en/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
+@dirrm lib/libkdcraw5
 @comment in kde: @dirrm lib/kde4
 @dirrm include/okular/interfaces
 @dirrm include/okular/core
 @dirrm include/okular
+@dirrm include/libksane
+@dirrm include/libkipi
+@dirrm include/libkexiv2
+@dirrm include/libkdcraw

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/07/26 23:03:17 mwdavies Exp $
 bin/juk
 bin/kmix
 bin/kmixctrl
@@ -23,13 +23,13 @@ lib/kde4/libaudiocd_encoder_vorbis.so
 lib/kde4/libaudiocd_encoder_wav.so
 lib/libaudiocdplugins.so
 lib/libaudiocdplugins.so.4
-lib/libaudiocdplugins.so.4.0.4
+lib/libaudiocdplugins.so.4.1.0
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.4.0.4
+lib/libkcddb.so.4.1.0
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.4.0.4
+lib/libkcompactdisc.so.4.1.0
 lib/libkdeinit4_kmix.so
 lib/libkdeinit4_kmixctrl.so
 share/applications/kde4/juk.desktop
@@ -119,7 +119,9 @@ share/kde/apps/kmix/pics/mix_video.png
 share/kde/apps/kmix/pics/mix_volume.png
 share/kde/apps/kmix/profiles/ALSA.default.xml
 share/kde/apps/kmix/profiles/OSS.default.xml
+share/kde/apps/konqsidebartng/virtual_folders/services/audiocd.desktop
 share/kde/apps/profiles/kscd.profile.xml
+share/kde/autostart/kmix_autostart.desktop
 share/kde/autostart/restore_kmix_volumes.desktop
 share/kde/config.kcfg/audiocd_lame_encoder.kcfg
 share/kde/config.kcfg/audiocd_vorbis_encoder.kcfg
@@ -136,6 +138,7 @@ share/kde4/services/libkcddb.desktop
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/profiles
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/kmix/profiles
 @dirrm share/kde/apps/kmix/pics
 @dirrm share/kde/apps/kmix

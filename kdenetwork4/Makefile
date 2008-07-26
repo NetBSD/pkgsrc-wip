@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/27 16:23:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/26 23:04:56 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -23,6 +23,7 @@ REPLACE_PERL+= \
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
