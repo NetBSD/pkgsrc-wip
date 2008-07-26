@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/09 22:41:18 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/26 22:57:53 mwdavies Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -22,6 +22,6 @@ BROKEN_READLINE_DETECTION=	yes
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
 #.include "../../wip/qimageblitz/buildlink3.mk"
-#.include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kdebase-workspace4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
