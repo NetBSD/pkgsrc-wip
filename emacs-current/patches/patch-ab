@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2008/06/11 14:35:39 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.9 2008/07/26 06:25:20 obache Exp $
 
---- configure.orig	2008-06-10 15:19:18.000000000 +0000
+--- configure.orig	2008-07-26 10:17:30.000000000 +0900
 +++ configure
-@@ -1847,7 +1847,7 @@ archlibdir='${libexecdir}/emacs/${versio
+@@ -1855,7 +1855,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -11,3 +11,15 @@ $NetBSD: patch-ab,v 1.8 2008/06/11 14:35:39 thomasklausner Exp $
  
  
  
+@@ -9493,9 +9493,9 @@ if test "${HAVE_NS}" = yes; then
+   with_xft=no
+   with_freetype=no
+   # set up packaging dirs
+-  exec_prefix=${ns_appbindir}
+-  libexecdir=${ns_appbindir}/libexec
+   if test "${EN_NS_SELF_CONTAINED}" = yes; then
++     exec_prefix=${ns_appbindir}
++     libexecdir=${ns_appbindir}/libexec
+      prefix=${ns_appresdir}
+   fi
+ fi

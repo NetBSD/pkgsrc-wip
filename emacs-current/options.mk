@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2008/02/27 14:22:20 obache Exp $
+# $NetBSD: options.mk,v 1.5 2008/07/26 06:25:20 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
 PKG_SUPPORTED_OPTIONS=	x11 gnome font-backend
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
-PKG_OPTIONS_GROUP.toolkit= gtk motif xaw carbon
+PKG_OPTIONS_GROUP.toolkit= gtk motif xaw carbon nextstep
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
@@ -94,6 +94,32 @@ CONFIGURE_ARGS+=	--with-x-toolkit=motif
 .include "../../mk/xaw.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .  endif
+
+###
+### Support using NextStep (Cocoa or GNUstep) windwing system
+###
+.elif !empty(PKG_OPTIONS:Mnextstep)
+.  if exists(/System/Library/Frameworks/Cocoa.framework)
+APPLICATIONS_DIR=	Applications
+NS_APPBINDIR=		nextstep/Emacs.app/Contents/MacOS
+PLIST_SRC+=		PLIST.cocoa
+.  else
+.include "../../devel/gnustep-base/buildlink3.mk"
+APPLICATIONS_DIR=	share/GNUstep/Local/Applications
+NS_APPBINDIR=		nextstep/Emacs.app
+PLIST_SRC+=		PLIST.gnustep
+.  endif
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-ns
+CONFIGURE_ARGS+=	--disable-ns-self-contained
+
+INSTALLATION_DIRS+=	${APPLICATIONS_DIR}
+USE_TOOLS+=		pax
+
+post-install:
+	cd ${WRKSRC}/nextstep && \
+		pax -rw -pp -pm Emacs.app ${DESTDIR}${PREFIX}/${APPLICATIONS_DIR}
+
 .else
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xpm
