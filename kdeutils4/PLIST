@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:42 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/07/26 23:10:22 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -6,37 +6,38 @@ bin/kdessh
 bin/kdf
 bin/kfloppy
 bin/kgpg
-bin/kjots
 bin/ktimer
 bin/kwalletmanager
 bin/kwikdisk
+bin/okteta
 bin/superkaramba
 bin/sweeper
 lib/kde4/kcm_kdf.so
 lib/kde4/kcm_kwallet.so
-lib/kde4/kcm_thinkpad.so
-lib/kde4/kded_kmilod.so
 lib/kde4/kerfuffle_bk.so
-lib/kde4/kerfuffle_karchive.so
 lib/kde4/kerfuffle_libarchive.so
 lib/kde4/kerfuffle_libzip.so
-lib/kde4/kmilo_asus.so
-lib/kde4/kmilo_thinkpad.so
+lib/kde4/kerfuffle_rar.so
 lib/kde4/libarkpart.so
-lib/kde4/plasma_applet_skapplet.so
+lib/kde4/libkbytearrayedit.so
+lib/kde4/liboktetapart.so
+lib/kde4/plasma_package_superkaramba.so
+lib/kde4/plasma_scriptengine_superkaramba.so
 lib/libkdeinit4_kcalc.so
 lib/libkerfuffle.so
 lib/libkerfuffle.so.4
-lib/libkerfuffle.so.4.0.4
-lib/libkmilo.so
-lib/libkmilo.so.4
-lib/libkmilo.so.4.0.4
+lib/libkerfuffle.so.4.1.0
+lib/liboktetacore.so
+lib/liboktetacore.so.4
+lib/liboktetacore.so.4.1.0
+lib/liboktetagui.so
+lib/liboktetagui.so.4
+lib/liboktetagui.so.4.1.0
 lib/libsuperkaramba.so
 lib/libsuperkaramba.so.4
-lib/libsuperkaramba.so.4.0.4
+lib/libsuperkaramba.so.4.1.0
 share/applications/kde4/KCharSelect.desktop
 share/applications/kde4/KFloppy.desktop
-share/applications/kde4/Kjots.desktop
 share/applications/kde4/ark.desktop
 share/applications/kde4/kcalc.desktop
 share/applications/kde4/kdf.desktop
@@ -45,10 +46,10 @@ share/applications/kde4/ktimer.desktop
 share/applications/kde4/kwalletmanager-kwalletd.desktop
 share/applications/kde4/kwalletmanager.desktop
 share/applications/kde4/kwikdisk.desktop
+share/applications/kde4/okteta.desktop
 share/applications/kde4/superkaramba.desktop
 share/applications/kde4/sweeper.desktop
 share/dbus-1/interfaces/org.kde.kgpg.Key.xml
-share/dbus-1/interfaces/org.kde.kmilod.xml
 share/dbus-1/interfaces/org.kde.superkaramba.xml
 share/dbus-1/interfaces/org.kde.sweeper.xml
 share/doc/kde/HTML/en/ark/common
@@ -81,9 +82,6 @@ share/doc/kde/HTML/en/kgpg/keys.png
 share/doc/kde/HTML/en/kgpg/keyserver.png
 share/doc/kde/HTML/en/kgpg/kicker.png
 share/doc/kde/HTML/en/kgpg/options.png
-share/doc/kde/HTML/en/kjots/common
-share/doc/kde/HTML/en/kjots/index.cache.bz2
-share/doc/kde/HTML/en/kjots/index.docbook
 share/doc/kde/HTML/en/ktimer/common
 share/doc/kde/HTML/en/ktimer/index.cache.bz2
 share/doc/kde/HTML/en/ktimer/index.docbook
@@ -98,6 +96,14 @@ share/doc/kde/HTML/en/kwallet/ox22-action-wallet_closed.png
 share/doc/kde/HTML/en/kwallet/ox22-action-wallet_open.png
 share/doc/kde/HTML/en/kwallet/password1.png
 share/doc/kde/HTML/en/kwallet/password2.png
+share/doc/kde/HTML/en/okteta/basics.docbook
+share/doc/kde/HTML/en/okteta/common
+share/doc/kde/HTML/en/okteta/credits.docbook
+share/doc/kde/HTML/en/okteta/index.cache.bz2
+share/doc/kde/HTML/en/okteta/index.docbook
+share/doc/kde/HTML/en/okteta/introduction.docbook
+share/doc/kde/HTML/en/okteta/menu.docbook
+share/doc/kde/HTML/en/okteta/tools.docbook
 share/doc/kde/HTML/en/superkaramba/common
 share/doc/kde/HTML/en/superkaramba/index.cache.bz2
 share/doc/kde/HTML/en/superkaramba/index.docbook
@@ -112,17 +118,16 @@ share/icons/hicolor/16x16/apps/kcalc.png
 share/icons/hicolor/16x16/apps/kdf.png
 share/icons/hicolor/16x16/apps/kfloppy.png
 share/icons/hicolor/16x16/apps/kgpg.png
-share/icons/hicolor/16x16/apps/kjots.png
 share/icons/hicolor/16x16/apps/ktimer.png
 share/icons/hicolor/16x16/apps/kwalletmanager.png
 share/icons/hicolor/16x16/apps/kwalletmanager2.png
 share/icons/hicolor/16x16/apps/kwikdisk.png
+share/icons/hicolor/16x16/apps/okteta.png
 share/icons/hicolor/16x16/apps/superkaramba.png
 share/icons/hicolor/22x22/apps/kcalc.png
 share/icons/hicolor/22x22/apps/kdf.png
 share/icons/hicolor/22x22/apps/kfloppy.png
 share/icons/hicolor/22x22/apps/kgpg.png
-share/icons/hicolor/22x22/apps/kjots.png
 share/icons/hicolor/22x22/apps/kwalletmanager.png
 share/icons/hicolor/22x22/apps/kwikdisk.png
 share/icons/hicolor/22x22/apps/superkaramba.png
@@ -130,26 +135,25 @@ share/icons/hicolor/32x32/apps/kcalc.png
 share/icons/hicolor/32x32/apps/kdf.png
 share/icons/hicolor/32x32/apps/kfloppy.png
 share/icons/hicolor/32x32/apps/kgpg.png
-share/icons/hicolor/32x32/apps/kjots.png
 share/icons/hicolor/32x32/apps/ktimer.png
 share/icons/hicolor/32x32/apps/kwalletmanager.png
 share/icons/hicolor/32x32/apps/kwalletmanager2.png
 share/icons/hicolor/32x32/apps/kwikdisk.png
+share/icons/hicolor/32x32/apps/okteta.png
 share/icons/hicolor/32x32/apps/superkaramba.png
 share/icons/hicolor/48x48/apps/kcalc.png
 share/icons/hicolor/48x48/apps/kdf.png
 share/icons/hicolor/48x48/apps/kfloppy.png
 share/icons/hicolor/48x48/apps/kgpg.png
-share/icons/hicolor/48x48/apps/kjots.png
 share/icons/hicolor/48x48/apps/ktimer.png
 share/icons/hicolor/48x48/apps/kwalletmanager.png
 share/icons/hicolor/48x48/apps/kwalletmanager2.png
 share/icons/hicolor/48x48/apps/kwikdisk.png
+share/icons/hicolor/48x48/apps/okteta.png
 share/icons/hicolor/48x48/apps/superkaramba.png
 share/icons/hicolor/64x64/apps/kcalc.png
 share/icons/hicolor/64x64/apps/kdf.png
 share/icons/hicolor/64x64/apps/kfloppy.png
-share/icons/hicolor/64x64/apps/kjots.png
 share/icons/hicolor/64x64/apps/kwalletmanager.png
 share/icons/hicolor/64x64/apps/kwalletmanager2.png
 share/icons/hicolor/64x64/apps/kwikdisk.png
@@ -208,42 +212,36 @@ share/kde/apps/kgpg/pics/kgpg_anim.gif
 share/kde/apps/kgpg/pics/kgpg_blank.png
 share/kde/apps/kgpg/pics/kgpg_fill.png
 share/kde/apps/kgpg/tips
-share/kde/apps/kjots/kjotsui.rc
-share/kde/apps/kjots/pics/filedel.png
 share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions/folder_closed.png
 share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions/folder_open.png
 share/kde/apps/kwalletmanager/kwalleteditor.rc
 share/kde/apps/kwalletmanager/kwalletmanager.rc
+share/kde/apps/okteta/oktetaui.rc
+share/kde/apps/oktetapart/oktetapartui.rc
 share/kde/apps/superkaramba/superkarambaui.rc
 share/kde/apps/sweeper/sweeperui.rc
 share/kde/autostart/kgpg.desktop
 share/kde/config.kcfg/ark.kcfg
 share/kde/config.kcfg/kcalc.kcfg
 share/kde/config.kcfg/kgpg.kcfg
-share/kde/config.kcfg/kjots.kcfg
 share/kde/config/superkaramba.knsrc
 share/kde4/services/ServiceMenus/encryptfile.desktop
 share/kde4/services/ServiceMenus/encryptfolder.desktop
 share/kde4/services/ServiceMenus/floppy_format.desktop
 share/kde4/services/ark_part.desktop
+share/kde4/services/kbytearrayedit.desktop
 share/kde4/services/kcmdf.desktop
-share/kde4/services/kded/kmilod.desktop
 share/kde4/services/kerfuffle_bk.desktop
-share/kde4/services/kerfuffle_karchive.desktop
 share/kde4/services/kerfuffle_libarchive.desktop
 share/kde4/services/kerfuffle_libzip.desktop
-share/kde4/services/kmilo/kmilo_asus.desktop
-share/kde4/services/kmilo/kmilo_thinkpad.desktop
+share/kde4/services/kerfuffle_rar.desktop
 share/kde4/services/kwalletconfig.desktop
 share/kde4/services/kwalletmanager_show.desktop
-share/kde4/services/plasma-skapplet-default.desktop
-share/kde4/services/thinkpad.desktop
+share/kde4/services/oktetapart.desktop
+share/kde4/services/plasma-package-superkaramba.desktop
+share/kde4/services/plasma-scriptengine-superkaramba.desktop
 share/kde4/servicetypes/kerfufflePlugin.desktop
-share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
-@dirrm share/kde4/servicetypes/kmilo
 @comment in kde: @dirrm share/kde4/servicetypes
-@dirrm share/kde4/services/kmilo
-@comment in kde: @dirrm share/kde4/services/kded
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
@@ -251,13 +249,13 @@ share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/sweeper
 @dirrm share/kde/apps/superkaramba
+@dirrm share/kde/apps/oktetapart
+@dirrm share/kde/apps/okteta
 @dirrm share/kde/apps/kwalletmanager/icons/oxygen/22x22/actions
 @dirrm share/kde/apps/kwalletmanager/icons/oxygen/22x22
 @dirrm share/kde/apps/kwalletmanager/icons/oxygen
 @dirrm share/kde/apps/kwalletmanager/icons
 @dirrm share/kde/apps/kwalletmanager
-@dirrm share/kde/apps/kjots/pics
-@dirrm share/kde/apps/kjots
 @dirrm share/kde/apps/kgpg/pics
 @dirrm share/kde/apps/kgpg/icons/oxygen/scalable/status
 @dirrm share/kde/apps/kgpg/icons/oxygen/scalable/actions
@@ -296,9 +294,9 @@ share/kde4/servicetypes/kmilo/kmilopluginsvc.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/superkaramba
+@dirrm share/doc/kde/HTML/en/okteta
 @dirrm share/doc/kde/HTML/en/kwallet
 @dirrm share/doc/kde/HTML/en/ktimer
-@dirrm share/doc/kde/HTML/en/kjots
 @dirrm share/doc/kde/HTML/en/kgpg
 @dirrm share/doc/kde/HTML/en/kfloppy
 @dirrm share/doc/kde/HTML/en/kdf
