@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2972 2008/07/26 07:11:01 kristerw Exp $
+# $Id: Makefile,v 1.2973 2008/07/26 07:12:47 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -400,7 +400,6 @@ SUBDIR+=	gambas2
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcc42
-#SUBDIR+=	gcl	# broken beyond repair
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
