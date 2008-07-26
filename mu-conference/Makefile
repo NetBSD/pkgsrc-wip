@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/06/28 03:24:05 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/26 23:50:39 schnoebe Exp $
 #
 
 DISTNAME=		mu-conference_0.7
 PKGNAME=		${DISTNAME:S/_/-/}
-# PKGREVISION=		6
 CATEGORIES=		chat
 MASTER_SITES=		http://download.gna.org/mu-conference/
 
@@ -11,13 +10,10 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://gna.org/projects/mu-conference/
 COMMENT=		Implementation of the JEP-0045 Multi-User Chat protocol
 
-# DEPENDS+=		jabberd-[0-9]*:../../chat/jabberd2
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
-# USE_TOOLS+=		gmake pax pkg-config
 USE_TOOLS+=		pkg-config
 
 RCD_SCRIPTS=		muc
