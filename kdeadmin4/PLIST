@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/11 21:09:15 mwdavies Exp $
-bin/kcron
+@comment $NetBSD: PLIST,v 1.4 2008/07/26 22:45:32 mwdavies Exp $
 bin/kpackage
+bin/ksystemlog
 bin/kuser
-bin/secpolicy
+lib/kde4/kcm_cron.so
 lib/kde4/kcm_knetworkconfmodule.so
 lib/pkgconfig/system-tools-backends.pc
-share/applications/kde4/kcron.desktop
 share/applications/kde4/kpackage.desktop
+share/applications/kde4/ksystemlog.desktop
 share/applications/kde4/kuser.desktop
 share/doc/kde/HTML/en/kcron/common
 share/doc/kde/HTML/en/kcron/index.cache.bz2
@@ -45,33 +45,43 @@ share/doc/kde/HTML/en/kpackage/search.png
 share/doc/kde/HTML/en/kpackage/searchf.png
 share/doc/kde/HTML/en/kpackage/searchl.png
 share/doc/kde/HTML/en/kpackage/uninstall.png
+share/doc/kde/HTML/en/ksystemlog/common
+share/doc/kde/HTML/en/ksystemlog/filter-process.png
+share/doc/kde/HTML/en/ksystemlog/first-opening.png
+share/doc/kde/HTML/en/ksystemlog/groupby-hour.png
+share/doc/kde/HTML/en/ksystemlog/index.cache.bz2
+share/doc/kde/HTML/en/ksystemlog/index.docbook
+share/doc/kde/HTML/en/ksystemlog/main-screen.png
 share/doc/kde/HTML/en/kuser/common
 share/doc/kde/HTML/en/kuser/index.cache.bz2
 share/doc/kde/HTML/en/kuser/index.docbook
 share/doc/kde/HTML/en/kuser/kuser.png
 share/icons/hicolor/128x128/apps/kpackage.png
+share/icons/hicolor/128x128/apps/ksystemlog.png
 share/icons/hicolor/128x128/apps/kuser.png
-share/icons/hicolor/16x16/apps/kcron.png
 share/icons/hicolor/16x16/apps/knetworkconf.png
 share/icons/hicolor/16x16/apps/kpackage.png
+share/icons/hicolor/16x16/apps/ksystemlog.png
 share/icons/hicolor/16x16/apps/kuser.png
 share/icons/hicolor/22x22/actions/network_connected_lan_knc.png
 share/icons/hicolor/22x22/actions/network_disconnected_lan.png
 share/icons/hicolor/22x22/actions/network_disconnected_wlan.png
 share/icons/hicolor/22x22/actions/network_traffic_wlan.png
-share/icons/hicolor/22x22/apps/kcron.png
 share/icons/hicolor/22x22/apps/knetworkconf.png
 share/icons/hicolor/22x22/apps/kpackage.png
+share/icons/hicolor/22x22/apps/ksystemlog.png
 share/icons/hicolor/22x22/apps/kuser.png
-share/icons/hicolor/32x32/apps/kcron.png
 share/icons/hicolor/32x32/apps/knetworkconf.png
 share/icons/hicolor/32x32/apps/kpackage.png
+share/icons/hicolor/32x32/apps/ksystemlog.png
 share/icons/hicolor/32x32/apps/kuser.png
 share/icons/hicolor/48x48/apps/kpackage.png
+share/icons/hicolor/48x48/apps/ksystemlog.png
 share/icons/hicolor/48x48/apps/kuser.png
 share/icons/hicolor/64x64/apps/kpackage.png
+share/icons/hicolor/64x64/apps/ksystemlog.png
 share/icons/hicolor/64x64/apps/kuser.png
-share/kde/apps/kcron/kcronui.rc
+share/icons/hicolor/scalable/apps/ksystemlog.svgz
 share/kde/apps/knetworkconf/backends/debug.pl
 share/kde/apps/knetworkconf/backends/file.pl
 share/kde/apps/knetworkconf/backends/general.pl
@@ -128,6 +138,7 @@ share/kde/apps/kpackage/pics/slack.png
 share/kde/apps/kpackage/pics/snew.png
 share/kde/apps/kpackage/pics/supdated.png
 share/kde/apps/kpackage/pics/tick.png
+share/kde/apps/ksystemlog/ksystemlogui.rc
 share/kde/apps/kuser/icons/oxygen/22x22/actions/user-group-delete.png
 share/kde/apps/kuser/icons/oxygen/22x22/actions/user-group-properties.png
 share/kde/apps/kuser/kuserui.rc
@@ -135,6 +146,7 @@ share/kde/apps/kuser/pics/group.png
 share/kde/apps/kuser/pics/user.png
 share/kde/config.kcfg/kpackageSettings.kcfg
 share/kde/config.kcfg/kuser.kcfg
+share/kde4/services/kcm_cron.desktop
 share/kde4/services/kcm_knetworkconfmodule.desktop
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
@@ -144,13 +156,14 @@ share/kde4/services/kcm_knetworkconfmodule.desktop
 @dirrm share/kde/apps/kuser/icons/oxygen
 @dirrm share/kde/apps/kuser/icons
 @dirrm share/kde/apps/kuser
+@dirrm share/kde/apps/ksystemlog
 @dirrm share/kde/apps/kpackage/pics
 @dirrm share/kde/apps/kpackage
 @dirrm share/kde/apps/knetworkconf/pixmaps
 @dirrm share/kde/apps/knetworkconf/backends
 @dirrm share/kde/apps/knetworkconf
-@dirrm share/kde/apps/kcron
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
@@ -160,6 +173,7 @@ share/kde4/services/kcm_knetworkconfmodule.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/kuser
+@dirrm share/doc/kde/HTML/en/ksystemlog
 @dirrm share/doc/kde/HTML/en/kpackage
 @dirrm share/doc/kde/HTML/en/knetworkconf
 @dirrm share/doc/kde/HTML/en/kcron

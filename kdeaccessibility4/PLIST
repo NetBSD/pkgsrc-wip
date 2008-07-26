@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/07 21:18:40 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/26 22:44:20 mwdavies Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -19,7 +19,7 @@ lib/kde4/libkttsd_xmltransformerplugin.so
 lib/kde4/libkttsjobmgrpart.so
 lib/libkttsd.so
 lib/libkttsd.so.4
-lib/libkttsd.so.4.0.4
+lib/libkttsd.so.4.1.0
 share/applications/kde4/kmag.desktop
 share/applications/kde4/kmousetool.desktop
 share/applications/kde4/kmouth.desktop

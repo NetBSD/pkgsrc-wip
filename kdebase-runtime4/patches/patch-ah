@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2007/12/22 21:08:52 mwdavies Exp $
+$NetBSD: patch-ah,v 1.2 2008/07/26 22:49:38 mwdavies Exp $
 
---- khelpcenter/docmetainfo.cpp.orig	2007-12-23 08:54:52.000000000 +1300
+--- khelpcenter/docmetainfo.cpp.orig	2008-01-15 14:50:04.000000000 +1300
 +++ khelpcenter/docmetainfo.cpp
 @@ -140,7 +140,7 @@ void DocMetaInfo::scanMetaInfo( bool for
  
    if ( metaInfos.isEmpty() ) {
      KStandardDirs* kstd = KGlobal::dirs();
--    kstd->addResourceType( "data", 0, QLatin1String("share/apps/khelpcenter") );
-+    kstd->addResourceType( "data", 0, QLatin1String("share/kde/apps/khelpcenter") );
-     metaInfos = kstd->findDirs( "data", "plugins" );
+-    //kstd->addResourceType( "data", 0, QLatin1String("share/apps/khelpcenter") );
++    //kstd->addResourceType( "data", 0, QLatin1String("share/kde/apps/khelpcenter") );
+     metaInfos = kstd->findDirs( "appdata", "plugins" );
    }
    for( it = metaInfos.begin(); it != metaInfos.end(); ++it) {

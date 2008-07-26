@@ -1,14 +1,80 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/07 21:18:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/26 22:42:58 mwdavies Exp $
+include/akonadi/agentbase.h
+include/akonadi/agentfilterproxymodel.h
+include/akonadi/agentinstance.h
+include/akonadi/agentinstancecreatejob.h
+include/akonadi/agentinstancemodel.h
+include/akonadi/agentinstancewidget.h
+include/akonadi/agentmanager.h
+include/akonadi/agenttype.h
+include/akonadi/agenttypemodel.h
+include/akonadi/agenttypewidget.h
+include/akonadi/akonadi_export.h
+include/akonadi/attribute.h
+include/akonadi/attributefactory.h
+include/akonadi/cachepolicy.h
+include/akonadi/changerecorder.h
+include/akonadi/collection.h
+include/akonadi/collectioncopyjob.h
+include/akonadi/collectioncreatejob.h
+include/akonadi/collectiondeletejob.h
+include/akonadi/collectionfetchjob.h
+include/akonadi/collectionfilterproxymodel.h
+include/akonadi/collectionmodel.h
+include/akonadi/collectionmodifyjob.h
+include/akonadi/collectionpropertiesdialog.h
+include/akonadi/collectionpropertiespage.h
+include/akonadi/collectionstatistics.h
+include/akonadi/collectionstatisticsdelegate.h
+include/akonadi/collectionstatisticsjob.h
+include/akonadi/collectionstatisticsmodel.h
+include/akonadi/collectionview.h
+include/akonadi/control.h
+include/akonadi/entity.h
+include/akonadi/item.h
+include/akonadi/itemcopyjob.h
+include/akonadi/itemcreatejob.h
+include/akonadi/itemdeletejob.h
+include/akonadi/itemfetchjob.h
+include/akonadi/itemfetchscope.h
+include/akonadi/itemmodel.h
+include/akonadi/itemmodifyjob.h
+include/akonadi/itemmonitor.h
+include/akonadi/itemmovejob.h
+include/akonadi/itempayloadinternals_p.h
+include/akonadi/itemserializerplugin.h
+include/akonadi/itemsync.h
+include/akonadi/itemview.h
+include/akonadi/job.h
+include/akonadi/kmime/akonadi-kmime_export.h
+include/akonadi/kmime/messagemodel.h
+include/akonadi/kmime/messageparts.h
+include/akonadi/kmime/messagethreaderproxymodel.h
+include/akonadi/kmime/messagethreadingattribute.h
+include/akonadi/monitor.h
+include/akonadi/private/collectionpathresolver_p.h
+include/akonadi/resourcebase.h
+include/akonadi/searchcreatejob.h
+include/akonadi/session.h
+include/akonadi/standardactionmanager.h
+include/akonadi/transactionjobs.h
+include/akonadi/transactionsequence.h
 include/gpgme++/context.h
 include/gpgme++/data.h
 include/gpgme++/decryptionresult.h
+include/gpgme++/editinteractor.h
 include/gpgme++/encryptionresult.h
 include/gpgme++/engineinfo.h
 include/gpgme++/error.h
 include/gpgme++/eventloopinteractor.h
+include/gpgme++/exception.h
 include/gpgme++/global.h
+include/gpgme++/gpgadduserideditinteractor.h
 include/gpgme++/gpgme++_export.h
 include/gpgme++/gpgmefw.h
+include/gpgme++/gpgsetexpirytimeeditinteractor.h
+include/gpgme++/gpgsetownertrusteditinteractor.h
+include/gpgme++/gpgsignkeyeditinteractor.h
 include/gpgme++/importresult.h
 include/gpgme++/interfaces/dataprovider.h
 include/gpgme++/interfaces/passphraseprovider.h
@@ -85,6 +151,7 @@ include/kcal/exceptions.h
 include/kcal/filestorage.h
 include/kcal/freebusy.h
 include/kcal/freebusycache.h
+include/kcal/freebusyperiod.h
 include/kcal/freebusyurlstore.h
 include/kcal/htmlexport.h
 include/kcal/htmlexportsettings.h
@@ -153,6 +220,7 @@ include/kpimidentities/identitycombo.h
 include/kpimidentities/identitymanager.h
 include/kpimidentities/kpimidentities_export.h
 include/kpimidentities/signature.h
+include/kpimidentities/signatureconfigurator.h
 include/kpimutils/email.h
 include/kpimutils/kfileio.h
 include/kpimutils/kpimutils_export.h
@@ -190,7 +258,6 @@ include/mailtransport/transportconfigdialog.h
 include/mailtransport/transportjob.h
 include/mailtransport/transportmanagementwidget.h
 include/mailtransport/transportmanager.h
-include/mailtransport/transporttypedialog.h
 include/qgpgme/dataprovider.h
 include/qgpgme/eventloopinteractor.h
 include/qgpgme/qgpgme_export.h
@@ -278,59 +345,71 @@ lib/kde4/kio_nntp.so
 lib/kde4/kio_pop3.so
 lib/kde4/kio_sieve.so
 lib/kde4/kio_smtp.so
+lib/libakonadi-kde.so
+lib/libakonadi-kde.so.4
+lib/libakonadi-kde.so.4.1.0
+lib/libakonadi-kmime.so
+lib/libakonadi-kmime.so.4
+lib/libakonadi-kmime.so.4.1.0
 lib/libgpgme++-pthread.so
-lib/libgpgme++-pthread.so.1.0.0
+lib/libgpgme++-pthread.so.2
+lib/libgpgme++-pthread.so.2.0.0
 lib/libgpgme++.so
-lib/libgpgme++.so.1.0.0
+lib/libgpgme++.so.2
+lib/libgpgme++.so.2.0.0
 lib/libkabc.so
 lib/libkabc.so.4
-lib/libkabc.so.4.0.4
+lib/libkabc.so.4.1.0
 lib/libkabc_file_core.so
 lib/libkabc_file_core.so.4
-lib/libkabc_file_core.so.4.0.4
+lib/libkabc_file_core.so.4.1.0
 lib/libkblog.so
 lib/libkblog.so.4
-lib/libkblog.so.4.0.4
+lib/libkblog.so.4.1.0
 lib/libkcal.so
 lib/libkcal.so.4
-lib/libkcal.so.4.0.4
+lib/libkcal.so.4.1.0
 lib/libkimap.so
 lib/libkimap.so.4
-lib/libkimap.so.4.0.4
+lib/libkimap.so.4.1.0
 lib/libkldap.so
 lib/libkldap.so.4
-lib/libkldap.so.4.0.4
+lib/libkldap.so.4.1.0
 lib/libkmime.so
 lib/libkmime.so.4
-lib/libkmime.so.4.0.4
+lib/libkmime.so.4.1.0
 lib/libkpimidentities.so
 lib/libkpimidentities.so.4
-lib/libkpimidentities.so.4.0.4
+lib/libkpimidentities.so.4.1.0
 lib/libkpimutils.so
 lib/libkpimutils.so.4
-lib/libkpimutils.so.4.0.4
+lib/libkpimutils.so.4.1.0
 lib/libkresources.so
 lib/libkresources.so.4
-lib/libkresources.so.4.0.4
+lib/libkresources.so.4.1.0
 lib/libktnef.so
 lib/libktnef.so.4
-lib/libktnef.so.4.0.4
+lib/libktnef.so.4.1.0
 lib/libkxmlrpcclient.so
 lib/libkxmlrpcclient.so.4
-lib/libkxmlrpcclient.so.4.0.4
+lib/libkxmlrpcclient.so.4.1.0
 lib/libmailtransport.so
 lib/libmailtransport.so.4
-lib/libmailtransport.so.4.0.4
+lib/libmailtransport.so.4.1.0
 lib/libqgpgme.so
-lib/libqgpgme.so.1.0.0
+lib/libqgpgme.so.1
+lib/libqgpgme.so.1.0.1
 lib/libsyndication.so
 lib/libsyndication.so.4
-lib/libsyndication.so.4.0.4
+lib/libsyndication.so.4.1.0
+share/apps/akonadi-kde/kcfg2dbus.xsl
 share/dbus-1/interfaces/org.kde.KResourcesManager.xml
 share/dbus-1/interfaces/org.kde.pim.IdentityManager.xml
 share/kde/apps/cmake/modules/CheckTimezone.cmake
+share/kde/apps/cmake/modules/FindAkonadi.cmake
 share/kde/apps/cmake/modules/FindGpgme.cmake
 share/kde/apps/cmake/modules/FindLdap.cmake
+share/kde/apps/cmake/modules/FindLibical.cmake
 share/kde/apps/cmake/modules/FindQGpgme.cmake
 share/kde/apps/cmake/modules/KDEPimLibsDependencies.cmake
 share/kde/apps/kabc/countrytransl.map
@@ -401,6 +480,7 @@ share/kde/apps/libical/zoneinfo/America/Argentina/La_Rioja.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Mendoza.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Rio_Gallegos.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/San_Juan.ics
+share/kde/apps/libical/zoneinfo/America/Argentina/San_Luis.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Tucuman.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Ushuaia.ics
 share/kde/apps/libical/zoneinfo/America/Aruba.ics
@@ -467,6 +547,7 @@ share/kde/apps/libical/zoneinfo/America/Los_Angeles.ics
 share/kde/apps/libical/zoneinfo/America/Maceio.ics
 share/kde/apps/libical/zoneinfo/America/Managua.ics
 share/kde/apps/libical/zoneinfo/America/Manaus.ics
+share/kde/apps/libical/zoneinfo/America/Marigot.ics
 share/kde/apps/libical/zoneinfo/America/Martinique.ics
 share/kde/apps/libical/zoneinfo/America/Mazatlan.ics
 share/kde/apps/libical/zoneinfo/America/Menominee.ics
@@ -502,6 +583,7 @@ share/kde/apps/libical/zoneinfo/America/Santo_Domingo.ics
 share/kde/apps/libical/zoneinfo/America/Sao_Paulo.ics
 share/kde/apps/libical/zoneinfo/America/Scoresbysund.ics
 share/kde/apps/libical/zoneinfo/America/Shiprock.ics
+share/kde/apps/libical/zoneinfo/America/St_Barthelemy.ics
 share/kde/apps/libical/zoneinfo/America/St_Johns.ics
 share/kde/apps/libical/zoneinfo/America/St_Kitts.ics
 share/kde/apps/libical/zoneinfo/America/St_Lucia.ics
@@ -555,6 +637,7 @@ share/kde/apps/libical/zoneinfo/Asia/Dubai.ics
 share/kde/apps/libical/zoneinfo/Asia/Dushanbe.ics
 share/kde/apps/libical/zoneinfo/Asia/Gaza.ics
 share/kde/apps/libical/zoneinfo/Asia/Harbin.ics
+share/kde/apps/libical/zoneinfo/Asia/Ho_Chi_Minh.ics
 share/kde/apps/libical/zoneinfo/Asia/Hong_Kong.ics
 share/kde/apps/libical/zoneinfo/Asia/Hovd.ics
 share/kde/apps/libical/zoneinfo/Asia/Irkutsk.ics
@@ -567,6 +650,7 @@ share/kde/apps/libical/zoneinfo/Asia/Kamchatka.ics
 share/kde/apps/libical/zoneinfo/Asia/Karachi.ics
 share/kde/apps/libical/zoneinfo/Asia/Kashgar.ics
 share/kde/apps/libical/zoneinfo/Asia/Katmandu.ics
+share/kde/apps/libical/zoneinfo/Asia/Kolkata.ics
 share/kde/apps/libical/zoneinfo/Asia/Krasnoyarsk.ics
 share/kde/apps/libical/zoneinfo/Asia/Kuala_Lumpur.ics
 share/kde/apps/libical/zoneinfo/Asia/Kuching.ics
@@ -736,7 +820,6 @@ share/kde/apps/libical/zoneinfo/Pacific/Wake.ics
 share/kde/apps/libical/zoneinfo/Pacific/Wallis.ics
 share/kde/apps/libical/zoneinfo/zones.tab
 share/kde/config.kcfg/mailtransport.kcfg
-share/kde/config.kcfg/pimemoticons.kcfg
 share/kde4/services/imap4.protocol
 share/kde4/services/imaps.protocol
 share/kde4/services/kcm_mailtransport.desktop
@@ -788,6 +871,7 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/dbus-1/interfaces
+@dirrm share/apps/akonadi-kde
 @comment in kde: @dirrm lib/kde4
 @dirrm lib/gpgmepp
 @dirrm include/syndication/rss2
@@ -809,3 +893,4 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @dirrm include/kabc
 @dirrm include/gpgme++/interfaces
 @dirrm include/gpgme++
+@dirrm include/akonadi/kmime

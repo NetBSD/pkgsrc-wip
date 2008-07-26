@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/06/07 21:18:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/07/26 22:49:38 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -9,6 +9,7 @@ bin/kdebugdialog
 bin/kfile4
 bin/khelpcenter
 bin/khotnewstuff4
+bin/kiconfinder
 bin/kioclient
 bin/kmimetypefinder
 bin/knotify4
@@ -20,30 +21,37 @@ bin/ktraderclient
 bin/ktrash
 bin/kuiserver
 bin/kwriteconfig
+bin/nepomukserver
+bin/nepomukservicestub
+bin/solid-hardware
+lib/kconf_update_bin/phonon_devicepreference_update
 lib/kde4/cursorthumbnail.so
 lib/kde4/djvuthumbnail.so
 lib/kde4/exrthumbnail.so
+lib/kde4/fixhosturifilter.so
 lib/kde4/htmlthumbnail.so
 lib/kde4/imagethumbnail.so
 lib/kde4/kcm_cgi.so
 lib/kde4/kcm_componentchooser.so
+lib/kde4/kcm_emoticons.so
 lib/kde4/kcm_icons.so
-lib/kde4/kcm_ioslaveinfo.so
 lib/kde4/kcm_kded.so
 lib/kde4/kcm_kdnssd.so
 lib/kde4/kcm_knotify.so
 lib/kde4/kcm_locale.so
 lib/kde4/kcm_nepomuk.so
+lib/kde4/kcm_phonon.so
 lib/kde4/kcm_phononxine.so
-lib/kde4/kcm_samba.so
+lib/kde4/kcmspellchecking.so
+lib/kde4/kded_desktopnotifier.so
 lib/kde4/kded_kpasswdserver.so
 lib/kde4/kded_ktimezoned.so
-lib/kde4/kded_nepomukserver.so
 lib/kde4/kded_remotedirnotify.so
 lib/kde4/kded_soliduiserver.so
 lib/kde4/kio_about.so
 lib/kde4/kio_archive.so
 lib/kde4/kio_cgi.so
+lib/kde4/kio_desktop.so
 lib/kde4/kio_filter.so
 lib/kde4/kio_finger.so
 lib/kde4/kio_fish.so
@@ -56,7 +64,10 @@ lib/kde4/kio_settings.so
 lib/kde4/kio_sftp.so
 lib/kde4/kio_thumbnail.so
 lib/kde4/kio_trash.so
+lib/kde4/kshorturifilter.so
 lib/kde4/kstyle_oxygen_config.so
+lib/kde4/kuriikwsfilter.so
+lib/kde4/kurisearchfilter.so
 lib/kde4/libexec/drkonqi
 lib/kde4/libexec/kdeeject
 lib/kde4/libexec/kdesu
@@ -69,44 +80,81 @@ lib/kde4/libexec/khc_mansearch.pl
 lib/kde4/libexec/kioexec
 lib/kde4/libexec/klocaldomainurifilterhelper
 lib/kde4/libexec/knetattach
-lib/kde4/libfixhosturifilter.so
 lib/kde4/libkmanpart.so
-lib/kde4/libkshorturifilter.so
-lib/kde4/libkuriikwsfilter.so
-lib/kde4/libkurisearchfilter.so
-lib/kde4/liblocaldomainurifilter.so
 lib/kde4/librenaudioplugin.so
 lib/kde4/librenimageplugin.so
+lib/kde4/localdomainurifilter.so
+lib/kde4/nepomukfilewatch.so
+lib/kde4/nepomukmigration1.so
+lib/kde4/nepomukontologyloader.so
+lib/kde4/nepomukstorage.so
+lib/kde4/nepomukstrigiservice.so
 lib/kde4/phonon_xine.so
+lib/kde4/plugins/phonon_platform/kde.so
 lib/kde4/plugins/styles/oxygen.so
 lib/kde4/svgthumbnail.so
 lib/kde4/textthumbnail.so
+lib/libkaudiodevicelist.so
+lib/libkaudiodevicelist.so.4
+lib/libkaudiodevicelist.so.4.1.0
 lib/libkdeinit4_kcmshell4.so
 lib/libkdeinit4_khelpcenter.so
 lib/libkdeinit4_kuiserver.so
+lib/libkdeinit4_nepomukserver.so
 lib/strigi/strigiindex_sopranobackend.so
 man/man1/kdesu.1
 share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
 share/dbus-1/interfaces/org.kde.KTimeZoned.xml
+share/dbus-1/interfaces/org.kde.NepomukServer.xml
 share/dbus-1/interfaces/org.kde.khelpcenter.kcmhelpcenter.xml
+share/dbus-1/interfaces/org.kde.nepomuk.ServiceControl.xml
+share/dbus-1/interfaces/org.kde.nepomuk.ServiceManager.xml
 share/dbus-1/services/org.kde.knotify.service
+share/desktop-directories/kde-development-translation.directory
+share/desktop-directories/kde-development-webdevelopment.directory
+share/desktop-directories/kde-development.directory
+share/desktop-directories/kde-editors.directory
+share/desktop-directories/kde-edu-languages.directory
+share/desktop-directories/kde-edu-mathematics.directory
+share/desktop-directories/kde-edu-miscellaneous.directory
+share/desktop-directories/kde-edu-science.directory
+share/desktop-directories/kde-edu-tools.directory
+share/desktop-directories/kde-education.directory
+share/desktop-directories/kde-games-arcade.directory
+share/desktop-directories/kde-games-board.directory
+share/desktop-directories/kde-games-card.directory
+share/desktop-directories/kde-games-kids.directory
+share/desktop-directories/kde-games-roguelikes.directory
+share/desktop-directories/kde-games-strategy.directory
+share/desktop-directories/kde-games.directory
+share/desktop-directories/kde-graphics.directory
 share/desktop-directories/kde-information.directory
+share/desktop-directories/kde-internet-terminal.directory
+share/desktop-directories/kde-internet.directory
+share/desktop-directories/kde-main.directory
+share/desktop-directories/kde-more.directory
+share/desktop-directories/kde-multimedia.directory
+share/desktop-directories/kde-office.directory
+share/desktop-directories/kde-science.directory
+share/desktop-directories/kde-settingsmenu.directory
+share/desktop-directories/kde-system-terminal.directory
+share/desktop-directories/kde-system.directory
+share/desktop-directories/kde-toys.directory
+share/desktop-directories/kde-unknown.directory
+share/desktop-directories/kde-utilities-accessibility.directory
+share/desktop-directories/kde-utilities-desktop.directory
+share/desktop-directories/kde-utilities-file.directory
+share/desktop-directories/kde-utilities-peripherals.directory
+share/desktop-directories/kde-utilities-pim.directory
+share/desktop-directories/kde-utilities-xutils.directory
+share/desktop-directories/kde-utilities.directory
 share/doc/kde/HTML/en/kcontrol/background/common
 share/doc/kde/HTML/en/kcontrol/background/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/background/index.docbook
-share/doc/kde/HTML/en/kcontrol/bell/common
-share/doc/kde/HTML/en/kcontrol/bell/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/bell/index.docbook
 share/doc/kde/HTML/en/kcontrol/cache/common
 share/doc/kde/HTML/en/kcontrol/cache/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/cache/index.docbook
-share/doc/kde/HTML/en/kcontrol/clock/common
-share/doc/kde/HTML/en/kcontrol/clock/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/clock/index.docbook
-share/doc/kde/HTML/en/kcontrol/colors/common
-share/doc/kde/HTML/en/kcontrol/colors/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/colors/index.docbook
 share/doc/kde/HTML/en/kcontrol/common
 share/doc/kde/HTML/en/kcontrol/cookies/common
 share/doc/kde/HTML/en/kcontrol/cookies/index.cache.bz2
@@ -126,9 +174,10 @@ share/doc/kde/HTML/en/kcontrol/ebrowsing/index.docbook
 share/doc/kde/HTML/en/kcontrol/email/common
 share/doc/kde/HTML/en/kcontrol/email/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/email/index.docbook
-share/doc/kde/HTML/en/kcontrol/energy/common
-share/doc/kde/HTML/en/kcontrol/energy/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/energy/index.docbook
+share/doc/kde/HTML/en/kcontrol/emoticons/common
+share/doc/kde/HTML/en/kcontrol/emoticons/emoticons.png
+share/doc/kde/HTML/en/kcontrol/emoticons/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/emoticons/index.docbook
 share/doc/kde/HTML/en/kcontrol/filemanager/common
 share/doc/kde/HTML/en/kcontrol/filemanager/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/filemanager/index.docbook
@@ -137,23 +186,21 @@ share/doc/kde/HTML/en/kcontrol/filemanager/kfileman2.png
 share/doc/kde/HTML/en/kcontrol/filetypes/common
 share/doc/kde/HTML/en/kcontrol/filetypes/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/filetypes/index.docbook
-share/doc/kde/HTML/en/kcontrol/fontinst/common
-share/doc/kde/HTML/en/kcontrol/fontinst/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/fontinst/index.docbook
-share/doc/kde/HTML/en/kcontrol/fonts/common
-share/doc/kde/HTML/en/kcontrol/fonts/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/fonts/index.docbook
 share/doc/kde/HTML/en/kcontrol/helpindex/common
 share/doc/kde/HTML/en/kcontrol/helpindex/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/helpindex/index.docbook
 share/doc/kde/HTML/en/kcontrol/icons/common
+share/doc/kde/HTML/en/kcontrol/icons/delete-theme.png
+share/doc/kde/HTML/en/kcontrol/icons/effects.png
+share/doc/kde/HTML/en/kcontrol/icons/get-new-theme.png
 share/doc/kde/HTML/en/kcontrol/icons/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/icons/index.docbook
+share/doc/kde/HTML/en/kcontrol/icons/install-theme.png
+share/doc/kde/HTML/en/kcontrol/icons/main.png
+share/doc/kde/HTML/en/kcontrol/icons/size.png
+share/doc/kde/HTML/en/kcontrol/icons/use-of-icons.png
 share/doc/kde/HTML/en/kcontrol/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/index.docbook
-share/doc/kde/HTML/en/kcontrol/kcmaccess/common
-share/doc/kde/HTML/en/kcontrol/kcmaccess/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/kcmaccess/index.docbook
 share/doc/kde/HTML/en/kcontrol/kcmcss/common
 share/doc/kde/HTML/en/kcontrol/kcmcss/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kcmcss/index.docbook
@@ -169,28 +216,16 @@ share/doc/kde/HTML/en/kcontrol/kcmnotify/index.docbook
 share/doc/kde/HTML/en/kcontrol/kcmsmserver/common
 share/doc/kde/HTML/en/kcontrol/kcmsmserver/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kcmsmserver/index.docbook
-share/doc/kde/HTML/en/kcontrol/kcmstyle/common
-share/doc/kde/HTML/en/kcontrol/kcmstyle/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/kcmstyle/index.docbook
 share/doc/kde/HTML/en/kcontrol/kcmtaskbar/common
 share/doc/kde/HTML/en/kcontrol/kcmtaskbar/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kcmtaskbar/index.docbook
 share/doc/kde/HTML/en/kcontrol/kdm/common
 share/doc/kde/HTML/en/kcontrol/kdm/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kdm/index.docbook
-share/doc/kde/HTML/en/kcontrol/keyboard/common
-share/doc/kde/HTML/en/kcontrol/keyboard/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/keyboard/index.docbook
-share/doc/kde/HTML/en/kcontrol/keys/common
-share/doc/kde/HTML/en/kcontrol/keys/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/keys/index.docbook
 share/doc/kde/HTML/en/kcontrol/khtml/common
 share/doc/kde/HTML/en/kcontrol/khtml/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/khtml/index.docbook
 share/doc/kde/HTML/en/kcontrol/khtml/nsplugin.docbook
-share/doc/kde/HTML/en/kcontrol/kwindecoration/common
-share/doc/kde/HTML/en/kcontrol/kwindecoration/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/kwindecoration/index.docbook
 share/doc/kde/HTML/en/kcontrol/language/common
 share/doc/kde/HTML/en/kcontrol/language/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/language/index.docbook
@@ -209,6 +244,10 @@ share/doc/kde/HTML/en/kcontrol/panelappearance/index.docbook
 share/doc/kde/HTML/en/kcontrol/passwords/common
 share/doc/kde/HTML/en/kcontrol/passwords/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/passwords/index.docbook
+share/doc/kde/HTML/en/kcontrol/paths/common
+share/doc/kde/HTML/en/kcontrol/paths/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/paths/index.docbook
+share/doc/kde/HTML/en/kcontrol/paths/paths.png
 share/doc/kde/HTML/en/kcontrol/performance/common
 share/doc/kde/HTML/en/kcontrol/performance/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/performance/index.docbook
@@ -216,13 +255,13 @@ share/doc/kde/HTML/en/kcontrol/proxy/common
 share/doc/kde/HTML/en/kcontrol/proxy/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/proxy/index.docbook
 share/doc/kde/HTML/en/kcontrol/proxy/socks.docbook
-share/doc/kde/HTML/en/kcontrol/screensaver/common
-share/doc/kde/HTML/en/kcontrol/screensaver/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/screensaver/index.docbook
 share/doc/kde/HTML/en/kcontrol/screenshot.png
 share/doc/kde/HTML/en/kcontrol/smb/common
 share/doc/kde/HTML/en/kcontrol/smb/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/smb/index.docbook
+share/doc/kde/HTML/en/kcontrol/spellchecking/common
+share/doc/kde/HTML/en/kcontrol/spellchecking/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/spellchecking/index.docbook
 share/doc/kde/HTML/en/kcontrol/useragent/common
 share/doc/kde/HTML/en/kcontrol/useragent/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/useragent/index.docbook
@@ -484,6 +523,7 @@ share/emoticons/kde4/unlove.png
 share/emoticons/kde4/wilted_rose.png
 share/emoticons/kde4/wink.png
 share/examples/kdebase-runtime4/kde-information.menu
+share/icons/default.kde4
 share/icons/hicolor/128x128/apps/khelpcenter.png
 share/icons/hicolor/128x128/apps/knetattach.png
 share/icons/hicolor/16x16/apps/khelpcenter.png
@@ -498,21 +538,35 @@ share/icons/hicolor/64x64/apps/khelpcenter.png
 share/icons/hicolor/64x64/apps/knetattach.png
 share/icons/hicolor/scalable/apps/khelpcenter.svgz
 share/icons/hicolor/scalable/apps/knetattach.svgz
+share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
+share/icons/oxygen/128x128/actions/appointment-new.png
+share/icons/oxygen/128x128/actions/bookmark-new.png
+share/icons/oxygen/128x128/actions/bookmarks-organize.png
+share/icons/oxygen/128x128/actions/dashboard-show.png
 share/icons/oxygen/128x128/actions/dialog-ok-apply.png
 share/icons/oxygen/128x128/actions/dialog-ok.png
 share/icons/oxygen/128x128/actions/document-preview.png
+share/icons/oxygen/128x128/actions/edit-bomb.png
+share/icons/oxygen/128x128/actions/edit-find.png
 share/icons/oxygen/128x128/actions/go-bottom.png
 share/icons/oxygen/128x128/actions/go-down.png
+share/icons/oxygen/128x128/actions/go-first-page.png
 share/icons/oxygen/128x128/actions/go-first.png
+share/icons/oxygen/128x128/actions/go-last-page.png
 share/icons/oxygen/128x128/actions/go-last.png
+share/icons/oxygen/128x128/actions/go-next-page.png
 share/icons/oxygen/128x128/actions/go-next.png
+share/icons/oxygen/128x128/actions/go-previous-page.png
 share/icons/oxygen/128x128/actions/go-previous.png
 share/icons/oxygen/128x128/actions/go-top.png
 share/icons/oxygen/128x128/actions/go-up.png
+share/icons/oxygen/128x128/actions/insert-horizontal-rule.png
+share/icons/oxygen/128x128/actions/insert-link.png
+share/icons/oxygen/128x128/actions/list-add-user.png
 share/icons/oxygen/128x128/actions/list-remove.png
 share/icons/oxygen/128x128/actions/mail-forward.png
-share/icons/oxygen/128x128/actions/mail-mark-task.png
+share/icons/oxygen/128x128/actions/mail-mark-junk.png
 share/icons/oxygen/128x128/actions/mail-mark-unread-new.png
 share/icons/oxygen/128x128/actions/mail-message-new.png
 share/icons/oxygen/128x128/actions/mail-queue.png
@@ -520,6 +574,8 @@ share/icons/oxygen/128x128/actions/mail-receive.png
 share/icons/oxygen/128x128/actions/mail-reply-all.png
 share/icons/oxygen/128x128/actions/mail-reply-list.png
 share/icons/oxygen/128x128/actions/mail-reply-sender.png
+share/icons/oxygen/128x128/actions/mail-send.png
+share/icons/oxygen/128x128/actions/page-zoom.png
 share/icons/oxygen/128x128/actions/system-lock-screen.png
 share/icons/oxygen/128x128/actions/system-log-out.png
 share/icons/oxygen/128x128/actions/system-restart.png
@@ -532,16 +588,21 @@ share/icons/oxygen/128x128/actions/system-switch-user.png
 share/icons/oxygen/128x128/actions/tools-report-bug.png
 share/icons/oxygen/128x128/actions/tools-wizard.png
 share/icons/oxygen/128x128/actions/transform-move.png
+share/icons/oxygen/128x128/actions/transform-scale.png
 share/icons/oxygen/128x128/actions/user-group-new.png
 share/icons/oxygen/128x128/actions/view-media-lyrics.png
 share/icons/oxygen/128x128/actions/view-media-playlist.png
 share/icons/oxygen/128x128/actions/view-presentation.png
 share/icons/oxygen/128x128/actions/window-duplicate.png
+share/icons/oxygen/128x128/actions/zoom-fit-best.png
+share/icons/oxygen/128x128/actions/zoom-fit-height.png
+share/icons/oxygen/128x128/actions/zoom-fit-width.png
 share/icons/oxygen/128x128/apps/accessories-calculator.png
 share/icons/oxygen/128x128/apps/accessories-character-map.png
 share/icons/oxygen/128x128/apps/accessories-dictionary.png
 share/icons/oxygen/128x128/apps/accessories-text-editor.png
 share/icons/oxygen/128x128/apps/acroread.png
+share/icons/oxygen/128x128/apps/akonadi.png
 share/icons/oxygen/128x128/apps/akregator.png
 share/icons/oxygen/128x128/apps/basket.png
 share/icons/oxygen/128x128/apps/bovo.png
@@ -564,6 +625,7 @@ share/icons/oxygen/128x128/apps/kchart.png
 share/icons/oxygen/128x128/apps/kcolorchooser.png
 share/icons/oxygen/128x128/apps/kde.png
 share/icons/oxygen/128x128/apps/kexi.png
+share/icons/oxygen/128x128/apps/kjots.png
 share/icons/oxygen/128x128/apps/kjournal.png
 share/icons/oxygen/128x128/apps/klipper.png
 share/icons/oxygen/128x128/apps/kmplayer.png
@@ -586,8 +648,10 @@ share/icons/oxygen/128x128/apps/kverbos.png
 share/icons/oxygen/128x128/apps/kwalletmanager.png
 share/icons/oxygen/128x128/apps/kword.png
 share/icons/oxygen/128x128/apps/multimedia-volume-control.png
+share/icons/oxygen/128x128/apps/nepomuk.png
 share/icons/oxygen/128x128/apps/office-address-book.png
 share/icons/oxygen/128x128/apps/office-calendar.png
+share/icons/oxygen/128x128/apps/okteta.png
 share/icons/oxygen/128x128/apps/oxygen.png
 share/icons/oxygen/128x128/apps/phonon-xine.png
 share/icons/oxygen/128x128/apps/plasma.png
@@ -700,6 +764,17 @@ share/icons/oxygen/128x128/devices/video-projector.png
 share/icons/oxygen/128x128/devices/video-television.png
 share/icons/oxygen/128x128/emblems/emblem-mounted.png
 share/icons/oxygen/128x128/emblems/emblem-symbolic-link.png
+share/icons/oxygen/128x128/emotes/face-angel.png
+share/icons/oxygen/128x128/emotes/face-embarrassed.png
+share/icons/oxygen/128x128/emotes/face-kiss.png
+share/icons/oxygen/128x128/emotes/face-laugh.png
+share/icons/oxygen/128x128/emotes/face-plain.png
+share/icons/oxygen/128x128/emotes/face-raspberry.png
+share/icons/oxygen/128x128/emotes/face-sad.png
+share/icons/oxygen/128x128/emotes/face-smile-big.png
+share/icons/oxygen/128x128/emotes/face-smile.png
+share/icons/oxygen/128x128/emotes/face-surprise.png
+share/icons/oxygen/128x128/emotes/face-uncertain.png
 share/icons/oxygen/128x128/mimetypes/application-illustrator.png
 share/icons/oxygen/128x128/mimetypes/application-octet-stream.png
 share/icons/oxygen/128x128/mimetypes/application-pdf.png
@@ -708,6 +783,7 @@ share/icons/oxygen/128x128/mimetypes/application-pgp-keys.png
 share/icons/oxygen/128x128/mimetypes/application-pkcs7-mime.png
 share/icons/oxygen/128x128/mimetypes/application-postscript.png
 share/icons/oxygen/128x128/mimetypes/application-relaxng.png
+share/icons/oxygen/128x128/mimetypes/application-rss+xml.png
 share/icons/oxygen/128x128/mimetypes/application-rtf.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-excel.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-powerpoint.png
@@ -936,6 +1012,7 @@ share/icons/oxygen/128x128/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/128x128/mimetypes/video-x-msvideo.png
 share/icons/oxygen/128x128/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/128x128/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/128x128/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/128x128/mimetypes/x-office-address-book.png
 share/icons/oxygen/128x128/mimetypes/x-office-calendar.png
 share/icons/oxygen/128x128/mimetypes/x-office-document.png
@@ -964,6 +1041,7 @@ share/icons/oxygen/128x128/places/folder-video.png
 share/icons/oxygen/128x128/places/folder-violet.png
 share/icons/oxygen/128x128/places/folder-yellow.png
 share/icons/oxygen/128x128/places/folder.png
+share/icons/oxygen/128x128/places/mail-folder-outbox.png
 share/icons/oxygen/128x128/places/mail-folder-sent
 share/icons/oxygen/128x128/places/network-server-database.png
 share/icons/oxygen/128x128/places/network-server.png
@@ -978,13 +1056,16 @@ share/icons/oxygen/128x128/status/dialog-information.png
 share/icons/oxygen/128x128/status/dialog-password.png
 share/icons/oxygen/128x128/status/dialog-warning.png
 share/icons/oxygen/128x128/status/image-missing.png
+share/icons/oxygen/128x128/status/mail-queued.png
 share/icons/oxygen/128x128/status/mail-unread-new.png
 share/icons/oxygen/128x128/status/script-error.png
 share/icons/oxygen/128x128/status/security-high.png
 share/icons/oxygen/128x128/status/security-low.png
 share/icons/oxygen/128x128/status/security-medium.png
 share/icons/oxygen/128x128/status/user-trash-full.png
+share/icons/oxygen/16x16/actions/address-book-new.png
 share/icons/oxygen/16x16/actions/application-exit.png
+share/icons/oxygen/16x16/actions/appointment-new.png
 share/icons/oxygen/16x16/actions/archive-extract.png
 share/icons/oxygen/16x16/actions/archive-insert-directory.png
 share/icons/oxygen/16x16/actions/archive-insert.png
@@ -1000,6 +1081,7 @@ share/icons/oxygen/16x16/actions/arrow-up.png
 share/icons/oxygen/16x16/actions/bookmark-new-list.png
 share/icons/oxygen/16x16/actions/bookmark-new.png
 share/icons/oxygen/16x16/actions/bookmark-toolbar.png
+share/icons/oxygen/16x16/actions/bookmarks-organize.png
 share/icons/oxygen/16x16/actions/character-set.png
 share/icons/oxygen/16x16/actions/chronometer.png
 share/icons/oxygen/16x16/actions/color-picker.png
@@ -1007,6 +1089,7 @@ share/icons/oxygen/16x16/actions/configure-shortcuts.png
 share/icons/oxygen/16x16/actions/configure-toolbars.png
 share/icons/oxygen/16x16/actions/configure.png
 share/icons/oxygen/16x16/actions/contact-new.png
+share/icons/oxygen/16x16/actions/dashboard-show.png
 share/icons/oxygen/16x16/actions/dialog-cancel.png
 share/icons/oxygen/16x16/actions/dialog-close.png
 share/icons/oxygen/16x16/actions/dialog-ok-apply.png
@@ -1035,6 +1118,7 @@ share/icons/oxygen/16x16/actions/draw-brush.png
 share/icons/oxygen/16x16/actions/draw-eraser.png
 share/icons/oxygen/16x16/actions/draw-freehand.png
 share/icons/oxygen/16x16/actions/draw-text.png
+share/icons/oxygen/16x16/actions/edit-bomb.png
 share/icons/oxygen/16x16/actions/edit-clear-history.png
 share/icons/oxygen/16x16/actions/edit-clear-list.png
 share/icons/oxygen/16x16/actions/edit-clear-locationbar-ltr.png
@@ -1042,12 +1126,12 @@ share/icons/oxygen/16x16/actions/edit-clear-locationbar-rtl.png
 share/icons/oxygen/16x16/actions/edit-clear.png
 share/icons/oxygen/16x16/actions/edit-copy.png
 share/icons/oxygen/16x16/actions/edit-cut.png
-share/icons/oxygen/16x16/actions/edit-delete-mail.png
 share/icons/oxygen/16x16/actions/edit-delete-shred.png
 share/icons/oxygen/16x16/actions/edit-delete.png
 share/icons/oxygen/16x16/actions/edit-find-mail.png
 share/icons/oxygen/16x16/actions/edit-find-user.png
 share/icons/oxygen/16x16/actions/edit-find.png
+share/icons/oxygen/16x16/actions/edit-link.png
 share/icons/oxygen/16x16/actions/edit-paste.png
 share/icons/oxygen/16x16/actions/edit-redo.png
 share/icons/oxygen/16x16/actions/edit-rename.png
@@ -1079,6 +1163,7 @@ share/icons/oxygen/16x16/actions/format-list-ordered.png
 share/icons/oxygen/16x16/actions/format-list-unordered.png
 share/icons/oxygen/16x16/actions/format-stroke-color.png
 share/icons/oxygen/16x16/actions/format-text-bold.png
+share/icons/oxygen/16x16/actions/format-text-color.png
 share/icons/oxygen/16x16/actions/format-text-direction-ltr.png
 share/icons/oxygen/16x16/actions/format-text-direction-rtl.png
 share/icons/oxygen/16x16/actions/format-text-italic.png
@@ -1101,13 +1186,17 @@ share/icons/oxygen/16x16/actions/get-hot-new-stuff.png
 share/icons/oxygen/16x16/actions/go-bottom.png
 share/icons/oxygen/16x16/actions/go-down-search.png
 share/icons/oxygen/16x16/actions/go-down.png
+share/icons/oxygen/16x16/actions/go-first-page.png
 share/icons/oxygen/16x16/actions/go-first.png
 share/icons/oxygen/16x16/actions/go-home.png
 share/icons/oxygen/16x16/actions/go-jump-locationbar.png
 share/icons/oxygen/16x16/actions/go-jump-today.png
 share/icons/oxygen/16x16/actions/go-jump.png
+share/icons/oxygen/16x16/actions/go-last-page.png
 share/icons/oxygen/16x16/actions/go-last.png
+share/icons/oxygen/16x16/actions/go-next-page.png
 share/icons/oxygen/16x16/actions/go-next.png
+share/icons/oxygen/16x16/actions/go-previous-page.png
 share/icons/oxygen/16x16/actions/go-previous.png
 share/icons/oxygen/16x16/actions/go-top.png
 share/icons/oxygen/16x16/actions/go-up-search.png
@@ -1116,10 +1205,11 @@ share/icons/oxygen/16x16/actions/help-about.png
 share/icons/oxygen/16x16/actions/help-contents.png
 share/icons/oxygen/16x16/actions/help-contextual.png
 share/icons/oxygen/16x16/actions/help-hint.png
+share/icons/oxygen/16x16/actions/insert-horizontal-rule.png
 share/icons/oxygen/16x16/actions/insert-image.png
+share/icons/oxygen/16x16/actions/insert-link.png
 share/icons/oxygen/16x16/actions/insert-table.png
 share/icons/oxygen/16x16/actions/insert-text.png
-share/icons/oxygen/16x16/actions/khotnewstuff.png
 share/icons/oxygen/16x16/actions/list-add-font.png
 share/icons/oxygen/16x16/actions/list-add-user.png
 share/icons/oxygen/16x16/actions/list-add.png
@@ -1128,6 +1218,7 @@ share/icons/oxygen/16x16/actions/list-remove.png
 share/icons/oxygen/16x16/actions/mail-flag.png
 share/icons/oxygen/16x16/actions/mail-forward.png
 share/icons/oxygen/16x16/actions/mail-mark-important.png
+share/icons/oxygen/16x16/actions/mail-mark-junk.png
 share/icons/oxygen/16x16/actions/mail-mark-notjunk.png
 share/icons/oxygen/16x16/actions/mail-mark-read.png
 share/icons/oxygen/16x16/actions/mail-mark-task.png
@@ -1153,8 +1244,11 @@ share/icons/oxygen/16x16/actions/network-connect.png
 share/icons/oxygen/16x16/actions/network-disconnect.png
 share/icons/oxygen/16x16/actions/news-subscribe.png
 share/icons/oxygen/16x16/actions/news-unsubscribe.png
+share/icons/oxygen/16x16/actions/object-flip-horizontal.png
+share/icons/oxygen/16x16/actions/object-flip-vertical.png
 share/icons/oxygen/16x16/actions/object-rotate-left.png
 share/icons/oxygen/16x16/actions/object-rotate-right.png
+share/icons/oxygen/16x16/actions/page-zoom.png
 share/icons/oxygen/16x16/actions/player-time.png
 share/icons/oxygen/16x16/actions/player-volume.png
 share/icons/oxygen/16x16/actions/process-stop.png
@@ -1190,6 +1284,7 @@ share/icons/oxygen/16x16/actions/tools-report-bug.png
 share/icons/oxygen/16x16/actions/tools-wizard.png
 share/icons/oxygen/16x16/actions/transform-move.png
 share/icons/oxygen/16x16/actions/transform-rotate.png
+share/icons/oxygen/16x16/actions/transform-scale.png
 share/icons/oxygen/16x16/actions/trash-empty.png
 share/icons/oxygen/16x16/actions/user-group-new.png
 share/icons/oxygen/16x16/actions/user-properties.png
@@ -1248,16 +1343,20 @@ share/icons/oxygen/16x16/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/16x16/actions/window-close.png
 share/icons/oxygen/16x16/actions/window-duplicate.png
 share/icons/oxygen/16x16/actions/window-new.png
-share/icons/oxygen/16x16/actions/window-suppressed.png
 share/icons/oxygen/16x16/actions/zoom-fit-best.png
+share/icons/oxygen/16x16/actions/zoom-fit-height.png
+share/icons/oxygen/16x16/actions/zoom-fit-width.png
 share/icons/oxygen/16x16/actions/zoom-in.png
 share/icons/oxygen/16x16/actions/zoom-original.png
 share/icons/oxygen/16x16/actions/zoom-out.png
+share/icons/oxygen/16x16/animations/process-idle-kde.png
+share/icons/oxygen/16x16/animations/process-working-kde.png
 share/icons/oxygen/16x16/apps/accessories-calculator.png
 share/icons/oxygen/16x16/apps/accessories-character-map.png
 share/icons/oxygen/16x16/apps/accessories-dictionary.png
 share/icons/oxygen/16x16/apps/accessories-text-editor.png
 share/icons/oxygen/16x16/apps/acroread.png
+share/icons/oxygen/16x16/apps/akonadi.png
 share/icons/oxygen/16x16/apps/akregator.png
 share/icons/oxygen/16x16/apps/basket.png
 share/icons/oxygen/16x16/apps/bovo.png
@@ -1281,6 +1380,7 @@ share/icons/oxygen/16x16/apps/kchart.png
 share/icons/oxygen/16x16/apps/kcolorchooser.png
 share/icons/oxygen/16x16/apps/kde.png
 share/icons/oxygen/16x16/apps/kexi.png
+share/icons/oxygen/16x16/apps/kjots.png
 share/icons/oxygen/16x16/apps/kjournal.png
 share/icons/oxygen/16x16/apps/klipper.png
 share/icons/oxygen/16x16/apps/kmplayer.png
@@ -1303,8 +1403,10 @@ share/icons/oxygen/16x16/apps/kverbos.png
 share/icons/oxygen/16x16/apps/kwalletmanager.png
 share/icons/oxygen/16x16/apps/kword.png
 share/icons/oxygen/16x16/apps/multimedia-volume-control.png
+share/icons/oxygen/16x16/apps/nepomuk.png
 share/icons/oxygen/16x16/apps/office-address-book.png
 share/icons/oxygen/16x16/apps/office-calendar.png
+share/icons/oxygen/16x16/apps/okteta.png
 share/icons/oxygen/16x16/apps/oxygen.png
 share/icons/oxygen/16x16/apps/phonon-xine.png
 share/icons/oxygen/16x16/apps/plasma.png
@@ -1431,6 +1533,17 @@ share/icons/oxygen/16x16/emblems/emblem-favorite.png
 share/icons/oxygen/16x16/emblems/emblem-important.png
 share/icons/oxygen/16x16/emblems/emblem-mounted.png
 share/icons/oxygen/16x16/emblems/emblem-symbolic-link.png
+share/icons/oxygen/16x16/emotes/face-angel.png
+share/icons/oxygen/16x16/emotes/face-embarrassed.png
+share/icons/oxygen/16x16/emotes/face-kiss.png
+share/icons/oxygen/16x16/emotes/face-laugh.png
+share/icons/oxygen/16x16/emotes/face-plain.png
+share/icons/oxygen/16x16/emotes/face-raspberry.png
+share/icons/oxygen/16x16/emotes/face-sad.png
+share/icons/oxygen/16x16/emotes/face-smile-big.png
+share/icons/oxygen/16x16/emotes/face-smile.png
+share/icons/oxygen/16x16/emotes/face-surprise.png
+share/icons/oxygen/16x16/emotes/face-uncertain.png
 share/icons/oxygen/16x16/mimetypes/application-illustrator.png
 share/icons/oxygen/16x16/mimetypes/application-octet-stream.png
 share/icons/oxygen/16x16/mimetypes/application-pdf.png
@@ -1668,6 +1781,7 @@ share/icons/oxygen/16x16/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/16x16/mimetypes/video-x-msvideo.png
 share/icons/oxygen/16x16/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/16x16/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/16x16/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/16x16/mimetypes/x-media-podcast.png
 share/icons/oxygen/16x16/mimetypes/x-office-address-book.png
 share/icons/oxygen/16x16/mimetypes/x-office-calendar.png
@@ -1734,7 +1848,9 @@ share/icons/oxygen/16x16/status/folder-open.png
 share/icons/oxygen/16x16/status/image-loading.png
 share/icons/oxygen/16x16/status/image-missing.png
 share/icons/oxygen/16x16/status/mail-attachment.png
+share/icons/oxygen/16x16/status/mail-queued.png
 share/icons/oxygen/16x16/status/mail-read.png
+share/icons/oxygen/16x16/status/mail-replied.png
 share/icons/oxygen/16x16/status/mail-unread-new.png
 share/icons/oxygen/16x16/status/mail-unread.png
 share/icons/oxygen/16x16/status/media-playlist-repeat.png
@@ -1756,7 +1872,10 @@ share/icons/oxygen/16x16/status/user-online.png
 share/icons/oxygen/16x16/status/user-trash-full.png
 share/icons/oxygen/16x16/status/wallet-closed.png
 share/icons/oxygen/16x16/status/wallet-open.png
+share/icons/oxygen/16x16/status/window-suppressed.png
+share/icons/oxygen/22x22/actions/address-book-new.png
 share/icons/oxygen/22x22/actions/application-exit.png
+share/icons/oxygen/22x22/actions/appointment-new.png
 share/icons/oxygen/22x22/actions/archive-extract.png
 share/icons/oxygen/22x22/actions/archive-insert-directory.png
 share/icons/oxygen/22x22/actions/archive-insert.png
@@ -1772,6 +1891,7 @@ share/icons/oxygen/22x22/actions/arrow-up.png
 share/icons/oxygen/22x22/actions/bookmark-new-list.png
 share/icons/oxygen/22x22/actions/bookmark-new.png
 share/icons/oxygen/22x22/actions/bookmark-toolbar.png
+share/icons/oxygen/22x22/actions/bookmarks-organize.png
 share/icons/oxygen/22x22/actions/character-set.png
 share/icons/oxygen/22x22/actions/chronometer.png
 share/icons/oxygen/22x22/actions/color-picker.png
@@ -1779,6 +1899,7 @@ share/icons/oxygen/22x22/actions/configure-shortcuts.png
 share/icons/oxygen/22x22/actions/configure-toolbars.png
 share/icons/oxygen/22x22/actions/configure.png
 share/icons/oxygen/22x22/actions/contact-new.png
+share/icons/oxygen/22x22/actions/dashboard-show.png
 share/icons/oxygen/22x22/actions/dialog-cancel.png
 share/icons/oxygen/22x22/actions/dialog-close.png
 share/icons/oxygen/22x22/actions/dialog-ok-apply.png
@@ -1807,6 +1928,7 @@ share/icons/oxygen/22x22/actions/draw-brush.png
 share/icons/oxygen/22x22/actions/draw-eraser.png
 share/icons/oxygen/22x22/actions/draw-freehand.png
 share/icons/oxygen/22x22/actions/draw-text.png
+share/icons/oxygen/22x22/actions/edit-bomb.png
 share/icons/oxygen/22x22/actions/edit-clear-history.png
 share/icons/oxygen/22x22/actions/edit-clear-list.png
 share/icons/oxygen/22x22/actions/edit-clear-locationbar-ltr.png
@@ -1814,7 +1936,6 @@ share/icons/oxygen/22x22/actions/edit-clear-locationbar-rtl.png
 share/icons/oxygen/22x22/actions/edit-clear.png
 share/icons/oxygen/22x22/actions/edit-copy.png
 share/icons/oxygen/22x22/actions/edit-cut.png
-share/icons/oxygen/22x22/actions/edit-delete-mail.png
 share/icons/oxygen/22x22/actions/edit-delete-shred.png
 share/icons/oxygen/22x22/actions/edit-delete.png
 share/icons/oxygen/22x22/actions/edit-find-mail.png
@@ -1851,6 +1972,7 @@ share/icons/oxygen/22x22/actions/format-list-ordered.png
 share/icons/oxygen/22x22/actions/format-list-unordered.png
 share/icons/oxygen/22x22/actions/format-stroke-color.png
 share/icons/oxygen/22x22/actions/format-text-bold.png
+share/icons/oxygen/22x22/actions/format-text-color.png
 share/icons/oxygen/22x22/actions/format-text-direction-ltr.png
 share/icons/oxygen/22x22/actions/format-text-direction-rtl.png
 share/icons/oxygen/22x22/actions/format-text-italic.png
@@ -1873,13 +1995,17 @@ share/icons/oxygen/22x22/actions/get-hot-new-stuff.png
 share/icons/oxygen/22x22/actions/go-bottom.png
 share/icons/oxygen/22x22/actions/go-down-search.png
 share/icons/oxygen/22x22/actions/go-down.png
+share/icons/oxygen/22x22/actions/go-first-page.png
 share/icons/oxygen/22x22/actions/go-first.png
 share/icons/oxygen/22x22/actions/go-home.png
 share/icons/oxygen/22x22/actions/go-jump-locationbar.png
 share/icons/oxygen/22x22/actions/go-jump-today.png
 share/icons/oxygen/22x22/actions/go-jump.png
+share/icons/oxygen/22x22/actions/go-last-page.png
 share/icons/oxygen/22x22/actions/go-last.png
+share/icons/oxygen/22x22/actions/go-next-page.png
 share/icons/oxygen/22x22/actions/go-next.png
+share/icons/oxygen/22x22/actions/go-previous-page.png
 share/icons/oxygen/22x22/actions/go-previous.png
 share/icons/oxygen/22x22/actions/go-top.png
 share/icons/oxygen/22x22/actions/go-up-search.png
@@ -1888,7 +2014,9 @@ share/icons/oxygen/22x22/actions/help-about.png
 share/icons/oxygen/22x22/actions/help-contents.png
 share/icons/oxygen/22x22/actions/help-contextual.png
 share/icons/oxygen/22x22/actions/help-hint.png
+share/icons/oxygen/22x22/actions/insert-horizontal-rule.png
 share/icons/oxygen/22x22/actions/insert-image.png
+share/icons/oxygen/22x22/actions/insert-link.png
 share/icons/oxygen/22x22/actions/insert-table.png
 share/icons/oxygen/22x22/actions/insert-text.png
 share/icons/oxygen/22x22/actions/list-add-font.png
@@ -1924,8 +2052,11 @@ share/icons/oxygen/22x22/actions/network-connect.png
 share/icons/oxygen/22x22/actions/network-disconnect.png
 share/icons/oxygen/22x22/actions/news-subscribe.png
 share/icons/oxygen/22x22/actions/news-unsubscribe.png
+share/icons/oxygen/22x22/actions/object-flip-horizontal.png
+share/icons/oxygen/22x22/actions/object-flip-vertical.png
 share/icons/oxygen/22x22/actions/object-rotate-left.png
 share/icons/oxygen/22x22/actions/object-rotate-right.png
+share/icons/oxygen/22x22/actions/page-zoom.png
 share/icons/oxygen/22x22/actions/player-time.png
 share/icons/oxygen/22x22/actions/player-volume.png
 share/icons/oxygen/22x22/actions/process-stop.png
@@ -1961,6 +2092,7 @@ share/icons/oxygen/22x22/actions/tools-report-bug.png
 share/icons/oxygen/22x22/actions/tools-wizard.png
 share/icons/oxygen/22x22/actions/transform-move.png
 share/icons/oxygen/22x22/actions/transform-rotate.png
+share/icons/oxygen/22x22/actions/transform-scale.png
 share/icons/oxygen/22x22/actions/trash-empty.png
 share/icons/oxygen/22x22/actions/user-group-new.png
 share/icons/oxygen/22x22/actions/user-properties.png
@@ -2014,12 +2146,14 @@ share/icons/oxygen/22x22/actions/view-sort-descending.png
 share/icons/oxygen/22x22/actions/view-split-left-right.png
 share/icons/oxygen/22x22/actions/view-split-top-bottom.png
 share/icons/oxygen/22x22/actions/view-statistics.png
+share/icons/oxygen/22x22/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/22x22/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/22x22/actions/window-close.png
 share/icons/oxygen/22x22/actions/window-duplicate.png
 share/icons/oxygen/22x22/actions/window-new.png
-share/icons/oxygen/22x22/actions/window-suppressed.png
 share/icons/oxygen/22x22/actions/zoom-fit-best.png
+share/icons/oxygen/22x22/actions/zoom-fit-height.png
+share/icons/oxygen/22x22/actions/zoom-fit-width.png
 share/icons/oxygen/22x22/actions/zoom-in.png
 share/icons/oxygen/22x22/actions/zoom-original.png
 share/icons/oxygen/22x22/actions/zoom-out.png
@@ -2032,6 +2166,7 @@ share/icons/oxygen/22x22/apps/accessories-character-map.png
 share/icons/oxygen/22x22/apps/accessories-dictionary.png
 share/icons/oxygen/22x22/apps/accessories-text-editor.png
 share/icons/oxygen/22x22/apps/acroread.png
+share/icons/oxygen/22x22/apps/akonadi.png
 share/icons/oxygen/22x22/apps/akregator.png
 share/icons/oxygen/22x22/apps/basket.png
 share/icons/oxygen/22x22/apps/bovo.png
@@ -2055,6 +2190,7 @@ share/icons/oxygen/22x22/apps/kchart.png
 share/icons/oxygen/22x22/apps/kcolorchooser.png
 share/icons/oxygen/22x22/apps/kde.png
 share/icons/oxygen/22x22/apps/kexi.png
+share/icons/oxygen/22x22/apps/kjots.png
 share/icons/oxygen/22x22/apps/kjournal.png
 share/icons/oxygen/22x22/apps/klipper.png
 share/icons/oxygen/22x22/apps/kmplayer.png
@@ -2077,8 +2213,10 @@ share/icons/oxygen/22x22/apps/kverbos.png
 share/icons/oxygen/22x22/apps/kwalletmanager.png
 share/icons/oxygen/22x22/apps/kword.png
 share/icons/oxygen/22x22/apps/multimedia-volume-control.png
+share/icons/oxygen/22x22/apps/nepomuk.png
 share/icons/oxygen/22x22/apps/office-address-book.png
 share/icons/oxygen/22x22/apps/office-calendar.png
+share/icons/oxygen/22x22/apps/okteta.png
 share/icons/oxygen/22x22/apps/oxygen.png
 share/icons/oxygen/22x22/apps/phonon-xine.png
 share/icons/oxygen/22x22/apps/plasma.png
@@ -2212,7 +2350,7 @@ share/icons/oxygen/22x22/emotes/face-embarrassed.png
 share/icons/oxygen/22x22/emotes/face-foot-in-mouth.png
 share/icons/oxygen/22x22/emotes/face-glasses.png
 share/icons/oxygen/22x22/emotes/face-kiss.png
-share/icons/oxygen/22x22/emotes/face-laughing.png
+share/icons/oxygen/22x22/emotes/face-laugh.png
 share/icons/oxygen/22x22/emotes/face-plain.png
 share/icons/oxygen/22x22/emotes/face-raspberry.png
 share/icons/oxygen/22x22/emotes/face-sad.png
@@ -2222,6 +2360,7 @@ share/icons/oxygen/22x22/emotes/face-smile-gearhead-female.png
 share/icons/oxygen/22x22/emotes/face-smile-gearhead-male.png
 share/icons/oxygen/22x22/emotes/face-smile.png
 share/icons/oxygen/22x22/emotes/face-surprise.png
+share/icons/oxygen/22x22/emotes/face-uncertain.png
 share/icons/oxygen/22x22/emotes/face-wink.png
 share/icons/oxygen/22x22/mimetypes/application-illustrator.png
 share/icons/oxygen/22x22/mimetypes/application-octet-stream.png
@@ -2462,6 +2601,7 @@ share/icons/oxygen/22x22/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/22x22/mimetypes/video-x-msvideo.png
 share/icons/oxygen/22x22/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/22x22/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/22x22/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/22x22/mimetypes/x-media-podcast.png
 share/icons/oxygen/22x22/mimetypes/x-office-address-book.png
 share/icons/oxygen/22x22/mimetypes/x-office-calendar.png
@@ -2532,7 +2672,9 @@ share/icons/oxygen/22x22/status/folder-open.png
 share/icons/oxygen/22x22/status/image-loading.png
 share/icons/oxygen/22x22/status/image-missing.png
 share/icons/oxygen/22x22/status/mail-attachment.png
+share/icons/oxygen/22x22/status/mail-queued.png
 share/icons/oxygen/22x22/status/mail-read.png
+share/icons/oxygen/22x22/status/mail-replied.png
 share/icons/oxygen/22x22/status/mail-unread-new.png
 share/icons/oxygen/22x22/status/mail-unread.png
 share/icons/oxygen/22x22/status/media-playlist-repeat.png
@@ -2545,10 +2687,20 @@ share/icons/oxygen/22x22/status/script-error.png
 share/icons/oxygen/22x22/status/security-high.png
 share/icons/oxygen/22x22/status/security-low.png
 share/icons/oxygen/22x22/status/security-medium.png
+share/icons/oxygen/22x22/status/user-away-extended.png
+share/icons/oxygen/22x22/status/user-away.png
+share/icons/oxygen/22x22/status/user-busy.png
+share/icons/oxygen/22x22/status/user-invisible.png
+share/icons/oxygen/22x22/status/user-offline.png
+share/icons/oxygen/22x22/status/user-online.png
 share/icons/oxygen/22x22/status/user-trash-full.png
 share/icons/oxygen/22x22/status/wallet-closed.png
 share/icons/oxygen/22x22/status/wallet-open.png
+share/icons/oxygen/22x22/status/window-suppressed.png
+share/icons/oxygen/22x22/view-table-of-contents-ltr.png
+share/icons/oxygen/32x32/actions/address-book-new.png
 share/icons/oxygen/32x32/actions/application-exit.png
+share/icons/oxygen/32x32/actions/appointment-new.png
 share/icons/oxygen/32x32/actions/archive-extract.png
 share/icons/oxygen/32x32/actions/archive-insert-directory.png
 share/icons/oxygen/32x32/actions/archive-insert.png
@@ -2564,6 +2716,7 @@ share/icons/oxygen/32x32/actions/arrow-up.png
 share/icons/oxygen/32x32/actions/bookmark-new-list.png
 share/icons/oxygen/32x32/actions/bookmark-new.png
 share/icons/oxygen/32x32/actions/bookmark-toolbar.png
+share/icons/oxygen/32x32/actions/bookmarks-organize.png
 share/icons/oxygen/32x32/actions/character-set.png
 share/icons/oxygen/32x32/actions/chronometer.png
 share/icons/oxygen/32x32/actions/color-picker.png
@@ -2571,6 +2724,7 @@ share/icons/oxygen/32x32/actions/configure-shortcuts.png
 share/icons/oxygen/32x32/actions/configure-toolbars.png
 share/icons/oxygen/32x32/actions/configure.png
 share/icons/oxygen/32x32/actions/contact-new.png
+share/icons/oxygen/32x32/actions/dashboard-show.png
 share/icons/oxygen/32x32/actions/dialog-cancel.png
 share/icons/oxygen/32x32/actions/dialog-close.png
 share/icons/oxygen/32x32/actions/dialog-ok-apply.png
@@ -2599,6 +2753,7 @@ share/icons/oxygen/32x32/actions/draw-brush.png
 share/icons/oxygen/32x32/actions/draw-eraser.png
 share/icons/oxygen/32x32/actions/draw-freehand.png
 share/icons/oxygen/32x32/actions/draw-text.png
+share/icons/oxygen/32x32/actions/edit-bomb.png
 share/icons/oxygen/32x32/actions/edit-clear-history.png
 share/icons/oxygen/32x32/actions/edit-clear-list.png
 share/icons/oxygen/32x32/actions/edit-clear-locationbar-ltr.png
@@ -2606,7 +2761,6 @@ share/icons/oxygen/32x32/actions/edit-clear-locationbar-rtl.png
 share/icons/oxygen/32x32/actions/edit-clear.png
 share/icons/oxygen/32x32/actions/edit-copy.png
 share/icons/oxygen/32x32/actions/edit-cut.png
-share/icons/oxygen/32x32/actions/edit-delete-mail.png
 share/icons/oxygen/32x32/actions/edit-delete-shred.png
 share/icons/oxygen/32x32/actions/edit-delete.png
 share/icons/oxygen/32x32/actions/edit-find-mail.png
@@ -2643,6 +2797,7 @@ share/icons/oxygen/32x32/actions/format-list-ordered.png
 share/icons/oxygen/32x32/actions/format-list-unordered.png
 share/icons/oxygen/32x32/actions/format-stroke-color.png
 share/icons/oxygen/32x32/actions/format-text-bold.png
+share/icons/oxygen/32x32/actions/format-text-color.png
 share/icons/oxygen/32x32/actions/format-text-direction-ltr.png
 share/icons/oxygen/32x32/actions/format-text-direction-rtl.png
 share/icons/oxygen/32x32/actions/format-text-italic.png
@@ -2665,13 +2820,17 @@ share/icons/oxygen/32x32/actions/get-hot-new-stuff.png
 share/icons/oxygen/32x32/actions/go-bottom.png
 share/icons/oxygen/32x32/actions/go-down-search.png
 share/icons/oxygen/32x32/actions/go-down.png
+share/icons/oxygen/32x32/actions/go-first-page.png
 share/icons/oxygen/32x32/actions/go-first.png
 share/icons/oxygen/32x32/actions/go-home.png
 share/icons/oxygen/32x32/actions/go-jump-locationbar.png
 share/icons/oxygen/32x32/actions/go-jump-today.png
 share/icons/oxygen/32x32/actions/go-jump.png
+share/icons/oxygen/32x32/actions/go-last-page.png
 share/icons/oxygen/32x32/actions/go-last.png
+share/icons/oxygen/32x32/actions/go-next-page.png
 share/icons/oxygen/32x32/actions/go-next.png
+share/icons/oxygen/32x32/actions/go-previous-page.png
 share/icons/oxygen/32x32/actions/go-previous.png
 share/icons/oxygen/32x32/actions/go-top.png
 share/icons/oxygen/32x32/actions/go-up-search.png
@@ -2680,10 +2839,11 @@ share/icons/oxygen/32x32/actions/help-about.png
 share/icons/oxygen/32x32/actions/help-contents.png
 share/icons/oxygen/32x32/actions/help-contextual.png
 share/icons/oxygen/32x32/actions/help-hint.png
+share/icons/oxygen/32x32/actions/insert-horizontal-rule.png
 share/icons/oxygen/32x32/actions/insert-image.png
+share/icons/oxygen/32x32/actions/insert-link.png
 share/icons/oxygen/32x32/actions/insert-table.png
 share/icons/oxygen/32x32/actions/insert-text.png
-share/icons/oxygen/32x32/actions/khotnewstuff.png
 share/icons/oxygen/32x32/actions/list-add-font.png
 share/icons/oxygen/32x32/actions/list-add-user.png
 share/icons/oxygen/32x32/actions/list-add.png
@@ -2692,6 +2852,7 @@ share/icons/oxygen/32x32/actions/list-remove.png
 share/icons/oxygen/32x32/actions/mail-flag.png
 share/icons/oxygen/32x32/actions/mail-forward.png
 share/icons/oxygen/32x32/actions/mail-mark-important.png
+share/icons/oxygen/32x32/actions/mail-mark-junk.png
 share/icons/oxygen/32x32/actions/mail-mark-notjunk.png
 share/icons/oxygen/32x32/actions/mail-mark-read.png
 share/icons/oxygen/32x32/actions/mail-mark-task.png
@@ -2717,8 +2878,11 @@ share/icons/oxygen/32x32/actions/network-connect.png
 share/icons/oxygen/32x32/actions/network-disconnect.png
 share/icons/oxygen/32x32/actions/news-subscribe.png
 share/icons/oxygen/32x32/actions/news-unsubscribe.png
+share/icons/oxygen/32x32/actions/object-flip-horizontal.png
+share/icons/oxygen/32x32/actions/object-flip-vertical.png
 share/icons/oxygen/32x32/actions/object-rotate-left.png
 share/icons/oxygen/32x32/actions/object-rotate-right.png
+share/icons/oxygen/32x32/actions/page-zoom.png
 share/icons/oxygen/32x32/actions/player-time.png
 share/icons/oxygen/32x32/actions/player-volume.png
 share/icons/oxygen/32x32/actions/process-stop.png
@@ -2754,6 +2918,7 @@ share/icons/oxygen/32x32/actions/tools-report-bug.png
 share/icons/oxygen/32x32/actions/tools-wizard.png
 share/icons/oxygen/32x32/actions/transform-move.png
 share/icons/oxygen/32x32/actions/transform-rotate.png
+share/icons/oxygen/32x32/actions/transform-scale.png
 share/icons/oxygen/32x32/actions/trash-empty.png
 share/icons/oxygen/32x32/actions/user-group-new.png
 share/icons/oxygen/32x32/actions/user-properties.png
@@ -2807,20 +2972,25 @@ share/icons/oxygen/32x32/actions/view-sort-descending.png
 share/icons/oxygen/32x32/actions/view-split-left-right.png
 share/icons/oxygen/32x32/actions/view-split-top-bottom.png
 share/icons/oxygen/32x32/actions/view-statistics.png
+share/icons/oxygen/32x32/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/32x32/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/32x32/actions/window-close.png
 share/icons/oxygen/32x32/actions/window-duplicate.png
 share/icons/oxygen/32x32/actions/window-new.png
-share/icons/oxygen/32x32/actions/window-suppressed.png
 share/icons/oxygen/32x32/actions/zoom-fit-best.png
+share/icons/oxygen/32x32/actions/zoom-fit-height.png
+share/icons/oxygen/32x32/actions/zoom-fit-width.png
 share/icons/oxygen/32x32/actions/zoom-in.png
 share/icons/oxygen/32x32/actions/zoom-original.png
 share/icons/oxygen/32x32/actions/zoom-out.png
+share/icons/oxygen/32x32/animations/process-idle-kde.png
+share/icons/oxygen/32x32/animations/process-working-kde.png
 share/icons/oxygen/32x32/apps/accessories-calculator.png
 share/icons/oxygen/32x32/apps/accessories-character-map.png
 share/icons/oxygen/32x32/apps/accessories-dictionary.png
 share/icons/oxygen/32x32/apps/accessories-text-editor.png
 share/icons/oxygen/32x32/apps/acroread.png
+share/icons/oxygen/32x32/apps/akonadi.png
 share/icons/oxygen/32x32/apps/akregator.png
 share/icons/oxygen/32x32/apps/basket.png
 share/icons/oxygen/32x32/apps/bovo.png
@@ -2844,6 +3014,7 @@ share/icons/oxygen/32x32/apps/kchart.png
 share/icons/oxygen/32x32/apps/kcolorchooser.png
 share/icons/oxygen/32x32/apps/kde.png
 share/icons/oxygen/32x32/apps/kexi.png
+share/icons/oxygen/32x32/apps/kjots.png
 share/icons/oxygen/32x32/apps/kjournal.png
 share/icons/oxygen/32x32/apps/klipper.png
 share/icons/oxygen/32x32/apps/kmplayer.png
@@ -2866,8 +3037,10 @@ share/icons/oxygen/32x32/apps/kverbos.png
 share/icons/oxygen/32x32/apps/kwalletmanager.png
 share/icons/oxygen/32x32/apps/kword.png
 share/icons/oxygen/32x32/apps/multimedia-volume-control.png
+share/icons/oxygen/32x32/apps/nepomuk.png
 share/icons/oxygen/32x32/apps/office-address-book.png
 share/icons/oxygen/32x32/apps/office-calendar.png
+share/icons/oxygen/32x32/apps/okteta.png
 share/icons/oxygen/32x32/apps/oxygen.png
 share/icons/oxygen/32x32/apps/phonon-xine.png
 share/icons/oxygen/32x32/apps/plasma.png
@@ -2994,6 +3167,17 @@ share/icons/oxygen/32x32/emblems/emblem-favorite.png
 share/icons/oxygen/32x32/emblems/emblem-important.png
 share/icons/oxygen/32x32/emblems/emblem-mounted.png
 share/icons/oxygen/32x32/emblems/emblem-symbolic-link.png
+share/icons/oxygen/32x32/emotes/face-angel.png
+share/icons/oxygen/32x32/emotes/face-embarrassed.png
+share/icons/oxygen/32x32/emotes/face-kiss.png
+share/icons/oxygen/32x32/emotes/face-laugh.png
+share/icons/oxygen/32x32/emotes/face-plain.png
+share/icons/oxygen/32x32/emotes/face-raspberry.png
+share/icons/oxygen/32x32/emotes/face-sad.png
+share/icons/oxygen/32x32/emotes/face-smile-big.png
+share/icons/oxygen/32x32/emotes/face-smile.png
+share/icons/oxygen/32x32/emotes/face-surprise.png
+share/icons/oxygen/32x32/emotes/face-uncertain.png
 share/icons/oxygen/32x32/mimetypes/application-illustrator.png
 share/icons/oxygen/32x32/mimetypes/application-octet-stream.png
 share/icons/oxygen/32x32/mimetypes/application-pdf.png
@@ -3233,6 +3417,7 @@ share/icons/oxygen/32x32/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/32x32/mimetypes/video-x-msvideo.png
 share/icons/oxygen/32x32/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/32x32/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/32x32/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/32x32/mimetypes/x-media-podcast.png
 share/icons/oxygen/32x32/mimetypes/x-office-address-book.png
 share/icons/oxygen/32x32/mimetypes/x-office-calendar.png
@@ -3299,7 +3484,9 @@ share/icons/oxygen/32x32/status/folder-open.png
 share/icons/oxygen/32x32/status/image-loading.png
 share/icons/oxygen/32x32/status/image-missing.png
 share/icons/oxygen/32x32/status/mail-attachment.png
+share/icons/oxygen/32x32/status/mail-queued.png
 share/icons/oxygen/32x32/status/mail-read.png
+share/icons/oxygen/32x32/status/mail-replied.png
 share/icons/oxygen/32x32/status/mail-unread-new.png
 share/icons/oxygen/32x32/status/mail-unread.png
 share/icons/oxygen/32x32/status/media-playlist-repeat.png
@@ -3320,7 +3507,11 @@ share/icons/oxygen/32x32/status/user-online.png
 share/icons/oxygen/32x32/status/user-trash-full.png
 share/icons/oxygen/32x32/status/wallet-closed.png
 share/icons/oxygen/32x32/status/wallet-open.png
+share/icons/oxygen/32x32/status/window-suppressed.png
+share/icons/oxygen/32x32/view-table-of-contents-ltr.png
+share/icons/oxygen/48x48/actions/address-book-new.png
 share/icons/oxygen/48x48/actions/application-exit.png
+share/icons/oxygen/48x48/actions/appointment-new.png
 share/icons/oxygen/48x48/actions/archive-extract.png
 share/icons/oxygen/48x48/actions/archive-insert-directory.png
 share/icons/oxygen/48x48/actions/archive-insert.png
@@ -3336,6 +3527,7 @@ share/icons/oxygen/48x48/actions/arrow-up.png
 share/icons/oxygen/48x48/actions/bookmark-new-list.png
 share/icons/oxygen/48x48/actions/bookmark-new.png
 share/icons/oxygen/48x48/actions/bookmark-toolbar.png
+share/icons/oxygen/48x48/actions/bookmarks-organize.png
 share/icons/oxygen/48x48/actions/character-set.png
 share/icons/oxygen/48x48/actions/chronometer.png
 share/icons/oxygen/48x48/actions/color-picker.png
@@ -3343,6 +3535,7 @@ share/icons/oxygen/48x48/actions/configure-shortcuts.png
 share/icons/oxygen/48x48/actions/configure-toolbars.png
 share/icons/oxygen/48x48/actions/configure.png
 share/icons/oxygen/48x48/actions/contact-new.png
+share/icons/oxygen/48x48/actions/dashboard-show.png
 share/icons/oxygen/48x48/actions/dialog-cancel.png
 share/icons/oxygen/48x48/actions/dialog-close.png
 share/icons/oxygen/48x48/actions/dialog-ok-apply.png
@@ -3371,6 +3564,7 @@ share/icons/oxygen/48x48/actions/draw-brush.png
 share/icons/oxygen/48x48/actions/draw-eraser.png
 share/icons/oxygen/48x48/actions/draw-freehand.png
 share/icons/oxygen/48x48/actions/draw-text.png
+share/icons/oxygen/48x48/actions/edit-bomb.png
 share/icons/oxygen/48x48/actions/edit-clear-history.png
 share/icons/oxygen/48x48/actions/edit-clear-list.png
 share/icons/oxygen/48x48/actions/edit-clear-locationbar-ltr.png
@@ -3378,7 +3572,6 @@ share/icons/oxygen/48x48/actions/edit-clear-locationbar-rtl.png
 share/icons/oxygen/48x48/actions/edit-clear.png
 share/icons/oxygen/48x48/actions/edit-copy.png
 share/icons/oxygen/48x48/actions/edit-cut.png
-share/icons/oxygen/48x48/actions/edit-delete-mail.png
 share/icons/oxygen/48x48/actions/edit-delete-shred.png
 share/icons/oxygen/48x48/actions/edit-delete.png
 share/icons/oxygen/48x48/actions/edit-find-mail.png
@@ -3415,6 +3608,7 @@ share/icons/oxygen/48x48/actions/format-list-ordered.png
 share/icons/oxygen/48x48/actions/format-list-unordered.png
 share/icons/oxygen/48x48/actions/format-stroke-color.png
 share/icons/oxygen/48x48/actions/format-text-bold.png
+share/icons/oxygen/48x48/actions/format-text-color.png
 share/icons/oxygen/48x48/actions/format-text-direction-ltr.png
 share/icons/oxygen/48x48/actions/format-text-direction-rtl.png
 share/icons/oxygen/48x48/actions/format-text-italic.png
@@ -3437,13 +3631,17 @@ share/icons/oxygen/48x48/actions/get-hot-new-stuff.png
 share/icons/oxygen/48x48/actions/go-bottom.png
 share/icons/oxygen/48x48/actions/go-down-search.png
 share/icons/oxygen/48x48/actions/go-down.png
+share/icons/oxygen/48x48/actions/go-first-page.png
 share/icons/oxygen/48x48/actions/go-first.png
 share/icons/oxygen/48x48/actions/go-home.png
 share/icons/oxygen/48x48/actions/go-jump-locationbar.png
 share/icons/oxygen/48x48/actions/go-jump-today.png
 share/icons/oxygen/48x48/actions/go-jump.png
+share/icons/oxygen/48x48/actions/go-last-page.png
 share/icons/oxygen/48x48/actions/go-last.png
+share/icons/oxygen/48x48/actions/go-next-page.png
 share/icons/oxygen/48x48/actions/go-next.png
+share/icons/oxygen/48x48/actions/go-previous-page.png
 share/icons/oxygen/48x48/actions/go-previous.png
 share/icons/oxygen/48x48/actions/go-top.png
 share/icons/oxygen/48x48/actions/go-up-search.png
@@ -3452,7 +3650,9 @@ share/icons/oxygen/48x48/actions/help-about.png
 share/icons/oxygen/48x48/actions/help-contents.png
 share/icons/oxygen/48x48/actions/help-contextual.png
 share/icons/oxygen/48x48/actions/help-hint.png
+share/icons/oxygen/48x48/actions/insert-horizontal-rule.png
 share/icons/oxygen/48x48/actions/insert-image.png
+share/icons/oxygen/48x48/actions/insert-link.png
 share/icons/oxygen/48x48/actions/insert-table.png
 share/icons/oxygen/48x48/actions/insert-text.png
 share/icons/oxygen/48x48/actions/list-add-font.png
@@ -3463,6 +3663,7 @@ share/icons/oxygen/48x48/actions/list-remove.png
 share/icons/oxygen/48x48/actions/mail-flag.png
 share/icons/oxygen/48x48/actions/mail-forward.png
 share/icons/oxygen/48x48/actions/mail-mark-important.png
+share/icons/oxygen/48x48/actions/mail-mark-junk.png
 share/icons/oxygen/48x48/actions/mail-mark-notjunk.png
 share/icons/oxygen/48x48/actions/mail-mark-read.png
 share/icons/oxygen/48x48/actions/mail-mark-task.png
@@ -3488,8 +3689,11 @@ share/icons/oxygen/48x48/actions/network-connect.png
 share/icons/oxygen/48x48/actions/network-disconnect.png
 share/icons/oxygen/48x48/actions/news-subscribe.png
 share/icons/oxygen/48x48/actions/news-unsubscribe.png
+share/icons/oxygen/48x48/actions/object-flip-horizontal.png
+share/icons/oxygen/48x48/actions/object-flip-vertical.png
 share/icons/oxygen/48x48/actions/object-rotate-left.png
 share/icons/oxygen/48x48/actions/object-rotate-right.png
+share/icons/oxygen/48x48/actions/page-zoom.png
 share/icons/oxygen/48x48/actions/player-time.png
 share/icons/oxygen/48x48/actions/player-volume.png
 share/icons/oxygen/48x48/actions/process-stop.png
@@ -3525,6 +3729,7 @@ share/icons/oxygen/48x48/actions/tools-report-bug.png
 share/icons/oxygen/48x48/actions/tools-wizard.png
 share/icons/oxygen/48x48/actions/transform-move.png
 share/icons/oxygen/48x48/actions/transform-rotate.png
+share/icons/oxygen/48x48/actions/transform-scale.png
 share/icons/oxygen/48x48/actions/trash-empty.png
 share/icons/oxygen/48x48/actions/user-group-new.png
 share/icons/oxygen/48x48/actions/user-properties.png
@@ -3560,6 +3765,7 @@ share/icons/oxygen/48x48/actions/view-pim-notes.png
 share/icons/oxygen/48x48/actions/view-pim-summary.png
 share/icons/oxygen/48x48/actions/view-pim-tasks.png
 share/icons/oxygen/48x48/actions/view-presentation.png
+share/icons/oxygen/48x48/actions/view-preview.png
 share/icons/oxygen/48x48/actions/view-process-all-tree.png
 share/icons/oxygen/48x48/actions/view-process-all.png
 share/icons/oxygen/48x48/actions/view-process-own.png
@@ -3573,20 +3779,25 @@ share/icons/oxygen/48x48/actions/view-sort-descending.png
 share/icons/oxygen/48x48/actions/view-split-left-right.png
 share/icons/oxygen/48x48/actions/view-split-top-bottom.png
 share/icons/oxygen/48x48/actions/view-statistics.png
+share/icons/oxygen/48x48/actions/view-table-of-contents-rtl.png
 share/icons/oxygen/48x48/actions/view-web-browser-dom-tree.png
 share/icons/oxygen/48x48/actions/window-close.png
 share/icons/oxygen/48x48/actions/window-duplicate.png
 share/icons/oxygen/48x48/actions/window-new.png
-share/icons/oxygen/48x48/actions/window-suppressed.png
 share/icons/oxygen/48x48/actions/zoom-fit-best.png
+share/icons/oxygen/48x48/actions/zoom-fit-height.png
+share/icons/oxygen/48x48/actions/zoom-fit-width.png
 share/icons/oxygen/48x48/actions/zoom-in.png
 share/icons/oxygen/48x48/actions/zoom-original.png
 share/icons/oxygen/48x48/actions/zoom-out.png
+share/icons/oxygen/48x48/animations/process-idle-kde.png
+share/icons/oxygen/48x48/animations/process-working-kde.png
 share/icons/oxygen/48x48/apps/accessories-calculator.png
 share/icons/oxygen/48x48/apps/accessories-character-map.png
 share/icons/oxygen/48x48/apps/accessories-dictionary.png
 share/icons/oxygen/48x48/apps/accessories-text-editor.png
 share/icons/oxygen/48x48/apps/acroread.png
+share/icons/oxygen/48x48/apps/akonadi.png
 share/icons/oxygen/48x48/apps/akregator.png
 share/icons/oxygen/48x48/apps/basket.png
 share/icons/oxygen/48x48/apps/bovo.png
@@ -3610,6 +3821,7 @@ share/icons/oxygen/48x48/apps/kchart.png
 share/icons/oxygen/48x48/apps/kcolorchooser.png
 share/icons/oxygen/48x48/apps/kde.png
 share/icons/oxygen/48x48/apps/kexi.png
+share/icons/oxygen/48x48/apps/kjots.png
 share/icons/oxygen/48x48/apps/kjournal.png
 share/icons/oxygen/48x48/apps/klipper.png
 share/icons/oxygen/48x48/apps/kmplayer.png
@@ -3632,8 +3844,10 @@ share/icons/oxygen/48x48/apps/kverbos.png
 share/icons/oxygen/48x48/apps/kwalletmanager.png
 share/icons/oxygen/48x48/apps/kword.png
 share/icons/oxygen/48x48/apps/multimedia-volume-control.png
+share/icons/oxygen/48x48/apps/nepomuk.png
 share/icons/oxygen/48x48/apps/office-address-book.png
 share/icons/oxygen/48x48/apps/office-calendar.png
+share/icons/oxygen/48x48/apps/okteta.png
 share/icons/oxygen/48x48/apps/oxygen.png
 share/icons/oxygen/48x48/apps/phonon-xine.png
 share/icons/oxygen/48x48/apps/plasma.png
@@ -3760,6 +3974,17 @@ share/icons/oxygen/48x48/emblems/emblem-favorite.png
 share/icons/oxygen/48x48/emblems/emblem-important.png
 share/icons/oxygen/48x48/emblems/emblem-mounted.png
 share/icons/oxygen/48x48/emblems/emblem-symbolic-link.png
+share/icons/oxygen/48x48/emotes/face-angel.png
+share/icons/oxygen/48x48/emotes/face-embarrassed.png
+share/icons/oxygen/48x48/emotes/face-kiss.png
+share/icons/oxygen/48x48/emotes/face-laugh.png
+share/icons/oxygen/48x48/emotes/face-plain.png
+share/icons/oxygen/48x48/emotes/face-raspberry.png
+share/icons/oxygen/48x48/emotes/face-sad.png
+share/icons/oxygen/48x48/emotes/face-smile-big.png
+share/icons/oxygen/48x48/emotes/face-smile.png
+share/icons/oxygen/48x48/emotes/face-surprise.png
+share/icons/oxygen/48x48/emotes/face-uncertain.png
 share/icons/oxygen/48x48/mimetypes/application-illustrator.png
 share/icons/oxygen/48x48/mimetypes/application-octet-stream.png
 share/icons/oxygen/48x48/mimetypes/application-pdf.png
@@ -3999,6 +4224,7 @@ share/icons/oxygen/48x48/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/48x48/mimetypes/video-x-msvideo.png
 share/icons/oxygen/48x48/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/48x48/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/48x48/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/48x48/mimetypes/x-media-podcast.png
 share/icons/oxygen/48x48/mimetypes/x-office-address-book.png
 share/icons/oxygen/48x48/mimetypes/x-office-calendar.png
@@ -4065,7 +4291,9 @@ share/icons/oxygen/48x48/status/folder-open.png
 share/icons/oxygen/48x48/status/image-loading.png
 share/icons/oxygen/48x48/status/image-missing.png
 share/icons/oxygen/48x48/status/mail-attachment.png
+share/icons/oxygen/48x48/status/mail-queued.png
 share/icons/oxygen/48x48/status/mail-read.png
+share/icons/oxygen/48x48/status/mail-replied.png
 share/icons/oxygen/48x48/status/mail-unread-new.png
 share/icons/oxygen/48x48/status/mail-unread.png
 share/icons/oxygen/48x48/status/media-playlist-repeat.png
@@ -4078,25 +4306,46 @@ share/icons/oxygen/48x48/status/script-error.png
 share/icons/oxygen/48x48/status/security-high.png
 share/icons/oxygen/48x48/status/security-low.png
 share/icons/oxygen/48x48/status/security-medium.png
+share/icons/oxygen/48x48/status/user-away-extended.png
+share/icons/oxygen/48x48/status/user-away.png
+share/icons/oxygen/48x48/status/user-busy.png
+share/icons/oxygen/48x48/status/user-invisible.png
+share/icons/oxygen/48x48/status/user-offline.png
+share/icons/oxygen/48x48/status/user-online.png
 share/icons/oxygen/48x48/status/user-trash-full.png
 share/icons/oxygen/48x48/status/wallet-closed.png
 share/icons/oxygen/48x48/status/wallet-open.png
+share/icons/oxygen/48x48/status/window-suppressed.png
+share/icons/oxygen/48x48/view-table-of-contents-ltr.png
+share/icons/oxygen/64x64/actions/address-book-new.png
 share/icons/oxygen/64x64/actions/application-exit.png
+share/icons/oxygen/64x64/actions/appointment-new.png
+share/icons/oxygen/64x64/actions/bookmark-new.png
+share/icons/oxygen/64x64/actions/bookmarks-organize.png
+share/icons/oxygen/64x64/actions/dashboard-show.png
 share/icons/oxygen/64x64/actions/dialog-ok-apply.png
 share/icons/oxygen/64x64/actions/dialog-ok.png
 share/icons/oxygen/64x64/actions/document-preview.png
+share/icons/oxygen/64x64/actions/edit-bomb.png
+share/icons/oxygen/64x64/actions/edit-find.png
 share/icons/oxygen/64x64/actions/go-bottom.png
 share/icons/oxygen/64x64/actions/go-down.png
+share/icons/oxygen/64x64/actions/go-first-page.png
 share/icons/oxygen/64x64/actions/go-first.png
+share/icons/oxygen/64x64/actions/go-last-page.png
 share/icons/oxygen/64x64/actions/go-last.png
+share/icons/oxygen/64x64/actions/go-next-page.png
 share/icons/oxygen/64x64/actions/go-next.png
+share/icons/oxygen/64x64/actions/go-previous-page.png
 share/icons/oxygen/64x64/actions/go-previous.png
 share/icons/oxygen/64x64/actions/go-top.png
 share/icons/oxygen/64x64/actions/go-up.png
-share/icons/oxygen/64x64/actions/khotnewstuff.png
+share/icons/oxygen/64x64/actions/insert-horizontal-rule.png
+share/icons/oxygen/64x64/actions/insert-link.png
+share/icons/oxygen/64x64/actions/list-add-user.png
 share/icons/oxygen/64x64/actions/list-remove.png
 share/icons/oxygen/64x64/actions/mail-forward.png
-share/icons/oxygen/64x64/actions/mail-mark-task.png
+share/icons/oxygen/64x64/actions/mail-mark-junk.png
 share/icons/oxygen/64x64/actions/mail-mark-unread-new.png
 share/icons/oxygen/64x64/actions/mail-message-new.png
 share/icons/oxygen/64x64/actions/mail-queue.png
@@ -4104,6 +4353,8 @@ share/icons/oxygen/64x64/actions/mail-receive.png
 share/icons/oxygen/64x64/actions/mail-reply-all.png
 share/icons/oxygen/64x64/actions/mail-reply-list.png
 share/icons/oxygen/64x64/actions/mail-reply-sender.png
+share/icons/oxygen/64x64/actions/mail-send.png
+share/icons/oxygen/64x64/actions/page-zoom.png
 share/icons/oxygen/64x64/actions/system-lock-screen.png
 share/icons/oxygen/64x64/actions/system-log-out.png
 share/icons/oxygen/64x64/actions/system-restart.png
@@ -4116,16 +4367,21 @@ share/icons/oxygen/64x64/actions/system-switch-user.png
 share/icons/oxygen/64x64/actions/tools-report-bug.png
 share/icons/oxygen/64x64/actions/tools-wizard.png
 share/icons/oxygen/64x64/actions/transform-move.png
+share/icons/oxygen/64x64/actions/transform-scale.png
 share/icons/oxygen/64x64/actions/user-group-new.png
 share/icons/oxygen/64x64/actions/view-media-lyrics.png
 share/icons/oxygen/64x64/actions/view-media-playlist.png
 share/icons/oxygen/64x64/actions/view-presentation.png
 share/icons/oxygen/64x64/actions/window-duplicate.png
+share/icons/oxygen/64x64/actions/zoom-fit-best.png
+share/icons/oxygen/64x64/actions/zoom-fit-height.png
+share/icons/oxygen/64x64/actions/zoom-fit-width.png
 share/icons/oxygen/64x64/apps/accessories-calculator.png
 share/icons/oxygen/64x64/apps/accessories-character-map.png
 share/icons/oxygen/64x64/apps/accessories-dictionary.png
 share/icons/oxygen/64x64/apps/accessories-text-editor.png
 share/icons/oxygen/64x64/apps/acroread.png
+share/icons/oxygen/64x64/apps/akonadi.png
 share/icons/oxygen/64x64/apps/akregator.png
 share/icons/oxygen/64x64/apps/basket.png
 share/icons/oxygen/64x64/apps/bovo.png
@@ -4148,6 +4404,7 @@ share/icons/oxygen/64x64/apps/kchart.png
 share/icons/oxygen/64x64/apps/kcolorchooser.png
 share/icons/oxygen/64x64/apps/kde.png
 share/icons/oxygen/64x64/apps/kexi.png
+share/icons/oxygen/64x64/apps/kjots.png
 share/icons/oxygen/64x64/apps/kjournal.png
 share/icons/oxygen/64x64/apps/klipper.png
 share/icons/oxygen/64x64/apps/kmplayer.png
@@ -4170,8 +4427,10 @@ share/icons/oxygen/64x64/apps/kverbos.png
 share/icons/oxygen/64x64/apps/kwalletmanager.png
 share/icons/oxygen/64x64/apps/kword.png
 share/icons/oxygen/64x64/apps/multimedia-volume-control.png
+share/icons/oxygen/64x64/apps/nepomuk.png
 share/icons/oxygen/64x64/apps/office-address-book.png
 share/icons/oxygen/64x64/apps/office-calendar.png
+share/icons/oxygen/64x64/apps/okteta.png
 share/icons/oxygen/64x64/apps/oxygen.png
 share/icons/oxygen/64x64/apps/phonon-xine.png
 share/icons/oxygen/64x64/apps/plasma.png
@@ -4284,6 +4543,17 @@ share/icons/oxygen/64x64/devices/video-television.png
 share/icons/oxygen/64x64/emblems/emblem-important.png
 share/icons/oxygen/64x64/emblems/emblem-mounted.png
 share/icons/oxygen/64x64/emblems/emblem-symbolic-link.png
+share/icons/oxygen/64x64/emotes/face-angel.png
+share/icons/oxygen/64x64/emotes/face-embarrassed.png
+share/icons/oxygen/64x64/emotes/face-kiss.png
+share/icons/oxygen/64x64/emotes/face-laugh.png
+share/icons/oxygen/64x64/emotes/face-plain.png
+share/icons/oxygen/64x64/emotes/face-raspberry.png
+share/icons/oxygen/64x64/emotes/face-sad.png
+share/icons/oxygen/64x64/emotes/face-smile-big.png
+share/icons/oxygen/64x64/emotes/face-smile.png
+share/icons/oxygen/64x64/emotes/face-surprise.png
+share/icons/oxygen/64x64/emotes/face-uncertain.png
 share/icons/oxygen/64x64/mimetypes/application-illustrator.png
 share/icons/oxygen/64x64/mimetypes/application-octet-stream.png
 share/icons/oxygen/64x64/mimetypes/application-pdf.png
@@ -4292,6 +4562,7 @@ share/icons/oxygen/64x64/mimetypes/application-pgp-keys.png
 share/icons/oxygen/64x64/mimetypes/application-pkcs7-mime.png
 share/icons/oxygen/64x64/mimetypes/application-postscript.png
 share/icons/oxygen/64x64/mimetypes/application-relaxng.png
+share/icons/oxygen/64x64/mimetypes/application-rss+xml.png
 share/icons/oxygen/64x64/mimetypes/application-rtf.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-excel.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-powerpoint.png
@@ -4520,6 +4791,7 @@ share/icons/oxygen/64x64/mimetypes/video-x-ms-wmv.png
 share/icons/oxygen/64x64/mimetypes/video-x-msvideo.png
 share/icons/oxygen/64x64/mimetypes/video-x-ogm+ogg.png
 share/icons/oxygen/64x64/mimetypes/video-x-theora+ogg.png
+share/icons/oxygen/64x64/mimetypes/x-kde-nsplugin-generated.png
 share/icons/oxygen/64x64/mimetypes/x-office-address-book.png
 share/icons/oxygen/64x64/mimetypes/x-office-calendar.png
 share/icons/oxygen/64x64/mimetypes/x-office-document.png
@@ -4548,6 +4820,7 @@ share/icons/oxygen/64x64/places/folder-video.png
 share/icons/oxygen/64x64/places/folder-violet.png
 share/icons/oxygen/64x64/places/folder-yellow.png
 share/icons/oxygen/64x64/places/folder.png
+share/icons/oxygen/64x64/places/mail-folder-outbox.png
 share/icons/oxygen/64x64/places/mail-folder-sent
 share/icons/oxygen/64x64/places/network-server-database.png
 share/icons/oxygen/64x64/places/network-server.png
@@ -4562,17 +4835,26 @@ share/icons/oxygen/64x64/status/dialog-information.png
 share/icons/oxygen/64x64/status/dialog-password.png
 share/icons/oxygen/64x64/status/dialog-warning.png
 share/icons/oxygen/64x64/status/image-missing.png
+share/icons/oxygen/64x64/status/mail-queued.png
 share/icons/oxygen/64x64/status/mail-unread-new.png
 share/icons/oxygen/64x64/status/script-error.png
 share/icons/oxygen/64x64/status/security-high.png
 share/icons/oxygen/64x64/status/security-low.png
 share/icons/oxygen/64x64/status/security-medium.png
+share/icons/oxygen/64x64/status/user-away-extended.png
+share/icons/oxygen/64x64/status/user-away.png
+share/icons/oxygen/64x64/status/user-busy.png
+share/icons/oxygen/64x64/status/user-invisible.png
+share/icons/oxygen/64x64/status/user-offline.png
+share/icons/oxygen/64x64/status/user-online.png
 share/icons/oxygen/64x64/status/user-trash-full.png
 share/icons/oxygen/8x8/emblems/emblem-important.png
 share/icons/oxygen/8x8/emblems/emblem-link.png
 share/icons/oxygen/8x8/emblems/emblem-mounted.png
 share/icons/oxygen/index.theme
+share/icons/oxygen/scalable/actions/address-book-new.svgz
 share/icons/oxygen/scalable/actions/application-exit.svgz
+share/icons/oxygen/scalable/actions/appointment-new.svgz
 share/icons/oxygen/scalable/actions/archive-extract.svgz
 share/icons/oxygen/scalable/actions/archive-insert-directory.svgz
 share/icons/oxygen/scalable/actions/archive-insert.svgz
@@ -4588,6 +4870,7 @@ share/icons/oxygen/scalable/actions/arrow-up.svgz
 share/icons/oxygen/scalable/actions/bookmark-new-list.svgz
 share/icons/oxygen/scalable/actions/bookmark-new.svgz
 share/icons/oxygen/scalable/actions/bookmark-toolbar.svgz
+share/icons/oxygen/scalable/actions/bookmarks-organize.svgz
 share/icons/oxygen/scalable/actions/character-set.svgz
 share/icons/oxygen/scalable/actions/chronometer.svgz
 share/icons/oxygen/scalable/actions/color-picker.svgz
@@ -4595,6 +4878,7 @@ share/icons/oxygen/scalable/actions/configure-shortcuts.svgz
 share/icons/oxygen/scalable/actions/configure-toolbars.svgz
 share/icons/oxygen/scalable/actions/configure.svgz
 share/icons/oxygen/scalable/actions/contact-new.svgz
+share/icons/oxygen/scalable/actions/dashboard-show.svgz
 share/icons/oxygen/scalable/actions/dialog-cancel.svgz
 share/icons/oxygen/scalable/actions/dialog-close.svgz
 share/icons/oxygen/scalable/actions/dialog-ok-apply.svgz
@@ -4623,6 +4907,7 @@ share/icons/oxygen/scalable/actions/draw-brush.svgz
 share/icons/oxygen/scalable/actions/draw-eraser.svgz
 share/icons/oxygen/scalable/actions/draw-freehand.svgz
 share/icons/oxygen/scalable/actions/draw-text.svgz
+share/icons/oxygen/scalable/actions/edit-bomb.svgz
 share/icons/oxygen/scalable/actions/edit-clear-history.svgz
 share/icons/oxygen/scalable/actions/edit-clear-list.svgz
 share/icons/oxygen/scalable/actions/edit-clear-locationbar-ltr.svgz
@@ -4630,7 +4915,6 @@ share/icons/oxygen/scalable/actions/edit-clear-locationbar-rtl.svgz
 share/icons/oxygen/scalable/actions/edit-clear.svgz
 share/icons/oxygen/scalable/actions/edit-copy.svgz
 share/icons/oxygen/scalable/actions/edit-cut.svgz
-share/icons/oxygen/scalable/actions/edit-delete-mail.svgz
 share/icons/oxygen/scalable/actions/edit-delete-shred.svgz
 share/icons/oxygen/scalable/actions/edit-delete.svgz
 share/icons/oxygen/scalable/actions/edit-find-mail.svgz
@@ -4667,6 +4951,7 @@ share/icons/oxygen/scalable/actions/format-list-ordered.svgz
 share/icons/oxygen/scalable/actions/format-list-unordered.svgz
 share/icons/oxygen/scalable/actions/format-stroke-color.svgz
 share/icons/oxygen/scalable/actions/format-text-bold.svgz
+share/icons/oxygen/scalable/actions/format-text-color.svgz
 share/icons/oxygen/scalable/actions/format-text-direction-ltr.svgz
 share/icons/oxygen/scalable/actions/format-text-direction-rtl.svgz
 share/icons/oxygen/scalable/actions/format-text-italic.svgz
@@ -4689,13 +4974,17 @@ share/icons/oxygen/scalable/actions/get-hot-new-stuff.svgz
 share/icons/oxygen/scalable/actions/go-bottom.svgz
 share/icons/oxygen/scalable/actions/go-down-search.svgz
 share/icons/oxygen/scalable/actions/go-down.svgz
+share/icons/oxygen/scalable/actions/go-first-page.svgz
 share/icons/oxygen/scalable/actions/go-first.svgz
 share/icons/oxygen/scalable/actions/go-home.svgz
 share/icons/oxygen/scalable/actions/go-jump-locationbar.svgz
 share/icons/oxygen/scalable/actions/go-jump-today.svgz
 share/icons/oxygen/scalable/actions/go-jump.svgz
+share/icons/oxygen/scalable/actions/go-last-page.svgz
 share/icons/oxygen/scalable/actions/go-last.svgz
+share/icons/oxygen/scalable/actions/go-next-page.svgz
 share/icons/oxygen/scalable/actions/go-next.svgz
+share/icons/oxygen/scalable/actions/go-previous-page.svgz
 share/icons/oxygen/scalable/actions/go-previous.svgz
 share/icons/oxygen/scalable/actions/go-top.svgz
 share/icons/oxygen/scalable/actions/go-up-search.svgz
@@ -4704,7 +4993,9 @@ share/icons/oxygen/scalable/actions/help-about.svgz
 share/icons/oxygen/scalable/actions/help-contents.svgz
 share/icons/oxygen/scalable/actions/help-contextual.svgz
 share/icons/oxygen/scalable/actions/help-hint.svgz
+share/icons/oxygen/scalable/actions/insert-horizontal-rule.svgz
 share/icons/oxygen/scalable/actions/insert-image.svgz
+share/icons/oxygen/scalable/actions/insert-link.svgz
 share/icons/oxygen/scalable/actions/insert-table.svgz
 share/icons/oxygen/scalable/actions/insert-text.svgz
 share/icons/oxygen/scalable/actions/list-add-font.svgz
@@ -4715,6 +5006,7 @@ share/icons/oxygen/scalable/actions/list-remove.svgz
 share/icons/oxygen/scalable/actions/mail-flag.svgz
 share/icons/oxygen/scalable/actions/mail-forward.svgz
 share/icons/oxygen/scalable/actions/mail-mark-important.svgz
+share/icons/oxygen/scalable/actions/mail-mark-junk.svgz
 share/icons/oxygen/scalable/actions/mail-mark-notjunk.svgz
 share/icons/oxygen/scalable/actions/mail-mark-read.svgz
 share/icons/oxygen/scalable/actions/mail-mark-task.svgz
@@ -4740,8 +5032,11 @@ share/icons/oxygen/scalable/actions/network-connect.svgz
 share/icons/oxygen/scalable/actions/network-disconnect.svgz
 share/icons/oxygen/scalable/actions/news-subscribe.svgz
 share/icons/oxygen/scalable/actions/news-unsubscribe.svgz
+share/icons/oxygen/scalable/actions/object-flip-horizontal.svgz
+share/icons/oxygen/scalable/actions/object-flip-vertical.svgz
 share/icons/oxygen/scalable/actions/object-rotate-left.svgz
 share/icons/oxygen/scalable/actions/object-rotate-right.svgz
+share/icons/oxygen/scalable/actions/page-zoom.svgz
 share/icons/oxygen/scalable/actions/player-time.svgz
 share/icons/oxygen/scalable/actions/player-volume.svgz
 share/icons/oxygen/scalable/actions/process-stop.svgz
@@ -4753,7 +5048,9 @@ share/icons/oxygen/scalable/actions/run-build.svgz
 share/icons/oxygen/scalable/actions/select-rectangular.svgz
 share/icons/oxygen/scalable/actions/services.svgz
 share/icons/oxygen/scalable/actions/show-menu.svgz
+share/icons/oxygen/scalable/actions/small/16x16/address-book-new.svgz
 share/icons/oxygen/scalable/actions/small/16x16/application-exit.svgz
+share/icons/oxygen/scalable/actions/small/16x16/appointment-new.svgz
 share/icons/oxygen/scalable/actions/small/16x16/archive-extract.svgz
 share/icons/oxygen/scalable/actions/small/16x16/archive-insert-directory.svgz
 share/icons/oxygen/scalable/actions/small/16x16/archive-insert.svgz
@@ -4769,6 +5066,7 @@ share/icons/oxygen/scalable/actions/small/16x16/arrow-up.svgz
 share/icons/oxygen/scalable/actions/small/16x16/bookmark-new-list.svgz
 share/icons/oxygen/scalable/actions/small/16x16/bookmark-new.svgz
 share/icons/oxygen/scalable/actions/small/16x16/bookmark-toolbar.svgz
+share/icons/oxygen/scalable/actions/small/16x16/bookmarks-organize.svgz
 share/icons/oxygen/scalable/actions/small/16x16/character-set.svgz
 share/icons/oxygen/scalable/actions/small/16x16/configure-toolbars.svgz
 share/icons/oxygen/scalable/actions/small/16x16/contact-new.svgz
@@ -4803,7 +5101,9 @@ share/icons/oxygen/scalable/actions/small/16x16/edit-clear.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-copy.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-cut.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-find-mail.svgz
+share/icons/oxygen/scalable/actions/small/16x16/edit-find-user.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-find.svgz
+share/icons/oxygen/scalable/actions/small/16x16/edit-link.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-paste.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-redo.svgz
 share/icons/oxygen/scalable/actions/small/16x16/edit-rename.svgz
@@ -4833,17 +5133,23 @@ share/icons/oxygen/scalable/actions/small/16x16/format-text-superscript.svgz
 share/icons/oxygen/scalable/actions/small/16x16/format-text-underline.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-down-search.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-down.svgz
+share/icons/oxygen/scalable/actions/small/16x16/go-frist-page.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-home.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-jump-locationbar.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-jump-today.svgz
+share/icons/oxygen/scalable/actions/small/16x16/go-last-page.svgz
+share/icons/oxygen/scalable/actions/small/16x16/go-next-page.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-next.svgz
+share/icons/oxygen/scalable/actions/small/16x16/go-previous-page.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-previous.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-up-search.svgz
 share/icons/oxygen/scalable/actions/small/16x16/go-up.svgz
 share/icons/oxygen/scalable/actions/small/16x16/help-about.svgz
 share/icons/oxygen/scalable/actions/small/16x16/help-contents.svgz
 share/icons/oxygen/scalable/actions/small/16x16/help-contextual.svgz
+share/icons/oxygen/scalable/actions/small/16x16/insert-horizontal-rule.svgz
 share/icons/oxygen/scalable/actions/small/16x16/insert-image.svgz
+share/icons/oxygen/scalable/actions/small/16x16/insert-link.svgz
 share/icons/oxygen/scalable/actions/small/16x16/insert-table.svgz
 share/icons/oxygen/scalable/actions/small/16x16/insert-text.svgz
 share/icons/oxygen/scalable/actions/small/16x16/list-add-font.svgz
@@ -4853,6 +5159,7 @@ share/icons/oxygen/scalable/actions/small/16x16/list-remove.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-flag.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-forward.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-mark-important.svgz
+share/icons/oxygen/scalable/actions/small/16x16/mail-mark-junk.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-mark-read.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-mark-task.svgz
 share/icons/oxygen/scalable/actions/small/16x16/mail-mark-unread-new.svgz
@@ -4867,8 +5174,11 @@ share/icons/oxygen/scalable/actions/small/16x16/mail-send.svgz
 share/icons/oxygen/scalable/actions/small/16x16/network-connect.svgz
 share/icons/oxygen/scalable/actions/small/16x16/news-subscribe.svgz
 share/icons/oxygen/scalable/actions/small/16x16/news-unsubscribe.svgz
+share/icons/oxygen/scalable/actions/small/16x16/object-flip-horizontal.svgz
+share/icons/oxygen/scalable/actions/small/16x16/object-flip-vertical.svgz
 share/icons/oxygen/scalable/actions/small/16x16/object-rotate-left.svgz
 share/icons/oxygen/scalable/actions/small/16x16/object-rotate-right.svgz
+share/icons/oxygen/scalable/actions/small/16x16/page-zoom.svgz
 share/icons/oxygen/scalable/actions/small/16x16/process-stop.svgz
 share/icons/oxygen/scalable/actions/small/16x16/rating.svgz
 share/icons/oxygen/scalable/actions/small/16x16/select-rectangular.svgz
@@ -4885,7 +5195,9 @@ share/icons/oxygen/scalable/actions/small/16x16/text-speak.svgz
 share/icons/oxygen/scalable/actions/small/16x16/tools-check-spelling.svgz
 share/icons/oxygen/scalable/actions/small/16x16/tools-media-optical-copy.svgz
 share/icons/oxygen/scalable/actions/small/16x16/transform-rotate.svgz
+share/icons/oxygen/scalable/actions/small/16x16/transform-scale.svgz
 share/icons/oxygen/scalable/actions/small/16x16/trash-empty.svgz
+share/icons/oxygen/scalable/actions/small/16x16/user-group-new.svgz
 share/icons/oxygen/scalable/actions/small/16x16/user-properties.svgz
 share/icons/oxygen/scalable/actions/small/16x16/view-calendar-day.svgz
 share/icons/oxygen/scalable/actions/small/16x16/view-calendar-list.svgz
@@ -4931,12 +5243,15 @@ share/icons/oxygen/scalable/actions/small/16x16/view-split-left-right.svgz
 share/icons/oxygen/scalable/actions/small/16x16/view-split-top-bottom.svgz
 share/icons/oxygen/scalable/actions/small/16x16/window-duplicate.svgz
 share/icons/oxygen/scalable/actions/small/16x16/window-new.svgz
-share/icons/oxygen/scalable/actions/small/16x16/window-suppressed.svgz
 share/icons/oxygen/scalable/actions/small/16x16/zoom-fit-best.svgz
+share/icons/oxygen/scalable/actions/small/16x16/zoom-fit-height.svgz
+share/icons/oxygen/scalable/actions/small/16x16/zoom-fit-width.svgz
 share/icons/oxygen/scalable/actions/small/16x16/zoom-in.svgz
 share/icons/oxygen/scalable/actions/small/16x16/zoom-original.svgz
 share/icons/oxygen/scalable/actions/small/16x16/zoom-out.svgz
+share/icons/oxygen/scalable/actions/small/22x22/address-book-new.svgz
 share/icons/oxygen/scalable/actions/small/22x22/application-exit.svgz
+share/icons/oxygen/scalable/actions/small/22x22/appointment-new.svgz
 share/icons/oxygen/scalable/actions/small/22x22/archive-extract.svgz
 share/icons/oxygen/scalable/actions/small/22x22/archive-insert-directory.svgz
 share/icons/oxygen/scalable/actions/small/22x22/archive-insert.svgz
@@ -4948,6 +5263,7 @@ share/icons/oxygen/scalable/actions/small/22x22/arrow-up-double.svgz
 share/icons/oxygen/scalable/actions/small/22x22/bookmark-new-list.svgz
 share/icons/oxygen/scalable/actions/small/22x22/bookmark-new.svgz
 share/icons/oxygen/scalable/actions/small/22x22/bookmark-toolbar.svgz
+share/icons/oxygen/scalable/actions/small/22x22/bookmarks-organize.svgz
 share/icons/oxygen/scalable/actions/small/22x22/character-set.svgz
 share/icons/oxygen/scalable/actions/small/22x22/color-picker.svgz
 share/icons/oxygen/scalable/actions/small/22x22/configure-toolbars.svgz
@@ -4981,7 +5297,6 @@ share/icons/oxygen/scalable/actions/small/22x22/edit-clear-locationbar-rtl.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-clear.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-copy.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-cut.svgz
-share/icons/oxygen/scalable/actions/small/22x22/edit-delete-mail.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-delete.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-find-mail.svgz
 share/icons/oxygen/scalable/actions/small/22x22/edit-find.svgz
@@ -5005,6 +5320,7 @@ share/icons/oxygen/scalable/actions/small/22x22/format-line-spacing-triple.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-list-ordered.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-list-unordered.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-text-bold.svgz
+share/icons/oxygen/scalable/actions/small/22x22/format-text-color.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-text-direction-ltr.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-text-direction-rtl.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-text-italic.svgz
@@ -5014,17 +5330,24 @@ share/icons/oxygen/scalable/actions/small/22x22/format-text-superscript.svgz
 share/icons/oxygen/scalable/actions/small/22x22/format-text-underline.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-down-search.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-down.svgz
+share/icons/oxygen/scalable/actions/small/22x22/go-first-page.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-home.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-jump-locationbar.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-jump-today.svgz
+share/icons/oxygen/scalable/actions/small/22x22/go-last-page.svgz
+share/icons/oxygen/scalable/actions/small/22x22/go-next-page.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-next.svgz
+share/icons/oxygen/scalable/actions/small/22x22/go-previous-page.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-previous.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-up-search.svgz
 share/icons/oxygen/scalable/actions/small/22x22/go-up.svgz
+share/icons/oxygen/scalable/actions/small/22x22/insert-horizontal-rule.svgz
 share/icons/oxygen/scalable/actions/small/22x22/insert-image.svgz
+share/icons/oxygen/scalable/actions/small/22x22/insert-link.svgz
 share/icons/oxygen/scalable/actions/small/22x22/insert-table.svgz
 share/icons/oxygen/scalable/actions/small/22x22/insert-text.svgz
 share/icons/oxygen/scalable/actions/small/22x22/list-add-font.svgz
+share/icons/oxygen/scalable/actions/small/22x22/list-add-user.svgz
 share/icons/oxygen/scalable/actions/small/22x22/list-add.svgz
 share/icons/oxygen/scalable/actions/small/22x22/list-remove.svgz
 share/icons/oxygen/scalable/actions/small/22x22/mail-flag.svgz
@@ -5042,8 +5365,11 @@ share/icons/oxygen/scalable/actions/small/22x22/mail-reply-list.svgz
 share/icons/oxygen/scalable/actions/small/22x22/mail-reply-sender.svgz
 share/icons/oxygen/scalable/actions/small/22x22/mail-send.svgz
 share/icons/oxygen/scalable/actions/small/22x22/network-connect.svgz
+share/icons/oxygen/scalable/actions/small/22x22/object-flip-horizontal.svgz
+share/icons/oxygen/scalable/actions/small/22x22/object-flip-vertical.svgz
 share/icons/oxygen/scalable/actions/small/22x22/object-rotate-left.svgz
 share/icons/oxygen/scalable/actions/small/22x22/object-rotate-right.svgz
+share/icons/oxygen/scalable/actions/small/22x22/page-zoom.svgz
 share/icons/oxygen/scalable/actions/small/22x22/process-stop.svgz
 share/icons/oxygen/scalable/actions/small/22x22/rating.svgz
 share/icons/oxygen/scalable/actions/small/22x22/select-rectangular.svgz
@@ -5055,7 +5381,9 @@ share/icons/oxygen/scalable/actions/small/22x22/tab-duplicate.svgz
 share/icons/oxygen/scalable/actions/small/22x22/tab-new-background.svgz
 share/icons/oxygen/scalable/actions/small/22x22/tools-check-spelling.svgz
 share/icons/oxygen/scalable/actions/small/22x22/transform-rotate.svgz
+share/icons/oxygen/scalable/actions/small/22x22/transform-scale.svgz
 share/icons/oxygen/scalable/actions/small/22x22/trash-empty.svgz
+share/icons/oxygen/scalable/actions/small/22x22/user-group-new.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-calendar-day.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-calendar-list.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-calendar-month.svgz
@@ -5092,42 +5420,72 @@ share/icons/oxygen/scalable/actions/small/22x22/view-sort-ascending.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-sort-descending.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-split-left-right.svgz
 share/icons/oxygen/scalable/actions/small/22x22/view-split-top-bottom.svgz
+share/icons/oxygen/scalable/actions/small/22x22/view-table-of-contents-ltr.svgz
+share/icons/oxygen/scalable/actions/small/22x22/view-table-of-contents-rtl.svgz
 share/icons/oxygen/scalable/actions/small/22x22/window-duplicate.svgz
 share/icons/oxygen/scalable/actions/small/22x22/window-new.svgz
-share/icons/oxygen/scalable/actions/small/22x22/window-suppressed.svgz
 share/icons/oxygen/scalable/actions/small/22x22/zoom-fit-best.svgz
+share/icons/oxygen/scalable/actions/small/22x22/zoom-fit-height.svgz
+share/icons/oxygen/scalable/actions/small/22x22/zoom-fit-width.svgz
 share/icons/oxygen/scalable/actions/small/22x22/zoom-in.svgz
 share/icons/oxygen/scalable/actions/small/22x22/zoom-original.svgz
 share/icons/oxygen/scalable/actions/small/22x22/zoom-out.svgz
+share/icons/oxygen/scalable/actions/small/32x32/bookmark-new.svgz
+share/icons/oxygen/scalable/actions/small/32x32/dashboard-show.svgz
 share/icons/oxygen/scalable/actions/small/32x32/edit-find-mail.svgz
 share/icons/oxygen/scalable/actions/small/32x32/edit-find.svgz
+share/icons/oxygen/scalable/actions/small/32x32/go-first-page.svgz
+share/icons/oxygen/scalable/actions/small/32x32/go-last-page.svgz
+share/icons/oxygen/scalable/actions/small/32x32/go-next-page.svgz
+share/icons/oxygen/scalable/actions/small/32x32/go-previous-page.svgz
+share/icons/oxygen/scalable/actions/small/32x32/mail-mark-junk.svgz
 share/icons/oxygen/scalable/actions/small/32x32/mail-receive.svgz
 share/icons/oxygen/scalable/actions/small/32x32/system-search.svgz
+share/icons/oxygen/scalable/actions/small/32x32/view-table-of-contents-ltr.svgz
+share/icons/oxygen/scalable/actions/small/32x32/view-table-of-contents-rtl.svgz
+share/icons/oxygen/scalable/actions/small/32x32/zoom-fit-best.svgz
+share/icons/oxygen/scalable/actions/small/32x32/zoom-fit-height.svgz
+share/icons/oxygen/scalable/actions/small/32x32/zoom-fit-width.svgz
+share/icons/oxygen/scalable/actions/small/48x48/address-book-new.svgz
+share/icons/oxygen/scalable/actions/small/48x48/appointment-new.svgz
 share/icons/oxygen/scalable/actions/small/48x48/bookmark-new.svgz
 share/icons/oxygen/scalable/actions/small/48x48/contact-new.svgz
 share/icons/oxygen/scalable/actions/small/48x48/document-new.svgz
+share/icons/oxygen/scalable/actions/small/48x48/document-open-recent.svgz
 share/icons/oxygen/scalable/actions/small/48x48/document-open.svgz
 share/icons/oxygen/scalable/actions/small/48x48/document-save-all.svgz
 share/icons/oxygen/scalable/actions/small/48x48/document-save-as.svgz
 share/icons/oxygen/scalable/actions/small/48x48/document-save.svgz
 share/icons/oxygen/scalable/actions/small/48x48/folder-new.svgz
+share/icons/oxygen/scalable/actions/small/48x48/format-text-color.svgz
+share/icons/oxygen/scalable/actions/small/48x48/go-first-page.svgz
+share/icons/oxygen/scalable/actions/small/48x48/go-last-page.svgz
+share/icons/oxygen/scalable/actions/small/48x48/go-next-page.svgz
+share/icons/oxygen/scalable/actions/small/48x48/go-previous-page.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-forward.svgz
-share/icons/oxygen/scalable/actions/small/48x48/mail-mark-task.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-message-new.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-queue.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-reply-all.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-reply-list.svgz
 share/icons/oxygen/scalable/actions/small/48x48/mail-reply-sender.svgz
+share/icons/oxygen/scalable/actions/small/48x48/object-flip-horizontal.svgz
+share/icons/oxygen/scalable/actions/small/48x48/object-flip-vertical.svgz
 share/icons/oxygen/scalable/actions/small/48x48/tab-new-background.svgz
 share/icons/oxygen/scalable/actions/small/48x48/view-media-lyrics.svgz
 share/icons/oxygen/scalable/actions/small/48x48/view-media-playlist.svgz
+share/icons/oxygen/scalable/actions/small/48x48/view-table-of-contents-ltr.svgz
+share/icons/oxygen/scalable/actions/small/48x48/view-table-of-contents-rtl.svgz
 share/icons/oxygen/scalable/actions/small/48x48/window-new.svgz
+share/icons/oxygen/scalable/actions/small/48x48/zoom-fit-best.svgz
+share/icons/oxygen/scalable/actions/small/48x48/zoom-fit-height.svgz
+share/icons/oxygen/scalable/actions/small/48x48/zoom-fit-width.svgz
 share/icons/oxygen/scalable/actions/speaker.svgz
 share/icons/oxygen/scalable/actions/system-lock-screen.svgz
 share/icons/oxygen/scalable/actions/system-log-out.svgz
 share/icons/oxygen/scalable/actions/system-restart.svgz
 share/icons/oxygen/scalable/actions/system-run.svgz
 share/icons/oxygen/scalable/actions/system-search.svgz
+share/icons/oxygen/scalable/actions/system-shutdown.svgz
 share/icons/oxygen/scalable/actions/system-suspend-hibernate.svgz
 share/icons/oxygen/scalable/actions/system-suspend.svgz
 share/icons/oxygen/scalable/actions/system-switch-user.svgz
@@ -5145,6 +5503,7 @@ share/icons/oxygen/scalable/actions/tools-report-bug.svgz
 share/icons/oxygen/scalable/actions/tools-wizard.svgz
 share/icons/oxygen/scalable/actions/transform-move.svgz
 share/icons/oxygen/scalable/actions/transform-rotate.svgz
+share/icons/oxygen/scalable/actions/transform-scale.svgz
 share/icons/oxygen/scalable/actions/trash-empty.svgz
 share/icons/oxygen/scalable/actions/user-group-new.svgz
 share/icons/oxygen/scalable/actions/user-properties.svgz
@@ -5202,8 +5561,9 @@ share/icons/oxygen/scalable/actions/view-web-browser-dom-tree.svgz
 share/icons/oxygen/scalable/actions/window-close.svgz
 share/icons/oxygen/scalable/actions/window-duplicate.svgz
 share/icons/oxygen/scalable/actions/window-new.svgz
-share/icons/oxygen/scalable/actions/window-suppressed.svgz
 share/icons/oxygen/scalable/actions/zoom-fit-best.svgz
+share/icons/oxygen/scalable/actions/zoom-fit-height.svgz
+share/icons/oxygen/scalable/actions/zoom-fit-width.svgz
 share/icons/oxygen/scalable/actions/zoom-in.svgz
 share/icons/oxygen/scalable/actions/zoom-original.svgz
 share/icons/oxygen/scalable/actions/zoom-out.svgz
@@ -5212,6 +5572,7 @@ share/icons/oxygen/scalable/apps/accessories-character-map.svgz
 share/icons/oxygen/scalable/apps/accessories-dictionary.svgz
 share/icons/oxygen/scalable/apps/accessories-text-editor.svgz
 share/icons/oxygen/scalable/apps/acroread.svgz
+share/icons/oxygen/scalable/apps/akonadi.svgz
 share/icons/oxygen/scalable/apps/akregator.svgz
 share/icons/oxygen/scalable/apps/alternativ/k3b.svgz
 share/icons/oxygen/scalable/apps/alternativ/k3b2.svgz
@@ -5241,6 +5602,7 @@ share/icons/oxygen/scalable/apps/kchart.svgz
 share/icons/oxygen/scalable/apps/kcolorchooser.svgz
 share/icons/oxygen/scalable/apps/kde.svgz
 share/icons/oxygen/scalable/apps/kexi.svgz
+share/icons/oxygen/scalable/apps/kjots.svgz
 share/icons/oxygen/scalable/apps/kjournal.svgz
 share/icons/oxygen/scalable/apps/klipper.svgz
 share/icons/oxygen/scalable/apps/kmplayer.svgz
@@ -5263,8 +5625,10 @@ share/icons/oxygen/scalable/apps/kverbos.svgz
 share/icons/oxygen/scalable/apps/kwalletmanager.svgz
 share/icons/oxygen/scalable/apps/kword.svgz
 share/icons/oxygen/scalable/apps/multimedia-volume-control.svgz
+share/icons/oxygen/scalable/apps/nepomuk.svgz
 share/icons/oxygen/scalable/apps/office-address-book.svgz
 share/icons/oxygen/scalable/apps/office-calendar.svgz
+share/icons/oxygen/scalable/apps/okteta.svgz
 share/icons/oxygen/scalable/apps/oxygen.svgz
 share/icons/oxygen/scalable/apps/phonon-xine.svgz
 share/icons/oxygen/scalable/apps/plasma.svgz
@@ -5343,6 +5707,7 @@ share/icons/oxygen/scalable/apps/small/16x16/preferences-desktop-notification-be
 share/icons/oxygen/scalable/apps/small/16x16/preferences-desktop-printer.svgz
 share/icons/oxygen/scalable/apps/small/16x16/preferences-desktop-text-to-speech.svgz
 share/icons/oxygen/scalable/apps/small/16x16/preferences-desktop-theme.svgz
+share/icons/oxygen/scalable/apps/small/16x16/preferences-desktop-user.svgz
 share/icons/oxygen/scalable/apps/small/16x16/preferences-plugin.svgz
 share/icons/oxygen/scalable/apps/small/16x16/preferences-web-browser-identification.svgz
 share/icons/oxygen/scalable/apps/small/16x16/preferences-web-browser-stylesheets.svgz
@@ -5379,6 +5744,7 @@ share/icons/oxygen/scalable/apps/small/22x22/utilities-system-monitor.svgz
 share/icons/oxygen/scalable/apps/small/22x22/utilities-terminal.svgz
 share/icons/oxygen/scalable/apps/small/32x32/digikam.svgz
 share/icons/oxygen/scalable/apps/small/32x32/klipper.svgz
+share/icons/oxygen/scalable/apps/small/32x32/preferences-desktop-user.svgz
 share/icons/oxygen/scalable/apps/small/32x32/system-file-manager.svgz
 share/icons/oxygen/scalable/apps/strigi.svgz
 share/icons/oxygen/scalable/apps/system-file-manager.svgz
@@ -5489,6 +5855,7 @@ share/icons/oxygen/scalable/devices/small/16x16/multimedia-player-apple-ipod.svg
 share/icons/oxygen/scalable/devices/small/16x16/multimedia-player.svgz
 share/icons/oxygen/scalable/devices/small/16x16/network-wireless.svgz
 share/icons/oxygen/scalable/devices/small/16x16/pda.svgz
+share/icons/oxygen/scalable/devices/small/16x16/phone.svgz
 share/icons/oxygen/scalable/devices/small/16x16/printer.svgz
 share/icons/oxygen/scalable/devices/small/16x16/video-display.svgz
 share/icons/oxygen/scalable/devices/small/16x16/video-television.svgz
@@ -5505,6 +5872,7 @@ share/icons/oxygen/scalable/devices/small/22x22/input-mouse.svgz
 share/icons/oxygen/scalable/devices/small/22x22/media-floppy.svgz
 share/icons/oxygen/scalable/devices/small/22x22/multimedia-player-apple-ipod.svgz
 share/icons/oxygen/scalable/devices/small/22x22/network-wireless.svgz
+share/icons/oxygen/scalable/devices/small/22x22/phone.svgz
 share/icons/oxygen/scalable/devices/small/22x22/video-display.svgz
 share/icons/oxygen/scalable/devices/small/32x32/camera-photo.svgz
 share/icons/oxygen/scalable/devices/small/32x32/computer-laptop.svgz
@@ -5513,6 +5881,8 @@ share/icons/oxygen/scalable/devices/small/32x32/drive-optical.svgz
 share/icons/oxygen/scalable/devices/small/32x32/media-floppy.svgz
 share/icons/oxygen/scalable/devices/small/32x32/multimedia-player-ipod.svgz
 share/icons/oxygen/scalable/devices/small/32x32/network-wireless.svgz
+share/icons/oxygen/scalable/devices/small/32x32/phone.svgz
+share/icons/oxygen/scalable/devices/small/48x48/computer-laptop.svgz
 share/icons/oxygen/scalable/devices/small/48x48/computer.svgz
 share/icons/oxygen/scalable/devices/small/48x48/media-floppy.svgz
 share/icons/oxygen/scalable/devices/small/48x48/network-wireless.svgz
@@ -5535,6 +5905,24 @@ share/icons/oxygen/scalable/emblems/small/22x22/emblem-mounted.svgz
 share/icons/oxygen/scalable/emblems/small/8x8/emblem-important.svgz
 share/icons/oxygen/scalable/emblems/small/8x8/emblem-link.svgz
 share/icons/oxygen/scalable/emblems/small/8x8/emblem-mounted.svgz
+share/icons/oxygen/scalable/emotes/face-angel.svgz
+share/icons/oxygen/scalable/emotes/face-embarrassed.svgz
+share/icons/oxygen/scalable/emotes/face-kiss.svgz
+share/icons/oxygen/scalable/emotes/face-laugh.svgz
+share/icons/oxygen/scalable/emotes/face-plain.svgz
+share/icons/oxygen/scalable/emotes/face-raspberry.svgz
+share/icons/oxygen/scalable/emotes/face-sad.svgz
+share/icons/oxygen/scalable/emotes/face-smile-big.svgz
+share/icons/oxygen/scalable/emotes/face-smile.svgz
+share/icons/oxygen/scalable/emotes/face-surprise.svgz
+share/icons/oxygen/scalable/emotes/face-uncertain.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-angel.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-kiss.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-laugh.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-raspberry.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-sad.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-smile-big.svgz
+share/icons/oxygen/scalable/emotes/small/16x16/face-uncertain.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-angel.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-confused.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-crying.svgz
@@ -5543,7 +5931,7 @@ share/icons/oxygen/scalable/emotes/small/22x22/face-embarrassed.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-foot-in-mouth.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-glasses.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-kiss.svgz
-share/icons/oxygen/scalable/emotes/small/22x22/face-laughing.svgz
+share/icons/oxygen/scalable/emotes/small/22x22/face-laugh.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-plain.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-raspberry.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-sad.svgz
@@ -5553,8 +5941,8 @@ share/icons/oxygen/scalable/emotes/small/22x22/face-smile-gearhead-female.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-smile-gearhead-male.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-smile.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-surprise.svgz
+share/icons/oxygen/scalable/emotes/small/22x22/face-uncertain.svgz
 share/icons/oxygen/scalable/emotes/small/22x22/face-wink.svgz
-share/icons/oxygen/scalable/export_pngs.sh
 share/icons/oxygen/scalable/mimetypes/application-illustrator.svgz
 share/icons/oxygen/scalable/mimetypes/application-octet-stream.svgz
 share/icons/oxygen/scalable/mimetypes/application-pdf.svgz
@@ -5917,6 +6305,7 @@ share/icons/oxygen/scalable/mimetypes/small/16x16/video-x-ms-wmv.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/video-x-msvideo.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/video-x-ogm+ogg.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/video-x-theora+ogg.svgz
+share/icons/oxygen/scalable/mimetypes/small/16x16/x-kde-nsplugin-generated.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/x-office-address-book.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/x-office-calendar.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/x-office-contact.svgz
@@ -6083,6 +6472,7 @@ share/icons/oxygen/scalable/mimetypes/small/22x22/video-x-ms-wmv.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/video-x-msvideo.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/video-x-ogm+ogg.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/video-x-theora+ogg.svgz
+share/icons/oxygen/scalable/mimetypes/small/22x22/x-kde-nsplugin-generated.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/x-office-contact.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/x-office-document.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/x-office-spreadsheet.svgz
@@ -6148,6 +6538,7 @@ share/icons/oxygen/scalable/mimetypes/video-x-ms-wmv.svgz
 share/icons/oxygen/scalable/mimetypes/video-x-msvideo.svgz
 share/icons/oxygen/scalable/mimetypes/video-x-ogm+ogg.svgz
 share/icons/oxygen/scalable/mimetypes/video-x-theora+ogg.svgz
+share/icons/oxygen/scalable/mimetypes/x-kde-nsplugin-generated.svgz
 share/icons/oxygen/scalable/mimetypes/x-media-podcast.svgz
 share/icons/oxygen/scalable/mimetypes/x-office-address-book.svgz
 share/icons/oxygen/scalable/mimetypes/x-office-calendar.svgz
@@ -6209,7 +6600,6 @@ share/icons/oxygen/scalable/places/small/22x22/bookmarks.svgz
 share/icons/oxygen/scalable/places/small/22x22/document-multiple.svgz
 share/icons/oxygen/scalable/places/small/22x22/folder.svgz
 share/icons/oxygen/scalable/places/small/22x22/mail-folder-inbox.svgz
-share/icons/oxygen/scalable/places/small/22x22/mail-folder-outbox.svgz
 share/icons/oxygen/scalable/places/small/22x22/mail-folder-sent.svgz
 share/icons/oxygen/scalable/places/small/22x22/mail-message.svgz
 share/icons/oxygen/scalable/places/small/22x22/start-here-kde.svgz
@@ -6245,7 +6635,9 @@ share/icons/oxygen/scalable/status/folder-open.svgz
 share/icons/oxygen/scalable/status/image-loading.svgz
 share/icons/oxygen/scalable/status/image-missing.svgz
 share/icons/oxygen/scalable/status/mail-attachment.svgz
+share/icons/oxygen/scalable/status/mail-queued.svgz
 share/icons/oxygen/scalable/status/mail-read.svgz
+share/icons/oxygen/scalable/status/mail-replied.svgz
 share/icons/oxygen/scalable/status/mail-unread-new.svgz
 share/icons/oxygen/scalable/status/mail-unread.svgz
 share/icons/oxygen/scalable/status/media-playlist-repeat.svgz
@@ -6277,7 +6669,9 @@ share/icons/oxygen/scalable/status/small/16x16/folder-open.svgz
 share/icons/oxygen/scalable/status/small/16x16/image-loading.svgz
 share/icons/oxygen/scalable/status/small/16x16/image-missing.svgz
 share/icons/oxygen/scalable/status/small/16x16/mail-attachment.svgz
+share/icons/oxygen/scalable/status/small/16x16/mail-queued.svgz
 share/icons/oxygen/scalable/status/small/16x16/mail-read.svgz
+share/icons/oxygen/scalable/status/small/16x16/mail-replied.svgz
 share/icons/oxygen/scalable/status/small/16x16/mail-unread-new.svgz
 share/icons/oxygen/scalable/status/small/16x16/mail-unread.svgz
 share/icons/oxygen/scalable/status/small/16x16/object-locked.svgz
@@ -6285,6 +6679,7 @@ share/icons/oxygen/scalable/status/small/16x16/object-unlocked.svgz
 share/icons/oxygen/scalable/status/small/16x16/security-high.svgz
 share/icons/oxygen/scalable/status/small/16x16/security-low.svgz
 share/icons/oxygen/scalable/status/small/16x16/security-medium.svgz
+share/icons/oxygen/scalable/status/small/16x16/window-suppressed.svgz
 share/icons/oxygen/scalable/status/small/22x22/audio-volume-high.svgz
 share/icons/oxygen/scalable/status/small/22x22/audio-volume-low.svgz
 share/icons/oxygen/scalable/status/small/22x22/audio-volume-medium.svgz
@@ -6299,21 +6694,26 @@ share/icons/oxygen/scalable/status/small/22x22/battery-charging-060.svgz
 share/icons/oxygen/scalable/status/small/22x22/battery-charging-080.svgz
 share/icons/oxygen/scalable/status/small/22x22/battery-charging-caution.svgz
 share/icons/oxygen/scalable/status/small/22x22/battery-charging-low.svgz
+share/icons/oxygen/scalable/status/small/22x22/battery-charging.svgz
 share/icons/oxygen/scalable/status/small/22x22/battery-low.svgz
+share/icons/oxygen/scalable/status/small/22x22/battery-missing.svgz
 share/icons/oxygen/scalable/status/small/22x22/dialog-error.svgz
 share/icons/oxygen/scalable/status/small/22x22/dialog-information.svgz
 share/icons/oxygen/scalable/status/small/22x22/dialog-warning.svgz
 share/icons/oxygen/scalable/status/small/22x22/image-loading.svgz
 share/icons/oxygen/scalable/status/small/22x22/image-missing.svgz
 share/icons/oxygen/scalable/status/small/22x22/mail-attachment.svgz
+share/icons/oxygen/scalable/status/small/22x22/mail-queued.svgz
 share/icons/oxygen/scalable/status/small/22x22/mail-read.svgz
 share/icons/oxygen/scalable/status/small/22x22/mail-unread-new.svgz
 share/icons/oxygen/scalable/status/small/22x22/mail-unread.svgz
 share/icons/oxygen/scalable/status/small/22x22/object-locked.svgz
 share/icons/oxygen/scalable/status/small/22x22/object-unlocked.svgz
+share/icons/oxygen/scalable/status/small/22x22/window-suppressed.svgz
 share/icons/oxygen/scalable/status/small/48x48/dialog-error.svgz
 share/icons/oxygen/scalable/status/small/48x48/dialog-information.svgz
 share/icons/oxygen/scalable/status/small/48x48/dialog-warning.svgz
+share/icons/oxygen/scalable/status/small/48x48/mail-queued.svgz
 share/icons/oxygen/scalable/status/user-away-extended.svgz
 share/icons/oxygen/scalable/status/user-away.svgz
 share/icons/oxygen/scalable/status/user-busy.svgz
@@ -6323,9 +6723,9 @@ share/icons/oxygen/scalable/status/user-online.svgz
 share/icons/oxygen/scalable/status/user-trash-full.svgz
 share/icons/oxygen/scalable/status/wallet-closed.svgz
 share/icons/oxygen/scalable/status/wallet-open.svgz
+share/icons/oxygen/scalable/status/window-suppressed.svgz
 share/kde/apps/cmake/modules/FindCLucene.cmake
 share/kde/apps/cmake/modules/FindXCB.cmake
-share/kde/apps/cmake/modules/FindXine.cmake
 share/kde/apps/drkonqi/debuggers/gdbrc
 share/kde/apps/drkonqi/pics/konqi.png
 share/kde/apps/drkonqi/presets/developerrc
@@ -6333,7 +6733,9 @@ share/kde/apps/drkonqi/presets/enduserrc
 share/kde/apps/kcm_componentchooser/kcm_browser.desktop
 share/kde/apps/kcm_componentchooser/kcm_kemail.desktop
 share/kde/apps/kcm_componentchooser/kcm_terminal.desktop
+share/kde/apps/kcm_phonon/listview-background.png
 share/kde/apps/kcmlocale/pics/background.png
+share/kde/apps/kconf_update/devicepreference.upd
 share/kde/apps/kconf_update/kuriikwsfilter.upd
 share/kde/apps/kde/kde.notifyrc
 share/kde/apps/khelpcenter/glossary.html.in
@@ -6381,7 +6783,12 @@ share/kde/apps/kio_info/kde-info2html.conf
 share/kde/apps/kio_man/kio_man.css
 share/kde/apps/kio_thumbnail/pics/thumbnailfont_7x4.png
 share/kde/apps/kstyle/themes/oxygen.themerc
+share/kde/apps/libphonon/hardwaredatabase
+share/kde/apps/phonon/phonon.notifyrc
+share/kde/autostart/nepomukserver.desktop
 share/kde/config.kcfg/khelpcenter.kcfg
+share/kde/config/emoticons.knsrc
+share/kde/config/icons.knsrc
 share/kde/config/khotnewstuff.knsrc
 share/kde/config/kshorturifilterrc
 share/kde4/services/about.protocol
@@ -6392,7 +6799,9 @@ share/kde4/services/bzip2.protocol
 share/kde4/services/cgi.protocol
 share/kde4/services/componentchooser.desktop
 share/kde4/services/cursorthumbnail.desktop
+share/kde4/services/desktop.protocol
 share/kde4/services/djvuthumbnail.desktop
+share/kde4/services/emoticons.desktop
 share/kde4/services/exrthumbnail.desktop
 share/kde4/services/finger.protocol
 share/kde4/services/fish.protocol
@@ -6403,16 +6812,16 @@ share/kde4/services/htmlthumbnail.desktop
 share/kde4/services/icons.desktop
 share/kde4/services/imagethumbnail.desktop
 share/kde4/services/info.protocol
-share/kde4/services/ioslaveinfo.desktop
 share/kde4/services/kcm_kdnssd.desktop
 share/kde4/services/kcm_nepomuk.desktop
+share/kde4/services/kcm_phonon.desktop
 share/kde4/services/kcm_phononxine.desktop
 share/kde4/services/kcmcgi.desktop
 share/kde4/services/kcmkded.desktop
 share/kde4/services/kcmnotify.desktop
+share/kde4/services/kded/desktopnotifier.desktop
 share/kde4/services/kded/kpasswdserver.desktop
 share/kde4/services/kded/ktimezoned.desktop
-share/kde4/services/kded/nepomukserver.desktop
 share/kde4/services/kded/remotedirnotify.desktop
 share/kde4/services/kded/soliduiserver.desktop
 share/kde4/services/khelpcenter.desktop
@@ -6425,6 +6834,11 @@ share/kde4/services/kurisearchfilter.desktop
 share/kde4/services/language.desktop
 share/kde4/services/localdomainurifilter.desktop
 share/kde4/services/man.protocol
+share/kde4/services/nepomukfilewatch.desktop
+share/kde4/services/nepomukmigration1.desktop
+share/kde4/services/nepomukontologyloader.desktop
+share/kde4/services/nepomukstorage.desktop
+share/kde4/services/nepomukstrigiservice.desktop
 share/kde4/services/nfs.protocol
 share/kde4/services/phononbackends/xine.desktop
 share/kde4/services/programs.protocol
@@ -6493,6 +6907,12 @@ share/kde4/services/searchproviders/lycos.desktop
 share/kde4/services/searchproviders/mamma.desktop
 share/kde4/services/searchproviders/metacrawler.desktop
 share/kde4/services/searchproviders/msdn.desktop
+share/kde4/services/searchproviders/multitran-deru.desktop
+share/kde4/services/searchproviders/multitran-enru.desktop
+share/kde4/services/searchproviders/multitran-esru.desktop
+share/kde4/services/searchproviders/multitran-frru.desktop
+share/kde4/services/searchproviders/multitran-itru.desktop
+share/kde4/services/searchproviders/multitran-nlru.desktop
 share/kde4/services/searchproviders/netcraft.desktop
 share/kde4/services/searchproviders/nl-telephone.desktop
 share/kde4/services/searchproviders/nl-teletekst.desktop
@@ -6500,6 +6920,7 @@ share/kde4/services/searchproviders/pgpkeys.desktop
 share/kde4/services/searchproviders/php.desktop
 share/kde4/services/searchproviders/python.desktop
 share/kde4/services/searchproviders/qt.desktop
+share/kde4/services/searchproviders/qt3.desktop
 share/kde4/services/searchproviders/rae.desktop
 share/kde4/services/searchproviders/rfc.desktop
 share/kde4/services/searchproviders/rpmfind.desktop
@@ -6520,13 +6941,15 @@ share/kde4/services/searchproviders/wiktionary.desktop
 share/kde4/services/searchproviders/wordref.desktop
 share/kde4/services/settings.protocol
 share/kde4/services/sftp.protocol
-share/kde4/services/smbstatus.desktop
+share/kde4/services/spellchecking.desktop
 share/kde4/services/svgthumbnail.desktop
 share/kde4/services/tar.protocol
 share/kde4/services/textthumbnail.desktop
 share/kde4/services/thumbnail.protocol
 share/kde4/services/trash.protocol
 share/kde4/services/zip.protocol
+share/kde4/servicetypes/nepomukservice.desktop
+share/kde4/servicetypes/phononbackend.desktop
 share/kde4/servicetypes/searchprovider.desktop
 share/kde4/servicetypes/thumbcreator.desktop
 share/locale/en_US/entry.desktop
@@ -7027,7 +7450,7 @@ share/sounds/KDE-Im-User-Auth.ogg
 share/sounds/KDE-K3B-Finish-Error.ogg
 share/sounds/KDE-K3B-Finish-Success.ogg
 share/sounds/KDE-K3B-Insert-Medium.ogg
-share/sounds/KDE-Sys-App-Error-Critial.ogg
+share/sounds/KDE-Sys-App-Error-Critical.ogg
 share/sounds/KDE-Sys-App-Error-Serious-Very.ogg
 share/sounds/KDE-Sys-App-Error-Serious.ogg
 share/sounds/KDE-Sys-App-Error.ogg
@@ -7294,6 +7717,9 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
+@comment in kde: @dirrm share/kde/autostart
+@dirrm share/kde/apps/phonon
+@dirrm share/kde/apps/libphonon
 @comment in kde: @dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kio_thumbnail/pics
 @dirrm share/kde/apps/kio_thumbnail
@@ -7312,6 +7738,7 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
+@dirrm share/kde/apps/kcm_phonon
 @comment in kde: @dirrm share/kde/apps/kcm_componentchooser
 @dirrm share/kde/apps/drkonqi/presets
 @dirrm share/kde/apps/drkonqi/pics
@@ -7336,7 +7763,9 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/icons/oxygen/scalable/mimetypes/small
 @comment in kde: @dirrm share/icons/oxygen/scalable/mimetypes
 @dirrm share/icons/oxygen/scalable/emotes/small/22x22
+@dirrm share/icons/oxygen/scalable/emotes/small/16x16
 @dirrm share/icons/oxygen/scalable/emotes/small
+@comment in kde: @dirrm share/icons/oxygen/scalable/emotes
 @dirrm share/icons/oxygen/scalable/emblems/small/8x8
 @dirrm share/icons/oxygen/scalable/emblems/small/22x22
 @dirrm share/icons/oxygen/scalable/emblems/small/16x16
@@ -7364,12 +7793,12 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/icons/oxygen/scalable/actions/small/16x16
 @dirrm share/icons/oxygen/scalable/actions/small
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
-@comment in kde: @dirrm share/icons/oxygen/scalable
 @dirrm share/icons/oxygen/8x8/emblems
 @dirrm share/icons/oxygen/8x8
 @comment in kde: @dirrm share/icons/oxygen/64x64/status
 @comment in kde: @dirrm share/icons/oxygen/64x64/places
 @comment in kde: @dirrm share/icons/oxygen/64x64/mimetypes
+@comment in kde: @dirrm share/icons/oxygen/64x64/emotes
 @comment in kde: @dirrm share/icons/oxygen/64x64/emblems
 @comment in kde: @dirrm share/icons/oxygen/64x64/devices
 @comment in kde: @dirrm share/icons/oxygen/64x64/categories
@@ -7378,19 +7807,25 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/icons/oxygen/48x48/status
 @comment in kde: @dirrm share/icons/oxygen/48x48/places
 @comment in kde: @dirrm share/icons/oxygen/48x48/mimetypes
+@comment in kde: @dirrm share/icons/oxygen/48x48/emotes
 @comment in kde: @dirrm share/icons/oxygen/48x48/emblems
 @comment in kde: @dirrm share/icons/oxygen/48x48/devices
 @comment in kde: @dirrm share/icons/oxygen/48x48/categories
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
+@comment in kde: @dirrm share/icons/oxygen/48x48/animations
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/status
 @comment in kde: @dirrm share/icons/oxygen/32x32/places
 @comment in kde: @dirrm share/icons/oxygen/32x32/mimetypes
+@comment in kde: @dirrm share/icons/oxygen/32x32/emotes
 @comment in kde: @dirrm share/icons/oxygen/32x32/emblems
 @comment in kde: @dirrm share/icons/oxygen/32x32/devices
 @comment in kde: @dirrm share/icons/oxygen/32x32/categories
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
+@comment in kde: @dirrm share/icons/oxygen/32x32/animations
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/status
 @comment in kde: @dirrm share/icons/oxygen/22x22/places
 @comment in kde: @dirrm share/icons/oxygen/22x22/mimetypes
@@ -7401,17 +7836,21 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
 @comment in kde: @dirrm share/icons/oxygen/22x22/animations
 @comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/status
 @comment in kde: @dirrm share/icons/oxygen/16x16/places
 @comment in kde: @dirrm share/icons/oxygen/16x16/mimetypes
+@comment in kde: @dirrm share/icons/oxygen/16x16/emotes
 @comment in kde: @dirrm share/icons/oxygen/16x16/emblems
 @comment in kde: @dirrm share/icons/oxygen/16x16/devices
 @comment in kde: @dirrm share/icons/oxygen/16x16/categories
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
+@comment in kde: @dirrm share/icons/oxygen/16x16/animations
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
 @comment in kde: @dirrm share/icons/oxygen/128x128/status
 @comment in kde: @dirrm share/icons/oxygen/128x128/places
 @comment in kde: @dirrm share/icons/oxygen/128x128/mimetypes
+@comment in kde: @dirrm share/icons/oxygen/128x128/emotes
 @comment in kde: @dirrm share/icons/oxygen/128x128/emblems
 @comment in kde: @dirrm share/icons/oxygen/128x128/devices
 @comment in kde: @dirrm share/icons/oxygen/128x128/categories
@@ -7426,6 +7865,7 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/examples/kdebase-runtime4
 @dirrm share/emoticons/kde4
 @comment in kde: @dirrm share/emoticons
@@ -7441,46 +7881,37 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @dirrm share/doc/kde/HTML/en/kdebugdialog
 @dirrm share/doc/kde/HTML/en/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/en/kcontrol/useragent
+@dirrm share/doc/kde/HTML/en/kcontrol/spellchecking
 @dirrm share/doc/kde/HTML/en/kcontrol/smb
-@dirrm share/doc/kde/HTML/en/kcontrol/screensaver
 @dirrm share/doc/kde/HTML/en/kcontrol/proxy
 @dirrm share/doc/kde/HTML/en/kcontrol/performance
+@dirrm share/doc/kde/HTML/en/kcontrol/paths
 @dirrm share/doc/kde/HTML/en/kcontrol/passwords
 @dirrm share/doc/kde/HTML/en/kcontrol/panelappearance
 @dirrm share/doc/kde/HTML/en/kcontrol/panel
 @dirrm share/doc/kde/HTML/en/kcontrol/netpref
 @dirrm share/doc/kde/HTML/en/kcontrol/mouse
 @dirrm share/doc/kde/HTML/en/kcontrol/language
-@dirrm share/doc/kde/HTML/en/kcontrol/kwindecoration
 @dirrm share/doc/kde/HTML/en/kcontrol/khtml
-@dirrm share/doc/kde/HTML/en/kcontrol/keys
-@dirrm share/doc/kde/HTML/en/kcontrol/keyboard
 @dirrm share/doc/kde/HTML/en/kcontrol/kdm
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmtaskbar
-@dirrm share/doc/kde/HTML/en/kcontrol/kcmstyle
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmsmserver
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmnotify
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmlaunch
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmkonsole
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmcss
-@dirrm share/doc/kde/HTML/en/kcontrol/kcmaccess
 @dirrm share/doc/kde/HTML/en/kcontrol/icons
 @dirrm share/doc/kde/HTML/en/kcontrol/helpindex
-@dirrm share/doc/kde/HTML/en/kcontrol/fonts
-@dirrm share/doc/kde/HTML/en/kcontrol/fontinst
 @dirrm share/doc/kde/HTML/en/kcontrol/filetypes
 @dirrm share/doc/kde/HTML/en/kcontrol/filemanager
-@dirrm share/doc/kde/HTML/en/kcontrol/energy
+@dirrm share/doc/kde/HTML/en/kcontrol/emoticons
 @dirrm share/doc/kde/HTML/en/kcontrol/email
 @dirrm share/doc/kde/HTML/en/kcontrol/ebrowsing
 @dirrm share/doc/kde/HTML/en/kcontrol/desktopbehavior
 @dirrm share/doc/kde/HTML/en/kcontrol/desktop
 @dirrm share/doc/kde/HTML/en/kcontrol/crypto
 @dirrm share/doc/kde/HTML/en/kcontrol/cookies
-@dirrm share/doc/kde/HTML/en/kcontrol/colors
-@dirrm share/doc/kde/HTML/en/kcontrol/clock
 @dirrm share/doc/kde/HTML/en/kcontrol/cache
-@dirrm share/doc/kde/HTML/en/kcontrol/bell
 @dirrm share/doc/kde/HTML/en/kcontrol/background
 @comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @comment in kde: @dirrm share/doc/kde/HTML/en
@@ -7490,5 +7921,8 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4/plugins/styles
+@dirrm lib/kde4/plugins/phonon_platform
+@comment in kde: @dirrm lib/kde4/plugins
 @comment in kde: @dirrm lib/kde4/libexec
 @comment in kde: @dirrm lib/kde4
+@dirrm lib/kconf_update_bin
