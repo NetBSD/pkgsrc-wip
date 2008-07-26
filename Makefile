@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2974 2008/07/26 07:19:52 kristerw Exp $
+# $Id: Makefile,v 1.2975 2008/07/26 22:26:39 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -61,6 +61,7 @@ SUBDIR+=	afflib
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
+SUBDIR+=	akonadi
 SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	alphamail
@@ -110,6 +111,7 @@ SUBDIR+=	audacity-devel
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
 SUBDIR+=	autocutsel
+SUBDIR+=	automoc4
 SUBDIR+=	autoproject
 SUBDIR+=	avahi
 SUBDIR+=	avida2
@@ -1352,6 +1354,7 @@ SUBDIR+=	pekwm-nightly
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
+SUBDIR+=	phonon
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar
 SUBDIR+=	php-doc-br
