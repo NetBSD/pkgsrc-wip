@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2973 2008/07/26 07:12:47 kristerw Exp $
+# $Id: Makefile,v 1.2974 2008/07/26 07:19:52 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -921,6 +921,7 @@ SUBDIR+=	manatee
 SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	mapserver
+SUBDIR+=	marsyas
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	mawk-uxre
@@ -1742,6 +1743,7 @@ SUBDIR+=	teamspeak
 SUBDIR+=	teapot
 SUBDIR+=	teco
 SUBDIR+=	tendra
+SUBDIR+=	tendra.org-sid
 SUBDIR+=	tenmado
 SUBDIR+=	tenshi
 SUBDIR+=	testdisk
@@ -1875,6 +1877,7 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xclipboard
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
+SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
 SUBDIR+=	xfce4-appfinder
