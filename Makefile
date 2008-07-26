@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2975 2008/07/26 22:26:39 mwdavies Exp $
+# $Id: Makefile,v 1.2976 2008/07/26 22:59:23 plunky Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1980,6 +1980,7 @@ SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh
+SUBDIR+=	zyGrib
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
