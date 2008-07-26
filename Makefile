@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2971 2008/07/24 20:18:09 asau Exp $
+# $Id: Makefile,v 1.2972 2008/07/26 07:11:01 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -689,7 +689,7 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imgseek
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
-# SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
+#SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
 SUBDIR+=	iodine
