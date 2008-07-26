@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2008/07/26 22:06:25 mwdavies Exp $
+bin/automoc4
+lib/automoc4/Automoc4Config.cmake
+lib/automoc4/automoc4.files.in
+@dirrm lib/automoc4
