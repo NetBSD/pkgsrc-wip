@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/09 18:47:22 plunky Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/27 12:03:58 plunky Exp $
 
 DISTNAME=		netbt-hcidump-1.42
 CATEGORIES=		sysutils
@@ -30,6 +30,8 @@ CPPFLAGS+=		-DINET6
 .endif
 
 CPPFLAGS+=	-DVERSION=\""1.42-netbt"\"
+
+USE_BSD_MAKEFILE=	yes
 
 post-extract:
 	mkdir ${WRKSRC}/bluetooth
