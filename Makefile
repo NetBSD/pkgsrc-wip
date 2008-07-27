@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2976 2008/07/26 22:59:23 plunky Exp $
+# $Id: Makefile,v 1.2977 2008/07/27 19:59:35 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1861,6 +1861,7 @@ SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
 SUBDIR+=	wordnet
 SUBDIR+=	workrave
+SUBDIR+=	wput
 SUBDIR+=	wrcs
 SUBDIR+=	wsmake
 SUBDIR+=	wxGTK-contrib-unicode
