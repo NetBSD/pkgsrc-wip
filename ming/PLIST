@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/01/26 02:52:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/07/27 11:11:54 obache Exp $
 bin/dbl2png
 bin/gif2dbl
 bin/gif2mask
@@ -20,9 +20,7 @@ bin/swftoperl
 bin/swftophp
 bin/swftopython
 bin/swftotcl
-bin/ttftofft
 include/ming.h
-include/ming_config.h
 include/mingpp.h
 lib/libming.la
 lib/pkgconfig/libming.pc
@@ -35,6 +33,10 @@ man/man3/Ming_setSWFCompression.3
 man/man3/Ming_setScale.3
 man/man3/Ming_setWarnFunction.3
 man/man3/Ming_useSWFVersion.3
+man/man3/SWFDisplayItem_addFilter.3
+man/man3/SWFDisplayItem_cacheAsBitmap.3
+man/man3/SWFDisplayItem_get_x.3
+man/man3/SWFDisplayItem_setBlendMode.3
 man/man3/SWFMovie_add.3
 man/man3/SWFMovie_labelFrame.3
 man/man3/SWFMovie_namedAnchor.3
@@ -43,6 +45,19 @@ man/man3/SWFMovie_setBackground.3
 man/man3/SWFMovie_setDimension.3
 man/man3/SWFMovie_setNumberOfFrames.3
 man/man3/SWFMovie_setRate.3
+man/man3/SWFShape_drawArc.3
+man/man3/SWFShape_drawCubic.3
+man/man3/SWFShape_drawScaledLineTo.3
+man/man3/SWFShape_movePenTo.3
+man/man3/SWFShape_moveScaledPenTo.3
+man/man3/SWFVideoStream_getNumFrames.3
+man/man3/SWFVideoStream_getVideoFrame.3
+man/man3/SWFVideoStream_hasAudio.3
+man/man3/SWFVideoStream_setDimension.3
 man/man3/destroySWFMovie.3
 man/man3/newSWFMovie.3
 man/man3/newSWFMovieWithVersion.3
+man/man3/newSWFShapeFromBitmap.3
+man/man3/newSWFVideoStream.3
+man/man3/newSWFVideoStream_fromFile.3
+man/man3/newSWFVideoStream_fromInput.3

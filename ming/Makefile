@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/01/26 02:52:44 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/27 11:11:54 obache Exp $
 #
 
-DISTNAME=	ming-0.4.0.beta5
-PKGNAME=	${DISTNAME:S/.beta/beta/}
+DISTNAME=	ming-0.4.0.rc1
+PKGNAME=	${DISTNAME:S/.rc/rc/}
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ming/}
 
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-tcl
 
 PKGCONFIG_OVERRIDE+=	src/libming.pc.in
+
+# Test require perl
+#USE_TOOLS+=	perl
+#TEST_TARGET=	check
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
