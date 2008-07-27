@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/07/27 00:09:32 mwdavies Exp $
+
+--- kresources/groupwise/soap/stdsoap2.h.orig	2008-01-15 14:57:41.000000000 +1300
++++ kresources/groupwise/soap/stdsoap2.h
+@@ -245,7 +245,7 @@ A commercial use license is available fr
+ #  define HAVE_LOCALTIME_R
+ #  define HAVE_WCTOMB
+ #  define HAVE_MBTOWC
+-# elif defined(FREEBSD) || defined(__FreeBSD__)
++# elif defined(FREEBSD) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #  define HAVE_STRRCHR
+ #  define HAVE_STRTOD
+ #  define HAVE_SSCANF

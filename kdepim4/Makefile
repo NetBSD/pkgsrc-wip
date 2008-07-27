@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/01/18 04:30:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/27 00:09:32 mwdavies Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -40,6 +39,7 @@ REPLACE_PERL+= \
 	kmail/kconf_update/kmail-upd-identities.pl \
 	kmail/kconf_update/upgrade-signature.pl \
 	kmail/kconf_update/upgrade-transport.pl \
+	kresources/kolab/upgrade-resourcetype.pl \
 	libkpgp/kpgp-3.1-upgrade-address-data.pl
 
 .include "../../wip/kde4/kde4.mk"
