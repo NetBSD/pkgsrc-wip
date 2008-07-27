@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/07/12 04:53:00 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2008/07/27 19:35:30 schnoebe Exp $
 
-SHA1 (psi-0.12-RC4/psi-0.12-RC4.tar.bz2) = ce6b38de30a65fb2bd83c13678a7e36424a26017
-RMD160 (psi-0.12-RC4/psi-0.12-RC4.tar.bz2) = b2214bac6873e1b9ab192c77fff6296e8c2609b1
-Size (psi-0.12-RC4/psi-0.12-RC4.tar.bz2) = 2142463 bytes
+SHA1 (psi-0.12/psi-0.12.tar.bz2) = 2927497a53d1eb00720718ec41cf61a911914922
+RMD160 (psi-0.12/psi-0.12.tar.bz2) = be5922ef84040113b257aaf99ac9bd350b69349c
+Size (psi-0.12/psi-0.12.tar.bz2) = 2122406 bytes
 SHA1 (patch-ac) = 1bdfedd39f3338f24278c020acb6762c76135fea
 SHA1 (patch-ad) = 19ac57e2662be8b02be735cd57bb80da97345bf8
 SHA1 (patch-ae) = 6d107097862c7793547abf3cd738654ee3fbbe81
