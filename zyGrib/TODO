@@ -1,0 +1,10 @@
+-  is mixed case zyGrib name ok?
+
+-  this archive includes libz, libbz2 and libsha which are all built
+   statically and linked to the binary. We should really dispense with
+   those and use the shared library versions already in the OS where
+   possible
+
+-  it is possible to load some finer detail coastlines, just by extracting
+   the relevant files to the maps/gshhs directory. should this be an option
+   or another package? (intermediate->6Mb, high->20Mb, full->80Mb)
