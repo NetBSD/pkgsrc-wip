@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/07/26 22:23:50 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/27 08:28:25 mwdavies Exp $
 bin/akonadi_control
 bin/akonadictl
 bin/akonadiserver
@@ -9,10 +9,10 @@ include/akonadi/private/notificationmessage_p.h
 include/akonadi/private/protocol_p.h
 include/akonadi/private/xdgbasedirs_p.h
 lib/libakonadiprivate.so
-lib/libakonadiprivate.so.0
+lib/libakonadiprivate.so.1
 lib/libakonadiprivate.so.${PKGVERSION}
 lib/libakonadiprotocolinternals.so
-lib/libakonadiprotocolinternals.so.0
+lib/libakonadiprotocolinternals.so.1
 lib/libakonadiprotocolinternals.so.${PKGVERSION}
 lib/pkgconfig/akonadi.pc
 share/config/akonadi/mysql-global.conf
