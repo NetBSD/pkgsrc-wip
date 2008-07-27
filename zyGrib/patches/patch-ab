@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2008/07/27 11:58:27 plunky Exp $
+
+--- src/zyGrib.pro.orig	2008-07-02 07:19:22.000000000 +0100
++++ src/zyGrib.pro
+@@ -2,8 +2,7 @@ CONFIG += qt
+ TEMPLATE = app
+ TARGET = 
+ DEPENDPATH += .
+-INCLUDEPATH += zlib-1.2.3
+-LIBS += -Lbzip2 -lbz2 -Lzlib-1.2.3 -lz
++LIBS += -lbz2 -lz
+ 
+ MOC_DIR = objs
+ OBJECTS_DIR = objs

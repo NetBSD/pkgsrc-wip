@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/27 09:07:06 plunky Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/27 11:58:27 plunky Exp $
 #
 
 DISTNAME=	zyGrib-1.6.1
@@ -10,11 +10,11 @@ MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://zygrib.free.fr/
 COMMENT=	GRIB file viewer for weather data
 
+#LICENSE=	gnu-gpl-v3
+
 WRKSRC=		${WRKDIR}/zyGrib
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	make
-
-BUILD_MAKE_FLAGS+=	QTBIN=${QTDIR}/bin
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
@@ -41,11 +41,13 @@ INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b maps/gshhs/wdb_rivers_l.b
 INSTALL_FILES+=	tr/zyGrib_en.qm tr/zyGrib_en.ts
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/zyGrib ${PREFIX}/bin
 .for f in ${INSTALL_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/zyGrib/${f}
 .endfor
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/07/27 11:58:27 plunky Exp $
+
+--- src/zuFile.h.orig	2008-07-02 07:19:22.000000000 +0100
++++ src/zuFile.h
+@@ -30,8 +30,8 @@ extern "C" {
+ #include <stdlib.h>
+ #include <ctype.h>
+ 
+-#include "zlib.h"
+-#include "bzip2/bzlib.h"
++#include <zlib.h>
++#include <bzlib.h>
+ 
+ #define ZU_COMPRESS_NONE   0
+ #define ZU_COMPRESS_GZIP   1
