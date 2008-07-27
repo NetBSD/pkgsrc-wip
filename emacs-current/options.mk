@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2008/07/26 06:25:20 obache Exp $
+# $NetBSD: options.mk,v 1.6 2008/07/27 06:32:38 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	x11 gnome font-backend
+PKG_SUPPORTED_OPTIONS=	gnome font-backend
+PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
+PKG_OPTIONS_GROUP.window-system= x11 carbon nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
-PKG_OPTIONS_GROUP.toolkit= gtk motif xaw carbon nextstep
+PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
