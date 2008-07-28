@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/16 19:50:33 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/28 10:59:25 cheusov Exp $
 #
 
 DISTNAME=	dash-0.5.4
@@ -9,6 +9,9 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://gondor.apana.org.au/~herbert/dash/files/
 COMMENT=	Debian Almquist shell, POSIX-compliant shell faster than bash
 
-GNU_CONFIGURE=	yes
+PKG_USER_DESTDIR=	user-destdir
+
+GNU_CONFIGURE=		yes
+USE_TOOLS=		gmake
 
 .include "../../mk/bsd.pkg.mk"
