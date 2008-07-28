@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/09 11:39:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/28 10:24:48 cheusov Exp $
 #
 
 DISTNAME=	bmake-20080215
@@ -13,9 +13,11 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
-WRKSRC=		${WRKDIR}/bmake
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_FEATURES=	nbcompat
+WRKSRC=			${WRKDIR}/bmake
+
+USE_FEATURES=		nbcompat
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
