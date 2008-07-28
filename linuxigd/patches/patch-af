@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2007/07/10 04:41:32 obache Exp $
+$NetBSD: patch-af,v 1.9 2008/07/28 08:30:54 obache Exp $
 
 --- pmlist.c.orig	2006-10-02 00:58:32.000000000 +0900
 +++ pmlist.c
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.8 2007/07/10 04:41:32 obache Exp $
 +	if (pf == NULL) return 0;
 +	snprintf(rules, sizeof(rules), "rdr pass on %s proto %s from any to %s port %s -> %s port %s", g_vars.extInterfaceName, protocol, ExternalIPAddress, externalPort, internalClient, internalPort);
 +	trace(3, "%s", rules);
-+	fprintf(pf, rules);
++	fprintf(pf, "%s\n", rules);
 +	pclose(pf);
 +#elif defined(USE_IPFILTER)
 +	FILE *ipnat = popen("/usr/sbin/ipnat -f -", "w");
@@ -57,7 +57,7 @@ $NetBSD: patch-af,v 1.8 2007/07/10 04:41:32 obache Exp $
 +	trace(3, "flush anchor %s", anchor);
 +	{
 +		int status;
-+		char *args[] =  {"-a", anchor, "-F", "all"};
++		char *args[] =  {"ipctl", "-a", anchor, "-F", "all"};
 +		if(!fork()) {
 +			int rc = execv("/sbin/ipctl", args);
 +			exit(rc);
