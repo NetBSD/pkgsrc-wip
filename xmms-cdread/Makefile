@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/07/23 10:34:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/28 10:10:33 cheusov Exp $
 #
 
 DISTNAME=		xmms-cdread-0.14a
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://mud.stack.nl/pub/OuterSpace/willem/
 MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		ftp://mud.stack.nl/pub/OuterSpace/willem/
 COMMENT=		XMMS input plugin that reads audio data from CDs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-* NetBSD-*-*
 ONLY_FOR_COMPILER=	gcc
@@ -23,7 +25,7 @@ INSTALLATION_DIRS=	${PKGDOCDIR}
 
 post-install:
 .for i in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PKGDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PKGDOCDIR}
 .endfor
 
 .include "../../audio/xmms/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/05 13:41:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/28 10:12:21 cheusov Exp $
 
 DISTNAME=	sharatype-2.0.5
 PKGNAME=	a2ps-${DISTNAME}
@@ -9,9 +9,11 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://ftp.45.free.net/pub/fonts/type1/
 COMMENT=	Cyrillic fonts for a2ps (a part of sharatype project)
 
-DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_BUILD=	yes
+DEPENDS+=		a2ps-[0-9]*:../../print/a2ps
+
+NO_BUILD=		yes
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
@@ -19,14 +21,14 @@ INSTALLATION_DIRS+=	share/a2ps/afm share/a2ps/encoding share/a2ps/fonts
 INSTALLATION_DIRS+=	${PKGDOCDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/afm/* ${PREFIX}/share/a2ps/afm
-	${INSTALL_DATA} ${WRKSRC}/pfa/* ${PREFIX}/share/a2ps/fonts
-	${INSTALL_DATA} ${WRKSRC}/a2ps/add/fonts.map ${PREFIX}/share/a2ps/afm/sharatype1-fonts.map
-	${INSTALL_DATA} ${WRKSRC}/a2ps/replace/fonts.map ${PREFIX}/share/a2ps/afm/sharatype2-fonts.map
-	${INSTALL_DATA} ${WRKSRC}/README ${PKGDOCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/afm/* ${DESTDIR}${PREFIX}/share/a2ps/afm
+	${INSTALL_DATA} ${WRKSRC}/pfa/* ${DESTDIR}${PREFIX}/share/a2ps/fonts
+	${INSTALL_DATA} ${WRKSRC}/a2ps/add/fonts.map ${DESTDIR}${PREFIX}/share/a2ps/afm/sharatype1-fonts.map
+	${INSTALL_DATA} ${WRKSRC}/a2ps/replace/fonts.map ${DESTDIR}${PREFIX}/share/a2ps/afm/sharatype2-fonts.map
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PKGDOCDIR}/
 .for i in koi8.edf iso5.edf ms-cp1251.edf
-	${INSTALL_DATA} ${WRKSRC}/a2ps/add/${i} ${PREFIX}/share/a2ps/encoding/sharatype1-${i}
-	${INSTALL_DATA} ${WRKSRC}/a2ps/replace/${i} ${PREFIX}/share/a2ps/encoding/sharatype2-${i}
+	${INSTALL_DATA} ${WRKSRC}/a2ps/add/${i} ${DESTDIR}${PREFIX}/share/a2ps/encoding/sharatype1-${i}
+	${INSTALL_DATA} ${WRKSRC}/a2ps/replace/${i} ${DESTDIR}${PREFIX}/share/a2ps/encoding/sharatype2-${i}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

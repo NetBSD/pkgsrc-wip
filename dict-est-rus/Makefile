@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/14 19:58:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/28 10:13:53 cheusov Exp $
 
 DISTNAME=	er-dict-gtk-0.23
 PKGNAME=	dict-est-rus-0.23
@@ -10,9 +10,11 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/er-dict
 COMMENT=	DICTD data for Estonian-Russian dictionary
 
-BUILD_DEPENDS+=	dict-server>=1.10.2:../../wip/dict-server
-BUILD_DEPENDS+=	metamail>=1.10.2:../../mail/metamail
-DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=		dict-server>=1.10.2:../../wip/dict-server
+BUILD_DEPENDS+=		metamail>=1.10.2:../../mail/metamail
+DEPENDS+=		dict-server>=1.9.14:../../wip/dict-server
 
 DICTD_DB_DIR=		${PREFIX}/share/dictd
 INSTALLATION_DIRS=	${DICTD_DB_DIR}
@@ -26,6 +28,6 @@ do-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.dict.dz ${WRKSRC}/*.index \
-		${DICTD_DB_DIR}
+		${DESTDIR}${DICTD_DB_DIR}
 
 .include "../../mk/bsd.pkg.mk"
