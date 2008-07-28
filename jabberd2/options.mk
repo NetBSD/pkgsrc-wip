@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/06/24 10:09:53 moubctez Exp $
+# $NetBSD: options.mk,v 1.8 2008/07/28 18:23:56 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
@@ -9,7 +9,7 @@ PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
 PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
 # SASL implementation
-PKG_OPTIONS_GROUP.sasl=		sasl-cyrus sasl-gnu sasl-scod
+PKG_OPTIONS_GROUP.sasl=		sasl-cyrus sasl-gnu 
 # debugging
 PKG_SUPPORTED_OPTIONS+=		debug
 PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite sasl-gnu
@@ -26,10 +26,6 @@ CONFIGURE_ARGS+=	--with-sasl=cyrus
 .if !empty(PKG_OPTIONS:Msasl-gnu)
 CONFIGURE_ARGS+=	--with-sasl=gsasl
 .  include "../../security/gsasl/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Msasl-scod)
-CONFIGURE_ARGS+=	--with-sasl=scod
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
