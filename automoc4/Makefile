@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/07/26 22:06:25 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/28 00:40:28 mwdavies Exp $
 
 DISTNAME=	automoc4-0.9.83
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org
-COMMENT=	???
+COMMENT=	Automatic moc for Qt 4 packages
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,4 +21,5 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/_build
 
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
