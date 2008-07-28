@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2008/07/25 16:10:30 makoto Exp $
+@comment $NetBSD: PLIST,v 1.62 2008/07/28 01:35:30 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2515,6 +2515,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-id.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-id.elc
 share/emacs/${PKGVERSION}/lisp/org/org-info.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-info.elc
+share/emacs/${PKGVERSION}/lisp/org/org-install.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-install.elc
 share/emacs/${PKGVERSION}/lisp/org/org-irc.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-irc.elc
 share/emacs/${PKGVERSION}/lisp/org/org-jsinfo.el.gz
@@ -2914,8 +2916,6 @@ share/emacs/${PKGVERSION}/lisp/term/internal.el
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el
 share/emacs/${PKGVERSION}/lisp/term/linux.el
 share/emacs/${PKGVERSION}/lisp/term/lk201.el
-share/emacs/${PKGVERSION}/lisp/term/mac-win.el.gz
-share/emacs/${PKGVERSION}/lisp/term/mac-win.elc
 share/emacs/${PKGVERSION}/lisp/term/news.el
 share/emacs/${PKGVERSION}/lisp/term/ns-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/ns-win.elc
