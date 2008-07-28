@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/07/28 20:08:05 asau Exp $
+
+Make PKGNAME more convenient.
+
+--- configure.in.orig	2008-07-20 02:44:25.000000000 +0400
++++ configure.in	2008-07-20 02:45:39.000000000 +0400
+@@ -20,7 +20,7 @@
+ 
+ dnl We use some automake macros here,
+ dnl but don't use automake for creating Makefile.in
+-AC_INIT([gforth],[0.6.9-20080716],[https://savannah.gnu.org/bugs/?func=addbug&group=gforth])
++AC_INIT([gforth],[0.6.99],[https://savannah.gnu.org/bugs/?func=addbug&group=gforth])
+ AC_PREREQ(2.54)
+ #snapshots have numbers major.minor.release-YYYYMMDD
+ #note that lexicographic ordering must be heeded.
