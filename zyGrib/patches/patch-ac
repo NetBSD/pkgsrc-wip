@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2008/07/27 11:58:27 plunky Exp $
+$NetBSD: patch-ac,v 1.2 2008/07/28 17:58:17 plunky Exp $
 
---- src/zuFile.h.orig	2008-07-02 07:19:22.000000000 +0100
-+++ src/zuFile.h
+--- zuFile.h.orig	2008-07-02 07:19:22.000000000 +0100
++++ zuFile.h
 @@ -30,8 +30,8 @@ extern "C" {
  #include <stdlib.h>
  #include <ctype.h>

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/27 11:58:27 plunky Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/28 17:58:17 plunky Exp $
 #
 
 DISTNAME=	zyGrib-1.6.1
@@ -12,15 +12,14 @@ COMMENT=	GRIB file viewer for weather data
 
 #LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/zyGrib
+WRKSRC=		${WRKDIR}/zyGrib/src
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	make
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Fixing shared data paths.
-SUBST_FILES.paths=	src/GisReader.cpp src/MenuBar.cpp
-SUBST_FILES.paths+=	src/MainWindow.cpp src/main.cpp
+SUBST_FILES.paths=	GisReader.cpp MenuBar.cpp MainWindow.cpp main.cpp
 SUBST_SED.paths+=	-e "s|maps/|${PREFIX}/share/zyGrib/maps/|"
 SUBST_SED.paths+=	-e "s|img/|${PREFIX}/share/zyGrib/img/|"
 SUBST_SED.paths+=	-e "s|tr/|${PREFIX}/share/zyGrib/tr/|"
@@ -40,10 +39,13 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_c.b maps/gshhs/wdb_borders_l.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b maps/gshhs/wdb_rivers_l.b
 INSTALL_FILES+=	tr/zyGrib_en.qm tr/zyGrib_en.ts
 
+do-configure:
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/zyGrib ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/zyGrib ${DESTDIR}${PREFIX}/bin
 .for f in ${INSTALL_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/zyGrib/${f}
+	${INSTALL_DATA} ${WRKDIR}/zyGrib/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"

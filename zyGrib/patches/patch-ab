@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/07/27 11:58:27 plunky Exp $
+$NetBSD: patch-ab,v 1.2 2008/07/28 17:58:17 plunky Exp $
 
---- src/zyGrib.pro.orig	2008-07-02 07:19:22.000000000 +0100
-+++ src/zyGrib.pro
+--- zyGrib.pro.orig	2008-07-02 07:19:22.000000000 +0100
++++ zyGrib.pro
 @@ -2,8 +2,7 @@ CONFIG += qt
  TEMPLATE = app
  TARGET = 
