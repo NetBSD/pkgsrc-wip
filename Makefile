@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2977 2008/07/27 19:59:35 othyro Exp $
+# $Id: Makefile,v 1.2978 2008/07/28 11:02:59 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1215,6 +1215,7 @@ SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
 SUBDIR+=	p5-Crypt-CAST5
+SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Random
