@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/01/21 00:23:23 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/07/28 00:37:02 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 STRIGI_BUILDLINK3_MK:=	${STRIGI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	strigi
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}strigi
 
 .if ${STRIGI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.7
+BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.10
 BUILDLINK_PKGSRCDIR.strigi?=	../../wip/strigi
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/strigi$$/ \
