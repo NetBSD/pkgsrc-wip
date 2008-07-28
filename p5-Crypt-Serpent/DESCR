@@ -1,0 +1,4 @@
+Crypt::Serpent is a perl module implementing Serpent,
+a symmetric block cipher and one of the finalists of
+the Advanced Encryption Standard (AES) contest.
+This module is compatible to Crypt::CBC.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/28 10:58:57 athaba Exp $
+
+SHA1 (Crypt-Serpent-1.01.tar.gz) = 95b1e148808d8c91aa32bcbed68ccd0f12f9abf5
+RMD160 (Crypt-Serpent-1.01.tar.gz) = afba368088bcdd2b41809265a168902e3c172cdf
+Size (Crypt-Serpent-1.01.tar.gz) = 19010 bytes
