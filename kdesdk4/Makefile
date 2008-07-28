@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/06 12:04:13 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/28 09:41:48 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -31,6 +31,8 @@ REPLACE_PERL+= \
 	cervisia/change_colors.pl
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+USE_TOOLS+=	gmake
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
