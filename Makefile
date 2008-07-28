@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2978 2008/07/28 11:02:59 athaba Exp $
+# $Id: Makefile,v 1.2979 2008/07/28 20:12:57 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -414,6 +414,7 @@ SUBDIR+=	geany
 SUBDIR+=	genshi
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
+SUBDIR+=	gforth
 SUBDIR+=	gforth-devel
 SUBDIR+=	ggz-gtk-client
 SUBDIR+=	ggz-gtk-games
