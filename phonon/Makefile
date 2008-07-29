@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2008/07/26 22:13:12 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/29 21:38:18 mwdavies Exp $
 
-DISTNAME=	phonon-4.1.83
+DISTNAME=	phonon-4.2.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=../unstable/4.0.83/support/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://phonon.kde.org
-COMMENT=	???
+COMMENT=	Multimedia API for KDE and QT
 
 #BUILD_MAKE_FLAGS+= VERBOSE=1
 
