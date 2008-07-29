@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.9 2008/07/28 08:30:54 obache Exp $
+$NetBSD: patch-af,v 1.10 2008/07/29 00:35:15 obache Exp $
 
 --- pmlist.c.orig	2006-10-02 00:58:32.000000000 +0900
 +++ pmlist.c
@@ -57,9 +57,9 @@ $NetBSD: patch-af,v 1.9 2008/07/28 08:30:54 obache Exp $
 +	trace(3, "flush anchor %s", anchor);
 +	{
 +		int status;
-+		char *args[] =  {"ipctl", "-a", anchor, "-F", "all"};
++		char *args[] =  {"pfctl", "-a", anchor, "-F", "all"};
 +		if(!fork()) {
-+			int rc = execv("/sbin/ipctl", args);
++			int rc = execv("/sbin/pfctl", args);
 +			exit(rc);
 +		} else {
 +			wait(&status);
