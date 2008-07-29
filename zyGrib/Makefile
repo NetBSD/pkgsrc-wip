@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/07/28 17:58:17 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/29 10:34:06 plunky Exp $
 #
 
 DISTNAME=	zyGrib-1.6.1
@@ -15,6 +15,8 @@ COMMENT=	GRIB file viewer for weather data
 WRKSRC=		${WRKDIR}/zyGrib/src
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	make
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
