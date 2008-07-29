@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.2 2008/07/09 18:47:22 plunky Exp $
+$NetBSD: distinfo,v 1.3 2008/07/29 10:27:12 plunky Exp $
 
 SHA1 (bluez-hcidump-1.42.tar.gz) = b18e41cbf92c00cfd0331506312fa248b39a0eee
 RMD160 (bluez-hcidump-1.42.tar.gz) = c80eab49c75b8782d35e64eecfbc5a0e56214d4c
 Size (bluez-hcidump-1.42.tar.gz) = 150060 bytes
-SHA1 (bluez-libs-3.35.tar.gz) = 68abf90fb266b782ade9e146a357a4b2d21ba0d3
-RMD160 (bluez-libs-3.35.tar.gz) = b1d0f2ea9f0231405dbea55758c27db69e602cae
-Size (bluez-libs-3.35.tar.gz) = 313294 bytes
-SHA1 (patch-aa) = 8c2f29764c0dda7eb29f4383ec1c6554f0a40c1e
-SHA1 (patch-ab) = 13441a99b2c433adb6cb75a08f731a45d0ee7814
-SHA1 (patch-ac) = 1ea13728c89c31156def7367557efea40611b0db
-SHA1 (patch-ad) = c2cc8fa146dd589d82cfd82a822ca89828d2481e
-SHA1 (patch-ae) = 4ef9720b93de76967fcede633af23b6e6c4b029d
+SHA1 (bluez-libs-3.36.tar.gz) = c181384485a2258deedba7f1347dd53c08a70b45
+RMD160 (bluez-libs-3.36.tar.gz) = c325c2ad302ffadb0b678f856e9e36bf9a8764ac
+Size (bluez-libs-3.36.tar.gz) = 313376 bytes
+SHA1 (patch-aa) = bf9c4cc67d77d0bcf7fd5147a7b6074fce74de50
+SHA1 (patch-ab) = 1b318c7718041bbad585f3c0921f55bd5220e84e
+SHA1 (patch-ac) = d2eb78f4def85704c4a9c0630dcf4e3446a28adc
+SHA1 (patch-ad) = d80688fa158526771df059ca1b757f35ea563f04
+SHA1 (patch-ae) = 69861c23a1442c536edb5f25f2e74455f3333b45
 SHA1 (patch-af) = 7748d6d83ce118eff90b9d8158badd0664faa308
-SHA1 (patch-ag) = ac3aab0eb46e92fbcdbd29b8807c110c7b8a23bc
+SHA1 (patch-ag) = 0509311fc69546038a8c82e2cf47a34175878d35
 SHA1 (patch-ah) = b5a190251ccb9e55d2ac8460a436df3026d6be3d
-SHA1 (patch-ai) = 1b9d118e5c0620e9348df8e22c8e839225fa78a2
+SHA1 (patch-ai) = 46239a7931f8fecee9216b13f98227711c69c54d
 SHA1 (patch-aj) = 3ef708a26e82ea209ef66c556889ba0cb9c9dd86
-SHA1 (patch-ak) = 31a7be3f15639e88b093242fd0b2362e9dba61a3
-SHA1 (patch-al) = 746f007cb9824d5c820aeae7091edc88588206b6
-SHA1 (patch-am) = 3864ef47bfe91ae82ef885c70f3357942fc7de30
+SHA1 (patch-ak) = 770deaf5721b7ee127e197668151da11e12f624e
+SHA1 (patch-al) = 539e3acaf2d63ba2cc777aa221163ffc010e489f
+SHA1 (patch-am) = d8e88c237bb4804fd8dc42f552c39d6a83280259
 SHA1 (patch-an) = 35d9fd1b0d82addf0688e2997fdf589fbc89d921
 SHA1 (patch-ao) = dfb59f0f12f7902161a9378db284de97cc7d3a94

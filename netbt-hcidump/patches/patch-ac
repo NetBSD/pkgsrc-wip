@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+$NetBSD: patch-ac,v 1.2 2008/07/29 10:27:12 plunky Exp $
 
---- bluetooth/hci.h.orig	2008-01-11 22:27:54.000000000 +0000
+--- bluetooth/hci.h.orig	2008-07-29 11:23:28.000000000 +0100
 +++ bluetooth/hci.h
 @@ -39,6 +39,7 @@ extern "C" {
  #define HCI_MAX_EVENT_SIZE	260
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  /* HCI dev events */
  #define HCI_DEV_REG	1
  #define HCI_DEV_UNREG	2
-@@ -97,6 +98,7 @@ enum {
+@@ -98,6 +99,7 @@ enum {
  #define HCISETSECMGR	_IOW('H', 230, int)
  
  #define HCIINQUIRY	_IOR('H', 240, int)
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  
  #ifndef __NO_HCI_DEFS
  
-@@ -1715,6 +1717,7 @@ typedef struct {
+@@ -1720,6 +1722,7 @@ typedef struct {
  
  #endif /* _NO_HCI_DEFS */
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  /* HCI Socket options */
  #define HCI_DATA_DIR	1
  #define HCI_FILTER	2
-@@ -1824,6 +1827,7 @@ struct hci_remotename_req {
+@@ -1834,6 +1837,7 @@ struct hci_remotename_req {
  	bdaddr_t bdaddr;
  	uint8_t  name[248];
  };

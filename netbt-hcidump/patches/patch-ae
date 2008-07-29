@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+$NetBSD: patch-ae,v 1.2 2008/07/29 10:27:12 plunky Exp $
 
---- bluetooth/l2cap.h.orig	2008-01-11 22:27:54.000000000 +0000
+--- bluetooth/l2cap.h.orig	2008-07-29 11:23:28.000000000 +0100
 +++ bluetooth/l2cap.h
 @@ -30,6 +30,7 @@
  extern "C" {

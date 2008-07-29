@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+$NetBSD: patch-ad,v 1.2 2008/07/29 10:27:12 plunky Exp $
 
---- bluetooth/hci_lib.h.orig	2008-01-11 22:27:54.000000000 +0000
+--- bluetooth/hci_lib.h.orig	2008-07-29 11:23:28.000000000 +0100
 +++ bluetooth/hci_lib.h
 @@ -30,6 +30,7 @@
  extern "C" {
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  struct hci_request {
  	uint16_t ogf;
  	uint16_t ocf;
-@@ -120,21 +121,29 @@ int hci_get_route(bdaddr_t *bdaddr);
+@@ -122,21 +123,29 @@ int hci_get_route(bdaddr_t *bdaddr);
  
  char *hci_dtypetostr(int type);
  char *hci_dflagstostr(uint32_t flags);
@@ -40,7 +40,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  int lmp_strtover(char *str, unsigned int *ver);
  
  char *lmp_featurestostr(uint8_t *features, char *pref, int width);
-@@ -203,6 +212,7 @@ static inline int hci_filter_test_opcode
+@@ -205,6 +214,7 @@ static inline int hci_filter_test_opcode
  {
  	return (f->opcode == opcode);
  }

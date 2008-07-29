@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+$NetBSD: patch-ak,v 1.2 2008/07/29 10:27:12 plunky Exp $
 
---- src/Makefile.orig	2008-01-11 22:27:55.000000000 +0000
+--- src/Makefile.orig	2008-07-29 11:23:30.000000000 +0100
 +++ src/Makefile
 @@ -0,0 +1,17 @@
 +.PATH: ../parser
@@ -8,7 +8,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
 +PROG=	hcidump
 +MAN=	hcidump.8
 +
-+BINDIR=	${PREFIX}/bin
++BINDIR=	${PREFIX}/sbin
 +MANDIR=	${PREFIX}/man
 +
 +SRCS=	hcidump.c bt_lib.c hci_lib.c 				\
