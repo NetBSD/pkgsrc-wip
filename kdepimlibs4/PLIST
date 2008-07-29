@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/26 22:42:58 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/29 21:43:16 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -402,9 +402,9 @@ lib/libqgpgme.so.1.0.1
 lib/libsyndication.so
 lib/libsyndication.so.4
 lib/libsyndication.so.4.1.0
-share/apps/akonadi-kde/kcfg2dbus.xsl
 share/dbus-1/interfaces/org.kde.KResourcesManager.xml
 share/dbus-1/interfaces/org.kde.pim.IdentityManager.xml
+share/kde/apps/akonadi-kde/kcfg2dbus.xsl
 share/kde/apps/cmake/modules/CheckTimezone.cmake
 share/kde/apps/cmake/modules/FindAkonadi.cmake
 share/kde/apps/cmake/modules/FindGpgme.cmake
@@ -869,9 +869,9 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @comment in kde: @dirrm share/kde/apps/kabc/formats
 @comment in kde: @dirrm share/kde/apps/kabc
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@dirrm share/kde/apps/akonadi-kde
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/dbus-1/interfaces
-@dirrm share/apps/akonadi-kde
 @comment in kde: @dirrm lib/kde4
 @dirrm lib/gpgmepp
 @dirrm include/syndication/rss2

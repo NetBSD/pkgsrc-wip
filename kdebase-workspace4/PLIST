@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/07/26 22:52:31 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/07/29 21:46:14 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -81,6 +81,7 @@ include/KDE/Plasma/Svg
 include/KDE/Plasma/TextEdit
 include/KDE/Plasma/Theme
 include/KDE/Plasma/UiLoader
+include/KDE/Plasma/Version
 include/KDE/Plasma/View
 include/KDE/Plasma/Weather/Formulas
 include/KDE/Plasma/Weather/Ion
@@ -148,6 +149,7 @@ include/plasma/servicejob.h
 include/plasma/svg.h
 include/plasma/theme.h
 include/plasma/uiloader.h
+include/plasma/version.h
 include/plasma/view.h
 include/plasma/weather/formulas.h
 include/plasma/weather/ion.h
@@ -1450,6 +1452,13 @@ share/kde/apps/kdm/sessions/wm2.desktop
 share/kde/apps/kdm/sessions/wmaker.desktop
 share/kde/apps/kdm/sessions/xfce.desktop
 share/kde/apps/kdm/sessions/xfce4.desktop
+share/kde/apps/kdm/themes/circles/KdmGreeterTheme.desktop
+share/kde/apps/kdm/themes/circles/background.svg
+share/kde/apps/kdm/themes/circles/circles.xml
+share/kde/apps/kdm/themes/circles/flower.png
+share/kde/apps/kdm/themes/circles/help.png
+share/kde/apps/kdm/themes/circles/options.png
+share/kde/apps/kdm/themes/circles/screenshot.png
 share/kde/apps/kdm/themes/oxygen/KdmGreeterTheme.desktop
 share/kde/apps/kdm/themes/oxygen/background.svg
 share/kde/apps/kdm/themes/oxygen/branding-icon.png
@@ -2044,6 +2053,7 @@ share/sounds/pop.wav
 @dirrm share/kde/apps/kfontinst/icons
 @dirrm share/kde/apps/kfontinst
 @dirrm share/kde/apps/kdm/themes/oxygen
+@dirrm share/kde/apps/kdm/themes/circles
 @dirrm share/kde/apps/kdm/themes
 @dirrm share/kde/apps/kdm/sessions
 @dirrm share/kde/apps/kdm/programs
