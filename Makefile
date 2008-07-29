@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2980 2008/07/28 20:14:07 asau Exp $
+# $Id: Makefile,v 1.2981 2008/07/29 22:11:00 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -769,6 +769,7 @@ SUBDIR+=	kdemultimedia4
 SUBDIR+=	kdenetwork4
 SUBDIR+=	kdepim4
 SUBDIR+=	kdepimlibs4
+SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdesdk4
 SUBDIR+=	kdetoys4
 SUBDIR+=	kdeutils4
