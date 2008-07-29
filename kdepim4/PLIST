@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/07/27 00:09:32 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/29 22:00:25 mwdavies Exp $
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -41,7 +41,6 @@ bin/konsolekalendar
 bin/kontact
 bin/korgac
 bin/korganizer
-bin/korn
 bin/ktimetracker
 bin/ktnefviewer
 bin/kung
@@ -415,7 +414,6 @@ share/akonadi/agents/strigifeeder.desktop
 share/akonadi/agents/vcardresource.desktop
 share/applications/kde4/KMail.desktop
 share/applications/kde4/KNode.desktop
-share/applications/kde4/KOrn.desktop
 share/applications/kde4/Kjots.desktop
 share/applications/kde4/Kontact.desktop
 share/applications/kde4/akonadiconsole.desktop
@@ -425,7 +423,6 @@ share/applications/kde4/groupwarewizard.desktop
 share/applications/kde4/kaddressbook.desktop
 share/applications/kde4/kalarm.desktop
 share/applications/kde4/karm.desktop
-share/applications/kde4/kjotspart.desktop
 share/applications/kde4/kleopatra_import.desktop
 share/applications/kde4/kmail_view.desktop
 share/applications/kde4/knotes.desktop
@@ -447,8 +444,6 @@ share/dbus-1/interfaces/org.kde.knode.xml
 share/dbus-1/interfaces/org.kde.kontact.KNotes.xml
 share/dbus-1/interfaces/org.kde.korganizer.KOrgac.xml
 share/dbus-1/interfaces/org.kde.korganizer.Korganizer.xml
-share/dbus-1/interfaces/org.kde.korn.BoxContainerItem.xml
-share/dbus-1/interfaces/org.kde.korn.MailDrop.xml
 share/dbus-1/interfaces/org.kde.ktimetracker.ktimetracker.xml
 share/dbus-1/interfaces/org.kde.mailtransport.service.xml
 share/doc/kde/HTML/en/akregator/add-feed.png
@@ -640,9 +635,6 @@ share/doc/kde/HTML/en/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/en/korganizer/plugins-chapter.docbook
 share/doc/kde/HTML/en/korganizer/remotefile-resource.png
 share/doc/kde/HTML/en/korganizer/todo-general.png
-share/doc/kde/HTML/en/korn/common
-share/doc/kde/HTML/en/korn/index.cache.bz2
-share/doc/kde/HTML/en/korn/index.docbook
 share/doc/kde/HTML/en/ktimetracker/clipboard-history.png
 share/doc/kde/HTML/en/ktimetracker/common
 share/doc/kde/HTML/en/ktimetracker/copy-this-task.png
@@ -655,6 +647,7 @@ share/doc/kde/HTML/en/ktimetracker/karm.png
 share/doc/kde/HTML/en/ktimetracker/systray.png
 share/icons/hicolor/128x128/apps/akregator.png
 share/icons/hicolor/128x128/apps/kaddressbook.png
+share/icons/hicolor/128x128/apps/kjots.png
 share/icons/hicolor/128x128/apps/kmail.png
 share/icons/hicolor/128x128/apps/knode.png
 share/icons/hicolor/128x128/apps/knode2.png
@@ -673,7 +666,6 @@ share/icons/hicolor/16x16/apps/knode2.png
 share/icons/hicolor/16x16/apps/knotes.png
 share/icons/hicolor/16x16/apps/kontact.png
 share/icons/hicolor/16x16/apps/korganizer.png
-share/icons/hicolor/16x16/apps/korn.png
 share/icons/hicolor/16x16/apps/ktimetracker.png
 share/icons/hicolor/22x22/apps/akregator.png
 share/icons/hicolor/22x22/apps/kaddressbook.png
@@ -694,7 +686,6 @@ share/icons/hicolor/32x32/apps/knode2.png
 share/icons/hicolor/32x32/apps/knotes.png
 share/icons/hicolor/32x32/apps/kontact.png
 share/icons/hicolor/32x32/apps/korganizer.png
-share/icons/hicolor/32x32/apps/korn.png
 share/icons/hicolor/32x32/apps/ktimetracker.png
 share/icons/hicolor/48x48/apps/akregator.png
 share/icons/hicolor/48x48/apps/kaddressbook.png
@@ -706,7 +697,6 @@ share/icons/hicolor/48x48/apps/knode2.png
 share/icons/hicolor/48x48/apps/knotes.png
 share/icons/hicolor/48x48/apps/kontact.png
 share/icons/hicolor/48x48/apps/korganizer.png
-share/icons/hicolor/48x48/apps/korn.png
 share/icons/hicolor/48x48/apps/ktimetracker.png
 share/icons/hicolor/48x48/apps/ktnef.png
 share/icons/hicolor/64x64/apps/akregator.png
@@ -721,6 +711,7 @@ share/icons/hicolor/64x64/apps/korganizer.png
 share/icons/hicolor/64x64/apps/ktimetracker.png
 share/icons/hicolor/scalable/apps/akregator.svgz
 share/icons/hicolor/scalable/apps/kaddressbook.svgz
+share/icons/hicolor/scalable/apps/kjots.svgz
 share/icons/hicolor/scalable/apps/kmail.svgz
 share/icons/hicolor/scalable/apps/korganizer.svgz
 share/icons/oxygen/128x128/apps/kleopatra.png
@@ -729,6 +720,7 @@ share/icons/oxygen/16x16/actions/edit-delete-page.png
 share/icons/oxygen/16x16/actions/ldap_lookup.png
 share/icons/oxygen/16x16/actions/mail-forwarded-replied.png
 share/icons/oxygen/16x16/actions/mail-forwarded.png
+share/icons/oxygen/16x16/actions/mail-reply-custom.png
 share/icons/oxygen/16x16/actions/mail-signed-part.png
 share/icons/oxygen/16x16/actions/mail-signed-verified.png
 share/icons/oxygen/16x16/actions/mail-signed.png
@@ -743,6 +735,7 @@ share/icons/oxygen/16x16/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/16x16/status/appointment-recurring.png
 share/icons/oxygen/16x16/status/appointment-reminder.png
 share/icons/oxygen/16x16/status/mail-sent.png
+share/icons/oxygen/16x16/status/mail-tagged.png
 share/icons/oxygen/16x16/status/mail-task.png
 share/icons/oxygen/16x16/status/meeting-organizer.png
 share/icons/oxygen/16x16/status/task-complete.png
@@ -753,6 +746,7 @@ share/icons/oxygen/22x22/actions/button_more.png
 share/icons/oxygen/22x22/actions/checkmark.png
 share/icons/oxygen/22x22/actions/document-new-from-template.png
 share/icons/oxygen/22x22/actions/edit-delete-page.png
+share/icons/oxygen/22x22/actions/mail-reply-custom.png
 share/icons/oxygen/22x22/actions/meeting-attending-tentative.png
 share/icons/oxygen/22x22/actions/meeting-attending.png
 share/icons/oxygen/22x22/apps/kalarm.png
@@ -760,14 +754,15 @@ share/icons/oxygen/22x22/apps/kleopatra.png
 share/icons/oxygen/22x22/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/22x22/status/appointment-recurring.png
 share/icons/oxygen/22x22/status/appointment-reminder.png
+share/icons/oxygen/22x22/status/mail-tagged.png
 share/icons/oxygen/22x22/status/mail-task.png
 share/icons/oxygen/22x22/status/meeting-organizer.png
 share/icons/oxygen/22x22/status/task-complete.png
 share/icons/oxygen/22x22/status/task-recurring.png
 share/icons/oxygen/22x22/status/task-reminder.png
-share/icons/oxygen/32x32/actions/appointment-new.png
 share/icons/oxygen/32x32/actions/edit-delete-page.png
 share/icons/oxygen/32x32/actions/journal-new.png
+share/icons/oxygen/32x32/actions/mail-reply-custom.png
 share/icons/oxygen/32x32/actions/meeting-attending-tentative.png
 share/icons/oxygen/32x32/actions/meeting-attending.png
 share/icons/oxygen/32x32/actions/task-new.png
@@ -777,24 +772,29 @@ share/icons/oxygen/32x32/apps/kmailcvt.png
 share/icons/oxygen/32x32/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/32x32/status/appointment-recurring.png
 share/icons/oxygen/32x32/status/appointment-reminder.png
+share/icons/oxygen/32x32/status/mail-tagged.png
 share/icons/oxygen/32x32/status/meeting-organizer.png
 share/icons/oxygen/32x32/status/task-complete.png
 share/icons/oxygen/32x32/status/task-recurring.png
 share/icons/oxygen/32x32/status/task-reminder.png
 share/icons/oxygen/48x48/actions/edit-delete-page.png
+share/icons/oxygen/48x48/actions/mail-reply-custom.png
 share/icons/oxygen/48x48/apps/kalarm.png
 share/icons/oxygen/48x48/apps/kleopatra.png
 share/icons/oxygen/48x48/apps/kmailcvt.png
 share/icons/oxygen/48x48/mimetypes/x-mail-distribution-list.png
+share/icons/oxygen/48x48/status/mail-tagged.png
 share/icons/oxygen/64x64/apps/kleopatra.png
 share/icons/oxygen/scalable/actions/edit-delete-page.svgz
 share/icons/oxygen/scalable/actions/mail-forwarded-replied.svgz
 share/icons/oxygen/scalable/actions/mail-forwarded.svgz
+share/icons/oxygen/scalable/actions/mail-reply-custom.svgz
 share/icons/oxygen/scalable/actions/mail-signed-part.svgz
 share/icons/oxygen/scalable/actions/mail-signed-verified.svgz
 share/icons/oxygen/scalable/actions/mail-signed.svgz
 share/icons/oxygen/scalable/apps/kleopatra.svgz
 share/icons/oxygen/scalable/mimetypes/x-mail-distribution-list.svgz
+share/icons/oxygen/scalable/status/mail-tagged.svgz
 share/icons/oxygen/scalable/status/mail-task.svgz
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_bookmark.desktop
@@ -805,11 +805,11 @@ share/kde/apps/akregator/about/akregator.css
 share/kde/apps/akregator/about/main.html
 share/kde/apps/akregator/about/top-left-akregator.png
 share/kde/apps/akregator/akregator.notifyrc
+share/kde/apps/akregator/akregator_onlinesync_plugin.desktop
+share/kde/apps/akregator/akregator_onlinesync_plugin.rc
 share/kde/apps/akregator/akregator_part.rc
 share/kde/apps/akregator/akregator_shell.rc
 share/kde/apps/akregator/articleviewer.rc
-share/kde/apps/akregator/kpartplugins/akregator_onlinesync_plugin.desktop
-share/kde/apps/akregator/kpartplugins/akregator_onlinesync_plugin.rc
 share/kde/apps/akregator/pageviewer.rc
 share/kde/apps/akregator/pics/kmmsgnew.png
 share/kde/apps/akregator/pics/kmmsgunseen.png
@@ -871,10 +871,6 @@ share/kde/apps/kconf_update/kmail-upd-identities.pl
 share/kde/apps/kconf_update/kmail.upd
 share/kde/apps/kconf_update/kolab-resource.upd
 share/kde/apps/kconf_update/korganizer.upd
-share/kde/apps/kconf_update/korn-3-4-config_change.upd
-share/kde/apps/kconf_update/korn-3-5-metadata-update.pl
-share/kde/apps/kconf_update/korn-3-5-ssl-update.pl
-share/kde/apps/kconf_update/korn-3-5-update.upd
 share/kde/apps/kconf_update/kpgp-3.1-upgrade-address-data.pl
 share/kde/apps/kconf_update/kpgp.upd
 share/kde/apps/kconf_update/upgrade-resourcetype.pl
@@ -1177,6 +1173,7 @@ share/kde4/services/kcmkmailsummary.desktop
 share/kde4/services/kcmkontactsummary.desktop
 share/kde4/services/kcmsdsummary.desktop
 share/kde4/services/kcmtodosummary.desktop
+share/kde4/services/kjotspart.desktop
 share/kde4/services/kleopatra_config_appear.desktop
 share/kde4/services/kleopatra_config_dirserv.desktop
 share/kde4/services/kleopatra_config_dnorder.desktop
@@ -1361,7 +1358,6 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/kde/apps/kaddressbook
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @dirrm share/kde/apps/akregator/pics
-@dirrm share/kde/apps/akregator/kpartplugins
 @dirrm share/kde/apps/akregator/about
 @dirrm share/kde/apps/akregator
 @dirrm share/kde/apps/akonadiconsole
@@ -1374,6 +1370,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in kde: @dirrm share/icons/oxygen/scalable/apps
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
 @comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/48x48/status
 @comment in kde: @dirrm share/icons/oxygen/48x48/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
@@ -1399,7 +1396,6 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/ktimetracker
-@dirrm share/doc/kde/HTML/en/korn
 @dirrm share/doc/kde/HTML/en/korganizer
 @dirrm share/doc/kde/HTML/en/kontact
 @dirrm share/doc/kde/HTML/en/konsolekalendar

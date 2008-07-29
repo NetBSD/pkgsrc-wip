@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/26 23:11:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/07/29 22:05:52 mwdavies Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -175,8 +175,6 @@ share/icons/hicolor/48x48/apps/kfilereplace.png
 share/icons/hicolor/48x48/apps/kimagemapeditor.png
 share/icons/hicolor/48x48/apps/klinkstatus.png
 share/icons/hicolor/64x64/apps/klinkstatus.png
-share/icons/locolor/16x16/apps/kxsldbg.png
-share/icons/locolor/32x32/apps/kxsldbg.png
 share/kde/apps/kfilereplace/kfilereplaceui.rc
 share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/backup_option.png
 share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions/casesensitive_option.png
@@ -251,8 +249,6 @@ share/kde4/services/kxsldbg_part.desktop
 @dirrm share/kde/apps/kfilereplacepart
 @dirrm share/kde/apps/kfilereplace
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps

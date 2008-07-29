@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/07/26 22:57:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/07/29 21:53:00 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -72,6 +72,7 @@ include/libkiten/libkitenexport.h
 include/marble/AbstractProjection.h
 include/marble/AbstractProjectionHelper.h
 include/marble/ClipPainter.h
+include/marble/CustomSortFilterProxyModel.h
 include/marble/EquirectProjection.h
 include/marble/EquirectProjectionHelper.h
 include/marble/ExtDateTime.h
@@ -102,6 +103,7 @@ include/marble/GeoDocument.h
 include/marble/GeoPainter.h
 include/marble/MapThemeManager.h
 include/marble/MarbleControlBox.h
+include/marble/MarbleDataFacade.h
 include/marble/MarbleDirs.h
 include/marble/MarbleMap.h
 include/marble/MarbleNavigator.h
@@ -123,12 +125,11 @@ include/marble/global.h
 include/marble/marble_export.h
 lib/kde4/kigpart.so
 lib/kde4/libmarble_part.so
-lib/kde4/plasma_applet_didyouknow.so
 lib/kde4/plasma_applet_kalgebra.so
 lib/kde4/plasma_applet_parley.so
-lib/kde4/plasma_engine_kalzium.so
 lib/kde4/plasma_engine_parley.so
 lib/kde4/plugins/marble/CompassFloatItem.so
+lib/kde4/plugins/marble/MapScaleFloatItem.so
 lib/kde4/plugins/marble/MarbleOverviewMap.so
 lib/kde4/plugins/marble/MarbleStarsPlugin.so
 lib/libSatLib.so
@@ -697,7 +698,6 @@ share/kde/apps/blinken/sounds/lose.wav
 share/kde/apps/cmake/modules/FindKDEEdu.cmake
 share/kde/apps/cmake/modules/FindMarble.cmake
 share/kde/apps/cmake/modules/FindMarbleWidget.cmake
-share/kde/apps/desktoptheme/default/widgets/chalkboard.svg
 share/kde/apps/desktoptheme/default/widgets/parley_plasma_card.svg
 share/kde/apps/kalzium/data/bg.jpg
 share/kde/apps/kalzium/data/hazardsymbols/hazard_C.png
@@ -3997,9 +3997,7 @@ share/kde/config/parley.knsrc
 share/kde4/services/kalgebraplasmoid.desktop
 share/kde4/services/kig_part.desktop
 share/kde4/services/marble_part.desktop
-share/kde4/services/plasma-dataengine-kalzium.desktop
 share/kde4/services/plasma-dataengine-parley.desktop
-share/kde4/services/plasma_didyouknow.desktop
 share/kde4/services/plasma_parley.desktop
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
