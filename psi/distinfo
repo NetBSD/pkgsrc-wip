@@ -1,8 +1,41 @@
-$NetBSD: distinfo,v 1.5 2008/07/27 19:35:30 schnoebe Exp $
+$NetBSD: distinfo,v 1.6 2008/07/30 00:42:49 schnoebe Exp $
 
 SHA1 (psi-0.12/psi-0.12.tar.bz2) = 2927497a53d1eb00720718ec41cf61a911914922
 RMD160 (psi-0.12/psi-0.12.tar.bz2) = be5922ef84040113b257aaf99ac9bd350b69349c
 Size (psi-0.12/psi-0.12.tar.bz2) = 2122406 bytes
+SHA1 (psi-0.12/psi_cs.qm) = 4a44ef9c4228c9e74c0a08651aa6f9080668c679
+RMD160 (psi-0.12/psi_cs.qm) = a4fded917f7dacf445870962bf14219aa9dafe41
+Size (psi-0.12/psi_cs.qm) = 251976 bytes
+SHA1 (psi-0.12/psi_de.qm) = c986f7a1122d2a8eacf786f39b213f2197c125c7
+RMD160 (psi-0.12/psi_de.qm) = fdff482096339a9799dd8ead9b6cadd5e5fb24e5
+Size (psi-0.12/psi_de.qm) = 271177 bytes
+SHA1 (psi-0.12/psi_es_ES.qm) = 45448c63c0c88e6e4772079d10cc0469bb115404
+RMD160 (psi-0.12/psi_es_ES.qm) = 829d7e92a54f84c08ca8aa67f6bca080a9f590bc
+Size (psi-0.12/psi_es_ES.qm) = 273904 bytes
+SHA1 (psi-0.12/psi_fr.qm) = b763760c49f9f2ed957609cf7bf552147a66944b
+RMD160 (psi-0.12/psi_fr.qm) = f638dddbe0b925fd747f32767329add984e2a044
+Size (psi-0.12/psi_fr.qm) = 280650 bytes
+SHA1 (psi-0.12/psi_mk.qm) = 654af0069c7f449ae49a0a2f27431031dc86dc50
+RMD160 (psi-0.12/psi_mk.qm) = b62319af02c713a30fe219ab067e78132994db19
+Size (psi-0.12/psi_mk.qm) = 260157 bytes
+SHA1 (psi-0.12/psi_pl.qm) = 04ee9376253d2c3019c03a8396cbc725bf866274
+RMD160 (psi-0.12/psi_pl.qm) = 55e0d5e0374bcc689e30c8018518073da332ae0f
+Size (psi-0.12/psi_pl.qm) = 259626 bytes
+SHA1 (psi-0.12/psi_pt_BR.qm) = e010811b9cbce1d4f19758dc8870b083e0d9d37f
+RMD160 (psi-0.12/psi_pt_BR.qm) = c24d8d6a917ea3fca358f19b8d3be43d4e72e531
+Size (psi-0.12/psi_pt_BR.qm) = 129586 bytes
+SHA1 (psi-0.12/psi_ru.qm) = 5387b479409c75dad38f1b54e1b871fd8c5189c4
+RMD160 (psi-0.12/psi_ru.qm) = e921c5f9c86b7721a60210bea6f4f7bb3240d8a8
+Size (psi-0.12/psi_ru.qm) = 247574 bytes
+SHA1 (psi-0.12/psi_uk.qm) = 8acdeec2a817484973d931fcb16cc864f467f2cd
+RMD160 (psi-0.12/psi_uk.qm) = f5bc49e8a184719420dc596346ff3fa64832ed62
+Size (psi-0.12/psi_uk.qm) = 166998 bytes
+SHA1 (psi-0.12/psi_vi.qm) = f5925ec17c954f26b0543e2bd0aa524670bf32c1
+RMD160 (psi-0.12/psi_vi.qm) = dcb3df04081d6fbda2592755de13e16bb8cbc4e3
+Size (psi-0.12/psi_vi.qm) = 153623 bytes
+SHA1 (psi-0.12/psi_zh.qm) = 54a9391f374c2f5024670d03015275f93854a11a
+RMD160 (psi-0.12/psi_zh.qm) = f6274c09f4378117ebc8eab8f0283cee178a9ec1
+Size (psi-0.12/psi_zh.qm) = 145352 bytes
 SHA1 (patch-ac) = 1bdfedd39f3338f24278c020acb6762c76135fea
 SHA1 (patch-ad) = 19ac57e2662be8b02be735cd57bb80da97345bf8
 SHA1 (patch-ae) = 6d107097862c7793547abf3cd738654ee3fbbe81

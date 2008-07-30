@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/27 19:35:30 schnoebe Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/30 00:42:49 schnoebe Exp $
 
 PSI_VERSION=	0.12
 DISTNAME=	psi-${PSI_VERSION}
@@ -36,10 +36,11 @@ CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 # LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
 # 		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
 # 		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
-LANG_FILES=
+LANG_FILES=     psi_pt_BR.qm psi_cs.qm psi_de.qm psi_es_ES.qm psi_fr.qm \
+                psi_mk.qm psi_pl.qm psi_ru.qm psi_uk.qm psi_vi.qm psi_zh.qm
 
 .for l in ${LANG_FILES}
-SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
+SITES.${l}=	http://psi-im.org/download/lang/
 .endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
