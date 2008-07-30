@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/29 19:38:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/30 22:48:35 asau Exp $
 
 DISTNAME=	gforth-0.6.99
 PKGNAME=	gforth-0.6.99 # needed because of cvs-package.mk
@@ -34,6 +34,8 @@ USE_TOOLS+=	gmake makeinfo gzip
 MAKE_JOBS_SAFE=	no # fresh Gforth is required to build doc
 BUILD_TARGET=	all doc
 TEST_TARGET=	check
+
+INSTALLATION_DIRS=	share/emacs/site-lisp
 
 pre-configure:
 	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
