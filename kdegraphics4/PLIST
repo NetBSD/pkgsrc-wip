@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/26 23:01:28 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/07/31 12:16:10 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -59,7 +59,9 @@ lib/kde4/gvpart.so
 lib/kde4/kcm_kamera.so
 lib/kde4/kcm_kgamma.so
 lib/kde4/kio_kamera.so
+lib/kde4/kio_msits.so
 lib/kde4/ksaneplugin.so
+lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_dvi.so
 lib/kde4/okularGenerator_fb.so
@@ -105,6 +107,7 @@ share/applications/kde4/kolourpaint.desktop
 share/applications/kde4/kruler.desktop
 share/applications/kde4/ksnapshot.desktop
 share/applications/kde4/okular.desktop
+share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
 share/applications/kde4/okularApplication_dvi.desktop
 share/applications/kde4/okularApplication_fb.desktop
@@ -415,6 +418,7 @@ share/kde4/services/gvpart.desktop
 share/kde4/services/kamera.desktop
 share/kde4/services/kgamma.desktop
 share/kde4/services/ksane_scan_service.desktop
+share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
 share/kde4/services/libokularGenerator_fb.desktop
@@ -424,6 +428,8 @@ share/kde4/services/libokularGenerator_plucker.desktop
 share/kde4/services/libokularGenerator_poppler.desktop
 share/kde4/services/libokularGenerator_tiff.desktop
 share/kde4/services/libokularGenerator_xps.desktop
+share/kde4/services/msits.protocol
+share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
 share/kde4/services/okularDvi.desktop
 share/kde4/services/okularFb.desktop
