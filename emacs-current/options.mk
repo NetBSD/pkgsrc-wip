@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.7 2008/07/31 09:21:46 obache Exp $
+# $NetBSD: options.mk,v 1.8 2008/07/31 09:27:54 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
 PKG_SUPPORTED_OPTIONS=	gnome font-backend
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
-PKG_OPTIONS_GROUP.window-system= x11 carbon nextstep
+PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
 PKG_SUGGESTED_OPTIONS=	x11
@@ -44,7 +44,6 @@ CONFIGURE_ARGS+=	--with-jpeg
 CONFIGURE_ARGS+=	--with-tiff
 CONFIGURE_ARGS+=	--with-gif
 CONFIGURE_ARGS+=	--with-png
-CONFIGURE_ARGS+=	--without-carbon
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
@@ -130,34 +129,4 @@ CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-gif
 CONFIGURE_ARGS+=	--without-png
-
-###
-### Support Carbon Emacs
-###
-.  if !empty(PKG_OPTIONS:Mcarbon)
-.    if !exists(/System/Library/Frameworks/Carbon.framework)
-PKG_FAIL_REASON=	"This platform doesn't support Carbon"
-.    else
-APPLICATIONS_DIR=	Applications
-
-CONFIGURE_ARGS+=	--with-carbon
-CONFIGURE_ARGS+=	--enable-carbon-app=${PREFIX}/${APPLICATIONS_DIR}
-
-PLIST_SRC+=		PLIST.carbon
-PLIST_SUBST+=		APPLIDATIONS_DIR=${APPLICATIONS_DIR:Q}
-
-INSTALLATION_DIRS=	${APPLICATIONS_DIR}
-
-CHECK_WRKREF_SKIP+=	${APPLICATIONS_DIR}/Emacs.app/Contents/MacOS/Emacs
-
-post-install:
-	for d in `find ${DESTDIR}${PREFIX}/${APPLICATIONS_DIR}/Emacs.app -type d ! -name CVS -print`; do  \
-		rm -rf $${d}/CVS; \
-		rm -rf $${d}/.cvsignore; \
-	done
-
-.    endif
-.  else
-CONFIGURE_ARGS+=	--without-carbon
-.  endif
 .endif
