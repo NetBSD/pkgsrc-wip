@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2981 2008/07/29 22:11:00 mwdavies Exp $
+# $Id: Makefile,v 1.2982 2008/07/31 06:19:42 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1269,7 +1269,6 @@ SUBDIR+=	p5-Metadata
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-NNTPClient
-SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
