@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2008/07/27 06:32:38 obache Exp $
+# $NetBSD: options.mk,v 1.7 2008/07/31 09:21:46 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -107,6 +107,7 @@ NS_APPBINDIR=		nextstep/Emacs.app/Contents/MacOS
 PLIST_SRC+=		PLIST.cocoa
 .  else
 .include "../../devel/gnustep-base/buildlink3.mk"
+MAKE_FILE=		Makefile
 APPLICATIONS_DIR=	share/GNUstep/Local/Applications
 NS_APPBINDIR=		nextstep/Emacs.app
 PLIST_SRC+=		PLIST.gnustep
