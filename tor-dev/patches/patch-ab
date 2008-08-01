@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/08/01 22:57:08 athaba Exp $
+
+--- src/config/Makefile.in.orig	2008-06-20 08:27:41.000000000 +0200
++++ src/config/Makefile.in
+@@ -147,7 +147,7 @@ infodir = @infodir@
+ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+-localedir = @localedir@
++localedir = /usr/pkg/share/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+@@ -167,7 +167,7 @@ confdir = $(sysconfdir)/tor
+ tordatadir = $(datadir)/tor
+ EXTRA_DIST = geoip
+ # fallback-consensus
+-conf_DATA = torrc.sample
++#conf_DATA = torrc.sample
+ tordata_DATA = geoip
+ all: all-am
+ 

@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/08/01 22:57:08 athaba Exp $
+
+You probably want to install www/privoxy to torify your browsers.  Please
+see https://wiki.torproject.org/wiki/TheOnionRouter/TorifyHOWTO for details.
+
+Other applications can be torified with the help of libtsocks (net/tsocks).
+A tsocks configuration file for this is installed as
+${PREFIX}/share/examples/tor/tor-tsocks.conf.
+===========================================================================
