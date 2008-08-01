@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/31 11:47:51 mwdavies Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/01 22:43:28 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -77,7 +77,6 @@ post-install:
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
-.include "../../audio/xmms/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/qimageblitz/buildlink3.mk"

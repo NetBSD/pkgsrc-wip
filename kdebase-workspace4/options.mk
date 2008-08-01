@@ -1,11 +1,19 @@
-# $NetBSD: options.mk,v 1.1 2007/12/22 18:57:53 mwdavies Exp $
+# $NetBSD: options.mk,v 1.2 2008/08/01 22:43:28 mwdavies Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase-workspace
-PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUPPORTED_OPTIONS=	inet6 xmms
 #PKG_SUPPORTED_OPTIONS=	inet6 sasl samba debug pam
 #PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
+
+WITH_Xmms:BOOL=OFF
+
+.if !empty(PKG_OPTIONS:Mxmms)
+.include "../../audio/xmms/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
+.endif
 
 #.if !empty(PKG_OPTIONS:Msamba)
 #.include "../../net/samba/buildlink3.mk"
