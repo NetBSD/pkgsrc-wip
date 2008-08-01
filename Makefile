@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2984 2008/08/01 17:25:12 thomasklausner Exp $
+# $Id: Makefile,v 1.2985 2008/08/01 23:01:07 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1774,6 +1774,7 @@ SUBDIR+=	tome
 SUBDIR+=	topless
 SUBDIR+=	toppler
 SUBDIR+=	tops-bin
+SUBDIR+=	tor-dev
 SUBDIR+=	tr2latex
 SUBDIR+=	trac
 SUBDIR+=	trac-plugins-AccountManager
