@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/19 14:04:28 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/01 08:52:52 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/acct_mgr/__init__.py
@@ -27,16 +26,29 @@ ${PYSITELIB}/acct_mgr/http.pyo
 ${PYSITELIB}/acct_mgr/md5crypt.py
 ${PYSITELIB}/acct_mgr/md5crypt.pyc
 ${PYSITELIB}/acct_mgr/md5crypt.pyo
+${PYSITELIB}/acct_mgr/notification.py
+${PYSITELIB}/acct_mgr/notification.pyc
+${PYSITELIB}/acct_mgr/notification.pyo
 ${PYSITELIB}/acct_mgr/pwhash.py
 ${PYSITELIB}/acct_mgr/pwhash.pyc
 ${PYSITELIB}/acct_mgr/pwhash.pyo
-${PYSITELIB}/acct_mgr/templates/account.cs
-${PYSITELIB}/acct_mgr/templates/admin_accountsconfig.cs
-${PYSITELIB}/acct_mgr/templates/admin_users.cs
-${PYSITELIB}/acct_mgr/templates/login.cs
-${PYSITELIB}/acct_mgr/templates/register.cs
-${PYSITELIB}/acct_mgr/templates/reset_password.cs
-${PYSITELIB}/acct_mgr/templates/reset_password_email.cs
+${PYSITELIB}/acct_mgr/svnserve.py
+${PYSITELIB}/acct_mgr/svnserve.pyc
+${PYSITELIB}/acct_mgr/svnserve.pyo
+${PYSITELIB}/acct_mgr/templates/admin_accountsconfig.html
+${PYSITELIB}/acct_mgr/templates/admin_accountsnotification.html
+${PYSITELIB}/acct_mgr/templates/admin_users.html
+${PYSITELIB}/acct_mgr/templates/login.html
+${PYSITELIB}/acct_mgr/templates/prefs_account.html
+${PYSITELIB}/acct_mgr/templates/register.html
+${PYSITELIB}/acct_mgr/templates/reset_password.html
+${PYSITELIB}/acct_mgr/templates/reset_password_email.txt
+${PYSITELIB}/acct_mgr/templates/user_changes_email.txt
+${PYSITELIB}/acct_mgr/templates/verify_email.html
+${PYSITELIB}/acct_mgr/templates/verify_email.txt
+${PYSITELIB}/acct_mgr/util.py
+${PYSITELIB}/acct_mgr/util.pyc
+${PYSITELIB}/acct_mgr/util.pyo
 ${PYSITELIB}/acct_mgr/web_ui.py
 ${PYSITELIB}/acct_mgr/web_ui.pyc
 ${PYSITELIB}/acct_mgr/web_ui.pyo
