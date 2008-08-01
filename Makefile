@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2982 2008/07/31 06:19:42 obache Exp $
+# $Id: Makefile,v 1.2983 2008/08/01 08:51:12 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -121,7 +121,6 @@ SUBDIR+=	awk-pkgsrc-dewey
 SUBDIR+=	axe
 SUBDIR+=	axel
 SUBDIR+=	azureus
-SUBDIR+=	babel
 SUBDIR+=	backplane
 SUBDIR+=	bakery
 SUBDIR+=	barnyard
@@ -411,7 +410,6 @@ SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	geany
-SUBDIR+=	genshi
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth
@@ -1531,7 +1529,6 @@ SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	pydance
 SUBDIR+=	pydb
-SUBDIR+=	pygments
 SUBDIR+=	pygopherd
 SUBDIR+=	pynfo
 SUBDIR+=	pypanel
