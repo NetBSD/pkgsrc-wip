@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2985 2008/08/01 23:01:07 athaba Exp $
+# $Id: Makefile,v 1.2986 2008/08/02 09:10:43 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1596,7 +1596,6 @@ SUBDIR+=	runawk
 SUBDIR+=	runit
 SUBDIR+=	samhain
 SUBDIR+=	sara
-SUBDIR+=	sarg
 SUBDIR+=	sbcl
 #SUBDIR+=	sbcl-boot	# in case self-bootstrap is required
 SUBDIR+=	scare
@@ -1979,8 +1978,8 @@ SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh
-SUBDIR+=	zyGrib
 SUBDIR+=	zvbi
+SUBDIR+=	zyGrib
 
 ${.CURDIR}/PKGDB:
 	${RM} -f ${.CURDIR}/PKGDB
