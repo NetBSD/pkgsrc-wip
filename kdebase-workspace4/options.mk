@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/08/01 22:43:28 mwdavies Exp $
+# $NetBSD: options.mk,v 1.3 2008/08/02 01:22:35 mwdavies Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase-workspace
 PKG_SUPPORTED_OPTIONS=	inet6 xmms
@@ -6,8 +6,6 @@ PKG_SUPPORTED_OPTIONS=	inet6 xmms
 #PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
-
-WITH_Xmms:BOOL=OFF
 
 .if !empty(PKG_OPTIONS:Mxmms)
 .include "../../audio/xmms/buildlink3.mk"
