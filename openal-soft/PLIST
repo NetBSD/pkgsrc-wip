@@ -1,1 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/05 02:14:19 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/02 20:20:20 asau Exp $
+bin/openal-info
+include/AL/al.h
+include/AL/alc.h
+include/AL/alext.h
+lib/libopenal.so
+lib/libopenal.so.1
+lib/libopenal.so.${PKGVERSION}
+lib/pkgconfig/openal.pc
+@dirrm include/AL

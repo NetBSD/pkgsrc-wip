@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2008/02/05 02:14:19 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/02 20:20:20 asau Exp $
 #
 
-DISTNAME=	openal-soft-1.2.218
+DISTNAME=	openal-soft-1.5.304
 CATEGORIES=	audio
-MASTER_SITES=	http://kcat.strangesoft.net/openal-releases/
+MASTER_SITES=	http://connect.creativelabs.com/openal/Downloads/ \
+		http://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bjs@NetBSD.org
