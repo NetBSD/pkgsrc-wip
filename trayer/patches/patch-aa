@@ -1,0 +1,31 @@
+--- systray/fixedtip.c.orig	2008-08-01 23:42:39.000000000 +0100
++++ systray/fixedtip.c	2008-08-01 23:42:46.000000000 +0100
+@@ -36,6 +36,7 @@
+   return FALSE;
+ }
+ 
++/*
+ static gboolean
+ expose_handler (GtkTooltips *tooltips)
+ {
+@@ -46,6 +47,7 @@
+ 
+   return FALSE;
+ }
++*/
+ 
+ void
+ fixed_tip_show (int screen_number,
+@@ -81,10 +83,12 @@
+       gtk_widget_set_name (tip, "gtk-tooltips");
+       gtk_container_set_border_width (GTK_CONTAINER (tip), 4);
+ 
++      /*
+       g_signal_connect (G_OBJECT (tip), 
+             "expose_event",
+             G_CALLBACK (expose_handler),
+             NULL);
++      */
+    
+       gtk_widget_add_events (tip, GDK_BUTTON_PRESS_MASK);
+       

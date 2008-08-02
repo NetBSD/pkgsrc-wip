@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/02/26 08:10:52 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/02 10:20:05 milosn Exp $
 
 TR_VERSION=	1.0
 DISTNAME=	trayer-${TR_VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	http://download.berlios.de/fvwm-crystal/
+PKGREVISION=    1
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://fvwm-crystal.org/
