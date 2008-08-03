@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/03/05 18:04:25 asau Exp $
+# $NetBSD: options.mk,v 1.8 2008/08/03 18:56:48 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -24,6 +24,18 @@ CONFIGURE_ARGS+=	--with-lisp=sbcl
 
 # Fix suffix for "fast load" files:
 PLIST_SUBST+=	FASL=${FASL:Q}
+
+# Generalize "fast load" files
+PRINT_PLIST_AWK+=	{gsub(/\.${FASL}$$/, ".$${FASL}");}
+.if !empty(PKG_OPTIONS:Mclisp)
+# Handle CLISP-specific files
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
+.endif
+
+# X11-only files:
+.if !empty(PKG_OPTIONS:Mx11)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+.endif
 
 # X11
 .if !empty(PKG_OPTIONS:Mx11)
