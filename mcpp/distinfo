@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/04 23:40:05 jkryl Exp $
+$NetBSD: distinfo,v 1.2 2008/08/03 13:30:13 jkryl Exp $
 
-SHA1 (mcpp-2.6.4.tar.gz) = 11bd7f88e458fa9c4f66eddaacd758c7a8d0f551
-RMD160 (mcpp-2.6.4.tar.gz) = 46fdf1587ef7e56eed5fdd72422e0cf69952c535
-Size (mcpp-2.6.4.tar.gz) = 1302617 bytes
+SHA1 (mcpp-2.7.1.tar.gz) = 9f85d43462b9cda2662df335ca3e0c8e015b8805
+RMD160 (mcpp-2.7.1.tar.gz) = 95e7abcf4257ae13215d30c3ec010e9ea60f93ae
+Size (mcpp-2.7.1.tar.gz) = 1384826 bytes
