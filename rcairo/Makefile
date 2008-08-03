@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 06:17:28 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/03 09:44:16 obache Exp $
 #
 
-DISTNAME=		rcairo-1.6.2
+DISTNAME=		rcairo-1.6.3
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
