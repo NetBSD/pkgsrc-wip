@@ -1,2 +1,2 @@
 - correctly set PTR64 (currently only done on x86_64)
-- share Makefile.common with sdlmess
+- use MAINTAINER?= in Makefile.common (says pkglint)

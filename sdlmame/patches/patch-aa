@@ -1,34 +1,21 @@
-$NetBSD: patch-aa,v 1.6 2008/06/30 12:02:57 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.7 2008/08/03 15:32:44 dillo Exp $
 
---- makefile.orig	2008-05-05 12:44:38.000000000 +0000
+--- makefile.orig	2008-07-10 02:34:43.000000000 +0200
 +++ makefile
-@@ -105,10 +105,10 @@ endif
- # PROFILER = 1
- 
- # uncomment next line to use DRC MIPS3 engine
--X86_MIPS3_DRC = 1
-+# X86_MIPS3_DRC = 1
- 
- # uncomment next line to use DRC PowerPC engine
--X86_PPC_DRC = 1
-+# X86_PPC_DRC = 1
- 
- # uncomment next line to build using unix-style libsdl on Mac OS X
- # (vs. the native framework port).  Normal users should not enable this.
-@@ -127,10 +127,10 @@ X86_PPC_DRC = 1
+@@ -125,10 +125,10 @@ endif
  # BIGENDIAN = 1
  
  # uncomment next line to build expat as part of MAME build
 -BUILD_EXPAT = 1
-+#BUILD_EXPAT = 1
++# BUILD_EXPAT = 1
  
  # uncomment next line to build zlib as part of MAME build
 -BUILD_ZLIB = 1
-+#BUILD_ZLIB = 1
++# BUILD_ZLIB = 1
  
  # uncomment next line to include the symbols
  # SYMBOLS = 1
-@@ -200,9 +200,9 @@ BUILD_EXE = $(EXE)
+@@ -193,9 +193,9 @@ BUILD_EXE = $(EXE)
  endif
  
  # compiler, linker and utilities
@@ -41,34 +28,31 @@ $NetBSD: patch-aa,v 1.6 2008/06/30 12:02:57 thomasklausner Exp $
  MD = -mkdir$(EXE)
  RM = @rm -f
  
-@@ -226,7 +226,7 @@ NAME = $(TARGET)$(SUBTARGET)
+@@ -219,7 +219,8 @@ NAME = $(TARGET)$(SUBTARGET)
  endif
  
  # fullname is prefix+name+suffix+debugsuffix
 -FULLNAME = $(PREFIX)$(NAME)$(SUFFIX)$(DEBUGSUFFIX)
++#FULLNAME = $(PREFIX)$(NAME)$(SUFFIX)$(DEBUGSUFFIX)
 +FULLNAME = $(NAME)$(SUFFIX)$(DEBUGSUFFIX)
  
  # add an EXE suffix to get the final emulator name
  EMULATOR = $(FULLNAME)$(EXE)
-@@ -289,7 +289,7 @@ ifdef PROFILER
- DEFS += -DMAME_PROFILER
- endif
- 
--
-+DEFS += -DPI=M_PI
- 
+@@ -284,10 +285,10 @@ endif
  #-------------------------------------------------
- # compile flags
-@@ -328,19 +328,19 @@ CFLAGS += -pg
- endif
  
- # this warning is not supported on the os2 compilers
--ifneq ($(TARGETOS),os2)
--CFLAGS += -Wdeclaration-after-statement
--endif
-+#ifneq ($(TARGETOS),os2)
-+#CFLAGS += -Wdeclaration-after-statement
-+#endif
+ # we compile to C89 standard with GNU extensions
+-CFLAGS = -std=gnu89
++#CFLAGS = -std=gnu89
+ 
+ # this speeds it up a bit by piping between the preprocessor/compiler/assembler
+-CFLAGS += -pipe
++#CFLAGS += -pipe
+ 
+ # add -g if we need symbols
+ ifdef SYMBOLS
+@@ -321,14 +322,14 @@ CFLAGS += -Wdeclaration-after-statement
+ endif
  
  # add the optimization flag
 -CFLAGS += -O$(OPTIMIZE)
@@ -84,28 +68,47 @@ $NetBSD: patch-aa,v 1.6 2008/06/30 12:02:57 thomasklausner Exp $
  endif
  endif
  
-@@ -389,13 +389,13 @@ LDFLAGS += -pg
+@@ -344,7 +345,7 @@ endif
+ #-------------------------------------------------
+ 
+ # add core include paths
+-CFLAGS += \
++CFLAGS := \
+ 	-I$(SRC)/$(TARGET) \
+ 	-I$(SRC)/$(TARGET)/includes \
+ 	-I$(OBJ)/$(TARGET)/layout \
+@@ -354,7 +355,7 @@ CFLAGS += \
+ 	-I$(SRC)/lib/util \
+ 	-I$(SRC)/osd \
+ 	-I$(SRC)/osd/$(OSD) \
+-
++	$(CFLAGS)
+ 
+ 
+ #-------------------------------------------------
+@@ -363,10 +364,10 @@ CFLAGS += \
+ 
+ # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
+ # flags only used when linking the core emulator
+-LDFLAGS =
++#LDFLAGS =
+ ifneq ($(TARGETOS),macosx)
+ ifneq ($(TARGETOS),os2)
+-LDFLAGS = -Wl,--warn-common
++#LDFLAGS = -Wl,--warn-common
  endif
- 
- # strip symbols and other metadata in non-symbols and non profiling builds
--ifndef SYMBOLS
--ifndef PROFILE
--ifneq ($(TARGETOS),macosx)
+ endif
+ LDFLAGSEMULATOR =
+@@ -380,7 +381,7 @@ endif
+ ifndef SYMBOLS
+ ifndef PROFILE
+ ifneq ($(TARGETOS),macosx)
 -LDFLAGS += -s
--endif
--endif
--endif
-+#ifndef SYMBOLS
-+#ifndef PROFILE
-+#ifneq ($(TARGETOS),macosx)
 +#LDFLAGS += -s
-+#endif
-+#endif
-+#endif
- 
- # output a map file (emulator only)
- ifdef MAP
-@@ -544,7 +544,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
+ endif
+ endif
+ endif
+@@ -532,7 +533,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
  # always recompile the version string
  	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
  	@echo Linking $@...
