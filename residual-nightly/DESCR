@@ -1,0 +1,5 @@
+Residual is a ScummVM (http://www.scummvm.org/) sub-project to play LucasArts'
+LUA-based 3D adventures, such as Grim Fandango. Residual is an OpenGL program,
+and requires a 3D card with working OpenGL support for optimum playability.
+
+A software renderer is also included for machines without hardware OpenGL.

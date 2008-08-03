@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/03 15:49:13 dillo Exp $
+bin/residual
+share/doc/residual/AUTHORS
+share/doc/residual/COPYING.GPL
+share/doc/residual/COPYING.LGPL
+share/doc/residual/NEWS
+share/doc/residual/README
+share/doc/residual/TODO
+share/pixmaps/residual.xpm
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/doc/residual
