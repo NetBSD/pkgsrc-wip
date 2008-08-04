@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 10:44:50 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/04 22:18:13 rhialto Exp $
 bin/puic
+include/smoke.h
 lib/libsmokeqt.la
+man/man1/puic.1
 share/PerlQt-3/css/pod.css
 share/PerlQt-3/en/index.html
 share/PerlQt-3/en/Makefile
