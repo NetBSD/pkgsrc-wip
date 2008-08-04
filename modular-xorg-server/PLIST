@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/06 09:02:14 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/08/04 21:39:48 bsadewitz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -13,7 +13,6 @@ bin/outb
 bin/outl
 bin/outw
 bin/pcitweak
-bin/scanpci
 bin/xorgconfig
 include/xorg/BT.h
 include/xorg/IBM.h
@@ -178,6 +177,7 @@ include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/X11/Cards
 lib/X11/Options
+lib/libxf86config.la
 lib/pkgconfig/xorg-server.pc
 ${PLIST.dri}lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
@@ -195,7 +195,6 @@ lib/xorg/modules/libfb.la
 lib/xorg/modules/libint10.la
 lib/xorg/modules/libmfb.la
 lib/xorg/modules/libpcidata.la
-lib/xorg/modules/libscanpci.la
 lib/xorg/modules/libshadow.la
 lib/xorg/modules/libshadowfb.la
 lib/xorg/modules/libvbe.la
@@ -222,7 +221,6 @@ man/man1/Xvfb.1
 man/man1/cvt.1
 man/man1/gtf.1
 man/man1/pcitweak.1
-man/man1/scanpci.1
 man/man1/xorgconfig.1
 man/man4/exa.4
 man/man4/fbdevhw.4

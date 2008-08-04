@@ -1,13 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2008/07/06 09:02:14 tnn2 Exp $
+# $NetBSD: options.mk,v 1.7 2008/08/04 21:39:48 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 #dbus
-# remove after 2007Q4
-PKG_OPTIONS_LEGACY_OPTS=glx:dri
-.if defined(PKG_OPTIONS.xorg-server)
-PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.xorg-server}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xorg-server used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,7 +9,7 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xorg-server us
 #CONFIGURE_ARGS+=	--enable-config-dbus
 #.  include "../../sysutils/dbus/buildlink3.mk"
 #.else
-CONFIGURE_ARGS+=	--disable-config-dbus
+#CONFIGURE_ARGS+=	--disable-config-dbus
 #.endif
 
 PLIST_VARS+=		dri
@@ -23,13 +17,14 @@ PLIST_VARS+=		dri
 PLIST.dri=		yes
 .include "mesaconfig.mk"
 DISTFILES=		${DEFAULT_DISTFILES}
-DISTFILES+=		MesaLib-7.0.3.tar.bz2
-#DIST_SUBDIR=		Mesa-7.0.3
-SITES.MesaLib-7.0.3.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-PATCHFILES=		Mesa-7.0.3-001 Mesa-7.0.3-002 Mesa-7.0.3-003
-PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
-PATCH_DIST_ARGS+=	-d ${WRKDIR}/Mesa-7.0.3 -f -V nil -b .orig_dist -p1 || ${TRUE}
-MESA_SRC=		${WRKDIR}/Mesa-7.0.3
+DISTFILES+=		MesaLib-7.0.4.tar.bz2
+PATCH_DIST_STRIP=	-p1
+PATCHFILES=		xserver-1.4.2-netbsd-rc0.patch
+SITES.MesaLib-7.0.4.tar.bz2=\
+			${MASTER_SITE_LOCAL:=Mesa-7.0.4/}
+SITES.xserver-1.4.2-netbsd-rc0.patch=\
+			ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
+MESA_SRC=		${WRKDIR}/Mesa-7.0.4
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx
 CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
@@ -43,11 +38,16 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 # the newer ones.
 #BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
-
+###
+### XXX As of driproto-2.0.4 and glproto-1.4.9, this should not be needed.
+###
 dri-post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 
 .else
+###
+### XXX Do we want this?
+###
 CONFIGURE_ARGS+=	--disable-glx
 
 dri-post-extract:
