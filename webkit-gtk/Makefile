@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/07/24 13:46:29 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2008/08/04 12:23:42 hoka_adam Exp $
 #
 # pkg-config says 1.0.2, let's combine it with the revision
 # to give a sane version number.
 #
-DISTNAME=	WebKit-r35289
+DISTNAME=	WebKit-r35417
 PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.2./}
 CATEGORIES=	www gtk2
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
