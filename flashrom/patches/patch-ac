@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/11/29 17:01:00 jakllsch Exp $
+$NetBSD: patch-ac,v 1.2 2008/08/05 21:50:19 jakllsch Exp $
 
---- Makefile.orig	2007-11-29 00:51:28.000000000 +0000
+--- Makefile.orig	2008-08-05 20:55:54.000000000 +0000
 +++ Makefile
 @@ -16,7 +16,7 @@ OS_ARCH	= $(shell uname)
  ifeq ($(OS_ARCH), SunOS)
  LDFLAGS = -lpci -lz
  else
--LDFLAGS = -lpci -lz -static 
-+LDFLAGS = -lpci -lz -static ${LDLIBS}
+-LDFLAGS = -lpci -lz
++LDFLAGS = -lpci ${LDLIBS} -static
  STRIP_ARGS = -s
  endif
- 
+ ifeq ($(OS_ARCH), FreeBSD)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/05 21:50:19 jakllsch Exp $
 #
 
 DISTNAME=	flashrom-${FLASHROM_SNAP_VERSION}
@@ -36,7 +36,8 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 
 SUBST_CLASSES+=	pciutils
 SUBST_FILES.pciutils=	Makefile flashrom.c
-SUBST_FILES.pciutils+=	board_enable.c chipset_enable.c spi.c
+SUBST_FILES.pciutils+=	board_enable.c chipset_enable.c
+SUBST_FILES.pciutils+=	spi.c it87spi.c ichspi.c
 SUBST_MESSAGE.pciutils=	fixing pciutils headers
 SUBST_STAGE.pciutils=	pre-configure
 SUBST_SED.pciutils+= -e 's,<pci/pci.h>,<pciutils/pci.h>,'
