@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/05 22:59:31 jkuittinen Exp $
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/beaker/__init__.pyc
+${PYSITELIB}/beaker/__init__.pyo
+${PYSITELIB}/beaker/cache.pyc
+${PYSITELIB}/beaker/cache.pyo
+${PYSITELIB}/beaker/container.pyc
+${PYSITELIB}/beaker/container.pyo
+${PYSITELIB}/beaker/converters.pyc
+${PYSITELIB}/beaker/converters.pyo
+${PYSITELIB}/beaker/crypto/__init__.pyc
+${PYSITELIB}/beaker/crypto/__init__.pyo
+${PYSITELIB}/beaker/crypto/pbkdf2.pyc
+${PYSITELIB}/beaker/crypto/pbkdf2.pyo
+${PYSITELIB}/beaker/exceptions.pyc
+${PYSITELIB}/beaker/exceptions.pyo
+${PYSITELIB}/beaker/ext/__init__.pyc
+${PYSITELIB}/beaker/ext/__init__.pyo
+${PYSITELIB}/beaker/ext/database.pyc
+${PYSITELIB}/beaker/ext/database.pyo
+${PYSITELIB}/beaker/ext/google.pyc
+${PYSITELIB}/beaker/ext/google.pyo
+${PYSITELIB}/beaker/ext/memcached.pyc
+${PYSITELIB}/beaker/ext/memcached.pyo
+${PYSITELIB}/beaker/ext/sqla.pyc
+${PYSITELIB}/beaker/ext/sqla.pyo
+${PYSITELIB}/beaker/middleware.pyc
+${PYSITELIB}/beaker/middleware.pyo
+${PYSITELIB}/beaker/session.pyc
+${PYSITELIB}/beaker/session.pyo
+${PYSITELIB}/beaker/synchronization.pyc
+${PYSITELIB}/beaker/synchronization.pyo
+${PYSITELIB}/beaker/util.pyc
+${PYSITELIB}/beaker/util.pyo
+@dirrm ${PYSITELIB}/beaker/ext
+@dirrm ${PYSITELIB}/beaker/crypto
+@dirrm ${PYSITELIB}/beaker
+@dirrm ${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
