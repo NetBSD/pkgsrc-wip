@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/08/06 11:44:10 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.1.1.2 2008/08/06 12:32:38 yazzy Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EWL_BUILDLINK3_MK:=	${EWL_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	ewl
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ewl
 
 .if ${EWL_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.ewl+=	ewl>=-0.5.1.011
-BUILDLINK_ABI_DEPENDS.ewl?=	ewl>=-0.5.1.011nb1
+BUILDLINK_API_DEPENDS.ewl+=	ewl>=0.5.1.011nb1
+BUILDLINK_ABI_DEPENDS.ewl?=	ewl>=0.5.1.011nb1
 BUILDLINK_PKGSRCDIR.ewl?=	../../wip/ewl
 .endif	# EWL_BUILDLINK3_MK
 
@@ -21,5 +21,3 @@ BUILDLINK_PKGSRCDIR.ewl?=	../../wip/ewl
 .include "../../wip/edje/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
-
-

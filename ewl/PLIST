@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/06 11:44:10 yazzy Exp $
+@comment $NetBSD: PLIST,v 1.1.1.2 2008/08/06 12:32:38 yazzy Exp $
 bin/ewl_config
 bin/ewl_embed_test
 bin/ewl_simple_test
 bin/ewl_test
-etc/ewl/ewl.cfg
 include/ewl/Ewl.h
 include/ewl/Ewl_Test.h
 include/ewl/ewl_attach.h
@@ -273,4 +272,3 @@ share/ewl/themes/ewl_embed_test.edj
 @dirrm lib/ewl/engines
 @dirrm lib/ewl
 @dirrm include/ewl
-@dirrm etc/ewl

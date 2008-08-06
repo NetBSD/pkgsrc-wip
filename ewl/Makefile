@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/06 11:44:10 yazzy Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2008/08/06 12:32:38 yazzy Exp $
 #
 
 DISTNAME=	ewl-0.5.1.011
@@ -25,4 +25,3 @@ CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 .include "../../wip/edje/buildlink3.mk"
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
