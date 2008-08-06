@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2008/07/30 07:15:52 makoto Exp $
+@comment $NetBSD: PLIST,v 1.64 2008/08/06 11:55:44 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -31,6 +31,7 @@ info/forms
 info/gnus
 info/idlwave
 info/info
+info/mairix-el
 info/message
 info/mh-e
 info/newsticker
@@ -82,7 +83,6 @@ share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
-share/emacs/${PKGVERSION}/etc/Emacs.clr
 share/emacs/${PKGVERSION}/etc/FTP
 share/emacs/${PKGVERSION}/etc/GNU
 share/emacs/${PKGVERSION}/etc/GNUS-NEWS
@@ -849,7 +849,6 @@ share/emacs/${PKGVERSION}/etc/schema/xslt.rnc
 share/emacs/${PKGVERSION}/etc/ses-example.ses
 share/emacs/${PKGVERSION}/etc/sex.6
 share/emacs/${PKGVERSION}/etc/spook.lines
-share/emacs/${PKGVERSION}/etc/termcap.src
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.bg
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.cn
@@ -2486,9 +2485,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/vms-patch.el
-share/emacs/${PKGVERSION}/lisp/obsolete/vms-pmail.el
-share/emacs/${PKGVERSION}/lisp/obsolete/vmsproc.el
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${PKGVERSION}/lisp/org/org-agenda.el.gz
