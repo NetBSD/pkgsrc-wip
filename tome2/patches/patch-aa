@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/06 05:08:42 phonohawk Exp $
+
+--- src/files.c.orig	2008-05-13 03:44:03.000000000 +0900
++++ src/files.c
+@@ -47,13 +47,13 @@ void safe_setuid_drop(void)
+ 
+ # else
+ 
+-		if (setreuid(geteuid(), getuid()) != 0)
++		if (seteuid(getuid()) != 0)
+ 		{
+-			quit("setreuid(): cannot set permissions correctly!");
++			quit("seteuid(): cannot set permissions correctly!");
+ 		}
+-		if (setregid(getegid(), getgid()) != 0)
++		if (setegid(getgid()) != 0)
+ 		{
+-			quit("setregid(): cannot set permissions correctly!");
++			quit("setegid(): cannot set permissions correctly!");
+ 		}
+ 
+ # endif
+@@ -91,13 +91,13 @@ void safe_setuid_grab(void)
+ 
+ # else
+ 
+-		if (setreuid(geteuid(), getuid()) != 0)
++		if (seteuid(player_euid) != 0)
+ 		{
+-			quit("setreuid(): cannot set permissions correctly!");
++			quit("seteuid(): cannot set permissions correctly!");
+ 		}
+-		if (setregid(getegid(), getgid()) != 0)
++		if (setegid(player_euid) != 0)
+ 		{
+-			quit("setregid(): cannot set permissions correctly!");
++			quit("setegid(): cannot set permissions correctly!");
+ 		}
+ 
+ # endif  /* SAFE_SETUID_POSIX */
