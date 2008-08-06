@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/08/06 10:55:00 yazzy Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EFREET_BUILDLINK3_MK:=	${EFREET_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	efreet
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}efreet
 
 .if ${EFREET_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.efreet+=	efreet>=0.0.3.006
-BUILDLINK_ABI_DEPENDS.efreet?=	efreet>=0.0.3.042nb1
+BUILDLINK_API_DEPENDS.efreet+=	efreet>=0.5.0.043
+BUILDLINK_ABI_DEPENDS.efreet?=	efreet>=0.5.0.043nb1
 BUILDLINK_PKGSRCDIR.efreet?=	../../wip/efreet
 .endif	# EFREET_BUILDLINK3_MK
 
