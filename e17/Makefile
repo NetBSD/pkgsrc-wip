@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/29 21:36:21 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.14 2008/08/06 13:50:30 yazzy Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.043
@@ -6,7 +6,7 @@ PKGNAME=	e17-0.16.999.043
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
-		http://www.yazzy.org/pkgsrc/e17/ \
+		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-05-19/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org

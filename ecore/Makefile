@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2008/06/29 21:29:04 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.20 2008/08/06 13:48:17 yazzy Exp $
 #
 
 DISTNAME=	ecore-0.9.9.043
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
-		http://www.yazzy.org/pkgsrc/e17/ \
+		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-05-19/ \
                 http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
