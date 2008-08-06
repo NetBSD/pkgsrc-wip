@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/06 18:40:52 yazzy Exp $
 #
 
 DISTNAME=	epeg-0.9.0.011
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.yazzy.org/pkgsrc/e17/ \
-                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2007-08-26/ \
+		http://www.ezunix.org/pkgsrc/e17/snapshots/2007-08-26/ \
+		http://jfranz.users.bsdprojects.net/pkgsrc/e17/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
