@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/06 03:29:05 netcap Exp $
+$NetBSD: distinfo,v 1.2 2008/08/06 14:10:12 yazzy Exp $
 
-SHA1 (epsilon-0.3.0.011.tar.gz) = c2ec5e9dad1f0aafccfc0fb3be98a99ebd3d06bc
-RMD160 (epsilon-0.3.0.011.tar.gz) = 31be855a485d802ad7547c4e92070d6c984c1a36
-Size (epsilon-0.3.0.011.tar.gz) = 389623 bytes
+SHA1 (epsilon-0.3.0.012.tar.gz) = f4aa8f18dcac450f103e824a694bbd26a7cf704c
+RMD160 (epsilon-0.3.0.012.tar.gz) = 21a0ead09139a65c2dbfa0b1d8a005e0f0f4bdb5
+Size (epsilon-0.3.0.012.tar.gz) = 347843 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/08/06 14:10:12 yazzy Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EPSILON_BUILDLINK3_MK:=	${EPSILON_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	epsilon
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}epsilon
 
 .if ${EPSILON_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.epsilon+=	epsilon>=0.3.0.011
-BUILDLINK_ABI_DEPENDS.epsilon?=	epsilon>=0.3.0.011nb2
+BUILDLINK_API_DEPENDS.epsilon+=	epsilon>=0.3.0.012
+BUILDLINK_ABI_DEPENDS.epsilon?=	epsilon>=0.3.0.012nb1
 BUILDLINK_PKGSRCDIR.epsilon?=	../../wip/epsilon
 .endif	# EPSILON_BUILDLINK3_MK
 
