@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/06/23 21:23:12 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/07 22:17:25 schnoebe Exp $
 
 DISTNAME=	Proxy65-1.1.1
-PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:
+PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	http://proxy65.googlecode.com/files/
 
@@ -10,23 +10,13 @@ HOMEPAGE=	http://code.google.com/p/proxy65/
 COMMENT=	XEP-0065 proxy transport for XMPP
 
 #
-# Set up to grab 'distributions' from the google SVN repository.
-#
-# SVN_REPOSITORIES=	proxy65
-# SVN_ROOT.proxy65=	http://proxy65.googlecode.com/svn/trunk/
-# SVN_MODULE.proxy65=	proxy65-read-only
-# SVN_TAG.proxy65=	{2007-12-28}
-
-# .include "../../wip/mk/svn-package.mk"
-
-#
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
+DEPENDS+=	${PYPKGPREFIX}-twisted-core>=8.1.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted-words>=8.1.0:../../wip/py-twisted-words
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
 # it's a python package using the standard Python packager
@@ -34,6 +24,10 @@ PYDISTUTILSPKG=	yes
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
+
+DOCDIR=                 ${PREFIX}/share/doc/proxy65
+DOCFILES=               README
+
 
 # RCD_SCRIPTS=	proxy65
 

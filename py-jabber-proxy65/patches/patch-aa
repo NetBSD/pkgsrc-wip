@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2008/08/07 22:17:25 schnoebe Exp $
+
+--- twisted/plugins/proxy65.py.orig	2008-01-14 10:48:32.000000000 -0600
++++ twisted/plugins/proxy65.py
+@@ -1,9 +1,9 @@
+ # Copyright (c) 2008 Fabio Forno
+ 
+-from twisted.scripts.mktap import _tapHelper
++from twisted.application.service import ServiceMaker
+ 
+-Proxy65 = _tapHelper(
++Proxy65 = ServiceMaker(
+         "Proxy65",
+         "proxy65.tap",
+-        "XEP 65 Bytestream Proxy Component",
++        "XMPP XEP 65 Bytestream Proxy Component",
+         "proxy65")
