@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2008/07/30 00:42:49 schnoebe Exp $
+$NetBSD: distinfo,v 1.7 2008/08/07 15:30:14 schnoebe Exp $
 
 SHA1 (psi-0.12/psi-0.12.tar.bz2) = 2927497a53d1eb00720718ec41cf61a911914922
 RMD160 (psi-0.12/psi-0.12.tar.bz2) = be5922ef84040113b257aaf99ac9bd350b69349c
@@ -18,15 +18,15 @@ Size (psi-0.12/psi_fr.qm) = 280650 bytes
 SHA1 (psi-0.12/psi_mk.qm) = 654af0069c7f449ae49a0a2f27431031dc86dc50
 RMD160 (psi-0.12/psi_mk.qm) = b62319af02c713a30fe219ab067e78132994db19
 Size (psi-0.12/psi_mk.qm) = 260157 bytes
-SHA1 (psi-0.12/psi_pl.qm) = 04ee9376253d2c3019c03a8396cbc725bf866274
-RMD160 (psi-0.12/psi_pl.qm) = 55e0d5e0374bcc689e30c8018518073da332ae0f
-Size (psi-0.12/psi_pl.qm) = 259626 bytes
+SHA1 (psi-0.12/psi_pl.qm) = d6d87a9b2ff26c87e01e310d517073968c3a0767
+RMD160 (psi-0.12/psi_pl.qm) = 68ea69ca395912475396b2a77ec9b8d2ad5c2324
+Size (psi-0.12/psi_pl.qm) = 269104 bytes
 SHA1 (psi-0.12/psi_pt_BR.qm) = e010811b9cbce1d4f19758dc8870b083e0d9d37f
 RMD160 (psi-0.12/psi_pt_BR.qm) = c24d8d6a917ea3fca358f19b8d3be43d4e72e531
 Size (psi-0.12/psi_pt_BR.qm) = 129586 bytes
-SHA1 (psi-0.12/psi_ru.qm) = 5387b479409c75dad38f1b54e1b871fd8c5189c4
-RMD160 (psi-0.12/psi_ru.qm) = e921c5f9c86b7721a60210bea6f4f7bb3240d8a8
-Size (psi-0.12/psi_ru.qm) = 247574 bytes
+SHA1 (psi-0.12/psi_ru.qm) = c16504293bb13f523601adae7242ff965d384e85
+RMD160 (psi-0.12/psi_ru.qm) = f2c3d76a71e6c2d84eafd0ae388df38586417808
+Size (psi-0.12/psi_ru.qm) = 248934 bytes
 SHA1 (psi-0.12/psi_uk.qm) = 8acdeec2a817484973d931fcb16cc864f467f2cd
 RMD160 (psi-0.12/psi_uk.qm) = f5bc49e8a184719420dc596346ff3fa64832ed62
 Size (psi-0.12/psi_uk.qm) = 166998 bytes
@@ -36,6 +36,9 @@ Size (psi-0.12/psi_vi.qm) = 153623 bytes
 SHA1 (psi-0.12/psi_zh.qm) = 54a9391f374c2f5024670d03015275f93854a11a
 RMD160 (psi-0.12/psi_zh.qm) = f6274c09f4378117ebc8eab8f0283cee178a9ec1
 Size (psi-0.12/psi_zh.qm) = 145352 bytes
+SHA1 (psi-0.12/psi_zh_TW.qm) = 23e4f01dd0047b352559684275aebaefc5a01692
+RMD160 (psi-0.12/psi_zh_TW.qm) = df2464d29d310bf4dc574faa54d6309071afe939
+Size (psi-0.12/psi_zh_TW.qm) = 167415 bytes
 SHA1 (patch-ac) = 1bdfedd39f3338f24278c020acb6762c76135fea
 SHA1 (patch-ad) = 19ac57e2662be8b02be735cd57bb80da97345bf8
 SHA1 (patch-ae) = 6d107097862c7793547abf3cd738654ee3fbbe81
