@@ -1,11 +1,17 @@
---- configure.orig	2008-04-26 22:43:45 +0300
-+++ configure	2008-04-26 22:44:00 +0300
-@@ -23559,7 +23559,7 @@
- if test "x${ASSUAN_MSG}" != "xyes" -o "x${OPENSSL_MSG}" != "xyes"; then
- 	ENABLE_NSPLUGIN="no"
- fi
--if test "x${ENABLE_NSPLUGIN}" == "xyes"; then
-+if test "x${ENABLE_NSPLUGIN}" = "xyes"; then
- 
- 
- if true; then
+--- etc/Makefile.in.orig	2008-08-06 01:38:42 +0300
++++ etc/Makefile.in	2008-08-06 01:39:11 +0300
+@@ -422,12 +422,8 @@ opensc.conf: opensc.conf.in force
+ 		-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
+ 		-e 's|@DEFAULT_PCSC_PROVIDER[@]|$(DEFAULT_PCSC_PROVIDER)|g' \
+ 		< $< > $@
+-install-exec-hook:	install-sysconfDATA opensc.conf
+-	if [ -f "$(DESTDIR)$(sysconfdir)/opensc.conf" ]; then \
+-		$(INSTALL_DATA) opensc.conf "$(DESTDIR)$(sysconfdir)/opensc.conf.new"; \
+-	else \
+-		$(INSTALL_DATA) opensc.conf "$(DESTDIR)$(sysconfdir)/opensc.conf"; \
+-	fi
++install-exec-hook:
++
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
