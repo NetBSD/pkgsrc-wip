@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2008/08/07 16:43:33 yazzy Exp $
+# $NetBSD: Makefile,v 1.1.1.3 2008/08/07 21:36:34 yazzy Exp $
 #
 
 DISTNAME=	entrace-0.9.9.042
@@ -16,9 +16,12 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
 
+RCD_SCRIPTS=	entranced
+
 CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 			--disable-valgrind --enable-glitz \
-			--enable-sdl \
+			--enable-sdl --with-vt=5 \
+			--with-xsession=${LOCALBASE}/etc/X11 \
 			--enable-software-16-x11 --disable-debug
 
 .include	"../../wip/ecore/buildlink3.mk"

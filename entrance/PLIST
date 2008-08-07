@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.2 2008/08/07 21:36:34 yazzy Exp $
+bin/entrance
+bin/entrance_edit
+bin/entrance_edit-config
+bin/entrance_wrapper
+include/Entrance_Edit.h
+lib/libentrance_edit.la
+libexec/entrace/entrance_login
+sbin/entranced
+share/entrace/images/pointer.png
+share/entrace/images/sessions/blackbox.png
+share/entrace/images/sessions/default.png
+share/entrace/images/sessions/enlightenment.png
+share/entrace/images/sessions/failsafe.png
+share/entrace/images/sessions/gnome.png
+share/entrace/images/sessions/kde.png
+share/entrace/images/sessions/xfce.png
+share/entrace/themes/darkrock.edj
+share/entrace/themes/default.edj
+share/entrace/users/default.edj
+share/examples/rc.d/entranced
+@dirrm share/entrace/users
+@dirrm share/entrace/themes
+@dirrm share/entrace/images/sessions
+@dirrm share/entrace/images
+@dirrm share/entrace
+@dirrm libexec/entrace
