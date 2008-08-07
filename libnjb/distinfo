@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/12 08:12:44 neimal Exp $
+$NetBSD: distinfo,v 1.2 2008/08/07 12:47:10 thomasklausner Exp $
 
 SHA1 (libnjb-2.2.5.tar.gz) = 818b3134116937dc5ef8f81939cf21e6a9b451b0
 RMD160 (libnjb-2.2.5.tar.gz) = a3a536e679482a665cdfd23cde73db8b32d5904f
 Size (libnjb-2.2.5.tar.gz) = 495780 bytes
+SHA1 (patch-aa) = 8c640fc4bc5d08f4125d06dad2c2559d77f6cfff
