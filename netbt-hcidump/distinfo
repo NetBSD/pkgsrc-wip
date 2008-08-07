@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/07/29 10:27:12 plunky Exp $
+$NetBSD: distinfo,v 1.4 2008/08/07 17:06:19 plunky Exp $
 
 SHA1 (bluez-hcidump-1.42.tar.gz) = b18e41cbf92c00cfd0331506312fa248b39a0eee
 RMD160 (bluez-hcidump-1.42.tar.gz) = c80eab49c75b8782d35e64eecfbc5a0e56214d4c
@@ -16,7 +16,7 @@ SHA1 (patch-ag) = 0509311fc69546038a8c82e2cf47a34175878d35
 SHA1 (patch-ah) = b5a190251ccb9e55d2ac8460a436df3026d6be3d
 SHA1 (patch-ai) = 46239a7931f8fecee9216b13f98227711c69c54d
 SHA1 (patch-aj) = 3ef708a26e82ea209ef66c556889ba0cb9c9dd86
-SHA1 (patch-ak) = 770deaf5721b7ee127e197668151da11e12f624e
+SHA1 (patch-ak) = b5ffc5006160d6ce730beccd2c2d8cd8c3ad4e6c
 SHA1 (patch-al) = 539e3acaf2d63ba2cc777aa221163ffc010e489f
 SHA1 (patch-am) = d8e88c237bb4804fd8dc42f552c39d6a83280259
 SHA1 (patch-an) = 35d9fd1b0d82addf0688e2997fdf589fbc89d921
