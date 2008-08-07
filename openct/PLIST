@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2008/05/06 13:21:23 htepper Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/07 18:31:23 htepper Exp $
 bin/openct-tool
 include/openct/apdu.h
 include/openct/buffer.h
@@ -18,12 +18,18 @@ include/openct/tlv.h
 include/openct/types.h
 lib/libopenct.la
 lib/libopenctapi.la
+${PLIST.pcsc-lite}lib/openct-ifd.la
 lib/pkgconfig/libopenct.pc
 man/man1/openct-tool.1
 sbin/ifdhandler
 sbin/ifdproxy
 sbin/openct-control
+share/doc/openct/NEWS
+share/doc/openct/README
 share/examples/openct/openct.conf
+share/examples/openct/reader.conf
 share/examples/rc.d/openct
+@dirrm share/doc/openct/api
+@dirrm share/doc/openct
 @dirrm share/examples/openct
 @dirrm include/openct

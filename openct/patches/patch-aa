@@ -1,60 +1,16 @@
-Index: src/ifd/sys-bsd.c
-===================================================================
---- src/ifd/sys-bsd.c	(revision 1032)
-+++ src/ifd/sys-bsd.c	(working copy)
-@@ -13,7 +13,11 @@
- #include "internal.h"
- #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
- #include <sys/types.h>
-+#if defined(__DragonFly__)
-+#include <bus/usb/usb.h>
-+#else
- #include <dev/usb/usb.h>
-+#endif
- #include <sys/stat.h>
- #include <sys/ioctl.h>
- #include <sys/poll.h>
-@@ -91,14 +95,28 @@
- 	int direction =
- 	    (ep & IFD_USB_ENDPOINT_DIR_MASK) == IFD_USB_ENDPOINT_IN ? 1 : 0;
- 	int endpoint = (ep & ~IFD_USB_ENDPOINT_DIR_MASK);
-+	int one = 1;
-+	int ret;
+--- etc/Makefile.in.orig	2008-08-06 00:53:45 +0300
++++ etc/Makefile.in	2008-08-06 00:54:01 +0300
+@@ -458,12 +458,7 @@ uninstall-am: uninstall-hotplugDATA unin
+ 	ps ps-am uninstall uninstall-am uninstall-hotplugDATA \
+ 	uninstall-nodist_udevSCRIPTS uninstall-sysconfDATA
  
- 	ct_debug("ifd_sysdep_usb_bulk: endpoint=%d direction=%d", endpoint,
- 		 direction);
--	if (open_ep(dev->name, 0, endpoint, O_RDWR | O_NONBLOCK)) {
-+
-+	if (direction)
-+		ret = open_ep(dev->name, 0, endpoint, O_RDONLY | O_NONBLOCK);
-+	else
-+		ret = open_ep(dev->name, 0, endpoint, O_WRONLY | O_NONBLOCK);
-+
-+	if (ret) {
- 		ct_debug("ifd_sysdep_usb_bulk: opening endpoint failed");
- 		return -1;
- 	}
- 	if (direction) {
-+		if (ioctl(interfaces[0][endpoint].ep_fd, USB_SET_SHORT_XFER,
-+		    &one) < 0) {
-+			ifd_debug(6, "ifd_sysdep_usb_bulk: USB_SET_SHORT_XFER"
-+			   " failed: %s", strerror(errno));
-+			ct_error("usb_bulk read failed: %s", strerror(errno));
-+		}
- 		if ((bytes_to_process =
- 		     read(interfaces[0][endpoint].ep_fd, buffer, len)) < 0) {
- 			ifd_debug(6, "ifd_sysdep_usb_bulk: read failed: %s",
-@@ -204,7 +222,12 @@
- 	    (cap->endpoint & IFD_USB_ENDPOINT_DIR_MASK) ==
- 	    IFD_USB_ENDPOINT_IN ? 1 : 0;
- 	int endpoint = (cap->endpoint & ~IFD_USB_ENDPOINT_DIR_MASK);
--	close_ep(0, endpoint);
-+	/*
-+	 * Keep interrupt endpoint open. Open/close dance leads us to lost
-+	 * events for some reason.
-+	 *
-+	 * close_ep(0, endpoint);
-+	 */
- 	if (cap)
- 		free(cap);
- 	return 0;
+-install-exec-hook:	install-sysconfDATA openct.conf
+-	if [ -f "$(DESTDIR)$(sysconfdir)/openct.conf" ]; then \
+-		$(INSTALL_DATA) openct.conf "$(DESTDIR)$(sysconfdir)/openct.conf.new"; \
+-	else \
+-		$(INSTALL_DATA) openct.conf "$(DESTDIR)$(sysconfdir)/openct.conf"; \
+-	fi
++install-exec-hook:
+ 
+ .in:
+ 	sed \

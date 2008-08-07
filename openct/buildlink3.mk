@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/05/06 13:21:23 htepper Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/08/07 18:31:23 htepper Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENCT_BUILDLINK3_MK:=	${OPENCT_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenct}
 BUILDLINK_PACKAGES+=	openct
 
 .if !empty(OPENCT_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.openct+=	openct>=0.6.14
+BUILDLINK_API_DEPENDS.openct+=	openct>=0.6.15
 BUILDLINK_PKGSRCDIR.openct?=	../../wip/openct
 .endif	# OPENCT_BUILDLINK3_MK
 

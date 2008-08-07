@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.pcsc-lite,v 1.2 2008/05/06 13:21:23 htepper Exp $
-lib/openct-ifd.la
