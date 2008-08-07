@@ -1,0 +1,4 @@
+Entrance is a login/display manager for UNIX X11 displays. It is
+designed to be extremely customizable and aesthetically attractive
+-- a refreshing relief from the traditional dull and boring interfaces
+of XDM and its descendants.
