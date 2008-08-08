@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2989 2008/08/08 09:40:23 athaba Exp $
+# $Id: Makefile,v 1.2990 2008/08/08 10:20:58 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1242,6 +1242,7 @@ SUBDIR+=	p5-HTML-TokeParser-Simple
 SUBDIR+=	p5-HTML-WebMake
 SUBDIR+=	p5-HTML-Widget
 SUBDIR+=	p5-HTTP-BrowserDetect
+SUBDIR+=	p5-Hash-AsObject
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-JavaScript-SpiderMonkey
@@ -1308,6 +1309,7 @@ SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-EtText
 SUBDIR+=	p5-Text-German
 SUBDIR+=	p5-Text-Hatena
+SUBDIR+=	p5-Text-Quote
 SUBDIR+=	p5-Text-Trim
 SUBDIR+=	p5-Text-VimColor
 SUBDIR+=	p5-Tie-Array-Sorted
