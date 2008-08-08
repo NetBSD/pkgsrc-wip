@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/08/07 19:03:31 htepper Exp $
+# $NetBSD: options.mk,v 1.4 2008/08/08 19:45:06 htepper Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
 PKG_SUPPORTED_OPTIONS=	nsplugin openct pcsc-lite
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--disable-nsplugin
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
 .include "../../security/pcsc-lite/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pcsc
+CONFIGURE_ARGS+=	--with-pcsc-provider=/usr/pkg/lib/libpcsclite.so
 .else
 CONFIGURE_ARGS+=	--disable-pcsc
 .endif
