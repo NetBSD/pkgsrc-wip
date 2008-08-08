@@ -1,0 +1,3 @@
+- Fix the PAM file being copied to /etc/pam.d
+  the patch is working with NetBSD, original is Linux specific
+  create an if OPSYS statement to copy appropriate file
