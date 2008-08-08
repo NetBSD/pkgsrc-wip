@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/08/07 22:18:59 yazzy Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/08 12:16:01 yazzy Exp $
 #
 
-DISTNAME=	entrace-0.9.9.042
+DISTNAME=	entrance-0.9.9.042
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
-		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/ \
-                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
+MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -21,7 +19,7 @@ RCD_SCRIPTS=	entranced
 CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 			--disable-valgrind --enable-glitz \
 			--enable-sdl --with-vt=5 \
-			--with-xsession=${LOCALBASE}/etc/X11 \
+			--with-xsession=${LOCALBASE}/share/entrace/ \
 			--enable-software-16-x11 --disable-debug
 
 .include	"../../wip/ecore/buildlink3.mk"

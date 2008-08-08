@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.4 2008/08/07 21:36:34 yazzy Exp $
+$NetBSD: distinfo,v 1.2 2008/08/08 12:16:01 yazzy Exp $
 
-SHA1 (entrace-0.9.9.042.tar.gz) = a7aec35ba80f4f73beee3866498fbfcb44513cfe
-RMD160 (entrace-0.9.9.042.tar.gz) = 1e857fac3538fe1da2cf7b39518ba0b54c200033
-Size (entrace-0.9.9.042.tar.gz) = 10832839 bytes
+SHA1 (entrance-0.9.9.042.tar.gz) = 1e08953049b3b15d60bf3f2a288dc3efb9387151
+RMD160 (entrance-0.9.9.042.tar.gz) = 6fe348bc81c04b372f09e4130f1d569b9d9e01ae
+Size (entrance-0.9.9.042.tar.gz) = 10834866 bytes
 SHA1 (patch-aa) = b4371c61ea5e75251ca0ce3d2925e7fe591a8fce
 SHA1 (patch-ab) = 2a1eda2b5e764cda3fbdbb242750a911ff4ba45a
+SHA1 (patch-ac) = cabe0dd0297778aafe1053d49c39752cb4204f20
