@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/08 10:01:04 athaba Exp $
+
+SHA1 (Hash-AsObject-0.10.tar.gz) = c32fe0f8ea41c24fff6a0c87c4980edaf4e8d4d2
+RMD160 (Hash-AsObject-0.10.tar.gz) = 4bf5ec896a1ba6b9360f16cad64303baae966833
+Size (Hash-AsObject-0.10.tar.gz) = 7806 bytes
