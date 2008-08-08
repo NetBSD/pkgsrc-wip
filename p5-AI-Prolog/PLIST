@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/08 11:25:35 athaba Exp $
+bin/aiprolog

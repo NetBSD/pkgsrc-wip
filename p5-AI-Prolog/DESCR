@@ -1,0 +1,5 @@
+AI::Prolog is a pure Perl predicate logic engine.
+In predicate logic, instead of telling the computer
+how to do something, you tell the computer what
+something is and let it figure out how to do it.
+Conceptually this is similar to regular expressions.
