@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2988 2008/08/06 05:09:50 phonohawk Exp $
+# $Id: Makefile,v 1.2989 2008/08/08 09:40:23 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1227,6 +1227,7 @@ SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exception-Base
 SUBDIR+=	p5-Exporter-Lite
+SUBDIR+=	p5-Exporter-Tidy
 SUBDIR+=	p5-File-MMagic-XS
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-Frontier-RPC
