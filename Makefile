@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2990 2008/08/08 10:20:58 athaba Exp $
+# $Id: Makefile,v 1.2991 2008/08/08 11:32:33 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1139,6 +1139,7 @@ SUBDIR+=	owl
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
 SUBDIR+=	p5-AI-NeuralNet-Simple
+SUBDIR+=	p5-AI-Prolog
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
@@ -1329,6 +1330,7 @@ SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
+SUBDIR+=	p5-aliased
 SUBDIR+=	p5-podlators
 SUBDIR+=	p5-qt3
 SUBDIR+=	packman
