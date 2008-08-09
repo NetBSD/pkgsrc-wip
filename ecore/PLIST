@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/05 06:29:49 netcap Exp $
-bin/ecore_config
+@comment $NetBSD: PLIST,v 1.8 2008/08/09 20:43:14 hoka_adam Exp $
 include/Ecore.h
 include/Ecore_Con.h
-include/Ecore_Config.h
 include/Ecore_Data.h
 include/Ecore_Desktop.h
 include/Ecore_Evas.h
@@ -22,9 +20,6 @@ lib/libecore.a
 lib/libecore_con.so
 lib/libecore_con.la
 lib/libecore_con.a
-lib/libecore_config.so
-lib/libecore_config.la
-lib/libecore_config.a
 lib/libecore_desktop.so
 lib/libecore_desktop.la
 lib/libecore_desktop.a
@@ -55,7 +50,6 @@ lib/libecore_x.a
 lib/pkgconfig/ecore.pc
 lib/pkgconfig/ecore-con.pc
 lib/pkgconfig/ecore-evas.pc
-lib/pkgconfig/ecore-config.pc
 lib/pkgconfig/ecore-file.pc
 lib/pkgconfig/ecore-desktop.pc
 lib/pkgconfig/ecore-ipc.pc

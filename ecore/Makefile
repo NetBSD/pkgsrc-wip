@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/08/06 13:48:17 yazzy Exp $
+# $NetBSD: Makefile,v 1.21 2008/08/09 20:43:14 hoka_adam Exp $
 #
 
 DISTNAME=	ecore-0.9.9.043
@@ -17,7 +17,6 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-openssl \
 		 	--disable-ecore-directfb \
-			--enable-ecore-evas-x11-16 \
 			--enable-ecore-desktop \
 			--disable-ecore-evas-sdl
 
