@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2008/07/28 18:23:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.55 2008/08/10 03:16:48 schnoebe Exp $
 
-DISTNAME=		jabberd-2.2.2
+DISTNAME=		jabberd-2.2.3
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +10,8 @@ HOMEPAGE=		http://jabberd2.xiaoka.com/
 COMMENT=		XMPP (Jabber) instant messaging server
 
 CONFLICTS=		jabberd-[0-9]*
+
+DEPENDS+=		gsasl>=0.2.27:../../security/gsasl
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
