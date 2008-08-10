@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/21 20:50:32 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/10 23:22:05 mstapelberg Exp $
 man/man5/rsyslog.conf.5
 man/man8/rsyslogd.8
 sbin/rsyslogd
@@ -20,3 +20,29 @@ share/examples/rsyslog/createDB.sql
 share/examples/rsyslog/rsyslog.conf
 @dirrm share/doc/rsyslog
 @dirrm share/examples/rsyslog
+lib/rsyslog/imklog.la
+lib/rsyslog/imklog.so
+lib/rsyslog/immark.la
+lib/rsyslog/immark.so
+lib/rsyslog/imtcp.la
+lib/rsyslog/imtcp.so
+lib/rsyslog/imudp.la
+lib/rsyslog/imudp.so
+lib/rsyslog/imuxsock.la
+lib/rsyslog/imuxsock.so
+lib/rsyslog/lmnet.la
+lib/rsyslog/lmnet.so
+lib/rsyslog/lmnetstrms.la
+lib/rsyslog/lmnetstrms.so
+lib/rsyslog/lmnsd_gtls.la
+lib/rsyslog/lmnsd_gtls.so
+lib/rsyslog/lmnsd_ptcp.la
+lib/rsyslog/lmnsd_ptcp.so
+lib/rsyslog/lmregexp.la
+lib/rsyslog/lmregexp.so
+lib/rsyslog/lmtcpclt.la
+lib/rsyslog/lmtcpclt.so
+lib/rsyslog/lmtcpsrv.la
+lib/rsyslog/lmtcpsrv.so
+lib/rsyslog/omtesting.la
+lib/rsyslog/omtesting.so
