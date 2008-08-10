@@ -1,18 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/21 20:50:32 bartoszkuzma Exp $
+$NetBSD: patch-aa,v 1.2 2008/08/10 21:08:29 mstapelberg Exp $
 
---- master.make.orig	2005-11-14 14:25:11.000000000 +0100
-+++ master.make
-@@ -11,8 +11,11 @@
- #LDFLAGS= -g -Wall -fno-omit-frame-pointer
- #CFLAGS= -DSYSV -g -Wall -fno-omit-frame-pointer
+--- runtime/wtp.c.orig	2008-07-25 13:49:41.000000000 +0200
++++ runtime/wtp.c
+@@ -481,7 +481,7 @@ wtpStartWrkr(wtp_t *pThis, int bLockMute
+  	 * hold the queue's mutex, but at least it has a chance to start on a single-CPU system.
+  	 */
+ #	if !defined(__hpux) /* pthread_yield is missing there! */
+-	pthread_yield();
++	sched_yield();
+ #	endif
  
--CFLAGS= $(RPM_OPT_FLAGS) -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -I/usr/local/include $(NOLARGEFILE) $(WITHDB)
--LDFLAGS= -s
-+#CFLAGS= $(RPM_OPT_FLAGS) -O3 -DSYSV -fomit-frame-pointer -Wall -fno-strength-reduce -I/usr/local/include $(NOLARGEFILE) $(WITHDB)
-+#LDFLAGS= -s
-+
-+CFLAGS+= -O3 -Wall -DSYSV $(NOLARGEFILE) $(WITHDB)
-+LDFLAGS+= -s
- 
- # There is one report that under an all ELF system there may be a need to
- # explicilty link with libresolv.a.  If linking syslogd fails you may wish
+ 	/* indicate we just started a worker and would like to see it running */
