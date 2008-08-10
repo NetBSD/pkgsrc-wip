@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/10 15:48:45 mstapelberg Exp $
+
+SHA1 (mxallowd.1.6.tar.bz2) = 03b33c15baeafb347c33e7ab52a64e5fdcd3690e
+RMD160 (mxallowd.1.6.tar.bz2) = 1d3fcf59e856ad7da1e6db77992c2dc9d24f1825
+Size (mxallowd.1.6.tar.bz2) = 51730 bytes
+SHA1 (patch-aa) = 6d2ebcc7eb9cbff83030a2dbf2e2db4fc75bc5c6
+SHA1 (patch-ab) = 202a95030f6587e54200411f60c46a09fd468914
+SHA1 (patch-ac) = a42040551daf112184a51a0cdd930a2d32e318eb
+SHA1 (patch-ad) = ddbf24b0cda63f9bd16774ef0efd2cbf53791895
