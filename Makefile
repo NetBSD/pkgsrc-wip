@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2992 2008/08/09 19:53:16 leot1990 Exp $
+# $Id: Makefile,v 1.2993 2008/08/11 21:13:04 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -321,6 +321,7 @@ SUBDIR+=	endeavour
 SUBDIR+=	enet
 SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
+SUBDIR+=	entrance
 SUBDIR+=	eot
 SUBDIR+=	epeg
 SUBDIR+=	epplets
@@ -336,6 +337,7 @@ SUBDIR+=	ethtool
 SUBDIR+=	evas
 SUBDIR+=	eventlog
 SUBDIR+=	evolution-sharp
+SUBDIR+=	ewl
 SUBDIR+=	expiretable
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
@@ -1014,6 +1016,7 @@ SUBDIR+=	mutt-ng
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mwf-designer
+SUBDIR+=	mxallowd
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
 SUBDIR+=	mysqltcl
@@ -1353,6 +1356,7 @@ SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
+SUBDIR+=	pekwm
 SUBDIR+=	pekwm-nightly
 #SUBDIR+=	perl59			# broken, breaks bulk build badly.
 SUBDIR+=	pfe
@@ -1435,6 +1439,7 @@ SUBDIR+=	pulseaudio
 SUBDIR+=	pulseaudio-dev
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
+SUBDIR+=	py-Beaker
 SUBDIR+=	py-BeautifulSoup
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CVSToys
