@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2993 2008/08/11 21:13:04 tnn2 Exp $
+# $Id: Makefile,v 1.2994 2008/08/11 21:18:59 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1357,7 +1357,6 @@ SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pekwm
-SUBDIR+=	pekwm-nightly
 #SUBDIR+=	perl59			# broken, breaks bulk build badly.
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
