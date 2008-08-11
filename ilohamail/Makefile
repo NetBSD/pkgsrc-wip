@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.19 2008/08/11 14:36:45 ondratu Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc3
@@ -10,13 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blog.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-imap>=4.3.3:../../mail/php-imap
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
+PKG_GROUPS=	${APACHE_GROUP}
+PKG_USERS=	${APACHE_USER}:${APACHE_GROUP}
+BUILD_DEFS+=	APACHE_USER APACHE_GROUP
 
 ILOHAMAIL_DIR=		${PREFIX}/share/ilohamail
 ILOHAMAIL_CONF_DIR=	${ILOHAMAIL_DIR}/conf
@@ -57,6 +60,5 @@ do-install:
 		RELEASE_NOTES THEMES TODO UPGRADING ${ILOHAMAIL_DOC_DIR}
 	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${ILOHAMAIL_DIR}
 
-.include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
