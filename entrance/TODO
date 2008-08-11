@@ -1,3 +1,6 @@
 - Fix the PAM file being copied to /etc/pam.d
   the patch is working with NetBSD, original is Linux specific
   create an if OPSYS statement to copy appropriate file
+- Entrance does not work with csh and tsch becouse of the -l
+  argument being sent to the login shell. 
+
