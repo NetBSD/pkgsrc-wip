@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2998 2008/08/12 16:36:45 othyro Exp $
+# $Id: Makefile,v 1.2999 2008/08/12 16:56:22 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -423,6 +423,7 @@ SUBDIR+=	ggz-server
 SUBDIR+=	ghc
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
+SUBDIR+=	gipfel
 SUBDIR+=	git
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
