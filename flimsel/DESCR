@@ -1,0 +1,6 @@
+flimsel is a minimalistic digitial image browser based on the fltk toolkit. It
+displays thumbnails of images given on the command line. It is intended to be
+used in digital image processing shell scripts see script in the examples
+directory. flimsel uses the very fast epeg library by The Rasterman (Carsten
+Haitzler) for JPEG thumbnail generation but falls back to fltk native methods
+for other image formats.

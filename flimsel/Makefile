@@ -1,0 +1,18 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/08/12 15:05:50 othyro Exp $
+#
+
+DISTNAME=	flimsel-0.0.5
+CATEGORIES=	graphics
+MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/
+COMMENT=	Minimalistic image browser
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+
+.include "../../graphics/epeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
