@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/08/12 12:07:39 thomasklausner Exp $
+
+NetBSD-current doesn't have statfs.
+
+--- src/browsers/servicebrowser/mp3tunes/harmonydaemon/Mp3tunesHarmonyDaemon.cpp.orig	2008-08-07 19:37:13.000000000 +0000
++++ src/browsers/servicebrowser/mp3tunes/harmonydaemon/Mp3tunesHarmonyDaemon.cpp
+@@ -20,6 +20,10 @@
+ #include "Mp3tunesHarmonyDaemon.h"
+ #include "mp3tunesharmonydaemonadaptor.h"
+ 
++#ifndef statfs
++#define statfs statvfs
++#endif
++
+ #include <kcmdlineargs.h>
+ #include <QtDebug>
+ 
