@@ -38,13 +38,12 @@ Suggested package updates
 	o ion3-20080707
 	o kino-1.0.0
 	o libgksu-2.0.4
-	o libmtp-0.2.6.1
 	o libxcb-1.1.90.1
 	o linphone-2.1.1
 	o lives-0.9.9.1
 	o llvm-2.2
 	o man-1.6f
-	o mixxx-1.5.0
+	o mixxx-1.6.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
 	o muine-0.8.9
@@ -61,7 +60,7 @@ Suggested package updates
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-1.0
-	o rdup-0.6.0
+	o rdup-0.6.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.18.0
