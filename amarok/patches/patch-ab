@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.3 2008/08/12 12:09:03 thomasklausner Exp $
+
+libamarok unconditionally uses libdl.
+http://bugs.kde.org/show_bug.cgi?id=168741
+
+Use newer pkg-config support from cmake.
+
+--- CMakeLists.txt.orig	2008-08-07 19:37:34.000000000 +0000
++++ CMakeLists.txt
+@@ -17,11 +17,13 @@ include(MacroLogFeature)
+ 
+ macro_log_feature( KDE4_FOUND "kdelibs" "The toolkit Amarok uses to build" "http://www.kde.org" TRUE "4.00.61" "" )
+ 
+ set( CMAKE_MODULE_PATH    ${CMAKE_MODULE_PATH}
+                           ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
+ 
+ add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+ 
++check_library_exists(dl dlopen "" LIBDL_FOUND)
++
+ set(TAGLIB_MIN_VERSION "1.5")
+ find_package(Taglib)
+ macro_log_feature( TAGLIB_FOUND "taglib" "Read and write tags in audio files" "http://www.freshmeat.net/projects/taglib" TRUE "1.5.0" "")
+@@ -50,10 +52,12 @@ include(CheckTagLibFileName)
+ macro_optional_find_package(GLIB2)
+ macro_log_feature( GLIB2_FOUND "glib2" "Required by libgpod and mp3tunes" "http://www.gtk.org" FALSE "2.x" "")
+ 
+-macro_optional_find_package(Gdk)
++INCLUDE(FindPkgConfig)
++pkg_check_modules(GDK gdk-pixbuf-2.0)
+ macro_log_feature( GDK_FOUND "Gdk" "Support for artwork on iPod audio devices via GdkPixbuf" "http://developer.gnome.org/arch/imaging/gdkpixbuf.html" FALSE "2.0.x" "" )
+ 
+-macro_optional_find_package(Ipod)
++#macro_optional_find_package(Ipod)
++pkg_check_modules(IPOD libgpod-1.0)
+ macro_log_feature( IPOD_FOUND "libgpod" "Support Apple iPod audio devices" "http://sourceforge.net/projects/gtkpod/" FALSE "0.6.0" "" )
+ 
+ macro_optional_find_package(MySQL)
+@@ -80,7 +84,8 @@ macro_log_feature( OPENSSL_FOUND "openss
+ find_package(GObject)
+ macro_log_feature( GOBJECT_FOUND "gobject" "Required by mp3tunes." "http://www.gtk.org" FALSE "2.x" "" )
+ 
+-macro_optional_find_package(Loudmouth)
++#macro_optional_find_package(Loudmouth)
++pkg_check_modules(LOUDMOUTH loudmouth-1.0)
+ macro_log_feature( LOUDMOUTH_FOUND "loudmouth" "Loudmouth is the communication backend needed by mp3tunes for synching." "http://www.loudmouth-project.org" FALSE "" "" )
+ 
+ find_package(KdeMultimedia)
