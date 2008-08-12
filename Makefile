@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2997 2008/08/12 15:41:25 thomasklausner Exp $
+# $Id: Makefile,v 1.2998 2008/08/12 16:36:45 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1415,6 +1415,7 @@ SUBDIR+=	pmars
 SUBDIR+=	pmk
 SUBDIR+=	png2ico
 SUBDIR+=	pngnq
+SUBDIR+=	pnmcurve
 SUBDIR+=	pointless
 SUBDIR+=	policykit
 SUBDIR+=	polipo
