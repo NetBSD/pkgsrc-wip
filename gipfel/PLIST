@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/12 16:55:04 othyro Exp $
+bin/gipfel
+share/gipfel/alpinkoordinaten.dat
+@dirrm share/gipfel
