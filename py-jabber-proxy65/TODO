@@ -1,0 +1,5 @@
+Tue Aug 12 11:47:24 CDT 2008
+    *	Make operable with twisted-core 8.1.0 (it may work with the
+	twisted 1.x that's in pkgsrc)
+    *	complete the startup script
+    *	meditate further on configuration
