@@ -1,27 +1,23 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/12/29 01:00:26 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2008/08/13 04:56:31 schnoebe Exp $
 
-You will need to customize the following file to get pyaimt to work
-with jabber:
+    To use proxy65, several items must be set as part of proxy65_flags
+    in rc.conf.
 
-	${PKG_SYSCONFDIR}/pyaimt.xml
+    The available flags are:
+	--jid=	    [Jabber ID of the service, def "proxy65"]
+	--secret=   [shared secret with the S2S]
+	--rhost=    [Host of the Jabber service router, default "localhost"]
+	--rport=    [port of the Jabber service router, default 5347]
+	--proxyips= [proxy address:ports to be advertised/used]
 
-Quick start for jabberd2:
+    --secret and --proxyips options are required.
 
-	Verify and update the following fields in
-	${PKG_SYSCONFDIR}/pyaimt.xml:
-
-	<jid>...</jid>		--  Set to the public name of the service
-				    ex: aim.jabber.example
-	<mainServer>...</mainServer>
-				--  Set to the hostname or IP address
-				    of the main jabber server
-	<mainServerJID>...</mainServerJID>
-				--  Set to the JID (jabber ID)
-				    of the main jabber server
-	<secret>...</secret>	--  should be set to the legacy components
-				    shared secret in jabber2's router.xml
-				    (look for <secret>...</secret> in
-				    router.xml)
+    ex:
+	proxy6_flags="--jid=proxy.jabber.example.org \
+			--secret=JabberSecret \
+			--rhost=jabber.example.org \
+			--rport=5347 \
+			--proxyips=172.17.233.23:8010"
 
 ===========================================================================
