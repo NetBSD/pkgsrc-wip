@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/08/13 04:56:31 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/13 05:12:54 schnoebe Exp $
 
 DISTNAME=	Proxy65-1.1.1
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -24,6 +24,15 @@ PYDISTUTILSPKG=	yes
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
+
+
+JABBER_USER?=		jabberd
+JABBER_GROUP?=		jabberd
+FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
+PKG_USERS_VARS+=	JABBER_USER
+PKG_GROUPS_VARS+=	JABBER_GROUP
+
+.include "../../wip/jabberd/transports.mk"
 
 DOCDIR=                 ${PREFIX}/share/doc/proxy65
 DOCFILES=               README
