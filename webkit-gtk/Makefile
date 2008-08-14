@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/08/04 12:23:42 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/14 18:51:05 hoka_adam Exp $
 #
 # pkg-config says 1.0.2, let's combine it with the revision
 # to give a sane version number.
 #
-DISTNAME=	WebKit-r35417
+DISTNAME=	WebKit-r35656
 PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.2./}
 CATEGORIES=	www gtk2
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
@@ -54,7 +54,7 @@ pre-configure:
 # Any reason to use pango?
 #.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-# NetBSD's flex is not suitable.
+# A correct Webkit build requires flex 2.5.33
 .include "../../devel/flex/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"

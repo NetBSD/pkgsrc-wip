@@ -1,6 +1,2 @@
-- Optionise curl/soup -- which one to be default? /I guess soup. ~ahoka/
-- Optionise FreeType/Pango -- which one to be default? /latter? ~ahoka/
-- SVG support, optionised?
-- html5 stuff - should wait to be default?
-
-- should be webkit instead of webkit-gtk
+- Optionise curl/soup -- which one to be default?
+- Optionise FreeType/Pango -- which one to be default?

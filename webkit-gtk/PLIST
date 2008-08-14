@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/22 18:43:50 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/14 18:51:05 hoka_adam Exp $
 bin/jsc
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -9,6 +9,7 @@ include/webkit-1.0/JavaScriptCore/JSStringRefCF.h
 include/webkit-1.0/JavaScriptCore/JSValueRef.h
 include/webkit-1.0/JavaScriptCore/JavaScript.h
 include/webkit-1.0/JavaScriptCore/JavaScriptCore.h
+include/webkit-1.0/JavaScriptCore/WebKitAvailability.h
 include/webkit-1.0/webkit/webkit.h
 include/webkit-1.0/webkit/webkitdefines.h
 include/webkit-1.0/webkit/webkitenumtypes.h
