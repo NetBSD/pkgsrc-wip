@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/18 15:22:51 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/14 20:29:50 hoka_adam Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
 ${PLIST.qt}bin/qvlc
 ${PLIST.qt}lib/vlc/gui/libqt4_plugin.la
+${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.la
+${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.la
+${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.la
+${PLIST.esd}lib/vlc/audio_output/libesd_plugin.la
 bin/cvlc
 bin/rvlc
 bin/vlc
@@ -114,7 +118,6 @@ lib/vlc/audio_mixer/libfloat32_mixer_plugin.la
 lib/vlc/audio_mixer/libspdif_mixer_plugin.la
 lib/vlc/audio_mixer/libtrivial_mixer_plugin.la
 lib/vlc/audio_output/libaout_file_plugin.la
-lib/vlc/audio_output/libaout_sdl_plugin.la
 lib/vlc/audio_output/liboss_plugin.la
 lib/vlc/codec/liba52_plugin.la
 lib/vlc/codec/libadpcm_plugin.la
@@ -134,7 +137,6 @@ lib/vlc/codec/liblpcm_plugin.la
 lib/vlc/codec/libmpeg_audio_plugin.la
 lib/vlc/codec/libpng_plugin.la
 lib/vlc/codec/librawvideo_plugin.la
-lib/vlc/codec/libsdl_image_plugin.la
 lib/vlc/codec/libspudec_plugin.la
 lib/vlc/codec/libsubsdec_plugin.la
 lib/vlc/codec/libsubsusf_plugin.la
@@ -299,7 +301,6 @@ lib/vlc/video_output/libglx_plugin.la
 lib/vlc/video_output/libimage_plugin.la
 lib/vlc/video_output/libopengl_plugin.la
 lib/vlc/video_output/libvmem_plugin.la
-lib/vlc/video_output/libvout_sdl_plugin.la
 lib/vlc/video_output/libx11_plugin.la
 lib/vlc/video_output/libxvideo_plugin.la
 lib/vlc/visualization/libvisual_plugin.la
@@ -544,10 +545,6 @@ share/vlc/vlc48x48.png
 @dirrm share/vlc/http/dialogs
 @dirrm share/vlc/http
 @dirrm share/vlc
-@dirrm share/locale/tet/LC_MESSAGES
-@dirrm share/locale/my/LC_MESSAGES
-@dirrm share/locale/fur/LC_MESSAGES
-@dirrm share/locale/co/LC_MESSAGES
 @dirrm share/doc/vlc
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/vlc/visualization

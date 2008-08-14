@@ -1,1 +1,1 @@
-- rpath incorrectly includes workdir.
+- The QT interface dumps core on exit

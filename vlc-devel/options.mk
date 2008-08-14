@@ -1,12 +1,31 @@
-# $NetBSD: options.mk,v 1.3 2008/05/14 18:36:00 hoka_adam Exp $
+# $NetBSD: options.mk,v 1.4 2008/08/14 20:29:50 hoka_adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		qt debug faad arts dbus # skins <- seems broken
-PKG_SUGGESTED_OPTIONS=		qt
+PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc-devel
+PKG_SUPPORTED_OPTIONS=		qt debug faad arts dbus skins sdl esd
+PKG_SUGGESTED_OPTIONS=		qt esd
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
+## ESOUND audio backend
+
+.if !empty(PKG_OPTIONS:Mesd)
+CONFIGURE_ARGS+=	--enable-esd
+.include "../../audio/esound/buildlink3.mk"
+PLIST.esd=		yes
+.endif
+
+## SDL backend support
+
+.if !empty(PKG_OPTIONS:Msdl)
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+PLIST.sdl=		yes
+.else
+CONFIGURE_ARGS+=	--disable-sdl
+CONFIGURE_ARGS+=	--disable-sdl-image
+.endif
 
 ## DBUS message bus support
 ## also libnotify because it uses dbus
@@ -17,6 +36,7 @@ CONFIGURE_ARGS+=	--enable-dbus
 .include "../../sysutils/dbus/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-notify
 .include "../../sysutils/libnotify/buildlink3.mk"
+PLIST.dbus=		yes
 .else
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
@@ -44,7 +64,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 .if !empty(PKG_OPTIONS:Mqt)
 .include "../../x11/qt4-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt4
-PLIST.qt=	yes
+PLIST.qt=		yes
 .else
 CONFIGURE_ARGS+=	--disable-qt4
 .endif

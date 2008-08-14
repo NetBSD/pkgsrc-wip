@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2008/07/18 15:22:51 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/14 20:29:50 hoka_adam Exp $
 #
 
 DISTNAME=	vlc-snapshot-${D}
 PKGNAME=	${DISTNAME:S/snapshot/devel/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://nightlies.videolan.org/build/source/trunk-${D}-${T}/
 EXTRACT_SUFX=	.tar.bz2
 
-D=	20080716	# Snapshot date
-T=	0008		# Snapshot time
+D=	20080813	# Snapshot date
+T=	0009		# Snapshot time
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://nightlies.videolan.org/
@@ -25,14 +24,14 @@ PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 USE_DIRS+=		xdg-1.4
 
-WRKSRC=			${WRKDIR}/vlc-0.9.0-test3
+WRKSRC=			${WRKDIR}/vlc-0.9.0
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-vcd
-.endif
+#.if ${OPSYS} == "NetBSD"
+#CONFIGURE_ARGS+=	--disable-vcd
+#.endif
 
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
@@ -40,7 +39,6 @@ BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-gnutls
-CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--disable-smb
 CONFIGURE_ARGS+=	--disable-mpc
 CONFIGURE_ARGS+=	--disable-dca
@@ -97,15 +95,12 @@ SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
 SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
 
-PLIST_VARS+=		cdda vcd
-.if ${OPSYS} != "NetBSD"
-PLIST.cdda=		yes
-PLIST.vcd=		yes
-.endif
-
-.if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
-.endif
+# VLC embeds the build environment info to help debuging
+#
+CHECK_WRKREF_SKIP=	lib/libvlccore.a \
+			lib/libvlccore.so \
+			lib/libvlccore.so.0 \
+			lib/libvlccore.so.0.0.1
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -138,9 +133,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
