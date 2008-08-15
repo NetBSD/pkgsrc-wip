@@ -1,0 +1,7 @@
+http://www.youtube.com is a wonderful service, but sometimes it is not
+possible or desirable to watch the videos it offers online. Unlike Google
+Video, YouTube does not offer a facility to download the videos for offline
+viewing.
+
+This module takes a standard YouTube.com URI and determines the URI of the FLV
+file for a given video, which can then be retrieved for later viewing.
