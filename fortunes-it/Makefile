@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/18 03:49:14 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/16 19:31:04 leot1990 Exp $
 #
 
 DISTNAME=	fortune-it-1.99
 CATEGORIES=	games
-MASTER_SITES=	http://www.fortune-it.net/download/
+MASTER_SITES=	http://www.fortune-it.net/download/ \
+		ftp://sunsite.unc.edu/pub/Linux/games/amusements/fortune/
 
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://www.fortune-it.net/
