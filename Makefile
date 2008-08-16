@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3003 2008/08/15 20:57:32 leot1990 Exp $
+# $Id: Makefile,v 1.3004 2008/08/16 12:14:54 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1219,6 +1219,7 @@ SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
+SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBD-ODBC
