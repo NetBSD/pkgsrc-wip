@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.8 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: dirs.mk,v 1.9 2008/08/17 02:29:51 mwdavies Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -11,7 +11,7 @@ KDE4_DIRS=	include/KDE
 KDE4_DIRS+=	include/dom
 KDE4_DIRS+=	include/kparts
 KDE4_DIRS+=	include/solid
-# KDE4_DIRS+=	lib/kconf_update_bin
+KDE4_DIRS+=	lib/kconf_update_bin
 KDE4_DIRS+=	lib/kde4
 KDE4_DIRS+=	lib/kde4/libexec
 KDE4_DIRS+=	lib/kde4/plugins

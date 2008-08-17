@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/07/29 21:46:14 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/08/17 02:29:51 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -2155,7 +2155,7 @@ share/sounds/pop.wav
 @comment in kde: @dirrm lib/kde4/plugins/designer
 @comment in kde: @dirrm lib/kde4/libexec
 @comment in kde: @dirrm lib/kde4
-@dirrm lib/kconf_update_bin
+@comment in kde: @dirrm lib/kconf_update_bin
 @dirrm include/taskmanager
 @dirrm include/solid/control/ifaces
 @dirrm include/solid/control
