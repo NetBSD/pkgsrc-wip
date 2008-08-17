@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/08/03 09:44:16 obache Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/17 09:41:39 obache Exp $
 #
 
-DISTNAME=		rcairo-1.6.3
+DISTNAME=		rcairo-1.7.0
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=		graphics
 MASTER_SITES=		http://cairographics.org/releases/
@@ -18,6 +18,9 @@ USE_TOOLS+=		pkg-config
 
 RUBY_HAS_ARCHLIB=	YES
 USE_RUBY_EXTCONF=	YES
+
+do-test:
+	${RUN} cd ${WRKSRC}; env ${TEST_ENV} ${RUBY} test/run-test.rb
 
 .include "../../lang/ruby/modules.mk"
 .include "../../graphics/cairo/buildlink3.mk"
