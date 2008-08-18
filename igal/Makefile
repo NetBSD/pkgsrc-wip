@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2008/08/18 17:14:52 ficovh Exp $
+# $NetBSD: Makefile,v 1.10 2008/08/18 18:35:48 ficovh Exp $
 #
-V=		wt
-DISTNAME=	igal-1.4.7-$V
+DISTNAME=	igal-1.4.7-wt
 CATEGORIES=	www graphics
 MASTER_SITES=	http://trexler.at/igal/
 
@@ -16,12 +15,6 @@ NO_BUILD=		YES
 REPLACE_PERL=		igal
 USE_TOOLS+=		perl:run
 USE_PKGLOCALEDIR=	YES
-
-post-patch:
-	${MV} ${WRKSRC}/igal ${WRKSRC}/igal.bak
-	${SED}	-e "s;@LOCALBASE@;${LOCALBASE};g" ${WRKSRC}/igal.bak > ${WRKSRC}/igal;
-	${MV} ${WRKSRC}/igal.1 ${WRKSRC}/igal.1.bak
-	${SED}	-e "s;@LOCALBASE@;${LOCALBASE};g" ${WRKSRC}/igal.1.bak > ${WRKSRC}/igal.1;
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/igal ${PREFIX}/bin
