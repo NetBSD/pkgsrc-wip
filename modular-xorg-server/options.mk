@@ -1,29 +1,19 @@
-# $NetBSD: options.mk,v 1.7 2008/08/04 21:39:48 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.8 2008/08/19 09:10:55 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
-PKG_SUPPORTED_OPTIONS=	dri inet6 #dbus
+PKG_SUPPORTED_OPTIONS=	dri inet6
 
 .include "../../mk/bsd.options.mk"
 
-#.if !empty(PKG_OPTIONS:Mdbus)
-#CONFIGURE_ARGS+=	--enable-config-dbus
-#.  include "../../sysutils/dbus/buildlink3.mk"
-#.else
-#CONFIGURE_ARGS+=	--disable-config-dbus
-#.endif
-
 PLIST_VARS+=		dri
+
 .if !empty(PKG_OPTIONS:Mdri)
 PLIST.dri=		yes
 .include "mesaconfig.mk"
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		MesaLib-7.0.4.tar.bz2
-PATCH_DIST_STRIP=	-p1
-PATCHFILES=		xserver-1.4.2-netbsd-rc0.patch
 SITES.MesaLib-7.0.4.tar.bz2=\
-			${MASTER_SITE_LOCAL:=Mesa-7.0.4/}
-SITES.xserver-1.4.2-netbsd-rc0.patch=\
-			ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
+			${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 MESA_SRC=		${WRKDIR}/Mesa-7.0.4
 CONFIGURE_ARGS+=	--enable-glx
 CONFIGURE_ARGS+=	--enable-aiglx

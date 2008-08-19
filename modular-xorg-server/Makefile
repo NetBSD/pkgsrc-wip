@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.21 2008/08/11 16:32:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.22 2008/08/19 09:10:55 bsadewitz Exp $
 
 DISTNAME=	xorg-server-1.4.2
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
-#MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
+
+PATCHFILES=		xserver-1.4.2-pkgsrc.patch
+PATCH_DIST_STRIP=	-p1
+SITES.xserver-1.4.2-pkgsrc.patch=\
+			ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
 
 SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 
@@ -17,6 +22,7 @@ COMMENT=		Xorg X11 Server from modular X.org X11
 
 # XXX this package should be upgraded to 1.1.6, I think.
 BUILD_DEPENDS+=		xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
+DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
