@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3005 2008/08/20 08:20:20 tonnerre Exp $
+# $Id: Makefile,v 1.3006 2008/08/20 15:24:00 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1077,7 +1077,6 @@ SUBDIR+=	ocp
 SUBDIR+=	octave-nox11
 SUBDIR+=	ode
 SUBDIR+=	omniORB
-SUBDIR+=	omniORBpy
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
@@ -1331,9 +1330,9 @@ SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-Unicode-CheckUTF8
 SUBDIR+=	p5-Unicode-Collate
 SUBDIR+=	p5-Unicode-Normalize
+SUBDIR+=	p5-WWW-YouTube-VideoURI
 SUBDIR+=	p5-WebService-Audioscrobbler
 SUBDIR+=	p5-WebService-CIA
-SUBDIR+=	p5-WWW-YouTube-VideoURI
 SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
@@ -1502,6 +1501,7 @@ SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-numpy
 SUBDIR+=	py-oak
+SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-pcapy
