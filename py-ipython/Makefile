@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:54 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2008/08/20 15:20:40 tonnerre Exp $
 #
 
-DISTNAME=		ipython-0.6.12
+DISTNAME=		ipython-0.8.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://ipython.scipy.org/dist/
 
-MAINTAINER=		sifu@0xx0.net
+MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://ipython.scipy.org/
 COMMENT=		Interactive, enhanced Python shell
 
