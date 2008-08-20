@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/08/19 09:10:55 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.9 2008/08/20 04:41:14 bsadewitz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6
@@ -12,6 +12,7 @@ PLIST.dri=		yes
 .include "mesaconfig.mk"
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		MesaLib-7.0.4.tar.bz2
+_PKGSRC_PATCHES+=	${FILESDIR}/patch-mesa # XXX is there a better way?
 SITES.MesaLib-7.0.4.tar.bz2=\
 			${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 MESA_SRC=		${WRKDIR}/Mesa-7.0.4
