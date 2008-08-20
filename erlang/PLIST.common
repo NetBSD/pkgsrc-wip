@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2008/08/20 00:22:53 asau Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -47,6 +47,7 @@ lib/erlang/erts-${VERSION.erts}/include/erl_int_sizes_config.h
 lib/erlang/erts-${VERSION.erts}/include/erl_memory_trace_parser.h
 lib/erlang/erts-${VERSION.erts}/include/internal/README
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_memory_trace_protocol.h
+lib/erlang/erts-${VERSION.erts}/include/internal/erl_misc_utils.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf_format.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread.h
@@ -1127,13 +1128,13 @@ lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_contracts.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_dataflow.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_dep.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_gui.beam
-lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_icode.beam
+@comment lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_icode.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_options.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_plt.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_succ_typings.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_typesig.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_utils.beam
-lib/erlang/lib/dialyzer-${VERSION.dialyzer}/plt/dialyzer_init_plt
+@comment lib/erlang/lib/dialyzer-${VERSION.dialyzer}/plt/dialyzer_init_plt
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer.hrl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_analysis_callgraph.erl
@@ -1146,8 +1147,8 @@ lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_contracts.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_dataflow.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_dep.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_gui.erl
-lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_icode.erl
-lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_init_plt
+@comment lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_icode.erl
+@comment lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_init_plt
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_options.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_plt.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_succ_typings.erl
@@ -1948,6 +1949,7 @@ lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_binary.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_engine.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_file.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_lib.beam
+lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_logger.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/tftp_sup.beam
 lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/auth/group
 lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/auth/passwd
@@ -2141,6 +2143,7 @@ lib/erlang/lib/inets-${VERSION.inets}/src/tftp_binary.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/tftp_engine.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/tftp_file.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/tftp_lib.erl
+lib/erlang/lib/inets-${VERSION.inets}/src/tftp_logger.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/tftp_sup.erl
 lib/erlang/lib/inviso-${VERSION.inviso}/ebin/inviso.app
 lib/erlang/lib/inviso-${VERSION.inviso}/ebin/inviso.appup
@@ -2886,7 +2889,7 @@ lib/erlang/lib/orber-${VERSION.orber}/include/erlang.hrl
 lib/erlang/lib/orber-${VERSION.orber}/include/ifr_types.hrl
 lib/erlang/lib/orber-${VERSION.orber}/include/oe_erlang.hrl
 lib/erlang/lib/orber-${VERSION.orber}/include/orber_pi.hrl
-lib/erlang/lib/orber-${VERSION.orber}/priv/bin/obj_init_port
+@comment lib/erlang/lib/orber-${VERSION.orber}/priv/bin/obj_init_port
 lib/erlang/lib/orber-${VERSION.orber}/priv/blank.html
 lib/erlang/lib/orber-${VERSION.orber}/priv/include/InitialReference.hh
 lib/erlang/lib/orber-${VERSION.orber}/priv/info_frames.html
@@ -3019,6 +3022,38 @@ lib/erlang/lib/parsetools-${VERSION.parsetools}/include/yeccpre.hrl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yecc.erl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yeccparser.erl
 lib/erlang/lib/parsetools-${VERSION.parsetools}/src/yeccscan.erl
+lib/erlang/lib/percept-${VERSION.percept}/ebin/egd.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/egd_font.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/egd_png.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/egd_primitives.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/egd_render.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept.app
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept.appup
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept_analyzer.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept_db.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept_graph.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept_html.beam
+lib/erlang/lib/percept-${VERSION.percept}/ebin/percept_image.beam
+lib/erlang/lib/percept-${VERSION.percept}/priv/fonts/6x11_latin1.wingsfont
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/conf/mime.types
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/css/percept.css
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/htdocs/guide.html
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/htdocs/index.html
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/scripts/percept_area_select.js
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/scripts/percept_error_handler.js
+lib/erlang/lib/percept-${VERSION.percept}/priv/server_root/scripts/percept_select_all.js
+lib/erlang/lib/percept-${VERSION.percept}/src/egd.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/egd_font.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/egd_png.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/egd_primitives.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/egd_render.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept_analyzer.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept_db.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept_graph.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept_html.erl
+lib/erlang/lib/percept-${VERSION.percept}/src/percept_image.erl
 lib/erlang/lib/pman-${VERSION.pman}/ebin/pman.app
 lib/erlang/lib/pman-${VERSION.pman}/ebin/pman.appup
 lib/erlang/lib/pman-${VERSION.pman}/ebin/pman.beam
@@ -3176,6 +3211,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_net_if.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_net_if_filter.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_network_interface.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_network_interface_filter.beam
+lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_notification_delivery_info_receiver.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_notification_filter.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_set.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_set_lib.beam
@@ -3318,6 +3354,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_net_if.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_net_if_filter.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_network_interface.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_network_interface_filter.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_notification_delivery_info_receiver.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_notification_filter.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_set.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/agent/snmpa_set_lib.erl
@@ -3614,6 +3651,7 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/qlc.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/qlc_pt.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/queue.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/random.beam
+lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/re.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/regexp.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/sets.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/shell.beam
@@ -3700,6 +3738,7 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/src/qlc.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/qlc_pt.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/queue.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/random.erl
+lib/erlang/lib/stdlib-${VERSION.stdlib}/src/re.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/regexp.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/sets.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/shell.erl
@@ -3906,21 +3945,23 @@ lib/erlang/lib/tv-${VERSION.tv}/src/tv_utils.erl
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.app
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.appup
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_generator.beam
+lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_annotator.beam
+@comment lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_generator.beam
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_info.beam
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_map.beam
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_options.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_parse.beam
+@comment lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_parse.beam
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_preprocess.beam
 lib/erlang/lib/typer-${VERSION.typer}/src/typer.erl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer.hrl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_generator.erl
+lib/erlang/lib/typer-${VERSION.typer}/src/typer_annotator.erl
+@comment lib/erlang/lib/typer-${VERSION.typer}/src/typer_generator.erl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer_info.erl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer_map.erl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer_options.erl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer_options.hrl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_parse.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_parse.yrl
+@comment lib/erlang/lib/typer-${VERSION.typer}/src/typer_parse.erl
+@comment lib/erlang/lib/typer-${VERSION.typer}/src/typer_parse.yrl
 lib/erlang/lib/typer-${VERSION.typer}/src/typer_preprocess.erl
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.app
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.appup

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/16 06:11:48 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/20 00:22:53 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -13,6 +13,7 @@ COMMENT=		Concurrent functional programming language
 DIST_SUBDIR=		erlang
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
@@ -68,6 +69,9 @@ post-install:
 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
+
+TEST_MAKE_FLAGS+=	TESTROOT=${WRKSRC} ERL_TOP=${WRKSRC}
+TEST_TARGET=		tests
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

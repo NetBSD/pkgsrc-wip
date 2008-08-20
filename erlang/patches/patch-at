@@ -1,11 +1,11 @@
-$NetBSD: patch-at,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-at,v 1.2 2008/08/20 00:22:53 asau Exp $
 
 Do we need this wrapper?
 
---- erts/emulator/hipe/hipe_x86_signal.c.orig	2008-02-05 08:37:54.000000000 -0500
-+++ erts/emulator/hipe/hipe_x86_signal.c
-@@ -171,7 +171,7 @@ static void do_init(void)
- #define INIT()	do { if( !init_done() ) do_init(); } while(0)
+--- erts/emulator/hipe/hipe_x86_signal.c.orig	2008-06-10 16:47:40.000000000 +0400
++++ erts/emulator/hipe/hipe_x86_signal.c	2008-08-20 00:31:52.000000000 +0400
+@@ -171,7 +171,7 @@
+ #define INIT()	do { if (!init_done()) do_init(); } while (0)
  #endif /* __DARWIN__ */
  
 -#if !defined(__GLIBC__) && !defined(__DARWIN__)
@@ -13,15 +13,15 @@ Do we need this wrapper?
  /*
   * Assume Solaris/x86 2.8.
   * There is a number of sigaction() procedures in libc:
-@@ -207,6 +207,7 @@ static void do_init(void)
- #define INIT()	do { if( !init_done() ) do_init(); } while(0)
+@@ -207,6 +207,7 @@
+ #define INIT()	do { if (!init_done()) do_init(); } while (0)
  #endif	/* not glibc or darwin */
  
 +#if !defined(__NetBSD__)
  /*
   * This is our wrapper for sigaction(). sigaction() can be called before
   * hipe_signal_init() has been executed, especially when threads support
-@@ -229,7 +230,7 @@ static int my_sigaction(int signum, cons
+@@ -229,7 +230,7 @@
      }
      return __next_sigaction(signum, act, oldact);
  }
@@ -30,7 +30,7 @@ Do we need this wrapper?
  /*
   * This overrides the C library's core sigaction() procedure, catching
   * all its internal calls.
-@@ -244,7 +245,7 @@ int __SIGACTION(int signum, const struct
+@@ -244,7 +245,7 @@
  /*
   * This catches the application's own sigaction() calls.
   */
@@ -39,7 +39,7 @@ Do we need this wrapper?
  int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)
  {
      return my_sigaction(signum, act, oldact);
-@@ -302,7 +303,9 @@ void hipe_signal_init(void)
+@@ -302,7 +303,9 @@
      struct sigaction sa;
      int i;
  
