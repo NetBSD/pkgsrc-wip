@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/18 00:46:36 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/20 02:24:05 asau Exp $
 bin/${MINGW_TARGET}-c++
 bin/${MINGW_TARGET}-cc
 bin/${MINGW_TARGET}-cpp
@@ -12,6 +12,7 @@ ${MINGW_TARGET}/bin/cc
 ${MINGW_TARGET}/bin/cpp
 ${MINGW_TARGET}/bin/g++
 ${MINGW_TARGET}/bin/gcc
+${MINGW_TARGET}/lib/libiberty.a
 ${MINGW_TARGET}/lib/libobjc.la
 ${MINGW_TARGET}/lib/libstdc++.la
 ${MINGW_TARGET}/lib/libsupc++.la
