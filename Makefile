@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3004 2008/08/16 12:14:54 leot1990 Exp $
+# $Id: Makefile,v 1.3005 2008/08/20 08:20:20 tonnerre Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1077,6 +1077,7 @@ SUBDIR+=	ocp
 SUBDIR+=	octave-nox11
 SUBDIR+=	ode
 SUBDIR+=	omniORB
+SUBDIR+=	omniORBpy
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
