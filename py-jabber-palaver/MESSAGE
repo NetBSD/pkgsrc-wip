@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/08/21 20:54:16 schnoebe Exp $
+
+    To use palaver, several items must be set in rc.conf.
+
+    The available variables are:
+	palaver_jid	[Jabber ID of the service, default "palaver"]
+	palaver_secret	[shared secret with the S2S]
+	palaver_rhost	[ost of the Jabber service router, default "localhost"]
+	palaver_rport	[port of the Jabber service router, default 5347]
+
+    palaver_secret and palaver_ips variables are required.
+
+    ex:
+	palaver_jid=proxy.jabber.example.org
+	palaver_secret=JabberSecret
+	palaver_rhost=jabber.example.org
+	palaver_rport=5347
+
+===========================================================================
