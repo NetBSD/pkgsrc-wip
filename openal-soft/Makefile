@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/02 20:20:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/22 01:05:10 asau Exp $
 #
 
 DISTNAME=	openal-soft-1.5.304
@@ -32,6 +32,12 @@ CMAKE_ARGS+=	-DEXTRA_LIBS=${LIBOSSAUDIO:Q}
 .endif
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+SUBST_CLASSES+=			fix-oss
+SUBST_STAGE.fix-oss=		pre-configure
+SUBST_MESSAGE.fix-oss=		Fixing OSS device references.
+SUBST_FILES.fix-oss=		Alc/oss.c
+SUBST_SED.fix-oss=		-e 's,/dev/dsp,${DEVOSSSOUND},'
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
