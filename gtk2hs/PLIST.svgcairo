@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.svgcairo,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+lib/gtk2hs/HSsvgcairo.o
+lib/gtk2hs/libHSsvgcairo.a
+lib/gtk2hs/svgcairo.package.conf
+lib/gtk2hs/imports/svgcairo/Graphics/Rendering/Cairo/SVG.hi
+@dirrm lib/gtk2hs/imports/svgcairo/Graphics/Rendering/Cairo
+@dirrm lib/gtk2hs/imports/svgcairo/Graphics/Rendering
+@dirrm lib/gtk2hs/imports/svgcairo/Graphics
+@dirrm lib/gtk2hs/imports/svgcairo

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.mozembed,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+lib/gtk2hs/HSmozembed.o
+lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk/MozEmbed.hi
+lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk/MozEmbed/Types.hi
+lib/gtk2hs/libHSmozembed.a
+lib/gtk2hs/mozembed.package.conf
+@dirrm lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk/MozEmbed
+@dirrm lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk
+@dirrm lib/gtk2hs/imports/mozembed/Graphics/UI
+@dirrm lib/gtk2hs/imports/mozembed/Graphics
+@dirrm lib/gtk2hs/imports/mozembed
