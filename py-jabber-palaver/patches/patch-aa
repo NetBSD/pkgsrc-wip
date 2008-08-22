@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/08/22 19:32:27 schnoebe Exp $
+
+--- twisted/plugins/palaver.py.orig	2007-02-08 17:08:22.000000000 -0600
++++ twisted/plugins/palaver.py
+@@ -1,6 +1,6 @@
+-from twisted.scripts.mktap import _tapHelper
++from twisted.application.service import ServiceMaker
+  
+-Palaver = _tapHelper(
++Palaver = ServiceMaker(
+                 "Palaver",
+                 "palaver.tap",
+                 "A multi-user chat jabber component.",
