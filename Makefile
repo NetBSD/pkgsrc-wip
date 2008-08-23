@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3008 2008/08/22 05:20:04 phonohawk Exp $
+# $Id: Makefile,v 1.3009 2008/08/23 20:17:39 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1274,6 +1274,7 @@ SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
 SUBDIR+=	p5-Math-IntervalSearch
 SUBDIR+=	p5-Maypole
+SUBDIR+=	p5-MediaWiki-API
 SUBDIR+=	p5-Metadata
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
