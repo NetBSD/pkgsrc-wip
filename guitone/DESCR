@@ -1,0 +1,4 @@
+Guitone is a frontend to the monotone revision control system. It aims towards
+a full implementation of the monotone automation interface and is especially
+targeted at beginners. Guitone is copylefted under the terms of the GNU General
+Public License Version 3, or, at your option, any later version of this license.
