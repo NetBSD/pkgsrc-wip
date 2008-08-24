@@ -1,3 +1,5 @@
 - clean up installed files
+- replace python paths in installed files
+- provide scripts in /usr/pkg/bin for starting the programs
 - fix
 - test
