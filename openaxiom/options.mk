@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/08/20 03:49:55 asau Exp $
+# $NetBSD: options.mk,v 1.4 2008/08/24 07:31:20 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openaxiom
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -35,6 +35,10 @@ PRINT_PLIST_AWK+=	{gsub(/\.${FASL}$$/, ".$${FASL}");}
 .if !empty(PKG_OPTIONS:Mclisp)
 # Handle CLISP-specific files
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
+.endif
+.if !empty(PKG_OPTIONS:Mecl)
+# Handle ECL-specific files
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\.o$$/) {$$0 = "$${ecl}" $$0;}}
 .endif
 
 # X11
