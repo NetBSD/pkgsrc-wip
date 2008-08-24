@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/24 22:17:08 asau Exp $
 #
 
-PKGVERSION=		1.68
+PKGVERSION=		1.77
 
 DISTNAME=		yaws-${PKGVERSION}
 CATEGORIES=		www
@@ -12,6 +12,8 @@ HOMEPAGE=		http://yaws.hyber.org/
 COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
 
 BUILD_DEFS+=		VARBASE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl pax
 GNU_CONFIGURE=		yes
@@ -46,21 +48,24 @@ post-configure:
 		${FILESDIR}/yaws.conf > ${WRKDIR}/yaws.conf
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/yaws ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/yaws.conf ${EGDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/yaws ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/yaws.conf ${DESTDIR}${EGDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/ebin/* ${LIBDIR}/ebin
-	${INSTALL_DATA} ${WRKSRC}/include/* ${LIBDIR}/include
-	${INSTALL_DATA} ${WRKSRC}/priv/* ${LIBDIR}/priv
+	${INSTALL_DATA} ${WRKSRC}/ebin/* ${DESTDIR}${LIBDIR}/ebin
+	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${LIBDIR}/include
+	cd ${WRKSRC}/priv && pax -rw . ${DESTDIR}${LIBDIR}/priv
 
-	${INSTALL_DATA} ${WRKSRC}/doc/yaws.pdf ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/yaws.pdf ${DESTDIR}${DOCDIR}
 
-	cd ${WRKSRC}/www && pax -rw . ${WWWDIR}
+	cd ${WRKSRC}/www && pax -rw . ${DESTDIR}${WWWDIR}
 
-	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/yaws
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
