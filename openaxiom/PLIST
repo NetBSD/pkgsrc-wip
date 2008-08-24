@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/23 22:21:47 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/08/24 07:30:03 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -1191,6 +1191,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/comdb.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/compress.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/exposed.${FASL}
 ${clisp}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/exposed.lib
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/exposed.o
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/interp.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/libdb.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/operation.daase
@@ -1208,6 +1209,15 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/bootsys
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/clef
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/sman
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/viewAlone
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/ast.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/includer.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/initial-env.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/linkset
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/parser.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/pile.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/scanner.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/tokens.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/translator.o
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algaggr.input
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algbrbf.input
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algfacob.input
@@ -1574,7 +1584,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/ex2ht
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htadd
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hypertex
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.a
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
+${clisp}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/session
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadbuf
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadclient
@@ -1582,6 +1592,8 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/summary
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view2D
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view3D
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/viewman
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lisp/core.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lisp/linkset
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/bitmaps/Al.bitmap
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/bitmaps/ClickToSet.bitmap
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/bitmaps/Continue.bitmap
