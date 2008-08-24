@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/08/24 22:17:08 asau Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/24 23:43:07 asau Exp $
 #
 
 PKGVERSION=		1.77
@@ -34,6 +34,10 @@ INSTALLATION_DIRS+=	${LIBDIR}/ebin ${LIBDIR}/include
 INSTALLATION_DIRS+=	${LIBDIR}/priv ${WWWDIR}
 
 OWN_DIRS=		${VARBASE}/log/yaws
+
+REPLACE_PYTHON=		www/cgi-bin/foo.py
+#CHECK_INTERPRETER_SKIP=	${WWWDIR}/cgi-bin/foo.py
+CHECK_INTERPRETER_SKIP=	share/yaws/www/cgi-bin/foo.py
 
 post-patch:
 	${RM} ${WRKDIR}/yaws
