@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/20 00:22:53 asau Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/24 20:26:58 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -69,9 +69,6 @@ post-install:
 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
-
-TEST_MAKE_FLAGS+=	TESTROOT=${WRKSRC} ERL_TOP=${WRKSRC}
-TEST_TARGET=		tests
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
