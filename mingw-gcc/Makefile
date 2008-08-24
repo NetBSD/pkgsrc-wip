@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/08/24 01:04:14 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.19 2008/08/24 01:38:35 hoka_adam Exp $
 #
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
@@ -19,6 +19,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_CROSSBASE=		yes
 
+GCC_VERSION=		3.4.5
 DIST_VERSION=		${GCC_VERSION}-20060117-2
 
 do-build:
