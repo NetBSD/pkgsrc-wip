@@ -1,6 +1,5 @@
-$Id: TODO,v 1.2 2003/12/15 19:19:28 mpasternak Exp $
+$Id: TODO,v 1.3 2008/08/24 01:04:14 hoka_adam Exp $
 
-1) verify if PLIST is okay
 2) verify objc (is it built? is it installed?)
 
 	-- dotz@irc.pl
