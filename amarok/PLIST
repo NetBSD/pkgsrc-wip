@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2008/08/12 12:09:03 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/08/25 12:23:45 thomasklausner Exp $
 bin/amarok
+bin/amarok_afttagger
 bin/amarokcollectionscanner
+bin/amarokmp3tunesharmonydaemon
 lib/kde4/amarok_containment_context.so
 lib/kde4/amarok_context_applet_albums.so
 lib/kde4/amarok_context_applet_cloud.so
 lib/kde4/amarok_context_applet_currenttrack.so
 lib/kde4/amarok_context_applet_lastfmevents.so
 lib/kde4/amarok_context_applet_lyrics.so
+lib/kde4/amarok_context_applet_mediadevices.so
 lib/kde4/amarok_context_applet_serviceinfo.so
 lib/kde4/amarok_context_applet_video.so
 lib/kde4/amarok_context_applet_wikipedia.so
@@ -20,12 +23,15 @@ lib/kde4/amarok_service_ampache.so
 lib/kde4/amarok_service_jamendo.so
 lib/kde4/amarok_service_lastfm.so
 lib/kde4/amarok_service_magnatunestore.so
+lib/kde4/amarok_service_mp3tunes.so
 lib/kde4/amarok_service_opmldirectory.so
 lib/kde4/amarok_service_shoutcast.so
 lib/kde4/kcm_amarok_service_ampache.so
 lib/kde4/kcm_amarok_service_lastfm.so
 lib/kde4/kcm_amarok_service_magnatunestore.so
+lib/kde4/kcm_amarok_service_mp3tunes.so
 lib/kde4/libamarok_collection-daapcollection.so
+lib/kde4/libamarok_collection-mtpcollection.so
 lib/kde4/libamarok_collection-nepomukcollection.so
 lib/kde4/libamarok_collection-sqlcollection.so
 lib/kde4/plugins/script/amarok/qtscript_debug/debug/__init__.js
@@ -36,8 +42,8 @@ lib/libamaroklib.so
 lib/libamaroklib.so.1
 lib/libamaroklib.so.1.0.0
 lib/libamarokplasma.so
-lib/libamarokplasma.so.1
-lib/libamarokplasma.so.1.0.0
+lib/libamarokplasma.so.2
+lib/libamarokplasma.so.2.0.0
 lib/libamarokpud.so
 lib/libamarokpud.so.1
 lib/libamarokpud.so.1.0.0
@@ -261,6 +267,7 @@ share/kde/apps/amarok/images/loading2.png
 share/kde/apps/amarok/images/menu_sidepixmap.png
 share/kde/apps/amarok/images/more_albums.png
 share/kde/apps/amarok/images/musicbrainz.png
+share/kde/apps/amarok/images/navigation_arrows.svg
 share/kde/apps/amarok/images/nocover.png
 share/kde/apps/amarok/images/pud_items.svg
 share/kde/apps/amarok/images/sbinner_stars.png
@@ -305,6 +312,7 @@ share/kde4/services/amarok-context-applet-cloud.desktop
 share/kde4/services/amarok-context-applet-currenttrack.desktop
 share/kde4/services/amarok-context-applet-lastfmevents.desktop
 share/kde4/services/amarok-context-applet-lyrics.desktop
+share/kde4/services/amarok-context-applet-mediadevices.desktop
 share/kde4/services/amarok-context-applet-serviceinfo.desktop
 share/kde4/services/amarok-context-applet-video.desktop
 share/kde4/services/amarok-context-applet-wikipedia.desktop
@@ -315,6 +323,7 @@ share/kde4/services/amarok-data-engine-lyrics.desktop
 share/kde4/services/amarok-data-engine-service.desktop
 share/kde4/services/amarok-data-engine-wikipedia.desktop
 share/kde4/services/amarok_collection-daapcollection.desktop
+share/kde4/services/amarok_collection-mtpcollection.desktop
 share/kde4/services/amarok_collection-nepomukcollection.desktop
 share/kde4/services/amarok_collection-sqlcollection.desktop
 share/kde4/services/amarok_service_ampache.desktop
@@ -324,20 +333,15 @@ share/kde4/services/amarok_service_lastfm.desktop
 share/kde4/services/amarok_service_lastfm_config.desktop
 share/kde4/services/amarok_service_magnatunestore.desktop
 share/kde4/services/amarok_service_magnatunestore_config.desktop
+share/kde4/services/amarok_service_mp3tunes.desktop
+share/kde4/services/amarok_service_mp3tunes_config.desktop
 share/kde4/services/amarok_service_opmldirectory.desktop
 share/kde4/services/amarok_service_shoutcast.desktop
 share/kde4/servicetypes/amarok_context_applet.desktop
 share/kde4/servicetypes/amarok_data_engine.desktop
 share/kde4/servicetypes/amarok_plugin.desktop
-@dirrm share/kde4/servicetypes
-@dirrm share/kde4/services/ServiceMenus
-@dirrm share/kde4/services
-@dirrm share/kde/config.kcfg
-@dirrm share/kde/config
-@dirrm share/kde/apps/desktoptheme/default/widgets
 @dirrm share/kde/apps/desktoptheme/Amarok-Mockup/widgets
 @dirrm share/kde/apps/desktoptheme/Amarok-Mockup
-@dirrm share/kde/apps/desktoptheme
 @dirrm share/kde/apps/amarok/scripts/webcontrol
 @dirrm share/kde/apps/amarok/scripts/script_console
 @dirrm share/kde/apps/amarok/scripts/radio_station_service
@@ -358,38 +362,8 @@ share/kde4/servicetypes/amarok_plugin.desktop
 @dirrm share/kde/apps/amarok/icons
 @dirrm share/kde/apps/amarok/data
 @dirrm share/kde/apps/amarok
-@dirrm share/kde/apps
-@dirrm share/icons/hicolor/64x64/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/128x128/apps
-@dirrm share/icons/hicolor
-@dirrm share/dbus-1/interfaces
-@dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
 @dirrm lib/kde4/plugins/script/amarok/qtscript_debug/debug
 @dirrm lib/kde4/plugins/script/amarok/qtscript_debug
 @dirrm lib/kde4/plugins/script/amarok
-@dirrm lib/kde4/plugins/script
-@dirrm lib/kde4
-@comment @dirrm share/kde4/servicetypes
-@comment @dirrm share/kde4/services/ServiceMenus
-@comment @dirrm share/kde4/services
-@comment @dirrm share/kde/config.kcfg
-@comment @dirrm share/kde/config
-@comment @dirrm share/kde/apps/desktoptheme/default/widgets
-@comment @dirrm share/kde/apps/desktoptheme
-@comment @dirrm share/kde/apps
-@comment @dirrm share/icons/hicolor/64x64/apps
-@comment @dirrm share/icons/hicolor/48x48/apps
-@comment @dirrm share/icons/hicolor/32x32/apps
-@comment @dirrm share/icons/hicolor/22x22/apps
-@comment @dirrm share/icons/hicolor/16x16/apps
-@comment @dirrm share/icons/hicolor/128x128/apps
-@comment @dirrm share/icons/hicolor
-@comment @dirrm share/dbus-1/interfaces
-@comment @dirrm share/applications/kde4
-@comment @dirrm lib/kde4/plugins/script
-@comment @dirrm lib/kde4
+@comment in kdelibs4: dirrm lib/kde4/plugins/script

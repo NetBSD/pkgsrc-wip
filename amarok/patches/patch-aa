@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2008/08/12 12:09:03 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.5 2008/08/25 12:23:45 thomasklausner Exp $
 
 libamarok unconditionally uses libdl.
 http://bugs.kde.org/show_bug.cgi?id=168741
 
---- src/CMakeLists.txt.orig	2008-08-07 19:37:33.000000000 +0000
+--- src/CMakeLists.txt.orig	2008-08-19 23:15:26.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -558,9 +558,9 @@ if(KDEMULTIMEDIA_FOUND)
+@@ -562,9 +562,9 @@ if(KDEMULTIMEDIA_FOUND)
          ${KCOMPACTDISC_LIBRARY}
      )
  endif(KDEMULTIMEDIA_FOUND)
