@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/04 21:22:58 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/08/25 15:00:35 tonnerre Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -366,6 +366,7 @@ share/doc/omniORB/utilities.html
 share/doc/omniORB/utilities.pdf
 share/doc/omniORB/utilities.ps
 share/examples/omniORB/sample.cfg
+share/examples/rc.d/omninames
 share/idl/omniORB/COS/CosCollection.idl
 share/idl/omniORB/COS/CosCompoundLifeCycle.idl
 share/idl/omniORB/COS/CosConcurrencyControl.idl

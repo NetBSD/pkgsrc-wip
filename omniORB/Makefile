@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/04 21:22:58 tonnerre Exp $
+# $NetBSD: Makefile,v 1.10 2008/08/25 15:00:35 tonnerre Exp $
 #
 
 PKGNAME=		omniORB-4.1.2
@@ -20,6 +20,7 @@ USE_LIBTOOL=	YES
 
 # omniORB requires native threads support
 PTHREAD_OPTS=	require native
+RCD_SCRIPTS= 	omninames
 
 OMNIORB_ETCDIR?= ${PKG_SYSCONFDIR}
 OMNIORB_CONFIG=	${OMNIORB_ETCDIR}/omniORB.cfg
