@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2008/08/25 15:38:06 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/25 16:19:33 schnoebe Exp $
+${PYSITELIB}/palaver/__init__.py
+${PYSITELIB}/palaver/__init__.pyc
+${PYSITELIB}/palaver/__init__.pyo
+${PYSITELIB}/palaver/admin.py
+${PYSITELIB}/palaver/admin.pyc
 ${PYSITELIB}/palaver/admin.pyo
 ${PYSITELIB}/palaver/cred.py
 ${PYSITELIB}/palaver/cred.pyc
