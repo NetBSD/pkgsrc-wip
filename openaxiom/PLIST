@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/24 21:14:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/25 03:01:40 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -1208,7 +1208,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/asq
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/bootsys
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/clef
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/sman
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/viewAlone
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/viewAlone
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/ast.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/includer.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/initial-env.o
@@ -1582,16 +1582,16 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/command.list
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/copyright
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/ex2ht
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htadd
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hypertex
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hypertex
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.a
 ${clisp}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/session
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadbuf
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadbuf
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadclient
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/summary
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view2D
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view3D
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/viewman
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view2D
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/view3D
+${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/viewman
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lisp/core.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lisp/linkset
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/bitmaps/Al.bitmap
