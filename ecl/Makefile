@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/08/12 19:45:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2008/08/25 20:52:52 asau Exp $
 #
 
 DISTNAME=		ecl-0.9l
-PKGNAME=		ecl-0.9.12
+PKGNAME=		ecl-0.9.12.99
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
@@ -14,6 +14,13 @@ COMMENT=		Embeddable Common Lisp
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
+CVS_REPOSITORIES=	ecls
+CVS_PROJECT=		ecls
+CVS_ROOT.ecls=		${CVS_ROOT_SOURCEFORGE}
+CVS_MODULE.ecls=	ecl
+
+WRKSRC=			${WRKDIR}/ecls
+
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -24,6 +31,7 @@ CONFIGURE_ARGS+=	--enable-boehm=system
 CONFIGURE_ENV+=		ECL_BOEHM_GC_HEADER=gc/gc.h
 CONFIGURE_ARGS+=	--with-system-gmp
 
+.include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
