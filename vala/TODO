@@ -1,0 +1,9 @@
+$NetBSD: TODO,v 1.1.1.1 2008/08/25 22:19:19 bsadewitz Exp $
+
+Remaining tasks:
+	- split up documentation and/or vapi generator, etc. into
+	  seperate packages.
+	- Where should the devhelp files go?  By default, they're
+	  installed into share/devhelp, but that directory is
+	  part of devel/devhelp ...
+	- See if it works.
