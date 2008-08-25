@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: palaver.sh,v 1.1 2008/08/25 15:38:06 schnoebe Exp $
+# $NetBSD: palaver.sh,v 1.2 2008/08/25 16:36:57 schnoebe Exp $
 #
 #   startup script for the proxy65 file transfer proxy service for Jabber
 #   uses the twistd application engine
@@ -9,7 +9,7 @@
 # REQUIRE: DAEMON s2s
 #
 
-name="proxy65"
+name="palaver"
 rcvar=$name
 command=@PREFIX@/bin/twistd
 command_interpreter="@PYTHONBIN@"
