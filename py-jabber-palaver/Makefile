@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/25 15:38:06 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/25 16:27:42 schnoebe Exp $
 
 DISTNAME=	palaver-0.5
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -41,7 +41,7 @@ INSTALLATION_DIRS=	share/doc/palaver
 
 CONF_FILES=	${EGDIR}/palaver.xml ${PKG_SYSCONFDIR}/palaver.xml
 
-# RCD_SCRIPTS=	palaver
+RCD_SCRIPTS=	palaver
 
 post-install:
 .for f in ${DOCFILES}
