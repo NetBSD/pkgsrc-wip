@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/21 20:54:16 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/25 15:38:06 schnoebe Exp $
 ${PYSITELIB}/palaver/admin.pyo
 ${PYSITELIB}/palaver/cred.py
 ${PYSITELIB}/palaver/cred.pyc
@@ -66,4 +66,10 @@ ${PYSITELIB}/palaver/xmpp/ns.pyo
 ${PYSITELIB}/twisted/plugins/palaver.py
 ${PYSITELIB}/twisted/plugins/palaver.pyc
 ${PYSITELIB}/twisted/plugins/palaver.pyo
+share/doc/palaver/README.txt
+share/doc/palaver/XEP.txt
+share/doc/palaver/muc-pgsql.sql
+share/examples/jabber/palaver.xml
 @dirrm ${PYSITELIB}/palaver
+@dirrm share/doc/palaver
+@dirrm share/examples/jabber

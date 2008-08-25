@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/21 20:54:16 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/25 15:38:06 schnoebe Exp $
 
 DISTNAME=	palaver-0.5
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -34,17 +34,35 @@ PKG_GROUPS_VARS+=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-# DOCDIR=                 ${PREFIX}/share/doc/proxy65
-# DOCFILES=               README
+DOCDIR=                 ${PREFIX}/share/doc/palaver
+DOCFILES=               README.txt XEP.txt db/muc-pgsql.sql
 
-# INSTALLATION_DIRS=	share/doc/proxy65
+INSTALLATION_DIRS=	share/doc/palaver
+
+CONF_FILES=	${EGDIR}/palaver.xml ${PKG_SYSCONFDIR}/palaver.xml
 
 # RCD_SCRIPTS=	palaver
 
 post-install:
-# .for f in ${DOCFILES}
-# 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
-# .endfor
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+.endfor
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/example-config.xml ${EGDIR}/palaver.xml
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Localizing Paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	example-config.xml
+SUBST_SED.paths+=	-e 's,@JABBER_GROUP@,${JABBER_GROUP},g'
+SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_SPOOLDIR@,${JABBER_SPOOLDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_TRANSDIR@,${JABBER_TRANSDIR},g'
+SUBST_SED.paths+=	-e 's,@JABBER_USER@,${JABBER_USER},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
