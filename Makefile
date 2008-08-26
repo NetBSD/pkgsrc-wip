@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3013 2008/08/26 05:41:07 phonohawk Exp $
+# $Id: Makefile,v 1.3014 2008/08/26 05:57:16 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -967,6 +967,7 @@ SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
+SUBDIR+=	mkcabal
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mlmmj
