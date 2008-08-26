@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2008/07/16 22:09:46 asau Exp $
+$NetBSD: patch-aa,v 1.2 2008/08/26 18:26:09 asau Exp $
 
---- doc/Makefile.in.orig	Mon May 12 03:46:47 2008
-+++ doc/Makefile.in	Wed May 28 17:01:04 2008
+Pass Python interpreter in variable.
+Fix unknown flag in tar.
+
+--- doc/Makefile.in.orig	2008-05-12 03:46:47.000000000 +0400
++++ doc/Makefile.in	2008-08-26 21:43:02.000000000 +0400
 @@ -211,7 +211,7 @@
  # --------------------------------------------------------- NEW DBK STYLE
  SORRY = "Sorry, the doc build system had been missing xmlg from xmlg.sf.net"
@@ -11,6 +14,15 @@ $NetBSD: patch-aa,v 1.1 2008/07/16 22:09:46 asau Exp $
  datehead = <hr><table border="0" width="100%"><tr><td> \
      <a href="mailto:guidod@gmx.de?subject=$(PACKAGE):">guidod@gmx.de</a> \
      </td><td align="right">
+@@ -459,7 +459,7 @@
+ 	||  $(mkinstalldirs) $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	@ echo un-tar '>>' :$(pkgdocdir)/$(VERSION)
+ 	@ p=`pwd` ; cd $(DESTDIR)$(pkgdocdir)/$(VERSION) \
+-	; tar x$vf $$p/$(DOCS).tar ; cd $$p ; true
++	; tar xf $$p/$(DOCS).tar ; cd $$p ; true
+ 	-cp $(top_srcdir)/ChangeLog $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	-cp $(top_srcdir)/COPYING.LIB $(DESTDIR)$(pkgdocdir)/$(VERSION)
+ 	@ echo ':::' ln -s $(pkgdocdir)/$(VERSION)/'*' $(pkgdocdir)/$(PACKAGE)/
 @@ -552,8 +552,9 @@
  pfe-manual.docbook : pfe-wordsets.docbook $(DBK) $(DBK_EXTRA)
  	sed -e "s|../doc/|$(srcdir)/|" $(srcdir)/doc-index.dbk   \

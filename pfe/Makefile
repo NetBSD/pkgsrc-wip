@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/16 22:09:46 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/26 18:26:09 asau Exp $
 
 DISTNAME=	pfe-0.33.69
 CATEGORIES=	lang
@@ -16,8 +16,10 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--with-regs
 USE_TOOLS+=	perl pkg-config
 
-BUILD_TARGET=	all doc
-INSTALL_TARGET=	install install-doc
+MAKE_JOBS_SAFE=	no
+BUILD_TARGET=	all mans docs
+INSTALL_TARGET=	install install-mans install-docs
+TEST_TARGET=	tests
 
 BUILD_DEPENDS=	xmlto-[0-9]*:../../textproc/xmlto	# documentation
 
