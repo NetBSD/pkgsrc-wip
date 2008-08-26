@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/26 05:16:26 phonohawk Exp $
+
+SHA1 (irc-0.4.3.tar.gz) = cf64ebf9b41507f6a4ac46779f646cd0fe63fce9
+RMD160 (irc-0.4.3.tar.gz) = 807d8f43945fb75a60728616db6cd12a59571a61
+Size (irc-0.4.3.tar.gz) = 6332 bytes
