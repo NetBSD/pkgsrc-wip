@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 05:56:07 phonohawk Exp $
+bin/mkcabal
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
