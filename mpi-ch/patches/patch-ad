@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2008/05/15 08:40:57 asau Exp $
+$NetBSD: patch-ad,v 1.2 2008/08/26 19:09:55 asau Exp $
 
 "test ==" portability fix.
 
---- configure.orig	Thu May 15 12:20:15 2008
-+++ configure	Thu May 15 12:26:13 2008
-@@ -30782,7 +30782,7 @@
+--- configure.orig	2008-08-11 23:02:40.000000000 +0400
++++ configure	2008-08-26 22:19:53.000000000 +0400
+@@ -32661,7 +32661,7 @@
  	    ;;
      esac
  
 -    if test "$cpu_gcc_x86_cycle" == "no" ; then
 +    if test "$cpu_gcc_x86_cycle" = "no" ; then
-         { { echo "$as_me:$LINENO: error: Linux86 cycle counter is not available on this system and or with the $CC compiler" >&5
- echo "$as_me: error: Linux86 cycle counter is not available on this system and or with the $CC compiler" >&2;}
+         { { $as_echo "$as_me:$LINENO: error: Linux86 cycle counter is not available on this system and or with the $CC compiler" >&5
+ $as_echo "$as_me: error: Linux86 cycle counter is not available on this system and or with the $CC compiler" >&2;}
     { (exit 1); exit 1; }; }
