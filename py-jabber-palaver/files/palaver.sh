@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: palaver.sh,v 1.2 2008/08/25 16:36:57 schnoebe Exp $
+# $NetBSD: palaver.sh,v 1.3 2008/08/26 21:03:47 schnoebe Exp $
 #
 #   startup script for the proxy65 file transfer proxy service for Jabber
 #   uses the twistd application engine
@@ -17,14 +17,15 @@ required_files="@PKG_SYSCONFDIR@/palaver.xml"
 pidfile="@JABBER_PIDDIR@/${name}.pid"
 logfile="@JABBER_LOGDIR@/${name}.log"
 command_args="-u @JABBER_USER@ --pidfile=${pidfile} -l ${logfile}"
-command_args="${command_args} palavar -c ${required_files}"
+command_args="${command_args} palaver -c ${required_files}"
 
-start_precmd="ensure_piddir"
+start_precmd="ensure_dirs"
 
-ensure_piddir()
+ensure_dirs()
 {
-	mkdir -p @JABBER_PIDDIR@
-	chown @JABBER_USER@ @JABBER_PIDDIR@
+	ChatDir=$(sed -ne 's:.*<spool>\(.*\)</spool>.*:\1:p' ${required_files})
+	mkdir -p @JABBER_PIDDIR@ ${ChatDir}
+	chown @JABBER_USER@ @JABBER_PIDDIR@ ${ChatDir}
 }
 
 if [ -f /etc/rc.subr ]; then
