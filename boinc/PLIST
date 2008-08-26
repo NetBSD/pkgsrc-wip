@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 22:20:57 asau Exp $
+bin/boinc_client
+bin/boinc_cmd
+bin/ca-bundle.crt
+bin/crypt_prog
+bin/switcher
+include/boinc/app_ipc.h
+include/boinc/boinc_api.h
+include/boinc/boinc_win.h
+include/boinc/boinc_zip.h
+include/boinc/common_defs.h
+include/boinc/config.h
+include/boinc/coproc.h
+include/boinc/crypt.h
+include/boinc/diagnostics.h
+include/boinc/error_numbers.h
+include/boinc/filesys.h
+include/boinc/graphics2.h
+include/boinc/gui_rpc_client.h
+include/boinc/gutil.h
+include/boinc/hostinfo.h
+include/boinc/mfile.h
+include/boinc/miofile.h
+include/boinc/msg_log.h
+include/boinc/parse.h
+include/boinc/prefs.h
+include/boinc/proxy_info.h
+include/boinc/std_fixes.h
+include/boinc/str_util.h
+include/boinc/util.h
+include/boinc/version.h
+lib/libboinc.a
+lib/libboinc_api.a
+lib/libboinc_zip.a
+@dirrm include/boinc
