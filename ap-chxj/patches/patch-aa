@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2008/08/27 05:04:40 obache Exp $
+
+LONG_LONG_MAX is not portable.
+
+--- src/chxj_img_conv_format.c.orig	2008-07-22 12:33:07.000000000 +0000
++++ src/chxj_img_conv_format.c
+@@ -30,6 +30,13 @@
+ 
+ #include <wand/magick_wand.h>
+ 
++#if !defined(LONG_LONG_MAX)
++#  if defined(LLONG_MAX)
++#define LONG_LONG_MAX LLONG_MAX
++#  elif defined(LONGLONG_MAX)
++#define LONG_LONG_MAX LONGLONG_MAX)
++#  endif
++#endif 
+ 
+ #define EXIT_MAGICK_ERROR() \
+   do { \

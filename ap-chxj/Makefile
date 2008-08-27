@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/08 13:11:48 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/27 05:04:39 obache Exp $
 #
 
-DISTNAME=	mod-chxj_0.8.2
-PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod-//:S/_/-/}
+DISTNAME=	mod-chxj_0.12.12.src
+PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod-//:S/_/-/:S/.src//}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=modchxj/29236/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=modchxj/32266/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://cvs.sourceforge.jp/cgi-bin/viewcvs.cgi/modchxj/mod_chxj/doc/modchxj.html?rev=HEAD
 COMMENT=	CHTML to HDML,XHTML,JHTML convert module for apache2
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
 PKG_SYSCONFSUBDIR=	httpd/chxj
@@ -22,6 +25,8 @@ CONFIGURE_ENV+=		ac_cv_path_LIBTOOL=${LIBTOOL:Q}
 CONFIGURE_ENV+=		WAND_CONFIG=${BUILDLINK_PREFIX.ImageMagick}/bin/Wand-config
 CONFIGURE_ENV+=		APR_CONFIG=${BUILDLINK_DIR}/bin/apr-config
 CONFIGURE_ENV+=		APU_CONFIG=${BUILDLINK_DIR}/bin/apu-config
+
+.include "options.mk"
 
 EGDIR=			share/examples/mod_chxj
 EGFILES=		device_data.xml emoji.xml
@@ -36,10 +41,10 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 
 post-install:
 .for f in ${EGFILES}
-	${INSTALL_DATA}	${WRKSRC}/etc/${f} ${PREFIX}/${EGDIR}
+	${INSTALL_DATA}	${WRKSRC}/etc/${f} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"

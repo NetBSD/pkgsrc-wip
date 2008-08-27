@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/08 13:11:48 obache Exp $
+$NetBSD: distinfo,v 1.2 2008/08/27 05:04:40 obache Exp $
 
-SHA1 (mod-chxj_0.8.2.tar.gz) = 528247de6d244c80d52f1d2174efcb34923bbc1f
-RMD160 (mod-chxj_0.8.2.tar.gz) = ec9336b4477038a3f07628cd465e36a9d3934828
-Size (mod-chxj_0.8.2.tar.gz) = 407327 bytes
+SHA1 (mod-chxj_0.12.12.src.tar.gz) = 19784a52df6a9871dfc9f9511670db68439fe429
+RMD160 (mod-chxj_0.12.12.src.tar.gz) = 784c9a361893a91585c694fb4cb168c3ac7ce1e2
+Size (mod-chxj_0.12.12.src.tar.gz) = 885742 bytes
+SHA1 (patch-aa) = f3f4c83e79408dcb7710e1cb467773c444c2099f
