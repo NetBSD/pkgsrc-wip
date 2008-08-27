@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/07 19:03:31 htepper Exp $
+$NetBSD: distinfo,v 1.5 2008/08/27 10:42:19 htepper Exp $
 
-SHA1 (opensc-0.11.5.tar.gz) = 8493938ca756a08f272db8d04859a5b94c1bf494
-RMD160 (opensc-0.11.5.tar.gz) = bd32aa0e3b55cc75c8076fc185ecec09a4b01991
-Size (opensc-0.11.5.tar.gz) = 1437684 bytes
+SHA1 (opensc-0.11.6.tar.gz) = 0aa3b6a57a730f8e06f138537220c30ee709037f
+RMD160 (opensc-0.11.6.tar.gz) = de838d827030f187ffa57028dbaf5013f6c82e68
+Size (opensc-0.11.6.tar.gz) = 1452763 bytes
 SHA1 (patch-aa) = 352f5fd3a929d520ad1c501c36a2de14ca748974
