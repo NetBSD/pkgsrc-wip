@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/08/28 16:37:57 phonohawk Exp $
+
+To complete installing this package, add to your .emacs the following
+line:
+
+   (load "${LISPDIR}/mpc/mpc-autoloads")
+
+That's all there is to it.  After restarting your Emacs, you should be able
+to use MPC.el by simply invoking M-x mpc RET.
+===========================================================================

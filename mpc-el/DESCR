@@ -1,0 +1,20 @@
+This is an Emacs front end to the Music Player Daemon.
+
+MPC.el mostly provides a browser inspired from Rhythmbox for your
+music collection and also allows you to play the music you select. The
+basic interface is somewhat unusual for mpd in that it does not
+provide direct access to MusicPD's playlist functionality. Instead it
+uses MusicPD's playlist internally to implement a queue of songs. This
+means that it does not always interact nicely with other clients that
+you may be using at the same time.
+
+The author plays albums rather than songs and thus don't have much
+need for playlists, and it shows. Playlist support exists, but is
+embryonic. The intention is to handle playlists just like any other
+attributes. I.e. placing a file in playlist FooSongs is treated as
+equivalent to adding a tag "playlist=FooSongs".
+
+The package is in the early stage of development. If you're not
+interested in fiddling with the code, it's probably too early for you
+to try it out. But if you do try it out, please tell the author know
+how it goes.
