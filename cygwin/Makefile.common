@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/08/28 06:12:19 makoto Exp $
+#
+# used by wip/cygwin-binutils/Makefile
+# used by wip/cygwin-gcc/Makefile
+# used by wip/cygwin-gcc/buildlink3.mk
+
+.if !defined(CYGWIN_MAKEFILECOMMON)
+CYGWIN_MAKEFILECOMMON=	# yes
+USE_CROSSBASE=		yes
+
+CYGWIN_TARGET?=		i386--cygwin
+PLIST_SUBST+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
+MAKE_ENV+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
+CONFIGURE_ENV+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
+
+BUILD_DEFS+=		CROSSBASE
+PATH:=			${CROSSBASE}/bin:${PATH}
+
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--target=${CYGWIN_TARGET:Q}
+# following line to avoid getting
+#    make: exec(i386--netbsdelf-ar) failed (No such file or directory)
+USE_GNU_CONFIGURE_HOST=	NO
+.endif
+
+.endif
