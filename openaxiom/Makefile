@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/08/27 13:46:16 asau Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/28 19:57:01 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.2.0
-CATEGORIES=		lang
+CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
 EXTRACT_SUFX=		.tar.bz2
 
