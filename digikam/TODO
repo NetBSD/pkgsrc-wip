@@ -1,0 +1,27 @@
+Main application builds fine, but then:
+
+[ 93%] Generating digikam.gmo
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:155: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:155:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:394: duplicate message definition
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:157: ...this is the location of the first definition
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1507: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1507:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1514: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1514:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1519: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1519:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1526: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1526:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1531: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1531:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1536: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1536:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1543: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1543:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1548: keyword "msgctxt" unknown
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1548:8: parse error
+.../digikam-kde4/work/digikam-0.10.0-beta2/po/be/digikam.po:1553: keyword "msgctxt" unknown
+.../digikam-kde4/work/.tools/bin/msgfmt: too many errors, aborting
+
+PLIST not filled in for that reason.
