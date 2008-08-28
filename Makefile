@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3016 2008/08/28 06:25:48 makoto Exp $
+# $Id: Makefile,v 1.3017 2008/08/28 16:39:19 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -985,6 +985,7 @@ SUBDIR+=	moto4lin
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
 SUBDIR+=	mp3gain
+SUBDIR+=	mpc-el
 SUBDIR+=	mpg123
 SUBDIR+=	mpg123-0.65
 SUBDIR+=	mpg123-nightly
