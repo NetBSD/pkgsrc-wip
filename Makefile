@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3015 2008/08/28 03:00:27 phonohawk Exp $
+# $Id: Makefile,v 1.3016 2008/08/28 06:25:48 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -220,6 +220,8 @@ SUBDIR+=	cvstrac
 SUBDIR+=	cvsutils
 SUBDIR+=	cycle
 SUBDIR+=	cyrus-imapd
+SUBDIR+=	cygwin
+SUBDIR+=	cygwin-binutils
 SUBDIR+=	d4x
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
