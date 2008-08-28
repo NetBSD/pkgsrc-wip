@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/30 00:42:49 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/28 21:59:29 schnoebe Exp $
 bin/psi
 share/doc/psi/COPYING
 share/doc/psi/README
@@ -185,6 +185,7 @@ share/psi/psi_ru.qm
 share/psi/psi_uk.qm
 share/psi/psi_vi.qm
 share/psi/psi_zh.qm
+share/psi/psi_zh_TW.qm
 @dirrm share/psi/sound
 @dirrm share/psi/iconsets/system/default/whiteboarding
 @dirrm share/psi/iconsets/system/default
