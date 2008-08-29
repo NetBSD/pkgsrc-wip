@@ -1,13 +1,13 @@
 $NetBSD$
 
---- src/include/firebird.h.orig	2007-03-07 15:04:27.000000000 +0000
+--- src/include/firebird.h.orig	2008-01-11 13:56:27.000000000 +0100
 +++ src/include/firebird.h
-@@ -87,7 +87,7 @@ using namespace NAMESPACE;
+@@ -88,7 +88,7 @@ using namespace NAMESPACE;
  #define USE_POSIX_THREADS
  #endif
  #ifdef SUPERCLIENT
--#if defined(LINUX) || defined(FREEBSD) || defined(DARWIN)
-+#if defined(LINUX) || defined(FREEBSD) || defined(DARWIN) || defined(NETBSD)
+-#if defined(LINUX) || defined(FREEBSD) || defined(DARWIN) || defined(HPUX)
++#if defined(LINUX) || defined(FREEBSD) || defined(DARWIN) || defined(HPUX) || defined(NETBSD)
  /* The following ifdef was added to build thread safe gds shared
     library on linux platform. It seems the gdslib works now (20020220)
     with thread enabled applications. Anyway, more tests should be 
