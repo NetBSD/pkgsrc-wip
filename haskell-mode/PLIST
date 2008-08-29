@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/29 02:15:33 phonohawk Exp $
+${EMACS_LISPPREFIX}/haskell-mode/haskell-c.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-c.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-cabal.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-cabal.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-decl-scan.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-decl-scan.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-doc.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-doc.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-font-lock.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-font-lock.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-ghci.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-hugs.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-indent.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-indent.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-mode.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-mode.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-simple-indent.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-simple-indent.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-site-file.el
+${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.el
+${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.elc
+@dirrm ${EMACS_LISPPREFIX}/haskell-mode
