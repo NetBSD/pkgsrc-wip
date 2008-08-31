@@ -6,3 +6,5 @@ There are also some recomended patches to the php, apache and mysql config-files
 The mysql-server can of corse run on another machine then the apache-php combo.
 
 There is a lot left todo. As this is far far away from an auto installation.
+
+- This package has known vulnerabilities, please investigate and fix if possible. (see: http://packetstorm.linuxsecurity.com/0808-exploits/dotproject-sqlxss.txt).
