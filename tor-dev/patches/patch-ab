@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/08/01 22:57:08 athaba Exp $
+$NetBSD: patch-ab,v 1.2 2008/09/01 14:44:29 athaba Exp $
 
 --- src/config/Makefile.in.orig	2008-06-20 08:27:41.000000000 +0200
 +++ src/config/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/08/01 22:57:08 athaba Exp $
  libdir = @libdir@
  libexecdir = @libexecdir@
 -localedir = @localedir@
-+localedir = /usr/pkg/share/locale
++localedir = ${PREFIX}/share/locale
  localstatedir = @localstatedir@
  mandir = @mandir@
  mkdir_p = @mkdir_p@
