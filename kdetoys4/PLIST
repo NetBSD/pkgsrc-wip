@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/07/26 23:09:16 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/09/03 22:29:39 mwdavies Exp $
 bin/amor
 bin/kteatime
 bin/ktux
@@ -34,11 +34,13 @@ share/doc/kde/HTML/en/kteatime/index.docbook
 share/doc/kde/HTML/en/kweather/common
 share/doc/kde/HTML/en/kweather/index.cache.bz2
 share/doc/kde/HTML/en/kweather/index.docbook
+share/icons/hicolor/128x128/apps/kteatime.png
 share/icons/hicolor/16x16/apps/amor.png
 share/icons/hicolor/16x16/apps/kteatime.png
 share/icons/hicolor/16x16/apps/ktux.png
 share/icons/hicolor/16x16/apps/kweather.png
 share/icons/hicolor/22x22/apps/amor.png
+share/icons/hicolor/22x22/apps/kteatime.png
 share/icons/hicolor/32x32/apps/amor.png
 share/icons/hicolor/32x32/apps/kteatime.png
 share/icons/hicolor/32x32/apps/ktux.png
@@ -46,6 +48,8 @@ share/icons/hicolor/32x32/apps/kweather.png
 share/icons/hicolor/48x48/apps/amor.png
 share/icons/hicolor/48x48/apps/kteatime.png
 share/icons/hicolor/48x48/apps/kweather.png
+share/icons/hicolor/64x64/apps/kteatime.png
+share/icons/hicolor/scalable/apps/kteatime.svgz
 share/kde/apps/amor/billyrc
 share/kde/apps/amor/blobrc
 share/kde/apps/amor/bonhommerc
@@ -523,10 +527,13 @@ share/kde4/services/kweatherservice.desktop
 @dirrm share/kde/apps/amor/pics
 @dirrm share/kde/apps/amor
 @comment in kde: @dirrm share/kde/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/kweather
 @dirrm share/doc/kde/HTML/en/kteatime

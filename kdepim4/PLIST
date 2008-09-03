@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/29 22:00:25 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/03 22:26:48 mwdavies Exp $
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -17,6 +17,7 @@ bin/akonaditray
 bin/akregator
 bin/egroupwarewizard
 bin/groupwarewizard
+bin/groupwisewizard
 bin/ical2vcal
 bin/kabc2mutt
 bin/kabcclient
@@ -145,6 +146,7 @@ lib/kde4/akregator_onlinesync_plugin.so
 lib/kde4/akregatorpart.so
 lib/kde4/kabc_akonadi.so
 lib/kde4/kabc_groupdav.so
+lib/kde4/kabc_groupwise.so
 lib/kde4/kabc_kolab.so
 lib/kde4/kabc_scalix.so
 lib/kde4/kabc_slox.so
@@ -172,6 +174,7 @@ lib/kde4/karmpart.so
 lib/kde4/kcal_akonadi.so
 lib/kde4/kcal_blog.so
 lib/kde4/kcal_groupdav.so
+lib/kde4/kcal_groupwise.so
 lib/kde4/kcal_kabc.so
 lib/kde4/kcal_kolab.so
 lib/kde4/kcal_remote.so
@@ -252,15 +255,15 @@ lib/libimap.so.4.1.0
 lib/libkabc_groupdav.so
 lib/libkabc_groupdav.so.4
 lib/libkabc_groupdav.so.4.1.0
-lib/libkabc_groupwise.so
-lib/libkabc_groupwise.so.4
-lib/libkabc_groupwise.so.4.1.0
 lib/libkabc_slox.so
 lib/libkabc_slox.so.4
 lib/libkabc_slox.so.4.1.0
 lib/libkabc_xmlrpc.so
 lib/libkabc_xmlrpc.so.4
 lib/libkabc_xmlrpc.so.4.1.0
+lib/libkabcgroupwise.so
+lib/libkabcgroupwise.so.4
+lib/libkabcgroupwise.so.4.1.0
 lib/libkabckolab.so
 lib/libkabckolab.so.4
 lib/libkabckolab.so.4.1.0
@@ -282,9 +285,6 @@ lib/libkalarm_resources.so.4.1.0
 lib/libkcal_groupdav.so
 lib/libkcal_groupdav.so.4
 lib/libkcal_groupdav.so.4.1.0
-lib/libkcal_groupwise.so
-lib/libkcal_groupwise.so.4
-lib/libkcal_groupwise.so.4.1.0
 lib/libkcal_resourceblog.so
 lib/libkcal_resourceblog.so.4
 lib/libkcal_resourceblog.so.4.1.0
@@ -300,6 +300,9 @@ lib/libkcal_slox.so.4.1.0
 lib/libkcal_xmlrpc.so
 lib/libkcal_xmlrpc.so.4
 lib/libkcal_xmlrpc.so.4.1.0
+lib/libkcalgroupwise.so
+lib/libkcalgroupwise.so.4
+lib/libkcalgroupwise.so.4.1.0
 lib/libkcalkolab.so
 lib/libkcalkolab.so.4
 lib/libkcalkolab.so.4.1.0
@@ -645,6 +648,9 @@ share/doc/kde/HTML/en/ktimetracker/index.cache.bz2
 share/doc/kde/HTML/en/ktimetracker/index.docbook
 share/doc/kde/HTML/en/ktimetracker/karm.png
 share/doc/kde/HTML/en/ktimetracker/systray.png
+share/doc/kde/HTML/en/kwsdl_compiler/common
+share/doc/kde/HTML/en/kwsdl_compiler/index.cache.bz2
+share/doc/kde/HTML/en/kwsdl_compiler/index.docbook
 share/icons/hicolor/128x128/apps/akregator.png
 share/icons/hicolor/128x128/apps/kaddressbook.png
 share/icons/hicolor/128x128/apps/kjots.png
@@ -849,6 +855,7 @@ share/kde/apps/kalarm/kalarmui.rc
 share/kde/apps/karmpart/karmui.rc
 share/kde/apps/kconf_update/kalarm-1.2.1-general.pl
 share/kde/apps/kconf_update/kalarm-1.9.5-defaults.pl
+share/kde/apps/kconf_update/kalarm-2.0.2-general.pl
 share/kde/apps/kconf_update/kalarm-version.pl
 share/kde/apps/kconf_update/kalarm.upd
 share/kde/apps/kconf_update/kmail-3.1-update-new-mail-notification-settings.pl
@@ -1072,7 +1079,7 @@ share/kde/apps/libkholidays/holiday_ie
 share/kde/apps/libkholidays/holiday_il
 share/kde/apps/libkholidays/holiday_is
 share/kde/apps/libkholidays/holiday_it
-share/kde/apps/libkholidays/holiday_ja
+share/kde/apps/libkholidays/holiday_jp
 share/kde/apps/libkholidays/holiday_lt
 share/kde/apps/libkholidays/holiday_mx
 share/kde/apps/libkholidays/holiday_nl
@@ -1395,6 +1402,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/kwsdl_compiler
 @dirrm share/doc/kde/HTML/en/ktimetracker
 @dirrm share/doc/kde/HTML/en/korganizer
 @dirrm share/doc/kde/HTML/en/kontact
