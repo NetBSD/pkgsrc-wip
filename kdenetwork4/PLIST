@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2008/08/01 21:07:33 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/09/03 22:24:45 mwdavies Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
 bin/kppp
 bin/kppplogview
 bin/krdc
+bin/krfb
 bin/winpopup-install.sh
 bin/winpopup-send.sh
 include/kopete/kabcpersistence.h
@@ -188,6 +189,7 @@ share/applications/kde4/kget.desktop
 share/applications/kde4/kopete.desktop
 share/applications/kde4/kppplogview.desktop
 share/applications/kde4/krdc.desktop
+share/applications/kde4/krfb.desktop
 share/dbus-1/interfaces/org.kde.Kopete.xml
 share/dbus-1/interfaces/org.kde.kdnssd.xml
 share/dbus-1/interfaces/org.kde.kopete.Client.xml
@@ -278,6 +280,17 @@ share/doc/kde/HTML/en/krdc/rdp_preferences.png
 share/doc/kde/HTML/en/krdc/vnc_host_configuration.png
 share/doc/kde/HTML/en/krdc/vnc_preferences.png
 share/doc/kde/HTML/en/krdc/windowmode_button.png
+share/doc/kde/HTML/en/krfb/common
+share/doc/kde/HTML/en/krfb/configuration_access.png
+share/doc/kde/HTML/en/krfb/configuration_network.png
+share/doc/kde/HTML/en/krfb/configuration_session.png
+share/doc/kde/HTML/en/krfb/connection.png
+share/doc/kde/HTML/en/krfb/email_invitation.png
+share/doc/kde/HTML/en/krfb/index.cache.bz2
+share/doc/kde/HTML/en/krfb/index.docbook
+share/doc/kde/HTML/en/krfb/invitation_management.png
+share/doc/kde/HTML/en/krfb/personal_invitation.png
+share/doc/kde/HTML/en/krfb/screenshot.png
 share/icons/hicolor/128x128/apps/kget.png
 share/icons/hicolor/128x128/apps/kopete.png
 share/icons/hicolor/128x128/apps/kppp.png
@@ -1272,6 +1285,7 @@ share/kde/apps/kppp/pics/phone.png
 share/kde/apps/krdc/krdcui.rc
 share/kde/apps/krdc/pics/pointcursor.png
 share/kde/apps/krdc/pics/pointcursormask.png
+share/kde/apps/krfb/krfb.notifyrc
 share/kde/apps/remoteview/zeroconf.desktop
 share/kde/config.kcfg/historyconfig.kcfg
 share/kde/config.kcfg/kget.kcfg
@@ -1371,7 +1385,8 @@ share/sounds/Kopete_User_is_Online.ogg
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/remoteview
+@comment in kdebase-runtime: @dirrm share/kde/apps/remoteview
+@dirrm share/kde/apps/krfb
 @dirrm share/kde/apps/krdc/pics
 @dirrm share/kde/apps/krdc
 @dirrm share/kde/apps/kppp/pics
@@ -1571,6 +1586,7 @@ share/sounds/Kopete_User_is_Online.ogg
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/kde/HTML/en/krfb
 @dirrm share/doc/kde/HTML/en/krdc
 @dirrm share/doc/kde/HTML/en/kppp
 @dirrm share/doc/kde/HTML/en/kopete
