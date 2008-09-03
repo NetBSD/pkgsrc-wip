@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/09/03 22:08:15 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/09/03 23:31:17 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -7708,7 +7708,6 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
-${PLIST.smb}@dirrm share/kde/apps/remoteview
 @dirrm share/kde/apps/phonon
 @dirrm share/kde/apps/libphonon
 @comment in kde: @dirrm share/kde/apps/kstyle/themes
