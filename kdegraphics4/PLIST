@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/31 12:16:10 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/09/03 22:20:57 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -63,8 +63,10 @@ lib/kde4/kio_msits.so
 lib/kde4/ksaneplugin.so
 lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
+lib/kde4/okularGenerator_djvu.so
 lib/kde4/okularGenerator_dvi.so
 lib/kde4/okularGenerator_fb.so
+lib/kde4/okularGenerator_ghostview.so
 lib/kde4/okularGenerator_kimgio.so
 lib/kde4/okularGenerator_ooo.so
 lib/kde4/okularGenerator_plucker.so
@@ -109,8 +111,10 @@ share/applications/kde4/ksnapshot.desktop
 share/applications/kde4/okular.desktop
 share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
+share/applications/kde4/okularApplication_djvu.desktop
 share/applications/kde4/okularApplication_dvi.desktop
 share/applications/kde4/okularApplication_fb.desktop
+share/applications/kde4/okularApplication_ghostview.desktop
 share/applications/kde4/okularApplication_kimgio.desktop
 share/applications/kde4/okularApplication_ooo.desktop
 share/applications/kde4/okularApplication_pdf.desktop
@@ -131,6 +135,9 @@ share/doc/kde/HTML/en/gwenview/view_mode.png
 share/doc/kde/HTML/en/kamera/common
 share/doc/kde/HTML/en/kamera/index.cache.bz2
 share/doc/kde/HTML/en/kamera/index.docbook
+share/doc/kde/HTML/en/kgamma/common
+share/doc/kde/HTML/en/kgamma/index.cache.bz2
+share/doc/kde/HTML/en/kgamma/index.docbook
 share/doc/kde/HTML/en/kolourpaint/brush_shapes.png
 share/doc/kde/HTML/en/kolourpaint/color_box.png
 share/doc/kde/HTML/en/kolourpaint/common
@@ -379,6 +386,8 @@ share/kde/apps/libkdcraw/profiles/prophoto.icm
 share/kde/apps/libkdcraw/profiles/srgb-d65.icm
 share/kde/apps/libkdcraw/profiles/srgb.icm
 share/kde/apps/libkdcraw/profiles/widegamut.icm
+share/kde/apps/okular/icons/hicolor/16x16/apps/okular-gv.png
+share/kde/apps/okular/icons/hicolor/32x32/apps/okular-gv.png
 share/kde/apps/okular/part.rc
 share/kde/apps/okular/pics/checkmark.png
 share/kde/apps/okular/pics/circle.png
@@ -409,6 +418,7 @@ share/kde/apps/okular/pics/upleftarrow.png
 share/kde/apps/okular/shell.rc
 share/kde/apps/okular/tools.xml
 share/kde/apps/svgpart/svgpart.rc
+share/kde/config.kcfg/gssettings.kcfg
 share/kde/config.kcfg/okular.kcfg
 share/kde/config/okular.knsrc
 share/kde4/services/ServiceMenus/slideshow.desktop
@@ -420,8 +430,10 @@ share/kde4/services/kgamma.desktop
 share/kde4/services/ksane_scan_service.desktop
 share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
+share/kde4/services/libokularGenerator_djvu.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
 share/kde4/services/libokularGenerator_fb.desktop
+share/kde4/services/libokularGenerator_ghostview.desktop
 share/kde4/services/libokularGenerator_kimgio.desktop
 share/kde4/services/libokularGenerator_ooo.desktop
 share/kde4/services/libokularGenerator_plucker.desktop
@@ -431,8 +443,10 @@ share/kde4/services/libokularGenerator_xps.desktop
 share/kde4/services/msits.protocol
 share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
+share/kde4/services/okularDjvu.desktop
 share/kde4/services/okularDvi.desktop
 share/kde4/services/okularFb.desktop
+share/kde4/services/okularGhostview.desktop
 share/kde4/services/okularKimgio.desktop
 share/kde4/services/okularOoo.desktop
 share/kde4/services/okularPlucker.desktop
@@ -450,6 +464,12 @@ share/kde4/servicetypes/okularGenerator.desktop
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/svgpart
 @dirrm share/kde/apps/okular/pics
+@dirrm share/kde/apps/okular/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/okular/icons/hicolor/32x32
+@dirrm share/kde/apps/okular/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/okular/icons/hicolor/16x16
+@dirrm share/kde/apps/okular/icons/hicolor
+@dirrm share/kde/apps/okular/icons
 @dirrm share/kde/apps/okular
 @dirrm share/kde/apps/libkdcraw/profiles
 @dirrm share/kde/apps/libkdcraw
@@ -494,6 +514,7 @@ share/kde4/servicetypes/okularGenerator.desktop
 @dirrm share/doc/kde/HTML/en/ksnapshot
 @dirrm share/doc/kde/HTML/en/kruler
 @dirrm share/doc/kde/HTML/en/kolourpaint
+@dirrm share/doc/kde/HTML/en/kgamma
 @dirrm share/doc/kde/HTML/en/kamera
 @dirrm share/doc/kde/HTML/en/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/en
