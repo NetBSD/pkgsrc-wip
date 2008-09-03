@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/08/17 02:29:51 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/09/03 22:08:15 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -62,6 +62,7 @@ lib/kde4/kio_nfs.so
 lib/kde4/kio_remote.so
 lib/kde4/kio_settings.so
 lib/kde4/kio_sftp.so
+${PLIST.smb}lib/kde4/kio_smb.so
 lib/kde4/kio_thumbnail.so
 lib/kde4/kio_trash.so
 lib/kde4/kshorturifilter.so
@@ -524,19 +525,12 @@ share/emoticons/kde4/wilted_rose.png
 share/emoticons/kde4/wink.png
 share/examples/kdebase-runtime4/kde-information.menu
 share/icons/default.kde4
-share/icons/hicolor/128x128/apps/khelpcenter.png
 share/icons/hicolor/128x128/apps/knetattach.png
-share/icons/hicolor/16x16/apps/khelpcenter.png
 share/icons/hicolor/16x16/apps/knetattach.png
-share/icons/hicolor/22x22/apps/khelpcenter.png
 share/icons/hicolor/22x22/apps/knetattach.png
-share/icons/hicolor/32x32/apps/khelpcenter.png
 share/icons/hicolor/32x32/apps/knetattach.png
-share/icons/hicolor/48x48/apps/khelpcenter.png
 share/icons/hicolor/48x48/apps/knetattach.png
-share/icons/hicolor/64x64/apps/khelpcenter.png
 share/icons/hicolor/64x64/apps/knetattach.png
-share/icons/hicolor/scalable/apps/khelpcenter.svgz
 share/icons/hicolor/scalable/apps/knetattach.svgz
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
@@ -640,7 +634,6 @@ share/icons/oxygen/128x128/apps/krita.png
 share/icons/oxygen/128x128/apps/ksnapshot.png
 share/icons/oxygen/128x128/apps/ksniffer.png
 share/icons/oxygen/128x128/apps/ksudoku.png
-share/icons/oxygen/128x128/apps/kteatime.png
 share/icons/oxygen/128x128/apps/ktip.png
 share/icons/oxygen/128x128/apps/ktorrent.png
 share/icons/oxygen/128x128/apps/kuickshow.png
@@ -1395,7 +1388,6 @@ share/icons/oxygen/16x16/apps/krita.png
 share/icons/oxygen/16x16/apps/ksnapshot.png
 share/icons/oxygen/16x16/apps/ksniffer.png
 share/icons/oxygen/16x16/apps/ksudoku.png
-share/icons/oxygen/16x16/apps/kteatime.png
 share/icons/oxygen/16x16/apps/ktip.png
 share/icons/oxygen/16x16/apps/ktorrent.png
 share/icons/oxygen/16x16/apps/kuickshow.png
@@ -2205,7 +2197,6 @@ share/icons/oxygen/22x22/apps/krita.png
 share/icons/oxygen/22x22/apps/ksnapshot.png
 share/icons/oxygen/22x22/apps/ksniffer.png
 share/icons/oxygen/22x22/apps/ksudoku.png
-share/icons/oxygen/22x22/apps/kteatime.png
 share/icons/oxygen/22x22/apps/ktip.png
 share/icons/oxygen/22x22/apps/ktorrent.png
 share/icons/oxygen/22x22/apps/kuickshow.png
@@ -3029,7 +3020,6 @@ share/icons/oxygen/32x32/apps/krita.png
 share/icons/oxygen/32x32/apps/ksnapshot.png
 share/icons/oxygen/32x32/apps/ksniffer.png
 share/icons/oxygen/32x32/apps/ksudoku.png
-share/icons/oxygen/32x32/apps/kteatime.png
 share/icons/oxygen/32x32/apps/ktip.png
 share/icons/oxygen/32x32/apps/ktorrent.png
 share/icons/oxygen/32x32/apps/kuickshow.png
@@ -3836,7 +3826,6 @@ share/icons/oxygen/48x48/apps/krita.png
 share/icons/oxygen/48x48/apps/ksnapshot.png
 share/icons/oxygen/48x48/apps/ksniffer.png
 share/icons/oxygen/48x48/apps/ksudoku.png
-share/icons/oxygen/48x48/apps/kteatime.png
 share/icons/oxygen/48x48/apps/ktip.png
 share/icons/oxygen/48x48/apps/ktorrent.png
 share/icons/oxygen/48x48/apps/kuickshow.png
@@ -4419,7 +4408,6 @@ share/icons/oxygen/64x64/apps/krita.png
 share/icons/oxygen/64x64/apps/ksnapshot.png
 share/icons/oxygen/64x64/apps/ksniffer.png
 share/icons/oxygen/64x64/apps/ksudoku.png
-share/icons/oxygen/64x64/apps/kteatime.png
 share/icons/oxygen/64x64/apps/ktip.png
 share/icons/oxygen/64x64/apps/ktorrent.png
 share/icons/oxygen/64x64/apps/kuickshow.png
@@ -5617,7 +5605,6 @@ share/icons/oxygen/scalable/apps/krita.svgz
 share/icons/oxygen/scalable/apps/ksnapshot.svgz
 share/icons/oxygen/scalable/apps/ksniffer.svgz
 share/icons/oxygen/scalable/apps/ksudoku.svgz
-share/icons/oxygen/scalable/apps/kteatime.svgz
 share/icons/oxygen/scalable/apps/ktip.svgz
 share/icons/oxygen/scalable/apps/ktorrent.svgz
 share/icons/oxygen/scalable/apps/kuickshow.svgz
@@ -6760,7 +6747,6 @@ share/kde/apps/khelpcenter/plugins/Scrollkeeper/scrollkeeper.desktop
 share/kde/apps/khelpcenter/plugins/Tutorials/.directory
 share/kde/apps/khelpcenter/plugins/Tutorials/quickstart.desktop
 share/kde/apps/khelpcenter/plugins/Tutorials/visualdict.desktop
-share/kde/apps/khelpcenter/plugins/applets.desktop
 share/kde/apps/khelpcenter/plugins/contact.desktop
 share/kde/apps/khelpcenter/plugins/faq.desktop
 share/kde/apps/khelpcenter/plugins/info.desktop
@@ -6768,6 +6754,7 @@ share/kde/apps/khelpcenter/plugins/kcontrolmodules.desktop
 share/kde/apps/khelpcenter/plugins/kicmodules.desktop
 share/kde/apps/khelpcenter/plugins/kioslaves.desktop
 share/kde/apps/khelpcenter/plugins/links.desktop
+share/kde/apps/khelpcenter/plugins/plasma.desktop
 share/kde/apps/khelpcenter/plugins/support.desktop
 share/kde/apps/khelpcenter/plugins/userguide.desktop
 share/kde/apps/khelpcenter/plugins/welcome.desktop
@@ -6782,9 +6769,11 @@ share/kde/apps/kio_info/kde-info2html
 share/kde/apps/kio_info/kde-info2html.conf
 share/kde/apps/kio_man/kio_man.css
 share/kde/apps/kio_thumbnail/pics/thumbnailfont_7x4.png
+${PLIST.smb}share/kde/apps/konqueror/dirtree/remote/smb-network.desktop
 share/kde/apps/kstyle/themes/oxygen.themerc
 share/kde/apps/libphonon/hardwaredatabase
 share/kde/apps/phonon/phonon.notifyrc
+${PLIST.smb}share/kde/apps/remoteview/smb-network.desktop
 share/kde/autostart/nepomukserver.desktop
 share/kde/config.kcfg/khelpcenter.kcfg
 share/kde/config/emoticons.knsrc
@@ -6942,6 +6931,7 @@ share/kde4/services/searchproviders/wordref.desktop
 share/kde4/services/settings.protocol
 share/kde4/services/sftp.protocol
 share/kde4/services/spellchecking.desktop
+${PLIST.smb}share/kde4/services/smb.protocol
 share/kde4/services/svgthumbnail.desktop
 share/kde4/services/tar.protocol
 share/kde4/services/textthumbnail.desktop
@@ -7718,9 +7708,12 @@ share/sounds/KDE-Window-Shade-Up.ogg
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
+${PLIST.smb}@dirrm share/kde/apps/remoteview
 @dirrm share/kde/apps/phonon
 @dirrm share/kde/apps/libphonon
 @comment in kde: @dirrm share/kde/apps/kstyle/themes
+${PLIST.smb}@dirrm share/kde/apps/konqueror/dirtree/remote
+${PLIST.smb}@dirrm share/kde/apps/konqueror/dirtree
 @dirrm share/kde/apps/kio_thumbnail/pics
 @dirrm share/kde/apps/kio_thumbnail
 @dirrm share/kde/apps/kio_man

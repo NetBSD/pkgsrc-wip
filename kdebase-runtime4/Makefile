@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/26 22:49:38 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/03 22:08:15 mwdavies Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -10,6 +10,8 @@ COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
 DEPENDS+=	htdig>=3.2.0:../../www/htdig-devel
 DEPENDS+=	xine-xcb>=1.1.9:../../wip/xine-xcb
+
+.include "options.mk"
 
 SUBST_CLASSES+=		htdig paths
 SUBST_STAGE.htdig=	post-patch
