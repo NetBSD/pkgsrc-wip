@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/07/29 21:53:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/09/03 22:16:29 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -69,6 +69,7 @@ include/libkiten/EntryList.h
 include/libkiten/HistoryPtrList.h
 include/libkiten/kromajiedit.h
 include/libkiten/libkitenexport.h
+include/marble/AbstractLayerInterface.h
 include/marble/AbstractProjection.h
 include/marble/AbstractProjectionHelper.h
 include/marble/ClipPainter.h
@@ -102,9 +103,12 @@ include/marble/GeoDataStyleSelector.h
 include/marble/GeoDocument.h
 include/marble/GeoPainter.h
 include/marble/MapThemeManager.h
+include/marble/MarbleAbstractFloatItem.h
+include/marble/MarbleAbstractLayer.h
 include/marble/MarbleControlBox.h
 include/marble/MarbleDataFacade.h
 include/marble/MarbleDirs.h
+include/marble/MarbleLayerInterface.h
 include/marble/MarbleMap.h
 include/marble/MarbleNavigator.h
 include/marble/MarbleWidget.h
@@ -3884,6 +3888,7 @@ share/kde/apps/marble/data/svg/application-x-marble.png
 share/kde/apps/marble/data/svg/application-x-marble.svg
 share/kde/apps/marble/data/svg/compass.svg
 share/kde/apps/marble/data/svg/marble-logo-72dpi.png
+share/kde/apps/marble/data/svg/marble-logo-inverted-72dpi.png
 share/kde/apps/marble/data/svg/marble-logo.png
 share/kde/apps/marble/data/svg/marble-logo.svg
 share/kde/apps/marble/data/svg/worldmap.svg
