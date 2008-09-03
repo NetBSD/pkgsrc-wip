@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/07/29 21:41:51 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/09/03 21:53:52 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1699,6 +1699,7 @@ share/kde/apps/cmake/modules/FindCarbon.cmake
 share/kde/apps/cmake/modules/FindDNSSD.cmake
 share/kde/apps/cmake/modules/FindENCHANT.cmake
 share/kde/apps/cmake/modules/FindEigen.cmake
+share/kde/apps/cmake/modules/FindEigen2.cmake
 share/kde/apps/cmake/modules/FindExiv2.cmake
 share/kde/apps/cmake/modules/FindFAM.cmake
 share/kde/apps/cmake/modules/FindFFmpeg.cmake
