@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/04 11:18:38 chet-s Exp $
+
+SHA1 (tracker-0.6.6.tar.gz) = 2a904a29454ec7513ac5ecb91b8bddf0cf92617b
+RMD160 (tracker-0.6.6.tar.gz) = f5a5ae4eecff3ec5136f6a65d44e4b09884bb0c9
+Size (tracker-0.6.6.tar.gz) = 1260741 bytes
+SHA1 (patch-aa) = 19767db83eb272009b456967405f716f7ef22294
+SHA1 (patch-ab) = 8dc19577528dc1f5c32072589495abb3665196ae
+SHA1 (patch-ac) = a4c52fe9d1479626538cd6e79aed6a2f1938f8f1

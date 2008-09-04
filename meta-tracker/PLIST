@@ -1,0 +1,166 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 11:18:38 chet-s Exp $
+bin/o3totxt
+bin/tracker-extract
+bin/tracker-files
+bin/tracker-meta-folder
+bin/tracker-query
+bin/tracker-search
+bin/tracker-stats
+bin/tracker-status
+bin/tracker-tag
+bin/tracker-thumbnailer
+bin/trackerd
+include/libtracker-gtk/tracker-gtk.h
+include/libtracker-gtk/tracker-keyword-store.h
+include/libtracker-gtk/tracker-metadata-tile.h
+include/libtracker-gtk/tracker-tag-bar.h
+include/libtracker-gtk/tracker-ui.h
+include/libtracker-gtk/tracker-utils.h
+include/tracker-client.h
+include/tracker.h
+lib/libtrackerclient.la
+lib/pkgconfig/libtracker-gtk.pc
+lib/pkgconfig/tracker.pc
+lib/tracker/extract-modules/libextract-abw.la
+lib/tracker/extract-modules/libextract-imagemagick.la
+lib/tracker/extract-modules/libextract-mp3.la
+lib/tracker/extract-modules/libextract-mplayer.la
+lib/tracker/extract-modules/libextract-oasis.la
+lib/tracker/extract-modules/libextract-png.la
+lib/tracker/extract-modules/libextract-ps.la
+lib/tracker/extract-modules/libextract-totem.la
+lib/tracker/filters/application/csv_filter
+lib/tracker/filters/application/msword_filter
+lib/tracker/filters/application/pdf_filter
+lib/tracker/filters/application/tab-separated-values_filter
+lib/tracker/filters/application/vnd.ms-excel_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.presentation-template_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.presentation_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.spreadsheet-template_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.spreadsheet_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.text-template_filter
+lib/tracker/filters/application/vnd.oasis.opendocument.text_filter
+lib/tracker/filters/application/vnd.stardivision.writer_filter
+lib/tracker/filters/application/vnd.sun.xml.calc.template_filter
+lib/tracker/filters/application/vnd.sun.xml.calc_filter
+lib/tracker/filters/application/vnd.sun.xml.draw_filter
+lib/tracker/filters/application/vnd.sun.xml.impress.template_filter
+lib/tracker/filters/application/vnd.sun.xml.impress_filter
+lib/tracker/filters/application/vnd.sun.xml.writer.template_filter
+lib/tracker/filters/application/vnd.sun.xml.writer_filter
+lib/tracker/filters/application/x-abiword_filter
+lib/tracker/filters/application/x-gnumeric_filter
+lib/tracker/filters/text/csv_filter
+lib/tracker/filters/text/djvu_filter
+lib/tracker/filters/text/html_filter
+lib/tracker/filters/text/spreadsheet_filter
+lib/tracker/filters/text/tab-separated-values_filter
+lib/tracker/filters/text/x-comma-separated-values_filter
+lib/tracker/filters/text/x-tex_filter
+lib/tracker/filters/text/xml_filter
+lib/tracker/thumbnailers/application/pdf_thumbnailer
+lib/tracker/thumbnailers/application/vnd.oasis.opendocument.graphics_thumbnailer
+lib/tracker/thumbnailers/application/vnd.oasis.opendocument.presentation_thumbnailer
+lib/tracker/thumbnailers/application/vnd.oasis.opendocument.spreadsheet_thumbnailer
+lib/tracker/thumbnailers/application/vnd.oasis.opendocument.text_thumbnailer
+lib/tracker/thumbnailers/image/gif_thumbnailer
+lib/tracker/thumbnailers/image/jpeg_thumbnailer
+lib/tracker/thumbnailers/image/png_thumbnailer
+lib/tracker/thumbnailers/image/tiff_thumbnailer
+man/man1/tracker-extract.1
+man/man1/tracker-files.1
+man/man1/tracker-meta-folder.1
+man/man1/tracker-query.1
+man/man1/tracker-search.1
+man/man1/tracker-stats.1
+man/man1/tracker-status.1
+man/man1/tracker-tag.1
+man/man1/tracker-thumbnailer.1
+man/man1/trackerd.1
+man/man5/tracker.cfg.5
+man/man7/tracker-services.7
+share/dbus-1/services/tracker.service
+share/icons/hicolor/16x16/apps/tracker.png
+share/icons/hicolor/22x22/apps/tracker.png
+share/icons/hicolor/24x24/apps/tracker.png
+share/icons/hicolor/32x32/apps/tracker.png
+share/icons/hicolor/48x48/apps/tracker.png
+share/icons/hicolor/icon-theme.cache
+share/icons/hicolor/scalable/apps/tracker.svg
+share/locale/ar/LC_MESSAGES/tracker.mo
+share/locale/be@latin/LC_MESSAGES/tracker.mo
+share/locale/ca/LC_MESSAGES/tracker.mo
+share/locale/de/LC_MESSAGES/tracker.mo
+share/locale/dz/LC_MESSAGES/tracker.mo
+share/locale/en_GB/LC_MESSAGES/tracker.mo
+share/locale/es/LC_MESSAGES/tracker.mo
+share/locale/et/LC_MESSAGES/tracker.mo
+share/locale/fi/LC_MESSAGES/tracker.mo
+share/locale/fr/LC_MESSAGES/tracker.mo
+share/locale/gl/LC_MESSAGES/tracker.mo
+share/locale/hu/LC_MESSAGES/tracker.mo
+share/locale/it/LC_MESSAGES/tracker.mo
+share/locale/ko/LC_MESSAGES/tracker.mo
+share/locale/lt/LC_MESSAGES/tracker.mo
+share/locale/mk/LC_MESSAGES/tracker.mo
+share/locale/nb/LC_MESSAGES/tracker.mo
+share/locale/nl/LC_MESSAGES/tracker.mo
+share/locale/oc/LC_MESSAGES/tracker.mo
+share/locale/pl/LC_MESSAGES/tracker.mo
+share/locale/pt/LC_MESSAGES/tracker.mo
+share/locale/pt_BR/LC_MESSAGES/tracker.mo
+share/locale/ru/LC_MESSAGES/tracker.mo
+share/locale/sk/LC_MESSAGES/tracker.mo
+share/locale/sl/LC_MESSAGES/tracker.mo
+share/locale/sv/LC_MESSAGES/tracker.mo
+share/locale/zh_CN/LC_MESSAGES/tracker.mo
+share/tracker/languages/stopwords.da
+share/tracker/languages/stopwords.de
+share/tracker/languages/stopwords.en
+share/tracker/languages/stopwords.es
+share/tracker/languages/stopwords.fi
+share/tracker/languages/stopwords.fr
+share/tracker/languages/stopwords.it
+share/tracker/languages/stopwords.nb
+share/tracker/languages/stopwords.nl
+share/tracker/languages/stopwords.pt
+share/tracker/languages/stopwords.ru
+share/tracker/languages/stopwords.sv
+share/tracker/services/application.metadata
+share/tracker/services/audio.metadata
+share/tracker/services/default.metadata
+share/tracker/services/default.service
+share/tracker/services/document.metadata
+share/tracker/services/email.metadata
+share/tracker/services/file.metadata
+share/tracker/services/image.metadata
+share/tracker/services/video.metadata
+share/tracker/sqlite-cache.sql
+share/tracker/sqlite-email.sql
+share/tracker/sqlite-metadata.sql
+share/tracker/sqlite-service-stored-procs.sql
+share/tracker/sqlite-service-triggers.sql
+share/tracker/sqlite-service-types.sql
+share/tracker/sqlite-service.sql
+share/tracker/sqlite-stored-procs.sql
+share/tracker/sqlite-tracker-triggers.sql
+share/tracker/sqlite-tracker.sql
+share/tracker/sqlite-user-data.sql
+share/tracker/tracker-introspect.xml
+@dirrm share/tracker/services
+@dirrm share/tracker/languages
+@dirrm share/tracker
+@dirrm share/icons/hicolor/scalable/apps
+@dirrm share/icons/hicolor/48x48/apps
+@dirrm share/icons/hicolor/32x32/apps
+@dirrm share/icons/hicolor/24x24/apps
+@dirrm share/icons/hicolor/22x22/apps
+@dirrm share/icons/hicolor/16x16/apps
+@dirrm share/icons/hicolor
+@comment in dbus: @dirrm share/dbus-1/services
+@dirrm lib/tracker/thumbnailers/image
+@dirrm lib/tracker/thumbnailers/application
+@dirrm lib/tracker/filters/text
+@dirrm lib/tracker/filters/application
+@dirrm lib/tracker/extract-modules
+@dirrm include/libtracker-gtk

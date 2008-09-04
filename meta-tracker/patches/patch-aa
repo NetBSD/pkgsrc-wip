@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 11:18:38 chet-s Exp $
+--- src/trackerd/tracker-os-dependant-unix.c.orig	2008-06-09 21:48:30.000000000 +0200
++++ src/trackerd/tracker-os-dependant-unix.c	2008-06-09 22:09:53.000000000 +0200
+@@ -26,6 +26,9 @@
+ 
+ #include "tracker-os-dependant.h"
+ 
++#ifndef RLIMIT_AS
++#define RLIMIT_AS RLIMIT_DATA
++#endif
+ 
+ #define MAX_MEM 128
+ #define MAX_MEM_AMD64 512
