@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1 2008/09/04 19:15:01 schnoebe Exp $
+
+--- ylib.py.orig	2008-09-04 11:33:26.000000000 -0500
++++ ylib.py
+@@ -142,8 +142,8 @@ class YahooCon:
+                 if pay[each].has_key(7):
+                     self.roster[pay[each][7]]=('available', typ, status)
+                     if pay[each].has_key(198):
+-                        if pay[each][198] == '1' and pay[each].has_key(197):
+-                            b = avatar.getavatar(pay[each][197], self.dumpProtocol)
++                        if pay[each][198] == '1':
++                            b = avatar.getavatar(pay[each][7], self.dumpProtocol)
+                             if b != None and self.handlers.has_key('avatar'):
+                                 self.handlers['avatar'](self,pay[each][7],b)
+                         elif pay[each][198] == '0':
+@@ -177,8 +177,8 @@ class YahooCon:
+             for each in pay:
+                 if pay[each].has_key(4):
+                     if pay[each].has_key(198):
+-                        if pay[each][198] == '1' and pay[each].has_key(197):
+-                            b = avatar.getavatar(pay[each][197], self.dumpProtocol)
++                        if pay[each][198] == '1':
++                            b = avatar.getavatar(pay[each][7], self.dumpProtocol)
+                             if b != None and self.handlers.has_key('avatar'):
+                                 self.handlers['avatar'](self,pay[each][4],b)
+                         elif pay[each][198] == '0':

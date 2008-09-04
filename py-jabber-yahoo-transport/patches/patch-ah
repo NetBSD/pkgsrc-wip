@@ -1,13 +1,19 @@
-$NetBSD: patch-ah,v 1.1 2008/07/31 15:40:46 schnoebe Exp $
+$NetBSD: patch-ah,v 1.2 2008/09/04 19:15:01 schnoebe Exp $
 
 --- avatar.py.orig	2007-08-03 18:57:29.000000000 -0500
 +++ avatar.py
-@@ -2,7 +2,7 @@ import httplib,sys,traceback
+@@ -1,11 +1,11 @@
+ import httplib,sys,traceback
  
  def getavatar(aid, debug):
-     #the aid value is the Avatar ID. This is given in tag 197
+-    #the aid value is the Avatar ID. This is given in tag 197
 -    conn = httplib.HTTPConnection("img1.avatar.vip.dcn.yahoo.com")
-+    conn = httplib.HTTPConnection("img.avatars.yahoo.com")
++    #the aid value is (now) the Yahoo User id, it is given in tag 7
++    conn = httplib.HTTPConnection("img.msg.yahoo.com")
      if debug: conn.debuglevel=3
      try:
-         conn.request("GET","/users/%s.medium.png"%aid)
+-        conn.request("GET","/users/%s.medium.png"%aid)
++        conn.request("GET","/avatar.php?yids=%s"%aid)
+         r1 = conn.getresponse()
+     except:
+         if debug: traceback.print_exc()

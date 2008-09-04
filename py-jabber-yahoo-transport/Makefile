@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/05/21 20:16:54 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/04 19:15:01 schnoebe Exp $
 
 DISTNAME=		yahoo-transport-0.4
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=		chat python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmpppy/}
@@ -51,13 +51,15 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
 	cd ${WRKSRC} && \
-	for i in ChangeLog `find . -type f -name '*.py' -print` ; do \
+	for i in `find . -type f -name '*.py' -print` ; do \
 	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
 	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
-	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
+	    ${INSTALL_DATA} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	    ${ECHO} "Compiling ${PREFIX}/${TRANSPORTDIR}/$$i." ;\
 	    ${PYTHONBIN} -m py_compile ${PREFIX}/${TRANSPORTDIR}/$$i ;\
-	done
+	done ;\
+	${INSTALL_DATA} ChangeLog ${PREFIX}/${TRANSPORTDIR}/ ;\
+	${INSTALL_SCRIPT} yahoo.py ${PREFIX}/${TRANSPORTDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/config_example.xml \
 						${EGDIR}/yahoo-transport.xml
