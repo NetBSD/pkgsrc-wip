@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/08/26 07:20:16 asau Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/05 12:07:15 asau Exp $
 
-DISTNAME=	openmpi-1.2.7rc5
+DISTNAME=	openmpi-1.2.7
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.2/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,8 +13,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
+#USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 
 TEST_TARGET=	check
