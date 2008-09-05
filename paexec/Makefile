@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2008/06/15 13:37:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/05 09:53:13 cheusov Exp $
 #
 
-DISTNAME=	paexec-0.9.0
+DISTNAME=	paexec-0.10.0
 CATEGORIES=	parallel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
+		http://mova.org/~cheusov/pub/paexec/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/paexec
@@ -57,6 +58,14 @@ post-install:
 		${DESTDIR}${PKGEGDIR}/cc_wrapper/
 	${INSTALL_DATA} ${WRKSRC}/examples/cc_wrapper/func*.c \
 		${DESTDIR}${PKGEGDIR}/cc_wrapper/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/1_div_X/1_div_X_cmd \
+		${DESTDIR}${PKGEGDIR}/1_div_X/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/1_div_X/1_div_X_run \
+		${DESTDIR}${PKGEGDIR}/1_div_X/
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/make_package/make_package_cmd* \
+		${DESTDIR}${PKGEGDIR}/make_package/
+	${INSTALL_DATA} ${WRKSRC}/examples/make_package/make_package_tasks \
+		${DESTDIR}${PKGEGDIR}/make_package/
 
 .if ${SUPPORTED_SYSTEM} == "0"
 .include "../../pkgtools/libnbcompat/inplace.mk"
