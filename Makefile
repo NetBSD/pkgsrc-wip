@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3020 2008/09/05 20:14:22 ghen Exp $
+# $Id: Makefile,v 1.3021 2008/09/06 23:28:31 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -851,7 +851,6 @@ SUBDIR+=	libhttpd
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
-SUBDIR+=	libmtp
 SUBDIR+=	libmusclecard
 SUBDIR+=	libnettle
 SUBDIR+=	libneural
