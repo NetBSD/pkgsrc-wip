@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/04/22 13:13:42 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2008/09/06 10:08:45 cheusov Exp $
 
-SHA1 (nettle-1.14.tar.gz) = d802d3b184765b579d33329941cf3eef043f7b17
-RMD160 (nettle-1.14.tar.gz) = 89edf8cdfcc3c8b10a5d9554d001e96175afbf28
-Size (nettle-1.14.tar.gz) = 793931 bytes
+SHA1 (nettle-1.15.tar.gz) = 0f2d95a859fc64ff3e490f9f2bec0d206ae95a7e
+RMD160 (nettle-1.15.tar.gz) = 8944901d4a856bb25b8e44e420ba4475c0fd0a93
+Size (nettle-1.15.tar.gz) = 829862 bytes

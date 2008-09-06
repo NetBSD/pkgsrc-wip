@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/09/14 06:44:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/06 10:08:45 cheusov Exp $
 
-DISTNAME=	nettle-1.14
+DISTNAME=	nettle-1.15
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel security
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-openssl --enable-shared
