@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/12 21:45:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/06 20:52:57 thomasklausner Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -25,8 +25,8 @@ INFO_FILES=	yes
 
 CONFIGURE_ENV+=	GNUMAKE=gmake
 
-DEPENDS+=	t1utils>=[0-9]*:../../fonts/t1utils
-DEPENDS+=	psutils>=[0-9]*:../../print/psutils
+DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
+DEPENDS+=	psutils-[0-9]*:../../print/psutils
 
 # Use pkgsrc versions instead of the ones shipped with livetex
 CONFIGURE_ARGS+=--with-system-freetype2

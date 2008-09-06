@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/11/10 20:15:56 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/06 20:52:57 thomasklausner Exp $
 #
 
 PKGNAME=	texlive-${TEXLIVE_VERSION}
@@ -22,7 +22,7 @@ PLIST_SRC=	# empty
 
 do-install:	# do nothing
 
-DEPENDS+=	texlive-bin>=[0-9]*:../../wip/texlive-bin
+DEPENDS+=	texlive-bin-[0-9]*:../../wip/texlive-bin
 
 .include "Makefile.common"
 .include "options.mk"
