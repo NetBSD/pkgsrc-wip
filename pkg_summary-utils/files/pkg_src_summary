@@ -59,6 +59,8 @@ OPTIONS:
   -d|--with-deps      also generates summary for dependancies (DEPENDS)
   -D|--with-bdeps     also generates summary for dependancies (BUILD_DEPENDS)
   -A|--with-alldeps   implies -d and -D
+  -m|--multi          generate ASSIGNMENTS field
+                      for multi-variant packages
 EOF
 }
 
@@ -115,6 +117,8 @@ process_options (){
 	    -A|--with-alldeps)
 		with_dep=1
 		with_bdep=1;;
+	    -m)
+	        multi_var=1;;
 	    --)
 		shift
 		break;;
@@ -131,6 +135,14 @@ process_options (){
 }
 
 process_options $PSS_OPTIONS "$@"
+
+if test multi_var = 1; then
+    # VARIANTS7 - artificial field keeping all variable assignments
+    # for multi-variant packages. This should be in pkgsrc but
+    # idea was declined by pkgsrc developers.
+    # http://mail-index.netbsd.org/tech-pkg/2008/07/20/msg001320.html
+    add_fields 'VARIANTS7'
+fi
 
 if echo "$PSS_FIELDS" | grep DESCRIPTION > /dev/null; then
     field_descr=1
@@ -185,13 +197,25 @@ enrich_summary (){
 
 enrich_Makefile (){
     cat <<EOF
+.include "./Makefile"
+
 .PHONY: my-show-vars
 my-show-vars:
 .for VARNAME in \${VARNAMES}
 	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
 .endfor
 
-.include "./Makefile"
+# for multi-variant packages and bulk build software
+.if !empty(PHP_VERSIONS_ACCEPTED)
+VARIANTS7+=   PHP_VERSION_DEFAULT=\${PHP_VERSIONS_ACCEPTED:ts,}
+.endif
+.if !empty(_PYTHON_VERSIONS_ACCEPTED)
+VARIANTS7+=   PYTHON_VERSION_DEFAULT=\${_PYTHON_VERSIONS_ACCEPTED:ts,}
+.endif
+.if !empty(PKG_APACHE_ACCEPTED)
+VARIANTS7+=   PKG_APACHE_DEFAULT=\${PKG_APACHE_ACCEPTED:ts,}
+.endif
+
 EOF
 }
 
@@ -201,24 +225,38 @@ prepand_PLIST () {
 
 cd_and_print_summary (){
     # $1 - pkgpath
-    ( cd $1 && enrich_Makefile |
-	${BMAKE} -f - my-show-vars VARNAMES="$varnames" ) > "$tmpfn" || return 1
+    real_pkgpath="`echo $1 | cut -d: -f1`"
+    if test "$real_pkgpath" = "$1"; then
+	var_assigns=''
+    else
+	var_assigns="`echo $1 | sed -e 's|^.*:||' -e 's|,| |g'`"
+    fi
+
+    ( cd "$real_pkgpath" && enrich_Makefile |
+	${BMAKE} -f - my-show-vars VARNAMES="$varnames" $var_assigns
+	) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1
 
+    # VAR_ASSIGNMENTS
+    if test "$var_assigns"; then
+	printf "ASSIGNMENTS=%s\n" "$var_assigns" >>"$summaryfn" || return 1
+    fi
+
     # CVS_CHECKSUM
     if test "$field_cvs_checksum"; then
-	cvs_checksum $1 > "$tmpfn" || return 1
+	cvs_checksum "$real_pkgpath" > "$tmpfn" || return 1
 	read cksum < "$tmpfn" || return 1
 	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
     fi
 
     # not expanding PLIST yet
     if test "$field_plist"; then
-	plist_fn=$1/PLIST
+	plist_fn="$real_pkgpath/PLIST"
 	if test -n "$make_plist"; then
 	    rm -f "$real_plistfn" || return 1
-	    ( cd $1 && ${BMAKE} plist PLIST="$real_plistfn" ) 1>&2 || return 1
+	    ( cd "$real_pkgpath" && ${BMAKE} plist PLIST="$real_plistfn"
+		) 1>&2 || return 1
 	     prepand_PLIST "$real_plistfn" >> "$summaryfn" || return 1
 	elif test -f $plist_fn; then
 	    prepand_PLIST $plist_fn >>"$summaryfn" || return 1
@@ -325,7 +363,7 @@ else
 fi
 
 ############################################################
-# dependancies
+# dependencies
 
 export PSS_FIELDS
 
