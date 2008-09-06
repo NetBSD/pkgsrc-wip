@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:45:22 milosn Exp $
+lib/io/addons/CGI/_build/dll/libIoCGI.so
+lib/io/addons/CGI/_build/lib/libIoCGI.a
+lib/io/addons/CGI/build.io
+lib/io/addons/CGI/depends
+lib/io/addons/CGI/io/CGI.io
+@dirrm lib/io/addons/CGI/io
+@dirrm lib/io/addons/CGI/_build/lib
+@dirrm lib/io/addons/CGI/_build/dll
+@dirrm lib/io/addons/CGI/_build
+@dirrm lib/io/addons/CGI

@@ -1,0 +1,2 @@
+CGI supports accessing CGI parameters passed in environment variable or
+standard input by a web servers like Apache.
