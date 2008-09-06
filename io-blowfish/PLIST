@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:41:12 milosn Exp $
+lib/io/addons/Blowfish/_build/dll/libIoBlowfish.so
+lib/io/addons/Blowfish/_build/lib/libIoBlowfish.a
+lib/io/addons/Blowfish/build.io
+lib/io/addons/Blowfish/depends
+lib/io/addons/Blowfish/io/Blowfish.io
+@dirrm lib/io/addons/Blowfish/io
+@dirrm lib/io/addons/Blowfish/_build/lib
+@dirrm lib/io/addons/Blowfish/_build/dll
+@dirrm lib/io/addons/Blowfish/_build
+@dirrm lib/io/addons/Blowfish
