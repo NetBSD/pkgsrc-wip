@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:14:57 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/06 20:54:44 thomasklausner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-bsddb-0
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	recht@NetBSD.org

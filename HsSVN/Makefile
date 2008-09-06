@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/20 05:58:41 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/06 20:54:43 thomasklausner Exp $
 #
 
 DISTNAME=	HsSVN-0.3.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=HsSVN/0.3.3/}
 

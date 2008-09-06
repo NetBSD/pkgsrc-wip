@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/06 20:54:43 thomasklausner Exp $
 
 DISTNAME=	mod_encoding-20021209
 PKGNAME=	ap2-encoding-20040616
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://webdav.todo.gr.jp/download/
 

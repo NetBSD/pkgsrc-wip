@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/06 20:54:43 thomasklausner Exp $
 
 DISTNAME=	mod_macro-1.1.5
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.cri.ensmp.fr/~coelho/mod_macro/
 

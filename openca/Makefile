@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/06 20:54:44 thomasklausner Exp $
 
 DISTNAME=	openca-0.9.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openca/}
 
