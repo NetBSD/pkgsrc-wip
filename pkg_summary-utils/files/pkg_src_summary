@@ -136,7 +136,7 @@ process_options (){
 
 process_options $PSS_OPTIONS "$@"
 
-if test multi_var = 1; then
+if test "_$multi_var" = _1; then
     # VARIANTS7 - artificial field keeping all variable assignments
     # for multi-variant packages. This should be in pkgsrc but
     # idea was declined by pkgsrc developers.
@@ -173,6 +173,8 @@ errsfn=$tmp_dir/errors.txt
 summaryfn=$tmp_dir/summary.txt
 tempsummaryfn=$tmp_dir/temp_summary.txt
 real_plistfn=$tmp_dir/real_plist.txt
+multi_pkgs_fn=$tmp_dir/multi_pkgs.txt
+normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 
 ############################################################
 enrich_summary (){
@@ -360,6 +362,77 @@ else
     runpipe0 \
 	packages2stdout $pkgpaths '|' \
 	process_one_by_one > "$partial_summary_fn"
+fi
+
+############################################################
+# multi-variant packages
+summary2all_variants (){
+    awk '
+$1 ~ /PKGPATH=/ {
+   pkgpath = substr($0, 9)
+   next
+}
+
+$1 ~ /VARIANTS7=/ {
+   variants = substr($0, 11)
+   next
+}
+
+NF == 0 {
+   $0 = variants
+   count = 0
+   for (k=1; k <= NF; ++k){
+      values = varname = $k
+      sub(/=.*$/, "", varname)
+      sub(/^[^=]*=/, "", values)
+
+      cnt = split(values, vals, /,/)
+
+      if (count){
+         new_count = count
+         for (i=1; i <= count; ++i){
+            if (!(i in variant)) continue
+
+            for (j=1; j <= cnt; ++j){
+               ++new_count
+               variant [new_count] = (variant [i] "," varname "=" vals [j])
+            }
+            delete variant [i]
+         }
+         count = new_count
+      }else{
+         for (j=1; j <= cnt; ++j){
+            variant [j] = (varname "=" vals [j])
+         }
+         count = cnt
+      }
+   }
+
+   for (i = 1; i <= count; ++i){
+      if (i in variant)
+         print pkgpath ":" variant [i]
+   }
+   pkgpath = variants = ""
+
+   delete variant
+}
+' "$@"
+}
+
+if test "_$multi_var" = _1; then
+    pkg_grep_summary VARIANTS7 '$2 != ""' \
+	< $partial_summary_fn >$multi_pkgs_fn
+
+    if test -s $multi_pkgs_fn; then
+	pkg_grep_summary VARIANTS7 '$2 == ""' \
+	    < $partial_summary_fn >$normal_pkgs_fn
+	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn
+
+	runpipe0 \
+	    summary2all_variants < $multi_pkgs_fn '|' \
+	    pkg_src_summary $make_plist '|' \
+	    grep -v VARIANTS7 >> "$partial_summary_fn"
+    fi
 fi
 
 ############################################################
