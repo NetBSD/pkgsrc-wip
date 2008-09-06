@@ -61,6 +61,7 @@ OPTIONS:
   -A|--with-alldeps   implies -d and -D
   -m|--multi          generate ASSIGNMENTS field
                       for multi-variant packages
+  -M|--MULTI          implies -m and move/add ASSIGNMENTS to PKGPATH field
 EOF
 }
 
@@ -119,6 +120,8 @@ process_options (){
 		with_bdep=1;;
 	    -m)
 	        multi_var=1;;
+	    -M)
+	        multi_var=2;;
 	    --)
 		shift
 		break;;
@@ -136,7 +139,7 @@ process_options (){
 
 process_options $PSS_OPTIONS "$@"
 
-if test "_$multi_var" = _1; then
+if test "$multi_var"; then
     # VARIANTS7 - artificial field keeping all variable assignments
     # for multi-variant packages. This should be in pkgsrc but
     # idea was declined by pkgsrc developers.
@@ -417,7 +420,37 @@ NF == 0 {
 ' "$@"
 }
 
-if test "_$multi_var" = _1; then
+if test "_$multi_var" = _2; then
+    move_ASSIGNMENTS_to_PKGPATH (){
+	awk '
+	$0 ~ /^PKGPATH=/ {
+	   pkgpath = $0
+	   next
+	}
+	$0 ~ /^ASSIGNMENTS=/ {
+	   assigns = substr($0, 13)
+	   gsub(/ /, ",", assigns)
+	   next
+	}
+	NF == 0 {
+	   if (assigns != "")
+	      print pkgpath ":" assigns body "\n"
+	   else
+	      print pkgpath body "\n"
+
+	   pkgpath = assigns = body = ""
+	   next
+	}
+	{ body = body "\n" $0 }
+	' "$@"
+    }
+else
+    move_ASSIGNMENTS_to_PKGPATH (){
+	cat "$@"
+    }
+fi
+
+if test "$multi_var"; then
     pkg_grep_summary VARIANTS7 '$2 != ""' \
 	< $partial_summary_fn >$multi_pkgs_fn
 
@@ -426,10 +459,13 @@ if test "_$multi_var" = _1; then
 	    < $partial_summary_fn >$normal_pkgs_fn
 	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn
 
+	rm $normal_pkgs_fn
+
 	runpipe0 \
 	    summary2all_variants < $multi_pkgs_fn '|' \
 	    pkg_src_summary $make_plist '|' \
-	    grep -v VARIANTS7 >> "$partial_summary_fn"
+	    grep -v VARIANTS7 '|' \
+	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
 fi
 

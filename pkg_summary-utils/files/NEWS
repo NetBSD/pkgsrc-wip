@@ -1,4 +1,49 @@
 ----------------------------------------------------------------------
+Version 0.14.0, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
+
+   pkg_src_summary: added option -M which implies -m and moves/adds
+   ASSIGNMENTS field to PKGPATH.
+
+     Example:
+
+	0 ~>export PSS_FIELDS='PKGPATH PKGNAME'
+	0 ~>pkg_src_summary -M lang/lua www/php-apc www/ap2-python
+	PKGPATH=lang/lua
+	PKGNAME=lua-5.1.3nb1
+
+	PKGPATH=www/php-apc:PHP_VERSION_REQD=4
+	PKGNAME=php4-apc-4.4.8.3.0.16
+
+	PKGPATH=www/php-apc:PHP_VERSION_REQD=5
+	PKGNAME=php5-apc-5.2.6.3.0.16
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
+	PKGNAME=ap2-py25-python-3.2.10
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache2,PYTHON_VERSION_REQD=24
+	PKGNAME=ap2-py24-python-3.2.10
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache2,PYTHON_VERSION_REQD=23
+	PKGNAME=ap2-py23-python-3.2.10
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache22,PYTHON_VERSION_REQD=25
+	PKGNAME=ap22-py25-python-3.2.10
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache22,PYTHON_VERSION_REQD=24
+	PKGNAME=ap22-py24-python-3.2.10
+
+	PKGPATH=www/ap2-python:PKG_APACHE=apache22,PYTHON_VERSION_REQD=23
+	PKGNAME=ap22-py23-python-3.2.10
+
+	0 ~>
+
+----------------------------------------------------------------------
+Version 0.13.1, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
+
+   VARIANTS7 is reimplemented through pbulk's mk/pbulk/pbulk-index.mk.
+   I hope this API it will not change...
+
+----------------------------------------------------------------------
 Version 0.13.0, by Aleksey Cheusov, Sat,  6 Sep 2008 23:05:15 +0300
 
    -----------------
