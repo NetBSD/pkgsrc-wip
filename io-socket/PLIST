@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:57:36 milosn Exp $
+lib/io/addons/Socket/_build/dll/libIoSocket.so
+lib/io/addons/Socket/_build/lib/libIoSocket.a
+lib/io/addons/Socket/build.io
+lib/io/addons/Socket/depends
+lib/io/addons/Socket/io/A0_EventManager.io
+lib/io/addons/Socket/io/A1_Socket.io
+lib/io/addons/Socket/io/A2_Server.io
+lib/io/addons/Socket/io/A3_Host.io
+lib/io/addons/Socket/io/A4_Object.io
+lib/io/addons/Socket/io/DNSResolver.io
+lib/io/addons/Socket/io/IPAddress.io
+lib/io/addons/Socket/io/URL.io
+@dirrm lib/io/addons/Socket/io
+@dirrm lib/io/addons/Socket/_build/lib
+@dirrm lib/io/addons/Socket/_build/dll
+@dirrm lib/io/addons/Socket/_build
+@dirrm lib/io/addons/Socket
