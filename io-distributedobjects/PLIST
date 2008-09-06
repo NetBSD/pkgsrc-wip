@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:55:00 milosn Exp $
+lib/io/addons/DistributedObjects/_build/dll/libIoDistributedObjects.so
+lib/io/addons/DistributedObjects/_build/lib/libIoDistributedObjects.a
+lib/io/addons/DistributedObjects/build.io
+lib/io/addons/DistributedObjects/depends
+lib/io/addons/DistributedObjects/io/DOConnection.io
+lib/io/addons/DistributedObjects/io/DOServer.io
+lib/io/addons/DistributedObjects/io/MDOConnection.io
+lib/io/addons/DistributedObjects/io/MDOServer.io
+@dirrm lib/io/addons/DistributedObjects/io
+@dirrm lib/io/addons/DistributedObjects/_build/lib
+@dirrm lib/io/addons/DistributedObjects/_build/dll
+@dirrm lib/io/addons/DistributedObjects/_build
+@dirrm lib/io/addons/DistributedObjects
