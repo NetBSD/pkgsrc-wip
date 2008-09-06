@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/09/06 11:44:24 cheusov Exp $
 # used by wip/pike-Gettext/Makefile
 # used by wip/pike-Gz/Makefile
 # used by wip/pike-Pipe/Makefile
@@ -7,7 +7,7 @@
 # used by wip/pike-gdbm/Makefile
 # used by wip/pike-mime/Makefile
 
-PIKE_VERSION=	7.6.86
+PIKE_VERSION=	7.6.112
 DISTNAME=	Pike-v${PIKE_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://pike.ida.liu.se/pub/pike/all/${PIKE_VERSION:Q}/
@@ -19,6 +19,8 @@ PATCHDIR=	${PKGDIR}/../../wip/pike-core/patches
 DISTINFO_FILE=	${PKGDIR}/../../wip/pike-core/distinfo
 PIKEDIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${PIKEDIR}/src
+
+#PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison autoconf
 GNU_CONFIGURE=		yes
