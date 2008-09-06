@@ -15,14 +15,14 @@ Suggested package updates
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o directfb-1.0.0
-	o ecasound-2.5.0
+	o ecasound-2.5.2
 	o editline-20080712.2.11
 	o emelfm2-0.4.1
 	o endeavour-2.10.1
 	o f-spot-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.0.3
-	o gambas2-2.8
+	o gambas2-2.8.2
 	o geant-4.9.1p2
 	o gforge-4.5.11
 	o gimmie-0.2.8
@@ -35,7 +35,7 @@ Suggested package updates
 	o gtypist-2.8.1
 	o guichan-0.8.1
 	o hu-go-2.11
-	o ion3-20080707
+	o ion3-20080825
 	o kino-1.0.0
 	o libgksu-2.0.4
 	o libxcb-1.1.90.1
@@ -64,6 +64,7 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.18.3
+	o runawk-0.14.2
 	o sdlmame-0.127
 	o sdlmess-0.127
 	o sendmailX-0.0.0.0
@@ -81,7 +82,7 @@ Suggested package updates
 	o tripwire-2.4.0.1
 	o twinkle-1.3.2
 	o txt2tags-2.3.2
-	o uade-2.11
+	o uade-2.12
 	o uqm-0.6.0
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.2
