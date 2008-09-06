@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/08/12 12:07:39 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.2 2008/09/06 23:27:13 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
 PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libnjb libvisual mp3tunes mysql plasma
@@ -23,7 +23,7 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.6.0nb1
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmtp)
-.include "../../wip/libmtp/buildlink3.mk"
+.include "../../devel/libmtp/buildlink3.mk"
 .endif
 
 #.if !empty(PKG_OPTIONS:Mlibnjb)

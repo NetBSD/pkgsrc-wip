@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:43 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/06 23:27:12 thomasklausner Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
@@ -18,9 +18,9 @@ USE_TOOLS+=perl
 
 DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
-.include "../../wip/libmtp/buildlink3.mk"
 .include "../../wip/libnjb/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
+.include "../../devel/libmtp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
