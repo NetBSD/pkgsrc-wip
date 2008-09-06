@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3024 2008/09/06 23:46:59 milosn Exp $
+# $Id: Makefile,v 1.3025 2008/09/06 23:50:35 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -705,6 +705,7 @@ SUBDIR+=	interbase-docs
 SUBDIR+=	io
 SUBDIR+=	io-blowfish
 SUBDIR+=	io-cgi
+SUBDIR+=	io-continuedfraction
 SUBDIR+=	io-server
 SUBDIR+=	io-vm
 SUBDIR+=	iodine
