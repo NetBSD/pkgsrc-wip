@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/03 17:06:32 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2008/09/06 23:35:08 milosn Exp $
 
-SHA1 (IoVM-2005-05-31.tar.gz) = 6b972eba711d5c22c56f79f949db04760499bbfa
-RMD160 (IoVM-2005-05-31.tar.gz) = 2cfa30226841a1575d92e788b9744880702a7a80
-Size (IoVM-2005-05-31.tar.gz) = 1107556 bytes
+SHA1 (io-20080904.tar.bz2) = cd42e2849ee038d7cfca14a93845c5616debe844
+RMD160 (io-20080904.tar.bz2) = 57e375041e2b3d5ce056cb3343f33e80d559894f
+Size (io-20080904.tar.bz2) = 21497037 bytes
