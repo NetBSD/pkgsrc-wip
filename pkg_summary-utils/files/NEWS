@@ -1,9 +1,87 @@
+----------------------------------------------------------------------
+Version 0.13.0, by Aleksey Cheusov, Sat,  6 Sep 2008 23:05:15 +0300
+
+   -----------------
+   pkg_src_summary: new option -m added that generates summary
+   for all variants of multi-variant packages
+   (Python {23,24,25}, PHP {4,5}, Apache {1.3,2,2.2} etc.)
+
+     Example:
+
+        0 ~>export PSS_FIELDS='PKGPATH PKGNAME'
+        0 ~>time -p ./pkg_src_summary -m lang/lua www/php-apc www/ap2-python
+        PKGPATH=lang/lua
+        PKGNAME=lua-5.1.3nb1
+
+        PKGPATH=www/php-apc
+        PKGNAME=php4-apc-4.4.8.3.0.16
+     => ASSIGNMENTS=PHP_VERSION_REQD=4
+
+        PKGPATH=www/php-apc
+     => PKGNAME=php5-apc-5.2.6.3.0.16
+     => ASSIGNMENTS=PHP_VERSION_REQD=5
+
+        PKGPATH=www/ap2-python
+     => PKGNAME=ap2-py25-python-3.2.10
+     => ASSIGNMENTS=PYTHON_VERSION_REQD=25 PKG_APACHE=apache2
+
+        PKGPATH=www/ap2-python
+     => PKGNAME=ap22-py25-python-3.2.10
+     => ASSIGNMENTS=PYTHON_VERSION_REQD=25 PKG_APACHE=apache22
+
+        PKGPATH=www/ap2-python
+        PKGNAME=ap2-py24-python-3.2.10
+        ASSIGNMENTS=PYTHON_VERSION_REQD=24 PKG_APACHE=apache2
+
+        PKGPATH=www/ap2-python
+        PKGNAME=ap22-py24-python-3.2.10
+        ASSIGNMENTS=PYTHON_VERSION_REQD=24 PKG_APACHE=apache22
+
+        PKGPATH=www/ap2-python
+        PKGNAME=ap2-py23-python-3.2.10
+        ASSIGNMENTS=PYTHON_VERSION_REQD=23 PKG_APACHE=apache2
+
+        PKGPATH=www/ap2-python
+        PKGNAME=ap22-py23-python-3.2.10
+        ASSIGNMENTS=PYTHON_VERSION_REQD=23 PKG_APACHE=apache22
+
+        0 ~>
+
+     See lines with '=>'.
+
+   -----------------
+   pkg_src_summary: the following format of input PKGPATH is supported:
+   real_pkgpath[:var1=value1[,var2=value2[...]]]
+
+     Example:
+
+        0 ~>export PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS'
+        0 ~>pkg_src_summary textproc/dictem:EMACS_TYPE=xemacs
+     => PKGNAME=xemacs-dictem-0.82
+        PKGPATH=textproc/dictem
+     => DEPENDS=dict-client>=1.9.14:../../textproc/dict-client xemacs>=21.4<21.5:../../editors/xemacs  xemacs>=21.4<21.5:../../editors/xemacs
+        BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+     => ASSIGNMENTS=EMACS_TYPE=xemacs
+
+        0 ~>pkg_src_summary www/ap2-wsgi:PYTHON_VERSION_DEFAULT=23,PKG_APACHE_DEFAULT=apache2
+     => PKGNAME=ap2-py23-wsgi-1.3
+        PKGPATH=www/ap2-wsgi
+     => DEPENDS=  python23>=2.3:../../lang/python23 apache>=2.0.51<2.2:../../www/apache2  python23>=2.3.5nb6:../../lang/python23 apache>=2.0.61nb2:../../www/apache2
+        BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base perl>=5.0:../../lang/perl5  checkperms>=1.1:../../sysutils/checkperms
+     => ASSIGNMENTS=PYTHON_VERSION_DEFAULT=23 PKG_APACHE_DEFAULT=apache2
+
+        0 ~>
+
+     See lines with '=>'.
+
+----------------------------------------------------------------------
 Version 0.12.0, by Aleksey Cheusov, Mon,  7 Jul 2008 17:26:35 +0300
 
    minor fixes in pkg_grep_summary
 
    added: pkg_grep_summary.1
 
+----------------------------------------------------------------------
 Version 0.11.0, by Aleksey Cheusov, Sat, 14 Jun 2008 15:33:06 +0300
 
    pkg_src_summary:
@@ -13,6 +91,7 @@ Version 0.11.0, by Aleksey Cheusov, Sat, 14 Jun 2008 15:33:06 +0300
       dependancies, -D is for BUILD_DEPENDS and -A is for both. See
       pkg_src_summary(1) for details.
 
+----------------------------------------------------------------------
 Version 0.10.0, by Aleksey Cheusov, Sat, 14 Jun 2008 13:30:04 +0300
 
    added: pkg_summary-utils(7) that describes what pkg_summary-utils
@@ -37,6 +116,7 @@ Version 0.10.0, by Aleksey Cheusov, Sat, 14 Jun 2008 13:30:04 +0300
       a list of fields listed in -f|--fields option may be separated
       by comma, not only space.
 
+----------------------------------------------------------------------
 Version 0.9.0, by Aleksey Cheusov, Sat, 14 Jun 2008 10:38:55 +0300
 
    ADDED: CVS_CHECKSUM field to pkg_src_summary. This gives a way to
@@ -58,6 +138,7 @@ Version 0.9.0, by Aleksey Cheusov, Sat, 14 Jun 2008 10:38:55 +0300
       packages with the same versions but different CVS_CHECKSUM provided
       that CVS_CHECKSUM is set in both compared packages.
 
+----------------------------------------------------------------------
 Version 0.8.0, by Aleksey Cheusov
 
    FIXED: pkg_src_summary pkgpath
@@ -81,6 +162,7 @@ Version 0.8.0, by Aleksey Cheusov
       added option -p|--make-plist for using 'bmake plist'
       instead 'cat PLIST'. @directives are removed.
 
+----------------------------------------------------------------------
 Version 0.7.0, by Aleksey Cheusov, Sat, 10 May 2008 12:43:07 +0300
 
    pkg_src_summary is now "distributed" tool, i.e. it can build
@@ -104,6 +186,7 @@ Version 0.7.0, by Aleksey Cheusov, Sat, 10 May 2008 12:43:07 +0300
    pkg_update_src_summary: -i|--fields options specify a list of
    generated fields.
 
+----------------------------------------------------------------------
 Version 0.6.2, by Aleksey Cheusov
 
    grepping functionality of pkg_grep_summary has been moved to a
@@ -111,17 +194,20 @@ Version 0.6.2, by Aleksey Cheusov
    in pkg_refresh_summary and pkg_update_src_summary use
    pkg_grep_summary.awk now.
 
+----------------------------------------------------------------------
 Version 0.6.1, by Aleksey Cheusov, Wed,  7 May 2008 23:07:00 +0300
 
    README file added. There are available a few examples how to use
    all these tools separately and together . You can use it as a
    titorial.
 
+----------------------------------------------------------------------
 Version 0.6.0, by Aleksey Cheusov, Wed,  7 May 2008 21:53:35 +0300
 
    NEW tool: pkg_grep_summary
      Run 'pkg_grep_summary -h' for a documentation.
 
+----------------------------------------------------------------------
 Version 0.5.1, by Aleksey Cheusov, Mon,  5 May 2008 01:00:43 +0300
 
    FIXED: pkg_update_summary fails under Linux, Solaris, Interix and
@@ -135,6 +221,7 @@ Version 0.5.1, by Aleksey Cheusov, Mon,  5 May 2008 01:00:43 +0300
 
    Minor fixes in documentation ans NEWS
 
+----------------------------------------------------------------------
 Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
 
    Lots of tasks from TODO are implemented.
@@ -175,28 +262,33 @@ Version 0.5.0, by Aleksey Cheusov, Sun, 27 Apr 2008 14:37:46 +0300
       - In case pkg_src_fetch_var failes pkg_micro_src_summary fallbacks
         to pkg_src_summary.
 
+----------------------------------------------------------------------
 Version 0.4.6, by Aleksey Cheusov, Sun, 13 Apr 2008 14:56:41 +0300
 
    fix for pkg_summary4view: doesn't depend on input fields order.
    fix for pkg_src_summary: PKGNAME and PKGPATH are printed first.
 
+----------------------------------------------------------------------
 Version 0.4.5, by Aleksey Cheusov, Sat, 13 Apr 2008 00:43:22 +0300
 
    Both pkg_micro_src_summary and pkg_src_summary generate
    nicely formatted bmake failures to stderr.
    (will be used by future versions of distbb)
 
+----------------------------------------------------------------------
 Version 0.4.4, by Aleksey Cheusov, Sat, 12 Apr 2008 19:53:22 +0300
 
    lots of fixes and improvements in manual pages
    minors fixes in utilities
 
+----------------------------------------------------------------------
 Version 0.4.3, by Aleksey Cheusov, Sat, 12 Apr 2008 18:00:50 +0300
 
    added:
       - pkg_list_all_pkgs.1
       - pkg_refresh_summary.1
 
+----------------------------------------------------------------------
 Version 0.4.2, by Aleksey Cheusov, Wed,  9 Apr 2008 00:34:58 +0300
 
    pkg_src_fetch_var:
@@ -210,11 +302,13 @@ Version 0.4.2, by Aleksey Cheusov, Wed,  9 Apr 2008 00:34:58 +0300
         -f|--fields is for specifying fields to be included
         to the summary, PKGNAME and PKGPATH by default
 
+----------------------------------------------------------------------
 Version 0.4.1, by Aleksey Cheusov, Wed,  9 Apr 2008 23:14:03 +0300
 
    ADDED: -f|--fields=<fields> option to pkg_src_fetc_var
    clean-ups
 
+----------------------------------------------------------------------
 Version 0.4.0, by Aleksey Cheusov
 
    first publicly available release (with name pkg_summary-utils)
