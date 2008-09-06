@@ -64,7 +64,10 @@ while test $# -ne 0; do
     shift
 done
 
-test $# -eq 2
+if test $# -ne 2; then
+    usage
+    exit 1
+fi
 
 field=$1
 condition="$2"
