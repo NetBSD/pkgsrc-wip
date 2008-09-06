@@ -199,8 +199,6 @@ enrich_summary (){
 
 enrich_Makefile (){
     cat <<EOF
-.include "./Makefile"
-
 .PHONY: my-show-vars
 my-show-vars:
 .for VARNAME in \${VARNAMES}
@@ -208,15 +206,11 @@ my-show-vars:
 .endfor
 
 # for multi-variant packages and bulk build software
-.if !empty(PHP_VERSIONS_ACCEPTED)
-VARIANTS7+=   PHP_VERSION_REQD=\${PHP_VERSIONS_ACCEPTED:ts,}
+.for i in \${_PBULK_MULTI}
+.if !empty(\${_PBULK_MULTI_LIST.\${i}})
+VARIANTS7+=	\${_PBULK_MULTI_VAR.\${i}}=\${\${_PBULK_MULTI_LIST.\${i}}:ts,}
 .endif
-.if !empty(_PYTHON_VERSIONS_ACCEPTED)
-VARIANTS7+=   PYTHON_VERSION_REQD=\${_PYTHON_VERSIONS_ACCEPTED:ts,}
-.endif
-.if !empty(PKG_APACHE_ACCEPTED)
-VARIANTS7+=   PKG_APACHE=\${PKG_APACHE_ACCEPTED:ts,}
-.endif
+.endfor
 
 EOF
 }
@@ -234,8 +228,12 @@ cd_and_print_summary (){
 	var_assigns="`echo $1 | sed -e 's|^.*:||' -e 's|,| |g'`"
     fi
 
+    extra_mk=''
+    if test -f mk/pbulk/pbulk-index.mk; then
+	extra_mk='-f ../../mk/pbulk/pbulk-index.mk'
+    fi
     ( cd "$real_pkgpath" && enrich_Makefile |
-	${BMAKE} -f - my-show-vars VARNAMES="$varnames" $var_assigns
+	${BMAKE} -f ./Makefile $extra_mk -f - my-show-vars VARNAMES="$varnames" $var_assigns
 	) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1

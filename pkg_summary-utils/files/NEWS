@@ -9,7 +9,7 @@ Version 0.13.0, by Aleksey Cheusov, Sat,  6 Sep 2008 23:05:15 +0300
      Example:
 
         0 ~>export PSS_FIELDS='PKGPATH PKGNAME'
-        0 ~>time -p ./pkg_src_summary -m lang/lua www/php-apc www/ap2-python
+        0 ~>./pkg_src_summary -m lang/lua www/php-apc www/ap2-python
         PKGPATH=lang/lua
         PKGNAME=lua-5.1.3nb1
 
