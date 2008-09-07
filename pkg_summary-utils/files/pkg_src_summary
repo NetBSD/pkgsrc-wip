@@ -367,6 +367,8 @@ fi
 
 ############################################################
 # multi-variant packages
+export PSS_FIELDS
+
 summary2all_variants (){
     awk '
 $1 ~ /PKGPATH=/ {
@@ -471,8 +473,6 @@ fi
 
 ############################################################
 # dependencies
-
-export PSS_FIELDS
 
 extra_deps_fn=$tmp_dir/extra_deps.txt
 
