@@ -1,0 +1,3 @@
+Picasaweb is a service hosted by Google. It's a service for storing
+images and share them with friends. This Perl module provides access to
+its features.
