@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/02 16:41:08 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/07 23:02:09 pettai Exp $
 #
 
 DISTNAME=		gallery-2.2.5-full
@@ -15,9 +15,10 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/gallery2
 
+DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.0.4:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=5.0.4:../../devel/php-gettext
 DEPENDS+=		${PHP_PKG_PREFIX}-{,mysql,pgsql}:../../databases/php-mysql
-DEPENDS+=		{mysql-,pgsql-}server-[0-9]*:../../databases/mysql5-server
+#DEPENDS+=		{mysql-,pgsql-}server-[0-9]*:../../databases/mysql5-server
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
@@ -38,8 +39,7 @@ OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/gallery2.conf
 SUBST_FILES.paths+=	${WRKSRC}/config.php
-SUBST_SED.paths+=	-e 's,@G2DIR@,${G2DIR},g'
-SUBST_SED.paths+=	-e 's,@G2DATA@,${G2DATA},g'
+SUBST_VARS.paths+=	G2DIR G2DATA
 SUBST_STAGE.paths=	post-patch
 
 INSTALLATION_DIRS=	share/examples/gallery2
