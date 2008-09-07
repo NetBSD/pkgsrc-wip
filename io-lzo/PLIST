@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/07 16:56:52 milosn Exp $
+lib/io/addons/LZO/_build/dll/libIoLZO.so
+lib/io/addons/LZO/_build/lib/libIoLZO.a
+lib/io/addons/LZO/build.io
+lib/io/addons/LZO/depends
+lib/io/addons/LZO/io/LZO.io
+@dirrm lib/io/addons/LZO/io
+@dirrm lib/io/addons/LZO/_build/lib
+@dirrm lib/io/addons/LZO/_build/dll
+@dirrm lib/io/addons/LZO/_build
+@dirrm lib/io/addons/LZO
