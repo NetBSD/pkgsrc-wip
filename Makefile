@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3036 2008/09/07 16:56:00 milosn Exp $
+# $Id: Makefile,v 1.3037 2008/09/07 16:58:12 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -710,6 +710,7 @@ SUBDIR+=	io-contracts
 SUBDIR+=	io-distributedobjects
 SUBDIR+=	io-editline
 SUBDIR+=	io-fnmatch
+SUBDIR+=	io-lzo
 SUBDIR+=	io-md5
 SUBDIR+=	io-sha1
 SUBDIR+=	io-socket
