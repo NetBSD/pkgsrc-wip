@@ -1,3 +1,0 @@
-install .a and .h files from the IoServer directory
-
-make io-server and io-desktop be dependent from io-vm  or just different packages? (talk to devs)
