@@ -25,10 +25,13 @@ grep_summary__skip == 1 && NF > 0 {
 	next
 }
 
-($1 == grep_summary__field) || ("" == grep_summary__field) {
-	$1=$1
+{
+	fname = $1
 	fvalue = $0
 	sub(/^[^=]*=/, "", fvalue)
+}
+
+($1 == grep_summary__field) || ("" == grep_summary__field) {
 	if (grep_summary__skip == -1){
 		update_skip()
 	}
@@ -40,7 +43,7 @@ grep_summary__skip == 0 && NF > 0 {
 }
 
 {
-	grep_summary__fields [$1] = $2
+	grep_summary__fields [$1] = fvalue
 }
 
 grep_summary__skip == -1 && NF > 0 {
