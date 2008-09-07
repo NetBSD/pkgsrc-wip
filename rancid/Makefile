@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/03 15:44:27 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/07 10:21:56 pettai Exp $
 #
 
 DISTNAME=		rancid-2.3.1
 CATEGORIES=		net
-MASTER_SITES=		http://www.shrubbery.net/rancid/
+MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
 MAINTAINER=		pettai@nordu.net
-HOMEPAGE=		ftp://ftp.shrubbery.net/pub/rancid/
+HOMEPAGE=		http://www.shrubbery.net/rancid/
 COMMENT=		Really Awesome New Cisco confIg Differ
 #LICENSE=		gnu-gpl-v2
 LICENSE=		rancid-license
