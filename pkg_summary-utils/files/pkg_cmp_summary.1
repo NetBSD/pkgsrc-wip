@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.6 2008/06/14 10:27:34 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.7 2008/09/07 18:17:38 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -44,6 +44,9 @@ display help message
 .It Fl p
 use PKGPATH:PKGBASE pair for identifing a package, by default only PKGBASE
 is used to identify the package.
+.It Fl m
+for comparing summaries for multi-variant packages
+(PKGPATH=category/name:variable_assignments format of PKGPATH field)
 .It Fl c
 use CVS_CHECKSUM field for comparing in addition to PKGNAME (and PKGPATH)
 .El

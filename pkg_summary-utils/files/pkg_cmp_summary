@@ -58,6 +58,7 @@ BEGIN {
 			++skip
 		}else if (ARGV [i] ~ /^(-m|--multi)$/){
 			with_multivar = 1
+			with_pkgpath  = 1
 			ARGV [i] = ""
 
 			++skip

@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.15.0, by Aleksey Cheusov, Sun,  7 Sep 2008 21:04:34 +0300
+
+   pkg_grep_summary: in order to support summaries for multi-variant
+   packages it is strongly recommented to use 'fvalue' variable in
+   condition, not $2. Man page and README update accordingly.
+
+   pkg_cmp_summary: -m option added for comparing summaries for
+   multi-variant packages
+   (PKGPATH=category/name:variable_assignments format).
+
+----------------------------------------------------------------------
 Version 0.14.0, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
 
    pkg_src_summary: added option -M which implies -m and moves/adds
