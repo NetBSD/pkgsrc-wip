@@ -1,20 +1,14 @@
-An open source implementation of the Sender ID specification as defined by the
-Internet Engineering Task Force's (IETF).
+The sid-milter package is an open source implementation of the Sender-ID and
+SPF sender authentication systems.
 
-The Sender ID proposal includes three different specifications:
-draft-lyon-senderid-core-01.txt
-draft-lyon-senderid-pra-01.txt
-draft-schlitt-spf-classic-02.txt
+Sender-ID and SPF have both been published by the IETF (RFC4406 and RFC4408,
+respectively) as experimental proposals.
 
-This implementation is part of the Sendmail Messaging Integrity program, a
-comprehensive testing initiative designed to gather real-world usage data by
-evaluating several aspects of various leading sender authentication schemes
-against a wide range of SMTP software operating today.
+This package consists of a library that implements the record parsers needed
+to provide the authentication service, and a milter-based filter application
+that can plug in to the sendmail MTA to provide that service to sufficiently
+recent sendmail and postfix MTAs.
 
-This software is being provided to the open source community for the purposes
-of testing the DomainKeys approach against various implementations of mail
-transport agents, mail list managers, forwarding services, and various other
-SMTP software.
-
-THIS IS PRE-RELEASE SOFTWARE, and should not be used in any critical
-production environments.
+An optional asynchronous resolver library is also provided to work around
+limitations of the basic BIND resolver which comes installed on most
+systems.
