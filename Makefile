@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3030 2008/09/07 00:08:00 milosn Exp $
+# $Id: Makefile,v 1.3031 2008/09/07 00:09:38 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -702,7 +702,7 @@ SUBDIR+=	imgseek
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
 #SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
-SUBDIR+=	io
+#SUBDIR+=	io			# not a package, same as jabberd bellow
 SUBDIR+=	io-blowfish
 SUBDIR+=	io-cgi
 SUBDIR+=	io-continuedfraction
