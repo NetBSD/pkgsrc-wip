@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/01/08 17:18:04 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/07 11:24:36 thomasklausner Exp $
 #
 
 DISTNAME=	oops-1.5.24
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://zipper.paco.net/~igor/oops/
 

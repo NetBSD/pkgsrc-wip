@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/10/14 00:19:37 adrian_p Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/07 11:24:36 thomasklausner Exp $
 #
 
 DISTNAME=	sks-1.0.9
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://savannah.nongnu.org/download/sks/
 EXTRACT_SUFX=	.tgz
