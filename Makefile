@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3031 2008/09/07 00:09:38 milosn Exp $
+# $Id: Makefile,v 1.3032 2008/09/07 14:51:43 uhabel Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1306,6 +1306,7 @@ SUBDIR+=	p5-PDF-Reuse
 SUBDIR+=	p5-PDF-Reuse-Barcode
 SUBDIR+=	p5-PDF-Table
 SUBDIR+=	p5-PDL
+SUBDIR+=	p5-Picasa
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
 SUBDIR+=	p5-Parallel-ForkManager
