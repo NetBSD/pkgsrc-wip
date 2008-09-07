@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/07 00:00:30 milosn Exp $
+lib/io/addons/Zlib/_build/dll/libIoZlib.so
+lib/io/addons/Zlib/_build/lib/libIoZlib.a
+lib/io/addons/Zlib/build.io
+lib/io/addons/Zlib/depends
+lib/io/addons/Zlib/io/Zlib.io
+@dirrm lib/io/addons/Zlib/io
+@dirrm lib/io/addons/Zlib/_build/lib
+@dirrm lib/io/addons/Zlib/_build/dll
+@dirrm lib/io/addons/Zlib/_build
+@dirrm lib/io/addons/Zlib
