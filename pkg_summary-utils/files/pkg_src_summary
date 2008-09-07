@@ -451,17 +451,17 @@ else
 fi
 
 if test "$multi_var"; then
-    pkg_grep_summary VARIANTS7 '$2 != ""' \
+    pkg_grep_summary VARIANTS7 'fvalue != ""' \
 	< $partial_summary_fn >$multi_pkgs_fn
 
     if test -s $multi_pkgs_fn; then
-	pkg_grep_summary VARIANTS7 '$2 == ""' \
+	pkg_grep_summary VARIANTS7 'fvalue == ""' \
 	    < $partial_summary_fn >$normal_pkgs_fn
-	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn
+	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn || true
 
 	rm $normal_pkgs_fn
 
-	runpipe0 \
+	runpipe_re '0 0 [01] 0' \
 	    summary2all_variants < $multi_pkgs_fn '|' \
 	    pkg_src_summary $make_plist '|' \
 	    grep -v VARIANTS7 '|' \

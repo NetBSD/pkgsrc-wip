@@ -36,13 +36,13 @@ OPTIONS:
   -h|--help        display this message
 
 EXAMPLES:
-  pkg_grep_summary 'PKGNAME' '\$2 ~ /judy/' \\
+  pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'PKGPATH' '\$2 ~ /^lang\//' \\
+  pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\//' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'DEPENDS' '\$2 ~ /libX/' \\
+  pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
-  pkg_grep_summary 'COMMENT' 'toupper(\$2) ~ /DNS/' \\
+  pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
 EOF
 }

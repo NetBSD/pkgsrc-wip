@@ -26,6 +26,9 @@ grep_summary__skip == 1 && NF > 0 {
 }
 
 ($1 == grep_summary__field) || ("" == grep_summary__field) {
+	$1=$1
+	fvalue = $0
+	sub(/^[^=]*=/, "", fvalue)
 	if (grep_summary__skip == -1){
 		update_skip()
 	}

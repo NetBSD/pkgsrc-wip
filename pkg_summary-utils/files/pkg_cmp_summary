@@ -35,6 +35,8 @@ OPTIONS:\n\
   -h|--help            display this help\n\
   -p|--with-pkgpath    use PKGPATH:PKGBASE pair for identifing a package\n\
   -c|--use-checksum    also use CVS_CHECKSUM field in comparing packages\n\
+  -m|--multi           support multi-variant packages, that is packages\n\
+                        with building options in PKGPATH section\n\
 " > "/dev/stderr"
 }
 
@@ -51,6 +53,11 @@ BEGIN {
 			++skip
 		}else if (ARGV [i] ~ /^(-c|--use-checksum)$/){
 			use_checksum = 1
+			ARGV [i] = ""
+
+			++skip
+		}else if (ARGV [i] ~ /^(-m|--multi)$/){
+			with_multivar = 1
 			ARGV [i] = ""
 
 			++skip
@@ -84,22 +91,29 @@ use_checksum && $0 ~ /^CVS_CHECKSUM=/ {
 
 with_pkgpath && $0 ~ /^PKGPATH=/ {
 	pkgpath = trim(substr($0, 9))
+	full_pkgpath = pkgpath
+	if (with_multivar && pkgpath ~ /:/){
+		sub(/:.*$/, "", pkgpath)
+	}
 	next
 }
 
 NF == 0 {
-	# option PKGPATH
-	if (with_pkgpath){
-		pkgname = pkgpath " " pkgname
-	}
-
 	# ver
 	ver = pkgname
 	sub(/^.*-/, "", ver)
 
 	# pkgbase
-	pkgbase = pkgname
-	sub(/-[^-]+$/, "", pkgbase)
+	sub(/-[^-]+$/, "", pkgname)
+
+	# option PKGPATH
+	if (with_pkgpath){
+		pkgbase      = pkgpath      " " pkgname
+		full_pkgbase = full_pkgpath " " pkgname
+	}else{
+		pkgbase      = pkgname
+		full_pkgbase = pkgname
+	}
 
 	# current checksum
 	curr_checksum = checksum
@@ -114,6 +128,9 @@ NF == 0 {
 			duplicates [pkgbase] += 1
 		}else{
 			names [pkgbase] = ver
+			if (with_multivar && pkgpath != full_pkgpath){
+				full_pkgpaths [pkgbase] = full_pkgbase
+			}
 
 			if (use_checksum){
 				checksums [pkgbase] = curr_checksum
@@ -128,7 +145,8 @@ NF == 0 {
 		}
 
 		if (! (pkgbase in names)){
-			print "+", pkgbase, ver
+			print "+", full_pkgbase, ver
+
 			next
 		}
 
@@ -145,7 +163,7 @@ NF == 0 {
 			}
 		}
 
-		print res, pkgbase, ver1, ver
+		print res, full_pkgbase, ver1, ver
 	}
 
 	next
@@ -154,7 +172,11 @@ NF == 0 {
 END {
 	for (pkgbase in names){
 		if (! (pkgbase in present)){
-			print "-", pkgbase, names [pkgbase]
+			if (pkgbase in full_pkgpaths)
+				print "-", full_pkgpaths [pkgbase], names [pkgbase]
+			else
+				print "-", pkgbase, names [pkgbase]
+
 			delete duplicates [pkgbase]
 		}else if (pkgbase in duplicates){
 			print duplicates [pkgbase]+1, pkgbase
