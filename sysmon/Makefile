@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/02 20:25:40 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/07 16:37:03 pettai Exp $
 #
 
 DISTNAME=		sysmon-0.92.2
@@ -10,6 +10,10 @@ HOMEPAGE=		http://www.sysmon.org/
 COMMENT=		Small and fast network monitoring tool
 
 GNU_CONFIGURE=		yes
+
+BUILD_DEFS+=		IPV6_READY
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/sysmon
 SMDOC=			${PREFIX}/share/doc/sysmon
@@ -33,4 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/sysmon.man \
 			${PREFIX}/${PKGMANDIR}/man8/sysmon.8
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
