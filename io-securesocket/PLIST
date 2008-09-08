@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 22:42:24 milosn Exp $
+lib/io/addons/SecureSocket/_build/dll/libIoSecureSocket.so
+lib/io/addons/SecureSocket/_build/lib/libIoSecureSocket.a
+lib/io/addons/SecureSocket/build.io
+lib/io/addons/SecureSocket/depends
+lib/io/addons/SecureSocket/io/Certificate.io
+lib/io/addons/SecureSocket/io/SecureClient.io
+lib/io/addons/SecureSocket/io/SecureServer.io
+lib/io/addons/SecureSocket/io/SecureSocket.io
+@dirrm lib/io/addons/SecureSocket/io
+@dirrm lib/io/addons/SecureSocket/_build/lib
+@dirrm lib/io/addons/SecureSocket/_build/dll
+@dirrm lib/io/addons/SecureSocket/_build
+@dirrm lib/io/addons/SecureSocket
