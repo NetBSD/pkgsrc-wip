@@ -1,0 +1,24 @@
+# $NetBSD: buildlink3.mk,v 1.1 2008/09/08 22:31:58 milosn Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+IOSOCKET_BUILDLINK3_MK:=	${IOSOCKET_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	io-socket
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nio-socket}
+BUILDLINK_PACKAGES+=	io-socket
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}io-socket
+
+.if !empty(IOSOCKET_BUILDLINK3_MK:M+)
+BUILDLINK_API_DEPENDS.io-socket+=	io-socket>=20080904
+BUILDLINK_ABI_DEPENDS.io-socket+=	io-socket>=20080904
+BUILDLINK_PKGSRCDIR.io-socket?=		../../wip/io-socket
+
+BUILDLINK_LIBDIRS.io-socket+=		lib/io/addons/Socket/_build/dll
+BUILDLINK_INCDIRS.io-socket+=		include/io/Socket
+
+.endif	# IOSOCKET_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:57:36 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/08 22:31:58 milosn Exp $
+include/io/Socket/IPAddress.h
+include/io/Socket/IoDNS.h
+include/io/Socket/IoEvent.h
+include/io/Socket/IoEventManager.h
+include/io/Socket/IoIPAddress.h
+include/io/Socket/IoSocket.h
+include/io/Socket/LocalNameServers.h
+include/io/Socket/Socket.h
 lib/io/addons/Socket/_build/dll/libIoSocket.so
 lib/io/addons/Socket/_build/lib/libIoSocket.a
 lib/io/addons/Socket/build.io
@@ -16,3 +24,4 @@ lib/io/addons/Socket/io/URL.io
 @dirrm lib/io/addons/Socket/_build/dll
 @dirrm lib/io/addons/Socket/_build
 @dirrm lib/io/addons/Socket
+@dirrm include/io/Socket
