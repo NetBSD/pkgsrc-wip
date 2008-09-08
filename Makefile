@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3041 2008/09/08 17:05:38 pettai Exp $
+# $Id: Makefile,v 1.3042 2008/09/08 17:07:14 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1307,6 +1307,7 @@ SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-SMTP-TLS
+SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-Net-Z3950-ZOOM
 SUBDIR+=	p5-News-Newsrc
