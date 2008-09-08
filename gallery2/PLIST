@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/02 16:41:12 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/08 08:46:47 pettai Exp $
 share/examples/gallery2/gallery2.conf
+share/examples/gallery2/config.php
 share/gallery2/LICENSE
 share/gallery2/MANIFEST
 share/gallery2/README.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/07 23:02:09 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/08 08:46:47 pettai Exp $
 #
 
 DISTNAME=		gallery-2.2.5-full
@@ -20,6 +20,8 @@ DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=5.0.4:../../devel/php-gettext
 DEPENDS+=		${PHP_PKG_PREFIX}-{,mysql,pgsql}:../../databases/php-mysql
 #DEPENDS+=		{mysql-,pgsql-}server-[0-9]*:../../databases/mysql5-server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS+=		VARBASE
@@ -29,18 +31,21 @@ G2DIR=			${PREFIX}/share/gallery2
 DATADIR=		${VARBASE}/db/gallery2
 G2DATA=			${DATADIR}/g2data
 
+CONF_FILES_PERMS=	${DESTDIR}${EGDIR}/config.php ${DESTDIR}${G2DIR}/config.php \
+			${ROOT_USER} ${ROOT_GROUP} 0644
+
 MESSAGE_SUBST+=		G2DIR=${G2DIR}
 MESSAGE_SUBST+=		G2DATA=${G2DATA}
 FILES_SUBST+=		G2DIR=${G2DIR}
 
-OWN_DIRS=		${G2DIR} ${DATADIR}
-OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/gallery2.conf
-SUBST_FILES.paths+=	${WRKSRC}/config.php
+SUBST_FILES.paths+=	${WRKDIR}/config.php
 SUBST_VARS.paths+=	G2DIR G2DATA
 SUBST_STAGE.paths=	post-patch
+
+#OWN_DIRS=		${G2DIR} ${DATADIR}
+OWN_DIRS_PERMS+=	${G2DATA} ${APACHE_USER} ${APACHE_GROUP} 755
 
 INSTALLATION_DIRS=	share/examples/gallery2
 INSTALLATION_DIRS+=	share/gallery2
@@ -48,13 +53,13 @@ INSTALLATION_DIRS+=	${G2DATA}
 
 post-extract:
 	${CP} ${FILESDIR}/gallery2.conf ${WRKDIR}/
-	${CP} ${FILESDIR}/config.php ${WRKSRC}/config.php
+	${CP} ${FILESDIR}/config.php ${WRKDIR}/
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/gallery2.conf ${EGDIR}/gallery2.conf
-	${CP} -R ${WRKSRC}/* ${G2DIR}
-	${CHMOD} 666 ${G2DIR}/config.php
-	${INSTALL_DATA} ${FILESDIR}/.htaccess ${G2DIR}/.htaccess
+	${INSTALL_DATA} ${WRKDIR}/gallery2.conf ${DESTDIR}${EGDIR}/gallery2.conf
+	${INSTALL_DATA} ${WRKDIR}/config.php ${DESTDIR}${EGDIR}/config.php
+	${CP} -R ${WRKSRC}/* ${DESTDIR}${G2DIR}
+	${INSTALL_DATA} ${FILESDIR}/.htaccess ${DESTDIR}${G2DIR}/.htaccess
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
