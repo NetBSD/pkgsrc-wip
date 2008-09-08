@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 22:37:16 milosn Exp $
+lib/io/addons/Range/_build/dll/libIoRange.so
+lib/io/addons/Range/_build/lib/libIoRange.a
+lib/io/addons/Range/build.io
+lib/io/addons/Range/depends
+lib/io/addons/Range/io/Extras.io
+lib/io/addons/Range/io/Range.io
+@dirrm lib/io/addons/Range/io
+@dirrm lib/io/addons/Range/_build/lib
+@dirrm lib/io/addons/Range/_build/dll
+@dirrm lib/io/addons/Range/_build
+@dirrm lib/io/addons/Range
