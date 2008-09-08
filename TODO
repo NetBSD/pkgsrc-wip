@@ -48,9 +48,9 @@ Suggested package updates
 	o mixxx-1.6.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
-	o muine-0.8.9
+	o muine-0.8.3
 	o mupen64-0.5
-	o nemo-0.2.2
+	o nemo-0.2.3
 	o opal-2.2.11
 	o openct-0.6.14
 	o osmose-0.8.1
@@ -62,7 +62,9 @@ Suggested package updates
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-1.0
+	o rasqal-0.9.16
 	o rdup-0.6.1
+	o redland-1.0.8.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.18.3
