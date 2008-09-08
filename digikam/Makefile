@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/28 21:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/08 10:58:32 thomasklausner Exp $
 #
 
 DISTNAME=	digikam-0.10.0-beta2
@@ -16,12 +16,28 @@ USE_LANGUAGES=		c c++
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../wip/automoc4
 
+REPLACE_PERL=	utilities/scripts/digitaglinktree
 USE_CMAKE=	yes
+USE_PERL=	yes
+USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	msgfmt pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+# As of at least NetBSD-4.0 the shipped gettext cannot handle the .po files,
+# so we strip out usage of the newer features (context and fuzzy matches)
+.if (${OPSYS} == "NetBSD")
+post-patch:
+	for f in ${WRKSRC}/po/*/digikam.po ; do \
+	    mv $$f $$f.original ; \
+	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
+.endif
 
 .include "options.mk"
 
 .include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/kdemultimedia4/buildlink3.mk"
 .include "../../wip/kdegraphics4/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
