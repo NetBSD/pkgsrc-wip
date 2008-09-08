@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 22:49:29 milosn Exp $
+lib/io/addons/Syslog/_build/dll/libIoSyslog.so
+lib/io/addons/Syslog/_build/lib/libIoSyslog.a
+lib/io/addons/Syslog/build.io
+lib/io/addons/Syslog/depends
+@dirrm lib/io/addons/Syslog/_build/lib
+@dirrm lib/io/addons/Syslog/_build/dll
+@dirrm lib/io/addons/Syslog/_build
+@dirrm lib/io/addons/Syslog
