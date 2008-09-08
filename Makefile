@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3039 2008/09/08 17:01:44 pettai Exp $
+# $Id: Makefile,v 1.3040 2008/09/08 17:03:32 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1599,6 +1599,7 @@ SUBDIR+=	qvamps
 SUBDIR+=	r8s
 SUBDIR+=	rabbit
 SUBDIR+=	radare
+SUBDIR+=	rancid
 SUBDIR+=	rar3
 SUBDIR+=	rasqal
 SUBDIR+=	ratproxy
