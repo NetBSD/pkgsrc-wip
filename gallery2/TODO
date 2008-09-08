@@ -1,2 +1,2 @@
-- Fix config.php deinstallation issue
-- Perhaps make the package less/or more dependant?
+- Find a way to apply the patches for the NetBSD logos without getting 
+  complaint from either pkg_delete or gallery2's consistancy check

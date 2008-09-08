@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/09/02 16:41:12 pettai Exp $
+$NetBSD: MESSAGE,v 1.2 2008/09/08 16:41:01 pettai Exp $
 
 gallery2 is now installed in the ${G2DIR} directory,
 and gallery2's data directory is ${G2DATA}.
@@ -13,8 +13,20 @@ And don't forget to read the security information regarding gallery2:
 
 	http://codex.gallery2.org/Gallery2:Security
 
-
 More tips? Read more about optional (but useful) gallery2 plugins here:
 http://codex.gallery2.org/Gallery2:Installation_Requirements#Optional_Items
+
+I've included ZwahlenDesign's NetBSD footer logos
+(see http://www.netbsd.org/gallery/other-logos.html)
+and put those in the gallery2 images directory.
+
+I've also added some *NetBSD-patch files to use for getting a netbsd logo
+in the footer. Those must be applied _after_ the web part of the setup of
+gallery2 is finished. (otherwise gallery2 will complain during the
+installation process about source files being tampered with...)
+
+# cd ${G2DIR}
+# patch < GalleryTemplateAdapter.class.NetBSD-patch
+# patch < ALL.theme.tpl.NetBSD-patch
 
 ===========================================================================

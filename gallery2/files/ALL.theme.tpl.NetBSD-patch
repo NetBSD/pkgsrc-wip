@@ -1,0 +1,90 @@
+--- themes/ajaxian/templates/theme.tpl.orig	2008-09-06 12:36:23.000000000 +0200
++++ themes/ajaxian/templates/theme.tpl	2008-09-06 12:42:51.000000000 +0200
+@@ -86,6 +86,7 @@
+ 	<p>{g->logoButton type="validation"}
+ 	{g->logoButton type="gallery2"}
+ 	{g->logoButton type="gallery2-version"}</p>
++	{g->logoButton type="netbsd"}</p>
+ 
+ 	<p id="footerSystemLinks">
+ 	  {g->block type="core.SystemLinks"
+--- themes/carbon/templates/theme.tpl.orig	2008-09-06 12:34:59.000000000 +0200
++++ themes/carbon/templates/theme.tpl	2008-09-06 12:37:28.000000000 +0200
+@@ -111,6 +111,7 @@
+ 	      {g->logoButton type="gallery2"}
+ 	      {g->logoButton type="gallery2-version"}
+ 	      {g->logoButton type="donate"}
++	      {g->logoButton type="netbsd"}
+ 	    </td>
+ 	    <td align="right">
+ 	      {strip}
+--- themes/classic/templates/theme.tpl.orig	2008-09-06 12:35:43.000000000 +0200
++++ themes/classic/templates/theme.tpl	2008-09-06 12:41:13.000000000 +0200
+@@ -65,6 +65,7 @@
+ 	{g->logoButton type="gallery2"}
+ 	{g->logoButton type="gallery2-version"}
+         {g->logoButton type="donate"}
++        {g->logoButton type="netbsd"}
+       </div>
+       {/if}  {* end of full screen check *}
+     </div>
+--- themes/floatrix/templates/theme.tpl.orig	2008-09-06 12:36:08.000000000 +0200
++++ themes/floatrix/templates/theme.tpl	2008-09-06 12:42:25.000000000 +0200
+@@ -82,6 +82,7 @@
+ 	{g->logoButton type="gallery2"}
+ 	{g->logoButton type="gallery2-version"}
+ 	{g->logoButton type="donate"}
++	{g->logoButton type="netbsd"}
+       </div>
+       {/if}  {* end of full screen check *}
+     </div>
+--- themes/hybrid/templates/theme.tpl.orig	2008-09-06 12:35:13.000000000 +0200
++++ themes/hybrid/templates/theme.tpl	2008-09-06 12:37:54.000000000 +0200
+@@ -72,6 +72,7 @@
+ 	  {g->logoButton type="gallery2"}
+ 	  {g->logoButton type="gallery2-version"}
+           {g->logoButton type="donate"}
++          {g->logoButton type="netbsd"}
+ 	</div>
+       {/if}
+     </div>
+--- themes/matrix/templates/theme.tpl.orig	2008-09-06 12:35:55.000000000 +0200
++++ themes/matrix/templates/theme.tpl	2008-09-06 12:41:40.000000000 +0200
+@@ -65,6 +65,7 @@
+ 	{g->logoButton type="gallery2"}
+ 	{g->logoButton type="gallery2-version"}
+ 	{g->logoButton type="donate"}
++	{g->logoButton type="netbsd"}
+       </div>
+       {/if}  {* end of full screen check *}
+     </div>
+--- themes/siriux/templates/theme.tpl.orig	2008-09-06 11:42:02.000000000 +0200
++++ themes/siriux/templates/theme.tpl	2008-09-06 11:45:31.000000000 +0200
+@@ -63,6 +63,7 @@
+ 	  {g->logoButton type="gallery2"}
+ 	  {g->logoButton type="gallery2-version"}
+           {g->logoButton type="donate"}
++          {g->logoButton type="netbsd"}
+ 	</div>
+       </div>
+       {/if}  {* end of full screen check *}
+--- themes/slider/templates/theme.tpl.orig	2008-09-06 12:35:28.000000000 +0200
++++ themes/slider/templates/theme.tpl	2008-09-06 12:38:18.000000000 +0200
+@@ -78,6 +78,7 @@
+ 	  {g->logoButton type="gallery2"}
+ 	  {g->logoButton type="gallery2-version"}
+           {g->logoButton type="donate"}
++          {g->logoButton type="netbsd"}
+ 	</div>
+       {/if}
+     </div>
+--- themes/tile/templates/theme.tpl.orig	2008-09-06 12:37:02.000000000 +0200
++++ themes/tile/templates/theme.tpl	2008-09-06 12:43:19.000000000 +0200
+@@ -72,6 +72,7 @@
+ 	  {g->logoButton type="gallery2"}
+ 	  {g->logoButton type="gallery2-version"}
+           {g->logoButton type="donate"}
++          {g->logoButton type="netbsd"}
+ 	</div>
+       {/if}
+     </div>

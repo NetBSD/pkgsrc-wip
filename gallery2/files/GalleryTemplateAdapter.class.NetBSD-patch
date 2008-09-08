@@ -1,0 +1,21 @@
+--- ./modules/core/classes/GalleryTemplateAdapter.class.orig	2008-09-06 11:16:52.000000000 +0200
++++ ./modules/core/classes/GalleryTemplateAdapter.class	2008-09-06 12:32:34.000000000 +0200
+@@ -694,6 +694,18 @@ class GalleryTemplateAdapter {
+ 		    $core->translate('G2.2: Double Double'),
+ 		    'border-style: none',
+ 		    $useLink ? '' : '');
++
++	case 'netbsd':
++	    return sprintf(
++		    '%s<img src="%s" alt="%s" title="%s" style="%s" width="80" height="15"/>%s',
++		    $useLink ? '<a href="http://www.netbsd.org">' : '',
++		    $urlGenerator->generateUrl(
++			array('href' => 'images/ngnetbsd.png')),
++		    $core->translate('Of course it runs NetBSD'),
++		    $core->translate('Of course it runs NetBSD'),
++		    'border-style: none',
++		    $useLink ? '' : '');
++
+ 	}
+     }
+ 

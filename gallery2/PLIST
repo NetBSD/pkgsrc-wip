@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/08 08:46:47 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/08 16:41:01 pettai Exp $
 share/examples/gallery2/gallery2.conf
 share/examples/gallery2/config.php
 share/gallery2/LICENSE
@@ -13,9 +13,15 @@ share/gallery2/images/galleryLogo_sm.png
 share/gallery2/images/gulftech.png
 share/gallery2/images/intershot.png
 share/gallery2/images/xhtml10.png
+share/gallery2/images/nnetbsd.png
+share/gallery2/images/ngnetbsd.png
+share/gallery2/images/poweredn.png
+share/gallery2/images/poweredng.png
 share/gallery2/index.php
 share/gallery2/init.inc
 share/gallery2/.htaccess
+share/gallery2/ALL.theme.tpl.NetBSD-patch
+share/gallery2/GalleryTemplateAdapter.class.NetBSD-patch
 share/gallery2/install/GalleryStub.class
 share/gallery2/install/InstallStep.class
 share/gallery2/install/StatusTemplate.class
