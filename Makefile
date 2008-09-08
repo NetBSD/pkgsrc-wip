@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3046 2008/09/08 22:43:46 milosn Exp $
+# $Id: Makefile,v 1.3047 2008/09/08 22:47:48 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -719,6 +719,8 @@ SUBDIR+=	io-rational
 SUBDIR+=	io-securesocket
 SUBDIR+=	io-sha1
 SUBDIR+=	io-socket
+SUBDIR+=	io-sqldatabase
+SUBDIR+=	io-rational
 SUBDIR+=	io-vm
 SUBDIR+=	io-zlib
 SUBDIR+=	iodine
