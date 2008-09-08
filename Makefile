@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3040 2008/09/08 17:03:32 pettai Exp $
+# $Id: Makefile,v 1.3041 2008/09/08 17:05:38 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1286,6 +1286,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-Da
 SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
+SUBDIR+=	p5-List-Compare
 SUBDIR+=	p5-MARC-Charset
 SUBDIR+=	p5-MARC-Record
 SUBDIR+=	p5-MARC-XML
