@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/08 10:58:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/08 14:58:08 thomasklausner Exp $
 #
 
 DISTNAME=	digikam-0.10.0-beta2
@@ -18,9 +18,8 @@ BUILD_DEPENDS+=	automoc4>=0.9.83:../../wip/automoc4
 
 REPLACE_PERL=	utilities/scripts/digitaglinktree
 USE_CMAKE=	yes
-USE_PERL=	yes
 USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	msgfmt pkg-config
+USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
