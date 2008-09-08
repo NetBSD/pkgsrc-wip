@@ -14,6 +14,7 @@ Suggested package updates
 	o commoncpp2-1.6.3
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o digikam-0.10.0beta3
 	o directfb-1.0.0
 	o ecasound-2.5.2
 	o editline-20080712.2.11
@@ -23,6 +24,7 @@ Suggested package updates
 	o fakenes-0.5.7
 	o firebird-2.0.3
 	o gambas2-2.8.2
+	o gcc42-4.2.4
 	o geant-4.9.1p2
 	o gforge-4.5.11
 	o gimmie-0.2.8
@@ -88,6 +90,7 @@ Suggested package updates
 	o xcb-proto-1.2
 	o xcb-util-0.2.1
 	o xinetd-2.3.14
+	o xmonad-0.8
 	o zinf-2.2.5
 
 Suggested infrastructure improvements
