@@ -1,0 +1,4 @@
+A high quality and reasonably fast random number generator based on Makoto
+Matsumoto, Takuji Nishimura, and Eric Landry's implementation of the Mersenne
+Twister algorithm. The default seed is and xor of the ANSI C time() and clock()
+return values.
