@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/07/31 09:27:54 obache Exp $
+# $NetBSD: options.mk,v 1.9 2008/09/09 01:02:41 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -104,6 +104,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 APPLICATIONS_DIR=	Applications
 NS_APPBINDIR=		nextstep/Emacs.app/Contents/MacOS
 PLIST_SRC+=		PLIST.cocoa
+CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
 .  else
 .include "../../devel/gnustep-base/buildlink3.mk"
 MAKE_FILE=		Makefile
