@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/09/09 22:50:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2008/09/09 23:01:20 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.6-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.phys.uu.nl/~rombouts/pdnsd/
 COMMENT=	Pdnsd is a DNS resolver
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
