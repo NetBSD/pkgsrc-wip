@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/09/09 22:45:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/09 22:50:11 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.6-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -55,7 +55,7 @@ PDNSDCACHE=		"${VARBASE}/run/pdnsd"
 PDNSDCACHE=		"${VARBASE}/pdnsd"
 .endif
 
-OWN_DIRS_PERMS+=	"${PDNSDCACHE}" ${PDNSD_USER} ${PDNSD_GROUP} 755
+OWN_DIRS_PERMS+=	"${PDNSDCACHE}" ${PDNSD_USER} ${PDNSD_GROUP} 750
 CONFIGURE_ARGS+=	--with-cachedir="${PDNSDCACHE}"
 
 .include "../../mk/pthread.buildlink3.mk"
