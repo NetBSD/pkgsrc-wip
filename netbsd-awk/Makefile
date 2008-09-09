@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/07/22 17:04:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/09 20:44:13 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20080721
@@ -25,7 +25,7 @@ CFLAGS+=	-I.
 
 MAKE_FLAGS+=	LIBS=${LIBS:Q}
 MAKE_FLAGS+=	CC=${CC:Q}
-MAKE_FLAGS+=	CFLAGS=${CFLAGS}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	YHEADER=yes
 
 post-patch:
