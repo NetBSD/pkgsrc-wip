@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/09/09 22:35:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/09 22:45:51 cheusov Exp $
 
 DISTNAME=	pdnsd-1.2.6-par
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-par//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
 		http://members.home.nl/p.a.rombouts/pdnsd/releases/
@@ -25,7 +25,7 @@ PDNSD_GROUP?=		nogroup
 PDNSD_GROUP?=		pdnsd
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .if ${OPSYS} == "IRIX" || ${OPSYS} == "Dragonfly"
 CONFIGURE_ARGS+=	--with-target=BSD # just give it a try
 .endif
