@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3050 2008/09/08 22:57:21 milosn Exp $
+# $Id: Makefile,v 1.3051 2008/09/09 20:05:15 shindenmorr Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1912,6 +1912,7 @@ SUBDIR+=	wkf
 SUBDIR+=	wmii-devel
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
+SUBDIR+=	wordpress
 SUBDIR+=	workrave
 SUBDIR+=	wput
 SUBDIR+=	wrcs
