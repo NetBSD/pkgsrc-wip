@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3051 2008/09/09 20:05:15 shindenmorr Exp $
+# $Id: Makefile,v 1.3052 2008/09/09 21:57:02 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -274,6 +274,7 @@ SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
+SUBDIR+=	dwm
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen
