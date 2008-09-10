@@ -1,4 +1,4 @@
-# $NetBSD: addon.mk,v 1.3 2008/09/08 22:29:09 milosn Exp $
+# $NetBSD: addon.mk,v 1.4 2008/09/10 19:59:59 milosn Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -48,6 +48,9 @@ do-install:
 	fi
 	if [ -e ${SRC_DIR}/depends ]; then \
 		${CP} -f ${SRC_DIR}/depends ${TARGET_DIR}/; \
+	fi
+	if [ -e ${SRC_DIR}/protos ]; then \
+		${CP} -f ${SRC_DIR}/protos ${TARGET_DIR}/; \
 	fi
 	if [ -e ${SRC_DIR}/build.io ]; then \
 		${CP} -f ${SRC_DIR}/build.io ${TARGET_DIR}/; \
