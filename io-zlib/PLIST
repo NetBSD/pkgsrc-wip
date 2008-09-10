@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/07 00:00:30 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/10 20:29:39 milosn Exp $
 lib/io/addons/Zlib/_build/dll/libIoZlib.so
 lib/io/addons/Zlib/_build/lib/libIoZlib.a
 lib/io/addons/Zlib/build.io
 lib/io/addons/Zlib/depends
 lib/io/addons/Zlib/io/Zlib.io
+lib/io/addons/Zlib/protos
 @dirrm lib/io/addons/Zlib/io
 @dirrm lib/io/addons/Zlib/_build/lib
 @dirrm lib/io/addons/Zlib/_build/dll
