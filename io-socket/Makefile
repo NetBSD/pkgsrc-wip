@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/09/08 22:31:58 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/10 20:08:58 milosn Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-socket-${IO_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 
 MAINTAINER=		milos.negovanovic@googlemail.com
