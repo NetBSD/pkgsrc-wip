@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3053 2008/09/12 20:46:04 ficovh Exp $
+# $Id: Makefile,v 1.3054 2008/09/12 21:07:53 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1191,7 +1191,7 @@ SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Application-Plugin-TT
 SUBDIR+=	p5-CGI-Untaint
-SUBDIR+=	p5-CGI-Untaint-Date
+SUBDIR+=	p5-CGI-Untaint-date
 SUBDIR+=	p5-CGI-Untaint-email
 SUBDIR+=	p5-CLASS
 SUBDIR+=	p5-CPANPLUS
