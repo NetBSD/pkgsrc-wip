@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2008/09/12 21:05:31 ficovh Exp $
+
+SHA1 (CGI-Untaint-date-1.00.tar.gz) = bb2ee0c5324fdd6a6c48214b62162dd79d5330b8
+RMD160 (CGI-Untaint-date-1.00.tar.gz) = 6b660af57cad246e8fc7edb8003f36e6df316c4f
+Size (CGI-Untaint-date-1.00.tar.gz) = 2940 bytes
