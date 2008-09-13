@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Version 0.16.0, by Aleksey Cheusov, Sat, 13 Sep 2008 11:23:57 +0300
 
-  A code that moves/add ASSIGNMENTS to PKGPATH is separated into a
+  A code that moves/adds ASSIGNMENTS to PKGPATH is separated into a
   separate script "pkg_assignments2pkgpath". One application for it is
   distbb.
 
@@ -29,11 +29,11 @@ Version 0.15.0, by Aleksey Cheusov, Sun,  7 Sep 2008 21:04:34 +0300
 
    pkg_grep_summary: in order to support summaries for multi-variant
    packages it is strongly recommented to use 'fvalue' variable in
-   condition, not $2. Man page and README update accordingly.
+   condition, not $2. Man page and README updated accordingly.
 
    pkg_cmp_summary: -m option added for comparing summaries for
    multi-variant packages
-   (PKGPATH=category/name:variable_assignments format).
+   (PKGPATH=CATEGORY/PACKAGE[:var1=value1[,var2=value2[...]]] format).
 
 ----------------------------------------------------------------------
 Version 0.14.0, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
@@ -78,7 +78,7 @@ Version 0.14.0, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
 Version 0.13.1, by Aleksey Cheusov, Sun,  7 Sep 2008 01:25:37 +0300
 
    VARIANTS7 is reimplemented through pbulk's mk/pbulk/pbulk-index.mk.
-   I hope this API it will not change...
+   I hope this API will not change...
 
 ----------------------------------------------------------------------
 Version 0.13.0, by Aleksey Cheusov, Sat,  6 Sep 2008 23:05:15 +0300
