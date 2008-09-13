@@ -1,4 +1,30 @@
 ----------------------------------------------------------------------
+Version 0.16.0, by Aleksey Cheusov, Sat, 13 Sep 2008 11:23:57 +0300
+
+  A code that moves/add ASSIGNMENTS to PKGPATH is separated into a
+  separate script "pkg_assignments2pkgpath". One application for it is
+  distbb.
+
+     Sample of usage: pkg_src_summary ... | pkg_assignments2pkgpath
+
+
+  pkg_src_summary: PKGPATH enriched with variable assignments and
+  passed to pkg_src_summary may contain spaces. They should be
+  represented as ~. In output spaces are also encoded as ~.
+
+     Example:
+
+       $ export PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS'
+       $ pkg_src_summary sysutils/mc:PKG_OPTIONS.mc=-x11~-slang,PKGNAME=mc-myown-4.6.1nb4
+       PKGNAME=mc-myown-4.6.1nb4
+       PKGPATH=sysutils/mc
+       DEPENDS= perl>=5.0:../../lang/perl5 unzip-[0-9]*:../../archivers/unzip  glib2>=2.4.0:../../devel/glib2  glib2>=2.14.3:../../devel/glib2
+       BUILD_DEPENDS= pkg-config>=0.19:../../devel/pkg-config  checkperms>=1.1:../../sysutils/checkperms
+       ASSIGNMENTS=PKG_OPTIONS.mc=-x11~-slang PKGNAME=mc-4.6.1nb4
+
+       $
+
+----------------------------------------------------------------------
 Version 0.15.0, by Aleksey Cheusov, Sun,  7 Sep 2008 21:04:34 +0300
 
    pkg_grep_summary: in order to support summaries for multi-variant
