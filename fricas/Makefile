@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/26 18:20:51 asau Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/13 17:11:58 asau Exp $
 
 PKGNAME=		fricas-1.0.3
 DISTNAME=		${PKGNAME}-full
@@ -10,7 +10,7 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
