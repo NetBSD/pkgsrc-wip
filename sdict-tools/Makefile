@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/04/09 09:53:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/13 12:44:58 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/ptksdict/sdict-tools/}
 CATEGORIES=	textproc
 MASTER_SITES=	http://sdict.com/rsc/files/
@@ -19,9 +20,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 #DEPENDS+=	p5-IO-File-[0-9]*:../../devel/p5-IO-File
-#DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
+DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
-#DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
 NO_BUILD=	yes
 
