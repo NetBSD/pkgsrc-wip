@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/09 20:04:03 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/14 08:52:06 shindenmorr Exp $
 
 DISTNAME=	latest
 PKGNAME=	wordpress-${VERSION}
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 WRKSRC=		${WRKDIR}/wordpress
 INSTALLATION_DIRS=	${PREFIX}/share/wordpress/ ${PREFIX}/share/doc/wordpress/ ${PREFIX}/share/examples/wordpress/
 NO_BUILD=       yes
+
+DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
 WORDPRESS_DIR=	share/wordpress/
 
