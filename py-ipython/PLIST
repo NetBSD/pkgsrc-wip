@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/05 11:43:30 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/09/15 09:14:46 tonnerre Exp $
 bin/ipython
 bin/irunner
 bin/pycolor
@@ -218,6 +218,12 @@ ${PYSITELIB}/IPython/Shell.pyo
 ${PYSITELIB}/IPython/UserConfig/ipy_user_conf.py
 ${PYSITELIB}/IPython/UserConfig/ipy_user_conf.pyc
 ${PYSITELIB}/IPython/UserConfig/ipy_user_conf.pyo
+${PYSITELIB}/IPython/UserConfig/ipythonrc
+${PYSITELIB}/IPython/UserConfig/ipythonrc-math
+${PYSITELIB}/IPython/UserConfig/ipythonrc-numeric
+${PYSITELIB}/IPython/UserConfig/ipythonrc-physics
+${PYSITELIB}/IPython/UserConfig/ipythonrc-pysh
+${PYSITELIB}/IPython/UserConfig/ipythonrc-tutorial
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
@@ -350,6 +356,49 @@ ${PYSITELIB}/IPython/wildcard.pyo
 ${PYSITELIB}/IPython/winconsole.py
 ${PYSITELIB}/IPython/winconsole.pyc
 ${PYSITELIB}/IPython/winconsole.pyo
+share/doc/ipython/COPYING
+share/doc/ipython/ChangeLog
+share/doc/ipython/NEWS
+share/doc/ipython/README.txt
+share/doc/ipython/README_Windows.txt
+share/doc/ipython/api_changes.txt
+share/doc/ipython/do_sphinx.py
+share/doc/ipython/examples/example-demo.py
+share/doc/ipython/examples/example-embed-short.py
+share/doc/ipython/examples/example-embed.py
+share/doc/ipython/examples/example-gnuplot.py
+share/doc/ipython/examples/extension.py
+share/doc/ipython/examples/seteditor.py
+share/doc/ipython/ipython.el
+share/doc/ipython/manual/_static/admin.css
+share/doc/ipython/manual/_static/comment.png
+share/doc/ipython/manual/_static/contents.png
+share/doc/ipython/manual/_static/default.css
+share/doc/ipython/manual/_static/doctools.js
+share/doc/ipython/manual/_static/file.png
+share/doc/ipython/manual/_static/hovercomment.png
+share/doc/ipython/manual/_static/interface.js
+share/doc/ipython/manual/_static/jquery.js
+share/doc/ipython/manual/_static/minus.png
+share/doc/ipython/manual/_static/navigation.png
+share/doc/ipython/manual/_static/nocomment.png
+share/doc/ipython/manual/_static/plus.png
+share/doc/ipython/manual/_static/preview.png
+share/doc/ipython/manual/_static/pygments.css
+share/doc/ipython/manual/_static/rightsidebar.css
+share/doc/ipython/manual/_static/searchtools.js
+share/doc/ipython/manual/_static/sphinxdoc.css
+share/doc/ipython/manual/_static/stickysidebar.css
+share/doc/ipython/manual/_static/top.png
+share/doc/ipython/manual/_static/traditional.css
+share/doc/ipython/manual/genindex.html
+share/doc/ipython/manual/ipython.html
+share/doc/ipython/manual/ipython.pdf
+share/doc/ipython/manual/modindex.html
+share/doc/ipython/manual/search.html
+share/doc/ipython/pycon.ico
+share/man/man1/ipython.1
+share/man/man1/pycolor.1
 @dirrm share/man/man1
 @dirrm share/doc/ipython/manual/_static
 @dirrm share/doc/ipython/manual
