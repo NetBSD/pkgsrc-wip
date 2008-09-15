@@ -25,6 +25,34 @@ set -e
 . pipestatus
 
 ############################################################
+usage (){
+    cat 1>&2 <<EOF
+pkg_list_all_pkgs - outputs all packages in pkgsrc tree
+
+usage: pkg_list_all_pkgs [OPTIONS]
+OPTIONS:
+  -h|--help              display this help message
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+############################################################
 # user settable variables
 if test -z "$PKGSRCDIR"; then
     PKGSRCDIR=/usr/pkgsrc
