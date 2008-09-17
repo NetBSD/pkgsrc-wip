@@ -1,0 +1,6 @@
+How to handle PREFIX/share/joomla/installation? That directory MUST be
+removed after initial configuration.
+
+How to handle PREFIX/share/joomla/configuration.php? That file contains
+the local settings. Maybe take a look at squirrelmail how it keeps
+PREFIX/share/squirrelmail/config/config.php out of PLIST.
