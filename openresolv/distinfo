@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/09/10 12:12:05 rsmarples Exp $
+$NetBSD: distinfo,v 1.6 2008/09/17 13:37:59 rsmarples Exp $
 
-SHA1 (openresolv-1.8.tar.bz2) = b026e6a2ca605e3326e42b84fc969019f1d4edce
-RMD160 (openresolv-1.8.tar.bz2) = 767cf49e2e5b1b38bf3e13d42ecf0456af24f3e0
-Size (openresolv-1.8.tar.bz2) = 9458 bytes
+SHA1 (openresolv-1.9.tar.bz2) = 9f1d99681c7ab7536dcafe17a76ac94358434427
+RMD160 (openresolv-1.9.tar.bz2) = 6b75976f756c888fe2bfebe3d0cbe1bf15eabc18
+Size (openresolv-1.9.tar.bz2) = 9490 bytes
