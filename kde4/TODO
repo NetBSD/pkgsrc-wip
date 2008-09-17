@@ -1,8 +1,6 @@
-PR lib/37654
+PR lib/37654 - fixed in current.
 
 Deal with requirement for gettext >= 0.15
-
-make a  kde-dirs that has the shared bits of kde3-dirs and kde4-dirs
 
 Will HAVE_FPIE_SUPPORT break NetBSD/macppc ?
 
@@ -14,52 +12,42 @@ Write a kconf_update script that moves users existing kde3 config from
 ~/.kde/share/kde/* to ~/.kde/share and makes ~/.kde/share/kde -> .. for
 backward compatibility.
 
-package Soprano
+dragonplayer not working? maybe phonon? maybe phonon-xine?
+
+ocular not displaying contents of pdf's.
 
 investigate Avahi vs DNSSD.  Are both wanted or just one.  If so what
 does Avahi give us?
 
-Optional? libsbmclient support.
+Investigate package pciutils
+Investigate package raw1394
 
 Investigate package BlueZ (linux bluetooth, how linuxy is it?)
 Investigate package NetworkManager
 Investigate package lm-sensors
 Investigate package libcaptury (realtime video capturing)
-Investigate mallinfo
 
 Investigate package OCaml
 Investigate package LibFacile
 Investigate package Boost.Python
-Investigate package openbabel-2.0
+Investigate package openbabel2
 Investigate package Eigen
 Investigate package SBIG
 Investigate package libcfitsio
 Investigate package Nova
+Investigate package Gmm++
 
 Solve issue of lack of tgamma(), fmin(), fmax() on NetBSD in kdeedu.
-
-Investigate package ggz-client-libs
-
-package libgs  (needs to rework ghostscript package to build libgs.so)
-
-Investigate package CHM
-Investigate package DjVuLibre
 
 Investigate package QtTapioca
 Investigate package Decibel
 
 Optionally enable xmms support in kopete?
 
-Investigate libvncserver
-
-Investigate package libmapi
 Investigate package opensync-1.0>=0.33
-Investigate package Nepomuk
 
 
 Possibly make some of the existing dependencies optional.
 
-libtidy needs to be shared lib for amd64 (probably other ports)
-
-Does this work with native X11?  Only tried with modular-xorg.
+Does this work with native X11?  Only tried with modular-xorg. (no it doesnt)
 Does this work on netBSD < 4.0?
