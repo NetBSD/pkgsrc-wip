@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/09/17 16:58:43 marttikuparinen Exp $
-#
+# $NetBSD: Makefile,v 1.11 2008/09/17 17:02:28 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.7-Stable-Full_Package
 PKGNAME=	joomla-1.5.7
@@ -16,13 +15,13 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MESSAGE_SUBST+=	JOOMLA_CONFFILE=${JOOMLA_CONFFILE}
+MESSAGE_SUBST+=		JOOMLA_CONFFILE=${JOOMLA_CONFFILE}
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-APACHE_USER?=	www
-APACHE_GROUP?=	www
-BUILD_DEFS+=	APACHE_USER APACHE_GROUP
+APACHE_USER?=		www
+APACHE_GROUP?=		www
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 EGDIR=			${PREFIX}/share/examples/joomla
 JOOMLA_CONFDIR=		${PKG_SYSCONFDIR}/joomla
@@ -34,8 +33,8 @@ CONF_FILES=		${EGDIR}/joomla.conf ${JOOMLA_CONFDIR}/joomla.conf
 SPECIAL_PERMS=		${JOOMLA_CONFDIR}/joomla.conf ${APACHE_USER} \
 			${APACHE_GROUP} 0644
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 # distfile has .gz extension but bzip2 compression
 # distfile does not extract to a subdirectory
