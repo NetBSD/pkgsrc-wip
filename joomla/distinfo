@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/10/18 20:36:09 bencollver Exp $
+$NetBSD: distinfo,v 1.5 2008/09/17 16:58:43 marttikuparinen Exp $
 
-SHA1 (joomla_1.0.11-Stable-Full_Package.tar.gz) = c3fd5f31e76932fb98331d4ec50176f53e904c77
-RMD160 (joomla_1.0.11-Stable-Full_Package.tar.gz) = bf7df6e01136383fff2a1f0a4e6ed371ebd8f1c5
-Size (joomla_1.0.11-Stable-Full_Package.tar.gz) = 1719645 bytes
+SHA1 (Joomla_1.5.7-Stable-Full_Package.tar.bz2) = 125db05fbc9d10aa2399075a154c36ea7f2d2177
+RMD160 (Joomla_1.5.7-Stable-Full_Package.tar.bz2) = aa4b93820b603bfc70f3693f410a0504471ce97f
+Size (Joomla_1.5.7-Stable-Full_Package.tar.bz2) = 3563224 bytes

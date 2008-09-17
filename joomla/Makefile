@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.9 2006/10/18 20:36:09 bencollver Exp $
+# $NetBSD: Makefile,v 1.10 2008/09/17 16:58:43 marttikuparinen Exp $
 #
 
-DISTNAME=	${PKGNAME:S/-/_/}-Stable-Full_Package
-PKGNAME=	joomla-1.0.11
+DISTNAME=	Joomla_1.5.7-Stable-Full_Package
+PKGNAME=	joomla-1.5.7
 CATEGORIES=	www
-MASTER_SITES=	http://forge.joomla.org/sf/frs/do/downloadFile/projects.joomla/frs.joomla_1_0.1_0_11/frs6656?dl=1/
+MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/8376/30991/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.2.0:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.2.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q} \
-		JOOMLA_CONFFILE=${JOOMLA_CONFFILE:Q}
+MESSAGE_SUBST+=	JOOMLA_CONFFILE=${JOOMLA_CONFFILE}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

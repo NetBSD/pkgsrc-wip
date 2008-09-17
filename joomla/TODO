@@ -1,7 +1,0 @@
-* Update to a newer version
-	versions <= 1.0.12 are vulnerable to a cross site
-	scripting attack http://secunia.com/advisories/25804/
-* Update to version 1.5.4 in order to fix a security issue:
-  http://www.joomla.org/content/view/5180/1/
-* Update to a newer version in order to fix a security issue:
-  http://milw0rm.com/exploits/5993
