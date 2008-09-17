@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/03 22:26:48 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/17 10:53:04 mwdavies Exp $
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -131,6 +131,12 @@ include/ksieve/lexer.h
 include/ksieve/libksieve_export.h
 include/ksieve/parser.h
 include/ksieve/scriptbuilder.h
+include/libkleopatraclient/core/command.h
+include/libkleopatraclient/core/initialization.h
+include/libkleopatraclient/core/selectcertificatecommand.h
+include/libkleopatraclient/core/signencryptfilescommand.h
+include/libkleopatraclient/gui/certificaterequester.h
+include/libkleopatraclient/kleopatraclient_export.h
 lib/kde4/akonadi_serializer_addressee.so
 lib/kde4/akonadi_serializer_bookmark.so
 lib/kde4/akonadi_serializer_kcal.so
@@ -324,6 +330,10 @@ lib/libkholidays.so.4.1.0
 lib/libkleo.so
 lib/libkleo.so.4
 lib/libkleo.so.4.1.0
+lib/libkleopatraclientcore.so
+lib/libkleopatraclientcore.so.0.2.0
+lib/libkleopatraclientgui.so
+lib/libkleopatraclientgui.so.0.2.0
 lib/libkmailprivate.so
 lib/libkmailprivate.so.4
 lib/libkmailprivate.so.4.1.0
@@ -1184,6 +1194,7 @@ share/kde4/services/kjotspart.desktop
 share/kde4/services/kleopatra_config_appear.desktop
 share/kde4/services/kleopatra_config_dirserv.desktop
 share/kde4/services/kleopatra_config_dnorder.desktop
+share/kde4/services/kleopatra_config_smimevalidation.desktop
 share/kde4/services/kleopatra_decryptverifyfiles.desktop
 share/kde4/services/kleopatra_decryptverifyfolders.desktop
 share/kde4/services/kleopatra_signencryptfiles.desktop
@@ -1423,6 +1434,9 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4/plugins/designer
 @comment in kde: @dirrm lib/kde4
+@dirrm include/libkleopatraclient/gui
+@dirrm include/libkleopatraclient/core
+@dirrm include/libkleopatraclient
 @dirrm include/ksieve
 @dirrm include/kpgp
 @dirrm include/kmail/interfaces

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/09/03 22:26:48 mwdavies Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/17 10:53:04 mwdavies Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -56,6 +56,7 @@ SUBST_SED.perlfix=	-e 's:@PERL@:${PERL5}:g'
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../security/libassuan/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
