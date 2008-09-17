@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2008/08/19 05:14:50 makoto Exp $
+@comment $NetBSD: PLIST,v 1.66 2008/09/17 10:39:41 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2175,20 +2175,6 @@ share/emacs/${PKGVERSION}/lisp/mail/mailheader.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mailheader.elc
 share/emacs/${PKGVERSION}/lisp/mail/mailpost.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mailpost.elc
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmail.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailedit.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailkwd.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailmsc.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailout.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailsort.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-changes/rmailsum.el.changes
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmail.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailedit.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailkwd.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailmsc.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailout.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailsort.el.annotation
-share/emacs/${PKGVERSION}/lisp/mail/mbox-trunk-annotations/rmailsum.el.annotation
 share/emacs/${PKGVERSION}/lisp/mail/metamail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/metamail.elc
 share/emacs/${PKGVERSION}/lisp/mail/mspools.el.gz
@@ -2239,7 +2225,6 @@ share/emacs/${PKGVERSION}/lisp/mail/sendmail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/sendmail.elc
 share/emacs/${PKGVERSION}/lisp/mail/smtpmail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/smtpmail.elc
-share/emacs/${PKGVERSION}/lisp/mail/subdirs.el
 share/emacs/${PKGVERSION}/lisp/mail/supercite.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/supercite.elc
 share/emacs/${PKGVERSION}/lisp/mail/uce.el.gz
