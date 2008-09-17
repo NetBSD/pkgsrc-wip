@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/09/17 17:30:51 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.13 2008/09/17 17:43:25 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.7-Stable-Full_Package
 PKGNAME=	joomla-1.5.7
@@ -18,6 +18,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 MESSAGE_SUBST+=		JOOMLA_CONFFILE=${JOOMLA_CONFFILE}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+.include "../../mk/bsd.prefs.mk"
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
