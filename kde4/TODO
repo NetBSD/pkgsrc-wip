@@ -16,6 +16,8 @@ dragonplayer not working? maybe phonon? maybe phonon-xine?
 
 ocular not displaying contents of pdf's.
 
+screensavers not displaying.
+
 investigate Avahi vs DNSSD.  Are both wanted or just one.  If so what
 does Avahi give us?
 
