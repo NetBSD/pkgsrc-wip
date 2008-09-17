@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/09/17 17:02:28 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/17 17:30:51 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.7-Stable-Full_Package
 PKGNAME=	joomla-1.5.7
@@ -36,7 +36,6 @@ SPECIAL_PERMS=		${JOOMLA_CONFDIR}/joomla.conf ${APACHE_USER} \
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
-# distfile has .gz extension but bzip2 compression
 # distfile does not extract to a subdirectory
 # extract using bzip2 decompression to the WRKSRC subdirectory
 EXTRACT_OPTS+=		-c bzip -d ${WRKSRC}
