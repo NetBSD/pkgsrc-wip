@@ -28,13 +28,16 @@ usage (){
 pkg_grep_summary - output summaries about packages that matches
 the specified condition.
 
-USAGE: pkg_grep_summary [OPTIONS] <FIELD> <AWK_CONDITION>
+USAGE: pkg_grep_summary -h
+       pkg_grep_summary <FIELD> <AWK_CONDITION>
+       pkg_grep_summary -e <FIELD>
   <FIELD>         - PKGNAME, PKGPATH, DEPENDS etc.
   <AWK_CONDITION> - boolean expression written in AWK language
 
 OPTIONS:
-  -h|--help        display this message
-
+  -h|--help               display this message
+  -e|--empty <field>      matches empty and absent fields only
+                          (equivalent to '<field>' 'fvalue == ""')
 EXAMPLES:
   pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
@@ -44,6 +47,8 @@ EXAMPLES:
         < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
+  pkg_grep_summary -e 'NO_BIN_ON_FTP' \\
+        < /usr/pkgsrc/pkg_src_summary.txt
 EOF
 }
 
@@ -52,6 +57,9 @@ while test $# -ne 0; do
 	-h|--help)
 	    usage
 	    exit 0;;
+	-e|--empty)
+	    empty_field=$2
+	    shift;;
 	--)
 	    shift
 	    break;;
@@ -64,15 +72,22 @@ while test $# -ne 0; do
     shift
 done
 
-if test $# -ne 2; then
+if test -z "$empty_field" -a $# -ne 2 ||
+    test -n "$empty_field" -a $# -ne 0
+then
     usage
     exit 1
 fi
 
-field=$1
-condition="$2"
-shift
-shift
+if test -z "$empty_field"; then
+    field=$1
+    condition="$2"
+    shift
+    shift
+else
+    field="$empty_field"
+    condition='fvalue == ""'
+fi
 
 runawk -e '
 #use "pkg_grep_summary.awk"

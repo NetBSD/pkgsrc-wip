@@ -51,6 +51,9 @@ grep_summary__skip == -1 && NF > 0 {
 }
 
 NF == 0 {
+	if (grep_summary__skip == -1){
+		update_skip()
+	}
 	if (grep_summary__skip == 0){
 		print ""
 	}
