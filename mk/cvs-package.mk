@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.26 2008/06/01 17:45:47 asau Exp $
+# $Id: cvs-package.mk,v 1.27 2008/09/19 21:19:27 asau Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -148,6 +148,7 @@ pre-extract: do-cvs-extract
 do-cvs-extract: .PHONY
 .for r in ${CVS_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
+	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi;	\
 	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
 	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${r}:Q};	\
