@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3054 2008/09/12 21:07:53 ficovh Exp $
+# $Id: Makefile,v 1.3055 2008/09/19 19:10:42 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -735,7 +735,6 @@ SUBDIR+=	iptables
 SUBDIR+=	iptstate
 SUBDIR+=	ispell-lietuviu
 SUBDIR+=	itask-ng
-SUBDIR+=	iwn-firmware
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd2
