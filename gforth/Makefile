@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/30 22:48:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/19 17:03:47 asau Exp $
 
 DISTNAME=	gforth-0.6.99
 PKGNAME=	gforth-0.6.99 # needed because of cvs-package.mk
@@ -28,8 +28,9 @@ WRKSRC=		${WRKDIR}/gforth
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf automake
+USE_TOOLS+=	autoconf automake aclocal
 USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	perl:build
 
 MAKE_JOBS_SAFE=	no # fresh Gforth is required to build doc
 BUILD_TARGET=	all doc
@@ -38,7 +39,7 @@ TEST_TARGET=	check
 INSTALLATION_DIRS=	share/emacs/site-lisp
 
 pre-configure:
-	cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
+	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
