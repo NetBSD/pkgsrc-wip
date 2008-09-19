@@ -67,7 +67,7 @@ EOF
 
 # list of fields for default pkg_src_summary
 if test -z "$PSS_FIELDS"; then
-    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES DESCRIPTION PLIST' # CVS_CHECKSUM'
+    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES NO_BIN_ON_FTP NO_SRC_ON_FTP NO_BIN_ON_CDROM NO_SRC_ON_CDROM LICENSE ALLSRCFILES DESCRIPTION PLIST' # CVS_CHECKSUM'
 fi
 
 if test -z "$PSS_PPERS"; then
@@ -202,12 +202,24 @@ enrich_summary (){
 
 enrich_Makefile (){
     cat <<EOF
+#####################################################################
 .PHONY: my-show-vars
 my-show-vars:
 .for VARNAME in \${VARNAMES}
-	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
+	@value="\${\${VARNAME}}"; \
+	if test -n "\$\$value"; then \${ECHO} \$(VARNAME)=\$\$value; fi
 .endfor
 
+#####################################################################
+.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
+_ALLSRCFILES=    \${DISTFILES:@f@\${DIST_SUBDIR}/\${f}@} \
+                 \${PATCHFILES:@f@\${DIST_SUBDIR}/\${f}@}
+.else
+_ALLSRCFILES=     \${_DISTFILES} \${_PATCHFILES}
+.endif
+ALLSRCFILES=     \${_ALLSRCFILES:O:u}
+
+#####################################################################
 # for multi-variant packages and bulk build software
 .for i in \${_PBULK_MULTI}
 .if !empty(\${_PBULK_MULTI_LIST.\${i}})

@@ -37,6 +37,7 @@ existing tools:
 
 new tools:
     - (unsure) additional tool for field reordering?
+
     - (unsure) simplified wrapper over pkg_grep_summary for grepping
       packages by their (list of!) PKGBASEs/PKGNAMEs/PKGPATHs
       (look inside pkg_refresh_summary and pkg_update_src_summary)
@@ -44,5 +45,8 @@ new tools:
     - rfc822_to_summary and (?)debian_to_summary(?) for comverting an
       information about Debian packages to pkg_summary(5) format.
       For pkg_online database server for Debian packages?
+
+    - pkg_summary2INDEX
+      pkg_summary2PKGDB
 
 ANY IDEAS? LET ME KNOW
