@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/07/30 22:48:35 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/19 17:05:29 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -12,8 +12,10 @@ include/gforth/${PKGVERSION}/libcc.h
 info/gforth.info
 lib/gforth/${PKGVERSION}/gforth-ditc
 lib/gforth/${PKGVERSION}/gforth.fi
+lib/gforth/${PKGVERSION}/libcc-named/cstr.la
 lib/gforth/${PKGVERSION}/libcc-named/fflib.la
 lib/gforth/${PKGVERSION}/libcc-named/libffi.la
+lib/gforth/${PKGVERSION}/libcc-named/mkdir.la
 lib/gforth/${PKGVERSION}/libcc-named/socket.la
 man/man1/gforth.1
 share/emacs/site-lisp/gforth.el
@@ -69,6 +71,7 @@ share/gforth/${PKGVERSION}/compat/struct.fs
 share/gforth/${PKGVERSION}/compat/vocabulary.fs
 share/gforth/${PKGVERSION}/complex.fs
 share/gforth/${PKGVERSION}/cross.fs
+share/gforth/${PKGVERSION}/cstr.fs
 share/gforth/${PKGVERSION}/debug.fs
 share/gforth/${PKGVERSION}/debugs.fs
 share/gforth/${PKGVERSION}/depth-changes.fs
@@ -157,6 +160,7 @@ share/gforth/${PKGVERSION}/machpc.fs.in
 share/gforth/${PKGVERSION}/make-app.fs
 share/gforth/${PKGVERSION}/matrix.fs
 share/gforth/${PKGVERSION}/mini-oof.fs
+share/gforth/${PKGVERSION}/mkdir.fs
 share/gforth/${PKGVERSION}/moof-exm.fs
 share/gforth/${PKGVERSION}/moofglos.fs
 share/gforth/${PKGVERSION}/more.fs
