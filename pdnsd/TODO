@@ -1,0 +1,2 @@
+- Update to pdnsd-1.2.7-par due to cache poisoning & DoS vulnerabilities
+  in prior versions.
