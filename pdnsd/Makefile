@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/09/09 23:01:20 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/20 20:46:06 cheusov Exp $
 
-DISTNAME=	pdnsd-1.2.6-par
+DISTNAME=	pdnsd-1.2.7-par
 PKGNAME=	${DISTNAME:S/-par//}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
 		http://members.home.nl/p.a.rombouts/pdnsd/releases/
