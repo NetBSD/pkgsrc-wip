@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3 2008/09/20 19:32:13 bsadewitz Exp $
+
+SHA1 (psh-1.8.1.tar.gz) = 49d40d38d776348715a946d5b768612dde30ba47
+RMD160 (psh-1.8.1.tar.gz) = 661b0127c53409e9ff5aa84f99b4e821f23038c2
+Size (psh-1.8.1.tar.gz) = 120036 bytes
