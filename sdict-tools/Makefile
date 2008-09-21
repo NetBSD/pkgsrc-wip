@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/09/13 12:44:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/21 13:21:03 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/ptksdict/sdict-tools/}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://sdict.com/rsc/files/
 
