@@ -1,0 +1,2 @@
+just is a small collection of some semi-useful SNMP tools.  They're all
+written in scotty, a Tcl dialect with builtin SNMP support.
