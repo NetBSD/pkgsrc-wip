@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/02 16:41:12 pettai Exp $
+$NetBSD: distinfo,v 1.2 2008/09/21 22:04:31 pettai Exp $
 
-SHA1 (gallery-2.2.5-full.tar.gz) = 713cf3c75a5963919802a63e730b8db9e2e16bbd
-RMD160 (gallery-2.2.5-full.tar.gz) = b4edf6d745243a3e5f3ee3cdcf1cd94a29c1e955
-Size (gallery-2.2.5-full.tar.gz) = 11908434 bytes
+SHA1 (gallery-2.2.6-full.tar.gz) = a3dfb86e2a0287795b3a2b859b12753141c68828
+RMD160 (gallery-2.2.6-full.tar.gz) = f60bcf44ee8479152c8767f4e99c9e43ad2e631b
+Size (gallery-2.2.6-full.tar.gz) = 12038651 bytes

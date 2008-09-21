@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/09/08 16:41:01 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/21 22:04:31 pettai Exp $
 #
 
-DISTNAME=		gallery-2.2.5-full
-PKGNAME=		gallery2-2.2.5
+DISTNAME=		gallery-2.2.6-full
+PKGNAME=		gallery2-2.2.6
 #PKGREVISION=		1
 CATEGORIES=		www graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gallery/}
