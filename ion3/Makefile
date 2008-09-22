@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/10 19:30:56 pmatias Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/22 12:45:11 thomasklausner Exp $
 #
 
 DISTNAME=	ion-3-20080825
@@ -36,7 +36,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Setting prefix paths.
 SUBST_FILES.fix-paths=		system.mk
-SUBST_SED.fix-paths=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 
 .include "../../mk/bsd.prefs.mk"
 

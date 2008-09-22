@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/13 21:20:48 pmatias Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/22 12:45:13 thomasklausner Exp $
 
---- system.mk.orig	2008-02-05 15:42:06.000000000 -0200
+--- system.mk.orig	2008-08-25 15:44:24.000000000 +0000
 +++ system.mk
-@@ -8,7 +8,7 @@
- 
- # Installation path prefix. Unless you know what you're doing, the default
- # of /usr/local is likely the correct choice.
--PREFIX=/usr/local
-+PREFIX=@PREFIX@
- 
- # Unless you are creating a package conforming to some OS's standards, you
- # probably do not want to modify the following directories:
 @@ -16,11 +16,12 @@ PREFIX=/usr/local
  # Main binaries
  BINDIR=$(PREFIX)/bin
@@ -54,3 +45,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/13 21:20:48 pmatias Exp $
  # You may also need to give the location of its headers. The following
  # should work on Mac OS X (which needs the above option as well) with
  # macports.
+@@ -127,7 +128,7 @@ DEFINES += -DCF_XFREE86_TEXTPROP_BUG_WOR
+ # You may uncomment this if you know that your system C libary provides
+ # asprintf and  vasprintf. (GNU libc does.) If HAS_SYSTEM_ASPRINTF is not
+ # defined, an implementation provided in libtu/sprintf_2.2/ is used. 
+-#HAS_SYSTEM_ASPRINTF=1
++HAS_SYSTEM_ASPRINTF=1
+ 
+ # The following setting is needed with GNU libc for clock_gettime and the
+ # monotonic clock. Other systems may not need it, or may not provide a
