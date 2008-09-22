@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/09/14 19:23:10 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/22 20:11:17 jsonn Exp $
 #
 
 DISTNAME=	tv-0.5
@@ -14,5 +14,5 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
-.include "../../x11/wxGTK-contrib/buildlink3.mk"
+.include "../../x11/wxGTK26-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

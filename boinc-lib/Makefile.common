@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/09/22 20:11:17 jsonn Exp $
 # used by wip/boinc-client/Makefile
 # used by wip/boinc-lib/Makefile
 
@@ -33,6 +33,6 @@ PKG_SUGGESTED_OPTIONS=	gui
 .	include "../../graphics/MesaLib/buildlink3.mk"
 .	include "../../graphics/glu/buildlink3.mk"
 .	include "../../graphics/glut/buildlink3.mk"
-.	include "../../x11/wxGTK/buildlink3.mk"
+.	include "../../x11/wxGTK26/buildlink3.mk"
 .	include "../../mk/x11.buildlink3.mk"
 .endif
