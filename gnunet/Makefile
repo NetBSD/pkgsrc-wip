@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.18 2008/09/22 12:16:16 thomasklausner Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
 PKGNAME=	${DISTNAME:S/GNU/gnu/}
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.ovmj.org/GNUnet/download/
+MASTER_SITES=	http://www2.cddc.vt.edu/gnu/ftp/gnu/gnunet/
+# http://www.gnunet.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pancake@phreaker.net
-HOMEPAGE=	http://www.ovmj.org/GNUnet/
-COMMENT=	Framework for secure p2p networking
+HOMEPAGE=	http://www.gnunet.org/
+COMMENT=	Framework for secure P2P networking
 
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
@@ -44,6 +45,7 @@ post-build:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libextractor/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libltdl/convenience.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
