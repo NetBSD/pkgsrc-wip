@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/29 11:02:51 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/22 09:22:55 thomasklausner Exp $
 
 DISTNAME=	akonadi-1.0.0
 CATEGORIES=	mail
@@ -12,6 +12,7 @@ COMMENT=	The KDE PIM Storage Service
 #BUILD_MAKE_FLAGS+= VERBOSE=1
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../wip/automoc4
+BUILD_DEPENDS+=	libxslt>=1.0:../../textproc/libxslt
 
 USE_DIRS+=	kde4-1.0
 USE_TOOLS+=	pkg-config
