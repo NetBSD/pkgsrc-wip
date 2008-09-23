@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2007/07/16 18:01:37 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/23 21:14:13 gschwarz Exp $
 
-DISTNAME=	moe-0.9
+DISTNAME=	moe-1.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=moe/}
 EXTRACT_SUFX=	.tar.bz2
