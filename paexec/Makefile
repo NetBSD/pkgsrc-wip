@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/09/05 09:53:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2008/09/24 20:15:23 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.10.0
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
@@ -14,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
+USE_FEATURES=		getopt_long
+
 TEST_TARGET=		test
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
@@ -26,6 +29,7 @@ DOC_FILES=		README NEWS ChangeLog
 MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=		LDADD=${LIBS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,7 +41,11 @@ SUPPORTED_SYSTEM=	1
 .if ${SUPPORTED_SYSTEM} == "0"
 CPPFLAGS+=		-DNO_PORTABHACKS_H=1 -DHAVE_CONFIG_H=1
 pre-build:
-	${ECHO} '#include <getopt.h>' > ${WRKSRC}/config.h
+	${ECHO} '#if defined(HAVE_NBCOMPAT_H)' >  ${WRKSRC}/config.h
+	${ECHO} '#include <nbcompat/config.h>' >> ${WRKSRC}/config.h
+	${ECHO} '#include <nbcompat/cdefs.h>'  >> ${WRKSRC}/config.h
+	${ECHO} '#include <nbcompat/getopt.h>' >> ${WRKSRC}/config.h
+	${ECHO} '#endif'                       >> ${WRKSRC}/config.h
 .endif
 
 post-install:
