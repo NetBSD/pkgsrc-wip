@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/09/06 21:40:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/24 13:48:02 athaba Exp $
 #
 
 DISTNAME=		tor-0.2.1.5-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP (unstable)
 
 .include "../../mk/bsd.prefs.mk"
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES+=		c99
 USE_PKGLOCALEDIR=	yes
@@ -41,10 +43,10 @@ OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
-CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
+CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
-CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
-				${PKG_SYSCONFDIR}/torrc
+CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample \
+			${PKG_SYSCONFDIR}/torrc
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
@@ -56,12 +58,12 @@ CFLAGS+=		-c99
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tor
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
-		${PREFIX}/share/examples/tor/torrc.sample
+		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
-		${PREFIX}/share/examples/tor/tor-tsocks.conf
-	-${RMDIR} ${PREFIX}/etc/tor/tor
+		${DESTDIR}${PREFIX}/share/examples/tor/tor-tsocks.conf
+	-${RMDIR} ${DESTDIR}${PREFIX}/etc/tor/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 .include "../../devel/libevent/buildlink3.mk"
