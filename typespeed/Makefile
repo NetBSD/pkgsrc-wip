@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/02/12 22:11:37 h2m Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/25 14:02:17 thomasklausner Exp $
 #
 
 DISTNAME=		typespeed-0.6.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://tobias.eyedacor.org/typespeed/
 
