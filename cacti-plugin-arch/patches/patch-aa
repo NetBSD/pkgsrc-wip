@@ -1,5 +1,5 @@
---- global.php.orig	2008-09-28 02:00:44.000000000 +0200
-+++ global.php	2008-09-28 02:02:10.000000000 +0200
+--- files-0.8.7b/include/global.php.orig	2008-09-28 02:00:44.000000000 +0200
++++ files-0.8.7b/include/global.php	2008-09-28 02:02:10.000000000 +0200
 @@ -53,7 +53,7 @@
     would be set to /cacti/
  */
