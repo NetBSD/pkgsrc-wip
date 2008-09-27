@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/27 22:33:26 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/27 22:37:01 pettai Exp $
 share/cacti/auth_changepassword.php
 share/cacti/auth_login.php
 share/cacti/data_sources.php
@@ -26,7 +26,6 @@ share/cacti/lib/plugins.php
 share/cacti/lib/poller.php
 share/cacti/lib/rrd.php
 share/cacti/lib/variables.php
-share/cacti/log/poller.log
 share/cacti/pa.sql
 share/cacti/plugins.php
 share/cacti/plugins/index.php
