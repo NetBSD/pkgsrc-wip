@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/09/27 21:03:57 pettai Exp $
+
+cacti-plugin-arch is now installed.
+
+To finalize the installation of cacti-plugin-arch, you have to complete
+these steps:
+
+- Add the cacti-plugin-arch database patch (${CACTIDIR}/pa.sql)
+
+	shell> mysql [-p] cacti < pa.sql
+
+Please read the included Readme (${CACTIDIR}/docs/Readme) file,
+for more information about installing cacti-plugin-arch.
+
+You can also find more information about the cacti-plugin-arch here:
+
+	http://cactiusers.org/wiki/PluginArchitectureInstall
+
+===========================================================================
