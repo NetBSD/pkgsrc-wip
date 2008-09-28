@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/27 21:03:57 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/28 10:46:29 pettai Exp $
 #
 
 DISTNAME=		cacti-plugin-arch
@@ -14,7 +14,7 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-DEPENDS+=		cacti:../../wip/cacti
+DEPENDS+=		cacti-0.8.7b:../../wip/cacti
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
