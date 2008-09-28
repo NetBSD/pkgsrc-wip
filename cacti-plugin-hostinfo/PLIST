@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/28 11:41:11 pettai Exp $
+share/cacti/plugins/hostinfo/LICENSE
+share/cacti/plugins/hostinfo/hostinfo.php
+share/cacti/plugins/hostinfo/index.php
+share/cacti/plugins/hostinfo/setup.php
+@dirrm share/cacti/plugins/hostinfo
+@dirrm share/cacti/plugins
