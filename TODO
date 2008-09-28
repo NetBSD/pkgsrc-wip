@@ -20,6 +20,7 @@ Suggested package updates
 	o editline-20080712.2.11
 	o emelfm2-0.4.1
 	o endeavour-2.10.1
+	o evolution-sharp-0.18.0
 	o f-spot-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.0.3
@@ -57,11 +58,12 @@ Suggested package updates
 	o p5-Net-DBus-0.33.6
 	o parted-1.8.8
 	o passepartout-0.7.0
+	o pdnsd-1.2.7
 	o pike-7.6.112
 	o py-PyPE-2.8.8
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
-	o quodlibet-1.0
+	o quodlibet-2.0
 	o rasqal-0.9.16
 	o rdup-0.6.1
 	o redland-1.0.8.1
