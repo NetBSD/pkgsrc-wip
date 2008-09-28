@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/28 01:09:07 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/28 10:37:53 pettai Exp $
 #
 
 DISTNAME=		php-weathermap-0.95b
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/weathermap
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
 
-DEPENDS+=		cacti-plugin-arch:../../wip/cacti-plugin-arch
+DEPENDS+=		cacti-plugin-arch-[0-9]*:../../wip/cacti-plugin-arch
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
