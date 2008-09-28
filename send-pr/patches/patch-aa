@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/13 23:23:34 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/28 14:25:57 cheusov Exp $
 
---- Makefile.in.orig	2001-05-08 10:22:21.000000000 -0700
-+++ Makefile.in	2003-10-13 15:19:01.000000000 -0700
-@@ -67,12 +67,13 @@
+--- Makefile.in.orig	2001-05-08 20:22:21.000000000 +0300
++++ Makefile.in
+@@ -67,12 +67,13 @@ TEXIDIR = $(srcdir)/../texinfo
  # Where to find sundry TeX/Texinfo files
  TEXINPUTS = $(srcdir):$(srcdir)/../gnats:$(srcdir)/../send-pr:$(TEXIDIR)
  
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/13 23:23:34 jeremy-c-reed Exp $
  
  CFLAGS = -g
  LDFLAGS = -g
-@@ -130,14 +131,14 @@
+@@ -130,14 +131,14 @@ all: send-pr install-sid send-pr.el send
  send-pr: send-pr.sh Makefile
  	sed -e 's,xVERSIONx,$(VERSION),' \
  	    -e 's,xGNATS_ROOTx,$(GNATS_ROOT),' \
@@ -35,7 +35,42 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/10/13 23:23:34 jeremy-c-reed Exp $
  	    -e 's,xDATADIRx,$(datadir),' $(srcdir)/send-pr.sh > $@-t
  	mv $@-t $@
  	chmod 755 $@
-@@ -266,7 +267,7 @@
+@@ -174,19 +175,19 @@ install-gnats-arch-dep: install-norm-arc
+ install-norm all-gnats: install-norm-arch-indep install-norm-arch-dep
+ 
+ install-norm-arch-indep:
+-	$(INSTALL_DATA) send-pr.el $(lispdir)/send-pr.el
++	$(INSTALL_DATA) send-pr.el ${DESTDIR}$(lispdir)/send-pr.el
+ 	if [ -f send-pr.elc ]; then \
+-	  $(INSTALL_DATA) send-pr.elc $(lispdir)/send-pr.elc; \
++	  $(INSTALL_DATA) send-pr.elc ${DESTDIR}$(lispdir)/send-pr.elc; \
+ 	else true; fi
+ 
+ install-norm-arch-dep:
+-	$(INSTALL_SCRIPT) send-pr $(bindir)/send-pr
+-	$(INSTALL_SCRIPT) install-sid $(bindir)/install-sid
+-	$(INSTALL_DATA) send-pr.1 $(man1dir)/send-pr.1
++	$(INSTALL_SCRIPT) send-pr ${DESTDIR}$(bindir)/send-pr
++	$(INSTALL_SCRIPT) install-sid ${DESTDIR}$(bindir)/install-sid
++	$(INSTALL_DATA) send-pr.1 ${DESTDIR}$(man1dir)/send-pr.1
+ 
+ # Install the Cygnus category list for bug reports.
+ install-categories:
+-	$(INSTALL_DATA) $(srcdir)/categories $(datadir)/gnats/cygnus
++	$(INSTALL_DATA) $(srcdir)/categories ${DESTDIR}$(datadir)/gnats/cygnus
+ 
+ install-gnats-dist:
+ 	$(SHELL) $(srcdir)/../mkinstalldirs $(datadir)/gnats/dist
+@@ -239,7 +240,7 @@ install-gnats-dist:
+ 
+ install-info: send-pr.info
+ 	for i in send-pr.info* ; do \
+-		$(INSTALL_DATA) $$i $(infodir)/$$i ; \
++		$(INSTALL_DATA) $$i ${DESTDIR}$(infodir)/$$i ; \
+ 	done
+ 
+ uninstall:
+@@ -266,7 +267,7 @@ send-pr.1: Makefile
  	mv $@-t $@
  
  send-pr.info: send-pr.texi version.texi fields.texi s-usage.texi categ.texi
