@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/28 11:41:11 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/28 12:00:59 pettai Exp $
 #
 
 DISTNAME=		hostinfo-0.2
@@ -14,7 +14,7 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/hostinfo
 
-DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
+BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
 DEPENDS+=		cacti-plugin-arch-[0-9]*:../../wip/cacti-plugin-arch
 
 USE_TOOLS+=		gtar
