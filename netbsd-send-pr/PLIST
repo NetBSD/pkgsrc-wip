@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/28 13:40:52 cheusov Exp $
+bin/nbsend-pr
+lib/gnats/netbsd
+man/man1/nbsend-pr.1
