@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/09/27 23:00:13 pettai Exp $
+$NetBSD: distinfo,v 1.4 2008/09/28 09:49:12 pettai Exp $
 
 SHA1 (cacti-plugin-arch.tar.gz) = f7f1dcb12b878dff0195827c7353fb27d3dfba35
 RMD160 (cacti-plugin-arch.tar.gz) = 9e2d8d6609942b85e3f17b07701357f3a9efcbff
 Size (cacti-plugin-arch.tar.gz) = 173327 bytes
-SHA1 (patch-aa) = 75719bcf4672dc015e374d7605e045e8f4961bcb
+SHA1 (patch-aa) = 71e24e552df0541f643e1ab5e5d226f603d72493

@@ -5,7 +5,7 @@
  */
  
 -$config['url_path'] = '/';
-+$config['url_path'] = './';
++$config['url_path'] = '/cacti/';
  
  define('URL_PATH', $config['url_path']);
  
