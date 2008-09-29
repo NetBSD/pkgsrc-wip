@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/05 09:58:42 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/09/29 22:45:37 cheusov Exp $
 bin/distbb
+bin/distbb_diff
 libexec/distbb/common
 libexec/distbb/slave
 libexec/distbb/stage_build
