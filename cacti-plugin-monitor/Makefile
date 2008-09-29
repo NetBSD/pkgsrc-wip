@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/28 13:02:16 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/29 22:58:48 pettai Exp $
 #
 
 DISTNAME=		monitor-0.8.2
 PKGNAME=		cacti-plugin-${DISTNAME}
 CATEGORIES=		net
-MASTER_SITES=		http://cactiusers.org/downloads/
+MASTER_SITES=		http://mirror.cactiusers.org/downloads/plugins/
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://cactiusers.org/

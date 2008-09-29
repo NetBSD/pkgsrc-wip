@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/28 12:43:51 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/29 23:00:26 pettai Exp $
 #
 
 DISTNAME=		thold-0.3.9
 PKGNAME=		cacti-plugin-${DISTNAME}
 CATEGORIES=		net
-MASTER_SITES=		http://cactiusers.org/downloads/
+MASTER_SITES=		http://mirror.cactiusers.org/downloads/plugins/
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://cactiusers.org/
