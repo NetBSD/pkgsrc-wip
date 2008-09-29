@@ -1,4 +1,2 @@
-Thold, or Threshold is a plugin for cacti, that allows you to setup
-different types of thresholds on your measurements. It also has alarm
-functions that can send mail to different group, depending on which
-threshold that was triggered.
+This plugin allows you to alert on down hosts and the breaching of
+values in your graphs.

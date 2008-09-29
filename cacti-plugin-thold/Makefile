@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/29 23:00:26 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/29 23:32:30 pettai Exp $
 #
 
 DISTNAME=		thold-0.3.9
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}/thold
 
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
 DEPENDS+=		cacti-plugin-arch-[0-9]*:../../wip/cacti-plugin-arch
+DEPENDS+=		cacti-plugin-settings-[0-9]*:../../wip/cacti-plugin-settings
 
 USE_TOOLS+=		gtar
 
