@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/29 23:24:21 pettai Exp $
+share/cacti/plugins/settings/LICENSE
+share/cacti/plugins/settings/README
+share/cacti/plugins/settings/email-test.php
+share/cacti/plugins/settings/include/functions.php
+share/cacti/plugins/settings/include/index.php
+share/cacti/plugins/settings/include/mailer.php
+share/cacti/plugins/settings/index.php
+share/cacti/plugins/settings/setup.php
+@dirrm share/cacti/plugins/settings/include
+@dirrm share/cacti/plugins/settings
