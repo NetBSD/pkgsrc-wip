@@ -498,7 +498,10 @@ while test -n "${with_dep}${with_bdep}"; do
     /^DEPENDS=/ && with_dep {
 	$0 = substr($0, 9)
 	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
-	for (i=1; i <= NF; ++i) depends [$i] = 1
+	for (i=1; i <= NF; ++i){
+	    sub(/\/+$/, "", $i)
+	    depends [$i] = 1
+	}
 	next
     }
     /^BUILD_DEPENDS=/ && with_bdep {

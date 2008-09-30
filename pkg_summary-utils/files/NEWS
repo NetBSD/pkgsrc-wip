@@ -1,4 +1,16 @@
 ----------------------------------------------------------------------
+Version 0.17.1, by Aleksey Cheusov, Tue, 30 Sep 2008 23:28:39 +0300
+
+  FIX for -A option: strip ending / symbol from dependencies
+    (DEPENDS and BUILD_DEPENDS)
+
+    www/typo3/Makefile revision 1.5
+        DEPENDS+=   ...  ../../archivers/php-zlib/
+                                                ^^^
+                                                /
+            extra slash character here --------/
+
+----------------------------------------------------------------------
 Version 0.17.0, by Aleksey Cheusov, Sat, 20 Sep 2008 02:29:07 +0300
 
   pkg_src_summary:
