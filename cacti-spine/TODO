@@ -1,0 +1,3 @@
+- Investigate if WARNING: netinet/ip.h & netinet/ip_icmp.h have any impact
+- Fix configure output errors
+- Fix installation output error
