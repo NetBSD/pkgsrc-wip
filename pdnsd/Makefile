@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/09/20 20:46:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/02 20:49:45 gschwarz Exp $
 
 DISTNAME=	pdnsd-1.2.7-par
 PKGNAME=	${DISTNAME:S/-par//}
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
+
+BUILD_DEFS+=	VARBASE
 
 PDNSD_USER?=		pdnsd
 .if ${OPSYS} == "Interix"
