@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2008/08/29 08:16:22 rsmarples Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/03 12:49:33 rsmarples Exp $
 #
 
-DISTNAME=		dhcpcd-4.0.1
+DISTNAME=		dhcpcd-4.0.2
 CATEGORIES=		net
-MASTER_SITES=		http://roy.marples.name/dhcpcd/
+MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roy@marples.name
-HOMEPAGE=		http://roy.marples.name/dhcpcd/
+HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
 COMMENT=		RFC2131 compliant DHCP client
 
 PKG_DESTDIR_SUPPORT=	user-destdir
