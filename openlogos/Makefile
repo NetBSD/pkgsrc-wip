@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2007/03/01 19:12:19 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/03 20:20:27 gschwarz Exp $
 
-DISTNAME=	openlogos-1.0.2
+DISTNAME=	openlogos-1.0.3
 CATEGORIES=	misc
 MASTER_SITES=	http://logos-os.dfki.de/release/
 
