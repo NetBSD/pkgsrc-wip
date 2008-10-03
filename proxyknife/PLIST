@@ -1,40 +1,39 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/13 08:49:23 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/03 16:22:19 gschwarz Exp $
 bin/proxyknife
 info/proxyknife.info
 man/man1/proxyknife.1
 ${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/proxyknife.mo
 ${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/proxyknife.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/proxyknife.mo
-share/proxyknife/doc/example/msn.req
-share/proxyknife/doc/example/proxyknife.conf.direct_http_connect.example
-share/proxyknife/doc/example/proxyknife.conf.example
-share/proxyknife/doc/example/proxyknife.conf.via_http_auth_tunnel_http_connect_msn.example
-share/proxyknife/doc/example/proxyknife.conf.via_http_tunnel.example
-share/proxyknife/doc/example/proxyknife.conf.via_socks5_auth_tunnel.example
-share/proxyknife/doc/example/proxylist
-share/proxyknife/doc/html/proxyknife.html/Advanced.html
-share/proxyknife/doc/html/proxyknife.html/Command_002dline-Exclusive-Options.html
-share/proxyknife/doc/html/proxyknife.html/Contact.html
-share/proxyknife/doc/html/proxyknife.html/Copying-Source-Code.html
-share/proxyknife/doc/html/proxyknife.html/Copying-This-Manual.html
-share/proxyknife/doc/html/proxyknife.html/Customize-Request.html
-share/proxyknife/doc/html/proxyknife.html/Download-Proxylist.html
-share/proxyknife/doc/html/proxyknife.html/Examples-of-startup-file.html
-share/proxyknife/doc/html/proxyknife.html/GNU-Free-Documentation-License.html
-share/proxyknife/doc/html/proxyknife.html/General-Usage.html
-share/proxyknife/doc/html/proxyknife.html/Introduction.html
-share/proxyknife/doc/html/proxyknife.html/Invoking.html
-share/proxyknife/doc/html/proxyknife.html/Output.html
-share/proxyknife/doc/html/proxyknife.html/Proxylist.html
-share/proxyknife/doc/html/proxyknife.html/Sort-the-Result.html
-share/proxyknife/doc/html/proxyknife.html/Startup-File.html
-share/proxyknife/doc/html/proxyknife.html/Startup-Options.html
-share/proxyknife/doc/html/proxyknife.html/Via-Proxy.html
-share/proxyknife/doc/html/proxyknife.html/index.html
-share/proxyknife/doc/proxyknife.dvi
-share/proxyknife/doc/proxyknife.pdf
-@dirrm share/proxyknife/doc/example
-@dirrm share/proxyknife/doc/html/proxyknife.html
-@dirrm share/proxyknife/doc/html
-@dirrm share/proxyknife/doc
-@dirrm share/proxyknife
+share/doc/proxyknife/example/msn.req
+share/doc/proxyknife/example/proxyknife.conf.direct_http_connect.example
+share/doc/proxyknife/example/proxyknife.conf.example
+share/doc/proxyknife/example/proxyknife.conf.via_http_auth_tunnel_http_connect_msn.example
+share/doc/proxyknife/example/proxyknife.conf.via_http_tunnel.example
+share/doc/proxyknife/example/proxyknife.conf.via_socks5_auth_tunnel.example
+share/doc/proxyknife/example/proxylist
+share/doc/proxyknife/html/proxyknife.html/Advanced.html
+share/doc/proxyknife/html/proxyknife.html/Command_002dline-Exclusive-Options.html
+share/doc/proxyknife/html/proxyknife.html/Contact.html
+share/doc/proxyknife/html/proxyknife.html/Copying-Source-Code.html
+share/doc/proxyknife/html/proxyknife.html/Copying-This-Manual.html
+share/doc/proxyknife/html/proxyknife.html/Customize-Request.html
+share/doc/proxyknife/html/proxyknife.html/Download-Proxylist.html
+share/doc/proxyknife/html/proxyknife.html/Examples-of-startup-file.html
+share/doc/proxyknife/html/proxyknife.html/GNU-Free-Documentation-License.html
+share/doc/proxyknife/html/proxyknife.html/General-Usage.html
+share/doc/proxyknife/html/proxyknife.html/index.html
+share/doc/proxyknife/html/proxyknife.html/Introduction.html
+share/doc/proxyknife/html/proxyknife.html/Invoking.html
+share/doc/proxyknife/html/proxyknife.html/Output.html
+share/doc/proxyknife/html/proxyknife.html/Proxylist.html
+share/doc/proxyknife/html/proxyknife.html/Sort-the-Result.html
+share/doc/proxyknife/html/proxyknife.html/Startup-File.html
+share/doc/proxyknife/html/proxyknife.html/Startup-Options.html
+share/doc/proxyknife/html/proxyknife.html/Via-Proxy.html
+share/doc/proxyknife/proxyknife.dvi
+share/doc/proxyknife/proxyknife.pdf
+@dirrm share/doc/proxyknife/example
+@dirrm share/doc/proxyknife/html/proxyknife.html
+@dirrm share/doc/proxyknife/html
+@dirrm share/doc/proxyknife

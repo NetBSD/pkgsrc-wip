@@ -1,13 +1,43 @@
-$NetBSD: patch-aa,v 1.2 2008/04/13 08:49:23 gschwarz Exp $
+$NetBSD: patch-aa,v 1.3 2008/10/03 16:22:19 gschwarz Exp $
 
---- doc/Makefile.in.orig	2008-04-13 10:30:26.000000000 +0200
-+++ doc/Makefile.in	2008-04-13 10:31:00.000000000 +0200
-@@ -669,7 +669,7 @@
+--- doc/Makefile.in.orig	2007-09-24 15:16:45.000000000 +0200
++++ doc/Makefile.in	2008-10-03 17:49:34.000000000 +0200
+@@ -264,7 +264,7 @@
+ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+-localedir = @localedir@
++localedir = /Users/schwarz/pkg/share/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+@@ -663,20 +663,20 @@
+ 	--release="GNU Proxyknife @VERSION@" $? >$@
+ 
+ install-data-local: dvi pdf html
+-	$(top_srcdir)/mkinstalldirs $(pkgdatadir)/doc/html
+-	$(top_srcdir)/mkinstalldirs $(pkgdatadir)/doc/example 
++	$(top_srcdir)/mkinstalldirs $(htmldir)/html
++	$(top_srcdir)/mkinstalldirs $(docdir)/example 
+ 	$(top_srcdir)/mkinstalldirs $(sysconfdir)
  #	cp -rf zh $(pkgdatadir)/doc/html/
  #	cp -rf en $(pkgdatadir)/doc/html/
- 	cp -rf proxyknife.html $(pkgdatadir)/doc/html/
+-	cp -rf proxyknife.html $(pkgdatadir)/doc/html/
 -	$(INSTALL_DATA) proxyknife.conf.example $(sysconfdir)/proxyknife.conf
+-	$(INSTALL_DATA) proxyknife.conf.* $(pkgdatadir)/doc/example/
+-	$(INSTALL_DATA) msn.req $(pkgdatadir)/doc/example/
+-	$(INSTALL_DATA) proxyknife.dvi $(pkgdatadir)/doc/
+-	$(INSTALL_DATA) proxyknife.pdf $(pkgdatadir)/doc/
++	cp -rf proxyknife.html $(htmldir)/html/
 +#	$(INSTALL_DATA) proxyknife.conf.example $(sysconfdir)/proxyknife.conf
- 	$(INSTALL_DATA) proxyknife.conf.* $(pkgdatadir)/doc/example/
- 	$(INSTALL_DATA) msn.req $(pkgdatadir)/doc/example/
- 	$(INSTALL_DATA) proxyknife.dvi $(pkgdatadir)/doc/
++	$(INSTALL_DATA) proxyknife.conf.* $(docdir)/example/
++	$(INSTALL_DATA) msn.req $(docdir)/example/
++	$(INSTALL_DATA) proxyknife.dvi $(dvidir)
++	$(INSTALL_DATA) proxyknife.pdf $(pdfdir)
+ #	$(INSTALL_DATA) proxyknife_zh.texi $(pkgdatadir)/doc/
+ #	$(INSTALL_DATA) proxyknife_zh.info $(pkgdatadir)/doc/
+-	$(INSTALL_DATA) proxylist $(pkgdatadir)/doc/example
++	$(INSTALL_DATA) proxylist $(docdir)/example
+ #$(INSTALL_DATA) proxyknife_zh.dvi $(pkgdatadir)/doc/
+ #$(INSTALL_DATA) proxyknife_zh.pdf $(pkgdatadir)/doc/
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
