@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2008/09/17 13:37:59 rsmarples Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/03 12:46:58 rsmarples Exp $
 #
 
-DISTNAME=		openresolv-1.9
+DISTNAME=		openresolv-2.0
 CATEGORIES=		net
-MASTER_SITES=		http://roy.marples.name/openresolv/
+MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roy@marples.name
-HOMEPAGE=		http://roy.marples.name/openresolv/
+HOMEPAGE=		http://roy.marples.name/projects/openresolv/
 COMMENT=		Framework for managing /etc/resolv.conf
 
 USE_LANGUAGES=		# none
