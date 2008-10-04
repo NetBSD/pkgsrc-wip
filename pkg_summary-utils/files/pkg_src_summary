@@ -206,8 +206,9 @@ enrich_Makefile (){
 .PHONY: my-show-vars
 my-show-vars:
 .for VARNAME in \${VARNAMES}
-	@value="\${\${VARNAME}}"; \
-	if test -n "\$\$value"; then \${ECHO} \$(VARNAME)=\$\$value; fi
+.if !empty(\${VARNAME})
+	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
+.endif
 .endfor
 
 #####################################################################

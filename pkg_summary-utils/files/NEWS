@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------
+Version 0.17.2, by Aleksey Cheusov, Sat,  4 Oct 2008 14:47:09 +0300
+
+  FIX: pkg_src_summary may fail for packages when fields contain
+  quotes (e.g. COMMENT field for devel/apache-ant15/Makefile rev. 1.10)
+
+----------------------------------------------------------------------
 Version 0.17.1, by Aleksey Cheusov, Tue, 30 Sep 2008 23:28:39 +0300
 
   FIX for -A option: strip ending / symbol from dependencies
