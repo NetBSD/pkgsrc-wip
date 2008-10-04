@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/09/06 23:14:18 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2008/10/04 16:40:23 leot1990 Exp $
 
-SHA1 (gtypist-2.7.tar.gz) = b44292ea6f5b7f97138777b8090c402084a839e0
-RMD160 (gtypist-2.7.tar.gz) = 3bd7f01c6cd4f9f453744c76296701967786fe19
-Size (gtypist-2.7.tar.gz) = 1019990 bytes
+SHA1 (gtypist-2.8.1.tar.gz) = 90c86a8e53d589dc93f905cd9d158d5a47c04d9b
+RMD160 (gtypist-2.8.1.tar.gz) = 0a678467ccf0a9b7616e5a37edd0905513f7bf08
+Size (gtypist-2.8.1.tar.gz) = 1106017 bytes
