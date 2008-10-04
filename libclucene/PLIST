@@ -1,4 +1,56 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/22 18:06:31 krub1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/04 20:28:36 krub1 Exp $
+emul/linux/dev/null
+emul/linux/root/.opera/cache4/dcache4.url
+emul/linux/root/.opera/cache4/opr0003X
+emul/linux/root/.opera/cache4/opr0003Y
+emul/linux/root/.opera/cache4/opr0003Z
+emul/linux/root/.opera/cache4/opr00040
+emul/linux/root/.opera/cache4/opr00041
+emul/linux/root/.opera/cache4/opr00042
+emul/linux/root/.opera/cache4/opr00043
+emul/linux/root/.opera/cache4/opr00044
+emul/linux/root/.opera/cache4/opr00045
+emul/linux/root/.opera/cache4/opr00046
+emul/linux/root/.opera/cache4/opr00047
+emul/linux/root/.opera/cache4/opr00048
+emul/linux/root/.opera/cache4/opr00049
+emul/linux/root/.opera/cache4/opr0004A
+emul/linux/root/.opera/cache4/opr0004B
+emul/linux/root/.opera/cache4/opr0004C
+emul/linux/root/.opera/cache4/opr0004D
+emul/linux/root/.opera/cache4/opr0004E
+emul/linux/root/.opera/cache4/opr0004F
+emul/linux/root/.opera/cache4/opr0004G
+emul/linux/root/.opera/cache4/opr0004H
+emul/linux/root/.opera/cache4/opr0004I
+emul/linux/root/.opera/cache4/opr0004J
+emul/linux/root/.opera/cache4/opr0004K
+emul/linux/root/.opera/cache4/opr0004L
+emul/linux/root/.opera/cache4/opr0004M
+emul/linux/root/.opera/cache4/opr0004N
+emul/linux/root/.opera/cache4/opr0004O
+emul/linux/root/.opera/cache4/opr0004P
+emul/linux/root/.opera/cache4/opr0004Q
+emul/linux/root/.opera/cache4/opr0004R
+emul/linux/root/.opera/cache4/opr0004S
+emul/linux/root/.opera/cache4/opr0004T
+emul/linux/root/.opera/cache4/opr0004U
+emul/linux/root/.opera/cache4/opr0004V
+emul/linux/root/.opera/cache4/opr0004W
+emul/linux/root/.opera/cache4/opr0004Y
+emul/linux/root/.opera/cache4/opr0004Z
+emul/linux/root/.opera/cache4/opr00050
+emul/linux/root/.opera/cache4/opr00051
+emul/linux/root/.opera/cookies4.dat
+emul/linux/root/.opera/global.dat
+emul/linux/root/.opera/images/http%3A%2F%2Flibrdf.org%2Ffavicon.ico
+emul/linux/root/.opera/images/librdf.org.idx
+emul/linux/root/.opera/images/www.google.com.idx
+emul/linux/root/.opera/opcache/dcache4.url
+emul/linux/root/.opera/opcache/opr0004X
+emul/linux/root/.opera/sessions/autosave.win
+emul/linux/root/.opera/vlink4.dat
+emul/linux/root/.opera/vps/0000/w.ax
 include/CLucene.h
 include/CLucene/CLBackwards.h
 include/CLucene/CLConfig.h
@@ -142,3 +194,9 @@ lib/libclucene.la
 @dirrm include/CLucene/analysis/standard
 @dirrm include/CLucene/analysis
 @dirrm include/CLucene
+@dirrm emul/linux/root/.opera/vps/0000
+@dirrm emul/linux/root/.opera/sessions
+@dirrm emul/linux/root/.opera/opcache
+@dirrm emul/linux/root/.opera/images
+@dirrm emul/linux/root/.opera/cache4
+@dirrm emul/linux/root/.opera
