@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2008/03/16 12:47:30 jukka Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/04 09:19:14 jukka Exp $
 
-DISTNAME=	dk-milter-1.0.0
+DISTNAME=	dk-milter-1.0.1
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
