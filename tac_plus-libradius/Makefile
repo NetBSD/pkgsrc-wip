@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/17 21:39:00 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/04 20:26:28 gschwarz Exp $
 
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
@@ -17,12 +17,13 @@ INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man8 share/doc/tac_plus \
 .include "options.mk"
 
 GNU_CONFIGURE=	yes
-#USE_TOOLS+=	perl
 BUILD_TARGET=	tac_plus
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 CPPFLAGS+=	-DNO_PWAGE
 .endif
+
+CPPFLAGS+=	-DSTDLIB_MALLOC
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${PREFIX}/sbin

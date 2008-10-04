@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1 2008/10/04 20:26:29 gschwarz Exp $
+
+--- programs.c.orig	2008-10-04 22:00:52.000000000 +0200
++++ programs.c	2008-10-04 22:02:36.000000000 +0200
+@@ -20,9 +20,10 @@
+ /* Routines to fork children and communicate with them via pipes */
+ 
+ #include "tac_plus.h"
+-#include "sys/wait.h"
++#include <sys/wait.h>
+ #include <unistd.h>
+-#include "signal.h"
++#include <signal.h>
++#include <stdlib.h> /* for exit() */
+ 
+ /* Support for dollar variables.  Look in the authorization data and
+ return strings representing values found there.  If not found, return
