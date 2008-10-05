@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/07/16 18:02:35 gschwarz Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/05 07:57:01 gschwarz Exp $
 #
 
-DISTNAME=	tacacs+-F4.0.4.14
+DISTNAME=	tacacs+-F4.0.4.15
 PKGNAME=	${DISTNAME:S,-F,-,}
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/tac_plus/
@@ -17,17 +17,17 @@ USE_TOOLS+=	id # used in options.mk
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl
+USE_FEATURES+=	snprintf
 
 CONFIGURE_ARGS+=	--with-acctfile=${VARBASE:Q}/log/tac_plus.acct
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE:Q}/log/tac_plus.log
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE:Q}/run/tac_plus.pid
 CONFIGURE_ENV+=		PERLV_PATH=${PERL5:Q}
+BUILD_DEFS+=		VARBASE
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t \
 			-Dsocklen_t=int
-# need snprintf()
-. include "../../pkgtools/libnbcompat/buildlink3.mk"
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \

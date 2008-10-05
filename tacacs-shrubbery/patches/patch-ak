@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.3 2006/09/16 19:04:11 gschwarz Exp $
+$NetBSD: patch-ak,v 1.4 2008/10/05 07:57:01 gschwarz Exp $
 
---- configure.orig	2006-09-16 16:09:39.000000000 +0200
-+++ configure	2006-09-16 16:11:29.000000000 +0200
-@@ -1910,8 +1910,8 @@
+--- configure.orig	2007-12-13 20:18:38.000000000 +0100
++++ configure	2008-10-04 16:32:48.000000000 +0200
+@@ -2415,8 +2415,8 @@
  	# XXX: not sure if /usr/local is necessary.
  	# XXX: linux libwrap needs -lnsl. configure should check for
  	#      existence of libnsl instead of hard-coding
@@ -13,7 +13,7 @@ $NetBSD: patch-ak,v 1.3 2006/09/16 19:04:11 gschwarz Exp $
  	LIBS="-lnsl -lcrypt"; export LIBS
          cat >>confdefs.h <<\_ACEOF
  #define LINUX 1
-@@ -1921,8 +1921,8 @@
+@@ -2426,8 +2426,8 @@
  	# XXX: does linux need glibc: -DGLIBC
      ;;
      *mips* )
@@ -24,7 +24,7 @@ $NetBSD: patch-ak,v 1.3 2006/09/16 19:04:11 gschwarz Exp $
  	LIBS="-lcrypt"; export LIBS
          cat >>confdefs.h <<\_ACEOF
  #define MIPS 1
-@@ -1930,8 +1930,8 @@
+@@ -2435,8 +2435,8 @@
  
      ;;
      * )
