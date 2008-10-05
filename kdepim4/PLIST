@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/09/17 10:53:04 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/05 10:49:02 mwdavies Exp $
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -821,14 +821,13 @@ share/kde/apps/akregator/about/akregator.css
 share/kde/apps/akregator/about/main.html
 share/kde/apps/akregator/about/top-left-akregator.png
 share/kde/apps/akregator/akregator.notifyrc
-share/kde/apps/akregator/akregator_onlinesync_plugin.desktop
-share/kde/apps/akregator/akregator_onlinesync_plugin.rc
 share/kde/apps/akregator/akregator_part.rc
 share/kde/apps/akregator/akregator_shell.rc
 share/kde/apps/akregator/articleviewer.rc
 share/kde/apps/akregator/pageviewer.rc
 share/kde/apps/akregator/pics/kmmsgnew.png
 share/kde/apps/akregator/pics/kmmsgunseen.png
+share/kde/apps/akregator_onlinesync_plugin/akregator_onlinesync_plugin.rc
 share/kde/apps/cmake/modules/FindKode.cmake
 share/kde/apps/cmake/modules/KodeMacros.cmake
 share/kde/apps/kaddressbook/bookmark_xxportui.rc
@@ -1375,6 +1374,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/kde/apps/kaddressbook/csv-templates
 @dirrm share/kde/apps/kaddressbook
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@dirrm share/kde/apps/akregator_onlinesync_plugin
 @dirrm share/kde/apps/akregator/pics
 @dirrm share/kde/apps/akregator/about
 @dirrm share/kde/apps/akregator

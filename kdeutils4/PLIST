@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/07/29 22:04:44 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/10/05 10:53:54 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -63,6 +63,9 @@ share/doc/kde/HTML/en/kcalc/index.docbook
 share/doc/kde/HTML/en/kcharselect/common
 share/doc/kde/HTML/en/kcharselect/index.cache.bz2
 share/doc/kde/HTML/en/kcharselect/index.docbook
+share/doc/kde/HTML/en/kcontrol/blockdevices/common
+share/doc/kde/HTML/en/kcontrol/blockdevices/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/blockdevices/index.docbook
 share/doc/kde/HTML/en/kdf/common
 share/doc/kde/HTML/en/kdf/index.cache.bz2
 share/doc/kde/HTML/en/kdf/index.docbook

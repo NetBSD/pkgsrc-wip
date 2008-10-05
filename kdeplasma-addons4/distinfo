@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/09/03 22:27:46 mwdavies Exp $
+$NetBSD: distinfo,v 1.3 2008/10/05 10:50:19 mwdavies Exp $
 
-SHA1 (kdeplasma-addons-4.1.1.tar.bz2) = 6f579c8afe3630b81fdd0802866239b05de07bea
-RMD160 (kdeplasma-addons-4.1.1.tar.bz2) = 2e195d4dfc58824f95c8bbe86a173aa9ecac02a2
-Size (kdeplasma-addons-4.1.1.tar.bz2) = 4076155 bytes
+SHA1 (kdeplasma-addons-4.1.2.tar.bz2) = dbb1318235d468dc243547991c2a350a331a0f16
+RMD160 (kdeplasma-addons-4.1.2.tar.bz2) = e40b197d879917a527495b7f03fcb6e72e50eae6
+Size (kdeplasma-addons-4.1.2.tar.bz2) = 4075290 bytes
