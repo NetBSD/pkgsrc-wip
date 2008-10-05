@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/03 22:20:57 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/10/05 10:46:28 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -193,6 +193,7 @@ share/doc/kde/HTML/en/kolourpaint/view_thumbnails.png
 share/doc/kde/HTML/en/kruler/common
 share/doc/kde/HTML/en/kruler/index.cache.bz2
 share/doc/kde/HTML/en/kruler/index.docbook
+share/doc/kde/HTML/en/kruler/kruler.png
 share/doc/kde/HTML/en/ksnapshot/common
 share/doc/kde/HTML/en/ksnapshot/index.cache.bz2
 share/doc/kde/HTML/en/ksnapshot/index.docbook

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/09/08 14:53:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/05 10:46:28 mwdavies Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 CATEGORIES=	graphics
-COMMENT=	Personal Information Management tools for the KDE desktop
+COMMENT=	Graphical tools for the KDE desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
