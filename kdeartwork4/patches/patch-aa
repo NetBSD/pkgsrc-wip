@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2008/10/05 10:34:20 mwdavies Exp $
+
+--- cmake/modules/FindXscreensaver.cmake.orig	2008-01-05 13:00:42.000000000 +1300
++++ cmake/modules/FindXscreensaver.cmake
+@@ -6,6 +6,7 @@
+ # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
+ 
+ 
++if(NOT XSCREENSAVER_DIR)
+ FIND_PATH(XSCREENSAVER_DIR lib${LIB_SUFFIX}/xscreensaver/deco
+    ${KDE4_INCLUDE_DIR}
+    /usr/
+@@ -23,6 +24,7 @@ FIND_PATH(XSCREENSAVER_DIR lib${LIB_SUFF
+ if( XSCREENSAVER_DIR)
+    set(XSCREENSAVER_DIR ${XSCREENSAVER_DIR}/lib${LIB_SUFFIX}/xscreensaver/)
+ endif(XSCREENSAVER_DIR)
++endif(NOT XSCREENSAVER_DIR)
+ 
+ 
+ 
