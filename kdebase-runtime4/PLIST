@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/03 23:31:17 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/10/05 10:19:48 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -230,9 +230,6 @@ share/doc/kde/HTML/en/kcontrol/khtml/nsplugin.docbook
 share/doc/kde/HTML/en/kcontrol/language/common
 share/doc/kde/HTML/en/kcontrol/language/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/language/index.docbook
-share/doc/kde/HTML/en/kcontrol/mouse/common
-share/doc/kde/HTML/en/kcontrol/mouse/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/mouse/index.docbook
 share/doc/kde/HTML/en/kcontrol/netpref/common
 share/doc/kde/HTML/en/kcontrol/netpref/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/netpref/index.docbook
@@ -266,9 +263,6 @@ share/doc/kde/HTML/en/kcontrol/spellchecking/index.docbook
 share/doc/kde/HTML/en/kcontrol/useragent/common
 share/doc/kde/HTML/en/kcontrol/useragent/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/useragent/index.docbook
-share/doc/kde/HTML/en/kcontrol/windowmanagement/common
-share/doc/kde/HTML/en/kcontrol/windowmanagement/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/windowmanagement/index.docbook
 share/doc/kde/HTML/en/kdebugdialog/common
 share/doc/kde/HTML/en/kdebugdialog/index.cache.bz2
 share/doc/kde/HTML/en/kdebugdialog/index.docbook
@@ -909,7 +903,7 @@ share/icons/oxygen/128x128/mimetypes/image-cgm.png
 share/icons/oxygen/128x128/mimetypes/image-fax-g3.png
 share/icons/oxygen/128x128/mimetypes/image-gif.png
 share/icons/oxygen/128x128/mimetypes/image-jpeg.png
-share/icons/oxygen/128x128/mimetypes/image-jpeg2000.png
+share/icons/oxygen/128x128/mimetypes/image-jp2.png
 share/icons/oxygen/128x128/mimetypes/image-png.png
 share/icons/oxygen/128x128/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/128x128/mimetypes/image-svg+xml.png
@@ -1677,7 +1671,7 @@ share/icons/oxygen/16x16/mimetypes/image-cgm.png
 share/icons/oxygen/16x16/mimetypes/image-fax-g3.png
 share/icons/oxygen/16x16/mimetypes/image-gif.png
 share/icons/oxygen/16x16/mimetypes/image-jpeg.png
-share/icons/oxygen/16x16/mimetypes/image-jpeg2000.png
+share/icons/oxygen/16x16/mimetypes/image-jp2.png
 share/icons/oxygen/16x16/mimetypes/image-png.png
 share/icons/oxygen/16x16/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/16x16/mimetypes/image-svg+xml.png
@@ -2496,7 +2490,7 @@ share/icons/oxygen/22x22/mimetypes/image-cgm.png
 share/icons/oxygen/22x22/mimetypes/image-fax-g3.png
 share/icons/oxygen/22x22/mimetypes/image-gif.png
 share/icons/oxygen/22x22/mimetypes/image-jpeg.png
-share/icons/oxygen/22x22/mimetypes/image-jpeg2000.png
+share/icons/oxygen/22x22/mimetypes/image-jp2.png
 share/icons/oxygen/22x22/mimetypes/image-png.png
 share/icons/oxygen/22x22/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/22x22/mimetypes/image-svg+xml.png
@@ -3311,7 +3305,7 @@ share/icons/oxygen/32x32/mimetypes/image-cgm.png
 share/icons/oxygen/32x32/mimetypes/image-fax-g3.png
 share/icons/oxygen/32x32/mimetypes/image-gif.png
 share/icons/oxygen/32x32/mimetypes/image-jpeg.png
-share/icons/oxygen/32x32/mimetypes/image-jpeg2000.png
+share/icons/oxygen/32x32/mimetypes/image-jp2.png
 share/icons/oxygen/32x32/mimetypes/image-png.png
 share/icons/oxygen/32x32/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/32x32/mimetypes/image-svg+xml.png
@@ -4117,7 +4111,7 @@ share/icons/oxygen/48x48/mimetypes/image-cgm.png
 share/icons/oxygen/48x48/mimetypes/image-fax-g3.png
 share/icons/oxygen/48x48/mimetypes/image-gif.png
 share/icons/oxygen/48x48/mimetypes/image-jpeg.png
-share/icons/oxygen/48x48/mimetypes/image-jpeg2000.png
+share/icons/oxygen/48x48/mimetypes/image-jp2.png
 share/icons/oxygen/48x48/mimetypes/image-png.png
 share/icons/oxygen/48x48/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/48x48/mimetypes/image-svg+xml.png
@@ -4683,7 +4677,7 @@ share/icons/oxygen/64x64/mimetypes/image-cgm.png
 share/icons/oxygen/64x64/mimetypes/image-fax-g3.png
 share/icons/oxygen/64x64/mimetypes/image-gif.png
 share/icons/oxygen/64x64/mimetypes/image-jpeg.png
-share/icons/oxygen/64x64/mimetypes/image-jpeg2000.png
+share/icons/oxygen/64x64/mimetypes/image-jp2.png
 share/icons/oxygen/64x64/mimetypes/image-png.png
 share/icons/oxygen/64x64/mimetypes/image-svg+xml-compressed.png
 share/icons/oxygen/64x64/mimetypes/image-svg+xml.png
@@ -6073,7 +6067,7 @@ share/icons/oxygen/scalable/mimetypes/image-cgm.svgz
 share/icons/oxygen/scalable/mimetypes/image-fax-g3.svgz
 share/icons/oxygen/scalable/mimetypes/image-gif.svgz
 share/icons/oxygen/scalable/mimetypes/image-jpeg.svgz
-share/icons/oxygen/scalable/mimetypes/image-jpeg2000.svgz
+share/icons/oxygen/scalable/mimetypes/image-jp2.svgz
 share/icons/oxygen/scalable/mimetypes/image-png.svgz
 share/icons/oxygen/scalable/mimetypes/image-svg+xml-compressed.svgz
 share/icons/oxygen/scalable/mimetypes/image-svg+xml.svgz
@@ -6214,7 +6208,7 @@ share/icons/oxygen/scalable/mimetypes/small/16x16/image-cgm.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-fax-g3.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-gif.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-jpeg.svgz
-share/icons/oxygen/scalable/mimetypes/small/16x16/image-jpeg2000.svgz
+share/icons/oxygen/scalable/mimetypes/small/16x16/image-jp2.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-png.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-svg+xml-compressed.svgz
 share/icons/oxygen/scalable/mimetypes/small/16x16/image-svg+xml.svgz
@@ -6384,7 +6378,7 @@ share/icons/oxygen/scalable/mimetypes/small/22x22/image-cgm.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-fax-g3.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-gif.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-jpeg.svgz
-share/icons/oxygen/scalable/mimetypes/small/22x22/image-jpeg2000.svgz
+share/icons/oxygen/scalable/mimetypes/small/22x22/image-jp2.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-png.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-svg+xml-compressed.svgz
 share/icons/oxygen/scalable/mimetypes/small/22x22/image-svg+xml.svgz
@@ -7871,7 +7865,6 @@ ${PLIST.smb}@dirrm share/kde/apps/konqueror/dirtree
 @dirrm share/doc/kde/HTML/en/khelpcenter
 @dirrm share/doc/kde/HTML/en/kdesu
 @dirrm share/doc/kde/HTML/en/kdebugdialog
-@dirrm share/doc/kde/HTML/en/kcontrol/windowmanagement
 @dirrm share/doc/kde/HTML/en/kcontrol/useragent
 @dirrm share/doc/kde/HTML/en/kcontrol/spellchecking
 @dirrm share/doc/kde/HTML/en/kcontrol/smb
@@ -7882,7 +7875,6 @@ ${PLIST.smb}@dirrm share/kde/apps/konqueror/dirtree
 @dirrm share/doc/kde/HTML/en/kcontrol/panelappearance
 @dirrm share/doc/kde/HTML/en/kcontrol/panel
 @dirrm share/doc/kde/HTML/en/kcontrol/netpref
-@dirrm share/doc/kde/HTML/en/kcontrol/mouse
 @dirrm share/doc/kde/HTML/en/kcontrol/language
 @dirrm share/doc/kde/HTML/en/kcontrol/khtml
 @dirrm share/doc/kde/HTML/en/kcontrol/kdm

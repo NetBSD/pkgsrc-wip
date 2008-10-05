@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/09/03 22:10:23 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/10/05 10:21:51 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -445,6 +445,9 @@ share/doc/kde/HTML/en/kcontrol/kwindecoration/common
 share/doc/kde/HTML/en/kcontrol/kwindecoration/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kwindecoration/index.docbook
 share/doc/kde/HTML/en/kcontrol/kwindecoration/main.png
+share/doc/kde/HTML/en/kcontrol/mouse/common
+share/doc/kde/HTML/en/kcontrol/mouse/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/mouse/index.docbook
 share/doc/kde/HTML/en/kcontrol/screensaver/common
 share/doc/kde/HTML/en/kcontrol/screensaver/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/screensaver/index.docbook
@@ -453,6 +456,12 @@ share/doc/kde/HTML/en/kcontrol/splashscreen/get-new-theme.png
 share/doc/kde/HTML/en/kcontrol/splashscreen/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/splashscreen/index.docbook
 share/doc/kde/HTML/en/kcontrol/splashscreen/splash-main.png
+share/doc/kde/HTML/en/kcontrol/windowbehaviour/common
+share/doc/kde/HTML/en/kcontrol/windowbehaviour/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/windowbehaviour/index.docbook
+share/doc/kde/HTML/en/kcontrol/windowspecific/common
+share/doc/kde/HTML/en/kcontrol/windowspecific/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/windowspecific/index.docbook
 share/doc/kde/HTML/en/kdm/Daemon.README
 share/doc/kde/HTML/en/kdm/common
 share/doc/kde/HTML/en/kdm/index.cache.bz2
@@ -2135,8 +2144,11 @@ share/sounds/pop.wav
 @dirrm share/doc/kde/HTML/en/kmenuedit
 @dirrm share/doc/kde/HTML/en/klipper
 @dirrm share/doc/kde/HTML/en/kdm
+@dirrm share/doc/kde/HTML/en/kcontrol/windowspecific
+@dirrm share/doc/kde/HTML/en/kcontrol/windowbehaviour
 @dirrm share/doc/kde/HTML/en/kcontrol/splashscreen
 @dirrm share/doc/kde/HTML/en/kcontrol/screensaver
+@dirrm share/doc/kde/HTML/en/kcontrol/mouse
 @dirrm share/doc/kde/HTML/en/kcontrol/kwindecoration
 @dirrm share/doc/kde/HTML/en/kcontrol/keys
 @dirrm share/doc/kde/HTML/en/kcontrol/keyboard
