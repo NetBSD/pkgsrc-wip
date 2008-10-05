@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/12/24 15:24:24 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/05 13:24:48 shattered Exp $
 #
 
-DISTNAME=		mp3chop-1.07
+DISTNAME=		mp3chop-1.08
 CATEGORIES=		audio
 MASTER_SITES=		http://www.fysh.org/~mac/mp3chop/
 
