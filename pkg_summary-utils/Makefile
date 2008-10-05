@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/07/07 14:25:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/05 20:10:10 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -32,7 +32,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${.CURDIR}/files
 NO_CHECKSUM=	yes
-NO_BUILD=	yes
 
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
 MAKE_ENV+=	MKCATPAGES=no

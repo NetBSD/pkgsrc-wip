@@ -36,6 +36,23 @@ BIRTHDATE=	2008-04-06
 
 PROJECTNAME=	pkg_summary-utils
 
+.SUFFIXES:		.in
+
+.in:
+	sed -e 's,@@sysconfdir@@,${SYSCONFDIR},g' \
+	    -e 's,@@libexecdir@@,${LIBEXECDIR},g' \
+	    -e 's,@@prefix@@,${PREFIX},g' \
+	    -e 's,@@bindir@@,${BINDIR},g' \
+	    -e 's,@@sbindir@@,${SBINDIR},g' \
+	    -e 's,@@datadir@@,${DATADIR},g' \
+	    -e 's,@@version@@,${VERSION},g' \
+	    ${.ALLSRC} > ${.TARGET}
+
+.PHONY: clean-my
+clean: clean-my
+clean-my:
+	rm -f ChangeLog ${SCRIPTS} *.cat1 *.cat7
+
 ############################################################
 .PHONY: install-dirs
 install-dirs:

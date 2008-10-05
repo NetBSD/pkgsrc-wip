@@ -23,7 +23,7 @@
 
 set -e
 
-. pipestatus
+. @@bindir@@/pipestatus
 
 ############################################################
 # user settable variables

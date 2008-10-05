@@ -22,24 +22,53 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 set -e
-. pipestatus
+
+. @@bindir@@/pipestatus
+
+############################################################
+# user settable variables
+if test -z "$PKGSRCDIR"; then
+    export PKGSRCDIR=/usr/pkgsrc # export - for pkg_src_fetch_var
+fi
+
+if test -z "$BMAKE"; then
+    export BMAKE=make
+fi
+
+############################################################
+tmpdir=/tmp/pkg_micro_src_summary.$$
+trap "rm -rf $tmpdir" 0 1 2 15
+mkdir -m 700 $tmpdir
+
+errsfn=$tmpdir/errors.txt
 
 ############################################################
 usage (){
     cat 1>&2 <<EOF
-pkg_list_all_pkgs - outputs all packages in pkgsrc tree
+pkg_micro_src_summary - builds micro summary information
+about source packages
 
-usage: pkg_list_all_pkgs [OPTIONS]
+usage: pkg_micro_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
 OPTIONS:
   -h|--help              display this help message
+  -f|--fields <filename>
+  -f|--fields=<filename> fields to be included to summary,
+                         PKGNAME and PKGPATH by default
 EOF
 }
+
+fields='PKGNAME PKGPATH'
 
 while test $# -ne 0; do
     case "$1" in
 	-h|--help)
 	    usage
 	    exit 0;;
+	-f|--fields)
+	    fields="$2"
+	    shift;;
+	-f=*|--fields=*)
+	    fields="$(echo $1 | cut -f2 -d=)";;
 	--)
 	    shift
 	    break;;
@@ -53,64 +82,44 @@ while test $# -ne 0; do
 done
 
 ############################################################
-# user settable variables
-if test -z "$PKGSRCDIR"; then
-    PKGSRCDIR=/usr/pkgsrc
-fi
-
-if test -z "$BMAKE"; then
-    BMAKE=make
-fi
-
-############################################################
 cd $PKGSRCDIR
 
-tmp_dir="/tmp/pkg_list_all_pkgs.$$"
-trap "rm -rf $tmp_dir" 0 1 2 15
-mkdir -m 700 "$tmp_dir"
+# running helper
+helper_out=$tmpdir/helper_out.txt
 
-############################################################
-############################################################
-#### get all available packages
-
-enrich_Makefile (){
-    cat <<EOF
-.PHONY: my-show-var
-my-show-var:
-	@echo \${\${VARNAME}:Q}
-
-.include "./Makefile"
-EOF
+list_pkgs (){
+    if test $# -ne 0; then
+	# processing arguments
+	for pkgpath in "$@"; do
+	    echo $pkgpath
+	done
+    else
+	cat
+    fi
 }
 
-get_SUBDIR (){
-    subdir_fn=$tmp_dir/subdirs
-    runpipe0 \
-	enrich_Makefile '|' \
-	${BMAKE} -f - my-show-var VARNAME=SUBDIR > $subdir_fn
-    cat $subdir_fn
+runpipe \
+    list_pkgs "$@" '|' \
+    pkg_src_fetch_var -f="$fields" > "$helper_out"
+
+# `+' to micro_summary (fast!)
+awk -F'\t' -v fields="$fields" '
+BEGIN {
+   fcnt = split(fields, fname, " ")
 }
 
-prepand (){
-    awk -v prefix="$1" '{print prefix $0}'
-}
+/^[+]/ {
+   for (i=1; i <= fcnt; ++i){
+      printf "%s=%s\n", fname [i], $(i+1)
+   }
 
-space_to_NL () {
-    tr ' ' '
-'
-}
+   printf "\n"
+}' "$helper_out"
 
-list_all_packages (){
-    categories="`get_SUBDIR`"
-    for c in $categories; do
-	(
-	    cd $c &&
-	    runpipe0 \
-		get_SUBDIR '|' \
-		space_to_NL '|' \
-		prepand "$c/"
-	)
-    done
-}
-
-list_all_packages
+# `-' to micro_summary (slo-o-o-ow!)
+make_out=$tmpdir/make_out.txt
+awk -F'\t' '
+/^[-]/ {
+   print $NF
+}' "$helper_out" |
+pkg_src_summary -f "$fields"
