@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/12 16:33:31 othyro Exp $
+$NetBSD: distinfo,v 1.2 2008/10/05 17:29:48 jh88 Exp $
 
-SHA1 (pnmcurve-0.0.1.tar.gz) = da98f82cf313ecf1819fbdcabe9f08d63fc5f22b
-RMD160 (pnmcurve-0.0.1.tar.gz) = 83bb832c8ca9b915f518d5f36e86f33f0d598b46
-Size (pnmcurve-0.0.1.tar.gz) = 81082 bytes
+SHA1 (pnmcurve-0.0.2.tar.gz) = 4a6705073fa12d52dd3c4f27664dc2d9900bba0d
+RMD160 (pnmcurve-0.0.2.tar.gz) = 276454c7c91d623ec74849a42d6baf451d0657ca
+Size (pnmcurve-0.0.2.tar.gz) = 94429 bytes
