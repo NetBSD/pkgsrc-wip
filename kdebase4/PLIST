@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/26 22:55:48 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/05 10:23:26 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -214,8 +214,6 @@ share/doc/kde/HTML/en/konqueror/sidebar.docbook
 share/doc/kde/HTML/en/konsole/common
 share/doc/kde/HTML/en/konsole/index.cache.bz2
 share/doc/kde/HTML/en/konsole/index.docbook
-share/doc/kde/HTML/en/konsole/konsole.png
-share/doc/kde/HTML/en/konsole/tabbar.png
 share/doc/kde/HTML/en/kwrite/common
 share/doc/kde/HTML/en/kwrite/index.cache.bz2
 share/doc/kde/HTML/en/kwrite/index.docbook
@@ -746,8 +744,6 @@ share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde3.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde4.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde5.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde6.png
-share/kde/apps/konqueror/konq-filemanagement.rc
-share/kde/apps/konqueror/konq-webbrowsing.rc
 share/kde/apps/konqueror/konqueror.rc
 share/kde/apps/konqueror/pics/arrow_bottomleft.png
 share/kde/apps/konqueror/pics/arrow_bottomright.png
