@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/09/19 17:03:47 asau Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/06 19:10:54 asau Exp $
 
 DISTNAME=	gforth-0.6.99
 PKGNAME=	gforth-0.6.99 # needed because of cvs-package.mk
@@ -29,7 +29,7 @@ CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake aclocal
-USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	makeinfo gzip
 USE_TOOLS+=	perl:build
 
 MAKE_JOBS_SAFE=	no # fresh Gforth is required to build doc
