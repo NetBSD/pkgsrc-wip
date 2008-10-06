@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3058 2008/10/05 19:01:00 cheusov Exp $
+# $Id: Makefile,v 1.3059 2008/10/06 20:11:28 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -885,6 +885,7 @@ SUBDIR+=	libp11
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
+SUBDIR+=	libpciaccess
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
