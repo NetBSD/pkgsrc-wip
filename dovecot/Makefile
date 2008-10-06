@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2008/09/05 20:11:03 ghen Exp $
+# $NetBSD: Makefile,v 1.52 2008/10/06 12:02:16 ghen Exp $
 
-DISTNAME=		dovecot-1.2.alpha1
+DISTNAME=		dovecot-1.2.alpha2
 PKGNAME=		${DISTNAME:S/.alpha/alpha/}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/1.2/alpha/

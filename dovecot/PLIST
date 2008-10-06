@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2008/09/05 20:11:03 ghen Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/10/06 12:02:16 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -124,6 +124,7 @@ include/dovecot/src/lib-storage/index/mbox/mbox-storage.h
 include/dovecot/src/lib-storage/index/mbox/mbox-sync-private.h
 include/dovecot/src/lib-storage/index/raw/raw-storage.h
 include/dovecot/src/lib-storage/index/raw/raw-sync.h
+include/dovecot/src/lib-storage/index/shared/shared-storage.h
 include/dovecot/src/lib-storage/list/index-mailbox-list.h
 include/dovecot/src/lib-storage/list/mailbox-list-fs.h
 include/dovecot/src/lib-storage/list/mailbox-list-maildir.h
@@ -406,10 +407,14 @@ share/doc/dovecot/wiki/PasswordDatabase.txt
 share/doc/dovecot/wiki/PerformanceTuning.txt
 share/doc/dovecot/wiki/Plugins.Convert.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
+share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
+share/doc/dovecot/wiki/Plugins.FTS.Solr.txt
+share/doc/dovecot/wiki/Plugins.FTS.Squat.txt
 share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
+share/doc/dovecot/wiki/Plugins.Zlib.txt
 share/doc/dovecot/wiki/Plugins.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
 share/doc/dovecot/wiki/QuickConfiguration.txt
@@ -447,6 +452,7 @@ share/doc/dovecot/wiki/maildrop.txt
 share/doc/dovecot/wiki/mutt.txt
 share/doc/dovecot/wiki/uw2dovecot.sh.txt
 share/examples/dovecot/dovecot-db-example.conf
+share/examples/dovecot/dovecot-dict-sql-example.conf
 share/examples/dovecot/dovecot-example.conf
 share/examples/dovecot/dovecot-ldap-example.conf
 share/examples/dovecot/dovecot-openssl.cnf
@@ -465,6 +471,7 @@ share/examples/rc.d/dovecot
 @dirrm lib/dovecot
 @dirrm include/dovecot/src/pop3
 @dirrm include/dovecot/src/lib-storage/list
+@dirrm include/dovecot/src/lib-storage/index/shared
 @dirrm include/dovecot/src/lib-storage/index/raw
 @dirrm include/dovecot/src/lib-storage/index/mbox
 @dirrm include/dovecot/src/lib-storage/index/maildir
