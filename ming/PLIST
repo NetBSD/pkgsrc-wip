@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/27 11:11:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/06 11:28:13 obache Exp $
 bin/dbl2png
 bin/gif2dbl
 bin/gif2mask
+bin/img2swf
 bin/listaction
 bin/listaction_d
 bin/listfdb
@@ -13,7 +14,6 @@ bin/makefdb
 bin/makeswf
 bin/ming-config
 bin/png2dbl
-bin/png2swf
 bin/raw2adpcm
 bin/swftocxx
 bin/swftoperl

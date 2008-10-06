@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2008/07/27 11:11:54 obache Exp $
+$NetBSD: patch-aa,v 1.6 2008/10/06 11:28:13 obache Exp $
 
---- configure.orig	2008-07-05 18:17:04.000000000 +0000
+--- configure.orig	2008-09-18 10:00:06.000000000 +0900
 +++ configure
-@@ -4622,7 +4622,7 @@ echo $ECHO_N "checking for Python librar
+@@ -4635,7 +4635,7 @@ echo $ECHO_N "checking for Python librar
  		py_version=`$PYTHON -c "from distutils.sysconfig import *; \
  			from string import join; \
  			print join(get_config_vars('VERSION'))"`

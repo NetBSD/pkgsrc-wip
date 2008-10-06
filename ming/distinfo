@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2008/07/27 11:11:54 obache Exp $
+$NetBSD: distinfo,v 1.11 2008/10/06 11:28:13 obache Exp $
 
-SHA1 (ming-0.4.0.rc1.tar.gz) = 86a8b58e52509969a7d1cb0816131538b248a578
-RMD160 (ming-0.4.0.rc1.tar.gz) = b9c7aa21124811c188ac9925fe1d4fc5b2c04702
-Size (ming-0.4.0.rc1.tar.gz) = 15235679 bytes
-SHA1 (patch-aa) = 68312d7c4c09ad5f661d6bd8ed29d47af3df899f
+SHA1 (ming-0.4.2.tar.gz) = 3990c718c448cd26c1551457258d8de11c74b3e5
+RMD160 (ming-0.4.2.tar.gz) = 20424ab2aee828addd6d757dbdcf1a5eefb1538d
+Size (ming-0.4.2.tar.gz) = 15294616 bytes
+SHA1 (patch-aa) = 336b4520e3e1b1024eabfb019c2ceb66ede3e819
