@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2008/07/27 11:29:30 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/06 11:35:20 obache Exp $
 
 DISTNAME=	ming-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ming-${VER}
 CATEGORIES=	multimedia
-MASTER_SITES=	http://rubyforge.org/frs/download.php/39583/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/44137/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mingruby.rubyforge.org/
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pax
 USE_RUBY_SETUP=		yes
-VER=			0.2.0
+VER=			0.2.1
 
 WRKSRC=			${WRKDIR}/ming-ruby
 

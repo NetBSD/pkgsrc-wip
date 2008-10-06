@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/27 11:29:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/10/06 11:35:20 obache Exp $
 ${RUBY_VENDORARCHLIB}/ming/mingc.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/ming/ming.rb
+${RUBY_EG}/ming/_README.examples
 ${RUBY_EG}/ming/common/Impact.fdb
 ${RUBY_EG}/ming/common/MatrixFilter.jpg
 ${RUBY_EG}/ming/common/Verdana.fdb
@@ -70,6 +71,7 @@ ${RUBY_EG}/ming/level2/javascript.rb
 ${RUBY_EG}/ming/level2/koch.rb
 ${RUBY_EG}/ming/level2/koch2.rb
 ${RUBY_EG}/ming/level2/mingplusas.rb
+${RUBY_EG}/ming/level2/morph2.rb
 ${RUBY_EG}/ming/level2/myxml.rb
 ${RUBY_EG}/ming/level2/objectregisterclass.rb
 ${RUBY_EG}/ming/level2/onclipevent2.rb
@@ -78,6 +80,7 @@ ${RUBY_EG}/ming/level2/polygon.rb
 ${RUBY_EG}/ming/level2/prebuilt.rb
 ${RUBY_EG}/ming/level2/pyramids.rb
 ${RUBY_EG}/ming/level2/setmask.rb
+${RUBY_EG}/ming/level2/shape_draw.rb
 ${RUBY_EG}/ming/level2/sketchpad.rb
 ${RUBY_EG}/ming/level2/skewxto.rb
 ${RUBY_EG}/ming/level2/skewyto.rb
@@ -111,6 +114,7 @@ ${RUBY_EG}/ming/level3/AScode/RectangleButton.as
 ${RUBY_EG}/ming/level3/AScode/Rotation.as
 ${RUBY_EG}/ming/level3/AScode/StarField.as
 ${RUBY_EG}/ming/level3/AScode/Timer.as
+${RUBY_EG}/ming/level3/AScode/fract04_f6.as
 ${RUBY_EG}/ming/level3/_README
 ${RUBY_EG}/ming/level3/aa/DrawArc.as
 ${RUBY_EG}/ming/level3/aa/DrawingMethods.as
@@ -124,6 +128,7 @@ ${RUBY_EG}/ming/level3/circles.xml
 ${RUBY_EG}/ming/level3/dot.rb
 ${RUBY_EG}/ming/level3/dotted.rb
 ${RUBY_EG}/ming/level3/drawarc.rb
+${RUBY_EG}/ming/level3/fractal.rb
 ${RUBY_EG}/ming/level3/gradient.rb
 ${RUBY_EG}/ming/level3/gravity.rb
 ${RUBY_EG}/ming/level3/mask.rb
@@ -138,12 +143,18 @@ ${RUBY_EG}/ming/multimedia/_README
 ${RUBY_EG}/ming/multimedia/sound_au.rb
 ${RUBY_EG}/ming/multimedia/sound_wav.rb
 ${RUBY_EG}/ming/multimedia/soundbutton.rb
+${RUBY_EG}/ming/multimedia/soundsoundstream.rb
 ${RUBY_EG}/ming/multimedia/soundstream.rb
+${RUBY_EG}/ming/multimedia/stream_flv.rb
 ${RUBY_EG}/ming/multimedia/stream_mp3.rb
 ${RUBY_EG}/ming/multimedia/swfscriptedsound.rb
 ${RUBY_EG}/ming/multimedia/swfsoundstop.rb
 ${RUBY_EG}/ming/multimedia/video.rb
-${RUBY_EG}/ming/multimedia/videostream.rb
+${RUBY_EG}/ming/multimedia/video2.rb
+${RUBY_EG}/ming/multimedia/video3.rb
+${RUBY_EG}/ming/multimedia/video4.rb
+${RUBY_EG}/ming/multimedia/video5.rb
+${RUBY_EG}/ming/multimedia/video6.rb
 ${RUBY_EG}/ming/rtmp/_README
 ${RUBY_EG}/ming/rtmp/haxevideoclient.rb
 ${RUBY_EG}/ming/rtmp/haxevideopublisher.rb
@@ -196,6 +207,10 @@ ${RUBY_EG}/ming/version8/gradient8.rb
 ${RUBY_EG}/ming/version8/gradient8a.rb
 ${RUBY_EG}/ming/version8/gradient8b.rb
 ${RUBY_EG}/ming/version8/gradientglow.rb
+${RUBY_EG}/ming/version8/initaction.rb
+${RUBY_EG}/ming/version8/initaction2.rb
+${RUBY_EG}/ming/version8/initaction3.rb
+${RUBY_EG}/ming/version8/initaction4.rb
 ${RUBY_EG}/ming/version8/matrix.rb
 ${RUBY_EG}/ming/version8/perlinnoise.rb
 ${RUBY_EG}/ming/version8/pixeldissolve.rb
@@ -235,3 +250,7 @@ ${RUBY_EG}/ming/version8/setTabIndex.rb
 @dirrm ${RUBY_EG}/ming
 @dirrm ${RUBY_VENDORLIB}/ming
 @dirrm ${RUBY_VENDORARCHLIB}/ming
+@dirrm ${RUBY_VENDORARCHLIB}
+@dirrm ${RUBY_VENDORLIB}
+@dirrm ${RUBY_VENDORLIB_BASE}
+@dirrm lib/ruby
