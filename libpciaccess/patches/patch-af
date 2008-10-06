@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/10/06 20:09:55 tnn2 Exp $
+
+--- configure.ac.orig	2008-06-10 21:24:44.000000000 +0200
++++ configure.ac
+@@ -77,6 +77,17 @@ case $host_os in
+ 	*linux*)
+ 		linux=yes
+ 		;;
++	*netbsd*)
++		case $host in
++		*i386*)
++			PCIACCESS_LIBS="-li386"
++			;;
++		*x86_64*|*amd64*)
++			PCIACCESS_LIBS="-lx86_64"
++			;;
++		esac
++		netbsd=yes
++		;;
+ 	*openbsd*)
+ 		openbsd=yes
+ 		;;
+@@ -88,6 +99,7 @@ esac
+ 
+ AM_CONDITIONAL(LINUX, [test "x$linux" = xyes])
+ AM_CONDITIONAL(FREEBSD, [test "x$freebsd" = xyes])
++AM_CONDITIONAL(NETBSD, [test "x$netbsd" = xyes])
+ AM_CONDITIONAL(OPENBSD, [test "x$openbsd" = xyes])
+ AM_CONDITIONAL(SOLARIS, [test "x$solaris" = xyes])
+ 

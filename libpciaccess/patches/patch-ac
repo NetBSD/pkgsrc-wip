@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/10/06 20:09:55 tnn2 Exp $
+
+--- src/common_interface.c.orig	2008-05-21 19:43:15.000000000 +0200
++++ src/common_interface.c
+@@ -64,7 +64,7 @@
+ #define HTOLE_16(x)	htole16(x)
+ #define HTOLE_32(x)	htole32(x)
+ 
+-#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ #define LETOH_16(x)	le16toh(x)
+ #define LETOH_32(x)	le32toh(x)
+ #else
