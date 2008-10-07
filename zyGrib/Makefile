@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/07/29 10:34:06 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/07 18:03:09 plunky Exp $
 #
 
-DISTNAME=	zyGrib-1.6.1
+DISTNAME=	zyGrib-2.1.0
 CATEGORIES=	geography
 MASTER_SITES=	http://zygrib.free.fr/files/
 EXTRACT_SUFX=	.tgz
@@ -29,17 +29,58 @@ SUBST_SED.paths+=	-e "s|tr/|${PREFIX}/share/zyGrib/tr/|"
 INSTALLATION_DIRS+=	share/zyGrib/maps/gis share/zyGrib/maps/gshhs
 INSTALLATION_DIRS+=	share/zyGrib/img share/zyGrib/tr
 
-INSTALL_FILES=	img/1leftarrow.png img/1rightarrow.png img/back.png img/down.png
-INSTALL_FILES+=	img/exit.png img/fileclose.png img/fileopen.png img/forward.png
-INSTALL_FILES+=	img/help.png img/info.png img/network.png img/up.png
-INSTALL_FILES+=	img/viewmag+.png img/viewmag-.png img/viewmag1.png
+INSTALL_FILES=	img/1leftarrow.png
+INSTALL_FILES+=	img/1rightarrow.png
+INSTALL_FILES+=	img/2leftarrow.png
+INSTALL_FILES+=	img/2rightarrow.png
+INSTALL_FILES+=	img/anim.png
+INSTALL_FILES+=	img/back.png
+INSTALL_FILES+=	img/connect_no.png
+INSTALL_FILES+=	img/down.png
+INSTALL_FILES+=	img/exit.png
+INSTALL_FILES+=	img/fileclose.png
+INSTALL_FILES+=	img/fileopen.png
+INSTALL_FILES+=	img/forward.png
+INSTALL_FILES+=	img/help.png
+INSTALL_FILES+=	img/info.png
+INSTALL_FILES+=	img/network.png
+INSTALL_FILES+=	img/player_eject.png
+INSTALL_FILES+=	img/player_end.png
+INSTALL_FILES+=	img/player_fwd.png
+INSTALL_FILES+=	img/player_pause.png
+INSTALL_FILES+=	img/player_play.png
+INSTALL_FILES+=	img/player_playlist.png
+INSTALL_FILES+=	img/player_rew.png
+INSTALL_FILES+=	img/player_start.png
+INSTALL_FILES+=	img/player_stop.png
+INSTALL_FILES+=	img/reload.png
+INSTALL_FILES+=	img/up.png
+INSTALL_FILES+=	img/viewmag+.png
+INSTALL_FILES+=	img/viewmag-.png
+INSTALL_FILES+=	img/viewmag1.png
 INSTALL_FILES+=	img/viewmagfit.png
-INSTALL_FILES+=	maps/gis/cities.txt.gz maps/gis/countries_en.txt.gz
+INSTALL_FILES+=	maps/gis/cities.txt.gz
+INSTALL_FILES+=	maps/gis/countries_en.txt.gz
 INSTALL_FILES+=	maps/gis/countries_fr.txt.gz
-INSTALL_FILES+=	maps/gshhs/README.gshhs maps/gshhs/gshhs_c.b maps/gshhs/gshhs_l.b
-INSTALL_FILES+=	maps/gshhs/wdb_borders_c.b maps/gshhs/wdb_borders_l.b
-INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b maps/gshhs/wdb_rivers_l.b
-INSTALL_FILES+=	tr/zyGrib_en.qm tr/zyGrib_en.ts
+INSTALL_FILES+=	maps/gshhs/README.gshhs
+INSTALL_FILES+=	maps/gshhs/README.gshhs.rangs
+INSTALL_FILES+=	maps/gshhs/gshhs_2.rim
+INSTALL_FILES+=	maps/gshhs/gshhs_3.rim
+INSTALL_FILES+=	maps/gshhs/gshhs_4.rim
+INSTALL_FILES+=	maps/gshhs/rangs_2.cat
+INSTALL_FILES+=	maps/gshhs/rangs_2.cel
+INSTALL_FILES+=	maps/gshhs/rangs_3.cat
+INSTALL_FILES+=	maps/gshhs/rangs_3.cel
+INSTALL_FILES+=	maps/gshhs/rangs_4.cat
+INSTALL_FILES+=	maps/gshhs/rangs_4.cel
+INSTALL_FILES+=	maps/gshhs/wdb_borders_c.b
+INSTALL_FILES+=	maps/gshhs/wdb_borders_i.b
+INSTALL_FILES+=	maps/gshhs/wdb_borders_l.b
+INSTALL_FILES+=	maps/gshhs/wdb_rivers_c.b
+INSTALL_FILES+=	maps/gshhs/wdb_rivers_i.b
+INSTALL_FILES+=	maps/gshhs/wdb_rivers_l.b
+INSTALL_FILES+=	tr/zyGrib_en.qm
+INSTALL_FILES+=	tr/zyGrib_en.ts
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake

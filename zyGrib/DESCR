@@ -3,7 +3,8 @@ Display of weather data contained in GRIB files.
 Weather data used:
     - atmospheric pressure at sea level
     - wind at 10m above ground
-    - temperature at 2m above ground
+    - temperature at 2m above ground (degC)
     - relative humidity at 2m above ground
     - rainfall (mm/h)
     - cloud cover (%)
+    - dew point (degC)

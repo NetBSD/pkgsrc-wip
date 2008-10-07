@@ -1,5 +1,0 @@
--  is mixed case zyGrib name ok?
-
--  it is possible to load some finer detail coastlines, just by extracting
-   the relevant files to the maps/gshhs directory. should this be an option
-   or another package? (intermediate->6Mb, high->20Mb, full->80Mb)
