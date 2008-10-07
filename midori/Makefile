@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/23 11:02:32 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/07 19:45:06 tonnerre Exp $
 #
 
-DISTNAME=	midori-0.0.18
+DISTNAME=	midori-0.0.21
 CATEGORIES=	www
-MASTER_SITES=	http://www.twotoasts.de/media/midori/
+MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
 MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://www.twotoasts.de/media/midori/
 COMMENT=	Lightweight web browser using WebKit
+EXTRACT_SUFX=	.tar.bz2
 
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_DIRS+=	xdg-1.4
+CONFIGURE_FLAGS+=	--prefix=${PREFIX:Q}
 
 USE_TOOLS+=	intltool pkg-config msgfmt gmake
 

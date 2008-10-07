@@ -1,7 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/23 11:02:32 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/07 19:45:06 tonnerre Exp $
 bin/midori
 share/applications/midori.desktop
+share/icons/hicolor/32x32/apps/midori.png
+share/icons/hicolor/32x32/categories/extension.png
+share/icons/hicolor/32x32/status/news-feed.png
+share/icons/hicolor/48x48/apps/midori.png
+share/icons/hicolor/48x48/categories/extension.png
+share/icons/hicolor/48x48/status/news-feed.png
+share/icons/hicolor/icon-theme.cache
 share/locale/de/LC_MESSAGES/midori.mo
+share/locale/es/LC_MESSAGES/midori.mo
 share/locale/fr/LC_MESSAGES/midori.mo
+share/locale/gl/LC_MESSAGES/midori.mo
+share/locale/hu/LC_MESSAGES/midori.mo
 share/locale/pl/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
+@comment in xdg-dirs: @dirrm share/applications
