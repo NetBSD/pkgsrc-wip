@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/09 16:31:03 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/08 19:46:11 thomasklausner Exp $
 bin/ar65
 bin/ca65
 bin/ca65html
@@ -261,3 +261,4 @@ share/doc/cc65/vic20.cfg
 @dirrm lib/cc65/include
 @dirrm lib/cc65/emd
 @dirrm lib/cc65/asminc
+@dirrm lib/cc65
