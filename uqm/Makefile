@@ -1,46 +1,53 @@
-# $NetBSD: Makefile,v 1.11 2008/03/07 19:35:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/08 19:57:50 leot1990 Exp $
 #
 
-DISTNAME=		uqm-0.3-source
-PKGNAME=		uqm-0.3
-PKGREVISION=		1
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sc2/}
-EXTRACT_SUFX=		.tgz
-DISTFILES=		${DEFAULT_DISTFILES} uqm-0.3-content.zip
+DISTNAME=	uqm-0.6.2-source
+PKGNAME=	${DISTNAME:S/-source//}
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sc2/}
+EXTRACT_SUFX=	.tgz
+DISTFILES=		${DEFAULT_DISTFILES} uqm-0.6.0-content.uqm
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sc2.sourceforge.net/
-COMMENT=		Star Control 2
+MAINTAINER=	leot1990@users.sourceforge.net
+HOMEPAGE=	http://sc2.sourceforge.net/
+COMMENT=	Ur-Quan Masters
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+# GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
+#LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=		gmake
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+USE_TOOLS=	gmake pkg-config
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/sc2
+
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-configure
+SUBST_MESSAGE.config=	Fixing config.state...
+SUBST_FILES.config=	config.state
+SUBST_SED.config+=	-e 's;/usr/local/games;${DESTDIR}${PREFIX};'
+
+INSTALLATION_DIRS=	bin lib
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} LIBOSSAUDIO=${LIBOSSAUDIO} \
-		./build.sh uqm config
+	cd ${WRKSRC} && ./build.sh uqm config
 
 do-build:
-	cd ${WRKSRC} && ./build.sh uqm
+	cd ${WRKSRC} && ./build.sh uqm reprocess_config && ./build.sh uqm
 
 do-install:
 	cd ${WRKSRC} && ./build.sh uqm install
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.3-content.zip \
-		${PREFIX}/share/uqm/content/packages
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uqm
-	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt ${PREFIX}/share/doc/uqm
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/uqm/content/packages
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uqm
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.6.0-content.uqm \
+		${DESTDIR}${PREFIX}/share/uqm/content/packages
+	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt ${DESTDIR}${PREFIX}/share/doc/uqm
 
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../audio/libmikmod/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
