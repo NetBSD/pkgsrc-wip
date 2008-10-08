@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3062 2008/10/08 18:07:54 thomasklausner Exp $
+# $Id: Makefile,v 1.3063 2008/10/08 19:55:08 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -171,7 +171,6 @@ SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
-SUBDIR+=	cc65
 SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
 SUBDIR+=	cdogs
