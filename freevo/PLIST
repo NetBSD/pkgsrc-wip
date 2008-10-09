@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/02/18 03:07:37 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/09 15:05:41 absd Exp $
 ${PYSITELIB}/freevo/__init__.py
 ${PYSITELIB}/freevo/__init__.pyc
 ${PYSITELIB}/freevo/__init__.pyo
@@ -1899,6 +1899,8 @@ share/freevo/skins/plugins/video_details.fxd
 share/freevo/skins/plugins/weather.fxd
 share/locale/af/LC_MESSAGES/freevo.mo
 share/locale/af/LC_MESSAGES/freevo.po
+share/locale/ca/LC_MESSAGES/freevo.mo
+share/locale/ca/LC_MESSAGES/freevo.po
 share/locale/cs/LC_MESSAGES/freevo.mo
 share/locale/cs/LC_MESSAGES/freevo.po
 share/locale/da/LC_MESSAGES/freevo.mo
@@ -1907,6 +1909,8 @@ share/locale/de/LC_MESSAGES/freevo.mo
 share/locale/de/LC_MESSAGES/freevo.po
 share/locale/el/LC_MESSAGES/freevo.mo
 share/locale/el/LC_MESSAGES/freevo.po
+share/locale/en_GB/LC_MESSAGES/freevo.mo
+share/locale/en_GB/LC_MESSAGES/freevo.po
 share/locale/es/LC_MESSAGES/freevo.mo
 share/locale/es/LC_MESSAGES/freevo.po
 share/locale/fi/LC_MESSAGES/freevo.mo
@@ -1927,6 +1931,8 @@ share/locale/pt_BR/LC_MESSAGES/freevo.mo
 share/locale/pt_BR/LC_MESSAGES/freevo.po
 share/locale/ro/LC_MESSAGES/freevo.mo
 share/locale/ro/LC_MESSAGES/freevo.po
+share/locale/ru/LC_MESSAGES/freevo.mo
+share/locale/ru/LC_MESSAGES/freevo.po
 share/locale/sv/LC_MESSAGES/freevo.mo
 share/locale/sv/LC_MESSAGES/freevo.po
 share/locale/zh_CN/LC_MESSAGES/freevo.mo
