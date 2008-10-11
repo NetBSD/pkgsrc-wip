@@ -276,16 +276,21 @@ cd_and_print_summary (){
 	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
     fi
 
-    # not expanding PLIST yet
+    # PLIST
     if test "$field_plist"; then
-	plist_fn="$real_pkgpath/PLIST"
-	if test -n "$make_plist"; then
-	    rm -f "$real_plistfn" || return 1
-	    ( cd "$real_pkgpath" && eval ${BMAKE} PLIST="$real_plistfn" \
-		$var_assigns plist ) 1>&2 || return 1
-	     prepand_PLIST "$real_plistfn" >> "$summaryfn" || return 1
-	elif test -f $plist_fn; then
-	    prepand_PLIST $plist_fn >>"$summaryfn" || return 1
+	if test -n "$make_plist" && \
+	    rm -f "$real_plistfn" && \
+	    ( cd "$real_pkgpath" && \
+	    eval ${BMAKE} PLIST="$real_plistfn" $var_assigns plist 2>/dev/null 1>&2)
+	then
+	    prepand_PLIST "$real_plistfn" >> "$summaryfn" || return 1
+	else
+	    plist_fns="$(cd $real_pkgpath && ${BMAKE} show-var VARNAME=PLIST_SRC)"
+	    for plist_fn in $plist_fns; do
+		if test -f $plist_fn; then
+		    prepand_PLIST $plist_fn >>"$summaryfn" || return 1
+		fi
+	    done
 	fi
     fi
 }
@@ -295,6 +300,7 @@ generate_summary (){
     if cd_and_print_summary $1 2>"$errsfn"
     then
 	cat "$summaryfn"
+#	cat "$errsfn" 1>&2
 
 	echo '' # empty line - separator 
     else
