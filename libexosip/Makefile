@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/20 17:15:07 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 22:26:27 gschwarz Exp $
 
 DISTNAME=	libeXosip2-3.1.0
 CATEGORIES=	devel
@@ -11,5 +11,6 @@ COMMENT=	The Extended Open SIP library
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
+DEPENDS+=	libosip2>=3.1.0:../../devel/libosip
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
