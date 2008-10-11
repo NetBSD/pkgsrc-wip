@@ -117,7 +117,7 @@ export newest_fn
 
 runawk -e '
 #use "xgetline.awk"
-#use "pkg_grep_summary.awk"
+#use "@@awkmoddir@@/pkg_grep_summary.awk"
 
 BEGIN {
    newest_fn = ENVIRON ["newest_fn"]

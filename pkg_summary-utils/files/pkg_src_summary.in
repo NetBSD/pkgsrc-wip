@@ -181,15 +181,18 @@ normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 
 ############################################################
 enrich_summary (){
-    awk -F= '
-    $1 == "DESCR_SRC" {
-	fn = $2
-	while (0 < ret = (getline < fn)){
-	    print "DESCRIPTION=" $0
-	}
-	if (ret < 0){
-	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
-	    exit 1
+    awk '
+    $0 ~ /^DESCR_SRC=/ {
+	$0 = substr($0, 11)
+	for (i=1; i <= NF; ++i){
+	    while (0 < ret = (getline ln < $i)){
+		print "DESCRIPTION=" ln
+	    }
+	    if (ret < 0){
+		printf "reading from `" fn "` failed\n" > "/dev/stderr"
+		exit 1
+	    }
+	    close($i)
 	}
 	next
     }
@@ -268,7 +271,7 @@ cd_and_print_summary (){
 
     # CVS_CHECKSUM
     if test "$field_cvs_checksum"; then
-	cvs_checksum "$real_pkgpath" > "$tmpfn" || return 1
+	@@bindir@@/cvs_checksum "$real_pkgpath" > "$tmpfn" || return 1
 	read cksum < "$tmpfn" || return 1
 	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
     fi
@@ -444,7 +447,7 @@ NF == 0 {
 
 if test "_$multi_var" = _2; then
     move_ASSIGNMENTS_to_PKGPATH (){
-	pkg_assignments2pkgpath "$@"
+	@@bindir@@/pkg_assignments2pkgpath "$@"
     }
 else
     move_ASSIGNMENTS_to_PKGPATH (){
@@ -453,11 +456,11 @@ else
 fi
 
 if test "$multi_var"; then
-    pkg_grep_summary VARIANTS7 'fvalue != ""' \
+    @@bindir@@/pkg_grep_summary VARIANTS7 'fvalue != ""' \
 	< $partial_summary_fn >$multi_pkgs_fn
 
     if test -s $multi_pkgs_fn; then
-	pkg_grep_summary VARIANTS7 'fvalue == ""' \
+	@@bindir@@/pkg_grep_summary VARIANTS7 'fvalue == ""' \
 	    < $partial_summary_fn >$normal_pkgs_fn
 	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn || true
 
@@ -465,7 +468,7 @@ if test "$multi_var"; then
 
 	runpipe_re '0 0 [01] 0' \
 	    summary2all_variants < $multi_pkgs_fn '|' \
-	    pkg_src_summary $make_plist '|' \
+	    @@bindir@@/pkg_src_summary $make_plist '|' \
 	    grep -v VARIANTS7 '|' \
 	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
@@ -522,7 +525,7 @@ while test -n "${with_dep}${with_bdep}"; do
 
     if test -s "$extra_deps_fn"; then
 #	echo "inside! pkg_src_summary $make_plist < \"$extra_deps_fn\" >> \"$partial_summary_fn\"" 1>&2
-	pkg_src_summary $make_plist \
+	@@bindir@@/pkg_src_summary $make_plist \
 	    < "$extra_deps_fn" >> "$partial_summary_fn"
 	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
     else

@@ -46,6 +46,7 @@ PROJECTNAME=	pkg_summary-utils
 	    -e 's,@@sbindir@@,${SBINDIR},g' \
 	    -e 's,@@datadir@@,${DATADIR},g' \
 	    -e 's,@@version@@,${VERSION},g' \
+	    -e 's,@@awkmoddir@@,${AWKMODDIR},g' \
 	    ${.ALLSRC} > ${.TARGET}
 
 .PHONY: clean-my

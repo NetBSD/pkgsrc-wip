@@ -43,7 +43,7 @@ while test $# -ne 0; do
 	    usage
 	    exit 0;;
 	-r|--refresh)
-	    refresh=pkg_refresh_summary;;
+	    refresh=@@bindir@@/pkg_refresh_summary;;
 	--)
 	    shift
 	    break;;
