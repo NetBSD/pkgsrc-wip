@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/09/06 20:54:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/11 22:11:13 gschwarz Exp $
 
-DISTNAME=	linphone-1.3.5
-PKGREVISION=	3
+DISTNAME=	linphone-2.1.1
 CATEGORIES=	net
-MASTER_SITES=	http://simon.morlat.free.fr/download/1.3.x/source/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/stable/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
@@ -21,8 +20,8 @@ CONFIGURE_ARGS+=	--with-speex=${BUILDLINK_PREFIX.speex}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 
-PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui
-PKG_SUGGESTED_OPTIONS=	linphone-gui
+PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video
+PKG_SUGGESTED_OPTIONS=	linphone-gui linphone-video
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
 
 .include "../../mk/bsd.options.mk"
@@ -40,17 +39,37 @@ CONFIGURE_ARGS+=	--enable-gnome_ui=yes
 .include "../../x11/gnome-panel/buildlink3.mk"
 .endif
 
+.if empty(PKG_OPTIONS:Mlinphone-gui) | empty(PKG_OPTIONS:Mlinphone-video)
+CONFIGURE_ARGS+=	--enable-video=no
+.else
+CONFIGURE_ARGS+=	--enable-video=yes
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-macsnd
+. if !empty(PKGSRC_COMPILER:Mgcc*)
+SUBST_CLASSES+=			objective-c
+SUBST_STAGE.objective-c=	post-patch
+SUBST_MESSAGE.objective-c=	adding "-x objective-c" for mediastreamer2 code
+SUBST_FILES.objective-c=	mediastreamer2/src/Makefile.in
+SUBST_SED.objective-c=		-e 's/^CC = @CC@/CC = @CC@ -x objective-c/g'
+. endif
+.else # OS other than MacOS X
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
+.include "../../mk/oss.buildlink3.mk"
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../wip/libosip222/buildlink3.mk"
+.include "../../devel/libosip/buildlink3.mk"
+.include "../../wip/libexosip/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../wip/speex-devel/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
