@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/01 17:24:49 koifren Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/12 14:36:09 koifren Exp $
 
 DISTNAME=	mwf-designer
 PKGNAME=	${DISTNAME}-${MWF_VERSION}
@@ -28,7 +28,7 @@ SUBST_SED.fix-prefix=		-e "s,%PREFIX%,${PREFIX},g"
 
 do-install:
 	${INSTALL} ${WRKSRC}/build/mwf-designer.exe ${PREFIX}/bin
-	${INSTALL} ${WRKSRC}/build/ICSharpCode.NRefactory.dll ${PREFIX}/lib/mono/2.0
+	${INSTALL} ${WRKSRC}/deps/ICSharpCode.NRefactory.dll ${PREFIX}/lib/mono/2.0
 	${INSTALL} ${WRKSRC}/mwf-designer ${PREFIX}/bin
 
 .include "../../wip/mk/svn-package.mk"
