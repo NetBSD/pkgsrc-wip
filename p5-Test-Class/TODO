@@ -1,4 +1,0 @@
-make test on 3.99.11/i386 reports:
-t/die_before_plan.t                4    4 100.00%  3-5
-t/fail2.t                          9   12 133.33%  3-12
-Failed 2/38 test scripts, 94.74% okay. 8/146 subtests failed, 94.52% okay.

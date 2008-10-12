@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3066 2008/10/12 11:18:43 gschwarz Exp $
+# $Id: Makefile,v 1.3067 2008/10/12 17:01:26 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1342,7 +1342,6 @@ SUBDIR+=	p5-Task-Catalyst
 SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Template-Provider-Encoding
 SUBDIR+=	p5-Term-Encoding
-SUBDIR+=	p5-Test-Class
 SUBDIR+=	p5-Test-MockModule
 SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
 SUBDIR+=	p5-Text-ASCIITable
