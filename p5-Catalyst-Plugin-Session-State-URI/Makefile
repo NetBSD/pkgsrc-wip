@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/25 09:20:57 absd Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/12 17:37:30 absd Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-State-URI-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Saves Catalyst Session IDs by rewriting URIs
 
 DEPENDS+=	p5-Catalyst-Plugin-Session>=0.06:../../wip/p5-Catalyst-Plugin-Session
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
-DEPENDS+=	p5-HTML-TokeParser-Simple>=0:../../wip/p5-HTML-TokeParser-Simple
+DEPENDS+=	p5-HTML-TokeParser-Simple>=0:../../www/p5-HTML-TokeParser-Simple
 DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Test-MockObject>=1.01:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-URI>=0:../../www/p5-URI

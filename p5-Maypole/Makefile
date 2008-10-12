@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/09/16 01:14:07 ficovh Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/12 17:37:30 absd Exp $
 #
 
 DISTNAME=	Maypole-2.13
@@ -23,11 +23,11 @@ DEPENDS+=	p5-Class-DBI-Plugin-RetrieveAll>=0:../../wip/p5-Class-DBI-Plugin-Retri
 DEPENDS+=	p5-Class-DBI-Plugin-Type>=0:../../wip/p5-Class-DBI-Plugin-Type
 DEPENDS+=	p5-Class-DBI-SQLite>=0.08:../../wip/p5-Class-DBI-SQLite
 DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
-DEPENDS+=	p5-File-MMagic-XS>=0.08:../../wip/p5-File-MMagic-XS
+DEPENDS+=	p5-File-MMagic-XS>=0.08:../../misc/p5-File-MMagic-XS
 DEPENDS+=	p5-HTML-Tree>=0:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTTP-Body>=0.5:../../www/p5-HTTP-Body
 DEPENDS+=	p5-Template-Plugin-Class>=0:../../wip/p5-Template-Plugin-Class
-DEPENDS+=	p5-Test-MockModule>=0:../../wip/p5-Test-MockModule
+DEPENDS+=	p5-Test-MockModule>=0:../../devel/p5-Test-MockModule
 DEPENDS+=	p5-UNIVERSAL-moniker>=0:../../devel/p5-UNIVERSAL-moniker
 DEPENDS+=	p5-UNIVERSAL-require>=0:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
