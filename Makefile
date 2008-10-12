@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3064 2008/10/10 19:42:18 leot1990 Exp $
+# $Id: Makefile,v 1.3065 2008/10/12 10:48:07 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1443,6 +1443,8 @@ SUBDIR+=	pjproject
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
 SUBDIR+=	pkg_online
+SUBDIR+=	pkg_online-client
+SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_select
 SUBDIR+=	pkg_summary-utils
@@ -1979,6 +1981,7 @@ SUBDIR+=	xmlsysinfo
 SUBDIR+=	xmms-cdread
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
+SUBDIR+=	xmms-nas
 SUBDIR+=	xmms-pac
 SUBDIR+=	xmms-pitch
 SUBDIR+=	xmms-scrobbler
