@@ -249,13 +249,27 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 #	print "incl:" fn
 
 	while ((ret = getline < fn) > 0){
+		# in:  <spaces>VAR=...
+		# out: VAR=...
 		sub(/^[ \t]+/, "")
 
+		# in:  VAR=123 # assignment
+		# out: VAR=123
+		sub(/#.*$/, "")
+
+		# in:  VAR=...<spaces>
+		# out: VAR=...
+		sub(/[ \t]+$/, "")
+
 		if ($1 ~ /^[[:alnum:]_.]+$/ && $2 ~ /=/){
+			# in:  VAR =...
+			# out: VAR=...
 			sub(/[ \t]+/, "")
 		}
 
 		if ($1 ~ /[[:alnum:]_.]+[!+?]=/){
+			# in:  VAR=123
+			# out: VAR= 123
 			sub(/=/, "= ")
 		}
 
