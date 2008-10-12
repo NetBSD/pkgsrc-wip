@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2008/10/03 03:14:48 makoto Exp $
+@comment $NetBSD: PLIST,v 1.68 2008/10/12 02:52:40 obache Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2928,6 +2928,8 @@ share/emacs/${PKGVERSION}/lisp/term/bobcat.el
 share/emacs/${PKGVERSION}/lisp/term/common-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/common-win.elc
 share/emacs/${PKGVERSION}/lisp/term/cygwin.el
+share/emacs/${PKGVERSION}/lisp/term/internal.el.gz
+share/emacs/${PKGVERSION}/lisp/term/internal.elc
 share/emacs/${PKGVERSION}/lisp/term/iris-ansi.el
 share/emacs/${PKGVERSION}/lisp/term/linux.el
 share/emacs/${PKGVERSION}/lisp/term/lk201.el
