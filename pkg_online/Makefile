@@ -1,28 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2008/10/11 14:18:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/12 10:46:10 cheusov Exp $
 #
 
-DISTNAME=	pkg_online-0.5.0
-PKGREVISION=	1
-CATEGORIES=	pkgtools
-MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
+.include "../../wip/pkg_online/Makefile.common"
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
-COMMENT=	Client/Server search in pkgsrc packages
+CATEGORIES=	pkgtools meta-pkgs
+PKGREVISION=	2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=	pkg_online-client-[0-9]*:../../wip/pkg_online-client
+DEPENDS+=	pkg_online-server-[0-9]*:../../wip/pkg_online-server
 
-DEPENDS+=	dict-server>=1.10.10nb2:../../wip/dict-server
-DEPENDS+=	dict-client>=1.10.9:../../wip/dict-client
-DEPENDS+=	pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils
-DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
-DEPENDS+=	netcat-[0-9]*:../../net/netcat
-
-INSTALLATION_DIRS+=	share/doc/pkg_online bin
-
-USE_LANGUAGES=		# none
-USE_BSD_MAKEFILE=	yes
-
-NO_BUILD=		yes
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
