@@ -51,7 +51,7 @@ function get_var_value (varname,                 value, pkgrev){
 		pkgrev = ""
 		if ("PKGREVISION" in var){
 			pkgrev_ = var ["PKGREVISION"]
-			if (pkgrev_ != "0")
+			if (pkgrev_ != "0" && pkgrev_ != "")
 				pkgrev = "nb" pkgrev_
 		}
 		return value pkgrev
