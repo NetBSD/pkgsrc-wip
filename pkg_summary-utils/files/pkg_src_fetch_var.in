@@ -50,7 +50,9 @@ function get_var_value (varname,                 value, pkgrev){
 
 		pkgrev = ""
 		if ("PKGREVISION" in var){
-			pkgrev = "nb" var ["PKGREVISION"]
+			pkgrev_ = var ["PKGREVISION"]
+			if (pkgrev_ != "0")
+				pkgrev = "nb" pkgrev_
 		}
 		return value pkgrev
 	}else if (varname == "PKGPATH"){
