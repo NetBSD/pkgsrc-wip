@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3069 2008/10/12 22:19:56 smoppy Exp $
+# $Id: Makefile,v 1.3070 2008/10/13 06:40:21 smoppy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -178,6 +178,7 @@ SUBDIR+=	cdpr
 SUBDIR+=	cedet
 SUBDIR+=	cfengine
 SUBDIR+=	chbg
+SUBDIR+=	chems
 SUBDIR+=	chicken-current
 SUBDIR+=	chora
 SUBDIR+=	chromium
