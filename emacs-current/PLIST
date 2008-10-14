@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2008/10/12 02:52:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.69 2008/10/14 08:36:33 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2509,6 +2509,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-agenda.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-agenda.elc
 share/emacs/${PKGVERSION}/lisp/org/org-archive.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-archive.elc
+share/emacs/${PKGVERSION}/lisp/org/org-attach.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-attach.elc
 share/emacs/${PKGVERSION}/lisp/org/org-bbdb.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-bbdb.elc
 share/emacs/${PKGVERSION}/lisp/org/org-bibtex.el.gz
@@ -2537,6 +2539,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-irc.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-irc.elc
 share/emacs/${PKGVERSION}/lisp/org/org-jsinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-jsinfo.elc
+share/emacs/${PKGVERSION}/lisp/org/org-list.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-list.elc
 share/emacs/${PKGVERSION}/lisp/org/org-mac-message.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mac-message.elc
 share/emacs/${PKGVERSION}/lisp/org/org-macs.el.gz
@@ -2547,6 +2551,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-mhe.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mhe.elc
 share/emacs/${PKGVERSION}/lisp/org/org-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mouse.elc
+share/emacs/${PKGVERSION}/lisp/org/org-plot.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-plot.elc
 share/emacs/${PKGVERSION}/lisp/org/org-publish.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-publish.elc
 share/emacs/${PKGVERSION}/lisp/org/org-remember.el.gz
