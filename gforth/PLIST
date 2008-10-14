@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/07 20:10:48 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/14 17:31:15 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -7,9 +7,12 @@ bin/gforth-itc
 bin/gforth-itc-${PKGVERSION}
 bin/gforthmi
 bin/gforthmi-${PKGVERSION}
+bin/vmgen
+bin/vmgen-${PKGVERSION}
 include/gforth/${PKGVERSION}/config.h
 include/gforth/${PKGVERSION}/libcc.h
 info/gforth.info
+info/vmgen.info
 lib/gforth/${PKGVERSION}/gforth-ditc
 lib/gforth/${PKGVERSION}/gforth.fi
 lib/gforth/${PKGVERSION}/libcc-named/cstr.la
