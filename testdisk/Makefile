@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/07/02 19:04:35 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/15 21:14:59 ghen Exp $
 #
 
-DISTNAME=		testdisk-6.3
+DISTNAME=		testdisk-6.10
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.cgsecurity.org/
 EXTRACT_SUFX=		.tar.bz2
