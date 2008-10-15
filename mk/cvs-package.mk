@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.28 2008/10/12 02:37:45 obache Exp $
+# $Id: cvs-package.mk,v 1.29 2008/10/15 20:05:58 cheusov Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -137,7 +137,7 @@ _CVS_TAG.${r}=		${CVS_TAG.${r}}
 _CVS_TAG_FLAG.${r}=	-r${CVS_TAG}
 _CVS_TAG.${r}=		${CVS_TAG}
 .  else
-_CVS_TAG_FLAG.${r}=	-D${_CVS_TODAY}T00:00+0
+_CVS_TAG_FLAG.${r}=	'-D${_CVS_TODAY} 00:00 +0000'
 _CVS_TAG.${r}=		${_CVS_TODAY:Q}
 .  endif
 _CVS_DISTFILE.${r}=	${PKGBASE}-${CVS_MODULE.${r}}-${_CVS_TAG.${r}}.tar.gz
@@ -171,7 +171,7 @@ do-cvs-extract: .PHONY
 	${STEP_MSG} "Downloading "${CVS_MODULE.${r}:Q}" from "${CVS_ROOT.${r}:Q}"."; \
 	${SETENV} ${_CVS_ENV}						\
 	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${r}:Q}		\
-	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${r}:Q}	\
+	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${r}}	\
 	      -d ${r} ${CVS_MODULE.${r}:Q};				\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${r}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};					\
