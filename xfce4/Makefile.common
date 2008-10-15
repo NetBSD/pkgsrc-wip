@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2008/05/24 15:34:16 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.26 2008/10/15 20:32:10 hoka_adam Exp $
 # used by wip/libxfce4gui/Makefile
 # used by wip/libxfce4mcs/Makefile
 # used by wip/libxfce4util/Makefile
@@ -25,18 +25,18 @@
 # used by wip/xfce4-xarchiver/Makefile
 # used by wip/xfce4-xmms-plugin/Makefile
 
-MASTER_SITES=		http://www.xfce.org/archive/xfce-4.4.1/src/
+MASTER_SITES=		http://www.ca-us.xfce.org/archive/xfce-4.5.91/src/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
-LICENSE=		gnu-gpl-v2
+#LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.4.1
-BROKEN=			Please use pkgsrc instead of pkgsrc-wip for now
+XFCE4_VERSION=		4.5.91
 
 # Do NOT put a PKGREVISION statement in this file!
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
