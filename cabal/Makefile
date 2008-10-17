@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2007/12/10 16:43:58 emil_s Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/17 14:18:37 marko_schuetz Exp $
 #
 
-DISTNAME=		cabal-1.2.2.0
+DISTNAME=		Cabal-1.4.0.2
+PKGNAME=		cabal-1.4.0.2
 CATEGORIES=		devel
-MASTER_SITES=		http://www.haskell.org/cabal/release/${DISTNAME}/
+MASTER_SITES=		http://www.haskell.org/cabal/release/${PKGNAME}/
 
 MAINTAINER=		emil@math.su.se
-HOMEPAGE=		http://www.haskell.org/cabal/release/${DISTNAME}/
+HOMEPAGE=		http://www.haskell.org/cabal/release/${PKGNAME}/
 COMMENT=		Haskell common architecture for building applications and libraries
 
 USE_TOOLS+=		gmake
@@ -31,19 +32,19 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 do-configure:
 	cd ${WRKSRC} &&						\
-	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
+	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.hs configure ${CONFIGURE_ARGS}
 
 do-build:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
+	cd ${WRKSRC} && runhaskell -cpp Setup.hs build
 
 do-install:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs install
+	cd ${WRKSRC} && runhaskell -cpp Setup.hs install
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}/pkg-spec-html
+	${INSTALL_DATA_DIR} ${DOCDIR}/API
 	${INSTALL_DATA_DIR} ${DOCDIR}/users-guide
-	cd ${WRKSRC}/doc/pkg-spec-html && \
-        ${INSTALL_DATA} *.html ${DOCDIR}/pkg-spec-html
+	cd ${WRKSRC}/doc/API/Cabal && \
+        ${INSTALL_DATA} *.html ${DOCDIR}/API
 	cd ${WRKSRC}/doc/users-guide && \
         ${INSTALL_DATA} *.html ${DOCDIR}/users-guide
 

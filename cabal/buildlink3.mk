@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/03/06 11:25:00 emil_s Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2008/10/17 14:18:37 marko_schuetz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CABAL_BUILDLINK3_MK:=	${CABAL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cabal
 
 .if ${CABAL_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.cabal?=	build
-BUILDLINK_API_DEPENDS.cabal+=	cabal>=1.2.2.0
+BUILDLINK_API_DEPENDS.cabal+=	cabal>=1.4.0.2
 BUILDLINK_PKGSRCDIR.cabal?=	../../wip/cabal
 .endif	# CABAL_BUILDLINK3_MK
 
