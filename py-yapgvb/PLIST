@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1 2008/10/17 16:05:34 marko_schuetz Exp $
+${PYSITELIB}/yapgvb/__init__.pyc
+${PYSITELIB}/yapgvb/__init__.pyo
+${PYSITELIB}/yapgvb/_yapgvb.so
+${PYSITELIB}/yapgvb/config.pyc
+${PYSITELIB}/yapgvb/config.pyo
+${PYSITELIB}/yapgvb/config_unix.pyc
+${PYSITELIB}/yapgvb/config_unix.pyo
+${PYSITELIB}/yapgvb/config_win32.pyc
+${PYSITELIB}/yapgvb/config_win32.pyo
+${PYSITELIB}/yapgvb/examples/__init__.pyc
+${PYSITELIB}/yapgvb/examples/__init__.pyo
+${PYSITELIB}/yapgvb/examples/clique.pyc
+${PYSITELIB}/yapgvb/examples/clique.pyo
+${PYSITELIB}/yapgvb/examples/graph_directory.pyc
+${PYSITELIB}/yapgvb/examples/graph_directory.pyo
+${PYSITELIB}/yapgvb/examples/minimum_spanning_tree.pyc
+${PYSITELIB}/yapgvb/examples/minimum_spanning_tree.pyo
+${PYSITELIB}/yapgvb/examples/random_graph.pyc
+${PYSITELIB}/yapgvb/examples/random_graph.pyo
+${PYSITELIB}/yapgvb/examples/yapgvb_logo.pyc
+${PYSITELIB}/yapgvb/examples/yapgvb_logo.pyo
+${PYSITELIB}/yapgvb/gendocs.pyc
+${PYSITELIB}/yapgvb/gendocs.pyo
+${PYSITELIB}/yapgvb/graph_attribute_types.pyc
+${PYSITELIB}/yapgvb/graph_attribute_types.pyo
+${PYSITELIB}/yapgvb/graph_attributes.pyc
+${PYSITELIB}/yapgvb/graph_attributes.pyo
+${PYSITELIB}/yapgvb/mneumonics.pyc
+${PYSITELIB}/yapgvb/mneumonics.pyo
+@dirrm ${PYSITELIB}/yapgvb/examples
+@dirrm ${PYSITELIB}/yapgvb
