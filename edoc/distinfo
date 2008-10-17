@@ -1,25 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/11/03 02:25:52 bjcosta Exp $
+$NetBSD: distinfo,v 1.5 2008/10/17 04:49:49 bjcosta Exp $
 
-SHA1 (edoc-0.1.0.tar.bz2) = e1c98519e76d0016ca92e34a08be60dcdf968df6
-RMD160 (edoc-0.1.0.tar.bz2) = 9770e72026308ebb5bebbf738d585131587d0dfe
-Size (edoc-0.1.0.tar.bz2) = 22678033 bytes
-SHA1 (patch-aa) = 8d2b87ef1f85544e39c055efb22f3b4f038ea207
-SHA1 (patch-ab) = f0c162bd950b7909d26ede9ca711005c1dcddc28
-SHA1 (patch-ac) = f7096b841e3b39890655618e1e58dde26f1610b9
-SHA1 (patch-ad) = ff7c8222533cba1beb248081bc3bc20153f2d7e2
-SHA1 (patch-ae) = 2c84f341def57bcbc9d062b7bca2dc7234b5f503
-SHA1 (patch-af) = 17fddee95610bf130d7a8a8119c27eb02f501910
-SHA1 (patch-ag) = ae4320bc00baaeddb759bb2d763cbffb57ffb6bd
-SHA1 (patch-ah) = 26abc64e05521c72d90b784adcb393c5413b72e3
-SHA1 (patch-ai) = 469a03a17327830e2f189e7370eadb2c4f6f4b4f
-SHA1 (patch-aj) = 235c012d08cef11ed6f0b7256445cbf1023934e2
-SHA1 (patch-ak) = d37357d0021e721181a25b20e88f2602e51e17ad
-SHA1 (patch-al) = 941d2b0a638c7633a1355dc7ec6009e16bb9f90e
-SHA1 (patch-am) = e8eaafd77e818a76d9d028f198fffc11cf1999dd
-SHA1 (patch-an) = d8a67dc9368d071eca92b06c073686620afd6623
-SHA1 (patch-ao) = 9e5c6c3de78a0c35bf784a9107a5088ce770f155
-SHA1 (patch-ap) = 7f50d2708c3eb848533de930dccda38f50743b58
-SHA1 (patch-aq) = 1d59cf99e9d5d7742dc20da30b3c2b5b285812b2
-SHA1 (patch-ar) = b060a04289e1af845c48a9242191fb278bac7e36
-SHA1 (patch-as) = 540f4a8029144a4db05702a5046a20cbe7448c4e
-SHA1 (patch-at) = 6c7eb2f28e395ab22cf9b66246277bb70e6a9bed
+SHA1 (edoc-0.2.0.tar.bz2) = 7f159bc8c02cfd1c4f552753149d1a5ec0bdd4df
+RMD160 (edoc-0.2.0.tar.bz2) = 2783f5ce0b0ef42b41be17bbfaa0163ed3c38ba1
+Size (edoc-0.2.0.tar.bz2) = 22997277 bytes
