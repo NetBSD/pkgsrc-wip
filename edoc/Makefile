@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/17 04:49:49 bjcosta Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/17 06:51:00 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -37,7 +37,7 @@ GNU_CONFIGURE=		yes
 # Some of the linux dependencies I may need to add.
 # python2.4-dev, binutils-dev, texinfo, libltdl3-dev, libc6-dev, g++
 #.include "../../lang/python24/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	 15 20 21 22 23 24
+PYTHON_VERSIONS_INCOMPATIBLE=15 20 21 22 23 24
 .include "../../lang/python/pyversion.mk"
 
 # Bring libbfd.
