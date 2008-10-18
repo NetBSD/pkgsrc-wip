@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/03/30 00:19:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/18 13:18:40 cheusov Exp $
 #
 
 DISTNAME=	mawk-1.3.3
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mawk/mawk-uxre/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/mawk/

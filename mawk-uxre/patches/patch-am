@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+$NetBSD: patch-am,v 1.2 2008/10/18 13:18:40 cheusov Exp $
 
---- rexp/regexp_system.c.orig	2008-02-06 21:46:49.000000000 +0200
+--- rexp/regexp_system.c.orig	2008-10-18 16:02:32.000000000 +0300
 +++ rexp/regexp_system.c
-@@ -0,0 +1,140 @@
+@@ -0,0 +1,154 @@
 +#include <sys/types.h>
 +#include <stdio.h>
 +#include <regex.h>
@@ -54,6 +54,20 @@ $NetBSD: patch-am,v 1.1 2008/02/06 21:33:54 cheusov Exp $
 +void * REcompile(regexp)
 +   char *regexp;
 +{
++   int ere_flags = REG_EXTENDED;
++#ifdef REG_ONESUB
++   ere_flags |= REG_ONESUB;
++#endif
++#ifdef REG_BKTEMPTY
++   ere_flags |= REG_BKTEMPTY;
++#endif
++#ifdef REG_BKTESCAPE
++   ere_flags |= REG_BKTESCAPE;
++#endif
++#ifdef REG_ESCSEQ
++   ere_flags |= REG_ESCSEQ;
++#endif
++
 +   mawk_re_t *re = (mawk_re_t*) malloc (sizeof (mawk_re_t));
 +   size_t len = strlen (regexp);
 +   char *new_regexp = (char *) malloc (len + 3);
@@ -73,7 +87,7 @@ $NetBSD: patch-am,v 1.1 2008/02/06 21:33:54 cheusov Exp $
 +
 +   memset (re, 0, sizeof (mawk_re_t));
 +   re -> regexp = strdup (new_regexp);
-+   err_code = regcomp (&re->re, new_regexp, REG_EXTENDED);
++   err_code = regcomp (&re->re, new_regexp, ere_flags);
 +
 +   free (new_regexp);
 +
