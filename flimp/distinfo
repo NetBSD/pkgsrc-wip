@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/19 18:11:51 jh88 Exp $
+
+SHA1 (flimp-0.0.8.tar.gz) = 95bba205be35df73b6c75f85d75cc5bc8f5d459f
+RMD160 (flimp-0.0.8.tar.gz) = 0e7f46ab90885a4fd0685b4fd8644c9234ee21bb
+Size (flimp-0.0.8.tar.gz) = 109988 bytes
