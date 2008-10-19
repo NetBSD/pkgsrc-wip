@@ -1,15 +1,17 @@
 Suggested package updates
 =========================
 
+	o amarok-1.92.2
 	o argouml-0.24
 	o audacious-1.5.1
 	o audacious-plugins-1.5.1
 	o avahi-0.6.23
+	o bakery-2.6.0
 	o bub-n-bros-1.6
 	o ccrtp-1.6.2
 	o cdogs-0.4
 	o chora-2.0.1
-	o chromium-0.9.13.2
+	o chromium-0.9.13.3
 	o cinelerra-2.1
 	o commoncpp2-1.6.3
 	o d4x-2.5.7.1
@@ -21,7 +23,7 @@ Suggested package updates
 	o emelfm2-0.4.1
 	o endeavour-2.10.1
 	o evolution-sharp-0.18.0
-	o f-spot-0.4.4
+	o f-spot-0.5.0.3
 	o fakenes-0.5.7
 	o firebird-2.0.3
 	o gambas2-2.8.2
@@ -30,25 +32,28 @@ Suggested package updates
 	o gforge-4.5.11
 	o gimmie-0.2.8
 	o globulation2-0.9.3
-	o gnokii-0.6.26
+	o gnokii-0.6.27
 	o gnome-commander-1.2.7
 	o gnunet-0.8.0b
 	o grass-6.2.3
 	o grisbi-0.5.8
 	o guichan-0.8.1
+	o guitone-0.9
 	o hu-go-2.11
 	o ion3-20080825
 	o kino-1.0.0
 	o libgksu-2.0.4
-	o libxcb-1.1.90.1
+	o libxcb-1.1.91
 	o lives-0.9.9.1
 	o llvm-2.2
 	o man-1.6f
+	o mcabber-0.9.9
 	o mixxx-1.6.0
 	o monkey-bubble-0.3.2
 	o mpgedit-0.73dev2
-	o muine-0.8.3
+	o muine-0.8.10
 	o mupen64-0.5
+	o ncc-2.8
 	o nemo-0.2.3
 	o opal-2.2.11
 	o openct-0.6.14
@@ -67,8 +72,8 @@ Suggested package updates
 	o redland-1.0.8.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.18.3
-	o sdlmame-0.127
+	o rsyslog-3.18.5
+	o sdlmame-0.128
 	o sdlmess-0.127
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
@@ -85,6 +90,7 @@ Suggested package updates
 	o twinkle-1.3.2
 	o txt2tags-2.3.2
 	o uade-2.12
+	o ufraw-0.14
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.2
 	o xcb-util-0.2.1
