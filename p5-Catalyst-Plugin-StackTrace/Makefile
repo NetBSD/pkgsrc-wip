@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/03/03 06:02:07 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/20 10:10:19 tonnerre Exp $
 
 DISTNAME=	Catalyst-Plugin-StackTrace-0.06
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-StackTrace/
 COMMENT=	Display a stack trace on the debug screen
 PERL5_REQD+=	5.8.0
 
-DEPENDS+=	p5-Catalyst>=5.61:../../wip/p5-Catalyst
+DEPENDS+=	p5-Catalyst-Runtime>=5.61:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Devel-StackTrace>=0:../../devel/p5-Devel-StackTrace
 
 PERL5_MODULE_TYPE=	Module::Build

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 19:56:39 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/20 10:10:18 tonnerre Exp $
 
 DISTNAME=	Catalyst-Plugin-Authentication-Store-Htpasswd-0.02
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/N/NU/NUFFIN/}
 
@@ -9,7 +10,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Authentication-Store-Htpasswd/
 COMMENT=	Use .htpasswd with Catalyst
 
-DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.01:../../wip/p5-Catalyst-Plugin-Authentication
+DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.01:../../www/p5-Catalyst-Plugin-Authentication
 DEPENDS+=	p5-Authen-Htpasswd>=0.13:../../wip/p5-Authen-Htpasswd
 
 PERL5_MODULE_TYPE=	Module::Build
