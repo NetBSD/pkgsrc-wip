@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/08/06 13:51:38 yazzy Exp $
+# $NetBSD: Makefile,v 1.23 2008/10/20 00:09:22 minskim Exp $
 #
 
 DISTNAME=	edje-0.9.9.043
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
 
-.include	"../../wip/eet/buildlink3.mk"
+.include	"../../devel/eet/buildlink3.mk"
 .include	"../../wip/ecore/buildlink3.mk"
 .include	"../../wip/evas/buildlink3.mk"
 .include	"../../wip/embryo/buildlink3.mk"

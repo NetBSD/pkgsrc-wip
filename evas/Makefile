@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/10/15 08:08:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.23 2008/10/20 00:09:22 minskim Exp $
 #
 
 DISTNAME=	evas-0.9.9.043
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 			--enable-sdl --enable-image-loader-edb \
 			--enable-software-16-x11
 
-.include "../../wip/eet/buildlink3.mk"
+.include "../../devel/eet/buildlink3.mk"
 .include "../../wip/libxcb/buildlink3.mk"
 .include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

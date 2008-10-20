@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/08/06 13:50:30 yazzy Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/20 00:09:22 minskim Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.043
@@ -40,7 +40,7 @@ PKG_SUPPORTED_OPTIONS=	dbus
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
-.include "../../wip/eet/buildlink3.mk"
+.include "../../devel/eet/buildlink3.mk"
 .include "../../wip/efreet/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
