@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/20 06:58:21 pettai Exp $
+
+--- Makefile.in.orig	2006-10-06 10:14:39.000000000 +0100
++++ Makefile.in	2006-10-15 13:06:07.000000000 +0100
+@@ -126,7 +126,7 @@
+ 		echo "	================================================"; \
+ 	) || ${TRUE}
+ 
+-install: install-daemon-to-bin install-man install-conf install-db
++install: install-daemon-to-bin install-man install-db
+ 
+ depend:
+ 	${MKDEP} ${CPPFLAGS} ${CFLAGS} ${SRC}
