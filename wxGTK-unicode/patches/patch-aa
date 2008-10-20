@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
+$NetBSD: patch-aa,v 1.3 2008/10/20 09:01:33 tonnerre Exp $
 
---- configure.orig	2006-03-21 23:42:05.000000000 +0000
+--- configure.orig	2008-06-20 11:07:14.000000000 +0200
 +++ configure
-@@ -1820,7 +1820,7 @@ _ACEOF
+@@ -1962,7 +1962,7 @@ _ACEOF
  
      DEFAULT_DEFAULT_wxUSE_MOTIF=1
    ;;
@@ -11,9 +11,27 @@ $NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
      USE_BSD=1
      USE_FREEBSD=1
      cat >>confdefs.h <<\_ACEOF
-@@ -23445,7 +23445,8 @@ SEARCH_INCLUDE="\
-     /usr/XFree86/include/X11  \
-     /usr/pkg/include          \
+@@ -15805,7 +15805,7 @@ retest_macosx_linking=no
+ 
+ #if test "$wxUSE_MAC" = 1; then
+     if test "x$wxUSE_UNIVERSAL_BINARY" != xno ; then
+-                        if test "x$wxUSE_UNIVERSAL_BINARY" == xyes; then
++                        if test "x$wxUSE_UNIVERSAL_BINARY" = xyes; then
+             # Implicitly turn on the new --with-macosx-sdk using the default
+             # SDK which provides the behavior this option has always had.
+             if test "x$wxUSE_MACOSX_SDK" = "x"; then
+@@ -15887,7 +15887,7 @@ echo $ECHO_N "checking SDK deployment ve
+         MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+         # If that failed, try again with the new key
+-        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" == "x"; then
++        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" = "x"; then
+ 
+             MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+@@ -24162,7 +24162,8 @@ SEARCH_INCLUDE="\
+     /usr/X11R4/include        \
+     /usr/include/X11R4        \
                                \
 -    /usr/openwin/share/include"
 +    /usr/openwin/share/include\
@@ -21,7 +39,7 @@ $NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
  
  echo "$as_me:$LINENO: checking for libraries directory" >&5
  echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
-@@ -36663,6 +36664,9 @@ echo "$as_me: WARNING: BeOS threads are 
+@@ -38671,6 +38672,9 @@ echo "$as_me: WARNING: BeOS threads are 
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
                  ;;
@@ -31,7 +49,7 @@ $NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
            *-*-freebsd*)
                                                  THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
                  ;;
-@@ -36797,7 +36801,7 @@ echo $ECHO_N "checking if more special f
+@@ -38804,7 +38808,7 @@ echo $ECHO_N "checking if more special f
                                                                                                                  LDFLAGS="-L/usr/lib/threads $LDFLAGS"
                  flag="-D_THREAD_SAFE"
                  ;;
@@ -40,16 +58,7 @@ $NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
-@@ -42959,7 +42963,7 @@ echo "$as_me: WARNING: GStreamer install
- 
- 
- 
--        if test "x$GST_INSPECT" == "x"; then
-+        if test "x$GST_INSPECT" = "x"; then
-             # Extract the first word of "gst-inspect", so it can be a program name with args.
- set dummy gst-inspect; ac_word=$2
- echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -44788,7 +44792,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+@@ -47714,7 +47718,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
              SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
          fi
  
@@ -58,21 +67,12 @@ $NetBSD: patch-aa,v 1.2 2008/02/02 23:57:48 shattered Exp $
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
-@@ -45354,7 +45358,7 @@ EOF
-       ;;
- 
-       powerpc-apple-macos* | \
--      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
-+      *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
-       *-*-sunos4* | \
-       *-*-osf* | \
-       *-*-dgux5* | \
-@@ -45396,7 +45400,7 @@ echo "$as_me: error: unknown system type
-     SONAME_FLAG=
- 
-     case "${BAKEFILE_HOST}" in
--      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu )
-+      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu | *-*-dragonfly*)
-         SONAME_FLAG="-Wl,-soname,"
-         USE_SOVERSION=1
-         USE_SOVERLINUX=1
+@@ -50561,6 +50565,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
