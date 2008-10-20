@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/22 15:38:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/20 08:59:58 tonnerre Exp $
 
-DISTNAME=	wxPython-src-2.6.3.3
-PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.6.3.3
+DISTNAME=	wxPython-src-2.8.8.1
+PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.8.8.1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets (unicode version)
 
-WRKSRC=		${WRKDIR}/wxPython-src-2.6.3.3/wxPython
+WRKSRC=		${WRKDIR}/${DISTNAME}/wxPython
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
@@ -23,7 +23,6 @@ CONFLICTS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*
 WXARG=	WXPORT=gtk2 \
 	WX_CONFIG=${BUILDLINK_PREFIX.wxGTK-unicode}/bin/wx-config \
 	CONTRIBS_INC="../contrib/include" \
-	BUILD_ANIMATE=0 \
 	UNICODE=1
 
 PYDISTUTILSPKG=	yes
