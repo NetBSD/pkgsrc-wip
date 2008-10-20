@@ -1,0 +1,64 @@
+$NetBSD: patch-ac,v 1.4 2008/10/20 04:15:01 bjcosta Exp $
+
+--- scripts/gendefeds.sh.in.orig	2008-09-24 17:48:43.000000000 +1000
++++ scripts/gendefeds.sh.in
+@@ -18,7 +18,7 @@ do
+       continue
+    fi
+ 
+-   base=`basename $i`
++   base="libstdc++"
+    echo "$base.eds"
+    $script_dir/geneds.sh $i > $destdir/$base.eds
+    if [ $? != 0 ]; then exit 1; fi
+@@ -37,7 +37,7 @@ do
+       continue
+    fi
+ 
+-   base=`basename $i`
++   base="libsupc++"
+    echo "$base.eds"
+    $script_dir/geneds.sh $i > $destdir/$base.eds
+    if [ $? != 0 ]; then exit 1; fi
+@@ -58,7 +58,7 @@ do
+       continue
+    fi
+ 
+-   base=`basename $i`
++   base="libc"
+    echo "$base.eds"
+    $script_dir/geneds.sh $i > $destdir/$base.eds
+    if [ $? != 0 ]; then exit 1; fi
+@@ -78,7 +78,7 @@ do
+       continue
+    fi
+ 
+-   base=`basename $i`
++   base="libm"
+    echo "$base.eds"
+    $script_dir/geneds.sh $i > $destdir/$base.eds
+    if [ $? != 0 ]; then exit 1; fi
+@@ -88,7 +88,7 @@ do
+    break
+ done
+ 
+-
++grouped=""
+ for i in $edoc_patched_prefix/lib/gcc/*/4.0.4/*.so* $edoc_patched_prefix/lib/gcc/*/4.0.4/*.a $edoc_patched_prefix/lib/gcc/*/4.0.4/*.o
+ do
+    # Skip sym-links.
+@@ -97,8 +97,10 @@ do
+       continue
+    fi
+ 
+-   base=`basename $i`
+-   echo "$base.eds"
+-   $script_dir/geneds.sh $i > $destdir/$base.eds
+-   if [ $? != 0 ]; then exit 1; fi
++   grouped="$grouped $i"
+ done
++
++base="gccextra"
++echo "$base.eds"
++$script_dir/geneds.sh $grouped > $destdir/$base.eds
++if [ $? != 0 ]; then exit 1; fi
