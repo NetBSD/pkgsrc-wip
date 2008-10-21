@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/09/22 20:38:16 gschwarz Exp $
+$NetBSD: patch-aa,v 1.4 2008/10/21 19:50:02 gschwarz Exp $
 
 --- src/index_dir.c.orig	2005-02-22 04:00:24.000000000 +0100
 +++ src/index_dir.c	2008-09-21 22:50:30.000000000 +0200
@@ -18,10 +18,10 @@ $NetBSD: patch-aa,v 1.3 2008/09/22 20:38:16 gschwarz Exp $
  
  #include "escape.h"
  
-+#ifdef __linux__
-+#define SCANDIR_ARG3_CONST	const
-+#else
++#ifdef __APPLE__
 +#define SCANDIR_ARG3_CONST
++#else
++#define SCANDIR_ARG3_CONST	const
 +#endif
 +
  char *html_escape_string(const char *inp, char *dest,
