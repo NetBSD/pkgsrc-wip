@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/17 06:51:00 bjcosta Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/21 04:08:22 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -24,7 +24,7 @@ USE_LANGUAGES=		c c++ fortran
 
 
 
-USE_PKGLOCALEDIR=	yes
+USE_PKGLOCALEDIR=	no
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDoc/EDoc.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDoc/EDoc-ver.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDocPy/EDocPy.pc.in

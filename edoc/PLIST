@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/20 04:15:00 bjcosta Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/10/21 04:08:22 bjcosta Exp $
 bin/edc-arch
 bin/edoc
 bin/start_edoc
@@ -337,20 +337,31 @@ edoc_patched/man/man7/fsf-funding.7
 edoc_patched/man/man7/gfdl.7
 edoc_patched/man/man7/gpl.7
 edoc_patched/share/locale/be/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/be/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/ca/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/ca/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/da/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/da/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/de/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/de/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/el/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/el/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/es/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/es/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/fr/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/fr/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/ja/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/ja/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/nl/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/nl/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/rw/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/rw/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/sv/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/sv/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/tr/LC_MESSAGES/cpplib.mo
+edoc_patched/share/locale/tr/LC_MESSAGES/gcc.mo
 edoc_patched/share/locale/vi/LC_MESSAGES/cpplib.mo
-include/EDoc
-include/EDocBFD
+edoc_patched/share/locale/zh_CN/LC_MESSAGES/gcc.mo
 include/${PKGNAME}/EDoc/ArchiveIFace.h
 include/${PKGNAME}/EDoc/BinaryPersistence.h
 include/${PKGNAME}/EDoc/CatchBlock.h
@@ -398,20 +409,17 @@ include/${PKGNAME}/EDocBFD/bfd_utils.h
 include/${PKGNAME}/EDocBFD/exceptions.h
 lib/libEDoc-${PKGVERSION}.eds
 lib/libEDoc-${PKGVERSION}.la
-lib/libEDoc.a
-lib/libEDoc.eds
-lib/libEDoc.la
-lib/libEDoc.so
-lib/libEDoc.so.0
+lib/libEDoc-${PKGVERSION}.a
+lib/libEDoc-${PKGVERSION}.so
+lib/libEDoc-${PKGVERSION}.so.0
+lib/libEDoc-${PKGVERSION}.so.0.0.0
 lib/libEDocBFD-${PKGVERSION}.la
-lib/libEDocBFD.a
-lib/libEDocBFD.la
-lib/libEDocBFD.so
-lib/libEDocBFD.so.0
+lib/libEDocBFD-${PKGVERSION}.a
+lib/libEDocBFD-${PKGVERSION}.so
+lib/libEDocBFD-${PKGVERSION}.so.0
+lib/libEDocBFD-${PKGVERSION}.so.0.0.0
 lib/pkgconfig/EDoc-${PKGVERSION}.pc
-lib/pkgconfig/EDoc.pc
 lib/pkgconfig/EDocBFD-${PKGVERSION}.pc
-lib/pkgconfig/EDocBFD.pc
 man/man1/edoc.1
 share/${PKGNAME}/defsupp/all.eds
 share/${PKGNAME}/defsupp/gccextra.eds
@@ -428,19 +436,6 @@ share/${PKGNAME}/eh/__init__.pyo
 share/${PKGNAME}/eh/eds/__init__.py
 share/${PKGNAME}/eh/eds/__init__.pyc
 share/${PKGNAME}/eh/eds/__init__.pyo
-share/locale/be/LC_MESSAGES/gcc.mo
-share/locale/ca/LC_MESSAGES/gcc.mo
-share/locale/da/LC_MESSAGES/gcc.mo
-share/locale/de/LC_MESSAGES/gcc.mo
-share/locale/el/LC_MESSAGES/gcc.mo
-share/locale/es/LC_MESSAGES/gcc.mo
-share/locale/fr/LC_MESSAGES/gcc.mo
-share/locale/ja/LC_MESSAGES/gcc.mo
-share/locale/nl/LC_MESSAGES/gcc.mo
-share/locale/rw/LC_MESSAGES/gcc.mo
-share/locale/sv/LC_MESSAGES/gcc.mo
-share/locale/tr/LC_MESSAGES/gcc.mo
-share/locale/zh_CN/LC_MESSAGES/gcc.mo
 @dirrm share/${PKGNAME}/eh/eds
 @dirrm share/${PKGNAME}/eh
 @dirrm share/${PKGNAME}/defsupp
@@ -448,6 +443,8 @@ share/locale/zh_CN/LC_MESSAGES/gcc.mo
 @dirrm include/${PKGNAME}/EDocBFD
 @dirrm include/${PKGNAME}/EDoc
 @dirrm include/${PKGNAME}
+@dirrm edoc_patched/share/locale/zh_CN/LC_MESSAGES
+@dirrm edoc_patched/share/locale/zh_CN
 @dirrm edoc_patched/share/locale/vi/LC_MESSAGES
 @dirrm edoc_patched/share/locale/vi
 @dirrm edoc_patched/share/locale/tr/LC_MESSAGES
