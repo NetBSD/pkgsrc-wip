@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/10/20 10:41:44 obache Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/21 00:29:00 obache Exp $
 
-DISTNAME=	cyrus-imapd-2.3.12p2
-PKGREVISION=	2
+DISTNAME=	cyrus-imapd-2.3.13
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
@@ -18,7 +17,6 @@ USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
-BDB_ACCEPTED=		db4 db3
 
 BUILD_DEFS+=		VARBASE
 
@@ -55,6 +53,9 @@ CONFIGURE_ARGS+=	--enable-replication
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
 PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap snmp zephyr
+PKG_SUPPORTED_OPTIONS+=	bdb mysql pgsql sqlite
+PKG_SUGGESTED_OPTIONS=	bdb
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mkerberos)
@@ -104,6 +105,36 @@ CONFIGURE_ARGS+=	--with-zephyr=${BUILDLINK_PREFIX.zephyr}
 CONFIGURE_ARGS+=	--without-zephyr
 .endif
 
+.if !empty(PKG_OPTIONS:Mbdb)
+BDB_ACCEPTED=		db4 db3
+.  include "../../mk/bdb.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-bdb=${BDBBASE:Q}
+CONFIGURE_ENV+=		BDB_TYPE=${BDB_TYPE:Q}
+.else
+CONFIGURE_ARGS+=	--without-bdb
+.endif
+
+.if !empty(PKG_OPTIONS:Mmysql)
+.  include "../../mk/mysql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q}
+.else
+CONFIGURE_ARGS+=	--without-mysql
+.endif
+
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX:Q}
+.else
+CONFIGURE_ARGS+=	--without-pgsql
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite)
+.  include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3:Q}
+.else
+CONFIGURE_ARGS+=	--without-sqlite
+.endif
+
 .if exists(/usr/bin/compile_et)
 COMERRBASE?=		/usr
 .endif
@@ -140,8 +171,6 @@ CFLAGS+=	-DOPENSSL_LACK_BN_CONST
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
-
-CONFIGURE_ENV+=	BDB_TYPE=${BDB_TYPE:Q}
 
 # Only imap/mupdate needs to be build with pthreads support, so selectively
 # enable it via patches for just that one program.
