@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3074 2008/10/20 09:34:09 thomasklausner Exp $
+# $Id: Makefile,v 1.3075 2008/10/21 07:22:14 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1619,6 +1619,7 @@ SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 #SUBDIR+=	rlab			# In Attic.
+SUBDIR+=	rnc-mode
 SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rosegarden-current
