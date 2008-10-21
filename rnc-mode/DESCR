@@ -1,0 +1,3 @@
+A small emacs mode for editing RELAX NG schemas in the compact
+syntax. It's just a beta. The indentation function needs some
+improvement.
