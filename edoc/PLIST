@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/21 04:08:22 bjcosta Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/21 06:35:52 bjcosta Exp $
 bin/edc-arch
 bin/edoc
 bin/start_edoc
@@ -409,15 +409,7 @@ include/${PKGNAME}/EDocBFD/bfd_utils.h
 include/${PKGNAME}/EDocBFD/exceptions.h
 lib/libEDoc-${PKGVERSION}.eds
 lib/libEDoc-${PKGVERSION}.la
-lib/libEDoc-${PKGVERSION}.a
-lib/libEDoc-${PKGVERSION}.so
-lib/libEDoc-${PKGVERSION}.so.0
-lib/libEDoc-${PKGVERSION}.so.0.0.0
 lib/libEDocBFD-${PKGVERSION}.la
-lib/libEDocBFD-${PKGVERSION}.a
-lib/libEDocBFD-${PKGVERSION}.so
-lib/libEDocBFD-${PKGVERSION}.so.0
-lib/libEDocBFD-${PKGVERSION}.so.0.0.0
 lib/pkgconfig/EDoc-${PKGVERSION}.pc
 lib/pkgconfig/EDocBFD-${PKGVERSION}.pc
 man/man1/edoc.1
