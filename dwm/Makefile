@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/09/09 22:03:56 leot1990 Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/21 20:51:30 leot1990 Exp $
 
 DISTNAME=	dwm-5.2
 CATEGORIES=	wm
 MASTER_SITES=	http://code.suckless.org/dl/dwm/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://dwm.suckless.org/
 COMMENT=	Dynamic window manager
 
