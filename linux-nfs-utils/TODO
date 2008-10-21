@@ -16,3 +16,4 @@ from util-linux 2.11f or later.
 # nhfsgraph uses graph(1) which is provided by graphics/plotutils
 # but graphics/plotutils is not a DEPENDS and may not be installed.
 - I added a MESSAGE about this
+- This package has a known vulnerability, please investigate and fix if possible. (see: CVE-2008-4552).
