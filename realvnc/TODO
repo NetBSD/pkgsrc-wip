@@ -8,3 +8,4 @@
   wip/realvnc to wip/vnc4.  I prefer keeping the realvnc name.
 
 - Still havn't looked into IPv6 support.
+- This package has a known vulnerability, please investigate and fix if possible. (see: http://www.realvnc.com/products/free/4.1/release-notes.html).
