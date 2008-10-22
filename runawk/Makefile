@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/10/19 10:15:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.31 2008/10/22 22:14:06 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.14.3
@@ -15,6 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
 TEST_TARGET=		test
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" #&& exists("/usr/bin/nawk")
+MAKE_ENV+=		AWK_PROG=${AWK}
+.endif
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
