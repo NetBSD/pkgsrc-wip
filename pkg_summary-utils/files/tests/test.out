@@ -1,0 +1,48 @@
+--------------------------------------------------
+------- args: 'pkg_grep_summary' 'PKGNAME' 'fvalue ~ /^d/'
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+DEPENDS=pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils paexec>=0.10.0:../../wip/paexec runawk>=0.13.0:../../wip/runawk
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://mova.org/~cheusov/pub/distbb/
+COMMENT=DISTributed Bulk Build tool for pkgsrc
+MAINTAINER=cheusov@tut.by
+CATEGORIES=pkgtools
+
+PKGPATH=textproc/dictem
+DEPENDS=dict-client>=1.9.14:../../textproc/dict-client emacs>=22:../../editors/emacs  emacs>=22:../../editors/emacs
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+CONFLICTS=xemacs-dictem-[0-9]*
+HOMEPAGE=http://freshmeat.net/projects/dictem/
+COMMENT=Dictionary client (RFC-2229) for [X]Emacs
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc editors
+PKGNAME=dictem-0.82
+
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+DEPENDS=   libmaa>=0.990:../../wip/libmaa
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol server
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+DEPENDS=  libltdl>=1.5.10:../../devel/libltdl
+BUILD_DEPENDS= gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=pkgsrc-users@NetBSD.org
+CATEGORIES=textproc
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+DEPENDS=  libmaa>=0.990:../../wip/libmaa
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc
+

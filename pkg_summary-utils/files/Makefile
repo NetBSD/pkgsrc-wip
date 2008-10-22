@@ -47,7 +47,7 @@ PROJECTNAME=	pkg_summary-utils
 	    -e 's,@@datadir@@,${DATADIR},g' \
 	    -e 's,@@version@@,${VERSION},g' \
 	    -e 's,@@awkmoddir@@,${AWKMODDIR},g' \
-	    ${.ALLSRC} > ${.TARGET}
+	    ${.ALLSRC} > ${.TARGET} && chmod +x ${.TARGET}
 
 .PHONY: clean-my
 clean: clean-my
@@ -71,6 +71,14 @@ install-dirs:
 
 ############################################################
 
-.sinclude "Makefile.cvsdist"
+.PHONY : test
+test : all
+	@echo 'running tests...'; \
+	if cd tests && ./test.sh > _test.res && diff -u test.out _test.res; \
+	then echo '   succeeded'; \
+	else echo '   failed'; false; \
+	fi
+
+############################################################
 
 .include <bsd.prog.mk>
