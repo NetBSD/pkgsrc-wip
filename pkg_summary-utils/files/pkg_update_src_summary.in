@@ -23,7 +23,7 @@
 
 set -e
 
-. @@bindir@@/pipestatus
+. pipestatus
 
 ############################################################
 # user settable variables
@@ -106,7 +106,7 @@ allpkgs_fn=$tmp_dir/allpkgs
 if test "$pkgs_fn"; then
     awk '{sub(/#.*/, "")} NF > 0 {print $1}' $pkgs_fn > $allpkgs_fn
 else
-    @@bindir@@/pkg_list_all_pkgs > $allpkgs_fn
+    pkg_list_all_pkgs > $allpkgs_fn
 fi
 
 ############################################################
@@ -114,18 +114,18 @@ fi
 
 # src_summary from scratch
 if ! test -f $summary; then
-    eval @@bindir@@/pkg_src_summary $fields < $allpkgs_fn > $new_summary
+    eval pkg_src_summary $fields < $allpkgs_fn > $new_summary
     mv $new_summary $summary
     exit $?
 fi
 
 # micro summary
 micsum_fn=$tmp_dir/micsum
-@@bindir@@/pkg_micro_src_summary < $allpkgs_fn >$micsum_fn
+pkg_micro_src_summary < $allpkgs_fn >$micsum_fn
 
 # summary against microsummary
 cmp_fn=$tmp_dir/cmp
-@@bindir@@/pkg_cmp_summary -p $summary $micsum_fn > $cmp_fn
+pkg_cmp_summary -p $summary $micsum_fn > $cmp_fn
 
 # copying summary about unchanged packages
 eq_pkgs_fn=$tmp_dir/eqpkgs
@@ -134,7 +134,7 @@ awk '$1 ~ /^[=]/ {print $2 ":" $3}' $cmp_fn > $eq_pkgs_fn # pkgpath:pkgbase
 copy_eq_pkgs (){
 env eq_pkgs_fn="$eq_pkgs_fn" runawk -e '
 #use "xgetline.awk"
-#use "@@awkmoddir@@/pkg_grep_summary.awk"
+#use "pkg_grep_summary.awk"
 
 BEGIN {
    eq_pkgs_fn = ENVIRON ["eq_pkgs_fn"]
@@ -212,7 +212,7 @@ NF == 0 && interesting {
 pkgpath_fn=$tmp_dir/pkgpaths
 extract_pkgpath $micsum_fn > $pkgpath_fn
 
-eval @@bindir@@/pkg_src_summary $fields < $pkgpath_fn >> $new_summary
+eval pkg_src_summary $fields < $pkgpath_fn >> $new_summary
 
 # result
 mv $new_summary $summary

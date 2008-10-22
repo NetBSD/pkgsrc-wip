@@ -23,7 +23,7 @@
 
 set -e
 
-. @@bindir@@/pipestatus
+. pipestatus
 
 usage (){
     cat 1>&2 <<EOF
@@ -43,7 +43,7 @@ while test $# -ne 0; do
 	    usage
 	    exit 0;;
 	-r|--refresh)
-	    refresh=@@bindir@@/pkg_refresh_summary;;
+	    refresh=pkg_refresh_summary;;
 	--)
 	    shift
 	    break;;

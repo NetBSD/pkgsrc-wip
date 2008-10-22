@@ -90,7 +90,7 @@ else
 fi
 
 runawk -e '
-#use "@@awkmoddir@@/pkg_grep_summary.awk"
+#use "pkg_grep_summary.awk"
 
 BEGIN {
    grep_summary__field="'"$field"'"
