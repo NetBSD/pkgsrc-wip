@@ -5,7 +5,6 @@ existing tools:
     pkg_cmp_summary:
 
     pkg_list_all_pkgs:
-       - add -h|--help option
 
     pkg_micro_src_summary:
        - f PKGNAME,PKGPATH,...
@@ -18,16 +17,11 @@ existing tools:
        - man page
 
     pkg_src_summary:
-       - output possible/default build OPTIONS
-       - summary for packages AND THEIR DEPENDANCIES,
-         useful for bulk builds
-       - VARIANTS field for building python-, apache- and php modules.
 
     pkg_summary4view:
        - add -h|--help option
 
     pkg_update_src_summary:
-       - added -p|--make-plist option similar to that of pkg_src_summary
 
     pkg_update_summary:
        - use standard 'find -newer' instead of 'ls -1t' and
@@ -36,18 +30,20 @@ existing tools:
     pkg_grep_summary:
        - man page
 
-new tools:
-    - (unsure) additional tool for field reordering?
+new tools?
+    - (unsure) additional tool for fields reordering?
 
     - (unsure) simplified wrapper over pkg_grep_summary for grepping
       packages by their (list of!) PKGBASEs/PKGNAMEs/PKGPATHs
       (look inside pkg_refresh_summary and pkg_update_src_summary)
 
-    - rfc822_to_summary and (?)debian_to_summary(?) for comverting an
+    - rfc822_to_summary and (?)debian_to_summary(?) for converting an
       information about Debian packages to pkg_summary(5) format.
       For pkg_online database server for Debian packages?
 
     - pkg_summary2INDEX
       pkg_summary2PKGDB
+
+    - pkg_op_summary <refresh|intersect|subtract>
 
 ANY IDEAS? LET ME KNOW
