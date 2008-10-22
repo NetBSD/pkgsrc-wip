@@ -1,4 +1,24 @@
 ----------------------------------------------------------------------
+Version 0.19.0, by Aleksey Cheusov, Wed, 22 Oct 2008 21:38:19 +0300
+
+  all scripts are preprocessed before installation
+  (sed 's,@@bindir@@,${BINDIR},g' etc.)
+
+  pkg_src_summary: fix for packages having more than one file listed
+  in DESCR_SRC
+
+  FIX for pkg_src_summary -p: For a huge number of packages 'make
+  plist' fails because this stage requires package's sources
+  extracted.  Now 'make plist' failures are not critical,
+  i.e. summary for such package is generated in any case.
+
+  fix in pkg_src_fetch_var.in: comments are removed
+  PKGNAME=pkgname-ver ### trtrtr -> PKGNAME=pkgname-ver
+
+  fix in pkg_micro_src_summary: If PKGREVISION is set to 0 (or empty)
+  in Makefile (bug?), then nb0 is *not* added to PKGNAME
+
+----------------------------------------------------------------------
 Version 0.17.2, by Aleksey Cheusov, Sat,  4 Oct 2008 14:47:09 +0300
 
   FIX: pkg_src_summary may fail for packages when fields contain
