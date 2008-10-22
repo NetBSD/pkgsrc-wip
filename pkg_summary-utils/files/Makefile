@@ -74,7 +74,10 @@ install-dirs:
 .PHONY : test
 test : all
 	@echo 'running tests...'; \
-	if cd tests && ./test.sh > _test.res && diff -u test.out _test.res; \
+	if cd ${.CURDIR}/tests && \
+		env OBJDIR=${.OBJDIR} ./test.sh \
+			> ${.OBJDIR}/_test.res && \
+		diff -u ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
 	then echo '   succeeded'; \
 	else echo '   failed'; false; \
 	fi

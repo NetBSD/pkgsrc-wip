@@ -6,6 +6,7 @@ HOMEPAGE=http://mova.org/~cheusov/pub/distbb/
 COMMENT=DISTributed Bulk Build tool for pkgsrc
 MAINTAINER=cheusov@tut.by
 CATEGORIES=pkgtools
+EXFIELD=XVALUE1
 
 PKGPATH=textproc/dictem
 DEPENDS=dict-client>=1.9.14:../../textproc/dict-client emacs>=22:../../editors/emacs  emacs>=22:../../editors/emacs
@@ -41,6 +42,7 @@ MAINTAINER=rillig@NetBSD.org
 CATEGORIES=sysutils
 PKGNAME=checkperms-1.10
 PKGPATH=sysutils/checkperms
+EXFIELD=XVALUE2
 
 PKGNAME=pkg_online-server-0.5.0
 PKGPATH=wip/pkg_online-server
@@ -185,7 +187,7 @@ COMMENT=Dictionary Service Protocol client
 MAINTAINER=cheusov@tut.by
 CATEGORIES=textproc
 
-PKGNAME=pipestatus-0.5.0
+PKGNAME=pipestatus-0.4.0
 PKGPATH=wip/pipestatus
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://sourceforge.net/projects/pipestatus/
