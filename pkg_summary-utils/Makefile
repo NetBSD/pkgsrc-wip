@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/10/22 20:17:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2008/10/22 22:16:19 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -38,6 +38,7 @@ NO_CHECKSUM=	yes
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
 MAKE_ENV+=	MKCATPAGES=no
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
+MAKE_ENV+=	SH=${SH:Q}
 
 AUTO_MKDIRS=	yes
 

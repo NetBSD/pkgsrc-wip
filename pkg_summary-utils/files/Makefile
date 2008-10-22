@@ -8,6 +8,9 @@ AWKMODDIR?=	${PREFIX}/share/awk
 
 INST_DIR?=	${INSTALL} -d
 
+SH?=		/bin/sh
+AWK?=		/usr/bin/awk
+
 ############################################################
 
 .include "Makefile.version"
@@ -47,6 +50,8 @@ PROJECTNAME=	pkg_summary-utils
 	    -e 's,@@datadir@@,${DATADIR},g' \
 	    -e 's,@@version@@,${VERSION},g' \
 	    -e 's,@@awkmoddir@@,${AWKMODDIR},g' \
+	    -e 's,@SH@,${SH},g' \
+	    -e 's,@AWK@,${AWK},g' \
 	    ${.ALLSRC} > ${.TARGET} && chmod +x ${.TARGET}
 
 .PHONY: clean-my
@@ -75,7 +80,7 @@ install-dirs:
 test : all
 	@echo 'running tests...'; \
 	if cd ${.CURDIR}/tests && \
-		env OBJDIR=${.OBJDIR} ./test.sh \
+		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} ./test.sh \
 			> ${.OBJDIR}/_test.res && \
 		diff -u ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
 	then echo '   succeeded'; \

@@ -1,11 +1,17 @@
 #!/bin/sh
 
-export LC_ALL=C
+LC_ALL=C
+export LC_ALL
 
 srcdir=..
-export objdir=${OBJDIR:=.}
+if test "$OBJDIR"; then
+    objdir=${OBJDIR}
+else
+    objdir='.'
+fi
 
-export AWKPATH="$srcdir"
+AWKPATH="$srcdir"
+export AWKPATH
 
 print_args (){
 #    echo "$@"
