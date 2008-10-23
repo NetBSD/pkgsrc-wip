@@ -68,5 +68,28 @@ sed 's/[0-9]/X/g'
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #4'
 pkgs=$(sed -n 's/^PKGPATH=//p' src_summary.txt)
-pkg_micro_src_summary $pkgs |
+pkg_micro_src_summary $pkgs | tee "$objdir"/summary_micro.txt |
 sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
+
+# pkg_refresh_summary
+echo '--------------------------------------------------'
+echo '------- pkg_micro_src_summary #5'
+pkg_refresh_summary src_summary.txt src_summary2.txt |
+sed -n 's/^PKGNAME=//p' | sort
+
+# pkg_src_summary
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #6'
+pkgs=$(sed -n 's/^PKGPATH=//p' src_summary.txt)
+pkg_micro_src_summary $pkgs | tee "$objdir"/summary_full.txt |
+sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #7'
+diff "$objdir"/summary_micro.txt "$objdir"/summary_full.txt
+
+# pkg_summary4view
+echo '--------------------------------------------------'
+echo '------- pkg_summary4view #8'
+pkg_grep_summary PKGPATH 'fvalue == "wip/pkg_summary-utils"' \
+    < src_summary.txt | pkg_summary4view
