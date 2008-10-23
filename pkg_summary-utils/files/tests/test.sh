@@ -66,7 +66,7 @@ awk 'END {gsub(/[0-9]/, "X", NR); print NR}'
 # pkg_micro_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #4'
-pkgs=$(sed -n 's/^PKGPATH=//p' src_summary.txt)
+pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"
 pkg_micro_src_summary $pkgs | tee "$objdir"/summary_micro.txt |
 sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
 
@@ -79,7 +79,7 @@ sed -n 's/^PKGNAME=//p' | sort
 # pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #6'
-pkgs=$(sed -n 's/^PKGPATH=//p' src_summary.txt)
+pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"
 pkg_micro_src_summary $pkgs | tee "$objdir"/summary_full.txt |
 sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
 
