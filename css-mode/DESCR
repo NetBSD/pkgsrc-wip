@@ -1,0 +1,4 @@
+This is a simple Emacs mode for editing CSS style sheets. It adds
+font-locking and some basic auto-indentation support to Emacs. It
+works with Emacs 19.34, but should also work with both older and newer
+versions as well as XEmacs.
