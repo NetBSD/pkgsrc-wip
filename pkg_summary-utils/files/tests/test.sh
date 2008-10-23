@@ -61,8 +61,7 @@ pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2
 echo '--------------------------------------------------'
 echo '------- pkg_list_all_pkgs #3'
 env  pkg_list_all_pkgs |
-wc -l |
-sed 's/[0-9]/X/g'
+awk 'END {gsub(/[0-9]/, "X", NR); print NR}'
 
 # pkg_micro_src_summary
 echo '--------------------------------------------------'
