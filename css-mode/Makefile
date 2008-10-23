@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/23 05:19:31 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/23 06:01:03 phonohawk Exp $
 #
 
 DISTNAME=	css-mode
-PKGNAME=	css-mode-0.11
+PKGNAME=	css-mode-1.0
 CATEGORIES=	editors
-MASTER_SITES=	http://www.garshol.priv.no/download/software/css-mode/
+MASTER_SITES=	http://www.brgeight.se/downloads/emacs/
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.garshol.priv.no/download/software/css-mode/
+HOMEPAGE=	http://www.brgeight.se/
 COMMENT=	CSS editing mode for Emacs
 
 WRKSRC=		${WRKDIR}
