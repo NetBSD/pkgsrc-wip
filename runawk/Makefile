@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/10/22 22:14:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.32 2008/10/23 18:12:08 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.14.3
@@ -18,8 +18,10 @@ TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" #&& exists("/usr/bin/nawk")
+.if ${OPSYS} == "SunOS"
 MAKE_ENV+=		AWK_PROG=${AWK}
+.elif ${OPSYS} == "Interix"
+MAKE_ENV+=		STDIN_FILENAME=-
 .endif
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
