@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3075 2008/10/21 07:22:14 phonohawk Exp $
+# $Id: Makefile,v 1.3076 2008/10/23 05:20:47 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -208,6 +208,7 @@ SUBDIR+=	crfpp
 SUBDIR+=	crm114
 SUBDIR+=	cryptcat
 SUBDIR+=	csoap
+SUBDIR+=	css-mode
 SUBDIR+=	csstidy
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
