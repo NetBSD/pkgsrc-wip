@@ -1,4 +1,4 @@
-############################################################
+#############################################################
 
 PREFIX?=	/usr/local
 BINDIR?=	${PREFIX}/bin
@@ -11,7 +11,10 @@ INST_DIR?=	${INSTALL} -d
 SH?=		/bin/sh
 AWK?=		/usr/bin/awk
 
-############################################################
+# NetBSD make is required for pkgsrc
+BMAKE?=		/usr/bin/make
+
+#############################################################
 
 .include "Makefile.version"
 
@@ -80,7 +83,8 @@ install-dirs:
 test : all
 	@echo 'running tests...'; \
 	if cd ${.CURDIR}/tests && \
-		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} ./test.sh \
+		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
+			BMAKE=${BMAKE} ./test.sh \
 			> ${.OBJDIR}/_test.res && \
 		diff -u ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
 	then echo '   succeeded'; \

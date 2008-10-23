@@ -109,7 +109,7 @@ PKGNAME=jpeg-6bnb4
 = tiff 3.8.2nb4 3.8.2nb4
 - x11-links 0.38
 --------------------------------------------------
-------- pkg_cmp_summary #1
+------- pkg_cmp_summary #2
 = devel/gmake gmake 3.81 3.81
 = devel/libltdl libltdl 1.5.24 1.5.24
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
@@ -138,3 +138,6 @@ PKGNAME=jpeg-6bnb4
 = wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
 = wip/pkg_summary-utils pkg_summary-utils 0.18.1 0.18.1
 > wip/runawk runawk 0.14.3 0.13.0
+--------------------------------------------------
+------- pkg_list_all_pkgs #3
+XXXX

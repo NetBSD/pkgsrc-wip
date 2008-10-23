@@ -10,6 +10,10 @@ else
     objdir='.'
 fi
 
+if test -z "$BMAKE"; then
+    BMAKE=/usr/bin/make
+fi
+
 AWKPATH="$srcdir"
 export AWKPATH
 
@@ -45,5 +49,12 @@ echo '--------------------------------------------------'
 echo '------- pkg_cmp_summary #1'
 pkg_cmp_summary src_summary.txt src_summary2.txt | sort -k2,2
 echo '--------------------------------------------------'
-echo '------- pkg_cmp_summary #1'
+echo '------- pkg_cmp_summary #2'
 pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2
+
+# pkg_list_all_pkgs
+echo '--------------------------------------------------'
+echo '------- pkg_list_all_pkgs #3'
+env PKGSRCDIR="`pwd`/../../../.." pkg_list_all_pkgs |
+wc -l |
+sed 's/[0-9]/X/g'
