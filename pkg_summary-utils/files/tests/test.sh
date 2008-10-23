@@ -3,6 +3,7 @@
 LC_ALL=C
 export LC_ALL
 
+#
 srcdir=..
 if test "$OBJDIR"; then
     objdir=${OBJDIR}
@@ -10,13 +11,17 @@ else
     objdir='.'
 fi
 
+#
 if test -z "$BMAKE"; then
     BMAKE=/usr/bin/make
 fi
+PKGSRCDIR="`pwd`/../../../.."
 
 AWKPATH="$srcdir"
-export AWKPATH
 
+export PKGSRCDIR BMAKE AWKPATH
+
+#
 print_args (){
 #    echo "$@"
     for i in "$@"; do
@@ -55,6 +60,13 @@ pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2
 # pkg_list_all_pkgs
 echo '--------------------------------------------------'
 echo '------- pkg_list_all_pkgs #3'
-env PKGSRCDIR="`pwd`/../../../.." pkg_list_all_pkgs |
+env  pkg_list_all_pkgs |
 wc -l |
 sed 's/[0-9]/X/g'
+
+# pkg_micro_src_summary
+echo '--------------------------------------------------'
+echo '------- pkg_micro_src_summary #4'
+pkgs=$(sed -n 's/^PKGPATH=//p' src_summary.txt)
+pkg_micro_src_summary $pkgs |
+sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
