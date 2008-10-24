@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/09/24 20:15:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/24 20:42:21 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.10.0
-PKGREVISION=	1
-CATEGORIES=	parallel
+PKGREVISION=	2
+CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
 
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_BSD_MAKEFILE=	yes
-USE_FEATURES=		getopt_long
 
 TEST_TARGET=		test
 
@@ -31,22 +30,10 @@ MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		LDADD=${LIBS:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-SUPPORTED_SYSTEM=	0
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
-SUPPORTED_SYSTEM=	1
-.endif
-
-.if ${SUPPORTED_SYSTEM} == "0"
 CPPFLAGS+=		-DNO_PORTABHACKS_H=1 -DHAVE_CONFIG_H=1
+
 pre-build:
-	${ECHO} '#if defined(HAVE_NBCOMPAT_H)' >  ${WRKSRC}/config.h
-	${ECHO} '#include <nbcompat/config.h>' >> ${WRKSRC}/config.h
-	${ECHO} '#include <nbcompat/cdefs.h>'  >> ${WRKSRC}/config.h
-	${ECHO} '#include <nbcompat/getopt.h>' >> ${WRKSRC}/config.h
-	${ECHO} '#endif'                       >> ${WRKSRC}/config.h
-.endif
+	cp ${.CURDIR}/files/config.h ${WRKSRC}/
 
 post-install:
 .for i in ${DOC_FILES}
@@ -74,10 +61,6 @@ post-install:
 		${DESTDIR}${PKGEGDIR}/make_package/
 	${INSTALL_DATA} ${WRKSRC}/examples/make_package/make_package_tasks \
 		${DESTDIR}${PKGEGDIR}/make_package/
-
-.if ${SUPPORTED_SYSTEM} == "0"
-.include "../../pkgtools/libnbcompat/inplace.mk"
-.endif
 
 .include "../../wip/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
