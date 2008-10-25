@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3076 2008/10/23 05:20:47 phonohawk Exp $
+# $Id: Makefile,v 1.3077 2008/10/25 13:46:53 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -258,6 +258,7 @@ SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
 #SUBDIR+=	dmd-bin
+SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dnswalk
