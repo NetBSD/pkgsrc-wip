@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/25 01:00:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/25 01:03:44 cheusov Exp $
 #
 
 DISTNAME=	pipestatus-0.5.0
@@ -18,6 +18,7 @@ INSTALLATION_DIRS+=	bin share/doc/pipestatus
 DOCS=			README NEWS
 
 TEST_TARGET=		test
+MAKE_FLAGS+=		SH=${SH}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/pipestatus ${DESTDIR}${PREFIX}/bin/
