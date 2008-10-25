@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/10/24 11:02:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.42 2008/10/25 16:40:46 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.22.1
@@ -15,6 +15,10 @@ DEPENDS+=	runawk>=0.13.0:../../wip/runawk
 
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
