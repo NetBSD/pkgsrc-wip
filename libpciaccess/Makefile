@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/06 20:09:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/26 10:40:23 tnn2 Exp $
 #
 
-DISTNAME=		libpciaccess-0.10.3
+DISTNAME=		libpciaccess-0.10.4
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,11 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config automake autoconf
+USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	pciaccess.pc.in
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoreconf -if
 
 .include "../../mk/bsd.pkg.mk"
