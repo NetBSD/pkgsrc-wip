@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/04 04:17:22 netcap Exp $
-bin/embryo_cc
-include/Embryo.h
-lib/libembryo.la
-lib/pkgconfig/embryo.pc
-share/embryo/include/default.inc
-@dirrm share/embryo/include
-@dirrm share/embryo

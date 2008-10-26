@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3077 2008/10/25 13:46:53 leot1990 Exp $
+# $Id: Makefile,v 1.3078 2008/10/26 07:57:53 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -317,7 +317,6 @@ SUBDIR+=	emboss-meme
 SUBDIR+=	emboss-mse
 SUBDIR+=	emboss-phylip
 SUBDIR+=	emboss-topo
-SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes

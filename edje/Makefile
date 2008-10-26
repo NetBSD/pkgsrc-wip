@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/10/20 00:09:22 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2008/10/26 07:57:53 minskim Exp $
 #
 
 DISTNAME=	edje-0.9.9.043
@@ -19,6 +19,6 @@ USE_TOOLS=	gmake pkg-config
 .include	"../../devel/eet/buildlink3.mk"
 .include	"../../wip/ecore/buildlink3.mk"
 .include	"../../wip/evas/buildlink3.mk"
-.include	"../../wip/embryo/buildlink3.mk"
+.include	"../../lang/embryo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
