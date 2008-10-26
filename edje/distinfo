@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/06/29 21:31:11 shindenmorr Exp $
+$NetBSD: distinfo,v 1.9 2008/10/26 08:05:21 minskim Exp $
 
-SHA1 (edje-0.9.9.043.tar.gz) = 8b59eede21170e005dada11d923a74dcbc2618dd
-RMD160 (edje-0.9.9.043.tar.gz) = 96ab3e610af3de061e6bd81eed4c360ffaf5bd35
-Size (edje-0.9.9.043.tar.gz) = 3052197 bytes
+SHA1 (edje-0.9.9.050.tar.gz) = 893e96cd48d1f4af0bc5bd86da4ba85f02bb9c01
+RMD160 (edje-0.9.9.050.tar.gz) = 2d790ed8ba53bb6eb82d9175f56f39e2a432df80
+Size (edje-0.9.9.050.tar.gz) = 4327911 bytes
