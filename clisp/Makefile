@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/16 20:18:00 asau Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/26 11:09:52 asau Exp $
 #
 
 DISTNAME=		clisp-2.46
@@ -22,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 CONFIGURE_DIRS=		.
-USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure--host=..." => cross-building
+USE_GNU_CONFIGURE_HOST=	NO	# work around broken reasoning: "configure --host=..." => cross-building
 BUILD_DIRS=		src
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
