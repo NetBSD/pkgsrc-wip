@@ -1,4 +1,5 @@
 #!@SH@
+#-*-mode:  sh -*-
 
 # Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
 #
@@ -142,7 +143,7 @@ process_options $PSS_OPTIONS "$@"
 if test "$multi_var"; then
     # VARIANTS7 - artificial field keeping all variable assignments
     # for multi-variant packages. This should be in pkgsrc but
-    # idea was declined by pkgsrc developers.
+    # idea was rejected by pkgsrc developers.
     # http://mail-index.netbsd.org/tech-pkg/2008/07/20/msg001320.html
     add_fields 'VARIANTS7'
 fi
@@ -206,15 +207,6 @@ enrich_summary (){
 enrich_Makefile (){
     cat <<EOF
 #####################################################################
-.PHONY: my-show-vars
-my-show-vars:
-.for VARNAME in \${VARNAMES}
-.if !empty(\${VARNAME})
-	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
-.endif
-.endfor
-
-#####################################################################
 .if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
 _ALLSRCFILES=    \${DISTFILES:@f@\${DIST_SUBDIR}/\${f}@} \
                  \${PATCHFILES:@f@\${DIST_SUBDIR}/\${f}@}
@@ -228,6 +220,15 @@ ALLSRCFILES=     \${_ALLSRCFILES:O:u}
 .for i in \${_PBULK_MULTI}
 .if !empty(\${_PBULK_MULTI_LIST.\${i}})
 VARIANTS7+=	\${_PBULK_MULTI_VAR.\${i}}=\${\${_PBULK_MULTI_LIST.\${i}}:ts,}
+.endif
+.endfor
+
+#####################################################################
+.PHONY: my-show-vars
+my-show-vars:
+.for VARNAME in \${VARNAMES}
+.if !empty(\${VARNAME})
+	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
 .endif
 .endfor
 
@@ -255,6 +256,7 @@ cd_and_print_summary (){
     if test -f mk/pbulk/pbulk-index.mk; then
 	extra_mk='-f ../../mk/pbulk/pbulk-index.mk'
     fi
+
     ( cd "$real_pkgpath" && enrich_Makefile |
 	eval ${BMAKE} -f ./Makefile $extra_mk -f - my-show-vars \
 	    VARNAMES="'$varnames'" $var_assigns ) > "$tmpfn" || return 1
