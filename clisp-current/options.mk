@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2008/10/02 18:42:53 asau Exp $
+# $NetBSD: options.mk,v 1.15 2008/10/26 11:08:13 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
 
@@ -25,12 +25,12 @@ PKG_SUGGESTED_OPTIONS+=		gmalloc
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
 .for option in ${PKG_SUPPORTED_OPTIONS}
-.if !empty(PKG_OPTIONS:M${option})
-PLIST_SUBST+=	${option}=""
-.else
-PLIST_SUBST+=	${option}="@comment "
-.endif
+.  if !empty(PKG_OPTIONS:M${option})
+PLIST.${option}=	yes
+.  endif
 .endfor
 
 .if !empty(PKG_OPTIONS:Mgmalloc)
