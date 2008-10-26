@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2008/10/20 00:09:22 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2008/10/26 07:22:09 minskim Exp $
 #
 
-DISTNAME=	evas-0.9.9.043
-PKGREVISION=	1
+DISTNAME=	evas-0.9.9.050
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
-		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-05-19/ \
-                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -39,6 +36,7 @@ CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 			--disable-valgrind --enable-glitz \
 			--enable-sdl --enable-image-loader-edb \
 			--enable-software-16-x11
+CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
 
 .include "../../devel/eet/buildlink3.mk"
 .include "../../wip/libxcb/buildlink3.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2008/10/26 07:22:09 minskim Exp $
+
+--- configure.orig	2008-10-26 06:40:23.000000000 +0000
++++ configure
+@@ -19641,8 +19641,6 @@ _ACEOF
+ fi
+ 
+ 
+-MODULE_ARCH="$host_os-$host_cpu"
+-
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define MODULE_ARCH "$MODULE_ARCH"
