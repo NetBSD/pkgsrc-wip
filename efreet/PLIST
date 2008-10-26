@@ -1,36 +1,37 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/04 04:17:23 netcap Exp $
-lib/libefreet.so
-lib/libefreet.la
-lib/libefreet.a
-lib/libefreet_mime.so
-lib/libefreet_mime.la
-lib/libefreet_mime.a
+@comment $NetBSD: PLIST,v 1.3 2008/10/26 08:28:57 minskim Exp $
+bin/efreet_alloc
+bin/efreet_cache_test
+bin/efreet_menu_alloc
+bin/efreet_spec_test
+bin/efreet_test
 include/efreet/Efreet.h
+include/efreet/Efreet_Mime.h
+include/efreet/Efreet_Trash.h
 include/efreet/efreet_base.h
 include/efreet/efreet_desktop.h
 include/efreet/efreet_icon.h
 include/efreet/efreet_ini.h
 include/efreet/efreet_menu.h
+include/efreet/efreet_uri.h
 include/efreet/efreet_utils.h
-include/efreet/Efreet_Mime.h
-share/efreet/test/test.ini
-share/efreet/test/long.ini
-share/efreet/test/test.desktop
-share/efreet/test/test_type.desktop
-share/efreet/test/test.menu
-share/efreet/test/test_menu_slash_bad.menu
-share/efreet/test/entry.png
+lib/libefreet.la
+lib/libefreet_mime.la
+lib/libefreet_trash.la
+lib/pkgconfig/efreet-mime.pc
+lib/pkgconfig/efreet-trash.pc
+lib/pkgconfig/efreet.pc
 share/efreet/test/entry
+share/efreet/test/entry.png
+share/efreet/test/long.ini
 share/efreet/test/preferences.menu
 share/efreet/test/sub/test.desktop
-bin/efreet_alloc
-bin/efreet_menu_alloc
-bin/efreet_test
-bin/efreet_spec_test
-bin/efreet_cache_test
-lib/pkgconfig/efreet.pc
-lib/pkgconfig/efreet-mime.pc
-@dirrm include/efreet
+share/efreet/test/test.desktop
+share/efreet/test/test.ini
+share/efreet/test/test.menu
+share/efreet/test/test_garbage
+share/efreet/test/test_menu_slash_bad.menu
+share/efreet/test/test_type.desktop
 @dirrm share/efreet/test/sub
 @dirrm share/efreet/test
 @dirrm share/efreet
+@dirrm include/efreet
