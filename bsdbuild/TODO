@@ -1,0 +1,5 @@
+# $NetBSD: TODO,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+#
+-- We really should edit all of the included mk files, etc.
+   to best integrate with pkgsrc.  This package is quite rough
+   around the edges at the moment!  Please feel free to work on it.

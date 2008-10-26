@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+
+SHA1 (bsdbuild-102608.tar.gz) = 567b14675a050c5c12094684267ec4eea5b28afd
+RMD160 (bsdbuild-102608.tar.gz) = fff57da27d46fe4b65fdcc6cc9d81a2457498591
+Size (bsdbuild-102608.tar.gz) = 123760 bytes
+SHA1 (patch-aa) = 4e371e260aa75b849865e232a3ff530fa2b71e83
+SHA1 (patch-ab) = 350d007fe183bdb0fb91323375526c228944cad1
+SHA1 (patch-ac) = c9c871778eda10c85c5f15f36d45b64f8d2e2943
+SHA1 (patch-ad) = 78e2e8da887fc9a6710a0901b30ac14883e6a033
+SHA1 (patch-ae) = 166a819e32d1cbfbc6bbf42ccc1653316becda18
+SHA1 (patch-af) = a202d3d209111e1e2ebcec3c67cbbf064a46fdcc
+SHA1 (patch-ag) = c9409238afd03967674674c3065e2695f5167bcc
+SHA1 (patch-ah) = 5676bd32f86a1528bc77434120b09c6c4bfea12e
+SHA1 (patch-ai) = 9449ec32f3636159bdfb1a55fbea95ddd68c4cf5
+SHA1 (patch-aj) = cae1f25aa8ff7d6a386d6c38153f75dff6738e63
+SHA1 (patch-ak) = 42f1845d3a73c760a7747e64fc6b34efac0d37c0
+SHA1 (patch-al) = d0f53284dd8036d4ed58e1a6a38dcc28af8a053e
+SHA1 (patch-am) = b1521ad4a473e26d5e5cbb3d9420776c6f87f670
