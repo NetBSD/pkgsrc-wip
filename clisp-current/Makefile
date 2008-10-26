@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2008/10/26 11:14:19 asau Exp $
+# $NetBSD: Makefile,v 1.24 2008/10/26 12:10:43 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
 PKGNAME=		clisp-2.47.99 # needed because of cvs-package.mk
 CATEGORIES=		lang
-MASTER_SITES=		#
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 
 MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://clisp.cons.org/
