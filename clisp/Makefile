@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/10/26 14:32:52 asau Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/26 15:44:14 asau Exp $
 #
 
 DISTNAME=		clisp-2.46
@@ -30,6 +30,7 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		dvipdf
 UNLIMIT_RESOURCES=	stacksize
 
+CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
