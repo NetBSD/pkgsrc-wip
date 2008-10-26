@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/10/26 12:20:27 asau Exp $
+# $NetBSD: Makefile,v 1.26 2008/10/26 14:43:02 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -38,10 +38,10 @@ CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
-MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
+MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGBASE}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
-MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
-MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
+MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGBASE}/emacs"
+MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGBASE}/vim"
 
 TEST_TARGET=		check mod-check
 
