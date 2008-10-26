@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/10/26 12:10:43 asau Exp $
+# $NetBSD: Makefile,v 1.25 2008/10/26 12:20:27 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -43,7 +43,7 @@ MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
 MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
 
-TEST_TARGET=		check
+TEST_TARGET=		check mod-check
 
 .include "../../mk/bsd.prefs.mk"
 
