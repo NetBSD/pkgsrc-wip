@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2008/10/20 00:09:22 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/26 19:48:33 minskim Exp $
 #
 
-DISTNAME=	enlightenment-0.16.999.043
-PKGNAME=	e17-0.16.999.043
-PKGREVISION=	1
+DISTNAME=	enlightenment-0.16.999.050
+PKGNAME=	${DISTNAME:S/enlightenment/e17/}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/ \
-		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-05-19/ \
-                http://jfranz.users.bsdprojects.net/pkgsrc/e17/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -24,10 +22,9 @@ CONF_FILES=	${EGDIR}/sysactions.conf \
 
 CONFIGURE_ARGS+=	--enable-zoom --enable-fsstd
 CONFIGURE_ARGS+=	--with-imlib2
+CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
 
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${EGDIR}
+PKGCONFIG_OVERRIDE=	enlightenment.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e17
 PKG_SUPPORTED_OPTIONS=	dbus
@@ -44,4 +41,9 @@ PKG_SUPPORTED_OPTIONS=	dbus
 .include "../../wip/efreet/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${EGDIR}
+
 .include "../../mk/bsd.pkg.mk"
