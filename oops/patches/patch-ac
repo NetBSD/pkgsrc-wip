@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2006/01/11 21:08:26 shattered Exp $
+$NetBSD: patch-ac,v 1.5 2008/10/27 19:13:58 shattered Exp $
 
---- src/Makefile.in.orig	2005-01-31 17:38:43.000000000 +0300
+--- src/Makefile.in.orig	2005-01-31 14:38:43.000000000 +0000
 +++ src/Makefile.in
 @@ -63,69 +63,12 @@ mkinstalldirs:
  install: all mkinstalldirs
@@ -72,3 +72,12 @@ $NetBSD: patch-ac,v 1.4 2006/01/11 21:08:26 shattered Exp $
  
  oops.o:		oops.c oops.h version.h environment.h extern.h
  lib.o:		lib.c oops.h environment.h extern.h
+@@ -155,7 +98,7 @@ lex.yy.o: lex.yy.c y.tab.h oops.h
+ lex.yy.c: parser.l
+ 	@LEX@ parser.l
+ 
+-y.tab.c: parser.y
++y.tab.c y.tab.h: parser.y
+ 	@YACC@ -d parser.y
+ 
+ y.tab.o: y.tab.c oops.h
