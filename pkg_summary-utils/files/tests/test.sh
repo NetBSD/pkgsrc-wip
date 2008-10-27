@@ -63,12 +63,21 @@ echo '------- pkg_list_all_pkgs #3'
 env  pkg_list_all_pkgs |
 awk 'END {gsub(/[0-9]/, "X", NR); print NR}'
 
+normalize_version (){
+  awk '{
+   gsub(/(nb|alpha|beta|pre|rc|pl)[0-9]+/, "")
+   gsub(/[0-9]+/, "X")
+   gsub(/jpeg-X.*$/, "jpeg-X")
+   print $0
+  }' "$@"
+}
+
 # pkg_micro_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #4'
 pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"
 pkg_micro_src_summary $pkgs | tee "$objdir"/summary_micro.txt |
-sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
+normalize_version
 
 # pkg_refresh_summary
 echo '--------------------------------------------------'
@@ -81,7 +90,7 @@ echo '--------------------------------------------------'
 echo '------- pkg_src_summary #6'
 pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"
 pkg_micro_src_summary $pkgs | tee "$objdir"/summary_full.txt |
-sed -e 's/nb[0-9][0-9]*$//' -e 's/[0-9][0-9]*/X/g' -e 's/jpeg-X.*$/jpeg-X/'
+normalize_version
 
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #7'
