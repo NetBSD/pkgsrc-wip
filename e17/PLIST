@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/26 19:48:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/10/28 19:17:47 minskim Exp $
 bin/enlightenment
 bin/enlightenment-config
 bin/enlightenment_fm
@@ -530,5 +530,3 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules
 @dirrm lib/enlightenment
 @dirrm include/enlightenment
-@exec ${MKDIR} %D/etc/enlightenment
-@dirrm etc/enlightenment

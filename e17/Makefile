@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/10/26 19:48:33 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/28 19:17:47 minskim Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.050
@@ -18,7 +18,7 @@ USE_DIRS+=	xdg-1.4
 
 EGDIR=		${PREFIX}/share/examples/enlightenment
 CONF_FILES=	${EGDIR}/sysactions.conf \
-		${PKG_SYSCONFDIR}/etc/enlightenment/sysactions.conf
+		${PKG_SYSCONFDIR}/enlightenment/sysactions.conf
 
 CONFIGURE_ARGS+=	--enable-zoom --enable-fsstd
 CONFIGURE_ARGS+=	--with-imlib2
@@ -41,9 +41,4 @@ PKG_SUPPORTED_OPTIONS=	dbus
 .include "../../wip/efreet/buildlink3.mk"
 .include "../../wip/evas/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${EGDIR}
-
 .include "../../mk/bsd.pkg.mk"
