@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/08/08 12:16:01 yazzy Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/29 22:27:27 yazzy Exp $
 #
 
-DISTNAME=	entrance-0.9.9.042
+DISTNAME=	entrance-0.9.9.050
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/
+MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-09-25/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/

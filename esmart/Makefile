@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2008/08/07 14:04:54 yazzy Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/29 22:28:22 yazzy Exp $
 #
 
-DISTNAME=	esmart-0.9.0.042
+DISTNAME=	esmart-0.9.0.050
 PKGREVISION=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
-		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/ \
-		http://jfranz.users.bsdprojects.net/pkgsrc/e17/
+MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-09-25/
 
+EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Collection of evas smart objects
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	gmake pkg-config
+USE_TOOLS=	gmake pkg-config automake autoconf
 
 CONFIGURE_ARGS=		--with-edje-cc=${PREFIX}/bin/edje_cc
 
 .include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/eina/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
