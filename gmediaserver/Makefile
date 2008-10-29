@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/12 10:52:33 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/29 04:30:46 obache Exp $
 
 DISTNAME=		gmediaserver-0.13.0
 CATEGORIES=		multimedia net
@@ -32,4 +32,5 @@ LIBS+=			-lz
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/libupnp/buildlink3.mk"
+.include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
