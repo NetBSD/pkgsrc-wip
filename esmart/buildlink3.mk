@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/08/07 14:17:32 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/10/29 22:58:51 yazzy Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ESMART_BUILDLINK3_MK:=	${ESMART_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.esmart?=	../../wip/esmart
 .endif	# ESMART_BUILDLINK3_MK
 
 .include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/eina/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
