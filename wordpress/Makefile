@@ -1,33 +1,41 @@
-# $NetBSD: Makefile,v 1.2 2008/09/14 08:52:06 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/29 10:55:00 marttikuparinen Exp $
 
-DISTNAME=	latest
-PKGNAME=	wordpress-${VERSION}
-VERSION=	2.6.2
-CATEGORIES=	www
-MASTER_SITES=	http://wordpress.org/
-EXTRACT_SUFX=	.zip
+DISTNAME=		latest
+PKGNAME=		wordpress-${VERSION}
+VERSION=		2.6.3
+CATEGORIES=		www
+MASTER_SITES=		http://wordpress.org/
+EXTRACT_SUFX=		.zip
 
-MAINTAINER=	shinden@linux.pl
-HOMEPAGE=	http://wordpress.org/
-COMMENT=	Blogging tool written in php
+MAINTAINER=		shinden@linux.pl
+HOMEPAGE=		http://wordpress.org/
+COMMENT=		Blogging tool written in php
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+USE_TOOLS+=		pax
 
-WRKSRC=		${WRKDIR}/wordpress
-INSTALLATION_DIRS=	${PREFIX}/share/wordpress/ ${PREFIX}/share/doc/wordpress/ ${PREFIX}/share/examples/wordpress/
-NO_BUILD=       yes
+NO_BUILD=		yes
+DIST_SUBDIR=		wordpress-${VERSION}
+PKG_DESTDIR_SUPPORT=	user-destdir
+WRKSRC=			${WRKDIR}/wordpress
 
-DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+INSTALLATION_DIRS=	${PREFIX}/share/wordpress
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/wordpress
+INSTALLATION_DIRS+=	${PREFIX}/share/examples/wordpress
 
-WORDPRESS_DIR=	share/wordpress/
+DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
 do-install:
-	${CP} -R ${WRKSRC}/* ${DESTDIR}${PREFIX}/${WORDPRESS_DIR}
-	${FIND} ${DESTDIR}${PREFIX}/${WORDPRESS_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${DESTDIR}${PREFIX}/${WORDPRESS_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${PREFIX}/share/doc/wordpress/
-	${INSTALL_DATA} ${WRKSRC}/license.txt ${DESTDIR}${PREFIX}/share/doc/wordpress/
-	${INSTALL_DATA} ${WRKSRC}/wp-config-sample.php ${DESTDIR}${PREFIX}/share/examples/wordpress/
+	cd ${WRKSRC} && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/wordpress
+	${FIND} ${DESTDIR}${PREFIX}/share/wordpress -type d \
+		-exec ${CHMOD} ${PKGDIRMODE} "{}" \;
+	${FIND} ${DESTDIR}${PREFIX}/share/wordpress -type f \
+		-exec ${CHMOD} ${SHAREMODE} "{}" \;
+	${INSTALL_DATA} ${WRKSRC}/readme.html \
+		${DESTDIR}${PREFIX}/share/doc/wordpress
+	${INSTALL_DATA} ${WRKSRC}/license.txt \
+		${DESTDIR}${PREFIX}/share/doc/wordpress
+	${INSTALL_DATA} ${WRKSRC}/wp-config-sample.php \
+		${DESTDIR}${PREFIX}/share/examples/wordpress
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"
