@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3080 2008/10/26 20:29:19 bsadewitz Exp $
+# $Id: Makefile,v 1.3081 2008/10/29 20:39:18 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -194,6 +194,7 @@ SUBDIR+=	clisp-current
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
 SUBDIR+=	coldfire
+SUBDIR+=	codeblocks
 SUBDIR+=	com_err
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
