@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/29 22:48:00 yazzy Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/29 22:49:17 yazzy Exp $
 #
 
 DISTNAME=       eina-0.9.0.050
@@ -16,7 +16,7 @@ USE_LIBTOOL=    yes
 USE_TOOLS=      gmake pkg-config automake autoconf autoheader aclocal
 
 pre-configure:
-        cd ${WRKSRC} && ${SH} autogen.sh
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../wip/eina/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
