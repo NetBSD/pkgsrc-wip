@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/29 22:28:22 yazzy Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/29 22:40:56 yazzy Exp $
 #
 
 DISTNAME=	esmart-0.9.0.050
@@ -13,9 +13,12 @@ COMMENT=	Collection of evas smart objects
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	gmake pkg-config automake autoconf
+USE_TOOLS=	gmake pkg-config automake autoconf autoheader aclocal
 
 CONFIGURE_ARGS=		--with-edje-cc=${PREFIX}/bin/edje_cc
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} autogen.sh	
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/eina/buildlink3.mk"
