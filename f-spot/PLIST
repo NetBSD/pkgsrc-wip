@@ -1,18 +1,22 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/15 13:32:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/29 10:07:08 thomasklausner Exp $
 bin/f-spot
 bin/f-spot-import
 bin/f-spot-sqlite-upgrade
 lib/f-spot/Cms.dll
 lib/f-spot/Cms.dll.config
 lib/f-spot/FSpot.Core.dll
+lib/f-spot/FSpot.JobScheduler.dll
 lib/f-spot/FSpot.Query.dll
 lib/f-spot/FSpot.Utils.dll
+lib/f-spot/FSpot.Utils.dll.config
+lib/f-spot/FSpot.Widgets.dll
 lib/f-spot/FlickrNet.dll
 lib/f-spot/Mono.Addins.Gui.dll
 lib/f-spot/Mono.Addins.Setup.dll
 lib/f-spot/Mono.Addins.dll
 lib/f-spot/Mono.Addins.dll.config
 lib/f-spot/Mono.Google.dll
+lib/f-spot/Mono.Tabblo.dll
 lib/f-spot/NDesk.Glitz.dll
 lib/f-spot/SemWeb.dll
 lib/f-spot/SmugMugNet.dll
@@ -22,23 +26,38 @@ lib/f-spot/Tao.OpenGl.Glu.dll
 lib/f-spot/Tao.OpenGl.Glu.dll.config
 lib/f-spot/Tao.OpenGl.dll
 lib/f-spot/Tao.OpenGl.dll.config
+lib/f-spot/extensions/BeagleService.dll
 lib/f-spot/extensions/CDExport.dll
+lib/f-spot/extensions/ChangePhotoPath.dll
+lib/f-spot/extensions/DBusService.dll
 lib/f-spot/extensions/DefaultExporters.addin.xml
+lib/f-spot/extensions/DevelopInUFRaw.dll
+lib/f-spot/extensions/FacebookExport.dll
 lib/f-spot/extensions/FlickrExport.dll
 lib/f-spot/extensions/FolderExport.dll
 lib/f-spot/extensions/GalleryExport.dll
+lib/f-spot/extensions/HashJob.dll
+lib/f-spot/extensions/MergeDb.dll
 lib/f-spot/extensions/PicasaWebExport.dll
+lib/f-spot/extensions/RawPlusJpeg.dll
 lib/f-spot/extensions/SmugMugExport.dll
+lib/f-spot/extensions/TabbloExport.dll
+lib/f-spot/extensions/ZipExport.dll
 lib/f-spot/f-spot.exe
 lib/f-spot/f-spot.exe.config
 lib/f-spot/f-spot.global.addins
+lib/f-spot/gio-sharp.dll
+lib/f-spot/gio-sharp.dll.config
 lib/f-spot/gnome-keyring-sharp.dll
 lib/f-spot/libfspot.la
 lib/f-spot/libfspoteog.la
 lib/f-spot/libfspotjpegtran.la
 lib/f-spot/libgphoto2-sharp.dll
 lib/f-spot/libgphoto2-sharp.dll.config
+lib/gio-sharp-unstable/gio-sharp.dll
+lib/gio-sharp-unstable/gio-sharp.dll.config
 lib/pkgconfig/f-spot.pc
+lib/pkgconfig/gio-sharp-unstable.pc
 libexec/gnome-screensaver/f-spot-screensaver
 share/applications/f-spot-import.desktop
 share/applications/f-spot-view.desktop
@@ -58,6 +77,7 @@ share/f-spot/icons/hicolor/16x16/actions/rating-rated-gray.png
 share/f-spot/icons/hicolor/16x16/actions/rating-rated.png
 share/f-spot/icons/hicolor/16x16/actions/red-eye-remove.png
 share/f-spot/icons/hicolor/16x16/actions/tag-new.png
+share/f-spot/icons/hicolor/16x16/actions/tag.png
 share/f-spot/icons/hicolor/16x16/actions/view-far.png
 share/f-spot/icons/hicolor/16x16/actions/view-fullscreen.png
 share/f-spot/icons/hicolor/16x16/actions/view-near.png
@@ -82,6 +102,7 @@ share/f-spot/icons/hicolor/22x22/actions/object-rotate-left.png
 share/f-spot/icons/hicolor/22x22/actions/object-rotate-right.png
 share/f-spot/icons/hicolor/22x22/actions/red-eye-remove.png
 share/f-spot/icons/hicolor/22x22/actions/tag-new.png
+share/f-spot/icons/hicolor/22x22/actions/tag.png
 share/f-spot/icons/hicolor/22x22/actions/view-far.png
 share/f-spot/icons/hicolor/22x22/actions/view-fullscreen.png
 share/f-spot/icons/hicolor/22x22/actions/view-near.png
@@ -213,6 +234,17 @@ share/gnome/help/f-spot/pt_BR/figures/f-spot-sepia.png
 share/gnome/help/f-spot/pt_BR/figures/f-spot-slideshow.png
 share/gnome/help/f-spot/pt_BR/figures/f-spot-soft-focus.png
 share/gnome/help/f-spot/pt_BR/figures/f-spot-straighten.png
+share/gnome/help/f-spot/ru/f-spot.xml
+share/gnome/help/f-spot/ru/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/ru/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/ru/figures/f-spot-crop.png
+share/gnome/help/f-spot/ru/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/ru/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/ru/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/ru/figures/f-spot-sepia.png
+share/gnome/help/f-spot/ru/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/ru/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/ru/figures/f-spot-straighten.png
 share/gnome/help/f-spot/sv/f-spot.xml
 share/gnome/help/f-spot/sv/figures/f-spot-adjust-colors.png
 share/gnome/help/f-spot/sv/figures/f-spot-autocolor.png
@@ -268,9 +300,10 @@ share/locale/ru/LC_MESSAGES/f-spot.mo
 share/locale/rw/LC_MESSAGES/f-spot.mo
 share/locale/sk/LC_MESSAGES/f-spot.mo
 share/locale/sr/LC_MESSAGES/f-spot.mo
-share/locale/sr@Latn/LC_MESSAGES/f-spot.mo
+share/locale/sr@latin/LC_MESSAGES/f-spot.mo
 share/locale/sv/LC_MESSAGES/f-spot.mo
 share/locale/th/LC_MESSAGES/f-spot.mo
+share/locale/uk/LC_MESSAGES/f-spot.mo
 share/locale/vi/LC_MESSAGES/f-spot.mo
 share/locale/zh_CN/LC_MESSAGES/f-spot.mo
 share/locale/zh_HK/LC_MESSAGES/f-spot.mo
@@ -282,6 +315,7 @@ share/omf/f-spot/f-spot-fr.omf
 share/omf/f-spot/f-spot-it.omf
 share/omf/f-spot/f-spot-oc.omf
 share/omf/f-spot/f-spot-pt_BR.omf
+share/omf/f-spot/f-spot-ru.omf
 share/omf/f-spot/f-spot-sv.omf
 @dirrm share/omf/f-spot
 @comment in rarian: @dirrm share/omf
@@ -293,6 +327,8 @@ share/omf/f-spot/f-spot-sv.omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/f-spot/sv/figures
 @dirrm share/gnome/help/f-spot/sv
+@dirrm share/gnome/help/f-spot/ru/figures
+@dirrm share/gnome/help/f-spot/ru
 @dirrm share/gnome/help/f-spot/pt_BR/figures
 @dirrm share/gnome/help/f-spot/pt_BR
 @dirrm share/gnome/help/f-spot/oc/figures
@@ -347,5 +383,6 @@ share/omf/f-spot/f-spot-sv.omf
 @dirrm share/applications/screensavers
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/gnome-screensaver
+@dirrm lib/gio-sharp-unstable
 @dirrm lib/f-spot/extensions
 @dirrm lib/f-spot
