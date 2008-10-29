@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/03/28 13:30:55 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2008/10/29 10:49:20 thomasklausner Exp $
 
-SHA1 (muine-0.5.2.tar.gz) = a8c3a5c7c97ae9165278ec0698fd16ae5c9c919c
-RMD160 (muine-0.5.2.tar.gz) = 1cc1cddfe98fe5f655a2c0ca51a3a450dd2ed465
-Size (muine-0.5.2.tar.gz) = 576684 bytes
-SHA1 (patch-aa) = 76ba0b012580abcf03565db2a672ce6307a226ee
+SHA1 (muine-0.8.10.tar.gz) = 736829a714a790bad1e974f7dd33dd614b29b903
+RMD160 (muine-0.8.10.tar.gz) = 703015e98d63b283e6d6cb4b551137daa1028edf
+Size (muine-0.8.10.tar.gz) = 781734 bytes
+SHA1 (patch-aa) = d91edf62cd5916feea8de659ee935709db315d4a
