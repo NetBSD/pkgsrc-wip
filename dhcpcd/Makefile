@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/10/03 12:49:33 rsmarples Exp $
+# $NetBSD: Makefile,v 1.19 2008/10/29 13:01:27 rsmarples Exp $
 #
 
-DISTNAME=		dhcpcd-4.0.2
+DISTNAME=		dhcpcd-4.0.3
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2

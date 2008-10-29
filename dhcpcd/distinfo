@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2008/10/03 12:49:33 rsmarples Exp $
+$NetBSD: distinfo,v 1.18 2008/10/29 13:01:27 rsmarples Exp $
 
-SHA1 (dhcpcd-4.0.2.tar.bz2) = 3224bb58fd82efb2f86e6a1f76dce6bff20cdc1d
-RMD160 (dhcpcd-4.0.2.tar.bz2) = e2bf8fce66404e70f03f331de2fc83503bdbf077
-Size (dhcpcd-4.0.2.tar.bz2) = 51625 bytes
+SHA1 (dhcpcd-4.0.3.tar.bz2) = 9fa8b562be73c712d0a44f2179214f93ae9705d9
+RMD160 (dhcpcd-4.0.3.tar.bz2) = bd44e76c4aadbff3ea24bc0ee292fee77ff75a1c
+Size (dhcpcd-4.0.3.tar.bz2) = 51943 bytes
