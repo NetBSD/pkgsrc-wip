@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/25 22:19:19 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/29 11:14:47 thomasklausner Exp $
 bin/valac
 include/vala-1.0/ccode/valaccodeassignment.h
 include/vala-1.0/ccode/valaccodebinaryexpression.h
@@ -51,6 +51,7 @@ include/vala-1.0/ccode/valaccodewhilestatement.h
 include/vala-1.0/ccode/valaccodewriter.h
 include/vala-1.0/gee/arraylist.h
 include/vala-1.0/gee/collection.h
+include/vala-1.0/gee/collectionobject.h
 include/vala-1.0/gee/hashmap.h
 include/vala-1.0/gee/hashset.h
 include/vala-1.0/gee/iterable.h
@@ -84,7 +85,7 @@ include/vala-1.0/gobject/valaccodemethodbinding.h
 include/vala-1.0/gobject/valaccodeobjecttypesymbolbinding.h
 include/vala-1.0/gobject/valaccodetypesymbolbinding.h
 include/vala-1.0/gobject/valaclassregisterfunction.h
-include/vala-1.0/gobject/valagidlwriter.h
+include/vala-1.0/gobject/valagirwriter.h
 include/vala-1.0/gobject/valainterfaceregisterfunction.h
 include/vala-1.0/gobject/valatyperegisterfunction.h
 include/vala-1.0/vala/vala.h
@@ -168,7 +169,6 @@ include/vala-1.0/vala/valamethod.h
 include/vala-1.0/vala/valamethodtype.h
 include/vala-1.0/vala/valanamedargument.h
 include/vala-1.0/vala/valanamespace.h
-include/vala-1.0/vala/valanamespacereference.h
 include/vala-1.0/vala/valanullchecker.h
 include/vala-1.0/vala/valanullliteral.h
 include/vala-1.0/vala/valanulltype.h
@@ -217,6 +217,7 @@ include/vala-1.0/vala/valatypesymbol.h
 include/vala-1.0/vala/valaunaryexpression.h
 include/vala-1.0/vala/valaunresolvedsymbol.h
 include/vala-1.0/vala/valaunresolvedtype.h
+include/vala-1.0/vala/valausingdirective.h
 include/vala-1.0/vala/valavaluetype.h
 include/vala-1.0/vala/valavoidtype.h
 include/vala-1.0/vala/valawhilestatement.h
@@ -257,12 +258,14 @@ share/vala/vapi/gio-unix-2.0.deps
 share/vala/vapi/gio-unix-2.0.vapi
 share/vala/vapi/glib-2.0.vapi
 share/vala/vapi/gmodule-2.0.vapi
+share/vala/vapi/gnet-2.0.vapi
 share/vala/vapi/gnome-desktop-2.0.deps
 share/vala/vapi/gnome-desktop-2.0.vapi
 share/vala/vapi/gnome-keyring-1.vapi
 share/vala/vapi/gnome-vfs-2.0.vapi
 share/vala/vapi/goocanvas.deps
 share/vala/vapi/goocanvas.vapi
+share/vala/vapi/gsl.vapi
 share/vala/vapi/gstreamer-0.10.deps
 share/vala/vapi/gstreamer-0.10.vapi
 share/vala/vapi/gstreamer-audio-0.10.deps
@@ -352,6 +355,7 @@ share/vala/vapi/sdl.vapi
 share/vala/vapi/sqlite3.vapi
 share/vala/vapi/taglib_c.vapi
 share/vala/vapi/tiff.vapi
+share/vala/vapi/tracker-indexer-module-1.0.vapi
 share/vala/vapi/unique-1.0.deps
 share/vala/vapi/unique-1.0.vapi
 share/vala/vapi/vala-1.0.vapi
