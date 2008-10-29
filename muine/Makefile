@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/29 10:49:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/29 13:46:54 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.8.10
@@ -10,6 +10,7 @@ HOMEPAGE=	http://muine-player.org/wiki/Main_Page
 COMMENT=	Simple and intuitive music player for GNOME
 
 GNU_CONFIGURE=		YES
+USE_DIRS=		xdg-1.4
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool pkg-config
@@ -28,6 +29,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
