@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.8 2008/10/29 20:58:27 asau Exp $
+
+1. sys/wait.h isn't detected.
+2. Type error.
+
+--- src/c/unixsys.d.orig	2008-10-29 22:52:31.000000000 +0300
++++ src/c/unixsys.d	2008-10-29 23:13:25.000000000 +0300
+@@ -306,7 +304,7 @@
+ 	if (child_pid == 0) {
+ 		/* Child */
+ 		int j;
+-		void **argv_ptr = (void **)argv->vector.self.t;
++		char **argv_ptr = (char **)argv->vector.self.t;
+ 		close(0);
+ 		dup(child_stdin);
+ 		if (parent_write) close(parent_write);
