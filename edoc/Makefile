@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/21 04:08:22 bjcosta Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/30 02:32:33 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -12,6 +12,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		brendon@christian.net
 HOMEPAGE=		http://edoc.sourceforge.net/index.html
 COMMENT=		Compile time C++ exception analysis/documentation tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
