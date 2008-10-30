@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/10/30 20:28:03 yazzy Exp $
+$NetBSD: distinfo,v 1.7 2008/10/30 21:01:57 yazzy Exp $
 
 SHA1 (esmart-0.9.0.050.tar.bz2) = 8715c2d88f679fdc09c95d18f62e4f676b07bafc
 RMD160 (esmart-0.9.0.050.tar.bz2) = 13811622a75496215064141b2b25d2928f389506
 Size (esmart-0.9.0.050.tar.bz2) = 1116597 bytes
-SHA1 (patch-aa) = a8acd41d9141b931f7d5b92ff30c8b1cd6d8896d
