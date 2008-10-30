@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/10/29 22:58:51 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2008/10/30 21:19:22 yazzy Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ESMART_BUILDLINK3_MK:=	${ESMART_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	esmart
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}esmart
 
 .if ${ESMART_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.esmart+=	esmart>=0.9.0.042nb1
+BUILDLINK_API_DEPENDS.esmart+=	esmart>=0.9.0.42nb2
 BUILDLINK_PKGSRCDIR.esmart?=	../../wip/esmart
 .endif	# ESMART_BUILDLINK3_MK
 
