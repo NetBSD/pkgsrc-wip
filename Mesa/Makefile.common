@@ -1,0 +1,47 @@
+# $NetBSD: Makefile.common,v 1.10 2008/10/30 21:10:05 bsadewitz Exp $
+#
+# used by wip/MesaLib/Makefile
+# used by wip/glu/Makefile
+# used by wip/glut/Makefile
+# used by wip/glw/Makefile
+# used by wip/glx-utils/Makefile
+
+
+DISTFILES+=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
+DISTFILES+=	MesaGLUT-${MESA_VERSION}${EXTRACT_SUFX}
+DISTFILES+=	MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
+
+.include "../../wip/Mesa/Makefile.version"
+
+CATEGORIES=	wip
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+DIST_SUBDIR=	Mesa-${MESA_VERSION}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	bjs@NetBSD.org
+HOMEPAGE=	http://mesa3d.sourceforge.net/
+
+PATCHDIR=	${PKGSRCDIR}/wip/MesaLib/patches
+DISTINFO_FILE=	${PKGSRCDIR}/wip/MesaLib/distinfo
+
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake makedepend pkg-config
+USE_LIBTOOL?=	yes
+USE_LANGUAGES=	c c++
+
+WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
+BUILD_TARGET?=	default
+
+.if "${MESA_HEADERS}" != ""
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
+.  for hdr in ${${MESA_HEADERS}:L}
+		${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr}\
+			${DESTDIR}${PREFIX}/include/GL/${hdr}
+.  endfor
+.endif
+
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
