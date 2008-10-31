@@ -1,0 +1,5 @@
+dot.conf is an easy to use and powerful configuration file parser
+library. The configuration files created for dot.conf look very
+similar to those used by the Apache Webserver. And even these
+"container directives" known from httpd.conf can easily be implemented
+in the exact same manner as for Apache modules.
