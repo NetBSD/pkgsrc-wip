@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:27 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/31 12:52:53 thomasklausner Exp $
 bin/audacity
 man/man1/audacity.1
 share/applications/audacity.desktop
@@ -60,8 +60,7 @@ share/locale/uk/LC_MESSAGES/audacity.mo
 share/locale/zh/LC_MESSAGES/audacity.mo
 share/locale/zh_TW/LC_MESSAGES/audacity.mo
 share/mime/packages/audacity.xml
-@dirrm share/mime/packages
-@dirrm share/mime
+@comment in shared-mime-info: @dirrm share/mime/packages
 @dirrm share/doc/audacity
 @dirrm share/audacity/plug-ins
 @dirrm share/audacity/nyquist
