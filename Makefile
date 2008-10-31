@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3081 2008/10/29 20:39:18 ondratu Exp $
+# $Id: Makefile,v 1.3082 2008/10/31 17:52:10 koifren Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1363,7 +1363,6 @@ SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-podlators
 SUBDIR+=	p5-qt3
-SUBDIR+=	packman
 SUBDIR+=	paexec
 SUBDIR+=	pal
 SUBDIR+=	pam-pkcs11
