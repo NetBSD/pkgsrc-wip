@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
+$NetBSD: patch-af,v 1.2 2008/10/31 22:12:04 gschwarz Exp $
 
 --- parse.h.orig	2006-10-21 22:35:31.000000000 +0200
 +++ parse.h	2006-10-21 22:35:58.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.1.1.1 2006/10/27 21:39:28 gschwarz Exp $
  */
  
  /* Dummy password, if nopasswd is specified */
-+#ifndef __APPLE__
++#if !defined(__APPLE__) && !defined(__NetBSD__)
  extern char *nopasswd_str;
 +#endif
  
