@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3082 2008/10/31 17:52:10 koifren Exp $
+# $Id: Makefile,v 1.3083 2008/10/31 20:42:17 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -204,6 +204,7 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	courierpassd
 SUBDIR+=	cpdup
+SUBDIR+=	cpm
 SUBDIR+=	cpphs
 SUBDIR+=	cream
 SUBDIR+=	crfpp
@@ -266,6 +267,7 @@ SUBDIR+=	dnrd
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
+SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot
 SUBDIR+=	dpic
