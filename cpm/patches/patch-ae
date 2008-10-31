@@ -1,0 +1,37 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/10/31 20:41:22 shattered Exp $
+
+--- Makefile.in.orig	2008-10-31 19:17:17.000000000 +0000
++++ Makefile.in
+@@ -265,7 +265,7 @@ check_gettext:
+ 		fi
+ 	@echo -n "Testing [1;37mgettext 2       [0m"; \
+ 		rm -f check-gettext.log; \
+-		$(GPG_ENV) LANG=de_DE ./cpm --version | tail --lines=1 > check-gettext.log 2>&1 || exit 1; \
++		$(GPG_ENV) LANG=de_DE ./cpm --version | tail -1 > check-gettext.log 2>&1 || exit 1; \
+ 		diff --brief check-gettext.log tests/gettext-result.txt > /dev/null; \
+ 		if [ $${?} -ne 0 ]; then \
+ 			echo -e "$(ERROR)"; \
+@@ -341,8 +341,8 @@ gettext: gettext_compile
+ .PHONY: gettext_compile
+ gettext_compile: gettext_translate
+ 	cd po; \
+-		tail --lines=+18 de_DE.po > current.txt; \
+-		tail --lines=+18 de_DE_new.po > new.txt; \
++		tail +18 de_DE.po > current.txt; \
++		tail +18 de_DE_new.po > new.txt; \
+ 		diff -u current.txt new.txt
+ 	cd po; msgfmt --check --statistics --strict de_DE.po --output=de_DE.mo
+ 	cd po; \
+@@ -374,9 +374,9 @@ gettext_update:
+ # install everything
+ .PHONY: install
+ install: cpm gettext
+-	$(INSTALL) -D --mode=4755 --owner=root --group=root @PACKAGE_NAME@ $(DESTDIR)$(bindir)/@PACKAGE_NAME@
+-	$(INSTALL) -D --mode=644 ./po/de_DE.mo $(DESTDIR)$(localedir)/de/LC_MESSAGES/@PACKAGE_NAME@.mo
+-	$(INSTALL) -D --mode=644 ./docs/cpm.1.gz $(DESTDIR)$(mandir)/man1/cpm.1.gz
++	$(INSTALL) -m 4755 -o 0 -g 0 @PACKAGE_NAME@ $(DESTDIR)$(bindir)/@PACKAGE_NAME@
++	$(INSTALL) -m 644 ./po/de_DE.mo $(DESTDIR)$(localedir)/de/LC_MESSAGES/@PACKAGE_NAME@.mo
++	$(INSTALL) -m 644 ./docs/cpm.1.gz $(DESTDIR)$(mandir)/man1/cpm.1.gz
+ 
+ 
+ # ##############################################################################

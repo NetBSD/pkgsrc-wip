@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/10/31 20:41:22 shattered Exp $
+
+--- interface_gui.c.orig	2006-03-26 14:59:24.000000000 +0000
++++ interface_gui.c
+@@ -1985,7 +1985,7 @@ RETSIGTYPE resizehandler(int signum)
+ 
+     if (signum == SIGWINCH)
+       {   /* we must resize our windows */
+-        ch = CTRL('L');
++        ch = '\014';
+         ioctl(0, TIOCSTI, &ch);
+       }
+   }
