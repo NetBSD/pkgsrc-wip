@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/11/01 07:37:45 gschwarz Exp $
+
+--- tftpd/recvfrom.c.orig	2008-11-01 08:08:38.000000000 +0100
++++ tftpd/recvfrom.c	2008-11-01 08:10:55.000000000 +0100
+@@ -150,6 +150,10 @@
+         setsockopt(s, IPPROTO_IP, IP_PKTINFO, &on, sizeof(on));
+ #endif
+ #ifdef HAVE_IPV6
++#if defined(HAVE_STRUCT_IN6_PKTINFO) && !defined(IPV6_RECVPKTINFO)
++/* This appears to be needed e.g. on Darwin (Mac OS X). */
++#  define IPV6_RECVPKTINFO IPV6_PKTINFO
++#endif
+ #ifdef IPV6_RECVPKTINFO
+     if (from->sa_family == AF_INET6)
+         setsockopt(s, IPPROTO_IPV6, IPV6_RECVPKTINFO, &on, sizeof(on));
