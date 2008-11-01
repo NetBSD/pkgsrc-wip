@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/11/01 17:30:19 cheusov Exp $
+
+DISTNAME=	pkg_conflicts-0.1.0
+CATEGORIES=	pkgtools
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+
+MAINTAINER=	cheusov@tut.by
+HOMEPAGE=	# empty http://www.mova.org/~cheusov/pub/pkg_conflicts/
+COMMENT=	Tools for automatic CONFLICTS detection
+
+DEPENDS+=	runawk>=0.14.3:../../wip/runawk
+DEPENDS+=	pkg_online-client>=0.6.0:../../wip/pkg_online-client
+DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
+
+USE_LANGUAGES=		#empty
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_CHECKSUM=		yes
+NO_BUILD=		yes
+
+INSTALLATION_DIRS+=	bin
+
+do-install:
+	${INSTALL_SCRIPT} ${.CURDIR}/files/pkg_* ${DESTDIR}${PREFIX}/bin/
+
+.include "../../mk/bsd.pkg.mk"

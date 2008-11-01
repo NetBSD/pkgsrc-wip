@@ -1,0 +1,205 @@
+#!/bin/sh
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+usage (){
+    cat 1>&2 <<EOF
+usage: pkg_all_conflicts [OPTIONS] pkg_src_summary.txt
+OPTIONS:
+  -h|--help       display this screen
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+if test $# -eq 0; then
+    usage
+    exit 1
+fi
+
+tmpdir=/tmp/pkg_conflicts.$$
+mkdir -m 700 "$tmpdir"
+trap "rm -rf $tmpdir" 0 1 2 3 15
+
+conflict_plist_fn=$tmpdir/plist
+pkg2conflict_fn=$tmpdir/pkg2conflict
+conflicts_fn=$tmpdir/conflicts
+
+export LC_ALL=C
+
+# Collecting filenames present in at least two packages
+# (hashes may eat tons of memory, this is why sort + uniq is used)
+sed -n 's,^PLIST=,,p' "$@" |
+grep -v '[${}]' |
+sort |
+uniq -d > "$conflict_plist_fn"
+
+# packages having common files
+real_conflicts (){
+    runawk -v conflict_plist_fn="$conflict_plist_fn" -e '
+#use "xgetline.awk"
+
+BEGIN {
+   while (xgetline0(conflict_plist_fn)){
+      cfn [$0] = 1
+   }
+}
+/^PKGPATH=/ {
+   pkgpath = substr($0, 9)
+   next
+}
+/^PKGNAME=/ {
+   pkgbase = substr($0, 9)
+   next
+}
+/^CONFLICTS=/ {
+   conflicts = substr($0, 11)
+   next
+}
+/^PLIST=/ {
+   fn = substr($0, 7)
+   if (fn in cfn){
+      fns [fn] = 1
+      analyse = 1
+   }
+}
+
+NF == 0 {
+   if (analyse){
+      sub(/-[^-]+$/, "", pkgbase)
+
+      for (fn in fns){
+         c [fn] = c [fn] " " pkgbase
+      }
+   }
+
+   delete fns
+   pkgpath = pkgname = conflicts = ""
+}
+
+END {
+   for (fn in c){
+      cnt = split(c [fn], arr)
+      for (i1=1; i1 <= cnt; ++i1){
+         for (i2=1; i2 <= cnt; ++i2){
+            if (i1 == i2) continue
+            p1 = arr [i1]
+            p2 = arr [i2]
+            if (p1 == p2) continue
+
+            print p1, p2, fn
+         }
+      }
+   }
+}
+' "$@" > $pkg2conflict_fn
+    awk '{print $1, $2}' $pkg2conflict_fn | sort -u
+}
+
+#real_conflicts "$@"
+# packages marked as conflicting
+makefile_conflicts (){
+    awk '
+/^PKGNAME=/ {
+   pkgbase = substr($0, 9)
+   sub(/-[^-]+$/, "", pkgbase)
+   next
+}
+/^CONFLICTS=/ {
+   $0 = substr($0, 11)
+   gsub(/\[[^\[\] ]+\]/, "")        # [0-9] like things removed first
+   gsub(/[-><=][^- ]+( |$)/, " ")   # version part removed
+
+   conflicts = $0
+   next
+}
+NF == 0 {
+   cnt = split(conflicts, arr)
+   for (i=1; i <= cnt; ++i){
+      print pkgbase, arr [i]
+   }
+}
+' "$@" | sort -u
+}
+
+# check conflicts
+check_conflicts (){
+    {
+	makefile_conflicts "$@"
+	real_conflicts "$@" | awk '{print $0 "\n" $0}'
+    } | sort | uniq -c | sort -k2,2 |
+    awk '
+    prev != $2 {
+        header_msg = sprintf(" -------- %s --------", $2)
+        printed = 0
+        prev = $2
+    }
+    function print_header(){
+        if (!printed) print header_msg
+        printed = 1
+    }
+#    $1 == 1 { print_header(); print "Rem?:  ", $3 }
+    $1 == 2 { print_header(); print "Missed:", $3 }
+#    $1 == 3 { print_header(); print "OK:    ", $3 }
+    '
+}
+
+# show at least one file common file
+enrich_conflicts_info (){
+    awk '
+FILENAME != "-" {
+   fn [$1, $2] = $3
+   next
+}
+$1 ~ /^---/ {
+   p1 = $2
+}
+$1 == "Missed:" {
+   $0 = $0 " ( " fn [p1, $2] " )"
+}
+{ print $0 }
+' $pkg2conflict_fn -
+}
+
+# main
+check_conflicts "$@" > $conflicts_fn
+enrich_conflicts_info < $conflicts_fn
+
+# for debugging
+#makefile_conflicts "$@"
+#real_conflicts "$@"

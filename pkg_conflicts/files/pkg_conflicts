@@ -1,0 +1,124 @@
+#!/bin/sh
+#-*-mode:  sh -*-
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+BMAKE=${BMAKE:-/usr/bin/make}
+PKGSRCDIR=${PKGSRCDIR:-/usr/pkgsrc}
+
+usage (){
+    cat 1>&2 <<EOF
+usage: pkg_conflicts [OPTIONS] pkgpath1 [pkgpath2...]
+OPTIONS:
+ -h|--help         display this help
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
+	    exit 1;;
+	*)
+	    break;;
+    esac
+    shift
+done
+
+if test $# -eq 0; then
+    usage
+    exit 1
+fi
+
+export LC_ALL=C
+
+# temp dir
+tmpdir=/tmp/pkg_conflicts.$$
+mkdir -m 700 "$tmpdir"
+trap "rm -rf $tmpdir" 0 1 2 3 15
+
+# real conflicts, found by PKG_ONLINE server
+real_conflicts (){
+    # PLIST
+    plist_fn=$tmpdir/plist
+    $BMAKE plist PLIST=$plist_fn
+
+    # PKGBASE
+    pkgbase="$($BMAKE show-var VARNAME=PKGNAME | sed 's,-[^-]*$,,')"
+
+    while read f; do
+	if echo "$f" | grep ^@ > /dev/null; then
+	    continue
+	fi
+
+	if pkg_online_find -q -r -3 PLIST:exact:"$f"; then
+	    break
+	fi
+    done < $plist_fn |
+    pkg_grep_summary PKGNAME "fvalue !~ /^$pkgbase-[^-]+\$/" |
+    awk '/^PKGNAME=/ {sub(/-[^-]+$/, ""); print substr($0, 9)}' |
+    sort -u
+}
+
+# makefile conflicts
+makefile_conflicts (){
+    $BMAKE show-var VARNAME=CONFLICTS |
+    awk '
+{
+   gsub(/\[[^\[\] ]+\]/, "")        # [0-9] like things removed first
+   gsub(/[-><=][^- ]+( |$)/, " ")   # version part removed
+   gsub(/  +/, " ")
+   sub(/^ +/, "")
+   sub(/ +$/, "")
+   gsub(/ /, "\n")
+   print
+}
+' | sort -u
+}
+
+check_conflicts (){
+    {
+	makefile_conflicts
+	real_conflicts | awk '{print $0 "\n" $0}'
+    } | sort | uniq -c |
+    awk '
+    $1 == 1 && NF > 1 { print "Rem?:  ", $2 }
+    $1 == 2 && NF > 1 { print "Missed:", $2 }
+    $1 == 3 && NF > 1 { print "OK:    ", $2 }
+    '
+}
+
+for i in "$@"; do
+    printf " -------- %s --------\n" "$i"
+#    cd $PKGSRCDIR/$i && makefile_conflicts
+#    echo ===================
+#    cd $PKGSRCDIR/$i && real_conflicts
+    cd $PKGSRCDIR/$i && check_conflicts
+done
