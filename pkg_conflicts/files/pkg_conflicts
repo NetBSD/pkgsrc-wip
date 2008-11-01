@@ -79,7 +79,7 @@ real_conflicts (){
 	fi
 
 	if pkg_online_find -q -r -3 PLIST:exact:"$f"; then
-	    break
+	    :
 	fi
     done < $plist_fn |
     pkg_grep_summary PKGNAME "fvalue !~ /^$pkgbase-[^-]+\$/" |
@@ -103,6 +103,7 @@ makefile_conflicts (){
 ' | sort -u
 }
 
+# compare real_conflicts and makefile_conflicts
 check_conflicts (){
     {
 	makefile_conflicts
@@ -120,5 +121,6 @@ for i in "$@"; do
 #    cd $PKGSRCDIR/$i && makefile_conflicts
 #    echo ===================
 #    cd $PKGSRCDIR/$i && real_conflicts
+
     cd $PKGSRCDIR/$i && check_conflicts
 done
