@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: options.mk,v 1.5 2008/11/01 14:29:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
@@ -67,6 +67,9 @@ CONFIGURE_ARGS+=	--disable-expat
 PKG_OPTIONS+=		glib
 .  include "../../x11/gtk2/buildlink3.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.gtk
+.if !empty(PKG_OPTIONS:Mdbus)
+PLIST_SRC+=		${PKGDIR}/PLIST.dbusgtk
+.endif
 .else
 CONFIGURE_ARGS+=	--disable-gtk
 .endif
@@ -87,7 +90,6 @@ CONFIGURE_ARGS+=	--disable-glib
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
 PYTHON_VERSIONS_ACCEPTED=	25 24
-PLIST_SRC+=		${PKGDIR}/PLIST.python
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 .else
 CONFIGURE_ARGS+=	--disable-python
@@ -108,6 +110,8 @@ CONFIGURE_ARGS+=	--disable-gdbm
 .if !empty(PKG_OPTIONS:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.dbus
+CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
+			${PREFIX}/etc/dbus-1/system.d/avahi-dbus.conf
 .else
 CONFIGURE_ARGS+=	--disable-dbus
 .endif

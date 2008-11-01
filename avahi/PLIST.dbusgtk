@@ -1,0 +1,12 @@
+@comment
+bin/bssh
+bin/bvnc
+include/avahi-ui/avahi-ui.h
+lib/libavahi-ui.la
+lib/pkgconfig/avahi-ui.pc
+man/man1/bssh.1
+man/man1/bvnc.1
+share/applications/bssh.desktop
+share/applications/bvnc.desktop
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm include/avahi-ui

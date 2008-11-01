@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST.pygdbm,v 1.1 2007/10/21 16:45:23 adrian_p Exp $
+@comment $NetBSD: PLIST.pygdbm,v 1.2 2008/11/01 14:29:34 thomasklausner Exp $
 ${PYSITELIB}/avahi/ServiceTypeDatabase.py
 share/avahi/service-types.db
+@unexec ${RMDIR} %D/${PYSITELIB}/avahi 2>/dev/null || ${TRUE}

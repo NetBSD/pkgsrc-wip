@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/10/21 16:45:23 adrian_p Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/01 14:29:33 thomasklausner Exp $
 
 DISTNAME=		avahi-0.6.19
 CATEGORIES=		net
@@ -8,15 +8,27 @@ MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://avahi.org/
 COMMENT=		Facilitate service discovery on a local network
 
-USE_TOOLS+=		pkg-config gmake
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE+=	avahi-core.pc.in
 GNU_CONFIGURE=		YES
+USE_DIRS+=		xdg-1.4
+USE_LIBTOOL=		YES
+USE_PKGINSTALL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		pkg-config gmake
+
+PKGCONFIG_OVERRIDE+=	avahi-client.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-compat-libdns_sd.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-core.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-glib.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-qt3.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-qt4.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui-sharp.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-ui.pc.in
+
 AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
-USE_PKGINSTALL=		YES
 BUILD_DEFS=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
@@ -38,11 +50,6 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dnsconfd.action \
 CONF_FILES+=		${PREFIX}/share/examples/avahi/ssh.service \
 			${PKG_SYSCONFDIR}/services/ssh.service
 
-.if !empty(PKG_OPTIONS:Mdbus)
-CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
-			${PREFIX}/etc/dbus-1/system.d/avahi-dbus.conf
-.endif
-
 CONFIGURE_ARGS+=	--with-distro=netbsd
 CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
@@ -57,10 +64,6 @@ CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
-
-.include "../../textproc/expat/buildlink3.mk"
-.include "../../wip/libdaemon/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
 post-extract:
 	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
@@ -90,4 +93,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/README ${PREFIX}/share/doc/avahi
 	${INSTALL_DATA} ${WRKSRC}/docs/TODO ${PREFIX}/share/doc/avahi
 
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../wip/libdaemon/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

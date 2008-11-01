@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.dbus,v 1.1 2006/09/10 18:29:58 adrian_p Exp $
+@comment $NetBSD: PLIST.dbus,v 1.2 2008/11/01 14:29:34 thomasklausner Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 bin/avahi-publish
@@ -10,8 +10,29 @@ bin/avahi-resolve-host-name
 include/avahi-client/client.h
 include/avahi-client/lookup.h
 include/avahi-client/publish.h
+include/avahi-compat-howl/corby/buffer.h
+include/avahi-compat-howl/corby/channel.h
+include/avahi-compat-howl/corby/corby.h
+include/avahi-compat-howl/corby/message.h
+include/avahi-compat-howl/corby/object.h
+include/avahi-compat-howl/corby/orb.h
+include/avahi-compat-howl/discovery/discovery.h
+include/avahi-compat-howl/discovery/text_record.h
+include/avahi-compat-howl/howl.h
+include/avahi-compat-howl/rendezvous/rendezvous.h
+include/avahi-compat-howl/rendezvous/text_record.h
+include/avahi-compat-howl/salt/address.h
+include/avahi-compat-howl/salt/debug.h
+include/avahi-compat-howl/salt/interface.h
+include/avahi-compat-howl/salt/platform.h
+include/avahi-compat-howl/salt/salt.h
+include/avahi-compat-howl/salt/signal.h
+include/avahi-compat-howl/salt/socket.h
+include/avahi-compat-howl/salt/time.h
 lib/libavahi-client.la
+lib/libhowl.la
 lib/pkgconfig/avahi-client.pc
+lib/pkgconfig/avahi-compat-howl.pc
 man/man1/avahi-browse-domains.1
 man/man1/avahi-browse.1
 man/man1/avahi-publish-address.1
@@ -31,3 +52,8 @@ share/avahi/introspection/ServiceResolver.introspect
 share/avahi/introspection/ServiceTypeBrowser.introspect
 share/examples/avahi/avahi-dbus.conf
 @dirrm include/avahi-client
+@dirrm include/avahi-compat-howl/salt
+@dirrm include/avahi-compat-howl/rendezvous
+@dirrm include/avahi-compat-howl/discovery
+@dirrm include/avahi-compat-howl/corby
+@dirrm include/avahi-compat-howl
