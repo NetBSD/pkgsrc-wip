@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/10/31 19:57:16 gschwarz Exp $
+# $NetBSD: Makefile,v 1.15 2008/11/01 12:22:07 gschwarz Exp $
 
 DISTNAME=	siproxd-0.7.1
 CATEGORIES=	net
@@ -22,6 +22,9 @@ CONF_FILES=	${EGDIR}/siproxd.conf.example ${PKG_SYSCONFDIR}/siproxd.conf \
 
 INSTALLATION_DIRS=	sbin share/examples/siproxd
 
-.include "../../devel/libosip/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
+# needed since siproxd's configure does not check for PTHREAD_LDFLAGS
+
+.include "../../devel/libosip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
