@@ -46,4 +46,8 @@ new tools?
 
     - pkg_op_summary <refresh|intersect|subtract>
 
+    - pkg_get_deps
+    - pkg_summary2binary
+    - pkg_uniq_summary
+
 ANY IDEAS? LET ME KNOW
