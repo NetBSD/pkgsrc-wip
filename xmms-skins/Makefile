@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/26 19:32:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/02 20:21:25 cheusov Exp $
 
 DISTNAME=	xmms-skins-0.10
 CATEGORIES=	meta-pkgs audio
@@ -19,10 +19,6 @@ SKINS=		AdamAmp Chaos CherryBest Cobalt CoolBlue Cracked Eclipse \
 DEPENDS+=	xmms-skin-${skin}-[0-9]*:../../wip/xmms-skin-${skin}
 .endfor
 
-EXTRACT_ONLY=	# empty
-
 META_PACKAGE=	yes
-
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
