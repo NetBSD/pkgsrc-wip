@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3083 2008/10/31 20:42:17 shattered Exp $
+# $Id: Makefile,v 1.3084 2008/11/02 19:44:21 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1868,6 +1868,7 @@ SUBDIR+=	ushare
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
+SUBDIR+=	vagalume
 SUBDIR+=	vala
 SUBDIR+=	vamps
 SUBDIR+=	vche
