@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/04 16:40:23 leot1990 Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/03 21:16:54 leot1990 Exp $
 #
 
 DISTNAME=		gtypist-2.8.1
@@ -9,9 +9,11 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gnu.org/software/gtypist/
 COMMENT=		Universal typing tutor
 
+#LICENSE=		gnu-gpl-v3
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# The *.typ files aren not interpreted. They are normally accessed by
+# The *.typ files are not interpreted. They are normally accessed by
 # starting gtypist with an argument.
 CHECK_INTERPRETER_SKIP+=	share/gtypist/ru.typ
 INFO_FILES=			yes
