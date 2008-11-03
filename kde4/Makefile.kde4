@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde4,v 1.11 2008/10/05 10:13:25 mwdavies Exp $
+# $NetBSD: Makefile.kde4,v 1.12 2008/11/03 11:24:45 mwdavies Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE4-distributed packages (they all share common configure and build
@@ -14,7 +14,7 @@ PKGNAME?=	${DISTNAME:S/-4/4-4/}
 MAINTAINER?=	markd@NetBSD.org
 HOMEPAGE?=	http://www.kde.org/
 
-BUILD_DEPENDS+= automoc4>=0.9.83:../../wip/automoc4
+BUILD_DEPENDS+= automoc4>=0.9.83:../../devel/automoc4
 
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
