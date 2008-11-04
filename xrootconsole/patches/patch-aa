@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/04 23:41:34 gregschenzel Exp $
+
+--- Makefile.orig	2004-02-20 14:53:28.000000000 -0700
++++ Makefile
+@@ -35,5 +35,5 @@
+ EXEC = xrootconsole
+-BINDIR = /usr/local/bin
++BINDIR = $(PREFIX)/bin
+ MANFILE = xrootconsole.1
+-MANDIR = /usr/local/share/man/man1
++MANDIR = $(PREFIX)/man/man1
+ 
+@@ -50,3 +50,3 @@ CPPFLAGS =
+ CFLAGS = -O2 -DNDEBUG -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION)\"" \
+-    -I /usr/X11R6/include
++    -I $(X11BASE)/include
+ LDFLAGS = -s
+@@ -55,6 +55,6 @@ LDFLAGS = -s
+ #CFLAGS = -g -Wall "-DXROOTCONSOLE_VERSION=\"$(VERSION) (debug build)\"" \
+-    -I /usr/X11R6/include
++    -I $(X11BASE)/include
+ #LDFLAGS = 
+ 
+-LIBS = -L/usr/X11R6/lib -lX11 -lutil
++LIBS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 -lutil
+ 
