@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/10/05 10:21:51 mwdavies Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/04 10:14:30 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -79,7 +79,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/qimageblitz/buildlink3.mk"
+.include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
