@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/10/05 10:46:28 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/11/04 20:08:53 thomasklausner Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -7,13 +7,15 @@ bin/kruler
 bin/ksnapshot
 bin/okular
 bin/xf86gammacfg
-include/libkdcraw/dcrawbinary.h
 include/libkdcraw/dcrawinfocontainer.h
 include/libkdcraw/dcrawsettingswidget.h
 include/libkdcraw/kdcraw.h
 include/libkdcraw/libkdcraw_export.h
 include/libkdcraw/rawdecodingsettings.h
 include/libkdcraw/rawfiles.h
+include/libkdcraw/rcombobox.h
+include/libkdcraw/rnuminput.h
+include/libkdcraw/squeezedcombobox.h
 include/libkdcraw/version.h
 include/libkexiv2/kexiv2.h
 include/libkexiv2/libkexiv2_export.h
@@ -65,6 +67,7 @@ lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_djvu.so
 lib/kde4/okularGenerator_dvi.so
+lib/kde4/okularGenerator_epub.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
 lib/kde4/okularGenerator_kimgio.so
@@ -79,10 +82,8 @@ lib/libgwenviewlib.so
 lib/libgwenviewlib.so.4
 lib/libgwenviewlib.so.4.1.0
 lib/libkdcraw.so
-lib/libkdcraw.so.5
-lib/libkdcraw.so.5.0.0
-lib/libkdcraw5/CAMERALIST
-lib/libkdcraw5/kdcraw
+lib/libkdcraw.so.7
+lib/libkdcraw.so.7.0.0
 lib/libkexiv2.so
 lib/libkexiv2.so.6
 lib/libkexiv2.so.6.0.0
@@ -113,6 +114,7 @@ share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
 share/applications/kde4/okularApplication_djvu.desktop
 share/applications/kde4/okularApplication_dvi.desktop
+share/applications/kde4/okularApplication_epub.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
 share/applications/kde4/okularApplication_kimgio.desktop
@@ -433,6 +435,7 @@ share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_djvu.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
+share/kde4/services/libokularGenerator_epub.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
 share/kde4/services/libokularGenerator_kimgio.desktop
@@ -446,6 +449,7 @@ share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
 share/kde4/services/okularDjvu.desktop
 share/kde4/services/okularDvi.desktop
+share/kde4/services/okularEPub.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
 share/kde4/services/okularKimgio.desktop
@@ -522,7 +526,6 @@ share/kde4/servicetypes/okularGenerator.desktop
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
-@dirrm lib/libkdcraw5
 @comment in kde: @dirrm lib/kde4
 @dirrm include/okular/interfaces
 @dirrm include/okular/core
