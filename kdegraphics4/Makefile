@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/05 10:46:28 mwdavies Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/04 10:20:04 mwdavies Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 CATEGORIES=	graphics
@@ -28,6 +28,7 @@ CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libspectre/buildlink3.mk"
@@ -35,7 +36,6 @@ CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 .include "../../security/qca2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
-.include "../../wip/qimageblitz/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
