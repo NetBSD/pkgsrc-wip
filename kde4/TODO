@@ -1,6 +1,15 @@
 PR lib/37654 - fixed in current.
 
-Deal with requirement for gettext >= 0.15
+Deal with requirement for gettext >= 0.15 - msgfmtstrip script works around.
+
+nepomukservicest is coredumping on login.
+
+Under some conditions konsole prints 
+  "Warning: Could not start program 'bin/sh' with arguments 'bin/sh'"
+rather than giving a working shell.  conditions are possily:
+   running under kdm and logging in as root.
+   using startx as any user.
+   does work as non root user under kdm.
 
 Will HAVE_FPIE_SUPPORT break NetBSD/macppc ?
 
@@ -12,14 +21,14 @@ Write a kconf_update script that moves users existing kde3 config from
 ~/.kde/share/kde/* to ~/.kde/share and makes ~/.kde/share/kde -> .. for
 backward compatibility.
 
-dragonplayer not working? maybe phonon? maybe phonon-xine?
+dragonplayer works for DVDs but coredumps for (some?) movie files.
 
-ocular not displaying contents of pdf's. possibly thread issue.
+kdmrc may not be generated properly under some conditions - I can't reproduce.
 
 investigate Avahi vs DNSSD.  Are both wanted or just one.  If so what
 does Avahi give us?
 
-Investigate package pciutils
+Investigate package pciutils - only used in linux
 Investigate package raw1394
 
 Investigate package BlueZ (linux bluetooth, how linuxy is it?)
@@ -46,8 +55,10 @@ Optionally enable xmms support in kopete?
 
 Investigate package opensync-1.0>=0.33
 
+video support in kopete
 
 Possibly make some of the existing dependencies optional.
 
 Does this work with native X11?  Only tried with modular-xorg. (no it doesnt)
+there appear to be some build issues with native xorg
 Does this work on netBSD < 4.0?
