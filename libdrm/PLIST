@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/08 08:01:51 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/04 08:44:23 bsadewitz Exp $
 include/drm/drm.h
 include/drm/drm_sarea.h
 include/drm/i915_drm.h
@@ -13,8 +13,9 @@ include/drm/sis_drm.h
 include/drm/via_3d_reg.h
 include/drm/via_drm.h
 include/drm/xgi_drm.h
+include/intel_bufmgr.h
 include/xf86drm.h
-include/xf86mm.h
 lib/libdrm.la
+lib/libdrm_intel.la
 lib/pkgconfig/libdrm.pc
 @dirrm include/drm
