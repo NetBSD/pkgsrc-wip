@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/09/08 14:58:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/04 21:05:05 thomasklausner Exp $
 #
 
-DISTNAME=	digikam-0.10.0-beta2
-PKGNAME=	digikam-0.10.0beta2
+DISTNAME=	digikam-0.10.0-beta5
+PKGNAME=	digikam-0.10.0beta5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,8 @@ post-patch:
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/kdemultimedia4/buildlink3.mk"
+# for libkdcraw>=0.4.0
+BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.2nb1
 .include "../../wip/kdegraphics4/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

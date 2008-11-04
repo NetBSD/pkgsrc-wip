@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/08 10:58:32 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/04 21:05:05 thomasklausner Exp $
 bin/digikam
 bin/digikam-camera
 bin/digikamthemedesigner
@@ -9,14 +9,13 @@ include/digikam/bcgmodifier.h
 include/digikam/cietonguewidget.h
 include/digikam/colorgradientwidget.h
 include/digikam/colormodifier.h
-include/digikam/ctrlpaneldlg.h
 include/digikam/curveswidget.h
 include/digikam/dcolor.h
 include/digikam/dcolorblend.h
 include/digikam/dcolorcomposer.h
 include/digikam/dcolorpixelaccess.h
 include/digikam/dcursortracker.h
-include/digikam/ddebug.h
+include/digikam/dgradientslider.h
 include/digikam/dimg.h
 include/digikam/dimggaussianblur.h
 include/digikam/dimgimagefilters.h
@@ -30,6 +29,7 @@ include/digikam/exifwidget.h
 include/digikam/greycstorationiface.h
 include/digikam/greycstorationsettings.h
 include/digikam/greycstorationwidget.h
+include/digikam/histogrambox.h
 include/digikam/histogramwidget.h
 include/digikam/hslmodifier.h
 include/digikam/iccpreviewwidget.h
@@ -38,14 +38,12 @@ include/digikam/iccprofilewidget.h
 include/digikam/icctransform.h
 include/digikam/imagecurves.h
 include/digikam/imagedialog.h
-include/digikam/imagedlgbase.h
-include/digikam/imageguidedlg.h
 include/digikam/imageguidewidget.h
 include/digikam/imagehistogram.h
 include/digikam/imageiface.h
 include/digikam/imagelevels.h
+include/digikam/imagepanelwidget.h
 include/digikam/imagepaniconwidget.h
-include/digikam/imagepannelwidget.h
 include/digikam/imageplugin.h
 include/digikam/imageregionwidget.h
 include/digikam/imagewidget.h
@@ -62,7 +60,6 @@ include/digikam/previewwidget.h
 include/digikam/rawcameradlg.h
 include/digikam/searchtextbar.h
 include/digikam/sidebar.h
-include/digikam/squeezedcombobox.h
 include/digikam/statusled.h
 include/digikam/statusnavigatebar.h
 include/digikam/statusprogressbar.h
@@ -105,7 +102,7 @@ lib/libdigikam.so.1.0.0
 lib/libdigikamdatabase.so
 lib/libdigikamdatabase.so.1
 lib/libdigikamdatabase.so.1.0.0
-man/digitaglinktree.1
+man/man1/digitaglinktree.1
 share/applications/kde4/digikam.desktop
 share/applications/kde4/showfoto.desktop
 share/icons/hicolor/128x128/actions/addimagefolder.png
@@ -465,11 +462,24 @@ share/icons/hicolor/scalable/actions/whitebalance.svgz
 share/icons/hicolor/scalable/apps/digikam.svgz
 share/icons/hicolor/scalable/apps/showfoto.svgz
 share/icons/oxygen/128x128/apps/showfoto.png
+share/icons/oxygen/16x16/actions/transform-crop-and-resize.png
+share/icons/oxygen/16x16/actions/view-object-histogram-linear.png
+share/icons/oxygen/16x16/actions/view-object-histogram-logarithmic.png
 share/icons/oxygen/16x16/apps/showfoto.png
+share/icons/oxygen/22x22/actions/transform-crop-and-resize.png
+share/icons/oxygen/22x22/actions/view-object-histogram-linear.png
+share/icons/oxygen/22x22/actions/view-object-histogram-logarithmic.png
 share/icons/oxygen/22x22/apps/showfoto.png
+share/icons/oxygen/32x32/actions/transform-crop-and-resize.png
+share/icons/oxygen/32x32/actions/view-object-histogram-linear.png
+share/icons/oxygen/32x32/actions/view-object-histogram-logarithmic.png
 share/icons/oxygen/32x32/apps/showfoto.png
+share/icons/oxygen/48x48/actions/transform-crop-and-resize.png
 share/icons/oxygen/48x48/apps/showfoto.png
 share/icons/oxygen/64x64/apps/showfoto.png
+share/icons/oxygen/scalable/actions/transform-crop-and-resize.svgz
+share/icons/oxygen/scalable/actions/view-object-histogram-linear.svgz
+share/icons/oxygen/scalable/actions/view-object-histogram-logarithmic.svgz
 share/icons/oxygen/scalable/apps/showfoto.svgz
 share/kde/apps/digikam/about/box-bottom-left.png
 share/kde/apps/digikam/about/box-bottom-middle.png
@@ -645,6 +655,7 @@ share/locale/ar/LC_MESSAGES/digikam.mo
 share/locale/be/LC_MESSAGES/digikam.mo
 share/locale/bg/LC_MESSAGES/digikam.mo
 share/locale/ca/LC_MESSAGES/digikam.mo
+share/locale/cs/LC_MESSAGES/digikam.mo
 share/locale/da/LC_MESSAGES/digikam.mo
 share/locale/de/LC_MESSAGES/digikam.mo
 share/locale/el/LC_MESSAGES/digikam.mo
@@ -659,6 +670,7 @@ share/locale/gl/LC_MESSAGES/digikam.mo
 share/locale/he/LC_MESSAGES/digikam.mo
 share/locale/hi/LC_MESSAGES/digikam.mo
 share/locale/is/LC_MESSAGES/digikam.mo
+share/locale/it/LC_MESSAGES/digikam.mo
 share/locale/ja/LC_MESSAGES/digikam.mo
 share/locale/km/LC_MESSAGES/digikam.mo
 share/locale/ko/LC_MESSAGES/digikam.mo
@@ -682,7 +694,6 @@ share/locale/th/LC_MESSAGES/digikam.mo
 share/locale/tr/LC_MESSAGES/digikam.mo
 share/locale/uk/LC_MESSAGES/digikam.mo
 share/locale/vi/LC_MESSAGES/digikam.mo
-share/locale/x-test/LC_MESSAGES/digikam.mo
 share/locale/zh_CN/LC_MESSAGES/digikam.mo
 @dirrm share/kde/apps/showfoto/data
 @dirrm share/kde/apps/showfoto
