@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/04 23:41:34 gregschenzel Exp $
+$NetBSD: distinfo,v 1.2 2008/11/04 23:54:08 gregschenzel Exp $
 
 SHA1 (xrootconsole-0.6.tar.gz) = 6c4bdbe979ce15d00c2e1efde672a6a99228ceb4
 RMD160 (xrootconsole-0.6.tar.gz) = 3dd6058316fd72f428fbef9fd5385e75c82a9683
