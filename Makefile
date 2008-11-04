@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3084 2008/11/02 19:44:21 roelants Exp $
+# $Id: Makefile,v 1.3085 2008/11/04 19:20:53 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,6 +291,7 @@ SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
+SUBDIR+=	ebook-tools
 SUBDIR+=	ecasound
 SUBDIR+=	ecb
 SUBDIR+=	eciadsl-usermode
