@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/11/03 11:30:44 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2008/11/04 11:20:09 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -18,8 +18,6 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
 .endif	# KDELIBS_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../wip/strigi/buildlink3.mk"
-.include "../../wip/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -31,6 +29,8 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
+.include "../../sysutils/strigi/buildlink3.mk"
+.include "../../textproc/soprano/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
