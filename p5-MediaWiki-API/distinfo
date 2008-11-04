@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/10/31 21:04:16 leot1990 Exp $
+$NetBSD: distinfo,v 1.5 2008/11/04 22:20:04 leot1990 Exp $
 
-SHA1 (MediaWiki-API-0.17.tar.gz) = b729f6838c1a88a2d3f0ff14b62feb433aadce7e
-RMD160 (MediaWiki-API-0.17.tar.gz) = 03fafd1720359d82c406ffc4a508d50ce2a59387
-Size (MediaWiki-API-0.17.tar.gz) = 11407 bytes
+SHA1 (MediaWiki-API-0.19.tar.gz) = d0792ff073506747af116c6edf25a9d831c06b8f
+RMD160 (MediaWiki-API-0.19.tar.gz) = 52ce29bbd12bd09f035df4f7d46336a6703b80a7
+Size (MediaWiki-API-0.19.tar.gz) = 11498 bytes

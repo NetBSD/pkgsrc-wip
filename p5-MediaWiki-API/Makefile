@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/10/31 21:04:16 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/04 22:20:04 leot1990 Exp $
 #
 
-DISTNAME=	MediaWiki-API-0.17
+DISTNAME=	MediaWiki-API-0.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXOBUZZ/}
