@@ -14,6 +14,7 @@ Suggested package updates
 	o commoncpp2-1.6.3
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o dhcpcd-4.0.4
 	o directfb-1.0.0
 	o ecasound-2.5.2
 	o editline-20080712.2.11
@@ -54,6 +55,7 @@ Suggested package updates
 	o nemo-0.2.3
 	o opal-2.2.11
 	o openct-0.6.14
+	o openvrml-0.17.10
 	o osmose-0.8.1
 	o p5-Net-DBus-0.33.6
 	o p5-PDF-Reuse-0.35
@@ -72,6 +74,7 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.18.5
+	o scite-1.77
 	o sdlmame-0.128
 	o sdlmess-0.128
 	o sendmailX-0.0.0.0
@@ -90,6 +93,7 @@ Suggested package updates
 	o txt2tags-2.3.2
 	o uade-2.12
 	o ufraw-0.14
+	o wordpress-2.6.3
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.2
 	o xcb-util-0.2.1
