@@ -86,7 +86,7 @@ test : all
 		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
 			BMAKE=${BMAKE} ./test.sh \
 			> ${.OBJDIR}/_test.res && \
-		diff -u ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
+		diff -C10 ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
 	then echo '   succeeded'; \
 	else echo '   failed'; false; \
 	fi
