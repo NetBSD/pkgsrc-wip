@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/10/05 10:21:51 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/11/05 20:50:15 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -431,6 +431,9 @@ share/doc/kde/HTML/en/kcontrol/kcmaccess/index.docbook
 share/doc/kde/HTML/en/kcontrol/kcmdisplay/common
 share/doc/kde/HTML/en/kcontrol/kcmdisplay/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kcmdisplay/index.docbook
+share/doc/kde/HTML/en/kcontrol/kcmsmserver/common
+share/doc/kde/HTML/en/kcontrol/kcmsmserver/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/kcmsmserver/index.docbook
 share/doc/kde/HTML/en/kcontrol/kcmstyle/common
 share/doc/kde/HTML/en/kcontrol/kcmstyle/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/kcmstyle/index.docbook
@@ -2153,6 +2156,7 @@ share/sounds/pop.wav
 @dirrm share/doc/kde/HTML/en/kcontrol/keys
 @dirrm share/doc/kde/HTML/en/kcontrol/keyboard
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmstyle
+@dirrm share/doc/kde/HTML/en/kcontrol/kcmsmserver
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmdisplay
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmaccess
 @dirrm share/doc/kde/HTML/en/kcontrol/joystick

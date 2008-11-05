@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/26 22:46:44 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/11/05 20:55:54 mwdavies Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -6197,6 +6197,8 @@ share/icons/kdeclassic/16x16/actions/tab-close-other.png
 share/icons/kdeclassic/16x16/actions/tab-close.png
 share/icons/kdeclassic/16x16/actions/tab-detach.png
 share/icons/kdeclassic/16x16/actions/tab-duplicate.png
+share/icons/kdeclassic/16x16/actions/tab-move-left.png
+share/icons/kdeclassic/16x16/actions/tab-move-right.png
 share/icons/kdeclassic/16x16/actions/tab-new-background.png
 share/icons/kdeclassic/16x16/actions/tab-new.png
 share/icons/kdeclassic/16x16/actions/tab_first.png
@@ -7276,6 +7278,8 @@ share/icons/kdeclassic/22x22/actions/tab-close-other.png
 share/icons/kdeclassic/22x22/actions/tab-close.png
 share/icons/kdeclassic/22x22/actions/tab-detach.png
 share/icons/kdeclassic/22x22/actions/tab-duplicate.png
+share/icons/kdeclassic/22x22/actions/tab-move-left.png
+share/icons/kdeclassic/22x22/actions/tab-move-right.png
 share/icons/kdeclassic/22x22/actions/tab-new-background.png
 share/icons/kdeclassic/22x22/actions/tab-new.png
 share/icons/kdeclassic/22x22/actions/text.png
@@ -7604,6 +7608,8 @@ share/icons/kdeclassic/32x32/actions/tab-close-other.png
 share/icons/kdeclassic/32x32/actions/tab-close.png
 share/icons/kdeclassic/32x32/actions/tab-detach.png
 share/icons/kdeclassic/32x32/actions/tab-duplicate.png
+share/icons/kdeclassic/32x32/actions/tab-move-left.png
+share/icons/kdeclassic/32x32/actions/tab-move-right.png
 share/icons/kdeclassic/32x32/actions/tab-new-background.png
 share/icons/kdeclassic/32x32/actions/tab-new.png
 share/icons/kdeclassic/32x32/actions/today.png
@@ -7955,6 +7961,8 @@ share/icons/kdeclassic/32x32/mimetypes/font_bitmap.png
 share/icons/kdeclassic/32x32/mimetypes/font_truetype.png
 share/icons/kdeclassic/32x32/mimetypes/font_type1.png
 share/icons/kdeclassic/32x32/mimetypes/gf.png
+share/icons/kdeclassic/32x32/mimetypes/image-x-adobe-dng.png
+share/icons/kdeclassic/64x64/mimetypes/image-x-adobe-dng.png
 share/icons/kdeclassic/32x32/mimetypes/image-x-generic.png
 share/icons/kdeclassic/32x32/mimetypes/info.png
 share/icons/kdeclassic/32x32/mimetypes/inode-blockdevice.png

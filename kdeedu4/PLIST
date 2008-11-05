@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/10/05 10:36:42 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/11/05 20:57:25 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -2651,6 +2651,7 @@ share/kde/apps/ktouch/typewriter.wav
 share/kde/apps/ktouch/uk.basic.keyboard
 share/kde/apps/ktouch/uk.typewriter.keyboard
 share/kde/apps/ktouch/uk.winkeys.keyboard
+share/kde/apps/ktouch/uk.winkeys.keyboard.xml
 share/kde/apps/ktouch/ukrainian.ktouch.xml
 share/kde/apps/ktouch/up.wav
 share/kde/apps/kturtle/kturtleui.rc
