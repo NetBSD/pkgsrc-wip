@@ -15,8 +15,6 @@ Will HAVE_FPIE_SUPPORT break NetBSD/macppc ?
 
 Fix SPECIAL_PERMS where appropriate.
 
-Update/write DESCR files and COMMENT's
-
 Write a kconf_update script that moves users existing kde3 config from
 ~/.kde/share/kde/* to ~/.kde/share and makes ~/.kde/share/kde -> .. for
 backward compatibility.
