@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/04 11:20:09 mwdavies Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/05 20:41:12 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -55,6 +55,8 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../wip/kde4/kde4.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../sysutils/strigi/buildlink3.mk"
+.include "../../textproc/soprano/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -69,8 +71,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
-.include "../../sysutils/strigi/buildlink3.mk"
-.include "../../textproc/soprano/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

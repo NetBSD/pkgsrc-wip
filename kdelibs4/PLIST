@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/13 12:13:25 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/11/05 20:41:12 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -3662,9 +3662,9 @@ share/mime/packages/kde.xml
 @dirrm share/kde/config/colors
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/proxyscout
-@dirrm share/kde/apps/nepomuk/pics
-@dirrm share/kde/apps/nepomuk/ontologies
-@dirrm share/kde/apps/nepomuk
+@comment in kde: @dirrm share/kde/apps/nepomuk/pics
+@comment in kde: @dirrm share/kde/apps/nepomuk/ontologies
+@comment in kde: @dirrm share/kde/apps/nepomuk
 @dirrm share/kde/apps/ktexteditor_kdatatool
 @dirrm share/kde/apps/ktexteditor_insertfile
 @dirrm share/kde/apps/ktexteditor_docwordcompletion

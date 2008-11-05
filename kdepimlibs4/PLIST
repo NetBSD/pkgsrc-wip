@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/29 21:43:16 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/11/05 20:43:31 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -353,10 +353,10 @@ lib/libakonadi-kmime.so.4
 lib/libakonadi-kmime.so.4.1.0
 lib/libgpgme++-pthread.so
 lib/libgpgme++-pthread.so.2
-lib/libgpgme++-pthread.so.2.0.0
+lib/libgpgme++-pthread.so.2.0.1
 lib/libgpgme++.so
 lib/libgpgme++.so.2
-lib/libgpgme++.so.2.0.0
+lib/libgpgme++.so.2.0.1
 lib/libkabc.so
 lib/libkabc.so.4
 lib/libkabc.so.4.1.0
