@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3085 2008/11/04 19:20:53 thomasklausner Exp $
+# $Id: Makefile,v 1.3086 2008/11/05 00:34:54 gregschenzel Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1414,6 +1414,7 @@ SUBDIR+=	php-mode
 SUBDIR+=	php-recode
 SUBDIR+=	php-suhosin
 SUBDIR+=	picasm
+SUBDIR+=	picocom
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-guifications
 SUBDIR+=	pike
@@ -2009,6 +2010,7 @@ SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
 SUBDIR+=	xrdp
+SUBDIR+=	xrootconsole
 SUBDIR+=	xspd
 SUBDIR+=	xspdapp
 SUBDIR+=	xspread
