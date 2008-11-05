@@ -60,4 +60,4 @@ look at default /boot/config-2.2.20-idepci
 # cp -i arch/i386/boot/bzImage /bzImage.-- with kernel-version- or other name
 #   maybe copy to boot directory (as lilo also knows it)
 
-- This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2008-1375, CVE-2008-1675, CVE-2008-1669, CVE-2008-1615, CVE-2008-1375, CVE-2008-0007, CVE-2007-6282, CVE-2005-0504, CVE-2008-1673, CVE-2008-2750, CVE-2008-2812, CVE-2008-3077, CVE-2008-3247, CVE-2008-3276, CVE-2008-3686, CVE-2008-1514, CVE-2008-3831, http://secunia.com/advisories/30258/, http://secunia.com/advisories/31366/, http://secunia.com/advisories/32124/).
+- This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2008-1375, CVE-2008-1675, CVE-2008-1669, CVE-2008-1615, CVE-2008-1375, CVE-2008-0007, CVE-2007-6282, CVE-2005-0504, CVE-2008-1673, CVE-2008-2750, CVE-2008-2812, CVE-2008-3077, CVE-2008-3247, CVE-2008-3276, CVE-2008-3686, CVE-2008-1514, CVE-2008-3831, http://secunia.com/advisories/30258/, http://secunia.com/advisories/31366/, http://secunia.com/advisories/32124/, http://secunia.com/advisories/32510/).
