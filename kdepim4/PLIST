@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/05 10:49:02 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/11/05 21:09:43 mwdavies Exp $
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -1303,7 +1303,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/nepomuk/ontologies
+@comment in kde: @dirrm share/kde/apps/nepomuk/ontologies
 @dirrm share/kde/apps/libkleopatra/pics
 @dirrm share/kde/apps/libkleopatra
 @dirrm share/kde/apps/libkholidays

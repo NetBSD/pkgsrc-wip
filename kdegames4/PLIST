@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/26 23:00:03 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/11/05 20:58:53 mwdavies Exp $
 bin/bovo
 bin/katomic
 bin/kbattleship
@@ -334,6 +334,7 @@ share/doc/kde/HTML/en/ksirk/moveFive.png
 share/doc/kde/HTML/en/ksirk/moveOne.png
 share/doc/kde/HTML/en/ksirk/moveTen.png
 share/doc/kde/HTML/en/ksirk/movement.png
+share/doc/kde/HTML/en/ksirk/newGame.png
 share/doc/kde/HTML/en/ksirk/newNetGame.png
 share/doc/kde/HTML/en/ksirk/newgamedialog.png
 share/doc/kde/HTML/en/ksirk/nouveauJeu.png
@@ -343,6 +344,7 @@ share/doc/kde/HTML/en/ksirk/placingarmies.png
 share/doc/kde/HTML/en/ksirk/player1PlacingArmies.png
 share/doc/kde/HTML/en/ksirk/playersetupdialog.png
 share/doc/kde/HTML/en/ksirk/preferences.png
+share/doc/kde/HTML/en/ksirk/quit.png
 share/doc/kde/HTML/en/ksirk/quitter.png
 share/doc/kde/HTML/en/ksirk/saveGame.png
 share/doc/kde/HTML/en/ksirk/shownumberofarmies.png
