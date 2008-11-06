@@ -1,67 +1,62 @@
-.\"	$NetBSD: pkg_update_summary.1,v 1.4 2008/06/14 10:27:35 cheusov Exp $
+.\"	$NetBSD: pkg_update_summary.1,v 1.5 2008/11/06 22:42:12 cheusov Exp $
 .\"
 .\" Copyright (c) 2007 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
-.Dd Aug 2, 2007
-.Dt PKG_UPDATE_SUMMARY 1
-.Sh NAME
-.Nm pkg_update_summary
-.Nd update, or create a summary file (pkg_summary(5))
-.Sh SYNOPSIS
-.Nm
-.Ar summary_file
-.Ar bin_pkg_dir
-.Op Ar decompress compress
-.Sh DESCRIPTION
-.Nm
+.TH PKG_UPDATE_SUMMARY 1 "Aug 2, 2007" "" ""
+.SH NAME
+pkg_update_summary \- update, or create a summary file (pkg_summary(5))
+.SH SYNOPSIS
+.BI pkg_update_summary " summary_file bin_pkg_dir [decompress compress]"
+.SH DESCRIPTION
+.B pkg_update_summary
 updates (or creates if it does not exist)
 summary information about binary packages 
-and stores it in 
-.Ar summary_file
-file.
-That is it checks
+and stores it in
+.I summary_file
+file. That is
+.B pkg_update_summary
+checks
 whether
-.Ar bin_pkg_dir
-directory contains packages newer than that from
-.Ar summary_file.
-If it does,
-updates the summary file. NOTE: modification time of
+.I bin_pkg_dir
+directory contains binary packages (files) newer than
+.I summary_file
+file.
+If they exist, it updates the summary. NOTE: modification time of
 the binary package file is checked, not the content of the package.
 Also
-.Nm 
+.B pkg_update_summary
 removes from 
-.Ar summary_file
+.I summary_file
 the information about packages removed from 
-.Ar bin_pkg_dir
+.I bin_pkg_dir
 directory.
-.Pp
+.PP
 The options are as follows:
-.Bl -tag -width indent
-.It Fl h
+.SH OPTIONS
+.TP
+.B "-h|--help"
 display help message
-.It Fl r
+.TP
+.B "-r|--refresh"
 only newest versions for each PKGPATH:PKGBASE pair is kept in summary
-.El
-.Sh ENVIRONMENT
-.Bd -literal
-.Bl -tag -width Cm
-.It Cm PKG_SUFX
+.SH ENVIRONMENT
+.TP
+.B PKG_SUFX
 Binary package extension, either .tgz or .tbz, defaults to '.tgz'
-.It Cm TEST_CMD
+.TP
+.B TEST_CMD
 Solaris's test command does not like option -nt, defaults to 'test'
-.It Cm PKG_INFO_CMD
+.TP
+.B PKG_INFO_CMD
 Path to pkg_info command, defaults to 'pkg_info'
-.El
-.Ed
-.Sh EXAMPLES
-.Bd -literal
-pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All
-pkg_update_summary /dir/pkg_summary.gz /dir 'gzip -dc' 'gzip -c'
-.Ed
-.Sh SEE ALSO
-.Xr pkg_summary-utils 7 ,
-.Xr pkg_summary 5
-.Sh AUTHOR
-.An Aleksey Cheusov
-.Aq vle@gmx.net
+.SH EXAMPLES
+.BD
+ pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All
+ pkg_update_summary /dir/pkg_summary.gz /dir 'gzip -dc' 'gzip -c'
+.ED
+.SH SEE ALSO
+.BR pkg_summary-utils(7) ,
+.BR pkg_summary(5)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>
