@@ -1,20 +1,20 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.4 2008/09/19 21:06:11 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.5 2008/11/06 22:07:19 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
-.Dd Jan 29, 2008
-.Dt PKG_GREP_SUMMARY 1
-.Sh NAME
-.Nm pkg_grep_summary
-.Nd matching program for pkgsrc packages summary
-.Sh SYNOPSIS
-.Nm
-.Op Ar OPTIONS
-.Ar field
-.Ar condition
-.Sh DESCRIPTION
-.Nm
+.TH PKG_GREP_SUMMARY 1 "Jan 29, 2008" "" ""
+.SH NAME
+pkg_grep_summary \- tool for grepping pkgsrc summary file
+.SH SYNOPSIS
+.B "pkg_grep_summary -h"
+.br
+.BI pkg_grep_summary " field awk_condition"
+.br
+.BI "pkg_grep_summary -e" " field"
+.br
+.SH DESCRIPTION
+.B pkg_grep_summary
 outputs a summary information about packages that matches
 the specified condition.
 In other words, pkg_grep_summary is a search tool
@@ -27,16 +27,17 @@ pkg_find
 etc. but it is multifield
 searcher and is fast because it uses summaries instead
 of pkgsrc packages source tree.
-.Pp
-The options are as follows:
-.Bl -tag -width indent
-.It Fl h
+.SH OPTIONS
+.TP
+.BR \-h " or" " --help"
 display help message
-.It Fl e Ar field
-matches empty or absent fields only
-.El
-.Sh EXAMPLES
-.Bd -literal
+.TP
+.BI \-e " field"
+outputs summaries in which
+.B "field"
+is either empty or absent
+.SH EXAMPLES
+.BD
   pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
   pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\\//' \\
@@ -45,10 +46,9 @@ matches empty or absent fields only
         < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
         < /usr/pkgsrc/pkg_src_summary.txt
-.Ed
-.Sh SEE ALSO
-.Xr pkg_summary-utils 7
-.Xr pkg_summary 5
-.Sh AUTHOR
-.An Aleksey Cheusov
-.Aq vle@gmx.net
+.ED
+.SH SEE ALSO
+.BR pkg_summary-utils(7),
+.BR pkg_summary(5)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>
