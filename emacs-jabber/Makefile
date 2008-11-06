@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/07/29 20:32:40 netcap Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/06 19:52:50 cheusov Exp $
 
 DISTNAME=     emacs-jabber-0.7.1
 PKGNAME=      ${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,15 +13,16 @@ COMMENT=      Minimal jabber client for emacs
 USE_TOOLS+=   makeinfo
 INFO_FILES=   yes
 
-NO_CONFIGURE= yes
+NO_CONFIGURE=		yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/emacs-jabber ${EMACS_INFOPREFIX}
 do-build:
 	cd ${WRKSRC} && makeinfo jabber.texi
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.el* ${EMACS_LISPPREFIX}/emacs-jabber
-	${INSTALL_DATA} ${WRKSRC}/jabber.info ${EMACS_INFOPREFIX}
+	${INSTALL_DATA} ${WRKSRC}/*.el* ${DESTDIR}${EMACS_LISPPREFIX}/emacs-jabber
+	${INSTALL_DATA} ${WRKSRC}/jabber.info ${DESTDIR}${EMACS_INFOPREFIX}
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
