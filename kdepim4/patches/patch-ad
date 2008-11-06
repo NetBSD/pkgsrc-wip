@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2008/11/06 11:29:40 mwdavies Exp $
+
+svn commit 877938 fixes imap mail duplication
+
+--- kmail/kmfoldermaildir.cpp.orig	2008-11-07 00:22:26.000000000 +1300
++++ kmail/kmfoldermaildir.cpp
+@@ -717,6 +717,7 @@ void KMFolderMaildir::readFileHeaderInte
+       dateStr = dateStr.trimmed();
+       if (!dateStr.isEmpty())
+         mi->setDate(dateStr.constData());
++      uidStr = uidStr.trimmed();
+       if ( !uidStr.isEmpty() )
+          mi->setUID( uidStr.toULong() );
+       mi->setDirty(false);
