@@ -1,42 +1,33 @@
-.\"	$NetBSD: pkg_list_all_pkgs.1,v 1.4 2008/06/14 10:27:35 cheusov Exp $
+.\"	$NetBSD: pkg_list_all_pkgs.1,v 1.5 2008/11/06 23:08:30 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
-.Dd Jan 29, 2008
-.Dt PKG_LIST_ALL_PKGS 1
-.Sh NAME
-.Nm pkg_list_all_pkgs
-.Nd list all packages in pkgsrc source tree
-.Sh SYNOPSIS
-.Nm
-.Op Ar OPTIONS
-.Sh DESCRIPTION
-.Nm
-analyses /usr/pkgsrc/Makefile files (SUBDIR
+.TH PKG_LIST_ALL_PKGS 1 "Jan 29, 2008" "" ""
+.SH NAME
+pkg_list_all_pkgs \- list all packages in pkgsrc source tree
+.SH SYNOPSIS
+.BI pkg_list_all_pkgs " [OPTIONS]"
+.SH DESCRIPTION
+.B pkg_list_all_pkgs
+analyses /usr/pkgsrc/Makefile file (SUBDIR
 variable defined there) and outputs all available packages
 in category/directory format. One package per line.
-.Pp
-The options are as follows:
-.Bl -tag -width indent
-.It Fl h
+.SH OPTIONS
+.TP
+.B "-h|--help"
 display help message
-.El
-.Sh ENVIRONMENT
-.Bd -literal
-.Bl -tag -width Cm
-.It Cm PKGSRCDIR
+.SH ENVIRONMENT
+.TP
+.B PKGSRCDIR
 pkgsrc root directory, defaults to /usr/pkgsrc
-.It Cm BMAKE
+.TP
+.B BMAKE
 path to pkgsrc friendly make utility, defaults to make
-.El
-.Ed
-.Sh EXAMPLES
-.Bd -literal
+.SH EXAMPLES
+.TP
 pkg_list_all_pkgs
-.Ed
-.Sh SEE ALSO
-.Xr pkg_summary-utils 7
-.Sh AUTHOR
-.An Aleksey Cheusov
-.Aq vle@gmx.net
+.SH "SEE ALSO"
+.B pkg_summary-utils(7)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>
