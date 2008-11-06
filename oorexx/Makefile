@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/26 21:36:55 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/06 21:10:39 cheusov Exp $
 #
 
 DISTNAME=	ooRexx-3.2.0
@@ -12,9 +12,10 @@ COMMENT=	Powerful typeless object-oriented scripting language
 
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=			yes
+USE_LIBTOOL=			yes
+USE_LANGUAGES=			c c++
+PKG_DESTDIR_SUPPORT=		user-destdir
 
 SUBST_CLASSES+=			fix-mandir
 SUBST_MESSAGE.fix-mandir=	Fixing hard-coded manuals path.
