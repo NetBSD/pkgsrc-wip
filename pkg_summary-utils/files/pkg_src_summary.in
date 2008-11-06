@@ -190,7 +190,7 @@ enrich_summary (){
 		print "DESCRIPTION=" ln
 	    }
 	    if (ret < 0){
-		printf "reading from `" fn "` failed\n" > "/dev/stderr"
+		printf "reading from `" $i "` failed\n" > "/dev/stderr"
 		exit 1
 	    }
 	    close($i)
