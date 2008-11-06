@@ -1,0 +1,7 @@
+Java Platform, Micro Edition (Java ME) provides a robust, flexible
+environment for applications running on mobile and other embedded
+devices set-top boxes, and printers. Java ME includes flexible user
+interfaces, robust security, built-in network protocols, and support
+for networked and offline applications that can be downloaded
+dynamically. Applications based on Java ME are portable across many
+devices, yet leverage each device's native capabilities.
