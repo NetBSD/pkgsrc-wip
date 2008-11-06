@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/05 00:29:27 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/06 03:20:47 gregschenzel Exp $
 
 DISTNAME=	picocom-1.4
 PKGREVISION=	1
-CATEGORIES=	misc
+CATEGORIES=	comms
 
 MAINTAINER=	inittab@unixdev.net
 MASTER_SITES=   http://efault.net/npat/hacks/picocom/dist/
 
 HOMEPAGE=       http://efault.net/npat/hacks/picocom/
-COMMENT=        Serial Console
+COMMENT=        Dumb Terminal Emulator
 
 USE_TOOLS+=             gmake
 BUILD_TARGET=		picocom
