@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3086 2008/11/05 00:34:54 gregschenzel Exp $
+# $Id: Makefile,v 1.3087 2008/11/06 11:21:50 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -790,7 +790,9 @@ SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kde4
-SUBDIR+=	kde4-dirs
+SUBDIR+=	kde4-l10n-de
+SUBDIR+=	kde4-l10n-en_GB
+SUBDIR+=	kde4-l10n-nl
 SUBDIR+=	kdeaccessibility4
 SUBDIR+=	kdeadmin4
 SUBDIR+=	kdeartwork4
