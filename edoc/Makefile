@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/30 02:32:33 bjcosta Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/06 06:19:52 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -18,33 +18,40 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
 
+
+# I dont think the build requires pkg-config. It just creates pkg-config data files.
+# USE_TOOLS+=		pkg-config
+
+# I am not sure if i specify ldd as a tool, as it is checked for in the configure script and used by the resulting binary. NOT by the build.
+# USE_TOOLS+=		ldd
+
+# Used by geneds.sh
+USE_TOOLS+=		nm
 USE_LIBTOOL=		yes
-
-#@@@Brendon Fortran should not be used but requested that i add it as the
-# configure script seems to check for f77
-USE_LANGUAGES=		c c++ fortran
-
+USE_LANGUAGES=		c c++
 
 
 USE_PKGLOCALEDIR=	no
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDoc/EDoc.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDoc/EDoc-ver.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDocPy/EDocPy.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDocPy/EDocPy-ver.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDocBFD/EDocBFD-ver.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libs/EDocBFD/EDocBFD.pc.in
 GNU_CONFIGURE=		yes
 
 
 # Some of the linux dependencies I may need to add.
-# python2.4-dev, binutils-dev, texinfo, libltdl3-dev, libc6-dev, g++
-#.include "../../lang/python24/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=15 20 21 22 23 24
-.include "../../lang/python/pyversion.mk"
+# texinfo, libltdl3-dev
 
-# Bring libbfd.
+# Bring in libpython2.5 and the python interpreter.
+.include "../../lang/python25/buildlink3.mk"
+#PYTHON_VERSIONS_INCOMPATIBLE=15 20 21 22 23 24
+#.include "../../lang/python/pyversion.mk"
+
+# Bring in libbfd.
 .if !exists(/usr/include/bfd.h)
 USE_BUILTIN.binutils=no
 .endif
 .include "../../devel/binutils/buildlink3.mk"
+
+# Bring in libltdl
+.include "../../devel/libltdl/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
