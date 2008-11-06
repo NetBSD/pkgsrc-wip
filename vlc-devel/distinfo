@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/08/14 20:29:50 hoka_adam Exp $
-
-SHA1 (vlc-snapshot-20080813.tar.bz2) = 6ef011a12871ca965157ed4d0cb0f3fdaa80bb01
-RMD160 (vlc-snapshot-20080813.tar.bz2) = bd3ab5a92937d18ed4f0d52b6e3d5d35739a0c04
-Size (vlc-snapshot-20080813.tar.bz2) = 15635345 bytes
-SHA1 (patch-aa) = 0551aa800c63af1e362a703418598de6a55da04e
