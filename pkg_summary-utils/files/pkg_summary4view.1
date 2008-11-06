@@ -1,30 +1,27 @@
-.\"	$NetBSD: pkg_summary4view.1,v 1.3 2008/06/14 10:27:35 cheusov Exp $
+.\"	$NetBSD: pkg_summary4view.1,v 1.4 2008/11/06 22:30:59 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
 .\"
-.Dd Jan 29, 2008
-.Dt PKG_SUMMARY4VIEW 1
-.Sh NAME
-.Nm pkg_summary4view
-.Nd converts pkg_summary(5) to human readable format
-.Sh SYNOPSIS
-.Nm
-.Op Ar summary files ...
-.Sh DESCRIPTION
-.Nm
+.TH PKG_SUMMARY4VIEW 1 "Jan 29, 2008" "" ""
+.SH NAME
+.B pkg_summary4view
+converts pkg_summary(5) to human readable format
+.SH SYNOPSIS
+.BI pkg_summary4view " [files...]"
+.SH DESCRIPTION
+.B pkg_summary4view
 converts package summary (pkg_summary(5)) to the format
 easily read by human but still easily parsable by standard UNIX utilities.
 An empty line separates packages.
-.Sh EXAMPLES
-.Bd -literal
-pkg_src_summary textproc/dictem | pkg_summary4view
-            zcat pkg_summary.gz | pkg_summary4view
-.Ed
-.Sh SEE ALSO
-.Xr pkg_summary-utils 7
-.Xr pkg_summary 5
-.Xr pkg_src_summary 1
-.Sh AUTHOR
-.An Aleksey Cheusov
-.Aq vle@gmx.net
+.SH EXAMPLES
+.BD
+ pkg_src_summary textproc/dictem | pkg_summary4view
+ zcat pkg_summary.gz | pkg_summary4view
+.ED
+.SH SEE ALSO
+.BR pkg_summary-utils(7) ,
+.BR pkg_summary(5) ,
+.BR pkg_src_summary(1)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>

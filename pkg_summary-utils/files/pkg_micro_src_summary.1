@@ -1,19 +1,15 @@
-.\"	$NetBSD: pkg_micro_src_summary.1,v 1.7 2008/06/14 10:27:35 cheusov Exp $
+.\"	$NetBSD: pkg_micro_src_summary.1,v 1.8 2008/11/06 22:21:57 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
-.Dd Jan 29, 2008
-.Dt PKG_MICRO_SRC_SUMMARY 1
-.Sh NAME
-.Nm pkg_micro_src_summary
-.Nd build micro summary for source packages
-.Sh SYNOPSIS
-.Nm
-.Op Ar OPTIONS
-.Op Ar category1/pkg1 category2/pkg2 ...
-.Sh DESCRIPTION
-.Nm
+.TH PKG_MICRO_SRC_SUMMARY 1 "Jan 29, 2008" "" ""
+.SH NAME
+pkg_micro_src_summary \- build micro summary for source packages
+.SH SYNOPSIS
+.BI pkg_micro_src_summary " [OPTIONS] [category1/pkg1 category2/pkg2 ...]"
+.SH DESCRIPTION
+.B pkg_micro_src_summary
 builds micro summary information about source packages specified in
 arguments or read from stdin (one package per line).  The word micro
 means that only PKGNAME and PKGPATH fields (by default) are
@@ -26,35 +22,31 @@ make. And for ~90% of all packages (pkgsrc + wip) it is possible to
 use this hack and fallback to make for other ~10%. As a result
 pkg_micro_src_summary works approximately 10 times faster than using
 make for all packages.
-.Pp
-The options are as follows:
-.Bl -tag -width indent
-.It Fl h
+.SH OPTIONS
+.TP
+.BR "-h|--help"
 display help message
-.It Fl f Ar fields
+.TP
+.BI "-f|--fields" " fields"
 A list of fields (separated by space character) to be generated. By
 default the following fields are generated: PKGNAME, PKGPATH.  Fields
 here are actually Makefile's variable names and should be fetchable by
 pkg_src_fetch_var from Makefile itself, for example, COMMENT,
 MAINTAINER etc., but not PLIST, DESCRIPTION, GZIP_CMD or similar.
-.El
-.Sh ENVIRONMENT
-.Bd -literal
-.Bl -tag -width Cm
-.It Cm PKGSRCDIR
+.SH ENVIRONMENT
+.TP
+.B PKGSRCDIR
 pkgsrc root directory, defaults to /usr/pkgsrc
-.It Cm BMAKE
+.TP
+.B BMAKE
 path to pkgsrc friendly make utility, defaults to make
-.El
-.Ed
-.Sh EXAMPLES
-.Bd -literal
-pkg_micro_src_summary wip/dict-server wip/dict-mueller7 x11/xxkb
-printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_micro_src_summary
-.Ed
-.Sh SEE ALSO
-.Xr pkg_summary-utils 7 ,
-.Xr pkg_src_summary 1
-.Sh AUTHOR
-.An Aleksey Cheusov
-.Aq vle@gmx.net
+.SH EXAMPLES
+.BD
+ pkg_micro_src_summary wip/dict-server wip/dict-mueller7 x11/xxkb
+ printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_micro_src_summary
+.ED
+.SH SEE ALSO
+.BR pkg_summary-utils(7) ,
+.BR pkg_src_summary(1)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>
