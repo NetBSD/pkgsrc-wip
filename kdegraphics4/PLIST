@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/11/04 20:08:53 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/11/06 12:14:58 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -67,7 +67,6 @@ lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_djvu.so
 lib/kde4/okularGenerator_dvi.so
-lib/kde4/okularGenerator_epub.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
 lib/kde4/okularGenerator_kimgio.so
@@ -114,7 +113,6 @@ share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
 share/applications/kde4/okularApplication_djvu.desktop
 share/applications/kde4/okularApplication_dvi.desktop
-share/applications/kde4/okularApplication_epub.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
 share/applications/kde4/okularApplication_kimgio.desktop
@@ -435,7 +433,6 @@ share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_djvu.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
-share/kde4/services/libokularGenerator_epub.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
 share/kde4/services/libokularGenerator_kimgio.desktop
@@ -449,7 +446,6 @@ share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
 share/kde4/services/okularDjvu.desktop
 share/kde4/services/okularDvi.desktop
-share/kde4/services/okularEPub.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
 share/kde4/services/okularKimgio.desktop
@@ -526,6 +522,7 @@ share/kde4/servicetypes/okularGenerator.desktop
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
+@dirrm lib/libkdcraw5
 @comment in kde: @dirrm lib/kde4
 @dirrm include/okular/interfaces
 @dirrm include/okular/core
