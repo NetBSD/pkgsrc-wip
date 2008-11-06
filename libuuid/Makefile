@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.12 2007/05/20 03:08:24 kheinz Exp $
-# $Id: Makefile,v 1.12 2007/05/20 03:08:24 kheinz Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/06 19:24:27 cheusov Exp $
+# $Id: Makefile,v 1.13 2008/11/06 19:24:27 cheusov Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -14,18 +14,21 @@ COMMENT=		Standalone libuuid from e2fsprogs package
 
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
-CONFLICTS=		e2fsprogs-1.32 e2fsprogs-1.36
+PKG_DESTDIR_SUPPORT=	user-destdir
+AUTO_MKDIRS=		yes
+
+CONFLICTS=		e2fsprogs-1.32{,nb*} e2fsprogs-1.36{,nb*}
 CONFLICTS+=		ossp-uuid-[0-9]* # libuuid.* uuid.pc uuid.3
 BUILD_DIRS=		lib/uuid
 PKGCONFIG_OVERRIDE+=	lib/uuid/uuid.pc.in
 
 post-build:
-	cd ${WRKSRC:Q}/misc && ${SETENV} ${MAKE_ENV} ${MAKE} \
+	cd ${WRKSRC}/misc && ${SETENV} ${MAKE_ENV} ${MAKE} \
 		${MAKE_FLAGS} uuidgen uuidgen.1
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/misc/uuidgen ${PREFIX:Q}/bin/uuidgen
-	${INSTALL_MAN} ${WRKSRC:Q}/misc/uuidgen.1 ${PREFIX:Q}/${PKGMANDIR}/man1/uuidgen.1
+	${INSTALL_PROGRAM} ${WRKSRC}/misc/uuidgen ${DESTDIR}${PREFIX}/bin/uuidgen
+	${INSTALL_MAN} ${WRKSRC}/misc/uuidgen.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/uuidgen.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
