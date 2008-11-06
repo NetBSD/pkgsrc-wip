@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/11/05 20:58:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/11/06 11:11:27 mwdavies Exp $
 bin/bovo
 bin/katomic
 bin/kbattleship
@@ -1541,9 +1541,9 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/kubrick/themes
 @dirrm share/kde/apps/kubrick
 @dirrm share/kde/apps/ktuberling/sounds/en
-@dirrm share/kde/apps/ktuberling/sounds
+@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/kde/apps/ktuberling/pics
-@dirrm share/kde/apps/ktuberling
+@comment in kde: @dirrm share/kde/apps/ktuberling
 @dirrm share/kde/apps/ksudoku/themes
 @dirrm share/kde/apps/ksudoku/icons/oxygen/64x64/actions
 @dirrm share/kde/apps/ksudoku/icons/oxygen/64x64
