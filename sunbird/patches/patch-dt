@@ -1,0 +1,13 @@
+$NetBSD: patch-dt,v 1.1.1.1 2008/11/06 11:50:47 thomasklausner Exp $
+
+--- nsprpub/pr/include/md/prosdep.h.orig	2006-06-26 14:36:19.000000000 +0000
++++ nsprpub/pr/include/md/prosdep.h
+@@ -72,7 +72,7 @@ PR_BEGIN_EXTERN_C
+ #if defined(AIX)
+ #include "md/_aix.h"
+ 
+-#elif defined(FREEBSD)
++#elif defined(FREEBSD) || defined(DRAGONFLY)
+ #include "md/_freebsd.h"
+ 
+ #elif defined(NETBSD)
