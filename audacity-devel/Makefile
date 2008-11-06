@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/31 12:52:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/06 19:44:55 thomasklausner Exp $
 
 DISTNAME=		audacity-src-1.3.0b
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -42,7 +42,7 @@ CONFIG_SUB_OVERRIDE=		\
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK26/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
