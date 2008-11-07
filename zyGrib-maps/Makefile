@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/07 12:35:14 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/07 18:42:17 plunky Exp $
 #
 
 DISTNAME=	zyGrib-maps-2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://zygrib.free.fr/
 COMMENT=	High resolution map files for zyGrib
 
 #LICENSE=	gnu-gpl
+
+DEPENDS+=	zyGrib>=2.0:../../wip/zyGrib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -27,7 +29,7 @@ INSTALL_FILES+=	maps/gshhs/wdb_borders_h.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_f.b
 INSTALL_FILES+=	maps/gshhs/wdb_rivers_h.b
 
-DEPENDS+=	zyGrib>=2.0:../../wip/zyGrib
+WRKSRC=		${WRKDIR}
 
 do-configure:
 
@@ -35,7 +37,7 @@ do-build:
 
 do-install:
 .for f in ${INSTALL_FILES}
-	${INSTALL_DATA} ${WRKDIR}/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/zyGrib/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
