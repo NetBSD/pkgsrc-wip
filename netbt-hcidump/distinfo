@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/11/07 12:49:21 plunky Exp $
+$NetBSD: distinfo,v 1.6 2008/11/07 14:49:40 plunky Exp $
 
-SHA1 (bluez-4.11.tar.gz) = 8466333ea78fa1da615467a02bebbee133ba5b42
-RMD160 (bluez-4.11.tar.gz) = 159e6f793a72360dab37f6300e6817e544bd9e5c
-Size (bluez-4.11.tar.gz) = 916884 bytes
+SHA1 (bluez-4.17.tar.gz) = 33c171777b769ba0574a9df2c0e715c4e225d021
+RMD160 (bluez-4.17.tar.gz) = 4e887edc3de66a5dde7f214bf854a2c001560d65
+Size (bluez-4.17.tar.gz) = 924992 bytes
 SHA1 (bluez-hcidump-1.42.tar.gz) = b18e41cbf92c00cfd0331506312fa248b39a0eee
 RMD160 (bluez-hcidump-1.42.tar.gz) = c80eab49c75b8782d35e64eecfbc5a0e56214d4c
 Size (bluez-hcidump-1.42.tar.gz) = 150060 bytes
