@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3091 2008/11/07 12:37:32 plunky Exp $
+# $Id: Makefile,v 1.3092 2008/11/07 17:40:45 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -981,6 +981,7 @@ SUBDIR+=	manatee
 SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	mapserver
+SUBDIR+=	marathon-scenarios
 SUBDIR+=	marsyas
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
