@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/21 16:34:43 adrian_p Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/11/07 23:42:58 adrian_p Exp $
 include/avahi-common/address.h
 include/avahi-common/alternative.h
 include/avahi-common/cdecl.h
@@ -28,6 +28,9 @@ man/man5/avahi.service.5
 man/man8/avahi-daemon.8
 man/man8/avahi-dnsconfd.8
 man/man8/avahi-dnsconfd.action.8
+sbin/avahi-daemon
+sbin/avahi-dnsconfd
+share/avahi/avahi-service.dtd
 share/avahi/service-types
 share/doc/avahi/HACKING
 share/doc/avahi/INSTALL
@@ -39,7 +42,28 @@ share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
 share/examples/avahi/ssh.service
 share/examples/rc.d/avahidaemon
+share/locale/de/LC_MESSAGES/avahi.mo
+share/locale/en_AU/LC_MESSAGES/avahi.mo
+share/locale/en_CA/LC_MESSAGES/avahi.mo
+share/locale/en_GB/LC_MESSAGES/avahi.mo
+share/locale/en_NZ/LC_MESSAGES/avahi.mo
+share/locale/fr/LC_MESSAGES/avahi.mo
+share/locale/it/LC_MESSAGES/avahi.mo
+share/locale/pl/LC_MESSAGES/avahi.mo
+share/locale/pt_BR/LC_MESSAGES/avahi.mo
+share/locale/ru/LC_MESSAGES/avahi.mo
+share/locale/sr/LC_MESSAGES/avahi.mo
+share/locale/sr@latin/LC_MESSAGES/avahi.mo
+share/locale/zh_CN/LC_MESSAGES/avahi.mo
+@dirrm share/locale/en_NZ/LC_MESSAGES
+@dirrm share/locale/en_NZ
+@dirrm share/examples/avahi
 @dirrm share/doc/avahi
+@exec ${MKDIR} %D/share/avahi/introspection
+@dirrm share/avahi/introspection
+@dirrm share/avahi
+@exec ${MKDIR} %D/lib/avahi
+@dirrm lib/avahi
 @dirrm include/avahi-core
 @dirrm include/avahi-common
 @unexec ${RMDIR} %D/etc/avahi/services 2>/dev/null || ${TRUE}
