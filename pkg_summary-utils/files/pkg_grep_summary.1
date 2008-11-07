@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.6 2008/11/06 23:52:39 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.7 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_GREP_SUMMARY 1 "Jan 29, 2008" "" ""
 .SH NAME
 pkg_grep_summary \- tool for grepping pkgsrc summary file
@@ -37,16 +48,16 @@ outputs summaries in which
 .B "field"
 is either empty or absent
 .SH EXAMPLES
-.BD
-  pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
-        < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\\//' \\
-        < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/' \\
-        < /usr/pkgsrc/pkg_src_summary.txt
-  pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
-        < /usr/pkgsrc/pkg_src_summary.txt
-.ED
+.VB
+pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
+      < /usr/pkgsrc/packages/pkg_summary.txt
+pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\\//' \\
+      < /usr/pkgsrc/packages/pkg_summary.txt
+pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/' \\
+      < /usr/pkgsrc/pkg_src_summary.txt
+pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
+      < /usr/pkgsrc/pkg_src_summary.txt
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7),
 .BR pkg_summary(5)

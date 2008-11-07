@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.15 2008/11/06 23:19:36 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.16 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_SRC_SUMMARY 1 "Jan 29, 2008" "" ""
 .SH NAME
 pkg_src_summary \- build summary information for source packages
@@ -79,21 +90,21 @@ A number of packages per slave that are built at once, defaults to 10.
 This variable specifies default options to be placed in front of
 any explicit options.
 .SH EXAMPLES
-.BD
- pkg_src_summary wip/dict-server wip/dict-mueller7 wip/dict-client
- printf 'wip/dict-server\\nwip/dict-client\\n' | pkg_src_summary
- env BMAKE=/usr/pkg/bin/bmake \\ 
-    PSS_SLAVES='host1 host2' \\ 
-    PSS_TRANSPORT=/usr/bin/ssh \\ 
-    /usr/pkg/bin/pkg_src_summary \\ 
-           -f 'PKGNAME PKGPATH DEPENDS BUILD_DEPENDS' \\ 
-           < /tmp/packages.txt \\ 
- pkg_list_all_pkgs | env PSS_SLAVES='+6' pkg_src_summary
- env PSS_OPTIONS=-p pkg_update_src_summary /path/to/pkg_src_summary.txt
- pkg_src_summary -a CVS_CHECKSUM x11/xxkb wip/distbb
- pkg_src_summary -r LICENSE,PLIST,DESCR x11/xxkb wip/distbb
- pkg_src_summary -m lang/lua www/php-apc www/ap2-python
-.ED
+.VB
+pkg_src_summary wip/dict-server wip/dict-mueller7 wip/dict-client
+printf 'wip/dict-server\\nwip/dict-client\\n' | pkg_src_summary
+env BMAKE=/usr/pkg/bin/bmake \\ 
+   PSS_SLAVES='host1 host2' \\ 
+   PSS_TRANSPORT=/usr/bin/ssh \\ 
+   /usr/pkg/bin/pkg_src_summary \\ 
+          -f 'PKGNAME PKGPATH DEPENDS BUILD_DEPENDS' \\ 
+          < /tmp/packages.txt \\ 
+pkg_list_all_pkgs | env PSS_SLAVES='+6' pkg_src_summary
+env PSS_OPTIONS=-p pkg_update_src_summary /path/to/pkg_src_summary.txt
+pkg_src_summary -a CVS_CHECKSUM x11/xxkb wip/distbb
+pkg_src_summary -r LICENSE,PLIST,DESCR x11/xxkb wip/distbb
+pkg_src_summary -m lang/lua www/php-apc www/ap2-python
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .B pkg_summary(5)

@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_update_src_summary.1,v 1.11 2008/11/06 23:33:33 cheusov Exp $
+.\"	$NetBSD: pkg_update_src_summary.1,v 1.12 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_UPDATE_SRC_SUMMARY 1 "Jan 29, 2008" "" ""
 .SH NAME
 pkg_update_src_summary \- incrementally updates source pkg_summary
@@ -45,7 +56,9 @@ path to pkgsrc friendly make utility, defaults to make
 .B PSS_OPTIONS
 passed to pkg_src_summary subprocesses
 .SH EXAMPLES
+.VB
 pkg_update_src_summary /usr/pkgsrc/pkg_src_summary.txt
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_cmp_summary(1)

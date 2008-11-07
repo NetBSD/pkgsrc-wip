@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_update_summary.1,v 1.5 2008/11/06 22:42:12 cheusov Exp $
+.\"	$NetBSD: pkg_update_summary.1,v 1.6 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2007 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_UPDATE_SUMMARY 1 "Aug 2, 2007" "" ""
 .SH NAME
 pkg_update_summary \- update, or create a summary file (pkg_summary(5))
@@ -51,10 +62,10 @@ Solaris's test command does not like option -nt, defaults to 'test'
 .B PKG_INFO_CMD
 Path to pkg_info command, defaults to 'pkg_info'
 .SH EXAMPLES
-.BD
- pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All
- pkg_update_summary /dir/pkg_summary.gz /dir 'gzip -dc' 'gzip -c'
-.ED
+.VB
+pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All
+pkg_update_summary /dir/pkg_summary.gz /dir 'gzip -dc' 'gzip -c'
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5)

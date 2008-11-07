@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_micro_src_summary.1,v 1.8 2008/11/06 22:21:57 cheusov Exp $
+.\"	$NetBSD: pkg_micro_src_summary.1,v 1.9 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_MICRO_SRC_SUMMARY 1 "Jan 29, 2008" "" ""
 .SH NAME
 pkg_micro_src_summary \- build micro summary for source packages
@@ -41,10 +52,10 @@ pkgsrc root directory, defaults to /usr/pkgsrc
 .B BMAKE
 path to pkgsrc friendly make utility, defaults to make
 .SH EXAMPLES
-.BD
- pkg_micro_src_summary wip/dict-server wip/dict-mueller7 x11/xxkb
- printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_micro_src_summary
-.ED
+.VB
+pkg_micro_src_summary wip/dict-server wip/dict-mueller7 x11/xxkb
+printf 'wip/dict-server\\ntextproc/dictem\\n' | pkg_micro_src_summary
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_src_summary(1)

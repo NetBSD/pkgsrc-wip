@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_refresh_summary.1,v 1.4 2008/11/06 22:27:22 cheusov Exp $
+.\"	$NetBSD: pkg_refresh_summary.1,v 1.5 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_REFRESH_SUMMARY 1 "Jan 29, 2008" "" ""
 .SH NAME
 pkg_refresh_summary \- refreshes the pkg_summary
@@ -18,9 +29,9 @@ an information only about newest version.
 .BR "-h|--help"
 display help message
 .SH EXAMPLES
-.BD
- pkg_refresh_summary /usr/pkgsrc/packages/pkg_summary.txt
-.ED
+.VB
+pkg_refresh_summary /usr/pkgsrc/packages/pkg_summary.txt
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,

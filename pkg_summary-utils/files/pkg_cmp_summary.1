@@ -1,8 +1,19 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.9 2008/11/06 23:02:18 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.10 2008/11/07 17:55:46 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
 .\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
 .TH PKG_CMP_SUMMARY 1 "Feb 10, 2008" "" ""
 .SH NAME
 pkg_cmp_summary \- compares two summary files (pkg_summary(5) format)
@@ -17,11 +28,11 @@ Actually only PKGNAME fields (and optionally PKGPATH) are used
 for comparison.
 .P
 Format of the results:
-.br
+.VB
   <R> [PKGPATH] <PKGBASE> <VER1> <VER2>
-.br
+.VE
 where R is
-.br
+.VB
   -     present in the first file but absent in the second one (disappears)
   +     absent in the first file but present in the second one (appears/new)
   <NUM> more than one package with the same PKGBASE is in the first file
@@ -31,7 +42,7 @@ where R is
   ?     versions are incomparable (incorrect version, for example)
   !     versions are not equal (versions themselves are the same but
            CVS_CHECKSUMs are different)
-.br
+.VE
 .P
 PKGBASE is PKGNAME with version stripped,
 VER1 and VER2 are package versions.
