@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/07/29 10:27:12 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/07 12:49:21 plunky Exp $
 
 DISTNAME=		netbt-hcidump-1.42
 CATEGORIES=		sysutils
-MASTER_SITES=		http://bluez.sourceforge.net/download/
+MASTER_SITES=		http://bluez.sourceforge.net/download/	\
+			http://www.kernel.org/pub/linux/bluetooth/
 DISTFILES=		bluez-hcidump-1.42.tar.gz	\
-			bluez-libs-3.36.tar.gz
+			bluez-4.11.tar.gz
 
 MAINTAINER=		plunky@rya-online.net
 HOMEPAGE=		http://www.bluez.org/
@@ -16,7 +17,7 @@ CONFLICTS+=		hcidump-[0-9]* bluez-hcidump-[0-9]*
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
 WRKSRC=			${WRKDIR}/bluez-hcidump-1.42
-LIBSRC=			${WRKDIR}/bluez-libs-3.36
+LIBSRC=			${WRKDIR}/bluez-4.11
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hcidump
@@ -27,7 +28,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
-CPPFLAGS+=		-DINET6
+CPPFLAGS+=	-DINET6
 .endif
 
 CPPFLAGS+=	-DVERSION=\""1.42-netbt"\"
@@ -40,7 +41,7 @@ post-extract:
 	cp ${LIBSRC}/include/hci.h ${WRKSRC}/bluetooth
 	cp ${LIBSRC}/include/hci_lib.h ${WRKSRC}/bluetooth
 	cp ${LIBSRC}/include/l2cap.h ${WRKSRC}/bluetooth
-	cp ${LIBSRC}/src/bluetooth.c ${WRKSRC}/src/bt_lib.c
-	cp ${LIBSRC}/src/hci.c ${WRKSRC}/src/hci_lib.c
+	cp ${LIBSRC}/lib/bluetooth.c ${WRKSRC}/src/bt_lib.c
+	cp ${LIBSRC}/lib/hci.c ${WRKSRC}/src/hci_lib.c
 
 .include "../../mk/bsd.pkg.mk"
