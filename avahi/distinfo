@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.6 2007/10/22 07:40:45 adrian_p Exp $
+$NetBSD: distinfo,v 1.7 2008/11/07 22:53:05 adrian_p Exp $
 
-SHA1 (avahi-0.6.19.tar.gz) = 367322064a5dd66a0e69c75df9407ab3518aebdc
-RMD160 (avahi-0.6.19.tar.gz) = 15ae4baaa55f0020422552994a8d1ef33935b065
-Size (avahi-0.6.19.tar.gz) = 973381 bytes
+SHA1 (avahi-0.6.23.tar.gz) = 54a0d1944e43805886aafccaf5cc3ec567f5cc9e
+RMD160 (avahi-0.6.23.tar.gz) = cdb24199bb9d48eba0a98097b4fe5aee94b8367c
+Size (avahi-0.6.23.tar.gz) = 1104410 bytes
 SHA1 (patch-aa) = a7ef1cd3ad4ecdbb0668b544f7ea1fc4497c4dce
-SHA1 (patch-ab) = c733319265320b89c717be51f656a3c25da201cc
-SHA1 (patch-ac) = 808960c29beeb5bf8ed6404f762f4cd930c5dda7
-SHA1 (patch-ad) = 23bb347eb148d71f852f85541281245283b2f52c
+SHA1 (patch-ac) = 0484dc5e663fd299f46d15c283fb6fde4aab3537
+SHA1 (patch-ad) = 9966ae9fd0d715fa735efc3b92b2cabe6de53b48
+SHA1 (patch-ae) = ec99b721253b0181ae12ab392d98e79ede30ddba
+SHA1 (patch-af) = 57a788ca492f15c0e05870ea5eb6c4048b30b9c5
+SHA1 (patch-ag) = 9e533fd4e0777c25b49affd655e2a51b6aa06517

@@ -1,4 +1,4 @@
-@comment
+@comment $NetBSD: PLIST.dbusgtk,v 1.2 2008/11/07 22:53:05 adrian_p Exp $
 bin/bssh
 bin/bvnc
 include/avahi-ui/avahi-ui.h

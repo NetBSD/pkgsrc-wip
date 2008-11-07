@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/11/01 14:29:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/07 22:53:05 adrian_p Exp $
 
-DISTNAME=		avahi-0.6.19
+DISTNAME=		avahi-0.6.23
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -13,7 +13,7 @@ USE_DIRS+=		xdg-1.4
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake intltool
 
 PKGCONFIG_OVERRIDE+=	avahi-client.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
@@ -29,10 +29,12 @@ PKGCONFIG_OVERRIDE+=	avahi-ui.pc.in
 AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
-BUILD_DEFS=		VARBASE
+BUILD_DEFS=		VARBASE PKG_SYSCONFBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
+
+#DEPENDS+=		intltool>=0.35.0:../../textproc/intltool
 
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}::Avahi\ user:/nonexistent
 PKG_GROUPS=		${AVAHI_GROUP}
@@ -95,5 +97,6 @@ post-install:
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/libdaemon/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
