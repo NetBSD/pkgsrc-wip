@@ -37,7 +37,6 @@ Suggested package updates
 	o guichan-0.8.1
 	o guitone-0.9
 	o hu-go-2.11
-	o ion3-20080825
 	o kino-1.0.0
 	o libexosip-3.2.0
 	o libgadu-1.8.2
@@ -68,12 +67,10 @@ Suggested package updates
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-2.0
-	o rasqal-0.9.16
 	o rdup-0.6.1
-	o redland-1.0.8.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.18.5
+	o rsyslog-3.20.0
 	o scite-1.77
 	o sdlmame-0.128
 	o sdlmess-0.128
