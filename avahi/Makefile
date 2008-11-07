@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/07 22:53:05 adrian_p Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/07 23:17:57 adrian_p Exp $
 
 DISTNAME=		avahi-0.6.23
 CATEGORIES=		net
@@ -14,6 +14,7 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		pkg-config gmake intltool
+MAKE_JOBS_SAFE=		no
 
 PKGCONFIG_OVERRIDE+=	avahi-client.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
@@ -34,8 +35,6 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
 
-#DEPENDS+=		intltool>=0.35.0:../../textproc/intltool
-
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}::Avahi\ user:/nonexistent
 PKG_GROUPS=		${AVAHI_GROUP}
 
@@ -52,7 +51,7 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dnsconfd.action \
 CONF_FILES+=		${PREFIX}/share/examples/avahi/ssh.service \
 			${PKG_SYSCONFDIR}/services/ssh.service
 
-CONFIGURE_ARGS+=	--with-distro=netbsd
+# CONFIGURE_ARGS+=	--with-distro=netbsd
 CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
