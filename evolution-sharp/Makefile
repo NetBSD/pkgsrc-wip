@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/11/08 00:32:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/08 00:33:11 thomasklausner Exp $
 #
 
 DISTNAME=	evolution-sharp-0.18.1
@@ -10,10 +10,11 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.18/}
 COMMENT=	.NET language binding for various Evolution libraries
 
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	evolution-sharp.pc.in
 USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
 
 .include "../../lang/mono/buildlink3.mk"
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.0
