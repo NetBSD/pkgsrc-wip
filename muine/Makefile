@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/10/29 13:46:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/08 09:34:16 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.8.10
@@ -13,7 +13,9 @@ GNU_CONFIGURE=		YES
 USE_DIRS=		xdg-1.4
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		bash:run gmake intltool pkg-config
+
+REPLACE_BASH=		src/muine.in
 
 GCONF_SCHEMAS=		muine.schemas
 
