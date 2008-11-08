@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2007/09/05 21:47:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2008/11/08 18:14:26 milosn Exp $
 
 CRYSTAL_VERSION=	3.0.4
 DISTNAME=		fvwm-crystal-${CRYSTAL_VERSION}
 CATEGORIES=		wm
 MASTER_SITES=		http://download.gna.org/fvwm-crystal/${CRYSTAL_VERSION}/
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://fvwm-crystal.org/
@@ -30,11 +30,8 @@ SUBST_MESSAGE.bash=	Fixing harcoded bash path
 DEPENDS+=	fvwm>=2.5.14:../../wm/fvwm-devel
 DEPENDS+=	trayer>=1.0:../../wip/trayer
 DEPENDS+=	ImageMagick>=6.2.9.1:../../graphics/ImageMagick
-DEPENDS+=	hsetroot>=1.0.2:../../x11/hsetroot
-DEPENDS+=	aterm>=1.0.0:../../x11/aterm
 DEPENDS+=	bash>=3.0:../../shells/bash
-DEPENDS+=	musicpd>=0.11.5:../../audio/musicpd
-DEPENDS+=	mpc>=0.11.2:../../audio/mpc
+.include "options.mk"
 
 
 do-build:
