@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2008/10/14 08:36:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.70 2008/11/08 00:38:43 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -796,22 +796,18 @@ share/emacs/${PKGVERSION}/etc/refcards/survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/vipcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/viperCard.tex
 share/emacs/${PKGVERSION}/etc/rgb.txt
+share/emacs/${PKGVERSION}/etc/schema/README
 share/emacs/${PKGVERSION}/etc/schema/calstbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbcalstbl.rnc
-share/emacs/${PKGVERSION}/etc/schema/dbdyntbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbhier.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbnotn.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbpool.rnc
-share/emacs/${PKGVERSION}/etc/schema/dbsoextbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/dbstart.rnc
-share/emacs/${PKGVERSION}/etc/schema/docbk-dyntbl.rnc
-share/emacs/${PKGVERSION}/etc/schema/docbk-soextbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/docbook.rnc
 share/emacs/${PKGVERSION}/etc/schema/locate.rnc
 share/emacs/${PKGVERSION}/etc/schema/rdfxml.rnc
 share/emacs/${PKGVERSION}/etc/schema/relaxng.rnc
 share/emacs/${PKGVERSION}/etc/schema/schemas.xml
-share/emacs/${PKGVERSION}/etc/schema/soextbl.rnc
 share/emacs/${PKGVERSION}/etc/schema/xhtml-applet.rnc
 share/emacs/${PKGVERSION}/etc/schema/xhtml-attribs.rnc
 share/emacs/${PKGVERSION}/etc/schema/xhtml-base.rnc
@@ -1591,7 +1587,6 @@ share/emacs/${PKGVERSION}/lisp/eshell/esh-ext.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-groups.el
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-io.elc
-share/emacs/${PKGVERSION}/lisp/eshell/esh-maint.el
 share/emacs/${PKGVERSION}/lisp/eshell/esh-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-mode.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-module.el.gz
@@ -2493,6 +2488,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/resume.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/resume.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rnews.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rnews.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/rnewspost.el.gz
@@ -2858,8 +2855,6 @@ share/emacs/${PKGVERSION}/lisp/replace.el.gz
 share/emacs/${PKGVERSION}/lisp/replace.elc
 share/emacs/${PKGVERSION}/lisp/reposition.el.gz
 share/emacs/${PKGVERSION}/lisp/reposition.elc
-share/emacs/${PKGVERSION}/lisp/resume.el.gz
-share/emacs/${PKGVERSION}/lisp/resume.elc
 share/emacs/${PKGVERSION}/lisp/reveal.el.gz
 share/emacs/${PKGVERSION}/lisp/reveal.elc
 share/emacs/${PKGVERSION}/lisp/rfn-eshadow.el.gz
