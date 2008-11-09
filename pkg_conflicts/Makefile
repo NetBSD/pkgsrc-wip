@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/11/03 21:59:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/09 21:06:20 cheusov Exp $
 
-DISTNAME=	pkg_conflicts-0.2.0
+DISTNAME=	pkg_conflicts-0.3.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
