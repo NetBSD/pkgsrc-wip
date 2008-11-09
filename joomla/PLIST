@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/11/09 10:45:12 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/09 10:50:47 marttikuparinen Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -4374,7 +4374,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/images/smilies
 @dirrm share/joomla/images/banners
 @dirrm share/joomla/images/M_images
-@dirrm share/joomla/images
 @dirrm share/joomla/components/com_wrapper/views/wrapper/tmpl
 @dirrm share/joomla/components/com_wrapper/views/wrapper
 @dirrm share/joomla/components/com_wrapper/views
@@ -4495,7 +4494,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/administrator/modules/mod_custom
 @dirrm share/joomla/administrator/modules
 @dirrm share/joomla/administrator/language/en-GB
-@dirrm share/joomla/administrator/language
 @dirrm share/joomla/administrator/includes/pcl
 @dirrm share/joomla/administrator/includes/js/ThemeOffice
 @dirrm share/joomla/administrator/includes/js
@@ -4642,4 +4640,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/administrator
 @dirrm share/examples/joomla
 @unexec ${RMDIR} %D/share/joomla/language 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/joomla/images 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/joomla/administrator/language 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/joomla 2>/dev/null || ${TRUE}
