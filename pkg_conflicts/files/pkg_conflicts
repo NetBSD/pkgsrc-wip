@@ -32,6 +32,10 @@ usage (){
 usage: pkg_conflicts [OPTIONS] pkgpath1 [pkgpath2...]
 OPTIONS:
  -h|--help         display this help
+ 
+BUG:
+ pkg_conflicts completely ignores "versions" in CONFLICTS values, i.e.
+ <X.Y, >=X.Y.Z etc. Results may be not fully correct. Recheck manually.
 EOF
 }
 

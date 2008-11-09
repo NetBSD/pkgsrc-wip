@@ -27,6 +27,10 @@ usage (){
 usage: pkg_all_conflicts [OPTIONS] pkg_src_summary.txt
 OPTIONS:
   -h|--help       display this screen
+
+BUG: 
+ pkg_all_conflicts completely ignores "versions" in CONFLICTS values, i.e.
+ <X.Y, >=X.Y.Z etc. Results may be not fully correct. Recheck manually.
 EOF
 }
 
