@@ -182,24 +182,38 @@ check_conflicts (){
 
 # show at least one file common file
 enrich_conflicts_info (){
-    awk '
-FILENAME != "-" {
+    awk -v pkg2conflict_fn="$pkg2conflict_fn" '
+FILENAME == pkg2conflict_fn {
    fn [$1, $2] = $3
+   next
+}
+FILENAME != "-" {
+   # here we read from pkg_src_summary.txt
+   if (/^MAINTAINER=/){
+      maintainer = substr($0, 12)
+   }else if (/^PKGNAME=/){
+      pkgbase = substr($0, 9)
+      sub(/-[^-]*$/, "", pkgbase)
+   }else if (NF == 0){
+      pkg2m [pkgbase] = maintainer
+      maintainer = pkgbase = ""
+   }
    next
 }
 $1 ~ /^---/ {
    p1 = $2
+   $2 = $2 " ( " pkg2m [$2] " ) "
 }
 $1 == "Missed:" {
    $0 = $0 " ( " fn [p1, $2] " )"
 }
 { print $0 }
-' $pkg2conflict_fn -
+' $pkg2conflict_fn "$@" -
 }
 
 # main
 check_conflicts "$@" > $conflicts_fn
-enrich_conflicts_info < $conflicts_fn
+enrich_conflicts_info "$@" < $conflicts_fn
 
 # for debugging
 #makefile_conflicts "$@"
