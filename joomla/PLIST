@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/09 10:52:41 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/11/09 10:55:51 marttikuparinen Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -4637,7 +4637,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/administrator/components
 @dirrm share/joomla/administrator/cache
 @dirrm share/joomla/administrator/backups
-@dirrm share/joomla/administrator
 @dirrm share/examples/joomla
 @unexec ${RMDIR} %D/share/joomla/language 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/joomla/images 2>/dev/null || ${TRUE}
