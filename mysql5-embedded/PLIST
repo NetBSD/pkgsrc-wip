@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2008/11/09 20:00:22 mwdavies Exp $
+bin/mysql_client_test_embedded
+bin/mysqltest_embedded
+lib/mysql/libmysqld.a
+lib/mysql/libmysqld.so
+lib/mysql/libmysqld.so.0
+lib/mysql/libmysqld.so.0.0.1
+@unexec ${RMDIR} %D/lib/mysql 2>/dev/null || ${TRUE}
