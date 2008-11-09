@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/08 21:16:10 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/09 22:30:28 gschwarz Exp $
 
 DISTNAME=	dns2tcp-0.4.3
 CATEGORIES=	net
@@ -10,6 +10,6 @@ COMMENT=	Dns2tcp is a tool for relaying TCP connections over DNS
 
 GNU_CONFIGURE=	YES
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
