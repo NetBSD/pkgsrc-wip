@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2006/02/12 14:07:28 rillig Exp $
+$NetBSD: patch-configure,v 1.2 2008/11/09 15:07:37 shattered Exp $
 
 --- configure.orig	2004-01-29 18:48:04.000000000 +0100
 +++ configure	2006-02-12 14:49:45.000000000 +0100
@@ -18,12 +18,3 @@ $NetBSD: patch-configure,v 1.1 2006/02/12 14:07:28 rillig Exp $
        # FIXME -- no need to abort building the whole package
        # Can't build mountlist.c or anything that needs its functions
      fi
-@@ -10165,6 +10163,8 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
