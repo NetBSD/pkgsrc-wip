@@ -1,10 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2008/09/06 23:27:13 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2008/11/09 20:09:03 mwdavies Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
-PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libnjb libvisual mp3tunes mysql plasma
-PKG_SUGGESTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes plasma
+PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libnjb libvisual mp3tunes
+PKG_SUGGESTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes
 
-# XXX: mysql doesn't work yet, probably needs more cmake magic
 # XXX: libnjb is currently not supported
 
 # XXX: not packaged yet
@@ -41,13 +40,4 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.6.0nb1
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 # XXX: make sure qt4-libs have glib enabled
-.endif
-
-.if !empty(PKG_OPTIONS:Mmysql)
-MYSQL_VERSIONS_ACCEPTED=	41
-.include "../../mk/mysql.buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mplasma)
-.include "../../wip/kdebase-workspace4/buildlink3.mk"
 .endif

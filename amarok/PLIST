@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2008/08/25 12:23:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/09 20:09:03 mwdavies Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
 bin/amarokmp3tunesharmonydaemon
 lib/kde4/amarok_containment_context.so
 lib/kde4/amarok_context_applet_albums.so
-lib/kde4/amarok_context_applet_cloud.so
 lib/kde4/amarok_context_applet_currenttrack.so
 lib/kde4/amarok_context_applet_lastfmevents.so
 lib/kde4/amarok_context_applet_lyrics.so
@@ -32,9 +31,14 @@ lib/kde4/kcm_amarok_service_magnatunestore.so
 lib/kde4/kcm_amarok_service_mp3tunes.so
 lib/kde4/libamarok_collection-daapcollection.so
 lib/kde4/libamarok_collection-mtpcollection.so
-lib/kde4/libamarok_collection-nepomukcollection.so
 lib/kde4/libamarok_collection-sqlcollection.so
-lib/kde4/plugins/script/amarok/qtscript_debug/debug/__init__.js
+lib/kde4/plugins/script/libqtscript_core.so
+lib/kde4/plugins/script/libqtscript_gui.so
+lib/kde4/plugins/script/libqtscript_network.so
+lib/kde4/plugins/script/libqtscript_sql.so
+lib/kde4/plugins/script/libqtscript_uitools.so
+lib/kde4/plugins/script/libqtscript_xml.so
+lib/libamarok_service_liblastfm.so
 lib/libamarok_taglib.so
 lib/libamarok_taglib.so.1
 lib/libamarok_taglib.so.1.0.0
@@ -59,15 +63,8 @@ share/icons/hicolor/22x22/apps/amarok.png
 share/icons/hicolor/32x32/apps/amarok.png
 share/icons/hicolor/48x48/apps/amarok.png
 share/icons/hicolor/64x64/apps/amarok.png
-share/kde/apps/amarok/data/Cool-Streams.xml
-share/kde/apps/amarok/data/ball.png
-share/kde/apps/amarok/data/dot.png
-share/kde/apps/amarok/data/equalizer_presets.xml
-share/kde/apps/amarok/data/grid.png
-share/kde/apps/amarok/data/magnatune_logo.png
-share/kde/apps/amarok/data/service_info_frontpage.html
-share/kde/apps/amarok/data/wirl1.png
-share/kde/apps/amarok/data/wirl2.png
+share/kde/apps/amarok/data/ServiceInfoCustomStyle.css
+share/kde/apps/amarok/data/WikipediaCustomStyle.css
 share/kde/apps/amarok/icons/hicolor/128x128/status/audio-volume-high-amarok.png
 share/kde/apps/amarok/icons/hicolor/128x128/status/audio-volume-low-amarok.png
 share/kde/apps/amarok/icons/hicolor/128x128/status/audio-volume-medium-amarok.png
@@ -114,8 +111,11 @@ share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-ampache-amarok.p
 share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-jamendo-amarok.png
 share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-jamendo-black-amarok.png
 share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-lastfm-amarok.png
+share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-librivox-amarok.png
 share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-magnatune-amarok.png
 share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-mp3tunes-amarok.png
+share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-opml-amarok.png
+share/kde/apps/amarok/icons/hicolor/16x16/actions/view-services-scripted-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/amarok_artist.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/amarok_change_language.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/amarok_clock.png
@@ -137,6 +137,7 @@ share/kde/apps/amarok/icons/hicolor/22x22/actions/download-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/edit-redo-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/edit-undo-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/emblem-favorite-amarok.png
+share/kde/apps/amarok/icons/hicolor/22x22/actions/internet-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/media-album-cover-manager-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/media-album-repeat-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/media-album-shuffle-amarok.png
@@ -156,8 +157,11 @@ share/kde/apps/amarok/icons/hicolor/22x22/actions/view-media-visualization-amaro
 share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-jamendo-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-jamendo-black-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-lastfm-amarok.png
+share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-librivox-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-magnatune-amarok.png
 share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-mp3tunes-amarok.png
+share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-opml-amarok.png
+share/kde/apps/amarok/icons/hicolor/22x22/actions/view-services-scripted-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/amarok_artist.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/amarok_change_language.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/amarok_clock.png
@@ -180,12 +184,14 @@ share/kde/apps/amarok/icons/hicolor/32x32/actions/download-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/edit-redo-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/edit-undo-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/emblem-favorite-amarok.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/media-album-cover.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-album-cover-manager-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-album-repeat-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-album-shuffle-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-playlist-repeat-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-playlist-repeat-off-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-playlist-shuffle-off-amarok.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/media-album-track.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-track-add-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-track-edit-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/media-track-queue-amarok.png
@@ -200,8 +206,11 @@ share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-ampache-amarok.p
 share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-jamendo-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-jamendo-black-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-lastfm-amarok.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-librivox-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-magnatune-amarok.png
 share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-mp3tunes-amarok.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-opml-amarok.png
+share/kde/apps/amarok/icons/hicolor/32x32/actions/view-services-scripted-amarok.png
 share/kde/apps/amarok/icons/hicolor/48x48/actions/amarok_artist.png
 share/kde/apps/amarok/icons/hicolor/48x48/actions/amarok_change_language.png
 share/kde/apps/amarok/icons/hicolor/48x48/actions/amarok_clock.png
@@ -247,13 +256,6 @@ share/kde/apps/amarok/icons/hicolor/48x48/actions/view-services-magnatune-amarok
 share/kde/apps/amarok/icons/hicolor/48x48/actions/view-services-mp3tunes-amarok.png
 share/kde/apps/amarok/images/FilenameLayoutDialogHint.png
 share/kde/apps/amarok/images/amarok_icon.svg
-share/kde/apps/amarok/images/back_stars_grey.png
-share/kde/apps/amarok/images/currenttrack_pause.png
-share/kde/apps/amarok/images/currenttrack_play.png
-share/kde/apps/amarok/images/currenttrack_repeat.png
-share/kde/apps/amarok/images/currenttrack_repeat_small.png
-share/kde/apps/amarok/images/currenttrack_stop.png
-share/kde/apps/amarok/images/currenttrack_stop_small.png
 share/kde/apps/amarok/images/default-theme.svg
 share/kde/apps/amarok/images/emblem-ampache.png
 share/kde/apps/amarok/images/emblem-default.png
@@ -261,39 +263,35 @@ share/kde/apps/amarok/images/emblem-jamendo.png
 share/kde/apps/amarok/images/emblem-lastfm.png
 share/kde/apps/amarok/images/emblem-magnatune.png
 share/kde/apps/amarok/images/emblem-mp3tunes.png
+share/kde/apps/amarok/images/emblem-scripted.png
 share/kde/apps/amarok/images/lastfm-default-cover.png
 share/kde/apps/amarok/images/loading1.png
 share/kde/apps/amarok/images/loading2.png
-share/kde/apps/amarok/images/menu_sidepixmap.png
-share/kde/apps/amarok/images/more_albums.png
-share/kde/apps/amarok/images/musicbrainz.png
 share/kde/apps/amarok/images/navigation_arrows.svg
 share/kde/apps/amarok/images/nocover.png
 share/kde/apps/amarok/images/pud_items.svg
-share/kde/apps/amarok/images/sbinner_stars.png
-share/kde/apps/amarok/images/service_info_frontpage_bg.png
-share/kde/apps/amarok/images/service_info_frontpage_logo.png
-share/kde/apps/amarok/images/service_info_frontpage_shadow.png
-share/kde/apps/amarok/images/shadow_albumcover.png
 share/kde/apps/amarok/images/smallstar.png
-share/kde/apps/amarok/images/sources.svgz
 share/kde/apps/amarok/images/splash_screen.jpg
 share/kde/apps/amarok/images/star.png
+share/kde/apps/amarok/images/volume_icon.png
 share/kde/apps/amarok/images/web_applet_background.svg
-share/kde/apps/amarok/scripts/qtscript_debug/main.js
-share/kde/apps/amarok/scripts/qtscript_debug/script.spec
+share/kde/apps/amarok/scripts/librivox_service/COPYING
+share/kde/apps/amarok/scripts/librivox_service/LibrivoxLogo.png
+share/kde/apps/amarok/scripts/librivox_service/LibrivoxService.html
+share/kde/apps/amarok/scripts/librivox_service/README
+share/kde/apps/amarok/scripts/librivox_service/main.js
+share/kde/apps/amarok/scripts/librivox_service/script.spec
+share/kde/apps/amarok/scripts/lyrics_lyricwiki/main.js
+share/kde/apps/amarok/scripts/lyrics_lyricwiki/script.spec
 share/kde/apps/amarok/scripts/radio_station_service/main.js
 share/kde/apps/amarok/scripts/radio_station_service/script.spec
 share/kde/apps/amarok/scripts/script_console/main.js
 share/kde/apps/amarok/scripts/script_console/script.spec
-share/kde/apps/amarok/scripts/webcontrol/main.js
-share/kde/apps/amarok/scripts/webcontrol/script.spec
 share/kde/apps/desktoptheme/Amarok-Mockup/colors
 share/kde/apps/desktoptheme/Amarok-Mockup/widgets/background.svg
 share/kde/apps/desktoptheme/amarok-default.desktop
 share/kde/apps/desktoptheme/default/widgets/amarok-albums.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-background.svg
-share/kde/apps/desktoptheme/default/widgets/amarok-cloud.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-containment-header.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-currenttrack.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-lastfm.svg
@@ -308,7 +306,6 @@ share/kde/config/amarok.knsrc
 share/kde4/services/ServiceMenus/amarok_append.desktop
 share/kde4/services/amarok-containment-context.desktop
 share/kde4/services/amarok-context-applet-albums.desktop
-share/kde4/services/amarok-context-applet-cloud.desktop
 share/kde4/services/amarok-context-applet-currenttrack.desktop
 share/kde4/services/amarok-context-applet-lastfmevents.desktop
 share/kde4/services/amarok-context-applet-lyrics.desktop
@@ -324,7 +321,6 @@ share/kde4/services/amarok-data-engine-service.desktop
 share/kde4/services/amarok-data-engine-wikipedia.desktop
 share/kde4/services/amarok_collection-daapcollection.desktop
 share/kde4/services/amarok_collection-mtpcollection.desktop
-share/kde4/services/amarok_collection-nepomukcollection.desktop
 share/kde4/services/amarok_collection-sqlcollection.desktop
 share/kde4/services/amarok_service_ampache.desktop
 share/kde4/services/amarok_service_ampache_config.desktop
@@ -337,15 +333,61 @@ share/kde4/services/amarok_service_mp3tunes.desktop
 share/kde4/services/amarok_service_mp3tunes_config.desktop
 share/kde4/services/amarok_service_opmldirectory.desktop
 share/kde4/services/amarok_service_shoutcast.desktop
+share/kde4/servicetypes/amarok_codecinstall.desktop
 share/kde4/servicetypes/amarok_context_applet.desktop
 share/kde4/servicetypes/amarok_data_engine.desktop
 share/kde4/servicetypes/amarok_plugin.desktop
+share/locale/ar/LC_MESSAGES/amarok.mo
+share/locale/be/LC_MESSAGES/amarok.mo
+share/locale/bg/LC_MESSAGES/amarok.mo
+share/locale/ca/LC_MESSAGES/amarok.mo
+share/locale/cs/LC_MESSAGES/amarok.mo
+share/locale/csb/LC_MESSAGES/amarok.mo
+share/locale/da/LC_MESSAGES/amarok.mo
+share/locale/de/LC_MESSAGES/amarok.mo
+share/locale/el/LC_MESSAGES/amarok.mo
+share/locale/eo/LC_MESSAGES/amarok.mo
+share/locale/es/LC_MESSAGES/amarok.mo
+share/locale/et/LC_MESSAGES/amarok.mo
+share/locale/eu/LC_MESSAGES/amarok.mo
+share/locale/fi/LC_MESSAGES/amarok.mo
+share/locale/fr/LC_MESSAGES/amarok.mo
+share/locale/ga/LC_MESSAGES/amarok.mo
+share/locale/gl/LC_MESSAGES/amarok.mo
+share/locale/he/LC_MESSAGES/amarok.mo
+share/locale/it/LC_MESSAGES/amarok.mo
+share/locale/ja/LC_MESSAGES/amarok.mo
+share/locale/km/LC_MESSAGES/amarok.mo
+share/locale/ko/LC_MESSAGES/amarok.mo
+share/locale/ku/LC_MESSAGES/amarok.mo
+share/locale/lt/LC_MESSAGES/amarok.mo
+share/locale/lv/LC_MESSAGES/amarok.mo
+share/locale/nb/LC_MESSAGES/amarok.mo
+share/locale/nds/LC_MESSAGES/amarok.mo
+share/locale/ne/LC_MESSAGES/amarok.mo
+share/locale/nl/LC_MESSAGES/amarok.mo
+share/locale/nn/LC_MESSAGES/amarok.mo
+share/locale/oc/LC_MESSAGES/amarok.mo
+share/locale/pa/LC_MESSAGES/amarok.mo
+share/locale/pl/LC_MESSAGES/amarok.mo
+share/locale/pt/LC_MESSAGES/amarok.mo
+share/locale/pt_BR/LC_MESSAGES/amarok.mo
+share/locale/ro/LC_MESSAGES/amarok.mo
+share/locale/ru/LC_MESSAGES/amarok.mo
+share/locale/se/LC_MESSAGES/amarok.mo
+share/locale/sk/LC_MESSAGES/amarok.mo
+share/locale/sv/LC_MESSAGES/amarok.mo
+share/locale/th/LC_MESSAGES/amarok.mo
+share/locale/tr/LC_MESSAGES/amarok.mo
+share/locale/uk/LC_MESSAGES/amarok.mo
+share/locale/zh_CN/LC_MESSAGES/amarok.mo
+share/locale/zh_TW/LC_MESSAGES/amarok.mo
 @dirrm share/kde/apps/desktoptheme/Amarok-Mockup/widgets
 @dirrm share/kde/apps/desktoptheme/Amarok-Mockup
-@dirrm share/kde/apps/amarok/scripts/webcontrol
 @dirrm share/kde/apps/amarok/scripts/script_console
 @dirrm share/kde/apps/amarok/scripts/radio_station_service
-@dirrm share/kde/apps/amarok/scripts/qtscript_debug
+@dirrm share/kde/apps/amarok/scripts/lyrics_lyricwiki
+@dirrm share/kde/apps/amarok/scripts/librivox_service
 @dirrm share/kde/apps/amarok/scripts
 @dirrm share/kde/apps/amarok/images
 @dirrm share/kde/apps/amarok/icons/hicolor/48x48/actions
@@ -360,10 +402,6 @@ share/kde4/servicetypes/amarok_plugin.desktop
 @dirrm share/kde/apps/amarok/icons/hicolor/128x128
 @dirrm share/kde/apps/amarok/icons/hicolor
 @dirrm share/kde/apps/amarok/icons
-@dirrm share/kde/apps/amarok/data
 @dirrm share/kde/apps/amarok
 @comment in strigi: @dirrm lib/strigi
-@dirrm lib/kde4/plugins/script/amarok/qtscript_debug/debug
-@dirrm lib/kde4/plugins/script/amarok/qtscript_debug
-@dirrm lib/kde4/plugins/script/amarok
 @comment in kdelibs4: dirrm lib/kde4/plugins/script

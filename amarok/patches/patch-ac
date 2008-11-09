@@ -1,15 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/08/12 12:07:39 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.2 2008/11/09 20:09:03 mwdavies Exp $
 
-Adapt for newer pkg-config support in cmake.
-
---- src/browsers/servicebrowser/mp3tunes/CMakeLists.txt.orig	2008-08-07 19:37:14.000000000 +0000
-+++ src/browsers/servicebrowser/mp3tunes/CMakeLists.txt
-@@ -24,7 +24,7 @@ if(OPENSSL_FOUND AND LIBXML2_FOUND AND C
+--- src/services/mp3tunes/CMakeLists.txt.orig	2008-10-31 14:02:07.000000000 +0000
++++ src/services/mp3tunes/CMakeLists.txt
+@@ -24,7 +24,7 @@ if(LIBXML2_FOUND AND CURL_FOUND)
                  ./harmonydaemon
                  ${GLIB2_INCLUDE_DIR}
                  ${GOBJECT_INCLUDE_DIR}
 -                ${LOUDMOUTH_INCLUDE_DIR}
 +                ${LOUDMOUTH_INCLUDE_DIRS}
              )
- 
-             set(amarok_service_mp3tunes_harmony_PART_SRCS
+             if(LIBGCRYPT_FOUND)
+                 add_definitions(-DHAVE_LIBGCRYPT)
