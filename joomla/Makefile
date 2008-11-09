@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/09/17 18:08:56 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.15 2008/11/09 10:45:12 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.7-Stable-Full_Package
 PKGNAME=	joomla-1.5.7
@@ -46,6 +46,7 @@ SUBST_SED.paths=	-e "s,@JOOMLADIR@,${JOOMLADIR},g"
 
 post-extract:
 	${CP} ${FILESDIR}/joomla.conf ${WRKDIR}/joomla.conf
+	${MV} ${WRKSRC}/installation ${WRKSRC}/installation.disabled
 
 do-install:
 	${INSTALL_DATA_DIR} ${JOOMLADIR}

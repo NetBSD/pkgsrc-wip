@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/17 16:58:43 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/11/09 10:45:12 marttikuparinen Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -1734,247 +1734,247 @@ share/joomla/includes/router.php
 share/joomla/includes/vcard.class.php
 share/joomla/index.php
 share/joomla/index2.php
-share/joomla/installation/favicon.ico
-share/joomla/installation/gpl.html
-share/joomla/installation/includes/application.php
-share/joomla/installation/includes/bigdump.php
-share/joomla/installation/includes/defines.php
-share/joomla/installation/includes/framework.php
-share/joomla/installation/includes/index.html
-share/joomla/installation/includes/js/index.html
-share/joomla/installation/includes/js/installation.js
-share/joomla/installation/includes/js/xajax.js
-share/joomla/installation/includes/js/xajaxCompress.php
-share/joomla/installation/includes/js/xajax_uncompressed.js
-share/joomla/installation/includes/router.php
-share/joomla/installation/includes/xajax/LICENSE.txt
-share/joomla/installation/includes/xajax/README.txt
-share/joomla/installation/includes/xajax/index.html
-share/joomla/installation/includes/xajax/xajax.inc.php
-share/joomla/installation/includes/xajax/xajaxResponse.inc.php
-share/joomla/installation/index.php
-share/joomla/installation/installer/controller.php
-share/joomla/installation/installer/helper.php
-share/joomla/installation/installer/index.html
-share/joomla/installation/installer/installer.php
-share/joomla/installation/installer/jajax.php
-share/joomla/installation/installer/models/index.html
-share/joomla/installation/installer/models/model.php
-share/joomla/installation/installer/views/index.html
-share/joomla/installation/installer/views/install/index.html
-share/joomla/installation/installer/views/install/view.php
-share/joomla/installation/language/be-BY/be-BY.ini
-share/joomla/installation/language/be-BY/be-BY.xml
-share/joomla/installation/language/be-BY/index.html
-share/joomla/installation/language/bg-BG/bg-BG.ini
-share/joomla/installation/language/bg-BG/bg-BG.xml
-share/joomla/installation/language/bg-BG/index.htm
-share/joomla/installation/language/bn-IN/bn-IN.ini
-share/joomla/installation/language/bn-IN/bn-IN.xml
-share/joomla/installation/language/bn-IN/index.html
-share/joomla/installation/language/bs-BA/bs-BA.ini
-share/joomla/installation/language/bs-BA/bs-BA.xml
-share/joomla/installation/language/bs-BA/index.html
-share/joomla/installation/language/ca-ES/ca-ES.ini
-share/joomla/installation/language/ca-ES/ca-ES.xml
-share/joomla/installation/language/ca-ES/index.htm
-share/joomla/installation/language/cs-CZ/cs-CZ.ini
-share/joomla/installation/language/cs-CZ/cs-CZ.xml
-share/joomla/installation/language/cs-CZ/index.html
-share/joomla/installation/language/da-DK/da-DK.ini
-share/joomla/installation/language/da-DK/da-DK.xml
-share/joomla/installation/language/da-DK/index.htm
-share/joomla/installation/language/de-AT/de-AT.ini
-share/joomla/installation/language/de-AT/de-AT.xml
-share/joomla/installation/language/de-AT/index.html
-share/joomla/installation/language/de-CH/de-CH.ini
-share/joomla/installation/language/de-CH/de-CH.xml
-share/joomla/installation/language/de-CH/index.htm
-share/joomla/installation/language/de-DE/de-DE.ini
-share/joomla/installation/language/de-DE/de-DE.xml
-share/joomla/installation/language/de-DE/index.htm
-share/joomla/installation/language/el-GR/el-GR.ini
-share/joomla/installation/language/el-GR/el-GR.xml
-share/joomla/installation/language/el-GR/index.htm
-share/joomla/installation/language/en-GB/en-GB.ini
-share/joomla/installation/language/en-GB/en-GB.xml
-share/joomla/installation/language/en-GB/index.html
-share/joomla/installation/language/en-US/en-US.ini
-share/joomla/installation/language/en-US/en-US.xml
-share/joomla/installation/language/en-US/index.htm
-share/joomla/installation/language/eo-XX/eo-XX.ini
-share/joomla/installation/language/eo-XX/eo-XX.xml
-share/joomla/installation/language/eo-XX/index.html
-share/joomla/installation/language/es-ES/es-ES.ini
-share/joomla/installation/language/es-ES/es-ES.xml
-share/joomla/installation/language/es-ES/index.htm
-share/joomla/installation/language/eu-ES/eu-ES.ini
-share/joomla/installation/language/eu-ES/eu-ES.xml
-share/joomla/installation/language/eu-ES/index.html
-share/joomla/installation/language/fa-IR/fa-IR.ini
-share/joomla/installation/language/fa-IR/fa-IR.xml
-share/joomla/installation/language/fa-IR/index.html
-share/joomla/installation/language/fi-FI/fi-FI.ini
-share/joomla/installation/language/fi-FI/fi-FI.xml
-share/joomla/installation/language/fi-FI/index.html
-share/joomla/installation/language/fr-FR/fr-FR.ini
-share/joomla/installation/language/fr-FR/fr-FR.xml
-share/joomla/installation/language/fr-FR/index.html
-share/joomla/installation/language/he-IL/he-IL.ini
-share/joomla/installation/language/he-IL/he-IL.xml
-share/joomla/installation/language/he-IL/index.html
-share/joomla/installation/language/hr-HR/hr-HR.ini
-share/joomla/installation/language/hr-HR/hr-HR.xml
-share/joomla/installation/language/hr-HR/index.html
-share/joomla/installation/language/hu-HU/hu-HU.ini
-share/joomla/installation/language/hu-HU/hu-HU.xml
-share/joomla/installation/language/hu-HU/index.htm
-share/joomla/installation/language/index.html
-share/joomla/installation/language/it-IT/index.htm
-share/joomla/installation/language/it-IT/it-IT.ini
-share/joomla/installation/language/it-IT/it-IT.xml
-share/joomla/installation/language/ja-JP/index.html
-share/joomla/installation/language/ja-JP/ja-JP.ini
-share/joomla/installation/language/ja-JP/ja-JP.xml
-share/joomla/installation/language/ko-KR/index.html
-share/joomla/installation/language/ko-KR/ko-KR.ini
-share/joomla/installation/language/ko-KR/ko-KR.xml
-share/joomla/installation/language/lo-LA/index.html
-share/joomla/installation/language/lo-LA/lo-LA.ini
-share/joomla/installation/language/lo-LA/lo-LA.xml
-share/joomla/installation/language/lt-LT/index.htm
-share/joomla/installation/language/lt-LT/lt-LT.ini
-share/joomla/installation/language/lt-LT/lt-LT.xml
-share/joomla/installation/language/lv-LV/index.html
-share/joomla/installation/language/lv-LV/lv-LV.ini
-share/joomla/installation/language/lv-LV/lv-LV.xml
-share/joomla/installation/language/nb-NO/index.htm
-share/joomla/installation/language/nb-NO/nb-NO.ini
-share/joomla/installation/language/nb-NO/nb-NO.xml
-share/joomla/installation/language/nl-NL/index.htm
-share/joomla/installation/language/nl-NL/nl-NL.ini
-share/joomla/installation/language/nl-NL/nl-NL.xml
-share/joomla/installation/language/pl-PL/index.html
-share/joomla/installation/language/pl-PL/pl-PL.ini
-share/joomla/installation/language/pl-PL/pl-PL.xml
-share/joomla/installation/language/pt-BR/index.htm
-share/joomla/installation/language/pt-BR/pt-BR.ini
-share/joomla/installation/language/pt-BR/pt-BR.xml
-share/joomla/installation/language/pt-PT/index.html
-share/joomla/installation/language/pt-PT/pt-PT.ini
-share/joomla/installation/language/pt-PT/pt-PT.xml
-share/joomla/installation/language/ro-RO/index.htm
-share/joomla/installation/language/ro-RO/ro-RO.ini
-share/joomla/installation/language/ro-RO/ro-RO.xml
-share/joomla/installation/language/ru-RU/index.html
-share/joomla/installation/language/ru-RU/ru-RU.ini
-share/joomla/installation/language/ru-RU/ru-RU.xml
-share/joomla/installation/language/sd-PK/index.html
-share/joomla/installation/language/sd-PK/sd-PK.ini
-share/joomla/installation/language/sd-PK/sd-PK.xml
-share/joomla/installation/language/si-LK/index.htm
-share/joomla/installation/language/si-LK/si-LK.ini
-share/joomla/installation/language/si-LK/si-LK.xml
-share/joomla/installation/language/sk-SK/index.html
-share/joomla/installation/language/sk-SK/sk-SK.ini
-share/joomla/installation/language/sk-SK/sk-SK.xml
-share/joomla/installation/language/sr-ME/index.html
-share/joomla/installation/language/sr-ME/sr-ME.ini
-share/joomla/installation/language/sr-ME/sr-ME.xml
-share/joomla/installation/language/sr-RS/index.htm
-share/joomla/installation/language/sr-RS/sr-RS.ini
-share/joomla/installation/language/sr-RS/sr-RS.xml
-share/joomla/installation/language/sv-SE/index.htm
-share/joomla/installation/language/sv-SE/sv-SE.ini
-share/joomla/installation/language/sv-SE/sv-SE.xml
-share/joomla/installation/language/sy-IQ/index.html
-share/joomla/installation/language/sy-IQ/sy-IQ.ini
-share/joomla/installation/language/sy-IQ/sy-IQ.xml
-share/joomla/installation/language/ta-LK/index.html
-share/joomla/installation/language/ta-LK/ta-LK.ini
-share/joomla/installation/language/ta-LK/ta-LK.xml
-share/joomla/installation/language/th-TH/index.html
-share/joomla/installation/language/th-TH/th-TH.ini
-share/joomla/installation/language/th-TH/th-TH.xml
-share/joomla/installation/language/tr-TR/index.htm
-share/joomla/installation/language/tr-TR/tr-TR.ini
-share/joomla/installation/language/tr-TR/tr-TR.xml
-share/joomla/installation/language/uk-UA/index.html
-share/joomla/installation/language/uk-UA/uk-UA.ini
-share/joomla/installation/language/uk-UA/uk-UA.xml
-share/joomla/installation/language/vi-VN/index.html
-share/joomla/installation/language/vi-VN/vi-VN.ini
-share/joomla/installation/language/vi-VN/vi-VN.xml
-share/joomla/installation/language/zh-TW/index.html
-share/joomla/installation/language/zh-TW/zh-TW.ini
-share/joomla/installation/language/zh-TW/zh-TW.xml
-share/joomla/installation/localise.xml
-share/joomla/installation/migration.html
-share/joomla/installation/sql/index.html
-share/joomla/installation/sql/migration/index.html
-share/joomla/installation/sql/mysql/diff.sql
-share/joomla/installation/sql/mysql/diff_rc1_to_rc2.sql
-share/joomla/installation/sql/mysql/diff_rc2_to_rc3.sql
-share/joomla/installation/sql/mysql/diff_rc3_to_rc4.sql
-share/joomla/installation/sql/mysql/index.html
-share/joomla/installation/sql/mysql/joomla.sql
-share/joomla/installation/sql/mysql/joomla_backward.sql
-share/joomla/installation/sql/mysql/sample_data.sql
-share/joomla/installation/template/css/index.html
-share/joomla/installation/template/css/template.css
-share/joomla/installation/template/css/template_rtl.css
-share/joomla/installation/template/images/index.html
-share/joomla/installation/template/images/j_arrow.png
-share/joomla/installation/template/images/j_arrow_down.png
-share/joomla/installation/template/images/j_arrow_left.png
-share/joomla/installation/template/images/j_border.png
-share/joomla/installation/template/images/j_bottom.png
-share/joomla/installation/template/images/j_button1_admin.png
-share/joomla/installation/template/images/j_button1_collate.png
-share/joomla/installation/template/images/j_button1_left.png
-share/joomla/installation/template/images/j_button1_next.png
-share/joomla/installation/template/images/j_button1_prev.png
-share/joomla/installation/template/images/j_button1_refresh.png
-share/joomla/installation/template/images/j_button1_right.png
-share/joomla/installation/template/images/j_button1_site.png
-share/joomla/installation/template/images/j_corner_bl.png
-share/joomla/installation/template/images/j_corner_br.png
-share/joomla/installation/template/images/j_crn_bl_dark.png
-share/joomla/installation/template/images/j_crn_bl_light.png
-share/joomla/installation/template/images/j_crn_bl_med.png
-share/joomla/installation/template/images/j_crn_br_dark.png
-share/joomla/installation/template/images/j_crn_br_light.png
-share/joomla/installation/template/images/j_crn_br_med.png
-share/joomla/installation/template/images/j_crn_tl_dark.png
-share/joomla/installation/template/images/j_crn_tl_light.png
-share/joomla/installation/template/images/j_crn_tl_med.png
-share/joomla/installation/template/images/j_crn_tr_dark.png
-share/joomla/installation/template/images/j_crn_tr_light.png
-share/joomla/installation/template/images/j_crn_tr_med.png
-share/joomla/installation/template/images/j_divider.png
-share/joomla/installation/template/images/j_header_left.png
-share/joomla/installation/template/images/j_header_left_rtl.png
-share/joomla/installation/template/images/j_header_middle.png
-share/joomla/installation/template/images/j_header_right.png
-share/joomla/installation/template/images/j_header_right_rtl.png
-share/joomla/installation/template/images/j_joomla_box.jpg
-share/joomla/installation/template/index.html
-share/joomla/installation/template/index.php
-share/joomla/installation/template/js/index.html
-share/joomla/installation/template/js/validation.js
-share/joomla/installation/template/tmpl/configuration.html
-share/joomla/installation/template/tmpl/dbconfig.html
-share/joomla/installation/template/tmpl/error.html
-share/joomla/installation/template/tmpl/finish.html
-share/joomla/installation/template/tmpl/ftpconfig.html
-share/joomla/installation/template/tmpl/index.html
-share/joomla/installation/template/tmpl/language.html
-share/joomla/installation/template/tmpl/license.html
-share/joomla/installation/template/tmpl/mainconfig.html
-share/joomla/installation/template/tmpl/migration.html
-share/joomla/installation/template/tmpl/page.html
-share/joomla/installation/template/tmpl/preinstall.html
-share/joomla/installation/template/tmpl/removedir.html
+share/joomla/installation.disabled/favicon.ico
+share/joomla/installation.disabled/gpl.html
+share/joomla/installation.disabled/includes/application.php
+share/joomla/installation.disabled/includes/bigdump.php
+share/joomla/installation.disabled/includes/defines.php
+share/joomla/installation.disabled/includes/framework.php
+share/joomla/installation.disabled/includes/index.html
+share/joomla/installation.disabled/includes/js/index.html
+share/joomla/installation.disabled/includes/js/installation.js
+share/joomla/installation.disabled/includes/js/xajax.js
+share/joomla/installation.disabled/includes/js/xajaxCompress.php
+share/joomla/installation.disabled/includes/js/xajax_uncompressed.js
+share/joomla/installation.disabled/includes/router.php
+share/joomla/installation.disabled/includes/xajax/LICENSE.txt
+share/joomla/installation.disabled/includes/xajax/README.txt
+share/joomla/installation.disabled/includes/xajax/index.html
+share/joomla/installation.disabled/includes/xajax/xajax.inc.php
+share/joomla/installation.disabled/includes/xajax/xajaxResponse.inc.php
+share/joomla/installation.disabled/index.php
+share/joomla/installation.disabled/installer/controller.php
+share/joomla/installation.disabled/installer/helper.php
+share/joomla/installation.disabled/installer/index.html
+share/joomla/installation.disabled/installer/installer.php
+share/joomla/installation.disabled/installer/jajax.php
+share/joomla/installation.disabled/installer/models/index.html
+share/joomla/installation.disabled/installer/models/model.php
+share/joomla/installation.disabled/installer/views/index.html
+share/joomla/installation.disabled/installer/views/install/index.html
+share/joomla/installation.disabled/installer/views/install/view.php
+share/joomla/installation.disabled/language/be-BY/be-BY.ini
+share/joomla/installation.disabled/language/be-BY/be-BY.xml
+share/joomla/installation.disabled/language/be-BY/index.html
+share/joomla/installation.disabled/language/bg-BG/bg-BG.ini
+share/joomla/installation.disabled/language/bg-BG/bg-BG.xml
+share/joomla/installation.disabled/language/bg-BG/index.htm
+share/joomla/installation.disabled/language/bn-IN/bn-IN.ini
+share/joomla/installation.disabled/language/bn-IN/bn-IN.xml
+share/joomla/installation.disabled/language/bn-IN/index.html
+share/joomla/installation.disabled/language/bs-BA/bs-BA.ini
+share/joomla/installation.disabled/language/bs-BA/bs-BA.xml
+share/joomla/installation.disabled/language/bs-BA/index.html
+share/joomla/installation.disabled/language/ca-ES/ca-ES.ini
+share/joomla/installation.disabled/language/ca-ES/ca-ES.xml
+share/joomla/installation.disabled/language/ca-ES/index.htm
+share/joomla/installation.disabled/language/cs-CZ/cs-CZ.ini
+share/joomla/installation.disabled/language/cs-CZ/cs-CZ.xml
+share/joomla/installation.disabled/language/cs-CZ/index.html
+share/joomla/installation.disabled/language/da-DK/da-DK.ini
+share/joomla/installation.disabled/language/da-DK/da-DK.xml
+share/joomla/installation.disabled/language/da-DK/index.htm
+share/joomla/installation.disabled/language/de-AT/de-AT.ini
+share/joomla/installation.disabled/language/de-AT/de-AT.xml
+share/joomla/installation.disabled/language/de-AT/index.html
+share/joomla/installation.disabled/language/de-CH/de-CH.ini
+share/joomla/installation.disabled/language/de-CH/de-CH.xml
+share/joomla/installation.disabled/language/de-CH/index.htm
+share/joomla/installation.disabled/language/de-DE/de-DE.ini
+share/joomla/installation.disabled/language/de-DE/de-DE.xml
+share/joomla/installation.disabled/language/de-DE/index.htm
+share/joomla/installation.disabled/language/el-GR/el-GR.ini
+share/joomla/installation.disabled/language/el-GR/el-GR.xml
+share/joomla/installation.disabled/language/el-GR/index.htm
+share/joomla/installation.disabled/language/en-GB/en-GB.ini
+share/joomla/installation.disabled/language/en-GB/en-GB.xml
+share/joomla/installation.disabled/language/en-GB/index.html
+share/joomla/installation.disabled/language/en-US/en-US.ini
+share/joomla/installation.disabled/language/en-US/en-US.xml
+share/joomla/installation.disabled/language/en-US/index.htm
+share/joomla/installation.disabled/language/eo-XX/eo-XX.ini
+share/joomla/installation.disabled/language/eo-XX/eo-XX.xml
+share/joomla/installation.disabled/language/eo-XX/index.html
+share/joomla/installation.disabled/language/es-ES/es-ES.ini
+share/joomla/installation.disabled/language/es-ES/es-ES.xml
+share/joomla/installation.disabled/language/es-ES/index.htm
+share/joomla/installation.disabled/language/eu-ES/eu-ES.ini
+share/joomla/installation.disabled/language/eu-ES/eu-ES.xml
+share/joomla/installation.disabled/language/eu-ES/index.html
+share/joomla/installation.disabled/language/fa-IR/fa-IR.ini
+share/joomla/installation.disabled/language/fa-IR/fa-IR.xml
+share/joomla/installation.disabled/language/fa-IR/index.html
+share/joomla/installation.disabled/language/fi-FI/fi-FI.ini
+share/joomla/installation.disabled/language/fi-FI/fi-FI.xml
+share/joomla/installation.disabled/language/fi-FI/index.html
+share/joomla/installation.disabled/language/fr-FR/fr-FR.ini
+share/joomla/installation.disabled/language/fr-FR/fr-FR.xml
+share/joomla/installation.disabled/language/fr-FR/index.html
+share/joomla/installation.disabled/language/he-IL/he-IL.ini
+share/joomla/installation.disabled/language/he-IL/he-IL.xml
+share/joomla/installation.disabled/language/he-IL/index.html
+share/joomla/installation.disabled/language/hr-HR/hr-HR.ini
+share/joomla/installation.disabled/language/hr-HR/hr-HR.xml
+share/joomla/installation.disabled/language/hr-HR/index.html
+share/joomla/installation.disabled/language/hu-HU/hu-HU.ini
+share/joomla/installation.disabled/language/hu-HU/hu-HU.xml
+share/joomla/installation.disabled/language/hu-HU/index.htm
+share/joomla/installation.disabled/language/index.html
+share/joomla/installation.disabled/language/it-IT/index.htm
+share/joomla/installation.disabled/language/it-IT/it-IT.ini
+share/joomla/installation.disabled/language/it-IT/it-IT.xml
+share/joomla/installation.disabled/language/ja-JP/index.html
+share/joomla/installation.disabled/language/ja-JP/ja-JP.ini
+share/joomla/installation.disabled/language/ja-JP/ja-JP.xml
+share/joomla/installation.disabled/language/ko-KR/index.html
+share/joomla/installation.disabled/language/ko-KR/ko-KR.ini
+share/joomla/installation.disabled/language/ko-KR/ko-KR.xml
+share/joomla/installation.disabled/language/lo-LA/index.html
+share/joomla/installation.disabled/language/lo-LA/lo-LA.ini
+share/joomla/installation.disabled/language/lo-LA/lo-LA.xml
+share/joomla/installation.disabled/language/lt-LT/index.htm
+share/joomla/installation.disabled/language/lt-LT/lt-LT.ini
+share/joomla/installation.disabled/language/lt-LT/lt-LT.xml
+share/joomla/installation.disabled/language/lv-LV/index.html
+share/joomla/installation.disabled/language/lv-LV/lv-LV.ini
+share/joomla/installation.disabled/language/lv-LV/lv-LV.xml
+share/joomla/installation.disabled/language/nb-NO/index.htm
+share/joomla/installation.disabled/language/nb-NO/nb-NO.ini
+share/joomla/installation.disabled/language/nb-NO/nb-NO.xml
+share/joomla/installation.disabled/language/nl-NL/index.htm
+share/joomla/installation.disabled/language/nl-NL/nl-NL.ini
+share/joomla/installation.disabled/language/nl-NL/nl-NL.xml
+share/joomla/installation.disabled/language/pl-PL/index.html
+share/joomla/installation.disabled/language/pl-PL/pl-PL.ini
+share/joomla/installation.disabled/language/pl-PL/pl-PL.xml
+share/joomla/installation.disabled/language/pt-BR/index.htm
+share/joomla/installation.disabled/language/pt-BR/pt-BR.ini
+share/joomla/installation.disabled/language/pt-BR/pt-BR.xml
+share/joomla/installation.disabled/language/pt-PT/index.html
+share/joomla/installation.disabled/language/pt-PT/pt-PT.ini
+share/joomla/installation.disabled/language/pt-PT/pt-PT.xml
+share/joomla/installation.disabled/language/ro-RO/index.htm
+share/joomla/installation.disabled/language/ro-RO/ro-RO.ini
+share/joomla/installation.disabled/language/ro-RO/ro-RO.xml
+share/joomla/installation.disabled/language/ru-RU/index.html
+share/joomla/installation.disabled/language/ru-RU/ru-RU.ini
+share/joomla/installation.disabled/language/ru-RU/ru-RU.xml
+share/joomla/installation.disabled/language/sd-PK/index.html
+share/joomla/installation.disabled/language/sd-PK/sd-PK.ini
+share/joomla/installation.disabled/language/sd-PK/sd-PK.xml
+share/joomla/installation.disabled/language/si-LK/index.htm
+share/joomla/installation.disabled/language/si-LK/si-LK.ini
+share/joomla/installation.disabled/language/si-LK/si-LK.xml
+share/joomla/installation.disabled/language/sk-SK/index.html
+share/joomla/installation.disabled/language/sk-SK/sk-SK.ini
+share/joomla/installation.disabled/language/sk-SK/sk-SK.xml
+share/joomla/installation.disabled/language/sr-ME/index.html
+share/joomla/installation.disabled/language/sr-ME/sr-ME.ini
+share/joomla/installation.disabled/language/sr-ME/sr-ME.xml
+share/joomla/installation.disabled/language/sr-RS/index.htm
+share/joomla/installation.disabled/language/sr-RS/sr-RS.ini
+share/joomla/installation.disabled/language/sr-RS/sr-RS.xml
+share/joomla/installation.disabled/language/sv-SE/index.htm
+share/joomla/installation.disabled/language/sv-SE/sv-SE.ini
+share/joomla/installation.disabled/language/sv-SE/sv-SE.xml
+share/joomla/installation.disabled/language/sy-IQ/index.html
+share/joomla/installation.disabled/language/sy-IQ/sy-IQ.ini
+share/joomla/installation.disabled/language/sy-IQ/sy-IQ.xml
+share/joomla/installation.disabled/language/ta-LK/index.html
+share/joomla/installation.disabled/language/ta-LK/ta-LK.ini
+share/joomla/installation.disabled/language/ta-LK/ta-LK.xml
+share/joomla/installation.disabled/language/th-TH/index.html
+share/joomla/installation.disabled/language/th-TH/th-TH.ini
+share/joomla/installation.disabled/language/th-TH/th-TH.xml
+share/joomla/installation.disabled/language/tr-TR/index.htm
+share/joomla/installation.disabled/language/tr-TR/tr-TR.ini
+share/joomla/installation.disabled/language/tr-TR/tr-TR.xml
+share/joomla/installation.disabled/language/uk-UA/index.html
+share/joomla/installation.disabled/language/uk-UA/uk-UA.ini
+share/joomla/installation.disabled/language/uk-UA/uk-UA.xml
+share/joomla/installation.disabled/language/vi-VN/index.html
+share/joomla/installation.disabled/language/vi-VN/vi-VN.ini
+share/joomla/installation.disabled/language/vi-VN/vi-VN.xml
+share/joomla/installation.disabled/language/zh-TW/index.html
+share/joomla/installation.disabled/language/zh-TW/zh-TW.ini
+share/joomla/installation.disabled/language/zh-TW/zh-TW.xml
+share/joomla/installation.disabled/localise.xml
+share/joomla/installation.disabled/migration.html
+share/joomla/installation.disabled/sql/index.html
+share/joomla/installation.disabled/sql/migration/index.html
+share/joomla/installation.disabled/sql/mysql/diff.sql
+share/joomla/installation.disabled/sql/mysql/diff_rc1_to_rc2.sql
+share/joomla/installation.disabled/sql/mysql/diff_rc2_to_rc3.sql
+share/joomla/installation.disabled/sql/mysql/diff_rc3_to_rc4.sql
+share/joomla/installation.disabled/sql/mysql/index.html
+share/joomla/installation.disabled/sql/mysql/joomla.sql
+share/joomla/installation.disabled/sql/mysql/joomla_backward.sql
+share/joomla/installation.disabled/sql/mysql/sample_data.sql
+share/joomla/installation.disabled/template/css/index.html
+share/joomla/installation.disabled/template/css/template.css
+share/joomla/installation.disabled/template/css/template_rtl.css
+share/joomla/installation.disabled/template/images/index.html
+share/joomla/installation.disabled/template/images/j_arrow.png
+share/joomla/installation.disabled/template/images/j_arrow_down.png
+share/joomla/installation.disabled/template/images/j_arrow_left.png
+share/joomla/installation.disabled/template/images/j_border.png
+share/joomla/installation.disabled/template/images/j_bottom.png
+share/joomla/installation.disabled/template/images/j_button1_admin.png
+share/joomla/installation.disabled/template/images/j_button1_collate.png
+share/joomla/installation.disabled/template/images/j_button1_left.png
+share/joomla/installation.disabled/template/images/j_button1_next.png
+share/joomla/installation.disabled/template/images/j_button1_prev.png
+share/joomla/installation.disabled/template/images/j_button1_refresh.png
+share/joomla/installation.disabled/template/images/j_button1_right.png
+share/joomla/installation.disabled/template/images/j_button1_site.png
+share/joomla/installation.disabled/template/images/j_corner_bl.png
+share/joomla/installation.disabled/template/images/j_corner_br.png
+share/joomla/installation.disabled/template/images/j_crn_bl_dark.png
+share/joomla/installation.disabled/template/images/j_crn_bl_light.png
+share/joomla/installation.disabled/template/images/j_crn_bl_med.png
+share/joomla/installation.disabled/template/images/j_crn_br_dark.png
+share/joomla/installation.disabled/template/images/j_crn_br_light.png
+share/joomla/installation.disabled/template/images/j_crn_br_med.png
+share/joomla/installation.disabled/template/images/j_crn_tl_dark.png
+share/joomla/installation.disabled/template/images/j_crn_tl_light.png
+share/joomla/installation.disabled/template/images/j_crn_tl_med.png
+share/joomla/installation.disabled/template/images/j_crn_tr_dark.png
+share/joomla/installation.disabled/template/images/j_crn_tr_light.png
+share/joomla/installation.disabled/template/images/j_crn_tr_med.png
+share/joomla/installation.disabled/template/images/j_divider.png
+share/joomla/installation.disabled/template/images/j_header_left.png
+share/joomla/installation.disabled/template/images/j_header_left_rtl.png
+share/joomla/installation.disabled/template/images/j_header_middle.png
+share/joomla/installation.disabled/template/images/j_header_right.png
+share/joomla/installation.disabled/template/images/j_header_right_rtl.png
+share/joomla/installation.disabled/template/images/j_joomla_box.jpg
+share/joomla/installation.disabled/template/index.html
+share/joomla/installation.disabled/template/index.php
+share/joomla/installation.disabled/template/js/index.html
+share/joomla/installation.disabled/template/js/validation.js
+share/joomla/installation.disabled/template/tmpl/configuration.html
+share/joomla/installation.disabled/template/tmpl/dbconfig.html
+share/joomla/installation.disabled/template/tmpl/error.html
+share/joomla/installation.disabled/template/tmpl/finish.html
+share/joomla/installation.disabled/template/tmpl/ftpconfig.html
+share/joomla/installation.disabled/template/tmpl/index.html
+share/joomla/installation.disabled/template/tmpl/language.html
+share/joomla/installation.disabled/template/tmpl/license.html
+share/joomla/installation.disabled/template/tmpl/mainconfig.html
+share/joomla/installation.disabled/template/tmpl/migration.html
+share/joomla/installation.disabled/template/tmpl/page.html
+share/joomla/installation.disabled/template/tmpl/preinstall.html
+share/joomla/installation.disabled/template/tmpl/removedir.html
 share/joomla/language/en-GB/en-GB.com_banners.ini
 share/joomla/language/en-GB/en-GB.com_contact.ini
 share/joomla/language/en-GB/en-GB.com_content.ini
@@ -4287,72 +4287,71 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/libraries
 @dirrm share/joomla/language/pdf_fonts
 @dirrm share/joomla/language/en-GB
-@dirrm share/joomla/language
-@dirrm share/joomla/installation/template/tmpl
-@dirrm share/joomla/installation/template/js
-@dirrm share/joomla/installation/template/images
-@dirrm share/joomla/installation/template/css
-@dirrm share/joomla/installation/template
-@dirrm share/joomla/installation/sql/mysql
-@dirrm share/joomla/installation/sql/migration
-@dirrm share/joomla/installation/sql
-@dirrm share/joomla/installation/language/zh-TW
-@dirrm share/joomla/installation/language/vi-VN
-@dirrm share/joomla/installation/language/uk-UA
-@dirrm share/joomla/installation/language/tr-TR
-@dirrm share/joomla/installation/language/th-TH
-@dirrm share/joomla/installation/language/ta-LK
-@dirrm share/joomla/installation/language/sy-IQ
-@dirrm share/joomla/installation/language/sv-SE
-@dirrm share/joomla/installation/language/sr-RS
-@dirrm share/joomla/installation/language/sr-ME
-@dirrm share/joomla/installation/language/sk-SK
-@dirrm share/joomla/installation/language/si-LK
-@dirrm share/joomla/installation/language/sd-PK
-@dirrm share/joomla/installation/language/ru-RU
-@dirrm share/joomla/installation/language/ro-RO
-@dirrm share/joomla/installation/language/pt-PT
-@dirrm share/joomla/installation/language/pt-BR
-@dirrm share/joomla/installation/language/pl-PL
-@dirrm share/joomla/installation/language/nl-NL
-@dirrm share/joomla/installation/language/nb-NO
-@dirrm share/joomla/installation/language/lv-LV
-@dirrm share/joomla/installation/language/lt-LT
-@dirrm share/joomla/installation/language/lo-LA
-@dirrm share/joomla/installation/language/ko-KR
-@dirrm share/joomla/installation/language/ja-JP
-@dirrm share/joomla/installation/language/it-IT
-@dirrm share/joomla/installation/language/hu-HU
-@dirrm share/joomla/installation/language/hr-HR
-@dirrm share/joomla/installation/language/he-IL
-@dirrm share/joomla/installation/language/fr-FR
-@dirrm share/joomla/installation/language/fi-FI
-@dirrm share/joomla/installation/language/fa-IR
-@dirrm share/joomla/installation/language/eu-ES
-@dirrm share/joomla/installation/language/es-ES
-@dirrm share/joomla/installation/language/eo-XX
-@dirrm share/joomla/installation/language/en-US
-@dirrm share/joomla/installation/language/en-GB
-@dirrm share/joomla/installation/language/el-GR
-@dirrm share/joomla/installation/language/de-DE
-@dirrm share/joomla/installation/language/de-CH
-@dirrm share/joomla/installation/language/de-AT
-@dirrm share/joomla/installation/language/da-DK
-@dirrm share/joomla/installation/language/cs-CZ
-@dirrm share/joomla/installation/language/ca-ES
-@dirrm share/joomla/installation/language/bs-BA
-@dirrm share/joomla/installation/language/bn-IN
-@dirrm share/joomla/installation/language/bg-BG
-@dirrm share/joomla/installation/language/be-BY
-@dirrm share/joomla/installation/language
-@dirrm share/joomla/installation/installer/views/install
-@dirrm share/joomla/installation/installer/views
-@dirrm share/joomla/installation/installer/models
-@dirrm share/joomla/installation/installer
-@dirrm share/joomla/installation/includes/xajax
-@dirrm share/joomla/installation/includes/js
-@dirrm share/joomla/installation/includes
-@dirrm share/joomla/installation
+@dirrm share/joomla/installation.disabled/template/tmpl
+@dirrm share/joomla/installation.disabled/template/js
+@dirrm share/joomla/installation.disabled/template/images
+@dirrm share/joomla/installation.disabled/template/css
+@dirrm share/joomla/installation.disabled/template
+@dirrm share/joomla/installation.disabled/sql/mysql
+@dirrm share/joomla/installation.disabled/sql/migration
+@dirrm share/joomla/installation.disabled/sql
+@dirrm share/joomla/installation.disabled/language/zh-TW
+@dirrm share/joomla/installation.disabled/language/vi-VN
+@dirrm share/joomla/installation.disabled/language/uk-UA
+@dirrm share/joomla/installation.disabled/language/tr-TR
+@dirrm share/joomla/installation.disabled/language/th-TH
+@dirrm share/joomla/installation.disabled/language/ta-LK
+@dirrm share/joomla/installation.disabled/language/sy-IQ
+@dirrm share/joomla/installation.disabled/language/sv-SE
+@dirrm share/joomla/installation.disabled/language/sr-RS
+@dirrm share/joomla/installation.disabled/language/sr-ME
+@dirrm share/joomla/installation.disabled/language/sk-SK
+@dirrm share/joomla/installation.disabled/language/si-LK
+@dirrm share/joomla/installation.disabled/language/sd-PK
+@dirrm share/joomla/installation.disabled/language/ru-RU
+@dirrm share/joomla/installation.disabled/language/ro-RO
+@dirrm share/joomla/installation.disabled/language/pt-PT
+@dirrm share/joomla/installation.disabled/language/pt-BR
+@dirrm share/joomla/installation.disabled/language/pl-PL
+@dirrm share/joomla/installation.disabled/language/nl-NL
+@dirrm share/joomla/installation.disabled/language/nb-NO
+@dirrm share/joomla/installation.disabled/language/lv-LV
+@dirrm share/joomla/installation.disabled/language/lt-LT
+@dirrm share/joomla/installation.disabled/language/lo-LA
+@dirrm share/joomla/installation.disabled/language/ko-KR
+@dirrm share/joomla/installation.disabled/language/ja-JP
+@dirrm share/joomla/installation.disabled/language/it-IT
+@dirrm share/joomla/installation.disabled/language/hu-HU
+@dirrm share/joomla/installation.disabled/language/hr-HR
+@dirrm share/joomla/installation.disabled/language/he-IL
+@dirrm share/joomla/installation.disabled/language/fr-FR
+@dirrm share/joomla/installation.disabled/language/fi-FI
+@dirrm share/joomla/installation.disabled/language/fa-IR
+@dirrm share/joomla/installation.disabled/language/eu-ES
+@dirrm share/joomla/installation.disabled/language/es-ES
+@dirrm share/joomla/installation.disabled/language/eo-XX
+@dirrm share/joomla/installation.disabled/language/en-US
+@dirrm share/joomla/installation.disabled/language/en-GB
+@dirrm share/joomla/installation.disabled/language/el-GR
+@dirrm share/joomla/installation.disabled/language/de-DE
+@dirrm share/joomla/installation.disabled/language/de-CH
+@dirrm share/joomla/installation.disabled/language/de-AT
+@dirrm share/joomla/installation.disabled/language/da-DK
+@dirrm share/joomla/installation.disabled/language/cs-CZ
+@dirrm share/joomla/installation.disabled/language/ca-ES
+@dirrm share/joomla/installation.disabled/language/bs-BA
+@dirrm share/joomla/installation.disabled/language/bn-IN
+@dirrm share/joomla/installation.disabled/language/bg-BG
+@dirrm share/joomla/installation.disabled/language/be-BY
+@dirrm share/joomla/installation.disabled/language
+@dirrm share/joomla/installation.disabled/installer/views/install
+@dirrm share/joomla/installation.disabled/installer/views
+@dirrm share/joomla/installation.disabled/installer/models
+@dirrm share/joomla/installation.disabled/installer
+@dirrm share/joomla/installation.disabled/includes/xajax
+@dirrm share/joomla/installation.disabled/includes/js
+@dirrm share/joomla/installation.disabled/includes
+@dirrm share/joomla/installation.disabled
 @dirrm share/joomla/includes/phpmailer
 @dirrm share/joomla/includes/phpInputFilter
 @dirrm share/joomla/includes/js/tabs
@@ -4641,5 +4640,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/administrator/cache
 @dirrm share/joomla/administrator/backups
 @dirrm share/joomla/administrator
-@dirrm share/joomla
 @dirrm share/examples/joomla
+@unexec ${RMDIR} %D/share/joomla/language 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/joomla 2>/dev/null || ${TRUE}
