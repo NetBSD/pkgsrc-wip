@@ -131,7 +131,6 @@ END {
     awk '{print $1, $2}' $pkg2conflict_fn | sort -u
 }
 
-#real_conflicts "$@"
 # packages marked as conflicting
 makefile_conflicts (){
     awk '
@@ -180,7 +179,7 @@ check_conflicts (){
     '
 }
 
-# show at least one file common file
+# show maintainer and at least one common file
 enrich_conflicts_info (){
     awk -v pkg2conflict_fn="$pkg2conflict_fn" '
 FILENAME == pkg2conflict_fn {
