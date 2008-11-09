@@ -133,7 +133,9 @@ END {
 
 # packages marked as conflicting
 makefile_conflicts (){
-    awk '
+    runawk -e '
+#use "braceexpand.awk"
+
 /^PKGNAME=/ {
    pkgbase = substr($0, 9)
    sub(/-[^-]+$/, "", pkgbase)
@@ -148,13 +150,25 @@ makefile_conflicts (){
    next
 }
 NF == 0 {
-   cnt = split(conflicts, arr)
+   cnt = split(braceexpand(conflicts), arr)
    for (i=1; i <= cnt; ++i){
       print pkgbase, arr [i]
    }
 }
 ' "$@" | sort -u
 }
+
+# A conflicts with B (or A == B)
+# Ax depends on A
+# By depends on B
+# Conlusion: all Ax condlict with all By indirectly
+# (not implemented)
+#indirect_conflict_too (){
+#    awk '
+#FILENAME != "-" {
+#
+#}' "$@" -
+#}
 
 # check conflicts
 check_conflicts (){
@@ -215,5 +229,5 @@ check_conflicts "$@" > $conflicts_fn
 enrich_conflicts_info "$@" < $conflicts_fn
 
 # for debugging
-#makefile_conflicts "$@"
+#makefile_conflicts "$@" #| indirect_conflict_too
 #real_conflicts "$@"
