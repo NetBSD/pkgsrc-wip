@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/10/05 07:57:01 gschwarz Exp $
+# $NetBSD: options.mk,v 1.8 2008/11/10 18:55:46 gschwarz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tacacs-shrubbery
 PKG_SUPPORTED_OPTIONS=	acls-support drop-root-privileges tcpwrappers skey
@@ -35,8 +35,8 @@ CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 . include "../../security/skey/builtin.mk"
 . include "../../security/skey/buildlink3.mk"
-. if defined(IS_BUILTIN.skey) && ${IS_BUILTIN.skey} == no
-# pkgsrc's version uses three arguments only
+. if (defined(IS_BUILTIN.skey) && ${IS_BUILTIN.skey} == no ) || ${OPSYS} == "OpenBSD"
+# pkgsrc's version uses three arguments only, as does OpenBSD's
 CPPFLAGS+=		-DOLDSKEY
 . endif
 .else
