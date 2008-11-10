@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/10 13:38:07 ondratu Exp $
+
+--- CMakeLists.txt.orig	2008-07-29 21:48:58.000000000 +0200
++++ CMakeLists.txt
+@@ -87,7 +87,7 @@ ADD_SUBDIRECTORY ( src )
+ 
+ IF ( NOT Win )
+ 	SET ( CMAKE_INSTALL_DATADIR share/ )
+-	SET ( CMAKE_INSTALL_ETCDIR /etc )
++	SET ( CMAKE_INSTALL_ETCDIR ${EGDIR} )
+ ELSE ( NOT Win )
+ 	SET ( CMAKE_INSTALL_DATADIR ${APPNAME}/share/ )
+ 	SET ( CMAKE_INSTALL_ETCDIR ${APPNAME}/etc )

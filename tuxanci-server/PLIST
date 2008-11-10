@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/10 13:38:07 ondratu Exp $
+bin/tuxanci-server
+lib/tuxanci-server/libmodAI.so
+lib/tuxanci-server/libmodMove.so
+lib/tuxanci-server/libmodPipe.so
+lib/tuxanci-server/libmodTeleport.so
+lib/tuxanci-server/libmodWall.so
+share/tuxanci-server/arena/ba_in_a_captivity_of_8-bit.map
+share/tuxanci-server/arena/construction_site.map
+share/tuxanci-server/arena/for_a_good_night.map
+share/tuxanci-server/arena/in_a_captivity_of_8-bit.map
+share/tuxanci-server/arena/night_workshift.map
+share/tuxanci-server/doc/AUTHORS
+share/tuxanci-server/doc/LICENCE
+share/tuxanci-server/doc/README
+@dirrm share/tuxanci-server/doc
+@dirrm share/tuxanci-server/arena
+@dirrm share/tuxanci-server
+@dirrm lib/tuxanci-server
