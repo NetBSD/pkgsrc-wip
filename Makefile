@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3095 2008/11/09 20:03:17 mwdavies Exp $
+# $Id: Makefile,v 1.3096 2008/11/10 13:42:01 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1869,6 +1869,8 @@ SUBDIR+=	ttysnoop
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tumble
 SUBDIR+=	tutos
+SUBDIR+=	tuxanci
+SUBDIR+=	tuxanci-server
 SUBDIR+=	tuxtype2
 SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
