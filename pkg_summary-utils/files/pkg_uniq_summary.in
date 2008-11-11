@@ -1,0 +1,78 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+############################################################
+
+############################################################
+function usage (){
+	printf "\
+pkg_uniq_summary - filter out repeated summaries\n\
+   Summaries are compared by (PKGPATH, PKGBASE) pair,\n\
+   building options (:var1=val1[,...]) are removed from PKGPATH\n\
+   before comparison\n\
+usage: pkg_uniq_summary -h\n\
+       pkg_uniq_summary [OPTIONS] [files...]\n\
+OPTIONS:\n\
+  -h|--help            display this help\n\
+" > "/dev/stderr"
+}
+
+BEGIN {
+	for (i = 1; i <= ARGC; ++i){
+		if (ARGV [i] ~ /^(-h|--help)$/){
+			usage()
+			exit 0
+		}
+	}
+
+	skip       = 0
+	line_count = 0
+}
+
+NF == 0 {
+	if (!pkgs [pkgbase, pkgpath]++){
+		for (i=0; i < line_count; ++i){
+			print lines [i]
+		}
+		print ""
+	}
+	pkgbase = pkgpath = ""
+	line_count = 0
+	next
+}
+
+{
+	lines [line_count++] = $0
+}
+
+$0 ~ /^PKGNAME=/ {
+	pkgbase = substr($0, 9)
+	sub(/-[^-]+$/, "", pkgbase)
+	next
+}
+
+$0 ~ /^PKGPATH=/ {
+	pkgpath = substr($0, 9)
+	sub(/:.*$/, "", pkgpath)
+	next
+}
