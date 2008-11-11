@@ -1,2 +1,3 @@
 - More testing
 - Maybe change the hardcoded PATH in the Makefile -> SUBST_SED.paths= 
+- This package has known vulnerabilities, please investigate and fix if possible  	CVE-2008-4979
