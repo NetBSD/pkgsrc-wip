@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/04/20 17:15:07 gschwarz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/11/11 22:07:39 gschwarz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBEXOSIP2_BUILDLINK3_MK:=	${LIBEXOSIP2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libexosip2
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libexosip2
 
 .if !empty(LIBEXOSIP2_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libexosip2+=	libeXosip2>=3.1.0
+BUILDLINK_API_DEPENDS.libexosip2+=	libeXosip2>=3.2.0
 BUILDLINK_PKGSRCDIR.libexosip2?=	../../wip/libexosip
 .endif	# LIBEXOSIP2_BUILDLINK3_MK
 
