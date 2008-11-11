@@ -11,7 +11,7 @@ Version 0.21.0, by Aleksey Cheusov, Tue, 11 Nov 2008 22:59:51 +0200
   pkg_src_summary fix: when reading DESCR files failed a bad error
   message was output (`` was output instead of real filename).
 
-  regression tests (test.sh)
+  fix in regression tests (test.sh)
 
 ----------------------------------------------------------------------
 Version 0.20.0, by Aleksey Cheusov, Sun, 26 Oct 2008 13:09:43 +0200
