@@ -199,7 +199,7 @@ check_conflicts (){
     '
 }
 
-# show maintainer and at least one common file
+# show MAINTAINER, PKGPATH and at least one common file
 enrich_conflicts_info (){
     awk -v pkg2conflict_fn="$pkg2conflict_fn" '
 FILENAME == pkg2conflict_fn {
