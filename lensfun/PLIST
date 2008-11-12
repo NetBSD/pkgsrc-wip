@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 14:50:32 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/12 16:39:24 thomasklausner Exp $
 include/lensfun.h
 lib/liblensfun.so
 lib/liblensfun.so.0
@@ -11,6 +11,7 @@ share/doc/lensfun-0.2.2b/lgpl-3.0.txt
 share/doc/lensfun-0.2.2b/manual/annotated.html
 share/doc/lensfun-0.2.2b/manual/basearch.html
 share/doc/lensfun-0.2.2b/manual/cc-by-ca.html
+share/doc/lensfun-0.2.2b/manual/classes.html
 share/doc/lensfun-0.2.2b/manual/credits.html
 share/doc/lensfun-0.2.2b/manual/database.html
 share/doc/lensfun-0.2.2b/manual/dbformat.html
