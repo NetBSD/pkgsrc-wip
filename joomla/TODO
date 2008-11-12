@@ -1,3 +1,7 @@
 How to handle PREFIX/share/joomla/tmp, PREFIX/share/joomla/cache and
 PREFIX/share/joomla/administrator/cache? Most likely these should be
 somewhere in /var (e.g. /var/joomla).
+
+This package has known vulnerabilities, please investigate and fix if possible.
+	see: 	http://developer.joomla.org/security/news/283-20081101-core-comcontent-xss-vulnerability.html
+		http://developer.joomla.org/security/news/284-20081102-core-comweblinks-xss-vulnerability.html
