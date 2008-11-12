@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3096 2008/11/10 13:42:01 ondratu Exp $
+# $Id: Makefile,v 1.3097 2008/11/12 08:52:43 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -93,7 +93,6 @@ SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-vhost-ldap
 SUBDIR+=	ap2-zeroconf
 SUBDIR+=	ap22-authn-sasl
-SUBDIR+=	ap22-authnz-external
 SUBDIR+=	apachebench2
 SUBDIR+=	apstget
 SUBDIR+=	ar7
