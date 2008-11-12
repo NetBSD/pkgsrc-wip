@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/12 16:39:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/12 16:39:46 thomasklausner Exp $
 #
 
 DISTNAME=	lensfun-0.2.2b
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lensfun.berlios.de/
 COMMENT=	Library for rectifying defects introduced by photographic equipment
 
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.5.7.1:../../devel/doxygen
 BUILD_DEPENDS+=	makedepend-[0-9]*:../../devel/makedepend
 
 HAS_CONFIGURE=		yes
