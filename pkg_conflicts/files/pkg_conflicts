@@ -109,10 +109,13 @@ makefile_conflicts (){
 
 # compare real_conflicts and makefile_conflicts
 check_conflicts (){
-    {
+    # $1 - PKGPATH
+    printf " -------- %s --------\n" "$1"
+    (
+	cd $PKGSRCDIR/$1
 	makefile_conflicts
 	real_conflicts | awk '{print $0 "\n" $0}'
-    } | sort | uniq -c |
+    ) | sort | uniq -c |
     awk '
     $1 == 1 && NF > 1 { print "Rem?:  ", $2 }
     $1 == 2 && NF > 1 { print "Missed:", $2 }
@@ -120,11 +123,42 @@ check_conflicts (){
     '
 }
 
+# show MAINTAINER and PKGPATH
+enrich_conflicts_info (){
+    awk '
+FILENAME == "-" {
+   # here we read package summary
+   if (/^MAINTAINER=/){
+      maintainer = substr($0, 12)
+   }else if (/^PKGNAME=/){
+      pkgbase = substr($0, 9)
+      sub(/-[^-]*$/, "", pkgbase)
+   }else if (/^PKGPATH=/){
+      pkgpath = substr($0, 9)
+   }else if (NF == 0){
+      pkg2m [pkgpath] = maintainer
+      pkg2b [pkgpath] = pkgbase
+      maintainer = pkgbase = ""
+   }
+   next
+}
+$1 ~ /^---/ {
+   p1 = $2
+   $2 = pkg2b [$2] " ( " pkg2m [$2] " " $2 " ) "
+}
+{ print $0 }
+' - "$@"
+}
+
+# MAIN loop
+conflicts_fn=$tmpdir/conflicts
 for i in "$@"; do
-    printf " -------- %s --------\n" "$i"
 #    cd $PKGSRCDIR/$i && makefile_conflicts
 #    echo ===================
 #    cd $PKGSRCDIR/$i && real_conflicts
 
-    cd $PKGSRCDIR/$i && check_conflicts
+    check_conflicts "$i" > "$conflicts_fn"
+
+    pkg_online_find -r -3 PKGPATH:exact:"$i" |
+    enrich_conflicts_info "$conflicts_fn"
 done
