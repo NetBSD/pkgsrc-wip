@@ -213,7 +213,12 @@ FILENAME != "-" {
    }else if (/^PKGNAME=/){
       pkgbase = substr($0, 9)
       sub(/-[^-]*$/, "", pkgbase)
+   }else if (/^PKGPATH=/){
+      pkgpath = substr($0, 9)
    }else if (NF == 0){
+      if (pkgbase in pkg2p)
+         pkg2p [pkgbase] = pkg2p [pkgbase] ","
+      pkg2p [pkgbase] = pkg2p [pkgbase] pkgpath
       pkg2m [pkgbase] = maintainer
       maintainer = pkgbase = ""
    }
@@ -221,7 +226,7 @@ FILENAME != "-" {
 }
 $1 ~ /^---/ {
    p1 = $2
-   $2 = $2 " ( " pkg2m [$2] " ) "
+   $2 = $2 " ( " pkg2m [$2] " " pkg2p [$2] " ) "
 }
 $1 == "Missed:" {
    $0 = $0 " ( " fn [p1, $2] " )"
