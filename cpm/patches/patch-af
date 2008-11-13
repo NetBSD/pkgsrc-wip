@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2008/11/13 19:34:14 shattered Exp $
+
+--- cpm.h.orig	2006-03-26 14:59:24.000000000 +0000
++++ cpm.h
+@@ -79,8 +79,8 @@
+ /* the default resource file and path; the path is used, if the file is not
+  * found in the users home directory
+  */
+-#define DEFAULT_RC_PATH_1 "/etc/cpm"
+-#define DEFAULT_RC_PATH_2 "/etc"
++#define DEFAULT_RC_PATH_1 PKG_SYSCONFDIR
++#define DEFAULT_RC_PATH_2 PKG_SYSCONFDIR
+ #define DEFAULT_RC_FILE ".cpmrc"
+ #define DEFAULT_ETC_RC_FILE "cpmrc"
+ 
