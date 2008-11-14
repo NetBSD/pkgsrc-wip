@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 22:11:13 gschwarz Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/14 09:36:08 thomasklausner Exp $
 
 DISTNAME=	linphone-2.1.1
 CATEGORIES=	net
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 
 PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video
-PKG_SUGGESTED_OPTIONS=	linphone-gui linphone-video
+PKG_SUGGESTED_OPTIONS=	linphone-gui
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
 
 .include "../../mk/bsd.options.mk"
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--enable-gnome_ui=yes
 CONFIGURE_ARGS+=	--enable-video=no
 .else
 CONFIGURE_ARGS+=	--enable-video=yes
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .endif
 
