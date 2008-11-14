@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3099 2008/11/13 22:25:13 christtrekker Exp $
+# $Id: Makefile,v 1.3100 2008/11/14 02:20:04 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1625,7 +1625,6 @@ SUBDIR+=	quickie
 SUBDIR+=	quodlibet
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
-SUBDIR+=	rabbit
 SUBDIR+=	radare
 SUBDIR+=	rancid
 SUBDIR+=	rar3
@@ -1634,7 +1633,6 @@ SUBDIR+=	ratproxy
 SUBDIR+=	rawphoto
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rc.subr
-SUBDIR+=	rcairo
 SUBDIR+=	rdup
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
@@ -1658,12 +1656,8 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	ruby-GalleryAdministrator
-SUBDIR+=	ruby-RMagick
-SUBDIR+=	ruby-gettext
-SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
-SUBDIR+=	ruby-rttool
 SUBDIR+=	runawk
 SUBDIR+=	runit
 SUBDIR+=	samhain
