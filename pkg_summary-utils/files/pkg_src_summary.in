@@ -533,7 +533,7 @@ while test -n "${with_dep}${with_bdep}"; do
 
     if test -s "$extra_deps_fn"; then
 #	echo "inside! pkg_src_summary $make_plist < \"$extra_deps_fn\" >> \"$partial_summary_fn\"" 1>&2
-	pkg_src_summary $make_plist \
+	$0 $make_plist \
 	    < "$extra_deps_fn" >> "$partial_summary_fn"
 	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
     else
