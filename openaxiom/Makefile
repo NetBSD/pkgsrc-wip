@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/08/28 19:57:01 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/15 09:24:29 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.2.0
+PKGNAME=		openaxiom-1.2.99	# VCS-based
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +11,13 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://www.open-axiom.org/
 # http://open-axiom.sourceforge.net/index.html
 COMMENT=		Platform for symbolic, algebraic, and numerical computations
+
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	open-axiom
+SVN_ROOT.open-axiom=	https://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
+SVN_MODULE.open-axiom=	open-axiom
+
+WRKSRC=			${WRKDIR}/open-axiom
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
@@ -23,7 +31,23 @@ BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 
 .include "options.mk"
 
+# Fix version string
+SUBST_CLASSES+=			version-string
+SUBST_STAGE.version-string=	post-patch
+SUBST_MESSAGE.version-string=	Fixing version string
+SUBST_FILES.version-string=	configure.ac.pamphlet
+SUBST_SED.version-string=	-e '/^AC_INIT(/s:[0-9.-]\{1,\}:${PKGVERSION_NOREV}:'
+
+SUBST_CLASSES+=			version-string-2
+SUBST_STAGE.version-string-2=	post-patch
+SUBST_MESSAGE.version-string-2=	Fixing version string
+SUBST_FILES.version-string-2=	configure
+SUBST_SED.version-string-2=	-e '/^PACKAGE_VERSION=/s:[0-9.-]\{1,\}:${PKGVERSION_NOREV}:'
+# PACKAGE_VERSION='1.3.0-2008-10-16'
+# PACKAGE_STRING='OpenAxiom 1.3.0-2008-10-16'
+
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./build-setup.sh
 
+.include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
