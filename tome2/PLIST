@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/06 05:08:42 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/15 07:29:45 phonohawk Exp $
 bin/tome
 share/tome2/apex/.cvsignore
 share/tome2/apex/delete.me
-share/tome2/apex/scores.raw
 share/tome2/bone/bone001.012
 share/tome2/bone/bone004.001
 share/tome2/bone/bone004.002

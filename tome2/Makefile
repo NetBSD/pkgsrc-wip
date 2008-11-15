@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/06 05:08:42 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/15 07:29:45 phonohawk Exp $
 #
 
 DISTNAME=	tome-235-src
@@ -14,6 +14,21 @@ COMMENT=	Troubles of Middle Earth
 BUILD_DIRS=	src
 MAKE_FILE=	makefile.std
 BUILD_TARGET=	default
+
+TOME2_SHAREDIR=	${PREFIX}/share/tome2
+FILES_SUBST+=	TOME2_SHAREDIR=${TOME2_SHAREDIR:Q}
+
+CONF_FILES_PERMS+= \
+	/dev/null ${TOME2_SHAREDIR}/apex/scores.raw ${GAMEOWN} ${GAMEGRP} 0644
+
+MAKE_FLAGS+= \
+	LIBDIR=${TOME2_SHAREDIR:Q} \
+	GAMEOWN=${GAMEOWN:Q} \
+	GAMEGRP=${GAMEGRP:Q}
+
+# Prevent the default score file to be installed.
+pre-install:
+	${RM} -f ${WRKSRC}/lib/apex/scores.raw
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
