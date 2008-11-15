@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/11 19:39:38 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/15 21:50:41 gschwarz Exp $
 
 DISTNAME=			iodine-0.4.2
 CATEGORIES=			net
@@ -21,4 +21,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${DESTDIR}${PREFIX}/share/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
