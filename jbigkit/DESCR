@@ -1,0 +1,3 @@
+jbigkit provides a library and set of tools implementing an effective
+data compression algorithm (JBIG) for bi-level high-resolution images, such
+as fax pages or scanned documents.

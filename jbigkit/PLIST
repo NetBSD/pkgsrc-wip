@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 15:29:07 jym-netbsd Exp $
+bin/jbgtopbm
+bin/pbmtojbg
+include/jbig.h
+lib/libjbig.a
+man/man1/jbgtopbm.1
+man/man1/pbmtojbg.1
+share/doc/jbig/jbig.doc
+@dirrm share/doc/jbig

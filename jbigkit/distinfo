@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/15 15:29:07 jym-netbsd Exp $
+
+SHA1 (jbigkit-1.6.tar.gz) = f401df793d91a1cc123bbf1387d39d4f0e73b272
+RMD160 (jbigkit-1.6.tar.gz) = c412bf5a665ee98026eaa4162a9d623dcf0d1b98
+Size (jbigkit-1.6.tar.gz) = 405712 bytes
