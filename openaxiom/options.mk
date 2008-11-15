@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/08/24 07:31:20 asau Exp $
+# $NetBSD: options.mk,v 1.5 2008/11/15 09:32:59 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openaxiom
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -50,6 +50,17 @@ CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
 .include "../../x11/libXt/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-x=no
+.endif
+
+# Help PLIST generation
+.if !empty(PKG_OPTIONS:Mecl)
+# Handle X11-specific files
+.for _file_ in viewAlone
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
+.for _file_ in hypertex spadbuf view2D view3D viewman
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/lib\${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
 .endif
 
 .for opt in clisp sbcl ecl x11
