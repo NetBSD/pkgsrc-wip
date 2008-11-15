@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2008/09/13 12:45:43 asau Exp $
+$NetBSD: patch-aa,v 1.6 2008/11/15 16:28:04 asau Exp $
 
 Don't remove what is there already.
 Precreate "lib" subdirectory.
 
---- Makefile.in.orig	2008-06-24 01:41:17.000000000 +0400
-+++ Makefile.in	2008-09-13 16:02:52.000000000 +0400
-@@ -103,9 +103,8 @@
+--- Makefile.in.orig	2008-11-05 05:49:47.000000000 +0300
++++ Makefile.in	2008-11-13 07:47:23.000000000 +0300
+@@ -107,10 +107,9 @@
  
  install:
  	@echo Installing FriCAS in $(prefix)
 -	rm -rf '$(DESTDIR)$(libdir)/fricas'
  	$(mkinstalldirs) '$(DESTDIR)$(libdir)/fricas'
+ 	$(mkinstalldirs) '$(DESTDIR)$(libdir)/fricas/$(reltarget)/lib'
 -	for A in algebra autoload doc share src lib/graph ; do \
 +	for A in algebra autoload doc share src lib lib/graph ; do \
  	  for B in `find $(reltarget)/$$A -type d -print` ; do \
