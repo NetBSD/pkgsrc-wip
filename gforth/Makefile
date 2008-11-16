@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2008/11/07 23:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/16 07:28:25 asau Exp $
 
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
 CATEGORIES=	lang
-MASTER_SITES=	#${MASTER_SITE_GNU:=gforth/}
-#MASTER_SITES+=	http://www.complang.tuwien.ac.at/forth/gforth/
+MASTER_SITES=	${MASTER_SITE_GNU:=gforth/} \
+		http://www.complang.tuwien.ac.at/forth/gforth/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.complang.tuwien.ac.at/forth/gforth/
 COMMENT=	Fast interpreter for the Forth language
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k *-*-powerpc *-*-sparc
-
-CONFLICTS+=	gforth-[0-9]*
 
 CVS_REPOSITORIES=	gforth
 CVS_ROOT.gforth=	:pserver:anonymous:@c1.complang.tuwien.ac.at:/nfs/unsafe/cvs-repository/src-master
