@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/17 09:26:01 phonohawk Exp $
+bin/hangman
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Console/HCL.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/${PKGNAME}/hangman/2of12.txt
+@dirrm share/${PKGNAME}/hangman
+@dirrm share/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Console
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
