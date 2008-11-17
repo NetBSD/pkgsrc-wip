@@ -1,0 +1,91 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/17 08:09:43 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/Thread/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/BinPacking.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Bits/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/CSV.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Compression/Inflate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Either/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/CRC32/GZip.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/CRC32/Posix.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/MD5.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/MD5/Zord64_HARD.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/List/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/MIME/Types.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Map/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Maybe/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Progress/Meter.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Progress/Tracker.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Quantity.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/String/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Tuple/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/Email/Mailbox.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/Email/Sendmail.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/SocketServer.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Network/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Cmd/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Console/GetOpt/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Daemon.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Debian.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Debian/ControlParser.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/FileArchive/GZip.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/Binary.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVFS.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVFS/Combinators.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVFS/InstanceHelpers.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVFS/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVIO.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/PlafCompat.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/StatCompat.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/WindowsCompat.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Path.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Path/Glob.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Path/NameManip.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Path/WildMatch.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Posix/Consts.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Time/ParseDate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/System/Time/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Utils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/COPYRIGHT
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Test
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Time
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Posix
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Path
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/IO/HVFS
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/IO
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/FileArchive
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Debian
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Console/GetOpt
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Console
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System/Cmd
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/System
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network/Email
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Network
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Tuple
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/String
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Progress
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Maybe
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Map
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/MIME
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/List
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/MD5
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash/CRC32
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Hash
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Either
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Compression
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Bits
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/Thread
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
