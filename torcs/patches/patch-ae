@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/11/17 14:04:31 yhardy Exp $
+
+--- src/libs/learning/policy.cpp.orig	2008-03-15 01:14:41.000000000 +0200
++++ src/libs/learning/policy.cpp	2008-03-15 01:15:30.000000000 +0200
+@@ -12,6 +12,9 @@
+  ***************************************************************************/
+ 
+ #include <cstring>
++
++using namespace std;
++
+ #include <learning/learn_debug.h>
+ #include <learning/policy.h>
+ #include <learning/MathFunctions.h>

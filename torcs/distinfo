@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/17 14:04:31 yhardy Exp $
+
+SHA1 (torcs-1.3.0.tar.bz2) = 02aa1f7e17ca92eb41a60879a765a8793f1676ee
+RMD160 (torcs-1.3.0.tar.bz2) = 1c039d4061a739c8bca2a8924bbf4eaf1490c058
+Size (torcs-1.3.0.tar.bz2) = 153890028 bytes
+SHA1 (patch-aa) = a41c7b8e09ebe4cef9cfad75494b75a09d7df1b1
+SHA1 (patch-ab) = ee73bdc08036ff08d5fd9c1d3b90823f1a6af177
+SHA1 (patch-ac) = c25e6491185bd0250d8ab03da735f61184ed6236
+SHA1 (patch-ad) = 7e9e1f8e9964016e179511198200630ebb5791cd
+SHA1 (patch-ae) = a05d28de0d0d2efa2212ada0a1978622db1248c7
+SHA1 (patch-af) = 8979d570fb1b90664e207e869818c76c42928f40
+SHA1 (patch-ag) = 51c1988524f315716f1f2d288583ea2e01964892
