@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3107 2008/11/17 14:06:23 yhardy Exp $
+# $Id: Makefile,v 1.3108 2008/11/17 16:54:41 blef Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -509,7 +509,6 @@ SUBDIR+=	grub2
 SUBDIR+=	gst-python
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
-SUBDIR+=	gtk-engines-thinice
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-imonc
 SUBDIR+=	gtk-qt-engine
