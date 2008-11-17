@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/06 16:26:49 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/11/17 12:32:32 yhardy Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -102,6 +102,7 @@ share/alsa/pcm/dmix.conf
 share/alsa/pcm/dpl.conf
 share/alsa/pcm/dsnoop.conf
 share/alsa/pcm/front.conf
+share/alsa/pcm/hdmi.conf
 share/alsa/pcm/iec958.conf
 share/alsa/pcm/modem.conf
 share/alsa/pcm/rear.conf

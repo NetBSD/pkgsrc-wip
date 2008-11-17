@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/02/06 16:26:49 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/17 12:32:32 yhardy Exp $
 #
 
-DISTNAME=		alsa-lib-1.0.16
+DISTNAME=		alsa-lib-1.0.18
 CATEGORIES=		audio
 MASTER_SITES=		http://www.alsa-project.org/alsa/ftp/lib/	\
 			ftp://ftp.alsa-project.org/pub/lib/		\
@@ -15,10 +15,11 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.alsa-project.org/
 COMMENT=		Libraries for the Advanced Linux Sound Architecture (ALSA)
 
-ONLY_FOR_PLATFORM=	Linux-*-*
+ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	utils/alsa.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
