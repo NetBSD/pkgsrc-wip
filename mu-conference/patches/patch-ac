@@ -1,5 +1,5 @@
---- src/conference_user.c	2007-06-08 15:19:48.000000000 -0500
-+++ src/conference_user.c	2008-11-12 18:06:33.000000000 -0600
+--- conference_user.c	2007-06-08 15:19:48.000000000 -0500
++++ conference_user.c	2008-11-12 18:06:33.000000000 -0600
 @@ -161,6 +161,12 @@ void _con_user_nick(gpointer key, gpoint
      if(element)
        xmlnode_hide(element);

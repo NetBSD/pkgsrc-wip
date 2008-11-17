@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/11/17 18:31:40 schnoebe Exp $
+$NetBSD: distinfo,v 1.6 2008/11/17 18:57:23 schnoebe Exp $
 
 SHA1 (mu-conference_0.7.tar.gz) = eb8e21f708587a02042f425a814db6fff6e0ba7e
 RMD160 (mu-conference_0.7.tar.gz) = 82a02434414ec3eb925959401b5c847912088e6b
 Size (mu-conference_0.7.tar.gz) = 112381 bytes
 SHA1 (patch-aa) = 2db01e45740e75a192b9f69f55c51107e2c09be6
 SHA1 (patch-ab) = e616b750127c68d7d64cc5294d83c0fc28a54c3e
-SHA1 (patch-ac) = 1c5e3eb6428767e450d21c35281f188864221dd7
+SHA1 (patch-ac) = 0101f258d96219927a97a58cec0046a5245098d2
