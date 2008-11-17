@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3104 2008/11/17 09:27:20 phonohawk Exp $
+# $Id: Makefile,v 1.3105 2008/11/17 12:44:25 yhardy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -69,6 +69,7 @@ SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	alphamail
 SUBDIR+=	alsa-lib
+SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-utils
 SUBDIR+=	am-utils
 SUBDIR+=	amarok
