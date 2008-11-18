@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 11:03:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/18 12:29:39 thomasklausner Exp $
 #
 
 DISTNAME=	fbreader-sources-0.8.17
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 MAKE_ENV+=	INSTALLDIR=${PREFIX}
+MAKE_ENV+=	DESTDIR=${DESTDIR}
 MAKE_ENV+=	LDFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_ENV+=	TARGET_ARCH=desktop
 

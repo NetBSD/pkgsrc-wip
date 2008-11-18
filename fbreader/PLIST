@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/18 11:03:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/18 12:29:39 thomasklausner Exp $
 bin/FBReader
 lib/libzlcore.so.0.8.17
 lib/libzlcore.so.0.9
 lib/libzltext.so.0.8.17
 lib/libzltext.so.0.9
 lib/zlibrary/ui/zlui-gtk.so
+share/applications/FBReader.desktop
+share/FBReader/default/config.xml
 share/FBReader/default/external.xml
+share/FBReader/default/keymap.xml
+share/FBReader/default/styles.xml
 share/FBReader/default/toolbar.xml
 share/FBReader/formats/fb2/FBReaderVersion.ent
 share/FBReader/formats/fb2/fb2genres.xml
@@ -29,6 +33,7 @@ share/FBReader/resources/it.xml
 share/FBReader/resources/ru.xml
 share/FBReader/resources/sv.xml
 share/FBReader/resources/uk.xml
+share/pixmaps/FBReader.png
 share/pixmaps/FBReader/addBook.png
 share/pixmaps/FBReader/bookInfo.png
 share/pixmaps/FBReader/fb2.png
@@ -102,6 +107,8 @@ share/zlibrary/resources/uk.xml
 @dirrm share/zlibrary/default
 @dirrm share/zlibrary
 @dirrm share/pixmaps/FBReader
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm share/FBReader/resources
 @dirrm share/FBReader/help
 @dirrm share/FBReader/formats/xhtml
