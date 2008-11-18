@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3109 2008/11/18 03:06:53 minskim Exp $
+# $Id: Makefile,v 1.3110 2008/11/18 11:04:25 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -371,6 +371,7 @@ SUBDIR+=	fasta
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
+SUBDIR+=	fbreader
 SUBDIR+=	fdm
 #SUBDIR+=	festival-gaim	# please replace with pidgin-festival
 SUBDIR+=	ffmpeg-snapshot
@@ -898,6 +899,7 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libhttpd
+SUBDIR+=	liblinebreak
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmaa
