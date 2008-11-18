@@ -1,0 +1,88 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/18 11:00:32 thomasklausner Exp $
+
+--- Makefile.orig	2008-04-20 04:45:51.000000000 +0000
++++ Makefile
+@@ -38,31 +38,31 @@ OLDGCC ?= N
+ DEBUG   := DebugDir
+ RELEASE := ReleaseDir
+ 
+-$(DEBUG)/%.o: %.c
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -c -o $@ $<
++$(DEBUG)/%.lo: %.c
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -c -o $@ $<
+ 
+-$(RELEASE)/%.o: %.c
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -c -o $@ $<
++$(RELEASE)/%.lo: %.c
++	${LIBTOOL} --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -c -o $@ $<
+ 
+-$(DEBUG)/%.o: %.cpp
+-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -c -o $@ $<
++$(DEBUG)/%.lo: %.cpp
++	${LIBTOOL} --mode=compile $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -c -o $@ $<
+ 
+-$(RELEASE)/%.o: %.cpp
+-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -c -o $@ $<
++$(RELEASE)/%.lo: %.cpp
++	${LIBTOOL} --mode=compile $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -c -o $@ $<
+ 
+ ifeq ($(OLDGCC),N)
+ 
+ $(DEBUG)/%.dep: %.c
+-	$(CC) -MM -MT $(patsubst %.dep,%.o,$@) $(CFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -o $@ $<
++	$(CC) -MM -MT $(patsubst %.dep,%.lo,$@) $(CFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -o $@ $<
+ 
+ $(RELEASE)/%.dep: %.c
+-	$(CC) -MM -MT $(patsubst %.dep,%.o,$@) $(CFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -o $@ $<
++	$(CC) -MM -MT $(patsubst %.dep,%.lo,$@) $(CFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -o $@ $<
+ 
+ $(DEBUG)/%.dep: %.cpp
+-	$(CXX) -MM -MT $(patsubst %.dep,%.o,$@) $(CXXFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -o $@ $<
++	$(CXX) -MM -MT $(patsubst %.dep,%.lo,$@) $(CXXFLAGS) $(CPPFLAGS) $(DBGFLAGS) $(TARGET_ARCH) -o $@ $<
+ 
+ $(RELEASE)/%.dep: %.cpp
+-	$(CXX) -MM -MT $(patsubst %.dep,%.o,$@) $(CXXFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -o $@ $<
++	$(CXX) -MM -MT $(patsubst %.dep,%.lo,$@) $(CXXFLAGS) $(CPPFLAGS) $(RELFLAGS) $(TARGET_ARCH) -o $@ $<
+ 
+ else
+ 
+@@ -97,20 +97,20 @@ ifeq ($(OLDGCC),N)
+ endif
+ 
+ HFILES   = $(wildcard $(patsubst -I%,%/*.h,$(INCLUDE)))
+-OBJFILES = $(CFILES:.c=.o) $(CXXFILES:.cpp=.o)
++OBJFILES = $(CFILES:.c=.lo) $(CXXFILES:.cpp=.lo)
+ 
+-DEBUG_OBJS   = $(patsubst %.o,$(DEBUG)/%.o,$(OBJFILES))
+-RELEASE_OBJS = $(patsubst %.o,$(RELEASE)/%.o,$(OBJFILES))
++DEBUG_OBJS   = $(patsubst %.lo,$(DEBUG)/%.lo,$(OBJFILES))
++RELEASE_OBJS = $(patsubst %.lo,$(RELEASE)/%.lo,$(OBJFILES))
+ 
+-DEBUG_DEPS   = $(patsubst %.o,%.dep,$(DEBUG_OBJS))
+-RELEASE_DEPS = $(patsubst %.o,%.dep,$(RELEASE_OBJS))
++DEBUG_DEPS   = $(patsubst %.lo,%.dep,$(DEBUG_OBJS))
++RELEASE_DEPS = $(patsubst %.lo,%.dep,$(RELEASE_OBJS))
+ 
+ CFILES   := linebreak.c linebreakdata.c linebreakdef.c
+ CXXFILES :=
+ 
+ LIBS :=
+ 
+-TARGET         = liblinebreak.a
++TARGET         = liblinebreak.la
+ DEBUG_TARGET   = $(patsubst %,$(DEBUG)/%,$(TARGET))
+ RELEASE_TARGET = $(patsubst %,$(RELEASE)/%,$(TARGET))
+ 
+@@ -127,10 +127,10 @@ $(RELEASE):
+ 	mkdir $(RELEASE)
+ 
+ $(DEBUG_TARGET): $(DEBUG_DEPS) $(DEBUG_OBJS)
+-	$(AR) -r $(DEBUG_TARGET) $(DEBUG_OBJS)
++	${LIBTOOL} --mode=link ${CXX} -o $(DEBUG_TARGET) $(DEBUG_OBJS) -version-info 0:0 -rpath ${PREFIX}/lib
+ 
+ $(RELEASE_TARGET): $(RELEASE_DEPS) $(RELEASE_OBJS)
+-	$(AR) -r $(RELEASE_TARGET) $(RELEASE_OBJS)
++	${LIBTOOL} --mode=link ${CXX} -o $(RELEASE_TARGET) $(RELEASE_OBJS) -version-info 0:0 -rpath ${PREFIX}/lib
+ 
+ doc:
+ 	doxygen

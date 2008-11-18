@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/18 11:00:32 thomasklausner Exp $
+
+SHA1 (liblinebreak-0.0.20080420.tar.gz) = 4c1fd2acde1ddb6108124fb2682bf9fb5e6af251
+RMD160 (liblinebreak-0.0.20080420.tar.gz) = 3dfd05663e0bc1d472fbbb36d83d18c45553ade9
+Size (liblinebreak-0.0.20080420.tar.gz) = 36952 bytes
+SHA1 (patch-aa) = 57c9b139f01576776ef612b4084523215f33f1d1
