@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3108 2008/11/17 16:54:41 blef Exp $
+# $Id: Makefile,v 1.3109 2008/11/18 03:06:53 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -840,6 +840,7 @@ SUBDIR+=	knutclient
 SUBDIR+=	koha
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
+SUBDIR+=	kpathsea
 SUBDIR+=	kplayer
 SUBDIR+=	kstart
 SUBDIR+=	ktorrent3
