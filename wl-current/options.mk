@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/11/18 02:11:41 makoto Exp $
+# $NetBSD: options.mk,v 1.2 2008/11/18 08:12:29 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wl
-PKG_SUPPORTED_OPTIONS.wl=	emacs-w3m emacs-w3m-current
+PKG_SUPPORTED_OPTIONS=	emacs-w3m emacs-w3m-current
 
 .include "../../mk/bsd.options.mk"
 
