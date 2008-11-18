@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/18 03:04:35 minskim Exp $
+
+--- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
++++ texmf.cnf
+@@ -44,18 +44,18 @@
+ 
+ % The tree containing the runtime files closely related to the specific
+ % program version used:
+-TEXMFMAIN = $SELFAUTOPARENT/texmf
++TEXMFMAIN = $SELFAUTODIR/share/texmf
+ 
+ % The main distribution tree:
+-TEXMFDIST = $SELFAUTOPARENT/texmf-dist
++TEXMFDIST = $SELFAUTODIR/share/texmf-dist
+ 
+ % Our documentation-only tree, arranged by language:
+-TEXMFDOC = $SELFAUTOPARENT/texmf-doc
++TEXMFDOC = $SELFAUTODIR/share/texmf-doc
+ 
+ % A place for local additions to a "standard" texmf tree.
+ % This tree is not used for local configuration maintained by
+ % texconfig, it uses TEXMFCONFIG below.
+-TEXMFLOCAL = $SELFAUTOPARENT/../texmf-local
++TEXMFLOCAL = $SELFAUTODIR/share/texmf-local
+ 
+ % TEXMFSYSVAR, where texconfig-sys stores variable runtime data.
+ % With teTeX-3.0 or later, this must be set.
+@@ -63,7 +63,7 @@ TEXMFLOCAL = $SELFAUTOPARENT/../texmf-lo
+ %   TEXMFSYSVAR = $TEXMFMAIN
+ % For using a separate tree:
+ %   TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+-TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
++TEXMFSYSVAR = $SELFAUTODIR/share/texmf-var
+ 
+ % TEXMFSYSCONFIG, where texconfig-sys stores configuration data.
+ % With teTeX-3.0 or later, this must be set.
+@@ -71,7 +71,7 @@ TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+ %   TEXMFSYSCONFIG = $TEXMFMAIN
+ % For using a separate tree:
+ %   TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
+-TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
++TEXMFSYSCONFIG = $SELFAUTODIR/share/texmf-config
+ 
+ % User texmf trees are allowed as follows.
+ % This used to be HOMETEXMF.
