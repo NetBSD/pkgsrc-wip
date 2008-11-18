@@ -1,0 +1,15 @@
+Segfaults on NetBSD-5.99.01/amd64:
+
+#0  0x00007f7ffcc1808c in XS_SDL_SurfaceW ()
+   from /usr/pkg/lib/perl5/vendor_perl/5.10.0/x86_64-netbsd-thread-multi/auto/SDL_perl/SDL_perl.so
+(gdb) bt
+#0  0x00007f7ffcc1808c in XS_SDL_SurfaceW ()
+   from /usr/pkg/lib/perl5/vendor_perl/5.10.0/x86_64-netbsd-thread-multi/auto/SDL_perl/SDL_perl.so
+#1  0x00007f7ffdb9f589 in Perl_pp_entersub ()
+   from /usr/pkg/lib/perl5/5.10.0/x86_64-netbsd-thread-multi/CORE/libperl.so
+#2  0x00007f7ffdb9deee in Perl_runops_standard ()
+   from /usr/pkg/lib/perl5/5.10.0/x86_64-netbsd-thread-multi/CORE/libperl.so
+#3  0x00007f7ffdb99ad7 in perl_run ()
+   from /usr/pkg/lib/perl5/5.10.0/x86_64-netbsd-thread-multi/CORE/libperl.so
+#4  0x0000000000400f4c in main ()
+(gdb)
