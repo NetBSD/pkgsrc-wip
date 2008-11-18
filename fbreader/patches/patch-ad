@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/18 11:03:16 thomasklausner Exp $
+
+--- zlibrary/core/src/unix/iconv/IConvEncodingConverter.cpp.orig	2008-03-22 13:00:31.000000000 +0000
++++ zlibrary/core/src/unix/iconv/IConvEncodingConverter.cpp
+@@ -86,7 +86,7 @@ void IConvEncodingConverter::convert(std
+ 	char *out = (char*)dst.data() + oldLength;
+ 
+ iconvlabel:
+-	iconv(myIConverter, &in, &inSize, &out, &outSize);
++	iconv(myIConverter, (const char **)&in, &inSize, &out, &outSize);
+ 	if (inSize != 0) {
+ 		if (myBuffer.empty()) {
+ 			myBuffer.append(in, inSize);
+@@ -125,7 +125,7 @@ bool IConvEncodingConverter::fillTable(i
+ 		inSize = 1;
+ 		outSize = 3;
+ 		inBuffer[0] = i;
+-		iconv(myIConverter, &in, &inSize, &out, &outSize);
++		iconv(myIConverter, (const char **)&in, &inSize, &out, &outSize);
+ 		if (inSize == 0) {
+ 			ZLUnicodeUtil::Ucs2Char ch;
+ 			ZLUnicodeUtil::firstChar(ch, outBuffer);
