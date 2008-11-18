@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/11/18 02:11:41 makoto Exp $
+To autoload wl, say 'M-x wl' works without any prior command, put following
+line on your ~/.emacs.el or ~/.emacs
+  (autoload 'wl "wl" "Wanderlust" t)
+
+Also, if you want write mail before you invoke wl, put following line
+  (autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+and 'M-x wl-draft' to do so.
+===========================================================================
