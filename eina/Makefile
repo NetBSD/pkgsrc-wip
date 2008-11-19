@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/30 20:49:44 yazzy Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/19 01:14:03 jsonn Exp $
 #
 
 DISTNAME=       eina-0.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=   .tar.bz2
 MAINTAINER=     yazzy@yazzy.org
 HOMEPAGE=       http://enlightenment.org/
 COMMENT=        Data types library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=  yes
 USE_LIBTOOL=    yes

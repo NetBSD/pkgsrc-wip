@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/08/06 19:10:40 yazzy Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/19 01:13:08 jsonn Exp $
 #
 
 DISTNAME=	epeg-0.9.1.042
@@ -11,6 +11,8 @@ MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	An IMMENSELY FAST JPEG thumbnailer library API.
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
