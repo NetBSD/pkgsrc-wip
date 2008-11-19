@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 02:11:41 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/19 00:22:01 makoto Exp $
 
 DISTNAME=	wl-2.15.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -22,36 +22,25 @@ MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR:Q}
 MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR:Q}${PREFIX:Q}/share/wl
 INFO_FILES=	# PLIST
 
+	# Change default wl-icon-directory for PIXMAP.
+	# Why not just use patch-ab ?  $PREFIX is to be embedded.
+
+SUBST_CLASSES+=			icon_directory
+SUBST_STAGE.icon_directory=	pre-configure
+SUBST_MESSAGES.icon_directory=	Fixing wl-icon-directory default value (defvar)
+SUBST_FILES.icon_directory=	${WRKSRC}/wl/wl-vars.el
+SUBST_SED.icon_directory=	-e 's|%%PREFIX%%|${PREFIX}|'
+
 DOCDIR=			${PREFIX}/share/doc/wl
 EXAMPLESDIR=		${PREFIX}/share/examples/wl
 INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 			${EXAMPLESDIR}/en ${EXAMPLESDIR}/ja \
 			${EMACS_INFOPREFIX}
 
-
 EMACS_BUILDLINK=	# empty
 
 CVS_ROOT.wanderlust=	:pserver:anonymous:@cvs.m17n.org:/cvs/root
 CVS_REPOSITORIES=	wanderlust
-
-	# Change default wl-icon-directory for PIXMAP.
-	# Why not just use patch-ab ?  $PREFIX is to be embedded.
-pre-build:
-	( 	\
-	${ECHO} "--- wanderlust/wl/wl-vars.el-orig	2008-02-15 23:10:39.000000000 +0900"	;\
-	${ECHO} "+++ wl/wl-vars.el	2008-11-18 09:54:56.000000000 +0900"		;\
-	${ECHO} "@@ -172,8 +172,8 @@"								; \
-	${ECHO} " "										; \
-	${ECHO} " (defcustom wl-icon-directory (if (fboundp 'locate-data-directory)"		; \
-	${ECHO} " 				 (locate-data-directory \"wl\")"			; \
-	${ECHO} "-			       (let ((icons (expand-file-name \"wl/icons/\""		; \
-	${ECHO} "-							      data-directory)))"	; \
-	${ECHO} "+			       (let ((icons (expand-file-name \"share/wl/\""	; \
-	${ECHO} "+							      \"${PREFIX}\")))"		; \
-	${ECHO} " 				 (if (file-directory-p icons)"				; \
-	${ECHO} " 				     icons)))"						; \
-	${ECHO} "   \"*Directory to load the icon files from, or nil if none.\""			; \
-	) | (cd ${WRKSRC}; patch  -p0 )
 
 post-install:
 	set -e; \
