@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/10/26 08:28:57 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/19 01:24:03 jsonn Exp $
 #
 
 DISTNAME=	efreet-0.5.0.050
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
