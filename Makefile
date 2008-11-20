@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3112 2008/11/20 15:21:26 marttikuparinen Exp $
+# $Id: Makefile,v 1.3113 2008/11/20 17:36:40 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1757,7 +1757,6 @@ SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spe
 SUBDIR+=	speedx
-SUBDIR+=	speex-devel
 SUBDIR+=	spfmilter
 SUBDIR+=	squirrelmail-avelsieve
 SUBDIR+=	squirrelmail-chg_sasl_passwd
