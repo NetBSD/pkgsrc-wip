@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/11/14 09:39:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2008/11/20 17:35:47 thomasklausner Exp $
 
 DISTNAME=	linphone-2.1.1
 CATEGORIES=	net
@@ -43,5 +43,5 @@ CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
 .include "../../wip/libexosip/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../wip/speex-devel/buildlink3.mk"
+.include "../../audio/speex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
