@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2008/11/08 00:38:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.71 2008/11/20 01:33:55 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -35,7 +35,6 @@ info/mairix-el
 info/message
 info/mh-e
 info/newsticker
-info/ns-emacs
 info/nxml-mode
 info/org
 info/pcl-cvs
