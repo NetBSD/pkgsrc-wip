@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/12 17:20:48 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/20 15:25:18 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.8-Stable-Full_Package
 PKGNAME=	joomla-1.5.8
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.joomla.org/
 COMMENT=	Dynamic web content management system (CMS)
+#LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
