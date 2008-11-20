@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/20 15:19:12 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/20 15:41:40 marttikuparinen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/AdminSettings.sample
 share/mediawiki/COPYING
@@ -1399,7 +1399,7 @@ share/mediawiki/wiki.phtml
 @dirrm share/mediawiki/docs/php-memcached
 @dirrm share/mediawiki/docs/html
 @dirrm share/mediawiki/docs
-@dirrm share/mediawiki/config
 @dirrm share/mediawiki/bin
-@dirrm share/mediawiki
 @dirrm share/examples/mediawiki
+@unexec ${RMDIR} %D/share/mediawiki/config 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/mediawiki 2>/dev/null || ${TRUE}
