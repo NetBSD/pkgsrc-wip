@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2008/08/04 12:23:42 hoka_adam Exp $
+$NetBSD: patch-ac,v 1.3 2008/11/21 06:41:51 yhardy Exp $
 
---- JavaScriptCore/kjs/collector.cpp.orig	2008-07-20 06:53:10.000000000 +0200
-+++ JavaScriptCore/kjs/collector.cpp
-@@ -386,7 +386,7 @@ static inline void* currentThreadStackBa
+--- ./JavaScriptCore/runtime/Collector.cpp.orig	2008-11-19 13:24:36.000000000 +0200
++++ ./JavaScriptCore/runtime/Collector.cpp	2008-11-19 13:25:33.000000000 +0200
+@@ -438,7 +438,7 @@
      if (stackBase == 0 || thread != stackThread) {
          pthread_attr_t sattr;
          pthread_attr_init(&sattr);
