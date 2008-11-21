@@ -5,3 +5,7 @@ Mon Feb  4 11:26:41 CST 2008
 Todo list:
 	Test on other platforms
 	clean up a few more of the warnings from pkglint.
+
+	This package has known vulnerabilities, please investigate
+	and fix them if possible:
+	http://www.icdevgroup.org/i/dev/news?id=ssEkj9j8&mv_arg=00030&mv_pc=96 .
