@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2008/11/15 01:00:38 dillo Exp $
+# $NetBSD: options.mk,v 1.11 2008/11/21 17:39:26 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scummvm-nightly
 PKG_SUPPORTED_OPTIONS=	scummvm-nightly-cruise
-PKG_SUPPORTED_OPTIONS=	scummvm-nightly-groovie
+PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-groovie
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-igor
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-m4
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-made
