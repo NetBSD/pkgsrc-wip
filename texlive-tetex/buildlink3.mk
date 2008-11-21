@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/21 08:50:33 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/11/21 08:52:47 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TEXLIVE_TETEX_BUILDLINK3_MK:=	${TEXLIVE_TETEX_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}texlive-tetex
 
 .if ${TEXLIVE_TETEX_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.texlive-tetex+=	texlive-tetex>=2008
-BUILDLINK_PKGSRCDIR.texlive-tetex?=	../../texlive/texlive-tetex
+BUILDLINK_PKGSRCDIR.texlive-tetex?=	../../wip/texlive-tetex
 .endif	# TEXLIVE_TETEX_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
