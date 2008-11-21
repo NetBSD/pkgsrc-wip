@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/10/07 19:45:06 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/21 06:43:10 yhardy Exp $
 #
 
-DISTNAME=	midori-0.0.21
+DISTNAME=	midori-0.1.0
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -16,6 +16,12 @@ USE_DIRS+=	xdg-1.4
 CONFIGURE_FLAGS+=	--prefix=${PREFIX:Q}
 
 USE_TOOLS+=	intltool pkg-config msgfmt gmake
+
+REPLACE_PYTHON=		waf wscript po/wscript_build katze/wscript_build
+REPLACE_PYTHON+=	docs/api/wscript_build icons/wscript_build
+REPLACE_PYTHON+=	midori/wscript_build
+
+.include "../../lang/python/application.mk"
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
