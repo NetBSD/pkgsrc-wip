@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/12/02 21:01:02 ondratu Exp $
-
-SHA1 (PolicyKit-0.6.tar.gz) = ec70eb994eb378b5a1129d9f40a28aac2c705b5c
-RMD160 (PolicyKit-0.6.tar.gz) = 810e5eb966a6e0b85abd004b0b0e5e75d31f8ab0
-Size (PolicyKit-0.6.tar.gz) = 550390 bytes
-SHA1 (patch-aa) = f64e9a42dcdd25dce11576fa955cd89ee48bf96d

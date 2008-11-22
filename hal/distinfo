@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/12/02 21:19:23 ondratu Exp $
-
-SHA1 (hal-0.5.10.tar.gz) = 8d67499df61590c11fd3203004d69e8a45abb8fa
-RMD160 (hal-0.5.10.tar.gz) = fafd90e671dbe95a8dd55a4ad257586a0289ef67
-Size (hal-0.5.10.tar.gz) = 1591146 bytes
-SHA1 (patch-ab) = 732bdac0767f956e173abacbb15effe028fba6d5
-SHA1 (patch-ad) = 72e17d8098c160c774879b66b5903ec412768d92

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3115 2008/11/22 14:57:20 thomasklausner Exp $
+# $Id: Makefile,v 1.3116 2008/11/22 15:34:56 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -539,8 +539,6 @@ SUBDIR+=	gwhois
 SUBDIR+=	gxmms2
 SUBDIR+=	habak
 SUBDIR+=	haddock
-SUBDIR+=	hal
-SUBDIR+=	hal-info
 SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
@@ -1478,7 +1476,6 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
-SUBDIR+=	policykit
 SUBDIR+=	polipo
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy

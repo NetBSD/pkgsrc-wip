@@ -1,8 +1,0 @@
-HAL is simply just a piece of user-space software that maintains a list
-of device with well-defined properties for each device. In addition, HAL
-provides space for application defined properties per device.
-
-HAL is *not* concerned with how to use the hardware, nor is HAL concerned
-with configuring the hardware. However, HAL can be used in applications that
-needs the hardware by providing the list of devices and space for storing
-configuration values.
