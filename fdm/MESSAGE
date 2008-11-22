@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/02/17 15:36:55 smoppy Exp $
+$NetBSD: MESSAGE,v 1.3 2008/11/22 15:46:18 leot1990 Exp $
 
 It's suggested to run fdm as non privileged user, else
 create an ad-hoc user as in the following example:
@@ -17,7 +17,7 @@ few lines (no filtering):
 Also you may want to run it every half hour or so. To
 do it just add the following line to the crontab(5):
 
-*/30    *       *       *       *       /usr/local/bin/fdm -l fetch
+*/30    *       *       *       *       ${PREFIX}/bin/fdm -l fetch
 
 Read more to the fdm(1) and fdm.conf(5) manual pages.
 ===========================================================================
