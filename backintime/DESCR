@@ -1,0 +1,29 @@
+Why did I write the application ? When I read about Apple's
+TimeMachine I thought it's nice tool to have. I searched for
+equivalent applications for Linux and I find TimeVault and FlyBack.
+I didn't feel very comfortable with TimeVault, especially with it's
+time line. FlyBack was almost what I was looking for: I wanted a
+Places/Bookmarks column and I wanted snapshots only when something
+changed (just to reduce the number of snapshots).
+
+Keep in mind that Back In Time is just a GUI. The real magic is
+done by rsync (take snapshots and restore), diff (check if something
+changed) and cp (make hard links).
+
+Back In Time acts as a "user mode" backup system. This means that
+you can backup/restore only folders you have write access to
+(actually you can backup read-only folders, but you can't restore
+them).
+
+In order to reduce disk space, it use the following rules:
+
+    * a new snapshot is created only if the last snapshot (if any)
+    is different from the current directories state
+    * when a new snapshot is created, it use hard-links (if possible)
+    for files that are not modified
+
+When you restore a file "A", if it already exists on the file system
+it will be renamed to "A.backup.<current data>".
+
+For automatic backup it use "cron" so there is no need for a daemon,
+but "cron" must be running.

@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 16:59:11 thomasklausner Exp $
+bin/backintime
+man/man1/backintime.1
+share/applications/backintime.desktop
+share/backintime/applicationinstance.py
+share/backintime/backintime.glade
+share/backintime/backintime.py
+share/backintime/backup.py
+share/backintime/config.py
+share/backintime/gnomeclipboardtools.py
+share/backintime/gnomefileicons.py
+share/backintime/gtkapplicationinstance.py
+share/backintime/logger.py
+share/backintime/messagebox.py
+share/backintime/settingsdialog.py
+share/backintime/snapshotsdialog.py
+share/doc/backintime/AUTHORS
+share/doc/backintime/CHANGES
+share/doc/backintime/LICENSE
+share/doc/backintime/README
+share/doc/backintime/TRANSLATIONS
+share/doc/backintime/VERSION
+share/gnome/help/backintime/C/backintime.xml
+share/gnome/help/backintime/C/figures/mainwindow.png
+share/gnome/help/backintime/C/figures/nautilus_actions_step1.png
+share/gnome/help/backintime/C/figures/nautilus_actions_step2.png
+share/gnome/help/backintime/C/figures/nautilus_actions_step3.png
+share/gnome/help/backintime/C/figures/nautilus_actions_step4.png
+share/gnome/help/backintime/C/figures/nautilus_actions_step5.png
+share/gnome/help/backintime/C/figures/settingsdialog.png
+share/gnome/help/backintime/C/figures/snapshotsdialog-diffoptions.png
+share/gnome/help/backintime/C/figures/snapshotsdialog.png
+share/gnome/help/backintime/C/legal.xml
+share/locale/es/LC_MESSAGES/backintime.mo
+share/locale/fr/LC_MESSAGES/backintime.mo
+share/omf/backintime/backintime-C.omf
+@dirrm share/omf/backintime
+@comment in rarian: @dirrm share/omf
+@dirrm share/gnome/help/backintime/C/figures
+@dirrm share/gnome/help/backintime/C
+@dirrm share/gnome/help/backintime
+@dirrm share/doc/backintime
+@dirrm share/backintime
+@comment in xdg-dirs: @dirrm share/applications
