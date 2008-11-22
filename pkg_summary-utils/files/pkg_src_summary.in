@@ -142,9 +142,7 @@ process_options $PSS_OPTIONS "$@"
 
 if test "$multi_var"; then
     # VARIANTS7 - artificial field keeping all variable assignments
-    # for multi-variant packages. This should be in pkgsrc but
-    # idea was rejected by pkgsrc developers.
-    # http://mail-index.netbsd.org/tech-pkg/2008/07/20/msg001320.html
+    # for multi-variant packages.
     add_fields 'VARIANTS7'
 fi
 
