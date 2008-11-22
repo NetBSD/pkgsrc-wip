@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/21 14:02:28 krub1 Exp $
-include/libvolume_id.h
-lib/libvolume_id.a
-lib/libvolume_id.so
-lib/libvolume_id.so.0
-lib/pkgconfig/libvolume_id.pc

@@ -1,4 +1,4 @@
-# $Id: volume_id.mk,v 1.2 2007/12/02 21:19:23 ondratu Exp $
+# $Id: volume_id.mk,v 1.3 2008/11/22 14:57:20 thomasklausner Exp $
 # from "Id: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp"
 #
 #
@@ -24,7 +24,7 @@ OS_HAVE_VOLUME_ID=		YES
 _PKG_CONFIG_LIBDIR?=		${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgconfig:${OS_PKG_CONFIG_LIBDIR}
 .	endif
 .else
-. 	include "../../wip/libvolumeid/buildlink3.mk"
+. 	include "../../devel/libvolume_id/buildlink3.mk"
 .endif
 
 .endif	# OSVOLUME_ID_MK

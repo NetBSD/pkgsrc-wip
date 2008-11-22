@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3114 2008/11/21 08:51:38 minskim Exp $
+# $Id: Makefile,v 1.3115 2008/11/22 14:57:20 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -926,7 +926,6 @@ SUBDIR+=	libuuid
 SUBDIR+=	libuxre
 SUBDIR+=	libvc
 SUBDIR+=	libvg
-SUBDIR+=	libvolumeid
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxcb
 SUBDIR+=	libxfce4gui
