@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/21 08:50:33 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/23 22:45:10 minskim Exp $
 
 --- Makefile.in.orig	2008-07-05 09:43:44.000000000 -0700
 +++ Makefile.in
+@@ -34,7 +34,7 @@ install: install-data install-exec
+ 
+ # Auxiliary files.
+ install-data::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(man5dir) $(texpooldir) $(texmf)/doc/tetex
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(man5dir) $(texpooldir)
+ 	for p in $(manpgs); do \
+ 	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
+ 	done
 @@ -53,22 +53,12 @@ install-data::
  	  updmap-sys.$(manext) mktexfmt.$(manext) fmtutil-sys.$(manext)
  	ln -s allcm.$(manext) $(man1dir)/allec.$(manext)
