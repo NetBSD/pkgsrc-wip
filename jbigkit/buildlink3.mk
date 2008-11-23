@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/11/23 12:34:46 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/11/23 14:19:53 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JBIGKIT_BUILDLINK3_MK:=	${JBIGKIT_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jbigkit
 .if ${JBIGKIT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.jbigkit+=	jbigkit>=1.6
 BUILDLINK_PKGSRCDIR.jbigkit?=	../../wip/jbigkit
+BUILDLINK_DEPMETHOD.jbigkit?=	build
 .endif	# JBIGKIT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
