@@ -13,7 +13,7 @@ Suggested package updates
 	o commoncpp2-1.6.3
 	o d4x-2.5.7.1
 	o daphne-1.0
-	o dhcpcd-4.0.4
+	o dhcpcd-4.0.5
 	o directfb-1.0.0
 	o ecasound-2.5.2
 	o editline-20080712.2.11
@@ -21,6 +21,7 @@ Suggested package updates
 	o endeavour-2.10.2
 	o fakenes-0.5.7
 	o firebird-2.0.3
+	o gallery-1.5.10
 	o gambas2-2.8.2
 	o gcc42-4.2.4
 	o geant-4.9.1p2
@@ -76,7 +77,7 @@ Suggested package updates
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o siege-2.67
-	o smc-1.5
+	o smc-1.6
 	o smlnj-110.67
 	o spe-0.8.2a
 	o swftools-0.8.1
@@ -93,7 +94,7 @@ Suggested package updates
 	o wordpress-2.6.3
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.2
-	o xcb-util-0.2.1
+	o xcb-util-0.3.1
 	o xinetd-2.3.14
 	o xmonad-0.8
 	o zinf-2.2.5
