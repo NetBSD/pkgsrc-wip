@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/23 20:42:18 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/23 21:30:35 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -35,7 +35,14 @@ BUILD_DEFS+=		TEXMFLOCAL
 TEXMFLOCAL?=		${PREFIX}/share/texmf-local
 FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
 
+CONF_FILES=	${PREFIX}/share/examples/${PKGBASE}/texmf.cnf \
+		${PKG_SYSCONFDIR}/texmf.cnf
+
 OWN_DIRS+=		${TEXMFLOCAL} ${VARBASE}/lib/texmf
 INSTALLATION_DIRS+=	share/doc/texmf share/texmf-dist
+
+post-install:
+	${LN} -sf ${PKG_SYSCONFDIR}/texmf.cnf \
+		${PREFIX}/share/texmf/web2c/texmf.cnf
 
 .include "../../mk/bsd.pkg.mk"
