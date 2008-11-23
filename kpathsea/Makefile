@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 03:04:35 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/23 20:42:18 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -20,5 +20,22 @@ USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/kpathsea
 
 MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
+
+SUBST_CLASSES+=		texmfdir
+SUBST_MESSAGE.texmfdir=	Setting texmf directories.
+SUBST_STAGE.texmfdir=	pre-configure
+SUBST_FILES.texmfdir=	texmf.cnf
+SUBST_SED.texmfdir=	-e 's,@TEXMFLOCAL@,${TEXMFLOCAL},' \
+			-e 's,@VARBASE@,${VARBASE},' \
+			-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
+
+PKG_SYSCONFSUBDIR=	texmf
+
+BUILD_DEFS+=		TEXMFLOCAL
+TEXMFLOCAL?=		${PREFIX}/share/texmf-local
+FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
+
+OWN_DIRS+=		${TEXMFLOCAL} ${VARBASE}/lib/texmf
+INSTALLATION_DIRS+=	share/doc/texmf share/texmf-dist
 
 .include "../../mk/bsd.pkg.mk"

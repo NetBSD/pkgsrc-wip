@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/18 03:04:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/23 20:42:18 minskim Exp $
 bin/kpseaccess
 bin/kpsereadlink
 bin/kpsestat
@@ -76,5 +76,9 @@ share/texmf/web2c/mktexnam.opt
 share/texmf/web2c/mktexupd
 share/texmf/web2c/texmf.cnf
 @dirrm share/texmf/web2c
+@exec ${MKDIR} %D/share/texmf-dist
+@dirrm share/texmf-dist
 @dirrm share/texmf
+@exec ${MKDIR} %D/share/doc/texmf
+@dirrm share/doc/texmf
 @dirrm include/kpathsea
