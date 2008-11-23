@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/23 21:30:35 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/23 21:45:33 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -25,13 +25,13 @@ SUBST_CLASSES+=		texmfdir
 SUBST_MESSAGE.texmfdir=	Setting texmf directories.
 SUBST_STAGE.texmfdir=	pre-configure
 SUBST_FILES.texmfdir=	texmf.cnf
-SUBST_SED.texmfdir=	-e 's,@TEXMFLOCAL@,${TEXMFLOCAL},' \
-			-e 's,@VARBASE@,${VARBASE},' \
-			-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
+SUBST_SED.texmfdir=	-e 's,@TEXMFLOCAL@,${TEXMFLOCAL},'
+SUBST_SED.texmfdir+=	-e 's,@VARBASE@,${VARBASE},'
+SUBST_SED.texmfdir+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 PKG_SYSCONFSUBDIR=	texmf
 
-BUILD_DEFS+=		TEXMFLOCAL
+BUILD_DEFS+=		TEXMFLOCAL VARBASE
 TEXMFLOCAL?=		${PREFIX}/share/texmf-local
 FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
 
