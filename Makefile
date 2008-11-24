@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3118 2008/11/24 08:11:49 minskim Exp $
+# $Id: Makefile,v 1.3119 2008/11/24 09:01:19 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1826,6 +1826,7 @@ SUBDIR+=	tex-leaflet
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-tetex
+SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thcrut
