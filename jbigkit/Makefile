@@ -1,31 +1,42 @@
-# $NetBSD: Makefile,v 1.2 2008/11/23 12:34:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/24 01:24:11 obache Exp $
 #
 
-DISTNAME=	jbigkit-1.6
+DISTNAME=	jbigkit-2.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cl.cam.ac.uk/~mgk25/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.cl.cam.ac.uk/~mgk25/jbigkit/
-COMMENT=	Highly effective data compression algorithm for bi-level images
+COMMENT=	JBIG-KIT lossless image compression library
 
-TEST_TARGET=	test
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_DESTDIR_SUPPORT=user-destdir
+USE_TOOLS+=	gmake
 
 WRKSRC=	${WRKDIR}/jbigkit
+
+TEST_TARGET=	test
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc/jbig
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libjbig/jbig.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/libjbig/libjbig.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/libjbig/jbig.doc \
-		${DESTDIR}${PREFIX}/share/doc/jbig
-	cd ${WRKSRC}/pbmtools \
-		&& ${INSTALL_PROGRAM} jbgtopbm pbmtojbg  \
-			${DESTDIR}${PREFIX}/bin          \
-		&& ${INSTALL_MAN} jbgtopbm.1 pbmtojbg.1  \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${RUN} \
+	cd ${WRKSRC}/libjbig; \
+	for h in *.h; do \
+		${INSTALL_DATA} $${h} ${DESTDIR}${PREFIX}/include; \
+	done; \
+	for l in *.a; do \
+		${INSTALL_DATA} $${l} ${DESTDIR}${PREFIX}/lib; \
+	done; \
+	for t in *.txt; do \
+		${INSTALL_DATA} $${t} ${DESTDIR}${PREFIX}/share/doc/jbig; \
+	done; \
+	cd ${WRKSRC}/pbmtools; \
+	for p in jbgtopbm jbgtopbm85 pbmtojbg pbmtojbg85; do \
+		${INSTALL_PROGRAM} $${p} ${DESTDIR}${PREFIX}/bin; \
+	done; \
+	for m in *.1; do \
+		${INSTALL_MAN} $${m} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
+	done;
 
 .include "../../mk/bsd.pkg.mk"

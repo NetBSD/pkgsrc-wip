@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 15:29:07 jym-netbsd Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/24 01:24:11 obache Exp $
 bin/jbgtopbm
+bin/jbgtopbm85
 bin/pbmtojbg
+bin/pbmtojbg85
 include/jbig.h
+include/jbig85.h
+include/jbig_ar.h
 lib/libjbig.a
+lib/libjbig85.a
 man/man1/jbgtopbm.1
 man/man1/pbmtojbg.1
-share/doc/jbig/jbig.doc
+share/doc/jbig/jbig.txt
+share/doc/jbig/jbig85.txt
 @dirrm share/doc/jbig
