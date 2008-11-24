@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3119 2008/11/24 09:01:19 minskim Exp $
+# $Id: Makefile,v 1.3120 2008/11/24 20:25:04 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1922,6 +1922,7 @@ SUBDIR+=	vpr
 SUBDIR+=	vreng
 SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
+SUBDIR+=	web2c
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-gtk
 SUBDIR+=	weplab
