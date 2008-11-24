@@ -1,0 +1,46 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+TEXMFSYSVAR=`@KPSEWHICH@ -var-value=TEXMFSYSVAR`
+
+case "${STAGE}" in
+POST-DEINSTALL)
+	for f in luatex.fmt pdfluatex.fmt lualatex.fmt pdflualatex.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/luatex/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/luatex 2>/dev/null || ${TRUE}
+	for f in cont-en.fmt xetex.fmt xelatex.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/xetex/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/xetex 2>/dev/null || ${TRUE}
+	for f in amstex.fmt cont-en.fmt mptopdf.fmt cslatex.fmt \
+	    pdfcslatex.fmt csplain.fmt pdfcsplain.fmt eplain.fmt \
+	    latex.fmt pdflatex.fmt jadetex.fmt pdfjadetex.fmt \
+	    mex.fmt pdfmex.fmt mltex.fmt mllatex.fmt \
+	    etex.fmt pdfetex.fmt pdftex.fmt physe.fmt phyzzx.fmt \
+	    texsis.fmt utf8mex.fmt xmltex.fmt pdfxmltex.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/pdftex/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/pdftex 2>/dev/null || ${TRUE}
+	for f in aleph.fmt lamed.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/aleph/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/aleph 2>/dev/null || ${TRUE}
+	for f in omega.fmt lambda.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/omega/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/omega 2>/dev/null || ${TRUE}
+	for f in metafun.mem mpost.mem; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/metapost/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/metapost 2>/dev/null || ${TRUE}
+	for f in mf.base; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/metafont/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/metafont 2>/dev/null || ${TRUE}
+	for f in tex.fmt; do
+	    ${RM} -f @VARBASE@/lib/texmf/web2c/tex/$f
+	done
+	${RMDIR} -p @VARBASE@/lib/texmf/web2c/tex 2>/dev/null || ${TRUE}
+	@MKTEXLSR@ ${TEXMFSYSVAR}
+	;;
+esac

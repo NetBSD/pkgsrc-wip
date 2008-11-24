@@ -1,0 +1,9 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+--- lib/Makefile.in.orig	2008-01-30 06:56:21.000000000 -0800
++++ lib/Makefile.in
+@@ -30,4 +30,3 @@ Makefile: Makefile.in ../config.status
+ 
+ kpse_include ../make/clean.mk
+ kpse_include ../make/rdepend.mk
+-kpse_include lib/depend.mk

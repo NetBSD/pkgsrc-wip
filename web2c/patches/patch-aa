@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+--- Makefile.in.orig	2008-08-12 16:46:59.000000000 -0700
++++ Makefile.in
+@@ -747,8 +747,6 @@ web2c/web2c: web2c/main.c web2c/web2c.h 
+ $(makecpool): web2c/makecpool.c
+ 	cd web2c && $(MAKE) $(common_makeargs) makecpool
+ 
+-kpse_include ../make/tkpathsea.mk
+-
+ # 
+ # Making dumps.
+ all_fmts = tex.fmt $(fmts)

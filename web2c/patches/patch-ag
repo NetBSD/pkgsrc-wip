@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+--- ../make/man.mk.orig	2006-01-17 13:41:51.000000000 -0800
++++ ../make/man.mk
+@@ -29,7 +29,7 @@ txt: $(manfiles:.1=.txt)
+ # At present, all but VERSION should be unused.
+ sedscript:
+ 	cp /dev/null sedscript
+-	for f in $(kpathsea_dir)/paths.h; do \
++	for f in $(KPATHSEA_PREFIX)/include/kpathsea/paths.h; do \
+ 	  sed -n -e '/^#define/s/#define[ 	][ 	]*\([A-Z_a-z][A-Z_a-z]*\)[ 	][ 	]*\(.*\)/s%@\1@%\2%/p' \
+ 		$$f \
+ 	  | sed -e 's/"//g' -e 's/[ 	]*\/\*[^*]*\*\///g' >>sedscript;\

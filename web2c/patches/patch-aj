@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+--- otps/Makefile.in.orig	2008-01-30 06:56:21.000000000 -0800
++++ otps/Makefile.in
+@@ -43,11 +43,9 @@ install-programs: $(programs)
+ Makefile: Makefile.in ../config.status
+ 	cd .. && $(SHELL) config.status
+ 
+-kpse_include ../make/tkpathsea.mk
+ kpse_include ../make/clean.mk
+ 
+ clean::
+ 	rm -f y_tab.c y_tab.h y.out* yacc.* $(LEX_OUTPUT_ROOT).c
+ 
+ kpse_include ../make/rdepend.mk
+-kpse_include otps/depend.mk

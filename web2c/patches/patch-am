@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+
+--- luatexdir/luatex-api.h.orig	2008-03-24 08:47:15.000000000 -0700
++++ luatexdir/luatex-api.h
+@@ -3,9 +3,9 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <stdarg.h>
+-#include <../lua51/lua.h>
+-#include <../lua51/lauxlib.h>
+-#include <../lua51/lualib.h>
++#include <lua.h>
++#include <lauxlib.h>
++#include <lualib.h>
+ 
+ 
+ typedef struct LoadS {
