@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/24 08:10:15 minskim Exp $
+
+--- wrappers/freetype/configure.ac.orig	2007-06-28 01:12:11.000000000 -0700
++++ wrappers/freetype/configure.ac
+@@ -40,7 +40,7 @@ AC_PROG_LIBTOOL
+ 
+ # Checks for external dependencies
+ PKG_CHECK_MODULES(FT2, freetype2)
+-PKG_CHECK_MODULES(GR2, silgraphite >= 2.2.0)
++#PKG_CHECK_MODULES(GR2, silgraphite >= 2.2.0)
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

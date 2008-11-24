@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/11/24 08:10:15 minskim Exp $
+
+--- wrappers/freetype/Makefile.in.orig	2007-11-08 22:32:53.000000000 -0800
++++ wrappers/freetype/Makefile.in
+@@ -125,8 +125,8 @@ F77 = @F77@
+ FFLAGS = @FFLAGS@
+ FT2_CFLAGS = @FT2_CFLAGS@
+ FT2_LIBS = @FT2_LIBS@
+-GR2_CFLAGS = @GR2_CFLAGS@
+-GR2_LIBS = @GR2_LIBS@
++GR2_CFLAGS = -I../../engine/include
++GR2_LIBS = ../../engine/src/libgraphite.la
+ GREP = @GREP@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@

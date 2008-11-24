@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/24 08:10:14 minskim Exp $
+
+--- wrappers/configure.ac.orig	2007-06-08 09:10:11.000000000 -0700
++++ wrappers/configure.ac
+@@ -12,7 +12,7 @@ AM_MAINTAINER_MODE
+ AC_CHECK_TOOL(PKG_CONFIG, pkg-config)
+ 
+ # All the packages require graphite
+-PKG_CHECK_MODULES(GR2, silgraphite >= 2.2.0)
++#PKG_CHECK_MODULES(GR2, silgraphite >= 2.2.0)
+ 
+ # Initialise backend detection 
+ # BUILD_BACKEND_INIT
