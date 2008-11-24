@@ -1,8 +1,16 @@
-$NetBSD: patch-ap,v 1.1.1.1 2008/11/24 20:13:49 minskim Exp $
+$NetBSD: patch-ap,v 1.2 2008/11/24 22:12:45 minskim Exp $
 
 --- luatexdir/luatexlib.mk.orig	2008-05-31 16:09:36.000000000 -0700
 +++ luatexdir/luatexlib.mk
-@@ -49,7 +49,7 @@ SLNUNICODEDIR=../../libs/slnunicode
+@@ -42,14 +42,14 @@ endif
+ 
+ 
+ $(LIBLUADEP):
+-	mkdir -p $(LIBLUADIR) && cd $(LIBLUADIR) && cp -f $(LIBLUASRCDIR)/* . && $(MAKE) $(luatarget)
++	cd $(LIBLUADIR) && $(MAKE) $(luatarget)
+ 
+ # slnunicode
+ SLNUNICODEDIR=../../libs/slnunicode
  SLNUNICODESRCDIR=$(srcdir)/$(SLNUNICODEDIR)
  SLNUNICODEDEP=$(SLNUNICODEDIR)/slnunico.o
  $(SLNUNICODEDEP): $(SLNUNICODEDIR)/slnunico.c $(SLNUNICODEDIR)/slnudata.c

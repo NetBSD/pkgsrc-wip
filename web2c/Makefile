@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/24 21:01:16 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/24 22:12:45 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
@@ -60,7 +60,6 @@ MAKE_FLAGS+=	TECKITFLAGS=-I${BUILDLINK_PREFIX.TECkit}/include/teckit \
 		GRAPHITESRCDIR=${BUILDLINK_PREFIX.silgraphite} \
 		LDGRAPHITE="-L${BUILDLINK_PREFIX.silgraphite}/lib -lgraphite" \
 		GRAPHITEDEP="" \
-		LIBLUADEP=${BUILDLINK_PREFIX.lua}/lib/liblua.la \
 		ZZIPLIBSRCDIR="" \
 		ZZIPLIBDEP=${BUILDLINK_PREFIX.zziplib}/lib/libzzip.la
 
@@ -74,7 +73,6 @@ FILES_SUBST+=	KPSEWHICH=${BUILDLINK_PREFIX.kpathsea}/bin/kpsewhich \
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/silgraphite/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../wip/kpathsea/buildlink3.mk"
 
 post-install:
