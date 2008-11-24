@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/24 08:59:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/24 20:11:09 minskim Exp $
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEabrv.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEexample.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEfull.bib
@@ -3320,7 +3320,7 @@ share/texmf-dist/fonts/map/dvips/zapfchan/uzc.map
 share/texmf-dist/fonts/map/dvips/zapfding/uzd.map
 share/texmf-dist/fonts/map/dvips/zefonts/slantcm.map
 share/texmf-dist/fonts/map/fontname/adobe.map
-share/texmf-dist/fonts/map/fontname/${LOWER_VENDOR}.map
+share/texmf-dist/fonts/map/fontname/apple.map
 share/texmf-dist/fonts/map/fontname/bitstrea.map
 share/texmf-dist/fonts/map/fontname/dtc.map
 share/texmf-dist/fonts/map/fontname/itc.map
@@ -35895,7 +35895,7 @@ share/texmf-dist/tex/latex/bardiag/bardiag.sty
 share/texmf-dist/tex/latex/bardiag/pstfp.sty
 share/texmf-dist/tex/latex/base/alltt.sty
 share/texmf-dist/tex/latex/base/ansinew.def
-share/texmf-dist/tex/latex/base/${LOWER_VENDOR}mac.def
+share/texmf-dist/tex/latex/base/applemac.def
 share/texmf-dist/tex/latex/base/article.cls
 share/texmf-dist/tex/latex/base/article.sty
 share/texmf-dist/tex/latex/base/ascii.def
@@ -37634,7 +37634,7 @@ share/texmf-dist/tex/latex/gfsporson/lgrporson.fd
 share/texmf-dist/tex/latex/gfssolomos/gfssolomos.sty
 share/texmf-dist/tex/latex/gfssolomos/lgrsolomos.fd
 share/texmf-dist/tex/latex/ginpenc/ansinew.gie
-share/texmf-dist/tex/latex/ginpenc/${LOWER_VENDOR}mac.gie
+share/texmf-dist/tex/latex/ginpenc/applemac.gie
 share/texmf-dist/tex/latex/ginpenc/ascii.gie
 share/texmf-dist/tex/latex/ginpenc/cp1250.gie
 share/texmf-dist/tex/latex/ginpenc/cp1252.gie
