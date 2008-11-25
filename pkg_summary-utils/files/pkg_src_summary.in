@@ -238,6 +238,9 @@ prepand_PLIST () {
 }
 
 pkgpath2multivar_opts (){
+    # textproc/dictem:EMACS_TYPE=xemacs215 -> EMACS_TYPE=xemacs215
+    # sysutils/mc:PKG_OPTIONS.mc=-x11~-slang -> PKG_OPTIONS.mc='-x11 -slang'
+    # sysutils/mc:A=a,B=b -> A=a B=b
     sed -e 's|^[^:]*:||' -e 's|,| |g' -e "s|[^ ][^ ]*|'&'|g" -e 's|~| |g'
 }
 
@@ -466,7 +469,7 @@ if test "$multi_var"; then
 	< $partial_summary_fn >$multi_pkgs_fn
 
     if test -s $multi_pkgs_fn; then
-	pkg_grep_summary VARIANTS7 'fvalue == ""' \
+	pkg_grep_summary -e VARIANTS7 \
 	    < $partial_summary_fn >$normal_pkgs_fn
 	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn || true
 
