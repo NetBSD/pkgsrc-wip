@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2008/11/22 21:37:23 gschwarz Exp $
+$NetBSD: distinfo,v 1.7 2008/11/25 19:53:12 gschwarz Exp $
 
 SHA1 (tac_plus.F5.0.0.alpha-libradius.tgz) = 937508cb00e70425890b53d1dde3e8a0ca570bb3
 RMD160 (tac_plus.F5.0.0.alpha-libradius.tgz) = c6ea0ab7c77c9b1684fcf9d26cdb7f689254e255
@@ -14,6 +14,6 @@ SHA1 (patch-ah) = 4725b2cd888d2a121ecf021d25a49567d6ce3d50
 SHA1 (patch-ai) = e08e64bfda5965e446556541105c0af2fc3a8bc6
 SHA1 (patch-aj) = 89ab85ccbf8d368a6e275064e46f3964d863d802
 SHA1 (patch-ak) = cb22d9b7889b9af09cdd7614fd00d2ca82cbf0e7
-SHA1 (patch-al) = 70248fb53838691e6867741166e54314d1fa61ab
+SHA1 (patch-al) = ae1f842ce7da71d9b0f099357feaf90d3f597712
 SHA1 (patch-am) = bd629852142d3a582470dea7fa2055c62bb5acf3
 SHA1 (patch-an) = 43fb78f2fc1a384937a04587766a363d7646ebfc
