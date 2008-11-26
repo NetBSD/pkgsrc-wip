@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2008/10/11 22:11:13 gschwarz Exp $
-${GUI}bin/linphone
+@comment $NetBSD: PLIST,v 1.12 2008/11/26 19:36:02 gschwarz Exp $
+${GUI}bin/linphone-3
 bin/linphonec
 bin/sipomatic
 include/linphone/config.h
@@ -22,8 +22,10 @@ include/mediastreamer2/msv4l.h
 include/mediastreamer2/msvideo.h
 include/mediastreamer2/msvideoout.h
 include/mediastreamer2/msvolume.h
+include/mediastreamer2/mswebcam.h
 include/mediastreamer2/rfc3984.h
 include/mediastreamer2/waveheader.h
+include/ortp/b64.h
 include/ortp/event.h
 include/ortp/ortp.h
 include/ortp/payloadtype.h
@@ -52,7 +54,6 @@ man/man1/linphone.1
 man/man1/linphonec.1
 man/man1/sipomatic.1
 share/applications/linphone.desktop
-share/gnome/apps/Internet/linphone.desktop
 share/images/nowebcamCIF.jpg
 share/locale/cs/LC_MESSAGES/linphone.mo
 share/locale/de/LC_MESSAGES/linphone.mo

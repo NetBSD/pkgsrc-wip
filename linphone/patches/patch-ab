@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2008/11/14 09:33:54 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.6 2008/11/26 19:36:02 gschwarz Exp $
 
 --- console/linphonec.c.orig	2007-11-14 14:40:27.000000000 +0100
-+++ console/linphonec.c
++++ console/linphonec.c	2008-09-30 19:10:05.000000000 +0200
 @@ -994,12 +994,12 @@
  	char *iptr;
  

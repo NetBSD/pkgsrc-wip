@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2008/11/14 09:33:54 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.5 2008/11/26 19:36:02 gschwarz Exp $
 
---- configure.orig	2008-02-13 10:16:50.000000000 +0100
-+++ configure
-@@ -21711,7 +21711,7 @@
+--- configure.orig	2008-10-10 14:48:47.000000000 +0200
++++ configure	2008-11-23 21:30:23.000000000 +0100
+@@ -22200,7 +22200,7 @@
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
  
  # Always use our own libtool.
