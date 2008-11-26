@@ -1,13 +1,13 @@
-# $Id: Makefile,v 1.5 2008/05/24 15:34:13 tnn2 Exp $
+# $Id: Makefile,v 1.6 2008/11/26 11:42:03 anielski Exp $
 #
 
-DISTNAME=	Mail-SPF-v2.005
-PKGNAME=	p5-Mail-SPF-2.005
+DISTNAME=	Mail-SPF-v2.006
+PKGNAME=	p5-Mail-SPF-2.006
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	aniou@smutek.pl
-HOMEPAGE=	http://search.cpan.org/~jmehnle/Mail-SPF-v2.005/
+HOMEPAGE=	http://search.cpan.org/~jmehnle/Mail-SPF-v2.006/
 COMMENT=	Perl implementation of the Sender Policy Framework
 
 BUILD_DEPENDS+= p5-Net-DNS-Resolver-Programmable-[0-9]*:../../wip/p5-Net-DNS-Resolver-Programmable

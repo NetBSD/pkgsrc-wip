@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2008/01/23 12:24:24 anielski Exp $
+$NetBSD: distinfo,v 1.2 2008/11/26 11:42:03 anielski Exp $
 
-SHA1 (Mail-SPF-v2.005.tar.gz) = c15085ab29f70525f62805abdc06fe81cb61cc97
-RMD160 (Mail-SPF-v2.005.tar.gz) = f49f638317d5c9160fe316c2e023570bdd198365
-Size (Mail-SPF-v2.005.tar.gz) = 73619 bytes
+SHA1 (Mail-SPF-v2.006.tar.gz) = 301b33f66d3a14a26c497fd80b91d6c7d5ce9faa
+RMD160 (Mail-SPF-v2.006.tar.gz) = 5d7244a0dc21979159f6bbba11da1590b3f2c6ba
+Size (Mail-SPF-v2.006.tar.gz) = 78943 bytes
