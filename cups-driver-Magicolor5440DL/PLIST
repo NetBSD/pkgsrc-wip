@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/27 16:32:38 jym-netbsd Exp $
+libexec/cups/filter/rastertokm5440dl
+share/KONICA_MINOLTA/mc5440DL/COPYING
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_00.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_01.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_02.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_03.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_10.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_11.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_12.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_13.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_20.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_21.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_22.bmp
+share/KONICA_MINOLTA/mc5440DL/Halftones/km_ht_23.bmp
+share/KONICA_MINOLTA/mc5440DL/Profiles/km_0.icm
+share/KONICA_MINOLTA/mc5440DL/Profiles/km_1.icm
+share/KONICA_MINOLTA/mc5440DL/Profiles/km_2.icm
+share/cups/model/KONICA_MINOLTA/km5440dl.ppd.gz
+@unexec ${RMDIR} %D/share/cups/model/KONICA_MINOLTA 2>/dev/null || ${TRUE}
+@dirrm share/KONICA_MINOLTA/mc5440DL/Profiles
+@dirrm share/KONICA_MINOLTA/mc5440DL/Halftones
+@dirrm share/KONICA_MINOLTA/mc5440DL
+@unexec ${RMDIR} %D/share/KONICA_MINOLTA 2>/dev/null || ${TRUE}
