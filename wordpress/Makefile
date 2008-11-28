@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/10/29 10:55:00 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/28 07:42:47 shindenmorr Exp $
 
 DISTNAME=		latest
 PKGNAME=		wordpress-${VERSION}
-VERSION=		2.6.3
+VERSION=		2.6.5
 CATEGORIES=		www
 MASTER_SITES=		http://wordpress.org/
 EXTRACT_SUFX=		.zip
