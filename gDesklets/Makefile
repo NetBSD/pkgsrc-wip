@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.28 2008/11/29 23:50:05 blef Exp $
 
 DISTNAME=	gDesklets-0.26
 PKGREVISION=	3
@@ -19,7 +19,6 @@ GCONF_SCHEMAS=		gdesklets-display-thumbnail.schemas
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	20 15
 PYTHON_PATCH_SCRIPTS=		gdesklets
 
 SUBST_CLASSES+=		python

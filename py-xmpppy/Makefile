@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/29 23:50:05 blef Exp $
 
 DISTNAME=		xmpppy-0.4.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,6 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://xmpppy.sourceforge.net/
 COMMENT=		XMPP (Jabber) library for Python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	15 20
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"

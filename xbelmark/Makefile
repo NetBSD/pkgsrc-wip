@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/11/10 23:16:05 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/29 23:50:05 blef Exp $
 #
 
 DISTNAME=		xbelmark.py
@@ -16,7 +16,7 @@ DEPENDS=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 WRKSRC=			${WRKDIR}
 NO_BUILD=		YES
 
-PYTHON_VERSIONS_INCOMPATIBLE=	21 20 15
+PYTHON_VERSIONS_INCOMPATIBLE=	21
 PYTHON_PATCH_SCRIPTS=	xbelmark.py
 
 do-extract:
