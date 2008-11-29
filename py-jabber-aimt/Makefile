@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/02/15 14:09:38 sebpierrel Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/29 05:34:53 schnoebe Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
+PKGREVISION=		1
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyaimt.googlecode.com/files/
 
@@ -16,9 +17,7 @@ COMMENT=		Transport connecting Jabber to the AOL IM network
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6nb1:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
-DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.7.0:../../wip/py-twisted-web
+DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 
 # Fifth paragraph - all build definitions that describe things used by

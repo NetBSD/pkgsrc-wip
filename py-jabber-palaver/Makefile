@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/08/25 16:27:42 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/29 05:34:53 schnoebe Exp $
 
 DISTNAME=	palaver-0.5
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	http://onlinegamegroup.com/releases/palaver/
 
@@ -15,8 +16,7 @@ COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=8.1.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=8.1.0:../../wip/py-twisted-words
+DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 # DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
 # it's a python package using the standard Python packager

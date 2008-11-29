@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/06/30 02:17:13 schnoebe Exp $
+# $NetBSD: Makefile,v 1.20 2008/11/29 05:34:53 schnoebe Exp $
 
 DISTNAME=		pyicq-t-0.8b
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyicqt.googlecode.com/files/
 
@@ -22,9 +22,7 @@ COMMENT=		Transport connecting Jabber to the ICQ IM network
 # do that..)
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.5.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=0.5.0:../../wip/py-twisted-words
-DEPENDS+=	${PYPKGPREFIX}-twisted-web>=0.7.0:../../wip/py-twisted-web
+DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6nb1:../../security/py-OpenSSL
 
