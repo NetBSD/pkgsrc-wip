@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/10/20 06:58:21 pettai Exp $
+# $NetBSD: options.mk,v 1.2 2008/11/30 22:09:15 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
-PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip spf2 ldap p0f dkim
+PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip ldap p0f dkim
 PKG_SUGGESTED_OPTIONS=		dnsrbl
 
 .include "../../mk/bsd.options.mk"
@@ -28,17 +28,6 @@ CONFIGURE_ARGS+=	--enable-drac --with-drac-db=${DRACD_DB}
 ### Sender Policy Framework
 ###
 .if empty(PKG_OPTIONS:Mspf)
-CONFIGURE_ARGS+=	--disable-libspf_alt
-.else
-.include "../../mail/libspf-alt/buildlink3.mk"
-
-CONFIGURE_ARGS+=	--with-libspf_alt=${PREFIX:Q}
-.endif
-
-###
-### libSPF2
-###
-.if empty(PKG_OPTIONS:Mspf2)
 CONFIGURE_ARGS+=	--disable-libspf2
 .else
 .include "../../mail/libspf2/buildlink3.mk"
@@ -75,8 +64,8 @@ CONFIGURE_ARGS+=	--with-openldap=${PREFIX:Q}
 .if empty(PKG_OPTIONS:Mdkim)
 CONFIGURE_ARGS+=	--disable-dkim=${PREFIX:Q}
 .else
-DEPENDS+=		../../mail/dkim-milter
-.include "../../mail/dkim-milter/buildlink3.mk"
+DEPENDS+=		dkim-milter>=2.6:../../wip/dkim-milter
+.include "../../wip/dkim-milter/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-libdkim=${PREFIX:Q}
 .endif
