@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/10/04 09:19:47 jukka Exp $
+# $NetBSD: Makefile,v 1.39 2008/11/30 21:11:22 pettai Exp $
 
 DISTNAME=	dkim-milter-2.7.2
 #PKGREVISION=	1
@@ -60,6 +60,7 @@ do-install: arlib-install stats-install
 	${INSTALL_PROGRAM} dkim-filter/dkim-testkey ${DESTDIR}${PREFIX}/bin; \
 	${INSTALL_PROGRAM} dkim-filter/dkim-testssp ${DESTDIR}${PREFIX}/bin; \
 	${INSTALL_PROGRAM} dkim-filter/dkim-filter ${DESTDIR}${PREFIX}/sbin/dkim-milter; \
+	${INSTALL_LIB} libdkim/dkim.h ${DESTDIR}${PREFIX}/include; \
 	${INSTALL_LIB} libdkim/libdkim.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_SCRIPT} ${WRKSRC}/dkim-filter/dkim-genkey.sh ${DESTDIR}${PREFIX}/bin/dkim-genkey
 	${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-filter.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/dkim-milter.conf.5

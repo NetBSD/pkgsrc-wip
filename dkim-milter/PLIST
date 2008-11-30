@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2008/10/04 09:19:48 jukka Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/11/30 21:11:22 pettai Exp $
 ${WITH_ARLIB}lib/libar.a
+include/dkim.h
 lib/libdkim.a
 ${WITH_ARLIB}man/man3/ar.3
 man/man5/dkim-milter.conf.5
