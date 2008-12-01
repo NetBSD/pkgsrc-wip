@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/03/29 22:28:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/01 19:59:52 cheusov Exp $
 #
 
-DISTNAME=	libdbi-0.8.2
+DISTNAME=	libdbi-0.8.3
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi/}
 
