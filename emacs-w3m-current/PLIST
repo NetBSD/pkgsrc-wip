@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/11/18 07:23:16 makoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/12/01 02:44:10 makoto Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 share/emacs/site-lisp/w3m/ChangeLog
@@ -184,6 +184,8 @@ share/emacs/site-lisp/w3m/sb-redhat.el
 share/emacs/site-lisp/w3m/sb-redhat.elc
 share/emacs/site-lisp/w3m/sb-rediff.el
 share/emacs/site-lisp/w3m/sb-rediff.elc
+share/emacs/site-lisp/w3m/sb-rss-blogs.el
+share/emacs/site-lisp/w3m/sb-rss-blogs.elc
 share/emacs/site-lisp/w3m/sb-rss-hash.el
 share/emacs/site-lisp/w3m/sb-rss-hash.elc
 share/emacs/site-lisp/w3m/sb-rss.el
