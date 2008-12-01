@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/03/29 23:05:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/01 20:09:24 cheusov Exp $
 #
 
-DISTNAME=	libdbi-drivers-0.8.2-1
-PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-pgsql/}
-PKGREVISION=	1
+DISTNAME=	libdbi-drivers-0.8.3-1
+PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-pgsql/:S/-1/.1/:S/-2/.2/}
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
 
