@@ -143,89 +143,89 @@ PKGNAME=jpeg-6bnb4
 XXXX
 --------------------------------------------------
 ------- pkg_micro_src_summary #4
-PKGNAME=distbb-X.X.X
+PKGNAME=distbb-X
 PKGPATH=wip/distbb
 
-PKGNAME=pkg_online-X.X.X
+PKGNAME=pkg_online-X
 PKGPATH=wip/pkg_online
 
-PKGNAME=dict-server-X.X.X
+PKGNAME=dict-server-X
 PKGPATH=wip/dict-server
 
-PKGNAME=checkperms-X.X
+PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
-PKGNAME=dict-client-X.X.X
+PKGNAME=dict-client-X
 PKGPATH=textproc/dict-client
 
-PKGNAME=libmaa-X.X.X
+PKGNAME=libmaa-X
 PKGPATH=wip/libmaa
 
-PKGNAME=gmake-X.X
+PKGNAME=gmake-X
 PKGPATH=devel/gmake
 
-PKGNAME=paexec-X.X.X
+PKGNAME=paexec-X
 PKGPATH=wip/paexec
 
-PKGNAME=libtool-base-X.X.X
+PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
-PKGNAME=runawk-X.X.X
+PKGNAME=runawk-X
 PKGPATH=wip/runawk
 
-PKGNAME=emacs-X.X
+PKGNAME=emacs-X
 PKGPATH=editors/emacs
 
-PKGNAME=pkg_summary-utils-X.X.X
+PKGNAME=pkg_summary-utils-X
 PKGPATH=wip/pkg_summary-utils
 
-PKGNAME=libungif-X.X.X
+PKGNAME=libungif-X
 PKGPATH=graphics/libungif
 
-PKGNAME=tiff-X.X.X
+PKGNAME=tiff-X
 PKGPATH=graphics/tiff
 
-PKGNAME=xX-links-X.X
-PKGPATH=pkgtools/xX-links
+PKGNAME=x11-links-X
+PKGPATH=pkgtools/x11-links
 
-PKGNAME=perl-X.X.X
-PKGPATH=lang/perlX
+PKGNAME=perl-X
+PKGPATH=lang/perl5
 
-PKGNAME=libltdl-X.X.X
+PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
 
-PKGNAME=dict-client-X.X.X
+PKGNAME=dict-client-X
 PKGPATH=wip/dict-client
 
-PKGNAME=pipestatus-X.X.X
+PKGNAME=pipestatus-X
 PKGPATH=wip/pipestatus
 
-PKGNAME=awk-pkgsrc-dewey-X.X.X
+PKGNAME=awk-pkgsrc-dewey-X
 PKGPATH=wip/awk-pkgsrc-dewey
 
-PKGNAME=png-X.X.X
+PKGNAME=png-X
 PKGPATH=graphics/png
 
-PKGNAME=netcat-X.X
+PKGNAME=netcat-X
 PKGPATH=net/netcat
 
-PKGNAME=pkg-config-X.X
+PKGNAME=pkg-config-X
 PKGPATH=devel/pkg-config
 
 PKGNAME=jpeg-X
 PKGPATH=graphics/jpeg
 
-PKGNAME=dictem-X.X
+PKGNAME=dictem-X
 PKGPATH=textproc/dictem
 
-PKGNAME=pkg_online-server-X.X.X
+PKGNAME=pkg_online-server-X
 PKGPATH=wip/pkg_online-server
 
-PKGNAME=pkg_online-client-X.X.X
+PKGNAME=pkg_online-client-X
 PKGPATH=wip/pkg_online-client
 
 --------------------------------------------------
-------- pkg_micro_src_summary #5
+------- pkg_refresh_summary #5
 awk-pkgsrc-dewey-0.5.6
 checkperms-1.10
 dict-client-1.10.11nb2
@@ -256,86 +256,86 @@ tiff-3.8.2nb4
 x11-links-0.38
 --------------------------------------------------
 ------- pkg_src_summary #6
-PKGNAME=distbb-X.X.X
+PKGNAME=distbb-X
 PKGPATH=wip/distbb
 
-PKGNAME=pkg_online-X.X.X
+PKGNAME=dictem-X
+PKGPATH=textproc/dictem
+
+PKGNAME=pkg_online-X
 PKGPATH=wip/pkg_online
 
-PKGNAME=dict-server-X.X.X
+PKGNAME=dict-server-X
 PKGPATH=wip/dict-server
 
-PKGNAME=checkperms-X.X
+PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
-PKGNAME=dict-client-X.X.X
+PKGNAME=pkg_online-server-X
+PKGPATH=wip/pkg_online-server
+
+PKGNAME=dict-client-X
 PKGPATH=textproc/dict-client
 
-PKGNAME=libmaa-X.X.X
+PKGNAME=pkg_online-client-X
+PKGPATH=wip/pkg_online-client
+
+PKGNAME=libmaa-X
 PKGPATH=wip/libmaa
 
-PKGNAME=gmake-X.X
+PKGNAME=gmake-X
 PKGPATH=devel/gmake
 
-PKGNAME=paexec-X.X.X
+PKGNAME=paexec-X
 PKGPATH=wip/paexec
 
-PKGNAME=libtool-base-X.X.X
+PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
-PKGNAME=runawk-X.X.X
+PKGNAME=runawk-X
 PKGPATH=wip/runawk
 
-PKGNAME=emacs-X.X
+PKGNAME=emacs-X
 PKGPATH=editors/emacs
 
-PKGNAME=pkg_summary-utils-X.X.X
+PKGNAME=pkg_summary-utils-X
 PKGPATH=wip/pkg_summary-utils
 
-PKGNAME=libungif-X.X.X
+PKGNAME=libungif-X
 PKGPATH=graphics/libungif
 
-PKGNAME=tiff-X.X.X
+PKGNAME=tiff-X
 PKGPATH=graphics/tiff
 
-PKGNAME=xX-links-X.X
-PKGPATH=pkgtools/xX-links
+PKGNAME=x11-links-X
+PKGPATH=pkgtools/x11-links
 
-PKGNAME=perl-X.X.X
-PKGPATH=lang/perlX
+PKGNAME=perl-X
+PKGPATH=lang/perl5
 
-PKGNAME=libltdl-X.X.X
+PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
 
-PKGNAME=dict-client-X.X.X
+PKGNAME=dict-client-X
 PKGPATH=wip/dict-client
 
-PKGNAME=pipestatus-X.X.X
+PKGNAME=pipestatus-X
 PKGPATH=wip/pipestatus
 
-PKGNAME=awk-pkgsrc-dewey-X.X.X
+PKGNAME=awk-pkgsrc-dewey-X
 PKGPATH=wip/awk-pkgsrc-dewey
 
-PKGNAME=png-X.X.X
+PKGNAME=png-X
 PKGPATH=graphics/png
 
-PKGNAME=netcat-X.X
+PKGNAME=netcat-X
 PKGPATH=net/netcat
 
-PKGNAME=pkg-config-X.X
+PKGNAME=pkg-config-X
 PKGPATH=devel/pkg-config
 
 PKGNAME=jpeg-X
 PKGPATH=graphics/jpeg
-
-PKGNAME=dictem-X.X
-PKGPATH=textproc/dictem
-
-PKGNAME=pkg_online-server-X.X.X
-PKGPATH=wip/pkg_online-server
-
-PKGNAME=pkg_online-client-X.X.X
-PKGPATH=wip/pkg_online-client
 
 --------------------------------------------------
 ------- pkg_src_summary #7
@@ -358,4 +358,79 @@ HOMEPAGE:       http://www.mova.org/~cheusov/pub/pkg_summary-utils/
 COMMENT:        Utilities for manipulating pkg_summary(5) files
 MAINTAINER:     cheusov@tut.by
 CATEGORIES:     pkgtools
+
+--------------------------------------------------
+------- pkg_uniq_summary #9
+ASSIGNMENTS=OPT1=1,OPT2=2
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb:OPT=1,OPT2=3
+
+--------------------------------------------------
+------- pkg_src_summary #10.1
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
+PKGNAME=ap2-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2
+PKGNAME=ap2-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=23
+PKGNAME=ap2-py23-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=ap22-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+PKGNAME=ap22-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=23
+PKGNAME=ap22-py23-python-3.3.1
+PKGPATH=www/ap2-python
+
+--------------------------------------------------
+------- pkg_src_summary #10.2
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=ap22-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+PKGNAME=ap22-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=23
+PKGNAME=ap22-py23-python-3.3.1
+PKGPATH=www/ap2-python
+
+--------------------------------------------------
+------- pkg_src_summary #10.3
+ASSIGNMENTS=PKG_APACHE=apache2
+PKGNAME=ap2-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+PKGNAME=ap22-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+--------------------------------------------------
+------- pkg_src_summary #10.4
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=ap22-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+--------------------------------------------------
+------- pkg_src_summary #11
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=py25-cairo-X
+PKGPATH=graphics/py-cairo
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=py25-Numeric-X
+PKGPATH=math/py-Numeric
+
+PKGNAME=gmake-X
+PKGPATH=devel/gmake
 

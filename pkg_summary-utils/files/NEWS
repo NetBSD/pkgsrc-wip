@@ -1,4 +1,120 @@
 ----------------------------------------------------------------------
+Version 0.22.0, by Aleksey Cheusov, Thu, 27 Nov 2008 22:16:16 +0200
+
+  1) MEGAFIXES and improvements in pkg_src_summary
+
+    - 'pkg_src_summary -d' automatically adds DEPENDS and
+      'pkg_src_summary -D' adds BUILD_DEPENDS
+       to the list of generated fields (PSS_FIELDS).
+      'pkg_src_summary -A' adds them both.
+
+    - 'pkg_src_summary -A' now correctly passes building options
+      (*_REQD) to the dependencies. For example,
+
+	0 ~>pkg_src_summary -A graphics/py-cairo:PYTHON_VERSION_REQD=25
+	PKGNAME=py25-cairo-1.6.4
+	PKGPATH=graphics/py-cairo
+	ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+	...
+	PKGNAME=py25-Numeric-24.2
+	PKGPATH=math/py-Numeric
+	ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+	...
+	PKGNAME=inputproto-1.4.4
+	PKGPATH=x11/inputproto
+	BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+
+	...
+	0 ~>
+
+    - pkg_src_summary assigns ASSIGNMENTS variable only if building
+      options are not equal to the default settings.
+      For example,
+
+	0 ~>export PSS_FIELDS='PKGNAME PKGPATH'
+	0 ~>pkg_src_summary graphics/py-cairo:PYTHON_VERSION_REQD=24
+	PKGNAME=py24-cairo-1.6.4
+	PKGPATH=graphics/py-cairo
+
+	0 ~>pkg_src_summary graphics/py-cairo:PYTHON_VERSION_REQD=25 
+	PKGNAME=py25-cairo-1.6.4
+	PKGPATH=graphics/py-cairo
+	ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+	0 ~>pkg_src_summary graphics/py-cairo:PYTHON_VERSION_REQD=23 
+	PKGNAME=-cairo-1.6.4
+	PKGPATH=graphics/py-cairo
+	ASSIGNMENTS=PYTHON_VERSION_REQD=23
+
+	0 ~>
+
+    - 'pkg_src_summary -m' do not list variants for *_REQ which is
+      already set. For example,
+
+	0 ~>export PSS_FIELDS='PKGNAME PKGPATH'
+	0 ~>pkg_src_summary -m www/ap2-python
+	PKGNAME=ap2-py25-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
+
+	PKGNAME=ap2-py24-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PKG_APACHE=apache2
+
+	PKGNAME=ap2-py23-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=23
+
+	PKGNAME=ap22-py25-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+	PKGNAME=ap22-py24-python-3.3.1
+	PKGPATH=www/ap2-python
+
+	PKGNAME=ap22-py23-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PYTHON_VERSION_REQD=23
+
+	0 ~>pkg_src_summary -m www/ap2-python:PKG_APACHE=apache2
+	PKGNAME=ap22-py25-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+	PKGNAME=ap22-py24-python-3.3.1
+	PKGPATH=www/ap2-python
+
+	PKGNAME=ap22-py23-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PYTHON_VERSION_REQD=23
+
+	0 ~>pkg_src_summary -m www/ap2-python:PYTHON_VERSION_REQD=25
+	PKGNAME=ap2-py24-python-3.3.1
+	PKGPATH=www/ap2-python
+	ASSIGNMENTS=PKG_APACHE=apache2
+
+	PKGNAME=ap22-py24-python-3.3.1
+	PKGPATH=www/ap2-python
+
+	0 ~>pkg_src_summary -m www/ap2-python:PYTHON_VERSION_REQD=25,PKG_APACHE=apache22 
+        PKGNAME=ap22-py25-python-3.3.1
+        PKGPATH=www/ap2-python
+        ASSIGNMENTS=PYTHON_VERSION_REQD=25
+
+        0 ~>
+
+  2) pkg_uniq_summary uses (PKGPATH, PKGBASE, ASSIGNMENTS) triple for
+     comparison
+
+  3) regression test for pkg_uniq_summary
+
+  4) -h option added to pkg_summary4view
+
+  5) -G option for debugging is added to pkg_src_summary
+
+----------------------------------------------------------------------
 Version 0.21.0, by Aleksey Cheusov, Tue, 11 Nov 2008 22:59:51 +0200
 
   new executable pkg_uniq_summary for filtering out repeated summaries

@@ -27,9 +27,7 @@
 function usage (){
 	printf "\
 pkg_uniq_summary - filter out repeated summaries\n\
-   Summaries are compared by (PKGPATH, PKGBASE) pair,\n\
-   building options (:var1=val1[,...]) are removed from PKGPATH\n\
-   before comparison\n\
+   Summaries are compared by (PKGPATH, PKGBASE, ASSIGNMENTS) triple.\n\
 usage: pkg_uniq_summary -h\n\
        pkg_uniq_summary [OPTIONS] [files...]\n\
 OPTIONS:\n\
@@ -50,13 +48,13 @@ BEGIN {
 }
 
 NF == 0 {
-	if (!pkgs [pkgbase, pkgpath]++){
+	if (!pkgs [pkgbase, pkgpath, assigns]++){
 		for (i=0; i < line_count; ++i){
 			print lines [i]
 		}
 		print ""
 	}
-	pkgbase = pkgpath = ""
+	assigns = pkgbase = pkgpath = ""
 	line_count = 0
 	next
 }
@@ -73,6 +71,14 @@ $0 ~ /^PKGNAME=/ {
 
 $0 ~ /^PKGPATH=/ {
 	pkgpath = substr($0, 9)
-	sub(/:.*$/, "", pkgpath)
+	if (sub(/:.*$/, "", pkgpath)){
+		assigns = substr($0, 9)
+		sub(/^[^:]*:/, "", assigns)
+	}
+	next
+}
+
+$0 ~ /^ASSIGNMENTS=/ {
+	assigns = substr($0, 13)
 	next
 }

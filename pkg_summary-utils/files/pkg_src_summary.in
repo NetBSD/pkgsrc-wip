@@ -26,6 +26,8 @@ set -e
 
 . pipestatus
 
+export LC_ALL=C
+
 ############################################################
 # user settable variables
 if test -z "$PKGSRCDIR"; then
@@ -63,6 +65,7 @@ OPTIONS:
   -m|--multi          generate ASSIGNMENTS field
                       for multi-variant packages
   -M|--MULTI          implies -m and move/add ASSIGNMENTS to PKGPATH field
+  -G|--debug          for debugging
 EOF
 }
 
@@ -76,6 +79,7 @@ if test -z "$PSS_PPERS"; then
 fi
 
 add_fields (){
+    rem_fields "$@"
     for f in "$@"; do
 	PSS_FIELDS="$PSS_FIELDS $f"
     done
@@ -117,12 +121,15 @@ process_options (){
 	    -D|--with-bdeps)
 		with_bdep=1;;
 	    -A|--with-alldeps)
+		add_fields DEPENDS BUILD_DEPENDS
 		with_dep=1
 		with_bdep=1;;
 	    -m)
 	        multi_var=1;;
 	    -M)
 	        multi_var=2;;
+	    -G)
+	        debug=1;;
 	    --)
 		shift
 		break;;
@@ -141,9 +148,16 @@ process_options (){
 process_options $PSS_OPTIONS "$@"
 
 if test "$multi_var"; then
-    # VARIANTS7 - artificial field keeping all variable assignments
+    # VARIANTS - artificial field keeping all variable assignments
     # for multi-variant packages.
-    add_fields 'VARIANTS7'
+    add_fields '_VARIANTS'
+fi
+
+if test -n "$with_dep"; then
+    add_fields DEPENDS
+fi
+if test -n "$with_bdep"; then
+    add_fields BUILD_DEPENDS
 fi
 
 if echo "$PSS_FIELDS" | grep DESCRIPTION > /dev/null; then
@@ -202,37 +216,6 @@ enrich_summary (){
     }' "$@"
 }
 
-enrich_Makefile (){
-    cat <<EOF
-#####################################################################
-.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
-_ALLSRCFILES=    \${DISTFILES:@f@\${DIST_SUBDIR}/\${f}@} \
-                 \${PATCHFILES:@f@\${DIST_SUBDIR}/\${f}@}
-.else
-_ALLSRCFILES=     \${_DISTFILES} \${_PATCHFILES}
-.endif
-ALLSRCFILES=     \${_ALLSRCFILES:O:u}
-
-#####################################################################
-# for multi-variant packages and bulk build software
-.for i in \${_PBULK_MULTI}
-.if !empty(\${_PBULK_MULTI_LIST.\${i}})
-VARIANTS7+=	\${_PBULK_MULTI_VAR.\${i}}=\${\${_PBULK_MULTI_LIST.\${i}}:ts,}
-.endif
-.endfor
-
-#####################################################################
-.PHONY: my-show-vars
-my-show-vars:
-.for VARNAME in \${VARNAMES}
-.if !empty(\${VARNAME})
-	@\${ECHO} \${VARNAME}=\${\${VARNAME}:Q}
-.endif
-.endfor
-
-EOF
-}
-
 prepand_PLIST () {
     awk '/^[^@]/ {print "PLIST=" $0}' "$@"
 }
@@ -250,7 +233,8 @@ cd_and_print_summary (){
     if test "$real_pkgpath" = "$1"; then
 	var_assigns=''
     else
-	var_assigns="`echo $1 | pkgpath2multivar_opts`"
+	var_assigns="$(echo $1 | pkgpath2multivar_opts)"
+	var_assignments="_ASSIGNMENTS='$(echo $1 | sed 's,^[^:]*:,,')'"
     fi
 
     extra_mk=''
@@ -258,19 +242,13 @@ cd_and_print_summary (){
 	extra_mk='-f ../../mk/pbulk/pbulk-index.mk'
     fi
 
-    ( cd "$real_pkgpath" && enrich_Makefile |
-	eval ${BMAKE} -f ./Makefile $extra_mk -f - my-show-vars \
-	    VARNAMES="'$varnames'" $var_assigns ) > "$tmpfn" || return 1
+    # INHER_ASSIGNS must be before DEPENDS and BUILD_DEPENDS, see below
+    ( cd "$real_pkgpath" && eval ${BMAKE} -f ./Makefile $extra_mk \
+	-f @@mkscriptsdir@@/pkg_src_summary.mk my-show-vars \
+	VARNAMES="'_INHER_ASSIGNS _INHER_ASSIGNS_REJ ASSIGNMENTS $varnames'" \
+	$var_assignments $var_assigns ) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1
-
-    # VAR_ASSIGNMENTS
-    if test "$var_assigns"; then
-	printf 'ASSIGNMENTS=' >>"$summaryfn" || return 1
-	printf "%s\n" "$var_assigns" | \
-	    sed -e 's| |~|g' -e "s|'~'| |g" -e "s|'||g" >>"$summaryfn" \
-	    || return 1
-    fi
 
     # CVS_CHECKSUM
     if test "$field_cvs_checksum"; then
@@ -408,7 +386,7 @@ $1 ~ /PKGPATH=/ {
    next
 }
 
-$1 ~ /VARIANTS7=/ {
+$1 ~ /_VARIANTS=/ {
    variants = substr($0, 11)
    next
 }
@@ -465,20 +443,17 @@ else
 fi
 
 if test "$multi_var"; then
-    pkg_grep_summary VARIANTS7 'fvalue != ""' \
+    pkg_grep_summary _VARIANTS 'fvalue != ""' \
 	< $partial_summary_fn >$multi_pkgs_fn
 
     if test -s $multi_pkgs_fn; then
-	pkg_grep_summary -e VARIANTS7 \
+	pkg_grep_summary -e _VARIANTS \
 	    < $partial_summary_fn >$normal_pkgs_fn
-	grep -v VARIANTS7 $normal_pkgs_fn > $partial_summary_fn || true
+	mv $normal_pkgs_fn $partial_summary_fn
 
-	rm $normal_pkgs_fn
-
-	runpipe_re '0 0 [01] 0' \
+	runpipe0 \
 	    summary2all_variants < $multi_pkgs_fn '|' \
 	    pkg_src_summary $make_plist '|' \
-	    grep -v VARIANTS7 '|' \
 	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
 fi
@@ -489,38 +464,65 @@ fi
 extra_deps_fn=$tmp_dir/extra_deps.txt
 
 processed_pkgs_fn=$tmp_dir/processed_pkgs.txt
-awk -F= '$1 == "PKGPATH" {print $2}' \
-    < "$partial_summary_fn" > "$processed_pkgs_fn"
+
+get_processed_pkgs (){
+    awk '
+NF == 0 {
+   if (assigns != "")
+      pkgpath = pkgpath ":" assigns
+   print pkgpath
+
+   if (assigns_rej != "")
+      print pkgpath (assigns != "" ? "," : ":") assigns_rej
+
+   pkgpath = assigns_rej = assigns = ""
+   next
+}
+/^PKGPATH=/ {
+   pkgpath = substr($0, 9)
+   next
+}
+/^ASSIGNMENTS=/ {
+   assigns = substr($0, 13)
+   next
+}
+/^_INHER_ASSIGNS_REJ=/ {
+   assigns_rej = substr($0, 20)
+   next
+}
+' "$@"
+}
+
+get_processed_pkgs < "$partial_summary_fn" > "$processed_pkgs_fn"
 
 while test -n "${with_dep}${with_bdep}"; do
-    awk -v with_dep=$with_dep -v with_bdep=$with_bdep \
-	-v processed_pkgs_fn=$processed_pkgs_fn '
+    runawk -v with_dep=$with_dep -v with_bdep=$with_bdep \
+	   -v processed_pkgs_fn=$processed_pkgs_fn -e '
+#use "xgetline.awk"
     BEGIN {
-	while (0 < (ret = (getline < processed_pkgs_fn))){
+	while (xgetline0(processed_pkgs_fn)){
 	    processed_pkgs [$0] = 1
-	}
-	if (ret){
-	    print "reading error" > "/dev/stderr"
-	    exit (1)
 	}
     }
     /^PKGPATH=/ {
 	pkgpaths [substr($0, 9)] = 1
 	next
     }
-    /^DEPENDS=/ && with_dep {
-	$0 = substr($0, 9)
+    NF == 0 {
+	inher_assigns = ""
+	next
+    }
+    /^_INHER_ASSIGNS=/ {
+	inher_assigns = ":" substr($0, 16)
+	next
+    }
+    (with_dep && /^DEPENDS=/) || (with_bdep && /^BUILD_DEPENDS=/)  {
+	sub(/^[^=]*=/, "")
 	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
 	for (i=1; i <= NF; ++i){
 	    sub(/\/+$/, "", $i)
-	    depends [$i] = 1
+	    depends [$i inher_assigns] = 1
 	}
-	next
-    }
-    /^BUILD_DEPENDS=/ && with_bdep {
-	$0 = substr($0, 15)
-	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
-	for (i=1; i <= NF; ++i) depends [$i] = 1
 	next
     }
     END {
@@ -533,13 +535,76 @@ while test -n "${with_dep}${with_bdep}"; do
     ' "$partial_summary_fn" > "$extra_deps_fn"
 
     if test -s "$extra_deps_fn"; then
-#	echo "inside! pkg_src_summary $make_plist < \"$extra_deps_fn\" >> \"$partial_summary_fn\"" 1>&2
-	$0 $make_plist \
-	    < "$extra_deps_fn" >> "$partial_summary_fn"
+	if test -n "$debug"; then
+	    echo ===== extra_deps: ========= 1>&2
+	    sort "$extra_deps_fn" 1>&2
+	fi
+	runpipe0 \
+	    env _PSS_RECURS=1 $0 $make_plist < "$extra_deps_fn" '|' \
+	    tee -a "$partial_summary_fn" '|' \
+	    get_processed_pkgs >> "$processed_pkgs_fn"
+
+	pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
+	mv "$partial_summary_fn".tmp "$partial_summary_fn"
+
 	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
     else
 	break
     fi
 done
 
-cat "$partial_summary_fn"
+remove_intrernal_fields (){
+    grep -v '^_.*=' "$@" || true
+}
+
+enrich_XDEPENDS (){
+    awk '
+FILENAME == "-" {
+   if (/^PKGPATH=/){
+      pkgpath = substr($0, 9)
+   }else if (/^ASSIGNMENTS=/){
+      assigns = substr($0, 13)
+   }else if (NF == 0){
+      if (assigns != ""){
+         p2a [pkgpath, assigns] = 1
+      }
+      assigns = pkgpath = ""
+   }
+   next
+}
+assigns != "" && match($0, /^(BUILD_)?DEPENDS=/) {
+   field = substr($0, 1, RLENGTH)
+   $0 = substr($0, RLENGTH+1)
+   for (i=1; i <= NF; ++i){
+      idx = index($i, ":")
+      pkgpath = substr($i, idx+1)
+      sub(/^[.][.]\/[.][.]\//, "", pkgpath)
+      if ((pkgpath SUBSEP assigns ) in p2a){
+         $i = $i ":" assigns
+      }
+   }
+   print field $0
+   next
+}
+{
+   if (/^ASSIGNMENTS=/){
+      assigns = substr($0, 13)
+   }else if (/^PKGPATH=/){
+      pkgpath = substr($0, 9)
+   }
+}
+{
+   print $0
+}
+NF == 0 {
+   assigns = pkgpath = ""
+}
+' - "$1" < "$1"
+}
+
+if test -z "$_PSS_RECURS"; then
+    enrich_XDEPENDS "$partial_summary_fn" |
+    remove_intrernal_fields
+else
+    remove_intrernal_fields "$partial_summary_fn"
+fi

@@ -5,6 +5,7 @@ BINDIR?=	${PREFIX}/bin
 MANDIR?=	${PREFIX}/man
 DOCDIR=		${PREFIX}/share/doc/pkg_summary-utils
 AWKMODDIR?=	${PREFIX}/share/awk
+MKSCRIPTSDIR?=	${PREFIX}/share/psu_mk
 
 INST_DIR?=	${INSTALL} -d
 
@@ -34,10 +35,11 @@ MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 MAN+=		cvs_checksum.1 pkg_uniq_summary.1
 
-FILES=		README NEWS TODO pkg_grep_summary.awk
+FILES=		README NEWS TODO pkg_grep_summary.awk pkg_src_summary.mk
 
 FILESDIR=			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk=	${AWKMODDIR}
+FILESDIR_pkg_src_summary.mk=	${MKSCRIPTSDIR}
 
 BIRTHDATE=	2008-04-06
 
@@ -54,6 +56,7 @@ PROJECTNAME=	pkg_summary-utils
 	    -e 's,@@datadir@@,${DATADIR},g' \
 	    -e 's,@@version@@,${VERSION},g' \
 	    -e 's,@@awkmoddir@@,${AWKMODDIR},g' \
+	    -e 's,@@mkscriptsdir@@,${MKSCRIPTSDIR},g' \
 	    -e 's,@SH@,${SH},g' \
 	    -e 's,@AWK@,${AWK},g' \
 	    ${.ALLSRC} > ${.TARGET} && chmod +x ${.TARGET}
@@ -69,6 +72,7 @@ install-dirs:
 	$(INST_DIR) ${DESTDIR}${BINDIR}
 	$(INST_DIR) ${DESTDIR}${DOCDIR}
 	$(INST_DIR) ${DESTDIR}${AWKMODDIR}
+	$(INST_DIR) ${DESTDIR}${MKSCRIPTSDIR}
 .if "$(MKMAN)" != "no"
 	$(INST_DIR) ${DESTDIR}${MANDIR}/man1
 	$(INST_DIR) ${DESTDIR}${MANDIR}/man7

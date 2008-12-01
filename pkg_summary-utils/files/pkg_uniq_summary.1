@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_uniq_summary.1,v 1.1 2008/11/11 20:53:43 cheusov Exp $
+.\"	$NetBSD: pkg_uniq_summary.1,v 1.2 2008/12/01 21:31:33 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -22,9 +22,7 @@ pkg_uniq_summary \- filter out repeated package summaries
 .SH DESCRIPTION
 .B pkg_uniq_summary
 filters out repeated package summaries.
-Summaries are compared by (PKGPATH, PKGBASE) pair,
-building options (:var1=val1[,...]) are removed from PKGPATH
-before comparison.
+Summaries are compared by (PKGPATH, PKGBASE, ASSIGNMENTS) triple.
 .SH OPTIONS
 .TP
 .B "-h|--help"

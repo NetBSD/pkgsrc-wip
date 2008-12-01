@@ -19,7 +19,6 @@ existing tools:
     pkg_src_summary:
 
     pkg_summary4view:
-       - add -h|--help option
 
     pkg_update_src_summary:
 
@@ -48,6 +47,5 @@ new tools?
 
     - pkg_get_deps
     - pkg_summary2binary
-    - pkg_uniq_summary
 
 ANY IDEAS? LET ME KNOW
