@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.jce,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
-@comment fixme
+@comment $NetBSD: PLIST.jce,v 1.2 2008/12/01 19:01:27 absd Exp $
+java/jdk-1.6.0/jre/lib/security/COPYRIGHT.html
+java/jdk-1.6.0/jre/lib/security/README.txt
