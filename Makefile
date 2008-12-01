@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3124 2008/12/01 20:51:19 cheusov Exp $
+# $Id: Makefile,v 1.3125 2008/12/01 20:53:47 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -285,7 +285,7 @@ SUBDIR+=	doorman
 SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot
-SUBDIR+=	dovecot-sieve
+#SUBDIR+=	dovecot-sieve
 SUBDIR+=	dpic
 SUBDIR+=	drow
 SUBDIR+=	drpython

@@ -169,12 +169,68 @@ NF == 0 {
 # By depends on B
 # Conlusion: all Ax condlict with all By indirectly
 # (not implemented)
-#indirect_conflict_too (){
-#    awk '
-#FILENAME != "-" {
-#
-#}' "$@" -
-#}
+indirect_conflict_too (){
+    awk '
+BEGIN {
+   SUBSEP = "/"
+}
+
+FILENAME == "-" {
+   graph [$1, $2] = "c"
+   nodes [$1] = 1
+   nodes [$2] = 1
+   next
+}
+
+/^PKGNAME=/ {
+   pkgbase = substr($0, 9)
+   sub(/-[^-]+$/, "", pkgbase)
+   next
+}
+
+/^PKGPATH=/ {
+   pkgpath = substr($0, 9)
+   next
+}
+
+/^DEPENDS=/ {
+   $0 = substr($0, 9)
+   gsub(/:[^ ]+/, "")
+   gsub(/[-><=][^- ]+/, "")
+   depends = $0
+   next
+}
+
+NF == 0 {
+   spath_dname [pkgpath] = spath_dname [pkgpath] " " pkgbase
+   if (pkgbase in nodes){
+#      print pkgbase, depends
+      cnt = split(depends, arr)
+      for (i=1; i <= cnt; ++i){
+         graph [pkgbase, arr [i]] = "d"
+      }
+   }
+   depends = pkgbase = ""
+}
+
+END {
+   for (pkgpath in spath_dname){
+      cnt = split(spath_dname [pkgpath], arr)
+      print cnt
+      for (i=1; i <= cnt; ++i){
+         for (j=1; j <= cnt; ++j){
+            if (i != j){
+               print arr [i], arr [j]
+            }
+         }
+      }
+   }
+#   for (arc in graph){
+#      printf "graph [%s] = %s\n", arc, graph [arc]
+#   }
+}
+' - "$@"
+}
 
 # check conflicts
 check_conflicts (){
@@ -236,9 +292,9 @@ $1 == "Missed:" {
 }
 
 # main
-check_conflicts "$@" > $conflicts_fn
-enrich_conflicts_info "$@" < $conflicts_fn
+#check_conflicts "$@" > $conflicts_fn
+#enrich_conflicts_info "$@" < $conflicts_fn
 
 # for debugging
-#makefile_conflicts "$@" #| indirect_conflict_too
+makefile_conflicts "$@" | indirect_conflict_too "$@"
 #real_conflicts "$@"

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2008/03/29 22:25:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/01 20:53:48 cheusov Exp $
 
-DISTNAME=	javascript-2.0b7.el
-PKGNAME=	${EMACS_PKGNAME_PREFIX}javascript-mode-2.0b7
+DISTNAME=	javascript-2.1b1.el
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/script/script-mode/:S/.el//}
 CATEGORIES=	devel editors
-MASTER_SITES=	http://web.comhem.se/~u34308910/emacs/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://www.brgeight.se/downloads/emacs/
+EXTRACT_SUFX=	
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://web.comhem.se/~u34308910/emacs.html
-#HOMEPAGE=	http://www.brgeight.se/
+HOMEPAGE=	http://www.brgeight.se/
 COMMENT=	Javascript major mode for Emacs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
