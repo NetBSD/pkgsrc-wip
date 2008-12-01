@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sidmilter.sh,v 1.1.1.1 2004/09/01 10:35:53 adrian_p Exp $
+# $NetBSD: sid-milter.sh,v 1.1 2008/12/01 00:04:29 pettai Exp $
 #
 # PROVIDE: sidfilter
 # REQUIRE: DAEMON

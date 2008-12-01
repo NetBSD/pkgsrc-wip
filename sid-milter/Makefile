@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/09/07 09:23:12 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/01 00:04:29 pettai Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
@@ -20,7 +20,7 @@ LICENSE=		sendmail-open-source-license
 USE_TOOLS+=		gm4
 MAKE_ENV+=		M4=${M4:Q}
 PTHREAD_OPTS+=		require
-RCD_SCRIPTS=		sidmilter
+RCD_SCRIPTS=		sid-milter
 
 SIDDOC=		${PREFIX}/share/doc/sid-milter
 
@@ -45,6 +45,7 @@ do-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat3/
 	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat8/
 
+	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libmarid/sm-marid.h ${PREFIX}/include
 	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a ${PREFIX}/lib
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 \
 		${PREFIX}/${PKGMANDIR}/cat3/
@@ -52,11 +53,16 @@ do-install:
 		${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
 		${PREFIX}/${PKGMANDIR}/cat8/
+	${INSTALL_DATA} ${WRKSRC}/FEATURES ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/README ${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4406.txt ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4407.txt ${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4408.txt ${SIDDOC}
 
 .include "../../mk/bsd.pkg.mk"
 
