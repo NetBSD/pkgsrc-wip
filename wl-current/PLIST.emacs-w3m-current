@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST.emacs-w3m-current,v 1.1.1.1 2008/11/18 02:11:41 makoto Exp $
-${PLIST.emacs-w3m-current}${EMACS_LISPPREFIX}/wl/elmo-shimbun.el
-${PLIST.emacs-w3m-current}${EMACS_LISPPREFIX}/wl/elmo-shimbun.elc
-${PLIST.emacs-w3m-current}share/wl/shimbun.xpm
+@comment $NetBSD: PLIST.emacs-w3m-current,v 1.2 2008/12/01 15:26:23 makoto Exp $
+${PLIST.emacs-w3m-current}/${EMACS_LISPPREFIX}/wl/elmo-shimbun.el
+${PLIST.emacs-w3m-current}/${EMACS_LISPPREFIX}/wl/elmo-shimbun.elc
