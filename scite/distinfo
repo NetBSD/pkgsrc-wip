@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2008/01/16 18:23:50 loic-hoguin Exp $
+$NetBSD: distinfo,v 1.11 2008/12/03 20:43:54 shattered Exp $
 
-SHA1 (scite175.tgz) = 7f3e3fceccb3ea3f3580fb01e22ac8b55604355c
-RMD160 (scite175.tgz) = 9428cfaaa16ca08609bb2eb5a63b1ab0ed7b0e1a
-Size (scite175.tgz) = 1489736 bytes
+SHA1 (scite177.tgz) = 9e49b13ada9aba10bed9db6ecdf5925f957caac5
+RMD160 (scite177.tgz) = 1aabe4899a2d7b57a397c0fdec961d0fdc05169e
+Size (scite177.tgz) = 1520037 bytes
 SHA1 (patch-ag) = d1d27b08b20c499b8aa01cd510da9aa4340e3949
-SHA1 (patch-ah) = 226a68dfcb390ce8f2d8b61de49cdadca02c4437
+SHA1 (patch-ah) = 7debe846df1a4ca77a3d4e399f7a5516e0fba4ea

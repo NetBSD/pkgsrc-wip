@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.6 2008/01/16 18:23:50 loic-hoguin Exp $
+$NetBSD: patch-ah,v 1.7 2008/12/03 20:43:54 shattered Exp $
 
---- scite/gtk/makefile.orig	2007-09-10 12:24:35.000000000 +0200
+--- scite/gtk/makefile.orig	2008-05-01 13:40:28.000000000 +0000
 +++ scite/gtk/makefile
 @@ -45,7 +45,7 @@ pixmapdir=$(datadir)/pixmaps
  bindir=$(prefix)/bin
  SYSCONF_PATH=$(prefix)/share/scite
  
--INSTALL=install -o root -g root
-+INSTALL=install -o 0 -g 0 -c
+-INSTALL=install
++INSTALL=install -c
  
  PROG	= ../bin/SciTE
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ah,v 1.6 2008/01/16 18:23:50 loic-hoguin Exp $
 @@ -103,7 +103,7 @@ COMPLIB=../../scintilla/bin/scintilla.a
  $(PROG): SciTEGTK.o FilePath.o SciTEBase.o SciTEBuffers.o SciTEIO.o StringList.o Exporters.o \
  PropSetFile.o MultiplexExtension.o DirectorExtension.o SciTEProps.o Utf8_16.o \
- 	JobQueue.o GTKMutex.o $(COMPLIB) $(LUA_OBJS)
+ 	JobQueue.o GTKMutex.o IFaceTable.o $(COMPLIB) $(LUA_OBJS)
 -	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--version-script lua.vers -DGTK $^ -o $@ $(CONFIGLIB)
 +	$(CC) `$(CONFIGTHREADS)` -rdynamic -Wl,--version-script lua.vers -DGTK $^ -o $@ -L/usr/lib $(CONFIGLIB)
  

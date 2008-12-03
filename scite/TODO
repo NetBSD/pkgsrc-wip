@@ -1,0 +1,5 @@
+abort()s on startup:
+
+SciTE: Error detected by libpthread: Unlocking unlocked mutex.
+Detected by file "/home/builds/ab/netbsd-4-0-RELEASE/src/lib/libpthread/pthread_mutex.c", line 363, function "pthread_mutex_unlock".
+See pthread(3) for information.
