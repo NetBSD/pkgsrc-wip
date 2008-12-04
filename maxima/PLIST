@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/04 15:21:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/12/04 18:35:59 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
 info/imaxima.info
 info/maxima-index.lisp
+info/maxima.info
 info/xmaxima.info
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
@@ -185,7 +186,6 @@ share/maxima/${PKGVERSION}/doc/html/maxima_9.html
 share/maxima/${PKGVERSION}/doc/html/maxima_90.html
 share/maxima/${PKGVERSION}/doc/html/maxima_91.html
 share/maxima/${PKGVERSION}/doc/html/maxima_92.html
-share/maxima/${PKGVERSION}/doc/html/maxima_93.html
 share/maxima/${PKGVERSION}/doc/html/maxima_abt.html
 share/maxima/${PKGVERSION}/doc/html/maxima_fot.html
 share/maxima/${PKGVERSION}/doc/html/maxima_ovr.html
@@ -394,7 +394,6 @@ share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_3
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_4.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_5.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_odelin.mac
-share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_utils.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/testsuite.lisp
 share/maxima/${PKGVERSION}/share/contrib/distrib/distrib.mac
 share/maxima/${PKGVERSION}/share/contrib/distrib/numdistrib.lisp
@@ -1536,6 +1535,8 @@ share/maxima/${PKGVERSION}/tests/rtest_diff_invtrig.mac
 share/maxima/${PKGVERSION}/tests/rtest_dot.mac
 share/maxima/${PKGVERSION}/tests/rtest_equal.mac
 share/maxima/${PKGVERSION}/tests/rtest_everysome.mac
+share/maxima/${PKGVERSION}/tests/rtest_expintegral.mac
+share/maxima/${PKGVERSION}/tests/rtest_gamma.mac
 share/maxima/${PKGVERSION}/tests/rtest_hypgeo.mac
 share/maxima/${PKGVERSION}/tests/rtest_map.mac
 share/maxima/${PKGVERSION}/tests/rtest_mset.mac
