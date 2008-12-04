@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/29 13:46:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/04 17:34:40 thomasklausner Exp $
 bin/muine
 lib/muine/libmuine.la
 lib/muine/muine-dbus.dll
@@ -20,7 +20,6 @@ share/icons/hicolor/22x22/apps/muine.png
 share/icons/hicolor/24x24/apps/muine.png
 share/icons/hicolor/32x32/apps/muine.png
 share/icons/hicolor/48x48/apps/muine.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/muine.svg
 share/locale/ar/LC_MESSAGES/muine.mo
 share/locale/az/LC_MESSAGES/muine.mo

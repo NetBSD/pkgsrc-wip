@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/11/08 09:34:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/04 17:34:40 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.8.10
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/muine/0.8/}
 
