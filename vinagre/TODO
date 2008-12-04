@@ -1,0 +1,2 @@
+Packages cleanly, but core dumps when opening a connection.
+Could be a problem in gtk-vnc.
