@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.pydbus,v 1.2 2007/10/21 16:34:43 adrian_p Exp $
-bin/avahi-set-host-name
-man/man1/avahi-bookmarks.1
-man/man1/avahi-discover.1
-man/man1/avahi-set-host-name.1
-share/avahi/interfaces/avahi-discover.glade

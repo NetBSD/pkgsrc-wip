@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/12/04 09:59:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/04 13:16:48 thomasklausner Exp $
 
 DISTNAME=		avahi-0.6.23
 CATEGORIES=		net
@@ -35,7 +35,7 @@ BUILD_DEFS=		VARBASE PKG_SYSCONFBASE
 PLIST_SRC=		${PKGDIR}/PLIST
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
-LIBS+=			-lintl
+MAKE_DIRS=		${PKG_SYSCONFDIR}/services
 
 PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}::Avahi\ user:/nonexistent
 PKG_GROUPS=		${AVAHI_GROUP}
@@ -56,6 +56,8 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dnsconfd.action \
 			${PKG_SYSCONFDIR}/avahi-dnsconfd.action
 CONF_FILES+=		${PREFIX}/share/examples/avahi/ssh.service \
 			${PKG_SYSCONFDIR}/services/ssh.service
+CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
+			${PREFIX}/etc/dbus-1/system.d/avahi-dbus.conf
 
 CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
 CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
@@ -71,9 +73,6 @@ CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
 
-post-extract:
-	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/avahi
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avahi
@@ -87,11 +86,8 @@ post-install:
 		${PREFIX}/share/examples/avahi
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/ssh.service \
 		${PREFIX}/share/examples/avahi
-
-.	if !empty(PKG_OPTIONS:Mdbus)
 		${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-dbus.conf \
 			${PREFIX}/share/examples/avahi/avahi-dbus.conf
-.	endif
 
 	${INSTALL_DATA} ${WRKSRC}/docs/HACKING ${PREFIX}/share/doc/avahi
 	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${PREFIX}/share/doc/avahi
@@ -99,8 +95,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/README ${PREFIX}/share/doc/avahi
 	${INSTALL_DATA} ${WRKSRC}/docs/TODO ${PREFIX}/share/doc/avahi
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/libdaemon/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

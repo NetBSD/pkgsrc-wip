@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.expat,v 1.1 2007/10/21 16:45:23 adrian_p Exp $
-sbin/avahi-daemon
-sbin/avahi-dnsconfd
-share/avahi/avahi-service.dtd
