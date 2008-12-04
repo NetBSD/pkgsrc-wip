@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/11/12 01:29:18 minskim Exp $
+# $NetBSD: options.mk,v 1.11 2008/12/04 21:40:54 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -64,6 +64,7 @@ CONFIGURE_ARGS+=	--with-png
 ### Enable font backend
 ###
 .  if !empty(PKG_OPTIONS:Mfont-backend)
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libotf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
