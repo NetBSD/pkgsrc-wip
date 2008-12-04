@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/04 23:07:12 shattered Exp $
+bin/dynamite
+include/libdynamite.h
+lib/libdynamite.la
+share/aclocal/dynamite.m4
