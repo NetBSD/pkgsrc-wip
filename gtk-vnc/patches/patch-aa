@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/04 16:05:28 thomasklausner Exp $
+
+--- src/gvnc.c.orig	2008-09-05 12:32:16.000000000 +0000
++++ src/gvnc.c
+@@ -41,6 +41,10 @@
+ 
+ #include "vnc_keycodes.h"
+ 
++#ifndef AI_ADDRCONFIG
++#define AI_ADDRCONFIG 0
++#endif
++
+ struct wait_queue
+ {
+ 	gboolean waiting;
