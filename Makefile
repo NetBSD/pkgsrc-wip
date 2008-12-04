@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3125 2008/12/01 20:53:47 cheusov Exp $
+# $Id: Makefile,v 1.3126 2008/12/04 04:32:51 htepper Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -64,6 +64,7 @@ SUBDIR+=	afflib
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
+SUBDIR+=	akode
 SUBDIR+=	akonadi
 SUBDIR+=	alex
 SUBDIR+=	alive
