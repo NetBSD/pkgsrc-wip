@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/04 16:08:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/04 16:12:11 thomasklausner Exp $
 #
 
 DISTNAME=	vinagre-2.24.1
@@ -26,7 +26,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.0
 BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.6.0
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../zzz/gtk-vnc/buildlink3.mk"
+.include "../../wip/gtk-vnc/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

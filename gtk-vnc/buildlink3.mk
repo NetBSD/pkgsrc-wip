@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/12/04 16:05:28 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/04 16:12:11 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK_VNC_BUILDLINK3_MK:=	${GTK_VNC_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtk-vnc
 
 .if ${GTK_VNC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.3.7
-BUILDLINK_PKGSRCDIR.gtk-vnc?=	../../zzz/gtk-vnc
+BUILDLINK_PKGSRCDIR.gtk-vnc?=	../../wip/gtk-vnc
 .endif	# GTK_VNC_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
