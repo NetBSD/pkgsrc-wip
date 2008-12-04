@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3127 2008/12/04 16:09:28 thomasklausner Exp $
+# $Id: Makefile,v 1.3128 2008/12/04 23:19:58 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1786,12 +1786,15 @@ SUBDIR+=	swftools
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
 SUBDIR+=	symon
-SUBDIR+=	sysmon
+SUBDIR+=	synce-dynamite
+#SUBDIR+=	synce-kde	# requires buildlink3 file to be put in pkgsrc tree
+#SUBDIR+=	synce-orange	# requires buildlink3 file to be put in pkgsrc tree
 SUBDIR+=	synfig
 SUBDIR+=	synfigstudio
 SUBDIR+=	sysjail
 SUBDIR+=	sysklogd
 SUBDIR+=	syslog-ng2
+SUBDIR+=	sysmon
 SUBDIR+=	sysstat
 SUBDIR+=	sysvinit
 SUBDIR+=	t-coffee
