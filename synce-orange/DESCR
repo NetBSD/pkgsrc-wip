@@ -1,0 +1,16 @@
+Orange is part of the SynCE project.
+
+Orange is a tool and library for squeezing out juicy installable
+Microsoft Cabinet Files from self-extracting installers for Microsoft
+Windows and some other installer file formats. It currently supports the
+following kinds of installers:
+
+    * Self-extracting installers (EXE):
+          o Early support for installers created by Installer VISE.
+          o Support for some installers created by Inno Setup.
+          o Setup Factory versions 5 and 6 using Dynamite for data
+	    decompression.
+          o Some other installer (using a DLL called inflate.dll). This
+	    is used by for example Macromedia Flash Player 6 for Pocket PC
+	    2002.
+          o InstallShield self-extracting installers.
