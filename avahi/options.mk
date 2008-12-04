@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2008/11/01 14:29:34 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.6 2008/12/04 09:59:05 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avahi
 
 PKG_SUPPORTED_OPTIONS=	dbus glib gdbm python gtk python-gtk python-dbus
 PKG_SUPPORTED_OPTIONS+=	avahi-howl expat
-PKG_SUGGESTED_OPTIONS=	expat
+PKG_SUGGESTED_OPTIONS=	expat gtk
 
 .include "../../mk/bsd.options.mk"
 
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--disable-expat
 ###
 .if !empty(PKG_OPTIONS:Mgtk)
 PKG_OPTIONS+=		glib
+.  include "../../devel/libglade/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.gtk
 .if !empty(PKG_OPTIONS:Mdbus)

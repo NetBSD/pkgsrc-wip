@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/11/07 23:42:58 adrian_p Exp $
+# $NetBSD: Makefile,v 1.14 2008/12/04 09:59:04 thomasklausner Exp $
 
 DISTNAME=		avahi-0.6.23
 CATEGORIES=		net
@@ -21,6 +21,7 @@ PKGCONFIG_OVERRIDE+=	avahi-compat-howl.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-compat-libdns_sd.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-core.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-glib.pc.in
+PKGCONFIG_OVERRIDE+=	avahi-gobject.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-qt3.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-qt4.pc.in
 PKGCONFIG_OVERRIDE+=	avahi-sharp.pc.in
@@ -31,7 +32,7 @@ AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
 BUILD_DEFS=		VARBASE PKG_SYSCONFBASE
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+PLIST_SRC=		${PKGDIR}/PLIST
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
 LIBS+=			-lintl
