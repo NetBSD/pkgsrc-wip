@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/02/25 11:12:40 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/04 22:49:51 tnn2 Exp $
 #
 
-DISTNAME=		aircrack-ng-0.9.3
+DISTNAME=		aircrack-ng-1.0-rc1
+PKGNAME=		aircrack-ng-1.0rc1
 CATEGORIES=		security
 MASTER_SITES=		http://download.aircrack-ng.org/
 
@@ -11,14 +12,16 @@ COMMENT=		Tools for auditing wireless networks
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
+USE_TOOLS+=		gmake
 
-.if ${OPSYS} == "NetBSD"
-# Override SBINFILES. The other tools have not been ported yet.
-MAKE_ENV+=	SBINFILES=airodump-ng
-PLIST_SUBST+=	notyet="@comment "
-.else
-PLIST_SUBST+=	notyet=""
-.endif
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		common.mak
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-paths+=		-e 's,man/man1,${PKGMANDIR}/man1,g'
 
+CHECK_INTERPRETER_SKIP=		sbin/airdriver-ng # xxx might as well not install it
+
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
