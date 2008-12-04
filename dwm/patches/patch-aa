@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4 2008/12/04 21:40:58 leot1990 Exp $
+
+To use signal(3), <signal.h> should be included.
+
+--- dwm.c.orig	2008-12-04 21:22:37.000000000 +0100
++++ dwm.c
+@@ -25,6 +25,7 @@
+  */
+ #include <errno.h>
+ #include <locale.h>
++#include <signal.h>
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
