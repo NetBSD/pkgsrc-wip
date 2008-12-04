@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/06 20:54:29 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/04 22:21:02 thomasklausner Exp $
 bin/giggle
 lib/libgiggle.la
 share/applications/giggle.desktop
@@ -7,7 +7,6 @@ share/icons/hicolor/16x16/apps/giggle.png
 share/icons/hicolor/22x22/apps/giggle.png
 share/icons/hicolor/32x32/apps/giggle.png
 share/icons/hicolor/48x48/apps/giggle.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/giggle.svg
 share/locale/ca/LC_MESSAGES/giggle.mo
 share/locale/de/LC_MESSAGES/giggle.mo
@@ -16,11 +15,12 @@ share/locale/fr/LC_MESSAGES/giggle.mo
 share/locale/pl/LC_MESSAGES/giggle.mo
 share/locale/sv/LC_MESSAGES/giggle.mo
 share/locale/vi/LC_MESSAGES/giggle.mo
-@dirrm share/icons/hicolor/scalable/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/giggle/glade
 @dirrm share/giggle
+@comment in xdg-dirs: @dirrm share/applications
