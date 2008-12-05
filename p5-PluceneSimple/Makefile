@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:52 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/05 22:53:34 tnn2 Exp $
 
 DISTNAME=	PluceneSimple-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Time-Piece-Range>=1.0:../../wip/p5-Time-Piece-Range
 BUILD_DEPENDS+=	p5-File-Find-Rule>=0.10:../../devel/p5-File-Find-Rule
 BUILD_DEPENDS+=	p5-File-Slurp>=2002.1031:../../devel/p5-File-Slurp
-BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../wip/p5-Test-Class
+BUILD_DEPENDS+=	p5-Test-Class>=0.03:../../devel/p5-Test-Class
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST= auto/PluceneSimple/.packlist
