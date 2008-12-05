@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3133 2008/12/05 23:11:37 tnn2 Exp $
+# $Id: Makefile,v 1.3134 2008/12/05 23:17:12 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -685,20 +685,11 @@ SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
 SUBDIR+=	hunspell-af_ZA
-SUBDIR+=	hunspell-bg_BG
-SUBDIR+=	hunspell-ca_ES
-SUBDIR+=	hunspell-cs_CZ
-SUBDIR+=	hunspell-da_DK
-SUBDIR+=	hunspell-es_ES
-SUBDIR+=	hunspell-es_MX
-SUBDIR+=	hunspell-fo_FO
-SUBDIR+=	hunspell-fr_FR
 SUBDIR+=	hunspell-fr_FR_1990
 SUBDIR+=	hunspell-fr_FR_classique
 SUBDIR+=	hunspell-ga_IE
 SUBDIR+=	hunspell-he_IL
 SUBDIR+=	hunspell-hr_HR
-SUBDIR+=	hunspell-id_ID
 SUBDIR+=	hunspell-it_IT
 SUBDIR+=	hunspell-lt_LT
 SUBDIR+=	hunspell-mg_MG
@@ -706,7 +697,6 @@ SUBDIR+=	hunspell-ms_MY
 SUBDIR+=	hunspell-nl_NL
 SUBDIR+=	hunspell-ny_MW
 SUBDIR+=	hunspell-ru_RU
-SUBDIR+=	hunspell-sv_SE
 SUBDIR+=	hxt
 SUBDIR+=	hydrogen-current
 SUBDIR+=	hylafax
