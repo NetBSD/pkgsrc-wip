@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/29 20:32:08 ondratu Exp $
+$NetBSD: distinfo,v 1.2 2008/12/05 19:47:13 jsonn Exp $
 
 SHA1 (codeblocks-8.02-src.tar.bz2) = 078932cfd4fee2066ec931cb6dfa8079235c1237
 RMD160 (codeblocks-8.02-src.tar.bz2) = 88451f42ac4de2b98d57416a3cea1a0647344b30
 Size (codeblocks-8.02-src.tar.bz2) = 6839711 bytes
 SHA1 (patch-aa) = 61b8176f298790e2d496be3fe5a5cc56980ee353
 SHA1 (patch-ab) = 869915db896d8254fbd847087bde5e8cea2bf621
+SHA1 (patch-ac) = 71f5e31e5a344c2699637f18783f2a2103c6cfd1
