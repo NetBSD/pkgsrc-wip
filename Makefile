@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3132 2008/12/05 23:06:19 tnn2 Exp $
+# $Id: Makefile,v 1.3133 2008/12/05 23:11:37 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1771,7 +1771,6 @@ SUBDIR+=	ssu
 SUBDIR+=	stardict
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
-SUBDIR+=	strigi
 SUBDIR+=	stumpwm
 SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
