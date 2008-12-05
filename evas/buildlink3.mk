@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/10/20 00:09:22 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2008/12/05 21:41:32 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EVAS_BUILDLINK3_MK:=	${EVAS_BUILDLINK3_MK}+
@@ -18,8 +18,6 @@ BUILDLINK_PKGSRCDIR.evas?=	../../wip/evas
 .endif	# EVAS_BUILDLINK3_MK
 
 .include "../../devel/eet/buildlink3.mk"
-.include "../../wip/libxcb/buildlink3.mk"
-.include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../databases/edb/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

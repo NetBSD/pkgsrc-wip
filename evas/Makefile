@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/10/26 07:22:09 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2008/12/05 21:41:32 minskim Exp $
 #
 
 DISTNAME=	evas-0.9.9.050
@@ -20,9 +20,7 @@ PKGCONFIG_OVERRIDE+=	evas-software-16-wince.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-qtopia.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-16-ddraw.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-ddraw.pc.in
-PKGCONFIG_OVERRIDE+=	evas-xrender-xcb.pc.in
 PKGCONFIG_OVERRIDE+=	evas-glitz-x11.pc.in
-PKGCONFIG_OVERRIDE+=	evas-software-xcb.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-16-x11.pc.in
 PKGCONFIG_OVERRIDE+=	evas-opengl-glew.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-sdl.pc.in
@@ -39,8 +37,6 @@ CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
 
 .include "../../devel/eet/buildlink3.mk"
-.include "../../wip/libxcb/buildlink3.mk"
-.include "../../wip/xcb-proto/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../databases/edb/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
