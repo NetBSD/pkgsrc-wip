@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 11:18:38 chet-s Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/05 10:52:07 thomasklausner Exp $
 bin/o3totxt
 bin/tracker-extract
 bin/tracker-files
@@ -85,7 +85,6 @@ share/icons/hicolor/22x22/apps/tracker.png
 share/icons/hicolor/24x24/apps/tracker.png
 share/icons/hicolor/32x32/apps/tracker.png
 share/icons/hicolor/48x48/apps/tracker.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/tracker.svg
 share/locale/ar/LC_MESSAGES/tracker.mo
 share/locale/be@latin/LC_MESSAGES/tracker.mo
@@ -150,17 +149,20 @@ share/tracker/tracker-introspect.xml
 @dirrm share/tracker/services
 @dirrm share/tracker/languages
 @dirrm share/tracker
-@dirrm share/icons/hicolor/scalable/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/24x24/apps
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm lib/tracker/thumbnailers/image
 @dirrm lib/tracker/thumbnailers/application
+@dirrm lib/tracker/thumbnailers
 @dirrm lib/tracker/filters/text
 @dirrm lib/tracker/filters/application
+@dirrm lib/tracker/filters
 @dirrm lib/tracker/extract-modules
+@dirrm lib/tracker
 @dirrm include/libtracker-gtk
