@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/07 18:31:23 htepper Exp $
+$NetBSD: distinfo,v 1.5 2008/12/05 10:00:35 htepper Exp $
 
 SHA1 (openct-0.6.15.tar.gz) = 17e5326bdacd79df52a16355084cc8d9927ea205
 RMD160 (openct-0.6.15.tar.gz) = a646dda412963de2e36e5bff64fce948c06bc761
 Size (openct-0.6.15.tar.gz) = 673265 bytes
-SHA1 (patch-aa) = e901b4c27f5347a0d610a15213fefc87bb001d26
+SHA1 (patch-aa) = d44e8daa9cc402c8276bf385a5fbbe5a498b37bb

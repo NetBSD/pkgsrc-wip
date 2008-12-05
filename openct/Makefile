@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/08/07 18:31:23 htepper Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/05 10:00:35 htepper Exp $
 
 DISTNAME=		openct-0.6.15
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/openct/
 
@@ -25,7 +26,9 @@ MAKE_DIRS+=		${VARBASE}/openct/run/openct
 EGDIR=			${PREFIX}/share/examples/openct
 CONF_FILES+=		${EGDIR}/openct.conf ${PKG_SYSCONFDIR}/openct.conf
 
+BUILD_DEFS+=		VARBASE
 INSTALLATION_DIRS=	${EGDIR}
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/openct.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/reader.conf ${DESTDIR}${EGDIR}
