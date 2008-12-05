@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/21 20:02:12 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/05 21:45:20 tnn2 Exp $
 #
 
 DISTNAME=	just-0.3.6
@@ -13,10 +13,10 @@ DEPENDS+=	tcl-scotty>=2.1.10:../../net/tcl-scotty
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=  yes
-CONFIGURE_ARGS+= --with-tcl-config=${PREFIX}/lib
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-tcl-config=${PREFIX}/lib
 
-TNMVER!= ${ECHO} 'puts $$tnm(version); exit' | scotty
-PLIST_SUBST+= TNMVER=${TNMVER}
+TNMVER_CMD=	${ECHO} 'puts $$tnm(version); exit' | ${PREFIX}/bin/scotty
+PLIST_SUBST+=	TNMVER=${:!${TNMVER_CMD}!}
 
 .include "../../mk/bsd.pkg.mk"
