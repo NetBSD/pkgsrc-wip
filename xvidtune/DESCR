@@ -1,7 +1,0 @@
-Xvidtune  is  a  client  interface to the X server video mode extension
-(XFree86-VidModeExtension).  When given one of the non-toolkit options,
-xvidtune provides a command line interface to either switch the video mode.
-Without any options--or with only toolkit options--it presents the user
-with various buttons and sliders that  can  be  used  to  interactively
-adjust existing video modes.  It will also print the settings in a for-
-mat suitable for inclusion in an xorg.conf file.

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3129 2008/12/05 19:44:47 tnn2 Exp $
+# $Id: Makefile,v 1.3130 2008/12/05 22:58:34 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2062,7 +2062,6 @@ SUBDIR+=	xtags
 SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
 SUBDIR+=	xulrunner
-SUBDIR+=	xvidtune
 SUBDIR+=	xwelltris
 SUBDIR+=	xxdiff
 SUBDIR+=	xyssl
