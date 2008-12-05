@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/04 04:31:00 htepper Exp $
+$NetBSD: distinfo,v 1.2 2008/12/05 14:03:53 htepper Exp $
 
 SHA1 (30375-akode-2.0.2.tar.bz2) = 10ad1e335bc53c2a90d133b493568324514c729c
 RMD160 (30375-akode-2.0.2.tar.bz2) = fa0322367d8e24e541007d3f9e508c3c31370d96
 Size (30375-akode-2.0.2.tar.bz2) = 472605 bytes
+SHA1 (patch-aa) = e984dc5d4f1e62812d8c0c9db4bf0476c1edf3fa

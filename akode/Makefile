@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/05 12:43:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/05 14:03:53 htepper Exp $
 #
 
 DISTNAME=		30375-akode-2.0.2
@@ -19,8 +19,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-
-SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
