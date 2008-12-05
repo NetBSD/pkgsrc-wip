@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/21 06:43:10 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/12/05 10:39:57 thomasklausner Exp $
 bin/midori
 share/applications/midori.desktop
 share/icons/hicolor/32x32/apps/midori.png
@@ -7,7 +7,6 @@ share/icons/hicolor/32x32/status/news-feed.png
 share/icons/hicolor/48x48/apps/midori.png
 share/icons/hicolor/48x48/categories/extension.png
 share/icons/hicolor/48x48/status/news-feed.png
-share/icons/hicolor/icon-theme.cache
 share/locale/de/LC_MESSAGES/midori.mo
 share/locale/es/LC_MESSAGES/midori.mo
 share/locale/et/LC_MESSAGES/midori.mo
@@ -19,18 +18,4 @@ share/locale/ru/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
 share/midori/logo-shade.png
 @dirrm share/midori
-@dirrm share/icons/hicolor/48x48/status
-@dirrm share/icons/hicolor/48x48/categories
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/status
-@dirrm share/icons/hicolor/32x32/categories
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/22x22/status
-@dirrm share/icons/hicolor/22x22/categories
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/16x16/status
-@dirrm share/icons/hicolor/16x16/categories
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor
-@dirrm share/doc/midori
 @comment in xdg-dirs: @dirrm share/applications
