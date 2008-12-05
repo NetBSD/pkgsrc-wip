@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/04 04:31:00 htepper Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/05 12:43:25 thomasklausner Exp $
 #
 
 DISTNAME=		30375-akode-2.0.2
@@ -13,7 +13,7 @@ COMMENT=		Simple audio decoding framework
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
