@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/08/27 10:42:19 htepper Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/05 10:06:39 htepper Exp $
 
 DISTNAME=		opensc-0.11.6
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/opensc/
 
@@ -14,7 +15,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_OLD_DES_API=	YES
 USE_TOOLS+=		gmake pkg-config
-USE_BUILTIN.openssl=	NO
 
 .include "options.mk"
 
