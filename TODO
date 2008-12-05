@@ -13,6 +13,7 @@ Suggested package updates
 	o commoncpp2-1.6.3
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o digikam-0.10.0beta6 (needs libkdcraw from KDE 4.2)
 	o directfb-1.0.0
 	o ecasound-2.5.2
 	o editline-20080712.2.11
@@ -42,7 +43,7 @@ Suggested package updates
 	o libgksu-2.0.4
 	o libxcb-1.1.92
 	o linphone-3.0.0
-	o lives-0.9.9.1
+	o lives-0.9.9.4
 	o llvm-2.4
 	o man-1.6f
 	o mcabber-0.9.9
@@ -69,7 +70,7 @@ Suggested package updates
 	o rdup-0.6.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.20.0
+	o rsyslog-3.20.1
 	o sdlmame-0.128
 	o sdlmess-0.128
 	o sendmailX-0.0.0.0
