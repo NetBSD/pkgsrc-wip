@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3130 2008/12/05 22:58:34 tnn2 Exp $
+# $Id: Makefile,v 1.3131 2008/12/05 23:01:03 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1904,7 +1904,6 @@ SUBDIR+=	ups-nut
 SUBDIR+=	uptimed
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
-SUBDIR+=	usbids
 SUBDIR+=	uschedule
 SUBDIR+=	ushare
 SUBDIR+=	using-mpi
