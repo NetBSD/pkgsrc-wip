@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/12/06 14:05:40 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2008/12/06 14:07:25 minskim Exp $
 #
 
 DISTNAME=	evas-0.9.9.050
@@ -11,7 +11,7 @@ COMMENT=	Enlightened Canvas Library
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	evas-software-16-x11.pc.in
 PKGCONFIG_OVERRIDE+=	evas-software-buffer.pc.in
