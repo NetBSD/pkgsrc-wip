@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3134 2008/12/05 23:17:12 tnn2 Exp $
+# $Id: Makefile,v 1.3135 2008/12/06 13:16:49 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1330,7 +1330,6 @@ SUBDIR+=	p5-Metadata
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-NNTPClient
-SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-PcapUtils
