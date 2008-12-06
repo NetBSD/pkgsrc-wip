@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/12/05 21:41:32 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2008/12/06 13:54:14 minskim Exp $
 #
 
 DISTNAME=	evas-0.9.9.050
@@ -34,7 +34,8 @@ CONFIGURE_ARGS+=	--disable-pthreads --disable-directfb \
 			--disable-valgrind --enable-glitz \
 			--enable-sdl --enable-image-loader-edb \
 			--enable-software-16-x11
-CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
+
+PLIST_SUBST=	MODULE_ARCH=${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${NATIVE_LOWER_ARCH}
 
 .include "../../devel/eet/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
