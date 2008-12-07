@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/07 01:20:39 minskim Exp $
+include/graphite/FreetypeFont.h
+lib/libgraphite-ft.la
+lib/pkgconfig/silgraphite-ft.pc
