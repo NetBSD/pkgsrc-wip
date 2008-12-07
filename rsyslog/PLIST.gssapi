@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.gssapi,v 1.1 2008/12/07 14:16:32 bartoszkuzma Exp $
+lib/rsyslog/imgssapi.la
+lib/rsyslog/lmgssutil.la
+lib/rsyslog/omgssapi.la

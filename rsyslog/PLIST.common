@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST.common,v 1.1 2008/12/07 14:16:32 bartoszkuzma Exp $
+man/man5/rsyslog.conf.5
+man/man8/rsyslogd.8
+sbin/rsyslogd
+share/examples/rc.d/rsyslogd
+share/examples/rsyslog/rsyslog.conf
+lib/rsyslog/imklog.la
+lib/rsyslog/immark.la
+lib/rsyslog/imtcp.la
+lib/rsyslog/imudp.la
+lib/rsyslog/imuxsock.la
+lib/rsyslog/lmnet.la
+lib/rsyslog/lmnetstrms.la
+lib/rsyslog/lmnsd_ptcp.la
+lib/rsyslog/lmregexp.la
+lib/rsyslog/lmtcpclt.la
+lib/rsyslog/lmtcpsrv.la
+lib/rsyslog/omtesting.la
