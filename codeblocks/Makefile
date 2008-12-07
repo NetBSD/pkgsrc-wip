@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2008/12/05 19:47:13 jsonn Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/07 15:18:12 thomasklausner Exp $
 #
 
 PKGVERSION=	8.02
 PKGREVISION=	1
 DISTNAME=	codeblocks-${PKGVERSION}-src
 PKGNAME=	codeblocks-${PKGVERSION}
-
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=codeblocks/}
 EXTRACT_SUFX=	.tar.bz2
 
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.codeblocks.org/
-COMMENT=	The open source, cross platform, free C++ IDE
+COMMENT=	Open source, cross platform, free C++ IDE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/codeblocks-8.02
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
