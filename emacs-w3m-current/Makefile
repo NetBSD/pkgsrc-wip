@@ -1,38 +1,32 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 02:15:36 makoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 2008/12/07 22:46:28 minskim Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
-PKGNAME=	emacs-w3m-1.4.50
 PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
-
-CATEGORIES=	editors
+CATEGORIES=	www
 MASTER_SITES=	#
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=	http://www.namazu.org/emacs-w3m
+HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Emacs frontend for w3m browser
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo gzip autoconf
+INFO_FILES=	yes
 
-#CONFLICTS+=
-
-BUILD_TARGET=
+DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
 
 CVS_REPOSITORIES=	emacs-w3m
 CVS_ROOT.emacs-w3m=	:pserver:anonymous:@cvs.namazu.org:/storage/cvsroot
 
-
 GNU_CONFIGURE=		yes
-INFO_FILES=		yes
-#REPLACE_PERL=		lib-src/grep-changelog
-
-WRKSRC=		${WRKDIR}/emacs-w3m
-
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+BUILD_TARGET=
+WRKSRC=			${WRKDIR}/emacs-w3m
+
+#REPLACE_PERL=		lib-src/grep-changelog
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
