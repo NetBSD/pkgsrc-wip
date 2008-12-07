@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/04/09 09:29:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.27 2008/12/07 22:27:59 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dictd/dict-server/}
-PKGREVISION=	2
 CATEGORIES=	textproc
 COMMENT=	Dictionary Service Protocol server
 
