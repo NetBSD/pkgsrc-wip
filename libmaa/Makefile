@@ -1,33 +1,31 @@
-# $NetBSD: Makefile,v 1.13 2008/04/09 09:18:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2008/12/07 16:14:58 cheusov Exp $
 
-.include "../../wip/dict-server/Makefile.common"
+DISTNAME=		libmaa-1.1.0
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dict/} \
+                        ftp://ftp.dict.org/pub/dict/
 
-PKGNAME=	libmaa-1.0.1
-PKGREVISION=	1
-CATEGORIES=	devel
-COMMENT=	Provides a few data structures and helpful functions
+MAINTAINER=		cheusov@tut.by
+HOMEPAGE=		http://www.dict.org/
+COMMENT=		General purpose data structures and functions
 
-CONFIGURE_DIRS=		libmaa
-BUILD_DIRS=		libmaa
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		lib
+TEST_TARGET=		test
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
-PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+PKGDOCDIR=		${PREFIX}/share/doc/libmaa
 INSTALLATION_DIRS+=	${PKGDOCDIR} lib include
 
 EXTRA_DOC_FILES=	COPYING.LIB README doc/libmaa.600dpi.ps
 
 post-install:
-	set -e; \
-	for i in ${EXTRA_DOC_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/libmaa/"$${i}" ${DESTDIR}${PKGDOCDIR}; \
-	done
-
-PATCHDIR=	${.CURDIR}/../../wip/dict-server/patches
-DISTINFO_FILE=	${.CURDIR}/../../wip/dict-server/distinfo
+.for i in ${EXTRA_DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
