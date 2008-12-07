@@ -1,5 +1,0 @@
-MyServer is a powerful web server designed, to be easily run on a personal
-computer by the average computer user. It is based on multi-threaded
-architecture, which makes it extremely scalable and usable in large scale
-sites, as well as in small networks. It supports HTTP, HTTPS, CGI, ISAPI,
-WinCGI and FastCGI protocols.
