@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/24 08:10:14 minskim Exp $
+$NetBSD: distinfo,v 1.2 2008/12/07 01:08:47 minskim Exp $
 
 SHA1 (silgraphite-2.3.tar.gz) = f3f7ed75fd16197bae41953ffb8c13d53ffae773
 RMD160 (silgraphite-2.3.tar.gz) = 0a8ca776793c0835799387ea6ab11a5ea7d72e2f
 Size (silgraphite-2.3.tar.gz) = 3394463 bytes
-SHA1 (patch-aa) = d367d4bcd5f19c80b566d5a8a0b75b68458ee0de
-SHA1 (patch-ab) = 1785d58ab5e5755b6f4711362cc18a731f55c3fb
-SHA1 (patch-ac) = 2b93865c5f87bf55e435b74bdf9fb2d3f6a6b7ac
-SHA1 (patch-ad) = 6c2c3b811af6375685b11c163fd4fd34a6baee89
-SHA1 (patch-ae) = 425b454025011eacf22ef4d7e9d799ac5027c64a

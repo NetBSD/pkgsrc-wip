@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/24 08:10:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/07 01:08:47 minskim Exp $
 include/graphite/FileFont.h
 include/graphite/Font.h
-include/graphite/FreetypeFont.h
 include/graphite/GrAppData.h
 include/graphite/GrClient.h
 include/graphite/GrCommon.h
@@ -24,7 +23,6 @@ include/graphite/MemoryUsage.h
 include/graphite/Segment.h
 include/graphite/SegmentAux.h
 include/graphite/SegmentPainter.h
-lib/libgraphite-ft.la
 lib/libgraphite.la
 lib/pkgconfig/silgraphite.pc
 @dirrm include/graphite

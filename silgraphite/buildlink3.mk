@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/24 08:10:14 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/07 01:08:47 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SILGRAPHITE_BUILDLINK3_MK:=	${SILGRAPHITE_BUILDLINK3_MK}+
@@ -15,7 +15,5 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}silgraphite
 BUILDLINK_API_DEPENDS.silgraphite+=	silgraphite>=2.3
 BUILDLINK_PKGSRCDIR.silgraphite?=	../../wip/silgraphite
 .endif	# SILGRAPHITE_BUILDLINK3_MK
-
-.include "../../graphics/freetype2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
