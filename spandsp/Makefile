@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/05 15:20:25 x400 Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2008/12/08 22:13:25 x400 Exp $
 
 DISTNAME=	spandsp-0.0.5pre3
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ WRKSRC=		${WRKDIR}/spandsp-0.0.5
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran
-USE_TOOLS+=	automake gmake
+USE_TOOLS+=	gmake
 
 .include "options.mk"
 
