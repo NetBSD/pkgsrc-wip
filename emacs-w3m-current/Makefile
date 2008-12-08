@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/08 07:58:52 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/08 08:00:43 minskim Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -26,6 +26,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 BUILD_TARGET=
 WRKSRC=			${WRKDIR}/emacs-w3m
+
+INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
+			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 #REPLACE_PERL=		lib-src/grep-changelog
 
