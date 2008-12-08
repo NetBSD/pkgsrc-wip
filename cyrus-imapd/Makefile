@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/10/21 00:29:00 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/12/08 00:59:30 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.13
 CATEGORIES=	mail
@@ -161,6 +161,7 @@ PERL5_PACKLIST= \
 	auto/Cyrus/SIEVE/managesieve/.packlist
 
 .include "../../lang/perl5/module.mk"
+BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
