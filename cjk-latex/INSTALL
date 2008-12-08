@@ -1,8 +1,5 @@
 #!/bin/sh
-# $NetBSD: INSTALL,v 1.3 2006/02/27 18:08:47 rxg Exp $
-
-PKGNAME=$1
-STAGE=$2
+# $NetBSD: INSTALL,v 1.4 2008/12/08 17:34:09 tnn2 Exp $
 
 TEXMFCNF=@TEXMFDIRS@/web2c/texmf.cnf
 
