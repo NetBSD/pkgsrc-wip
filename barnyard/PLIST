@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/23 14:18:09 adrian_p Exp $
-bin/barnyard
-share/doc/barnyard/FAQ
-share/doc/barnyard/USAGE
-share/examples/barnyard/barnyard.conf
-@dirrm share/doc/barnyard
-@dirrm share/examples/barnyard
