@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/07 22:46:28 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/08 07:58:52 minskim Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
+PKGNAME=	emacs-w3m-1.4.50
 PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
 CATEGORIES=	www
 MASTER_SITES=	#
