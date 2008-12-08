@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/01 14:46:44 asau Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/08 23:19:09 adrian_p Exp $
 
 DISTNAME=	barnyard-0.2.0
 CATEGORIES=	net
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		YES
 
 PKG_SYSCONFSUBDIR=	snort
+
+LIBS.SunOS+=	-lresolv
 
 CONF_FILES=	${EGDIR}/barnyard.conf ${PKG_SYSCONFDIR}/barnyard.conf
 
