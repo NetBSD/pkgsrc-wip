@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/08 17:06:46 tnn2 Exp $
 #
 
 DISTNAME=		adms-2.2.8
@@ -13,7 +13,7 @@ COMMENT=		Verilog to C code compiler
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake bison flex autoconf
+USE_TOOLS+=		gmake bison flex autoconf automake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++ fortran
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c c++ fortran
 #LDFLAGS+= ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoreconf -f
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
