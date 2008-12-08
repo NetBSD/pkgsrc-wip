@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/04 23:01:33 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/08 16:28:28 absd Exp $
 #
 
 DISTNAME=	xcb-proto-1.2
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		XMLLLINT=${BUILDLINK_PREFIX.libxml}/bin/xmllint
 PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	21 23 24
+PYTHON_VERSIONS_ACCEPTED= 	25
 
 .include "../../lang/python/extension.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build
