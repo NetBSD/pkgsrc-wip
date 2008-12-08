@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/11/18 08:02:34 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/08 07:58:15 tonnerre Exp $
 #
 
 DISTNAME=	dillo-2.0
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	christtrekker@users.sourceforge.net
@@ -19,5 +20,6 @@ REPLACE.perl.old=	/usr/bin/perl
 REPLACE.perl.new=	${TOOLS_PATH.perl}
 REPLACE_FILES.perl=	dpid/dpidc
 
+.include "options.mk"
 .include "../../x11/fltk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
