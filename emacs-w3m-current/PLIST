@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/01 02:44:10 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/12/08 08:03:27 minskim Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 share/emacs/site-lisp/w3m/ChangeLog
@@ -152,8 +152,8 @@ share/emacs/site-lisp/w3m/sb-n24-de.el
 share/emacs/site-lisp/w3m/sb-n24-de.elc
 share/emacs/site-lisp/w3m/sb-namazu.el
 share/emacs/site-lisp/w3m/sb-namazu.elc
-share/emacs/site-lisp/w3m/sb-${LOWER_OPSYS}.el
-share/emacs/site-lisp/w3m/sb-${LOWER_OPSYS}.elc
+share/emacs/site-lisp/w3m/sb-netbsd.el
+share/emacs/site-lisp/w3m/sb-netbsd.elc
 share/emacs/site-lisp/w3m/sb-nikkansports.el
 share/emacs/site-lisp/w3m/sb-nikkansports.elc
 share/emacs/site-lisp/w3m/sb-nikkei.el
