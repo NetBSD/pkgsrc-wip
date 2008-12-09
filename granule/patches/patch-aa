@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/12/09 21:42:36 bartoszkuzma Exp $
+
+--- configure.orig	2008-09-01 15:59:59.000000000 +0200
++++ configure
+@@ -20383,7 +20383,7 @@ else
+   with_debug=no
+ fi;
+ 
+-if test "x$with_debug" == "xyes" ; then
++if test "x$with_debug" = "xyes" ; then
+ 	CPPFLAGS="$CPPFLAGS -ggdb -O0 -Wall"
+ else
+     CPPFLAGS="$CPPFLAGS -O2 -Wall"

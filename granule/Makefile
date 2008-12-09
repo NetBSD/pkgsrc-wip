@@ -1,31 +1,25 @@
-# $NetBSD: Makefile,v 1.8 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/09 21:42:35 bartoszkuzma Exp $
 #
 
-DISTNAME=		granule-1.2.4-1
-PKGNAME=		${DISTNAME:S/-1$//}
-PKGREVISION=		1
+DISTNAME=		granule-1.4.0-7
+PKGNAME=		${DISTNAME:S/-7$//}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=granule/}
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://granule.sourceforge.net/
 COMMENT=		Program for Leitner methodology for learning new words
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		xdg-1.1
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoconf autoheader automake
-USE_TOOLS+=		intltool msgfmt perl pkg-config xgettext
+
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config xgettext
 
 GNU_CONFIGURE=		yes
-
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
-pre-configure:
-	cd ${WRKSRC}; aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

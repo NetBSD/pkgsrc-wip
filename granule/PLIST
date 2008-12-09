@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/21 13:38:43 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/09 21:42:35 bartoszkuzma Exp $
 bin/granule
 share/applications/granule.desktop
-share/granule/granule
 share/granule/pixmaps/cardview_32x32.png
 share/granule/pixmaps/copy_deck.png
 share/granule/pixmaps/deckplayer_32x32.png
@@ -37,18 +36,32 @@ share/granule/pixmaps/text_small.png
 share/granule/pixmaps/text_subscript.png
 share/granule/pixmaps/text_superscript.png
 share/granule/pixmaps/text_underlined.png
-share/granule/pixmaps/thumbdown.png
-share/granule/pixmaps/thumbup.png
 share/granule/xml/cardfile.dtd
 share/granule/xml/granule.dtd
+share/granule/granule-hildon.conf
+share/granule/granule-linux.conf
+share/granule/granule-pda.conf
+share/granule/pixmaps/flip-card_72x72.png
+share/granule/pixmaps/next-card_72x72.png
+share/granule/pixmaps/scroll-down_72x72.png
+share/granule/pixmaps/scroll-up_72x72.png
+share/granule/pixmaps/speaker_72x72.png
+share/granule/pixmaps/thumb-0-down.png
+share/granule/pixmaps/thumb-0-down_72x72.png
+share/granule/pixmaps/thumb-1-bad-partial.png
+share/granule/pixmaps/thumb-2-bad-recall.png
+share/granule/pixmaps/thumb-3-difficult.png
+share/granule/pixmaps/thumb-4-hesitant.png
+share/granule/pixmaps/thumb-4-hesitant_72x72.png
+share/granule/pixmaps/thumb-5-up.png
+share/pixmaps/granule.png
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/granule.mo
-share/pixmaps/granule.png
+@comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/granule/xml
 @dirrm share/granule/pixmaps
 @dirrm share/granule
-@comment in xdg-dirs: @dirrm share/applications
