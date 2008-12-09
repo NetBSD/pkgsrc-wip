@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3142 2008/12/09 12:30:43 yhardy Exp $
+# $Id: Makefile,v 1.3143 2008/12/09 13:16:12 yhardy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -412,6 +412,7 @@ SUBDIR+=	freej
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
 SUBDIR+=	fricas
+SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
 SUBDIR+=	ftpd-tls
