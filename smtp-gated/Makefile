@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2007/03/06 13:06:42 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/09 22:01:34 bartoszkuzma Exp $
 #
 
-DISTNAME=		smtp-gated-1.4.15.1
-PKGNAME=		${DISTNAME:S/-rc/rc/}
+DISTNAME=		smtp-gated-1.4.16
+# PKGNAME=		${DISTNAME:S/-rc/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		http://smtp-proxy.klolik.org/files/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://smtp-proxy.klolik.org/
 COMMENT=		Proxy for SMTP sessions with virus and spam scan
 
