@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/10/09 17:56:00 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.4 2008/12/09 21:40:00 bartoszkuzma Exp $
 
-SHA1 (libassa-3.4.2.tar.gz) = 284771f90493eccbb77a549716e9ba67f422157a
-RMD160 (libassa-3.4.2.tar.gz) = 7f3424e1a63a979d0b60f66c716eeca98af7f3a9
-Size (libassa-3.4.2.tar.gz) = 594145 bytes
-SHA1 (patch-aa) = b241cfd4c983229c30b3e603907b62259f3576a7
+SHA1 (libassa-3.5.0.tar.gz) = b3813fa952dec3ece621606a919035f308798a7a
+RMD160 (libassa-3.5.0.tar.gz) = 4919157cdf3fd75c42aed571328c0033867aa5eb
+Size (libassa-3.5.0.tar.gz) = 586237 bytes
