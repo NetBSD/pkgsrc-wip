@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3141 2008/12/09 01:58:51 minskim Exp $
+# $Id: Makefile,v 1.3142 2008/12/09 12:30:43 yhardy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -703,6 +703,7 @@ SUBDIR+=	iTextXML
 #SUBDIR+=	icc
 #SUBDIR+=	icc8
 SUBDIR+=	icecast
+SUBDIR+=	icecat
 SUBDIR+=	ices
 SUBDIR+=	ices-vorbis
 SUBDIR+=	icmpchat
