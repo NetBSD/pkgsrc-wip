@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/07 01:20:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/09 01:58:51 minskim Exp $
 
 DISTNAME=	silgraphite-2.3
 PKGNAME=	${DISTNAME:S/silgraphite/silgraphite-ft/}
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/wrappers/freetype
 PKGCONFIG_OVERRIDE+=	silgraphite-ft.pc
 
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../wip/silgraphite/buildlink3.mk"
+.include "../../graphics/silgraphite/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/silgraphite-ft.pc ${PREFIX}/lib/pkgconfig

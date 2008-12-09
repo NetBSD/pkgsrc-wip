@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/24 22:12:45 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/09 01:58:51 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
@@ -72,7 +72,7 @@ FILES_SUBST+=	KPSEWHICH=${BUILDLINK_PREFIX.kpathsea}/bin/kpsewhich \
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/silgraphite/buildlink3.mk"
+.include "../../graphics/silgraphite/buildlink3.mk"
 .include "../../wip/kpathsea/buildlink3.mk"
 
 post-install:

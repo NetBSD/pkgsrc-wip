@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/07 01:23:29 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/09 01:58:51 minskim Exp $
 
 DISTNAME=	silgraphite-2.3
 PKGNAME=	${DISTNAME:S/silgraphite/silgraphite-xft/}
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${DISTNAME}/wrappers/xft
 
-.include "../../wip/silgraphite/buildlink3.mk"
+.include "../../graphics/silgraphite/buildlink3.mk"
 .include "../../wip/silgraphite-ft/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 
