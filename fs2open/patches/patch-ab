@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/09 13:10:55 yhardy Exp $
+
+--- code/windows_stub/config.h.orig	2008-10-27 11:51:23.000000000 +0200
++++ code/windows_stub/config.h	2008-10-27 11:55:53.000000000 +0200
+@@ -301,7 +301,7 @@
+ typedef SDL_mutex* CRITICAL_SECTION;
+ 
+ // timer stuff
+-typedef timeval TIMEVAL;
++typedef struct timeval TIMEVAL;
+ bool QueryPerformanceCounter(LARGE_INTEGER *pcount);
+ 
+ // file related items

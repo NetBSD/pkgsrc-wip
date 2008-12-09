@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/09 13:10:55 yhardy Exp $
+
+--- configure.orig	2008-10-27 11:41:42.000000000 +0200
++++ configure	2008-10-27 11:43:47.000000000 +0200
+@@ -3653,6 +3653,21 @@
+ 		fs2_os_osx="yes"
+ 		D_LDFLAGS="$D_LDFLAGS -lobjc -fPIC -Wl,-noprebind"
+ 		;;
++	*-*-dragonfly*)
++		# dragonfly bsd
++		echo "Using Unix defines (for $host_os)"
++		fs2_os_unix="yes"
++		;;
++	*-*-freebsd*)
++		# freebsd
++		echo "Using Unix defines (for $host_os)"
++		fs2_os_unix="yes"
++		;;
++	*-*-netbsd*)
++		# netbsd
++		echo "Using Unix defines (for $host_os)"
++		fs2_os_unix="yes"
++		;;
+ 	*)
+ 		# Unknown
+ 		echo "fs2_open does not support $host_cpu-$host_os"
