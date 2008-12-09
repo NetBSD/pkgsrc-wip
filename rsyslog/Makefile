@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/12/07 14:16:32 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.14 2008/12/09 18:04:29 bartoszkuzma Exp $
 #
 
 DISTNAME=		rsyslog-3.21.9
@@ -18,6 +18,8 @@ SUBST_SED.paths=	-e "s|/etc/rsyslog.conf|${PKG_SYSCONFDIR}/rsyslog.conf|g"
 SUBST_SED.paths+=	-e "s|/etc/rsyslogd.conf|${PKG_SYSCONFDIR}/rsyslog.conf|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
+DOCDIR=			${PREFIX}/share/doc/rsyslog
+
 EGDIR=			${PREFIX}/share/examples/rsyslog
 CONF_FILES=		${EGDIR}/rsyslog.conf ${PKG_SYSCONFDIR}/rsyslog.conf
 RCD_SCRIPTS=		rsyslogd
@@ -29,6 +31,8 @@ PLIST_SRC=		PLIST.common
 PLIST_SRC+=		PLIST.common_end
 
 post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}/doc && pax -rw *.html ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rsyslog.conf ${EGDIR}/rsyslog.conf
 .	if !empty(PKG_OPTIONS:Mmysql)
