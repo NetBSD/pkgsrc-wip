@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3144 2008/12/09 14:27:26 tnn2 Exp $
+# $Id: Makefile,v 1.3145 2008/12/10 12:31:16 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1479,7 +1479,6 @@ SUBDIR+=	pulseaudio-dev
 SUBDIR+=	pxlib
 SUBDIR+=	pxview
 SUBDIR+=	py-Beaker
-SUBDIR+=	py-BeautifulSoup
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CVSToys
 SUBDIR+=	py-DirectoryStorage
