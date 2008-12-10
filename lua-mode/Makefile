@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/10 14:39:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/10 20:07:57 cheusov Exp $
 #
 
 DISTNAME=	lua-mode-20071122
@@ -29,5 +29,6 @@ do-install:
 	${INSTALL_DATA} lua-mode.el lua-mode.elc \
 		${DESTDIR}${EMACS_LISPPREFIX}/
 
-.include "../../editors/emacs/modules.mk"
+#.include "../../editors/emacs/modules.mk"
+.include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
