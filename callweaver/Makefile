@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/05 15:39:43 x400 Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2008/12/10 00:31:53 x400 Exp $
 
 DISTNAME=	callweaver-1.2.0.1
 CATEGORIES=	comms
@@ -63,45 +63,62 @@ RCD_SCRIPTS=		callweaver
 
 OWN_DIRS+=		${CWLOGDIR} ${CWSPOOLDIR} ${CWVARDIR}
 
-CONF_FILES=
-CONF_FILES+=		${CWCONFDIR}/adsi.conf \
-			${CWCONFDIR}/adtranvofr.conf \
-			${CWCONFDIR}/agents.conf \
-			${CWCONFDIR}/callweaver.adsi \
-			${CWCONFDIR}/callweaver.conf \
-			${CWCONFDIR}/cdr.conf \
-			${CWCONFDIR}/cdr_custom.conf \
-			${CWCONFDIR}/cdr_manager.conf \
-			${CWCONFDIR}/cdr_tds.conf \
-			${CWCONFDIR}/codecs.conf \
-			${CWCONFDIR}/db-memcached.conf \
-			${CWCONFDIR}/dnsmgr.conf \
-			${CWCONFDIR}/dundi.conf \
-			${CWCONFDIR}/enum.conf \
-			${CWCONFDIR}/extconfig.conf \
-			${CWCONFDIR}/extensions.ael \
-			${CWCONFDIR}/extensions.conf \
-			${CWCONFDIR}/features.conf \
-			${CWCONFDIR}/iax.conf \
-			${CWCONFDIR}/indications.conf \
-			${CWCONFDIR}/logger.conf \
-			${CWCONFDIR}/manager.conf \
-			${CWCONFDIR}/meetme.conf \
-			${CWCONFDIR}/mgcp.conf \
-			${CWCONFDIR}/modem.conf \
-			${CWCONFDIR}/modules.conf \
-			${CWCONFDIR}/musiconhold.conf \
-			${CWCONFDIR}/muted.conf \
-			${CWCONFDIR}/osp.conf \
-			${CWCONFDIR}/privacy.conf \
-			${CWCONFDIR}/queues.conf \
-			${CWCONFDIR}/res_snmp.conf \
-			${CWCONFDIR}/rtp.conf \
-			${CWCONFDIR}/sip.conf \
-			${CWCONFDIR}/sip_notify.conf \
-			${CWCONFDIR}/udptl.conf \
-			${CWCONFDIR}/voicemail.conf \
-			${CWCONFDIR}/woomera.conf
+EGDIR=			${PREFIX}/share/examples/callweaver
+
+.for f in adsi.conf \
+	adtranvofr.conf \
+	agents.conf \
+	callweaver.adsi \
+	callweaver.conf \
+	cdr.conf \
+	cdr_custom.conf \
+	cdr_manager.conf \
+	cdr_tds.conf \
+	codecs.conf \
+	db-memcached.conf \
+	dnsmgr.conf \
+	dundi.conf \
+	enum.conf \
+	extconfig.conf \
+	extensions.ael \
+	extensions.conf \
+	features.conf \
+	iax.conf \
+	indications.conf \
+	logger.conf \
+	manager.conf \
+	meetme.conf \
+	mgcp.conf \
+	modem.conf \
+	modules.conf \
+	musiconhold.conf \
+	muted.conf \
+	osp.conf \
+	privacy.conf \
+	queues.conf \
+	res_snmp.conf \
+	rtp.conf \
+	sip.conf \
+	sip_notify.conf \
+	udptl.conf \
+	voicemail.conf \
+	woomera.conf
+CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+.endfor
+
+.if !empty(PKG_OPTIONS:Mmysql)
+.for f in cdr_mysql.conf \
+	res_mysql.conf
+CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+.endfor
+.endif
+
+.if !empty(PKG_OPTIONS:Mpgsql)
+.for f in cdr_pgsql.conf \
+	res_pgsql.conf
+CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+.endfor
+.endif
 
 PKGCONFIG_OVERRIDE+=    sqlite3-embedded/sqlite3.pc.in
 PKGCONFIG_OVERRIDE+=    sqlite3-embedded/sqlite.pc.in

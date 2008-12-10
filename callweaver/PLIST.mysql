@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mysql,v 1.1.1.1 2008/12/05 15:39:43 x400 Exp $
+@comment $NetBSD: PLIST.mysql,v 1.1.1.2 2008/12/10 00:31:53 x400 Exp $
 bin/callweaver
 bin/streamplayer
 include/callweaver/acl.h
@@ -219,7 +219,48 @@ share/callweaver/ogi/ogi-test.ogi
 share/doc/callweaver/CREDITS
 share/doc/callweaver/LICENSE
 share/doc/callweaver/README
+share/examples/callweaver/adsi.conf
+share/examples/callweaver/adtranvofr.conf
+share/examples/callweaver/agents.conf
+share/examples/callweaver/callweaver.adsi
+share/examples/callweaver/callweaver.conf
+share/examples/callweaver/cdr.conf
+share/examples/callweaver/cdr_custom.conf
+share/examples/callweaver/cdr_manager.conf
+share/examples/callweaver/cdr_mysql.conf
+share/examples/callweaver/cdr_tds.conf
+share/examples/callweaver/codecs.conf
+share/examples/callweaver/db-memcached.conf
+share/examples/callweaver/dnsmgr.conf
+share/examples/callweaver/dundi.conf
+share/examples/callweaver/enum.conf
+share/examples/callweaver/extconfig.conf
+share/examples/callweaver/extensions.ael
+share/examples/callweaver/extensions.conf
+share/examples/callweaver/features.conf
+share/examples/callweaver/iax.conf
+share/examples/callweaver/indications.conf
+share/examples/callweaver/logger.conf
+share/examples/callweaver/manager.conf
+share/examples/callweaver/meetme.conf
+share/examples/callweaver/mgcp.conf
+share/examples/callweaver/modem.conf
+share/examples/callweaver/modules.conf
+share/examples/callweaver/musiconhold.conf
+share/examples/callweaver/muted.conf
+share/examples/callweaver/osp.conf
+share/examples/callweaver/privacy.conf
+share/examples/callweaver/queues.conf
+share/examples/callweaver/res_mysql.conf
+share/examples/callweaver/res_snmp.conf
+share/examples/callweaver/rtp.conf
+share/examples/callweaver/sip.conf
+share/examples/callweaver/sip_notify.conf
+share/examples/callweaver/udptl.conf
+share/examples/callweaver/voicemail.conf
+share/examples/callweaver/woomera.conf
 share/examples/rc.d/callweaver
+@dirrm share/examples/callweaver
 @dirrm share/doc/callweaver
 @dirrm share/callweaver/ogi
 @exec ${MKDIR} %D/share/callweaver/moh
