@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/12/11 18:59:25 x400 Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+SPANDSP_BUILDLINK3_MK:=	${SPANDSP_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	spandsp
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nspandsp}
+BUILDLINK_PACKAGES+=	spandsp
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}spandsp
+
+.if ${SPANDSP_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.spandsp+=	spandsp>=0.0.6pre2
+BUILDLINK_PKGSRCDIR.spandsp?=	../../wip/spandsp-current
+.endif	# SPANDSP_BUILDLINK3_MK
+
+.include "../../graphics/tiff/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
