@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/21 08:50:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/11 01:10:39 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	texlive-tetex-2008
@@ -18,7 +18,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texk
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/tetex
 
-TEXMFDIRS=	share/texmf
+TEXMFDIRS=	${TEXMFMAIN}
 
 .include "../../wip/kpathsea/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

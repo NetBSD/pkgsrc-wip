@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/24 08:58:36 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/11 01:10:39 minskim Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -26,7 +26,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 NO_BUILD=		yes
 USE_TOOLS+=		pax
 
-TEXMFDIRS=	share/texmf share/texmf-dist
+TEXMFDIRS=	${TEXMFMAIN} ${TEXMFDIST}
 
 .include "../../wip/kpathsea/buildlink3.mk"
 

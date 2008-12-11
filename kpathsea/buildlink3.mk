@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/11/23 21:45:33 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/12/11 01:10:39 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KPATHSEA_BUILDLINK3_MK:=	${KPATHSEA_BUILDLINK3_MK}+
@@ -15,12 +15,13 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kpathsea
 BUILDLINK_API_DEPENDS.kpathsea+=	kpathsea>=3.5.7
 BUILDLINK_PKGSRCDIR.kpathsea?=	../../wip/kpathsea
 
+TEXMFMAIN=	${BUILDLINK_PREFIX.kpathsea}/share/texmf
+TEXMFDIST=	${BUILDLINK_PREFIX.kpathsea}/share/texmf-dist
+TEXMFDOC=	${BUILDLINK_PREFIX.kpathsea}/share/doc/texmf
+TEXMFSYSCONFIG=	${PKG_SYSCONFBASE}/texmf
+
 .  if !empty(TEXMFDIRS)
-_TEXMFDIRS=	# empty
-.    for _texmfdir_ in ${TEXMFDIRS}
-_TEXMFDIRS+=	${PREFIX}/${_texmfdir_}
-.    endfor
-FILES_SUBST+=		TEXMFDIRS=${_TEXMFDIRS:Q}
+FILES_SUBST+=		TEXMFDIRS=${TEXMFDIRS:Q}
 FILES_SUBST+=		MKTEXLSR="${BUILDLINK_PREFIX.kpathsea}/bin/mktexlsr"
 INSTALL_TEMPLATES+=	../../wip/kpathsea/files/texmf-install.tmpl
 DEINSTALL_TEMPLATES+=	../../wip/kpathsea/files/texmf-deinstall.tmpl
