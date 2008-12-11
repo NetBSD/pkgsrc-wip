@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/23 21:45:33 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/11 06:04:28 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -12,7 +12,12 @@ COMMENT=	Library to do path searching
 
 CONFLICTS+=	teTeX-bin-[0-9]*
 
-EXTRACT_ELEMENTS=	${DISTNAME}/texk
+EXTRACT_ELEMENTS=	${DISTNAME}/texk/kpathsea \
+			${DISTNAME}/texk/make \
+			${DISTNAME}/texk/config.guess \
+			${DISTNAME}/texk/config.sub \
+			${DISTNAME}/texk/install.sh \
+			${DISTNAME}/texk/mkinstalldirs
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
