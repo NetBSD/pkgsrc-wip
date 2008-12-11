@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/11/23 21:10:19 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2008/12/11 06:06:50 minskim Exp $
 
 --- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
 +++ texmf.cnf
@@ -43,3 +43,12 @@ $NetBSD: patch-aa,v 1.3 2008/11/23 21:10:19 minskim Exp $
  
  % User texmf trees are allowed as follows.
  % This used to be HOMETEXMF.
+@@ -447,7 +447,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+ % 
+ % For security reasons, it is better not to include . in this path.
+ %
+-TEXMFCNF = {$SELFAUTOLOC,$SELFAUTODIR,$SELFAUTOPARENT}{,{/share,}/texmf{-local,}/web2c}
++TEXMFCNF = @PKG_SYSCONFDIR@
+ 
+ # kpathsea 3.5.3 and later sets these at runtime. To avoid empty
+ # expansions from binaries linked against an earlier version of the
