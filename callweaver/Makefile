@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2008/12/10 00:31:53 x400 Exp $
+# $NetBSD: Makefile,v 1.1.1.3 2008/12/11 08:27:29 x400 Exp $
 
 DISTNAME=	callweaver-1.2.0.1
 CATEGORIES=	comms
@@ -37,6 +37,8 @@ CWSPOOLDIR?=		${VARBASE}/spool/callweaver
 CWMANDIR?=		${PREFIX}/man
 CWDOCDIR?=		${PREFIX}/share/doc/callweaver
 
+CWCONFEXAMPLESDIR?=	${PREFIX}/share/examples/callweaver
+
 SUBST_CLASSES+=         callweaver
 SUBST_STAGE.callweaver=	pre-configure
 SUBST_FILES.callweaver=	layout.bsd
@@ -62,8 +64,6 @@ CONFIGURE_ARGS+= 	--with-app_backticks --with-app_dtmftotext --with-app_page --w
 RCD_SCRIPTS=		callweaver
 
 OWN_DIRS+=		${CWLOGDIR} ${CWSPOOLDIR} ${CWVARDIR}
-
-EGDIR=			${PREFIX}/share/examples/callweaver
 
 .for f in adsi.conf \
 	adtranvofr.conf \
@@ -103,20 +103,20 @@ EGDIR=			${PREFIX}/share/examples/callweaver
 	udptl.conf \
 	voicemail.conf \
 	woomera.conf
-CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
 .endfor
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .for f in cdr_mysql.conf \
 	res_mysql.conf
-CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
 .endfor
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .for f in cdr_pgsql.conf \
 	res_pgsql.conf
-CONF_FILES+=		${EGDIR}/${f} ${CWCONFDIR}/${f}
+CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
 .endfor
 .endif
 
