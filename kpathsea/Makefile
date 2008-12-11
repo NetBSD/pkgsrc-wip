@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/11 06:06:50 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/11 06:08:01 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -18,6 +18,8 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texk/kpathsea \
 			${DISTNAME}/texk/config.sub \
 			${DISTNAME}/texk/install.sh \
 			${DISTNAME}/texk/mkinstalldirs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
@@ -45,5 +47,9 @@ CONF_FILES=	${PREFIX}/share/texmf/web2c/texmf.cnf \
 
 OWN_DIRS+=		${TEXMFLOCAL} ${VARBASE}/lib/texmf
 INSTALLATION_DIRS+=	share/doc/texmf share/texmf-dist
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
