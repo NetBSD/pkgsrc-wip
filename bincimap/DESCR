@@ -1,4 +1,0 @@
-Binc IMAP is a well designed, modular IMAP server for Maildir. Its goals
-are to be secure, stable, and fast, yet flexible and easy to maintain.
-Binc IMAP 1.2 is a Maildir only IMAP server (no traditional mbox support).
-It needs to be started from inetd.
