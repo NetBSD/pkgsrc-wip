@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/12/11 01:10:39 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2008/12/12 05:15:22 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KPATHSEA_BUILDLINK3_MK:=	${KPATHSEA_BUILDLINK3_MK}+
@@ -14,6 +14,8 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kpathsea
 .if ${KPATHSEA_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kpathsea+=	kpathsea>=3.5.7
 BUILDLINK_PKGSRCDIR.kpathsea?=	../../wip/kpathsea
+
+BUILDLINK_FILES.kpathsea+=	bin/kpsewhich
 
 TEXMFMAIN=	${BUILDLINK_PREFIX.kpathsea}/share/texmf
 TEXMFDIST=	${BUILDLINK_PREFIX.kpathsea}/share/texmf-dist
