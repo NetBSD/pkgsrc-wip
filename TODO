@@ -3,7 +3,8 @@ Suggested package updates
 
 	o amarok-1.92.2
 	o argouml-0.24
-	o bakery-2.6.0
+	o backintime-0.8.16
+	o bakery-2.6.1
 	o bub-n-bros-1.6
 	o ccrtp-1.6.2
 	o cdogs-0.4
@@ -33,8 +34,10 @@ Suggested package updates
 	o gnunet-0.8.0b
 	o grass-6.2.3
 	o grisbi-0.5.8
+	o grsync-0.6.2
 	o guichan-0.8.1
 	o guitone-0.9
+	o httrack-3.43
 	o hu-go-2.11
 	o icc-11.0
 	o kino-1.0.0
@@ -62,7 +65,7 @@ Suggested package updates
 	o pdnsd-1.2.7
 	o pike-7.6.112
 	o py-PyPE-2.8.8
-	o py-gdata-1.2.2
+	o py-gdata-1.2.3
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-2.0
