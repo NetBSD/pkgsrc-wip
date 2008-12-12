@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/11 01:10:39 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/12 02:48:16 minskim Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Essential texmf files of TeX Live
 
 CONFLICTS+=	tetex-texmf-[0-9]*
+DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 			${DISTNAME}/texmf-dist/fonts \
@@ -34,6 +35,9 @@ post-extract:
 .for texmf in texmf texmf-dist
 	rm -f ${WRKSRC}/${texmf}/ls-R
 .endfor
+	rm -rf ${WRKSRC}/texmf-dist/makeindex/plain
+	rm -rf ${WRKSRC}/texmf-dist/tex/plain/base
+	rm -rf ${WRKSRC}/texmf-dist/tex/plain/config
 	rm -f ${WRKSRC}/texmf/web2c/fmtutil.cnf
 	rm -f ${WRKSRC}/texmf/web2c/mktex.opt
 	rm -f ${WRKSRC}/texmf/web2c/mktexdir

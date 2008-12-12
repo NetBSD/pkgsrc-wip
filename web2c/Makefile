@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/09 01:58:51 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/12 02:48:16 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
@@ -10,6 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/kpathsea/
 COMMENT=	TeX implementation translating WEB to C
 
+DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
 DEPENDS+=	texlive-texmf-base-[0-9]*:../../wip/texlive-texmf-base
 
 EXTRACT_ELEMENTS=	${DISTNAME}/config \
