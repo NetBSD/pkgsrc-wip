@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3147 2008/12/12 12:55:17 bartoszkuzma Exp $
+# $Id: Makefile,v 1.3148 2008/12/13 06:59:33 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1684,7 +1684,6 @@ SUBDIR+=	shunt
 SUBDIR+=	sic
 SUBDIR+=	sid-milter
 SUBDIR+=	siege
-SUBDIR+=	silgraphite-ft
 SUBDIR+=	silgraphite-xft
 SUBDIR+=	silky
 SUBDIR+=	silvertree

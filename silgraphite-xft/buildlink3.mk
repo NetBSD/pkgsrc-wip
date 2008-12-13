@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/12/07 01:23:29 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/13 06:59:34 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SILGRAPHITE_XFT_BUILDLINK3_MK:=	${SILGRAPHITE_XFT_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_API_DEPENDS.silgraphite-xft+=	silgraphite-xft>=2.3
 BUILDLINK_PKGSRCDIR.silgraphite-xft?=	../../wip/silgraphite-xft
 .endif	# SILGRAPHITE_XFT_BUILDLINK3_MK
 
-.include "../../wip/silgraphite-ft/buildlink3.mk"
+.include "../../graphics/silgraphite-ft/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
