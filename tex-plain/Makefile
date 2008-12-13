@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/12 02:43:31 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/13 09:03:33 minskim Exp $
 # TeX Live Revision 9267
 
 DISTNAME=	plain
@@ -22,16 +22,15 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-TEXMFDIRS=	${TEXMFDIST}
 
-.include "../../wip/kpathsea/buildlink3.mk"
+.include "../../wip/kpathsea/texmf.mk"
 
 post-extract:
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${WRKSRC}/texmf* -type f -exec ${CHMOD} ${SHAREMODE} {} \;
 
 do-install:
-	cd ${WRKSRC}/texmf-dist && \
-		pax -rwpm * ${DESTDIR}${TEXMFDIST}
+	cd ${WRKSRC} && \
+		pax -rwpm -s ',.*\.orig$$,,' texmf* ${DESTDIR}${PREFIX}/share
 
 .include "../../mk/bsd.pkg.mk"
