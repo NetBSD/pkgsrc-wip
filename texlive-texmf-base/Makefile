@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/12 02:48:16 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/13 09:07:40 minskim Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Essential texmf files of TeX Live
 
 CONFLICTS+=	tetex-texmf-[0-9]*
+DEPENDS+=	tex-bin-tetex-[0-9]*:../../wip/tex-bin-tetex
 DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
@@ -27,9 +28,9 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 NO_BUILD=		yes
 USE_TOOLS+=		pax
 
-TEXMFDIRS=	${TEXMFMAIN} ${TEXMFDIST}
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
 
-.include "../../wip/kpathsea/buildlink3.mk"
+.include "../../wip/kpathsea/texmf.mk"
 
 post-extract:
 .for texmf in texmf texmf-dist
@@ -38,6 +39,9 @@ post-extract:
 	rm -rf ${WRKSRC}/texmf-dist/makeindex/plain
 	rm -rf ${WRKSRC}/texmf-dist/tex/plain/base
 	rm -rf ${WRKSRC}/texmf-dist/tex/plain/config
+	rm -rf ${WRKSRC}/texmf/fonts/enc/dvips/tetex
+	rm -rf ${WRKSRC}/texmf/fonts/map/dvipdfm/tetex
+	rm -rf ${WRKSRC}/texmf/fonts/map/dvips/tetex
 	rm -f ${WRKSRC}/texmf/web2c/fmtutil.cnf
 	rm -f ${WRKSRC}/texmf/web2c/mktex.opt
 	rm -f ${WRKSRC}/texmf/web2c/mktexdir
@@ -46,6 +50,7 @@ post-extract:
 	rm -f ${WRKSRC}/texmf/web2c/mktexnam.opt
 	rm -f ${WRKSRC}/texmf/web2c/mktexupd
 	rm -f ${WRKSRC}/texmf/web2c/texmf.cnf
+	rm -f ${WRKSRC}/texmf/web2c/updmap.cfg
 	${FIND} ${WRKSRC} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${WRKSRC} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 
