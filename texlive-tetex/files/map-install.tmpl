@@ -1,0 +1,19 @@
+# $NetBSD: map-install.tmpl,v 1.1 2008/12/13 09:14:59 minskim Exp $
+#
+# Enable font maps.
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	map_files="@MAP_FILES@"
+	for map in $map_files ; do
+		@UPDMAP_SYS@ --enable Map=${map}
+	done
+	mixedmap_files="@MIXEDMAP_FILES@"
+	for map in $mixedmap_files ; do
+		@UPDMAP_SYS@ --enable MixedMap=${map}
+	done
+        ;;
+*)
+	;;
+esac

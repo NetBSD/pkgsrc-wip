@@ -1,0 +1,19 @@
+# $NetBSD: map-deinstall.tmpl,v 1.1 2008/12/13 09:14:59 minskim Exp $
+#
+# Disable font maps.
+#
+
+case ${STAGE} in
+DEINSTALL)
+	map_files="@MAP_FILES@"
+	for map in $map_files ; do
+		@UPDMAP_SYS@ --disable ${map}
+	done
+	mixedmap_files="@MIXEDMAP_FILES@"
+	for map in $mixedmap_files ; do
+		@UPDMAP_SYS@ --disable ${map}
+	done
+        ;;
+*)
+	;;
+esac
