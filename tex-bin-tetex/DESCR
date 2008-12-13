@@ -1,0 +1,7 @@
+teTeX was a comprehensive distribution of TeX, LaTeX and
+family, particularly designed to be very easy to install and to
+customise. In 2006, Thomas Esser announced he would no longer
+be able to support, or to produce new versions of, teTeX. With
+the appearance of TeX-live 2007 (whose Unix-system TeX support
+originally derived from teTeX), no-one should be using teTeX at
+all, in new applications.
