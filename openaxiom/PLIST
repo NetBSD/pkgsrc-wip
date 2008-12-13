@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/11/15 09:26:44 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/12/13 23:54:12 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -37,6 +37,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ANY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ANY1.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/APPLYORE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/APPRULE.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ARITY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ARR2CAT-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ARR2CAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ARRAY1.${FASL}
@@ -466,6 +467,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HEUGCD.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HEXADEC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HOAGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HOAGG.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HOMOTOP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HOSTNAME.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HYPCAT-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/HYPCAT.${FASL}
@@ -585,7 +587,9 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KERNEL2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KOERCE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KONVERT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KOVACIC.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KRCFROM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KTVLOGIC.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/KVTFROM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/LA.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/LALG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/LALG.${FASL}
@@ -801,6 +805,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OMSERVER.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ONECOMP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ONECOMP2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OP.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPERCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPQUERY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPTCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPTPACK.${FASL}
