@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/10/20 09:01:33 tonnerre Exp $
+$NetBSD: patch-aa,v 1.4 2008/12/13 21:31:48 shattered Exp $
 
---- configure.orig	2008-06-20 11:07:14.000000000 +0200
+--- configure.orig	2008-06-20 09:07:14.000000000 +0000
 +++ configure
 @@ -1962,7 +1962,7 @@ _ACEOF
  
@@ -67,12 +67,21 @@ $NetBSD: patch-aa,v 1.3 2008/10/20 09:01:33 tonnerre Exp $
              PIC_FLAG="-dynamic -fPIC"
          fi
          if test "x$XLCC" = "xyes"; then
-@@ -50561,6 +50565,8 @@ do
- _ACEOF
- cat >>$CONFIG_STATUS <<\_ACEOF
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --vers* | -V )
-     echo "$ac_cs_version"; exit 0 ;;
+@@ -48280,7 +48284,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -48324,7 +48328,7 @@ echo "$as_me: error: unknown system type
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* )
++      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-dragonfly*)
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else

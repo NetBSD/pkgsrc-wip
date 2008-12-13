@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2008/10/20 09:01:33 tonnerre Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/12/13 21:31:48 shattered Exp $
 # used by wip/wxGTK-contrib-unicode/Makefile
 
 DISTNAME=		wxGTK-2.8.8
@@ -13,8 +13,10 @@ HOMEPAGE=		http://www.wxwidgets.org/
 PATCHDIR=		${.CURDIR}/../../wip/wxGTK-unicode/patches
 DISTINFO_FILE=		${.CURDIR}/../../wip/wxGTK-unicode/distinfo
 
-#PATCHFILES=		${DISTNAME}-libtool.diff2.bz2
-#PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		${DISTNAME}-libtool.diff.bz2
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
@@ -30,14 +32,14 @@ CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--enable-unicode
-CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 #PIST_SUBST+=		UNICODE=u
 #PLIST_SUBST+=		UNICODE=
 #PLIST_SUBST+=		BUILDTYPE=ansi
 
-CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
+#CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK-unicode
 
@@ -50,6 +52,7 @@ USE_TOOLS+=		gawk:pkgsrc
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
@@ -57,4 +60,3 @@ USE_TOOLS+=		gawk:pkgsrc
 .include "../../x11/libSM/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
-#include "../../mk/x11.buildlink3.mk"

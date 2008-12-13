@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.3 2008/10/20 09:01:33 tonnerre Exp $
+$NetBSD: distinfo,v 1.4 2008/12/13 21:31:48 shattered Exp $
 
+SHA1 (wxGTK-2.8.8-libtool.diff.bz2) = f09ae6cefe70dab7383e11b4ca0abd10b44baeac
+RMD160 (wxGTK-2.8.8-libtool.diff.bz2) = 34b3c3949adc47f2ce9293f91e0cb72543c7d7bb
+Size (wxGTK-2.8.8-libtool.diff.bz2) = 154447 bytes
 SHA1 (wxGTK-2.8.8.tar.bz2) = ba33ca7efad2847c538d3df524d31b8b4011ad8a
 RMD160 (wxGTK-2.8.8.tar.bz2) = 1dc3fab9e6f4d446bbc1c104aa69cf395c56b577
 Size (wxGTK-2.8.8.tar.bz2) = 9482521 bytes
-SHA1 (patch-aa) = 4ca9de0453b668c9b6156331a93099e161a2b5fa
+SHA1 (patch-aa) = 6bb597f4f1b89a27ee02664a19889a2d5cbac96a
+SHA1 (patch-ad) = a5291ecbb3990dfd41f0ee50201636252d0491bd
