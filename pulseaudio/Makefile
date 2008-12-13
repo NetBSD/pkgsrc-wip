@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/17 10:15:23 netcap Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/13 13:47:47 krub1 Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.5
@@ -23,7 +23,7 @@ CFLAGS+=	-Wall
 DL_AUTO_VARS=		yes
 PTHREAD_AUTO_VARS=	yes
 
-PULSE_CONFDIR=		${PREFOX}/share/examples
+PULSE_CONFDIR=		${PREFIX}/share/examples
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-hal
