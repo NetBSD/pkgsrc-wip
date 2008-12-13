@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2008/08/03 15:32:44 dillo Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/12/13 23:49:31 shattered Exp $
 #
 # used by wip/sdlmess/Makefile
 
 CATEGORIES=		emulators
-MASTER_SITES=		http://rbelmont.mameworld.info/
+MASTER_SITES=		http://rbelmont.mameworld.info/ \
+			http://dev.gentoo.org/~joker/sdlmame/distfiles/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dillo@NetBSD.org
