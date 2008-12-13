@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/13 21:31:48 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/13 23:50:44 shattered Exp $
 
 .include "Makefile.common"
 
@@ -7,6 +7,11 @@ COMMENT=		GTK-based unicode implementation of the wxWidgets GUI library
 
 # conflicts with non unicode version
 CONFLICTS+=	wxGTK-[0-9]*
+
+BUILD_TARGET=	all
+INSTALL_TARGET=	install
+
+INSTALLATION_DIRS=	${DOCDIR}
 
 post-build:
 	set -e; cd ${WRKSRC}/locale; \
@@ -20,8 +25,7 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DOCDIR}/LICENSE
+	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DESTDIR}${DOCDIR}
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
