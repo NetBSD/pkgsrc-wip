@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/02 05:54:36 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/13 15:08:50 shattered Exp $
 #
 
 DISTNAME=	xf86-video-nouveau-0.0.10
@@ -21,7 +21,7 @@ CFLAGS+=	-I${BUILDLINK_PREFIX.glproto}/include
 # or server in wip
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.3.1
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.3.1.0
 .include "../../wip/libdrm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
