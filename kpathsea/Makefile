@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/12/13 06:47:06 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2008/12/13 08:51:19 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	kpathsea-3.5.7
@@ -39,8 +39,8 @@ SUBST_SED.texmfdir+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 PKG_SYSCONFSUBDIR=	texmf
 
-BUILD_DEFS+=		TEXMFLOCAL VARBASE
-TEXMFLOCAL?=		${PREFIX}/share/texmf-local
+BUILD_DEFS+=		VARBASE
+TEXMFLOCAL=		${PREFIX}/share/texmf-local
 FILES_SUBST+=		TEXMFLOCAL=${TEXMFLOCAL}
 
 CONF_FILES=	${PREFIX}/share/texmf/web2c/texmf.cnf \
