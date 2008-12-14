@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/12/07 15:17:30 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/12/14 16:46:54 thomasklausner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AVAHI_BUILDLINK3_MK:=	${AVAHI_BUILDLINK3_MK}+
@@ -23,6 +23,7 @@ pkgbase := avahi
 .  include "../../databases/gdbm/buildlink3.mk"
 .endif
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
