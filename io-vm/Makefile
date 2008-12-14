@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/06 23:35:08 milosn Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/14 10:45:31 tnn2 Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -33,14 +33,12 @@ SUBST_MESSAGE.fix-linking=	Fixing linking.
 SUBST_FILES.fix-linking=	tools/Makefile
 SUBST_SED.fix-linking=		-e 's,LFLAGS +=-lm,LFLAGS +=-lm -L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib,g'
 
+INSTALLATION_DIRS=		bin include/io lib lib/io lib/io/addons
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/_build/binaries/io ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/include/io
 	${CP} -rf ${WRKSRC}/_build/headers/*.h ${PREFIX}/include/io/
 	${INSTALL_LIB} ${WRKSRC}/_build/dll/libiovmall.so  ${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/_build/lib/libiovmall.a  ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/io
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/io/addons
 
 .include "../../mk/bsd.pkg.mk"
