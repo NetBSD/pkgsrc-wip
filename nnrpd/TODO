@@ -9,3 +9,8 @@
 - Fix rc.d script installation
 
 - Install 'subscriptions' boilerplate for new users
+
+- Make Perl and TCL support options, default to off since they probably
+  will not be used on a large scale
+
+- Add dependency to C News, since we use libcnews.a
