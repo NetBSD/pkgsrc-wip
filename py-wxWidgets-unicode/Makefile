@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/20 08:59:58 tonnerre Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/14 00:57:36 shattered Exp $
 
 DISTNAME=	wxPython-src-2.8.8.1
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.8.8.1
@@ -31,7 +31,7 @@ PYSETUPBUILDARGS=	NO_SCRIPTS=1 ${WXARG}
 PYSETUPINSTALLARGS=	NO_SCRIPTS=1 ${WXARG}
 PYBINMODULE=	yes
 
-PLIST_SUBST+=            GTKVER=2
+PLIST_SUBST+=		GTKVER=2
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
