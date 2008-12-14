@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3149 2008/12/13 09:01:10 minskim Exp $
+# $Id: Makefile,v 1.3150 2008/12/14 01:49:43 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -510,7 +510,6 @@ SUBDIR+=	groku
 SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
-SUBDIR+=	gst-python
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gtk-gnutella-current
