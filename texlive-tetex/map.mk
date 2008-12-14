@@ -1,4 +1,4 @@
-# $NetBSD: map.mk,v 1.1 2008/12/13 09:14:59 minskim Exp $
+# $NetBSD: map.mk,v 1.2 2008/12/14 00:37:46 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install font maps for TeX.  It updates font map entries in updmap.cfg
@@ -23,4 +23,4 @@ FILES_SUBST+=		MIXEDMAP_FILES=${TEX_MIXEDMAP_FILES:Q}
 INSTALL_TEMPLATES+=	../../wip/texlive-tetex/files/map-install.tmpl
 DEINSTALL_TEMPLATES+=	../../wip/texlive-tetex/files/map-deinstall.tmpl
 
-.endif	# TEX_TEXMF_MK
+.endif	# TEX_MAP_MK
