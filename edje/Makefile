@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/11/19 01:16:51 jsonn Exp $
+# $NetBSD: Makefile,v 1.27 2008/12/14 13:49:49 tnn2 Exp $
 #
 
 DISTNAME=	edje-0.9.9.050
@@ -14,6 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
+
+REPLACE_PYTHON+=	utils/inkscape2edc
+.include	"../../lang/python/application.mk"
 
 .include	"../../devel/eet/buildlink3.mk"
 .include	"../../wip/ecore/buildlink3.mk"
