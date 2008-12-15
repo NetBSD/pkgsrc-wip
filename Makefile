@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3151 2008/12/15 01:08:24 minskim Exp $
+# $Id: Makefile,v 1.3152 2008/12/15 15:54:30 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -964,6 +964,7 @@ SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
+SUBDIR+=	lua-mode
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
