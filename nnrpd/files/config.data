@@ -823,15 +823,13 @@ INNWATCH_BLOCKS		4
 ##  13.  TCL Configuration
 ##  Do you want TCL support?  Pick DO or DONT
 #### =()<TCL_SUPPORT		@<TCL_SUPPORT>@>()=
-TCL_SUPPORT		DONT
+TCL_SUPPORT		@TCL_SUPPORT@
 ##  Where your tcl header file live. Blank if no TCL
 ### =()<TCL_INC		@<TCL_INC>@>()=
-TCL_INC		
-# TCL_INC		-I/usr/local/include
+TCL_INC			@TCL_INC@
 ##  How do you get the TCL library?  Probably -ltcl -lm, blank if no TCL
 #### =()<TCL_LIB		@<TCL_LIB>@>()=
-TCL_LIB		
-# TCL_LIB		-ltcl -lm
+TCL_LIB			@TCL_LIB@
 ##  TCL Startup File. Should probably be prefixed with the same value as
 ##  _PATH_CONTROLPROGS. 
 #### =()<_PATH_TCL_STARTUP	@<_PATH_TCL_STARTUP>@>()=
@@ -850,10 +848,10 @@ _PATH_TCL_FILTER	@INNPREFIX@/bin/control/filter.tcl
 ## If you change this then you need to fiddle with control.ctl.
 ## Setting it DONT is a really bad idea with all the miscreants out there...
 #### =()<WANT_PGPVERIFY		@<WANT_PGPVERIFY>@>()=
-WANT_PGPVERIFY		DO
+WANT_PGPVERIFY		@WANT_PGPVERIFY@
 ##  PGP binary.
 #### =()<_PATH_PGP		@<_PATH_PGP>@>()=
-_PATH_PGP		@PREFIX@/bin/pgp
+_PATH_PGP		@PREFIX@/bin/gpg
 
 ##
 ##  15. Local Configuration
@@ -886,7 +884,7 @@ _PATH_ACTSYNC_IGN	@INNDATA@/etc/actsync.ign
 ##  17.  Perl Configuration
 ##  Do you want Perl support?  Pick DO or DONT
 #### =()<PERL_SUPPORT		@<PERL_SUPPORT>@>()=
-PERL_SUPPORT		DO
+PERL_SUPPORT		@PERL_SUPPORT@
 ##  How do you get the PERL libraries?  This version of INN has Perl dynamic
 ##  loading support.  If you've set PERL_SUPPORT to DO, go back to your shell
 ##  and run 'perl -MExtUtils::Embed -e ldopts'.  Paste its output below.

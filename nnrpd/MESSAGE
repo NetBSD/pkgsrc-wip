@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/05/03 14:52:38 hfath Exp $
+$NetBSD: MESSAGE,v 1.3 2008/12/15 15:41:19 hfath Exp $
 
-Please add nnrpd to /etc/inetd.conf like
+To use nnrpd, add the following line to /etc/inetd.conf:
 
-nntp  stream  tcp     nowait  news:news /usr/pkg/sbin/nnrpd   nnrpd
+nntp  stream  tcp     nowait  ${NEWSUID}:${NEWSGID} ${PREFIX}/sbin/nnrpd   nnrpd
 
 ===========================================================================

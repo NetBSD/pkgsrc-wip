@@ -2,15 +2,3 @@
 
 - Make sure we got all the relevant patches from 
   http://www.mibsoftware.com/userkt/inn/patches/
-
-- Should we try to keep clear of INN heritage (/var/news etc.) to
-  allow installing INN and C News at the same time?
-
-- Fix rc.d script installation
-
-- Install 'subscriptions' boilerplate for new users
-
-- Make Perl and TCL support options, default to off since they probably
-  will not be used on a large scale
-
-- Add dependency to C News, since we use libcnews.a

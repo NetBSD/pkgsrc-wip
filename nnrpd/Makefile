@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/23 04:47:03 hfath Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/15 15:41:19 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -13,27 +13,22 @@ COMMENT=		NNTP reader daemon from release 1.7 of InterNet News (INN)
 
 INN_DATA_DIR?=		/var/news
 
-CONFLICTS+=		nntpclnt-[0-9]* \
-			inn-[1-9].*
+CONFLICTS+=		nntpclnt-[0-9]*
+CONFLICTS+=		inn-[0-9]*
+
 RCD_SCRIPTS=		actived
 USE_TOOLS+=		perl
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/c-news/Makefile.common"
-
-# We need include and library paths to compile in Perl support
-PERL_LDOPTS_cmd=	eval ${PERL5} -MExtUtils::Embed -e ldopts 2>/dev/null
-PERL_ARCHLIB_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`; \
-			${ECHO} $${installarchlib}
+.include "options.mk"
 
 # Given foo=${bar}, replace @foo@ with ${bar}.
 #
-FILES_SUBST=		PREFIX=${PREFIX:Q}
+FILES_SUBST+=		PREFIX=${PREFIX:Q}
 FILES_SUBST+=		INNDATA=${INN_DATA_DIR:Q}
 FILES_SUBST+=		INNPREFIX=${PREFIX:Q}
 FILES_SUBST+=		INNMANPREFIX=${PREFIX:Q}
-FILES_SUBST+=		PERL_LDOPTS="${PERL_LDOPTS_cmd:sh}"
-FILES_SUBST+=		PERL_INC="-I${PERL_ARCHLIB_cmd:sh}/CORE -DPERL_POLLUTE"
 
 # UBC brought read and mmap in sync
 .if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.[0-4]*} != "" || \
@@ -47,8 +42,20 @@ FILES_SUBST+=		INNCFLAGS="${CFLAGS} -DOVERSCREAM"
 .endif
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
+MESSAGE_SUBST+=		NEWSUID=${NEWSUID}
+MESSAGE_SUBST+=		NEWSGID=${NEWSGID}
+
 DEINSTALL_SRC=		${WRKDIR}/DEINSTALL
-INSTALL_SRC=		${WRKDIR}/INSTALL
+
+.for inn_dir in etc run tmp
+OWN_DIRS_PERMS+=	${INN_DATA_DIR}/${inn_dir} ${NEWSUID} ${NEWSGID} 0775
+.endfor
+.for inn_files in nnrp.access innshellvars innshellvars.csh \
+			innshellvars.pl innshellvars.tcl
+CONF_FILES_PERMS+=	${PREFIX}/share/examples/nnrpd/${inn_files} \
+			${INN_DATA_DIR}/etc/${inn_files} \
+			${NEWSUID} ${NEWSGID} 0444
+.endfor
 
 BUILD_DEFS+=		INN_DATA_DIR
 
@@ -58,9 +65,7 @@ pre-configure:
 	${CP} ${FILESDIR}/mailpost ${WRKSRC}/samples/
 
 post-build:
-.for FILE in DEINSTALL INSTALL
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
-.endfor
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL >${WRKDIR}/DEINSTALL
 	for DIR in lib actived nnrpd; do \
 		${SED} -e 's#-b .OLD##' -e 's#-G#-g#' -e 's#-O#-o#'	\
 			${WRKSRC}/$$DIR/Makefile			\
@@ -71,21 +76,30 @@ post-build:
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} Install.ms)
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nnrpd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nnrpd
 	${INSTALL_PROGRAM} ${WRKSRC}/nnrpd/nnrpd ${PREFIX}/sbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/actived/actived ${PREFIX}/sbin/
 	${INSTALL_SCRIPT} ${WRKSRC}/samples/mailpost ${PREFIX}/sbin/
 	${INSTALL_DATA} ${WRKSRC}/samples/filter_nnrpd.pl ${PREFIX}/libexec/
-	${INSTALL_DATA} ${WRKSRC}/samples/innshellvars.pl ${CNEWSCTL}/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nnrpd
-	${INSTALL_DATA} ${WRKSRC}/samples/nnrp.access \
-		${PREFIX}/share/examples/nnrpd/
-	${INSTALL_DATA} ${WRKSRC}/samples/moderators \
-		${PREFIX}/share/examples/nnrpd/
+	for FILE in innshellvars innshellvars.csh innshellvars.pl \
+			innshellvars.tcl; do \
+		${INSTALL_DATA} ${WRKSRC}/samples/$${FILE} 	\
+			${PREFIX}/share/examples/nnrpd/ ;  	\
+	done
+	for FILE in nnrp.access moderators; do \
+		${INSTALL_DATA} ${WRKSRC}/samples/$${FILE} 	\
+			${PREFIX}/share/examples/nnrpd/ ;  	\
+	done
+	for FILE in CONTRIBUTORS COPYRIGHT FAQ/* HISTORY 	\
+		Install.ms PGPKEYS README* ; do			\
+		${INSTALL_DATA} ${WRKSRC}/$${FILE} 		\
+			${PREFIX}/share/doc/nnrpd/ ;  		\
+	done
 	${INSTALL_MAN} ${WRKSRC}/doc/dbz.3  ${PREFIX}/${PKGMANDIR}/man3/
 	${INSTALL_MAN} ${WRKSRC}/doc/nnrp.access.5 ${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_MAN} ${WRKSRC}/doc/moderators.5 ${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_MAN} ${WRKSRC}/doc/nnrpd.8  ${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../wip/c-news/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
