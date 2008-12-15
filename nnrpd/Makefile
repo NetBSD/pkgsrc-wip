@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/12/15 15:41:19 hfath Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/15 15:45:24 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/OLD/1.7/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/OLD/1.7/ \
