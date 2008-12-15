@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/08 18:59:26 hfath Exp $
+# $NetBSD: Makefile,v 1.17 2008/12/15 16:45:28 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -94,7 +94,7 @@ pre-configure:
 # One of the regression tests does not work correctly if we are in
 # a union-mounted directory. In that case, build with something like
 # "env WRKOBJDIR=/var/tmp make".
-post-build:     build-doc  # regression
+post-build:     build-doc regression
 
 .PHONY: regression
 regression:
