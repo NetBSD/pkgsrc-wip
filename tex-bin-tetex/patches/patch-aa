@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/15 00:12:07 minskim Exp $
 
---- texmf/web2c/updmap.cfg.orig	2008-11-20 18:49:26.000000000 -0800
+--- texmf/web2c/updmap.cfg.orig	2008-12-10 18:39:21.000000000 -0800
 +++ texmf/web2c/updmap.cfg
-@@ -100,171 +100,171 @@ dvipdfmDownloadBase14 true
+@@ -100,177 +100,177 @@ dvipdfmDownloadBase14 true
  # Map files should be marked by "#! " (without the quotes), not just #.
  #
  
@@ -139,6 +139,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
 -Map pazo.map
 -Map pbsi.map
 -Map phaistos.map
+-MixedMap pigpen.map
 -MixedMap plother.map
 -MixedMap pltext.map
 -Map pxfonts.map
@@ -173,6 +174,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
 -MixedMap xypic.map
 -Map yfrak.map
 -MixedMap yhmath.map
+-Map yv1.map
+-Map yv2.map
+-Map yv3.map
+-Map yvo.map
+-Map yvt.map
 -Map zpeu.map
 +#! Map Acorn.map
 +#! Map AnnSton.map
@@ -307,6 +313,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
 +#! Map pazo.map
 +#! Map pbsi.map
 +#! Map phaistos.map
++#! MixedMap pigpen.map
 +#! MixedMap plother.map
 +#! MixedMap pltext.map
 +#! Map pxfonts.map
@@ -341,4 +348,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
 +#! MixedMap xypic.map
 +#! Map yfrak.map
 +#! MixedMap yhmath.map
++#! Map yv1.map
++#! Map yv2.map
++#! Map yv3.map
++#! Map yvo.map
++#! Map yvt.map
 +#! Map zpeu.map

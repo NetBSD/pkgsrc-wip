@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/13 09:00:17 minskim Exp $
-# TeX Live Revision 11386
+# $NetBSD: Makefile,v 1.2 2008/12/15 00:12:07 minskim Exp $
+# TeX Live Revision 11589
 
 DISTNAME=	bin-tetex
 PKGNAME=	tex-bin-tetex-3.0
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.lzma
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
-COMMENT=	The TeX distribution for Unix/Linux
+COMMENT=	scripts and files originally written for or included in teTeX
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
