@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/16 17:10:49 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/16 21:45:13 cheusov Exp $
 bin/xsokoban
 man/man1/xsokoban.1
 share/xsokoban/bitmaps/20/centerwall.xpm
@@ -183,3 +183,9 @@ share/xsokoban/screens/screen.88
 share/xsokoban/screens/screen.89
 share/xsokoban/screens/screen.9
 share/xsokoban/screens/screen.90
+@dirrm share/xsokoban/bitmaps/20
+@dirrm share/xsokoban/bitmaps/36
+@dirrm share/xsokoban/bitmaps/defaults
+@dirrm share/xsokoban/bitmaps
+@dirrm share/xsokoban/screens
+@dirrm share/xsokoban
