@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/13 09:12:25 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/16 06:36:45 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	texlive-tetex-2008
@@ -33,7 +33,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
 CONF_FILES=	${PREFIX}/share/texmf/web2c/fmtutil.cnf \
 		${PKG_SYSCONFDIR}/web2c/fmtutil.cnf
 
-TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PKG_SYSCONFDIR}
 
 .include "../../wip/kpathsea/buildlink3.mk"
 .include "../../wip/kpathsea/texmf.mk"

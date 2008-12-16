@@ -1,0 +1,16 @@
+# $NetBSD: format-install.tmpl,v 1.1 2008/12/16 06:36:45 minskim Exp $
+#
+# Create format files.
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	format_names="@FORMAT_NAMES@"
+	for f in $format_names ; do
+		@FMTUTIL_SYS@ --cnffile \
+			@PREFIX@/share/texmf/fmtutil/format.$f.cnf --all
+	done
+        ;;
+*)
+	;;
+esac
