@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/16 17:10:49 cheusov Exp $
+
+--- display.c.orig	1997-07-17 19:25:52.000000000 +0300
++++ display.c
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <string.h>
++#include <stdlib.h>
+ #include <assert.h>
+ 
+ #include "config_local.h"
