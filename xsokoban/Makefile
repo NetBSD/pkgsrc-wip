@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/16 17:10:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/16 18:23:37 cheusov Exp $
 #
 
 DISTNAME=	xsokoban-3.3c
@@ -20,8 +20,6 @@ CHANGABLEPATH=		${VARBASE}/xsokoban
 SAVEPATH=		${CHANGABLEPATH}/saves
 SCOREPATH=		${CHANGABLEPATH}/scores
 
-CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11:Q}/include/X11
-CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11:Q}/lib
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/xsokoban
 
 SPECIAL_PERMS=		bin/xsokoban ${SETGID_GAMES_PERMS}

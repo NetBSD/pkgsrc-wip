@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/12/16 17:10:49 cheusov Exp $
+$NetBSD: patch-ac,v 1.2 2008/12/16 18:23:38 cheusov Exp $
 
 --- display.c.orig	1997-07-17 19:25:52.000000000 +0300
 +++ display.c
@@ -9,3 +9,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/16 17:10:49 cheusov Exp $
  #include <assert.h>
  
  #include "config_local.h"
+@@ -19,7 +20,7 @@
+ #include "display.h"
+ 
+ #if USE_XPM
+-#include "xpm.h"
++#include "X11/xpm.h"
+ #endif
+ 
+ static short LoadBitmaps(void);
