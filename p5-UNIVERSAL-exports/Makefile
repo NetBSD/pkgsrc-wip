@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/10/12 17:37:30 absd Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/17 09:21:07 tonnerre Exp $
 
-DISTNAME=		UNIVERSAL-exports-0.03
+DISTNAME=		UNIVERSAL-exports-0.05
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5uex
 CATEGORIES=		devel perl5
@@ -12,10 +12,6 @@ COMMENT=		Lightweight, universal exporting of variables
 
 DEPENDS+=		p5-Exporter-Lite>=0.01:../../devel/p5-Exporter-Lite
 DEPENDS+=		p5-UNIVERSAL-require>=0.01:../../devel/p5-UNIVERSAL-require
-
-# p5-UNIVERSAL-require provides a conflicting (and more recent) require.pm
-post-extract:
-	${RM} ${WRKSRC}/lib/UNIVERSAL/require.pm
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
