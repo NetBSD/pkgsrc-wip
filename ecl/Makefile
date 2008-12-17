@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2008/12/13 02:43:53 asau Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/17 16:42:16 asau Exp $
 #
 
 DISTNAME=		ecl-8.12.0
 PKGNAME=		ecl-8.12.0
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
-EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
@@ -19,11 +18,7 @@ CVS_PROJECT=		ecls
 CVS_ROOT.ecl=		${CVS_ROOT_SOURCEFORGE}
 CVS_MODULE.ecl=		ecl
 
-# CVS_REPOSITORIES+=	ecl-test
-# CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
-# CVS_MODULE.ecl-test=	ecl-test
-
-WRKSRC=			${WRKDIR}/ecl
+# WRKSRC=			${WRKDIR}/ecl
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -36,11 +31,11 @@ CONFIGURE_ENV+=		ECL_BOEHM_GC_HEADER=gc/gc.h
 CONFIGURE_ARGS+=	--with-system-gmp
 
 # sys/wait.h isn't detected on NetBSD:
-USE_TOOLS+=		autoconf
-post-extract:
-	cd ${WRKSRC}/src && autoconf
+# USE_TOOLS+=		autoconf
+# post-extract:
+# 	cd ${WRKSRC}/src && autoconf
 
-.include "../../wip/mk/cvs-package.mk"
+#.include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
