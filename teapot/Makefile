@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/30 10:18:33 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/17 17:59:41 tnn2 Exp $
 #
 
 DISTNAME=	teapot-1.09
@@ -9,12 +9,15 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://www.moria.de/~michael/teapot/
 COMMENT=	Curses based spread sheet program
 
-EGDIR=		${PREFIX}/share/examples/teapot
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${TEA_DOCSDIR} ${EGDIR}
+
+EGDIR=		share/examples/teapot
 EXAMPLES=	examples/asqrt examples/asqrt.README examples/blink \
 		examples/counter examples/counter.README examples/life \
 		examples/life.README examples/graphtest.sh examples/sqrt \
 		examples/sqrt.README
-TEA_DOCSDIR=	${PREFIX}/share/doc/teapot
+TEA_DOCSDIR=	share/doc/teapot
 TEA_DOCS=	doc/teapot.doc doc/teapot.html doc/teapot.ps
 
 do-build:
@@ -22,15 +25,14 @@ do-build:
 	cd ${WRKSRC}/doc && ${MAKE} teapot.doc teapot.html teapot.ps
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/teapot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/teapot.1.en ${PREFIX}/${PKGMANDIR}/man1/teapot.1
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/teapot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/teapot.1.en \
+	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/teapot.1
 .for file in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${TEA_DOCSDIR}
 .for file in ${TEA_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${TEA_DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${TEA_DOCSDIR}
 .endfor
 
 .include "../../mk/curses.buildlink3.mk"
