@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/11 18:59:25 x400 Exp $
+$NetBSD: distinfo,v 1.1.1.2 2008/12/17 10:02:57 x400 Exp $
 
 SHA1 (spandsp-0.0.6pre2.tgz) = eab4138502a9ef9945547ae5fdf4db0a0804a7ed
 RMD160 (spandsp-0.0.6pre2.tgz) = 6ebda54ee743fa4ec9643d3fcbb8819c9ff62da0
 Size (spandsp-0.0.6pre2.tgz) = 2456148 bytes
+SHA1 (patch-aa) = 35691cd24c1972798c8c20249c7a16a4cfd7f4c9

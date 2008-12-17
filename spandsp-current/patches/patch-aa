@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/17 10:02:57 x400 Exp $
+
+--- configure.orig	2008-05-16 16:34:26.000000000 +0400
++++ configure
+@@ -25857,7 +25857,7 @@
+ 
+ done
+ 
+-if test "${build}" == "${host}"
++if test "${build}" = "${host}"
+ then
+ 
+ for ac_header in X11/X.h
+@@ -27487,7 +27487,7 @@
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+-if test "${build}" == "${host}"
++if test "${build}" = "${host}"
+ then
+     case "${host}" in
+     x86_64-*)
+@@ -28480,7 +28480,7 @@
+ fi
+ 
+ 
+-if test "${build}" == "${host}"
++if test "${build}" = "${host}"
+ then
+     case "${host}" in
+     x86_64-*)
