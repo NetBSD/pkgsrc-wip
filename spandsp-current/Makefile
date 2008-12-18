@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/12/18 14:19:59 x400 Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/18 14:29:52 x400 Exp $
 
-DISTNAME=	spandsp-0.0.6pre3
+DISTNAME=	spandsp-0.0.6pre2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.soft-switch.org/downloads/spandsp/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/11 18:55:08 x400 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/18 14:38:49 x400 Exp $
 bin/callweaver
 sbin/streamplayer
 include/callweaver/acl.h
@@ -206,6 +206,12 @@ lib/callweaver/modules/res_indications.la
 lib/callweaver/modules/res_monitor.la
 lib/callweaver/modules/res_musiconhold.la
 lib/callweaver/modules/res_ogi.la
+${PLIST.mysql}lib/callweaver/modules/app_sql_mysql.la
+${PLIST.mysql}lib/callweaver/modules/cdr_mysql.la
+${PLIST.mysql}lib/callweaver/modules/res_config_mysql.la
+${PLIST.pgsql}lib/callweaver/modules/app_sql_postgres.la
+${PLIST.pgsql}lib/callweaver/modules/cdr_pgsql.la
+${PLIST.pgsql}lib/callweaver/modules/res_config_pgsql.la
 man/man8/callweaver.8
 man/man8/safe_callweaver.8
 sbin/callweaver_cli
@@ -256,6 +262,10 @@ share/examples/callweaver/sip_notify.conf
 share/examples/callweaver/udptl.conf
 share/examples/callweaver/voicemail.conf
 share/examples/callweaver/woomera.conf
+${PLIST.mysql}share/examples/callweaver/cdr_mysql.conf
+${PLIST.mysql}share/examples/callweaver/res_mysql.conf
+${PLIST.pgsql}share/examples/callweaver/cdr_pgsql.conf
+${PLIST.pgsql}share/examples/callweaver/res_pgsql.conf
 share/examples/rc.d/callweaver
 @dirrm share/examples/callweaver
 @dirrm share/doc/callweaver
