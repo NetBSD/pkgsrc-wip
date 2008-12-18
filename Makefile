@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3153 2008/12/18 10:41:14 cheusov Exp $
+# $Id: Makefile,v 1.3154 2008/12/18 20:12:41 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1002,7 +1002,6 @@ SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren
 SUBDIR+=	microcom
 SUBDIR+=	mid2gmc
-SUBDIR+=	midori
 SUBDIR+=	milkytracker
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	mime-support
@@ -1376,7 +1375,6 @@ SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
 SUBDIR+=	panda
-SUBDIR+=	parpd
 SUBDIR+=	parted
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
@@ -1901,7 +1899,6 @@ SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
 SUBDIR+=	web2c
 SUBDIR+=	webcleaner
-SUBDIR+=	webkit-gtk
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	which
