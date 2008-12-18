@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/09/13 12:34:03 asau Exp $
+# $NetBSD: options.mk,v 1.11 2008/12/18 05:28:26 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -41,7 +41,7 @@ PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
 
 # X11-only files:
 .if !empty(PKG_OPTIONS:Mx11)
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
 .endif
 
 # X11
