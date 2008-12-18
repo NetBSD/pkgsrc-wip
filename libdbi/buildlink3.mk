@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/12/15 22:33:43 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/18 10:30:52 cheusov Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDBI_BUILDLINK3_MK:=	${LIBDBI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libdbi
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libdbi
 
 .if ${LIBDBI_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libdbi+=	libdbi>=0.8.2
+BUILDLINK_API_DEPENDS.libdbi+=	libdbi>=0.8.3
 BUILDLINK_PKGSRCDIR.libdbi?=	../../wip/libdbi
 .endif	# LIBDBI_BUILDLINK3_MK
 
