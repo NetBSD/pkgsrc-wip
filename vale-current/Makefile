@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/11 19:15:18 x400 Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/18 14:10:15 x400 Exp $
 
 DISTNAME=	vale-0.0.2
-CATEGORIES=	comms
+CATEGORIES=	devel
 MASTER_SITES=	http://www.soft-switch.org/downloads/vale/
 EXTRACT_SUFX=	.tgz
 
