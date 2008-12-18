@@ -1,20 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2008/12/18 10:39:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/18 11:11:15 cheusov Exp $
 #
 
-DISTNAME=	libdbi-drivers-0.8.3-1
-PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-mysql/:S/-1/.1/:S/-2/.2/}
-CATEGORIES=	databases devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}
+.include "../../wip/libdbi/Makefile_drivers"
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://libdbi-drivers.sourceforge.net/
+PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-mysql/:S/-1/.1/:S/-2/.2/}
+
 COMMENT=	MySQL driver for libdbi, a database abstraction
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		libdbi-mysql-[0-9]*
-
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS+=	lib/dbd
 
