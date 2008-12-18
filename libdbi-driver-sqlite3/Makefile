@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/12/18 11:21:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/18 11:39:04 cheusov Exp $
 #
 
 .include "../../wip/libdbi/Makefile_drivers"
 
-PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-sqlite3/:S/-1/.1/:S/-2/.2/}
+DRIVER=			sqlite3
 
-COMMENT=	SQLite3 driver for libdbi, a database abstraction
+COMMENT=		SQLite3 driver for libdbi, a database abstraction
 
 CONFLICTS=		libdbi-sqlite3-[0-9]*
 
