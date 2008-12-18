@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.4 2008/12/17 14:44:52 x400 Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/18 09:11:19 x400 Exp $
 
 DISTNAME=	callweaver-1.2.0.1
 CATEGORIES=	comms
@@ -110,7 +110,6 @@ CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
 .for f in cdr_mysql.conf \
 	res_mysql.conf
 CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
-PLIST_SRC+=		PLIST.mysql
 .endfor
 .endif
 
@@ -118,7 +117,6 @@ PLIST_SRC+=		PLIST.mysql
 .for f in cdr_pgsql.conf \
 	res_pgsql.conf
 CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
-PLIST_SRC+=		PLIST.pgsql
 .endfor
 .endif
 
