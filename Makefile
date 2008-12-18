@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3152 2008/12/15 15:54:30 cheusov Exp $
+# $Id: Makefile,v 1.3153 2008/12/18 10:41:14 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -869,10 +869,10 @@ SUBDIR+=	libclucene
 SUBDIR+=	libcm
 SUBDIR+=	libdaemon
 SUBDIR+=	libdbi
-SUBDIR+=	libdbi-mysql
-SUBDIR+=	libdbi-pgsql
-SUBDIR+=	libdbi-sqlite
-SUBDIR+=	libdbi-sqlite3
+SUBDIR+=	libdbi-driver-mysql
+SUBDIR+=	libdbi-driver-pgsql
+SUBDIR+=	libdbi-driver-sqlite
+SUBDIR+=	libdbi-driver-sqlite3
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdmx
