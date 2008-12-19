@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/13 17:48:58 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/19 18:51:18 jakllsch Exp $
 #
 
 DISTNAME=	nvramtool-${NVRAMTOOL_SNAP_VERSION}
@@ -42,7 +42,7 @@ SUBST_MESSAGE.iopl=	fixing iopl
 SUBST_STAGE.iopl=	pre-configure
 SUBST_SED.iopl+= -e 's,i386_iopl,${MACHINE_ARCH}_iopl,g'
 
-MAKE_ENV+=	LDLIBS=-l${MACHINE_ARCH}
+MAKE_FLAGS+=	LDFLAGS=-l${MACHINE_ARCH}
 
 .endif
 
