@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/08/05 21:50:19 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/19 18:15:49 jakllsch Exp $
 #
 
 DISTNAME=	flashrom-${FLASHROM_SNAP_VERSION}
@@ -6,8 +6,8 @@ CATEGORIES=	sysutils
 MASTER_SITES=	#empty
 
 MAINTAINER=	jakllsch@kollasch.net
-HOMEPAGE=	http://linuxbios.org/Flashrom
-COMMENT=	Universal (LinuxBIOS) flash utility
+HOMEPAGE=	http://www.coreboot.org/Flashrom
+COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,7 +16,7 @@ USE_TOOLS+= date
 
 SVN_REPOSITORIES=	flashrom
 SVN_TAG=		{${FLASHROM_TAG}}
-SVN_ROOT.flashrom=	svn://linuxbios.org/repos/trunk/util/flashrom
+SVN_ROOT.flashrom=	svn://coreboot.org/repos/trunk/util/flashrom
 SVN_MODULE.flashrom=	flashrom
 
 pre-build:
@@ -37,7 +37,7 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 SUBST_CLASSES+=	pciutils
 SUBST_FILES.pciutils=	Makefile flashrom.c
 SUBST_FILES.pciutils+=	board_enable.c chipset_enable.c
-SUBST_FILES.pciutils+=	spi.c it87spi.c ichspi.c
+SUBST_FILES.pciutils+=	spi.c it87spi.c ichspi.c sb600spi.c
 SUBST_MESSAGE.pciutils=	fixing pciutils headers
 SUBST_STAGE.pciutils=	pre-configure
 SUBST_SED.pciutils+= -e 's,<pci/pci.h>,<pciutils/pci.h>,'

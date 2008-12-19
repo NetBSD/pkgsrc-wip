@@ -29,7 +29,7 @@ inw(unsigned short port)
 static __inline void
 outl(unsigned int value, unsigned short port)
 {
-  __asm__ __volatile__ ("outl %w0,%w1": :"a" (value), "Nd" (port));
+  __asm__ __volatile__ ("outl %0,%w1": :"a" (value), "Nd" (port));
 }
 
 static __inline unsigned int
