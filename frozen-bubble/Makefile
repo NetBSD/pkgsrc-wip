@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/20 12:05:26 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/20 12:38:03 leot1990 Exp $
 #
 
 DISTNAME=	frozen-bubble-2.2.0
@@ -31,6 +31,6 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man6
 PERL5_PACKLIST=	auto/fb_c_stuff/.packlist
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/SDL_Pango/buildlink3.mk"
+.include "../../wip/SDL_Pango/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
