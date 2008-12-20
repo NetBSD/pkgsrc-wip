@@ -1,4 +1,4 @@
-# $NetBSD: Makefile_drivers,v 1.3 2008/12/18 11:39:04 cheusov Exp $
+# $NetBSD: Makefile_drivers,v 1.4 2008/12/20 13:44:57 cheusov Exp $
 #
 
 DISTNAME=	libdbi-drivers-0.8.3-1
@@ -15,11 +15,11 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/libdbi/distinfo_drivers
-PATCHDIR=		${.CURDIR}/../../wip/libdbi/patches_drivers
+#PATCHDIR=		${.CURDIR}/../../wip/libdbi/patches_drivers
 
 INSTALLATION_DIRS+=	lib/dbd
 
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--with-dbi-incdir=${BUILDLINK_PREFIX.libdbi}/include/dbi
 CONFIGURE_ARGS+=	--with-dbi-libdir=${BUILDLINK_PREFIX.libdbi}/lib
-CONFIGURE_ARGS+=	--disable-docs                                                    
+CONFIGURE_ARGS+=	--disable-docs
