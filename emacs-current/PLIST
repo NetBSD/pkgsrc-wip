@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2008/11/20 01:33:55 makoto Exp $
+@comment $NetBSD: PLIST,v 1.72 2008/12/20 13:32:07 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -64,10 +64,14 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
+man/man1/b2m.1
 man/man1/ctags.1
+man/man1/ebrowse.1
 man/man1/emacs.1
 man/man1/emacsclient.1
 man/man1/etags.1
+man/man1/grep-changelog.1
+man/man1/rcs-checkin.1
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/BABYL
@@ -2173,8 +2177,6 @@ share/emacs/${PKGVERSION}/lisp/mail/mspools.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mspools.elc
 share/emacs/${PKGVERSION}/lisp/mail/pmail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/pmail.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmaildesc.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmaildesc.elc
 share/emacs/${PKGVERSION}/lisp/mail/pmailedit.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/pmailedit.elc
 share/emacs/${PKGVERSION}/lisp/mail/pmailhdr.el.gz
@@ -2499,6 +2501,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${PKGVERSION}/lisp/org/org-agenda.el.gz
@@ -2563,6 +2567,10 @@ share/emacs/${PKGVERSION}/lisp/org/org-wl.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-wl.elc
 share/emacs/${PKGVERSION}/lisp/org/org.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org.elc
+share/emacs/${PKGVERSION}/lisp/org/org-timer.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-timer.elc
+share/emacs/${PKGVERSION}/lisp/org/org-w3m.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-w3m.elc
 share/emacs/${PKGVERSION}/lisp/outline.el.gz
 share/emacs/${PKGVERSION}/lisp/outline.elc
 share/emacs/${PKGVERSION}/lisp/paren.el.gz
@@ -2810,6 +2818,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/python.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/python.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/ruby-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/scheme.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/scheme.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/sh-script.el.gz
@@ -3165,8 +3175,6 @@ share/emacs/${PKGVERSION}/lisp/vc-hg.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-hg.elc
 share/emacs/${PKGVERSION}/lisp/vc-hooks.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-hooks.elc
-share/emacs/${PKGVERSION}/lisp/vc-mcvs.el.gz
-share/emacs/${PKGVERSION}/lisp/vc-mcvs.elc
 share/emacs/${PKGVERSION}/lisp/vc-mtn.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-mtn.elc
 share/emacs/${PKGVERSION}/lisp/vc-rcs.el.gz
