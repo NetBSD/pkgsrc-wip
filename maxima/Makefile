@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/12/20 00:00:02 asau Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/20 00:05:58 asau Exp $
 #
 
 DISTNAME=		maxima-5.17.1
@@ -18,8 +18,7 @@ DEPENDS+=		tk-[0-9]*:../../x11/tk
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		makeinfo
-USE_TOOLS+=		perl
+USE_TOOLS+=		makeinfo perl
 REPLACE_SH=		doc/misc/grepforvariables.sh
 
 INFO_FILES=		yes
