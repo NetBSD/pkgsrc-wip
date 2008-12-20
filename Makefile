@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3156 2008/12/20 12:06:58 leot1990 Exp $
+# $Id: Makefile,v 1.3157 2008/12/20 12:28:38 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -32,6 +32,7 @@ SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	ReZound
 SUBDIR+=	Redland-rdf
+SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL-doc
 SUBDIR+=	SDL-doc-html
 SUBDIR+=	SDL-doc-ps
