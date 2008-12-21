@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2008/12/15 17:16:51 asau Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/12/21 13:28:08 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
 info/imaxima.info
 info/maxima-index.lisp
-info/maxima.info
 info/xmaxima.info
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
 ${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
@@ -187,6 +186,8 @@ share/maxima/${PKGVERSION}/doc/html/maxima_90.html
 share/maxima/${PKGVERSION}/doc/html/maxima_91.html
 share/maxima/${PKGVERSION}/doc/html/maxima_92.html
 share/maxima/${PKGVERSION}/doc/html/maxima_93.html
+share/maxima/${PKGVERSION}/doc/html/maxima_94.html
+share/maxima/${PKGVERSION}/doc/html/maxima_95.html
 share/maxima/${PKGVERSION}/doc/html/maxima_abt.html
 share/maxima/${PKGVERSION}/doc/html/maxima_fot.html
 share/maxima/${PKGVERSION}/doc/html/maxima_ovr.html
@@ -395,6 +396,7 @@ share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_3
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_4.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_5.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_odelin.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_utils.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/testsuite.lisp
 share/maxima/${PKGVERSION}/share/contrib/distrib/distrib.mac
 share/maxima/${PKGVERSION}/share/contrib/distrib/numdistrib.lisp
@@ -527,6 +529,10 @@ share/maxima/${PKGVERSION}/share/contrib/graphs/matching.lisp
 share/maxima/${PKGVERSION}/share/contrib/graphs/spring_embedding.lisp
 share/maxima/${PKGVERSION}/share/contrib/impdiff.mac
 share/maxima/${PKGVERSION}/share/contrib/implicit_plot.lisp
+share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.html
+share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.mac
+share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.texi
+share/maxima/${PKGVERSION}/share/contrib/integration/rtest_abs_integrate.mac
 share/maxima/${PKGVERSION}/share/contrib/integer_sequence.lisp
 share/maxima/${PKGVERSION}/share/contrib/levin/levin.dem
 share/maxima/${PKGVERSION}/share/contrib/levin/levin.mac
@@ -1441,6 +1447,7 @@ share/maxima/${PKGVERSION}/src/option.lisp
 share/maxima/${PKGVERSION}/src/outmis.lisp
 share/maxima/${PKGVERSION}/src/pade.lisp
 share/maxima/${PKGVERSION}/src/parse-body.lisp
+share/maxima/${PKGVERSION}/src/plasma.lisp
 share/maxima/${PKGVERSION}/src/plot.lisp
 share/maxima/${PKGVERSION}/src/pois2.lisp
 share/maxima/${PKGVERSION}/src/pois3.lisp
@@ -1539,6 +1546,7 @@ share/maxima/${PKGVERSION}/tests/rtest_everysome.mac
 share/maxima/${PKGVERSION}/tests/rtest_expintegral.mac
 share/maxima/${PKGVERSION}/tests/rtest_gamma.mac
 share/maxima/${PKGVERSION}/tests/rtest_hypgeo.mac
+share/maxima/${PKGVERSION}/tests/rtest_lambert_w.mac
 share/maxima/${PKGVERSION}/tests/rtest_map.mac
 share/maxima/${PKGVERSION}/tests/rtest_mset.mac
 share/maxima/${PKGVERSION}/tests/rtest_round.mac
