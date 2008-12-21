@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3160 2008/12/21 15:55:49 tnn2 Exp $
+# $Id: Makefile,v 1.3161 2008/12/21 21:38:53 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -859,7 +859,6 @@ SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libanimal
-SUBDIR+=	libao-nas
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libatomic_ops
