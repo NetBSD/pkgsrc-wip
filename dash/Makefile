@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/06 19:50:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/21 22:07:19 cheusov Exp $
 #
 
 DISTNAME=	dash-0.5.4
@@ -12,6 +12,9 @@ COMMENT=	Debian Almquist shell, POSIX-compliant shell faster than bash
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake autoconf
+
+pre-configure:
+	cd ${WRKSRC} && autoheader && autoconf
 
 .include "../../mk/bsd.pkg.mk"

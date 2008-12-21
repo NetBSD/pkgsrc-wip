@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/12/21 22:07:19 cheusov Exp $
+
+--- configure.ac.orig	2007-07-13 11:26:42.000000000 +0300
++++ configure.ac
+@@ -21,6 +21,7 @@ AC_SUBST(CC_FOR_BUILD)
+ dnl Checks for libraries.
+ 
+ dnl Checks for header files.
++AC_CHECK_HEADERS(alloca.h)
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(bsearch getpwnam getrlimit isalpha killpg mempcpy sigsetmask \
