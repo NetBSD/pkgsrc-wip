@@ -1,4 +1,0 @@
-lib/pkgconfig/libpulse-mainloop-glib.pc
-libexec/pulse/gconf-helper
-@dirrm /usr/pkg/libexec/pulse
-
