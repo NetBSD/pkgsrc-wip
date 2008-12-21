@@ -11,7 +11,7 @@ Suggested package updates
 	o chora-2.0.1
 	o chromium-0.9.13.3
 	o cinelerra-2.1
-	o commoncpp2-1.6.3
+	o commoncpp2-1.7.0
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o digikam-0.10.0beta7 (needs libraries from KDE 4.2)
@@ -73,6 +73,7 @@ Suggested package updates
 	o rdup-0.6.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
+	o runawk-0.15.0
 	o sdlmame-0.128
 	o sdlmess-0.128
 	o sendmailX-0.0.0.0
