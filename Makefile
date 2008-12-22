@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3162 2008/12/22 09:26:22 cheusov Exp $
+# $Id: Makefile,v 1.3163 2008/12/22 17:38:54 pebog Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -245,6 +245,7 @@ SUBDIR+=	darcs
 SUBDIR+=	dash
 SUBDIR+=	db1
 SUBDIR+=	dbf
+SUBDIR+=	dcc
 SUBDIR+=	ddate
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
