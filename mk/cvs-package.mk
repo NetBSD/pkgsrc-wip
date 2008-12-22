@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.29 2008/10/15 20:05:58 cheusov Exp $
+# $Id: cvs-package.mk,v 1.30 2008/12/22 16:46:08 asau Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -6,6 +6,8 @@
 # in ${DISTDIR}/cvs-packages, to save bandwidth.
 #
 # === Package-settable variables ===
+#
+# A package using this file shall define the following variables:
 #
 # CVS_REPOSITORIES
 #	A list of unique identifiers. For each of those identifiers, the
@@ -25,6 +27,8 @@
 #
 #	Default value: ${id}
 #
+# It may define the following variables:
+#
 # CVS_TAG.${id}
 #	Overridable CVS tag for a repository.
 #
@@ -42,6 +46,8 @@
 #	Default: ${PKGBASE}
 #
 # === Variables defined here ===
+#
+# This file defines the following variables:
 #
 # CVS_ROOT_GNU
 # CVS_ROOT_NONGNU
