@@ -1,4 +1,3 @@
-runawk is a small AWK interpreter wrapper that helps to write the
-standalone AWK scripts.
-Its main feature is a module system for AWK like PERL's "use" command.
-It also allows to select a preffered AWK interpreter.
+RUNAWK is a small wrapper for AWK interpreter that impements module system
+(similar to Perl's "use" command) and helps to write the standalone AWK
+programs. A few modules ready for use are also provided.
