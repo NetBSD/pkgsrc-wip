@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/12/22 03:02:22 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/22 03:36:50 gregschenzel Exp $
 
 DISTNAME=	xrootconsole-0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 MAINTAINER=	inittab@unixdev.net
