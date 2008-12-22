@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/04 23:54:08 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/22 03:02:22 gregschenzel Exp $
 
 DISTNAME=	xrootconsole-0.6
 PKGREVISION=	1
@@ -12,8 +12,7 @@ COMMENT=        Windowless XConsole
 
 USE_TOOLS+=             gmake
 
-LIBS.SunOS+=            -lX11
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
 
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
