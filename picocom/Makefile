@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/22 03:33:55 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/22 03:58:06 gregschenzel Exp $
 
 DISTNAME=	picocom-1.4
 PKGREVISION=	2
@@ -16,7 +16,7 @@ BUILD_TARGET=		picocom
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man8
 
 do-install:
-        ${INSTALL_PROGRAM} ${WRKSRC}/picocom ${DESTDIR}${PREFIX}/bin
-        ${INSTALL_MAN} ${WRKSRC}/picocom.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/picocom ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/picocom.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
