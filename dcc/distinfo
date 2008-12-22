@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+
+SHA1 (dcc-1.3.99.tar.Z) = 8baf991fe07b04bc2311d56eea7366dc3e22db7f
+RMD160 (dcc-1.3.99.tar.Z) = 4913fa8a7b924cff4d5043ee17f7e93c9fd3e0bd
+Size (dcc-1.3.99.tar.Z) = 2588124 bytes
+SHA1 (patch-aa) = a92de2879670d11f2a6b9287dc57597cb34bae2c
+SHA1 (patch-ab) = 55279e85a8a552447545be9c0528d62e39fbae2b

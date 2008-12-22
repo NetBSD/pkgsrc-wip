@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+
+	Makefile:
+		${DCC_HOME}
+		${DCC_HOME}/log
+
+	INSTALL:
+		ids
+		map
+		map.txt
+
+--- homedir/Makefile.in.orig	2008-05-29 20:02:36.000000000 +0200
++++ homedir/Makefile.in
+@@ -62,10 +62,6 @@ all:
+ RND=(ps; dd if=/dev/random count=1 2>&1) | cksum | tr '	 ' xy
+ 
+ install:
+-	if test ! -d $(HD); then\
+-	    $(HINST) -m 755 -d $(HD); fi
+-	if test ! -d $(HD)/log; then\
+-	    $(HINST) -m 710 -d $(HD)/log; fi
+ 	if test -z '@configsuffix@' -a -s $(HD)/dcc_conf; then\
+ 	    sh make-dcc_conf -h $(HD) -s '@configsuffix@';\
+ 	else\
+@@ -77,19 +73,6 @@ install:
+ 	if test -s $(UPFILE); then\
+ 	    $(HINST) -m 600 $(UPFILE) $(HD)/$(UPFILE);\
+ 	    set +e; chown @DCCSUID@ $(HD)/$(UPFILE); fi
+-	if test -n '@configsuffix@' || test ! -f $(HD)/ids -a ! -f $(HD)/map\
+-				 -a ! -f $(HD)/map.txt; then\
+-	    umask 077; PASSWD=`$(RND)`;\
+-	    sed -e "s/secret1/$$PASSWD/" -e "s/secret2/`$(RND)`/" ids >$(IDS);\
+-	    rm -f $(MAP) || true; sed -e "s/secret1/$$PASSWD/" map.txt |\
+-		$(CDCC) -qh$(HD) "new map $(MAP); load -";\
+-	    sh fix-map -c $(CDCC) -m $(MAP) -h $(HD);\
+-	    echo '# map.txt is merely the output of `cdcc info`' >$(MAPTXT);\
+-	    $(CDCC) -qh$(HD) "file $(MAP); info" >>$(MAPTXT);\
+-	    set +e; chown @DCCSUID@ $(MAPTXT) $(MAP) $(IDS);\
+-	else\
+-	    sh fix-map -c $(CDCC) -m $(MAP) -h $(HD);\
+-	fi
+ 	if test -n '@configsuffix@'; then\
+ 	    for nm in $(ALL); do\
+ 		if test ! -f $(HD)/$$nm; then\

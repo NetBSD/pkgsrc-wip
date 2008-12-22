@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+
+   + NetBSD su(1) understands -
+   + the default file-ownership on NetBSD should be root:wheel
+
+--- configure.orig	2008-10-16 02:06:16.000000000 +0200
++++ configure
+@@ -1795,7 +1795,7 @@ fi
+ 
+ # choose between `su` and `su -`
+ case "$TARGET_SYS" in
+-    Linux|BSD/OS|FreeBSD|DragonFly)
++    Linux|BSD/OS|FreeBSD|DragonFly|NetBSD)
+ 	# `su -` is required on Linux and desirable where it works
+ 	# clear $TERM because some too smart by half systems spew /etc/motd
+ 	DCC_SU="TERM= su -";;
+@@ -2815,7 +2815,7 @@ case "$TARGET_SYS" in
+ 	DCC_OWN=daemon
+ 	DCC_GRP=daemon
+ 	;;
+-    FreeBSD)
++    FreeBSD|NetBSD)
+ 	DCCSUID=root
+ 	DCC_OWN=root
+ 	DCC_GRP=wheel

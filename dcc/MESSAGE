@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+
+If your site handles more than 100,000 messages per day, to decrease the
+load on the public DCC servers and increase the responsiveness of your
+DCC clients, you should set up your own, local DCC server connected to
+the global network of DCC servers.
+
+If you run the DCC server, cron-dccd should be run at least daily from the
+crontab to clean old checksums from the DB.
+
+The free DCC source is available only for non-commercial and some other
+uses.  It is not available to organizations that sell anti-spam appliances
+or provide managed email services as opposed to common Internet service.
+
+===========================================================================
