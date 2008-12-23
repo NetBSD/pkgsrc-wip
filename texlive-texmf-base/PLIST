@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/13 09:07:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/12/23 10:08:16 minskim Exp $
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEabrv.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEexample.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEfull.bib
@@ -32214,28 +32214,6 @@ share/texmf-dist/makeindex/startex/stxglo.ist
 share/texmf-dist/makeindex/startex/stxind.ist
 share/texmf-dist/makeindex/stex/stex.ist
 share/texmf-dist/makeindex/xdoc/docindex.ist
-share/texmf-dist/metafont/base/expr.mf
-share/texmf-dist/metafont/base/io.mf
-share/texmf-dist/metafont/base/mf.mf
-share/texmf-dist/metafont/base/null.mf
-share/texmf-dist/metafont/base/plain.mf
-share/texmf-dist/metafont/config/cmmf.ini
-share/texmf-dist/metafont/config/mf.ini
-share/texmf-dist/metafont/feynmf/feynmf.mf
-share/texmf-dist/metafont/mfpic/grafbase.mf
-share/texmf-dist/metafont/mftoeps/mftoeps.mf
-share/texmf-dist/metafont/misc/3test.mf
-share/texmf-dist/metafont/misc/6test.mf
-share/texmf-dist/metafont/misc/mode2dpi.mf
-share/texmf-dist/metafont/misc/mode2dpixy.mf
-share/texmf-dist/metafont/misc/modename.mf
-share/texmf-dist/metafont/misc/modes.mf
-share/texmf-dist/metafont/misc/ps2mfbas.mf
-share/texmf-dist/metafont/misc/rtest.mf
-share/texmf-dist/metafont/misc/test.mf
-share/texmf-dist/metafont/misc/waits.mf
-share/texmf-dist/metafont/misc/ztest.mf
-share/texmf-dist/metafont/roex/roex.mf
 share/texmf-dist/metapost/automata/automata.mp
 share/texmf-dist/metapost/base/TEX.mp
 share/texmf-dist/metapost/base/boxes.mp
@@ -43315,14 +43293,6 @@ share/texmf/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/metapost/base
 @dirrm share/texmf-dist/metapost/automata
 @dirrm share/texmf-dist/metapost
-@dirrm share/texmf-dist/metafont/roex
-@dirrm share/texmf-dist/metafont/misc
-@dirrm share/texmf-dist/metafont/mftoeps
-@dirrm share/texmf-dist/metafont/mfpic
-@dirrm share/texmf-dist/metafont/feynmf
-@dirrm share/texmf-dist/metafont/config
-@dirrm share/texmf-dist/metafont/base
-@dirrm share/texmf-dist/metafont
 @dirrm share/texmf-dist/makeindex/xdoc
 @dirrm share/texmf-dist/makeindex/stex
 @dirrm share/texmf-dist/makeindex/startex
