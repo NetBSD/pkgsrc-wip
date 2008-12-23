@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/23 13:06:12 pebog Exp $
 
 DISTNAME=		dcc-1.3.99
 #PKGREVISION=		1
@@ -45,6 +45,7 @@ SUBST_SED.dae=		-Ee 's!^(DCC(D|IFD|M)_ENABLE=)off$$!\1on!'
 SUBST_MESSAGE.dae=	Enabling all daemons in dcc_conf
 
 HAS_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ENV+=		PERL=${PERL5} \
 			DCC_XARGS=${XARGS}
