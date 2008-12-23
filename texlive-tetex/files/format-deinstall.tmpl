@@ -1,4 +1,4 @@
-# $NetBSD: format-deinstall.tmpl,v 1.1 2008/12/16 06:36:45 minskim Exp $
+# $NetBSD: format-deinstall.tmpl,v 1.2 2008/12/23 09:26:17 minskim Exp $
 #
 # Delete format files.
 #
@@ -10,10 +10,22 @@ DEINSTALL)
 		@CAT@ @PREFIX@/share/texmf/fmtutil/format.$f.cnf |
 		@GREP@ "^[^#]" |
 		while read format engine junk; do
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$engine/$format.base
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$engine/$format.fmt
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$engine/$format.log
-			@RM@ -f @VARBASE@/lib/texmf/web2c/$engine/$format.mem
+		  case "$engine" in
+		    mpost)
+		      fmtfile="$format.mem"
+		      texengine=metapost
+		      ;;
+		    mf-nowin)
+		      fmtfile="$format.base"
+		      texengine=metafont
+		      ;;
+		    *)
+		      fmtfile="$format.fmt"
+		      texengine=$engine
+		      ;;
+		  esac
+			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$fmtfile
+			@RM@ -f @VARBASE@/lib/texmf/web2c/$texengine/$format.log
 		done
 	done
 	@FIND@ -d @VARBASE@/lib/texmf -type d -empty -exec @RMDIR@ {} \;
