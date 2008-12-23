@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/15 00:12:07 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/23 09:22:07 minskim Exp $
 # TeX Live Revision 11589
 
 DISTNAME=	bin-tetex
@@ -26,7 +26,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
 CONF_FILES+=	${PREFIX}/share/texmf/web2c/updmap.cfg \
 		${PKG_SYSCONFDIR}/web2c/updmap.cfg
 
-TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PKG_SYSCONFDIR}
 
 .include "../../wip/kpathsea/texmf.mk"
 
