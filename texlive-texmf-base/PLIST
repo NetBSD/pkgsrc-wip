@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/23 10:08:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/23 10:24:07 minskim Exp $
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEabrv.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEexample.bib
 share/texmf-dist/bibtex/bib/IEEEtran/IEEEfull.bib
@@ -41627,32 +41627,6 @@ share/texmf-dist/tex/ytex/base/ytex.mail
 share/texmf-dist/tex/ytex/base/yusage.lst
 share/texmf-dist/tex/ytex/base/yusage.tex
 share/texmf-dist/tex/ytex/base/yuser.mac
-share/texmf/fmtutil/fmtutil-hdr.cnf
-share/texmf/fmtutil/format.aleph.cnf
-share/texmf/fmtutil/format.amstex.cnf
-share/texmf/fmtutil/format.context.cnf
-share/texmf/fmtutil/format.cslatex.cnf
-share/texmf/fmtutil/format.csplain.cnf
-share/texmf/fmtutil/format.cyramstex.cnf
-share/texmf/fmtutil/format.cyrtex.cnf
-share/texmf/fmtutil/format.cyrtexinfo.cnf
-share/texmf/fmtutil/format.eplain.cnf
-share/texmf/fmtutil/format.jadetex.cnf
-share/texmf/fmtutil/format.latex.cnf
-share/texmf/fmtutil/format.luatex.cnf
-share/texmf/fmtutil/format.metafont.cnf
-share/texmf/fmtutil/format.metapost.cnf
-share/texmf/fmtutil/format.mex.cnf
-share/texmf/fmtutil/format.mltex.cnf
-share/texmf/fmtutil/format.omega.cnf
-share/texmf/fmtutil/format.pdftex.cnf
-share/texmf/fmtutil/format.physe.cnf
-share/texmf/fmtutil/format.phyzzx.cnf
-share/texmf/fmtutil/format.tex.cnf
-share/texmf/fmtutil/format.texsis.cnf
-share/texmf/fmtutil/format.utf8mex.cnf
-share/texmf/fmtutil/format.xetex.cnf
-share/texmf/fmtutil/format.xmltex.cnf
 share/texmf/fonts/cmap/README
 share/texmf/fonts/cmap/dvipdfmx/EUC-UCS2
 share/texmf/fonts/cmap/dvipdfmx/README

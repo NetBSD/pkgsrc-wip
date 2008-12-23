@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/23 10:08:16 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/23 10:24:07 minskim Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -21,7 +21,6 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 			${DISTNAME}/texmf-dist/omega \
 			${DISTNAME}/texmf-dist/metapost \
 			${DISTNAME}/texmf-dist/tex \
-			${DISTNAME}/texmf/fmtutil \
 			${DISTNAME}/texmf/fonts \
 			${DISTNAME}/texmf/tex \
 			${DISTNAME}/texmf/web2c
