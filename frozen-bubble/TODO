@@ -1,5 +1,3 @@
-o Send an email to pkgsrc-users@ and pkgsrc-wip-review@ [leot]
-o Test DESTDIR support
 o If it is possible remove the INSTALL_MAKE_FLAGS hacks (they are horrible).
 o Test on more OSs and ports.
 o Review and import the patch needed for devel/SDL_Pango
