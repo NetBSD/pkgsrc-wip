@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/24 13:20:52 thomasklausner Exp $
+
+SHA1 (bsnes_v038.tar.bz2) = a18925d58695213a91319b0d2d32563e7d822c08
+RMD160 (bsnes_v038.tar.bz2) = 7fd97bc7737eaf5956359f7243f04bc1ea16c599
+Size (bsnes_v038.tar.bz2) = 448509 bytes
+SHA1 (patch-aa) = 49f286d6840eef297985631ccf35dff4275b8619

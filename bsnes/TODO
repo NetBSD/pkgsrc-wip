@@ -1,0 +1,2 @@
+Compiles fine, but dumps core after loading a ROM.
+Backtrace points to threading problem.
