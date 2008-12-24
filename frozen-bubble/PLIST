@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 12:05:26 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/24 20:47:22 leot1990 Exp $
 bin/frozen-bubble
 bin/frozen-bubble-editor
 lib/frozen-bubble/fb-server
-@comment lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/fb_c_stuff/.packlist
 man/man6/frozen-bubble-editor.6
 man/man6/frozen-bubble.6
 share/frozen-bubble/data/demo1.bz2
@@ -3251,6 +3250,7 @@ share/locale/sk/LC_MESSAGES/frozen-bubble.mo
 share/locale/sl/LC_MESSAGES/frozen-bubble.mo
 share/locale/sv/LC_MESSAGES/frozen-bubble.mo
 share/locale/tr/LC_MESSAGES/frozen-bubble.mo
+@dirrm lib/frozen-bubble
 @dirrm share/frozen-bubble/snd
 @dirrm share/frozen-bubble/gfx/pinguins
 @dirrm share/frozen-bubble/gfx/menu/anims
