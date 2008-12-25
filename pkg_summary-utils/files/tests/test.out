@@ -442,3 +442,7 @@ PKGPATH=math/py-Numeric
 PKGNAME=gmake-X
 PKGPATH=devel/gmake
 
+--------------------------------------------------
+------- pkg_assignments2pkgpath #12
+ok1
+ok2

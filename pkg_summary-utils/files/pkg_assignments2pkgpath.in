@@ -22,14 +22,32 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ############################################################
+
+#use "alt_getopt.awk"
+#use "abort.awk"
+
+############################################################
 function usage (){
 	printf "\
 pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH\n\
-usage: pkg_cmp_summary -h\n\
-       pkg_cmp_summary [OPTIONS] [files...]\n\
+usage: pkg_assignments2pkgpath -h|--help\n\
+       pkg_assignments2pkgpath [OPTIONS] [files...]\n\
 OPTIONS:\n\
   -h|--help            display this help\n\
 " > "/dev/stderr"
+}
+
+BEGIN {
+	long_opts ["help"] = "h"
+
+	while (getopt("h")){
+		if (optopt == "h"){
+			usage()
+			exit 0
+		}else{
+			abort()
+		}
+	}
 }
 
 $0 ~ /^PKGPATH=/ {

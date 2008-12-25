@@ -149,3 +149,12 @@ pkg_src_summary -A -f PKGNAME,PKGPATH \
 grep -v DEPENDS |
 pkg_grep_summary PKGPATH 'fvalue ~ /gmake|py-Numeric|py-cairo/' |
 normalize_version
+
+echo '--------------------------------------------------'
+echo '------- pkg_assignments2pkgpath #12'
+pkg_assignments2pkgpath -h 2>&1 |
+grep pkg_assignments2pkgpath > /dev/null && echo ok1
+
+pkg_assignments2pkgpath --help 2>&1 |
+grep pkg_assignments2pkgpath > /dev/null && echo ok2
+
