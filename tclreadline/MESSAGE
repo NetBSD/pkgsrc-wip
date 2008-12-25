@@ -1,12 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/12/09 22:58:43 pettai Exp $
+$NetBSD: MESSAGE,v 1.2 2008/12/25 11:58:11 pettai Exp $
 
 tclreadline is now installed.
 
-A skel file for tclsh & wish is bundled:
+A template file for the tcl/tk shells (tclsh & wish) is bundled and
+installed here:
 ${EGDIR}/tclshrc
 
-Rename it to .tclshrc (and/or .wishrc) and copy it to your skel directory:
-/etc/skel (and/or your home directory ~)
+Rename it with a dot infront (.tclshrc & .wishrc) and copy it to your
+/etc/skel directory if you wish that all newly created users should receive
+it automatically, or your just your home directory ~
 
 ===========================================================================
