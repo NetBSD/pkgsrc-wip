@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2008/12/25 14:06:53 cheusov Exp $
+$NetBSD: distinfo,v 1.12 2008/12/25 17:20:21 cheusov Exp $
 
-SHA1 (pkg_online-0.8.0.tar.gz) = 17b49091d1d29412120c6be8320c4f044e18436d
-RMD160 (pkg_online-0.8.0.tar.gz) = 64917c3906909f530a28efbe1f2072940407d3c0
-Size (pkg_online-0.8.0.tar.gz) = 13653 bytes
+SHA1 (pkg_online-0.9.0.tar.gz) = 121a7674467805f1f6e4ef060619bfa754a11597
+RMD160 (pkg_online-0.9.0.tar.gz) = f2f02fec598e59d12f4e760cf69947f65ef7d95b
+Size (pkg_online-0.9.0.tar.gz) = 14057 bytes
