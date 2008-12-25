@@ -52,11 +52,29 @@ runtest pkg_grep_summary -e EXFIELD < src_summary.txt | \
 
 # pkg_cmp_summary
 echo '--------------------------------------------------'
-echo '------- pkg_cmp_summary #1'
+echo '------- pkg_cmp_summary #1.1'
 pkg_cmp_summary src_summary.txt src_summary2.txt | sort -k2,2
 echo '--------------------------------------------------'
-echo '------- pkg_cmp_summary #2'
+echo '------- pkg_cmp_summary #1.2.1'
 pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.2.2'
+pkg_cmp_summary --with-pkgpath src_summary.txt src_summary2.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.3'
+pkg_cmp_summary src_summary4.txt src_summary5.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.4'
+pkg_cmp_summary -p src_summary4.txt src_summary5.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.5.1'
+pkg_cmp_summary --use-checksum src_summary4.txt src_summary5.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.5.2'
+pkg_cmp_summary -c src_summary4.txt src_summary5.txt | sort -k2,2
+echo '--------------------------------------------------'
+echo '------- pkg_cmp_summary #1.6'
+pkg_cmp_summary -c -p src_summary4.txt src_summary6.txt | sort -k2,2
 
 # pkg_list_all_pkgs
 echo '--------------------------------------------------'

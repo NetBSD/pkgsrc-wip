@@ -80,7 +80,7 @@ PKGNAME=netcat-1.10nb2
 PKGNAME=pkg-config-0.23
 PKGNAME=jpeg-6bnb4
 --------------------------------------------------
-------- pkg_cmp_summary #1
+------- pkg_cmp_summary #1.1
 = awk-pkgsrc-dewey 0.5.6 0.5.6
 = checkperms 1.10 1.10
 2 dict-client
@@ -109,7 +109,7 @@ PKGNAME=jpeg-6bnb4
 = tiff 3.8.2nb4 3.8.2nb4
 - x11-links 0.38
 --------------------------------------------------
-------- pkg_cmp_summary #2
+------- pkg_cmp_summary #1.2.1
 = devel/gmake gmake 3.81 3.81
 = devel/libltdl libltdl 1.5.24 1.5.24
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
@@ -138,6 +138,52 @@ PKGNAME=jpeg-6bnb4
 = wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
 = wip/pkg_summary-utils pkg_summary-utils 0.18.1 0.18.1
 > wip/runawk runawk 0.14.3 0.13.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.2.2
+= devel/gmake gmake 3.81 3.81
+= devel/libltdl libltdl 1.5.24 1.5.24
+= devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
+= devel/pkg-config pkg-config 0.23 0.23
+= editors/emacs emacs 22.1nb6 22.1nb6
+= graphics/jpeg jpeg 6bnb4 6bnb4
+= graphics/libungif libungif 4.1.4nb1 4.1.4nb1
+= graphics/png png 1.2.32beta01 1.2.32beta01
+= graphics/tiff tiff 3.8.2nb4 3.8.2nb4
+= lang/perl5 perl 5.8.8nb8 5.8.8nb8
+- net/netcat netcat 1.10nb2
++ pkgtools/digest digest 99.99.99
+- pkgtools/x11-links x11-links 0.38
+= sysutils/checkperms checkperms 1.10 1.10
+= textproc/dict-client dict-client 1.9.15nb2 1.9.15nb2
+= textproc/dictem dictem 0.82 0.82
+= wip/awk-pkgsrc-dewey awk-pkgsrc-dewey 0.5.6 0.5.6
+= wip/dict-client dict-client 1.10.11nb2 1.10.11nb2
+< wip/dict-server dict-server 1.10.11nb2 1.11.0
+= wip/distbb distbb 0.22.0 0.22.0
+= wip/libmaa libmaa 1.0.1nb1 1.0.1nb1
+= wip/paexec paexec 0.10.0nb1 0.10.0nb1
+< wip/pipestatus pipestatus 0.4.0 0.5.0
+= wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
+= wip/pkg_online-client pkg_online-client 0.5.0 0.5.0
+= wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
+= wip/pkg_summary-utils pkg_summary-utils 0.18.1 0.18.1
+> wip/runawk runawk 0.14.3 0.13.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.3
+= dictem 1.0.0 1.0.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.4
+- textproc/dictem dictem 1.0.0
++ wip/dictem dictem 1.0.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.5.1
+! dictem 1.0.0 1.0.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.5.2
+! dictem 1.0.0 1.0.0
+--------------------------------------------------
+------- pkg_cmp_summary #1.6
+! textproc/dictem dictem 1.0.0 1.0.0
 --------------------------------------------------
 ------- pkg_list_all_pkgs #3
 XXXX

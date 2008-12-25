@@ -24,6 +24,7 @@
 ############################################################
 
 #use "pkgsrc-dewey.awk"
+#use "alt_getopt.awk"
 
 ############################################################
 function usage (){
@@ -42,26 +43,28 @@ OPTIONS:\n\
 
 BEGIN {
 	skip = 0
-	for (i = 1; i <= ARGC; ++i){
-		if (ARGV [i] ~ /^(-h|--help)$/){
+
+	long_opts ["help"]         = "h"
+	long_opts ["with-pkgpath"] = "p"
+	long_opts ["use-checksum"] = "c"
+	long_opts ["multi"]        = "m"
+
+	while (getopt("hpcm")){
+		if (optopt == "h"){
 			usage()
 			exit 0
-		}else if (ARGV [i] ~ /^(-p|--with-pkgpath)$/){
+		}else if (optopt == "p"){
 			with_pkgpath = 1
-			ARGV [i] = ""
-
 			++skip
-		}else if (ARGV [i] ~ /^(-c|--use-checksum)$/){
+		}else if (optopt == "c"){
 			use_checksum = 1
-			ARGV [i] = ""
-
 			++skip
-		}else if (ARGV [i] ~ /^(-m|--multi)$/){
+		}else if (optopt == "m"){
 			with_multivar = 1
 			with_pkgpath  = 1
-			ARGV [i] = ""
-
 			++skip
+		}else{
+			abort()
 		}
 	}
 
