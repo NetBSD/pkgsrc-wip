@@ -176,3 +176,22 @@ grep pkg_assignments2pkgpath > /dev/null && echo ok1
 pkg_assignments2pkgpath --help 2>&1 |
 grep pkg_assignments2pkgpath > /dev/null && echo ok2
 
+echo '--------------------------------------------------'
+echo '------- pkg_src_fetch_var #13.1'
+echo x11/xxkb | pkg_src_fetch_var -f 'PKGNAME PKGPATH MAINTAINER' |
+normalize_version
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_fetch_var #13.2'
+echo x11/xxkb | pkg_src_fetch_var -v'PKGNAME PKGPATH MAINTAINER' |
+normalize_version
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_fetch_var #13.3'
+echo x11/xxkb | pkg_src_fetch_var --vars='PKGNAME PKGPATH MAINTAINER' |
+normalize_version
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_fetch_var #13.4'
+echo x11/xxkb | pkg_src_fetch_var --fields 'PKGNAME PKGPATH MAINTAINER' |
+normalize_version

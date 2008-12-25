@@ -492,3 +492,15 @@ PKGPATH=devel/gmake
 ------- pkg_assignments2pkgpath #12
 ok1
 ok2
+--------------------------------------------------
+------- pkg_src_fetch_var #13.1
++	xxkb-X	x11/xxkb	cheusov@tut.by
+--------------------------------------------------
+------- pkg_src_fetch_var #13.2
++	xxkb-X	x11/xxkb	cheusov@tut.by
+--------------------------------------------------
+------- pkg_src_fetch_var #13.3
++	xxkb-X	x11/xxkb	cheusov@tut.by
+--------------------------------------------------
+------- pkg_src_fetch_var #13.4
++	xxkb-X	x11/xxkb	cheusov@tut.by

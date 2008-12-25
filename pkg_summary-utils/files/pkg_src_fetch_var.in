@@ -21,6 +21,11 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+###############################################################
+
+#use "alt_getopt.awk"
+
+###############################################################
 # output format:
 #    for success:
 #       + <TAB> FIELD1 <TAB> FIELD2 ...FIELD-N
@@ -85,22 +90,18 @@ PKGPATHs are read from files or stdin, one PKGPATH per line\n\
 
 BEGIN {
 	# options and fields
-	for (i=1; i <= ARGC; ++i){
-		if (ARGV [i] ~ /^(--help|-h)$/){
+	long_opts ["help"]   = "h"
+	long_opts ["fields"] = "f"
+	long_opts ["vars"]   = "v"
+
+	while (getopt("hf:v:")){
+		if (optopt == "h"){
 			usage()
 			exit 0
-		}
-		if (ARGV [i] ~ /^(--fields|-f|--vars|-v)$/){
-			fields = ARGV [i+1]
-			ARGV [i+1] = ARGV [i] = ""
-			++i
-			continue
-		}
-		if (ARGV [i] ~ /^(--fields|-f|--vars|-v)/){
-			fields = ARGV [i]
-			sub(/^[^=]*=/, "", fields)
-			ARGV [i] = ""
-			continue
+		}else if (optopt == "f" || optopt == "v"){
+			fields = optarg
+		}else{
+			abort()
 		}
 	}
 

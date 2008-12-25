@@ -101,7 +101,7 @@ list_pkgs (){
 
 runpipe \
     list_pkgs "$@" '|' \
-    pkg_src_fetch_var -f="$fields" > "$helper_out"
+    pkg_src_fetch_var -f "$fields" > "$helper_out"
 
 # `+' to micro_summary (fast!)
 awk -F'\t' -v fields="$fields" '
