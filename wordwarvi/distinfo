@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/25 12:27:03 thomasklausner Exp $
+
+SHA1 (wordwarvi-0.24.tar.gz) = cc745ca6debb15c8ab1269c4922e1d732f176cb8
+RMD160 (wordwarvi-0.24.tar.gz) = 70c0097d386fafbf68afe19ab0b7e6853a248ab2
+Size (wordwarvi-0.24.tar.gz) = 8787814 bytes
+SHA1 (patch-aa) = a2b85856abee3f3dc8811d17bc1236853d04cbc9
+SHA1 (patch-ab) = 722752254fd64a2d4e30927ca9558d3947512693

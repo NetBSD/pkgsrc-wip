@@ -1,0 +1,34 @@
+Core dumps very soon, during intro or at startup.
+
+(gdb) bt
+#0  0x00000000004105e4 in draw_objs ()
+#1  0x0000000000411a67 in main_da_expose ()
+#2  0x00007f7ffd02d61d in gtk_marshal_BOOLEAN__VOID ()
+   from /usr/pkg/lib/libgtk-x11-2.0.so.0
+#3  0x00007f7ffa60b329 in g_closure_invoke ()
+   from /usr/pkg/lib/libgobject-2.0.so.0
+#4  0x00007f7ffa61b8d1 in g_signal_chain_from_overridden ()
+   from /usr/pkg/lib/libgobject-2.0.so.0
+#5  0x00007f7ffa61c9f8 in g_signal_emit_valist ()
+   from /usr/pkg/lib/libgobject-2.0.so.0
+#6  0x00007f7ffa61cd93 in g_signal_emit ()
+   from /usr/pkg/lib/libgobject-2.0.so.0
+#7  0x00007f7ffd11f99e in gtk_widget_class_list_style_properties ()
+   from /usr/pkg/lib/libgtk-x11-2.0.so.0
+#8  0x00007f7ffd027a80 in gtk_main_do_event ()
+   from /usr/pkg/lib/libgtk-x11-2.0.so.0
+#9  0x00007f7ffcd38f30 in gdk_window_is_viewable ()
+   from /usr/pkg/lib/libgdk-x11-2.0.so.0
+#10 0x00007f7ffcd39536 in gdk_window_process_all_updates ()
+   from /usr/pkg/lib/libgdk-x11-2.0.so.0
+#11 0x00007f7ffcd39559 in gdk_window_process_all_updates ()
+   from /usr/pkg/lib/libgdk-x11-2.0.so.0
+#12 0x00007f7ffcd1eeae in gdk_threads_add_timeout_seconds ()
+   from /usr/pkg/lib/libgdk-x11-2.0.so.0
+#13 0x00007f7ffa0350d2 in g_main_context_dispatch ()
+   from /usr/pkg/lib/libglib-2.0.so.0
+#14 0x00007f7ffa0383a5 in g_main_context_check ()
+   from /usr/pkg/lib/libglib-2.0.so.0
+#15 0x00007f7ffa03869d in g_main_loop_run () from /usr/pkg/lib/libglib-2.0.so.0
+#16 0x00007f7ffd027c52 in gtk_main () from /usr/pkg/lib/libgtk-x11-2.0.so.0
+#17 0x0000000000427d86 in main ()
