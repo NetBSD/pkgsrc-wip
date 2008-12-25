@@ -360,6 +360,10 @@ MAINTAINER:     cheusov@tut.by
 CATEGORIES:     pkgtools
 
 --------------------------------------------------
+------- pkg_summary4view #8.1
+ok
+ok
+--------------------------------------------------
 ------- pkg_uniq_summary #9
 ASSIGNMENTS=OPT1=1,OPT2=2
 PKGNAME=distbb-0.22.0

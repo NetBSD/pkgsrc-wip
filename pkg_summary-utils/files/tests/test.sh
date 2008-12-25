@@ -105,6 +105,11 @@ echo '------- pkg_summary4view #8'
 pkg_grep_summary PKGPATH 'fvalue == "wip/pkg_summary-utils"' \
     < src_summary.txt | pkg_summary4view
 
+echo '--------------------------------------------------'
+echo '------- pkg_summary4view #8.1'
+pkg_summary4view -h     2>&1 | grep pkg_summary4view >/dev/null && echo ok
+pkg_summary4view --help 2>&1 | grep pkg_summary4view >/dev/null && echo ok
+
 # pkg_uniq_summary
 echo '--------------------------------------------------'
 echo '------- pkg_uniq_summary #9'
