@@ -1,4 +1,14 @@
 ----------------------------------------------------------------------
+Version 0.23.0, by Aleksey Cheusov, Fri, 26 Dec 2008 00:30:26 +0200
+
+  tools based on runawk uses alt_getopt.awk module
+  for handling options, regression tests
+
+  pkg_src_fetch_var doesn't accept -f=<value>
+
+  minor clean-ups in pkg_update_src_summary
+
+----------------------------------------------------------------------
 Version 0.22.0, by Aleksey Cheusov, Thu, 27 Nov 2008 22:16:16 +0200
 
   1) MEGAFIXES and improvements in pkg_src_summary
