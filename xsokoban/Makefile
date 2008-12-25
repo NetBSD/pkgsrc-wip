@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/16 19:31:05 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/25 19:26:56 cheusov Exp $
 #
 
 DISTNAME=	xsokoban-3.3c
@@ -35,7 +35,6 @@ BUILD_TARGET=		xsokoban
 CPPFLAGS+=		-DROOTDIR="\"${PREFIX}/share/xsokoban\""
 CPPFLAGS+=		-DSAVEPATH="\"${SAVEPATH}\""
 CPPFLAGS+=		-DSCOREPATH="\"${SCOREFILE}\""
-CPPFLAGS+=		-DOWNSER="\"GAMES_USER\""
 
 AUTO_MKDIRS=		yes
 
