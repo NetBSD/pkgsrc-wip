@@ -176,14 +176,12 @@ changed_pkgs_fn=$tmp_dir/changed_pkgs
 awk '$1 ~ /^[+<>?0-9]/ {print $2 ":" $3}' $cmp_fn > $changed_pkgs_fn
 
 extract_pkgpath (){
-awk -v changed_pkgs_fn=$changed_pkgs_fn '
-BEGIN {
-   while (0 < (ret = getline < changed_pkgs_fn)){
-      pkgs [$1] = 1
-   }
+runawk -v changed_pkgs_fn=$changed_pkgs_fn -e '
+#use "xgetline.awk"
 
-   if (ret < 0){
-      printf "reading error from" changed_pkgs_fn > "/dev/stderr"
+BEGIN {
+   while (xgetline0(changed_pkgs_fn)){
+      pkgs [$1] = 1
    }
 
    SUBSEP = ":"
@@ -199,11 +197,7 @@ $1 == "PKGPATH" {
    pkgpath = $2
 }
 
-pkgpath != "" && pkgbase != "" {
-   interesting = ((pkgpath ":" pkgbase) in pkgs)
-}
-
-NF == 0 && interesting {
+NF == 0 && ((pkgpath ":" pkgbase) in pkgs) {
    print pkgpath
    pkgbase = pkgpath = ""
 }
@@ -216,4 +210,6 @@ extract_pkgpath $micsum_fn > $pkgpath_fn
 eval pkg_src_summary $fields < $pkgpath_fn >> $new_summary
 
 # result
-mv $new_summary $summary
+pkg_uniq_summary $new_summary > $new_summary.uniq
+rm $new_summary
+mv $new_summary.uniq $summary
