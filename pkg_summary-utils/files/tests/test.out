@@ -373,6 +373,10 @@ PKGNAME=distbb-0.22.0
 PKGPATH=wip/distbb:OPT=1,OPT2=3
 
 --------------------------------------------------
+------- pkg_uniq_summary #9.1
+ok1
+ok2
+--------------------------------------------------
 ------- pkg_src_summary #10.1
 ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
 PKGNAME=ap2-py25-python-3.3.1

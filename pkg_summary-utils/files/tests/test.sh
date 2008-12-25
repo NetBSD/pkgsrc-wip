@@ -115,6 +115,11 @@ echo '--------------------------------------------------'
 echo '------- pkg_uniq_summary #9'
 pkg_uniq_summary src_summary3.txt
 
+echo '--------------------------------------------------'
+echo '------- pkg_uniq_summary #9.1'
+pkg_uniq_summary -h 2>&1     | grep pkg_uniq_summary > /dev/null && echo ok1
+pkg_uniq_summary --help 2>&1 | grep pkg_uniq_summary > /dev/null && echo ok2
+
 # pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #10.1'
