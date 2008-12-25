@@ -63,7 +63,7 @@ $gallery->setConfig('setup.password', '');
  *
  * Don't make this the same as your gallery directory!
  */
-$gallery->setConfig('data.gallery.base', '@G2DATA@');
+$gallery->setConfig('data.gallery.base', '@G2DATA@/');
 
 /*
  * Gallery can store its data in multiple different back ends.  Currently we
