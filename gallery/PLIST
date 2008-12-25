@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/22 16:48:38 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/25 23:40:15 pettai Exp $
+share/examples/gallery/.htaccess
 share/examples/gallery/config.php
 share/examples/gallery/gallery.conf
 share/gallery/AUTHORS
@@ -110,45 +111,6 @@ share/gallery/docs/context-help/register.php
 share/gallery/docs/context-help/search.php
 share/gallery/docs/context-help/slideshow.php
 share/gallery/docs/context-help/test.php
-share/gallery/docs/g1package/gallery1-admin.backup.html
-share/gallery/docs/g1package/gallery1-admin.basics.html
-share/gallery/docs/g1package/gallery1-admin.embedding.html
-share/gallery/docs/g1package/gallery1-admin.html
-share/gallery/docs/g1package/gallery1-admin.mirroring.html
-share/gallery/docs/g1package/gallery1-admin.offline.html
-share/gallery/docs/g1package/gallery1-admin.patching.html
-share/gallery/docs/g1package/gallery1-admin.performance.html
-share/gallery/docs/g1package/gallery1-admin.securing.html
-share/gallery/docs/g1package/gallery1-admin.users.html
-share/gallery/docs/g1package/gallery1-install.config-wizard.html
-share/gallery/docs/g1package/gallery1-install.credits.html
-share/gallery/docs/g1package/gallery1-install.faq.a.html
-share/gallery/docs/g1package/gallery1-install.faq.b.html
-share/gallery/docs/g1package/gallery1-install.faq.c.html
-share/gallery/docs/g1package/gallery1-install.faq.d.html
-share/gallery/docs/g1package/gallery1-install.faq.html
-share/gallery/docs/g1package/gallery1-install.features.html
-share/gallery/docs/g1package/gallery1-install.help.html
-share/gallery/docs/g1package/gallery1-install.html
-share/gallery/docs/g1package/gallery1-install.language-packs.html
-share/gallery/docs/g1package/gallery1-install.overview.html
-share/gallery/docs/g1package/gallery1-install.remote-applets.html
-share/gallery/docs/g1package/gallery1-install.required-programs.html
-share/gallery/docs/g1package/gallery1-install.requirements.html
-share/gallery/docs/g1package/gallery1-install.unix-ftp.html
-share/gallery/docs/g1package/gallery1-install.unix-shell.html
-share/gallery/docs/g1package/gallery1-install.upgrade.html
-share/gallery/docs/g1package/gallery1-install.windows-iis.html
-share/gallery/docs/g1package/gallery1-install.windows.html
-share/gallery/docs/g1package/gallery1-user.html
-share/gallery/docs/g1package/gallery1-user.import.html
-share/gallery/docs/g1package/gallery1-user.watermark.html
-share/gallery/docs/g1package/html.css
-share/gallery/docs/g1package/images/basic-auth.gif
-share/gallery/docs/g1package/images/up-up.gif
-share/gallery/docs/g1package/images/up.gif
-share/gallery/docs/g1package/index.html
-share/gallery/docs/g1package/pretty-html.css
 share/gallery/docs/gallery1-admin.backup.html
 share/gallery/docs/gallery1-admin.basics.html
 share/gallery/docs/gallery1-admin.embedding.html
@@ -448,17 +410,16 @@ share/gallery/images/gallery-tag.png
 share/gallery/images/gallery1.gif
 share/gallery/images/green_trafficlight.gif
 share/gallery/images/icons/2downarrow.gif
-share/gallery/images/icons/admin.gif
-share/gallery/images/icons/behavior-capplet.gif
 share/gallery/images/icons/camera.gif
+share/gallery/images/icons/cog.png
+share/gallery/images/icons/comments.png
 share/gallery/images/icons/compressed.gif
 share/gallery/images/icons/decrypted.gif
 share/gallery/images/icons/delete.gif
-share/gallery/images/icons/display.gif
 share/gallery/images/icons/ecard.gif
 share/gallery/images/icons/editcopy.gif
 share/gallery/images/icons/exit.gif
-share/gallery/images/icons/folder_new.gif
+share/gallery/images/icons/folder_new.png
 share/gallery/images/icons/frame_query.gif
 share/gallery/images/icons/help.gif
 share/gallery/images/icons/history.gif
@@ -476,6 +437,8 @@ share/gallery/images/icons/key.gif
 share/gallery/images/icons/locked.gif
 share/gallery/images/icons/login.gif
 share/gallery/images/icons/logout.gif
+share/gallery/images/icons/map.png
+share/gallery/images/icons/monitor.png
 share/gallery/images/icons/navigation/nav_dot.gif
 share/gallery/images/icons/navigation/nav_dot_left.gif
 share/gallery/images/icons/navigation/nav_dot_right.gif
@@ -486,12 +449,12 @@ share/gallery/images/icons/navigation/nav_next.gif
 share/gallery/images/icons/navigation/nav_page.gif
 share/gallery/images/icons/navigation/nav_prev.gif
 share/gallery/images/icons/navigation/return_to.gif
-share/gallery/images/icons/new_album.gif
 share/gallery/images/icons/no_idea.gif
 share/gallery/images/icons/notice/error.gif
 share/gallery/images/icons/notice/information.gif
 share/gallery/images/icons/notice/success.gif
 share/gallery/images/icons/notice/warning.gif
+share/gallery/images/icons/picture_edit.png
 share/gallery/images/icons/preferences.gif
 share/gallery/images/icons/register.gif
 share/gallery/images/icons/reload.gif
@@ -500,14 +463,12 @@ share/gallery/images/icons/slideshow/1leftarrow.gif
 share/gallery/images/icons/slideshow/1rightarrow.gif
 share/gallery/images/icons/slideshow/play_stop.gif
 share/gallery/images/icons/tab_duplicate.gif
-share/gallery/images/icons/thumbnail.gif
+share/gallery/images/icons/text_list_numbers.png
 share/gallery/images/icons/tree/join-left.gif
 share/gallery/images/icons/tree/join-right.gif
 share/gallery/images/icons/tree/joinbottom-left.gif
 share/gallery/images/icons/tree/joinbottom-right.gif
-share/gallery/images/icons/unsortedList.gif
 share/gallery/images/icons/user_gray.gif
-share/gallery/images/icons/view_comment.gif
 share/gallery/images/icons/viewmag1.gif
 share/gallery/images/icons/window_fullscreen.gif
 share/gallery/images/icons/window_nofullscreen.gif
@@ -1034,8 +995,6 @@ share/gallery/watermark_album.php
 @dirrm share/gallery/html
 @dirrm share/gallery/help
 @dirrm share/gallery/docs/images
-@dirrm share/gallery/docs/g1package/images
-@dirrm share/gallery/docs/g1package
 @dirrm share/gallery/docs/context-help
 @dirrm share/gallery/docs
 @dirrm share/gallery/css
