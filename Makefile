@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3165 2008/12/24 13:22:11 thomasklausner Exp $
+# $Id: Makefile,v 1.3166 2008/12/25 11:46:24 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1778,6 +1778,7 @@ SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
 SUBDIR+=	tcl85
+SUBDIR+=	tclreadline
 SUBDIR+=	tcmplex-panteltje
 SUBDIR+=	tcpspy
 SUBDIR+=	tcptrack
