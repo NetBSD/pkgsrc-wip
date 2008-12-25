@@ -42,8 +42,6 @@ OPTIONS:\n\
 }
 
 BEGIN {
-	skip = 0
-
 	long_opts ["help"]         = "h"
 	long_opts ["with-pkgpath"] = "p"
 	long_opts ["use-checksum"] = "c"
@@ -55,25 +53,24 @@ BEGIN {
 			exit 0
 		}else if (optopt == "p"){
 			with_pkgpath = 1
-			++skip
 		}else if (optopt == "c"){
 			use_checksum = 1
-			++skip
 		}else if (optopt == "m"){
 			with_multivar = 1
 			with_pkgpath  = 1
-			++skip
 		}else{
 			abort()
 		}
 	}
 
-	if (ARGC-skip != 3){
+	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
+
+	if (ARGC != ind+2){
 		usage()
 		exit 1
 	}
 
-	file1 = ARGV [1 + skip]
+	file1 = ARGV [ind]
 }
 
 function trim (s){

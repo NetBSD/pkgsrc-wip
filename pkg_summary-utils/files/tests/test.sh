@@ -74,7 +74,7 @@ echo '------- pkg_cmp_summary #1.5.2'
 pkg_cmp_summary -c src_summary4.txt src_summary5.txt | sort -k2,2
 echo '--------------------------------------------------'
 echo '------- pkg_cmp_summary #1.6'
-pkg_cmp_summary -c -p src_summary4.txt src_summary6.txt | sort -k2,2
+pkg_cmp_summary -cp src_summary4.txt src_summary6.txt | sort -k2,2
 
 # pkg_list_all_pkgs
 echo '--------------------------------------------------'
