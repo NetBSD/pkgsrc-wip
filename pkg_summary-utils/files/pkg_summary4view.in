@@ -21,6 +21,9 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#use "alt_getopt.awk"
+#use "abort.awk"
+
 function usage (){
 	printf "\
 pkg_summary4view - converts pkg_summary(5) to human readable format\n\
@@ -31,10 +34,13 @@ OPTIONS:\n\
 }
 
 BEGIN {
-	for (i = 1; i <= ARGC; ++i){
-		if (ARGV [i] ~ /^(-h|--help)$/){
+	long_opts ["help"] = "h"
+	while (getopt("h")){
+		if (optopt == "h"){
 			usage()
 			exit 0
+		}else{
+			abort()
 		}
 	}
 }
