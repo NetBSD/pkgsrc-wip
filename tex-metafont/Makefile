@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/23 10:03:11 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/26 08:29:57 minskim Exp $
 # TeX Live Revision 7340
 
 DISTNAME=	metafont
-PKGNAME=	tex-metafont-2008.7340
+PKGNAME=	tex-${DISTNAME}-2008.7340
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
 DIST_SUBDIR=	${PKGNAME_NOREV}

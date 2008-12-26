@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/12/26 08:21:06 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/26 08:22:00 minskim Exp $
 # TeX Live Revision 9267
 
 DISTNAME=	plain
-PKGNAME=	tex-plain-3.14159265
+PKGNAME=	tex-${DISTNAME}-3.14159265
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
