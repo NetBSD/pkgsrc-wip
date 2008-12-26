@@ -38,21 +38,27 @@ OPTIONS:\n\
   -c|--use-checksum    also use CVS_CHECKSUM field in comparing packages\n\
   -m|--multi           support multi-variant packages, that is packages\n\
                         with building options in PKGPATH section\n\
+  -P|--pkgpath         use PKGPATH only for comparison, ignore PKGNAME\n\
 " > "/dev/stderr"
 }
 
 BEGIN {
+	with_pkgname = 1
+
 	long_opts ["help"]         = "h"
 	long_opts ["with-pkgpath"] = "p"
 	long_opts ["use-checksum"] = "c"
 	long_opts ["multi"]        = "m"
 
-	while (getopt("hpcm")){
+	while (getopt("hpcmP")){
 		if (optopt == "h"){
 			usage()
 			exit 0
 		}else if (optopt == "p"){
 			with_pkgpath = 1
+		}else if (optopt == "P"){
+			with_pkgpath = 1
+			with_pkgname = 0
 		}else if (optopt == "c"){
 			use_checksum = 1
 		}else if (optopt == "m"){
@@ -80,7 +86,7 @@ function trim (s){
 	return s
 }
 
-$0 ~ /^PKGNAME=/ {
+with_pkgname && $0 ~ /^PKGNAME=/ {
 	pkgname = trim(substr($0, 9))
 	next
 }
@@ -108,9 +114,12 @@ NF == 0 {
 	sub(/-[^-]+$/, "", pkgname)
 
 	# option PKGPATH
-	if (with_pkgpath){
+	if (with_pkgpath && with_pkgname){
 		pkgbase      = pkgpath      " " pkgname
 		full_pkgbase = full_pkgpath " " pkgname
+	}else if (with_pkgpath){
+		pkgbase      = pkgpath
+		full_pkgbase = full_pkgpath
 	}else{
 		pkgbase      = pkgname
 		full_pkgbase = pkgname
@@ -146,25 +155,32 @@ NF == 0 {
 		}
 
 		if (! (pkgbase in names)){
-			print "+", full_pkgbase, ver
+			if (ver != "")
+				print "+", full_pkgbase, ver
+			else
+				print "+", full_pkgbase
 
 			next
 		}
 
-		ver1 = names [pkgbase]
-		res = dewey_cmp(ver1, ver)
+		if (with_pkgname){
+			ver1 = names [pkgbase]
+			res = dewey_cmp(ver1, ver)
 
-		if (use_checksum && res == "="){
-			prev_checksum = checksums [pkgbase]
-			if (prev_checksum != "" &&
-				curr_checksum != "" &&
-				prev_checksum != curr_checksum)
-			{
-				res = "!"
+			if (use_checksum && res == "="){
+				prev_checksum = checksums [pkgbase]
+				if (prev_checksum != "" &&
+					curr_checksum != "" &&
+					prev_checksum != curr_checksum)
+				{
+					res = "!"
+				}
 			}
-		}
 
-		print res, full_pkgbase, ver1, ver
+			print res, full_pkgbase, ver1, ver
+		}else{
+			print "=", full_pkgbase
+		}
 	}
 
 	next
@@ -173,10 +189,16 @@ NF == 0 {
 END {
 	for (pkgbase in names){
 		if (! (pkgbase in present)){
+			if (names [pkgbase] != ""){
+				nm = " " names [pkgbase]
+			}else{
+				nm = ""
+			}
+
 			if (pkgbase in full_pkgpaths)
-				print "-", full_pkgpaths [pkgbase], names [pkgbase]
+				print "-", full_pkgpaths [pkgbase] nm
 			else
-				print "-", pkgbase, names [pkgbase]
+				print "-", pkgbase nm
 
 			delete duplicates [pkgbase]
 		}else if (pkgbase in duplicates){

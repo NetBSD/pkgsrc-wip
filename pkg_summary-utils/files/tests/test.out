@@ -185,6 +185,36 @@ PKGNAME=jpeg-6bnb4
 ------- pkg_cmp_summary #1.6
 ! textproc/dictem dictem 1.0.0 1.0.0
 --------------------------------------------------
+------- pkg_cmp_summary #1.7
+= devel/gmake
+= devel/libltdl
+= devel/libtool-base
+= devel/pkg-config
+= editors/emacs
+= graphics/jpeg
+= graphics/libungif
+= graphics/png
+= graphics/tiff
+= lang/perl5
+- net/netcat
++ pkgtools/digest
+- pkgtools/x11-links
+= sysutils/checkperms
+= textproc/dict-client
+= textproc/dictem
+= wip/awk-pkgsrc-dewey
+= wip/dict-client
+= wip/dict-server
+= wip/distbb
+= wip/libmaa
+= wip/paexec
+= wip/pipestatus
+= wip/pkg_online
+= wip/pkg_online-client
+= wip/pkg_online-server
+= wip/pkg_summary-utils
+= wip/runawk
+--------------------------------------------------
 ------- pkg_list_all_pkgs #3
 XXXX
 --------------------------------------------------
