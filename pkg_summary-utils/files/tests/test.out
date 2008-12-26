@@ -504,3 +504,27 @@ ok2
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.4
 +	xxkb-X	x11/xxkb	cheusov@tut.by
+--------------------------------------------------
+------- pkg_micro_src_summary #14.1
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_micro_src_summary #14.2
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_micro_src_summary #14.3
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_micro_src_summary #14.4
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+

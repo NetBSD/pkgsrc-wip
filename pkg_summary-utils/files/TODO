@@ -3,6 +3,7 @@ TODO list and thoughts
 existing tools:
 
     pkg_cmp_summary:
+       - test for -m
 
     pkg_list_all_pkgs:
 
@@ -17,10 +18,12 @@ existing tools:
        - man page
 
     pkg_src_summary:
+       - remove support for -f=
 
     pkg_summary4view:
 
     pkg_update_src_summary:
+       - remove support for -f=
 
     pkg_update_summary:
        - use standard 'find -newer' instead of 'ls -1t' and

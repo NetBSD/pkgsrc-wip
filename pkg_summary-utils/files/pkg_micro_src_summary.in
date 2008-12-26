@@ -68,8 +68,13 @@ while test $# -ne 0; do
 	-f|--fields)
 	    fields="$2"
 	    shift;;
-	-f=*|--fields=*)
+	-f=*)
+	    printf '%s\n' '-f= is not allowed' 1>&2
+	    exit 1;;
+	--fields=*)
 	    fields="$(echo $1 | cut -f2 -d=)";;
+	-f*)
+	    fields="$(echo $1 | cut -b 3-)";;
 	--)
 	    shift
 	    break;;
