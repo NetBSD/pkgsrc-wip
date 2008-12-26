@@ -528,3 +528,47 @@ PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
 MAINTAINER=cheusov@tut.by
 
+--------------------------------------------------
+------- pkg_src_summary #15.1
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_src_summary #15.2
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_src_summary #15.3
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_src_summary #15.4
+PKGNAME=xxkb-X
+PKGPATH=x11/xxkb
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- pkg_src_summary #16.1
+PKGNAME=xxkb-X
+COMMENT=XXKB - switches and indicates a current keyboard layout
+
+--------------------------------------------------
+------- pkg_src_summary #16.2
+PKGNAME=xxkb-X
+COMMENT=XXKB - switches and indicates a current keyboard layout
+
+--------------------------------------------------
+------- pkg_src_summary #16.3
+PKGNAME=xxkb-X
+COMMENT=XXKB - switches and indicates a current keyboard layout
+
+--------------------------------------------------
+------- pkg_src_summary #16.4
+PKGNAME=xxkb-X
+COMMENT=XXKB - switches and indicates a current keyboard layout
+

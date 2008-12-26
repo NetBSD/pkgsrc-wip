@@ -212,3 +212,39 @@ echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #14.4'
 pkg_micro_src_summary --fields 'PKGNAME PKGPATH MAINTAINER' x11/xxkb |
 normalize_version
+
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #15.1'
+pkg_src_summary -f PKGNAME --add-fields 'PKGPATH MAINTAINER' x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #15.2'
+pkg_src_summary --fields=PKGNAME -a 'PKGPATH MAINTAINER' x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #15.3'
+pkg_src_summary -fPKGNAME -aPKGPATH,MAINTAINER x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #15.4'
+pkg_src_summary -fPKGNAME --add-fields=PKGPATH,MAINTAINER x11/xxkb |
+normalize_version
+
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #16.1'
+pkg_src_summary -f PKGNAME,PKGPATH,COMMENT --rem-fields 'PKGPATH MAINTAINER' x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #16.2'
+pkg_src_summary -f PKGNAME,PKGPATH,COMMENT -r 'PKGPATH MAINTAINER' x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #16.3'
+pkg_src_summary -f PKGNAME,PKGPATH,COMMENT -rPKGPATH,MAINTAINER x11/xxkb |
+normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #16.4'
+pkg_src_summary -f PKGNAME,PKGPATH,COMMENT --rem-fields=PKGPATH,MAINTAINER x11/xxkb |
+normalize_version

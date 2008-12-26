@@ -50,8 +50,7 @@ usage:
 OPTIONS:
   -h|--help              display this help message
   -p|--make-plist        generate PLIST using 'bmake plist'
-  -f|--fields <fields>
-  -f|--fields=<fields> list of fields (separated by space or comma)
+  -f|--fields <fields> list of fields (separated by space or comma)
                          to be included to summary,
                          by default FULL summary is generated
   -s|--slave-mode        ready for use as paexec slave/remote program
@@ -103,6 +102,12 @@ process_options (){
 	    -f=*)
 		printf '%s\n' '-f= is not allowed' 1>&2
 		exit 1;;
+	    -a=*)
+		printf '%s\n' '-a= is not allowed' 1>&2
+		exit 1;;
+	    -r=*)
+		printf '%s\n' '-r= is not allowed' 1>&2
+		exit 1;;
 	    --fields=*)
 		PSS_FIELDS="$(echo $1 | cut -f2 -d= | tr , ' ')";;
 	    -f*)
@@ -110,13 +115,17 @@ process_options (){
 	    -a|--add-fields)
 		add_fields $(echo $2 | tr , ' ')
 		shift;;
-	    -a=*|--add-fields=*)
+	    --add-fields=*)
 	        add_fields $(echo $1 | cut -f2 -d= | tr , ' ');;
+	    -a*)
+	        add_fields $(echo $1 | cut -b 3- | tr , ' ');;
 	    -r|--rem-fields)
 		rem_fields $(echo $2 | tr , ' ')
 		shift;;
-	    -r=*|--rem-fields=*)
+	    --rem-fields=*)
 	        rem_fields $(echo $1 | cut -f2 -d= | tr , ' ');;
+	    -r*)
+	        rem_fields $(echo $1 | cut -b 3- | tr , ' ');;
 	    -s|--slave-mode)
 		slave=1;;
 	    -p|--make-plist)
