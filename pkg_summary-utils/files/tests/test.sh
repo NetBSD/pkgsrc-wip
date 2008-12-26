@@ -141,22 +141,22 @@ pkg_uniq_summary --help 2>&1 | grep pkg_uniq_summary > /dev/null && echo ok2
 # pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #10.1'
-pkg_src_summary -m -f PKGNAME,PKGPATH www/ap2-python |
+pkg_src_summary -m -fPKGNAME,PKGPATH www/ap2-python |
 grep -v DEPENDS
 
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #10.2'
-pkg_src_summary -m -f PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache2 |
+pkg_src_summary -m --fields PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache2 |
 grep -v DEPENDS
 
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #10.3'
-pkg_src_summary -m -f PKGNAME,PKGPATH www/ap2-python:PYTHON_VERSION_REQD=25 |
+pkg_src_summary -m --fields='PKGNAME PKGPATH' www/ap2-python:PYTHON_VERSION_REQD=25 |
 grep -v DEPENDS
 
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #10.4'
-pkg_src_summary -m -f PKGNAME,PKGPATH \
+pkg_src_summary -m -f'PKGNAME PKGPATH' \
    www/ap2-python:PYTHON_VERSION_REQD=25,PKG_APACHE=apache22 |
 grep -v DEPENDS
 
