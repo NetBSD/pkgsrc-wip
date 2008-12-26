@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2008/02/27 17:51:31 smoppy Exp $
---- local.c.orig	2008-02-23 14:26:12.000000000 +0100
-+++ local.c	2008-02-23 14:26:34.000000000 +0100
-@@ -19,15 +19,19 @@
- #include <sys/types.h>
- #include <sys/ioctl.h>
+$NetBSD: patch-aa,v 1.4 2008/12/26 21:52:09 fulviociriaco Exp $
+
+--- Makefile.orig	2008-11-17 20:37:53.000000000 +0100
++++ Makefile
+@@ -40,7 +40,7 @@ SRCS= tmux.c server.c server-msg.c serve
+       tty.c tty-keys.c tty-write.c colour.c utf8.c
  
--#include <curses.h>
-+#include <ncurses.h>
- #include <fcntl.h>
- #include <stdlib.h>
- #include <string.h>
-+#if !defined(_KERNEL)
-+# define _KERNEL
-+#endif
- #define TTYDEFCHARS
- /* glibc requires unistd.h before termios.h for TTYDEFCHARS. */
- #include <unistd.h>	
- #include <termios.h>
- #include <term.h>
-+#undef _KERNEL
+ CC?= cc
+-INCDIRS+= -I. -I- -I/usr/local/include
++INCDIRS+= -I.
+ CFLAGS+= -DMETA="'${META}'"
+ .ifdef PROFILE
+ # Don't use ccache
+@@ -76,6 +76,10 @@ LIBS+= -lutil -lncurses
+ CFLAGS+= -DUSE_LIBUTIL_H
+ .endif
  
- #include "tmux.h"
++.if ${OS} == "NetBSD"
++SRCS+= compat/strtonum.c
++.endif
++
+ OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
  
+ DISTDIR= ${PROG}-${VERSION}

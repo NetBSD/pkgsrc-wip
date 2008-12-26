@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/03/02 19:53:15 smoppy Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/26 21:52:09 fulviociriaco Exp $
 
-DISTNAME=	tmux-0.1
+DISTNAME=	tmux-0.5
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -10,13 +10,6 @@ COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
 NO_CONFIGURE=	yes
 USE_NCURSES=	yes
-
-# compat/strtonum.c: replace "tmux.h" with "../tmux.h"
-SUBST_CLASSES+=		header
-SUBST_STAGE.header=	pre-build
-SUBST_MESSAGE.header=	Fixing distribution headers..
-SUBST_FILES.header=	compat/strtonum.c
-SUBST_SED.header=	-e "s,tmux.h,../tmux.h,"
 
 INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 ${DESTDIR}${PREFIX}/bin
 
