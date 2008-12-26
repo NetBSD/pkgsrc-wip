@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------
+Version 0.24.0, by Aleksey Cheusov, Fri, 26 Dec 2008 15:30:19 +0200
+
+  pkg_micro_src_summary, pkg_src_summary, pkg_update_src_summary:
+  -X=value options are not supported. Use -Xvalue instead!
+
+----------------------------------------------------------------------
 Version 0.23.0, by Aleksey Cheusov, Fri, 26 Dec 2008 00:30:26 +0200
 
   tools based on runawk uses alt_getopt.awk module
