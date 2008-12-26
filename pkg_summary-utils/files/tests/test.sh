@@ -209,11 +209,11 @@ pkg_micro_src_summary --fields=PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #14.3'
-pkg_micro_src_summary -f'PKGNAME PKGPATH MAINTAINER' x11/xxkb |
+pkg_micro_src_summary -fPKGNAME,PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #14.4'
-pkg_micro_src_summary --fields 'PKGNAME PKGPATH MAINTAINER' x11/xxkb |
+pkg_micro_src_summary --fields PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
 
 
