@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/10 20:07:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/26 23:47:49 cheusov Exp $
 #
 
 DISTNAME=	lua-mode-20071122
@@ -8,7 +8,7 @@ MASTER_SITES=	http://luaforge.net/frs/download.php/2724/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://luaforge.net/projects/lua-mode/
-COMMENT=	Emacs major mode for editing Lua code.
+COMMENT=	Emacs major mode for editing Lua code
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
