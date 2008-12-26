@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/13 09:03:33 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/26 08:21:06 minskim Exp $
 # TeX Live Revision 9267
 
 DISTNAME=	plain
@@ -21,7 +21,6 @@ USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
-
 
 .include "../../wip/kpathsea/texmf.mk"
 
