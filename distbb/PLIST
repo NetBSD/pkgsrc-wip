@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/12/02 19:51:40 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/12/26 23:44:37 cheusov Exp $
 bin/distbb
 bin/distbb_diff
 libexec/distbb/common
@@ -16,6 +16,7 @@ libexec/distbb/upload_pkgs_built_total
 libexec/distbb/upload_pkgs_no_bin_on_cdrom
 libexec/distbb/upload_pkgs_no_bin_on_ftp
 share/distbb/distbb.default.conf
+share/distbb/distbb.ico
 share/distbb/distbb.mk
 share/doc/distbb/NEWS
 share/doc/distbb/README
