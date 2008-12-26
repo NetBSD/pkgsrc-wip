@@ -61,18 +61,30 @@ while test $# -ne 0; do
 	-h|--help)
 	    usage
 	    exit 0;;
+
+	-f=*)
+	    printf '%s\n' '-f= is not allowed' 1>&2
+	    exit 1;;
+	-i=*)
+	    printf '%s\n' '-f= is not allowed' 1>&2
+	    exit 1;;
+
 	-f|--file)
 	    pkgs_fn="$2"
 	    shift;;
-	--file=*|-f=*)
+	--file=*)
 	    pkgs_fn="`printf '%s\n' \"$1\" | sed 's,^[^=]*=,,'`";;
 	-f*)
 	    pkgs_fn="`printf '%s\n' \"$1\" | cut -b3-`";;
+
 	-i|--fields)
 	    fields="-f '$2'"
 	    shift;;
-	-i=*|--fields=*)
+	--fields=*)
 	    fields="-f '`echo $1 | cut -f2 -d=`'";;
+	-i*)
+	    fields="-f '`printf '%s\n' \"$1\" | cut -b 3-`'";;
+
 	--)
 	    shift
 	    break;;
