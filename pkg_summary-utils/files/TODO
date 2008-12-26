@@ -8,7 +8,6 @@ existing tools:
     pkg_list_all_pkgs:
 
     pkg_micro_src_summary:
-       - f PKGNAME,PKGPATH,...
 
     pkg_refresh_summary:
        - should optionally output packages that are not newest

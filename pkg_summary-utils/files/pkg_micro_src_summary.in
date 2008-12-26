@@ -72,9 +72,9 @@ while test $# -ne 0; do
 	    printf '%s\n' '-f= is not allowed' 1>&2
 	    exit 1;;
 	--fields=*)
-	    fields="$(echo $1 | cut -f2 -d=)";;
+	    fields="$(echo $1 | cut -f2 -d= | tr , ' ')";;
 	-f*)
-	    fields="$(echo $1 | cut -b 3-)";;
+	    fields="$(echo $1 | cut -b 3- | tr , ' ')";;
 	--)
 	    shift
 	    break;;
