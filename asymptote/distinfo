@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/26 21:49:26 fulviociriaco Exp $
+
+SHA1 (asymptote-1.56.src.tgz) = e01f937a8ca6cb5e94ed59e0ac5a61fe06aac0f8
+RMD160 (asymptote-1.56.src.tgz) = 5f6840e99565350ca35d8a01d999dc52839b789b
+Size (asymptote-1.56.src.tgz) = 1297672 bytes
+SHA1 (patch-aa) = 96f5c4543aa0e4b65e4eb69e3cabce087301b9ab

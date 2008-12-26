@@ -1,0 +1,138 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/26 21:49:26 fulviociriaco Exp $
+bin/asy
+bin/xasy
+share/asymptote/GUI/CubicBezier.py
+share/asymptote/GUI/UndoRedoStack.py
+share/asymptote/GUI/xasy.py
+share/asymptote/GUI/xasy2asy.py
+share/asymptote/GUI/xasyActions.py
+share/asymptote/GUI/xasyBezierEditor.py
+share/asymptote/GUI/xasyCodeEditor.py
+share/asymptote/GUI/xasyColorPicker.py
+share/asymptote/GUI/xasyFile.py
+share/asymptote/GUI/xasyGUIIcons.py
+share/asymptote/GUI/xasyMainWin.py
+share/asymptote/GUI/xasyOptions.py
+share/asymptote/GUI/xasyOptionsDialog.py
+share/asymptote/GUI/xasyVersion.py
+share/asymptote/CAD.asy
+share/asymptote/animate.asy
+share/asymptote/animation.asy
+share/asymptote/annotate.asy
+share/asymptote/babel.asy
+share/asymptote/bezulate.asy
+share/asymptote/binarytree.asy
+share/asymptote/bsp.asy
+share/asymptote/contour.asy
+share/asymptote/contour3.asy
+share/asymptote/drawtree.asy
+share/asymptote/embed.asy
+share/asymptote/external.asy
+share/asymptote/featpost3D.asy
+share/asymptote/feynman.asy
+share/asymptote/flowchart.asy
+share/asymptote/fontsize.asy
+share/asymptote/geometry.asy
+share/asymptote/graph.asy
+share/asymptote/graph3.asy
+share/asymptote/graph_settings.asy
+share/asymptote/grid3.asy
+share/asymptote/interpolate.asy
+share/asymptote/labelpath.asy
+share/asymptote/latin1.asy
+share/asymptote/markers.asy
+share/asymptote/math.asy
+share/asymptote/metapost.asy
+share/asymptote/obj.asy
+share/asymptote/ode.asy
+share/asymptote/palette.asy
+share/asymptote/patterns.asy
+share/asymptote/plain.asy
+share/asymptote/plain_Label.asy
+share/asymptote/plain_arcs.asy
+share/asymptote/plain_arrows.asy
+share/asymptote/plain_boxes.asy
+share/asymptote/plain_constants.asy
+share/asymptote/plain_debugger.asy
+share/asymptote/plain_filldraw.asy
+share/asymptote/plain_margins.asy
+share/asymptote/plain_markers.asy
+share/asymptote/plain_paths.asy
+share/asymptote/plain_pens.asy
+share/asymptote/plain_picture.asy
+share/asymptote/plain_shipout.asy
+share/asymptote/plain_strings.asy
+share/asymptote/plain_xasy.asy
+share/asymptote/pstoedit.asy
+share/asymptote/roundedpath.asy
+share/asymptote/simplex.asy
+share/asymptote/size10.asy
+share/asymptote/size11.asy
+share/asymptote/slide.asy
+share/asymptote/slopefield.asy
+share/asymptote/solids.asy
+share/asymptote/splinetype.asy
+share/asymptote/stats.asy
+share/asymptote/syzygy.asy
+share/asymptote/texcolors.asy
+share/asymptote/three.asy
+share/asymptote/three_arrows.asy
+share/asymptote/three_light.asy
+share/asymptote/three_margins.asy
+share/asymptote/tree.asy
+share/asymptote/three_surface.asy
+share/asymptote/tube.asy
+share/asymptote/unicode.asy
+share/asymptote/version.asy
+share/asymptote/x11colors.asy
+share/asymptote/asy-mode.el
+share/asymptote/asy-keywords.el
+share/asymptote/asy-init.el
+share/asymptote/asy.vim
+share/asymptote/asymptote.py
+share/asymptote/reload.js
+share/doc/asymptote/CAD.pdf
+share/doc/asymptote/asy-faq.ascii
+share/doc/asymptote/asy-faq.html/index.html
+share/doc/asymptote/asy-faq.html/section1.html
+share/doc/asymptote/asy-faq.html/section2.html
+share/doc/asymptote/asy-faq.html/section3.html
+share/doc/asymptote/asy-faq.html/section4.html
+share/doc/asymptote/asy-faq.html/section5.html
+share/doc/asymptote/asy-faq.html/section6.html
+share/doc/asymptote/asy-faq.html/section7.html
+share/doc/asymptote/asy-faq.html/section8.html
+share/doc/asymptote/asy-faq.html/section9.html
+share/doc/asymptote/asymptote.pdf
+share/doc/asymptote/examples/latexusage.asy
+share/texmf-dist/ls-R
+share/texmf-local/ls-R
+share/texmf-var/ls-R
+share/texmf/ls-R
+share/texmf-local/tex/latex/asymptote
+share/texmf-local/tex/latex/asymptote/asymptote.sty
+share/texmf-local/tex/latex/asymptote/asycolors.sty
+share/doc/asymptote/examples/animations
+share/doc/asymptote/examples/animations/cube.asy
+share/doc/asymptote/examples/animations/embeddedmovie.asy
+share/doc/asymptote/examples/animations/embeddedu3d.asy
+share/doc/asymptote/examples/animations/externalmovie.asy
+share/doc/asymptote/examples/animations/pdfmovie.asy
+share/doc/asymptote/examples/animations/slidemovies.asy
+share/doc/asymptote/examples/animations/sphere.asy
+share/doc/asymptote/examples/animations/wavepacket.asy
+share/doc/asymptote/examples/animations/wheel.asy
+man/man1/asy.1
+man/man1/xasy.1x
+@dirrm share/texmf-var
+@dirrm share/texmf-local/tex/latex/asymptote
+@dirrm share/texmf-local/tex/latex
+@dirrm share/texmf-local
+@dirrm share/texmf-dist
+@dirrm share/texmf
+@dirrm share/doc/asymptote/examples/animations
+@dirrm share/doc/asymptote/examples
+@dirrm share/doc/asymptote/asy-faq.html
+@dirrm share/doc/asymptote
+@dirrm share/asymptote/GUI
+@dirrm share/asymptote

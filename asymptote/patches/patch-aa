@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/26 21:49:26 fulviociriaco Exp $
+
+--- configure.orig	2008-12-22 06:18:16.000000000 +0100
++++ configure	2008-12-22 06:19:43.000000000 +0100
+@@ -7003,14 +7003,14 @@
+ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
+-if test $ac_cv_lib_pthread_pthread_create = yes; then
+-  cat >>confdefs.h <<_ACEOF
+-#define HAVE_LIBPTHREAD 1
+-_ACEOF
+-
+-  LIBS="-lpthread $LIBS"
+-
+-fi
++#if test $ac_cv_lib_pthread_pthread_create = yes; then
++#  cat >>confdefs.h <<_ACEOF
++##define HAVE_LIBPTHREAD 1
++#_ACEOF
++#
++#  LIBS="-lpthread $LIBS"
++#
++#fi
+ 
+ 
+ { echo "$as_me:$LINENO: checking for stackoverflow_install_handler in -lsigsegv" >&5
