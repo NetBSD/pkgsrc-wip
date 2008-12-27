@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/12/27 18:17:21 cheusov Exp $
+# used by wip/lua-lrexlib-posix/Makefile
+# used by wip/lua-lrexlib-pcre/Makefile
 #
 
 DISTNAME=	lrexlib-2.4.0
@@ -13,6 +15,7 @@ HOMEPAGE=	http://luaforge.net/projects/lrexlib
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
+USE_LIBTOOLS=		yes
 
 BUILD_TARGET=		build_${ENGINE}
 TEST_TARGET=		test_${ENGINE}
