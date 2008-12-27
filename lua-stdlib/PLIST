@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/27 20:08:00 cheusov Exp $
+${MODULES_DIR}/base.lua
+${MODULES_DIR}/debug_ext.lua
+${MODULES_DIR}/getopt.lua
+${MODULES_DIR}/io_ext.lua
+${MODULES_DIR}/lcs.lua
+${MODULES_DIR}/list.lua
+${MODULES_DIR}/math_ext.lua
+${MODULES_DIR}/mbox.lua
+${MODULES_DIR}/object.lua
+${MODULES_DIR}/parser.lua
+${MODULES_DIR}/rex.lua
+${MODULES_DIR}/set.lua
+${MODULES_DIR}/std.lua
+${MODULES_DIR}/string_ext.lua
+${MODULES_DIR}/table_ext.lua
+${MODULES_DIR}/xml.lua
