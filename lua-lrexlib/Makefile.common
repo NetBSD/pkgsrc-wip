@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2008/12/27 18:17:21 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/12/27 18:33:02 cheusov Exp $
 # used by wip/lua-lrexlib-posix/Makefile
 # used by wip/lua-lrexlib-pcre/Makefile
+# used by wip/lua-lrexlib-oniguruma/Makefile
 #
 
 DISTNAME=	lrexlib-2.4.0
