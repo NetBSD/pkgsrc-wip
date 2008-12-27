@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+
+--- src/defaults.mak.orig	2007-04-21 13:29:10.000000000 +0300
++++ src/defaults.mak
+@@ -10,4 +10,4 @@ LIB_LUA  =
+ 
+ MYCFLAGS = -W -Wall -g $(INC_LUA) $(INC_PCRE)
+ AR = ar rcu
+-CC = gcc
++#CC = gcc

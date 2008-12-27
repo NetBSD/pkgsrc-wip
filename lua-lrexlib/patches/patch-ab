@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+
+--- makefile.orig	2008-07-30 12:44:00.000000000 +0300
++++ makefile
+@@ -24,13 +24,13 @@ build_onig:
+ 	make -C $(ONIG) -f rex_onig.mak
+ 
+ test_pcre:
+-	cd test && lua ./runtest.lua -d../$(PCRE) pcre
++	cd test && lua ./runtest.lua -d../$(PCRE)/.libs pcre
+ 
+ test_posix:
+-	cd test && lua ./runtest.lua -d../$(POSIX) posix
++	cd test && lua ./runtest.lua -d../$(POSIX)/.libs posix
+ 
+ test_onig:
+-	cd test && lua ./runtest.lua -d../$(ONIG) onig
++	cd test && lua ./runtest.lua -d../$(ONIG)/.libs onig
+ 
+ clean_pcre:
+ 	make -C $(PCRE) -f rex_pcre.mak clean

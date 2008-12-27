@@ -1,0 +1,3 @@
+Lrexlib is a binding of three regular expression library APIs
+(POSIX, PCRE and Oniguruma) to Lua 5.1.
+

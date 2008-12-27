@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+#
+
+DISTNAME=	lrexlib-2.4.0
+PKGNAME=	${DISTNAME:S/lrexlib/lua-lrexlib-${ENGINE}/}
+CATEGORIES=	devel
+MASTER_SITES=	http://luaforge.net/frs/download.php/3599/
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	cheusov@tut.by
+HOMEPAGE=	http://luaforge.net/projects/lrexlib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
+
+BUILD_TARGET=		build_${ENGINE}
+TEST_TARGET=		test_${ENGINE}
+
+MAKE_FILE=		makefile
+
+# hack! I don't how to get Lua's directory for modules properly
+LUA_VER=		5.1
+MODULES_DIR=		${PREFIX}/lib/lua/${LUA_VER}
+
+#
+PATCHDIR=		${.CURDIR}/../../wip/lua-lrexlib/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/lua-lrexlib/distinfo
+DESCR_SRC=		${.CURDIR}/../../wip/lua-lrexlib/DESCR
+
+PLIST_SUBST+=		LUA_VER=${LUA_VER}
+
+MAKE_FLAGS+=		LIBS=${LIBS:Q}
+MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
+MAKE_FLAGS+=		MODULES_DIR=${MODULES_DIR}
+
+INSTALLATION_DIRS+=	${MODULES_DIR}
+
+do-install:
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+	    ${WRKSRC}/src/${ENGINE}/rex_${ENGINE}.la ${DESTDIR}${MODULES_DIR}
