@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2008/12/26 21:52:09 fulviociriaco Exp $
+$NetBSD: patch-aa,v 1.5 2008/12/28 05:59:36 htepper Exp $
 
---- Makefile.orig	2008-11-17 20:37:53.000000000 +0100
-+++ Makefile
+--- Makefile.orig	2008-11-17 21:37:53 +0200
++++ Makefile	2008-12-28 00:35:47 +0200
 @@ -40,7 +40,7 @@ SRCS= tmux.c server.c server-msg.c serve
        tty.c tty-keys.c tty-write.c colour.c utf8.c
  
@@ -11,7 +11,12 @@ $NetBSD: patch-aa,v 1.4 2008/12/26 21:52:09 fulviociriaco Exp $
  CFLAGS+= -DMETA="'${META}'"
  .ifdef PROFILE
  # Don't use ccache
-@@ -76,6 +76,10 @@ LIBS+= -lutil -lncurses
+@@ -72,10 +72,14 @@ LDFLAGS+= -pg
+ LIBS+= -lutil -lncurses
+ 
+ # FreeBSD
+-.if ${OS} == "FreeBSD"
++.if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
  CFLAGS+= -DUSE_LIBUTIL_H
  .endif
  
