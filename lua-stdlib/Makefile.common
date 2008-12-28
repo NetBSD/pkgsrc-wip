@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/12/28 10:44:57 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/12/28 10:48:03 cheusov Exp $
 # used by wip/lua-stdlib-doc/Makefile
 
 DISTNAME=		stdlib-8
@@ -11,6 +11,8 @@ HOMEPAGE=		http://luaforge.net/projects/stdlib/
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DIST_SUBDIR=		lua
+
+DISTINFO_FILE=		${.CURDIR}/../../wip/lua-stdlib/distinfo
 
 WRKSRC=			${WRKDIR}/stdlib
 
