@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/25 19:26:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/28 13:56:45 cheusov Exp $
 #
 
 DISTNAME=	xsokoban-3.3c
@@ -20,6 +20,9 @@ SAVEPATH=		${VARBASE}/games/xsokoban
 SCOREFILE=		${SAVEPATH}/scores
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/xsokoban
+
+# For removing setting SETGIDGAME from here pkgsrc should be fixed
+SETGIDGAME=		yes
 
 SPECIAL_PERMS=		bin/xsokoban ${SETGID_GAMES_PERMS}
 MAKE_DIRS_PERMS+=	${SAVEPATH} ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
