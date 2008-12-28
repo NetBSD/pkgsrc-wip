@@ -3,7 +3,7 @@ Suggested package updates
 
 	o amarok-1.92.2
 	o argouml-0.24
-	o backintime-0.8.18
+	o backintime-0.8.20
 	o bakery-2.6.2
 	o bub-n-bros-1.6
 	o ccrtp-1.6.2
@@ -26,7 +26,7 @@ Suggested package updates
 	o gallery-1.5.10
 	o gambas2-2.8.2
 	o gcc42-4.2.4
-	o geant-4.9.1p2
+	o geant-4.9.2
 	o gforge-4.5.11
 	o gimmie-0.2.8
 	o globulation2-0.9.3
@@ -61,6 +61,7 @@ Suggested package updates
 	o openvrml-0.17.10
 	o osmose-0.8.1
 	o p5-Net-DBus-0.33.6
+	o paexec-0.12.0
 	o parted-1.8.8
 	o passepartout-0.7.0
 	o pdnsd-1.2.7
