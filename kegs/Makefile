@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/13 22:38:01 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/29 21:31:38 christtrekker Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -9,6 +9,8 @@ MASTER_SITES=	http://kegs.sourceforge.net/
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://kegs.sourceforge.net/
 COMMENT=	Apple IIgs emulator for Mac OS X, Win32, Linux, and Unix/X11
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=     gmake perl
