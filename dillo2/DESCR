@@ -1,6 +1,0 @@
-A very small and fast graphical web browser using FLTK2.
-
-You will find: tabbed browsing, antialiasing, different character sets, 
-accepting compressed pages, control over image loading, smaller footprint, 
-near 50% smaller memory usage, fewer dependencies, better table rendering, 
-bugfixes, improved GUI, among others!
