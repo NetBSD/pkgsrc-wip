@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3169 2008/12/27 20:09:26 cheusov Exp $
+# $Id: Makefile,v 1.3170 2008/12/29 03:38:30 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -266,7 +266,6 @@ SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	dict-mueller7
 SUBDIR+=	dict-server
 SUBDIR+=	digikam
-SUBDIR+=	dillo2
 SUBDIR+=	ding
 SUBDIR+=	dir2ogg
 SUBDIR+=	directfb
@@ -393,7 +392,6 @@ SUBDIR+=	flc
 SUBDIR+=	flexdump
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
-SUBDIR+=	fltk2
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
 SUBDIR+=	flyback
