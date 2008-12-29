@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/07 23:11:11 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/12/29 22:22:55 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -17,6 +17,7 @@ lib/gforth/${PKGVERSION}/gforth-ditc
 lib/gforth/${PKGVERSION}/gforth.fi
 lib/gforth/${PKGVERSION}/libcc-named/cstr.la
 lib/gforth/${PKGVERSION}/libcc-named/fflib.la
+lib/gforth/${PKGVERSION}/libcc-named/libffi.la
 lib/gforth/${PKGVERSION}/libcc-named/socket.la
 man/man1/gforth.1
 share/emacs/site-lisp/gforth.el

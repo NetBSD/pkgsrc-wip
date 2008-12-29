@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/16 14:45:52 asau Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/29 22:22:55 asau Exp $
 
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
@@ -33,6 +33,14 @@ BUILD_TARGET=	all doc
 TEST_TARGET=	check
 
 INSTALLATION_DIRS=	share/emacs/site-lisp
+
+# Change package version to make it consistent with our scheme:
+SUBST_CLASSES+=			fix-version
+SUBST_STAGE.fix-version=	post-patch
+SUBST_MESSAGE.fix-version=	Fixing package version.
+SUBST_FILES.fix-version=	configure.in
+SUBST_SED.fix-version=		-e '/^AC_INIT(/s/\[[-.0-9]*\]/[${PKGVERSION}]/'
+# AC_INIT([gforth],[0.7.0-20081226],[https://savannah.gnu.org/bugs/?func=addbug&group=gforth])
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${CONFIG_SHELL} autogen.sh
