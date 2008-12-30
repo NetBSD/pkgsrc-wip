@@ -1,16 +1,39 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+$NetBSD: MESSAGE,v 1.2 2008/12/30 23:05:47 pebog Exp $
 
-If your site handles more than 100,000 messages per day, to decrease the
-load on the public DCC servers and increase the responsiveness of your
-DCC clients, you should set up your own, local DCC server connected to
-the global network of DCC servers.
+DCC License
+-----------
 
-If you run the DCC server, cron-dccd should be run at least daily from the
-crontab to clean old checksums from the DB.
+The use of DCC is somewhat restricted and you are not allowed to use the
+public DCC servers if you sell spam filtering services. Please make sure
+you've read and accepted the LICENSE before you deploy the package:
 
-The free DCC source is available only for non-commercial and some other
-uses.  It is not available to organizations that sell anti-spam appliances
-or provide managed email services as opposed to common Internet service.
+   http://www.rhyolite.com/dcc/LICENSE
+
+===========================================================================
+===========================================================================
+
+DCC Server (dccd)
+-----------------
+
+Running an own DCC server is strongly recommended if your site handles
+more than 100k messages per day. It will decrease the load on public DCC
+servers and increase the responsiveness of your DCC clients. When doing
+so, cron-dccd should run at least once per day in order to remove old
+checksums from the database:
+
+   ${PREFIX}/libexec/cron-dccd
+
+===========================================================================
+===========================================================================
+
+SpamAssassin DCC Module
+-----------------------
+
+For a proper initialization of the SpamAssassin DCC module (DCC.pm),
+copy dcc-spamassassin.cf into the main SpamAssassin configuration
+directory and restart spamd:
+
+   ${PREFIX}/share/examples/dcc/dcc-spamassassin.cf
 
 ===========================================================================

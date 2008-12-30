@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/23 13:06:12 pebog Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/30 23:05:48 pebog Exp $
 
 DISTNAME=		dcc-1.3.99
 #PKGREVISION=		1
@@ -80,7 +80,10 @@ INSTALL_DCC_EGDIR=	${INSTALL} -m 644 -o ${DCC_USER} -g ${ROOT_GROUP}
 
 post-install:
 	${INSTALL_DCC_EGDIR} ${WRKSRC}/homedir/ids ${DESTDIR}${DCC_EGDIR}; \
-	${INSTALL_DCC_EGDIR} ${WRKSRC}/homedir/map.txt ${DESTDIR}${DCC_EGDIR};
+	${INSTALL_DCC_EGDIR} ${WRKSRC}/homedir/map.txt ${DESTDIR}${DCC_EGDIR}; \
+	${SED} -e "s!@DCC_HOME@!${DCC_HOME}!g" ${FILESDIR}/dcc-spamassassin.cf \
+		>${WRKDIR}/dcc-spamassassin.cf; \
+	${INSTALL_DCC_EGDIR} ${WRKDIR}/dcc-spamassassin.cf ${DESTDIR}${DCC_EGDIR};
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

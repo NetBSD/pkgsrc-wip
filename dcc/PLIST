@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/30 23:05:48 pebog Exp $
 bin/cdcc
 bin/dccproc
 libexec/cron-dccd
@@ -48,6 +48,7 @@ share/examples/dcc/cgi-bin/http2https
 share/examples/dcc/cgi-bin/list-log
 share/examples/dcc/cgi-bin/list-msg
 share/examples/dcc/cgi-bin/webuser-notify
+share/examples/dcc/dcc-spamassassin.cf
 share/examples/dcc/dcc_conf
 share/examples/dcc/flod
 share/examples/dcc/grey_flod
