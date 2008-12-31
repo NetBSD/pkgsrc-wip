@@ -1,9 +1,12 @@
-# $NetBSD: options.mk,v 1.15 2008/10/26 11:08:13 asau Exp $
+# $NetBSD: options.mk,v 1.16 2008/12/31 13:43:38 asau Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp-current
+PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
 # this option is essential for some others to work:
 PKG_SUPPORTED_OPTIONS+=		ffcall
+
+# some regular expression libraries don't pass tests:
+PKG_SUPPORTED_OPTIONS+=		regexp
 
 PKG_SUPPORTED_OPTIONS+=		pgsql gdbm bdb pcre rawsock pari fastcgi wildcard gtk2 zlib
 PKG_SUPPORTED_OPTIONS+=		readline
@@ -18,6 +21,7 @@ PKG_SUGGESTED_OPTIONS+=		ffcall pcre rawsock readline zlib
 # CLISP doesn't work with jemalloc:
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=		gmalloc
+PKG_SUGGESTED_OPTIONS+=		regexp
 .elif ${OPSYS} == "FreeBSD" && !empty(OS_VERSION:N[0-6].*)
 PKG_SUGGESTED_OPTIONS+=		gmalloc
 .endif
@@ -45,6 +49,12 @@ PKG_OPTIONS+=	ffcall
 .if !empty(PKG_OPTIONS:Mffcall)
 CONFIGURE_ARGS+=	--with-dynamic-ffi
 .  include "../../devel/ffcall/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mregexp)
+CONFIGURE_ARGS+=	--with-included-regex
+.else
+CONFIGURE_ARGS+=	--without-included-regex
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)

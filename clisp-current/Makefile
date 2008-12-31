@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/10/26 18:01:19 asau Exp $
+# $NetBSD: Makefile,v 1.28 2008/12/31 13:43:38 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -36,7 +36,7 @@ UNLIMIT_RESOURCES=	stacksize
 
 CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
-CONFIGURE_ARGS+=	--without-included-regex
+#CONFIGURE_ARGS+=	--without-included-regex	# see options
 CONFIGURE_ARGS+=	--with-gettext
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGBASE}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
