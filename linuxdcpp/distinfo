@@ -1,2 +1,5 @@
-$NetBSD: distinfo,v 1.10 2007/12/08 21:20:53 tnn2 Exp $
+$NetBSD: distinfo,v 1.11 2008/12/31 13:18:02 tnn2 Exp $
 
+SHA1 (linuxdcpp-1.0.2.tar.bz2) = 0ee61b524dc0d79d4f981bd0a91951f07239e2a0
+RMD160 (linuxdcpp-1.0.2.tar.bz2) = 25e8baccbbd41882de10c1a1f0a7264c23efa4a5
+Size (linuxdcpp-1.0.2.tar.bz2) = 300484 bytes
