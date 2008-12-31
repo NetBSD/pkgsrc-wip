@@ -13,6 +13,11 @@
 # efficient than dccproc.
 
 
+# load DCC.pm
+#
+loadplugin Mail::SpamAssassin::Plugin::DCC
+
+
 # DCC home directory
 #
 dcc_home @DCC_HOME@
