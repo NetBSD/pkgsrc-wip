@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/04 16:05:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/31 15:53:09 thomasklausner Exp $
 #
 
-DISTNAME=	gtk-vnc-0.3.7
+DISTNAME=	gtk-vnc-0.3.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-vnc/}
 

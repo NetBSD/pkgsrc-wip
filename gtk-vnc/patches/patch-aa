@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/04 16:05:28 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/31 15:53:10 thomasklausner Exp $
 
---- src/gvnc.c.orig	2008-09-05 12:32:16.000000000 +0000
+--- src/gvnc.c.orig	2008-12-07 20:35:14.000000000 +0100
 +++ src/gvnc.c
-@@ -41,6 +41,10 @@
+@@ -59,6 +59,10 @@
+ #endif
  
- #include "vnc_keycodes.h"
  
 +#ifndef AI_ADDRCONFIG
 +#define AI_ADDRCONFIG 0
