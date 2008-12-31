@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/25 12:28:16 akihabara Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/31 08:14:48 akihabara Exp $
 
 DISTNAME=	ipsvd-0.14.0
 CATEGORIES=	net
@@ -12,7 +12,6 @@ WRKSRC=		${WRKDIR}/net/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-DJB_ERRNO_HACK=		NO
 DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
 

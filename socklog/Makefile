@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/31 08:13:15 akihabara Exp $
 
 DISTNAME=	socklog-2.1.0
 CATEGORIES=	sysutils
@@ -12,7 +12,6 @@ WRKSRC=		${WRKDIR}/admin/${DISTNAME}
 CMDDIR=		${WRKSRC}/command
 PKGDOCDIR=	${PREFIX}/share/doc/${PKGBASE}
 
-DJB_ERRNO_HACK=		NO
 DJB_RESTRICTED=		NO
 DJB_SLASHPACKAGE=	YES
 
