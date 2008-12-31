@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/12/31 08:14:48 akihabara Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/31 08:20:37 akihabara Exp $
 
-DISTNAME=	ipsvd-0.14.0
+DISTNAME=	ipsvd-1.0.0
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
