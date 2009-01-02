@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/29 16:06:05 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/02 22:20:27 christtrekker Exp $
 #
 
 # The version number should be incremented 0.1 when a scenario is moved or
@@ -18,9 +18,8 @@ SITES.MarathonInfinity.zip=	http://trilogyrelease.bungie.org/files/
 # Another series
 DISTFILES+=	tgi.zip
 SITES.tgi.zip=	http://ryoko.treellama.org/
-#Organization of Rubicon is messy...deal with it later.
-#DISTFILES+=	marathonRubiconX.zip
-#SITES.marathonRubiconX.zip=	http://files5.bungie.org/marathon/
+DISTFILES+=	marathonRubiconX.zip
+SITES.marathonRubiconX.zip=	http://files5.bungie.org/marathon/
 
 # Another series
 DISTFILES+=	Siege_of_NorKorh_-SDL-v2.zip
@@ -29,12 +28,12 @@ DISTFILES+=	MarathonEvil.zip
 SITES.MarathonEvil.zip=	http://trilogyrelease.bungie.org/files/
 
 # Standalone games
-#DISTFILES+=	EternalXv103Full.zip
-#SITES.EternalXv103Full.zip+=	http://eternal.bungie.org/files/_releases/
-#DISTFILES+=	MarathonRED.zip
-#SITES.MarathonRED.zip=	http://trilogyrelease.bungie.org/files/
-#DISTFILES+=	Tempus_Irae.zip
-#SITES.Tempus_Irae.zip=	http://nardofiles.bungie.org/
+DISTFILES+=	EternalXv103Full.zip
+SITES.EternalXv103Full.zip+=	http://eternal.bungie.org/files/_releases/
+DISTFILES+=	MarathonRED.zip
+SITES.MarathonRED.zip=	http://trilogyrelease.bungie.org/files/
+DISTFILES+=	Tempus_Irae.zip
+SITES.Tempus_Irae.zip=	http://nardofiles.bungie.org/
 
 EXTRACT_SUFX=	.zip
 
@@ -42,11 +41,13 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://traxus.jjaro.net/traxus/Category:Scenarios
 COMMENT=	Game data for numerous scenarios playable with the Aleph One engine
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in 1 2 Infinity \
 	TheGrayIncident Rubicon \
 	SiegeOfNorKorh Evil \
-	Eternal Red TempusIrae 
+	Eternal Red TempusIrae
 INSTALLATION_DIRS+= ${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
 .endfor
 
@@ -57,11 +58,13 @@ post-extract:
 	#clean up irregular author packaging
 	${MV} ${WRKDIR}/the\ gray\ incident/scripts ${WRKDIR}/the\ gray\ incident/Scripts
 	${MV} ${WRKDIR}/the\ gray\ incident/themes ${WRKDIR}/the\ gray\ incident/Themes
-	#Rubicon here...
 	${MKDIR} ${WRKDIR}/SoNK
 	${MV} ${WRKDIR}/fm\ net\ maps.map ${WRKDIR}/SoNK
 	${MV} ${WRKDIR}/marathon\ files ${WRKDIR}/SoNK
 	${MV} ${WRKDIR}/siege\ of\ nor\'korh\ v2.map ${WRKDIR}/SoNK
+	${MV} ${WRKDIR}/tempus_irae/scripts ${WRKDIR}/tempus_irae/Scripts
+	${MV} ${WRKDIR}/tempus_irae/themes ${WRKDIR}/tempus_irae/Themes
+	find ${WRKDIR} -name CVS -exec rm -rf {} \;
 
 do-install:
 	#install the files into the Scenarios dir
@@ -70,9 +73,12 @@ do-install:
 	${CP} -r ${WRKDIR}/Marathon\ 2/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/2
 	${CP} -r ${WRKDIR}/Marathon\ Infinity/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Infinity
 	${CP} -r ${WRKDIR}/the\ gray\ incident/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/TheGrayIncident
-	#Rubicon here....
+	${CP} -r ${WRKDIR}/Rubicon\ X*/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Rubicon
 	${CP} -r ${WRKDIR}/SoNK/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/SiegeOfNorKorh
 	${CP} -r ${WRKDIR}/Marathon\ EVIL/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Evil
+	${CP} -r ${WRKDIR}/Eternal\ X*/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Eternal
+	${CP} -r ${WRKDIR}/Marathon\ RED/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Red
+	${CP} -r ${WRKDIR}/tempus_irae/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/TempusIrae
 
 LICENSE=	generic-nonlicense
 RESTRICTED=	Individual scenarios are subject to various licenses, so play it safe.
