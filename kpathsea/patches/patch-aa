@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2008/12/11 06:06:50 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2009/01/03 22:03:56 minskim Exp $
+
+Set paths to texmf trees for pkgsrc.
 
 --- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
 +++ texmf.cnf
