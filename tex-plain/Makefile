@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/26 08:22:00 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/03 22:21:03 minskim Exp $
 # TeX Live Revision 9267
 
 DISTNAME=	plain
@@ -22,7 +22,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-.include "../../wip/kpathsea/texmf.mk"
+.include "../../print/kpathsea/texmf.mk"
 
 post-extract:
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;

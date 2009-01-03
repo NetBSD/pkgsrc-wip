@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/23 10:24:07 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/03 22:21:03 minskim Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -29,7 +29,7 @@ USE_TOOLS+=		pax
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
 
-.include "../../wip/kpathsea/texmf.mk"
+.include "../../print/kpathsea/texmf.mk"
 
 post-extract:
 .for texmf in texmf texmf-dist

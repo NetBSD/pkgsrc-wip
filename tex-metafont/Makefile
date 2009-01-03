@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/26 08:29:57 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/03 22:21:03 minskim Exp $
 # TeX Live Revision 7340
 
 DISTNAME=	metafont
@@ -20,7 +20,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-.include "../../wip/kpathsea/texmf.mk"
+.include "../../print/kpathsea/texmf.mk"
 
 post-extract:
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
