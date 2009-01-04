@@ -1,11 +1,40 @@
-$NetBSD: patch-aa,v 1.2 2008/12/15 00:12:07 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2009/01/04 23:44:38 minskim Exp $
 
 --- texmf/web2c/updmap.cfg.orig	2008-12-10 18:39:21.000000000 -0800
 +++ texmf/web2c/updmap.cfg
-@@ -100,177 +100,177 @@ dvipdfmDownloadBase14 true
+@@ -6,25 +6,13 @@
+ # appending a local configuration file.
+ #
+ # To make local customizations to the map files, please use of the
+-# following methods:
++# following method:
+ #
+-# 1) call 
++# call 
+ #       updmap-sys --enable Map=foo.map
+ #    for each map file.  (Or MixedMap instead of Map, if your font has
+ #    both Metafont and outline definitions.)  See the updmap --help
+ #    documentation.
+-#
+-# 2) add your local map entries to the file
+-#       TEXMFLOCAL/web2c/updmap-local.cfg
+-#    and then call
+-#       tlmgr generate updmap
+-#    which will concatenate updmap-local.cfg to the end of the final
+-#    updmap.cfg.  (You can override the local.cfg file location with the
+-#    --localcfg option; see tlmgr --help.)
+-#
+-# If you use either of these methods, your local adaptations will be
+-# preserved when tlmgr updates the installation or this config file.
+-# Manual edits to updmap.cfg may be lost on update.
+ 
+ 
+ ################################################################
+@@ -99,178 +87,3 @@ dvipdfmDownloadBase14 true
+ # in the default map of dvips if dvipsPreferOutline is false. Inactive
  # Map files should be marked by "#! " (without the quotes), not just #.
  #
- 
+-
 -Map Acorn.map
 -Map AnnSton.map
 -Map ArtNouv.map
@@ -180,177 +209,3 @@ $NetBSD: patch-aa,v 1.2 2008/12/15 00:12:07 minskim Exp $
 -Map yvo.map
 -Map yvt.map
 -Map zpeu.map
-+#! Map Acorn.map
-+#! Map AnnSton.map
-+#! Map ArtNouv.map
-+#! Map ArtNouvc.map
-+#! Map Carrickc.map
-+#! Map Eichenla.map
-+#! Map Eileen.map
-+#! Map EileenBl.map
-+#! Map Elzevier.map
-+#! Map GotIn.map
-+#! Map GoudyIn.map
-+#! Map Kinigcap.map
-+#! Map Konanur.map
-+#! Map Kramer.map
-+#! Map MnSymbol.map
-+#! Map MorrisIn.map
-+#! Map Nouveaud.map
-+#! Map Romantik.map
-+#! Map Rothdn.map
-+#! Map RoyalIn.map
-+#! Map Sanremo.map
-+#! Map SkakNew.map
-+#! Map Starburst.map
-+#! Map Typocaps.map
-+#! Map Zallman.map
-+#! MixedMap allrunes.map
-+#! MixedMap ams-bsr-interpolated.map
-+#! MixedMap ams-bsr.map
-+#! MixedMap ams-cmcsc-bsr-interpolated.map
-+#! Map antp.map
-+#! Map antt.map
-+#! Map arabi.map
-+#! MixedMap arabtex.map
-+#! Map archaicprw.map
-+#! Map arev.map
-+#! Map arevvn.map
-+#! Map ascii.map
-+#! Map augie.map
-+#! Map auncial.map
-+#! Map aurical.map
-+#! Map belleek.map
-+#! Map bera.map
-+#! Map bkaiu.map
-+#! Map bsmiu.map
-+#! Map burmese.map
-+#! MixedMap cbgreek-full.map
-+#! MixedMap ccpl.map
-+#! Map charter.map
-+#! Map chartervn.map
-+#! Map chemarrow.map
-+#! Map cherokee.map
-+#! Map cjhebrew.map
-+#! Map cm-lgc.map
-+#! MixedMap cm-super-t1.map
-+#! MixedMap cm-super-t2a.map
-+#! MixedMap cm-super-t2b.map
-+#! MixedMap cm-super-t2c.map
-+#! MixedMap cm-super-ts1.map
-+#! MixedMap cm-super-x2.map
-+#! Map cmbrightvn.map
-+#! Map cmcyr.map
-+#! Map cmin.map
-+#! MixedMap cmll.map
-+#! MixedMap cmother-bsr.map
-+#! MixedMap cmtext-bsr-interpolated.map
-+#! MixedMap cmtext-bsr.map
-+#! Map comicvn.map
-+#! Map concretevn.map
-+#! MixedMap csother.map
-+#! MixedMap cstext.map
-+#! Map cyklop.map
-+#! Map dgj.map
-+#! Map dictsym.map
-+#! Map dmj.map
-+#! Map dstroke.map
-+#! MixedMap dvng.map
-+#! Map epigrafica.map
-+#! Map epiolmec.map
-+#! MixedMap esint.map
-+#! Map esvect.map
-+#! MixedMap ethiop.map
-+#! MixedMap eurosym.map
-+#! Map foekfont.map
-+#! Map fonetika.map
-+#! Map fourier-utopia-expert.map
-+#! Map fourier.map
-+#! Map fpls.map
-+#! Map garuda.map
-+#! Map gbsnu.map
-+#! Map gfsartemisia.map
-+#! Map gfsbaskerville.map
-+#! Map gfsbodoni.map
-+#! Map gfscomplutum.map
-+#! Map gfsdidot.map
-+#! Map gfsneohellenic.map
-+#! Map gfsporson.map
-+#! Map gfssolomos.map
-+#! Map gkaiu.map
-+#! Map grotesqvn.map
-+#! Map grverb.map
-+#! MixedMap hfbright.map
-+#! MixedMap iby.map
-+#! Map icelandic.map
-+#! Map iwona.map
-+#! Map kerkis.map
-+#! Map kpfonts.map
-+#! Map kurier.map
-+#! Map l7x-urwvn.map
-+#! MixedMap latex-bsr.map
-+#! Map libertine.map
-+#! Map linearA.map
-+#! Map lm.map
-+#! MixedMap lxfonts.map
-+#! MixedMap manfnt.map
-+#! Map marvosym.map
-+#! Map mathpple.map
-+#! Map mc2j.map
-+#! Map mcj.map
-+#! Map mdbch.map
-+#! Map mdput.map
-+#! Map mdugm.map
-+#! MixedMap mflogo.map
-+#! MixedMap mongolian.map
-+#! Map mr2j.map
-+#! Map mrj.map
-+#! Map mscorevn.map
-+#! MixedMap musix.map
-+#! Map norasi.map
-+#! Map oinuit.map
-+#! Map omega.map
-+#! Map pazo.map
-+#! Map pbsi.map
-+#! Map phaistos.map
-+#! MixedMap pigpen.map
-+#! MixedMap plother.map
-+#! MixedMap pltext.map
-+#! Map pxfonts.map
-+#! Map qag.map
-+#! Map qbk.map
-+#! Map qcr.map
-+#! Map qcs.map
-+#! Map qhv.map
-+#! Map qpl.map
-+#! Map qtm.map
-+#! Map qzc.map
-+#! MixedMap rsfs.map
-+#! MixedMap semaf.map
-+#! Map slantcm.map
-+#! MixedMap stmaryrd.map
-+#! Map tabvar.map
-+#! MixedMap tipa.map
-+#! MixedMap trajan.map
-+#! Map troff-updmap.map
-+#! MixedMap ttcmex.map
-+#! Map txfonts.map
-+#! Map txttvn.map
-+#! Map uaq.map
-+#! Map ugq.map
-+#! Map umj.map
-+#! Map urwvn.map
-+#! Map utopia.map
-+#! MixedMap vnrother.map
-+#! MixedMap vnrtext.map
-+#! Map vntopia.map
-+#! MixedMap wasy.map
-+#! MixedMap xypic.map
-+#! Map yfrak.map
-+#! MixedMap yhmath.map
-+#! Map yv1.map
-+#! Map yv2.map
-+#! Map yv3.map
-+#! Map yvo.map
-+#! Map yvt.map
-+#! Map zpeu.map
