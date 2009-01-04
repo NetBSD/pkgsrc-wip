@@ -1,3 +1,5 @@
+- broken dependency from www/py-beautifulsoup
+
 - fix python's ossaudiodev to support netbsd
 
 - nearly all the pkg-options (except for mame and snes groups) are used for
