@@ -24,7 +24,7 @@ Suggested package updates
 	o firebird-2.0.3
 	o gajim-0.12
 	o gallery-1.5.10
-	o gambas2-2.8.2
+	o gambas2-2.10.0
 	o gcc42-4.2.4
 	o geant-4.9.2
 	o gforge-4.5.11
@@ -56,6 +56,7 @@ Suggested package updates
 	o mpgedit-0.73dev2
 	o mupen64-0.5
 	o nemo-0.2.3
+	o ocp-0.1.16
 	o opal-2.2.11
 	o openct-0.6.14
 	o openvrml-0.17.10
@@ -65,13 +66,13 @@ Suggested package updates
 	o parted-1.8.8
 	o passepartout-0.7.0
 	o pdnsd-1.2.7
-	o pike-7.6.112
+	o pike-7.8.116
 	o py-PyPE-2.8.8
 	o py-gdata-1.2.3
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-2.0
-	o rdup-0.6.1
+	o rdup-0.6.4
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o sdlmame-0.128
@@ -93,6 +94,7 @@ Suggested package updates
 	o txt2tags-2.3.2
 	o uade-2.12
 	o ufraw-0.14
+	o uptimed-0.3.16
 	o wordpress-2.7
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.3
