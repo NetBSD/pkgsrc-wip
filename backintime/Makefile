@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 16:59:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/04 18:16:45 thomasklausner Exp $
 #
 
 DISTNAME=	backintime-0.8.10_src
@@ -37,5 +37,5 @@ do-install:
 	cd ${WRKSRC} && ${SH} install.sh
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../mk/bsd.pkg.mk"

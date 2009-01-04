@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/06 14:54:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/04 18:16:45 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-commander-1.2.4
@@ -35,5 +35,5 @@ PLIST_SRC+=		${PKGDIR}/PLIST.end
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../mk/bsd.pkg.mk"

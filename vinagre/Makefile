@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/20 17:39:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/04 18:16:45 thomasklausner Exp $
 #
 
 DISTNAME=	vinagre-2.24.2
@@ -30,7 +30,7 @@ BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.6.0
 .include "../../wip/gtk-vnc/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.1
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
