@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/11/12 00:05:43 jakllsch Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/04 22:50:58 jakllsch Exp $
 
-DISTNAME=	remctl-2.11
+DISTNAME=	remctl-2.13
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
-MAINTAINER=	jakllsch@kollasch.net
+MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
 
