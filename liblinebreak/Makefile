@@ -1,29 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 11:00:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/04 15:38:16 thomasklausner Exp $
 #
 
-DISTNAME=	liblinebreak-0.0.20080420
+DISTNAME=	liblinebreak-1.0
 CATEGORIES=	textproc
-MASTER_SITES=	# manually created CVS checkout
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vimgadgets/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://vimgadgets.cvs.sourceforge.net/vimgadgets/common/tools/linebreak/
+HOMEPAGE=	http://vimgadgets.sourceforge.net/liblinebreak/
 COMMENT=	Library for line breaking in a Unicode sequence
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/common/tools/linebreak
+GNU_CONFIGURE=	yes
 
-MAKE_ENV+=	CFG=release PREFIX=${PREFIX}
+INSTALLATION_DIRS=	share/doc/liblinebreak
 
-INSTALLATION_DIRS=	include lib share/doc/liblinebreak
-
-do-install:
-	cd ${WRKSRC}/ReleaseDir && \
-		${LIBTOOL} --mode=install ${INSTALL_LIB} \
-			liblinebreak.la ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/linebreak.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/linebreakdef.h ${DESTDIR}${PREFIX}/include
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/liblinebreak
 
