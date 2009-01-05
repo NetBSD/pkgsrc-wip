@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/03 22:21:03 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/05 19:00:23 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	texlive-tetex-2008
@@ -12,7 +12,6 @@ COMMENT=	Scripts included in teTeX
 
 CONFLICTS+=	teTeX-bin-[0-9]*
 DEPENDS+=	dialog>=1.0:../../misc/dialog
-DEPENDS+=	tex-bin-tetex>=3.0:../../wip/tex-bin-tetex
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texk/tetex \
 			${DISTNAME}/texk/make \
@@ -27,13 +26,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/texk/tetex
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-PKG_SYSCONFSUBDIR=	texmf
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
-CONF_FILES=	${PREFIX}/share/texmf/web2c/fmtutil.cnf \
-		${PKG_SYSCONFDIR}/web2c/fmtutil.cnf
-
-TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PKG_SYSCONFDIR}
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
