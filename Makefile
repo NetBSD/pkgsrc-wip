@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3172 2009/01/05 01:39:15 minskim Exp $
+# $Id: Makefile,v 1.3173 2009/01/05 19:01:15 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1797,6 +1797,7 @@ SUBDIR+=	tetrinet
 SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-bin-tetex
+SUBDIR+=	tex-bin-texlive
 SUBDIR+=	tex-cm
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
