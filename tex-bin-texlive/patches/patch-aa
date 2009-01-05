@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/05 18:59:04 minskim Exp $
+
+Remove comments not applicable to pkgsrc.
+
+--- texmf/web2c/updmap-hdr.cfg.orig	2008-11-20 10:59:26.000000000 -0800
++++ texmf/web2c/updmap-hdr.cfg
+@@ -4,26 +4,14 @@
+ # all the Map and MixedMap lines from an installation, possibly
+ # appending a local configuration file.
+ #
+-# To make local customizations to the map files, please use of the
+-# following methods:
++# To make local customizations to the map files, please use the
++# following method:
+ #
+-# 1) call 
++# call 
+ #       updmap-sys --enable Map=foo.map
+ #    for each map file.  (Or MixedMap instead of Map, if your font has
+ #    both Metafont and outline definitions.)  See the updmap --help
+ #    documentation.
+-#
+-# 2) add your local map entries to the file
+-#       TEXMFLOCAL/web2c/updmap-local.cfg
+-#    and then call
+-#       tlmgr generate updmap
+-#    which will concatenate updmap-local.cfg to the end of the final
+-#    updmap.cfg.  (You can override the local.cfg file location with the
+-#    --localcfg option; see tlmgr --help.)
+-#
+-# If you use either of these methods, your local adaptations will be
+-# preserved when tlmgr updates the installation or this config file.
+-# Manual edits to updmap.cfg may be lost on update.
+ 
+ 
+ ################################################################

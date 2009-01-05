@@ -1,0 +1,3 @@
+This packages contains the scripts of the TeX Live tools.  Together
+with tex-texlive_infra, it provides all the basic TeX Live
+infrastructure.
