@@ -1,4 +1,4 @@
-# $NetBSD: format-install.tmpl,v 1.2 2009/01/05 19:00:23 minskim Exp $
+# $NetBSD: format-install.tmpl,v 1.3 2009/01/06 07:03:31 minskim Exp $
 #
 # Create format files.
 #
@@ -10,7 +10,11 @@ POST-INSTALL)
 	format_names="@FORMAT_NAMES@"
 	for f in $format_names ; do
 		${GREP} -v "^#" @PREFIX@/share/texmf/fmtutil/format.$f.cnf >> ${FMTUTIL_CNF}
-		@FMTUTIL_SYS@ --byfmt $f
+		@CAT@ @PREFIX@/share/texmf/fmtutil/format.$f.cnf |
+		@GREP@ "^[^#]" |
+		while read format engine junk; do
+			@FMTUTIL_SYS@ --byfmt $format
+		done
 	done
         ;;
 *)
