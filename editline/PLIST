@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 19:29:00 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/06 16:35:18 phonohawk Exp $
 include/editline/readline.h
 include/histedit.h
 lib/libedit.la
+lib/pkgconfig/libedit.pc
 man/man3/editline.3
 man/man3/el_deletestr.3
 man/man3/el_end.3

@@ -1,5 +1,0 @@
-compare with the portable libedit... from ftp.astron.com
-
-install -c -m 644 'editline/readline.h' '/usr/pkg/include/editline/readline.h'
-install: /usr/pkg/include/editline/readline.h: open: No such file or directory
-*** Error code 1
