@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/06 20:48:00 ficovh Exp $
+
+SHA1 (DBIx-Simple-1.32.tar.gz) = 124663099e555e4449844450dc5cbe5f3a291a3f
+RMD160 (DBIx-Simple-1.32.tar.gz) = df0987c01ede7b1a32b044fd7ba26d1fe99ca047
+Size (DBIx-Simple-1.32.tar.gz) = 16475 bytes
