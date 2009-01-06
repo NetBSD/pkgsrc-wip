@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3173 2009/01/05 19:01:15 minskim Exp $
+# $Id: Makefile,v 1.3174 2009/01/06 20:51:05 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1265,6 +1265,7 @@ SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
 SUBDIR+=	p5-DBD-ODBC
+SUBDIR+=	p5-DBIx-Simple
 SUBDIR+=	p5-Data-Properties
 SUBDIR+=	p5-Data-Random
 SUBDIR+=	p5-Date-Range
