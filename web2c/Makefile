@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/03 22:21:03 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/06 05:30:47 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
@@ -10,8 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/kpathsea/
 COMMENT=	TeX implementation translating WEB to C
 
-DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
-DEPENDS+=	texlive-texmf-base-[0-9]*:../../wip/texlive-texmf-base
+CONFLICTS+=	teTeX-bin-[0-9]*
 
 EXTRACT_ELEMENTS=	${DISTNAME}/config \
 			${DISTNAME}/libs/icu-xetex \
@@ -25,7 +24,12 @@ EXTRACT_ELEMENTS=	${DISTNAME}/config \
 			${DISTNAME}/libs/md5 \
 			${DISTNAME}/libs/slnunicode \
 			${DISTNAME}/libs/xpdf ${DISTNAME}/libs/obsdcompat \
-			${DISTNAME}/texk
+			${DISTNAME}/texk/make \
+			${DISTNAME}/texk/config.guess \
+			${DISTNAME}/texk/config.sub \
+			${DISTNAME}/texk/install.sh \
+			${DISTNAME}/texk/mkinstalldirs \
+			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
@@ -77,22 +81,9 @@ FILES_SUBST+=	KPSEWHICH=${BUILDLINK_PREFIX.kpathsea}/bin/kpsewhich \
 .include "../../print/kpathsea/buildlink3.mk"
 
 post-install:
-.for cmd in amstex cslatex csplain eplain etex jadetex lambda latex mex \
-	mllatex mltex pdfcslatex pdfcsplain pdfetex pdfjadetex pdflatex \
-	pdfmex pdfxmltex physe phyzzx texsis utf8mex xmltex
-	${LN} -sf pdftex ${PREFIX}/bin/${cmd}
-.endfor
-.for cmd in lualatex pdflualatex pdfluatex
-	${LN} -sf luatex ${PREFIX}/bin/${cmd}
-.endfor
-	${LN} -sf aleph ${PREFIX}/bin/lamed
-	${LN} -sf mpost ${PREFIX}/bin/metafun
-	${LN} -sf xetex ${PREFIX}/bin/xelatex
-	${LN} -sf omega.1 ${PREFIX}/${PKGMANDIR}/man1/lambda.1
-	${LN} -sf pdftex.1 ${PREFIX}/${PKGMANDIR}/man1/pdflatex.1
-	${LN} -sf mf.1 ${PREFIX}/${PKGMANDIR}/man1/mf-nowin.1
 	${LN} -sf cweb.1 ${PREFIX}/${PKGMANDIR}/man1/ctangle.1
 	${LN} -sf cweb.1 ${PREFIX}/${PKGMANDIR}/man1/cweave.1
+	${LN} -sf mf.1 ${PREFIX}/${PKGMANDIR}/man1/mf-nowin.1
 	${LN} -sf dvicopy.1 ${PREFIX}/${PKGMANDIR}/man1/odvicopy.1
 	${LN} -sf dvitype.1 ${PREFIX}/${PKGMANDIR}/man1/odvitype.1
 
