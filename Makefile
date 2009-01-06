@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3175 2009/01/06 21:38:20 shindenmorr Exp $
+# $Id: Makefile,v 1.3176 2009/01/06 23:36:57 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -32,7 +32,6 @@ SUBDIR+=	Radiator
 SUBDIR+=	Radiator-all
 SUBDIR+=	ReZound
 SUBDIR+=	Redland-rdf
-SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL-doc
 SUBDIR+=	SDL-doc-html
 SUBDIR+=	SDL-doc-ps
@@ -45,6 +44,7 @@ SUBDIR+=	SDL-intro-it
 SUBDIR+=	SDL-intro-jp
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
+SUBDIR+=	SDL_Pango
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
@@ -963,12 +963,14 @@ SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
+SUBDIR+=	lua-lrexlib
+SUBDIR+=	lua-lrexlib-onig
 SUBDIR+=	lua-lrexlib-pcre
 SUBDIR+=	lua-lrexlib-posix
-SUBDIR+=	lua-lrexlib-onig
 SUBDIR+=	lua-mode
-SUBDIR+=	lua-stdlib
 SUBDIR+=	lua-pgsql
+SUBDIR+=	lua-stdlib
+SUBDIR+=	lua-stdlib-doc
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
