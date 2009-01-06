@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/10 15:48:45 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/06 12:10:17 mstapelberg Exp $
 
 CATEGORIES=mail
-DISTNAME=mxallowd-1.6
+DISTNAME=mxallowd-1.7
 HOMEPAGE=http://michael.stapelberg.de/mxallowd
 COMMENT=Anti-Spam-Daemon using pf/pflog
 
@@ -14,6 +14,6 @@ CONF_FILES=${PREFIX}/share/doc/mxallowd/samples/mxallowd.conf ${PKG_SYSCONFDIR}/
 RCD_SCRIPTS+=mxallowd
 
 MASTER_SITES=http://michael.stapelberg.de/mxallowd/
-DISTFILES=mxallowd.1.6.tar.bz2
+DISTFILES=mxallowd.1.7.tar.bz2
 
 .include "../../mk/bsd.pkg.mk"
