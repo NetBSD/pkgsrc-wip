@@ -50,4 +50,5 @@ pkgpm options:
   -is               - install missed packages through pkgsrc tree
 
   -uba              - upgrade package through binary pkg_summary.gz
-  -usa              - upgrade package through binary pkg_summary.gz
+  -usa              - upgrade package through pkgsrc tree
+
