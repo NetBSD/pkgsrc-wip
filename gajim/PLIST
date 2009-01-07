@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/07 22:29:40 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/07 22:52:03 tonnerre Exp $
 bin/gajim
 ${REMOTE}bin/gajim-remote
 ${GTKSPELL}lib/gajim/gtkspell.la
@@ -1045,6 +1045,10 @@ share/pixmaps/gajim_about.png
 @dirrm share/gajim/data/iconsets/transports/msn/32x32
 @dirrm share/gajim/data/iconsets/transports/msn/16x16
 @dirrm share/gajim/data/iconsets/transports/msn
+@dirrm share/gajim/data/iconsets/transports/mrim/48x48
+@dirrm share/gajim/data/iconsets/transports/mrim/32x32
+@dirrm share/gajim/data/iconsets/transports/mrim/16x16
+@dirrm share/gajim/data/iconsets/transports/mrim
 @dirrm share/gajim/data/iconsets/transports/irc/32x32
 @dirrm share/gajim/data/iconsets/transports/irc/16x16
 @dirrm share/gajim/data/iconsets/transports/irc
@@ -1066,12 +1070,15 @@ share/pixmaps/gajim_about.png
 @dirrm share/gajim/data/iconsets/sun/16x16
 @dirrm share/gajim/data/iconsets/sun
 @dirrm share/gajim/data/iconsets/stellar/48x48
+@dirrm share/gajim/data/iconsets/stellar/32x32
 @dirrm share/gajim/data/iconsets/stellar/16x16
 @dirrm share/gajim/data/iconsets/stellar
 @dirrm share/gajim/data/iconsets/simplebulb/48x48
+@dirrm share/gajim/data/iconsets/simplebulb/32x32
 @dirrm share/gajim/data/iconsets/simplebulb/16x16
 @dirrm share/gajim/data/iconsets/simplebulb
 @dirrm share/gajim/data/iconsets/nuvola/48x48
+@dirrm share/gajim/data/iconsets/nuvola/32x32
 @dirrm share/gajim/data/iconsets/nuvola/16x16
 @dirrm share/gajim/data/iconsets/nuvola
 @dirrm share/gajim/data/iconsets/jabberbulb/48x48
@@ -1083,6 +1090,7 @@ share/pixmaps/gajim_about.png
 @dirrm share/gajim/data/iconsets/gota/16x16
 @dirrm share/gajim/data/iconsets/gota
 @dirrm share/gajim/data/iconsets/gossip/48x48
+@dirrm share/gajim/data/iconsets/gossip/32x32
 @dirrm share/gajim/data/iconsets/gossip/16x16
 @dirrm share/gajim/data/iconsets/gossip
 @dirrm share/gajim/data/iconsets/goojim/48x48
@@ -1098,6 +1106,7 @@ share/pixmaps/gajim_about.png
 @dirrm share/gajim/data/iconsets/dcraven/16x16
 @dirrm share/gajim/data/iconsets/dcraven
 @dirrm share/gajim/data/iconsets/crystal/48x48
+@dirrm share/gajim/data/iconsets/crystal/32x32
 @dirrm share/gajim/data/iconsets/crystal/16x16
 @dirrm share/gajim/data/iconsets/crystal
 @dirrm share/gajim/data/iconsets
