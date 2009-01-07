@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/01/07 22:29:40 tonnerre Exp $
+# $NetBSD: options.mk,v 1.3 2009/01/07 22:52:52 tonnerre Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
 PKG_SUPPORTED_OPTIONS=	gtkspell dbus trayicon ssl avahi
@@ -43,5 +43,5 @@ PLIST_SUBST+=	TRAYICON="@comment "
 
 # avahi
 .if !empty(PKG_OPTIONS:Mavahi)
-.include "../../wip/avahi/buildlink3.mk"
+.include "../../net/avahi/buildlink3.mk"
 .endif
