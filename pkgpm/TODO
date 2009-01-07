@@ -8,7 +8,7 @@ Goals:
   3) Cache directory for downloaded packages, no 'ftp ... | tar ...'
   4) No pkg_add -u|-uu. Package's versions should be analysed
      by pkgpm.
-  5) pkg_check_summary - sanity checks for pkg_summary.txt,
+  5) pkg_lint_summary - sanity checks for pkg_summary.txt,
      i.e. REQUIRES/PROVIDES consistency, versioned dependencies
      in DEPENDS etc.
   6) wip/pkg_summary-utils and wip/awk-pkgsrc-dewey are in use
