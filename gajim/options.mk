@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2009/01/07 22:52:52 tonnerre Exp $
+# $NetBSD: options.mk,v 1.4 2009/01/07 23:17:17 tonnerre Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
-PKG_SUPPORTED_OPTIONS=	gtkspell dbus trayicon ssl avahi
-PKG_SUGGESTED_OPTIONS=	gtkspell dbus trayicon ssl avahi
+PKG_SUPPORTED_OPTIONS=	avahi dbus gnome gnome-keyring gtkspell ssl trayicon
+PKG_SUGGESTED_OPTIONS=	avahi dbus gtkspell ssl trayicon
 
 .include "../../mk/bsd.options.mk"
 
@@ -37,11 +37,21 @@ PLIST_SUBST+=	TRAYICON="@comment "
 
 # ssl
 .if !empty(PKG_OPTIONS:Mssl)
-.include "../../security/py-OpenSSL/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 .include "../../security/py-amkCrypto/buildlink3.mk"
 .endif
 
 # avahi
 .if !empty(PKG_OPTIONS:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
+.endif
+
+# gnome
+.if !empty(PKG_OPTIONS:Mgnome)
+.include "../../x11/py-gnome2/buildlink3.mk"
+.endif
+
+# avahi
+.if !empty(PKG_OPTIONS:Mgnome-keyring)
+.include "../../x11/py-gnome2-desktop/buildlink3.mk"
 .endif
