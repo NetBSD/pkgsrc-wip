@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/09/08 14:53:12 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/07 01:44:00 lexort Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEGRAPHICS4_BUILDLINK3_MK:=	${KDEGRAPHICS4_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdegraphics4
 
 .if ${KDEGRAPHICS4_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.1
+BUILDLINK_ABI_DEPENDS.kdegraphics4?=	kdegraphics4>=4.1.3nb1
 BUILDLINK_PKGSRCDIR.kdegraphics4?=	../../wip/kdegraphics4
 .endif	# KDEGRAPHICS4_BUILDLINK3_MK
 
