@@ -26,7 +26,7 @@ Goals:
 
 pkgpm options:
 
-1) install packages
+1) installed packages
 2) registered packages
 
   -r +epkgpath      - add package to 2)
