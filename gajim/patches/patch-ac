@@ -1,13 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2008/02/16 23:02:24 shattered Exp $
---- src/gajim.py.orig	2007-12-06 21:07:50.000000000 +0200
-+++ src/gajim.py	2008-02-14 21:12:55.000000000 +0200
-@@ -36,6 +36,9 @@
- #	os.environ['GTK_BASEPATH'] = 'gtk'
+$NetBSD: patch-ac,v 1.5 2009/01/07 22:29:40 tonnerre Exp $
+
+--- src/gajim.py.orig	2008-12-15 15:43:52.000000000 +0100
++++ src/gajim.py
+@@ -57,6 +57,9 @@ if os.name == 'nt':
  
  import sys
+ 
 +sys.path += ["@PREFIX@/share/gajim/src"]
 +sys.path += ["@PREFIX@/lib/gajim"]
 +
- import urllib
- 
- from common import i18n
+ if os.name == 'nt':
+ 	# needed for docutils
+ 	sys.path.append('.')

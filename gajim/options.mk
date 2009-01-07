@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2008/02/16 23:03:05 shattered Exp $
+# $NetBSD: options.mk,v 1.2 2009/01/07 22:29:40 tonnerre Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
-PKG_SUPPORTED_OPTIONS=	gtkspell dbus trayicon
-PKG_SUGGESTED_OPTIONS=	gtkspell dbus trayicon
+PKG_SUPPORTED_OPTIONS=	gtkspell dbus trayicon ssl avahi
+PKG_SUGGESTED_OPTIONS=	gtkspell dbus trayicon ssl avahi
 
 .include "../../mk/bsd.options.mk"
 
@@ -33,4 +33,15 @@ PLIST_SUBST+=	TRAYICON=""
 .else
 CONFIGURE_ARGS+=	--disable-trayicon
 PLIST_SUBST+=	TRAYICON="@comment "
+.endif
+
+# ssl
+.if !empty(PKG_OPTIONS:Mssl)
+.include "../../security/py-OpenSSL/buildlink3.mk"
+.include "../../security/py-amkCrypto/buildlink3.mk"
+.endif
+
+# avahi
+.if !empty(PKG_OPTIONS:Mavahi)
+.include "../../wip/avahi/buildlink3.mk"
 .endif
