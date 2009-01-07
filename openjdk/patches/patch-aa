@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+
+--- jdk/make/common/shared/Platform.gmk.orig	2008-12-30 18:39:22.000000000 +0100
++++ jdk/make/common/shared/Platform.gmk
+@@ -339,11 +339,7 @@ ifeq ($(PLATFORM), bsd)
+   #    a fully built workspace.
+   REQUIRED_FREE_SPACE=1500000
+   # How much RAM does this machine have:
+-  ifeq ($(OS_VENDOR), OpenBSD)
+-    MB_OF_MEMORY=$(shell perl -e 'printf "%d", `sysctl hw.physmem | cut -d'=' -f2` / 1048576' )
+-  else
+-    MB_OF_MEMORY=$(shell expr `sysctl hw.physmem | cut -d' ' -f2` / 1048576 )
+-  endif
++  MB_OF_MEMORY=$(shell expr `sysctl hw.physmem | sed 's/[^0-9]//g'` / 1048576 )
+ endif
+ 
+ # Windows with and without CYGWIN will be slightly different

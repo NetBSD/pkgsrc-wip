@@ -1,0 +1,64 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+
+--- hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp.orig	2008-12-30 21:38:53.000000000 +0100
++++ hotspot/src/os_cpu/bsd_x86/vm/os_bsd_x86.cpp
+@@ -48,7 +48,7 @@
+ # include <ucontext.h>
+ #endif
+ 
+-#if defined(_ALLBSD_SOURCE) && !defined(__APPLE__)
++#if defined(_ALLBSD_SOURCE) && !defined(__APPLE__) && !defined(__NetBSD__)
+ # include <pthread_np.h>
+ #endif
+ 
+@@ -196,6 +196,50 @@
+ # endif
+ #endif
+ 
++#ifdef __NetBSD__
++# ifdef AMD64
++/* fixme: hardcoded offsets :-( */
++#  define context_pc uc_mcontext.__gregs[21]
++#  define context_sp uc_mcontext.__gregs[24]
++#  define context_fp uc_mcontext.__gregs[12]
++#  define context_rip uc_mcontext.__gregs[21]
++#  define context_rsp uc_mcontext.__gregs[24]
++#  define context_rbp uc_mcontext.__gregs[12]
++#  define context_rax uc_mcontext.__gregs[14]
++#  define context_rbx uc_mcontext.__gregs[13]
++#  define context_rcx uc_mcontext.__gregs[3]
++#  define context_rdx uc_mcontext.__gregs[2]
++#  define context_rsi uc_mcontext.__gregs[1]
++#  define context_rdi uc_mcontext.__gregs[0]
++#  define context_r8 uc_mcontext.__gregs[4]
++#  define context_r9 uc_mcontext.__gregs[5]
++#  define context_r10 uc_mcontext.__gregs[6]
++#  define context_r11 uc_mcontext.__gregs[7]
++#  define context_r12 uc_mcontext.__gregs[8]
++#  define context_r13 uc_mcontext.__gregs[9]
++#  define context_r14 uc_mcontext.__gregs[10]
++#  define context_r15 uc_mcontext.__gregs[11]
++#  define context_flags uc_mcontext.__gregs[23]
++#  define context_err uc_mcontext.__gregs[20]
++#  define context_trapno uc_mcontext.__gregs[19]
++# else
++#  define context_pc uc_mcontext.__gregs[_REG_EIP]
++#  define context_sp uc_mcontext.__gregs[_REG_ESP]
++#  define context_fp uc_mcontext.__gregs[_REG_EBP]
++#  define context_eip uc_mcontext.__gregs[_REG_EIP]
++#  define context_esp uc_mcontext.__gregs[_REG_ESP]
++#  define context_eax uc_mcontext.__gregs[_REG_EAX]
++#  define context_ebx uc_mcontext.__gregs[_REG_EBX]
++#  define context_ecx uc_mcontext.__gregs[_REG_ECX]
++#  define context_edx uc_mcontext.__gregs[_REG_EDX]
++#  define context_ebp uc_mcontext.__gregs[_REG_EBP]
++#  define context_esi uc_mcontext.__gregs[_REG_ESI]
++#  define context_edi uc_mcontext.__gregs[_REG_EDI]
++#  define context_eflags uc_mcontext.__gregs[_REG_EFL]
++#  define context_trapno uc_mcontext.__gregs[_REG_TRAPNO]
++# endif
++#endif
++
+ address os::current_stack_pointer() {
+ #ifdef SPARC_WORKS
+   register void *esp;

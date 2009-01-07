@@ -1,0 +1,9 @@
+- fix X11R6 run paths
+- figure out why swing apps fail to initialise
+- Fix netbsd-4 build
+- review patches/*, look for XXX, implement commented out code
+- integrate iced tea support for sound and browser plugin.
+    See http://icedtea.classpath.org/
+- Test X11_TYPE=native builds
+- Fix Linux build
+- Add support for OtherBSD

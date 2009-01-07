@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+
+--- ./jdk/src/solaris/native/java/io/UnixFileSystem_md.c.orig	2008-12-21 21:41:28.000000000 +0100
++++ ./jdk/src/solaris/native/java/io/UnixFileSystem_md.c
+@@ -420,7 +420,9 @@ Java_java_io_UnixFileSystem_getSpace(JNI
+                                      jobject file, jint t)
+ {
+     jlong rv = 0L;
+-
++    return rv;
++    /* XXX tnn fixme: vfsstat */
++#if 0
+     WITH_FIELD_PLATFORM_STRING(env, file, ids.path, path) {
+         struct statfs fsstat;
+         memset(&fsstat, 0, sizeof(struct statfs));
+@@ -444,4 +446,5 @@ Java_java_io_UnixFileSystem_getSpace(JNI
+         }
+     } END_PLATFORM_STRING(env, path);
+     return rv;
++#endif
+ }

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+
+--- ./jdk/src/solaris/native/java/net/NetworkInterface.c.orig	2008-12-21 21:41:28.000000000 +0100
++++ ./jdk/src/solaris/native/java/net/NetworkInterface.c
+@@ -53,7 +53,7 @@
+ #if defined(__FreeBSD__) || defined(__APPLE__)
+ #include <net/ethernet.h>
+ #include <net/if_var.h>
+-#elif defined(__OpenBSD__)
++#elif defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <netinet/if_ether.h>
+ #endif
+ #include <net/if_dl.h>
