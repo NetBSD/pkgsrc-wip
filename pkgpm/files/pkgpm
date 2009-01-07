@@ -1,0 +1,237 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+export LC_ALL=C
+
+#pkg_info_orig=$PKG_PATH
+#unset PKG_PATH || true
+
+######################################################################
+# temp directory
+tmp_dir="/tmp/pkgpm.$$"
+trap "rm -rf $tmp_dir" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+######################################################################
+
+plfn=$HOME/.pkgpm/packages
+binsummary=$HOME/.pkgpm/pkg_summary.txt
+srcsummary=$HOME/.pkgpm/pkg_src_summary.txt
+pkgext=.tbz
+packages=/srv/pkgsrc_bin/NetBSD/All
+
+usage (){
+    cat 1>&2 <<EOF
+pkgpm - check, install and update packages
+
+usage: <see PLAN file>
+EOF
+}
+
+register_pkg (){
+    touch $plfn
+
+    if printf "%s\n" "$1" | grep '^[+]' > /dev/null; then
+	pkg=`printf "%s\n" "$1" | cut -b 2-`
+	{ echo $pkg; cat $plfn; } |
+	sort -u > $plfn.tmp && mv $plfn.tmp $plfn
+    elif printf "%s\n" "$1" | grep '^[-]' > /dev/null; then
+	pkg=`printf "%s\n" "$1" | cut -b 2-`
+	grep -v '^'"$pkg"'$' $plfn > $plfn.tmp && mv $plfn.tmp $plfn
+    else
+	echo 'Bad argument to -r option'
+	exit 1
+    fi
+}
+
+summary2pkgpath (){
+    sed -n 's/^PKGPATH=//p' "$@"
+}
+
+summary2pkgname (){
+    sed -n 's/^PKGNAME=//p' "$@"
+}
+
+summary2pkgname_pkgpath (){
+    awk -F= '
+$1 == "PKGPATH" { pkgpath = $2 }
+$1 == "PKGNAME" { pkgname = $2 }
+NF == 0         { print pkgname "," pkgpath }
+' "$@"
+}
+
+register_all_pkgs (){
+    env PKG_PATH= pkg_info -u -X | summary2pkgpath > $plfn
+}
+
+get_summary_installed (){
+    env PKG_PATH= pkg_info -u -X
+}
+
+get_summary_registered (){
+    awk '{print "PKGPATH=" $0 "\n"}' $plfn
+}
+
+grep_summary_PKGPATH (){
+    # $1 - file containing PKGPATHs
+    # $2 - summary file
+    runawk -v plfn="$1" -e '
+#use "xgetline.awk"
+#use "pkg_grep_summary.awk"
+
+function grep_summary__condition (){
+   return (fvalue in pkgs)
+}
+
+BEGIN {
+   grep_summary__field = "PKGPATH"
+
+   while (xgetline0(plfn)){
+      $1 = $1
+      pkgs [$0] = 1
+      print $0
+   }
+}
+' "$2"
+}
+
+get_summary_installed_registered (){
+    env PKG_PATH= pkg_info -u -X |
+    grep_summary_PKGPATH "$plfn" -
+}
+
+get_summary_pkgsrc (){
+    pkg_micro_src_summary -f PKGPATH,PKGNAME
+}
+
+prepare_cmp (){
+    grep -v '^=' "$@" | sort -k1 -k2
+}
+
+summary2pkgpaths (){
+    sed -n 's,^PKGPATH=,,p' "$@"
+}
+
+compare_cir (){
+    get_summary_installed > "$tmp_dir"/installed
+
+    get_summary_registered > "$tmp_dir"/registered
+
+    pkg_cmp_summary -P "$tmp_dir"/installed "$tmp_dir"/registered |
+    prepare_cmp
+}
+
+compare_cis (){
+    get_summary_installed > "$tmp_dir"/installed
+
+    summary2pkgpaths "$tmp_dir"/installed > "$tmp_dir"/pkgpaths
+
+    get_summary_pkgsrc < "$tmp_dir"/pkgpaths > "$tmp_dir"/micro_summary
+
+    pkg_cmp_summary -p "$tmp_dir"/installed "$tmp_dir"/micro_summary |
+    prepare_cmp
+}
+
+compare_cib (){
+    get_summary_installed > "$tmp_dir"/installed
+
+    pkg_cmp_summary -p "$tmp_dir"/installed "$binsummary" |
+    prepare_cmp | grep -v '^[+]' || true
+}
+
+compare_crs (){
+    get_summary_installed_registered > "$tmp_dir"/installed_registered
+
+    summary2pkgpaths "$tmp_dir"/installed_registered > "$tmp_dir"/pkgpaths
+
+    get_summary_pkgsrc < "$tmp_dir"/pkgpaths > "$tmp_dir"/micro_summary
+
+    pkg_cmp_summary -p "$tmp_dir"/installed_registered \
+                       "$tmp_dir"/micro_summary |
+    prepare_cmp
+}
+
+compare_cbS (){
+    pkg_cmp_summary -p "$binsummary" "$srcsummary" |
+    prepare_cmp
+}
+
+install_ib (){
+    compare_cir | awk '$1 == "+" {print $2}' \
+	> "$tmp_dir"/pkgpath_to_install
+
+    grep_summary_PKGPATH "$tmp_dir"/pkgpath_to_install "$binsummary" |
+    summary2pkgname > "$tmp_dir"/pkgname_to_install
+
+    while read pkgname; do
+	echo '------------------------------------------'
+	printf "Adding $pkgname package... "
+	if pkg_add "$packages/$pkgname$pkgext"; then
+	    echo '[done]'
+	else
+	    echo '[failed]'
+	fi
+    done < "$tmp_dir"/pkgname_to_install
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-r)
+	    register_pkg $2
+	    shift;;
+	-rc)
+	    register_all_pkgs
+	    shift;;
+
+	-cir)
+	    compare_cir;;
+	-cib)
+	    compare_cib;;
+	-cis)
+	    compare_cis;;
+
+	-crs)
+	    compare_crs;;
+
+	-cbS)
+	    compare_cbS;;
+
+	-ib)
+	    install_ib;;
+
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done

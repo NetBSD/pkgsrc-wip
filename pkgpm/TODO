@@ -1,0 +1,53 @@
+Goals:
+
+  0) No gui :-)
+  1) Packages user is interested in are registered in a special database,
+     plain text file similar to pkg_chk.conf by pkgtools/pkg_chk
+  2) Everything is made through pkg_summary.gz/.txt,
+     see 7), 8)
+  3) Cache directory for downloaded packages, no 'ftp ... | tar ...'
+  4) No pkg_add -u|-uu. Package's versions should be analysed
+     by pkgpm.
+  5) pkg_check_summary - sanity checks for pkg_summary.txt,
+     i.e. REQUIRES/PROVIDES consistency, versioned dependencies
+     in DEPENDS etc.
+  6) wip/pkg_summary-utils and wip/awk-pkgsrc-dewey are in use
+  7) NetBSD's ftp://...pkg_summary.gz + pkg_summary.txt for locally built
+     packages + user's preferences = final pkg_summary.txt
+  8) User can have his preferences about what packages
+     can be installed/upgraded
+     from the remote repsitory and what packages cannot, see 2) and 7)
+  9) shell + runawk + awk
+  10) (optional) local pkg_src_summary.txt database
+  11) Ability to remove old binaries from pkgsrc/packages,
+      see pkg_src_summary and pkg_cmp_summary.
+      Ability to remove old source tarball from pkgsrc/distfiles,
+      see pkg_src_summary and pkg_cmp_summary.
+
+pkgpm options:
+
+1) install packages
+2) registered packages
+
+  -r +epkgpath      - add package to 2)
+  -r -epkgpath      - add package from 2)
+  -ra               - add all installed packages to 2)
+  -rc               - register all installed packages in 2)
+                      and remove all others
+
+  -cir              - compare installed vs. registered
+  -cib              - compare installed vs. binary pkg_summary.gz
+  -cio              - compare installed vs. pkg_online database
+  -cis              - compare installed vs. pkgsrc source tree
+  -ciS              - compare installed vs. pkg_src_summary.txt
+
+  -crs              - compare installed registered vs. pkgsrc source tree
+  -crS              - compare installed registered vs. pkg_src_summary.txt
+
+  -cbS              - compare binary vs. pkg_src_summary.txt
+
+  -ib               - install missed packages through binary pkg_summary.gz
+  -is               - install missed packages through pkgsrc tree
+
+  -uba              - upgrade package through binary pkg_summary.gz
+  -usa              - upgrade package through binary pkg_summary.gz
