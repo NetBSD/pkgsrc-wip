@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3176 2009/01/06 23:36:57 tnn2 Exp $
+# $Id: Makefile,v 1.3177 2009/01/07 12:35:07 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1155,6 +1155,7 @@ SUBDIR+=	openbsd-input-ws
 SUBDIR+=	openca
 SUBDIR+=	openct
 SUBDIR+=	opendchub
+SUBDIR+=	openjdk
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openoffice2-bin-af
