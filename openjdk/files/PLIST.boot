@@ -11,6 +11,7 @@ bin/rmic
 include/jni.h
 include/netbsd/jni_md.h
 jre/bin/java
+jre/lib/${ARCH}/client/libjvm.so
 jre/lib/${ARCH}/jvm.cfg
 jre/lib/${ARCH}/libjava.so
 jre/lib/${ARCH}/libnet.so
