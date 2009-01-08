@@ -1,7 +1,7 @@
 Suggested package updates
 =========================
 
-	o amarok-1.92.2
+	o amarok-2.0.1
 	o argouml-0.24
 	o backintime-0.8.20
 	o bakery-2.6.2
@@ -14,7 +14,8 @@ Suggested package updates
 	o commoncpp2-1.7.0
 	o d4x-2.5.7.1
 	o daphne-1.0
-	o digikam-0.10.0beta7 (needs libraries from KDE 4.2)
+	o desmume-0.9
+	o digikam-0.10.0beta8 (needs libraries from KDE 4.2)
 	o directfb-1.0.0
 	o ecasound-2.5.2
 	o editline-20080712.2.11
@@ -75,7 +76,7 @@ Suggested package updates
 	o rdup-0.6.4
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o sdlmame-0.128
+	o sdlmame-0.129
 	o sdlmess-0.128
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
