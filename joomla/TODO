@@ -1,3 +1,5 @@
+Possibly vulnerable: http://secunia.com/advisories/33377/
+
 How to handle PREFIX/share/joomla/tmp, PREFIX/share/joomla/cache and
 PREFIX/share/joomla/administrator/cache? Most likely these should be
 somewhere in /var (e.g. /var/joomla).
