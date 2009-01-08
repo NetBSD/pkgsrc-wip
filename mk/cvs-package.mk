@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.31 2008/12/22 18:41:08 asau Exp $
+# $Id: cvs-package.mk,v 1.32 2009/01/08 17:32:03 asau Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -80,6 +80,10 @@ _PKG_MK_CVS_PACKAGE_MK=	# defined
 
 DISTFILES?=		# empty
 PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
+# Enforce PKGREVISION unless CVS_TAG is set:
+.if empty(CVS_TAG)
+PKGREVISION?=		$(_CVS_PKGVERSION:S/.//g)
+.endif
 
 #
 # definition of user-visible output variables

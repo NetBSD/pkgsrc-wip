@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.8 2008/12/22 20:01:28 asau Exp $
+# $Id: svn-package.mk,v 1.9 2009/01/08 17:32:03 asau Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -67,6 +67,10 @@ BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 #
 
 DISTFILES?=		# empty
+# Enforce PKGREVISION unless SVN_TAG is set
+.if empty(SVN_TAG)
+PKGREVISION?=		$(_SVN_PKGVERSION:S/.//g)
+.endif
 
 #
 # definition of user-visible output variables
