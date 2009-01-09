@@ -1,0 +1,3 @@
+This is a simple HTTP server for for use during development
+with CGI::Application. At this moment, it serves our needs in
+a very basic way.
