@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3180 2009/01/09 07:58:23 thomasklausner Exp $
+# $Id: Makefile,v 1.3181 2009/01/09 09:02:45 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -115,7 +115,6 @@ SUBDIR+=	audacity-devel
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
 SUBDIR+=	autocutsel
-SUBDIR+=	automoc4
 SUBDIR+=	autoproject
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
