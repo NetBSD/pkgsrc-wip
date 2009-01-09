@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/03 07:16:14 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/09 17:06:57 fulviociriaco Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -63,6 +63,7 @@ REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\
 		gcc/opt-functions.awk
 
 USE_TOOLS+=		awk:run
+USE_TOOLS+=		perl
 
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
@@ -73,7 +74,7 @@ BUILD_DEFS+=	BUILD_CXX BUILD_OBJC
 BUILD_DEFS+=	BUILD_ADA BUILD_F77 BUILD_JAVA
 BUILD_ADA?=	NO
 BUILD_CXX?=	YES
-BUILD_F77?=	NO
+BUILD_FORTRAN?=	NO
 BUILD_JAVA?=	NO
 BUILD_OBJC?=	YES
 
@@ -84,9 +85,9 @@ LANGS='c'
 .if !empty(BUILD_CXX:M[Yy][Ee][Ss])
 LANGS+='c++'
 .endif
-#.if !empty(BUILD_F77:M[Yy][Ee][Ss])
-#LANGS+='f77'
-#.endif
+.if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
+LANGS+='fortran'
+.endif
 #.if !empty(BUILD_JAVA:M[Yy][Ee][Ss])
 #LANGS+='java'
 #.endif
@@ -106,9 +107,11 @@ MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 UNLIMIT_RESOURCES+=	datasize
 
 
-.if !empty(BUILD_F77:M[Yy][Ee][Ss])
+.if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 USE_TOOLS+=		chmod
 MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 .endif
