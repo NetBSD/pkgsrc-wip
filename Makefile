@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3184 2009/01/09 12:33:40 thomasklausner Exp $
+# $Id: Makefile,v 1.3185 2009/01/09 21:46:01 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -864,7 +864,6 @@ SUBDIR+=	libatomic_ops
 SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
 SUBDIR+=	libcli
-SUBDIR+=	libclucene
 SUBDIR+=	libcm
 SUBDIR+=	libdaemon
 SUBDIR+=	libdbi
