@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/29 21:38:18 mwdavies Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/09 09:07:37 thomasklausner Exp $
 
 DISTNAME=	phonon-4.2.0
 CATEGORIES=	multimedia
@@ -11,7 +11,7 @@ COMMENT=	Multimedia API for KDE and QT
 
 #BUILD_MAKE_FLAGS+= VERBOSE=1
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../wip/automoc4
+BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 USE_DIRS+=	kde4-1.0
 USE_TOOLS+=	pkg-config
