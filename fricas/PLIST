@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/06 23:38:16 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/01/09 08:11:46 asau Exp $
 bin/axiom
 bin/efricas
 bin/fricas
@@ -1877,8 +1877,18 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DAlgebrai
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DAlgebraic1.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DAlgebraic1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DAlgebraic1.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DFunctions1.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DFunctions1.VIEW/graph0
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DFunctions1.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DFunctions1.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DParametric1.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DParametric1.VIEW/graph0
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DParametric1.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DParametric1.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DPolar1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DPolar1.VIEW/graph0
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DPolar1.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DPolar1.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DFunctions1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DFunctions1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DFunctions1.VIEW/image.xpm
@@ -2798,6 +2808,8 @@ ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DP
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DParametricCurve1.VIEW
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot3DFunctions1.VIEW
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DPolar1.VIEW
+${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DParametric1.VIEW
+${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DFunctions1.VIEW
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ExPlot2DAlgebraic1.VIEW
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/AssortedGraphicsExamplePage6.VIEW
 ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/AssortedGraphicsExamplePage5.VIEW
