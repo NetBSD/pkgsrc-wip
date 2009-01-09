@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3182 2009/01/09 11:52:56 thomasklausner Exp $
+# $Id: Makefile,v 1.3183 2009/01/09 12:30:52 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1625,7 +1625,6 @@ SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	redfang
-SUBDIR+=	redland
 SUBDIR+=	regexxer
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
