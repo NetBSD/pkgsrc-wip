@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/28 10:44:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/09 12:43:46 cheusov Exp $
 
 .include "../../wip/lua-stdlib/Makefile.common"
 
@@ -7,7 +7,6 @@ PKGNAME=		${DISTNAME:S/stdlib/lua-stdlib/}
 COMMENT=		Standard library for Lua programming language
 
 DEPENDS+=		lua>=5.1:../../lang/lua
-DEPENDS+=		lua-lrexlib-pcre:../../wip/lua-lrexlib-pcre
 
 # hack! I don't how to get Lua's directory for modules properly
 LUA_VER=		5.1
