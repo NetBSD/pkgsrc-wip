@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/27 04:54:35 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/09 12:35:07 thomasklausner Exp $
 
 DISTNAME=	soprano-2.1
 CATEGORIES=	sysutils
@@ -19,7 +19,7 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../wip/libclucene/buildlink3.mk"
-.include "../../wip/redland/buildlink3.mk"
+.include "../../textproc/redland/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
