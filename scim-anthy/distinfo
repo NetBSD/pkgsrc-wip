@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/02/26 13:50:05 rxg Exp $
+$NetBSD: distinfo,v 1.3 2009/01/09 04:22:01 makoto Exp $
 
-SHA1 (scim-anthy-0.9.0.tar.gz) = a0de539b2a113892a0799128f888468b688926b0
-RMD160 (scim-anthy-0.9.0.tar.gz) = 5c92d33352f5e4ca6f6cf89d8a863fff16ae5a37
-Size (scim-anthy-0.9.0.tar.gz) = 638764 bytes
+SHA1 (scim-anthy-1.2.6.tar.gz) = cadf34c8fa21d7414db19accd16c6aa2ec6d3c14
+RMD160 (scim-anthy-1.2.6.tar.gz) = 59c1a1a2e4d188e4b7da12c78cf7e303db016f07
+Size (scim-anthy-1.2.6.tar.gz) = 667839 bytes
 SHA1 (patch-aa) = 08e52ae26596893995aba4ba801abfcaebff0018
