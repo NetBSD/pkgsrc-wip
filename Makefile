@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3186 2009/01/09 21:50:57 mwdavies Exp $
+# $Id: Makefile,v 1.3187 2009/01/09 23:37:34 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1601,7 +1601,6 @@ SUBDIR+=	qemu-neo1973-images
 SUBDIR+=	qgis
 SUBDIR+=	qhacc
 SUBDIR+=	qico
-SUBDIR+=	qimageblitz
 SUBDIR+=	qinx
 SUBDIR+=	qn-x11
 SUBDIR+=	qpsmtpd
