@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/11/06 12:14:58 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/10 10:15:02 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -67,6 +67,8 @@ lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_djvu.so
 lib/kde4/okularGenerator_dvi.so
+lib/kde4/okularGenerator_epub.so
+lib/kde4/okularGenerator_fax.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
 lib/kde4/okularGenerator_kimgio.so
@@ -79,19 +81,19 @@ lib/kde4/okularpart.so
 lib/kde4/svgpart.so
 lib/libgwenviewlib.so
 lib/libgwenviewlib.so.4
-lib/libgwenviewlib.so.4.1.0
+lib/libgwenviewlib.so.4.2.0
 lib/libkdcraw.so
 lib/libkdcraw.so.7
 lib/libkdcraw.so.7.0.0
 lib/libkexiv2.so
-lib/libkexiv2.so.6
-lib/libkexiv2.so.6.0.0
+lib/libkexiv2.so.7
+lib/libkexiv2.so.7.2.0
 lib/libkipi.so
-lib/libkipi.so.5
-lib/libkipi.so.5.0.0
+lib/libkipi.so.6
+lib/libkipi.so.6.0.0
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.4
-lib/libkolourpaint_lgpl.so.4.1.0
+lib/libkolourpaint_lgpl.so.4.2.0
 lib/libksane.so
 lib/libksane.so.0
 lib/libksane.so.0.1.1
@@ -113,6 +115,8 @@ share/applications/kde4/okularApplication_chm.desktop
 share/applications/kde4/okularApplication_comicbook.desktop
 share/applications/kde4/okularApplication_djvu.desktop
 share/applications/kde4/okularApplication_dvi.desktop
+share/applications/kde4/okularApplication_epub.desktop
+share/applications/kde4/okularApplication_fax.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
 share/applications/kde4/okularApplication_kimgio.desktop
@@ -132,9 +136,9 @@ share/doc/kde/HTML/en/gwenview/introduction.docbook
 share/doc/kde/HTML/en/gwenview/keybindings.docbook
 share/doc/kde/HTML/en/gwenview/mouse.docbook
 share/doc/kde/HTML/en/gwenview/view_mode.png
-share/doc/kde/HTML/en/kamera/common
-share/doc/kde/HTML/en/kamera/index.cache.bz2
-share/doc/kde/HTML/en/kamera/index.docbook
+share/doc/kde/HTML/en/kcontrol/kamera/common
+share/doc/kde/HTML/en/kcontrol/kamera/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/kamera/index.docbook
 share/doc/kde/HTML/en/kgamma/common
 share/doc/kde/HTML/en/kgamma/index.cache.bz2
 share/doc/kde/HTML/en/kgamma/index.docbook
@@ -254,7 +258,6 @@ share/icons/hicolor/scalable/apps/ksnapshot.svgz
 share/icons/hicolor/scalable/apps/okular.svgz
 share/kde/apps/cmake/modules/FindKSane.cmake
 share/kde/apps/cmake/modules/FindOkular.cmake
-share/kde/apps/gvpart/gvpart-gwenview.rc
 share/kde/apps/gvpart/gvpart.rc
 share/kde/apps/gwenview/cursors/zoom.png
 share/kde/apps/gwenview/fullscreenthemes/blackglass/checked.png
@@ -404,6 +407,7 @@ share/kde/apps/okular/pics/paragraph.png
 share/kde/apps/okular/pics/pushpin.png
 share/kde/apps/okular/pics/rightarrow.png
 share/kde/apps/okular/pics/rightpointer.png
+share/kde/apps/okular/pics/stamps.svg
 share/kde/apps/okular/pics/star.png
 share/kde/apps/okular/pics/tool-note-inline.png
 share/kde/apps/okular/pics/tool-note.png
@@ -433,6 +437,8 @@ share/kde4/services/libokularGenerator_chmlib.desktop
 share/kde4/services/libokularGenerator_comicbook.desktop
 share/kde4/services/libokularGenerator_djvu.desktop
 share/kde4/services/libokularGenerator_dvi.desktop
+share/kde4/services/libokularGenerator_epub.desktop
+share/kde4/services/libokularGenerator_fax.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
 share/kde4/services/libokularGenerator_kimgio.desktop
@@ -446,6 +452,8 @@ share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
 share/kde4/services/okularDjvu.desktop
 share/kde4/services/okularDvi.desktop
+share/kde4/services/okularEPub.desktop
+share/kde4/services/okularFax.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
 share/kde4/services/okularKimgio.desktop
@@ -516,13 +524,12 @@ share/kde4/servicetypes/okularGenerator.desktop
 @dirrm share/doc/kde/HTML/en/kruler
 @dirrm share/doc/kde/HTML/en/kolourpaint
 @dirrm share/doc/kde/HTML/en/kgamma
-@dirrm share/doc/kde/HTML/en/kamera
+@dirrm share/doc/kde/HTML/en/kcontrol/kamera
 @dirrm share/doc/kde/HTML/en/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
 @comment in strigi: @dirrm lib/strigi
-@dirrm lib/libkdcraw5
 @comment in kde: @dirrm lib/kde4
 @dirrm include/okular/interfaces
 @dirrm include/okular/core

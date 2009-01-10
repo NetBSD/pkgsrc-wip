@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2008/09/17 10:51:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:20:45 mwdavies Exp $
 bin/dragon
 bin/juk
 bin/kmix
 bin/kmixctrl
 bin/kscd
-bin/workman2cddb.pl
 include/audiocdencoder.h
 include/libkcddb/cdinfo.h
 include/libkcddb/cdinfodialog.h
@@ -25,13 +24,13 @@ lib/kde4/libaudiocd_encoder_vorbis.so
 lib/kde4/libaudiocd_encoder_wav.so
 lib/libaudiocdplugins.so
 lib/libaudiocdplugins.so.4
-lib/libaudiocdplugins.so.4.1.0
+lib/libaudiocdplugins.so.4.2.0
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.4.1.0
+lib/libkcddb.so.4.2.0
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.4.1.0
+lib/libkcompactdisc.so.4.2.0
 lib/libkdeinit4_kmix.so
 lib/libkdeinit4_kmixctrl.so
 share/applications/kde4/dragonplayer.desktop
@@ -42,6 +41,7 @@ share/dbus-1/interfaces/org.kde.KMix.xml
 share/dbus-1/interfaces/org.kde.juk.collection.xml
 share/dbus-1/interfaces/org.kde.juk.player.xml
 share/dbus-1/interfaces/org.kde.juk.search.xml
+share/dbus-1/interfaces/org.kde.kscd.cdplayer.xml
 share/doc/kde/HTML/en/dragonplayer/common
 share/doc/kde/HTML/en/dragonplayer/index.cache.bz2
 share/doc/kde/HTML/en/dragonplayer/index.docbook
@@ -57,6 +57,9 @@ share/doc/kde/HTML/en/juk/juk-tag-guesser.png
 share/doc/kde/HTML/en/juk/normal-playlist.png
 share/doc/kde/HTML/en/juk/search-playlist.png
 share/doc/kde/HTML/en/juk/toolbar.png
+share/doc/kde/HTML/en/kioslave/audiocd/common
+share/doc/kde/HTML/en/kioslave/audiocd/index.cache.bz2
+share/doc/kde/HTML/en/kioslave/audiocd/index.docbook
 share/doc/kde/HTML/en/kmix/common
 share/doc/kde/HTML/en/kmix/index.cache.bz2
 share/doc/kde/HTML/en/kmix/index.docbook
@@ -104,6 +107,7 @@ share/icons/hicolor/64x64/apps/kmix.png
 share/icons/hicolor/64x64/apps/kscd.png
 share/icons/hicolor/scalable/apps/dragonplayer.svgz
 share/icons/oxygen/16x16/actions/player-volume-muted.png
+share/icons/oxygen/22x22/actions/kscd-dock.png
 share/icons/oxygen/22x22/actions/player-volume-muted.png
 share/icons/oxygen/32x32/actions/player-volume-muted.png
 share/icons/oxygen/48x48/actions/player-volume-muted.png
@@ -141,7 +145,14 @@ share/kde/apps/kmix/pics/mix_volume.png
 share/kde/apps/kmix/profiles/ALSA.default.xml
 share/kde/apps/kmix/profiles/OSS.default.xml
 share/kde/apps/konqsidebartng/virtual_folders/services/audiocd.desktop
+share/kde/apps/kscd/skin/BubbleGum.svg
+share/kde/apps/kscd/skin/Melon.svg
+share/kde/apps/kscd/skin/NGRemote.svg
+share/kde/apps/kscd/skin/Orange2.svg
+share/kde/apps/kscd/skin/SquaredMelon.svg
+share/kde/apps/kscd/skin/default.svg
 share/kde/apps/profiles/kscd.profile.xml
+share/kde/apps/solid/actions/dragonplayer-opendvd.desktop
 share/kde/autostart/kmix_autostart.desktop
 share/kde/autostart/restore_kmix_volumes.desktop
 share/kde/config/dragonplayerrc
@@ -162,6 +173,8 @@ share/kde4/services/libkcddb.desktop
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/profiles
+@dirrm share/kde/apps/kscd/skin
+@dirrm share/kde/apps/kscd
 @comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/kmix/profiles
 @dirrm share/kde/apps/kmix/pics
@@ -179,6 +192,7 @@ share/kde4/services/libkcddb.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/kmix
+@dirrm share/doc/kde/HTML/en/kioslave/audiocd
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/dragonplayer
 @comment in kde: @dirrm share/doc/kde/HTML/en
