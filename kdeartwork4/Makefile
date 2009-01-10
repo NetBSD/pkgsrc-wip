@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/06 11:42:45 mwdavies Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/10 09:54:03 mwdavies Exp $
 
 DISTNAME=	kdeartwork-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -15,6 +15,7 @@ BUILDLINK_API_DEPENDS.xscreensaver+=  xscreensaver>=5.00
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../math/eigen2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
 .include "../../wip/kdebase-workspace4/buildlink3.mk"

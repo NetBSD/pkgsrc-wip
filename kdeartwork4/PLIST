@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/05 20:55:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/01/10 09:54:03 mwdavies Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
+bin/kdeasciiquarium.kss
 bin/keuphoria.kss
 bin/kflux.kss
 bin/kfountain.kss
@@ -435,7 +436,6 @@ share/icons/Locolor/16x16/apps/keystone.png
 share/icons/Locolor/16x16/apps/kfax.png
 share/icons/Locolor/16x16/apps/kfind.png
 share/icons/Locolor/16x16/apps/kfloppy.png
-share/icons/Locolor/16x16/apps/kfm.png
 share/icons/Locolor/16x16/apps/kfm_home.png
 share/icons/Locolor/16x16/apps/kfontinst.png
 share/icons/Locolor/16x16/apps/kfract.png
@@ -573,6 +573,7 @@ share/icons/Locolor/16x16/apps/remote.png
 share/icons/Locolor/16x16/apps/samba.png
 share/icons/Locolor/16x16/apps/scsi.png
 share/icons/Locolor/16x16/apps/style.png
+share/icons/Locolor/16x16/apps/system-file-manager.png
 share/icons/Locolor/16x16/apps/terminal.png
 share/icons/Locolor/16x16/apps/usb.png
 share/icons/Locolor/16x16/apps/wabi.png
@@ -757,7 +758,6 @@ share/icons/Locolor/32x32/apps/keystone.png
 share/icons/Locolor/32x32/apps/kfax.png
 share/icons/Locolor/32x32/apps/kfind.png
 share/icons/Locolor/32x32/apps/kfloppy.png
-share/icons/Locolor/32x32/apps/kfm.png
 share/icons/Locolor/32x32/apps/kfm_home.png
 share/icons/Locolor/32x32/apps/kfontinst.png
 share/icons/Locolor/32x32/apps/kfract.png
@@ -885,6 +885,7 @@ share/icons/Locolor/32x32/apps/pysol.png
 share/icons/Locolor/32x32/apps/realplayer.png
 share/icons/Locolor/32x32/apps/samba.png
 share/icons/Locolor/32x32/apps/style.png
+share/icons/Locolor/32x32/apps/system-file-manager.png
 share/icons/Locolor/32x32/apps/terminal.png
 share/icons/Locolor/32x32/apps/wabi.png
 share/icons/Locolor/32x32/apps/window_list.png
@@ -2086,7 +2087,6 @@ share/icons/crystalsvg/16x16/apps/kfax.png
 share/icons/crystalsvg/16x16/apps/kfaxview.png
 share/icons/crystalsvg/16x16/apps/kfind.png
 share/icons/crystalsvg/16x16/apps/kfloppy.png
-share/icons/crystalsvg/16x16/apps/kfm.png
 share/icons/crystalsvg/16x16/apps/kfontview.png
 share/icons/crystalsvg/16x16/apps/kfouleggs.png
 share/icons/crystalsvg/16x16/apps/kgamma.png
@@ -2260,6 +2260,7 @@ share/icons/crystalsvg/16x16/apps/style.png
 share/icons/crystalsvg/16x16/apps/stylesheet.png
 share/icons/crystalsvg/16x16/apps/superkaramba.png
 share/icons/crystalsvg/16x16/apps/synaescope.png
+share/icons/crystalsvg/16x16/apps/system-file-manager.png
 share/icons/crystalsvg/16x16/apps/systemtray.png
 share/icons/crystalsvg/16x16/apps/taskbar.png
 share/icons/crystalsvg/16x16/apps/telepathy_protocol.png
@@ -3082,7 +3083,6 @@ share/icons/crystalsvg/22x22/apps/kfaxview.png
 share/icons/crystalsvg/22x22/apps/kfilereplace.png
 share/icons/crystalsvg/22x22/apps/kfind.png
 share/icons/crystalsvg/22x22/apps/kfloppy.png
-share/icons/crystalsvg/22x22/apps/kfm.png
 share/icons/crystalsvg/22x22/apps/kfontview.png
 share/icons/crystalsvg/22x22/apps/kfouleggs.png
 share/icons/crystalsvg/22x22/apps/kgeography.png
@@ -3192,6 +3192,7 @@ share/icons/crystalsvg/22x22/apps/samba.png
 share/icons/crystalsvg/22x22/apps/style.png
 share/icons/crystalsvg/22x22/apps/stylesheet.png
 share/icons/crystalsvg/22x22/apps/superkaramba.png
+share/icons/crystalsvg/22x22/apps/system-file-manager.png
 share/icons/crystalsvg/22x22/apps/systemtray.png
 share/icons/crystalsvg/22x22/apps/taskbar.png
 share/icons/crystalsvg/22x22/apps/telepathy_protocol.png
@@ -3780,7 +3781,6 @@ share/icons/crystalsvg/32x32/apps/kfaxview.png
 share/icons/crystalsvg/32x32/apps/kfilereplace.png
 share/icons/crystalsvg/32x32/apps/kfind.png
 share/icons/crystalsvg/32x32/apps/kfloppy.png
-share/icons/crystalsvg/32x32/apps/kfm.png
 share/icons/crystalsvg/32x32/apps/kfontview.png
 share/icons/crystalsvg/32x32/apps/kfouleggs.png
 share/icons/crystalsvg/32x32/apps/kgamma.png
@@ -3953,6 +3953,7 @@ share/icons/crystalsvg/32x32/apps/sms_protocol.png
 share/icons/crystalsvg/32x32/apps/style.png
 share/icons/crystalsvg/32x32/apps/stylesheet.png
 share/icons/crystalsvg/32x32/apps/superkaramba.png
+share/icons/crystalsvg/32x32/apps/system-file-manager.png
 share/icons/crystalsvg/32x32/apps/systemtray.png
 share/icons/crystalsvg/32x32/apps/taskbar.png
 share/icons/crystalsvg/32x32/apps/telepathy_protocol.png
@@ -4338,7 +4339,6 @@ share/icons/crystalsvg/48x48/apps/kfaxview.png
 share/icons/crystalsvg/48x48/apps/kfilereplace.png
 share/icons/crystalsvg/48x48/apps/kfind.png
 share/icons/crystalsvg/48x48/apps/kfloppy.png
-share/icons/crystalsvg/48x48/apps/kfm.png
 share/icons/crystalsvg/48x48/apps/kfontview.png
 share/icons/crystalsvg/48x48/apps/kfouleggs.png
 share/icons/crystalsvg/48x48/apps/kgamma.png
@@ -4495,6 +4495,7 @@ share/icons/crystalsvg/48x48/apps/staroffice.png
 share/icons/crystalsvg/48x48/apps/style.png
 share/icons/crystalsvg/48x48/apps/stylesheet.png
 share/icons/crystalsvg/48x48/apps/superkaramba.png
+share/icons/crystalsvg/48x48/apps/system-file-manager.png
 share/icons/crystalsvg/48x48/apps/systemtray.png
 share/icons/crystalsvg/48x48/apps/taskbar.png
 share/icons/crystalsvg/48x48/apps/telepathy_protocol.png
@@ -4778,7 +4779,6 @@ share/icons/crystalsvg/64x64/apps/kenolaba.png
 share/icons/crystalsvg/64x64/apps/key_bindings.png
 share/icons/crystalsvg/64x64/apps/kfind.png
 share/icons/crystalsvg/64x64/apps/kfloppy.png
-share/icons/crystalsvg/64x64/apps/kfm.png
 share/icons/crystalsvg/64x64/apps/kfontview.png
 share/icons/crystalsvg/64x64/apps/kfouleggs.png
 share/icons/crystalsvg/64x64/apps/kgeography.png
@@ -4882,6 +4882,7 @@ share/icons/crystalsvg/64x64/apps/staroffice.png
 share/icons/crystalsvg/64x64/apps/style.png
 share/icons/crystalsvg/64x64/apps/stylesheet.png
 share/icons/crystalsvg/64x64/apps/superkaramba.png
+share/icons/crystalsvg/64x64/apps/system-file-manager.png
 share/icons/crystalsvg/64x64/apps/systemtray.png
 share/icons/crystalsvg/64x64/apps/taskbar.png
 share/icons/crystalsvg/64x64/apps/telepathy_protocol.png
@@ -5555,13 +5556,13 @@ share/icons/ikons/32x32/apps/HancomWord.png
 share/icons/ikons/32x32/apps/go.png
 share/icons/ikons/32x32/apps/kandy.png
 share/icons/ikons/32x32/apps/kcontrol.png
-share/icons/ikons/32x32/apps/kfm.png
 share/icons/ikons/32x32/apps/kfm_home.png
 share/icons/ikons/32x32/apps/kjobviewer.png
 share/icons/ikons/32x32/apps/kmail_tmp.png
 share/icons/ikons/32x32/apps/konsole.png
 share/icons/ikons/32x32/apps/kpilot.png
 share/icons/ikons/32x32/apps/printmgr.png
+share/icons/ikons/32x32/apps/system-file-manager.png
 share/icons/ikons/32x32/apps/tux_config.png
 share/icons/ikons/32x32/devices/3floppy_mount.png
 share/icons/ikons/32x32/devices/3floppy_unmount.png
@@ -6291,7 +6292,6 @@ share/icons/kdeclassic/16x16/apps/cookie.png
 share/icons/kdeclassic/16x16/apps/date.png
 share/icons/kdeclassic/16x16/apps/designer.png
 share/icons/kdeclassic/16x16/apps/dlgedit.png
-share/icons/kdeclassic/16x16/apps/dolphin.png
 share/icons/kdeclassic/16x16/apps/edu_languages.png
 share/icons/kdeclassic/16x16/apps/edu_mathematics.png
 share/icons/kdeclassic/16x16/apps/edu_miscellaneous.png
@@ -6389,7 +6389,6 @@ share/icons/kdeclassic/16x16/apps/keyboard_layout.png
 share/icons/kdeclassic/16x16/apps/kfax.png
 share/icons/kdeclassic/16x16/apps/kfind.png
 share/icons/kdeclassic/16x16/apps/kfloppy.png
-share/icons/kdeclassic/16x16/apps/kfm.png
 share/icons/kdeclassic/16x16/apps/kfm_home.png
 share/icons/kdeclassic/16x16/apps/kformula.png
 share/icons/kdeclassic/16x16/apps/kghostview.png
@@ -6518,6 +6517,8 @@ share/icons/kdeclassic/16x16/apps/realplayer.png
 share/icons/kdeclassic/16x16/apps/remote.png
 share/icons/kdeclassic/16x16/apps/samba.png
 share/icons/kdeclassic/16x16/apps/stylesheet.png
+share/icons/kdeclassic/16x16/apps/system-file-manager-dolphin.png
+share/icons/kdeclassic/16x16/apps/system-file-manager.png
 share/icons/kdeclassic/16x16/apps/terminal.png
 share/icons/kdeclassic/16x16/apps/usb.png
 share/icons/kdeclassic/16x16/apps/wabi.png
@@ -7357,13 +7358,13 @@ share/icons/kdeclassic/22x22/actions/zoom-out.png
 share/icons/kdeclassic/22x22/actions/zoom.png
 share/icons/kdeclassic/22x22/animations/process-idle.png
 share/icons/kdeclassic/22x22/animations/process-working.png
-share/icons/kdeclassic/22x22/apps/dolphin.png
 share/icons/kdeclassic/22x22/apps/kaboodle.png
 share/icons/kdeclassic/22x22/apps/kivio.png
 share/icons/kdeclassic/22x22/apps/konqsidebar_mediaplayer.png
 share/icons/kdeclassic/22x22/apps/kpilot.png
 share/icons/kdeclassic/22x22/apps/kugar.png
 share/icons/kdeclassic/22x22/apps/noatun.png
+share/icons/kdeclassic/22x22/apps/system-file-manager-dolphin.png
 share/icons/kdeclassic/22x22/mimetypes/empty.png
 share/icons/kdeclassic/22x22/mimetypes/karbon_karbon.png
 share/icons/kdeclassic/22x22/mimetypes/kchart_chrt.png
@@ -7664,7 +7665,6 @@ share/icons/kdeclassic/32x32/apps/cookie.png
 share/icons/kdeclassic/32x32/apps/date.png
 share/icons/kdeclassic/32x32/apps/designer.png
 share/icons/kdeclassic/32x32/apps/dlgedit.png
-share/icons/kdeclassic/32x32/apps/dolphin.png
 share/icons/kdeclassic/32x32/apps/edu_languages.png
 share/icons/kdeclassic/32x32/apps/edu_mathematics.png
 share/icons/kdeclassic/32x32/apps/edu_miscellaneous.png
@@ -7753,7 +7753,6 @@ share/icons/kdeclassic/32x32/apps/keyboard_layout.png
 share/icons/kdeclassic/32x32/apps/kfax.png
 share/icons/kdeclassic/32x32/apps/kfind.png
 share/icons/kdeclassic/32x32/apps/kfloppy.png
-share/icons/kdeclassic/32x32/apps/kfm.png
 share/icons/kdeclassic/32x32/apps/kfm_home.png
 share/icons/kdeclassic/32x32/apps/kformula.png
 share/icons/kdeclassic/32x32/apps/kghostview.png
@@ -7880,6 +7879,8 @@ share/icons/kdeclassic/32x32/apps/realplayer.png
 share/icons/kdeclassic/32x32/apps/samba.png
 share/icons/kdeclassic/32x32/apps/style.png
 share/icons/kdeclassic/32x32/apps/stylesheet.png
+share/icons/kdeclassic/32x32/apps/system-file-manager-dolphin.png
+share/icons/kdeclassic/32x32/apps/system-file-manager.png
 share/icons/kdeclassic/32x32/apps/terminal.png
 share/icons/kdeclassic/32x32/apps/usb.png
 share/icons/kdeclassic/32x32/apps/wabi.png
@@ -8057,7 +8058,6 @@ share/icons/kdeclassic/48x48/apps/colors.png
 share/icons/kdeclassic/48x48/apps/cookie.png
 share/icons/kdeclassic/48x48/apps/date.png
 share/icons/kdeclassic/48x48/apps/designer.png
-share/icons/kdeclassic/48x48/apps/dolphin.png
 share/icons/kdeclassic/48x48/apps/edu_languages.png
 share/icons/kdeclassic/48x48/apps/emacs.png
 share/icons/kdeclassic/48x48/apps/email.png
@@ -8113,7 +8113,6 @@ share/icons/kdeclassic/48x48/apps/keyboard_layout.png
 share/icons/kdeclassic/48x48/apps/kfax.png
 share/icons/kdeclassic/48x48/apps/kfind.png
 share/icons/kdeclassic/48x48/apps/kfloppy.png
-share/icons/kdeclassic/48x48/apps/kfm.png
 share/icons/kdeclassic/48x48/apps/kfm_home.png
 share/icons/kdeclassic/48x48/apps/kformula.png
 share/icons/kdeclassic/48x48/apps/kget.png
@@ -8211,6 +8210,8 @@ share/icons/kdeclassic/48x48/apps/remote.png
 share/icons/kdeclassic/48x48/apps/samba.png
 share/icons/kdeclassic/48x48/apps/style.png
 share/icons/kdeclassic/48x48/apps/stylesheet.png
+share/icons/kdeclassic/48x48/apps/system-file-manager-dolphin.png
+share/icons/kdeclassic/48x48/apps/system-file-manager.png
 share/icons/kdeclassic/48x48/apps/terminal.png
 share/icons/kdeclassic/48x48/apps/usb.png
 share/icons/kdeclassic/48x48/apps/window_list.png
@@ -8341,7 +8342,7 @@ share/icons/kdeclassic/48x48/places/folder.png
 share/icons/kdeclassic/48x48/places/user-desktop.png
 share/icons/kdeclassic/48x48/places/user-home.png
 share/icons/kdeclassic/48x48/places/user-trash.png
-share/icons/kdeclassic/64x64/apps/dolphin.png
+share/icons/kdeclassic/64x64/apps/system-file-manager-dolphin.png
 share/icons/kdeclassic/64x64/mimetypes/audio-x-generic.png
 share/icons/kdeclassic/64x64/mimetypes/binary2.png
 share/icons/kdeclassic/64x64/mimetypes/cdtrack.png
@@ -8525,7 +8526,6 @@ share/icons/kids/16x16/apps/key_bindings.png
 share/icons/kids/16x16/apps/keyboard.png
 share/icons/kids/16x16/apps/keyboard_layout.png
 share/icons/kids/16x16/apps/kfloppy.png
-share/icons/kids/16x16/apps/kfm.png
 share/icons/kids/16x16/apps/kfm_home.png
 share/icons/kids/16x16/apps/khelpcenter.png
 share/icons/kids/16x16/apps/kicker.png
@@ -8582,6 +8582,7 @@ share/icons/kids/16x16/apps/sisadmin.png
 share/icons/kids/16x16/apps/star_here.png
 share/icons/kids/16x16/apps/start_here.png
 share/icons/kids/16x16/apps/stylesheet.png
+share/icons/kids/16x16/apps/system-file-manager.png
 share/icons/kids/16x16/apps/trash.png
 share/icons/kids/16x16/apps/window_list.png
 share/icons/kids/16x16/apps/windows_users.png
@@ -8753,7 +8754,6 @@ share/icons/kids/22x22/apps/key_bindings.png
 share/icons/kids/22x22/apps/keyboard.png
 share/icons/kids/22x22/apps/keyboard_layout.png
 share/icons/kids/22x22/apps/kfloppy.png
-share/icons/kids/22x22/apps/kfm.png
 share/icons/kids/22x22/apps/kfm_home.png
 share/icons/kids/22x22/apps/khelpcenter.png
 share/icons/kids/22x22/apps/kicker.png
@@ -8807,6 +8807,7 @@ share/icons/kids/22x22/apps/samba.png
 share/icons/kids/22x22/apps/sisadmin.png
 share/icons/kids/22x22/apps/start_here.png
 share/icons/kids/22x22/apps/stylesheet.png
+share/icons/kids/22x22/apps/system-file-manager.png
 share/icons/kids/22x22/apps/trash.png
 share/icons/kids/22x22/apps/window_list.png
 share/icons/kids/22x22/apps/windows_users.png
@@ -8985,7 +8986,6 @@ share/icons/kids/32x32/apps/key_bindings.png
 share/icons/kids/32x32/apps/keyboard.png
 share/icons/kids/32x32/apps/keyboard_layout.png
 share/icons/kids/32x32/apps/kfloppy.png
-share/icons/kids/32x32/apps/kfm.png
 share/icons/kids/32x32/apps/kfm_home.png
 share/icons/kids/32x32/apps/khelpcenter.png
 share/icons/kids/32x32/apps/kicker.png
@@ -9045,6 +9045,7 @@ share/icons/kids/32x32/apps/sisadmin.png
 share/icons/kids/32x32/apps/star_here.png
 share/icons/kids/32x32/apps/start_here.png
 share/icons/kids/32x32/apps/stylesheet.png
+share/icons/kids/32x32/apps/system-file-manager.png
 share/icons/kids/32x32/apps/trash.png
 share/icons/kids/32x32/apps/window_list.png
 share/icons/kids/32x32/apps/windows_users.png
@@ -9217,7 +9218,6 @@ share/icons/kids/48x48/apps/key_bindings.png
 share/icons/kids/48x48/apps/keyboard.png
 share/icons/kids/48x48/apps/keyboard_layout.png
 share/icons/kids/48x48/apps/kfloppy.png
-share/icons/kids/48x48/apps/kfm.png
 share/icons/kids/48x48/apps/kfm_home.png
 share/icons/kids/48x48/apps/khelpcenter.png
 share/icons/kids/48x48/apps/kicker.png
@@ -9274,6 +9274,7 @@ share/icons/kids/48x48/apps/sisadmin.png
 share/icons/kids/48x48/apps/star_here.png
 share/icons/kids/48x48/apps/start_here.png
 share/icons/kids/48x48/apps/stylesheet.png
+share/icons/kids/48x48/apps/system-file-manager.png
 share/icons/kids/48x48/apps/trash.png
 share/icons/kids/48x48/apps/window_list.png
 share/icons/kids/48x48/apps/windows_users.png
@@ -9444,7 +9445,6 @@ share/icons/kids/64x64/apps/key_bindings.png
 share/icons/kids/64x64/apps/keyboard.png
 share/icons/kids/64x64/apps/keyboard_layout.png
 share/icons/kids/64x64/apps/kfloppy.png
-share/icons/kids/64x64/apps/kfm.png
 share/icons/kids/64x64/apps/kfm_home.png
 share/icons/kids/64x64/apps/khelpcenter.png
 share/icons/kids/64x64/apps/kicker.png
@@ -9501,6 +9501,7 @@ share/icons/kids/64x64/apps/sisadmin.png
 share/icons/kids/64x64/apps/star_here.png
 share/icons/kids/64x64/apps/start_here.png
 share/icons/kids/64x64/apps/stylesheet.png
+share/icons/kids/64x64/apps/system-file-manager.png
 share/icons/kids/64x64/apps/trash.png
 share/icons/kids/64x64/apps/window_list.png
 share/icons/kids/64x64/apps/windows_users.png
@@ -9644,7 +9645,6 @@ share/icons/nuvola/128x128/apps/keyboard_layout.png
 share/icons/nuvola/128x128/apps/kfig.png
 share/icons/nuvola/128x128/apps/kfind.png
 share/icons/nuvola/128x128/apps/kfloppy.png
-share/icons/nuvola/128x128/apps/kfm.png
 share/icons/nuvola/128x128/apps/kfm_home.png
 share/icons/nuvola/128x128/apps/kget.png
 share/icons/nuvola/128x128/apps/kghostview.png
@@ -9778,6 +9778,7 @@ share/icons/nuvola/128x128/apps/samba.png
 share/icons/nuvola/128x128/apps/sodipodi.png
 share/icons/nuvola/128x128/apps/style.png
 share/icons/nuvola/128x128/apps/stylesheet.png
+share/icons/nuvola/128x128/apps/system-file-manager.png
 share/icons/nuvola/128x128/apps/terminal.png
 share/icons/nuvola/128x128/apps/usb.png
 share/icons/nuvola/128x128/apps/window_list.png
@@ -10268,7 +10269,6 @@ share/icons/nuvola/16x16/apps/keyboard_layout.png
 share/icons/nuvola/16x16/apps/kfig.png
 share/icons/nuvola/16x16/apps/kfind.png
 share/icons/nuvola/16x16/apps/kfloppy.png
-share/icons/nuvola/16x16/apps/kfm.png
 share/icons/nuvola/16x16/apps/kfm_home.png
 share/icons/nuvola/16x16/apps/kget.png
 share/icons/nuvola/16x16/apps/kghostview.png
@@ -10404,6 +10404,7 @@ share/icons/nuvola/16x16/apps/sodipodi.png
 share/icons/nuvola/16x16/apps/spellcheck.png
 share/icons/nuvola/16x16/apps/style.png
 share/icons/nuvola/16x16/apps/stylesheet.png
+share/icons/nuvola/16x16/apps/system-file-manager.png
 share/icons/nuvola/16x16/apps/terminal.png
 share/icons/nuvola/16x16/apps/usb.png
 share/icons/nuvola/16x16/apps/window_list.png
@@ -10919,7 +10920,6 @@ share/icons/nuvola/22x22/apps/keyboard_layout.png
 share/icons/nuvola/22x22/apps/kfig.png
 share/icons/nuvola/22x22/apps/kfind.png
 share/icons/nuvola/22x22/apps/kfloppy.png
-share/icons/nuvola/22x22/apps/kfm.png
 share/icons/nuvola/22x22/apps/kfm_home.png
 share/icons/nuvola/22x22/apps/kget.png
 share/icons/nuvola/22x22/apps/kghostview.png
@@ -11042,6 +11042,7 @@ share/icons/nuvola/22x22/apps/samba.png
 share/icons/nuvola/22x22/apps/sodipodi.png
 share/icons/nuvola/22x22/apps/style.png
 share/icons/nuvola/22x22/apps/stylesheet.png
+share/icons/nuvola/22x22/apps/system-file-manager.png
 share/icons/nuvola/22x22/apps/terminal.png
 share/icons/nuvola/22x22/apps/usb.png
 share/icons/nuvola/22x22/apps/window_list.png
@@ -11528,7 +11529,6 @@ share/icons/nuvola/32x32/apps/keyboard_layout.png
 share/icons/nuvola/32x32/apps/kfig.png
 share/icons/nuvola/32x32/apps/kfind.png
 share/icons/nuvola/32x32/apps/kfloppy.png
-share/icons/nuvola/32x32/apps/kfm.png
 share/icons/nuvola/32x32/apps/kfm_home.png
 share/icons/nuvola/32x32/apps/kget.png
 share/icons/nuvola/32x32/apps/kghostview.png
@@ -11661,6 +11661,7 @@ share/icons/nuvola/32x32/apps/samba.png
 share/icons/nuvola/32x32/apps/sodipodi.png
 share/icons/nuvola/32x32/apps/style.png
 share/icons/nuvola/32x32/apps/stylesheet.png
+share/icons/nuvola/32x32/apps/system-file-manager.png
 share/icons/nuvola/32x32/apps/terminal.png
 share/icons/nuvola/32x32/apps/usb.png
 share/icons/nuvola/32x32/apps/window_list.png
@@ -12146,7 +12147,6 @@ share/icons/nuvola/48x48/apps/keyboard_layout.png
 share/icons/nuvola/48x48/apps/kfig.png
 share/icons/nuvola/48x48/apps/kfind.png
 share/icons/nuvola/48x48/apps/kfloppy.png
-share/icons/nuvola/48x48/apps/kfm.png
 share/icons/nuvola/48x48/apps/kfm_home.png
 share/icons/nuvola/48x48/apps/kget.png
 share/icons/nuvola/48x48/apps/kghostview.png
@@ -12279,6 +12279,7 @@ share/icons/nuvola/48x48/apps/samba.png
 share/icons/nuvola/48x48/apps/sodipodi.png
 share/icons/nuvola/48x48/apps/style.png
 share/icons/nuvola/48x48/apps/stylesheet.png
+share/icons/nuvola/48x48/apps/system-file-manager.png
 share/icons/nuvola/48x48/apps/terminal.png
 share/icons/nuvola/48x48/apps/usb.png
 share/icons/nuvola/48x48/apps/window_list.png
@@ -12565,7 +12566,6 @@ share/icons/nuvola/64x64/apps/keyboard_layout.png
 share/icons/nuvola/64x64/apps/kfig.png
 share/icons/nuvola/64x64/apps/kfind.png
 share/icons/nuvola/64x64/apps/kfloppy.png
-share/icons/nuvola/64x64/apps/kfm.png
 share/icons/nuvola/64x64/apps/kfm_home.png
 share/icons/nuvola/64x64/apps/kget.png
 share/icons/nuvola/64x64/apps/kghostview.png
@@ -12699,6 +12699,7 @@ share/icons/nuvola/64x64/apps/samba.png
 share/icons/nuvola/64x64/apps/sodipodi.png
 share/icons/nuvola/64x64/apps/style.png
 share/icons/nuvola/64x64/apps/stylesheet.png
+share/icons/nuvola/64x64/apps/system-file-manager.png
 share/icons/nuvola/64x64/apps/terminal.png
 share/icons/nuvola/64x64/apps/usb.png
 share/icons/nuvola/64x64/apps/window_list.png
@@ -13139,7 +13140,6 @@ share/icons/slick/16x16/apps/keditbookmarks.png
 share/icons/slick/16x16/apps/key_bindings.png
 share/icons/slick/16x16/apps/keyboard.png
 share/icons/slick/16x16/apps/kfind.png
-share/icons/slick/16x16/apps/kfm.png
 share/icons/slick/16x16/apps/kfm2.png
 share/icons/slick/16x16/apps/kfm3.png
 share/icons/slick/16x16/apps/kfm_home.png
@@ -13225,6 +13225,7 @@ share/icons/slick/16x16/apps/speaker.png
 share/icons/slick/16x16/apps/style.png
 share/icons/slick/16x16/apps/suspend.png
 share/icons/slick/16x16/apps/system.png
+share/icons/slick/16x16/apps/system-file-manager.png
 share/icons/slick/16x16/apps/terminal.png
 share/icons/slick/16x16/apps/trees.png
 share/icons/slick/16x16/apps/tux.png
@@ -13647,7 +13648,6 @@ share/icons/slick/22x22/apps/kcmkwin.png
 share/icons/slick/22x22/apps/kcmsystem.png
 share/icons/slick/22x22/apps/kdmconfig.png
 share/icons/slick/22x22/apps/kfind.png
-share/icons/slick/22x22/apps/kfm.png
 share/icons/slick/22x22/apps/kfm_home.png
 share/icons/slick/22x22/apps/kget.png
 share/icons/slick/22x22/apps/khelpcenter.png
@@ -13691,6 +13691,7 @@ share/icons/slick/22x22/apps/personal.png
 share/icons/slick/22x22/apps/printmgr.png
 share/icons/slick/22x22/apps/randr.png
 share/icons/slick/22x22/apps/style.png
+share/icons/slick/22x22/apps/system-file-manager.png
 share/icons/slick/22x22/apps/window_list.png
 share/icons/slick/22x22/apps/xkill.png
 share/icons/slick/22x22/apps/xmms.png
@@ -13960,7 +13961,6 @@ share/icons/slick/32x32/apps/kcontrol_2.png
 share/icons/slick/32x32/apps/kdf.png
 share/icons/slick/32x32/apps/kdisknav.png
 share/icons/slick/32x32/apps/kfind.png
-share/icons/slick/32x32/apps/kfm.png
 share/icons/slick/32x32/apps/kfm_home.png
 share/icons/slick/32x32/apps/kformula.png
 share/icons/slick/32x32/apps/kget.png
@@ -14021,6 +14021,7 @@ share/icons/slick/32x32/apps/samba.png
 share/icons/slick/32x32/apps/showimg.png
 share/icons/slick/32x32/apps/smb4k.png
 share/icons/slick/32x32/apps/speaker.png
+share/icons/slick/32x32/apps/system-file-manager.png
 share/icons/slick/32x32/apps/trees.png
 share/icons/slick/32x32/apps/tux.png
 share/icons/slick/32x32/apps/vmware.png
@@ -14182,7 +14183,6 @@ share/icons/slick/48x48/apps/kcontrol_2.png
 share/icons/slick/48x48/apps/kdf.png
 share/icons/slick/48x48/apps/kdisknav.png
 share/icons/slick/48x48/apps/kfind.png
-share/icons/slick/48x48/apps/kfm.png
 share/icons/slick/48x48/apps/kfm_home.png
 share/icons/slick/48x48/apps/kformula.png
 share/icons/slick/48x48/apps/khelpcenter.png
@@ -14246,6 +14246,7 @@ share/icons/slick/48x48/apps/samba.png
 share/icons/slick/48x48/apps/showimg.png
 share/icons/slick/48x48/apps/smb4k.png
 share/icons/slick/48x48/apps/speaker.png
+share/icons/slick/48x48/apps/system-file-manager.png
 share/icons/slick/48x48/apps/telnet.png
 share/icons/slick/48x48/apps/trees.png
 share/icons/slick/48x48/apps/tux.png
@@ -14679,6 +14680,7 @@ share/kde4/services/ScreenSavers/KSolarWinds.desktop
 share/kde4/services/ScreenSavers/KSwarm.desktop
 share/kde4/services/ScreenSavers/KVm.desktop
 share/kde4/services/ScreenSavers/KWave.desktop
+share/kde4/services/ScreenSavers/asciiquarium.desktop
 share/kde4/services/ScreenSavers/anemone.desktop
 share/kde4/services/ScreenSavers/anemotaxis.desktop
 share/kde4/services/ScreenSavers/ant.desktop
