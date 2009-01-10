@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/11/06 07:58:45 mwdavies Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/10 10:41:48 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -24,6 +24,7 @@ REPLACE_PERL+= \
 	scripts/krazy-licensecheck \
 	scripts/png2mng.pl \
 	scripts/svnintegrate \
+	kioslave/perldoc/pod2html.pl \
 	kcachegrind/converters/dprof2calltree \
 	kcachegrind/converters/memprof2calltree \
 	kcachegrind/converters/op2calltree \

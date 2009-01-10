@@ -1,167 +1,333 @@
-@comment $NetBSD: PLIST,v 1.1 2008/07/29 22:11:00 mwdavies Exp $
-include/plasmaappletdialog.h
-include/plasmaappletdialog_export.h
+@comment $NetBSD: PLIST,v 1.2 2009/01/10 10:39:37 mwdavies Exp $
+bin/lancelot
+include/lancelot/Global.h
+include/lancelot/lancelot.h
+include/lancelot/lancelot_export.h
+include/lancelot/layouts/CardLayout.h
+include/lancelot/layouts/ColumnLayout.h
+include/lancelot/models/ActionListViewModels.h
+include/lancelot/models/PassagewayViewModels.h
+include/lancelot/widgets/ActionListView.h
+include/lancelot/widgets/BasicWidget.h
+include/lancelot/widgets/ExtenderButton.h
+include/lancelot/widgets/HoverIcon.h
+include/lancelot/widgets/Panel.h
+include/lancelot/widgets/PassagewayView.h
+include/lancelot/widgets/ResizeBordersPanel.h
+include/lancelot/widgets/Widget.h
+include/lancelot/widgets/WidgetPositioner.h
+lib/kde4/kcm_krunner_spellcheck.so
+lib/kde4/krunner_browserhistory.so
 lib/kde4/krunner_contacts.so
-lib/kde4/krunner_converterrunner.so
+lib/kde4/krunner_converter.so
+lib/kde4/krunner_katesessions.so
+lib/kde4/krunner_konquerorsessions.so
+lib/kde4/krunner_konsolesessions.so
+lib/kde4/krunner_spellcheckrunner.so
+lib/kde4/plasma_applet_bball.so
 lib/kde4/plasma_applet_binaryclock.so
 lib/kde4/plasma_applet_calculator.so
+lib/kde4/plasma_applet_charselect.so
 lib/kde4/plasma_applet_comic.so
 lib/kde4/plasma_applet_dict.so
+lib/kde4/plasma_applet_eyes.so
 lib/kde4/plasma_applet_fifteenPuzzle.so
 lib/kde4/plasma_applet_fileWatcher.so
 lib/kde4/plasma_applet_frame.so
 lib/kde4/plasma_applet_fuzzy_clock.so
+lib/kde4/plasma_applet_incomingmsg.so
 lib/kde4/plasma_applet_kolourpicker.so
 lib/kde4/plasma_applet_konqprofiles.so
 lib/kde4/plasma_applet_konsoleprofiles.so
+lib/kde4/plasma_applet_lancelot_launcher.so
+lib/kde4/plasma_applet_lancelot_part.so
+lib/kde4/plasma_applet_leavenote.so
+lib/kde4/plasma_applet_life.so
 lib/kde4/plasma_applet_luna.so
+lib/kde4/plasma_applet_news.so
 lib/kde4/plasma_applet_notes.so
 lib/kde4/plasma_applet_nowplaying.so
+lib/kde4/plasma_applet_paste.so
+lib/kde4/plasma_applet_pastebin.so
+lib/kde4/plasma_applet_previewer.so
+lib/kde4/plasma_applet_rssnow.so
 lib/kde4/plasma_applet_showdashboard.so
 lib/kde4/plasma_applet_showdesktop.so
+lib/kde4/plasma_applet_timer.so
 lib/kde4/plasma_applet_twitter.so
-lib/kde4/plasma_comic_dilbertprovider.so
-lib/kde4/plasma_comic_garfieldprovider.so
-lib/kde4/plasma_comic_osnewsprovider.so
-lib/kde4/plasma_comic_phdprovider.so
-lib/kde4/plasma_comic_snoopyprovider.so
-lib/kde4/plasma_comic_userfriendlyprovider.so
-lib/kde4/plasma_comic_xkcdprovider.so
+lib/kde4/plasma_applet_weatherstation.so
+lib/kde4/plasma_comic_krossprovider.so
 lib/kde4/plasma_engine_comic.so
 lib/kde4/plasma_engine_twitter.so
-lib/libplasmaappletdialog.so
-lib/libplasmaappletdialog.so.4
-lib/libplasmaappletdialog.so.4.1.0
+lib/kde4/plasma_packagestructure_comic.so
+lib/liblancelot.so
+lib/liblancelot.so.0
+lib/liblancelot.so.0.5.0
 lib/libplasmacomicprovidercore.so
 lib/libplasmacomicprovidercore.so.1
 lib/libplasmacomicprovidercore.so.1.0.0
+lib/libplasmaconverter.so
+lib/libplasmaconverter.so.4
+lib/libplasmaconverter.so.4.2.0
+share/dbus-1/services/org.kde.lancelot.service
+share/icons/hicolor/128x128/apps/lancelot-part.png
+share/icons/hicolor/128x128/apps/lancelot.png
+share/icons/hicolor/128x128/apps/previewer.png
+share/icons/hicolor/16x16/apps/lancelot-part.png
+share/icons/hicolor/16x16/apps/lancelot.png
+share/icons/hicolor/16x16/apps/previewer.png
+share/icons/hicolor/22x22/apps/lancelot-part.png
+share/icons/hicolor/22x22/apps/lancelot.png
+share/icons/hicolor/22x22/apps/previewer.png
+share/icons/hicolor/32x32/apps/lancelot-part.png
+share/icons/hicolor/32x32/apps/lancelot.png
+share/icons/hicolor/32x32/apps/previewer.png
+share/icons/hicolor/48x48/apps/lancelot-part.png
+share/icons/hicolor/48x48/apps/lancelot.png
+share/icons/hicolor/48x48/apps/previewer.png
+share/icons/hicolor/64x64/apps/lancelot-part.png
+share/icons/hicolor/64x64/apps/lancelot.png
+share/icons/hicolor/64x64/apps/previewer.png
 share/icons/hicolor/scalable/apps/fifteenpuzzle.svgz
-share/kde/apps/desktoptheme/Aya/dialogs/background.svg
-share/kde/apps/desktoptheme/Aya/dialogs/krunner.svg
-share/kde/apps/desktoptheme/Aya/dialogs/shutdowndialog.svg
+share/icons/oxygen/scalable/apps/bball.svgz
+share/kde/apps/bball/bball.svgz
+share/kde/apps/bball/bounce.ogg
+share/kde/apps/bball/football.svgz
+share/kde/apps/desktoptheme/Aya/dialogs/background.svgz
+share/kde/apps/desktoptheme/Aya/dialogs/kickoff.svgz
+share/kde/apps/desktoptheme/Aya/dialogs/krunner.svgz
+share/kde/apps/desktoptheme/Aya/dialogs/shutdowndialog.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/Aya/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/system-buttons-extender.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/system-buttons.svgz
+share/kde/apps/desktoptheme/Aya/lancelot/theme.config
 share/kde/apps/desktoptheme/Aya/metadata.desktop
-share/kde/apps/desktoptheme/Aya/opaque/dialogs/background.svg
-share/kde/apps/desktoptheme/Aya/opaque/widgets/tooltip.svg
-share/kde/apps/desktoptheme/Aya/widgets/analog_meter.svg
-share/kde/apps/desktoptheme/Aya/widgets/background.svg
-share/kde/apps/desktoptheme/Aya/widgets/bar_meter_horizontal.svg
-share/kde/apps/desktoptheme/Aya/widgets/bar_meter_vertical.svg
-share/kde/apps/desktoptheme/Aya/widgets/battery-oxygen.svg
-share/kde/apps/desktoptheme/Aya/widgets/battery.svg
-share/kde/apps/desktoptheme/Aya/widgets/clock.svg
-share/kde/apps/desktoptheme/Aya/widgets/connection-established.svg
-share/kde/apps/desktoptheme/Aya/widgets/iconbutton.svg
-share/kde/apps/desktoptheme/Aya/widgets/pager.svg
-share/kde/apps/desktoptheme/Aya/widgets/panel-background.svg
-share/kde/apps/desktoptheme/Aya/widgets/plot-background.svg
-share/kde/apps/desktoptheme/Aya/widgets/systemtray.svg
-share/kde/apps/desktoptheme/Aya/widgets/tasks.svg
-share/kde/apps/desktoptheme/Aya/widgets/toolbox-button.svg
-share/kde/apps/desktoptheme/Aya/widgets/tooltip.svg
-share/kde/apps/desktoptheme/Aya/widgets/translucentbackground.svg
+share/kde/apps/desktoptheme/Aya/opaque/dialogs/background.svgz
+share/kde/apps/desktoptheme/Aya/opaque/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/Aya/widgets/background.svgz
+share/kde/apps/desktoptheme/Aya/widgets/battery.svgz
+share/kde/apps/desktoptheme/Aya/widgets/clock.svgz
+share/kde/apps/desktoptheme/Aya/widgets/pager.svgz
+share/kde/apps/desktoptheme/Aya/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/Aya/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/Aya/widgets/systemtray.svgz
+share/kde/apps/desktoptheme/Aya/widgets/tasks.svgz
+share/kde/apps/desktoptheme/Aya/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/Aya/widgets/translucentbackground.svgz
 share/kde/apps/desktoptheme/Elegance/colors
-share/kde/apps/desktoptheme/Elegance/dialogs/background.svg
-share/kde/apps/desktoptheme/Elegance/dialogs/krunner.svg
-share/kde/apps/desktoptheme/Elegance/dialogs/shutdowndialog.svg
-share/kde/apps/desktoptheme/Elegance/dialogs/shutdowndlg.svg
+share/kde/apps/desktoptheme/Elegance/dialogs/background.svgz
+share/kde/apps/desktoptheme/Elegance/dialogs/krunner.svgz
+share/kde/apps/desktoptheme/Elegance/dialogs/shutdowndialog.svgz
+share/kde/apps/desktoptheme/Elegance/dialogs/shutdowndlg.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/action-list-view-categories-extender.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/action-list-view-categories.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/action-list-view-items-extender.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/action-list-view-items.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/Elegance/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/system-buttons.svgz
+share/kde/apps/desktoptheme/Elegance/lancelot/theme.config
 share/kde/apps/desktoptheme/Elegance/metadata.desktop
-share/kde/apps/desktoptheme/Elegance/widgets/analog_meter.svg
-share/kde/apps/desktoptheme/Elegance/widgets/background.svg
-share/kde/apps/desktoptheme/Elegance/widgets/battery-oxygen.svg
-share/kde/apps/desktoptheme/Elegance/widgets/clock.svg
-share/kde/apps/desktoptheme/Elegance/widgets/containment-controls.svg
-share/kde/apps/desktoptheme/Elegance/widgets/iconbutton.svg
-share/kde/apps/desktoptheme/Elegance/widgets/panel-background.svg
-share/kde/apps/desktoptheme/Elegance/widgets/plot-background.svg
-share/kde/apps/desktoptheme/Elegance/widgets/systemtray.svg
-share/kde/apps/desktoptheme/Elegance/widgets/tasks.svg
-share/kde/apps/desktoptheme/Elegance/widgets/toolbox-button.svg
-share/kde/apps/desktoptheme/Elegance/widgets/tooltip.svg
-share/kde/apps/desktoptheme/Elegance/widgets/translucentbackground.svg
+share/kde/apps/desktoptheme/Elegance/widgets/analog_meter.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/background.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/battery-oxygen.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/clock.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/iconbutton.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/systemtray.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/tasks.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/toolbox-button.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/Elegance/widgets/translucentbackground.svgz
 share/kde/apps/desktoptheme/Silicon/colors
-share/kde/apps/desktoptheme/Silicon/dialogs/background.svg
-share/kde/apps/desktoptheme/Silicon/dialogs/krunner.svg
+share/kde/apps/desktoptheme/Silicon/dialogs/background.svgz
+share/kde/apps/desktoptheme/Silicon/dialogs/krunner.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/action-list-view-categories-extender.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/action-list-view-categories.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/action-list-view-items-extender.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/action-list-view-items.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/Silicon/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/system-buttons.svgz
+share/kde/apps/desktoptheme/Silicon/lancelot/theme.config
 share/kde/apps/desktoptheme/Silicon/metadata.desktop
-share/kde/apps/desktoptheme/Silicon/opaque/dialogs/background.svg
-share/kde/apps/desktoptheme/Silicon/opaque/dialogs/krunner.svg
-share/kde/apps/desktoptheme/Silicon/widgets/background.svg
-share/kde/apps/desktoptheme/Silicon/widgets/clock.svg
-share/kde/apps/desktoptheme/Silicon/widgets/iconbutton.svg
-share/kde/apps/desktoptheme/Silicon/widgets/notes.svg
-share/kde/apps/desktoptheme/Silicon/widgets/pager.svg
-share/kde/apps/desktoptheme/Silicon/widgets/panel-background.svg
-share/kde/apps/desktoptheme/Silicon/widgets/plot-background.svg
-share/kde/apps/desktoptheme/Silicon/widgets/systemtray.svg
-share/kde/apps/desktoptheme/Silicon/widgets/tasks.svg
-share/kde/apps/desktoptheme/Silicon/widgets/tooltip.svg
-share/kde/apps/desktoptheme/default/widgets/luna.svg
-share/kde/apps/desktoptheme/default/widgets/notes.svg
-share/kde/apps/desktoptheme/default/widgets/picture-frame-default.svg
-share/kde/apps/desktoptheme/default/widgets/twitter.svg
+share/kde/apps/desktoptheme/Silicon/opaque/dialogs/background.svgz
+share/kde/apps/desktoptheme/Silicon/opaque/dialogs/krunner.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/background.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/clock.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/iconbutton.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/notes.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/pager.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/systemtray.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/tasks.svgz
+share/kde/apps/desktoptheme/Silicon/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-categories-extender.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-categories.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-headers-plasma-applet.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-headers.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-items-extender.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-items.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-scroll-down-plasma-applet.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-scroll-down.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-scroll-up-plasma-applet.svgz
+share/kde/apps/desktoptheme/default/lancelot/action-list-view-scroll-up.svgz
+share/kde/apps/desktoptheme/default/lancelot/extender-button-icon.svgz
+share/kde/apps/desktoptheme/default/lancelot/inner-background.svgz
+share/kde/apps/desktoptheme/default/lancelot/lancelot-context-extender.svgz
+share/kde/apps/desktoptheme/default/lancelot/lancelot-context.svgz
+share/kde/apps/desktoptheme/default/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/default/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/default/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/default/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/default/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/default/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-background-bar-down.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-background-bar-left.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-background-bar-right.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-background-bar-up.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-background.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-button-down-icon.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-button-left-icon.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-button-right-icon.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-button-up-icon.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-handle-horizontal.svgz
+share/kde/apps/desktoptheme/default/lancelot/scroll-bar-handle-vertical.svgz
+share/kde/apps/desktoptheme/default/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/default/lancelot/system-buttons-extender.svgz
+share/kde/apps/desktoptheme/default/lancelot/system-buttons.svgz
+share/kde/apps/desktoptheme/default/lancelot/theme.config
+share/kde/apps/desktoptheme/default/rssnow/background.svgz
+share/kde/apps/desktoptheme/default/rssnow/left.svgz
+share/kde/apps/desktoptheme/default/rssnow/right.svgz
+share/kde/apps/desktoptheme/default/rssnow/rssnow.svgz
+share/kde/apps/desktoptheme/default/stylesheets/news.css
+share/kde/apps/desktoptheme/default/weatherstation/lcd.svgz
+share/kde/apps/desktoptheme/default/weatherstation/lcd_panel.svgz
+share/kde/apps/desktoptheme/default/widgets/luna.svgz
+share/kde/apps/desktoptheme/default/widgets/notes.svgz
+share/kde/apps/desktoptheme/default/widgets/picture-frame-default.svgz
+share/kde/apps/desktoptheme/default/widgets/previewer-16.svgz
+share/kde/apps/desktoptheme/default/widgets/previewer-22.svgz
+share/kde/apps/desktoptheme/default/widgets/timer.svgz
+share/kde/apps/desktoptheme/default/widgets/twitter.svgz
 share/kde/apps/desktoptheme/heron/colors
-share/kde/apps/desktoptheme/heron/dialogs/background.svg
-share/kde/apps/desktoptheme/heron/dialogs/shutdowndialog.svg
+share/kde/apps/desktoptheme/heron/dialogs/background.svgz
+share/kde/apps/desktoptheme/heron/dialogs/shutdowndialog.svgz
+share/kde/apps/desktoptheme/heron/lancelot/action-list-view-categories-extender.svgz
+share/kde/apps/desktoptheme/heron/lancelot/action-list-view-categories.svgz
+share/kde/apps/desktoptheme/heron/lancelot/action-list-view-items-extender.svgz
+share/kde/apps/desktoptheme/heron/lancelot/action-list-view-items.svgz
+share/kde/apps/desktoptheme/heron/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/heron/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/heron/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/heron/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/heron/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/heron/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/heron/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/heron/lancelot/system-buttons.svgz
+share/kde/apps/desktoptheme/heron/lancelot/theme.config
 share/kde/apps/desktoptheme/heron/metadata.desktop
-share/kde/apps/desktoptheme/heron/opaque/dialogs/background.svg
-share/kde/apps/desktoptheme/heron/opaque/widgets/panel-background.svg
-share/kde/apps/desktoptheme/heron/opaque/widgets/tooltip.svg
-share/kde/apps/desktoptheme/heron/widgets/analog_meter.svg
-share/kde/apps/desktoptheme/heron/widgets/background.svg
-share/kde/apps/desktoptheme/heron/widgets/bar_meter_horizontal.svg
-share/kde/apps/desktoptheme/heron/widgets/bar_meter_vertical.svg
-share/kde/apps/desktoptheme/heron/widgets/clock.svg
-share/kde/apps/desktoptheme/heron/widgets/connection-established.svg
-share/kde/apps/desktoptheme/heron/widgets/iconbutton.svg
-share/kde/apps/desktoptheme/heron/widgets/notes.svg
-share/kde/apps/desktoptheme/heron/widgets/panel-background.svg
-share/kde/apps/desktoptheme/heron/widgets/picture-frame-default.svg
-share/kde/apps/desktoptheme/heron/widgets/plot-background.svg
-share/kde/apps/desktoptheme/heron/widgets/tasks.svg
-share/kde/apps/desktoptheme/heron/widgets/tooltip.svg
+share/kde/apps/desktoptheme/heron/opaque/dialogs/background.svgz
+share/kde/apps/desktoptheme/heron/opaque/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/heron/opaque/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/heron/widgets/analog_meter.svgz
+share/kde/apps/desktoptheme/heron/widgets/background.svgz
+share/kde/apps/desktoptheme/heron/widgets/bar_meter_horizontal.svgz
+share/kde/apps/desktoptheme/heron/widgets/bar_meter_vertical.svgz
+share/kde/apps/desktoptheme/heron/widgets/clock.svgz
+share/kde/apps/desktoptheme/heron/widgets/iconbutton.svgz
+share/kde/apps/desktoptheme/heron/widgets/notes.svgz
+share/kde/apps/desktoptheme/heron/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/heron/widgets/picture-frame-default.svgz
+share/kde/apps/desktoptheme/heron/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/heron/widgets/tasks.svgz
+share/kde/apps/desktoptheme/heron/widgets/tooltip.svgz
 share/kde/apps/desktoptheme/slim-glow/LICENSE
 share/kde/apps/desktoptheme/slim-glow/colors
-share/kde/apps/desktoptheme/slim-glow/dialogs/background.svg
-share/kde/apps/desktoptheme/slim-glow/dialogs/krunner.svg
-share/kde/apps/desktoptheme/slim-glow/dialogs/shutdowndialog.svg
+share/kde/apps/desktoptheme/slim-glow/dialogs/background.svgz
+share/kde/apps/desktoptheme/slim-glow/dialogs/krunner.svgz
+share/kde/apps/desktoptheme/slim-glow/dialogs/shutdowndialog.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/action-list-view-categories-extender.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/action-list-view-categories.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/action-list-view-items-extender.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/action-list-view-items.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/main-background.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/passageway-view-buttons-extender.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/passageway-view-buttons.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/passageway-view-inactivebuttons.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/passageway-view-spacer.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/plasma-theme.config
+share/kde/apps/desktoptheme/slim-glow/lancelot/section-buttons.svgz
+share/kde/apps/desktoptheme/slim-glow/lancelot/theme.config
 share/kde/apps/desktoptheme/slim-glow/metadata.desktop
-share/kde/apps/desktoptheme/slim-glow/opaque/dialogs/background.svg
-share/kde/apps/desktoptheme/slim-glow/opaque/widgets/panel-background.svg
-share/kde/apps/desktoptheme/slim-glow/opaque/widgets/tooltip.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/analog_meter.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/background.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/bar_meter_horizontal.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/bar_meter_vertical.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/clock.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/connection-established.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/iconbutton.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/notes.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/panel-background.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/picture-frame-default.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/plot-background.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/tasks.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/toolbox-button.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/tooltip.svg
-share/kde/apps/desktoptheme/slim-glow/widgets/translucentbackground.svg
-share/kde/apps/plasma-comic/plasma_comic_dilbert.png
-share/kde/apps/plasma-comic/plasma_comic_garfield.png
-share/kde/apps/plasma-comic/plasma_comic_osnews.png
-share/kde/apps/plasma-comic/plasma_comic_phd.png
-share/kde/apps/plasma-comic/plasma_comic_snoopy.png
-share/kde/apps/plasma-comic/plasma_comic_userfriendly.png
-share/kde/apps/plasma-comic/plasma_comic_xkcd.png
-share/kde4/services/dilbertprovider.desktop
-share/kde4/services/garfieldprovider.desktop
-share/kde4/services/osnewsprovider.desktop
-share/kde4/services/phdprovider.desktop
+share/kde/apps/desktoptheme/slim-glow/opaque/dialogs/background.svgz
+share/kde/apps/desktoptheme/slim-glow/opaque/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/slim-glow/opaque/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/analog_meter.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/background.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/bar_meter_horizontal.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/bar_meter_vertical.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/clock.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/iconbutton.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/notes.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/panel-background.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/picture-frame-default.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/tasks.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/toolbox-button.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/tooltip.svgz
+share/kde/apps/desktoptheme/slim-glow/widgets/translucentbackground.svgz
+share/kde/apps/plasma/services/tweet.operations
+share/kde/apps/rssnow/feeds
+share/kde/config/comic.knsrc
+share/kde4/services/ServiceMenus/preview.desktop
+share/kde4/services/browserhistory.desktop
+share/kde4/services/katesessions.desktop
+share/kde4/services/konquerorsessions.desktop
+share/kde4/services/konsolesessions.desktop
+share/kde4/services/plasma-applet-bball.desktop
 share/kde4/services/plasma-applet-binaryclock.desktop
 share/kde4/services/plasma-applet-calculator.desktop
+share/kde4/services/plasma-applet-charselect.desktop
+share/kde4/services/plasma-applet-eyes.desktop
 share/kde4/services/plasma-applet-fifteenPuzzle.desktop
+share/kde4/services/plasma-applet-incomingmsg.desktop
 share/kde4/services/plasma-applet-konqprofiles.desktop
 share/kde4/services/plasma-applet-konsoleprofiles.desktop
+share/kde4/services/plasma-applet-lancelot-launcher.desktop
+share/kde4/services/plasma-applet-lancelot-part.desktop
+share/kde4/services/plasma-applet-leavenote.desktop
+share/kde4/services/plasma-applet-life.desktop
 share/kde4/services/plasma-applet-luna.desktop
+share/kde4/services/plasma-applet-news.desktop
 share/kde4/services/plasma-applet-nowplaying.desktop
+share/kde4/services/plasma-applet-paste.desktop
+share/kde4/services/plasma-applet-pastebin.desktop
+share/kde4/services/plasma-applet-previewer.desktop
+share/kde4/services/plasma-applet-rssnow.desktop
 share/kde4/services/plasma-applet-showdashboard.desktop
 share/kde4/services/plasma-applet-showdesktop.desktop
+share/kde4/services/plasma-applet-timer.desktop
+share/kde4/services/plasma-applet-weatherstation.desktop
 share/kde4/services/plasma-clock-fuzzy.desktop
 share/kde4/services/plasma-comic-default.desktop
 share/kde4/services/plasma-dataengine-comic.desktop
@@ -171,45 +337,60 @@ share/kde4/services/plasma-fileWatcher-default.desktop
 share/kde4/services/plasma-frame-default.desktop
 share/kde4/services/plasma-kolourpicker-default.desktop
 share/kde4/services/plasma-notes-default.desktop
+share/kde4/services/plasma-packagestructure-comic.desktop
 share/kde4/services/plasma-runner-contacts.desktop
 share/kde4/services/plasma-runner-converter.desktop
+share/kde4/services/plasma-runner-spellchecker.desktop
+share/kde4/services/plasma-runner-spellchecker_config.desktop
 share/kde4/services/plasma-twitter-default.desktop
-share/kde4/services/snoopyprovider.desktop
-share/kde4/services/userfriendlyprovider.desktop
-share/kde4/services/xkcdprovider.desktop
 share/kde4/servicetypes/plasma_comicprovider.desktop
+share/mime/packages/lancelotpart-mime.xml
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services
-@dirrm share/kde/apps/plasma-comic
+@dirrm share/kde/apps/rssnow
 @dirrm share/kde/apps/desktoptheme/slim-glow/widgets
 @dirrm share/kde/apps/desktoptheme/slim-glow/opaque/widgets
 @dirrm share/kde/apps/desktoptheme/slim-glow/opaque/dialogs
 @dirrm share/kde/apps/desktoptheme/slim-glow/opaque
+@dirrm share/kde/apps/desktoptheme/slim-glow/lancelot
 @dirrm share/kde/apps/desktoptheme/slim-glow/dialogs
 @dirrm share/kde/apps/desktoptheme/slim-glow
 @dirrm share/kde/apps/desktoptheme/heron/widgets
 @dirrm share/kde/apps/desktoptheme/heron/opaque/widgets
 @dirrm share/kde/apps/desktoptheme/heron/opaque/dialogs
 @dirrm share/kde/apps/desktoptheme/heron/opaque
+@dirrm share/kde/apps/desktoptheme/heron/lancelot
 @dirrm share/kde/apps/desktoptheme/heron/dialogs
 @dirrm share/kde/apps/desktoptheme/heron
+@dirrm share/kde/apps/desktoptheme/default/weatherstation
+@dirrm share/kde/apps/desktoptheme/default/stylesheets
+@dirrm share/kde/apps/desktoptheme/default/rssnow
+@dirrm share/kde/apps/desktoptheme/default/lancelot
 @comment in kde: @dirrm share/kde/apps/desktoptheme/default/widgets
 @dirrm share/kde/apps/desktoptheme/Silicon/widgets
 @dirrm share/kde/apps/desktoptheme/Silicon/opaque/dialogs
 @dirrm share/kde/apps/desktoptheme/Silicon/opaque
+@dirrm share/kde/apps/desktoptheme/Silicon/lancelot
 @dirrm share/kde/apps/desktoptheme/Silicon/dialogs
 @dirrm share/kde/apps/desktoptheme/Silicon
 @dirrm share/kde/apps/desktoptheme/Elegance/widgets
+@dirrm share/kde/apps/desktoptheme/Elegance/lancelot
 @dirrm share/kde/apps/desktoptheme/Elegance/dialogs
 @dirrm share/kde/apps/desktoptheme/Elegance
 @dirrm share/kde/apps/desktoptheme/Aya/widgets
 @dirrm share/kde/apps/desktoptheme/Aya/opaque/widgets
 @dirrm share/kde/apps/desktoptheme/Aya/opaque/dialogs
 @dirrm share/kde/apps/desktoptheme/Aya/opaque
+@dirrm share/kde/apps/desktoptheme/Aya/lancelot
 @dirrm share/kde/apps/desktoptheme/Aya/dialogs
 @dirrm share/kde/apps/desktoptheme/Aya
 @comment in kde: @dirrm share/kde/apps/desktoptheme
+@dirrm share/kde/apps/bball
 @comment in kde: @dirrm share/kde/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in kde: @dirrm lib/kde4
+@dirrm include/lancelot/widgets
+@dirrm include/lancelot/models
+@dirrm include/lancelot/layouts
+@dirrm include/lancelot
