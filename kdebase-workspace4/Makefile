@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/11/04 10:14:30 mwdavies Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/10 09:37:03 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -37,6 +37,8 @@ REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \
 	kwin/data/kwin3_plugin.pl \
 	kwin/data/pluginlibFix.pl
+
+PY_PATCHPLIST=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -77,10 +79,16 @@ post-install:
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../lang/python/extension.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
+# not yet - causes kdm logins to fail, presumably because
+#  I don't know how consolekit works
+#.include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../wip/kdebindings4-python/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

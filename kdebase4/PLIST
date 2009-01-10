@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/05 10:23:26 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/10 09:42:44 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -27,7 +27,6 @@ include/konqmimedata.h
 include/konqsidebarplugin.h
 include/libkonq_export.h
 lib/kde4/dolphinpart.so
-lib/kde4/kcm_css.so
 lib/kde4/kcm_dolphin.so
 lib/kde4/kcm_filetypes.so
 lib/kde4/kcm_history.so
@@ -49,7 +48,6 @@ lib/kde4/kcm_usb.so
 lib/kde4/kcm_useraccount.so
 lib/kde4/kded_favicons.so
 lib/kde4/kded_konqy_preloader.so
-lib/kde4/kded_kwrited.so
 lib/kde4/khtmlkttsdplugin.so
 lib/kde4/konq_aboutpage.so
 lib/kde4/konq_remoteencoding.so
@@ -68,7 +66,7 @@ lib/kde4/libnsplugin.so
 lib/kde4/plasma_applet_folderview.so
 lib/libdolphinprivate.so
 lib/libdolphinprivate.so.4
-lib/libdolphinprivate.so.4.1.0
+lib/libdolphinprivate.so.4.2.0
 lib/libkdeinit4_keditbookmarks.so
 lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_kinfocenter.so
@@ -77,13 +75,13 @@ lib/libkdeinit4_konsole.so
 lib/libkdeinit4_kwrite.so
 lib/libkonq.so
 lib/libkonq.so.5
-lib/libkonq.so.5.1.0
+lib/libkonq.so.5.2.0
 lib/libkonqsidebarplugin.so
 lib/libkonqsidebarplugin.so.4
-lib/libkonqsidebarplugin.so.4.1.0
+lib/libkonqsidebarplugin.so.4.2.0
 lib/libkonquerorprivate.so
 lib/libkonquerorprivate.so.4
-lib/libkonquerorprivate.so.4.1.0
+lib/libkonquerorprivate.so.4.2.0
 share/applications/kde4/Home.desktop
 share/applications/kde4/dolphin.desktop
 share/applications/kde4/kappfinder.desktop
@@ -687,7 +685,6 @@ share/kde/apps/kconf_update/kfmclient_3_2_update.sh
 share/kde/apps/kconf_update/konqsidebartng.upd
 share/kde/apps/kconf_update/move_favicons.sh
 share/kde/apps/kconf_update/move_konqsidebartng_entries.sh
-share/kde/apps/kconf_update/socks.upd
 share/kde/apps/kcontrol/pics/onlyone.png
 share/kde/apps/kcontrol/pics/overlapping.png
 share/kde/apps/kdm/pics/users/Blackbox.png
@@ -738,12 +735,6 @@ share/kde/apps/konqueror/about/plugins_rtl.html
 share/kde/apps/konqueror/about/specs.html
 share/kde/apps/konqueror/about/tips.html
 share/kde/apps/konqueror/about/top-left-konqueror.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde1.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde2.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde3.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde4.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde5.png
-share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde6.png
 share/kde/apps/konqueror/konqueror.rc
 share/kde/apps/konqueror/pics/arrow_bottomleft.png
 share/kde/apps/konqueror/pics/arrow_bottomright.png
@@ -774,7 +765,6 @@ share/kde/apps/konsole/linux.keytab
 share/kde/apps/konsole/partui.rc
 share/kde/apps/konsole/sessionui.rc
 share/kde/apps/konsole/solaris.keytab
-share/kde/apps/konsole/vt420pc.keytab
 share/kde/apps/kwrite/kwriteui.rc
 share/kde/apps/plugin/nspluginpart.rc
 share/kde/autostart/konqy_preload.desktop
@@ -816,6 +806,7 @@ share/kde/templates/linkProgram.desktop
 share/kde/templates/linkURL.desktop
 share/kde/templates/linkZIP.desktop
 share/kde4/services/ServiceMenus/konsolehere.desktop
+share/kde4/services/bookmarks.desktop
 share/kde4/services/cache.desktop
 share/kde4/services/cookies.desktop
 share/kde4/services/desktoppath.desktop
@@ -824,8 +815,6 @@ share/kde4/services/dma.desktop
 share/kde4/services/dolphinpart.desktop
 share/kde4/services/ebrowsing.desktop
 share/kde4/services/filebehavior.desktop
-share/kde4/services/filebrowser.desktop
-share/kde4/services/filepreviews.desktop
 share/kde4/services/filetypes.desktop
 share/kde4/services/interrupts.desktop
 share/kde4/services/ioports.desktop
@@ -834,7 +823,6 @@ share/kde4/services/kcm_memory.desktop
 share/kde4/services/kcm_partition.desktop
 share/kde4/services/kcm_pci.desktop
 share/kde4/services/kcm_useraccount.desktop
-share/kde4/services/kcmcss.desktop
 share/kde4/services/kcmdolphin.desktop
 share/kde4/services/kcmhistory.desktop
 share/kde4/services/kcmkonqyperformance.desktop
@@ -843,11 +831,10 @@ share/kde4/services/kcmsolidproc.desktop
 share/kde4/services/kcmusb.desktop
 share/kde4/services/kded/favicons.desktop
 share/kde4/services/kded/konqy_preloader.desktop
-share/kde4/services/kded/kwrited.desktop
 share/kde4/services/kfindpart.desktop
+share/kde4/services/khtml_appearance.desktop
 share/kde4/services/khtml_behavior.desktop
 share/kde4/services/khtml_filter.desktop
-share/kde4/services/khtml_fonts.desktop
 share/kde4/services/khtml_general.desktop
 share/kde4/services/khtml_java_js.desktop
 share/kde4/services/khtml_plugins.desktop
@@ -911,10 +898,6 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/konsole
 @dirrm share/kde/apps/konqueror/profiles
 @dirrm share/kde/apps/konqueror/pics
-@dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16
-@dirrm share/kde/apps/konqueror/icons/crystalsvg
-@dirrm share/kde/apps/konqueror/icons
 @dirrm share/kde/apps/konqueror/about
 @comment in kde: @dirrm share/kde/apps/konqueror
 @dirrm share/kde/apps/konqsidebartng/websidebar
