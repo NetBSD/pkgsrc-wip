@@ -1,18 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2008/11/06 11:11:27 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/01/10 10:02:38 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
-bin/indi_celestron_gps
-bin/indi_intelliscope
-bin/indi_lx200_16
-bin/indi_lx200autostar
-bin/indi_lx200basic
-bin/indi_lx200classic
-bin/indi_lx200generic
-bin/indi_lx200gps
-bin/indi_orion_atlas
-bin/indi_skycommander
-bin/indiserver
 bin/kalgebra
 bin/kalzium
 bin/kanagram
@@ -24,7 +13,6 @@ bin/kiten
 bin/kitengen
 bin/kitenradselect
 bin/klettres
-bin/kpercentage
 bin/kstars
 bin/ktouch
 bin/kturtle
@@ -46,6 +34,7 @@ include/libkdeedu/keduvoccontainer.h
 include/libkdeedu/keduvocdocument.h
 include/libkdeedu/keduvocexpression.h
 include/libkdeedu/keduvocidentifier.h
+include/libkdeedu/keduvocleitnerbox.h
 include/libkdeedu/keduvoclesson.h
 include/libkdeedu/keduvocmultiplechoice.h
 include/libkdeedu/keduvocpersonalpronoun.h
@@ -72,8 +61,8 @@ include/libkiten/libkitenexport.h
 include/marble/AbstractLayerInterface.h
 include/marble/AbstractProjection.h
 include/marble/AbstractProjectionHelper.h
+include/marble/BoundingBox.h
 include/marble/ClipPainter.h
-include/marble/CustomSortFilterProxyModel.h
 include/marble/EquirectProjection.h
 include/marble/EquirectProjectionHelper.h
 include/marble/ExtDateTime.h
@@ -89,6 +78,7 @@ include/marble/GeoDataHotSpot.h
 include/marble/GeoDataIconStyle.h
 include/marble/GeoDataLabelStyle.h
 include/marble/GeoDataLatLonAltBox.h
+include/marble/GeoDataLatLonBox.h
 include/marble/GeoDataLineString.h
 include/marble/GeoDataLineStyle.h
 include/marble/GeoDataLinearRing.h
@@ -99,18 +89,23 @@ include/marble/GeoDataPoint.h
 include/marble/GeoDataPolyStyle.h
 include/marble/GeoDataPolygon.h
 include/marble/GeoDataStyle.h
+include/marble/GeoDataStyleMap.h
 include/marble/GeoDataStyleSelector.h
 include/marble/GeoDocument.h
 include/marble/GeoPainter.h
+include/marble/LatLonEdit.h
 include/marble/MapThemeManager.h
+include/marble/MapThemeSortFilterProxyModel.h
+include/marble/MarbleAboutDialog.h
 include/marble/MarbleAbstractFloatItem.h
-include/marble/MarbleAbstractLayer.h
 include/marble/MarbleControlBox.h
 include/marble/MarbleDataFacade.h
 include/marble/MarbleDirs.h
-include/marble/MarbleLayerInterface.h
 include/marble/MarbleMap.h
+include/marble/MarbleModel.h
 include/marble/MarbleNavigator.h
+include/marble/MarbleRenderPlugin.h
+include/marble/MarbleRenderPluginInterface.h
 include/marble/MarbleWidget.h
 include/marble/MarbleWidgetInputHandler.h
 include/marble/MercatorProjection.h
@@ -129,38 +124,41 @@ include/marble/global.h
 include/marble/marble_export.h
 lib/kde4/kigpart.so
 lib/kde4/libmarble_part.so
+lib/kde4/plasma_applet_didyouknow.so
 lib/kde4/plasma_applet_kalgebra.so
 lib/kde4/plasma_applet_parley.so
+lib/kde4/plasma_applet_worldclock.so
+lib/kde4/plasma_engine_kalzium.so
 lib/kde4/plasma_engine_parley.so
 lib/kde4/plugins/marble/CompassFloatItem.so
 lib/kde4/plugins/marble/MapScaleFloatItem.so
+lib/kde4/plugins/marble/MarbleCrosshairsPlugin.so
+lib/kde4/plugins/marble/MarbleGeoDataPlugin.so
 lib/kde4/plugins/marble/MarbleOverviewMap.so
 lib/kde4/plugins/marble/MarbleStarsPlugin.so
+lib/kde4/plugins/marble/NavigationFloatItem.so
 lib/libSatLib.so
 lib/libSatLib.so.4
-lib/libSatLib.so.4.1.0
+lib/libSatLib.so.4.2.0
 lib/libanalitza.so
 lib/libanalitza.so.4
-lib/libanalitza.so.4.1.0
+lib/libanalitza.so.4.2.0
 lib/libhtmesh.a
 lib/libkdeeduui.so
 lib/libkdeeduui.so.4
-lib/libkdeeduui.so.4.1.0
+lib/libkdeeduui.so.4.2.0
 lib/libkeduvocdocument.so
 lib/libkeduvocdocument.so.4
-lib/libkeduvocdocument.so.4.1.0
+lib/libkeduvocdocument.so.4.2.0
 lib/libkiten.so
 lib/libkiten.so.4
-lib/libkiten.so.4.1.0
+lib/libkiten.so.4.2.0
 lib/libmarblewidget.so
 lib/libmarblewidget.so.4
-lib/libmarblewidget.so.4.1.0
-lib/libsbigudrv.so
-lib/libsbigudrv.so.1
-lib/libsbigudrv.so.1.0.0
+lib/libmarblewidget.so.4.2.0
 lib/libscience.so
 lib/libscience.so.4
-lib/libscience.so.4.1.0
+lib/libscience.so.4.2.0
 share/applications/kde4/blinken.desktop
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalzium.desktop
@@ -171,7 +169,6 @@ share/applications/kde4/khangman.desktop
 share/applications/kde4/kig.desktop
 share/applications/kde4/kiten.desktop
 share/applications/kde4/klettres.desktop
-share/applications/kde4/kpercentage.desktop
 share/applications/kde4/kstars.desktop
 share/applications/kde4/ktouch.desktop
 share/applications/kde4/kturtle.desktop
@@ -238,11 +235,15 @@ share/doc/kde/HTML/en/kbruch/compare.png
 share/doc/kde/HTML/en/kbruch/convert.png
 share/doc/kde/HTML/en/kbruch/factorize.png
 share/doc/kde/HTML/en/kbruch/gui_main.png
+share/doc/kde/HTML/en/kbruch/gui_mode.png
 share/doc/kde/HTML/en/kbruch/index.cache.bz2
 share/doc/kde/HTML/en/kbruch/index.docbook
+share/doc/kde/HTML/en/kbruch/learning.png
 share/doc/kde/HTML/en/kbruch/man-kbruch.1.docbook
+share/doc/kde/HTML/en/kbruch/percentage.png
 share/doc/kde/HTML/en/kbruch/reduced.png
 share/doc/kde/HTML/en/kbruch/settings.png
+share/doc/kde/HTML/en/kbruch/statistics.png
 share/doc/kde/HTML/en/kgeography/common
 share/doc/kde/HTML/en/kgeography/first-start1.png
 share/doc/kde/HTML/en/kgeography/first-start10.png
@@ -311,21 +312,6 @@ share/doc/kde/HTML/en/klettres/klettres3.png
 share/doc/kde/HTML/en/klettres/klettres4.png
 share/doc/kde/HTML/en/klettres/klettres5.png
 share/doc/kde/HTML/en/klettres/klettres6.png
-share/doc/kde/HTML/en/kpercentage/answer.png
-share/doc/kde/HTML/en/kpercentage/commands.docbook
-share/doc/kde/HTML/en/kpercentage/common
-share/doc/kde/HTML/en/kpercentage/credits.docbook
-share/doc/kde/HTML/en/kpercentage/devel.docbook
-share/doc/kde/HTML/en/kpercentage/edu-logo.png
-share/doc/kde/HTML/en/kpercentage/faq.docbook
-share/doc/kde/HTML/en/kpercentage/help.png
-share/doc/kde/HTML/en/kpercentage/index.cache.bz2
-share/doc/kde/HTML/en/kpercentage/index.docbook
-share/doc/kde/HTML/en/kpercentage/install.docbook
-share/doc/kde/HTML/en/kpercentage/introduction.docbook
-share/doc/kde/HTML/en/kpercentage/main.png
-share/doc/kde/HTML/en/kpercentage/using.docbook
-share/doc/kde/HTML/en/kpercentage/welcome.png
 share/doc/kde/HTML/en/kstars/aavso.png
 share/doc/kde/HTML/en/kstars/ai-contents.docbook
 share/doc/kde/HTML/en/kstars/alpha.png
@@ -411,7 +397,6 @@ share/doc/kde/HTML/en/kstars/luminosity.docbook
 share/doc/kde/HTML/en/kstars/luminosity.png
 share/doc/kde/HTML/en/kstars/luminosity_ex.png
 share/doc/kde/HTML/en/kstars/magnitude.docbook
-share/doc/kde/HTML/en/kstars/man-celestrongps.1.docbook
 share/doc/kde/HTML/en/kstars/man-indi_celestron_gps.1.docbook
 share/doc/kde/HTML/en/kstars/man-indi_fli_ccd.1.docbook
 share/doc/kde/HTML/en/kstars/man-indi_lx200_16.1.docbook
@@ -582,7 +567,6 @@ share/icons/hicolor/128x128/apps/khangman.png
 share/icons/hicolor/128x128/apps/kig.png
 share/icons/hicolor/128x128/apps/kiten.png
 share/icons/hicolor/128x128/apps/klettres.png
-share/icons/hicolor/128x128/apps/kpercentage.png
 share/icons/hicolor/128x128/apps/kstars.png
 share/icons/hicolor/128x128/apps/ktouch.png
 share/icons/hicolor/128x128/apps/kturtle.png
@@ -600,7 +584,6 @@ share/icons/hicolor/16x16/apps/khangman.png
 share/icons/hicolor/16x16/apps/kig.png
 share/icons/hicolor/16x16/apps/kiten.png
 share/icons/hicolor/16x16/apps/klettres.png
-share/icons/hicolor/16x16/apps/kpercentage.png
 share/icons/hicolor/16x16/apps/kstars.png
 share/icons/hicolor/16x16/apps/ktouch.png
 share/icons/hicolor/16x16/apps/kturtle.png
@@ -617,7 +600,6 @@ share/icons/hicolor/22x22/apps/khangman.png
 share/icons/hicolor/22x22/apps/kig.png
 share/icons/hicolor/22x22/apps/kiten.png
 share/icons/hicolor/22x22/apps/klettres.png
-share/icons/hicolor/22x22/apps/kpercentage.png
 share/icons/hicolor/22x22/apps/ktouch.png
 share/icons/hicolor/22x22/apps/kturtle.png
 share/icons/hicolor/22x22/apps/kwordquiz.png
@@ -633,7 +615,6 @@ share/icons/hicolor/32x32/apps/khangman.png
 share/icons/hicolor/32x32/apps/kig.png
 share/icons/hicolor/32x32/apps/kiten.png
 share/icons/hicolor/32x32/apps/klettres.png
-share/icons/hicolor/32x32/apps/kpercentage.png
 share/icons/hicolor/32x32/apps/kstars.png
 share/icons/hicolor/32x32/apps/ktouch.png
 share/icons/hicolor/32x32/apps/kturtle.png
@@ -651,7 +632,6 @@ share/icons/hicolor/48x48/apps/khangman.png
 share/icons/hicolor/48x48/apps/kig.png
 share/icons/hicolor/48x48/apps/kiten.png
 share/icons/hicolor/48x48/apps/klettres.png
-share/icons/hicolor/48x48/apps/kpercentage.png
 share/icons/hicolor/48x48/apps/kstars.png
 share/icons/hicolor/48x48/apps/ktouch.png
 share/icons/hicolor/48x48/apps/kturtle.png
@@ -669,7 +649,6 @@ share/icons/hicolor/64x64/apps/khangman.png
 share/icons/hicolor/64x64/apps/kig.png
 share/icons/hicolor/64x64/apps/kiten.png
 share/icons/hicolor/64x64/apps/klettres.png
-share/icons/hicolor/64x64/apps/kpercentage.png
 share/icons/hicolor/64x64/apps/kstars.png
 share/icons/hicolor/64x64/apps/kturtle.png
 share/icons/hicolor/64x64/apps/kwordquiz.png
@@ -685,7 +664,6 @@ share/icons/hicolor/scalable/apps/khangman.svgz
 share/icons/hicolor/scalable/apps/kig.svgz
 share/icons/hicolor/scalable/apps/kiten.svgz
 share/icons/hicolor/scalable/apps/klettres.svgz
-share/icons/hicolor/scalable/apps/kpercentage.svgz
 share/icons/hicolor/scalable/apps/kstars.svgz
 share/icons/hicolor/scalable/apps/ktouch.svgz
 share/icons/hicolor/scalable/apps/kturtle.svgz
@@ -704,6 +682,7 @@ share/kde/apps/blinken/sounds/lose.wav
 share/kde/apps/cmake/modules/FindKDEEdu.cmake
 share/kde/apps/cmake/modules/FindMarble.cmake
 share/kde/apps/cmake/modules/FindMarbleWidget.cmake
+share/kde/apps/desktoptheme/default/widgets/chalkboard.svg
 share/kde/apps/desktoptheme/default/widgets/parley_plasma_card.svg
 share/kde/apps/kalzium/data/bg.jpg
 share/kde/apps/kalzium/data/hazardsymbols/hazard_C.png
@@ -1013,19 +992,22 @@ share/kde/apps/kanagram/images/kanagram.svg
 share/kde/apps/kanagram/sounds/chalk.ogg
 share/kde/apps/kanagram/sounds/right.ogg
 share/kde/apps/kanagram/sounds/wrong.ogg
-share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_common.png
-share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_compare.png
-share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_conversion.png
-share/kde/apps/kbruch/icons/oxygen/32x32/actions/kbruch_exercise_factorisation.png
-share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_common.png
-share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_compare.png
-share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_conversion.png
-share/kde/apps/kbruch/icons/oxygen/64x64/actions/kbruch_exercise_factorisation.png
-share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_common.svgz
-share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_compare.svgz
-share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_conversion.svgz
-share/kde/apps/kbruch/icons/oxygen/scalable/actions/kbruch_exercise_factorisation.svgz
+share/kde/apps/katepart/syntax/python-kig.xml
+share/kde/apps/kbruch/AppMenuWidgetui.rc
+share/kde/apps/kbruch/FractionRingWidgetui.rc
 share/kde/apps/kbruch/kbruchui.rc
+share/kde/apps/kbruch/pics/exercise_arithmetics.png
+share/kde/apps/kbruch/pics/exercise_compare.png
+share/kde/apps/kbruch/pics/exercise_conversion.png
+share/kde/apps/kbruch/pics/exercise_factorization.png
+share/kde/apps/kbruch/pics/exercise_percentage.png
+share/kde/apps/kbruch/pics/icon_back_arrow.png
+share/kde/apps/kbruch/pics/icon_freestyle.png
+share/kde/apps/kbruch/pics/icon_freestyle_1.png
+share/kde/apps/kbruch/pics/icon_learning.png
+share/kde/apps/kbruch/pics/icon_learning_1.png
+share/kde/apps/kbruch/pics/icon_test_case.png
+share/kde/apps/kbruch/pics/icon_test_case_1.png
 share/kde/apps/kgeography/afghanistan.kgm
 share/kde/apps/kgeography/afghanistan.png
 share/kde/apps/kgeography/africa.kgm
@@ -1720,6 +1702,8 @@ share/kde/apps/kgeography/kyrgyzstan.kgm
 share/kde/apps/kgeography/kyrgyzstan.png
 share/kde/apps/kgeography/latvia.kgm
 share/kde/apps/kgeography/latvia.png
+share/kde/apps/kgeography/liechtenstein.kgm
+share/kde/apps/kgeography/liechtenstein.png
 share/kde/apps/kgeography/lithuania_municipalities.kgm
 share/kde/apps/kgeography/lithuania_municipalities.png
 share/kde/apps/kgeography/luxembourg_cantons.kgm
@@ -1746,6 +1730,8 @@ share/kde/apps/kgeography/norway.kgm
 share/kde/apps/kgeography/norway.png
 share/kde/apps/kgeography/oceania.kgm
 share/kde/apps/kgeography/oceania.png
+share/kde/apps/kgeography/oman.kgm
+share/kde/apps/kgeography/oman.png
 share/kde/apps/kgeography/pakistan.kgm
 share/kde/apps/kgeography/pakistan.png
 share/kde/apps/kgeography/panama.kgm
@@ -1770,6 +1756,8 @@ share/kde/apps/kgeography/russia_districts.kgm
 share/kde/apps/kgeography/russia_districts.png
 share/kde/apps/kgeography/russia_subjects.kgm
 share/kde/apps/kgeography/russia_subjects.png
+share/kde/apps/kgeography/san-marino.kgm
+share/kde/apps/kgeography/san-marino.png
 share/kde/apps/kgeography/saudi_arabia.kgm
 share/kde/apps/kgeography/saudi_arabia.png
 share/kde/apps/kgeography/slovakia.kgm
@@ -2241,26 +2229,6 @@ share/kde/apps/klettres/pics/klettres_grownup.png
 share/kde/apps/klettres/pics/klettres_kids.jpeg
 share/kde/apps/klettres/pics/savannah/klettres_savannah.svg
 share/kde/apps/klettres/sk.txt
-share/kde/apps/kpercentage/pics/kanswer_bg.png
-share/kde/apps/kpercentage/pics/kpercentage_bg.svgz
-share/kde/apps/kpercentage/pics/kpercentage_bg_rtl.svgz
-share/kde/apps/kpercentage/pics/kpercentmain_bg.svgz
-share/kde/apps/kpercentage/pics/kpercentmain_bg_rtl.svgz
-share/kde/apps/kpercentage/pics/smily0000.png
-share/kde/apps/kpercentage/pics/smily0001.png
-share/kde/apps/kpercentage/pics/smily0002.png
-share/kde/apps/kpercentage/pics/smily0003.png
-share/kde/apps/kpercentage/pics/smily0004.png
-share/kde/apps/kpercentage/pics/smily0005.png
-share/kde/apps/kpercentage/pics/smily0006.png
-share/kde/apps/kpercentage/pics/smily_medium.png
-share/kde/apps/kpercentage/pics/smily_right.png
-share/kde/apps/kpercentage/pics/smily_wrong.png
-share/kde/apps/kpercentage/pics/splash.png
-share/kde/apps/kpercentage/right.txt
-share/kde/apps/kpercentage/story/right.story
-share/kde/apps/kpercentage/story/wrong.story
-share/kde/apps/kpercentage/wrong.txt
 share/kde/apps/kstars/Cities.dat
 share/kde/apps/kstars/TZrules.dat
 share/kde/apps/kstars/advinterface.dat
@@ -2275,7 +2243,6 @@ share/kde/apps/kstars/classic.colors
 share/kde/apps/kstars/clines.dat
 share/kde/apps/kstars/cnames.dat
 share/kde/apps/kstars/comets.dat
-share/kde/apps/kstars/drivers.xml
 share/kde/apps/kstars/earth.B0.vsop
 share/kde/apps/kstars/earth.B1.vsop
 share/kde/apps/kstars/earth.B2.vsop
@@ -2370,6 +2337,7 @@ share/kde/apps/kstars/jupiter.orbit
 share/kde/apps/kstars/jupiter.png
 share/kde/apps/kstars/kstars.png
 share/kde/apps/kstars/kstarsui.rc
+share/kde/apps/kstars/lmc.dat
 share/kde/apps/kstars/mars.B0.vsop
 share/kde/apps/kstars/mars.B1.vsop
 share/kde/apps/kstars/mars.B2.vsop
@@ -2450,6 +2418,7 @@ share/kde/apps/kstars/moon35.png
 share/kde/apps/kstars/moonB.dat
 share/kde/apps/kstars/moonLR.dat
 share/kde/apps/kstars/moonless-night.colors
+share/kde/apps/kstars/namedstars.dat
 share/kde/apps/kstars/neptune.B0.vsop
 share/kde/apps/kstars/neptune.B1.vsop
 share/kde/apps/kstars/neptune.B2.vsop
@@ -2495,10 +2464,13 @@ share/kde/apps/kstars/saturn.R4.vsop
 share/kde/apps/kstars/saturn.R5.vsop
 share/kde/apps/kstars/saturn.orbit
 share/kde/apps/kstars/saturn.png
+share/kde/apps/kstars/smc.dat
 share/kde/apps/kstars/starlnum.idx
+share/kde/apps/kstars/starnames.dat
 share/kde/apps/kstars/stars.dat
 share/kde/apps/kstars/sun.png
 share/kde/apps/kstars/tips
+share/kde/apps/kstars/unnamedstars.dat
 share/kde/apps/kstars/uranus.B0.vsop
 share/kde/apps/kstars/uranus.B1.vsop
 share/kde/apps/kstars/uranus.B2.vsop
@@ -2543,56 +2515,38 @@ share/kde/apps/kstars/wzgeo.png
 share/kde/apps/kstars/wzscope.png
 share/kde/apps/kstars/wzstars.png
 share/kde/apps/ktouch/ar.keyboard.xml
-share/kde/apps/ktouch/be.keyboard
-share/kde/apps/ktouch/bg.keyboard
+share/kde/apps/ktouch/arabic.ktouch.xml
 share/kde/apps/ktouch/bulgarian.ktouch.xml
 share/kde/apps/ktouch/bulgarian_long.ktouch.xml
 share/kde/apps/ktouch/catalan.ktouch.xml
+share/kde/apps/ktouch/colemak.keyboard.xml
+share/kde/apps/ktouch/colemak.ktouch.xml
 share/kde/apps/ktouch/cs.qwerty.keyboard.xml
 share/kde/apps/ktouch/cs.qwertz.keyboard.xml
 share/kde/apps/ktouch/czech.ktouch.xml
 share/kde/apps/ktouch/danish.ktouch.xml
 share/kde/apps/ktouch/danish2.ktouch.xml
-share/kde/apps/ktouch/de-2.keyboard
-share/kde/apps/ktouch/de-ch.keyboard
-share/kde/apps/ktouch/de-ch2.keyboard
-share/kde/apps/ktouch/de.keyboard
 share/kde/apps/ktouch/de.keyboard.xml
-share/kde/apps/ktouch/de_neo.keyboard
-share/kde/apps/ktouch/dk.keyboard
 share/kde/apps/ktouch/dk.keyboard.xml
 share/kde/apps/ktouch/down.wav
 share/kde/apps/ktouch/dvorak-fr-1.ktouch.xml
 share/kde/apps/ktouch/dvorak-fr-2.ktouch.xml
-share/kde/apps/ktouch/dvorak.keyboard
 share/kde/apps/ktouch/dvorak.keyboard.xml
 share/kde/apps/ktouch/dvorak.ktouch.xml
 share/kde/apps/ktouch/dvorak_ABCD.ktouch.xml
-share/kde/apps/ktouch/dvorak_es.keyboard
 share/kde/apps/ktouch/dvorak_es.ktouch.xml
-share/kde/apps/ktouch/dvorak_fr.keyboard
 share/kde/apps/ktouch/dvorak_fr.keyboard.xml
-share/kde/apps/ktouch/dvorak_se.keyboard
-share/kde/apps/ktouch/ee.keyboard
-share/kde/apps/ktouch/el.keyboard
 share/kde/apps/ktouch/el.keyboard.xml
 share/kde/apps/ktouch/el.ktouch.xml
-share/kde/apps/ktouch/en.dvorak.keyboard
-share/kde/apps/ktouch/en.keyboard
 share/kde/apps/ktouch/en.keyboard.xml
 share/kde/apps/ktouch/english.ktouch.xml
-share/kde/apps/ktouch/es.keyboard
-share/kde/apps/ktouch/es2.keyboard
+share/kde/apps/ktouch/es.keyboard.xml
 share/kde/apps/ktouch/espanol.ktouch.xml
 share/kde/apps/ktouch/espanol2.ktouch.xml
-share/kde/apps/ktouch/fi.keyboard
 share/kde/apps/ktouch/fi.keyboard.xml
 share/kde/apps/ktouch/finnish.ktouch.xml
 share/kde/apps/ktouch/finnish_for_kids.ktouch.xml
-share/kde/apps/ktouch/fr.keyboard
 share/kde/apps/ktouch/fr.keyboard.xml
-share/kde/apps/ktouch/fr_a.keyboard
-share/kde/apps/ktouch/fr_ch.keyboard
 share/kde/apps/ktouch/fr_ch.keyboard.xml
 share/kde/apps/ktouch/french.ktouch.xml
 share/kde/apps/ktouch/french2.ktouch.xml
@@ -2601,56 +2555,35 @@ share/kde/apps/ktouch/german.neo.ktouch.xml
 share/kde/apps/ktouch/german.number.ktouch.xml
 share/kde/apps/ktouch/german2.ktouch.xml
 share/kde/apps/ktouch/german3.ktouch.xml
-share/kde/apps/ktouch/he.keyboard
 share/kde/apps/ktouch/he.keyboard.xml
-share/kde/apps/ktouch/hu.keyboard
 share/kde/apps/ktouch/hungarian.ktouch.xml
 share/kde/apps/ktouch/hungarian_expert.ktouch.xml
-share/kde/apps/ktouch/it.keyboard
 share/kde/apps/ktouch/it.keyboard.xml
 share/kde/apps/ktouch/italian.ktouch.xml
 share/kde/apps/ktouch/ktouchui.rc
-share/kde/apps/ktouch/la.keyboard
+share/kde/apps/ktouch/lat.keyboard.xml
 share/kde/apps/ktouch/latin.ktouch.xml
+share/kde/apps/ktouch/lt.ktouch.xml
 share/kde/apps/ktouch/nederlands.ktouch.xml
 share/kde/apps/ktouch/nederlands_junior.ktouch.xml
-share/kde/apps/ktouch/nn.keyboard
-share/kde/apps/ktouch/no.keyboard
 share/kde/apps/ktouch/no.keyboard.xml
 share/kde/apps/ktouch/norwegian.ktouch.xml
-share/kde/apps/ktouch/number.keyboard
-share/kde/apps/ktouch/pl.keyboard
 share/kde/apps/ktouch/polish.ktouch.xml
-share/kde/apps/ktouch/pt.br.abnt.keyboard
-share/kde/apps/ktouch/pt.br.keyboard
-share/kde/apps/ktouch/pt.keyboard
 share/kde/apps/ktouch/ru-winkeys.keyboard.xml
-share/kde/apps/ktouch/ru.2.keyboard
-share/kde/apps/ktouch/ru.3.keyboard
 share/kde/apps/ktouch/ru.keyboard.xml
-share/kde/apps/ktouch/ru.winkeys.keyboard
 share/kde/apps/ktouch/russian.ktouch.xml
 share/kde/apps/ktouch/russian2ktouch.xml
 share/kde/apps/ktouch/russian_long.ktouch.xml
-share/kde/apps/ktouch/se.keyboard
 share/kde/apps/ktouch/sk.qwerty.keyboard.xml
 share/kde/apps/ktouch/sk.qwertz.keyboard.xml
-share/kde/apps/ktouch/sl.keyboard
 share/kde/apps/ktouch/sl.keyboard.xml
+share/kde/apps/ktouch/slovak.ktouch.xml
 share/kde/apps/ktouch/slovenian.ktouch.xml
 share/kde/apps/ktouch/spanish.ktouch.xml
 share/kde/apps/ktouch/splash.png
-share/kde/apps/ktouch/sv.keyboard
 share/kde/apps/ktouch/sv.keyboard.xml
-share/kde/apps/ktouch/tr.f.keyboard
-share/kde/apps/ktouch/tr.q.keyboard
 share/kde/apps/ktouch/turkish.ktouch.xml
-share/kde/apps/ktouch/turkish_f.keyboard
-share/kde/apps/ktouch/turkish_q.keyboard
 share/kde/apps/ktouch/typewriter.wav
-share/kde/apps/ktouch/uk.basic.keyboard
-share/kde/apps/ktouch/uk.typewriter.keyboard
-share/kde/apps/ktouch/uk.winkeys.keyboard
 share/kde/apps/ktouch/uk.winkeys.keyboard.xml
 share/kde/apps/ktouch/ukrainian.ktouch.xml
 share/kde/apps/ktouch/up.wav
@@ -2858,6 +2791,8 @@ share/kde/apps/marble/data/bitmaps/city_4_orange.png
 share/kde/apps/marble/data/bitmaps/city_4_red.png
 share/kde/apps/marble/data/bitmaps/city_4_white.png
 share/kde/apps/marble/data/bitmaps/city_4_yellow.png
+share/kde/apps/marble/data/bitmaps/coordinate.png
+share/kde/apps/marble/data/bitmaps/crater.png
 share/kde/apps/marble/data/bitmaps/cursor_bc.xpm
 share/kde/apps/marble/data/bitmaps/cursor_bl.xpm
 share/kde/apps/marble/data/bitmaps/cursor_br.xpm
@@ -2869,15 +2804,23 @@ share/kde/apps/marble/data/bitmaps/cursor_tr.xpm
 share/kde/apps/marble/data/bitmaps/default_location.png
 share/kde/apps/marble/data/bitmaps/earth_apollo.jpg
 share/kde/apps/marble/data/bitmaps/lake.png
+share/kde/apps/marble/data/bitmaps/manned_landing.png
 share/kde/apps/marble/data/bitmaps/mountain_1.png
 share/kde/apps/marble/data/bitmaps/nation.png
 share/kde/apps/marble/data/bitmaps/ocean.png
+share/kde/apps/marble/data/bitmaps/osm.png
+share/kde/apps/marble/data/bitmaps/other.png
 share/kde/apps/marble/data/bitmaps/pole_1.png
 share/kde/apps/marble/data/bitmaps/pole_2.png
 share/kde/apps/marble/data/bitmaps/river.png
+share/kde/apps/marble/data/bitmaps/robotic_rover.png
 share/kde/apps/marble/data/bitmaps/shipwreck.png
+share/kde/apps/marble/data/bitmaps/unmanned_hard_landing.png
+share/kde/apps/marble/data/bitmaps/unmanned_soft_landing.png
+share/kde/apps/marble/data/bitmaps/valley.png
 share/kde/apps/marble/data/bitmaps/volcano_1.png
 share/kde/apps/marble/data/bitmaps/waypoint.png
+share/kde/apps/marble/data/bitmaps/wikipedia.png
 share/kde/apps/marble/data/credits_authors.html
 share/kde/apps/marble/data/credits_data.html
 share/kde/apps/marble/data/flags/flag_ad.svg
@@ -3175,6 +3118,16 @@ share/kde/apps/marble/data/maps/earth/precip-dec/precip-dec.jpg
 share/kde/apps/marble/data/maps/earth/precip-july/precip-july-preview.png
 share/kde/apps/marble/data/maps/earth/precip-july/precip-july.dgml
 share/kde/apps/marble/data/maps/earth/precip-july/precip-july.jpg
+share/kde/apps/marble/data/maps/earth/schagen1689/legend.html
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/lake.png
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/mountain.png
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/river.png
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/schagen_orig.png
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/schagen_title.png
+share/kde/apps/marble/data/maps/earth/schagen1689/legend/town.png
+share/kde/apps/marble/data/maps/earth/schagen1689/schagen1689-preview.png
+share/kde/apps/marble/data/maps/earth/schagen1689/schagen1689.dgml
+share/kde/apps/marble/data/maps/earth/schagen1689/schagen1689.jpg
 share/kde/apps/marble/data/maps/earth/srtm/0/000000/000000_000000.jpg
 share/kde/apps/marble/data/maps/earth/srtm/0/000000/000000_000001.jpg
 share/kde/apps/marble/data/maps/earth/srtm/1/000000/000000_000000.jpg
@@ -3865,6 +3818,10 @@ share/kde/apps/marble/data/maps/earth/temp-dec/temp-dec.jpg
 share/kde/apps/marble/data/maps/earth/temp-july/temp-july-preview.png
 share/kde/apps/marble/data/maps/earth/temp-july/temp-july.dgml
 share/kde/apps/marble/data/maps/earth/temp-july/temp-july.jpg
+share/kde/apps/marble/data/maps/moon/clementine/clementine-preview.png
+share/kde/apps/marble/data/maps/moon/clementine/clementine.dgml
+share/kde/apps/marble/data/maps/moon/clementine/clementine.jpg
+share/kde/apps/marble/data/maps/moon/clementine/legend.html
 share/kde/apps/marble/data/mwdbii/DATELINE.PNT
 share/kde/apps/marble/data/mwdbii/PAUST.PNT
 share/kde/apps/marble/data/mwdbii/PBORDER.PNT
@@ -3883,6 +3840,8 @@ share/kde/apps/marble/data/placemarks/baseplacemarks.cache
 share/kde/apps/marble/data/placemarks/boundaryplacemarks.cache
 share/kde/apps/marble/data/placemarks/cityplacemarks.cache
 share/kde/apps/marble/data/placemarks/elevplacemarks.cache
+share/kde/apps/marble/data/placemarks/moonlandingsites.cache
+share/kde/apps/marble/data/placemarks/moonterrain.cache
 share/kde/apps/marble/data/placemarks/otherplacemarks.cache
 share/kde/apps/marble/data/precipcolors.leg
 share/kde/apps/marble/data/seacolors.leg
@@ -3891,17 +3850,19 @@ share/kde/apps/marble/data/svg/application-x-marble-gray.png
 share/kde/apps/marble/data/svg/application-x-marble.png
 share/kde/apps/marble/data/svg/application-x-marble.svg
 share/kde/apps/marble/data/svg/compass.svg
+share/kde/apps/marble/data/svg/coordinate.svg
+share/kde/apps/marble/data/svg/lunarmap.svg
 share/kde/apps/marble/data/svg/marble-logo-72dpi.png
 share/kde/apps/marble/data/svg/marble-logo-inverted-72dpi.png
 share/kde/apps/marble/data/svg/marble-logo.png
 share/kde/apps/marble/data/svg/marble-logo.svg
+share/kde/apps/marble/data/svg/wikipedia.svg
 share/kde/apps/marble/data/svg/worldmap.svg
 share/kde/apps/marble/data/tempcolors.leg
 share/kde/apps/marble/marble.knsrc
 share/kde/apps/marble/marbleui.rc
 share/kde/apps/marble_part/marble_part.rc
-share/kde/apps/parley/examples/sample-de.kvtml
-share/kde/apps/parley/examples/sample-en.kvtml
+share/kde/apps/parley/editorui.rc
 share/kde/apps/parley/icons/oxygen/16x16/actions/advanced-setup.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/edit-clear.png
@@ -3916,7 +3877,6 @@ share/kde/apps/parley/icons/oxygen/16x16/actions/practice-setup.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/16x16/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/16x16/actions/statistics.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/advanced-setup.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/edit-clear.png
@@ -3931,7 +3891,6 @@ share/kde/apps/parley/icons/oxygen/22x22/actions/practice-setup.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/22x22/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/22x22/actions/statistics.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/advanced-setup.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/edit-clear.png
@@ -3946,7 +3905,6 @@ share/kde/apps/parley/icons/oxygen/32x32/actions/practice-setup.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/32x32/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/32x32/actions/statistics.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/advanced-setup.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/cards-block.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/edit-clear.png
@@ -3962,7 +3920,6 @@ share/kde/apps/parley/icons/oxygen/48x48/actions/practice-setup.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/practice-start.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/remove-duplicates.png
 share/kde/apps/parley/icons/oxygen/48x48/actions/set-language.png
-share/kde/apps/parley/icons/oxygen/48x48/actions/statistics.png
 share/kde/apps/parley/icons/oxygen/scalable/actions/advanced-setup.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/cards-block.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/edit-clear.svgz
@@ -3976,9 +3933,26 @@ share/kde/apps/parley/icons/oxygen/scalable/actions/practice-setup.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/practice-start.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/remove-duplicates.svgz
 share/kde/apps/parley/icons/oxygen/scalable/actions/set-language.svgz
-share/kde/apps/parley/icons/oxygen/scalable/actions/statistics.svgz
+share/kde/apps/parley/parleypracticeui.rc
 share/kde/apps/parley/parleyui.rc
+share/kde/apps/parley/plugins/example.desktop
+share/kde/apps/parley/plugins/example.py
+share/kde/apps/parley/plugins/google_dictionary.desktop
+share/kde/apps/parley/plugins/google_dictionary.py
+share/kde/apps/parley/plugins/google_images.desktop
+share/kde/apps/parley/plugins/google_images.py
+share/kde/apps/parley/plugins/google_images.ui
+share/kde/apps/parley/plugins/leo-dict.desktop
+share/kde/apps/parley/plugins/leo-dict.py
+share/kde/apps/parley/plugins/test.desktop
+share/kde/apps/parley/plugins/test.py
 share/kde/apps/parley/tips
+share/kde/apps/parley/themes/clean.desktop
+share/kde/apps/parley/themes/clean_preview.png
+share/kde/apps/parley/themes/clean_theme.svgz
+share/kde/apps/parley/themes/default.desktop
+share/kde/apps/parley/themes/default_preview.png
+share/kde/apps/parley/themes/default_theme.svgz
 share/kde/apps/parley/xslt/flashcards.xsl
 share/kde/apps/parley/xslt/table.xsl
 share/kde/config.kcfg/blinken.kcfg
@@ -4006,12 +3980,17 @@ share/kde/config/parley.knsrc
 share/kde4/services/kalgebraplasmoid.desktop
 share/kde4/services/kig_part.desktop
 share/kde4/services/marble_part.desktop
+share/kde4/services/plasma-applet-kworldclock.desktop
+share/kde4/services/plasma-dataengine-kalzium.desktop
 share/kde4/services/plasma-dataengine-parley.desktop
+share/kde4/services/plasma_didyouknow.desktop
 share/kde4/services/plasma_parley.desktop
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/parley/xslt
+@dirrm share/kde/apps/parley/themes
+@dirrm share/kde/apps/parley/plugins
 @dirrm share/kde/apps/parley/icons/oxygen/scalable/actions
 @dirrm share/kde/apps/parley/icons/oxygen/scalable
 @dirrm share/kde/apps/parley/icons/oxygen/48x48/actions
@@ -4024,13 +4003,14 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/parley/icons/oxygen/16x16
 @dirrm share/kde/apps/parley/icons/oxygen
 @dirrm share/kde/apps/parley/icons
-@dirrm share/kde/apps/parley/examples
 @dirrm share/kde/apps/parley
 @dirrm share/kde/apps/marble_part
 @dirrm share/kde/apps/marble/data/svg
 @dirrm share/kde/apps/marble/data/stars
 @dirrm share/kde/apps/marble/data/placemarks
 @dirrm share/kde/apps/marble/data/mwdbii
+@dirrm share/kde/apps/marble/data/maps/moon/clementine
+@dirrm share/kde/apps/marble/data/maps/moon
 @dirrm share/kde/apps/marble/data/maps/earth/temp-july
 @dirrm share/kde/apps/marble/data/maps/earth/temp-dec
 @dirrm share/kde/apps/marble/data/maps/earth/srtm/4/000015
@@ -4070,6 +4050,8 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/marble/data/maps/earth/srtm/0/000000
 @dirrm share/kde/apps/marble/data/maps/earth/srtm/0
 @dirrm share/kde/apps/marble/data/maps/earth/srtm
+@dirrm share/kde/apps/marble/data/maps/earth/schagen1689/legend
+@dirrm share/kde/apps/marble/data/maps/earth/schagen1689
 @dirrm share/kde/apps/marble/data/maps/earth/precip-july
 @dirrm share/kde/apps/marble/data/maps/earth/precip-dec
 @dirrm share/kde/apps/marble/data/maps/earth/plain
@@ -4138,9 +4120,6 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/kstars/icons/hicolor
 @dirrm share/kde/apps/kstars/icons
 @dirrm share/kde/apps/kstars
-@dirrm share/kde/apps/kpercentage/story
-@dirrm share/kde/apps/kpercentage/pics
-@dirrm share/kde/apps/kpercentage
 @dirrm share/kde/apps/klettres/pics/savannah
 @dirrm share/kde/apps/klettres/pics/kids
 @dirrm share/kde/apps/klettres/pics/desert
@@ -4205,14 +4184,7 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/kgeography/flags/australia
 @dirrm share/kde/apps/kgeography/flags
 @dirrm share/kde/apps/kgeography
-@dirrm share/kde/apps/kbruch/icons/oxygen/scalable/actions
-@dirrm share/kde/apps/kbruch/icons/oxygen/scalable
-@dirrm share/kde/apps/kbruch/icons/oxygen/64x64/actions
-@dirrm share/kde/apps/kbruch/icons/oxygen/64x64
-@dirrm share/kde/apps/kbruch/icons/oxygen/32x32/actions
-@dirrm share/kde/apps/kbruch/icons/oxygen/32x32
-@dirrm share/kde/apps/kbruch/icons/oxygen
-@dirrm share/kde/apps/kbruch/icons
+@dirrm share/kde/apps/kbruch/pics
 @dirrm share/kde/apps/kbruch
 @dirrm share/kde/apps/kanagram/sounds
 @dirrm share/kde/apps/kanagram/images
@@ -4270,7 +4242,6 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/doc/kde/HTML/en/kturtle
 @dirrm share/doc/kde/HTML/en/ktouch
 @dirrm share/doc/kde/HTML/en/kstars
-@dirrm share/doc/kde/HTML/en/kpercentage
 @dirrm share/doc/kde/HTML/en/klettres
 @dirrm share/doc/kde/HTML/en/kiten
 @dirrm share/doc/kde/HTML/en/kig

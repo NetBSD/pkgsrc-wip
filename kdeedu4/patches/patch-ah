@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2009/01/10 10:02:39 mwdavies Exp $
+
+--- kstars/kstars/kscomet.h.orig	2008-07-22 12:04:11.000000000 +1200
++++ kstars/kstars/kscomet.h
+@@ -89,7 +89,7 @@ public:
+      *@return true on success, false if one or more pointers were NULL
+      */
+     bool getOrbitalElements( long double *_JD, double *_q, double *_e, dms *_i,
+-                             dms *_w, dms *_N );
++                             dms *_w, dms *_NN );
+ 
+     /**
+      *@short Returns the Julian Day of Perihelion passage

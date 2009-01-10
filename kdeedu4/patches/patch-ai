@@ -1,0 +1,23 @@
+$NetBSD: patch-ai,v 1.1 2009/01/10 10:02:39 mwdavies Exp $
+
+--- kstars/kstars/ksasteroid.cpp.orig	2008-07-22 12:04:11.000000000 +1200
++++ kstars/kstars/ksasteroid.cpp
+@@ -51,15 +51,15 @@ KSAsteroid::KSAsteroid( KSAsteroid &o ) 
+ }
+ 
+ bool KSAsteroid::getOrbitalElements( long double *_JD, double *_a, double *_e, dms *_i,
+-                                     dms *_w, dms *_N, dms *_M ) {
+-    if( !_JD || !_a || !_e || !_i || !_w || !_N || !_M )
++                                     dms *_w, dms *_NN, dms *_M ) {
++    if( !_JD || !_a || !_e || !_i || !_w || !_NN || !_M )
+         return false;
+     *_JD = JD;
+     *_a = a;
+     *_e = e;
+     *_i = i;
+     *_w = w;
+-    *_N = N;
++    *_NN = N;
+     *_M = M;
+     return true;
+ }

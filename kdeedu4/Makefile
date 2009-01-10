@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/11/05 20:57:25 mwdavies Exp $
+# $NetBSD: Makefile,v 1.8 2009/01/10 10:02:38 mwdavies Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -10,18 +10,22 @@ COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
 CMAKE_ARGS+=	-DBUILD_kmplot:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_SBIG:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_PyKDE4:BOOL=OFF   # "sip: MarblePlacemarkModel is undefined"
 
 USE_GNU_READLINE=	yes
 BROKEN_READLINE_DETECTION=	yes
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../lang/python/application.mk"
+.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/cfitsio/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
-#.include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kdebindings4-python/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

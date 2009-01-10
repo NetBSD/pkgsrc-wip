@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2008/11/06 11:11:27 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:06:49 mwdavies Exp $
+bin/bomber
 bin/bovo
+bin/kapman
 bin/katomic
 bin/kbattleship
 bin/kblackbox
@@ -10,6 +12,7 @@ bin/kdiamond
 bin/kfourinline
 bin/kfourinlineproc
 bin/kgoldrunner
+bin/killbots
 bin/kiriki
 bin/kjumpingcube
 bin/klines
@@ -24,6 +27,7 @@ bin/kreversi
 bin/ksame
 bin/kshisen
 bin/ksirk
+bin/ksirkskineditor
 bin/kspaceduel
 bin/ksquares
 bin/ksudoku
@@ -134,26 +138,31 @@ include/kmahjonggtileset.h
 include/kstandardgameaction.h
 include/libkdegames_export.h
 include/libkmahjongg_export.h
+lib/libiris_ksirk.so
+lib/libiris_ksirk.so.2
+lib/libiris_ksirk.so.2.0.0
 lib/libkdegames.so
 lib/libkdegames.so.5
 lib/libkdegames.so.5.0.0
 lib/libkggzgames.so
 lib/libkggzgames.so.4
-lib/libkggzgames.so.4.1.0
+lib/libkggzgames.so.4.2.0
 lib/libkggzmod.so
 lib/libkggzmod.so.4
-lib/libkggzmod.so.4.1.0
+lib/libkggzmod.so.4.2.0
 lib/libkggznet.so
 lib/libkggznet.so.4
-lib/libkggznet.so.4.1.0
+lib/libkggznet.so.4.2.0
 lib/libkmahjongglib.so
 lib/libkmahjongglib.so.4
-lib/libkmahjongglib.so.4.1.0
+lib/libkmahjongglib.so.4.2.0
 lib/libkolfprivate.so
 lib/libkolfprivate.so.4
-lib/libkolfprivate.so.4.1.0
+lib/libkolfprivate.so.4.2.0
 share/applications/kde4/KGoldrunner.desktop
+share/applications/kde4/bomber.desktop
 share/applications/kde4/bovo.desktop
+share/applications/kde4/kapman.desktop
 share/applications/kde4/katomic.desktop
 share/applications/kde4/kbattleship.desktop
 share/applications/kde4/kblackbox.desktop
@@ -162,7 +171,9 @@ share/applications/kde4/kbounce.desktop
 share/applications/kde4/kbreakout.desktop
 share/applications/kde4/kdiamond.desktop
 share/applications/kde4/kfourinline.desktop
+share/applications/kde4/killbots.desktop
 share/applications/kde4/kiriki.desktop
+share/applications/kde4/ksirkskineditor.desktop
 share/applications/kde4/kjumpingcube.desktop
 share/applications/kde4/klines.desktop
 share/applications/kde4/kmahjongg.desktop
@@ -182,9 +193,17 @@ share/applications/kde4/ksudoku.desktop
 share/applications/kde4/ktuberling.desktop
 share/applications/kde4/kubrick.desktop
 share/applications/kde4/lskat.desktop
+share/doc/kde/HTML/en/bomber/common
+share/doc/kde/HTML/en/bomber/index.cache.bz2
+share/doc/kde/HTML/en/bomber/index.docbook
 share/doc/kde/HTML/en/bovo/common
 share/doc/kde/HTML/en/bovo/index.cache.bz2
 share/doc/kde/HTML/en/bovo/index.docbook
+share/doc/kde/HTML/en/kapman/common
+share/doc/kde/HTML/en/kapman/config.png
+share/doc/kde/HTML/en/kapman/index.cache.bz2
+share/doc/kde/HTML/en/kapman/index.docbook
+share/doc/kde/HTML/en/kapman/kapman.png
 share/doc/kde/HTML/en/katomic/common
 share/doc/kde/HTML/en/katomic/index.cache.bz2
 share/doc/kde/HTML/en/katomic/index.docbook
@@ -223,6 +242,16 @@ share/doc/kde/HTML/en/kgoldrunner/index.cache.bz2
 share/doc/kde/HTML/en/kgoldrunner/index.docbook
 share/doc/kde/HTML/en/kgoldrunner/select.png
 share/doc/kde/HTML/en/kgoldrunner/tute008.png
+share/doc/kde/HTML/en/killbots/common
+share/doc/kde/HTML/en/killbots/enemy.png
+share/doc/kde/HTML/en/killbots/fastenemy.png
+share/doc/kde/HTML/en/killbots/grid.png
+share/doc/kde/HTML/en/killbots/hero.png
+share/doc/kde/HTML/en/killbots/index.cache.bz2
+share/doc/kde/HTML/en/killbots/index.docbook
+share/doc/kde/HTML/en/killbots/junkheap.png
+share/doc/kde/HTML/en/killbots/status.png
+share/doc/kde/HTML/en/killbots/waitoutround.png
 share/doc/kde/HTML/en/kiriki/common
 share/doc/kde/HTML/en/kiriki/index.cache.bz2
 share/doc/kde/HTML/en/kiriki/index.docbook
@@ -289,6 +318,7 @@ share/doc/kde/HTML/en/ksirk/8020.png
 share/doc/kde/HTML/en/ksirk/SoldatAGenoux1.png
 share/doc/kde/HTML/en/ksirk/afterDistribution.png
 share/doc/kde/HTML/en/ksirk/aide.png
+share/doc/kde/HTML/en/ksirk/alaska.png
 share/doc/kde/HTML/en/ksirk/annuler.png
 share/doc/kde/HTML/en/ksirk/attackOne.png
 share/doc/kde/HTML/en/ksirk/attackThree.png
@@ -296,6 +326,7 @@ share/doc/kde/HTML/en/ksirk/attackTwo.png
 share/doc/kde/HTML/en/ksirk/attackmenu.png
 share/doc/kde/HTML/en/ksirk/autoattack.png
 share/doc/kde/HTML/en/ksirk/belgium.png
+share/doc/kde/HTML/en/ksirk/bluedices.png
 share/doc/kde/HTML/en/ksirk/cannon.png
 share/doc/kde/HTML/en/ksirk/cavalry.png
 share/doc/kde/HTML/en/ksirk/common
@@ -324,6 +355,7 @@ share/doc/kde/HTML/en/ksirk/logoLeft.png
 share/doc/kde/HTML/en/ksirk/logoRight.png
 share/doc/kde/HTML/en/ksirk/map-mask.png
 share/doc/kde/HTML/en/ksirk/map.png
+share/doc/kde/HTML/en/ksirk/mark1.png
 share/doc/kde/HTML/en/ksirk/messagesent.png
 share/doc/kde/HTML/en/ksirk/moveArmies.png
 share/doc/kde/HTML/en/ksirk/moveBackFive.png
@@ -337,6 +369,7 @@ share/doc/kde/HTML/en/ksirk/movement.png
 share/doc/kde/HTML/en/ksirk/newGame.png
 share/doc/kde/HTML/en/ksirk/newNetGame.png
 share/doc/kde/HTML/en/ksirk/newgamedialog.png
+share/doc/kde/HTML/en/ksirk/nextPlayer.png
 share/doc/kde/HTML/en/ksirk/nouveauJeu.png
 share/doc/kde/HTML/en/ksirk/numnetplayersdialog.png
 share/doc/kde/HTML/en/ksirk/ouvrirJeu.png
@@ -346,6 +379,9 @@ share/doc/kde/HTML/en/ksirk/playersetupdialog.png
 share/doc/kde/HTML/en/ksirk/preferences.png
 share/doc/kde/HTML/en/ksirk/quit.png
 share/doc/kde/HTML/en/ksirk/quitter.png
+share/doc/kde/HTML/en/ksirk/recycling.png
+share/doc/kde/HTML/en/ksirk/recyclingFinished.png
+share/doc/kde/HTML/en/ksirk/reddices.png
 share/doc/kde/HTML/en/ksirk/saveGame.png
 share/doc/kde/HTML/en/ksirk/shownumberofarmies.png
 share/doc/kde/HTML/en/ksirk/uk.png
@@ -384,6 +420,7 @@ share/doc/kde/HTML/en/lskat/common
 share/doc/kde/HTML/en/lskat/index.cache.bz2
 share/doc/kde/HTML/en/lskat/index.docbook
 share/doc/kde/HTML/en/lskat/lskat_screen_01.png
+share/icons/hicolor/128x128/apps/bomber.png
 share/icons/hicolor/128x128/apps/katomic.png
 share/icons/hicolor/128x128/apps/kbattleship.png
 share/icons/hicolor/128x128/apps/kblackbox.png
@@ -393,6 +430,7 @@ share/icons/hicolor/128x128/apps/kbreakout.png
 share/icons/hicolor/128x128/apps/kdiamond.png
 share/icons/hicolor/128x128/apps/kfourinline.png
 share/icons/hicolor/128x128/apps/kgoldrunner.png
+share/icons/hicolor/128x128/apps/killbots.png
 share/icons/hicolor/128x128/apps/kiriki.png
 share/icons/hicolor/128x128/apps/kjumpingcube.png
 share/icons/hicolor/128x128/apps/klines.png
@@ -421,6 +459,7 @@ share/icons/hicolor/16x16/apps/kbreakout.png
 share/icons/hicolor/16x16/apps/kdiamond.png
 share/icons/hicolor/16x16/apps/kfourinline.png
 share/icons/hicolor/16x16/apps/kgoldrunner.png
+share/icons/hicolor/16x16/apps/killbots.png
 share/icons/hicolor/16x16/apps/kiriki.png
 share/icons/hicolor/16x16/apps/kjumpingcube.png
 share/icons/hicolor/16x16/apps/klines.png
@@ -450,6 +489,7 @@ share/icons/hicolor/22x22/apps/kbreakout.png
 share/icons/hicolor/22x22/apps/kdiamond.png
 share/icons/hicolor/22x22/apps/kfourinline.png
 share/icons/hicolor/22x22/apps/kgoldrunner.png
+share/icons/hicolor/22x22/apps/killbots.png
 share/icons/hicolor/22x22/apps/kiriki.png
 share/icons/hicolor/22x22/apps/kjumpingcube.png
 share/icons/hicolor/22x22/apps/klines.png
@@ -468,6 +508,7 @@ share/icons/hicolor/22x22/apps/ksquares.png
 share/icons/hicolor/22x22/apps/ktuberling.png
 share/icons/hicolor/22x22/apps/kubrick.png
 share/icons/hicolor/22x22/apps/lskat.png
+share/icons/hicolor/32x32/apps/bomber.png
 share/icons/hicolor/32x32/apps/katomic.png
 share/icons/hicolor/32x32/apps/kbattleship.png
 share/icons/hicolor/32x32/apps/kblackbox.png
@@ -477,6 +518,7 @@ share/icons/hicolor/32x32/apps/kbreakout.png
 share/icons/hicolor/32x32/apps/kdiamond.png
 share/icons/hicolor/32x32/apps/kfourinline.png
 share/icons/hicolor/32x32/apps/kgoldrunner.png
+share/icons/hicolor/32x32/apps/killbots.png
 share/icons/hicolor/32x32/apps/kiriki.png
 share/icons/hicolor/32x32/apps/kjumpingcube.png
 share/icons/hicolor/32x32/apps/klines.png
@@ -497,6 +539,7 @@ share/icons/hicolor/32x32/apps/ksudoku.png
 share/icons/hicolor/32x32/apps/ktuberling.png
 share/icons/hicolor/32x32/apps/kubrick.png
 share/icons/hicolor/32x32/apps/lskat.png
+share/icons/hicolor/48x48/apps/bomber.png
 share/icons/hicolor/48x48/apps/katomic.png
 share/icons/hicolor/48x48/apps/kbattleship.png
 share/icons/hicolor/48x48/apps/kblackbox.png
@@ -506,6 +549,7 @@ share/icons/hicolor/48x48/apps/kbreakout.png
 share/icons/hicolor/48x48/apps/kdiamond.png
 share/icons/hicolor/48x48/apps/kfourinline.png
 share/icons/hicolor/48x48/apps/kgoldrunner.png
+share/icons/hicolor/48x48/apps/killbots.png
 share/icons/hicolor/48x48/apps/kiriki.png
 share/icons/hicolor/48x48/apps/kjumpingcube.png
 share/icons/hicolor/48x48/apps/klines.png
@@ -525,6 +569,7 @@ share/icons/hicolor/48x48/apps/ksquares.png
 share/icons/hicolor/48x48/apps/ktuberling.png
 share/icons/hicolor/48x48/apps/kubrick.png
 share/icons/hicolor/48x48/apps/lskat.png
+share/icons/hicolor/64x64/apps/bomber.png
 share/icons/hicolor/64x64/apps/katomic.png
 share/icons/hicolor/64x64/apps/kbattleship.png
 share/icons/hicolor/64x64/apps/kblackbox.png
@@ -534,6 +579,7 @@ share/icons/hicolor/64x64/apps/kbreakout.png
 share/icons/hicolor/64x64/apps/kdiamond.png
 share/icons/hicolor/64x64/apps/kfourinline.png
 share/icons/hicolor/64x64/apps/kgoldrunner.png
+share/icons/hicolor/64x64/apps/killbots.png
 share/icons/hicolor/64x64/apps/kiriki.png
 share/icons/hicolor/64x64/apps/kjumpingcube.png
 share/icons/hicolor/64x64/apps/klines.png
@@ -552,6 +598,8 @@ share/icons/hicolor/64x64/apps/ksquares.png
 share/icons/hicolor/64x64/apps/ktuberling.png
 share/icons/hicolor/64x64/apps/kubrick.png
 share/icons/hicolor/64x64/apps/lskat.png
+share/icons/hicolor/scalable/apps/bomber.svgz
+share/icons/hicolor/scalable/apps/kapman.svgz
 share/icons/hicolor/scalable/apps/kdiamond.svgz
 share/icons/hicolor/scalable/apps/knetwalk.svgz
 share/icons/locolor/16x16/apps/ksirk.png
@@ -573,6 +621,10 @@ share/icons/oxygen/64x64/apps/kollision.png
 share/icons/oxygen/scalable/actions/lastmoves.svgz
 share/icons/oxygen/scalable/actions/legalmoves.svgz
 share/icons/oxygen/scalable/apps/kollision.svgz
+share/kde/apps/bomber/bomberui.rc
+share/kde/apps/bomber/themes/kbomber.desktop
+share/kde/apps/bomber/themes/kbomber.png
+share/kde/apps/bomber/themes/kbomber.svgz
 share/kde/apps/bovo/bovoui.rc
 share/kde/apps/bovo/themes/gomoku/theme.svg
 share/kde/apps/bovo/themes/gomoku/themerc
@@ -850,40 +902,50 @@ share/kde/apps/carddecks/cards-xskat-german/8.png
 share/kde/apps/carddecks/cards-xskat-german/9.png
 share/kde/apps/carddecks/cards-xskat-german/COPYRIGHT
 share/kde/apps/carddecks/cards-xskat-german/index.desktop
-share/kde/apps/carddecks/decks/deck0.desktop
-share/kde/apps/carddecks/decks/deck0.png
+share/kde/apps/carddecks/decks/deck1.desktop
+share/kde/apps/carddecks/decks/deck1.png
 share/kde/apps/carddecks/decks/deck10.desktop
 share/kde/apps/carddecks/decks/deck10.png
+share/kde/apps/carddecks/decks/deck10.svgz
 share/kde/apps/carddecks/decks/deck11.desktop
 share/kde/apps/carddecks/decks/deck11.png
+share/kde/apps/carddecks/decks/deck11.svgz
+share/kde/apps/carddecks/decks/deck12.desktop
+share/kde/apps/carddecks/decks/deck12.png
+share/kde/apps/carddecks/decks/deck12.svgz
+share/kde/apps/carddecks/decks/deck13.desktop
+share/kde/apps/carddecks/decks/deck13.png
+share/kde/apps/carddecks/decks/deck13.svgz
 share/kde/apps/carddecks/decks/deck14.desktop
 share/kde/apps/carddecks/decks/deck14.png
-share/kde/apps/carddecks/decks/deck15.desktop
-share/kde/apps/carddecks/decks/deck15.png
-share/kde/apps/carddecks/decks/deck16.desktop
-share/kde/apps/carddecks/decks/deck16.png
-share/kde/apps/carddecks/decks/deck17.desktop
-share/kde/apps/carddecks/decks/deck17.png
-share/kde/apps/carddecks/decks/deck24.desktop
-share/kde/apps/carddecks/decks/deck24.png
-share/kde/apps/carddecks/decks/deck25.desktop
-share/kde/apps/carddecks/decks/deck25.png
-share/kde/apps/carddecks/decks/deck25_dondorf.svgz
-share/kde/apps/carddecks/decks/deck26.desktop
-share/kde/apps/carddecks/decks/deck26.png
-share/kde/apps/carddecks/decks/deck26_ornamental.svg
-share/kde/apps/carddecks/decks/deck27.desktop
-share/kde/apps/carddecks/decks/deck27.png
-share/kde/apps/carddecks/decks/deck27_classic.svgz
-share/kde/apps/carddecks/decks/deck28.desktop
-share/kde/apps/carddecks/decks/deck28.png
-share/kde/apps/carddecks/decks/deck28_oxygen.svgz
+share/kde/apps/carddecks/decks/deck14.svgz
+share/kde/apps/carddecks/decks/deck2.desktop
+share/kde/apps/carddecks/decks/deck2.png
+share/kde/apps/carddecks/decks/deck3.desktop
+share/kde/apps/carddecks/decks/deck3.png
+share/kde/apps/carddecks/decks/deck4.desktop
+share/kde/apps/carddecks/decks/deck4.png
+share/kde/apps/carddecks/decks/deck5.desktop
+share/kde/apps/carddecks/decks/deck5.png
+share/kde/apps/carddecks/decks/deck6.desktop
+share/kde/apps/carddecks/decks/deck6.png
+share/kde/apps/carddecks/decks/deck7.desktop
+share/kde/apps/carddecks/decks/deck7.png
+share/kde/apps/carddecks/decks/deck8.desktop
+share/kde/apps/carddecks/decks/deck8.png
+share/kde/apps/carddecks/decks/deck8.svgz
+share/kde/apps/carddecks/decks/deck9.desktop
+share/kde/apps/carddecks/decks/deck9.png
+share/kde/apps/carddecks/decks/deck9.svgz
 share/kde/apps/carddecks/svg-dondorf/11.png
 share/kde/apps/carddecks/svg-dondorf/dondorf.svgz
 share/kde/apps/carddecks/svg-dondorf/index.desktop
 share/kde/apps/carddecks/svg-gm-paris/11.png
 share/kde/apps/carddecks/svg-gm-paris/index.desktop
 share/kde/apps/carddecks/svg-gm-paris/paris.svgz
+share/kde/apps/carddecks/svg-jolly-royal/11.png
+share/kde/apps/carddecks/svg-jolly-royal/index.desktop
+share/kde/apps/carddecks/svg-jolly-royal/jolly-royal.svgz
 share/kde/apps/carddecks/svg-nicu-ornamental/11.png
 share/kde/apps/carddecks/svg-nicu-ornamental/AUTHORS
 share/kde/apps/carddecks/svg-nicu-ornamental/COPYING
@@ -896,15 +958,26 @@ share/kde/apps/carddecks/svg-nicu-white/index.desktop
 share/kde/apps/carddecks/svg-nicu-white/white.svgz
 share/kde/apps/carddecks/svg-oxygen-white/11.png
 share/kde/apps/carddecks/svg-oxygen-white/index.desktop
-share/kde/apps/carddecks/svg-oxygen-white/oxygen-white.svg
+share/kde/apps/carddecks/svg-oxygen-white/oxygen-white.svgz
 share/kde/apps/carddecks/svg-oxygen/11.png
 share/kde/apps/carddecks/svg-oxygen/index.desktop
 share/kde/apps/carddecks/svg-oxygen/oxygen.svgz
 share/kde/apps/carddecks/svg-tigullio-international/index.desktop
 share/kde/apps/carddecks/svg-tigullio-international/queen-of-hearts.png
-share/kde/apps/carddecks/svg-tigullio-international/tigullio-international.svg
+share/kde/apps/carddecks/svg-tigullio-international/tigullio-international.svgz
 share/kde/apps/cmake/modules/FindLibKDEGames.cmake
 share/kde/apps/cmake/modules/GGZ.cmake
+share/kde/apps/kapman/defaultmaze.xml
+share/kde/apps/kapman/kapmanui.rc
+share/kde/apps/kapman/themes/invisible.desktop
+share/kde/apps/kapman/themes/invisible.svgz
+share/kde/apps/kapman/themes/invisible_preview.png
+share/kde/apps/kapman/themes/matches.desktop
+share/kde/apps/kapman/themes/matches.svgz
+share/kde/apps/kapman/themes/matches_preview.png
+share/kde/apps/kapman/themes/retro.desktop
+share/kde/apps/kapman/themes/retro.svgz
+share/kde/apps/kapman/themes/retro_preview.png
 share/kde/apps/katomic/katomicui.rc
 share/kde/apps/katomic/levels/level_1
 share/kde/apps/katomic/levels/level_10
@@ -1000,6 +1073,8 @@ share/kde/apps/kblackbox/kblackboxui.rc
 share/kde/apps/kblackbox/pics/kblackbox.svgz
 share/kde/apps/kblocks/kblocksui.rc
 share/kde/apps/kblocks/themes/default.desktop
+share/kde/apps/kblocks/themes/default_block_fall.ogg
+share/kde/apps/kblocks/themes/default_block_move.ogg
 share/kde/apps/kblocks/themes/default_preview.png
 share/kde/apps/kblocks/themes/default_theme.svg
 share/kde/apps/kbounce/kbounceui.rc
@@ -1015,16 +1090,24 @@ share/kde/apps/kbounce/themes/default_theme.svgz
 share/kde/apps/kbounce/themes/geometry.desktop
 share/kde/apps/kbounce/themes/geometry.png
 share/kde/apps/kbounce/themes/kbounce.svg
+share/kde/apps/kbounce/themes/oxygen.desktop
+share/kde/apps/kbounce/themes/oxygen.png
+share/kde/apps/kbounce/themes/oxygen.svgz
 share/kde/apps/kbreakout/levelsets/default.levelset
+share/kde/apps/kbreakout/themes/IceWorld.desktop
+share/kde/apps/kbreakout/themes/IceWorld.svgz
+share/kde/apps/kbreakout/themes/IceWorld_preview.png
 share/kde/apps/kbreakout/themes/crystal.desktop
 share/kde/apps/kbreakout/themes/crystal.svgz
 share/kde/apps/kbreakout/themes/crystal_preview.png
 share/kde/apps/kbreakout/themes/default.desktop
 share/kde/apps/kbreakout/themes/default.svgz
-share/kde/apps/kbreakout/themes/default_preview.png
 share/kde/apps/kbreakout/themes/simple.desktop
 share/kde/apps/kbreakout/themes/simple.svgz
 share/kde/apps/kbreakout/themes/simple_preview.png
+share/kde/apps/kbreakout/themes/web20.desktop
+share/kde/apps/kbreakout/themes/web20.svgz
+share/kde/apps/kbreakout/themes/web20_preview.png
 share/kde/apps/kconf_update/kpat_update_cardwidth.upd
 share/kde/apps/kdegames/pics/star.png
 share/kde/apps/kdiamond/kdiamond.kcfg
@@ -1046,6 +1129,7 @@ share/kde/apps/kfourinline/grafix/yellow_reflection.desktop
 share/kde/apps/kfourinline/grafix/yellow_reflection.rc
 share/kde/apps/kfourinline/kfourinlineui.rc
 share/kde/apps/kgoldrunner/kgoldrunnerui.rc
+share/kde/apps/kgoldrunner/system/game_cnt.txt
 share/kde/apps/kgoldrunner/system/game_ende.txt
 share/kde/apps/kgoldrunner/system/game_kgr.txt
 share/kde/apps/kgoldrunner/system/game_plws.txt
@@ -1065,9 +1149,13 @@ share/kde/apps/kgoldrunner/themes/black-on-white.desktop
 share/kde/apps/kgoldrunner/themes/default.desktop
 share/kde/apps/kgoldrunner/themes/default/actors.svg
 share/kde/apps/kgoldrunner/themes/default/climb.wav
+share/kde/apps/kgoldrunner/themes/default/completed.wav
+share/kde/apps/kgoldrunner/themes/default/death.wav
 share/kde/apps/kgoldrunner/themes/default/dig.wav
 share/kde/apps/kgoldrunner/themes/default/falling.wav
+share/kde/apps/kgoldrunner/themes/default/gameover.wav
 share/kde/apps/kgoldrunner/themes/default/gold.wav
+share/kde/apps/kgoldrunner/themes/default/ladder.wav
 share/kde/apps/kgoldrunner/themes/default/set.svg
 share/kde/apps/kgoldrunner/themes/default/step.wav
 share/kde/apps/kgoldrunner/themes/egypt.desktop
@@ -1082,6 +1170,19 @@ share/kde/apps/kgoldrunner/themes/nostalgia/actors.svg
 share/kde/apps/kgoldrunner/themes/nostalgia/blue-actors.svg
 share/kde/apps/kgoldrunner/themes/nostalgia/blue-set.svg
 share/kde/apps/kgoldrunner/themes/nostalgia/set.svg
+share/kde/apps/killbots/killbotsui.rc
+share/kde/apps/killbots/rulesets/classic.desktop
+share/kde/apps/killbots/rulesets/default.desktop
+share/kde/apps/killbots/rulesets/easy.desktop
+share/kde/apps/killbots/themes/classic.desktop
+share/kde/apps/killbots/themes/classic.png
+share/kde/apps/killbots/themes/classic.svg
+share/kde/apps/killbots/themes/default.desktop
+share/kde/apps/killbots/themes/default.png
+share/kde/apps/killbots/themes/default.svg
+share/kde/apps/killbots/themes/mountainadventure.desktop
+share/kde/apps/killbots/themes/mountainadventure.png
+share/kde/apps/killbots/themes/mountainadventure.svg
 share/kde/apps/kiriki/images/dice-1.png
 share/kde/apps/kiriki/images/dice-2.png
 share/kde/apps/kiriki/images/dice-3.png
@@ -1195,7 +1296,20 @@ share/kde/apps/kollision/sounds/you_lose.ogg
 share/kde/apps/konquest/konquestui.rc
 share/kde/apps/konquest/pics/default_theme.svgz
 share/kde/apps/konquest/pics/konquest-splash.png
-share/kde/apps/kpat/backgrounds/background.svg
+share/kde/apps/kpat/background.svg
+share/kde/apps/kpat/demo_bubble.svg
+share/kde/apps/kpat/demos/demo_0.png
+share/kde/apps/kpat/demos/demo_1.png
+share/kde/apps/kpat/demos/demo_10.png
+share/kde/apps/kpat/demos/demo_11.png
+share/kde/apps/kpat/demos/demo_12.png
+share/kde/apps/kpat/demos/demo_15.png
+share/kde/apps/kpat/demos/demo_2.png
+share/kde/apps/kpat/demos/demo_3.png
+share/kde/apps/kpat/demos/demo_5.png
+share/kde/apps/kpat/demos/demo_7.png
+share/kde/apps/kpat/demos/demo_8.png
+share/kde/apps/kpat/demos/demo_9.png
 share/kde/apps/kpat/kpatui.rc
 share/kde/apps/kpat/pile.svg
 share/kde/apps/kpat/won.svg
@@ -1208,6 +1322,7 @@ share/kde/apps/ksame/ksameui.rc
 share/kde/apps/ksame/pics/default_theme.svgz
 share/kde/apps/ksame/pics/old_theme.svgz
 share/kde/apps/kshisen/kshisenui.rc
+share/kde/apps/ksirk/jabber.png
 share/kde/apps/ksirk/ksirkui.rc
 share/kde/apps/ksirk/skins/default/Data/world.desktop
 share/kde/apps/ksirk/skins/default/Images/2DownArrow.png
@@ -1246,42 +1361,9 @@ share/kde/apps/ksirk/skins/default/Sounds/cannon.wav
 share/kde/apps/ksirk/skins/default/Sounds/crash.wav
 share/kde/apps/ksirk/skins/default/Sounds/roll.wav
 share/kde/apps/ksirk/skins/skinsdir
-share/kde/apps/ksirk/skins/static/Data/world.desktop
-share/kde/apps/ksirk/skins/static/Images/2DownArrow.png
-share/kde/apps/ksirk/skins/static/Images/2UpArrow.png
-share/kde/apps/ksirk/skins/static/Images/arena.svg
-share/kde/apps/ksirk/skins/static/Images/attackAuto.png
-share/kde/apps/ksirk/skins/static/Images/attackOne.png
-share/kde/apps/ksirk/skins/static/Images/attackThree.png
-share/kde/apps/ksirk/skins/static/Images/attackTwo.png
-share/kde/apps/ksirk/skins/static/Images/cancel.png
-share/kde/apps/ksirk/skins/static/Images/defendOne.png
-share/kde/apps/ksirk/skins/static/Images/defendTwo.png
-share/kde/apps/ksirk/skins/static/Images/downArrow.png
-share/kde/apps/ksirk/skins/static/Images/loader.gif
-share/kde/apps/ksirk/skins/static/Images/logoLeft.png
-share/kde/apps/ksirk/skins/static/Images/logoRight.png
-share/kde/apps/ksirk/skins/static/Images/map-mask.png
-share/kde/apps/ksirk/skins/static/Images/moveArmies.png
-share/kde/apps/ksirk/skins/static/Images/moveBackFive.png
-share/kde/apps/ksirk/skins/static/Images/moveBackOne.png
-share/kde/apps/ksirk/skins/static/Images/moveBackTen.png
-share/kde/apps/ksirk/skins/static/Images/moveFinish.png
-share/kde/apps/ksirk/skins/static/Images/moveFive.png
-share/kde/apps/ksirk/skins/static/Images/moveOne.png
-share/kde/apps/ksirk/skins/static/Images/moveTen.png
-share/kde/apps/ksirk/skins/static/Images/newNetGame.png
-share/kde/apps/ksirk/skins/static/Images/nextPlayer.png
-share/kde/apps/ksirk/skins/static/Images/pool.svg
-share/kde/apps/ksirk/skins/static/Images/recycling.png
-share/kde/apps/ksirk/skins/static/Images/recyclingFinished.png
-share/kde/apps/ksirk/skins/static/Images/snapshot.jpg
-share/kde/apps/ksirk/skins/static/Images/soldierKneeling.png
-share/kde/apps/ksirk/skins/static/Images/stopAttackAuto.png
-share/kde/apps/ksirk/skins/static/Images/upArrow.png
-share/kde/apps/ksirk/skins/static/Sounds/cannon.wav
-share/kde/apps/ksirk/skins/static/Sounds/crash.wav
-share/kde/apps/ksirk/skins/static/Sounds/roll.wav
+share/kde/apps/ksirkskineditor/cross.png
+share/kde/apps/ksirkskineditor/ksirkskineditorui.rc
+share/kde/apps/ksirkskineditor/target.png
 share/kde/apps/kspaceduel/icons/oxygen/16x16/actions/spnewgame.png
 share/kde/apps/kspaceduel/icons/oxygen/16x16/actions/spnewround.png
 share/kde/apps/kspaceduel/icons/oxygen/16x16/actions/sppausegame.png
@@ -1412,6 +1494,9 @@ share/kde/apps/ktuberling/pics/pizzeria.theme
 share/kde/apps/ktuberling/pics/potato-game.desktop
 share/kde/apps/ktuberling/pics/potato-game.svg
 share/kde/apps/ktuberling/pics/potato-game.theme
+share/kde/apps/ktuberling/pics/robin-tux.desktop
+share/kde/apps/ktuberling/pics/robin-tux.svgz
+share/kde/apps/ktuberling/pics/robin-tux.theme
 share/kde/apps/ktuberling/pics/train_valley.desktop
 share/kde/apps/ktuberling/pics/train_valley.svgz
 share/kde/apps/ktuberling/pics/train_valley.theme
@@ -1520,12 +1605,15 @@ share/kde/apps/lskat/grafix/default.desktop
 share/kde/apps/lskat/grafix/default.rc
 share/kde/apps/lskat/grafix/default.svg
 share/kde/apps/lskat/lskatui.rc
+share/kde/config.kcfg/bomber.kcfg
 share/kde/config.kcfg/kblocks.kcfg
+share/kde/config.kcfg/killbots.kcfg
 share/kde/config.kcfg/kjumpingcube.kcfg
 share/kde/config.kcfg/klines.kcfg
 share/kde/config.kcfg/kmahjongg.kcfg
 share/kde/config.kcfg/kshisen.kcfg
 share/kde/config.kcfg/ksirksettings.kcfg
+share/kde/config.kcfg/ksirkskineditorsettings.kcfg
 share/kde/config.kcfg/kspaceduel.kcfg
 share/kde/config.kcfg/ksquares.kcfg
 share/kde/config.kcfg/kwin4.kcfg
@@ -1533,7 +1621,19 @@ share/kde/config/kblocks.knsrc
 share/kde/config/kdiamond.knsrc
 share/kde/config/kgoldrunner.knsrc
 share/kde/config/kmines.knsrc
+share/kde/config/ksirk.knsrc
 share/kde/config/ksudokurc
+share/sounds/KDiamond-Stone-Drop.ogg
+share/sounds/KDiamond-Stone-Swap.ogg
+share/sounds/KDiamond-Stone-Touch.ogg
+share/sounds/kapman/bonus.ogg
+share/sounds/kapman/energizer.ogg
+share/sounds/kapman/gameover.ogg
+share/sounds/kapman/ghost.ogg
+share/sounds/kapman/levelup.ogg
+share/sounds/kapman/life.ogg
+share/sounds/kapman/pill.ogg
+@dirrm share/sounds/kapman
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/lskat/grafix
@@ -1572,10 +1672,7 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/kspaceduel/icons/oxygen
 @dirrm share/kde/apps/kspaceduel/icons
 @dirrm share/kde/apps/kspaceduel
-@dirrm share/kde/apps/ksirk/skins/static/Sounds
-@dirrm share/kde/apps/ksirk/skins/static/Images
-@dirrm share/kde/apps/ksirk/skins/static/Data
-@dirrm share/kde/apps/ksirk/skins/static
+@dirrm share/kde/apps/ksirkskineditor
 @dirrm share/kde/apps/ksirk/skins/default/Sounds
 @dirrm share/kde/apps/ksirk/skins/default/Images
 @dirrm share/kde/apps/ksirk/skins/default/Data
@@ -1588,7 +1685,7 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/kreversi/sounds
 @dirrm share/kde/apps/kreversi/pics
 @dirrm share/kde/apps/kreversi
-@dirrm share/kde/apps/kpat/backgrounds
+@dirrm share/kde/apps/kpat/demos
 @dirrm share/kde/apps/kpat
 @dirrm share/kde/apps/konquest/pics
 @dirrm share/kde/apps/konquest
@@ -1615,6 +1712,9 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/kjumpingcube
 @dirrm share/kde/apps/kiriki/images
 @dirrm share/kde/apps/kiriki
+@dirrm share/kde/apps/killbots/themes
+@dirrm share/kde/apps/killbots/rulesets
+@dirrm share/kde/apps/killbots
 @dirrm share/kde/apps/kgoldrunner/themes/nostalgia
 @dirrm share/kde/apps/kgoldrunner/themes/kgr_geek
 @dirrm share/kde/apps/kgoldrunner/themes/egypt
@@ -1646,12 +1746,15 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/katomic/pics
 @dirrm share/kde/apps/katomic/levels
 @dirrm share/kde/apps/katomic
+@dirrm share/kde/apps/kapman/themes
+@dirrm share/kde/apps/kapman
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @dirrm share/kde/apps/carddecks/svg-tigullio-international
 @dirrm share/kde/apps/carddecks/svg-oxygen-white
 @dirrm share/kde/apps/carddecks/svg-oxygen
 @dirrm share/kde/apps/carddecks/svg-nicu-white
 @dirrm share/kde/apps/carddecks/svg-nicu-ornamental
+@dirrm share/kde/apps/carddecks/svg-jolly-royal
 @dirrm share/kde/apps/carddecks/svg-gm-paris
 @dirrm share/kde/apps/carddecks/svg-dondorf
 @dirrm share/kde/apps/carddecks/decks
@@ -1667,6 +1770,8 @@ share/kde/config/ksudokurc
 @dirrm share/kde/apps/bovo/themes/gomoku
 @dirrm share/kde/apps/bovo/themes
 @dirrm share/kde/apps/bovo
+@dirrm share/kde/apps/bomber/themes
+@dirrm share/kde/apps/bomber
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/icons/oxygen/scalable/apps
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
@@ -1710,6 +1815,7 @@ share/kde/config/ksudokurc
 @dirrm share/doc/kde/HTML/en/klines
 @dirrm share/doc/kde/HTML/en/kjumpingcube
 @dirrm share/doc/kde/HTML/en/kiriki
+@dirrm share/doc/kde/HTML/en/killbots
 @dirrm share/doc/kde/HTML/en/kgoldrunner
 @dirrm share/doc/kde/HTML/en/kfourinline
 @dirrm share/doc/kde/HTML/en/kdiamond
@@ -1719,7 +1825,9 @@ share/kde/config/ksudokurc
 @dirrm share/doc/kde/HTML/en/kblackbox
 @dirrm share/doc/kde/HTML/en/kbattleship
 @dirrm share/doc/kde/HTML/en/katomic
+@dirrm share/doc/kde/HTML/en/kapman
 @dirrm share/doc/kde/HTML/en/bovo
+@dirrm share/doc/kde/HTML/en/bomber
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde4
 @dirrm include/kggznet
