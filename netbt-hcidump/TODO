@@ -1,4 +1,2 @@
-check if this works on OpenBSD
-
-somebody was working on porting the NetBSD bluetooth stack to DragonflyBSD,
-check if this works there
+check if this works on OpenBSD and DragonflyBSD as they both use
+the same NetBSD bluetooth stack
