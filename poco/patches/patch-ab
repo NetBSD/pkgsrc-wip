@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+
+--- Foundation/src/NamedEvent_UNIX.cpp.orig	2008-10-09 18:14:00.000000000 +0200
++++ Foundation/src/NamedEvent_UNIX.cpp
+@@ -60,7 +60,7 @@ namespace Poco {
+ 		unsigned short int* array;
+ 		struct seminfo*     __buf;
+ 	};
+-#elif defined(hpux)
++#elif defined(hpux) || defined(__NetBSD__)
+ 	union semun
+ 	{
+ 		int              val;
