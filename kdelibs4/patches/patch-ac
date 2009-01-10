@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
+$NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
 
---- kio/kssl/kopenssl.cpp.orig	2008-05-21 23:08:14.000000000 +1200
+--- kio/kssl/kopenssl.cpp.orig	2008-10-23 12:05:00.000000000 +1300
 +++ kio/kssl/kopenssl.cpp
 @@ -236,7 +236,7 @@ void KOpenSSLProxy::destroy() {
     delete x;
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
  #include <QtCore/QString>
  #include <QtCore/QStringList>
 @@ -259,10 +259,20 @@ static QString findMostRecentLib(QString
-        for (QStringList::Iterator it = l.begin(); it != l.end(); ++it) {
+        for (QStringList::const_iterator it = l.begin(); it != l.end(); ++it) {
                 QString numberpart = (*it).mid(s);
                 uint endmaj = numberpart.indexOf('.');
 -               if (endmaj == -1)
@@ -97,8 +97,8 @@ $NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
     libnamess
  	     #ifdef hpux
 @@ -382,6 +361,17 @@ KOpenSSLProxy::KOpenSSLProxy()
-    for (QStringList::Iterator it = libpaths.begin();
-                               it != libpaths.end();
+    for (QStringList::const_iterator it = libpaths.constBegin();
+                               it != libpaths.constEnd();
                                ++it) {
 +#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
 +      QString libname = findMostRecentLib(*it, "crypto");
@@ -111,8 +111,8 @@ $NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
 +         }
 +      }
 +#else
-       for (QStringList::Iterator shit = libnamesc.begin();
-                                  shit != libnamesc.end();
+       for (QStringList::const_iterator shit = libnamesc.constBegin();
+                                  shit != libnamesc.constEnd();
                                   ++shit) {
 @@ -404,6 +394,7 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->cryptoLib = 0;
@@ -145,8 +145,8 @@ $NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
 -   }
 -   }
 -#else
-    for (QStringList::Iterator it = libpaths.begin();
-                               it != libpaths.end();
+    for (QStringList::const_iterator it = libpaths.constBegin();
+                               it != libpaths.constEnd();
                                ++it) {
 +#if defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +      QString libname = findMostRecentLib(*it, "ssl");
@@ -159,8 +159,8 @@ $NetBSD: patch-ac,v 1.4 2008/07/26 22:39:29 mwdavies Exp $
 +	    }
 +      }
 +#else
-       for (QStringList::Iterator shit = libnamess.begin();
-                                  shit != libnamess.end();
+       for (QStringList::const_iterator shit = libnamess.constBegin();
+                                  shit != libnamess.constEnd();
                                   ++shit) {
 @@ -576,9 +559,9 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->sslLib = 0;
