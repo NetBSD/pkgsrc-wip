@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3188 2009/01/10 01:22:10 ficovh Exp $
+# $Id: Makefile,v 1.3189 2009/01/10 09:32:40 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -813,6 +813,7 @@ SUBDIR+=	kdeartwork4
 SUBDIR+=	kdebase-runtime4
 SUBDIR+=	kdebase-workspace4
 SUBDIR+=	kdebase4
+SUBDIR+=	kdebindings4-python
 SUBDIR+=	kdeedu4
 SUBDIR+=	kdegames4
 SUBDIR+=	kdegraphics4
