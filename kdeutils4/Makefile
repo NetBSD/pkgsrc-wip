@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/01/10 10:47:32 mwdavies Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/10 20:21:39 mwdavies Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -21,7 +21,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/kdebindings4-python/buildlink3.mk"
-.include "../../print/py-pycups/buildlink3.mk"
+.include "../../print/py-cups/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
