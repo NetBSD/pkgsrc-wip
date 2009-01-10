@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/12/12 03:25:44 mwdavies Exp $
+$NetBSD: patch-ac,v 1.2 2009/01/10 09:19:17 mwdavies Exp $
 
---- kcontrol/menus/CMakeLists.txt.orig	2007-12-07 01:45:22.000000000 +1300
+--- kcontrol/menus/CMakeLists.txt.orig	2008-12-11 05:13:10.000000000 +1300
 +++ kcontrol/menus/CMakeLists.txt
-@@ -4,5 +4,5 @@
- ########### install files ###############
+@@ -5,7 +5,7 @@
+ if (WIN32)
+ install( FILES kde-information.menu DESTINATION ${SHARE_INSTALL_DIR}/xdg/menus/)
+ else (WIN32)
+-install( FILES kde-information.menu DESTINATION ${SYSCONF_INSTALL_DIR}/xdg/menus/)
++install( FILES kde-information.menu DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/kdebase-runtime4/)
+ endif (WIN32)
  
- install( FILES kde-information.menu
--    DESTINATION ${SYSCONF_INSTALL_DIR}/xdg/menus/)
-+    DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/kdebase-runtime4/)
  install( FILES kde-information.directory  DESTINATION  ${XDG_DIRECTORY_INSTALL_DIR} )
