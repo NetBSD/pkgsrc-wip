@@ -1,0 +1,3 @@
+This package makes testing CGIApp based modules fast and easy.
+It takes advantage of Test::WWW::Mechanize to provide
+functions for common web testing scenarios.
