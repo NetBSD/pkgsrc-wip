@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/07/29 21:38:18 mwdavies Exp $
+$NetBSD: distinfo,v 1.3 2009/01/10 00:11:40 mwdavies Exp $
 
-SHA1 (phonon-4.2.0.tar.bz2) = 11e2f2d73b0f0ccd66dfbe82f95d5185c6dc005b
-RMD160 (phonon-4.2.0.tar.bz2) = 9a141abb24a5f4c9b484c9f28680e45c4bb788d8
-Size (phonon-4.2.0.tar.bz2) = 400435 bytes
+SHA1 (phonon-4.2.96.tar.bz2) = 67da0baed622527a797ab925b37d40661fca2b68
+RMD160 (phonon-4.2.96.tar.bz2) = 5828b3a01c324fd274250e6f1ba05e17a2b97f59
+Size (phonon-4.2.96.tar.bz2) = 564698 bytes
