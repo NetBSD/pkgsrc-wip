@@ -1,14 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2008/11/06 11:29:40 mwdavies Exp $
+$NetBSD: patch-ad,v 1.2 2009/01/10 10:31:04 mwdavies Exp $
 
-svn commit 877938 fixes imap mail duplication
-
---- kmail/kmfoldermaildir.cpp.orig	2008-11-07 00:22:26.000000000 +1300
-+++ kmail/kmfoldermaildir.cpp
-@@ -717,6 +717,7 @@ void KMFolderMaildir::readFileHeaderInte
-       dateStr = dateStr.trimmed();
-       if (!dateStr.isEmpty())
-         mi->setDate(dateStr.constData());
-+      uidStr = uidStr.trimmed();
-       if ( !uidStr.isEmpty() )
-          mi->setUID( uidStr.toULong() );
-       mi->setDirty(false);
+--- ktimetracker/test/deleteparenttask.sh.orig	2008-07-22 12:04:32.000000000 +1200
++++ ktimetracker/test/deleteparenttask.sh
+@@ -22,7 +22,7 @@ qdbus org.kde.ktimetracker /KTimeTracker
+ 
+ RVAL=`qdbus org.kde.ktimetracker /KTimeTracker version`
+ 
+-if [ "$RVAL" == "" ]; then 
++if [ "$RVAL" = "" ]; then 
+   echo "FAIL $0: got no version."
+   exit 1;
+ else 

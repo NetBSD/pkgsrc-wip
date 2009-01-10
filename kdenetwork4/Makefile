@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/11/04 10:21:49 mwdavies Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/10 10:27:07 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -17,11 +17,18 @@ CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 
 REPLACE_PERL+= \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
+	kopete/kopete/kconf_update/kopete-initialstatus.pl \
 	kopete/kopete/kconf_update/kopete-pluginloader.pl
+
+REPLACE_SH+= \
+	kopete/protocols/winpopup/winpopup-install.sh \
+	kopete/protocols/winpopup/winpopup-send.sh
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../chat/libmsn/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
+.include "../../chat/meanwhile/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
@@ -29,9 +36,11 @@ REPLACE_PERL+= \
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
+.include "../../wip/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
+.include "../../wip/kdebase4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
 .include "../../wip/kdebase-workspace4/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"

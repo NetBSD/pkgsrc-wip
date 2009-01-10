@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.3 2009/01/10 10:27:07 mwdavies Exp $
+
+--- cmake/modules/FindLiboRTP.cmake.orig	2008-10-23 12:04:34.000000000 +1300
++++ cmake/modules/FindLiboRTP.cmake
+@@ -14,15 +14,15 @@ FIND_LIBRARY( LIBORTP_LIBRARY NAMES ortp
+ SET( LIBORTP_FOUND FALSE )
+ 
+ IF( LIBORTP_INCLUDE_DIR AND LIBORTP_LIBRARY )
+-  EXECUTE_PROCESS( COMMAND gcc -o ortpversion -lortp -L${LIBORTP_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/cmake/modules/ortpversion.c OUTPUT_QUIET ERROR_QUIET RESULT_VARIABLE compileErr )
+-  if ( NOT compileErr )
+-    EXECUTE_PROCESS(COMMAND ./ortpversion 0 13 RESULT_VARIABLE resultErr )
+-    if ( NOT resultErr )
+-#     Version OK
++#  EXECUTE_PROCESS( COMMAND gcc -o ortpversion -lortp -L${LIBORTP_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/cmake/modules/ortpversion.c OUTPUT_QUIET ERROR_QUIET RESULT_VARIABLE compileErr )
++#  if ( NOT compileErr )
++#    EXECUTE_PROCESS(COMMAND ./ortpversion 0 13 RESULT_VARIABLE resultErr )
++#    if ( NOT resultErr )
++##     Version OK
+       SET( LIBORTP_FOUND TRUE )
+       MESSAGE( STATUS "Found libortp: ${LIBORTP_LIBRARY}" )
+-    endif( NOT resultErr )
+-  endif( NOT compileErr )
++#    endif( NOT resultErr )
++#  endif( NOT compileErr )
+ ENDIF( LIBORTP_INCLUDE_DIR AND LIBORTP_LIBRARY )
+ 
+ IF( resultErr OR compileErr )

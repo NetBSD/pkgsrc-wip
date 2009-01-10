@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2008/11/05 21:09:43 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:31:04 mwdavies Exp $
+bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
 bin/akonadi_kabc_resource
@@ -9,9 +10,11 @@ bin/akonadi_maildir_resource
 bin/akonadi_mailthreader_agent
 bin/akonadi_nepomuk_contact_feeder
 bin/akonadi_nepomuk_email_feeder
+bin/akonadi_nepomuktag_resource
 bin/akonadi_nntp_resource
 bin/akonadi_strigi_feeder
 bin/akonadi_vcard_resource
+bin/akonadi_vcarddir_resource
 bin/akonadiconsole
 bin/akonaditray
 bin/akregator
@@ -21,6 +24,7 @@ bin/groupwisewizard
 bin/ical2vcal
 bin/kabc2mutt
 bin/kabcclient
+bin/kabcdistlistupdater
 bin/kaddressbook
 bin/kalarm
 bin/kalarmautostart
@@ -42,8 +46,11 @@ bin/konsolekalendar
 bin/kontact
 bin/korgac
 bin/korganizer
+bin/kpilot
+bin/kpilotDaemon
+bin/kres-migrator
+bin/ksendemail
 bin/ktimetracker
-bin/ktnefviewer
 bin/kung
 bin/kwatchgnupg
 bin/kwsdl_compiler
@@ -126,6 +133,20 @@ include/kpgp/kpgpblock.h
 include/kpgp/kpgpkey.h
 include/kpgp/kpgpui.h
 include/kpgp/libkpgp_export.h
+include/kpilot/kpilot_export.h
+include/kpilot/kpilotdevicelink.h
+include/kpilot/kpilotlink.h
+include/kpilot/kpilotlocallink.h
+include/kpilot/options.h
+include/kpilot/pilot.h
+include/kpilot/pilotDatabase.h
+include/kpilot/pilotLinkVersion.h
+include/kpilot/pilotLocalDatabase.h
+include/kpilot/pilotRecord.h
+include/kpilot/pilotSerialDatabase.h
+include/kpilot/plugin.h
+include/kpilot/pluginfactory.h
+include/kpilot/syncAction.h
 include/ksieve/error.h
 include/ksieve/lexer.h
 include/ksieve/libksieve_export.h
@@ -139,6 +160,7 @@ include/libkleopatraclient/gui/certificaterequester.h
 include/libkleopatraclient/kleopatraclient_export.h
 lib/kde4/akonadi_serializer_addressee.so
 lib/kde4/akonadi_serializer_bookmark.so
+lib/kde4/akonadi_serializer_contactgroup.so
 lib/kde4/akonadi_serializer_kcal.so
 lib/kde4/akonadi_serializer_mail.so
 lib/kde4/akregator_config_advanced.so
@@ -176,7 +198,6 @@ lib/kde4/kaddressbookpart.so
 lib/kde4/kalarm_local.so
 lib/kde4/kalarm_localdir.so
 lib/kde4/kalarm_remote.so
-lib/kde4/karmpart.so
 lib/kde4/kcal_akonadi.so
 lib/kde4/kcal_blog.so
 lib/kde4/kcal_groupdav.so
@@ -188,7 +209,9 @@ lib/kde4/kcal_resourcefeatureplan_plugin.so
 lib/kde4/kcal_scalix.so
 lib/kde4/kcal_slox.so
 lib/kde4/kcal_xmlrpc.so
+lib/kde4/kcm_akonadi.so
 lib/kde4/kcm_akonadi_resources.so
+lib/kde4/kcm_akonadi_server.so
 lib/kde4/kcm_apptsummary.so
 lib/kde4/kcm_kabconfig.so
 lib/kde4/kcm_kabcustomfields.so
@@ -200,7 +223,9 @@ lib/kde4/kcm_knode.so
 lib/kde4/kcm_kontact.so
 lib/kde4/kcm_kontactsummary.so
 lib/kde4/kcm_korganizer.so
+lib/kde4/kcm_kpilot.so
 lib/kde4/kcm_ktimetrackerconfig.so
+lib/kde4/kcm_planner.so
 lib/kde4/kcm_sdsummary.so
 lib/kde4/kcm_todosummary.so
 lib/kde4/kio_akonadi.so
@@ -220,12 +245,13 @@ lib/kde4/knotes_xmlrpc.so
 lib/kde4/kontact_akregatorplugin.so
 lib/kde4/kontact_journalplugin.so
 lib/kde4/kontact_kaddressbookplugin.so
-lib/kde4/kontact_karmplugin.so
 lib/kde4/kontact_kjotsplugin.so
 lib/kde4/kontact_kmailplugin.so
 lib/kde4/kontact_knodeplugin.so
 lib/kde4/kontact_knotesplugin.so
 lib/kde4/kontact_korganizerplugin.so
+lib/kde4/kontact_ktimetrackerplugin.so
+lib/kde4/kontact_plannerplugin.so
 lib/kde4/kontact_specialdatesplugin.so
 lib/kde4/kontact_summaryplugin.so
 lib/kde4/kontact_todoplugin.so
@@ -237,181 +263,193 @@ lib/kde4/korg_thisdayinhistory.so
 lib/kde4/korg_yearprint.so
 lib/kde4/korganizerpart.so
 lib/kde4/kpartsdesignerplugin.so
+lib/kde4/kpilot_conduit_calendar2.so
+lib/kde4/kpilot_conduit_contacts.so
+lib/kde4/kpilot_conduit_memofile.so
+lib/kde4/kpilot_conduit_time.so
+lib/kde4/kpilot_conduit_todo2.so
 lib/kde4/ktexteditorkabcbridge.so
+lib/kde4/ktimetrackerpart.so
 lib/kde4/ldifvcardthumbnail.so
 lib/kde4/plugins/designer/kdepimwidgets.so
-lib/libakonadi-kabc.so
-lib/libakonadi-kabc.so.4
-lib/libakonadi-kabc.so.4.1.0
+lib/libakonadi-kabccommon.so
+lib/libakonadi-kabccommon.so.4
+lib/libakonadi-kabccommon.so.4.2.0
 lib/libakonadi-kcal.so
 lib/libakonadi-kcal.so.4
-lib/libakonadi-kcal.so.4.1.0
+lib/libakonadi-kcal.so.4.2.0
 lib/libakregatorinterfaces.so
 lib/libakregatorinterfaces.so.4
-lib/libakregatorinterfaces.so.4.1.0
+lib/libakregatorinterfaces.so.4.2.0
 lib/libakregatorprivate.so
 lib/libakregatorprivate.so.4
-lib/libakregatorprivate.so.4.1.0
+lib/libakregatorprivate.so.4.2.0
 lib/libgwsoap.so
 lib/libgwsoap.so.4
-lib/libgwsoap.so.4.1.0
+lib/libgwsoap.so.4.2.0
 lib/libimap.so
 lib/libimap.so.4
-lib/libimap.so.4.1.0
+lib/libimap.so.4.2.0
 lib/libkabc_groupdav.so
 lib/libkabc_groupdav.so.4
-lib/libkabc_groupdav.so.4.1.0
+lib/libkabc_groupdav.so.4.2.0
 lib/libkabc_slox.so
 lib/libkabc_slox.so.4
-lib/libkabc_slox.so.4.1.0
+lib/libkabc_slox.so.4.2.0
 lib/libkabc_xmlrpc.so
 lib/libkabc_xmlrpc.so.4
-lib/libkabc_xmlrpc.so.4.1.0
+lib/libkabc_xmlrpc.so.4.2.0
 lib/libkabcgroupwise.so
 lib/libkabcgroupwise.so.4
-lib/libkabcgroupwise.so.4.1.0
+lib/libkabcgroupwise.so.4.2.0
 lib/libkabckolab.so
 lib/libkabckolab.so.4
-lib/libkabckolab.so.4.1.0
+lib/libkabckolab.so.4.2.0
 lib/libkabcommon.so
 lib/libkabcommon.so.4
-lib/libkabcommon.so.4.1.0
+lib/libkabcommon.so.4.2.0
 lib/libkabcscalix.so
 lib/libkabcscalix.so.4
-lib/libkabcscalix.so.4.1.0
+lib/libkabcscalix.so.4.2.0
 lib/libkabinterfaces.so
 lib/libkabinterfaces.so.4
-lib/libkabinterfaces.so.4.1.0
+lib/libkabinterfaces.so.4.2.0
 lib/libkaddressbookprivate.so
 lib/libkaddressbookprivate.so.4
-lib/libkaddressbookprivate.so.4.1.0
+lib/libkaddressbookprivate.so.4.2.0
 lib/libkalarm_resources.so
 lib/libkalarm_resources.so.4
-lib/libkalarm_resources.so.4.1.0
+lib/libkalarm_resources.so.4.2.0
 lib/libkcal_groupdav.so
 lib/libkcal_groupdav.so.4
-lib/libkcal_groupdav.so.4.1.0
+lib/libkcal_groupdav.so.4.2.0
 lib/libkcal_resourceblog.so
 lib/libkcal_resourceblog.so.4
-lib/libkcal_resourceblog.so.4.1.0
+lib/libkcal_resourceblog.so.4.2.0
 lib/libkcal_resourcefeatureplan.so
 lib/libkcal_resourcefeatureplan.so.4
-lib/libkcal_resourcefeatureplan.so.4.1.0
+lib/libkcal_resourcefeatureplan.so.4.2.0
 lib/libkcal_resourceremote.so
 lib/libkcal_resourceremote.so.4
-lib/libkcal_resourceremote.so.4.1.0
+lib/libkcal_resourceremote.so.4.2.0
 lib/libkcal_slox.so
 lib/libkcal_slox.so.4
-lib/libkcal_slox.so.4.1.0
+lib/libkcal_slox.so.4.2.0
 lib/libkcal_xmlrpc.so
 lib/libkcal_xmlrpc.so.4
-lib/libkcal_xmlrpc.so.4.1.0
+lib/libkcal_xmlrpc.so.4.2.0
 lib/libkcalgroupwise.so
 lib/libkcalgroupwise.so.4
-lib/libkcalgroupwise.so.4.1.0
+lib/libkcalgroupwise.so.4.2.0
 lib/libkcalkolab.so
 lib/libkcalkolab.so.4
-lib/libkcalkolab.so.4.1.0
+lib/libkcalkolab.so.4.2.0
 lib/libkcalscalix.so
 lib/libkcalscalix.so.4
-lib/libkcalscalix.so.4.1.0
+lib/libkcalscalix.so.4.2.0
 lib/libkdepim.so
 lib/libkdepim.so.4
-lib/libkdepim.so.4.1.0
+lib/libkdepim.so.4.2.0
 lib/libkgroupwarebase.so
 lib/libkgroupwarebase.so.4
-lib/libkgroupwarebase.so.4.1.0
+lib/libkgroupwarebase.so.4.2.0
 lib/libkgroupwaredav.so
 lib/libkgroupwaredav.so.4
-lib/libkgroupwaredav.so.4.1.0
+lib/libkgroupwaredav.so.4.2.0
 lib/libkholidays.so
 lib/libkholidays.so.4
-lib/libkholidays.so.4.1.0
+lib/libkholidays.so.4.2.0
 lib/libkleo.so
 lib/libkleo.so.4
-lib/libkleo.so.4.1.0
+lib/libkleo.so.4.2.0
 lib/libkleopatraclientcore.so
-lib/libkleopatraclientcore.so.0.2.0
+lib/libkleopatraclientcore.so.0.2.1
 lib/libkleopatraclientgui.so
-lib/libkleopatraclientgui.so.0.2.0
+lib/libkleopatraclientgui.so.0.2.1
 lib/libkmailprivate.so
 lib/libkmailprivate.so.4
-lib/libkmailprivate.so.4.1.0
+lib/libkmailprivate.so.4.2.0
 lib/libknodecommon.so
 lib/libknodecommon.so.4
-lib/libknodecommon.so.4.1.0
+lib/libknodecommon.so.4.2.0
 lib/libknotes_xmlrpc.so
 lib/libknotes_xmlrpc.so.4
-lib/libknotes_xmlrpc.so.4.1.0
+lib/libknotes_xmlrpc.so.4.2.0
 lib/libknoteskolab.so
 lib/libknoteskolab.so.4
-lib/libknoteskolab.so.4.1.0
+lib/libknoteskolab.so.4.2.0
 lib/libknotesscalix.so
 lib/libknotesscalix.so.4
-lib/libknotesscalix.so.4.1.0
+lib/libknotesscalix.so.4.2.0
 lib/libkocorehelper.so
 lib/libkocorehelper.so.4
-lib/libkocorehelper.so.4.1.0
+lib/libkocorehelper.so.4.2.0
 lib/libkode.so
 lib/libkode.so.4
-lib/libkode.so.4.1.0
+lib/libkode.so.4.2.0
 lib/libkontactinterfaces.so
 lib/libkontactinterfaces.so.4
-lib/libkontactinterfaces.so.4.1.0
+lib/libkontactinterfaces.so.4.2.0
 lib/libkontactprivate.so
 lib/libkontactprivate.so.4
-lib/libkontactprivate.so.4.1.0
+lib/libkontactprivate.so.4.2.0
 lib/libkorg_stdprinting.so
 lib/libkorg_stdprinting.so.4
-lib/libkorg_stdprinting.so.4.1.0
+lib/libkorg_stdprinting.so.4.2.0
 lib/libkorganizer_calendar.so
 lib/libkorganizer_calendar.so.4
-lib/libkorganizer_calendar.so.4.1.0
+lib/libkorganizer_calendar.so.4.2.0
 lib/libkorganizer_eventviewer.so
 lib/libkorganizer_eventviewer.so.4
-lib/libkorganizer_eventviewer.so.4.1.0
+lib/libkorganizer_eventviewer.so.4.2.0
 lib/libkorganizer_interfaces.so
 lib/libkorganizer_interfaces.so.4
-lib/libkorganizer_interfaces.so.4.1.0
+lib/libkorganizer_interfaces.so.4.2.0
 lib/libkorganizerprivate.so
 lib/libkorganizerprivate.so.4
-lib/libkorganizerprivate.so.4.1.0
+lib/libkorganizerprivate.so.4.2.0
 lib/libkpgp.so
 lib/libkpgp.so.4
-lib/libkpgp.so.4.1.0
+lib/libkpgp.so.4.2.0
+lib/libkpilot.so
+lib/libkpilot.so.4
+lib/libkpilot.so.4.2.0
+lib/libkpilot_akonadibase.so
+lib/libkpilot_conduit_base.so
 lib/libkschema.so
 lib/libkschema.so.4
-lib/libkschema.so.4.1.0
+lib/libkschema.so.4.2.0
 lib/libkschemawidgets.so
 lib/libkschemawidgets.so.4
-lib/libkschemawidgets.so.4.1.0
+lib/libkschemawidgets.so.4.2.0
 lib/libksieve.so
 lib/libksieve.so.4
-lib/libksieve.so.4.1.0
+lib/libksieve.so.4.2.0
 lib/libkslox.so
 lib/libkslox.so.4
-lib/libkslox.so.4.1.0
+lib/libkslox.so.4.2.0
 lib/libkxmlcommon.so
 lib/libkxmlcommon.so.4
-lib/libkxmlcommon.so.4.1.0
+lib/libkxmlcommon.so.4.2.0
 lib/libmaildir.so
 lib/libmaildir.so.4
-lib/libmaildir.so.4.1.0
+lib/libmaildir.so.4.2.0
 lib/libmimelib.so
 lib/libmimelib.so.4
-lib/libmimelib.so.4.1.0
+lib/libmimelib.so.4.2.0
 lib/libschema.so
 lib/libschema.so.4
-lib/libschema.so.4.1.0
+lib/libschema.so.4.2.0
 lib/libwscl.so
 lib/libwscl.so.4
-lib/libwscl.so.4.1.0
+lib/libwscl.so.4.2.0
 lib/libwsdl.so
 lib/libwsdl.so.4
-lib/libwsdl.so.4.1.0
+lib/libwsdl.so.4.2.0
 lib/strigi/strigiea_ics.so
-lib/strigi/strigiea_rfc822.so
 lib/strigi/strigiea_vcf.so
+man/man1/kabcclient.1
+share/akonadi/agents/distlistresource.desktop
 share/akonadi/agents/icalresource.desktop
 share/akonadi/agents/imaplibresource.desktop
 share/akonadi/agents/kabcresource.desktop
@@ -422,8 +460,10 @@ share/akonadi/agents/maildirresource.desktop
 share/akonadi/agents/mailthreaderagent.desktop
 share/akonadi/agents/nepomukcontactfeeder.desktop
 share/akonadi/agents/nepomukemailfeeder.desktop
+share/akonadi/agents/nepomuktagresource.desktop
 share/akonadi/agents/nntpresource.desktop
 share/akonadi/agents/strigifeeder.desktop
+share/akonadi/agents/vcarddirresource.desktop
 share/akonadi/agents/vcardresource.desktop
 share/applications/kde4/KMail.desktop
 share/applications/kde4/KNode.desktop
@@ -435,14 +475,15 @@ share/applications/kde4/akregator.desktop
 share/applications/kde4/groupwarewizard.desktop
 share/applications/kde4/kaddressbook.desktop
 share/applications/kde4/kalarm.desktop
-share/applications/kde4/karm.desktop
 share/applications/kde4/kleopatra_import.desktop
 share/applications/kde4/kmail_view.desktop
 share/applications/kde4/knotes.desktop
 share/applications/kde4/konsolekalendar.desktop
 share/applications/kde4/korganizer-import.desktop
 share/applications/kde4/korganizer.desktop
-share/applications/kde4/ktnef.desktop
+share/applications/kde4/kpilot.desktop
+share/applications/kde4/kpilotdaemon.desktop
+share/applications/kde4/ktimetracker.desktop
 share/applications/kde4/kwsdl_compiler.desktop
 share/dbus-1/interfaces/org.kde.KAddressbook.Core.xml
 share/dbus-1/interfaces/org.kde.KNotes.xml
@@ -480,6 +521,10 @@ share/doc/kde/HTML/en/akregator/main-window4.png
 share/doc/kde/HTML/en/akregator/quick-filter.png
 share/doc/kde/HTML/en/akregator/rss.png
 share/doc/kde/HTML/en/akregator/rss3.png
+share/doc/kde/HTML/en/kabcclient/common
+share/doc/kde/HTML/en/kabcclient/index.cache.bz2
+share/doc/kde/HTML/en/kabcclient/index.docbook
+share/doc/kde/HTML/en/kabcclient/man-kabcclient.1.docbook
 share/doc/kde/HTML/en/kaddressbook/addhost.png
 share/doc/kde/HTML/en/kaddressbook/common
 share/doc/kde/HTML/en/kaddressbook/conf.png
@@ -497,10 +542,14 @@ share/doc/kde/HTML/en/kaddressbook/vieweditdlg.png
 share/doc/kde/HTML/en/kalarm/alarmmessage.png
 share/doc/kde/HTML/en/kalarm/common
 share/doc/kde/HTML/en/kalarm/editwindow.png
+share/doc/kde/HTML/en/kalarm/editwindow-simple.png
 share/doc/kde/HTML/en/kalarm/index.cache.bz2
 share/doc/kde/HTML/en/kalarm/index.docbook
 share/doc/kde/HTML/en/kalarm/mainwindow.png
 share/doc/kde/HTML/en/kalarm/spinbox.png
+share/doc/kde/HTML/en/kioslave/news/common
+share/doc/kde/HTML/en/kioslave/news/index.cache.bz2
+share/doc/kde/HTML/en/kioslave/news/index.docbook
 share/doc/kde/HTML/en/kjots/common
 share/doc/kde/HTML/en/kjots/index.cache.bz2
 share/doc/kde/HTML/en/kjots/index.docbook
@@ -658,9 +707,6 @@ share/doc/kde/HTML/en/ktimetracker/index.cache.bz2
 share/doc/kde/HTML/en/ktimetracker/index.docbook
 share/doc/kde/HTML/en/ktimetracker/karm.png
 share/doc/kde/HTML/en/ktimetracker/systray.png
-share/doc/kde/HTML/en/kwsdl_compiler/common
-share/doc/kde/HTML/en/kwsdl_compiler/index.cache.bz2
-share/doc/kde/HTML/en/kwsdl_compiler/index.docbook
 share/icons/hicolor/128x128/apps/akregator.png
 share/icons/hicolor/128x128/apps/kaddressbook.png
 share/icons/hicolor/128x128/apps/kjots.png
@@ -671,6 +717,14 @@ share/icons/hicolor/128x128/apps/knotes.png
 share/icons/hicolor/128x128/apps/kontact.png
 share/icons/hicolor/128x128/apps/korganizer.png
 share/icons/hicolor/128x128/apps/ktimetracker.png
+share/icons/hicolor/16x16/actions/kpilot_backup.png
+share/icons/hicolor/16x16/actions/kpilot_busysync.png
+share/icons/hicolor/16x16/actions/kpilot_fullsync.png
+share/icons/hicolor/16x16/actions/kpilot_hhtopc.png
+share/icons/hicolor/16x16/actions/kpilot_hotsync.png
+share/icons/hicolor/16x16/actions/kpilot_nosync.png
+share/icons/hicolor/16x16/actions/kpilot_reset.png
+share/icons/hicolor/16x16/actions/kpilot_restore.png
 share/icons/hicolor/16x16/apps/akregator.png
 share/icons/hicolor/16x16/apps/akregator_empty.png
 share/icons/hicolor/16x16/apps/kaddressbook.png
@@ -682,16 +736,31 @@ share/icons/hicolor/16x16/apps/knode2.png
 share/icons/hicolor/16x16/apps/knotes.png
 share/icons/hicolor/16x16/apps/kontact.png
 share/icons/hicolor/16x16/apps/korganizer.png
+share/icons/hicolor/16x16/apps/kpilot.png
+share/icons/hicolor/16x16/apps/kpilotDaemon.png
 share/icons/hicolor/16x16/apps/ktimetracker.png
+share/icons/hicolor/22x22/actions/kpilot_backup.png
+share/icons/hicolor/22x22/actions/kpilot_busysync.png
+share/icons/hicolor/22x22/actions/kpilot_fullsync.png
+share/icons/hicolor/22x22/actions/kpilot_hhtopc.png
+share/icons/hicolor/22x22/actions/kpilot_hotsync.png
+share/icons/hicolor/22x22/actions/kpilot_nosync.png
+share/icons/hicolor/22x22/actions/kpilot_reset.png
+share/icons/hicolor/22x22/actions/kpilot_restore.png
 share/icons/hicolor/22x22/apps/akregator.png
 share/icons/hicolor/22x22/apps/kaddressbook.png
-share/icons/hicolor/22x22/apps/kalarm.png
 share/icons/hicolor/22x22/apps/kjots.png
 share/icons/hicolor/22x22/apps/kmail.png
 share/icons/hicolor/22x22/apps/knotes.png
 share/icons/hicolor/22x22/apps/kontact.png
 share/icons/hicolor/22x22/apps/korganizer.png
+share/icons/hicolor/22x22/apps/kpilot.png
+share/icons/hicolor/22x22/apps/kpilotDaemon.png
 share/icons/hicolor/22x22/apps/ktimetracker.png
+share/icons/hicolor/32x32/actions/kpilot_fullsync.png
+share/icons/hicolor/32x32/actions/kpilot_hhtopc.png
+share/icons/hicolor/32x32/actions/kpilot_hotsync.png
+share/icons/hicolor/32x32/actions/kpilot_reset.png
 share/icons/hicolor/32x32/apps/akregator.png
 share/icons/hicolor/32x32/apps/kaddressbook.png
 share/icons/hicolor/32x32/apps/kalarm.png
@@ -702,7 +771,13 @@ share/icons/hicolor/32x32/apps/knode2.png
 share/icons/hicolor/32x32/apps/knotes.png
 share/icons/hicolor/32x32/apps/kontact.png
 share/icons/hicolor/32x32/apps/korganizer.png
+share/icons/hicolor/32x32/apps/kpilot.png
+share/icons/hicolor/32x32/apps/kpilotDaemon.png
 share/icons/hicolor/32x32/apps/ktimetracker.png
+share/icons/hicolor/48x48/actions/kpilot_fullsync.png
+share/icons/hicolor/48x48/actions/kpilot_hhtopc.png
+share/icons/hicolor/48x48/actions/kpilot_hotsync.png
+share/icons/hicolor/48x48/actions/kpilot_reset.png
 share/icons/hicolor/48x48/apps/akregator.png
 share/icons/hicolor/48x48/apps/kaddressbook.png
 share/icons/hicolor/48x48/apps/kalarm.png
@@ -713,8 +788,16 @@ share/icons/hicolor/48x48/apps/knode2.png
 share/icons/hicolor/48x48/apps/knotes.png
 share/icons/hicolor/48x48/apps/kontact.png
 share/icons/hicolor/48x48/apps/korganizer.png
+share/icons/hicolor/48x48/apps/kpilot.png
+share/icons/hicolor/48x48/apps/kpilotDaemon.png
 share/icons/hicolor/48x48/apps/ktimetracker.png
-share/icons/hicolor/48x48/apps/ktnef.png
+share/icons/hicolor/64x64/actions/kpilot_address.png
+share/icons/hicolor/64x64/actions/kpilot_bhotsync.png
+share/icons/hicolor/64x64/actions/kpilot_calendar.png
+share/icons/hicolor/64x64/actions/kpilot_db.png
+share/icons/hicolor/64x64/actions/kpilot_fileinstaller.png
+share/icons/hicolor/64x64/actions/kpilot_knotes.png
+share/icons/hicolor/64x64/actions/kpilot_todo.png
 share/icons/hicolor/64x64/apps/akregator.png
 share/icons/hicolor/64x64/apps/kaddressbook.png
 share/icons/hicolor/64x64/apps/kjots.png
@@ -737,8 +820,8 @@ share/icons/oxygen/16x16/actions/ldap_lookup.png
 share/icons/oxygen/16x16/actions/mail-forwarded-replied.png
 share/icons/oxygen/16x16/actions/mail-forwarded.png
 share/icons/oxygen/16x16/actions/mail-reply-custom.png
+share/icons/oxygen/16x16/actions/mail-signed-fully.png
 share/icons/oxygen/16x16/actions/mail-signed-part.png
-share/icons/oxygen/16x16/actions/mail-signed-verified.png
 share/icons/oxygen/16x16/actions/mail-signed.png
 share/icons/oxygen/16x16/actions/meeting-attending-tentative.png
 share/icons/oxygen/16x16/actions/meeting-attending.png
@@ -762,6 +845,7 @@ share/icons/oxygen/22x22/actions/button_more.png
 share/icons/oxygen/22x22/actions/checkmark.png
 share/icons/oxygen/22x22/actions/document-new-from-template.png
 share/icons/oxygen/22x22/actions/edit-delete-page.png
+share/icons/oxygen/22x22/actions/kalarm.png
 share/icons/oxygen/22x22/actions/mail-reply-custom.png
 share/icons/oxygen/22x22/actions/meeting-attending-tentative.png
 share/icons/oxygen/22x22/actions/meeting-attending.png
@@ -805,8 +889,8 @@ share/icons/oxygen/scalable/actions/edit-delete-page.svgz
 share/icons/oxygen/scalable/actions/mail-forwarded-replied.svgz
 share/icons/oxygen/scalable/actions/mail-forwarded.svgz
 share/icons/oxygen/scalable/actions/mail-reply-custom.svgz
+share/icons/oxygen/scalable/actions/mail-signed-fully.svgz
 share/icons/oxygen/scalable/actions/mail-signed-part.svgz
-share/icons/oxygen/scalable/actions/mail-signed-verified.svgz
 share/icons/oxygen/scalable/actions/mail-signed.svgz
 share/icons/oxygen/scalable/apps/kleopatra.svgz
 share/icons/oxygen/scalable/mimetypes/x-mail-distribution-list.svgz
@@ -814,6 +898,7 @@ share/icons/oxygen/scalable/status/mail-tagged.svgz
 share/icons/oxygen/scalable/status/mail-task.svgz
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_addressee.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_bookmark.desktop
+share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_contactgroup.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_kcal.desktop
 share/kde/apps/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 share/kde/apps/akonadiconsole/akonadiconsoleui.rc
@@ -861,7 +946,6 @@ share/kde/apps/kaddressbook/printing/ringbinder-style.png
 share/kde/apps/kaddressbook/vcard_xxportui.rc
 share/kde/apps/kaddressbook/zone.tab
 share/kde/apps/kalarm/kalarmui.rc
-share/kde/apps/karmpart/karmui.rc
 share/kde/apps/kconf_update/kalarm-1.2.1-general.pl
 share/kde/apps/kconf_update/kalarm-1.9.5-defaults.pl
 share/kde/apps/kconf_update/kalarm-2.0.2-general.pl
@@ -889,6 +973,7 @@ share/kde/apps/kconf_update/kolab-resource.upd
 share/kde/apps/kconf_update/korganizer.upd
 share/kde/apps/kconf_update/kpgp-3.1-upgrade-address-data.pl
 share/kde/apps/kconf_update/kpgp.upd
+share/kde/apps/kconf_update/kpilot.upd
 share/kde/apps/kconf_update/upgrade-resourcetype.pl
 share/kde/apps/kconf_update/upgrade-signature.pl
 share/kde/apps/kconf_update/upgrade-transport.pl
@@ -911,6 +996,23 @@ share/kde/apps/kmail/kmail_part.rc
 share/kde/apps/kmail/kmcomposerui.rc
 share/kde/apps/kmail/kmmainwin.rc
 share/kde/apps/kmail/kmreadermainwin.rc
+share/kde/apps/kmail/pics/attachmentQuicklistClosed.png
+share/kde/apps/kmail/pics/attachmentQuicklistOpened.png
+share/kde/apps/kmail/pics/enterprise_bottom.png
+share/kde/apps/kmail/pics/enterprise_bottom_left.png
+share/kde/apps/kmail/pics/enterprise_bottom_right.png
+share/kde/apps/kmail/pics/enterprise_icon.png
+share/kde/apps/kmail/pics/enterprise_left.png
+share/kde/apps/kmail/pics/enterprise_right.png
+share/kde/apps/kmail/pics/enterprise_s_left.png
+share/kde/apps/kmail/pics/enterprise_s_right.png
+share/kde/apps/kmail/pics/enterprise_sbar.png
+share/kde/apps/kmail/pics/enterprise_sp_right.png
+share/kde/apps/kmail/pics/enterprise_sw.png
+share/kde/apps/kmail/pics/enterprise_top.png
+share/kde/apps/kmail/pics/enterprise_top_left.png
+share/kde/apps/kmail/pics/enterprise_top_right.png
+share/kde/apps/kmail/pics/enterprise_w.png
 share/kde/apps/kmail/pics/key.png
 share/kde/apps/kmail/pics/key_bad.png
 share/kde/apps/kmail/pics/key_ok.png
@@ -920,8 +1022,14 @@ share/kde/apps/kmail/pics/mail-deleted.png
 share/kde/apps/kmail/pics/mail-encrypted-full.png
 share/kde/apps/kmail/pics/mail-encrypted-part.png
 share/kde/apps/kmail/pics/mail-encrypted.png
+share/kde/apps/kmail/pics/mail-horizontal-space.png
 share/kde/apps/kmail/pics/mail-thread-ignored.png
 share/kde/apps/kmail/pics/mail-thread-watch.png
+share/kde/apps/kmail/pics/mail-vertical-separator-line.png
+share/kde/apps/kmail/pics/overlay-busy-clock-1.png
+share/kde/apps/kmail/pics/overlay-busy-clock-2.png
+share/kde/apps/kmail/pics/overlay-busy-clock-3.png
+share/kde/apps/kmail/pics/overlay-busy-clock-4.png
 share/kde/apps/kmail/pics/pgp-keys.png
 share/kde/apps/kmail/pics/quotecollapse.png
 share/kde/apps/kmail/pics/quoteexpand.png
@@ -989,6 +1097,7 @@ share/kde/apps/kontact/ksettingsdialog/knode.setdlg
 share/kde/apps/kontact/ksettingsdialog/knotes.setdlg
 share/kde/apps/kontact/ksettingsdialog/korganizer.setdlg
 share/kde/apps/kontact/ksettingsdialog/ktimetracker.setdlg
+share/kde/apps/kontact/ksettingsdialog/planner.setdlg
 share/kde/apps/kontact/ksettingsdialog/specialdates.setdlg
 share/kde/apps/kontact/ksettingsdialog/summary.setdlg
 share/kde/apps/kontactsummary/kontactsummary_part.rc
@@ -1001,6 +1110,7 @@ share/kde/apps/korganizer/sounds/lightmag.wav
 share/kde/apps/korganizer/sounds/onscreen.wav
 share/kde/apps/korganizer/sounds/spinout.wav
 share/kde/apps/korganizer/tips
+share/kde/apps/kpilot/kpilotui.rc
 share/kde/apps/ktimetracker/icons/oxygen/128x128/actions/subtask-new-ktimetracker.png
 share/kde/apps/ktimetracker/icons/oxygen/16x16/actions/subtask-new-ktimetracker.png
 share/kde/apps/ktimetracker/icons/oxygen/22x22/actions/subtask-new-ktimetracker.png
@@ -1008,7 +1118,7 @@ share/kde/apps/ktimetracker/icons/oxygen/32x32/actions/subtask-new-ktimetracker.
 share/kde/apps/ktimetracker/icons/oxygen/48x48/actions/subtask-new-ktimetracker.png
 share/kde/apps/ktimetracker/icons/oxygen/64x64/actions/subtask-new-ktimetracker.png
 share/kde/apps/ktimetracker/icons/oxygen/scalable/actions/subtask-new-ktimetracker.svgz
-share/kde/apps/ktimetracker/karmui.rc
+share/kde/apps/ktimetracker/ktimetrackerui.rc
 share/kde/apps/ktimetracker/pics/active-icon-0.xpm
 share/kde/apps/ktimetracker/pics/active-icon-1.xpm
 share/kde/apps/ktimetracker/pics/active-icon-2.xpm
@@ -1031,7 +1141,6 @@ share/kde/apps/ktimetracker/pics/watch-4.xpm
 share/kde/apps/ktimetracker/pics/watch-5.xpm
 share/kde/apps/ktimetracker/pics/watch-6.xpm
 share/kde/apps/ktimetracker/pics/watch-7.xpm
-share/kde/apps/ktnef/ktnefui.rc
 share/kde/apps/kwatchgnupg/kwatchgnupgui.rc
 share/kde/apps/kwatchgnupg/pics/kwatchgnupg.png
 share/kde/apps/kwatchgnupg/pics/kwatchgnupg2.png
@@ -1071,6 +1180,7 @@ share/kde/apps/libkholidays/holiday_br
 share/kde/apps/libkholidays/holiday_ca
 share/kde/apps/libkholidays/holiday_catalan
 share/kde/apps/libkholidays/holiday_ch
+share/kde/apps/libkholidays/holiday_cl
 share/kde/apps/libkholidays/holiday_co
 share/kde/apps/libkholidays/holiday_cz
 share/kde/apps/libkholidays/holiday_de
@@ -1088,6 +1198,7 @@ share/kde/apps/libkholidays/holiday_ie
 share/kde/apps/libkholidays/holiday_il
 share/kde/apps/libkholidays/holiday_is
 share/kde/apps/libkholidays/holiday_it
+share/kde/apps/libkholidays/holiday_jm
 share/kde/apps/libkholidays/holiday_jp
 share/kde/apps/libkholidays/holiday_lt
 share/kde/apps/libkholidays/holiday_mx
@@ -1116,9 +1227,12 @@ share/kde/apps/nepomuk/ontologies/nco.desktop
 share/kde/apps/nepomuk/ontologies/nco.trig
 share/kde/apps/nepomuk/ontologies/nmo.desktop
 share/kde/apps/nepomuk/ontologies/nmo.trig
+share/kde/autostart/kabcdistlistupdater.desktop
 share/kde/autostart/kalarm.autostart.desktop
 share/kde/autostart/korgac.desktop
 share/kde/config.kcfg/akregator.kcfg
+share/kde/config.kcfg/calendarsettings.kcfg
+share/kde/config.kcfg/contactssettings.kcfg
 share/kde/config.kcfg/custommimeheader.kcfg
 share/kde/config.kcfg/customtemplates_kfg.kcfg
 share/kde/config.kcfg/egroupware.kcfg
@@ -1131,14 +1245,20 @@ share/kde/config.kcfg/knotesglobalconfig.kcfg
 share/kde/config.kcfg/kolab.kcfg
 share/kde/config.kcfg/kontact.kcfg
 share/kde/config.kcfg/korganizer.kcfg
+share/kde/config.kcfg/kpilot.kcfg
+share/kde/config.kcfg/kpilotlib.kcfg
 share/kde/config.kcfg/kxforms.kcfg
+share/kde/config.kcfg/memofileconduit.kcfg
 share/kde/config.kcfg/replyphrases.kcfg
 share/kde/config.kcfg/scalix.kcfg
 share/kde/config.kcfg/slox.kcfg
 share/kde/config.kcfg/templatesconfiguration_kfg.kcfg
+share/kde/config.kcfg/timeconduit.kcfg
+share/kde/config.kcfg/todosettings.kcfg
 share/kde/config/kmail.antispamrc
 share/kde/config/kmail.antivirusrc
 share/kde/config/korganizer.knsrc
+share/kde/config/kres-migratorrc
 share/kde/config/libkleopatrarc
 share/kde4/services/akonadi.protocol
 share/kde4/services/akregator_config_advanced.desktop
@@ -1182,11 +1302,14 @@ share/kde4/services/kaddressbook/smsprotocol.desktop
 share/kde4/services/kaddressbook/tableview.desktop
 share/kde4/services/kaddressbook/vcard_xxport.desktop
 share/kde4/services/kaddressbook/yahooprotocol.desktop
-share/kde4/services/karm_part.desktop
+share/kde4/services/kaddressbookpart.desktop
+share/kde4/services/kcm_akonadi.desktop
 share/kde4/services/kcm_akonadi_resources.desktop
+share/kde4/services/kcm_akonadi_server.desktop
 share/kde4/services/kcmapptsummary.desktop
 share/kde4/services/kcmkmailsummary.desktop
 share/kde4/services/kcmkontactsummary.desktop
+share/kde4/services/kcmplanner.desktop
 share/kde4/services/kcmsdsummary.desktop
 share/kde4/services/kcmtodosummary.desktop
 share/kde4/services/kjotspart.desktop
@@ -1221,6 +1344,7 @@ share/kde4/services/kontact/knodeplugin.desktop
 share/kde4/services/kontact/knotesplugin.desktop
 share/kde4/services/kontact/korganizerplugin.desktop
 share/kde4/services/kontact/ktimetracker_plugin.desktop
+share/kde4/services/kontact/plannerplugin.desktop
 share/kde4/services/kontact/specialdatesplugin.desktop
 share/kde4/services/kontact/summaryplugin.desktop
 share/kde4/services/kontact/todoplugin.desktop
@@ -1239,6 +1363,10 @@ share/kde4/services/korganizer_configmain.desktop
 share/kde4/services/korganizer_configplugins.desktop
 share/kde4/services/korganizer_configtime.desktop
 share/kde4/services/korganizer_configviews.desktop
+share/kde4/services/kpilot-conduit-calendar.desktop
+share/kde4/services/kpilot-conduit-contacts.desktop
+share/kde4/services/kpilot-conduit-todo.desktop
+share/kde4/services/kpilot_config.desktop
 share/kde4/services/kresources/alarms/local.desktop
 share/kde4/services/kresources/alarms/localdir.desktop
 share/kde4/services/kresources/alarms/remote.desktop
@@ -1271,9 +1399,12 @@ share/kde4/services/kresources/knotes/local.desktop
 share/kde4/services/kresources/knotes/scalix.desktop
 share/kde4/services/kresources/knotes_manager.desktop
 share/kde4/services/ktimetrackerconfig.desktop
+share/kde4/services/ktimetrackerpart.desktop
 share/kde4/services/ldifvcardthumbnail.desktop
+share/kde4/services/memofile-conduit.desktop
 share/kde4/services/scalix.protocol
 share/kde4/services/scalixs.protocol
+share/kde4/services/time_conduit.desktop
 share/kde4/services/webcal.protocol
 share/kde4/servicetypes/akregator_plugin.desktop
 share/kde4/servicetypes/calendardecoration.desktop
@@ -1290,6 +1421,7 @@ share/kde4/servicetypes/kaddressbookimprotocol.desktop
 share/kde4/servicetypes/kontactplugin.desktop
 share/kde4/servicetypes/korganizerpart.desktop
 share/kde4/servicetypes/korgprintplugin.desktop
+share/kde4/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @dirrm share/kde4/services/kresources/knotes
 @comment in kde: @dirrm share/kde4/services/kresources/kcal
@@ -1312,7 +1444,6 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/kde/apps/kxforms
 @dirrm share/kde/apps/kwatchgnupg/pics
 @dirrm share/kde/apps/kwatchgnupg
-@dirrm share/kde/apps/ktnef
 @dirrm share/kde/apps/ktimetracker/pics
 @dirrm share/kde/apps/ktimetracker/icons/oxygen/scalable/actions
 @dirrm share/kde/apps/ktimetracker/icons/oxygen/scalable
@@ -1331,6 +1462,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/kde/apps/ktimetracker/icons/oxygen
 @dirrm share/kde/apps/ktimetracker/icons
 @dirrm share/kde/apps/ktimetracker
+@dirrm share/kde/apps/kpilot
 @dirrm share/kde/apps/korganizer/sounds
 @dirrm share/kde/apps/korganizer
 @dirrm share/kde/apps/korgac/icons/oxygen/22x22/actions
@@ -1363,7 +1495,6 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/kde/apps/kdepimwidgets/pics
 @dirrm share/kde/apps/kdepimwidgets
 @comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/karmpart
 @dirrm share/kde/apps/kalarm
 @dirrm share/kde/apps/kaddressbook/printing
 @dirrm share/kde/apps/kaddressbook/pics
@@ -1413,7 +1544,6 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/kwsdl_compiler
 @dirrm share/doc/kde/HTML/en/ktimetracker
 @dirrm share/doc/kde/HTML/en/korganizer
 @dirrm share/doc/kde/HTML/en/kontact
@@ -1423,8 +1553,10 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm share/doc/kde/HTML/en/kmail
 @dirrm share/doc/kde/HTML/en/kleopatra
 @dirrm share/doc/kde/HTML/en/kjots
+@dirrm share/doc/kde/HTML/en/kioslave/news
 @dirrm share/doc/kde/HTML/en/kalarm
 @dirrm share/doc/kde/HTML/en/kaddressbook
+@dirrm share/doc/kde/HTML/en/kabcclient
 @dirrm share/doc/kde/HTML/en/akregator
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/dbus-1/interfaces
@@ -1438,6 +1570,7 @@ share/kde4/servicetypes/korgprintplugin.desktop
 @dirrm include/libkleopatraclient/core
 @dirrm include/libkleopatraclient
 @dirrm include/ksieve
+@dirrm include/kpilot
 @dirrm include/kpgp
 @dirrm include/kmail/interfaces
 @dirrm include/kmail

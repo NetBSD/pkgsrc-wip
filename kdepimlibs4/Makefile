@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/03 11:34:03 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/10 10:34:45 mwdavies Exp $
 
 DISTNAME=	kdepimlibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -17,6 +17,7 @@ REPLACE_PERL+= mailtransport/kconf_update/migrate-transports.pl
 .include "../../mail/akonadi/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../time/libical/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
