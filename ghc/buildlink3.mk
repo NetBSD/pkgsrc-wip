@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/07/17 14:45:25 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/01/11 09:28:43 phonohawk Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GHC_BUILDLINK3_MK:=	${GHC_BUILDLINK3_MK}+
@@ -12,14 +12,12 @@ BUILDLINK_PACKAGES+=	ghc
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ghc
 
 .if !empty(GHC_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.ghc+=	ghc>=6.6.1
-BUILDLINK_ABI_DEPENDS.ghc?=	ghc>=6.6.1
+BUILDLINK_API_DEPENDS.ghc+=	ghc>=6.10.1
+BUILDLINK_ABI_DEPENDS.ghc?=	ghc>=6.10.1
 BUILDLINK_PKGSRCDIR.ghc?=	../../wip/ghc
 
 BUILDLINK_DEPMETHOD.ghc?=	build
 .endif	# GHC_BUILDLINK3_MK
-
-.include "../../devel/readline/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 

@@ -1,13 +1,48 @@
-$NetBSD: patch-aa,v 1.3 2008/07/17 14:45:25 phonohawk Exp $
+$NetBSD: patch-aa,v 1.4 2009/01/11 09:28:43 phonohawk Exp $
 
---- ../ghc-6.4.2/ghc/Makefile.orig	2006-07-30 14:26:56.000000000 +0200
-+++ ../ghc-6.4.2/ghc/Makefile	2006-07-30 14:27:26.000000000 +0200
-@@ -22,7 +22,7 @@
- # we descend into subdirs - to boot utils must be before driver.
- #
- ifeq "$(BootingFromHc)" "YES"
--SUBDIRS = includes rts docs compiler lib utils driver
-+SUBDIRS = includes rts docs lib compiler utils driver
- else
- ifneq "$(ILXized)" "YES"
- SUBDIRS = includes lib utils driver docs compiler rts
+--- ../ghc-6.6.1/mk/bootstrap.mk.orig	2007-04-26 02:10:40.000000000 +0900
++++ ../ghc-6.6.1/mk/bootstrap.mk
+@@ -30,7 +30,6 @@ PLATFORM_CC_OPTS += -D_HPUX_SOURCE
+ endif
+ 
+ ifeq "$(powerpc_TARGET_ARCH)" "1"
+-PLATFORM_CC_OPTS += -static
+ PLATFORM_HC_BOOT_CC_OPTS += -finhibit-size-directive
+ endif
+ 
+@@ -68,10 +67,6 @@ SRC_CC_OPTS += -I$(FPTOOLS_TOP_ABS)/$(GH
+ # yet, so we use lazy expansion.
+ SRC_CC_OPTS += $(if $(findstring YES,$(UseGhcForCc)), $(PLATFORM_HC_BOOT_CC_OPTS) $(PLATFORM_CC_OPTS))
+ 
+-ifeq "$(GhcWithInterpreter)" "YES"
+-SRC_CC_OPTS += -I$(FPTOOLS_TOP_ABS)/libraries/readline/include
+-endif
+-
+ # -----------------------------------------------------------------------------
+ # Linking: we have to give all the libraries explicitly.
+ 
+@@ -100,7 +95,6 @@ HC_BOOT_LD_OPTS =				\
+ ifeq "$(GhcWithInterpreter)" "YES"
+ HC_BOOT_LD_OPTS += \
+    -L$(FPTOOLS_TOP_ABS)/libraries/template-haskell	\
+-   -L$(FPTOOLS_TOP_ABS)/libraries/readline	\
+    -L$(FPTOOLS_TOP_ABS)/libraries/unix          \
+    -L$(FPTOOLS_TOP_ABS)/libraries/unix/cbits
+ endif
+@@ -135,14 +129,12 @@ HC_BOOT_LD_OPTS += \
+    -u "$(UNDERSCORE)base_GHCziIOBase_NonTermination_closure" \
+    -u "$(UNDERSCORE)base_GHCziIOBase_BlockedOnDeadMVar_closure" \
+    -u "$(UNDERSCORE)base_GHCziIOBase_Deadlock_closure" \
+-   -u "$(UNDERSCORE)base_GHCziWeak_runFinalizzerBatch_closure" \
+-   -u "$(UNDERSCORE)__stginit_Prelude"
+-
++   -u "$(UNDERSCORE)base_GHCziWeak_runFinalizzerBatch_closure"
+ 
+ HC_BOOT_LIBS =
+ 
+ ifeq "$(GhcWithInterpreter)" "YES"
+-HC_BOOT_LIBS += -lHSreadline -lreadline -lHStemplate-haskell -lHSunix -lHSunix_cbits
++HC_BOOT_LIBS += -lHStemplate-haskell -lHSunix -lHSunix_cbits
+ endif
+ 
+ HC_BOOT_LIBS +=  -lHSCabal -lHShaskell98 -lHSregex-compat -lHSregex-posix -lHSregex-base -lHSbase -lHSbase_cbits -lHSparsec -lHSrts -lgmp -lm $(EXTRA_HC_BOOT_LIBS)

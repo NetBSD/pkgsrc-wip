@@ -1,33 +1,13 @@
-$NetBSD: distinfo,v 1.3 2008/07/17 14:45:25 phonohawk Exp $
+$NetBSD: distinfo,v 1.4 2009/01/11 09:28:43 phonohawk Exp $
 
-SHA1 (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 29c1a17a83ec0ddec8ff231e009c740ebc61dd6c
-RMD160 (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 5ce775a19797fe257357fedd33db2354dd50d2de
-Size (ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz) = 9927295 bytes
-SHA1 (ghc-6.4.2-src.tar.bz2) = 60bcea323f851caa84d49c7731b86164d5cefa42
-RMD160 (ghc-6.4.2-src.tar.bz2) = 19943eb2673e663973e64739cdf23720b6f36d38
-Size (ghc-6.4.2-src.tar.bz2) = 6954958 bytes
-SHA1 (ghc-6.6-ppc-apple-darwin.tar.gz) = 75d94ccd967862fa6ca2decfa86b1e112c25980e
-RMD160 (ghc-6.6-ppc-apple-darwin.tar.gz) = 950ac36a87ec83de3b97bae206a764732f334ac1
-Size (ghc-6.6-ppc-apple-darwin.tar.gz) = 61722459 bytes
-SHA1 (ghc-6.8.3-src-extralibs.tar.bz2) = 800258df7d86f5538fd2cc54829e29e90183b882
-RMD160 (ghc-6.8.3-src-extralibs.tar.bz2) = f701da7129075ae62dfb6c524efd39103f944ad3
-Size (ghc-6.8.3-src-extralibs.tar.bz2) = 1912647 bytes
-SHA1 (ghc-6.8.3-src.tar.bz2) = f908b0e0293014dde587abd8c7912eb490f9b3d2
-RMD160 (ghc-6.8.3-src.tar.bz2) = 415cd144f0641a0c5887ad7325e2e775e93044f0
-Size (ghc-6.8.3-src.tar.bz2) = 7092076 bytes
-SHA1 (patch-aa) = bcb07fa1a18edddf1629705a9c1557b0489f6d63
-SHA1 (patch-ab) = 488385a706126efa4bf9453bb491728e1b1b4051
-SHA1 (patch-ac) = bf93f732d2747f6cd7072115b5ccbce43b4fd032
-SHA1 (patch-ad) = 8baca1dae82ab52267ea5367917d1d93ece2b437
-SHA1 (patch-af) = a2e969ea4995612fc974164d030d6acacfcb5b9c
-SHA1 (patch-ag) = 6456d1913ef16f804c6a8126b6e61063948e5011
-SHA1 (patch-ah) = 12ca06285033d5b45df5ff72b6718869920323ad
-SHA1 (patch-ai) = f157d50386ce8fd032d6f19d1f0b6fbb7baa6269
-SHA1 (patch-aj) = 26019891c21907c9c26a7bc21d655172528cfbaa
-SHA1 (patch-ak) = 5b29f92b0f9c1e33da89c916f9ae93946df3b063
-SHA1 (patch-al) = 3a66b0bf57772c34234fde5713dc02037c476eb2
-SHA1 (patch-am) = 20f0e86a79853b0c514d91db72277b86d567603f
-SHA1 (patch-an) = 3267a1ff00ae74b337e4dbd8f4e1c85cdb1aeed7
-SHA1 (patch-ao) = ba3c218d3a6fc70986d159bbae9e41e37f4e0d79
-SHA1 (patch-ap) = 13afc2f1c51fc10f5bc657528599e2d53b11507b
-SHA1 (patch-aq) = 554514e160ae2bdcab0dfd444839d333a72b5b4f
+SHA1 (ghc-6.10.1-src.tar.bz2) = 5b3759d6a1177f0cc8f754673b52bfd31923280f
+RMD160 (ghc-6.10.1-src.tar.bz2) = 4768e7246edd494367232e3af030ffed77990c10
+Size (ghc-6.10.1-src.tar.bz2) = 9590409 bytes
+SHA1 (ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz) = 439a1c23ceb2393d366974573c60e5662dee116f
+RMD160 (ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz) = 5d05e2f2d8e5eb367b7b790e42a16cda5c65e5c9
+Size (ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz) = 11335543 bytes
+SHA1 (ghc-6.6.1-src.tar.bz2) = cc1846b4ad607e270721371ce4043b1a017cd10e
+RMD160 (ghc-6.6.1-src.tar.bz2) = 6b82a74559425fe5fe1fa1b67a83433457bae0ad
+Size (ghc-6.6.1-src.tar.bz2) = 4339970 bytes
+SHA1 (patch-aa) = fd9cd9ec50fab10c81a84d49bc9e43068df2804a
+SHA1 (patch-ab) = 651695a6634b68d9eaa18bc583bf43e73d2d50a1
