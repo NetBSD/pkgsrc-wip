@@ -3,7 +3,7 @@ Suggested package updates
 
 	o amarok-2.0.1
 	o argouml-0.24
-	o backintime-0.8.20
+	o backintime-0.9
 	o bakery-2.6.2
 	o bub-n-bros-1.6
 	o ccrtp-1.6.2
@@ -42,6 +42,7 @@ Suggested package updates
 	o httrack-3.43
 	o hu-go-2.11
 	o icc-11.0
+	o ion3-20090110
 	o kino-1.0.0
 	o libexosip-3.2.0
 	o libgadu-1.8.2
@@ -95,6 +96,7 @@ Suggested package updates
 	o uade-2.12
 	o ufraw-0.14
 	o uptimed-0.3.16
+	o vala-0.5.4
 	o wordpress-2.7
 	o xaralx-bin-0.7.1692
 	o xcb-proto-1.3
