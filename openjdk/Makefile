@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/01/11 11:54:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/11 12:45:03 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b42-19_dec_2008
 PKGNAME=	openjdk-1.7.0.42.20081230
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.java.net/download/openjdk/jdk7/promoted/b42/
 EXTRACT_SUFX=	.zip
