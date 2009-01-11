@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2009/01/11 10:00:22 phonohawk Exp $
+
+--- src/vi.c.orig	2008-07-12 17:38:05.000000000 +0900
++++ src/vi.c
+@@ -915,14 +915,12 @@ vi_comment_out(EditLine *el, int c)
+  * NB: posix implies that we should enter insert mode, however
+  * this is against historical precedent...
+  */
+-#ifdef __weak_reference
+-extern char *get_alias_text(const char *) __weak_reference(get_alias_text);
+-#endif
++extern char *get_alias_text(const char *);
++#pragma weak get_alias_text
+ protected el_action_t
+ /*ARGSUSED*/
+ vi_alias(EditLine *el, int c)
+ {
+-#ifdef __weak_reference
+ 	char alias_name[3];
+ 	char *alias_text;
+ 
+@@ -939,9 +937,6 @@ vi_alias(EditLine *el, int c)
+ 	if (alias_text != NULL)
+ 		el_push(el, alias_text);
+ 	return CC_NORM;
+-#else
+-	return CC_ERROR;
+-#endif
+ }
+ 
+ /* vi_to_history_line():
