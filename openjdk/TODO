@@ -1,5 +1,4 @@
-- fix X11R6 run paths
-- figure out why swing apps fail to initialise
+- investigate fontconfig issues (fonts are not displayed properly)
 - Fix netbsd-4 build
 - review patches/*, look for XXX, implement commented out code
 - integrate iced tea support for sound and browser plugin.

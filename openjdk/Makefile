@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/11 11:54:25 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b42-19_dec_2008
 PKGNAME=	openjdk-1.7.0.42.20081230
@@ -68,6 +68,17 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 .include "../../mk/bsd.prefs.mk"
 .include "bootstrap.mk"
 .include "plugs.mk"
+
+SUBST_CLASSES+=			add-rpaths
+SUBST_STAGE.add-rpaths=		pre-build
+SUBST_MESSAGE.add-rpaths=	adding X11 run path flags to Makefiles
+SUBST_FILES.add-rpaths=		jdk/make/sun/awt/Makefile		\
+				jdk/make/sun/awt/mawt.gmk		\
+				jdk/make/sun/jawt/Makefile		\
+				jdk/make/sun/jdga/Makefile		\
+				jdk/make/sun/splashscreen/Makefile	\
+				jdk/make/sun/xawt/Makefile
+SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWIN_LIB)|g'
 
 #post-patch:
 #	cd ${WRKSRC} && cp -R ${WRKDIR}/icedtea-1.8/overlays/openjdk/jdk/src/share/classes/com/sun/media/sound jdk/src/share/classes/com/sun/media

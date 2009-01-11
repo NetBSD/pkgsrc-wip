@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2009/01/07 14:18:01 tnn2 Exp $
+$NetBSD: distinfo,v 1.3 2009/01/11 11:54:25 tnn2 Exp $
 
 SHA1 (apache-ant-1.7.1-bin.zip) = a7e8fa7bc2102a8d8df99c64db73c2eae3d8b483
 RMD160 (apache-ant-1.7.1-bin.zip) = a4e2c992ac7c81949b391d146baf9c411dbb2c2d
 Size (apache-ant-1.7.1-bin.zip) = 11657986 bytes
-SHA1 (bootstrap-jdk-7-bin-netbsd-5-amd64-20090106.tar.bz2) = 3f960dc867614867f61dcbb42a8b5aa37fcf6204
-RMD160 (bootstrap-jdk-7-bin-netbsd-5-amd64-20090106.tar.bz2) = 8dee1ef20c332f160ed0d160b3b7a413be0de90b
-Size (bootstrap-jdk-7-bin-netbsd-5-amd64-20090106.tar.bz2) = 19689911 bytes
-SHA1 (bootstrap-jdk-7-bin-netbsd-5-i386-20090107-2.tar.bz2) = 92b4728381a815a8dfc8510344d77432eba095d8
-RMD160 (bootstrap-jdk-7-bin-netbsd-5-i386-20090107-2.tar.bz2) = ea48e291fe3cf34df6085614424637e5dfc88792
-Size (bootstrap-jdk-7-bin-netbsd-5-i386-20090107-2.tar.bz2) = 21578005 bytes
+SHA1 (bootstrap-jdk-7-bin-netbsd-5-amd64-20090111.tar.bz2) = ea306eeedac52ddcf23209df746a42990191013a
+RMD160 (bootstrap-jdk-7-bin-netbsd-5-amd64-20090111.tar.bz2) = fdae781e2603e1ac885a666693dc683705cd54ae
+Size (bootstrap-jdk-7-bin-netbsd-5-amd64-20090111.tar.bz2) = 20464536 bytes
+SHA1 (bootstrap-jdk-7-bin-netbsd-5-i386-20090111.tar.bz2) = ffe1f14bf96c1ddb759adb1f838beb069f7caa44
+RMD160 (bootstrap-jdk-7-bin-netbsd-5-i386-20090111.tar.bz2) = 962c320452298a7112ac044135e733b7d102339c
+Size (bootstrap-jdk-7-bin-netbsd-5-i386-20090111.tar.bz2) = 22331300 bytes
 SHA1 (icedtea-1.8.tar.gz) = b55281fe606c475c67c470ebd1490ab41fcc4452
 RMD160 (icedtea-1.8.tar.gz) = 36e0decee1e9f04f94dcb625e5ad5d200709224a
 Size (icedtea-1.8.tar.gz) = 5882607 bytes
@@ -36,3 +36,6 @@ SHA1 (patch-al) = bcac52d353c6c502157fa430662231c2375fe452
 SHA1 (patch-am) = 7e0ffa317a83d5b1e34c3f3e76b7a3de26980df6
 SHA1 (patch-an) = 7e1a392a003cc01f3c009c9e15828c03b550a2df
 SHA1 (patch-ao) = 87ee9dd450d0b4e7cbd2302466a2e9f586fa6df1
+SHA1 (patch-ap) = 1497019265bf524575d0cf78ca095166ac313318
+SHA1 (patch-aq) = 4cd70c3451eef29d21d1d562cb5f29fbf639631c
+SHA1 (patch-ar) = 19abc4c858c730fb337d68d1d524db82c73ffa36
