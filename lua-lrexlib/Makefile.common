@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2008/12/27 18:49:57 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.5 2009/01/11 10:20:14 cheusov Exp $
 # used by wip/lua-lrexlib-posix/Makefile
 # used by wip/lua-lrexlib-pcre/Makefile
 # used by wip/lua-lrexlib-oniguruma/Makefile
 #
+.include "../../wip/lua-lrexlib/Makefile.version"
 
-DISTNAME=	lrexlib-2.4.0
+DISTNAME=	lrexlib-${VERSION}
 PKGNAME=	${DISTNAME:S/lrexlib/lua-lrexlib-${ENGINE}/}
 CATEGORIES=	devel
 MASTER_SITES=	http://luaforge.net/frs/download.php/3599/
@@ -16,7 +17,7 @@ HOMEPAGE=	http://luaforge.net/projects/lrexlib
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
-USE_LIBTOOLS=		yes
+USE_LIBTOOL=		yes
 
 BUILD_TARGET=		build_${ENGINE}
 TEST_TARGET=		test_${ENGINE}

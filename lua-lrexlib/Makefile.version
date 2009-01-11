@@ -1,0 +1,3 @@
+# $NetBSD: Makefile.version,v 1.1 2009/01/11 10:20:14 cheusov Exp $
+
+VERSION=2.4.0
