@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/11 20:48:46 cheusov Exp $
+share/lua/5.1/alt_getopt.lua

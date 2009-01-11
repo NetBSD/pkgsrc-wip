@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/11 20:48:46 cheusov Exp $
+
+SHA1 (lua_alt_getopt-0.4.0.tar.gz) = f494f54984ec74077d531103b25aed4684654359
+RMD160 (lua_alt_getopt-0.4.0.tar.gz) = fbacdb2c1dbf21a0a0b7c1b5702a0ef8f10ca092
+Size (lua_alt_getopt-0.4.0.tar.gz) = 4000 bytes
