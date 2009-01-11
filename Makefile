@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3192 2009/01/11 10:00:22 cheusov Exp $
+# $Id: Makefile,v 1.3193 2009/01/11 21:56:11 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -963,6 +963,7 @@ SUBDIR+=	logrotate
 SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	ltrace
+SUBDIR+=	lua-alt-getopt
 SUBDIR+=	lua-lrexlib
 SUBDIR+=	lua-lrexlib-onig
 SUBDIR+=	lua-lrexlib-pcre
