@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/01/06 16:35:18 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2009/01/11 10:57:19 phonohawk Exp $
 #
 
 DISTNAME=		libedit-20080712-2.11
@@ -13,6 +13,10 @@ COMMENT=		NetBSD Editline library (libedit) for generic line editing
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=			automake
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../mk/curses.buildlink3.mk"
