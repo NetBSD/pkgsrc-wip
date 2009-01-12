@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/28 12:15:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/12 19:10:46 cheusov Exp $
 #
 
 ENGINE=		posix
@@ -9,5 +9,5 @@ COMMENT=	POSIX regexp library for Lua (lrexlib project)
 
 DESCR_SRC+=	${.CURDIR}/DESCR
 
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/11 10:20:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/12 19:10:46 cheusov Exp $
 
 .include "../../wip/lua-lrexlib/Makefile.version"
 
@@ -14,7 +14,7 @@ COMMENT=	Regexp libraries for Lua programming language
 APIs=		pcre posix onig
 
 .for i in ${APIs}
-DEPENDS+=	lua-lrexlib-${i}-${VERSION}:../../wip/lua-lrexlib-${i}
+DEPENDS+=	lua-lrexlib-${i}-${VERSION}nb1:../../wip/lua-lrexlib-${i}
 .endfor
 
 META_PACKAGE=		yes
