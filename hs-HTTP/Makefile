@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/19 08:09:31 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/12 06:24:28 phonohawk Exp $
 #
 
-DISTNAME=	HTTP-3001.0.4
-PKGNAME=	hs-HTTP-3001.0.4
+DISTNAME=	HTTP-4000.0.1
+PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=HTTP/3001.0.4/}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.haskell.org/http/
 COMMENT=	Haskell library for client-side HTTP
 
-USE_LANGUAGES=	# none
-
-.include "../../wip/mk/haskell.mk" # This should be "../../mk/haskell.mk"
+.include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-network/buildlink3.mk"
+.include "../../wip/parsec/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

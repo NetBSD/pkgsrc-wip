@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/07/19 08:40:45 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/12 06:24:28 phonohawk Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HS_HTTP_BUILDLINK3_MK:=	${HS_HTTP_BUILDLINK3_MK}+
@@ -13,8 +13,11 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-HTTP
 
 .if ${HS_HTTP_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-HTTP?=	build
-BUILDLINK_API_DEPENDS.hs-HTTP+=	hs-HTTP>=3001.0.4
+BUILDLINK_API_DEPENDS.hs-HTTP+=	hs-HTTP>=4000.0.1
 BUILDLINK_PKGSRCDIR.hs-HTTP?=	../../wip/hs-HTTP
 .endif	# HS_HTTP_BUILDLINK3_MK
+
+.include "../../wip/hs-network/buildlink3.mk"
+.include "../../wip/parsec/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
