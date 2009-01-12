@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/20 07:11:57 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/01/12 06:46:49 phonohawk Exp $
 
-SHA1 (zlib-0.4.0.4.tar.gz) = b031c719091a7a26b7486a8b64bb2b2715365df2
-RMD160 (zlib-0.4.0.4.tar.gz) = a3e2a50d30c1f98232156438555384c4cbe175a1
-Size (zlib-0.4.0.4.tar.gz) = 120949 bytes
+SHA1 (zlib-0.5.0.0.tar.gz) = 4a93e727a408754baf6ede0ed721863eb4ea0df2
+RMD160 (zlib-0.5.0.0.tar.gz) = 0ba0769d78b83b05726b15be55b10168db7d59bb
+Size (zlib-0.5.0.0.tar.gz) = 122533 bytes
