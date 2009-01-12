@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 02:40:42 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Cont.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Cont/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Error.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Error/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Identity.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/List.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/RWS.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/RWS/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/RWS/Lazy.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/RWS/Strict.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Reader.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Reader/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/State.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/State/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/State/Lazy.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/State/Strict.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Trans.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Writer.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Writer/Class.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Writer/Lazy.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Writer/Strict.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Writer
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/State
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Reader
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/RWS
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Error
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/Cont
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
