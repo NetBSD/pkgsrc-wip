@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 05:53:43 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/ByteString.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/ByteString/Lazy.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Char.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Combinator.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Error.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Expr.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Language.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Perm.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Pos.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Prim.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/String.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/Token.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Char.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Combinator.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Error.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Expr.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Language.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Perm.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Pos.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Prim.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Token.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec/ByteString
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Parsec
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
