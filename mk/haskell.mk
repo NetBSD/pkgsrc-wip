@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.3 2009/01/12 02:08:35 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.4 2009/01/12 03:18:06 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -140,12 +140,14 @@ do-build:
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} build
 
 # Define install target. We need installed-pkg-config to be installed
-# for package registration.
+# for package registration (if any).
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
 do-install:
 	cd ${WRKSRC} && \
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy && \
-		${INSTALL_DATA} dist/installed-pkg-config ${_HASKELL_PKG_DESCR_FILE}
+		if [ -f dist/installed-pkg-config ]; then \
+			${INSTALL_DATA} dist/installed-pkg-config ${_HASKELL_PKG_DESCR_FILE}; \
+		fi
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	DISTNAME=${DISTNAME}

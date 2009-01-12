@@ -1,10 +1,14 @@
 # -*- sh -*-
-# $NetBSD: DEINSTALL.in,v 1.1 2008/07/19 07:50:00 phonohawk Exp $
+# $NetBSD: DEINSTALL.in,v 1.2 2009/01/12 03:18:06 phonohawk Exp $
 #
 DISTNAME="@DISTNAME@"
+HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
+HASKELL_PKG_DESCR_FILE="@HASKELL_PKG_DESCR_FILE@"
 
 case ${STAGE} in 
-    POST-DEINSTALL)
-        ghc-pkg unregister ${DISTNAME};
+    DEINSTALL)
+        if [ -f ${HASKELL_PKG_DESCR_FILE} ]; then
+            ${HASKELL_PKG_BIN} unregister ${DISTNAME}
+        fi
         ;;
 esac
