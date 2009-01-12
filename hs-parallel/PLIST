@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 07:37:26 phonohawk Exp $
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel.hi
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel/Strategies.hi
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/HSparallel-${PKGVERSION}.o
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/libHSparallel-${PKGVERSION}.a
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/parallel-${PKGVERSION}/LICENSE
+@dirrm share/doc/parallel-${PKGVERSION}
+@dirrm lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel
+@dirrm lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control
+@dirrm lib/parallel-${PKGVERSION}/${HASKELL_VERSION}
