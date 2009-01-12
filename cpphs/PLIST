@@ -1,3 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/07 17:04:20 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/12 02:20:36 phonohawk Exp $
 bin/cpphs
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/CppIfdef.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/HashDefine.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/MacroPass.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Options.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Position.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/ReadFirst.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/RunCpphs.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/SymTab.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs/Tokenise.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Unlit.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators/HuttonMeijer.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 man/man1/cpphs.1
+share/doc/${PKGNAME}/LICENCE-LGPL
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/ParserCombinators
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Preprocessor
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}

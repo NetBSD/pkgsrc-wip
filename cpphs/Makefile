@@ -1,22 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2007/08/15 10:13:30 emil_s Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/12 02:20:36 phonohawk Exp $
 #
 
-DISTNAME=		cpphs-1.5
+DISTNAME=		cpphs-1.6
 CATEGORIES=		devel
-MASTER_SITES=		http://www.cs.york.ac.uk/fp/cpphs/
 
 MAINTAINER=		emil@math.su.se
-HOMEPAGE=		http://www.cs.york.ac.uk/fp/cpphs/
+HOMEPAGE=		http://haskell.org/cpphs/
 COMMENT=		Re-implementation of cpp in Haskell
 
 
-do-build:
-	cd ${WRKSRC} && ghc -o cpphs --make cpphs
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cpphs ${PREFIX}/bin/cpphs
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/cpphs.1 ${PREFIX}/${PKGMANDIR}/man1
 
 
-.include "../../lang/ghc/buildlink3.mk"
+.include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
