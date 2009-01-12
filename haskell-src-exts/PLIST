@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 03:27:58 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/Build.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/Lexer.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseMonad.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseUtils.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/Parser.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/Pretty.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts/Syntax.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/Exts
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
