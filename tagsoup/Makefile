@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/20 06:27:40 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/12 07:22:26 phonohawk Exp $
 #
 
 DISTNAME=	tagsoup-0.6
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=tagsoup/0.6/}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www-users.cs.york.ac.uk/~ndm/tagsoup/
 COMMENT=	Haskell library for parsing unstructured HTML code
 
-USE_LANGUAGES=	# none
-
-.include "../../wip/mk/haskell.mk" # This should be "../../mk/haskell.mk"
+.include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-network/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
