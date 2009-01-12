@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/12 03:27:58 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/12 03:49:06 phonohawk Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HASKELL_SRC_EXTS_BUILDLINK3_MK:=	${HASKELL_SRC_EXTS_BUILDLINK3_MK}+
@@ -16,5 +16,7 @@ BUILDLINK_DEPMETHOD.haskell-src-exts?=	build
 BUILDLINK_API_DEPENDS.haskell-src-exts+=	haskell-src-exts>=0.4.8
 BUILDLINK_PKGSRCDIR.haskell-src-exts?=	../../wip/haskell-src-exts
 .endif	# HASKELL_SRC_EXTS_BUILDLINK3_MK
+
+.include "../../wip/cpphs/buildlink3.mk"
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
