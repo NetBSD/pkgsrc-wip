@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 03:41:40 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/Biplate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/Compos.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/PlateData.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/PlateDirect.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/PlateInternal.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/PlateTypeable.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/SYB.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/Str.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/Uniplate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/UniplateOn.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/UniplateStr.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics/UniplateStrOn.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Generics
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
