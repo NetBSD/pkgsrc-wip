@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3196 2009/01/12 03:42:55 phonohawk Exp $
+# $Id: Makefile,v 1.3197 2009/01/12 03:56:05 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -10,6 +10,7 @@ SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	HCL
+SUBDIR+=	HLint
 SUBDIR+=	HSH
 SUBDIR+=	HsHyperEstraier
 SUBDIR+=	HsOpenSSL
