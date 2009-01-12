@@ -1,0 +1,2 @@
+The Haskell "time" package replaces System.Time (existing API). As of
+GHC 6.6, it is part of the standard libraries.

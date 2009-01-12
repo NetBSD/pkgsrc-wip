@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 06:54:50 phonohawk Exp $
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/Days.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/Easter.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/Gregorian.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/Julian.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/JulianYearDay.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/MonthDay.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/OrdinalDate.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/Private.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar/WeekDate.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/CTimeval.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/POSIX.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/Scale.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/TAI.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/UTC.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock/UTCDiff.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Format.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Format/Parse.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/LocalTime.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeOfDay.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone.hi
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/HStime-${PKGVERSION}.o
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/include/HsTime.h
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/include/HsTimeConfig.h
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/libHStime-${PKGVERSION}.a
+lib/time-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/time-${PKGVERSION}/LICENSE
+@dirrm share/doc/time-${PKGVERSION}
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/include
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Format
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Clock
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/Calendar
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data/Time
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}/Data
+@dirrm lib/time-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/time-${PKGVERSION}
