@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 07:07:18 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM/TArray.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM/TChan.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM/TMVar.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM/TVar.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad/STM.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Sequential/STM.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Sequential
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Monad
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent/STM
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Concurrent
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
