@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/20 06:12:51 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/13 22:41:35 phonohawk Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 HS_DATAENC_BUILDLINK3_MK:=	${HS_DATAENC_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-dataenc
 
 .if ${HS_DATAENC_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-dataenc?=	build
-BUILDLINK_API_DEPENDS.hs-dataenc+=	hs-dataenc>=0.11
+BUILDLINK_API_DEPENDS.hs-dataenc+=	hs-dataenc>=0.11.1
 BUILDLINK_PKGSRCDIR.hs-dataenc?=	../../wip/hs-dataenc
 .endif	# HS_DATAENC_BUILDLINK3_MK
 
