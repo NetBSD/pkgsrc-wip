@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/20 07:57:59 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/13 22:36:38 phonohawk Exp $
 #
 
-DISTNAME=	hslogger-1.0.5
+DISTNAME=	hslogger-1.0.7
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=hslogger/1.0.5/}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://software.complete.org/hslogger
 COMMENT=	Logging framework for Haskell
 
-USE_LANGUAGES=	# none
-
-.include "../../wip/mk/haskell.mk" # This should be "../../mk/haskell.mk"
+.include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-network/buildlink3.mk"
+.include "../../wip/hs-time/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
