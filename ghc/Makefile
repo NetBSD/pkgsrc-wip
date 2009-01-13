@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/11 09:28:43 phonohawk Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/13 06:25:27 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.10.1
@@ -49,7 +49,7 @@ pre-configure:
 	cd ${WRKDIR}/ghc-6.6.1 && \
 		${CHMOD} +x ./distrib/hc-build && \
 		${ENV} ${CONFIGURE_ENV} ./distrib/hc-build -C --disable-readline --enable-hc-boot-unregisterised && \
-		${FIND} . -type f -and -perm +o+x -and -name '*-inplace' | \
+		${FIND} . -type f -and -perm -o+x -and -name '*-inplace' | \
 			while read i; do \
 				${CP} $$i ${BUILDLINK_DIR}/bin/`basename $$i | sed -e 's/-inplace//'`; \
 			done
