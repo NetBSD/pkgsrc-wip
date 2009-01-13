@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/11 10:57:19 phonohawk Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/13 03:16:35 phonohawk Exp $
 #
 
 DISTNAME=		libedit-20080712-2.11
@@ -18,5 +18,5 @@ USE_TOOLS+=			automake
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
