@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 07:01:06 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/13 13:11:58 phonohawk Exp $
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowIO.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowIf.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowList.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowNF.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowState.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowStrict.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ArrowTree.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/IOListArrow.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/IOStateListArrow.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ListArrow.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/ListArrows.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow/StateListArrow.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Control/Strategies/DeepSeq.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Data/AssocList.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Data/Atom.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Data/Char/UTF8.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Data/NavTree.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Data/Tree/Class.hi
@@ -94,6 +94,7 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/Validation.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/Validator.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/DataTypeLibW3C.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/Regex.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/RegexMatch.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/RegexParser.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/Version.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/XML/HXT/XPath.hi
@@ -134,7 +135,6 @@ share/doc/${PKGNAME}/LICENCE
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Tree
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Char
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Strategies
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control/Arrow
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Control
 @dirrm lib/${PKGNAME}/${HASKELL_VERSION}
