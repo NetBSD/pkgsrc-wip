@@ -1,7 +1,11 @@
+$NetBSD: patch-aa,v 1.6 2009/01/13 12:22:18 anielski Exp $
+
+This patch provides config file adapted to pkgsrc settings.
 --- conf/nginx.conf.orig	2008-02-28 22:44:16.000000000 +0200
 +++ conf/nginx.conf
 @@ -2,12 +2,11 @@
- #user  nobody;
+-#user  nobody;
++user   %%NGINX_USER%%  %%NGINX_GROUP%%;
  worker_processes  1;
  
 -#error_log  logs/error.log;
@@ -13,7 +17,7 @@
 +#error_log  %%NGINX_LOGDIR%%/error.log  notice;                                                                                                                                                                   
 +#error_log  %%NGINX_LOGDIR%%/error.log  info;
  
-+#pid        %%NGINX_LOGDIR%%/nginx.pid;
++#pid        %%NGINX_PIDDIR%%/nginx.pid;
  
  events {
      worker_connections  1024;

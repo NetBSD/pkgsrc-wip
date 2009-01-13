@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2008/07/27 18:40:48 rootcho Exp $
+# $NetBSD: Makefile,v 1.19 2009/01/13 12:22:18 anielski Exp $
 
-DISTNAME=		nginx-0.6.32
+DISTNAME=		nginx-0.6.34
 PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
@@ -11,21 +11,43 @@ COMMENT=		Lightweight HTTP server and mail proxy server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
+NGINX_USER?=		nginx
+NGINX_GROUP?=		nginx
+NGINX_DATADIR?=		${VARBASE}/db/nginx
+NGINX_LOGDIR?=		${VARBASE}/log/nginx
+NGINX_PIDDIR?=		${VARBASE}/run
+
+PKG_USERS_VARS+=	NGINX_USER
+PKG_GROUPS_VARS+=	NGINX_GROUP
+PKG_GROUPS=		${NGINX_GROUP}
+PKG_USERS=		${NGINX_USER}:${NGINX_GROUP}
+
+PKG_GECOS.${NGINX_USER}=NGINX server user
+PKG_HOME.${NGINX_USER}=	${NGINX_DATADIR}
+PKG_SHELL.${NGINX_USER}=${NOLOGIN}
+
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--user=${NGINX_USER}
+CONFIGURE_ARGS+=	--group=${NGINX_GROUP}
 CONFIGURE_ARGS+=	--with-ld-opt=-L${PREFIX}/lib\ -Wl,-R${PREFIX}/lib
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sbin-path=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--conf-path=${PKG_SYSCONFDIR}/nginx.conf
-CONFIGURE_ARGS+=	--pid-path=${VARBASE}/run/nginx.pid
+CONFIGURE_ARGS+=	--pid-path=${NGINX_PIDDIR}/nginx.pid
+CONFIGURE_ARGS+=	--lock-path=${NGINX_DATADIR}/nginx.lock
 CONFIGURE_ARGS+=	--error-log-path=${NGINX_LOGDIR}/error.log
 CONFIGURE_ARGS+=	--http-log-path=${NGINX_LOGDIR}/access.log
+CONFIGURE_ARGS+=	--http-client-body-temp-path=${NGINX_DATADIR}/client_body_temp
+CONFIGURE_ARGS+=	--http-proxy-temp-path=${NGINX_DATADIR}/proxy_temp
+CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 CONFIGURE_ARGS+=	--with-mail
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR=	nginx
-NGINX_LOGDIR?=		${VARBASE}/log/nginx
 
 EGDIR=			${PREFIX}/share/examples/nginx
 EGFILES=		fastcgi_params koi-utf koi-win mime.types nginx.conf win-utf
@@ -37,9 +59,10 @@ CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 RCD_SCRIPTS=		nginx
 
 INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
-OWN_DIRS=		${NGINX_LOGDIR}
+OWN_DIRS=		${NGINX_LOGDIR} ${NGINX_DATADIR}
+OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
 
-BUILD_DEFS+=		PKG_SYSCONFBASE NGINX_LOGDIR VARBASE
+BUILD_DEFS+=		PKG_SYSCONFBASE NGINX_LOGDIR ${NGINX_PIDDIR} VARBASE
 
 BUILD_TARGET=		build
 
@@ -48,6 +71,12 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	conf/nginx.conf
 SUBST_SED.paths=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,%%NGINX_LOGDIR%%,${NGINX_LOGDIR},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_PIDDIR%%,${NGINX_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_USER%%,${NGINX_USER},g'
+SUBST_SED.paths+=	-e 's,%%NGINX_GROUP%%,${NGINX_GROUP},g'
+
+MESSAGE_SUBST+=		NGINX_LOGDIR=${NGINX_LOGDIR}
+MESSAGE_SUBST+=		NGINX_PIDDIR=${NGINX_PIDDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
