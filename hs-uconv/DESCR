@@ -1,0 +1,2 @@
+This package provides a Haskell interface to ICU's uconv library
+function for string encoding conversion.
