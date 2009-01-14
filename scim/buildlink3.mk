@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/01/14 13:42:41 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/01/14 13:55:00 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SCIM_BUILDLINK3_MK:=	${SCIM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	scim
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}scim
 
 .if ${SCIM_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.scim+=	scim>=1.4.4
+BUILDLINK_API_DEPENDS.scim+=	scim>=1.4.7
 BUILDLINK_PKGSRCDIR.scim?=	../../wip/scim
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/scim-1.0\/1.4.0$$/ { next; }
