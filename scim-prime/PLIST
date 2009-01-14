@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 13:58:07 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/prime.la
+lib/scim-1.0/1.4.0/SetupUI/prime-imengine-setup.la
+share/locale/ja/LC_MESSAGES/scim-prime.mo
+share/scim/icons/scim-prime.png
+@comment in scim: @dirrm share/scim/icons
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine
