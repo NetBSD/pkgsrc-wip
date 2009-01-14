@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/10 09:42:44 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/14 10:51:54 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
@@ -82,6 +82,9 @@ lib/libkonqsidebarplugin.so.4.2.0
 lib/libkonquerorprivate.so
 lib/libkonquerorprivate.so.4
 lib/libkonquerorprivate.so.4.2.0
+man/man1/kappfinder.1
+man/man1/kbookmarkmerger.1
+man/man1/kfind.1
 share/applications/kde4/Home.desktop
 share/applications/kde4/dolphin.desktop
 share/applications/kde4/kappfinder.desktop
@@ -253,7 +256,6 @@ share/icons/oxygen/128x128/apps/wp.png
 share/icons/oxygen/128x128/apps/xclock.png
 share/icons/oxygen/128x128/apps/xfmail.png
 share/icons/oxygen/128x128/apps/xmag.png
-share/icons/oxygen/16x16/actions/view-file-columns.png
 share/icons/oxygen/16x16/apps/abiword.png
 share/icons/oxygen/16x16/apps/alevt.png
 share/icons/oxygen/16x16/apps/applixware.png
@@ -305,9 +307,7 @@ share/icons/oxygen/16x16/apps/xmms.png
 share/icons/oxygen/16x16/apps/xosview.png
 share/icons/oxygen/16x16/apps/xpaint.png
 share/icons/oxygen/16x16/apps/xv.png
-share/icons/oxygen/22x22/actions/view-file-columns.png
 share/icons/oxygen/22x22/apps/email.png
-share/icons/oxygen/32x32/actions/view-file-columns.png
 share/icons/oxygen/32x32/apps/abiword.png
 share/icons/oxygen/32x32/apps/alevt.png
 share/icons/oxygen/32x32/apps/applixware.png
@@ -362,7 +362,6 @@ share/icons/oxygen/32x32/apps/xmms.png
 share/icons/oxygen/32x32/apps/xosview.png
 share/icons/oxygen/32x32/apps/xpaint.png
 share/icons/oxygen/32x32/apps/xv.png
-share/icons/oxygen/48x48/actions/view-file-columns.png
 share/icons/oxygen/48x48/apps/abiword.png
 share/icons/oxygen/48x48/apps/applixware.png
 share/icons/oxygen/48x48/apps/blender.png
@@ -415,7 +414,6 @@ share/icons/oxygen/64x64/apps/wp.png
 share/icons/oxygen/64x64/apps/xclock.png
 share/icons/oxygen/64x64/apps/xfmail.png
 share/icons/oxygen/64x64/apps/xmag.png
-share/icons/oxygen/scalable/actions/view-file-columns.svgz
 share/icons/oxygen/scalable/apps/aim.svgz
 share/icons/oxygen/scalable/apps/antivirus.svgz
 share/icons/oxygen/scalable/apps/applixware.svgz
@@ -888,6 +886,7 @@ share/kde4/servicetypes/uasprovider.desktop
 @comment in kde: @dirrm share/kde4/services/kded
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/templates/.source
 @comment in kde: @dirrm share/kde/templates
 @comment in kde: @dirrm share/kde/config.kcfg
@@ -913,9 +912,13 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/kinfocenter/about
 @dirrm share/kde/apps/kinfocenter
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
+@comment in kde: @dirrm share/kde/apps/khtml
 @dirrm share/kde/apps/keditbookmarks
 @comment in kde: @dirrm share/kde/apps/kdm/pics/users
+@comment in kde: @dirrm share/kde/apps/kdm/pics
+@comment in kde: @dirrm share/kde/apps/kdm
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
+@comment in kde: @dirrm share/kde/apps/kcontrol
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmcss
@@ -945,32 +948,44 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/kde/apps/dolphinpart
 @dirrm share/kde/apps/dolphin
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/scalable/apps
-@comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
 @comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/64x64
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
-@comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
-@comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
-@comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
-@comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
 @comment in kde: @dirrm share/icons/oxygen/128x128/apps
+@comment in kde: @dirrm share/icons/oxygen/128x128
+@comment in kde: @dirrm share/icons/oxygen
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/konsole
 @dirrm share/doc/kde/HTML/en/konqueror
@@ -996,6 +1011,9 @@ share/kde4/servicetypes/uasprovider.desktop
 @dirrm share/doc/kde/HTML/en/kdepasswd
 @dirrm share/doc/kde/HTML/en/dolphin
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4

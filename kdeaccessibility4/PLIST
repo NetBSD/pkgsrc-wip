@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/10 09:45:39 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/01/14 10:51:53 mwdavies Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -20,6 +20,9 @@ lib/kde4/libkttsjobmgrpart.so
 lib/libkttsd.so
 lib/libkttsd.so.4
 lib/libkttsd.so.4.2.0
+man/man1/kmag.1
+man/man1/kmousetool.1
+man/man1/kmouth.1
 share/applications/kde4/kmag.desktop
 share/applications/kde4/kmousetool.desktop
 share/applications/kde4/kmouth.desktop
@@ -333,8 +336,8 @@ share/icons/mono/scalable/actions/document-encrypt.svgz
 share/icons/mono/scalable/actions/document-export.svgz
 share/icons/mono/scalable/actions/document-import.svgz
 share/icons/mono/scalable/actions/document-new.svgz
-share/icons/mono/scalable/actions/document-open.svgz
 share/icons/mono/scalable/actions/document-open-folder.svgz
+share/icons/mono/scalable/actions/document-open.svgz
 share/icons/mono/scalable/actions/document-preview-archive.svgz
 share/icons/mono/scalable/actions/document-print-frame.svgz
 share/icons/mono/scalable/actions/document-print-preview.svgz
@@ -1258,9 +1261,9 @@ share/icons/mono/scalable/actions/zoom-best-fit.svgz
 share/icons/mono/scalable/actions/zoom-in.svgz
 share/icons/mono/scalable/actions/zoom-original.svgz
 share/icons/mono/scalable/actions/zoom-out.svgz
+share/icons/mono/scalable/actions/zoom.svgz
 share/icons/mono/scalable/actions/zoom_disabled.svgz
 share/icons/mono/scalable/actions/zoom_enabled.svgz
-share/icons/mono/scalable/actions/zoom.svgz
 share/icons/mono/scalable/apps/VBox.svgz
 share/icons/mono/scalable/apps/abakus.svgz
 share/icons/mono/scalable/apps/abiword.svgz
@@ -1660,8 +1663,8 @@ share/icons/mono/scalable/apps/preferences-desktop-printer.svgz
 share/icons/mono/scalable/apps/preferences-desktop-screensaver.svgz
 share/icons/mono/scalable/apps/preferences-desktop-sound.svgz
 share/icons/mono/scalable/apps/preferences-desktop-text-to-speech.svgz
-share/icons/mono/scalable/apps/preferences-desktop-theme.svgz
 share/icons/mono/scalable/apps/preferences-desktop-theme-style.svgz
+share/icons/mono/scalable/apps/preferences-desktop-theme.svgz
 share/icons/mono/scalable/apps/preferences-desktop-user.svgz
 share/icons/mono/scalable/apps/preferences-desktop-wallpaper.svgz
 share/icons/mono/scalable/apps/preferences-system-bluetooth.svgz
@@ -2214,6 +2217,7 @@ share/kde4/servicetypes/kttsd_filterplugin.desktop
 share/kde4/servicetypes/kttsd_synthplugin.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/kttsd/xslt
 @dirrm share/kde/apps/kttsd/xmltransformer
@@ -2245,6 +2249,7 @@ share/kde4/servicetypes/kttsd_synthplugin.desktop
 @dirrm share/kde/apps/kmag
 @comment in kde: @dirrm share/kde/apps/color-schemes
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @dirrm share/icons/mono/scalable/status
 @dirrm share/icons/mono/scalable/places
 @dirrm share/icons/mono/scalable/mimetypes
@@ -2270,12 +2275,16 @@ share/kde4/servicetypes/kttsd_synthplugin.desktop
 @dirrm share/icons/mono
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/kttsd
@@ -2283,5 +2292,8 @@ share/kde4/servicetypes/kttsd_synthplugin.desktop
 @dirrm share/doc/kde/HTML/en/kmousetool
 @dirrm share/doc/kde/HTML/en/kmag
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4

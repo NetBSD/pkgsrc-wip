@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/01/10 10:41:48 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/01/14 10:51:55 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -132,7 +132,31 @@ lib/libkompareinterface.so.4.2.0
 lib/strigi/strigila_diff.so
 lib/strigi/strigila_po.so
 lib/strigi/strigita_ts.so
+man/man1/adddebug.1
 man/man1/cervisia.1
+man/man1/cheatmake.1
+man/man1/create_cvsignore.1
+man/man1/create_makefile.1
+man/man1/create_makefiles.1
+man/man1/cvscheck.1
+man/man1/cvslastchange.1
+man/man1/cvslastlog.1
+man/man1/cvsrevertlast.1
+man/man1/cxxmetric.1
+man/man1/demangle.1
+man/man1/extend_dmalloc.1
+man/man1/extractrc.1
+man/man1/fixincludes.1
+man/man1/kate.1
+man/man1/po2xml.1
+man/man1/pruneemptydirs.1
+man/man1/qtdoc.1
+man/man1/reportview.1
+man/man1/split2po.1
+man/man1/swappo.1
+man/man1/transxx.1
+man/man1/xml2pot.1
+man/man1/zonetab2pot.py.1
 share/applications/kde4/cervisia.desktop
 share/applications/kde4/kapptemplate.desktop
 share/applications/kde4/kate.desktop
@@ -284,9 +308,9 @@ share/icons/hicolor/16x16/actions/prevfuzzyuntrans.png
 share/icons/hicolor/16x16/actions/prevuntranslated.png
 share/icons/hicolor/16x16/actions/search2msgstr.png
 share/icons/hicolor/16x16/actions/transsearch.png
+share/icons/hicolor/16x16/apps/cervisia.png
 share/icons/hicolor/16x16/apps/kapptemplate.png
 share/icons/hicolor/16x16/apps/kate.png
-share/icons/hicolor/16x16/apps/cervisia.png
 share/icons/hicolor/16x16/apps/kbugbuster.png
 share/icons/hicolor/16x16/apps/kompare.png
 share/icons/hicolor/16x16/apps/kuiviewer.png
@@ -307,9 +331,9 @@ share/icons/hicolor/22x22/actions/prevfuzzyuntrans.png
 share/icons/hicolor/22x22/actions/prevuntranslated.png
 share/icons/hicolor/22x22/actions/search2msgstr.png
 share/icons/hicolor/22x22/actions/transsearch.png
+share/icons/hicolor/22x22/apps/cervisia.png
 share/icons/hicolor/22x22/apps/kapptemplate.png
 share/icons/hicolor/22x22/apps/kate.png
-share/icons/hicolor/22x22/apps/cervisia.png
 share/icons/hicolor/22x22/apps/kbugbuster.png
 share/icons/hicolor/22x22/apps/kompare.png
 share/icons/hicolor/22x22/apps/umbrello.png
@@ -330,9 +354,9 @@ share/icons/hicolor/32x32/actions/prevfuzzyuntrans.png
 share/icons/hicolor/32x32/actions/prevuntranslated.png
 share/icons/hicolor/32x32/actions/search2msgstr.png
 share/icons/hicolor/32x32/actions/transsearch.png
+share/icons/hicolor/32x32/apps/cervisia.png
 share/icons/hicolor/32x32/apps/kapptemplate.png
 share/icons/hicolor/32x32/apps/kate.png
-share/icons/hicolor/32x32/apps/cervisia.png
 share/icons/hicolor/32x32/apps/kbugbuster.png
 share/icons/hicolor/32x32/apps/kcachegrind.png
 share/icons/hicolor/32x32/apps/kompare.png
@@ -341,9 +365,9 @@ share/icons/hicolor/32x32/apps/lokalize.png
 share/icons/hicolor/32x32/apps/umbrello.png
 share/icons/hicolor/32x32/mimetypes/umbrellofile.png
 share/icons/hicolor/48x48/actions/approved.png
+share/icons/hicolor/48x48/apps/cervisia.png
 share/icons/hicolor/48x48/apps/kapptemplate.png
 share/icons/hicolor/48x48/apps/kate.png
-share/icons/hicolor/48x48/apps/cervisia.png
 share/icons/hicolor/48x48/apps/kbugbuster.png
 share/icons/hicolor/48x48/apps/kcachegrind.png
 share/icons/hicolor/48x48/apps/kompare.png
@@ -493,9 +517,9 @@ share/kde/apps/kate/icons/oxygen/16x16/actions/modonhd.png
 share/kde/apps/kate/icons/oxygen/16x16/actions/null.png
 share/kde/apps/kate/kateui.rc
 share/kde/apps/kate/plugins/findinfiles/ui.rc
-share/kde/apps/kate/plugins/kateexternaltools/ui.rc
 share/kde/apps/kate/plugins/katebuild/ui.rc
 share/kde/apps/kate/plugins/katectags/ui.rc
+share/kde/apps/kate/plugins/kateexternaltools/ui.rc
 share/kde/apps/kate/plugins/katefiletemplates/templates/cppgpl.cpp.katetemplate
 share/kde/apps/kate/plugins/katefiletemplates/templates/cppgpl.hh.katetemplate
 share/kde/apps/kate/plugins/katefiletemplates/templates/cpplgpl.cpp.katetemplate
@@ -541,6 +565,7 @@ share/kde/apps/kdevappwizard/template_previews/plasma-applet.png
 share/kde/apps/kdevappwizard/template_previews/pykde4.png
 share/kde/apps/kdevappwizard/template_previews/pyqt4app.png
 share/kde/apps/kdevappwizard/template_previews/qmake4gui.png
+share/kde/apps/kdevappwizard/template_previews/runner.png
 share/kde/apps/kdevappwizard/templates/akonadiresource.tar.bz2
 share/kde/apps/kdevappwizard/templates/kapp4.tar.bz2
 share/kde/apps/kdevappwizard/templates/kderubyapp.tar.bz2
@@ -548,8 +573,8 @@ share/kde/apps/kdevappwizard/templates/kpartapp.tar.bz2
 share/kde/apps/kdevappwizard/templates/plasmoid.tar.bz2
 share/kde/apps/kdevappwizard/templates/pykde4app.tar.bz2
 share/kde/apps/kdevappwizard/templates/pyqt4app.tar.bz2
-share/kde/apps/kdevappwizard/templates/runner.tar.bz2
 share/kde/apps/kdevappwizard/templates/qmake_qt4guiapp.tar.bz2
+share/kde/apps/kdevappwizard/templates/runner.tar.bz2
 share/kde/apps/kio_perldoc/kio_perldoc.css
 share/kde/apps/kio_perldoc/pod2html.pl
 share/kde/apps/kompare/komparepartui.rc
@@ -775,12 +800,13 @@ share/kde4/servicetypes/kateplugin.desktop
 share/kde4/servicetypes/komparenavigationpart.desktop
 share/kde4/servicetypes/kompareviewpart.desktop
 share/strigi/fieldproperties/strigi_translation.fieldproperties
-@comment in strigi: @dirrm share/strigi/fieldproperties
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services/kresources/kcal
+@comment in kde: @dirrm share/kde4/services/kresources
 @comment in kde: @dirrm share/kde4/services/kded
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/umbrello/pics
@@ -809,6 +835,7 @@ share/strigi/fieldproperties/strigi_translation.fieldproperties
 @dirrm share/kde/apps/kbugbuster/pics
 @dirrm share/kde/apps/kbugbuster
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
+@comment in kde: @dirrm share/kde/apps/katepart
 @dirrm share/kde/apps/kate/plugins/katetextfilter
 @dirrm share/kde/apps/kate/plugins/katetabbarextension
 @dirrm share/kde/apps/kate/plugins/katesymbolviewer
@@ -830,33 +857,54 @@ share/strigi/fieldproperties/strigi_translation.fieldproperties
 @dirrm share/kde/apps/kate/icons
 @dirrm share/kde/apps/kate
 @comment in kde: @dirrm share/kde/apps/kabc/formats
+@comment in kde: @dirrm share/kde/apps/kabc
 @dirrm share/kde/apps/cervisiapart
 @dirrm share/kde/apps/cervisia
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
 @comment in kde: @dirrm share/icons/oxygen/64x64/actions
+@comment in kde: @dirrm share/icons/oxygen/64x64
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
 @comment in kde: @dirrm share/icons/oxygen/128x128/actions
+@comment in kde: @dirrm share/icons/oxygen/128x128
+@comment in kde: @dirrm share/icons/oxygen
 @comment in kde: @dirrm share/icons/locolor/32x32/actions
+@comment in kde: @dirrm share/icons/locolor/32x32
 @comment in kde: @dirrm share/icons/locolor/16x16/actions
+@comment in kde: @dirrm share/icons/locolor/16x16
+@comment in kde: @dirrm share/icons/locolor
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/umbrello
 @dirrm share/doc/kde/HTML/en/lokalize
 @dirrm share/doc/kde/HTML/en/kompare
@@ -868,8 +916,11 @@ share/strigi/fieldproperties/strigi_translation.fieldproperties
 @dirrm share/doc/kde/HTML/en/kapptemplate
 @dirrm share/doc/kde/HTML/en/cervisia
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4
 @dirrm include/kate

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/01/10 10:27:07 mwdavies Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -9,6 +9,8 @@ CONFLICTS=	kopete-[0-9]*
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # for kded_dnssdwatcher
 UNLIMIT_RESOURCES+=	datasize memorysize stacksize

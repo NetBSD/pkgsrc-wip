@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/10 09:54:03 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/14 10:51:53 mwdavies Exp $
 
 DISTNAME=	kdeartwork-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -10,6 +10,8 @@ CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/lib
 CMAKE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
 
 #BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.xscreensaver+=  xscreensaver>=5.00
 

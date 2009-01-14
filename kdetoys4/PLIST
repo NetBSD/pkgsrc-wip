@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/09/03 22:29:39 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/14 10:51:55 mwdavies Exp $
 bin/amor
 bin/kteatime
 bin/ktux
@@ -7,6 +7,7 @@ bin/kweatherservice
 lib/kde4/kcm_weather.so
 lib/kde4/kcm_weatherservice.so
 lib/libkdeinit4_kweatherreport.so
+man/man6/amor.6
 share/applications/kde4/amor.desktop
 share/applications/kde4/kteatime.desktop
 share/dbus-1/interfaces/org.kde.amor.xml
@@ -508,6 +509,7 @@ share/kde4/services/kcmweatherservice.desktop
 share/kde4/services/kweatherservice.desktop
 @comment in kde: @dirrm share/kde4/services/ScreenSavers
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @dirrm share/kde/apps/kweatherservice
 @dirrm share/kde/apps/kweather
 @dirrm share/kde/apps/ktux/sprites
@@ -527,18 +529,30 @@ share/kde4/services/kweatherservice.desktop
 @dirrm share/kde/apps/amor/pics
 @dirrm share/kde/apps/amor
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/kweather
 @dirrm share/doc/kde/HTML/en/kteatime
 @dirrm share/doc/kde/HTML/en/amor
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4

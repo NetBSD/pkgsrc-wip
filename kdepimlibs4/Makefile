@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2009/01/10 10:34:45 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/14 10:51:55 mwdavies Exp $
 
 DISTNAME=	kdepimlibs-${_KDE_VERSION}
 CATEGORIES=	x11
 COMMENT=	Support libraries for PIM for the KDE integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDEPimLibsDependencies.cmake
 

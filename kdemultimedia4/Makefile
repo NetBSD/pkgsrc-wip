@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/10 10:20:45 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
@@ -7,6 +7,8 @@ COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xine-xcb>=1.1.9:../../wip/xine-xcb
 

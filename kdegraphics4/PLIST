@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/10 10:15:02 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/01/14 10:51:54 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -409,15 +409,17 @@ share/kde/apps/okular/pics/rightarrow.png
 share/kde/apps/okular/pics/rightpointer.png
 share/kde/apps/okular/pics/stamps.svg
 share/kde/apps/okular/pics/star.png
+share/kde/apps/okular/pics/tool-ellipse-okular.png
+share/kde/apps/okular/pics/tool-highlighter-okular.png
+share/kde/apps/okular/pics/tool-ink-okular.png
+share/kde/apps/okular/pics/tool-line-okular.png
+share/kde/apps/okular/pics/tool-note-inline-okular.png
 share/kde/apps/okular/pics/tool-note-inline.png
+share/kde/apps/okular/pics/tool-note-okular.png
 share/kde/apps/okular/pics/tool-note.png
-share/kde/apps/okular/pics/tool-stamp.png
-share/kde/apps/okular/pics/tool_ellipse_okular.png
-share/kde/apps/okular/pics/tool_hl_yellow.png
-share/kde/apps/okular/pics/tool_ink_green.png
-share/kde/apps/okular/pics/tool_line_okular.png
-share/kde/apps/okular/pics/tool_note.png
-share/kde/apps/okular/pics/tool_polygon_okular.png
+share/kde/apps/okular/pics/tool-polygon-okular.png
+share/kde/apps/okular/pics/tool-stamp-okular.png
+share/kde/apps/okular/pics/tool-underline-okular.png
 share/kde/apps/okular/pics/uparrow.png
 share/kde/apps/okular/pics/upleftarrow.png
 share/kde/apps/okular/shell.rc
@@ -469,6 +471,7 @@ share/kde4/servicetypes/okularGenerator.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/svgpart
@@ -509,26 +512,40 @@ share/kde4/servicetypes/okularGenerator.desktop
 @dirrm share/kde/apps/gwenview
 @dirrm share/kde/apps/gvpart
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps/cmake
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/okular
 @dirrm share/doc/kde/HTML/en/ksnapshot
 @dirrm share/doc/kde/HTML/en/kruler
 @dirrm share/doc/kde/HTML/en/kolourpaint
 @dirrm share/doc/kde/HTML/en/kgamma
 @dirrm share/doc/kde/HTML/en/kcontrol/kamera
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/gwenview
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4
 @dirrm include/okular/interfaces

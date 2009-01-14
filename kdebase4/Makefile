@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/11/04 10:17:26 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -7,6 +7,8 @@ COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/kde4/kde4.mk"
 

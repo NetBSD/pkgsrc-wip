@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/10 10:52:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/14 10:51:52 mwdavies Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -252,9 +252,6 @@ share/doc/kde/HTML/en_GB/kinfocenter/usb/index.docbook
 share/doc/kde/HTML/en_GB/kinfocenter/xserver/common
 share/doc/kde/HTML/en_GB/kinfocenter/xserver/index.cache.bz2
 share/doc/kde/HTML/en_GB/kinfocenter/xserver/index.docbook
-share/doc/kde/HTML/en_GB/kleopatra/common
-share/doc/kde/HTML/en_GB/kleopatra/index.cache.bz2
-share/doc/kde/HTML/en_GB/kleopatra/index.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/bzip.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/bzip2.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/cgi.docbook
@@ -297,6 +294,9 @@ share/doc/kde/HTML/en_GB/kioslave/kioslave/telnet.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/thumbnail.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/webdav.docbook
 share/doc/kde/HTML/en_GB/kioslave/kioslave/webdavs.docbook
+share/doc/kde/HTML/en_GB/kleopatra/common
+share/doc/kde/HTML/en_GB/kleopatra/index.cache.bz2
+share/doc/kde/HTML/en_GB/kleopatra/index.docbook
 share/doc/kde/HTML/en_GB/klipper/common
 share/doc/kde/HTML/en_GB/klipper/index.cache.bz2
 share/doc/kde/HTML/en_GB/klipper/index.docbook
@@ -919,6 +919,8 @@ share/locale/en_GB/entry.desktop
 @dirrm share/kde/apps/klettres/en_GB/alpha
 @dirrm share/kde/apps/klettres/en_GB
 @comment in kde: @dirrm share/kde/apps/klettres
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @dirrm share/doc/kde/HTML/en_GB/umbrello
 @dirrm share/doc/kde/HTML/en_GB/kxkb
 @dirrm share/doc/kde/HTML/en_GB/kwrite
@@ -1018,3 +1020,5 @@ share/locale/en_GB/entry.desktop
 @dirrm share/doc/kde/HTML/en_GB/kaddressbook
 @dirrm share/doc/kde/HTML/en_GB/cervisia
 @comment in kde: @dirrm share/doc/kde/HTML/en_GB
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde

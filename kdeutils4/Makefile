@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/01/10 20:21:39 mwdavies Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/14 10:51:55 mwdavies Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -10,6 +10,8 @@ COMMENT=	Utilities for the KDE integrated X11 desktop
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"

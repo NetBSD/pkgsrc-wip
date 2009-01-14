@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/09/17 10:53:04 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/14 10:51:55 mwdavies Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -7,6 +7,8 @@ COMMENT=	Personal Information Management tools for the KDE desktop
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CMAKE_ARGS+=-DMAL_BASE:STRING=${BUILDLINK_PREFIX.libmal}
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:20:45 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
 bin/dragon
 bin/juk
 bin/kmix
@@ -155,11 +155,11 @@ share/kde/apps/profiles/kscd.profile.xml
 share/kde/apps/solid/actions/dragonplayer-opendvd.desktop
 share/kde/autostart/kmix_autostart.desktop
 share/kde/autostart/restore_kmix_volumes.desktop
-share/kde/config/dragonplayerrc
 share/kde/config.kcfg/audiocd_lame_encoder.kcfg
 share/kde/config.kcfg/audiocd_vorbis_encoder.kcfg
 share/kde/config.kcfg/kscd.kcfg
 share/kde/config.kcfg/libkcddb.kcfg
+share/kde/config/dragonplayerrc
 share/kde4/services/ServiceMenus/audiocd_play.desktop
 share/kde4/services/ServiceMenus/dragonplayer_play_dvd.desktop
 share/kde4/services/ServiceMenus/jukservicemenu.desktop
@@ -170,12 +170,16 @@ share/kde4/services/kmixctrl_restore.desktop
 share/kde4/services/libkcddb.desktop
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/profiles
 @dirrm share/kde/apps/kscd/skin
 @dirrm share/kde/apps/kscd
 @comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders
+@comment in kde: @dirrm share/kde/apps/konqsidebartng
 @dirrm share/kde/apps/kmix/profiles
 @dirrm share/kde/apps/kmix/pics
 @dirrm share/kde/apps/kmix
@@ -184,20 +188,46 @@ share/kde4/services/libkcddb.desktop
 @dirrm share/kde/apps/juk
 @dirrm share/kde/apps/dragonplayer
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
+@comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
+@comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
+@comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
+@comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
+@comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
+@comment in kde: @dirrm share/icons/oxygen
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kioslave/audiocd
+@dirrm share/doc/kde/HTML/en/kioslave
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/dragonplayer
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4
 @dirrm include/libkcompactdisc
 @dirrm include/libkcddb

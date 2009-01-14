@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/01/10 10:41:48 mwdavies Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/14 10:51:55 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -10,6 +10,8 @@ CONFLICTS+=	umbrello-[0-9]*
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CMAKE_ARGS+=	-DBUILD_kmtrace:BOOL=OFF
 

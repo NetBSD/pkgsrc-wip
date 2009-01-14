@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/07/26 23:11:54 mwdavies Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/14 10:51:55 mwdavies Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
 CATEGORIES=	www
@@ -6,7 +6,9 @@ COMMENT=	HTML editor and tools suitable for experienced web developers
 
 .include "../../wip/kde4/Makefile.kde4"
 
-BUILD_MAKE_FLAGS+= VERBOSE=1
+# BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/kde4/kde4.mk"
 

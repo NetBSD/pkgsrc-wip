@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/10 10:34:45 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/14 10:51:55 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -336,9 +336,10 @@ include/syndication/specificitem.h
 include/syndication/specificitemvisitor.h
 include/syndication/syndication.h
 include/syndication/tools.h
-lib/KdepimLibs/cmake/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
-lib/KdepimLibs/cmake/KDEPimLibsLibraryTargetsWithPrefix.cmake
-lib/KdepimLibs/cmake/KdepimLibsConfig.cmake
+lib/KdepimLibs-4.2.0/cmake/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
+lib/KdepimLibs-4.2.0/cmake/KDEPimLibsLibraryTargetsWithPrefix.cmake
+lib/KdepimLibs-4.2.0/cmake/KdepimLibsConfig.cmake
+lib/KdepimLibs-4.2.0/cmake/KdepimLibsConfigVersion.cmake
 lib/gpgmepp/GpgmeppConfig.cmake
 lib/gpgmepp/GpgmeppLibraryDepends.cmake
 lib/kde4/kabc_directory.so
@@ -445,7 +446,6 @@ share/kde/apps/cmake/modules/FindLdap.cmake
 share/kde/apps/cmake/modules/FindLibical.cmake
 share/kde/apps/cmake/modules/FindQGpgme.cmake
 share/kde/apps/cmake/modules/KDEPimLibsDependencies.cmake
-share/kde/apps/cmake/modules/KDEPimLibsInformation.cmake
 share/kde/apps/kabc/countrytransl.map
 share/kde/apps/kabc/formats/binary.desktop
 share/kde/apps/kconf_update/mailtransports.upd
@@ -495,8 +495,8 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm lib/kde4
 @dirrm lib/gpgmepp
-@dirrm lib/KdepimLibs/cmake
-@dirrm lib/KdepimLibs
+@dirrm lib/KdepimLibs-4.2.0/cmake
+@dirrm lib/KdepimLibs-4.2.0
 @dirrm include/syndication/rss2
 @dirrm include/syndication/rdf
 @dirrm include/syndication/atom

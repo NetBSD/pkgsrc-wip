@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/10 10:47:32 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/14 10:51:55 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -16,7 +16,6 @@ bin/sweeper
 lib/kde4/kcm_kdf.so
 lib/kde4/kcm_kwallet.so
 lib/kde4/kerfuffle_7zip.so
-lib/kde4/kerfuffle_bk.so
 lib/kde4/kerfuffle_libarchive.so
 lib/kde4/kerfuffle_libgz.so
 lib/kde4/kerfuffle_libzip.so
@@ -39,6 +38,7 @@ lib/liboktetagui.so.4.2.0
 lib/libsuperkaramba.so
 lib/libsuperkaramba.so.4
 lib/libsuperkaramba.so.4.2.0
+man/man1/ark.1
 share/applications/kde4/KCharSelect.desktop
 share/applications/kde4/KFloppy.desktop
 share/applications/kde4/ark.desktop
@@ -242,7 +242,6 @@ share/kde4/services/ark_part.desktop
 share/kde4/services/kbytearrayedit.desktop
 share/kde4/services/kcmdf.desktop
 share/kde4/services/kerfuffle_7zip.desktop
-share/kde4/services/kerfuffle_bk.desktop
 share/kde4/services/kerfuffle_libarchive.desktop
 share/kde4/services/kerfuffle_libgz.desktop
 share/kde4/services/kerfuffle_libzip.desktop
@@ -256,6 +255,7 @@ share/kde4/servicetypes/kerfufflePlugin.desktop
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
@@ -295,17 +295,30 @@ share/kde4/servicetypes/kerfufflePlugin.desktop
 @dirrm share/kde/apps/kcalc
 @dirrm share/kde/apps/ark
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
+@comment in kde: @dirrm share/icons/oxygen/16x16
+@comment in kde: @dirrm share/icons/oxygen
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/superkaramba
 @dirrm share/doc/kde/HTML/en/okteta
 @dirrm share/doc/kde/HTML/en/kwallet
@@ -313,10 +326,15 @@ share/kde4/servicetypes/kerfufflePlugin.desktop
 @dirrm share/doc/kde/HTML/en/kgpg
 @dirrm share/doc/kde/HTML/en/kfloppy
 @dirrm share/doc/kde/HTML/en/kdf
+@dirrm share/doc/kde/HTML/en/kcontrol/blockdevices
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kcharselect
 @dirrm share/doc/kde/HTML/en/kcalc
 @dirrm share/doc/kde/HTML/en/ark
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4

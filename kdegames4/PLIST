@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:06:49 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
 bin/bomber
 bin/bovo
 bin/kapman
@@ -173,7 +173,6 @@ share/applications/kde4/kdiamond.desktop
 share/applications/kde4/kfourinline.desktop
 share/applications/kde4/killbots.desktop
 share/applications/kde4/kiriki.desktop
-share/applications/kde4/ksirkskineditor.desktop
 share/applications/kde4/kjumpingcube.desktop
 share/applications/kde4/klines.desktop
 share/applications/kde4/kmahjongg.desktop
@@ -187,6 +186,7 @@ share/applications/kde4/kreversi.desktop
 share/applications/kde4/ksame.desktop
 share/applications/kde4/kshisen.desktop
 share/applications/kde4/ksirk.desktop
+share/applications/kde4/ksirkskineditor.desktop
 share/applications/kde4/kspaceduel.desktop
 share/applications/kde4/ksquares.desktop
 share/applications/kde4/ksudoku.desktop
@@ -421,6 +421,7 @@ share/doc/kde/HTML/en/lskat/index.cache.bz2
 share/doc/kde/HTML/en/lskat/index.docbook
 share/doc/kde/HTML/en/lskat/lskat_screen_01.png
 share/icons/hicolor/128x128/apps/bomber.png
+share/icons/hicolor/128x128/apps/kapman.png
 share/icons/hicolor/128x128/apps/katomic.png
 share/icons/hicolor/128x128/apps/kbattleship.png
 share/icons/hicolor/128x128/apps/kblackbox.png
@@ -444,12 +445,14 @@ share/icons/hicolor/128x128/apps/kpat.png
 share/icons/hicolor/128x128/apps/kreversi.png
 share/icons/hicolor/128x128/apps/ksame.png
 share/icons/hicolor/128x128/apps/kshisen.png
+share/icons/hicolor/128x128/apps/ksirk.png
 share/icons/hicolor/128x128/apps/kspaceduel.png
 share/icons/hicolor/128x128/apps/ksquares.png
 share/icons/hicolor/128x128/apps/ksudoku.png
 share/icons/hicolor/128x128/apps/ktuberling.png
 share/icons/hicolor/128x128/apps/kubrick.png
 share/icons/hicolor/128x128/apps/lskat.png
+share/icons/hicolor/16x16/apps/kapman.png
 share/icons/hicolor/16x16/apps/katomic.png
 share/icons/hicolor/16x16/apps/kbattleship.png
 share/icons/hicolor/16x16/apps/kblackbox.png
@@ -480,6 +483,7 @@ share/icons/hicolor/16x16/apps/ksudoku.png
 share/icons/hicolor/16x16/apps/ktuberling.png
 share/icons/hicolor/16x16/apps/kubrick.png
 share/icons/hicolor/16x16/apps/lskat.png
+share/icons/hicolor/22x22/apps/kapman.png
 share/icons/hicolor/22x22/apps/katomic.png
 share/icons/hicolor/22x22/apps/kbattleship.png
 share/icons/hicolor/22x22/apps/kblackbox.png
@@ -503,12 +507,14 @@ share/icons/hicolor/22x22/apps/kpat.png
 share/icons/hicolor/22x22/apps/kreversi.png
 share/icons/hicolor/22x22/apps/ksame.png
 share/icons/hicolor/22x22/apps/kshisen.png
+share/icons/hicolor/22x22/apps/ksirk.png
 share/icons/hicolor/22x22/apps/kspaceduel.png
 share/icons/hicolor/22x22/apps/ksquares.png
 share/icons/hicolor/22x22/apps/ktuberling.png
 share/icons/hicolor/22x22/apps/kubrick.png
 share/icons/hicolor/22x22/apps/lskat.png
 share/icons/hicolor/32x32/apps/bomber.png
+share/icons/hicolor/32x32/apps/kapman.png
 share/icons/hicolor/32x32/apps/katomic.png
 share/icons/hicolor/32x32/apps/kbattleship.png
 share/icons/hicolor/32x32/apps/kblackbox.png
@@ -540,6 +546,7 @@ share/icons/hicolor/32x32/apps/ktuberling.png
 share/icons/hicolor/32x32/apps/kubrick.png
 share/icons/hicolor/32x32/apps/lskat.png
 share/icons/hicolor/48x48/apps/bomber.png
+share/icons/hicolor/48x48/apps/kapman.png
 share/icons/hicolor/48x48/apps/katomic.png
 share/icons/hicolor/48x48/apps/kbattleship.png
 share/icons/hicolor/48x48/apps/kblackbox.png
@@ -570,6 +577,7 @@ share/icons/hicolor/48x48/apps/ktuberling.png
 share/icons/hicolor/48x48/apps/kubrick.png
 share/icons/hicolor/48x48/apps/lskat.png
 share/icons/hicolor/64x64/apps/bomber.png
+share/icons/hicolor/64x64/apps/kapman.png
 share/icons/hicolor/64x64/apps/katomic.png
 share/icons/hicolor/64x64/apps/kbattleship.png
 share/icons/hicolor/64x64/apps/kblackbox.png
@@ -593,6 +601,7 @@ share/icons/hicolor/64x64/apps/kpat.png
 share/icons/hicolor/64x64/apps/kreversi.png
 share/icons/hicolor/64x64/apps/ksame.png
 share/icons/hicolor/64x64/apps/kshisen.png
+share/icons/hicolor/64x64/apps/ksirk.png
 share/icons/hicolor/64x64/apps/kspaceduel.png
 share/icons/hicolor/64x64/apps/ksquares.png
 share/icons/hicolor/64x64/apps/ktuberling.png
@@ -601,6 +610,7 @@ share/icons/hicolor/64x64/apps/lskat.png
 share/icons/hicolor/scalable/apps/bomber.svgz
 share/icons/hicolor/scalable/apps/kapman.svgz
 share/icons/hicolor/scalable/apps/kdiamond.svgz
+share/icons/hicolor/scalable/apps/kmahjongg.svgz
 share/icons/hicolor/scalable/apps/knetwalk.svgz
 share/icons/locolor/16x16/apps/ksirk.png
 share/icons/locolor/32x32/apps/ksirk.png
@@ -622,9 +632,12 @@ share/icons/oxygen/scalable/actions/lastmoves.svgz
 share/icons/oxygen/scalable/actions/legalmoves.svgz
 share/icons/oxygen/scalable/apps/kollision.svgz
 share/kde/apps/bomber/bomberui.rc
+share/kde/apps/bomber/themes/Lava-Island.desktop
+share/kde/apps/bomber/themes/Lava-Island.svgz
 share/kde/apps/bomber/themes/kbomber.desktop
 share/kde/apps/bomber/themes/kbomber.png
 share/kde/apps/bomber/themes/kbomber.svgz
+share/kde/apps/bomber/themes/lava-Island.png
 share/kde/apps/bovo/bovoui.rc
 share/kde/apps/bovo/themes/gomoku/theme.svg
 share/kde/apps/bovo/themes/gomoku/themerc
@@ -975,6 +988,10 @@ share/kde/apps/kapman/themes/invisible_preview.png
 share/kde/apps/kapman/themes/matches.desktop
 share/kde/apps/kapman/themes/matches.svgz
 share/kde/apps/kapman/themes/matches_preview.png
+share/kde/apps/kapman/themes/mountain.copyright
+share/kde/apps/kapman/themes/mountain.desktop
+share/kde/apps/kapman/themes/mountain.svgz
+share/kde/apps/kapman/themes/mountain_preview.png
 share/kde/apps/kapman/themes/retro.desktop
 share/kde/apps/kapman/themes/retro.svgz
 share/kde/apps/kapman/themes/retro_preview.png
@@ -1298,12 +1315,12 @@ share/kde/apps/konquest/pics/default_theme.svgz
 share/kde/apps/konquest/pics/konquest-splash.png
 share/kde/apps/kpat/background.svg
 share/kde/apps/kpat/demo_bubble.svg
-share/kde/apps/kpat/demos/demo_0.png
 share/kde/apps/kpat/demos/demo_1.png
 share/kde/apps/kpat/demos/demo_10.png
 share/kde/apps/kpat/demos/demo_11.png
 share/kde/apps/kpat/demos/demo_12.png
-share/kde/apps/kpat/demos/demo_15.png
+share/kde/apps/kpat/demos/demo_17.png
+share/kde/apps/kpat/demos/demo_18.png
 share/kde/apps/kpat/demos/demo_2.png
 share/kde/apps/kpat/demos/demo_3.png
 share/kde/apps/kpat/demos/demo_5.png
@@ -1634,6 +1651,7 @@ share/sounds/kapman/levelup.ogg
 share/sounds/kapman/life.ogg
 share/sounds/kapman/pill.ogg
 @dirrm share/sounds/kapman
+@comment in xdg-dirs: @dirrm share/sounds
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/lskat/grafix
@@ -1749,6 +1767,7 @@ share/sounds/kapman/pill.ogg
 @dirrm share/kde/apps/kapman/themes
 @dirrm share/kde/apps/kapman
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps/cmake
 @dirrm share/kde/apps/carddecks/svg-tigullio-international
 @dirrm share/kde/apps/carddecks/svg-oxygen-white
 @dirrm share/kde/apps/carddecks/svg-oxygen
@@ -1773,28 +1792,48 @@ share/sounds/kapman/pill.ogg
 @dirrm share/kde/apps/bomber/themes
 @dirrm share/kde/apps/bomber
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/scalable/apps
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
 @comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/64x64
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
 @comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
 @comment in kde: @dirrm share/icons/oxygen/128x128/apps
+@comment in kde: @dirrm share/icons/oxygen/128x128
+@comment in kde: @dirrm share/icons/oxygen
 @comment in kde: @dirrm share/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/icons/locolor/32x32
 @comment in kde: @dirrm share/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/icons/locolor/16x16
+@comment in kde: @dirrm share/icons/locolor
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/lskat
 @dirrm share/doc/kde/HTML/en/kubrick
 @dirrm share/doc/kde/HTML/en/ktuberling
@@ -1829,7 +1868,10 @@ share/sounds/kapman/pill.ogg
 @dirrm share/doc/kde/HTML/en/bovo
 @dirrm share/doc/kde/HTML/en/bomber
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm include/kggznet
 @dirrm include/kggzmod
 @dirrm include/kggzgames

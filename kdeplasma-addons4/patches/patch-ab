@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/01/14 10:51:55 mwdavies Exp $
+
+doesn't compile so dont try at the moment.
+
+--- applets/CMakeLists.txt.orig	2009-01-07 06:24:01.000000000 +1300
++++ applets/CMakeLists.txt
+@@ -5,7 +5,7 @@ include_directories(${PLASMACLOCK_INCLUD
+ if(KDE4_PLASMA_OPENGL_FOUND)
+   message(STATUS "libplasma supports OpenGL applets")
+   if(NOT WIN32)
+-    add_subdirectory(bluemarble)
++#    add_subdirectory(bluemarble)
+   endif(NOT WIN32)
+ else(KDE4_PLASMA_OPENGL_FOUND)
+   message(STATUS "libplasma doesn't support OpenGL applets")

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/01/10 09:32:40 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/14 10:51:54 mwdavies Exp $
 lib/kde4/kpythonpluginfactory.so
 lib/kde4/krosspython.so
 ${PYSITELIB}/PyKDE4/__init__.py
@@ -65,6 +65,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentinstancemodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentinstancewidget.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentmanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agenttype.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agenttypedialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agenttypemodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agenttypewidget.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/akonadimod.sip
@@ -89,6 +90,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionstatisticsmodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/collectionview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/control.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entity.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/entitydisplayattribute.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/item.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/itemcopyjob.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/itemcreatejob.sip
@@ -103,6 +105,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/itemserializerplugin.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/itemsync.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/itemview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/job.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/linkjob.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/messagemodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/messageparts.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/messagethreaderproxymodel.sip
@@ -110,10 +113,12 @@ share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/messagethreadingattribute.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/monitor.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/resourcebase.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/searchcreatejob.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/servermanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/session.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/standardactionmanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/transactionjobs.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/transactionsequence.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/unlinkjob.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/dnssdmod.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/domainbrowser.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/domainmodel.sip
@@ -125,6 +130,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/servicemodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/servicetypebrowser.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/glossary.html
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/backgroundchecker.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/globals.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kaboutdata.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kascii.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kauthorized.sip
@@ -146,6 +152,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kdecoremod.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kdedmodule.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kdesktopfile.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kencodingdetector.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kencodingprober.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kexportplugin.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kfilterbase.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kfilterdev.sip
@@ -202,6 +209,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/configdialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/configwidget.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/dialog.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/dictionarycombobox.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/fixx11h.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/highlighter.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/k3icon_p.sip
@@ -210,6 +218,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kabstractwidgetjobtracker.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kacceleratormanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kaccelgen.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kaction.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kactioncategory.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kactioncollection.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kactionmenu.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kactionselector.sip
@@ -219,6 +228,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/karrowbutton.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kassistantdialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kbugreport.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kbuttongroup.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kcapacitybar.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kcategorizedsortfilterproxymodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kcategorizedview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kcategorydrawer.sip
@@ -255,6 +265,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/keditlistbox.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kedittoolbar.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kextendableitemdelegate.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfadewidgeteffect.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfilterproxysearchline.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfind.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfinddialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfontaction.sip
@@ -266,6 +277,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kfontsizeaction.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kgesture.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kglobalaccel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kglobalsettings.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kglobalshortcutinfo.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/kguiitem.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/khbox.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kdeui/khelpmenu.sip
@@ -455,6 +467,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kio/kdirselectdialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kdirsortfilterproxymodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kdirwatch.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kdiskfreespace.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kio/kdiskfreespaceinfo.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kemailsettings.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kencodingfiledialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfile.sip
@@ -466,6 +479,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfilemetainfo.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfilemetainfoitem.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfileplacesmodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfileplacesview.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfilepreviewgenerator.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfileshare.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfilesharedialog.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/kio/kfilewidget.sip
@@ -600,29 +614,46 @@ share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/property.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/resource.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/resourcemanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/tag.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/thing.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/tools.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/nepomuk/variant.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/abstractaudiodataoutput.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/abstractmediastream.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/abstractvideodataoutput.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/abstractvideooutput.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/audiodataoutput.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/audiodataoutputinterface.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/audioformat.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/audiooutput.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/avcapture.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/backendcapabilities.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/effect.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/effectparameter.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/effectwidget.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/experimental_phononnamespace.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/mediacontroller.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/medianode.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/mediaobject.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/mediasource.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/objectdescription.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/objectdescriptionmodel.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/packet.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/packetpool.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/path.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/phononmod.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/phononnamespace.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/seekslider.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/snapshotinterface.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/streaminterface.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videodataoutput.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videodataoutput2.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videodataoutputinterface.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videoframe.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videoframe2.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videoplayer.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videowidget.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/videowidgetinterface.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/phonon/visualization.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/volumefadereffect.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/phonon/volumeslider.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/abstractrunner.sip
@@ -630,10 +661,12 @@ share/sip${PYVERSSUFFIX}/PyKDE4/plasma/animationdriver.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/animator.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/applet.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/appletscript.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/busywidget.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/checkbox.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/combobox.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/configloader.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/containment.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/context.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/corona.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/datacontainer.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/dataengine.sip
@@ -641,7 +674,10 @@ share/sip${PYVERSSUFFIX}/PyKDE4/plasma/dataenginemanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/dataenginescript.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/delegate.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/dialog.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/extender.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/extenderitem.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/flashinglabel.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/frame.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/framesvg.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/glapplet.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/groupbox.sip
@@ -655,6 +691,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/plasma/packagestructure.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/paintutils.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/plasma.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/plasmamod.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/popupapplet.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/pushbutton.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/querymatch.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/radiobutton.sip
@@ -662,13 +699,22 @@ share/sip${PYVERSSUFFIX}/PyKDE4/plasma/runnercontext.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/runnermanager.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/runnerscript.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/scriptengine.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/scrollbar.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/service.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/signalplotter.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/slider.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/svg.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/svgwidget.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/tabbar.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/textedit.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/theme.sip
-share/sip${PYVERSSUFFIX}/PyKDE4/plasma/uiloader.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/toolbutton.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/tooltipcontent.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/tooltipmanager.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/treeview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/version.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/view.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/plasma/wallpaper.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/plasma/webview.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/acadapter.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/audiointerface.sip
@@ -696,6 +742,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/solid/storagedrive.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/storagevolume.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/solid/video.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/asyncmodel.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/soprano/asyncresult.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/backend.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/bindingset.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/dbusclient.sip
@@ -743,6 +790,7 @@ share/sip${PYVERSSUFFIX}/PyKDE4/soprano/simplenodeiterator.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/simplestatementiterator.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/sopranomod.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/sopranotypes.sip
+share/sip${PYVERSSUFFIX}/PyKDE4/soprano/sparqlmodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/statement.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/statementiterator.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/soprano/statementpattern.sip

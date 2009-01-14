@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/01/10 10:02:38 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/01/14 10:51:54 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -159,6 +159,11 @@ lib/libmarblewidget.so.4.2.0
 lib/libscience.so
 lib/libscience.so.4
 lib/libscience.so.4.2.0
+man/man1/kalzium.1
+man/man1/kbruch.1
+man/man1/kig.1
+man/man1/ktouch.1
+man/man6/khangman.6
 share/applications/kde4/blinken.desktop
 share/applications/kde4/kalgebra.desktop
 share/applications/kde4/kalzium.desktop
@@ -397,16 +402,6 @@ share/doc/kde/HTML/en/kstars/luminosity.docbook
 share/doc/kde/HTML/en/kstars/luminosity.png
 share/doc/kde/HTML/en/kstars/luminosity_ex.png
 share/doc/kde/HTML/en/kstars/magnitude.docbook
-share/doc/kde/HTML/en/kstars/man-indi_celestron_gps.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_fli_ccd.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_lx200_16.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_lx200autostar.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_lx200classic.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_lx200generic.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_temma.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_v4l_generic.1.docbook
-share/doc/kde/HTML/en/kstars/man-indi_v4l_philips.1.docbook
-share/doc/kde/HTML/en/kstars/man-indiserver.1.docbook
 share/doc/kde/HTML/en/kstars/meridian.docbook
 share/doc/kde/HTML/en/kstars/newfov.png
 share/doc/kde/HTML/en/kstars/observinglist.docbook
@@ -700,7 +695,7 @@ share/kde/apps/kalzium/data/htmlview/discovery.png
 share/kde/apps/kalzium/data/htmlview/electronaffinity.png
 share/kde/apps/kalzium/data/htmlview/header.png
 share/kde/apps/kalzium/data/htmlview/icons.svg
-share/kde/apps/kalzium/data/htmlview/ionisation.png
+share/kde/apps/kalzium/data/htmlview/ionization.png
 share/kde/apps/kalzium/data/htmlview/mass.png
 share/kde/apps/kalzium/data/htmlview/meltingpoint.png
 share/kde/apps/kalzium/data/htmlview/radius.png
@@ -3946,13 +3941,13 @@ share/kde/apps/parley/plugins/leo-dict.desktop
 share/kde/apps/parley/plugins/leo-dict.py
 share/kde/apps/parley/plugins/test.desktop
 share/kde/apps/parley/plugins/test.py
-share/kde/apps/parley/tips
 share/kde/apps/parley/themes/clean.desktop
 share/kde/apps/parley/themes/clean_preview.png
 share/kde/apps/parley/themes/clean_theme.svgz
 share/kde/apps/parley/themes/default.desktop
 share/kde/apps/parley/themes/default_preview.png
 share/kde/apps/parley/themes/default_theme.svgz
+share/kde/apps/parley/tips
 share/kde/apps/parley/xslt/flashcards.xsl
 share/kde/apps/parley/xslt/table.xsl
 share/kde/config.kcfg/blinken.kcfg
@@ -3986,6 +3981,7 @@ share/kde4/services/plasma-dataengine-parley.desktop
 share/kde4/services/plasma_didyouknow.desktop
 share/kde4/services/plasma_parley.desktop
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/parley/xslt
@@ -4186,6 +4182,8 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/kgeography
 @dirrm share/kde/apps/kbruch/pics
 @dirrm share/kde/apps/kbruch
+@comment in kde: @dirrm share/kde/apps/katepart/syntax
+@comment in kde: @dirrm share/kde/apps/katepart
 @dirrm share/kde/apps/kanagram/sounds
 @dirrm share/kde/apps/kanagram/images
 @dirrm share/kde/apps/kanagram
@@ -4214,27 +4212,39 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/kde/apps/kalzium/data
 @dirrm share/kde/apps/kalzium
 @comment in kde: @dirrm share/kde/apps/desktoptheme/default/widgets
+@comment in kde: @dirrm share/kde/apps/desktoptheme/default
+@comment in kde: @dirrm share/kde/apps/desktoptheme
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps/cmake
 @dirrm share/kde/apps/blinken/sounds
 @dirrm share/kde/apps/blinken/images
 @dirrm share/kde/apps/blinken/fonts
 @dirrm share/kde/apps/blinken
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/step
 @dirrm share/doc/kde/HTML/en/parley
 @dirrm share/doc/kde/HTML/en/marble
@@ -4253,7 +4263,10 @@ share/kde4/services/plasma_parley.desktop
 @dirrm share/doc/kde/HTML/en/kalgebra
 @dirrm share/doc/kde/HTML/en/blinken
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/kde4/plugins/marble
 @comment in kde: @dirrm lib/kde4/plugins
 @comment in kde: @dirrm lib/kde4

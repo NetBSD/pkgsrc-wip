@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/10 10:06:49 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
 CATEGORIES=	games
@@ -6,21 +6,9 @@ COMMENT=	Games for the KDE integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
-BUILD_MAKE_FLAGS+= VERBOSE=1
+# BUILD_MAKE_FLAGS+= VERBOSE=1
 
-#REPLACE_BASH+= pics/oxygen/scalable/export_pngs.sh
-
-#REPLACE_PERL+= \
-#	khelpcenter/searchhandlers/khc_docbookdig.pl.cmake \
-#	khelpcenter/searchhandlers/khc_htdig.pl.cmake \
-#	khelpcenter/searchhandlers/khc_htsearch.pl \
-#	khelpcenter/searchhandlers/khc_mansearch.pl \
-#	kioslave/info/kde-info2html
-
-#CONF_FILES+=	${PREFIX}/share/examples/kdebase-runtime4/kde-information.menu \
-#                ${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
-
-#INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/kde4/kde4.mk"
 

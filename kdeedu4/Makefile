@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/10 10:02:38 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -8,9 +8,11 @@ COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
+PKG_DESTDIR_SUPPORT=    user-destdir
+
 CMAKE_ARGS+=	-DBUILD_kmplot:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_SBIG:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_PyKDE4:BOOL=OFF   # "sip: MarblePlacemarkModel is undefined"
+# CMAKE_ARGS+=	-DWITH_PyKDE4:BOOL=OFF   # "sip: MarblePlacemarkModel is undefined"
 
 USE_GNU_READLINE=	yes
 BROKEN_READLINE_DETECTION=	yes

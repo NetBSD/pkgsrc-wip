@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:27:07 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
 bin/kget
 bin/kopete
 bin/kopete_latexconvert.sh
@@ -544,8 +544,8 @@ share/kde/apps/kopete/icons/oxygen/16x16/apps/jabber_gateway_smtp.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/jabber_gateway_tlen.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/jabber_gateway_yahoo.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/jabber_protocol.png
-share/kde/apps/kopete/icons/oxygen/16x16/apps/qq_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/meanwhile_protocol.png
+share/kde/apps/kopete/icons/oxygen/16x16/apps/qq_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/sms_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/testbed_protocol.png
 share/kde/apps/kopete/icons/oxygen/16x16/apps/wlm_protocol.png
@@ -815,10 +815,10 @@ share/kde/apps/kopete_privacy/privacyui.rc
 share/kde/apps/kopete_statistics/statisticsui.rc
 share/kde/apps/kopete_translator/translatorchatui.rc
 share/kde/apps/kopete_translator/translatorui.rc
+share/kde/apps/kopete_wlm/wlmchatui.rc
 share/kde/apps/kopete_yahoo/yahoochatui.rc
 share/kde/apps/kopete_yahoo/yahooconferenceui.rc
 share/kde/apps/kopete_yahoo/yahooimui.rc
-share/kde/apps/kopete_wlm/wlmchatui.rc
 share/kde/apps/kopeterichtexteditpart/kopeterichtexteditpartfull.rc
 share/kde/apps/kppp/Provider/Austria/.directory
 share/kde/apps/kppp/Provider/Austria/Simon%032Media
@@ -953,6 +953,7 @@ share/kde/apps/kppp/Provider/Taiwan/SeedNet
 share/kde/apps/kppp/Provider/Ukraine/.directory
 share/kde/apps/kppp/Provider/Ukraine/Adamant
 share/kde/apps/kppp/Provider/Ukraine/IPTelecom
+share/kde/apps/kppp/Provider/Ukraine/LifeEDGE
 share/kde/apps/kppp/Provider/Ukraine/NuVse
 share/kde/apps/kppp/Provider/United_Kingdom/.directory
 share/kde/apps/kppp/Provider/United_Kingdom/Demon%032Green%0322120666
@@ -1324,6 +1325,7 @@ share/kde/config.kcfg/krdc.kcfg
 share/kde/config.kcfg/latexconfig.kcfg
 share/kde/config.kcfg/nowlisteningconfig.kcfg
 share/kde/config.kcfg/urlpicpreview.kcfg
+share/kde/config.kcfg/webpresenceconfig.kcfg
 share/kde/config/kopeterc
 share/kde4/services/ServiceMenus/kget_download.desktop
 share/kde4/services/ServiceMenus/smb2rdc.desktop
@@ -1416,9 +1418,10 @@ share/sounds/Kopete_User_is_Online.ogg
 @dirrm share/kde4/services/kconfiguredialog
 @comment in kde: @dirrm share/kde4/services/ServiceMenus
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
-@comment in kdebase-runtime: @dirrm share/kde/apps/remoteview
+@comment in kde: @dirrm share/kde/apps/remoteview
 @dirrm share/kde/apps/krfb
 @dirrm share/kde/apps/krdc/pics
 @dirrm share/kde/apps/krdc
@@ -1597,6 +1600,7 @@ share/sounds/Kopete_User_is_Online.ogg
 @dirrm share/kde/apps/kopete/icons
 @dirrm share/kde/apps/kopete
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
+@comment in kde: @dirrm share/kde/apps/khtml
 @dirrm share/kde/apps/kget/www
 @dirrm share/kde/apps/kget/pics
 @dirrm share/kde/apps/kget/content_fetch_scripts/youtubedl
@@ -1604,35 +1608,57 @@ share/sounds/Kopete_User_is_Online.ogg
 @dirrm share/kde/apps/kget
 @comment in kde: @dirrm share/kde/apps/kconf_update
 @comment in kde: @dirrm share/kde/apps/desktoptheme/default/widgets
+@comment in kde: @dirrm share/kde/apps/desktoptheme/default
+@comment in kde: @dirrm share/kde/apps/desktoptheme
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/scalable/status
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
 @comment in kde: @dirrm share/icons/oxygen/64x64/actions
+@comment in kde: @dirrm share/icons/oxygen/64x64
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/status
 @comment in kde: @dirrm share/icons/oxygen/22x22/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
 @comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
 @comment in kde: @dirrm share/icons/oxygen/128x128/actions
+@comment in kde: @dirrm share/icons/oxygen/128x128
+@comment in kde: @dirrm share/icons/oxygen
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/krfb
 @dirrm share/doc/kde/HTML/en/krdc
 @dirrm share/doc/kde/HTML/en/kppp
 @dirrm share/doc/kde/HTML/en/kopete
 @dirrm share/doc/kde/HTML/en/kget
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4
 @dirrm include/kopete/ui
 @dirrm include/kopete

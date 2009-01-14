@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/01/10 10:15:02 mwdavies Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 CATEGORIES=	graphics
@@ -7,6 +7,8 @@ COMMENT=	Graphical tools for the KDE desktop
 .include "../../wip/kde4/Makefile.kde4"
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 		ktimetracker/test/booktime-badduration.sh \
@@ -30,7 +32,7 @@ CHECK_PORTABILITY_SKIP+=ktimetracker/test/booktime-baddate.sh \
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
-.include "../../wip/ebook-tools/buildlink3.mk"
+.include "../../textproc/ebook-tools/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"

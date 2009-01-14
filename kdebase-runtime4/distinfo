@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2009/01/10 09:19:17 mwdavies Exp $
+$NetBSD: distinfo,v 1.17 2009/01/14 10:51:53 mwdavies Exp $
 
-SHA1 (kdebase-runtime-4.1.85.tar.bz2) = e5e6741249405787bcab080addec44df731f0033
-RMD160 (kdebase-runtime-4.1.85.tar.bz2) = 362f7fa3c1297a6a6cb123e1a774d65a21dce854
-Size (kdebase-runtime-4.1.85.tar.bz2) = 68538709 bytes
+SHA1 (kdebase-runtime-4.1.96.tar.bz2) = eaa08d2f2038e047a0409d0bedd148e0c6ca9644
+RMD160 (kdebase-runtime-4.1.96.tar.bz2) = 2bcc24d78f7fabc5cffbc9488661326bdb036999
+Size (kdebase-runtime-4.1.96.tar.bz2) = 70076719 bytes
 SHA1 (patch-ab) = b7e168f12e0137891befdcc94fa13ec9b269d03a
 SHA1 (patch-ac) = 6bb21775f48d7a7155712524162a2de736391f40
 SHA1 (patch-ad) = 285fbd72b3be665776acc61a55f3d65f35e338c4

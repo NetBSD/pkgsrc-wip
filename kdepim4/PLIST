@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/10 10:31:04 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:55 mwdavies Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -281,7 +281,6 @@ lib/libakonadi-kcal.so.4.2.0
 lib/libakregatorinterfaces.so
 lib/libakregatorinterfaces.so.4
 lib/libakregatorinterfaces.so.4.2.0
-lib/libakregatorprivate.so
 lib/libakregatorprivate.so.4
 lib/libakregatorprivate.so.4.2.0
 lib/libgwsoap.so
@@ -314,7 +313,6 @@ lib/libkabcscalix.so.4.2.0
 lib/libkabinterfaces.so
 lib/libkabinterfaces.so.4
 lib/libkabinterfaces.so.4.2.0
-lib/libkaddressbookprivate.so
 lib/libkaddressbookprivate.so.4
 lib/libkaddressbookprivate.so.4.2.0
 lib/libkalarm_resources.so
@@ -366,7 +364,6 @@ lib/libkleopatraclientcore.so
 lib/libkleopatraclientcore.so.0.2.1
 lib/libkleopatraclientgui.so
 lib/libkleopatraclientgui.so.0.2.1
-lib/libkmailprivate.so
 lib/libkmailprivate.so.4
 lib/libkmailprivate.so.4.2.0
 lib/libknodecommon.so
@@ -390,7 +387,6 @@ lib/libkode.so.4.2.0
 lib/libkontactinterfaces.so
 lib/libkontactinterfaces.so.4
 lib/libkontactinterfaces.so.4.2.0
-lib/libkontactprivate.so
 lib/libkontactprivate.so.4
 lib/libkontactprivate.so.4.2.0
 lib/libkorg_stdprinting.so
@@ -405,7 +401,6 @@ lib/libkorganizer_eventviewer.so.4.2.0
 lib/libkorganizer_interfaces.so
 lib/libkorganizer_interfaces.so.4
 lib/libkorganizer_interfaces.so.4.2.0
-lib/libkorganizerprivate.so
 lib/libkorganizerprivate.so.4
 lib/libkorganizerprivate.so.4.2.0
 lib/libkpgp.so
@@ -541,8 +536,8 @@ share/doc/kde/HTML/en/kaddressbook/resourcesdlg.png
 share/doc/kde/HTML/en/kaddressbook/vieweditdlg.png
 share/doc/kde/HTML/en/kalarm/alarmmessage.png
 share/doc/kde/HTML/en/kalarm/common
-share/doc/kde/HTML/en/kalarm/editwindow.png
 share/doc/kde/HTML/en/kalarm/editwindow-simple.png
+share/doc/kde/HTML/en/kalarm/editwindow.png
 share/doc/kde/HTML/en/kalarm/index.cache.bz2
 share/doc/kde/HTML/en/kalarm/index.docbook
 share/doc/kde/HTML/en/kalarm/mainwindow.png
@@ -697,6 +692,41 @@ share/doc/kde/HTML/en/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/en/korganizer/plugins-chapter.docbook
 share/doc/kde/HTML/en/korganizer/remotefile-resource.png
 share/doc/kde/HTML/en/korganizer/todo-general.png
+share/doc/kde/HTML/en/kpilot/address-app.png
+share/doc/kde/HTML/en/kpilot/common
+share/doc/kde/HTML/en/kpilot/conduit-knotes.png
+share/doc/kde/HTML/en/kpilot/conduit-mal.png
+share/doc/kde/HTML/en/kpilot/conduit-palmdoc.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-kmail.png
+share/doc/kde/HTML/en/kpilot/conduit-sysinfo.png
+share/doc/kde/HTML/en/kpilot/conduit-vcal.png
+share/doc/kde/HTML/en/kpilot/configuration.docbook
+share/doc/kde/HTML/en/kpilot/daemon-menu.png
+share/doc/kde/HTML/en/kpilot/db-app.png
+share/doc/kde/HTML/en/kpilot/faq.docbook
+share/doc/kde/HTML/en/kpilot/file-app.png
+share/doc/kde/HTML/en/kpilot/index.cache.bz2
+share/doc/kde/HTML/en/kpilot/index.docbook
+share/doc/kde/HTML/en/kpilot/main-app.png
+share/doc/kde/HTML/en/kpilot/memo-app.png
+share/doc/kde/HTML/en/kpilot/setup-address.png
+share/doc/kde/HTML/en/kpilot/setup-conduit.png
+share/doc/kde/HTML/en/kpilot/setup-dbspecial.png
+share/doc/kde/HTML/en/kpilot/setup-general.png
+share/doc/kde/HTML/en/kpilot/setup-hotsync.png
+share/doc/kde/HTML/en/kpilot/setup-items.png
+share/doc/kde/HTML/en/kpilot/setup-startup-exit.png
+share/doc/kde/HTML/en/kpilot/setup-tabs.png
+share/doc/kde/HTML/en/kpilot/setup-viewer.png
+share/doc/kde/HTML/en/kpilot/sidebar.png
+share/doc/kde/HTML/en/kpilot/sync.docbook
+share/doc/kde/HTML/en/kpilot/todo-app.png
+share/doc/kde/HTML/en/kpilot/toolbar_backup.png
+share/doc/kde/HTML/en/kpilot/toolbar_hotsync.png
+share/doc/kde/HTML/en/kpilot/usage.docbook
+share/doc/kde/HTML/en/kpilot/wizard-conduits.png
+share/doc/kde/HTML/en/kpilot/wizard-connection.png
+share/doc/kde/HTML/en/kpilot/wizard-general.png
 share/doc/kde/HTML/en/ktimetracker/clipboard-history.png
 share/doc/kde/HTML/en/ktimetracker/common
 share/doc/kde/HTML/en/ktimetracker/copy-this-task.png
@@ -813,6 +843,7 @@ share/icons/hicolor/scalable/apps/kaddressbook.svgz
 share/icons/hicolor/scalable/apps/kjots.svgz
 share/icons/hicolor/scalable/apps/kmail.svgz
 share/icons/hicolor/scalable/apps/korganizer.svgz
+share/icons/oxygen/128x128/apps/kalarm.png
 share/icons/oxygen/128x128/apps/kleopatra.png
 share/icons/oxygen/16x16/actions/document-new-from-template.png
 share/icons/oxygen/16x16/actions/edit-delete-page.png
@@ -849,6 +880,7 @@ share/icons/oxygen/22x22/actions/kalarm.png
 share/icons/oxygen/22x22/actions/mail-reply-custom.png
 share/icons/oxygen/22x22/actions/meeting-attending-tentative.png
 share/icons/oxygen/22x22/actions/meeting-attending.png
+share/icons/oxygen/22x22/actions/new-command-alarm.png
 share/icons/oxygen/22x22/apps/kalarm.png
 share/icons/oxygen/22x22/apps/kleopatra.png
 share/icons/oxygen/22x22/mimetypes/x-mail-distribution-list.png
@@ -884,6 +916,7 @@ share/icons/oxygen/48x48/apps/kleopatra.png
 share/icons/oxygen/48x48/apps/kmailcvt.png
 share/icons/oxygen/48x48/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/48x48/status/mail-tagged.png
+share/icons/oxygen/64x64/apps/kalarm.png
 share/icons/oxygen/64x64/apps/kleopatra.png
 share/icons/oxygen/scalable/actions/edit-delete-page.svgz
 share/icons/oxygen/scalable/actions/mail-forwarded-replied.svgz
@@ -892,6 +925,7 @@ share/icons/oxygen/scalable/actions/mail-reply-custom.svgz
 share/icons/oxygen/scalable/actions/mail-signed-fully.svgz
 share/icons/oxygen/scalable/actions/mail-signed-part.svgz
 share/icons/oxygen/scalable/actions/mail-signed.svgz
+share/icons/oxygen/scalable/apps/kalarm.svgz
 share/icons/oxygen/scalable/apps/kleopatra.svgz
 share/icons/oxygen/scalable/mimetypes/x-mail-distribution-list.svgz
 share/icons/oxygen/scalable/status/mail-tagged.svgz
@@ -1432,10 +1466,12 @@ share/kde4/servicetypes/kpilotconduit.desktop
 @dirrm share/kde4/services/kontact
 @dirrm share/kde4/services/kaddressbook
 @comment in kde: @dirrm share/kde4/services
+@comment in kde: @dirrm share/kde4
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
 @comment in kde: @dirrm share/kde/apps/nepomuk/ontologies
+@comment in kde: @dirrm share/kde/apps/nepomuk
 @dirrm share/kde/apps/libkleopatra/pics
 @dirrm share/kde/apps/libkleopatra
 @dirrm share/kde/apps/libkholidays
@@ -1505,6 +1541,7 @@ share/kde4/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/kaddressbook/csv-templates
 @dirrm share/kde/apps/kaddressbook
 @comment in kde: @dirrm share/kde/apps/cmake/modules
+@comment in kde: @dirrm share/kde/apps/cmake
 @dirrm share/kde/apps/akregator_onlinesync_plugin
 @dirrm share/kde/apps/akregator/pics
 @dirrm share/kde/apps/akregator/about
@@ -1514,37 +1551,60 @@ share/kde4/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/akonadi/plugins
 @dirrm share/kde/apps/akonadi
 @comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde
 @comment in kde: @dirrm share/icons/oxygen/scalable/status
 @comment in kde: @dirrm share/icons/oxygen/scalable/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/scalable/apps
 @comment in kde: @dirrm share/icons/oxygen/scalable/actions
+@comment in kde: @dirrm share/icons/oxygen/scalable
 @comment in kde: @dirrm share/icons/oxygen/64x64/apps
+@comment in kde: @dirrm share/icons/oxygen/64x64
 @comment in kde: @dirrm share/icons/oxygen/48x48/status
 @comment in kde: @dirrm share/icons/oxygen/48x48/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/48x48/apps
 @comment in kde: @dirrm share/icons/oxygen/48x48/actions
+@comment in kde: @dirrm share/icons/oxygen/48x48
 @comment in kde: @dirrm share/icons/oxygen/32x32/status
 @comment in kde: @dirrm share/icons/oxygen/32x32/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/32x32/apps
 @comment in kde: @dirrm share/icons/oxygen/32x32/actions
+@comment in kde: @dirrm share/icons/oxygen/32x32
 @comment in kde: @dirrm share/icons/oxygen/22x22/status
 @comment in kde: @dirrm share/icons/oxygen/22x22/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/22x22/apps
 @comment in kde: @dirrm share/icons/oxygen/22x22/actions
+@comment in kde: @dirrm share/icons/oxygen/22x22
 @comment in kde: @dirrm share/icons/oxygen/16x16/status
 @comment in kde: @dirrm share/icons/oxygen/16x16/mimetypes
 @comment in kde: @dirrm share/icons/oxygen/16x16/apps
 @comment in kde: @dirrm share/icons/oxygen/16x16/actions
+@comment in kde: @dirrm share/icons/oxygen/16x16
 @comment in kde: @dirrm share/icons/oxygen/128x128/apps
+@comment in kde: @dirrm share/icons/oxygen/128x128
+@comment in kde: @dirrm share/icons/oxygen
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/kde/HTML/en/ktimetracker
+@dirrm share/doc/kde/HTML/en/kpilot
 @dirrm share/doc/kde/HTML/en/korganizer
 @dirrm share/doc/kde/HTML/en/kontact
 @dirrm share/doc/kde/HTML/en/konsolekalendar
@@ -1559,12 +1619,16 @@ share/kde4/servicetypes/kpilotconduit.desktop
 @dirrm share/doc/kde/HTML/en/kabcclient
 @dirrm share/doc/kde/HTML/en/akregator
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm share/applications/kde4
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm share/akonadi/agents
 @dirrm share/akonadi
 @comment in strigi: @dirrm lib/strigi
 @comment in kde: @dirrm lib/kde4/plugins/designer
+@comment in kde: @dirrm lib/kde4/plugins
 @comment in kde: @dirrm lib/kde4
 @dirrm include/libkleopatraclient/gui
 @dirrm include/libkleopatraclient/core

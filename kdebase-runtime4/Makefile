@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2009/01/10 09:19:17 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/14 10:51:53 mwdavies Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
