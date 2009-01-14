@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 08:40:43 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/14 01:10:17 obache Exp $
 
 DISTNAME=	excelviewerplugin-0.1dev_r687
 PKGNAME=	trac-plugins-excelviewer-0.1.687
+PKGREVISION=	# empty
 EGG_NAME=	TracExcelViewer-0.1
 CATEGORIES=	www
 MASTER_SITES=	# not defined
