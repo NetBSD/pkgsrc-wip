@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
-lib/scim-1.0/IMEngine/sinhala.la
+@comment $NetBSD: PLIST,v 1.3 2009/01/14 13:57:48 obache Exp $
+lib/scim-1.0/1.4.0/IMEngine/sinhala.la
 share/locale/ja/LC_MESSAGES/scim-sinhala.mo
 share/scim/icons/scim-sinhala.png
-@dirrm lib/scim-1.0/IMEngine
+@comment in scim: @dirrm share/scim/icons
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine
