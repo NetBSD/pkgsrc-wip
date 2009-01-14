@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/09 04:22:01 makoto Exp $
-lib/scim-1.0/Helper/anthy-imengine-helper.a
-lib/scim-1.0/Helper/anthy-imengine-helper.la
-lib/scim-1.0/Helper/anthy-imengine-helper.so
-lib/scim-1.0/IMEngine/anthy.la
-lib/scim-1.0/SetupUI/anthy-imengine-setup.la
+@comment $NetBSD: PLIST,v 1.4 2009/01/14 13:44:20 obache Exp $
+lib/scim-1.0/1.4.0/Helper/anthy-imengine-helper.la
+lib/scim-1.0/1.4.0/IMEngine/anthy.la
+lib/scim-1.0/1.4.0/SetupUI/anthy-imengine-setup.la
 share/locale/de/LC_MESSAGES/scim-anthy.mo
 share/locale/ja/LC_MESSAGES/scim-anthy.mo
 share/scim/Anthy/style/101kana.sty
@@ -24,7 +22,9 @@ share/scim/Anthy/style/wnn.sty
 share/scim/icons/scim-anthy-dict.png
 share/scim/icons/scim-anthy-swap-colors.png
 share/scim/icons/scim-anthy.png
+@comment in scim: @dirrm share/scim/icons
 @dirrm share/scim/Anthy/style
 @dirrm share/scim/Anthy
-@dirrm lib/scim-1.0/SetupUI
-@dirrm lib/scim-1.0/IMEngine
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine
+@comment in scim: @dirrm lib/scim-1.0/1.4.0/Helper
