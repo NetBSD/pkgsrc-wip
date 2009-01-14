@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2009/01/12 18:46:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/14 19:49:08 cheusov Exp $
 #
 
-PKGNAME=	${DISTNAME:S/lua_/${LUA_PKGPREFIX}-/:S/_/-/}
-DISTNAME=	lua_alt_getopt-0.4.0
+PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/}
+DISTNAME=	lua-alt-getopt-0.5.0
 CATEGORIES=	devel
-MASTER_SITES=	http://mova.org/~cheusov/pub/lua_alt_getopt/
+MASTER_SITES=	http://luaforge.net/frs/download.php/3915/ \
+		http://mova.org/~cheusov/pub/lua_alt_getopt/
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://mova.org/~cheusov/pub/lua_alt_getopt/
+HOMEPAGE=	http://luaforge.net/projects/alt-getopt/
 COMMENT=	getopt API for Lua similar to getopt_long(3) function
 
 PKG_DESTDIR_SUPPORT=	user-destdir
