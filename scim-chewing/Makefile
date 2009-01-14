@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2006/04/13 18:18:15 jlamwww Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/14 13:50:47 obache Exp $
 #
 
-DISTNAME=		scim-chewing-0.2.1
+DISTNAME=		scim-chewing-0.3.3
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://chewing.csie.net/download/scim/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rxg@NetBSD.org
-HOMEPAGE=		http://www.scim-im.org/
+MAINTAINER=		obache@NetBSD.org
+HOMEPAGE=		http://chewing.csie.net/
 COMMENT=		SCIM IMEngine module for Chewing input method
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config intltool
 GNU_CONFIGURE=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../inputmethod/libchewing/buildlink3.mk"
+.include "../../wip/libchewing/buildlink3.mk"
 .include "../../wip/scim/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
