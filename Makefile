@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3204 2009/01/12 07:38:22 phonohawk Exp $
+# $Id: Makefile,v 1.3205 2009/01/14 01:03:21 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1851,7 +1851,6 @@ SUBDIR+=	torcs
 SUBDIR+=	tr2latex
 SUBDIR+=	trac
 SUBDIR+=	trac-plugins-AccountManager
-SUBDIR+=	trac-plugins-WebAdmin
 SUBDIR+=	trac-plugins-excelviewer
 SUBDIR+=	traceroute-nanog
 SUBDIR+=	trackballs
