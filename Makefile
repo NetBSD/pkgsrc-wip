@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3205 2009/01/14 01:03:21 obache Exp $
+# $Id: Makefile,v 1.3206 2009/01/14 02:43:12 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -674,6 +674,7 @@ SUBDIR+=	hs-curl
 SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-irc
 SUBDIR+=	hs-magic
+SUBDIR+=	hs-mime
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-network
 SUBDIR+=	hs-parallel
