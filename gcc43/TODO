@@ -1,0 +1,15 @@
+Busted on NetBSD-current (5.99.01 at the time of writing).
+Lots of problems because of missing ssize_t and conflicts to standard header
+files for memcpy etc.
+
+--Add support for what's commented out in the Makefile.
+--I think the C++ ABI stuff is OK, but that needs to be checked.
+--I use -current and only need what this package already supports (C/C++/objc)
+so others will have to hack on it to get the rest going, as I don't have time
+[right now].
+--Anything else I missed?
+--Of course, to import this, the relevant rules will have to be added
+to gcc.mk.
+
+--Anything else?
+

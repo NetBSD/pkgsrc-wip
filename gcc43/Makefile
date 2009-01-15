@@ -1,0 +1,131 @@
+# $NetBSD: Makefile,v 1.1 2009/01/15 18:39:15 fulviociriaco Exp $
+#
+
+DISTNAME=	gcc-${GCC_VERSION}
+PKGNAME=	gcc43-${GCC_VERSION}
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	blair.sadewitz@gmail.com
+HOMEPAGE=	http://gcc.gnu.org/
+COMMENT=	This is the GCC 4.3.2 compiler
+
+GCC_VERSION=		4.3.2
+
+NOT_FOR_PLATFORM=	Interix-*-*
+
+PKG_NO_CPUFLAGS=# empty
+
+.undef PKG_DEVELOPER
+
+.include "../../mk/bsd.prefs.mk"
+
+# Determine whether to use binutils
+
+# REPLACE_AWK+=	gcc/testsuite/gcc.test-framework/test-framework.awk	\
+# 		gcc/mkmap-symver.awk					\
+# 		gcc/optc-gen.awk					\
+# 		gcc/mkmap-flat.awk					\
+# 		gcc/opt-gather.awk					\
+# 		gcc/opth-gen.awk					\
+# 		gcc/opt-functions.awk
+
+USE_TOOLS+=		awk:run
+USE_TOOLS+=		perl ar
+USE_LANGUAGES+= c c++
+# Optional languages - change as required
+#
+# XXX As of now, only BUILD_CXX BUILD_OBJC and BUILD_FORTRAN are supported
+BUILD_DEFS+=	BUILD_CXX BUILD_OBJC
+BUILD_DEFS+=	BUILD_FORTRAN
+BUILD_CXX?=	YES
+BUILD_FORTRAN?=	NO
+BUILD_OBJC?=	YES
+
+LANGS= c
+.if !empty(BUILD_CXX:M[Yy][Ee][Ss])
+LANGS+= c++
+.endif
+.if !empty(BUILD_FORTRAN:M[Yy][Ee][Ss])
+LANGS+= fortran
+.endif
+.if !empty(BUILD_OBJC:M[Yy][Ee][Ss])
+LANGS+= objc
+.endif
+CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-__cxa_atexit
+CONFIGURE_ARGS+=	--enable-long-long
+CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
+CONFIGURE_ARGS+=	--disable-libssp
+MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+MAKE_ENV+=		SHELL=${CONFIG_SHELL}
+
+UNLIMIT_RESOURCES+=	datasize
+
+
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
+CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
+USE_TOOLS+=		chmod
+MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
+
+CONFIGURE_ARGS+=	--enable-threads=posix # XXX seems to be needed
+
+USE_TOOLS+=		gmake makeinfo msgfmt
+HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
+CONFIG_SHELL?=		${SH}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+
+GCC_SUBPREFIX=		gcc43
+GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
+CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include
+CFLAGS+=	-I${BUILDLINK_DIR}/include
+.if ${OPSYS} == "NetBSD"
+GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
+#CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
+.endif # NetBSD
+
+
+do-configure:
+	${MKDIR} ${WRKDIR}/obj
+	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
+
+do-build:
+	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1} )
+
+# do-build:
+# 	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1} bootstrap)
+
+do-test:
+.if (${MACHINE_GNU_ARCH} == "x86_64")
+	(cd ${FILESDIR} && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
+.endif
+	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
+
+do-install:
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install \
+	 && ${TEST} -f ${GCC_PREFIX}/bin/cc || ${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc)
+
+post-install:
+	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
+		>> ${PLIST_SRC}
+	${FIND} ${GCC_PREFIX} -type d -print	\
+		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
+		>> ${PLIST_SRC}
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
