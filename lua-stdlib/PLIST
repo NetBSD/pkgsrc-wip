@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/27 20:08:00 cheusov Exp $
-${MODULES_DIR}/base.lua
-${MODULES_DIR}/debug_ext.lua
-${MODULES_DIR}/getopt.lua
-${MODULES_DIR}/io_ext.lua
-${MODULES_DIR}/lcs.lua
-${MODULES_DIR}/list.lua
-${MODULES_DIR}/math_ext.lua
-${MODULES_DIR}/mbox.lua
-${MODULES_DIR}/object.lua
-${MODULES_DIR}/parser.lua
-${MODULES_DIR}/rex.lua
-${MODULES_DIR}/set.lua
-${MODULES_DIR}/std.lua
-${MODULES_DIR}/string_ext.lua
-${MODULES_DIR}/table_ext.lua
-${MODULES_DIR}/xml.lua
+@comment $NetBSD: PLIST,v 1.2 2009/01/15 19:22:37 minskim Exp $
+${LUA_LDIR}/base.lua
+${LUA_LDIR}/debug_ext.lua
+${LUA_LDIR}/getopt.lua
+${LUA_LDIR}/io_ext.lua
+${LUA_LDIR}/lcs.lua
+${LUA_LDIR}/list.lua
+${LUA_LDIR}/math_ext.lua
+${LUA_LDIR}/mbox.lua
+${LUA_LDIR}/object.lua
+${LUA_LDIR}/parser.lua
+${LUA_LDIR}/rex.lua
+${LUA_LDIR}/set.lua
+${LUA_LDIR}/std.lua
+${LUA_LDIR}/string_ext.lua
+${LUA_LDIR}/table_ext.lua
+${LUA_LDIR}/xml.lua

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/12 19:24:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/15 19:22:37 minskim Exp $
 
 .include "../../wip/lua-stdlib/Makefile.common"
 
@@ -7,7 +7,6 @@ PKGNAME=		${DISTNAME:S/stdlib/${LUA_PKGPREFIX}-stdlib/}
 COMMENT=		Standard library for Lua programming language
 
 INSTALLATION_DIRS+=	${LUA_LDIR}
-PLIST_SUBST+=		MODULES_DIR=${LUA_LDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/modules/*.lua \
