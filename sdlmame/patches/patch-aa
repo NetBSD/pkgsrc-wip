@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2008/08/03 15:32:44 dillo Exp $
+$NetBSD: patch-aa,v 1.8 2009/01/15 16:04:44 thomasklausner Exp $
 
---- makefile.orig	2008-07-10 02:34:43.000000000 +0200
+--- makefile.orig	2008-08-31 18:48:22.000000000 +0200
 +++ makefile
 @@ -125,10 +125,10 @@ endif
  # BIGENDIAN = 1
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.7 2008/08/03 15:32:44 dillo Exp $
  
  
  #-------------------------------------------------
-@@ -363,10 +364,10 @@ CFLAGS += \
+@@ -363,11 +364,11 @@ CFLAGS += \
  
  # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
  # flags only used when linking the core emulator
@@ -94,12 +94,13 @@ $NetBSD: patch-aa,v 1.7 2008/08/03 15:32:44 dillo Exp $
 +#LDFLAGS =
  ifneq ($(TARGETOS),macosx)
  ifneq ($(TARGETOS),os2)
+ ifneq ($(TARGETOS),solaris)
 -LDFLAGS = -Wl,--warn-common
 +#LDFLAGS = -Wl,--warn-common
  endif
  endif
- LDFLAGSEMULATOR =
-@@ -380,7 +381,7 @@ endif
+ endif
+@@ -382,7 +383,7 @@ endif
  ifndef SYMBOLS
  ifndef PROFILE
  ifneq ($(TARGETOS),macosx)
@@ -108,9 +109,9 @@ $NetBSD: patch-aa,v 1.7 2008/08/03 15:32:44 dillo Exp $
  endif
  endif
  endif
-@@ -532,7 +533,7 @@ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(
- # always recompile the version string
- 	$(CC) $(CDEFS) $(CFLAGS) -c $(SRC)/version.c -o $(VERSIONOBJ)
+@@ -535,7 +536,7 @@ $(VERSIONOBJ): $(DRVLIBS) $(LIBOSD) $(LI
+ 
+ $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(LIBOSD) $(LIBEMU) $(LIBCPU) $(LIBSOUND) $(LIBUTIL) $(EXPAT) $(ZLIB) $(LIBOCORE) $(RESFILE)
  	@echo Linking $@...
 -	$(LD) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@
 +	$(CC) $(LDFLAGS) $(LDFLAGSEMULATOR) $^ $(LIBS) -o $@

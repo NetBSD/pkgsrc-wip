@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/08/03 15:34:34 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/15 16:04:44 thomasklausner Exp $
 bin/imgtool
 bin/mess
 share/doc/mess/sysinfo.htm
@@ -353,6 +353,7 @@ share/mess/hash/p2000t.hsi
 share/mess/hash/pce.hsi
 share/mess/hash/pdp1.hsi
 share/mess/hash/pet.hsi
+share/mess/hash/pico.hsi
 share/mess/hash/pokemini.hsi
 share/mess/hash/psx.hsi
 share/mess/hash/samcoupe.hsi

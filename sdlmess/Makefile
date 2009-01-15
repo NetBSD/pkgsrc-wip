@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/08/03 15:34:34 dillo Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/15 16:04:44 thomasklausner Exp $
 #
 
-DISTNAME=		sdlmess0126
-PKGNAME=		sdlmess-0.126
+DISTNAME=		sdlmess0129
+PKGNAME=		sdlmess-0.129
 
 COMMENT=		Multi Emulator Super System, SDL port
 
