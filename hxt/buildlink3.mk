@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/01/13 13:11:58 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/01/16 08:39:06 phonohawk Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HXT_BUILDLINK3_MK:=	${HXT_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_API_DEPENDS.hxt+=	hxt>=8.2.0
 BUILDLINK_PKGSRCDIR.hxt?=	../../wip/hxt
 .endif	# HXT_BUILDLINK3_MK
 
+.include "../../wip/HUnit/buildlink3.mk"
 .include "../../wip/hs-curl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-parallel/buildlink3.mk"
