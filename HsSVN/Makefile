@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/09/06 20:54:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/16 15:18:43 phonohawk Exp $
 #
 
-DISTNAME=	HsSVN-0.3.3
-PKGREVISION=	1
+DISTNAME=	HsSVN-0.4
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_HASKELL_HACKAGE:=HsSVN/0.3.3/}
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://cielonegro.org/HsSVN.html
@@ -14,5 +12,7 @@ CONFIGURE_ENV+=	EXTRA_CPPFLAGS=-I${BUILDLINK_DIR}/include/subversion-1
 CONFIGURE_ENV+=	EXTRA_LDFLAGS=-L${BUILDLINK_DIR}/lib
 
 .include "../../wip/mk/haskell.mk" # This should be "../../mk/haskell.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/stm/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
