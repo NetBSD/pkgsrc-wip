@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/01/17 09:19:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/17 10:58:01 asau Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -52,6 +52,7 @@ lib/clisp/linkkit/clisp.h
 lib/clisp/linkkit/modprep.lisp
 lib/clisp/linkkit/modules.c
 man/man1/clisp.1
+share/aclocal/clisp.m4
 share/clisp/emacs/clhs.el
 share/clisp/emacs/clisp-coding.el
 share/clisp/emacs/clisp-ffi.el
