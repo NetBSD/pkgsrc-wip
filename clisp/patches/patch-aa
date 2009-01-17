@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/05/18 13:51:47 asau Exp $
+$NetBSD: patch-aa,v 1.4 2009/01/17 09:19:24 asau Exp $
 
 Don't use cache file to avoid trailing space problem.
 

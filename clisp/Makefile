@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.17 2008/10/26 16:26:08 asau Exp $
+# $NetBSD: Makefile,v 1.18 2009/01/17 09:19:24 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
+PKGNAME=		clisp-2.47.99 # needed because of cvs-package.mk
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
-#EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://clisp.cons.org/
 COMMENT=		CLISP, a Common Lisp implementation
+
+CVS_REPOSITORIES=	clisp
+CVS_ROOT.clisp=		:pserver:anonymous:@clisp.cvs.sourceforge.net:/cvsroot/clisp
+WRKSRC=			${WRKDIR}/clisp
 
 # Sparc64 has assembler code problems, see
 # http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
@@ -32,7 +36,7 @@ UNLIMIT_RESOURCES=	stacksize
 
 CONFIGURE_ARGS+=	--disable-maintainer-mode
 CONFIGURE_ARGS+=	--fsstnd=netbsd
-CONFIGURE_ARGS+=	--without-included-regex
+#CONFIGURE_ARGS+=	--without-included-regex	# see options
 CONFIGURE_ARGS+=	--with-gettext
 MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGBASE}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
@@ -55,4 +59,5 @@ CONFIGURE_ARGS+=	--disable-mmap
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
 
+.include "../../wip/mk/cvs-package.mk"
 .include "../../mk/bsd.pkg.mk"

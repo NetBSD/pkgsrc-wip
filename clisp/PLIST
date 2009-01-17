@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/26 14:31:45 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/17 09:19:24 asau Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -11,6 +11,7 @@ lib/clisp/base/makevars
 lib/clisp/base/modules.h
 lib/clisp/base/modules.o
 lib/clisp/base/readline.o
+${PLIST.regexp}lib/clisp/base/regex.o
 lib/clisp/base/regexi.o
 lib/clisp/base/regexp.dvi
 lib/clisp/base/uniname.o
@@ -39,6 +40,7 @@ lib/clisp/full/modules.o
 ${PLIST.pgsql}lib/clisp/full/postgresql.o
 ${PLIST.rawsock}lib/clisp/full/rawsock.o
 lib/clisp/full/readline.o
+${PLIST.regexp}lib/clisp/full/regex.o
 lib/clisp/full/regexi.o
 lib/clisp/full/regexp.dvi
 lib/clisp/full/uniname.o
