@@ -1,19 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 16:59:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/18 19:25:34 thomasklausner Exp $
 bin/backintime
+bin/backintime-gnome
 man/man1/backintime.1
-share/applications/backintime.desktop
+share/applications/backintime-gnome.desktop
 share/backintime/applicationinstance.py
-share/backintime/backintime.glade
 share/backintime/backintime.py
-share/backintime/backup.py
 share/backintime/config.py
+share/backintime/configfile.py
+share/backintime/gnomeapplicationinstance.py
+share/backintime/gnomebackintime.glade
+share/backintime/gnomebackintime.py
 share/backintime/gnomeclipboardtools.py
 share/backintime/gnomefileicons.py
-share/backintime/gtkapplicationinstance.py
+share/backintime/gnomemessagebox.py
+share/backintime/gnomesettingsdialog.py
+share/backintime/gnomesnapshotnamedialog.py
+share/backintime/gnomesnapshotsdialog.py
+share/backintime/gnomesnapshotstools.py
+share/backintime/guiapplicationinstance.py
 share/backintime/logger.py
-share/backintime/messagebox.py
-share/backintime/settingsdialog.py
-share/backintime/snapshotsdialog.py
+share/backintime/snapshots.py
+share/backintime/tools.py
+share/doc/backintime-common/copyright
+share/doc/backintime-gnome/copyright
 share/doc/backintime/AUTHORS
 share/doc/backintime/CHANGES
 share/doc/backintime/LICENSE
@@ -28,9 +37,11 @@ share/gnome/help/backintime/C/figures/nautilus_actions_step3.png
 share/gnome/help/backintime/C/figures/nautilus_actions_step4.png
 share/gnome/help/backintime/C/figures/nautilus_actions_step5.png
 share/gnome/help/backintime/C/figures/settingsdialog.png
+share/gnome/help/backintime/C/figures/snapshotnamedialog.png
 share/gnome/help/backintime/C/figures/snapshotsdialog-diffoptions.png
 share/gnome/help/backintime/C/figures/snapshotsdialog.png
 share/gnome/help/backintime/C/legal.xml
+share/locale/de/LC_MESSAGES/backintime.mo
 share/locale/es/LC_MESSAGES/backintime.mo
 share/locale/fr/LC_MESSAGES/backintime.mo
 share/omf/backintime/backintime-C.omf
@@ -39,6 +50,8 @@ share/omf/backintime/backintime-C.omf
 @dirrm share/gnome/help/backintime/C/figures
 @dirrm share/gnome/help/backintime/C
 @dirrm share/gnome/help/backintime
+@dirrm share/doc/backintime-gnome
+@dirrm share/doc/backintime-common
 @dirrm share/doc/backintime
 @dirrm share/backintime
 @comment in xdg-dirs: @dirrm share/applications

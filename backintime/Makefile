@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/01/04 18:16:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/18 19:25:34 thomasklausner Exp $
 #
 
-DISTNAME=	backintime-0.8.10_src
+DISTNAME=	backintime-0.9.2_src
 PKGNAME=	${DISTNAME:S/_src//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.le-web.org/download/backintime/
@@ -22,19 +22,23 @@ USE_TOOLS=	msgfmt
 
 SUBST_CLASSES+=		path
 SUBST_FILES.path=	backintime
+SUBST_FILES.path+=	backintime-gnome
 SUBST_FILES.path+=	config.py
 SUBST_FILES.path+=	docbook/C/backintime-C.omf
-SUBST_FILES.path+=	install.sh
+SUBST_FILES.path+=	install-common.sh
+SUBST_FILES.path+=	install-gnome.sh
 SUBST_SED.path=		-e "s,/usr,${PREFIX},"
 SUBST_SED.path+=	-e "s,--mode=,-m ,"
 SUBST_SED.path+=	-e "s,share/man/man1,${PKGMANDIR}/man1,"
+SUBST_SED.path+=	-e "s,python ,${PYTHONBIN} ,"
 SUBST_STAGE.path=	post-extract
 SUBST_MESSAGE.path=	Fixing installation path.
 
 do-build:
 
 do-install:
-	cd ${WRKSRC} && ${SH} install.sh
+	cd ${WRKSRC} && ${SH} install-common.sh
+	cd ${WRKSRC} && ${SH} install-gnome.sh
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/rarian/omf.mk"
