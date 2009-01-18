@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/06/01 13:29:43 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2009/01/18 18:33:06 tnn2 Exp $
 
 --- config/autoconf.mk.in.orig	2008-02-26 19:30:21.000000000 +0100
 +++ config/autoconf.mk.in
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/06/01 13:29:43 tnn2 Exp $
 -installdir	= $(libdir)/$(MOZ_APP_NAME)-$(MOZ_APP_VERSION)
 -sdkdir		= $(libdir)/$(MOZ_APP_NAME)-devel-$(MOZ_APP_VERSION)
 +installdir	= $(libdir)/$(MOZILLA_PKG_NAME)
-+sdkdir		= $(libdir)/$(MOZILLA_PKG_NAME)-devel
++sdkdir		= $(libdir)/$(MOZILLA_PKG_NAME)-sdk
  
  DIST		= $(DEPTH)/dist
  LIBXUL_SDK      = @LIBXUL_SDK@

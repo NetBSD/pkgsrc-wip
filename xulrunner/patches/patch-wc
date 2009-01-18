@@ -1,4 +1,4 @@
-$NetBSD: patch-wip-ac,v 1.1.1.1 2008/06/01 13:29:43 tnn2 Exp $
+$NetBSD: patch-wc,v 1.1 2009/01/18 18:33:06 tnn2 Exp $
 
 --- js/src/xpconnect/shell/Makefile.in.orig	2008-01-16 21:42:51.000000000 +0100
 +++ js/src/xpconnect/shell/Makefile.in

@@ -1,4 +1,4 @@
-$NetBSD: patch-wip-ae,v 1.1.1.1 2008/06/01 13:29:43 tnn2 Exp $
+$NetBSD: patch-we,v 1.1 2009/01/18 18:33:06 tnn2 Exp $
 
 --- toolkit/mozapps/installer/packager.mk.orig	2008-05-18 23:12:08.000000000 +0200
 +++ toolkit/mozapps/installer/packager.mk

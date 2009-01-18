@@ -1,4 +1,4 @@
-$NetBSD: patch-wip-af,v 1.1.1.1 2008/06/01 13:29:43 tnn2 Exp $
+$NetBSD: patch-wf,v 1.1 2009/01/18 18:33:06 tnn2 Exp $
 
 --- nsprpub/pr/src/md/unix/uxrng.c.orig	2005-12-24 09:25:29.000000000 +0100
 +++ nsprpub/pr/src/md/unix/uxrng.c
