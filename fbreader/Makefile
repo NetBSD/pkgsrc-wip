@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/11/18 12:29:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/18 17:36:56 thomasklausner Exp $
 #
 
-DISTNAME=	fbreader-sources-0.8.17
+DISTNAME=	fbreader-sources-0.10.1
 PKGNAME=	${DISTNAME:S/-sources//}
 CATEGORIES=	misc
 MASTER_SITES=	http://www.fbreader.org/
@@ -24,9 +24,11 @@ MAKE_ENV+=	TARGET_ARCH=desktop
 .include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../wip/liblinebreak/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
