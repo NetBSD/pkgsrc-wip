@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/08 08:00:43 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/18 14:30:36 makoto Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -41,5 +41,7 @@ pre-configure:
 	(cd ${WRKSRC} ; autoconf)
 
 #.include "../../mk/oss.buildlink3.mk"
+.include "../../devel/apel/buildlink3.mk"
+.include "../../devel/flim/buildlink3.mk"
 .include "../../wip/mk/cvs-package.mk"
 .include "../../mk/bsd.pkg.mk"
