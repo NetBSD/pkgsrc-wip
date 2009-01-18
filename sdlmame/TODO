@@ -1,2 +1,0 @@
-- correctly set PTR64 (currently only done on x86_64)
-- use MAINTAINER?= in Makefile.common (says pkglint)

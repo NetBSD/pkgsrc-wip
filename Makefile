@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3211 2009/01/17 22:55:52 thomasklausner Exp $
+# $Id: Makefile,v 1.3212 2009/01/18 16:07:16 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1681,8 +1681,6 @@ SUBDIR+=	scummvm-nightly
 SUBDIR+=	scx
 SUBDIR+=	sdd
 SUBDIR+=	sdict-tools
-SUBDIR+=	sdlmame
-SUBDIR+=	sdlmess
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serlook
