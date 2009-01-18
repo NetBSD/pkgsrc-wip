@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/19 07:54:02 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/18 03:29:35 phonohawk Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FILEMANIP_BUILDLINK3_MK:=	${FILEMANIP_BUILDLINK3_MK}+
@@ -13,8 +13,10 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}FileManip
 
 .if ${FILEMANIP_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.FileManip?=	build
-BUILDLINK_API_DEPENDS.FileManip+=	FileManip>=0.3.2
+BUILDLINK_API_DEPENDS.FileManip+=	FileManip>=0.3.2nb1
 BUILDLINK_PKGSRCDIR.FileManip?=	../../wip/FileManip
 .endif	# FILEMANIP_BUILDLINK3_MK
+
+.include "../../wip/hs-mtl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
