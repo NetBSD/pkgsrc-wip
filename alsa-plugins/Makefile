@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/11/17 12:28:45 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/19 12:25:00 yhardy Exp $
 #
 
 DISTNAME=	alsa-plugins-1.0.18
@@ -12,7 +12,11 @@ COMMENT=	Advanced Linux Sound Architecture plugins
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	aclocal autoconf autoheader automake pkg-config
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../wip/alsa-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
