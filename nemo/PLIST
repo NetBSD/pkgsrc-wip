@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/15 13:22:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/19 16:35:42 thomasklausner Exp $
 bin/nemo
 bin/nemo.exe
 share/applications/nemo.desktop
+share/locale/ar/LC_MESSAGES/nemo.mo
 share/locale/cs/LC_MESSAGES/nemo.mo
 share/locale/da/LC_MESSAGES/nemo.mo
 share/locale/de/LC_MESSAGES/nemo.mo
 share/locale/el/LC_MESSAGES/nemo.mo
+share/locale/fi/LC_MESSAGES/nemo.mo
+share/locale/fr/LC_MESSAGES/nemo.mo
+share/locale/pt_BR/LC_MESSAGES/nemo.mo
 share/locale/sv/LC_MESSAGES/nemo.mo
 share/nemo/nemo.png
 share/nemo/no-preview.png
