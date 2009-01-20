@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2009/01/13 12:22:18 anielski Exp $
+$NetBSD: patch-aa,v 1.7 2009/01/20 20:18:42 anielski Exp $
 
 This patch provides config file adapted to pkgsrc settings.
 --- conf/nginx.conf.orig	2008-02-28 22:44:16.000000000 +0200
 +++ conf/nginx.conf
-@@ -2,12 +2,11 @@
+@@ -2,12 +2,13 @@
 -#user  nobody;
 +user   %%NGINX_USER%%  %%NGINX_GROUP%%;
  worker_processes  1;
@@ -20,6 +20,8 @@ This patch provides config file adapted to pkgsrc settings.
 +#pid        %%NGINX_PIDDIR%%/nginx.pid;
  
  events {
++    # After increasing this value You probably should increase limit
++    # of file descriptors (for example in start_precmd in startup script)
      worker_connections  1024;
 @@ -15,14 +14,14 @@
  
