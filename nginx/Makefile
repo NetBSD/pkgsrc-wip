@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/01/13 12:22:18 anielski Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/20 15:46:18 anielski Exp $
 
 DISTNAME=		nginx-0.6.34
 PKGREVISION=		1
@@ -59,7 +59,7 @@ CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 RCD_SCRIPTS=		nginx
 
 INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
-OWN_DIRS=		${NGINX_LOGDIR} ${NGINX_DATADIR}
+OWN_DIRS=		${NGINX_LOGDIR}
 OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
 
 BUILD_DEFS+=		PKG_SYSCONFBASE NGINX_LOGDIR ${NGINX_PIDDIR} VARBASE
