@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/01/18 22:19:28 fulviociriaco Exp $
+$NetBSD: patch-aa,v 1.7 2009/01/20 07:58:47 fulviociriaco Exp $
 
 --- Makefile.orig	2009-01-17 21:12:07.000000000 +0100
 +++ Makefile
@@ -11,13 +11,14 @@ $NetBSD: patch-aa,v 1.6 2009/01/18 22:19:28 fulviociriaco Exp $
  CFLAGS+= -DMETA="'${META}'"
  .ifdef PROFILE
  # Don't use ccache
-@@ -82,6 +82,11 @@ LIBS+= -lutil -lncurses
+@@ -82,6 +82,12 @@ LIBS+= -lutil -lncurses
  CFLAGS+= -DUSE_LIBUTIL_H
  .endif
  
 +.if ${OS} == "NetBSD"
 +SRCS+= compat/strtonum.c compat/vis.c
 +LIBS+= -lcrypt
++CFLAGS+=-DNO_STRTONUM
 +.endif
 +
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}

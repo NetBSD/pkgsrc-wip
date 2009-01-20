@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/18 22:17:29 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/20 07:58:47 fulviociriaco Exp $
 
 DISTNAME=	tmux-0.6
 CATEGORIES=	misc
@@ -10,6 +10,10 @@ COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
 NO_CONFIGURE=	yes
 USE_NCURSES=	yes
+DEBUG_FLAGS?=no
+.if ${DEBUG_FLAGS} == "yes"
+CFLAGS+= -g
+.endif
 
 INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 ${DESTDIR}${PREFIX}/bin
 
