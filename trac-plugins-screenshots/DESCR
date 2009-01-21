@@ -1,0 +1,11 @@
+Provides screenshots upload and viewing subsystem for Trac.
+
+Uploaded screenshots can be described with short name, longer
+description and custom tags (if TracTags plugin is installed) and
+assigned to any number of components and versions registered in Trac.
+Screenshot uploads can be listed in timeline and screenshots can be
+referenced or embedded in wiki pages. Plugin internally defines few
+interfaces for further extension.
+
+The name is a little misleading as of course it is perfectly able to be
+used as a picture archive for the wiki pages.
