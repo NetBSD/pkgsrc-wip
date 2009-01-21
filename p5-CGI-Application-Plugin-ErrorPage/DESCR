@@ -1,0 +1,5 @@
+This plugin provides a shortcut for the common need of returning
+a simple error message to the user.
+You are encouraged to provide a template file so that the error
+messages can be presented with a design consistent with the
+rest of your application.
