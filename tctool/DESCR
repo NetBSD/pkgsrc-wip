@@ -1,0 +1,4 @@
+Tctool is a control and status utility for Tr*ndCh*p-based ADSL-modems. It
+allows to access the devices' console-service and retrieves their current
+staus. The following TC3084 devices are supported: Lucent CELL 19A-BX,
+Speed Modem 50B(+) and 200 by Arcor.

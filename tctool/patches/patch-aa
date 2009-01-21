@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/21 22:42:09 gschwarz Exp $
+
+--- Makefile.orig	2009-01-13 22:44:06.000000000 +0100
++++ Makefile	2009-01-13 22:44:44.000000000 +0100
+@@ -31,10 +31,10 @@
+ EXAMPLE  := example
+ EXOBJ    := if.o interface.o etherStream.o etherStreambuf.o tcStream.o tcStreambuf.o tcRtsDump.o tcRtsDumpbuf.o
+ 
+-CXX        := g++
+-CXXFLAGS   := -march=i386 -O2
+-LDFLAGS    := --strip-unneeded
+-LIBS       := 
++#CXX        := g++
++#CXXFLAGS   := -march=i386 -O2
++#LDFLAGS    := --strip-unneeded
++#LIBS       := 
+ LDSTATIC   := -L. -static-libgcc
+ STATICLIBS := stdc++ m
+ COUNTRY    := "C"
