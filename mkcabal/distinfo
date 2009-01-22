@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/26 05:56:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/01/22 06:13:19 phonohawk Exp $
 
 SHA1 (mkcabal-0.4.1.1.tar.gz) = 1d2f637e99b6fcb3fc2506f32c2dc76d4b31e1cf
 RMD160 (mkcabal-0.4.1.1.tar.gz) = 8f42597c43df1e82ec017cafddcc470ec906a2e9
 Size (mkcabal-0.4.1.1.tar.gz) = 41665 bytes
+SHA1 (patch-aa) = dc4f9b4ae2fad2c8606947a7473319780fec1aab
