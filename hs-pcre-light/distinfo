@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/26 05:40:20 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/01/22 06:33:43 phonohawk Exp $
 
 SHA1 (pcre-light-0.3.1.tar.gz) = 4b00f16d3974e54a467f750467f6875af6e4b154
 RMD160 (pcre-light-0.3.1.tar.gz) = 5c3f35ef4c49743f4bf517f5f1193c90f6e03dae
 Size (pcre-light-0.3.1.tar.gz) = 28824 bytes
+SHA1 (patch-aa) = 0323b5d35819030057c7381fe72bd16ca43215c4
