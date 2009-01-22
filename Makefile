@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3219 2009/01/22 06:05:46 phonohawk Exp $
+# $Id: Makefile,v 1.3220 2009/01/22 15:52:25 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1232,6 +1232,7 @@ SUBDIR+=	p5-CGI-Application-Plugin-Redirect
 SUBDIR+=	p5-CGI-Application-Plugin-TT
 SUBDIR+=	p5-CGI-Application-Plugin-ErrorPage
 SUBDIR+=	p5-CGI-Application-Server
+SUBDIR+=	p5-CGI-Application-Dispatch
 SUBDIR+=	p5-CGI-Untaint
 SUBDIR+=	p5-CGI-Untaint-date
 SUBDIR+=	p5-CGI-Untaint-email
@@ -1290,6 +1291,7 @@ SUBDIR+=	p5-Email-AddressParser
 SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exception-Base
+SUBDIR+=	p5-Exception-Class-TryCatch
 SUBDIR+=	p5-Exporter-Tidy
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GD-Barcode
