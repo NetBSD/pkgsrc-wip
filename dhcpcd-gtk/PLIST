@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/22 16:09:05 rsmarples Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/22 18:08:37 rsmarples Exp $
 bin/dhcpcd-gtk
-share/examples/dhcpcd-gtk/dhcpcd-gtk.desktop
-@dirrm share/examples/dhcpcd-gtk
+share/gnome/autostart/dhcpcd-gtk.desktop
+@unexec ${RMDIR} %D/share/gnome/autostart 2>/dev/null || ${TRUE}
