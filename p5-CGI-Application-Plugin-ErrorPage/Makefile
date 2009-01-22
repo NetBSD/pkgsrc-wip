@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/21 19:27:59 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/22 02:02:08 ficovh Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-ErrorPage-1.20
@@ -10,7 +10,12 @@ MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MA/MARKSTOS/
 COMMENT=	Simple error page plugin for CGI::Application
 
-# TODO: Look for the dependencies in Build.PL.
+DEPENDS+=       p5-CGI-Application>=4.01:../../www/p5-CGI-Application
+DEPENDS+=       p5-Params-Validate>0:../../devel/p5-Params-Validate
+DEPENDS+=       p5-Module-Build>0:../../devel/p5-Module-Build
+
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/ErrorPage/.packlist
