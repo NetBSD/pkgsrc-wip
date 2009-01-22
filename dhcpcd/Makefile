@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2008/12/02 15:11:26 rsmarples Exp $
+# $NetBSD: Makefile,v 1.24 2009/01/22 14:33:27 rsmarples Exp $
 #
 
-DISTNAME=		dhcpcd-4.0.7
+DISTNAME=		dhcpcd-4.99.10
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +20,6 @@ INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 # Install the configuration file
 CONF_FILES+=		${EGDIR}/dhcpcd.conf ${PKG_SYSCONFDIR}/dhcpcd.conf
 
-# The RC script needs some loving
 RCD_SCRIPTS+=		dhcpcd
 
 # Install the ntp hook script by default
