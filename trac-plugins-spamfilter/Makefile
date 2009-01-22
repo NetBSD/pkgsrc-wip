@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/22 00:17:57 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/22 09:54:37 rsmarples Exp $
 
 DISTNAME=	TracSpamFilter-0.1dev
 PKGNAME=	trac-plugins-spamfilter-0.1pre7539
+PKGREVISION=	# blank on purpose even though pkglint moans
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 
