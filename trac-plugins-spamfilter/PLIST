@@ -1,0 +1,68 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/22 00:17:57 rsmarples Exp $
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/requires.txt
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/top_level.txt
+${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/zip-safe
+${PYSITELIB}/tracspamfilter/__init__.py
+${PYSITELIB}/tracspamfilter/__init__.pyc
+${PYSITELIB}/tracspamfilter/__init__.pyo
+${PYSITELIB}/tracspamfilter/adapters.py
+${PYSITELIB}/tracspamfilter/adapters.pyc
+${PYSITELIB}/tracspamfilter/adapters.pyo
+${PYSITELIB}/tracspamfilter/admin.py
+${PYSITELIB}/tracspamfilter/admin.pyc
+${PYSITELIB}/tracspamfilter/admin.pyo
+${PYSITELIB}/tracspamfilter/api.py
+${PYSITELIB}/tracspamfilter/api.pyc
+${PYSITELIB}/tracspamfilter/api.pyo
+${PYSITELIB}/tracspamfilter/filters/__init__.py
+${PYSITELIB}/tracspamfilter/filters/__init__.pyc
+${PYSITELIB}/tracspamfilter/filters/__init__.pyo
+${PYSITELIB}/tracspamfilter/filters/akismet.py
+${PYSITELIB}/tracspamfilter/filters/akismet.pyc
+${PYSITELIB}/tracspamfilter/filters/akismet.pyo
+${PYSITELIB}/tracspamfilter/filters/bayes.py
+${PYSITELIB}/tracspamfilter/filters/bayes.pyc
+${PYSITELIB}/tracspamfilter/filters/bayes.pyo
+${PYSITELIB}/tracspamfilter/filters/extlinks.py
+${PYSITELIB}/tracspamfilter/filters/extlinks.pyc
+${PYSITELIB}/tracspamfilter/filters/extlinks.pyo
+${PYSITELIB}/tracspamfilter/filters/ip_blacklist.py
+${PYSITELIB}/tracspamfilter/filters/ip_blacklist.pyc
+${PYSITELIB}/tracspamfilter/filters/ip_blacklist.pyo
+${PYSITELIB}/tracspamfilter/filters/ip_throttle.py
+${PYSITELIB}/tracspamfilter/filters/ip_throttle.pyc
+${PYSITELIB}/tracspamfilter/filters/ip_throttle.pyo
+${PYSITELIB}/tracspamfilter/filters/regex.py
+${PYSITELIB}/tracspamfilter/filters/regex.pyc
+${PYSITELIB}/tracspamfilter/filters/regex.pyo
+${PYSITELIB}/tracspamfilter/filters/session.py
+${PYSITELIB}/tracspamfilter/filters/session.pyc
+${PYSITELIB}/tracspamfilter/filters/session.pyo
+${PYSITELIB}/tracspamfilter/htdocs/admin.css
+${PYSITELIB}/tracspamfilter/htdocs/no.gif
+${PYSITELIB}/tracspamfilter/htdocs/yes.gif
+${PYSITELIB}/tracspamfilter/model.py
+${PYSITELIB}/tracspamfilter/model.pyc
+${PYSITELIB}/tracspamfilter/model.pyo
+${PYSITELIB}/tracspamfilter/templates/admin_akismet.cs
+${PYSITELIB}/tracspamfilter/templates/admin_akismet.html
+${PYSITELIB}/tracspamfilter/templates/admin_bayes.cs
+${PYSITELIB}/tracspamfilter/templates/admin_bayes.html
+${PYSITELIB}/tracspamfilter/templates/admin_spamconfig.cs
+${PYSITELIB}/tracspamfilter/templates/admin_spamconfig.html
+${PYSITELIB}/tracspamfilter/templates/admin_spamentry.cs
+${PYSITELIB}/tracspamfilter/templates/admin_spamentry.html
+${PYSITELIB}/tracspamfilter/templates/admin_spammonitor.cs
+${PYSITELIB}/tracspamfilter/templates/admin_spammonitor.html
+${PYSITELIB}/tracspamfilter/upgrades.py
+${PYSITELIB}/tracspamfilter/upgrades.pyc
+${PYSITELIB}/tracspamfilter/upgrades.pyo
+@dirrm ${PYSITELIB}/tracspamfilter/templates
+@dirrm ${PYSITELIB}/tracspamfilter/htdocs
+@dirrm ${PYSITELIB}/tracspamfilter/filters
+@dirrm ${PYSITELIB}/tracspamfilter
+@dirrm ${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info
