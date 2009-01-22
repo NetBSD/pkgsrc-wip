@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3220 2009/01/22 15:52:25 ficovh Exp $
+# $Id: Makefile,v 1.3221 2009/01/22 16:10:46 rsmarples Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -259,6 +259,8 @@ SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
 SUBDIR+=	dhcpcd
+SUBDIR+=	dhcpcd-dbus
+SUBDIR+=	dhcpcd-gtk
 SUBDIR+=	di
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
