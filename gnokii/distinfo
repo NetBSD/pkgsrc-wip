@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2007/12/08 16:13:11 shattered Exp $
+$NetBSD: distinfo,v 1.9 2009/01/22 10:45:12 corecode Exp $
 
 SHA1 (gnokii-0.6.22.tar.bz2) = a782fb05ace48fae5aeabfbdf2f8c100ec96cb7a
 RMD160 (gnokii-0.6.22.tar.bz2) = 4e1ec33936b05bdab65b64507574522891a02fef
@@ -7,5 +7,6 @@ SHA1 (patch-aa) = a804c5ff755d72ad34bb4539926ccae451ca0f80
 SHA1 (patch-ab) = f0454a4989bc5cede93425d08759607957cac78a
 SHA1 (patch-ac) = c9eeac0112b55c0acd55bc2d029a13b2abad1793
 SHA1 (patch-ad) = 83b2c178e2f2af77082a09ee0d91bdbadec7fb04
+SHA1 (patch-ae) = c46a6c1cbf7de53e22a2b9098c0ab68615b0be1f
 SHA1 (patch-af) = c1eee682d8e8da65d6dca2f283a16989ffd691e3
-SHA1 (patch-ag) = b64623673c9843ec47c004a7f858745a24c9e641
+SHA1 (patch-ag) = 7e505e15a9d85ff3f5de5f5b16f1ceb73cb2b849

@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.5 2009/01/22 10:45:12 corecode Exp $
+
+--- include/compat.h.orig	2007-11-24 12:31:01 +0100
++++ include/compat.h
+@@ -79,6 +79,10 @@
+ #  include <sys/types.h>
+ #endif
+ 
++#ifdef HAVE_SYS_STAT_H
++#  include <sys/stat.h>
++#endif
++
+ #ifdef HAVE_CTYPE_H
+ #  include <ctype.h>
+ #endif

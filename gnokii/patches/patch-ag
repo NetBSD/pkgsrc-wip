@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2007/12/08 16:13:11 shattered Exp $
+$NetBSD: patch-ag,v 1.4 2009/01/22 10:45:12 corecode Exp $
 
 --- common/devices/unixbluetooth.c.orig	2006-08-27 23:36:54.000000000 +0100
 +++ common/devices/unixbluetooth.c
@@ -77,18 +77,18 @@ $NetBSD: patch-ag,v 1.3 2007/12/08 16:13:11 shattered Exp $
 +#define SOCKLEN(sa)
 +#endif	/* SOCKADDR_HAS_LEN */
 +
-+#ifndef HAVE_BACPY
++#if !defined(HAVE_BACPY) && !defined(bacpy)
 +#define bacpy(dst, src)		memcpy((dst), (src), sizeof(bdaddr_t))
 +#endif	/* HAVE_BACPY */
 +
-+#ifndef HAVE_BASWAP	/* don't have == don't need */
++#if !defined(HAVE_BASWAP) && !defined(baswap)	/* don't have == don't need */
 +#define baswap(dst, src)	bacpy(dst, src)
 +#endif	/* HAVE_BASWAP */
  
-+#ifndef HAVE_STR2BA
++#if !defined(HAVE_STR2BA) && !defined(str2ba)
  static int str2ba(const char *str, bdaddr_t *ba)
  {
-+#ifdef HAVE_BT_ATON
++#if defined(HAVE_BT_ATON) || defined(bt_aton)
  	return !bt_aton(str, ba);
 +#else
 +	uint8_t b[6];
