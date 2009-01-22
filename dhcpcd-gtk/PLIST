@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/22 16:09:05 rsmarples Exp $
+bin/dhcpcd-gtk
+share/examples/dhcpcd-gtk/dhcpcd-gtk.desktop
+@dirrm share/examples/dhcpcd-gtk

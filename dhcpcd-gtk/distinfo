@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/22 16:09:05 rsmarples Exp $
+
+SHA1 (dhcpcd-gtk-0.1.1.tar.bz2) = 820b7f371cba3e82551ca2171be9b44289c6ec1a
+RMD160 (dhcpcd-gtk-0.1.1.tar.bz2) = b44888d3e7ffe13f3f3ccefaf37a9b5a843c2a42
+Size (dhcpcd-gtk-0.1.1.tar.bz2) = 8080 bytes
