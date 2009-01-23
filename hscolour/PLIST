@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 09:42:14 phonohawk Exp $
+bin/HsColour
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/ANSI.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/Anchors.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/CSS.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/Classify.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/ColourHighlight.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/Colourise.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/General.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/HTML.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/LaTeX.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/MIRC.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/Options.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/Output.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour/TTY.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENCE-GPL
+share/${PKGNAME}/hscolour.css
+@dirrm share/${PKGNAME}
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
