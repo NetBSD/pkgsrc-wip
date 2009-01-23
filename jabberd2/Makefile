@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.56 2008/08/28 15:10:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.57 2009/01/23 03:21:20 schnoebe Exp $
 
-DISTNAME=		jabberd-2.2.4
+DISTNAME=		jabberd-2.2.5
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 COMMENT=		XMPP (Jabber) instant messaging server
 
 CONFLICTS=		jabberd-[0-9]*
 
-DEPENDS+=		gsasl>=0.2.27:../../security/gsasl
-
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-BUILDLINK_FNAME_TRANSFORM.db4+=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -110,17 +108,17 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
-	    ${EGDIR}/roster.xml
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${BINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${BINDIR}
+	    ${DESTDIR}${EGDIR}/roster.xml
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${DESTDIR}${BINDIR}
 .for f in ${DBFILES}
-	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${DESTDIR}${EGDIR}
 .endfor
 .for f in ${FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${DESTDIR}${EGDIR}
 .endfor
 .for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
 .include "../../wip/udns/buildlink3.mk"
