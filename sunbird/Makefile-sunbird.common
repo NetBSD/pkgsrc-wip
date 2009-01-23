@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-sunbird.common,v 1.1.1.1 2008/11/06 11:50:47 thomasklausner Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.2 2009/01/23 08:03:13 ghen Exp $
 
 MOZILLA_BIN=		sunbird-bin
 MOZ_VER=		0.9
@@ -12,8 +12,8 @@ HOMEPAGE=		http://www.mozilla.org/projects/calendar/sunbird/
 CONFIGURE_ENV+=		MOZ_SUNBIRD=1
 MAKE_ENV+=		MOZ_SUNBIRD=1
 
-DISTINFO_FILE=		${.CURDIR}/../../time/sunbird/distinfo
-PATCHDIR=		${.CURDIR}/../../time/sunbird/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/sunbird/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/sunbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=calendar
 CONFIGURE_ARGS+=	--enable-system-cairo
