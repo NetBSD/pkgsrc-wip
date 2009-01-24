@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/04 19:19:47 thomasklausner Exp $
-bin/einfo
-bin/lit2epub
-include/epub.h
-include/epub_shared.h
-lib/libepub.so
-lib/libepub.so.0
-lib/libepub.so.0.1.1
