@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/01/20 07:58:47 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/24 22:59:09 leot1990 Exp $
 
 DISTNAME=	tmux-0.6
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
@@ -8,18 +9,16 @@ MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://tmux.sourceforge.net/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 USE_NCURSES=	yes
-DEBUG_FLAGS?=no
-.if ${DEBUG_FLAGS} == "yes"
-CFLAGS+= -g
-.endif
 
-INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 ${DESTDIR}${PREFIX}/bin
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tmux ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tmux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+= \
+   INSTALL_MAN=${INSTALL_MAN:Q} \
+   INSTALL_MAN_DIR=${INSTALL_PROGRAM_DIR:Q} \
+   INSTALL_PROGRAM_DIR=${INSTALL_PROGRAM_DIR:Q} \
+   INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.7 2009/01/20 07:58:47 fulviociriaco Exp $
+$NetBSD: patch-aa,v 1.8 2009/01/24 22:59:10 leot1990 Exp $
+
+Do not add -W* flags to CFLAGS.
+NetBSD has not got strtonum(3) and strnvis(3) so use the compat/
+alternatives.
+Do not use rough install(1) commands, use cleaner INSTALL_* ones.
 
 --- Makefile.orig	2009-01-17 21:12:07.000000000 +0100
 +++ Makefile
@@ -11,10 +16,22 @@ $NetBSD: patch-aa,v 1.7 2009/01/20 07:58:47 fulviociriaco Exp $
  CFLAGS+= -DMETA="'${META}'"
  .ifdef PROFILE
  # Don't use ccache
-@@ -82,6 +82,12 @@ LIBS+= -lutil -lncurses
+@@ -61,10 +61,6 @@ CFLAGS+= -DBUILD="\"$(VERSION) ($(DATE))
+ CFLAGS+= -DBUILD="\"$(VERSION)\""
+ .endif
+ #CFLAGS+= -pedantic -std=c99
+-CFLAGS+= -Wno-long-long -Wall -W -Wnested-externs -Wformat=2
+-CFLAGS+= -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations
+-CFLAGS+= -Wwrite-strings -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
+-CFLAGS+= -Wundef -Wbad-function-cast -Winline -Wcast-align
+ 
+ PREFIX?= /usr/local
+ INSTALLDIR= install -d
+@@ -82,6 +78,13 @@ LIBS+= -lutil -lncurses
  CFLAGS+= -DUSE_LIBUTIL_H
  .endif
  
++# NetBSD
 +.if ${OS} == "NetBSD"
 +SRCS+= compat/strtonum.c compat/vis.c
 +LIBS+= -lcrypt
@@ -24,3 +41,15 @@ $NetBSD: patch-aa,v 1.7 2009/01/20 07:58:47 fulviociriaco Exp $
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
  
  DISTDIR= ${PROG}-${VERSION}
+@@ -128,7 +131,7 @@ update-index.html:
+ 		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
+ 
+ install:	all
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/bin
+-		${INSTALLBIN} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/man/man1
+-		${INSTALLMAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1/
++		${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++		${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
++		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++		${INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
