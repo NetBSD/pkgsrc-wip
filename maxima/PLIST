@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/08 17:36:28 asau Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/24 20:10:55 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -1015,6 +1015,54 @@ share/maxima/${PKGVERSION}/share/matrix/pfaff.usg
 share/maxima/${PKGVERSION}/share/matrix/rateig.mac
 share/maxima/${PKGVERSION}/share/matrix/rtest_eigen.mac
 share/maxima/${PKGVERSION}/share/maxima-init.lisp
+share/maxima/${PKGVERSION}/share/minpack/disclaimer
+share/maxima/${PKGVERSION}/share/minpack/fortran/chkder.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/dogleg.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/dpmpar.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/enorm.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/fdjac1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/fdjac2.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/hybrd.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/hybrd1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/hybrj.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/hybrj1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmder.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmder1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmdif.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmdif1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmpar.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmstr.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/lmstr1.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/qform.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/qrfac.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/qrsolv.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/r1mpyq.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/r1updt.f
+share/maxima/${PKGVERSION}/share/minpack/fortran/rwupdt.f
+share/maxima/${PKGVERSION}/share/minpack/lisp/dogleg.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/dpmpar.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/enorm.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/fdjac1.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/fdjac2.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/hybrd.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/hybrd1.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/hybrj.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/hybrj1.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/lmder.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/lmder1.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/lmdif.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/lmdif1.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/lmpar.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/qform.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/qrfac.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/qrsolv.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/r1mpyq.lisp
+share/maxima/${PKGVERSION}/share/minpack/lisp/r1updt.lisp
+share/maxima/${PKGVERSION}/share/minpack/load-minpack.lisp
+share/maxima/${PKGVERSION}/share/minpack/minpack-interface.lisp
+share/maxima/${PKGVERSION}/share/minpack/minpack-lisp.system
+share/maxima/${PKGVERSION}/share/minpack/minpack-package.lisp
+share/maxima/${PKGVERSION}/share/minpack/minpack.system
 share/maxima/${PKGVERSION}/share/misc/arrfun.mac
 share/maxima/${PKGVERSION}/share/misc/declin.dem
 share/maxima/${PKGVERSION}/share/misc/declin.mac
@@ -1658,6 +1706,9 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima/${PKGVERSION}/share/orthopoly
 @dirrm share/maxima/${PKGVERSION}/share/numeric
 @dirrm share/maxima/${PKGVERSION}/share/misc
+@dirrm share/maxima/${PKGVERSION}/share/minpack/lisp
+@dirrm share/maxima/${PKGVERSION}/share/minpack/fortran
+@dirrm share/maxima/${PKGVERSION}/share/minpack
 @dirrm share/maxima/${PKGVERSION}/share/matrix
 @dirrm share/maxima/${PKGVERSION}/share/macro
 @dirrm share/maxima/${PKGVERSION}/share/lisp-utils
