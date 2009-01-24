@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/24 13:58:18 obache Exp $
+bin/xvmware
+lib/X11/app-defaults/Xvmware

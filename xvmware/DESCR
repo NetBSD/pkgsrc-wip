@@ -1,0 +1,3 @@
+Xvmware is a X utility for VMware guest OS to support
+ * seamless mouse corsor movement of guest <=> host.
+ * copy&paste with X Selection and Windows clipboard.
