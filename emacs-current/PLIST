@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2008/12/20 13:32:07 makoto Exp $
+@comment $NetBSD: PLIST,v 1.73 2009/01/25 05:47:32 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2175,24 +2175,6 @@ share/emacs/${PKGVERSION}/lisp/mail/metamail.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/metamail.elc
 share/emacs/${PKGVERSION}/lisp/mail/mspools.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/mspools.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmail.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmail.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailedit.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailedit.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailhdr.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailhdr.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailkwd.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailkwd.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailmm.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailmm.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailmsc.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailmsc.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailout.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailout.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailsort.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailsort.elc
-share/emacs/${PKGVERSION}/lisp/mail/pmailsum.el.gz
-share/emacs/${PKGVERSION}/lisp/mail/pmailsum.elc
 share/emacs/${PKGVERSION}/lisp/mail/reporter.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/reporter.elc
 share/emacs/${PKGVERSION}/lisp/mail/rfc2368.el.gz
@@ -2207,6 +2189,8 @@ share/emacs/${PKGVERSION}/lisp/mail/rmailedit.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rmailedit.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmailkwd.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rmailkwd.elc
+share/emacs/${PKGVERSION}/lisp/mail/rmailmm.el.gz
+share/emacs/${PKGVERSION}/lisp/mail/rmailmm.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmailmsc.el.gz
 share/emacs/${PKGVERSION}/lisp/mail/rmailmsc.elc
 share/emacs/${PKGVERSION}/lisp/mail/rmailout.el.gz
