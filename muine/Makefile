@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/12/04 17:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2009/01/25 18:44:47 koifren Exp $
 #
 
 DISTNAME=	muine-0.8.10
@@ -37,7 +37,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../lang/monodoc/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
