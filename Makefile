@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3224 2009/01/24 12:39:36 thomasklausner Exp $
+# $Id: Makefile,v 1.3225 2009/01/25 08:21:00 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1824,6 +1824,7 @@ SUBDIR+=	tex-cm
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
 SUBDIR+=	tex-metafont
+SUBDIR+=	tex-misc
 SUBDIR+=	tex-plain
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
