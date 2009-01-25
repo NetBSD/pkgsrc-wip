@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2009/01/25 23:59:39 alnsn Exp $
+
+SHA1 (l_cc_p_10.1.021.tar.gz) = 413c0a1f461800eda2de90edcb629fb590f4992d
+RMD160 (l_cc_p_10.1.021.tar.gz) = 3d993a6f8ab923e07cd2c7b2ce8c982d9ab7c79e
+Size (l_cc_p_10.1.021.tar.gz) = 81568847 bytes
+SHA1 (patch-aa) = 37d5364ff56a0c05af309bff8677235dc62d3785
+SHA1 (patch-ab) = e846761495460937b19c9e150751e0a4d8f264e2
+SHA1 (patch-ac) = 88b08001ce86c2b69d944131dc0ae6c4092f7b10

@@ -1,0 +1,94 @@
+$NetBSD: patch-aa,v 1.1 2009/01/25 23:59:39 alnsn Exp $
+
+--- icc10/bin/icc.orig	2009-01-25 20:26:30.000000000 +0000
++++ icc10/bin/icc
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ if [ -z "${INTEL_LICENSE_FILE}" ]
+ then
+@@ -8,23 +8,6 @@ else
+ fi
+ export INTEL_LICENSE_FILE;
+ 
+-if [ -z "${LD_LIBRARY_PATH}" ]
+-then 
+- LD_LIBRARY_PATH="<INSTALLDIR>/lib";
+-else
+- LD_LIBRARY_PATH="<INSTALLDIR>/lib:${LD_LIBRARY_PATH}";
+-fi
+-export LD_LIBRARY_PATH;
+-
+-# DYLD_LIBRARY_PATH is used on MAC OS*
+-if [ -z "${DYLD_LIBRARY_PATH}" ]
+-then 
+- DYLD_LIBRARY_PATH="<INSTALLDIR>/lib";
+-else
+- DYLD_LIBRARY_PATH="<INSTALLDIR>/lib:${DYLD_LIBRARY_PATH}";
+-fi
+-export DYLD_LIBRARY_PATH;
+-
+ if [ -z "${NLSPATH}" ] 
+ then
+     NLSPATH="<INSTALLDIR>/lib/locale/en_US/%N"; 
+@@ -34,17 +17,50 @@ fi
+ 
+ if [ -z "${PATH}" ]
+ then
+- PATH="<INSTALLDIR>/bin";
++ PATH="<INSTALLDIR>/bin:@BUILDLINK_PREFIX.gcc43@/bin";
+ else
+- PATH="<INSTALLDIR>/bin:${PATH}";
++ PATH="<INSTALLDIR>/bin:@BUILDLINK_PREFIX.gcc43@/bin:${PATH}";
+ fi
+ export PATH;
+ 
+-export -n IA32ROOT; unset IA32ROOT;
++unset IA32ROOT;
+ 
+-if [ $# != 0 ]
+-then
+- exec -a "<INSTALLDIR>/bin/icc" <INSTALLDIR>/bin/iccbin "$@";
+-else
+- exec -a "<INSTALLDIR>/bin/icc" <INSTALLDIR>/bin/iccbin;
+-fi
++GCC_LIBDIR=`dirname "$(gcc -print-libgcc-file-name)"`
++
++for crt in @STARTFILES@
++do
++	crt_path=`gcc -print-file-name=${crt}`
++	startfiles="${startfiles} -Qoption,ld,${crt_path}"
++done
++
++for crt in @ENDFILES@
++do
++	crt_path=`gcc -print-file-name=${crt}`
++	endfiles="${endfiles} -Qoption,ld,${crt_path}"
++done
++
++exec "<INSTALLDIR>/bin/iccbin"               \
++	-U__linux__ -U__linux                \
++	-U__gnu_linux__ -Ulinux              \
++	-nostdinc                            \
++	-I @BUILDLINK_PREFIX.gcc43@/include  \
++	-I "${GCC_LIBDIR}/include"           \
++	-I "${GCC_LIBDIR}/include-fixed"     \
++	-I /usr/include                      \
++	-nostartfiles                        \
++	-dynamic-linker @INTERP@             \
++	${startfiles}                        \
++	"$@"                                 \
++	-nostdlib                            \
++	-Qoption,ld,-limf                    \
++	-Qoption,ld,-lm                      \
++	-Qoption,ld,-lipgo                   \
++	-Qoption,ld,-lgcc_s                  \
++	-Qoption,ld,-lgcc                    \
++	-Qoption,ld,-lirc                    \
++	-Qoption,ld,-lc                      \
++	-Qoption,ld,-lgcc_s                  \
++	-Qoption,ld,-lgcc                    \
++	-Qoption,ld,-lirc_s                  \
++	-Qoption,ld,-lc                      \
++	${endfiles}

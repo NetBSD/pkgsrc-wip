@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2009/01/25 23:59:39 alnsn Exp $
+
+--- icc10/bin/profrun.orig	2009-01-25 20:26:31.000000000 +0000
++++ icc10/bin/profrun
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # Record full path to this script, needed by profrun.
+ export PROFRUN_FULL_PATH=$0
+@@ -28,11 +28,4 @@ fi
+ export PROFRUN_MODIFIED_PATH="${PATH}"
+ export PROFRUN_MODIFIED_LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
+ 
+-BINARY="profrun.bin"
+-
+-if [ $# != 0 ]
+-then
+-    exec -a "${BINARY}" "${BINARY}" "$@"
+-else
+-    exec -a "${BINARY}" "${BINARY}"
+-fi
++exec profrun.bin "$@";
