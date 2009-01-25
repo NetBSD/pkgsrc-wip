@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3227 2009/01/25 18:43:31 minskim Exp $
+# $Id: Makefile,v 1.3228 2009/01/25 19:18:08 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1820,6 +1820,7 @@ SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-bin-kpathsea
 SUBDIR+=	tex-bin-tetex
+SUBDIR+=	tex-bin-tex
 SUBDIR+=	tex-bin-texlive
 SUBDIR+=	tex-cm
 SUBDIR+=	tex-hyphen-base
