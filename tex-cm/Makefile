@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/05 01:38:12 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/25 08:32:03 minskim Exp $
 # TeX Live Revision 7621
 
 DISTNAME=	cm
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
+
 TEX_MIXEDMAP_FILES+=	cmother-bsr.map
 TEX_MIXEDMAP_FILES+=	cmtext-bsr-interpolated.map
 TEX_MIXEDMAP_FILES+=	cmtext-bsr.map
