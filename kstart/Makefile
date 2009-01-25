@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/14 18:23:43 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/25 01:12:11 jakllsch Exp $
 
 DISTNAME=	kstart-3.14
 CATEGORIES=	sysutils
@@ -12,13 +12,14 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-k4start
+CONFIGURE_ARGS+=	--enable-setpag
 
 # As the NetBSD base system doesn't ship with afslog
-# (or pagsh), and pkgsrc heimdal and pkgsrc openafs
-# conflict; I've made the path to (ak|afs)log selectable.
+# and pkgsrc heimdal and pkgsrc openafs conflict;
+# the path to (ak|afs)log is configurable.
 
 BUILD_DEFS+= KSTART_PATH_AKLOG
-KSTART_PATH_AKLOG?= /usr/local/bin/afslog
+KSTART_PATH_AKLOG?= ${PREFIX}/bin/afslog
 .include "../../mk/bsd.prefs.mk"
 CONFIGURE_ARGS+=	--with-aklog=${KSTART_PATH_AKLOG:Q}
 
