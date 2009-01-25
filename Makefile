@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3226 2009/01/25 08:38:38 minskim Exp $
+# $Id: Makefile,v 1.3227 2009/01/25 18:43:31 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1822,6 +1822,7 @@ SUBDIR+=	tex-bin-kpathsea
 SUBDIR+=	tex-bin-tetex
 SUBDIR+=	tex-bin-texlive
 SUBDIR+=	tex-cm
+SUBDIR+=	tex-hyphen-base
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
 SUBDIR+=	tex-metafont
