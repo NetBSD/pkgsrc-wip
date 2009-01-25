@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/05 18:59:04 minskim Exp $
-# TeX Live Revision 11613
+# $NetBSD: Makefile,v 1.2 2009/01/25 08:25:46 minskim Exp $
+# TeX Live Revision 11728
 
 DISTNAME=	bin-texlive
-PKGNAME=	tex-${DISTNAME}-2008
+PKGNAME=	tex-${DISTNAME}-2008.11728
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -20,20 +20,12 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-PKG_SYSCONFSUBDIR=	texmf
-
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/web2c
-CONF_FILES+=	${PREFIX}/share/texmf/fmtutil/fmtutil-hdr.cnf \
-		${PKG_SYSCONFDIR}/web2c/fmtutil.cnf
-CONF_FILES+=	${PREFIX}/share/texmf/web2c/updmap-hdr.cfg \
-		${PKG_SYSCONFDIR}/web2c/updmap.cfg
-
-TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 .include "../../print/kpathsea/texmf.mk"
 
 post-extract:
+	${RM} -f ${WRKSRC}/texmf/web2c/updmap-hdr.cfg
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${WRKSRC}/texmf* -type f -exec ${CHMOD} ${SHAREMODE} {} \;
 
