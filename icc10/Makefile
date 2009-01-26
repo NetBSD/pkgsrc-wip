@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/01/25 23:59:39 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/26 20:01:00 alnsn Exp $
 
 ICC_VERSION=	10.1.021
 ICC_SUBPREFIX=	icc10
@@ -25,7 +25,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 DEPENDS+=		gcc43>=4.3.2:../../wip/gcc43
 BUILD_DEPENDS+=		rpm2pkg>=2.1:../../pkgtools/rpm2pkg
 
-EMUL_PLATFORMS=		linux-i386
+EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	base compat
 EMUL_REQD=		suse>=10.0
 
