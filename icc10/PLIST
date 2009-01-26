@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/01/25 23:59:39 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/26 19:41:28 alnsn Exp $
 
 ${ICC_SUBPREFIX}/bin/codecov
 ${ICC_SUBPREFIX}/bin/icc
@@ -2315,7 +2315,6 @@ ${ICC_SUBPREFIX}/samples/vec_samples/vec_sample.c
 @dirrm ${ICC_SUBPREFIX}/lib/locale/en_US
 @dirrm ${ICC_SUBPREFIX}/lib/locale
 @dirrm ${ICC_SUBPREFIX}/lib
-@dirrm ${ICC_SUBPREFIX}/include
 @dirrm ${ICC_SUBPREFIX}/doc/main_cls/whxdata
 @dirrm ${ICC_SUBPREFIX}/doc/main_cls/whgdata
 @dirrm ${ICC_SUBPREFIX}/doc/main_cls/whdata
