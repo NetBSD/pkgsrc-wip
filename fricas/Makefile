@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/01/17 13:11:31 asau Exp $
+# $NetBSD: Makefile,v 1.19 2009/01/26 02:10:47 asau Exp $
 
 PKGNAME=		fricas-1.0.99
 DISTNAME=		${PKGNAME}-full
@@ -34,6 +34,10 @@ MAKE_JOBS_SAFE=		no
 #INSTALLATION_DIRS=	lib/fricas/emacs
 
 .include "options.mk"
+
+.if !empty(PKG_OPTIONS:Mclisp)
+INSTALL_UNSTRIPPED=	yes	# don't strip AXIOMsys, it breaks FFI
+.endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 post-build:
