@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2009/01/24 22:59:09 leot1990 Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/27 13:23:28 fulviociriaco Exp $
 
 DISTNAME=	tmux-0.6
 PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
-MAINTAINER=	clamiax@gmail.com
+MAINTAINER=	oivulf@gmail.com
 HOMEPAGE=	http://tmux.sourceforge.net/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 
