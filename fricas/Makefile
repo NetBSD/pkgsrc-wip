@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2009/01/26 02:10:47 asau Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/27 00:07:00 asau Exp $
 
-PKGNAME=		fricas-1.0.99
+PKGNAME=		fricas-1.0.5
 DISTNAME=		${PKGNAME}-full
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
@@ -15,8 +15,8 @@ SVN_REPOSITORIES=	fricas
 SVN_ROOT.fricas=	https://fricas.svn.sourceforge.net/svnroot/fricas/trunk
 SVN_MODULE.fricas=	fricas
 
-#WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-WRKSRC=			${WRKDIR}/fricas
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+#WRKSRC=			${WRKDIR}/fricas
 
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
@@ -30,6 +30,7 @@ MAKE_JOBS_SAFE=		no
 # 1. Building X11 interfaces requires X server running.
 # We should run Xvfb for that stage.
 # 4. Emacs files should go into "site-lisp".
+# 5. view3D hangs sometimes (?), killing it doesn't affect binary package.
 
 #INSTALLATION_DIRS=	lib/fricas/emacs
 
@@ -41,10 +42,9 @@ INSTALL_UNSTRIPPED=	yes	# don't strip AXIOMsys, it breaks FFI
 
 .if !empty(PKG_OPTIONS:Mx11)
 post-build:
-# This should start Xvfb temporarily:
-	cd ${WRKSRC}/src/paste && ${MAKE_PROGRAM} gphts 
-# xvfb-run --server-args="-screen 0 1024x768x24" --auto-servernum -n 0 make gphts
+# This should start Xvfb temporarily (1024x768x24 resolution recommended):
+	cd ${WRKSRC}/src/paste && ${MAKE_PROGRAM} gphts
 .endif
 
-.include "../mk/svn-package.mk"
+#.include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
