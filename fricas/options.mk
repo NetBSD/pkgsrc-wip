@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/12/18 05:28:26 asau Exp $
+# $NetBSD: options.mk,v 1.12 2009/01/27 00:12:16 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -6,9 +6,7 @@ PKG_OPTIONS_GROUP.lisp=		clisp sbcl ecl
 
 PKG_SUPPORTED_OPTIONS+=		x11
 
-# We should use CLISP instead of ECL, but it became problematic
-# in FriCAS 1.0.3:
-PKG_SUGGESTED_OPTIONS+=		ecl x11
+PKG_SUGGESTED_OPTIONS+=		clisp x11
 
 .include "../../mk/bsd.options.mk"
 
