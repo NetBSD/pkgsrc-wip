@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/11/28 07:42:47 shindenmorr Exp $
+$NetBSD: distinfo,v 1.4 2009/01/27 12:42:09 shindenmorr Exp $
 
-SHA1 (wordpress-2.6.5/latest.zip) = 7148bc63bf0747b5ac8bfe6dbac2451b97790dd9
-RMD160 (wordpress-2.6.5/latest.zip) = 9b12107c07fdfb7366628d8f7b19b5c09f08620e
-Size (wordpress-2.6.5/latest.zip) = 1514961 bytes
+SHA1 (wordpress-2.7/latest.zip) = 718c76206044c923a21e0c4707b64f9ac435e3e1
+RMD160 (wordpress-2.7/latest.zip) = b816b806e2fd17ad1ab3bc76002d67b036efa343
+Size (wordpress-2.7/latest.zip) = 1849558 bytes
