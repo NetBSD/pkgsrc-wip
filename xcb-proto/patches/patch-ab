@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.4 2009/01/28 20:26:35 drochner Exp $
+
+--- xcbgen/xtypes.py.orig	2008-07-16 07:56:57.000000000 +0200
++++ xcbgen/xtypes.py
+@@ -158,12 +158,21 @@ class ListType(Type):
+ 
+         if elt.tag == 'list':
+             elts = list(elt)
+-            self.expr = Expression(elts[0] if len(elts) else elt, self)
++	    if len(elts):
++		self.expr = Expression(elts[0], self)
++	    else:
++            	self.expr = Expression(elt, self)
+         elif elt.tag == 'valueparam':
+             self.expr = Expression(elt, self)
+ 
+-        self.size = member.size if member.fixed_size() else None
+-        self.nmemb = self.expr.nmemb if self.expr.fixed_size() else None
++	if member.fixed_size():
++		self.size = member.size
++	else:
++        	self.size = None
++	if self.expr.fixed_size():
++		self.nmemb = self.expr.nmemb
++	else:
++        	self.nmemb = None
+ 
+     def make_member_of(self, module, complex_type, field_type, field_name, visible, wire, auto):
+         if not self.fixed_size():
+@@ -241,7 +250,10 @@ class PadType(Type):
+         Type.__init__(self, tcard8.name)
+         self.is_pad = True
+         self.size = 1
+-        self.nmemb = 1 if (elt == None) else int(elt.get('bytes'))
++	if (elt == None):
++		self.nmemb = 1
++	else:
++        	self.nmemb = int(elt.get('bytes'))
+ 
+     def resolve(self, module):
+         self.resolved = True
