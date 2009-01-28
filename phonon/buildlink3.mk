@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/07/26 22:13:12 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/28 10:44:04 mwdavies Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHONON_BUILDLINK3_MK:=	${PHONON_BUILDLINK3_MK}+
