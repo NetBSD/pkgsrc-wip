@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/14 10:51:52 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/28 11:25:22 mwdavies Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -792,8 +792,6 @@ share/locale/en_GB/LC_MESSAGES/kreversi.mo
 share/locale/en_GB/LC_MESSAGES/krfb.mo
 share/locale/en_GB/LC_MESSAGES/kruler.mo
 share/locale/en_GB/LC_MESSAGES/krunner.mo
-share/locale/en_GB/LC_MESSAGES/krunner_locationsrunner.mo
-share/locale/en_GB/LC_MESSAGES/krunner_webshortcutsrunner.mo
 share/locale/en_GB/LC_MESSAGES/ksame.mo
 share/locale/en_GB/LC_MESSAGES/ksayit.mo
 share/locale/en_GB/LC_MESSAGES/kscd.mo
@@ -891,12 +889,13 @@ share/locale/en_GB/LC_MESSAGES/plasma_applet_launcher.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_pager.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_tasks.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_trash.mo
+share/locale/en_GB/LC_MESSAGES/plasma_runner_locations.mo
+share/locale/en_GB/LC_MESSAGES/plasma_runner_webshortcuts.mo
 share/locale/en_GB/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/en_GB/LC_MESSAGES/plasmapkg.mo
 share/locale/en_GB/LC_MESSAGES/printer-applet.mo
 share/locale/en_GB/LC_MESSAGES/processcore.mo
 share/locale/en_GB/LC_MESSAGES/processui.mo
-share/locale/en_GB/LC_MESSAGES/quanta.mo
 share/locale/en_GB/LC_MESSAGES/solid-bluetooth.mo
 share/locale/en_GB/LC_MESSAGES/solid-hardware.mo
 share/locale/en_GB/LC_MESSAGES/solid-network.mo

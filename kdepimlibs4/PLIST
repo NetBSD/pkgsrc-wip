@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/14 10:51:55 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/28 11:25:22 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -100,8 +100,6 @@ include/kabc/addressee.h
 include/kabc/addresseedialog.h
 include/kabc/addresseelist.h
 include/kabc/addresslineedit.h
-include/kabc/contactgroup.h
-include/kabc/contactgrouptool.h
 include/kabc/distributionlist.h
 include/kabc/distributionlistdialog.h
 include/kabc/emailselectdialog.h

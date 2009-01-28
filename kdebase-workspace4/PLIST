@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/01/14 10:51:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/01/28 11:25:22 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -1645,14 +1645,6 @@ share/kde/wallpapers/Code_Poets_Dream/contents/images/1600x1200.jpg
 share/kde/wallpapers/Code_Poets_Dream/contents/images/1920x1200.jpg
 share/kde/wallpapers/Code_Poets_Dream/contents/screenshot.png
 share/kde/wallpapers/Code_Poets_Dream/metadata.desktop
-share/kde/wallpapers/Colorado_Farm/contents/images/1024x768.jpg
-share/kde/wallpapers/Colorado_Farm/contents/images/1280x1024.jpg
-share/kde/wallpapers/Colorado_Farm/contents/images/1280x800.jpg
-share/kde/wallpapers/Colorado_Farm/contents/images/1440x900.jpg
-share/kde/wallpapers/Colorado_Farm/contents/images/1600x1200.jpg
-share/kde/wallpapers/Colorado_Farm/contents/images/1920x1200.jpg
-share/kde/wallpapers/Colorado_Farm/contents/screenshot.png
-share/kde/wallpapers/Colorado_Farm/metadata.desktop
 share/kde/wallpapers/Curls_on_Green/contents/images/1024x768.jpg
 share/kde/wallpapers/Curls_on_Green/contents/images/1280x1024.jpg
 share/kde/wallpapers/Curls_on_Green/contents/images/1280x800.jpg
@@ -1701,6 +1693,14 @@ share/kde/wallpapers/Fresh_Morning/contents/images/1600x1200.jpg
 share/kde/wallpapers/Fresh_Morning/contents/images/1920x1200.jpg
 share/kde/wallpapers/Fresh_Morning/contents/screenshot.png
 share/kde/wallpapers/Fresh_Morning/metadata.desktop
+share/kde/wallpapers/HighTide/contents/images/1024x768.jpg
+share/kde/wallpapers/HighTide/contents/images/1280x1024.jpg
+share/kde/wallpapers/HighTide/contents/images/1280x800.jpg
+share/kde/wallpapers/HighTide/contents/images/1440x900.jpg
+share/kde/wallpapers/HighTide/contents/images/1600x1200.jpg
+share/kde/wallpapers/HighTide/contents/images/1920x1200.jpg
+share/kde/wallpapers/HighTide/contents/screenshot.png
+share/kde/wallpapers/HighTide/metadata.desktop
 share/kde/wallpapers/Ladybuggin/contents/images/1024x768.jpg
 share/kde/wallpapers/Ladybuggin/contents/images/1280x1024.jpg
 share/kde/wallpapers/Ladybuggin/contents/images/1280x800.jpg
@@ -1971,6 +1971,9 @@ share/sounds/pop.wav
 @dirrm share/kde/wallpapers/Ladybuggin/contents/images
 @dirrm share/kde/wallpapers/Ladybuggin/contents
 @dirrm share/kde/wallpapers/Ladybuggin
+@dirrm share/kde/wallpapers/HighTide/contents/images
+@dirrm share/kde/wallpapers/HighTide/contents
+@dirrm share/kde/wallpapers/HighTide
 @dirrm share/kde/wallpapers/Fresh_Morning/contents/images
 @dirrm share/kde/wallpapers/Fresh_Morning/contents
 @dirrm share/kde/wallpapers/Fresh_Morning
@@ -1989,9 +1992,6 @@ share/sounds/pop.wav
 @dirrm share/kde/wallpapers/Curls_on_Green/contents/images
 @dirrm share/kde/wallpapers/Curls_on_Green/contents
 @dirrm share/kde/wallpapers/Curls_on_Green
-@dirrm share/kde/wallpapers/Colorado_Farm/contents/images
-@dirrm share/kde/wallpapers/Colorado_Farm/contents
-@dirrm share/kde/wallpapers/Colorado_Farm
 @dirrm share/kde/wallpapers/Code_Poets_Dream/contents/images
 @dirrm share/kde/wallpapers/Code_Poets_Dream/contents
 @dirrm share/kde/wallpapers/Code_Poets_Dream

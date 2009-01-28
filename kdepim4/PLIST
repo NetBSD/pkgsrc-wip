@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:55 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/28 11:25:22 mwdavies Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -60,7 +60,6 @@ bin/scalixadmin
 bin/scalixwizard
 bin/schematest
 bin/sloxwizard
-bin/thememain
 include/akregator/akregator_export.h
 include/akregator/article.h
 include/akregator/command.h
@@ -263,11 +262,11 @@ lib/kde4/korg_thisdayinhistory.so
 lib/kde4/korg_yearprint.so
 lib/kde4/korganizerpart.so
 lib/kde4/kpartsdesignerplugin.so
-lib/kde4/kpilot_conduit_calendar2.so
+lib/kde4/kpilot_conduit_calendar.so
 lib/kde4/kpilot_conduit_contacts.so
 lib/kde4/kpilot_conduit_memofile.so
 lib/kde4/kpilot_conduit_time.so
-lib/kde4/kpilot_conduit_todo2.so
+lib/kde4/kpilot_conduit_todo.so
 lib/kde4/ktexteditorkabcbridge.so
 lib/kde4/ktimetrackerpart.so
 lib/kde4/ldifvcardthumbnail.so

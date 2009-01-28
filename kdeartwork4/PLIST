@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/14 10:51:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/28 11:25:22 mwdavies Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -3047,7 +3047,6 @@ share/kde/apps/desktoptheme/Silicon/widgets/background.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/bar_meter_horizontal.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/button.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/calendar.svgz
-share/kde/apps/desktoptheme/Silicon/widgets/clock.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/configuration-icons.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/containment-controls.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/extender-background.svgz
@@ -3062,21 +3061,19 @@ share/kde/apps/desktoptheme/Silicon/widgets/tasks.svgz
 share/kde/apps/desktoptheme/Silicon/widgets/tooltip.svgz
 share/kde/apps/desktoptheme/heron/colors
 share/kde/apps/desktoptheme/heron/dialogs/background.svgz
-share/kde/apps/desktoptheme/heron/dialogs/shutdowndialog.svgz
+share/kde/apps/desktoptheme/heron/dialogs/krunner.svgz
 share/kde/apps/desktoptheme/heron/metadata.desktop
 share/kde/apps/desktoptheme/heron/opaque/dialogs/background.svgz
 share/kde/apps/desktoptheme/heron/opaque/widgets/panel-background.svgz
 share/kde/apps/desktoptheme/heron/opaque/widgets/tooltip.svgz
-share/kde/apps/desktoptheme/heron/widgets/analog_meter.svgz
 share/kde/apps/desktoptheme/heron/widgets/background.svgz
-share/kde/apps/desktoptheme/heron/widgets/bar_meter_horizontal.svgz
-share/kde/apps/desktoptheme/heron/widgets/bar_meter_vertical.svgz
 share/kde/apps/desktoptheme/heron/widgets/clock.svgz
-share/kde/apps/desktoptheme/heron/widgets/iconbutton.svgz
-share/kde/apps/desktoptheme/heron/widgets/notes.svgz
+share/kde/apps/desktoptheme/heron/widgets/containment-controls.svgz
+share/kde/apps/desktoptheme/heron/widgets/frame.svgz
+share/kde/apps/desktoptheme/heron/widgets/pager.svgz
 share/kde/apps/desktoptheme/heron/widgets/panel-background.svgz
-share/kde/apps/desktoptheme/heron/widgets/picture-frame-default.svgz
-share/kde/apps/desktoptheme/heron/widgets/plot-background.svgz
+share/kde/apps/desktoptheme/heron/widgets/scrollbar.svgz
+share/kde/apps/desktoptheme/heron/widgets/systemtray.svgz
 share/kde/apps/desktoptheme/heron/widgets/tasks.svgz
 share/kde/apps/desktoptheme/heron/widgets/tooltip.svgz
 share/kde/apps/desktoptheme/slim-glow/LICENSE
@@ -3116,6 +3113,14 @@ share/kde/apps/kscreensaver/image.png
 share/kde/apps/kscreensaver/kscience.png
 share/kde/apps/kscreensaver/particle.png
 share/kde/apps/kstyle/themes/phase.themerc
+share/kde/wallpapers/Colorado_Farm/contents/images/1024x768.jpg
+share/kde/wallpapers/Colorado_Farm/contents/images/1280x1024.jpg
+share/kde/wallpapers/Colorado_Farm/contents/images/1280x800.jpg
+share/kde/wallpapers/Colorado_Farm/contents/images/1440x900.jpg
+share/kde/wallpapers/Colorado_Farm/contents/images/1600x1200.jpg
+share/kde/wallpapers/Colorado_Farm/contents/images/1920x1200.jpg
+share/kde/wallpapers/Colorado_Farm/contents/screenshot.png
+share/kde/wallpapers/Colorado_Farm/metadata.desktop
 share/kde/wallpapers/Emotion/contents/images/1024x768.jpg
 share/kde/wallpapers/Emotion/contents/images/1280x1024.jpg
 share/kde/wallpapers/Emotion/contents/images/1280x800.jpg
@@ -3388,6 +3393,9 @@ share/sounds/KDE_Startup_new.wav
 @dirrm share/kde/wallpapers/Emotion/contents/images
 @dirrm share/kde/wallpapers/Emotion/contents
 @dirrm share/kde/wallpapers/Emotion
+@dirrm share/kde/wallpapers/Colorado_Farm/contents/images
+@dirrm share/kde/wallpapers/Colorado_Farm/contents
+@dirrm share/kde/wallpapers/Colorado_Farm
 @comment in kde: @dirrm share/kde/wallpapers
 @comment in kde: @dirrm share/kde/apps/kstyle/themes
 @comment in kde: @dirrm share/kde/apps/kstyle

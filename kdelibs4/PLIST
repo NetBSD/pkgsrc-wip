@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/01/28 11:25:22 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -331,6 +331,7 @@ include/KDE/KFileItemList
 include/KDE/KFileMetaInfo
 include/KDE/KFileMetaInfoGroup
 include/KDE/KFileMetaInfoItem
+include/KDE/KFilePlacesModel
 include/KDE/KFileShare
 include/KDE/KFileSharePropsPlugin
 include/KDE/KFileTreeBranch
@@ -2693,6 +2694,7 @@ share/kde/apps/ksgmltools2/customization/nl/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/nl/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/nl/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/nl/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/nl/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/nl/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/nl/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/nl/lang.entities

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/01/28 11:25:22 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -734,6 +734,7 @@ share/kde/apps/kalzium/data/iconsets/school/19.svg
 share/kde/apps/kalzium/data/iconsets/school/2.svg
 share/kde/apps/kalzium/data/iconsets/school/20.svg
 share/kde/apps/kalzium/data/iconsets/school/21.svg
+share/kde/apps/kalzium/data/iconsets/school/22.svg
 share/kde/apps/kalzium/data/iconsets/school/23.svg
 share/kde/apps/kalzium/data/iconsets/school/24.svg
 share/kde/apps/kalzium/data/iconsets/school/25.svg
@@ -753,8 +754,12 @@ share/kde/apps/kalzium/data/iconsets/school/37.svg
 share/kde/apps/kalzium/data/iconsets/school/38.svg
 share/kde/apps/kalzium/data/iconsets/school/39.svg
 share/kde/apps/kalzium/data/iconsets/school/4.svg
+share/kde/apps/kalzium/data/iconsets/school/40.svg
+share/kde/apps/kalzium/data/iconsets/school/42.svg
 share/kde/apps/kalzium/data/iconsets/school/43.svg
+share/kde/apps/kalzium/data/iconsets/school/44.svg
 share/kde/apps/kalzium/data/iconsets/school/47.svg
+share/kde/apps/kalzium/data/iconsets/school/48.svg
 share/kde/apps/kalzium/data/iconsets/school/49.svg
 share/kde/apps/kalzium/data/iconsets/school/5.svg
 share/kde/apps/kalzium/data/iconsets/school/50.svg
@@ -772,7 +777,9 @@ share/kde/apps/kalzium/data/iconsets/school/61.svg
 share/kde/apps/kalzium/data/iconsets/school/62.svg
 share/kde/apps/kalzium/data/iconsets/school/7.svg
 share/kde/apps/kalzium/data/iconsets/school/72.svg
+share/kde/apps/kalzium/data/iconsets/school/73.svg
 share/kde/apps/kalzium/data/iconsets/school/74.svg
+share/kde/apps/kalzium/data/iconsets/school/76.svg
 share/kde/apps/kalzium/data/iconsets/school/79.svg
 share/kde/apps/kalzium/data/iconsets/school/8.svg
 share/kde/apps/kalzium/data/iconsets/school/80.svg
@@ -3939,14 +3946,6 @@ share/kde/apps/parley/plugins/google_images.py
 share/kde/apps/parley/plugins/google_images.ui
 share/kde/apps/parley/plugins/leo-dict.desktop
 share/kde/apps/parley/plugins/leo-dict.py
-share/kde/apps/parley/plugins/test.desktop
-share/kde/apps/parley/plugins/test.py
-share/kde/apps/parley/themes/clean.desktop
-share/kde/apps/parley/themes/clean_preview.png
-share/kde/apps/parley/themes/clean_theme.svgz
-share/kde/apps/parley/themes/default.desktop
-share/kde/apps/parley/themes/default_preview.png
-share/kde/apps/parley/themes/default_theme.svgz
 share/kde/apps/parley/tips
 share/kde/apps/parley/xslt/flashcards.xsl
 share/kde/apps/parley/xslt/table.xsl
@@ -3985,7 +3984,6 @@ share/kde4/services/plasma_parley.desktop
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/parley/xslt
-@dirrm share/kde/apps/parley/themes
 @dirrm share/kde/apps/parley/plugins
 @dirrm share/kde/apps/parley/icons/oxygen/scalable/actions
 @dirrm share/kde/apps/parley/icons/oxygen/scalable

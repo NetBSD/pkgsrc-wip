@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/01/14 10:51:55 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/01/28 11:25:22 mwdavies Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/cervisia
@@ -65,6 +65,7 @@ bin/svn-clean
 bin/svn2dist
 bin/svnbackport
 bin/svnchangesince
+bin/svnforwardport
 bin/svngettags
 bin/svnintegrate
 bin/svnlastchange

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2009/01/14 10:51:54 mwdavies Exp $
+$NetBSD: distinfo,v 1.17 2009/01/28 11:25:22 mwdavies Exp $
 
-SHA1 (kdemultimedia-4.1.96.tar.bz2) = 951bee90ce9e663dda05b155bb75032f3cd71f8c
-RMD160 (kdemultimedia-4.1.96.tar.bz2) = 1b4b603abc67c780b7b111862d6188c09b1eeb7c
-Size (kdemultimedia-4.1.96.tar.bz2) = 1549651 bytes
+SHA1 (kdemultimedia-4.2.0.tar.bz2) = 96dab8f18fc98cde9ff8d6b8c3390da78634a07c
+RMD160 (kdemultimedia-4.2.0.tar.bz2) = 0b07d41ea33caf0df64fce353e831ce908a33f41
+Size (kdemultimedia-4.2.0.tar.bz2) = 1550040 bytes
 SHA1 (patch-ac) = 40087923958bbfd5a5135ae7324830933e620564
 SHA1 (patch-ad) = 8901537664189b95f54f06b429362ac15df5afa9
 SHA1 (patch-ae) = 0e018f6a5db4098bac61fab06b0d29244f33e00c

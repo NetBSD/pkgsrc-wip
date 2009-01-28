@@ -1,13 +1,60 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/14 10:51:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/28 11:25:22 mwdavies Exp $
+man/nl/man1/fixincludes.1
+man/nl/man1/kalzium.1
+man/nl/man1/kappfinder.1
+man/nl/man1/kate.1
+man/nl/man1/kbruch.1
+man/nl/man1/kig.1
+man/nl/man1/kmag.1
+man/nl/man1/kmousetool.1
+man/nl/man1/kmouth.1
+man/nl/man1/kmplot.1
+man/nl/man1/po2xml.1
+man/nl/man1/qtdoc.1
+man/nl/man1/split2po.1
+man/nl/man1/swappo.1
+man/nl/man6/kpat.6
 share/doc/kde/HTML/nl/amor/common
 share/doc/kde/HTML/nl/amor/index.cache.bz2
 share/doc/kde/HTML/nl/amor/index.docbook
 share/doc/kde/HTML/nl/irkick/common
 share/doc/kde/HTML/nl/irkick/index.cache.bz2
 share/doc/kde/HTML/nl/irkick/index.docbook
-share/doc/kde/HTML/nl/kamera/common
-share/doc/kde/HTML/nl/kamera/index.cache.bz2
-share/doc/kde/HTML/nl/kamera/index.docbook
+share/doc/kde/HTML/nl/juk/common
+share/doc/kde/HTML/nl/juk/index.cache.bz2
+share/doc/kde/HTML/nl/juk/index.docbook
+share/doc/kde/HTML/nl/juk/juk-main.png
+share/doc/kde/HTML/nl/kalgebra/common
+share/doc/kde/HTML/nl/kalgebra/index.cache.bz2
+share/doc/kde/HTML/nl/kalgebra/index.docbook
+share/doc/kde/HTML/nl/kalgebra/kalgebra-main-window.png
+share/doc/kde/HTML/nl/kalzium/common
+share/doc/kde/HTML/nl/kalzium/gradient.png
+share/doc/kde/HTML/nl/kalzium/index.cache.bz2
+share/doc/kde/HTML/nl/kalzium/index.docbook
+share/doc/kde/HTML/nl/kalzium/infodialog_bohr.png
+share/doc/kde/HTML/nl/kalzium/infodialog_data_overview.png
+share/doc/kde/HTML/nl/kalzium/infodialog_isotopes.png
+share/doc/kde/HTML/nl/kalzium/infodialog_misc.png
+share/doc/kde/HTML/nl/kalzium/infodialog_overview.png
+share/doc/kde/HTML/nl/kalzium/infodialog_spectrum.png
+share/doc/kde/HTML/nl/kalzium/man-kalzium.1.docbook
+share/doc/kde/HTML/nl/kalzium/quick-1.png
+share/doc/kde/HTML/nl/kalzium/quick-2.png
+share/doc/kde/HTML/nl/kalzium/quick-3.png
+share/doc/kde/HTML/nl/kalzium/quick-4.png
+share/doc/kde/HTML/nl/kalzium/screenshot1.png
+share/doc/kde/HTML/nl/kalzium/screenshot2.png
+share/doc/kde/HTML/nl/kalzium/screenshot5.png
+share/doc/kde/HTML/nl/kalzium/screenshot6.png
+share/doc/kde/HTML/nl/kalzium/screenshot7.png
+share/doc/kde/HTML/nl/kalzium/screenshoteqsolver.png
+share/doc/kde/HTML/nl/kalzium/screenshotnuclidboard.png
+share/doc/kde/HTML/nl/kalzium/settings1.png
+share/doc/kde/HTML/nl/kalzium/settings2.png
+share/doc/kde/HTML/nl/kalzium/settings3.png
+share/doc/kde/HTML/nl/kalzium/sidebar1.png
+share/doc/kde/HTML/nl/kalzium/sidebar2.png
 share/doc/kde/HTML/nl/kate-plugins/common
 share/doc/kde/HTML/nl/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/nl/kate-plugins/htmltools.docbook
@@ -468,13 +515,25 @@ share/doc/kde/HTML/nl/kmplot/configuration.docbook
 share/doc/kde/HTML/nl/kmplot/credits.docbook
 share/doc/kde/HTML/nl/kmplot/dcop.docbook
 share/doc/kde/HTML/nl/kmplot/developer.docbook
+share/doc/kde/HTML/nl/kmplot/edu-logo.png
 share/doc/kde/HTML/nl/kmplot/firststeps.docbook
 share/doc/kde/HTML/nl/kmplot/index.cache.bz2
 share/doc/kde/HTML/nl/kmplot/index.docbook
 share/doc/kde/HTML/nl/kmplot/install.docbook
 share/doc/kde/HTML/nl/kmplot/introduction.docbook
+share/doc/kde/HTML/nl/kmplot/kfkt.png
+share/doc/kde/HTML/nl/kmplot/ksys1.png
+share/doc/kde/HTML/nl/kmplot/ksys2.png
+share/doc/kde/HTML/nl/kmplot/ksys3.png
+share/doc/kde/HTML/nl/kmplot/main.png
 share/doc/kde/HTML/nl/kmplot/man-kmplot.1.docbook
+share/doc/kde/HTML/nl/kmplot/popup.png
 share/doc/kde/HTML/nl/kmplot/reference.docbook
+share/doc/kde/HTML/nl/kmplot/settings-colors.png
+share/doc/kde/HTML/nl/kmplot/settings-coords.png
+share/doc/kde/HTML/nl/kmplot/settings-diagram.png
+share/doc/kde/HTML/nl/kmplot/settings-fonts.png
+share/doc/kde/HTML/nl/kmplot/settings-general.png
 share/doc/kde/HTML/nl/kmplot/using.docbook
 share/doc/kde/HTML/nl/knetattach/common
 share/doc/kde/HTML/nl/knetattach/index.cache.bz2
@@ -536,21 +595,6 @@ share/doc/kde/HTML/nl/kpat/common
 share/doc/kde/HTML/nl/kpat/index.cache.bz2
 share/doc/kde/HTML/nl/kpat/index.docbook
 share/doc/kde/HTML/nl/kpat/man-kpat.6.docbook
-share/doc/kde/HTML/nl/kpercentage/answer.png
-share/doc/kde/HTML/nl/kpercentage/commands.docbook
-share/doc/kde/HTML/nl/kpercentage/common
-share/doc/kde/HTML/nl/kpercentage/credits.docbook
-share/doc/kde/HTML/nl/kpercentage/devel.docbook
-share/doc/kde/HTML/nl/kpercentage/edu-logo.png
-share/doc/kde/HTML/nl/kpercentage/faq.docbook
-share/doc/kde/HTML/nl/kpercentage/help.png
-share/doc/kde/HTML/nl/kpercentage/index.cache.bz2
-share/doc/kde/HTML/nl/kpercentage/index.docbook
-share/doc/kde/HTML/nl/kpercentage/install.docbook
-share/doc/kde/HTML/nl/kpercentage/introduction.docbook
-share/doc/kde/HTML/nl/kpercentage/main.png
-share/doc/kde/HTML/nl/kpercentage/using.docbook
-share/doc/kde/HTML/nl/kpercentage/welcome.png
 share/doc/kde/HTML/nl/kpilot/common
 share/doc/kde/HTML/nl/kpilot/configuration.docbook
 share/doc/kde/HTML/nl/kpilot/faq.docbook
@@ -561,6 +605,9 @@ share/doc/kde/HTML/nl/kpilot/usage.docbook
 share/doc/kde/HTML/nl/ksim/common
 share/doc/kde/HTML/nl/ksim/index.cache.bz2
 share/doc/kde/HTML/nl/ksim/index.docbook
+share/doc/kde/HTML/nl/ksnapshot/common
+share/doc/kde/HTML/nl/ksnapshot/index.cache.bz2
+share/doc/kde/HTML/nl/ksnapshot/index.docbook
 share/doc/kde/HTML/nl/kspaceduel/common
 share/doc/kde/HTML/nl/kspaceduel/index.cache.bz2
 share/doc/kde/HTML/nl/kspaceduel/index.docbook
@@ -708,6 +755,19 @@ share/doc/kde/HTML/nl/kxkb/index.docbook
 share/doc/kde/HTML/nl/lskat/common
 share/doc/kde/HTML/nl/lskat/index.cache.bz2
 share/doc/kde/HTML/nl/lskat/index.docbook
+share/doc/kde/HTML/nl/marble/common
+share/doc/kde/HTML/nl/marble/configure-cacheproxy.png
+share/doc/kde/HTML/nl/marble/configure-navigation.png
+share/doc/kde/HTML/nl/marble/configure-plugins.png
+share/doc/kde/HTML/nl/marble/configure-view.png
+share/doc/kde/HTML/nl/marble/index.cache.bz2
+share/doc/kde/HTML/nl/marble/index.docbook
+share/doc/kde/HTML/nl/marble/logo-1.png
+share/doc/kde/HTML/nl/marble/mapview-1.png
+share/doc/kde/HTML/nl/marble/measure-1.png
+share/doc/kde/HTML/nl/marble/quick-1.png
+share/doc/kde/HTML/nl/marble/search-1.png
+share/doc/kde/HTML/nl/marble/search-2.png
 share/kde/apps/klettres/nl/alpha/a-0.ogg
 share/kde/apps/klettres/nl/alpha/a-1.ogg
 share/kde/apps/klettres/nl/alpha/a-10.ogg
@@ -1107,17 +1167,6 @@ share/locale/nl/LC_MESSAGES/kreversi.mo
 share/locale/nl/LC_MESSAGES/krfb.mo
 share/locale/nl/LC_MESSAGES/kruler.mo
 share/locale/nl/LC_MESSAGES/krunner.mo
-share/locale/nl/LC_MESSAGES/krunner_contacts.mo
-share/locale/nl/LC_MESSAGES/krunner_converterrunner.mo
-share/locale/nl/LC_MESSAGES/krunner_katesessions.mo
-share/locale/nl/LC_MESSAGES/krunner_locationsrunner.mo
-share/locale/nl/LC_MESSAGES/krunner_nepomuksearchrunner.mo
-share/locale/nl/LC_MESSAGES/krunner_powerdevil.mo
-share/locale/nl/LC_MESSAGES/krunner_recentdocuments.mo
-share/locale/nl/LC_MESSAGES/krunner_sessions.mo
-share/locale/nl/LC_MESSAGES/krunner_shellrunner.mo
-share/locale/nl/LC_MESSAGES/krunner_spellcheckrunner.mo
-share/locale/nl/LC_MESSAGES/krunner_webshortcutsrunner.mo
 share/locale/nl/LC_MESSAGES/ksame.mo
 share/locale/nl/LC_MESSAGES/ksaneplugin.mo
 share/locale/nl/LC_MESSAGES/ksayit.mo
@@ -1295,6 +1344,17 @@ share/locale/nl/LC_MESSAGES/plasma_containment_saverdesktop.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_kalzium.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_rss.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_contacts.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_converterrunner.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_katesessions.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_locations.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_nepomuksearchrunner.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_powerdevil.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_recentdocuments.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_sessions.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_shell.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_webshortcuts.mo
 share/locale/nl/LC_MESSAGES/plasma_scriptengine_qscript.mo
 share/locale/nl/LC_MESSAGES/plasma_wallpaper_color.mo
 share/locale/nl/LC_MESSAGES/plasma_wallpaper_image.mo
@@ -1305,7 +1365,6 @@ share/locale/nl/LC_MESSAGES/powerdevil.mo
 share/locale/nl/LC_MESSAGES/printer-applet.mo
 share/locale/nl/LC_MESSAGES/processcore.mo
 share/locale/nl/LC_MESSAGES/processui.mo
-share/locale/nl/LC_MESSAGES/quanta.mo
 share/locale/nl/LC_MESSAGES/solid-bluetooth.mo
 share/locale/nl/LC_MESSAGES/solid-hardware.mo
 share/locale/nl/LC_MESSAGES/solid-network.mo
@@ -1336,6 +1395,7 @@ share/locale/nl/entry.desktop
 @comment in kde: @dirrm share/kde/apps/klettres
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde
+@dirrm share/doc/kde/HTML/nl/marble
 @dirrm share/doc/kde/HTML/nl/lskat
 @dirrm share/doc/kde/HTML/nl/kxkb
 @dirrm share/doc/kde/HTML/nl/kworldclock
@@ -1346,9 +1406,9 @@ share/locale/nl/entry.desktop
 @dirrm share/doc/kde/HTML/nl/ksysv
 @dirrm share/doc/kde/HTML/nl/kstars
 @dirrm share/doc/kde/HTML/nl/kspaceduel
+@dirrm share/doc/kde/HTML/nl/ksnapshot
 @dirrm share/doc/kde/HTML/nl/ksim
 @dirrm share/doc/kde/HTML/nl/kpilot
-@dirrm share/doc/kde/HTML/nl/kpercentage
 @dirrm share/doc/kde/HTML/nl/kpat
 @dirrm share/doc/kde/HTML/nl/kontact
 @dirrm share/doc/kde/HTML/nl/konsolekalendar
@@ -1453,7 +1513,9 @@ share/locale/nl/entry.desktop
 @dirrm share/doc/kde/HTML/nl/kcmlirc
 @dirrm share/doc/kde/HTML/nl/kbruch
 @dirrm share/doc/kde/HTML/nl/kate-plugins
-@dirrm share/doc/kde/HTML/nl/kamera
+@dirrm share/doc/kde/HTML/nl/kalzium
+@dirrm share/doc/kde/HTML/nl/kalgebra
+@dirrm share/doc/kde/HTML/nl/juk
 @dirrm share/doc/kde/HTML/nl/irkick
 @dirrm share/doc/kde/HTML/nl/amor
 @comment in kde: @dirrm share/doc/kde/HTML/nl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/01/28 11:25:22 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -99,7 +99,7 @@ lib/libksane.so.0
 lib/libksane.so.0.1.1
 lib/libokularcore.so
 lib/libokularcore.so.1
-lib/libokularcore.so.1.1.0
+lib/libokularcore.so.1.2.0
 lib/pkgconfig/libkdcraw.pc
 lib/pkgconfig/libkexiv2.pc
 lib/pkgconfig/libkipi.pc

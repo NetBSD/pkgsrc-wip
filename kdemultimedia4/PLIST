@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/28 11:25:22 mwdavies Exp $
 bin/dragon
 bin/juk
 bin/kmix
@@ -219,7 +219,6 @@ share/kde4/services/libkcddb.desktop
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kioslave/audiocd
-@dirrm share/doc/kde/HTML/en/kioslave
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/dragonplayer
 @comment in kde: @dirrm share/doc/kde/HTML/en
