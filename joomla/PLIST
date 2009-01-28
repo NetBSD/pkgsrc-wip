@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/11/12 17:20:48 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/28 13:26:23 heidnes Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -840,7 +840,6 @@ share/joomla/administrator/language/en-GB/en-GB.com_poll.menu.ini
 share/joomla/administrator/language/en-GB/en-GB.com_search.ini
 share/joomla/administrator/language/en-GB/en-GB.com_search.menu.ini
 share/joomla/administrator/language/en-GB/en-GB.com_sections.ini
-share/joomla/administrator/language/en-GB/en-GB.com_statistics.ini
 share/joomla/administrator/language/en-GB/en-GB.com_templates.ini
 share/joomla/administrator/language/en-GB/en-GB.com_trash.ini
 share/joomla/administrator/language/en-GB/en-GB.com_user.ini
@@ -1766,33 +1765,21 @@ share/joomla/installation.disabled/installer/views/install/view.php
 share/joomla/installation.disabled/language/ar-DZ/ar-DZ.ini
 share/joomla/installation.disabled/language/ar-DZ/ar-DZ.xml
 share/joomla/installation.disabled/language/ar-DZ/index.html
-share/joomla/installation.disabled/language/be-BY/be-BY.ini
-share/joomla/installation.disabled/language/be-BY/be-BY.xml
-share/joomla/installation.disabled/language/be-BY/index.html
 share/joomla/installation.disabled/language/bg-BG/bg-BG.ini
 share/joomla/installation.disabled/language/bg-BG/bg-BG.xml
-share/joomla/installation.disabled/language/bg-BG/index.htm
-share/joomla/installation.disabled/language/bn-IN/bn-IN.ini
-share/joomla/installation.disabled/language/bn-IN/bn-IN.xml
-share/joomla/installation.disabled/language/bn-IN/index.html
-share/joomla/installation.disabled/language/bs-BA/bs-BA.ini
-share/joomla/installation.disabled/language/bs-BA/bs-BA.xml
-share/joomla/installation.disabled/language/bs-BA/index.html
+share/joomla/installation.disabled/language/bg-BG/index.html
+share/joomla/installation.disabled/language/bn-BD/bn-BD.ini
+share/joomla/installation.disabled/language/bn-BD/bn-BD.xml
+share/joomla/installation.disabled/language/bn-BD/index.html
 share/joomla/installation.disabled/language/ca-ES/ca-ES.ini
 share/joomla/installation.disabled/language/ca-ES/ca-ES.xml
-share/joomla/installation.disabled/language/ca-ES/index.htm
+share/joomla/installation.disabled/language/ca-ES/index.html
 share/joomla/installation.disabled/language/cs-CZ/cs-CZ.ini
 share/joomla/installation.disabled/language/cs-CZ/cs-CZ.xml
 share/joomla/installation.disabled/language/cs-CZ/index.html
 share/joomla/installation.disabled/language/da-DK/da-DK.ini
 share/joomla/installation.disabled/language/da-DK/da-DK.xml
-share/joomla/installation.disabled/language/da-DK/index.htm
-share/joomla/installation.disabled/language/de-AT/de-AT.ini
-share/joomla/installation.disabled/language/de-AT/de-AT.xml
-share/joomla/installation.disabled/language/de-AT/index.html
-share/joomla/installation.disabled/language/de-CH/de-CH.ini
-share/joomla/installation.disabled/language/de-CH/de-CH.xml
-share/joomla/installation.disabled/language/de-CH/index.htm
+share/joomla/installation.disabled/language/da-DK/index.html
 share/joomla/installation.disabled/language/de-DE/de-DE.ini
 share/joomla/installation.disabled/language/de-DE/de-DE.xml
 share/joomla/installation.disabled/language/de-DE/index.htm
@@ -1823,9 +1810,6 @@ share/joomla/installation.disabled/language/fi-FI/index.html
 share/joomla/installation.disabled/language/fr-FR/fr-FR.ini
 share/joomla/installation.disabled/language/fr-FR/fr-FR.xml
 share/joomla/installation.disabled/language/fr-FR/index.html
-share/joomla/installation.disabled/language/he-IL/he-IL.ini
-share/joomla/installation.disabled/language/he-IL/he-IL.xml
-share/joomla/installation.disabled/language/he-IL/index.html
 share/joomla/installation.disabled/language/hr-HR/hr-HR.ini
 share/joomla/installation.disabled/language/hr-HR/hr-HR.xml
 share/joomla/installation.disabled/language/hr-HR/index.html
@@ -1833,19 +1817,19 @@ share/joomla/installation.disabled/language/hu-HU/hu-HU.ini
 share/joomla/installation.disabled/language/hu-HU/hu-HU.xml
 share/joomla/installation.disabled/language/hu-HU/index.htm
 share/joomla/installation.disabled/language/index.html
-share/joomla/installation.disabled/language/it-IT/index.htm
+share/joomla/installation.disabled/language/is-IS/index.html
+share/joomla/installation.disabled/language/is-IS/is-IS.ini
+share/joomla/installation.disabled/language/is-IS/is-IS.xml
+share/joomla/installation.disabled/language/it-IT/index.html
 share/joomla/installation.disabled/language/it-IT/it-IT.ini
 share/joomla/installation.disabled/language/it-IT/it-IT.xml
 share/joomla/installation.disabled/language/ja-JP/index.html
 share/joomla/installation.disabled/language/ja-JP/ja-JP.ini
 share/joomla/installation.disabled/language/ja-JP/ja-JP.xml
-share/joomla/installation.disabled/language/ko-KR/index.html
-share/joomla/installation.disabled/language/ko-KR/ko-KR.ini
-share/joomla/installation.disabled/language/ko-KR/ko-KR.xml
 share/joomla/installation.disabled/language/lo-LA/index.html
 share/joomla/installation.disabled/language/lo-LA/lo-LA.ini
 share/joomla/installation.disabled/language/lo-LA/lo-LA.xml
-share/joomla/installation.disabled/language/lt-LT/index.htm
+share/joomla/installation.disabled/language/lt-LT/index.html
 share/joomla/installation.disabled/language/lt-LT/lt-LT.ini
 share/joomla/installation.disabled/language/lt-LT/lt-LT.xml
 share/joomla/installation.disabled/language/lv-LV/index.html
@@ -1854,9 +1838,9 @@ share/joomla/installation.disabled/language/lv-LV/lv-LV.xml
 share/joomla/installation.disabled/language/mk-MK/index.html
 share/joomla/installation.disabled/language/mk-MK/mk-MK.ini
 share/joomla/installation.disabled/language/mk-MK/mk-MK.xml
-share/joomla/installation.disabled/language/nb-NO/index.htm
-share/joomla/installation.disabled/language/nb-NO/nb-NO.ini
-share/joomla/installation.disabled/language/nb-NO/nb-NO.xml
+share/joomla/installation.disabled/language/nb-BO/index.html
+share/joomla/installation.disabled/language/nb-BO/nb-NO.ini
+share/joomla/installation.disabled/language/nb-BO/nb-NO.xml
 share/joomla/installation.disabled/language/nl-NL/index.htm
 share/joomla/installation.disabled/language/nl-NL/nl-NL.ini
 share/joomla/installation.disabled/language/nl-NL/nl-NL.xml
@@ -1884,9 +1868,6 @@ share/joomla/installation.disabled/language/si-LK/si-LK.xml
 share/joomla/installation.disabled/language/sk-SK/index.html
 share/joomla/installation.disabled/language/sk-SK/sk-SK.ini
 share/joomla/installation.disabled/language/sk-SK/sk-SK.xml
-share/joomla/installation.disabled/language/sq-AL/index.html
-share/joomla/installation.disabled/language/sq-AL/sq-AL.ini
-share/joomla/installation.disabled/language/sq-AL/sq-AL.xml
 share/joomla/installation.disabled/language/sr-ME/index.html
 share/joomla/installation.disabled/language/sr-ME/sr-ME.ini
 share/joomla/installation.disabled/language/sr-ME/sr-ME.xml
@@ -1914,6 +1895,9 @@ share/joomla/installation.disabled/language/uk-UA/uk-UA.xml
 share/joomla/installation.disabled/language/vi-VN/index.html
 share/joomla/installation.disabled/language/vi-VN/vi-VN.ini
 share/joomla/installation.disabled/language/vi-VN/vi-VN.xml
+share/joomla/installation.disabled/language/zh-CN/index.html
+share/joomla/installation.disabled/language/zh-CN/zh-CN.ini
+share/joomla/installation.disabled/language/zh-CN/zh-CN.xml
 share/joomla/installation.disabled/language/zh-TW/index.html
 share/joomla/installation.disabled/language/zh-TW/zh-TW.ini
 share/joomla/installation.disabled/language/zh-TW/zh-TW.xml
@@ -2332,6 +2316,7 @@ share/joomla/libraries/joomla/utilities/utility.php
 share/joomla/libraries/joomla/version.php
 share/joomla/libraries/loader.php
 share/joomla/libraries/openid/Auth/OpenID.php
+share/joomla/libraries/openid/Auth/OpenID/AX.php
 share/joomla/libraries/openid/Auth/OpenID/Association.php
 share/joomla/libraries/openid/Auth/OpenID/BigMath.php
 share/joomla/libraries/openid/Auth/OpenID/Consumer.php
@@ -2340,36 +2325,44 @@ share/joomla/libraries/openid/Auth/OpenID/DatabaseConnection.php
 share/joomla/libraries/openid/Auth/OpenID/DiffieHellman.php
 share/joomla/libraries/openid/Auth/OpenID/Discover.php
 share/joomla/libraries/openid/Auth/OpenID/DumbStore.php
+share/joomla/libraries/openid/Auth/OpenID/Extension.php
 share/joomla/libraries/openid/Auth/OpenID/FileStore.php
-share/joomla/libraries/openid/Auth/OpenID/HMACSHA1.php
+share/joomla/libraries/openid/Auth/OpenID/HMAC.php
 share/joomla/libraries/openid/Auth/OpenID/Interface.php
 share/joomla/libraries/openid/Auth/OpenID/KVForm.php
+share/joomla/libraries/openid/Auth/OpenID/MemcachedStore.php
+share/joomla/libraries/openid/Auth/OpenID/Message.php
 share/joomla/libraries/openid/Auth/OpenID/MySQLStore.php
+share/joomla/libraries/openid/Auth/OpenID/Nonce.php
+share/joomla/libraries/openid/Auth/OpenID/PAPE.php
 share/joomla/libraries/openid/Auth/OpenID/Parse.php
+share/joomla/libraries/openid/Auth/OpenID/PostgreSQLStore.php
 share/joomla/libraries/openid/Auth/OpenID/SQLStore.php
 share/joomla/libraries/openid/Auth/OpenID/SQLiteStore.php
+share/joomla/libraries/openid/Auth/OpenID/SReg.php
 share/joomla/libraries/openid/Auth/OpenID/Server.php
 share/joomla/libraries/openid/Auth/OpenID/ServerRequest.php
 share/joomla/libraries/openid/Auth/OpenID/TrustRoot.php
 share/joomla/libraries/openid/Auth/OpenID/URINorm.php
 share/joomla/libraries/openid/Auth/OpenID/index.html
+share/joomla/libraries/openid/Auth/Yadis/HTTPFetcher.php
+share/joomla/libraries/openid/Auth/Yadis/Manager.php
+share/joomla/libraries/openid/Auth/Yadis/Misc.php
+share/joomla/libraries/openid/Auth/Yadis/ParanoidHTTPFetcher.php
+share/joomla/libraries/openid/Auth/Yadis/ParseHTML.php
+share/joomla/libraries/openid/Auth/Yadis/PlainHTTPFetcher.php
+share/joomla/libraries/openid/Auth/Yadis/XML.php
+share/joomla/libraries/openid/Auth/Yadis/XRDS.php
+share/joomla/libraries/openid/Auth/Yadis/XRI.php
+share/joomla/libraries/openid/Auth/Yadis/XRIRes.php
+share/joomla/libraries/openid/Auth/Yadis/Yadis.php
+share/joomla/libraries/openid/Auth/Yadis/index.html
 share/joomla/libraries/openid/Auth/index.html
 share/joomla/libraries/openid/CHANGELOG
+share/joomla/libraries/openid/CHANGES-2.1.0
 share/joomla/libraries/openid/COPYING
+share/joomla/libraries/openid/NEWS
 share/joomla/libraries/openid/README
-share/joomla/libraries/openid/Services/Yadis/HTTPFetcher.php
-share/joomla/libraries/openid/Services/Yadis/Manager.php
-share/joomla/libraries/openid/Services/Yadis/Misc.php
-share/joomla/libraries/openid/Services/Yadis/ParanoidHTTPFetcher.php
-share/joomla/libraries/openid/Services/Yadis/ParseHTML.php
-share/joomla/libraries/openid/Services/Yadis/PlainHTTPFetcher.php
-share/joomla/libraries/openid/Services/Yadis/XML.php
-share/joomla/libraries/openid/Services/Yadis/XRDS.php
-share/joomla/libraries/openid/Services/Yadis/XRI.php
-share/joomla/libraries/openid/Services/Yadis/XRIRes.php
-share/joomla/libraries/openid/Services/Yadis/Yadis.php
-share/joomla/libraries/openid/Services/Yadis/index.html
-share/joomla/libraries/openid/Services/index.html
 share/joomla/libraries/openid/consumer.php
 share/joomla/libraries/openid/index.html
 share/joomla/libraries/pattemplate/index.html
@@ -4235,8 +4228,7 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/libraries/pattemplate/patTemplate/Dump
 @dirrm share/joomla/libraries/pattemplate/patTemplate
 @dirrm share/joomla/libraries/pattemplate
-@dirrm share/joomla/libraries/openid/Services/Yadis
-@dirrm share/joomla/libraries/openid/Services
+@dirrm share/joomla/libraries/openid/Auth/Yadis
 @dirrm share/joomla/libraries/openid/Auth/OpenID
 @dirrm share/joomla/libraries/openid/Auth
 @dirrm share/joomla/libraries/openid
@@ -4305,6 +4297,7 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/installation.disabled/sql/migration
 @dirrm share/joomla/installation.disabled/sql
 @dirrm share/joomla/installation.disabled/language/zh-TW
+@dirrm share/joomla/installation.disabled/language/zh-CN
 @dirrm share/joomla/installation.disabled/language/vi-VN
 @dirrm share/joomla/installation.disabled/language/uk-UA
 @dirrm share/joomla/installation.disabled/language/tr-TR
@@ -4314,7 +4307,6 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/installation.disabled/language/sv-SE
 @dirrm share/joomla/installation.disabled/language/sr-RS
 @dirrm share/joomla/installation.disabled/language/sr-ME
-@dirrm share/joomla/installation.disabled/language/sq-AL
 @dirrm share/joomla/installation.disabled/language/sk-SK
 @dirrm share/joomla/installation.disabled/language/si-LK
 @dirrm share/joomla/installation.disabled/language/sd-PK
@@ -4324,17 +4316,16 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/installation.disabled/language/pt-BR
 @dirrm share/joomla/installation.disabled/language/pl-PL
 @dirrm share/joomla/installation.disabled/language/nl-NL
-@dirrm share/joomla/installation.disabled/language/nb-NO
+@dirrm share/joomla/installation.disabled/language/nb-BO
+@dirrm share/joomla/installation.disabled/language/mk-MK
 @dirrm share/joomla/installation.disabled/language/lv-LV
 @dirrm share/joomla/installation.disabled/language/lt-LT
 @dirrm share/joomla/installation.disabled/language/lo-LA
-@dirrm share/joomla/installation.disabled/language/mk-MK
-@dirrm share/joomla/installation.disabled/language/ko-KR
 @dirrm share/joomla/installation.disabled/language/ja-JP
 @dirrm share/joomla/installation.disabled/language/it-IT
+@dirrm share/joomla/installation.disabled/language/is-IS
 @dirrm share/joomla/installation.disabled/language/hu-HU
 @dirrm share/joomla/installation.disabled/language/hr-HR
-@dirrm share/joomla/installation.disabled/language/he-IL
 @dirrm share/joomla/installation.disabled/language/fr-FR
 @dirrm share/joomla/installation.disabled/language/fi-FI
 @dirrm share/joomla/installation.disabled/language/fa-IR
@@ -4345,15 +4336,11 @@ share/joomla/xmlrpc/index.php
 @dirrm share/joomla/installation.disabled/language/en-GB
 @dirrm share/joomla/installation.disabled/language/el-GR
 @dirrm share/joomla/installation.disabled/language/de-DE
-@dirrm share/joomla/installation.disabled/language/de-CH
-@dirrm share/joomla/installation.disabled/language/de-AT
 @dirrm share/joomla/installation.disabled/language/da-DK
 @dirrm share/joomla/installation.disabled/language/cs-CZ
 @dirrm share/joomla/installation.disabled/language/ca-ES
-@dirrm share/joomla/installation.disabled/language/bs-BA
-@dirrm share/joomla/installation.disabled/language/bn-IN
+@dirrm share/joomla/installation.disabled/language/bn-BD
 @dirrm share/joomla/installation.disabled/language/bg-BG
-@dirrm share/joomla/installation.disabled/language/be-BY
 @dirrm share/joomla/installation.disabled/language/ar-DZ
 @dirrm share/joomla/installation.disabled/language
 @dirrm share/joomla/installation.disabled/installer/views/install
