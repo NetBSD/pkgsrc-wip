@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/29 10:14:21 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv/Internal.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}

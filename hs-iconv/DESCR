@@ -1,0 +1,2 @@
+Provides a Haskell interface to the POSIX iconv library functions for
+string encoding conversion.
