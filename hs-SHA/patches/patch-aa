@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/29 10:11:40 phonohawk Exp $
+
+--- SHA.cabal.orig	2009-01-13 04:46:22.000000000 +0900
++++ SHA.cabal
+@@ -23,7 +23,8 @@ Library
+  extensions: CPP, BangPatterns
+ 
+ Executable test_sha
+-  build-depends: base >= 3, bytestring, QuickCheck >= 1 && < 2
++  Buildable: False
++  build-depends: base >= 3, bytestring, QuickCheck
+   GHC-Options: -O2 -Wall -fno-ignore-asserts -fno-warn-orphans -funbox-strict-fields
+   cpp-options: -DSHA_TEST
+   Main-Is: Test.hs

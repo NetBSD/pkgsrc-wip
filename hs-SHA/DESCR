@@ -1,0 +1,5 @@
+This library implements the SHA suite of message digest functions,
+according to NIST FIPS 180-2 (with the SHA-224 addendum). The
+functions have been tested against most of the NIST test vectors for
+the various functions. However, only slight attention has been paid to
+the speed of the functions.
