@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/01/09 17:29:38 pebog Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/29 15:26:53 pebog Exp $
 
-DISTNAME=		dcc-1.3.101
+DISTNAME=		dcc-1.3.102
 #PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
