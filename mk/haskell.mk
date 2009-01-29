@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.5 2009/01/12 05:46:22 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.6 2009/01/29 09:55:05 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -59,6 +59,10 @@ HASKELL_TYPE?=	ghc
 # Possible: ghc
 # Default: ghc
 # -----------------------------------------------------------------------------
+
+
+# Cabal packages usually supoprt DESTDIR with no root access.
+PKG_DESTDIR_SUPPORT?=	user-destdir
 
 
 # Declarations for ../../mk/misc/show.mk
@@ -148,9 +152,9 @@ do-build:
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
 do-install:
 	cd ${WRKSRC} && \
-		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy && \
+		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy --destdir=${DESTDIR} && \
 		if [ -f dist/installed-pkg-config ]; then \
-			${INSTALL_DATA} dist/installed-pkg-config ${_HASKELL_PKG_DESCR_FILE}; \
+			${INSTALL_DATA} dist/installed-pkg-config ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}; \
 		fi
 
 # Substitutions for INSTALL and DEINSTALL.
