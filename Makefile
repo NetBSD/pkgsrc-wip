@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3235 2009/01/29 10:12:21 phonohawk Exp $
+# $Id: Makefile,v 1.3236 2009/01/29 10:14:59 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -673,6 +673,7 @@ SUBDIR+=	hs-SHA
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-dataenc
+SUBDIR+=	hs-iconv
 SUBDIR+=	hs-irc
 SUBDIR+=	hs-magic
 SUBDIR+=	hs-mime
