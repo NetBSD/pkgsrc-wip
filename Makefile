@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3232 2009/01/27 15:07:21 shindenmorr Exp $
+# $Id: Makefile,v 1.3233 2009/01/29 06:52:57 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1229,6 +1229,7 @@ SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-Barcode-Code128
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
+SUBDIR+=	p5-CGI-Application-Plugin-ConfigAuto
 SUBDIR+=	p5-CGI-Application-Plugin-DevPopup
 SUBDIR+=	p5-CGI-Application-Plugin-Redirect
 SUBDIR+=	p5-CGI-Application-Plugin-Session
@@ -1280,6 +1281,7 @@ SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
+SUBDIR+=	p5-Config-Auto
 SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
