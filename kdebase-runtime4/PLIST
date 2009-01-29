@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/01/29 11:00:02 mwdavies Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -1379,6 +1379,7 @@ share/icons/oxygen/16x16/actions/view-calendar-week.png
 share/icons/oxygen/16x16/actions/view-calendar-workweek.png
 share/icons/oxygen/16x16/actions/view-choose.png
 share/icons/oxygen/16x16/actions/view-close.png
+share/icons/oxygen/16x16/actions/view-file-columns.png
 share/icons/oxygen/16x16/actions/view-filter.png
 share/icons/oxygen/16x16/actions/view-fullscreen.png
 share/icons/oxygen/16x16/actions/view-history.png
@@ -2252,6 +2253,7 @@ share/icons/oxygen/22x22/actions/view-calendar-week.png
 share/icons/oxygen/22x22/actions/view-calendar-workweek.png
 share/icons/oxygen/22x22/actions/view-choose.png
 share/icons/oxygen/22x22/actions/view-close.png
+share/icons/oxygen/22x22/actions/view-file-columns.png
 share/icons/oxygen/22x22/actions/view-filter.png
 share/icons/oxygen/22x22/actions/view-fullscreen.png
 share/icons/oxygen/22x22/actions/view-history.png
@@ -3138,6 +3140,7 @@ share/icons/oxygen/32x32/actions/view-calendar-week.png
 share/icons/oxygen/32x32/actions/view-calendar-workweek.png
 share/icons/oxygen/32x32/actions/view-choose.png
 share/icons/oxygen/32x32/actions/view-close.png
+share/icons/oxygen/32x32/actions/view-file-columns.png
 share/icons/oxygen/32x32/actions/view-filter.png
 share/icons/oxygen/32x32/actions/view-fullscreen.png
 share/icons/oxygen/32x32/actions/view-history.png
@@ -4015,6 +4018,7 @@ share/icons/oxygen/48x48/actions/view-calendar-week.png
 share/icons/oxygen/48x48/actions/view-calendar-workweek.png
 share/icons/oxygen/48x48/actions/view-choose.png
 share/icons/oxygen/48x48/actions/view-close.png
+share/icons/oxygen/48x48/actions/view-file-columns.png
 share/icons/oxygen/48x48/actions/view-filter.png
 share/icons/oxygen/48x48/actions/view-fullscreen.png
 share/icons/oxygen/48x48/actions/view-history.png
@@ -5913,6 +5917,7 @@ share/icons/oxygen/scalable/actions/view-calendar-week.svgz
 share/icons/oxygen/scalable/actions/view-calendar-workweek.svgz
 share/icons/oxygen/scalable/actions/view-choose.svgz
 share/icons/oxygen/scalable/actions/view-close.svgz
+share/icons/oxygen/scalable/actions/view-file-columns.svgz
 share/icons/oxygen/scalable/actions/view-filter.svgz
 share/icons/oxygen/scalable/actions/view-fullscreen.svgz
 share/icons/oxygen/scalable/actions/view-history.svgz
@@ -6071,6 +6076,7 @@ share/icons/oxygen/scalable/apps/preferences-web-browser-identification.svgz
 share/icons/oxygen/scalable/apps/preferences-web-browser-shortcuts.svgz
 share/icons/oxygen/scalable/apps/preferences-web-browser-stylesheets.svgz
 share/icons/oxygen/scalable/apps/scribus.svgz
+share/icons/oxygen/scalable/apps/semn.svg
 share/icons/oxygen/scalable/apps/small/16x16/accessories-calculator.svgz
 share/icons/oxygen/scalable/apps/small/16x16/accessories-character-map.svgz
 share/icons/oxygen/scalable/apps/small/16x16/accessories-dictionary.svgz
@@ -6521,6 +6527,7 @@ share/icons/oxygen/scalable/mimetypes/image-png.svgz
 share/icons/oxygen/scalable/mimetypes/image-svg+xml-compressed.svgz
 share/icons/oxygen/scalable/mimetypes/image-svg+xml.svgz
 share/icons/oxygen/scalable/mimetypes/image-tiff.svgz
+share/icons/oxygen/scalable/mimetypes/image-x-adobe-dng.svgz
 share/icons/oxygen/scalable/mimetypes/image-x-applix-graphics.svgz
 share/icons/oxygen/scalable/mimetypes/image-x-dcraw.svgz
 share/icons/oxygen/scalable/mimetypes/image-x-dds.svgz
@@ -6989,6 +6996,7 @@ share/icons/oxygen/scalable/mimetypes/text-x-pascal.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-patch.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-po.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-python.svgz
+share/icons/oxygen/scalable/mimetypes/text-x-readme.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-script.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-sql.svgz
 share/icons/oxygen/scalable/mimetypes/text-x-tcl.svgz
