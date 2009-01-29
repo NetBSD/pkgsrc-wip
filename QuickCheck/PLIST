@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/29 09:52:47 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Arbitrary.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Exception.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Function.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Gen.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Monadic.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Poly.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Property.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/State.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Test.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck/Text.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Test/QuickCheck
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Test
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}

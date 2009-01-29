@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/29 09:52:47 phonohawk Exp $
+
+SHA1 (QuickCheck-2.1.0.1.tar.gz) = 1fd79a1dabaf3a0e86ddc6988067d393aa7da4fc
+RMD160 (QuickCheck-2.1.0.1.tar.gz) = 04941d49d02cb25bcfb83cfd82e46b0fea5e45d3
+Size (QuickCheck-2.1.0.1.tar.gz) = 17476 bytes
+SHA1 (patch-aa) = 9c1a2fa5e7a44efaae57d2326e95b6c50b3ab684
