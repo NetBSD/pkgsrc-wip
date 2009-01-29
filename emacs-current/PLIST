@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2009/01/25 05:47:32 makoto Exp $
+@comment $NetBSD: PLIST,v 1.74 2009/01/29 10:09:46 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2511,6 +2511,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-export-latex.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-export-latex.elc
 share/emacs/${PKGVERSION}/lisp/org/org-faces.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-faces.elc
+share/emacs/${PKGVERSION}/lisp/org/org-footnote.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-footnote.elc
 share/emacs/${PKGVERSION}/lisp/org/org-gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-gnus.elc
 share/emacs/${PKGVERSION}/lisp/org/org-id.el.gz
