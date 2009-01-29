@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/29 10:14:21 phonohawk Exp $
-lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv/Internal.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
-lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
-lib/${PKGNAME}/${HASKELL_VERSION}/package-description
-share/doc/${PKGNAME}/LICENSE
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text/IConv
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec/Text
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Codec
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
-@dirrm lib/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2009/01/29 10:27:14 phonohawk Exp $
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv.hi
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv/Internal.hi
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/HSiconv-${PKGVERSION}.o
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/libHSiconv-${PKGVERSION}.a
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/iconv-${PKGVERSION}/LICENSE
+@dirrm share/doc/iconv-${PKGVERSION}
+@dirrm lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv
+@dirrm lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text
+@dirrm lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec
+@dirrm lib/iconv-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/iconv-${PKGVERSION}
