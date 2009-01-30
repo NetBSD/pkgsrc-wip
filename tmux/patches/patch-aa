@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2009/01/24 22:59:10 leot1990 Exp $
+$NetBSD: patch-aa,v 1.9 2009/01/30 17:06:33 htepper Exp $
 
 Do not add -W* flags to CFLAGS.
 NetBSD has not got strtonum(3) and strnvis(3) so use the compat/
@@ -27,21 +27,22 @@ Do not use rough install(1) commands, use cleaner INSTALL_* ones.
  
  PREFIX?= /usr/local
  INSTALLDIR= install -d
-@@ -82,6 +78,13 @@ LIBS+= -lutil -lncurses
+@@ -80,6 +76,14 @@ LIBS+= -lutil -lncurses
+ # FreeBSD and DragonFly
+ .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
  CFLAGS+= -DUSE_LIBUTIL_H
- .endif
- 
++LIBS+= -lcrypt
++.endif
++
 +# NetBSD
 +.if ${OS} == "NetBSD"
 +SRCS+= compat/strtonum.c compat/vis.c
 +LIBS+= -lcrypt
 +CFLAGS+=-DNO_STRTONUM
-+.endif
-+
- OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
+ .endif
  
- DISTDIR= ${PROG}-${VERSION}
-@@ -128,7 +131,7 @@ update-index.html:
+ OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
+@@ -128,7 +132,7 @@ update-index.html:
  		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
  
  install:	all
