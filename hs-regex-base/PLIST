@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/30 14:38:32 phonohawk Exp $
-lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/Context.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/Impl.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/RegexLike.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
-lib/${PKGNAME}/${HASKELL_VERSION}/package-description
-share/doc/${PKGNAME}/LICENSE
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
-@dirrm lib/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2009/01/30 14:45:11 phonohawk Exp $
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/HSregex-base-${PKGVERSION}.o
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base.hi
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base/Context.hi
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base/Impl.hi
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base/RegexLike.hi
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-base-${PKGVERSION}.a
+lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/regex-base-${PKGVERSION}/LICENSE
+@dirrm share/doc/regex-base-${PKGVERSION}
+@dirrm lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Base
+@dirrm lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex
+@dirrm lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}/Text
+@dirrm lib/regex-base-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/regex-base-${PKGVERSION}
