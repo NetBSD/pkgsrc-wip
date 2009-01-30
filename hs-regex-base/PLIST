@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/30 14:38:32 phonohawk Exp $
+lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/Context.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/Impl.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base/RegexLike.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex/Base
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text/Regex
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Text
+@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
+@dirrm lib/${PKGNAME}
