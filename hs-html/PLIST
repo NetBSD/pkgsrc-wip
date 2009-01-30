@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/30 14:20:52 phonohawk Exp $
+lib/html-${PKGVERSION}/${HASKELL_VERSION}/HShtml-${PKGVERSION}.o
+lib/html-${PKGVERSION}/${HASKELL_VERSION}/Text/Html.hi
+lib/html-${PKGVERSION}/${HASKELL_VERSION}/Text/Html/BlockTable.hi
+lib/html-${PKGVERSION}/${HASKELL_VERSION}/libHShtml-${PKGVERSION}.a
+lib/html-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/html-${PKGVERSION}/LICENSE
+@dirrm share/doc/html-${PKGVERSION}
+@dirrm lib/html-${PKGVERSION}/${HASKELL_VERSION}/Text/Html
+@dirrm lib/html-${PKGVERSION}/${HASKELL_VERSION}/Text
+@dirrm lib/html-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/html-${PKGVERSION}
