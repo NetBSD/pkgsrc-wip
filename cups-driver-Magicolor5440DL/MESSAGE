@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/01/31 23:39:00 jym-netbsd Exp $
+
+The CUPS driver for the Konica Minolta Magicolor 5440DL requires
+ghostscript to be compiled with cups support (which is off by default).
+
+This can be achieved by setting:
+
+	PKG_OPTIONS.ghostscript+=cups
+
+inside /etc/mk.conf, and then reinstall ghostscript package.
+
+===========================================================================

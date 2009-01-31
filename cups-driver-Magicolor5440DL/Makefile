@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/27 16:32:38 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/31 23:39:00 jym-netbsd Exp $
 #
 
 DISTNAME=	5440DL_lin64bit_1_2_1
@@ -22,6 +22,7 @@ USE_TOOLS+=	gmake
 
 BUILD_DEPENDS+=	jbigkit>=1.6:../../wip/jbigkit
 DEPENDS+=	cups>=1.1.14:../../print/cups
+DEPENDS+=	ghostscript>=8.0:../../print/ghostscript
 
 post-extract:
 	cd ${WRKDIR}/5440dl_64_v1.2.1/; \
