@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3242 2009/02/02 13:08:46 phonohawk Exp $
+# $Id: Makefile,v 1.3243 2009/02/02 19:18:09 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1832,6 +1832,7 @@ SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-bin-kpathsea
 SUBDIR+=	tex-bin-tex
 SUBDIR+=	tex-cm
+SUBDIR+=	tex-etex
 SUBDIR+=	tex-hyphen-base
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
