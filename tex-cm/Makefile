@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/25 08:32:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/02 19:57:46 minskim Exp $
 # TeX Live Revision 7621
 
 DISTNAME=	cm
@@ -27,7 +27,7 @@ TEX_MIXEDMAP_FILES+=	cmtext-bsr-interpolated.map
 TEX_MIXEDMAP_FILES+=	cmtext-bsr.map
 
 .include "../../print/kpathsea/texmf.mk"
-.include "../../wip/texlive-tetex/map.mk"
+.include "../../print/texlive-tetex/map.mk"
 
 post-extract:
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
