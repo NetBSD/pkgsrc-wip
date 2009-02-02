@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/11/09 20:00:22 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/02 03:22:13 thomasklausner Exp $
 
 PKGNAME=		${DISTNAME:S/-/-embedded-/}
 COMMENT=		MySQL 5, a free SQL database (embedded)
@@ -22,7 +22,7 @@ BUILD_DIRS=		strings regex mysys dbug myisam myisammrg heap innobase vio libmysq
 CFLAGS+=		-fPIC -DPIC -I../libmysql
 CXXFLAGS+=		-fPIC -DPIC -I../libmysql
 
-INSTALLATION_DIRS=	lib/mysql
+INSTALLATION_DIRS=	bin lib/mysql
 
 .include "../../mk/bsd.prefs.mk"
 
