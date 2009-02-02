@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3241 2009/02/01 06:09:20 minskim Exp $
+# $Id: Makefile,v 1.3242 2009/02/02 13:08:46 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -171,6 +171,7 @@ SUBDIR+=	bwm-ng
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
 SUBDIR+=	cabal
+SUBDIR+=	cabal-upload
 SUBDIR+=	cabocha
 SUBDIR+=	cacti
 SUBDIR+=	cacti-plugin-arch
