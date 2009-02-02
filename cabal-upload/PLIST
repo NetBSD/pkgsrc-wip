@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/02 13:07:33 phonohawk Exp $
+bin/cabal-upload
+share/doc/${PKGNAME}/LICENSE
+@dirrm share/doc/${PKGNAME}
