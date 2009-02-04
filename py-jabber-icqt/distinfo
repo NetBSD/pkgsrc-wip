@@ -1,14 +1,8 @@
-$NetBSD: distinfo,v 1.10 2008/06/30 02:17:13 schnoebe Exp $
+$NetBSD: distinfo,v 1.11 2009/02/04 17:24:30 schnoebe Exp $
 
-SHA1 (pyicq-t-0.8b.tar.gz) = 134491ff38b4b5dbba1cff9f69ae2ebf7baef43f
-RMD160 (pyicq-t-0.8b.tar.gz) = be6ced1c07d91c9ec5f277c9440d341211fc5ee0
-Size (pyicq-t-0.8b.tar.gz) = 164765 bytes
-SHA1 (pyicq08b-senducs2.patch) = 33632bb25c1699c75b3b1b4b4e64e722ac10d725
-RMD160 (pyicq08b-senducs2.patch) = 6a8797b9edc5975de9f1f1b85859414d12d7586b
-Size (pyicq08b-senducs2.patch) = 1073 bytes
-SHA1 (pyicqt-allow-md5-v3.patch) = 1f3514dec94d96ecaacafc5773eacba7afac6676
-RMD160 (pyicqt-allow-md5-v3.patch) = de977e26977252f853f07678a0739edc73c94958
-Size (pyicqt-allow-md5-v3.patch) = 5843 bytes
+SHA1 (pyicqt-0.8.1.1.tar.gz) = 996d984694c466180ef0a528e9c970e853bfadc3
+RMD160 (pyicqt-0.8.1.1.tar.gz) = d12fc0b0f45ffb64359342fdf6e291b37ee0a95c
+Size (pyicqt-0.8.1.1.tar.gz) = 206247 bytes
 SHA1 (patch-aa) = 20380de4db720a39f8c0e3dc559637e77a7a5363
 SHA1 (patch-ab) = 029b2aba5a9e4b71bd3919cd645fafd27144d393
 SHA1 (patch-ac) = 168b5d888a48c0d7a31ea47f94b60d8eb4adb2b6

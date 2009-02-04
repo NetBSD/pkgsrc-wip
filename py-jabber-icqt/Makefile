@@ -1,20 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2008/11/29 05:34:53 schnoebe Exp $
+# $NetBSD: Makefile,v 1.21 2009/02/04 17:24:30 schnoebe Exp $
 
-DISTNAME=		pyicq-t-0.8b
+DISTNAME=		pyicqt-0.8.1.1
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
-PKGREVISION=		3
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyicqt.googlecode.com/files/
-
-PATCH_SITES=		http://maxim.modum.by/
-PATCHFILES=		pyicqt-allow-md5-v3.patch
-PATCH_DIST_STRIP.pyicqt-allow-md5-v3.patch=	-p1
-PATCHFILES+=		pyicq08b-senducs2.patch
-PATCH_DIST_STRIP.pyicq08b-senducs2.patch=	-R
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyicqt/
 COMMENT=		Transport connecting Jabber to the ICQ IM network
+
+CONFLICTS=		${PYPKGPREFIX}-jabber-pyicq-t-*
 
 #
 # jabberd isn't really a dependency since the transport can run on a
