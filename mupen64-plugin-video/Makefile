@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/04 20:53:45 thomasklausner Exp $
 #
 
 DISTNAME=	tr64_oglv078_src
@@ -21,5 +21,4 @@ pre-install:
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

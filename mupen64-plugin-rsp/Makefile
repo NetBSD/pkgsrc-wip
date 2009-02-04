@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/14 18:18:58 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/04 20:53:45 thomasklausner Exp $
 #
 
 DISTNAME=	hack_azi_rsp_hle
@@ -20,5 +20,4 @@ USE_LANGUAGES=	c c++
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
