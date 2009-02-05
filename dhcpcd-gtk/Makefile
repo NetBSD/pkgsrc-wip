@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/01/26 12:10:33 rsmarples Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/05 01:32:51 rsmarples Exp $
 #
 
-DISTNAME=		dhcpcd-gtk-0.1.4
+DISTNAME=		dhcpcd-gtk-0.2.0
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
+MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		roy@marples.name
@@ -15,7 +16,7 @@ USE_LANGUAGES=		c99
 
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${PREFIX}/share/gnome/autostart
 
-DEPENDS+=		dhcpcd-dbus>=0.1.1:../../wip/dhcpcd-dbus
+DEPENDS+=		dhcpcd-dbus>=0.2.0:../../wip/dhcpcd-dbus
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
