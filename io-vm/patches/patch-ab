@@ -1,0 +1,9 @@
+--- libs/coroutine/Makefile.orig	2009-02-05 20:42:45.000000000 +0000
++++ libs/coroutine/Makefile	2009-02-05 20:43:04.000000000 +0000
+@@ -1,5 +1,6 @@
+ include ../../Makefile.lib
+ CFLAGS += -DBUILDING_CORO_DLL $(IOVMALLFLAGS)
++CFLAGS += -fPIC
+ 
+ # Manually control which coro implementation to use
+ #CFLAGS += -DUSE_UCONTEXT   	# preferred on OSX, Linux and friends

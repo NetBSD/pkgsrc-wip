@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/09/10 20:10:37 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/05 23:08:14 milosn Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-distributedobjects-${IO_VERSION}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		milos.negovanovic@googlemail.com

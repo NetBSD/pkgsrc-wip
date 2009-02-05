@@ -1,0 +1,7 @@
+--- libs/basekit/Makefile.orig	2009-02-05 20:42:10.000000000 +0000
++++ libs/basekit/Makefile	2009-02-05 20:42:25.000000000 +0000
+@@ -1,3 +1,4 @@
+ include Makefile.lib
+ CFLAGS += -DBUILDING_BASEKIT_DLL $(IOVMALLFLAGS)
+ CFLAGS += -Isource/simd_cph/include
++CFLAGS += -fPIC

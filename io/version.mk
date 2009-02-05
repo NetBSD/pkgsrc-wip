@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.2 2008/09/10 19:58:55 milosn Exp $
+# $NetBSD: version.mk,v 1.3 2009/02/05 23:01:05 milosn Exp $
 
-IO_VERSION=	20080904
-IO_MASTER_SITES = http://milosn.no-ip.org/files/
+IO_VERSION=		20090205
+IO_MASTER_SITES = 	http://milosn.no-ip.org/files/
