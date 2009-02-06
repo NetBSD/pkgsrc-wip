@@ -103,8 +103,8 @@ Suggested package updates
 Suggested infrastructure improvements
 =====================================
 
-	o Support cached distfiles in {hg,svn}-package.mk.
+	o Support cached distfiles in hg-package.mk.
 
 	o Support using cached distfiles for 'tool update' instead
 	  of checking out the whole repository again, in
-	  {cvs,hg,svn}-package.mk.
+	  {hg,svn}-package.mk.
