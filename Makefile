@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3244 2009/02/02 19:37:45 minskim Exp $
+# $Id: Makefile,v 1.3245 2009/02/07 20:14:52 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -757,6 +757,7 @@ SUBDIR+=	io-socket
 SUBDIR+=	io-sqldatabase
 SUBDIR+=	io-syslog
 SUBDIR+=	io-systemcall
+SUBDIR+=	io-thread
 SUBDIR+=	io-user
 SUBDIR+=	io-vm
 SUBDIR+=	io-zlib
