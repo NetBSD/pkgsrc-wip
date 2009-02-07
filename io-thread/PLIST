@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/07 20:12:53 milosn Exp $
+lib/io/addons/Thread/_build/dll/libIoThread.so
+lib/io/addons/Thread/_build/lib/libIoThread.a
+lib/io/addons/Thread/build.io
+lib/io/addons/Thread/depends
+@dirrm lib/io/addons/Thread/_build/lib
+@dirrm lib/io/addons/Thread/_build/dll
+@dirrm lib/io/addons/Thread/_build
+@dirrm lib/io/addons/Thread
