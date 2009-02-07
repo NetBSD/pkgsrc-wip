@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/08 15:24:09 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/07 16:20:15 pbraun9 Exp $
 bin/ndbm
 bin/runq
-libexec/authexpire
-libexec/postoffice
+lib/authexpire
+lib/postoffice
 man/man1/mailq.1
 man/man1/ndbm.1
 man/man1/newaliases.1

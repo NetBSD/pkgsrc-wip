@@ -1,36 +1,8 @@
-# man postoffice.cf
-
-# examples,
-
-#self=mx.example.com
-#clients=30
-#delay=1m
-#hops=3
-#minfree=40m
-#size=10m
-#timeout=1h
-
-
-# more examples,
-
-#audit
-#localmx
-#qreturn=Xm Xh Xd
-# soft-deny temporary
-#soft-deny
-#load=2
-#verify-from=1 (default)
-
-# smart host or (dedicated?) backup MX,
-#forward-all
-#relay-host=
-
-# under attack,
-#nodaemon
-#paranoid
-#checkhelo
-# greater delay=4h
-# no soft-deny
-
-# private network or firewalled
-#relay
+self=mx.example.com
+audit
+clients=100
+delay=1m
+escape-from=1
+immediate
+minfree=10m
+timeout=1h

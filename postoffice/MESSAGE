@@ -1,34 +1,20 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.6 2008/01/12 14:09:46 shattered Exp $
+Configure the daemon,
+	cp ${PREFIX}/share/examples/postoffice/postoffice.cf \
+		${PKG_SYSCONFBASE}/postoffice.cf
+	vi ${PKG_SYSCONFBASE}/postoffice.cf
 
-- Run	mv ${SYSCONFBASE}/mailer.conf ${SYSCONFBASE}/mailer.conf.sendmail
-	cp ${PREFIX}/share/examples/postoffice/mailer.conf ${SYSCONFBASE}/mailer.conf
+On BSD systems, update your mailwrapper,
+	mv ${SYSCONFBASE}/mailer.conf ${SYSCONFBASE}/mailer.conf.dist
+	cp ${PREFIX}/share/examples/postoffice/mailer.conf \
+		${SYSCONFBASE}/mailer.conf
 
-- Edit /etc/mail/aliases
-  and run
+Update your aliases,
+	vi $SYSCONFBASE/mail/aliases
 	newaliases
-
-- If using /etc/mk.conf:POSTOFFICE_VIRTUAL=YES, also create
-    ${VARBASE}/spool/virtual
-    ${SYSCONFBASE}/virtual/domains.cf
-    ${SYSCONFBASE}/virtual/example.com/passwd
-    ${SYSCONFBASE}/virtual/example.com/aliases
-  all readable by user having uid 8 (mail) and run
 	newaliases example.com
+Note. the "newaliases" command points to postoffice according to the
+mailwrapper configuration.
 
-NetBSD:
-- Run	/etc/rc.d/sendmail stop
-	/etc/rc.d/smmsp stop
-	cp -p ${PREFIX}/share/examples/rc.d/postoffice /etc/rc.d
+Recommended daemon flags : -bd -q10
 
-- Edit /etc/rc.conf:
-    sendmail=NO
-    smmsp=NO
-    postoffice=YES
-    postoffice_flags="-bd -q2"
-
-- Run	/etc/rc.d/postoffice start
-
-Others:
-- ${PREFIX}/libexec/postoffice -C/usr/pkg/etc/postoffice.cf -bd -q2
 ===========================================================================
