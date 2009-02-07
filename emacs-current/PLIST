@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2009/01/29 10:09:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.75 2009/02/07 21:36:37 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -986,6 +986,7 @@ share/emacs/${PKGVERSION}/leim/quail/vntelex.el.gz
 share/emacs/${PKGVERSION}/leim/quail/vntelex.elc
 share/emacs/${PKGVERSION}/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/leim/quail/welsh.elc
+share/emacs/${PKGVERSION}/lisp/.gitignore
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
 share/emacs/${PKGVERSION}/lisp/abbrev.el.gz
@@ -1279,6 +1280,7 @@ share/emacs/${PKGVERSION}/lisp/electric.el.gz
 share/emacs/${PKGVERSION}/lisp/electric.elc
 share/emacs/${PKGVERSION}/lisp/elide-head.el.gz
 share/emacs/${PKGVERSION}/lisp/elide-head.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/.gitignore
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/assoc.el.gz
@@ -1549,6 +1551,7 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-xdcc.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-xdcc.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc.elc
+share/emacs/${PKGVERSION}/lisp/eshell/.gitignore
 share/emacs/${PKGVERSION}/lisp/eshell/em-alias.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-alias.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-banner.el.gz
