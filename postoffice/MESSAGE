@@ -1,20 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.8 2009/02/08 12:13:14 pbraun9 Exp $
+
 Configure the daemon,
-	cp ${PREFIX}/share/examples/postoffice/postoffice.cf \
-		${PKG_SYSCONFBASE}/postoffice.cf
-	vi ${PKG_SYSCONFBASE}/postoffice.cf
+	vi ${PKG_SYSCONFDIR}/postoffice.cf
 
 On BSD systems, update your mailwrapper,
-	mv ${SYSCONFBASE}/mailer.conf ${SYSCONFBASE}/mailer.conf.dist
+	mv /etc/mailer.conf /etc/mailer.conf.dist
 	cp ${PREFIX}/share/examples/postoffice/mailer.conf \
 		${SYSCONFBASE}/mailer.conf
 
-Update your aliases,
-	vi $SYSCONFBASE/mail/aliases
-	newaliases
-	newaliases example.com
-Note. the "newaliases" command points to postoffice according to the
-mailwrapper configuration.
+On other systems, make sure you're now using the postoffice executables,
+	cd /usr/bin
+	mv mailq mailq.dist
+	mv newaliases newaliases.dist
+	which mailq
+	which newaliases
 
-Recommended daemon flags : -bd -q10
+Then update your aliases,
+        vi /etc/mail/aliases
+        newaliases
+        newaliases example.com
+
+Recommended flags : -bd -q10
 
 ===========================================================================

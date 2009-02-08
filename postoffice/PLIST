@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/07 16:20:15 pbraun9 Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/02/08 12:13:14 pbraun9 Exp $
 bin/ndbm
 bin/runq
+etc/postoffice.cf
 lib/authexpire
 lib/postoffice
 man/man1/mailq.1
@@ -8,12 +9,14 @@ man/man1/ndbm.1
 man/man1/newaliases.1
 man/man1/runq.1
 man/man5/aliases.5
+man/man5/domains.cf.5
 man/man5/mailaudit.5
 man/man5/postoffice.cf.5
 man/man5/smtpauth.5
 man/man7/greylist.7
 man/man7/mailaddr.7
 man/man7/usermap.7
+man/man7/vhosts.7
 man/man8/authexpire.8
 man/man8/postoffice.8
 man/man8/sendmail.8
@@ -23,3 +26,5 @@ share/examples/postoffice/pop_passwd.pl
 share/examples/postoffice/postoffice.cf
 share/examples/rc.d/postoffice
 @dirrm share/examples/postoffice
+@exec ${MKDIR} %D/etc/virtual
+@dirrm etc/virtual
