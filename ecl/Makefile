@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2008/12/20 14:10:23 asau Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/08 12:38:44 asau Exp $
 #
 
 DISTNAME=		ecl-8.12.0
-PKGNAME=		ecl-8.12.99
+PKGNAME=		ecl-9.2.99
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 
@@ -39,7 +39,9 @@ SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	post-patch
 SUBST_MESSAGE.fix-version=	Fixing package version.
 SUBST_FILES.fix-version=	src/configure.in
-SUBST_SED.fix-version=		-e '/^AC_INIT(/s/8.12.0/${PKGVERSION}/'
+SUBST_SED.fix-version=		-e '/^AC_INIT(\[ecl\],/s/\[\([0-9.]*\)\]/[${PKGVERSION_NOREV}]/'
+
+PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
 
 # Make package version change to come in effect:
 USE_TOOLS+=		autoconf

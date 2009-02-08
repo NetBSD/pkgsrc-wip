@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2009/02/08 12:38:44 asau Exp $
+
+fileno is a macro, not a function.
+Use real type for stream to avoid casting pointers in too many places.
+
+--- src/h/object.h.orig	2009-02-08 06:43:09.000000000 +0300
++++ src/h/object.h	2009-02-08 07:54:34.000000000 +0300
+@@ -15,6 +15,8 @@
+     See file '../Copyright' for full details.
+ */
+ 
++#include <stdio.h>
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+@@ -558,7 +560,7 @@
+ 				/*  closed stream?  */
+ 	struct ecl_file_ops *ops; /*  dispatch table  */
+         union {
+-                void *stream;		/* ANSI C streams */
++                FILE *stream;		/* ANSI C streams */
+                 cl_fixnum descriptor;	/* POSIX files */
+         } file;
+ 	cl_object object0;	/*  some object  */
