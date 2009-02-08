@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/08 12:13:14 pbraun9 Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/08 12:29:53 pbraun9 Exp $
 #
 
 DISTNAME=		postoffice-1.4.9
@@ -13,7 +13,7 @@ COMMENT=		Simple SMTP mail server and client
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./configure.sh
 CONFIGURE_ARGS=		--prefix=${PREFIX} \
-			--confdir=${PREFIX} \
+			--confdir=${PKG_SYSCONFDIR} \
 			--use-mailwrappers \
 			--with-queuedir=${VARBASE}/spool/mqueue \
 			--with-auth \

@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2009/02/08 12:13:14 pbraun9 Exp $
+$NetBSD: MESSAGE,v 1.9 2009/02/08 12:29:53 pbraun9 Exp $
 
 Configure the daemon,
 	vi ${PKG_SYSCONFDIR}/postoffice.cf
@@ -21,6 +21,7 @@ Then update your aliases,
         newaliases
         newaliases example.com
 
-Recommended flags : -bd -q10
+Use the rc script or launch the daemon manually,
+	/usr/pkg/lib/postoffice -C${PKG_SYSCONFDIR}/postoffice.cf -bd -q10
 
 ===========================================================================
