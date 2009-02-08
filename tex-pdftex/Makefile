@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/08 23:32:47 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/08 23:57:10 minskim Exp $
 # TeX Live Revision 11868
 
 DISTNAME=	pdftex
@@ -18,6 +18,7 @@ DEPENDS+=	tex-etex-[0-9]*:../../wip/tex-etex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../wip/tex-hyphen-base
 DEPENDS+=	tex-misc-[0-9]*:../../wip/tex-misc
 DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
+DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
