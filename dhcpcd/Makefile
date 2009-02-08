@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/05 00:12:28 rsmarples Exp $
+# $NetBSD: Makefile,v 1.28 2009/02/08 19:38:14 absd Exp $
 #
 
 DISTNAME=		dhcpcd-4.99.13
@@ -16,6 +16,7 @@ USE_LANGUAGES=		c99
 
 EGDIR=			${PREFIX}/share/examples
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man
+MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 
 # Install the configuration file
