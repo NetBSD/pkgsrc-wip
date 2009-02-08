@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/12/06 23:20:45 leot1990 Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/08 16:52:48 leot1990 Exp $
+#
 
-DISTNAME=	dwm-5.3.1
+DISTNAME=	dwm-5.4.1
 CATEGORIES=	wm
 MASTER_SITES=	http://code.suckless.org/dl/dwm/
 
