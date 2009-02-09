@@ -1,25 +1,34 @@
-$NetBSD: patch-ae,v 1.1 2008/03/08 18:02:00 tnn2 Exp $
+$NetBSD: patch-ae,v 1.2 2009/02/09 21:08:40 othyro Exp $
 
 --- src/gui/lang/Makefile.in.orig	2008-03-08 18:26:36.000000000 +0100
 +++ src/gui/lang/Makefile.in
-@@ -465,16 +465,16 @@ uninstall-am: uninstall-info-am uninstal
+@@ -485,16 +485,16 @@ uninstall-am: uninstall-info-am uninstal
  
  
- twinkle_nl.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
--	lrelease twinkle_nl.ts
-+	$(have_lrelease) twinkle_nl.ts
- 
- twinkle_de.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
--	lrelease twinkle_de.ts
-+	$(have_lrelease) twinkle_de.ts
- 
- twinkle_cs.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
--	lrelease twinkle_cs.ts
-+	$(have_lrelease) twinkle_cs.ts
- 
- twinkle_fr.qm: $(top_builddir)/src/gui/twinkle $(top_builddir)/src/gui/twinkle.pro
--	lrelease twinkle_fr.ts
-+	$(have_lrelease) twinkle_fr.ts
+ twinkle_nl.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_nl.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_nl.ts -qm $@
+
+ twinkle_de.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_de.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_de.ts -qm $@
+
+ twinkle_cs.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_cs.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_cs.ts -qm $@
+
+ twinkle_fr.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_fr.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_fr.ts -qm $@
+
+ twinkle_ru.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_ru.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_ru.ts -qm $@
+
+ twinkle_sv.qm: $(top_builddir)/src/gui/twinkle $(top_srcdir)/src/gui/twinkle.pro
+-	lrelease $(LRELEASEOPTION) $(srcdir)/twinkle_sv.ts -qm $@
++	$(have_lrelease) $(LRELEASEOPTION) $(srcdir)/twinkle_sv.ts -qm $@
+
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
