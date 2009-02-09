@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2007/10/07 08:38:24 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2009/02/09 21:07:44 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.twinkle
-PKG_SUPPORTED_OPTIONS=	ilbc kde speex # zrtp
+PKG_SUPPORTED_OPTIONS=	ilbc kde speex zrtp
 PKG_SUGGESTED_OPTIONS=	kde speex
 
 .include "../../mk/bsd.options.mk"
@@ -24,8 +24,8 @@ CONFIGURE_ARGS+=	--without-kde
 CONFIGURE_ARGS+=	--without-speex
 .endif
 
-#.if !empty(PKG_OPTIONS:Mzrtp)
-#BROKEN=		libzrtpcpp not packaged yet.
-#.else
-#CONFIGURE_ARGS+=	--without-zrtp
-#.endif
+.if !empty(PKG_OPTIONS:Mzrtp)
+.include "../../wip/libzrtpcpp/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-zrtp
+.endif
