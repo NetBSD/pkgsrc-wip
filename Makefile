@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3248 2009/02/08 23:34:42 minskim Exp $
+# $Id: Makefile,v 1.3249 2009/02/09 00:32:01 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1838,6 +1838,8 @@ SUBDIR+=	tex-etex-doc
 SUBDIR+=	tex-hyphen-base
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
+SUBDIR+=	tex-luatex
+SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-metafont
 SUBDIR+=	tex-misc
 SUBDIR+=	tex-pdftex
