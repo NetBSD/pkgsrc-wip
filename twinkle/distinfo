@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2008/03/08 18:02:00 tnn2 Exp $
+$NetBSD: distinfo,v 1.6 2009/02/09 21:06:32 othyro Exp $
 
-SHA1 (twinkle-1.1.tar.gz) = e2f0b1e7c0273b3197c5e4c21545d0500249240f
-RMD160 (twinkle-1.1.tar.gz) = afd1f82a889b5313dc5b59fdf6fe8d190ff5d4ac
-Size (twinkle-1.1.tar.gz) = 1372495 bytes
+SHA1 (twinkle-1.4.1.tar.gz) = a65ce2ff0176d38d1275d4367b297234fac684d3
+RMD160 (twinkle-1.4.1.tar.gz) = e8b9777b020a21c1ea0b2680db810eeea85d6af3
+Size (twinkle-1.4.1.tar.gz) = 1577865 bytes
 SHA1 (patch-aa) = 840bd51fa828991c235d052f668153ebf6c9e162
 SHA1 (patch-ab) = 2314f4f3d098d29f1e9913463315ad6864fa6a17
 SHA1 (patch-ac) = 4c210ba698d4664d7298a173676c82ba7c7dce92
 SHA1 (patch-ad) = 6418561e3ff1c4c27f7092782cf58d7e15b9850c
-SHA1 (patch-ae) = 6fc503f298d8fec21f073fefdb285f974bfa89a9
+SHA1 (patch-ae) = c2ec3d5f39296f7d9362f93f9281a2f5f3075a95
