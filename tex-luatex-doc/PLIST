@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/09 00:31:00 minskim Exp $
+share/texmf-dist/doc/luatex/luatexref-env.tex
+share/texmf-dist/doc/luatex/luatexref-t.pdf
+share/texmf-dist/doc/luatex/luatexref-t.tex
