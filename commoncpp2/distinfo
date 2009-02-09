@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/09/08 16:45:16 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2009/02/09 19:54:38 othyro Exp $
 
-SHA1 (commoncpp2-1.5.7.tar.gz) = f0d522bbbba279c2c5520fa411c78ea7b4814846
-RMD160 (commoncpp2-1.5.7.tar.gz) = 897076e80a9d6acca1c7f11dd1dc94c3a32fc73b
-Size (commoncpp2-1.5.7.tar.gz) = 858598 bytes
+SHA1 (commoncpp2-1.7.1.tar.gz) = 97456aca09675fdf67194f1aff55f45ab28710f1
+RMD160 (commoncpp2-1.7.1.tar.gz) = 5203a60e21d8d95afa805186278a1963a8e585d8
+Size (commoncpp2-1.7.1.tar.gz) = 892905 bytes
 SHA1 (patch-aa) = b60da84355fa0f6fc450a98795d0e59bd211d1d7
