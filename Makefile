@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3249 2009/02/09 00:32:01 minskim Exp $
+# $Id: Makefile,v 1.3250 2009/02/09 19:08:00 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -142,6 +142,7 @@ SUBDIR+=	beryl-settings-simple
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	blassic
+SUBDIR+=	blop
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
 SUBDIR+=	bluez-hcidump
