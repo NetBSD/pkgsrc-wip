@@ -1,1 +1,6 @@
 Test if it actually works.
+
+Current configure failure:
+
+checking size of int... configure: error: cannot compute sizeof (int)
+See `config.log' for more details.
