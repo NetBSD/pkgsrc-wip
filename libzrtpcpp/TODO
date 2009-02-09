@@ -1,3 +1,0 @@
-This package does not currently build. For some reason, it's pulling in the
-system evp.h instead of the one from pkgsrc. joerg and i could not figure out
-why.
