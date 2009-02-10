@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/10 12:20:49 obache Exp $
+
+SHA1 (scim-bridge-0.4.15.2.tar.gz) = 96c0f0b85da3d3d684e657e73842feb4dac02a72
+RMD160 (scim-bridge-0.4.15.2.tar.gz) = 0c7cdfa4ee6fed8a53b9ab68dbfd519492eed557
+Size (scim-bridge-0.4.15.2.tar.gz) = 508097 bytes
