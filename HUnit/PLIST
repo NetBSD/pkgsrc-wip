@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 07:29:12 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/10 04:55:41 phonohawk Exp $
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Base.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Base.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Lang.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Lang.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Terminal.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Terminal.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Text.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Test/HUnit/Text.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
+lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 share/doc/${PKGNAME}/LICENSE
 @dirrm share/doc/${PKGNAME}
