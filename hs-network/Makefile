@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/12 06:16:58 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 05:38:18 phonohawk Exp $
 #
 
 DISTNAME=	network-2.2.0.1
+PKGREVISION=	1
 PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	devel
 

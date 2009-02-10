@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 06:16:58 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/10 05:38:18 phonohawk Exp $
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-${PKGVERSION}.o
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/include/HsNet.h
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/include/HsNetworkConfig.h
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-${PKGVERSION}.a
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-${PKGVERSION}_p.a
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/network-${PKGVERSION}/LICENSE
 @dirrm share/doc/network-${PKGVERSION}
