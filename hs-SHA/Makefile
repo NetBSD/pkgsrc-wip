@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/29 10:11:40 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 07:20:45 phonohawk Exp $
 #
 
 DISTNAME=	SHA-1.0.3
+PKGREVISION=	1
 PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	security
 

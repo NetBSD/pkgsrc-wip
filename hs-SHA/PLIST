@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/29 10:11:40 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/10 07:20:45 phonohawk Exp $
 lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Pure/SHA.hi
+lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Pure/SHA.p_hi
 lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/HSSHA-${PKGVERSION}.o
 lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/libHSSHA-${PKGVERSION}.a
+lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/libHSSHA-${PKGVERSION}_p.a
 lib/SHA-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/SHA-${PKGVERSION}/LICENSE
 @dirrm share/doc/SHA-${PKGVERSION}
