@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/14 13:59:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/10 12:30:43 obache Exp $
 bin/scim-make-table
 lib/scim-1.0/1.4.0/IMEngine/table.la
 lib/scim-1.0/1.4.0/SetupUI/table-imengine-setup.la
@@ -47,6 +47,7 @@ share/scim/icons/Punjabi-inscript.png
 share/scim/icons/Punjabi-jhelum.png
 share/scim/icons/Punjabi-phonetic.png
 share/scim/icons/Quick.png
+share/scim/icons/RussianTraditional.png
 share/scim/icons/Simplex.png
 share/scim/icons/Stroke5.png
 share/scim/icons/Tamil-inscript.png
@@ -99,6 +100,7 @@ share/scim/tables/Punjabi-inscript.bin
 share/scim/tables/Punjabi-jhelum.bin
 share/scim/tables/Punjabi-phonetic.bin
 share/scim/tables/Quick.bin
+share/scim/tables/RussianTraditional.bin
 share/scim/tables/Simplex.bin
 share/scim/tables/Stroke5.bin
 share/scim/tables/Tamil-inscript.bin
