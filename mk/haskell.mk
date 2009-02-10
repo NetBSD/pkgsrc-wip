@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.7 2009/01/29 10:22:31 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.8 2009/02/10 04:54:17 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -36,7 +36,13 @@
 #
 # Public variables for packages:
 #
-#   (nothing currently)
+#   HASKELL_ENABLE_LIBRARY_PROFILING
+#       Description:
+#           Whether profiling library should be built or not.
+#       Possible values:
+#           yes, no
+#       Default value:
+#           yes
 #
 
 .if !defined(HASKELL_MK)
@@ -61,7 +67,7 @@ HASKELL_TYPE?=	ghc
 # -----------------------------------------------------------------------------
 
 
-# Cabal packages usually supoprt DESTDIR with no root access.
+# Cabal packages usually support DESTDIR with no root access.
 PKG_DESTDIR_SUPPORT?=	user-destdir
 
 
@@ -82,6 +88,8 @@ _DEF_VARS.haskell= \
 	_HASKELL_VERSION \
 	_RUNHASKELL_BIN \
 	_RUNGHC_BIN
+_PKG_VARS.haskell= \
+	HASKELL_ENABLE_LIBRARY_PROFILING
 
 
 # Default value of MASTER_SITES.
@@ -90,8 +98,10 @@ _DISTVERSION?=	${DISTNAME:C/^.*-//}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${_DISTBASE}/${_DISTVERSION}/}
 
 # Default value of HOMEPAGE.
-HOMEPAGE=		http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
+HOMEPAGE?=		http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
 
+# Default value of HASKELL_ENABLE_LIBRARY_PROFILING
+HASKELL_ENABLE_LIBRARY_PROFILING?= yes
 
 # Compiler specific variables and targets.
 .if ${HASKELL_TYPE} == "ghc"
@@ -122,6 +132,11 @@ CONFIGURE_ARGS+=	--with-hc-pkg=${_GHC_PKG_BIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 .endif # ${HASKELL_TYPE}
+
+# Library profiling
+.if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
+CONFIGURE_ARGS+=	-p
+.endif
 
 # package.conf and package.conf.old should be ignored at all.
 PRINT_PLIST_AWK+= \
