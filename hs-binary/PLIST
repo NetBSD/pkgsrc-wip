@@ -1,14 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/20 05:37:11 phonohawk Exp $
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Binary.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Binary/Builder.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Binary/Get.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Data/Binary/Put.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
-lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
-lib/${PKGNAME}/${HASKELL_VERSION}/package-description
-share/doc/${PKGNAME}/LICENSE
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data/Binary
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Data
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
-@dirrm lib/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2009/02/10 07:39:00 phonohawk Exp $
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary.hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary.p_hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Builder.hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Builder.p_hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Get.hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Get.p_hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Put.hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Put.p_hi
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/HSbinary-${PKGVERSION}.o
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-${PKGVERSION}.a
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-${PKGVERSION}_p.a
+lib/binary-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/binary-${PKGVERSION}/LICENSE
+@dirrm share/doc/binary-${PKGVERSION}
+@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary
+@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data
+@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/binary-${PKGVERSION}
