@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 02:40:48 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/10 06:16:50 phonohawk Exp $
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Base64.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Base64.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Decode.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Decode.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Parse.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Parse.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/QuotedPrintable.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/QuotedPrintable.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Type.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Type.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Utils.hi
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/Codec/MIME/Utils.p_hi
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/HSmime-${PKGVERSION}.o
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/libHSmime-${PKGVERSION}.a
+lib/mime-${PKGVERSION}/${HASKELL_VERSION}/libHSmime-${PKGVERSION}_p.a
 lib/mime-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/mime-${PKGVERSION}/LICENSE
 @dirrm share/doc/mime-${PKGVERSION}
