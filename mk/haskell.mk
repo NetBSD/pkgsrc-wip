@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.8 2009/02/10 04:54:17 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.9 2009/02/10 08:30:07 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -137,6 +137,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 .if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
 CONFIGURE_ARGS+=	-p
 .endif
+
+# Optimization
+CONFIGURE_ARGS+=	-O2
 
 # package.conf and package.conf.old should be ignored at all.
 PRINT_PLIST_AWK+= \
