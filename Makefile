@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3251 2009/02/10 08:37:22 othyro Exp $
+# $Id: Makefile,v 1.3252 2009/02/10 09:23:15 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1941,6 +1941,7 @@ SUBDIR+=	vinagre
 SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vkeybd
+SUBDIR+=        vlevel
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmsbackup
 SUBDIR+=	vncselector
