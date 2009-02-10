@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2009/02/10 08:17:58 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 09:22:14 othyro Exp $
 #
 
 DISTNAME=	vcf-0.0.5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.suse.de/~mana/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.suse.de/~mana/
+HOMEPAGE=	http://www.suse.de/~mana/ladspa.html
 COMMENT=	Some LADSPA plugins for audio EQ biquad filters
 
 do-install:
