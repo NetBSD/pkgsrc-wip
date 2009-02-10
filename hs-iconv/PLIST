@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/29 10:27:14 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/10 07:11:53 phonohawk Exp $
 lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv.hi
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv.p_hi
 lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv/Internal.hi
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/Codec/Text/IConv/Internal.p_hi
 lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/HSiconv-${PKGVERSION}.o
 lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/libHSiconv-${PKGVERSION}.a
+lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/libHSiconv-${PKGVERSION}_p.a
 lib/iconv-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/iconv-${PKGVERSION}/LICENSE
 @dirrm share/doc/iconv-${PKGVERSION}

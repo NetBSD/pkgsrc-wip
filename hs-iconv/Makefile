@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/29 10:14:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 07:11:53 phonohawk Exp $
 #
 
 DISTNAME=	iconv-0.4.0.2
+PKGREVISION=	1
 PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	converters
 
