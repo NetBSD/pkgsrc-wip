@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/12 05:53:43 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 05:32:42 phonohawk Exp $
 #
 
 DISTNAME=	parsec-3.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
