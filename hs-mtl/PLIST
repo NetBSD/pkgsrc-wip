@@ -1,27 +1,49 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/12 06:10:46 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/10 05:04:35 phonohawk Exp $
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Identity.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Identity.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/List.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/List.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Lazy.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Lazy.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Strict.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS/Strict.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Reader.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Reader.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Reader/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Reader/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Lazy.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Lazy.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Strict.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State/Strict.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Class.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Class.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Lazy.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Lazy.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Strict.hi
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer/Strict.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/HSmtl-${PKGVERSION}.o
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSmtl-${PKGVERSION}.a
+lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSmtl-${PKGVERSION}_p.a
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/mtl-${PKGVERSION}/LICENSE
 @dirrm share/doc/mtl-${PKGVERSION}
@@ -32,4 +54,6 @@ share/doc/mtl-${PKGVERSION}/LICENSE
 @dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error
 @dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont
 @dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad
+@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control
 @dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/mtl-${PKGVERSION}
