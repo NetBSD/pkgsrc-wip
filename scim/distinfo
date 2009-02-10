@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/01/14 13:42:41 obache Exp $
+$NetBSD: distinfo,v 1.3 2009/02/10 12:16:38 obache Exp $
 
-SHA1 (scim-1.4.7.tar.gz) = 54ab2ab0ef28a84c24fbc32d37e996ecae416d50
-RMD160 (scim-1.4.7.tar.gz) = 0b24e24f547ce39469811076420bfcd41d1e906c
-Size (scim-1.4.7.tar.gz) = 3075769 bytes
+SHA1 (scim-1.4.8.tar.gz) = 7dc7f04e27c1bc4b06e952123656d220140708a0
+RMD160 (scim-1.4.8.tar.gz) = d8f407e0d960f7f790cbdf76f85d1db56c6eb967
+Size (scim-1.4.8.tar.gz) = 2907528 bytes
 SHA1 (patch-ab) = a49bf1c92d36e4042f32004a383a7f5d350807ae
