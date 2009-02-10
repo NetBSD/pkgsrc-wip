@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/07/20 23:34:43 absd Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/10 20:38:45 shattered Exp $
 
 DISTNAME=	alphamail-1.0.44
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alphamail/}
 
@@ -11,8 +11,7 @@ COMMENT=	Highly scalable webmail with middleware component
 
 DEPENDS+=	p5-HTML-Mason>=1.30:../../www/p5-HTML-Mason
 DEPENDS+=	p5-CGI>=3.20:../../www/p5-CGI
-# hacked
-DEPENDS+=	p5-Apache-AuthCookie>=3.10:../../www/p5-Apache-AuthCookie
+DEPENDS+=	p5-Apache2-AuthCookie>=3.10:../../www/p5-Apache2-AuthCookie
 DEPENDS+=	p5-Apache-Session>=1.6:../../www/p5-Apache-Session
 DEPENDS+=	p5-MIME-tools>=5.4:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MIME-Types>=1.16:../../mail/p5-MIME-Types

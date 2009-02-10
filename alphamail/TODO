@@ -1,3 +1,2 @@
-- requires modified www/p5-Apache-AuthCookie (one that depends on apache 2)
 - NetBSD 4.0 make crashes at install time (most likely cause: PR 37684); use GNU make 
 - incompatible with boost 1.34
