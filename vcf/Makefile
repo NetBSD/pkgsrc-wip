@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/10 08:10:39 othyro Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2009/02/10 08:17:58 othyro Exp $
 #
 
 DISTNAME=	vcf-0.0.5
@@ -11,8 +11,8 @@ HOMEPAGE=	http://www.suse.de/~mana/
 COMMENT=	Some LADSPA plugins for audio EQ biquad filters
 
 do-install:
-	cd ${WRKSRC} && \
-	${CP} vcf.so ${BUILDLINK_PREFIX.ladspa}/lib/ladspa
+	${INSTALL_LIB_DIR} ${BUILDLINK_PREFIX.ladspa}/lib/ladspa
+	${INSTALL_LIB} ${WRKSRC}/vcf.so ${BUILDLINK_PREFIX.ladspa}/lib/ladspa
 
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
