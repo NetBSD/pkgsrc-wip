@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/02/11 23:06:39 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -994,7 +994,6 @@ share/kde/apps/kanagram/images/kanagram.svg
 share/kde/apps/kanagram/sounds/chalk.ogg
 share/kde/apps/kanagram/sounds/right.ogg
 share/kde/apps/kanagram/sounds/wrong.ogg
-share/kde/apps/katepart/syntax/python-kig.xml
 share/kde/apps/kbruch/AppMenuWidgetui.rc
 share/kde/apps/kbruch/FractionRingWidgetui.rc
 share/kde/apps/kbruch/kbruchui.rc
