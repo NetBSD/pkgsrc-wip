@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2008/10/22 21:19:12 ghen Exp $
+@comment $NetBSD: PLIST,v 1.29 2009/02/11 14:57:33 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -40,11 +40,12 @@ include/dovecot/src/imap/commands.h
 include/dovecot/src/imap/common.h
 include/dovecot/src/imap/imap-expunge.h
 include/dovecot/src/imap/imap-fetch.h
+include/dovecot/src/imap/imap-search-args.h
 include/dovecot/src/imap/imap-search.h
-include/dovecot/src/imap/imap-sort.h
 include/dovecot/src/imap/imap-status.h
 include/dovecot/src/imap/imap-sync.h
 include/dovecot/src/lib-auth/auth-client.h
+include/dovecot/src/lib-auth/auth-master.h
 include/dovecot/src/lib-auth/auth-server-connection.h
 include/dovecot/src/lib-auth/auth-server-request.h
 include/dovecot/src/lib-charset/charset-utf8.h
@@ -61,7 +62,9 @@ include/dovecot/src/lib-imap/imap-id.h
 include/dovecot/src/lib-imap/imap-match.h
 include/dovecot/src/lib-imap/imap-parser.h
 include/dovecot/src/lib-imap/imap-quote.h
+include/dovecot/src/lib-imap/imap-resp-code.h
 include/dovecot/src/lib-imap/imap-seqset.h
+include/dovecot/src/lib-imap/imap-utf7.h
 include/dovecot/src/lib-imap/imap-util.h
 include/dovecot/src/lib-index/mail-cache-private.h
 include/dovecot/src/lib-index/mail-cache.h
@@ -237,6 +240,7 @@ include/dovecot/src/pop3/commands.h
 include/dovecot/src/pop3/common.h
 lib/dovecot/dovecot-config
 lib/dovecot/imap/lib01_acl_plugin.so
+lib/dovecot/imap/lib02_imap_acl_plugin.la
 lib/dovecot/imap/lib02_lazy_expunge_plugin.so
 lib/dovecot/imap/lib10_quota_plugin.so
 lib/dovecot/imap/lib11_imap_quota_plugin.la
@@ -299,6 +303,7 @@ libexec/dovecot/gdbhelper
 libexec/dovecot/idxview
 libexec/dovecot/imap
 libexec/dovecot/imap-login
+libexec/dovecot/imap_utf7
 libexec/dovecot/listview
 libexec/dovecot/logview
 libexec/dovecot/maildirlock
@@ -314,6 +319,7 @@ share/doc/dovecot/documentation.txt
 share/doc/dovecot/securecoding.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
+share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.txt
 share/doc/dovecot/wiki/AuthDatabase.Passwd.txt
 share/doc/dovecot/wiki/AuthDatabase.PasswdFile.txt
@@ -404,7 +410,6 @@ share/doc/dovecot/wiki/Namespaces.txt
 share/doc/dovecot/wiki/OSCompatibility.txt
 share/doc/dovecot/wiki/POP3Server.txt
 share/doc/dovecot/wiki/PasswordDatabase.BSDAuth.txt
-share/doc/dovecot/wiki/PasswordDatabase.CheckPassword.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.AllowNets.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.Host.txt
 share/doc/dovecot/wiki/PasswordDatabase.ExtraFields.NoDelay.txt
@@ -416,6 +421,7 @@ share/doc/dovecot/wiki/PasswordDatabase.PAM.txt
 share/doc/dovecot/wiki/PasswordDatabase.Shadow.txt
 share/doc/dovecot/wiki/PasswordDatabase.txt
 share/doc/dovecot/wiki/PerformanceTuning.txt
+share/doc/dovecot/wiki/Plugins.Autocreate.txt
 share/doc/dovecot/wiki/Plugins.Convert.txt
 share/doc/dovecot/wiki/Plugins.Expire.txt
 share/doc/dovecot/wiki/Plugins.FTS.Lucene.txt
@@ -423,8 +429,11 @@ share/doc/dovecot/wiki/Plugins.FTS.Solr.txt
 share/doc/dovecot/wiki/Plugins.FTS.Squat.txt
 share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
+share/doc/dovecot/wiki/Plugins.Listescape.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
+share/doc/dovecot/wiki/Plugins.MboxSnarf.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
+share/doc/dovecot/wiki/Plugins.Virtual.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
 share/doc/dovecot/wiki/Plugins.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
@@ -449,6 +458,7 @@ share/doc/dovecot/wiki/TestPop3Installation.txt
 share/doc/dovecot/wiki/TimeMovedBackwards.txt
 share/doc/dovecot/wiki/Upgrading.1.0.txt
 share/doc/dovecot/wiki/Upgrading.1.1.txt
+share/doc/dovecot/wiki/Upgrading.1.2.txt
 share/doc/dovecot/wiki/Upgrading.txt
 share/doc/dovecot/wiki/UserDatabase.ExtraFields.txt
 share/doc/dovecot/wiki/UserDatabase.NSS.txt

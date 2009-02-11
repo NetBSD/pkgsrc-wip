@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
+$NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
 
---- dovecot-example.conf.orig	2008-08-28 12:54:24.000000000 +0200
+--- dovecot-example.conf.orig	2009-01-26 02:13:25.000000000 +0100
 +++ dovecot-example.conf
 @@ -10,17 +10,14 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
@@ -22,16 +22,16 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
  # A space separated list of IP or host addresses where to listen in for
  # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
-@@ -84,7 +81,7 @@
+@@ -85,7 +82,7 @@
  #ssl_listen =
  
- # Disable SSL/TLS support.
--#ssl_disable = no
-+ssl_disable = yes
+ # SSL/TLS support: yes, no, required. <doc/wiki/SSL>
+-#ssl = yes
++#ssl = no
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -508,19 +505,19 @@
+@@ -532,19 +529,19 @@
  
  protocol imap {
    # Login executable location.
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -534,7 +531,7 @@ protocol imap {
+@@ -558,7 +555,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
    # IMAP logout format string:
    #  %i - total number of bytes read from client
-@@ -580,11 +577,11 @@ protocol imap {
+@@ -604,11 +601,11 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -644,7 +641,7 @@ protocol pop3 {
+@@ -668,7 +665,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -87,7 +87,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -672,7 +669,7 @@ protocol lda {
+@@ -696,7 +693,7 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -96,16 +96,16 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
    # If user is over quota, return with temporary failure instead of
    # bouncing the mail.
-@@ -686,7 +683,7 @@ protocol lda {
+@@ -710,7 +707,7 @@ protocol lda {
    #deliver_log_format = msgid=%m: %$
  
    # Binary to use for sending mails.
 -  #sendmail_path = /usr/lib/sendmail
 +  #sendmail_path = /usr/sbin/sendmail
  
-   # Human readable error message for rejection mails. Use can use variables:
-   #  %n = CRLF, %r = reason, %s = subject, %t = recipient
-@@ -701,7 +698,7 @@ protocol lda {
+   # Subject: header to use for rejection mails. You can use the same variables
+   # as for rejection_reason below.
+@@ -729,7 +726,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -114,16 +114,16 @@ $NetBSD: patch-ab,v 1.10 2008/09/05 20:11:04 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -834,7 +831,7 @@ auth default {
+@@ -858,7 +855,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
 -  passdb pam {
 +  #passdb pam {
-     # [session=yes] [setcred=yes] [failure_show_msg=yes]
+     # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
      # [cache_key=<key>] [<service name>]
      #
-@@ -863,15 +860,15 @@ auth default {
+@@ -891,15 +888,15 @@ auth default {
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
