@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/10 20:08:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/12 01:18:03 minskim Exp $
 bin/afm2tfm
 bin/dvips
 bin/odvips
@@ -14,4 +14,4 @@ share/texmf/dvips/base/special.pro
 share/texmf/dvips/base/tex.pro
 share/texmf/dvips/base/texc.pro
 share/texmf/dvips/base/texps.pro
-share/texmf/dvips/config/config.ps
+share/texmf-dist/dvips/config/config.ps

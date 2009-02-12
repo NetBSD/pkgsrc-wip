@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/10 20:08:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/12 01:18:03 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	dvipsk-5.97
@@ -10,15 +10,17 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.radicaleye.com/dvips.html
 COMMENT=	DVI-to-PostScript translator
 
+CONFLICTS+=	teTeX-bin-[0-9]*
+CONFLICTS+=	teTeX-texmf-[0-9]*
+DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../wip/tex-bin-dvipsk
+DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
+
 EXTRACT_ELEMENTS=	${DISTNAME}/texk/dvipsk \
 			${DISTNAME}/texk/make \
 			${DISTNAME}/texk/install.sh \
 			${DISTNAME}/texk/mkinstalldirs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	teTeX-bin-[0-9]*
-DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
@@ -41,17 +43,18 @@ INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 PKG_SYSCONFSUBDIR=	texmf
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dvips/config
-CONF_FILES=	${PREFIX}/share/texmf/dvips/config/config.ps \
+CONF_FILES=	${PREFIX}/share/texmf-dist/dvips/config/config.ps \
 		${PKG_SYSCONFDIR}/dvips/config/config.ps
 
 BUILD_DEFS+=		PAPERSIZE
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 
-INSTALLATION_DIRS+=	share/texmf/dvips/config
+INSTALLATION_DIRS+=	share/texmf-dist/dvips/config
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../print/kpathsea/buildlink3.mk"
 
@@ -63,6 +66,6 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/texmf/dvips/config/config.ps \
-		${DESTDIR}${PREFIX}/share/texmf/dvips/config
+		${DESTDIR}${PREFIX}/share/texmf-dist/dvips/config
 
 .include "../../mk/bsd.pkg.mk"
