@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/12 01:18:03 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/12 18:32:57 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	dvipsk-5.97
@@ -57,6 +57,7 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/kpathsea/texmf.mk"
 
 post-build:
 	${MKDIR} ${WRKSRC}/texmf
