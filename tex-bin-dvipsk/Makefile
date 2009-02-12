@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/11 19:21:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/12 18:30:31 minskim Exp $
 # TeX Live Revision 11868
 
 DISTNAME=	bin-dvipsk
@@ -25,6 +25,7 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 .include "../../print/kpathsea/texmf.mk"
 
 post-extract:
+	${RM} -rf ${WRKSRC}/texmf/dvips/base
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${WRKSRC}/texmf* -type f -exec ${CHMOD} ${SHAREMODE} {} \;
 

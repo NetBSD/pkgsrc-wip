@@ -1,12 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/11 19:21:58 minskim Exp $
-share/texmf/dvips/base/color.pro
-share/texmf/dvips/base/crop.pro
-share/texmf/dvips/base/finclude.pro
-share/texmf/dvips/base/hps.pro
-share/texmf/dvips/base/special.pro
-share/texmf/dvips/base/tex.pro
-share/texmf/dvips/base/texc.pro
-share/texmf/dvips/base/texps.pro
+@comment $NetBSD: PLIST,v 1.2 2009/02/12 18:30:31 minskim Exp $
 share/texmf/dvips/config/alt-rule.pro
 share/texmf/dvips/config/canonex.cfg
 share/texmf/dvips/config/config.bakoma
