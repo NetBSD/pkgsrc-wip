@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.9 2009/01/08 17:32:03 asau Exp $
+# $Id: svn-package.mk,v 1.10 2009/02/13 05:07:36 obache Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -160,7 +160,7 @@ do-svn-extract: .PHONY
 			${SVN_MODULE.${repo}:Q};			\
 	${STEP_MSG} "Creating cached Subversion archive "${_SVN_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_SVN_DISTDIR:Q};					\
-	pax -w -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ${repo}
+	pax -w -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ${SVN_MODULE.${repo}:Q}
 .endfor
 
 .endif
