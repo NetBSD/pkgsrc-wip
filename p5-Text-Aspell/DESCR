@@ -1,3 +1,0 @@
-Text::Aspell is an interface to the GNU Aspell library.  GNU Aspell is a Free
-and Open Source spell checker.  The Text::Aspell module is a thin XS wrapper
-around the Aspell C Library.

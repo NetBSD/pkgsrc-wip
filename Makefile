@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3256 2009/02/12 14:19:00 tnn2 Exp $
+# $Id: Makefile,v 1.3257 2009/02/13 21:16:57 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1279,7 +1279,6 @@ SUBDIR+=	p5-Catalyst-Plugin-Static
 SUBDIR+=	p5-Catalyst-Plugin-SubRequest
 SUBDIR+=	p5-Catalyst-Plugin-Unicode-Encoding
 SUBDIR+=	p5-Catalyst-Plugin-XMLRPC
-SUBDIR+=	p5-Catalyst-View-Mason
 SUBDIR+=	p5-Class-DBI-AsForm
 SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
@@ -1292,7 +1291,6 @@ SUBDIR+=	p5-Class-DBI-Sweet
 SUBDIR+=	p5-Class-Date
 SUBDIR+=	p5-Class-Throwable
 SUBDIR+=	p5-Class-Virtual
-SUBDIR+=	p5-Config-Auto
 SUBDIR+=	p5-Config-Simple
 SUBDIR+=	p5-Crypt-CAST5
 SUBDIR+=	p5-Crypt-Serpent
@@ -1380,7 +1378,6 @@ SUBDIR+=	p5-Template-Provider-Encoding
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Test-WWW-Mechanize-CGIApp
 SUBDIR+=	p5-Text-ASCIITable
-SUBDIR+=	p5-Text-Aspell
 SUBDIR+=	p5-Text-CHM
 SUBDIR+=	p5-Text-Context
 SUBDIR+=	p5-Text-EtText
@@ -1406,7 +1403,6 @@ SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
-SUBDIR+=	p5-podlators
 SUBDIR+=	p5-qt3
 SUBDIR+=	paexec
 SUBDIR+=	pal
