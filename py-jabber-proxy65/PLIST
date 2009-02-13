@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/13 04:56:31 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/13 05:25:08 schnoebe Exp $
 ${PYSITELIB}/proxy65/__init__.py
 ${PYSITELIB}/proxy65/__init__.pyc
 ${PYSITELIB}/proxy65/__init__.pyo
@@ -8,12 +8,9 @@ ${PYSITELIB}/proxy65/proxy65.pyo
 ${PYSITELIB}/proxy65/socks5.py
 ${PYSITELIB}/proxy65/socks5.pyc
 ${PYSITELIB}/proxy65/socks5.pyo
-${PYSITELIB}/proxy65/tap.py
-${PYSITELIB}/proxy65/tap.pyc
-${PYSITELIB}/proxy65/tap.pyo
-${PYSITELIB}/twisted/plugins/proxy65.py
-${PYSITELIB}/twisted/plugins/proxy65.pyc
-${PYSITELIB}/twisted/plugins/proxy65.pyo
+${PYSITELIB}/twisted/plugins/proxy65_plugin.pyo
+${PYSITELIB}/twisted/plugins/proxy65_plugin.py
+${PYSITELIB}/twisted/plugins/proxy65_plugin.pyc
 share/doc/proxy65/README
 share/examples/rc.d/proxy65
 @dirrm share/doc/proxy65

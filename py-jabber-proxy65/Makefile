@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/11/29 05:34:53 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/13 05:25:08 schnoebe Exp $
 
-DISTNAME=	Proxy65-1.1.1
+DISTNAME=	Proxy65-1.2.0
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
-PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	http://proxy65.googlecode.com/files/
 

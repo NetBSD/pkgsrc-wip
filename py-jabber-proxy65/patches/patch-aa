@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2008/08/07 22:17:25 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/13 05:25:08 schnoebe Exp $
 
---- twisted/plugins/proxy65.py.orig	2008-01-14 10:48:32.000000000 -0600
-+++ twisted/plugins/proxy65.py
-@@ -1,9 +1,9 @@
- # Copyright (c) 2008 Fabio Forno
+--- twisted/plugins/proxy65_plugin.py.orig	2008-11-22 05:04:58.000000000 -0600
++++ twisted/plugins/proxy65_plugin.py
+@@ -37,7 +37,7 @@ class Options(usage.Options):
+     optParameters = [('jid', None, 'proxy65'),
+                      ('secret', None, None),
+                      ('rhost', None, '127.0.0.1'),
+-                     ('rport', None, '6000'),
++                     ('rport', None, '5347'),
+                      ('proxyips', None, None)]
  
--from twisted.scripts.mktap import _tapHelper
-+from twisted.application.service import ServiceMaker
  
--Proxy65 = _tapHelper(
-+Proxy65 = ServiceMaker(
-         "Proxy65",
-         "proxy65.tap",
--        "XEP 65 Bytestream Proxy Component",
-+        "XMPP XEP 65 Bytestream Proxy Component",
-         "proxy65")

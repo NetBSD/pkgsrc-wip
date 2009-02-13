@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/13 04:56:31 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2009/02/13 05:25:08 schnoebe Exp $
 
-SHA1 (Proxy65-1.1.1.tar.gz) = e4deb0f90d5ef11d1201200458793e18144dd906
-RMD160 (Proxy65-1.1.1.tar.gz) = e8d2f4038ad77c374f1c3f4b6f658b7c42a3ec17
-Size (Proxy65-1.1.1.tar.gz) = 9088 bytes
-SHA1 (patch-aa) = be44b60f073841548e77c25f8aea397145581064
-SHA1 (patch-ab) = 8eb1bf3199397d6b8a3744074f6f2d903745aa24
+SHA1 (Proxy65-1.2.0.tar.gz) = b06cd72317147569b0dae18ee925228f6566e29d
+RMD160 (Proxy65-1.2.0.tar.gz) = 745a9ecc82fa184f7aa0b968f193709d3dc261a8
+Size (Proxy65-1.2.0.tar.gz) = 9118 bytes
+SHA1 (patch-aa) = 387a008e6c686a3edfa1d5fbf64eb10665db11cd
