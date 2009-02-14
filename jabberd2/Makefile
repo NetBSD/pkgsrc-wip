@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/01/23 03:21:20 schnoebe Exp $
+# $NetBSD: Makefile,v 1.58 2009/02/14 05:37:27 schnoebe Exp $
 
 DISTNAME=		jabberd-2.2.5
 CATEGORIES=		chat
@@ -106,7 +106,8 @@ pre-configure:
 .endfor
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
 	    ${DESTDIR}${EGDIR}/roster.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
