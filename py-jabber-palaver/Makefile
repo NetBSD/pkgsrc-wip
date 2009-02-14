@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/29 05:34:53 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/14 05:31:25 schnoebe Exp $
 
 DISTNAME=	palaver-0.5
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.onlinegamegroup.com/projects/palaver/
 COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will
@@ -34,7 +35,7 @@ PKG_GROUPS_VARS+=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-DOCDIR=                 ${PREFIX}/share/doc/palaver
+DOCDIR=                 ${DESTDIR}${PREFIX}/share/doc/palaver
 DOCFILES=               README.txt XEP.txt db/muc-pgsql.sql
 
 INSTALLATION_DIRS=	share/doc/palaver
@@ -44,11 +45,13 @@ CONF_FILES=	${EGDIR}/palaver.xml ${PKG_SYSCONFDIR}/palaver.xml
 RCD_SCRIPTS=	palaver
 
 post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/example-config.xml ${EGDIR}/palaver.xml
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/example-config.xml \
+						${DESTDIR}${EGDIR}/palaver.xml
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths

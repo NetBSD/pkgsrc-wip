@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/11/29 05:34:53 schnoebe Exp $
+# $NetBSD: Makefile,v 1.25 2009/02/14 05:31:24 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGREVISION=		2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://delx.net.au/projects/pymsnt/tarballs/
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://delx.net.au/projects/pymsnt
 COMMENT=		Transport connecting Jabber to the MSN network
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #
 # jabberd isn't really a dependency since the transport can run on a
@@ -47,19 +49,23 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/${TRANSPORTDIR}
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/${TRANSPORTDIR}
 	cd ${WRKSRC} && \
 	for i in `find src data \\( \\( -type f -name '*.orig' -o \
 		    -type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
-	    ${ECHO} "Installing $$i -> ${PREFIX}/${TRANSPORTDIR}/$$i";\
-	    ${INSTALL_SCRIPT_DIR} `${DIRNAME} ${PREFIX}/${TRANSPORTDIR}/$$i` ;\
-	    ${INSTALL_SCRIPT} $$i ${PREFIX}/${TRANSPORTDIR}/$$i ;\
+	    ${ECHO} "Installing $$i -> " \
+				"${DESTDIR}${PREFIX}/${TRANSPORTDIR}/$$i";\
+	    ${INSTALL_SCRIPT_DIR} \
+			`${DIRNAME} ${DESTDIR}${PREFIX}/${TRANSPORTDIR}/$$i` ;\
+	    ${INSTALL_SCRIPT} $$i ${DESTDIR}${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}; \
-	${INSTALL_SCRIPT} PyMSNt.py ${PREFIX}/bin/PyMSNt
-	${INSTALL_DATA_DIR} ${EGDIR};\
-	${INSTALL_DATA} ${WRKSRC}/config-example.xml ${EGDIR}/pymsnt.xml
+	${INSTALL_SCRIPT} PyMSNt.py ${DESTDIR}${PREFIX}/bin/PyMSNt
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR};\
+	${INSTALL_DATA} ${WRKSRC}/config-example.xml \
+						${DESTDIR}${EGDIR}/pymsnt.xml
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
