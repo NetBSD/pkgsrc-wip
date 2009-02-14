@@ -1,0 +1,60 @@
+$NetBSD: patch-af,v 1.1 2009/02/14 11:03:57 asau Exp $
+
+Portability fixes to send upstream.
+
+--- src/mpid/ch3/channels/nemesis/configure.in.orig	2008-11-06 21:59:53.000000000 +0300
++++ src/mpid/ch3/channels/nemesis/configure.in	2009-02-14 10:49:56.000000000 +0300
+@@ -238,7 +238,7 @@
+ 
+     net_index=`expr $net_index + 1`
+ 
+-    if test "${net}" == "gm" ; then 
++    if test "${net}" = "gm" ; then 
+         AC_CHECK_HEADER([gm.h], , [
+             AC_MSG_ERROR(['gm.h not found.  Did you specify --with-gm= or --with-gm-include=?'])
+     	    ])
+@@ -247,7 +247,7 @@
+     	    ])
+     fi
+ 
+-    if test "${net}" == "ib" ; then 
++    if test "${net}" = "ib" ; then 
+         AC_CHECK_HEADER([verbs.h], , [
+             AC_MSG_ERROR(['verbs.h not found.  Did you specify --with-ib= or --with-ib-include=?'])
+         ])
+@@ -256,7 +256,7 @@
+         ])
+     fi;
+ 
+-    if test "${net}" == "mx" ; then
++    if test "${net}" = "mx" ; then
+         AC_CHECK_HEADER([myriexpress.h], , [
+             AC_MSG_ERROR(['myriexpress.h not found.  Did you specify --with-mx= or --with-mx-include=?'])
+         ])
+@@ -266,7 +266,7 @@
+         ])
+     fi;
+ 
+-    if test "${net}" == "elan" ; then
++    if test "${net}" = "elan" ; then
+     echo "=== You're about to use the experimental Nemesis/Elan network module." 
+     echo "=== This module has not been thoroughly tested and some performance issues remain."
+ 
+@@ -277,7 +277,7 @@
+             AC_MSG_ERROR(['elan library not found.  Did you specify --with-elan= or --with-elan-lib=? or --with-qsnet-include=?'])
+         ])
+     fi;
+-    if test "${net}" == "sctp" ; then 
++    if test "${net}" = "sctp" ; then 
+         AC_CHECK_HEADER([netinet/sctp.h], , [
+             AC_MSG_ERROR(['sctp.h not found.  Did you specify --with-sctp= or --with-sctp-include=?'])
+         ])
+@@ -286,7 +286,7 @@
+         ])
+     fi;
+ 
+-    if test "${net}" == "psm" ; then
++    if test "${net}" = "psm" ; then
+         AC_CHECK_HEADER([psm.h], , [
+             AC_MSG_ERROR(['psm.h not found.  Did you specify --with-psm= or --with-psm-include=?'])
+     ])

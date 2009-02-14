@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2009/02/14 11:03:57 asau Exp $
+
+"test ==" portability fix.
+
+--- configure.in.orig	2008-11-14 02:06:07.000000000 +0300
++++ configure.in	2009-02-14 11:02:00.000000000 +0300
+@@ -5464,7 +5464,7 @@
+ 	    ;;
+     esac
+ 
+-    if test "$cpu_gcc_x86_cycle" == "no" ; then
++    if test "$cpu_gcc_x86_cycle" = "no" ; then
+         AC_MSG_ERROR([Linux86 cycle counter is not available on this system and or with the $CC compiler])
+     fi
+     MPID_TIMER_TYPE="long long"
