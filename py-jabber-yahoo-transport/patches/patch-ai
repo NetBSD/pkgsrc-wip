@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2008/09/04 19:15:01 schnoebe Exp $
+$NetBSD: patch-ai,v 1.2 2009/02/14 05:25:22 schnoebe Exp $
 
 --- ylib.py.orig	2008-09-04 11:33:26.000000000 -0500
 +++ ylib.py
@@ -6,9 +6,8 @@ $NetBSD: patch-ai,v 1.1 2008/09/04 19:15:01 schnoebe Exp $
                  if pay[each].has_key(7):
                      self.roster[pay[each][7]]=('available', typ, status)
                      if pay[each].has_key(198):
--                        if pay[each][198] == '1' and pay[each].has_key(197):
+                         if pay[each][198] == '1' and pay[each].has_key(197):
 -                            b = avatar.getavatar(pay[each][197], self.dumpProtocol)
-+                        if pay[each][198] == '1':
 +                            b = avatar.getavatar(pay[each][7], self.dumpProtocol)
                              if b != None and self.handlers.has_key('avatar'):
                                  self.handlers['avatar'](self,pay[each][7],b)
@@ -17,9 +16,8 @@ $NetBSD: patch-ai,v 1.1 2008/09/04 19:15:01 schnoebe Exp $
              for each in pay:
                  if pay[each].has_key(4):
                      if pay[each].has_key(198):
--                        if pay[each][198] == '1' and pay[each].has_key(197):
+                         if pay[each][198] == '1' and pay[each].has_key(197):
 -                            b = avatar.getavatar(pay[each][197], self.dumpProtocol)
-+                        if pay[each][198] == '1':
 +                            b = avatar.getavatar(pay[each][7], self.dumpProtocol)
                              if b != None and self.handlers.has_key('avatar'):
                                  self.handlers['avatar'](self,pay[each][4],b)
