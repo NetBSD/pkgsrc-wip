@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/02/06 20:29:06 plunky Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/14 20:39:49 plunky Exp $
 #
 
-DISTNAME=	zyGrib-3.2.0
+DISTNAME=	zyGrib-3.3.0
 CATEGORIES=	geography
 MASTER_SITES=	http://www.zygrib.org/files/
 EXTRACT_SUFX=	.tgz
