@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/14 05:31:25 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/14 15:40:01 schnoebe Exp $
 
 DISTNAME=	Proxy65-1.2.0
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
@@ -42,6 +42,7 @@ INSTALLATION_DIRS=	share/doc/proxy65
 RCD_SCRIPTS=	proxy65
 
 post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
