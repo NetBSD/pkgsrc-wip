@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/05/30 11:24:37 asau Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/14 17:59:53 asau Exp $
 #
 
-DISTNAME=		gromacs-3.3.3
+DISTNAME=		gromacs-4.0.3
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-double --program-suffix=
 
 #TEST_TARGET=		tests	# something extra needed?
+
+CHECK_PORTABILITY_SKIP=	configure
 
 .include "../../math/fftw/buildlink3.mk"
 #.include "../../textproc/libxml2/buildlink3.mk"
