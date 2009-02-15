@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/02/15 04:09:54 schnoebe Exp $
+
+    To use punjab, several items must be set in rc.conf.
+
+    The available variables are:
+	punjab_jid	[Jabber ID of the service, default "punjab"]
+	punjab_secret	[shared secret with the S2S]
+	punjab_rhost	[ost of the Jabber service router, default "localhost"]
+	punjab_rport	[port of the Jabber service router, default 5347]
+
+    punjab_secret and punjab_ips variables are required.
+
+    ex:
+	punjab_jid=bosh.jabber.example.org
+	punjab_secret=JabberSecret
+	punjab_rhost=jabber.example.org
+	punjab_rport=5347
+
+===========================================================================

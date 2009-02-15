@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 04:09:54 schnoebe Exp $
+${PYSITELIB}/punjab/__init__.py
+${PYSITELIB}/punjab/__init__.pyc
+${PYSITELIB}/punjab/__init__.pyo
+${PYSITELIB}/punjab/error.py
+${PYSITELIB}/punjab/error.pyc
+${PYSITELIB}/punjab/error.pyo
+${PYSITELIB}/punjab/httpb.py
+${PYSITELIB}/punjab/httpb.pyc
+${PYSITELIB}/punjab/httpb.pyo
+${PYSITELIB}/punjab/httpb_client.py
+${PYSITELIB}/punjab/httpb_client.pyc
+${PYSITELIB}/punjab/httpb_client.pyo
+${PYSITELIB}/punjab/jabber.py
+${PYSITELIB}/punjab/jabber.pyc
+${PYSITELIB}/punjab/jabber.pyo
+${PYSITELIB}/punjab/session.py
+${PYSITELIB}/punjab/session.pyc
+${PYSITELIB}/punjab/session.pyo
+${PYSITELIB}/punjab/stream.py
+${PYSITELIB}/punjab/stream.pyc
+${PYSITELIB}/punjab/stream.pyo
+${PYSITELIB}/punjab/tap.py
+${PYSITELIB}/punjab/tap.pyc
+${PYSITELIB}/punjab/tap.pyo
+${PYSITELIB}/punjab/xmpp/__init__.py
+${PYSITELIB}/punjab/xmpp/__init__.pyc
+${PYSITELIB}/punjab/xmpp/__init__.pyo
+${PYSITELIB}/punjab/xmpp/error.py
+${PYSITELIB}/punjab/xmpp/error.pyc
+${PYSITELIB}/punjab/xmpp/error.pyo
+${PYSITELIB}/punjab/xmpp/ns.py
+${PYSITELIB}/punjab/xmpp/ns.pyc
+${PYSITELIB}/punjab/xmpp/ns.pyo
+${PYSITELIB}/punjab/xmpp/server.py
+${PYSITELIB}/punjab/xmpp/server.pyc
+${PYSITELIB}/punjab/xmpp/server.pyo
+${PYSITELIB}/twisted/plugins/punjab.py
+${PYSITELIB}/twisted/plugins/punjab.pyc
+${PYSITELIB}/twisted/plugins/punjab.pyo
+share/doc/punjab/INSTALL.txt
+share/doc/punjab/README.txt
+share/examples/rc.d/punjab
+@exec ${MKDIR} %D/share/examples/jabber
+@dirrm share/examples/jabber
+@dirrm share/doc/punjab
+@dirrm ${PYSITELIB}/punjab/xmpp
+@dirrm ${PYSITELIB}/punjab
