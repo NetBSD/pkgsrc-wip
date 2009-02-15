@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/15 08:11:00 obache Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/15 08:14:33 obache Exp $
 #
 
 DISTNAME=	gipfel-0.2.6
@@ -6,7 +6,7 @@ CATEGORIES=	geography graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/
+HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/gipfel.html
 COMMENT=	Georeferencing software for arbitrary images
 
 PKG_DESTDIR_SUPPORT=	user-destdir
