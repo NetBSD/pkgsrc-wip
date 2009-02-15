@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/12/05 07:11:04 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/15 17:14:47 jsonn Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.050
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Enlightenment Window Manager, Development Release
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -26,6 +28,11 @@ CONF_FILES=	${EGDIR}/sysactions.conf \
 CONFIGURE_ARGS+=	--enable-zoom --enable-fsstd
 CONFIGURE_ARGS+=	--with-imlib2
 CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
+
+INSTALLATION_DIRS=	${EGDIR}
+
+pre-install:
+	${INSTALL_DATA} ${WRKSRC}/data/etc/sysactions.conf ${DESTDIR}${EGDIR}
 
 PKGCONFIG_OVERRIDE=	enlightenment.pc.in
 

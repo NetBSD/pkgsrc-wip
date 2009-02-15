@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/12/06 14:07:25 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/15 17:14:46 jsonn Exp $
 #
 
 DISTNAME=	evas-0.9.9.050
@@ -8,6 +8,8 @@ MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Enlightened Canvas Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
