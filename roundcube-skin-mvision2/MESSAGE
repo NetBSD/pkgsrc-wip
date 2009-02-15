@@ -1,0 +1,9 @@
+Configuration file changes (main.inc.php):
+
+1) $rcmail_config['skin'] = 'mvision2_en';
+
+2) $rcmail_config['list_cols'] = array('subject', 'from', 'date', 'attachment'); // remove "size" and "flag" (flag will still appear however)
+
+3) $rcmail_config['preview_pane'] = TRUE;
+
+4) Additional configuration line required; $rcmail_config['preview_pane_vertical'] = TRUE;
