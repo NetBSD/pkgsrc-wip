@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/02/04 20:53:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/15 13:38:59 thomasklausner Exp $
 #
 
 DISTNAME=	tr64_oglv078_src
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	OpenGL Video plugin for mupen64 emulator
 
+CPPFLAGS+=	-fPIC
 LIBS+=		${PTHREAD_LDFLAGS}
 
 pre-install:
