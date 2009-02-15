@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2007/12/12 21:31:31 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/15 13:53:33 kralian Exp $
 #
 
 DISTNAME=	aspell-python1.11
 PKGNAME=	${PYPKGPREFIX}-aspell-1.11
 CATEGORIES=	textproc python
-MASTER_SITES=	http://www.wmula.republika.pl/proj/aspell-python/
+MASTER_SITES=	http://www.wmula.republika.pl/proj/aspell-python/download/
 
 COMMENT=	Python wrapper for GNU Aspell
 HOMEPAGE=	http://www.wmula.republika.pl/proj/aspell-python/
