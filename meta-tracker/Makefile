@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/12/05 10:52:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/15 11:49:25 thomasklausner Exp $
 
 DISTNAME=	tracker-0.6.6
 PKGNAME=	meta-tracker-0.6.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 

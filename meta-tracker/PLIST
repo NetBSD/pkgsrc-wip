@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/05 10:52:07 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/15 11:49:25 thomasklausner Exp $
 bin/o3totxt
 bin/tracker-extract
 bin/tracker-files
@@ -80,6 +80,7 @@ man/man1/trackerd.1
 man/man5/tracker.cfg.5
 man/man7/tracker-services.7
 share/dbus-1/services/tracker.service
+share/gnome/autostart/trackerd.desktop
 share/icons/hicolor/16x16/apps/tracker.png
 share/icons/hicolor/22x22/apps/tracker.png
 share/icons/hicolor/24x24/apps/tracker.png
@@ -156,6 +157,8 @@ share/tracker/tracker-introspect.xml
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@unexec ${RMDIR} %D/share/gnome/autostart 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm lib/tracker/thumbnailers/image
 @dirrm lib/tracker/thumbnailers/application
