@@ -1,8 +1,0 @@
-Needs a fix for:
-=> Checking file-check results for texlive-bin-2007
-ERROR: ************************************************************
-ERROR: The following files are in the PLIST but not in /usr/pkg:
-ERROR:         /usr/pkg/share/texmf-dist/ls-R
-*** Error code 1
-
-Should be handled similarly to teTeX3-bin.
