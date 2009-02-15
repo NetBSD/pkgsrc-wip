@@ -1,0 +1,11 @@
+--- opal/mca/base/mca_base_component_repository.c.orig	2008-11-04 23:56:23.000000000 +0300
++++ opal/mca/base/mca_base_component_repository.c	2009-02-06 01:25:56.000000000 +0300
+@@ -27,7 +27,7 @@
+ #include <stdio.h>
+ 
+ #if OMPI_WANT_LIBLTDL
+-#include "opal/libltdl/ltdl.h"
++#include "ltdl.h"
+ #endif
+ 
+ #include "opal/class/opal_list.h"
