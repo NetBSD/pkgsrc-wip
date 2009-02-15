@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/27 09:09:40 jh88 Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/15 08:11:00 obache Exp $
 #
 
 DISTNAME=	gipfel-0.2.6
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/
 COMMENT=	Georeferencing software for arbitrary images
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
