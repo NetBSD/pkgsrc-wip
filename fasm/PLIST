@@ -1,21 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/08/15 19:15:14 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/15 11:01:10 athaba Exp $
 bin/fasm
 share/doc/fasm/fasm.txt
-share/example/fasm/elfexe/hello
-share/example/fasm/elfexe/hello.asm
-share/example/fasm/elfexe64/hello64
-share/example/fasm/elfexe64/hello64.asm
-share/example/fasm/elfobj/msgdemo.asm
-share/example/fasm/elfobj/msgdemo.o
-share/example/fasm/elfobj/writemsg.asm
-share/example/fasm/elfobj/writemsg.o
-share/example/fasm/libcdemo/cdecl.inc
-share/example/fasm/libcdemo/libcdemo.asm
-share/example/fasm/libcdemo/libcdemo.o
-@dirrm share/example/fasm/libcdemo
-@dirrm share/example/fasm/elfobj
-@dirrm share/example/fasm/elfexe64
-@dirrm share/example/fasm/elfexe
-@dirrm share/example/fasm
-@dirrm share/example
 @dirrm share/doc/fasm
