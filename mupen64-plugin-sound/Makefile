@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/04 20:53:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/15 13:39:31 thomasklausner Exp $
 #
 
 DISTNAME=	mupen64_sound
@@ -13,6 +13,7 @@ HOMEPAGE=	http://mupen64.emulation64.com/
 COMMENT=	Sound plugin for mupen64 emulator
 
 LDFLAGS+=	${LIBOSSAUDIO}
+CPPFLAGS+=	-fPIC
 
 SUBST_CLASSES+=	    dsp
 SUBST_STAGE.dsp=    post-patch
