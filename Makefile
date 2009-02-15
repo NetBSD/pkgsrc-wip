@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3258 2009/02/14 21:02:19 plunky Exp $
+# $Id: Makefile,v 1.3259 2009/02/15 20:04:37 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -286,6 +286,7 @@ SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
+SUBDIR+=	dnstop
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	doorman
@@ -1235,6 +1236,7 @@ SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Authen-Htpasswd
+SUBDIR+=	p5-Authen-TacacsPlus
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-Barcode-Code128
@@ -2087,6 +2089,7 @@ SUBDIR+=	ypserv
 SUBDIR+=	zabbix
 SUBDIR+=	zapping
 SUBDIR+=	zinf
+SUBDIR+=	zkt
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh
 SUBDIR+=	zsh-snapshot
