@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/07/30 23:19:48 asau Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/02/15 19:30:06 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -20,7 +20,8 @@ man/man1/csc.1
 man/man1/csi.1
 share/chicken/chicken-ffi-macros.scm
 share/chicken/chicken-more-macros.scm
-share/chicken/chicken-sys-macros.scm
+share/chicken/chicken-primitive-object-inlines.scm
+share/chicken/chicken-thread-object-inlines.scm
 share/chicken/data-structures.exports
 share/chicken/eval.exports
 share/chicken/extras.exports
