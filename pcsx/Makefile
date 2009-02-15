@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/09 01:05:18 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/15 16:48:44 thomasklausner Exp $
 #
 
 DISTNAME=	PcsxSrc-1.5
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.pcsx.net/
 COMMENT=	Free Playstation(TM) emulator
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/Linux
 
 # Build fails with GCC4
