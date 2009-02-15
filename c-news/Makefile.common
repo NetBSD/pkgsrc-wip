@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.6 2009/02/15 22:17:02 hfath Exp $
 # used by wip/nnrpd/Makefile
 
 CNEWSBIN?=	${PREFIX}/cnews
@@ -35,7 +35,7 @@ FILES_SUBST+=		CNEWSGID=${NEWSGID:Q}
 # We want awk to be nawk, and we want uucp
 FILES_SUBST+=		CNEWSPATH="/usr/xpg4/bin:/usr/bin:${PREFIX}/bin"
 .else
-FILES_SUBST+=		CNEWSPATH="/bin:/usr/bin"
+FILES_SUBST+=		CNEWSPATH="/bin:/usr/bin:${PREFIX}/bin"
 .endif
 # statfs(2) or statvfs(2)? NetBSD switched to the latter in 2.0D
 .if (${OPSYS} == "NetBSD" && !(empty(OS_VERSION:M[01].*) && \
