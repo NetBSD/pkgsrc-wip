@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/19 18:11:51 jh88 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/16 18:53:59 jh88 Exp $
 bin/flimp
 bin/flimpgui
-share/flimp/flimprc.sample
 share/doc/flimp/README
+share/flimp/flimprc.sample
