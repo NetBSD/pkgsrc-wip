@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/16 14:39:37 hfath Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 PKGREVISION=		1
@@ -17,7 +17,7 @@ DISTFILES=		binutils-2.16.91.0.2-8.2.${SUSE_ARCH}.rpm \
 			libstdc++-devel-4.0.2_20050901-3.${SUSE_ARCH}.rpm \
 			make-3.80-188.${SUSE_ARCH}.rpm
 
-MAINTAINER=		hauke@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Linux compatibility package - development tools
 
 EMUL_MODULES.linux=	base
