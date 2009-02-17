@@ -106,6 +106,22 @@ Suggested package updates
 	o xmonad-0.8
 	o zinf-2.2.5
 
+Suggested ready to import packages
+=================================
+
+	o am-utils [pkg/35668]
+	o gipfel [pkg/40558]
+	o granule [pkg/40177]
+	o gtypist [pkg/40177]
+	o heirloom-sh [pkg/40272]
+	o javascript-mode [pkg/35669]
+	o libdbi [pkg/40235]
+	o lua-mode [pkg/40236]
+	o pipestatus [pkg/40250]
+	o tmux [pkg/40497]
+	o xmms-cdread [pkg/36220]
+	o xmms-skins [pkg/35666]
+
 Suggested infrastructure improvements
 =====================================
 
