@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/12 18:32:57 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/17 07:48:38 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	dvipsk-5.97
@@ -12,7 +12,7 @@ COMMENT=	DVI-to-PostScript translator
 
 CONFLICTS+=	teTeX-bin-[0-9]*
 CONFLICTS+=	teTeX-texmf-[0-9]*
-DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../wip/tex-bin-dvipsk
+DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../print/tex-bin-dvipsk
 DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texk/dvipsk \
