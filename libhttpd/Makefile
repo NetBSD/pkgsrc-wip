@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/17 12:56:23 jsonn Exp $
 #
 
 DISTNAME=		libhttpd-1.4
 CATEGORIES=		www
 MASTER_SITES=		http://www.hughes.com.au/products/libhttpd/
 
-MAINTAINER=		packages@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hughes.com.au/products/libhttpd/
 COMMENT=		Library that provides basic web server capabilities
 
