@@ -1,56 +1,33 @@
-$NetBSD: patch-aa,v 1.9 2009/01/30 17:06:33 htepper Exp $
+$NetBSD: patch-aa,v 1.10 2009/02/17 18:45:21 fulviociriaco Exp $
 
-Do not add -W* flags to CFLAGS.
-NetBSD has not got strtonum(3) and strnvis(3) so use the compat/
-alternatives.
-Do not use rough install(1) commands, use cleaner INSTALL_* ones.
-
---- Makefile.orig	2009-01-17 21:12:07.000000000 +0100
+--- Makefile.orig	2009-02-07 09:36:34.000000000 +0100
 +++ Makefile
-@@ -46,7 +46,7 @@ SRCS= tmux.c server.c server-msg.c serve
-       tty.c tty-term.c tty-keys.c tty-write.c
+@@ -46,10 +46,10 @@ SRCS= tmux.c server.c server-msg.c serve
+       options.c options-cmd.c paste.c colour.c utf8.c clock.c \
+       tty.c tty-term.c tty-keys.c tty-write.c util.c names.c \
+       osdep-unknown.c osdep-openbsd.c osdep-freebsd.c osdep-linux.c \
+-      osdep-darwin.c attributes.c
++      osdep-darwin.c osdep-netbsd.c attributes.c
  
  CC?= cc
 -INCDIRS+= -I. -I- -I/usr/local/include
-+INCDIRS+=-I. -Icompat
++INCDIRS+= -I. -I/usr/local/include
  CFLAGS+= -DMETA="'${META}'"
  .ifdef PROFILE
  # Don't use ccache
-@@ -61,10 +61,6 @@ CFLAGS+= -DBUILD="\"$(VERSION) ($(DATE))
- CFLAGS+= -DBUILD="\"$(VERSION)\""
+@@ -88,6 +88,15 @@ CFLAGS+= -DUSE_LIBUTIL_H -DNO_QUEUE_H -D
+ LIBS+= -lcrypt
  .endif
- #CFLAGS+= -pedantic -std=c99
--CFLAGS+= -Wno-long-long -Wall -W -Wnested-externs -Wformat=2
--CFLAGS+= -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations
--CFLAGS+= -Wwrite-strings -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
--CFLAGS+= -Wundef -Wbad-function-cast -Winline -Wcast-align
  
- PREFIX?= /usr/local
- INSTALLDIR= install -d
-@@ -80,6 +76,14 @@ LIBS+= -lutil -lncurses
- # FreeBSD and DragonFly
- .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
- CFLAGS+= -DUSE_LIBUTIL_H
-+LIBS+= -lcrypt
-+.endif
-+
 +# NetBSD
 +.if ${OS} == "NetBSD"
++INCDIRS+= -Icompat
 +SRCS+= compat/strtonum.c compat/vis.c
 +LIBS+= -lcrypt
 +CFLAGS+=-DNO_STRTONUM
- .endif
- 
++.endif
++
++
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
-@@ -128,7 +132,7 @@ update-index.html:
- 		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
  
- install:	all
--		${INSTALLDIR} ${DESTDIR}${PREFIX}/bin
--		${INSTALLBIN} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
--		${INSTALLDIR} ${DESTDIR}${PREFIX}/man/man1
--		${INSTALLMAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1/
-+		${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-+		${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
-+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-+		${INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+ DISTDIR= ${PROG}-${VERSION}

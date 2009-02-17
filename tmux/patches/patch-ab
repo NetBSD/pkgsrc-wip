@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.4 2009/02/17 18:45:21 fulviociriaco Exp $
+
+--- osdep-unknown.c.orig	2009-01-20 23:17:53.000000000 +0100
++++ osdep-unknown.c
+@@ -17,7 +17,7 @@
+  */
+ 
+ #if !defined(__OpenBSD__) && !defined(__FreeBSD__) && !defined(__linux__) && \
+-	!defined(__APPLE__)
++	!defined(__APPLE__) && !defined(__NetBSD__)
+ 
+ #include <sys/types.h>
+ 
