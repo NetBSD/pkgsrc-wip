@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/02/18 19:49:36 marko_schuetz Exp $
+
+--- main.cpp.orig	2007-06-26 08:54:52.000000000 -0400
++++ main.cpp
+@@ -111,7 +111,7 @@ public:
+ //					std::cout << itr->string() << " " << itr->leaf() << std::endl;
+ 					try
+ 					{
+-						map[itr->leaf()] = *itr;
++					  map[itr->path().leaf()] = *itr;
+ 					}
+ 					catch(const std::exception& e)
+ 					{

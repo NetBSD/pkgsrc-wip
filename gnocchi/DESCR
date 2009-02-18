@@ -1,0 +1,8 @@
+Gnocchi calculates complexity on a per function basis. Instead of
+trying to parse C++ code Gnocchi reads the coverage information
+produced by GCC. If code is compiled with -fprofile-arcs or
+-ftest-coverage (depending on compiler version) GCC creates a .gcno
+file for every object file. Please refer to you GCC manual for
+details.
+ 
+Gnocchi calculates cyclomatic and the NPATH complexity measures.

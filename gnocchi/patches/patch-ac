@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/02/18 19:49:36 marko_schuetz Exp $
+
+--- gcov_reader.cpp.orig	2007-06-25 06:40:06.000000000 -0400
++++ gcov_reader.cpp
+@@ -290,6 +290,8 @@ void gcov_reader::open(const boost::file
+ 	
+ 			GCOV_UNSIGNED2STRING (e, GCOV_VERSION);
+ 			printf ("%s:warning:current version is `%.4s'\n", filename, e);
++			GCOV_UNSIGNED2STRING (e, version);
++			printf ("%s:       :files   version is `%.4s'\n", filename, e);
+ 		}
+ 	}
+ 
