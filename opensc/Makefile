@@ -1,28 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2008/12/05 10:06:39 htepper Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/18 10:16:04 htepper Exp $
 
-DISTNAME=		opensc-0.11.6
-PKGREVISION=		1
-CATEGORIES=		security
-MASTER_SITES=		http://www.opensc-project.org/files/opensc/
-
-MAINTAINER=		hasso@estpak.ee
-HOMEPAGE=		http://www.opensc-project.org/openct/
+PKGREVISION=		2
 COMMENT=		Smart Card drivers and middleware
+
+.include "../../wip/opensc/Makefile.common"
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_OLD_DES_API=	YES
-USE_TOOLS+=		gmake pkg-config
-
-.include "options.mk"
-
-USE_OLD_DES_API=	YES
-.include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--disable-sensitive-logging
+CONFIGURE_ARGS+=	--disable-nsplugin
 
 EGDIR=			${PREFIX}/share/examples/opensc
 CONF_FILES+=		${EGDIR}/opensc.conf ${PKG_SYSCONFDIR}/opensc.conf
@@ -31,6 +16,6 @@ INSTALLATION_DIRS=	${EGDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/opensc.conf ${DESTDIR}${EGDIR}
 
-
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

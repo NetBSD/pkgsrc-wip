@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/05 10:06:39 htepper Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/02/18 10:16:04 htepper Exp $
 bin/cardos-info
 bin/cryptoflex-tool
 bin/eidenv
@@ -26,13 +26,11 @@ include/opensc/pkcs15.h
 include/opensc/scconf.h
 include/opensc/types.h
 include/opensc/ui.h
-${PLIST.nsplugin}lib/mozilla/plugins/opensc-signer.so
 lib/libopensc.la
 lib/libpkcs15init.la
 lib/libscconf.la
 lib/onepin-opensc-pkcs11.la
 lib/opensc-pkcs11.la
-${PLIST.nsplugin}lib/opensc-signer.la
 lib/pkcs11-spy.la
 lib/pkcs11/onepin-opensc-pkcs11.so
 lib/pkcs11/opensc-pkcs11.so

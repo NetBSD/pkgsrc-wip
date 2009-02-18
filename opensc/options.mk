@@ -1,23 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2008/12/05 10:06:39 htepper Exp $
+# $NetBSD: options.mk,v 1.6 2009/02/18 10:16:04 htepper Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
-PKG_SUPPORTED_OPTIONS=	nsplugin openct pcsc-lite
-PKG_SUGGESTED_OPTIONS=	nsplugin pcsc-lite
-PLIST_VARS+=		nsplugin
+PKG_SUPPORTED_OPTIONS=	openct pcsc-lite
+PKG_SUGGESTED_OPTIONS=	pcsc-lite
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mnsplugin)
-.include "../../security/libassuan/buildlink3.mk"
-.include "../../security/pinentry/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-nsplugin
-CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/mozilla/plugins
-CONFIGURE_ARGS+=	--with-pinentry=${PREFIX}/bin/pinentry
-PLIST.nsplugin=		yes
-.else
-CONFIGURE_ARGS+=	--disable-nsplugin
-.endif
 
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
 .include "../../security/pcsc-lite/buildlink3.mk"

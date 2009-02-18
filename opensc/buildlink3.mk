@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/12/05 10:06:39 htepper Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/02/18 10:16:04 htepper Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSC_BUILDLINK3_MK:=	${OPENSC_BUILDLINK3_MK}+
@@ -18,6 +18,7 @@ pkgbase := opensc
 .include "../../mk/pkg-build-options.mk"
 .endif	# OPENSC_BUILDLINK3_MK
 
+.include "../../devel/libltdl/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.opensc:Mopenct)
 .include "../../wip/openct/buildlink3.mk"
 .endif
