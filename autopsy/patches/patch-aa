@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2009/02/19 15:45:51 fulviociriaco Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/19 16:13:41 fulviociriaco Exp $
 
 --- /dev/null	2009-02-19 16:35:50.000000000 +0100
 +++ build
 @@ -0,0 +1,39 @@
 +(cat<<EOF
-+#!${1}/bin/perl"
++#!${1}/bin/perl
 +
 +use lib '${1}/share/autopsy/';
 +use lib '${1}/share/autopsy/lib/';
