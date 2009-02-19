@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2009/02/19 15:45:51 fulviociriaco Exp $
+bin/autopsy
+man/man1/autopsy.1
+share/autopsy/conf.pl
+share/autopsy/lib/Appsort.pm
+share/autopsy/lib/Appview.pm
+share/autopsy/lib/Args.pm
+share/autopsy/lib/Caseman.pm
+share/autopsy/lib/Data.pm
+share/autopsy/lib/Exec.pm
+share/autopsy/lib/File.pm
+share/autopsy/lib/Filesystem.pm
+share/autopsy/lib/Frame.pm
+share/autopsy/lib/Fs.pm
+share/autopsy/lib/Hash.pm
+share/autopsy/lib/Kwsrch.pm
+share/autopsy/lib/Main.pm
+share/autopsy/lib/Meta.pm
+share/autopsy/lib/Notes.pm
+share/autopsy/lib/Print.pm
+share/autopsy/lib/Timeline.pm
+share/autopsy/lib/Vs.pm
+share/autopsy/lib/define.pl
+share/autopsy/lib/search.pl
+@dirrm share/autopsy/lib
+@dirrm share/autopsy
