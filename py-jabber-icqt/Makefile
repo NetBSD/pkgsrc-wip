@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2009/02/14 05:31:24 schnoebe Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/20 17:51:40 schnoebe Exp $
 
-DISTNAME=		pyicqt-0.8.1.1
+DISTNAME=		pyicqt-0.8.1.3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyicqt.googlecode.com/files/
