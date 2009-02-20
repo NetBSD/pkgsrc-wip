@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/06 20:54:29 guigui2 Exp $
+$NetBSD: distinfo,v 1.2 2009/02/20 21:51:24 guigui2 Exp $
 
-SHA1 (giggle-0.4.tar.gz) = 6cb44e5a64a8279aee2e19e00d8714cd3b0f43aa
-RMD160 (giggle-0.4.tar.gz) = 6e4d6691179c4a0d43bc0f252603ca911683cddc
-Size (giggle-0.4.tar.gz) = 539885 bytes
+SHA1 (giggle-0.4.91.tar.bz2) = 9dde9736714aa41a4550dc817082ffe49f62ede9
+RMD160 (giggle-0.4.91.tar.bz2) = a9b27c650f5f5356172894298f5b5cc6587b89da
+Size (giggle-0.4.91.tar.bz2) = 416878 bytes
