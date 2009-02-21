@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3265 2009/02/21 16:53:03 imilh Exp $
+# $Id: Makefile,v 1.3266 2009/02/21 23:32:33 mstapelberg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -194,6 +194,7 @@ SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
 SUBDIR+=	cfengine
+SUBDIR+=	cgit
 SUBDIR+=	chbg
 SUBDIR+=	chems
 SUBDIR+=	chicken-current
