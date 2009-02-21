@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/02/09 21:05:39 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/21 13:22:52 thomasklausner Exp $
 #
 
 DISTNAME=		twinkle-1.4.1
+PKGREVISION=		1
 CATEGORIES=		audio chat net
 MASTER_SITES=		http://www.xs4all.nl/~mfnboer/twinkle/download/
 
