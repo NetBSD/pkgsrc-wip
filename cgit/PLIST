@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/21 23:29:58 mstapelberg Exp $
+libexec/cgi-bin/cgit.cgi
+share/httpd/htdocs/cgit/cgit.png
+share/httpd/htdocs/cgit/cgit.css

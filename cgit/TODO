@@ -1,0 +1,2 @@
+This package is basically finished, note however that it needs to download git while building.
+Maybe there is a nicer solution, or maybe scmgit will have a shared library in the future?

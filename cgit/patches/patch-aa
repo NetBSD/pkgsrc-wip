@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/21 23:29:58 mstapelberg Exp $
+
+--- Makefile.orig	2009-02-01 19:31:37.000000000 +0100
++++ Makefile
+@@ -153,4 +146,4 @@ clean:
+ 	rm -f cgit VERSION *.o *.d
+ 
+ get-git:
+-	curl $(GIT_URL) | tar -xj && rm -rf git && mv git-$(GIT_VER) git
++	curl $(GIT_URL) | tar -xjf - && rm -rf git && mv git-$(GIT_VER) git
