@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/21 20:43:54 guigui2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/21 20:49:03 guigui2 Exp $
 #
 
 DISTNAME=	castget-1.0.1
@@ -13,12 +13,13 @@ COMMENT=	Command-line RSS enclosures dowloader
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config
 
 AUTO_MKDIRS=	yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/castgetrc.example ${PREFIX}/share/examples/castgetrc.example
+	${INSTALL_DATA} ${WRKSRC}/castgetrc.example \
+		${PREFIX}/share/examples/castgetrc.example
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../audio/id3lib/buildlink3.mk"
