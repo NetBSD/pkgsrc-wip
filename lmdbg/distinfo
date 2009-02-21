@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/21 11:59:50 cheusov Exp $
+
+SHA1 (lmdbg-0.4.1.tar.gz) = 910168b3b96e49edbf6862494d303e6115609b89
+RMD160 (lmdbg-0.4.1.tar.gz) = 4911aaa5fc13a3e5d01050c8d067462e25a04239
+Size (lmdbg-0.4.1.tar.gz) = 79668 bytes

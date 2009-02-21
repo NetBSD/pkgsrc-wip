@@ -1,0 +1,8 @@
+               LMDBG - lightweight malloc debugger.
+
+LMDBG logs the calls of malloc/realloc/free/memalign functions with their
+stack frames and analyses such a logs.
+
+lmdbg-run  - for create malloc/realloc/free/memalign logs
+lmdbg-sym  - for converting address to 'file.c:NUM func_name'
+lmdbg-leak - memory leaks checker
