@@ -1,4 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2009/02/18 09:03:27 htepper Exp $
+$NetBSD: patch-ad,v 1.2 2009/02/22 16:09:06 leot1990 Exp $
+
+get_argv0() function prototype is:
+
+ char *get_argv0(int, char *);
+
+so respect it in order to build on unknown platforms.
 
 --- osdep-unknown.c.orig	2009-02-18 09:36:41 +0200
 +++ osdep-unknown.c	2009-02-18 09:37:30 +0200

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2009/02/18 09:03:27 htepper Exp $
+$NetBSD: distinfo,v 1.12 2009/02/22 16:09:06 leot1990 Exp $
 
 SHA1 (tmux-0.7.tar.gz) = 11c27de5de98367ea2c94ea70ef098e5e70eeead
 RMD160 (tmux-0.7.tar.gz) = 81f60d21230b995651e91e18e587d484e40f6c96
 Size (tmux-0.7.tar.gz) = 163951 bytes
-SHA1 (patch-aa) = a56e50420ee94be6499c6286be7a3a80c3a2e561
-SHA1 (patch-ab) = c1819e57521597e3bb3ea4b7a4385f3bee4daecf
-SHA1 (patch-ac) = e0de56eaf2a06ee8ae0cd51e1613cce8e7090315
-SHA1 (patch-ad) = 88747da995c7e1cc31e7eeb5cf92006340830c37
+SHA1 (patch-aa) = dbad81706824e25f841522d77f55a02dd742d698
+SHA1 (patch-ab) = 0de94fd65799bbf1447fbc204e8d6885bcd08aae
+SHA1 (patch-ac) = 305dd0b74ad7b8a07de529f52a93dcb889c5578e
+SHA1 (patch-ad) = 83155287cee869f9b44885e0f662001e0875da3a

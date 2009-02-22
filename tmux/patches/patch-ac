@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2009/02/17 18:45:21 fulviociriaco Exp $
+$NetBSD: patch-ac,v 1.2 2009/02/22 16:09:06 leot1990 Exp $
 
---- /dev/null	2009-02-17 19:24:39.000000000 +0100
+get_argv0() and get_proc_argv0() functions for NetBSD.
+
+--- osdep-netbsd.c.orig	2009-02-22 16:30:11.000000000 +0100
 +++ osdep-netbsd.c
 @@ -0,0 +1,161 @@
 +/*
