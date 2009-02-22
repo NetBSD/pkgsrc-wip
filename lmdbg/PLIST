@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/21 11:59:50 cheusov Exp $
-lib/liblmdbg.la
+@comment $NetBSD: PLIST,v 1.2 2009/02/22 21:45:22 cheusov Exp $
+bin/lmdbg-leak-check
+bin/lmdbg-leaks
 bin/lmdbg-run
 bin/lmdbg-sym
-bin/lmdbg-check
-bin/lmdbg-leak-check
+bin/lmdbg-sysleaks
+lib/liblmdbg.la
+share/doc/lmdbg/ChangeLog
+share/doc/lmdbg/NEWS
+share/doc/lmdbg/README
