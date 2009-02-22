@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/21 23:29:58 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/22 02:41:44 mstapelberg Exp $
 
 CATEGORIES=www
 DISTNAME=cgit-0.8.2
@@ -21,11 +21,11 @@ CGIT_CGIBIN=	${PREFIX}/libexec/cgi-bin
 CGIT_HTDOCS=	${PREFIX}/share/httpd/htdocs/cgit
 CGIT_EGDIR=	${PREFIX}/share/examples
 
-CONF_FILES= ${CGIT_CONFIG} ${CGIT_EGDIR}/cgitrc
+CONF_FILES= ${CGIT_EGDIR}/cgitrc ${CGIT_CONFIG}
 INSTALLATION_DIRS= libexec/cgi-bin share/httpd/htdocs/cgit
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cgit ${DESTDIR}${CGIT_CGIBIN}/cgit.cgi
+	${INSTALL_PROGRAM} ${WRKSRC}/cgit ${DESTDIR}${CGIT_CGIBIN}/cgit.cgi
 	${INSTALL_DATA} ${WRKSRC}/cgit.png ${DESTDIR}${CGIT_HTDOCS}/cgit.png
 	${INSTALL_DATA} ${WRKSRC}/cgit.css ${DESTDIR}${CGIT_HTDOCS}/cgit.css
 	${INSTALL_DATA} ${WRKSRC}/cgitrc ${DESTDIR}${CGIT_EGDIR}/cgitrc
