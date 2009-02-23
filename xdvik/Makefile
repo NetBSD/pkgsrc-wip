@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/23 08:46:54 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/23 09:01:39 minskim Exp $
 
 DISTNAME=	xdvik-22.84.14
 CATEGORIES=	print
@@ -9,7 +9,7 @@ HOMEPAGE=	http://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 
 CONFLICTS+=	teTeX-bin-[0-9]*
-DEPENDS+=	tex-bin-xdvi-[0-9]*:../../wip/tex-bin-xdvi
+DEPENDS+=	tex-bin-xdvi-[0-9]*:../../print/tex-bin-xdvi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
