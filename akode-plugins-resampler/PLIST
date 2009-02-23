@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/23 08:42:51 htepper Exp $
+lib/libakode_src_resampler.la
