@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/04 04:31:00 htepper Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/23 08:26:45 htepper Exp $
 bin/akode-config
 bin/akodeplay
 include/akode/akode_export.h
@@ -27,8 +27,4 @@ include/akode/void_sink.h
 include/akode/volumefilter.h
 include/akode/wav_decoder.h
 lib/libakode.la
-lib/libakode_mpc_decoder.la
-lib/libakode_mpeg_decoder.la
-lib/libakode_oss_sink.la
-lib/libakode_xiph_decoder.la
 @dirrm include/akode
