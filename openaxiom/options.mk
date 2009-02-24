@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/11/15 09:32:59 asau Exp $
+# $NetBSD: options.mk,v 1.6 2009/02/24 22:40:36 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openaxiom
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-x=no
 .endif
 
 # Help PLIST generation
-.if !empty(PKG_OPTIONS:Mecl)
+.if !empty(PKG_OPTIONS:Mx11)
 # Handle X11-specific files
 .for _file_ in viewAlone
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
