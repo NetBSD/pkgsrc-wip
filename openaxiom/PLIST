@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/12/13 23:54:12 asau Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/02/24 21:35:17 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -112,6 +112,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BTOURN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BTREE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BYTE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BYTEBUF.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BYTEORD.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CABMON.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CACHSET.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CAPSLAST.${FASL}
@@ -120,6 +121,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CARTEN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CARTEN2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CASEAST.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CATAST.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CATCTOR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CATEGORY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CCLASS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CDEN.${FASL}
@@ -165,6 +167,8 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CRFP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CSTTOOLS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTOR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTORCALL.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTORCAT-.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTORCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTORKIND.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CTRIGMNP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/CVMP.${FASL}
@@ -228,6 +232,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DLIST.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DLP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DMP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMAIN.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMCTOR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPMM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPMO.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPOLCAT-.${FASL}
@@ -417,6 +422,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FSUPFACT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FTEM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FUNCTION.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FUNDESC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FVC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FVFUN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/GALFACT.${FASL}
@@ -524,6 +530,9 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INPSIGN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INS-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INT.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INT16.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INT32.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INT8.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INTABL.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INTAF.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/INTALG.${FASL}
@@ -805,8 +814,10 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OMSERVER.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ONECOMP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ONECOMP2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OP.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPERCAT-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPERCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPQUERY.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPSIG.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPTCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPTPACK.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OPTPROB.${FASL}
@@ -833,6 +844,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OUTBCON.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OUTBFILE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OUTFORM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OVAR.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OVERSET.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OWP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PADE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PADEPAC.${FASL}
@@ -1146,6 +1158,8 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYMPOLY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYMS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYMTAB.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYNTAX.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSINT.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSNNI.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSSOLP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSTEM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/TABLBUMP.${FASL}
@@ -1182,6 +1196,9 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UDPO.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UDVO.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UFD-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UFD.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UINT16.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UINT32.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/UINT8.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ULS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ULS2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ULSCAT.${FASL}
