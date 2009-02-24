@@ -1,0 +1,5 @@
+#hack.se proudly presents an open source Spotify client
+C implementation based on F/OSS code
+Proof of Concept multi-OS client with curses (text-based) UI
+Proof of Concept gateway to the Spotify service
+(text-based protocol, for supporting REST)
