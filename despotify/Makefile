@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/24 16:45:19 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/24 16:56:55 tnn2 Exp $
 #
 
 DISTNAME=	despotify-r761
@@ -10,8 +10,16 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://despotify.sourceforge.net/
 COMMENT=	Open Source Spotify client
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 USE_NCURSES=	yes
+
+INSTALLATION_DIRS=	bin
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/gateway ${DESTDIR}${PREFIX}/bin/gateway
+	${INSTALL_PROGRAM} ${WRKSRC}/despotify ${DESTDIR}${PREFIX}/bin/despotify
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
