@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/24 15:19:22 absd Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -18,7 +18,8 @@ COMMENT=		Java Development Kit ${JDK_VERSION}
 
 LICENSE=		sun-jrl-16-license
 
-USE_TOOLS+=		patch
+MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		patch pax
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
