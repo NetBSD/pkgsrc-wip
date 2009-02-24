@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/02/24 16:48:37 tnn2 Exp $
+
+--- audio.c.orig	2009-02-23 04:20:00.000000000 +0100
++++ audio.c
+@@ -22,9 +22,7 @@
+ 
+ #ifdef __APPLE__
+ #include "coreaudio.h"
+-#endif
+-
+-#ifdef __linux__
++#else
+ #include "pulseaudio.h"
+ #endif
+ 

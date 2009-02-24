@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2009/02/24 16:48:37 tnn2 Exp $
+
+--- Makefile.orig	2009-02-23 04:20:00.000000000 +0100
++++ Makefile
+@@ -14,10 +14,7 @@ GATEWAY_OBJS = gw-core.o gw-browse.o gw-
+ ifeq ($(shell uname -s),Darwin)
+ 	LDFLAGS += -framework CoreAudio
+ 	DESPOTIFY_OBJS += coreaudio.o
+-endif
+-
+-# Linux specifics
+-ifeq ($(shell uname -s),Linux)
++else
+ 	LDFLAGS += -lpulse -lpulse-simple
+ 	DESPOTIFY_OBJS += pulseaudio.o
+ endif
