@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/01/07 07:07:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/24 16:20:14 thomasklausner Exp $
 
 DISTNAME=		opentracker-0.0.${OPENTRACKER_PKG_VERSION}
 CATEGORIES=		net
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://erdgeist.org/arts/software/opentracker/
 COMMENT=		High performance bittorrent tracker
 
