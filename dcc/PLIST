@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/30 23:05:48 pebog Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/25 12:31:54 pebog Exp $
 bin/cdcc
 bin/dccproc
 libexec/cron-dccd
-${PLIST.dccd}libexec/dbclean
-${PLIST.dccd}libexec/dblist
+libexec/dbclean
+libexec/dblist
 libexec/dcc-stats-collect
 libexec/dcc-stats-graph
 libexec/dcc-stats-init
-${PLIST.dccd}libexec/dccd
-${PLIST.dccifd}libexec/dccifd
+libexec/dccd
+libexec/dccifd
 ${PLIST.dccm}libexec/dccm
 libexec/dccsight
-${PLIST.dns-helper}libexec/dns-helper
+libexec/dns-helper
 libexec/fetch-testmsg-whitelist
 libexec/fetchblack
 libexec/fetchids
@@ -58,8 +58,8 @@ share/examples/dcc/map.txt
 share/examples/dcc/whiteclnt
 share/examples/dcc/whitecommon
 share/examples/dcc/whitelist
-${PLIST.dccd}share/examples/rc.d/dccd
-${PLIST.dccifd}share/examples/rc.d/dccifd
+share/examples/rc.d/dccd
+share/examples/rc.d/dccifd
 ${PLIST.dccm}share/examples/rc.d/dccm
 @dirrm share/examples/dcc/cgi-bin
 @dirrm share/examples/dcc
