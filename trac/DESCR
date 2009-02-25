@@ -2,3 +2,6 @@ Trac is a minimalistic web-based software project management and bug/issue
 tracking system. It provides an interface to the Subversion revision control
 systems, an integrated wiki, flexible issue tracking and convenient report
 facilities.
+
+This package seems to be the same major version of trac as www/trac,
+but older.
