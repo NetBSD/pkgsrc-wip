@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/08 20:43:44 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/26 17:42:09 minskim Exp $
 # TeX Live Revision 10592
 
 DISTNAME=	bin-tex
@@ -32,7 +32,7 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 TEX_FORMAT_NAMES+=	tex
 
 .include "../../print/kpathsea/texmf.mk"
-.include "../../wip/texlive-tetex/format.mk"
+.include "../../print/texlive-tetex/format.mk"
 
 post-extract:
 	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
