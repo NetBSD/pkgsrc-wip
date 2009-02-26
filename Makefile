@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3270 2009/02/26 00:25:40 lexort Exp $
+# $Id: Makefile,v 1.3271 2009/02/26 05:43:39 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -109,6 +109,7 @@ SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-zeroconf
 SUBDIR+=	apachebench2
+SUBDIR+=	applewmproto
 SUBDIR+=	apstget
 SUBDIR+=	ar7
 SUBDIR+=	archimedes
