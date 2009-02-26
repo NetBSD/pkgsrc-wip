@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 05:42:11 phonohawk Exp $
+include/X11/extensions/applewm.h
+include/X11/extensions/applewmstr.h
+lib/pkgconfig/applewmproto.pc
+@dirrm include/X11/extensions
+@dirrm include/X11
