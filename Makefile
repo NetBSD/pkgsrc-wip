@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3269 2009/02/23 21:12:21 minskim Exp $
+# $Id: Makefile,v 1.3270 2009/02/26 00:25:40 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1899,6 +1899,8 @@ SUBDIR+=	torcs
 SUBDIR+=	tr2latex
 SUBDIR+=	trac
 SUBDIR+=	trac-plugins-AccountManager
+SUBDIR+=	trac-plugins-GraphViz
+SUBDIR+=	trac-plugins-MasterTickets
 SUBDIR+=	trac-plugins-excelviewer
 SUBDIR+=	trac-plugins-fullblog
 SUBDIR+=	trac-plugins-screenshots
