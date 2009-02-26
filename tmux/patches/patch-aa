@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.11 2009/02/22 16:09:06 leot1990 Exp $
+$NetBSD: patch-aa,v 1.12 2009/02/26 01:32:05 minskim Exp $
 
 Do not add -W* flags to CFLAGS.
 NetBSD has not got strtonum(3) and strnvis(3) so use the compat/
 alternatives.
+Add settings for Darwin, obtained from GNUmakefile.
 Do not use rough install(1) commands, use cleaner INSTALL_* ones.
 
---- Makefile.orig	2009-02-07 09:36:34.000000000 +0100
+--- Makefile.orig	2009-02-07 00:36:34.000000000 -0800
 +++ Makefile
 @@ -46,10 +46,10 @@ SRCS= tmux.c server.c server-msg.c serve
        options.c options-cmd.c paste.c colour.c utf8.c clock.c \
@@ -35,7 +36,22 @@ Do not use rough install(1) commands, use cleaner INSTALL_* ones.
  
  PREFIX?= /usr/local
  INSTALLDIR= install -d
-@@ -88,6 +88,15 @@ CFLAGS+= -DUSE_LIBUTIL_H -DNO_QUEUE_H -D
+@@ -80,6 +80,14 @@ LDFLAGS+= -pg
+ .endif
+ LIBS+= -lutil -lncurses
+ 
++# Darwin
++.if ${OS} == "Darwin"
++INCDIRS+= -Icompat
++SRCS+= compat/strtonum.c compat/bsd-poll.c compat/vis.c
++CFLAGS+= -DNO_STRTONUM -DNO_SETRESUID -DNO_SETRESGID -DNO_SETPROCTITLE \
++         -DNO_QUEUE_H -DNO_TREE_H -DBROKEN_POLL
++.endif
++
+ # FreeBSD and DragonFly
+ .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
+ INCDIRS+= -Icompat
+@@ -88,6 +96,15 @@ CFLAGS+= -DUSE_LIBUTIL_H -DNO_QUEUE_H -D
  LIBS+= -lcrypt
  .endif
  
@@ -51,7 +67,7 @@ Do not use rough install(1) commands, use cleaner INSTALL_* ones.
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
  
  DISTDIR= ${PROG}-${VERSION}
-@@ -134,7 +143,7 @@ update-index.html:
+@@ -134,7 +151,7 @@ update-index.html:
  		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
  
  install:	all
