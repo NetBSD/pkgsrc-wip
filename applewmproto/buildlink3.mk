@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1 2009/02/26 05:49:06 phonohawk Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+APPLEWMPROTO_BUILDLINK3_MK:=	${APPLEWMPROTO_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	applewmproto
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napplewmproto}
+BUILDLINK_PACKAGES+=	applewmproto
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}applewmproto
+
+.if ${APPLEWMPROTO_BUILDLINK3_MK} == "+"
+BUILDLINK_DEPMETHOD.applewmproto?=	build
+BUILDLINK_API_DEPENDS.applewmproto+=	applewmproto>=1.1.1
+BUILDLINK_PKGSRCDIR.applewmproto?=	../../wip/applewmproto
+.endif	# APPLEWMPROTO_BUILDLINK3_MK
+
+.include "../../x11/libX11/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
