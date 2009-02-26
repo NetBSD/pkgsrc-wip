@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/25 23:38:59 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/26 19:05:49 guigui2 Exp $
 #
 
 DISTNAME=		tint-0.6.0
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://tint2.googlecode.com/files/
 
 MAINTAINER=		netbsd@guigui2.net
-HOMEPAGE=		http://tint2.googlecode.com/files/
+HOMEPAGE=		http://tint2.googlecode.co
 COMMENT=		Tint2 is a simple panel/taskbar
 
 USE_TOOLS+=		gmake pkg-config
