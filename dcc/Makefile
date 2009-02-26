@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/25 12:31:54 pebog Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/26 10:14:42 pebog Exp $
 #
 #
 #	Request by the author:
@@ -10,8 +10,8 @@
 #	> you distribute. Updatedcc must work.
 #
 #
-DISTNAME=		dcc-1.3.102
-PKGREVISION=		1
+DISTNAME=		dcc-1.3.103
+#PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
 EXTRACT_SUFX=		.tar.Z
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--homedir=${DCC_HOME} \
 
 .include "options.mk"
 
-INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/cat8 \
+INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man8 \
 			share/examples/dcc/cgi-bin
 
 PKG_GROUPS=		${DCC_GROUP}
@@ -123,18 +123,18 @@ do-install: dccm-install
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/stop-dccd ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/uninstalldcc ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/updatedcc ${DESTDIR}${PREFIX}/libexec/
-	${INSTALL_DATA} ${WRKSRC}/cdcc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
+	${INSTALL_MAN} ${WRKSRC}/cdcc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dbclean.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dblist.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dcc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dccd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dccifd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dccm.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dccproc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_MAN} ${WRKSRC}/dccsight.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA} ${WRKSRC}/cgi-bin/README ${DESTDIR}${DCC_EGDIR}/cgi-bin/
 	${INSTALL_DATA} ${WRKSRC}/cgi-bin/footer ${DESTDIR}${DCC_EGDIR}/cgi-bin/
 	${INSTALL_DATA} ${WRKSRC}/cgi-bin/header ${DESTDIR}${DCC_EGDIR}/cgi-bin/
-	${INSTALL_DATA} ${WRKSRC}/dbclean.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dblist.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dcc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dccd.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dccifd.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dccm.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dccproc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/dccsight.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
 	${INSTALL_DATA} ${WRKSRC}/homedir/dcc_conf ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/flod ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/grey_flod ${DESTDIR}${DCC_EGDIR}/

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/25 12:31:54 pebog Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/26 10:14:42 pebog Exp $
 bin/cdcc
 bin/dccproc
 libexec/cron-dccd
@@ -29,15 +29,15 @@ libexec/stop-dccd
 libexec/uninstalldcc
 libexec/updatedcc
 libexec/wlist
-man/cat8/cdcc.0
-man/cat8/dbclean.0
-man/cat8/dblist.0
-man/cat8/dcc.0
-man/cat8/dccd.0
-man/cat8/dccifd.0
-man/cat8/dccm.0
-man/cat8/dccproc.0
-man/cat8/dccsight.0
+man/man8/cdcc.8
+man/man8/dbclean.8
+man/man8/dblist.8
+man/man8/dcc.8
+man/man8/dccd.8
+man/man8/dccifd.8
+man/man8/dccm.8
+man/man8/dccproc.8
+man/man8/dccsight.8
 share/examples/dcc/cgi-bin/README
 share/examples/dcc/cgi-bin/chgpasswd
 share/examples/dcc/cgi-bin/common
