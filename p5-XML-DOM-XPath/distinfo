@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/09 18:16:46 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.2 2009/02/27 04:37:35 phonohawk Exp $
 
-SHA1 (XML-DOM-XPath-0.10.tar.gz) = bc51b3543513db96009e6c6d0292711769435a44
-RMD160 (XML-DOM-XPath-0.10.tar.gz) = ca76c4fd0d48bb483ad6b705e11a61c8ab59dd40
-Size (XML-DOM-XPath-0.10.tar.gz) = 10901 bytes
+SHA1 (XML-DOM-XPath-0.14.tar.gz) = 624358219a984a04a0ea884c95d1386bd10eed24
+RMD160 (XML-DOM-XPath-0.14.tar.gz) = d9bdbcc3514bae2bf3f8e533888fb74cbd7ee1d9
+Size (XML-DOM-XPath-0.14.tar.gz) = 12410 bytes
