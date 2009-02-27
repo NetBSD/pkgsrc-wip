@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/02/27 14:34:42 emil_s Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+PLPLOT_BUILDLINK3_MK:=	${PLPLOT_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	plplot
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nplplot}
+BUILDLINK_PACKAGES+=	plplot
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}plplot
+
+.if ${PLPLOT_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.plplot+=	plplot>=5.9.2
+BUILDLINK_PKGSRCDIR.plplot?=	../../wip/plplot
+.endif	# PLPLOT_BUILDLINK3_MK
+
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
