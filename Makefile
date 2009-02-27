@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3271 2009/02/26 05:43:39 phonohawk Exp $
+# $Id: Makefile,v 1.3272 2009/02/27 14:51:25 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1498,6 +1498,7 @@ SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
 #SUBDIR+=	pkgpm
 SUBDIR+=	plod
+SUBDIR+=	plplot
 SUBDIR+=	plugger
 SUBDIR+=	pmars
 SUBDIR+=	pmk
