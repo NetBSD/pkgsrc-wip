@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/02 19:43:04 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/27 07:46:17 roelants Exp $
 #
 
 DISTNAME=	vagalume_${VERSION}.orig
 PKGNAME=	vagalume-${VERSION}
-VERSION=	0.7
+VERSION=	0.7.1
 CATEGORIES=	audio net
 MASTER_SITES=	http://vagalume.igalia.com/files/source/
 
