@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/18 10:18:49 htepper Exp $
-lib/mozilla/plugins/opensc-signer.so
-lib/opensc-signer.la

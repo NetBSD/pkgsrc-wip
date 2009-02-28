@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3274 2009/02/28 20:54:09 htepper Exp $
+# $Id: Makefile,v 1.3275 2009/02/28 20:57:39 htepper Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1180,7 +1180,6 @@ SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openbsd-input-ws
 SUBDIR+=	openca
-SUBDIR+=	openct
 SUBDIR+=	opendchub
 SUBDIR+=	openjdk
 SUBDIR+=	openlogos
@@ -1218,8 +1217,6 @@ SUBDIR+=	openoffice2-bin-tn
 SUBDIR+=	openoffice2-bin-ts
 SUBDIR+=	openoffice2-bin-xh
 SUBDIR+=	openoffice2-bin-zu
-SUBDIR+=	opensc
-SUBDIR+=	opensc-signer
 SUBDIR+=	openscep
 SUBDIR+=	opentracker-current
 SUBDIR+=	openvrml
