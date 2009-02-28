@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/02/22 21:45:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/28 16:07:17 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.8.0
+DISTNAME=	lmdbg-0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	http://mova.org/~cheusov/pub/lmdbg/
 
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+
+TEST_TARGET=		test
 
 DOCDIR=			share/doc/lmdbg
 INSTALLATION_DIRS+=	${DOCDIR}

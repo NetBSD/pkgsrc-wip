@@ -1,3 +1,16 @@
+LMDBG is a collection of small tools for collecting and analysing the
+logs of malloc/realloc/memalign/free function calls. Unlike many
+others LMDBG does *NOT* provide any way to detect overruns of the
+boundaries of a malloc() memory allocations. On the other hand LMDBG
+provides sory leaks effectively excluding those appeared in system
+libraries (e.g. libc).ome features that others doesn't have.  LMDBG
+provides a FULL stacktrace of each malloc/realloc/memalign/free call.
+Your application should *NOT* be (re)linked statically to be checked
+by LMDBG.  LMDBG correctly determines source.c:NNN even if it is in
+the shared library.  LMDBG is portable to many OSes and doesn't make
+your application significantly slower. LMDBG allows to effectively
+exclude memory leaks appeared in system libraries, e.g. in libc.
+
                LMDBG - lightweight malloc debugger.
 
 LMDBG logs the calls of malloc/realloc/free/memalign functions with their
