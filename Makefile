@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3272 2009/02/27 14:51:25 emil_s Exp $
+# $Id: Makefile,v 1.3273 2009/02/28 00:02:24 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1837,6 +1837,7 @@ SUBDIR+=	tacacs-shrubbery
 SUBDIR+=	tagsoup
 SUBDIR+=	tagtool
 SUBDIR+=	talksoup
+SUBDIR+=	task
 SUBDIR+=	taskbar
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
