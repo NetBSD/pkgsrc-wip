@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2008/12/07 22:27:59 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.10 2009/02/28 21:39:51 cheusov Exp $
 # used by wip/dict-server/Makefile
 # used by wip/dict-client/Makefile
-DISTNAME=	dictd-1.11.0
+DISTNAME=	dictd-1.11.1
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/} \
 		ftp://ftp.dict.org/pub/dict/
