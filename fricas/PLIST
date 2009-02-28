@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/02/06 17:55:10 asau Exp $
-bin/axiom
+@comment $NetBSD: PLIST,v 1.17 2009/02/28 14:59:31 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
