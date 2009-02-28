@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2009/02/19 20:40:12 asau Exp $
+# $NetBSD: options.mk,v 1.14 2009/02/28 15:01:23 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -40,6 +40,16 @@ PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
 # X11-only files:
 .if !empty(PKG_OPTIONS:Mx11)
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+# files in lib/.../bin
+.for _file_ in htadd hypertex viewAlone
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
+# files in lib/.../lib
+.for _file_ in ex2ht hthits htsearch presea spadbuf view2D view3D viewman
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/lib\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+.endfor
+# Postscript files in lib/.../lib/graph:
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/lib\/graph\/.*\.ps$$/) {$$0 = "$${x11}" $$0;}}
 .endif
 
 # X11
