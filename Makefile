@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3273 2009/02/28 00:02:24 emil_s Exp $
+# $Id: Makefile,v 1.3274 2009/02/28 20:54:09 htepper Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -67,17 +67,6 @@ SUBDIR+=	afflib
 SUBDIR+=	aida
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
-SUBDIR+=	akode
-SUBDIR+=	akode-plugins-alsa
-SUBDIR+=	akode-plugins-ffmpeg
-SUBDIR+=	akode-plugins-jack
-SUBDIR+=	akode-plugins-mpc
-SUBDIR+=	akode-plugins-mpeg
-SUBDIR+=	akode-plugins-oss
-SUBDIR+=	akode-plugins-pulseaudio
-SUBDIR+=	akode-plugins-resampler
-SUBDIR+=	akode-plugins-sun
-SUBDIR+=	akode-plugins-xiph
 SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	alphamail
