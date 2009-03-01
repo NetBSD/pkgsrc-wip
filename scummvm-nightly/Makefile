@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/25 13:19:45 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/01 15:33:47 dillo Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -45,5 +45,4 @@ BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
