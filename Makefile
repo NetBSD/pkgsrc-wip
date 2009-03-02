@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3275 2009/02/28 20:57:39 htepper Exp $
+# $Id: Makefile,v 1.3276 2009/03/02 08:20:32 jkjuopperi Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -882,6 +882,7 @@ SUBDIR+=	leim-current
 SUBDIR+=	lensfun
 SUBDIR+=	leo
 SUBDIR+=	lhs2tex
+SUBDIR+=	ledger
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libanimal
