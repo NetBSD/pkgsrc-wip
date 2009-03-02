@@ -1,26 +1,38 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 01:30:06 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/02 22:19:38 hoka_adam Exp $
+${PYSITELIB}/xdg/BaseDirectory.py
 ${PYSITELIB}/xdg/BaseDirectory.pyc
 ${PYSITELIB}/xdg/BaseDirectory.pyo
+${PYSITELIB}/xdg/Config.py
 ${PYSITELIB}/xdg/Config.pyc
 ${PYSITELIB}/xdg/Config.pyo
+${PYSITELIB}/xdg/DesktopEntry.py
 ${PYSITELIB}/xdg/DesktopEntry.pyc
 ${PYSITELIB}/xdg/DesktopEntry.pyo
+${PYSITELIB}/xdg/Exceptions.py
 ${PYSITELIB}/xdg/Exceptions.pyc
 ${PYSITELIB}/xdg/Exceptions.pyo
+${PYSITELIB}/xdg/IconTheme.py
 ${PYSITELIB}/xdg/IconTheme.pyc
 ${PYSITELIB}/xdg/IconTheme.pyo
+${PYSITELIB}/xdg/IniFile.py
 ${PYSITELIB}/xdg/IniFile.pyc
 ${PYSITELIB}/xdg/IniFile.pyo
+${PYSITELIB}/xdg/Locale.py
 ${PYSITELIB}/xdg/Locale.pyc
 ${PYSITELIB}/xdg/Locale.pyo
+${PYSITELIB}/xdg/Menu.py
 ${PYSITELIB}/xdg/Menu.pyc
 ${PYSITELIB}/xdg/Menu.pyo
+${PYSITELIB}/xdg/MenuEditor.py
 ${PYSITELIB}/xdg/MenuEditor.pyc
 ${PYSITELIB}/xdg/MenuEditor.pyo
+${PYSITELIB}/xdg/Mime.py
 ${PYSITELIB}/xdg/Mime.pyc
 ${PYSITELIB}/xdg/Mime.pyo
+${PYSITELIB}/xdg/RecentFiles.py
 ${PYSITELIB}/xdg/RecentFiles.pyc
 ${PYSITELIB}/xdg/RecentFiles.pyo
+${PYSITELIB}/xdg/__init__.py
 ${PYSITELIB}/xdg/__init__.pyc
 ${PYSITELIB}/xdg/__init__.pyo
 @dirrm ${PYSITELIB}/xdg

@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/06 01:30:06 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/02 22:19:38 hoka_adam Exp $
 #
 
 DISTNAME=		pyxdg-0.15
-PKGNAME=	py23-xdg-0.15 # XXX
-CATEGORIES=		wip sysutils python
+PKGNAME=		${PYPKGPREFIX}-xdg-0.15
+CATEGORIES=		sysutils python
 MASTER_SITES=		http://www.freedesktop.org/~lanius/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://pyxdg.freedesktop.org/
 COMMENT=		XDG handling library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		pkg-config
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
