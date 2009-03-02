@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.10 2009/02/13 05:07:36 obache Exp $
+# $Id: svn-package.mk,v 1.11 2009/03/02 20:29:55 lexort Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -53,6 +53,14 @@
 # DISTFILES
 #	Is set to an empty list, since that is the right choice for most
 #	of the Subversion packages.
+#
+#
+# PKGREVISION
+#	If PKGREVISION is not set, set it to today's date.  This is
+#	useful for packages that automatically grab the latest code
+#	from subversion every time they are built.
+#	TODO: Reconsider this, and instead use the subversion revision
+#	number in the package version somehow.
 #
 # Keywords: subversion
 #
