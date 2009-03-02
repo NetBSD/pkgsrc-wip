@@ -1,8 +1,0 @@
-The MiniUPnP project offers software which supports the UPnP Internet
-Gateway Device (IGD) specifications. The MiniUPnP daemon (MiniUPnPd)
-running on the NAT-router lets authorized computers behind NAT request
-for public port redirections using UPnP or NAT-PMP protocols.  Any
-peer to peer network application such as games, IM, etc. can benefit
-from a NAT router supporting UPnP and/or NAT-PMP. MiniUPnPd supports
-OpenBSD, FreeBSD, NetBSD and (Open)Solaris in combination with pf or
-ipf and Linux with netfilter.
