@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/02 12:39:16 jkjuopperi Exp $
+man/man1/miniupnpd.1
+sbin/miniupnpd
+share/examples/miniupnpd/miniupnpd.conf
+share/examples/rc.d/miniupnpd
+@dirrm share/examples/miniupnpd
