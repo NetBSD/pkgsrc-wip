@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/24 20:21:51 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/02 20:23:01 lexort Exp $
 
-DISTNAME=	TracMasterTickets-2.1.3.5305
-PKGNAME=	trac-plugins-MasterTickets-2.1.3.5305
+VERSION=	2.1.3.4179
+DISTNAME=	TracMasterTickets-${VERSION}
+PKGNAME=	trac-plugins-MasterTickets-${VERSION}
+# Empty PKGREVISION because svn-package by default sets one.
+PKGREVISION=	
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
@@ -16,7 +19,7 @@ DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
 SVN_REPOSITORIES=	mastertickets
 SVN_ROOT.mastertickets=	http://trac-hacks.org/svn/masterticketsplugin/0.11
-SVN_TAG.mastertickets=	5305
+SVN_TAG.mastertickets=	4179
 
 NO_CHECKSUM=	yes
 
