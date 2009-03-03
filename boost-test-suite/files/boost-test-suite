@@ -1,0 +1,273 @@
+#!/bin/sh
+# $NetBSD: boost-test-suite,v 1.1 2009/03/03 16:02:39 brook1 Exp $
+
+# Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions, and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# set -x
+
+VERSION=0.1
+
+COMMAND_LINE="$0 $*"
+
+version ()
+{
+    echo >&2 \
+	"$0 -- version $VERSION"
+}
+	
+usage ()
+{
+    version
+    echo >&2 \
+	"usage: $0 [-Vchipv] [-D domain] [-I URL] [-N name]"
+    echo >&2 \
+	"       [-S schedule] [-T title] [-U username] [-t toolset] [-- args]"
+    echo >&2 \
+	"  -D   -- email domain to contact operator [$CONTACT_DOMAIN]"
+    echo >&2 \
+	"  -I   -- import index from URL [$DEFAULT_INDEX_URL]"
+    echo >&2 \
+	"  -N   -- contact name [$CONTACT_NAME]"
+    echo >&2 \
+	"  -S   -- schedule of runs [$TEST_SCHEDULE]"
+    echo >&2 \
+	"  -T   -- title [$TITLE]"
+    echo >&2 \
+	"  -U   -- email username to contact operator [$CONTACT_USER]"
+    echo >&2 \
+	"  -V   -- print the version and exit"
+    echo >&2 \
+	"  -c   -- do not clean test directory prior to running test"
+    echo >&2 \
+	"  -d   -- include debug output in comment.html"
+    echo >&2 \
+	"  -h   -- print this help (see the man page for more information)"
+    echo >&2 \
+	"  -i   -- do not import patches; use the distributed patches instead"
+    echo >&2 \
+	"  -p   -- do not patch files prior to test"
+    echo >&2 \
+	"  -t   -- toolset [@BOOST_TOOLSET@]"
+    echo >&2 \
+	"  -v   -- increase level of verbosity"
+    echo >&2 \
+	"  args -- any remaining arguments to the Boost test script"
+    exit 1
+}
+
+BASENAME=@BASENAME@
+EXPR=@EXPR@
+FTP=@FTP@
+GREP=@GREP@
+HOSTNAME=@HOSTNAME@
+MKDIR="@MKDIR@"
+PYTHON=@PYTHONBIN@
+RM=@RM@
+SED=@SED@
+TR=@TR@
+UNAME=@UNAME@
+
+SYS=$($UNAME -s)
+RELEASE=$($UNAME -r)
+ARCH=$($UNAME -m)
+HOST=$($HOSTNAME)
+
+CC=@CC@
+CXX=@CXX@
+CC_DESC=$($CC -v 2>&1 | $SED -e 's,^,<LI>,' | $TR -d '\n')
+CXX_DESC=$($CXX -v 2>&1 | $SED -e 's,^,<LI>,' | $TR -d '\n')
+
+DEFAULT_INDEX_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/*checkout*/pkgsrc-wip/wip/boost-test-suite/patches/index?revision=1.2
+DEFAULT_PATCH_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/pkgsrc-wip/wip/boost-test-suite/patches/
+
+TITLE=$HOST
+CONTACT_NAME=${USER}
+CONTACT_USER=${USER}
+CONTACT_DOMAIN=${HOST}
+TEST_SCHEDULE="Tests are performed occasionally."
+TOOLSET=@BOOST_TOOLSET@
+VERBOSE=0			# default: not verbose
+DEBUG=0				# default: no debug output
+CLEAN=1				# default: clean up files before test
+USE_PATCHES=1			# default: use patches
+IMPORT_PATCHES=1		# default: import patches (if needed)
+INDEX_URL=			# default: public URL for patches
+
+while getopts D:I:N:S:T:U:Vcdipt:vh opt
+do
+    case "$opt" in
+	D)  CONTACT_DOMAIN="$OPTARG";;
+	I)  INDEX_URL="$OPTARG";;
+	N)  CONTACT_NAME="$OPTARG";;
+	S)  TEST_SCHEDULE="$OPTARG";;
+	T)  TITLE="$OPTARG";;
+	U)  CONTACT_USER="$OPTARG";;
+	V)  version; exit 0;;
+	c)  CLEAN=0;;
+	d)  DEBUG=1;;
+	i)  IMPORT_PATCHES=0;;
+	p)  USE_PATCHES=0;;
+	t)  TOOLSET="$OPTARG";;
+	v)  VERBOSE=$($EXPR $VERBOSE + 1);;
+	h)  usage;;
+	\?)			# unknown flag
+	    usage;;
+    esac
+done
+shift $($EXPR $OPTIND - 1)
+RUN_SCRIPT_ARGS=$*
+
+if [ -z "$INDEX_URL" ]; then
+    INDEX_URL="$DEFAULT_INDEX_URL"
+fi
+if [ $VERBOSE -le 1 ]; then
+    VERBOSE_FTP="-V"
+fi
+
+RUNNER_BASE=$TITLE-$SYS-$RELEASE-$ARCH
+
+echo "Boost Test Suite -- $RUNNER_BASE"
+
+BASEDIR=@BASEDIR@
+
+RUN_SCRIPT_BASEURL=http://svn.boost.org/svn/boost/trunk/tools/regression/src
+RUN_SCRIPT_URL=$RUN_SCRIPT_BASEURL/run.py
+RUN_SCRIPT=$($BASENAME $RUN_SCRIPT_URL)
+
+cd $BASEDIR
+
+# clean directory (if necessary)
+if [ $CLEAN -ne 0 ]; then
+    echo "Cleaning test directory ..."
+    $RM  -f boost-build.jam
+    $RM  -f timestamp
+    $RM -rf boost
+    $RM -rf results
+    $RM -rf tools_bb
+    $RM -rf tools_bjam
+    $RM -rf tools_regression
+    $RM -rf tools_regression_src
+fi
+
+# remove pre-existing patches
+if [ -e patches ]; then
+    echo "Removing pre-existing patches ..."
+    $RM -rf patches
+fi
+PATCH_TAG=NO_PATCHES
+
+# import patches (if necessary)
+if [ $USE_PATCHES -ne 0 ]; then
+    PATCHED="-patched"
+    $MKDIR patches
+    if [ $IMPORT_PATCHES -eq 0 ]; then
+	echo "Importing distributed patches ..."
+	cp patches.dist/* patches
+	PATCH_TAG=DISTRIB_PATCHES
+	PATCH_URL=$DEFAULT_PATCH_URL
+    else
+	echo "Importing index from $INDEX_URL ..."
+	cd patches
+	$FTP $VERBOSE_FTP -o index $INDEX_URL 2> /dev/null
+	if [ $? -ne 0 ]; then
+	    echo "Import of index failed: $INDEX_URL."
+	    exit 1
+	fi
+	PATCH_URL=$($GREP -E "^[[:blank:]]*URL:" index			\
+	    | $SED -E							\
+		-e 's/^[[:blank:]]*URL:[[:blank:]]*//'			\
+		-e 's/#.*$//'						\
+		-e 's/[[:blank:]]*$//')
+	if [ -z "$PATCH_URL" ]; then
+	    PATCH_TAG=PRIVATE_PATCHES
+	    if [ $VERBOSE -ne 0 ]; then
+		echo "Patches:  private"
+	    fi
+	else
+	    PATCH_TAG=PUBLIC_PATCHES
+	    if [ $VERBOSE -ne 0 ]; then
+		echo "Patches:  $PATCH_URL"
+	    fi
+	fi
+	echo "Importing patches ..."
+	for f in $($SED -E						\
+		-e '/^[[:blank:]]*URL:/d'				\
+		-e 's/#.*$//'						\
+		-e '/^[[:blank:]]*$/d' index); do
+	    echo "  $f"
+	    $FTP $VERBOSE_FTP $f 2> /dev/null
+	    if [ $? -ne 0 ]; then
+		echo "Import of patch file failed: $f."
+		exit 1
+	    fi
+	done
+	cd ..
+    fi
+fi
+
+# create comment.html
+echo "Creating comment.html ..."
+SED_FLAGS="-E -e s/$PATCH_TAG// -e /^[A-Z]*_PATCH/d"
+if [ $DEBUG -eq 0 ]; then
+    SED_FLAGS="$SED_FLAGS -e /^DEBUG/d"
+else
+    SED_FLAGS="$SED_FLAGS -e s/^DEBUG//"
+fi
+$SED									\
+    $SED_FLAGS								\
+    -e s/@SYS@/"$SYS"/							\
+    -e s/@RELEASE@/"$RELEASE"/						\
+    -e s/@ARCH@/"$ARCH"/						\
+    -e s/@TITLE@/"$TITLE"/						\
+    -e s/@CONTACT_NAME@/"$CONTACT_NAME"/				\
+    -e s/@CONTACT_USER@/"$CONTACT_USER"/				\
+    -e s/@CONTACT_DOMAIN@/"$CONTACT_DOMAIN"/				\
+    -e s/@TEST_SCHEDULE@/"$TEST_SCHEDULE"/				\
+    -e s/\@CC\@/"$CC"/							\
+    -e s,@CC_DESC@,"$CC_DESC",						\
+    -e s/\@CXX\@/"$CXX"/						\
+    -e s,@CXX_DESC@,"$CXX_DESC",					\
+    -e s,@PATCH_URL@,"$PATCH_URL",g					\
+    -e s,@COMMAND_LINE@,"$COMMAND_LINE",g				\
+    comment.html.in > comment.html
+
+# retrieve run script (if necessary)
+if [ ! -r $RUN_SCRIPT ]; then
+    echo "Retrieving Boost test suite run script ..."
+    $FTP $VERBOSE_FTP $RUN_SCRIPT_URL 2> /dev/null
+    if [ $? -ne 0 ]; then
+	echo "Import of boost test suite run script failed: $RUN_SCRIPT."
+	exit 1
+    fi
+fi
+
+RUNNER=$RUNNER_BASE$PATCHED
+
+# run test suite
+echo "Testing Boost: $RUNNER ..."
+TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolset=$TOOLSET $RUN_SCRIPT_ARGS"
+if [ $VERBOSE -ne 0 ]; then
+    echo "$TEST_CMD"
+fi
+exec $TEST_CMD

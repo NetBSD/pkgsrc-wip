@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/03/03 16:02:38 brook1 Exp $
+
+Ideally, the Boost test suite will be run on a regular basis with and
+without patches.  This may be accommplished with the following
+crontab(5) entries.
+
+#minute hour    mday    month   wday    command
+0       2       *       *       *       ${PREFIX}/sbin/boost-test-suite
+0       14      *       *       *       ${PREFIX}/sbin/boost-test-suite -p
+
+It is important that the pkgsrc community run the test suite often as
+it not only improves cross-platform support for Boost itself, but it
+also improves our packages by regularly testing our pkgsrc-specific
+patches and our compilers by exercising our toolchain.
+
+Please contribute available resources to the testing so we can ensure
+the best possible Boost packages.
+
+===========================================================================

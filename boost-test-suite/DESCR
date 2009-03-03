@@ -1,0 +1,25 @@
+This package provides a simple framework for running tests of Boost
+(http://www.boost.org/).  Once installed, the entire Boost test suite
+may be run by invoking the following script, ideally on a regular
+basis.
+
+   @PREFIX@/sbin/boost-test-suite
+   @PREFIX@/sbin/boost-test-suite -p	# run unpatched tests
+
+This script takes care of downloading the necessary Boost test script
+and running it with parameters appropriate for simple testing
+applications.  It may, however, be configured for more advanced uses.
+The testing process and requirements are described in greater detail
+at the following site:
+
+   http://www.boost.org/development/running_regression_tests.html
+
+Note that the Boost test framework requires a network connection, as
+it updates the local copy of Boost with the most current version prior
+to running the tests and then uploads the results, which are
+summarized here.
+
+   http://www.boost.org/development/tests/trunk/developer/summary.html
+
+It is important that the test suite is run regularly as it helps
+ensure that the pkgsrc packages are correct.

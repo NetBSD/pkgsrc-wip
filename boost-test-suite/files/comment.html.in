@@ -1,0 +1,106 @@
+<!-- $NetBSD: comment.html.in,v 1.1 2009/03/03 16:02:39 brook1 Exp $ -->
+
+<!--
+  - Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
+  - All rights reserved.
+  -
+  - Redistribution and use in source and binary forms, with or without
+  - modification, are permitted provided that the following conditions
+  - are met:
+  - 1. Redistributions of source code must retain the above copyright
+  -    notice, this list of conditions, and the following disclaimer.
+  - 2. Redistributions in binary form must reproduce the above copyright
+  -    notice, this list of conditions and the following disclaimer in the
+  -    documentation and/or other materials provided with the distribution.
+  -
+  - THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+  - IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+  - OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+  - IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+  - INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+  - NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  - DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  - THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  - (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+  - THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>@TITLE@</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <h1>@TITLE@</h1>
+    <hr>
+    <p>
+      This test is orchestrated by
+      <a href="http://pkgsrc-wip.cvs.sourceforge.net/viewvc/pkgsrc-wip/wip/boost-test-suite/">boost-test-suite</a>,
+      a package within the
+      <a href="http://www.netbsd.org">NetBSD</a>
+      <a href="http://www.pkgsrc.org">pkgsrc</a>
+      system.  The package allows easy and automated operation of the 
+      <a href="http://www.boost.org">Boost</a>
+      test suite, with or without a set of patches.  Consequently, it
+      aids in evaluating
+      <a href="http://www.boost.org">Boost</a>
+      on multiple platforms, it provides a means of verifying
+      potential patches for the
+      <a href="ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/boost/README.html">Boost pkgsrc package</a>
+      prior to deploying packages for new versions of
+      <a href="http://www.boost.org">Boost</a>,
+      and it provides a means of exercising a system's compilers.  The
+      test suite itself is described more completely
+      <a href="http://www.boost.org/development/running_regression_tests.html">here</a>
+      and the results of all tests are summarized
+      <a href="http://www.boost.org/development/tests/trunk/developer/summary.html">here</a>.
+    </p>
+    <h2>Test configuration</h2>
+      <dl class="docutils">
+        <dt>Platform</dt>
+        <dd>@SYS@/@ARCH@ @RELEASE@</dd>
+        <dt>Compilers</dt>
+        <dd>@CC@: <UL>@CC_DESC@</UL></dd>
+        <dd>@CXX@: <UL>@CXX_DESC@</UL></dd>
+        <dt>Patches</dt>
+NO_PATCHES          <dd>None</dd>
+DISTRIB_PATCHES          <dd>These builds are based upon the set of patches 
+DISTRIB_PATCHES          that make up the
+DISTRIB_PATCHES          <a href="http://pkgsrc-wip.cvs.sourceforge.net/viewvc/pkgsrc-wip/wip/boost-test-suite/">boost-test-suite</a>
+DISTRIB_PATCHES          package, a part of the
+DISTRIB_PATCHES          <a href="http://www.netbsd.org">NetBSD</a>
+DISTRIB_PATCHES          <a href="http://www.pkgsrc.org">pkgsrc</a>
+DISTRIB_PATCHES          system that exercises the test suite for
+DISTRIB_PATCHES          <a href="http://www.boost.org">Boost</a>.
+DISTRIB_PATCHES          Specifically, the patches used for this test
+DISTRIB_PATCHES          are those that are distributed with the package itself
+DISTRIB_PATCHES          and are available at
+DISTRIB_PATCHES          <a href="@PATCH_URL@">@PATCH_URL@</a>.
+DISTRIB_PATCHES          </dd>
+PUBLIC_PATCHES          <dd>These builds are based upon a set of patches that
+PUBLIC_PATCHES          are available at
+PUBLIC_PATCHES          <a href="@PATCH_URL@">@PATCH_URL@</a>.
+PUBLIC_PATCHES          </dd>
+PRIVATE_PATCHES          <dd>These builds are based upon a set of private
+PRIVATE_PATCHES          patches that are not publicly available.
+PRIVATE_PATCHES          </dd>
+DEBUG        <dt>Command line</dt>
+DEBUG          <dd>@COMMAND_LINE@</dd>
+        <dt>Schedule</dt>
+        <dd>@TEST_SCHEDULE@</dd>
+        <dt>Contact</dt>
+        <dd>@CONTACT_NAME@</dd>
+        <dd>
+          <tt class="docutils literal">
+            <span class="pre">@CONTACT_USER@</span>
+          </tt>
+          <em>at</em>
+          <tt class="docutils literal">
+            <span class="pre">@CONTACT_DOMAIN@</span>
+          </tt>
+        </dd>
+    </dl>
+  </body>
+</html>
