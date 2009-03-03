@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/03/03 15:14:32 brook1 Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/03 16:44:39 brook1 Exp $
 
 --- Jamroot.orig
 +++ Jamroot
-@@ -129,6 +129,8 @@
- constant BOOST_VERSION : 1.38.0 ;
- constant BOOST_JAMROOT_MODULE : $(__name__) ;
- 
-+@USING_MPI@
-+
- local version-tag = [ MATCH "^([^.]+)[.]([^.]+)[.]([^.]+)" : $(BOOST_VERSION) ] ;
- if $(version-tag[3]) = 0
- {
-@@ -253,6 +255,10 @@
+@@ -253,6 +253,10 @@
         ECHO "error: both --with-<library> and --without-<library> specified" ;
         EXIT ;
     }
@@ -22,11 +13,11 @@ $NetBSD: patch-aa,v 1.1 2009/03/03 15:14:32 brook1 Exp $
  
     local wrong = [ set.difference $(with-parameter) : $(existing-libraries) ] ;
     if $(wrong)
-@@ -398,6 +404,7 @@
-     :   <location>$(stage-locate)/lib
-         <install-dependencies>on <install-type>LIB 
-         <install-no-version-symlinks>on
-+	<dll-path>/usr/pkg/lib
+@@ -419,6 +423,7 @@
+     : <location>$(stage-locate)/lib
+       <install-dependencies>on <install-type>LIB
+       <install-no-version-symlinks>on
++      <dll-path>/usr/pkg/lib
      ;
  explicit stage-proper ;
  
