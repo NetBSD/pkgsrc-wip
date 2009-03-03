@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.2 2009/03/03 16:12:01 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.3 2009/03/03 16:30:49 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -98,7 +98,8 @@ CXX=@CXX@
 CC_DESC=$($CC -v 2>&1 | $SED -e 's,^,<LI>,' | $TR -d '\n')
 CXX_DESC=$($CXX -v 2>&1 | $SED -e 's,^,<LI>,' | $TR -d '\n')
 
-DEFAULT_INDEX_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/*checkout*/pkgsrc-wip/wip/boost-test-suite/patches/index?revision=1.2
+DEFAULT_INDEX_REVISION=1.2
+DEFAULT_INDEX_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/*checkout*/pkgsrc-wip/wip/boost-test-suite/patches/index?revision=$DEFAULT_INDEX_REVISION
 DEFAULT_PATCH_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/pkgsrc-wip/wip/boost-test-suite/patches/
 
 TITLE=$HOST
