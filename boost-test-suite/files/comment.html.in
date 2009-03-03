@@ -1,4 +1,4 @@
-<!-- $NetBSD: comment.html.in,v 1.1 2009/03/03 16:02:39 brook1 Exp $ -->
+<!-- $NetBSD: comment.html.in,v 1.2 2009/03/03 16:12:01 brook1 Exp $ -->
 
 <!--
   - Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
@@ -86,8 +86,9 @@ PUBLIC_PATCHES          </dd>
 PRIVATE_PATCHES          <dd>These builds are based upon a set of private
 PRIVATE_PATCHES          patches that are not publicly available.
 PRIVATE_PATCHES          </dd>
-DEBUG        <dt>Command line</dt>
-DEBUG          <dd>@COMMAND_LINE@</dd>
+DEBUG        <dt>Debugging information</dt>
+DEBUG          <dd>Command line: @COMMAND_LINE@</dd>
+DEBUG          <dd>Test command: @TEST_CMD@</dd>
         <dt>Schedule</dt>
         <dd>@TEST_SCHEDULE@</dd>
         <dt>Contact</dt>

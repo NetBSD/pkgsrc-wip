@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.1 2009/03/03 16:02:39 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.2 2009/03/03 16:12:01 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -226,6 +226,9 @@ if [ $USE_PATCHES -ne 0 ]; then
     fi
 fi
 
+RUNNER=$RUNNER_BASE$PATCHED
+TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolset=$TOOLSET $RUN_SCRIPT_ARGS"
+
 # create comment.html
 echo "Creating comment.html ..."
 SED_FLAGS="-E -e s/$PATCH_TAG// -e /^[A-Z]*_PATCH/d"
@@ -250,6 +253,7 @@ $SED									\
     -e s,@CXX_DESC@,"$CXX_DESC",					\
     -e s,@PATCH_URL@,"$PATCH_URL",g					\
     -e s,@COMMAND_LINE@,"$COMMAND_LINE",g				\
+    -e s,@TEST_CMD@,"$TEST_CMD",g					\
     comment.html.in > comment.html
 
 # retrieve run script (if necessary)
@@ -262,11 +266,8 @@ if [ ! -r $RUN_SCRIPT ]; then
     fi
 fi
 
-RUNNER=$RUNNER_BASE$PATCHED
-
 # run test suite
 echo "Testing Boost: $RUNNER ..."
-TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolset=$TOOLSET $RUN_SCRIPT_ARGS"
 if [ $VERBOSE -ne 0 ]; then
     echo "$TEST_CMD"
 fi
