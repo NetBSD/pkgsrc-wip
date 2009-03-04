@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/01/15 23:17:50 pmatias Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/04 14:38:26 thomasklausner Exp $
 #
 
 DISTNAME=	ion-3-20090110
@@ -12,6 +12,8 @@ HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
 # with the 28th day after the latest release. To be on the safe side,
 # we just always mark it as obsolete.
 COMMENT=	Tiling tabbed window manager (obsolete version)
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=	gmake msgfmt
 
