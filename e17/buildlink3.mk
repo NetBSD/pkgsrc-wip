@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/10/20 00:09:22 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/04 17:47:44 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 E17_BUILDLINK3_MK:=	${E17_BUILDLINK3_MK}+
@@ -21,7 +21,8 @@ BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
 .include "../../wip/edje/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
 .include "../../wip/efreet/buildlink3.mk"
-.include "../../wip/evas/buildlink3.mk"
+.include "../../graphics/evas/buildlink3.mk"
+.include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

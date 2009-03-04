@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/11 20:40:28 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/04 17:47:47 minskim Exp $
 #
 
 DISTNAME=	entrance-0.9.9.050
@@ -26,7 +26,7 @@ CONF_FILES=	${PREFIX}/share/examples/entrance/entrance_config.cfg \
 		${PKG_SYSCONFDIR}/entrance_config.cfg
 
 .include	"../../wip/ecore/buildlink3.mk"
-.include	"../../wip/evas/buildlink3.mk"
+.include	"../../graphics/evas/buildlink3.mk"
 .include	"../../wip/edje/buildlink3.mk"
 .include	"../../wip/esmart/buildlink3.mk"
 .include	"../../wip/efreet/buildlink3.mk"

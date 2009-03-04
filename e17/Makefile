@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/02/15 17:14:47 jsonn Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/04 17:47:43 minskim Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.050
@@ -10,6 +10,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Enlightenment Window Manager, Development Release
+
+DEPENDS+=	evas-eet>=0.9.9:../../graphics/evas-eet
+DEPENDS+=	evas-jpeg>=0.9.9:../../graphics/evas-jpeg
+DEPENDS+=	evas-png>=0.9.9:../../graphics/evas-png
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -49,6 +53,7 @@ PKG_SUPPORTED_OPTIONS=	dbus
 .include "../../wip/edje/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
 .include "../../wip/efreet/buildlink3.mk"
-.include "../../wip/evas/buildlink3.mk"
+.include "../../graphics/evas/buildlink3.mk"
+.include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

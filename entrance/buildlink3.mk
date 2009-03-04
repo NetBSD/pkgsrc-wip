@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/08/08 12:16:01 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/04 17:47:47 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ENTRANCE_BUILDLINK3_MK:=	${ENTRANCE_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.entrance?=	../../wip/entrance
 .endif	# ENTRANCE_BUILDLINK3_MK
 
 .include	"../../wip/ecore/buildlink3.mk"
-.include	"../../wip/evas/buildlink3.mk"
+.include	"../../graphics/evas/buildlink3.mk"
 .include	"../../wip/edje/buildlink3.mk"
 .include	"../../wip/esmart/buildlink3.mk"
 .include	"../../wip/efreet/buildlink3.mk"

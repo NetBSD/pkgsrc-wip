@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/08/06 14:10:12 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/04 17:47:47 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EPSILON_BUILDLINK3_MK:=	${EPSILON_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.epsilon?=	../../wip/epsilon
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
 .include "../../wip/epeg/buildlink3.mk"
-.include "../../wip/evas/buildlink3.mk"
+.include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/11/19 01:12:09 jsonn Exp $
+# $NetBSD: Makefile,v 1.25 2009/03/04 17:47:45 minskim Exp $
 #
 
 DISTNAME=	ecore-0.9.9.050
@@ -21,7 +21,9 @@ CONFIGURE_ARGS+=	--disable-openssl \
 			--disable-ecore-evas-sdl
 
 .include "../../devel/eet/buildlink3.mk"
-.include "../../wip/evas/buildlink3.mk"
+.include "../../graphics/evas/buildlink3.mk"
+.include "../../graphics/evas-buffer/buildlink3.mk"
+.include "../../graphics/evas-software-x11/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

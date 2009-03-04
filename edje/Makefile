@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/12/14 13:49:49 tnn2 Exp $
+# $NetBSD: Makefile,v 1.28 2009/03/04 17:47:46 minskim Exp $
 #
 
 DISTNAME=	edje-0.9.9.050
@@ -20,7 +20,7 @@ REPLACE_PYTHON+=	utils/inkscape2edc
 
 .include	"../../devel/eet/buildlink3.mk"
 .include	"../../wip/ecore/buildlink3.mk"
-.include	"../../wip/evas/buildlink3.mk"
+.include	"../../graphics/evas/buildlink3.mk"
 .include	"../../lang/embryo/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
