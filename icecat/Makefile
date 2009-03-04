@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/28 07:49:45 yhardy Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/04 10:04:12 yhardy Exp $
 
 MOZILLA=		icecat
 MOZILLA_BIN=		icecat-bin
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 .include "../../www/firefox/Makefile-firefox.common"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-MOZ_VER=		3.0.5
+MOZ_VER=		3.0.6
 MOZILLA_BIN=		icecat-bin
 
 DISTNAME=		icecat-${MOZ_VER}-g1

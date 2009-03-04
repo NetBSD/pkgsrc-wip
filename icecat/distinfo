@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/01/28 07:49:45 yhardy Exp $
+$NetBSD: distinfo,v 1.3 2009/03/04 10:04:12 yhardy Exp $
 
-SHA1 (icecat-3.0.5-g1.tar.bz2) = c8c7a6cc32d8ad234f4ec31a6a7a2b736a5826eb
-RMD160 (icecat-3.0.5-g1.tar.bz2) = 7ea69ca7bd256421bee52f980be31f3824f1d33b
-Size (icecat-3.0.5-g1.tar.bz2) = 33426149 bytes
+SHA1 (icecat-3.0.6-g1.tar.bz2) = 83892fa690322da6d1c60db1ffc1c43fbc663ec1
+RMD160 (icecat-3.0.6-g1.tar.bz2) = 23e7579def3d95b04a581109e3532dce4d1928e4
+Size (icecat-3.0.6-g1.tar.bz2) = 33554825 bytes
 SHA1 (icecat.png) = 652cbc8d30934f6268299120f81a29c3c7c12f2e
 RMD160 (icecat.png) = 1c6c3dae841320efb5d2f716b4f45f07613e7076
 Size (icecat.png) = 181341 bytes
@@ -35,13 +35,17 @@ SHA1 (patch-dr) = 377b1d83079ada4d819b6702c1010cdd900575fc
 SHA1 (patch-ds) = 1e2e371b9ff7ab9049a947d8e0a63483a1fd244e
 SHA1 (patch-du) = c6e66bb420ce9ea988f89b57d1c20a247704cfcf
 SHA1 (patch-dv) = a380d261d4c2771a672d2b0f4f1f23821e3e5266
-SHA1 (patch-ea) = 14e31d17c2493e468cd01f99abfc996853a11032
-SHA1 (patch-eb) = dc9232b10075d17f7ed742e7be8ea036db2f0241
+SHA1 (patch-ea) = a4c586b2a3aa6e1c4c7cdaf83a37bd894e235bec
+SHA1 (patch-eb) = 176f71af302b1067c301e9cffa2d13a5837e45fe
 SHA1 (patch-ed) = 3c6281a75373843c5767fc1213d8cc67dc549e03
 SHA1 (patch-ee) = d5aeca91305ed2e1f522b2c0ed4bb17f7f8b881b
 SHA1 (patch-eh) = 60aca7f94ee04c957386014f7d4df9e3c8ac8ff1
 SHA1 (patch-ei) = 4484d57e19e39ef86760716d5886ebf2a3e69f63
+SHA1 (patch-ej) = 9b9c708483399fa89c6bf5bdc15e79b31793c89d
+SHA1 (patch-ek) = b94debcf16ba6f0dccc0a812b5e5fa38a150c413
+SHA1 (patch-el) = 8a1586e4ebb76f584dc7b1cbc19f0c389ea206f7
+SHA1 (patch-em) = 6b8b470fc78a4a56400e77af1057b9266634dcc9
+SHA1 (patch-en) = 39926ce5669119c358e8600e2d70d08236e67443
 SHA1 (patch-wc) = 2de8665ed6c23c26566ca6d50165c0cf413a753d
 SHA1 (patch-wd) = fc5c3103ae6f2a2eccc01911a8207f3ca614008b
 SHA1 (patch-we) = f7fecce05454e9794ff7a4e7789031a5ef49c42d
-SHA1 (patch-wf) = c5adc9d3a6b23132399c23ea130f26e7a30a259d
