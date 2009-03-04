@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/02/21 13:22:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/04 22:34:14 thomasklausner Exp $
 #
 
 DISTNAME=		twinkle-1.4.1
@@ -33,6 +33,7 @@ LDFLAGS+=		${BUILDLINK_LDADD.oss}
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
