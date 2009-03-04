@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/04 22:35:00 thomasklausner Exp $
 
---- configure.orig	2007-09-08 14:27:36.000000000 +0000
+--- configure.orig	2009-01-31 04:48:59.000000000 +0000
 +++ configure
-@@ -13391,7 +13391,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -13394,7 +13394,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
    { echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
  echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6; }
    cat >conftest.$ac_ext <<_ACEOF
-@@ -13467,6 +13467,7 @@ echo "$as_me: error:
+@@ -13470,6 +13470,7 @@ echo "$as_me: error:
     { (exit 1); exit 1; }; }
  
  fi
@@ -19,3 +19,12 @@ $NetBSD: patch-aa,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  
+@@ -21448,7 +21449,7 @@ done
+     fi
+   fi
+ 
+-if test "x$vl_cv_lib_readline" == "xno"
++if test "x$vl_cv_lib_readline" = "xno"
+ then
+ 	{ { echo "$as_me:$LINENO: error: readline-devel package is not installed" >&5
+ echo "$as_me: error: readline-devel package is not installed" >&2;}
