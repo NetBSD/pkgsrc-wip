@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/09/22 12:16:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/04 11:47:00 thomasklausner Exp $
 #
 
 DISTNAME=	GNUnet-0.6.4a
@@ -12,6 +12,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.gnunet.org/
 COMMENT=	Framework for secure P2P networking
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
