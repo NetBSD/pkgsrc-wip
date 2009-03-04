@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/11/10 17:21:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/04 15:45:59 thomasklausner Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	TeXLive programs, using Edd Barret's OpenBSD repository
+
+MAKE_JOBS_SAFE=	no
 
 CONFLICTS+=	teTeX-bin-[0-9]*
 CONFLICTS+=	teTeX2-bin-[0-9]*
