@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/03/03 16:02:38 brook1 Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/04 17:57:24 brook1 Exp $
 
 DISTNAME=		boost-test-suite-20090302
 CATEGORIES=		devel
@@ -9,26 +9,20 @@ MAINTAINER?=		brook@nmsu.edu
 HOMEPAGE?=		http://www.boost.org/
 COMMENT?=		Run the Boost test suite
 
+# XXX - yet to be tested
 # PKG_INSTALLATION_TYPES=	overwrite pkgviews
 # PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pax patch
+USE_TOOLS+=		ftp pax patch
 
-BASENAME?=		/usr/bin/basename
-EXPR?=			/bin/expr
-FTP?=			/usr/bin/ftp
-GREP?=			/usr/bin/grep
-HOSTNAME?=		/bin/hostname
-SED?=			/usr/bin/sed
-TR?=			/usr/bin/tr
-UNAME?=			/usr/bin/uname
-
-HOST!=			${HOSTNAME}
-
-BASEDIR=		${PREFIX}/var/boost
+# XXX - why are these not defined already?
+FTP=			${TOOLS_PLATFORM.ftp}
+HOSTNAME=		${TOOLS_PLATFORM.hostname}
 
 BOOST_USER?=		${USER}
-BOOST_TOOLSET?=		gcc			# XXX - should be detected?
+BOOST_TEST_BASEDIR?=	var/boost
+
+BOOST_TEST_DIR=		${PREFIX}/${BOOST_TEST_BASEDIR}
 
 NO_CHECKSUM=		yes
 CHECK_PERMS=		no
@@ -41,7 +35,7 @@ SUBST_MESSAGE.fix-files=	Customizing files
 SUBST_FILES.fix-files+=		DESCR
 SUBST_FILES.fix-files+=		boost-test-suite comment.html.in patch_boost
 
-SUBST_VARS.fix-files+=		BASEDIR
+SUBST_VARS.fix-files+=		BOOST_TEST_DIR
 SUBST_VARS.fix-files+=		BASENAME
 SUBST_VARS.fix-files+=		CAT
 SUBST_VARS.fix-files+=		CC
@@ -61,7 +55,9 @@ SUBST_VARS.fix-files+=		UNAME
 
 SUBST_VARS.fix-files+=		BOOST_TOOLSET
 
-INSTALLATION_DIRS+=		${BASEDIR}
+PLIST_SUBST+=   		BOOST_TEST_BASEDIR=${BOOST_TEST_BASEDIR}
+
+INSTALLATION_DIRS+=		${BOOST_TEST_DIR}
 
 INSTALL_FILES+=			comment.html.in
 
@@ -79,12 +75,13 @@ do-patch:		# no patches to apply
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/boost-test-suite ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/boost-test-suite.1 ${PREFIX}/man/man1
-	${INSTALL_SCRIPT} ${WRKSRC}/patch_boost ${BASEDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/patch_boost ${BOOST_TEST_DIR}
 .for f in ${INSTALL_FILES}
-	cd ${WRKSRC} && ${INSTALL_DATA} $f ${BASEDIR}/$f
+	cd ${WRKSRC} && ${INSTALL_DATA} $f ${BOOST_TEST_DIR}/$f
 .endfor
-	${CP} -Rp ${WRKSRC}/patches.dist ${BASEDIR}/patches.dist
-	${CHOWN} -R ${BOOST_USER} ${BASEDIR}
+	${CP} -Rp ${WRKSRC}/patches.dist ${BOOST_TEST_DIR}
+	${CHOWN} -R ${BOOST_USER} ${BOOST_TEST_DIR}
 
+.include "../../devel/boost-build/toolset.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

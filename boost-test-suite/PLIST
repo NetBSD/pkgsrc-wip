@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2009/03/03 16:02:38 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/04 17:57:29 brook1 Exp $
 sbin/boost-test-suite
-var/boost/comment.html.in
-var/boost/patch_boost
-var/boost/patches.dist/index
-var/boost/patches.dist/patch-aa
-@unexec ${RM}  -f %D/var/boost/boost-build.jam
-@unexec ${RM}  -f %D/var/boost/comment.html
-@unexec ${RM}  -f %D/var/boost/timestamp
-@unexec ${RM}  -f %D/var/boost/run.py
-@unexec ${RM} -rf %D/var/boost/boost
-@unexec ${RM} -rf %D/var/boost/patches
-@unexec ${RM} -rf %D/var/boost/results
-@unexec ${RM} -rf %D/var/boost/tools_bb
-@unexec ${RM} -rf %D/var/boost/tools_bjam
-@unexec ${RM} -rf %D/var/boost/tools_regression
-@unexec ${RM} -rf %D/var/boost/tools_regression_src
-@dirrm var/boost/patches.dist
-@dirrm var/boost
+${BOOST_TEST_BASEDIR}/comment.html.in
+${BOOST_TEST_BASEDIR}/patch_boost
+${BOOST_TEST_BASEDIR}/patches.dist/index
+${BOOST_TEST_BASEDIR}/patches.dist/patch-aa
+@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/boost-build.jam
+@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/comment.html
+@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/timestamp
+@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/run.py
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/boost
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/patches
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/results
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_bb
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_bjam
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_regression
+@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_regression_src
+@dirrm ${BOOST_TEST_BASEDIR}/patches.dist
+@dirrm ${BOOST_TEST_BASEDIR}

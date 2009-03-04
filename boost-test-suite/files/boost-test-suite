@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.4 2009/03/03 16:44:39 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.5 2009/03/04 17:57:30 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -149,14 +149,21 @@ fi
 RUNNER_BASE=$TITLE-$SYS-$RELEASE-$ARCH
 
 echo "Boost Test Suite -- $RUNNER_BASE"
+if [ $DEBUG -ne 0 ]; then
+    echo "command line:  $COMMAND_LINE"
+fi
 
-BASEDIR=@BASEDIR@
+BOOST_TEST_DIR=@BOOST_TEST_DIR@
 
 RUN_SCRIPT_BASEURL=http://svn.boost.org/svn/boost/trunk/tools/regression/src
 RUN_SCRIPT_URL=$RUN_SCRIPT_BASEURL/run.py
 RUN_SCRIPT=$($BASENAME $RUN_SCRIPT_URL)
 
-cd $BASEDIR
+if [ ! -d $BOOST_TEST_DIR ]; then
+    echo "$BOOST_TEST_DIR does not exist."
+    exit 1
+fi
+cd $BOOST_TEST_DIR
 
 # clean directory (if necessary)
 if [ $CLEAN -ne 0 ]; then
@@ -269,7 +276,7 @@ fi
 
 # run test suite
 echo "Testing Boost: $RUNNER ..."
-if [ $VERBOSE -ne 0 ]; then
+if [ $DEBUG -ne 0 -o $VERBOSE -ne 0 ]; then
     echo "$TEST_CMD"
 fi
 exec $TEST_CMD
