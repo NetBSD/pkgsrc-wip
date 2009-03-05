@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.7 2009/03/05 11:35:44 hfath Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/03/05 14:17:48 hfath Exp $
 # used by wip/nnrpd/Makefile
 
-CNEWSBIN?=	${DESTDIR}/${PREFIX}/cnews
+CNEWSBIN?=	${PREFIX}/cnews
 CNEWSDATA?=	/var/news
 CNEWSCTL?=	${CNEWSDATA}/etc
 CNEWSARTS?=	${CNEWSDATA}/articles
