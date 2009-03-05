@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 05:42:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 16:56:17 phonohawk Exp $
 #
 
-DISTNAME=		applewmproto-1.1.1
+DISTNAME=		applewmproto-1.2.0
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2

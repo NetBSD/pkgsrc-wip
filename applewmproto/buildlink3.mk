@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/02/26 05:49:06 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/05 16:56:17 phonohawk Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 APPLEWMPROTO_BUILDLINK3_MK:=	${APPLEWMPROTO_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}applewmproto
 
 .if ${APPLEWMPROTO_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.applewmproto?=	build
-BUILDLINK_API_DEPENDS.applewmproto+=	applewmproto>=1.1.1
+BUILDLINK_API_DEPENDS.applewmproto+=	applewmproto>=1.2.0
 BUILDLINK_PKGSRCDIR.applewmproto?=	../../wip/applewmproto
 .endif	# APPLEWMPROTO_BUILDLINK3_MK
 
