@@ -1,4 +1,4 @@
-$Id: TODO,v 1.7 2008/03/15 00:39:14 obache Exp $
+$Id: TODO,v 1.8 2009/03/05 11:12:50 tnn2 Exp $
 
 2. Install sample configuration files.
 3. Options: provide sane default values.
@@ -10,3 +10,5 @@ $Id: TODO,v 1.7 2008/03/15 00:39:14 obache Exp $
 
 DoS from remote:
 http://secunia.com/advisories/29383/
+PHP Frontend Multiple Vulnerabilities:
+http://secunia.com/advisories/34091/
