@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3279 2009/03/05 05:54:43 phonohawk Exp $
+# $Id: Makefile,v 1.3280 2009/03/05 17:12:08 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -883,6 +883,7 @@ SUBDIR+=	lensfun
 SUBDIR+=	leo
 SUBDIR+=	lhs2tex
 SUBDIR+=	ledger
+SUBDIR+=	libAppleWM
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
 SUBDIR+=	libanimal
