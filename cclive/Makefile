@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 00:58:43 zecrazytux Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 23:34:20 thomasklausner Exp $
 #
 
 DISTNAME=	cclive-0.2.3
@@ -13,6 +13,8 @@ COMMENT= 	Command line video extraction tool for user-uploaded video hosts
 PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_TOOLS+=	gmake
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cclive ${DESTDIR}${PREFIX}/bin
