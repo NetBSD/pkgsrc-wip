@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3278 2009/03/04 17:47:33 minskim Exp $
+# $Id: Makefile,v 1.3279 2009/03/05 05:54:43 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1382,6 +1382,7 @@ SUBDIR+=	p5-Template-Plugin-Class
 SUBDIR+=	p5-Template-Provider-Encoding
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Test-WWW-Mechanize-CGIApp
+SUBDIR+=	p5-Test-XML
 SUBDIR+=	p5-Text-ASCIITable
 SUBDIR+=	p5-Text-CHM
 SUBDIR+=	p5-Text-Context
