@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2008/01/18 04:30:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/05 11:03:16 hfath Exp $
 
 DISTNAME=		stunnel-3.26
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.stunnel.org/download/stunnel/src/
 
 MAINTAINER=		hauke@Espresso.Rhein-Neckar.DE
 HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		stunnel-[4-9]*
 
