@@ -1,19 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/04 17:57:29 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/05 15:49:50 brook1 Exp $
 sbin/boost-test-suite
-${BOOST_TEST_BASEDIR}/comment.html.in
-${BOOST_TEST_BASEDIR}/patch_boost
-${BOOST_TEST_BASEDIR}/patches.dist/index
-${BOOST_TEST_BASEDIR}/patches.dist/patch-aa
-@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/boost-build.jam
-@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/comment.html
-@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/timestamp
-@unexec ${RM}  -f %D/${BOOST_TEST_BASEDIR}/run.py
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/boost
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/patches
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/results
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_bb
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_bjam
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_regression
-@unexec ${RM} -rf %D/${BOOST_TEST_BASEDIR}/tools_regression_src
-@dirrm ${BOOST_TEST_BASEDIR}/patches.dist
-@dirrm ${BOOST_TEST_BASEDIR}
+libdata/boost-test-suite/comment.html.in
+libdata/boost-test-suite/patch_boost
+libdata/boost-test-suite/patches.dist/index
+libdata/boost-test-suite/patches.dist/patch-aa
+@dirrm libdata/boost-test-suite/patches.dist
+@dirrm libdata/boost-test-suite

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.5 2009/03/04 17:57:30 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.6 2009/03/05 15:49:50 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -40,9 +40,11 @@ usage ()
 {
     version
     echo >&2 \
-	"usage: $0 [-Vchipv] [-D domain] [-I URL] [-N name]"
+	"usage: $0 [-Vchipv] [-D domain] [-I URL]"
     echo >&2 \
-	"       [-S schedule] [-T title] [-U username] [-t toolset] [-- args]"
+	"       [-N name] [-S schedule] [-T title] [-U username] [-b directory]"
+    echo >&2 \
+	"       [-t toolset] [-- args]"
     echo >&2 \
 	"  -D   -- email domain to contact operator [$CONTACT_DOMAIN]"
     echo >&2 \
@@ -57,6 +59,8 @@ usage ()
 	"  -U   -- email username to contact operator [$CONTACT_USER]"
     echo >&2 \
 	"  -V   -- print the version and exit"
+    echo >&2 \
+	"  -b   -- run tests in directory [$BASEDIR]"
     echo >&2 \
 	"  -c   -- do not clean test directory prior to running test"
     echo >&2 \
@@ -77,6 +81,7 @@ usage ()
 }
 
 BASENAME=@BASENAME@
+CP=@CP@
 EXPR=@EXPR@
 FTP=@FTP@
 GREP=@GREP@
@@ -87,6 +92,8 @@ RM=@RM@
 SED=@SED@
 TR=@TR@
 UNAME=@UNAME@
+
+LIBDATA_DIR=@LIBDATA_DIR@
 
 SYS=$($UNAME -s)
 RELEASE=$($UNAME -r)
@@ -102,6 +109,7 @@ DEFAULT_INDEX_REVISION=1.3
 DEFAULT_INDEX_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/*checkout*/pkgsrc-wip/wip/boost-test-suite/patches/index?revision=$DEFAULT_INDEX_REVISION
 DEFAULT_PATCH_URL=http://pkgsrc-wip.cvs.sourceforge.net/viewvc/pkgsrc-wip/wip/boost-test-suite/patches/
 
+BASEDIR=@BOOST_TEST_BASEDIR@
 TITLE=$HOST
 CONTACT_NAME=${USER}
 CONTACT_USER=${USER}
@@ -110,12 +118,12 @@ TEST_SCHEDULE="Tests are performed occasionally."
 TOOLSET=@BOOST_TOOLSET@
 VERBOSE=0			# default: not verbose
 DEBUG=0				# default: no debug output
-CLEAN=1				# default: clean up files before test
+CLEAN=0				# default: do NOT clean up files before test
 USE_PATCHES=1			# default: use patches
 IMPORT_PATCHES=1		# default: import patches (if needed)
 INDEX_URL=			# default: public URL for patches
 
-while getopts D:I:N:S:T:U:Vcdipt:vh opt
+while getopts D:I:N:S:T:U:Vb:cdipt:vh opt
 do
     case "$opt" in
 	D)  CONTACT_DOMAIN="$OPTARG";;
@@ -125,7 +133,8 @@ do
 	T)  TITLE="$OPTARG";;
 	U)  CONTACT_USER="$OPTARG";;
 	V)  version; exit 0;;
-	c)  CLEAN=0;;
+	b)  BASEDIR="$OPTARG";;
+	c)  CLEAN=1;;
 	d)  DEBUG=1;;
 	i)  IMPORT_PATCHES=0;;
 	p)  USE_PATCHES=0;;
@@ -153,29 +162,28 @@ if [ $DEBUG -ne 0 ]; then
     echo "command line:  $COMMAND_LINE"
 fi
 
-BOOST_TEST_DIR=@BOOST_TEST_DIR@
-
 RUN_SCRIPT_BASEURL=http://svn.boost.org/svn/boost/trunk/tools/regression/src
 RUN_SCRIPT_URL=$RUN_SCRIPT_BASEURL/run.py
 RUN_SCRIPT=$($BASENAME $RUN_SCRIPT_URL)
 
-if [ ! -d $BOOST_TEST_DIR ]; then
-    echo "$BOOST_TEST_DIR does not exist."
+if [ -e $BASEDIR -a ! -d $BASEDIR ]; then
+    echo "$BASEDIR already exists but is not a directory."
+    exit 1
+elif [ ! -e $BASEDIR ]; then
+    echo "Creating $BASEDIR ..."
+    $MKDIR -p $BASEDIR
+fi
+echo "Running tests in $BASEDIR ..."
+cd $BASEDIR
+if [ $? -ne 0 ]; then
+    echo "Cannot cd to $BASEDIR."
     exit 1
 fi
-cd $BOOST_TEST_DIR
 
 # clean directory (if necessary)
 if [ $CLEAN -ne 0 ]; then
-    echo "Cleaning test directory ..."
-    $RM  -f boost-build.jam
-    $RM  -f timestamp
-    $RM -rf boost
-    $RM -rf results
-    $RM -rf tools_bb
-    $RM -rf tools_bjam
-    $RM -rf tools_regression
-    $RM -rf tools_regression_src
+    echo "Cleaning $BASEDIR ..."
+    $RM -rf *
 fi
 
 # remove pre-existing patches
@@ -191,7 +199,7 @@ if [ $USE_PATCHES -ne 0 ]; then
     $MKDIR patches
     if [ $IMPORT_PATCHES -eq 0 ]; then
 	echo "Importing distributed patches ..."
-	cp patches.dist/* patches
+	$CP $LIBDATA_DIR/patches.dist/* patches
 	PATCH_TAG=DISTRIB_PATCHES
 	PATCH_URL=$DEFAULT_PATCH_URL
     else
@@ -262,7 +270,7 @@ $SED									\
     -e s,@PATCH_URL@,"$PATCH_URL",g					\
     -e s,@COMMAND_LINE@,"$COMMAND_LINE",g				\
     -e s,@TEST_CMD@,"$TEST_CMD",g					\
-    comment.html.in > comment.html
+    $LIBDATA_DIR/comment.html.in > comment.html
 
 # retrieve run script (if necessary)
 if [ ! -r $RUN_SCRIPT ]; then

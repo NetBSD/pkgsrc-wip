@@ -1,4 +1,4 @@
-.\"	$NetBSD: boost-test-suite.1,v 1.1 2009/03/03 16:02:39 brook1 Exp $
+.\"	$NetBSD: boost-test-suite.1,v 1.2 2009/03/05 15:49:50 brook1 Exp $
 .\"
 .\" Copyright (c) 2009 Brook Milligan.  < brook -at- nmsu.edu >
 .\" All rights reserved.
@@ -38,6 +38,7 @@
 .Op Fl S Ar schedule
 .Op Fl T Ar title
 .Op Fl U Ar username
+.Op Fl b Ar directory
 .Op Fl t Ar toolset
 .Op -- Ar args
 .Sh DESCRIPTION
@@ -153,10 +154,14 @@ file as the user portion of the email address for contacting the
 operator responsible for the test suite runs.
 .It Fl V
 Print version information and exit.
+.It Fl b Ar directory
+Run the Boost tests in
+.Ar directory .
+By default, the tests will be run in @BOOST_TEST_BASEDIR@.
 .It Fl c
-Do not clean the test directory prior to running the tests.  Normally,
-the sources and results of prior tests are deleted before a new one is
-run.
+Clean the test directory prior to running the tests.  Normally, this
+is not required; however, it may be useful to ensure a completely
+empty test directory prior to starting the tests.
 .It Fl d
 Generate debug output and include it in
 .Dq comment.html .
