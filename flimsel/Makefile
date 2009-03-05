@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/12 15:05:50 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 00:33:52 othyro Exp $
 #
 
 DISTNAME=	flimsel-0.0.5
@@ -9,8 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/
 COMMENT=	Minimalistic image browser
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../graphics/epeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
