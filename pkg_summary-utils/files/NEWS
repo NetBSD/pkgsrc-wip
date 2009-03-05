@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.26.0, by Aleksey Cheusov, Fri,  6 Mar 2009 00:29:03 +0200
+
+  pkg_src_summary analyses DEPENDS and BUILD_DEPENDS for correctness.
+  That is if appropriate directories don't exist, building summary
+  fails with stderr messages.
+
+  'pkg_micro_src_summary -f' supports comma separated fields
+
+  pkg_cmp_summary: new option -P for comparison PKGPATH without PKGNAME
+
+----------------------------------------------------------------------
 Version 0.24.0, by Aleksey Cheusov, Fri, 26 Dec 2008 15:30:19 +0200
 
   pkg_micro_src_summary, pkg_src_summary, pkg_update_src_summary:

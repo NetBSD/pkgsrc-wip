@@ -38,6 +38,9 @@ if test -z "$BMAKE"; then
     BMAKE=make
 fi
 
+if test -z "$PSS_MKSCRIPTSDIR"; then
+    PSS_MKSCRIPTSDIR=@@mkscriptsdir@@
+fi
 ############################################################
 usage (){
     cat 1>&2 <<EOF
@@ -258,7 +261,7 @@ cd_and_print_summary (){
 
     # INHER_ASSIGNS must be before DEPENDS and BUILD_DEPENDS, see below
     ( cd "$real_pkgpath" && eval ${BMAKE} -f ./Makefile $extra_mk \
-	-f @@mkscriptsdir@@/pkg_src_summary.mk my-show-vars \
+	-f "$PSS_MKSCRIPTSDIR"/pkg_src_summary.mk my-show-vars \
 	VARNAMES="'_INHER_ASSIGNS _INHER_ASSIGNS_REJ ASSIGNMENTS $varnames'" \
 	$var_assignments $var_assigns ) > "$tmpfn" || return 1
 
@@ -290,14 +293,38 @@ cd_and_print_summary (){
     fi
 }
 
+summary2deps (){
+    awk '
+match($0, /^(BUILD_)?DEPENDS=/) {
+   $0=substr($0, RLENGTH+1)
+   gsub(/[^ :]*:[.][.]\/[.][.]\//, "")
+   print
+}' "$@"
+}
+
 generate_summary (){
     # general information
     if cd_and_print_summary $1 2>"$errsfn"
     then
-	cat "$summaryfn"
-#	cat "$errsfn" 1>&2
+	all_deps=$(summary2deps "$summaryfn")
 
-	echo '' # empty line - separator 
+	bad_deps=''
+	for d in $all_deps; do
+	    if ! test -d "$PKGSRCDIR/$d"; then
+		if test -z "$bad_deps"; then
+		    printf ' ------------------\n' 1>&2
+		    printf "Bad package %s, skipped\n" "$1" 1>&2
+		fi
+		bad_deps=1
+		printf "     not existing dependancy: %s\n" "$d" 1>&2
+	    fi
+	done
+
+	if test -z "$bad_deps"; then
+	    cat "$summaryfn"
+
+	    echo '' # empty line - separator
+	fi
     else
 	printf ' ------------------\n' 1>&2
 	printf "Bad package %s, skipped\n" "$1" 1>&2
