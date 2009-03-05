@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/29 23:50:05 blef Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/05 00:58:25 bjcosta Exp $
 #
 
 # Created using instructions from:
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl
+USE_TOOLS+=		flex
+USE_TOOLS+=		bison
 
 
 # I dont think the build requires pkg-config. It just creates pkg-config data files.
