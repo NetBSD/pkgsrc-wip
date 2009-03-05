@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/03/01 15:33:47 dillo Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/05 23:51:28 thomasklausner Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -9,7 +9,7 @@ COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 
 NO_SRC_ON_FTP=	# changes daily
 NO_SRC_ON_CDROM=# changes daily
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
