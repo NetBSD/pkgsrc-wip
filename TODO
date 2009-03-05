@@ -54,7 +54,7 @@ Suggested package updates
 	o lincity-ng-2.0
 	o linphone-3.0.0
 	o lives-0.9.9.6
-	o llvm-2.4
+	o llvm-2.5
 	o man-1.6f
 	o mcabber-0.9.9
 	o meta-tracker-0.6.90
@@ -65,7 +65,6 @@ Suggested package updates
 	o mupen64-0.5
 	o ocp-0.1.16
 	o opal-2.2.11
-	o openct-0.6.14
 	o openvrml-0.17.10
 	o osmose-0.8.5b
 	o p5-Net-DBus-0.33.6
