@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/27 19:53:18 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 00:50:05 othyro Exp $
 #
 
 DISTNAME=	wput-0.6.1
@@ -10,14 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wput.sourceforge.net/
 COMMENT=	Wput is a command-line ftp-client that looks like wget
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${DESTDIR}/bin ${DESTDIR}/${PKGMANDIR}/man1
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wput ${PREFIX}/bin/wput
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/wput.1 ${PREFIX}/${PKGMANDIR}/man1/wput.1
+	${INSTALL_PROGRAM} ${WRKSRC}/wput ${DESTDIR}/${PREFIX}/bin/wput
+	${INSTALL_MAN_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/wput.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/wput.1
 
 .include "../../mk/bsd.pkg.mk"
