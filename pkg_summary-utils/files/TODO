@@ -17,6 +17,8 @@ existing tools:
        - man page
 
     pkg_src_summary:
+       - new option for exit code 0 if ALL was done successfully,
+         1 otherwise
 
     pkg_summary4view:
 
