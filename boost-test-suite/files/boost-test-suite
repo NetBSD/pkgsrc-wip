@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.7 2009/03/06 15:15:11 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.8 2009/03/06 16:19:01 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -44,7 +44,7 @@ usage ()
     echo >&2 \
 	"       [-N name] [-S schedule] [-T title] [-U username] [-b directory]"
     echo >&2 \
-	"       [-t toolset] [-- args]"
+	"       [-l logfile] [-t toolset] [-- args]"
     echo >&2 \
 	"  -D   -- email domain to contact operator [$CONTACT_DOMAIN]"
     echo >&2 \
@@ -70,6 +70,8 @@ usage ()
     echo >&2 \
 	"  -i   -- do not import patches; use the distributed patches instead"
     echo >&2 \
+	"  -l   -- log output of test to logfile"
+    echo >&2 \
 	"  -p   -- do not patch files prior to test"
     echo >&2 \
 	"  -t   -- toolset [@BOOST_TOOLSET@]"
@@ -90,6 +92,7 @@ MKDIR="@MKDIR@"
 PYTHON=@PYTHONBIN@
 RM=@RM@
 SED=@SED@
+TEE=@TEE@
 TR=@TR@
 UNAME=@UNAME@
 
@@ -122,8 +125,9 @@ CLEAN=0				# default: do NOT clean up files before test
 USE_PATCHES=1			# default: use patches
 IMPORT_PATCHES=1		# default: import patches (if needed)
 INDEX_URL=			# default: public URL for patches
+LOG_FILE=			# default: no logging
 
-while getopts D:I:N:S:T:U:Vb:cdipt:vh opt
+while getopts D:I:N:S:T:U:Vb:cdil:pt:vh opt
 do
     case "$opt" in
 	D)  CONTACT_DOMAIN="$OPTARG";;
@@ -137,6 +141,7 @@ do
 	c)  CLEAN=1;;
 	d)  DEBUG=1;;
 	i)  IMPORT_PATCHES=0;;
+	l)  LOG_FILE="$OPTARG";;
 	p)  USE_PATCHES=0;;
 	t)  TOOLSET="$OPTARG";;
 	v)  VERBOSE=$($EXPR $VERBOSE + 1);;
@@ -238,6 +243,11 @@ fi
 
 RUNNER=$RUNNER_BASE$PATCHED
 TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolset=$TOOLSET $RUN_SCRIPT_ARGS"
+if [ -z "$LOG_FILE" ]; then
+    REAL_TEST_CMD="$TEST_CMD"
+else
+    REAL_TEST_CMD="$TEST_CMD | $TEE -a $LOG_FILE"
+fi
 
 # create comment.html
 echo "Creating comment.html ..."
@@ -279,9 +289,12 @@ fi
 # run test suite
 echo "Testing Boost: $RUNNER ..."
 if [ $DEBUG -ne 0 -o $VERBOSE -ne 0 ]; then
-    echo "$TEST_CMD"
+    echo "$REAL_TEST_CMD"
 fi
-exec $TEST_CMD
+if [ -n "$LOG_FILE" ]; then
+    eval echo "Testing Boost: $RUNNER in $BASEDIR ..." > $LOG_FILE
+fi
+eval $REAL_TEST_CMD
 
 if [ $? -ne 0 ]; then
     echo "An error occurred while running the tests.  The results in"

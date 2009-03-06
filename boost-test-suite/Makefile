@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/05 15:59:57 brook1 Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/06 16:19:01 brook1 Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -16,6 +16,7 @@ USE_TOOLS+=		ftp pax patch
 
 FTP=			${TOOLS_PLATFORM.ftp}
 HOSTNAME=		${TOOLS_PLATFORM.hostname}
+TEE=			${TOOLS_PLATFORM.tee}
 
 BOOST_USER?=		${USER}
 BOOST_TEST_BASEDIR?=	/var/boost
@@ -46,6 +47,7 @@ SUBST_VARS.fix-files+=		PATCH
 SUBST_VARS.fix-files+=		PYTHONBIN
 SUBST_VARS.fix-files+=		RM
 SUBST_VARS.fix-files+=		SED
+SUBST_VARS.fix-files+=		TEE
 SUBST_VARS.fix-files+=		TR
 SUBST_VARS.fix-files+=		UNAME
 
