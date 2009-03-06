@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/26 17:42:09 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/06 17:56:57 minskim Exp $
 # TeX Live Revision 10592
 
 DISTNAME=	bin-tex
@@ -14,7 +14,7 @@ COMMENT=	Plain TeX format
 
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
 DEPENDS+=	tex-cm-[0-9]*:../../wip/tex-cm
-DEPENDS+=	tex-hyphen-base-[0-9]*:../../wip/tex-hyphen-base
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-misc-[0-9]*:../../wip/tex-misc
 DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
