@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/01/03 22:21:03 minskim Exp $
-# TeX Live Revision 7340
+# $NetBSD: Makefile,v 1.4 2009/03/06 05:39:24 minskim Exp $
+# TeX Live Revision 11896
 
 DISTNAME=	metafont
-PKGNAME=	tex-${DISTNAME}-2008.7340
+PKGNAME=	tex-${DISTNAME}-2008.11896
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -19,6 +19,8 @@ USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
+
+TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../print/kpathsea/texmf.mk"
 
