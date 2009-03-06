@@ -1,4 +1,4 @@
-.\"	$NetBSD: boost-test-suite.1,v 1.5 2009/03/06 16:19:01 brook1 Exp $
+.\"	$NetBSD: boost-test-suite.1,v 1.6 2009/03/06 23:48:42 brook1 Exp $
 .\"
 .\" Copyright (c) 2009 Brook Milligan.  < brook -at- nmsu.edu >
 .\" All rights reserved.
@@ -40,7 +40,7 @@
 .Op Fl U Ar username
 .Op Fl b Ar directory
 .Op Fl l Ar logfile
-.Op Fl t Ar toolset
+.Op Fl t Ar toolsets
 .Op -- Ar args
 .Sh DESCRIPTION
 The
@@ -184,11 +184,11 @@ Note that a relative path will be resolved relative to the test
 directory.
 .It Fl p
 Do not patch the source prior to running the tests.
-.It Fl t Ar toolset
+.It Fl t Ar toolsets
 Use
-.Ar toolset
-as the
-.Dq toolset
+.Ar toolsets
+(a comma-delimited list of valid toolsets) as the
+.Dq toolsets
 argument to the Boost test script.
 .It Fl v
 Increase the verbosity of output.  This option may be repeated.

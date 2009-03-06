@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.8 2009/03/06 16:19:01 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.9 2009/03/06 23:48:42 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -44,7 +44,7 @@ usage ()
     echo >&2 \
 	"       [-N name] [-S schedule] [-T title] [-U username] [-b directory]"
     echo >&2 \
-	"       [-l logfile] [-t toolset] [-- args]"
+	"       [-l logfile] [-t toolsets] [-- args]"
     echo >&2 \
 	"  -D   -- email domain to contact operator [$CONTACT_DOMAIN]"
     echo >&2 \
@@ -74,7 +74,7 @@ usage ()
     echo >&2 \
 	"  -p   -- do not patch files prior to test"
     echo >&2 \
-	"  -t   -- toolset [@BOOST_TOOLSET@]"
+	"  -t   -- toolsets [@BOOST_TOOLSET@]"
     echo >&2 \
 	"  -v   -- increase level of verbosity"
     echo >&2 \
@@ -84,10 +84,12 @@ usage ()
 
 BASENAME=@BASENAME@
 CP=@CP@
+DATE=@DATE@
 EXPR=@EXPR@
 FTP=@FTP@
 GREP=@GREP@
 HOSTNAME=@HOSTNAME@
+INSTALL=@INSTALL@
 MKDIR="@MKDIR@"
 PYTHON=@PYTHONBIN@
 RM=@RM@
@@ -118,7 +120,7 @@ CONTACT_NAME=${USER}
 CONTACT_USER=${USER}
 CONTACT_DOMAIN=${HOST}
 TEST_SCHEDULE="Tests are performed occasionally."
-TOOLSET=@BOOST_TOOLSET@
+TOOLSETS=@BOOST_TOOLSET@
 VERBOSE=0			# default: not verbose
 DEBUG=0				# default: no debug output
 CLEAN=0				# default: do NOT clean up files before test
@@ -143,7 +145,7 @@ do
 	i)  IMPORT_PATCHES=0;;
 	l)  LOG_FILE="$OPTARG";;
 	p)  USE_PATCHES=0;;
-	t)  TOOLSET="$OPTARG";;
+	t)  TOOLSETS="$OPTARG";;
 	v)  VERBOSE=$($EXPR $VERBOSE + 1);;
 	h)  usage;;
 	\?)			# unknown flag
@@ -160,9 +162,9 @@ if [ $VERBOSE -le 1 ]; then
     VERBOSE_FTP="-V"
 fi
 
-RUNNER_BASE=$TITLE-$SYS-$RELEASE-$ARCH
+RUNNER_BASE="$TITLE-$SYS-$RELEASE-$ARCH"
 
-echo "Boost Test Suite -- $RUNNER_BASE"
+eval echo "Boost Test Suite -- $RUNNER_BASE"
 if [ $DEBUG -ne 0 ]; then
     echo "command line:  $COMMAND_LINE"
 fi
@@ -241,12 +243,12 @@ if [ $USE_PATCHES -ne 0 ]; then
     fi
 fi
 
-RUNNER=$RUNNER_BASE$PATCHED
-TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolset=$TOOLSET $RUN_SCRIPT_ARGS"
+RUNNER="\"$RUNNER_BASE$PATCHED\""
+TEST_CMD="$PYTHON $RUN_SCRIPT --runner=$RUNNER --toolsets=$TOOLSETS $RUN_SCRIPT_ARGS"
 if [ -z "$LOG_FILE" ]; then
     REAL_TEST_CMD="$TEST_CMD"
 else
-    REAL_TEST_CMD="$TEST_CMD | $TEE -a $LOG_FILE"
+    REAL_TEST_CMD="$TEST_CMD 2>&1 | $TEE -a $LOG_FILE"
 fi
 
 # create comment.html
@@ -276,6 +278,10 @@ $SED									\
     -e s,@TEST_CMD@,"$TEST_CMD",g					\
     $LIBDATA_DIR/comment.html.in > comment.html
 
+# copying patch_boost
+echo "Installing patch_boost ..."
+$INSTALL -c $LIBDATA_DIR/patch_boost patch_boost
+
 # retrieve run script (if necessary)
 if [ ! -r $RUN_SCRIPT ]; then
     echo "Retrieving Boost test suite run script ..."
@@ -287,20 +293,31 @@ if [ ! -r $RUN_SCRIPT ]; then
 fi
 
 # run test suite
-echo "Testing Boost: $RUNNER ..."
+eval echo "Testing Boost: $RUNNER ..."
 if [ $DEBUG -ne 0 -o $VERBOSE -ne 0 ]; then
-    echo "$REAL_TEST_CMD"
+    eval echo "$REAL_TEST_CMD"
 fi
+
 if [ -n "$LOG_FILE" ]; then
-    eval echo "Testing Boost: $RUNNER in $BASEDIR ..." > $LOG_FILE
+    eval echo "\# Testing Boost: $RUNNER in $BASEDIR ..." > $LOG_FILE
+    (echo -n "# " && $DATE) >> $LOG_FILE
 fi
-eval $REAL_TEST_CMD
+if [ $DEBUG -ne 0 ]; then
+    eval echo "\# $TEST_CMD" >> $LOG_FILE
+fi
+
+eval "$REAL_TEST_CMD"
 
 if [ $? -ne 0 ]; then
     echo "An error occurred while running the tests.  The results in"
     echo "$BASEDIR will be preserved in case they are helpful for"
     echo "determining the cause of the error(s)."
     exit 1
+fi
+
+if [ -n "$LOG_FILE" ]; then
+    eval echo "\# Successful completion" >> $LOG_FILE
+    (echo -n "# " && $DATE) >> $LOG_FILE
 fi
 
 # clean directory (if necessary)
@@ -314,4 +331,4 @@ echo "Tests completed successfully.  The test results will be available at:"
 echo
 echo "     http:http://www.boost.org/development/tests/trunk/developer/summary.html"
 echo
-echo "under the heading $SYS / $RUNNER"
+eval echo "under the heading $SYS / $RUNNER"

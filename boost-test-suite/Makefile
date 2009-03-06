@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/06 16:19:01 brook1 Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/06 23:48:42 brook1 Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -38,10 +38,12 @@ SUBST_VARS.fix-files+=		CAT
 SUBST_VARS.fix-files+=		CC
 SUBST_VARS.fix-files+=		CP
 SUBST_VARS.fix-files+=		CXX
+SUBST_VARS.fix-files+=		DATE
 SUBST_VARS.fix-files+=		EXPR
 SUBST_VARS.fix-files+=		FTP
 SUBST_VARS.fix-files+=		GREP
 SUBST_VARS.fix-files+=		HOSTNAME
+SUBST_VARS.fix-files+=		INSTALL
 SUBST_VARS.fix-files+=		MKDIR
 SUBST_VARS.fix-files+=		PATCH
 SUBST_VARS.fix-files+=		PYTHONBIN
