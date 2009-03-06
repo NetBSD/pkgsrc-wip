@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2009/02/07 21:36:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.76 2009/03/06 00:06:42 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -9,6 +9,7 @@ bin/etags
 bin/grep-changelog
 bin/rcs-checkin
 info/ada-mode
+info/auth
 info/autotype
 info/calc
 info/ccmode
@@ -73,6 +74,7 @@ man/man1/etags.1
 man/man1/grep-changelog.1
 man/man1/rcs-checkin.1
 share/applications/emacs.desktop
+share/emacs/${PKGVERSION}/etc/.gitignore
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/BABYL
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
@@ -874,6 +876,7 @@ share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
+share/emacs/${PKGVERSION}/leim/quail/.gitignore
 share/emacs/${PKGVERSION}/leim/quail/4Corner.el.gz
 share/emacs/${PKGVERSION}/leim/quail/4Corner.elc
 share/emacs/${PKGVERSION}/leim/quail/ARRAY30.el.gz
