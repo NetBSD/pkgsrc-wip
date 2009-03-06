@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2009/03/06 12:56:08 absd Exp $
+$NetBSD: patch-af,v 1.5 2009/03/06 20:40:55 absd Exp $
 
 --- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-03-06 01:20:09.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.4 2009/03/06 12:56:08 absd Exp $
  
  #ifndef DEFAULT_LD_LIBRARY_PATH
 -#define DEFAULT_LD_LIBRARY_PATH "/usr/lib" /* See ld.so.1(1) */
-+#define DEFAULT_LD_LIBRARY_PATH "/usr/lib:%%LOCALBASE%%/lib:%%X11BASE%%/lib" /* See ld.so.1(1) */
++#define DEFAULT_LD_LIBRARY_PATH "/usr/lib:%%PREFIX%%/lib:%%X11BASE%%/lib" /* See ld.so.1(1) */
  #endif
  #define EXTENSIONS_DIR "/lib/ext"
  #define ENDORSED_DIR "/lib/endorsed"

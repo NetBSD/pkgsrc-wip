@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/03/06 13:44:53 ghen Exp $
+# $NetBSD: Makefile,v 1.31 2009/03/06 20:40:55 absd Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -21,26 +21,25 @@ LICENSE=		sun-jrl-16-license
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		patch pax
 WRKSRC=			${WRKDIR}
-PLIST_SRC=		PLIST.common
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 
 JAVA_NAME=		jdk15
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
-.if exists(${LOCALBASE}/java/jdk-1.6.0/bin/javac) && defined(NOT_YET)
-BUILD_DEPENDS+=		jdk16>=1
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/jdk-1.6.0
-.elif exists(${LOCALBASE}/java/jdk-1.5.0/bin/javac)
+.if exists(${PREFIX}/java/jdk-1.6.0/bin/javac) && defined(NOT_YET)
+BUILD_DEPENDS+=		jdk16>=1:../../wip/jdk16
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.6.0
+.elif exists(${PREFIX}/java/jdk-1.5.0/bin/javac)
 #don't depend on my myself
 #BUILD_DEPENDS+=	jdk15>=1
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/jdk-1.5.0
-.elif exists(${LOCALBASE}/java/sun-6/bin/javac) && defined(NOT_YET)
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.5.0
+.elif exists(${PREFIX}/java/sun-6/bin/javac) && defined(NOT_YET)
 BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-6
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/sun-6
 .else
 BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
-MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
+MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/sun-1.5
 .endif
 
 .if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime) && !exists(/proc/uptime)
@@ -51,7 +50,7 @@ PKG_FAIL_REASON+=	"mount -o linux -t procfs /dev/null /emul/linux/proc"
 
 # used to find "zip" and "unzipsfx"
 MAKE_FLAGS+=		M4=${M4:Q}
-MAKE_FLAGS+=		ALT_DEVTOOLS_PATH=${LOCALBASE}/bin
+MAKE_FLAGS+=		ALT_DEVTOOLS_PATH=${PREFIX}/bin
 MAKE_FLAGS+=		ALT_COMPILER_PATH=${WRAPPER_BINDIR:Q}
 MAKE_ENV+=		LANG=C
 MAKE_ENV+=		JAVA_HOME=
@@ -102,7 +101,7 @@ FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Then resume this build by running '"${MAKE:Q}"' again."
 
-MESSAGE_SUBST+=		LOCALBASE=${LOCALBASE}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
 MESSAGE_SUBST+=		MOZILLA=${MOZILLA}
 
@@ -119,16 +118,13 @@ SUBST_FILES.paths+=	motif/lib/Xm/util/Makefile
 SUBST_FILES.paths+=	j2se/src/solaris/native/sun/awt/fontpath.c
 SUBST_FILES.paths+=	j2se/make/sun/xawt/Makefile
 SUBST_FILES.paths+=	j2se/make/sun/awt/mawt.gmk
-SUBST_SED.paths=	-e 's,%%LOCALBASE%%,${LOCALBASE},g'
+SUBST_SED.paths=	-e 's,%%PREFIX%%,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,%%X11BASE%%,${X11BASE},g'
 SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 .include "options.mk"
 
-INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
-
-PLIST_SRC+=		PLIST.common_end
+PLIST_VARS+=    jce plugin
 
 .include "../../wip/jdk16/license-extract.mk"
 
@@ -141,7 +137,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
-	cd ${JDKIMAGEDIR} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
+	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs
 	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
 	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock

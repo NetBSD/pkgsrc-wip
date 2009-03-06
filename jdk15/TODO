@@ -5,13 +5,7 @@
   * files/cacerts stolen from a Sun JDK 1.6 installation -- is there
     a better source?
 
-  * Figure out why some directories aren't properly removed on
-    package deletion.
-
   * The JDK Makefiles use `gcc -w' to suppress all the static and
     inline warning messages from the build -- and there are lots!
     But `-w' is stripped by the pkgsrc wrappers for gcc.  Can we
     add this back in?  Is it worth it?
-
-  * Stole INSTALL.tmpl and DEINSTALL.tmpl from sun-jre15 -- but these
-    don't seem to be executed.

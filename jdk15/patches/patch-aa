@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/06 20:40:55 absd Exp $
 
 --- control/make/common/Defs-bsd.gmk.orig	2005-09-07 10:16:01.000000000 +0200
 +++ control/make/common/Defs-bsd.gmk
@@ -7,10 +7,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/28 13:56:35 ghen Exp $
  # zip, etc.)
  ifeq ($(TRUE_PLATFORM), NetBSD)
 -DEVTOOLS_PATH = /usr/pkg/bin/
-+DEVTOOLS_PATH = %%LOCALBASE%%/bin/
++DEVTOOLS_PATH = %%PREFIX%%/bin/
  else
 -DEVTOOLS_PATH = /usr/local/bin/
-+DEVTOOLS_PATH = %%LOCALBASE%%/bin/
++DEVTOOLS_PATH = %%PREFIX%%/bin/
  endif
  # Allow the user to override the default value...
  ifdef ALT_DEVTOOLS_PATH
