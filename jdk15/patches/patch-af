@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.3 2008/03/04 15:43:54 tnn2 Exp $
+$NetBSD: patch-af,v 1.4 2009/03/06 12:56:08 absd Exp $
 
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2008-03-03 18:07:27.000000000 +0100
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-03-06 01:20:09.000000000 +0000
 +++ hotspot/src/os/bsd/vm/os_bsd.cpp
 @@ -59,6 +59,17 @@
  # define pthread_main_np() 0
@@ -29,3 +29,12 @@ $NetBSD: patch-af,v 1.3 2008/03/04 15:43:54 tnn2 Exp $
  #endif
  #define EXTENSIONS_DIR "/lib/ext"
  #define ENDORSED_DIR "/lib/endorsed"
+@@ -3000,7 +3011,7 @@ jint os::init_2(void) {
+ 
+   // XXX ugly hack for 32-bit address space, since we know the
+   // java heap is allocated with mmap() not sbrk():
+-#if !defined(__OpenBSD__) && !defined(_LP64)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(_LP64)
+   // set the max datasegment size to something reasonable
+   // complain if getrlimit/setrlimit fails but continue regardless. 
+   struct rlimit dseg_size;
