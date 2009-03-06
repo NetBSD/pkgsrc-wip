@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/03/06 20:40:55 absd Exp $
+# $NetBSD: Makefile,v 1.32 2009/03/06 20:56:53 ghen Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -23,6 +23,7 @@ USE_TOOLS+=		patch pax
 WRKSRC=			${WRKDIR}
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
 
 JAVA_NAME=		jdk15
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
@@ -70,8 +71,13 @@ PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 JRL_DOWNLOAD=	http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 
+.if ${MACHINE_ARCH} == "i386"
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
+.elif ${MACHINE_ARCH} == "x86_64"
+JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-image
+# JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-debug-image
+.endif
 
 FETCH_MESSAGE+= " The source and patches for the Java (tm) 2 SDK require"
 FETCH_MESSAGE+= " a Sun Java Research License, and cannot be"
