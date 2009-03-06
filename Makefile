@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3282 2009/03/06 07:11:01 htepper Exp $
+# $Id: Makefile,v 1.3283 2009/03/06 12:32:46 htepper Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1874,7 +1874,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tk85
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
-SUBDIR+=	tmux
 SUBDIR+=	tmw
 SUBDIR+=	tome
 SUBDIR+=	tome2

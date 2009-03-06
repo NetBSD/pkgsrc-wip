@@ -116,7 +116,6 @@ Suggested ready to import packages
 	o libdbi [pkg/40235]
 	o lua-mode [pkg/40236]
 	o pipestatus [pkg/40250]
-	o tmux [pkg/40497]
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
 
