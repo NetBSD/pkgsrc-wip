@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/02/24 15:19:22 absd Exp $
+# $NetBSD: Makefile,v 1.30 2009/03/06 13:44:53 ghen Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -43,7 +43,7 @@ BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
 MAKE_ENV+=		ALT_BOOTDIR=${LOCALBASE}/java/sun-1.5
 .endif
 
-.if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime)
+.if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime) && !exists(/proc/uptime)
 PKG_FAIL_REASON=	"If bootstrapping with Linux JDK,"
 PKG_FAIL_REASON+=	"then /emul/linux/proc must be mounted. Run:"
 PKG_FAIL_REASON+=	"mount -o linux -t procfs /dev/null /emul/linux/proc"
