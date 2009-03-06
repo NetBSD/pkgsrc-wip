@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.6 2009/03/05 15:49:50 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.7 2009/03/06 15:15:11 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -180,12 +180,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# clean directory (if necessary)
-if [ $CLEAN -ne 0 ]; then
-    echo "Cleaning $BASEDIR ..."
-    $RM -rf *
-fi
-
 # remove pre-existing patches
 if [ -e patches ]; then
     echo "Removing pre-existing patches ..."
@@ -288,3 +282,23 @@ if [ $DEBUG -ne 0 -o $VERBOSE -ne 0 ]; then
     echo "$TEST_CMD"
 fi
 exec $TEST_CMD
+
+if [ $? -ne 0 ]; then
+    echo "An error occurred while running the tests.  The results in"
+    echo "$BASEDIR will be preserved in case they are helpful for"
+    echo "determining the cause of the error(s)."
+    exit 1
+fi
+
+# clean directory (if necessary)
+if [ $CLEAN -ne 0 ]; then
+    echo "Cleaning $BASEDIR ..."
+    $RM -rf $BASEDIR
+fi
+
+# report location of test results
+echo "Tests completed successfully.  The test results will be available at:"
+echo
+echo "     http:http://www.boost.org/development/tests/trunk/developer/summary.html"
+echo
+echo "under the heading $SYS / $RUNNER"
