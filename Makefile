@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3284 2009/03/06 17:56:56 minskim Exp $
+# $Id: Makefile,v 1.3285 2009/03/07 15:01:33 imilh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1477,7 +1477,6 @@ SUBDIR+=	pkg_online
 SUBDIR+=	pkg_online-client
 SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
-SUBDIR+=	pkg_select
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
 #SUBDIR+=	pkgpm
