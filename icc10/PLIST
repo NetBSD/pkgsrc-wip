@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/26 19:41:28 alnsn Exp $
-
+@comment $NetBSD: PLIST,v 1.3 2009/03/07 03:07:28 thomasklausner Exp $
 ${ICC_SUBPREFIX}/bin/codecov
 ${ICC_SUBPREFIX}/bin/icc
 ${ICC_SUBPREFIX}/bin/icc.cfg
