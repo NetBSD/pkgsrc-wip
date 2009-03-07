@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/06 17:56:57 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/07 03:05:04 minskim Exp $
 # TeX Live Revision 11868
 
 DISTNAME=	pdftex
@@ -13,10 +13,8 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	TeX extension for direct creation of PDF
 
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
-DEPENDS+=	tex-cm-[0-9]*:../../wip/tex-cm
 DEPENDS+=	tex-etex-[0-9]*:../../wip/tex-etex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
-DEPENDS+=	tex-misc-[0-9]*:../../wip/tex-misc
 DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
