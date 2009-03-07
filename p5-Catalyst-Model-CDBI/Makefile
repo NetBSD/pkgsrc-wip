@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/07 09:46:53 cheusov Exp $
 
 DISTNAME=	Catalyst-Model-CDBI-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Model-CDBI/
 COMMENT=	CDBI model class for Catalyst
 
-DEPENDS+=	p5-Class-DBI-Loader>=0.2:../../devel/p5-Class-DBI-Loader
+DEPENDS+=	p5-Class-DBI-Loader>=0.2:../../wip/p5-Class-DBI-Loader
 DEPENDS+=	p5-Catalyst-Runtime>=4:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-DBI>=0:../../databases/p5-Class-DBI
 
