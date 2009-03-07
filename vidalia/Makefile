@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/30 08:29:46 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/07 09:43:38 cheusov Exp $
 #
 
 DISTNAME=	vidalia-0.0.16
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 
 # should work with net/tor aswell
-DEPENDS+=	tor-[0-9]*:../../wip/tor
+DEPENDS+=	tor-[0-9]*:../../net/tor
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
