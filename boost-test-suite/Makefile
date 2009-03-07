@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/06 23:48:42 brook1 Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/07 15:36:17 brook1 Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -18,7 +18,6 @@ FTP=			${TOOLS_PLATFORM.ftp}
 HOSTNAME=		${TOOLS_PLATFORM.hostname}
 TEE=			${TOOLS_PLATFORM.tee}
 
-BOOST_USER?=		${USER}
 BOOST_TEST_BASEDIR?=	/var/boost
 
 NO_CHECKSUM=		yes
@@ -62,25 +61,32 @@ LIBDATA_DIR=			${PREFIX}/libdata/boost-test-suite
 
 INSTALLATION_DIRS+=		libdata sbin
 
+FILES+=				boost-test-suite boost-test-suite.1
+FILES+=				comment.html.in patch_boost
+PATCHES+=			index patch-aa
+
 do-extract:
-	@${MKDIR} -p ${WRKSRC} ${WRKSRC}/patches.dist
-	@${CP} DESCR ${WRKSRC}
-	@${CP} -R ${FILESDIR}/* ${WRKSRC}
-	@${CP} -R ${PATCHDIR}/* ${WRKSRC}/patches.dist
-	@${CHMOD} 444 ${WRKSRC}/patches.dist/*
-	@${RM} -rf ${WRKSRC}/CVS ${WRKSRC}/patches.dist/CVS
+	${MKDIR} -p ${WRKSRC} ${WRKSRC}/patches
+	${CP} DESCR ${WRKSRC}
+.for f in ${FILES}
+	${CP} ${FILESDIR}/${f} ${WRKSRC}
+.endfor
+.for f in ${PATCHES}
+	${CP} ${PATCHDIR}/${f} ${WRKSRC}/patches
+.endfor
 
 # patches/* are patches to apply during the testing, not to the package itself
 do-patch:		# no patches to apply
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDATA_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDATA_DIR}/patches
 	${INSTALL_SCRIPT} ${WRKSRC}/boost-test-suite ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/boost-test-suite.1 \
-		${DESTDIR}${PREFIX}/man/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/patch_boost ${DESTDIR}${LIBDATA_DIR}
 	${INSTALL_DATA} ${WRKSRC}/comment.html.in ${DESTDIR}${LIBDATA_DIR}
-	${CP} -Rp ${WRKSRC}/patches.dist ${DESTDIR}${LIBDATA_DIR}
+	cd ${WRKSRC}/patches && ${PAX} -rw * ${DESTDIR}${LIBDATA_DIR}/patches
 
 .include "../../devel/boost-build/toolset.mk"
 .include "../../lang/python/pyversion.mk"

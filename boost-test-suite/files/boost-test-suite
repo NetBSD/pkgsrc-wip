@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: boost-test-suite,v 1.9 2009/03/06 23:48:42 brook1 Exp $
+# $NetBSD: boost-test-suite,v 1.10 2009/03/07 15:36:17 brook1 Exp $
 
 # Copyright (c) 2009, Brook Milligan < brook -at- nmsu.edu >
 # All rights reserved.
@@ -200,7 +200,7 @@ if [ $USE_PATCHES -ne 0 ]; then
     $MKDIR patches
     if [ $IMPORT_PATCHES -eq 0 ]; then
 	echo "Importing distributed patches ..."
-	$CP $LIBDATA_DIR/patches.dist/* patches
+	$CP $LIBDATA_DIR/patches/* patches
 	PATCH_TAG=DISTRIB_PATCHES
 	PATCH_URL=$DEFAULT_PATCH_URL
     else
@@ -303,6 +303,7 @@ if [ -n "$LOG_FILE" ]; then
     (echo -n "# " && $DATE) >> $LOG_FILE
 fi
 if [ $DEBUG -ne 0 ]; then
+    eval echo "\# $COMMAND_LINE" >> $LOG_FILE
     eval echo "\# $TEST_CMD" >> $LOG_FILE
 fi
 
