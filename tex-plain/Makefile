@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/25 08:34:02 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/07 02:18:53 minskim Exp $
 # TeX Live Revision 9267
 
 DISTNAME=	plain
@@ -13,6 +13,9 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	The Plain TeX format
 
 CONFLICTS+=	teTeX-texmf-[0-9]*
+DEPENDS+=	tex-cm-[0-9]*:../../wip/tex-cm
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
+DEPENDS+=	tex-misc-[0-9]*:../../wip/tex-misc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
