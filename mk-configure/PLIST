@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/08 17:33:35 cheusov Exp $
+libexec/mkc/mkc_check_decl
+libexec/mkc/mkc_check_funclib
+libexec/mkc/mkc_check_header
+libexec/mkc/mkc_check_sizeof
+share/doc/mk-configure/ChangeLog
+share/doc/mk-configure/NEWS
+share/doc/mk-configure/README
+share/doc/mk-configure/TODO
+share/mk/configure.mk
+@dirrm share/mk
+@dirrm share/doc/mk-configure
+@dirrm libexec/mkc
