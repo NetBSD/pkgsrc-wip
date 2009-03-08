@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/12 23:58:48 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/08 12:01:58 pettai Exp $
 #
 
 PKGNAME=	p5-Authen-${DISTNAME}
@@ -10,8 +10,9 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://search.cpan.org/~mshoyher/TacacsPlus-0.16/TacacsPlus.pm
 COMMENT=	Perl extension for authentication using tacacs+ server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PERL5_PACKLIST=	auto/Authen/TacacsPlus/.packlist
-# url2pkg-marker (please do not remove this line.)
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
