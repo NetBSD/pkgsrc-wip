@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/01/04 18:16:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/08 15:56:05 thomasklausner Exp $
 
 DISTNAME=	gnomebaker-0.5.1
 PKGREVISION=	2
@@ -18,7 +18,7 @@ DEPENDS+=	cdrtools>=2.01.01.53:../../sysutils/cdrtools
 DEPENDS+=	libgnomeui>=2.8.1:../../devel/libgnomeui
 
 
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

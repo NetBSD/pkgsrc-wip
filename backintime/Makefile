@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/18 19:25:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/08 15:56:04 thomasklausner Exp $
 #
 
 DISTNAME=	backintime-0.9.2_src
@@ -41,5 +41,5 @@ do-install:
 	cd ${WRKSRC} && ${SH} install-gnome.sh
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
