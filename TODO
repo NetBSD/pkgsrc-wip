@@ -11,6 +11,7 @@ Suggested package updates
 	o chora-2.0.1
 	o chromium-0.9.13.3
 	o cinelerra-2.1
+	o commoncpp2-1.7.3
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o desmume-0.9.1
@@ -30,6 +31,7 @@ Suggested package updates
 	o geant-4.9.2
 	o gforge-4.5.11
 	o gimmie-0.2.8
+	o gipfel-0.2.8
 	o globulation2-0.9.4
 	o gnokii-0.6.27
 	o gnome-commander-1.2.7
@@ -44,7 +46,7 @@ Suggested package updates
 	o icc-11.0
 	o kino-1.0.0
 	o lensfun-0.2.3
-	o libexosip-3.2.0
+	o libexosip-3.3.0
 	o libgadu-1.8.2
 	o libgksu-2.0.4
 	o libxcb-1.2
@@ -63,6 +65,7 @@ Suggested package updates
 	o ocp-0.1.16
 	o opal-2.2.11
 	o openvrml-0.17.11
+	o ortp-0.15.0
 	o osmose-0.8.5b
 	o p5-Net-DBus-0.33.6
 	o parted-1.8.8
