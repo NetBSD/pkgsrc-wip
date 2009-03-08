@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/02/27 09:53:48 jh88 Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/08 22:28:16 jh88 Exp $
 #
 
-DISTNAME=	gipfel-0.2.7
+DISTNAME=	gipfel-0.2.8
 CATEGORIES=	geography graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
