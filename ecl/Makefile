@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/02/08 12:38:44 asau Exp $
+# $NetBSD: Makefile,v 1.25 2009/03/08 15:57:25 asau Exp $
 #
 
 DISTNAME=		ecl-8.12.0
@@ -47,6 +47,12 @@ PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} PKGVERSION_MAJOR=${PKG
 USE_TOOLS+=		autoconf
 pre-configure:
 	cd ${WRKSRC}/src && autoconf
+
+# Work around problem with libraries on "Darwin 8.11.0 Power Macintosh":
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=    yes
+.endif
 
 .include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
