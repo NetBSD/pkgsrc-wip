@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/04 17:47:46 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/08 01:56:29 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ECORE_BUILDLINK3_MK:=	${ECORE_BUILDLINK3_MK}+
@@ -19,7 +19,6 @@ BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 
 .include "../../devel/eet/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/evas-software-x11/buildlink3.mk"
