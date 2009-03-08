@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/02/14 21:39:20 asau Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/08 16:41:09 asau Exp $
 #
 
-DISTNAME=		gromacs-4.0.3
+DISTNAME=		gromacs-4.0.4
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.gromacs.org/pub/gromacs/
 
