@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/15 22:38:13 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/08 11:11:43 pettai Exp $
 #
 
 DISTNAME=	mvision2.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://roundcubethemes.net/downloads/
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://roundcubethemes.net/
 COMMENT=	Hotmail/MSN-stylish skin for roundcube webmail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	roundcube>=0.2-stable:../../mail/roundcube
 WRKSRC=		${WRKDIR}/mvision2_en
