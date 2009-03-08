@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/07 16:37:03 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/08 00:46:33 pettai Exp $
 #
 
 DISTNAME=		sysmon-0.92.2
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://puck.nether.net/pub/jared/
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.sysmon.org/
 COMMENT=		Small and fast network monitoring tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -25,17 +27,17 @@ INSTALLATION_DIRS=      share/examples/sysmon
 INSTALLATION_DIRS+=     share/doc/sysmon bin
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/examples/sysmon.conf.dist ${EGDIR}/sysmon.conf.dist
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SMDOC}
-	${INSTALL_DATA} ${WRKSRC}/docs/README ${SMDOC}
-	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES ${SMDOC}
-	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${SMDOC}
-	${INSTALL_DATA} ${WRKSRC}/docs/*.jpg  ${SMDOC}
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt  ${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/examples/sysmon.conf.dist ${DESTDIR}${EGDIR}/sysmon.conf.dist
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/docs/README ${DESTDIR}${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES ${DESTDIR}${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${DESTDIR}${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.jpg  ${DESTDIR}${SMDOC}
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt  ${DESTDIR}${SMDOC}
 	${INSTALL_DATA} ${WRKSRC}/docs/sysmon.conf.man \
-			${PREFIX}/${PKGMANDIR}/man5/sysmon.conf.5
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/sysmon.conf.5
 	${INSTALL_DATA} ${WRKSRC}/docs/sysmon.man \
-			${PREFIX}/${PKGMANDIR}/man8/sysmon.8
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/sysmon.8
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

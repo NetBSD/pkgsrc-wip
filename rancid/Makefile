@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/07 22:42:08 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/08 00:42:06 pettai Exp $
 #
 
 DISTNAME=		rancid-2.3.1
@@ -8,8 +8,9 @@ MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.shrubbery.net/rancid/
 COMMENT=		Really Awesome New Cisco confIg Differ
-#LICENSE=		gnu-gpl-v2
 LICENSE=		rancid-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		tcl-expect>=5.4:../../lang/tcl-expect
 
@@ -19,7 +20,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS+=	--disable-conf-install
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/rancid
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/rancid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		PERLV_PATH=${PERL5:Q}
@@ -32,7 +33,7 @@ RC_GROUP?=		rancid
 PKG_GROUPS=		${RC_GROUP}
 PKG_USERS=		${RC_USER}:${RC_GROUP}
 PKG_GECOS.${RC_USER}=	Really Awesome New Cisco confIg Differ
-PKG_HOME.${RC_USER}=	${VARBASE}/db/rancid
+PKG_HOME.${RC_USER}=	${VARBASE}/rancid
 PKG_SHELL.${RC_USER}=	${SH}
 PKG_USERS_VARS+=	RC_USER
 PKG_GROUPS_VARS+=	RC_GROUP
@@ -51,17 +52,17 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/etc/lg.conf.sample.in
 SUBST_FILES.paths+=	${WRKSRC}/etc/rancid.conf.sample.in
 SUBST_STAGE.paths=      post-extract
-SUBST_SED.paths=        -e 's,@ENV_PATH@,${PREFIX}/sbin:/bin:/usr/bin:/usr/sbin:/sbin,'
+SUBST_SED.paths=        -e 's,@ENV_PATH@,${PREFIX}/sbin:/bin:/usr/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin,'
 
-#OWN_DIRS=		${VARBASE}/db/rancid
-OWN_DIRS_PERMS+=	${VARBASE}/db/rancid ${RC_USER} ${RC_GROUP} 0755
+#OWN_DIRS=		${VARBASE}/rancid
+OWN_DIRS_PERMS+=	${VARBASE}/rancid ${RC_USER} ${RC_GROUP} 0755
 
 INSTALLATION_DIRS=	share/examples/rancid
 INSTALLATION_DIRS+=	share/doc/rancid
-INSTALLATION_DIRS+=	${VARBASE}/db/rancid
+INSTALLATION_DIRS+=	${VARBASE}/rancid
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/lg.conf.sample ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/rancid.conf.sample ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/lg.conf.sample ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/rancid.conf.sample ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
