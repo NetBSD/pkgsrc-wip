@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/07 21:02:49 koifren Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/08 08:46:29 koifren Exp $
 
 DISTNAME=	packman-0.0.9
 CATEGORIES=	pkgtools
@@ -7,6 +7,8 @@ MASTER_SITES=	http://kefren.ngnetworks.ro/
 MAINTAINER=	mihai.chelaru@ngnetworks.ro
 HOMEPAGE=	http://kefren.ngnetworks.ro/
 COMMENT=	Small package manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
@@ -17,6 +19,6 @@ REPLACE_PERL+=	packman.pl
 
 do-build:
 do-install:
-	install ${WRKSRC}/packman.pl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/packman.pl ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
