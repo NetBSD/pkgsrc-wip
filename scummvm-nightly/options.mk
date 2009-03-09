@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.16 2009/03/08 10:27:10 dillo Exp $
+# $NetBSD: options.mk,v 1.17 2009/03/09 09:45:20 dillo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scummvm-nightly
 PKG_SUPPORTED_OPTIONS=	scummvm-nightly-cruise
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-igor
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-lol
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-m4
+PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-pn
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-saga2
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-sci
 PKG_SUPPORTED_OPTIONS+=	scummvm-nightly-tinsel
@@ -23,6 +24,9 @@ CONFIGURE_ARGS+=--enable-lol
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-m4)
 CONFIGURE_ARGS+=--enable-m4
+.endif
+.if !empty(PKG_OPTIONS:Mscummvm-nightly-pn)
+CONFIGURE_ARGS+=--enable-pn
 .endif
 .if !empty(PKG_OPTIONS:Mscummvm-nightly-saga2)
 CONFIGURE_ARGS+=--enable-saga2
