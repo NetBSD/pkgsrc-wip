@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/09 15:25:34 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/03/09 16:20:45 emil_s Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -23,6 +23,7 @@ include/givaro/givextension.h
 include/givaro/givgenarith.h
 include/givaro/givgfq.h
 include/givaro/givgfq.inl
+include/givaro/givgfqext.h
 include/givaro/givhashtable.h
 include/givaro/givhashtable.inl
 include/givaro/givindeter.h
@@ -118,6 +119,7 @@ include/gmp++/gmp++_int.inl
 lib/libgivaro.la
 share/examples/givaro/FiniteField/ChineseRemaindering.C
 share/examples/givaro/FiniteField/GF128.C
+share/examples/givaro/FiniteField/GFirreducible.C
 share/examples/givaro/FiniteField/Test_Extension.C
 share/examples/givaro/FiniteField/all_field.C
 share/examples/givaro/FiniteField/domain_to_operatorstyle.C
@@ -125,6 +127,7 @@ share/examples/givaro/FiniteField/exponentiation.C
 share/examples/givaro/FiniteField/ff_arith.C
 share/examples/givaro/FiniteField/gfq_atomic.C
 share/examples/givaro/FiniteField/zpz_atomic.C
+share/examples/givaro/Integer/ModularSquareRoot.C
 share/examples/givaro/Integer/ProbLucas.C
 share/examples/givaro/Integer/RSA_breaking.C
 share/examples/givaro/Integer/RSA_decipher.C
@@ -156,6 +159,7 @@ share/examples/givaro/Polynomial/pol_arith.C
 share/examples/givaro/Polynomial/pol_eval.C
 share/examples/givaro/Polynomial/pol_factor.C
 share/examples/givaro/Rational/iratrecon.C
+share/examples/givaro/Rational/polydouble.C
 @dirrm share/examples/givaro/Rational
 @dirrm share/examples/givaro/Polynomial
 @dirrm share/examples/givaro/Integer
