@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/09 12:06:08 emil_s Exp $
 #
 
 DISTNAME=	jp2a-1.0.6
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jp2a/}
 MAINTAINER=	emil@math.su.se
 HOMEPAGE=	http://jp2a.sourceforge.net/
 COMMENT=	JPEG to ASCII converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
