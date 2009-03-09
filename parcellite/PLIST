@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/09 01:42:02 jihbed Exp $
+bin/parcellite
+man/man1/parcellite.1
+share/applications/parcellite.desktop
+share/locale/de/LC_MESSAGES/parcellite.mo
+share/locale/es/LC_MESSAGES/parcellite.mo
+share/locale/hu/LC_MESSAGES/parcellite.mo
+share/locale/it/LC_MESSAGES/parcellite.mo
+share/locale/ja/LC_MESSAGES/parcellite.mo
+share/locale/ru/LC_MESSAGES/parcellite.mo
