@@ -1,20 +1,44 @@
-# $NetBSD: Makefile,v 1.7 2006/12/18 01:37:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/09 21:26:40 jihbed Exp $
 #
 
-DISTNAME=		grisbi-0.5.5
-CATEGORIES=		finance
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grisbi/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	grisbi-0.5.9
+CATEGORIES=	finance
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grisbi/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.grisbi.org/
-COMMENT=		Personal Finance Manager under Gnome/GTK
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://grisbi.sourceforge.net/
+COMMENT=	Personal Finance Manager under Gnome/GTK
 
-USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config intltool gmake
+
+USE_DIRS+=	xdg-1.4
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
+PKG_OPTIONS_VAR=                PKG_OPTIONS.homebank
+PKG_SUPPORTED_OPTIONS=          libofx
+PKG_SUGGESTED_OPTIONS=          libofx
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty (PKG_OPTIONS:Mlibofx)
+.include "../../finance/libofx/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libofx
+.else
+CONFIGURE_ARGS+=	--without-libofx
+.endif
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/grisbi.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
