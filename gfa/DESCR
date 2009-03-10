@@ -1,0 +1,2 @@
+gfa is a small and fast address book written in C and GTK+2. It uses
+sqlite as backend for the addresses

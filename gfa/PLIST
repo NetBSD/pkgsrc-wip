@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/10 23:58:40 jihbed Exp $
+bin/gfa
+share/gfa/README
+share/gfa/pixmaps/person.png
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gfa/pixmaps
+@dirrm share/gfa
