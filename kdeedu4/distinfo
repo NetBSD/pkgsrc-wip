@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2009/01/28 11:25:22 mwdavies Exp $
+$NetBSD: distinfo,v 1.17 2009/03/10 11:36:06 mwdavies Exp $
 
-SHA1 (kdeedu-4.2.0.tar.bz2) = fa37baac997345168816dc238daa6461effd36ee
-RMD160 (kdeedu-4.2.0.tar.bz2) = fcd9f66d350e2f32bc5b6c34b09eae79c0835210
-Size (kdeedu-4.2.0.tar.bz2) = 59252322 bytes
+SHA1 (kdeedu-4.2.1.tar.bz2) = f2381f33f6586b950e925423d135b9e66b7bf428
+RMD160 (kdeedu-4.2.1.tar.bz2) = 1d934e175d4897c224d3a9843e1fbdd18e5e7e80
+Size (kdeedu-4.2.1.tar.bz2) = 59459156 bytes
 SHA1 (patch-aa) = 5e2f12e2c70e438524ace2d238c9119dd36695ed
 SHA1 (patch-ab) = 2ff0e901376e5a01abc26799049eb738b3eb2fd8
 SHA1 (patch-ae) = 412adfe31664db087e66ce73428ee775dff858d3

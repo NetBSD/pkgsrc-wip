@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/03/10 11:36:06 mwdavies Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -982,6 +982,7 @@ share/kde/apps/kalarm/kalarmui.rc
 share/kde/apps/kconf_update/kalarm-1.2.1-general.pl
 share/kde/apps/kconf_update/kalarm-1.9.5-defaults.pl
 share/kde/apps/kconf_update/kalarm-2.0.2-general.pl
+share/kde/apps/kconf_update/kalarm-2.1.5-general.pl
 share/kde/apps/kconf_update/kalarm-version.pl
 share/kde/apps/kconf_update/kalarm.upd
 share/kde/apps/kconf_update/kmail-3.1-update-new-mail-notification-settings.pl
@@ -1246,6 +1247,7 @@ share/kde/apps/libkholidays/holiday_ro
 share/kde/apps/libkholidays/holiday_ru
 share/kde/apps/libkholidays/holiday_se
 share/kde/apps/libkholidays/holiday_si
+share/kde/apps/libkholidays/holiday_sk
 share/kde/apps/libkholidays/holiday_th
 share/kde/apps/libkholidays/holiday_ua
 share/kde/apps/libkholidays/holiday_us

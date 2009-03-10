@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/03/10 11:36:06 mwdavies Exp $
 bin/bomber
 bin/bovo
 bin/kapman
@@ -1118,6 +1118,7 @@ share/kde/apps/kbreakout/themes/crystal.desktop
 share/kde/apps/kbreakout/themes/crystal.svgz
 share/kde/apps/kbreakout/themes/crystal_preview.png
 share/kde/apps/kbreakout/themes/default.desktop
+share/kde/apps/kbreakout/themes/default_preview.png
 share/kde/apps/kbreakout/themes/default.svgz
 share/kde/apps/kbreakout/themes/simple.desktop
 share/kde/apps/kbreakout/themes/simple.svgz

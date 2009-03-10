@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/14 10:51:53 mwdavies Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/10 11:36:06 mwdavies Exp $
 
 DISTNAME=	kdeartwork-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -6,7 +6,7 @@ COMMENT=	Artwork for the KDE integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
-CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
+CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver/config
 CMAKE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
 
 #BUILD_MAKE_FLAGS+= VERBOSE=1

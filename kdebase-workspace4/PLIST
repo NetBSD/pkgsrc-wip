@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/03/10 11:36:06 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -434,9 +434,9 @@ share/doc/kde/HTML/en/kcontrol/kwindecoration/main.png
 share/doc/kde/HTML/en/kcontrol/mouse/common
 share/doc/kde/HTML/en/kcontrol/mouse/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/mouse/index.docbook
-share/doc/kde/HTML/en/kcontrol/powerdevilconfig/common
-share/doc/kde/HTML/en/kcontrol/powerdevilconfig/index.cache.bz2
-share/doc/kde/HTML/en/kcontrol/powerdevilconfig/index.docbook
+share/doc/kde/HTML/en/kcontrol/powerdevil/common
+share/doc/kde/HTML/en/kcontrol/powerdevil/index.cache.bz2
+share/doc/kde/HTML/en/kcontrol/powerdevil/index.docbook
 share/doc/kde/HTML/en/kcontrol/screensaver/common
 share/doc/kde/HTML/en/kcontrol/screensaver/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/screensaver/index.docbook
@@ -2170,7 +2170,7 @@ share/sounds/pop.wav
 @dirrm share/doc/kde/HTML/en/kcontrol/windowbehaviour
 @dirrm share/doc/kde/HTML/en/kcontrol/splashscreen
 @dirrm share/doc/kde/HTML/en/kcontrol/screensaver
-@dirrm share/doc/kde/HTML/en/kcontrol/powerdevilconfig
+@dirrm share/doc/kde/HTML/en/kcontrol/powerdevil
 @dirrm share/doc/kde/HTML/en/kcontrol/mouse
 @dirrm share/doc/kde/HTML/en/kcontrol/kwindecoration
 @dirrm share/doc/kde/HTML/en/kcontrol/kwincompositing

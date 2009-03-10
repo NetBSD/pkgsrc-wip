@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/03/10 11:36:06 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -29,6 +29,7 @@ include/KDE/DNSSD/RemoteService
 include/KDE/DNSSD/ServiceBase
 include/KDE/DNSSD/ServiceBrowser
 include/KDE/DNSSD/ServiceModel
+include/KDE/DNSSD/ServiceTypeBrowser
 include/KDE/DOM/AbstractView
 include/KDE/DOM/Attr
 include/KDE/DOM/CDATASection
@@ -1999,6 +2000,7 @@ share/kde/apps/katepart/katepartsimpleui.rc
 share/kde/apps/katepart/katepartui.rc
 share/kde/apps/katepart/script/cstyle.js
 share/kde/apps/katepart/script/jstest.js
+share/kde/apps/katepart/script/lilypond.js
 share/kde/apps/katepart/script/lisp.js
 share/kde/apps/katepart/script/python.js
 share/kde/apps/katepart/script/ruby.js
@@ -2171,6 +2173,8 @@ share/kde/apps/kconf_update/kcookiescfg.upd
 share/kde/apps/kconf_update/kded.upd
 share/kde/apps/kconf_update/kio_help.upd
 share/kde/apps/kconf_update/kioslave.upd
+share/kde/apps/kconf_update/ksslcertificatemanager.upd
+share/kde/apps/kconf_update/ksslcertificatemanager.upd.sh
 share/kde/apps/kconf_update/move_kio_help_cache.sh
 share/kde/apps/kconf_update/proxytype.pl
 share/kde/apps/kconf_update/useragent.pl
