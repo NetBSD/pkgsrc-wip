@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/03/10 15:01:25 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/10 15:06:54 fulviociriaco Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -7,8 +7,8 @@ CATEGORIES=	lang
 MASTER_SITES=	http://www.iro.umontreal.ca/~gambit/download/gambit/v4.4/source/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE=	http://www.iro.umontreal.ca/~gambit/
+MAINTAINER= oivulf@gmail.com
+HOMEPAGE=	http://dynamo.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page
 COMMENT=	GambitC Scheme System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
