@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/03/06 20:56:53 ghen Exp $
+# $NetBSD: Makefile,v 1.33 2009/03/10 11:15:26 absd Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -71,10 +71,14 @@ PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 JRL_DOWNLOAD=	http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 
+# Use JAVA_MACHINE_ARCH rather than MACHINE as we would want to share
+# at a MACHINE_ARCH level if we ever build for powerpc or mips
+JAVA_MACHINE_ARCH=${MACHINE_ARCH}
 .if ${MACHINE_ARCH} == "i386"
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 .elif ${MACHINE_ARCH} == "x86_64"
+JAVA_MACHINE_ARCH=	amd64
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-debug-image
 .endif
@@ -131,6 +135,7 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 .include "options.mk"
 
 PLIST_VARS+=    jce plugin
+PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
 
 .include "../../wip/jdk16/license-extract.mk"
 
