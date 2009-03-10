@@ -1,7 +1,3 @@
-  * Test other browsers (currently tested: firefox-2.0.0.2)
-
-  * Fix up installation without the plugin
-
   * files/cacerts stolen from a Sun JDK 1.6 installation -- is there
     a better source?
 

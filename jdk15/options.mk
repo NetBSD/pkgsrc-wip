@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2009/03/06 20:40:55 absd Exp $
+# $NetBSD: options.mk,v 1.12 2009/03/10 09:44:31 absd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin inet6
@@ -36,9 +36,9 @@ MAKE_ENV+=	ALT_MOZILLA_HEADERS_PATH=${PREFIX:Q}/include/${MOZILLA}
 # Check: is nspr necessary?
 #.include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.nspr=	build
-PLIST.plugin=	yes
-MESSAGE_SRC+=			MESSAGE.plugin
+PLIST.plugin=		yes
+MESSAGE_SRC+=		MESSAGE.plugin
 
 .else
-MAKE_ENV+=			BUILD_PLUGIN=false
+MAKE_ENV+=		BUILD_PLUGIN=false
 .endif
