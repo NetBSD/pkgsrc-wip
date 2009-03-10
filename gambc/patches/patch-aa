@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/03/10 15:01:25 fulviociriaco Exp $
+
+--- makefile.in.orig	2008-12-23 15:08:52.000000000 +0100
++++ makefile.in
+@@ -70,7 +70,7 @@ includedir=$(includedir) libdir=$(libdir
+ bindir=$(bindir) docdir=$(docdir) \
+ infodir=$(infodir) emacsdir=$(emacsdir)
+ 
+-SUBDIRS = include lib gsi gsc bin misc doc tests examples prebuilt
++SUBDIRS = include lib gsi gsc bin doc tests examples
+ 
+ RCFILES = README INSTALL.txt LICENSE-2.0.txt LGPL.txt \
+ makefile.in configure configure.ac config.guess config.sub install-sh mkidirs \

@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1 2009/03/10 15:01:25 fulviociriaco Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+GAMBC_BUILDLINK3_MK:=	${GAMBC_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	gambc
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngambc}
+BUILDLINK_PACKAGES+=	gambc
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gambc
+
+.if ${GAMBC_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.gambc+=	gambc>=4.2.6
+BUILDLINK_PKGSRCDIR.gambc?=	../../lang/gambc
+.endif	# GAMBC_BUILDLINK3_MK
+
+.include "../../mk/dlopen.buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

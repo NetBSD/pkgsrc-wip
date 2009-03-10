@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2009/03/10 15:01:25 fulviociriaco Exp $
+
+SHA1 (gambc-v4_4_1.tgz) = 80ed43702024320c20065871c909377745c154b8
+RMD160 (gambc-v4_4_1.tgz) = 8f126b5a54cf7fba4f80afbe3d9b917db98e5779
+Size (gambc-v4_4_1.tgz) = 8016716 bytes
+SHA1 (patch-aa) = 2f3ed753556217020dd10c407d989d59c315f909
