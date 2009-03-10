@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/03/10 10:57:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/03/10 12:34:39 thomasklausner Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/doc/scummvm/AUTHORS
@@ -14,7 +14,6 @@ share/scummvm/kyra.dat
 share/scummvm/lure.dat
 share/scummvm/m4.dat
 share/scummvm/queen.tbl
-share/scummvm/scummclassic.zip
 share/scummvm/scummmodern.zip
 share/scummvm/sky.cpt
 @dirrm share/scummvm
