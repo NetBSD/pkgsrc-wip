@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/05 23:51:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/10 11:41:37 thomasklausner Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
 CATEGORIES=	games
@@ -6,6 +6,8 @@ CATEGORIES=	games
 OWNER=		dillo@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_SRC_ON_FTP=	# changes daily
 NO_SRC_ON_CDROM=# changes daily
