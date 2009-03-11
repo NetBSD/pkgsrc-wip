@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3289 2009/03/11 16:02:51 jihbed Exp $
+# $Id: Makefile,v 1.3290 2009/03/11 21:53:17 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1418,6 +1418,7 @@ SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
 SUBDIR+=	panda
+SUBDIR+=	parcellite:
 SUBDIR+=	parsec
 SUBDIR+=	parted
 SUBDIR+=	pasmo
