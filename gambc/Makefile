@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/10 15:06:54 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/11 07:07:38 fulviociriaco Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -24,20 +24,15 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--enable-single-host
 CONFIGURE_ARGS+=	--enable-cplusplus
 CONFIGURE_ARGS+=	--enable-shared
-###
-### XXX On NetBSD/amd64 4.99.61, gcc had a resident memory size of over 384MB
-###	while building this and ultimately exhausted all 1GB of swap I had.
-###	See the documentation for more information.  (This was due to using
-###	-fmodulo-sched, gcc 4.1.3).
-###
+CONFIGURE_ARGS+=  --docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--disable-gcc-opts
 
 INFO_FILES=		yes
 MAKE_FILE=		makefile
 
-BUILD_TARGET+=		bootstrap
+BUILD_TARGET+=		bootstrap all doc 
 TEST_TARGET=		check
-
+LDFLAGS += -L${WRKSRC}/lib -L${WRKSRC}/gsi
 CHECK_PORTABILITY_SKIP=	prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=no
 
@@ -45,20 +40,8 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-GAMBC_MAKE_FLAGS=	prefix=${PREFIX}
-GAMBC_MAKE_FLAGS+=	includedir=${PREFIX}/include
-GAMBC_MAKE_FLAGS+=	bindir=${PREFIX}/bin
-GAMBC_MAKE_FLAGS+=	infodir=${PREFIX}/${PKGINFODIR}
-GAMBC_MAKE_FLAGS+=	libdir=${PREFIX}/lib/
-GAMBC_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
-GAMBC_MAKE_FLAGS+=	docdir=${PREFIX}/share/doc/${PKGBASE}
-GAMBC_MAKE_FLAGS+=	infodir=${PREFIX}/${PKGINFODIR}
-GAMBC_MAKE_FLAGS+=	emacsdir=${PREFIX}/share/emacs/site-lisp
 
 MAKE_FLAGS+=		${GAMBC_MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	${GAMBC_MAKE_FLAGS:@.f.@\
-				${.f.:C|${PREFIX}|${DESTDIR}&|}\
-			@:M*}
 
 SUBST_CLASSES+=		build
 SUBST_FILES.build=	configure
