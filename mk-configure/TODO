@@ -1,0 +1,5 @@
+A PLIST conflict with bootstrap-mk-files: @dirrm share/mk
+
+  Running /usr/pkg/sbin/pkg_delete -K /var/db/pkg  mk-configure-0.6.0
+  pkg_delete: unable to completely remove directory '/usr/pkg/share/mk'
+  pkg_delete: couldn't entirely delete package `mk-configure-0.6.0'\n
