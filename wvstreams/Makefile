@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/11 14:14:51 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/11 16:58:12 udontknow Exp $
 #
 
 DISTNAME=	wvstreams-4.5.1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://wvstreams.googlecode.com/files/
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://wvstreams.googlecode.com/files/
+HOMEPAGE=	http://alumnit.ca/wiki/index.php?page=WvDial
 COMMENT=	WvStreams is a network programming library in C++
 
 GNU_CONFIGURE=	yes
