@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/09 21:28:05 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/11 12:33:16 jihbed Exp $
 bin/grisbi
 man/man1/grisbi.1
+share/applications/grisbi.desktop
 share/doc/grisbi/help/C/contents_motif.gif
 share/doc/grisbi/help/C/grisbi-manuel.html
 share/doc/grisbi/help/C/next_motif.gif
