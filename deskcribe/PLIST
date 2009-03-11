@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/11 13:14:49 jihbed Exp $
+bin/deskscribe
+bin/mausgrapher
+share/applications/deskscribe.desktop
+share/applications/mausgrapher.desktop
+share/deskscribe/icons/hicolor/48x48/status/deskscribe-recording.svg
+share/deskscribe/mausgrapher.glade
+share/icons/hicolor/16x16/apps/mausgrapher.svg
+share/icons/hicolor/22x22/apps/mausgrapher.svg
+share/icons/hicolor/32x32/apps/mausgrapher.svg
+share/icons/hicolor/48x48/apps/deskscribe.svg
+share/icons/hicolor/48x48/apps/mausgrapher.svg
+share/locale/ar/LC_MESSAGES/deskscribe.mo
+share/locale/dz/LC_MESSAGES/deskscribe.mo
+share/locale/en_GB/LC_MESSAGES/deskscribe.mo
+share/locale/es/LC_MESSAGES/deskscribe.mo
+share/locale/eu/LC_MESSAGES/deskscribe.mo
+share/locale/fi/LC_MESSAGES/deskscribe.mo
+share/locale/fr/LC_MESSAGES/deskscribe.mo
+share/locale/oc/LC_MESSAGES/deskscribe.mo
+share/locale/sl/LC_MESSAGES/deskscribe.mo
+share/locale/sv/LC_MESSAGES/deskscribe.mo
+share/mime/packages/deskscribe.xml
+@comment in shared-mime-info: @dirrm share/mime/packages
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/deskscribe/icons/hicolor/48x48/status
+@dirrm share/deskscribe/icons/hicolor/48x48
+@dirrm share/deskscribe/icons/hicolor
+@dirrm share/deskscribe/icons
+@dirrm share/deskscribe
+@comment in xdg-dirs: @dirrm share/applications
