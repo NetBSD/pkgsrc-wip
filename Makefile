@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3288 2009/03/11 15:02:11 udontknow Exp $
+# $Id: Makefile,v 1.3289 2009/03/11 16:02:51 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -259,6 +259,7 @@ SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
 #SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
+SUBDIR+=	deskscribe
 SUBDIR+=	desmume
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
@@ -448,6 +449,7 @@ SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	geany
+SUBDIR+=	gfa
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth
@@ -668,9 +670,11 @@ SUBDIR+=	hellanzb
 SUBDIR+=	hengband
 SUBDIR+=	heroes
 SUBDIR+=	hgview
+SUBDIR+=	hitori
 SUBDIR+=	hping3
 SUBDIR+=	hplip
 SUBDIR+=	hpoj
+SUBDIR+=	homebank
 SUBDIR+=	hs-HTTP
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-binary
