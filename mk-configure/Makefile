@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/08 17:33:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/11 19:44:56 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.6.0
@@ -16,9 +16,7 @@ USE_BSD_MAKEFILE=	yes
 
 DOC_FILES=		README NEWS ChangeLog TODO
 
-MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MKCATPAGES=no
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 INSTALL_TARGET=		install-dirs install
 
