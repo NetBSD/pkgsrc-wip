@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/04 09:37:29 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/12 11:15:32 thomasklausner Exp $
 bin/gimmie
 lib/bonobo/servers/GNOME_GimmieApplet.server
 ${PYSITELIB}/gimmie/W3CDate.py
@@ -26,15 +26,9 @@ ${PYSITELIB}/gimmie/gimmie_bar.pyo
 ${PYSITELIB}/gimmie/gimmie_base.py
 ${PYSITELIB}/gimmie/gimmie_base.pyc
 ${PYSITELIB}/gimmie/gimmie_base.pyo
-${PYSITELIB}/gimmie/gimmie_browser.py
-${PYSITELIB}/gimmie/gimmie_browser.pyc
-${PYSITELIB}/gimmie/gimmie_browser.pyo
 ${PYSITELIB}/gimmie/gimmie_computer.py
 ${PYSITELIB}/gimmie/gimmie_computer.pyc
 ${PYSITELIB}/gimmie/gimmie_computer.pyo
-${PYSITELIB}/gimmie/gimmie_documents.py
-${PYSITELIB}/gimmie/gimmie_documents.pyc
-${PYSITELIB}/gimmie/gimmie_documents.pyo
 ${PYSITELIB}/gimmie/gimmie_file.py
 ${PYSITELIB}/gimmie/gimmie_file.pyc
 ${PYSITELIB}/gimmie/gimmie_file.pyo
@@ -44,24 +38,33 @@ ${PYSITELIB}/gimmie/gimmie_gaim.pyo
 ${PYSITELIB}/gimmie/gimmie_globals.py
 ${PYSITELIB}/gimmie/gimmie_globals.pyc
 ${PYSITELIB}/gimmie/gimmie_globals.pyo
-${PYSITELIB}/gimmie/gimmie_gmail.py
-${PYSITELIB}/gimmie/gimmie_gmail.pyc
-${PYSITELIB}/gimmie/gimmie_gmail.pyo
 ${PYSITELIB}/gimmie/gimmie_gui.py
 ${PYSITELIB}/gimmie/gimmie_gui.pyc
 ${PYSITELIB}/gimmie/gimmie_gui.pyo
+${PYSITELIB}/gimmie/gimmie_library.py
+${PYSITELIB}/gimmie/gimmie_library.pyc
+${PYSITELIB}/gimmie/gimmie_library.pyo
 ${PYSITELIB}/gimmie/gimmie_logout.py
 ${PYSITELIB}/gimmie/gimmie_logout.pyc
 ${PYSITELIB}/gimmie/gimmie_logout.pyo
 ${PYSITELIB}/gimmie/gimmie_people.py
 ${PYSITELIB}/gimmie/gimmie_people.pyc
 ${PYSITELIB}/gimmie/gimmie_people.pyo
+${PYSITELIB}/gimmie/gimmie_pidgin.py
+${PYSITELIB}/gimmie/gimmie_pidgin.pyc
+${PYSITELIB}/gimmie/gimmie_pidgin.pyo
+${PYSITELIB}/gimmie/gimmie_prefs.py
+${PYSITELIB}/gimmie/gimmie_prefs.pyc
+${PYSITELIB}/gimmie/gimmie_prefs.pyo
 ${PYSITELIB}/gimmie/gimmie_recent.py
 ${PYSITELIB}/gimmie/gimmie_recent.pyc
 ${PYSITELIB}/gimmie/gimmie_recent.pyo
 ${PYSITELIB}/gimmie/gimmie_running.py
 ${PYSITELIB}/gimmie/gimmie_running.pyc
 ${PYSITELIB}/gimmie/gimmie_running.pyo
+${PYSITELIB}/gimmie/gimmie_threads.py
+${PYSITELIB}/gimmie/gimmie_threads.pyc
+${PYSITELIB}/gimmie/gimmie_threads.pyo
 ${PYSITELIB}/gimmie/gimmie_tomboy.py
 ${PYSITELIB}/gimmie/gimmie_tomboy.pyc
 ${PYSITELIB}/gimmie/gimmie_tomboy.pyo
@@ -74,6 +77,10 @@ ${PYSITELIB}/gimmie/gimmie_trash.pyo
 ${PYSITELIB}/gimmie/gimmie_util.py
 ${PYSITELIB}/gimmie/gimmie_util.pyc
 ${PYSITELIB}/gimmie/gimmie_util.pyo
+${PYSITELIB}/gimmie/gmenu/__init__.py
+${PYSITELIB}/gimmie/gmenu/__init__.pyc
+${PYSITELIB}/gimmie/gmenu/__init__.pyo
+${PYSITELIB}/gimmie/gmenu/gmenu.la
 ${PYSITELIB}/gimmie/gnomecups/__init__.py
 ${PYSITELIB}/gimmie/gnomecups/__init__.pyc
 ${PYSITELIB}/gimmie/gnomecups/__init__.pyo
@@ -91,8 +98,15 @@ ${PYSITELIB}/gimmie/traymanager/__init__.pyc
 ${PYSITELIB}/gimmie/traymanager/__init__.pyo
 ${PYSITELIB}/gimmie/traymanager/_egg.la
 libexec/gimmie_applet
+share/gconf/schemas/gimmie.schemas
+share/gnome-2.0/ui/GNOME_GimmieApplet.xml
+share/icons/hicolor/16x16/apps/gimmie.png
+share/icons/hicolor/32x32/apps/gimmie.png
+share/icons/hicolor/48x48/apps/gimmie.png
+share/icons/hicolor/scalable/apps/gimmie.svg
 share/locale/ar/LC_MESSAGES/gimmie.mo
 share/locale/ca/LC_MESSAGES/gimmie.mo
+share/locale/cs/LC_MESSAGES/gimmie.mo
 share/locale/da/LC_MESSAGES/gimmie.mo
 share/locale/de/LC_MESSAGES/gimmie.mo
 share/locale/dz/LC_MESSAGES/gimmie.mo
@@ -100,16 +114,39 @@ share/locale/el/LC_MESSAGES/gimmie.mo
 share/locale/en_GB/LC_MESSAGES/gimmie.mo
 share/locale/es/LC_MESSAGES/gimmie.mo
 share/locale/fi/LC_MESSAGES/gimmie.mo
+share/locale/fr/LC_MESSAGES/gimmie.mo
 share/locale/gl/LC_MESSAGES/gimmie.mo
+share/locale/hu/LC_MESSAGES/gimmie.mo
 share/locale/ja/LC_MESSAGES/gimmie.mo
+share/locale/lv/LC_MESSAGES/gimmie.mo
 share/locale/mk/LC_MESSAGES/gimmie.mo
 share/locale/nb/LC_MESSAGES/gimmie.mo
+share/locale/oc/LC_MESSAGES/gimmie.mo
+share/locale/pt_BR/LC_MESSAGES/gimmie.mo
 share/locale/ru/LC_MESSAGES/gimmie.mo
 share/locale/sv/LC_MESSAGES/gimmie.mo
 share/locale/vi/LC_MESSAGES/gimmie.mo
+share/locale/zh_CN/LC_MESSAGES/gimmie.mo
+share/pixmaps/gimmie.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in gnome2-dirs: @dirrm share/gnome-2.0
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm ${PYSITELIB}/gimmie/traymanager
 @dirrm ${PYSITELIB}/gimmie/sexy
 @dirrm ${PYSITELIB}/gimmie/iconentry
 @dirrm ${PYSITELIB}/gimmie/gnomecups
+@dirrm ${PYSITELIB}/gimmie/gmenu
 @dirrm ${PYSITELIB}/gimmie/gdmclient
 @dirrm ${PYSITELIB}/gimmie
+@comment in libbonobo: @dirrm lib/bonobo/servers
