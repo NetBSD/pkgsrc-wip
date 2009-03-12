@@ -1,0 +1,5 @@
+Error on Darwin:
+
+gcc -O -DNDEBUG -Wall -I/usr/X11/include  -DROOTDIR="\"/usr/pkg/share/xsokoban\"" -DSAVEPATH="\"/var/games/xsokoban\"" -DSCOREPATH="\"/var/games/xsokoban/scores\"" -no-cpp-precomp -isystem /usr/include -I/usr/pkg/include -I/usr/X11/include -c display.c
+In file included from display.c:16:
+externs.h:8:20: error: malloc.h: No such file or directory
