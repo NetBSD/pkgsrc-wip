@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/03/07 21:14:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.21 2009/03/12 00:58:02 minskim Exp $
 #
 
 DISTNAME=	paexec-0.13.0
@@ -66,5 +66,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/make_package/make_package_tasks \
 		${DESTDIR}${PKGEGDIR}/make_package/
 
-.include "../../wip/libmaa/buildlink3.mk"
+.include "../../devel/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

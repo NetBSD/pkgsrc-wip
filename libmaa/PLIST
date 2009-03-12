@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/31 16:59:06 cheusov Exp $
-include/maa.h
-lib/libmaa.la
-share/doc/libmaa/COPYING.LIB
-share/doc/libmaa/README
-share/doc/libmaa/libmaa.600dpi.ps
-@dirrm share/doc/libmaa

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/12/07 22:27:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.28 2009/03/12 00:58:00 minskim Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
@@ -64,5 +64,5 @@ post-install:
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../wip/libmaa/buildlink3.mk"
+.include "../../devel/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
