@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/07 15:36:17 brook1 Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/12 17:06:04 brook1 Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -59,7 +59,7 @@ SUBST_VARS.fix-files+=		PREFIX
 
 LIBDATA_DIR=			${PREFIX}/libdata/boost-test-suite
 
-INSTALLATION_DIRS+=		libdata sbin
+INSTALLATION_DIRS+=		libdata ${PKGMANDIR}/man1 sbin
 
 FILES+=				boost-test-suite boost-test-suite.1
 FILES+=				comment.html.in patch_boost

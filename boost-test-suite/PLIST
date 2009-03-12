@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/07 15:36:17 brook1 Exp $
-sbin/boost-test-suite
+@comment $NetBSD: PLIST,v 1.5 2009/03/12 17:06:05 brook1 Exp $
 libdata/boost-test-suite/comment.html.in
 libdata/boost-test-suite/patch_boost
 libdata/boost-test-suite/patches/index
 libdata/boost-test-suite/patches/patch-aa
+man/man1/boost-test-suite.1
+sbin/boost-test-suite
 @dirrm libdata/boost-test-suite/patches
 @dirrm libdata/boost-test-suite
