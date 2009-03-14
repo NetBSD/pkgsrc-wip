@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3296 2009/03/14 13:56:48 jihbed Exp $
+# $Id: Makefile,v 1.3297 2009/03/14 14:16:27 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1055,6 +1055,7 @@ SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
+SUBDIR+=	mk-configure
 SUBDIR+=	mkcabal
 SUBDIR+=	mkdep
 SUBDIR+=	mksend
