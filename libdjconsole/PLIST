@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/14 05:38:53 othyro Exp $
+include/libdjconsole/bitfield.h
+include/libdjconsole/delta.h
+include/libdjconsole/djconsole.h
+lib/libdjconsole.la
+lib/pkgconfig/libdjconsole.pc
+share/libdjconsole/06f8-b000.buttons
+share/libdjconsole/06f8-b000.leds
+share/libdjconsole/06f8-b000.mouse
+share/libdjconsole/06f8-b100.buttons
+share/libdjconsole/06f8-b100.leds
+share/libdjconsole/06f8-b100.mouse
+share/libdjconsole/06f8-b101.buttons
+share/libdjconsole/06f8-b101.leds
+share/libdjconsole/06f8-d001.buttons
+share/libdjconsole/06f8-d001.leds
+share/libdjconsole/06f8-d001.mouse
+@dirrm share/libdjconsole
+@dirrm include/libdjconsole
