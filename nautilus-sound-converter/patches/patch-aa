@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/14 14:58:40 jihbed Exp $
+
+--- configure.orig	2009-02-09 02:55:54.000000000 +0000
++++ configure	2009-03-13 20:53:14.000000000 +0000
+@@ -21179,7 +21179,7 @@
+ 
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21235,7 +21235,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21291,7 +21291,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21347,7 +21347,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21403,7 +21403,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21459,7 +21459,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21515,7 +21515,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21571,7 +21571,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -21627,7 +21627,7 @@
+   fi
+ 
+ 
+-  if test "x$GST_INSPECT" == "x"; then
++  if test "x$GST_INSPECT" = "x"; then
+     # Extract the first word of "gst-inspect-0.10", so it can be a program name with args.
+ set dummy gst-inspect-0.10; ac_word=$2
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
