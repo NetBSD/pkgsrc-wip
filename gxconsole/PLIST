@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/14 13:54:54 jihbed Exp $
+bin/gxconsole
+share/applications/gxconsole.desktop
+@comment in xdg-dirs: @dirrm share/applications
