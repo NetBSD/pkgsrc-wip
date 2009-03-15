@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3300 2009/03/15 13:58:41 jihbed Exp $
+# $Id: Makefile,v 1.3301 2009/03/15 23:04:53 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -819,6 +819,7 @@ SUBDIR+=	jlibtool
 SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
+SUBDIR+=	gtk-grdc
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
 SUBDIR+=	just
