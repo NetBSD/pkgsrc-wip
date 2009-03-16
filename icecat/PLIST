@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 12:24:27 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/16 15:59:30 yhardy Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -27,7 +27,6 @@ lib/${MOZILLA}/libplc4.${SO_SUFFIX}
 lib/${MOZILLA}/libplds4.${SO_SUFFIX}
 lib/${MOZILLA}/libsmime3.${SO_SUFFIX}
 lib/${MOZILLA}/libsoftokn3.${SO_SUFFIX}
-lib/${MOZILLA}/libsqlite3.${SO_SUFFIX}
 lib/${MOZILLA}/libssl3.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxul.${SO_SUFFIX}
@@ -1822,7 +1821,6 @@ include/${MOZILLA}/spellchecker/mozIPersonalDictionary.h
 include/${MOZILLA}/spellchecker/mozISpellCheckingEngine.h
 include/${MOZILLA}/spellchecker/mozISpellI18NManager.h
 include/${MOZILLA}/spellchecker/mozISpellI18NUtil.h
-include/${MOZILLA}/sqlite3/sqlite3.h
 include/${MOZILLA}/storage/mozIStorageAggregateFunction.h
 include/${MOZILLA}/storage/mozIStorageConnection.h
 include/${MOZILLA}/storage/mozIStorageDataSet.h

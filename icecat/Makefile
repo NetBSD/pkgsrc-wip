@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/04 10:04:12 yhardy Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/16 15:59:30 yhardy Exp $
 
 MOZILLA=		icecat
 MOZILLA_BIN=		icecat-bin
@@ -9,18 +9,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
-INSTALLATION_DIRS=	lib/pkgconfig
+INSTALLATION_DIRS=	lib/pkgconfig share/applications share/pixmaps
 
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.4
-.include "../../databases/sqlite3/buildlink3.mk"
 
-PYTHON_FOR_BUILD_ONLY=	yes
-.include "../../lang/python/application.mk"
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-
-# Pull in standard firefox build framework, and override some things below
+# Pull in standard firefox build framework, and override some things below.
+# This include must appear first, to ensure that USE_LANGUAGES is set
+# correctly before mk/compiler.mk may be loaded.
 .include "../../www/firefox/Makefile-firefox.common"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -35,35 +32,23 @@ HOMEPAGE=		http://www.gnu.org/software/gnuzilla/
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 DISTFILES=      	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		icecat.png
 
+XPTCFILES:=		${XPTCFILES:C,^,../../firefox3/files/,}
+DESCR_SRC=		${.CURDIR}/../../wip/icecat/DESCR
 DISTINFO_FILE=		${.CURDIR}/../../wip/icecat/distinfo
 PATCHDIR=		${.CURDIR}/../../www/firefox3/patches
 
 CONFLICTS=		firefox3
 
-PLIST_SUBST+=		MOZILLA=${MOZILLA:Q}
-PLIST_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
-FILES_SUBST+=		MOZILLA=${MOZILLA:Q}
-FILES_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
-
-post-extract: copy-pkgconfig copy-icon
+#PLIST_SUBST+=		MOZILLA=${MOZILLA:Q}
+#PLIST_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
+#FILES_SUBST+=		MOZILLA=${MOZILLA:Q}
+#FILES_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
 
 .PHONY: copy-pkgconfig
+post-extract: copy-pkgconfig
 copy-pkgconfig:
 	cp ${.CURDIR}/../../wip/icecat/files/*.pc ${WRKSRC:Q}/build/unix
-
-MOZ_ICON_DIR=	${WRKSRC:Q}/dist/bin/chrome/icons/default
-MOZ_ICON=	${MOZ_ICON_DIR}/default.png
-
-.PHONY: copy-icon
-copy-icon:
-	if [ ! -e ${MOZ_ICON_DIR} ]; then		\
-		mkdir -p ${MOZ_ICON_DIR};		\
-	fi
-	if [ ! -e ${MOZ_ICON} ]; then			\
-		cp ${DISTDIR:Q}/icecat.png ${MOZ_ICON};	\
-	fi
 
 SUBST_CLASSES+=		fix-pc
 SUBST_STAGE.fix-pc=	pre-configure
@@ -79,41 +64,69 @@ SUBST_FILES.no-xcb+=	configure.in
 SUBST_SED.no-xcb=	-e 's,PKG_CHECK_MODULES(XCB,\#PKG_CHECK_MODULES(XCB,g'
 
 # Need this to be able to reuse existing firefox pkgsrc infrastructure
-pre-configure: create-dummy-c-sdk
 .PHONY: create-dummy-c-sdk
+pre-configure: create-dummy-c-sdk
 create-dummy-c-sdk:
 	mkdir -p ${WRKSRC:Q}/directory/c-sdk
 	touch ${WRKSRC:Q}/directory/c-sdk/configure.in
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
-pre-configure: ye-olde-rm-hack
-.PHONY: ye-olde-rm-hack
-ye-olde-rm-hack:
+.PHONY: create-rm-wrapper
+pre-configure: create-rm-wrapper
+create-rm-wrapper:
 	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
 # Link browser.xpt
-post-build: stage-package
 .PHONY: stage-package
+post-build: stage-package
 stage-package:
 	cd ${WRKSRC}/browser/installer && \
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} stage-package
 	cp ${WRKSRC}/dist/icecat/components/browser.xpt \
 	   ${WRKSRC}/dist/bin/components/browser.xpt
 
-# Install libjemalloc.so which is needed on Linux.
-.if ${OPSYS} == "Linux"
-post-install: install-libjemalloc
+.if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
+PLIST_SUBST+=		JEMALLOC=
+SCRIPTS_ENV+=		JEMALLOC=
 .PHONY: install-libjemalloc
+post-install: install-libjemalloc
 install-libjemalloc:
-	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.so \
+	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.${SO_SUFFIX} \
 	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
+.else
+PLIST_SUBST+=		JEMALLOC="@comment "
+SCRIPTS_ENV+=		JEMALLOC="@comment "
 .endif
+
+MOZILLA_NAME=	IceCat 3
+MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/content/default.png
+
+.PHONY: preinstall-icon
+pre-install: preinstall-icon
+preinstall-icon:
+	${INSTALL_DATA_DIR} ${WRKSRC}/dist/bin/chrome/icons/default
+	${INSTALL_DATA} ${MOZILLA_ICON}				\
+	    ${WRKSRC}/dist/bin/chrome/icons/default/default.png
+
+.PHONY: install-desktop
+post-install: install-desktop
+install-desktop:
+	${SED}							\
+		-e 's|@MOZILLA@|${MOZILLA}|g'			\
+		-e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'		\
+		-e 's|@FIREFOX_ICON@|${MOZILLA}.png|g'		\
+		<${.CURDIR}/../../www/firefox3/files/firefox3.desktop.in \
+		>${WRKDIR}/${MOZILLA}.desktop
+	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop		\
+	    ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
+	${INSTALL_DATA} ${MOZILLA_ICON}				\
+	    ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
 
-# Can't use system PNG because it doesn't have APNG support?
+# configure says: "Can't use system PNG because it doesn't have APNG support"
 CONFIGURE_ARGS+=	--without-system-png
 # Override www/firefox's idea of toolkit
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
@@ -121,5 +134,13 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--disable-dbus
 # Avoids needing curl on Linux
 CONFIGURE_ARGS+=	--disable-crashreporter
+
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/application.mk"
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+CONFIGURE_ARGS+=	--enable-system-sqlite
+BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.5.9
+.include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
