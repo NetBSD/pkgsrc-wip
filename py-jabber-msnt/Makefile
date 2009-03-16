@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/03/16 02:05:46 schnoebe Exp $
+# $NetBSD: Makefile,v 1.27 2009/03/16 02:18:57 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGREVISION=		2
@@ -8,6 +8,7 @@ MASTER_SITES=		http://delx.net.au/projects/pymsnt/tarballs/
 
 PATCH_SITES=		http://www.darkskies.za.net/~norman/msn/
 PATCHFILES=		hg-214.patch
+PATCH_DIST_STRIP.hg-214.patch=	-p1
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://delx.net.au/projects/pymsnt
