@@ -1,5 +1,3 @@
-cclive is a cross-platform command line video extraction tool for
-user-uploaded video hosts such as Youtube, Google Video, Dailymotion,
-Guba, and Metacafe. It can be chained with 3rd party tools for
-subsequent video re-encoding and playing.
-It is similar to clive, but has less requirements.
+cclive is a command line video extraction utility similar to clive but with lower requirements.
+Its features are few and essential. Supports Youtube, Googlevideo, Break, Liveleak,
+Sevenload, Evisortv and Dailymotion.
