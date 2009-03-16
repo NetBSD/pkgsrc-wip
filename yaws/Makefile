@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/08/24 23:43:07 asau Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/16 18:34:59 asau Exp $
 #
 
-PKGVERSION=		1.77
+PKGVERSION=		1.81
 
 DISTNAME=		yaws-${PKGVERSION}
 CATEGORIES=		www
@@ -26,10 +26,9 @@ CONF_FILES=		${EGDIR}/yaws.conf ${PKG_SYSCONFDIR}/yaws/yaws.conf
 RCD_SCRIPTS=		yaws
 RCD_SCRIPT_SRC.yaws=	${WRKSRC}/scripts/netbsd/yaws.sh
 
-DOCDIR=			${PREFIX}/share/doc/yaws
 LIBDIR=			${PREFIX}/lib/yaws
 WWWDIR=			${PREFIX}/share/yaws/www
-INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=	${EGDIR}
 INSTALLATION_DIRS+=	${LIBDIR}/ebin ${LIBDIR}/include
 INSTALLATION_DIRS+=	${LIBDIR}/priv ${WWWDIR}
 
@@ -59,8 +58,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ebin/* ${DESTDIR}${LIBDIR}/ebin
 	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${LIBDIR}/include
 	cd ${WRKSRC}/priv && pax -rw . ${DESTDIR}${LIBDIR}/priv
-
-	${INSTALL_DATA} ${WRKSRC}/doc/yaws.pdf ${DESTDIR}${DOCDIR}
 
 	cd ${WRKSRC}/www && pax -rw . ${DESTDIR}${WWWDIR}
 
