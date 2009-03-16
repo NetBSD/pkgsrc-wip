@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/16 18:55:08 lexort Exp $
+${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/top_level.txt
+${PYSITELIB}/timingandestimationplugin/__init__.pyc
+${PYSITELIB}/timingandestimationplugin/__init__.pyo
+${PYSITELIB}/timingandestimationplugin/api.pyc
+${PYSITELIB}/timingandestimationplugin/api.pyo
+${PYSITELIB}/timingandestimationplugin/dbhelper.pyc
+${PYSITELIB}/timingandestimationplugin/dbhelper.pyo
+${PYSITELIB}/timingandestimationplugin/query_webui.pyc
+${PYSITELIB}/timingandestimationplugin/query_webui.pyo
+${PYSITELIB}/timingandestimationplugin/reportmanager.pyc
+${PYSITELIB}/timingandestimationplugin/reportmanager.pyo
+${PYSITELIB}/timingandestimationplugin/reports.pyc
+${PYSITELIB}/timingandestimationplugin/reports.pyo
+${PYSITELIB}/timingandestimationplugin/statuses.pyc
+${PYSITELIB}/timingandestimationplugin/statuses.pyo
+${PYSITELIB}/timingandestimationplugin/tande_filters.pyc
+${PYSITELIB}/timingandestimationplugin/tande_filters.pyo
+${PYSITELIB}/timingandestimationplugin/ticket_daemon.pyc
+${PYSITELIB}/timingandestimationplugin/ticket_daemon.pyo
+${PYSITELIB}/timingandestimationplugin/ticket_webui.pyc
+${PYSITELIB}/timingandestimationplugin/ticket_webui.pyo
+${PYSITELIB}/timingandestimationplugin/usermanual.pyc
+${PYSITELIB}/timingandestimationplugin/usermanual.pyo
+${PYSITELIB}/timingandestimationplugin/webui.pyc
+${PYSITELIB}/timingandestimationplugin/webui.pyo
+@dirrm ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info
+@dirrm ${PYSITELIB}/timingandestimationplugin
