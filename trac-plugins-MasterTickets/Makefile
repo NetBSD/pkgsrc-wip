@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/03/02 20:23:01 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/16 18:26:37 lexort Exp $
 
 VERSION=	2.1.3.4179
 DISTNAME=	TracMasterTickets-${VERSION}
 PKGNAME=	trac-plugins-MasterTickets-${VERSION}
 # Empty PKGREVISION because svn-package by default sets one.
-PKGREVISION=	
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
@@ -30,6 +30,9 @@ PRIVILEGED_STAGES+=	clean
 post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 
+# MasterTickets uses graphviz directly (rather than via the GraphViz plugin).
+# \todo Make this optional.
+.include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
