@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.12 2008/08/05 17:17:40 schnoebe Exp $
+$NetBSD: distinfo,v 1.13 2009/03/16 02:05:46 schnoebe Exp $
 
+SHA1 (hg-214.patch) = 0e17178f379ffcf414f4864dad5618b4615566b0
+RMD160 (hg-214.patch) = f4a83ec1d73c8ed93362983187312da30571cfad
+Size (hg-214.patch) = 2128 bytes
 SHA1 (pymsnt-0.11.3.tar.gz) = 093ce984446f9edeec9d9d35a07a3958f5f656b1
 RMD160 (pymsnt-0.11.3.tar.gz) = 59e2af9eee9aa1d5b7a408b05fd520f0355556e1
 Size (pymsnt-0.11.3.tar.gz) = 162549 bytes

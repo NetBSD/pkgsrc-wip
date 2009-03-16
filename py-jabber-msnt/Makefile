@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2009/02/14 05:31:24 schnoebe Exp $
+# $NetBSD: Makefile,v 1.26 2009/03/16 02:05:46 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGREVISION=		2
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://delx.net.au/projects/pymsnt/tarballs/
+
+PATCH_SITES=		http://www.darkskies.za.net/~norman/msn/
+PATCHFILES=		hg-214.patch
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://delx.net.au/projects/pymsnt
