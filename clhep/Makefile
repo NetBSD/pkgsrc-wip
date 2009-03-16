@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/10/31 17:01:33 hugor Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/16 19:53:44 asau Exp $
 #
 
-DISTNAME=	clhep-1.9.3.0
+DISTNAME=	clhep-2.0.4.2
 CATEGORIES=	math
 MASTER_SITES=	http://cern.ch/clhep/distributions/ \
 		http://cern.ch/clhep/
@@ -11,7 +11,9 @@ MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
 
-TMPEXT_DIR=	${WRKDIR}/1.9.3.0/CLHEP
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+TMPEXT_DIR=	${WRKDIR}/${PKGVERSION_NOREV}/CLHEP
 AUTOCONF_REQD=	2.59
 USE_TOOLS+=	aclocal autoconf automake gmake perl
 

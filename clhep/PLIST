@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/31 17:01:33 hugor Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/16 19:53:44 asau Exp $
 bin/Cast-config
 bin/Evaluator-config
 bin/Exceptions-config
@@ -14,6 +14,7 @@ bin/clhep-config
 bin/clheplib
 include/CLHEP/Cast/defs.h
 include/CLHEP/Cast/itos.h
+include/CLHEP/ClhepVersion.h
 include/CLHEP/Evaluator/Evaluator.h
 include/CLHEP/Evaluator/defs.h
 include/CLHEP/Exceptions/ZMerrno.h
@@ -208,6 +209,8 @@ include/CLHEP/RefCount/ZMhandleTo.icc
 include/CLHEP/RefCount/ZMuseCount.h
 include/CLHEP/RefCount/ZMuseCount.icc
 include/CLHEP/RefCount/defs.h
+include/CLHEP/Units/GlobalPhysicalConstants.h
+include/CLHEP/Units/GlobalSystemOfUnits.h
 include/CLHEP/Units/PhysicalConstants.h
 include/CLHEP/Units/SystemOfUnits.h
 include/CLHEP/Units/defs.h
@@ -244,16 +247,6 @@ include/CLHEP/Vector/TwoVector.h
 include/CLHEP/Vector/TwoVector.icc
 include/CLHEP/Vector/ZMxpv.h
 include/CLHEP/Vector/defs.h
-include/CLHEP/config/CLHEP.h
-include/CLHEP/config/StringStream.h
-include/CLHEP/config/TemplateFunctions.h
-include/CLHEP/config/defs.h
-include/CLHEP/config/fstream.h
-include/CLHEP/config/iomanip.h
-include/CLHEP/config/iosfwd.h
-include/CLHEP/config/iostream.h
-include/CLHEP/config/sstream.h
-include/CLHEP/config/strstream.h
 lib/libCLHEP-${PKGVERSION}.a
 lib/libCLHEP-${PKGVERSION}.so
 lib/libCLHEP-Cast-${PKGVERSION}.a
@@ -278,7 +271,6 @@ lib/libCLHEP-Vector-${PKGVERSION}.a
 lib/libCLHEP-Vector-${PKGVERSION}.so
 lib/libCLHEP.a
 lib/libCLHEP.so
-@dirrm include/CLHEP/config
 @dirrm include/CLHEP/Vector
 @dirrm include/CLHEP/Units
 @dirrm include/CLHEP/RefCount
