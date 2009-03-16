@@ -1,15 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/16 18:03:00 asau Exp $
 
-Added support for NetBSD.
+Add support for Dragonfly.
 
---- lib/os_mon/c_src/memsup.c.orig	2006-08-29 11:47:15.000000000 +0200
-+++ lib/os_mon/c_src/memsup.c
-@@ -98,10 +98,10 @@
- #ifdef BSD4_4
- #include <sys/types.h>
- #include <sys/sysctl.h>
--#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
+--- lib/os_mon/c_src/memsup.c.orig	2008-11-04 13:51:16.000000000 +0300
++++ lib/os_mon/c_src/memsup.c	2009-03-16 19:27:16.000000000 +0300
+@@ -113,7 +113,7 @@
+ #if !defined ( __OpenBSD__) && !defined(__NetBSD__) 
  #include <vm/vm_param.h>
  #endif
 -#ifdef __FreeBSD__
