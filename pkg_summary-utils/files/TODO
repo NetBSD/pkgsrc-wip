@@ -32,6 +32,11 @@ existing tools:
        - man page
 
 new tools?
+    - pkg_summary_lint: versions consistency, old distfiles, old binaries,
+      distfiles checksums.
+
+    - replacement for lintpkgsrc -m | -o
+
     - (unsure) additional tool for fields reordering?
 
     - (unsure) simplified wrapper over pkg_grep_summary for grepping
