@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3307 2009/03/17 10:35:15 jihbed Exp $
+# $Id: Makefile,v 1.3308 2009/03/17 11:05:25 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -539,6 +539,7 @@ SUBDIR+=	gtkada
 SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglk
 SUBDIR+=	gtk-grdc
+SUBDIR+=	gtkhotkey
 SUBDIR+=	gtklookat
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
