@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/02/22 02:41:44 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/17 12:19:33 mstapelberg Exp $
 
 CATEGORIES=www
-DISTNAME=cgit-0.8.2
+DISTNAME=cgit-0.8.2.1
 HOMEPAGE=http://hjemli.net/git/cgit
 COMMENT=Fast web interface for git
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=user-destdir
 BUILD_DEPENDS+= curl-7.19.2:../../www/curl
 
 MASTER_SITES=http://hjemli.net/git/cgit/snapshot/
-DISTFILES=cgit-0.8.2.tar.bz2
+DISTFILES=${DISTNAME}.tar.bz2
 
 CGIT_CONFIG=	${PKG_SYSCONFDIR}/cgitrc
 CGIT_CGIBIN=	${PREFIX}/libexec/cgi-bin
