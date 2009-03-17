@@ -1,0 +1,5 @@
+Recursive closures suffer from a severe memory leak. Sub::Recursive
+makes the problem go away cleanly and at the same time allows you to
+write recursive subroutines as expression and can make them truly
+anonymous. There's no significant speed difference between using
+&recursive and writing the simpler leaking solution.
