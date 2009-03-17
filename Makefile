@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3305 2009/03/16 18:55:58 lexort Exp $
+# $Id: Makefile,v 1.3306 2009/03/17 02:56:01 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1385,6 +1385,7 @@ SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
 SUBDIR+=	p5-String-Similarity
+SUBDIR+=	p5-Sub-Recursive
 SUBDIR+=	p5-TAP-Harness-Archive
 SUBDIR+=	p5-Task-Catalyst
 SUBDIR+=	p5-Template-Plugin-Class
