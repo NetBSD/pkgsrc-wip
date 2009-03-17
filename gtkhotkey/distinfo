@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/17 11:03:23 jihbed Exp $
+
+SHA1 (gtkhotkey-0.2.0.tar.gz) = 7fe04c61e45daab4a819bfd3ff0b5dd725ab8b96
+RMD160 (gtkhotkey-0.2.0.tar.gz) = c74ac7cf0fb85c4efe94c94aa2bffdceb9a269cc
+Size (gtkhotkey-0.2.0.tar.gz) = 443750 bytes
+SHA1 (patch-aa) = d258cd9c47c4ec6e7369acdf6d0b6b9587dc3412
