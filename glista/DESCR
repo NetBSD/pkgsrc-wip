@@ -1,0 +1,7 @@
+Glista aims to be a very simple personal to-do list manager
+or task tracking tool that does what it's supposed to
+and does not get in your way
+
+Glista is based on the Gtk+ graphical toolkit which means it will
+integrate best with the GNOME desktop and other Gtk+ based desktop
+environments, but will also run well on other environments such as KDE

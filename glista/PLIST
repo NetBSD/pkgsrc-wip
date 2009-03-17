@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/17 10:30:38 jihbed Exp $
+bin/glista
+share/applications/glista.desktop
+share/glista/glista-icon.png
+share/glista/glista.ui
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/glista
+@comment in xdg-dirs: @dirrm share/applications
