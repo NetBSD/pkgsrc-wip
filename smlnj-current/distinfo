@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/03/18 17:14:34 asau Exp $
+$NetBSD: distinfo,v 1.12 2009/03/18 22:17:53 asau Exp $
 
 SHA1 (smlnj-110.69/MLRISC.tgz) = 77091a1d1336c22c656e85a2ded4240d96fb1aec
 RMD160 (smlnj-110.69/MLRISC.tgz) = 14c1b5ac6d509362aa6d5da951f794c3d783eb60
@@ -47,7 +47,7 @@ RMD160 (smlnj-110.69/system.tgz) = aad65d42888e6c59401013bc0f1221cea07a52dd
 Size (smlnj-110.69/system.tgz) = 239953 bytes
 SHA1 (patch-aa) = 0d475b9273d9322bde205005b06d213a17032dc3
 SHA1 (patch-ab) = 3d5946b2d72dee255159afe6fb25240f8fa7e306
-SHA1 (patch-ac) = 54f435f74d9502fd9bb5d0e6b74a1b077c8d9ee6
+SHA1 (patch-ac) = f6c30285f55a9537a785d363837ecc83cfd384b7
 SHA1 (patch-ad) = a406bde2f6f7e2d93d652135b94aefd4b7aca494
 SHA1 (patch-ae) = 5796401418fd91a795fdfe75060cf654dd315ac1
 SHA1 (patch-af) = fae22c6f367b3007bbd9b46b7a7a218710723ca4
@@ -61,3 +61,6 @@ SHA1 (patch-an) = d6e1a75d5fb68423ce3181622de919c2337db2e7
 SHA1 (patch-ao) = 1c66024c5949269291cbf6f815baf6162db47d31
 SHA1 (patch-ap) = 8e9e28548b4e58de68a11982a355a010ea96aa29
 SHA1 (patch-aq) = 7d0734b76d778d7f584d2e70d325fd72e6554b01
+SHA1 (patch-au) = 727afe6de54eb244c48e99c661f6b8ae3f780de0
+SHA1 (patch-av) = a2e5d474876baa1dc2484dda81708ea6ac92eb0b
+SHA1 (patch-aw) = 9fd22dab9def459d3305695a38d14d25c645ff30
