@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/06 21:20:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/18 09:36:02 cheusov Exp $
 #
 
 DISTNAME=	xmms-nas-0.2
@@ -17,5 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../audio/nas/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
