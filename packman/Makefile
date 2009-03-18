@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/09 09:24:04 koifren Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/18 10:11:10 cheusov Exp $
 
 DISTNAME=	packman-0.0.10
 CATEGORIES=	pkgtools
@@ -16,6 +16,8 @@ DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 
 USE_LANGUAGES=	# empty
 REPLACE_PERL+=	packman.pl
+
+INSTALLATION_DIRS+=	bin
 
 do-build:
 do-install:
