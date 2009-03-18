@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 21:56:44 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/18 22:01:46 airhead Exp $
 bin/lire
 bin/lr_anondump
 bin/lr_anonymize
@@ -98,6 +98,8 @@ libexec/lire/lr_getbody
 libexec/lire/lr_mail
 libexec/lire/lr_processmail
 libexec/lire/lr_spool
+libexec/lire/www/dlf2combined
+libexec/lire/www/merge2combined
 man/man1/argomail2dlf.1
 man/man1/bind8_named2dlf.1
 man/man1/bind8_query2dlf.1

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/03/05 19:04:28 airhead Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/18 22:01:45 airhead Exp $
 #
 
-DISTNAME=	lire-2.0.2.99.2
+DISTNAME=	lire-2.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.logreport.org/pub/cvs-snapshots/
+MASTER_SITES=	http://download.logreport.org/pub/
 #LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	airhead@users.sf.net
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.logreport.org/lire.html
 COMMENT=	Log analyzing tool
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-DEPENDS+=	p5-DBD-SQLite2-[0-9]*:../../databases/p5-DBD-SQLite2
+DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-Curses-[0-9]*:../../devel/p5-Curses
 DEPENDS+=	p5-Curses-UI-[0-9]*:../../devel/p5-Curses-UI
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
