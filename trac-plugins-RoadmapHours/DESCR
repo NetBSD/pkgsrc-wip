@@ -1,0 +1,5 @@
+This plugin uses the custom ticket fields supplied by the
+TimingAndEstimationPlugin to provide a Ticket Group Stats Provider
+that can be used to show hours on the Roadmap and Milestone progress
+bars instead of the count of tickets.  Note that this says 'instead';
+it really means instead.

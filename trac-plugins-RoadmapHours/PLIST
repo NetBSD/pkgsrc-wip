@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/18 18:44:41 lexort Exp $
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/requires.txt
+${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/top_level.txt
+${PYSITELIB}/roadmaphours/__init__.pyc
+${PYSITELIB}/roadmaphours/__init__.pyo
+${PYSITELIB}/roadmaphours/roadmaphours.pyc
+${PYSITELIB}/roadmaphours/roadmaphours.pyo
+@dirrm ${PYSITELIB}/roadmaphours
+@dirrm ${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info
