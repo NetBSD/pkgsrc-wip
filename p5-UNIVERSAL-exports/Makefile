@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/17 09:21:07 tonnerre Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/18 11:51:25 cheusov Exp $
 
 DISTNAME=		UNIVERSAL-exports-0.05
 PKGNAME=		p5-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=		p5-Exporter-Lite>=0.01:../../devel/p5-Exporter-Lite
 DEPENDS+=		p5-UNIVERSAL-require>=0.01:../../devel/p5-UNIVERSAL-require
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/UNIVERSAL/exports/.packlist
 
