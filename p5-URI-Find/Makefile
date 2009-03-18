@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/05 02:59:18 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/18 12:03:20 cheusov Exp $
 
 DISTNAME=		URI-Find-0.16
 PKGNAME=		p5-${DISTNAME}
@@ -13,6 +13,7 @@ COMMENT=		Find URIs in arbitrary text
 DEPENDS+=		p5-URI>=1.35:../../www/p5-URI
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/URI/Find/.packlist
 

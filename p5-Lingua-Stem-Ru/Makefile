@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/18 12:04:59 cheusov Exp $
 
 DISTNAME=		Lingua-Stem-Ru-0.01
 PKGNAME=		p5-${DISTNAME}
@@ -9,7 +9,9 @@ MAINTAINER=		kuli0020@umn.edu
 HOMEPAGE=		http://search.cpan.org/dist/Lingua-Stem-Ru/
 COMMENT=		Porter's stemming algorithm for Russian (KOI8-R only)
 
-PERL5_PACKLIST= auto/Lingua/Stem/Ru/.packlist
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PERL5_PACKLIST=		auto/Lingua/Stem/Ru/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
