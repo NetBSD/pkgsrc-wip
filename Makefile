@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3308 2009/03/17 11:05:25 jihbed Exp $
+# $Id: Makefile,v 1.3309 2009/03/18 14:49:07 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -745,6 +745,7 @@ SUBDIR+=	iksemel
 SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
+SUBDIR+=	imagination
 SUBDIR+=	imgseek
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
