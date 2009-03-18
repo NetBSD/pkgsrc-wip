@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/05 23:04:00 milosn Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/18 10:59:09 cheusov Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -13,6 +13,7 @@ MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Small programming language
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #USE_PKGLOCALEDIR=	yes
 NO_CONFIGURE=		yes
@@ -35,10 +36,10 @@ SUBST_SED.fix-linking=		-e 's,LFLAGS +=-lm,LFLAGS +=-lm -L${PREFIX}/lib ${LINKER
 INSTALLATION_DIRS=		bin include/io lib lib/io lib/io/addons
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/_build/binaries/io ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/include/io
-	cp ${WRKSRC}/_build/headers/*.h ${PREFIX}/include/io/
-	${INSTALL_LIB} ${WRKSRC}/_build/dll/libiovmall.so  ${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/_build/lib/libiovmall.a  ${PREFIX}/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/_build/binaries/io ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/io
+	cp ${WRKSRC}/_build/headers/*.h ${DESTDIR}${PREFIX}/include/io/
+	${INSTALL_LIB} ${WRKSRC}/_build/dll/libiovmall.so  ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/_build/lib/libiovmall.a  ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
