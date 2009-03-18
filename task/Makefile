@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/02/28 12:57:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/18 14:17:46 emil_s Exp $
 #
 
-DISTNAME=	task-1.4.3
+DISTNAME=	task-1.5.0
 CATEGORIES=	time
 MASTER_SITES=	http://www.beckingham.net/
 
