@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/16 18:55:08 lexort Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/18 18:59:36 lexort Exp $
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/dependency_links.txt
@@ -28,5 +28,6 @@ ${PYSITELIB}/timingandestimationplugin/usermanual.pyc
 ${PYSITELIB}/timingandestimationplugin/usermanual.pyo
 ${PYSITELIB}/timingandestimationplugin/webui.pyc
 ${PYSITELIB}/timingandestimationplugin/webui.pyo
+share/examples/trac/TimingAndEstimation-post-commit.py
 @dirrm ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info
 @dirrm ${PYSITELIB}/timingandestimationplugin
