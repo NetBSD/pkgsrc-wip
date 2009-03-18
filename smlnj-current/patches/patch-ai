@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2005/12/26 18:00:42 pulahti Exp $
+$NetBSD: patch-ai,v 1.3 2009/03/18 17:14:37 asau Exp $
 
---- config/_ml-build.orig	2004-12-23 23:58:38.000000000 +0000
-+++ config/_ml-build	2005-12-24 22:45:16.000000000 +0000
+--- config/_ml-build.orig	2007-02-13 00:05:27.000000000 +0300
++++ config/_ml-build	2009-03-18 12:37:58.000000000 +0300
 @@ -1,5 +1,7 @@
  #!@SHELL@
  
@@ -9,4 +9,4 @@ $NetBSD: patch-ai,v 1.2 2005/12/26 18:00:42 pulahti Exp $
 +
  if [ x${SMLNJ_HOME} = x ] ; then
      BIN_DIR="@BINDIR@"
- else
+     LIB_DIR="@LIBDIR@"

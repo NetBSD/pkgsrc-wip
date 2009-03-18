@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/18 17:14:33 asau Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -15,8 +15,7 @@ DISTFILES=	MLRISC.tgz			\
 		eXene.tgz			\
 		ml-burg.tgz			\
 		ml-lex.tgz			\
-		ml-nlffi-lib.tgz		\
-		ml-nlffigen.tgz			\
+		nlffi.tgz			\
 		ml-yacc.tgz			\
 		runtime.tgz			\
 		smlnj-lib.tgz			\
@@ -26,7 +25,9 @@ MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Working version of SML/NJ Standard ML compiler
 
-SML_VERSION=	110.59
+SML_VERSION=	110.69
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
@@ -59,8 +60,7 @@ post-extract:
 # resolve definition of SML_BASE, CFLAGS in patched files
 do-configure:
 	if [ ${MACHINE_ARCH} = "powerpc" ]; then		\
-		${AWK} '(! /^request ml-nlffi-lib$$/ &&		\
-			 ! /^request ml-nlffigen$$/) { print }' \
+		${AWK} '(! /^request nlffi$$/) { print }' \
 		< ${WRKDIR}/config/targets			\
 		> ${WRKDIR}/temp;				\
 		${MV} ${WRKDIR}/temp ${WRKDIR}/config/targets;	\
@@ -89,9 +89,10 @@ do-build:
 # 1. create installation directories
 # 2. copy the ./bin and ./lib directories across
 # 3. install links to executables in $PREFIX/bin
+INSTALLATION_DIRS=	bin
 do-install:
-	${INSTALL_DATA_DIR} ${SML_BASE}
-	cd ${WRKDIR} && pax -rw -pam bin lib ${SML_BASE}
-	cd ${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
+	${INSTALL_DATA_DIR} ${DESTDIR}${SML_BASE}
+	cd ${WRKDIR} && pax -rw -pam bin lib ${DESTDIR}${SML_BASE}
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
 
 .include "../../mk/bsd.pkg.mk"
