@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/16 18:55:08 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/18 17:35:23 lexort Exp $
 
 SVNVERSION=	5162
 VERSION=	0.7.6.${SVNVERSION}
@@ -12,7 +12,7 @@ MASTER_SITES=	# not defined
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/TimingAndEstimationPlugin
-COMMENT=	Graphviz plugin for Trac
+COMMENT=	TimingAndEstimation plugin for Trac
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
