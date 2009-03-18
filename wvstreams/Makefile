@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/11 16:58:12 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/18 10:16:53 cheusov Exp $
 #
 
 DISTNAME=	wvstreams-4.5.1
@@ -31,4 +31,5 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/libwvutils.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/libuniconf.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/libwvqt.pc.in
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
