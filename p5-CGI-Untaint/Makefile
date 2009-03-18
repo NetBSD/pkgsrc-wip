@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/27 03:18:02 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/18 12:27:16 cheusov Exp $
 #
 
 DISTNAME=	CGI-Untaint-1.26
@@ -12,8 +12,10 @@ COMMENT=	CGI::Untaint - process CGI input parameters
 
 DEPENDS+=	p5-UNIVERSAL-require>=0.01:../../devel/p5-UNIVERSAL-require
 
-PERL5_PACKLIST=	auto/CGI/Untaint/.packlist
-USE_LANGUAGES=	# none
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+PERL5_PACKLIST=		auto/CGI/Untaint/.packlist
+USE_LANGUAGES=		# none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
