@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/06 21:36:14 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/19 21:39:41 shindenmorr Exp $
 #
 
-DISTNAME=		latest
+DISTNAME=		wordpress-mu-${VERSION}
 PKGNAME=		wordpress-mu-${VERSION}
-VERSION=		2.6.5
+VERSION=		2.7
 CATEGORIES=		www
 MASTER_SITES=		http://mu.wordpress.org/
 
@@ -16,7 +16,7 @@ USE_TOOLS+=		pax
 NO_BUILD=		yes
 DIST_SUBDIR=		wordpress-mu-${VERSION}
 PKG_DESTDIR_SUPPORT=	user-destdir
-WRKSRC=			${WRKDIR}/wordpress-mu-${VERSION}
+WRKSRC=			${WRKDIR}/wordpress-mu
 
 INSTALLATION_DIRS=	${PREFIX}/share/wordpress-mu
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/wordpress-mu
@@ -24,7 +24,14 @@ INSTALLATION_DIRS+=	${PREFIX}/share/examples/wordpress-mu
 
 DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
+SVN_REPOSITORIES=	wordpress-mu
+SVN_ROOT.wordpress-mu=	http://svn.automattic.com/wordpress-mu/tags/2.7
+SVN_TAG=		1696
+
+NO_CHECKSUM=    yes 
+
 do-install:
+	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
 	cd ${WRKSRC} && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/wordpress-mu
 	${FIND} ${DESTDIR}${PREFIX}/share/wordpress-mu -type d \
 		-exec ${CHMOD} ${PKGDIRMODE} "{}" \;
@@ -38,4 +45,5 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/wordpress-mu
 
 .include "options.mk"
+.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
