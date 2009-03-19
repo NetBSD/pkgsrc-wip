@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.33 2009/02/21 22:16:15 asau Exp $
+# $Id: cvs-package.mk,v 1.34 2009/03/19 19:22:32 asau Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -67,6 +67,11 @@
 #	with the current date. This is useful when no CVS_TAG variables
 #	are defined. When they are defined (and there may be multiple
 #	ones), the package author should define PKGNAME explicitly.
+#
+# PKGREVISION
+#	If PKGREVISION is not set, set it to today's date.  This is
+#	useful for packages that automatically grab the latest code
+#	from CVS every time they are built.
 #
 # Keywords: cvs
 #
