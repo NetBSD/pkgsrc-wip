@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/19 21:39:41 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/19 21:47:48 shindenmorr Exp $
 share/doc/wordpress-mu/README.txt
 share/doc/wordpress-mu/license.txt
 share/examples/wordpress-mu/wp-config-sample.php
-share/wordpress-mu/README.txt
 share/wordpress-mu/htaccess.dist
 share/wordpress-mu/index-install.php
 share/wordpress-mu/index.php
