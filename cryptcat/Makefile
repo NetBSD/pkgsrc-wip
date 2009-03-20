@@ -1,18 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2007/12/12 21:31:31 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/20 22:26:13 jihbed Exp $
 #
 
 DISTNAME=		cryptcat-unix-1.2.1
-CATEGORIES=		net
+CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptcat/}
 EXTRACT_SUFX=		.tar
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://sourceforge.net/projects/cryptcat/
-COMMENT=		Standard netcat enhanced with twofish encryption.
+COMMENT=		Standard netcat enhanced with twofish encryption
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 WRKSRC=		${WRKDIR}/unix
 BUILD_TARGET=	${LOWER_OPSYS}
+
+INSTALLATION_DIRS= 	share/doc/
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cryptcat ${PREFIX}/bin
