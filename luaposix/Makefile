@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/06/30 21:56:05 corecode Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/20 13:50:51 cheusov Exp $
 #
 
 DISTNAME=		lposix
@@ -10,11 +10,16 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/
 COMMENT=		POSIX library for Lua
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/posix/
 BUILD_TARGET=		lposix.so
+#TEST_TARGET=		test
+
+INSTALLATION_DIRS+=	${LUA_CDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/lposix.so ${PREFIX}/lib/lua/5.1/posix.so
+	${INSTALL_DATA} ${WRKSRC}/lposix.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/posix.so
 
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"

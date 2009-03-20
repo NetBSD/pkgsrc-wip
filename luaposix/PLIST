@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/30 21:56:05 corecode Exp $
-lib/lua/5.1/posix.so
+@comment $NetBSD: PLIST,v 1.3 2009/03/20 13:50:52 cheusov Exp $
+${LUA_CDIR}/posix.so
