@@ -1,20 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 07:18:00 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:49 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-MAPSERVER_BUILDLINK3_MK:=	${MAPSERVER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	mapserver
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	mapserver
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmapserver}
-BUILDLINK_PACKAGES+=	mapserver
-
-.if !empty(MAPSERVER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.mapserver+=	mapserver>=4.4.2
 BUILDLINK_PKGSRCDIR.mapserver?=	../../wip/mapserver
-.endif	# MAPSERVER_BUILDLINK3_MK
 
 .include "../../mk/x11.buildlink3.mk"
+.endif # MAPSERVER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-mapserver

@@ -1,24 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:36 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:53 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.2.
 # XXX After this file as been verified as correct, the comment lines
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink[23].mk files.
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XBASE_BUILDLINK3_MK:=	${XBASE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xbase
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	xbase
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxbase}
-BUILDLINK_PACKAGES+=	xbase
-
-.if !empty(XBASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xbase+=	xbase>=2.0.0
 BUILDLINK_PKGSRCDIR.xbase?=	../../wip/xbase
+.endif # XBASE_BUILDLINK3_MK
 
-.endif	# XBASE_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xbase

@@ -1,19 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:14 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:51 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-OPENVRML_BUILDLINK3_MK:=	${OPENVRML_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	openvrml
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	openvrml
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenvrml}
-BUILDLINK_PACKAGES+=	openvrml
-
-.if !empty(OPENVRML_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.openvrml+=	openvrml>=0.14.3
 BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
-.endif	# OPENVRML_BUILDLINK3_MK
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glut/buildlink3.mk"
@@ -22,5 +12,6 @@ BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+.endif # OPENVRML_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-openvrml

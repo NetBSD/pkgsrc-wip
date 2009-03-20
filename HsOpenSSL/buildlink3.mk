@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/02/02 13:19:32 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:39 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-HSOPENSSL_BUILDLINK3_MK:=	${HSOPENSSL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	HsOpenSSL
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	HsOpenSSL
-.endif
+.if !defined(HSOPENSSL_BUILDLINK3_MK)
+HSOPENSSL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NHsOpenSSL}
-BUILDLINK_PACKAGES+=	HsOpenSSL
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}HsOpenSSL
-
-.if ${HSOPENSSL_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.HsOpenSSL?=	build
 BUILDLINK_API_DEPENDS.HsOpenSSL+=	HsOpenSSL>=0.5.1
 BUILDLINK_PKGSRCDIR.HsOpenSSL?=	../../wip/HsOpenSSL
-.endif	# HSOPENSSL_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-time/buildlink3.mk"
+.endif # HSOPENSSL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-HsOpenSSL

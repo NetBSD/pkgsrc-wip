@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:22 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,20 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.libgksu1.2?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBGKSU1.2_BUILDLINK3_MK:=	${LIBGKSU1.2_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgksu1.2
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libgksu1.2
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgksu1.2}
-BUILDLINK_PACKAGES+=	libgksu1.2
-
-.if !empty(LIBGKSU1.2_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgksu1.2+=	libgksu1.2>=1.3.7
 BUILDLINK_PKGSRCDIR.libgksu1.2?=	../../wip/libgksu
-.endif	# LIBGKSU1.2_BUILDLINK3_MK
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -32,5 +22,6 @@ BUILDLINK_PKGSRCDIR.libgksu1.2?=	../../wip/libgksu
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../x11/gtk2/buildlink3.mk"
+.endif # LIBGKSU1.2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgksu1.2

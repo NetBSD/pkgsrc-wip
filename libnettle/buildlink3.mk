@@ -1,18 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/23 11:05:51 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBNETTLE_BUILDLINK3_MK:=	${LIBNETTLE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libnettle
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libnettle
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibnettle}
-BUILDLINK_PACKAGES+=	libnettle
-
-.if !empty(LIBNETTLE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libnettle+=	libnettle>=1.14
 BUILDLINK_PKGSRCDIR.libnettle?=	../../wip/libnettle
-.endif	# LIBNETTLE_BUILDLINK3_MK
+.endif # LIBNETTLE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libnettle

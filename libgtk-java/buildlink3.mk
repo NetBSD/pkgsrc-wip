@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/05/31 21:36:14 poppnk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:48 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.12.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,20 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.libgtk-java?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-uibgtk_java_BUILDLINK3_MK:=	${uibgtk_java_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgtk-java
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libgtk-java
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgtk-java}
-BUILDLINK_PACKAGES+=	libgtk-java
-
-.if ${uibgtk_java_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libgtk-java+=	libgtk-java>=2.8.5
 BUILDLINK_PKGSRCDIR.libgtk-java?=	../../wip/libgtk-java
-.endif	# uibgtk_java_BUILDLINK3_MK
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -35,5 +25,6 @@ BUILDLINK_PKGSRCDIR.libgtk-java?=	../../wip/libgtk-java
 .include "../../wip/cairo-java/buildlink3.mk"
 #.include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # uibgtk_java_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgtk-java

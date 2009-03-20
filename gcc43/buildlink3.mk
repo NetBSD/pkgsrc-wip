@@ -1,18 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/01/26 00:03:26 alnsn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-GCC43_BUILDLINK3_MK:=  ${GCC43_BUILDLINK3_MK}+
 BUILDLINK_PREFIX.gcc43:=${LOCALBASE}/gcc43
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     gcc43
-.endif
+BUILDLINK_TREE+=	gcc43
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ngcc43}
-BUILDLINK_PACKAGES+=    gcc43
-BUILDLINK_ORDER:=    ${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gcc43
+.if !defined(GCC43_BUILDLINK3_MK)
+GCC43_BUILDLINK3_MK:=
 
-.if !empty(GCC43_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gcc43+=	gcc43>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc43?=	gcc43>=4.3.0
 BUILDLINK_PKGSRCDIR.gcc43?=	../../wip/gcc43
@@ -31,7 +25,6 @@ BUILDLINK_LIBDIRS.gcc43+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc43}\///}/adali
 BUILDLINK_INCDIRS.gcc43+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc43}\///}/include
 .    endif
 .  endif
-.endif  # GCC43_BUILDLINK3_MK
 
 BUILDLINK_FILES_CMD.gcc43=	\
 	(cd  ${BUILDLINK_PREFIX.gcc43} &&	\
@@ -45,8 +38,8 @@ BUILDLINK_DEPMETHOD.gcc+=	full
 BUILDLINK_DEPMETHOD.gcc?=	build
 .  endif
 
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # GCC43_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gcc43

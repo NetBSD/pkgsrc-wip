@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/26 14:04:31 ivaniclixx Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:53 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-VIDRIOLIB_BUILDLINK3_MK:=	${VIDRIOLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	vidriolib
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	vidriolib
-.endif
+.if !defined(VIDRIOLIB_BUILDLINK3_MK)
+VIDRIOLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvidriolib}
-BUILDLINK_PACKAGES+=	vidriolib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vidriolib
-
-.if !empty(VIDRIOLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.vidriolib+=	vidriolib>=0.1.20070715.0
 BUILDLINK_PKGSRCDIR.vidriolib?=	../../wip/vidriolib
-.endif	# VIDRIOLIB_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.endif # VIDRIOLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-vidriolib

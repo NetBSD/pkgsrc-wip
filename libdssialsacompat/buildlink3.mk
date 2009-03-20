@@ -1,20 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/01/16 17:54:53 netcap Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-LIBDSSIALSACOMPAT_BUILDLINK3_MK:=	${LIBDSSIALSACOMPAT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libdssialsacompat
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libdssialsacompat
-.endif
+.if !defined(LIBDSSIALSACOMPAT_BUILDLINK3_MK)
+LIBDSSIALSACOMPAT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibdssialsacompat}
-BUILDLINK_PACKAGES+=	libdssialsacompat
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libdssialsacompat
-
-.if ${LIBDSSIALSACOMPAT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libdssialsacompat+=	libdssialsacompat>=1.0.8a
 BUILDLINK_PKGSRCDIR.libdssialsacompat?=	../../wip/libdssialsacompat
 BUILDLINK_DEPMETHOD.libdssialsacompat?=	build
-.endif	# LIBDSSIALSACOMPAT_BUILDLINK3_MK
+.endif # LIBDSSIALSACOMPAT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libdssialsacompat

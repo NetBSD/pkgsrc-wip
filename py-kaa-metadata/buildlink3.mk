@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/18 03:01:24 dhowland Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:52 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_KAA_METADATA_BUILDLINK3_MK:=	${PY_KAA_METADATA_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	py-kaa-metadata
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	py-kaa-metadata
-.endif
+.if !defined(PY_KAA_METADATA_BUILDLINK3_MK)
+PY_KAA_METADATA_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-kaa-metadata}
-BUILDLINK_PACKAGES+=	py-kaa-metadata
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-kaa-metadata
-
-.if ${PY_KAA_METADATA_BUILDLINK3_MK} == "+"
 .include "../../lang/python/pyversion.mk"
 BUILDLINK_API_DEPENDS.py-kaa-metadata+=	${PYPKGPREFIX}-kaa-metadata>=0.7.2
 BUILDLINK_PKGSRCDIR.py-kaa-metadata?=	../../wip/py-kaa-metadata
-.endif	# PY_KAA_METADATA_BUILDLINK3_MK
 
 .include "../../wip/py-kaa-base/buildlink3.mk"
+.endif # PY_KAA_METADATA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-py-kaa-metadata

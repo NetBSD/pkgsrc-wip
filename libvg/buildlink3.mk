@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:58 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:49 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.7.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,19 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.libvg?=	build
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBVG_BUILDLINK3_MK:=	${LIBVG_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libvg
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libvg
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibvg}
-BUILDLINK_PACKAGES+=	libvg
-
-.if !empty(LIBVG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libvg+=	libvg>=0.2.0
 BUILDLINK_PKGSRCDIR.libvg?=	../../wip/libvg
-.endif	# LIBVG_BUILDLINK3_MK
+.endif # LIBVG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libvg

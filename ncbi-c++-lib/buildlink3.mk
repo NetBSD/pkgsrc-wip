@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 07:18:11 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:51 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,20 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.ncbi_cxx-lib?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-NCBI_CXX_LIB_BUILDLINK3_MK:=	${NCBI_CXX_LIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ncbi_cxx-lib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	ncbi_cxx-lib
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nncbi_cxx-lib}
-BUILDLINK_PACKAGES+=	ncbi_cxx-lib
-
-.if !empty(NCBI_CXX_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ncbi_cxx-lib+=	ncbi_cxx-lib>=20041130
 BUILDLINK_PKGSRCDIR.ncbi_cxx-lib?=	../../wip/ncbi-c++-lib
-.endif	# NCBI_CXX_LIB_BUILDLINK3_MK
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -36,5 +26,6 @@ BUILDLINK_PKGSRCDIR.ncbi_cxx-lib?=	../../wip/ncbi-c++-lib
 #.include "../../x11/fltk/buildlink3.mk"
 #.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+.endif # NCBI_CXX_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ncbi_cxx-lib

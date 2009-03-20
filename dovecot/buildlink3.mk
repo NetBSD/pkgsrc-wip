@@ -1,24 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/09/05 20:11:03 ghen Exp $
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-DOVECOT_BUILDLINK3_MK:=			${DOVECOT_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:40 jsonn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=			dovecot
-.endif
+BUILDLINK_TREE+=	dovecot
 
-BUILDLINK_PACKAGES:=			${BUILDLINK_PACKAGES:Ndovecot}
-BUILDLINK_PACKAGES+=			dovecot
-BUILDLINK_ORDER:=			${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}dovecot
+.if !defined(DOVECOT_BUILDLINK3_MK)
+DOVECOT_BUILDLINK3_MK:=
 
-.if !empty(DOVECOT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=1.2alpha1
 BUILDLINK_PKGSRCDIR.dovecot?=		../../wip/dovecot
 .endif
 
 pkgbase := dovecot
 .include "../../mk/pkg-build-options.mk"
+.endif # DOVECOT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-dovecot

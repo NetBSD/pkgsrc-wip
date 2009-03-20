@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/01/07 01:44:00 lexort Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-KDEGRAPHICS4_BUILDLINK3_MK:=	${KDEGRAPHICS4_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	kdegraphics4
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	kdegraphics4
-.endif
+.if !defined(KDEGRAPHICS4_BUILDLINK3_MK)
+KDEGRAPHICS4_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdegraphics4}
-BUILDLINK_PACKAGES+=	kdegraphics4
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdegraphics4
-
-.if ${KDEGRAPHICS4_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.1
 BUILDLINK_ABI_DEPENDS.kdegraphics4?=	kdegraphics4>=4.1.3nb1
 BUILDLINK_PKGSRCDIR.kdegraphics4?=	../../wip/kdegraphics4
-.endif	# KDEGRAPHICS4_BUILDLINK3_MK
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -37,5 +29,6 @@ BUILDLINK_PKGSRCDIR.kdegraphics4?=	../../wip/kdegraphics4
 #.include "../../wip/kdebase-runtime4/buildlink3.mk"
 #.include "../../wip/qimageblitz/buildlink3.mk"
 #.include "../../x11/libXxf86vm/buildlink3.mk"
+.endif # KDEGRAPHICS4_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-kdegraphics4

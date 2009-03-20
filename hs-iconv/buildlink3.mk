@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/29 10:14:21 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:42 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-HS_ICONV_BUILDLINK3_MK:=	${HS_ICONV_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	hs-iconv
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	hs-iconv
-.endif
+.if !defined(HS_ICONV_BUILDLINK3_MK)
+HS_ICONV_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-iconv}
-BUILDLINK_PACKAGES+=	hs-iconv
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-iconv
-
-.if ${HS_ICONV_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-iconv?=	build
 BUILDLINK_API_DEPENDS.hs-iconv+=	hs-iconv>=0.4.0.2
 BUILDLINK_PKGSRCDIR.hs-iconv?=	../../wip/hs-iconv
-.endif	# HS_ICONV_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
+.endif # HS_ICONV_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-hs-iconv

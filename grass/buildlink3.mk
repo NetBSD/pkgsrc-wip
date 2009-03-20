@@ -1,21 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/02/16 01:29:09 lexort Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GRASS_BUILDLINK3_MK:=	${GRASS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	grass
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	grass
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngrass}
-BUILDLINK_PACKAGES+=	grass
-
-.if !empty(GRASS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.grass+=	grass>=6.0.0
 BUILDLINK_ABI_DEPENDS.grass?=	grass>=6.0.2nb2
 BUILDLINK_PKGSRCDIR.grass?=	../../wip/grass
-.endif	# GRASS_BUILDLINK3_MK
 
 .include "../../geography/gdal-lib/buildlink3.mk"
+.endif # GRASS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-grass

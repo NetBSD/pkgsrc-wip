@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/14 08:49:59 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:43 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-HS_UCONV_BUILDLINK3_MK:=	${HS_UCONV_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	hs-uconv
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	hs-uconv
-.endif
+.if !defined(HS_UCONV_BUILDLINK3_MK)
+HS_UCONV_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-uconv}
-BUILDLINK_PACKAGES+=	hs-uconv
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-uconv
-
-.if ${HS_UCONV_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-uconv?=	build
 BUILDLINK_API_DEPENDS.hs-uconv+=	hs-uconv>=0.0.3
 BUILDLINK_PKGSRCDIR.hs-uconv?=	../../wip/hs-uconv
-.endif	# HS_UCONV_BUILDLINK3_MK
 
 .include "../../textproc/icu/buildlink3.mk"
+.endif # HS_UCONV_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-hs-uconv

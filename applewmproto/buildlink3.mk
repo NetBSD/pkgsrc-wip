@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/05 16:56:17 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:39 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-APPLEWMPROTO_BUILDLINK3_MK:=	${APPLEWMPROTO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	applewmproto
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	applewmproto
-.endif
+.if !defined(APPLEWMPROTO_BUILDLINK3_MK)
+APPLEWMPROTO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napplewmproto}
-BUILDLINK_PACKAGES+=	applewmproto
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}applewmproto
-
-.if ${APPLEWMPROTO_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.applewmproto?=	build
 BUILDLINK_API_DEPENDS.applewmproto+=	applewmproto>=1.2.0
 BUILDLINK_PKGSRCDIR.applewmproto?=	../../wip/applewmproto
-.endif	# APPLEWMPROTO_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
+.endif # APPLEWMPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-applewmproto

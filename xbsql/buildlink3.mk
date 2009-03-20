@@ -1,20 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:36 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:53 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-XBSQL_BUILDLINK3_MK:=	${XBSQL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xbsql
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	xbsql
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxbsql}
-BUILDLINK_PACKAGES+=	xbsql
-
-.if !empty(XBSQL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xbsql+=	xbsql>=0.11
 BUILDLINK_PKGSRCDIR.xbsql?=	../../wip/xbsql
-.endif	# XBSQL_BUILDLINK3_MK
 
 .include "../../wip/xbase/buildlink3.mk"
+.endif # XBSQL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xbsql

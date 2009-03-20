@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/08/18 06:41:57 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-KDEMULTIMEDIA4_BUILDLINK3_MK:=	${KDEMULTIMEDIA4_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	kdemultimedia4
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	kdemultimedia4
-.endif
+.if !defined(KDEMULTIMEDIA4_BUILDLINK3_MK)
+KDEMULTIMEDIA4_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdemultimedia4}
-BUILDLINK_PACKAGES+=	kdemultimedia4
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdemultimedia4
-
-.if ${KDEMULTIMEDIA4_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kdemultimedia4+=	kdemultimedia4>=4.1.0
 BUILDLINK_PKGSRCDIR.kdemultimedia4?=	../../wip/kdemultimedia4
-.endif	# KDEMULTIMEDIA4_BUILDLINK3_MK
 
 # XXX: didn't seem necessary for amarok, so leave them disabled.
 #.include "../../audio/cdparanoia/buildlink3.mk"
@@ -26,5 +18,6 @@ BUILDLINK_PKGSRCDIR.kdemultimedia4?=	../../wip/kdemultimedia4
 #.include "../../multimedia/libtheora/buildlink3.mk"
 #.include "../../wip/kdelibs4/buildlink3.mk"
 #.include "../../wip/kdebase-runtime4/buildlink3.mk"
+.endif # KDEMULTIMEDIA4_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-kdemultimedia4

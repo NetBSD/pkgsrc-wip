@@ -1,18 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/08/14 14:02:50 dhowland Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-EMBOSS_BASE_BUILDLINK3_MK:=	${EMBOSS_BASE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	emboss-base
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	emboss-base
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nemboss-base}
-BUILDLINK_PACKAGES+=	emboss-base
-
-.if !empty(EMBOSS_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.emboss-base+=	emboss-base>=2.7.1
 BUILDLINK_PKGSRCDIR.emboss-base?=	../../wip/emboss-base
-.endif	# EMBOSS_BASE_BUILDLINK3_MK
+.endif # EMBOSS_BASE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-emboss-base

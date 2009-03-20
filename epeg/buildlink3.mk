@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/08/07 14:08:11 yazzy Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-EPEG_BUILDLINK3_MK:=	${EPEG_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	epeg
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	epeg
-.endif
+.if !defined(EPEG_BUILDLINK3_MK)
+EPEG_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nepeg}
-BUILDLINK_PACKAGES+=	epeg
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}epeg
-
-.if ${EPEG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.epeg+=	epeg>=0.9.1.042
 BUILDLINK_ABI_DEPENDS.epeg?=	epeg>=0.9.1.042nb1
 BUILDLINK_PKGSRCDIR.epeg?=	../../wip/epeg
-.endif	# EPEG_BUILDLINK3_MK
 
 .include	"../../wip/ecore/buildlink3.mk"
 .include	"../../graphics/jpeg/buildlink3.mk"
+.endif # EPEG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-epeg

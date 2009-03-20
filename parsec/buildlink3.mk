@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/12 05:53:43 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:51 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PARSEC_BUILDLINK3_MK:=	${PARSEC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	parsec
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	parsec
-.endif
+.if !defined(PARSEC_BUILDLINK3_MK)
+PARSEC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nparsec}
-BUILDLINK_PACKAGES+=	parsec
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}parsec
-
-.if ${PARSEC_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.parsec?=	build
 BUILDLINK_API_DEPENDS.parsec+=	parsec>=3.0.0
 BUILDLINK_PKGSRCDIR.parsec?=	../../wip/parsec
-.endif	# PARSEC_BUILDLINK3_MK
 
 .include "../../wip/hs-mtl/buildlink3.mk"
+.endif # PARSEC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-parsec

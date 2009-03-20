@@ -1,18 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:26 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:43 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-JALVIEW_BINARY_BUILDLINK3_MK:=	${JALVIEW_BINARY_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	jalview_binary
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	jalview_binary
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njalview_binary}
-BUILDLINK_PACKAGES+=	jalview_binary
-
-.if !empty(JALVIEW_BINARY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jalview_binary+=	jalview_binary>=1.8
 BUILDLINK_PKGSRCDIR.jalview_binary?=	../../wip/jalview
-.endif	# JALVIEW_BINARY_BUILDLINK3_MK
+.endif # JALVIEW_BINARY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-jalview_binary

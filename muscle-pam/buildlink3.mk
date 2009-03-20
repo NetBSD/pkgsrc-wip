@@ -1,20 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:08 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:50 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-MUSCLE_PAM_BUILDLINK3_MK:=	${MUSCLE_PAM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	muscle-pam
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	muscle-pam
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmuscle-pam}
-BUILDLINK_PACKAGES+=	muscle-pam
-
-.if !empty(MUSCLE_PAM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.muscle-pam+=	muscle-pam>=1.1.5
 BUILDLINK_PKGSRCDIR.muscle-pam?=	../../wip/muscle-pam
-.endif	# MUSCLE_PAM_BUILDLINK3_MK
 
 .include "../../wip/libmusclecard/buildlink3.mk"
+.endif # MUSCLE_PAM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-muscle-pam

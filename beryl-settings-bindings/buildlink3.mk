@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/05/27 06:51:50 bsadewitz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:39 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.13.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,22 +10,15 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.beryl-settings-bindings?=	build
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK:=	${BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	beryl-settings-bindings
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	beryl-settings-bindings
-.endif
+.if !defined(BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK)
+BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nberyl-settings-bindings}
-BUILDLINK_PACKAGES+=	beryl-settings-bindings
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}beryl-settings-bindings
-
-.if ${BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.beryl-settings-bindings+=	beryl-settings-bindings>=0.2.1
 BUILDLINK_PKGSRCDIR.beryl-settings-bindings?=	../../wip/beryl-settings-bindings
-.endif	# BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK
 
 .include "../../wip/beryl-core/buildlink3.mk"
+.endif # BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-beryl-settings-bindings

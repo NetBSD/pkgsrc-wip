@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/01/16 15:18:43 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:39 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-HSSVN_BUILDLINK3_MK:=	${HSSVN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	HsSVN
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	HsSVN
-.endif
+.if !defined(HSSVN_BUILDLINK3_MK)
+HSSVN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NHsSVN}
-BUILDLINK_PACKAGES+=	HsSVN
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}HsSVN
-
-.if ${HSSVN_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.HsSVN?=	build
 BUILDLINK_API_DEPENDS.HsSVN+=	HsSVN>=0.4
 BUILDLINK_PKGSRCDIR.HsSVN?=	../../wip/HsSVN
-.endif	# HSSVN_BUILDLINK3_MK
 
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/stm/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
+.endif # HSSVN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-HsSVN

@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/03/05 17:10:59 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBAPPLEWM_BUILDLINK3_MK:=	${LIBAPPLEWM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libAppleWM
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libAppleWM
-.endif
+.if !defined(LIBAPPLEWM_BUILDLINK3_MK)
+LIBAPPLEWM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibAppleWM}
-BUILDLINK_PACKAGES+=	libAppleWM
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libAppleWM
-
-.if ${LIBAPPLEWM_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libAppleWM+=	libAppleWM>=1.2.0
 BUILDLINK_PKGSRCDIR.libAppleWM?=	../../wip/libAppleWM
-.endif	# LIBAPPLEWM_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../wip/applewmproto/buildlink3.mk"
+.endif # LIBAPPLEWM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libAppleWM

@@ -1,18 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:52 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBPARSIFAL_BUILDLINK3_MK:=	${LIBPARSIFAL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libparsifal
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libparsifal
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibparsifal}
-BUILDLINK_PACKAGES+=	libparsifal
-
-.if !empty(LIBPARSIFAL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libparsifal+=	libparsifal>=0.9.0
 BUILDLINK_PKGSRCDIR.libparsifal?=	../../wip/libparsifal
-.endif	# LIBPARSIFAL_BUILDLINK3_MK
+.endif # LIBPARSIFAL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libparsifal

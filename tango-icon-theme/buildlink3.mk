@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/16 18:29:17 roelants Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:52 jsonn Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-TANGO_ICON_THEME_BUILDLINK3_MK:=	${TANGO_ICON_THEME_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tango-icon-theme
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	tango-icon-theme
-.endif
+.if !defined(TANGO_ICON_THEME_BUILDLINK3_MK)
+TANGO_ICON_THEME_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntango-icon-theme}
-BUILDLINK_PACKAGES+=	tango-icon-theme
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}tango-icon-theme
-
-.if ${TANGO_ICON_THEME_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.tango-icon-theme+=	tango-icon-theme>=0.8.90
 BUILDLINK_PKGSRCDIR.tango-icon-theme?=	../../wip/tango-icon-theme
-.endif	# TANGO_ICON_THEME_BUILDLINK3_MK
+.endif # TANGO_ICON_THEME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tango-icon-theme

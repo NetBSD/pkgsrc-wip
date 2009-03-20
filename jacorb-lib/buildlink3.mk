@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:26 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:43 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -10,21 +10,12 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.JacORB-lib?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-JACORB_LIB_BUILDLINK3_MK:=	${JACORB_LIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	JacORB-lib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	JacORB-lib
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NJacORB-lib}
-BUILDLINK_PACKAGES+=	JacORB-lib
-
-.if !empty(JACORB_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.JacORB-lib+=	JacORB-lib>=1.4.1
 BUILDLINK_PKGSRCDIR.JacORB-lib?=	../../wip/jacorb-lib
-.endif	# JACORB_LIB_BUILDLINK3_MK
 
 .include "../../lang/sun-jdk13/buildlink3.mk"
+.endif # JACORB_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-JacORB-lib

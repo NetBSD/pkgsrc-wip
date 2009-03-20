@@ -1,25 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/01/11 09:28:43 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GHC_BUILDLINK3_MK:=	${GHC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ghc
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	ghc
-.endif
+.if !defined(GHC_BUILDLINK3_MK)
+GHC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nghc}
-BUILDLINK_PACKAGES+=	ghc
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ghc
-
-.if !empty(GHC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ghc+=	ghc>=6.10.1
 BUILDLINK_ABI_DEPENDS.ghc?=	ghc>=6.10.1
 BUILDLINK_PKGSRCDIR.ghc?=	../../wip/ghc
 
 BUILDLINK_DEPMETHOD.ghc?=	build
-.endif	# GHC_BUILDLINK3_MK
+.endif # GHC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ghc
 
 # We include gmp/buildlink3.mk here so that "gmp" is registered as a
 # direct dependency for any package that includes this buildlink3.mk

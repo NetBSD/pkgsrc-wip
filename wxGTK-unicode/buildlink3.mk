@@ -1,23 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/12/13 21:31:48 shattered Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-WXGTK_UNICODE_BUILDLINK3_MK:=	${WXGTK_UNICODE_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:53 jsonn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	wxGTK-unicode
-.endif
+BUILDLINK_TREE+=	wxGTK-unicode
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK-unicode}
-BUILDLINK_PACKAGES+=	wxGTK-unicode
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK-unicode
+.if !defined(WXGTK_UNICODE_BUILDLINK3_MK)
+WXGTK_UNICODE_BUILDLINK3_MK:=
 
-.if !empty(WXGTK_UNICODE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wxGTK-unicode+=	wxGTK-unicode>=2.8.0
 BUILDLINK_ABI_DEPENDS.wxGTK-unicode?=	wxGTK-unicode>=2.8.3
 BUILDLINK_PKGSRCDIR.wxGTK-unicode?=	../../wip/wxGTK-unicode
-.endif	# WXGTK_UNICODE_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -26,5 +18,6 @@ BUILDLINK_PKGSRCDIR.wxGTK-unicode?=	../../wip/wxGTK-unicode
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # WXGTK_UNICODE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-wxGTK-unicode

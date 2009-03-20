@@ -1,25 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/07 22:01:10 shattered Exp $
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-PY_WXWIDGETS_UNICODE_BUILDLINK3_MK:=	${PY_WXWIDGETS_UNICODE_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:52 jsonn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	${PYPKGPREFIX}-wxWidgets-unicode
-.endif
+BUILDLINK_TREE+=	${PYPKGPREFIX}-wxWidgets-unicode
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:N${PYPKGPREFIX}-wxWidgets-unicode}
-BUILDLINK_PACKAGES+=	${PYPKGPREFIX}-wxWidgets-unicode
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}${PYPKGPREFIX}-wxWidgets-unicode
+.if !defined(PY_WXWIDGETS_UNICODE_BUILDLINK3_MK)
+PY_WXWIDGETS_UNICODE_BUILDLINK3_MK:=
 
-.if !empty(PY_WXWIDGETS_UNICODE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-wxWidgets-unicode+=	${PYPKGPREFIX}-wxWidgets-unicode>=2.6.3.3
 BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets-unicode?=	${PYPKGPREFIX}-wxWidgets-unicode>=2.6.3.3
 BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-wxWidgets-unicode?=		../../wip/py-wxWidgets-unicode
 
 .include "../../wip/wxGTK-unicode/buildlink3.mk"
+.endif # PY_WXWIDGETS_UNICODE_BUILDLINK3_MK
 
-.endif	# PY_WXWIDGETS_UNICODE_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-${PYPKGPREFIX}-wxWidgets-unicode

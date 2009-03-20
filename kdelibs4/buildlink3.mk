@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/01/10 09:14:14 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	kdelibs
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	kdelibs
-.endif
+.if !defined(KDELIBS_BUILDLINK3_MK)
+KDELIBS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdelibs}
-BUILDLINK_PACKAGES+=	kdelibs
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdelibs
-
-.if ${KDELIBS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.0.0
 BUILDLINK_ABI_DEPENDS.kdelibs?=	kdelibs4>=4.0.0nb1
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
-.endif	# KDELIBS_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
@@ -42,5 +34,6 @@ BUILDLINK_PKGSRCDIR.kdelibs?=	../../wip/kdelibs4
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
+.endif # KDELIBS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-kdelibs

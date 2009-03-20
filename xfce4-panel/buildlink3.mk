@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2007/04/11 14:12:58 marttikuparinen Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:43:54 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XFCE4_PANEL_BUILDLINK3_MK:=	${XFCE4_PANEL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4-panel
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4-panel
-.endif
+.if !defined(XFCE4_PANEL_BUILDLINK3_MK)
+XFCE4_PANEL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-panel}
-BUILDLINK_PACKAGES+=	xfce4-panel
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-panel
-
-.if ${XFCE4_PANEL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.4.1
 BUILDLINK_PKGSRCDIR.xfce4-panel?=	../../wip/xfce4-panel
-.endif	# XFCE4_PANEL_BUILDLINK3_MK
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -22,5 +14,6 @@ BUILDLINK_PKGSRCDIR.xfce4-panel?=	../../wip/xfce4-panel
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.endif # XFCE4_PANEL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4-panel

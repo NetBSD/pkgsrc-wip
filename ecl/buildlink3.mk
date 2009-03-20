@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/08/12 19:30:04 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:40 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ECL_BUILDLINK3_MK:=	${ECL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ecl
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	ecl
-.endif
+.if !defined(ECL_BUILDLINK3_MK)
+ECL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Necl}
-BUILDLINK_PACKAGES+=	ecl
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ecl
-
-.if ${ECL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ecl+=	ecl>=0.9.12
 BUILDLINK_PKGSRCDIR.ecl?=	../../wip/ecl
-.endif	# ECL_BUILDLINK3_MK
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.endif # ECL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ecl

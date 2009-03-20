@@ -1,19 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:51 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBOPENMODELLER_BUILDLINK3_MK:=	${LIBOPENMODELLER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libopenmodeller
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libopenmodeller
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibopenmodeller}
-BUILDLINK_PACKAGES+=	libopenmodeller
-
-.if !empty(LIBOPENMODELLER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libopenmodeller+=	libopenmodeller>=0.3.3
 BUILDLINK_PKGSRCDIR.libopenmodeller?=	../../wip/openmodeller
-.endif	# LIBOPENMODELLER_BUILDLINK3_MK
+.endif # LIBOPENMODELLER_BUILDLINK3_MK
 
-
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libopenmodeller

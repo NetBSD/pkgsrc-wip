@@ -1,21 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:03 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:40 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-COM_ERR_BUILDLINK3_MK:=	${COM_ERR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	com_err
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	com_err
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncom_err}
-BUILDLINK_PACKAGES+=	com_err
-
-.if !empty(COM_ERR_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.com_err+=	com_err>=1.35
 BUILDLINK_PKGSRCDIR.com_err?=	../../wip/com_err
 
 BUILDLINK_FILES.com_err+=	share/et/*
 BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/share/et
-.endif	# COM_ERR_BUILDLINK3_MK
+.endif # COM_ERR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-com_err

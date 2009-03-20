@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/06/25 10:56:01 mwdavies Exp $
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_NUMPY_BUILDLINK3_MK:=	${PY_NUMPY_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:52 jsonn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	pynumpy
-.endif
+BUILDLINK_TREE+=	pynumpy
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npynumpy}
-BUILDLINK_PACKAGES+=	pynumpy
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pynumpy
+.if !defined(PY_NUMPY_BUILDLINK3_MK)
+PY_NUMPY_BUILDLINK3_MK:=
 
-.if ${PY_NUMPY_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.0
 BUILDLINK_PKGSRCDIR.pynumpy?=	../../wip/py-numpy
-.endif	# PY_NUMPY_BUILDLINK3_MK
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.endif # PY_NUMPY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pynumpy

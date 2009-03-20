@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/09/08 14:52:53 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:44 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LENSFUN_BUILDLINK3_MK:=	${LENSFUN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	lensfun
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	lensfun
-.endif
+.if !defined(LENSFUN_BUILDLINK3_MK)
+LENSFUN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlensfun}
-BUILDLINK_PACKAGES+=	lensfun
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}lensfun
-
-.if ${LENSFUN_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.lensfun+=	lensfun>=0.2.2b
 BUILDLINK_PKGSRCDIR.lensfun?=	../../wip/lensfun
-.endif	# LENSFUN_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
+.endif # LENSFUN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-lensfun

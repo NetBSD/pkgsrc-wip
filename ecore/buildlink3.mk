@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/08 01:56:29 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:43:40 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ECORE_BUILDLINK3_MK:=	${ECORE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ecore
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	ecore
-.endif
+.if !defined(ECORE_BUILDLINK3_MK)
+ECORE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Necore}
-BUILDLINK_PACKAGES+=	ecore
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ecore
-
-.if ${ECORE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ecore+=	ecore>=0.9.9.041
 BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=0.9.9.042nb1
 BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
-.endif	# ECORE_BUILDLINK3_MK
 
 .include "../../devel/eet/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
@@ -26,5 +18,6 @@ BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+.endif # ECORE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ecore

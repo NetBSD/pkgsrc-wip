@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/01/18 04:30:18 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:43:54 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XFCE4_PRINT_BUILDLINK3_MK:=	${XFCE4_PRINT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4-print
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4-print
-.endif
+.if !defined(XFCE4_PRINT_BUILDLINK3_MK)
+XFCE4_PRINT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-print}
-BUILDLINK_PACKAGES+=	xfce4-print
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-print
-
-.if ${XFCE4_PRINT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4-print+=	xfce4-print>=4.4.1
 BUILDLINK_ABI_DEPENDS.xfce4-print?=	xfce4-print>=4.4.1
 BUILDLINK_PKGSRCDIR.xfce4-print?=	../../wip/xfce4-print
-.endif	# XFCE4_PRINT_BUILDLINK3_MK
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/a2ps/buildlink3.mk"
@@ -29,5 +21,6 @@ pkgbase := xfce4-print
 .if !empty(PKG_BUILD_OPTIONS.xfce4-print:Mcups)
 .  include "../../print/cups/buildlink3.mk"
 .endif
+.endif # XFCE4_PRINT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4-print

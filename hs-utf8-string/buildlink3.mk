@@ -1,20 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/02/10 06:21:12 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:43 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-HS_UTF8_STRING_BUILDLINK3_MK:=	${HS_UTF8_STRING_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	hs-utf8-string
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	hs-utf8-string
-.endif
+.if !defined(HS_UTF8_STRING_BUILDLINK3_MK)
+HS_UTF8_STRING_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhs-utf8-string}
-BUILDLINK_PACKAGES+=	hs-utf8-string
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hs-utf8-string
-
-.if ${HS_UTF8_STRING_BUILDLINK3_MK} == "+"
 BUILDLINK_DEPMETHOD.hs-utf8-string?=	build
 BUILDLINK_API_DEPENDS.hs-utf8-string+=	hs-utf8-string>=0.3.4
 BUILDLINK_PKGSRCDIR.hs-utf8-string?=	../../wip/hs-utf8-string
-.endif	# HS_UTF8_STRING_BUILDLINK3_MK
+.endif # HS_UTF8_STRING_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-hs-utf8-string

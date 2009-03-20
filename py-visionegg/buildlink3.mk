@@ -1,22 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/06/12 16:28:59 thomasklausner Exp $
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-PY_VISIONEGG_BUILDLINK3_MK:=	${PY_VISIONEGG_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:52 jsonn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pyvisionegg
-.endif
+BUILDLINK_TREE+=	pyvisionegg
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyvisionegg}
-BUILDLINK_PACKAGES+=	pyvisionegg
-
-.if !empty(PY_VISIONEGG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pyvisionegg+=	${PYPKGPREFIX}-visionegg>=0.9.9
 BUILDLINK_ABI_DEPENDS.pyvisionegg?=	${PYPKGPREFIX}-visionegg>=0.9.9nb1
 BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
-.endif	# PY_VISIONEGG_BUILDLINK3_MK
 
 .if exists(../../mk/opengl.buildlink3.mk)
 # see PR 23845 for details
@@ -27,5 +17,6 @@ BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
+.endif # PY_VISIONEGG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pyvisionegg

@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/09/21 13:06:56 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:43:54 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XFCE4_THUNAR_BUILDLINK3_MK:=	${XFCE4_THUNAR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4-thunar
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4-thunar
-.endif
+.if !defined(XFCE4_THUNAR_BUILDLINK3_MK)
+XFCE4_THUNAR_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-thunar}
-BUILDLINK_PACKAGES+=	xfce4-thunar
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-thunar
-
-.if ${XFCE4_THUNAR_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4-thunar+=	xfce4-thunar>=0.8.0
 BUILDLINK_PKGSRCDIR.xfce4-thunar?=	../../wip/xfce4-thunar
-.endif	# XFCE4_THUNAR_BUILDLINK3_MK
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -28,5 +20,6 @@ BUILDLINK_PKGSRCDIR.xfce4-thunar?=	../../wip/xfce4-thunar
 .include "../../wip/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
+.endif # XFCE4_THUNAR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4-thunar

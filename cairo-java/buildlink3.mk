@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:18:21 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:40 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,20 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.cairo-java?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-CAIRO_JAVA_BUILDLINK3_MK:=	${CAIRO_JAVA_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	cairo-java
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	cairo-java
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncairo-java}
-BUILDLINK_PACKAGES+=	cairo-java
-
-.if !empty(CAIRO_JAVA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.cairo-java+=	cairo-java>=1.0.1
 BUILDLINK_PKGSRCDIR.cairo-java?=	../../wip/cairo-java
-.endif	# CAIRO_JAVA_BUILDLINK3_MK
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -34,5 +24,6 @@ BUILDLINK_PKGSRCDIR.cairo-java?=	../../wip/cairo-java
 #.include "../../graphics/cairo/buildlink3.mk"
 #.include "../../wip/glib-java/buildlink3.mk"
 #.include "../../x11/gtk2/buildlink3.mk"
+.endif # CAIRO_JAVA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-cairo-java

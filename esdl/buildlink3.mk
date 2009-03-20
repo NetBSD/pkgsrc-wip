@@ -1,22 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/06/12 16:28:56 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:41 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-ESDL_BUILDLINK3_MK:=		${ESDL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	esdl
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=		esdl
-.endif
-
-BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Nesdl}
-BUILDLINK_PACKAGES+=		esdl
-
-.if !empty(ESDL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.esdl+=	esdl>=0.95
 BUILDLINK_ABI_DEPENDS.esdl?=	esdl>=0.95.0630nb1
 BUILDLINK_PKGSRCDIR.esdl?=	../../wip/esdl
-.endif	# ESDL_BUILDLINK3_MK
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+.endif # ESDL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-esdl

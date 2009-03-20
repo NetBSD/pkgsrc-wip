@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.9 2008/01/18 04:30:18 tnn2 Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:43:57 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-XMMS2_BUILDLINK3_MK:=	${XMMS2_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xmms2
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xmms2
-.endif
+.if !defined(XMMS2_BUILDLINK3_MK)
+XMMS2_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxmms2}
-BUILDLINK_PACKAGES+=	xmms2
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xmms2
-
-.if ${XMMS2_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xmms2+=	xmms2>=0.1DR2.2
 BUILDLINK_ABI_DEPENDS.xmms2?=	xmms2>=0.2rc10nb2
 BUILDLINK_PKGSRCDIR.xmms2?=	../../wip/xmms2
-.endif	# XMMS2_BUILDLINK3_MK
 
 .if !defined(PKG_BUILD_OPTIONS.xmms2)
 PKG_BUILD_OPTIONS.xmms2!=						\
@@ -55,5 +47,6 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
 .include "../../mk/oss.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.endif # XMMS2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xmms2

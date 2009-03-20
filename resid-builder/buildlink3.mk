@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/01/03 02:01:06 hoka_adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:52 jsonn Exp $
 #
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-RESID_BUILDER_BUILDLINK3_MK:=	${RESID_BUILDER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	resid-builder
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	resid-builder
-.endif
+.if !defined(RESID_BUILDER_BUILDLINK3_MK)
+RESID_BUILDER_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nresid-builder}
-BUILDLINK_PACKAGES+=	resid-builder
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}resid-builder
-
-.if ${RESID_BUILDER_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.resid-builder+=	resid-builder>=20060528
 BUILDLINK_PKGSRCDIR.resid-builder?=	../../wip/resid-builder
-.endif	# RESID_BUILDER_BUILDLINK3_MK
 
 .include "../../wip/libsidplay2/buildlink3.mk"
+.endif # RESID_BUILDER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-resid-builder

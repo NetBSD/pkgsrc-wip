@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/04 17:47:44 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:40 jsonn Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-E17_BUILDLINK3_MK:=	${E17_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	e17
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	e17
-.endif
+.if !defined(E17_BUILDLINK3_MK)
+E17_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ne17}
-BUILDLINK_PACKAGES+=	e17
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}e17
-
-.if ${E17_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.e17+=	e17>=0.16.999.042
 BUILDLINK_ABI_DEPENDS.e17?=	e17>=0.16.999.042nb1
 BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
-.endif	# E17_BUILDLINK3_MK
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
@@ -24,5 +16,6 @@ BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
+.endif # E17_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-e17

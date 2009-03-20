@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/21 01:05:11 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:52 jsonn Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SYNFIGSTUDIO_BUILDLINK3_MK:=	${SYNFIGSTUDIO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	synfigstudio
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	synfigstudio
-.endif
+.if !defined(SYNFIGSTUDIO_BUILDLINK3_MK)
+SYNFIGSTUDIO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsynfigstudio}
-BUILDLINK_PACKAGES+=	synfigstudio
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}synfigstudio
-
-.if ${SYNFIGSTUDIO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.synfigstudio+=	synfigstudio>=0.61.08
 BUILDLINK_PKGSRCDIR.synfigstudio?=	../../wip/synfigstudio
-.endif	# SYNFIGSTUDIO_BUILDLINK3_MK
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -23,5 +15,6 @@ BUILDLINK_PKGSRCDIR.synfigstudio?=	../../wip/synfigstudio
 .include "../../wip/synfig/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # SYNFIGSTUDIO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-synfigstudio

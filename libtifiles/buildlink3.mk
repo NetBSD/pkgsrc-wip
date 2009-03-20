@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 07:17:56 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -10,19 +10,10 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.libtifiles?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBTIFILES_BUILDLINK3_MK:=	${LIBTIFILES_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libtifiles
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libtifiles
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibtifiles}
-BUILDLINK_PACKAGES+=	libtifiles
-
-.if !empty(LIBTIFILES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libtifiles+=	libtifiles>=0.5.6
 BUILDLINK_PKGSRCDIR.libtifiles?=	../../wip/libtifiles
-.endif	# LIBTIFILES_BUILDLINK3_MK
+.endif # LIBTIFILES_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libtifiles
