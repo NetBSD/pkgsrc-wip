@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/12/04 22:49:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/21 18:58:45 tnn2 Exp $
 #
 
-DISTNAME=		aircrack-ng-1.0-rc1
-PKGNAME=		aircrack-ng-1.0rc1
+DISTNAME=		aircrack-ng-1.0-rc2
+PKGNAME=		aircrack-ng-1.0rc2
 CATEGORIES=		security
 MASTER_SITES=		http://download.aircrack-ng.org/
 
