@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/16 21:33:03 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/21 15:37:13 asau Exp $
 #
 
 DISTNAME=	geant4.8.1.p01
@@ -25,7 +25,7 @@ BUILD_TARGET=	# empty
 G4SYSTEM=	Linux-g++
 MAKE_ENV+=	G4SYSTEM=Linux-g++
 MAKE_ENV+=	G4INSTALL=${WRKDIR}/${DISTNAME}
-MAKE_ENV+=	CLHEP_BASE_DIR=${LOCALBASE}
+MAKE_ENV+=	CLHEP_BASE_DIR=${PREFIX}
 MAKE_ENV+=	G4LIB_BUILD_STATIC=1
 MAKE_ENV+=	G4LIB_USE_GRANULAR=1
 
@@ -33,9 +33,9 @@ MAKE_ENV+=	G4LIB_USE_GRANULAR=1
 
 MAKE_ENV+=	G4VIS_USE_OPENGLX=1
 MAKE_ENV+=	G4VIS_BUILD_OPENGLX_DRIVER=1
-MAKE_ENV+=	OGLHOME=${LOCALBASE}
-MAKE_ENV+=	OGLFLAGS="-I${LOCALBASE}/include"
-MAKE_ENV+=	OGLLIBS="-L${LOCALBASE}/lib -lGLU -lGL"
+MAKE_ENV+=	OGLHOME=${PREFIX}
+MAKE_ENV+=	OGLFLAGS="-I${PREFIX}/include"
+MAKE_ENV+=	OGLLIBS="-L${PREFIX}/lib -lGLU -lGL"
 
 # RayTracerX Visualization driver
 MAKE_ENV+=	G4VIS_USE_RAYTRACERX=1
@@ -45,23 +45,23 @@ MAKE_ENV+=	G4VIS_BUILD_RAYTRACERX_DRIVER=1
 MAKE_ENV+=	G4UI_USE_TERMINAL=1
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant/config
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant/examples
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant/lib
-	${INSTALL_LIB_DIR} ${DESTDIR}${LOCALBASE}/geant/lib/${G4SYSTEM}
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant/physics_lists
-	${INSTALL_DATA_DIR} ${DESTDIR}${LOCALBASE}/geant/source
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/config
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/examples
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/lib
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/geant/lib/${G4SYSTEM}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/physics_lists
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/source
 	cd ${WRKDIR}/${DISTNAME}/config && pax -pp -rw . \
-		${DESTDIR}${LOCALBASE}/geant/config
+		${DESTDIR}${PREFIX}/geant/config
 	cd ${WRKDIR}/${DISTNAME}/examples && pax -pp -rw . \
-		${DESTDIR}${LOCALBASE}/geant/examples
+		${DESTDIR}${PREFIX}/geant/examples
 	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/lib/${G4SYSTEM}/* \
-		${DESTDIR}${LOCALBASE}/geant/lib/${G4SYSTEM}
+		${DESTDIR}${PREFIX}/geant/lib/${G4SYSTEM}
 	cd ${WRKDIR}/${DISTNAME}/physics_lists && pax -pp -rw . \
-		${DESTDIR}${LOCALBASE}/geant/physics_lists
+		${DESTDIR}${PREFIX}/geant/physics_lists
 	cd ${WRKDIR}/${DISTNAME}/source && pax -pp -rw . \
-		${DESTDIR}${LOCALBASE}/geant/source
+		${DESTDIR}${PREFIX}/geant/source
 
 .include	"../../wip/clhep/buildlink3.mk"
 .include	"../../graphics/MesaLib/buildlink3.mk"
