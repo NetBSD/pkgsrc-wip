@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3313 2009/03/21 19:42:41 thomasklausner Exp $
+# $Id: Makefile,v 1.3314 2009/03/21 23:31:58 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -297,6 +297,7 @@ SUBDIR+=	dotproject
 SUBDIR+=	dovecot
 #SUBDIR+=	dovecot-sieve
 SUBDIR+=	dpic
+SUBDIR+=	dragbox
 SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
