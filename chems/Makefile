@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/13 06:37:44 smoppy Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/22 11:09:56 smoppy Exp $
 
 DISTNAME=	chems-0x03_1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chems/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	smoppy@gmail.com
+MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://chems.sourceforge.net/
 COMMENT=	The geekest content helper management system
 
