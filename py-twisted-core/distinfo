@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/07/12 00:21:58 milosn Exp $
-
-SHA1 (TwistedCore-8.1.0.tar.bz2) = 77b6ebff5c11ea6efb62e41d0b09897d37d97423
-RMD160 (TwistedCore-8.1.0.tar.bz2) = 92f28c14709f5eb307757cd993a511344109c59a
-Size (TwistedCore-8.1.0.tar.bz2) = 1194164 bytes
-SHA1 (patch-aa) = 91b5564462a42793f3f2fb9e4045ff207879b124
