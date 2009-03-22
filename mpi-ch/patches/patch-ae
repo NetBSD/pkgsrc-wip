@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.5 2009/03/22 23:53:18 asau Exp $
+
+"test ==" portability fixes.
+
+--- src/mpid/ch3/channels/nemesis/configure.orig	2009-03-18 19:24:45.000000000 +0300
++++ src/mpid/ch3/channels/nemesis/configure	2009-03-23 02:27:16.000000000 +0300
+@@ -5436,7 +5436,7 @@
+ 
+     fi;
+ 
+-    if test "${net}" == "newmad" ; then
++    if test "${net}" = "newmad" ; then
+        if test "${ac_cv_header_nm_public_h+set}" = set; then
+   { $as_echo "$as_me:$LINENO: checking for nm_public.h" >&5
+ $as_echo_n "checking for nm_public.h... " >&6; }
+@@ -5810,7 +5810,7 @@
+        fi
+     fi;
+ 
+-    if test "${net}" == "elan" ; then
++    if test "${net}" = "elan" ; then
+     echo "=== You're about to use the experimental Nemesis/Elan network module."
+     echo "=== This module has not been thoroughly tested and some performance issues remain."
+         if test "${ac_cv_header_elan_elan_h+set}" = set; then

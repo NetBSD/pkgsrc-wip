@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/03/22 22:56:35 asau Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/22 23:53:18 asau Exp $
 
 DISTNAME=	mpich2-1.1b1
 PKGNAME=	${DISTNAME}
@@ -57,8 +57,6 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
-
-CHECK_PORTABILITY_SKIP=	src/mpid/ch3/channels/nemesis/configure
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
