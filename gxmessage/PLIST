@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/22 16:02:38 jihbed Exp $
+bin/gxmessage
+man/man1/gxmessage.1
+share/locale/sk/LC_MESSAGES/gxmessage.mo
+share/locale/sv/LC_MESSAGES/gxmessage.mo
+share/pixmaps/gxmessage.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
