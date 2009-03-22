@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2009/03/22 19:21:27 moubctez Exp $
+
+--- manpages/Makefile.orig	2009-03-22 12:34:34.000000000 +0100
++++ manpages/Makefile
+@@ -30,8 +30,7 @@ all:
+ 	@echo Nothing to do
+ 	
+ install: uninstall
+-	install -d $(DESTDIR)$(mandir)
+-	install -m 644 $(MP_FILES) $(DESTDIR)$(mandir)
++	${BSD_INSTALL_MAN} $(MP_FILES) $(DESTDIR)$(mandir)
+ 
+ uninstall:
+ 	@-$(foreach CUR_MP,$(MP_FILES), rm -f $(DESTDIR)$(mandir)/$(CUR_MP); echo rm -f $(DESTDIR)$(mandir)/$(CUR_MP); ) 

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/21 18:58:45 tnn2 Exp $
-#
+# $NetBSD: Makefile,v 1.8 2009/03/22 19:21:27 moubctez Exp $
 
 DISTNAME=		aircrack-ng-1.0-rc2
 PKGNAME=		aircrack-ng-1.0rc2
@@ -14,14 +13,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		common.mak
-SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.fix-paths+=		-e 's,man/man1,${PKGMANDIR}/man1,g'
+DEPENDS+=		bash>=3.2.9:../../shells/bash
 
-CHECK_INTERPRETER_SKIP=		sbin/airdriver-ng # xxx might as well not install it
+REPLACE_INTERPRETER+=	bash
+REPLACE.bash.old=	.*/bin/bash
+REPLACE.bash.new=	${PREFIX}/bin/bash
+REPLACE_FILES.bash=	airdriver-ng
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
