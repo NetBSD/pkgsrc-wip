@@ -166,3 +166,10 @@ $0 ~ /^ASSIGNMENTS=/ {
 
 	next
 }
+
+match($0, /^PKGPATH=.*:/) {
+	assigns = substr($0, RLENGTH+1)
+	update()
+
+	next
+}
