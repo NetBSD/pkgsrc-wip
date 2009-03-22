@@ -1,0 +1,4 @@
+libgxim is a X Input Method(XIM) protocol library that is implemented by GObject
+this library helps you to implement XIM server or client applications to
+communicate through XIM protocol without using Xlib API, particularly
+ if your application uses  GObject-based main loop
