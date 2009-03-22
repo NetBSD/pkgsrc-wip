@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/06 11:01:34 absd Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/22 19:18:29 thomasklausner Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 CATEGORIES=	net kde
@@ -17,20 +17,6 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		awk msgfmt pkg-config perl
 
-.include "../../mk/bsd.prefs.mk"
-
-# As of at least NetBSD-4.0 the shipped gettext cannot handle the .po files,
-# so we strip out usage of the newer features (context and fuzzy matches)
-.if (${OPSYS} == "NetBSD")
-post-patch:
-	for f in ${WRKSRC}/po/*/ktorrent.po ; do \
-	    mv $$f $$f.original ; \
-	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
-.endif
-
-BUILDLINK_DEPMETHOD.libXt?=	build
-
 .include "../../wip/kde4/kde4.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -40,5 +26,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../wip/kdebase-runtime4/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

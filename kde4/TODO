@@ -1,7 +1,5 @@
 PR lib/37654 - fixed in current.
 
-Deal with requirement for gettext >= 0.15 - msgfmtstrip script works around.
-
 nepomukservicest is coredumping on login.
 
 Under some conditions konsole prints 

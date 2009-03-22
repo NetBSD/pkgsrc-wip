@@ -1,4 +1,4 @@
-# $NetBSD: l10n.mk,v 1.1 2008/11/06 11:17:54 mwdavies Exp $
+# $NetBSD: l10n.mk,v 1.2 2009/03/22 19:18:29 thomasklausner Exp $
 
 # This file provides useful defaults for the l10n packages of koffice.
 #
@@ -28,12 +28,6 @@ USE_TOOLS+=		msgfmt
 BUILDLINK_DEPMETHOD.qt4-libs=	build
 BUILDLINK_DEPMETHOD.qt4-qdbus=	build
 BUILDLINK_DEPMETHOD.kdelibs=	build
-
-SUBST_CLASSES+=		pofix
-SUBST_STAGE.pofix=	post-patch
-SUBST_MESSAGE.pofix=	Fixup po files that use new features
-SUBST_FILES.pofix=	messages/*/*.po
-SUBST_FILTER_CMD.pofix=	${AWK} -f ${PKGDIR}/../../wip/kde4/files/msgfmtstrip
 
 .include "../../wip/kde4/kde4.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"

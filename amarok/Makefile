@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/09 20:09:03 mwdavies Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/22 19:18:29 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -23,12 +23,6 @@ SUBST_STAGE.mysql=	post-patch
 SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/:
-
-SUBST_CLASSES+=		pofix
-SUBST_STAGE.pofix=	post-patch
-SUBST_MESSAGE.pofix=	Fixup po files that use new features
-SUBST_FILES.pofix=	po/*/amarok.po
-SUBST_FILTER_CMD.pofix=	${AWK} -f ${PKGDIR}/../../wip/kde4/files/msgfmtstrip
 
 # uses its own internal plasma library/includes but if system plasma not 
 # there will install some plasma config.
