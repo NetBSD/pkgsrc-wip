@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3318 2009/03/22 16:15:48 jihbed Exp $
+# $Id: Makefile,v 1.3319 2009/03/22 16:30:05 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1964,7 +1964,6 @@ SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
 SUBDIR+=	vacuum
 SUBDIR+=	vagalume
-SUBDIR+=	vala
 SUBDIR+=	vale-current
 SUBDIR+=	vamps
 SUBDIR+=	vcf
