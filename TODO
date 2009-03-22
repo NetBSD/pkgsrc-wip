@@ -3,11 +3,11 @@ Suggested package updates
 
 	o amarok-2.0.2
 	o argouml-0.24
-	o asymptote-1.66
+	o asymptote-1.67
 	o backintime-0.9.16
 	o bakery-2.6.3
 	o bub-n-bros-1.6
-	o cclive-0.2.4
+	o cclive-0.2.5
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.13.3
@@ -16,7 +16,7 @@ Suggested package updates
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o desmume-0.9.1
-	o digikam-0.10.0rc2 (needs libraries from KDE 4.2)
+	o digikam-0.10.0
 	o directfb-1.0.0
 	o ecasound-2.6.0
 	o editline-20090111.3.0
@@ -26,7 +26,7 @@ Suggested package updates
 	o firebird-2.0.3
 	o gajim-0.12
 	o gallery-1.5.10
-	o gambas2-2.11.0
+	o gambas2-2.12
 	o gcc42-4.2.4
 	o gcc43-4.3.3
 	o geant-4.9.2
@@ -51,7 +51,7 @@ Suggested package updates
 	o libgksu-2.0.4
 	o libxcb-1.2
 	o lincity-ng-2.0
-	o linphone-3.0.0
+	o linphone-3.1.0
 	o lives-0.9.9.6
 	o llvm-2.5
 	o man-1.6f
@@ -64,6 +64,7 @@ Suggested package updates
 	o mupen64-0.5
 	o ocp-0.1.16
 	o opal-2.2.11
+	o openmpi-1.3.1
 	o openvrml-0.17.11
 	o ortp-0.15.0
 	o osmose-0.8.5b
