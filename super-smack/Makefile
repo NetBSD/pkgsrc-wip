@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2007/03/12 08:54:26 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/22 10:43:35 bartoszkuzma Exp $
 #
 
 DISTNAME=		super-smack-1.3
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://vegan.net/tony/supersmack/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://vegan.net/tony/supersmack/
 COMMENT=		Database benchmarking tool
 
