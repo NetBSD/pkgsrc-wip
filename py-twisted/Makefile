@@ -1,33 +1,26 @@
-# $NetBSD: Makefile,v 1.23 2008/07/12 00:30:11 milosn Exp $
-.include "../../wip/py-twisted-core/version.mk"
+# $NetBSD: Makefile,v 1.24 2009/03/22 14:40:40 milosn Exp $
+
+TWISTED_VERSION=	8.2.0
 
 DISTNAME=	Twisted-${TWISTED_VERSION}
 PKGNAME=	${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
-CATEGORIES =	meta-pkgs net python
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+CATEGORIES =	net python
+MASTER_SITES=	http://tmrc.mit.edu/mirror/twisted/Twisted/8.2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://www.twistedmatrix.com/
 COMMENT=	Event-driven networking framework for Python
 
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=8.1.0:../../wip/py-twisted-core
-DEPENDS+=	${PYPKGPREFIX}-twisted-conch>=8.1.0:../../wip/py-twisted-conch
-DEPENDS+=	${PYPKGPREFIX}-twisted-web>=8.1.0:../../wip/py-twisted-web
-DEPENDS+=	${PYPKGPREFIX}-twisted-lore>=8.1.0:../../wip/py-twisted-lore
-DEPENDS+=	${PYPKGPREFIX}-twisted-names>=8.1.0:../../wip/py-twisted-names
-DEPENDS+=	${PYPKGPREFIX}-twisted-mail>=8.1.0:../../wip/py-twisted-mail
-DEPENDS+=	${PYPKGPREFIX}-twisted-runner>=8.0.0:../../wip/py-twisted-runner
-DEPENDS+=	${PYPKGPREFIX}-twisted-words>=8.1.0:../../wip/py-twisted-words
-DEPENDS+=	${PYPKGPREFIX}-twisted-news>=8.1.0:../../wip/py-twisted-news
+DEPENDS+=	${PYPKGPREFIX}-twisted-zopeinterface>=3.3.0:../../wip/py-twisted-zopeinterface
+DEPENDS+=	${PYPKGPREFIX}-twisted-kqueue>=2.0:../../wip/py-twisted-kqueue
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-amkCrypto>=1.9a6nb3:../../security/py-amkCrypto
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-NO_MTREE=	yes
+PYDISTUTILSPKG=		yes
+_PYSETUPTOOLSINSTALLARGS+=	--old-and-unmanageable
 
-do-install:     # empty
+CONFLICTS+=            ${PYPKGPREFIX}-twisted<2.4
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
