@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2009/02/14 10:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.16 2009/03/22 22:56:35 asau Exp $
 
-DISTNAME=	mpich2-1.1a2
+DISTNAME=	mpich2-1.1b1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.1a2/src/
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.1b1/src/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
@@ -57,6 +57,8 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
+
+CHECK_PORTABILITY_SKIP=	src/mpid/ch3/channels/nemesis/configure
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

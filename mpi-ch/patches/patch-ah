@@ -1,0 +1,13 @@
+Random data are not programs.
+
+--- src/packaging/envmods/Makefile.in.orig	2009-03-18 19:24:09.000000000 +0300
++++ src/packaging/envmods/Makefile.in	2009-03-22 19:40:07.000000000 +0300
+@@ -76,7 +76,7 @@
+ # Install target
+ install:  FORCE_TARGET 
+ 	if [ ! -d ${DESTDIR}${datadir} ] ; then $(MKDIR_P) ${DESTDIR}${datadir} ; fi
+-	if [ -s mpich2.module ] ; then $(INSTALL_PROGRAM) mpich2.module ${DESTDIR}${datadir}/mpich2.module ; fi
++	if [ -s mpich2.module ] ; then $(INSTALL_DATA) mpich2.module ${DESTDIR}${datadir}/mpich2.module ; fi
+ 
+ install-strip:
+ 	$(MAKE) INSTALL_STRIP_FLAG=-s install
