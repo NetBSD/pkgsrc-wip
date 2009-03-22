@@ -1,0 +1,10 @@
+Aaspects is a lightweight and low-level library for intercepting function
+calls. Functions and methods (also in Python standard library and third
+party code) can be wrapped so that when they are called, the wrap is invoked
+first. Depending on the wrap, the execution of the original function can be
+omitted, or the function can be called arbitrarily many times. Wraps are
+able to modify the call arguments and the return values of wrapped functions
+and handle exceptions. There can be many wraps on the same function. The
+wraps can be enabled, disabled and removed in any order. In the terminology
+of aspect-oriented programming, the library allows applying advices (wraps)
+to call join points of methods and functions in around fashion
