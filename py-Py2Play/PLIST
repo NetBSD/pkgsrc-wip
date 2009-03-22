@@ -1,23 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/05 05:20:53 mpasternak Exp $
-${PYSITELIB}/py2play/__init__.py
-${PYSITELIB}/py2play/action.py
-${PYSITELIB}/py2play/character.py
-${PYSITELIB}/py2play/demo.py
-${PYSITELIB}/py2play/idler.py
-${PYSITELIB}/py2play/level.py
-${PYSITELIB}/py2play/player.py
+@comment $NetBSD: PLIST,v 1.2 2009/03/22 22:41:40 jihbed Exp $
 ${PYSITELIB}/py2play/__init__.pyc
-${PYSITELIB}/py2play/action.pyc
-${PYSITELIB}/py2play/character.pyc
-${PYSITELIB}/py2play/demo.pyc
-${PYSITELIB}/py2play/idler.pyc
-${PYSITELIB}/py2play/level.pyc
-${PYSITELIB}/py2play/player.pyc
 ${PYSITELIB}/py2play/__init__.pyo
+${PYSITELIB}/py2play/action.pyc
 ${PYSITELIB}/py2play/action.pyo
+${PYSITELIB}/py2play/character.pyc
 ${PYSITELIB}/py2play/character.pyo
+${PYSITELIB}/py2play/demo.pyc
 ${PYSITELIB}/py2play/demo.pyo
+${PYSITELIB}/py2play/idler.pyc
 ${PYSITELIB}/py2play/idler.pyo
+${PYSITELIB}/py2play/level.pyc
 ${PYSITELIB}/py2play/level.pyo
+${PYSITELIB}/py2play/player.pyc
 ${PYSITELIB}/py2play/player.pyo
 @dirrm ${PYSITELIB}/py2play

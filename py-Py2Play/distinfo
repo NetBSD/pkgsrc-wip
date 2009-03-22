@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/01/02 02:52:08 mpasternak Exp $
+$NetBSD: distinfo,v 1.3 2009/03/22 22:41:40 jihbed Exp $
 
-SHA1 (Py2Play-0.1.6.tar.gz) = 07943dedcb323597514ee174918e87d3ea77e8c0
-Size (Py2Play-0.1.6.tar.gz) = 21436 bytes
+SHA1 (Py2Play-0.1.10.tar.gz) = 8000d5b70a729e51c5312fb26ddbb4279fe27616
+RMD160 (Py2Play-0.1.10.tar.gz) = 26738ed7ffb458f3f30a54f89945612e6abe5fcd
+Size (Py2Play-0.1.10.tar.gz) = 21436 bytes
