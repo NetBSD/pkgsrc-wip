@@ -1,0 +1,168 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2008-2009 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#use "alt_getopt.awk"
+#use "abort.awk"
+#use "xgetline.awk"
+#use "xclose.awk"
+#use "min.awk"
+
+############################################################
+function usage (){
+	printf "\
+pkg_summary2bb_pkgs - extracts summaries for packages\n\
+   ready for bulk build (bb in the script name).\n\
+   That is, summaries for packages with not empty ASSIGNMENTS\n\
+   are removed if their PKGNAME (binary package basename) do not depend\n\
+   on ASSIGNMENTS.\n\
+   Input summary must be pkg_uniq_summary'ed!\n\
+   Duplications on input are not allowed\n\
+usage: pkg_summary2bb_pkgs -h\n\
+       pkg_summary2bb_pkgs [OPTIONS] file1 [file2...]\n\
+OPTIONS:\n\
+  -h|--help            display this help\n\
+" > "/dev/stderr"
+}
+
+BEGIN {
+	long_opts ["help"] = "h"
+	while (getopt("h")){
+		if (optopt == "h"){
+			usage()
+			exit 0
+		}else{
+			abort()
+		}
+	}
+
+	# find problematic packages
+	for (i=1; i < ARGC; ++i){
+		if (ARGV [i] == "") continue
+
+		while (xgetline0(ARGV [i])){
+			if ($0 ~ /^PKGNAME=/){
+				pkgname = substr($0, 9)
+				++conflicts [pkgname]
+			}else if ($0 ~ /^ASSIGNMENTS=/){
+				assigns = substr($0, 13)
+			}else if (NF == 0){
+				commas = assigns != "" ? 1+gsub(/,/, "", assigns) : 0
+				if (pkgname in cnt)
+					cnt [pkgname] = min(cnt [pkgname] + 0, commas + 0)
+				else
+					cnt [pkgname] = commas
+
+				assigns = pkgname = ""
+			}
+		}
+
+		xclose(ARGV [i])
+	}
+
+	# init
+	pkgname = assigns = ""
+	good_pkg = 0 # -1|0|1 - bad|unknown|good
+	count = 0
+
+# 	for (i in cnt){
+# 		if (conflicts [i] > 1){
+# 			print i, cnt [i]
+# 		}
+# 	}
+# 	exit 0
+}
+
+function print_lines (){
+	for (i=0; i < count; ++i){
+		print lines [i]
+	}
+	count    = 0
+}
+
+NF == 0 {
+	if (good_pkg == 0){
+		assert(assigns == "")
+		good_pkg = 1
+	}
+	if (good_pkg == 1){
+		print_lines()
+		print ""
+	}
+
+	pkgname = assigns = ""
+	good_pkg = 0
+	count    = 0
+	next
+}
+
+good_pkg == 1 {
+	print $0
+	next
+}
+
+good_pkg == -1 {
+	next
+}
+
+{
+	lines [count++] = $0
+}
+
+function update (){
+	if (pkgname == ""){
+		return
+	}
+
+	if (conflicts [pkgname] < 2){
+		print_lines()
+		good_pkg = 1
+		return
+	}
+
+	if (assigns == ""){
+		return
+	}
+
+	if (gsub(/,/, "", assigns)+1 == cnt [pkgname]){
+		print_lines()
+		good_pkg = 1
+		return
+	}
+
+	good_pkg = -1
+	count = 0
+}
+
+$0 ~ /^PKGNAME=/ {
+	pkgname = substr($0, 9)
+	update()
+
+	next
+}
+
+$0 ~ /^ASSIGNMENTS=/ {
+	assigns = substr($0, 13)
+	update()
+
+	next
+}
