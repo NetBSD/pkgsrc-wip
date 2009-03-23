@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3324 2009/03/22 22:32:02 jihbed Exp $
+# $Id: Makefile,v 1.3325 2009/03/23 13:05:03 mstapelberg Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -731,6 +731,7 @@ SUBDIR+=	hxt
 SUBDIR+=	hydrogen-current
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
+SUBDIR+=	i3
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 #SUBDIR+=	icc
