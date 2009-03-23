@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:53 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/23 11:55:49 mstapelberg Exp $
 
 BUILDLINK_TREE+=	xcb-util
 
 .if !defined(XCB_UTIL_BUILDLINK3_MK)
 XCB_UTIL_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xcb-util+=	xcb-util>=0.2pl0
+BUILDLINK_API_DEPENDS.xcb-util+=	xcb-util>=0.3.3
 BUILDLINK_PKGSRCDIR.xcb-util?=	../../wip/xcb-util
 
 .include "../../wip/libxcb/buildlink3.mk"
