@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/23 13:03:33 mstapelberg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/23 17:42:11 mstapelberg Exp $
 bin/i3
-share/doc/i3/i3.config
+share/doc/i3/config
 man/man1/i3.1
 @comment in i3: @dirrm etc/i3
