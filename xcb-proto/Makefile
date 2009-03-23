@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/03/23 11:20:01 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/23 11:23:44 mstapelberg Exp $
 #
 
-DISTNAME=	xcb-proto-1.3
+DISTNAME=	xcb-proto-1.4
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
