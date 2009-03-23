@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/06 20:06:44 pebog Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/23 16:58:25 lexort Exp $
 #
 #
 #	Request by the author:
@@ -11,7 +11,7 @@
 #
 #
 DISTNAME=		dcc-1.3.103
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
 EXTRACT_SUFX=		.tar.Z
@@ -88,7 +88,8 @@ SPECIAL_PERMS+=		bin/cdcc ${DCC_PERMS_SETUID} \
 			bin/dccproc ${DCC_PERMS_SETUID} \
 			libexec/dccsight ${DCC_PERMS_SETUID}
 
-do-install: dccm-install
+# options.mk/dccm adds a dependency on do-install.
+do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cdcc/cdcc ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/dbclean/dbclean ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_PROGRAM} ${WRKSRC}/dblist/dblist ${DESTDIR}${PREFIX}/libexec/

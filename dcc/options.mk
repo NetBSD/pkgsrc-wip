@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/02/25 12:31:54 pebog Exp $
+# $NetBSD: options.mk,v 1.4 2009/03/23 16:58:25 lexort Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dcc
 PKG_SUPPORTED_OPTIONS=	dccm
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--disable-dccm
 .else
 RCD_SCRIPTS+=		dccm
 PLIST.dccm=		yes
+do-install: dccm-install
 dccm-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dccm/dccm ${DESTDIR}${PREFIX}/libexec/
 .include "../../mail/libmilter/buildlink3.mk"
