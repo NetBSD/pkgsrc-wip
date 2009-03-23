@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/23 13:03:33 mstapelberg Exp $
+
+--- Makefile.orig	2009-03-15 23:34:55.000000000 +0100
++++ Makefile
+@@ -58,10 +58,10 @@ all: ${FILES}
+ 	$(CC) -o i3 ${FILES} $(LDFLAGS)
+ 
+ install: all
+-	$(INSTALL) -d -m 0755 $(DESTDIR)/usr/bin
+-	$(INSTALL) -d -m 0755 $(DESTDIR)/etc/i3
+-	$(INSTALL) -m 0755 i3 $(DESTDIR)/usr/bin/
+-	test -e $(DESTDIR)/etc/i3/config || $(INSTALL) -m 0644 i3.config $(DESTDIR)/etc/i3/config
++	$(INSTALL) -d -m 0755 $(DESTDIR)/usr/pkg/bin
++	$(INSTALL) -d -m 0755 $(DESTDIR)/usr/pkg/share/doc/i3
++	$(INSTALL) -m 0755 i3 $(DESTDIR)/usr/pkg/bin/
++	test -e $(DESTDIR)/usr/pkg/share/doc/i3/config || $(INSTALL) -m 0644 i3.config $(DESTDIR)/usr/pkg/share/doc/i3/i3.config
+ 
+ dist: clean
+ 	[ ! -f i3-${VERSION} ] || rm -rf i3-${VERSION}
