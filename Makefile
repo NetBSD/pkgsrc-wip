@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3325 2009/03/23 13:05:03 mstapelberg Exp $
+# $Id: Makefile,v 1.3326 2009/03/23 21:48:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1688,6 +1688,7 @@ SUBDIR+=	rosegarden-current
 SUBDIR+=	roundcube-skin-mvision2
 SUBDIR+=	rsyslog
 SUBDIR+=	rte
+SUBDIR+=	rthread
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
