@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/23 21:45:44 jihbed Exp $
+bin/rthread_server
+${PYSITELIB}/rthread.pyc
+${PYSITELIB}/rthread.pyo
