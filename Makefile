@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3327 2009/03/23 22:21:00 jihbed Exp $
+# $Id: Makefile,v 1.3328 2009/03/23 22:33:12 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -453,6 +453,7 @@ SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	geany
+SUBDIR+=	gecko-sharp
 SUBDIR+=	gfa
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
