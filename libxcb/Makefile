@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/03/25 20:49:06 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/23 11:46:49 mstapelberg Exp $
 #
 
-DISTNAME=	libxcb-1.1
-PKGREVISION=	2
+DISTNAME=	libxcb-1.1.93
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +21,7 @@ USE_TOOLS+=	pkg-config automake
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
 CONFIGURE_ARGS+=	--disable-doxygen
 
+# Adds -Wl,-R to pkgconfig files automatically
 PKGCONFIG_OVERRIDE+=	xcb-composite.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-damage.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-dpms.pc.in
@@ -38,7 +38,6 @@ PKGCONFIG_OVERRIDE+=	xcb-xevie.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xf86dri.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xfixes.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xinerama.pc.in
-PKGCONFIG_OVERRIDE+=	xcb-xlib.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xprint.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xtest.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xv.pc.in

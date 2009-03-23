@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/24 21:08:59 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/23 11:46:49 mstapelberg Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -15,13 +15,14 @@ include/xcb/sync.h
 include/xcb/xc_misc.h
 include/xcb/xcb.h
 include/xcb/xcbext.h
-include/xcb/xcbxlib.h
 include/xcb/xevie.h
 include/xcb/xf86dri.h
 include/xcb/xfixes.h
 include/xcb/xinerama.h
+include/xcb/xinput.h
 include/xcb/xprint.h
 include/xcb/xproto.h
+include/xcb/xselinux.h
 include/xcb/xtest.h
 include/xcb/xv.h
 include/xcb/xvmc.h
@@ -41,7 +42,6 @@ lib/libxcb-xevie.la
 lib/libxcb-xf86dri.la
 lib/libxcb-xfixes.la
 lib/libxcb-xinerama.la
-lib/libxcb-xlib.la
 lib/libxcb-xprint.la
 lib/libxcb-xtest.la
 lib/libxcb-xv.la
@@ -63,7 +63,6 @@ lib/pkgconfig/xcb-xevie.pc
 lib/pkgconfig/xcb-xf86dri.pc
 lib/pkgconfig/xcb-xfixes.pc
 lib/pkgconfig/xcb-xinerama.pc
-lib/pkgconfig/xcb-xlib.pc
 lib/pkgconfig/xcb-xprint.pc
 lib/pkgconfig/xcb-xtest.pc
 lib/pkgconfig/xcb-xv.pc
