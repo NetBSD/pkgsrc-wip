@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/23 17:42:11 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/24 14:04:23 mstapelberg Exp $
 #
 
 PKGNAME=	i3-3a
@@ -13,6 +13,8 @@ COMMENT=	Improved dynamic tiling window manager
 
 USE_TOOLS+=		gmake
 BUILD_DEPENDS+=		asciidoc>=8.3.0:../../textproc/asciidoc
+BUILD_DEPENDS+=		xmlto:../../textproc/xmlto
+BUILD_DEPENDS+=		docbook-xml:../../textproc/docbook-xml
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES=${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/i3/config
