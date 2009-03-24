@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/22 19:21:27 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/24 19:57:10 absd Exp $
 
 DISTNAME=		aircrack-ng-1.0-rc2
 PKGNAME=		aircrack-ng-1.0rc2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.aircrack-ng.org/
 COMMENT=		Tools for auditing wireless networks
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1
 
 USE_TOOLS+=		gmake
 
