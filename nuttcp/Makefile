@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/24 15:42:29 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/24 15:48:55 bubuchka Exp $
 #
 
 DISTNAME=	nuttcp-${NUTTCP_VERSION}
-CATEGORIES=	wip benchmarks
+CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.lcp.nrl.navy.mil/nuttcp/ \
 		ftp://ftp.lcp.nrl.navy.mil/pub/nuttcp/
 EXTRACT_SUFX=	.tar.bz2
