@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2009/03/23 17:39:53 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/24 16:29:50 lexort Exp $
 
 SVNVERSION=	5370
 VERSION=	0.7.6.${SVNVERSION}
 DISTNAME=	TracTimingAndEstimation-${VERSION}
 PKGNAME=	trac-plugins-TimingAndEstimation-${VERSION}
 # Empty to avoid default setting.
+PKGREVISION=	0
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
