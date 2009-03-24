@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3329 2009/03/23 23:09:07 jihbed Exp $
+# $Id: Makefile,v 1.3330 2009/03/24 15:45:35 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1178,6 +1178,7 @@ SUBDIR+=	nomadio
 SUBDIR+=	nos-tun
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
+SUBDIR+=	nuttcp
 SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nvramtool
 SUBDIR+=	nx-client-bin
