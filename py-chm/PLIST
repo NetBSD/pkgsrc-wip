@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/23 22:19:57 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/25 09:21:52 thomasklausner Exp $
+${PYSITELIB}/chm/__init__.py
 ${PYSITELIB}/chm/__init__.pyc
 ${PYSITELIB}/chm/__init__.pyo
 ${PYSITELIB}/chm/_chmlib.so
+${PYSITELIB}/chm/chm.py
 ${PYSITELIB}/chm/chm.pyc
 ${PYSITELIB}/chm/chm.pyo
+${PYSITELIB}/chm/chmlib.py
 ${PYSITELIB}/chm/chmlib.pyc
 ${PYSITELIB}/chm/chmlib.pyo
 ${PYSITELIB}/chm/extra.so
