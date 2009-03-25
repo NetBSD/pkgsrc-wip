@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2009/02/15 19:30:06 asau Exp $
+# $NetBSD: Makefile,v 1.27 2009/03/25 20:12:03 asau Exp $
 #
 
-DISTNAME=	chicken-3.4.15
+DISTNAME=	chicken-4.0.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2009/02/03/ \
-		http://galinha.ucpel.tche.br/dev-snapshots/2009/02/03/
+MASTER_SITES=	http://chicken.wiki.br/dev-snapshots/2009/02/16/ \
+		http://galinha.ucpel.tche.br/dev-snapshots/2009/02/16/
+MASTER_SITES+=	http://www.call-with-current-continuation.org/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/
@@ -18,9 +19,9 @@ USE_TOOLS+=		gmake makeinfo
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
-OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/3
+OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/4
 
-BUILD_TARGET=		all chicken.info
+BUILD_TARGET=		all
 
 .include "../../mk/bsd.prefs.mk"
 
