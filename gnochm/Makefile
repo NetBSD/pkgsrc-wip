@@ -1,0 +1,39 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/03/25 10:22:09 thomasklausner Exp $
+#
+
+DISTNAME=	gnochm-0.9.11
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://gnochm.sourceforge.net/
+COMMENT=	CHM file viewer for Gnome2
+
+DEPENDS+=	${PYPKGPREFIX}-chm>=0.8.4:../../wip/py-chm
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.12:../../x11/py-gtk2
+DEPENDS+=	${PYPKGPREFIX}-gnome2>=1.99.12:../../x11/py-gnome2
+DEPENDS+=	${PYPKGPREFIX}-gnome2-extras>=1.99.12:../../x11/py-gnome2-extras
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+USE_DIRS+=		xdg-1.4 gnome2-1.6
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake intltool
+
+GCONF_SCHEMAS+=	gnochm.schemas
+
+SUBST_CLASSES+=		schema
+SUBST_STAGE.schema=	pre-configure
+SUBST_MESSAGE.schema=	Fixing schema installation path.
+SUBST_FILES.schema+=	data/Makefile.in
+SUBST_SED.schema+=	-e "s,..sysconfdir./gconf/schemas,${PREFIX}/share/gconf/schemas/,"
+
+.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/omf-scrollkeeper.mk"
+.include "../../mk/bsd.pkg.mk"
