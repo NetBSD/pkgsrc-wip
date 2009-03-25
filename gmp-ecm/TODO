@@ -1,2 +1,3 @@
 -create options.mk for the various optimization
 -research what's the best option for default
+-figure out how the libtool stuff works and use it
