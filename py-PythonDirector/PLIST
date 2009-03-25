@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/08 11:48:57 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/25 14:16:44 jihbed Exp $
+bin/pydir.py
