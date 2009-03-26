@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/14 00:02:30 splitscreen Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/26 22:28:25 jihbed Exp $
 bin/pydb
 ${PYSITELIB}/pydb/__init__.py
 ${PYSITELIB}/pydb/__init__.pyc
 ${PYSITELIB}/pydb/__init__.pyo
+${PYSITELIB}/pydb/complete.py
+${PYSITELIB}/pydb/complete.pyc
+${PYSITELIB}/pydb/complete.pyo
+${PYSITELIB}/pydb/connection.py
+${PYSITELIB}/pydb/connection.pyc
+${PYSITELIB}/pydb/connection.pyo
+${PYSITELIB}/pydb/disassemble.py
+${PYSITELIB}/pydb/disassemble.pyc
+${PYSITELIB}/pydb/disassemble.pyo
 ${PYSITELIB}/pydb/display.py
 ${PYSITELIB}/pydb/display.pyc
 ${PYSITELIB}/pydb/display.pyo
@@ -31,8 +40,17 @@ ${PYSITELIB}/pydb/set.pyo
 ${PYSITELIB}/pydb/show.py
 ${PYSITELIB}/pydb/show.pyc
 ${PYSITELIB}/pydb/show.pyo
+${PYSITELIB}/pydb/sighandler.py
+${PYSITELIB}/pydb/sighandler.pyc
+${PYSITELIB}/pydb/sighandler.pyo
 ${PYSITELIB}/pydb/subcmd.py
 ${PYSITELIB}/pydb/subcmd.pyc
 ${PYSITELIB}/pydb/subcmd.pyo
+${PYSITELIB}/pydb/threaddbg.py
+${PYSITELIB}/pydb/threaddbg.pyc
+${PYSITELIB}/pydb/threaddbg.pyo
+${PYSITELIB}/pydb/threadinfo.py
+${PYSITELIB}/pydb/threadinfo.pyc
+${PYSITELIB}/pydb/threadinfo.pyo
 man/man1/pydb.1
 @dirrm ${PYSITELIB}/pydb
