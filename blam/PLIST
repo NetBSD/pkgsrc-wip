@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/26 21:39:50 jihbed Exp $
+bin/blam
+lib/blam/AtomFeed.dll
+lib/blam/RSSFeed.dll
+lib/blam/blam.exe
+lib/blam/blam.exe.config
+man/man1/blam.1
+share/applications/blam.desktop
+share/blam/collection.xml
+share/blam/themes/akregator/theme.html
+share/blam/themes/blam/blam-box-bottom-left.png
+share/blam/themes/blam/blam-box-bottom-right.png
+share/blam/themes/blam/blam-box-pad.png
+share/blam/themes/blam/blam-box-top-left.png
+share/blam/themes/blam/blam-box-top-right.png
+share/blam/themes/blam/blam.css
+share/blam/themes/blam/theme.html
+share/blam/themes/pimped/blam.png
+share/blam/themes/pimped/news.png
+share/blam/themes/pimped/pimped.css
+share/blam/themes/pimped/theme.html
+share/blam/themes/planet/bubble-bottom-left.png
+share/blam/themes/planet/bubble-bottom-right.png
+share/blam/themes/planet/bubble-bottom.png
+share/blam/themes/planet/bubble-left.png
+share/blam/themes/planet/bubble-nipple.png
+share/blam/themes/planet/bubble-right.png
+share/blam/themes/planet/bubble-top-left.png
+share/blam/themes/planet/bubble-top-right.png
+share/blam/themes/planet/bubble-top.png
+share/blam/themes/planet/planet.css
+share/blam/themes/planet/theme.html
+share/gconf/schemas/blam.schemas
+share/icons/hicolor/16x16/apps/blam.png
+share/icons/hicolor/22x22/apps/blam.png
+share/icons/hicolor/24x24/apps/blam.png
+share/icons/hicolor/32x32/apps/blam.png
+share/icons/hicolor/48x48/apps/blam.png
+share/icons/hicolor/scalable/apps/blam.svg
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in GConf: @dirrm share/gconf/schemas
+@dirrm share/blam/themes/planet
+@dirrm share/blam/themes/pimped
+@dirrm share/blam/themes/blam
+@dirrm share/blam/themes/akregator
+@dirrm share/blam/themes
+@dirrm share/blam
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/blam
