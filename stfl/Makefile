@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/26 15:55:22 smoppy Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/26 21:31:27 smoppy Exp $
 #
 
 DISTNAME=	stfl-0.19
@@ -14,14 +14,7 @@ USE_TOOLS+=	gmake perl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#
-# TODO
-#
-# 	. Remove Makefile:76 wrong include
-#
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/libstfl.a ${DESTDIR}/${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/stfl.h ${DESTDIR}/${PREFIX}/include
+INSTALL_MAKE_FLAGS+=    prefix=${PREFIX}
+INSTALL_MAKE_FLAGS+=    DESTDIR=${DESTDIR}
 
 .include "../../mk/bsd.pkg.mk"
