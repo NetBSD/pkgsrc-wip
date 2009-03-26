@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/18 19:49:36 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/26 19:37:25 jihbed Exp $
 #
 
 DISTNAME=	gnocchi-0.35
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnocchi/}
 MAINTAINER=	MarkoSchuetz@web.de
 HOMEPAGE=	http://www.muftor.com/Wikka/wikka.php?wakka=Gnocchi
 COMMENT=	Complexity analyser for C++
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
