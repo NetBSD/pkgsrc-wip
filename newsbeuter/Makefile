@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/27 00:05:49 smoppy Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/27 00:11:27 smoppy Exp $
 
 DISTNAME=	newsbeuter-1.3
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
-MAINTAINER=	
+MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://www.newsbeuter.org/downloads/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 
