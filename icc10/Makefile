@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/26 20:01:00 alnsn Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/27 09:53:35 thomasklausner Exp $
 
 ICC_VERSION=	10.1.021
 ICC_SUBPREFIX=	icc10
@@ -10,6 +10,8 @@ MASTER_SITES=# empty
 MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	http://www.intel.com/cd/software/products/asmo-na/eng/compilers/
 COMMENT=	Intel C++ Compiler for Linux
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Intel forbids any redistribution
 NO_SRC_ON_CDROM=${RESTRICTED}
@@ -63,10 +65,13 @@ SUBST_VARS.vars=		BUILDLINK_PREFIX.gcc43 INTERP \
 SUBST_FILES.vars=		${ICC_SUBPREFIX}/bin/icc  \
 				${ICC_SUBPREFIX}/bin/icpc
 
+PLIST_VARS+=	i386 amd64
 .if ${MACHINE_ARCH}=="i386"
 ICC_EXTRACT_RPM=data/intel-icc${ICC_VERSION:S/.//g}-${ICC_VERSION}-1.i386.rpm
+PLIST.i386=	yes
 .else
 ICC_EXTRACT_RPM=data/intel-icce${ICC_VERSION:S/.//g}-${ICC_VERSION}-1.em64t.rpm
+PLIST.amd64=	yes
 .endif
 
 post-extract:
@@ -77,8 +82,7 @@ post-extract:
 		${ICC_SUBPREFIX}/lib/*.so* )
 
 do-install:
-	@( cd ${WRKSRC:Q} && \
-	${TOOLS_PLATFORM.cp} -R ${ICC_SUBPREFIX} ${LOCALBASE:Q} )
+	cd ${WRKSRC} && cp -R ${ICC_SUBPREFIX} ${DESTDIR}${PREFIX}
 
 .include "../../wip/gcc43/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/07 03:07:28 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/27 09:53:35 thomasklausner Exp $
 ${ICC_SUBPREFIX}/bin/codecov
 ${ICC_SUBPREFIX}/bin/icc
 ${ICC_SUBPREFIX}/bin/icc.cfg
-${ICC_SUBPREFIX}/bin/iccbin
 ${ICC_SUBPREFIX}/bin/icc.orig
+${ICC_SUBPREFIX}/bin/iccbin
 ${ICC_SUBPREFIX}/bin/iccvars.csh
 ${ICC_SUBPREFIX}/bin/iccvars.sh
 ${ICC_SUBPREFIX}/bin/icpc
 ${ICC_SUBPREFIX}/bin/icpc.cfg
-${ICC_SUBPREFIX}/bin/icpcbin
 ${ICC_SUBPREFIX}/bin/icpc.orig
+${ICC_SUBPREFIX}/bin/icpcbin
 ${ICC_SUBPREFIX}/bin/map_opts
 ${ICC_SUBPREFIX}/bin/mcpcom
 ${ICC_SUBPREFIX}/bin/prelink
@@ -23,6 +23,26 @@ ${ICC_SUBPREFIX}/bin/pronto_tool
 ${ICC_SUBPREFIX}/bin/tselect
 ${ICC_SUBPREFIX}/bin/xiar
 ${ICC_SUBPREFIX}/bin/xild
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/docs/README.txt
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/docs/Release_Notes.txt
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/docs/UsersGuide.pdf
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/Makefile
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/README
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/hello.c
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/kmp_cluster.ini
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/md.c
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/C/mpd.hosts
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/Fortran/Makefile
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/Fortran/README
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/Fortran/hello.f
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/Fortran/kmp_cluster.ini
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/examples/Fortran/md.f
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/README.forecaster
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/README.getlatency
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/README.segvprof
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/clomp_forecaster.pl
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/clomp_getlatency.pl
+${PLIST.amd64}${ICC_SUBPREFIX}/cluster_omp/tools/segvprof.pl
 ${ICC_SUBPREFIX}/doc/Doc_Index.htm
 ${ICC_SUBPREFIX}/doc/Getting_Started.htm
 ${ICC_SUBPREFIX}/doc/INSTALL.htm
@@ -30,7 +50,8 @@ ${ICC_SUBPREFIX}/doc/INSTALL.txt
 ${ICC_SUBPREFIX}/doc/README.txt
 ${ICC_SUBPREFIX}/doc/Release_Notes.htm
 ${ICC_SUBPREFIX}/doc/Release_Notes.txt
-${ICC_SUBPREFIX}/doc/csupport
+${PLIST.amd64}${ICC_SUBPREFIX}/doc/cesupport
+${PLIST.i386}${ICC_SUBPREFIX}/doc/csupport
 ${ICC_SUBPREFIX}/doc/flex_ug.pdf
 ${ICC_SUBPREFIX}/doc/main_cls/bullet.gif
 ${ICC_SUBPREFIX}/doc/main_cls/cshdat_robohelp.htm
@@ -2250,6 +2271,9 @@ ${ICC_SUBPREFIX}/doc/main_cls/whxdata/whtdata5.xml
 ${ICC_SUBPREFIX}/doc/main_cls/whxdata/whtdata6.xml
 ${ICC_SUBPREFIX}/doc/main_cls/whxdata/whtoc.xml
 ${ICC_SUBPREFIX}/doc/style.css
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/crtclusterbegin.o
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/crtclusterend.o
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/init.o
 ${ICC_SUBPREFIX}/lib/libcxaguard.a
 ${ICC_SUBPREFIX}/lib/libguide.a
 ${ICC_SUBPREFIX}/lib/libguide_stats.a
@@ -2258,20 +2282,23 @@ ${ICC_SUBPREFIX}/lib/libiomp5.a
 ${ICC_SUBPREFIX}/lib/libiompprof5.a
 ${ICC_SUBPREFIX}/lib/libiompstubs5.a
 ${ICC_SUBPREFIX}/lib/libipgo.a
-${ICC_SUBPREFIX}/lib/libipgo_pic.a
+${PLIST.i386}${ICC_SUBPREFIX}/lib/libipgo_pic.a
 ${ICC_SUBPREFIX}/lib/libirc.a
-${ICC_SUBPREFIX}/lib/libirc_fp.a
-${ICC_SUBPREFIX}/lib/libirc_pic.a
+${PLIST.i386}${ICC_SUBPREFIX}/lib/libirc_fp.a
+${PLIST.i386}${ICC_SUBPREFIX}/lib/libirc_pic.a
 ${ICC_SUBPREFIX}/lib/libirc_s.a
-${ICC_SUBPREFIX}/lib/libirc_s_pic.a
+${PLIST.i386}${ICC_SUBPREFIX}/lib/libirc_s_pic.a
 ${ICC_SUBPREFIX}/lib/libompstub.a
 ${ICC_SUBPREFIX}/lib/libsvml.a
 ${ICC_SUBPREFIX}/lib/locale/en_US/diagsc.cat
 ${ICC_SUBPREFIX}/lib/locale/en_US/diagsc.msg
 ${ICC_SUBPREFIX}/lib/locale/en_US/irc_msg.cat
 ${ICC_SUBPREFIX}/lib/locale/en_US/irc_msg.msg
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/locale/en_US/libclusterguide.cat
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/locale/en_US/libclusterguide.msg
 ${ICC_SUBPREFIX}/lib/locale/en_US/libm.cat
 ${ICC_SUBPREFIX}/lib/locale/en_US/libm.msg
+${PLIST.amd64}${ICC_SUBPREFIX}/lib/sharable_init.o
 ${ICC_SUBPREFIX}/licenses/clicense
 ${ICC_SUBPREFIX}/licenses/clredist.txt
 ${ICC_SUBPREFIX}/licenses/credist.txt
@@ -2369,5 +2396,11 @@ ${ICC_SUBPREFIX}/samples/vec_samples/vec_sample.c
 @dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects
 @dirrm ${ICC_SUBPREFIX}/doc/main_cls
 @dirrm ${ICC_SUBPREFIX}/doc
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/tools
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples/Fortran
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples/C
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/docs
+${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp
 @dirrm ${ICC_SUBPREFIX}/bin
 @dirrm ${ICC_SUBPREFIX}
