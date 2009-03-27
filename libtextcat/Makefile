@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/09 17:03:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/27 09:56:33 thomasklausner Exp $
 #
 
 DISTNAME=	libtextcat-2.2
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/libtextcat
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/libtextcat
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/libtextcat
 
 .include "../../mk/bsd.pkg.mk"

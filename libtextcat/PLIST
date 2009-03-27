@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/09 17:03:40 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/27 09:56:33 thomasklausner Exp $
 bin/createfp
 lib/libtextcat.la
-share/libtextcat
+share/libtextcat/README
+@dirrm share/libtextcat
