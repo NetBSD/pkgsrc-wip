@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/24 14:04:23 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/27 14:10:27 thomasklausner Exp $
 #
 
 PKGNAME=	i3-3a
@@ -11,11 +11,13 @@ MAINTAINER=	michael+pkgsrc@stapelberg.de
 HOMEPAGE=	http://i3.zekjur.net/
 COMMENT=	Improved dynamic tiling window manager
 
-USE_TOOLS+=		gmake
 BUILD_DEPENDS+=		asciidoc>=8.3.0:../../textproc/asciidoc
-BUILD_DEPENDS+=		xmlto:../../textproc/xmlto
-BUILD_DEPENDS+=		docbook-xml:../../textproc/docbook-xml
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+BUILD_DEPENDS+=		docbook-xml-[0-9]*:../../textproc/docbook-xml
+
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
 
 CONF_FILES=${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/i3/config
 
@@ -36,7 +38,7 @@ post-build:
 	cd ${WRKSRC} && gmake -C man
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/i3.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/i3.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../wip/xcb-util/buildlink3.mk"
 .include "../../wip/libxcb/buildlink3.mk"
