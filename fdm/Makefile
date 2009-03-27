@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/22 21:28:26 smoppy Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/27 09:58:15 smoppy Exp $
 
 DISTNAME=	fdm-1.6
 CATEGORIES=	mail
@@ -21,6 +21,7 @@ SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${BINOWN} -g ${BINGRP}/'
 .if ${OS} == "Linux"
 SUBST_SED.makefile+=	-e 's|^SRCS=.*.c|& compat/strlcpy.c compat/strlcat.c compat/strtonum.c|'
+
 CFLAGS+= -DNO_STRLCPY -DNO_STRLCAT -DNO_STRTONUM -D_GNU_SOURCE
 CFLAGS+= -DNO_SETRESUID -DNO_SETRESGID -DNO_SETPROCTITLE -DNO_QUEUE_H -DNO_TREE_H
 LDFLAGS+= -lresolv
@@ -38,14 +39,14 @@ SUBST_SED.paths=	-e "s,/etc,${PKG_SYSCONFDIR},"
 # Options
 ##
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fdm
-PKG_SUPPORTED_OPTIONS=	pcre courier
+PKG_SUPPORTED_OPTIONS=	pcre courier-auth
 PKG_SUGGESTED_OPTIONS=	pcre
 
 # Options handling framework
 .include "../../mk/bsd.options.mk"
 
 # COURIER
-.if !empty(PKG_OPTIONS:Mcourier)
+.if !empty(PKG_OPTIONS:Mcourier-auth)
 .include "../../security/courier-authlib/buildlink3.mk"
 CFLAGS+= -DCOURIER
 .endif
