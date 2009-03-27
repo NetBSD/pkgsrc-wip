@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3333 2009/03/26 21:42:24 jihbed Exp $
+# $Id: Makefile,v 1.3334 2009/03/27 00:07:39 smoppy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1175,6 +1175,7 @@ SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
+SUBDIR+=	newsbeuter
 SUBDIR+=	nginx
 SUBDIR+=	nginx-devel
 SUBDIR+=	nicotine+
