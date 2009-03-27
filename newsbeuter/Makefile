@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/27 00:11:27 smoppy Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/27 09:50:07 smoppy Exp $
 
 DISTNAME=	newsbeuter-1.3
 CATEGORIES=	news
@@ -12,9 +12,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config msgfmt 
+USE_TOOLS+=	gmake pkg-config msgfmt
 
-INSTALL_MAKE_FLAGS+=    prefix=${PREFIX}
+INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../wip/stfl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

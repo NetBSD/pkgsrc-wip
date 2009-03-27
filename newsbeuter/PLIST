@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/27 00:05:49 smoppy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/27 09:50:07 smoppy Exp $
 bin/newsbeuter
 bin/podbeuter
+man/man1/newsbeuter.1
+man/man1/podbeuter.1
 share/doc/newsbeuter/examples/config
 share/doc/newsbeuter/newsbeuter.html
 share/locale/de/LC_MESSAGES/newsbeuter.mo
@@ -16,9 +18,5 @@ share/locale/tr/LC_MESSAGES/newsbeuter.mo
 share/locale/uk/LC_MESSAGES/newsbeuter.mo
 share/locale/zh/LC_MESSAGES/newsbeuter.mo
 share/locale/zh_TW/LC_MESSAGES/newsbeuter.mo
-share/man/man1/newsbeuter.1
-share/man/man1/podbeuter.1
-@dirrm share/man/man1
-@dirrm share/man
 @dirrm share/doc/newsbeuter/examples
 @dirrm share/doc/newsbeuter
