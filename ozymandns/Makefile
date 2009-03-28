@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/08 15:18:50 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/28 16:59:55 thomasklausner Exp $
 
 DISTNAME=	ozymandns_src_0.1
 PKGNAME=	${DISTNAME:S/_src_/-/}
@@ -9,6 +9,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://localhost.lu/localhostwiki/OzymanDNS/
 COMMENT=	Tool to enable ssh tunnel over DNS using TXT records
+
+DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
+DEPENDS+=		p5-LWP-UserAgent-Determined-[0-9]*:../../www/p5-LWP-UserAgent-Determined
+DEPENDS+=		p5-MIME-Base32-[0-9]*:../../converters/p5-MIME-Base32
+DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
@@ -23,11 +28,6 @@ SUBST_STAGE.perlfix=    post-patch
 SUBST_MESSAGE.perlfix=  Fixing perl path
 SUBST_FILES.perlfix=    ${OZYMAN_PERLSCRIPTS}
 SUBST_SED.perlfix=      -e 's:^\#!/usr/bin/perl:\#!${PERL5}:g'
-
-DEPENDS+=		p5-Net-DNS:../../net/p5-Net-DNS
-DEPENDS+=		p5-LWP-UserAgent-Determined:../../www/p5-LWP-UserAgent-Determined
-DEPENDS+=		p5-MIME-Base32:../../converters/p5-MIME-Base32
-DEPENDS+=		p5-MIME-Base64:../../converters/p5-MIME-Base64
 
 do-build:
 		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} glance.c -o glance ${LDFLAGS}
