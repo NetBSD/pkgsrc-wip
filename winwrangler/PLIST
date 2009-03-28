@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/28 22:37:43 jihbed Exp $
+bin/winwrangler
+share/icons/hicolor/16x16/apps/winwrangler.png
+share/icons/hicolor/22x22/apps/winwrangler.png
+share/icons/hicolor/32x32/apps/winwrangler.png
+share/icons/hicolor/scalable/apps/winwrangler.svg
+share/winwrangler/art/winwrangler.png
+@dirrm share/winwrangler/art
+@dirrm share/winwrangler
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
