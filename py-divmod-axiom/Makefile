@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/03/28 17:02:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/28 21:06:35 milosn Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-axiom-${AXIOM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
