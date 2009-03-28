@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/12/10 22:10:58 absd Exp $
+# $NetBSD: Makefile,v 1.35 2009/03/28 15:35:52 thomasklausner Exp $
 #
 
 DISTNAME=		freevo-1.7.6
@@ -14,7 +14,8 @@ DEPENDS+=		mplayer>=1.0rc7:../../multimedia/mplayer
 DEPENDS+=		${PYPKGPREFIX}-sqlite>=1.0.1:../../databases/py-sqlite
 DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../wip/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
-DEPENDS+=		${PYPKGPREFIX}-elementtree>=0:../../textproc/py-elementtree
+DEPENDS+=		${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
+DEPENDS+=		${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 
 PYDISTUTILSPKG=		yes
 USE_PKGLOCALEDIR=	yes
@@ -49,7 +50,6 @@ post-install:
 .include "../../multimedia/libdvdcss/buildlink3.mk"  # not default by libdvdread
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
-.include "../../www/py-beautifulsoup/buildlink3.mk"
 .include "../../wip/py-kaa-imlib2/buildlink3.mk"
 .include "../../wip/py-kaa-metadata/buildlink3.mk"
 .include "../../wip/py-osd/buildlink3.mk"
