@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/03/08 11:11:43 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/28 16:55:08 thomasklausner Exp $
 #
 
 DISTNAME=	mvision2.2
-PKGNAME=	roundcube-skin-mvision2
+PKGNAME=	roundcube-skin-mvision-2.2
 CATEGORIES=	mail
 MASTER_SITES=	http://roundcubethemes.net/downloads/
 
