@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3334 2009/03/27 00:07:39 smoppy Exp $
+# $Id: Makefile,v 1.3335 2009/03/28 10:51:04 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1855,6 +1855,7 @@ SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
 SUBDIR+=	tagsoup
 SUBDIR+=	tagtool
+SUBDIR+=	ta-lib
 SUBDIR+=	talksoup
 SUBDIR+=	tango-icon-theme
 SUBDIR+=	task
