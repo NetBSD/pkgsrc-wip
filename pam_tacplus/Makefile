@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/26 00:18:03 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/28 17:08:05 pettai Exp $
 #
 
 DISTNAME=	pam_tacplus-1.2.10
@@ -18,7 +18,8 @@ SUBST_FILES.paths=      ${WRKSRC}/Makefile
 SUBST_STAGE.paths=      post-patch
 SUBST_SED.paths=        -e 's,@PREFIX@,${PREFIX},'
 
-#install:
-#	${INSTALL} ${WRKSRC}/pam_tacplus.so ${DESTDIR}${PREFIX}/lib/security/
+#USE_TOOLS+=		gmake
+
+MAKE_DIRS+=             ${DESTDIR}${PREFIX}/lib/security
 
 .include "../../mk/bsd.pkg.mk"
