@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/28 17:02:19 thomasklausner Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://divmod.org/trac/wiki/DivmodAxiom
 COMMENT=	An object database implemented on top of SQLite
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2.0:../../databases/py-sqlite2
-DEPENDS+=	${PYPKGPREFIX}-twisted-core>=2.4.0:../../wip/py-twisted-core
+DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../wip/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.6:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
