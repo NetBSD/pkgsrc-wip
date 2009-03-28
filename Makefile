@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3336 2009/03/28 22:40:02 jihbed Exp $
+# $Id: Makefile,v 1.3337 2009/03/28 23:12:29 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2042,6 +2042,7 @@ SUBDIR+=	xclipboard
 SUBDIR+=	xcowsay
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
+SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4
