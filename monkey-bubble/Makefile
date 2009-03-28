@@ -1,20 +1,27 @@
-# $NetBSD: Makefile,v 1.16 2008/03/06 14:54:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/28 16:46:33 thomasklausner Exp $
 #
 
-DISTNAME=		monkey-bubble-0.1.6
-PKGREVISION=		4
+DISTNAME=		monkey-bubble-0.4.0
 CATEGORIES=		games
-MASTER_SITES=		http://monkey-bubble.tuxfamily.org/
+MASTER_SITES=		http://home.gna.org/monkeybubble/downloads/
 
 MAINTAINER=		cube@NetBSD.org
-HOMEPAGE=		http://monkey-bubble.tuxfamily.org/
-COMMENT=		Bust'a'move clone written in C for GNOME2
+HOMEPAGE=		http://home.gna.org/monkeybubble/
+COMMENT=		Bust'A'Move clone written for GNOME2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_DIRS+=		xdg-1.6 gnome2-1.4
+USE_TOOLS+=		gmake intltool pkg-config
 
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

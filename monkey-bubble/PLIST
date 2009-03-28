@@ -1,16 +1,38 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/18 00:46:36 jlamwww Exp $
-bin/gsttest
+@comment $NetBSD: PLIST,v 1.8 2009/03/28 16:46:33 thomasklausner Exp $
 bin/monkey-bubble
 bin/monkey-srv
-etc/gconf/schemas/monkey-bubble.schemas
-lib/libgdkview.la
-lib/libgstaudio.la
-lib/libmonkey.la
-lib/libmonkeyutil.la
-lib/libnetcltmonkey.la
 share/applications/monkey-bubble.desktop
+share/gconf/schemas/monkey-bubble.schemas
+share/gnome/help/monkey-bubble/C/monkey-bubble.xml
+share/gnome/help/monkey-bubble/fr/monkey-bubble.xml
+share/locale/bg/LC_MESSAGES/monkey-bubble.mo
+share/locale/cs/LC_MESSAGES/monkey-bubble.mo
 share/locale/de/LC_MESSAGES/monkey-bubble.mo
+share/locale/en_CA/LC_MESSAGES/monkey-bubble.mo
+share/locale/en_GB/LC_MESSAGES/monkey-bubble.mo
+share/locale/es/LC_MESSAGES/monkey-bubble.mo
+share/locale/eu/LC_MESSAGES/monkey-bubble.mo
+share/locale/fi/LC_MESSAGES/monkey-bubble.mo
 share/locale/fr/LC_MESSAGES/monkey-bubble.mo
+share/locale/hr/LC_MESSAGES/monkey-bubble.mo
+share/locale/hu/LC_MESSAGES/monkey-bubble.mo
+share/locale/ja/LC_MESSAGES/monkey-bubble.mo
+share/locale/lv/LC_MESSAGES/monkey-bubble.mo
+share/locale/ms/LC_MESSAGES/monkey-bubble.mo
+share/locale/ne/LC_MESSAGES/monkey-bubble.mo
+share/locale/nl/LC_MESSAGES/monkey-bubble.mo
+share/locale/pt/LC_MESSAGES/monkey-bubble.mo
+share/locale/pt_BR/LC_MESSAGES/monkey-bubble.mo
+share/locale/ru/LC_MESSAGES/monkey-bubble.mo
+share/locale/rw/LC_MESSAGES/monkey-bubble.mo
+share/locale/sr/LC_MESSAGES/monkey-bubble.mo
+share/locale/sr@Latn/LC_MESSAGES/monkey-bubble.mo
+share/locale/sv/LC_MESSAGES/monkey-bubble.mo
+share/locale/tr/LC_MESSAGES/monkey-bubble.mo
+share/locale/uk/LC_MESSAGES/monkey-bubble.mo
+share/locale/vi/LC_MESSAGES/monkey-bubble.mo
+share/locale/zh_CN/LC_MESSAGES/monkey-bubble.mo
+share/locale/zh_TW/LC_MESSAGES/monkey-bubble.mo
 share/monkey-bubble/gfx/banana.svg
 share/monkey-bubble/gfx/bubbles/bubble_01.svg
 share/monkey-bubble/gfx/bubbles/bubble_02.svg
@@ -20,16 +42,27 @@ share/monkey-bubble/gfx/bubbles/bubble_05.svg
 share/monkey-bubble/gfx/bubbles/bubble_06.svg
 share/monkey-bubble/gfx/bubbles/bubble_07.svg
 share/monkey-bubble/gfx/bubbles/bubble_08.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_01.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_02.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_03.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_04.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_05.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_06.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_07.svg
+share/monkey-bubble/gfx/bubbles/little_bubble_08.svg
 share/monkey-bubble/gfx/frozen-bubble/back_hiscores.png
-share/monkey-bubble/gfx/frozen-bubble/data
 share/monkey-bubble/gfx/harm.svg
+share/monkey-bubble/gfx/harm_down.svg
+share/monkey-bubble/gfx/harm_shoot.svg
+share/monkey-bubble/gfx/harm_up.svg
+share/monkey-bubble/gfx/hurry_up.svg
 share/monkey-bubble/gfx/layout_1_player.svg
 share/monkey-bubble/gfx/layout_2_players.svg
+share/monkey-bubble/gfx/layout_network_player.svg
+share/monkey-bubble/gfx/left_monkey.svg
 share/monkey-bubble/gfx/looser.svg
 share/monkey-bubble/gfx/lost.svg
-share/monkey-bubble/gfx/monkey-bubble-icon.xpm
 share/monkey-bubble/gfx/monkey.png
-share/monkey-bubble/gfx/monkeys.svg
 share/monkey-bubble/gfx/number/0.svg
 share/monkey-bubble/gfx/number/1.svg
 share/monkey-bubble/gfx/number/2.svg
@@ -42,6 +75,7 @@ share/monkey-bubble/gfx/number/8.svg
 share/monkey-bubble/gfx/number/9.svg
 share/monkey-bubble/gfx/pane.svg
 share/monkey-bubble/gfx/pause.svg
+share/monkey-bubble/gfx/right_monkey.svg
 share/monkey-bubble/gfx/snake-body.svg
 share/monkey-bubble/gfx/snake/snake.svg
 share/monkey-bubble/gfx/snake/snake_-0.svg
@@ -126,11 +160,28 @@ share/monkey-bubble/gfx/snake/snake_6.svg
 share/monkey-bubble/gfx/snake/snake_7.svg
 share/monkey-bubble/gfx/snake/snake_8.svg
 share/monkey-bubble/gfx/snake/snake_9.svg
+share/monkey-bubble/gfx/splash.svg
+share/monkey-bubble/gfx/star.svg
 share/monkey-bubble/gfx/tomato.svg
 share/monkey-bubble/gfx/win.svg
 share/monkey-bubble/glade/keybinding.glade
 share/monkey-bubble/glade/monkey-bubble.glade
+share/monkey-bubble/glade/netgame.glade
+share/monkey-bubble/glade/netserver.glade
 share/monkey-bubble/levels
+share/monkey-bubble/sounds/destroy_group.wav
+share/monkey-bubble/sounds/game.ogg
+share/monkey-bubble/sounds/launch.wav
+share/monkey-bubble/sounds/rebound.wav
+share/monkey-bubble/sounds/splash.ogg
+share/monkey-bubble/sounds/stick.wav
+share/omf/monkey-bubble/monkey-bubble-C.omf
+share/omf/monkey-bubble/monkey-bubble-fr.omf
+share/pixmaps/monkey-bubble-icon.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/monkey-bubble
+@comment in rarian: @dirrm share/omf
+@dirrm share/monkey-bubble/sounds
 @dirrm share/monkey-bubble/glade
 @dirrm share/monkey-bubble/gfx/snake
 @dirrm share/monkey-bubble/gfx/number
@@ -138,3 +189,10 @@ share/monkey-bubble/levels
 @dirrm share/monkey-bubble/gfx/bubbles
 @dirrm share/monkey-bubble/gfx
 @dirrm share/monkey-bubble
+@dirrm share/locale/sr@Latn/LC_MESSAGES
+@dirrm share/gnome/help/monkey-bubble/fr
+@dirrm share/gnome/help/monkey-bubble/C
+@dirrm share/gnome/help/monkey-bubble
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
