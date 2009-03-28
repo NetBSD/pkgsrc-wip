@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/03/28 16:46:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/28 21:42:08 jihbed Exp $
 #
 
 DISTNAME=		monkey-bubble-0.4.0
@@ -9,10 +9,12 @@ MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://home.gna.org/monkeybubble/
 COMMENT=		Bust'A'Move clone written for GNOME2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.6 gnome2-1.4
+USE_DIRS+=		xdg-1.4 gnome2-1.6
 USE_TOOLS+=		gmake intltool pkg-config
 
 .include "../../devel/GConf/schemas.mk"
@@ -20,6 +22,7 @@ USE_TOOLS+=		gmake intltool pkg-config
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
