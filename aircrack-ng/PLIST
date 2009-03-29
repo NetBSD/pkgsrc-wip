@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/21 18:58:45 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/03/29 16:33:22 tnn2 Exp $
 bin/aircrack-ng
 bin/airdecap-ng
 bin/airdecloak-ng
-bin/buddy-ng
 bin/ivstools
 bin/kstats
 bin/makeivs-ng
@@ -17,14 +16,10 @@ man/man1/airmon-ng.1
 man/man1/airodump-ng.1
 man/man1/airserv-ng.1
 man/man1/airtun-ng.1
-man/man1/buddy-ng.1
-man/man1/easside-ng.1
 man/man1/ivstools.1
 man/man1/kstats.1
 man/man1/makeivs-ng.1
 man/man1/packetforge-ng.1
-man/man1/tkiptun-ng.1
-man/man1/wesside-ng.1
 sbin/airbase-ng
 sbin/airdriver-ng
 sbin/aireplay-ng
@@ -32,6 +27,3 @@ sbin/airmon-ng
 sbin/airodump-ng
 sbin/airserv-ng
 sbin/airtun-ng
-sbin/easside-ng
-sbin/tkiptun-ng
-sbin/wesside-ng

@@ -1,30 +1,30 @@
-$NetBSD: patch-ac,v 1.1 2008/12/04 22:49:51 tnn2 Exp $
+$NetBSD: patch-ac,v 1.2 2009/03/29 16:33:22 tnn2 Exp $
 
---- src/airserv-ng.c.orig	2008-06-09 21:55:09.000000000 +0200
+--- src/airserv-ng.c.orig	2009-03-26 22:01:02.000000000 +0100
 +++ src/airserv-ng.c
-@@ -37,10 +37,24 @@
+@@ -24,6 +24,7 @@
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <sys/select.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <stdio.h>
+@@ -37,7 +38,7 @@
  
  #ifdef __MACH__
  #include <libkern/OSByteOrder.h>
--#else
-+#elif defined(__linux__)
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <machine/endian.h>
+ #else
  #include <asm/byteorder.h>
-+#else
-+#include <sys/endian.h>
- #endif /* __MACH__ */
+@@ -450,7 +451,7 @@ static void handle_card(struct sstate *s
+ 	ri->ri_rate = OSSwapHostToBigInt32(ri->ri_rate);
+ 	ri->ri_antenna = OSSwapHostToBigInt32(ri->ri_antenna);
  
-+#ifdef __NetBSD__
-+#include <sys/types.h>
-+#include <machine/bswap.h>
-+#if BYTE_ORDER == BIG_ENDIAN
-+#define __cpu_to_be64(x) (x)
-+#define __cpu_to_be32(x) (x)
-+#else
-+#define __cpu_to_be64(x) bswap64(x)
-+#define __cpu_to_be32(x) bswap32(x)
-+#endif
-+#endif
-+
- #include "osdep/osdep.h"
- #include "osdep/network.h"
- #include "version.h"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #if BYTE_ORDER == BIG_ENDIAN
+ # define __be32_to_cpu(x)       (x)
+ # define __be64_to_cpu(x)       (x)

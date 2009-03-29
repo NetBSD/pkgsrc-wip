@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2009/03/29 16:33:22 tnn2 Exp $
+
+--- src/osdep/Makefile.orig	2009-03-26 22:01:02.000000000 +0100
++++ src/osdep/Makefile
+@@ -11,7 +11,7 @@ OBJS		= osdep.o $(OBJS_NET)
+ OBJS_APCAP	= airpcap.o
+ 
+ OBJS_OBSD	= $(OBJS) openbsd.o openbsd_tap.o
+-OBJS_NBSD	= $(OBJS) netbsd.o netbsd_tap.o
++OBJS_NBSD	= $(OBJS) netbsd.o netbsd_tap.o common.o
+ OBJS_FBSD	= $(OBJS) freebsd.o freebsd_tap.o
+ OBJS_LINUX	= $(OBJS) linux.o linux_tap.o radiotap-parser.o common.o
+ OBJS_DUMMY	= $(OBJS) dummy.o dummy_tap.o
