@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/29 23:35:55 emil_s Exp $
+
+SHA1 (tpp-1.3.1.tar.gz) = e99fca1d7819c23d4562e3abdacea7ff82563754
+RMD160 (tpp-1.3.1.tar.gz) = 2d6f70d7114e1d37955a90d0261f9efecda953d2
+Size (tpp-1.3.1.tar.gz) = 42095 bytes
+SHA1 (patch-aa) = d9b66502a182e18ab896fb31bcdd0e322faa0449
