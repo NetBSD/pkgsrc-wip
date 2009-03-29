@@ -1,0 +1,8 @@
+The usual way to inspect a stacktrace of a program is to use an external
+debugger such as gdb and its command 'bt'.  However, sometimes it is useful
+to obtain a stacktrace from within a program, e.g., for the purposes of
+logging, debugging or diagnostics.
+
+libstacktrace library provides stacktrace(3) function that have the same
+API/usage as glibc's backtrace(3) but works at least under NetBSD, FreeBSD
+and Solaris.
