@@ -1,0 +1,97 @@
+# Miscellaneous
+debugfile 
+debuglevel 4
+messagelevel 3
+interval 10
+updatevar 
+gusttime 300
+popup 1
+raindaily 0
+rainhour 0
+raindate 1
+rainday 0
+rainbackreset 1
+urllauncher 1
+mapurl http://www.mapquest.com/maps/map.adp?latlongtype=decimal&latitude=%f&longitude=%f
+ringcol ffffff eeeeee dddddd cccccc bbbbbb aaaaaa 999999 888888 777777 666666 555555 444444 333333 222222 111111 0 
+# Server ports and unix socket names
+arneudpport 8890
+arnetcpport 8888
+owwtcpport 8899
+owwlocalname /tmp/oww_trx_un
+txttcpport 8891
+txtname /tmp/oww_txtserve
+txtform $localtime%d/%m/%y , %H:%M:%S$ , $t1%7.1$,$tunit$   , $wsp%7.2$,$wspunit%5$,$wdrname%10$   ,$wdrdeg%5.1$  ,$wdrpoint%3$    ,$rain%5.2$, $rainunit$
+
+# Format strings
+displaydate %d/%m/%y %H:%M:%S
+logfilef /%y%m/%y%m%d.csv
+logdirf /%y%m
+logform $localtime%d/%m/%y , %H:%M:%S$ , $t1%7.1$,$tunit$   , $wsp%7.2$,$wspunit%5$,$wdrname%10$   ,$wdrdeg%5.1$  ,$wdrpoint%3$    ,$rain%5.2$, $rainunit$
+logheadf Date          Time      Temperature    Speed           Direction                      RainGauge
+raintform Rain: %%s since %H:%M
+raindform Rain: %%s since %d/%m/%y
+lcdform $localtime%H:%M:%S$ $t1%4.1$$tunit$ $wsp$$wspunit%5$ $wdrname$ $rain%5.2$$rainunit$
+
+# Data source
+datasource 1
+owwremote_host localhost
+owwremote_port 8899
+arneremote_host localhost
+arneremote_port 8888
+dallasremote 
+
+# Command strings
+postupdate 
+postlog 
+httpprecom 
+httppostcom 
+
+# HTTP setup
+httpuseproxy 0
+httpproxy 
+httpdallas http://www.aag.com.mx/servlet/weather/
+httpdallason 0
+httpwund http://www.wunderground.com/weatherstation/updateweatherstation.php
+httpwunduser NO_USER
+httpwundpass 
+httpwundon 0
+httpham http://www.hamweather.net/weatherstations/vwsupdate.php
+httphamuser NO_USER
+httphampass 
+httphamon 0
+httptime 0
+httptsnap 0
+longitude 0.000000
+latitude 0.000000
+cwopon 0
+cwopport 14580
+cwopuser NO_USER
+cwoppass -1
+cwopserver rotate.aprs.net
+
+# Display setup
+tmin 300.000000
+tmax -300.000000
+smax 1024.000000
+mph 1
+fahr 0
+bpunit 0
+mm 0
+anim 0
+reporttrh 0
+
+# Wind chill: (1) Steadman, (2) NWS 1992b, (3) New WCT
+wctype 1
+
+# Heat index: (1) U.S. Heat Index, (2) Canadian Humidex
+hitype 1
+
+# Log setup
+loginterval 100
+logsnap 0
+logtype 0
+logfile_name logfile.csv
+logdir_name logdir
+logvar 
+font 
