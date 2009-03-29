@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3337 2009/03/28 23:12:29 jihbed Exp $
+# $Id: Makefile,v 1.3338 2009/03/29 00:39:01 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -272,6 +272,7 @@ SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
 SUBDIR+=	di
+SUBDIR+=	diablo
 SUBDIR+=	dicom3tools
 SUBDIR+=	dict-client
 SUBDIR+=	dict-est-rus
@@ -1447,6 +1448,7 @@ SUBDIR+=	pal
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
+SUBDIR+=	pam_tacplus
 SUBDIR+=	panda
 SUBDIR+=	parcellite
 SUBDIR+=	parsec
