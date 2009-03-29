@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/03/29 16:09:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/29 16:30:02 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.9.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -19,14 +20,15 @@ DOC_FILES=		README NEWS ChangeLog TODO
 
 MAKE_ENV+=		MKCATPAGES=no
 
-INSTALL_TARGET=		install-dirs install
+AUTO_MKDIRS=		yes
 
 PKGDOCDIR=		share/doc/mk-configure
-INSTALLATION_DIRS+=	${PKGDOCDIR}
+EGDIR=			share/examples/mk-configure
 
 post-install:
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PREFIX}/${PKGDOCDIR}
 .endfor
+	cp -Rp ${WRKSRC}/examples ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

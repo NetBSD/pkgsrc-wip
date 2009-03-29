@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/29 16:08:00 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/29 16:30:02 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_decl
 bin/mkc_check_funclib
@@ -12,6 +12,38 @@ share/doc/mk-configure/ChangeLog
 share/doc/mk-configure/NEWS
 share/doc/mk-configure/README
 share/doc/mk-configure/TODO
+share/examples/mk-configure/examples/1/Makefile
+share/examples/mk-configure/examples/1/hello_world.c
+share/examples/mk-configure/examples/2/Makefile
+share/examples/mk-configure/examples/2/hello_world.1
+share/examples/mk-configure/examples/2/hello_world2
+share/examples/mk-configure/examples/2/hello_world3
+share/examples/mk-configure/examples/2/main.c
+share/examples/mk-configure/examples/2/msg.c
+share/examples/mk-configure/examples/3/Makefile
+share/examples/mk-configure/examples/3/Makefile.version
+share/examples/mk-configure/examples/3/hello/Makefile
+share/examples/mk-configure/examples/3/hello/hello_world.1.in
+share/examples/mk-configure/examples/3/hello/hello_world2.in
+share/examples/mk-configure/examples/3/hello/main.c
+share/examples/mk-configure/examples/3/libhello1/Makefile
+share/examples/mk-configure/examples/3/libhello1/hello1.c
+share/examples/mk-configure/examples/3/libhello1/hello1.h
+share/examples/mk-configure/examples/3/libhello1/linkme.mk
+share/examples/mk-configure/examples/3/libhello2/Makefile
+share/examples/mk-configure/examples/3/libhello2/hello2.cc
+share/examples/mk-configure/examples/3/libhello2/include/hello2.h
+share/examples/mk-configure/examples/3/libhello2/linkme.mk
+share/examples/mk-configure/examples/4/Makefile
+share/examples/mk-configure/examples/4/hello.c
+share/examples/mk-configure/examples/4/strlcpy.c
+share/examples/mk-configure/examples/5/Makefile
+share/examples/mk-configure/examples/5/dlopen_test.c
+share/examples/mk-configure/examples/6/Makefile
+share/examples/mk-configure/examples/6/sizeof_test.c
+share/examples/mk-configure/examples/7/Makefile
+share/examples/mk-configure/examples/7/compiler_test.c
+share/examples/mk-configure/examples/8/Makefile
 share/mk/configure.mk
 share/mk/mkc.common.mk
 share/mk/mkc.configure.mk
