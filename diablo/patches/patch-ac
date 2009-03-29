@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/03/29 00:32:00 pettai Exp $
+
+--- lib/vendor.h.orig	2009-03-28 22:09:09.000000000 +0100
++++ lib/vendor.h	2009-03-28 22:08:33.000000000 +0100
+@@ -254,7 +254,7 @@
+  * of the IPv6 address could be taken for the port. e.g:
+  *	-B[::1]:119
+  */
+-#undef INET6
++#define INET6 1
+ 
+ /*
+  * Experimental PERL authentication by an external script.  Requires

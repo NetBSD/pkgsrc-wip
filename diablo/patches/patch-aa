@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/29 00:32:00 pettai Exp $
+
+--- XMakefile.inc.orig	2007-11-30 12:25:07.000000000 +0100
++++ XMakefile.inc	2009-03-29 01:09:32.000000000 +0100
+@@ -21,8 +21,8 @@
+ #endif
+ 
+ .set LFLAGS	-L$(BD)obj -lfilter -ldiablo -lutil -lm
+-.set IDIR	/news
+-.set MDIR	/news/man
++.set IDIR	@@IDIR@@
++.set MDIR	@@MDIR@@
+ .set INSTALL	install
+ 
+ /*
+@@ -73,5 +73,9 @@
+ .set INSTALL	installbsd
+ #endif
+ 
+-.set DIST /news
++#ifdef __NetBSD__
++.set LFLAGS	-L$(BD)obj -lfilter -ldiablo -lutil -lm -lz
++#endif
++
++.set DIST @@DIST@@
+ 
