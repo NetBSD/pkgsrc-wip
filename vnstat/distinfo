@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/30 19:21:23 mstapelberg Exp $
+
+SHA1 (vnstat-1.6_bsd.tar.gz) = 497f766f57f24b7c26a9835b80561c8cda6cecbc
+RMD160 (vnstat-1.6_bsd.tar.gz) = f679fe7a2cf85ffbbd45026076b9a2f7db2b4d80
+Size (vnstat-1.6_bsd.tar.gz) = 37085 bytes
+SHA1 (patch-aa) = ed3dd94262b07e22cdbd8abd038e17eae915379a
+SHA1 (patch-ab) = 54c45b1e89122f7a45add5d90d764883cdbf6a83

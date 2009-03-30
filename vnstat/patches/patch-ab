@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/03/30 19:21:23 mstapelberg Exp $
+
+--- src/misc.c.orig	2008-02-03 00:08:16.000000000 +0100
++++ src/misc.c
+@@ -185,11 +185,11 @@ char *getvalue(uint64_t mb, uint64_t kb,
+ 	} else {
+ 		/* try to figure out what unit to use */
+ 		if (kB>=(1024*1024*1000)) {
+-			sprintf(buffer, "%'*.2f TB", len, kB/(float)1024/(float)1024/(float)1024);
++			sprintf(buffer, "%*.2f TB", len, kB/(float)1024/(float)1024/(float)1024);
+ 		} else if (kB>=(1024*1000)) {
+-			sprintf(buffer, "%'*.2f GB", len, kB/(float)1024/(float)1024);
++			sprintf(buffer, "%*.2f GB", len, kB/(float)1024/(float)1024);
+ 		} else if (kB>=1000) {
+-			sprintf(buffer, "%'*.*f MB", len, declen, kB/(float)1024);
++			sprintf(buffer, "%*.*f MB", len, declen, kB/(float)1024);
+ 		} else {
+ 			sprintf(buffer, "%'*"PRIu64" kB", len, kB);
+ 		}

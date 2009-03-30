@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/30 19:21:23 mstapelberg Exp $
+bin/vnstat
+man/man1/vnstat.1
+share/examples/vnstat.conf
+@unexec ${RMDIR} %D/var/vnstat 2>/dev/null || ${TRUE}
