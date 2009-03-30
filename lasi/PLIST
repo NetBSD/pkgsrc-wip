@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/30 13:20:30 emil_s Exp $
+lib/libLASi.so
+lib/libLASi.so.0
+lib/libLASi.so.0.0.1
+lib/pkgconfig/lasi.pc
+share/lasi${PKGVERSION}/examples/Makefile
+share/lasi${PKGVERSION}/examples/ComplexTextLayoutExample.cpp
+share/lasi${PKGVERSION}/examples/Example_1_Result.png
+share/lasi${PKGVERSION}/examples/Example_2_Result.png
+share/lasi${PKGVERSION}/examples/MissingGlyphExample.cpp
+share/lasi${PKGVERSION}/examples/README
+share/lasi${PKGVERSION}/examples/SimpleLASiExample.cpp
+@dirrm share/lasi${PKGVERSION}/examples
+@dirrm share/lasi${PKGVERSION}

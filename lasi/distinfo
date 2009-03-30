@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/30 13:20:30 emil_s Exp $
+
+SHA1 (libLASi-1.1.0.tar.gz) = 6b2db9dc8719eb7f31c63b70e04b2337812379a1
+RMD160 (libLASi-1.1.0.tar.gz) = 468ffda874ab78676408e8fbe7ab5fee3acc7de7
+Size (libLASi-1.1.0.tar.gz) = 200126 bytes
