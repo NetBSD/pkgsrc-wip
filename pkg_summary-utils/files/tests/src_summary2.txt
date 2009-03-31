@@ -37,7 +37,7 @@ PKGNAME=pkg_online-client-0.5.0
 PKGPATH=wip/pkg_online-client
 
 PKGNAME=libmaa-1.0.1nb1
-PKGPATH=wip/libmaa
+PKGPATH=devel/libmaa
 
 PKGNAME=gmake-3.81
 PKGPATH=devel/gmake

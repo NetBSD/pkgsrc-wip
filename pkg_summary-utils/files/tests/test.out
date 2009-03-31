@@ -23,7 +23,7 @@ PKGNAME=dictem-0.82
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 PKGNAME=dict-server-1.10.11nb2
 PKGPATH=wip/dict-server
-DEPENDS=   libmaa>=0.990:../../wip/libmaa
+DEPENDS=   libmaa>=0.990:../../devel/libmaa
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol server
 MAINTAINER=cheusov@tut.by
@@ -40,7 +40,7 @@ CATEGORIES=textproc
 
 PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
-DEPENDS=  libmaa>=0.990:../../wip/libmaa
+DEPENDS=  libmaa>=0.990:../../devel/libmaa
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol client
@@ -112,6 +112,7 @@ PKGNAME=jpeg-6bnb4
 ------- pkg_cmp_summary #1.2.1
 = devel/gmake gmake 3.81 3.81
 = devel/libltdl libltdl 1.5.24 1.5.24
+= devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
 = devel/pkg-config pkg-config 0.23 0.23
 = editors/emacs emacs 22.1nb6 22.1nb6
@@ -130,7 +131,6 @@ PKGNAME=jpeg-6bnb4
 = wip/dict-client dict-client 1.10.11nb2 1.10.11nb2
 < wip/dict-server dict-server 1.10.11nb2 1.11.0
 = wip/distbb distbb 0.22.0 0.22.0
-= wip/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = wip/paexec paexec 0.10.0nb1 0.10.0nb1
 < wip/pipestatus pipestatus 0.4.0 0.5.0
 = wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
@@ -142,6 +142,7 @@ PKGNAME=jpeg-6bnb4
 ------- pkg_cmp_summary #1.2.2
 = devel/gmake gmake 3.81 3.81
 = devel/libltdl libltdl 1.5.24 1.5.24
+= devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
 = devel/pkg-config pkg-config 0.23 0.23
 = editors/emacs emacs 22.1nb6 22.1nb6
@@ -160,7 +161,6 @@ PKGNAME=jpeg-6bnb4
 = wip/dict-client dict-client 1.10.11nb2 1.10.11nb2
 < wip/dict-server dict-server 1.10.11nb2 1.11.0
 = wip/distbb distbb 0.22.0 0.22.0
-= wip/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = wip/paexec paexec 0.10.0nb1 0.10.0nb1
 < wip/pipestatus pipestatus 0.4.0 0.5.0
 = wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
@@ -188,6 +188,7 @@ PKGNAME=jpeg-6bnb4
 ------- pkg_cmp_summary #1.7
 = devel/gmake
 = devel/libltdl
+= devel/libmaa
 = devel/libtool-base
 = devel/pkg-config
 = editors/emacs
@@ -206,7 +207,6 @@ PKGNAME=jpeg-6bnb4
 = wip/dict-client
 = wip/dict-server
 = wip/distbb
-= wip/libmaa
 = wip/paexec
 = wip/pipestatus
 = wip/pkg_online
@@ -235,7 +235,7 @@ PKGNAME=dict-client-X
 PKGPATH=textproc/dict-client
 
 PKGNAME=libmaa-X
-PKGPATH=wip/libmaa
+PKGPATH=devel/libmaa
 
 PKGNAME=gmake-X
 PKGPATH=devel/gmake
@@ -357,7 +357,7 @@ PKGNAME=pkg_online-client-X
 PKGPATH=wip/pkg_online-client
 
 PKGNAME=libmaa-X
-PKGPATH=wip/libmaa
+PKGPATH=devel/libmaa
 
 PKGNAME=gmake-X
 PKGPATH=devel/gmake
@@ -514,9 +514,6 @@ PKGPATH=graphics/py-cairo
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-Numeric-X
 PKGPATH=math/py-Numeric
-
-PKGNAME=gmake-X
-PKGPATH=devel/gmake
 
 --------------------------------------------------
 ------- pkg_assignments2pkgpath #12

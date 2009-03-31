@@ -30,7 +30,7 @@ DEPENDS=pkg_online-client-[0-9]*:../../wip/pkg_online-client pkg_online-server-[
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 PKGNAME=dict-server-1.10.11nb2
 PKGPATH=wip/dict-server
-DEPENDS=   libmaa>=0.990:../../wip/libmaa
+DEPENDS=   libmaa>=0.990:../../devel/libmaa
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol server
 MAINTAINER=cheusov@tut.by
@@ -72,7 +72,7 @@ MAINTAINER=cheusov@tut.by
 CATEGORIES=pkgtools
 
 PKGNAME=libmaa-1.0.1nb1
-PKGPATH=wip/libmaa
+PKGPATH=devel/libmaa
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://www.dict.org/
 COMMENT=Provides a few data structures and helpful functions
@@ -89,7 +89,7 @@ CATEGORIES=devel
 
 PKGNAME=paexec-0.10.0nb1
 PKGPATH=wip/paexec
-DEPENDS=  libmaa>=0.990:../../wip/libmaa
+DEPENDS=  libmaa>=0.990:../../devel/libmaa
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://sourceforge.net/projects/paexec
 COMMENT=Parallel executor, distributes tasks over network
@@ -180,7 +180,7 @@ CATEGORIES=devel pkgtools
 
 PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
-DEPENDS=  libmaa>=0.990:../../wip/libmaa
+DEPENDS=  libmaa>=0.990:../../devel/libmaa
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol client
