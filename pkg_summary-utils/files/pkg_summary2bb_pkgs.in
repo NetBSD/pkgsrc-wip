@@ -65,6 +65,9 @@ BEGIN {
 				++conflicts [pkgname]
 			}else if ($0 ~ /^ASSIGNMENTS=/){
 				assigns = substr($0, 13)
+			}else if (match($0, /^PKGPATH=.*:/)) {
+				assigns = substr($0, RLENGTH+1)
+				update()
 			}else if (NF == 0){
 				commas = assigns != "" ? 1+gsub(/,/, "", assigns) : 0
 				if (pkgname in cnt)
@@ -83,13 +86,6 @@ BEGIN {
 	pkgname = assigns = ""
 	good_pkg = 0 # -1|0|1 - bad|unknown|good
 	count = 0
-
-# 	for (i in cnt){
-# 		if (conflicts [i] > 1){
-# 			print i, cnt [i]
-# 		}
-# 	}
-# 	exit 0
 }
 
 function print_lines (){
