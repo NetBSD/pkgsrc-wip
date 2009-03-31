@@ -79,6 +79,82 @@ PKGNAME=png-1.2.32beta01
 PKGNAME=netcat-1.10nb2
 PKGNAME=pkg-config-0.23
 PKGNAME=jpeg-6bnb4
+------- args: 'pkg_grep_summary' '-m' 'MAINTAINER' 'cheusov|vle@gmx.net'
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+COMMENT=DISTributed Bulk Build tool for pkgsrc
+MAINTAINER=cheusov@tut.by
+
+PKGPATH=textproc/dictem
+COMMENT=Dictionary client (RFC-2229) for [X]Emacs
+MAINTAINER=cheusov@tut.by
+PKGNAME=dictem-0.82
+
+COMMENT=Client/Server search in pkgsrc packages
+MAINTAINER=cheusov@tut.by
+PKGNAME=pkg_online-0.5.0nb2
+PKGPATH=wip/pkg_online
+
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+COMMENT=Dictionary Service Protocol server
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=pkg_online-server-0.5.0
+PKGPATH=wip/pkg_online-server
+COMMENT=Client/Server search in pkgsrc packages (server tools)
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=pkg_online-client-0.5.0
+PKGPATH=wip/pkg_online-client
+COMMENT=Client/Server search in pkgsrc packages (client tools)
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=libmaa-1.0.1nb1
+PKGPATH=devel/libmaa
+COMMENT=Provides a few data structures and helpful functions
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=paexec-0.10.0nb1
+PKGPATH=wip/paexec
+COMMENT=Parallel executor, distributes tasks over network
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=runawk-0.14.3
+PKGPATH=wip/runawk
+COMMENT=Wrapper that impelements modules for AWK
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=pkg_summary-utils-0.18.1
+PKGPATH=wip/pkg_summary-utils
+COMMENT=Utilities for manipulating pkg_summary(5) files
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=pipestatus-0.4.0
+PKGPATH=wip/pipestatus
+COMMENT=UNIX/POSIX shell helper for running pipes safely
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=awk-pkgsrc-dewey-0.5.6
+PKGPATH=wip/awk-pkgsrc-dewey
+COMMENT=Pkgsrc dewey module for AWK programming language
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-s' 'PKGPATH' 'graphics/png'
+PKGNAME=png-1.2.32beta01
+PKGPATH=graphics/png
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.libpng.org/pub/png/
+COMMENT=Library for manipulating PNG images
+MAINTAINER=wiz@NetBSD.org
+CATEGORIES=graphics
+
 --------------------------------------------------
 ------- pkg_cmp_summary #1.1
 = awk-pkgsrc-dewey 0.5.6 0.5.6

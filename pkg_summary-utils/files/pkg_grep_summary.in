@@ -30,26 +30,32 @@ pkg_grep_summary - output summaries about packages that matches
 the specified condition.
 
 USAGE: pkg_grep_summary -h
-       pkg_grep_summary <FIELD> <AWK_CONDITION>
-       pkg_grep_summary -e <FIELD>
-  <FIELD>         - PKGNAME, PKGPATH, DEPENDS etc.
-  <AWK_CONDITION> - boolean expression written in AWK language
+       pkg_grep_summary -e <field>
+       pkg_grep_summary -m <field> <regexp>
+       pkg_grep_summary -s <field> <string>
+       pkg_grep_summary <field> <awk_condition>
+  <field>         - PKGNAME, PKGPATH, DEPENDS etc.
+  <awk_condition> - boolean expression written in AWK language
+  <regexp>        - AWK regular expression
+  <string>        - text string
 
 OPTIONS:
-  -h|--help               display this message
-  -e|--empty <field>      matches empty and absent fields only
+  -h|--help   display this message
+  -e|--empty  matches empty and absent fields only
                           (equivalent to '<field>' 'fvalue == ""')
+  -m          matches <field> against regular expression <regexp>
+  -s          matches <field> equal to <string>
 EXAMPLES:
+  pkg_grep_summary -s 'PKGPATH' 'devel/libjudy'
+  pkg_grep_summary -m 'PKGPATH' '^wip/'
   pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
-        < /usr/pkgsrc/packages/pkg_summary.txt
   pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\//' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
   pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/' \\
-        < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
-        < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary -e 'NO_BIN_ON_FTP' \\
         < /usr/pkgsrc/pkg_src_summary.txt
+  pkg_grep_summary -e 'NO_BIN_ON_CDROM'
 EOF
 }
 
@@ -59,7 +65,18 @@ while test $# -ne 0; do
 	    usage
 	    exit 0;;
 	-e|--empty)
-	    empty_field=$2
+	    empty=1
+	    field=$2
+	    shift;;
+	-s)
+	    field=$2
+	    string=$3
+	    shift
+	    shift;;
+	-m)
+	    field=$2
+	    regex=$3
+	    shift
 	    shift;;
 	--)
 	    shift
@@ -73,21 +90,23 @@ while test $# -ne 0; do
     shift
 done
 
-if test -z "$empty_field" -a $# -ne 2 ||
-    test -n "$empty_field" -a $# -ne 0
-then
-    usage
-    exit 1
-fi
-
-if test -z "$empty_field"; then
-    field=$1
+if test -n "$empty"; then
+    condition='fvalue == ""'
+elif test -n "$string"; then
+    condition="fvalue == \"$string\""
+elif test -n "$regex"; then
+    re=`echo $regex | sed 's|/|\\\/|g'`
+    condition="fvalue ~ /$re/"
+elif test $# -eq 2; then
+    field="$1"
     condition="$2"
     shift
     shift
-else
-    field="$empty_field"
-    condition='fvalue == ""'
+fi
+
+if test -z "$condition" -o $# -ne 0; then
+    usage
+    exit 1
 fi
 
 runawk -e '

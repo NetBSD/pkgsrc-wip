@@ -49,6 +49,10 @@ runtest pkg_grep_summary COMMENT \
     grep -E 'PKGNAME|---'
 runtest pkg_grep_summary -e EXFIELD < src_summary.txt | \
     grep -E 'PKGNAME|---'
+runtest pkg_grep_summary -m MAINTAINER 'cheusov|vle@gmx.net' < src_summary.txt |
+    grep -E 'PKGNAME|PKGPATH|^$|MAINTAINER|COMMENT'
+
+runtest pkg_grep_summary -s PKGPATH graphics/png < src_summary.txt
 
 # pkg_cmp_summary
 echo '--------------------------------------------------'
@@ -123,7 +127,7 @@ grep -v '^='
 # pkg_summary4view
 echo '--------------------------------------------------'
 echo '------- pkg_summary4view #8'
-pkg_grep_summary PKGPATH 'fvalue == "wip/pkg_summary-utils"' \
+pkg_grep_summary -s PKGPATH 'wip/pkg_summary-utils' \
     < src_summary.txt | pkg_summary4view
 
 echo '--------------------------------------------------'
@@ -168,7 +172,7 @@ echo '------- pkg_src_summary #11'
 pkg_src_summary -A -f PKGNAME,PKGPATH \
    graphics/py-cairo:PYTHON_VERSION_REQD=25 |
 grep -v DEPENDS |
-pkg_grep_summary PKGPATH 'fvalue ~ /gmake|py-Numeric|py-cairo/' |
+pkg_grep_summary -m PKGPATH 'gmake|py-Numeric|py-cairo' |
 normalize_version
 
 echo '--------------------------------------------------'

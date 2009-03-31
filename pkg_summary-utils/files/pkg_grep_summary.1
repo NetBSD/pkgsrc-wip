@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.7 2008/11/07 17:55:46 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.8 2009/03/31 18:48:01 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -24,6 +24,10 @@ pkg_grep_summary \- tool for grepping pkgsrc summary file
 .br
 .BI "pkg_grep_summary -e" " field"
 .br
+.BI "pkg_grep_summary -m" " field regexp"
+.br
+.BI "pkg_grep_summary -s" " field string"
+.br
 .SH DESCRIPTION
 .B pkg_grep_summary
 outputs a summary information about packages that matches
@@ -45,10 +49,24 @@ display help message
 .TP
 .BI "-e" " field"
 outputs summaries in which
-.B "field"
+.I "field"
 is either empty or absent
+.TP
+.BI "-m" " field regexp"
+outputs summary if
+.I "regexp"
+matches the
+.I "field"
+.TP
+.BI "-s" " field string"
+outputs summary if
+.I "field"
+is equal to
+.I "string"
 .SH EXAMPLES
 .VB
+pkg_grep_summary -s 'PKGPATH' 'devel/libjudy'
+pkg_grep_summary -m 'PKGPATH' '^wip/'
 pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
       < /usr/pkgsrc/packages/pkg_summary.txt
 pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\\//' \\
