@@ -50,13 +50,19 @@ about source packages
 usage:
   pkg_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
   pkg_src_summary -s [OPTIONS]
+  pkg_src_summary -i [OPTIONS]
 OPTIONS:
   -h|--help              display this help message
   -p|--make-plist        generate PLIST using 'bmake plist'
+  -i|--installed         generate src_summary for the installed packages only,
+                         do not read list of packages from stdin and
+                         from pkgpathN arguments
   -f|--fields <fields> list of fields (separated by space or comma)
                          to be included to summary,
                          by default FULL summary is generated
   -s|--slave-mode        ready for use as paexec slave/remote program
+                         (used internally for generating summary in parallel
+                          when PSS_SLAVES is set)
   -a|--add-fields <fields>  add the specified fields to the list
                                of default ones
   -r|--rem-fields <fields>  remove the specified fields from the list
@@ -145,6 +151,8 @@ process_options (){
 	        multi_var=1;;
 	    -M)
 	        multi_var=2;;
+	    -i|--installed)
+		installed_pkgs=1;;
 	    -G)
 	        debug=1;;
 	    --)
@@ -333,8 +341,14 @@ generate_summary (){
 }
 
 ############################################################
+installed_packages2stdout (){
+    pkg_info -X '*' | sed -n 's,^PKGPATH=,,p'
+}
+
 packages2stdout__1per_line (){
-    if test $# -eq 0; then
+    if test -n "$installed_pkgs"; then
+	installed_packages2stdout
+    elif test $# -eq 0; then
 	# processing stdin
 	cat 
     else

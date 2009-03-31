@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.18 2008/12/01 21:31:33 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.19 2009/03/31 21:18:04 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -21,6 +21,8 @@ pkg_src_summary \- build summary information for source packages
 .BI pkg_src_summary " [OPTIONS] [pkgpath1 ...]"
 .br
 .BI pkg_src_summary " -s [OPTIONS]"
+.br
+.BI pkg_src_summary " -i [OPTIONS]"
 .SH DESCRIPTION
 .B pkg_src_summary
 builds summary information about source packages specified in
@@ -67,6 +69,10 @@ generate summary for all variants of multi-variant packages
 .TP
 .B "-M|--MULTI"
 implies -m and moves/adds ASSIGNMENTS field to PKGPATH
+.TP
+.B "-i|--installed"
+generate src_summary for the installed packages only,
+do not read list of packages from stdin and from pkgpathN arguments
 .SH ENVIRONMENT
 .TP
 .B PKGSRCDIR
@@ -104,6 +110,7 @@ env PSS_OPTIONS=-p pkg_update_src_summary /path/to/pkg_src_summary.txt
 pkg_src_summary -a CVS_CHECKSUM x11/xxkb wip/distbb
 pkg_src_summary -r LICENSE,PLIST,DESCR x11/xxkb wip/distbb
 pkg_src_summary -m lang/lua www/php-apc www/ap2-python
+pkg_src_summary -i
 .VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
