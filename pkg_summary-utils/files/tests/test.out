@@ -216,7 +216,7 @@ PKGNAME=jpeg-6bnb4
 = wip/runawk
 --------------------------------------------------
 ------- pkg_list_all_pkgs #3
-XXXX
+XXXXX
 --------------------------------------------------
 ------- pkg_micro_src_summary #4
 PKGNAME=distbb-X
@@ -454,11 +454,11 @@ ok1
 ok2
 --------------------------------------------------
 ------- pkg_src_summary #10.1
-ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
+ASSIGNMENTS=PKG_APACHE=apache2
 PKGNAME=ap2-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
-ASSIGNMENTS=PKG_APACHE=apache2
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=24
 PKGNAME=ap2-py24-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -466,10 +466,10 @@ ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=23
 PKGNAME=ap2-py23-python-3.3.1
 PKGPATH=www/ap2-python
 
-ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
 PKGNAME=ap22-py24-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -479,10 +479,10 @@ PKGPATH=www/ap2-python
 
 --------------------------------------------------
 ------- pkg_src_summary #10.2
-ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
 PKGNAME=ap22-py24-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -493,25 +493,22 @@ PKGPATH=www/ap2-python
 --------------------------------------------------
 ------- pkg_src_summary #10.3
 ASSIGNMENTS=PKG_APACHE=apache2
-PKGNAME=ap2-py24-python-3.3.1
+PKGNAME=ap2-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
-PKGNAME=ap22-py24-python-3.3.1
+PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
 --------------------------------------------------
 ------- pkg_src_summary #10.4
-ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
 --------------------------------------------------
 ------- pkg_src_summary #11
-ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-cairo-X
 PKGPATH=graphics/py-cairo
 
-ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-Numeric-X
 PKGPATH=math/py-Numeric
 
@@ -521,63 +518,63 @@ ok1
 ok2
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.1
-+	xxkb-X	x11/xxkb	cheusov@tut.by
++	xxkb-X	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.2
-+	xxkb-X	x11/xxkb	cheusov@tut.by
++	xxkb-X	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.3
-+	xxkb-X	x11/xxkb	cheusov@tut.by
++	xxkb-X	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.4
-+	xxkb-X	x11/xxkb	cheusov@tut.by
++	xxkb-X	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_micro_src_summary #14.1
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_micro_src_summary #14.2
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_micro_src_summary #14.3
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_micro_src_summary #14.4
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_src_summary #15.1
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_src_summary #15.2
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_src_summary #15.3
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_src_summary #15.4
 PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=cheusov@tut.by
+MAINTAINER=vle@gmx.net
 
 --------------------------------------------------
 ------- pkg_src_summary #16.1
