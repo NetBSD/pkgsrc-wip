@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/27 09:50:07 smoppy Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/31 11:47:25 smoppy Exp $
 
 DISTNAME=	newsbeuter-1.3
 CATEGORIES=	news
@@ -15,6 +15,12 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config msgfmt
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# NetBSD iconv implementation doesn't support
+# the wchar_t encoding (upon stfl relies).
+.if ${OS} == "NetBSD"
+.include "../../converters/libiconv/buildlink3.mk"
+.endif
 
 .include "../../wip/stfl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
