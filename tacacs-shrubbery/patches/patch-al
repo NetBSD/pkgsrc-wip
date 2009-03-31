@@ -1,0 +1,43 @@
+--- config.c.orig	2007-12-13 20:18:38.000000000 +0100
++++ config.c	2008-10-14 14:35:37.000000000 +0200
+@@ -65,7 +65,9 @@
+ 				skey |
+ 				cleartext <password> |
+ 				des <password> |
++#ifdef HAVE_PAM
+ 				PAM |
++#endif
+ 				nopassword
+ 
+    <user_attr>		:=	name	= <string> |
+@@ -79,6 +81,9 @@
+ #endif
+ 				pap	= cleartext <string> |
+ 				pap	= des <string> |
++#ifdef HAVE_PAM
++				pap	= PAM |
++#endif
+ 				opap	= cleartext <string> |
+ 				global	= cleartext <string> |
+ 				msg	= <string>
+@@ -1129,9 +1134,19 @@
+ 		user->pap = tac_strdup(buf);
+ 		break;
+ 
++#ifdef HAVE_PAM
++	    case S_pam:
++		user->pap = tac_strdup(sym_buf);
++		break;
++#endif
++
+ 	    default:
+ 		parse_error(
+- "expecting 'cleartext', or 'des' keyword after 'pap =' on line %d",
++#ifdef HAVE_PAM
++ "expecting 'cleartext', 'PAM' or 'des' keyword after 'pap =' on line %d",
++#else
++ "expecting 'cleartext' or 'des' keyword after 'pap =' on line %d",
++#endif
+  sym_line);
+ 	    }
+ 	    sym_get();

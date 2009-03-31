@@ -1,0 +1,75 @@
+--- pwlib.c.orig	2007-12-13 20:18:39.000000000 +0100
++++ pwlib.c	2008-10-14 15:08:48.000000000 +0200
+@@ -50,6 +50,9 @@
+ #endif
+ static int passwd_file_verify(char *, char *, struct authen_data *, char *);
+ 
++// Global password variable for pap PAM support
++static char *predef_passwd;
++
+ /* Adjust data->status depending on whether a user has expired or not */
+ void
+ set_expiration_status(char *exp_date, struct authen_data *data)
+@@ -473,29 +476,33 @@
+ 		report(LOG_ERR, "%s %s: PAM_PROMPT_ECHO_OFF", session.peer,
+ 		       session.port);
+ 
+-	    send_authen_reply(TAC_PLUS_AUTHEN_STATUS_GETPASS,
+-			      (char *)pmpp[i]->msg,
+-			      pmpp[i]->msg ? strlen(pmpp[i]->msg) : 0,
+-			      NULL, 0, TAC_PLUS_AUTHEN_FLAG_NOECHO);
+-	    reply = get_authen_continue();
+-	    if (!reply) {
+-		/* Typically due to a premature connection close */
+-		report(LOG_ERR, "%s %s: Null reply packet, expecting CONTINUE",
++            if (strcmp(predef_passwd, "") != 0) {
++                prpp[i]->resp = predef_passwd;
++            } else {
++	        send_authen_reply(TAC_PLUS_AUTHEN_STATUS_GETPASS,
++			        (char *)pmpp[i]->msg,
++			        pmpp[i]->msg ? strlen(pmpp[i]->msg) : 0,
++			        NULL, 0, TAC_PLUS_AUTHEN_FLAG_NOECHO);
++	        reply = get_authen_continue();
++	        if (!reply) {
++	    	    /* Typically due to a premature connection close */
++		    report(LOG_ERR, "%s %s: Null reply packet, expecting CONTINUE",
+ 		       session.peer, session.port);
+- 		goto fail;
+-	    }
+-	    acp = (struct authen_cont *) (reply + TAC_PLUS_HDR_SIZE);
++ 		    goto fail;
++	        }
++	        acp = (struct authen_cont *) (reply + TAC_PLUS_HDR_SIZE);
++
++	        rp = reply + TAC_PLUS_HDR_SIZE + TAC_AUTHEN_CONT_FIXED_FIELDS_SIZE;
++	        /*
++	         * A response to our GETDATA/GETPASS request. Create a
++	         * null-terminated string for authen_data.
++	         */
++	        prpp[i]->resp = (char *) tac_malloc(acp->user_msg_len + 1);
++	        bcopy(rp, prpp[i]->resp, acp->user_msg_len);
++	        prpp[i]->resp[acp->user_msg_len] = '\0';
+ 
+-	    rp = reply + TAC_PLUS_HDR_SIZE + TAC_AUTHEN_CONT_FIXED_FIELDS_SIZE;
+-	    /*
+-	     * A response to our GETDATA/GETPASS request. Create a
+-	     * null-terminated string for authen_data.
+-	     */
+-	    prpp[i]->resp = (char *) tac_malloc(acp->user_msg_len + 1);
+-	    bcopy(rp, prpp[i]->resp, acp->user_msg_len);
+-	    prpp[i]->resp[acp->user_msg_len] = '\0';
+-
+-	    free(reply);
++	        free(reply);
++	    }
+ 	    break;
+ 	case PAM_PROMPT_ECHO_ON:
+ 	    if (debug & DEBUG_PASSWD_FLAG)
+@@ -570,6 +577,7 @@
+     int			err;
+     struct pam_conv	conv = { pam_tacacs, NULL };
+     pam_handle_t	*pamh = NULL;
++    predef_passwd = passwd;
+ 
+     if (debug & DEBUG_PASSWD_FLAG)
+ 	report(LOG_DEBUG, "pam_verify %s %s", user, passwd);

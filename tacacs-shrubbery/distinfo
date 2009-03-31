@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2008/10/05 07:57:01 gschwarz Exp $
+$NetBSD: distinfo,v 1.10 2009/03/31 21:52:40 pettai Exp $
 
 SHA1 (tacacs+-F4.0.4.15.tar.gz) = 2710039cd7855807b8c51bd909562c9f672c2432
 RMD160 (tacacs+-F4.0.4.15.tar.gz) = 213226fc0bf3cbf5a45e65249558e06099dadf43
@@ -7,3 +7,5 @@ SHA1 (patch-ag) = 9eef5632501be0306e9305730a527807e5aa381d
 SHA1 (patch-ah) = 7fd3bd94530002f5f2cbdaffc9673f3ac3a15b68
 SHA1 (patch-aj) = 1595c787ea7c4106ce1b70a5743277902a71eb5e
 SHA1 (patch-ak) = 3af50a28d943c0361423478b4f9a6727e896d147
+SHA1 (patch-al) = e9ab771f9d0f72cccca8d86ff74e00c95f49ad49
+SHA1 (patch-am) = 2f1c4d0d0bc44106d4c3d0822b69d2f4357824a1
