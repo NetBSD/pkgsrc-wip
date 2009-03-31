@@ -24,26 +24,37 @@
 
 set -e
 
+export LC_ALL=C
+
+############################################################
+
+tmp_dir="/tmp/pkg_cleanup_distdir.$$"
+trap "rm -rf $tmp_dir" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+############################################################
+
 usage (){
     cat 1>&2 <<EOF
-pkg_cleanup_distfiles - analyses ALLSRCFILES field of src_summary given
-on input and removes unnecessary files and directories in DISTDIR
+pkg_cleanup_distdir - analyses ALLSRCFILES field of src_summary
+given on input and optionally removes files and directories in DISTDIR
+not referenced by any package.
 
-usage: pkg_cleanup_distfiles [OPTIONS] [files...]
+usage: pkg_cleanup_distdir [OPTIONS] [files...]
 OPTIONS:
   -h|--help      display this help message
-  -n             do not delete, just show
+  -r             remove unreferenced files and empty directories
 EOF
 }
 
-nodelete=''
+delete=''
 while test $# -ne 0; do
     case "$1" in
 	-h|--help)
 	    usage
 	    exit 0;;
-	-n)
-	    nodelete=1;;
+	-r)
+	    delete=1;;
 	--)
 	    shift
 	    break;;
@@ -55,3 +66,42 @@ while test $# -ne 0; do
     esac
     shift
 done
+
+DISTDIR=${DISTDIR:=/usr/pkgsrc/distfiles}
+cd "$DISTDIR"
+
+useful_distfiles (){
+    awk '/^ALLSRCFILES=/ {
+	$0 = substr($0, 13)
+	for (i=1; i <= NF; ++i)
+	    print $i
+    }' "$@" |
+    sort | uniq
+}
+
+existing_files (){
+    find . -type f | sed "s,^[.]/,,"
+}
+
+ex_file=$tmp_dir/existing
+us_file=$tmp_dir/useful
+rm_file=$tmp_dir/to_be_removed
+rmdir_file=$tmp_dir/dirs
+
+existing_files > "$ex_file"
+
+useful_distfiles "$@" > "$us_file"
+
+sort "$ex_file" "$ex_file" "$us_file" | uniq -c |
+awk '$1 == 2 {print $2}' > "$rm_file"
+
+if test -n "$delete"; then
+    xargs rm -f < "$rm_file"
+
+    find . -type d |
+    while read d; do
+	rmdir "$d" 2>/dev/null || true
+    done
+else
+    cat "$rm_file"
+fi

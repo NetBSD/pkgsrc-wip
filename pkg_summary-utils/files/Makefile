@@ -26,6 +26,7 @@ SCRIPTS+=	pkg_update_src_summary pkg_summary4view
 SCRIPTS+=	pkg_update_summary pkg_grep_summary
 SCRIPTS+=	cvs_checksum pkg_assignments2pkgpath
 SCRIPTS+=	pkg_uniq_summary pkg_summary2bb_pkgs
+SCRIPTS+=	pkg_cleanup_distdir
 
 MAN=		pkg_summary-utils.7
 MAN+=		pkg_cmp_summary.1 pkg_grep_summary.1
@@ -34,6 +35,7 @@ MAN+=		pkg_src_summary.1 pkg_update_src_summary.1
 MAN+=		pkg_summary4view.1 pkg_update_summary.1
 MAN+=		pkg_refresh_summary.1 pkg_list_all_pkgs.1
 MAN+=		cvs_checksum.1 pkg_uniq_summary.1
+MAN+=		pkg_cleanup_distdir.1
 
 FILES=		README NEWS TODO pkg_grep_summary.awk pkg_src_summary.mk
 
