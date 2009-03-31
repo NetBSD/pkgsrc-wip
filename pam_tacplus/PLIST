@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/26 00:18:03 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/31 21:30:33 pettai Exp $
 lib/security/pam_tacplus.so
+share/examples/pam_tacplus/sample.pam
+@dirrm share/examples/pam_tacplus
 @dirrm lib/security

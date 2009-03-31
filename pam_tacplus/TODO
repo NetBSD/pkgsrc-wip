@@ -1,2 +1,1 @@
-- Must adopt (patch) it more for *BSD
-  The initial tests failed :-(
+- _pam_account: [STOP] doesn't work on NetBSD + ssh/pam
