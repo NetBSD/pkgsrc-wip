@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2007/09/21 13:06:56 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.11 2009/04/01 12:53:47 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	faad flac gnomevfs modplug ogg pyrex ruby perl
@@ -6,71 +6,61 @@ PKG_SUGGESTED_OPTIONS=	flac gnomevfs modplug ogg
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS} gamin
 .if !empty(PKG_OPTIONS:Mfaad)
 .  include "../../audio/faad2/buildlink3.mk"
-PLIST_SUBST+=		FAAD=""
-.else
-PLIST_SUBST+=		FAAD="@comment "
+PLIST.faad=		yes
 .endif
 
+PLIST_VARS+=	flac
 .if !empty(PKG_OPTIONS:Mflac)
 .  include "../../audio/flac/buildlink3.mk"
-PLIST_SUBST+=		FLAC=""
-.else
-PLIST_SUBST+=		FLAC="@comment "
+PLIST.flac=		yes
 .endif
+
+# currently won't work
+#.if !empty(PKG_OPTIONS:Mgamin)
+#.  include "../../sysutils/gamin/buildlink3.mk"
+#PLIST.gamin=		yes
+#.endif
 
 .if !empty(PKG_OPTIONS:Mgnomevfs)
 .  include "../../sysutils/gnome-vfs/buildlink3.mk"
-PLIST_SUBST+=		GNOMEVFS=""
-.else
-PLIST_SUBST+=		GNOMEVFS="@comment "
+PLIST.gnomevfs=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mmodplug)
 .  include "../../audio/libmodplug/buildlink3.mk"
-PLIST_SUBST+=		MODPLUG=""
-.else
-PLIST_SUBST+=		MODPLUG="@comment "
+PLIST.modplug=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mogg)
 .  include "../../audio/libvorbis/buildlink3.mk"
-PLIST_SUBST+=		OGG=""
-.else
-PLIST_SUBST+=		OGG="@comment "
+PLIST.ogg=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mperl)
 .   include "../../lang/perl5/buildlink3.mk"
-PLIST_SUBST+=		PERL=""
+PLIST.perl=		yes
 USE_TOOLS+=		perl
-.else
-PLIST_SUBST+=		PERL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mpyrex)
 PY_PATCHPLIST=		yes
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.8.1:../../lang/py-pyrex
 .  include "../../lang/python/extension.mk"
-PLIST_SUBST+=		PYREX=""
-.else
-PLIST_SUBST+=		PYREX="@comment "
+PLIST.pyrex=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mruby)
 USE_RUBY_DIST_SUBDIR=	no
 .  include "../../lang/ruby/buildlink3.mk"
-PLIST_SUBST+=		RUBY=""
-.else
-PLIST_SUBST+=		RUBY="@comment "
+PLIST.ruby=		yes
 .endif
 
 # this is currently disabled by the package itself.
-.if !empty(PKG_OPTIONS:Msid)
+.if !empty(PKG_OPTIONS:Msidplay)
 .  include "../../audio/libsidplay/buildlink3.mk"
 DEPENDS+=		sidplay-[0-9]*:../../audio/sidplay
-PLIST_SUBST+=		SID=""
-.else
-PLIST_SUBST+=		SID="@comment "
+PLIST.sidplay=		yes
 .endif

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2008/03/12 08:58:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/04/01 12:53:46 thomasklausner Exp $
 bin/xmms2
 bin/xmms2-et
 bin/xmms2-launcher
-bin/xmms2-mlib-updater
+${PLIST.gamin}bin/xmms2-mlib-updater
 bin/xmms2d
 include/xmms2/xmms/xmms_bindata.h
 include/xmms2/xmms/xmms_config.h
@@ -68,21 +68,20 @@ lib/libxmmsclient-glib.so.1.0.0
 lib/libxmmsclient.so
 lib/libxmmsclient.so.2
 lib/libxmmsclient.so.2.0.0
-${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient.pm
-${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Collection.pm
-${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Glib.pm
-${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Sync.pm
-${PERL}lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/auto/Audio/XMMSClient/XMMSClient.so
+${PLIST.perl}lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient.pm
+${PLIST.perl}lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Collection.pm
+${PLIST.perl}lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Glib.pm
+${PLIST.perl}lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient/Sync.pm
+${PLIST.perl}lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/auto/Audio/XMMSClient/XMMSClient.so
 lib/pkgconfig/xmms2-client-cpp-glib.pc
 lib/pkgconfig/xmms2-client-glib.pc
 lib/pkgconfig/xmms2-client.pc
 lib/pkgconfig/xmms2-plugin.pc
-${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient.so
-${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient_ext.so
-${RUBY}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}elf/xmmsclient_glib.so
-${RUBY}lib/ruby/site_ruby/1.8/xmmsclient.rb
-${RUBY}lib/ruby/site_ruby/1.8/xmmsclient/async.rb
-${RUBY}lib/ruby/site_ruby/1.8/xmmsclient/sync.rb
+${PLIST.ruby}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}/xmmsclient_ext.so
+${PLIST.ruby}lib/ruby/site_ruby/1.8/${MACHINE_ARCH}-${LOWER_OPSYS}/xmmsclient_glib.so
+${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient.rb
+${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/async.rb
+${PLIST.ruby}lib/ruby/site_ruby/1.8/xmmsclient/sync.rb
 lib/xmms2/libxmms_asx.so
 lib/xmms2/libxmms_cue.so
 lib/xmms2/libxmms_curl.so
@@ -90,15 +89,15 @@ lib/xmms2/libxmms_daap.so
 lib/xmms2/libxmms_diskwrite.so
 lib/xmms2/libxmms_equalizer.so
 lib/xmms2/libxmms_file.so
-${FLAC}lib/xmms2/libxmms_flac.so
-${GNOMEVFS}lib/xmms2/libxmms_gnomevfs.so
+${PLIST.flac}lib/xmms2/libxmms_flac.so
+${PLIST.gnomevfs}lib/xmms2/libxmms_gnomevfs.so
 lib/xmms2/libxmms_icymetaint.so
 lib/xmms2/libxmms_id3v2.so
 lib/xmms2/libxmms_lastfm.so
 lib/xmms2/libxmms_lastfmeta.so
 lib/xmms2/libxmms_m3u.so
 lib/xmms2/libxmms_mad.so
-${MODPLUG}lib/xmms2/libxmms_modplug.so
+${PLIST.modplug}lib/xmms2/libxmms_modplug.so
 lib/xmms2/libxmms_mp4.so
 lib/xmms2/libxmms_null.so
 lib/xmms2/libxmms_nulstripper.so
@@ -107,32 +106,32 @@ lib/xmms2/libxmms_pls.so
 lib/xmms2/libxmms_replaygain.so
 lib/xmms2/libxmms_rss.so
 lib/xmms2/libxmms_sun.so
-${OGG}lib/xmms2/libxmms_vorbis.so
+${PLIST.ogg}lib/xmms2/libxmms_vorbis.so
 lib/xmms2/libxmms_wave.so
 lib/xmms2/libxmms_xml.so
 lib/xmms2/libxmms_xspf.so
-${PYREX}${PYSITELIB}/xmmsclient.so
-${PYREX}${PYSITELIB}/xmmsclient/__init__.py
-${PYREX}${PYSITELIB}/xmmsclient/collections.py
-${PYREX}${PYSITELIB}/xmmsclient/consts.py
-${PYREX}${PYSITELIB}/xmmsclient/glib.py
-${PYREX}${PYSITELIB}/xmmsclient/propdict.py
-${PYREX}${PYSITELIB}/xmmsclient/qt3.py
-${PYREX}${PYSITELIB}/xmmsclient/sync.py
-${PYREX}${PYSITELIB}/xmmsclient/xmmsapi.so
+${PLIST.pyrex}${PYSITELIB}/xmmsclient.so
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/__init__.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/collections.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/consts.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/glib.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/propdict.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/qt3.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/sync.py
+${PLIST.pyrex}${PYSITELIB}/xmmsclient/xmmsapi.so
 man/man1/xmms2-et.1.gz
 man/man1/xmms2-launcher.1.gz
 man/man1/xmms2.1.gz
 man/man1/xmms2d.1.gz
 share/xmms2/mind.in.a.box-lament_snipplet.ogg
 share/xmms2/scripts/startup.d/xmms2-et-launcher.sh
-share/xmms2/scripts/startup.d/xmms2-mlib-updater.sh
+${PLIST.gamin}share/xmms2/scripts/startup.d/xmms2-mlib-updater.sh
 @dirrm share/xmms2/scripts/startup.d
 @dirrm share/xmms2/scripts
 @dirrm share/xmms2
 @dirrm lib/xmms2
-${PERL}@dirrm /lib/perl5/site_perl/5.8.0/x86_64-netbsd-thread-multi/Audio/XMMSClient
-${RUBY}@dirrm lib/ruby/site_rube/1.8/xmmsclient
+${PLIST.perl}@dirrm /lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient
+${PLIST.ruby}@dirrm lib/ruby/site_ruby/1.8/xmmsclient
 @dirrm include/xmms2/xmmsclient/xmmsclient++
 @dirrm include/xmms2/xmmsclient
 @dirrm include/xmms2/xmmsc
