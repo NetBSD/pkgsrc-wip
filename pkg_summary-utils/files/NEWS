@@ -1,4 +1,25 @@
 ----------------------------------------------------------------------
+Version 0.28.0, by Aleksey Cheusov, Wed,  1 Apr 2009 12:52:57 +0300
+
+  - pkg_src_summary
+      new option -i|--installed:
+              generate src_summary for the installed packages only,
+              do not read list of packages from stdin and
+              from pkgpathN arguments
+
+  - New tool pkg_cleanup_distdir which is actually a replacement for
+    lintpkgsrc -o|-r and works much faster.
+
+      pkg_cleanup_distdir - analyses ALLSRCFILES field of src_summary
+      given on input and optionally removes files and directories in DISTDIR
+      not referenced by any package.
+
+  - pkg_grep_summary:
+      new options -s and -m which make it easier for use.
+
+  - New tool pkg_summary2bb_pkgs (needs more testing)
+
+----------------------------------------------------------------------
 Version 0.26.0, by Aleksey Cheusov, Fri,  6 Mar 2009 00:29:03 +0200
 
   pkg_src_summary analyses DEPENDS and BUILD_DEPENDS for correctness.
