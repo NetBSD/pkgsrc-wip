@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/03/23 22:36:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/01 21:02:14 pebog Exp $
 #
 #
 #	Request by the author:
@@ -23,6 +23,8 @@ COMMENT=		Anti-spam content filter
 LICENSE=		dcc-free-license
 LICENSE_FILE=		${FILESDIR}/dcc-free-license
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../mk/bsd.prefs.mk"
 
 DCC_USER?=		dcc
 DCC_GROUP?=		dcc
@@ -51,7 +53,7 @@ SUBST_MESSAGE.dae=	Enabling all daemons in dcc_conf
 HAS_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no
 
-CONFIGURE_ENV+=		PERL=${PERL5} \
+CONFIGURE_ENV+=		PERL=${PERL5:Q} \
 			DCC_XARGS=${XARGS:Q}
 
 CONFIGURE_ARGS+=	--homedir=${DCC_HOME} \
@@ -62,6 +64,8 @@ CONFIGURE_ARGS+=	--homedir=${DCC_HOME} \
 			--with-rundir=${DCC_RUN}
 
 .include "options.mk"
+
+BUILD_DEFS+=		VARBASE
 
 INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man8 \
 			share/examples/dcc/cgi-bin
@@ -87,6 +91,10 @@ DCC_PERMS_SETUID=	${DCC_USER} ${ROOT_GROUP} 4555
 SPECIAL_PERMS+=		bin/cdcc ${DCC_PERMS_SETUID} \
 			bin/dccproc ${DCC_PERMS_SETUID} \
 			libexec/dccsight ${DCC_PERMS_SETUID}
+
+post-build:
+	${SED} -e "s!@DCC_HOME@!${DCC_HOME}!g" ${FILESDIR}/dcc-spamassassin.cf \
+		>${WRKDIR}/dcc-spamassassin.cf
 
 # options.mk/dccm adds a dependency on do-install.
 do-install:
@@ -147,7 +155,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/homedir/whiteclnt ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/whitecommon ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/whitelist ${DESTDIR}${DCC_EGDIR}/
-	${SED} -e "s!@DCC_HOME@!${DCC_HOME}!g" ${FILESDIR}/dcc-spamassassin.cf >${WRKDIR}/dcc-spamassassin.cf
 	${INSTALL_DATA} ${WRKDIR}/dcc-spamassassin.cf ${DESTDIR}${DCC_EGDIR}/
 
 .include "../../mk/bsd.pkg.mk"

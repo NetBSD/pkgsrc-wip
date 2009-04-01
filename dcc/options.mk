@@ -1,16 +1,17 @@
-# $NetBSD: options.mk,v 1.4 2009/03/23 16:58:25 lexort Exp $
+# $NetBSD: options.mk,v 1.5 2009/04/01 21:02:15 pebog Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dcc
 PKG_SUPPORTED_OPTIONS=	dccm
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS=		dccm
-
-###
-### Enable dccm, the DCC milter interface.
-###
+PLIST_VARS+=		dccm
+#
+#
+#	Enable dccm, the DCC milter interface.
+#
+#
 .if empty(PKG_OPTIONS:Mdccm)
 CONFIGURE_ARGS+=	--disable-dccm
 .else
