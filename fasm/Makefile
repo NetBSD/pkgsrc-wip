@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/03/25 22:29:10 athaba Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/01 16:36:23 athaba Exp $
 #
 
-DISTNAME=		fasm-1.67.37
+DISTNAME=		fasm-1.67.38
 CATEGORIES=		devel
 MASTER_SITES=		http://flatassembler.net/
 
