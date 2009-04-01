@@ -32,8 +32,12 @@ existing tools:
        - man page
 
 new tools?
-    - pkg_summary_lint: versions consistency, old distfiles, old binaries,
-      distfiles checksums.
+    - pkg_lint_summary:
+         - versions consistency
+         - old distfiles
+         - old binaries
+         - distfiles checksums
+         - check binaries and their REQUIRES and analyse Makefile
 
     - replacement for lintpkgsrc -m | -o
 
