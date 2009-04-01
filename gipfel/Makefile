@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2009/03/08 22:28:16 jh88 Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/01 20:21:05 jh88 Exp $
 #
 
-DISTNAME=	gipfel-0.2.8
+DISTNAME=	gipfel-0.2.9
 CATEGORIES=	geography graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/gipfel.html
-COMMENT=	Georeferencing software for arbitrary images
+COMMENT=	Photogrammetry For Mountain Images
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
