@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/04/01 21:02:14 pebog Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/02 00:21:18 pebog Exp $
 #
 #
 #	Request by the author:
@@ -11,7 +11,7 @@
 #
 #
 DISTNAME=		dcc-1.3.103
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
 EXTRACT_SUFX=		.tar.Z
@@ -93,8 +93,8 @@ SPECIAL_PERMS+=		bin/cdcc ${DCC_PERMS_SETUID} \
 			libexec/dccsight ${DCC_PERMS_SETUID}
 
 post-build:
-	${SED} -e "s!@DCC_HOME@!${DCC_HOME}!g" ${FILESDIR}/dcc-spamassassin.cf \
-		>${WRKDIR}/dcc-spamassassin.cf
+	${SED} -e "s!@DCC_HOME@!${DCC_HOME}!g" ${FILESDIR}/dcc-spamassassin.pre \
+		>${WRKDIR}/dcc-spamassassin.pre
 
 # options.mk/dccm adds a dependency on do-install.
 do-install:
@@ -155,6 +155,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/homedir/whiteclnt ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/whitecommon ${DESTDIR}${DCC_EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/homedir/whitelist ${DESTDIR}${DCC_EGDIR}/
-	${INSTALL_DATA} ${WRKDIR}/dcc-spamassassin.cf ${DESTDIR}${DCC_EGDIR}/
+	${INSTALL_DATA} ${WRKDIR}/dcc-spamassassin.pre ${DESTDIR}${DCC_EGDIR}/
 
 .include "../../mk/bsd.pkg.mk"
