@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/12/23 11:33:42 x400 Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/02 08:35:28 x400 Exp $
 
-DISTNAME=       callweaver-RC-1.1.99.20081212
+DISTNAME=       callweaver-RC-1.1.99.20090331
 CATEGORIES=     comms
 MASTER_SITES=   http://devs.callweaver.org/1.2_snapshots/
 EXTRACT_SUFX=   .tar.gz

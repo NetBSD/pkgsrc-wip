@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/18 14:38:49 x400 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/04/02 08:35:32 x400 Exp $
 bin/callweaver
 sbin/streamplayer
 include/callweaver/acl.h
@@ -216,6 +216,11 @@ man/man8/callweaver.8
 man/man8/safe_callweaver.8
 sbin/callweaver_cli
 sbin/safe_callweaver
+${PLIST.sipsecurity}share/callweaver/keys/dh1024.pem
+${PLIST.sipsecurity}share/callweaver/keys/dh512.pem
+${PLIST.sipsecurity}share/callweaver/keys/servercert.pem
+${PLIST.sipsecurity}share/callweaver/keys/serverkey.pem
+${PLIST.sipsecurity}share/callweaver/keys/trustcerts.pem
 share/callweaver/ogi/eogi-sphinx-test
 share/callweaver/ogi/eogi-test
 share/callweaver/ogi/fastogi-test
