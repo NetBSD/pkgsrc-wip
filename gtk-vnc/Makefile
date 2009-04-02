@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/12/31 15:53:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/02 07:52:36 thomasklausner Exp $
 #
 
 DISTNAME=	gtk-vnc-0.3.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-vnc/}
 
@@ -9,12 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk-vnc.sourceforge.net/
 COMMENT=	VNC viewer widget for GTK
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	gtk-vnc-1.0.pc.in
 PY_PATCHPLIST=	yes
+
+CONFIGURE_ARGS+=	--with-coroutine=gthread
 
 .include "options.mk"
 
