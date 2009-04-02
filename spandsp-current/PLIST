@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/11 18:59:25 x400 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/02 09:08:50 x400 Exp $
 include/spandsp.h
 include/spandsp/adsi.h
 include/spandsp/arctan2.h
@@ -20,6 +20,7 @@ include/spandsp/dds.h
 include/spandsp/dtmf.h
 include/spandsp/echo.h
 include/spandsp/expose.h
+include/spandsp/fast_convert.h
 include/spandsp/fax.h
 include/spandsp/fax_modems.h
 include/spandsp/fir.h
@@ -41,26 +42,51 @@ include/spandsp/playout.h
 include/spandsp/plc.h
 include/spandsp/power_meter.h
 include/spandsp/private/adsi.h
+include/spandsp/private/async.h
+include/spandsp/private/at_interpreter.h
+include/spandsp/private/awgn.h
 include/spandsp/private/bell_r2_mf.h
+include/spandsp/private/bert.h
+include/spandsp/private/bitstream.h
 include/spandsp/private/dtmf.h
 include/spandsp/private/fax.h
 include/spandsp/private/fax_modems.h
 include/spandsp/private/fsk.h
+include/spandsp/private/g711.h
 include/spandsp/private/g722.h
 include/spandsp/private/g726.h
+include/spandsp/private/gsm0610.h
+include/spandsp/private/hdlc.h
+include/spandsp/private/ima_adpcm.h
+include/spandsp/private/logging.h
+include/spandsp/private/lpc10.h
 include/spandsp/private/modem_connect_tones.h
+include/spandsp/private/noise.h
+include/spandsp/private/oki_adpcm.h
+include/spandsp/private/queue.h
+include/spandsp/private/schedule.h
+include/spandsp/private/sig_tone.h
+include/spandsp/private/super_tone_rx.h
+include/spandsp/private/super_tone_tx.h
 include/spandsp/private/t30.h
 include/spandsp/private/t31.h
+include/spandsp/private/t38_core.h
 include/spandsp/private/t38_gateway.h
 include/spandsp/private/t38_non_ecm_buffer.h
 include/spandsp/private/t38_terminal.h
 include/spandsp/private/t4.h
+include/spandsp/private/time_scale.h
+include/spandsp/private/tone_detect.h
+include/spandsp/private/tone_generate.h
 include/spandsp/private/v17rx.h
 include/spandsp/private/v17tx.h
+include/spandsp/private/v22bis.h
 include/spandsp/private/v27ter_rx.h
 include/spandsp/private/v27ter_tx.h
 include/spandsp/private/v29rx.h
 include/spandsp/private/v29tx.h
+include/spandsp/private/v42.h
+include/spandsp/private/v42bis.h
 include/spandsp/private/v8.h
 include/spandsp/queue.h
 include/spandsp/saturated.h
@@ -99,5 +125,6 @@ include/spandsp/vector_float.h
 include/spandsp/vector_int.h
 include/spandsp/version.h
 lib/libspandsp.la
+lib/pkgconfig/spandsp.pc
 @dirrm include/spandsp/private
 @dirrm include/spandsp
