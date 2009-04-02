@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2009/03/08 15:56:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/02 07:53:30 thomasklausner Exp $
 #
 
-DISTNAME=	vinagre-2.24.2
+DISTNAME=	vinagre-2.26.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vinagre/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/vinagre/
 COMMENT=	VNC client for GNOME
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 USE_DIRS=	xdg-1.4 gnome2-1.6
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config
@@ -27,6 +27,7 @@ BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.6.0
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-vnc+=	gtk-vnc>=0.3.8nb1
 .include "../../wip/gtk-vnc/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/12/06 16:34:29 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2009/04/02 07:53:31 thomasklausner Exp $
 
-SHA1 (vinagre-2.24.2.tar.gz) = e001cb3e80288fa97e8bcffd74e64ebea6660ea3
-RMD160 (vinagre-2.24.2.tar.gz) = 60f0d0c62ac04a272c12748177a66080af2e64bd
-Size (vinagre-2.24.2.tar.gz) = 1607989 bytes
+SHA1 (vinagre-2.26.0.tar.gz) = 6c1e2453697cadd3f992ac8b6d79f05c3f773873
+RMD160 (vinagre-2.26.0.tar.gz) = 5a7aafe7dab119e95c31623f0f2239a2739949c1
+Size (vinagre-2.26.0.tar.gz) = 1645146 bytes
