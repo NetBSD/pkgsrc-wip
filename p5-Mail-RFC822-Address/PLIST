@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/03 22:37:10 pettai Exp $
+lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Mail/RFC822/Address/.packlist
+lib/perl5/vendor_perl/man/man3/Mail::RFC822::Address.3
+@dirrm lib/perl5/vendor_perl/man/man3
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Mail/RFC822/Address
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Mail/RFC822
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Mail
+@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
+@dirrm lib/perl5/vendor_perl/5.8.0/Mail/RFC822
+@dirrm lib/perl5/vendor_perl/5.8.0/Mail
+@dirrm lib/perl5/vendor_perl/5.8.0
