@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3342 2009/04/03 08:03:22 emil_s Exp $
+# $Id: Makefile,v 1.3343 2009/04/03 22:23:18 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1635,6 +1635,7 @@ SUBDIR+=	py-speex
 SUBDIR+=	py-stem
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
+SUBDIR+=	py-trash
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-zopeinterface
