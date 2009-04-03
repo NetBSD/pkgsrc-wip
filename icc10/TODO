@@ -1,6 +1,3 @@
-Exclude *.orig files from PLIST (anf don't install them).
+Fix static linking.
 Detect -no* options and don't add corresponding option to iccbin/icpcbin command
 line, for instance, don't add start files if a user passes -nostartfiles.
-wip/gcc43 links to own libgcc/libstdc++ but icc10 links to system's.
-Don't use gcc from wip, use lang/gcc34 (but it doesn't build on -current).
-Add more information to MESSAGE.
