@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3341 2009/03/30 19:23:18 mstapelberg Exp $
+# $Id: Makefile,v 1.3342 2009/04/03 08:03:22 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -54,6 +54,7 @@ SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	TinySVM
 SUBDIR+=	WEPCrack
+SUBDIR+=	aamath
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abclock
 SUBDIR+=	abuse_sdl
@@ -893,6 +894,7 @@ SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
+SUBDIR+=	lasi
 SUBDIR+=	last.fm
 SUBDIR+=	lat
 SUBDIR+=	lcdproc
