@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/13 21:33:41 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/04 12:30:12 thomasklausner Exp $
 #
 
 .include "../../wip/wxGTK-unicode/Makefile.common"
@@ -14,10 +14,10 @@ USE_TOOLS+=		gmake
 CONFLICTS+=		wxGTK-contrib-[0-9]*
 
 do-build:
-	cd ${WRKSRC}/contrib/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS}
+	cd ${WRKSRC}/contrib/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_MAKE_FLAGS}
 
 do-install:
-	cd ${WRKSRC}/contrib/src && ${SETENV} ${MAKE_ENV} ${MAKE} install ${MAKE_FLAGS}
+	cd ${WRKSRC}/contrib/src && ${SETENV} ${MAKE_ENV} ${MAKE} install ${INSTALL_MAKE_FLAGS}
 
 .include "../../wip/wxGTK-unicode/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

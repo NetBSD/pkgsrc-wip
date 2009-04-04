@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/13 23:50:44 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/04 12:30:12 thomasklausner Exp $
 include/wx-2.8/wx/fl/antiflickpl.h
 include/wx-2.8/wx/fl/bardragpl.h
 include/wx-2.8/wx/fl/barhintspl.h
@@ -51,16 +51,18 @@ include/wx-2.8/wx/plot/plot_zot.bmp
 include/wx-2.8/wx/plot/wxplot.rc
 include/wx-2.8/wx/stc/stc.h
 include/wx-2.8/wx/svg/dcsvg.h
-lib/libwx_gtk2u_fl-2.8.so
-lib/libwx_gtk2u_gizmos-2.8.so
-lib/libwx_gtk2u_gizmos_xrc-2.8.so
-lib/libwx_gtk2u_ogl-2.8.so
-lib/libwx_gtk2u_plot-2.8.so
-lib/libwx_gtk2u_stc-2.8.so
-lib/libwx_gtk2u_svg-2.8.so
+lib/libwx_gtk2u_fl-2.8.la
+lib/libwx_gtk2u_gizmos-2.8.la
+lib/libwx_gtk2u_gizmos_xrc-2.8.la
+lib/libwx_gtk2u_ogl-2.8.la
+lib/libwx_gtk2u_plot-2.8.la
+lib/libwx_gtk2u_stc-2.8.la
+lib/libwx_gtk2u_svg-2.8.la
 @dirrm include/wx-2.8/wx/svg
 @dirrm include/wx-2.8/wx/stc
 @dirrm include/wx-2.8/wx/plot
 @dirrm include/wx-2.8/wx/ogl
 @dirrm include/wx-2.8/wx/gizmos
 @dirrm include/wx-2.8/wx/fl
+@comment in wxGTK: @dirrm include/wx-2.8/wx
+@comment in wxGTK: @dirrm include/wx-2.8
