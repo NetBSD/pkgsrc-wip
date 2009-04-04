@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/14 00:57:36 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/04 13:27:25 thomasklausner Exp $
 
 DISTNAME=	wxPython-src-2.8.8.1
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-unicode-2.8.8.1
@@ -10,13 +10,14 @@ MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets (unicode version)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/wxPython
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
-
 # non unicode version
 CONFLICTS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*
 
