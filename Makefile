@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3343 2009/04/03 22:23:18 jihbed Exp $
+# $Id: Makefile,v 1.3344 2009/04/04 14:51:28 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1645,6 +1645,7 @@ SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
+SUBDIR+=	py-webkit
 SUBDIR+=	py-willow
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xdg
