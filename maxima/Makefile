@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/01/08 17:35:26 asau Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/04 15:12:16 asau Exp $
 #
 
 PKGNAME=		maxima-5.17.99
@@ -36,7 +36,7 @@ SUBST_CLASSES+=			fix-version
 SUBST_STAGE.fix-version=	post-patch
 SUBST_MESSAGE.fix-version=	Fixing package version.
 SUBST_FILES.fix-version=	configure.in
-SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,5.17post):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
+SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,[^)]*):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
 
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap
