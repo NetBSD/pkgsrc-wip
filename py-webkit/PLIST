@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/04 14:48:17 jihbed Exp $
+${PYSITELIB}/gtk-2.0/webkit.la
+share/pywebkitgtk/defs/webkit-1.0.2.defs
+share/pywebkitgtk/defs/webkit-1.1-types.defs
+share/pywebkitgtk/defs/webkit-1.1.defs
+share/pywebkitgtk/defs/webkit-base-types.defs
+@dirrm share/pywebkitgtk/defs
+@dirrm share/pywebkitgtk
