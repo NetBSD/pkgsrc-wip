@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/08/31 17:28:14 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/05 10:13:28 asau Exp $
 #
 
 DISTNAME=		slate-0.3.5
@@ -7,7 +7,7 @@ MASTER_SITES=		http://slate.tunes.org/downloads/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://slate.tunes.org/
+HOMEPAGE=		http://slatelanguage.org/
 COMMENT=		Prototype-based object-oriented programming language
 
 USE_TOOLS=		gmake
