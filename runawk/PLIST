@@ -1,9 +1,26 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/05 10:16:30 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/04/05 14:51:08 cheusov Exp $
 bin/runawk
 man/man1/runawk.1
 share/doc/runawk/ChangeLog
 share/doc/runawk/NEWS
 share/doc/runawk/README
+share/examples/runawk/demo_alt_getopt
+share/examples/runawk/demo_basename
+share/examples/runawk/demo_dirname
+share/examples/runawk/demo_embed_str
+share/examples/runawk/demo_has_prefix
+share/examples/runawk/demo_has_prefix.in
+share/examples/runawk/demo_has_suffix
+share/examples/runawk/demo_has_suffix.in
+share/examples/runawk/demo_modinfo
+share/examples/runawk/demo_multisub
+share/examples/runawk/demo_power_getopt
+share/examples/runawk/demo_readfile
+share/examples/runawk/demo_readfile.in
+share/examples/runawk/demo_tokenre
+share/examples/runawk/demo_tokenre.in
+share/examples/runawk/demo_tokenre2
+share/examples/runawk/demo_tokenre2.in
 share/runawk/abort.awk
 share/runawk/abs.awk
 share/runawk/alt_assert.awk
