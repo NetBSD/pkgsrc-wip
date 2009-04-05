@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/03/08 15:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.26 2009/04/05 10:02:55 asau Exp $
 #
 
-DISTNAME=		ecl-8.12.0
-PKGNAME=		ecl-9.2.99
+DISTNAME=		ecl-9.4.0
+# PKGNAME=		ecl-9.4.99
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 
@@ -22,7 +22,7 @@ CVS_MODULE.ecl=		ecl
 # CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
 # CVS_MODULE.ecl-test=	ecl-test
 
-WRKSRC=			${WRKDIR}/ecl
+# WRKSRC=			${WRKDIR}/ecl
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -33,6 +33,8 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-boehm=system
 CONFIGURE_ENV+=		ECL_BOEHM_GC_HEADER=gc/gc.h
 CONFIGURE_ARGS+=	--with-system-gmp
+
+.include "options.mk"
 
 # Change package version to make it differ from released one:
 SUBST_CLASSES+=			fix-version
@@ -54,7 +56,7 @@ pre-configure:
 INSTALL_UNSTRIPPED=    yes
 .endif
 
-.include "../../wip/mk/cvs-package.mk"
+# .include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
