@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/08 00:42:06 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/05 21:19:53 pettai Exp $
 #
 
-DISTNAME=		rancid-2.3.1
+DISTNAME=		rancid-2.3.2a9
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
@@ -9,6 +9,7 @@ MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.shrubbery.net/rancid/
 COMMENT=		Really Awesome New Cisco confIg Differ
 LICENSE=		rancid-license
+LICENSE_FILE=		${FILESDIR}/rancid-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
