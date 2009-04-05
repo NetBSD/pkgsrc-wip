@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3344 2009/04/04 14:51:28 jihbed Exp $
+# $Id: Makefile,v 1.3345 2009/04/05 14:34:35 mj_turner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -123,6 +123,7 @@ SUBDIR+=	audit-system
 SUBDIR+=	autocutsel
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
+SUBDIR+=	autossh
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
 SUBDIR+=	awflwm
