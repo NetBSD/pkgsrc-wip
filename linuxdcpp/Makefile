@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2008/12/31 13:18:02 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/05 12:40:05 tnn2 Exp $
 
-DISTNAME=		linuxdcpp-1.0.2
+DISTNAME=		linuxdcpp-1.0.3
 CATEGORIES=		net x11
-MASTER_SITES=		http://launchpad.net/linuxdcpp/1.0/1.0.2/+download/
+MASTER_SITES=		http://launchpad.net/linuxdcpp/1.0/1.0.3/+download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		https://launchpad.net/linuxdcpp/
 COMMENT=		DC++-based p2p filesharing application
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.4
 USE_TOOLS+=		pkg-config pax
@@ -20,6 +21,7 @@ BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 LDFLAGS+=		${X11_LDFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "HPUX"
 CFLAGS+=		"-Dmadvise(addr,len,behav)="
@@ -28,15 +30,15 @@ CFLAGS+=		"-Dmadvise(addr,len,behav)="
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons debug=true relase=true PREFIX=${PREFIX}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/linuxdcpp ${PREFIX}/bin/linuxdcpp
-	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp
-	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/glade
-	${INSTALL_DATA_DIR} ${PREFIX}/share/linuxdcpp/pixmaps
-	cd ${WRKSRC}/glade && pax -rw *.glade ${PREFIX}/share/linuxdcpp/glade
-	cd ${WRKSRC}/pixmaps && pax -rw *.png ${PREFIX}/share/linuxdcpp/pixmaps
+INSTALLATION_DIRS=	bin share/linuxdcpp/glade share/linuxdcpp/pixmaps
 
-.include "../../mk/compiler.mk"
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/linuxdcpp \
+	  ${DESTDIR}${PREFIX}/bin/linuxdcpp
+	cd ${WRKSRC}/glade && pax -rw *.glade \
+	  ${DESTDIR}${PREFIX}/share/linuxdcpp/glade
+	cd ${WRKSRC}/pixmaps && pax -rw *.png \
+	  ${DESTDIR}${PREFIX}/share/linuxdcpp/pixmaps
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"

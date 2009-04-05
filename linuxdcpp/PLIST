@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/02 18:26:59 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/05 12:40:06 tnn2 Exp $
 bin/linuxdcpp
 share/linuxdcpp/glade/downloadqueue.glade
 share/linuxdcpp/glade/favoritehubs.glade
@@ -21,8 +21,8 @@ share/linuxdcpp/pixmaps/dc++.png
 share/linuxdcpp/pixmaps/download.png
 share/linuxdcpp/pixmaps/favhubs.png
 share/linuxdcpp/pixmaps/hash.png
-share/linuxdcpp/pixmaps/linuxdcpp.png
 share/linuxdcpp/pixmaps/linuxdcpp-icon.png
+share/linuxdcpp/pixmaps/linuxdcpp.png
 share/linuxdcpp/pixmaps/normal-fw-op.png
 share/linuxdcpp/pixmaps/normal-fw.png
 share/linuxdcpp/pixmaps/normal-op.png
