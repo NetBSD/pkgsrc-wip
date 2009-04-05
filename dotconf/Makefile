@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/31 20:39:29 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/05 15:46:05 cheusov Exp $
 #
 
 DISTNAME=	dotconf-1.0.13
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.azzit.de/dotconf/download/v1.0/
 MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://www.azzit.de/dotconf/
 COMMENT=	Configuration file parser library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
