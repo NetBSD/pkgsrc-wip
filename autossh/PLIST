@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/05 14:33:29 mj_turner Exp $
+bin/autossh
+man/man1/autossh.1
+share/doc/${PKGBASE}/CHANGES
+share/doc/${PKGBASE}/README
+share/examples/${PKGBASE}/autossh.host
+share/examples/${PKGBASE}/rscreen
+@dirrm share/doc/${PKGBASE}
+@dirrm share/examples/${PKGBASE}
