@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/06 20:25:41 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/06 21:57:46 fulviociriaco Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -22,7 +22,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-single-host
-CONFIGURE_ARGS+=	--enable-cplusplus
+#CONFIGURE_ARGS+=	--enable-cplusplus  #breaks c code ld
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=  --docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--disable-gcc-opts
