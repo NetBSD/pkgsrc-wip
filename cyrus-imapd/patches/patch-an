@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.5 2008/04/22 01:45:43 obache Exp $
+$NetBSD: patch-an,v 1.6 2009/04/06 04:56:52 obache Exp $
 
---- imap/tls.c.orig	2008-04-15 17:58:08.000000000 +0000
+--- imap/tls.c.orig	2008-11-14 22:24:38.000000000 +0000
 +++ imap/tls.c
 @@ -223,7 +223,7 @@ static RSA *tmp_rsa_cb(SSL * s __attribu
      return (rsa_tmp);

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2008/12/08 00:59:30 obache Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/06 04:56:52 obache Exp $
 
-DISTNAME=	cyrus-imapd-2.3.13
+DISTNAME=	cyrus-imapd-2.3.14
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
@@ -165,9 +165,11 @@ BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.17
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
-# NetBSD's libssl is built without bn/bn_const.c
-.if ${OPSYS} == "NetBSD"
+# NetBSD's libssl is built without bn/bn_const.c (PR#37505)
+.if !empty(MACHINE_PLATFORM:MNetBSD-4.*-*)
+#.  if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 CFLAGS+=	-DOPENSSL_LACK_BN_CONST
+#.  endif
 .endif
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
