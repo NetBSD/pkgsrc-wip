@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3346 2009/04/06 10:19:38 thomasklausner Exp $
+# $Id: Makefile,v 1.3347 2009/04/06 14:13:42 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1472,7 +1472,6 @@ SUBDIR+=	pekwm
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
-SUBDIR+=	phonon
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar
 SUBDIR+=	php-doc-br
