@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/11 07:07:38 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/06 20:25:41 fulviociriaco Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -32,7 +32,7 @@ MAKE_FILE=		makefile
 
 BUILD_TARGET+=		bootstrap all doc 
 TEST_TARGET=		check
-LDFLAGS += -L${WRKSRC}/lib -L${WRKSRC}/gsi
+LDFLAGS += -L${WRKSRC}/lib -L${WRKSRC}/gsi -L${WRKSRC}/gsc
 CHECK_PORTABILITY_SKIP=	prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=no
 

@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2009/04/06 20:25:41 fulviociriaco Exp $
+
+--- bin/makefile.in.orig	2009-04-06 21:50:09.000000000 +0200
++++ bin/makefile.in
+@@ -8,8 +8,8 @@ SUBDIRS =
+ 
+ PACKAGE_SHORTNAME = @PACKAGE_SHORTNAME@
+ PACKAGE_NAME = @PACKAGE_NAME@
+-PACKAGE_VERSION = @PACKAGE_VERSION@
+-PACKAGE_STRING = @PACKAGE_STRING@
++PACKAGE_VERSION = 4.4.1
++PACKAGE_STRING = gambc 4.4.1
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ PACKAGE_TARNAME = @PACKAGE_TARNAME@
+ 
+@@ -258,10 +258,10 @@ install-post: all
+ 	  $(INSTALL_PROGRAM) $$file $$t_bindir/$$file; \
+ 	done; \
+ 	for file in $(INSTFILES_BIN_LINK_GSI); do \
+-	  (cd $$t_bindir && $(LN_S) gsi@exe@ $$file); \
++	  (cd $$t_bindir && $(LN_S) gambit-si $$file); \
+ 	done; \
+ 	for file in $(INSTFILES_BIN_LINK_GSC); do \
+-	  (cd $$t_bindir && $(LN_S) gsc@exe@ $$file); \
++	  (cd $$t_bindir && $(LN_S) gambit-sc $$file); \
+ 	done; \
+ 	if test "$$t_bindir" != "$$i_bindir"; then \
+ 	  r_bindir=`$(rootfromhere)/relpath "$$t_bindir" "$$i_bindir" @ENABLE_MULTIPLE_VERSIONS@`; \

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/11 07:07:38 fulviociriaco Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/04/06 20:25:41 fulviociriaco Exp $
 bin/gambc-doc.bat
+bin/gambit-sc
+bin/gambit-si
 bin/gsc-cc-o.bat
 bin/gsc-script
-bin/gsi
 bin/gsi-script
 bin/scheme-ieee-1178-1990
 bin/scheme-r4rs

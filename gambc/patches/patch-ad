@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2009/04/06 20:25:41 fulviociriaco Exp $
+
+--- gsi/makefile.in.orig	2009-04-06 21:52:38.000000000 +0200
++++ gsi/makefile.in
+@@ -8,8 +8,8 @@ SUBDIRS =
+ 
+ PACKAGE_SHORTNAME = @PACKAGE_SHORTNAME@
+ PACKAGE_NAME = @PACKAGE_NAME@
+-PACKAGE_VERSION = @PACKAGE_VERSION@
+-PACKAGE_STRING = @PACKAGE_STRING@
++PACKAGE_VERSION = 4.4.1
++PACKAGE_STRING = gambc 4.4.1
+ PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
+ PACKAGE_TARNAME = @PACKAGE_TARNAME@
+ 
+@@ -194,7 +194,7 @@ install-post: all
+ 	$(INSTALL_LIB) $(LIBRARY) $$t_libdir/$(LIBRARY); \
+ 	@FIXLIB@ $$t_libdir/$(LIBRARY); \
+ 	@LINK_FOR_INSTALL@; \
+-	$(INSTALL_PROGRAM) $(EXECUTABLE) $$t_bindir/$(EXECUTABLE); \
++	$(INSTALL_PROGRAM) $(EXECUTABLE) $$t_bindir/gambit-si; \
+ 	if test "$$t_libdir" != "$$i_libdir"; then \
+ 	  r_libdir=`$(rootfromhere)/relpath "$$t_libdir" "$$i_libdir" @ENABLE_MULTIPLE_VERSIONS@`; \
+ 	  for file in _$(GAMBCGSILIB).c $(LIBRARY); do \
