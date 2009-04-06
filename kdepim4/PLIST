@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/03/10 11:36:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/04/06 13:42:10 mwdavies Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -360,8 +360,10 @@ lib/libkleo.so
 lib/libkleo.so.4
 lib/libkleo.so.4.2.0
 lib/libkleopatraclientcore.so
+lib/libkleopatraclientcore.so.0
 lib/libkleopatraclientcore.so.0.2.1
 lib/libkleopatraclientgui.so
+lib/libkleopatraclientgui.so.0
 lib/libkleopatraclientgui.so.0.2.1
 lib/libkmailprivate.so.4
 lib/libkmailprivate.so.4.2.0
@@ -691,23 +693,17 @@ share/doc/kde/HTML/en/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/en/korganizer/plugins-chapter.docbook
 share/doc/kde/HTML/en/korganizer/remotefile-resource.png
 share/doc/kde/HTML/en/korganizer/todo-general.png
-share/doc/kde/HTML/en/kpilot/address-app.png
 share/doc/kde/HTML/en/kpilot/common
-share/doc/kde/HTML/en/kpilot/conduit-knotes.png
-share/doc/kde/HTML/en/kpilot/conduit-mal.png
-share/doc/kde/HTML/en/kpilot/conduit-palmdoc.png
-share/doc/kde/HTML/en/kpilot/conduit-popmail-kmail.png
-share/doc/kde/HTML/en/kpilot/conduit-sysinfo.png
+share/doc/kde/HTML/en/kpilot/conduit-memofile.png
+share/doc/kde/HTML/en/kpilot/conduit-todo.png
 share/doc/kde/HTML/en/kpilot/conduit-vcal.png
 share/doc/kde/HTML/en/kpilot/configuration.docbook
 share/doc/kde/HTML/en/kpilot/daemon-menu.png
-share/doc/kde/HTML/en/kpilot/db-app.png
 share/doc/kde/HTML/en/kpilot/faq.docbook
 share/doc/kde/HTML/en/kpilot/file-app.png
 share/doc/kde/HTML/en/kpilot/index.cache.bz2
 share/doc/kde/HTML/en/kpilot/index.docbook
 share/doc/kde/HTML/en/kpilot/main-app.png
-share/doc/kde/HTML/en/kpilot/memo-app.png
 share/doc/kde/HTML/en/kpilot/setup-address.png
 share/doc/kde/HTML/en/kpilot/setup-conduit.png
 share/doc/kde/HTML/en/kpilot/setup-dbspecial.png
@@ -716,16 +712,9 @@ share/doc/kde/HTML/en/kpilot/setup-hotsync.png
 share/doc/kde/HTML/en/kpilot/setup-items.png
 share/doc/kde/HTML/en/kpilot/setup-startup-exit.png
 share/doc/kde/HTML/en/kpilot/setup-tabs.png
-share/doc/kde/HTML/en/kpilot/setup-viewer.png
 share/doc/kde/HTML/en/kpilot/sidebar.png
 share/doc/kde/HTML/en/kpilot/sync.docbook
-share/doc/kde/HTML/en/kpilot/todo-app.png
-share/doc/kde/HTML/en/kpilot/toolbar_backup.png
-share/doc/kde/HTML/en/kpilot/toolbar_hotsync.png
 share/doc/kde/HTML/en/kpilot/usage.docbook
-share/doc/kde/HTML/en/kpilot/wizard-conduits.png
-share/doc/kde/HTML/en/kpilot/wizard-connection.png
-share/doc/kde/HTML/en/kpilot/wizard-general.png
 share/doc/kde/HTML/en/ktimetracker/clipboard-history.png
 share/doc/kde/HTML/en/ktimetracker/common
 share/doc/kde/HTML/en/ktimetracker/copy-this-task.png

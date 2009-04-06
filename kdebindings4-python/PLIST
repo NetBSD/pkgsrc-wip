@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/10 11:36:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/06 13:42:04 mwdavies Exp $
 lib/kde4/kpythonpluginfactory.so
 lib/kde4/krosspython.so
 ${PYSITELIB}/PyKDE4/__init__.py
@@ -53,6 +53,8 @@ share/kde/apps/pykde4/examples/solidExamples/solid_storageaccess.py
 share/kde/apps/pykde4/examples/solidExamples/solid_storagedrive.py
 share/kde/apps/pykde4/examples/solidExamples/solid_storagevolume.py
 share/kde/apps/pykde4/examples/solid_demo.py
+share/kde/apps/pykde4/kde4.py
+share/kde/apps/pykde4/kde4.pyc
 share/kde/apps/pykde4/pykdeuic4.py
 share/kde/apps/pykde4/pykdeuic4.pyc
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentbase.sip

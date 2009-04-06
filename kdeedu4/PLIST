@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/03/10 11:36:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/04/06 13:42:05 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -779,7 +779,11 @@ share/kde/apps/kalzium/data/iconsets/school/6.svg
 share/kde/apps/kalzium/data/iconsets/school/60.svg
 share/kde/apps/kalzium/data/iconsets/school/61.svg
 share/kde/apps/kalzium/data/iconsets/school/62.svg
+share/kde/apps/kalzium/data/iconsets/school/67.svg
+share/kde/apps/kalzium/data/iconsets/school/68.svg
 share/kde/apps/kalzium/data/iconsets/school/7.svg
+share/kde/apps/kalzium/data/iconsets/school/70.svg
+share/kde/apps/kalzium/data/iconsets/school/71.svg
 share/kde/apps/kalzium/data/iconsets/school/72.svg
 share/kde/apps/kalzium/data/iconsets/school/73.svg
 share/kde/apps/kalzium/data/iconsets/school/74.svg

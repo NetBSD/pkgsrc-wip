@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/14 10:51:55 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/04/06 13:42:11 mwdavies Exp $
 bin/ark
 bin/kcalc
 bin/kcharselect
@@ -98,14 +98,16 @@ share/doc/kde/HTML/en/ktimer/two.at.once.png
 share/doc/kde/HTML/en/kwallet/common
 share/doc/kde/HTML/en/kwallet/edit1.png
 share/doc/kde/HTML/en/kwallet/edit2.png
-share/doc/kde/HTML/en/kwallet/edit3.png
+share/doc/kde/HTML/en/kwallet/first-open-request.png
 share/doc/kde/HTML/en/kwallet/index.cache.bz2
 share/doc/kde/HTML/en/kwallet/index.docbook
 share/doc/kde/HTML/en/kwallet/kwalletmanager.png
-share/doc/kde/HTML/en/kwallet/ox22-action-wallet_closed.png
-share/doc/kde/HTML/en/kwallet/ox22-action-wallet_open.png
+share/doc/kde/HTML/en/kwallet/openwallet-request.png
+share/doc/kde/HTML/en/kwallet/oxygen48-status-wallet-closed.png
+share/doc/kde/HTML/en/kwallet/oxygen48-status-wallet-open.png
 share/doc/kde/HTML/en/kwallet/password1.png
 share/doc/kde/HTML/en/kwallet/password2.png
+share/doc/kde/HTML/en/kwallet/save-login-information.png
 share/doc/kde/HTML/en/okteta/basics.docbook
 share/doc/kde/HTML/en/okteta/common
 share/doc/kde/HTML/en/okteta/credits.docbook
