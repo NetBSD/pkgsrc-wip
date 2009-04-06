@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3345 2009/04/05 14:34:35 mj_turner Exp $
+# $Id: Makefile,v 1.3346 2009/04/06 10:19:38 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -542,7 +542,6 @@ SUBDIR+=	gtk-imonc
 SUBDIR+=	gtk-qt-engine
 SUBDIR+=	gtk-server
 SUBDIR+=	gtk-theme-switch
-SUBDIR+=	gtk-vnc
 SUBDIR+=	gtk2-engines-dwerg
 SUBDIR+=	gtk2-engines-flat
 SUBDIR+=	gtk2-engines-galaxy
@@ -1997,7 +1996,6 @@ SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
-SUBDIR+=	vinagre
 SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vkeybd
