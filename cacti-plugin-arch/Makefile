@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2008/09/28 10:46:29 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/06 22:25:44 pettai Exp $
 #
-
-DISTNAME=		cacti-plugin-arch
-PKGNAME=		${DISTNAME}-2.1
+DISTNAME=		cacti-plugin-${CACTI_RC}-PA-v${RC_VERSION}
+PKGNAME=		cacti-plugin-arch-${RC_VERSION}
 CATEGORIES=		net
-MASTER_SITES=		http://cactiusers.org/downloads/
+MASTER_SITES=		http://mirror.cactiusers.org/downloads/plugins/
+EXTRACT_SUFX=		.zip
+RC_VERSION=		2.4
+CACTI_RC=		0.8.7d
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://cactiusers.org/
@@ -12,9 +14,9 @@ COMMENT=		Plugin architecture for cacti
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME}
+WRKSRC=			${WRKDIR}/files-${CACTI_RC}
 
-DEPENDS+=		cacti-0.8.7b:../../wip/cacti
+DEPENDS+=		cacti-0.8.7d:../../wip/cacti
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,8 +27,8 @@ MESSAGE_SUBST+=         CACTIDIR=${CACTIDIR}
 INSTALLATION_DIRS+=	share/cacti
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DESTDIR}${CACTIDIR}/docs/
-	${INSTALL_DATA} ${WRKSRC}/pa.sql ${DESTDIR}${CACTIDIR}/
-	${CP} -R ${WRKSRC}/files-0.8.7b/* ${DESTDIR}${CACTIDIR}/
+	${INSTALL_DATA} ${WRKDIR}/readme.txt ${DESTDIR}${CACTIDIR}/docs/
+	${INSTALL_DATA} ${WRKDIR}/pa.sql ${DESTDIR}${CACTIDIR}/
+	${CP} -R ${WRKSRC}/* ${DESTDIR}${CACTIDIR}/
 
 .include "../../mk/bsd.pkg.mk"

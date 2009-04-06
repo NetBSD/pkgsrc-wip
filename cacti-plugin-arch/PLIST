@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/27 22:37:01 pettai Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/06 22:25:44 pettai Exp $
 share/cacti/auth_changepassword.php
 share/cacti/auth_login.php
 share/cacti/data_sources.php
-share/cacti/docs/Readme.txt
+share/cacti/docs/readme.txt
 share/cacti/graph.php
 share/cacti/graph_image.php
 share/cacti/graphs.php
 share/cacti/graphs_new.php
 share/cacti/host.php
 share/cacti/include/auth.php
+share/cacti/include/bottom_footer.php
 share/cacti/include/global.php
+share/cacti/include/global.php.orig
 share/cacti/include/global_arrays.php
+share/cacti/include/global_constants.php
 share/cacti/include/global_form.php
 share/cacti/include/global_settings.php
 share/cacti/include/plugins.php
@@ -18,10 +21,10 @@ share/cacti/include/top_graph_header.php
 share/cacti/include/top_header.php
 share/cacti/index.php
 share/cacti/lib/api_device.php
+share/cacti/lib/auth.php
 share/cacti/lib/functions.php
 share/cacti/lib/html.php
 share/cacti/lib/html_form.php
-share/cacti/lib/html_tree.php
 share/cacti/lib/plugins.php
 share/cacti/lib/poller.php
 share/cacti/lib/rrd.php
@@ -33,3 +36,7 @@ share/cacti/poller.php
 share/cacti/user_admin.php
 share/cacti/utilities.php
 @dirrm share/cacti/plugins
+@dirrm share/cacti/lib
+@dirrm share/cacti/include
+@dirrm share/cacti/docs
+@dirrm share/cacti

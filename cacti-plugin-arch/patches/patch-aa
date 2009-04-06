@@ -1,5 +1,7 @@
---- files-0.8.7b/include/global.php.orig	2008-09-28 02:00:44.000000000 +0200
-+++ files-0.8.7b/include/global.php	2008-09-28 02:02:10.000000000 +0200
+$NetBSD: patch-aa,v 1.4 2009/04/06 22:25:45 pettai Exp $
+
+--- include/global.php.orig	2009-04-07 00:19:04.000000000 +0200
++++ include/global.php	2009-04-07 00:20:10.000000000 +0200
 @@ -53,7 +53,7 @@
     would be set to /cacti/
  */
@@ -9,10 +11,3 @@
  
  define('URL_PATH', $config['url_path']);
  
-@@ -220,4 +220,4 @@
- include_once($config["library_path"] . "/variables.php");
- include_once($config["library_path"] . "/auth.php");
- 
--?>
-\ No newline at end of file
-+?>
