@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/30 16:27:38 pettai Exp $
+$NetBSD: distinfo,v 1.2 2009/04/06 21:49:27 pettai Exp $
 
-SHA1 (cacti-spine-0.8.7a.tar.gz) = b4ad837bf2ef777fe739712209b681491d308ead
-RMD160 (cacti-spine-0.8.7a.tar.gz) = 77e0487817e34b286e1fcc2574939b6da92e52d7
-Size (cacti-spine-0.8.7a.tar.gz) = 364746 bytes
+SHA1 (cacti-spine-0.8.7c.tar.gz) = 4eb2c40fccc5cdcca517c2e1b352b66fd0ad7e5e
+RMD160 (cacti-spine-0.8.7c.tar.gz) = f9352f52fadd990a3495043c9977813c19f5f8da
+Size (cacti-spine-0.8.7c.tar.gz) = 368272 bytes
