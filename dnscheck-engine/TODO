@@ -1,0 +1,2 @@
+- Fix SVN+SSH without having to accept the host key? (SVN_CERTS?)
+- Fix CONF_FILES

@@ -1,0 +1,4 @@
+DNSCheck is a program that was designed to help people check, measure and
+hopefully also understand the workings of the Domain Name System, DNS.
+This repository contains a new version of DNSCheck and is currently
+in beta stage.
