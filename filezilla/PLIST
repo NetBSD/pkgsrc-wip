@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/12 14:17:03 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/07 14:34:42 tnn2 Exp $
 bin/filezilla
 bin/fzputtygen
 bin/fzsftp
@@ -32,6 +32,7 @@ share/filezilla/resources/16x16/refresh.png
 share/filezilla/resources/16x16/remotetreeview.png
 share/filezilla/resources/16x16/server.png
 share/filezilla/resources/16x16/sitemanager.png
+share/filezilla/resources/16x16/synchronize.png
 share/filezilla/resources/16x16/unknown.png
 share/filezilla/resources/16x16/upload.png
 share/filezilla/resources/16x16/uploadadd.png
