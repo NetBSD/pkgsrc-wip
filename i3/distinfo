@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/23 13:03:33 mstapelberg Exp $
+$NetBSD: distinfo,v 1.2 2009/04/07 22:43:56 thomasklausner Exp $
 
 SHA1 (i3-3.a.tar.bz2) = 1ce0eb91e7ee69afcefda682d19a2e444e7117dc
 RMD160 (i3-3.a.tar.bz2) = 854a01cf1dec7ef5de7d38a903a180e15af8cdd9
 Size (i3-3.a.tar.bz2) = 50288 bytes
-SHA1 (patch-aa) = 2415615edc3f740943e948138bc3b2525ad48f74
