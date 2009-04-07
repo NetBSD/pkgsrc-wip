@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3347 2009/04/06 14:13:42 mwdavies Exp $
+# $Id: Makefile,v 1.3348 2009/04/07 21:45:09 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -974,7 +974,6 @@ SUBDIR+=	libuxre
 SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libwbxml2-patched
-SUBDIR+=	libxcb
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4menu
@@ -2040,8 +2039,6 @@ SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbnbt
 SUBDIR+=	xbsql
-SUBDIR+=	xcb-proto
-SUBDIR+=	xcb-util
 SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
@@ -2083,7 +2080,6 @@ SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
 SUBDIR+=	xine-plugin
-SUBDIR+=	xine-xcb
 SUBDIR+=	xinetd
 SUBDIR+=	xlsfonts
 SUBDIR+=	xmail

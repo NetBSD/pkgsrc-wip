@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/24 12:32:32 thomasklausner Exp $
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbshm.la
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xcbxv.la

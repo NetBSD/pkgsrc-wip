@@ -1,7 +1,0 @@
-=> Creating installation directories
-cd /scratch/wip/xine-xcb/work/xine-lib-1.1.12/src/video_out &&  libtool --mode=i
-nstall /usr/bin/install -c -o root -g wheel -m 444  xineplug_vo_out_xcbshm.la /u
-sr/pkg/lib/xine/plugins/1.1.12
-libtool: install: error: cannot install `xineplug_vo_out_xcbshm.la' to a directo
-ry not ending in /usr/pkg/lib/xine/plugins/1.21
-*** Error code 1
