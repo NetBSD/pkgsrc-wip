@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2009/04/05 10:02:55 asau Exp $
+# $NetBSD: Makefile,v 1.27 2009/04/07 04:40:26 asau Exp $
 #
 
-DISTNAME=		ecl-9.4.0
+DISTNAME=		ecl-9.4.1
 # PKGNAME=		ecl-9.4.99
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}

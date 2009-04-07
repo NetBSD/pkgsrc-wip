@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2009/04/05 10:02:55 asau Exp $
+$NetBSD: distinfo,v 1.17 2009/04/07 04:40:26 asau Exp $
 
-SHA1 (ecl-9.4.0.tar.gz) = f45f97dc2e0941d170756bf245703683aa4005b3
-RMD160 (ecl-9.4.0.tar.gz) = b123c6e33e368fb9395ef55f1cd6426e5075b461
-Size (ecl-9.4.0.tar.gz) = 5898692 bytes
+SHA1 (ecl-9.4.1.tar.gz) = 7fcf900cb4350c0c77f4bcf033394ac7bb141707
+RMD160 (ecl-9.4.1.tar.gz) = e7f8cb338710c7ebc4034ee756fd0982321c412d
+Size (ecl-9.4.1.tar.gz) = 5699081 bytes
