@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/27 14:10:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/07 18:46:36 mstapelberg Exp $
 #
 
 PKGNAME=	i3-3a
@@ -19,6 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
+INSTALLATION_DIRS=${PKG_SYSCONFDIR}/i3
 CONF_FILES=${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/i3/config
 
 SUBST_CLASSES+=			fix-prefix
@@ -32,7 +33,7 @@ SUBST_CLASSES+=		fix-src
 SUBST_STAGE.fix-src=	pre-configure
 SUBST_MESSAGE.fix-src=	Fixing absolute paths (source)
 SUBST_FILES.fix-src=	src/config.c
-SUBST_SED.fix-src=	-e 's,/etc/i3,${PREFIX}/etc/i3,g'
+SUBST_SED.fix-src=	-e 's,/etc/i3,${PKG_SYSCONFDIR}/i3,g'
 
 post-build:
 	cd ${WRKSRC} && gmake -C man
