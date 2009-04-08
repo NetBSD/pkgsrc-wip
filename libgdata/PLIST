@@ -1,0 +1,51 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/08 09:06:49 jihbed Exp $
+include/libgdata/gdata/gdata-atom.h
+include/libgdata/gdata/gdata-entry.h
+include/libgdata/gdata/gdata-enums.h
+include/libgdata/gdata/gdata-feed.h
+include/libgdata/gdata/gdata-gdata.h
+include/libgdata/gdata/gdata-marshal.h
+include/libgdata/gdata/gdata-media-rss.h
+include/libgdata/gdata/gdata-parser.h
+include/libgdata/gdata/gdata-query.h
+include/libgdata/gdata/gdata-service.h
+include/libgdata/gdata/gdata-types.h
+include/libgdata/gdata/gdata.h
+include/libgdata/gdata/services/calendar/gdata-calendar-calendar.h
+include/libgdata/gdata/services/calendar/gdata-calendar-event.h
+include/libgdata/gdata/services/calendar/gdata-calendar-query.h
+include/libgdata/gdata/services/calendar/gdata-calendar-service.h
+include/libgdata/gdata/services/youtube/gdata-youtube-enums.h
+include/libgdata/gdata/services/youtube/gdata-youtube-service.h
+include/libgdata/gdata/services/youtube/gdata-youtube-video.h
+include/libgdata/gdata/services/youtube/gdata-youtube.h
+lib/libgdata.la
+lib/pkgconfig/libgdata.pc
+share/gtk-doc/html/gdata/GDataEntry.html
+share/gtk-doc/html/gdata/GDataFeed.html
+share/gtk-doc/html/gdata/GDataQuery.html
+share/gtk-doc/html/gdata/GDataService.html
+share/gtk-doc/html/gdata/GDataYouTubeService.html
+share/gtk-doc/html/gdata/GDataYouTubeVideo.html
+share/gtk-doc/html/gdata/api-index-full.html
+share/gtk-doc/html/gdata/ch01.html
+share/gtk-doc/html/gdata/ch02.html
+share/gtk-doc/html/gdata/ch03.html
+share/gtk-doc/html/gdata/gdata-Atom-API.html
+share/gtk-doc/html/gdata/gdata-GData-API.html
+share/gtk-doc/html/gdata/gdata.devhelp
+share/gtk-doc/html/gdata/gdata.devhelp2
+share/gtk-doc/html/gdata/home.png
+share/gtk-doc/html/gdata/index.html
+share/gtk-doc/html/gdata/index.sgml
+share/gtk-doc/html/gdata/left.png
+share/gtk-doc/html/gdata/object-tree.html
+share/gtk-doc/html/gdata/right.png
+share/gtk-doc/html/gdata/style.css
+share/gtk-doc/html/gdata/up.png
+@dirrm share/gtk-doc/html/gdata
+@dirrm include/libgdata/gdata/services/youtube
+@dirrm include/libgdata/gdata/services/calendar
+@dirrm include/libgdata/gdata/services
+@dirrm include/libgdata/gdata
+@dirrm include/libgdata
