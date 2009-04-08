@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/22 21:40:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/08 23:37:10 jihbed Exp $
 #
 
 DISTNAME=	scratchpad-0.3.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://scratchpad.googlecode.com/files/
+HOMEPAGE=	http://dborg.wordpress.com/scratchpad/
 COMMENT=	Scratchpad is a document oriented
 
 GNU_CONFIGURE=	yes
