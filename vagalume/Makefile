@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/27 07:46:17 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/08 13:53:59 roelants Exp $
 #
 
 DISTNAME=	vagalume_${VERSION}.orig
@@ -24,6 +24,7 @@ BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.4.1
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
