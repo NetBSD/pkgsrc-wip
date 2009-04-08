@@ -1,29 +1,32 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/22 16:14:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/08 14:52:49 jihbed Exp $
 #
 
-DISTNAME=	libgxim-0.3.2
+DISTNAME=	libgxim-0.3.3
 CATEGORIES=	x11
 MASTER_SITES=	http://libgxim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://code.google.com/p/libgxim/
+HOMEPAGE=	http://libgxim.googlecode.com/files/
 COMMENT=	GObject-based XIM protocol library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl intltool
+USE_TOOLS+=	pkg-config  perl intltool
+USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	share/libgxim
-
-PKGCONFIG_OVERRIDE+=	libgxim.pc.in
 
 post-install:
 .for f in AUTHORS NEWS README
 	${INSTALL_DATA} ${WRKSRC}/${f}  ${PREFIX}/share/libgxim
 .endfor
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=0.3.1
+PKGCONFIG_OVERRIDE+=	libgxim.pc.in
+
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
