@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3348 2009/04/07 21:45:09 thomasklausner Exp $
+# $Id: Makefile,v 1.3349 2009/04/08 07:54:33 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -164,6 +164,7 @@ SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
 SUBDIR+=	boost-test-suite
+SUBDIR+=	botan
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
@@ -296,6 +297,7 @@ SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
+SUBDIR+=	dnscheck-engine
 SUBDIR+=	dnstop
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
@@ -1374,6 +1376,7 @@ SUBDIR+=	p5-MARC-Charset
 SUBDIR+=	p5-MARC-XML
 SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-MP3-Mplib
+SUBDIR+=	p5-Mail-RFC822-Address
 SUBDIR+=	p5-Mail-SPF
 SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
