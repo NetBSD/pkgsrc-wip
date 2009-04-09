@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/02/18 11:14:52 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.16 2009/04/09 09:30:42 bartoszkuzma Exp $
 #
 
-DISTNAME=		rsyslog-3.21.10
+DISTNAME=		rsyslog-3.21.11
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.rsyslog.com/rsyslog/
 
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.rsyslog.com/
 COMMENT=		The enhanced syslogd for Unix
 
 GNU_CONFIGURE=		yes
+
+USE_TOOLS+=		pkg-config
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

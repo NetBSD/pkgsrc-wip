@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2008/12/09 18:04:29 bartoszkuzma Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2009/04/09 09:30:42 bartoszkuzma Exp $
 man/man5/rsyslog.conf.5
 man/man8/rsyslogd.8
 sbin/rsyslogd
@@ -47,6 +47,7 @@ share/doc/rsyslog/ns_gtls.html
 share/doc/rsyslog/ns_ptcp.html
 share/doc/rsyslog/omlibdbi.html
 share/doc/rsyslog/ommail.html
+share/doc/rsyslog/ommysql.html
 share/doc/rsyslog/omrelp.html
 share/doc/rsyslog/omsnmp.html
 share/doc/rsyslog/professional_support.html
@@ -94,7 +95,7 @@ share/doc/rsyslog/rsyslog_reliable_forwarding.html
 share/doc/rsyslog/rsyslog_secure_tls.html
 share/doc/rsyslog/rsyslog_stunnel.html
 share/doc/rsyslog/rsyslog_tls.html
-share/doc/rsyslog/status.html
+share/doc/rsyslog/syslog_parsing.html
 share/doc/rsyslog/syslog_protocol.html
 share/doc/rsyslog/tls_cert_ca.html
 share/doc/rsyslog/tls_cert_client.html
