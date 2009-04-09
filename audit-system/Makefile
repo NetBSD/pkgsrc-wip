@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/07/05 20:00:30 adrian_p Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/09 01:24:26 jsonn Exp $
 #
 
 DISTNAME=	audit-system-0.01
@@ -11,10 +11,7 @@ HOMEPAGE=	http://www.NetBSD.org/support/security/
 COMMENT=	Check the NetBSD base OS for known vulnerabilities
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
 USE_LANGUAGES=	# none
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
