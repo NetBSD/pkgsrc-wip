@@ -1,2 +1,1 @@
-PyWebKitGtk allows Python (Gtk) developers to create software
-on top of the WebKitGtk rendering engine
+PyWebKitGtk provides an API for developers to program WebKit/Gtk using Python
