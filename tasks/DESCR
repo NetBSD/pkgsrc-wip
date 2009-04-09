@@ -1,0 +1,3 @@
+Tasks is a simple To Do list application for GNOME, using libecal and Gtk+.
+It eschews complicated features for a simple interface and functionality
+that does rigth thing
