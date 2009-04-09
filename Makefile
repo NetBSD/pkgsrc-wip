@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3351 2009/04/09 16:24:13 jihbed Exp $
+# $Id: Makefile,v 1.3352 2009/04/09 16:26:48 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -537,6 +537,7 @@ SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
 SUBDIR+=	gstat
+SUBDIR+=	gst-inspector
 SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-grdc
