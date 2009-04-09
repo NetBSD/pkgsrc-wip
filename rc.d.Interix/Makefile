@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/08/27 12:04:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/09 01:09:31 jsonn Exp $
 #
 
 DISTNAME=		rc.d.Interix-0.0.1
@@ -15,7 +15,6 @@ DEPENDS+=		rcorder-[0-9]*:../../pkgtools/rcorder
 DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
 
 NO_BUILD=		yes
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_MTREE=		yes
 

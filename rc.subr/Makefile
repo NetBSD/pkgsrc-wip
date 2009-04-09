@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/29 17:43:17 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/09 01:09:04 jsonn Exp $
 #
 
 DISTNAME=		rc.subr-20030912
@@ -12,11 +12,9 @@ COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 
 NOT_FOR_PLATFORM=	NetBSD-1.[5-9]*-* NetBSD-[2-9]*-* FreeBSD-[5-9]*-*
 
-NO_CHECKSUM=		yes
 NO_EXTRACT=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
-NO_MTREE=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 

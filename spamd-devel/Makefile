@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/07/21 12:01:30 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/09 01:07:31 jsonn Exp $
 
 DISTNAME=		spamd-20070531
 PKGREVISION=		1
@@ -12,7 +12,6 @@ COMMENT=		OpenBSD spam deferral daemons and tools
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
 
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/src
 
