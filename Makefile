@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3352 2009/04/09 16:26:48 jihbed Exp $
+# $Id: Makefile,v 1.3353 2009/04/09 16:29:19 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1584,6 +1584,7 @@ SUBDIR+=	py-Soya
 SUBDIR+=	py-albatross
 SUBDIR+=	py-aspects
 SUBDIR+=	py-aspell
+SUBDIR+=	py-bitstring
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-chm
