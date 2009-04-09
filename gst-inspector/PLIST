@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/09 16:23:22 jihbed Exp $
+bin/gst-inspector
+${PYSITELIB}/GstInspector/Data.pyc
+${PYSITELIB}/GstInspector/Data.pyo
+${PYSITELIB}/GstInspector/GUI.pyc
+${PYSITELIB}/GstInspector/GUI.pyo
+${PYSITELIB}/GstInspector/__init__.pyc
+${PYSITELIB}/GstInspector/__init__.pyo
+${PYSITELIB}/GstInspector/main.pyc
+${PYSITELIB}/GstInspector/main.pyo
+${PYSITELIB}/GstInspector/utils.pyc
+${PYSITELIB}/GstInspector/utils.pyo
+share/applications/gst-inspector.desktop
+share/locale/de/LC_MESSAGES/gst-inspector.mo
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/GstInspector

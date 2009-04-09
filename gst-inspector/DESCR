@@ -1,0 +1,3 @@
+GStreamer Inspector is an introspection data viewer for the GStreamer multimedia
+framework. Developers of GStreamer applications can use it to find out about
+the various elements available in the system.
