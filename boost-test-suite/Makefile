@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/12 17:06:04 brook1 Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/09 01:18:38 jsonn Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -20,7 +20,6 @@ TEE=			${TOOLS_PLATFORM.tee}
 
 BOOST_TEST_BASEDIR?=	/var/boost
 
-NO_CHECKSUM=		yes
 CHECK_PERMS=		no
 NO_BUILD=		yes
 DESCR_SRC=		${WRKSRC}/DESCR

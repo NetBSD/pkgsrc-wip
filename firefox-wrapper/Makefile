@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/16 23:52:29 poppnk Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/09 01:19:15 jsonn Exp $
 
 DISTNAME=	firefox-wrapper-0.3
 CATEGORIES=	www
@@ -9,7 +9,6 @@ MAINTAINER=	pancake@phreaker.net
 COMMENT=	Firefox binary wrapper
 
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/firefox-wrapper/firefox-wrapper.conf \

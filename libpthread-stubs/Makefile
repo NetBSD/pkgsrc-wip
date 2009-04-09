@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/05/10 18:09:24 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/09 01:14:58 jsonn Exp $
 
 DISTNAME=	libpthread-stubs-1.0
 PKGREVISION=	6
@@ -9,7 +9,6 @@ MAINTAINER=	blair.sadewitz@gmail.com #drochner@NetBSD.org
 COMMENT=	Library providing noop-stubs for pthread functions
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
