@@ -1,22 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 04:30:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/09 01:03:12 jsonn Exp $
+
+META_PACKAGE=	# empty
 
 .include "../../wip/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-DISTFILES=	# empty
 #PKGREVISION=	1
 PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 COMMENT=	Xfce extras
-
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-WRKSRC=		${WRKDIR}
-
-do-install:
-	@${DO_NADA}
 
 # Xfce
 .include "../../wip/xfce4/buildlink3.mk"
