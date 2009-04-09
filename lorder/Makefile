@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:47 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/09 01:14:29 jsonn Exp $
 #
 
 # XXX This version is the CVS revision number from NetBSD's
@@ -12,8 +12,6 @@ MAINTAINER=	reed@reedmedia.net
 #HOMEPAGE=
 COMMENT=	Determine interdependencies in a list of object files
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
