@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:17 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/09 01:06:28 jsonn Exp $
 
 DISTNAME=	tex-arphic-ttf-2.11
 CATEGORIES=	fonts
@@ -15,8 +15,6 @@ DEPENDS+=	arphic-ttf-2.11*:../../fonts/arphic-ttf
 FONT_FILES=	bkai00mp bsmi00lp gbsn00lp gkai00mp
 
 TEX_ACCEPTED=	teTeX3
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
