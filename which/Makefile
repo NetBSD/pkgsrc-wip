@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/06 21:17:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/09 01:04:06 jsonn Exp $
 
 # this code is from NetBSD's src/usr.bin/whereis/ with slight changes
 
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 NO_CONFIGURE=		yes
-NO_CHECKSUM=		yes
 
 AUTO_MKDIRS=		yes
 
