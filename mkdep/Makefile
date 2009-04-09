@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/13 22:23:10 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/09 01:13:59 jsonn Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -9,7 +9,6 @@ DISTFILES=		# empty
 MAINTAINER=		reed@reedmedia.net
 COMMENT=		Fast mkdep
 
-NO_CHECKSUM=		yes
 USE_FEATURES=		nbcompat
 
 do-extract:
