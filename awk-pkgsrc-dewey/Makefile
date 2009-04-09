@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/12 23:09:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/09 01:25:43 jsonn Exp $
 
 DISTNAME=	awk-pkgsrc-dewey-${VERSION}
 CATEGORIES=	pkgtools
@@ -22,7 +22,6 @@ INSTALLATION_DIRS+=	share/runawk
 
 WRKSRC=		${.CURDIR}/files
 USE_LANGUAGES=	# empty
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk

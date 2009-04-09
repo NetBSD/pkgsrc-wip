@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/02/03 15:03:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.33 2009/04/09 01:26:24 jsonn Exp $
 
 DISTNAME=	apstget-20060410
 CATEGORIES=	pkgtools
@@ -14,7 +14,6 @@ DEPENDS+=	pkg_chk>=1.54:../../pkgtools/pkg_chk
 DEPENDS+=	pkglint>=3.94:../../pkgtools/pkglint
 
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 CONF_FILES=	apstget.conf ${PKG_SYSCONFDIR}/apstget.conf
