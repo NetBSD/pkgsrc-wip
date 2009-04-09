@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/28 12:43:51 pettai Exp $
+$NetBSD: distinfo,v 1.2 2009/04/09 20:34:21 pettai Exp $
 
-SHA1 (thold-0.3.9.tar.gz) = f8833e51566a7b505bb9d22e351983b556fa1c59
-RMD160 (thold-0.3.9.tar.gz) = 9e3f3d7c89c2b36c5f1d6c9021a854b71f9f0b19
-Size (thold-0.3.9.tar.gz) = 52288 bytes
+SHA1 (thold-0.4.1.tar.gz) = 0bd2a7818b5897aa2f3ababcba1d74f4c1fd29f3
+RMD160 (thold-0.4.1.tar.gz) = 92d9f8bf3f736f00e26414a8f4773a53eb49c658
+Size (thold-0.4.1.tar.gz) = 80571 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/09/29 23:32:30 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/09 20:34:19 pettai Exp $
 #
 
-DISTNAME=		thold-0.3.9
+DISTNAME=		thold-0.4.1
 PKGNAME=		cacti-plugin-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		http://mirror.cactiusers.org/downloads/plugins/
@@ -36,5 +36,4 @@ do-extract:
 do-install:
 	${CP} -R ${WRKSRC}/* ${DESTDIR}${PLUGINDIR}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
