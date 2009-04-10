@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/04/03 07:56:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/10 22:02:37 jihbed Exp $
 #
 
 DISTNAME=		quodlibet-0.24
@@ -8,7 +8,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.sacredchao.net/~piman/software/
 
 MAINTAINER=		shattered@users.sourceforge.net
-HOMEPAGE=		http://www.sacredchao.net/quodlibet/wiki
+HOMEPAGE=		http://code.google.com/p/quodlibet/
 COMMENT=		Finally a good alternative to iTunes
 
 DEPENDS+=		${PYPKGPREFIX}-mutagen>=1.8:../../audio/py-mutagen
