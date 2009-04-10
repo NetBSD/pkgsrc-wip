@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/04/01 20:21:05 jh88 Exp $
+$NetBSD: distinfo,v 1.6 2009/04/10 17:15:11 jh88 Exp $
 
-SHA1 (gipfel-0.2.9.tar.gz) = 0e027f8d4c5175f95e2fd0a68e6f128150bc3b74
-RMD160 (gipfel-0.2.9.tar.gz) = 9fefff04cd55439d99798096259b1ab2a80b500e
-Size (gipfel-0.2.9.tar.gz) = 470353 bytes
+SHA1 (gipfel-0.3.1.tar.gz) = 32f339b3e9425ba18ed1001f53911e2a76e689c0
+RMD160 (gipfel-0.3.1.tar.gz) = 060e25cfbc847ad015ca72c0afcb8eb813ede503
+Size (gipfel-0.3.1.tar.gz) = 476358 bytes
