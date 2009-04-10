@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3353 2009/04/09 16:29:19 jihbed Exp $
+# $Id: Makefile,v 1.3354 2009/04/10 23:01:57 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1150,6 +1150,7 @@ SUBDIR+=	mythtv
 SUBDIR+=	nanoblogger
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
+SUBDIR+=	nautilus-image-converter
 SUBDIR+=	nautilus-open-terminal
 SUBDIR+=	nautilus-sound-converter
 SUBDIR+=	navigatrix
