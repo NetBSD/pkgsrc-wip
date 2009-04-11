@@ -3,8 +3,8 @@ Suggested package updates
 
 	o amarok-2.0.2
 	o argouml-0.24
-	o asymptote-1.68
-	o backintime-0.9.18
+	o asymptote-1.70
+	o backintime-0.9.20
 	o bakery-2.6.3
 	o bub-n-bros-1.6
 	o cclive-0.3.1
@@ -39,7 +39,7 @@ Suggested package updates
 	o grass-6.2.3
 	o grisbi-0.5.8
 	o grsync-0.6.2
-	o gtkaml-0.2.4
+	o gtkaml-0.2.5
 	o guichan-0.8.1
 	o guitone-0.9
 	o hitori-0.2.2
@@ -56,7 +56,7 @@ Suggested package updates
 	o lives-0.9.9.7
 	o llvm-2.5
 	o man-1.6f
-	o meta-tracker-0.6.92
+	o meta-tracker-0.6.93
 	o mixxx-1.6.0
 	o moe-1.1
 	o mpgedit-0.73dev2
@@ -65,7 +65,7 @@ Suggested package updates
 	o opal-2.2.11
 	o openvrml-0.17.11
 	o ortp-0.15.0
-	o osmose-0.8.5b
+	o osmose-0.9.0b
 	o p5-Net-DBus-0.33.6
 	o parted-1.8.8
 	o passepartout-0.7.0
