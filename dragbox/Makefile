@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/06 20:41:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/11 22:01:21 jihbed Exp $
 #
 
 DISTNAME=	dragbox-0.4.0
@@ -14,16 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-
-REPLACE_PYTHON=+	dragbox
+REPLACE_PYTHON+=	dragbox
 PY_PATCHPLIST=	yes
 
-INSTALLATION_DIRS+= 	share/doc
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dragbox
-
-.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"
