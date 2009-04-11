@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/11 12:57:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/11 14:27:41 thomasklausner Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.autistici.org/bakunin/libmrss/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.autistici.org/bakunin/libmrss/
-COMMENT=	Libmrss is a C library manipulate rss files or streams
+COMMENT=	C library for parsing, writing and creating RSS files or streams
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
