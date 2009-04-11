@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/11 12:53:42 jihbed Exp $
+include/nxml.h
+lib/libnxml.la
+lib/pkgconfig/nxml.pc
