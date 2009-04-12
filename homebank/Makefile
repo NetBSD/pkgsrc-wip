@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/25 09:45:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/12 17:39:59 thomasklausner Exp $
 #
 
 DISTNAME=	homebank-4.0.2
@@ -6,7 +6,7 @@ CATEGORIES=	finance
 MASTER_SITES=	http://homebank.free.fr/public/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://homebank.free.fr/public/
+HOMEPAGE=	http://homebank.free.fr/
 COMMENT=	HomeBank is to manage your personal accounts at home
 
 PKG_DESTDIR_SUPPORT=	user-destdir
