@@ -1,1 +1,3 @@
 test and define all directory installation paths
+Fix the following vulnerability:
+	* http://secunia.com/advisories/34567/
