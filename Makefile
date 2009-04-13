@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3363 2009/04/13 07:14:23 minskim Exp $
+# $Id: Makefile,v 1.3364 2009/04/13 07:21:58 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1906,7 +1906,6 @@ SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-metafont
 SUBDIR+=	tex-pdftex
-SUBDIR+=	tex-plain
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
