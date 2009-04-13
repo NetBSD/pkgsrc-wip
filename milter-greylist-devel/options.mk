@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/11/30 22:09:15 pettai Exp $
+# $NetBSD: options.mk,v 1.3 2009/04/13 22:04:53 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
 PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip ldap p0f dkim
@@ -64,8 +64,8 @@ CONFIGURE_ARGS+=	--with-openldap=${PREFIX:Q}
 .if empty(PKG_OPTIONS:Mdkim)
 CONFIGURE_ARGS+=	--disable-dkim=${PREFIX:Q}
 .else
-DEPENDS+=		dkim-milter>=2.6:../../wip/dkim-milter
-.include "../../wip/dkim-milter/buildlink3.mk"
+DEPENDS+=		dkim-milter>=2.6:../../mail/dkim-milter
+.include "../../mail/dkim-milter/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-libdkim=${PREFIX:Q}
 .endif
