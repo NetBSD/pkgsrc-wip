@@ -1,19 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/03/30 19:21:23 mstapelberg Exp $
+$NetBSD: patch-ab,v 1.2 2009/04/13 16:08:26 mstapelberg Exp $
 
---- src/misc.c.orig	2008-02-03 00:08:16.000000000 +0100
+--- src/misc.c.orig	2009-04-02 10:26:39.000000000 +0200
 +++ src/misc.c
-@@ -185,11 +185,11 @@ char *getvalue(uint64_t mb, uint64_t kb,
+@@ -231,7 +231,7 @@ char *getvalue(uint64_t mb, uint64_t kb,
+ 	if ( (type==2) && (kB==0) ){
+ 		sprintf(buffer, "%*s    ", len, "--");
  	} else {
+-#if !defined(__OpenBSD__)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
  		/* try to figure out what unit to use */
- 		if (kB>=(1024*1024*1000)) {
--			sprintf(buffer, "%'*.2f TB", len, kB/(float)1024/(float)1024/(float)1024);
-+			sprintf(buffer, "%*.2f TB", len, kB/(float)1024/(float)1024/(float)1024);
- 		} else if (kB>=(1024*1000)) {
--			sprintf(buffer, "%'*.2f GB", len, kB/(float)1024/(float)1024);
-+			sprintf(buffer, "%*.2f GB", len, kB/(float)1024/(float)1024);
- 		} else if (kB>=1000) {
--			sprintf(buffer, "%'*.*f MB", len, declen, kB/(float)1024);
-+			sprintf(buffer, "%*.*f MB", len, declen, kB/(float)1024);
- 		} else {
- 			sprintf(buffer, "%'*"PRIu64" kB", len, kB);
- 		}
+ 		if (kB>=1048576000) { /* 1024*1024*1000 - value >=1000 GiB -> show in TiB */
+ 			sprintf(buffer, "%'*.*f %*s", len, declen, kB/(float)1073741824, pad, getunit(4)); /* 1024*1024*1024 */

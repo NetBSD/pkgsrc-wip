@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/30 19:21:23 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/13 16:08:25 mstapelberg Exp $
 
 CATEGORIES=net
-DISTNAME=vnstat-1.6
+DISTNAME=vnstat-1.7
 HOMEPAGE=http://humdi.net/vnstat/
 COMMENT=Small network traffic monitor
 MASTER_SITES=http://humdi.net/vnstat/
-DISTFILES=${DISTNAME}_bsd.tar.gz
+DISTFILES=${DISTNAME}.tar.gz
 
 USE_TOOLS+=gmake
 BUILD_TARGET=vnstat
@@ -17,7 +17,7 @@ VNSTAT_EGDIR=	${PREFIX}/share/examples
 SUBST_CLASSES+=			fix-dbpath
 SUBST_STAGE.fix-dbpath=		pre-configure
 SUBST_MESSAGE.fix-dbpath=	Fixing path to database files
-SUBST_FILES.fix-dbpath=		src/vnstat.h cfg/vnstat.conf
+SUBST_FILES.fix-dbpath=		src/common.h cfg/vnstat.conf
 SUBST_SED.fix-dbpath=		-e 's,/var/db/,${PREFIX}/var/,g'
 SUBST_SED.fix-dbpath+=		-e 's,/var/lib/,${PREFIX}/var/,g'
 
