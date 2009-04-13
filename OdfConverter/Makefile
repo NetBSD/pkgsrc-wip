@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/27 09:01:02 koifren Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/13 08:20:59 thomasklausner Exp $
 #
 
 DISTNAME=	OdfConverter--src-1.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://odf-converter.sourceforge.net/
 COMMENT=	Converter between Microsoft Office 2007 and OpenOffice formats
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
@@ -24,16 +26,16 @@ BUILD_DIRS+=	source/Shell/OdfConverterTest
 
 MAKE_JOBS_SAFE=	no
 
-INSTALLATION_DIRS=	share/doc/OdfConverter
+INSTALLATION_DIRS=	bin share/doc/OdfConverter
 
 post-extract:
 	cd ${WRKDIR} && mv "Copy of 4thMarch" ${DISTNAME:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/Shell/OdfConverterTest/OdfConverter \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/source/Shell/OdfConverterTest/README.TXT \
-		${PREFIX}/share/doc/OdfConverter
+		${DESTDIR}${PREFIX}/share/doc/OdfConverter
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
