@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/22 15:38:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/13 22:46:48 jihbed Exp $
 #
 
 DISTNAME=	iCalendar-1.2
@@ -11,13 +11,15 @@ MAINTAINER=	mj@turner.org.za
 HOMEPAGE=	http://codespeak.net/icalendar/
 COMMENT=	Python parser/generator for iCalendar files, as per RFC2445
 
-PYDISTUTILSPKG=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PY_PATCHPLIST=	yes
 
+DOCDIR=	${PREFIX}/share/doc/${PKGNAME}
 # Install documentation manually
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${DOCDIR}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
