@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 21:13:30 zecrazytux Exp $
+bin/lxrandr
+share/applications/lxrandr.desktop
+share/locale/hu/LC_MESSAGES/lxrandr.mo
+share/locale/zh_TW/LC_MESSAGES/lxrandr.mo
