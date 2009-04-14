@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/02/25 23:38:59 guigui2 Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/14 21:41:46 guigui2 Exp $
 
 --- Makefile.orig	2008-07-19 15:43:41.000000000 +0200
 +++ Makefile
-@@ -3,16 +3,11 @@ PROGNAME=tint
+@@ -2,18 +2,7 @@ FLAGS=-Wall -g `pkg-config --cflags --li
+ PROGNAME=tint
  FILES=tint.c server.c window.c task.c launcher.c visual.c config.c
  
- ifndef DESTDIR
+-ifndef DESTDIR
 -	ifndef PREFIX
 -		BINDIR=/usr/bin
 -		XDG_CONFIG_DIR=/etc/xdg
@@ -13,25 +14,23 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/02/25 23:38:59 guigui2 Exp $
 -		BINDIR=$(PREFIX)/bin
 -		XDG_CONFIG_DIR=/etc/xdg
 -	endif
-+	BINDIR=${PREFIX}/bin
-+	XDG_CONFIG_DIR=${PKG_SYSCONFDIR}
- else
+-else
 -	BINDIR=$(DESTDIR)/usr/bin
 -	XDG_CONFIG_DIR=$(DESTDIR)/etc/xdg
-+	BINDIR=$(DESTDIR)/${PREFIX}/bin
-+	XDG_CONFIG_DIR=$(DESTDIR)/${PKG_SYSCONFDIR}
- endif
+-endif
++BINDIR=${DESTDIR}${PREFIX}/bin
  
  
-@@ -22,9 +17,9 @@ $(PROGNAME): $(FILES)
+ $(PROGNAME): $(FILES)
+@@ -22,9 +11,9 @@ $(PROGNAME): $(FILES)
  
  install:
  	mkdir -p $(BINDIR)
 -	mkdir -p $(XDG_CONFIG_DIR)/tint
-+	mkdir -p ${PREFIX}/share/examples/xdg/tint
++	mkdir -p ${DESTDIR}${PREFIX}/share/examples/xdg/tint/
  	install $(PROGNAME) $(BINDIR)
 -	cp -f ../tintrc1 $(XDG_CONFIG_DIR)/tint/tintrc
-+	cp -f ../tintrc1 ${PREFIX}/share/examples/xdg/tint/tintrc
++	cp -f ../tintrc1 ${DESTDIR}${PREFIX}/share/examples/xdg/tint/tintrc
  
  uninstall:
  	rm -f $(BINDIR)/$(PROGNAME)

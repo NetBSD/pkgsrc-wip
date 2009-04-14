@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/25 23:38:59 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/14 21:41:40 guigui2 Exp $
 bin/tint
 share/doc/tint/tint-0.6.odt
 share/doc/tint/tint-0.6.pdf
 share/examples/xdg/tint/tintrc
+@dirrm share/examples/xdg/tint
+@dirrm share/examples/xdg
 @dirrm share/doc/tint
