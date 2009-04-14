@@ -1,26 +1,31 @@
-# $NetBSD: Makefile,v 1.7 2008/09/21 17:38:39 guigui2 Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/14 21:51:39 guigui2 Exp $
 #
 
-DISTNAME=	dir2ogg-0.11.6
-CATEGORIES=	audio
-MASTER_SITES=	http://jak-linux.org/projects/dir2ogg/0.11/
+DISTNAME=			dir2ogg-0.11.6
+CATEGORIES=			audio
+MASTER_SITES=			http://jak-linux.org/projects/dir2ogg/0.11/
 
-MAINTAINER=	netbsd@guigui2.net
-HOMEPAGE=	http://jak-linux.org/projects/dir2ogg
-COMMENT=	Command-line {wav,mp3,m4a} to ogg converter
+MAINTAINER=			netbsd@guigui2.net
+HOMEPAGE=			http://jak-linux.org/projects/dir2ogg
+COMMENT=			Command-line {wav,mp3,m4a} to ogg converter
 
-USE_LANGUAGES=	# none
+LICENSE=			gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=		user-destdir
+
+USE_LANGUAGES=			# none
 PYTHON_VERSIONS_ACCEPTED=	25 24
+INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1
+REPLACE_PYTHON+=		${WRKSRC}/dir2ogg
+NO_BUILD=			yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-REPLACE_PYTHON+=	${WRKSRC}/dir2ogg
-NO_BUILD=yes
+.include "../../audio/py-mutagen/buildlink3.mk"
+.include "../../lang/python/application.mk"
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dir2ogg ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dir2ogg.1 ${PREFIX}/${PKGMANDIR}/man1/
+				${INSTALL_SCRIPT} ${WRKSRC}/dir2ogg \
+					${DESTDIR}${PREFIX}/bin
+				${INSTALL_MAN} ${WRKSRC}/dir2ogg.1 \
+					${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
-.include "../../lang/python/application.mk"
-.include "../../audio/py-mutagen/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
