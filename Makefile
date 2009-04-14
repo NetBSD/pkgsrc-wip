@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3371 2009/04/13 22:11:32 pettai Exp $
+# $Id: Makefile,v 1.3372 2009/04/14 18:34:36 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -20,7 +20,6 @@ SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	Lucu
 SUBDIR+=	MissingH
-SUBDIR+=	OdfConverter
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
