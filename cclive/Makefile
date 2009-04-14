@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/27 09:39:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/14 22:23:04 zecrazytux Exp $
 #
 
-DISTNAME=	cclive-0.2.6
+DISTNAME=	cclive-0.3.1
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://cclive.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,8 @@ COMMENT= 	Command line video extraction tool for user-uploaded video hosts
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
+GNU_CONFIGURE=yes
+USE_TOOLS+=pkg-config
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
