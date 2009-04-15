@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/05 01:03:07 zecrazytux Exp $
+$NetBSD: distinfo,v 1.2 2009/04/15 00:56:30 zecrazytux Exp $
 
-SHA1 (arora-0.5.tar.gz) = 9809e608edcbd9eae1e2a758a6135bf0534245ae
-RMD160 (arora-0.5.tar.gz) = 8cb129602ee74835380acf7d71cbc751df4396f5
-Size (arora-0.5.tar.gz) = 764853 bytes
+SHA1 (arora-0.6.tar.gz) = 8fa7821092dcb090b2ff84437dcf6774277b44d2
+RMD160 (arora-0.6.tar.gz) = 573c7f0630df1ff5c7f051b9450711fda2dc0f44
+Size (arora-0.6.tar.gz) = 819356 bytes
