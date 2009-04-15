@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 01:21:43 zecrazytux Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/15 21:25:16 zecrazytux Exp $
 
-DISTNAME= gpicview-0.1.11
-PKGREVISION=	1
-CATEGORIES= graphics	
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
+DISTNAME=				gpicview-0.1.11
+PKGREVISION=		1
+CATEGORIES=			graphics
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lxde/}
 
-MAINTAINER= zecrazytux@zecrazytux.net
-HOMEPAGE=	http://lxde.sourceforge.net/gpicview/
-COMMENT= Lightweight image viewer
+MAINTAINER=			zecrazytux@zecrazytux.net
+HOMEPAGE=				http://lxde.sourceforge.net/gpicview/
+COMMENT=				Lightweight image viewer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config gmake
-USE_DIRS+= xdg-1.4
+GNU_CONFIGURE=	yes
+USE_TOOLS+=			pkg-config gmake
+USE_DIRS+=			xdg-1.4
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

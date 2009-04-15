@@ -1,37 +1,35 @@
-# $NetBSD: Makefile,v 1.2 2009/04/15 00:56:30 zecrazytux Exp $
-#
+# $NetBSD: Makefile,v 1.3 2009/04/15 21:25:16 zecrazytux Exp $
 
-DISTNAME=	arora-0.6
-CATEGORIES=	www net
-MASTER_SITES=	http://arora.googlecode.com/files/
+DISTNAME=					arora-0.6
+CATEGORIES=				www net
+MASTER_SITES=			http://arora.googlecode.com/files/
 
-MAINTAINER=	zecrazytux@zecrazytux.net
-HOMEPAGE=	http://code.google.com/p/arora
-COMMENT=	Arora is a simple cross platform web browser using Qt and Webkit
+MAINTAINER=				zecrazytux@zecrazytux.net
+HOMEPAGE=					http://code.google.com/p/arora
+COMMENT=					Arora is a simple cross platform web browser using Qt and Webkit
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=		user-destdir
 
-USE_LIBTOOL=yes
-USE_LANGUAGES=	c++
-USE_DIRS+=	xdg-1.4
+USE_LIBTOOL=			yes
+USE_LANGUAGES=		c++
+USE_DIRS+=				xdg-1.4
 
-ARORA_BIN=	../arora
+ARORA_BIN=				../arora
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake PREFIX=${PREFIX} arora.pro)
 
-SUBST_CLASSES+=         path target
+SUBST_CLASSES+=					path target
 
-SUBST_MESSAGE.path=     Fixing hardcoded man path.
-SUBST_STAGE.path=       pre-configure
-SUBST_FILES.path=       src/src.pro
-SUBST_SED.path=         -e 's:$$$$DATADIR/man:${PREFIX}/${PKGMANDIR}:g'
+SUBST_MESSAGE.path=			Fixing hardcoded man path.
+SUBST_STAGE.path=				pre-configure
+SUBST_FILES.path=				src/src.pro
+SUBST_SED.path=					-e 's:$$$$DATADIR/man:${PREFIX}/${PKGMANDIR}:g'
 
-SUBST_MESSAGE.target=     Fixing target (make install).
-SUBST_STAGE.target=       post-build
-SUBST_FILES.target=       src/Makefile
-SUBST_SED.target=         -e 's,^QMAKE_TARGET.*$$,QMAKE_TARGET=${ARORA_BIN},g'
-
+SUBST_MESSAGE.target=		Fixing target (make install).
+SUBST_STAGE.target=			post-build
+SUBST_FILES.target=			src/Makefile
+SUBST_SED.target=				-e 's,^QMAKE_TARGET.*$$,QMAKE_TARGET=${ARORA_BIN},g'
 
 
 .include "../../x11/qt4-libs/buildlink3.mk"
