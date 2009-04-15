@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/03/24 12:49:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/15 10:48:42 jihbed Exp $
 #
 
-DISTNAME=	grsync-0.6.2
+DISTNAME=	grsync-0.6.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.opbyte.it/release/
 
@@ -12,10 +12,9 @@ COMMENT=	Grsync is a GUI for rsync
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	intltool msgfmt pkg-config bash:run
+USE_TOOLS+=	pkg-config intltool msgfmt bash:run
 USE_DIRS+=	xdg-1.4
 
-NO_CHECKSUM=	yes
 
 REPLACE_BASH+=	src/grsync-batch
 
