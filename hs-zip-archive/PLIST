@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 21:02:55 zecrazytux Exp $
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Zip.hi
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Zip.p_hi
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/HSzip-archive-${PKGVERSION}.o
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/libHSzip-archive-${PKGVERSION}.a
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/libHSzip-archive-${PKGVERSION}_p.a
+lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/zip-archive-${PKGVERSION}/LICENSE
+@dirrm share/doc/zip-archive-${PKGVERSION}
+@dirrm lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive
+@dirrm lib/zip-archive-${PKGVERSION}/${HASKELL_VERSION}
