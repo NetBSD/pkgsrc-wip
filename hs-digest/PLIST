@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 21:00:23 zecrazytux Exp $
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Adler32.hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/Adler32.p_hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/CRC32.hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest/CRC32.p_hi
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/HSdigest-${PKGVERSION}.o
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/libHSdigest-${PKGVERSION}.a
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/libHSdigest-${PKGVERSION}_p.a
+lib/digest-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/digest-${PKGVERSION}/LICENSE
+@dirrm share/doc/digest-${PKGVERSION}
+@dirrm lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data/Digest
+@dirrm lib/digest-${PKGVERSION}/${HASKELL_VERSION}/Data
+@dirrm lib/digest-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/digest-${PKGVERSION}
