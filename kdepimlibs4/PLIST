@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/04/06 13:42:10 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/04/15 20:49:42 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -334,10 +334,10 @@ include/syndication/specificitem.h
 include/syndication/specificitemvisitor.h
 include/syndication/syndication.h
 include/syndication/tools.h
-lib/KdepimLibs-4.2.2/cmake/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
-lib/KdepimLibs-4.2.2/cmake/KDEPimLibsLibraryTargetsWithPrefix.cmake
-lib/KdepimLibs-4.2.2/cmake/KdepimLibsConfig.cmake
-lib/KdepimLibs-4.2.2/cmake/KdepimLibsConfigVersion.cmake
+lib/cmake/KdepimLibs-4.2.2/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
+lib/cmake/KdepimLibs-4.2.2/KDEPimLibsLibraryTargetsWithPrefix.cmake
+lib/cmake/KdepimLibs-4.2.2/KdepimLibsConfig.cmake
+lib/cmake/KdepimLibs-4.2.2/KdepimLibsConfigVersion.cmake
 lib/gpgmepp/GpgmeppConfig.cmake
 lib/gpgmepp/GpgmeppLibraryDepends.cmake
 lib/kde4/kabc_directory.so
@@ -493,8 +493,8 @@ share/kde4/servicetypes/kresources_plugin.desktop
 @comment in kde: @dirrm share/dbus-1/interfaces
 @comment in kde: @dirrm lib/kde4
 @dirrm lib/gpgmepp
-@dirrm lib/KdepimLibs-4.2.2/cmake
-@dirrm lib/KdepimLibs-4.2.2
+@dirrm lib/cmake/KdepimLibs-4.2.2
+@dirrm lib/cmake
 @dirrm include/syndication/rss2
 @dirrm include/syndication/rdf
 @dirrm include/syndication/atom
