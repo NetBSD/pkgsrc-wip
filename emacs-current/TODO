@@ -1,0 +1,7 @@
+* Cocoa support is broken due to patch-ab, force to not self-contained
+  exec_prefix and libexecdir, but emacs/Makefile.in does not honor it.
+* GNUStep support is not tested.
+* --disable-font-backend was deprecated, default behaviour.
+* gnome option should be gone away.
+   * dbus option should be added
+   * librsvg is gnome-free now, and can use with Cocoa.
