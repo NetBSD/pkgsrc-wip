@@ -51,7 +51,7 @@ Suggested package updates
 	o libgadu-1.8.2
 	o libgksu-2.0.4
 	o lincity-ng-2.0
-	o linphone-3.1.0
+	o linphone-3.1.1
 	o lives-0.9.9.7
 	o llvm-2.5
 	o man-1.6f
@@ -82,7 +82,7 @@ Suggested package updates
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o siege-2.67
-	o smc-1.6
+	o smc-1.8
 	o spe-0.8.2a
 	o swftools-0.8.1
 	o sxemacs-22.1.6
@@ -99,6 +99,7 @@ Suggested package updates
 	o xaralx-bin-0.7.1692
 	o xinetd-2.3.14
 	o xmonad-0.8
+	o xmoto-0.5.1
 	o zinf-2.2.5
 
 Suggested ready to import packages
