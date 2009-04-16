@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2009/03/06 00:06:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.77 2009/04/16 23:17:03 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -74,7 +74,6 @@ man/man1/etags.1
 man/man1/grep-changelog.1
 man/man1/rcs-checkin.1
 share/applications/emacs.desktop
-share/emacs/${PKGVERSION}/etc/.gitignore
 share/emacs/${PKGVERSION}/etc/AUTHORS
 share/emacs/${PKGVERSION}/etc/BABYL
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
@@ -876,7 +875,6 @@ share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
-share/emacs/${PKGVERSION}/leim/quail/.gitignore
 share/emacs/${PKGVERSION}/leim/quail/4Corner.el.gz
 share/emacs/${PKGVERSION}/leim/quail/4Corner.elc
 share/emacs/${PKGVERSION}/leim/quail/ARRAY30.el.gz
@@ -989,7 +987,6 @@ share/emacs/${PKGVERSION}/leim/quail/vntelex.el.gz
 share/emacs/${PKGVERSION}/leim/quail/vntelex.elc
 share/emacs/${PKGVERSION}/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/leim/quail/welsh.elc
-share/emacs/${PKGVERSION}/lisp/.gitignore
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
 share/emacs/${PKGVERSION}/lisp/abbrev.el.gz
@@ -1283,7 +1280,6 @@ share/emacs/${PKGVERSION}/lisp/electric.el.gz
 share/emacs/${PKGVERSION}/lisp/electric.elc
 share/emacs/${PKGVERSION}/lisp/elide-head.el.gz
 share/emacs/${PKGVERSION}/lisp/elide-head.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/.gitignore
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/advice.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/assoc.el.gz
@@ -1554,7 +1550,6 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-xdcc.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-xdcc.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc.elc
-share/emacs/${PKGVERSION}/lisp/eshell/.gitignore
 share/emacs/${PKGVERSION}/lisp/eshell/em-alias.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-alias.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-banner.el.gz
