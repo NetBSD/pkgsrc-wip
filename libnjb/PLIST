@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/12 08:12:44 neimal Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/17 18:01:36 jihbed Exp $
 bin/njb-cursesplay
 bin/njb-delfile
 bin/njb-deltr
@@ -22,8 +22,5 @@ bin/njb-settime
 bin/njb-tagtr
 bin/njb-tracks
 include/libnjb.h
-lib/libnjb.a
 lib/libnjb.la
-lib/libnjb.so.5.1.0
-lib/libnjb.so
 lib/pkgconfig/libnjb.pc
