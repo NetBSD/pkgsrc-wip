@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/10 17:48:39 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/04/17 23:08:54 jihbed Exp $
 ${PYSITELIB}/Brenda.py
 ${PYSITELIB}/einRpc.py
 ${PYSITELIB}/myMath.py
 ${PYSITELIB}/niftySocket.py
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/INSTALL
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/LICENSE
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/NEWS
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/QuickStart
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/README
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/TODO
-share/doc/${PYPKGPREFIX}-Brenda-0.4.1/examples/hello.py
-@dirrm share/doc/${PYPKGPREFIX}-Brenda-0.4.1/examples
-@dirrm share/doc/${PYPKGPREFIX}-Brenda-0.4.1
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/QuickStart
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/TODO
+share/doc/${PKGNAME}/examples/hello.py
+@dirrm share/doc/${PKGNAME}/examples
+@dirrm share/doc/${PKGNAME}
