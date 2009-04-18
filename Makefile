@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3376 2009/04/18 00:25:23 jihbed Exp $
+# $Id: Makefile,v 1.3377 2009/04/18 00:27:51 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1872,6 +1872,7 @@ SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
+SUBDIR+=	taglib-sharp
 SUBDIR+=	tagsoup
 SUBDIR+=	tagtool
 SUBDIR+=	ta-lib
