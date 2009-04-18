@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/05/22 15:38:49 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/18 10:26:13 jihbed Exp $
+#
 
-DISTNAME=			txt2tags-2.3
+DISTNAME=	txt2tags-2.5
 CATEGORIES=			textproc
-MASTER_SITES=			http://txt2tags.sourceforge.net/src/
-EXTRACT_SUFX=			.tgz
+MASTER_SITES=	http://txt2tags.googlecode.com/files/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=			dbolgheroni@unifei.edu.br
 HOMEPAGE=			http://txt2tags.sourceforge.net/
@@ -12,7 +13,9 @@ COMMENT=			Text formatting and conversion tool
 PYTHON_PATCH_SCRIPTS=		txt2tags
 PYTHON_VERSIONS_ACCEPTED=	25 24
 
+USE_PKGLOCALEDIR=	yes
 NO_BUILD=			yes
+USE_LANGUAGES=	# none
 
 DOC_DIR=			${PREFIX}/share/doc/${PKGBASE}
 SAMPLES_DIR=			${PREFIX}/share/examples/${PKGBASE}

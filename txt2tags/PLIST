@@ -1,22 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/06 21:36:55 dbolgheroni Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/18 10:26:13 jihbed Exp $
 bin/txt2tags
 man/man1/txt2tags.1
+share/doc/txt2tags/manpage-ca.man
+share/doc/txt2tags/manpage-es.man
+share/doc/txt2tags/manpage-fr.man
+share/doc/txt2tags/manpage-it.man
+share/doc/txt2tags/manpage-pt.man
+share/doc/txt2tags/manpage-zh.man
 share/doc/txt2tags/manpage.man
 share/doc/txt2tags/manpage.t2t
-share/doc/txt2tags/markup.html
-share/doc/txt2tags/rules.html
-share/doc/txt2tags/rules.t2t
+share/doc/txt2tags/txt2tags-quickref.pdf
 share/doc/txt2tags/userguide.pdf
-share/doc/txt2tags/writing-book.html
 share/examples/txt2tags/img/madeinbr.png
 share/examples/txt2tags/img/old-poweredby-1.png
 share/examples/txt2tags/img/old-poweredby-2.png
 share/examples/txt2tags/img/photo.jpg
 share/examples/txt2tags/img/t2tbutton.png
+share/examples/txt2tags/img/t2tpowered-black.png
+share/examples/txt2tags/img/t2tpowered-white.png
 share/examples/txt2tags/img/t2tpowered.png
 share/examples/txt2tags/img/valid-css.png
 share/examples/txt2tags/img/valid-html.png
 share/examples/txt2tags/img/valid-xhtml.png
+share/examples/txt2tags/sample.doku
+share/examples/txt2tags/sample.gwiki
 share/examples/txt2tags/sample.html
 share/examples/txt2tags/sample.lout
 share/examples/txt2tags/sample.man
@@ -27,6 +34,7 @@ share/examples/txt2tags/sample.sgml
 share/examples/txt2tags/sample.t2t
 share/examples/txt2tags/sample.tex
 share/examples/txt2tags/sample.txt
+share/examples/txt2tags/sample.wiki
 share/examples/txt2tags/sample.xhtml
 @dirrm share/examples/txt2tags/img
 @dirrm share/examples/txt2tags
