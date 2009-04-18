@@ -1,0 +1,3 @@
+D-Bus Explorer is a GTK+ application written in C# which use NDesk?s
+managed D-Bus library to display the API of D-Bus services. In summary
+it?s a clone of dbus-viewer with a GTK+ interface.
