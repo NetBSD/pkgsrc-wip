@@ -1,0 +1,3 @@
+lastfm-sharp is an open-source Last.fm .NET/Mono interface (dll assembly)
+It was started as a C# incarnation of its older python sister pylast,
+and It has now become a complete abstraction layer of the Last.fm API.

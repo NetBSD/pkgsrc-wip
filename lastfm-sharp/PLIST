@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 00:29:20 jihbed Exp $
+lib/liblastfm-sharp/liblastfm-sharp.dll
+lib/pkgconfig/liblastfm-sharp.pc
+@dirrm lib/liblastfm-sharp
