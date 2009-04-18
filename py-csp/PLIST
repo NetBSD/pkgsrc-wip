@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 23:31:08 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pycsp/__init__.pyc
+${PYSITELIB}/pycsp/__init__.pyo
+${PYSITELIB}/pycsp/alternation.pyc
+${PYSITELIB}/pycsp/alternation.pyo
+${PYSITELIB}/pycsp/channel.pyc
+${PYSITELIB}/pycsp/channel.pyo
+${PYSITELIB}/pycsp/channelend.pyc
+${PYSITELIB}/pycsp/channelend.pyo
+${PYSITELIB}/pycsp/guard.pyc
+${PYSITELIB}/pycsp/guard.pyo
+${PYSITELIB}/pycsp/process.pyc
+${PYSITELIB}/pycsp/process.pyo
+share/example/${PKGNAME}/Commstime.py
+share/example/${PKGNAME}/Dining-Phil.py
+share/example/${PKGNAME}/MCPi.py
+share/example/${PKGNAME}/Sieve.py
+share/example/${PKGNAME}/WebServer.py
+share/example/${PKGNAME}/common.py
+@dirrm share/example/${PKGNAME}
+@dirrm share/example
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/pycsp
