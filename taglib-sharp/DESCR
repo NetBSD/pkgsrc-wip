@@ -1,0 +1,4 @@
+TagLib# is a .NET library capable of reading and writing both the basic and
+advanced tagging information stored in popular audio formats. The majority
+of the code and the underlying framework is a port of the TagLib tagging
+library from C++ to C# on .NET and Mono
