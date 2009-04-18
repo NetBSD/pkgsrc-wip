@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3380 2009/04/18 00:36:17 jihbed Exp $
+# $Id: Makefile,v 1.3381 2009/04/18 00:38:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -428,6 +428,7 @@ SUBDIR+=	freej
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
 SUBDIR+=	fricas
+SUBDIR+=	froggymicroblog
 SUBDIR+=	frozen-bubble
 SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
