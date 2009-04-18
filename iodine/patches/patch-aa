@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2009/04/18 12:08:31 gschwarz Exp $
+
+--- src/Makefile.orig	2009-04-18 13:50:38.000000000 +0200
++++ src/Makefile	2009-04-18 13:52:59.000000000 +0200
+@@ -1,4 +1,4 @@
+-CC = gcc
++#CC = gcc
+ COMMONOBJS = tun.o dns.o read.o encoding.o login.o base32.o base64.o md5.o common.o
+ CLIENTOBJS = iodine.o
+ CLIENT = ../bin/iodine
+@@ -9,8 +9,8 @@
+ ARCH = `uname -m`
+ 
+ LIBPATH = -L.
+-LDFLAGS =  -lz `sh osflags $(TARGETOS) link` $(LIBPATH)
+-CFLAGS = -c -g -Wall -D$(OS) -pedantic `sh osflags $(TARGETOS) cflags`
++LDFLAGS +=  -lz `sh osflags $(TARGETOS) link` $(LIBPATH)
++CFLAGS += -c -D$(OS) `sh osflags $(TARGETOS) cflags` $(CPPFLAGS)
+ 
+ all: stateos $(CLIENT) $(SERVER)
+ 
