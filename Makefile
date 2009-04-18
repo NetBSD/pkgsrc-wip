@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3378 2009/04/18 00:30:16 jihbed Exp $
+# $Id: Makefile,v 1.3379 2009/04/18 00:33:12 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -503,6 +503,7 @@ SUBDIR+=	gnome-bluetooth
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-commander
 SUBDIR+=	gnome-jabber
+SUBDIR+=	gnome-keyring-sharp
 SUBDIR+=	gnomebaker
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
