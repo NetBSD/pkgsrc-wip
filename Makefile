@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3384 2009/04/18 23:37:03 jihbed Exp $
+# $Id: Makefile,v 1.3385 2009/04/18 23:40:15 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1598,6 +1598,7 @@ SUBDIR+=	py-aspyct
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
+SUBDIR+=	py-cherry
 SUBDIR+=	py-chm
 SUBDIR+=	py-configobj
 SUBDIR+=	py-csp
