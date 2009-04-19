@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/12/08 10:09:53 gschwarz Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/19 21:13:09 gschwarz Exp $
 
 DISTNAME=	traceroute-nanog-6.4.2
 CATEGORIES=	net
@@ -10,6 +10,8 @@ DIST_SUBDIR=	traceroute-nanog
 # for the man page:
 PATCH_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/traceroute-nanog/}
 PATCHFILES=	traceroute-nanog_6.3.10-2.diff.gz
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 COMMENT=	Traceroute implementation
 MAINTAINER=	schwarz@NetBSD.org
@@ -54,7 +56,7 @@ do-build:
 		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} traceroute.c -o traceroute-nanog ${LDFLAGS} -lm ${TRN_EXTRALIBS}
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${PREFIX}/sbin
-		${INSTALL_MAN} ${WRKDIR}/traceroute-nanog-6.3.10/debian/traceroute-nanog.8 ${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${DESTDIR}${PREFIX}/sbin
+		${INSTALL_MAN} ${WRKDIR}/traceroute-nanog-6.3.10/debian/traceroute-nanog.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
