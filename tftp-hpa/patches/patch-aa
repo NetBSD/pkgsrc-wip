@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2008/11/01 07:37:45 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/19 21:12:34 gschwarz Exp $
 
---- tftpd/tftpd.c.orig	2008-11-01 07:57:57.000000000 +0100
-+++ tftpd/tftpd.c	2008-11-01 07:59:14.000000000 +0100
-@@ -841,7 +841,7 @@
-                        sizeof(bindaddr4.sin_addr));
- #ifdef HAVE_IPV6
-             } else if ((from.sa.sa_family == AF_INET6) &&
--              IN6_IS_ADDR_UNSPECIFIED(SOCKADDR_P(&myaddr))) {
-+              IN6_IS_ADDR_UNSPECIFIED((struct in6_addr *)SOCKADDR_P(&myaddr))) {
-                 memcpy(SOCKADDR_P(&myaddr), &bindaddr6.sin6_addr,
-                        sizeof(bindaddr6.sin6_addr));
- #endif
+--- MCONFIG.in.orig	2009-02-16 23:51:22.000000000 +0100
++++ MCONFIG.in	2009-04-18 18:18:38.000000000 +0200
+@@ -39,7 +39,7 @@
+ X = @EXEEXT@
+ 
+ # Install into alternate root area, e.g. for package generation
+-INSTALLROOT = 
++#INSTALLROOT =
+ 
+ # Link
+ LN_S            = @LN_S@
