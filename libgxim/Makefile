@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/08 14:52:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/19 09:21:58 jihbed Exp $
 #
 
 DISTNAME=	libgxim-0.3.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://libgxim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://libgxim.googlecode.com/files/
+HOMEPAGE=	http://code.google.com/p/libgxim/
 COMMENT=	GObject-based XIM protocol library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
