@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/08 19:52:38 gschwarz Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/19 20:18:14 gschwarz Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -35,18 +35,16 @@ CPPFLAGS+=	-DINET6
 .endif
 
 CONF_FILES=		${EGDIR}/boa.conf ${PKG_SYSCONFDIR}/boa.conf
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/doc/boa share/examples/boa
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/boa ${DESDIR}${PREFIX}/sbin/
-	${INSTALL_PROGRAM} ${WRKSRC}/src/boa_indexer ${DESDIR}${PREFIX}/sbin/
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/boa ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/boa_indexer ${DESTDIR}${PREFIX}/sbin/
 .for f in boa.conf cgi-test.cgi nph-test.cgi resolver.pl
 	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}${EGDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${DESDIR}${PREFIX}/share/doc/boa
-	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESDIR}${PREFIX}/share/doc/boa
-	${INSTALL_DATA} ${WRKSRC}/README ${DESDIR}${PREFIX}/share/doc/boa
-	${INSTALL_MAN} ${WRKSRC}/docs/boa.8 ${DESDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESTDIR}${PREFIX}/share/doc/boa
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/boa
+	${INSTALL_MAN} ${WRKSRC}/docs/boa.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
