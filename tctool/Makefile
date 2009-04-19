@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/21 22:42:09 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/19 21:11:11 gschwarz Exp $
 
 DISTNAME=	tctool-0.9.7
 CATEGORIES=	net
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://speedmodem50b.berlios.de/
 COMMENT=	Speed Modem 50B/50B+/200/Cellpipe CELL 19A-BX utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #LICENSE=	gnu-gpl-v2
 
@@ -21,6 +23,6 @@ INSTALLATION_DIRS=	bin
 BUILD_TARGET=	tctool
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/tctool ${PREFIX}/bin
+		${INSTALL_PROGRAM} ${WRKSRC}/tctool ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
