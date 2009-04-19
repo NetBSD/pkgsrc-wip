@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/11/01 12:22:07 gschwarz Exp $
+# $NetBSD: Makefile,v 1.16 2009/04/19 21:09:01 gschwarz Exp $
 
 DISTNAME=	siproxd-0.7.1
 CATEGORIES=	net
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://siproxd.sourceforge.net/
 COMMENT=	Session Initiation Protocol Application-Level Gateway (SIP ALG)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/11/22 21:37:23 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/19 21:09:41 gschwarz Exp $
 
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.portal-to-web.de/tacacs/
 COMMENT=	Version of Cisco's tac_plus Tacacs server with RADIUS support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man8 share/doc/tac_plus \
 			share/examples/tac_plus
@@ -28,12 +30,12 @@ CPPFLAGS+=	-DMIPS
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/generate_passwd \
-	${PREFIX}/bin/tac_plus_generate_passwd
+	${DESTDIR}${PREFIX}/bin/tac_plus_generate_passwd
 	${INSTALL_MAN} ${WRKSRC}/tac_plus.1 \
-	${PREFIX}/${PKGMANDIR}/man8/tac_plus.8
-	${INSTALL_DATA} ${WRKSRC}/users_guide ${PREFIX}/share/doc/tac_plus
-	${INSTALL_DATA} ${WRKSRC}/tac_plus.cfg ${PREFIX}/share/examples/tac_plus
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tac_plus.8
+	${INSTALL_DATA} ${WRKSRC}/users_guide ${DESTDIR}${PREFIX}/share/doc/tac_plus
+	${INSTALL_DATA} ${WRKSRC}/tac_plus.cfg ${DESTDIR}${PREFIX}/share/examples/tac_plus
 
 .include "../../mk/bsd.pkg.mk"
