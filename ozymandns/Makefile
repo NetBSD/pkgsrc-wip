@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/28 16:59:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/19 20:25:31 gschwarz Exp $
 
 DISTNAME=	ozymandns_src_0.1
 PKGNAME=	${DISTNAME:S/_src_/-/}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://localhost.lu/localhostwiki/OzymanDNS/
 COMMENT=	Tool to enable ssh tunnel over DNS using TXT records
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=		p5-LWP-UserAgent-Determined-[0-9]*:../../www/p5-LWP-UserAgent-Determined
@@ -33,6 +35,6 @@ do-build:
 		cd ${WRKSRC} && ${CC} ${CPPFLAGS} ${CFLAGS} glance.c -o glance ${LDFLAGS}
 
 do-install:
-		cd ${WRKSRC} && ${INSTALL_PROGRAM} glance ${PREFIX}/sbin && ${INSTALL_SCRIPT} ${OZYMAN_PERLSCRIPTS} ${PREFIX}/sbin
+		cd ${WRKSRC} && ${INSTALL_PROGRAM} glance ${DESTDIR}${PREFIX}/sbin && ${INSTALL_SCRIPT} ${OZYMAN_PERLSCRIPTS} ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
