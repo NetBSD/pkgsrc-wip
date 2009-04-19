@@ -8,6 +8,7 @@ Suggested package updates
 	o bakery-2.6.3
 	o bsnes-0.042
 	o bub-n-bros-1.6
+	o cclive-0.3.2
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.14
@@ -75,7 +76,7 @@ Suggested package updates
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.0
 	o quodlibet-2.0
-	o rdup-0.9.0
+	o rdup-0.9.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-3.20.5
@@ -84,7 +85,7 @@ Suggested package updates
 	o siege-2.67
 	o smc-1.8
 	o spe-0.8.2a
-	o swftools-0.8.1
+	o swftools-0.9.0
 	o sxemacs-22.1.6
 	o tmw-0.0.26
 	o toppler-1.1.3
