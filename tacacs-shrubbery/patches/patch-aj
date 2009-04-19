@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2006/08/05 18:43:02 gschwarz Exp $
+$NetBSD: patch-aj,v 1.2 2009/04/19 21:10:37 gschwarz Exp $
 
---- aclocal.m4.orig	2006-07-31 20:35:48.000000000 +0200
-+++ aclocal.m4	2006-07-31 20:36:00.000000000 +0200
-@@ -128,7 +128,7 @@
+--- aclocal.m4.orig	2009-03-02 18:18:21.000000000 +0100
++++ aclocal.m4	2009-04-19 12:35:10.000000000 +0200
+@@ -154,7 +154,7 @@
  
  # There are a few dirty hacks below to avoid letting `AC_PROG_CC' be
  # written in clear, in which case automake, when reading aclocal.m4,

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/03/31 21:52:40 pettai Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/19 21:10:37 gschwarz Exp $
 #
 
-DISTNAME=	tacacs+-F4.0.4.15
+DISTNAME=	tacacs+-F4.0.4.18
 PKGNAME=	${DISTNAME:S,-F,-,}
 PKGREVISION=	1
 CATEGORIES=	net security
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.shrubbery.net/pub/tac_plus/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.shrubbery.net/tac_plus/
 COMMENT=	Cisco AAA protocol (tacacs+) daemon (Shrubbery Networks version)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	id # used in options.mk
 
@@ -27,8 +29,7 @@ CONFIGURE_ENV+=		PERLV_PATH=${PERL5:Q}
 BUILD_DEFS+=		VARBASE
 
 .if !empty(LOWER_OPSYS:Mirix5*)
-CPPFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t \
-			-Dsocklen_t=int
+CPPFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \
@@ -36,12 +37,12 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tac_plus ${WRKSRC}/tac_pwd \
-	${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/tac_convert ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/regexp.3 ${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/tac_plus.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/tac_convert ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/regexp.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_MAN} ${WRKSRC}/tac_plus.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/tac_plus.8 ${WRKSRC}/tac_pwd.8 \
-	${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/users_guide ${PREFIX}/share/doc/tacacs
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/users_guide ${DESTDIR}${PREFIX}/share/doc/tacacs
 
 .include "../../mk/bsd.pkg.mk"
