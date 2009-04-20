@@ -1,145 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/02 22:20:27 christtrekker Exp $
-share/AlephOne/Scenarios/1/Fonts.fntA
-share/AlephOne/Scenarios/1/M1A1 Images.imgA
-share/AlephOne/Scenarios/1/M1A1 Map.sceA
-share/AlephOne/Scenarios/1/M1A1 Music.ogg
-share/AlephOne/Scenarios/1/M1A1 Shapes.shpA
-share/AlephOne/Scenarios/1/M1A1 Sounds.sndA
-share/AlephOne/Scenarios/1/Read Me M1A1.html
-share/AlephOne/Scenarios/1/Scripts/havoc.mml
-share/AlephOne/Scenarios/1/Scripts/M1A1.mml
-share/AlephOne/Scenarios/1/Scripts/monsters.mml
-share/AlephOne/Scenarios/1/Scripts/scenery.mml
-share/AlephOne/Scenarios/1/Scripts/settings.mml
-share/AlephOne/Scenarios/1/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/1/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/1/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/1/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/1/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/1/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/1/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/1/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/1/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/1/Themes/Default/Makefile
-share/AlephOne/Scenarios/1/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/1/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/1/Themes/Default/README
-share/AlephOne/Scenarios/1/Themes/Default/resources
-share/AlephOne/Scenarios/1/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/1/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/1/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/1/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/1/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/1/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/1/Themes/Default/theme.mml
-share/AlephOne/Scenarios/1/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/1/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/1/Themes/Default/tiny_button_r.bmp
-share/AlephOne/Scenarios/1/Tracks/aliensagain.mp3
-share/AlephOne/Scenarios/1/Tracks/chomber.mp3
-share/AlephOne/Scenarios/1/Tracks/fatman.mp3
-share/AlephOne/Scenarios/1/Tracks/flippant.mp3
-share/AlephOne/Scenarios/1/Tracks/flowersinheaven.mp3
-share/AlephOne/Scenarios/1/Tracks/freedom.mp3
-share/AlephOne/Scenarios/1/Tracks/guardians.mp3
-share/AlephOne/Scenarios/1/Tracks/landing.mp3
-share/AlephOne/Scenarios/1/Tracks/leela.mp3
-share/AlephOne/Scenarios/1/Tracks/newpacific.mp3
-share/AlephOne/Scenarios/1/Tracks/newpacific_reprise.mp3
-share/AlephOne/Scenarios/1/Tracks/rapture.mp3
-share/AlephOne/Scenarios/1/Tracks/rushing.mp3
-share/AlephOne/Scenarios/1/Tracks/splash_marathon.mp3
-share/AlephOne/Scenarios/1/Tracks/swirls.mp3
-share/AlephOne/Scenarios/1/Tracks/whataboutbob.mp3
-share/AlephOne/Scenarios/2/Fonts.fntA
-share/AlephOne/Scenarios/2/Images.imgA
-share/AlephOne/Scenarios/2/Map.sceA
-share/AlephOne/Scenarios/2/Music.ogg
-share/AlephOne/Scenarios/2/Physics Models/Standard.phyA
-share/AlephOne/Scenarios/2/Scripts/Filenames.mml
-share/AlephOne/Scenarios/2/Scripts/Marathon 2.mml
-share/AlephOne/Scenarios/2/Scripts/Transparent_Liquids.mml
-share/AlephOne/Scenarios/2/Scripts/Transparent_Sprites.mml
-share/AlephOne/Scenarios/2/Shapes.shpA
-share/AlephOne/Scenarios/2/Sounds.sndA
-share/AlephOne/Scenarios/2/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/2/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/2/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/2/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/2/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/2/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/2/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/2/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/2/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/2/Themes/Default/Makefile
-share/AlephOne/Scenarios/2/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/2/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/2/Themes/Default/README
-share/AlephOne/Scenarios/2/Themes/Default/resources
-share/AlephOne/Scenarios/2/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/2/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/2/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/2/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/2/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/2/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/2/Themes/Default/theme.mml
-share/AlephOne/Scenarios/2/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/2/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/2/Themes/Default/tiny_button_r.bmp
+@comment $NetBSD: PLIST,v 1.3 2009/04/20 20:11:38 christtrekker Exp $
 share/AlephOne/Scenarios/Eternal/Eternal_Data/Images/Loading.png
 share/AlephOne/Scenarios/Eternal/Eternal_Data/Music/Chomber.mp3
 share/AlephOne/Scenarios/Eternal/Eternal_Data/Music/ChomberNick.mp3
@@ -1061,68 +920,6 @@ share/AlephOne/Scenarios/Evil/Themes/Default/thumb_tc.bmp
 share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_c.bmp
 share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_l.bmp
 share/AlephOne/Scenarios/Evil/Themes/Default/tiny_button_r.bmp
-share/AlephOne/Scenarios/Infinity/Fonts.fntA
-share/AlephOne/Scenarios/Infinity/Images.imgA
-share/AlephOne/Scenarios/Infinity/Map.sceA
-share/AlephOne/Scenarios/Infinity/Music.ogg
-share/AlephOne/Scenarios/Infinity/Physics Models/Standard.phyA
-share/AlephOne/Scenarios/Infinity/Scripts/Filenames.mml
-share/AlephOne/Scenarios/Infinity/Scripts/Marathon Infinity.mml
-share/AlephOne/Scenarios/Infinity/Scripts/Transparent_Liquids.mml
-share/AlephOne/Scenarios/Infinity/Scripts/Transparent_Sprites.mml
-share/AlephOne/Scenarios/Infinity/Shapes.shpA
-share/AlephOne/Scenarios/Infinity/Sounds.sndA
-share/AlephOne/Scenarios/Infinity/Themes/Default/bankgthd.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/bankgthd.ttf.txt
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_c_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_l_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/button_r_p.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/DejaVuLGCSansCondensed-BoldOblique.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/DejaVuLGCSansCondensed-Bold.ttf
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_bl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_br.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_tl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/frame_tr.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/LICENSE-DejaVu
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_bl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_br.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_tl.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/list_tr.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile.am
-share/AlephOne/Scenarios/Infinity/Themes/Default/Makefile.in
-share/AlephOne/Scenarios/Infinity/Themes/Default/README
-share/AlephOne/Scenarios/Infinity/Themes/Default/resources
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_c.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_l.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/slider_r.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#slider_r.bmp.1.3
-share/AlephOne/Scenarios/Infinity/Themes/Default/theme2.mml
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#theme2.mml.1.2
-share/AlephOne/Scenarios/Infinity/Themes/Default/.#theme2.mml.1.7
-share/AlephOne/Scenarios/Infinity/Themes/Default/theme.mml
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_b.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_bc.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_t.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/thumb_tc.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_c.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_l.bmp
-share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_r.bmp
 share/AlephOne/Scenarios/Red/Fonts.fntA
 share/AlephOne/Scenarios/Red/NET Physics.phyA
 share/AlephOne/Scenarios/Red/RED Images.imgA
@@ -2598,9 +2395,11 @@ share/AlephOne/Scenarios/TheGrayIncident/Themes/default/thumbs.db
 share/AlephOne/Scenarios/TheGrayIncident/Themes/default/thumb_t.bmp
 share/AlephOne/Scenarios/TheGrayIncident/Themes/default/thumb_tc.bmp
 @dirrm share/AlephOne/Scenarios/TheGrayIncident/Themes/default
+@dirrm share/AlephOne/Scenarios/TheGrayIncident/Themes
 @dirrm share/AlephOne/Scenarios/TheGrayIncident/Scripts
 @dirrm share/AlephOne/Scenarios/TheGrayIncident
 @dirrm share/AlephOne/Scenarios/TempusIrae/Themes/default
+@dirrm share/AlephOne/Scenarios/TempusIrae/Themes
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/landscapes
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/7
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/26
@@ -2611,13 +2410,14 @@ share/AlephOne/Scenarios/TheGrayIncident/Themes/default/thumb_tc.bmp
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/19
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/18
 @dirrm share/AlephOne/Scenarios/TempusIrae/tex/17
+@dirrm share/AlephOne/Scenarios/TempusIrae/tex
 @dirrm share/AlephOne/Scenarios/TempusIrae/Scripts
 @dirrm share/AlephOne/Scenarios/TempusIrae
 @dirrm share/AlephOne/Scenarios/SiegeOfNorKorh/marathon files/readme
 @dirrm share/AlephOne/Scenarios/SiegeOfNorKorh/marathon files
 @dirrm share/AlephOne/Scenarios/SiegeOfNorKorh
 @dirrm share/AlephOne/Scenarios/Rubicon/Scripts
-@dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data/Graphics/Weapons/shotgun
+@dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Graphics/Weapons/shotgun
 @dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data/Graphics/Weapons/rocket
 @dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data/Graphics/Weapons/pistol
 @dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data/Graphics/Weapons/mortar
@@ -2647,68 +2447,62 @@ share/AlephOne/Scenarios/TheGrayIncident/Themes/default/thumb_tc.bmp
 @dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data/Graphics
 @dirrm share/AlephOne/Scenarios/Rubicon/Rubicon Data
 @dirrm share/AlephOne/Scenarios/Rubicon
-@exec ${MKDIR} %D/share/AlephOne/Scenarios/Red/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/Red/Themes/Default/CVS
 @dirrm share/AlephOne/Scenarios/Red/Themes/Default
+@dirrm share/AlephOne/Scenarios/Red/Themes
 @dirrm share/AlephOne/Scenarios/Red/Scripts
 @dirrm share/AlephOne/Scenarios/Red
-@exec ${MKDIR} %D/share/AlephOne/Scenarios/Infinity/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/Infinity/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/Infinity/Themes/Default
-@dirrm share/AlephOne/Scenarios/Infinity/Scripts
-@dirrm share/AlephOne/Scenarios/Infinity/Physics Models
-@dirrm share/AlephOne/Scenarios/Infinity
-@exec ${MKDIR} %D/share/AlephOne/Scenarios/Evil/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/Evil/Themes/Default/CVS
 @dirrm share/AlephOne/Scenarios/Evil/Themes/Default
+@dirrm share/AlephOne/Scenarios/Evil/Themes
 @dirrm share/AlephOne/Scenarios/Evil/Scripts
 @dirrm share/AlephOne/Scenarios/Evil
 @dirrm share/AlephOne/Scenarios/Eternal/Themes/Eternal_Theme
+@dirrm share/AlephOne/Scenarios/Eternal/Themes
 @dirrm share/AlephOne/Scenarios/Eternal/Scripts
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Weapons/GravBlades
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Weapons
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/5Magenta
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/4Aqua
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/3Green
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/2Orange
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/1Grey
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor/0Special
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set5_Pfhor
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/5Magenta
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/4Aqua
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/3Green
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/2Orange
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/1Grey
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human/0Special
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set4_Human
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/5Magenta
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/4Aqua
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/3Green
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/2Orange
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/1Grey
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro/0Special
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set3_Jjaro
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/5Magenta
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/4Aqua
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/3Green
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/2Orange
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/1Grey
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht/0Special
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set2_Spht
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/5Magenta
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/4Aqua
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/3Green
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/2Orange
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/1Grey
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner/0Special
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Textures/Set1_Forerunner
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Shots
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Monsters/Banshee
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Monsters
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Landscapes
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Items
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes/Interface
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Shapes
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Music
 @dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data/Images
+@dirrm share/AlephOne/Scenarios/Eternal/Eternal_Data
 @dirrm share/AlephOne/Scenarios/Eternal
-@dirrm share/AlephOne/Scenarios/2/Themes/Default
-@dirrm share/AlephOne/Scenarios/2/Scripts
-@dirrm share/AlephOne/Scenarios/2/Physics Models
-@dirrm share/AlephOne/Scenarios/2
-@dirrm share/AlephOne/Scenarios/1/Tracks
-@dirrm share/AlephOne/Scenarios/1/Themes/Default
-@dirrm share/AlephOne/Scenarios/1/Scripts
-@dirrm share/AlephOne/Scenarios/1

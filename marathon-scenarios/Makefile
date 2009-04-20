@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/02 22:20:27 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/20 20:11:38 christtrekker Exp $
 #
 
 # The version number should be incremented 0.1 when a scenario is moved or
@@ -6,14 +6,6 @@
 # It's rather arbitrary and only for pkgsrc's benefit.
 DISTNAME=	marathon-scenarios-1.0
 CATEGORIES=	games
-
-# The original Bungie trilogy series
-DISTFILES=	M1A1.zip
-SITES.M1A1.zip=	http://trilogyrelease.bungie.org/files/
-DISTFILES+=	Marathon2.zip
-SITES.Marathon2.zip=	http://trilogyrelease.bungie.org/files/
-DISTFILES+=	MarathonInfinity.zip
-SITES.MarathonInfinity.zip=	http://trilogyrelease.bungie.org/files/
 
 # Another series
 DISTFILES+=	tgi.zip
@@ -44,8 +36,7 @@ COMMENT=	Game data for numerous scenarios playable with the Aleph One engine
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
-.for scenario in 1 2 Infinity \
-	TheGrayIncident Rubicon \
+.for scenario in TheGrayIncident Rubicon \
 	SiegeOfNorKorh Evil \
 	Eternal Red TempusIrae
 INSTALLATION_DIRS+= ${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Physics\ Models ${SCENARIO_BASE}/${scenario}/Scripts ${SCENARIO_BASE}/${scenario}/Themes ${SCENARIO_BASE}/${scenario}/Tracks
@@ -69,9 +60,6 @@ post-extract:
 do-install:
 	#install the files into the Scenarios dir
 	#there is no ${INSTALL_...} command with recursive abilities...
-	${CP} -r ${WRKDIR}/M1A1/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/1
-	${CP} -r ${WRKDIR}/Marathon\ 2/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/2
-	${CP} -r ${WRKDIR}/Marathon\ Infinity/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Infinity
 	${CP} -r ${WRKDIR}/the\ gray\ incident/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/TheGrayIncident
 	${CP} -r ${WRKDIR}/Rubicon\ X*/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Rubicon
 	${CP} -r ${WRKDIR}/SoNK/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/SiegeOfNorKorh
