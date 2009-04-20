@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/08 18:11:05 milosn Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/20 21:27:31 rsmarples Exp $
 
 TR_VERSION=	1.0
 DISTNAME=	trayer-${TR_VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://fvwm-crystal.org/
 COMMENT=	Standalone tray app
 
 USE_TOOLS+=	gmake pkg-config
-
+MAKE_JOBS_SAFE=	no
 
 do-install:
 	cp ${WRKSRC}/trayer ${PREFIX}/bin/
