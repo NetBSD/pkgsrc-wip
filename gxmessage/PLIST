@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/22 16:02:38 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/21 23:18:48 jihbed Exp $
 bin/gxmessage
+info/gxmessage.info
 man/man1/gxmessage.1
-share/locale/sk/LC_MESSAGES/gxmessage.mo
-share/locale/sv/LC_MESSAGES/gxmessage.mo
-share/pixmaps/gxmessage.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+share/examples/${PKGNAME}/gtkrc
+share/examples/${PKGNAME}/gxaddress
+share/examples/${PKGNAME}/gxdialup
+share/examples/${PKGNAME}/gxdict
+share/examples/${PKGNAME}/gxman
+share/examples/${PKGNAME}/gxview
+share/examples/${PKGNAME}/nautilus-word-count
+share/icons/hicolor/48x48/apps/gxmessage.png
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@dirrm share/examples/${PKGNAME}
