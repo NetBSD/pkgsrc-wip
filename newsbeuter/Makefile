@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/03/31 11:47:25 smoppy Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/22 17:31:38 smoppy Exp $
 
-DISTNAME=	newsbeuter-1.3
+DISTNAME=	newsbeuter-2.0
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
