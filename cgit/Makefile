@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/17 12:19:33 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/23 05:46:33 minskim Exp $
 
 CATEGORIES=www
 DISTNAME=cgit-0.8.2.1
@@ -11,7 +11,7 @@ BUILD_MAKE_FLAGS+=CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
 BUILD_TARGET=get-git all
 
 PKG_DESTDIR_SUPPORT=user-destdir
-BUILD_DEPENDS+= curl-7.19.2:../../www/curl
+BUILD_DEPENDS+= curl>=7.19.2:../../www/curl
 
 MASTER_SITES=http://hjemli.net/git/cgit/snapshot/
 DISTFILES=${DISTNAME}.tar.bz2
