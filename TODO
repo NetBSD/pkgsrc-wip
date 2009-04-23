@@ -6,7 +6,7 @@ Suggested package updates
 	o asymptote-1.70
 	o backintime-0.9.20
 	o bakery-2.6.3
-	o bsnes-0.042
+	o bsnes-0.045
 	o bub-n-bros-1.6
 	o cclive-0.3.2
 	o cdogs-0.4
@@ -79,7 +79,7 @@ Suggested package updates
 	o rdup-0.9.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.20.5
+	o rsyslog-3.22.0
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o siege-2.67
