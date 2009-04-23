@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/22 17:31:38 smoppy Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/23 11:02:32 emil_s Exp $
 
 DISTNAME=	newsbeuter-2.0
 CATEGORIES=	news
@@ -22,6 +22,7 @@ INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 .include "../../converters/libiconv/buildlink3.mk"
 .endif
 
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/stfl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
