@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/24 06:37:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/24 18:26:04 minskim Exp $
 # TeX Live Revision 9325
 
 DISTNAME=	collection-basicbin
@@ -19,7 +19,7 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk	# bin-dvipsk
 #DEPENDS+=	tex-bin-gsftopk-[0-9]*:../../print/tex-bin-gsftopk
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
 #DEPENDS+=	tex-bin-makeindex-[0-9]*:../../print/tex-bin-makeindex
-#DEPENDS+=	tex-bin-metafont-[0-9]*:../../print/tex-bin-metafont
+DEPENDS+=	tex-bin-metafont-[0-9]*:../../fonts/tex-bin-metafont
 #DEPENDS+=	tex-bin-mfware-[0-9]*:../../print/tex-bin-mfware
 DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 DEPENDS+=	tex-bin-texlive-[0-9]*:../../print/tex-bin-texlive
