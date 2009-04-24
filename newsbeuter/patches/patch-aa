@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2009/04/24 11:50:49 emil_s Exp $
+
+# manpages should not be installed with executable flag set
+
+--- Makefile.orig	2009-04-21 08:47:25.000000000 +0100
++++ Makefile
+@@ -136,8 +136,8 @@ install: install-mo
+ 	$(INSTALL) $(NEWSBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(PODBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(MKDIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+-	$(INSTALL) doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+ 	$(MKDIR) $(DESTDIR)$(docdir)
+ 	$(INSTALL) -m 644 doc/xhtml/* $(DESTDIR)$(docdir) || true
+ 	$(MKDIR) $(DESTDIR)$(docdir)/examples
