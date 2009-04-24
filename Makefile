@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3390 2009/04/24 22:06:43 jihbed Exp $
+# $Id: Makefile,v 1.3391 2009/04/24 22:50:33 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1052,7 +1052,6 @@ SUBDIR+=	map-browse
 SUBDIR+=	mapnik
 SUBDIR+=	mapserver
 SUBDIR+=	marathon-scenarios
-SUBDIR+=	marathon-trilogy
 SUBDIR+=	marsyas
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
@@ -1714,6 +1713,7 @@ SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	redfang
 SUBDIR+=	regexxer
+SUBDIR+=	reinteract
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
@@ -1915,6 +1915,7 @@ SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-collection-basicbin
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
+SUBDIR+=	tex-metafont
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
