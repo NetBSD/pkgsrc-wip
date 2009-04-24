@@ -1,0 +1,6 @@
+Reinteract is a system for interactive experimentation with Python
+Reinteract worksheets contain Python code combined with the results
+of that code, formatted as text or graphical plots. Unlike a traditional shell
+you can go back and edit previously entered statements, and the results will
+update. Among other things, Reinteract is suitable for experimentation with
+the Python language and for data analysis using the NumPy and SciPy packages
