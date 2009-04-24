@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/27 09:53:07 smoppy Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/24 11:42:32 emil_s Exp $
 
 DISTNAME=	stfl-0.19
 CATEGORIES=	devel
@@ -16,4 +16,5 @@ USE_TOOLS+=	gmake perl
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
