@@ -1,0 +1,5 @@
+njb-sharp provides C# bindings for libnjb, to provide NJB
+Digital Audio Player (DAP) support to Mono applications
+See the libnjb project page for a complete list of supported
+NJB devices (Creative Nomad, Zen, Zen Micro, Dell DJ, and more)
+and detailed project information.

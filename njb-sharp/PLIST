@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 23:48:46 jihbed Exp $
+lib/monodoc/sources/njb-sharp-docs.source
+lib/monodoc/sources/njb-sharp-docs.tree
+lib/monodoc/sources/njb-sharp-docs.zip
+lib/njb-sharp/libnjbglue.la
+lib/njb-sharp/njb-sharp.dll
+lib/njb-sharp/njb-sharp.dll.config
+lib/njb-sharp/njb-sharp.dll.mdb
+lib/pkgconfig/njb-sharp.pc
+@dirrm lib/njb-sharp
+@dirrm lib/monodoc/sources
