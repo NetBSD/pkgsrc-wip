@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/17 18:01:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/24 22:29:24 jihbed Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
@@ -11,8 +11,6 @@ HOMEPAGE=		http://libnjb.sourceforge.net/
 COMMENT=		Communicating with some Creative and Dell audio players
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CHECK_PORTABILITY_SKIP+=	hotplug.sh.in
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
