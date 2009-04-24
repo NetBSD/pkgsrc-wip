@@ -1,0 +1,3 @@
+PP is a python module which provides mechanism for parallel execution
+of python code on SMP (systems with multiple processors or cores)
+and clusters (computers connected via network)
