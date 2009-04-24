@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3391 2009/04/24 22:50:33 jihbed Exp $
+# $Id: Makefile,v 1.3392 2009/04/24 23:01:11 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1640,6 +1640,7 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-pcapy
+SUBDIR+=	py-pp
 SUBDIR+=	py-plucker
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rlcompleter2
