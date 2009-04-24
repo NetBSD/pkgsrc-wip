@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3389 2009/04/24 18:26:04 minskim Exp $
+# $Id: Makefile,v 1.3390 2009/04/24 22:06:43 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -899,10 +899,11 @@ SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
+SUBDIR+=	laby
 SUBDIR+=	lasi
 SUBDIR+=	last.fm
 SUBDIR+=	lastfm-sharp
-SUBDIR+=	lat
+SUBDIR+=	labyrinth
 SUBDIR+=	lcdproc
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
@@ -1655,6 +1656,7 @@ SUBDIR+=	py-stem
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-trash
+SUBDIR+=	py-tranquil
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-zopeinterface
