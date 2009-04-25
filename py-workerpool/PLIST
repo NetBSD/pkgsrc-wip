@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/25 23:07:27 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/workerpool/QueueWrapper.pyc
+${PYSITELIB}/workerpool/QueueWrapper.pyo
+${PYSITELIB}/workerpool/__init__.pyc
+${PYSITELIB}/workerpool/__init__.pyo
+${PYSITELIB}/workerpool/exceptions.pyc
+${PYSITELIB}/workerpool/exceptions.pyo
+${PYSITELIB}/workerpool/jobs.pyc
+${PYSITELIB}/workerpool/jobs.pyo
+${PYSITELIB}/workerpool/pools.pyc
+${PYSITELIB}/workerpool/pools.pyo
+${PYSITELIB}/workerpool/workers.pyc
+${PYSITELIB}/workerpool/workers.pyo
+share/example/${PKGNAME}/blockingworker.py
+@dirrm share/example/${PKGNAME}
+@dirrm share/example
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/workerpool
