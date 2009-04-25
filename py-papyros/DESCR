@@ -1,0 +1,3 @@
+Small platform independent parallel processing package. It provides a
+simple uniform interface for executing tasks concurrently in multiple threads
+or processes, locally or on remote hosts.
