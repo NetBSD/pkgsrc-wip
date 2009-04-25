@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/18 14:28:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/25 22:15:46 jihbed Exp $
 #
 
 DISTNAME=	configobj-4.6.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=configobj/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.voidspace.org.uk/python/configobj.html/
+HOMEPAGE=	http://www.voidspace.org.uk/python/configobj.html
 COMMENT=	Simple but powerful config file reader and write
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 25 24
+PYTHON_VERSIONS_ACCEPTED= 26 25 24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 DOCDIR=		${PREFIX}/share/doc/${PKGNAME}
