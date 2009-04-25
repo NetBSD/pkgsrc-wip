@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/18 00:26:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/25 22:02:17 jihbed Exp $
 #
 
 DISTNAME=	taglib-sharp-2.0.3.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.banshee-project.org/taglib-sharp/2.0.3.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://developer.novell.com/wiki/index.php/TagLib_Sharp/
+HOMEPAGE=	http://developer.novell.com/wiki/index.php/TagLib_Sharp
 COMMENT=	Multimedia metadata reading/writing library for popular formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir
