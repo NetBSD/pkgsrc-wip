@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/26 22:28:25 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/25 20:22:06 jihbed Exp $
 bin/pydb
 ${PYSITELIB}/pydb/__init__.py
 ${PYSITELIB}/pydb/__init__.pyc
 ${PYSITELIB}/pydb/__init__.pyo
+${PYSITELIB}/pydb/bytecode.py
+${PYSITELIB}/pydb/bytecode.pyc
+${PYSITELIB}/pydb/bytecode.pyo
 ${PYSITELIB}/pydb/complete.py
 ${PYSITELIB}/pydb/complete.pyc
 ${PYSITELIB}/pydb/complete.pyo

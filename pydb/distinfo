@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2009/03/26 22:28:25 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2009/04/25 20:22:06 jihbed Exp $
 
-SHA1 (pydb-1.25.tar.bz2) = c9c85d3c3003d7d2feebc081bb71bf5649d3e09c
-RMD160 (pydb-1.25.tar.bz2) = aebba569564dac9415ef6fc3b16f32f3157d1ce3
-Size (pydb-1.25.tar.bz2) = 228687 bytes
-SHA1 (patch-aa) = b9258e784916b6ffa1cba889089782ac0b133c7a
-SHA1 (patch-ab) = a1f87fe2ceab46a65708863d06d7d4f4902a138d
-SHA1 (patch-ac) = 3be4cbd2616d043d034a29ac5d8a8330dcd7c0c6
+SHA1 (pydb-1.26.tar.bz2) = 7f2de4530c3399cfb380fccdc440f5a8e14cc989
+RMD160 (pydb-1.26.tar.bz2) = ecefe104f58b0857ec2e17d6d0421e28030d6160
+Size (pydb-1.26.tar.bz2) = 572184 bytes
+SHA1 (patch-aa) = adc0654c741fa1321ecb63cb3707d4e1f1eaecc7
+SHA1 (patch-ab) = 36ec3fc43ae8d0e1f7ed1633ac60d8a08701464f
+SHA1 (patch-ac) = 75c69577bc815b82cd52dc5169a41c67923da4be
