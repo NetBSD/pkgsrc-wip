@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3396 2009/04/25 22:33:06 jihbed Exp $
+# $Id: Makefile,v 1.3397 2009/04/25 23:10:22 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1671,6 +1671,7 @@ SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-weave
 SUBDIR+=	py-webkit
 SUBDIR+=	py-willow
+SUBDIR+=	py-workerpool
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xdg
 SUBDIR+=	py-xlrd
@@ -1740,6 +1741,7 @@ SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
 SUBDIR+=	runawk
 SUBDIR+=	runit
+SUBDIR+=	s3funnel
 SUBDIR+=	samhain
 SUBDIR+=	sara
 SUBDIR+=	sbcl
