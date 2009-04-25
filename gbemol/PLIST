@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/25 21:06:33 jihbed Exp $
+bin/gbemol
+share/applications/gbemol.desktop
+share/pixmaps/gbemol.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
