@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/12 06:09:23 othyro Exp $
+$NetBSD: distinfo,v 1.2 2009/04/25 08:52:01 jh88 Exp $
 
-SHA1 (nmzmail-1.0.tar.gz) = e69e16d1a60d8ff0ad6cdc0b34b7c6b2bdfeb4f2
-RMD160 (nmzmail-1.0.tar.gz) = 1df410c347e6859c6ce2f5a5029735fa591da492
-Size (nmzmail-1.0.tar.gz) = 84265 bytes
+SHA1 (nmzmail-1.1.tar.gz) = 94f956a1fd51c4fbff42d6bac57c94de781a39f2
+RMD160 (nmzmail-1.1.tar.gz) = fbca7a1f08f7bfdee116d942fc734093d0d3ce88
+Size (nmzmail-1.1.tar.gz) = 94326 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/03/06 11:38:31 jh88 Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/25 08:52:01 jh88 Exp $
 #
 
-DISTNAME=	nmzmail-1.0
+DISTNAME=	nmzmail-1.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
