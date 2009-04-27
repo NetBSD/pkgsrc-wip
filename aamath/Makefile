@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/02 16:51:09 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/27 21:40:42 thomasklausner Exp $
 #
 
 DISTNAME=	aamath-0.3
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/aamath
 USE_LANGUAGES=	c++
+MAKE_JOBS_SAFE=	no
 
 BUILD_TARGET=	aamath
 
