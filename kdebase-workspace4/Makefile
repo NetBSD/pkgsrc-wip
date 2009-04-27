@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/11 23:00:42 mwdavies Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/27 18:21:24 thomasklausner Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -72,7 +72,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/kde/HTML/en/kdm
 .if ${OPSYS} == "NetBSD"
 	@# NetBSD Advertisement O:-)
-	cd ${PREFIX}/share/kde/config/kdm;				\
+	cd ${DESTDIR}${PREFIX}/share/kde/config/kdm;			\
 	${SED} -e 's|^\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
                 kdmrc > ${WRKDIR}/kdmrc.ad;				\
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
