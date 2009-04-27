@@ -4,7 +4,7 @@ Suggested package updates
 	o amarok-2.0.2
 	o argouml-0.24
 	o asymptote-1.70
-	o backintime-0.9.20
+	o backintime-0.9.22
 	o bakery-2.6.3
 	o bsnes-0.045
 	o bub-n-bros-1.6
@@ -50,25 +50,27 @@ Suggested package updates
 	o lensfun-0.2.3
 	o libexosip-3.3.0
 	o libgadu-1.8.2
+	o libgdata-0.2.0
 	o libgksu-2.0.4
 	o lincity-ng-2.0
 	o linphone-3.1.1
 	o lives-0.9.9.7
 	o llvm-2.5
 	o man-1.6f
-	o meta-tracker-0.6.93
+	o meta-tracker-0.6.94
 	o mixxx-1.6.0
 	o moe-1.1
 	o mpgedit-0.73dev2
 	o mupen64-0.5
 	o ocp-0.1.16
 	o opal-2.2.11
+	o openmpi-1.3.2
 	o openvrml-0.17.11
 	o ortp-0.15.0
 	o osmose-0.9.0b
 	o p5-Net-DBus-0.33.6
 	o parted-1.8.8
-	o passepartout-0.7.0
+	o passepartout-0.7.1
 	o pdnsd-1.2.7
 	o pike-7.8.116
 	o py-PyPE-2.8.8
@@ -98,6 +100,7 @@ Suggested package updates
 	o vinagre-2.26.0
 	o xaralx-bin-0.7.1692
 	o xinetd-2.3.14
+	o xmms2-0.6
 	o xmonad-0.8
 	o xmoto-0.5.1
 	o zinf-2.2.5
