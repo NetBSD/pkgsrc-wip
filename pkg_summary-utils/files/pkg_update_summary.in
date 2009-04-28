@@ -70,12 +70,12 @@ if test -z "$TEST_CMD"; then
     TEST_CMD=test
 fi
 
-if $TEST_CMD $# -eq 2; then
+if test $# -eq 2; then
     summary_file="$1"
     bin_pkg_dir="$2"
     uncompress='cat'
     compress='cat'
-elif $TEST_CMD $# -eq 4; then
+elif test $# -eq 4; then
     summary_file="$1"
     bin_pkg_dir="$2"
     uncompress="$3"
@@ -130,10 +130,13 @@ get_unchanged_pkgs (){
     { echo "$all"; echo "$updated"; } | subtract
 }
 
-tmp1="`dirname $summary_file`/`basename $summary_file`.tmp1"
-tmp2="`dirname $summary_file`/`basename $summary_file`.tmp2"
+tmpbase="`dirname $summary_file`/`basename $summary_file`.tmp"
+tmpfinal="$tmpbase.final"
+tmp2="$tmpbase.tmp2"
 
-trap "rm -f $tmp1 $tmp2" 0 1 2 15
+if test -z "$TRACE"; then
+    trap "rm -f $tmpfinal $tmp2" 0 1 2 15
+fi
 
 filter_unchanged (){
     pkgs_fn=$1
@@ -179,17 +182,20 @@ filter_unchanged (){
 }
 
 show_debugging_info (){
-    if $TEST_CMD "$TRACE"; then
-	printf "\n\nall binary packages : \n\n$all"
+    if test -n "$TRACE"; then
+	printf "$all" > "$tmpbase.all"
 
-	printf "\n\nupdated packages : \n\n$updated"
+	printf "$updated" > "$tmpbase.updated"
 
-	printf "\n\nkept packages : \n\n"; cat "$tmp2"
+	if test -f "$summary_file"; then
+	    { echo "$all" | sed 's/[.][^.]*$//'
+		sed -n 's/^PKGNAME=//p' "$summary_file"
+	    } | subtract > "$tmpbase.removed"
+	else
+	    printf '' > "$tmpbase.removed"
+	fi
 
-	printf "\n\nremoved packages : \n\n"
-	{ echo "$all" | sed 's/[.][^.]*$//'
-	    sed -n 's/^PKGNAME=//p' "$summary_file"
-	} | subtract
+	echo "See $tmpbase.{all,updated,removed,final,tmp2} files" 1>&2
     fi
 }
 
@@ -204,21 +210,21 @@ update_summary (){
     fi
 }
 
-if $TEST_CMD -f "$summary_file"; then
+if test -f "$summary_file"; then
     runpipe0 \
 	update_summary '|' \
 	$refresh '|' \
-	$compress > "$tmp1"
-
-    show_debugging_info
+	$compress > "$tmpfinal"
 else
     runpipe0 \
 	get_all_pkgs '|' \
 	pkgs2summary '|' \
 	$refresh '|' \
-	$compress > "$tmp1"
+	$compress > "$tmpfinal"
 fi
 
-if $TEST_CMD -z "$TRACE"; then
-    mv "$tmp1" "$summary_file"
+show_debugging_info
+
+if test -z "$TRACE"; then
+    mv "$tmpfinal" "$summary_file"
 fi
