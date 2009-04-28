@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2009/01/24 10:38:07 anielski Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/28 23:13:46 ficovh Exp $
 
-DISTNAME=		nginx-0.6.34
-PKGREVISION=		3
+DISTNAME=		nginx-0.6.36
+#PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
