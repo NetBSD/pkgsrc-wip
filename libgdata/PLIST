@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/08 09:06:49 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/28 00:04:57 jihbed Exp $
 include/libgdata/gdata/gdata-atom.h
 include/libgdata/gdata/gdata-entry.h
 include/libgdata/gdata/gdata-enums.h
 include/libgdata/gdata/gdata-feed.h
 include/libgdata/gdata/gdata-gdata.h
-include/libgdata/gdata/gdata-marshal.h
 include/libgdata/gdata/gdata-media-rss.h
 include/libgdata/gdata/gdata-parser.h
 include/libgdata/gdata/gdata-query.h
@@ -15,12 +14,22 @@ include/libgdata/gdata/services/calendar/gdata-calendar-calendar.h
 include/libgdata/gdata/services/calendar/gdata-calendar-event.h
 include/libgdata/gdata/services/calendar/gdata-calendar-query.h
 include/libgdata/gdata/services/calendar/gdata-calendar-service.h
+include/libgdata/gdata/services/contacts/gdata-contacts-contact.h
+include/libgdata/gdata/services/contacts/gdata-contacts-query.h
+include/libgdata/gdata/services/contacts/gdata-contacts-service.h
 include/libgdata/gdata/services/youtube/gdata-youtube-enums.h
 include/libgdata/gdata/services/youtube/gdata-youtube-service.h
 include/libgdata/gdata/services/youtube/gdata-youtube-video.h
 include/libgdata/gdata/services/youtube/gdata-youtube.h
 lib/libgdata.la
 lib/pkgconfig/libgdata.pc
+share/gtk-doc/html/gdata/GDataCalendarCalendar.html
+share/gtk-doc/html/gdata/GDataCalendarEvent.html
+share/gtk-doc/html/gdata/GDataCalendarQuery.html
+share/gtk-doc/html/gdata/GDataCalendarService.html
+share/gtk-doc/html/gdata/GDataContactsContact.html
+share/gtk-doc/html/gdata/GDataContactsQuery.html
+share/gtk-doc/html/gdata/GDataContactsService.html
 share/gtk-doc/html/gdata/GDataEntry.html
 share/gtk-doc/html/gdata/GDataFeed.html
 share/gtk-doc/html/gdata/GDataQuery.html
@@ -31,8 +40,12 @@ share/gtk-doc/html/gdata/api-index-full.html
 share/gtk-doc/html/gdata/ch01.html
 share/gtk-doc/html/gdata/ch02.html
 share/gtk-doc/html/gdata/ch03.html
+share/gtk-doc/html/gdata/ch04.html
+share/gtk-doc/html/gdata/ch05.html
 share/gtk-doc/html/gdata/gdata-Atom-API.html
 share/gtk-doc/html/gdata/gdata-GData-API.html
+share/gtk-doc/html/gdata/gdata-GData-Types.html
+share/gtk-doc/html/gdata/gdata-YouTube-API.html
 share/gtk-doc/html/gdata/gdata.devhelp
 share/gtk-doc/html/gdata/gdata.devhelp2
 share/gtk-doc/html/gdata/home.png
@@ -43,8 +56,12 @@ share/gtk-doc/html/gdata/object-tree.html
 share/gtk-doc/html/gdata/right.png
 share/gtk-doc/html/gdata/style.css
 share/gtk-doc/html/gdata/up.png
+share/locale/de/LC_MESSAGES/gdata.mo
+share/locale/en_GB/LC_MESSAGES/gdata.mo
+share/locale/sv/LC_MESSAGES/gdata.mo
 @dirrm share/gtk-doc/html/gdata
 @dirrm include/libgdata/gdata/services/youtube
+@dirrm include/libgdata/gdata/services/contacts
 @dirrm include/libgdata/gdata/services/calendar
 @dirrm include/libgdata/gdata/services
 @dirrm include/libgdata/gdata
