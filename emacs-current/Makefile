@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/04/01 10:54:22 makoto Exp $
+# $NetBSD: Makefile,v 1.37 2009/04/29 07:53:35 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-23.0.92
@@ -10,6 +10,8 @@ MASTER_SITES=	#
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
+
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
