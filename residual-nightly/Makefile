@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/03 15:49:13 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/29 22:16:52 thomasklausner Exp $
 
 DISTNAME=	residual-${SCM_VER}
 CATEGORIES=	games
 
 OWNER=		dillo@NetBSD.org
-HOMEPAGE=	http://scummvm.sourceforge.net/
+HOMEPAGE=	http://residual.sourceforge.net/
 COMMENT=	Lucas Arts' LUA-based 3D adventure engine
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -22,8 +22,8 @@ WRKSRC=		${WRKDIR}/residual
 
 SVN_REPOSITORIES=	residual
 SVN_TAG=		{${SCM_TAG}}
-SVN_CERTS=		files/dbd39a6ed632407eb1510e5009956117
-SVN_ROOT.residual=	https://scummvm.svn.sourceforge.net/svnroot/scummvm/residual/trunk
+SVN_CERTS=		files/1559baa475cf8c004d9ce6b7ca4cae6b
+SVN_ROOT.residual=	https://residual.svn.sourceforge.net/svnroot/residual/residual/trunk
 SVN_MODULE.residual=	residual
 
 .include "../../wip/mk/svn-package.mk"
