@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3401 2009/04/29 05:56:22 ficovh Exp $
+# $Id: Makefile,v 1.3402 2009/04/29 15:56:00 mjoellnir Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1843,6 +1843,7 @@ SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spandsp
 SUBDIR+=	spandsp-current
+SUBDIR+=	spawnfcgi
 SUBDIR+=	spe
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
