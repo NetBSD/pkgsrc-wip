@@ -1,2 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/02 21:51:10 blef Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/04/29 00:38:02 jihbed Exp $
 ${PYSITELIB}/pyRXP.so
+${PYSITELIB}/pyRXPU.so
+share/doc/${PKGNAME}/PyRXP_Documentation.html
+share/doc/${PKGNAME}/PyRXP_Documentation.rml
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/replogo.gif
+@dirrm share/doc/${PKGNAME}

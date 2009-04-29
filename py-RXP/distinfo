@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
+$NetBSD: distinfo,v 1.3 2009/04/29 00:38:02 jihbed Exp $
 
-SHA1 (pyRXP-0-9.tgz) = 5bab28e4b550181e4cca829e217c9e4e7128f1da
-RMD160 (pyRXP-0-9.tgz) = a642d6cc71d09798ba5b2b304c3cf5c74c8e2d10
-Size (pyRXP-0-9.tgz) = 290915 bytes
+SHA1 (pyRXP-1.13-daily-unix.tar.gz) = 744ebb1cdf58e6df4b7466556c64eb7ff982113f
+RMD160 (pyRXP-1.13-daily-unix.tar.gz) = 8e578e783c35ea7ee15a76aeba4032db351ebb42
+Size (pyRXP-1.13-daily-unix.tar.gz) = 376069 bytes
