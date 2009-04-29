@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/29 05:52:00 ficovh Exp $
+
+SHA1 (CGI-Application-Plugin-FillInForm-1.14.tar.gz) = 46e4ad333fdfdaa85f0eabc72a14ecce254326ca
+RMD160 (CGI-Application-Plugin-FillInForm-1.14.tar.gz) = 1e1f1472b68eb0386904f54b556d0abaf21bdea5
+Size (CGI-Application-Plugin-FillInForm-1.14.tar.gz) = 11562 bytes
