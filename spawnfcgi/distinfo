@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/29 15:51:24 mjoellnir Exp $
+
+SHA1 (spawn-fcgi-1.6.2.tar.bz2) = 475e9d9bff7ab31c29d082cc214cea66e04da690
+RMD160 (spawn-fcgi-1.6.2.tar.bz2) = 7a0986a9254646e7c635c086ef055b0f9a00a458
+Size (spawn-fcgi-1.6.2.tar.bz2) = 73169 bytes

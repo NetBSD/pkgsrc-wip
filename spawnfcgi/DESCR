@@ -1,0 +1,16 @@
+spawn-fcgi is used to spawn remote and local FastCGI processes.
+
+While  it is obviously needed to spawn remote FastCGI backends (the web
+server can only spawn local ones), it is  recommended  to  spawn  local
+backends with spawn-fcgi, too.
+
+Reasons why you may want to use spawn-fcgi instead of something else:
+
+*  Privilege  separation  without  needing  a  suid-binary or running a
+   server as root.
+*  You can restart your web server and the FastCGI applications without
+   restarting the others.
+*  You can run them in different chroot()s.
+*  Running  your  FastCGI applications doesn't depend on the web server
+   you are running, which  allows  for  easier  testing  of  other  web
+   servers.

@@ -1,0 +1,26 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/04/29 15:51:24 mjoellnir Exp $
+
+Use the following flags to adjust spawn-fcgi to your demands:
+(These flags come into /etc/rc.conf. Flags that are commented out
+ are added here with their default-values. You can leave them untouched
+ or adjust them to your own demands)
+
+### Enables spawn-fcgi
+spawnfcgi=YES
+### The path to the pidfile...
+#spawnfcgi_pidfile=@VARBASE@/run/spawnfcgi.pid
+### The path to the actual FastCGI-Application
+#spawnfcgi_app=@PREFIX@/libexec/cgi-bin/php
+### The number of children, fast-cgi should launch for processing requests
+#spawnfcgi_children=10
+### The IP, spawn-fcgi should bind to...
+#spawnfcgi_ip=127.0.0.1
+### The port, spawn-fcgi should listen on...
+#spawnfcgi_port=9999
+### The user, spawn-fcgi should change to after startup
+#spawnfcgi_user=www
+### The group, spawn-fcgi should change to after startup
+#spawnfcgi_group=www
+
+===========================================================================
