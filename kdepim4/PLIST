@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/04/06 13:42:10 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/04/29 21:29:42 thomasklausner Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -703,6 +703,7 @@ share/doc/kde/HTML/en/kpilot/faq.docbook
 share/doc/kde/HTML/en/kpilot/file-app.png
 share/doc/kde/HTML/en/kpilot/index.cache.bz2
 share/doc/kde/HTML/en/kpilot/index.docbook
+share/doc/kde/HTML/en/kpilot/kpilot.png
 share/doc/kde/HTML/en/kpilot/main-app.png
 share/doc/kde/HTML/en/kpilot/setup-address.png
 share/doc/kde/HTML/en/kpilot/setup-conduit.png
