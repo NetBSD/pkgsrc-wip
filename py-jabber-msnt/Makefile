@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/03/16 02:18:57 schnoebe Exp $
+# $NetBSD: Makefile,v 1.28 2009/04/29 14:26:04 schnoebe Exp $
 
 DISTNAME=		pymsnt-0.11.3
-PKGREVISION=		2
+PKGREVISION=		3
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://delx.net.au/projects/pymsnt/tarballs/
@@ -13,6 +13,8 @@ PATCH_DIST_STRIP.hg-214.patch=	-p1
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://delx.net.au/projects/pymsnt
 COMMENT=		Transport connecting Jabber to the MSN network
+
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -48,14 +50,16 @@ PLIST_SUBST+=		TRANSPORTDIR=${TRANSPORTDIR:Q}
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
+INSTALLATION_DIRS+=	${TRANSPORTDIR} bin
+
 .include "../../wip/jabberd/transports.mk"
 
 CONF_FILES=	${EGDIR}/pymsnt.xml ${PKG_SYSCONFDIR}/pymsnt.xml
 
 do-install:
-	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/${TRANSPORTDIR}
 	cd ${WRKSRC} && \
 	for i in `find src data \\( \\( -type f -name '*.orig' -o \
+		    -type f -name '*.orig_dist' -o \
 		    -type d -name .svn \\) -prune \\) -o -type f -print` ;\
 	do \
 	    ${ECHO} "Installing $$i -> " \
@@ -64,7 +68,6 @@ do-install:
 			`${DIRNAME} ${DESTDIR}${PREFIX}/${TRANSPORTDIR}/$$i` ;\
 	    ${INSTALL_SCRIPT} $$i ${DESTDIR}${PREFIX}/${TRANSPORTDIR}/$$i ;\
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}; \
 	${INSTALL_SCRIPT} PyMSNt.py ${DESTDIR}${PREFIX}/bin/PyMSNt
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR};\
