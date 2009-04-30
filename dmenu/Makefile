@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2008/10/25 13:28:44 leot1990 Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/30 22:44:00 leot1990 Exp $
 #
 
-DISTNAME=	dmenu-3.9
+DISTNAME=	dmenu-4.0
 CATEGORIES=	x11
 MASTER_SITES=	http://code.suckless.org/dl/tools/
 
 MAINTAINER=	leot1990@users.sourceforge.net
-HOMEPAGE=	http://www.suckless.org/programs/dmenu.html
+HOMEPAGE=	http://tools.suckless.org/dmenu
 COMMENT=	Dymanic menu for X
 
 PKG_DESTDIR_SUPPORT=	user-destdir
