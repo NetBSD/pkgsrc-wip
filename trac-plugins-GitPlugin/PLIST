@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/30 21:03:21 rsmarples Exp $
+${PYSITELIB}/TracGit-0.11.0.2-py2.5-nspkg.pth
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/namespace_packages.txt
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/requires.txt
+${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/top_level.txt
+${PYSITELIB}/tracext/git/PyGIT.py
+${PYSITELIB}/tracext/git/PyGIT.pyc
+${PYSITELIB}/tracext/git/PyGIT.pyo
+${PYSITELIB}/tracext/git/__init__.py
+${PYSITELIB}/tracext/git/__init__.pyc
+${PYSITELIB}/tracext/git/__init__.pyo
+${PYSITELIB}/tracext/git/git_fs.py
+${PYSITELIB}/tracext/git/git_fs.pyc
+${PYSITELIB}/tracext/git/git_fs.pyo
+@dirrm ${PYSITELIB}/tracext/git
+@dirrm ${PYSITELIB}/tracext
+@dirrm ${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info
