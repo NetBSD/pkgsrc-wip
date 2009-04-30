@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3402 2009/04/29 15:56:00 mjoellnir Exp $
+# $Id: Makefile,v 1.3403 2009/04/30 21:06:55 rsmarples Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1957,6 +1957,7 @@ SUBDIR+=	tpp
 SUBDIR+=	tr2latex
 SUBDIR+=	trac
 SUBDIR+=	trac-plugins-AccountManager
+SUBDIR+=	trac-plugins-GitPlugin
 SUBDIR+=	trac-plugins-GraphViz
 SUBDIR+=	trac-plugins-MasterTickets
 SUBDIR+=	trac-plugins-RoadmapHours
