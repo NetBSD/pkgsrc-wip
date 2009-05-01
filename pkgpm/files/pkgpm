@@ -51,6 +51,7 @@ EOF
 }
 
 register_pkg (){
+    # $1: +category/package or -category/package
     touch $plfn
 
     if printf "%s\n" "$1" | grep '^[+]' > /dev/null; then
@@ -82,12 +83,12 @@ NF == 0         { print pkgname "," pkgpath }
 ' "$@"
 }
 
-register_all_pkgs (){
-    env PKG_PATH= pkg_info -u -X | summary2pkgpath > $plfn
-}
-
 get_summary_installed (){
     env PKG_PATH= pkg_info -u -X
+}
+
+register_all_pkgs (){
+    get_summary_installed | summary2pkgpath > $plfn
 }
 
 get_summary_registered (){
