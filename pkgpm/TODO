@@ -24,6 +24,8 @@ Goals:
       Ability to remove old source tarball from pkgsrc/distfiles,
       see pkg_src_summary and pkg_cmp_summary.
 
+  *) Force rebuilding packages with "bad" REQUIRES.
+
 pkgpm options:
 
 1) installed packages
