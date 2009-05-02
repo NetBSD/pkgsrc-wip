@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/02 00:08:55 jihbed Exp $
+
+SHA1 (pysage-1.2.2.tar.gz) = 50c2b64cc2f75c7e1f9c9d5ecd7ffbf8299e20be
+RMD160 (pysage-1.2.2.tar.gz) = 14fb02e78e4a470dbfea116ccd5c9a0649267c11
+Size (pysage-1.2.2.tar.gz) = 11662 bytes

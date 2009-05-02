@@ -1,0 +1,16 @@
+pysage is a high-level message passing library supporting actor based
+concurrency. It also extends the "actor model" to support actor
+partitioning/grouping to further scalability. pysage has a simple
+high-level interface. Messages are serialized and sent light-weight using
+pipes or domain sockets across local "groups". In the case of network messages,
+UDP is used.
+
+    * simple pythonic API
+    * efficient message propagation within group, across group, across network
+    * network messages can optionally be configured to be reliable
+       and/or ordered using UDP
+    * grouping - actors can be partitioned into groups that are run in
+       separate os processes
+    * process-local singleton manager - actor registration, discovery,
+       message propagation
+    * publisher/subscriber pattern built-in
