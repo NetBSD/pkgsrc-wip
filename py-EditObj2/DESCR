@@ -1,0 +1,7 @@
+EditObj 2 is a dialog box generator for Python objects, using
+Gtk 2, Tk, Qt or Qtopia (at your choice). It behaves similarly to a
+Java Bean editor, but is devoted to Python, and it features several
+improvements. In particular, it can deal with tree structure of objects
+in a very efficient way.Well... actually EditObj2 is more that just a dialog
+box generator. It is somehow a GUI per se... look at the examples directory
+to see its power :-) EditObj2 is entirely written in Python

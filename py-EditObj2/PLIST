@@ -1,0 +1,34 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/02 00:10:55 jihbed Exp $
+${PYSITELIB}/editobj2/__init__.pyc
+${PYSITELIB}/editobj2/__init__.pyo
+${PYSITELIB}/editobj2/editor.pyc
+${PYSITELIB}/editobj2/editor.pyo
+${PYSITELIB}/editobj2/editor_gtk.pyc
+${PYSITELIB}/editobj2/editor_gtk.pyo
+${PYSITELIB}/editobj2/editor_qt.pyc
+${PYSITELIB}/editobj2/editor_qt.pyo
+${PYSITELIB}/editobj2/editor_qtopia.pyc
+${PYSITELIB}/editobj2/editor_qtopia.pyo
+${PYSITELIB}/editobj2/editor_tk.pyc
+${PYSITELIB}/editobj2/editor_tk.pyo
+${PYSITELIB}/editobj2/field.pyc
+${PYSITELIB}/editobj2/field.pyo
+${PYSITELIB}/editobj2/field_gtk.pyc
+${PYSITELIB}/editobj2/field_gtk.pyo
+${PYSITELIB}/editobj2/field_qt.pyc
+${PYSITELIB}/editobj2/field_qt.pyo
+${PYSITELIB}/editobj2/field_qtopia.pyc
+${PYSITELIB}/editobj2/field_qtopia.pyo
+${PYSITELIB}/editobj2/field_tk.pyc
+${PYSITELIB}/editobj2/field_tk.pyo
+${PYSITELIB}/editobj2/introsp.pyc
+${PYSITELIB}/editobj2/introsp.pyo
+${PYSITELIB}/editobj2/observe.pyc
+${PYSITELIB}/editobj2/observe.pyo
+${PYSITELIB}/editobj2/qtopia_file_chooser.pyc
+${PYSITELIB}/editobj2/qtopia_file_chooser.pyo
+${PYSITELIB}/editobj2/treewidget.pyc
+${PYSITELIB}/editobj2/treewidget.pyo
+${PYSITELIB}/editobj2/undoredo.pyc
+${PYSITELIB}/editobj2/undoredo.pyo
+@dirrm ${PYSITELIB}/editobj2
