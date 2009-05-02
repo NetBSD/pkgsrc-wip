@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3404 2009/05/01 23:31:20 ficovh Exp $
+# $Id: Makefile,v 1.3405 2009/05/02 00:43:47 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1618,6 +1618,7 @@ SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-fastaudio
+SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-gdata
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
@@ -1644,9 +1645,11 @@ SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mysqldb-docs
+SUBDIR+=	py-nose
 SUBDIR+=	py-numpy
 SUBDIR+=	py-oak
 SUBDIR+=	py-omniORBpy
+SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-papyros
@@ -1655,6 +1658,7 @@ SUBDIR+=	py-pp
 SUBDIR+=	py-plucker
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rlcompleter2
+SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sendmail-admin
