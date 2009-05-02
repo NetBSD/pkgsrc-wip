@@ -1,0 +1,2 @@
+googlecalendarsync is a tool written in python to bidirectional
+synchronize a local iCal (.ics) file with Google Calendar
