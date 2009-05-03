@@ -8,7 +8,7 @@ Suggested package updates
 	o bakery-2.6.3
 	o bsnes-0.045
 	o bub-n-bros-1.6
-	o cclive-0.3.2
+	o cclive-0.4.0
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.14
@@ -51,9 +51,10 @@ Suggested package updates
 	o libexosip-3.3.0
 	o libgadu-1.8.2
 	o libgksu-2.0.4
+	o libuuid-1.41.5
 	o lincity-ng-2.0
 	o linphone-3.1.1
-	o lives-0.9.9.7
+	o lives-0.9.9.8
 	o llvm-2.5
 	o man-1.6f
 	o meta-tracker-0.6.94
@@ -83,7 +84,7 @@ Suggested package updates
 	o rsyslog-3.22.0
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
-	o siege-2.67
+	o siege-2.68
 	o smc-1.8
 	o spe-0.8.2a
 	o swftools-0.9.0
