@@ -1,0 +1,11 @@
+--- vars_linuxppc.orig	Mon Dec  6 18:42:47 2004
++++ vars_linuxppc	Mon May  4 11:38:40 2009
+@@ -15,6 +15,6 @@
+ AS = cc
+ PERL = perl
+ 
+-XOPTS = -I/usr/X11R6/include
+-XLIBS = -L/usr/X11R6/lib
++XOPTS = -I${X11BASE}/include
++XLIBS = -L${X11BASE}/lib
+ 

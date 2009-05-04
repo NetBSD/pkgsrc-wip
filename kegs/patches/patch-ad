@@ -1,0 +1,9 @@
+--- vars_x86linux.orig	Mon Dec  6 18:42:47 2004
++++ vars_x86linux	Mon May  4 11:39:31 2009
+@@ -15,5 +15,5 @@
+ AS = cc
+ PERL = perl
+ 
+-XOPTS = -I/usr/X11R6/include
++XOPTS = -I${X11BASE}/include
+ 
