@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/05 21:33:40 jihbed Exp $
+
+SHA1 (csp2B1.2.tar.gz) = 9644eb220c5f150168a3866268e6e00337b721ff
+RMD160 (csp2B1.2.tar.gz) = 29d4c3d787404a0cc10aa47e4cf6fa278bde959d
+Size (csp2B1.2.tar.gz) = 48681 bytes
+SHA1 (patch-aa) = 467f89f96d21dfcc52494b4e95337ec695fb335c

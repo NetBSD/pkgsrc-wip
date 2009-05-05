@@ -1,0 +1,8 @@
+The csp2B tool provides a means of combining CSP-like descriptions
+with standard B specifications. The notation of CSP provides a convenient
+way of describing the order in which the operations of a B machine may occur.
+The function of the tool is to convert CSP-like specifications into standard
+machine-readable B specifications which means that they may be animated
+and appropriate proof obligations may be generated. Use of csp2B means that
+abstract specifications and refinements may be specified purely using CSP
+or using a combination of CSP and B
