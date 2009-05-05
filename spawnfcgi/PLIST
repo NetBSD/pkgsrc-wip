@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 15:51:24 mjoellnir Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/05 19:29:37 mjoellnir Exp $
 bin/spawn-fcgi
 man/man1/spawn-fcgi.1
 share/examples/rc.d/spawnfcgi
@@ -6,3 +6,4 @@ share/doc/spawn-fcgi/AUTHORS
 share/doc/spawn-fcgi/COPYING
 share/doc/spawn-fcgi/NEWS
 share/doc/spawn-fcgi/README
+@dirrm share/doc/spawn-fcgi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/29 15:51:24 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/05 19:29:37 mjoellnir Exp $
 #
 
 DISTNAME=	spawn-fcgi-1.6.2
@@ -17,18 +17,16 @@ CONFLICTS=       lighttpd<1.4.23
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+= --libdir=${PREFIX}/lib/${PKGBASE}
 
 DOCDIR=                 ${PREFIX}/share/doc/${PKGBASE}
-EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
 PKG_SYSCONFSUBDIR=      ${PKGBASE}
 
 RCD_SCRIPTS=            spawnfcgi
 
-INSTALLATION_DIRS=      ${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS=      ${DOCDIR}
 
 post-install:
-	cd ${WRKSRC}; for f in AUTHORS COPYING ChangeLog NEWS README; do	\
+	cd ${WRKSRC}; for f in AUTHORS COPYING NEWS README; do	\
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${DOCDIR};		\
 	done
 
