@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3407 2009/05/05 21:05:57 msorc Exp $
+# $Id: Makefile,v 1.3408 2009/05/05 21:35:37 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -239,6 +239,7 @@ SUBDIR+=	crfpp
 SUBDIR+=	crm114
 SUBDIR+=	cryptcat
 SUBDIR+=	csoap
+SUBDIR+=	csp2b
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
 SUBDIR+=	cups-driver-Magicolor5440DL
