@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/05/06 09:14:41 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 09:25:32 cheusov Exp $
 
 BUILDLINK_TREE+=	boinc-lib
+
+.if !defined(BOINC_LIB_BUILDLINK3_MK)
+BOINC_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.boinc-lib+=	boinc-lib>=1
 BUILDLINK_PKGSRCDIR.boinc-lib?=	../../wip/boinc-lib
@@ -13,5 +16,7 @@ BUILDLINK_PKGSRCDIR.boinc-lib?=	../../wip/boinc-lib
 # XXX
 #.include "../../www/curl/buildlink3.mk"
 #.include "../../security/openssl/buildlink3.mk"
+
+.endif # BOINC_LIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-boinc-lib

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/05/06 09:15:15 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/05/06 09:27:04 cheusov Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.12.
 # XXX After this file has been verified as correct, the comment lines
@@ -12,6 +12,9 @@
 
 BUILDLINK_TREE+=	glib-java
 
+.if !defined(GLIB_JAVA_BUILDLINK3_MK)
+GLIB_JAVA_BUILDLINK3_MK:=
+
 BUILDLINK_API_DEPENDS.glib-java+=	glib-java>=0.2.5
 BUILDLINK_PKGSRCDIR.glib-java?=	../../wip/glib-java
 
@@ -22,5 +25,7 @@ BUILDLINK_PKGSRCDIR.glib-java?=	../../wip/glib-java
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../devel/glib2/buildlink3.mk"
+
+.endif # GLIB_JAVA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-glib-java
