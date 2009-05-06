@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/06 06:27:08 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/06 06:31:35 mjoellnir Exp $
 #
 
 DISTNAME=	spawn-fcgi-1.6.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	vs@nifelheim.info
 HOMEPAGE=	http://redmine.lighttpd.net/projects/spawn-fcgi
 COMMENT=	Spawns FCGI-Processes and runs with priviledge separation
-LICENSE=        generic-nonlicense
+LICENSE=        modified-bsd
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
