@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 10:24:46 cheusov Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -11,6 +11,9 @@
 # XXX	BUILDLINK_DEPMETHOD.libticables?=	build
 
 BUILDLINK_TREE+=	libticables
+
+.if !defined(LIBTICABLES_BUILDLINK3_MK)
+LIBTICABLES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libticables+=	libticables>=3.7.6
 BUILDLINK_PKGSRCDIR.libticables?=	../../wip/libticables
