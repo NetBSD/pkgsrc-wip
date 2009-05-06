@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:40 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/05/06 09:37:52 cheusov Exp $
 
 BUILDLINK_TREE+=	DirectFB
+
+.if !defined(DIRECTFB_BUILDLINK3_MK)
+DIRECTFB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.DirectFB+=	directfb>=0.9.17
 BUILDLINK_ABI_DEPENDS.DirectFB?=	directfb>=0.9.22nb1
