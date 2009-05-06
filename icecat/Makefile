@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/08 16:26:40 yhardy Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/06 13:57:01 yhardy Exp $
 
 MOZILLA=		icecat
 MOZILLA_BIN=		icecat-bin
@@ -21,7 +21,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.4
 .include "../../www/firefox/Makefile-firefox.common"
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-MOZ_VER=		3.0.8
+MOZ_VER=		3.0.10
 MOZILLA_BIN=		icecat-bin
 
 DISTNAME=		icecat-${MOZ_VER}-g1
