@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:43:43 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/05/06 10:47:32 cheusov Exp $
 
 BUILDLINK_TREE+=	jdk14
+
+.if !defined(JDK14_BUILDLINK3_MK)
+JDK14_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.jdk14+=	jdk14>=1.4.2.6
 BUILDLINK_PKGSRCDIR.jdk14?=	../../wip/jdk14

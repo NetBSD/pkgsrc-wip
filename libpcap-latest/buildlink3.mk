@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:48 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/05/06 10:47:32 cheusov Exp $
 
 BUILDLINK_TREE+=	libpcap
+
+.if !defined(LIBPCAP_BUILDLINK3_MK)
+LIBPCAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.3
 BUILDLINK_PKGSRCDIR.libpcap?=	../../wip/libpcap-latest

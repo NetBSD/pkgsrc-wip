@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:49 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 10:47:33 cheusov Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -11,6 +11,9 @@
 # XXX	BUILDLINK_DEPMETHOD.lirc?=	build
 
 BUILDLINK_TREE+=	lirc
+
+.if !defined(LIRC_BUILDLINK3_MK)
+LIRC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lirc+=	lirc>=0.8.0
 BUILDLINK_PKGSRCDIR.lirc?=	../../wip/lirc

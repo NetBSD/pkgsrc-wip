@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:43:42 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/05/06 10:47:32 cheusov Exp $
 
 BUILDLINK_TREE+=	gtkglk
+
+.if !defined(GTKGLK_BUILDLINK3_MK)
+GTKGLK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkglk+=	gtkglk>=0.2
 BUILDLINK_ABI_DEPENDS.gtkglk?=	gtkglk>=0.2nb1
