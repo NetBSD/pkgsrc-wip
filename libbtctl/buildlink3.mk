@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:44 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 10:04:24 cheusov Exp $
 
 BUILDLINK_TREE+=	libbtctl
+
+.if !defined(LIBBTCTL_BUILDLINK3_MK)
+LIBBTCTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbtctl+=	libbtctl>=0.4.1
 BUILDLINK_PKGSRCDIR.libbtctl?=	../../wip/libbtctl

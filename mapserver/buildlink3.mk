@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:49 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/05/06 10:03:40 cheusov Exp $
 
 BUILDLINK_TREE+=	mapserver
+
+.if !defined(MAPSERVER_BUILDLINK3_MK)
+MAPSERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mapserver+=	mapserver>=4.4.2
 BUILDLINK_PKGSRCDIR.mapserver?=	../../wip/mapserver

@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:48 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 10:01:55 cheusov Exp $
 
 BUILDLINK_TREE+=	liblingoteach
+
+.if !defined(LIBLINGOTEACH_BUILDLINK3_MK)
+LIBLINGOTEACH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblingoteach+=	liblingoteach>=0.2.1
 BUILDLINK_PKGSRCDIR.liblingoteach?=	../../wip/liblingoteach

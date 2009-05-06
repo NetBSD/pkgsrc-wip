@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:43 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/05/06 09:58:42 cheusov Exp $
 
 BUILDLINK_TREE+=	kaffe
+
+.if !defined(KAFFE_BUILDLINK3_MK)
+KAFFE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kaffe+=	kaffe>=1.1.4nb2
 BUILDLINK_ABI_DEPENDS.kaffe+=	kaffe>=1.1.4nb4

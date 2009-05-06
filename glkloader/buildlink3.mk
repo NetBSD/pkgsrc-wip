@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:41 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/05/06 09:51:29 cheusov Exp $
 
 BUILDLINK_TREE+=	glkloader
+
+.if !defined(GLKLOADER_BUILDLINK3_MK)
+GLKLOADER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glkloader+=	glkloader>=0.3.2
 BUILDLINK_PKGSRCDIR.glkloader?=	../../wip/glkloader

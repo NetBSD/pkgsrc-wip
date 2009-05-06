@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:43:49 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/05/06 10:02:47 cheusov Exp $
 
 BUILDLINK_TREE+=	mingw-gcc
+
+.if !defined(MINGW_GCC_BUILDLINK3_MK)
+MINGW_GCC_BUILDLINK3_MK:=
 
 .include "../../wip/mingw/Makefile.common"
 

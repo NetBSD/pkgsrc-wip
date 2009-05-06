@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:44 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/05/06 10:15:50 cheusov Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.2.
 # XXX After this file as been verified as correct, the comment lines
@@ -6,6 +6,9 @@
 # XXX unverified buildlink[23].mk files.
 
 BUILDLINK_TREE+=	kyra
+
+.if !defined(KYRA_BUILDLINK3_MK)
+KYRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kyra+=	kyra>=1.6.5
 BUILDLINK_ABI_DEPENDS.kyra?=	kyra>=1.6.5nb1

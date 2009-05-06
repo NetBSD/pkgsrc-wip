@@ -1,8 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:52 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/05/06 10:16:43 cheusov Exp $
 
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_TREE+=	pyvisionegg
+
+.if !defined(PY_VISIONEGG_BUILDLINK3_MK)
+PY_VISIONEGG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pyvisionegg+=	${PYPKGPREFIX}-visionegg>=0.9.9
 BUILDLINK_ABI_DEPENDS.pyvisionegg?=	${PYPKGPREFIX}-visionegg>=0.9.9nb1

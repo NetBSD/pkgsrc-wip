@@ -1,6 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:51 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/05/06 09:56:03 cheusov Exp $
 
 BUILDLINK_TREE+=	openvrml
+
+.if !defined(OPENVRML_BUILDLINK3_MK)
+OPENVRML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openvrml+=	openvrml>=0.14.3
 BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
