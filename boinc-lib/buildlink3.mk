@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:39 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/05/06 09:14:41 cheusov Exp $
 
 BUILDLINK_TREE+=	boinc-lib
 
@@ -13,6 +13,5 @@ BUILDLINK_PKGSRCDIR.boinc-lib?=	../../wip/boinc-lib
 # XXX
 #.include "../../www/curl/buildlink3.mk"
 #.include "../../security/openssl/buildlink3.mk"
-.endif # BOINC_LIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-boinc-lib
