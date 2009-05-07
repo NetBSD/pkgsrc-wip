@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3409 2009/05/06 10:32:43 jihbed Exp $
+# $Id: Makefile,v 1.3410 2009/05/07 01:35:25 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -889,6 +889,7 @@ SUBDIR+=	kegs
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
+SUBDIR+=	kmldonkey
 SUBDIR+=	knutclient
 SUBDIR+=	koha
 SUBDIR+=	korelib
