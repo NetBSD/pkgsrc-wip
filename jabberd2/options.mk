@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2009/04/28 13:17:46 schnoebe Exp $
+# $NetBSD: options.mk,v 1.10 2009/05/07 09:56:27 moubctez Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--enable-db
 PLIST.db=		yes
 BDB_ACCEPTED=		db4
 BUILDLINK_TRANSFORM+=	l:db:db4
-.  include "../../mk/bdb.buildlink3.mk"
+.  include "../../databases/db4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-db
 .endif
