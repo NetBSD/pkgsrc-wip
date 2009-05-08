@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3412 2009/05/08 20:56:09 cheusov Exp $
+# $Id: Makefile,v 1.3413 2009/05/08 21:01:14 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1937,7 +1937,6 @@ SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-collection-basicbin
 SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-leaflet
-SUBDIR+=	tex-metafont
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
