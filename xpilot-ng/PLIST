@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/02 19:50:08 pulahti Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/08 22:13:45 cheusov Exp $
 bin/xpilot-ng-replay
 bin/xpilot-ng-sdl
 bin/xpilot-ng-server
 bin/xpilot-ng-x11
 bin/xpilot-ng-xp-mapedit
+man/man6/xpilot-ng-replay.6
+man/man6/xpilot-ng-sdl.6
+man/man6/xpilot-ng-server.6
+man/man6/xpilot-ng-x11.6
+man/man6/xpilot-ng-xp-mapedit.6
 share/xpilot-ng/defaults.txt
 share/xpilot-ng/fonts/ConsoleFont.bmp
 share/xpilot-ng/fonts/FreeSansBoldOblique.ttf
 share/xpilot-ng/fonts/VeraMoBd.ttf
+share/xpilot-ng/mapconvert.py
 share/xpilot-ng/maps/blood-music.xp2
 share/xpilot-ng/maps/circle2.xp2
 share/xpilot-ng/maps/dodgers-legacy.xp2
@@ -20,10 +26,11 @@ share/xpilot-ng/maps/polybloods7.xp2
 share/xpilot-ng/maps/sadistic_bastard_v2.xp2
 share/xpilot-ng/maps/spaceball-0.1.xp2
 share/xpilot-ng/maps/spaceball-0.2.xp2
-share/xpilot-ng/maps/tourmination.xp2
 share/xpilot-ng/maps/teamcup.xp
+share/xpilot-ng/maps/tourmination.xp2
 share/xpilot-ng/password.txt
 share/xpilot-ng/robots.txt
+share/xpilot-ng/shipshapes.txt
 share/xpilot-ng/textures/acwise_grav.ppm
 share/xpilot-ng/textures/allitems.ppm
 share/xpilot-ng/textures/asteroid.ppm
@@ -93,11 +100,7 @@ share/xpilot-ng/textures/wall_ull.ppm
 share/xpilot-ng/textures/wall_ur.ppm
 share/xpilot-ng/textures/wall_url.ppm
 share/xpilot-ng/textures/wormhole.ppm
-man/man6/xpilot-ng-sdl.6
-man/man6/xpilot-ng-x11.6
-man/man6/xpilot-ng-server.6
-man/man6/xpilot-ng-replay.6
+@dirrm share/xpilot-ng
 @dirrm share/xpilot-ng/fonts
 @dirrm share/xpilot-ng/maps
 @dirrm share/xpilot-ng/textures
-@dirrm share/xpilot-ng
