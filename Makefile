@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3411 2009/05/08 20:51:40 cheusov Exp $
+# $Id: Makefile,v 1.3412 2009/05/08 20:56:09 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1547,7 +1547,7 @@ SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgmanager
-SUBDIR+=	pkgpm
+#SUBDIR+=	pkgpm # not a package yet
 SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
