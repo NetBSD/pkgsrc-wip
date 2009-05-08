@@ -2,8 +2,8 @@ This package provides a simple framework for testing Boost
 (http://www.boost.org/).  Once installed, the entire Boost test suite
 may be run as follows, ideally on a regular basis.
 
-   @PREFIX@/sbin/boost-test-suite
-   @PREFIX@/sbin/boost-test-suite -p	# run unpatched tests
+   PREFIX/sbin/boost-test-suite
+   PREFIX/sbin/boost-test-suite -p	# run unpatched tests
 
 This script takes care of downloading the necessary Boost test script
 and running it with parameters appropriate for simple testing

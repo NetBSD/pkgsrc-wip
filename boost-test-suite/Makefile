@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/09 01:18:38 jsonn Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/08 20:50:16 cheusov Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -22,12 +22,10 @@ BOOST_TEST_BASEDIR?=	/var/boost
 
 CHECK_PERMS=		no
 NO_BUILD=		yes
-DESCR_SRC=		${WRKSRC}/DESCR
 
 SUBST_CLASSES+=			fix-files
 SUBST_STAGE.fix-files=		pre-configure
 SUBST_MESSAGE.fix-files=	Customizing files
-SUBST_FILES.fix-files+=		DESCR
 SUBST_FILES.fix-files+=		boost-test-suite boost-test-suite.1
 SUBST_FILES.fix-files+=		comment.html.in patch_boost
 
@@ -66,7 +64,6 @@ PATCHES+=			index patch-aa
 
 do-extract:
 	${MKDIR} -p ${WRKSRC} ${WRKSRC}/patches
-	${CP} DESCR ${WRKSRC}
 .for f in ${FILES}
 	${CP} ${FILESDIR}/${f} ${WRKSRC}
 .endfor
