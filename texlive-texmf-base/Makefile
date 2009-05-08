@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/07 09:42:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/08 21:04:34 cheusov Exp $
 
 DISTNAME=	texlive-20080822-texmf
 PKGNAME=	texlive-texmf-base-2008
@@ -12,8 +12,8 @@ COMMENT=	Essential texmf files of TeX Live
 
 CONFLICTS+=	tetex-texmf-[0-9]*
 DEPENDS+=	tex-bin-tetex-[0-9]*:../../print/tex-bin-tetex
-DEPENDS+=	tex-metafont-[0-9]*:../../wip/tex-metafont
-DEPENDS+=	tex-plain-[0-9]*:../../wip/tex-plain
+DEPENDS+=	tex-metafont-[0-9]*:../../fonts/tex-metafont
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 			${DISTNAME}/texmf-dist/fonts \
