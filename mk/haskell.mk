@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.9 2009/02/10 08:30:07 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.10 2009/05/09 21:57:59 emil_s Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -44,6 +44,13 @@
 #       Default value:
 #           yes
 #
+#    HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+#        Description:
+#            Whether haddock documentation should be built or not.
+#        Possible values:
+#            yes, no
+#        Default value:
+#            no
 
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
@@ -93,15 +100,20 @@ _PKG_VARS.haskell= \
 
 
 # Default value of MASTER_SITES.
-_DISTBASE?=		${DISTNAME:C/-[^-]*$//}
+_DISTBASE?=	${DISTNAME:C/-[^-]*$//}
 _DISTVERSION?=	${DISTNAME:C/^.*-//}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${_DISTBASE}/${_DISTVERSION}/}
 
 # Default value of HOMEPAGE.
-HOMEPAGE?=		http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
+HOMEPAGE?=	http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
+
+USE_TOOLS+=	pkg-config
 
 # Default value of HASKELL_ENABLE_LIBRARY_PROFILING
-HASKELL_ENABLE_LIBRARY_PROFILING?= yes
+HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
+
+# Default value of HASKELL_ENABLE_HADDOCK_DOCUMENTATION
+HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
 
 # Compiler specific variables and targets.
 .if ${HASKELL_TYPE} == "ghc"
@@ -110,7 +122,7 @@ HASKELL_ENABLE_LIBRARY_PROFILING?= yes
 .include "../../lang/ghc/buildlink3.mk"
 
 # Tools
-_GHC_BIN=			${PREFIX}/bin/ghc
+_GHC_BIN=		${PREFIX}/bin/ghc
 _GHC_PKG_BIN=		${PREFIX}/bin/ghc-pkg
 _RUNGHC_BIN=		${PREFIX}/bin/runghc
 _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
@@ -130,12 +142,22 @@ CONFIGURE_ARGS+=	--ghc
 CONFIGURE_ARGS+=	--with-compiler=${_GHC_BIN}
 CONFIGURE_ARGS+=	--with-hc-pkg=${_GHC_PKG_BIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-
 .endif # ${HASKELL_TYPE}
 
 # Library profiling
+PLIST_VARS+=		prof
 .if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
 CONFIGURE_ARGS+=	-p
+PLIST.prof=		yes
+.endif
+
+
+# Haddock documentations
+PLIST_VARS+=		doc
+.if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
+.include "../../wip/hs-haddock/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-haddock=${PREFIX}/bin/haddock
+PLIST.doc=		yes
 .endif
 
 # Optimization
@@ -164,7 +186,10 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && \
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} build
-
+.if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
+	cd ${WRKSRC} && \
+		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} haddock
+.endif
 # Define install target. We need installed-pkg-config to be installed
 # for package registration (if any).
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
@@ -192,7 +217,7 @@ FILES_SUBST+=	HASKELL_PKG_DESCR_FILE=${_HASKELL_PKG_DESCR_FILE}
 
 # INSTALL_TEMPLATES+=	../../mk/haskell/INSTALL.in
 # DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
-INSTALL_TEMPLATES+=		../../wip/mk/haskell/INSTALL.in
+INSTALL_TEMPLATES+=	../../wip/mk/haskell/INSTALL.in
 DEINSTALL_TEMPLATES+=	../../wip/mk/haskell/DEINSTALL.in
 
 
