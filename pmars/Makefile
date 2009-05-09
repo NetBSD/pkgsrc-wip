@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 11:23:12 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/09 10:01:13 cheusov Exp $
 #
 
 DISTNAME=		pmars-0_8_6_tar
@@ -15,14 +15,22 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		pkg-config gmake
 MAKE_FILE=		makefile
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pmars ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pmars/
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/pmars/
-	${INSTALL_DATA} ${WRKSRC}/CONTRIB ${PREFIX}/share/pmars/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pmars/warriors
-	${INSTALL_DATA} ${WRKSRC}/*.red ${PREFIX}/share/pmars/warriors/
-	${INSTALL_MAN} ${WRKSRC}/pmars.6 ${PREFIX}/${PKGMANDIR}/man6
+.include "../../mk/bsd.prefs.mk"
 
-.include "../../mk/x11.buildlink3.mk"
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD" && ${OPSYS} != "SunOS"
+BUILD_DEPENDS+=		ex-[0-9]*:../../editors/ex
+.endif
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS+=	share/pmars share/pmars/warriors ${PKGMANDIR}/man6
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/pmars ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/pmars/
+	${INSTALL_DATA} ${WRKSRC}/CONTRIB ${DESTDIR}${PREFIX}/share/pmars/
+	${INSTALL_DATA} ${WRKSRC}/*.red ${DESTDIR}${PREFIX}/share/pmars/warriors/
+	${INSTALL_MAN} ${WRKSRC}/pmars.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
