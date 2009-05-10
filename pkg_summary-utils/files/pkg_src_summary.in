@@ -212,7 +212,6 @@ mkdir -m 700 "$tmp_dir"
 tmpfn=$tmp_dir/pkgdirs2info.txt
 errsfn=$tmp_dir/errors.txt
 summaryfn=$tmp_dir/summary.txt
-tempsummaryfn=$tmp_dir/temp_summary.txt
 real_plistfn=$tmp_dir/real_plist.txt
 multi_pkgs_fn=$tmp_dir/multi_pkgs.txt
 normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
@@ -388,21 +387,9 @@ process_one_by_one (){
 	done
 
 	if test "$slave"; then
-	    echo '' # for paexec
+	    printf 'success\n\n' # for paexec
 	fi
     done
-}
-
-add_NR (){
-    awk '{print NR, $0}'
-}
-
-rem_two_first_tokens (){
-    awk '{$1 = $2 = ""; print substr($0, 3)}'
-}
-
-restore_order (){
-    runpipe0 add_NR '|' sort -k2n -k1n '|' rem_two_first_tokens
 }
 
 ############################################################
@@ -415,10 +402,10 @@ if test "$PSS_SLAVES"; then
 
     runpipe0 \
 	packages2stdout $pkgpaths '|' \
-	paexec -l -n "$PSS_SLAVES" -t "$PSS_TRANSPORT" \
-	   -c "env $environ $0 -s -f '$qfields'" > "$tempsummaryfn"
-
-    restore_order < "$tempsummaryfn" > "$partial_summary_fn"
+	paexec -slez $PSS_PAEXEC_EXTRA_OPTS -n "$PSS_SLAVES" \
+	    -t "$PSS_TRANSPORT" \
+	-c "env $environ $0 -s -f '$qfields'" '|' \
+	paexec_reorder -s > "$partial_summary_fn"
 elif test "$slave"; then
     process_one_by_one
     exit 0
