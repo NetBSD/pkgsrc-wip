@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/04/09 01:11:32 jsonn Exp $
+# $NetBSD: Makefile,v 1.28 2009/05/10 10:04:12 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -25,6 +25,8 @@ CONFLICTS+=	pkg_summary4view-[0-9]*
 .include "../../wip/pkg_summary-utils/files/Makefile.version"
 
 TEST_TARGET=		test
+
+NO_CHECKSUM=		yes
 
 USE_BSD_MAKEFILE=	yes
 USE_LANGUAGES=		#empty

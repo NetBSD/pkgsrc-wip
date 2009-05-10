@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/09 01:01:52 jsonn Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/10 10:05:29 cheusov Exp $
 
 DISTNAME=	pkg_conflicts-0.4.0
 CATEGORIES=	pkgtools
@@ -17,6 +17,7 @@ USE_LANGUAGES=		#empty
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+NO_CHECKSUM=		yes
 NO_BUILD=		yes
 
 INSTALLATION_DIRS+=	bin
