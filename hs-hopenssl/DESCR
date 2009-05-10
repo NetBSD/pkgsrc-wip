@@ -1,0 +1,5 @@
+Foreign-function bindings to the OpenSSL library
+<http://www.openssl.org/>. Currently provides
+access to the messages digests MD2, MD5, SHA,
+SHA1, DSS, DSS1, and RIPEMD160 through the
+EVP digest interface.

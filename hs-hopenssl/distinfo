@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/10 00:18:41 emil_s Exp $
+
+SHA1 (hopenssl-1.2.tar.gz) = ec82dbeecb5ce0d5b1edbd1f3d830b36e229e935
+RMD160 (hopenssl-1.2.tar.gz) = 13d598f849245182db255927d41a9f85fe998ad0
+Size (hopenssl-1.2.tar.gz) = 4474 bytes
