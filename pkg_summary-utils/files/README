@@ -1,4 +1,10 @@
-Just a few words about tools included to pkg_summary-utils
+pkg_summary-utils is a collection of tools designed to handle summary
+files about pkgsrc (http://www.pkgsrc.org) packages, both binary
+summaries (pkg_summary(5)) and source summaries.
+Despite orientation on pkgsrc, most(all?) scripts are
+rather universal and can be adapted for othe packaging systems.
+
+Just a few words about the included tools.
 
 =================================================================
 
@@ -21,6 +27,10 @@ pkg_summary(5) and pkg_src_summary (the same but for pkgsrc tree).
                             of packages
    pkg_grep_summary       - output summaries about packages that matches
                             the specified condition.
+   pkg_cleanup_distdir    - cleanups directory with binary packages,
+                            that is remove all binaries absent
+                            in input summary.
+   pkg_uniq_summary       - filters out repeated package summaries.
 
 =================================================================
 
