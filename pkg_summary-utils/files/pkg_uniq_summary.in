@@ -21,32 +21,26 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+############################################################
+
+#env "LC_ALL=C"
+
 #use "alt_getopt.awk"
 #use "abort.awk"
+#use "power_getopt.awk"
 
 ############################################################
-function usage (){
-	printf "\
-pkg_uniq_summary - filter out repeated summaries\n\
-   Summaries are compared by (PKGPATH, PKGBASE, ASSIGNMENTS) triple.\n\
-usage: pkg_uniq_summary -h\n\
-       pkg_uniq_summary [OPTIONS] [files...]\n\
-OPTIONS:\n\
-  -h|--help            display this help\n\
-" > "/dev/stderr"
-}
+#.begin-str help
+# pkg_uniq_summary - filter out repeated summaries.
+#   Summaries are compared by (PKGPATH, PKGBASE, ASSIGNMENTS) triple.
+# usage: pkg_uniq_summary -h
+#       pkg_uniq_summary [OPTIONS] [files...]
+# OPTIONS:
+#   -h|--help            display this help
+#.end-str
+############################################################
 
 BEGIN {
-	long_opts ["help"] = "h"
-	while (getopt("h")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else{
-			abort()
-		}
-	}
-
 	skip       = 0
 	line_count = 0
 }

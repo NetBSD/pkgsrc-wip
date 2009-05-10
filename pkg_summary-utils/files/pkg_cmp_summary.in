@@ -23,50 +23,38 @@
 
 ############################################################
 
+#env "LC_ALL=C"
+
 #use "pkgsrc-dewey.awk"
-#use "alt_getopt.awk"
+#use "power_getopt.awk"
 
 ############################################################
-function usage (){
-	printf "\
-pkg_cmp_summary - compares two summary files\n\
-usage: pkg_cmp_summary -h\n\
-       pkg_cmp_summary [OPTIONS] summary1 summary2\n\
-OPTIONS:\n\
-  -h|--help            display this help\n\
-  -p|--with-pkgpath    use PKGPATH:PKGBASE pair for identifing a package\n\
-  -c|--use-checksum    also use CVS_CHECKSUM field in comparing packages\n\
-  -m|--multi           support multi-variant packages, that is packages\n\
-                        with building options in PKGPATH section\n\
-  -P|--pkgpath         use PKGPATH only for comparison, ignore PKGNAME\n\
-" > "/dev/stderr"
-}
+#.begin-str help
+# pkg_cmp_summary - compares two summary files
+# usage: pkg_cmp_summary -h
+#        pkg_cmp_summary [OPTIONS] summary1 summary2
+# OPTIONS:
+#   -h|--help            display this help
+#   -p|--with-pkgpath    use PKGPATH:PKGBASE pair for identifing a package
+#   -c|--use-checksum    also use CVS_CHECKSUM field in comparing packages
+#   -m|--multi           support multi-variant packages, that is packages
+#                         with building options in PKGPATH section
+#   -P|--pkgpath         use PKGPATH only for comparison, ignore PKGNAME
+#.end-str
+############################################################
 
 BEGIN {
 	with_pkgname = 1
 
-	long_opts ["help"]         = "h"
-	long_opts ["with-pkgpath"] = "p"
-	long_opts ["use-checksum"] = "c"
-	long_opts ["multi"]        = "m"
-
-	while (getopt("hpcmP")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else if (optopt == "p"){
-			with_pkgpath = 1
-		}else if (optopt == "P"){
-			with_pkgpath = 1
-			with_pkgname = 0
-		}else if (optopt == "c"){
-			use_checksum = 1
-		}else if (optopt == "m"){
-			with_multivar = 1
-			with_pkgpath  = 1
-		}else{
-			abort()
-		}
+	with_pkgpath = getarg("p")
+	use_checksum = getarg("c")
+	if (getarg("P")){
+		with_pkgpath = 1
+		with_pkgname = 0
+	}
+	if (getarg("m")){
+		with_multivar = 1
+		with_pkgpath  = 1
 	}
 
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);

@@ -21,29 +21,22 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+############################################################
+
+#env "LC_ALL=C"
+
 #use "alt_getopt.awk"
 #use "abort.awk"
+#use "power_getopt.awk"
 
-function usage (){
-	printf "\
-pkg_summary4view - converts pkg_summary(5) to human readable format\n\
-usage: pkg_summary4view [OPTIONS] [files...]\n\
-OPTIONS:\n\
-  -h|--help            display this help\n\
-" > "/dev/stderr"
-}
-
-BEGIN {
-	long_opts ["help"] = "h"
-	while (getopt("h")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else{
-			abort()
-		}
-	}
-}
+############################################################
+#.begin-str help
+# pkg_summary4view - converts pkg_summary(5) to human readable format
+# usage: pkg_summary4view [OPTIONS] [files...]
+# OPTIONS:
+#   -h|--help            display this help
+#.end-str
+############################################################
 
 function spaces (n,            ret){
 	ret = ""

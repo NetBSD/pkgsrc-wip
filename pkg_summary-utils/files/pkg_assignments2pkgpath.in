@@ -23,32 +23,20 @@
 
 ############################################################
 
-#use "alt_getopt.awk"
+#env "LC_ALL=C"
+
+#use "power_getopt.awk"
 #use "abort.awk"
 
 ############################################################
-function usage (){
-	printf "\
-pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH\n\
-usage: pkg_assignments2pkgpath -h|--help\n\
-       pkg_assignments2pkgpath [OPTIONS] [files...]\n\
-OPTIONS:\n\
-  -h|--help            display this help\n\
-" > "/dev/stderr"
-}
-
-BEGIN {
-	long_opts ["help"] = "h"
-
-	while (getopt("h")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else{
-			abort()
-		}
-	}
-}
+#.begin-str help
+# pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH
+# usage: pkg_assignments2pkgpath -h|--help\n\
+#        pkg_assignments2pkgpath [OPTIONS] [files...]
+# OPTIONS:
+#   -h|--help            display this help
+#.end-str
+############################################################
 
 $0 ~ /^PKGPATH=/ {
 	pkgpath = $0

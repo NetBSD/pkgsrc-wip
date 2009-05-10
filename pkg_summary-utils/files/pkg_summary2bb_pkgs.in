@@ -21,40 +21,34 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+############################################################
+
+#env "LC_ALL=C"
+
 #use "alt_getopt.awk"
 #use "abort.awk"
 #use "xgetline.awk"
 #use "xclose.awk"
 #use "min.awk"
+#use "power_getopt.awk"
 
 ############################################################
-function usage (){
-	printf "\
-pkg_summary2bb_pkgs - extracts summaries for packages\n\
-   ready for bulk build (bb in the script name).\n\
-   That is, summaries for packages with not empty ASSIGNMENTS\n\
-   are removed if their PKGNAME (binary package basename) do not depend\n\
-   on ASSIGNMENTS.\n\
-   Input summary must be pkg_uniq_summary'ed!\n\
-   Duplications on input are not allowed\n\
-usage: pkg_summary2bb_pkgs -h\n\
-       pkg_summary2bb_pkgs [OPTIONS] file1 [file2...]\n\
-OPTIONS:\n\
-  -h|--help            display this help\n\
-" > "/dev/stderr"
-}
+#.begin-str help
+# pkg_summary2bb_pkgs - extracts summaries for packages
+#   ready for bulk build (bb in the script name).
+#   That is, summaries for packages with not empty ASSIGNMENTS
+#   are removed if their PKGNAME (binary package basename) do not depend
+#   on ASSIGNMENTS.
+#   Input summary must be pkg_uniq_summary'ed!
+#   Duplications on input are not allowed
+# usage: pkg_summary2bb_pkgs -h
+#       pkg_summary2bb_pkgs [OPTIONS] file1 [file2...]
+# OPTIONS:
+#   -h|--help            display this help
+#.end-str
+############################################################
 
 BEGIN {
-	long_opts ["help"] = "h"
-	while (getopt("h")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else{
-			abort()
-		}
-	}
-
 	# find problematic packages
 	for (i=1; i < ARGC; ++i){
 		if (ARGV [i] == "") continue
