@@ -1,4 +1,20 @@
 ----------------------------------------------------------------------
+Version 0.29.0, by Aleksey Cheusov, Sun, 10 May 2009 23:00:18 +0300
+
+  - pkg_src_summary:
+
+     pkg_src_summary is now also fault-tolerant just like wip/distbb.
+     paexec(1) child process is now run with -slez options.
+     Additional options may also be passed to paexec(1) through
+     PSS_PAEXEC_EXTRA_OPTS environment variable.
+
+  - pkg_assignments2pkgpath, pkg_cmp_summary, pkg_summary2bb_pkgs,
+    pkg_summary4view.in and pkg_uniq_summary.in:
+
+    All these scripts use latest power_getopt.awk module.
+    This make arguments handling code cleaner, simplier and shorter.
+
+----------------------------------------------------------------------
 Version 0.28.0, by Aleksey Cheusov, Wed,  1 Apr 2009 12:52:57 +0300
 
   - pkg_src_summary
