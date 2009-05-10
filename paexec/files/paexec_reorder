@@ -1,0 +1,74 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2009 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#env "LC_ALL=C"
+
+#use "alt_assert.awk"
+#use "power_getopt.awk"
+
+#.begin-str help
+# paexec_reorder - takes output of 'paexec -le' on input and outputs
+#     results in normal order, that is one full task,
+#     then another full task etc. without "slicing"
+# usage: paexec_reorder [OPTIONS]
+# OPTIONS:
+#    -h|--help                  display this help
+#    -s                         remove leading space
+#.end-str
+
+BEGIN {
+	bad_input_msg = "bad input, did you run paexec -sle?"
+	remove_spc = getarg("s")
+}
+
+{
+	assert(NF > 0 && $0 ~ /^[0-9]+ /, bad_input_msg "1")
+}
+
+$0 ~ /^[0-9]+ $/ {
+	if (status [$1] == "success" || status [$1] == "failure"){
+		cnt = count [$1]
+		for (i=1; i < cnt; ++i){
+			print line [$1, i]
+			delete line [$1, i]
+		}
+		count [$1] = 0
+	}else if (status [$1] == "fatal"){
+		count [$1] = 0
+	}else{
+		abort(bad_input_msg)
+	}
+	next
+}
+
+{
+	status [$1] = $2
+
+	num = $1
+	sub(/^[0-9]+ /, "", $0)
+	cnt = ++count [num]
+
+	if (remove_spc)
+		sub(/^ /, "", $0)
+	line [num, cnt] = $0
+}

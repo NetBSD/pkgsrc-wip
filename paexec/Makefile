@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/03/12 00:58:02 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/10 12:18:16 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.13.0
+PKGREVISION=	1
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
@@ -9,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/paexec
 COMMENT=	Parallel executor, distributes tasks over network
+
+DEPENDS+=		runawk>=0.16.0:../../wip/runawk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -40,6 +43,7 @@ REPLACE_AWK+=		examples/1_div_X/1_div_X_cmd \
 REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd
 
 post-install:
+	${INSTALL_SCRIPT} ${.CURDIR}/files/paexec_reorder ${DESTDIR}${PREFIX}/bin
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
 .endfor
