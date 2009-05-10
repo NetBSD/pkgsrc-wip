@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/10 09:25:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/10 09:42:13 jihbed Exp $
 #
 
 DISTNAME=	flvmeta-1.0.8
-CATEGORIES=	wip
+CATEGORIES=	multimedia
 MASTER_SITES=	http://flvmeta.googlecode.com/files/
 
 MAINTAINER=	kamel.derouiche@gmail.com
