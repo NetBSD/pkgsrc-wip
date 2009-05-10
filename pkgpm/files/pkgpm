@@ -25,8 +25,8 @@ set -e
 
 export LC_ALL=C
 
-#pkg_info_orig=$PKG_PATH
-#unset PKG_PATH || true
+pkg_info_orig=$PKG_PATH
+unset PKG_PATH || true
 
 ######################################################################
 # temp directory
@@ -44,10 +44,34 @@ packages=/srv/pkgsrc_bin/NetBSD/All
 
 usage (){
     cat 1>&2 <<EOF
-pkgpm - check, install and update packages
-
-usage: <see PLAN file>
+pkgpm - pkgsrc package manager
+usage: pkgpm [OPTIONS]
+"Registered" packages are package explicitly marked as "Yes, I need it!".
+OPTIONS:
+          --------------------------------------------------
+   -r +<category/package>      register <category/package>
+   -r -<category/package>      unregister <category/package>
+   -rc                         register all packages currently installed
+                               and unregister all others (c - copy)
+   -ra                         register all currebntly installed packages
+                               (a - add)
+   -rl                         list all registered packages (l - list)
+   -re                         edit registered database using $EDITOR
+          --------------------------------------------------
+   -cri                        compare registered packages and those
+                               installed by user
+          --------------------------------------------------
+   -eri                        compare registered packages and those
+                               installed by user and run editor to manually
+                               register required packages. all others will
+                               be marked as "installed as a dependency".
 EOF
+}
+
+register_cleanup (){
+    awk '{sub(/#.*$/, "")} NF == 0 {next} {$1=$1; print}' $plfn |
+    sort -u > $plfn.tmp
+    mv $plfn.tmp $plfn
 }
 
 register_pkg (){
@@ -56,8 +80,8 @@ register_pkg (){
 
     if printf "%s\n" "$1" | grep '^[+]' > /dev/null; then
 	pkg=`printf "%s\n" "$1" | cut -b 2-`
-	{ echo $pkg; cat $plfn; } |
-	sort -u > $plfn.tmp && mv $plfn.tmp $plfn
+	{ echo $pkg; cat $plfn; } > $$plfn
+	register_cleanup
     elif printf "%s\n" "$1" | grep '^[-]' > /dev/null; then
 	pkg=`printf "%s\n" "$1" | cut -b 2-`
 	grep -v '^'"$pkg"'$' $plfn > $plfn.tmp && mv $plfn.tmp $plfn
@@ -84,11 +108,24 @@ NF == 0         { print pkgname "," pkgpath }
 }
 
 get_summary_installed (){
-    env PKG_PATH= pkg_info -u -X
+    pkg_info -u -X
 }
 
 register_all_pkgs (){
     get_summary_installed | summary2pkgpath > $plfn
+}
+
+register_list (){
+    cat $plfn
+}
+
+register_edit (){
+    if test -z "$EDITOR"; then
+	echo 'Set EDITOR variable!' 1>&2
+	exit 1
+    fi
+    $EDITOR $plfn
+    register_cleanup
 }
 
 get_summary_registered (){
@@ -119,7 +156,7 @@ BEGIN {
 }
 
 get_summary_installed_registered (){
-    env PKG_PATH= pkg_info -u -X |
+    env PKG_PATH= pkg_info -Xu |
     grep_summary_PKGPATH "$plfn" -
 }
 
@@ -135,13 +172,34 @@ summary2pkgpaths (){
     sed -n 's,^PKGPATH=,,p' "$@"
 }
 
-compare_cir (){
+compare_cri (){
     get_summary_installed > "$tmp_dir"/installed
 
     get_summary_registered > "$tmp_dir"/registered
 
-    pkg_cmp_summary -P "$tmp_dir"/installed "$tmp_dir"/registered |
+    pkg_cmp_summary -P "$tmp_dir"/registered "$tmp_dir"/installed |
     prepare_cmp
+}
+
+edit_ri (){
+    {
+	echo '# Uncomment packages to register them'
+	compare_cri | awk '$1 == "+" {print "# " $2}'
+    } > "$tmp_dir"/eir
+    $EDITOR "$tmp_dir"/eir
+
+    # registered uncommented
+    cat "$tmp_dir"/eir >> $plfn
+    register_cleanup
+
+    # mark others as "installed as a dependency"
+    awk '$1 == "#" {print $2}' "$tmp_dir"/eir |
+    while read pkgpath; do
+	pkgname=`pkg_grep_summary -s PKGPATH "$pkgpath" < "$tmp_dir"/installed | summary2pkgname`
+	if test -n "$pkgname"; then
+	    pkg_admin set automatic=YES "$pkgname"
+	fi
+    done
 }
 
 compare_cis (){
@@ -208,9 +266,13 @@ while test $# -ne 0; do
 	-rc)
 	    register_all_pkgs
 	    shift;;
+	-rl)
+	    register_list;;
+	-re)
+	    register_edit;;
 
-	-cir)
-	    compare_cir;;
+	-cri)
+	    compare_cri;;
 	-cib)
 	    compare_cib;;
 	-cis)
@@ -224,6 +286,9 @@ while test $# -ne 0; do
 
 	-ib)
 	    install_ib;;
+
+	-eri)
+	    edit_ri;;
 
 	--)
 	    shift
