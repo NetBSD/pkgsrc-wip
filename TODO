@@ -6,9 +6,9 @@ Suggested package updates
 	o asymptote-1.70
 	o backintime-0.9.24
 	o bakery-2.6.3
-	o bsnes-0.045
+	o bsnes-0.046
 	o bub-n-bros-1.6
-	o cclive-0.4.0
+	o cclive-0.4.2
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.14
@@ -21,7 +21,7 @@ Suggested package updates
 	o directfb-1.0.0
 	o ecasound-2.6.0
 	o editline-20090503.3.0
-	o emelfm2-0.5.0
+	o emelfm2-0.6.0
 	o endeavour-3.1.2
 	o fakenes-0.5.7
 	o firebird-2.0.3
@@ -45,7 +45,7 @@ Suggested package updates
 	o hitori-0.2.2
 	o httrack-3.43
 	o hu-go-2.11
-	o i3-3.a.bf1
+	o i3-3.bf2
 	o icc-11.0
 	o kino-1.0.0
 	o lensfun-0.2.3
@@ -67,7 +67,7 @@ Suggested package updates
 	o opal-2.2.11
 	o openmpi-1.3.2
 	o openvrml-0.17.11
-	o ortp-0.15.0
+	o ortp-0.16.0
 	o osmose-0.9.0b
 	o p5-Net-DBus-0.33.6
 	o parted-1.8.8
