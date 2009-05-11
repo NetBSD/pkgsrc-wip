@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/09 16:23:22 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/11 15:49:00 jihbed Exp $
 bin/gst-inspector
 ${PYSITELIB}/GstInspector/Data.pyc
 ${PYSITELIB}/GstInspector/Data.pyo
@@ -12,5 +12,6 @@ ${PYSITELIB}/GstInspector/utils.pyc
 ${PYSITELIB}/GstInspector/utils.pyo
 share/applications/gst-inspector.desktop
 share/locale/de/LC_MESSAGES/gst-inspector.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm ${PYSITELIB}/GstInspector
