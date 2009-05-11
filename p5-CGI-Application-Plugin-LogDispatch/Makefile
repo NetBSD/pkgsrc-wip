@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/01 23:16:38 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/11 22:28:29 ficovh Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-LogDispatch-1.02
@@ -14,7 +14,7 @@ COMMENT=	Add Log::Dispatch support to CGI::Application
 
 DEPENDS+=	p5-Log-Dispatch>=0.21:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-UNIVERSAL-require>=0:../../devel/p5-UNIVERSAL-require
-DEPENDS+=	p5-Sub-WrapPackages>=0:../wip/p5-Sub-WrapPackages
+DEPENDS+=	p5-Sub-WrapPackages>=0:../../wip/p5-Sub-WrapPackages
 
 
 PKG_DESTDIR_SUPPORTh=	user-destdir
