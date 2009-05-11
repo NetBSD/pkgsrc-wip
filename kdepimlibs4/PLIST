@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/04/15 20:49:42 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/05/11 11:27:05 mwdavies Exp $
 include/akonadi/agentbase.h
 include/akonadi/agentfilterproxymodel.h
 include/akonadi/agentinstance.h
@@ -334,10 +334,10 @@ include/syndication/specificitem.h
 include/syndication/specificitemvisitor.h
 include/syndication/syndication.h
 include/syndication/tools.h
-lib/cmake/KdepimLibs-4.2.2/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
-lib/cmake/KdepimLibs-4.2.2/KDEPimLibsLibraryTargetsWithPrefix.cmake
-lib/cmake/KdepimLibs-4.2.2/KdepimLibsConfig.cmake
-lib/cmake/KdepimLibs-4.2.2/KdepimLibsConfigVersion.cmake
+lib/cmake/KdepimLibs-4.2.3/KDEPimLibsLibraryTargetsWithPrefix-relwithdebinfo.cmake
+lib/cmake/KdepimLibs-4.2.3/KDEPimLibsLibraryTargetsWithPrefix.cmake
+lib/cmake/KdepimLibs-4.2.3/KdepimLibsConfig.cmake
+lib/cmake/KdepimLibs-4.2.3/KdepimLibsConfigVersion.cmake
 lib/gpgmepp/GpgmeppConfig.cmake
 lib/gpgmepp/GpgmeppLibraryDepends.cmake
 lib/kde4/kabc_directory.so

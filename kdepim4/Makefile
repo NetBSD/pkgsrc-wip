@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/04/29 21:29:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/11 11:27:03 mwdavies Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -52,6 +51,8 @@ SUBST_STAGE.perlfix=	pre-configure
 SUBST_MESSAGE.perlfix=	Fix perl path in cmake script
 SUBST_FILES.perlfix=	korganizer/ical2vcal.cmake
 SUBST_SED.perlfix=	-e 's:@PERL@:${PERL5}:g'
+
+BUILDLINK_DEPMETHOD.qt4-tools=full
 
 .include "../../wip/kde4/kde4.mk"
 

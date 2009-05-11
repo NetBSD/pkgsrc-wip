@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/01/28 11:25:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/05/11 11:27:01 mwdavies Exp $
 bin/dragon
 bin/juk
 bin/kmix
@@ -38,7 +38,6 @@ share/applications/kde4/juk.desktop
 share/applications/kde4/kmix.desktop
 share/applications/kde4/kscd.desktop
 share/dbus-1/interfaces/org.kde.KMix.xml
-share/dbus-1/interfaces/org.kde.juk.collection.xml
 share/dbus-1/interfaces/org.kde.juk.player.xml
 share/dbus-1/interfaces/org.kde.juk.search.xml
 share/dbus-1/interfaces/org.kde.kscd.cdplayer.xml
@@ -162,7 +161,6 @@ share/kde/config.kcfg/libkcddb.kcfg
 share/kde/config/dragonplayerrc
 share/kde4/services/ServiceMenus/audiocd_play.desktop
 share/kde4/services/ServiceMenus/dragonplayer_play_dvd.desktop
-share/kde4/services/ServiceMenus/jukservicemenu.desktop
 share/kde4/services/audiocd.desktop
 share/kde4/services/audiocd.protocol
 share/kde4/services/dragonplayer_part.desktop

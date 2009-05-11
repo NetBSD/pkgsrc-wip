@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/06 14:23:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/05/11 11:27:00 mwdavies Exp $
 man/nl/man1/fixincludes.1
 man/nl/man1/kalzium.1
 man/nl/man1/kappfinder.1
@@ -1149,6 +1149,7 @@ share/locale/nl/LC_MESSAGES/kio_floppy.mo
 share/locale/nl/LC_MESSAGES/kio_groupwise.mo
 share/locale/nl/LC_MESSAGES/kio_help4.mo
 share/locale/nl/LC_MESSAGES/kio_imap4.mo
+share/locale/nl/LC_MESSAGES/kio_info.mo
 share/locale/nl/LC_MESSAGES/kio_jabberdisco.mo
 share/locale/nl/LC_MESSAGES/kio_ldap.mo
 share/locale/nl/LC_MESSAGES/kio_man.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/03/10 11:36:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/05/11 11:27:00 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -2755,6 +2755,7 @@ share/kde/apps/ksgmltools2/customization/pl/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/pl/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/pl/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/pl/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/pl/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/pl/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/pl/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/pl/lang.entities

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/04/06 13:42:05 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/05/11 11:27:00 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -779,8 +779,13 @@ share/kde/apps/kalzium/data/iconsets/school/6.svg
 share/kde/apps/kalzium/data/iconsets/school/60.svg
 share/kde/apps/kalzium/data/iconsets/school/61.svg
 share/kde/apps/kalzium/data/iconsets/school/62.svg
+share/kde/apps/kalzium/data/iconsets/school/63.svg
+share/kde/apps/kalzium/data/iconsets/school/64.svg
+share/kde/apps/kalzium/data/iconsets/school/65.svg
+share/kde/apps/kalzium/data/iconsets/school/66.svg
 share/kde/apps/kalzium/data/iconsets/school/67.svg
 share/kde/apps/kalzium/data/iconsets/school/68.svg
+share/kde/apps/kalzium/data/iconsets/school/69.svg
 share/kde/apps/kalzium/data/iconsets/school/7.svg
 share/kde/apps/kalzium/data/iconsets/school/70.svg
 share/kde/apps/kalzium/data/iconsets/school/71.svg
@@ -2539,6 +2544,7 @@ share/kde/apps/ktouch/czech.ktouch.xml
 share/kde/apps/ktouch/danish.ktouch.xml
 share/kde/apps/ktouch/danish2.ktouch.xml
 share/kde/apps/ktouch/de.keyboard.xml
+share/kde/apps/ktouch/de_ch.keyboard.xml
 share/kde/apps/ktouch/dk.keyboard.xml
 share/kde/apps/ktouch/down.wav
 share/kde/apps/ktouch/dvorak-fr-1.ktouch.xml
@@ -2581,6 +2587,7 @@ share/kde/apps/ktouch/nederlands_junior.ktouch.xml
 share/kde/apps/ktouch/no.keyboard.xml
 share/kde/apps/ktouch/norwegian.ktouch.xml
 share/kde/apps/ktouch/polish.ktouch.xml
+share/kde/apps/ktouch/qc.keyboard.xml
 share/kde/apps/ktouch/ru-winkeys.keyboard.xml
 share/kde/apps/ktouch/ru.keyboard.xml
 share/kde/apps/ktouch/russian.ktouch.xml

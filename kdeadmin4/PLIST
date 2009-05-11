@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/05 10:26:02 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/11 11:27:00 mwdavies Exp $
 bin/kpackage
 bin/ksystemlog
 bin/kuser
 lib/kde4/kcm_cron.so
 lib/kde4/kcm_knetworkconfmodule.so
-lib/pkgconfig/system-tools-backends.pc
 share/applications/kde4/kpackage.desktop
 share/applications/kde4/ksystemlog.desktop
 share/applications/kde4/kuser.desktop

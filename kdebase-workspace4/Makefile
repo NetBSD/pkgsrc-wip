@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/04/27 18:21:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/11 11:27:00 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -64,7 +64,14 @@ RT_LIB_SCHED=	# empty
 .endif
 CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
 
+# genkdmconf wont install faces if using destdir so do it ourselves
+INSTALLATION_DIRS+= share/kde/apps/kdm/faces
+
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/kdm/kfrontend/pics/default1.png \
+		${DESTDIR}${PREFIX}/share/kde/apps/kdm/faces/.default.face.icon
+	${INSTALL_DATA} ${WRKSRC}/kdm/kfrontend/pics/root1.png \
+		${DESTDIR}${PREFIX}/share/kde/apps/kdm/faces/root.face.icon
 	${INSTALL_DATA} ${DISTDIR}/NetBSD-flag-1.0.png \
 		${DESTDIR}${PREFIX}/${ICONDIR}/NetBSD-flag.png
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${DESTDIR}${PREFIX}/${ICONDIR}
@@ -72,7 +79,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/kde/HTML/en/kdm
 .if ${OPSYS} == "NetBSD"
 	@# NetBSD Advertisement O:-)
-	cd ${DESTDIR}${PREFIX}/share/kde/config/kdm;			\
+	cd ${PREFIX}/share/kde/config/kdm;				\
 	${SED} -e 's|^\(LogoPixmap\)=.*|\1=${PREFIX}/${ICONDIR}/NetBSD-flag.png|' \
                 kdmrc > ${WRKDIR}/kdmrc.ad;				\
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc

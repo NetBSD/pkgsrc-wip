@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/06 14:23:47 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/11 11:27:00 mwdavies Exp $
 man/de/man1/adddebug.1
 man/de/man1/ark.1
 man/de/man1/cheatmake.1
@@ -1871,6 +1871,7 @@ share/locale/de/LC_MESSAGES/kio_floppy.mo
 share/locale/de/LC_MESSAGES/kio_groupwise.mo
 share/locale/de/LC_MESSAGES/kio_help4.mo
 share/locale/de/LC_MESSAGES/kio_imap4.mo
+share/locale/de/LC_MESSAGES/kio_info.mo
 share/locale/de/LC_MESSAGES/kio_jabberdisco.mo
 share/locale/de/LC_MESSAGES/kio_ldap.mo
 share/locale/de/LC_MESSAGES/kio_man.mo

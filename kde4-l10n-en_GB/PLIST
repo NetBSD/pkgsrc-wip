@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/06 14:23:50 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/11 11:27:00 mwdavies Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -749,6 +749,7 @@ share/locale/en_GB/LC_MESSAGES/kio_floppy.mo
 share/locale/en_GB/LC_MESSAGES/kio_groupwise.mo
 share/locale/en_GB/LC_MESSAGES/kio_help4.mo
 share/locale/en_GB/LC_MESSAGES/kio_imap4.mo
+share/locale/en_GB/LC_MESSAGES/kio_info.mo
 share/locale/en_GB/LC_MESSAGES/kio_jabberdisco.mo
 share/locale/en_GB/LC_MESSAGES/kio_ldap.mo
 share/locale/en_GB/LC_MESSAGES/kio_man.mo
