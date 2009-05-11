@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3414 2009/05/08 21:05:37 cheusov Exp $
+# $Id: Makefile,v 1.3415 2009/05/11 22:43:29 imilh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1546,6 +1546,7 @@ SUBDIR+=	pkg_online-client
 SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
+SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
 #SUBDIR+=	pkgpm # not a package yet
 SUBDIR+=	plod
