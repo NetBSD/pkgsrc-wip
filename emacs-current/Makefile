@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/05/06 04:06:11 makoto Exp $
+# $NetBSD: Makefile,v 1.39 2009/05/12 08:58:48 obache Exp $
 #
 
 DISTNAME=	emacs-23.0.93
@@ -28,6 +28,7 @@ CVS_ROOT.emacs=		${CVS_ROOT_GNU}/emacs
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 REPLACE_PERL=		lib-src/grep-changelog
+CHECK_INTERPRETER_SKIP=	bin/grep-changelog
 
 WRKSRC=		${WRKDIR}/emacs
 
@@ -50,6 +51,7 @@ SUBST_SED.test_equal=		-e 's/ == / = /g'
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
+SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
 
 .include "options.mk"
 

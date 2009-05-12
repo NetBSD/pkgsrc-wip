@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.cocoa,v 1.1 2008/07/26 06:25:20 obache Exp $
+@comment $NetBSD: PLIST.cocoa,v 1.2 2009/05/12 08:58:48 obache Exp $
 Applications/Emacs.app/Contents/Info.plist
 Applications/Emacs.app/Contents/MacOS/Emacs
 Applications/Emacs.app/Contents/PkgInfo
@@ -6,11 +6,7 @@ Applications/Emacs.app/Contents/Resources/Credits.html
 Applications/Emacs.app/Contents/Resources/Emacs.icns
 Applications/Emacs.app/Contents/Resources/English.lproj/InfoPlist.strings
 Applications/Emacs.app/Contents/Resources/document.icns
-Applications/Emacs.app/Contents/Resources/preferences.nib/classes.nib
-Applications/Emacs.app/Contents/Resources/preferences.nib/info.nib
-Applications/Emacs.app/Contents/Resources/preferences.nib/keyedobjects.nib
 bin/mac-fix-env
-@dirrm Applications/Emacs.app/Contents/Resources/preferences.nib
 @dirrm Applications/Emacs.app/Contents/Resources/English.lproj
 @dirrm Applications/Emacs.app/Contents/Resources
 @dirrm Applications/Emacs.app/Contents/MacOS
