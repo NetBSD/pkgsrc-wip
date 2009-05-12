@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/10 12:16:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/12 08:47:02 obache Exp $
 bin/scim
 bin/scim-config-agent
 bin/scim-setup
@@ -94,6 +94,7 @@ share/locale/pt_BR/LC_MESSAGES/scim.mo
 share/locale/ru/LC_MESSAGES/scim.mo
 share/locale/sk/LC_MESSAGES/scim.mo
 share/locale/sv/LC_MESSAGES/scim.mo
+share/locale/ta/LC_MESSAGES/scim.mo
 share/locale/te/LC_MESSAGES/scim.mo
 share/locale/vi/LC_MESSAGES/scim.mo
 share/locale/zh_CN/LC_MESSAGES/scim.mo

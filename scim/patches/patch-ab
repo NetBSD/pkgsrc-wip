@@ -1,9 +1,14 @@
-$NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/12 08:47:02 obache Exp $
 
---- src/scim_chartraits.cpp.orig	2008-05-11 11:19:48.000000000 +0000
+--- src/scim_chartraits.cpp.orig	2008-11-02 06:42:37.000000000 +0000
 +++ src/scim_chartraits.cpp
-@@ -40,29 +40,35 @@ namespace std
- {
+@@ -26,4 +26,5 @@
+  */
+ 
++#if 0
+ #include <string>
+ #include "scim_types.h"
+@@ -41,27 +42,33 @@ namespace std
    
  template<>
 -void
@@ -48,9 +53,7 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +assign(char_type* __s, size_t __n, char_type __a)
  {
      char_type* dest = __s;
-     while (__n-- > 0) 
-@@ -70,9 +76,8 @@ char_traits<ucs4_t>::assign(char_type* _
-     return __s;
+@@ -71,7 +78,6 @@ char_traits<ucs4_t>::assign(char_type* _
  }
  
 -template<>
@@ -60,9 +63,7 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +copy(char_type* __s1, const char_type* __s2, size_t __n)
  {
      char_type* dest = __s1;
-     const char_type* from = __s2;
-@@ -81,9 +86,8 @@ char_traits<ucs4_t>::copy(char_type* __s
-     return __s1;
+@@ -82,13 +88,12 @@ char_traits<ucs4_t>::copy(char_type* __s
  }
  
 -template<>
@@ -71,10 +72,17 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +static char_type*
 +move(char_type* __s1, const char_type* __s2, size_t __n)
  {
-     if (__s1 + __n > __s2) {
+-    if (__s1 + __n > __s2) {
++    if (__s1 > __s2) {
          char_type* dest = __s1 + __n - 1;
-@@ -96,9 +100,8 @@ char_traits<ucs4_t>::move(char_type* __s
-     }
+-        const char_type* from = __s2;
++        const char_type* from = __s2 + __n - 1;
+         while (__n-- > 0)
+-            *(dest--) = *(from++);
++            *(dest--) = *(from--);
+         return __s1;
+     } else {
+@@ -97,7 +102,6 @@ char_traits<ucs4_t>::move(char_type* __s
  }
  
 -template<>
@@ -84,9 +92,7 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +length(const char_type* __s)
  {
      size_t __result = 0;
-     while ( *(__s++) != 0 )
-@@ -106,9 +109,8 @@ char_traits<ucs4_t>::length(const char_t
-     return __result;
+@@ -107,7 +111,6 @@ char_traits<ucs4_t>::length(const char_t
  }
  
 -template<>
@@ -96,9 +102,7 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +compare(const char_type* __s1, const char_type* __s2, size_t __n)
  {
      while ( (*__s1 == *__s2++) && __n-- > 0 )
-         if (*__s1++ == 0)
-@@ -117,9 +119,8 @@ char_traits<ucs4_t>::compare(const char_
-     return ( *__s1 - *(__s2 - 1) );
+@@ -118,7 +121,6 @@ char_traits<ucs4_t>::compare(const char_
  }
  
 -template<>
@@ -108,9 +112,7 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +find(const char_type* __s, size_t __n, const char_type& __a)
  {
      while (__n-- > 0) {
-         if (*__s == __a)
-@@ -129,42 +130,39 @@ char_traits<ucs4_t>::find(const char_typ
-     return 0;
+@@ -130,40 +132,38 @@ char_traits<ucs4_t>::find(const char_typ
  }
  
 -template<>
@@ -156,13 +158,14 @@ $NetBSD: patch-ab,v 1.1 2009/01/14 13:42:41 obache Exp $
 +static int_type
 +not_eof(const int_type& __c)
  {
-     return (__c == eof()) ? 0 : __c;
+-    return (__c == eof()) ? 0 : __c;
++    return eq_int_type(__c, eof()) ? static_cast<int_type>(0) : __c;
  }
  
 -}
 +}; //struct char_traits<ucs4_t>
 +
 +} //namespace std
++#endif
  #endif
  
- /*
