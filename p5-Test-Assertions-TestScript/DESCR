@@ -1,0 +1,13 @@
+Test::Assertions::TestScript provides a base for writing test scripts.
+It performs some common actions such as setting up the @INC path
+and parsing command-line options, specifically:
+* The lib and t/lib directories are added to @INC.
+* The current directory is changed to the directory the script is in.
+* Test script command-line options are parsed. (See "COMMAND-LINE OPTIONS")
+* The test set of functions from Test::Assertions are
+imported into your test script.
+Test::Assertions::TestScript makes certain assumptions about 
+the filesystem layout of your project:
+* Modules that you are testing are in the lib directory of your project.
+* There may also be a t/lib directory for any modules written
+for the test process.
