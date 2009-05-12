@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/10 12:20:49 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/12 08:50:11 obache Exp $
 #
 
-DISTNAME=	scim-bridge-0.4.15.2
+DISTNAME=	scim-bridge-0.4.16
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scim/}
 
@@ -9,13 +9,16 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.scim-im.org/projects/scim_bridge
 COMMENT=	C wrapper library for SCIM
 
+#LICENSE=	gnu-gpl-v2 OR gnu-lgpl-2.1
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/scim-bridge-0.4.15
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+#CFLAGS+=	-Wextra
 
 CONFIGURE_ARGS+=	--enable-agent
 CONFIGURE_ARGS+=	--disable-documents

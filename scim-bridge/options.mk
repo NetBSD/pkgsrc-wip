@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/02/10 12:20:49 obache Exp $
+# $NetBSD: options.mk,v 1.2 2009/05/12 08:50:11 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scim-bridge
 PKG_SUPPORTED_OPTIONS=	gtk qt
 PKG_SUGGESTED_OPTIONS=	gtk
 
-PLIST_VARS=	gtk qt
+PLIST_VARS+=	gtk qt
 
 .include "../../mk/bsd.options.mk"
 
