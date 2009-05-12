@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3415 2009/05/11 22:43:29 imilh Exp $
+# $Id: Makefile,v 1.3416 2009/05/12 15:25:15 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -806,6 +806,7 @@ SUBDIR+=	ipmitools
 SUBDIR+=	ipsvd
 SUBDIR+=	iptables
 SUBDIR+=	iptstate
+SUBDIR+=	ironpython
 SUBDIR+=	ispell-lietuviu
 SUBDIR+=	itask-ng
 #SUBDIR+=	jabberd			# not a real package
