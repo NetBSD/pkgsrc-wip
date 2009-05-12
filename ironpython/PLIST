@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/12 15:17:03 jihbed Exp $
+bin/ipy
+bin/ipyw
+lib/ironpython/IronMath.dll
+lib/ironpython/IronPython.dll
+lib/ironpython/ipy.exe
+lib/ironpython/ipyw.exe
+share/doc/${PKGNAME}/FAQ.html
+share/doc/${PKGNAME}/License.html
+share/doc/${PKGNAME}/Readme.html
+@dirrm share/doc/${PKGNAME}
