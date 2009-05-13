@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2009/05/13 10:44:08 emil_s Exp $
-
-SHA1 (Cabal-1.6.0.2.tar.gz) = 14524518ff5dcd82c8f018f3eb6cce9208ef92e0
-RMD160 (Cabal-1.6.0.2.tar.gz) = ae07dc027856b48ab49c5356dad006f6db8eb752
-Size (Cabal-1.6.0.2.tar.gz) = 407192 bytes
