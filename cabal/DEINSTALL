@@ -1,7 +1,0 @@
-PKGVERSION=@PKGVERSION@
-
-case ${STAGE} in 
-    POST-DEINSTALL)
-    ghc-pkg unregister Cabal-${PKGVERSION}
-    ;;
-esac
