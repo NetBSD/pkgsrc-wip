@@ -1,15 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/05/13 10:55:04 emil_s Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/05/13 11:05:29 emil_s Exp $
 
-BUILDLINK_TREE+=	cabal
+BUILDLINK_TREE+=	hs-cabal
 
-.if !defined(CABAL_BUILDLINK3_MK)
-CABAL_BUILDLINK3_MK:=
+.if !defined(HS_CABAL_BUILDLINK3_MK)
+HS_CABAL_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.cabal?=	build
-BUILDLINK_API_DEPENDS.cabal+=	cabal>=1.4.0.2
-BUILDLINK_PKGSRCDIR.cabal?=	../../wip/cabal
+BUILDLINK_DEPMETHOD.hs-cabal?=		build
+BUILDLINK_API_DEPENDS.hs-cabal+=	hs-cabal>=1.6.0.2
+BUILDLINK_PKGSRCDIR.hs-cabal?=		../../wip/hs-cabal
 
 .include "../../lang/ghc/buildlink3.mk"
-.endif # CABAL_BUILDLINK3_MK
+.endif # HS_CABAL_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-cabal
+BUILDLINK_TREE+=	hs-cabal
