@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/10/17 14:18:37 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/13 10:44:08 emil_s Exp $
 #
 
-DISTNAME=		Cabal-1.4.0.2
-PKGNAME=		cabal-1.4.0.2
+DISTNAME=		Cabal-1.6.0.2
+PKGNAME=		cabal-1.6.0.2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/cabal/release/${PKGNAME}/
 
@@ -10,44 +10,6 @@ MAINTAINER=		emil@math.su.se
 HOMEPAGE=		http://www.haskell.org/cabal/release/${PKGNAME}/
 COMMENT=		Haskell common architecture for building applications and libraries
 
-USE_TOOLS+=		gmake
-MAKE_FILE=		GNUmakefile
-
-GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
-GHCVERSION=		${GHCVERSION_cmd:sh}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		GHCVERSION=${GHCVERSION}
-FILES_SUBST+=		PKGVERSION=${PKGVERSION}
-PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
-
-CONFIGURE_ARGS+=	--ghc
-CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
-CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-
-CHECK_FILES_SKIP+=	lib/ghc-${GHCVERSION}/package.conf.old
-
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-
-
-do-configure:
-	cd ${WRKSRC} &&						\
-	${SETENV} ${CONFIGURE_ENV} runhaskell -cpp Setup.hs configure ${CONFIGURE_ARGS}
-
-do-build:
-	cd ${WRKSRC} && runhaskell -cpp Setup.hs build
-
-do-install:
-	cd ${WRKSRC} && runhaskell -cpp Setup.hs install
-
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}/API
-	${INSTALL_DATA_DIR} ${DOCDIR}/users-guide
-	cd ${WRKSRC}/doc/API/Cabal && \
-        ${INSTALL_DATA} *.html ${DOCDIR}/API
-	cd ${WRKSRC}/doc/users-guide && \
-        ${INSTALL_DATA} *.html ${DOCDIR}/users-guide
-
-
+.include "../../wip/mk/haskell.mk"
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
