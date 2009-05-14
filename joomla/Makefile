@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2009/01/28 13:26:23 heidnes Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/14 08:15:03 marttikuparinen Exp $
 
-DISTNAME=	Joomla_1.5.9-Stable-Full_Package
-PKGNAME=	joomla-1.5.9
+DISTNAME=	Joomla_1.5.10-Stable-Full_Package
+PKGNAME=	joomla-1.5.10
 CATEGORIES=	www
-MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/9294/34964/
+MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/9910/37906/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
