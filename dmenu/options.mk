@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/10/25 13:22:33 leot1990 Exp $
+# $NetBSD: options.mk,v 1.2 2009/05/14 20:43:51 leot1990 Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.dmenu
-PKG_SUPPORTED_OPTIONS=		xinerama
-PKG_SUGGESTED_OPTIONS=		xinerama
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dmenu
+PKG_SUPPORTED_OPTIONS=	xinerama
+PKG_SUGGESTED_OPTIONS=	xinerama
 
 .include "../../mk/bsd.options.mk"
 
