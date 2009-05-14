@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/05/14 08:15:03 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/14 08:24:58 marttikuparinen Exp $
 
 DISTNAME=	Joomla_1.5.10-Stable-Full_Package
 PKGNAME=	joomla-1.5.10
@@ -15,6 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.10:../../archivers/php-zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -50,15 +51,17 @@ post-extract:
 	${MV} ${WRKSRC}/installation ${WRKSRC}/installation.disabled
 
 do-install:
-	${INSTALL_DATA_DIR} ${JOOMLADIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
-	    ${JOOMLADIR}/{} \; -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
-	    ${JOOMLADIR}/{} \;
-	cd ${WRKSRC} && ${FIND} . \! -type d -exec ${INSTALL_DATA} {} \
-	    ${JOOMLADIR}/{} \; -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
-	    ${JOOMLADIR}/{} \;
-	${INSTALL_DATA} ${WRKDIR}/joomla.conf ${EGDIR}/joomla.conf
+	${INSTALL_DATA_DIR} ${DESTDIR}${JOOMLADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	cd ${WRKSRC} && ${FIND} . -type d \
+	  -exec ${INSTALL_DATA_DIR} ${DESTDIR}${JOOMLADIR}/{} \; \
+	  -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
+	    ${DESTDIR}${JOOMLADIR}/{} \;
+	cd ${WRKSRC} && ${FIND} . \! -type d \
+	  -exec ${INSTALL_DATA} {} ${DESTDIR}${JOOMLADIR}/{} \; \
+	  -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
+	    ${DESTDIR}${JOOMLADIR}/{} \;
+	${INSTALL_DATA} ${WRKDIR}/joomla.conf ${DESTDIR}${EGDIR}/joomla.conf
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
