@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/04/18 12:30:24 asau Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/14 20:15:24 asau Exp $
 #
 
 DISTNAME=		maxima-5.18.1
@@ -18,7 +18,6 @@ DEPENDS+=		tk-[0-9]*:../../x11/tk
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		aclocal automake autoconf
 USE_TOOLS+=		makeinfo perl
 REPLACE_SH=		doc/misc/grepforvariables.sh
 
@@ -27,24 +26,26 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
-# Uncomment following section for VCS-based package:
+# Section for VCS-based package:
 
-# PKGNAME=		maxima-5.18.99
+PKGNAME=		maxima-5.18.99
 
-# CVS_REPOSITORIES=	maxima
-# CVS_ROOT.maxima=	:pserver:anonymous:@maxima.cvs.sourceforge.net:/cvsroot/maxima
+CVS_REPOSITORIES=	maxima
+CVS_ROOT.maxima=	:pserver:anonymous:@maxima.cvs.sourceforge.net:/cvsroot/maxima
 
-# WRKSRC=		${WRKDIR}/maxima
+WRKSRC=		${WRKDIR}/maxima
 
-# SUBST_CLASSES+=			fix-version
-# SUBST_STAGE.fix-version=	post-patch
-# SUBST_MESSAGE.fix-version=	Fixing package version.
-# SUBST_FILES.fix-version=	configure.in
-# SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,[^)]*):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
+USE_TOOLS+=		aclocal automake autoconf
 
-# pre-configure:
-# 	cd ${WRKSRC} && ./bootstrap
+SUBST_CLASSES+=			fix-version
+SUBST_STAGE.fix-version=	post-patch
+SUBST_MESSAGE.fix-version=	Fixing package version.
+SUBST_FILES.fix-version=	configure.in
+SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,[^)]*):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
 
-# .include "../../wip/mk/cvs-package.mk"
+pre-configure:
+	cd ${WRKSRC} && ./bootstrap
+
+.include "../../wip/mk/cvs-package.mk"
 
 .include "../../mk/bsd.pkg.mk"
