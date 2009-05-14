@@ -1,0 +1,3 @@
+Modified version of GNATS' send-pr.el
+using emacs' built-in sendmail.el
+for sending email instead of system MTA.
