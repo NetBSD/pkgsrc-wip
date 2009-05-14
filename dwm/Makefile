@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/04/30 22:42:12 leot1990 Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/14 20:41:32 leot1990 Exp $
 #
 
 DISTNAME=	dwm-5.5
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://code.suckless.org/dl/dwm/
 
@@ -18,7 +19,7 @@ SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing config.mk
 SUBST_FILES.makefile=	config.mk
-SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.makefile+=	-e 's,/usr/local,${DESTDIR}${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
 SUBST_SED.makefile+=	-e 's,^CFLAGS = ,CFLAGS += ,'
