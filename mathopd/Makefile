@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/15 17:05:48 ishit Exp $
 
 DISTNAME=	mathopd-1.5p6
 CATEGORIES=	www
@@ -8,9 +8,11 @@ MAINTAINER=	ishit@users.sourceforge.jp
 HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=	VARBASE EXTRA_OBJS MATHOPD_USER MATHOPD_GROUP
+BUILD_DEFS=	VARBASE MATHOPD_USER MATHOPD_GROUP
 
 MATHOPD_USER?=		mathopd
 MATHOPD_GROUP?=		mathopd
@@ -49,6 +51,7 @@ CPPFLAGS+=	-DHAVE_VFORK
 .endif
 
 .if ${OPSYS} == "Linux"
+BUILD_DEFS+=	EXTRA_OBJS
 CPPFLAGS+=	-DHAVE_CRYPT_H
 CPPFLAGS+=	-DLINUX_SENDFILE
 CPPFLAGS+=	-D_FILE_OFFSET_BITS=64
@@ -56,6 +59,7 @@ EXTRA_OBJS+=	sendfile.o
 .endif
 
 .if ${OPSYS} == "FreeBSD"
+BUILD_DEFS+=	EXTRA_OBJS
 CPPFLAGS+=	-DFREEBSD_SENDFILE
 EXTRA_OBJS+=	sendfile.o
 .endif
