@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3419 2009/05/14 21:25:31 cheusov Exp $
+# $Id: Makefile,v 1.3420 2009/05/15 05:54:22 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -305,7 +305,7 @@ SUBDIR+=	doorman
 SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot
-SUBDIR+=	dovecot-sieve
+#SUBDIR+=	dovecot-sieve
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
 SUBDIR+=	drow
