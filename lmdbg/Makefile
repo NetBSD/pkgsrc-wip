@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/29 16:45:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/15 05:55:43 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.10alpha1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://mova.org/~cheusov/pub/lmdbg/
 COMMENT=	Lightweight Malloc Debugger
 
 BUILD_DEPENDS+=		mk-configure>=0.9.0:../../wip/mk-configure
+DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
