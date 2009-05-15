@@ -26,6 +26,7 @@
 #use "alt_assert.awk"
 #use "power_getopt.awk"
 
+############################################################
 #.begin-str help
 # paexec_reorder - takes output of 'paexec -le' on input and outputs
 #     results in normal order, that is one full task,
@@ -35,6 +36,7 @@
 #    -h|--help                  display this help
 #    -s                         remove leading space
 #.end-str
+############################################################
 
 BEGIN {
 	bad_input_msg = "bad input, did you run paexec -sle?"
