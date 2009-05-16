@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/25 22:32:00 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/16 12:33:33 jihbed Exp $
+${PYSITELIB}/pylast.py
 ${PYSITELIB}/pylast.pyc
 ${PYSITELIB}/pylast.pyo
