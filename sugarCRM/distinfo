@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/24 02:16:06 marmfield Exp $
+$NetBSD: distinfo,v 1.2 2009/05/17 18:23:45 rewts Exp $
 
-SHA1 (SugarSuite-Full-3.0.1a.zip) = e41f0b44193f0e45250ee1619715d9a319bd9c2e
-RMD160 (SugarSuite-Full-3.0.1a.zip) = ae520013342b1d1d809495b4de62808986b13613
-Size (SugarSuite-Full-3.0.1a.zip) = 4328845 bytes
+SHA1 (SugarCE-5.2.0e.zip) = 8718edc2bfb575f10299aae28c52d4a884035794
+RMD160 (SugarCE-5.2.0e.zip) = 493c3d62456ec75a05685002989d3aa6f370c8a2
+Size (SugarCE-5.2.0e.zip) = 14561122 bytes

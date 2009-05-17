@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2008/05/23 10:32:36 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/17 18:23:45 rewts Exp $
 #
 
-DISTNAME=	SugarSuite-Full-${VERSION}
+DISTNAME=	SugarCE-${VERSION}
 PKGNAME=	sugarCRM-${VERSION}
 CATEGORIES=	misc
-MASTER_SITES=	http://www.sugarforge.org/frs/download.php/235/
+MASTER_SITES=	http://www.sugarforge.org/frs/download.php/5446/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ma@arconsulting.com.au
-HOMEPAGE=	http://www.sugarforge.org/frs/download.php/235/
+MAINTAINER=	derv0@nubisci.net
+HOMEPAGE=	http://www.sugarcrm.com/
 COMMENT=	SugarCRM is a php based CRM system
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
-VERSION=	3.0.1a
+VERSION=	5.2.0e
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
+WRKSRC=	${WRKDIR}/SugarCE-Full-5.2.0e
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
