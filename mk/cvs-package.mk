@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.34 2009/03/19 19:22:32 asau Exp $
+# $Id: cvs-package.mk,v 1.35 2009/05/18 12:36:03 tnn2 Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -130,7 +130,7 @@ _CVS_CMD=		cvs
 _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
-_CVS_FLAGS=		-Q
+_CVS_FLAGS=		-Q -z3
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
