@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3421 2009/05/15 16:41:30 ishit Exp $
+# $Id: Makefile,v 1.3422 2009/05/18 23:42:28 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1412,6 +1412,7 @@ SUBDIR+=	p5-MediaWiki-API
 SUBDIR+=	p5-Metadata
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
+SUBDIR+=	p5-Mojo
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
