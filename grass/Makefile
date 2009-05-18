@@ -1,36 +1,57 @@
-# $NetBSD: Makefile,v 1.16 2008/02/16 01:29:09 lexort Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/18 16:08:47 brook1 Exp $
 #
 
 DISTNAME=		grass-${GRASS_VERSION}
-PKGREVISION=		2
 CATEGORIES=		geography
-MASTER_SITES=		http://grass.itc.it/grass60/source/
+MASTER_SITES=		http://grass.itc.it/grass63/source/
 
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://grass.itc.it/
 COMMENT=		Open source geographical information system (GIS)
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl
-USE_TOOLS+=		autoconf
-USE_TOOLS+=		gm4
+USE_X11=		yes
+USE_TOOLS+=		autoconf bash gm4 gmake perl
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
+
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${GRASS_HOME}/lib
 
 .include "options.mk"
 
-PLIST_SRC+=		PLIST
+PLIST_VARS+=		fftw freetype iodbc motif mysql
+PLIST_VARS+=		nls opengl pgsql sqlite unixodbc
 
+CONFIGURE_ARGS+=	--with-cxx
 CONFIGURE_ARGS+=	--without-opendwg
-CONFIGURE_ARGS+=	--with-proj-share=${LOCALBASE}/share/proj
+CONFIGURE_ARGS+=	--with-proj-share=${PREFIX}/share/proj
+CONFIGURE_ARGS+=	--with-readline
 
-BUILDLINK_PASSTHRU_RPATHDIRS+=    ${GRASS_HOME}/lib
+REPLACE_BASH+=		scripts/i.spectral/i.spectral
+REPLACE_BASH+=		scripts/r.tileset/r.tileset
+REPLACE_BASH+=		scripts/v.in.gpsbabel/v.in.gpsbabel
+
+REPLACE_PYTHON+=	gui/wxpython/gui_modules/menuform.py
 
 BUILD_TARGET=		default
 
-pre-configure:
-	cd ${WRKSRC} && autoconf || ${TRUE}
+# Note - the following is because the grass build process involves
+# installing compiled objects into a directory within ${WRKSRC};
+# during installation, files are installed from there into ${PREFIX}.
+# However, because the install command changes ownership (even during
+# the build phase), the package cannot be built by a non-root user.
+pre-extract:
+	@if [ `${ID} -u` != 0 ]; then \
+	  ${ECHO} "${PKGNAME} must be built as root because it uses install during build." ; \
+	  ${FALSE}; fi
+
+post-install:
+	${LN} -s grass${GRASS_VERSION:C/\.[0-9]+\$$//:S/.//g} \
+		${PREFIX}/bin/grass
 
 .include "Makefile.common"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -39,6 +60,5 @@ pre-configure:
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

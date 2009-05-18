@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.3 2009/05/18 16:08:47 brook1 Exp $
 #
-# used by wip/gdal-grass/Makefile
 
 # Required for dependent packages (e.g., geography/qgis) to find grass
 
-GRASS_VERSION=		6.0.2
+GRASS_VERSION=		6.3.0
 
 GRASS_HOME?=		${PREFIX}/grass-${GRASS_VERSION}

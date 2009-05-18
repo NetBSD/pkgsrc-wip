@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/05/18 16:08:47 brook1 Exp $
+
+--- aclocal.m4.orig	2007-11-05 07:33:55.000000000 -0700
++++ aclocal.m4
+@@ -891,7 +891,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR} -export-dynamic'
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+-	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
++	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 	    if test "${GRASS_THREADS}" = "1" ; then
+ 		# The -pthread needs to go in the CFLAGS, not LIBS
+ 		LIBS=`echo $LIBS | sed s/-pthread//`

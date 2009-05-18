@@ -1,17 +1,23 @@
-# $NetBSD: options.mk,v 1.2 2006/11/01 22:22:04 brook1 Exp $
+# $NetBSD: options.mk,v 1.3 2009/05/18 16:08:47 brook1 Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grass
-PKG_SUPPORTED_OPTIONS=	ffmpeg fftw freetype glw gmath motif nls
-PKG_SUPPORTED_OPTIONS+=	odbc opengl readline sqlite terraflow
-PKG_SUGGESTED_OPTIONS=	ffmpeg fftw freetype glw motif nls
-PKG_SUGGESTED_OPTIONS+=	odbc opengl readline sqlite terraflow
+PKG_SUPPORTED_OPTIONS=	fftw freetype iodbc motif mysql nls
+PKG_SUPPORTED_OPTIONS+=	opengl postgres python sqlite unixodbc
+# PKG_SUPPORTED_OPTIONS+=	ffmpeg		# XXX - handle includes
+# PKG_SUPPORTED_OPTIONS+=	glw		# XXX - requires libGLw(M)
+# PKG_SUPPORTED_OPTIONS+=	gmath		# XXX - undefined MAIN__
+# PKG_SUPPORTED_OPTIONS+=	wxWidgets	# XXX - need new version
+PKG_SUGGESTED_OPTIONS+= fftw freetype iodbc motif nls
+PKG_SUGGESTED_OPTIONS+= opengl postgres python sqlite
 
 .include "../../mk/bsd.options.mk"
 
+# XXX - requires handling of split header directories:  include/libav*
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CONFIGURE_ARGS+=	--with-ffmpeg
-CONFIGURE_ARGS+=	--with-ffmpeg-includes=${LOCALBASE}/include/ffmpeg
+CONFIGURE_ARGS+=	--with-ffmpeg-includes=${PREFIX}/include/libavcodec
+CONFIGURE_ARGS+=	--with-ffmpeg-libs=${PREFIX}/lib
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ffmpeg
@@ -19,8 +25,8 @@ CONFIGURE_ARGS+=	--without-ffmpeg
 
 .if !empty(PKG_OPTIONS:Mfftw)
 CONFIGURE_ARGS+=	--with-fftw
-CONFIGURE_ARGS+=	--with-fftw-includes=${LOCALBASE}/include
-PLIST_SRC+=		PLIST.fftw
+CONFIGURE_ARGS+=	--with-fftw-includes=${PREFIX}/include
+PLIST.fftw=		yes
 .include "../../math/fftw2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-fftw
@@ -28,21 +34,27 @@ CONFIGURE_ARGS+=	--without-fftw
 
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--with-freetype
-PLIST_SRC+=		PLIST.freetype
+PLIST.freetype=		yes
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-freetype
 .endif
 
+# XXX - requires GLw support
 .if !empty(PKG_OPTIONS:Mglw)
 CONFIGURE_ARGS+=	--with-glw
+CONFIGURE_ARGS+=	--with-glw-includes=${PREFIX}/include/GL
+CONFIGURE_ARGS+=	--with-glw-libs=${PREFIX}/lib
+.include "../../graphics/MesaLib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-glw
 .endif
 
+# XXX - requires MAIN__ / fortran support
 .if !empty(PKG_OPTIONS:Mgmath)
 USE_LANGUAGES+=		fortran
 CONFIGURE_ARGS+=	--with-blas
+CONFIGURE_ARGS+=	--with-blas-libs=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-lapack
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
@@ -51,55 +63,82 @@ CONFIGURE_ARGS+=	--without-blas
 CONFIGURE_ARGS+=	--without-lapack
 .endif
 
+.if !empty(PKG_OPTIONS:Miodbc)
+CONFIGURE_ARGS+=	--with-odbc
+PLIST.iodbc=		yes
+.include "../../databases/iodbc/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-odbc
+.endif
+
 .if !empty(PKG_OPTIONS:Mmotif)
 CONFIGURE_ARGS+=	--with-motif
-PLIST_SRC+=		PLIST.motif
+PLIST.motif=		yes
 .include "../../mk/motif.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-motif
 .endif
 
+.if !empty(PKG_OPTIONS:Mmysql)
+CONFIGURE_ARGS+=	--with-mysql
+PLIST.mysql=		yes
+. include "../../mk/mysql.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-mysql
+.endif
+
 .if !empty(PKG_OPTIONS:Mnls)
 CONFIGURE_ARGS+=	--with-nls
-PLIST_SRC+=		PLIST.nls
+PLIST.nls=		yes
 .else
 CONFIGURE_ARGS+=	--without-nls
 .endif
 
-.if !empty(PKG_OPTIONS:Modbc)
-CONFIGURE_ARGS+=	--with-odbc
-PLIST_SRC+=		PLIST.odbc
-.include "../../databases/unixodbc/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-odbc
-.endif
-
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--with-opengl
+PLIST.opengl=		yes
+.include "../../graphics/Mesa/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-opengl
 .endif
 
-.if !empty(PKG_OPTIONS:Mreadline)
-CONFIGURE_ARGS+=	--with-readline
-.include "../../devel/readline/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mpostgres)
+CONFIGURE_ARGS+=	--with-postgres
+PLIST.pgsql=		yes
+. include "../../mk/pgsql.buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--without-postgres
+.endif
+
+.if !empty(PKG_OPTIONS:Mpython)
+CONFIGURE_ARGS+=	--with-python=${PREFIX}/bin/python${PYVERSSUFFIX}-config
+.include "../../lang/python/extension.mk"
+.else
+CONFIGURE_ARGS+=	--without-python
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
 CONFIGURE_ARGS+=	--with-sqlite
 CONFIGURE_ARGS+=	--with-sqlite
-CONFIGURE_ARGS+=	--with-sqlite-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-sqlite-includes=${PREFIX}/include
+PLIST.sqlite=		yes
 .include "../../databases/sqlite3/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-sqlite
 .endif
 
-.if !empty(PKG_OPTIONS:Mterraflow)
-USE_LANGUAGES+=		c++
-CONFIGURE_ARGS+=	--with-cxx
-PLIST_SRC+=		PLIST.terraflow
+.if !empty(PKG_OPTIONS:Munixodbc)
+CONFIGURE_ARGS+=	--with-odbc
+PLIST.unixodbc=		yes
+.include "../../databases/unixodbc/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-cxx
+CONFIGURE_ARGS+=	--without-odbc
+.endif
+
+# XXX - requires new version of wxWidgets
+.if !empty(PKG_OPTIONS:MwxWidgets)
+CONFIGURE_ARGS+=	--with-wxwidgets=${PREFIX}/bin/wx-config
+.include "../../x11/py-wxWidgets/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-wxwidgets
 .endif

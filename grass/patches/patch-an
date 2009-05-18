@@ -1,0 +1,96 @@
+$NetBSD: patch-an,v 1.1 2009/05/18 16:08:47 brook1 Exp $
+
+--- configure.orig	2008-03-26 09:04:27.000000000 -0600
++++ configure
+@@ -2212,7 +2212,7 @@ fi
+ 	    SHLIB_SUFFIX=".so"
+ 	    LDFLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR} -export-dynamic'
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+-	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
++	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 	    if test "${GRASS_THREADS}" = "1" ; then
+ 		# The -pthread needs to go in the CFLAGS, not LIBS
+ 		LIBS=`echo $LIBS | sed s/-pthread//`
+@@ -12457,6 +12457,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char dnrm2_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ dnrm2_()
+ ; return 0; }
+@@ -12493,6 +12495,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char dnrm2_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ dnrm2_()
+ ; return 0; }
+@@ -12707,6 +12711,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char sgemm_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ sgemm_()
+ ; return 0; }
+@@ -12901,6 +12907,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char sgemm_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ sgemm_()
+ ; return 0; }
+@@ -13068,6 +13076,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char dsegv_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ 
+ /* The GNU C library defines this for functions which it implements
+@@ -13121,6 +13131,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char desgv_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ desgv_()
+ ; return 0; }
+@@ -13170,6 +13182,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char dgesv_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ dgesv_()
+ ; return 0; }
+@@ -13206,6 +13220,8 @@ cat > conftest.$ac_ext <<EOF
+     builtin and then its argument prototype would still apply.  */
+ char dgesv_();
+ 
++int MAIN__() { return 0; }
++
+ int main() {
+ dgesv_()
+ ; return 0; }
+@@ -15372,6 +15388,10 @@ for ac_option
+ do
+   case "\$ac_option" in
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
+     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
+     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
+   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
