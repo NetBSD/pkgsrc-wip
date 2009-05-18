@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/02 00:08:55 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/05/18 21:51:41 jihbed Exp $
 
-SHA1 (pysage-1.2.2.tar.gz) = 50c2b64cc2f75c7e1f9c9d5ecd7ffbf8299e20be
-RMD160 (pysage-1.2.2.tar.gz) = 14fb02e78e4a470dbfea116ccd5c9a0649267c11
-Size (pysage-1.2.2.tar.gz) = 11662 bytes
+SHA1 (pysage-1.5.2.tar.gz) = 74e634c6eb806c9a2cbd1124008fd825523d9f29
+RMD160 (pysage-1.5.2.tar.gz) = df4a2566274c6f55cf21e9321e82d5ac93e99c79
+Size (pysage-1.5.2.tar.gz) = 12253 bytes

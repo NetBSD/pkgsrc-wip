@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/02 00:08:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/18 21:51:41 jihbed Exp $
 ${PYSITELIB}/pysage/__init__.pyc
 ${PYSITELIB}/pysage/__init__.pyo
 ${PYSITELIB}/pysage/messaging.pyc
 ${PYSITELIB}/pysage/messaging.pyo
+${PYSITELIB}/pysage/process.pyc
+${PYSITELIB}/pysage/process.pyo
 ${PYSITELIB}/pysage/system.pyc
 ${PYSITELIB}/pysage/system.pyo
+${PYSITELIB}/pysage/transport.pyc
+${PYSITELIB}/pysage/transport.pyo
 ${PYSITELIB}/pysage/util.pyc
 ${PYSITELIB}/pysage/util.pyo
 @dirrm ${PYSITELIB}/pysage
