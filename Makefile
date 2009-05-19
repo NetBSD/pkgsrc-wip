@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3422 2009/05/18 23:42:28 ficovh Exp $
+# $Id: Makefile,v 1.3423 2009/05/19 09:21:57 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1631,7 +1631,6 @@ SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-httplib2
-SUBDIR+=	py-icalendar
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
