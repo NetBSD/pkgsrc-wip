@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/27 09:56:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 22:57:36 jihbed Exp $
 #
 
 DISTNAME=	libtextcat-2.2
@@ -11,12 +11,13 @@ COMMENT=	Libtextcat library the Cavnar & Trenkle
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=	xdg-1.4
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+SHAREDIR=	${PREFIX}/share/libtextcat
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/libtextcat
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/libtextcat
 
 .include "../../mk/bsd.pkg.mk"
