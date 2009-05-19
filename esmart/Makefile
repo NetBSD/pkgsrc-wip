@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/10/30 22:57:42 yazzy Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 17:29:44 minskim Exp $
 #
 
 DISTNAME=	esmart-0.9.0.042
@@ -23,7 +23,7 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh	
 
 .include "../../wip/ecore/buildlink3.mk"
-.include "../../wip/eina/buildlink3.mk"
+.include "../../devel/eina/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
