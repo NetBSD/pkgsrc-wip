@@ -1,14 +1,14 @@
-Quantum GIS (QGIS) is a user friendly Open Source Geographic
-Information System (GIS) that runs on Linux, Unix, Mac OSX,
-and Windows. QGIS supports vector, raster, and database
-formats. QGIS is licensed under the GNU Public License.
+Quantum GIS (QGIS) is a Geographic Information System (GIS) that
+supports vector, raster, and database formats.
+
 Some of the major features include:
-* Support for spatially enabled PostGIS tables
-* Support for shapefiles, ArcInfo coverages, Mapinfo, and
-  other formats supported by OGR
-* Raster support for a large number of formats
-* Identify features
-* Display attribute tables
-* Select features
-* GRASS Digitizing
-* Feature labeling
+
+- Support for spatially enabled PostGIS tables
+- Support for shapefiles, ArcInfo coverages, Mapinfo, and other
+  formats supported by OGR
+- Raster support for a large number of formats
+- Identify features
+- Display attribute tables
+- Select features
+- GRASS Digitizing
+- Feature labeling

@@ -1,37 +1,45 @@
-# $NetBSD: Makefile,v 1.12 2008/02/16 01:29:09 lexort Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 04:15:36 brook1 Exp $
 #
 
-DISTNAME=		qgis-0.7.4
-PKGREVISION=		2
+DISTNAME=		qgis_1.0.0
+PKGNAME=		qgis-1.0.0
 CATEGORIES=		geography
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qgis/}
+MASTER_SITES=		http://download.osgeo.org/qgis/src/
+EXTRACT_SUFX=		.tar.gz
 
-MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		http://qgis.org/
-COMMENT=		Open Source Geographic Information System
+MAINTAINER=		brook@nmsu.edu
+HOMEPAGE=		${MASTER_SITE_SOURCEFORGE:=qgis/}
+COMMENT=		Geographic Information System (GIS)
 
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		YES
+.include "options.mk"
 
-CONFIGURE_ARGS+=	--without-grass
+USE_PKGLOCALEDIR=       yes
+USE_TOOLS+=		bison perl
+USE_LANGUAGES+=		c c++ fortran
+USE_CMAKE=		yes
+USE_LIBTOOL=		yes
+USE_X11=		yes
 
-SUBST_CLASSES+=		qtbindir
-SUBST_STAGE.qtbindir=	pre-build
-SUBST_FILES.qtbindir=	create_qm_files.sh
-SUBST_SED.qtbindir+=	-e 's:@QTBINDIR:${QTDIR}/bin:g'
-SUBST_MESSAGE.qtbindir=	Fixing QT bin path.
+CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
+CMAKE_ARGS+=		-DEXPAT_INCLUDE_DIR:PATH=${PREFIX}/include
+CMAKE_ARGS+=		-DEXPAT_LIBRARY:FILEPATH=${PREFIX}/lib/libexpat.so
+CMAKE_ARGS+=		-DGDAL_CONFIG_PREFER_PATH:STRING=${PREFIX}/bin
+CMAKE_ARGS+=		-DGEOS_INCLUDE_DIR:PATH=${PREFIX}/geos/include
+CMAKE_ARGS+=		-DGEOS_LIBRARY:FILEPATH=${PREFIX}/lib/libgeos.so
+CMAKE_ARGS+=		-DPROJ_INCLUDE_DIR:PATH=${PREFIX}/include
+CMAKE_ARGS+=		-DPROJ_LIBRARY:FILEPATH=/usr/pkg/lib/libproj.so
+CMAKE_ARGS+=		-DQT_QMAKE_EXECUTABLE:FILEPATH=${PREFIX}/qt4/bin/qmake
+CMAKE_ARGS+=		-DSQLITE3_INCLUDE_DIR:PATH=${PREFIX}/include
+CMAKE_ARGS+=		-DSQLITE3_LIBRARY:FILEPATH=${PREFIX}/lib/libsqlite3.so
+
+PLIST_VARS+=		grass python
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
