@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2007/12/07 20:37:39 briandealwis Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 16:22:45 briandealwis Exp $
 #
 
-DISTNAME=	pdf2svg-0.2
+DISTNAME=	pdf2svg-0.2.1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.cityinthesky.co.uk/files/
 
@@ -10,12 +10,10 @@ HOMEPAGE=	http://www.cityinthesky.co.uk/files/
 COMMENT=	Small utility to convert PDF files to SVG files
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=     gmake pkg-config
+GNU_CONFIGURE=  yes
 
 BUILD_TARGET=	pdf2svg
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pdf2svg ${PREFIX}/bin/pdf2svg
 
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
