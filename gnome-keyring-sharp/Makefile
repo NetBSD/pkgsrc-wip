@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/19 23:18:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 23:11:24 jihbed Exp $
 #
 
 DISTNAME=	gnome-keyring-sharp-1.0.0
@@ -7,7 +7,8 @@ MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://andrew.jorgensenfamily.us/2008/08/gnome-keyring-sharp/
+#http://andrew.jorgensenfamily.us/2008/08/gnome-keyring-sharp/
+HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/ 
 COMMENT=	Fully managed implementation of libgnome-keyring
 
 PKG_DESTDIR_SUPPORT=	user-destdir
