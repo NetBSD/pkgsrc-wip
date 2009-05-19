@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/23 21:45:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 23:22:43 jihbed Exp $
 #
 
 DISTNAME=	rthread-0.1.1
-CATEGORIES=	devel parallel
+CATEGORIES=	devel python
 MASTER_SITES=	http://www.cs.tut.fi/~ask/rthread/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.cs.tut.fi/~ask/rthread/
 COMMENT=	Distributed computing with remote threads in Python
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
