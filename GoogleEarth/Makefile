@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/20 10:24:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 09:00:04 thomasklausner Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -9,8 +9,8 @@ EXTRACT_SUFX=
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://earth.google.com/
 COMMENT=		Interactive browser for satellite imagery and maps
-
 LICENSE=		google-earth-license
+
 LICENSE_FILE=		${FILESDIR}/google-earth-license
 RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}

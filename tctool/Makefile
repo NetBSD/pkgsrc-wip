@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/19 21:11:11 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:13 thomasklausner Exp $
 
 DISTNAME=	tctool-0.9.7
 CATEGORIES=	net
@@ -9,10 +9,9 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://speedmodem50b.berlios.de/
 COMMENT=	Speed Modem 50B/50B+/200/Cellpipe CELL 19A-BX utility
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-#LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGBASE}/src
 NO_CONFIGURE=	YES

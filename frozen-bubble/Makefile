@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/20 12:38:03 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:07 thomasklausner Exp $
 #
 
 DISTNAME=	frozen-bubble-2.2.0
@@ -9,8 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://www.frozen-bubble.org/
 COMMENT=	Pop the frozen bubbles
-
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-SDL>=2.1.2:../../devel/p5-SDL
 DEPENDS+=	p5-gettext>=0:../../devel/p5-gettext

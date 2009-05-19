@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/04/29 14:26:04 schnoebe Exp $
+# $NetBSD: Makefile,v 1.29 2009/05/19 09:00:11 thomasklausner Exp $
 
 DISTNAME=		pymsnt-0.11.3
 PKGREVISION=		3
@@ -13,7 +13,6 @@ PATCH_DIST_STRIP.hg-214.patch=	-p1
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://delx.net.au/projects/pymsnt
 COMMENT=		Transport connecting Jabber to the MSN network
-
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

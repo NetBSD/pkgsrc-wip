@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/05 21:19:53 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 09:00:11 thomasklausner Exp $
 #
 
 DISTNAME=		rancid-2.3.2a9
@@ -9,11 +9,12 @@ MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.shrubbery.net/rancid/
 COMMENT=		Really Awesome New Cisco confIg Differ
 LICENSE=		rancid-license
+
 LICENSE_FILE=		${FILESDIR}/rancid-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 DEPENDS+=		tcl-expect>=5.4:../../lang/tcl-expect
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		VARBASE
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/04/13 18:59:48 jukka Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/19 09:00:06 thomasklausner Exp $
 
 DISTNAME=	dk-milter-1.0.2
 #PKGREVISION=	1
@@ -8,10 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
 MAINTAINER=	j+pkgsrc@salmi.ch
 HOMEPAGE=	http://sourceforge.net/projects/dk-milter/
 COMMENT=	Open source DomainKeys filter software from Sendmail, Inc.
+LICENSE=	sendmail-open-source-license
 
-BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
-
-LICENSE=		sendmail-open-source-license
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter
 USE_BUILTIN.libmilter=	no
@@ -62,6 +60,7 @@ do-install:
 
 .include "options.mk"
 .include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

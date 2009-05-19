@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/08 07:44:51 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:06 thomasklausner Exp $
 
 DISTNAME=	Botan-1.8.1
 PKGNAME=	botan-1.8.1
@@ -11,9 +11,8 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://botan.randombit.net/
 COMMENT=	Portable, easy to use, and efficient C++ crypto library
 LICENSE=	botan-license
-LICENSE_FILE=	${FILESDIR}/botan-license
 
-#BROKEN_IN=	pkgsrc-2006Q4
+LICENSE_FILE=	${FILESDIR}/botan-license
 
 USE_TOOLS+=	perl
 

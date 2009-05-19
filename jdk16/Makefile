@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/19 09:00:08 thomasklausner Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -14,7 +14,6 @@ MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk16.html
 DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
 
 COMMENT=		Java Development Kit ${JDK_VERSION}
-
 LICENSE=		sun-jrl-16-license
 
 USE_TOOLS+=		patch

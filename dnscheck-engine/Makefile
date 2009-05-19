@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/09 09:54:50 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:07 thomasklausner Exp $
 #
 
 DISTNAME=	dnscheck-${RCVERSION}
@@ -10,6 +10,7 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://opensource.iis.se/trac/dnscheck/
 COMMENT=	DNSCheck is a DNS quality checker
 LICENSE=	iis-license
+
 LICENSE_FILE=	${FILESDIR}/iis-license
 
 SVN_REPOSITORIES=	dnscheck

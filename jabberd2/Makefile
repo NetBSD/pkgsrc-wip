@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2009/04/28 13:17:45 schnoebe Exp $
+# $NetBSD: Makefile,v 1.63 2009/05/19 09:00:08 thomasklausner Exp $
 
 DISTNAME=		jabberd-2.2.8
 CATEGORIES=		chat
@@ -7,7 +7,6 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
-
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

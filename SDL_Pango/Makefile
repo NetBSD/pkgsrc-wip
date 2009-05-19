@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/20 12:26:05 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:05 thomasklausner Exp $
 #
 
 DISTNAME=	SDL_Pango-0.1.2
@@ -12,8 +12,7 @@ PATCH_SITES+=	http://zarb.org/~gc/t/
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://sdlpango.sourceforge.net/
 COMMENT=	Connects the text rendering engine of GNOME 2.x. with SDL
-
-#LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

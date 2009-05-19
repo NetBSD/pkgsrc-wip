@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/12 08:47:02 obache Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/19 09:00:13 thomasklausner Exp $
 #
 
 DISTNAME=		scim-1.4.9
@@ -8,7 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.scim-im.org/
 COMMENT=		Smart Common Input Method
-
 LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

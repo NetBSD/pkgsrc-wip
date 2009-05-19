@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/12/01 00:22:31 pettai Exp $
+# $NetBSD: Makefile,v 1.41 2009/05/19 09:00:07 thomasklausner Exp $
 
 DISTNAME=	dkim-milter-2.7.2
 PKGREVISION=	1
@@ -8,11 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 MAINTAINER=	j+pkgsrc@salmi.ch
 HOMEPAGE=	http://sourceforge.net/projects/dkim-milter/
 COMMENT=	Open source DKIM filter software from Sendmail, Inc.
-
-BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
-BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
-
 LICENSE=		sendmail-open-source-license
+
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-milter
 USE_BUILTIN.libmilter=	no
@@ -89,7 +86,9 @@ do-install: arlib-install stats-install
 	${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/share/doc/dkim-milter/libdkim; done
 
 .include "options.mk"
+BUILDLINK_API_DEPENDS.openssl+=		openssl>=0.9.8
 .include "../../security/openssl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

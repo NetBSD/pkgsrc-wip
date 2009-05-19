@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/20 20:11:38 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:09 thomasklausner Exp $
 #
 
 # The version number should be incremented 0.1 when a scenario is moved or
@@ -6,19 +6,16 @@
 # It's rather arbitrary and only for pkgsrc's benefit.
 DISTNAME=	marathon-scenarios-1.0
 CATEGORIES=	games
-
 # Another series
 DISTFILES+=	tgi.zip
 SITES.tgi.zip=	http://ryoko.treellama.org/
 DISTFILES+=	marathonRubiconX.zip
 SITES.marathonRubiconX.zip=	http://files5.bungie.org/marathon/
-
 # Another series
 DISTFILES+=	Siege_of_NorKorh_-SDL-v2.zip
 SITES.Siege_of_NorKorh_-SDL-v2.zip=	ftp://ftp2.fileball.net/fileball/marathon/aleph1/scenarios/
 DISTFILES+=	MarathonEvil.zip
 SITES.MarathonEvil.zip=	http://trilogyrelease.bungie.org/files/
-
 # Standalone games
 DISTFILES+=	EternalXv103Full.zip
 SITES.EternalXv103Full.zip+=	http://eternal.bungie.org/files/_releases/
@@ -26,12 +23,19 @@ DISTFILES+=	MarathonRED.zip
 SITES.MarathonRED.zip=	http://trilogyrelease.bungie.org/files/
 DISTFILES+=	Tempus_Irae.zip
 SITES.Tempus_Irae.zip=	http://nardofiles.bungie.org/
-
+# common extract suffix
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://traxus.jjaro.net/traxus/Category:Scenarios
 COMMENT=	Game data for numerous scenarios playable with the Aleph One engine
+LICENSE=	generic-nonlicense
+
+RESTRICTED=	Individual scenarios are subject to various licenses, so play it safe.
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -67,13 +71,6 @@ do-install:
 	${CP} -r ${WRKDIR}/Eternal\ X*/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Eternal
 	${CP} -r ${WRKDIR}/Marathon\ RED/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Red
 	${CP} -r ${WRKDIR}/tempus_irae/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/TempusIrae
-
-LICENSE=	generic-nonlicense
-RESTRICTED=	Individual scenarios are subject to various licenses, so play it safe.
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.

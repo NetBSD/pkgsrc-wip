@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/12 08:50:11 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:12 thomasklausner Exp $
 #
 
 DISTNAME=	scim-bridge-0.4.16
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scim/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.scim-im.org/projects/scim_bridge
 COMMENT=	C wrapper library for SCIM
-
 #LICENSE=	gnu-gpl-v2 OR gnu-lgpl-2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

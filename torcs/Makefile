@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/19 16:54:47 yhardy Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:14 thomasklausner Exp $
 #
 
 DISTNAME=	torcs-1.3.1
@@ -9,6 +9,13 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.torcs.org/
 COMMENT=	The Open Racing Car Simulator
+LICENSE=	gnu-gpl-v2
+
+RESTRICTED=		Files too large.
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -16,14 +23,6 @@ USE_TOOLS=	bash gmake
 
 CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
-
-LICENSE=		gnu-gpl-v2
-
-RESTRICTED=		Files too large.
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 REPLACE_BASH+=	robotgen
 REPLACE_BASH+=	src/linux/torcs.in

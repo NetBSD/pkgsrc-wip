@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/14 21:51:39 guigui2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/19 09:00:06 thomasklausner Exp $
 #
 
 DISTNAME=			dir2ogg-0.11.6
@@ -8,7 +8,6 @@ MASTER_SITES=			http://jak-linux.org/projects/dir2ogg/0.11/
 MAINTAINER=			netbsd@guigui2.net
 HOMEPAGE=			http://jak-linux.org/projects/dir2ogg
 COMMENT=			Command-line {wav,mp3,m4a} to ogg converter
-
 LICENSE=			gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=		user-destdir

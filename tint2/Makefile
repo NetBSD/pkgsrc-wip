@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/14 21:41:40 guigui2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:13 thomasklausner Exp $
 #
 
 DISTNAME=		tint-0.6.0
@@ -8,7 +8,6 @@ MASTER_SITES=		http://tint2.googlecode.com/files/
 MAINTAINER=		netbsd@guigui2.net
 HOMEPAGE=		http://tint2.googlecode.com/
 COMMENT=		Tint2 is a simple panel/taskbar
-
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

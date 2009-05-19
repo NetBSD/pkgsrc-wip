@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/25 23:40:15 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:07 thomasklausner Exp $
 #
 
 DISTNAME=	gallery-1.5.10
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://gallery.sourceforge.net/
 COMMENT=	Web-based photo gallery written in PHP
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}

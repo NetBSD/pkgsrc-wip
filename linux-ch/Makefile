@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/19 09:00:09 thomasklausner Exp $
 
 DISTNAME=	chstandard-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-ch-4.0.0
@@ -8,11 +8,9 @@ MASTER_SITES=	http://www.softintegration.com/download/software/release/Linux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.softintegration.com/products/
 COMMENT=	Ch is an interactive C development environment
-
 # I have included chstandard-license for pkgsrc-wip purposes as
 # linux-ch/licenses/chstandard-license. Basically,
 # this tool is free for personal and commercial use.
-
 LICENSE=		chstandard-license
 
 LINUX_BINPKG_FMT=	plain

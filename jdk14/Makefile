@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.42 2009/05/19 09:00:08 thomasklausner Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -13,7 +13,6 @@ MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk14.html
 DISTFILES=		${SCSL_SRCFILE} ${SCSL_BINFILE} ${PATCHSETFILE}
 
 COMMENT=		Java Development Kit 1.4.2
-
 LICENSE=		scsl23-license
 
 EXTRACT_CMD_OPTS.zip=	-a -q

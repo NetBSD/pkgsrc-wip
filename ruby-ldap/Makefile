@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/07 11:28:00 obache Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/19 09:00:12 thomasklausner Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://ruby-ldap.sourceforge.net/
 COMMENT=	LDAP extension module for Ruby
-
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/26 01:11:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:14 thomasklausner Exp $
 #
 
 DISTNAME=	tw_cli-${EMUL_OPSYS}-${DIST_ARCH}-9.5.0.1
@@ -10,16 +10,16 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.3ware.com/support/
 COMMENT=	AMCC/3ware Strage Controller Management Command Line Interface
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	3ware-license
+
 LICENSE_FILE=	LICENSE
 RESTRICTED=	Redistribution is not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/07/30 15:49:10 jlamwww Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/19 09:00:09 thomasklausner Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chprofessional-4.0.0
@@ -8,17 +8,15 @@ MASTER_SITES=	http://www.softintegration.com/download/software/release/Linux/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.softintegration.com/products/chprofessional/
 COMMENT=	Ch is an interactive C development environment
-
-BUILD_DIRS=	# empty
-
 #
 # I have included chpro-license for pkgsrc-wip purposes as
 # linux-chprofessional/licenses/chpro-license. Basically,
 # this tool is free for academic purposes *only*. For personal
 # or commercial use, go for Ch standard edition
 #
-
 LICENSE=	chpro-license
+
+BUILD_DIRS=	# empty
 
 #
 # Webpage claims, that there are ports for Solaris, HP-UX, MacOS

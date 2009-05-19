@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/02 18:00:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 09:00:08 thomasklausner Exp $
 #
 
 DISTNAME=		jadlx158
@@ -11,10 +11,10 @@ JAD_OSDIR=		linux # Default one
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.kpdus.com/jad.html
 COMMENT=		The fast Java Decompiler
+LICENSE=		no-commercial-use
 
 WRKSRC=		${WRKDIR}
 
-LICENSE=no-commercial-use
 NO_BUILD=YES
 
 .include "../../mk/bsd.prefs.mk"

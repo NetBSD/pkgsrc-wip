@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/10 19:38:49 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:14 thomasklausner Exp $
 #
 
 DISTNAME=	xcowsay-1.1
@@ -8,8 +8,7 @@ MASTER_SITES=	http://www.nickg.me.uk/files/
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://www.doof.me.uk/xcowsay/
 COMMENT=	Display a cow and message on your desktop
-
-#LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

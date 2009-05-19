@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2008/10/15 20:32:10 hoka_adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2009/05/19 09:00:14 thomasklausner Exp $
 # used by wip/libxfce4gui/Makefile
 # used by wip/libxfce4mcs/Makefile
 # used by wip/libxfce4util/Makefile
@@ -30,7 +30,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
-#LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 XFCE4_VERSION=		4.5.91
 

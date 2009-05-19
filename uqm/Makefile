@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/08 19:57:50 leot1990 Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 09:00:14 thomasklausner Exp $
 #
 
 DISTNAME=	uqm-0.6.2-source
@@ -11,7 +11,6 @@ DISTFILES=		${DEFAULT_DISTFILES} uqm-0.6.0-content.uqm
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://sc2.sourceforge.net/
 COMMENT=	Ur-Quan Masters
-
 # GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
 #LICENSE=	gnu-gpl-v2
 

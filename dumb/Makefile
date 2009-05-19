@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/29 18:43:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 09:00:07 thomasklausner Exp $
 #
 
 DISTNAME=		dumb-0.9.3
@@ -8,8 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dumb/}
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://dumb.sourceforge.net/
 COMMENT=		IT, XM, S3M and MOD player library
-
 LICENSE=		dumb-license
+
 USE_TOOLS+=		gmake
 
 post-install:

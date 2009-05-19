@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 16:30:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/19 09:00:10 thomasklausner Exp $
 
 DISTNAME=	mpg123-${MPG123_VERSION}
 CATEGORIES=	audio
@@ -6,7 +6,6 @@ CATEGORIES=	audio
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.mpg123.de
 COMMENT=	Mpg123 MPEG layer 1, 2, 3 audio player
-
 LICENSE=	mpg123-license
 
 NO_SRC_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/08 12:29:53 pbraun9 Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/19 09:00:11 thomasklausner Exp $
 #
 
 DISTNAME=		postoffice-1.4.9
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.pell.portland.or.us/~orc/Code/postoffice/
 MAINTAINER=		pbraun@nethence.com
 HOMEPAGE=		http://www.pell.portland.or.us/~orc/Code/postoffice/
 COMMENT=		Simple SMTP mail server and client
-#LICENSE=		original-bsd
+LICENSE=		original-bsd
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./configure.sh

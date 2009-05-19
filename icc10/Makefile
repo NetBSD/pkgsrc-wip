@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/03 21:50:51 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:08 thomasklausner Exp $
 
 ICC_VERSION=	10.1.022
 ICC_SUBPREFIX=	icc10
@@ -10,15 +10,15 @@ MASTER_SITES=# empty
 MAINTAINER=	alnsn@yandex.ru
 HOMEPAGE=	http://www.intel.com/cd/software/products/asmo-na/eng/compilers/277618.htm
 COMMENT=	Intel C++ Compiler for Linux
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=	intel-icc10-license
 
 RESTRICTED=	Intel forbids any redistribution
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
-LICENSE=	intel-icc10-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ICC_PREFIX=		${PREFIX}/${ICC_SUBPREFIX}
 

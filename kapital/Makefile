@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/18 04:30:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/19 09:00:08 thomasklausner Exp $
 
 DISTNAME=	kapital-1.1.030606
 PKGREVISION=	2
@@ -7,16 +7,15 @@ CATEGORIES=	devel kde
 MAINTAINER=	greyskyy@users.sourceforge.net
 HOMEPAGE=	http://www.thekompany.com/products/kapital/
 COMMENT=	Personal finance manager
-
-
-DOWNLOAD_PAGE=	http://www.thekompany.com/products/
-
 LICENSE=		no-redistribution
+
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+DOWNLOAD_PAGE=	http://www.thekompany.com/products/
 
 INTERACTIVE_STAGE=	fetch
 _FETCH_MESSAGE= \

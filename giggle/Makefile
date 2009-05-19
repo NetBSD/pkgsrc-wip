@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/14 20:37:14 guigui2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/19 09:00:08 thomasklausner Exp $
 #
 
 DISTNAME=       giggle-0.4.91
@@ -9,7 +9,6 @@ EXTRACT_SUFX=   .tar.bz2
 MAINTAINER=     netbsd@guigui2.net
 HOMEPAGE=       http://live.gnome.org/giggle
 COMMENT=        GTK2 graphical frontend to git SCM tool
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

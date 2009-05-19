@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/06 17:43:31 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:07 thomasklausner Exp $
 #
 
 DISTNAME=	es40
@@ -10,19 +10,19 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://h18002.www1.hp.com/alphaserver/es40/
 COMMENT=	AlphaServer ES40 firmware image
+#LICENSE=		unknown
+
+RESTRICTED=		No redistribution allowed
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-
-#LICENSE=		unknown
-RESTRICTED=		No redistribution allowed
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 NO_BUILD=		yes
 INSTALLATION_DIRS=	share/es40-firmware

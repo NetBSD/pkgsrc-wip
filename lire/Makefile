@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2009/03/18 22:01:45 airhead Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 09:00:09 thomasklausner Exp $
 #
 
 DISTNAME=	lire-2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.logreport.org/pub/
-#LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	airhead@users.sf.net
 HOMEPAGE=	http://www.logreport.org/lire.html
 COMMENT=	Log analyzing tool
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite

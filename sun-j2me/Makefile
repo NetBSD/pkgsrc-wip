@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/22 10:48:37 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:13 thomasklausner Exp $
 #
 
 DISTNAME=j2me_wireless_toolkit-2_1_01-linux-i386
@@ -9,6 +9,7 @@ MASTER_SITES=
 MAINTAINER=--@--.--
 HOMEPAGE=http://java.sun.com/j2me/
 COMMENT= Sun's Java(tm) 2 Micro Edition Environment
+LICENSE=jdk13-license
 
 ARCHIVE=http://java.sun.com/products/archive/index.html
 DOWNLOAD=http://java.sun.com/products/j2mewtoolkit/download-2_1.html
@@ -48,8 +49,6 @@ _FETCH_MESSAGE= \
    ${ECHO} " license, then choose 'Linux self-extracting file'.";    \
    ${ECHO} -e ${END_MESSAGE};             \
    ${ECHO} "======================================================================"
-
-LICENSE=jdk13-license
 
 ONLY_FOR_PLATFORM=Linux-*-i[3-6]86
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/13 22:08:03 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:14 thomasklausner Exp $
 #
 
 DISTNAME=	xtags-0.5
@@ -9,8 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://xtags.sourceforge.net/
 COMMENT=	Little keyboard-driven Window Manager for X11
-
-#LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
