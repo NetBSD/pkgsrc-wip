@@ -1,6 +1,1 @@
-Dragbox is a tool for connecting the command line with the desktop environment. It 
-summons a drag handle in a window when you are managing files or text in the shell, 
-connecting the different workspaces -- desktop and command line. 
-
-Dragbox can take items on the command line or from a pipe and put on its shelf.
-The inverse is also possible: dragged-to items can be output to the shell
+Dragbox is a tool for connecting the command line with the desktop environment.

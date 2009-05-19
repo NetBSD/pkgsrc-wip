@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/11 22:01:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/19 23:31:16 jihbed Exp $
 #
 
 DISTNAME=	dragbox-0.4.0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://kaizer.se/publicfiles/dragbox/
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://users.student.lth.se/f04us/wiki/dragbox/
 COMMENT=	Command line drag-and-drop tool for GNOME
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,6 +17,7 @@ USE_TOOLS+=	gmake
 
 REPLACE_PYTHON+=	dragbox
 PY_PATCHPLIST=	yes
+
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
