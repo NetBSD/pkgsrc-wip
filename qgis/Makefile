@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 04:15:36 brook1 Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/19 14:15:55 brook1 Exp $
 #
 
-DISTNAME=		qgis_1.0.0
-PKGNAME=		qgis-1.0.0
+DISTNAME=		qgis_1.0.2
+PKGNAME=		qgis-1.0.2
 CATEGORIES=		geography
 MASTER_SITES=		http://download.osgeo.org/qgis/src/
 EXTRACT_SUFX=		.tar.gz
@@ -19,6 +19,8 @@ USE_LANGUAGES+=		c c++ fortran
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
+
+WRKSRC=			${WRKDIR}/${PKGNAME}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKE_ARGS+=		-DEXPAT_INCLUDE_DIR:PATH=${PREFIX}/include

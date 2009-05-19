@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/19 04:15:36 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/19 14:15:55 brook1 Exp $
 bin/qgis
 bin/qgis_help
 include/qgis/qgis.h
@@ -112,7 +112,43 @@ ${PLIST.python}lib/libqgispython.so.1.0
 ${PLIST.grass}lib/qgis/libgrassplugin.so
 ${PLIST.grass}lib/qgis/libgrassprovider.so
 lib/qgis/libmemoryprovider.so
+share/qgis/i18n/qgis_he.qm
 share/qgis/i18n/qgis_lo.qm
+share/qgis/svg/emergency/amenity=fire_station.svg
+share/qgis/svg/emergency/amenity=hospital.svg
+share/qgis/svg/emergency/amenity=police.svg
+share/qgis/svg/entertainment/amenity=fast_food.svg
+share/qgis/svg/entertainment/amenity=cinema.svg
+share/qgis/svg/entertainment/amenity=cafe.svg
+share/qgis/svg/entertainment/amenity=bar.svg
+share/qgis/svg/entertainment/amenity=pub.svg
+share/qgis/svg/entertainment/amenity=restaurant.svg
+share/qgis/svg/entertainment/amenity=theatre.svg
+share/qgis/svg/landmark/amenity=place_of_worship.svg
+share/qgis/svg/landmark/religion=christian.svg
+share/qgis/svg/landmark/religion=sikh.svg
+share/qgis/svg/landmark/religion=buddhist.svg
+share/qgis/svg/landmark/amenity=school.svg
+share/qgis/svg/landmark/tourism=museum.svg
+share/qgis/svg/landmark/religion=pastafarian.svg
+share/qgis/svg/landmark/religion=muslim.svg
+share/qgis/svg/landmark/religion=hindu.svg
+share/qgis/svg/landmark/religion=jewish.svg
+share/qgis/svg/services/amenity=recycling.svg
+share/qgis/svg/services/amenity=post_box.svg
+share/qgis/svg/services/amenity=telephone.svg
+share/qgis/svg/services/shop=convenience.svg
+share/qgis/svg/services/amenity=atm.svg
+share/qgis/svg/services/amenity=pharmacy.svg
+share/qgis/svg/services/amenity=pharmacy,dispensing=yes.svg
+share/qgis/svg/services/shop=supermarket.svg
+share/qgis/svg/services/tourism=hotel.svg
+share/qgis/svg/transport/amenity=ferry_terminal.svg
+share/qgis/svg/transport/amenity=airport.svg
+share/qgis/svg/transport/railway=station.svg
+share/qgis/svg/transport/highway=bus_stop.svg
+share/qgis/svg/transport/amenity=taxi.svg
+share/qgis/svg/transport/amenity=parking.svg
 share/qgis/themes/default/mActionAddOgrLayer.png
 share/qgis/themes/default/mIconDelete.png
 share/qgis/themes/default/mIconFirst.png
@@ -1540,12 +1576,17 @@ ${PLIST.grass}@dirrm share/qgis/themes/default/grass
 ${PLIST.grass}@dirrm share/qgis/themes/classic/grass
 @dirrm share/qgis/themes/classic
 @dirrm share/qgis/themes
+@dirrm share/qgis/svg/transport
 @dirrm share/qgis/svg/symbol
 @dirrm share/qgis/svg/sport
+@dirrm share/qgis/svg/services
 @dirrm share/qgis/svg/north_arrows
+@dirrm share/qgis/svg/landmark
 @dirrm share/qgis/svg/icon
 @dirrm share/qgis/svg/gpsicons
 @dirrm share/qgis/svg/geometric
+@dirrm share/qgis/svg/entertainment
+@dirrm share/qgis/svg/emergency
 @dirrm share/qgis/svg/biology
 @dirrm share/qgis/svg
 @dirrm share/qgis/resources/context_help
