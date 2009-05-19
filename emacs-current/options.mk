@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/12/04 21:40:54 minskim Exp $
+# $NetBSD: options.mk,v 1.12 2009/05/19 14:55:09 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -98,7 +98,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=athena
 .  endif
 
 ###
-### Support using NextStep (Cocoa or GNUstep) windwing system
+### Support using NextStep (Cocoa or GNUstep) windowing system
 ###
 .elif !empty(PKG_OPTIONS:Mnextstep)
 .  if exists(/System/Library/Frameworks/Cocoa.framework)
