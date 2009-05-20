@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/04/23 15:29:37 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:40 thomasklausner Exp $
 #
 
 DISTNAME=	alex-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.haskell.org/alex/dist/${VERSION}/
 DISTFILES=	${DISTNAME}.tar.gz

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2009/03/04 14:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=	ion-3-20090110
 PKGNAME=	ion3-20090110
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/04/12 10:36:38 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:40 thomasklausner Exp $
 
 DISTNAME=	fusesmb-${FUSESMB_VER}
 PKGNAME=	fuse-smb-${FUSESMB_VER}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://www.ricardis.tudelft.nl/~vincent/fusesmb/download/
 

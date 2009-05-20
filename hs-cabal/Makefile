@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/13 10:55:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=		Cabal-1.6.0.2
 PKGNAME=		hs-cabal-1.6.0.2
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/cabal/release/${PKGNAME}/
 

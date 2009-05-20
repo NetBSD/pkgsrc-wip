@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/01/10 12:45:12 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=		luasql-2.0b
 PKGNAME=		lua-pgsql-2.0b
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.keplerproject.org/luasql/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/20 00:58:42 thomasklausner Exp $
 #
 
 DISTNAME=		luasocket-2.0.1
 PKGNAME=		lua-socket-2.0.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://luaforge.net/frs/download.php/1589/
 

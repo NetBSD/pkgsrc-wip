@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/08 23:53:55 zul_ Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:43 thomasklausner Exp $
 #
 
 DISTNAME=	xmonad-contrib-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/xmonad-contrib/${VERSION}/
 

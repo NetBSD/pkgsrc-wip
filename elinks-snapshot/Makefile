@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:40 thomasklausner Exp $
 #
 
 DISTNAME=	elinks-current-unstable
 PKGNAME=	elinks-snap-${ELINKS_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://elinks.or.cz/download/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/14 11:23:10 zecrazytux Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:41 thomasklausner Exp $
 
 DISTNAME=			digest-0.0.0.5
 PKGNAME=			hs-digest-0.0.0.5
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/digest/0.0.0.5/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/04/10 02:00:02 hitscan Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:42 thomasklausner Exp $
 #
 
 DISTNAME=	JavaScript-SpiderMonkey-0.19
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JavaScript/}
 

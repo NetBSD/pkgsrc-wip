@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/02/14 16:34:44 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:42 thomasklausner Exp $
 
 DISTNAME=		netrik-1.15.4
+PKGREVISION=		1
 CATEGORIES=		www net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netrik/}
 

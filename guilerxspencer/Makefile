@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/12/15 14:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=		guilerxspencer-1.2
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://arglist.com/guile/${DISTNAME}/
 

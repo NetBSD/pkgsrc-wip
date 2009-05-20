@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=	gtk2hs-0.9.13
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2hs/}
 

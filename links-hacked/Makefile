@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/03/07 19:35:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://xray.sai.msu.ru/~karpov/links-hacked/downloads/
 EXTRACT_SUFX=	.tgz

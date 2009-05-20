@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/03/10 11:41:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/20 00:58:43 thomasklausner Exp $
 
 DISTNAME=	scummvm-${SCM_VER}
+PKGREVISION=	1
 CATEGORIES=	games
 
 OWNER=		dillo@NetBSD.org

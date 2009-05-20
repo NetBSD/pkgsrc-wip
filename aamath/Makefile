@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/29 11:05:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:39 thomasklausner Exp $
 #
 
 DISTNAME=	aamath-0.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://fuse.superglue.se/aamath/
 

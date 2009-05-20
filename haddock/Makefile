@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/10/17 13:35:10 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=		haddock-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.haskell.org/haddock/
 DISTFILES=		haddock-${VERSION}-src.tar.gz

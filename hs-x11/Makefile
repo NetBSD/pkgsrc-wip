@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/06/08 17:46:32 zul_ Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=	X11-${VERSION}
 PKGNAME=	hs-x11-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/X11/${VERSION}/
 

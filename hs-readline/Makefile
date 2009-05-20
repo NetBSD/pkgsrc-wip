@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/22 05:56:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:41 thomasklausner Exp $
 #
 
 DISTNAME=	readline-1.0.1.0
 PKGNAME=	hs-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/04/27 14:21:44 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:40 thomasklausner Exp $
 #
 
 DISTNAME=	c2hs-0.14.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cse.unsw.edu.au/~chak/haskell/c2hs/
 

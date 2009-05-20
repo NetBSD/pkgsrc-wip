@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/01/22 06:13:18 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:42 thomasklausner Exp $
 #
 
 DISTNAME=	mkcabal-0.4.1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

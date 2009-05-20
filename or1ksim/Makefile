@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/10/30 22:45:31 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:42 thomasklausner Exp $
 #
 
 DISTNAME=	or1ksim-0.2.0rc3
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.opencores.org/projects.cgi/web/or1k/
 

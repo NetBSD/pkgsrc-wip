@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/01/18 04:30:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/20 00:58:42 thomasklausner Exp $
 #
 
 DISTNAME=	qinx-1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm kde
 MASTER_SITES=	http://www.usermode.org/code/
 EXTRACT_SUFX=	.tar.bz2
