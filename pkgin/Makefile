@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/05/19 14:17:25 imilh Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/20 17:07:12 imilh Exp $
 #
 
-DISTNAME=		pkgin-20090519
+DISTNAME=		pkgin-20090520
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
@@ -20,6 +20,9 @@ SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	Makefile
 SUBST_SED.path=		-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
+
+USE_FEATURES=			nbcompat
+NBCOMPAT_CONFIGURE_ARGS=	--enable-db
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgin ${DESTDIR}${PREFIX}/bin
