@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.10 2009/05/09 21:57:59 emil_s Exp $
+# $NetBSD: haskell.mk,v 1.11 2009/05/20 08:32:00 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -9,13 +9,17 @@
 #     compiler currently supported is GHC.
 #
 #   * You can't install a cabal package for more than one compilers
-#     simultaneously. This limitation can possibly be eliminated using
-#     package-options-framework in the future.
+#     simultaneously. In the future, this limitation can possibly be
+#     eliminated using the method used by
+#     "../../lang/python/pyversion.mk".
 #
 # Note to package developers:
 #
 #   * This file must be included *before* "../../mk/bsd.pkg.mk", or
 #     you'll get target-redefinition errors.
+#
+#   * PKGNAME will automatically be "hs-${DISTNAME}" unless you
+#     explicitly declare it.
 # 
 #   * If your package is on the HackageDB, MASTER_SITES and HOMEPAGE
 #     can be omitted.
@@ -24,9 +28,27 @@
 #     unregistration are fully automated. You usually don't need to do
 #     anything special.
 #
+#   * When Haskell libraries depend on other Haskell libraries, they
+#     MUST depend on, not build-depend on, such libraries. So if your
+#     package installs a library, you MUST NOT set
+#     BUILDLINK_DEPMETHOD.${PKG} to "build" in your buildlink3.mk
+#     file. Reason:
+#         1. Assume we have two libraries A and B, and B build-depends
+#            on A.
+#         2. We install package A.
+#         3. We then install package B, which build-depends on A.
+#         4. After that, a new upstream version of package A is
+#            released. We therefore update package A to the new version.
+#         5. Package B had a build-dependency on A, so pkgsrc assumes
+#            that it's still safe to use package B without
+#            recompilation of B. But in fact package B requires the
+#            very version of package A which was available when
+#            package B was compiled. So the installed package B is
+#            completely broken at this time.
+#
 # Public variables for users:
 #
-#   HASKELL_TYPE
+#   HASKELL_COMPILER
 #       Description:
 #           The user's favourite Haskell compiler.
 #       Possible values:
@@ -66,12 +88,24 @@ MASTER_SITE_HASKELL_HACKAGE?=	http://hackage.haskell.org/packages/archive/
 # -----------------------------------------------------------------------------
 # This declaration should be placed in ../../mk/defaults/mk.conf
 #
-HASKELL_TYPE?=	ghc
+HASKELL_COMPILER?=	ghc
 # Used by haskell.mk to determine which Haskell compiler should be
 # used for building Haskell packages.
 # Possible: ghc
 # Default: ghc
 # -----------------------------------------------------------------------------
+
+
+# To be deprecated: if HASKELL_TYPE is set, copy its value to
+# HASKELL_COMPILER. The former is an old variable name of the latter.
+.if defined(HASKELL_TYPE)
+HASKELL_COMPILER?=	${HASKELL_TYPE}
+.endif
+
+
+# Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
+# ../../mk/misc/show.mk
+BUILD_DEFS+=	HASKELL_COMPILER
 
 
 # Cabal packages usually support DESTDIR with no root access.
@@ -80,7 +114,6 @@ PKG_DESTDIR_SUPPORT?=	user-destdir
 
 # Declarations for ../../mk/misc/show.mk
 _VARGROUPS+=		haskell
-_USER_VARS.haskell=	HASKELL_TYPE
 _DEF_VARS.haskell= \
 	_CABAL_SETUP_SCRIPT \
 	_DISTBASE \
@@ -98,6 +131,8 @@ _DEF_VARS.haskell= \
 _PKG_VARS.haskell= \
 	HASKELL_ENABLE_LIBRARY_PROFILING
 
+# PKGNAME is usually named after DISTNAME.
+PKGNAME?=	hs-${DISTNAME}
 
 # Default value of MASTER_SITES.
 _DISTBASE?=	${DISTNAME:C/-[^-]*$//}
@@ -107,6 +142,8 @@ MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${_DISTBASE}/${_DISTVERSION}/}
 # Default value of HOMEPAGE.
 HOMEPAGE?=	http://hackage.haskell.org/cgi-bin/hackage-scripts/package/${_DISTBASE}
 
+# Cabal packages may use pkg-config, but url2pkg can't detect
+# that. (PHO: I think that should be handled by url2pkg (2009-05-20))
 USE_TOOLS+=	pkg-config
 
 # Default value of HASKELL_ENABLE_LIBRARY_PROFILING
@@ -116,7 +153,7 @@ HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
 
 # Compiler specific variables and targets.
-.if ${HASKELL_TYPE} == "ghc"
+.if ${HASKELL_COMPILER} == "ghc"
 
 # Add dependency to the GHC.
 .include "../../lang/ghc/buildlink3.mk"
@@ -142,7 +179,7 @@ CONFIGURE_ARGS+=	--ghc
 CONFIGURE_ARGS+=	--with-compiler=${_GHC_BIN}
 CONFIGURE_ARGS+=	--with-hc-pkg=${_GHC_PKG_BIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-.endif # ${HASKELL_TYPE}
+.endif # ${HASKELL_COMPILER}
 
 # Library profiling
 PLIST_VARS+=		prof
@@ -190,6 +227,7 @@ do-build:
 	cd ${WRKSRC} && \
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} haddock
 .endif
+
 # Define install target. We need installed-pkg-config to be installed
 # for package registration (if any).
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
