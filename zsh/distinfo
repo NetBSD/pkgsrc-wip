@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/08 15:51:15 bsadewitz Exp $
-
-SHA1 (zsh-4.3.6.tar.bz2) = 7600f56d4304d1b84428b57a9b1d394de185c207
-RMD160 (zsh-4.3.6.tar.bz2) = fedd72f427439e75b8488479a3d20e9d8d5be794
-Size (zsh-4.3.6.tar.bz2) = 2527972 bytes

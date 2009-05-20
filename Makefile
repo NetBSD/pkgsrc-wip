@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3425 2009/05/20 00:25:35 blef Exp $
+# $Id: Makefile,v 1.3426 2009/05/20 00:31:48 blef Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2190,7 +2190,6 @@ SUBDIR+=	zapping
 SUBDIR+=	zinf
 SUBDIR+=	zkt
 SUBDIR+=	zope3-unstable
-SUBDIR+=	zsh
 SUBDIR+=	zsh-snapshot
 SUBDIR+=	zvbi
 
