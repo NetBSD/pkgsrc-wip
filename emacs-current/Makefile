@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/05/19 09:00:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.41 2009/05/21 08:41:26 obache Exp $
 #
 
 DISTNAME=	emacs-23.0.93
@@ -50,7 +50,7 @@ SUBST_SED.test_equal=		-e 's/ == / = /g'
 MAKE_DIRS_PERMS+=	${VARBASE}/games/emacs ${GAMEOWN:Q} ${GAMEGRP} ${GAMEDIRMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
-SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
+#SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM:Q}/update-game-score ${SETGID_GAMES_PERMS}
 
 .include "options.mk"
 
