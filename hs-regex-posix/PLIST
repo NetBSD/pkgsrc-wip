@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/30 14:54:03 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/21 04:54:13 phonohawk Exp $
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/HSregex-posix-${PKGVERSION}.o
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/ByteString.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/ByteString.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/ByteString/Lazy.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/ByteString/Lazy.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/Sequence.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/Sequence.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/String.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/String.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/Wrap.hi
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Posix/Wrap.p_hi
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-posix-${PKGVERSION}.a
+lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-posix-${PKGVERSION}_p.a
 lib/regex-posix-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/regex-posix-${PKGVERSION}/LICENSE
 @dirrm share/doc/regex-posix-${PKGVERSION}
