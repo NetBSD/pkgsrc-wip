@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/02/10 07:39:00 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/21 04:50:37 phonohawk Exp $
 #
 
-DISTNAME=	binary-0.4.4
-PKGREVISION=	1
+DISTNAME=	binary-0.5.0.1
 PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://code.haskell.org/binary/
 COMMENT=	Binary serialisation for Haskell values
 
 .include "../../wip/mk/haskell.mk"
