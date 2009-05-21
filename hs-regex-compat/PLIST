@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/30 15:13:12 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/21 04:53:25 phonohawk Exp $
 lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/HSregex-compat-${PKGVERSION}.o
 lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex.hi
+lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex.p_hi
 lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-compat-${PKGVERSION}.a
+lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/libHSregex-compat-${PKGVERSION}_p.a
 lib/regex-compat-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/regex-compat-${PKGVERSION}/LICENSE
 @dirrm share/doc/regex-compat-${PKGVERSION}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/30 15:13:12 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/21 04:53:25 phonohawk Exp $
 #
 
 DISTNAME=	regex-compat-0.92
+PKGREVISION=	1
 PKGNAME=	hs-${DISTNAME}
 CATEGORIES=	devel
 
