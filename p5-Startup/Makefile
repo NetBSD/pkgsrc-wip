@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/01 13:51:07 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/21 14:28:53 tonnerre Exp $
 
 DISTNAME=		Startup-0.103
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		p5stu
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Unicode/MSCHWARTZ/}
 
-MAINTAINER=		tonnerre@NetBSD.org
+MAINTAINER=		pkgsrc-p5-people@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Startup/
 COMMENT=		Program flow utility
 
