@@ -1,0 +1,12 @@
+Python bindings for remctl remote command execution
+
+remctl is a client/server application that supports remote
+execution of specific commands, using Kerberos v5 GSS-API for
+authentication.  Authorization is controlled by a configuration
+file and ACL files and can be set separately for each command,
+unlike with rsh.  remctl is like a Kerberos-authenticated simple
+CGI server, or a combination of Kerberos rsh and sudo without
+most of the features and complexity of either.
+
+This module provides Python bindings to the remctl client
+library.
