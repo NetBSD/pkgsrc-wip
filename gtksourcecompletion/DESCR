@@ -1,0 +1,6 @@
+GtkSourceCompletion is a library to add (auto)completion
+and calltips support to GtkSourceView. The library manages all events,
+etc  the popup position but it doesn't complete anything,
+it is the base library. You can develop providers for GtkSourceCompletion and
+the library will use it to show all the proposals,
+the information for every proposal etc
