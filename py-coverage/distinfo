@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/23 21:27:28 jihbed Exp $
+
+SHA1 (coverage-2.85.tar.gz) = 4191e2ee99d19990e74c351193443048af9b3a9e
+RMD160 (coverage-2.85.tar.gz) = 37ab5d97aea8a73843d083fb921b6fa797f669e1
+Size (coverage-2.85.tar.gz) = 14169 bytes
