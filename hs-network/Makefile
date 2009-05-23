@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/02/10 05:38:18 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/23 07:31:23 phonohawk Exp $
 #
 
-DISTNAME=	network-2.2.0.1
-PKGREVISION=	1
-PKGNAME=	hs-${DISTNAME}
-CATEGORIES=	devel
+DISTNAME=	network-2.2.1.2
+CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell networking-related facilities
