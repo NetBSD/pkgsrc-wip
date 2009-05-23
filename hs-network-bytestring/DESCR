@@ -1,0 +1,2 @@
+Fast, memory-efficient, low-level socket functions that use
+Data.ByteStrings instead of Strings.
