@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3430 2009/05/23 15:26:05 jihbed Exp $
+# $Id: Makefile,v 1.3431 2009/05/23 15:36:28 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -561,6 +561,7 @@ SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglk
 SUBDIR+=	gtkhotkey
 SUBDIR+=	gtklookat
+SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
 SUBDIR+=	guichan
