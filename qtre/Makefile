@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/06 22:12:34 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/23 14:17:45 ivaniclixx Exp $
 #
 
 DISTNAME=		qtre-0.0.20070206.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.arrakis.es/~ninsesabe/qtre/
 COMMENT=		Quick Tool for Raw Editing
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config perl
 GNU_CONFIGURE=		yes
 GNU_MAKE=		yes
 USE_LANGUAGES+=		c c++
