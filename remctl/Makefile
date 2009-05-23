@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/01/04 22:50:58 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/23 15:49:21 jakllsch Exp $
 
-DISTNAME=	remctl-2.13
+VERSION=	2.14
+DISTNAME=	remctl-${VERSION}
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
@@ -12,6 +13,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
