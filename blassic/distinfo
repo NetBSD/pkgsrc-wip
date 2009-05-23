@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/30 12:44:51 ivaniclixx Exp $
+$NetBSD: distinfo,v 1.5 2009/05/23 04:15:50 ivaniclixx Exp $
 
-SHA1 (blassic-0.10.0.tgz) = 6bb8237c96cb84df8eae8754ca621a76e1d0956f
-RMD160 (blassic-0.10.0.tgz) = 006df2c2ca25499050a2f7c9e711f07e57475fb2
-Size (blassic-0.10.0.tgz) = 349416 bytes
+SHA1 (blassic-0.10.1.tgz) = 92e6b312716d057f4e65c9de8cabf5b07b3cfa47
+RMD160 (blassic-0.10.1.tgz) = 5d7d6d1ec10e8e1fe8e487184a9b631e85996115
+Size (blassic-0.10.1.tgz) = 361164 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/09/14 18:43:43 dhowland Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/23 04:15:50 ivaniclixx Exp $
 #
 
-DISTNAME=		blassic-0.10.0
+DISTNAME=		blassic-0.10.1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.blassic.org/bin/
 EXTRACT_SUFX=		.tgz
