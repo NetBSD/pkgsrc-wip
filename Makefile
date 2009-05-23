@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3428 2009/05/23 07:38:20 phonohawk Exp $
+# $Id: Makefile,v 1.3429 2009/05/23 13:30:39 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1670,6 +1670,7 @@ SUBDIR+=	py-snmp
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-speex
+SUBDIR+=	py-statgrab
 SUBDIR+=	py-stem
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
