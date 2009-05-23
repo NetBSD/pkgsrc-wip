@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/05/23 15:22:44 jihbed Exp $
+
+--- d-feet.orig	2007-12-18 23:57:49.000000000 +0000
++++ d-feet	2009-05-22 12:55:28.000000000 +0000
+@@ -25,15 +25,15 @@
+     ENV_PATHS = {"DFEET_DATA_PATH" : "ui/",
+                  "DFEET_IMAGE_PATH" : "ui/",
+                  "DFEET_LOCALE_PATH" : "locale/",
+-                 "DFEET_HELP_PATH" : "/usr/share/gnome/dfeet/"
++                 "DFEET_HELP_PATH" : "/usr/pkg/share/gnome/dfeet/"
+                 }
+     
+ 
+ else:
+-    ENV_PATHS = {"DFEET_DATA_PATH" : "/usr/share/dfeet/",
+-                 "DFEET_IMAGE_PATH" : "/usr/share/dfeet/pixmaps/",
+-                 "DFEET_LOCALE_PATH" : "/usr/share/locale/",
+-                 "DFEET_HELP_PATH" : "/usr/share/gnome/dfeet/"
++    ENV_PATHS = {"DFEET_DATA_PATH" : "/usr/pkg/share/dfeet/",
++                 "DFEET_IMAGE_PATH" : "/usr/pkg/share/dfeet/pixmaps/",
++                 "DFEET_LOCALE_PATH" : "/usr/pkg/share/locale/",
++                 "DFEET_HELP_PATH" : "/usr/pkg/share/gnome/dfeet/"
+                 }
+ 
+ #must set variables before importing Globals because it requires them
