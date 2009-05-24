@@ -2,18 +2,18 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3432 2009/05/23 21:28:22 jihbed Exp $
+# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
 =======
-# $Id: Makefile,v 1.3432 2009/05/23 21:28:22 jihbed Exp $
+# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
 >>>>>>> 1.3416
 =======
-# $Id: Makefile,v 1.3432 2009/05/23 21:28:22 jihbed Exp $
+# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
 >>>>>>> 1.3424
 =======
-# $Id: Makefile,v 1.3432 2009/05/23 21:28:22 jihbed Exp $
+# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
 >>>>>>> 1.3427
 =======
-# $Id: Makefile,v 1.3432 2009/05/23 21:28:22 jihbed Exp $
+# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
 >>>>>>> 1.3431
 #
 
@@ -713,6 +713,7 @@ SUBDIR+=	hellanzb
 SUBDIR+=	hengband
 SUBDIR+=	heroes
 SUBDIR+=	hgview
+SUBDIR+=	hijra
 SUBDIR+=	hitori
 SUBDIR+=	homebank
 SUBDIR+=	hping3
