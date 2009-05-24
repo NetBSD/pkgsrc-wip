@@ -1,67 +1,45 @@
-$NetBSD: patch-ab,v 1.3 2007/05/04 05:09:41 bsadewitz Exp $
+$NetBSD: patch-ab,v 1.4 2009/05/24 19:27:50 cheusov Exp $
 
---- configure.ac.orig	2007-05-04 01:04:49.000000000 -0400
+--- configure.ac.orig	2009-05-24 00:45:16.000000000 +0300
 +++ configure.ac
-@@ -197,6 +197,7 @@ AC_HEADER_STDC
- dnl Is it too paranoid to specifically check for stdint.h and limits.h?
- AC_CHECK_HEADERS([stdlib.h string.h unistd.h sched.h sys/ioctl.h stdint.h limits.h])
- 
-+AC_CHECK_HEADERS([sys/wait.h sys/time.h sys/resource.h])
- 
- # OSS Header files
- AC_CHECK_HEADERS([sys/soundcard.h linux/soundcard.h machine/soundcard.h], HAVE_OSS=yes, HAVE_OSS=no)
-@@ -294,22 +295,22 @@ case $target in
- 	i386-*)
+@@ -553,31 +553,26 @@ case $target in
  		AC_MSG_WARN([Unknown target operating system])
  		cpu_type="i386"
--		CFLAGS="-DGENERIC $CFLAGS"
-+		CFLAGS="$CFLAGS"
+ 		buffer=disabled
+-		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	i486-*)
  		AC_MSG_WARN([Unknown target operating system])
  		cpu_type="i486"
--		CFLAGS="-DGENERIC $CFLAGS"
-+		CFLAGS="$CFLAGS"
+ 		buffer=disabled
+-		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	i586-*)
  		AC_MSG_WARN([Unknown target operating system])
  		cpu_type="i586"
--		CFLAGS="-DGENERIC $CFLAGS"
-+		CFLAGS="$CFLAGS"
+ 		buffer=disabled
+-		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
+ 	;;
+ 	i686-*)
+ 		AC_MSG_WARN([Unknown target operating system])
+ 		cpu_type="x86"
+ 		buffer=disabled
+-		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
+ 	;;
+ 	x86_64-*)
+ 		AC_MSG_WARN([Unknown target operating system])
+ 		cpu_type="x86-64"
+ 		buffer=disabled
+-		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
    *)
    	AC_MSG_WARN([Unknown target operating system])
-     cpu_type="generic_fpu"
--    CFLAGS="-DGENERIC $CFLAGS"
-+    CFLAGS="$CFLAGS"
-   ;;
- esac
+@@ -770,6 +765,8 @@ AC_HEADER_STDC
+ dnl Is it too paranoid to specifically check for stdint.h and limits.h?
+ AC_CHECK_HEADERS([stdio.h stdlib.h string.h unistd.h sched.h sys/ioctl.h sys/types.h stdint.h limits.h inttypes.h sys/time.h sys/wait.h sys/resource.h sys/signal.h signal.h])
  
-@@ -366,7 +367,26 @@ case $cpu_type in
-     CFLAGS="$CFLAGS -DOPT_SSE -DREAL_IS_FLOAT"
-   ;;
-   x86) 
--    CFLAGS="$CFLAGS -DOPT_MULTI -DOPT_GENERIC -DOPT_I386 -DOPT_I586 -DOPT_I586_DITHER -DOPT_MMX -DOPT_3DNOW -DOPT_3DNOWEXT -DOPT_SSE -DREAL_IS_FLOAT"
-+    CFLAGS="$CFLAGS -DOPT_MULTI -DOPT_I386 -DOPT_I586 -DOPT_I586_DITHER -DOPT_MMX -DOPT_3DNOW -DOPT_3DNOWEXT -DOPT_SSE -DREAL_IS_FLOAT"
-+  ;;
-+  arm-*-netbsd*)
-+    # check that... perhaps we are better off on arm with kernel math emulation
-+    cpu_type="generic_nofpu"
-+  ;;
-+  i386-*-netbsd*)
-+    cpu_type="i386_fpu"
-+  ;;
-+  i486-*-netbsd*)
-+    cpu_type="i486"
-+  ;;
-+  i586-*-netbsd*)
-+    cpu_type="x86"
-+  ;;
-+  i686-*-netbsd*)
-+    cpu_type="x86"
-+  ;;
-+  *-*-netbsd*)
-+    cpu_type="generic_fpu"
-   ;;
-   *)
-   	AC_MSG_ERROR([Unknown CPU type '$cpu_type'])
++AC_CHECK_HEADERS([sys/wait.h sys/time.h sys/resource.h])
++
+ dnl ############## Types
+ 
+ dnl Detect large file support, enable switches if needed.

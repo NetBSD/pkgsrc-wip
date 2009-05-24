@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2007/04/23 17:41:54 bsadewitz Exp $
+$NetBSD: patch-aa,v 1.2 2009/05/24 19:27:50 cheusov Exp $
 
---- src/audio_oss.c.orig	2007-02-07 04:24:33.000000000 -0500
-+++ src/audio_oss.c
-@@ -173,7 +173,7 @@ int audio_open(struct audio_info_struct 
-     return -1;
- 
-   if(!ai->device) {
--    ai->device = "/dev/dsp";
-+    ai->device = DEVOSSAUDIO;
-     usingdefdev = 1;
-   }
- 
-@@ -182,7 +182,7 @@ int audio_open(struct audio_info_struct 
-   if(ai->fn < 0)
-   {
-     if(usingdefdev) {
--      ai->device = "/dev/sound/dsp";
-+      ai->device = DEVOSSSOUND;
-       ai->fn = open(ai->device,O_WRONLY);
-       if(ai->fn < 0) {
-       error("Can't open default sound device!");
+--- src/output/oss.c.orig	2009-05-24 00:45:10.000000000 +0300
++++ src/output/oss.c
+@@ -167,7 +167,7 @@ static int open_oss(audio_output_t *ao)
+ 	if(!ao) return -1;
+ 	
+ 	if(!ao->device) {
+-		ao->device = "/dev/dsp";
++		ao->device = DEVOSSAUDIO;
+ 		usingdefdev = 1;
+ 	}
+ 	
+@@ -176,7 +176,7 @@ static int open_oss(audio_output_t *ao)
+ 	if(ao->fn < 0)
+ 	{
+ 		if(usingdefdev) {
+-			ao->device = "/dev/sound/dsp";
++			ao->device = DEVOSSAUDIO;
+ 			ao->fn = open(ao->device,O_WRONLY);
+ 			if(ao->fn < 0) {
+ 				if(!AOQUIET) error("Can't open default sound device!");

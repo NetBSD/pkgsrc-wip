@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/19 09:00:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/24 19:27:50 cheusov Exp $
 
 DISTNAME=	mpg123-${MPG123_VERSION}
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ LICENSE=	mpg123-license
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=		pkg-config automake date
+USE_TOOLS+=		pkg-config automake date perl
 GNU_CONFIGURE=		yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
