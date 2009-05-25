@@ -2,18 +2,18 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
+# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
 =======
-# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
+# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
 >>>>>>> 1.3416
 =======
-# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
+# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
 >>>>>>> 1.3424
 =======
-# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
+# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
 >>>>>>> 1.3427
 =======
-# $Id: Makefile,v 1.3433 2009/05/24 14:08:33 jihbed Exp $
+# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
 >>>>>>> 1.3431
 #
 
@@ -933,6 +933,7 @@ SUBDIR+=	ldapbrowser
 SUBDIR+=	ldapdns
 SUBDIR+=	lde
 SUBDIR+=	ldp
+SUBDIR+=	ldtp
 SUBDIR+=	ledger
 SUBDIR+=	leim-current
 SUBDIR+=	lensfun
