@@ -1,2 +1,51 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/25 15:26:09 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/26 09:40:20 jihbed Exp $
 bin/ldtp
+bin/ldtpcodegen
+bin/ldtpeditor
+bin/ldtprunner
+${PYSITELIB}/ldtp.py
+${PYSITELIB}/ldtp.pyc
+${PYSITELIB}/ldtplib/__init__.py
+${PYSITELIB}/ldtplib/__init__.pyc
+${PYSITELIB}/ldtplib/acss.py
+${PYSITELIB}/ldtplib/acss.pyc
+${PYSITELIB}/ldtplib/atspi.py
+${PYSITELIB}/ldtplib/atspi.pyc
+${PYSITELIB}/ldtplib/checkbox.py
+${PYSITELIB}/ldtplib/checkbox.pyc
+${PYSITELIB}/ldtplib/clienthandler.py
+${PYSITELIB}/ldtplib/clienthandler.pyc
+${PYSITELIB}/ldtplib/debug.py
+${PYSITELIB}/ldtplib/debug.pyc
+${PYSITELIB}/ldtplib/ldtpcommon.py
+${PYSITELIB}/ldtplib/ldtpcommon.pyc
+${PYSITELIB}/ldtplib/ldtpgui.py
+${PYSITELIB}/ldtplib/ldtpgui.pyc
+${PYSITELIB}/ldtplib/ldtplibutils.py
+${PYSITELIB}/ldtplib/ldtplibutils.pyc
+${PYSITELIB}/ldtplib/ldtprecorder.py
+${PYSITELIB}/ldtplib/ldtprecorder.pyc
+${PYSITELIB}/ldtplib/ldtprequest.py
+${PYSITELIB}/ldtplib/ldtprequest.pyc
+${PYSITELIB}/ldtplib/libldtpcodegen.py
+${PYSITELIB}/ldtplib/libldtpcodegen.pyc
+${PYSITELIB}/ldtplib/orca_i18n.py
+${PYSITELIB}/ldtplib/orca_i18n.pyc
+${PYSITELIB}/ldtplib/pushbutton.py
+${PYSITELIB}/ldtplib/pushbutton.pyc
+${PYSITELIB}/ldtplib/rolenames.py
+${PYSITELIB}/ldtplib/rolenames.pyc
+${PYSITELIB}/ldtplib/settings.py
+${PYSITELIB}/ldtplib/settings.pyc
+${PYSITELIB}/ldtputils.py
+${PYSITELIB}/ldtputils.pyc
+${PYSITELIB}/ooldtp.py
+${PYSITELIB}/ooldtp.pyc
+share/ldtp/appdata
+share/ldtp/editor.conf
+share/ldtp/glade/ldtpeditor.glade
+share/ldtp/icons/ldtp-logo-small.png
+@dirrm share/ldtp/icons
+@dirrm share/ldtp/glade
+@dirrm share/ldtp
+@dirrm ${PYSITELIB}/ldtplib
