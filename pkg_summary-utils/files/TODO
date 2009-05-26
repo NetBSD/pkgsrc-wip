@@ -2,6 +2,9 @@ TODO list and thoughts
 
 existing tools:
 
+    pkg_cleanup_distdir:
+       - remove empty directories
+
     pkg_cmp_summary:
        - test for -m
 
@@ -16,10 +19,10 @@ existing tools:
          (they can be deleted, for examples)
 
     pkg_src_fetch_var:
-       - man page
+       - remove it, see pkg_micro_src_summary
 
     pkg_src_summary:
-       - new option for exit code 0 if ALL was done successfully,
+       - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
     pkg_summary4view:
