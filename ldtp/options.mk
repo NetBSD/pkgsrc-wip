@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/05/26 09:40:20 jihbed Exp $
+# $NetBSD: options.mk,v 1.3 2009/05/26 10:28:42 jihbed Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -19,6 +19,7 @@ PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
 .  include "../../x11/py-gnome2/buildlink3.mk"
 .  include "../../x11/py-gnome2-desktop/buildlink3.mk"
 .  include "../../x11/py-gtk2/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-gtksourceview-[0-9]*:../../x11/py-gtksourceview
 .else
 CONFIGURE_ARGS+=	--without-pythonmodules
 .endif
