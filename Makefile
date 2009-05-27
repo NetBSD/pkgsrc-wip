@@ -2,18 +2,18 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
+# $Id: Makefile,v 1.3435 2009/05/27 15:22:09 jihbed Exp $
 =======
-# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
+# $Id: Makefile,v 1.3435 2009/05/27 15:22:09 jihbed Exp $
 >>>>>>> 1.3416
 =======
-# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
+# $Id: Makefile,v 1.3435 2009/05/27 15:22:09 jihbed Exp $
 >>>>>>> 1.3424
 =======
-# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
+# $Id: Makefile,v 1.3435 2009/05/27 15:22:09 jihbed Exp $
 >>>>>>> 1.3427
 =======
-# $Id: Makefile,v 1.3434 2009/05/25 15:28:42 jihbed Exp $
+# $Id: Makefile,v 1.3435 2009/05/27 15:22:09 jihbed Exp $
 >>>>>>> 1.3431
 #
 
@@ -1771,6 +1771,7 @@ SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rosegarden-current
 SUBDIR+=	roundcube-skin-mvision2
+SUBDIR+=	rss-glib
 SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	rthread
