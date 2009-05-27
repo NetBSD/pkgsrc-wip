@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/27 15:25:38 jihbed Exp $
 #
 
 DISTNAME=	rss-glib-0.2.2
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://ftp.dronelabs.com/sources/rss-glib/0.2/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://ftp.dronelabs.com/sources/rss-glib/0.2/
+HOMEPAGE=	http://dronelabs.com/
 COMMENT=	Rss GLib is a RSS and Atom parser for GObject
 
 PKG_DESTDIR_SUPPORT=	user-destdir
