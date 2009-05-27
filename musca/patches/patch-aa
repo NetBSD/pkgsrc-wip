@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/05/27 15:44:23 ishit Exp $
+
+--- Makefile.orig	2009-05-14 21:10:54.000000000 +0900
++++ Makefile
+@@ -1,7 +1,9 @@
+ CFLAGS?=-Wall -g
++X11INC=${X11BASE}/include
++X11LIB=${X11BASE}/lib
+ 
+ all:
+-	$(CC) $(CFLAGS) -I/usr/X11R6/include -L/usr/X11R6/lib -lc -lm -lX11 -o musca musca.c
++	$(CC) $(CFLAGS) -I${X11INC} -L${X11LIB} -Wl,-R${X11LIB} -lc -lm -lX11 -o musca musca.c
+ 
+ clean:
+ 	rm -f musca
