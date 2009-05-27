@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/27 15:41:32 ishit Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/27 16:25:31 ishit Exp $
 #
 
 DISTNAME=	musca-0.9.22
@@ -16,6 +16,7 @@ NO_CONFIGURE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musca ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/musca.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
