@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+include/rss-glib-1.0/rss-glib/rss-document.h
+include/rss-glib-1.0/rss-glib/rss-glib.h
+include/rss-glib-1.0/rss-glib/rss-item.h
+include/rss-glib-1.0/rss-glib/rss-parser.h
+include/rss-glib-1.0/rss-glib/rss-version.h
+lib/librss-glib-1.0.la
+lib/pkgconfig/rss-glib-1.0.pc
+${PYSITELIB}/gtk-2.0/rss.la
+share/gtk-doc/html/rss-glib/RssDocument.html
+share/gtk-doc/html/rss-glib/RssItem.html
+share/gtk-doc/html/rss-glib/RssParser.html
+share/gtk-doc/html/rss-glib/ch01.html
+share/gtk-doc/html/rss-glib/home.png
+share/gtk-doc/html/rss-glib/index.html
+share/gtk-doc/html/rss-glib/index.sgml
+share/gtk-doc/html/rss-glib/left.png
+share/gtk-doc/html/rss-glib/right.png
+share/gtk-doc/html/rss-glib/rss-glib-rss-version.html
+share/gtk-doc/html/rss-glib/rss-glib.devhelp
+share/gtk-doc/html/rss-glib/rss-glib.devhelp2
+share/gtk-doc/html/rss-glib/style.css
+share/gtk-doc/html/rss-glib/up.png
+share/pygtk/2.0/defs/rss.defs
+@dirrm share/pygtk/2.0/defs
+@dirrm share/pygtk/2.0
+@dirrm share/pygtk
+@dirrm share/gtk-doc/html/rss-glib
+@dirrm ${PYSITELIB}/gtk-2.0
+@dirrm include/rss-glib-1.0/rss-glib
+@dirrm include/rss-glib-1.0

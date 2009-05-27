@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+#
+
+DISTNAME=	rss-glib-0.2.2
+CATEGORIES=	www
+MASTER_SITES=	http://ftp.dronelabs.com/sources/rss-glib/0.2/
+
+MAINTAINER=	kamel.derouiche@gmail.com
+HOMEPAGE=	http://ftp.dronelabs.com/sources/rss-glib/0.2/
+COMMENT=	Rss GLib is a RSS and Atom parser for GObject
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake
+
+TEST_TARGET=	test
+
+PKGCONFIG_OVERRIDE+=	bindings/mono/rss-glib-sharp-1.0.pc.in
+PKGCONFIG_OVERRIDE+=	rss-glib.pc.in
+
+PLIST_SRC+=		PLIST
+
+.include "options.mk"
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../wip/libmrss/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

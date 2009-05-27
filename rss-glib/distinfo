@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+
+SHA1 (rss-glib-0.2.2.tar.gz) = f4c3c76cc6d84d61dd21830845be4f32bd91f21b
+RMD160 (rss-glib-0.2.2.tar.gz) = c299acdff198d7e468a642d00031bfbf67666ecd
+Size (rss-glib-0.2.2.tar.gz) = 370685 bytes
