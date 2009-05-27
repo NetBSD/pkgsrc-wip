@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/18 00:35:20 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/05/27 23:08:21 jihbed Exp $
 
-SHA1 (mono-zeroconf-0.8.0.tar.bz2) = 0ba83248cc5afa24653c485fa92bcf6984533183
-RMD160 (mono-zeroconf-0.8.0.tar.bz2) = 725720e35788de7085afc984acd34767a6bf48e6
-Size (mono-zeroconf-0.8.0.tar.bz2) = 138181 bytes
+SHA1 (mono-zeroconf-0.9.0.tar.bz2) = e79b0aa7ec420618862d14e383d7287e9451d04c
+RMD160 (mono-zeroconf-0.9.0.tar.bz2) = 089b910b931c319256451b08126e620bcf1da9b8
+Size (mono-zeroconf-0.9.0.tar.bz2) = 139677 bytes
