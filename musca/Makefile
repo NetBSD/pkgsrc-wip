@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/15 16:36:14 ishit Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/27 15:41:32 ishit Exp $
 #
 
 DISTNAME=	musca-0.9.22
@@ -11,6 +11,8 @@ HOMEPAGE=	http://aerosuidae.net/musca/
 COMMENT=	Simple dynamic window manager for X
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_CONFIGURE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musca ${DESTDIR}${PREFIX}/bin
