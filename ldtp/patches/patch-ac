@@ -1,0 +1,11 @@
+--- ./python/ldtpeditor.orig	2009-05-11 04:26:29.000000000 +0000
++++ ./python/ldtpeditor	2009-05-26 11:02:41.000000000 +0000
+@@ -116,7 +116,7 @@
+         else:
+             self.gladeFilePath = '/usr/share/ldtp/glade/' + gladeFileName
+             if os.path.exists (self.gladeFilePath) is False:
+-                self.gladeFilePath = '/usr/share/local/ldtp/glade/' + gladeFileName
++                self.gladeFilePath = '/usr/pkg/share/ldtp/glade/' + gladeFileName
+         self.wTree = gtk.glade.XML (self.gladeFilePath)
+ 
+         dic = { "on_quit_activate" : self.quittingApplication,
