@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2009/05/16 15:16:25 imilh Exp $
+$NetBSD: MESSAGE,v 1.3 2009/05/29 15:03:32 imilh Exp $
 
 First steps before using pkgin.
 
@@ -8,20 +8,6 @@ Initialize the database :
 	# PKG_REPOS=ftp://your.favourite/pkgsrc/binary/mirror/All
 	# export PKG_REPOS
 	# pkgin update
-
-Mark pkgin and dependencies as "keepable" :
-
-On NetBSD >= 5
-
-	# pkgin keep pkgin sqlite3
-
-On DragonFly
-
-	# pkgin keep pkgin sqlite3 libfetch
-
-Anywhere else
-
-	# pkgin keep pkgin sqlite3 libfetch libarchive
 
 ***************************************************************************
 
