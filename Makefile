@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3436 2009/05/29 01:43:50 gduzan Exp $
+# $Id: Makefile,v 1.3437 2009/05/29 04:13:57 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -709,6 +709,7 @@ SUBDIR+=	hs-binary
 SUBDIR+=	hs-cabal
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-dataenc
+SUBDIR+=	hs-haskelldb
 SUBDIR+=	hs-hopenssl
 SUBDIR+=	hs-html
 SUBDIR+=	hs-iconv
