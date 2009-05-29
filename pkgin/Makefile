@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/05/28 15:51:41 imilh Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/29 13:31:38 imilh Exp $
 #
 
-DISTNAME=		pkgin-20090528
+DISTNAME=		pkgin-20090529
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
@@ -22,8 +22,10 @@ SUBST_FILES.path=	Makefile actions.c
 SUBST_SED.path=		-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
 
+USE_BSD_MAKEFILE=		yes
 USE_FEATURES=			nbcompat
-NBCOMPAT_CONFIGURE_ARGS=	--enable-db
+
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-db
 
 .include "options.mk"
 
