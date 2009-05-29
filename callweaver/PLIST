@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/18 09:11:19 x400 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/29 13:29:21 x400 Exp $
 bin/callweaver
-bin/streamplayer
+sbin/streamplayer
 include/callweaver/acl.h
 include/callweaver/adsi.h
 include/callweaver/aes.h
@@ -77,6 +77,7 @@ lib/callweaver/libcallweaver.la
 lib/callweaver/libcwjb.la
 lib/callweaver/libcwsqlite3.la
 lib/callweaver/modules/app_adsiprog.la
+lib/callweaver/modules/app_amd.la
 lib/callweaver/modules/app_authenticate.la
 lib/callweaver/modules/app_backgrounddetect.la
 lib/callweaver/modules/app_backticks.la
@@ -215,6 +216,11 @@ man/man8/callweaver.8
 man/man8/safe_callweaver.8
 sbin/callweaver_cli
 sbin/safe_callweaver
+${PLIST.sipsecurity}share/callweaver/keys/dh1024.pem
+${PLIST.sipsecurity}share/callweaver/keys/dh512.pem
+${PLIST.sipsecurity}share/callweaver/keys/servercert.pem
+${PLIST.sipsecurity}share/callweaver/keys/serverkey.pem
+${PLIST.sipsecurity}share/callweaver/keys/trustcerts.pem
 share/callweaver/ogi/eogi-sphinx-test
 share/callweaver/ogi/eogi-test
 share/callweaver/ogi/fastogi-test
@@ -225,6 +231,7 @@ share/doc/callweaver/README
 share/examples/callweaver/adsi.conf
 share/examples/callweaver/adtranvofr.conf
 share/examples/callweaver/agents.conf
+share/examples/callweaver/amd.conf
 share/examples/callweaver/callweaver.adsi
 share/examples/callweaver/callweaver.conf
 share/examples/callweaver/cdr.conf

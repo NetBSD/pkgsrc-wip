@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.2 2008/12/10 00:31:53 x400 Exp $
+$NetBSD: distinfo,v 1.2 2009/05/29 13:29:21 x400 Exp $
 
-SHA1 (callweaver-1.2.0.1.tgz) = 47fe1faef9bc93c06812030fba93d64f2f399580
-RMD160 (callweaver-1.2.0.1.tgz) = a11d1322b18e55844e44deb1d94f91ebefd3f968
-Size (callweaver-1.2.0.1.tgz) = 5769383 bytes
+SHA1 (callweaver-1.2.1.tgz) = f84cc3575879a89fa602e45978272bc522177ed1
+RMD160 (callweaver-1.2.1.tgz) = 89f94fdca876e9126732e3e725a4ab30fdc272fc
+Size (callweaver-1.2.1.tgz) = 5795528 bytes
 SHA1 (patch-aa) = 661b7565ab9de1e9c10ba69bb5fe03a186b847c8

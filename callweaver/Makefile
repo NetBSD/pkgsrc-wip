@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/29 13:29:21 x400 Exp $
 
-DISTNAME=	callweaver-1.2.0.1
+DISTNAME=	callweaver-1.2.1
 PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://devs.callweaver.org/release/
@@ -42,7 +42,7 @@ CWCONFEXAMPLESDIR?=	${PREFIX}/share/examples/callweaver
 
 SUBST_CLASSES+=         callweaver
 SUBST_STAGE.callweaver=	pre-configure
-SUBST_FILES.callweaver=	layout.bsd
+SUBST_FILES.callweaver=	layout.freebsd
 SUBST_SED.callweaver+=	-e 's|^ *\(cwprefix\)=.*|\1=${CWPREFIX}|'
 SUBST_SED.callweaver+=	-e 's|^ *\(cwexecdir\)=.*|\1=${CWEXECDIR}|'
 SUBST_SED.callweaver+=  -e 's|^ *\(cwutilsdir\)=.*|\1=${CWUTILSDIR}|'
@@ -56,7 +56,7 @@ SUBST_SED.callweaver+=	-e 's|^ *\(cwspooldir\)=.*|\1=${CWSPOOLDIR}|'
 SUBST_SED.callweaver+=  -e 's|^ *\(cwmandir\)=.*|\1=${CWMANDIR}|'
 SUBST_SED.callweaver+=  -e 's|^ *\(cwdocdir\)=.*|\1=${CWDOCDIR}|'
 
-CONFIGURE_ARGS+= 	--with-directory-layout=bsd
+CONFIGURE_ARGS+= 	--with-directory-layout=freebsd
 CONFIGURE_ARGS+= 	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+= 	--with-app_backticks --with-app_dtmftotext --with-app_page --with-app_valetparking
 
@@ -69,6 +69,7 @@ OWN_DIRS+=		${CWLOGDIR} ${CWSPOOLDIR} ${CWVARDIR}
 .for f in adsi.conf \
 	adtranvofr.conf \
 	agents.conf \
+	amd.conf \
 	callweaver.adsi \
 	callweaver.conf \
 	cdr.conf \
