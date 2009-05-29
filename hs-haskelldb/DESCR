@@ -1,0 +1,4 @@
+HaskellDB is a combinator library for expressing queries and other
+operations on relational databases in a type safe and declarative
+way. All the queries and operations are completely expressed within
+Haskell, no embedded (SQL) commands are needed.
