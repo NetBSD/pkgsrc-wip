@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/12 06:54:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/29 04:44:52 phonohawk Exp $
 #
 
-DISTNAME=	time-1.1.2.2
-PKGNAME=	hs-${DISTNAME}
-CATEGORIES=	devel
+DISTNAME=	time-1.1.2.4
+CATEGORIES=	time
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://semantic.org/TimeLib/
