@@ -1,0 +1,4 @@
+HDBC provides an abstraction layer between Haskell programs and SQL
+relational databases. This lets you write database code once, in
+Haskell, and have it work with any number of backend SQL databases
+(MySQL, Oracle, PostgreSQL, ODBC-compliant databases, etc.)
