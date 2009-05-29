@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/29 04:12:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/29 04:18:18 phonohawk Exp $
 #
 
 DISTNAME=	haskelldb-0.12
-CATEGORIES=	net
+CATEGORIES=	databases
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	SQL unwrapper for Haskell
