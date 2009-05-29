@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/29 05:24:07 phonohawk Exp $
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Base.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Base.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/C.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/C.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Map.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Map.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Num.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Num.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Time.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances/Time.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Utils.hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Utils.p_hi
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/HSconvertible-${PKGVERSION}.o
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-${PKGVERSION}.a
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-${PKGVERSION}_p.a
+lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/convertible-${PKGVERSION}/COPYRIGHT
+@dirrm share/doc/convertible-${PKGVERSION}
+@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances
+@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible
+@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data
+@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/convertible-${PKGVERSION}
