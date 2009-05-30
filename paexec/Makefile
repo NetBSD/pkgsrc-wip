@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/10 12:18:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/30 18:29:51 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.13.0
@@ -40,7 +40,8 @@ REPLACE_AWK+=		examples/1_div_X/1_div_X_cmd \
 			tests/big_result_cmd \
 			tests/transport_broken_rnd \
 			examples/make_package/make_package_cmd__*
-REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd
+REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd \
+			examples/broken_echo/transport_broken_echo2
 
 post-install:
 	${INSTALL_SCRIPT} ${.CURDIR}/files/paexec_reorder ${DESTDIR}${PREFIX}/bin
