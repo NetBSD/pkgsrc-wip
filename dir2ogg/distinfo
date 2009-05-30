@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/09/21 17:38:39 guigui2 Exp $
+$NetBSD: distinfo,v 1.6 2009/05/30 06:19:41 guigui2 Exp $
 
-SHA1 (dir2ogg-0.11.6.tar.gz) = cb5a70bcb045f331519981674031f489136c0e66
-RMD160 (dir2ogg-0.11.6.tar.gz) = 2a68fff4fe9fb32d63ca508b3a2b4af8729a9d64
-Size (dir2ogg-0.11.6.tar.gz) = 19442 bytes
+SHA1 (dir2ogg-0.11.7.tar.gz) = 20b6b807e98fbfde7ce43f66cba322d94389b397
+RMD160 (dir2ogg-0.11.7.tar.gz) = aafad74acd5d754361baca8c42ddf831f67760cc
+Size (dir2ogg-0.11.7.tar.gz) = 19945 bytes
