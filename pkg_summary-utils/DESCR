@@ -17,3 +17,4 @@ pkg_refresh_summary    - output an information about latest/newest version
 pkg_grep_summary       - grep the summary using AWK expression
 pkg_cleanup_distdir    - remove old unused distfiles
 pkg_uniq_summary       - filter out repeated package summaries
+pkg_summary2build_graph- convert src_summary to build dependency graph
