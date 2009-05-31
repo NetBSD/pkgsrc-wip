@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/29 18:47:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/31 12:59:07 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.10alpha1
+DISTNAME=	lmdbg-0.10.0
 PKGNAME=	${DISTNAME:S/lmdbg-/libstacktrace-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
@@ -11,7 +11,7 @@ MAINTAINER=	vle@gmx.net
 HOMEPAGE=	http://mova.org/~cheusov/pub/lmdbg/
 COMMENT=	Stacktracing library
 
-BUILD_DEPENDS+=		mk-configure>=0.9.0:../../wip/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.10.0:../../wip/mk-configure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
