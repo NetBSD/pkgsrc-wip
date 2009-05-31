@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 16:40:46 jihbed Exp $
+include/gtask-1.0/gtask/gtask.h
+include/gtask-1.0/gtask/gtaskscheduler.h
+lib/libgtask-1.0.la
+lib/pkgconfig/gtask-1.0.pc
+${PYSITELIB}/gtk-2.0/gtask.la
+share/gtk-doc/html/gtask/GTask.html
+share/gtk-doc/html/gtask/GTaskScheduler.html
+share/gtk-doc/html/gtask/ch01.html
+share/gtk-doc/html/gtask/gtask-gtaskversion.html
+share/gtk-doc/html/gtask/gtask.devhelp
+share/gtk-doc/html/gtask/gtask.devhelp2
+share/gtk-doc/html/gtask/home.png
+share/gtk-doc/html/gtask/index.html
+share/gtk-doc/html/gtask/index.sgml
+share/gtk-doc/html/gtask/left.png
+share/gtk-doc/html/gtask/right.png
+share/gtk-doc/html/gtask/style.css
+share/gtk-doc/html/gtask/up.png
+share/pygtk/2.0/defs/gtask.defs
+share/vala/vapi/gtask-1.0.vapi
+@dirrm share/vala/vapi
+@dirrm share/vala
+@dirrm share/pygtk/2.0/defs
+@dirrm share/pygtk/2.0
+@dirrm share/pygtk
+@dirrm share/gtk-doc/html/gtask
+@dirrm ${PYSITELIB}/gtk-2.0
+@dirrm include/gtask-1.0/gtask
+@dirrm include/gtask-1.0
