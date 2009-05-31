@@ -1,0 +1,63 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 10:02:19 jihbed Exp $
+bin/arista-gtk
+bin/arista-transcode
+${PYSITELIB}/arista/__init__.py
+${PYSITELIB}/arista/__init__.pyc
+${PYSITELIB}/arista/__init__.pyo
+${PYSITELIB}/arista/discoverer.py
+${PYSITELIB}/arista/discoverer.pyc
+${PYSITELIB}/arista/discoverer.pyo
+${PYSITELIB}/arista/inputs.py
+${PYSITELIB}/arista/inputs.pyc
+${PYSITELIB}/arista/inputs.pyo
+${PYSITELIB}/arista/presets.py
+${PYSITELIB}/arista/presets.pyc
+${PYSITELIB}/arista/presets.pyo
+${PYSITELIB}/arista/queue.py
+${PYSITELIB}/arista/queue.pyc
+${PYSITELIB}/arista/queue.pyo
+${PYSITELIB}/arista/transcoder.py
+${PYSITELIB}/arista/transcoder.pyc
+${PYSITELIB}/arista/transcoder.pyo
+${PYSITELIB}/arista/utils.py
+${PYSITELIB}/arista/utils.pyc
+${PYSITELIB}/arista/utils.pyo
+share/applications/arista.desktop
+share/arista/locale/de/LC_MESSAGES/arista.mo
+share/arista/locale/es/LC_MESSAGES/arista.mo
+share/arista/locale/fr/LC_MESSAGES/arista.mo
+share/arista/locale/it/LC_MESSAGES/arista.mo
+share/arista/locale/templates/arista.pot
+share/arista/presets/computer.svg
+share/arista/presets/computer.xml
+share/arista/presets/d2.svg
+share/arista/presets/d2.xml
+share/arista/presets/dvd.svg
+share/arista/presets/dvd.xml
+share/arista/presets/ipod.svg
+share/arista/presets/ipod.xml
+share/arista/presets/ps3.svg
+share/arista/presets/ps3.xml
+share/arista/presets/psp.svg
+share/arista/presets/psp.xml
+share/arista/ui/about.ui
+share/arista/ui/icon-small.svg
+share/arista/ui/icon.svg
+share/arista/ui/logo.svg
+share/arista/ui/main.ui
+share/arista/ui/prefs.ui
+@dirrm share/arista/ui
+@dirrm share/arista/presets
+@dirrm share/arista/locale/templates
+@dirrm share/arista/locale/it/LC_MESSAGES
+@dirrm share/arista/locale/it
+@dirrm share/arista/locale/fr/LC_MESSAGES
+@dirrm share/arista/locale/fr
+@dirrm share/arista/locale/es/LC_MESSAGES
+@dirrm share/arista/locale/es
+@dirrm share/arista/locale/de/LC_MESSAGES
+@dirrm share/arista/locale/de
+@dirrm share/arista/locale
+@dirrm share/arista
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/arista
