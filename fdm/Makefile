@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/03/27 09:58:15 smoppy Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/31 13:22:31 smoppy Exp $
 
 DISTNAME=	fdm-1.6
 CATEGORIES=	mail
@@ -19,7 +19,12 @@ SUBST_FILES.makefile=	${MAKE_FILE}
 SUBST_SED.makefile=	-e 's/ -I-//'
 SUBST_SED.makefile+=	-e "s,/man/,/${PKGMANDIR}/,"
 SUBST_SED.makefile+=	-e 's/-g bin -o root/-o ${BINOWN} -g ${BINGRP}/'
-.if ${OS} == "Linux"
+
+#
+# Linux-dependant changes.
+#
+.include "../../mk/bsd.prefs.mk" # This defines ${OPSYS}
+.if ${OPSYS} == "Linux"
 SUBST_SED.makefile+=	-e 's|^SRCS=.*.c|& compat/strlcpy.c compat/strlcat.c compat/strtonum.c|'
 
 CFLAGS+= -DNO_STRLCPY -DNO_STRLCAT -DNO_STRTONUM -D_GNU_SOURCE
