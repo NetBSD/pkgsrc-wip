@@ -1,0 +1,160 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 19:02:25 jihbed Exp $
+bin/gtg
+${PYSITELIB}/GTG/__init__.py
+${PYSITELIB}/GTG/__init__.pyc
+${PYSITELIB}/GTG/__init__.pyo
+${PYSITELIB}/GTG/backends/__init__.py
+${PYSITELIB}/GTG/backends/__init__.pyc
+${PYSITELIB}/GTG/backends/__init__.pyo
+${PYSITELIB}/GTG/backends/localfile.py
+${PYSITELIB}/GTG/backends/localfile.pyc
+${PYSITELIB}/GTG/backends/localfile.pyo
+${PYSITELIB}/GTG/core/__init__.py
+${PYSITELIB}/GTG/core/__init__.pyc
+${PYSITELIB}/GTG/core/__init__.pyo
+${PYSITELIB}/GTG/core/datastore.py
+${PYSITELIB}/GTG/core/datastore.pyc
+${PYSITELIB}/GTG/core/datastore.pyo
+${PYSITELIB}/GTG/core/firstrun_tasks.py
+${PYSITELIB}/GTG/core/firstrun_tasks.pyc
+${PYSITELIB}/GTG/core/firstrun_tasks.pyo
+${PYSITELIB}/GTG/core/requester.py
+${PYSITELIB}/GTG/core/requester.pyc
+${PYSITELIB}/GTG/core/requester.pyo
+${PYSITELIB}/GTG/core/tagstore.py
+${PYSITELIB}/GTG/core/tagstore.pyc
+${PYSITELIB}/GTG/core/tagstore.pyo
+${PYSITELIB}/GTG/core/task.py
+${PYSITELIB}/GTG/core/task.pyc
+${PYSITELIB}/GTG/core/task.pyo
+${PYSITELIB}/GTG/gtg.py
+${PYSITELIB}/GTG/gtg.pyc
+${PYSITELIB}/GTG/gtg.pyo
+${PYSITELIB}/GTG/taskbrowser/CellRendererTags.py
+${PYSITELIB}/GTG/taskbrowser/CellRendererTags.pyc
+${PYSITELIB}/GTG/taskbrowser/CellRendererTags.pyo
+${PYSITELIB}/GTG/taskbrowser/__init__.py
+${PYSITELIB}/GTG/taskbrowser/__init__.pyc
+${PYSITELIB}/GTG/taskbrowser/__init__.pyo
+${PYSITELIB}/GTG/taskbrowser/browser.py
+${PYSITELIB}/GTG/taskbrowser/browser.pyc
+${PYSITELIB}/GTG/taskbrowser/browser.pyo
+${PYSITELIB}/GTG/taskbrowser/taskbrowser.glade
+${PYSITELIB}/GTG/taskbrowser/treetools.py
+${PYSITELIB}/GTG/taskbrowser/treetools.pyc
+${PYSITELIB}/GTG/taskbrowser/treetools.pyo
+${PYSITELIB}/GTG/taskeditor/__init__.py
+${PYSITELIB}/GTG/taskeditor/__init__.pyc
+${PYSITELIB}/GTG/taskeditor/__init__.pyo
+${PYSITELIB}/GTG/taskeditor/editor.py
+${PYSITELIB}/GTG/taskeditor/editor.pyc
+${PYSITELIB}/GTG/taskeditor/editor.pyo
+${PYSITELIB}/GTG/taskeditor/taskeditor.glade
+${PYSITELIB}/GTG/taskeditor/taskview.py
+${PYSITELIB}/GTG/taskeditor/taskview.pyc
+${PYSITELIB}/GTG/taskeditor/taskview.pyo
+${PYSITELIB}/GTG/taskeditor/taskviewserial.py
+${PYSITELIB}/GTG/taskeditor/taskviewserial.pyc
+${PYSITELIB}/GTG/taskeditor/taskviewserial.pyo
+${PYSITELIB}/GTG/tools/__init__.py
+${PYSITELIB}/GTG/tools/__init__.pyc
+${PYSITELIB}/GTG/tools/__init__.pyo
+${PYSITELIB}/GTG/tools/cleanxml.py
+${PYSITELIB}/GTG/tools/cleanxml.pyc
+${PYSITELIB}/GTG/tools/cleanxml.pyo
+${PYSITELIB}/GTG/tools/colors.py
+${PYSITELIB}/GTG/tools/colors.pyc
+${PYSITELIB}/GTG/tools/colors.pyo
+${PYSITELIB}/GTG/tools/dates.py
+${PYSITELIB}/GTG/tools/dates.pyc
+${PYSITELIB}/GTG/tools/dates.pyo
+${PYSITELIB}/GTG/tools/listes.py
+${PYSITELIB}/GTG/tools/listes.pyc
+${PYSITELIB}/GTG/tools/listes.pyo
+${PYSITELIB}/GTG/tools/openurl.py
+${PYSITELIB}/GTG/tools/openurl.pyc
+${PYSITELIB}/GTG/tools/openurl.pyo
+${PYSITELIB}/GTG/tools/taskxml.py
+${PYSITELIB}/GTG/tools/taskxml.pyc
+${PYSITELIB}/GTG/tools/taskxml.pyo
+man/man1/gtg.1
+share/applications/gtg.desktop
+share/gtg/icons/hicolor/16x16/actions/gtg-note-new.png
+share/gtg/icons/hicolor/16x16/actions/gtg-tag-new.png
+share/gtg/icons/hicolor/16x16/actions/gtg-tag.png
+share/gtg/icons/hicolor/16x16/actions/gtg-task-dismiss.png
+share/gtg/icons/hicolor/16x16/actions/gtg-task-done.png
+share/gtg/icons/hicolor/16x16/actions/gtg-task-new.png
+share/gtg/icons/hicolor/16x16/actions/gtg-task-undismiss.png
+share/gtg/icons/hicolor/16x16/actions/gtg-task-undone.png
+share/gtg/icons/hicolor/16x16/apps/gtg.png
+share/gtg/icons/hicolor/16x16/categories/gtg-tags-all.png
+share/gtg/icons/hicolor/16x16/categories/gtg-tags-none.png
+share/gtg/icons/hicolor/16x16/emblems/gtg-home.png
+share/gtg/icons/hicolor/16x16/emblems/gtg-people.png
+share/gtg/icons/hicolor/16x16/emblems/gtg-work.png
+share/gtg/icons/hicolor/22x22/actions/gtg-note-new.png
+share/gtg/icons/hicolor/22x22/actions/gtg-tag-new.png
+share/gtg/icons/hicolor/22x22/actions/gtg-tag.png
+share/gtg/icons/hicolor/22x22/actions/gtg-task-dismiss.png
+share/gtg/icons/hicolor/22x22/actions/gtg-task-done.png
+share/gtg/icons/hicolor/22x22/actions/gtg-task-new.png
+share/gtg/icons/hicolor/22x22/actions/gtg-task-undismiss.png
+share/gtg/icons/hicolor/22x22/actions/gtg-task-undone.png
+share/gtg/icons/hicolor/22x22/apps/gtg.png
+share/gtg/icons/hicolor/22x22/categories/items-tags.png
+share/gtg/icons/hicolor/24x24/actions/gtg-tag-new.png
+share/gtg/icons/hicolor/24x24/apps/gtg.png
+share/gtg/icons/hicolor/32x32/apps/gtg.png
+share/gtg/icons/hicolor/scalable/apps/gtg.svg
+share/gtg/icons/hicolor/svg/gtg.svg
+share/icons/hicolor/16x16/apps/gtg.png
+share/icons/hicolor/22x22/apps/gtg.png
+share/icons/hicolor/24x24/apps/gtg.png
+share/icons/hicolor/scalable/apps/gtg.svg
+share/locale/be/LC_MESSAGES/gtg.mo
+share/locale/de/LC_MESSAGES/gtg.mo
+share/locale/es/LC_MESSAGES/gtg.mo
+share/locale/fr/LC_MESSAGES/gtg.mo
+share/locale/it/LC_MESSAGES/gtg.mo
+share/locale/ms/LC_MESSAGES/gtg.mo
+share/locale/nl/LC_MESSAGES/gtg.mo
+share/locale/ru/LC_MESSAGES/gtg.mo
+share/locale/sv/LC_MESSAGES/gtg.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@dirrm share/gtg/icons/hicolor/svg
+@dirrm share/gtg/icons/hicolor/scalable/apps
+@dirrm share/gtg/icons/hicolor/scalable
+@dirrm share/gtg/icons/hicolor/32x32/apps
+@dirrm share/gtg/icons/hicolor/32x32
+@dirrm share/gtg/icons/hicolor/24x24/apps
+@dirrm share/gtg/icons/hicolor/24x24/actions
+@dirrm share/gtg/icons/hicolor/24x24
+@dirrm share/gtg/icons/hicolor/22x22/categories
+@dirrm share/gtg/icons/hicolor/22x22/apps
+@dirrm share/gtg/icons/hicolor/22x22/actions
+@dirrm share/gtg/icons/hicolor/22x22
+@dirrm share/gtg/icons/hicolor/16x16/emblems
+@dirrm share/gtg/icons/hicolor/16x16/categories
+@dirrm share/gtg/icons/hicolor/16x16/apps
+@dirrm share/gtg/icons/hicolor/16x16/actions
+@dirrm share/gtg/icons/hicolor/16x16
+@dirrm share/gtg/icons/hicolor
+@dirrm share/gtg/icons
+@dirrm share/gtg
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/GTG/tools
+@dirrm ${PYSITELIB}/GTG/taskeditor
+@dirrm ${PYSITELIB}/GTG/taskbrowser
+@dirrm ${PYSITELIB}/GTG/core
+@dirrm ${PYSITELIB}/GTG/backends
+@dirrm ${PYSITELIB}/GTG
