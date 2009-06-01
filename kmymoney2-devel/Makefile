@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/05/29 01:37:01 gduzan Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/01 11:17:07 gduzan Exp $
 
 DISTNAME=	kmymoney2-0.9.3
-#PKGREVISION=	4
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=  .tar.bz2
@@ -19,32 +18,23 @@ CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
 
 USE_TOOLS+=		gsed
-#_TOOLS_USE_PKGSRC.gsed=yes
-
-INSTALL_UNSTRIPPED=YES
-
-.include "options.mk"
-
-CONFIGURE_ARGS+=	--enable-mt
 
 USE_TOOLS+=		autoconf
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-#CONFIGURE_ARGS+=	--enable-debug
-#INSTALL_UNSTRIPPED=yes
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--enable-mt
 
 REPLACE_PERL+=	admin/fixuifiles
 
-# a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
-#SUBST_CLASSES+=		hints
-#SUBST_STAGE.hints=	post-patch
-#SUBST_MESSAGE.hints=	Fix includehints.
-#SUBST_FILES.hints=	kmymoney2/dialogs/*.ui kmymoney2/views/*.ui
-#SUBST_FILTER_CMD.hints=	${GREP} -v includehint
-
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+.if (${OPSYS} == "NetBSD")
+BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
+.endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -55,4 +45,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
