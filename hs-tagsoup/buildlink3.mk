@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/06/02 06:56:47 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/06/02 07:16:16 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-tagsoup
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tagsoup
 HS_TAGSOUP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tagsoup+=	hs-tagsoup>=0.6
-BUILDLINK_PKGSRCDIR.hs-tagsoup?=	../../wip/tagsoup
+BUILDLINK_PKGSRCDIR.hs-tagsoup?=	../../wip/hs-tagsoup
 
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
