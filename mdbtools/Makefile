@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/02 12:22:28 noud4 Exp $
 #
 
 DISTNAME=		mdbtools-0.6pre1
@@ -11,6 +11,14 @@ COMMENT=		Microsoft Access Database management tools
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
+
+.include "../../mk/bsd.prefs.mk"
+
+GCC_REQD+=		3.4
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*) || !empty(MACHINE_PLATFORM:MNetBSD-5*)
+USE_PKGSRC_GCC=		yes
+.endif
+.include "../../mk/compiler.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
