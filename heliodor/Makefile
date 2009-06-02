@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/21 13:06:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/02 13:12:07 noud4 Exp $
 #
 
 DISTNAME=	heliodor-0.2.1
@@ -12,6 +12,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+
+.include "../../x11/gnome-control-center/buildlink3.mk"
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
