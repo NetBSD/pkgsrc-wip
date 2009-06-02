@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/05/06 09:29:04 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/06/02 13:14:30 noud4 Exp $
 
 BUILDLINK_TREE+=	ncbi-lib
 
@@ -8,6 +8,9 @@ NCBI_LIB_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.ncbi-lib+=	ncbi-lib>=20060301
 BUILDLINK_PKGSRCDIR.ncbi-lib?=		../../wip/ncbi-lib
 
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libX11/buildlink3.mk"
+.endif # X11_TYPE
 .endif # NCBI_LIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ncbi-lib
