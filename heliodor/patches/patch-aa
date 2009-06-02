@@ -1,0 +1,10 @@
+--- src/main.c.orig	2009-05-07 17:07:28.000000000 +0000
++++ src/main.c	2009-05-07 17:07:46.000000000 +0000
+@@ -3342,7 +3342,6 @@
+ 	return;
+     case WNCK_WINDOW_NORMAL:
+     case WNCK_WINDOW_DIALOG:
+-    case WNCK_WINDOW_MODAL_DIALOG:
+     case WNCK_WINDOW_TOOLBAR:
+     case WNCK_WINDOW_MENU:
+     case WNCK_WINDOW_UTILITY:
