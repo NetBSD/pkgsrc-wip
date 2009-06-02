@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3449 2009/06/02 06:53:52 phonohawk Exp $
+# $Id: Makefile,v 1.3450 2009/06/02 06:58:30 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -707,6 +707,7 @@ SUBDIR+=	hpoj
 SUBDIR+=	hs-HDBC
 SUBDIR+=	hs-HDBC-sqlite3
 SUBDIR+=	hs-HTTP
+SUBDIR+=	hs-HUnit
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-cabal
