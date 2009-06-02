@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/05/19 09:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.35 2009/06/02 13:18:43 noud4 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -157,6 +157,12 @@ do-install:
 		${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
 #		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
+
+GCC_REQD+=		3.0
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*) || !empty(MACHINE_PLATFORM:MNetBSD-5*)
+USE_PKGSRC_GCC=		yes
+.endif
+.include "../../mk/compiler.mk"
 
 .include "../../mk/java-env.mk"
 .include "../../x11/libXi/buildlink3.mk"
