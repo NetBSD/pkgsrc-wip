@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/02/10 06:44:17 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/02 07:51:55 phonohawk Exp $
 #
 
-DISTNAME=	curl-1.3.4
-PKGREVISION=	1
-PKGNAME=	hs-${DISTNAME}
-CATEGORIES=	devel
+DISTNAME=	curl-1.3.5
+CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell binding to libcurl
