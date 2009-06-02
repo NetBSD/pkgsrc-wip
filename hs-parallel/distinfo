@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/12 07:37:26 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/06/02 07:54:25 phonohawk Exp $
 
-SHA1 (parallel-1.1.0.0.tar.gz) = 6f544c37adc0fe4ad1183050d701faff1b065098
-RMD160 (parallel-1.1.0.0.tar.gz) = 6ff1cc17b59133287939b52d4f8a9717866f5b63
-Size (parallel-1.1.0.0.tar.gz) = 7997 bytes
+SHA1 (parallel-1.1.0.1.tar.gz) = 39bcd5c8a896914c7ddc853049005a71a4eaabb6
+RMD160 (parallel-1.1.0.1.tar.gz) = 326fb117d411065eec3acf89ddceb7e44d5aee7c
+Size (parallel-1.1.0.1.tar.gz) = 8074 bytes
