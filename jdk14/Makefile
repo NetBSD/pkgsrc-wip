@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/05/19 09:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.43 2009/06/02 13:25:58 noud4 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -23,6 +23,8 @@ ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386 DragonFly-*-i386
 
 JAVA_NAME=		jdk14
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
+
+USE_TOOLS+=		pax
 
 # Let an installed version of this package bootstrap a later version
 # (skips having to reinstall sun-jdk14 again)
@@ -60,8 +62,8 @@ PATCHSETFILE=		bsd-jdk14-patches-${JDK_PATCHSET_VERSION}.tar.gz
 SCSL_DOWNLOAD=		http://wwws.sun.com/software/java2/download.html
 PATCH_DOWNLOAD=		http://www.eyesbeyond.com/freebsddom/java/JDK14SCSLConfirm.html
 
-JDKIMAGEDIR=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
-JDKIMAGEDIR_G=		${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
+JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
+JDKIMAGEDIR_G=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 
 FETCH_MESSAGE+="The files ${SCSL_SRCFILE} and ${SCSL_BINFILE}"
 FETCH_MESSAGE+="containing the Java(tm) 2 SDK, Standard Edition must be fetched"
@@ -128,7 +130,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
-	cd ${JDKIMAGEDIR} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
+	cd ${JDKIMAGEDIR} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs
 	${TOUCH} ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
 	${CHMOD} 644 ${DESTDIR}${JAVA_HOME}/jre/.systemPrefs/.system.lock
@@ -139,6 +141,17 @@ do-install:
 #	 ${INSTALL_DATA} ${FILESDIR}/cacerts \
 #		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
 
+GCC_REQD+=		3.0
+.if !empty(MACHINE_PLATFORM:MNetBSD-4*) || !empty(MACHINE_PLATFORM:MNetBSD-5*)
+USE_PKGSRC_GCC=		yes
+.endif
+.include "../../mk/compiler.mk"
+
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.endif
 .include "../../mk/java-env.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
