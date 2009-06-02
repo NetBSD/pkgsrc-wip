@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/12 07:29:12 phonohawk Exp $
-
-SHA1 (HUnit-1.2.0.3.tar.gz) = 558793b852d3c0e0f2025b60b4b165a80ba34dea
-RMD160 (HUnit-1.2.0.3.tar.gz) = 9c3ff1c8d086cb9aff7d27b558964ce931247c1b
-Size (HUnit-1.2.0.3.tar.gz) = 6849 bytes
