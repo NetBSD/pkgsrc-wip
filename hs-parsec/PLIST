@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/02 07:06:30 phonohawk Exp $
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/HSparsec-${PKGVERSION}.o
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/ByteString.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/ByteString.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/ByteString/Lazy.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/ByteString/Lazy.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Char.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Char.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Combinator.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Combinator.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Error.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Error.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Expr.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Expr.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Language.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Language.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Perm.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Perm.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Pos.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Pos.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Prim.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Prim.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/String.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/String.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Token.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Token.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Char.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Char.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Combinator.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Combinator.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Error.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Error.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Expr.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Expr.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Language.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Language.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Perm.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Perm.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Pos.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Pos.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Prim.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Prim.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Token.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec/Token.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/libHSparsec-${PKGVERSION}.a
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/libHSparsec-${PKGVERSION}_p.a
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/parsec-${PKGVERSION}/LICENSE
+@dirrm share/doc/parsec-${PKGVERSION}
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/ByteString
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text
+@dirrm lib/parsec-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/parsec-${PKGVERSION}
