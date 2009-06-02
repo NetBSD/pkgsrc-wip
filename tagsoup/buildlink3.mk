@@ -1,13 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:52 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/06/02 06:44:34 phonohawk Exp $
 
-BUILDLINK_TREE+=	tagsoup
+BUILDLINK_TREE+=	hs-tagsoup
 
-.if !defined(TAGSOUP_BUILDLINK3_MK)
-TAGSOUP_BUILDLINK3_MK:=
+.if !defined(HS_TAGSOUP_BUILDLINK3_MK)
+HS_TAGSOUP_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.tagsoup?=	build
-BUILDLINK_API_DEPENDS.tagsoup+=	tagsoup>=0.6
-BUILDLINK_PKGSRCDIR.tagsoup?=	../../wip/tagsoup
-.endif # TAGSOUP_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.hs-tagsoup+=	hs-tagsoup>=0.6nb1
+BUILDLINK_PKGSRCDIR.hs-tagsoup?=	../../wip/tagsoup
 
-BUILDLINK_TREE+=	-tagsoup
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-network/buildlink3.mk"
+.endif	# HS_TAGSOUP_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-hs-tagsoup
