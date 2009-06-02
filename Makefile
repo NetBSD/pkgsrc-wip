@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3451 2009/06/02 07:00:01 phonohawk Exp $
+# $Id: Makefile,v 1.3452 2009/06/02 07:02:38 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1496,7 +1496,6 @@ SUBDIR+=	pam-pwdfile
 SUBDIR+=	pam_tacplus
 SUBDIR+=	panda
 SUBDIR+=	parcellite
-SUBDIR+=	parsec
 SUBDIR+=	parted
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
