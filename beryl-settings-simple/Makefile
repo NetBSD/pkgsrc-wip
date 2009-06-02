@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/21 13:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/02 12:19:22 noud4 Exp $
 #
 
 DISTNAME=	beryl-settings-simple-0.2.1
@@ -8,7 +8,7 @@ COMMENT=	"Simple" beryl settings (?)
 .include "../../wip/beryl/Makefile.inc"
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 USE_TOOLS+=	gettext-tools intltool
 
