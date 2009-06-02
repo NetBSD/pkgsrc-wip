@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/02 07:43:45 phonohawk Exp $
+
+SHA1 (hxt-8.3.0.tar.gz) = bb80419854aa47041136ae031c0d0b59242cfbbb
+RMD160 (hxt-8.3.0.tar.gz) = 93321f82859718a6750a41bbce7a752c9a27a0ea
+Size (hxt-8.3.0.tar.gz) = 3984288 bytes
+SHA1 (patch-aa) = 75e60776841df9855804f68cece70171a4775a59
