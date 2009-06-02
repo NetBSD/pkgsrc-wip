@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/30 05:38:38 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2009/06/02 12:20:29 noud4 Exp $
 #
 
 DISTNAME=		gnokii-0.6.22
@@ -14,7 +14,8 @@ HOMEPAGE=		http://www.gnokii.org/
 COMMENT=		Open source tools for your mobile phone
 
 USE_PKGLOCALEDIR=	yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/common/gnokii.pc.in
+PKGCONFIG_OVERRIDE+=	common/gnokii.pc.in
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
