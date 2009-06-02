@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/09/06 20:54:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/02 23:30:50 jsonn Exp $
 #
 
 DISTNAME=	mod_ometer-1.3.0
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-odometerdb=${VARBASE}/odometer/odometer.db
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
 
-WRAPPER_TRANSFORM_CMDS+=l:db:db4
+BUILDLINK_TRANSFORM+=l:db:db4
 
 .include "../../www/apache/module.mk"
 
