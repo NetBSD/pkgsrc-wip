@@ -1,0 +1,6 @@
+cpphs is a liberalised re-implementation of cpp, the C pre-processor,
+in Haskell. This version of cpp is pretty-much feature-complete, and
+compatible with the -traditional style. It has two main modes:
+
+    * conditional compilation only (--nomacro),
+    * and full macro-expansion (default).
