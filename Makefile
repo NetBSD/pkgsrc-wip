@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3462 2009/06/03 07:25:34 phonohawk Exp $
+# $Id: Makefile,v 1.3463 2009/06/03 08:49:43 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1892,7 +1892,6 @@ SUBDIR+=	stunnel3
 SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
-SUBDIR+=	sunbird
 SUBDIR+=	sunterlib
 SUBDIR+=	super-smack
 SUBDIR+=	supertux
