@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3459 2009/06/03 07:10:18 phonohawk Exp $
+# $Id: Makefile,v 1.3460 2009/06/03 07:16:10 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -579,7 +579,6 @@ SUBDIR+=	happy
 SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	haskell-mode
-SUBDIR+=	haskell-src-exts
 SUBDIR+=	haze
 SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
