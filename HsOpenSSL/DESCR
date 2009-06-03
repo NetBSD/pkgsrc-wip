@@ -1,3 +1,0 @@
-HsOpenSSL is a (part of) OpenSSL binding for Haskell. It can generate
-RSA and DSA keys, read and write PEM files, generate message digests,
-sign and verify messages, encrypt and decrypt messages.
