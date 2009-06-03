@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/11 15:24:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/03 08:57:09 thomasklausner Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
@@ -18,6 +18,6 @@ USE_LANGUAGES =	c c++
 
 PKGCONFIG_OVERRIDE+=	mrss.pc.in
 
-.include "../../wip/libnxml/buildlink3.mk"
+.include "../../textproc/libnxml/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
