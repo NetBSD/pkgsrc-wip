@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/08 14:12:14 lexort Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/03 14:11:38 marko_schuetz Exp $
 bin/buildcat
 bin/gensgmlenv
 bin/sgmltools
@@ -31,6 +31,10 @@ share/sgml/stylesheets/sgmltools/html.dsl
 share/sgml/stylesheets/sgmltools/ld2db.dsl
 share/sgml/stylesheets/sgmltools/print.dsl
 share/sgml/stylesheets/sgmltools/sgmltools.cat
+share/examples/sgmltools-lite/aliases
+share/examples/sgmltools-lite/catalog
+share/examples/sgmltools-lite/catalog.rh62
+share/examples/sgmltools-lite/catalog.suse
 @dirrm etc/sgml/catalog.d
 @dirrm etc/sgml
 @dirrm share/sgml/stylesheets/sgmltools
