@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3464 2009/06/03 08:57:32 thomasklausner Exp $
+# $Id: Makefile,v 1.3465 2009/06/03 09:06:09 fjaeckel Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -140,6 +140,7 @@ SUBDIR+=	beryl-plugins
 SUBDIR+=	beryl-settings
 SUBDIR+=	beryl-settings-bindings
 SUBDIR+=	beryl-settings-simple
+SUBDIR+=  bird
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	blam
