@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/11 12:53:42 jihbed Exp $
-
-SHA1 (libnxml-0.18.3.tar.gz) = 2bcb17ea01aa953d0f8cbc116e025bb837bec4aa
-RMD160 (libnxml-0.18.3.tar.gz) = e7ad57cbe2859a779580a3dd8f29eaecdb2e6af7
-Size (libnxml-0.18.3.tar.gz) = 361977 bytes
