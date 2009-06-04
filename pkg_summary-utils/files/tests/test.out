@@ -377,7 +377,7 @@ PKGNAME=pkg_online-client-X
 PKGPATH=wip/pkg_online-client
 
 --------------------------------------------------
-------- pkg_refresh_summary #5
+------- pkg_refresh_summary #5.1
 awk-pkgsrc-dewey-0.5.6
 checkperms-1.10
 dict-client-1.10.11nb2
@@ -406,6 +406,11 @@ png-1.2.32beta01
 runawk-0.14.3
 tiff-3.8.2nb4
 x11-links-0.38
+--------------------------------------------------
+------- pkg_refresh_summary #5.2
+dict-server-1.10.11nb2
+pipestatus-0.4.0
+runawk-0.13.0
 --------------------------------------------------
 ------- pkg_src_summary #6
 PKGNAME=distbb-X

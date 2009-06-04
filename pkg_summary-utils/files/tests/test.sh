@@ -107,8 +107,13 @@ normalize_version
 
 # pkg_refresh_summary
 echo '--------------------------------------------------'
-echo '------- pkg_refresh_summary #5'
+echo '------- pkg_refresh_summary #5.1'
 pkg_refresh_summary src_summary.txt src_summary2.txt |
+sed -n 's/^PKGNAME=//p' | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_refresh_summary #5.2'
+pkg_refresh_summary -o src_summary.txt src_summary2.txt |
 sed -n 's/^PKGNAME=//p' | sort
 
 # pkg_src_summary

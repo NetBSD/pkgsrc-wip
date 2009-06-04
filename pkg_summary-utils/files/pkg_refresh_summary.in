@@ -33,6 +33,7 @@ an information about only the newest version
 usage: pkg_refresh_summary [OPTIONS] [files...]
 OPTIONS:
   -h|--help      display this help message
+  -o             print summaries of older packages, not newest
 EOF
 }
 
@@ -41,6 +42,8 @@ while test $# -ne 0; do
 	-h|--help)
 	    usage
 	    exit 0;;
+	-o)
+	    print_older=1;;
 	--)
 	    shift
 	    break;;
@@ -63,12 +66,15 @@ mkdir -m 700 "$tmp_dir"
 if test $# -eq 0; then
     # copy stdin to temporary file and then use it
     tmp_fn=$tmp_dir/tmp
-    cat > $tmp_fn
+    cat > "$tmp_fn"
+    set -- "$tmp_fn"
 fi
 
 newest_fn=$tmp_dir/newest
 
-runawk -e '
+############################################################
+find_newest (){
+    runawk -e '
 #use "pkgsrc-dewey.awk"
 
 BEGIN {
@@ -99,29 +105,31 @@ NF == 0 && pkgpath != "" && pkgbase != "" {
       pkgbase2ver [pair] = pkgver
    }
 
-   pkgbase2path [pair] = pkgpath
-
    pkgpath = pkgbase = ""
 }
 
 END {
    for (p in pkgbase2ver){
-      pkgbase = p
-      sub(/^.*:/, "", pkgbase)
+      pathname = p
+      sub(/:/, " ", pathname)
 
-      print pkgbase2path [p], pkgbase "-" pkgbase2ver [p]
+      print pathname "-" pkgbase2ver [p]
    }
 }
-' "$@" $tmp_fn > $newest_fn
+' "$@"
+}
 
-export newest_fn
+############################################################
 
-runawk -e '
+grep_newest_summaries (){
+    runawk -v newest_fn="$newest_fn" -v print_older="$print_older" -e '
 #use "xgetline.awk"
 #use "pkg_grep_summary.awk"
 
 BEGIN {
-   newest_fn = ENVIRON ["newest_fn"]
+   print_older = print_older + 0
+   NEWEST_PKG     = 1-print_older
+   OLDER_PKG    = print_older
 
    FS = " "
    while (xgetline0(newest_fn)){
@@ -133,21 +141,27 @@ BEGIN {
    FS = "="
 }
 
-function grep_summary__condition (           pkgpath, pkgname){
+function grep_summary__condition (           pkgpath, pkgname, pair){
    pkgpath = grep_summary__fields ["PKGPATH"]
-   pkgname = grep_summary__fields ["PKGNAME"]
-
-   if (pkgpath == "" || pkgname == ""){
+   if (pkgpath == "")
       return -1
+
+   pkgname = grep_summary__fields ["PKGNAME"]
+   if (pkgname == "")
+      return -1
+
+   pair = pkgpath ":" pkgname
+   if (pair in processed){
+      return 0
+   }else if (pair in keep){
+      processed [pair] = 1
+      return NEWEST_PKG
    }
 
-   if (((pkgpath ":" pkgname) in keep) &&
-      !((pkgpath ":" pkgname) in processed))
-   {
-      processed [pkgpath ":" pkgname] = 1
-      return 1
-   }
-
-   return 0
+   return OLDER_PKG
 }
-' "$@" $tmp_fn
+' "$@"
+}
+
+find_newest "$@" > $newest_fn
+grep_newest_summaries "$@"
