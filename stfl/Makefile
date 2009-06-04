@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/24 11:42:32 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/04 09:36:42 smoppy Exp $
 
 DISTNAME=	stfl-0.19
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
+USE_NCURSES=	yes
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 
