@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/05/29 13:31:38 imilh Exp $
+# $NetBSD: Makefile,v 1.20 2009/06/04 16:09:41 imilh Exp $
 #
 
-DISTNAME=		pkgin-20090529
+DISTNAME=		pkgin-20090604
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
