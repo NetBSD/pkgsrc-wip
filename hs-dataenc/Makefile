@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/01/13 22:41:35 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/04 05:09:16 phonohawk Exp $
 #
 
-DISTNAME=	dataenc-0.11.1
-PKGNAME=	hs-${DISTNAME}
+DISTNAME=	dataenc-0.13.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
