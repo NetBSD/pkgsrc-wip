@@ -1,20 +1,20 @@
-# $NetBSD: options.mk,v 1.14 2009/06/04 17:45:50 minskim Exp $
+# $NetBSD: options.mk,v 1.15 2009/06/04 19:07:42 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	gnome font-backend
+PKG_SUPPORTED_OPTIONS=	gnome xft2
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	x11 font-backend
+PKG_SUGGESTED_OPTIONS=	x11 xft2
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Any of the "toolkit" options implies "x11".
 ###
-.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mgnome) || !empty(PKG_OPTIONS:Mfont-backend)
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mgnome) || !empty(PKG_OPTIONS:Mxft2)
 .  if empty(PKG_OPTIONS:Mx11)
 PKG_OPTIONS+=		x11
 .  endif
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--with-png
 ###
 ### Enable font backend
 ###
-.  if !empty(PKG_OPTIONS:Mfont-backend)
+.  if !empty(PKG_OPTIONS:Mxft2)
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libotf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
