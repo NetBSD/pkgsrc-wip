@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3465 2009/06/03 09:06:09 fjaeckel Exp $
+# $Id: Makefile,v 1.3466 2009/06/04 04:05:46 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -713,6 +713,7 @@ SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-haskell-src
+SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-haskelldb
 SUBDIR+=	hs-haskelldb-hdbc
 SUBDIR+=	hs-haskelldb-hdbc-sqlite3
