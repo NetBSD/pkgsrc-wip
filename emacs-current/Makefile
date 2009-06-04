@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2009/05/21 08:41:26 obache Exp $
+# $NetBSD: Makefile,v 1.42 2009/06/04 01:37:42 makoto Exp $
 #
 
-DISTNAME=	emacs-23.0.93
-PKGNAME=	emacs-23.0.93
+DISTNAME=	emacs-23.0.94
+PKGNAME=	emacs-23.0.94
 PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
 CATEGORIES=	editors
 MASTER_SITES=	#
