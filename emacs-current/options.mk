@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2009/05/21 09:41:22 obache Exp $
+# $NetBSD: options.mk,v 1.14 2009/06/04 17:45:50 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -7,7 +7,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	x11 font-backend
 
 .include "../../mk/bsd.options.mk"
 
@@ -69,9 +69,8 @@ CONFIGURE_ARGS+=	--with-png
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../devel/m17n-lib/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-font-backend
 .  else
-CONFIGURE_ARGS+=	--disable-font-backend
+CONFIGURE_ARGS+=	--without-xft --without-otf --without-m17n-flt
 .  endif
 
 ###
