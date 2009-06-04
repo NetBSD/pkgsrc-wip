@@ -1,4 +1,1 @@
 * GNUStep support is not tested.
-* gnome option should be gone away.
-   * dbus option should be added
-   * librsvg is gnome-free now, and can use with Cocoa.

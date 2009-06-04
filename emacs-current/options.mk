@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2009/06/04 19:07:42 minskim Exp $
+# $NetBSD: options.mk,v 1.16 2009/06/04 19:29:46 minskim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	gnome xft2
+PKG_SUPPORTED_OPTIONS=	dbus xft2 svg
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
@@ -14,7 +14,7 @@ PKG_SUGGESTED_OPTIONS=	x11 xft2
 ###
 ### Any of the "toolkit" options implies "x11".
 ###
-.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mgnome) || !empty(PKG_OPTIONS:Mxft2)
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mxft2)
 .  if empty(PKG_OPTIONS:Mx11)
 PKG_OPTIONS+=		x11
 .  endif
@@ -25,11 +25,7 @@ PKG_OPTIONS+=		x11
 ###
 .if !empty(PKG_OPTIONS:Mx11)
 .  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
-.    if !empty(PKG_OPTIONS:Mgnome)
-PKG_OPTIONS+=		gtk
-.    else
 PKG_OPTIONS+=		xaw
-.    endif
 .  endif
 .endif
 
@@ -53,11 +49,19 @@ CONFIGURE_ARGS+=	--with-png
 .include "../../x11/libXpm/buildlink3.mk"
 
 ###
-### Support gnome features
+### Support D-BUS
 ###
-.  if !empty(PKG_OPTIONS:Mgnome)
-.include "../../graphics/librsvg/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
+.  endif
+
+###
+### Support SVG
+###
+.  if !empty(PKG_OPTIONS:Msvg)
+.include "../../graphics/librsvg/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-rsvg
 .  endif
 
 ###
