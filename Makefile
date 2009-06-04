@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3466 2009/06/04 04:05:46 phonohawk Exp $
+# $Id: Makefile,v 1.3467 2009/06/04 04:23:50 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1885,7 +1885,6 @@ SUBDIR+=	srvx
 SUBDIR+=	ssu
 SUBDIR+=	stardict
 SUBDIR+=	stfl
-SUBDIR+=	stm
 SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	stumpwm
