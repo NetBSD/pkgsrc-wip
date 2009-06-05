@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2009/06/04 19:36:36 imilh Exp $
+# $NetBSD: Makefile,v 1.22 2009/06/05 22:30:51 imilh Exp $
 #
 
-DISTNAME=		pkgin-2009060401
+DISTNAME=		pkgin-20090605
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
@@ -11,14 +11,19 @@ COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/repositories.conf.example		\
+			${PKG_SYSCONFDIR}/${PKGBASE}/repositories.conf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}			\
+			${PKG_SYSCONFDIR}/${PKGBASE}
 
 WRKSRC=			${WRKDIR}/pkgin
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Adjusting path.
-SUBST_FILES.path=	Makefile actions.c
+SUBST_FILES.path=	Makefile actions.c pkgin.1
 SUBST_SED.path=		-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
 
@@ -31,8 +36,11 @@ NBCOMPAT_CONFIGURE_ARGS+=	--enable-db
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgin ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pkgin.1	\
+	${INSTALL_MAN} ${WRKSRC}/pkgin.1				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/repositories.conf			\
+		${DESTDIR}${EGDIR}/repositories.conf.example
+
 
 .include "../../mk/bsd.prefs.mk"
 

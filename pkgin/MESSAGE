@@ -1,12 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2009/05/29 15:03:32 imilh Exp $
+$NetBSD: MESSAGE,v 1.4 2009/06/05 22:30:51 imilh Exp $
 
 First steps before using pkgin.
 
-Initialize the database :
+. Modify ${PREFIX}/etc/pkgin/repositories.conf to suit your platform
+. Initialize the database :
 
-	# PKG_REPOS=ftp://your.favourite/pkgsrc/binary/mirror/All
-	# export PKG_REPOS
 	# pkgin update
 
 ***************************************************************************
