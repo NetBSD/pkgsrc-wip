@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/02/11 14:57:33 ghen Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/05 06:50:12 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -115,6 +115,7 @@ include/dovecot/src/lib-storage/index/index-storage.h
 include/dovecot/src/lib-storage/index/index-sync-changes.h
 include/dovecot/src/lib-storage/index/index-sync-private.h
 include/dovecot/src/lib-storage/index/index-thread-private.h
+include/dovecot/src/lib-storage/index/istream-mail-stats.h
 include/dovecot/src/lib-storage/index/maildir/maildir-filename.h
 include/dovecot/src/lib-storage/index/maildir/maildir-keywords.h
 include/dovecot/src/lib-storage/index/maildir/maildir-storage.h
@@ -160,6 +161,7 @@ include/dovecot/src/lib/close-keep-errno.h
 include/dovecot/src/lib/compat.h
 include/dovecot/src/lib/crc32.h
 include/dovecot/src/lib/data-stack.h
+include/dovecot/src/lib/eacces-error.h
 include/dovecot/src/lib/env-util.h
 include/dovecot/src/lib/failures.h
 include/dovecot/src/lib/fd-close-on-exec.h
@@ -320,6 +322,9 @@ share/doc/dovecot/securecoding.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
 share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
+share/doc/dovecot/wiki/AuthDatabase.LDAP.AuthBinds.txt
+share/doc/dovecot/wiki/AuthDatabase.LDAP.PasswordLookups.txt
+share/doc/dovecot/wiki/AuthDatabase.LDAP.Userdb.txt
 share/doc/dovecot/wiki/AuthDatabase.LDAP.txt
 share/doc/dovecot/wiki/AuthDatabase.Passwd.txt
 share/doc/dovecot/wiki/AuthDatabase.PasswdFile.txt
@@ -451,6 +456,10 @@ share/doc/dovecot/wiki/SSL.DovecotConfiguration.txt
 share/doc/dovecot/wiki/SSL.txt
 share/doc/dovecot/wiki/Sasl.txt
 share/doc/dovecot/wiki/SecurityTuning.txt
+share/doc/dovecot/wiki/SharedMailboxes.Permissions.txt
+share/doc/dovecot/wiki/SharedMailboxes.Public.txt
+share/doc/dovecot/wiki/SharedMailboxes.Shared.txt
+share/doc/dovecot/wiki/SharedMailboxes.Symlinks.txt
 share/doc/dovecot/wiki/SharedMailboxes.txt
 share/doc/dovecot/wiki/SystemUsers.txt
 share/doc/dovecot/wiki/TestInstallation.txt
@@ -475,6 +484,7 @@ share/doc/dovecot/wiki/uw2dovecot.sh.txt
 share/examples/dovecot/dovecot-db-example.conf
 share/examples/dovecot/dovecot-dict-sql-example.conf
 share/examples/dovecot/dovecot-example.conf
+share/examples/dovecot/dovecot-initd.sh
 share/examples/dovecot/dovecot-ldap-example.conf
 share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql-example.conf

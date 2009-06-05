@@ -1,16 +1,14 @@
-$NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
+$NetBSD: patch-ab,v 1.12 2009/06/05 06:50:12 ghen Exp $
 
---- dovecot-example.conf.orig	2009-01-26 02:13:25.000000000 +0100
+--- dovecot-example.conf.orig	2009-06-01 05:21:42.000000000 +0200
 +++ dovecot-example.conf
-@@ -10,17 +10,14 @@
- # value inside quotes, eg.: key = "# char and trailing whitespace  "
- 
+@@ -12,16 +12,13 @@
  # Default values are shown for each setting, it's not required to uncomment
--# any of the lines. Exception to this are paths, they're just examples with
--# the real defaults being based on configure options. The paths listed here
--# are for configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
--# --with-ssldir=/etc/ssl
-+# any of the lines. 
+ # those. These are exceptions to this though: No sections (e.g. namespace {})
+ # or plugin settings are added by default, they're listed only as examples.
+-# Paths are also just examples with the real defaults being based on configure
+-# options. The paths listed here are for configure --prefix=/usr
+-# --sysconfdir=/etc --localstatedir=/var --with-ssldir=/etc/ssl
  
  # Base directory where to store runtime data.
  #base_dir = /var/run/dovecot/
@@ -22,16 +20,16 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
  # A space separated list of IP or host addresses where to listen in for
  # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
-@@ -85,7 +82,7 @@
+@@ -86,7 +83,7 @@
  #ssl_listen =
  
- # SSL/TLS support: yes, no, required. <doc/wiki/SSL>
+ # SSL/TLS support: yes, no, required. <doc/wiki/SSL.txt>
 -#ssl = yes
 +#ssl = no
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -532,19 +529,19 @@
+@@ -537,20 +534,20 @@
  
  protocol imap {
    # Login executable location.
@@ -41,9 +39,10 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
    # IMAP executable location. Changing this allows you to execute other
    # binaries before the imap process is executed.
    #
-   # This would write rawlogs into ~/dovecot.rawlog/ directory:
+   # This would write rawlogs into user's ~/dovecot.rawlog/, if it exists:
 -  #   mail_executable = /usr/libexec/dovecot/rawlog /usr/libexec/dovecot/imap
 +  #   mail_executable = @PREFIX@/libexec/dovecot/rawlog @PREFIX@/libexec/dovecot/imap
+   # <doc/wiki/Debugging/Rawlog.txt>
    #
    # This would attach gdb into the imap process and write backtraces into
    # /tmp/gdbhelper.* files:
@@ -55,7 +54,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -558,7 +555,7 @@ protocol imap {
+@@ -564,7 +561,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -64,7 +63,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # IMAP logout format string:
    #  %i - total number of bytes read from client
-@@ -604,11 +601,11 @@ protocol imap {
+@@ -614,11 +611,11 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -78,7 +77,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -668,7 +665,7 @@ protocol pop3 {
+@@ -678,7 +675,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -87,7 +86,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -696,7 +693,7 @@ protocol lda {
+@@ -706,7 +703,7 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -96,7 +95,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # If user is over quota, return with temporary failure instead of
    # bouncing the mail.
-@@ -710,7 +707,7 @@ protocol lda {
+@@ -720,7 +717,7 @@ protocol lda {
    #deliver_log_format = msgid=%m: %$
  
    # Binary to use for sending mails.
@@ -105,7 +104,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
    # Subject: header to use for rejection mails. You can use the same variables
    # as for rejection_reason below.
-@@ -729,7 +726,7 @@ protocol lda {
+@@ -739,7 +736,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -114,7 +113,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -858,7 +855,7 @@ auth default {
+@@ -869,7 +866,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -123,7 +122,7 @@ $NetBSD: patch-ab,v 1.11 2009/02/11 14:57:34 ghen Exp $
      # [session=yes] [setcred=yes] [failure_show_msg=yes] [max_requests=<n>]
      # [cache_key=<key>] [<service name>]
      #
-@@ -891,15 +888,15 @@ auth default {
+@@ -902,15 +899,15 @@ auth default {
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot

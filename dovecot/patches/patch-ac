@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2008/10/06 12:02:16 ghen Exp $
+$NetBSD: patch-ac,v 1.6 2009/06/05 06:50:12 ghen Exp $
 
---- doc/Makefile.in.orig	2008-10-05 19:05:25.000000000 +0200
+--- doc/Makefile.in.orig	2009-06-01 06:30:20.000000000 +0200
 +++ doc/Makefile.in
-@@ -212,11 +212,7 @@ top_builddir = @top_builddir@
+@@ -219,11 +219,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = wiki
  confdir = $(sysconfdir)
