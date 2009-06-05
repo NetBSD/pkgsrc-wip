@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/01 21:56:58 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2009/06/05 16:52:26 jihbed Exp $
 
-SHA1 (LiVES-0.9.6-pre2.tar.bz2) = 6fd76dc5c1eb28721afaaf5c89fa9511364d00bc
-RMD160 (LiVES-0.9.6-pre2.tar.bz2) = 22488ce3cfdf5b1b427aef73f1af60db00e106f7
-Size (LiVES-0.9.6-pre2.tar.bz2) = 1446464 bytes
+SHA1 (LiVES-0.9.9.9.tar.bz2) = 48278d17d383f05e2501521b1060b6beec6bf7cb
+RMD160 (LiVES-0.9.9.9.tar.bz2) = 9d44c52138de53ce27a49f14e4e50a34ea5e0b64
+Size (LiVES-0.9.9.9.tar.bz2) = 2202112 bytes
+SHA1 (patch-aa) = 36195dc051df480c807572ae9ad4c7f002971efc
+SHA1 (patch-ab) = 447143e11c31eac75087de8d7fc5372ff55f5297
+SHA1 (patch-ac) = e8effba904244e3a3ff140e8825e67605affd05d
+SHA1 (patch-ad) = 9823fff7150ac7f26aee1bc5a4455f9ca5c93961
