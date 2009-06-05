@@ -1,9 +1,9 @@
 Suggested package updates
 =========================
 
-	o amarok-2.0.2
+	o amarok-2.1
 	o argouml-0.24
-	o asymptote-1.72
+	o asymptote-1.75
 	o backintime-0.9.26
 	o bakery-2.6.3
 	o bsnes-0.046
@@ -26,7 +26,7 @@ Suggested package updates
 	o firebird-2.0.3
 	o gajim-0.12
 	o gallery-1.5.10
-	o gambas2-2.13
+	o gambas2-2.13.1
 	o gcc42-4.2.4
 	o gcc43-4.3.3
 	o geant-4.9.2
@@ -38,7 +38,7 @@ Suggested package updates
 	o gnunet-0.8.0c
 	o grass-6.2.3
 	o grisbi-0.5.8
-	o gtkaml-0.2.6
+	o gtkaml-0.2.7
 	o guichan-0.8.1
 	o guitone-0.9
 	o hitori-0.2.2
@@ -50,11 +50,12 @@ Suggested package updates
 	o lensfun-0.2.3
 	o libexosip-3.3.0
 	o libgadu-1.8.2
+	o libgdata-0.3.0
 	o libgksu-2.0.4
 	o libuuid-1.41.5
 	o lincity-ng-2.0
 	o linphone-3.1.2
-	o lives-0.9.9.8
+	o lives-0.9.9.9
 	o llvm-2.5
 	o man-1.6f
 	o meta-tracker-0.6.95
