@@ -15,8 +15,6 @@ existing tools:
          It is enough to run bmake for cut off Makefile.
 
     pkg_refresh_summary:
-       - should optionally output packages that are not newest
-         (they can be deleted, for examples)
 
     pkg_src_fetch_var:
        - remove it, see pkg_micro_src_summary

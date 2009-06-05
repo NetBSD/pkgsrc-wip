@@ -28,12 +28,13 @@ usage (){
     cat 1>&2 <<EOF
 pkg_refresh_summary - refresh pkg_summary, that is
 for each pkgpath:pkgbase pair present in summary it outputs
-an information about only the newest version
+only summaries about newest packages.
+Duplicated summaries are also removed.
 
 usage: pkg_refresh_summary [OPTIONS] [files...]
 OPTIONS:
   -h|--help      display this help message
-  -o             print summaries of older packages, not newest
+  -o             output summaries of all package except newest ones
 EOF
 }
 
