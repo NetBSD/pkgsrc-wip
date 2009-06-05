@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.3 2009/06/05 22:58:50 thomasklausner Exp $
+
+--- admin/charsets/mapconv.orig	2009-01-29 01:34:53.000000000 +0000
++++ admin/charsets/mapconv
+@@ -70,19 +70,19 @@ else
+     AWKPROG=cat
+ fi
+ 
+-if [ "$3" == "GLIBC-1" ] ; then
++if [ "$3" = "GLIBC-1" ] ; then
+     # Source format is:
+     #   <UYYYY>	/xXX
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's,<U\([^>]*\)>[ 	]*/x\(..\).*,0x\2 0x\1,' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "GLIBC-2" ] ; then
++elif [ "$3" = "GLIBC-2" ] ; then
+     # Source format is:
+     #   <UYYYY>	/xXX/xZZ
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's,<U\([^>]*\)>[ 	]*/x\(..\)/x\(..\).*,0x\2\3 0x\1,' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "GLIBC-2-7" ] ; then
++elif [ "$3" = "GLIBC-2-7" ] ; then
+     # Source format is:
+     #   <UYYYY>	/xXX/xZZ
+     # We must drop MSBs of XX and ZZ
+@@ -92,43 +92,43 @@ elif [ "$3" == "GLIBC-2-7" ] ; then
+ 	      -e 's,<U\([^>]*\)>[ 	]*/x\(..\)/x\(..\).*,0x\2\3 0x\1,' \
+ 	| tee temp \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "CZYBORRA" ] ; then
++elif [ "$3" = "CZYBORRA" ] ; then
+     # Source format is:
+     #   =XX	U+YYYY
+     zcat $1 | sed -n -e "$2 p" \
+ 	| sed -e 's/=\(..\)[^U]*U+\([0-9A-F]*\).*/0x\1 0x\2/' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "IANA" ] ; then
++elif [ "$3" = "IANA" ] ; then
+     # Source format is:
+     #   0xXX	0xYYYY
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's/\(0x[0-9A-Fa-f]*\)[^0]*\(0x[0-9A-Fa-f]*\).*/\1 \2/' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "UNICODE" ] ; then
++elif [ "$3" = "UNICODE" ] ; then
+     # Source format is:
+     #   YYYY	XX
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's/\([0-9A-F]*\)[^0-9A-F]*\([0-9A-F]*\).*/0x\2 0x\1/' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "UNICODE2" ] ; then
++elif [ "$3" = "UNICODE2" ] ; then
+     # Source format is:
+     #   0xXXXX	0xYYYY	# ...
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's/\([0-9A-Fx]*\)[^0]*\([0-9A-Fx]*\).*/\1 \2/' \
+ 	| ${AWKPROG} | sort -n -k 4,4
+-elif [ "$3" == "YASUOKA" ] ; then
++elif [ "$3" = "YASUOKA" ] ; then
+     # Source format is:
+     # YYYY	0-XXXX (XXXX is a Kuten code)
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's/\([0-9A-F]*\)[^0]*0-\([0-9]*\).*/0x\2 0x\1/' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "MICROSOFT" ] ; then
++elif [ "$3" = "MICROSOFT" ] ; then
+     # Source format is:
+     # XX = U+YYYY
+     sed -n -e "$2 p" < $1 \
+ 	| sed -e 's/\([0-9A-F]*\).*U+\([0-9A-F]*\).*/0x\1 0x\2/' \
+ 	| sort | ${AWKPROG}
+-elif [ "$3" == "KANJI-DATABASE" ] ; then
++elif [ "$3" = "KANJI-DATABASE" ] ; then
+     # Source format is:
+     # C?-XXXX U+YYYYY .....
+     sed -n -e "$2 p" < $1 \
