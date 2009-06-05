@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/05/12 15:17:03 jihbed Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/05 10:35:05 jihbed Exp $
 
---- ./Src/makefile.orig	2009-05-04 13:23:45.000000000 +0000
-+++ ./Src/makefile	2009-05-04 13:24:21.000000000 +0000
+--- ./Src/makefile.orig	2006-07-06 08:58:46.000000000 +0000
++++ ./Src/makefile	2009-06-05 02:00:42.000000000 +0000
 @@ -1,4 +1,4 @@
 -CSC=csc
-+CSC=gmcs 
++CSC=gmcs
  
  all:../IronMath.dll ../IronPython.dll ../ipy.exe ../ipyw.exe IronPythonTest/bin/Debug/IronPythonTest.dll
  

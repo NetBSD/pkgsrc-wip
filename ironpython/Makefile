@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/12 15:17:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/05 10:35:05 jihbed Exp $
 #
 
 DISTNAME=	IronPython-1.0.1-Src
@@ -27,7 +27,7 @@ SUBST_VARS.ipy-sh=	CMP EMULDIR MKDIR MV RM SED SH
 DOCDIR=		${PREFIX}/share/doc/${PKGNAME}
 LIBDIR=		${PREFIX}/lib/ironpython
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin lib/ironpython
 
 post-extract:
 	${CP} ${FILESDIR}/ipy.sh ${WRKSRC}
@@ -40,15 +40,15 @@ do-build:
 	cd ${WRKSRC}/Src && ${GMAKE}
 
 do-install:
-	${CHMOD} +x  ${WRKSRC}/ipy.exe
-	${CHMOD} +x  ${WRKSRC}/ipyw.exe
-	${INSTALL_SCRIPT} ${WRKSRC}/ipy.sh ${PREFIX}/bin/ipy
-	${INSTALL_SCRIPT} ${WRKSRC}/ipyw.sh ${PREFIX}/bin/ipyw
+	${INSTALL_SCRIPT} ${WRKSRC}/ipy.sh ${DESTDIR}${PREFIX}/bin/ipy
+	${CHMOD} +x  ${DESTDIR}${PREFIX}/bin/ipy
+	${INSTALL_SCRIPT} ${WRKSRC}/ipyw.sh ${DESTDIR}${PREFIX}/bin/ipyw
+	${CHMOD} +x  ${DESTDIR}${PREFIX}/bin/ipyw
 	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/ipy.exe ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/ipyw.exe ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA}	${WRKSRC}/IronMath.dll ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA}	${WRKSRC}/IronPython.dll ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/ipy.exe ${DESTDIR}${PREFIX}/lib/ironpython
+	${INSTALL_DATA} ${WRKSRC}/ipyw.exe ${DESTDIR}${PREFIX}/lib/ironpython
+	${INSTALL_DATA}	${WRKSRC}/IronMath.dll ${DESTDIR}${PREFIX}/lib/ironpython
+	${INSTALL_DATA}	${WRKSRC}/IronPython.dll ${DESTDIR}${PREFIX}/lib/ironpython
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.html ${DESTDIR}${DOCDIR}
 

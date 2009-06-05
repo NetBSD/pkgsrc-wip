@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/12 15:17:03 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/06/05 10:35:05 jihbed Exp $
 
-SHA1 (IronPython-1.0.1-Src.zip) = e5cb4a9eaf0c72a3db981db3c53da8bfc899efdd
-RMD160 (IronPython-1.0.1-Src.zip) = 64d0dc3c6ef100d94f19eb85ec2e1e466afb381a
-Size (IronPython-1.0.1-Src.zip) = 1579582 bytes
-SHA1 (patch-aa) = b7a77d02048ba9eda5e5fc18e83778d535e4a5fc
+SHA1 (IronPython-2.0.1-Src.zip) = 4251e05b0dcbbf5cb16c59fee382df27d9dddb4e
+RMD160 (IronPython-2.0.1-Src.zip) = df66a18255f66a9b7ba81e7c9b9e33fbe1e4fe06
+Size (IronPython-2.0.1-Src.zip) = 2920274 bytes
+SHA1 (patch-aa) = 78ff2118c94c453e84316616823e5aca733f08f7
