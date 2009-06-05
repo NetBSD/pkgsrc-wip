@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/05/11 11:27:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/05 22:27:07 mwdavies Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -1866,6 +1866,7 @@ share/kde/apps/LICENSES/LGPL_V2
 share/kde/apps/LICENSES/LGPL_V3
 share/kde/apps/LICENSES/QPL_V1.0
 share/kde/apps/cmake/modules/BasicFindPackageVersion.cmake.in
+share/kde/apps/cmake/modules/CheckCXXSymbolExists.cmake
 share/kde/apps/cmake/modules/CheckPointerMember.cmake
 share/kde/apps/cmake/modules/CheckPrototypeExists.cmake
 share/kde/apps/cmake/modules/CheckStructMember.cmake

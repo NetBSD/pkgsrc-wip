@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.18 2009/05/11 11:27:05 mwdavies Exp $
+$NetBSD: distinfo,v 1.19 2009/06/05 22:27:07 mwdavies Exp $
 
-SHA1 (kdesdk-4.2.3.tar.bz2) = cf24ae63e6ee4ed875f580a7dfd8aa6d822d9b47
-RMD160 (kdesdk-4.2.3.tar.bz2) = 5593d07ece1e557d8931cc15e7179671e15e757e
-Size (kdesdk-4.2.3.tar.bz2) = 5478593 bytes
+SHA1 (kdesdk-4.2.4.tar.bz2) = ad5a00f5ee4ae0f627b971b7413edb0550e92db1
+RMD160 (kdesdk-4.2.4.tar.bz2) = b42311a6c1f2298b01e8a705ac8d83ec0d2c71a5
+Size (kdesdk-4.2.4.tar.bz2) = 5477177 bytes
 SHA1 (patch-aa) = ab73e4306efb33344012f95c059ea0ed0adfafd1
 SHA1 (patch-ab) = af132807eaca326ad0c5fe87ffced9e8b813f3f9

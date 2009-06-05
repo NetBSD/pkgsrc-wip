@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/05/11 11:27:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/05 22:27:07 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -134,10 +134,10 @@ include/taskmanager/taskgroup.h
 include/taskmanager/taskitem.h
 include/taskmanager/taskmanager.h
 include/taskmanager/taskmanager_export.h
-lib/cmake/KDE4Workspace-4.2.3/KDE4WorkspaceConfig.cmake
-lib/cmake/KDE4Workspace-4.2.3/KDE4WorkspaceConfigVersion.cmake
-lib/cmake/KDE4Workspace-4.2.3/KDE4WorkspaceLibraryTargets-relwithdebinfo.cmake
-lib/cmake/KDE4Workspace-4.2.3/KDE4WorkspaceLibraryTargets.cmake
+lib/cmake/KDE4Workspace-4.2.4/KDE4WorkspaceConfig.cmake
+lib/cmake/KDE4Workspace-4.2.4/KDE4WorkspaceConfigVersion.cmake
+lib/cmake/KDE4Workspace-4.2.4/KDE4WorkspaceLibraryTargets-relwithdebinfo.cmake
+lib/cmake/KDE4Workspace-4.2.4/KDE4WorkspaceLibraryTargets.cmake
 lib/kconf_update_bin/khotkeys_update
 lib/kconf_update_bin/krdb_clearlibrarypath
 lib/kconf_update_bin/kwin_update_default_rules
@@ -2204,7 +2204,7 @@ share/sounds/pop.wav
 @comment in kde: @dirrm lib/kde4/libexec
 @comment in kde: @dirrm lib/kde4
 @comment in kde: @dirrm lib/kconf_update_bin
-@dirrm lib/cmake/KDE4Workspace-4.2.0
+@dirrm lib/cmake/KDE4Workspace-4.2.4
 @dirrm include/taskmanager
 @dirrm include/solid/control/ifaces
 @dirrm include/solid/control

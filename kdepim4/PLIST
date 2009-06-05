@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/04/29 21:29:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/05 22:27:07 mwdavies Exp $
 bin/akonadi_distlist_resource
 bin/akonadi_ical_resource
 bin/akonadi_imaplib_resource
@@ -1200,6 +1200,7 @@ share/kde/apps/libkholidays/holiday_ar
 share/kde/apps/libkholidays/holiday_at
 share/kde/apps/libkholidays/holiday_au
 share/kde/apps/libkholidays/holiday_bavarian
+share/kde/apps/libkholidays/holiday_bg
 share/kde/apps/libkholidays/holiday_br
 share/kde/apps/libkholidays/holiday_ca
 share/kde/apps/libkholidays/holiday_catalan
