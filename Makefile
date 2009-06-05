@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3469 2009/06/04 05:27:33 phonohawk Exp $
+# $Id: Makefile,v 1.3470 2009/06/05 04:22:30 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -713,6 +713,7 @@ SUBDIR+=	hs-convertible
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-dataenc
+SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-haskell-src
 SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-haskelldb
