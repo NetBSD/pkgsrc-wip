@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/06/06 23:05:18 jihbed Exp $
+#
+
+DISTNAME=	fusil-1.2.1
+CATEGORIES=	devel security python
+MASTER_SITES=	http://pypi.python.org/packages/source/f/fusil/
+
+MAINTAINER=	kamel.derouiche@gmail.com
+HOMEPAGE=	http://fusil.hachoir.org/trac
+COMMENT=	Fuzzing program to test applications
+LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-ptrace>=0.6:../../wip/py-ptrace
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	# none
+
+PYDISTUTILSPKG=  yes
+
+DOCDIR=		${PREFIX}/share/doc/${DISTNAME}
+EDGDIR=		${PREFIX}/share/examples/${DISTNAME}
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EDGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${EDGDIR}
+
+
+.include "../../lang/python/extension.mk"
+.include "../../x11/py-Xlib/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
