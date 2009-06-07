@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/16 17:56:18 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/07 11:24:45 thomasklausner Exp $
 #
 
 DISTNAME=	openbsd-input-usbtablet-1.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
