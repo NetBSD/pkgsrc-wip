@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2008/10/28 17:33:37 minskim Exp $
+$NetBSD: distinfo,v 1.7 2009/06/07 21:27:19 jsonn Exp $
 
-SHA1 (efreet-0.5.0.050.tar.bz2) = 035924a985cddda3351c89a5dc5de08be7117daf
-RMD160 (efreet-0.5.0.050.tar.bz2) = 28a617a4190330d314ecf7dcf9bd9513f6c074ed
-Size (efreet-0.5.0.050.tar.bz2) = 1073655 bytes
+SHA1 (efreet-0.5.0.060.tar.bz2) = 153131c96ac87c017977beb69c6c7910cb744fbd
+RMD160 (efreet-0.5.0.060.tar.bz2) = 673ad43485bbee33ebc360140ab3d0a73b6e2393
+Size (efreet-0.5.0.060.tar.bz2) = 549978 bytes
 SHA1 (patch-aa) = 26268fbd11f9d0c92ea2bd186c2e14609e92ba39

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/03/04 17:47:46 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2009/06/07 21:27:03 jsonn Exp $
 #
 
-DISTNAME=	edje-0.9.9.050
+DISTNAME=	edje-0.9.92.060
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
