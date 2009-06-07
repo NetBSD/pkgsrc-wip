@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2008/10/26 19:11:39 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/07 21:53:06 jsonn Exp $
 #
 
-DISTNAME=	e_dbus-0.5.0.050
+DISTNAME=	e_dbus-0.5.0.060
 PKGNAME=	${DISTNAME:S/_//}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://download.enlightenment.org/snapshots/2008-05-19/
+HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Convenience wrappers around dbus to ease integrating dbus with E17.
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
