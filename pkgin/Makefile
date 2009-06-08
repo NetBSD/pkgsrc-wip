@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2009/06/07 09:56:49 imilh Exp $
+# $NetBSD: Makefile,v 1.24 2009/06/08 10:22:11 imilh Exp $
 #
 
-DISTNAME=		pkgin-20090607
+DISTNAME=		pkgin-20090608
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
 MAINTAINER=		imil@gcu.info
 HOMEPAGE=		http://imil.net/pkgin/
 COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
