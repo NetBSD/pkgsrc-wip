@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/04/01 02:19:13 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/08 09:41:05 obache Exp $
 #
 
-DISTNAME=	swftools-0.7.0
+DISTNAME=	swftools-0.9.0
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.swftools.org/
 
@@ -9,10 +9,15 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.swftools.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake yacc
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+
+# png2swf already installed as part of ming. 
+CONFIGURE_ENV+=		DISABLEPNG2SWF=true
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.swftools
 PKG_SUPPORTED_OPTIONS=	lame
@@ -26,13 +31,15 @@ CONFIGURE_ARGS+=	--enable-lame
 CONFIGURE_ARGS+=	--disable-lame
 .endif
 
+INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}/${PREFIX}/${PKGMANDIR}
+
 .include "../../wip/avifile-devel/buildlink3.mk"
+BUILDLINK_INCDIRS.fontconfig=	include/fontconfig
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
-.include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
