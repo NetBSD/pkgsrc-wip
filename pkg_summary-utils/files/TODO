@@ -6,6 +6,9 @@ existing tools:
 
     pkg_cmp_summary:
        - test for -m
+       - -f <p> use pkgpath only for comparison
+       - -f <n> use pkgbase only for comparison
+       - -f <pn> use pkgbase and pkgpath for comparison
 
     pkg_list_all_pkgs:
 
@@ -33,15 +36,18 @@ existing tools:
     pkg_grep_summary:
        - man page
 
+    pkg_summary2build_graph:
+
+    pkg_summary2bb_pkgs:
+
 new tools?
     - pkg_lint_summary:
          - versions consistency
-         - old distfiles
          - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
 
-    - replacement for lintpkgsrc -m | -o
+    - replacement for lintpkgsrc -m
 
     - (unsure) additional tool for fields reordering?
 
