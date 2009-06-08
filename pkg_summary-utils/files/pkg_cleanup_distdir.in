@@ -98,9 +98,14 @@ awk '$1 == 2 {print $2}' > "$rm_file"
 if test -n "$delete"; then
     xargs rm -f < "$rm_file"
 
-    find . -type d |
-    while read d; do
-	rmdir "$d" 2>/dev/null || true
+    sed 's,/[^/]*$,,' "$rm_file" | sort | uniq |
+    while read -r dir; do
+	while test "$dir" != '.'; do
+	    if ! rmdir "$dir" 2>/dev/null; then
+		break
+	    fi
+	    dir=`dirname $dir`
+	done
     done
 else
     cat "$rm_file"

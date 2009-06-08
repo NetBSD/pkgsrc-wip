@@ -3,7 +3,6 @@ TODO list and thoughts
 existing tools:
 
     pkg_cleanup_distdir:
-       - remove empty directories
 
     pkg_cmp_summary:
        - test for -m
