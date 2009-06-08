@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:40 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/06/08 15:32:07 jsonn Exp $
 
 BUILDLINK_TREE+=	e17
 
 .if !defined(E17_BUILDLINK3_MK)
 E17_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.e17+=	e17>=0.16.999.042
-BUILDLINK_ABI_DEPENDS.e17?=	e17>=0.16.999.042nb1
+BUILDLINK_API_DEPENDS.e17+=	e17>=0.16.999.060
 BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
 
 .include "../../wip/ecore/buildlink3.mk"

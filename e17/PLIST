@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2008/10/28 19:17:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/08 15:32:07 jsonn Exp $
 bin/enlightenment
-bin/enlightenment-config
-bin/enlightenment_fm
-bin/enlightenment_fm_op
+bin/enlightenment_fm_open
 bin/enlightenment_imc
-bin/enlightenment_init
 bin/enlightenment_remote
 bin/enlightenment_start
-bin/enlightenment_sys
-bin/enlightenment_thumb
 include/enlightenment/e.h
 include/enlightenment/e_about.h
 include/enlightenment/e_actions.h
@@ -48,6 +43,7 @@ include/enlightenment/e_fm_custom.h
 include/enlightenment/e_fm_hal.h
 include/enlightenment/e_fm_mime.h
 include/enlightenment/e_fm_op.h
+include/enlightenment/e_fm_op_registry.h
 include/enlightenment/e_fm_prop.h
 include/enlightenment/e_fm_shared.h
 include/enlightenment/e_focus.h
@@ -116,7 +112,6 @@ include/enlightenment/e_test.h
 include/enlightenment/e_theme.h
 include/enlightenment/e_theme_about.h
 include/enlightenment/e_thumb.h
-include/enlightenment/e_tlist.h
 include/enlightenment/e_toolbar.h
 include/enlightenment/e_user.h
 include/enlightenment/e_utils.h
@@ -146,7 +141,8 @@ include/enlightenment/e_widget_slider.h
 include/enlightenment/e_widget_spectrum.h
 include/enlightenment/e_widget_table.h
 include/enlightenment/e_widget_textblock.h
-include/enlightenment/e_widget_tlist.h
+include/enlightenment/e_widget_toolbar.h
+include/enlightenment/e_widget_toolbook.h
 include/enlightenment/e_win.h
 include/enlightenment/e_xinerama.h
 include/enlightenment/e_zone.h
@@ -190,6 +186,9 @@ lib/enlightenment/modules/conf_display/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/conf_dpms/e-module-conf_dpms.edj
 lib/enlightenment/modules/conf_dpms/module.desktop
 lib/enlightenment/modules/conf_dpms/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/conf_edgebindings/e-module-conf_edgebindings.edj
+lib/enlightenment/modules/conf_edgebindings/module.desktop
+lib/enlightenment/modules/conf_edgebindings/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/conf_engine/e-module-conf_engine.edj
 lib/enlightenment/modules/conf_engine/module.desktop
 lib/enlightenment/modules/conf_engine/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
@@ -259,6 +258,9 @@ lib/enlightenment/modules/conf_transitions/${LOWER_OPSYS}-${MACHINE_ARCH}/module
 lib/enlightenment/modules/conf_wallpaper/e-module-conf_wallpaper.edj
 lib/enlightenment/modules/conf_wallpaper/module.desktop
 lib/enlightenment/modules/conf_wallpaper/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/conf_wallpaper2/e-module-conf_wallpaper2.edj
+lib/enlightenment/modules/conf_wallpaper2/module.desktop
+lib/enlightenment/modules/conf_wallpaper2/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/conf_window_display/e-module-conf_window_display.edj
 lib/enlightenment/modules/conf_window_display/module.desktop
 lib/enlightenment/modules/conf_window_display/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
@@ -274,8 +276,6 @@ lib/enlightenment/modules/conf_window_remembers/${LOWER_OPSYS}-${MACHINE_ARCH}/m
 lib/enlightenment/modules/conf_winlist/e-module-conf_winlist.edj
 lib/enlightenment/modules/conf_winlist/module.desktop
 lib/enlightenment/modules/conf_winlist/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
-lib/enlightenment/modules/connman/e-module-connman.edj
-lib/enlightenment/modules/connman/module.desktop
 lib/enlightenment/modules/cpufreq/e-module-cpufreq.edj
 lib/enlightenment/modules/cpufreq/module.desktop
 lib/enlightenment/modules/cpufreq/${LOWER_OPSYS}-${MACHINE_ARCH}/freqset
@@ -289,6 +289,9 @@ lib/enlightenment/modules/exebuf/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/fileman/e-module-fileman.edj
 lib/enlightenment/modules/fileman/module.desktop
 lib/enlightenment/modules/fileman/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/fileman_opinfo/e-module-fileman_opinfo.edj
+lib/enlightenment/modules/fileman_opinfo/module.desktop
+lib/enlightenment/modules/fileman_opinfo/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/gadman/e-module-gadman.edj
 lib/enlightenment/modules/gadman/module.desktop
 lib/enlightenment/modules/gadman/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
@@ -298,15 +301,42 @@ lib/enlightenment/modules/ibar/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/ibox/e-module-ibox.edj
 lib/enlightenment/modules/ibox/module.desktop
 lib/enlightenment/modules/ibox/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/illume/dicts/English_(US).dic
+lib/enlightenment/modules/illume/dicts/English_(US)_Small.dic
+lib/enlightenment/modules/illume/e-module-illume.edj
+lib/enlightenment/modules/illume/keyboards/Default.kbd
+lib/enlightenment/modules/illume/keyboards/Numbers.kbd
+lib/enlightenment/modules/illume/keyboards/Terminal.kbd
+lib/enlightenment/modules/illume/keyboards/alpha.png
+lib/enlightenment/modules/illume/keyboards/backspace.png
+lib/enlightenment/modules/illume/keyboards/down.png
+lib/enlightenment/modules/illume/keyboards/enter.png
+lib/enlightenment/modules/illume/keyboards/ignore_built_in_keyboards
+lib/enlightenment/modules/illume/keyboards/left.png
+lib/enlightenment/modules/illume/keyboards/numeric.png
+lib/enlightenment/modules/illume/keyboards/qwerty.png
+lib/enlightenment/modules/illume/keyboards/right.png
+lib/enlightenment/modules/illume/keyboards/shift.png
+lib/enlightenment/modules/illume/keyboards/tab.png
+lib/enlightenment/modules/illume/keyboards/up.png
+lib/enlightenment/modules/illume/module.desktop
+lib/enlightenment/modules/illume/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/illume/${LOWER_OPSYS}-${MACHINE_ARCH}/wifiget
 lib/enlightenment/modules/mixer/e-module-mixer.edj
 lib/enlightenment/modules/mixer/module.desktop
 lib/enlightenment/modules/mixer/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/msgbus_lang/e-module-msgbus_lang.edj
+lib/enlightenment/modules/msgbus_lang/module.desktop
+lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/pager/e-module-pager.edj
 lib/enlightenment/modules/pager/module.desktop
 lib/enlightenment/modules/pager/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/start/e-module-start.edj
 lib/enlightenment/modules/start/module.desktop
 lib/enlightenment/modules/start/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
+lib/enlightenment/modules/syscon/e-module-syscon.edj
+lib/enlightenment/modules/syscon/module.desktop
+lib/enlightenment/modules/syscon/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/temperature/e-module-temperature.edj
 lib/enlightenment/modules/temperature/module.desktop
 lib/enlightenment/modules/temperature/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
@@ -320,37 +350,77 @@ lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/module.la
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_000.la
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_010.la
 lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_020.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_030.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_070.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_080.la
+lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}/page_200.la
 lib/enlightenment/preload/e_precache.la
+lib/enlightenment/utils/enlightenment_fm
+lib/enlightenment/utils/enlightenment_fm_op
+lib/enlightenment/utils/enlightenment_init
+lib/enlightenment/utils/enlightenment_sys
+lib/enlightenment/utils/enlightenment_thumb
 lib/pkgconfig/enlightenment.pc
 share/enlightenment/AUTHORS
 share/enlightenment/COPYING
-share/enlightenment/data/backgrounds/Blue_Sky_Tree.edj
-share/enlightenment/data/backgrounds/Cracked_Earth.edj
-share/enlightenment/data/backgrounds/Ivy_Wall.edj
-share/enlightenment/data/backgrounds/Ladybug.edj
+share/enlightenment/data/backgrounds/Dark_Gradient.edj
+share/enlightenment/data/backgrounds/Light_Gradient.edj
 share/enlightenment/data/config/default/e.cfg
-share/enlightenment/data/config/default/module.battery.cfg
-share/enlightenment/data/config/default/module.cpufreq.cfg
-share/enlightenment/data/config/default/module.dropshadow.cfg
-share/enlightenment/data/config/default/module.fileman.cfg
-share/enlightenment/data/config/default/module.ibar.cfg
-share/enlightenment/data/config/default/module.ibox.cfg
-share/enlightenment/data/config/default/module.pager.cfg
-share/enlightenment/data/config/default/module.temperature.cfg
+share/enlightenment/data/config/default/icon.png
+share/enlightenment/data/config/default/profile.desktop
+share/enlightenment/data/config/illume/e.cfg
+share/enlightenment/data/config/illume/icon.png
+share/enlightenment/data/config/illume/module.battery.cfg
+share/enlightenment/data/config/illume/module.dropshadow.cfg
+share/enlightenment/data/config/illume/module.illume.cfg
+share/enlightenment/data/config/illume/module.mixer.cfg
+share/enlightenment/data/config/illume/module.pager.cfg
+share/enlightenment/data/config/illume/profile.desktop
+share/enlightenment/data/config/minimalist/e.cfg
+share/enlightenment/data/config/minimalist/icon.png
+share/enlightenment/data/config/minimalist/module.battery.cfg
+share/enlightenment/data/config/minimalist/module.cpufreq.cfg
+share/enlightenment/data/config/minimalist/module.dropshadow.cfg
+share/enlightenment/data/config/minimalist/module.fileman.cfg
+share/enlightenment/data/config/minimalist/module.ibar.cfg
+share/enlightenment/data/config/minimalist/module.ibox.cfg
+share/enlightenment/data/config/minimalist/module.pager.cfg
+share/enlightenment/data/config/minimalist/module.temperature.cfg
+share/enlightenment/data/config/minimalist/profile.desktop
+share/enlightenment/data/config/netbook/e.cfg
+share/enlightenment/data/config/netbook/icon.png
+share/enlightenment/data/config/netbook/module.battery.cfg
+share/enlightenment/data/config/netbook/module.cpufreq.cfg
+share/enlightenment/data/config/netbook/module.dropshadow.cfg
+share/enlightenment/data/config/netbook/module.fileman.cfg
+share/enlightenment/data/config/netbook/module.ibar.cfg
+share/enlightenment/data/config/netbook/module.ibox.cfg
+share/enlightenment/data/config/netbook/module.pager.cfg
+share/enlightenment/data/config/netbook/module.temperature.cfg
+share/enlightenment/data/config/netbook/profile.desktop
 share/enlightenment/data/config/profile.cfg
-share/enlightenment/data/fonts/Vera.COPYING
-share/enlightenment/data/fonts/Vera.ttf
-share/enlightenment/data/fonts/VeraBI.ttf
-share/enlightenment/data/fonts/VeraBd.ttf
-share/enlightenment/data/fonts/VeraIt.ttf
-share/enlightenment/data/fonts/VeraMoBI.ttf
-share/enlightenment/data/fonts/VeraMoBd.ttf
-share/enlightenment/data/fonts/VeraMoIt.ttf
-share/enlightenment/data/fonts/VeraMono.ttf
-share/enlightenment/data/fonts/VeraSe.ttf
-share/enlightenment/data/fonts/VeraSeBd.ttf
-share/enlightenment/data/fonts/fonts.alias
-share/enlightenment/data/fonts/fonts.dir
+share/enlightenment/data/config/scaleable/e.cfg
+share/enlightenment/data/config/scaleable/icon.png
+share/enlightenment/data/config/scaleable/module.battery.cfg
+share/enlightenment/data/config/scaleable/module.cpufreq.cfg
+share/enlightenment/data/config/scaleable/module.dropshadow.cfg
+share/enlightenment/data/config/scaleable/module.fileman.cfg
+share/enlightenment/data/config/scaleable/module.ibar.cfg
+share/enlightenment/data/config/scaleable/module.ibox.cfg
+share/enlightenment/data/config/scaleable/module.pager.cfg
+share/enlightenment/data/config/scaleable/module.temperature.cfg
+share/enlightenment/data/config/scaleable/profile.desktop
+share/enlightenment/data/config/standard/e.cfg
+share/enlightenment/data/config/standard/icon.png
+share/enlightenment/data/config/standard/module.battery.cfg
+share/enlightenment/data/config/standard/module.cpufreq.cfg
+share/enlightenment/data/config/standard/module.dropshadow.cfg
+share/enlightenment/data/config/standard/module.fileman.cfg
+share/enlightenment/data/config/standard/module.ibar.cfg
+share/enlightenment/data/config/standard/module.ibox.cfg
+share/enlightenment/data/config/standard/module.pager.cfg
+share/enlightenment/data/config/standard/module.temperature.cfg
+share/enlightenment/data/config/standard/profile.desktop
 share/enlightenment/data/icons/audio_player.png
 share/enlightenment/data/icons/audio_player2.png
 share/enlightenment/data/icons/image_viewer.png
@@ -360,10 +430,34 @@ share/enlightenment/data/icons/video_player.png
 share/enlightenment/data/icons/web_browser.png
 share/enlightenment/data/icons/xterm.png
 share/enlightenment/data/images/enlightenment.png
+share/enlightenment/data/images/lang-bg_BG.png
+share/enlightenment/data/images/lang-ca_ES.png
+share/enlightenment/data/images/lang-cs_CZ.png
+share/enlightenment/data/images/lang-da_DK.png
+share/enlightenment/data/images/lang-de_DE.png
+share/enlightenment/data/images/lang-el_GR.png
+share/enlightenment/data/images/lang-en_US.png
+share/enlightenment/data/images/lang-es_AR.png
+share/enlightenment/data/images/lang-es_ES.png
+share/enlightenment/data/images/lang-fi_FI.png
+share/enlightenment/data/images/lang-fr_FR.png
+share/enlightenment/data/images/lang-hu_HU.png
+share/enlightenment/data/images/lang-it_IT.png
+share/enlightenment/data/images/lang-ja_JP.png
+share/enlightenment/data/images/lang-ko_KR.png
+share/enlightenment/data/images/lang-nb_NO.png
+share/enlightenment/data/images/lang-nl_NL.png
+share/enlightenment/data/images/lang-pl_PL.png
+share/enlightenment/data/images/lang-pt_BR.png
+share/enlightenment/data/images/lang-ru_RU.png
+share/enlightenment/data/images/lang-sk_SK.png
+share/enlightenment/data/images/lang-sl_SI.png
+share/enlightenment/data/images/lang-sv_SE.png
+share/enlightenment/data/images/lang-zh_CN.png
+share/enlightenment/data/images/lang-zh_TW.png
 share/enlightenment/data/images/test.edj
 share/enlightenment/data/images/test.jpg
 share/enlightenment/data/images/test.png
-share/enlightenment/data/init/default.edj
 share/enlightenment/data/input_methods/iiimf.imc
 share/enlightenment/data/input_methods/scim.imc
 share/enlightenment/data/input_methods/uim.imc
@@ -372,6 +466,7 @@ share/enlightenment/data/other/desktop_order.tar.gz
 share/enlightenment/data/other/efm_favorites.tar.gz
 share/enlightenment/data/other/icon_example.tar.gz
 share/enlightenment/data/themes/default.edj
+share/enlightenment/data/themes/illume.edj
 share/enlightenment/doc/FDO.txt
 share/enlightenment/doc/cache.txt
 share/enlightenment/doc/documentation.html
@@ -379,19 +474,30 @@ share/enlightenment/doc/enlightenment.png
 share/examples/enlightenment/sysactions.conf
 share/locale/bg/LC_MESSAGES/enlightenment.mo
 share/locale/ca/LC_MESSAGES/enlightenment.mo
+share/locale/cs/LC_MESSAGES/enlightenment.mo
+share/locale/da/LC_MESSAGES/enlightenment.mo
 share/locale/de/LC_MESSAGES/enlightenment.mo
+share/locale/el/LC_MESSAGES/enlightenment.mo
 share/locale/eo/LC_MESSAGES/enlightenment.mo
 share/locale/es/LC_MESSAGES/enlightenment.mo
 share/locale/fi/LC_MESSAGES/enlightenment.mo
 share/locale/fr/LC_MESSAGES/enlightenment.mo
 share/locale/fr_CH/LC_MESSAGES/enlightenment.mo
+share/locale/he/LC_MESSAGES/enlightenment.mo
 share/locale/hu/LC_MESSAGES/enlightenment.mo
 share/locale/it/LC_MESSAGES/enlightenment.mo
 share/locale/ja/LC_MESSAGES/enlightenment.mo
 share/locale/ko/LC_MESSAGES/enlightenment.mo
+share/locale/nb/LC_MESSAGES/enlightenment.mo
+share/locale/nl/LC_MESSAGES/enlightenment.mo
+share/locale/pl/LC_MESSAGES/enlightenment.mo
+share/locale/pt/LC_MESSAGES/enlightenment.mo
 share/locale/pt_BR/LC_MESSAGES/enlightenment.mo
 share/locale/ru/LC_MESSAGES/enlightenment.mo
+share/locale/sk/LC_MESSAGES/enlightenment.mo
 share/locale/sl/LC_MESSAGES/enlightenment.mo
+share/locale/sv/LC_MESSAGES/enlightenment.mo
+share/locale/tr/LC_MESSAGES/enlightenment.mo
 share/locale/zh_CN/LC_MESSAGES/enlightenment.mo
 share/locale/zh_TW/LC_MESSAGES/enlightenment.mo
 share/xsessions/enlightenment.desktop
@@ -403,15 +509,19 @@ share/xsessions/enlightenment.desktop
 @dirrm share/enlightenment/data/themes
 @dirrm share/enlightenment/data/other
 @dirrm share/enlightenment/data/input_methods
-@dirrm share/enlightenment/data/init
 @dirrm share/enlightenment/data/images
 @dirrm share/enlightenment/data/icons
-@dirrm share/enlightenment/data/fonts
+@dirrm share/enlightenment/data/config/standard
+@dirrm share/enlightenment/data/config/scaleable
+@dirrm share/enlightenment/data/config/netbook
+@dirrm share/enlightenment/data/config/minimalist
+@dirrm share/enlightenment/data/config/illume
 @dirrm share/enlightenment/data/config/default
 @dirrm share/enlightenment/data/config
 @dirrm share/enlightenment/data/backgrounds
 @dirrm share/enlightenment/data
 @dirrm share/enlightenment
+@dirrm lib/enlightenment/utils
 @dirrm lib/enlightenment/preload
 @dirrm lib/enlightenment/modules/wizard/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/wizard
@@ -419,21 +529,28 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/winlist
 @dirrm lib/enlightenment/modules/temperature/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/temperature
+@dirrm lib/enlightenment/modules/syscon/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/syscon
 @dirrm lib/enlightenment/modules/start/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/start
 @dirrm lib/enlightenment/modules/pager/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/pager
-@exec ${MKDIR} %D/lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/msgbus_lang/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/msgbus_lang
 @dirrm lib/enlightenment/modules/mixer/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/mixer
+@dirrm lib/enlightenment/modules/illume/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/illume/keyboards
+@dirrm lib/enlightenment/modules/illume/dicts
+@dirrm lib/enlightenment/modules/illume
 @dirrm lib/enlightenment/modules/ibox/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/ibox
 @dirrm lib/enlightenment/modules/ibar/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/ibar
 @dirrm lib/enlightenment/modules/gadman/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/gadman
+@dirrm lib/enlightenment/modules/fileman_opinfo/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/fileman_opinfo
 @dirrm lib/enlightenment/modules/fileman/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/fileman
 @dirrm lib/enlightenment/modules/exebuf/${LOWER_OPSYS}-${MACHINE_ARCH}
@@ -442,9 +559,6 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/dropshadow
 @dirrm lib/enlightenment/modules/cpufreq/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/cpufreq
-@exec ${MKDIR} %D/lib/enlightenment/modules/connman/${LOWER_OPSYS}-${MACHINE_ARCH}
-@dirrm lib/enlightenment/modules/connman/${LOWER_OPSYS}-${MACHINE_ARCH}
-@dirrm lib/enlightenment/modules/connman
 @dirrm lib/enlightenment/modules/conf_winlist/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_winlist
 @dirrm lib/enlightenment/modules/conf_window_remembers/${LOWER_OPSYS}-${MACHINE_ARCH}
@@ -455,6 +569,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/conf_window_focus
 @dirrm lib/enlightenment/modules/conf_window_display/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_window_display
+@dirrm lib/enlightenment/modules/conf_wallpaper2/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/conf_wallpaper2
 @dirrm lib/enlightenment/modules/conf_wallpaper/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_wallpaper
 @dirrm lib/enlightenment/modules/conf_transitions/${LOWER_OPSYS}-${MACHINE_ARCH}
@@ -501,6 +617,8 @@ share/xsessions/enlightenment.desktop
 @dirrm lib/enlightenment/modules/conf_exebuf
 @dirrm lib/enlightenment/modules/conf_engine/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_engine
+@dirrm lib/enlightenment/modules/conf_edgebindings/${LOWER_OPSYS}-${MACHINE_ARCH}
+@dirrm lib/enlightenment/modules/conf_edgebindings
 @dirrm lib/enlightenment/modules/conf_dpms/${LOWER_OPSYS}-${MACHINE_ARCH}
 @dirrm lib/enlightenment/modules/conf_dpms
 @dirrm lib/enlightenment/modules/conf_display/${LOWER_OPSYS}-${MACHINE_ARCH}

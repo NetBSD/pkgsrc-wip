@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.10 2008/10/28 19:17:47 minskim Exp $
+$NetBSD: distinfo,v 1.11 2009/06/08 15:32:07 jsonn Exp $
 
-SHA1 (enlightenment-0.16.999.050.tar.bz2) = e55dd88a1654776758d5bc47b2258e3f954b8150
-RMD160 (enlightenment-0.16.999.050.tar.bz2) = 8586c5d6c0f770f0509a7ff139c7c5deac890407
-Size (enlightenment-0.16.999.050.tar.bz2) = 32818538 bytes
+SHA1 (enlightenment-0.16.999.060.tar.bz2) = 970d3f54bebd28f651c85a3965e81d94a4dd11d7
+RMD160 (enlightenment-0.16.999.060.tar.bz2) = 8b59f67f230c3b30f4920662fe638f6f633eac54
+Size (enlightenment-0.16.999.060.tar.bz2) = 4764636 bytes
 SHA1 (patch-aa) = 70e28f1d31e334a0d3ba2c58232835f2cd40ea48
-SHA1 (patch-ab) = 2cb3a755e7303c64ab5297ee351095cf241db431
-SHA1 (patch-ac) = 492885cc6c6976366a012b05d2d594bbe27e8d6b
+SHA1 (patch-ab) = 7924bdaf7053f4026be405a4a6c2a15717b98f1f
+SHA1 (patch-ac) = 278ff1d840d28bd76148796c6ae8a6ea4ba06ff4
 SHA1 (patch-ad) = 80be9e296c5d68cf7978cf092e22f21ac860e51e
 SHA1 (patch-ae) = 1c280cdf3bb2a67985a8e94ffb11ab0cf124532f
-SHA1 (patch-af) = de350f5a99dec94985a219ee3e886275dffb5c70
-SHA1 (patch-ag) = d22051c79cc450c4eedaed5b8da610814fda4db3
+SHA1 (patch-af) = 785db672d1d771770d5d96efb77b34b94d403a43
+SHA1 (patch-ag) = 99ec8af1686937f345b8337ea963fcd6be71768b
+SHA1 (patch-ah) = 9f0ff69ab6d93b2ab848c79067bea155d10bd186

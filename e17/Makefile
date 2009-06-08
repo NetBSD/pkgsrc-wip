@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2009/03/04 17:47:43 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2009/06/08 15:32:07 jsonn Exp $
 #
 
-DISTNAME=	enlightenment-0.16.999.050
+DISTNAME=	enlightenment-0.16.999.060
 PKGNAME=	${DISTNAME:S/enlightenment/e17/}
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yazzy@yazzy.org
@@ -30,7 +30,6 @@ CONF_FILES=	${EGDIR}/sysactions.conf \
 		${PKG_SYSCONFDIR}/sysactions.conf
 
 CONFIGURE_ARGS+=	--enable-zoom --enable-fsstd
-CONFIGURE_ARGS+=	--with-imlib2
 CONFIGURE_ENV+=		MODULE_ARCH="${LOWER_OPSYS}-${MACHINE_ARCH}"
 
 INSTALLATION_DIRS=	${EGDIR}
@@ -40,20 +39,11 @@ pre-install:
 
 PKGCONFIG_OVERRIDE=	enlightenment.pc.in
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.e17
-PKG_SUPPORTED_OPTIONS=	dbus
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mdbus)
-.	include	"../../wip/edbus/buildlink3.mk"
-.endif
-
 .include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/edbus/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
 .include "../../wip/efreet/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
