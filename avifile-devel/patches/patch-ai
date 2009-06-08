@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2009/06/08 09:38:20 obache Exp $
+
+--- plugins/libmp3lame_audioenc/mp3encoder.cpp.orig	2006-03-05 20:45:26.000000000 +0000
++++ plugins/libmp3lame_audioenc/mp3encoder.cpp
+@@ -30,7 +30,7 @@ class MP3Encoder: public IAudioEncoder
+ 	short  nCodecDelay;
+     };
+ public:
+-    MP3Encoder::MP3Encoder(const CodecInfo& info, const WAVEFORMATEX* format)
++    MP3Encoder(const CodecInfo& info, const WAVEFORMATEX* format)
+ 	:IAudioEncoder(info)
+     {
+ 	in_fmt=*format;

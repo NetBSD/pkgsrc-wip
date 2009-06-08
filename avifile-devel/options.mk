@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2006/07/21 12:32:09 obache Exp $
+# $NetBSD: options.mk,v 1.11 2009/06/08 09:38:20 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -47,10 +47,9 @@ CONFIGURE_ARGS+=	--without-faad-prefix
 .if !empty(PKG_OPTIONS:Mqt)
 .include "../../x11/qt3-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt-prefix=${QTDIR:Q}
-PLIST_SUBST+=		QT_COMMENT=
+PLIST.qt=		yes
 .else
 CONFIGURE_ARGS+=	--without-qt
-PLIST_SUBST+=		QT_COMMENT="@comment "
 SUBST_CLASSES+=		qtman
 SUBST_STAGE.qtman=	pre-configure
 SUBST_MESSAGE.qtman=	do not install man page for qt
@@ -63,18 +62,17 @@ SUBST_SED.qtman+=	-e 's|avirecompress.1||'
 .include "../../audio/libvorbis/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vorbis \
 			--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis:Q}
-PLIST_SUBST+=		VORBIS_COMMENT=
+PLIST.vorbis=		yes
 .else
 CONFIGURE_ARGS+=	--disable-vorbis \
 			--without-vorbis-prefix
-PLIST_SUBST+=		VORBIS_COMMENT="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mxvid)
 .include "../../multimedia/xvidcore/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-xvid4 \
 			--with-xvid4-prefix=${BUILDLINK_PREFIX.xvidcore:Q}
-PLIST_SUBST+=		XVID_COMMENT=
+PLIST.xvid=		yes
 
 SUBST_CLASSES+=		xvidlib
 SUBST_STAGE.xvidlib=	pre-configure
@@ -85,24 +83,21 @@ SUBST_SED.xvidlib=	-e 's|XVID4_LIBS -lxvidcore|XVID4_LIBS -Wl,-lxvidcore -lm|'
 .else
 CONFIGURE_ARGS+=	--disable-xvid4 \
 			--without-xvid4-prefix
-PLIST_SUBST+=		XVID_COMMENT="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mmad)
 .include "../../audio/libmad/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libmad
-PLIST_SUBST+=		MAD_COMMENT=
+PLIST.mad=		yes
 .else
 CONFIGURE_ARGS+=	--disable-mad
-PLIST_SUBST+=		MAD_COMMENT="@comment "
 .endif
 
 # .if !empty(PKG_OPTIONS:Mvidix)
 # CONFIGURE_ARGS+=	--enable-vidix
-# PLIST_SUBST+=		VIDIX_COMMENT=
+# PLIST.vidix=		yes
 # .else
 # CONFIGURE_ARGS+=	--disable-vidix
-# PLIST_SUBST+=		VIDIX_COMMENT="@comment "
 # .endif
 
 .if !empty(PKG_OPTIONS:Ma52)
@@ -116,10 +111,9 @@ CONFIGURE_ARGS+=	--disable-a52
 .if !empty(PKG_OPTIONS:Mlame)
 .include "../../audio/lame/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-lame-bin
-PLIST_SUBST+=		LAME_COMMENT=
+PLIST.lame=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lame-bin
-PLIST_SUBST+=		LAME_COMMENT="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mac3_passthrough)
@@ -128,18 +122,15 @@ PLIST_SUBST+=		LAME_COMMENT="@comment "
 PKG_FAIL_REASON+=	"Need oss to use ac3passthrough"
 .  else
 CONFIGURE_ARGS+=	--enable-ac3passthrough
-PLIST_SUBST+=		AC3PASS_COMMENT=
+PLIST.ac3pass=		yes
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-ac3passthrough
-PLIST_SUBST+=		AC3PASS_COMMENT="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
 .include "../../graphics/jpeg/buildlink3.mk"
-PLIST_SUBST+=		JPEG_COMMENT=
-.else
-PLIST_SUBST+=		JPEG_COMMENT="@comment "
+PLIST.jpeg=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mmmx)
@@ -147,3 +138,29 @@ CONFIGURE_ARGS+=	--enable-x86opt
 .else
 CONFIGURE_ARGS+=	--disable-x86opt
 .endif
+
+#.if !empty(PKG_OPTIONS:Mv4l)
+#.include "../../graphics/libv4l/buildlink3.mk"
+#CONFIGURE_ARGS+=	--enable-v4l
+#PLIST.v4l=		yes
+#.  if !exists(/usr/include/linux/videodev.h)
+#pre-configure: fix-videodev
+#fix-videodev:
+#	${MKDIR} ${BUILDLINK_DIR}/include/linux
+#	cp ../../graphics/libv4l/files/videodev.h ${BUILDLINK_DIR}/include/linux/videodev.h
+#.  endif
+#.else
+#CONFIGURE_ARGS+=	--disable-v4l
+#SUBST_CLASSES+=		v4l
+#SUBST_STAGE.v4l=	pre-configure
+#SUBST_MESSAGE.v4l=	do not support v4l, so do not build qtvidcap
+#SUBST_FILES.v4l=	samples/Makefile.in
+#SUBST_SED.v4l=		-E -e 's|^(SUBDIRS.+)qtvidcap|\1|'
+#
+#SUBST_CLASSES+=		v4lman
+#SUBST_STAGE.v4lman=	pre-configure
+#SUBST_MESSAGE.v4lman=	do not install man page for v4l
+#SUBST_FILES.v4lman=	doc/Makefile.in
+#SUBST_SED.v4lman=	-e 's|kv4lsetup.1||'
+#SUBST_SED.v4lman+=	-e 's|avirec.1||'
+#.endif

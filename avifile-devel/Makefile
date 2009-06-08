@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/04/01 02:19:12 obache Exp $
+# $NetBSD: Makefile,v 1.21 2009/06/08 09:38:20 obache Exp $
 
 DISTNAME=	avifile-0.7-0.7.45
 PKGNAME=	avifile-devel-0.7.45
@@ -10,6 +10,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	win32-codecs>=010122:../../multimedia/win32-codecs
 .endif
@@ -20,6 +22,8 @@ USE_LANGUAGES=		c c++ fortran
 
 PKGCONFIG_OVERRIDE+=	avifile.pc.in
 
+PLIST_VARS=	ac3pass ffmpeg jpeg mad lame qt v4l vidix vorbis win32 xvid
+
 .include "options.mk"
 
 GNU_CONFIGURE=		YES
@@ -29,25 +33,22 @@ CONFIGURE_ARGS+=	--disable-divx4
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-win32
 CONFIGURE_ARGS+=	--with-win32-path=${LOCALBASE:Q}/lib/win32
-PLIST_SUBST+=	WIN32_COMMENT=
+PLIST.win32=		yes
 .else
 CONFIGURE_ARGS+=	--disable-win32
-PLIST_SUBST+=	WIN32_COMMENT="@comment "
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "amd64"
 CONFIGURE_ARGS+=	--enable-ffmpeg
-PLIST_SUBST+=	FFMPEG_COMMENT=
+PLIST.ffmpeg=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x86opt
 CONFIGURE_ARGS+=	--disable-ffmpeg
-PLIST_SUBST+=	FFMPEG_COMMENT="@comment "
 .endif
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-v4l
-PLIST_SUBST+=	V4L_COMMENT=
+PLIST.v4l=		yes
 .else
 CONFIGURE_ARGS+=	--disable-v4l
-PLIST_SUBST+=	V4L_COMMENT="@comment "
 SUBST_CLASSES+=		v4l
 SUBST_STAGE.v4l=	pre-configure
 SUBST_MESSAGE.v4l=	do not support v4l, so do not build qtvidcap
@@ -64,10 +65,9 @@ SUBST_SED.v4lman+=	-e 's|avirec.1||'
 
 .if ${MACHINE_ARCH} == "i386" && (${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD")
 CONFIGURE_ARGS+=	--enable-vidix
-PLIST_SUBST+=		VIDIX_COMMENT=
+PLIST.vidix=		yes
 .else
 CONFIGURE_ARGS+=	--disable-vidix
-PLIST_SUBST+=		VIDIX_COMMENT="@comment "
 .endif
 
 SUBST_CLASSES+=		pkgname
@@ -101,8 +101,11 @@ SUBST_SED.dsp=		-e 's|/dev/dsp|${DEVOSSSOUND}|'
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv:Q}
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
