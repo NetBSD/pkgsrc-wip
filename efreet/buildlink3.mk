@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:43:40 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/06/08 15:31:56 jsonn Exp $
 
 BUILDLINK_TREE+=	efreet
 
 .if !defined(EFREET_BUILDLINK3_MK)
 EFREET_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.efreet+=	efreet>=0.5.0.043
-BUILDLINK_ABI_DEPENDS.efreet?=	efreet>=0.5.0.043nb1
+BUILDLINK_API_DEPENDS.efreet+=	efreet>=0.5.0.060
 BUILDLINK_PKGSRCDIR.efreet?=	../../wip/efreet
 
 .include        "../../wip/ecore/buildlink3.mk"
