@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/09 22:34:24 othyro Exp $
+lib/purple-2/festival.la
+share/locale/es/LC_MESSAGES/pidgin-festival.mo
+share/locale/pt_BR/LC_MESSAGES/pidgin-festival.mo
+share/locale/ru/LC_MESSAGES/pidgin-festival.mo
+@dirrm lib/purple-2
