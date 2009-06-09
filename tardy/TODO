@@ -1,0 +1,13 @@
+-*- mode: org -*- 
+
+* test/00/t0012a.sh
+  fails
+
+  This is due to BSD cpio not recognizing the output file from tardy. I assume
+  archivers/gcpio would recognize it. gcpio conflicts with gtar-base and I have not gotten
+  around to testing in e.g. a chroot with gcpio.
+
+* add option 'testing' to mk/defaults/options.description
+  Does not seem to be quite the right way to handle this.
+  Better would be per-phase DEPENDS variables, like there already are in BUILD_DEPENDS and
+  DEPENDS. 
