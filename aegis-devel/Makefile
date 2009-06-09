@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/06/09 17:32:49 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/09 19:16:03 marko_schuetz Exp $
 #
 
 DISTNAME=	aegis-devel-4.24
@@ -15,32 +15,35 @@ META_PACKAGE=   	yes
 
 DEPENDS+=		aegis>=4.24:../../devel/aegis
 DEPENDS+=		autoconf>=2.53:../../devel/autoconf
-DEPENDS+=		automake:../../devel/automake
-DEPENDS+=		bison:../../devel/bison
+DEPENDS+=		automake>=1.10.1:../../devel/automake
+DEPENDS+=		bison>=2.4.1:../../devel/bison
 DEPENDS+=		cook>=2.8:../../devel/cook
-DEPENDS+=		coreutils:../../sysutils/coreutils
-DEPENDS+=		exctags:../../devel/exctags
-DEPENDS+=		fhist:../../devel/fhist
-DEPENDS+=		flex:../../devel/flex
-DEPENDS+=		gawk:../../lang/gawk
+DEPENDS+=		coreutils>=6.12:../../sysutils/coreutils
+DEPENDS+=		exctags>=5.7:../../devel/exctags
+DEPENDS+=		fhist>=1.16:../../devel/fhist
+DEPENDS+=		flex>=2.5.35:../../devel/flex
+DEPENDS+=		gawk>=3.1.6:../../lang/gawk
+.if ${OPSYS} != "NetBSD"
+# on NetBSD gettext is in the base set. others?
 DEPENDS+=		gettext>=0.14.4:../../devel/gettext
-DEPENDS+=		ghostscript:../../print/ghostscript
-DEPENDS+=		gsharutils:../../archivers/gsharutils
-DEPENDS+=		ImageMagick:../../graphics/ImageMagick
+.endif
+DEPENDS+=		ghostscript>=8.64:../../print/ghostscript
+DEPENDS+=		gsharutils>=4.2.1:../../archivers/gsharutils
+DEPENDS+=		ImageMagick>=6.4.8.3:../../graphics/ImageMagick
 DEPENDS+=		libxml2>=1.8.17:../../textproc/libxml2
-DEPENDS+=		png2ico:../../wip/png2ico
-DEPENDS+=		pngcrush:../../graphics/pngcrush
-DEPENDS+=		psutils:../../print/psutils
+DEPENDS+=		png2ico>=20021208:../../wip/png2ico
+DEPENDS+=		pngcrush>=1.6.17:../../graphics/pngcrush
+DEPENDS+=		psutils>=1.17:../../print/psutils
 .if ${OPSYS} != "NetBSD"
 # on NetBSD rcs is in the base set. others?
 DEPENDS+=		rcs>=5.7:../../devel/rcs
 .endif
-DEPENDS+= 		rx:../../devel/rx
-DEPENDS+=		sudo:../../security/sudo
-DEPENDS+=		tardy:../../wip/tardy
+DEPENDS+= 		rx>=1.5:../../devel/rx
+DEPENDS+=		sudo>=1.7.0:../../security/sudo
+DEPENDS+=		tardy>=1.17:../../wip/tardy
 .if ${OPSYS} != "NetBSD"
 # on NetBSD zlib is in the base set. others?
-DEPENDS+=		zlib:../../devel/zlib
+DEPENDS+=		zlib>=1.1.4:../../devel/zlib
 .endif
 
 .include "../../mk/bsd.pkg.mk"
