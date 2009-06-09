@@ -1,12 +1,8 @@
-$NetBSD: distinfo,v 1.1 2009/06/06 17:20:52 gduzan Exp $
+$NetBSD: distinfo,v 1.2 2009/06/09 08:57:48 gduzan Exp $
 
-SHA1 (kmymoney2-0.9.3.tar.bz2) = 88ebaf136569999f74d726efba4d0f00895f88a5
-RMD160 (kmymoney2-0.9.3.tar.bz2) = 2e9f3867c2c7dd7308876e89b6a1b1fd1f6a2494
-Size (kmymoney2-0.9.3.tar.bz2) = 7724798 bytes
 SHA1 (patch-aa) = 742f6b67c3f9de966f0441c5c5dd16fd8fcc28e3
 SHA1 (patch-ae) = 3466df88f68535549172e253ad24142ef1149360
 SHA1 (patch-af) = 9228789b4d601a22d77fe7b41e04fa08a068040c
 SHA1 (patch-ag) = a52dd21ff8c88b3729783d664094c1be00a454d4
 SHA1 (patch-ai) = bde45e75d7dc11c8d3939d13051f3bc901676fd1
 SHA1 (patch-aj) = 72e4e143b2ceeba9a90bd28d12d220ada2be58a6
-SHA1 (patch-ak) = bda1f5061478b994ad24bd5970c623a532446f09
