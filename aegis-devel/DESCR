@@ -1,0 +1,6 @@
+Meta-package consisting of all the tools necessary to
+develop and/or track development of Aegis.
+
+This package automates the process of setting up an infrastructure
+as described in chapter 10,  How to Become an Aegis Developer, of
+Aegis' Howto document.
