@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3476 2009/06/09 16:11:04 jihbed Exp $
+# $Id: Makefile,v 1.3477 2009/06/09 22:36:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1545,6 +1545,7 @@ SUBDIR+=	php-suhosin
 SUBDIR+=	picasm
 SUBDIR+=	picocom
 SUBDIR+=	picprog
+SUBDIR+=	pidgin-festival
 SUBDIR+=	pidgin-guifications
 SUBDIR+=	pidgin-rhythmbox
 SUBDIR+=	pike
