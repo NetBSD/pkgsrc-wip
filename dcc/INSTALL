@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2008/12/22 17:26:14 pebog Exp $
+# $NetBSD: INSTALL,v 1.2 2009/06/09 11:41:39 pebog Exp $
 #
 #	mostly taken from homedir/Makefile.in
 #
@@ -22,45 +22,40 @@ POST-INSTALL)
 	IDS=ids
 	MAP=map
 	MAPTXT=${MAP}.txt
-	WLIST=whitelist
 
 	SECRET1=$(${DD} if=${URND} count=1 2>&1 | ${CKSUM} | ${TR} '	 ' xy)
 	SECRET2=$(${DD} if=${URND} count=1 2>&1 | ${CKSUM} | ${TR} '	 ' xy)
 	#
 	#	assemble sed-commands
 	#
-	if [ -f ${DCC_HOME}/${WLIST} ]; then
-		CMD_S1="-e s/secret1/${SECRET1}/"
-		CMD_S2="-e s/secret2/${SECRET2}/"
-	else
-		CMD_LH="-e s/^127\.0\.0\.1/#&/"
-	fi
+	SED_CMD1="-e s/secret1/${SECRET1}/"
+	SED_CMD2="-e s/secret2/${SECRET2}/"
 
-	if [ -f ${DCC_HOME}/${WLIST} -a ! -f ${DCC_HOME}/${IDS} ]; then
+	if [ ! -f ${DCC_HOME}/${IDS} ]; then
 		#
 		#	replace secrets in ids
 		#
-		${SED} ${CMD_S1} ${CMD_S2} ${DCC_EGDIR}/${IDS} \
+		${SED} ${SED_CMD1} ${SED_CMD2} ${DCC_EGDIR}/${IDS} \
 			>${DCC_HOME}/${IDS}
 		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${IDS}
 		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${IDS}
 	fi
 
-	if [ ! -f ${DCC_HOME}/${MAPTXT} -a ! -f ${DCC_HOME}/${MAP} ]; then
+	if [ ! -f ${DCC_HOME}/${MAP} -a ! -f ${DCC_HOME}/${MAPTXT} ]; then
 		#
 		#	replace random secrets in MAPTXT and generate MAP
 		#
-		${SED} ${CMD_S1} ${CMD_LH} ${DCC_EGDIR}/${MAPTXT} |
+		${SED} ${SED_CMD1} ${DCC_EGDIR}/${MAPTXT} |
 			${CDCC} -qh${DCC_HOME} "new map; load -"
 		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${MAP}
 		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${MAP}
 		#
-		#	regenerate MAPTXT from MAP
+		#	generate MAPTXT from MAP
 		#
-		${CDCC} -qh${DCC_HOME} "file ${MAP}; info" >${DCC_HOME}/${MAPTXT}
+		${CDCC} -qh${DCC_HOME} "file ${MAP}; info" \
+			>${DCC_HOME}/${MAPTXT}
 		${CHMOD} ${DCC_MODE_PRIV} ${DCC_HOME}/${MAPTXT}
 		${CHOWN} ${DCC_USER}:${DCC_GROUP} ${DCC_HOME}/${MAPTXT}
 	fi
 	;;
 esac
-
