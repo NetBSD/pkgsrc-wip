@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/09 16:03:03 jihbed Exp $
+bin/minisat2
+include/Alg.h
+include/BasicHeap.h
+include/BoxedVec.h
+include/Heap.h
+include/Map.h
+include/Queue.h
+include/Solver.h
+include/SolverTypes.h
+include/Sort.h
+include/Vec.h
+share/doc/minisat2
