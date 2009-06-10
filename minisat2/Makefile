@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/09 16:03:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/10 15:30:20 jihbed Exp $
 #
 
 DISTNAME=	minisat2-070721
@@ -23,9 +23,9 @@ do-build:
 	cd ${WRKSRC}/core && ${GMAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/core/minisat ${DESTDIR}${PREFIX}/bin/minisat2
-	${INSTALL_DATA} ${WRKSRC}/core/*.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/mtl/*.h ${DESTDIR}${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/LICENSE  ${DESTDIR}${PREFIX}/share/doc/minisat2
+	${INSTALL_PROGRAM} ${WRKSRC}/core/minisat \
+		${DESTDIR}${PREFIX}/bin/minisat2
+	${INSTALL_DATA} ${WRKSRC}/LICENSE \
+		${DESTDIR}${PREFIX}/share/doc/minisat2
 
 .include "../../mk/bsd.pkg.mk"
