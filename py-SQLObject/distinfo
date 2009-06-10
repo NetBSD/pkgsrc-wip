@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:36 rillig Exp $
+$NetBSD: distinfo,v 1.3 2009/06/10 00:17:17 jihbed Exp $
 
-SHA1 (SQLObject-0.5.1.tar.gz) = 24ee3802d2c68df6cc10673102599eade287a895
-RMD160 (SQLObject-0.5.1.tar.gz) = 9af1a3fb29f403814dc82791ccaa9b638623a1e9
-Size (SQLObject-0.5.1.tar.gz) = 113061 bytes
+SHA1 (SQLObject-0.10.6.tar.gz) = b01a34bd8c7dcaad2c4c4d3c52dda08a2adfa285
+RMD160 (SQLObject-0.10.6.tar.gz) = 94045532fb4dcefa0e9be726f44f2bd2fb1a00c4
+Size (SQLObject-0.10.6.tar.gz) = 260416 bytes
