@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/08 09:41:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/10 12:47:12 obache Exp $
 bin/avi2swf
 bin/as3compile
 bin/font2swf
@@ -34,6 +34,5 @@ share/swftools/swfs/keyboard_viewer.swf
 share/swftools/swfs/simple_viewer.swf
 share/swftools/swfs/swft_loader.swf
 share/swftools/swfs/tessel_loader.swf
-@dirrm share/swftools/fonts
 @dirrm share/swftools/swfs
 @dirrm share/swftools
