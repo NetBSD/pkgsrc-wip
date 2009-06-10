@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/09 22:34:24 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/10 05:54:26 othyro Exp $
 #
 
 DISTNAME=	pidgin-festival-2.4
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pidgin-festival.sourceforge.net/
 COMMENT=	Pidgin plugin that interfaces with festival
 
+BUILD_DEPENDS+=		festival-[0-9]*:../../audio/festival
 WRKSRC=			${WRKDIR}/pidgin-festival-2.4
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++ fortran
@@ -17,6 +18,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ENV+=		FESTIVAL_VOICES_PATH=${DESTDIR}${PREFIX}/share/festival/lib/voices
 
 
 .include "../../x11/gtk2/buildlink3.mk"
