@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3477 2009/06/09 22:36:20 othyro Exp $
+# $Id: Makefile,v 1.3478 2009/06/11 11:07:36 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -984,6 +984,7 @@ SUBDIR+=	libgxim
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libipctdata
+SUBDIR+=	liblastfm
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmrss
