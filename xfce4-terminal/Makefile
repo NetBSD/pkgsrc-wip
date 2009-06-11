@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/21 13:06:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/06/11 08:10:32 thomasklausner Exp $
 
 .include "../../wip/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ XFCE4_VERSION=	0.2.6
 
 DISTNAME=	Terminal-${XFCE4_VERSION}
 PKGNAME=	xfce4-terminal-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Xfce terminal emulator
 

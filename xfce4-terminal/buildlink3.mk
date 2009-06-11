@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:43:54 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/06/11 08:10:32 thomasklausner Exp $
 
 BUILDLINK_TREE+=	xfce4-terminal
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-terminal
 XFCE4_TERMINAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-terminal+=	xfce4-terminal>=0.2.6
+BUILDLINK_ABI_DEPENDS.xfce4-terminal?=	xfce4-terminal>=0.2.6nb2
 BUILDLINK_PKGSRCDIR.xfce4-terminal?=	../../wip/xfce4-terminal
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2008/11/27 13:04:15 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/11 08:10:32 thomasklausner Exp $
 #
 
 DISTNAME=		evilvte-0.4.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.calno.com/evilvte/
 
