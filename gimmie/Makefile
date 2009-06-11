@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/03/12 11:15:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/11 17:53:23 jihbed Exp $
 #
 
 DISTNAME=	gimmie-0.2.8
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils python
 MASTER_SITES=	http://www.beatniksoftware.com/gimmie/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,15 +12,23 @@ COMMENT=	Creative panel replacement
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+USE_PKGLOCALEDIR= yes
 USE_DIRS=	gnome2-1.6 xdg-1.4
 USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake intltool msgfmt pkg-config
+USE_LANGUAGES=  c c++
+
 PY_PATCHPLIST=	yes
-USE_TOOLS+=	gmake intltool pkg-config
 
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsexy+=	libsexy>=0.1.8
+.include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnomecups+=	libgnomecups>=0.2.0
 .include "../../print/libgnomecups/buildlink3.mk"
+.include "../../sysutils/py-dbus/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-menus+=	gnome-menus>=2.18
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/py-gnome-menus/buildlink3.mk"
