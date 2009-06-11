@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3478 2009/06/11 11:07:36 thomasklausner Exp $
+# $Id: Makefile,v 1.3479 2009/06/11 12:14:58 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1448,7 +1448,6 @@ SUBDIR+=	p5-PDF-Table
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
-SUBDIR+=	p5-Parallel-ForkManager
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Picasa
 SUBDIR+=	p5-Plucene
