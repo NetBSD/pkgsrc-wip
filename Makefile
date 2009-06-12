@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3479 2009/06/11 12:14:58 absd Exp $
+# $Id: Makefile,v 1.3480 2009/06/12 21:15:04 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -870,6 +870,7 @@ SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
 SUBDIR+=	json
+SUBDIR+=	json-c
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
 SUBDIR+=	just
