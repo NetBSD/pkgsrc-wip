@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/03 11:04:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/13 12:53:41 leot1990 Exp $
 #
 
 DISTNAME=	dwm-5.5
@@ -9,6 +9,8 @@ MASTER_SITES=	http://code.suckless.org/dl/dwm/
 MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://dwm.suckless.org/
 COMMENT=	Dynamic window manager
+
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
