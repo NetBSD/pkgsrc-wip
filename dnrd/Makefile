@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/19 20:18:52 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/13 17:12:34 gschwarz Exp $
 
 DISTNAME=	dnrd-2.20.3
 CATEGORIES=	net
@@ -29,8 +29,8 @@ LIBS+=		-lresolv	# for inet_aton()
 INSTALLATION_DIRS=	sbin share/doc/dnrd
 
 post-install:
-		${RM} -f ${PREFIX}/share/doc/dnrd/README-cygwin \
-			 ${PREFIX}/share/doc/dnrd/NEWS
+		${RM} -f ${DESTDIR}${PREFIX}/share/doc/dnrd/README-cygwin \
+			 ${DESTDIR}${PREFIX}/share/doc/dnrd/NEWS
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
