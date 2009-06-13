@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/23 20:06:56 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/13 17:03:01 gschwarz Exp $
 
 DISTNAME=	gtk-imonc-0.6.4.1
 CATEGORIES=	net
@@ -11,6 +11,7 @@ COMMENT=	GTK version of the fli4l monitoring tool
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
+USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
