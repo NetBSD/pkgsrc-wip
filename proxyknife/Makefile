@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/19 21:11:48 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/13 17:53:45 gschwarz Exp $
 
 DISTNAME=	proxyknife-1.7
 CATEGORIES=	www
@@ -18,7 +18,7 @@ USE_FEATURES+=	snprintf
 
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/proxyknife
 
-CONF_FILES=	${PREFIX}/share/doc/proxyknife/example/proxyknife.conf.example ${PKG_SYSCONFDIR}/proxyknife.conf
+CONF_FILES=	${DESTDIR}${PREFIX}/share/doc/proxyknife/example/proxyknife.conf.example ${DESTDIR}${PKG_SYSCONFDIR}/proxyknife.conf
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
