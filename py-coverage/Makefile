@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/23 21:27:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/15 10:28:55 jihbed Exp $
 #
 
 DISTNAME=	coverage-2.85
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://bitbucket.org/ned/coveragepy/downloads/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://nedbatchelder.com/code/modules/coverage.html/
+HOMEPAGE=	http://nedbatchelder.com/code/coverage/
 COMMENT=	Python module that measures and testing code coverage for Python
 #LICENSE=	modified-bsd
 
