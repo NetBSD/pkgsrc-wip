@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3481 2009/06/12 21:48:07 jihbed Exp $
+# $Id: Makefile,v 1.3482 2009/06/15 23:45:08 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,7 +291,6 @@ SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
-SUBDIR+=	dmenu
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
@@ -315,7 +314,6 @@ SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
 SUBDIR+=	dwepcrack
-SUBDIR+=	dwm
 SUBDIR+=	dxmake
 SUBDIR+=	dzen
 SUBDIR+=	e00pg
