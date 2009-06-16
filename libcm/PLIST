@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/29 17:08:50 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/16 22:08:03 jihbed Exp $
 include/cm/clip.h
 include/cm/cm.h
 include/cm/cube.h
@@ -23,4 +23,3 @@ include/cm/ws.h
 include/cm/wsint.h
 lib/libcm.la
 lib/pkgconfig/cm.pc
-@dirrm include/cm
