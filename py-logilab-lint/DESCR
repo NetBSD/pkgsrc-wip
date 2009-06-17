@@ -1,0 +1,3 @@
+Pylint is a python tool that checks if a module satisfies a coding standard.
+Pylint can be seen as another PyChecker since nearly all tests you can do with
+PyChecker can also be done with Pylint.
