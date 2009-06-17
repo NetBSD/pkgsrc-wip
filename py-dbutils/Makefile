@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/18 23:35:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/18 00:08:04 jihbed Exp $
 #
 
 DISTNAME=	DBUtils-1.0
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-dbutils-1.0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.webwareforpython.org/downloads/DBUtils/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.webwareforpython.org/DBUtils
 COMMENT=	Database connections for multi-threaded environments
 

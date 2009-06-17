@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/25 23:08:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/18 00:00:43 jihbed Exp $
 #
 
 DISTNAME=	s3funnel-0.5.2
 CATEGORIES=	devel python
 MASTER_SITES=	http://s3funnel.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/s3funnel/
 COMMENT=	Multithreaded tool for performing operations on Amazon S3
 

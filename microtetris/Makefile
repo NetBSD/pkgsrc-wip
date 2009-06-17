@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 20:45:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/18 00:28:17 jihbed Exp $
 #
 
 DISTNAME=	microtetris
@@ -7,7 +7,7 @@ CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=microtetris/}
 EXTRACT_SUFX=	.py
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://microtetris.sourceforge.net/
 COMMENT=	MicroTetris is a simple and compact popular game Tetris
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/25 23:34:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/18 00:19:04 jihbed Exp $
 #
 
 DISTNAME=	ConvertToMP3_0.6.3
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://converttomp3.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/converttomp3/
 COMMENT=	Convert music files to MP3, preserving some tag information
 

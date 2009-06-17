@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/03 22:21:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/18 00:02:28 jihbed Exp $
 #
 
 DISTNAME=	pytrash-0.2
@@ -6,7 +6,7 @@ PKGNAME=        ${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pytrash.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pytrash/
 COMMENT=	The command line tool for the GNOME Trash
 
