@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:19:45 jihbed Exp $
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/PKG-INFO
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/SOURCES.txt
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/dependency_links.txt
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/entry_points.txt
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/not-zip-safe
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/requires.txt
+lib/python2.5/site-packages/nose_scenario-${PKGVERSION}-py2.5.egg-info/top_level.txt
+lib/python2.5/site-packages/nose_scenario/__init__.py
+lib/python2.5/site-packages/nose_scenario/__init__.pyc
+lib/python2.5/site-packages/nose_scenario/__init__.pyo
+lib/python2.5/site-packages/nose_scenario/adapt.py
+lib/python2.5/site-packages/nose_scenario/adapt.pyc
+lib/python2.5/site-packages/nose_scenario/adapt.pyo
+lib/python2.5/site-packages/nose_scenario/nose_plugin.py
+lib/python2.5/site-packages/nose_scenario/nose_plugin.pyc
+lib/python2.5/site-packages/nose_scenario/nose_plugin.pyo
