@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:39:46 jihbed Exp $
+
+SHA1 (fs-0.1.0.tar.gz) = c2809c13e6813c88f6f3eac985cb8a17bcd8af2d
+RMD160 (fs-0.1.0.tar.gz) = 47588d4bf3257a48803987f0b9c4b97a78970667
+Size (fs-0.1.0.tar.gz) = 22271 bytes
