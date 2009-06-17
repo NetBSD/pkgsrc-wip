@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/11 22:55:20 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/17 17:33:19 drochner Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
@@ -24,6 +24,7 @@ PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"

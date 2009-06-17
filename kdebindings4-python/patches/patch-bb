@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2009/06/17 17:33:20 drochner Exp $
+
+--- python/pykde4/sip/dnssd/servicebase.sip.orig	2009-06-17 17:02:04.000000000 +0200
++++ python/pykde4/sip/dnssd/servicebase.sip
+@@ -27,7 +27,7 @@ class ServiceBase : KShared
+ %End
+ 
+ public:
+-    typedef KSharedPtr<DNSSD::ServiceBase> Ptr;
++//    typedef KSharedPtr<DNSSD::ServiceBase> Ptr;
+ 
+     explicit                ServiceBase (const QString& name = QString(), const QString& type = QString(), const QString& domain = QString(), const QString& host = QString(), unsigned short port = 0);
+     QString                 serviceName () const;

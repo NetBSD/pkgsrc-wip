@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1 2009/06/17 17:33:20 drochner Exp $
+
+--- python/pykde4/sip/phonon/backendcapabilities.sip.orig	2009-06-17 17:12:31.000000000 +0200
++++ python/pykde4/sip/phonon/backendcapabilities.sip
+@@ -26,7 +26,7 @@ namespace Phonon
+ {
+ namespace BackendCapabilities
+ {
+-class Notifier : QObject /NoDefaultCtors,NoQMetaObject/
++class Notifier : QObject /NoDefaultCtors,PyQt4NoQMetaObject/
+ {
+ 
+ signals:

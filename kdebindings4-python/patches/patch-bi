@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1 2009/06/17 17:33:20 drochner Exp $
+
+--- python/pykde4/sip/kparts/factory.sip.orig	2009-06-17 17:53:39.000000000 +0200
++++ python/pykde4/sip/kparts/factory.sip
+@@ -37,7 +37,7 @@ public:
+ 
+ protected:
+     virtual KParts::Part*   createPartObject (QWidget* parentWidget = 0, QObject* parent /Transfer/ = 0, const char* classname = "KParts::Part", const QStringList& args = QStringList()) = 0;
+-    virtual QObject*        createObject (QObject* parent /Transfer/ = 0, const char* classname = "QObject", const QStringList& args = QStringList());
++//    virtual QObject*        createObject (QObject* parent /Transfer/ = 0, const char* classname = "QObject", const QStringList& args = QStringList());
+ };   // Factory
+ 
+ };   // KParts

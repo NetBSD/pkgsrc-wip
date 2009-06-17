@@ -1,0 +1,13 @@
+$NetBSD: patch-bh,v 1.1 2009/06/17 17:33:20 drochner Exp $
+
+--- python/pykde4/sip/plasma/abstractrunner.sip.orig	2009-06-17 17:13:32.000000000 +0200
++++ python/pykde4/sip/plasma/abstractrunner.sip
+@@ -129,7 +129,7 @@ protected:
+     void                    setHasRunOptions (bool hasRunOptions);
+     void                    setSpeed (Plasma::AbstractRunner::Speed newSpeed);
+     void                    setPriority (Plasma::AbstractRunner::Priority newPriority);
+-    KService::List          serviceQuery (const QString& serviceType, const QString& constraint = QString()) const;
++//    KService::List          serviceQuery (const QString& serviceType, const QString& constraint = QString()) const;
+     virtual QList<QAction*>  actionsForMatch (const Plasma::QueryMatch& match);
+     QAction*                addAction (const QString& id, const QIcon& icon, const QString& text);
+     void                    addAction (const QString& id, QAction* action);
