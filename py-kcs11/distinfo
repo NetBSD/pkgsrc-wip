@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:22:44 jihbed Exp $
+
+SHA1 (PyKCS11-1.2.1.tar.gz) = fd458228fa69e696b26f2ff0a6ad8b7a441a54bf
+RMD160 (PyKCS11-1.2.1.tar.gz) = e3969da9d5dbb7071c9780850678e8ca43247f9e
+Size (PyKCS11-1.2.1.tar.gz) = 137252 bytes

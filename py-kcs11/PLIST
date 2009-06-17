@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:22:44 jihbed Exp $
+${PYSITELIB}/PyKCS11/LowLevel.py
+${PYSITELIB}/PyKCS11/LowLevel.pyc
+${PYSITELIB}/PyKCS11/LowLevel.pyo
+${PYSITELIB}/PyKCS11/_LowLevel.so
+${PYSITELIB}/PyKCS11/__init__.py
+${PYSITELIB}/PyKCS11/__init__.pyc
+${PYSITELIB}/PyKCS11/__init__.pyo
+@dirrm ${PYSITELIB}/PyKCS11
