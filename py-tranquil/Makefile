@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/24 22:03:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/17 23:53:51 jihbed Exp $
 #
 
 DISTNAME=	Tranquil-0.2dev
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-tranquil-0.2
 CATEGORIES=	databases
 MASTER_SITES=	http://tranquil.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/tranquil/
 COMMENT=	Integrating SQLAlchemy with Django
 

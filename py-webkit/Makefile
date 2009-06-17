@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/30 10:17:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/17 23:55:21 jihbed Exp $
 #
 
 DISTNAME=	pywebkitgtk-1.1.5
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://pywebkitgtk.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pywebkitgtk/
 COMMENT=	Python bindings for the WebKit GTK+ port
 LICENSE=	gnu-lgpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/18 23:39:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/17 23:47:22 jihbed Exp $
 #
 
 CHERRYVERS=	3.1.2
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-cherry-${CHERRYVERS}
 CATEGORIES=	www python
 MASTER_SITES=	http://download.cherrypy.org/cherrypy/${CHERRYVERS}/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.cherrypy.org/
 COMMENT=	CherryPy is a pythonic, object-oriented HTTP framework
 

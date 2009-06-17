@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/02 00:06:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/17 23:49:58 jihbed Exp $
 #
 
 DISTNAME=	openxmllib-1.0.4
@@ -6,7 +6,7 @@ PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://openxmllib.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/openxmllib/
 COMMENT=	Provides resources to handle OpenXML documents from Python
 
