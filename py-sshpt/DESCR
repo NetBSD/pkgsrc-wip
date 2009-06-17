@@ -1,0 +1,6 @@
+The SSH Power Tool (sshpt) enables you to execute commands and upload files
+to many servers simultaneously via SSH without using pre-shared keys.
+Uploaded files and commands can be executed directly or via sudo.
+Connection and command execution results are output in standard CSV
+format for easy importing into spreadsheets, databases,
+or data mining applications.
