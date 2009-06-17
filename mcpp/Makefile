@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/08/03 13:30:13 jkryl Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/17 12:53:22 marko_schuetz Exp $
 #
 
-DISTNAME=	mcpp-2.7.1
+DISTNAME=	mcpp-2.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcpp/}
 
