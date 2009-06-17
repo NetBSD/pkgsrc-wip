@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:41:41 jihbed Exp $
+bin/cspchecker
+share/doc/README
+@exec ${MKDIR} %D/share/doc/cspchecker
+@dirrm share/doc/cspchecker
