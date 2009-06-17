@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:13:03 jihbed Exp $
+
+SHA1 (py-1.0.0b1.tar.gz) = 2b2d44e3027203a237e699d89be8bcf513c043c2
+RMD160 (py-1.0.0b1.tar.gz) = 059ba0b1744fbcc3ab18e8eaaac1412c86638f25
+Size (py-1.0.0b1.tar.gz) = 427462 bytes
