@@ -1,0 +1,13 @@
+The aim of the  SympyCore  project is to seek out new high Performance
+solutions to represent and manipulate symbolic expressions in the Python
+programming language, and to try out new symbolic models to achive fundamentally
+consistent and sufficiently general symbolic model that would be easy to extend
+to a Computer Algebra System (CAS).
+
+See SympyCore Demo and SympyCore User's Guide for examples. Various performance
+improvements are reported in Performance History and SympyCore Benchmark sites.
+
+Sympycore is inspired by many attempts to implement CAS for Python and it is
+created to fix SymPy performance and robustness issues. Sympycore does not yet
+have nearly as many features as SymPy. Our goal is to work on in direction of
+merging the efforts with the SymPy project in the future. 
