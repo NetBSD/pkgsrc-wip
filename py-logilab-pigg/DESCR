@@ -1,0 +1,5 @@
+Pigg provides a set of base classes and mechanisms to build
+a graphical application using the MVC design pattern.
+
+Pigg also provides a nice way to generate form dialogs 'on-the-fly', just
+by defining a simple schema
