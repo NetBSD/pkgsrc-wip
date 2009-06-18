@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/02/13 12:58:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/18 08:00:50 tnn2 Exp $
 #
 
-DISTNAME=	xulrunner-1.9.0.6-source
+DISTNAME=	xulrunner-1.9.0.11-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	www devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/1.9.0.6/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/1.9.0.11/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -76,6 +76,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "../../archivers/bzip2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.5.9
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
