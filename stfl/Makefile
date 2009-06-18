@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/04 09:36:42 smoppy Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/18 10:02:03 smoppy Exp $
 
 DISTNAME=	stfl-0.19
 CATEGORIES=	devel
@@ -16,6 +16,14 @@ USE_TOOLS+=	gmake perl
 USE_NCURSES=	yes
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+
+# NetBSD iconv implementation doesn't support
+# the wchar_t encoding (upon stfl relies).
+.if ${OPSYS} == "NetBSD"
+.include "../../converters/libiconv/buildlink3.mk"
+.endif
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
