@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/27 16:25:31 ishit Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/18 12:18:10 thomasklausner Exp $
 #
 
 DISTNAME=	musca-0.9.22
-CATEGORIES=	wip x11
+CATEGORIES=	x11
 MASTER_SITES=	http://aerosuidae.net/
 EXTRACT_SUFX=	.tgz
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://aerosuidae.net/musca/
 COMMENT=	Simple dynamic window manager for X
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 NO_CONFIGURE=	yes
 
