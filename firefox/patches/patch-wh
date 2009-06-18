@@ -1,0 +1,13 @@
+$NetBSD: patch-wh,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
+
+--- media/libsydneyaudio/src/Makefile.in.orig	2009-06-16 00:42:52.000000000 +0200
++++ media/libsydneyaudio/src/Makefile.in
+@@ -65,7 +65,7 @@ CSRCS		= \
+ OS_LIBS += -framework CoreAudio -framework AudioToolbox -framework AudioUnit -framework Carbon
+ endif
+ 
+-ifeq ($(OS_ARCH),SunOS)
++ifneq (,$(filter SunOS NetBSD,$(OS_ARCH)))
+ CSRCS		= \
+ 		sydney_audio_sunaudio.c \
+ 		$(NULL)

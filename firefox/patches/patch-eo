@@ -1,0 +1,17 @@
+$NetBSD: patch-eo,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
+
+This is a hack for:
+cc1plus: warnings being treated as errors
+../../../dist/include/xpcom/nsVoidArray.h: In member function 'void nsAutoVoidArray::ResetToAutoBuffer()':
+../../../dist/include/xpcom/nsVoidArray.h:193: warning: cast from 'char*' to 'nsVoidArray::Impl*' increases required alignment of target type
+
+... which happens on PowerPC and possibly other architectures.
+
+--- netwerk/cookie/src/Makefile.in.orig	2009-06-16 00:42:54.000000000 +0200
++++ netwerk/cookie/src/Makefile.in
+@@ -60,4 +60,4 @@ CPPSRCS		= \
+ 
+ include $(topsrcdir)/config/rules.mk
+ 
+-DEFINES += -DIMPL_NS_NET
++#CXXFLAGS += $(WARNINGS_AS_ERRORS)
