@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/06/18 13:56:20 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2009/06/18 14:55:10 tnn2 Exp $
 #
 
 DISTNAME=	firefox-3.5rc1-source
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
+CHECK_SHLIBS_SUPPORTED=	no # XXX
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	js/src/build/autoconf/config.guess
@@ -51,14 +52,6 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/js/src && autoconf
 	cd ${WRKSRC}/nsprpub && autoconf
-
-# Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
-#.PHONY: create-rm-wrapper
-#pre-configure: create-rm-wrapper
-#create-rm-wrapper:
-#	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
-#	  ${WRAPPER_DIR}/bin/rm
-#	chmod +x ${WRAPPER_DIR}/bin/rm
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
