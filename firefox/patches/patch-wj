@@ -1,0 +1,13 @@
+$NetBSD: patch-wj,v 1.1 2009/06/19 07:41:26 tnn2 Exp $
+
+--- js/src/configure.in.orig	2009-06-16 00:42:43.000000000 +0200
++++ js/src/configure.in
+@@ -2504,7 +2504,7 @@ darwin*)
+ solaris*)
+     AC_DEFINE(AVMPLUS_UNIX)
+     ;;
+-freebsd*|kfreebsd*)
++freebsd*|kfreebsd*|netbsd*)
+     AC_DEFINE(AVMPLUS_UNIX)
+     ;;
+ *cygwin*|*mingw*|*mks*|*msvc*|*wince)
