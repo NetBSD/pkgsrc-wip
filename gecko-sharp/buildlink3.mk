@@ -1,21 +1,23 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/03/23 22:31:06 jihbed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/06/19 22:25:46 jihbed Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GECKO_SHARP_2.0_BUILDLINK3_MK:=	${GECKO_SHARP_2.0_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gecko-sharp-2.0
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gecko-sharp-2.0
-.endif
+.if !defined(GECKO_SHARP_2.0_BUILDLINK3_MK)
+GECKO_SHARP_2.0_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngecko-sharp-2.0}
-BUILDLINK_PACKAGES+=	gecko-sharp-2.0
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gecko-sharp-2.0
-
-.if ${GECKO_SHARP_2.0_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.gecko-sharp-2.0+=		gecko-sharp>=2.0
+BUILDLINK_API_DEPENDS.gecko-sharp-2.0+=	gecko-sharp-2.0>=0.13
 BUILDLINK_PKGSRCDIR.gecko-sharp-2.0?=	../../wip/gecko-sharp
+
+# XXX
+# XXX Uncomment and keep only the buildlink3 lines below which are directly
+# XXX needed for dependencies to compile, link, and run.  If this package
+# XXX provides a wrappered API or otherwise does not expose the APIs of the
+# XXX buildlink3 lines below to dependencies, remove them.
+# XXX
+#.include "../../devel/glib2/buildlink3.mk"
+#.include "../../lang/mono/buildlink3.mk"
+#.include "../../x11/gtk2/buildlink3.mk"
+#.include "../../x11/gtk-sharp/buildlink3.mk"
 .endif	# GECKO_SHARP_2.0_BUILDLINK3_MK
 
-.include "../../x11/gtk-sharp/buildlink3.mk"
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gecko-sharp-2.0
