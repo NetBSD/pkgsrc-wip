@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/10 23:58:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/19 22:13:00 jihbed Exp $
 #
 
 DISTNAME=	gfa-0.4.1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gfa/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gfa.sourceforge.net/
 COMMENT=	Gfa a GTK+ fast address
 
