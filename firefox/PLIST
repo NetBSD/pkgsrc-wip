@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/19 12:44:24 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/19 22:25:13 tnn2 Exp $
 bin/firefox35
 include/firefox35/stable/base64.h
 include/firefox35/stable/blapit.h
@@ -678,7 +678,7 @@ lib/firefox35/icons/mozicon50.xpm
 lib/firefox35/icons/updater.png
 lib/firefox35/libfreebl3.chk
 lib/firefox35/libfreebl3.so
-${PLIST.mozilla-jemalloc}lib/firefox35/libjemalloc.so
+${PLIST.jemalloc}lib/firefox35/libjemalloc.so
 lib/firefox35/libmozjs.so
 lib/firefox35/libnspr4.so
 lib/firefox35/libnss3.so
@@ -706,6 +706,7 @@ lib/firefox35/modules/debug.js
 lib/firefox35/modules/distribution.js
 lib/firefox35/modules/utils.js
 lib/firefox35/mozilla-xremote-client
+${PLIST.branding}lib/firefox35/old-homepage-default.properties
 lib/firefox35/platform.ini
 lib/firefox35/plugins/libnullplugin.so
 lib/firefox35/removed-files
