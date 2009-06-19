@@ -1,0 +1,9 @@
+Making a new operating system drive us to conceive a new programmation language
+Lisaac.This language based on prototype object is strongly inspired from self
+language.More than the advantages of self, Lisaac give protection of
+comunication mecanism and operating system tools.
+
+Using prototype and dynamic inheritance is fully adapted to the conception
+of operating system. First tests learn us, that Lisaac compiler is able to
+give the same performance than C compiler. Lisaac inherit of Self's semantic
+and of the Eiffel's static typing.
