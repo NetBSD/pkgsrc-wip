@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/08 19:10:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/19 10:31:52 jihbed Exp $
 #
 
 DISTNAME=	IronPython-1.0.1-Src
@@ -30,7 +30,6 @@ INSTALLATION_DIRS+=	bin lib/ironpython
 
 post-extract:
 	${CP} ${FILESDIR}/ipy.sh ${WRKSRC}
-	${CP} ${FILESDIR}/ipyw.sh ${WRKSRC}
 
 pre-build:
 	${MKDIR} ${WRKSRC}/Src/IronPythonTest/bin
@@ -39,10 +38,8 @@ do-build:
 	cd ${WRKSRC}/Src && ${GMAKE}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ipy.sh ${DESTDIR}${PREFIX}/bin/ipy
-	${CHMOD} +x  ${DESTDIR}${PREFIX}/bin/ipy
-	${INSTALL_SCRIPT} ${WRKSRC}/ipyw.sh ${DESTDIR}${PREFIX}/bin/ipyw
-	${CHMOD} +x  ${DESTDIR}${PREFIX}/bin/ipyw
+	${INSTALL_SCRIPT} ${WRKSRC}/ipy.sh ${DESTDIR}${PREFIX}/bin/ironpython
+	${CHMOD} +x  ${DESTDIR}${PREFIX}/bin/ironpython
 	${INSTALL_DATA} ${WRKSRC}/ipy.exe ${DESTDIR}${PREFIX}/lib/ironpython
 	${INSTALL_DATA} ${WRKSRC}/ipyw.exe ${DESTDIR}${PREFIX}/lib/ironpython
 	${INSTALL_LIB}	${WRKSRC}/IronMath.dll ${DESTDIR}${PREFIX}/lib/ironpython
