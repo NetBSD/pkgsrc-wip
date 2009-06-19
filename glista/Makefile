@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/17 10:30:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/19 22:06:04 jihbed Exp $
 #
 
 DISTNAME=	glista-0.4
@@ -15,11 +15,14 @@ USE_DIRS+= 	xdg-1.4
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
+CONFIGURE_ARGS+=	--disable-linkify-urls
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 CONFIGURE_ARGS+=		--with-gtkspell
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
