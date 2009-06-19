@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/06/19 22:06:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/19 22:07:27 jihbed Exp $
 #
 
 DISTNAME=	glista-0.4
 CATEGORIES=	time gnome
 MASTER_SITES=	http://glista.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://prematureoptimization.org/glista/
 COMMENT=	Simple task list management utility
 
