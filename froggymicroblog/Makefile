@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/18 00:37:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/19 23:47:12 jihbed Exp $
 #
 
 DISTNAME=	frogmicroblog-0.1.2.1
 CATEGORIES=	www
 MASTER_SITES=	http://froggymicroblog.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/froggymicroblog/
 COMMENT=	C\# twitter identi.ca client
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=		user-destdir
 
