@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/06/18 14:55:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/19 12:44:24 tnn2 Exp $
 #
 
 DISTNAME=	firefox-3.5rc1-source
@@ -35,7 +35,7 @@ CONFIG_STATUS_OVERRIDE+=nsprpub/config.status
 CONFIGURE_ARGS+=	--enable-application=browser
 #CONFIGURE_ARGS+=	--with-libxul-sdk=/usr/pkg/lib/xulrunner-sdk
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
-CONFIGURE_ARGS+=	--disable-debug --enable-crypto
+CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
 CONFIGURE_ARGS+=	--disable-gnomevfs --disable-gnomeui
 CONFIGURE_ARGS+=	--disable-dbus --disable-javaxpcom
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--enable-system-cairo --enable-system-lcms
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
+CONFIGURE_ARGS+=	--disable-crashreporter
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=firefox35
 
@@ -56,6 +57,8 @@ pre-configure:
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+.include "options.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
