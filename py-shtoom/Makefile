@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/09/08 12:53:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/20 13:02:14 jihbed Exp $
 #
 
 DISTNAME=		shtoom-0.2
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://divmod.org/trac/wiki/ShtoomProject
 COMMENT=		Software VoIP telephony in Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		${PYPKGPREFIX}-twisted>=1.3.0:../../net/py-twisted
 
 PY_PATCHPLIST=		yes
@@ -17,7 +19,7 @@ PYDISTUTILSPKG=		yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/shtoom/ui/gnomeui/shtoom.glade \
-		${PREFIX}/${PYSITELIB}/shtoom/ui/gnomeui/shtoom.glade
+		${DESTDIR}${PREFIX}/${PYSITELIB}/shtoom/ui/gnomeui/shtoom.glade
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
