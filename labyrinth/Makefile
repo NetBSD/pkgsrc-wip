@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/24 22:04:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/20 12:18:58 jihbed Exp $
 #
 
 DISTNAME=	labyrinth_0.4.1
@@ -6,7 +6,7 @@ PKGNAME=	labyrinth-0.4.1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://labyrinth.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.gnome.org/~dscorgie/labyrinth.html
 COMMENT=	Labyrinth is a lightweight mind-mapping tool for GNOME
 
