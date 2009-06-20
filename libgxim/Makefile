@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/19 09:21:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/20 00:16:36 jihbed Exp $
 #
 
 DISTNAME=	libgxim-0.3.3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://libgxim.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libgxim/
 COMMENT=	GObject-based XIM protocol library
 
