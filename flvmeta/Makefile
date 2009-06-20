@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/05/10 09:42:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/20 00:13:23 jihbed Exp $
 #
 
 DISTNAME=	flvmeta-1.0.8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://flvmeta.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/flvmeta/
 COMMENT=	Metadata injector for FLV video files
 LICENSE=	gnu-gpl-v2
