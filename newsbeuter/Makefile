@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/24 11:50:49 emil_s Exp $
+# $NetBSD: Makefile,v 1.8 2009/06/21 15:56:38 smoppy Exp $
 
 DISTNAME=	newsbeuter-2.0
 CATEGORIES=	news
@@ -9,6 +9,13 @@ HOMEPAGE=	http://www.newsbeuter.org/downloads/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Makefile
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing distribution Makefile...
+SUBST_FILES.makefile=	${MAKE_FILE}
+SUBST_SED.makefile=	-e 's|$(INSTALL) doc|$(INSTALL) -m 644 doc|'
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl
