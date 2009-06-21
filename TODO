@@ -1,14 +1,14 @@
 Suggested package updates
 =========================
 
-	o amarok-2.1
+	o amarok-2.1.1
 	o argouml-0.24
-	o asymptote-1.76
+	o asymptote-1.77
 	o backintime-0.9.26
 	o bakery-2.6.3
 	o bsnes-0.046
 	o bub-n-bros-1.6
-	o cclive-0.4.2
+	o cclive-0.4.3
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.14
@@ -60,6 +60,7 @@ Suggested package updates
 	o moe-1.1
 	o mpgedit-0.73dev2
 	o mupen64-0.5
+	o nemo-0.2.4
 	o ocp-0.1.16
 	o opal-2.2.11
 	o openmpi-1.3.2
@@ -87,6 +88,7 @@ Suggested package updates
 	o spe-0.8.2a
 	o swftools-0.9.0
 	o sxemacs-22.1.10
+	o taglib-extras-0.1.4
 	o task-1.7.0
 	o tmw-0.0.29.1
 	o toppler-1.1.3
