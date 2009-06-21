@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/21 06:17:39 othyro Exp $
+
+SHA1 (gimp-high-pass-1.0/high-pass.scm) = 3704caee2ddf5077b2da43ae095e5600a1111ad2
+RMD160 (gimp-high-pass-1.0/high-pass.scm) = f743e2776f14dab53b91db1aea334762cc5bc065
+Size (gimp-high-pass-1.0/high-pass.scm) = 6348 bytes
