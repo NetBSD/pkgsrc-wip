@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/31 19:02:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/21 21:13:02 jihbed Exp $
 #
 
 DISTNAME=	gtg-0.1.1
 CATEGORIES=	editors python
 MASTER_SITES=	http://launchpad.net/gtg/trunk/0.1.1/+download/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@iyahoo.com
 HOMEPAGE=	http://gtg.fritalk.com/
 COMMENT=	GTG is a personal organizer for the GNOME
 LICENSE=	gnu-gpl-v3
