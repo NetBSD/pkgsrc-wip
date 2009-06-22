@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/01 20:02:32 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2009/06/22 14:37:27 jihbed Exp $
 
-SHA1 (homebank-4.0.3.tar.gz) = 6ac0dfebabacdca3f3dc4b9369b1ff5a6f2e1a03
-RMD160 (homebank-4.0.3.tar.gz) = e3101069dcafe59a93ff960e0150f139e3893821
-Size (homebank-4.0.3.tar.gz) = 2483792 bytes
+SHA1 (homebank-4.0.4.tar.gz) = b6eeea505806ca41b676f4b019489b70e2fc968c
+RMD160 (homebank-4.0.4.tar.gz) = fd4d54f6d7b3cfe4eea2e919fc34e9c467e45fe1
+Size (homebank-4.0.4.tar.gz) = 2605519 bytes
