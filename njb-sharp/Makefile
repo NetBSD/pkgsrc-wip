@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2009/04/27 23:36:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/22 10:51:29 jihbed Exp $
 #
 
 DISTNAME=	njb-sharp-0.3.0
 CATEGORIES=	audio
-MASTER_SITES=	http://download.banshee-project.org/njb-sharp/
+MASTER_SITES=	http://download.banshee-project.org/legacy/njb-sharp/
 
-MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://download.banshee-project.org/njb-sharp/
-COMMENT=	Sharp binding for libnjb
+MAINTAINER=	kamelderouiche@yahoo.com
+HOMEPAGE=	http://download.banshee-project.org/legacy/njb-sharp/
+COMMENT=	Mono C\# Bindings to libnjb
+#LICENSE=	LICENSE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

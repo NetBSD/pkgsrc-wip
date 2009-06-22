@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 23:48:46 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/06/22 10:51:29 jihbed Exp $
 
-SHA1 (njb-sharp-0.2.2.tar.gz) = 0dca8233fff3706658673788ab587056f1109718
-RMD160 (njb-sharp-0.2.2.tar.gz) = 59f08868503453267a367557195c4e0f885e9b86
-Size (njb-sharp-0.2.2.tar.gz) = 309885 bytes
+SHA1 (njb-sharp-0.3.0.tar.gz) = 0df37746af08de9100fef7ae646afbb2ef0b336c
+RMD160 (njb-sharp-0.3.0.tar.gz) = f5eaad708482dc0406715a7d6e24162c81f7961c
+Size (njb-sharp-0.3.0.tar.gz) = 317882 bytes
