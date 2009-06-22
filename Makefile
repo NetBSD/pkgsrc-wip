@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3486 2009/06/21 06:21:42 othyro Exp $
+# $Id: Makefile,v 1.3487 2009/06/22 02:50:36 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1915,6 +1915,7 @@ SUBDIR+=	softflowd
 SUBDIR+=	softhsm
 SUBDIR+=	songwrite
 SUBDIR+=	soundtracker
+SUBDIR+=	sox
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spandsp
