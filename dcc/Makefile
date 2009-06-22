@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/09 11:41:39 pebog Exp $
+# $NetBSD: Makefile,v 1.15 2009/06/22 17:40:47 pebog Exp $
 #
 #
 #	Request by the author:
@@ -10,7 +10,7 @@
 #	> you distribute. Updatedcc must work.
 #
 #
-DISTNAME=		dcc-1.3.106
+DISTNAME=		dcc-1.3.109
 #PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
