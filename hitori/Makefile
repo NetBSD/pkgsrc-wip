@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/09 00:16:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/22 14:06:47 jihbed Exp $
 #
 
 DISTNAME=	hitori-0.2.1
 CATEGORIES=	games
 MASTER_SITES=	http://tecnocode.co.uk/downloads/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://tecnocode.co.uk/projects/hitori/
 COMMENT=	Hitori is an application that allow to play the eponymous puzzle game
 
