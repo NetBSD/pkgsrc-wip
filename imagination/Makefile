@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/04/07 12:21:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/22 14:08:13 jihbed Exp $
 #
 
 DISTNAME=	imagination-1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ovh.dl.sourceforge.net/sourceforge/imagination/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://imagination.sourceforge.net/
 COMMENT=	Imagination a simple and lightweight DVD slideshow maker
 

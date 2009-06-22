@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/04/25 22:30:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/22 14:12:40 jihbed Exp $
 #
 
 DISTNAME=	liblastfm-sharp-0.1.09
 CATEGORIES=	audio
 MASTER_SITES=	http://lastfm-sharp.googlecode.com/files/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/lastfm-sharp/
 COMMENT=	DotNet/Mono interface to last.fm
 

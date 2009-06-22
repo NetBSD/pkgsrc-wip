@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/25 22:02:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/22 14:11:34 jihbed Exp $
 #
 
 DISTNAME=	taglib-sharp-2.0.3.2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://download.banshee-project.org/taglib-sharp/2.0.3.2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://developer.novell.com/wiki/index.php/TagLib_Sharp
 COMMENT=	Multimedia metadata reading/writing library for popular formats
 
