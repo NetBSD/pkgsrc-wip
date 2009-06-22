@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2009/06/22 14:37:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/23 09:25:50 jihbed Exp $
 #
 
 DISTNAME=	homebank-4.0.4
 CATEGORIES=	finance
 MASTER_SITES=	http://homebank.free.fr/public/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://homebank.free.fr/
 COMMENT=	HomeBank is to manage your personal accounts at home
 LICENSE=	gnu-gpl-v2

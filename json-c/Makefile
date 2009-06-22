@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/12 21:12:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/22 23:53:30 jihbed Exp $
 #
 
 DISTNAME=	json-c-0.8
 CATEGORIES=	textproc
 MASTER_SITES=	http://oss.metaparadigm.com/json-c/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://json.org/
 COMMENT=	JSON (Javascript Object Notation) implementation in C
 #LICENSE=	LICENSE

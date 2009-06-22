@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/15 13:55:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/23 09:31:55 jihbed Exp $
 #
 
 DISTNAME=	pidgin-rhythmbox-2.0
 CATEGORIES=	chat
 MASTER_SITES=	http://jon.oberheide.org/projects/pidgin-rhythmbox/downloads/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://jon.oberheide.org/projects/pidgin-rhythmbox/
 COMMENT=	Plugin for pidgin to support Rhythmbox
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/11 12:50:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/23 09:18:51 jihbed Exp $
 #
 
 DISTNAME=	libiptcdata-1.0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://libiptcdata.sourceforge.net/
 COMMENT=	Library to parse IPTC metadata
 
