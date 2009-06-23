@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/03/22 11:09:56 smoppy Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/23 14:24:21 smoppy Exp $
 
-DISTNAME=	chems-0x03_1
+DISTNAME=	chems-0x04
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chems/}
 EXTRACT_SUFX=	.tar.bz2

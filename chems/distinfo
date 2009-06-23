@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/13 06:37:44 smoppy Exp $
+$NetBSD: distinfo,v 1.2 2009/06/23 14:24:21 smoppy Exp $
 
-SHA1 (chems-0x03_1.tar.bz2) = d027c86caf9f763bea69b68ea8642ab3dfb628db
-RMD160 (chems-0x03_1.tar.bz2) = aebe3ea9c7421107e1ea1140a4ab3b3fece320ae
-Size (chems-0x03_1.tar.bz2) = 77027 bytes
+SHA1 (chems-0x04.tar.bz2) = 8391d1bfb5e22b495f6fd5b7a665a68fef8530e5
+RMD160 (chems-0x04.tar.bz2) = 37247469d6ae6198ab588ce4adc1e861825b2c1c
+Size (chems-0x04.tar.bz2) = 321126 bytes
