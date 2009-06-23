@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/05/19 09:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/23 14:26:30 athaba Exp $
 #
 
-DISTNAME=		tor-0.2.1.14-rc
+DISTNAME=		tor-0.2.1.16-rc
 PKGNAME=		${DISTNAME:S/-rc//}
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
@@ -51,6 +51,7 @@ CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample \
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
 
+INSTALLATION_DIRS+=	share/examples/tor
 CHECK_PORTABILITY_SKIP+=contrib/*
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
@@ -58,7 +59,6 @@ CFLAGS+=		-c99
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tor
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
 		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
