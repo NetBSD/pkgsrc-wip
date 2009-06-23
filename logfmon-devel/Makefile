@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/04/03 22:32:33 smoppy Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/23 14:31:39 smoppy Exp $
 #
 
-PKGNAME=	logfmon-1.0.1
 DISTNAME=	logfmon
 CATEGORIES=	sysutils
 
