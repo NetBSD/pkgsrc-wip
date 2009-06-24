@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/17 13:48:03 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/24 08:06:41 yhardy Exp $
 #
 
 DISTNAME=	xine-plugin-1.0.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xinehq.de/
 COMMENT=	Plugin for www/firefox for using multimedia/xine-lib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
