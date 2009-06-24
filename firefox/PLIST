@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/19 22:25:13 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/24 20:59:14 htepper Exp $
 bin/firefox35
 include/firefox35/stable/base64.h
 include/firefox35/stable/blapit.h
@@ -44,7 +44,7 @@ include/firefox35/stable/md/_irix64.cfg
 include/firefox35/stable/md/_linux.cfg
 include/firefox35/stable/md/_ncr.cfg
 include/firefox35/stable/md/_nec.cfg
-include/firefox35/stable/md/_${LOWER_OPSYS}.cfg
+include/firefox35/stable/md/_netbsd.cfg
 include/firefox35/stable/md/_nextstep.cfg
 include/firefox35/stable/md/_nto.cfg
 include/firefox35/stable/md/_openbsd.cfg

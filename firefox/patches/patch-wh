@@ -1,8 +1,8 @@
-$NetBSD: patch-wh,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
+$NetBSD: patch-wh,v 1.2 2009/06/24 20:59:15 htepper Exp $
 
---- media/libsydneyaudio/src/Makefile.in.orig	2009-06-16 00:42:52.000000000 +0200
+--- media/libsydneyaudio/src/Makefile.in.orig
 +++ media/libsydneyaudio/src/Makefile.in
-@@ -65,7 +65,7 @@ CSRCS		= \
+@@ -65,12 +65,18 @@ CSRCS		= \
  OS_LIBS += -framework CoreAudio -framework AudioToolbox -framework AudioUnit -framework Carbon
  endif
  
@@ -11,3 +11,14 @@ $NetBSD: patch-wh,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
  CSRCS		= \
  		sydney_audio_sunaudio.c \
  		$(NULL)
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++CSRCS		= \
++		sydney_audio_oss.c \
++		$(NULL)
++endif
++
+ ifeq ($(OS_ARCH),WINNT)
+ OS_LIBS += winmm.lib
+ endif

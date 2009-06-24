@@ -1,13 +1,31 @@
-$NetBSD: patch-wj,v 1.1 2009/06/19 07:41:26 tnn2 Exp $
+$NetBSD: patch-wj,v 1.2 2009/06/24 20:59:15 htepper Exp $
 
---- js/src/configure.in.orig	2009-06-16 00:42:43.000000000 +0200
-+++ js/src/configure.in
+--- js/src/configure.in.orig	2009-06-16 01:42:43 +0300
++++ js/src/configure.in	2009-06-23 08:05:07 +0300
+@@ -1693,7 +1693,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-freebsd*)
++*-freebsd*|*-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
 @@ -2504,7 +2504,7 @@ darwin*)
  solaris*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
 -freebsd*|kfreebsd*)
-+freebsd*|kfreebsd*|netbsd*)
++freebsd*|kfreebsd*|netbsd*|dragonfly*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
  *cygwin*|*mingw*|*mks*|*msvc*|*wince)
+@@ -4185,7 +4185,7 @@ if test "$MOZ_MEMORY"; then
+   darwin*)
+     AC_DEFINE(MOZ_MEMORY_DARWIN)
+     ;;
+-  *freebsd*)
++  *freebsd*|dragonfly*)
+     AC_DEFINE(MOZ_MEMORY_BSD)
+     ;;
+   *linux*)

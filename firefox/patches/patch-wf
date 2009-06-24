@@ -1,4 +1,4 @@
-$NetBSD: patch-wf,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
+$NetBSD: patch-wf,v 1.2 2009/06/24 20:59:15 htepper Exp $
 
 --- media/liboggz/include/oggz/oggz_off_t_generated.h.orig	2009-06-16 00:42:52.000000000 +0200
 +++ media/liboggz/include/oggz/oggz_off_t_generated.h
@@ -7,7 +7,7 @@ $NetBSD: patch-wf,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
  #include <sys/types.h>
  
 -#if defined(__APPLE__) || defined(SOLARIS)
-+#if defined(__APPLE__) || defined(SOLARIS) || defined(__NetBSD__)
++#if defined(__APPLE__) || defined(SOLARIS) || defined(__NetBSD__) || defined(__DragonFly__)
  typedef off_t oggz_off_t;
  #else
  typedef loff_t oggz_off_t;
