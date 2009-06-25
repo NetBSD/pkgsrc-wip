@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2009/06/05 06:50:12 ghen Exp $
+$NetBSD: patch-ab,v 1.13 2009/06/25 14:20:50 ghen Exp $
 
 --- dovecot-example.conf.orig	2009-06-01 05:21:42.000000000 +0200
 +++ dovecot-example.conf
-@@ -12,16 +12,13 @@
+@@ -12,9 +12,6 @@
  # Default values are shown for each setting, it's not required to uncomment
  # those. These are exceptions to this though: No sections (e.g. namespace {})
  # or plugin settings are added by default, they're listed only as examples.
@@ -12,14 +12,11 @@ $NetBSD: patch-ab,v 1.12 2009/06/05 06:50:12 ghen Exp $
  
  # Base directory where to store runtime data.
  #base_dir = /var/run/dovecot/
- 
- # Protocols we want to be serving: imap imaps pop3 pop3s
+@@ -23,3 +20,3 @@
  # If you only want to use dovecot-auth, you can set this to "none".
 -#protocols = imap imaps
 +protocols = imap pop3
  
- # A space separated list of IP or host addresses where to listen in for
- # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
 @@ -86,7 +83,7 @@
  #ssl_listen =
  

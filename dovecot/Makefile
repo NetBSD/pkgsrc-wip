@@ -1,9 +1,15 @@
-# $NetBSD: Makefile,v 1.55 2009/06/05 06:50:12 ghen Exp $
+# $NetBSD: Makefile,v 1.56 2009/06/25 14:20:49 ghen Exp $
 
-DISTNAME=		dovecot-1.2.rc5
-PKGNAME=		${DISTNAME:S/.rc/rc/}
+DOVECOT_VERSION=	1.2
+DOVECOT_SUBVERSION=	.rc5
+SIEVE_VERSION=		0.1.6
+MANAGESIEVE_VERSION=	0.11.5
+DOVECOT_SUBDIR=		rc/
+DISTNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION}
+PKGNAME=		dovecot-${DOVECOT_VERSION}${DOVECOT_SUBVERSION:S/^.//}
 CATEGORIES=		mail
-MASTER_SITES=		http://www.dovecot.org/releases/1.2/rc/
+MASTER_SITES=		http://www.dovecot.org/releases/${DOVECOT_VERSION}/${DOVECOT_SUBDIR}
+DOVECOT_SIEVE_SITES=	http://www.rename-it.nl/dovecot/${DOVECOT_VERSION}/
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
@@ -54,6 +60,20 @@ post-build:
 						> ${WRKDIR}/dovecot-example.conf
 	${SED} "s|/etc/ssl|${SSLDIR}|" ${WRKSRC}/doc/mkcert.sh \
 						> ${WRKDIR}/mkcert.sh
+.if !empty(PKG_OPTIONS:Mdovecot-sieve)
+# We need dovecot built in order to be able to configure sieve.
+	cd ${WRKSRC.sieve} \
+	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ${CONFIGURE_ARGS.sieve}
+	cd ${WRKSRC.sieve} \
+	&& env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+.endif
+.if !empty(PKG_OPTIONS:Mdovecot-managesieve)
+# Wee need sieve built in order to configure and build managesieve. Sigh.
+	cd ${WRKSRC.managesieve} \
+	&& env ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} ${CONFIGURE_ARGS.managesieve}
+	cd ${WRKSRC.managesieve} \
+	&& env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} -f ${MAKE_FILE} ${BUILD_TARGET}
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/dovecot-example.conf ${DESTDIR}${EGDIR}
