@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/25 11:33:39 pettai Exp $
 #
 
 DISTNAME=	dnscheck-${RCVERSION}
@@ -16,7 +16,7 @@ LICENSE_FILE=	${FILESDIR}/iis-license
 SVN_REPOSITORIES=	dnscheck
 SVN_ROOT.dnscheck=	svn+ssh://anonsvn@opensource.iis.se/dnscheck/branches/${RCVERSION}
 SVN_MODULE.dnscheck=	dnscheck
-RCVERSION=		0.91-maint
+RCVERSION=		0.92-maint
 NO_CHECKSUM=		yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
