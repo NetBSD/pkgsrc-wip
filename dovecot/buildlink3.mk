@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:43:40 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/06/25 14:22:57 ghen Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -9,7 +9,6 @@ DOVECOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dovecot+=		dovecot>=1.2alpha1
 BUILDLINK_PKGSRCDIR.dovecot?=		../../wip/dovecot
-.endif
 
 pkgbase := dovecot
 .include "../../mk/pkg-build-options.mk"
