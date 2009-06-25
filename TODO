@@ -3,12 +3,12 @@ Suggested package updates
 
 	o amarok-2.1.1
 	o argouml-0.24
-	o asymptote-1.77
+	o asymptote-1.78
 	o backintime-0.9.26
 	o bakery-2.6.3
 	o bsnes-0.046
 	o bub-n-bros-1.6
-	o cclive-0.4.3
+	o cclive-0.4.4
 	o cdogs-0.4
 	o chora-2.0.1
 	o chromium-0.9.14
@@ -45,6 +45,7 @@ Suggested package updates
 	o httrack-3.43
 	o hu-go-2.11
 	o icc-11.0
+	o icecat-3.0.11
 	o kino-1.0.0
 	o lensfun-0.2.3
 	o libexosip-3.3.0
@@ -79,7 +80,7 @@ Suggested package updates
 	o rdup-1.0.0
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-3.22.0
+	o rsyslog-4.2.0
 	o sendmailX-0.0.0.0
 	o sflphone-0.7.2
 	o siege-2.69
