@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3490 2009/06/26 09:36:37 jihbed Exp $
+# $Id: Makefile,v 1.3491 2009/06/26 21:57:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1716,6 +1716,7 @@ SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-papyros
+SUBDIR+=	py-parsing
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-pp
