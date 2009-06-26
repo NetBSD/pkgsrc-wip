@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/26 09:34:44 jihbed Exp $
+
+SHA1 (amqplib-0.6.tgz) = c6a2c8112fbdde653bd2eee2fa029b76e8a1c273
+RMD160 (amqplib-0.6.tgz) = 73eafb3ddc19d40e098f0d312c642020590b0803
+Size (amqplib-0.6.tgz) = 52227 bytes
