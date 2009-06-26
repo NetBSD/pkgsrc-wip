@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/28 22:37:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/26 23:43:45 jihbed Exp $
 #
 
 DISTNAME=	winwrangler-0.2.1
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/winwrangler/0.2/0.2.1/+download/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://launchpad.net/winwrangler/
 COMMENT=	WinWrangler desktop daemon to manipulations window managers
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT= 	user-destdir
 GNU_CONFIGURE=	yes
