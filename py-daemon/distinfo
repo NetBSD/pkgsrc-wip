@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/26 22:37:42 jihbed Exp $
+
+SHA1 (python-daemon-1.4.5.tar.gz) = 90c4e5ee7a8050ce255e58730314cf875d88b67f
+RMD160 (python-daemon-1.4.5.tar.gz) = 1d9aed7d35c9f02b94069d63187fde44b88e4fcf
+Size (python-daemon-1.4.5.tar.gz) = 30550 bytes
