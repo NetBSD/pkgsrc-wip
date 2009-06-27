@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2009/04/16 23:17:03 makoto Exp $
+@comment $NetBSD: PLIST,v 1.78 2009/06/27 14:23:53 obache Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1617,6 +1617,8 @@ share/emacs/${PKGVERSION}/lisp/facemenu.el.gz
 share/emacs/${PKGVERSION}/lisp/facemenu.elc
 share/emacs/${PKGVERSION}/lisp/faces.el.gz
 share/emacs/${PKGVERSION}/lisp/faces.elc
+share/emacs/${PKGVERSION}/lisp/fadr.el.gz
+share/emacs/${PKGVERSION}/lisp/fadr.elc
 share/emacs/${PKGVERSION}/lisp/ffap.el.gz
 share/emacs/${PKGVERSION}/lisp/ffap.elc
 share/emacs/${PKGVERSION}/lisp/filecache.el.gz
@@ -1982,6 +1984,7 @@ share/emacs/${PKGVERSION}/lisp/info.el.gz
 share/emacs/${PKGVERSION}/lisp/info.elc
 share/emacs/${PKGVERSION}/lisp/informat.el.gz
 share/emacs/${PKGVERSION}/lisp/informat.elc
+share/emacs/${PKGVERSION}/lisp/international/README
 share/emacs/${PKGVERSION}/lisp/international/ccl.el.gz
 share/emacs/${PKGVERSION}/lisp/international/ccl.elc
 share/emacs/${PKGVERSION}/lisp/international/characters.el.gz
@@ -2388,6 +2391,8 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-fish.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-fish.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gw.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gw.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.el.gz
@@ -2751,8 +2756,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/flymake.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/flymake.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/fortran.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/fortran.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/gdb-ui.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/gdb-ui.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/gdb-mi.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/gdb-mi.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/glasses.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/glasses.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/grep.el.gz
