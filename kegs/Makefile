@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/29 15:44:07 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/29 16:17:38 christtrekker Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -10,8 +10,10 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://kegs.sourceforge.net/
 COMMENT=	Apple IIgs emulator for Mac OS X, Win32, Linux, and Unix/X11
 
-ONLY_FOR_PLATFORM=	Linux-*-[i386|ppc] SunOS-*-[i386|sparc] Darwin-*-* HPUX-*-*
-ONLY_FOR_PLATFORM+=	*-*-[i386|ppc|amd64|ia64|mips|m68k]
+# Official support
+ONLY_FOR_PLATFORM=	Linux-*-i386 Linux-*-ppc SunOS-*-i386 SunOS-*-sparc Darwin-*-* HPUX-*-*
+# Probably work
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-ppc *-*-amd64 *-*-ia64 *-*-mips *-*-m68k
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
