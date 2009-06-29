@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2009/06/29 15:41:01 khorben Exp $
+
+--- Makefile.inc.orig	2009-06-24 19:00:51.000000000 +0200
++++ Makefile.inc
+@@ -41,11 +41,12 @@ TAGCMD ?=	etags
+ 
+ # target directories and names
+ DESTDIR ?=
+-SBINDIR ?= $(DESTDIR)/usr/sbin
++DESTDIR ?= /usr
++SBINDIR ?= $(DESTDIR)$(PREFIX)/sbin
+ ETCDIR  ?= $(DESTDIR)/etc
+-LIBDIR  ?= $(DESTDIR)/usr/lib
+-DOCDIR  ?= $(DESTDIR)/usr/share/doc
+-MANDIR  ?= $(DESTDIR)/usr/share/man
++LIBDIR  ?= $(DESTDIR)$(PREFIX)/lib
++DOCDIR  ?= $(DESTDIR)$(PREFIX)/share/doc
++MANDIR  ?= $(DESTDIR)$(PREFIX)/share/man
+ EXENAME ?= olsrd
+ CFGNAME ?= $(EXENAME).conf
+ CFGFILE ?= $(ETCDIR)/$(CFGNAME)
