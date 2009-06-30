@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/24 20:59:14 htepper Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/30 21:40:32 tnn2 Exp $
 bin/firefox35
 include/firefox35/stable/base64.h
 include/firefox35/stable/blapit.h
@@ -774,6 +774,7 @@ lib/firefox35/searchplugins/yahoo.xml
 lib/firefox35/update.locale
 lib/firefox35/updater
 lib/firefox35/updater.ini
+share/applications/firefox35.desktop
 share/idl/firefox35/stable/domstubs.idl
 share/idl/firefox35/stable/mozIJSSubScriptLoader.idl
 share/idl/firefox35/stable/nsIASN1Object.idl
@@ -2125,3 +2126,4 @@ share/idl/firefox35/unstable/xpcIJSWeakReference.idl
 share/idl/firefox35/unstable/xpccomponents.idl
 share/idl/firefox35/unstable/xpcexception.idl
 share/idl/firefox35/unstable/xpcjsid.idl
+share/pixmaps/firefox35.png

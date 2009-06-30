@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2009/06/28 11:57:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.19 2009/06/30 21:40:32 tnn2 Exp $
 #
 
-DISTNAME=	firefox-3.5rc3-source
-PKGNAME=	firefox35-3.5rc3
+DISTNAME=	firefox-3.5-source
+PKGNAME=	firefox35-3.5
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/3.5rc3/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/3.5/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
@@ -49,16 +49,40 @@ CONFIGURE_ARGS+=	--disable-crashreporter
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=firefox35
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/js/src && autoconf
-	cd ${WRKSRC}/nsprpub && autoconf
-
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "options.mk"
+
+MOZILLA=firefox35
+.if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
+MOZILLA_NAME=	Firefox 3.5
+MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
+.else
+MOZILLA_NAME=	Shiretoko 3.5
+MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
+.endif
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC}/js/src && autoconf
+	cd ${WRKSRC}/nsprpub && autoconf
+
+.PHONY: install-desktop
+post-install: install-desktop
+install-desktop:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pixmaps
+	${SED}	-e 's|@MOZILLA@|${MOZILLA}|g'				\
+	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
+	  -e 's|@FIREFOX_ICON@|${MOZILLA}.png|g'			\
+	  < ${FILESDIR}/desktop.in					\
+	  > ${WRKDIR}/desktop
+	${INSTALL_DATA} ${WRKDIR}/desktop				\
+	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
+	${INSTALL_DATA} ${MOZILLA_ICON}					\
+	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
@@ -68,4 +92,5 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 #.include "../../wip/xulrunner/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
