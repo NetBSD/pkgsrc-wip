@@ -1,4 +1,6 @@
-$NetBSD: patch-md,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
+$NetBSD: patch-md,v 1.3 2009/06/30 20:43:37 tnn2 Exp $
+
+???. from www/firefox/patch-ax.
 
 --- security/coreconf/SunOS5.mk.orig	2009-06-29 18:15:11.000000000 +0200
 +++ security/coreconf/SunOS5.mk

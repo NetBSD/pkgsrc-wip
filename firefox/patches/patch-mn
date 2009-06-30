@@ -1,4 +1,6 @@
-$NetBSD: patch-mn,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
+$NetBSD: patch-mn,v 1.3 2009/06/30 20:43:37 tnn2 Exp $
+
+Make sure we link correctly with sqlite3 from pkgsrc.
 
 --- security/nss/lib/softoken/config.mk.orig	2009-06-29 18:15:14.000000000 +0200
 +++ security/nss/lib/softoken/config.mk
