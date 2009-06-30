@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:15:57 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/06/30 15:00:32 jihbed Exp $
 
-SHA1 (pyntch-dist-20090531.tar.gz) = 9dbd69b799248ad9b91255bdf537dd7d02c470dc
-RMD160 (pyntch-dist-20090531.tar.gz) = 62552954842fa23a84c294cad6a35eb0fcc60b3a
-Size (pyntch-dist-20090531.tar.gz) = 54687 bytes
+SHA1 (pyntch-dist-20090615.tar.gz) = 4777ae5d36f82cf8effce32b28e949663a2e229e
+RMD160 (pyntch-dist-20090615.tar.gz) = c957f12915772c153db2eb091a02ff478487f044
+Size (pyntch-dist-20090615.tar.gz) = 56434 bytes
