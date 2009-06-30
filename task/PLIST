@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/28 00:00:54 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/30 13:03:24 jihbed Exp $
 bin/task
+man/man1/task.1
+man/man5/taskrc.5
+share/doc/task/AUTHORS
+share/doc/task/ChangeLog
+share/doc/task/NEWS
+share/doc/task/README
+share/doc/task/task_completion.sh

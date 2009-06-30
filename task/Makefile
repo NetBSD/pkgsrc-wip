@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2009/04/24 15:34:43 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/30 13:03:24 jihbed Exp $
 #
 
-DISTNAME=	task-1.6.1
+DISTNAME=	task-1.7.1
 CATEGORIES=	time
-MASTER_SITES=	http://www.beckingham.net/
+MASTER_SITES=	http://www.taskwarrior.org/download/
 
 MAINTAINER=	emil@math.su.se
-HOMEPAGE=	http://www.beckingham.net/task.html
+HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
 COMMENT=	Task is an open source, command-line, TODO list manager
+#LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+INSTALLATION_DIRS+=	share/doc/task ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 .include "../../mk/bsd.pkg.mk"

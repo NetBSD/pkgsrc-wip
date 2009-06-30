@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/06/30 13:03:24 jihbed Exp $
+
+--- Makefile.in.orig	2009-06-30 12:41:38.000000000 +0000
++++ Makefile.in	2009-06-30 12:44:29.000000000 +0000
+@@ -176,8 +176,8 @@
+ EXTRA_DIST = task_completion.sh doc/man1/task.1 doc/man5/taskrc.5
+ man1_MANS = doc/man1/task.1
+ man5_MANS = doc/man5/taskrc.5
+-otherdir = $(datadir)/doc/task-$(VERSION)
+-other_DATA = AUTHORS ChangeLog COPYING INSTALL NEWS README task_completion.sh
++otherdir = $(datadir)/doc/task
++other_DATA = AUTHORS ChangeLog NEWS README task_completion.sh
+ all: auto.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 

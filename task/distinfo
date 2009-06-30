@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/04/24 15:34:43 emil_s Exp $
+$NetBSD: distinfo,v 1.5 2009/06/30 13:03:24 jihbed Exp $
 
-SHA1 (task-1.6.1.tar.gz) = 903a12eaa8dc2a5d1929740d0ba1c74f1f23260c
-RMD160 (task-1.6.1.tar.gz) = b86cc78a00a0dba97d5e9ba31e211c78531315d0
-Size (task-1.6.1.tar.gz) = 154391 bytes
+SHA1 (task-1.7.1.tar.gz) = af984e8151fd0e63cf5c872797774ae73f57826b
+RMD160 (task-1.7.1.tar.gz) = 5bfcc6a5765692bbc3c8227c4f2de7f74aeb7b20
+Size (task-1.7.1.tar.gz) = 170621 bytes
+SHA1 (patch-aa) = 61010cdbc508036b9392730d3a6296f9a062710a
