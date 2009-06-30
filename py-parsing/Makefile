@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/26 21:52:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/30 12:42:13 jihbed Exp $
 #
 
 DISTNAME=	pyparsing-1.5.2
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyparsing/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://pyparsing.sourceforge.net/
+HOMEPAGE=	http://pyparsing.wikispaces.com/
 COMMENT=	General parsing module for Python
 #LICENSE=	LICENSE
 
