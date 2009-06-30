@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
+$NetBSD: patch-ao,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
---- toolkit/mozapps/installer/packager.mk.orig	2009-06-16 00:43:19.000000000 +0200
+--- toolkit/mozapps/installer/packager.mk.orig	2009-06-29 18:15:27.000000000 +0200
 +++ toolkit/mozapps/installer/packager.mk
 @@ -449,8 +449,8 @@ endif
  	(cd $(DIST)/$(MOZ_PKG_DIR) && tar $(TAR_CREATE_FLAGS) - .) | \

@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2009/06/30 19:58:10 tnn2 Exp $
+$NetBSD: patch-ac,v 1.7 2009/06/30 20:22:31 tnn2 Exp $
 
---- nsprpub/configure.in.orig	2009-06-16 00:42:54.000000000 +0200
+--- nsprpub/configure.in.orig	2009-06-29 18:15:05.000000000 +0200
 +++ nsprpub/configure.in
 @@ -62,7 +62,7 @@ USE_CPLUS=
  USE_IPV6=

@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
+$NetBSD: patch-ar,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
---- media/libsydneyaudio/src/sydney_audio_sunaudio.c.orig	2009-06-16 00:42:52.000000000 +0200
+--- media/libsydneyaudio/src/sydney_audio_sunaudio.c.orig	2009-06-29 18:15:03.000000000 +0200
 +++ media/libsydneyaudio/src/sydney_audio_sunaudio.c
 @@ -38,9 +38,14 @@
  #include <sys/types.h>

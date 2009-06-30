@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
+$NetBSD: patch-at,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
---- gfx/qcms/qcmstypes.h.orig	2009-06-23 09:01:23 +0300
-+++ gfx/qcms/qcmstypes.h	2009-06-23 09:01:54 +0300
+--- gfx/qcms/qcmstypes.h.orig	2009-06-29 18:14:50.000000000 +0200
++++ gfx/qcms/qcmstypes.h
 @@ -23,7 +23,7 @@ typedef PRUint64 uint64_t;
  #ifdef __OS2__
  /* OS/2's stdlib typdefs uintptr_t. So we'll just include that so we don't collide */

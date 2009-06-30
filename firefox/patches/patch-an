@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
+$NetBSD: patch-an,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
 SHA1_Update conflicts with openssl which may be dynamically loaded
 at runtime via libcups or libgssapi so causing a crash due to using
 the wrong binding.  So rename here to avoid conflict.
 
---- security/nss/lib/freebl/sha-fast-amd64-sun.s.orig	2007-10-12 14:44:43.000000000 +1300
+--- security/nss/lib/freebl/sha-fast-amd64-sun.s.orig	2009-06-29 18:15:14.000000000 +0200
 +++ security/nss/lib/freebl/sha-fast-amd64-sun.s
 @@ -1712,9 +1712,9 @@ shaCompress:
  .LFE7:

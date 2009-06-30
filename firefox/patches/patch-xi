@@ -1,8 +1,8 @@
-$NetBSD: patch-xi,v 1.1 2009/06/30 19:41:03 tnn2 Exp $
+$NetBSD: patch-xi,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp	1970-01-01 09:00:00.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp	2005-12-04 19:32:22.000000000 +0900
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp.orig	2009-06-30 22:20:24.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp
 @@ -0,0 +1,206 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 +

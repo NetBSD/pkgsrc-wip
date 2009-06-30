@@ -1,9 +1,9 @@
-$NetBSD: patch-xe,v 1.1 2009/06/30 19:41:03 tnn2 Exp $
+$NetBSD: patch-xe,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
 diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	2004-04-18 23:18:18.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp	2005-12-04 19:03:09.000000000 +0900
-@@ -132,6 +132,15 @@
+--- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2009-06-29 18:15:33.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m68k.cpp
+@@ -132,6 +132,15 @@ extern "C" {
      }
  }
  
@@ -19,7 +19,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_netbsd_m6
  XPTC_PUBLIC_API(nsresult)
  XPTC_InvokeByIndex(nsISupports* that, PRUint32 methodIndex,
                     PRUint32 paramCount, nsXPTCVariant* params)
-@@ -139,30 +148,30 @@
+@@ -139,30 +148,30 @@ XPTC_InvokeByIndex(nsISupports* that, PR
      PRUint32 result;
  
   __asm__ __volatile__(

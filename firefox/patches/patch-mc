@@ -1,6 +1,6 @@
-$NetBSD: patch-mc,v 1.1 2009/06/30 19:51:08 tnn2 Exp $
+$NetBSD: patch-mc,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
 
---- security/coreconf/command.mk.orig	2007-10-23 23:55:00.000000000 +0200
+--- security/coreconf/command.mk.orig	2009-06-29 18:15:11.000000000 +0200
 +++ security/coreconf/command.mk
 @@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
  CCF           = $(CC) $(CFLAGS)
