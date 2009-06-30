@@ -1,4 +1,4 @@
-$NetBSD: patch-ej,v 1.1.1.1 2009/06/18 13:52:35 tnn2 Exp $
+$NetBSD: patch-ak,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
 
 --- toolkit/components/places/src/nsMorkHistoryImporter.cpp.orig	2008-03-19 20:30:49.000000000 +0100
 +++ toolkit/components/places/src/nsMorkHistoryImporter.cpp	2008-12-17 09:38:05.000000000 +0100

@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.5 2009/06/30 19:58:10 tnn2 Exp $
+
+--- configure.in.orig	2009-06-16 00:42:36.000000000 +0200
++++ configure.in
+@@ -1799,7 +1799,7 @@ case "$target" in
+     fi
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -1813,6 +1813,9 @@ case "$target" in
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -2349,7 +2352,14 @@ case "$target" in
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++    case "${target_cpu}" in
++    alpha*)
++       CFLAGS="$CFLAGS -mieee"
++       CXXFLAGS="$CXXFLAGS -mieee"
+     ;;
++    esac
++    ;;
++
+ 
+ *-openvms*) 
+     AC_DEFINE(NO_PW_GECOS)
+@@ -3043,6 +3053,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -6320,7 +6333,7 @@ dnl ====================================
+ dnl = Enable code optimization. ON by default.
+ dnl ========================================================
+ if test -z "$MOZ_OPTIMIZE_FLAGS"; then
+-	MOZ_OPTIMIZE_FLAGS="-O"
++	MOZ_OPTIMIZE_FLAGS=""
+ fi
+ 
+ MOZ_ARG_ENABLE_STRING(optimize,

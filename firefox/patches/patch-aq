@@ -1,4 +1,4 @@
-$NetBSD: patch-wg,v 1.2 2009/06/24 20:59:15 htepper Exp $
+$NetBSD: patch-aq,v 1.1 2009/06/30 19:58:10 tnn2 Exp $
 
 --- media/liboggplay/src/liboggplay/std_semaphore.h.orig	2009-06-16 00:42:52.000000000 +0200
 +++ media/liboggplay/src/liboggplay/std_semaphore.h
