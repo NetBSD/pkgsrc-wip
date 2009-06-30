@@ -1,4 +1,4 @@
-$NetBSD: patch-ds,v 1.3 2009/06/18 13:56:20 tnn2 Exp $
+$NetBSD: patch-mj,v 1.1 2009/06/30 19:51:08 tnn2 Exp $
 
 diff -ruN ../Orig/mozilla/security/coreconf/arch.mk ./security/coreconf/arch.mk
 --- ../Orig/mozilla/security/coreconf/arch.mk	2005-10-11 08:30:12.000000000 +0900

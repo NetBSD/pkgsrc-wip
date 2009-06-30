@@ -1,4 +1,4 @@
-$NetBSD: patch-du,v 1.3 2009/06/18 13:56:20 tnn2 Exp $
+$NetBSD: patch-mk,v 1.1 2009/06/30 19:51:08 tnn2 Exp $
 
 diff -ruN ../Orig/mozilla/config/rules.mk ./config/rules.mk
 --- ../Orig/mozilla/config/rules.mk	2005-10-11 08:16:39.000000000 +0900
