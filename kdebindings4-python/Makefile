@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/17 17:33:19 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/30 15:45:14 thomasklausner Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
@@ -21,6 +21,17 @@ CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 PYTHON_VERSIONS_ACCEPTED=	25
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/akonadi/messagethreadingattribute.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/dnssd/servicebase.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kdecore/kptydevice.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kdecore/typedefs.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kio/global.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kio/kacl.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kparts/factory.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/phonon/backendcapabilities.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/plasma/abstractrunner.sip.orig
 
 .include "../../wip/kde4/kde4.mk"
 
