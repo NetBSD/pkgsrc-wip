@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/05/19 09:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.64 2009/07/01 22:01:22 schnoebe Exp $
 
 DISTNAME=		jabberd-2.2.8
 CATEGORIES=		chat
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 
-.if (${MACHINE_ARCH} == alpha)
+.if (${MACHINE_ARCH} == alpha) || (${MACHINE_ARCH} == x86_64)
 CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
 CONFIGURE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
 MAKE_ENV+=		CXXFLAGS=${CXXFLAGS:M*:C/-O./-O1/:Q}
