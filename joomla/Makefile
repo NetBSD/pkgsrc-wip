@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/06/03 12:37:28 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/01 12:39:50 marttikuparinen Exp $
 
-DISTNAME=	Joomla_1.5.11-Stable-Full_Package
-PKGNAME=	joomla-1.5.11
+DISTNAME=	Joomla_1.5.12-Stable-Full_Package
+PKGNAME=	joomla-1.5.12
 CATEGORIES=	www
-MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/10209/40306/
+MASTER_SITES=	http://joomlacode.org/gf/download/frsrelease/10547/41303/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
