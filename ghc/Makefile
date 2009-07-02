@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2009/02/24 06:12:36 phonohawk Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/02 08:57:03 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		6.10.1
+VERSION=		6.10.3
 CATEGORIES=		lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.haskell.org/ghc/
 COMMENT=		Compiler for the functional language Haskell
+LICENSE=		modified-bsd
 
 DISTFILES=		${DISTNAME}-src.tar.bz2 \
 				ghc-6.6.1-src.tar.bz2 \
@@ -16,6 +17,8 @@ DISTFILES=		${DISTNAME}-src.tar.bz2 \
 SITES.ghc-6.6.1-src.tar.bz2						= http://www.haskell.org/ghc/dist/6.6.1/
 SITES.ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz	= http://static.cielonegro.org/archive/
 SITES.ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz	= http://static.cielonegro.org/archive/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,6 +39,12 @@ EXTRACT_ONLY += ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz
 .elif ${MACHINE_ARCH} == "powerpc"
 EXTRACT_ONLY += ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz
 .endif
+
+# We need to tell the ./configure that libgmp is in a non-standard path. Without
+# that, the resulting GHC tries to link programs by executing ld(1) without
+# passing it -L${PREFIX}/lib.
+CONFIGURE_ARGS += --with-gmp-includes=${PREFIX}/include
+CONFIGURE_ARGS += --with-gmp-libraries=${PREFIX}/lib
 
 # Build an unregisterised bootstrap compiler and install it directly
 # into the .buildlink directory. But we can't use "make install"
@@ -61,11 +70,13 @@ pre-configure:
 # as long than when the files are not split.  See
 #    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
 # for a description of the problem.
-# Disable file splitting until pkgsrc has been improved.
+# Disable file splitting until pkgsrc gets improved.
 pre-build:
 	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
 
+# Some unused scripts don't pass the portability test.
+CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
+
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../wip/editline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
