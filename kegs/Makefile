@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/29 16:17:38 christtrekker Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/02 05:05:56 christtrekker Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -44,5 +44,6 @@ do-install:
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
