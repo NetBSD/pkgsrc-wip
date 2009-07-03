@@ -1,17 +1,30 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/11 15:49:00 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/03 10:42:46 jihbed Exp $
 bin/gst-inspector
-${PYSITELIB}/GstInspector/Data.pyc
-${PYSITELIB}/GstInspector/Data.pyo
-${PYSITELIB}/GstInspector/GUI.pyc
-${PYSITELIB}/GstInspector/GUI.pyo
-${PYSITELIB}/GstInspector/__init__.pyc
-${PYSITELIB}/GstInspector/__init__.pyo
-${PYSITELIB}/GstInspector/main.pyc
-${PYSITELIB}/GstInspector/main.pyo
-${PYSITELIB}/GstInspector/utils.pyc
-${PYSITELIB}/GstInspector/utils.pyo
+lib/python2.5/site-packages/GstInspector/Data.py
+lib/python2.5/site-packages/GstInspector/Data.pyc
+lib/python2.5/site-packages/GstInspector/Data.pyo
+lib/python2.5/site-packages/GstInspector/GUI.py
+lib/python2.5/site-packages/GstInspector/GUI.pyc
+lib/python2.5/site-packages/GstInspector/GUI.pyo
+lib/python2.5/site-packages/GstInspector/__init__.py
+lib/python2.5/site-packages/GstInspector/__init__.pyc
+lib/python2.5/site-packages/GstInspector/__init__.pyo
+lib/python2.5/site-packages/GstInspector/main.py
+lib/python2.5/site-packages/GstInspector/main.pyc
+lib/python2.5/site-packages/GstInspector/main.pyo
+lib/python2.5/site-packages/GstInspector/utils.py
+lib/python2.5/site-packages/GstInspector/utils.pyc
+lib/python2.5/site-packages/GstInspector/utils.pyo
 share/applications/gst-inspector.desktop
+share/gst-inspector/gst-inspector.glade
+share/gst-inspector/gst-inspector.ui
+share/icons/hicolor/16x16/apps/gst-inspector.png
+share/icons/hicolor/16x16/apps/gst-inspector.svg
+share/icons/hicolor/22x22/apps/gst-inspector.png
+share/icons/hicolor/22x22/apps/gst-inspector.svg
+share/icons/hicolor/24x24/apps/gst-inspector.png
+share/icons/hicolor/32x32/apps/gst-inspector.png
+share/icons/hicolor/32x32/apps/gst-inspector.svg
+share/icons/hicolor/48x48/apps/gst-inspector.png
+share/icons/hicolor/scalable/apps/gst-inspector.svg
 share/locale/de/LC_MESSAGES/gst-inspector.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/GstInspector
