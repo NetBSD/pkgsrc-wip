@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/01 15:45:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/03 14:58:39 drochner Exp $
 #
 
 DISTNAME=	digikam-1.0.0-beta1
@@ -20,6 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
 REPLACE_PERL=	utilities/scripts/digitaglinktree
+REPLACE_SH=	utilities/scripts/cleanup_digikamdb
 USE_CMAKE=	yes
 USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config

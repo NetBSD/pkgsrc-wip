@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2009/07/03 14:58:40 drochner Exp $
+
+--- utilities/scripts/cleanup_digikamdb.orig	2009-07-03 16:43:14.000000000 +0200
++++ utilities/scripts/cleanup_digikamdb
+@@ -46,14 +46,14 @@ curdir=$(pwd)
+ 
+ # try to enter the database directory
+ cd $databasedir 2&> /dev/null
+-if [ $? == 0 ]
++if [ $? = 0 ]
+ then
+     echo "Cleaning up $programname databases in $(pwd)"
+     for db in $(find . -type f -name 'digikam*.db' -print)
+     do
+         echo -n "$db ... "
+         sqlite3 $db "VACUUM;"
+-        if [ $? == 0 ]
++        if [ $? = 0 ]
+         then
+             echo "done"
+         else
