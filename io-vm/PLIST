@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/05 23:04:00 milosn Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/04 19:18:35 milosn Exp $
 bin/io
 include/io/BStream.h
 include/io/BStreamTag.h
 include/io/Base.h
+include/io/CHash.h
+include/io/CHash_inline.h
 include/io/Collector.h
 include/io/CollectorMarker.h
 include/io/CollectorMarker_inline.h
@@ -13,6 +15,9 @@ include/io/Coro.h
 include/io/Date.h
 include/io/Duration.h
 include/io/DynLib.h
+include/io/Hash_fnv.h
+include/io/Hash_murmur.h
+include/io/Hash_superfast.h
 include/io/IoBlock.h
 include/io/IoCFunction.h
 include/io/IoCall.h
@@ -68,6 +73,10 @@ include/io/List_inline.h
 include/io/MainArgs.h
 include/io/PHash.h
 include/io/PHash_inline.h
+include/io/PHash_struct.h
+include/io/PointerHash.h
+include/io/PointerHash_inline.h
+include/io/PointerHash_struct.h
 include/io/PortableGettimeofday.h
 include/io/PortableSorting.h
 include/io/PortableStdint.h
@@ -79,8 +88,6 @@ include/io/PortableUContext386.h
 include/io/PortableUContextPPC.h
 include/io/PortableUsleep.h
 include/io/RandomGen.h
-include/io/SHash.h
-include/io/SHash_inline.h
 include/io/Stack.h
 include/io/Stack_inline.h
 include/io/UArray.h

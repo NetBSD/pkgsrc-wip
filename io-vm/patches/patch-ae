@@ -1,0 +1,72 @@
+--- libs/basekit/source/PortableStdint.h.orig   2009-07-04 12:14:13.000000000 +0100
++++ libs/basekit/source/PortableStdint.h        2009-07-04 12:17:06.000000000 +0100
+@@ -453,8 +453,8 @@
+ #if !defined (stdint_int64_defined)
+ # if defined(__GNUC__)
+ #  define stdint_int64_defined
+-   __extension__ typedef long long int64_t;
+-   __extension__ typedef unsigned long long uint64_t;
++   //__extension__ typedef long long int64_t;
++   //__extension__ typedef unsigned long long uint64_t;
+ #  define UINT64_C(v) v ## ULL
+ #  define  INT64_C(v) v ## LL
+ #  ifndef PRINTF_INT64_MODIFIER
+@@ -535,8 +535,8 @@
+  */
+
+ #ifdef stdint_int64_defined
+-  typedef int64_t intmax_t;
+-  typedef uint64_t uintmax_t;
++  //typedef int64_t intmax_t;
++  //typedef uint64_t uintmax_t;
+ # define  INTMAX_MAX   INT64_MAX
+ # define  INTMAX_MIN   INT64_MIN
+ # define UINTMAX_MAX  UINT64_MAX
+@@ -595,8 +595,8 @@
+ # define  INT_LEAST16_MIN  INT16_MIN
+ # define  INT_LEAST32_MIN  INT32_MIN
+ # ifdef stdint_int64_defined
+-    typedef  int64_t  int_least64_t;
+-    typedef uint64_t uint_least64_t;
++    //typedef  int64_t  int_least64_t;
++    //typedef uint64_t uint_least64_t;
+ #   define PRINTF_LEAST64_MODIFIER PRINTF_INT64_MODIFIER
+ #   define UINT_LEAST64_MAX UINT64_MAX
+ #   define  INT_LEAST64_MAX  INT64_MAX
+@@ -616,10 +616,10 @@
+  *  stdint.h.
+  */
+
+-typedef   int_least8_t   int_fast8_t;
+-typedef  uint_least8_t  uint_fast8_t;
+-typedef  int_least16_t  int_fast16_t;
+-typedef uint_least16_t uint_fast16_t;
++//typedef   int_least8_t   int_fast8_t;
++//typedef  uint_least8_t  uint_fast8_t;
++//typedef  int_least16_t  int_fast16_t;
++//typedef uint_least16_t uint_fast16_t;
+ typedef  int_least32_t  int_fast32_t;
+ typedef uint_least32_t uint_fast32_t;
+ #define  UINT_FAST8_MAX  UINT_LEAST8_MAX
+@@ -632,8 +632,8 @@
+ #define  INT_FAST16_MIN  INT_LEAST16_MIN
+ #define  INT_FAST32_MIN  INT_LEAST32_MIN
+ #ifdef stdint_int64_defined
+-  typedef  int_least64_t  int_fast64_t;
+-  typedef uint_least64_t uint_fast64_t;
++  //typedef  int_least64_t  int_fast64_t;
++  //typedef uint_least64_t uint_fast64_t;
+ # define UINT_FAST64_MAX UINT_LEAST64_MAX
+ # define  INT_FAST64_MAX  INT_LEAST64_MAX
+ # define  INT_FAST64_MIN  INT_LEAST64_MIN
+@@ -707,8 +707,8 @@
+ #  ifndef UINTPTR_C
+ #    define UINTPTR_C(x)                stdint_intptr_glue3(UINT,stdint_intptr_bits,_C)(x)
+ #  endif
+-  typedef stdint_intptr_glue3(uint,stdint_intptr_bits,_t) uintptr_t;
+-  typedef stdint_intptr_glue3( int,stdint_intptr_bits,_t)  intptr_t;
++  //typedef stdint_intptr_glue3(uint,stdint_intptr_bits,_t) uintptr_t;
++  //typedef stdint_intptr_glue3( int,stdint_intptr_bits,_t)  intptr_t;
+ # else
+ /* TODO -- This following is likely wrong for some platforms, and does
+    nothing for the definition of uintptr_t. */
