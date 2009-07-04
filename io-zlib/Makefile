@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/09/10 20:29:39 milosn Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/04 19:34:29 milosn Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-zlib-${IO_VERSION}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		archivers
 
 MAINTAINER=		milos.negovanovic@googlemail.com
