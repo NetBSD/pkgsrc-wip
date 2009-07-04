@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3492 2009/06/26 22:43:28 jihbed Exp $
+# $Id: Makefile,v 1.3493 2009/07/04 22:46:27 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1668,6 +1668,7 @@ SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-django-diario
+SUBDIR+=	py-django-tagging
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-flakes
 SUBDIR+=	py-foolscap
@@ -1698,6 +1699,7 @@ SUBDIR+=	py-libmemcache
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtunepimp
+SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-logilab-doctools
