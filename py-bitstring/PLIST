@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/09 16:28:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/04 16:03:29 jihbed Exp $
+${PYSITELIB}/bitstring.py
 ${PYSITELIB}/bitstring.pyc
 ${PYSITELIB}/bitstring.pyo
+share/doc/py-bitstring/bitstring.pdf

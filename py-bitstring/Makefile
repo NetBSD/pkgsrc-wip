@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/06/17 23:58:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/04 16:03:29 jihbed Exp $
 #
 
-DISTNAME=	bitstring-0.4.2
+DISTNAME=	bitstring-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel python
 MASTER_SITES=	http://python-bitstring.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
@@ -19,6 +19,13 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED= 26 25 24
 PYDISTUTILSPKG=	yes
 
+
+DOCDIR=		${PREFIX}/share/doc/py-bitstring
+
+INSTALLATION_DIRS=	${DOCDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/bitstring.pdf ${DESTDIR}${DOCDIR}
+
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
