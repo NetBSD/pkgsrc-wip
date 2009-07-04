@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/07/04 19:18:35 milosn Exp $
+$NetBSD: distinfo,v 1.5 2009/07/04 19:49:55 milosn Exp $
 
 SHA1 (io-20090704.tar.bz2) = 6980857288c73a3352b2faca015240ecf29d4689
 RMD160 (io-20090704.tar.bz2) = ea10d150125a994183f8387e4bdb6482361af7fc
-Size (io-20090205.tar.bz2) = 6384013 bytes
+Size (io-20090704.tar.bz2) = 6384013 bytes
 SHA1 (patch-aa) = c489c35743f270010c1b6559768462ba3ea2c904
 SHA1 (patch-ab) = 6022ea6115885089f08d75f51e9f4c3102d0a3a0
 SHA1 (patch-ac) = 854111d569f9d8e90872998d594f6770bda60072
