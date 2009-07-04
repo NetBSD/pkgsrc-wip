@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2007/01/13 22:13:43 shattered Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/04 13:25:17 leot1990 Exp $
 #
 
-DISTNAME=	httrack-3.40-2
-PKGNAME=	httrack-3.40.2
+DISTNAME=	httrack-3.43-5
+PKGNAME=	httrack-3.43.5
 CATEGORIES=	www
 MASTER_SITES=	http://www.httrack.com/ \
 		http://httrack.free.fr/mirror/
@@ -10,18 +10,25 @@ MASTER_SITES=	http://www.httrack.com/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.httrack.com/
 COMMENT=	Easy-to-use offline browser utility
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/httrack-3.40.3
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
-LDFLAGS+=	-L${WRKSRC}/src/.libs/
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-SUBST_CLASSES+=	html
-SUBST_STAGE.html=pre-install
-SUBST_FILES.html=html/Makefile
-SUBST_SED.html=	-e 's,install-data-hook,,'
+GNU_CONFIGURE=		yes
+LDFLAGS+=		-L${WRKSRC}/src/.libs/
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_DIRS+=		xdg-1.4
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash:run gmake
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+REPLACE_BASH=		src/webhttrack
+
+SUBST_CLASSES+=		html
+SUBST_STAGE.html=	pre-install
+SUBST_FILES.html=	html/Makefile
+SUBST_SED.html=		-e 's,install-data-hook,,'
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
