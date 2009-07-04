@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/07/04 19:26:57 milosn Exp $
+$NetBSD: distinfo,v 1.4 2009/07/04 19:44:31 milosn Exp $
 
 SHA1 (io-20090704.tar.bz2) = 6980857288c73a3352b2faca015240ecf29d4689
 RMD160 (io-20090704.tar.bz2) = ea10d150125a994183f8387e4bdb6482361af7fc
-Size (io-20090205.tar.bz2) = 6384013 bytes
+Size (io-20090704.tar.bz2) = 6384013 bytes
