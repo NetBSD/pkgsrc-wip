@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3493 2009/07/04 22:46:27 jihbed Exp $
+# $Id: Makefile,v 1.3494 2009/07/05 10:32:05 milosn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -817,6 +817,7 @@ SUBDIR+=	io-md5
 SUBDIR+=	io-random
 SUBDIR+=	io-range
 SUBDIR+=	io-rational
+SUBDIR+=	io-regex
 SUBDIR+=	io-securesocket
 SUBDIR+=	io-sha1
 SUBDIR+=	io-socket
