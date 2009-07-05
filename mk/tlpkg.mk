@@ -1,4 +1,4 @@
-# $NetBSD: tlpkg.mk,v 1.1 2009/07/05 22:05:35 minskim Exp $
+# $NetBSD: tlpkg.mk,v 1.2 2009/07/05 22:34:33 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -62,10 +62,11 @@ _texlive-install:
 			${_texmf} ${DESTDIR}${PREFIX}/share; \
 	fi
 .endfor
-	if [ -d ${WRKSRC}/texmf-doc ]; then \
-		cd ${WRKSRC} && \
-		pax -rwpm -s ',.*\.orig$$,,' texmf-doc/* \
-			${DESTDIR}${PREFIX}/share/doc/texmf; \
+	if [ -d ${WRKSRC}/bin ]; then \
+		${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin; \
+		for script in ${WRKSRC}/bin/*; do \
+			${INSTALL_SCRIPT} $$script ${DESTDIR}${PREFIX}/bin; \
+		done; \
 	fi
 
 .include "../../print/kpathsea/texmf.mk"
