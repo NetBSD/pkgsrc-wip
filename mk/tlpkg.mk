@@ -1,9 +1,12 @@
-# $NetBSD: tlpkg.mk,v 1.2 2009/07/05 22:34:33 minskim Exp $
+# $NetBSD: tlpkg.mk,v 1.3 2009/07/05 23:54:52 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
 #
 # Package-settable variables:
+#
+# REPLACE_TEXLUA
+#	A list of texlua scripts to be installed, relative to ${WRKSRC}.
 #
 # TEX_FORMAT_NAMES
 #	See ../../print/texlive-tetex/format.mk.
@@ -40,6 +43,16 @@ USE_TOOLS+=	pax
 
 NO_BUILD?=	yes
 WRKSRC?=	${WRKDIR}
+
+.if defined(REPLACE_TEXLUA)
+FIND_PREFIX:=	LUATEX_PREFIX=luatex
+.include "../../mk/find-prefix.mk"
+
+REPLACE_INTERPRETER=	texlua
+REPLACE.texlua.old=	.*texlua
+REPLACE.texlua.new=	${LUATEX_PREFIX}/bin/texlua
+REPLACE_FILES.texlua=	${REPLACE_TEXLUA}
+.endif
 
 .PHONY: _texlive-set-permission:
 _texlive-set-permission:

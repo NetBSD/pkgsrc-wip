@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/05 23:41:16 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/05 23:54:52 minskim Exp $
 # TeX Live Revision 13822
 
 DISTNAME=	texlive-scripts
@@ -11,14 +11,7 @@ LICENSE=	gnu-gpl-v2 AND public-domain
 CONFLICTS+=	tex-bin-texlive-[0-9]*
 DEPENDS+=	luatex-[0-9]*:../../print/luatex
 
-FIND_PREFIX:=	TEXLUA_PREFIX=texlua
-.include "../../mk/find-prefix.mk"
-
-REPLACE_INTERPRETER=	texlua
-REPLACE.texlua.old=	.*texlua
-REPLACE.texlua.new=	${TEXLUA_PREFIX}/bin/texlua
-REPLACE_FILES.texlua=	bin/rungs
-
+REPLACE_TEXLUA=		bin/rungs
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
 .include "../../wip/mk/tlpkg.mk"
