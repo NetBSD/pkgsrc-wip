@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2009/06/25 14:20:49 ghen Exp $
+# $NetBSD: options.mk,v 1.12 2009/07/05 20:37:43 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi inet6
-PKG_SUPPORTED_OPTIONS+=	kqueue ldap mysql pam pgsql sasl sqlite
+PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
+PKG_SUPPORTED_OPTIONS+=	kqueue ldap mysql pam pgsql sqlite
 PKG_OPTIONS_OPTIONAL_GROUPS= ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
@@ -43,15 +43,6 @@ CONFIGURE_ARGS+=	--with-mysql
 CONFIGURE_ARGS+=	--with-pgsql
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 .  include "../../mk/pgsql.buildlink3.mk"
-.endif
-
-###
-### IPv6 support.
-###
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 ###
