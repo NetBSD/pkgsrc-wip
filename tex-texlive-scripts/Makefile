@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/05 22:37:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/05 23:41:16 minskim Exp $
 # TeX Live Revision 13822
 
 DISTNAME=	texlive-scripts
@@ -6,6 +6,7 @@ PKGNAME=	tex-${DISTNAME}-2009.13822
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Executables and files maintained as part of TeX Live
+LICENSE=	gnu-gpl-v2 AND public-domain
 
 CONFLICTS+=	tex-bin-texlive-[0-9]*
 DEPENDS+=	luatex-[0-9]*:../../print/luatex
