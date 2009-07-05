@@ -1,0 +1,2 @@
+The Regex addon adds support for Perl regular expressions using the PCRE
+library by Philip Hazel.
