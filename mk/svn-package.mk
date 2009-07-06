@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.11 2009/03/02 20:29:55 lexort Exp $
+# $Id: svn-package.mk,v 1.12 2009/07/06 18:22:23 minskim Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -22,6 +22,11 @@
 #	The SVN module to check out.
 #
 #	Default value: ${id}
+#
+# SVN_DISTBASE.${id}
+#	The prefix for cached archive file name.
+#
+#	Default value: ${PKGBASE}-${SVN_MODULE.${repo}}
 #
 # It may define the following variables:
 #
@@ -141,7 +146,10 @@ _SVN_TAG.${repo}=	${SVN_TAG}
 _SVN_TAG_FLAG.${repo}=	-r{${_SVN_TODAY} 00:00 +0000}
 _SVN_TAG.${repo}=	${_SVN_TODAY}
 .  endif
-_SVN_DISTFILE.${repo}=	${PKGBASE}-${SVN_MODULE.${repo}}-${_SVN_TAG.${repo}}.tar.gz
+.  if !defined(SVN_DISTBASE.${repo})
+SVN_DISTBASE.${repo}=	${PKGBASE}-${SVN_MODULE.${repo}}
+.  endif
+_SVN_DISTFILE.${repo}=	${SVN_DISTBASE.${repo}}-${_SVN_TAG.${repo}}.tar.gz
 .endfor
 
 pre-extract: do-svn-extract
