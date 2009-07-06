@@ -1,4 +1,4 @@
-# $NetBSD: tlpkg.mk,v 1.3 2009/07/05 23:54:52 minskim Exp $
+# $NetBSD: tlpkg.mk,v 1.4 2009/07/06 18:19:07 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -45,6 +45,8 @@ NO_BUILD?=	yes
 WRKSRC?=	${WRKDIR}
 
 .if defined(REPLACE_TEXLUA)
+DEPENDS+=	luatex-[0-9]*:../../print/luatex
+
 FIND_PREFIX:=	LUATEX_PREFIX=luatex
 .include "../../mk/find-prefix.mk"
 
