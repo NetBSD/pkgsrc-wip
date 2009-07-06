@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:27:34 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/06 22:33:21 jihbed Exp $
 bin/pytest
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/common/__init__.py
@@ -103,6 +103,9 @@ ${PYSITELIB}/logilab/common/pdf_ext.pyo
 ${PYSITELIB}/logilab/common/proc.py
 ${PYSITELIB}/logilab/common/proc.pyc
 ${PYSITELIB}/logilab/common/proc.pyo
+${PYSITELIB}/logilab/common/pyro_ext.py
+${PYSITELIB}/logilab/common/pyro_ext.pyc
+${PYSITELIB}/logilab/common/pyro_ext.pyo
 ${PYSITELIB}/logilab/common/pytest.py
 ${PYSITELIB}/logilab/common/pytest.pyc
 ${PYSITELIB}/logilab/common/pytest.pyo
@@ -314,29 +317,10 @@ ${PYSITELIB}/logilab/common/visitor.pyo
 ${PYSITELIB}/logilab/common/xmlrpcutils.py
 ${PYSITELIB}/logilab/common/xmlrpcutils.pyc
 ${PYSITELIB}/logilab/common/xmlrpcutils.pyo
-${PYSITELIB}/logilab_common-0.41.0-py2.5-nspkg.pth
-${PYSITELIB}/logilab_common-0.41.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/logilab_common-0.41.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/logilab_common-0.41.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/logilab_common-0.41.0-py2.5.egg-info/namespace_packages.txt
-${PYSITELIB}/logilab_common-0.41.0-py2.5.egg-info/top_level.txt
-@dirrm ${PYSITELIB}/logilab_common-${PKGVERSION}-py2.5.egg-info
-@dirrm ${PYSITELIB}/logilab/common/ureports
-@dirrm ${PYSITELIB}/logilab/common/test/data/subdir_differ_dir/subdir
-@dirrm ${PYSITELIB}/logilab/common/test/data/subdir_differ_dir
-@dirrm ${PYSITELIB}/logilab/common/test/data/sub
-@dirrm ${PYSITELIB}/logilab/common/test/data/same_dir/subdir
-@dirrm ${PYSITELIB}/logilab/common/test/data/same_dir
-@dirrm ${PYSITELIB}/logilab/common/test/data/reference_dir/subdir
-@dirrm ${PYSITELIB}/logilab/common/test/data/reference_dir
-@dirrm ${PYSITELIB}/logilab/common/test/data/find_test/sub
-@dirrm ${PYSITELIB}/logilab/common/test/data/find_test
-@dirrm ${PYSITELIB}/logilab/common/test/data/file_differ_dir/subdirtwo
-@dirrm ${PYSITELIB}/logilab/common/test/data/file_differ_dir/subdir
-@dirrm ${PYSITELIB}/logilab/common/test/data/file_differ_dir
-@dirrm ${PYSITELIB}/logilab/common/test/data/content_differ_dir/subdir
-@dirrm ${PYSITELIB}/logilab/common/test/data/content_differ_dir
-@dirrm ${PYSITELIB}/logilab/common/test/data
-@dirrm ${PYSITELIB}/logilab/common/test
-@dirrm ${PYSITELIB}/logilab/common
-@dirrm ${PYSITELIB}/logilab
+${PYSITELIB}/logilab_common-0.42.0-py2.5-nspkg.pth
+${PYSITELIB}/logilab_common-0.42.0-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/logilab_common-0.42.0-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/logilab_common-0.42.0-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/logilab_common-0.42.0-py2.5.egg-info/namespace_packages.txt
+${PYSITELIB}/logilab_common-0.42.0-py2.5.egg-info/top_level.txt
+man/man1/pytest.1
