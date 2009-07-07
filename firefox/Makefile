@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/06/30 21:40:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/07 09:50:22 tnn2 Exp $
 #
 
 DISTNAME=	firefox-3.5-source
@@ -33,6 +33,7 @@ CONFIG_STATUS_OVERRIDE+=js/src/build/autoconf/config.status
 CONFIG_STATUS_OVERRIDE+=nsprpub/config.status
 
 CONFIGURE_ARGS+=	--enable-application=browser
+CONFIGURE_ARGS+=	--enable-libxul
 #CONFIGURE_ARGS+=	--with-libxul-sdk=/usr/pkg/lib/xulrunner-sdk
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
