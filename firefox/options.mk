@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/06/19 22:25:13 tnn2 Exp $
+# $NetBSD: options.mk,v 1.3 2009/07/07 09:58:14 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox35
 PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding mozilla-jemalloc
@@ -13,7 +13,9 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--enable-jemalloc
+. if ${OPSYS} == "SunOS"
 PLIST.jemalloc=		yes
+. endif
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
