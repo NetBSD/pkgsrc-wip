@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/06/30 20:22:31 tnn2 Exp $
+$NetBSD: patch-aa,v 1.7 2009/07/07 12:19:55 tnn2 Exp $
 
 --- configure.in.orig	2009-06-29 18:14:41.000000000 +0200
 +++ configure.in
@@ -46,12 +46,3 @@ $NetBSD: patch-aa,v 1.6 2009/06/30 20:22:31 tnn2 Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -6320,7 +6333,7 @@ dnl ====================================
- dnl = Enable code optimization. ON by default.
- dnl ========================================================
- if test -z "$MOZ_OPTIMIZE_FLAGS"; then
--	MOZ_OPTIMIZE_FLAGS="-O"
-+	MOZ_OPTIMIZE_FLAGS=""
- fi
- 
- MOZ_ARG_ENABLE_STRING(optimize,

@@ -1,16 +1,7 @@
-$NetBSD: patch-ac,v 1.7 2009/06/30 20:22:31 tnn2 Exp $
+$NetBSD: patch-ac,v 1.8 2009/07/07 12:19:55 tnn2 Exp $
 
 --- nsprpub/configure.in.orig	2009-06-29 18:15:05.000000000 +0200
 +++ nsprpub/configure.in
-@@ -62,7 +62,7 @@ USE_CPLUS=
- USE_IPV6=
- USE_MDUPDATE=
- _MACOSX_DEPLOYMENT_TARGET=
--_OPTIMIZE_FLAGS=-O
-+_OPTIMIZE_FLAGS=
- _DEBUG_FLAGS=-g
- MOZ_DEBUG=1
- MOZ_OPTIMIZE=
 @@ -1160,6 +1160,34 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
