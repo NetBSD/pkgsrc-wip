@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/06/02 13:18:43 noud4 Exp $
+# $NetBSD: Makefile,v 1.36 2009/07/08 09:46:22 absd Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -29,17 +29,17 @@ JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
 
 .if exists(${PREFIX}/java/jdk-1.6.0/bin/javac) && defined(NOT_YET)
 BUILD_DEPENDS+=		jdk16>=1:../../wip/jdk16
-MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.6.0
+ALT_BOOTDIR=		${PREFIX}/java/jdk-1.6.0
 .elif exists(${PREFIX}/java/jdk-1.5.0/bin/javac)
 #don't depend on my myself
 #BUILD_DEPENDS+=	jdk15>=1
-MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/jdk-1.5.0
+ALT_BOOTDIR=		${PREFIX}/java/jdk-1.5.0
 .elif exists(${PREFIX}/java/sun-6/bin/javac) && defined(NOT_YET)
 BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
-MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/sun-6
+ALT_BOOTDIR=		${PREFIX}/java/sun-6
 .else
 BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
-MAKE_ENV+=		ALT_BOOTDIR=${PREFIX}/java/sun-1.5
+ALT_BOOTDIR=		${PREFIX}/java/sun-1.5
 .endif
 
 .if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime) && !exists(/proc/uptime)
@@ -60,6 +60,7 @@ MAKE_ENV+=		DEV_ONLY=YES
 MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
+MAKE_ENV+=		ALT_BOOTDIR=${ALT_BOOTDIR}
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
 
