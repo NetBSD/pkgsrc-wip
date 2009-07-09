@@ -1,8 +1,7 @@
-$NetBSD: patch-mj,v 1.3 2009/06/30 20:43:37 tnn2 Exp $
+$NetBSD: patch-mj,v 1.4 2009/07/09 09:00:24 tnn2 Exp $
 
 Add DragonFly support.
 
-diff -ruN ../Orig/mozilla/security/coreconf/arch.mk ./security/coreconf/arch.mk
 --- security/coreconf/arch.mk.orig	2009-06-29 18:15:11.000000000 +0200
 +++ security/coreconf/arch.mk
 @@ -146,7 +146,7 @@ endif

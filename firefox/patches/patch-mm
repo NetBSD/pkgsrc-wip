@@ -1,4 +1,4 @@
-$NetBSD: patch-mm,v 1.3 2009/06/30 20:43:37 tnn2 Exp $
+$NetBSD: patch-mm,v 1.4 2009/07/09 09:00:24 tnn2 Exp $
 
 Don't link with -lCstd on Solaris when using GCC. From Tim Zingelman.
 part of PR pkg/39085

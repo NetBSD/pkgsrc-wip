@@ -1,4 +1,4 @@
-$NetBSD: patch-xk,v 1.3 2009/06/30 20:43:37 tnn2 Exp $
+$NetBSD: patch-xk,v 1.4 2009/07/09 09:00:25 tnn2 Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 

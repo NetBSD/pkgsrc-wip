@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.2 2009/06/30 20:22:31 tnn2 Exp $
+$NetBSD: patch-aj,v 1.3 2009/07/09 09:00:24 tnn2 Exp $
 
 --- profile/dirserviceprovider/src/nsProfileLock.cpp.orig	2009-06-29 18:15:11.000000000 +0200
 +++ profile/dirserviceprovider/src/nsProfileLock.cpp
