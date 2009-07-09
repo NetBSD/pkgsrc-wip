@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/07 14:34:42 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/09 07:40:05 tnn2 Exp $
 #
 
 PKGNAME=	filezilla-3.2.3.1
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--disable-autoupdatecheck
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../security/gnutls/libgnutls-config.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
