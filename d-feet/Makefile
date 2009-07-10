@@ -1,36 +1,42 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/23 15:22:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/10 23:27:49 jihbed Exp $
 #
 
-DISTNAME=	d-feet-0.1.8
+DISTNAME=	d-feet-0.1.10
 CATEGORIES=	devel python
-MASTER_SITES=	http://johnp.fedorapeople.org/
+MASTER_SITES=	http://johnp.fedorapeople.org/downloads/d-feet/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://fedorahosted.org/d-feet/
-COMMENT=	D-Feet is a powerful D-Bus debugger
-LICENSE=	gnu-gpl-v2
+COMMENT=	D-Feet is a powerful dbus debugger
+#LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=		user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		msgfmt
-USE_DIRS+= 		xdg-1.4
-USE_LANGUAGES=	# none
+USE_TOOLS+=	intltool msgfmt
+USE_DIRS+= 	xdg-1.4
 
-PYTHON_VERSIONS_ACCEPTED= 25
-
+PYTHON_VERSIONS_ACCEPTED= 26 25
 PYDISTUTILSPKG=		yes
+PY_PATCHPLIST=		yes
 
-.include "../../devel/libglade/buildlink3.mk"
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_SED.paths+=	-e 's,/usr/share/dfeet,${PREFIX}/share/dfeet,g'
+SUBST_SED.paths+=	-e 's,/usr/share/gnome/dfeet,${PREFIX}/share/gnome/dfeet,g'
+SUBST_SED.paths+=	-e 's,/usr/share/dfeet/pixmaps,${PREFIX}/share/dfeet/pixmaps,g'
+SUBST_SED.paths+=	-e 's,/usr/share/locale,${PREFIX}/share/locale,g'
+SUBST_FILES.paths+=	d-feet
+SUBST_MESSAGE.paths=	Fixing header search paths.
+
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.23.4
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

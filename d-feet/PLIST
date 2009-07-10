@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/23 15:22:44 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/10 23:27:49 jihbed Exp $
 bin/d-feet
+${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/top_level.txt
 ${PYSITELIB}/dfeet/DFeetApp.py
 ${PYSITELIB}/dfeet/DFeetApp.pyc
 ${PYSITELIB}/dfeet/DFeetApp.pyo
@@ -65,22 +69,7 @@ share/icons/hicolor/16x16/apps/dfeet-method.png
 share/icons/hicolor/16x16/apps/dfeet-object.png
 share/icons/hicolor/16x16/apps/dfeet-property-category.png
 share/icons/hicolor/16x16/apps/dfeet-property.png
-share/icons/hicolor/16x16/apps/dfeet-read-property.png
-share/icons/hicolor/16x16/apps/dfeet-readwrite-property.png
 share/icons/hicolor/16x16/apps/dfeet-signal-category.png
 share/icons/hicolor/16x16/apps/dfeet-signal.png
-share/icons/hicolor/16x16/apps/dfeet-write-property.png
 share/icons/hicolor/48x48/apps/dfeet-icon.png
-@exec ${MKDIR} %D/share/omf/dfeet
-@dirrm share/omf/dfeet
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/dfeet
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/dfeet/_ui
-@dirrm ${PYSITELIB}/dfeet
+@pkgdir share/omf/dfeet

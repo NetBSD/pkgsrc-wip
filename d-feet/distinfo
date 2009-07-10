@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/23 15:22:44 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/07/10 23:27:49 jihbed Exp $
 
-SHA1 (d-feet-0.1.8.tar.gz) = ea4e22eafc7a405542bc7d25ff2b0f6a352de487
-RMD160 (d-feet-0.1.8.tar.gz) = 6bffe6e77ffa09e0a7b5559b2b21a01eb2c56daa
-Size (d-feet-0.1.8.tar.gz) = 38226 bytes
-SHA1 (patch-aa) = 41e9a956555d1e9116b2e0687bd886e55faf0bcc
+SHA1 (d-feet-0.1.10.tar.bz2) = 2a70b62df99595a3d6a0ecdead0a05ccb77eaf75
+RMD160 (d-feet-0.1.10.tar.bz2) = 9dc7401e0cc0f6ec6a0a9e8a8bdf4af4a1be0802
+Size (d-feet-0.1.10.tar.bz2) = 34488 bytes
