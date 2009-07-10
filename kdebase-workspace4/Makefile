@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/06/03 08:28:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/10 22:15:23 absd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -88,7 +88,7 @@ post-install:
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../wip/kde4/kde4.mk"
 
-PYTHON_VERSIONS_ACCEPTED= 25 # because kdebindings4-python
+PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/libusb/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/11 23:08:17 mwdavies Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/10 22:15:23 absd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -6,7 +6,7 @@ COMMENT=	Utilities for the KDE integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
-PYTHON_VERSIONS_ACCEPTED= 25
+PYTHON_VERSIONS_ACCEPTED= 26 25
 #make sure cmake picks up the same Python version as pkgsrc
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 
