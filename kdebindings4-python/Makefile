@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/10 22:15:23 absd Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/10 22:28:28 absd Exp $
 
 PKGNAME=	kdebindings4-python-${_KDE_VERSION}
 DISTNAME=	kdebindings-${_KDE_VERSION}
@@ -23,15 +23,15 @@ PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/akonadi/messagethreadingattribute.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/dnssd/servicebase.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kdecore/kptydevice.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kdecore/typedefs.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kio/global.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kio/kacl.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/kparts/factory.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/phonon/backendcapabilities.sip.orig
-	${RM} ${DESTDIR}${PREFIX}/share/sip2.5/PyKDE4/plasma/abstractrunner.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/messagethreadingattribute.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/dnssd/servicebase.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/kptydevice.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kdecore/typedefs.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kio/global.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kio/kacl.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/kparts/factory.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/phonon/backendcapabilities.sip.orig
+	${RM} ${DESTDIR}${PREFIX}/share/sip${PYVERSSUFFIX}/PyKDE4/plasma/abstractrunner.sip.orig
 
 .include "../../wip/kde4/kde4.mk"
 
