@@ -1,0 +1,2 @@
+Io addon for SQLite. SQLite provides a embedded simple and fast (2x faster than
+PostgreSQL or MySQL) SQL database.
