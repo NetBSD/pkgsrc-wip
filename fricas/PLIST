@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/02/28 14:59:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/07/11 15:06:19 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -116,6 +116,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMBOPC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMMONOP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMMUPC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPAR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/COMPFACT.${FASL}
@@ -290,7 +291,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATCP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATRP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM1.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMFUN.${FASL}
@@ -838,6 +839,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QFCAT2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QFORM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUAT2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/QUATCT2.${FASL}
@@ -1712,6 +1714,8 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/POLY.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/POLY.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT.pht
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT2.ht
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/QUAT2.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RADIX.ht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RADIX.pht
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/hypertex/pages/RECLOS.ht
@@ -2290,12 +2294,6 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuild
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.xpm
@@ -2305,21 +2303,6 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawing
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.xpm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/data
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/image.bm
