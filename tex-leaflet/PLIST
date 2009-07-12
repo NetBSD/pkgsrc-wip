@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/26 13:18:15 leot1990 Exp $
-${PKG_LOCALTEXMFPREFIX}/doc/latex/leaflet/README
-${PKG_LOCALTEXMFPREFIX}/doc/latex/leaflet/leaflet-manual.pdf
-${PKG_LOCALTEXMFPREFIX}/doc/latex/leaflet/leaflet.pdf
-${PKG_LOCALTEXMFPREFIX}/tex/latex/leaflet/leaflet.cls
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/leaflet
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/leaflet
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex
