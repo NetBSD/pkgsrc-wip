@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2009/06/27 14:23:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.79 2009/07/13 13:17:13 thomasklausner Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1617,8 +1617,6 @@ share/emacs/${PKGVERSION}/lisp/facemenu.el.gz
 share/emacs/${PKGVERSION}/lisp/facemenu.elc
 share/emacs/${PKGVERSION}/lisp/faces.el.gz
 share/emacs/${PKGVERSION}/lisp/faces.elc
-share/emacs/${PKGVERSION}/lisp/fadr.el.gz
-share/emacs/${PKGVERSION}/lisp/fadr.elc
 share/emacs/${PKGVERSION}/lisp/ffap.el.gz
 share/emacs/${PKGVERSION}/lisp/ffap.elc
 share/emacs/${PKGVERSION}/lisp/filecache.el.gz
@@ -1991,8 +1989,6 @@ share/emacs/${PKGVERSION}/lisp/international/characters.el.gz
 share/emacs/${PKGVERSION}/lisp/international/characters.elc
 share/emacs/${PKGVERSION}/lisp/international/charprop.el
 share/emacs/${PKGVERSION}/lisp/international/cp51932.el
-share/emacs/${PKGVERSION}/lisp/international/encoded-kb.el.gz
-share/emacs/${PKGVERSION}/lisp/international/encoded-kb.elc
 share/emacs/${PKGVERSION}/lisp/international/eucjp-ms.el
 share/emacs/${PKGVERSION}/lisp/international/fontset.el.gz
 share/emacs/${PKGVERSION}/lisp/international/fontset.elc
