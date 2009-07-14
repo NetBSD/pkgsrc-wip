@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/07/14 19:26:50 tnn2 Exp $
+
+--- configure.orig	2009-07-10 17:38:46.000000000 +0200
++++ configure
+@@ -51,6 +51,8 @@ case "$OS" in
+     ;;
+   freebsd)
+     ;;
++  netbsd)
++    ;;
+   sunos)
+     OS='solaris'
+     ;;
+@@ -106,22 +108,18 @@ LIBPTHREAD="-lpthread"
+ LIBCAP="-lcap"
+ GSOAP=""
+ GSOAP_IMPORT=""
+-INCX11="/usr/local/include"
+-LIBX11="-L/usr/X11R6/lib -L/usr/X11R6/lib64 -L/usr/local/lib -lXext -lX11"
+-LIBXCURSOR="-lXcursor"
+-LIBXMU="-lXmu"
+-MESA="-lGL"
+-INCZ=""
+-LIBZ="-lz"
+-INCPNG=""
+-LIBPNG="-lpng"
+-if [ "$OS" = "freebsd" ]; then
+-  INCCURL="-I/usr/local/include"
+-  LIBCURL="-L/usr/local/lib -lcurl"
+-else
+-  INCCURL=""
+-  LIBCURL="-lcurl"
+-fi
++INCX11="-I${X11PREFIX}/include"
++LIBX11="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXext -lX11"
++LIBXCURSOR="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXcursor"
++LIBXMU="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXmu"
++MESA="-L${MESAPREFIX}/lib -Wl,-R${MESAPREFIX}/lib -lGL"
++INCZ="-I${ZLIBPREFIX}/include"
++LIBZ="-L${ZLIBPREFIX}/lib -Wl,-R${ZLIBPREFIX}/lib -lz"
++INCPNG="$(pkg-config --cflags libpng)"
++# XXX why doesn't pkg-config emit a run path?
++LIBPNG="-Wl,-R/usr/pkg/lib $(pkg-config --libs libpng)"
++INCCURL="$(pkg-config --cflags libcurl)"
++LIBCURL="$(pkg-config --libs libcurl)"
+ PKGCONFIG="`which_wrapper pkg-config`"
+ PYTHONDIR="/usr /usr/local"
+ QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
