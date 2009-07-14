@@ -1,0 +1,4 @@
+The SRecord package is a collection of powerful tools for manipulating
+EPROM load files. SRecord is written in C++ and polymorphism is used to
+provide the file format flexibility and arbitrary filter chaining. Adding
+more file formats and filters is relatively simple.
