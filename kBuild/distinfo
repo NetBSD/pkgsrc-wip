@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/07/14 19:25:05 tnn2 Exp $
+
+SHA1 (kBuild-0.1.5-p1-all.tar.gz) = 3cb17d55b9f52e1b99f82fb239659815b13a6503
+RMD160 (kBuild-0.1.5-p1-all.tar.gz) = 532669d645cc03282b9976ca91962d08acbcb7ca
+Size (kBuild-0.1.5-p1-all.tar.gz) = 12850052 bytes
+SHA1 (patch-aa) = de3c422312543038d06a183c0ca99587ae72b776
+SHA1 (patch-ab) = 424e3f5de4ef9bac4e1af515b53be65b3f79716b
+SHA1 (patch-ac) = 37751c52b0eadf39bd50e0e845ce99781f3a1941
+SHA1 (patch-ad) = 78c64ec70e3000d2113d995da478165d433899c6
