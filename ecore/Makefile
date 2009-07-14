@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/06/12 00:20:08 jsonn Exp $
+# $NetBSD: Makefile,v 1.29 2009/07/14 22:25:31 jsonn Exp $
 #
 
-DISTNAME=	ecore-0.9.9.060
-PKGREVISION=	1
+DISTNAME=	ecore-0.9.9.061
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-06-14/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -14,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--disable-openssl \
 		 	--disable-ecore-directfb \
