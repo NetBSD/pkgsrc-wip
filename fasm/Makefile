@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2009/04/01 16:36:23 athaba Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/15 22:12:44 athaba Exp $
 #
 
-DISTNAME=		fasm-1.67.38
+DISTNAME=		fasm-1.68
 CATEGORIES=		devel
 MASTER_SITES=		http://flatassembler.net/
 
 MAINTAINER=		athaba@inode.at
 HOMEPAGE=		http://flatassembler.net/
 COMMENT=		Open source assembly language compiler
+
+LICENSE=		modified-bsd
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 PKG_DESTDIR_SUPPORT=	user-destdir
