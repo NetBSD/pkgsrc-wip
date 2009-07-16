@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3503 2009/07/16 11:22:41 prudhvikrishna Exp $
+# $Id: Makefile,v 1.3504 2009/07/16 15:18:25 prudhvikrishna Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2266,6 +2266,7 @@ SUBDIR+=	yafray
 SUBDIR+=	yakuake
 SUBDIR+=	yamcha
 SUBDIR+=	yaws
+SUBDIR+=	yersinia
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
