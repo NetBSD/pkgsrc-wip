@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 17:47:53 jihbed Exp $
+${PYSITELIB}/decorator-3.0.1-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/decorator-3.0.1-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/decorator-3.0.1-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/decorator-3.0.1-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/decorator-3.0.1-py2.5.egg-info/top_level.txt
+${PYSITELIB}/decorator.py
+${PYSITELIB}/decorator.pyc
+${PYSITELIB}/decorator.pyo
+share/doc/py-decorator/documentation.html
+share/doc/py-decorator/documentation.pdf
