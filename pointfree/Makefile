@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/26 09:12:22 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/16 09:56:27 phonohawk Exp $
 #
 
 DISTNAME=	pointfree-1.0.1
@@ -10,5 +10,5 @@ COMMENT=	Convert Haskell expressions to pointfree form
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
-.include "../../wip/parsec/buildlink3.mk"
+.include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
