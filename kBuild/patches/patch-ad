@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/07/14 19:25:05 tnn2 Exp $
+$NetBSD: patch-ad,v 1.2 2009/07/16 13:09:26 tnn2 Exp $
 
 --- src/kmk/Makefile.kmk.orig	2009-01-10 03:24:02.000000000 +0100
 +++ src/kmk/Makefile.kmk
@@ -27,7 +27,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/07/14 19:25:05 tnn2 Exp $
  kmk_DEFS.freebsd.x86 = CONFIG_WITHOUT_THREADS
  
 +kmk_LIBS.netbsd.amd64 = pthread
-+kmk_DEFS.netbsd.freebsd.x86 = CONFIG_WITHOUT_THREADS
++kmk_DEFS.netbsd.x86 = CONFIG_WITHOUT_THREADS
 +
  #
  # kmkbuiltin commands
