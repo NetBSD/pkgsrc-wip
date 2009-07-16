@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3500 2009/07/14 09:12:06 yhardy Exp $
+# $Id: Makefile,v 1.3501 2009/07/16 02:23:48 prudhvikrishna Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -107,6 +107,7 @@ SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	armagetronad
 SUBDIR+=	arora
+SUBDIR+=	arpdig
 SUBDIR+=	artemis
 SUBDIR+=	aspell-finnish
 SUBDIR+=	asymptote
@@ -260,6 +261,7 @@ SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
 SUBDIR+=	dash
+SUBDIR+=	datapipe
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
@@ -1824,6 +1826,7 @@ SUBDIR+=	rss-glib
 SUBDIR+=	rsyslog
 SUBDIR+=	rte
 SUBDIR+=	rthread
+SUBDIR+=	rtpbreak
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
