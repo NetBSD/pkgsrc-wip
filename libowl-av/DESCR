@@ -1,0 +1,4 @@
+libowl-av (OpenedHand Widget Library - Audio/Video) is a collection of objects
+for use in multimedia applications. These include a video widget, as well as
+audio player and metadata reader objects. All of these are backed by GStreamer
+and include Vala bindings.
