@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 18:08:04 jihbed Exp $
+bin/yauap
+share/doc/yauap

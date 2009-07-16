@@ -1,0 +1,3 @@
+Yauap is a simple commandline audio player based on the GStreamer multimedia
+framework. There is also a DBus interface that allows yauap to act as a backend
+for the Amarok audio player
