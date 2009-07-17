@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3505 2009/07/17 09:20:14 rsmarples Exp $
+# $Id: Makefile,v 1.3506 2009/07/17 23:03:24 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -444,7 +444,6 @@ SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-smbfs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
-SUBDIR+=	fuzil
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fvwm1-tch
