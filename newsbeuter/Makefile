@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/06/22 15:03:49 smoppy Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/17 20:37:05 smoppy Exp $
 
 DISTNAME=	newsbeuter-2.0
 CATEGORIES=	news
@@ -10,9 +10,10 @@ COMMENT=	Open-source RSS/Atom feed reader for text terminals
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_NCURSES=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl
+USE_NCURSES=	yes
+USE_GNU_ICONV=	yes
 
 REPLACE_PERL+=	txt2h.pl
 
