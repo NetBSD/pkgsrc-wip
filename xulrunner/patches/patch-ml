@@ -1,0 +1,17 @@
+$NetBSD: patch-ml,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
+
+Treat DragonFly like FreeBSD.
+
+diff -ruN ../Orig/mozilla/js/src/Makefile.in ./js/src/Makefile.in
+--- js/src/Makefile.in.orig	2008-12-24 19:36:25.000000000 +0100
++++ js/src/Makefile.in
+@@ -323,6 +323,9 @@ endif # WINNT
+ ifeq ($(OS_ARCH),FreeBSD)
+ LDFLAGS		+= -pthread
+ endif
++ifeq ($(OS_ARCH),DragonFly)
++LDFLAGS		+= -pthread
++endif
+ ifeq ($(OS_ARCH),IRIX)
+ ifdef USE_N32
+ DASH_R		+= -n32

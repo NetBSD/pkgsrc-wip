@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
+
+--- dbm/src/mktemp.c.orig	2006-04-01 02:23:40.000000000 +0200
++++ dbm/src/mktemp.c
+@@ -96,7 +96,7 @@ mktemp(char *path)
+ static int 
+ _gettemp(char *path, register int *doopen, int extraFlags)
+ {    
+-#if !defined(_WINDOWS) || defined(_WIN32)
++#if (!defined(_WINDOWS) || defined(_WIN32)) && !defined(errno)
+ 	extern int errno;                    
+ #endif
+ 	register char *start, *trv;
