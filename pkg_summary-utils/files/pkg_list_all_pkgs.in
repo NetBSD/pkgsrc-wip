@@ -94,24 +94,21 @@ get_SUBDIR (){
 }
 
 prepand (){
-    awk -v prefix="$1" '{print prefix $0}'
+    awk -v prefix="$1" '
+{
+   for (i=1; i <= NF; ++i)
+      print prefix $i
 }
-
-space_to_NL () {
-    tr ' ' '
 '
 }
 
 list_all_packages (){
     categories="`get_SUBDIR`"
     for c in $categories; do
-	(
-	    cd $c &&
-	    runpipe0 \
-		get_SUBDIR '|' \
-		space_to_NL '|' \
-		prepand "$c/"
-	)
+	cd "$PKGSRCDIR/$c" &&
+	runpipe0 \
+	    get_SUBDIR '|' \
+	    prepand "$c/"
     done
 }
 
