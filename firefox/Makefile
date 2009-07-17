@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2009/07/16 09:04:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/17 09:32:22 tnn2 Exp $
 #
 
-DISTNAME=	firefox-3.5-source
-PKGNAME=	firefox35-3.5
+DISTNAME=	firefox-${FIREFOX_VER}-source
+PKGNAME=	firefox35-${FIREFOX_VER}
+FIREFOX_VER=	3.5.1
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/3.5/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
