@@ -105,7 +105,7 @@ prepand (){
 list_all_packages (){
     categories="`get_SUBDIR`"
     for c in $categories; do
-	cd "$PKGSRCDIR/$c" &&
+	cd "$PKGSRCDIR/$c";
 	runpipe0 \
 	    get_SUBDIR '|' \
 	    prepand "$c/"
