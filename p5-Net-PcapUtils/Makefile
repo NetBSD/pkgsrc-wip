@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/26 03:14:33 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/17 17:11:05 adrian_p Exp $
 #
 
 DISTNAME=	Net-PcapUtils-0.01
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~timpotter/Net-PcapUtils-0.01/
 COMMENT=	Utility routines for Net::Pcap module
 

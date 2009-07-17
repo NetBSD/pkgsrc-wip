@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/09 01:24:26 jsonn Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/17 17:11:04 adrian_p Exp $
 #
 
 DISTNAME=	audit-system-0.01
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/support/security/
 COMMENT=	Check the NetBSD base OS for known vulnerabilities
 

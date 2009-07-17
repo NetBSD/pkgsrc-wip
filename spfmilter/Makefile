@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/05/22 22:48:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/17 17:11:05 adrian_p Exp $
 
 DISTNAME=	spfmilter-1.0.8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.libspf2.org/patch/
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libspf2.org/
 COMMENT=	Implementation of the Sender Policy Framework (SPF) as a milter
 
