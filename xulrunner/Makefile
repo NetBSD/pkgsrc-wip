@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2009/06/18 08:00:50 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/18 19:50:22 tnn2 Exp $
 #
 
-DISTNAME=	xulrunner-1.9.0.11-source
+DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
+XULRUNNER_VER=	1.9.0.11
 CATEGORIES=	www devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/1.9.0.11/source/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -32,6 +33,8 @@ PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-nspr.pc.in
 PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-nss.pc.in
 PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-plugin.pc.in
 
+CHECK_SHLIBS_SUPPORTED=	no # XXX
+
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
@@ -51,6 +54,7 @@ CONFIGURE_ARGS+=	--enable-system-cairo --enable-system-lcms
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
+CONFIGURE_ARGS+=	--disable-crashreporter
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
