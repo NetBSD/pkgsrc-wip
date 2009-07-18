@@ -1,0 +1,24 @@
+Storm is an Object Relational Mapper for Python.
+
+    * Storm is fast.
+    * Storm lets you efficiently access and update large datasets
+    by allowing you to formulate complex queries spanning multiple
+    tables using Python.
+    * Storm allows you to fallback to SQL if needed (or if you just
+    prefer), allowing you to mix "old school" code and ORM code
+    * Storm handles composed primary keys with ease (no need for
+    surrogate keys).
+    * Storm doesn't do schema management, and as a result you're
+    free to manage the schema as wanted, and creating classes that
+    work with Storm is clean and simple.
+    * Storm works very well connecting to several databases and
+    using the same Python types (or different ones) with all of
+    them.
+    * Storm can handle obj.attr = <A SQL expression> assignments,
+    when that's really needed (the expression is executed at
+    INSERT/UPDATE time).
+    * Storm handles relationships between objects even before they
+    were added to a database.
+    * Storm works well with existing database schemas.
+    * Storm will flush changes to the database automatically when
+    needed, so that queries made affect recently modified objects.
