@@ -1,0 +1,7 @@
+Needs an example config file and rc.d script
+
+This package should really test for OS-specific stuff:
+ lm-sensors when on linux
+ libstatgrab on *BSD
+
+Put everything in options since there are 70 possible plugins for this
