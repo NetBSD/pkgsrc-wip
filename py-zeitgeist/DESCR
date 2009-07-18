@@ -1,0 +1,6 @@
+Zeitgeist is a service that logs the users activities and determines
+which files are relevant to one another. It supports simple searching,
+filtering by type and mimetype, tagging, etc.
+
+Note that this package only contains the daemon, which you can use
+together with several different user interfaces.
