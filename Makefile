@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3507 2009/07/17 23:57:09 jihbed Exp $
+# $Id: Makefile,v 1.3508 2009/07/18 13:40:33 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -523,6 +523,7 @@ SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnupod
 SUBDIR+=	godura
 SUBDIR+=	goldwater
+SUBDIR+=	google-perftools
 SUBDIR+=	gov2
 SUBDIR+=	gpak
 SUBDIR+=	gpicview
