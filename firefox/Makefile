@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/17 09:32:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.25 2009/07/18 20:57:09 tnn2 Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
@@ -21,6 +21,8 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
+
+PRIVILEGED_STAGES=	clean
 CHECK_SHLIBS_SUPPORTED=	no # XXX
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess

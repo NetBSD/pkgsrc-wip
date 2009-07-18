@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/18 19:50:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/18 20:57:09 tnn2 Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
@@ -33,6 +33,7 @@ PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-nspr.pc.in
 PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-nss.pc.in
 PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-plugin.pc.in
 
+PRIVILEGED_STAGES=	clean
 CHECK_SHLIBS_SUPPORTED=	no # XXX
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
