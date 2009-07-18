@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3510 2009/07/18 15:26:34 thomasklausner Exp $
+# $Id: Makefile,v 1.3511 2009/07/18 15:28:07 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1265,6 +1265,7 @@ SUBDIR+=	nzbget
 SUBDIR+=	ocp
 SUBDIR+=	octave-nox11
 SUBDIR+=	ode
+SUBDIR+=	ogmrip
 SUBDIR+=	omniORB
 SUBDIR+=	oolite
 SUBDIR+=	oops
