@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3509 2009/07/18 14:38:07 thomasklausner Exp $
+# $Id: Makefile,v 1.3510 2009/07/18 15:26:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1328,6 +1328,7 @@ SUBDIR+=	orion
 SUBDIR+=	ortp
 SUBDIR+=	osmose
 SUBDIR+=	outguess
+SUBDIR+=	overgod
 SUBDIR+=	owl
 SUBDIR+=	oww-nox11
 SUBDIR+=	ozymandns
