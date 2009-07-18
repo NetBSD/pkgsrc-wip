@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3513 2009/07/18 20:40:50 thomasklausner Exp $
+# $Id: Makefile,v 1.3514 2009/07/18 21:15:15 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1753,6 +1753,7 @@ SUBDIR+=	py-speex
 SUBDIR+=	py-sshpt
 SUBDIR+=	py-statgrap
 SUBDIR+=	py-stem
+SUBDIR+=	py-storm
 SUBDIR+=	py-sympy-core
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
@@ -1775,6 +1776,7 @@ SUBDIR+=	py-xlrd
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
+SUBDIR+=	py-zeitgeist
 SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pygopherd
