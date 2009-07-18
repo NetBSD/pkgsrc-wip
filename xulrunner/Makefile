@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2009/07/18 20:57:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/18 22:52:00 tnn2 Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
 PKGNAME=	${DISTNAME:S/-source//}
 XULRUNNER_VER=	1.9.0.11
-CATEGORIES=	www devel
+CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=xulrunner/releases/${XULRUNNER_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -71,10 +71,10 @@ create-rm-wrapper:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
-#post-install:
-#	cd ${WRKSRC}/dist/include && \
-#	  ${INSTALL_DATA} $$(find . ! -type d -print) \
-#	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
+post-install:
+	cd ${WRKSRC}/dist/include && \
+	  ${INSTALL_DATA} `find js -name "*.h" -print` js/jsproto.tbl \
+	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"

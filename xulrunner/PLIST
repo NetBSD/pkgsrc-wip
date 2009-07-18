@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/18 08:18:49 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/07/18 22:52:00 tnn2 Exp $
 bin/xulrunner
 include/xulrunner/stable/base64.h
 include/xulrunner/stable/blapit.h
@@ -44,7 +44,7 @@ include/xulrunner/stable/md/_irix64.cfg
 include/xulrunner/stable/md/_linux.cfg
 include/xulrunner/stable/md/_ncr.cfg
 include/xulrunner/stable/md/_nec.cfg
-include/xulrunner/stable/md/_netbsd.cfg
+include/xulrunner/stable/md/_${LOWER_OPSYS}.cfg
 include/xulrunner/stable/md/_nextstep.cfg
 include/xulrunner/stable/md/_nto.cfg
 include/xulrunner/stable/md/_openbsd.cfg
@@ -464,10 +464,55 @@ include/xulrunner/unstable/crmft.h
 include/xulrunner/unstable/cryptohi.h
 include/xulrunner/unstable/cryptoht.h
 include/xulrunner/unstable/ecl-exp.h
+include/xulrunner/unstable/fdlibm.h
 include/xulrunner/unstable/hasht.h
 include/xulrunner/unstable/jar-ds.h
 include/xulrunner/unstable/jar.h
 include/xulrunner/unstable/jarfile.h
+include/xulrunner/unstable/jsapi.h
+include/xulrunner/unstable/jsarena.h
+include/xulrunner/unstable/jsarray.h
+include/xulrunner/unstable/jsatom.h
+include/xulrunner/unstable/jsautocfg.h
+include/xulrunner/unstable/jsautokw.h
+include/xulrunner/unstable/jsbit.h
+include/xulrunner/unstable/jsbool.h
+include/xulrunner/unstable/jsclist.h
+include/xulrunner/unstable/jscntxt.h
+include/xulrunner/unstable/jscompat.h
+include/xulrunner/unstable/jsconfig.h
+include/xulrunner/unstable/jsdate.h
+include/xulrunner/unstable/jsdbgapi.h
+include/xulrunner/unstable/jsdhash.h
+include/xulrunner/unstable/jsdtoa.h
+include/xulrunner/unstable/jsemit.h
+include/xulrunner/unstable/jsfun.h
+include/xulrunner/unstable/jsgc.h
+include/xulrunner/unstable/jshash.h
+include/xulrunner/unstable/jsinterp.h
+include/xulrunner/unstable/jsiter.h
+include/xulrunner/unstable/jslock.h
+include/xulrunner/unstable/jslong.h
+include/xulrunner/unstable/jsmath.h
+include/xulrunner/unstable/jsnum.h
+include/xulrunner/unstable/jsobj.h
+include/xulrunner/unstable/jsopcode.h
+include/xulrunner/unstable/jsotypes.h
+include/xulrunner/unstable/jsparse.h
+include/xulrunner/unstable/jsprf.h
+include/xulrunner/unstable/jsproto.tbl
+include/xulrunner/unstable/jsprvtd.h
+include/xulrunner/unstable/jspubtd.h
+include/xulrunner/unstable/jsregexp.h
+include/xulrunner/unstable/jsscan.h
+include/xulrunner/unstable/jsscope.h
+include/xulrunner/unstable/jsscript.h
+include/xulrunner/unstable/jsstddef.h
+include/xulrunner/unstable/jsstr.h
+include/xulrunner/unstable/jstypes.h
+include/xulrunner/unstable/jsutil.h
+include/xulrunner/unstable/jsxdrapi.h
+include/xulrunner/unstable/jsxml.h
 include/xulrunner/unstable/key.h
 include/xulrunner/unstable/keyhi.h
 include/xulrunner/unstable/keyt.h
@@ -2144,38 +2189,3 @@ share/idl/xulrunner/unstable/xpcIJSWeakReference.idl
 share/idl/xulrunner/unstable/xpccomponents.idl
 share/idl/xulrunner/unstable/xpcexception.idl
 share/idl/xulrunner/unstable/xpcjsid.idl
-@dirrm share/idl/xulrunner/unstable
-@dirrm share/idl/xulrunner/stable
-@dirrm share/idl/xulrunner
-@dirrm share/idl
-@dirrm lib/xulrunner/res/html
-@dirrm lib/xulrunner/res/fonts
-@dirrm lib/xulrunner/res/entityTables
-@dirrm lib/xulrunner/res/dtd
-@dirrm lib/xulrunner/res
-@dirrm lib/xulrunner/plugins
-@dirrm lib/xulrunner/modules
-@dirrm lib/xulrunner/icons
-@dirrm lib/xulrunner/greprefs
-@dirrm lib/xulrunner/dictionaries
-@dirrm lib/xulrunner/defaults/profile/chrome
-@dirrm lib/xulrunner/defaults/profile/US/chrome
-@dirrm lib/xulrunner/defaults/profile/US
-@dirrm lib/xulrunner/defaults/profile
-@dirrm lib/xulrunner/defaults/pref
-@dirrm lib/xulrunner/defaults/autoconfig
-@dirrm lib/xulrunner/defaults
-@dirrm lib/xulrunner/components
-@dirrm lib/xulrunner/chrome/icons/default
-@dirrm lib/xulrunner/chrome/icons
-@dirrm lib/xulrunner/chrome
-@dirrm lib/xulrunner-sdk/sdk/lib
-@dirrm lib/xulrunner-sdk/sdk
-@dirrm lib/xulrunner-sdk
-@dirrm lib/xulrunner
-@dirrm include/xulrunner/unstable
-@dirrm include/xulrunner/stable/private
-@dirrm include/xulrunner/stable/obsolete
-@dirrm include/xulrunner/stable/md
-@dirrm include/xulrunner/stable
-@dirrm include/xulrunner
