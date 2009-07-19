@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/19 21:48:10 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/19 22:26:29 pettai Exp $
 #
 
 DISTNAME=		cacti-0.8.7e
@@ -8,6 +8,7 @@ MASTER_SITES=		http://sourceforge.net/project/showfiles.php?group_id=34886&packa
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.cacti.net/
 COMMENT=		Frontend to rrdtool for monitoring systems and services
+LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
