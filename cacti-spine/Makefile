@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/19 22:09:39 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/19 22:22:42 pettai Exp $
 #
 
 DISTNAME=	cacti-spine-0.8.7e
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.cacti.net/downloads/spine/
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.cacti.net/spine_info.php
 COMMENT=	Spine is a poller for Cacti for large installations
+LICENSE=	cacti-license
+LICENSE_FILE=	${FILESDIR}/cacti-license
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c c++
