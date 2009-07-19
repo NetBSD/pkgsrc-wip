@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/06 21:33:41 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/19 22:01:50 pettai Exp $
 share/cacti/LICENSE
 share/cacti/README
 share/cacti/about.php
@@ -15,6 +15,7 @@ share/cacti/cli/add_perms.php
 share/cacti/cli/add_tree.php
 share/cacti/cli/copy_user.php
 share/cacti/cli/host_update_template.php
+share/cacti/cli/import_template.php
 share/cacti/cli/poller_data_sources_reapply_names.php
 share/cacti/cli/poller_graphs_reapply_names.php
 share/cacti/cli/poller_output_empty.php
@@ -31,10 +32,7 @@ share/cacti/data_sources.php
 share/cacti/data_templates.php
 share/cacti/docs/CHANGELOG
 share/cacti/docs/CONTRIB
-share/cacti/docs/INSTALL
 share/cacti/docs/README
-share/cacti/docs/REQUIREMENTS
-share/cacti/docs/UPGRADE
 share/cacti/docs/html/LICENSE.html
 share/cacti/docs/html/advanced_topics.html
 share/cacti/docs/html/basics.html
@@ -109,7 +107,6 @@ share/cacti/docs/html/install_unix.html
 share/cacti/docs/html/install_windows.html
 share/cacti/docs/html/installation.html
 share/cacti/docs/html/making_scripts_work_with_cacti.html
-share/cacti/docs/html/manual.css
 share/cacti/docs/html/migration_php_scripts_to_script_server.html
 share/cacti/docs/html/new_graphs.html
 share/cacti/docs/html/operating_principles.html
@@ -136,7 +133,7 @@ share/cacti/docs/html/user_management.html
 share/cacti/docs/html/using_spine.html
 share/cacti/docs/html/variables.html
 share/cacti/docs/pdf/README
-share/cacti/docs/text/manual.txt
+share/cacti/docs/txt/manual.txt
 share/cacti/gprint_presets.php
 share/cacti/graph.php
 share/cacti/graph_image.php
@@ -299,6 +296,7 @@ share/cacti/install/0_8_7_to_0_8_7a.php
 share/cacti/install/0_8_7a_to_0_8_7b.php
 share/cacti/install/0_8_7b_to_0_8_7c.php
 share/cacti/install/0_8_7c_to_0_8_7d.php
+share/cacti/install/0_8_7d_to_0_8_7e.php
 share/cacti/install/0_8_to_0_8_1.php
 share/cacti/install/index.php
 share/cacti/install/index.php.orig
@@ -426,6 +424,7 @@ share/cacti/lib/utility.php
 share/cacti/lib/variables.php
 share/cacti/lib/xml.php
 share/cacti/log/.htaccess
+share/cacti/log/.placeholder
 share/cacti/logout.php
 share/cacti/poller.php
 share/cacti/poller_commands.php
@@ -473,29 +472,3 @@ share/cacti/tree.php
 share/cacti/user_admin.php
 share/cacti/utilities.php
 share/examples/cacti/cacti.conf
-@dirrm share/examples/cacti
-@dirrm share/cacti/scripts
-@dirrm share/cacti/rra
-@dirrm share/cacti/resource/snmp_queries
-@dirrm share/cacti/resource/script_server
-@dirrm share/cacti/resource/script_queries
-@dirrm share/cacti/resource
-@dirrm share/cacti/log
-@dirrm share/cacti/lib/adodb/lang
-@dirrm share/cacti/lib/adodb/drivers
-@dirrm share/cacti/lib/adodb/datadict
-@dirrm share/cacti/lib/adodb
-@dirrm share/cacti/lib
-@dirrm share/cacti/install
-@dirrm share/cacti/include/treeview
-@dirrm share/cacti/include/jscalendar/lang
-@dirrm share/cacti/include/jscalendar
-@dirrm share/cacti/include
-@dirrm share/cacti/images
-@dirrm share/cacti/docs/pdf
-@dirrm share/cacti/docs/text
-@dirrm share/cacti/docs/html/images
-@dirrm share/cacti/docs/html
-@dirrm share/cacti/docs
-@dirrm share/cacti/cli
-@dirrm share/cacti
