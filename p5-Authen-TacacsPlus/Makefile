@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2009/03/08 12:03:26 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/19 17:42:34 pettai Exp $
 #
 
-DISTNAME=	TacacsPlus-0.16
-PKGNAME=	p5-Authen-${DISTNAME}
+DISTNAME=	Authen-TacacsPlus-0.20
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	http://search.cpan.org/~mshoyher/TacacsPlus-0.16/TacacsPlus.pm
+HOMEPAGE=	http://search.cpan.org/~mikem/Authen-TacacsPlus/TacacsPlus.pm
 COMMENT=	Perl extension for authentication using tacacs+ server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
