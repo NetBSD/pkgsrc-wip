@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/03 15:44:27 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/19 16:52:29 pettai Exp $
 bin/alogin
 bin/arancid
 bin/blogin
@@ -101,5 +101,3 @@ share/doc/rancid/rancid.conf.sample
 share/doc/rancid/rtrfilter
 share/examples/rancid/lg.conf.sample
 share/examples/rancid/rancid.conf.sample
-@dirrm share/examples/rancid
-@dirrm share/doc/rancid
