@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/04/06 21:49:27 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/19 22:09:39 pettai Exp $
 #
 
-DISTNAME=	cacti-spine-0.8.7c
+DISTNAME=	cacti-spine-0.8.7e
 CATEGORIES=	net
 MASTER_SITES=	http://www.cacti.net/downloads/spine/
 
@@ -39,7 +39,7 @@ pre-configure:
 		automake -acf
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/spine.conf.dist ${EGDIR}/spine.conf.dist
+	${INSTALL_DATA} ${WRKSRC}/spine.conf ${EGDIR}/spine.conf.dist
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
