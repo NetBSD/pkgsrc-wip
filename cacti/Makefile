@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/04/06 21:33:41 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/19 21:48:10 pettai Exp $
 #
 
-DISTNAME=		cacti-0.8.7d
+DISTNAME=		cacti-0.8.7e
 CATEGORIES=		net
 MASTER_SITES=		http://sourceforge.net/project/showfiles.php?group_id=34886&package_id=27259
 
