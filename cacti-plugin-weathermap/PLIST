@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/28 01:09:07 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/19 23:21:48 pettai Exp $
 share/cacti/plugins/weathermap/CHANGES
 share/cacti/plugins/weathermap/COPYING
 share/cacti/plugins/weathermap/HTML_ImageMap.class.php
@@ -34,17 +34,36 @@ share/cacti/plugins/weathermap/docs/example/my_router.png
 share/cacti/plugins/weathermap/docs/example/overlib.js
 share/cacti/plugins/weathermap/docs/howto.pdf
 share/cacti/plugins/weathermap/docs/howto.png
+share/cacti/plugins/weathermap/docs/images/arrowstyle-classic.png
+share/cacti/plugins/weathermap/docs/images/arrowstyle-compact.png
+share/cacti/plugins/weathermap/docs/images/bwstyle-angled.png
+share/cacti/plugins/weathermap/docs/images/bwstyle-classic.png
 share/cacti/plugins/weathermap/docs/images/cacti_mainscreen.png
 share/cacti/plugins/weathermap/docs/images/cacti_maps_manage.png
 share/cacti/plugins/weathermap/docs/images/cacti_step1.png
 share/cacti/plugins/weathermap/docs/images/cacti_step2.png
 share/cacti/plugins/weathermap/docs/images/cacti_user_manage.png
 share/cacti/plugins/weathermap/docs/images/cacti_wmap_settings.png
+share/cacti/plugins/weathermap/docs/images/commentstyle-center.png
+share/cacti/plugins/weathermap/docs/images/commentstyle-edge.png
+share/cacti/plugins/weathermap/docs/images/compass-points.png
+share/cacti/plugins/weathermap/docs/images/contrast.png
 share/cacti/plugins/weathermap/docs/images/font-sizes.png
 share/cacti/plugins/weathermap/docs/images/howto-thumb.jpg
 share/cacti/plugins/weathermap/docs/images/keystyle-classic.png
 share/cacti/plugins/weathermap/docs/images/keystyle-horizontal.png
+share/cacti/plugins/weathermap/docs/images/keystyle-inverted.png
+share/cacti/plugins/weathermap/docs/images/keystyle-tags.png
 share/cacti/plugins/weathermap/docs/images/keystyle-vertical.png
+share/cacti/plugins/weathermap/docs/images/labelangle+labeloffset.png
+share/cacti/plugins/weathermap/docs/images/link-comments.png
+share/cacti/plugins/weathermap/docs/images/linkoffset-defaults.png
+share/cacti/plugins/weathermap/docs/images/linkoffset-east50west50.png
+share/cacti/plugins/weathermap/docs/images/linkoffset-eastwest.png
+share/cacti/plugins/weathermap/docs/images/linkoffset-parallel.png
+share/cacti/plugins/weathermap/docs/images/linkoffset-radial.png
+share/cacti/plugins/weathermap/docs/images/viastyle-angled.png
+share/cacti/plugins/weathermap/docs/images/viastyle-curved.png
 share/cacti/plugins/weathermap/docs/images/weathermap-example.png
 share/cacti/plugins/weathermap/docs/images/weathermap-mini.png
 share/cacti/plugins/weathermap/docs/index.html
@@ -65,7 +84,7 @@ share/cacti/plugins/weathermap/docs/pages/targets.html
 share/cacti/plugins/weathermap/docs/pages/upgrading.html
 share/cacti/plugins/weathermap/docs/pages/weathermap.css
 share/cacti/plugins/weathermap/editor-config.php-dist
-share/cacti/plugins/weathermap/editor-resources/jquery-latest.pack.js
+share/cacti/plugins/weathermap/editor-resources/jquery-latest.min.js
 share/cacti/plugins/weathermap/editor.css
 share/cacti/plugins/weathermap/editor.inc.php
 share/cacti/plugins/weathermap/editor.js
@@ -106,8 +125,10 @@ share/cacti/plugins/weathermap/images/index.php
 share/cacti/plugins/weathermap/images/monitor.png
 share/cacti/plugins/weathermap/images/page_white.png
 share/cacti/plugins/weathermap/images/red-ball-64.png
-share/cacti/plugins/weathermap/images/tab_weathermap.png
-share/cacti/plugins/weathermap/images/tab_weathermap_red.png
+share/cacti/plugins/weathermap/images/s_tab_weathermap.gif
+share/cacti/plugins/weathermap/images/s_tab_weathermap_red.gif
+share/cacti/plugins/weathermap/images/tab_weathermap.gif
+share/cacti/plugins/weathermap/images/tab_weathermap_red.gif
 share/cacti/plugins/weathermap/images/tick.png
 share/cacti/plugins/weathermap/images/uk1024.png
 share/cacti/plugins/weathermap/images/updown_0.png
@@ -132,6 +153,7 @@ share/cacti/plugins/weathermap/lib/datasources/WeatherMapDataSource_skeleton.php
 share/cacti/plugins/weathermap/lib/datasources/WeatherMapDataSource_snmp.php
 share/cacti/plugins/weathermap/lib/datasources/WeatherMapDataSource_static.php
 share/cacti/plugins/weathermap/lib/datasources/WeatherMapDataSource_tabfile.php
+share/cacti/plugins/weathermap/lib/datasources/WeatherMapDataSource_time.php
 share/cacti/plugins/weathermap/lib/index.php
 share/cacti/plugins/weathermap/lib/poller-common.php
 share/cacti/plugins/weathermap/lib/post/WeatherMapPostProcessorTest.php
@@ -144,6 +166,8 @@ share/cacti/plugins/weathermap/output/index.php
 share/cacti/plugins/weathermap/overlib.js
 share/cacti/plugins/weathermap/random-bits/README
 share/cacti/plugins/weathermap/random-bits/auto-overlib.pl
+share/cacti/plugins/weathermap/random-bits/cacti-integrate.php
+share/cacti/plugins/weathermap/random-bits/cacti-mapper.php
 share/cacti/plugins/weathermap/random-bits/map-split.php
 share/cacti/plugins/weathermap/random-bits/suite-1.conf
 share/cacti/plugins/weathermap/random-bits/suite-1.png
@@ -154,19 +178,4 @@ share/cacti/plugins/weathermap/weathermap
 share/cacti/plugins/weathermap/weathermap-cacti-plugin-mgmt.php
 share/cacti/plugins/weathermap/weathermap-cacti-plugin.php
 share/cacti/plugins/weathermap/weathermap-cacti-rebuild.php
-share/cacti/plugins/weathermap/weathermap-logo.png
 share/cacti/plugins/weathermap/weathermap.conf
-@dirrm share/cacti/plugins/weathermap/random-bits
-@dirrm share/cacti/plugins/weathermap/output
-@dirrm share/cacti/plugins/weathermap/lib/pre
-@dirrm share/cacti/plugins/weathermap/lib/post
-@dirrm share/cacti/plugins/weathermap/lib/datasources
-@dirrm share/cacti/plugins/weathermap/lib
-@dirrm share/cacti/plugins/weathermap/images
-@dirrm share/cacti/plugins/weathermap/editor-resources
-@dirrm share/cacti/plugins/weathermap/docs/pages
-@dirrm share/cacti/plugins/weathermap/docs/images
-@dirrm share/cacti/plugins/weathermap/docs/example
-@dirrm share/cacti/plugins/weathermap/docs
-@dirrm share/cacti/plugins/weathermap/configs
-@dirrm share/cacti/plugins/weathermap
