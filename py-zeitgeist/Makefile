@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/20 10:55:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/20 10:56:43 thomasklausner Exp $
 #
 
 DISTNAME=	zeitgeist-0.2.0
@@ -31,4 +31,6 @@ REPLACE_PYTHON=	zeitgeist-daemon zeitgeist-datahub
 .include "../../sysutils/py-dbus/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.14.1nb1
 .include "../../x11/py-gtk2/buildlink3.mk"
+# for py-gconf
+.include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
