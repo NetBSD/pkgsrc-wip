@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/07/18 13:45:50 genolopolis Exp $
+$NetBSD: distinfo,v 1.2 2009/07/20 22:15:55 genolopolis Exp $
 
-SHA1 (collectd-4.7.1.tar.bz2) = f235bad3e6798d6da56fffff988410624f31354a
-RMD160 (collectd-4.7.1.tar.bz2) = 1777b36b24a7604f1f9139649c98bbe721709df3
-Size (collectd-4.7.1.tar.bz2) = 1239521 bytes
+SHA1 (collectd-4.7.2.tar.bz2) = 605caa80c3698b930f9e46f9ec31448bd4d2e99e
+RMD160 (collectd-4.7.2.tar.bz2) = b76a5613fffa6e5dac0b5f51acb3e44f7c75af1e
+Size (collectd-4.7.2.tar.bz2) = 1191801 bytes
