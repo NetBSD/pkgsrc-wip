@@ -58,3 +58,11 @@ Possibly make some of the existing dependencies optional.
 Does this work with native X11?  Only tried with modular-xorg. (no it doesnt)
 there appear to be some build issues with native xorg
 Does this work on netBSD < 4.0?
+
+This package has known vulnerabilities, please investigate and fix if possible
+.
+ CVE-2009-0945 (fixed in SVN repository)
+ CVE-2009-1687
+ CVE-2009-1690 (fixed in SVN repository)
+ CVE-2009-1698
+ CVE-2009-1709
