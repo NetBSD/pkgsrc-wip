@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/03/21 15:37:13 asau Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/20 11:44:24 asau Exp $
 #
 
-DISTNAME=	geant4.8.1.p01
-PKGNAME=	geant-4.8.1p01
+DISTNAME=	geant4.9.2
+PKGNAME=	geant-4.9.2
 CATEGORIES=	math
 MASTER_SITES=	http://geant4.web.cern.ch/geant4/support/source/
 
@@ -44,6 +44,9 @@ MAKE_ENV+=	G4VIS_BUILD_RAYTRACERX_DRIVER=1
 # User Interface
 MAKE_ENV+=	G4UI_USE_TERMINAL=1
 
+# Override "echo -e" gnuism
+MAKE_FLAGS+=	ECHO=echo
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/config
@@ -58,8 +61,6 @@ do-install:
 		${DESTDIR}${PREFIX}/geant/examples
 	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/lib/${G4SYSTEM}/* \
 		${DESTDIR}${PREFIX}/geant/lib/${G4SYSTEM}
-	cd ${WRKDIR}/${DISTNAME}/physics_lists && pax -pp -rw . \
-		${DESTDIR}${PREFIX}/geant/physics_lists
 	cd ${WRKDIR}/${DISTNAME}/source && pax -pp -rw . \
 		${DESTDIR}${PREFIX}/geant/source
 
