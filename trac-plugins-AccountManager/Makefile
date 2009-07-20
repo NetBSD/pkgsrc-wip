@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/02/13 05:25:01 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/20 13:12:26 rsmarples Exp $
 
 DISTNAME=	TracAccountManager-0.2.1dev
-PKGNAME=	trac-plugins-AccountManager-0.2.1pre4698
+PKGNAME=	trac-plugins-AccountManager-0.2.1pre5836
 PKGREVISION=	# empty
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
@@ -17,7 +17,7 @@ DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
 SVN_REPOSITORIES=	acct_mgr
 SVN_ROOT.acct_mgr=	http://trac-hacks.org/svn/accountmanagerplugin/0.11
-SVN_TAG.acct_mgr=	4698
+SVN_TAG.acct_mgr=	5836
 
 NO_CHECKSUM=	yes
 
