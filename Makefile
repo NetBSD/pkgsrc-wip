@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3514 2009/07/18 21:15:15 thomasklausner Exp $
+# $Id: Makefile,v 1.3515 2009/07/21 18:53:13 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -930,6 +930,7 @@ SUBDIR+=	knutclient
 SUBDIR+=	koha
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
+SUBDIR+=	kpathsea
 SUBDIR+=	kplayer
 SUBDIR+=	kstart
 SUBDIR+=	ktorrent3
