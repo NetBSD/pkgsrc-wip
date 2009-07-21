@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/21 12:15:26 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/21 13:25:04 koifren Exp $
 
 PKGNAME=	mplayer-mt-20090720
+PKGREVISION=	1
 DISTNAME=	mplayer-svn-mt
 EXTRACT_SUFX=	.tar.bz2
 
@@ -11,8 +12,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/mplayer
 
 .include "Makefile.common"
-
-CONFLICTS=	mplayer-{share-,}[0-9]*
 
 USE_TOOLS+=	pkg-config
 
@@ -32,7 +31,7 @@ BUILDLINK_PASSTHRU_DIRS+=	/usr/X11R6/include
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin/mplayer-mt
 
 .include "../../x11/libXt/buildlink3.mk"
 

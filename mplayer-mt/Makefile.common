@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/07/21 12:15:26 koifren Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/07/21 13:25:04 koifren Exp $
 
 CATEGORIES?=		multimedia
-MASTER_SITES=		http://kefren.netbsd.ro/
+MASTER_SITES=		http://kefren.netbsd.ro/ \
+			http://just.mooo.com/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
