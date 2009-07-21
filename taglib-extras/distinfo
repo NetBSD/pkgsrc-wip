@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/02 17:43:07 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2009/07/21 07:30:43 koifren Exp $
 
-SHA1 (taglib-extras-0.1.3.tar.gz) = 3cf1f8920a3c70a76fc9f1b436a9b411567a5224
-RMD160 (taglib-extras-0.1.3.tar.gz) = 45bff423c34e3f980ff2921934108f73515802f8
-Size (taglib-extras-0.1.3.tar.gz) = 48904 bytes
+SHA1 (taglib-extras-0.1.4.tar.gz) = f1d0c5b41b474ff7e7bce4bd8f0aecb242cae40c
+RMD160 (taglib-extras-0.1.4.tar.gz) = 0e673d4b580eed21b7a240a07d7975be4ad1343c
+Size (taglib-extras-0.1.4.tar.gz) = 49034 bytes
