@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2009/07/21 13:56:13 rsmarples Exp $
+
+For some reason the dependency doesn't work, however the package
+still does. There should be a better fix for this.
+
+--- setup.py.orig	2009-07-21 14:46:47.000000000 +0100
++++ setup.py	2009-07-21 14:47:05.000000000 +0100
+@@ -16,8 +16,5 @@
+         include_package_data = True,
+         package_data={'authopenid': ['templates/*.html', 'htdocs/css/*.css',
+             'htdocs/images/*', 'htdocs/js/*']},
+-        install_requires = [
+-            "python-openid>=2.1.0"
+-        ],
+ )
+ 
