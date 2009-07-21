@@ -1,0 +1,15 @@
+--- configure.orig	2009-07-21 15:06:02.000000000 +0300
++++ configure	2009-07-21 15:06:14.000000000 +0300
+@@ -4141,11 +4141,7 @@
+   for I in "" -L/usr/X11R7/lib -L/usr/X11R6/lib -L/usr/lib/X11R6 \
+            -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/X11R6/lib64 \
+            -L/usr/lib ; do
+-    if netbsd; then
+-      _ld_tmp="$I -lXext -lX11 $_ld_pthread -Wl,-R$(echo $I | sed s/^-L//)"
+-    else
+-      _ld_tmp="$I -lXext -lX11 $_ld_pthread"
+-    fi
++    _ld_tmp="$I -lXext -lX11 $_ld_pthread"
+     cc_check $_ld_tmp && libs_mplayer="$libs_mplayer $_ld_tmp" \
+                       && _x11=yes && break
+   done
