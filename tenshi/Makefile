@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 04:16:53 jessepeterson Exp $
 #
 
-DISTNAME=	tenshi-0.10
+DISTNAME=	tenshi-0.11
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dev.inversepath.com/tenshi/
 

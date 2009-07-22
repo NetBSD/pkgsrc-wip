@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/03/18 15:24:21 jessepeterson Exp $
+$NetBSD: distinfo,v 1.3 2009/07/22 04:16:53 jessepeterson Exp $
 
-SHA1 (tenshi-0.10.tar.gz) = 998ecafd263af9ee54d1494cd973a91ec734ea2d
-RMD160 (tenshi-0.10.tar.gz) = 27a3dc2e0fc7e6790497ddfa0dc6bd85cafd7316
-Size (tenshi-0.10.tar.gz) = 26131 bytes
+SHA1 (tenshi-0.11.tar.gz) = 3998b0823a2c5aa973bb56a74207fdab35d9e85b
+RMD160 (tenshi-0.11.tar.gz) = 5a2a821d818ded3990bd2d0109ffd9987baf1d18
+Size (tenshi-0.11.tar.gz) = 26583 bytes
