@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=	nicotine+-1.2.9
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.nicotine-plus.org/
 COMMENT=	Client for the SoulSeek, a peer-to-peer network for music
 
 CONFLICTS=	nicotine-[0-9]*
-USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis

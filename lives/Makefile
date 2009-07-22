@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/06/05 16:52:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	LiVES-0.9.9.9
@@ -24,7 +24,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	pkg-config perl gmake intltool msgfmt
-USE_DIRS+= 	xdg-1.4
 
 PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
 

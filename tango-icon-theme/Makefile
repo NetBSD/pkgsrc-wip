@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/16 18:25:03 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:17 thomasklausner Exp $
 
 DISTNAME=	tango-icon-theme-0.8.90
 CATEGORIES=	graphics
@@ -16,7 +16,6 @@ USE_TOOLS+=	gmake intltool pkg-config
 BUILDLINK_DEPMETHOD.ImageMagick=	build
 BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 
-USE_DIRS+=	xdg-1.4
 
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

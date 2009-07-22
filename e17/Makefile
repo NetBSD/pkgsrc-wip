@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/06/08 15:32:07 jsonn Exp $
+# $NetBSD: Makefile,v 1.22 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.060
@@ -20,7 +20,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config automake autoconf
-USE_DIRS+=	xdg-1.4
 
 PKG_SYSCONFSUBDIR=	enlightenment
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

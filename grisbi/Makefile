@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/03/11 12:33:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 
-USE_DIRS+=	xdg-1.4
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

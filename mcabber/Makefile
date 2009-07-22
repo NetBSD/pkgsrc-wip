@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/04/10 21:44:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.13 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	mcabber-0.9.9
@@ -17,7 +17,6 @@ CHECK_PORTABILITY_SKIP+=	contrib/events/eventcmd.pastebin
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake xgettext pkg-config
-USE_DIRS+=			xdg-1.4
 USE_NCURSES=		yes
 
 post-install:

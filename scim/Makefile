@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/05/19 09:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=		scim-1.4.9
@@ -20,7 +20,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
 USE_TOOLS+=		gmake	# make scim-setup.desktop
 USE_TOOLS+=		perl intltool
-USE_DIRS+=		gnome2-1.3
 
 PKGCONFIG_OVERRIDE=	scim-gtkutils.pc.in
 PKGCONFIG_OVERRIDE+=	scim-x11utils.pc.in

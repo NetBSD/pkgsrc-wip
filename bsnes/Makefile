@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/18 19:01:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	bsnes_v039
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.byuu.org/
 COMMENT=	SNES emulator
 
 WRKSRC=		${WRKDIR}/src
-USE_DIRS=	xdg-1.4
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 MAKE_FLAGS+=	platform=x compiler=gcc enable_gzip=true

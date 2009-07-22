@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/22 09:53:10 thomasklausner Exp $
 #
 
 VERSION=	8.38.6
@@ -18,7 +18,6 @@ LICENSE=	amd-software-license
 LICENSE_FILE=	LICENSE
 
 NO_BUILD=	yes
-USE_DIRS+=	xdg-1.1
 
 # Note: untested on all but NetBSD-4.99.[23]?-i386
 # Please send feedback to ${MAINTAINER}

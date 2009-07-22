@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	tmw-0.0.22.1
@@ -16,7 +16,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--with-opengl
 USE_TOOLS+=	pkg-config
 
-USE_DIRS+= xdg-1.4
 
 .include "../../wip/guichan/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

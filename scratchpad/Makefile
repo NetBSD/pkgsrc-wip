@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/18 00:34:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	scratchpad-0.3.0
@@ -17,7 +17,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
 
-USE_DIRS+=	xdg-1.4
 
 INSTALLATION_DIRS=	share/doc/scratchpad
 

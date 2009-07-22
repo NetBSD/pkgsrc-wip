@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/09 07:40:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 PKGNAME=	filezilla-3.2.3.1
@@ -14,7 +14,6 @@ COMMENT=	FTP, FTPS and SFTP client with intuitive GUI
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt msgmerge
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/18 17:03:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	dbus-explorer-0.5
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config msgfmt gmake
 USE_LANGUAGES=	# none
-USE_DIRS+=			xdg-1.4
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"

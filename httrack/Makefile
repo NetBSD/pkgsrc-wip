@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/07/04 13:25:17 leot1990 Exp $
+# $NetBSD: Makefile,v 1.24 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	httrack-3.43-5
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-L${WRKSRC}/src/.libs/
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_DIRS+=		xdg-1.4
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash:run gmake
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/09 14:07:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 PKGVERSION=	8.02
@@ -22,7 +22,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
-USE_DIRS+=	xdg-1.4
 
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
 # wxsmith makes error in build process

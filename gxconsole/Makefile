@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/14 13:54:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=		gxconsole-0.3.1
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 WRKSRC=		${WRKDIR}/gxconsole
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config
-USE_DIRS+=		 xdg-1.4
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

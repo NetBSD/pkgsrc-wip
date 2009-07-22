@@ -1,4 +1,4 @@
-# $NetBSD: kde4.mk,v 1.4 2008/07/26 22:32:27 mwdavies Exp $
+# $NetBSD: kde4.mk,v 1.5 2009/07/22 09:53:13 thomasklausner Exp $
 #
 # This Makefile fragment is included by packages that use the KDE4
 # configure-and-build process.
@@ -8,7 +8,6 @@
 KDE4_MK=	# defined
 
 USE_PKGLOCALEDIR=	YES
-USE_DIRS+=		kde4-1.0
 
 CMAKE_ARGS+=	-DHTML_INSTALL_DIR=${PREFIX}/share/doc/kde/HTML
 CMAKE_ARGS+=	-DDATA_INSTALL_DIR=${PREFIX}/share/kde/apps

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:17 ykomatsu Exp $
-# $Id: Makefile,v 1.11 2006/05/19 16:51:17 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:12 thomasklausner Exp $
+# $Id: Makefile,v 1.12 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=		glade-2.0.1
@@ -15,7 +15,6 @@ COMMENT=		User interface builder for the GTK2+ toolkit and GNOME2
 CONFLICTS+=		glade-*
 
 GNU_CONFIGURE=		YES
-USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/19 09:00:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=       giggle-0.4.91
@@ -17,7 +17,6 @@ DEPENDS+=       scmgit-base-[0-9]*:../../devel/scmgit-base
 GNU_CONFIGURE=  yes
 USE_LIBTOOL=    yes
 USE_TOOLS+=     gmake pkg-config intltool
-USE_DIRS+=      xdg-1.4
 
 .include "options.mk"
 

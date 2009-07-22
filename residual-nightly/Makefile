@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/29 22:16:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:14 thomasklausner Exp $
 
 DISTNAME=	residual-${SCM_VER}
 CATEGORIES=	games
@@ -17,7 +17,6 @@ USE_LANGUAGES=	c c++
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${PREFIX}
 CONFIGURE_ARGS+=--mandir=${PREFIX}/${PKGMANDIR}
-USE_DIRS+=	xdg-1.1
 WRKSRC=		${WRKDIR}/residual
 
 SVN_REPOSITORIES=	residual

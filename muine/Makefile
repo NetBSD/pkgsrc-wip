@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/01/25 18:44:47 koifren Exp $
+# $NetBSD: Makefile,v 1.17 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.8.10
@@ -11,7 +11,6 @@ HOMEPAGE=	http://muine-player.org/wiki/Main_Page
 COMMENT=	Simple and intuitive music player for GNOME
 
 GNU_CONFIGURE=		YES
-USE_DIRS=		xdg-1.4
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		bash:run gmake intltool pkg-config

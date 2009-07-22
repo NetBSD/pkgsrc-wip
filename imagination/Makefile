@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/22 14:08:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	imagination-1.0
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool perl gmake
 USE_LANGUAGES=	c c++
-USE_DIRS+=	xdg-1.4
 
 
 .include "../../devel/glib2/buildlink3.mk"

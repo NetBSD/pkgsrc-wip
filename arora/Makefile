@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/15 21:25:16 zecrazytux Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:10 thomasklausner Exp $
 
 DISTNAME=					arora-0.6
 CATEGORIES=				www net
@@ -12,7 +12,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LIBTOOL=			yes
 USE_LANGUAGES=		c++
-USE_DIRS+=				xdg-1.4
 
 ARORA_BIN=				../arora
 

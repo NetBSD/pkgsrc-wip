@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/03/28 18:04:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/22 09:53:12 thomasklausner Exp $
 
 DISTNAME=	gnomebaker-0.6.4
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ COMMENT=	GTK2/GNOME CD/DVD burning application
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
-USE_DIRS+=		xdg-1.4 gnome2-1.4
 USE_TOOLS+=		pkg-config msgfmt intltool
 GNU_CONFIGURE=		YES
 

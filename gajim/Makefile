@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/01/07 22:29:40 tonnerre Exp $
+# $NetBSD: Makefile,v 1.15 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	gajim-0.12.1
@@ -14,7 +14,6 @@ DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .include "options.mk"
 
 PY_PATCHPLIST=	yes
-USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	gmake intltool pkg-config
 GNU_CONFIGURE=	yes
 

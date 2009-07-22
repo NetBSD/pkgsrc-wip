@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/08 15:56:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-commander-1.2.4
@@ -14,7 +14,6 @@ COMMENT=		GNOME Commander is a fast and powerful graphical filemanager
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_DIRS=		gnome2-1.6
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool pkg-config perl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/12/04 22:15:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 09:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	tagtool-0.12.3
@@ -14,7 +14,6 @@ COMMENT=	GTK-based Ogg Vorbis and MP3 file tagger
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool pkg-config
-USE_DIRS+=		xdg-1.4
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

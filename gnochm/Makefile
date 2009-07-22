@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/25 10:22:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=	gnochm-0.9.11
@@ -18,7 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-USE_DIRS+=		xdg-1.4 gnome2-1.6
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool

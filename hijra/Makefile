@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/24 14:05:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	hijra-0.1.18
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
 
-USE_DIRS+=	xdg-1.4
 
 INSTALLATION_DIRS+=	bin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 VERSION=	8.40.4
@@ -20,7 +20,6 @@ LICENSE_FILE=	LICENSE
 DEPENDS=	ati-xfree86-bin<${VERSION}:../../wip/ati-xfree86-bin
 
 NO_BUILD=	yes
-USE_DIRS+=	xdg-1.1
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
 

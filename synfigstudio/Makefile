@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/21 03:00:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	synfigstudio-0.61.08
@@ -16,7 +16,6 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=			gmake
-USE_DIRS+=			xdg-1.4
 
 GCONF2_SCHEMAS+=	synfigstudio-thumbnailer.schemas
 

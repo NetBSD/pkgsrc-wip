@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/22 14:06:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	hitori-0.2.1
@@ -11,7 +11,6 @@ COMMENT=	Hitori is an application that allow to play the eponymous puzzle game
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=	xdg-1.4
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/09 16:21:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	tasks-0.15
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool pkg-config gmake
-USE_DIRS+= 	xdg-1.4
 
 CONFIGURE_ARGS+=	--disable-omoko
 CONFIGURE_ARGS+=	--disable-hildon

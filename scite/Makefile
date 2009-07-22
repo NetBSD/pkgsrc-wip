@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/20 00:58:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.23 2009/07/22 09:53:14 thomasklausner Exp $
 
 DISTNAME=		scite177
 PKGNAME=		scite-1.77
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.scintilla.org/SciTE.html
 COMMENT=		Editor with facilities for building and running programs
 
 WRKSRC=			${WRKDIR}
-USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 BUILD_DIRS=		scintilla/gtk scite/gtk

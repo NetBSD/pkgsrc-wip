@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/14 08:25:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	desmume-0.8
@@ -11,7 +11,6 @@ COMMENT=	Nintendo DS emulator
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool perl pkg-config
-USE_DIRS+=	xdg-1.4
 
 PKG_DESTDIR_SUPPORT=user-destdir
 

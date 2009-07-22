@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/07 20:56:10 dhowland Exp $
+# $NetBSD: Makefile,v 1.8 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=		cb2bib-0.7.2
@@ -13,7 +13,6 @@ BROKEN=			Requires QT>=4.2, and pkgsrc is still at 4.1
 DEPENDS+=		qt4-libs>=4.2:../../x11/qt4-libs
 DEPENDS+=		qt4-tools>=4.2:../../x11/qt4-tools
 
-USE_DIRS+=		xdg-1.2
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/03/28 21:42:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.19 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.4.0
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.4 gnome2-1.6
 USE_TOOLS+=		gmake intltool pkg-config
 
 .include "../../devel/GConf/schemas.mk"

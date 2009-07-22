@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/21 21:13:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=	gtg-0.1.1
@@ -18,7 +18,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=	# none
-USE_DIRS+= 	xdg-1.4
 
 PYDISTUTILSPKG= yes
 

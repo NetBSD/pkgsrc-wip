@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.20 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	gtk2-theme-pack
@@ -124,7 +124,6 @@ WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
 USE_TOOLS+=		pax
-USE_DIRS+=		xdg-1.4
 
 # clean up a bit. remove .xvpics (GIMP and xv thumbnail directories) and
 # backup files

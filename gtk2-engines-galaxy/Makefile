@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/03 09:22:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/22 09:53:13 thomasklausner Exp $
 
 DISTNAME=		GTK2-Galaxy
 PKGNAME=		gtk2-engines-galaxy-0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Another theme engine for GTK+ 2.x
 
 USE_LIBTOOL=		YES
-USE_DIRS+=		xdg-1.4
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--disable-gtktest  --disable-gdk_pixbuftest

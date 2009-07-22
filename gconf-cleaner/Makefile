@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/18 21:20:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	gconf-cleaner-0.0.3
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl intltool gmake
-USE_DIRS+= 	xdg-1.4
 USE_LANGUAGES=	c c++
 
 .include "../../devel/GConf/schemas.mk"

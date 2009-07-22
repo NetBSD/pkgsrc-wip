@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/04 00:47:10 netcap Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/22 09:53:17 thomasklausner Exp $
 #
 
 DISTNAME=		soundtracker-0.6.8
@@ -12,7 +12,6 @@ COMMENT=		Music tracker for XM and MOD files
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gettext
-USE_DIRS+=		xdg-1.4
 LIBS+=	${LIBOSSAUDIO}
 
 .include "../../x11/gtk/buildlink3.mk"

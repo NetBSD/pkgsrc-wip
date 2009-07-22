@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/11 02:36:59 dhowland Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	endeavour-2.8.5
@@ -17,7 +17,6 @@ DEPENDS+=	lha>=114:../../archivers/lha
 DEPENDS+=	unrar>=3.0:../../archivers/unrar
 DEPENDS+=	wget>=1.10:../../net/wget
 
-USE_DIRS+=	xdg-1.1
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash gzip:run tar:run
 

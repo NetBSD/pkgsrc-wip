@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/27 09:21:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=		lat-1.2.3
@@ -16,7 +16,6 @@ USE_TOOLS+=		pkg-config gmake msgfmt intltool
 USE_LANGUAGES=		# empty -> its csharp
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_DIRS+=		xdg-1.4 \
 			gnome2-1.6
 
 PKGCONFIG_OVERRIDE+=	desktop/lat-plugins.pc.in

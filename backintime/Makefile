@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/08 15:56:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	backintime-0.9.2_src
@@ -16,7 +16,6 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 REPLACE_PYTHON=	backintime
-USE_DIRS+=	gnome2-1.6 xdg-1.4
 USE_LANGUAGES=	# none
 USE_TOOLS=	msgfmt
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/21 13:06:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=	regexxer-0.9
@@ -11,7 +11,6 @@ HOMEPAGE=	http://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
 
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl intltool pkg-config
 

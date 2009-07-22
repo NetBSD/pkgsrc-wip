@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/02/21 13:22:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:11 thomasklausner Exp $
 
 DISTNAME=		audacity-src-1.3.0b
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -14,7 +14,6 @@ DEPENDS+=		zip>=0.0:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-beta
 
-USE_DIRS+=		xdg-1.3
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/19 22:07:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=	glista-0.4
@@ -11,7 +11,6 @@ COMMENT=	Simple task list management utility
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+= 	xdg-1.4
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 

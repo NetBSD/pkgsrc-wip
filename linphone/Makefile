@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/22 09:53:13 thomasklausner Exp $
 
 DISTNAME=	linphone-3.0.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	SIP-based IP telephony client
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool perl pkg-config
-USE_DIRS+=	gnome2-1.6 xdg-1.4
 USE_LIBTOOL=	YES
 USE_GNU_READLINE=	yes # rl_hook_func_t et al.
 USE_PKGLOCALEDIR=	yes

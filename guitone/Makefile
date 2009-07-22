@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/23 01:46:22 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	guitone-0.8.99.0
@@ -19,7 +19,6 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 ###
 NOT_FOR_PLATFORM=	Darwin-*-*
  
-USE_DIRS+=		xdg-1.4
 USE_LANGUAGES=          c c++
 USE_LIBTOOL=		yes
 

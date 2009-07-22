@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/15 23:02:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 DISTNAME=	grdc-0.4.0
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool perl pkg-config gmake
-USE_DIRS+= xdg-1.4
 
 DEPENDS+=	rdesktop>=1.6.0:../../net/rdesktop
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/03 09:24:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/22 09:53:18 thomasklausner Exp $
 # Port du theme bluecurve de Redhat
 # David Ferlier - dferlier@BonBon.net
 
@@ -22,7 +22,6 @@ BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
 
 WRKSRC=	${WRKDIR}/redhat-artwork-${THEMEVERSION}
 USE_TOOLS+=	gmake
-USE_DIRS+=		xdg-1.4
 THEMES_SUBDIRS= ${WRKSRC}/art/gtk/Bluecurve1
 USE_LIBTOOL=	YES
 

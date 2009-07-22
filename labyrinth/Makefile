@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/20 12:18:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	labyrinth_0.4.1
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 USE_LANGUAGES=	c c++
-USE_DIRS+=		xdg-1.4
 
 PYTHON_VERSIONS_ACCEPTED=   26 25
 PY_PATCHPLIST=		yes

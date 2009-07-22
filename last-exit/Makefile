@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/23 21:07:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
 #
 
 DISTNAME=	last-exit-6
@@ -18,7 +18,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	pkg-config perl intltool msgfmt gmake bash:run
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-USE_DIRS+=	xdg-1.4 gnome2-1.6
 
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/

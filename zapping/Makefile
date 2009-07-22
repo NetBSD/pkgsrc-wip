@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/08 15:56:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:18 thomasklausner Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -14,7 +14,6 @@ COMMENT=		TV viewer for the Gnome desktop
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_DIRS+=		xdg-1.2 gnome1-1.5
 USE_TOOLS+=		gmake intltool perl
 
 CONFIGURE_ARGS+=	--disable-rebuild-man

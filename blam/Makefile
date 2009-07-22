@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/22 14:10:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	blam-1.8.6
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config intltool
 USE_LANGUAGES=		c
-USE_DIRS+= 		xdg-1.4 gnome2-1.6
 
 SUBST_CLASSES+=		schema
 SUBST_STAGE.schema=	pre-configure

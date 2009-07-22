@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2009/06/27 14:23:53 obache Exp $
+# $NetBSD: Makefile,v 1.46 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	emacs-23.1.50
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_DIRS+=	xdg-1.1
 USE_TOOLS+=	gmake makeinfo gzip
 
 CONFLICTS+=	emacs-nox11-[0-9]*

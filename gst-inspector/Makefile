@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/03 10:43:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:12 thomasklausner Exp $
 #
 
 
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt gettext
-USE_DIRS+=		xdg-1.4
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

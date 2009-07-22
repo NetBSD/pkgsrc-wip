@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/06/22 14:47:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:14 thomasklausner Exp $
 #
 
 DISTNAME=	nemo-0.2.4
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 # for stetic
 DEPENDS+=	monodevelop-[0-9]*:../../devel/monodevelop
 
-USE_DIRS+=	xdg-1.4
 USE_PKGLOCALEDIR= yes
 USE_LANGUAGES=	# C#
 USE_TOOLS+=	gmake msgfmt pkg-config

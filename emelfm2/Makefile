@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:11 thomasklausner Exp $
 #
 
 DISTNAME=	emelfm2-0.1.3
@@ -11,7 +11,6 @@ COMMENT=	Fast two-pane file manager using GTK2
 
 PTHREAD_OPTS+=	require
 
-USE_DIRS+=	xdg-1.2
 USE_TOOLS+=	gmake
 
 .include "../../converters/libiconv/buildlink3.mk"
