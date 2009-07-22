@@ -1,0 +1,3 @@
+SensitiveTickets is a plugin that lets users mark tickets as sensitive
+with a checkbox on the ticket form.  Sensitive tickets are viewable
+only to those with the SENSITIVE_VIEW permission.
