@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/22 13:33:21 lexort Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/22 14:01:21 lexort Exp $
 
-VERSION=	0.0.${SVN_VERSION}
+VERSION=	0.1.${SVN_VERSION}
 SVN_VERSION=	5285
 
 DISTNAME=	TracSensitiveTickets-${VERSION}
@@ -10,6 +10,9 @@ PKGREVISION=
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
+
+# setup.py says "GPL".
+LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/SensitiveTicketsPlugin
