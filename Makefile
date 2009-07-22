@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3516 2009/07/22 12:29:44 thomasklausner Exp $
+# $Id: Makefile,v 1.3517 2009/07/22 13:36:04 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2064,6 +2064,7 @@ SUBDIR+=	trac-plugins-GitPlugin
 SUBDIR+=	trac-plugins-GraphViz
 SUBDIR+=	trac-plugins-MasterTickets
 SUBDIR+=	trac-plugins-RoadmapHours
+SUBDIR+=	trac-plugins-SensitiveTickets
 SUBDIR+=	trac-plugins-TimingAndEstimation
 SUBDIR+=	trac-plugins-excelviewer
 SUBDIR+=	trac-plugins-fullblog
