@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/30 14:20:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/23 09:32:35 phonohawk Exp $
 #
 
 DISTNAME=	html-1.0.1.2
 PKGNAME=	hs-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
