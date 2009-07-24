@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/05/31 12:59:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/24 23:24:12 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.10.0
+DISTNAME=	lmdbg-0.11.0
 PKGNAME=	${DISTNAME:S/lmdbg-/libstacktrace-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
