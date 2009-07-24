@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2008/08/28 21:59:29 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/07/24 02:21:17 schnoebe Exp $
 bin/psi
+share/applications/psi.desktop
 share/doc/psi/COPYING
 share/doc/psi/README
-share/applications/psi.desktop
 share/icons/hicolor/128x128/apps/psi.png
 share/icons/hicolor/16x16/apps/psi.png
 share/icons/hicolor/32x32/apps/psi.png
@@ -58,9 +58,9 @@ share/psi/iconsets/roster/crystal-roster.jisp
 share/psi/iconsets/roster/crystal-service.jisp
 share/psi/iconsets/roster/crystal-sms.jisp
 share/psi/iconsets/roster/crystal-yahoo.jisp
-share/psi/iconsets/roster/stellar-1.jisp
 share/psi/iconsets/roster/default/ask.png
 share/psi/iconsets/roster/default/away.png
+share/psi/iconsets/roster/default/call.png
 share/psi/iconsets/roster/default/chat.fading.png
 share/psi/iconsets/roster/default/chatty.png
 share/psi/iconsets/roster/default/dnd.png
@@ -78,6 +78,7 @@ share/psi/iconsets/roster/default/online.png
 share/psi/iconsets/roster/default/perr.png
 share/psi/iconsets/roster/default/system.png
 share/psi/iconsets/roster/default/xa.png
+share/psi/iconsets/roster/stellar-1.jisp
 share/psi/iconsets/system/README
 share/psi/iconsets/system/default/account.png
 share/psi/iconsets/system/default/add.png
@@ -102,6 +103,7 @@ share/psi/iconsets/system/default/events.png
 share/psi/iconsets/system/default/eye_blue.png
 share/psi/iconsets/system/default/filemanager.png
 share/psi/iconsets/system/default/groupchat.png
+share/psi/iconsets/system/default/gstreamer-logo-50.png
 share/psi/iconsets/system/default/help.png
 share/psi/iconsets/system/default/history.png
 share/psi/iconsets/system/default/icondef.xml
@@ -167,13 +169,6 @@ share/psi/iconsets/system/default/whiteboarding/translate.png
 share/psi/iconsets/system/default/whiteboarding/ungroup.png
 share/psi/iconsets/system/default/whiteboarding/whiteboard.png
 share/psi/iconsets/system/default/xml.png
-share/psi/sound/chat1.wav
-share/psi/sound/chat2.wav
-share/psi/sound/ft_complete.wav
-share/psi/sound/ft_incoming.wav
-share/psi/sound/offline.wav
-share/psi/sound/online.wav
-share/psi/sound/send.wav
 share/psi/psi_cs.qm
 share/psi/psi_de.qm
 share/psi/psi_es_ES.qm
@@ -186,15 +181,10 @@ share/psi/psi_uk.qm
 share/psi/psi_vi.qm
 share/psi/psi_zh.qm
 share/psi/psi_zh_TW.qm
-@dirrm share/psi/sound
-@dirrm share/psi/iconsets/system/default/whiteboarding
-@dirrm share/psi/iconsets/system/default
-@dirrm share/psi/iconsets/system
-@dirrm share/psi/iconsets/roster/default
-@dirrm share/psi/iconsets/roster
-@dirrm share/psi/iconsets/emoticons/default
-@dirrm share/psi/iconsets/emoticons
-@dirrm share/psi/iconsets
-@dirrm share/psi/certs
-@dirrm share/psi
-@dirrm share/doc/psi
+share/psi/sound/chat1.wav
+share/psi/sound/chat2.wav
+share/psi/sound/ft_complete.wav
+share/psi/sound/ft_incoming.wav
+share/psi/sound/offline.wav
+share/psi/sound/online.wav
+share/psi/sound/send.wav

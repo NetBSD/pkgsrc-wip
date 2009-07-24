@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2009/07/24 02:21:17 schnoebe Exp $
+
+--- iris/src/jdns/jdns_p.h.orig	2009-07-16 00:08:57.000000000 -0500
++++ iris/src/jdns/jdns_p.h
+@@ -36,7 +36,7 @@
+ # define JDNS_OS_UNIX
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ # define JDNS_OS_FREEBSD
+ #elif defined(__APPLE__) && (defined(__GNUC__) || defined(__xlC__) || defined(__xlc__))
+ # define JDNS_OS_MAC

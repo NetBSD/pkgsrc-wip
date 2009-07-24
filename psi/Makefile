@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/03/09 21:04:27 schnoebe Exp $
+# $NetBSD: Makefile,v 1.12 2009/07/24 02:21:17 schnoebe Exp $
 
-PSI_VERSION=	0.12.1
+PSI_VERSION=	0.13-rc4
 DISTNAME=	psi-${PSI_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
@@ -8,7 +8,10 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://psi-im.org/
-COMMENT=	PSI Jabber Client
+COMMENT=	Psi XMPP/Jabber Client
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
@@ -39,7 +42,7 @@ CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 
 LANG_FILES=     psi_pt_BR.qm psi_cs.qm psi_de.qm psi_es_ES.qm psi_fr.qm \
                 psi_mk.qm psi_uk.qm psi_vi.qm psi_zh.qm psi_zh_TW.qm \
-		psi_ru.qm psi_pl.qm 
+		psi_ru.qm psi_pl.qm
 
 .for l in ${LANG_FILES}
 SITES.${l}=	http://psi-im.org/download/lang/
@@ -66,4 +69,5 @@ post-install:
 .include "../../security/qca2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.3.2
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
