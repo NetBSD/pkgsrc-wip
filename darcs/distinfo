@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2009/01/30 15:54:26 phonohawk Exp $
+$NetBSD: distinfo,v 1.11 2009/07/24 02:23:27 phonohawk Exp $
 
 SHA1 (darcs-2.2.0.tar.gz) = a932ee14efc57490a4304958ab391ad7c86030f0
 RMD160 (darcs-2.2.0.tar.gz) = 86186f0dc64580c099f815b511eb84ee6387b7b0
 Size (darcs-2.2.0.tar.gz) = 1793273 bytes
 SHA1 (patch-aa) = de343c0816a3cfb1d2003e1ff80a6654f196d494
+SHA1 (patch-ab) = 8924cdeb4283fa77f57b04ec1b1d8949cb6f9264
