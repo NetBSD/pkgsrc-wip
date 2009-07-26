@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/07/02 08:57:04 phonohawk Exp $
+$NetBSD: distinfo,v 1.7 2009/07/26 22:49:54 phonohawk Exp $
 
-SHA1 (ghc-6.10.3-src.tar.bz2) = 598bef94c99011a4f6791b8fbb7153ba7dffaf92
-RMD160 (ghc-6.10.3-src.tar.bz2) = 90b01fefd474a64cf6b6b507f224abf6250745d3
-Size (ghc-6.10.3-src.tar.bz2) = 8059285 bytes
+SHA1 (ghc-6.10.4-src.tar.bz2) = 0566858b409066d98da70de5adb9a7030d0df5dc
+RMD160 (ghc-6.10.4-src.tar.bz2) = 5f83baf2549f1f4bea140c6a80728c2a76f60ab6
+Size (ghc-6.10.4-src.tar.bz2) = 8060565 bytes
 SHA1 (ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz) = 48ff45c34bc1ad8c0a6cbbe1f9c36cabbb720912
 RMD160 (ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz) = 0df10237ebeeb7100e84778fef862baed815650d
 Size (ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz) = 11278184 bytes
