@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/05 21:41:17 cheusov Exp $
-bin/dash
-man/man1/dash.1
