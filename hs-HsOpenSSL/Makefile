@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/03 04:10:48 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/26 23:12:54 phonohawk Exp $
 #
 
-DISTNAME=	HsOpenSSL-0.6.1
+DISTNAME=	HsOpenSSL-0.6.4
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://cielonegro.org/HsOpenSSL.html
 COMMENT=	OpenSSL binding for Haskell
+LICENSE=	public-domain
+
 USE_TOOLS+=	pkg-config
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7l
