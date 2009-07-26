@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/02 07:06:30 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/26 22:58:24 phonohawk Exp $
 #
 
 DISTNAME=	parsec-3.0.0
@@ -7,6 +7,7 @@ CATEGORIES=	textproc
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.cs.uu.nl/~daan/parsec.html
 COMMENT=	Monadic parser combinators
+LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
