@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/21 07:30:43 koifren Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/26 08:35:07 thomasklausner Exp $
 #
 
-DISTNAME=	taglib-extras-0.1.4
+DISTNAME=	taglib-extras-0.1.5
 CATEGORIES=	audio
 MASTER_SITES=	http://www.kollide.net/~jefferai/
 
