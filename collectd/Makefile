@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/20 22:15:55 genolopolis Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/26 13:21:00 genolopolis Exp $
 #
 
 DISTNAME=	collectd-4.7.2
@@ -20,9 +20,12 @@ PKGCONFIG_OVERRIDE+=	src/libcollectdclient/libcollectdclient.pc.in
 USE_LANGUAGES= c c++
 PKG_DESTDIR_SUPPORT=    user-destdir
 CONFIGURE_ARGS+=	--with-perl-bindings='INSTALLDIRS=vendor'
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}/${PKGBASE}
+MAKE_DIRS+=		${PKG_SYSCONFDIR:Q}/${PKGBASE}
 
-#EGDIR=          ${PREFIX}/share/${PKGBASE}
-#CONF_FILES=     ${EDGIR}/collectd.conf ${PKG_SYSCONFDIR}/collectd.conf
+EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=            ${EGDIR}/collectd.conf ${PKG_SYSCONFDIR}/${PKGBASE}/collectd.conf
+INSTALL_MAKE_FLAGS+=    ${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST=	auto/Collectd/.packlist

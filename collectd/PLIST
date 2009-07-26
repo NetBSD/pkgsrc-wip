@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/07/18 13:45:50 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/26 13:21:00 genolopolis Exp $
 bin/collectd-nagios
 include/collectd/client.h
 include/collectd/lcc_features.h
@@ -57,3 +57,4 @@ sbin/collectd
 sbin/collectdmon
 share/collectd/postgresql_default.conf
 share/collectd/types.db
+share/examples/collectd/collectd.conf
