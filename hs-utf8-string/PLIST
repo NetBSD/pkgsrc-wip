@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/10 06:21:12 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/07/27 03:42:35 phonohawk Exp $
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/Generic.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/Generic.p_hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/String.hi
@@ -10,21 +10,11 @@ lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/UTF8.p_hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8.p_hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/HSutf8-string-${PKGVERSION}.o
+lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/UTF8.hi
+lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/UTF8.p_hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/IO/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/IO/UTF8.p_hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/libHSutf8-string-${PKGVERSION}.a
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/libHSutf8-string-${PKGVERSION}_p.a
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/utf8-string-${PKGVERSION}/LICENSE
-@dirrm share/doc/utf8-string-${PKGVERSION}
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/IO
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/String
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Lazy
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec
-@dirrm lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/utf8-string-${PKGVERSION}
