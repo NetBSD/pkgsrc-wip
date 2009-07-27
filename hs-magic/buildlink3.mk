@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:42 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/07/27 04:30:38 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-magic
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-magic
 HS_MAGIC_BUILDLINK3_MK:=
 
 BUILDLINK_DEPMETHOD.hs-magic?=	build
-BUILDLINK_API_DEPENDS.hs-magic+=	hs-magic>=1.0.7
+BUILDLINK_API_DEPENDS.hs-magic+=	hs-magic>=1.0.7nb1
 BUILDLINK_PKGSRCDIR.hs-magic?=	../../wip/hs-magic
 
 .include "../../sysutils/file/buildlink3.mk"
