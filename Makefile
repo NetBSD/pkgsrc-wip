@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3522 2009/07/27 04:16:56 phonohawk Exp $
+# $Id: Makefile,v 1.3523 2009/07/27 04:26:17 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -732,6 +732,7 @@ SUBDIR+=	hs-haskelldb
 SUBDIR+=	hs-haskelldb-hdbc
 SUBDIR+=	hs-haskelldb-hdbc-sqlite3
 SUBDIR+=	hs-hopenssl
+SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-iconv
@@ -759,7 +760,6 @@ SUBDIR+=	hs-x11-extras
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
 SUBDIR+=	hscolour
-SUBDIR+=	hslogger
 SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
