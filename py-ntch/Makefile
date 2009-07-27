@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/06/30 15:00:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/27 23:57:59 jihbed Exp $
 #
 
 DISTNAME=	pyntch-dist-20090615
-PKGNAME=	${PYPKGPREFIX}-ntch-20090531
+PKGNAME=	${PYPKGPREFIX}-ntch-${VERSION}
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.unixuser.org/~euske/python/pyntch/
 
@@ -13,7 +13,7 @@ COMMENT=	Examine python code and detect possible errors
 
 PKG_DESTDIR_SUPPORT=		user-destdir
 
-USE_LANGUAGES=	# none
+VERSION=	20090615
 
 PYDISTUTILSPKG= 	yes
 PYTHON_VERSIONS_ACCEPTED= 26 25 24
