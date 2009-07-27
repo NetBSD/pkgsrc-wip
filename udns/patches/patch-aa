@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/06/10 13:29:38 moubctez Exp $
+$NetBSD: patch-aa,v 1.2 2009/07/27 20:24:25 schnoebe Exp $
+
+# update to use libtool for portability
 
 --- Makefile.in.orig	2007-01-15 22:19:08.000000000 +0100
 +++ Makefile.in
