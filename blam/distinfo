@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/26 21:39:50 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/07/27 23:31:27 jihbed Exp $
 
-SHA1 (blam-1.8.6.tar.bz2) = 83ab19d445fc9a2c75ae562583ef820341111489
-RMD160 (blam-1.8.6.tar.bz2) = 34a55d85b706f2db28ec54b390cecc703dfab383
-Size (blam-1.8.6.tar.bz2) = 244887 bytes
+SHA1 (blam-1.8.7.tar.bz2) = 72835b0bf6fd1f237ed3dfbf433952f5c14ab1f7
+RMD160 (blam-1.8.7.tar.bz2) = 035627624d473c6c2afeac6c90ca4450e688f703
+Size (blam-1.8.7.tar.bz2) = 260644 bytes
