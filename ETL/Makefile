@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/20 09:20:20 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/27 09:52:28 minskim Exp $
 #
 
 DISTNAME=	ETL-0.04.11
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=synfig/}
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://synfig.org/
 COMMENT=	C++ template library for synfig
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
