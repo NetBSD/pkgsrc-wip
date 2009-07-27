@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3521 2009/07/27 04:00:20 phonohawk Exp $
+# $Id: Makefile,v 1.3522 2009/07/27 04:16:56 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -11,7 +11,6 @@ SUBDIR+=	GoogleEarth
 SUBDIR+=	HCL
 SUBDIR+=	HLint
 SUBDIR+=	HSH
-SUBDIR+=	HsSVN
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	LuaJIT
@@ -715,6 +714,7 @@ SUBDIR+=	hs-HTTP
 SUBDIR+=	hs-HUnit
 SUBDIR+=	hs-HsHyperEstraier
 SUBDIR+=	hs-HsOpenSSL
+SUBDIR+=	hs-HsSVN
 SUBDIR+=	hs-Lucu
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-binary
