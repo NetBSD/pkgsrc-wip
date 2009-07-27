@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/04 05:26:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/27 03:12:59 phonohawk Exp $
 #
 
-DISTNAME=	Lucu-0.3
+DISTNAME=	Lucu-0.3.2
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://cielonegro.org/Lucu.html
 COMMENT=	HTTP daemonic library for Haskell
+LICENSE=	public-domain
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-HsOpenSSL/buildlink3.mk"
