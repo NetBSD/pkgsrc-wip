@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/27 03:57:38 phonohawk Exp $
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Database/QDBM/Cabin/List.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Database/QDBM/Cabin/List.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Database/QDBM/Cabin/Map.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Database/QDBM/Cabin/Map.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/HSHsHyperEstraier-${PKGVERSION}.o
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Condition.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Condition.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Database.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Database.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Document.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Document.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Utils.hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/Text/HyperEstraier/Utils.p_hi
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/libHSHsHyperEstraier-${PKGVERSION}.a
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/libHSHsHyperEstraier-${PKGVERSION}_p.a
+lib/HsHyperEstraier-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/HsHyperEstraier-${PKGVERSION}/COPYING
