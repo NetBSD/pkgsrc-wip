@@ -1,11 +1,10 @@
-# $Id: Makefile,v 1.3519 2009/07/25 21:52:33 pettai Exp $
+# $Id: Makefile,v 1.3520 2009/07/27 03:26:32 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
-SUBDIR+=	FileManip
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
@@ -710,6 +709,7 @@ SUBDIR+=	homebank
 SUBDIR+=	hping3
 SUBDIR+=	hplip
 SUBDIR+=	hpoj
+SUBDIR+=	hs-FileManip
 SUBDIR+=	hs-HDBC
 SUBDIR+=	hs-HDBC-sqlite3
 SUBDIR+=	hs-HTTP
