@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/22 13:05:23 htepper Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/07/27 03:58:12 othyro Exp $
 bin/arora
 bin/arora-placesimport
 bin/googlesuggest
 bin/htmlToXBel
-man/man1/arora.1.gz
+man/man1/arora.1
 share/applications/arora.desktop
 share/arora/locale/cs_CZ.qm
 share/arora/locale/da_DK.qm
