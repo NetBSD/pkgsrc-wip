@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/04/07 22:41:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/28 21:45:09 jtonio Exp $
 #
 
-PKGNAME=	i3-3a
-DISTNAME=	i3-3.a
+PKGNAME=	i3-3b
+DISTNAME=	i3-3.b
 CATEGORIES=	wm
 MASTER_SITES=	http://i3.zekjur.net/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
-INSTALLATION_DIRS=${PKG_SYSCONFDIR}/i3
+INSTALLATION_DIRS=${PKG_SYSCONFDIR}/i3 ${PKGMANDIR}/man1
 CONF_FILES=${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/i3/config
 
 SUBST_CLASSES+=			fix-prefix
@@ -44,4 +44,5 @@ post-install:
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../wip/libev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
