@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/12 22:16:08 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2009/07/28 16:15:47 jihbed Exp $
 
-SHA1 (tilda-0.09.2.tar.gz) = f26981f1bc8e80aa2bcb542c216113e0ca4cc329
-RMD160 (tilda-0.09.2.tar.gz) = 102370db11638da3f53a01146ee7bfa2d5ebed1c
-Size (tilda-0.09.2.tar.gz) = 108736 bytes
+SHA1 (tilda-0.9.6.tar.gz) = bb16b78d1622311bf6de9f91db32ea5dc2019ca6
+RMD160 (tilda-0.9.6.tar.gz) = b52d3269b2af1d7061f3cb849d7cdc02c5628270
+Size (tilda-0.9.6.tar.gz) = 307517 bytes
