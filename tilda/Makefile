@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/28 16:15:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/28 16:19:22 jihbed Exp $
 #
 
 DISTNAME=	tilda-0.9.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilda/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://tilda.sourceforge.net/
-COMMENT=	Terminal like the classic first-person-shooter games.
+COMMENT=	Terminal like the classic first-person-shooter games
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
