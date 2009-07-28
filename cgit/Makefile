@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2009/04/23 05:46:33 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/28 22:22:16 rsmarples Exp $
 
 CATEGORIES=www
 DISTNAME=cgit-0.8.2.1
+PKGREVISION=1
 HOMEPAGE=http://hjemli.net/git/cgit
 COMMENT=Fast web interface for git
 
 USE_TOOLS+=gmake
-MAKE_ENV+=GIT_VER=1.6.0.6
+MAKE_JOBS_SAFE=no
+MAKE_FLAGS+=GIT_VER=1.6.3.3
 BUILD_MAKE_FLAGS+=CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
 BUILD_TARGET=get-git all
 
