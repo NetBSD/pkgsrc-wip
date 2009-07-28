@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/28 00:10:09 jihbed Exp $
 #
 
-DISTNAME=		gxconsole-0.3.1
-CATEGORIES=		x11
+DISTNAME=	gxconsole-0.3.1
+CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxconsole/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gxconsole.sourceforge.net/
 COMMENT=	Gxconsole is gtk-based reading system console messages like xconsole
 
