@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/28 21:39:35 jtonio Exp $
+include/ev++.h
+include/ev.h
+include/event.h
+lib/libev.la
+man/man3/ev.3
