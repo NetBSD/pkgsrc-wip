@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/04/21 23:18:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/28 00:08:28 jihbed Exp $
 #
 
 DISTNAME=	gxmessage-2.12.1
 CATEGORIES=	x11
 MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://homepages.ihug.co.nz/~trmusson/programs.html#gxmessage/
 COMMENT=	Gxmessage a GTK2+ based xmessage clone
 
