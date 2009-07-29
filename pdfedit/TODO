@@ -13,3 +13,5 @@ warning: /usr/pkg/share/pdfedit/icon/hicolor/stream_mode_gfx.png: executable bit
 	(what's QSA, and can it be linked in nexternally?)
 * Added --enable-release to configure
 	(can we use that?)
+
+- This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2009-0146, CVE-2009-0147, CVE-2009-0166, CVE-2009-0195, CVE-2009-0799, CVE-2009-0800, CVE-2009-1179, CVE-2009-1180, CVE-2009-1181, CVE-2009-1182, CVE-2009-1183).
