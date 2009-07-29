@@ -1,1 +1,3 @@
 add chroot support to syslogng.sh script like in named
+
+- This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2008-5110).
