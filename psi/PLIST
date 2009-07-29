@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/07/24 02:21:17 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/07/29 00:52:51 schnoebe Exp $
 bin/psi
 share/applications/psi.desktop
 share/doc/psi/COPYING
@@ -169,18 +169,18 @@ share/psi/iconsets/system/default/whiteboarding/translate.png
 share/psi/iconsets/system/default/whiteboarding/ungroup.png
 share/psi/iconsets/system/default/whiteboarding/whiteboard.png
 share/psi/iconsets/system/default/xml.png
-share/psi/psi_cs.qm
+@comment share/psi/psi_cs.qm
 share/psi/psi_de.qm
-share/psi/psi_es_ES.qm
+@comment share/psi/psi_es_ES.qm
 share/psi/psi_fr.qm
 share/psi/psi_mk.qm
 share/psi/psi_pl.qm
 share/psi/psi_pt_BR.qm
 share/psi/psi_ru.qm
-share/psi/psi_uk.qm
-share/psi/psi_vi.qm
-share/psi/psi_zh.qm
-share/psi/psi_zh_TW.qm
+@comment share/psi/psi_uk.qm
+@comment share/psi/psi_vi.qm
+@comment share/psi/psi_zh.qm
+@comment share/psi/psi_zh_TW.qm
 share/psi/sound/chat1.wav
 share/psi/sound/chat2.wav
 share/psi/sound/ft_complete.wav
