@@ -1,6 +1,6 @@
-$NetBSD: patch-pd,v 1.1 2009/07/18 22:52:00 tnn2 Exp $
+$NetBSD: patch-pd,v 1.2 2009/07/29 22:07:22 tnn2 Exp $
 
---- xulrunner/installer/mozilla-nss.pc.in.orig	2008-01-18 12:20:17.000000000 +0100
+--- xulrunner/installer/mozilla-nss.pc.in.orig	2009-06-29 18:15:36.000000000 +0200
 +++ xulrunner/installer/mozilla-nss.pc.in
 @@ -6,5 +6,5 @@ Name: NSS
  Description: Mozilla Network Security Services

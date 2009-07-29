@@ -1,6 +1,6 @@
-$NetBSD: patch-mb,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
+$NetBSD: patch-mb,v 1.2 2009/07/29 22:07:22 tnn2 Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2008-04-09 08:34:20.000000000 +0200
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2009-06-29 18:15:32.000000000 +0200
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -64,14 +64,21 @@ include $(topsrcdir)/config/config.mk
  #
@@ -44,7 +44,7 @@ $NetBSD: patch-mb,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -329,9 +336,10 @@ endif
+@@ -325,9 +332,10 @@ endif
  #
  # NetBSD/PPC
  #
@@ -56,7 +56,7 @@ $NetBSD: patch-mb,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
  endif
  
  #
-@@ -403,6 +411,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
+@@ -399,6 +407,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
  ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
  endif
  #

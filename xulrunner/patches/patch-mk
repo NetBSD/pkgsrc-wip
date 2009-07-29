@@ -1,10 +1,10 @@
-$NetBSD: patch-mk,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
+$NetBSD: patch-mk,v 1.2 2009/07/29 22:07:22 tnn2 Exp $
 
 Treat DragonFly like FreeBSD.
 
---- config/rules.mk.orig	2008-06-25 01:29:46.000000000 +0200
+--- config/rules.mk.orig	2009-06-29 18:14:41.000000000 +0200
 +++ config/rules.mk
-@@ -473,6 +473,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -592,6 +592,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  

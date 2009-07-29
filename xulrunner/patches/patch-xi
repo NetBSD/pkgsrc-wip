@@ -1,8 +1,8 @@
-$NetBSD: patch-xi,v 1.1 2009/07/17 10:18:30 tnn2 Exp $
+$NetBSD: patch-xi,v 1.2 2009/07/29 22:07:22 tnn2 Exp $
 
 NetBSD/amd64 xptcall support code. Originally from pkgsrc/www/mozilla.
 
---- xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp.orig	2009-07-09 10:44:51.000000000 +0200
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp.orig	2009-06-30 22:20:24.000000000 +0200
 +++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_unixish_amd64.cpp
 @@ -0,0 +1,206 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
