@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/07/18 20:57:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.26 2009/07/29 19:08:54 tnn2 Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
-HOMEPAGE=	http://www.mozilla.com/en-US/firefox/all-beta.html
+HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions
 
 WRKSRC=		${WRKDIR}/mozilla-1.9.1
