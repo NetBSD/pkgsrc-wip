@@ -1,3 +1,9 @@
 This package is finished, please move it to pkgsrc.
 
 -- Michael Stapelberg
+
+It still needs:
+- import libev first
+- make it install the configuration file properly with PKGSYSCONFDIR
+
+-- tonio
