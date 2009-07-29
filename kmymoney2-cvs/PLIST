@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/06/06 17:20:52 gduzan Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/07/29 21:09:02 gduzan Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -177,12 +177,18 @@ share/doc/kde/HTML/en/kmymoney2/makemostof.docbook
 share/doc/kde/HTML/en/kmymoney2/new.png
 share/doc/kde/HTML/en/kmymoney2/newacct.png
 share/doc/kde/HTML/en/kmymoney2/newfile.png
+share/doc/kde/HTML/en/kmymoney2/newfile-2.png
+share/doc/kde/HTML/en/kmymoney2/newfile-3.png
+share/doc/kde/HTML/en/kmymoney2/newfile-4.png
+share/doc/kde/HTML/en/kmymoney2/newfile-5.png
+share/doc/kde/HTML/en/kmymoney2/newfile-6.png
 share/doc/kde/HTML/en/kmymoney2/newinst.png
 share/doc/kde/HTML/en/kmymoney2/newsched_numbered.png
 share/doc/kde/HTML/en/kmymoney2/otherdoc.docbook
 share/doc/kde/HTML/en/kmymoney2/outbox_view.png
 share/doc/kde/HTML/en/kmymoney2/payee_history.png
 share/doc/kde/HTML/en/kmymoney2/payee_info.png
+share/doc/kde/HTML/en/kmymoney2/payee_match.png
 share/doc/kde/HTML/en/kmymoney2/payee_widget.png
 share/doc/kde/HTML/en/kmymoney2/payees_view.png
 share/doc/kde/HTML/en/kmymoney2/payeeview.png
