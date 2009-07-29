@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/07/29 19:15:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.28 2009/07/29 19:29:47 tnn2 Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
@@ -31,9 +31,6 @@ CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
 CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=	js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
-CONFIG_STATUS_OVERRIDE=	config.status
-CONFIG_STATUS_OVERRIDE+=js/src/config.status
-CONFIG_STATUS_OVERRIDE+=nsprpub/config.status
 
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--enable-libxul
