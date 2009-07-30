@@ -1,0 +1,6 @@
+This package provides support for documents marked up using the reStructuredText
+format. Support includes font locking as well as some convenience functions for
+editing. It does this by defining a Emacs major mode.
+
+The package is based on `text-mode' and inherits some things from it.
+Particularly `text-mode-hook' is run before `rst-mode-hook'.
