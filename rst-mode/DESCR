@@ -1,6 +1,5 @@
-This package provides support for documents marked up using the reStructuredText
-format. Support includes font locking as well as some convenience functions for
-editing. It does this by defining a Emacs major mode.
-
-The package is based on `text-mode' and inherits some things from it.
-Particularly `text-mode-hook' is run before `rst-mode-hook'.
+reStructuredText is a series of conventions that allows a toolset--docutils--to
+extract generic document structure from simple text files. For people who use
+Emacs, there is a package that adds a major mode that supports editing in the
+conventions of reStructuredText: rst.el. This document describes the features it
+provides, and how to setup your emacs to use them and how to invoke them.

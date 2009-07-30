@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/30 05:49:12 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/07/30 06:07:12 phonohawk Exp $
 
-SHA1 (rst-mode.el) = 0dcdd420e58160627e68f6391b38bd7123dc94c5
-RMD160 (rst-mode.el) = 2ba05c7cc4ed101e1025a9b3f5f9067539342b9c
-Size (rst-mode.el) = 29498 bytes
+SHA1 (rst.el) = 8a61d0939fccdb2fd44711f1245e1cb082579996
+RMD160 (rst.el) = 2b0c55b16a73e353d60c66d34860c87980dc035a
+Size (rst.el) = 117357 bytes
