@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/07/10 22:15:23 absd Exp $
+# $NetBSD: Makefile,v 1.27 2009/07/30 12:26:56 mwdavies Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -32,8 +32,6 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 
 CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
-CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/systemsettingsrc \
-			${PKG_SYSCONFDIR}/systemsettingsrc
 
 REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \
@@ -99,6 +97,7 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 # because kdebindings4-python
 #.include "../../sysutils/consolekit/buildlink3.mk"
 .include "../../wip/kdebindings4-python/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../wip/kdelibs-experimental4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"

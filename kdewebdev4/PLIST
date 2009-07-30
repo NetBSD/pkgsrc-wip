@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/07/29 22:05:52 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/07/30 12:47:23 mwdavies Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -230,42 +230,3 @@ share/kde4/services/klinkstatus_automation.desktop
 share/kde4/services/klinkstatus_part.desktop
 share/kde4/services/krossmoduleklinkstatus.desktop
 share/kde4/services/kxsldbg_part.desktop
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/xsldbg
-@dirrm share/kde/apps/kxsldbgpart
-@dirrm share/kde/apps/kxsldbg
-@dirrm share/kde/apps/klinkstatuspart/pics
-@dirrm share/kde/apps/klinkstatuspart/kpartplugins
-@dirrm share/kde/apps/klinkstatuspart
-@dirrm share/kde/apps/klinkstatus/styles
-@dirrm share/kde/apps/klinkstatus/scripts
-@dirrm share/kde/apps/klinkstatus
-@dirrm share/kde/apps/kimagemapeditor
-@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg
-@dirrm share/kde/apps/kfilereplacepart/icons
-@dirrm share/kde/apps/kfilereplacepart
-@dirrm share/kde/apps/kfilereplace
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/xsldbg
-@dirrm share/doc/kde/HTML/en/kxsldbg
-@dirrm share/doc/kde/HTML/en/klinkstatus
-@dirrm share/doc/kde/HTML/en/kimagemapeditor
-@dirrm share/doc/kde/HTML/en/kfilereplace
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/dbus-1/interfaces
-@dirrm share/applnk/.hidden
-@dirrm share/applnk
-@comment in kde: @dirrm share/applications/kde4
-@comment in kde: @dirrm lib/kde4

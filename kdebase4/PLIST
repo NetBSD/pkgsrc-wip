@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/14 10:51:54 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/07/30 12:26:56 mwdavies Exp $
 bin/dolphin
 bin/kappfinder
 bin/kbookmarkmerger
 bin/kdepasswd
 bin/kdialog
 bin/keditbookmarks
-bin/keditfiletype
 bin/kfind
 bin/kfmclient
 bin/kinfocenter
@@ -16,6 +15,7 @@ bin/kwrite
 bin/nspluginscan
 bin/nspluginviewer
 include/knewmenu.h
+include/konq_dndpopupmenuplugin.h
 include/konq_events.h
 include/konq_fileitemcapabilities.h
 include/konq_menuactions.h
@@ -27,8 +27,10 @@ include/konqmimedata.h
 include/konqsidebarplugin.h
 include/libkonq_export.h
 lib/kde4/dolphinpart.so
-lib/kde4/kcm_dolphin.so
-lib/kde4/kcm_filetypes.so
+lib/kde4/kcm_dolphingeneral.so
+lib/kde4/kcm_dolphinnavigation.so
+lib/kde4/kcm_dolphinservices.so
+lib/kde4/kcm_dolphinviewmodes.so
 lib/kde4/kcm_history.so
 lib/kde4/kcm_info.so
 lib/kde4/kcm_ioslaveinfo.so
@@ -50,7 +52,6 @@ lib/kde4/kded_favicons.so
 lib/kde4/kded_konqy_preloader.so
 lib/kde4/khtmlkttsdplugin.so
 lib/kde4/konq_aboutpage.so
-lib/kde4/konq_remoteencoding.so
 lib/kde4/konq_shellcmdplugin.so
 lib/kde4/konq_sidebar.so
 lib/kde4/konq_sidebartree_bookmarks.so
@@ -66,7 +67,7 @@ lib/kde4/libnsplugin.so
 lib/kde4/plasma_applet_folderview.so
 lib/libdolphinprivate.so
 lib/libdolphinprivate.so.4
-lib/libdolphinprivate.so.4.2.0
+lib/libdolphinprivate.so.4.3.0
 lib/libkdeinit4_keditbookmarks.so
 lib/libkdeinit4_kfmclient.so
 lib/libkdeinit4_kinfocenter.so
@@ -75,13 +76,14 @@ lib/libkdeinit4_konsole.so
 lib/libkdeinit4_kwrite.so
 lib/libkonq.so
 lib/libkonq.so.5
-lib/libkonq.so.5.2.0
+lib/libkonq.so.5.3.0
 lib/libkonqsidebarplugin.so
 lib/libkonqsidebarplugin.so.4
-lib/libkonqsidebarplugin.so.4.2.0
+lib/libkonqsidebarplugin.so.4.3.0
 lib/libkonquerorprivate.so
 lib/libkonquerorprivate.so.4
-lib/libkonquerorprivate.so.4.2.0
+lib/libkonquerorprivate.so.4.3.0
+lib/libkonsoleprivate.so
 man/man1/kappfinder.1
 man/man1/kbookmarkmerger.1
 man/man1/kfind.1
@@ -218,26 +220,20 @@ share/doc/kde/HTML/en/konsole/index.docbook
 share/doc/kde/HTML/en/kwrite/common
 share/doc/kde/HTML/en/kwrite/index.cache.bz2
 share/doc/kde/HTML/en/kwrite/index.docbook
-share/icons/hicolor/128x128/actions/preview.png
 share/icons/hicolor/128x128/apps/kappfinder.png
 share/icons/hicolor/128x128/apps/konqueror.png
-share/icons/hicolor/16x16/actions/preview.png
 share/icons/hicolor/16x16/apps/kappfinder.png
 share/icons/hicolor/16x16/apps/kfind.png
 share/icons/hicolor/16x16/apps/konqueror.png
-share/icons/hicolor/22x22/actions/preview.png
 share/icons/hicolor/22x22/apps/kappfinder.png
 share/icons/hicolor/22x22/apps/kfind.png
 share/icons/hicolor/22x22/apps/konqueror.png
-share/icons/hicolor/32x32/actions/preview.png
 share/icons/hicolor/32x32/apps/kappfinder.png
 share/icons/hicolor/32x32/apps/kfind.png
 share/icons/hicolor/32x32/apps/konqueror.png
-share/icons/hicolor/48x48/actions/preview.png
 share/icons/hicolor/48x48/apps/kappfinder.png
 share/icons/hicolor/48x48/apps/kfind.png
 share/icons/hicolor/48x48/apps/konqueror.png
-share/icons/hicolor/64x64/actions/preview.png
 share/icons/hicolor/64x64/apps/kappfinder.png
 share/icons/hicolor/64x64/apps/kfind.png
 share/icons/hicolor/64x64/apps/konqueror.png
@@ -441,8 +437,6 @@ share/icons/oxygen/scalable/apps/xeyes.svgz
 share/icons/oxygen/scalable/apps/xpaint.svgz
 share/kde/apps/dolphin/dolphinui.rc
 share/kde/apps/dolphinpart/dolphinpart.rc
-share/kde/apps/dolphinpart/kpartplugins/kremoteencodingplugin.desktop
-share/kde/apps/dolphinpart/kpartplugins/kremoteencodingplugin.rc
 share/kde/apps/dolphinpart/kpartplugins/kshellcmdplugin.desktop
 share/kde/apps/dolphinpart/kpartplugins/kshellcmdplugin.rc
 share/kde/apps/kappfinder/apps/Development/Forte.desktop
@@ -813,7 +807,6 @@ share/kde4/services/dma.desktop
 share/kde4/services/dolphinpart.desktop
 share/kde4/services/ebrowsing.desktop
 share/kde4/services/filebehavior.desktop
-share/kde4/services/filetypes.desktop
 share/kde4/services/interrupts.desktop
 share/kde4/services/ioports.desktop
 share/kde4/services/ioslaveinfo.desktop
@@ -821,7 +814,10 @@ share/kde4/services/kcm_memory.desktop
 share/kde4/services/kcm_partition.desktop
 share/kde4/services/kcm_pci.desktop
 share/kde4/services/kcm_useraccount.desktop
-share/kde4/services/kcmdolphin.desktop
+share/kde4/services/kcmdolphingeneral.desktop
+share/kde4/services/kcmdolphinnavigation.desktop
+share/kde4/services/kcmdolphinservices.desktop
+share/kde4/services/kcmdolphinviewmodes.desktop
 share/kde4/services/kcmhistory.desktop
 share/kde4/services/kcmkonqyperformance.desktop
 share/kde4/services/kcmperformance.desktop
@@ -851,18 +847,18 @@ share/kde4/services/smb.desktop
 share/kde4/services/smbstatus.desktop
 share/kde4/services/sound.desktop
 share/kde4/services/useragent.desktop
-share/kde4/services/useragentstrings/firefox15oncurrent.desktop
+share/kde4/services/useragentstrings/android10.desktop
+share/kde4/services/useragentstrings/chrome10onwinnt51.desktop
 share/kde4/services/useragentstrings/firefox20oncurrent.desktop
+share/kde4/services/useragentstrings/firefox30oncurrent.desktop
 share/kde4/services/useragentstrings/googlebot.desktop
 share/kde4/services/useragentstrings/ie401onwinnt4.desktop
 share/kde4/services/useragentstrings/ie50onppc.desktop
 share/kde4/services/useragentstrings/ie55onwinnt5.desktop
 share/kde4/services/useragentstrings/ie60oncurrent.desktop
 share/kde4/services/useragentstrings/ie60onwinnt51.desktop
+share/kde4/services/useragentstrings/ie70onwinnt51.desktop
 share/kde4/services/useragentstrings/lynxoncurrent.desktop
-share/kde4/services/useragentstrings/mozoncurrent.desktop
-share/kde4/services/useragentstrings/mozoncurrent12.desktop
-share/kde4/services/useragentstrings/mozonwinxp.desktop
 share/kde4/services/useragentstrings/nn301oncurrent.desktop
 share/kde4/services/useragentstrings/nn475oncurrent.desktop
 share/kde4/services/useragentstrings/nn475onwin95.desktop
@@ -871,149 +867,16 @@ share/kde4/services/useragentstrings/ns71onwinnt51.desktop
 share/kde4/services/useragentstrings/op403onwinnt4.desktop
 share/kde4/services/useragentstrings/op85oncurrent.desktop
 share/kde4/services/useragentstrings/op90oncurrent.desktop
-share/kde4/services/useragentstrings/safari12.desktop
+share/kde4/services/useragentstrings/op962oncurrent.desktop
 share/kde4/services/useragentstrings/safari20.desktop
+share/kde4/services/useragentstrings/safari30oniphone.desktop
+share/kde4/services/useragentstrings/safari32.desktop
 share/kde4/services/useragentstrings/w3moncurrent.desktop
 share/kde4/services/useragentstrings/wgetoncurrent.desktop
 share/kde4/services/xserver.desktop
 share/kde4/servicetypes/findpart.desktop
 share/kde4/servicetypes/konqaboutpage.desktop
+share/kde4/servicetypes/konqdndpopupmenuplugin.desktop
 share/kde4/servicetypes/konqpopupmenuplugin.desktop
 share/kde4/servicetypes/terminalemulator.desktop
 share/kde4/servicetypes/uasprovider.desktop
-@comment in kde: @dirrm share/kde4/servicetypes
-@dirrm share/kde4/services/useragentstrings
-@comment in kde: @dirrm share/kde4/services/kded
-@comment in kde: @dirrm share/kde4/services/ServiceMenus
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@comment in kde: @dirrm share/kde/templates/.source
-@comment in kde: @dirrm share/kde/templates
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/config
-@comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/plugin
-@dirrm share/kde/apps/kwrite
-@dirrm share/kde/apps/konsole
-@dirrm share/kde/apps/konqueror/profiles
-@dirrm share/kde/apps/konqueror/pics
-@dirrm share/kde/apps/konqueror/about
-@comment in kde: @dirrm share/kde/apps/konqueror
-@dirrm share/kde/apps/konqsidebartng/websidebar
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
-@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/web
-@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/ftp
-@dirrm share/kde/apps/konqsidebartng/virtual_folders/remote
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders
-@dirrm share/kde/apps/konqsidebartng/entries
-@dirrm share/kde/apps/konqsidebartng/dirtree
-@dirrm share/kde/apps/konqsidebartng/add
-@comment in kde: @dirrm share/kde/apps/konqsidebartng
-@dirrm share/kde/apps/kinfocenter/about
-@dirrm share/kde/apps/kinfocenter
-@comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
-@comment in kde: @dirrm share/kde/apps/khtml
-@dirrm share/kde/apps/keditbookmarks
-@comment in kde: @dirrm share/kde/apps/kdm/pics/users
-@comment in kde: @dirrm share/kde/apps/kdm/pics
-@comment in kde: @dirrm share/kde/apps/kdm
-@comment in kde: @dirrm share/kde/apps/kcontrol/pics
-@comment in kde: @dirrm share/kde/apps/kcontrol
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/kcmusb
-@dirrm share/kde/apps/kcmcss
-@dirrm share/kde/apps/kbookmark
-@dirrm share/kde/apps/kappfinder/apps/Utilities/XUtilities
-@dirrm share/kde/apps/kappfinder/apps/Utilities
-@dirrm share/kde/apps/kappfinder/apps/Toys
-@dirrm share/kde/apps/kappfinder/apps/System/Terminal
-@dirrm share/kde/apps/kappfinder/apps/System
-@dirrm share/kde/apps/kappfinder/apps/Office
-@dirrm share/kde/apps/kappfinder/apps/Multimedia
-@dirrm share/kde/apps/kappfinder/apps/Internet/Terminal
-@dirrm share/kde/apps/kappfinder/apps/Internet
-@dirrm share/kde/apps/kappfinder/apps/Graphics
-@dirrm share/kde/apps/kappfinder/apps/Games/TacticStrategy
-@dirrm share/kde/apps/kappfinder/apps/Games/Roguelikes
-@dirrm share/kde/apps/kappfinder/apps/Games/Emulators
-@dirrm share/kde/apps/kappfinder/apps/Games/Card
-@dirrm share/kde/apps/kappfinder/apps/Games/Board
-@dirrm share/kde/apps/kappfinder/apps/Games/Arcade
-@dirrm share/kde/apps/kappfinder/apps/Games
-@dirrm share/kde/apps/kappfinder/apps/Editors
-@dirrm share/kde/apps/kappfinder/apps/Development
-@dirrm share/kde/apps/kappfinder/apps
-@dirrm share/kde/apps/kappfinder
-@dirrm share/kde/apps/dolphinpart/kpartplugins
-@dirrm share/kde/apps/dolphinpart
-@dirrm share/kde/apps/dolphin
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in kde: @dirrm share/icons/oxygen/scalable/apps
-@comment in kde: @dirrm share/icons/oxygen/scalable
-@comment in kde: @dirrm share/icons/oxygen/64x64/apps
-@comment in kde: @dirrm share/icons/oxygen/64x64
-@comment in kde: @dirrm share/icons/oxygen/48x48/apps
-@comment in kde: @dirrm share/icons/oxygen/48x48
-@comment in kde: @dirrm share/icons/oxygen/32x32/apps
-@comment in kde: @dirrm share/icons/oxygen/32x32
-@comment in kde: @dirrm share/icons/oxygen/22x22/apps
-@comment in kde: @dirrm share/icons/oxygen/22x22
-@comment in kde: @dirrm share/icons/oxygen/16x16/apps
-@comment in kde: @dirrm share/icons/oxygen/16x16
-@comment in kde: @dirrm share/icons/oxygen/128x128/apps
-@comment in kde: @dirrm share/icons/oxygen/128x128
-@comment in kde: @dirrm share/icons/oxygen
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/en/kwrite
-@dirrm share/doc/kde/HTML/en/konsole
-@dirrm share/doc/kde/HTML/en/konqueror
-@dirrm share/doc/kde/HTML/en/kinfocenter/xserver
-@dirrm share/doc/kde/HTML/en/kinfocenter/usb
-@dirrm share/doc/kde/HTML/en/kinfocenter/sound
-@dirrm share/doc/kde/HTML/en/kinfocenter/scsi
-@dirrm share/doc/kde/HTML/en/kinfocenter/samba
-@dirrm share/doc/kde/HTML/en/kinfocenter/protocols
-@dirrm share/doc/kde/HTML/en/kinfocenter/processor
-@dirrm share/doc/kde/HTML/en/kinfocenter/pcmcia
-@dirrm share/doc/kde/HTML/en/kinfocenter/pci
-@dirrm share/doc/kde/HTML/en/kinfocenter/partitions
-@dirrm share/doc/kde/HTML/en/kinfocenter/opengl
-@dirrm share/doc/kde/HTML/en/kinfocenter/nics
-@dirrm share/doc/kde/HTML/en/kinfocenter/memory
-@dirrm share/doc/kde/HTML/en/kinfocenter/ioports
-@dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
-@dirrm share/doc/kde/HTML/en/kinfocenter/dma
-@dirrm share/doc/kde/HTML/en/kinfocenter/devices
-@dirrm share/doc/kde/HTML/en/kinfocenter
-@dirrm share/doc/kde/HTML/en/kfind
-@dirrm share/doc/kde/HTML/en/kdepasswd
-@dirrm share/doc/kde/HTML/en/dolphin
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/dbus-1/interfaces
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in kde: @dirrm lib/kde4

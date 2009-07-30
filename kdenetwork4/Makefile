@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/01/14 10:51:54 mwdavies Exp $
+# $NetBSD: Makefile,v 1.14 2009/07/30 12:47:22 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -41,6 +41,7 @@ REPLACE_SH+= \
 .include "../../wip/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../wip/kdelibs-experimental4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../wip/kdebase4/buildlink3.mk"
 .include "../../wip/kdebase-runtime4/buildlink3.mk"

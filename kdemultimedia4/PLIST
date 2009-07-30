@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2009/05/11 11:27:01 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/07/30 12:47:22 mwdavies Exp $
 bin/dragon
 bin/juk
 bin/kmix
 bin/kmixctrl
 bin/kscd
+bin/mplayerthumbsconfig
 include/audiocdencoder.h
 include/libkcddb/cdinfo.h
 include/libkcddb/cdinfodialog.h
@@ -22,15 +23,16 @@ lib/kde4/libaudiocd_encoder_flac.so
 lib/kde4/libaudiocd_encoder_lame.so
 lib/kde4/libaudiocd_encoder_vorbis.so
 lib/kde4/libaudiocd_encoder_wav.so
+lib/kde4/videopreview.so
 lib/libaudiocdplugins.so
 lib/libaudiocdplugins.so.4
-lib/libaudiocdplugins.so.4.2.0
+lib/libaudiocdplugins.so.4.3.0
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.4.2.0
+lib/libkcddb.so.4.3.0
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.4.2.0
+lib/libkcompactdisc.so.4.3.0
 lib/libkdeinit4_kmix.so
 lib/libkdeinit4_kmixctrl.so
 share/applications/kde4/dragonplayer.desktop
@@ -38,6 +40,7 @@ share/applications/kde4/juk.desktop
 share/applications/kde4/kmix.desktop
 share/applications/kde4/kscd.desktop
 share/dbus-1/interfaces/org.kde.KMix.xml
+share/dbus-1/interfaces/org.kde.juk.collection.xml
 share/dbus-1/interfaces/org.kde.juk.player.xml
 share/dbus-1/interfaces/org.kde.juk.search.xml
 share/dbus-1/interfaces/org.kde.kscd.cdplayer.xml
@@ -113,6 +116,7 @@ share/icons/oxygen/48x48/actions/player-volume-muted.png
 share/icons/oxygen/scalable/actions/player-volume-muted.svgz
 share/kde/apps/dragonplayer/dragonlogo.png
 share/kde/apps/dragonplayer/dragonplayerui.rc
+share/kde/apps/juk/juk.notifyrc
 share/kde/apps/juk/jukui-rtl.rc
 share/kde/apps/juk/jukui.rc
 share/kde/apps/juk/pics/playing.png
@@ -125,106 +129,48 @@ share/kde/apps/kmix/kmixui.rc
 share/kde/apps/kmix/pics/kmixdocked.png
 share/kde/apps/kmix/pics/kmixdocked_error.png
 share/kde/apps/kmix/pics/kmixdocked_mute.png
-share/kde/apps/kmix/pics/mix_ac97.png
-share/kde/apps/kmix/pics/mix_audio.png
-share/kde/apps/kmix/pics/mix_bass.png
-share/kde/apps/kmix/pics/mix_cd.png
-share/kde/apps/kmix/pics/mix_digital.png
-share/kde/apps/kmix/pics/mix_ext.png
-share/kde/apps/kmix/pics/mix_headphone.png
-share/kde/apps/kmix/pics/mix_microphone.png
-share/kde/apps/kmix/pics/mix_midi.png
-share/kde/apps/kmix/pics/mix_recmon.png
 share/kde/apps/kmix/pics/mix_record.png
-share/kde/apps/kmix/pics/mix_surround.png
-share/kde/apps/kmix/pics/mix_treble.png
-share/kde/apps/kmix/pics/mix_unknown.png
-share/kde/apps/kmix/pics/mix_video.png
-share/kde/apps/kmix/pics/mix_volume.png
+share/kde/apps/kmix/pics/mixer-ac97.png
+share/kde/apps/kmix/pics/mixer-capture.png
+share/kde/apps/kmix/pics/mixer-cd.png
+share/kde/apps/kmix/pics/mixer-digital.png
+share/kde/apps/kmix/pics/mixer-front.png
+share/kde/apps/kmix/pics/mixer-headset.png
+share/kde/apps/kmix/pics/mixer-lfe.png
+share/kde/apps/kmix/pics/mixer-line.png
+share/kde/apps/kmix/pics/mixer-master.png
+share/kde/apps/kmix/pics/mixer-microphone.png
+share/kde/apps/kmix/pics/mixer-midi.png
+share/kde/apps/kmix/pics/mixer-pcm-default.png
+share/kde/apps/kmix/pics/mixer-pcm.png
+share/kde/apps/kmix/pics/mixer-surround.png
+share/kde/apps/kmix/pics/mixer-video.png
 share/kde/apps/kmix/profiles/ALSA.default.xml
 share/kde/apps/kmix/profiles/OSS.default.xml
 share/kde/apps/konqsidebartng/virtual_folders/services/audiocd.desktop
-share/kde/apps/kscd/skin/BubbleGum.svg
-share/kde/apps/kscd/skin/Melon.svg
-share/kde/apps/kscd/skin/NGRemote.svg
-share/kde/apps/kscd/skin/Orange2.svg
-share/kde/apps/kscd/skin/SquaredMelon.svg
+share/kde/apps/kscd/skin/Chrome.svg
+share/kde/apps/kscd/skin/Obsidian-Coast.svg
+share/kde/apps/kscd/skin/Steel.svg
 share/kde/apps/kscd/skin/default.svg
 share/kde/apps/profiles/kscd.profile.xml
 share/kde/apps/solid/actions/dragonplayer-opendvd.desktop
+share/kde/apps/solid/actions/kscd-play-audiocd.desktop
+share/kde/apps/videothumbnail/sprocket-large.png
+share/kde/apps/videothumbnail/sprocket-medium.png
+share/kde/apps/videothumbnail/sprocket-small.png
 share/kde/autostart/kmix_autostart.desktop
 share/kde/autostart/restore_kmix_volumes.desktop
 share/kde/config.kcfg/audiocd_lame_encoder.kcfg
 share/kde/config.kcfg/audiocd_vorbis_encoder.kcfg
 share/kde/config.kcfg/kscd.kcfg
 share/kde/config.kcfg/libkcddb.kcfg
+share/kde/config.kcfg/mplayerthumbs.kcfg
 share/kde/config/dragonplayerrc
-share/kde4/services/ServiceMenus/audiocd_play.desktop
 share/kde4/services/ServiceMenus/dragonplayer_play_dvd.desktop
+share/kde4/services/ServiceMenus/jukservicemenu.desktop
 share/kde4/services/audiocd.desktop
 share/kde4/services/audiocd.protocol
 share/kde4/services/dragonplayer_part.desktop
 share/kde4/services/kmixctrl_restore.desktop
 share/kde4/services/libkcddb.desktop
-@comment in kde: @dirrm share/kde4/services/ServiceMenus
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/config
-@comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/profiles
-@dirrm share/kde/apps/kscd/skin
-@dirrm share/kde/apps/kscd
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders
-@comment in kde: @dirrm share/kde/apps/konqsidebartng
-@dirrm share/kde/apps/kmix/profiles
-@dirrm share/kde/apps/kmix/pics
-@dirrm share/kde/apps/kmix
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/juk/pics
-@dirrm share/kde/apps/juk
-@dirrm share/kde/apps/dragonplayer
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in kde: @dirrm share/icons/oxygen/scalable/actions
-@comment in kde: @dirrm share/icons/oxygen/scalable
-@comment in kde: @dirrm share/icons/oxygen/48x48/actions
-@comment in kde: @dirrm share/icons/oxygen/48x48
-@comment in kde: @dirrm share/icons/oxygen/32x32/actions
-@comment in kde: @dirrm share/icons/oxygen/32x32
-@comment in kde: @dirrm share/icons/oxygen/22x22/actions
-@comment in kde: @dirrm share/icons/oxygen/22x22
-@comment in kde: @dirrm share/icons/oxygen/16x16/actions
-@comment in kde: @dirrm share/icons/oxygen/16x16
-@comment in kde: @dirrm share/icons/oxygen
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/en/kscd
-@dirrm share/doc/kde/HTML/en/kmix
-@dirrm share/doc/kde/HTML/en/kioslave/audiocd
-@dirrm share/doc/kde/HTML/en/juk
-@dirrm share/doc/kde/HTML/en/dragonplayer
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/dbus-1/interfaces
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in kde: @dirrm lib/kde4
-@dirrm include/libkcompactdisc
-@dirrm include/libkcddb
+share/kde4/services/videopreview.desktop

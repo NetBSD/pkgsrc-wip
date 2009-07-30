@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/14 10:51:55 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/07/30 12:47:23 mwdavies Exp $
 bin/amor
 bin/kteatime
 bin/ktux
@@ -507,52 +507,3 @@ share/kde4/services/ScreenSavers/ktux.desktop
 share/kde4/services/kcmweather.desktop
 share/kde4/services/kcmweatherservice.desktop
 share/kde4/services/kweatherservice.desktop
-@comment in kde: @dirrm share/kde4/services/ScreenSavers
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@dirrm share/kde/apps/kweatherservice
-@dirrm share/kde/apps/kweather
-@dirrm share/kde/apps/ktux/sprites
-@dirrm share/kde/apps/ktux
-@dirrm share/kde/apps/kteatime
-@dirrm share/kde/apps/amor/pics/static
-@dirrm share/kde/apps/amor/pics/preview
-@dirrm share/kde/apps/amor/pics/animated/worm
-@dirrm share/kde/apps/amor/pics/animated/tao
-@dirrm share/kde/apps/amor/pics/animated/pingu
-@dirrm share/kde/apps/amor/pics/animated/neko
-@dirrm share/kde/apps/amor/pics/animated/ghost
-@dirrm share/kde/apps/amor/pics/animated/eyes
-@dirrm share/kde/apps/amor/pics/animated/bonhomme
-@dirrm share/kde/apps/amor/pics/animated/blob
-@dirrm share/kde/apps/amor/pics/animated
-@dirrm share/kde/apps/amor/pics
-@dirrm share/kde/apps/amor
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/en/kweather
-@dirrm share/doc/kde/HTML/en/kteatime
-@dirrm share/doc/kde/HTML/en/amor
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/dbus-1/interfaces
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in kde: @dirrm lib/kde4

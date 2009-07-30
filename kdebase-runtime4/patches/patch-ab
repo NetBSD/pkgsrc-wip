@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/12/12 03:25:44 mwdavies Exp $
+$NetBSD: patch-ab,v 1.2 2009/07/30 12:18:13 mwdavies Exp $
 
 dont install hicolor/index.theme as hicolor-icon-theme pkg will
 
@@ -9,5 +9,5 @@ dont install hicolor/index.theme as hicolor-icon-theme pkg will
 -add_subdirectory( hicolor )
 +#add_subdirectory( hicolor )
  add_subdirectory( emoticons )
- add_subdirectory( oxygen )
+ #add_subdirectory( oxygen )
  
