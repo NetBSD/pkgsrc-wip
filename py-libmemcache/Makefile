@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:21:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 18:09:24 jihbed Exp $
 #
 
 DISTNAME=	python-memcached-1.44
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+PKGNAME=	${PYPKGPREFIX}-lib${DISTNAME:S/python-//}
 CATEGORIES=	devel python
 MASTER_SITES=	ftp://ftp.tummy.com/pub/python-memcached/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.tummy.com/Community/software/python-memcached/
 COMMENT=	Python memcached client
-LICENSE=	LICENSE
+#LICENSE=	LICENSE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
