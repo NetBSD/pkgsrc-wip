@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/19 19:22:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/31 11:29:55 jihbed Exp $
 #
 
-DISTNAME=	pudb-0.92.9.tar
+DISTNAME=	pudb-0.92.11.tar
 PKGNAME=	${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pudb/
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/pudb-0.92.9
+WRKSRC=		${WRKDIR}/pudb-0.92.11
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"

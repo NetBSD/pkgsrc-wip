@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 18:02:57 jihbed Exp $
-${PYSITELIB}/pudb-0.92.7-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/pudb-0.92.7-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/pudb-0.92.7-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/pudb-0.92.7-py2.5.egg-info/requires.txt
-${PYSITELIB}/pudb-0.92.7-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2009/07/31 11:29:55 jihbed Exp $
+${PYSITELIB}/pudb-0.92.11-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/pudb-0.92.11-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/pudb-0.92.11-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/pudb-0.92.11-py2.5.egg-info/requires.txt
+${PYSITELIB}/pudb-0.92.11-py2.5.egg-info/top_level.txt
 ${PYSITELIB}/pudb/__init__.py
 ${PYSITELIB}/pudb/__init__.pyc
 ${PYSITELIB}/pudb/__init__.pyo
 ${PYSITELIB}/pudb/debugger.py
 ${PYSITELIB}/pudb/debugger.pyc
 ${PYSITELIB}/pudb/debugger.pyo
+${PYSITELIB}/pudb/ipython.py
+${PYSITELIB}/pudb/ipython.pyc
+${PYSITELIB}/pudb/ipython.pyo
 ${PYSITELIB}/pudb/lowlevel.py
 ${PYSITELIB}/pudb/lowlevel.pyc
 ${PYSITELIB}/pudb/lowlevel.pyo

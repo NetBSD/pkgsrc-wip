@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/19 19:22:30 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2009/07/31 11:29:55 jihbed Exp $
 
-SHA1 (pudb-0.92.9.tar.gz) = 8e16ac61fc6fdd10677d4df1c780397715860e77
-RMD160 (pudb-0.92.9.tar.gz) = 6b241def5f4aa7d00124e43b6632e0a62dbe63aa
-Size (pudb-0.92.9.tar.gz) = 25411 bytes
+SHA1 (pudb-0.92.11.tar.gz) = 6721585b5cca9a82d382887c073930f632e197b4
+RMD160 (pudb-0.92.11.tar.gz) = fca22d232375ec542f10bc0d9ec941c8e37fc216
+Size (pudb-0.92.11.tar.gz) = 26159 bytes
