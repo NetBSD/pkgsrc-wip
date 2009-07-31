@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/23 06:01:03 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/07/31 22:18:50 minskim Exp $
 #
 
 DISTNAME=	css-mode
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.el  ${EMACS_LISPPREFIX}
 	${INSTALL_DATA} ${WRKSRC}/*.elc ${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

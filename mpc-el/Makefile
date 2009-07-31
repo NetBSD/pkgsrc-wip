@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/28 16:37:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
 #
 
 DISTNAME=	mpc.el-p29
@@ -29,5 +29,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mpc/images/mpc
 	${INSTALL_DATA} ${WRKSRC}/images/mpc/*.xpm ${EMACS_LISPPREFIX}/mpc/images/mpc
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/31 22:18:51 minskim Exp $
 #
 
 DISTNAME=	php-mode-1.1.0
@@ -14,7 +14,7 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 do-build:
 	cd ${WRKSRC}; \

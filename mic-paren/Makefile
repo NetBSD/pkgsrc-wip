@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/17 00:19:26 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
 #
 
 DISTNAME=	mic-paren
@@ -23,5 +23,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.el  ${DESTDIR}${EMACS_LISPPREFIX}
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.elc ${DESTDIR}${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

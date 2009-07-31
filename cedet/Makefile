@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/06 19:39:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2009/07/31 22:18:50 minskim Exp $
 #
 
 DISTNAME=	cedet-1.0pre4
@@ -45,4 +45,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*/doc/*.info* ${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"

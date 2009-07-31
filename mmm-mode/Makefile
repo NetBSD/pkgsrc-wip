@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/16 09:03:12 airhead Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
 
 DISTNAME=		mmm-mode-0.4.8
 CATEGORIES=		textproc editors
@@ -12,5 +12,5 @@ USE_TOOLS+=		makeinfo
 GNU_CONFIGURE=		yes
 EMACS_VERSIONS_ACCEPTED= emacs21 emacs21nox
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

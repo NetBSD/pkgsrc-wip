@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/11/06 19:56:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/31 22:18:50 minskim Exp $
 
 DISTNAME=	emacs-jabber-0.7.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.el* ${DESTDIR}${EMACS_LISPPREFIX}/emacs-jabber
 	${INSTALL_DATA} ${WRKSRC}/jabber.info ${DESTDIR}${EMACS_INFOPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

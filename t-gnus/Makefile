@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/08 01:05:27 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/31 22:18:51 minskim Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
 CATEGORIES=	mail
@@ -32,5 +32,5 @@ FILES_SUBST+=		EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 #pre-configure:
 #	cd ${WRKSRC} && ${AUTORECONF} --force
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

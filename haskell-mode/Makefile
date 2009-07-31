@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/29 02:15:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
 #
 DISTNAME=		haskell-mode-2.4
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.el  ${EMACS_LISPPREFIX}/haskell-mode
 	${INSTALL_DATA} ${WRKSRC}/*.elc ${EMACS_LISPPREFIX}/haskell-mode
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

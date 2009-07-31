@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/01 17:06:16 netcap Exp $
+# $NetBSD: Makefile,v 1.7 2009/07/31 22:18:50 minskim Exp $
 #
 
 DISTNAME=	erc-5.3
@@ -12,7 +12,7 @@ COMMENT=	IRC client for Emacs
 USE_TOOLS+=	gmake makeinfo
 INFO_FILES=	yes
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .if ${EMACS_FLAVOR} == "xemacs"
 	MAKE_FLAGS+= EMACS=xemacs
 .endif

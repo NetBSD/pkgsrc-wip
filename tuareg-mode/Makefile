@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/15 21:30:48 jtonio Exp $
+# $NetBSD: Makefile,v 1.11 2009/07/31 22:18:51 minskim Exp $
 
 DISTNAME=      tuareg-mode-1.46.2
 PKGNAME=       ${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -18,5 +18,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS} \
 		${EMACS_LISPPREFIX}/
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

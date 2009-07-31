@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/04/18 22:09:04 netcap Exp $
+# $NetBSD: Makefile,v 1.5 2009/07/31 22:18:51 minskim Exp $
 #
 
 DISTNAME=		slime-2.0
@@ -35,5 +35,5 @@ do-install:
 		${INSTALL_DATA} *.lisp ${SLIME_LISPDIR}
 		${INSTALL_DATA} ${WRKSRC}/doc/slime.info ${EMACS_INFOPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

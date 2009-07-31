@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/01 20:53:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2009/07/31 22:18:51 minskim Exp $
 
 DISTNAME=	javascript-2.1b1.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/script/script-mode/:S/.el//}
@@ -29,5 +29,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 	   ${DESTDIR}${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
