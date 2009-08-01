@@ -1,34 +1,37 @@
-$NetBSD: patch-aa,v 1.5 2008/09/23 21:14:14 gschwarz Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/01 17:55:55 gschwarz Exp $
 
---- Makefile.in.orig	2008-04-25 01:07:46.000000000 +0200
-+++ Makefile.in	2008-09-23 23:08:04.000000000 +0200
-@@ -1,9 +1,9 @@
+--- Makefile.in.orig	2009-08-01 18:23:14.000000000 +0200
++++ Makefile.in	2009-08-01 18:26:57.000000000 +0200
+@@ -1,11 +1,11 @@
  
  DISTNAME = $(progname)-$(progversion)
 -INSTALL = install
 -INSTALL_PROGRAM = $(INSTALL) -p -m 755
 -INSTALL_DATA = $(INSTALL) -p -m 644
--SHELL = /bin/sh
+-INSTALL_DIR = $(INSTALL) -d -m 755
 +#INSTALL = install
 +#INSTALL_PROGRAM = $(INSTALL) -p -m 755
 +#INSTALL_DATA = $(INSTALL) -p -m 644
++#INSTALL_DIR = $(INSTALL) -d -m 755
+ LIBS = -lncurses
+-SHELL = /bin/sh
 +#SHELL = /bin/sh
  
  objs = arg_parser.o basic_buffer.o block.o buffer.o buffer_handle.o \
         encoding.o iso_8859.o main.o menu_file.o menu_help.o menu_opts.o \
-@@ -62,7 +62,7 @@
- 	if test ! -d $(DESTDIR)$(bindir) ; then $(INSTALL) -d $(DESTDIR)$(bindir) ; fi
- 	if test ! -d $(DESTDIR)$(sysconfdir) ; then $(INSTALL) -d $(DESTDIR)$(sysconfdir) ; fi
+@@ -66,7 +66,7 @@
+ 	if test ! -d $(DESTDIR)$(bindir) ; then $(INSTALL_DIR) $(DESTDIR)$(bindir) ; fi
+ 	if test ! -d $(DESTDIR)$(sysconfdir) ; then $(INSTALL_DIR) $(DESTDIR)$(sysconfdir) ; fi
  	$(INSTALL_PROGRAM) ./$(progname) $(DESTDIR)$(bindir)/$(progname)
 -	$(INSTALL_DATA) $(VPATH)/$(progname)rc $(DESTDIR)$(sysconfdir)/$(progname)rc
-+	$(INSTALL_DATA) $(VPATH)/$(progname)rc $(DESTDIR)$(prefix)/share/examples/$(progname)/$(progname)rc
++	$(INSTALL_DATA) $(VPATH)/$(progname)rc $(DESTDIR)$(prefix)/share/examples/moe/$(progname)rc
  
  install-info :
- 	if test ! -d $(DESTDIR)$(infodir) ; then $(INSTALL) -d $(DESTDIR)$(infodir) ; fi
-@@ -71,7 +71,7 @@
+ 	if test ! -d $(DESTDIR)$(infodir) ; then $(INSTALL_DIR) $(DESTDIR)$(infodir) ; fi
+@@ -75,7 +75,7 @@
  
  install-man :
- 	if test ! -d $(DESTDIR)$(mandir)/man1 ; then $(INSTALL) -d $(DESTDIR)$(mandir)/man1 ; fi
+ 	if test ! -d $(DESTDIR)$(mandir)/man1 ; then $(INSTALL_DIR) $(DESTDIR)$(mandir)/man1 ; fi
 -	$(INSTALL_DATA) $(VPATH)/doc/$(progname).1 $(DESTDIR)$(mandir)/man1/$(progname).1
 +	$(INSTALL_MAN) $(VPATH)/doc/$(progname).1 $(DESTDIR)$(mandir)/man1/$(progname).1
  
