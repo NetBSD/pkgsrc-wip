@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/10 13:29:38 moubctez Exp $
-bin/dnsget
-bin/rblcheck
-include/udns.h
-lib/libudns.la
-man/man1/dnsget.1
-man/man1/rblcheck.1
-man/man3/udns.3

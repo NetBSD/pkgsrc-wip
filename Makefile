@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3527 2009/07/31 20:53:02 athaba Exp $
+# $Id: Makefile,v 1.3528 2009/08/01 02:48:02 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2098,7 +2098,6 @@ SUBDIR+=	uade
 SUBDIR+=	ubit
 SUBDIR+=	uclibc
 SUBDIR+=	udhcp
-SUBDIR+=	udns
 SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	umix
