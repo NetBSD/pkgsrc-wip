@@ -1,10 +1,9 @@
-# $Id: Makefile,v 1.3528 2009/08/01 02:48:02 schnoebe Exp $
+# $Id: Makefile,v 1.3529 2009/08/01 22:41:52 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	Chinput
-SUBDIR+=	ETL
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
