@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 09:20:20 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/01 22:31:56 minskim Exp $
 bin/ETL-config
 include/ETL/_angle.h
 include/ETL/_bezier.h
@@ -66,4 +66,3 @@ include/ETL/thread
 include/ETL/trivial
 include/ETL/value
 lib/pkgconfig/ETL.pc
-@dirrm include/ETL
