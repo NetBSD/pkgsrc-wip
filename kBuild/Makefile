@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/14 19:25:05 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/01 20:34:24 tnn2 Exp $
 #
 
 DISTNAME=	kBuild-0.1.5-p1-all
@@ -17,7 +17,7 @@ NO_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/kBuild-0.1.5-p1
 
-USE_TOOLS+=	pax gmake autoconf automake autoreconf perl
+USE_TOOLS+=	pax gmake autoconf automake autoreconf perl flex bison
 
 .include "../../mk/bsd.prefs.mk"
 
