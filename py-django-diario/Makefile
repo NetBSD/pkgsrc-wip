@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:07:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/01 20:56:02 jihbed Exp $
 #
 
 DISTNAME=	django-diario-0.2-grigoropoulos
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-grigoropoulos//}
 CATEGORIES=	www python
 MASTER_SITES=	http://django-diario.googlecode.com/files/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://django-diario.googlecode.com/
 COMMENT=	Django Diário is a pluggable weblog application for Django Web
 #LICENSE=	gnu-lgpl-v2.1

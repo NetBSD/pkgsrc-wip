@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/01 16:13:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/01 20:54:33 jihbed Exp $
 #
 
 DISTNAME=	tagging-0.2.1
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://django-tagging.googlecode.com/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/django-tagging/
 COMMENT=	Generic tagging application for Django
 #LICENSE=	LICENSE
