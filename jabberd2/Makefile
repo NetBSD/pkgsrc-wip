@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/07/23 03:06:10 schnoebe Exp $
+# $NetBSD: Makefile,v 1.66 2009/08/01 16:18:14 schnoebe Exp $
 
 DISTNAME=		jabberd-2.2.9
 CATEGORIES=		chat
@@ -123,7 +123,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
-.include "../../wip/udns/buildlink3.mk"
+.include "../../net/udns/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
