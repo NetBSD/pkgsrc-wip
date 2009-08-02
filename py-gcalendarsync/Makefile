@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/18 00:14:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/02 09:32:14 jihbed Exp $
 #
 
 DISTNAME=	googlecalendarsync-0.4
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-gcalendarsync-0.4
 CATEGORIES=	www python
 MASTER_SITES=	http://googlecalendarsync.googlecode.com/files/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/googlecalendarsync/
 COMMENT=	Googlecalendarsync is a tool to bidirectional synchronize a local iCal
 
