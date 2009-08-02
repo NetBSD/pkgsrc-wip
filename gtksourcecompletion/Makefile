@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/23 15:34:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/02 22:46:05 jihbed Exp $
 #
 
 DISTNAME=	gtksourcecompletion-0.5.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtksourcecomple/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gtksourcecomple.sourceforge.net/
 COMMENT=	GtkSourceCompletion
 LICENSE=	gnu-gpl-v3

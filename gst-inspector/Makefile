@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/02 22:47:08 jihbed Exp $
 #
 
 
@@ -7,7 +7,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://cgit.freedesktop.org/~cymacs/gst-inspector/snapshot/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://renestadler.de/projects/gst-inspector/
 COMMENT=	Multimedia system plugin introspection for the GStreamer framework
 LICENSE=	gnu-gpl-v3

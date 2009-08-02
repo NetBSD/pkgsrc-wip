@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/02 22:49:16 jihbed Exp $
 #
 
 DISTNAME=	tasks-0.15
 CATEGORIES=	time editors
 MASTER_SITES=	http://pimlico-project.org/sources/tasks/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pimlico-project.org/tasks.html
 COMMENT=	Tasks is a simple To Do list application for GNOME
 
