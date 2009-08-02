@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/28 18:39:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/02 23:00:29 jihbed Exp $
 #
 
 DISTNAME=	nautilus-open-terminal-0.13
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-open-terminal/0.13/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-open-terminal/
 COMMENT=	Nautilus extension which allows you to open a terminal
 LICENSE=	gnu-gpl-v3
