@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/02 21:59:35 pettai Exp $
 
-DISTNAME=	Botan-1.8.1
-PKGNAME=	botan-1.8.1
+DISTNAME=	Botan-1.8.5
+PKGNAME=	botan-1.8.5
 #PKGREVISION=	0
 CATEGORIES=	security
 MASTER_SITES=	http://files.randombit.net/botan/
@@ -17,7 +17,8 @@ LICENSE_FILE=	${FILESDIR}/botan-license
 USE_TOOLS+=	perl
 
 USE_LANGUAGES=	c++
-REPLACE_PERL+=	./configure.pl
+REPLACE_PERL=	./configure.pl
+#REPLACE_PYTHON=	./configure.py
 #HAS_CONFIGURE=	yes
 CONFIG_SHELL=		perl
 #CONFIGURE_SCRIPT=	./configure.pl
@@ -29,8 +30,14 @@ CXXFLAGS.DragonFly+=	-D_DRAGONFLY_SOURCE
 #CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 BUILDLINK_TRANSFORM+=	rm:-mcpu=i686
 
+# depricated
 pre-build:
 	cd ${WRKSRC} && \
 	${CONFIG_SHELL} ./configure.pl --prefix=${PREFIX:Q}
+
+# new way
+#pre-build:
+#	cd ${WRKSRC} && \
+#	${CONFIG_SHELL} ./configure.py --prefix=${PREFIX:Q}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/08 07:44:51 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/02 21:59:35 pettai Exp $
 bin/botan-config
 include/botan/adler32.h
 include/botan/aes.h
@@ -110,7 +110,8 @@ include/botan/freestore.h
 include/botan/get_pbe.h
 include/botan/gfp_element.h
 include/botan/gfp_modulus.h
-include/botan/gost.h
+include/botan/gost_28147.h
+include/botan/gost_3411.h
 include/botan/has160.h
 include/botan/hash.h
 include/botan/hash_id.h
@@ -174,6 +175,7 @@ include/botan/pgp_s2k.h
 include/botan/pipe.h
 include/botan/pk_algs.h
 include/botan/pk_engine.h
+include/botan/pk_filts.h
 include/botan/pk_keys.h
 include/botan/pkcs10.h
 include/botan/pkcs8.h
@@ -210,6 +212,7 @@ include/botan/sha1_sse2.h
 include/botan/sha2_32.h
 include/botan/sha2_64.h
 include/botan/signed_obj.h
+include/botan/skein_512.h
 include/botan/skipjack.h
 include/botan/square.h
 include/botan/ssl3_mac.h
@@ -244,7 +247,8 @@ include/botan/x919_mac.h
 include/botan/x931_rng.h
 include/botan/xor_buf.h
 include/botan/xtea.h
-lib/lib${PKGNAME}.so
+include/botan/xts.h
+lib/libbotan-1.8.2.so
 lib/libbotan.a
 lib/libbotan.so
 lib/pkgconfig/botan-1.8.pc
@@ -259,5 +263,3 @@ share/doc/Botan-${PKGVERSION}/readme.txt
 share/doc/Botan-${PKGVERSION}/thanks.txt
 share/doc/Botan-${PKGVERSION}/tutorial.pdf
 share/doc/Botan-${PKGVERSION}/tutorial.tex
-@dirrm share/doc/Botan-${PKGVERSION}
-@dirrm include/botan
