@@ -55,6 +55,7 @@ Suggested package updates
 	o libuuid-1.41.8
 	o lincity-ng-2.0
 	o linphone-3.1.2
+	o lives-1.0.0
 	o llvm-2.5
 	o man-1.6f
 	o meta-tracker-0.6.95
@@ -90,6 +91,7 @@ Suggested package updates
 	o spe-0.8.2a
 	o swftools-0.9.0
 	o sxemacs-22.1.10
+	o taglib-extras-0.1.5
 	o tasks-0.16
 	o tmw-0.0.29.1
 	o toppler-1.1.3
