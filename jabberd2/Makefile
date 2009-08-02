@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2009/08/01 16:18:14 schnoebe Exp $
+# $NetBSD: Makefile,v 1.67 2009/08/02 23:40:12 schnoebe Exp $
 
 DISTNAME=		jabberd-2.2.9
 CATEGORIES=		chat
@@ -7,10 +7,10 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
+COMMENT=		XMPP (Jabber) instant messaging server
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-COMMENT=		XMPP (Jabber) instant messaging server
 
 CONFLICTS=		jabberd-[0-9]*
 
@@ -75,7 +75,7 @@ DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
 			db-update.mysql	db-setup.sqlite db-update.sqlite
 DOCFILES=		README.protocol README UPGRADE ChangeLog
 
-INSTALLATION_DIRS=	bin share/examples/jabberd share/doc/jabberd
+INSTALLATION_DIRS=	bin ${EGDIR} ${DOCDIR}
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -107,8 +107,6 @@ pre-configure:
 .endfor
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
 	    ${DESTDIR}${EGDIR}/roster.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
