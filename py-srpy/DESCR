@@ -1,0 +1,9 @@
+Simple Remote Python (SRPy) intends to harness the power of the Python by
+allowing multiple python programs (instances) to seamlessly communicate and
+share information between each other. As such, each CPU (or core) in each
+computer can be considered as an individual that can request for other
+individuals to store information or run processing tasks. In this context, SRPy
+abstracts itself from the physical boundaries between processors and computers
+by looking at them simply as volunteer workers that are able to deal with
+workloads this workers can even work in a social manner by communicating with
+each other on a non-centralized way, sharing information and processing requests
