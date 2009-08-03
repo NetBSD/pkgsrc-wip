@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2009/04/07 10:04:34 asau Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/03 19:59:15 airhead Exp $
 #
 
-DISTNAME=	chicken-4.0.0
+DISTNAME=	chicken-4.1.0
 CATEGORIES=	lang
 MASTER_SITES=	http://chicken.wiki.br/releases/ \
 		http://galinha.ucpel.tche.br/releases/ \
@@ -47,14 +47,9 @@ MAKE_FLAGS+=	PLATFORM=${PLATFORM:Q} PREFIX=${PREFIX:Q} DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	TOPMANDIR=${PREFIX:Q}/${PKGMANDIR}
 MAKE_FLAGS+=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}
 MAKE_FLAGS+=	DOCDIR=${PREFIX:Q}/share/doc/${PKGNAME_NOREV}
-MAKE_FLAGS+=	USE_HOST_PCRE=yes
-
-SUBST_CLASSES+=		add-rpath
-SUBST_STAGE.add-rpath=	pre-configure
-SUBST_FILES.add-rpath=	defaults.make
-SUBST_SED.add-rpath=	-e 's|-lpcre|${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lpcre|'
 
 TEST_TARGET=	check
 
-.include "../../devel/pcre/buildlink3.mk"
+CHECK_PORTABILITY_SKIP += scripts/test-dist.sh
+
 .include "../../mk/bsd.pkg.mk"
