@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+
+--- src/plugins/coreplugin/coreplugin.pro.orig	2009-07-10 12:38:08 +0000
++++ src/plugins/coreplugin/coreplugin.pro
+@@ -173,7 +173,7 @@ RESOURCES += core.qrc \
+ 
+ unix:!macx {
+     images.files = images/qtcreator_logo_*.png
+-    images.path = /share/pixmaps
++    images.path = /$(PREFIX)/share/pixmaps
+     INSTALLS += images
+ }
+ 

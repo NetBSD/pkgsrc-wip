@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+
+--- src/app/app.pro.orig	2009-07-10 12:38:08 +0000
++++ src/app/app.pro
+@@ -23,6 +23,6 @@ win32 {
+ } else {
+     LIBS *= -lExtensionSystem -lAggregation
+ 
+-    target.path  = /bin
++    target.path  = /$(PREFIX)/bin
+     INSTALLS    += target
+ }

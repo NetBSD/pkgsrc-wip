@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+
+--- src/qtcreatorlibrary.pri.orig	2009-07-10 12:38:08 +0000
++++ src/qtcreatorlibrary.pri
+@@ -13,6 +13,6 @@ TARGET = $$qtLibraryTarget($$TARGET)
+ contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols
+ 
+ unix:!macx {
+-	target.path = /$$IDE_LIBRARY_BASENAME/qtcreator
++	target.path = /$(PREFIX)/lib/qtcreator
+ 	INSTALLS += target
+ }

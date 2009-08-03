@@ -1,0 +1,8 @@
+ * Check portability of patches/patch-ae: The assumption is that pkgsrc always
+   sets the qmake mkspec to "netbsd-g++", regardless of the host OS. The ld
+   library is part of the libc on BSD, but has to be specified on other systems
+   like linux. QMake and pkgsrc should set "-lld" directly for those systems.
+ * Check portability of the 'find -exec' command used to install dirs and data.
+ * Optional Debugging Helper (gdb output beautification for Qt objects) that
+   is compiled through qtcreator itself does not yet work without manual
+   modification. A fix is underway.
