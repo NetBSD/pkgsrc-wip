@@ -1,0 +1,8 @@
+Smalltalk YX (Syx) is a free and open Smalltalk
+implementation.
+
+Syx is written in the C programming language
+and aims to be small and portable. It comes
+with an interface to C/C++, which makes it
+possible to create plugins for Syx or embed
+Smalltalk code in C.
