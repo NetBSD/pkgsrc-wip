@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/07/01 12:39:51 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/08/03 09:41:07 marttikuparinen Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -2732,6 +2732,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/editor_plug
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/images/advhr.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/images/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/js/rule.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advhr/jscripts/rule.js
@@ -2746,9 +2747,11 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/editor_p
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/image.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/images/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/images/sample.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/img/sample.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/js/image.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/jscripts/functions.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advimage/langs/en.js
@@ -2760,6 +2763,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/editor_pl
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/editor_plugin_src.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/js/advlink.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/jscripts/functions.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/advlink/langs/en.js
@@ -2779,6 +2783,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/cleanup/editor_pl
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/cleanup/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/compat2x/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/compat2x/editor_plugin_src.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/compat2x/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/css/contextmenu.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/css/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/contextmenu/editor_plugin.js
@@ -2830,6 +2835,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/s
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-undecided.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-wink.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/images/smiley-yell.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-cool.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-cry.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-embarassed.gif
@@ -2848,6 +2854,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/smil
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-yell.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/js/emotions.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/jscripts/functions.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/emotions/langs/en.js
@@ -2857,9 +2864,13 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/dialog.ht
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/editor_plugin_src.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/img/example.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/img/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/js/dialog.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/langs/en.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/langs/en_dlg.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/example/langs/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/flash/css/content.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/flash/css/flash.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/flash/css/index.html
@@ -2887,6 +2898,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/images/m
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/images/remove.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/js/fullpage.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/jscripts/fullpage.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/fullpage/langs/en.js
@@ -2931,8 +2943,11 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skin
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/window.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/inlinepopups/template.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/insertdatetime/editor_plugin_src.js
@@ -2969,6 +2984,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/images/shoc
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/images/windowsmedia.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/flash.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/flv_player.swf
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/quicktime.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/realmedia.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/shockwave.gif
@@ -2976,6 +2992,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/trans.g
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/img/windowsmedia.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/js/embed.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/js/media.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/jscripts/embed.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/media/jscripts/index.html
@@ -2997,10 +3014,13 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/edito
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/editor_plugin_src.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/noneditable/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/css/content.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/css/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/editor_plugin_src.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/img/pagebreak.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/img/trans.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/pagebreak/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/blank.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/css/blank.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/css/index.html
@@ -3012,6 +3032,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/images/past
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/images/pasteword.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/images/selectall.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/js/pastetext.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/js/pasteword.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/paste/jscripts/index.html
@@ -3043,6 +3064,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/print/langs/index
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/safari/blank.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/safari/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/safari/editor_plugin_src.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/safari/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/save/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/save/editor_plugin_src.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/save/images/cancel.gif
@@ -3061,6 +3083,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/ima
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/images/replace_button_bg.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/images/search.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/js/searchreplace.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/jscripts/replace.js
@@ -3073,9 +3096,12 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/rep
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/search.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/searchreplace/searchreplace.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/css/content.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/css/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/editor_plugin_src.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/img/wline.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/spellchecker/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/css/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/css/props.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/editor_plugin.js
@@ -3085,6 +3111,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/images/inde
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/images/style_info.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/images/styleprops.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/js/props.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/jscripts/props.js
@@ -3094,6 +3121,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/langs/index
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/style/props.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tabfocus/editor_plugin.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tabfocus/editor_plugin_src.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tabfocus/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/cell.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/css/cell.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/css/index.html
@@ -3117,6 +3145,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/images/tabl
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/images/table_split_cells.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/js/cell.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/js/merge_cells.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/js/row.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/table/js/table.js
@@ -3139,6 +3168,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/editor_p
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/images/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/images/template.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/js/template.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/jscripts/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/jscripts/template.js
@@ -3147,6 +3177,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/langs/en
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/langs/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/template/template.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/config_tinybrowser.php
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/css/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/css/style_tinybrowser.css.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/css/stylefull_tinybrowser.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/edit.php
@@ -3157,10 +3188,13 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/folde
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/asc.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/back.png
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/desc.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/preview.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/rotate_ac.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/rotate_c.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/img/tabs.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/js/swfobject.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/js/tinybrowser.js.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/cs.php
@@ -3172,6 +3206,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/fr.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/hr.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/hu.php
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/it.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/lv.php
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/langs/nl.php
@@ -3224,6 +3259,7 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/att
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/cite.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/del.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/element_common.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/js/ins.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/jscripts/abbr.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/jscripts/acronym.js
@@ -3322,12 +3358,14 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/xp
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/images/xp/tabs_bg.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/img/colorpicker.jpg
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/img/icons.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/about.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/anchor.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/charmap.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/color_picker.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/image.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/link.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/js/source_editor.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/jscripts/about.js
@@ -3345,17 +3383,22 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/link.htm
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/content.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/dialog.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/buttons.png
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/items.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/menu_arrow.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/menu_check.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/progress.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/img/tabs.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/default/ui.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/content.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/dialog.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/ui.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/ui_black.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css
@@ -3391,12 +3434,18 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/images/unde
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/images/underline_tw.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/images/undo.gif
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/img/icons.gif
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/img/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/langs/en.js
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/langs/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/default/content.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/default/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/default/ui.css
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/content.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg.png
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/index.html
+share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/ui.css
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/tiny_mce.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/tiny_mce_gzip.js
