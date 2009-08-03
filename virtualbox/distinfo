@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/14 19:26:50 tnn2 Exp $
+$NetBSD: distinfo,v 1.2 2009/08/03 00:02:16 tnn2 Exp $
 
 SHA1 (VirtualBox-3.0.2-OSE.tar.bz2) = 442206e7dfcf6719b7ee452f9f042563acd6f0eb
 RMD160 (VirtualBox-3.0.2-OSE.tar.bz2) = 9d33f82cf0ef2ca001fd61b9b26583ca2ad32a5a
 Size (VirtualBox-3.0.2-OSE.tar.bz2) = 51322139 bytes
-SHA1 (patch-aa) = d981f16327ab1535d3942e5e941c215092cce93f
+SHA1 (patch-aa) = f5b3313cc512cb888ef5cd01f980f7d33e1272e0
 SHA1 (patch-ab) = 1815e18a6cbd6f531d57535896cca6fed99de481

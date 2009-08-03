@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/14 19:26:50 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/03 00:02:16 tnn2 Exp $
 
 --- configure.orig	2009-07-10 17:38:46.000000000 +0200
 +++ configure
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/07/14 19:26:50 tnn2 Exp $
    sunos)
      OS='solaris'
      ;;
-@@ -106,22 +108,18 @@ LIBPTHREAD="-lpthread"
+@@ -106,22 +108,17 @@ LIBPTHREAD="-lpthread"
  LIBCAP="-lcap"
  GSOAP=""
  GSOAP_IMPORT=""
@@ -39,10 +39,18 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/07/14 19:26:50 tnn2 Exp $
 +INCZ="-I${ZLIBPREFIX}/include"
 +LIBZ="-L${ZLIBPREFIX}/lib -Wl,-R${ZLIBPREFIX}/lib -lz"
 +INCPNG="$(pkg-config --cflags libpng)"
-+# XXX why doesn't pkg-config emit a run path?
-+LIBPNG="-Wl,-R/usr/pkg/lib $(pkg-config --libs libpng)"
++LIBPNG="$(pkg-config --libs libpng)"
 +INCCURL="$(pkg-config --cflags libcurl)"
 +LIBCURL="$(pkg-config --libs libcurl)"
  PKGCONFIG="`which_wrapper pkg-config`"
  PYTHONDIR="/usr /usr/local"
  QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
+@@ -2182,6 +2179,8 @@ check_gcc
+ [ "$OS" != "darwin"  ] && check_pthread
+ [ $WITH_XPCOM  -eq 1 ] && check_libxml2
+ [ $WITH_XPCOM  -eq 1 ] && check_libxslt
++check_libxml2
++check_libxslt
+ [ $WITH_LIBIDL -eq 1 ] && check_libidl
+ # build openssl on Darwin in every case
+ [ "$OS" != "darwin"  ] && check_ssl
