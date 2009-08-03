@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3530 2009/08/02 19:50:52 minskim Exp $
+# $Id: Makefile,v 1.3531 2009/08/03 13:02:03 yhardy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -364,6 +364,7 @@ SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
 SUBDIR+=	endeavour
 SUBDIR+=	enet
+SUBDIR+=	enigmail
 SUBDIR+=	ent
 SUBDIR+=	entrance
 SUBDIR+=	eot
