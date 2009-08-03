@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
+share/${PKGNAME}-${LOWER_OPSYS}-${MACHINE_ARCH}.xpi

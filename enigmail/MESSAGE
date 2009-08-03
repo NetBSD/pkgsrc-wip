@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
+
+Enigmail must be installed as an add-on in thunderbird.
+To do so select "Tools" from the main menu, then select
+"Add-Ons". Press "Install" in the window that appears.
+The file to install is
+	${XPDIR}/${ENIGMAILXPI}.
+===========================================================================
