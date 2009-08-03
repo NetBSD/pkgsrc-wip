@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3531 2009/08/03 13:02:03 yhardy Exp $
+# $Id: Makefile,v 1.3532 2009/08/03 19:41:39 athaba Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1989,6 +1989,7 @@ SUBDIR+=	syslog-ng2
 SUBDIR+=	sysmon
 SUBDIR+=	sysstat
 SUBDIR+=	sysvinit
+SUBDIR+=	syx
 SUBDIR+=	t-coffee
 SUBDIR+=	t-gnus
 SUBDIR+=	ta-lib
