@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 14:01:21 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/04 18:29:09 lexort Exp $
 
 VERSION=	0.1.${SVN_VERSION}
 SVN_VERSION=	5285
@@ -6,7 +6,7 @@ SVN_VERSION=	5285
 DISTNAME=	TracSensitiveTickets-${VERSION}
 PKGNAME=	trac-plugins-SensitiveTickets-${VERSION}
 # Empty PKGREVISION because svn-package by default sets one.
-PKGREVISION=
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
