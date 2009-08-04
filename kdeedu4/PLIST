@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/07/30 12:30:36 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/08/04 21:50:22 mwdavies Exp $
 bin/blinken
 bin/calgebra
 bin/geodatatest
@@ -147,7 +147,6 @@ lib/kde4/plasma_engine_kalzium.so
 lib/kde4/plasma_engine_parley.so
 lib/kde4/plugins/marble/CompassFloatItem.so
 lib/kde4/plugins/marble/CrosshairsPlugin.so
-lib/kde4/plugins/marble/FileViewFloatItem.so
 lib/kde4/plugins/marble/GeoRendererPlugin.so
 lib/kde4/plugins/marble/GraticulePlugin.so
 lib/kde4/plugins/marble/MapScaleFloatItem.so
@@ -559,19 +558,6 @@ share/doc/kde/HTML/en/parley/stat1-dlg.png
 share/doc/kde/HTML/en/parley/stat2-dlg.png
 share/doc/kde/HTML/en/parley/syn-query-dlg.png
 share/doc/kde/HTML/en/parley/verb-query-dlg.png
-share/doc/kde/HTML/en/step/circular-motor.png
-share/doc/kde/HTML/en/step/common
-share/doc/kde/HTML/en/step/disk-properties.png
-share/doc/kde/HTML/en/step/examples.docbook
-share/doc/kde/HTML/en/step/index.cache.bz2
-share/doc/kde/HTML/en/step/index.docbook
-share/doc/kde/HTML/en/step/mainwindow.png
-share/doc/kde/HTML/en/step/tutorial1.png
-share/doc/kde/HTML/en/step/tutorial2.png
-share/doc/kde/HTML/en/step/tutorial3.png
-share/doc/kde/HTML/en/step/tutorial4.png
-share/doc/kde/HTML/en/step/tutorial5.png
-share/doc/kde/HTML/en/step/tutorials.docbook
 share/icons/hicolor/128x128/apps/blinken.png
 share/icons/hicolor/128x128/apps/kalgebra.png
 share/icons/hicolor/128x128/apps/kalzium.png

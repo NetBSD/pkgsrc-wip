@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/14 10:51:53 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/04 21:50:22 mwdavies Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -19,7 +19,7 @@ lib/kde4/libkttsd_xmltransformerplugin.so
 lib/kde4/libkttsjobmgrpart.so
 lib/libkttsd.so
 lib/libkttsd.so.4
-lib/libkttsd.so.4.2.0
+lib/libkttsd.so.4.3.0
 man/man1/kmag.1
 man/man1/kmousetool.1
 man/man1/kmouth.1
@@ -1030,7 +1030,7 @@ share/icons/mono/scalable/actions/suspend_to_ram.svgz
 share/icons/mono/scalable/actions/syntax.svgz
 share/icons/mono/scalable/actions/system-lock-screen.svgz
 share/icons/mono/scalable/actions/system-log-out.svgz
-share/icons/mono/scalable/actions/system-restart.svgz
+share/icons/mono/scalable/actions/system-reboot.svgz
 share/icons/mono/scalable/actions/system-run.svgz
 share/icons/mono/scalable/actions/system-search.svgz
 share/icons/mono/scalable/actions/system-shutdown.svgz
@@ -2215,85 +2215,3 @@ share/kde4/services/kttsjobmgr.desktop
 share/kde4/servicetypes/kttsd_audioplugin.desktop
 share/kde4/servicetypes/kttsd_filterplugin.desktop
 share/kde4/servicetypes/kttsd_synthplugin.desktop
-@comment in kde: @dirrm share/kde4/servicetypes
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kttsd/xslt
-@dirrm share/kde/apps/kttsd/xmltransformer
-@dirrm share/kde/apps/kttsd/talkerchooser
-@dirrm share/kde/apps/kttsd/stringreplacer
-@dirrm share/kde/apps/kttsd/sbd
-@dirrm share/kde/apps/kttsd/hadifix/xslt
-@dirrm share/kde/apps/kttsd/hadifix
-@dirrm share/kde/apps/kttsd/festivalint/xslt
-@dirrm share/kde/apps/kttsd/festivalint
-@dirrm share/kde/apps/kttsd
-@dirrm share/kde/apps/kmouth/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kmouth/icons/hicolor/48x48
-@dirrm share/kde/apps/kmouth/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kmouth/icons/hicolor/32x32
-@dirrm share/kde/apps/kmouth/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kmouth/icons/hicolor/22x22
-@dirrm share/kde/apps/kmouth/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kmouth/icons/hicolor/16x16
-@dirrm share/kde/apps/kmouth/icons/hicolor
-@dirrm share/kde/apps/kmouth/icons
-@dirrm share/kde/apps/kmouth/books/sv
-@dirrm share/kde/apps/kmouth/books/en
-@dirrm share/kde/apps/kmouth/books/de
-@dirrm share/kde/apps/kmouth/books
-@dirrm share/kde/apps/kmouth
-@dirrm share/kde/apps/kmousetool/sounds
-@dirrm share/kde/apps/kmousetool
-@dirrm share/kde/apps/kmag
-@comment in kde: @dirrm share/kde/apps/color-schemes
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@dirrm share/icons/mono/scalable/status
-@dirrm share/icons/mono/scalable/places
-@dirrm share/icons/mono/scalable/mimetypes
-@dirrm share/icons/mono/scalable/emotes
-@dirrm share/icons/mono/scalable/emblems
-@dirrm share/icons/mono/scalable/devices
-@dirrm share/icons/mono/scalable/categories
-@dirrm share/icons/mono/scalable/apps
-@dirrm share/icons/mono/scalable/actions
-@dirrm share/icons/mono/scalable
-@dirrm share/icons/mono/64x64/animations
-@dirrm share/icons/mono/64x64
-@dirrm share/icons/mono/48x48/animations
-@dirrm share/icons/mono/48x48
-@dirrm share/icons/mono/32x32/animations
-@dirrm share/icons/mono/32x32
-@dirrm share/icons/mono/22x22/animations
-@dirrm share/icons/mono/22x22
-@dirrm share/icons/mono/16x16/animations
-@dirrm share/icons/mono/16x16
-@dirrm share/icons/mono/128x128/animations
-@dirrm share/icons/mono/128x128
-@dirrm share/icons/mono
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/en/kttsd
-@dirrm share/doc/kde/HTML/en/kmouth
-@dirrm share/doc/kde/HTML/en/kmousetool
-@dirrm share/doc/kde/HTML/en/kmag
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in kde: @dirrm lib/kde4

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/05/11 11:27:05 mwdavies Exp $
+# $NetBSD: Makefile,v 1.15 2009/08/04 21:50:23 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 CATEGORIES=	devel
@@ -33,6 +33,10 @@ REPLACE_PERL+= \
 	cervisia/cervisia-change_repos_list.pl \
 	cervisia/cervisia-normalize_cvsroot.pl \
 	cervisia/change_colors.pl
+
+REPLACE_SH+= \
+	scripts/build-progress.sh \
+	scripts/cvsaddcurrentdir
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 

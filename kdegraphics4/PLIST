@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/05/11 11:27:00 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/08/04 21:50:22 mwdavies Exp $
 bin/gwenview
 bin/kbackgroundsnapshot
 bin/kcolorchooser
@@ -63,6 +63,7 @@ lib/kde4/kcm_kgamma.so
 lib/kde4/kio_kamera.so
 lib/kde4/kio_msits.so
 lib/kde4/ksaneplugin.so
+lib/kde4/mobithumbnail.so
 lib/kde4/okularGenerator_chmlib.so
 lib/kde4/okularGenerator_comicbook.so
 lib/kde4/okularGenerator_djvu.so
@@ -72,38 +73,41 @@ lib/kde4/okularGenerator_fax.so
 lib/kde4/okularGenerator_fb.so
 lib/kde4/okularGenerator_ghostview.so
 lib/kde4/okularGenerator_kimgio.so
+lib/kde4/okularGenerator_mobi.so
 lib/kde4/okularGenerator_ooo.so
 lib/kde4/okularGenerator_plucker.so
 lib/kde4/okularGenerator_poppler.so
 lib/kde4/okularGenerator_tiff.so
 lib/kde4/okularGenerator_xps.so
 lib/kde4/okularpart.so
+lib/kde4/rawthumbnail.so
 lib/kde4/svgpart.so
 lib/libgwenviewlib.so
 lib/libgwenviewlib.so.4
-lib/libgwenviewlib.so.4.2.0
+lib/libgwenviewlib.so.4.3.0
 lib/libkdcraw.so
 lib/libkdcraw.so.7
-lib/libkdcraw.so.7.0.0
+lib/libkdcraw.so.7.1.0
 lib/libkexiv2.so
 lib/libkexiv2.so.7
-lib/libkexiv2.so.7.2.0
+lib/libkexiv2.so.7.3.0
 lib/libkipi.so
 lib/libkipi.so.6
-lib/libkipi.so.6.0.0
+lib/libkipi.so.6.1.0
 lib/libkolourpaint_lgpl.so
 lib/libkolourpaint_lgpl.so.4
-lib/libkolourpaint_lgpl.so.4.2.0
+lib/libkolourpaint_lgpl.so.4.3.0
 lib/libksane.so
 lib/libksane.so.0
-lib/libksane.so.0.1.2
+lib/libksane.so.0.2.0
 lib/libokularcore.so
 lib/libokularcore.so.1
-lib/libokularcore.so.1.2.0
+lib/libokularcore.so.1.3.0
 lib/pkgconfig/libkdcraw.pc
 lib/pkgconfig/libkexiv2.pc
 lib/pkgconfig/libkipi.pc
 lib/pkgconfig/libksane.pc
+lib/strigi/strigila_mobi.so
 lib/strigi/strigita_dvi.so
 share/applications/kde4/gwenview.desktop
 share/applications/kde4/kcolorchooser.desktop
@@ -120,6 +124,7 @@ share/applications/kde4/okularApplication_fax.desktop
 share/applications/kde4/okularApplication_fb.desktop
 share/applications/kde4/okularApplication_ghostview.desktop
 share/applications/kde4/okularApplication_kimgio.desktop
+share/applications/kde4/okularApplication_mobi.desktop
 share/applications/kde4/okularApplication_ooo.desktop
 share/applications/kde4/okularApplication_pdf.desktop
 share/applications/kde4/okularApplication_plucker.desktop
@@ -444,11 +449,13 @@ share/kde4/services/libokularGenerator_fax.desktop
 share/kde4/services/libokularGenerator_fb.desktop
 share/kde4/services/libokularGenerator_ghostview.desktop
 share/kde4/services/libokularGenerator_kimgio.desktop
+share/kde4/services/libokularGenerator_mobi.desktop
 share/kde4/services/libokularGenerator_ooo.desktop
 share/kde4/services/libokularGenerator_plucker.desktop
 share/kde4/services/libokularGenerator_poppler.desktop
 share/kde4/services/libokularGenerator_tiff.desktop
 share/kde4/services/libokularGenerator_xps.desktop
+share/kde4/services/mobithumbnail.desktop
 share/kde4/services/msits.protocol
 share/kde4/services/okularChm.desktop
 share/kde4/services/okularComicbook.desktop
@@ -459,99 +466,14 @@ share/kde4/services/okularFax.desktop
 share/kde4/services/okularFb.desktop
 share/kde4/services/okularGhostview.desktop
 share/kde4/services/okularKimgio.desktop
+share/kde4/services/okularMobi.desktop
 share/kde4/services/okularOoo.desktop
 share/kde4/services/okularPlucker.desktop
 share/kde4/services/okularPoppler.desktop
 share/kde4/services/okularTiff.desktop
 share/kde4/services/okularXps.desktop
 share/kde4/services/okular_part.desktop
+share/kde4/services/rawthumbnail.desktop
 share/kde4/services/svgpart.desktop
 share/kde4/servicetypes/kipiplugin.desktop
 share/kde4/servicetypes/okularGenerator.desktop
-@comment in kde: @dirrm share/kde4/servicetypes
-@comment in kde: @dirrm share/kde4/services/ServiceMenus
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/svgpart
-@dirrm share/kde/apps/okular/pics
-@dirrm share/kde/apps/okular/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/okular/icons/hicolor/32x32
-@dirrm share/kde/apps/okular/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/okular/icons/hicolor/16x16
-@dirrm share/kde/apps/okular/icons/hicolor
-@dirrm share/kde/apps/okular/icons
-@dirrm share/kde/apps/okular
-@dirrm share/kde/apps/libkdcraw/profiles
-@dirrm share/kde/apps/libkdcraw
-@dirrm share/kde/apps/kruler/sounds
-@dirrm share/kde/apps/kruler/pics
-@dirrm share/kde/apps/kruler
-@dirrm share/kde/apps/kolourpaint/pics
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/scalable
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/48x48
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/32x32
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/22x22
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kolourpaint/icons/hicolor/16x16
-@dirrm share/kde/apps/kolourpaint/icons/hicolor
-@dirrm share/kde/apps/kolourpaint/icons
-@dirrm share/kde/apps/kolourpaint
-@dirrm share/kde/apps/kipi/data
-@dirrm share/kde/apps/kipi
-@dirrm share/kde/apps/kgamma/pics
-@dirrm share/kde/apps/kgamma
-@dirrm share/kde/apps/gwenview/fullscreenthemes/blackglass
-@dirrm share/kde/apps/gwenview/fullscreenthemes
-@dirrm share/kde/apps/gwenview/cursors
-@dirrm share/kde/apps/gwenview
-@dirrm share/kde/apps/gvpart
-@comment in kde: @dirrm share/kde/apps/cmake/modules
-@comment in kde: @dirrm share/kde/apps/cmake
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/en/okular
-@dirrm share/doc/kde/HTML/en/ksnapshot
-@dirrm share/doc/kde/HTML/en/kruler
-@dirrm share/doc/kde/HTML/en/kolourpaint
-@dirrm share/doc/kde/HTML/en/kgamma
-@dirrm share/doc/kde/HTML/en/kcontrol/kamera
-@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
-@dirrm share/doc/kde/HTML/en/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/dbus-1/interfaces
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in strigi: @dirrm lib/strigi
-@comment in kde: @dirrm lib/kde4
-@dirrm include/okular/interfaces
-@dirrm include/okular/core
-@dirrm include/okular
-@dirrm include/libksane
-@dirrm include/libkipi
-@dirrm include/libkexiv2
-@dirrm include/libkdcraw

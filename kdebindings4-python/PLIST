@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/30 12:26:56 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/04 21:50:22 mwdavies Exp $
+bin/pykdeuic4
 lib/kde4/kpythonpluginfactory.so
 lib/kde4/krosspython.so
 ${PYSITELIB}/PyKDE4/__init__.py
@@ -20,6 +21,10 @@ ${PYSITELIB}/PyKDE4/pykdeconfig.py
 ${PYSITELIB}/PyKDE4/pykdeconfig.pyc
 ${PYSITELIB}/PyKDE4/solid.so
 ${PYSITELIB}/PyKDE4/soprano.so
+${PYSITELIB}/PyQt4/uic/pykdeuic4.py
+${PYSITELIB}/PyQt4/uic/pykdeuic4.pyc
+${PYSITELIB}/PyQt4/uic/widget-plugins/kde4.py
+${PYSITELIB}/PyQt4/uic/widget-plugins/kde4.pyc
 share/kde/apps/pykde4/examples/__init__.py
 share/kde/apps/pykde4/examples/default.py
 share/kde/apps/pykde4/examples/kdecoreExamples/__init__.py
@@ -58,10 +63,6 @@ share/kde/apps/pykde4/examples/solidExamples/solid_storageaccess.py
 share/kde/apps/pykde4/examples/solidExamples/solid_storagedrive.py
 share/kde/apps/pykde4/examples/solidExamples/solid_storagevolume.py
 share/kde/apps/pykde4/examples/solid_demo.py
-share/kde/apps/pykde4/kde4.py
-share/kde/apps/pykde4/kde4.pyc
-share/kde/apps/pykde4/pykdeuic4.py
-share/kde/apps/pykde4/pykdeuic4.pyc
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentbase.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentfilterproxymodel.sip
 share/sip${PYVERSSUFFIX}/PyKDE4/akonadi/agentinstance.sip

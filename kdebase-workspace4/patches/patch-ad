@@ -1,6 +1,9 @@
-$NetBSD: patch-ad,v 1.1 2007/12/22 21:13:18 mwdavies Exp $
+$NetBSD: patch-ad,v 1.2 2009/08/04 21:50:22 mwdavies Exp $
 
---- kdm/config.def.orig	2007-12-06 03:12:43.000000000 +1300
+NetBSD server args
+kde svn r1004104
+
+--- kdm/config.def.orig	2009-07-30 07:44:51.000000000 +1200
 +++ kdm/config.def
 @@ -74,6 +74,12 @@
  #else
@@ -24,3 +27,30 @@ $NetBSD: patch-ad,v 1.1 2007/12/22 21:13:18 mwdavies Exp $
  Comment: &
  Description:
   Additional arguments for the &X-Server;s for local sessions.
+@@ -2029,7 +2035,7 @@ Update: upd_guistyle
+ Comment: &
+ Description:
+  Specify the widget style for the greeter. Empty means to use the
+- built-in default which currently is <literal>Oxygen</literal>.
++ built-in default which currently is <literal>Oxygen-air</literal>.
+ 
+ Key: ColorScheme
+ Type: string
+@@ -2039,7 +2045,7 @@ Instance: #*/"MidnightMeadow"
+ Comment: &
+ Description:
+  Specify the widget color scheme for the greeter. Empty means to use the
+- built-in default which currently is <literal>Oxygen</literal>.
++ built-in default which currently is <literal>Oxygen-air</literal>.
+ 
+ Key: LogoArea
+ Type: enum
+@@ -2657,7 +2663,7 @@ Key: Theme
+ Type: string
+ Default: ""
+ User: greeter
+-Instance: */KDMDATA "/themes/oxygen"
++Instance: */KDMDATA "/themes/oxygen-air"
+ Comment: &
+ Description:
+  The theme to use for the greeter. Can point to either a directory or an XML
