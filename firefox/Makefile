@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/08/05 01:59:23 tnn2 Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/05 02:01:10 tnn2 Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 
-ALL_ENV+=		MOZILLA_PKG_NAME=firefox35
+ALL_ENV+=		MOZILLA_PKG_NAME=firefox
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
