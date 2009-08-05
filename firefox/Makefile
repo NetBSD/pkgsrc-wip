@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2009/07/29 19:29:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.29 2009/08/05 01:59:23 tnn2 Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}-source
-PKGNAME=	firefox35-${FIREFOX_VER}
-FIREFOX_VER=	3.5.1
+PKGNAME=	firefox-${FIREFOX_VER}
+FIREFOX_VER=	3.5.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +23,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
 PRIVILEGED_STAGES=	clean
-CHECK_SHLIBS_SUPPORTED=	no # XXX
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	js/src/build/autoconf/config.guess
@@ -34,7 +33,6 @@ CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--enable-libxul
-#CONFIGURE_ARGS+=	--with-libxul-sdk=/usr/pkg/lib/xulrunner-sdk
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
@@ -48,7 +46,7 @@ CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 
-MAKE_ENV+=		MOZILLA_PKG_NAME=firefox35
+ALL_ENV+=		MOZILLA_PKG_NAME=firefox35
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
@@ -56,7 +54,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 .include "options.mk"
 
-MOZILLA=firefox35
+MOZILLA=firefox
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 MOZILLA_NAME=	Firefox 3.5
 MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
@@ -101,6 +99,5 @@ install-desktop:
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-#.include "../../wip/xulrunner/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
