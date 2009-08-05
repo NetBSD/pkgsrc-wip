@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/05 00:17:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/05 02:56:52 tnn2 Exp $
 #
 
 DISTNAME=	xulrunner-${XULRUNNER_VER}-source
@@ -43,6 +43,7 @@ CONFIG_SUB_OVERRIDE+=	js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=xulrunner
+CONFIGURE_ARGS+=	--enable-libxul
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
@@ -55,7 +56,6 @@ CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-debug
 
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
@@ -83,7 +83,6 @@ post-install:
 	cd ${WRKSRC}/dist/include && \
 	  ${INSTALL_DATA} `find js -name "*.h" -print` js/jsproto.tbl \
 	  ${DESTDIR}${PREFIX}/include/xulrunner/unstable
-
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
