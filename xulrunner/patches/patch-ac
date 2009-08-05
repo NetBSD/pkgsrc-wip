@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.4 2009/07/29 22:07:22 tnn2 Exp $
+$NetBSD: patch-ac,v 1.5 2009/08/05 00:17:08 tnn2 Exp $
 
 --- nsprpub/configure.in.orig	2009-06-29 18:15:05.000000000 +0200
 +++ nsprpub/configure.in
+@@ -71,7 +71,7 @@ OBJDIR_NAME=.
+ OBJDIR_SUFFIX=OBJ
+ NSINSTALL='$(MOD_DEPTH)/config/$(OBJDIR_NAME)/nsinstall'
+ NOSUCHFILE=/no-such-file
+-LIBNSPR='-L$(dist_libdir) -lnspr$(MOD_MAJOR_VERSION)'
++LIBNSPR='-Wl,-R${prefix}/lib/${MOZILLA_PKG_NAME} -L$(dist_libdir) -lnspr$(MOD_MAJOR_VERSION)'
+ LIBPLC='-L$(dist_libdir) -lplc$(MOD_MAJOR_VERSION)'
+ CYGWIN_WRAPPER=
+ MACOS_SDK_DIR=
 @@ -1160,6 +1160,34 @@ tools are selected during the Xcode/Deve
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
