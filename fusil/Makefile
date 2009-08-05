@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/17 23:08:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/05 14:10:48 jihbed Exp $
 #
 
 DISTNAME=	fusil-1.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel security python
 MASTER_SITES=	http://pypi.python.org/packages/source/f/fusil/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://fusil.hachoir.org/trac
+HOMEPAGE=	http://bitbucket.org/haypo/fusil/wiki/Home
 COMMENT=	Fuzzing program to test applications
 LICENSE=	gnu-gpl-v2
 
