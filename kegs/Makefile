@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/02 05:05:56 christtrekker Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/06 15:31:45 thomasklausner Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -13,7 +13,7 @@ COMMENT=	Apple IIgs emulator for Mac OS X, Win32, Linux, and Unix/X11
 # Official support
 ONLY_FOR_PLATFORM=	Linux-*-i386 Linux-*-ppc SunOS-*-i386 SunOS-*-sparc Darwin-*-* HPUX-*-*
 # Probably work
-ONLY_FOR_PLATFORM+=	*-*-i386 *-*-ppc *-*-amd64 *-*-ia64 *-*-mips *-*-m68k
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-ppc *-*-x86_64 *-*-ia64 *-*-mips *-*-m68k
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -32,7 +32,7 @@ pre-build:
 	HPUX*) ${LN} -s ${WRKSRC}/vars_hp ${WRKSRC}/vars; break;;	\
 	*_i386) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
 	*_ppc) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/vars_linuxppc ${WRKSRC}/vars; break;;\
-	*_amd64|*_ia64) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
+	*_amd64|*_ia64|*_x86_64) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
 	*_mips|*_m68k) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/vars_linuxppc ${WRKSRC}/vars; break;;\
 	*) ${ECHO} Your platform is not recognized. ;;			\
 	esac
