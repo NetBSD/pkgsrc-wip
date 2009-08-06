@@ -1,4 +1,4 @@
-A Web-Based Bug And Patch-Set Tracking System For CVS.
+A web-based bug and patch-set tracking system for CVS, Subversion and GIT.
 
 Features
 - Automatically generates a patch-set log from CVS check-in comments
@@ -12,9 +12,7 @@ Features
 - Access permissions configurable separately for each user
 - Allows for anonymous users
 - Uses a built-in SQL database engine (SQLite) - no external RDBMS required
-- Tested under Linux - works on other versions of Unix. Also  works under
+- Tested under Linux - works on other versions of Unix. Also works under
   Windows
-- Can be run from a  chroot jail for added security.
+- Can be run from a chroot jail for added security.
 - GNU Public License
-
-from http://www.cvstrac.org/

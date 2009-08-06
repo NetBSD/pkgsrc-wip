@@ -1,19 +1,33 @@
-# $NetBSD: Makefile,v 1.2 2006/10/21 01:59:15 yomram Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/06 16:21:24 schmonz Exp $
 #
 
-DISTNAME=	cvstrac-2.0.0
+DISTNAME=	cvstrac-2.0.1
 CATEGORIES=	devel www
 MASTER_SITES=	http://www.cvstrac.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cvstrac.org/
-COMMENT=	Web-Based Bug And Patch-Set Tracking System For CVS
+COMMENT=	Web-based bug and patch-set tracker for CVS, Subversion and GIT
+LICENSE=	gnu-gpl-v2
 
-pre-build:
-	${CP} ${FILESDIR}/Makefile.in ${WRKSRC}/Makefile
+.if !exists(/usr/bin/rlog)
+DEPENDS+=	rcs-[0-9]*:../../devel/rcs
+.endif
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_FILE=		bsd-gcc.mk
+
+INSTALLATION_DIRS+=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-lcrypt
+.endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cvstrac ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cvstrac ${DESTDIR}${PREFIX}/bin
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
