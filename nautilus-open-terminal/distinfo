@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/24 09:58:07 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2009/08/07 17:51:45 jihbed Exp $
 
-SHA1 (nautilus-open-terminal-0.13.tar.bz2) = c15f621419d673cdaa5f6b8be3a425e174b30ab2
-RMD160 (nautilus-open-terminal-0.13.tar.bz2) = c493ddfba52775d9b2395164aea85f967dba9fce
-Size (nautilus-open-terminal-0.13.tar.bz2) = 272946 bytes
+SHA1 (nautilus-open-terminal-0.16.tar.bz2) = 9ddf695463568253a7c39eb33fbde76f49cde1a1
+RMD160 (nautilus-open-terminal-0.16.tar.bz2) = 33032b24a732fe36d1c0c636308bf333106ca8e5
+Size (nautilus-open-terminal-0.16.tar.bz2) = 271276 bytes
