@@ -1,6 +1,17 @@
 --- vars_x86linux.orig	Mon Dec  6 18:42:47 2004
 +++ vars_x86linux	Mon May  4 11:39:31 2009
-@@ -15,5 +15,5 @@
+--- vars_x86linux.orig	2004-12-07 00:42:47.000000000 +0000
++++ vars_x86linux
+@@ -2,7 +2,7 @@
+ TARGET = xkegs
+ OBJECTS = $(OBJECTS1) xdriver.o
+ CC = cc
+-CCOPTS = -O2 -Wall -fomit-frame-pointer -march=pentium
++CCOPTS = -O2 -Wall -fomit-frame-pointer
+ OPTS = -DKEGS_LITTLE_ENDIAN
+ SUFFIX =
+ NAME = xkegs
+@@ -15,5 +15,5 @@ EXTRA_SPECIALS =
  AS = cc
  PERL = perl
  
