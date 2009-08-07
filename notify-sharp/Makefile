@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/07 16:33:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/07 17:41:54 jihbed Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r2998.orig
@@ -19,8 +19,6 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	notify-sharp.pc.in
-
-INSTALLATION_DIRS+=	${PREFIX}/lib/monodoc/sources
 
 
 .include "../../lang/mono/buildlink3.mk"
