@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/08/06 15:31:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/07 23:43:25 thomasklausner Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=     gmake perl
-INSTALLATION_DIRS+=	share/doc/${PKGBASE} share/${PKGBASE}
+INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
 pre-build:
 	if [ -L ${WRKSRC}/vars ]; then ${RM} ${WRKSRC}/vars; fi
