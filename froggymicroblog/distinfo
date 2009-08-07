@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/18 00:37:27 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/08/07 16:54:26 jihbed Exp $
 
-SHA1 (frogmicroblog-0.1.2.1.tar.gz) = f4fb53ed0955aba2a8a7283524dba4e592f7a462
-RMD160 (frogmicroblog-0.1.2.1.tar.gz) = 4ac19351988801e4f014f8321d54be0950b33db1
-Size (frogmicroblog-0.1.2.1.tar.gz) = 105187 bytes
+SHA1 (frogmicroblog-0.1.4.tar.gz) = cf91027dd10a034402ecb0d7c20920a81e31a3f0
+RMD160 (frogmicroblog-0.1.4.tar.gz) = 61b6eef39f26186dfa7b495a2fdc9d6477007c71
+Size (frogmicroblog-0.1.4.tar.gz) = 128743 bytes

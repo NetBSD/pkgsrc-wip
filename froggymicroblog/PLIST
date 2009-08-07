@@ -1,16 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 00:37:27 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/07 16:54:26 jihbed Exp $
 bin/frogmicroblog
+lib/frogmicroblog/FluxRss.dll
 lib/frogmicroblog/FrogMicroBlog.exe
 lib/frogmicroblog/Gconf.dll
 lib/frogmicroblog/Metier.dll
 lib/frogmicroblog/Twitter.dll
 lib/frogmicroblog/en/LC_MESSAGES/frogmicroblog.mo
 lib/frogmicroblog/fr/LC_MESSAGES/frogmicroblog.mo
-lib/pkgconfig/gconf.pc
-lib/pkgconfig/metier.pc
-lib/pkgconfig/twitter.pc
-@dirrm lib/frogmicroblog/fr/LC_MESSAGES
-@dirrm lib/frogmicroblog/fr
-@dirrm lib/frogmicroblog/en/LC_MESSAGES
-@dirrm lib/frogmicroblog/en
-@dirrm lib/frogmicroblog
+lib/pkgconfig/fluxrss.pc
+lib/pkgconfig/frogconf.pc
+lib/pkgconfig/frogmetier.pc
+lib/pkgconfig/frogtwitter.pc
