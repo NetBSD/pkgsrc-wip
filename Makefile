@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3534 2009/08/05 02:54:19 tnn2 Exp $
+# $Id: Makefile,v 1.3535 2009/08/07 16:35:36 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1155,6 +1155,7 @@ SUBDIR+=	monkey-bubble
 SUBDIR+=	mono-zeroconf
 SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moregroupware
+SUBDIR+=	notify-sharp
 SUBDIR+=	moto4lin
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
@@ -1722,6 +1723,7 @@ SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
+SUBDIR+=	py-mocker
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose-senario
