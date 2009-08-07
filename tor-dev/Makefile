@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/08/06 09:57:33 athaba Exp $
+# $NetBSD: Makefile,v 1.22 2009/08/07 23:22:48 thomasklausner Exp $
 #
 
 DISTNAME=		tor-0.2.1.19
@@ -11,9 +11,9 @@ HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 LICENSE=		modified-bsd
 
-.include "../../mk/bsd.prefs.mk"
-
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES+=		c99
 USE_PKGLOCALEDIR=	yes
