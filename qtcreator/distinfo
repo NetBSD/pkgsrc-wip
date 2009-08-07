@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+$NetBSD: distinfo,v 1.2 2009/08/07 23:39:20 thomasklausner Exp $
 
 SHA1 (qt-creator-1.2.1-src.zip) = 41d10717a83d3b7de7bc5218a35a38f25408a8d6
 RMD160 (qt-creator-1.2.1-src.zip) = 6aea12a39bd5827422afa6e02cfcad2174dc6582
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = af870313c4b19f00eed85b706fc191e8cfb02a58
 SHA1 (patch-ah) = 96e3d0f30468f72960bbbd782feee1edf67df89b
 SHA1 (patch-ai) = 9d17a150c08cdff978b7a4b13d3f3864366755e3
 SHA1 (patch-aj) = ecadb2944bdfcefdbf29f4c51046eee609347d48
+SHA1 (patch-ak) = ace322ebb9f1670db1a70e04ea0ae8d154c58a4a
