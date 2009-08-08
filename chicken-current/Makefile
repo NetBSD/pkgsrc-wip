@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2009/08/03 19:59:15 airhead Exp $
+# $NetBSD: Makefile,v 1.30 2009/08/08 00:11:36 airhead Exp $
 #
 
 DISTNAME=	chicken-4.1.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/releases/ \
-		http://galinha.ucpel.tche.br/releases/ \
-		$(HOMEPAGE)
+MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION}/ \
+		http://galinha.ucpel.tche.br/releases/${PKGVERSION}/ \
+		${HOMEPAGE}
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/
 COMMENT=	Scheme to C compiler, handling R5RS
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
