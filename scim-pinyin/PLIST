@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/14 13:56:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/08/08 05:36:12 obache Exp $
 lib/scim-1.0/1.4.0/IMEngine/pinyin.la
 lib/scim-1.0/1.4.0/SetupUI/pinyin-imengine-setup.la
 share/locale/de/LC_MESSAGES/scim-pinyin.mo
@@ -14,7 +14,3 @@ share/scim/pinyin/pinyin_phrase_index
 share/scim/pinyin/pinyin_phrase_lib
 share/scim/pinyin/pinyin_table
 share/scim/pinyin/special_table
-@dirrm share/scim/pinyin
-@comment in scim: @dirrm share/scim/icons
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine

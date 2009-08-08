@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/10 12:30:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/08 05:36:12 obache Exp $
 bin/scim-make-table
 lib/scim-1.0/1.4.0/IMEngine/table.la
 lib/scim-1.0/1.4.0/SetupUI/table-imengine-setup.la
@@ -117,7 +117,3 @@ share/scim/tables/Yawerty.bin
 share/scim/tables/ZhuYin-Big.bin
 share/scim/tables/ZhuYin.bin
 share/scim/tables/Ziranma.bin
-@dirrm share/scim/tables
-@comment in scim: @dirrm share/scim/icons
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/10 12:20:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/08 05:36:12 obache Exp $
 bin/scim-bridge
 ${PLIST.gtk}lib/gtk-2.0/immodules/im-scim-bridge.la
 ${PLIST.qt}qt4/plugins/inputmethods/im-scim-bridge.la
-@comment in qt4-libs @dirrm qt4/plugins/inputmethods
-@comment in gtk2: @dirrm lib/gtk-2.0/immodules

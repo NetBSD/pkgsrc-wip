@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/12 08:47:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/08 05:36:12 obache Exp $
 bin/scim
 bin/scim-config-agent
 bin/scim-setup
@@ -119,22 +119,3 @@ share/scim/icons/sctc.png
 share/scim/icons/setup.png
 share/scim/icons/trademark.png
 share/scim/icons/up.png
-@dirrm share/scim/icons
-@dirrm share/scim
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/examples/scim
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
-@comment in gnome2-dirs: @dirrm share/control-center-2.0
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/scim-1.0/1.4.0/SetupUI
-@dirrm lib/scim-1.0/1.4.0/IMEngine
-@dirrm lib/scim-1.0/1.4.0/Helper
-@dirrm lib/scim-1.0/1.4.0/FrontEnd
-@dirrm lib/scim-1.0/1.4.0/Filter
-@dirrm lib/scim-1.0/1.4.0/Config
-@dirrm lib/scim-1.0/1.4.0
-@dirrm lib/scim-1.0
-@comment in gtk2: @dirrm lib/gtk-2.0/immodules
-@dirrm include/scim-1.0/x11
-@dirrm include/scim-1.0/gtk
-@dirrm include/scim-1.0

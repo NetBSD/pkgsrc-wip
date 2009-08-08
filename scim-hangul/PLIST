@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/14 13:53:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/08/08 05:36:12 obache Exp $
 lib/scim-1.0/1.4.0/IMEngine/hangul.la
 lib/scim-1.0/1.4.0/SetupUI/hangul-imengine-setup.la
 share/locale/de/LC_MESSAGES/scim-hangul.mo
@@ -10,7 +10,3 @@ share/locale/pa/LC_MESSAGES/scim-hangul.mo
 share/locale/zh_CN/LC_MESSAGES/scim-hangul.mo
 share/scim/hangul/symbol.txt
 share/scim/icons/scim-hangul.png
-@comment in scim: @dirrm share/scim/icons
-@dirrm share/scim/hangul
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine

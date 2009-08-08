@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/14 13:52:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/08 05:36:12 obache Exp $
 bin/createPYMB
 bin/mb2txt
 bin/txt2mb
@@ -38,7 +38,3 @@ share/scim/icons/fcitx/quwei.png
 share/scim/icons/fcitx/shuangpin.png
 share/scim/icons/fcitx/wubi86.png
 share/scim/icons/fcitx/wubi98.png
-@dirrm share/scim/icons/fcitx
-@comment in scim: @dirrm share/scim/icons
-@dirrm share/scim/fcitx
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine

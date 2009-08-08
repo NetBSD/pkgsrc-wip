@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 13:49:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/08 05:36:12 obache Exp $
 lib/scim-1.0/1.4.0/IMEngine/ccin.la
 lib/scim-1.0/1.4.0/SetupUI/ccin-imengine-setup.la
 share/locale/zh_CN/LC_MESSAGES/ccinput.mo
@@ -12,7 +12,3 @@ share/scim/icons/sp_st.png
 share/scim/icons/sp_zg.png
 share/scim/icons/sp_zn.png
 share/scim/icons/sp_zr.png
-@comment in scim: @dirrm share/scim/icons
-@dirrm share/scim/ccinput
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine
