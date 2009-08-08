@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/14 13:44:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/08 05:25:59 obache Exp $
 lib/scim-1.0/1.4.0/Helper/anthy-imengine-helper.la
 lib/scim-1.0/1.4.0/IMEngine/anthy.la
 lib/scim-1.0/1.4.0/SetupUI/anthy-imengine-setup.la
@@ -22,9 +22,3 @@ share/scim/Anthy/style/wnn.sty
 share/scim/icons/scim-anthy-dict.png
 share/scim/icons/scim-anthy-swap-colors.png
 share/scim/icons/scim-anthy.png
-@comment in scim: @dirrm share/scim/icons
-@dirrm share/scim/Anthy/style
-@dirrm share/scim/Anthy
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/SetupUI
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/IMEngine
-@comment in scim: @dirrm lib/scim-1.0/1.4.0/Helper
