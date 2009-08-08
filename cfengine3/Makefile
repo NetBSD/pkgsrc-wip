@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/08/01 20:04:55 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/08 03:56:10 genolopolis Exp $
 #
 
 DISTNAME=	cfengine-3.0.2b5
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.cfengine.org/tarballs/
 
 MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://www.cfengine.org/
-COMMENT=	cfengine is a tool for automating sysadmin administration
+COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=          YES
@@ -20,7 +20,14 @@ CONFIGURE_ARGS+=        --with-berkeleydb=${BUILDLINK_PREFIX.db4:Q}
 CONFIGURE_ARGS+=        --with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ARGS+=        --with-pcre=${BUILDLINK_PREFIX.pcre:Q}
 
-# url2pkg-marker (please do not remove this line.)
+EGDIR=                  /var/${PKGBASE}
+CONF_FILES+=            ${PREFIX/share/${PKGBASE}/failsafe.cf ${EGDIR}/failsafe.cf
+CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/library.cf ${EGDIR}/library.cf
+CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/promises.cf ${EGDIR}/promises.cf
+CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/site.cf ${EGDIR}/site.cf
+CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/update.cf ${EGDIR}/update.cf
+INSTALL_MAKE_FLAGS+=    ${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"

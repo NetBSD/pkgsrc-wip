@@ -1,2 +1,6 @@
-cfengine3 is the next generation of the cfengine management tool.
-It is incompatible with cfengine2, has new command names, and an updated language.
+Cfengine, or the "configuration engine" is a very high level language
+for building expert systems which administrate and configure large
+computer networks. Cfengine uses the idea of classes and a primitive
+form of intelligence to define and automate the configuration of
+large systems in the most economical way possible. Cfengine is
+designed to be a part of computer immune system.
