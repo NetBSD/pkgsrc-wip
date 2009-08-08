@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3537 2009/08/08 15:14:23 thomasklausner Exp $
+# $Id: Makefile,v 1.3538 2009/08/08 23:11:45 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1641,7 +1641,6 @@ SUBDIR+=	py-Beaker
 SUBDIR+=	py-Brenda
 SUBDIR+=	py-CVSToys
 SUBDIR+=	py-DirectoryStorage
-SUBDIR+=	py-EditObj
 SUBDIR+=	py-EditObj2
 SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
