@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/03 19:10:28 jmmv Exp $
-
-SHA1 (festival-gaim-0.64.tar.gz) = 0ed9185fbdfada21435a65d900b6f2a870586214
-Size (festival-gaim-0.64.tar.gz) = 44430 bytes
-SHA1 (patch-aa) = 07b105544c9653c7faf97c2a6785046237a52030
-SHA1 (patch-ab) = ddd94fcf4d54abd33c05dee0ac3932a749351de9
