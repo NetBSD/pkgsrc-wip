@@ -1,3 +1,6 @@
+# $NetBSD: options.mk,v 1.2 2009/08/08 03:37:26 genolopolis Exp $
+#
+
 PKG_OPTIONS_VAR=                PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=          rrdtool curl libstatgrab snmp
 PKG_SUGGESTED_OPTIONS+=         rrdtool curl libstatgrab
