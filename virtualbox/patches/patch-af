@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2009/08/08 05:43:37 tnn2 Exp $
+
+--- src/VBox/Devices/Makefile.kmk.orig	2009-07-10 17:41:12.000000000 +0200
++++ src/VBox/Devices/Makefile.kmk
+@@ -789,6 +789,12 @@ Drivers_SOURCES      := $(filter-out \
+ Drivers_SOURCES.freebsd =
+ endif # freebsd
+ 
++ifeq ($(KBUILD_TARGET),netbsd)
++Drivers_SOURCES      := $(filter-out \
++	Storage/DrvHost% \
++	, $(Drivers_SOURCES))
++Drivers_SOURCES.netbsd =
++endif # netbsd
+ 
+ ifeq ($(KBUILD_TARGET),l4)
+ Drivers_SOURCES       = \

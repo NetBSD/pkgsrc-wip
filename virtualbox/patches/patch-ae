@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2009/08/08 05:43:37 tnn2 Exp $
+
+--- src/VBox/Devices/Network/lwip/src/api/sockets.c.orig	2009-08-03 02:29:29.000000000 +0200
++++ src/VBox/Devices/Network/lwip/src/api/sockets.c
+@@ -34,6 +34,7 @@
+ 
+ #include <string.h>
+ #include <errno.h>
++#include <time.h>
+ 
+ #include "lwip/opt.h"
+ #include "lwip/api.h"
