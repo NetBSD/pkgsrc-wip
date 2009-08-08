@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3536 2009/08/08 07:16:27 tnn2 Exp $
+# $Id: Makefile,v 1.3537 2009/08/08 15:14:23 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -205,7 +205,6 @@ SUBDIR+=	cfengine3
 SUBDIR+=	cgit
 SUBDIR+=	chbg
 SUBDIR+=	chems
-SUBDIR+=	chicken-current
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chromium-data
