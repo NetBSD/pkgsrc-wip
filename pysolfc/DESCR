@@ -1,8 +1,0 @@
-PySol is a solitaire card game. Its features include support for many
-different games, very nice look and feel, multiple cardsets and
-backgrounds, unlimited undo & redo, load & save games, player
-statistics, hint system, demo games, support for user written plug-ins,
-integrated HTML help browser, and it's free Open Source software.
-
-PySol Fan Club edition in a fork of PySol Solitaire, updated for
-newer versions of Python, and with more games.
