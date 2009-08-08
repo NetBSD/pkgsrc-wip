@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 07:44:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/08 08:16:41 obache Exp $
 #
 
-DISTNAME=	CRF++-0.50
+DISTNAME=	CRF++-0.53
 PKGNAME=	${DISTNAME:tl:S/+/p/g}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crfpp/}
