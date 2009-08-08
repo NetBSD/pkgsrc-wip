@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/08/08 00:11:36 airhead Exp $
+# $NetBSD: Makefile,v 1.31 2009/08/08 10:20:26 airhead Exp $
 #
 
 DISTNAME=	chicken-4.1.0
@@ -13,6 +13,8 @@ COMMENT=	Scheme to C compiler, handling R5RS
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 INFO_FILES=		yes
 USE_LIBTOOL=		yes
