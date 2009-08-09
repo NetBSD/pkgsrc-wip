@@ -1,0 +1,2 @@
+Does not compile on NetBSD-5.99.15/amd64 because of inline assembler
+in durango.c and cimarron.c.
