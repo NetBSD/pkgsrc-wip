@@ -24,6 +24,10 @@ exposed-modules: Graphics.X11 Graphics.X11.Types Graphics.X11.Xlib
                  Graphics.X11.Xlib.Screen Graphics.X11.Xlib.Types
                  Graphics.X11.Xlib.Window Graphics.X11.Xlib.Image
                  Graphics.X11.Xlib.Extras Graphics.X11.Xinerama
+                 Graphics.X11.ExtraTypes Graphics.X11.ExtraTypes.AP
+                 Graphics.X11.ExtraTypes.DEC Graphics.X11.ExtraTypes.HP
+                 Graphics.X11.ExtraTypes.Sun Graphics.X11.ExtraTypes.XF86
+                 Graphics.X11.ExtraTypes.XorgDefault
 hidden-modules:
 import-dirs: @PREFIX@/lib/X11-@PKGVERSION@/ghc-@GHCVERSION@
 library-dirs: @PREFIX@/lib/X11-@PKGVERSION@/ghc-@GHCVERSION@
@@ -31,14 +35,17 @@ hs-libraries: HSX11-@PKGVERSION@
 extra-libraries: X11
 extra-ghci-libraries:
 include-dirs: @PREFIX@/lib/X11-@PKGVERSION@/ghc-@GHCVERSION@/include
-includes: HsXlib.h HsXlib.h XlibExtras.h
-depends: base-3.0.1.0
+includes: HsXlib.h HsAllKeysyms.h
+depends: base-3.0.2.0
 hugs-options:
-cc-options: -I@XINCLUDES@
-ld-options: -L@XLIBRARIES@ -R@XLIBRARIES@
+cc-options: -I/usr/X11R7/include
+ld-options: -L/usr/X11R7/lib -R/usr/X11R7/lib
 framework-dirs:
 frameworks:
-haddock-interfaces: @PREFIX@/share/X11-@PKGVERSION@/doc/html/X11.haddock
-haddock-html: @PREFIX@/share/X11-@PKGVERSION@/doc/html' | @PREFIX@/bin/ghc-pkg update -
+haddock-interfaces: @PREFIX@/share/doc/X11-@PKGVERSION@/html/X11.haddock
+haddock-html: @PREFIX@/share/doc/X11-@PKGVERSION@/html
+
+
+' | @PREFIX@/bin/ghc-pkg update -
         ;;
 esac
