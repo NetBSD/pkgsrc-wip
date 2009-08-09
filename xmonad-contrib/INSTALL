@@ -4,161 +4,103 @@ case ${STAGE} in
 version: @PKGVERSION@
 license: BSD3
 copyright:
-maintainer: xmonad@haskell.org
-description:
-    Third party tiling algorithms, configurations and scripts to xmonad,
-    a tiling window manager for X.
-    .
-    For an introduction to building, configuring and using xmonad
-    extensions, see "XMonad.Doc". In particular:
-    .
-    "XMonad.Doc.Configuring", a guide to configuring xmonad
-    .
-    "XMonad.Doc.Extending", using the contributed extensions library
-    .
-    "XMonad.Doc.Developing", introduction to xmonad internals and writing
-    your own extensions.
-    .
+maintainer: spencerjanssen@gmail.com
 stability:
-homepage: http://xmonad.org
+homepage: http://xmonad.org/
 package-url:
-description:
+description: Third party tiling algorithms, configurations and scripts to xmonad,
+             a tiling window manager for X.
+             .
+             For an introduction to building, configuring and using xmonad
+             extensions, see "XMonad.Doc". In particular:
+             .
+             "XMonad.Doc.Configuring", a guide to configuring xmonad
+             .
+             "XMonad.Doc.Extending", using the contributed extensions library
+             .
+             "XMonad.Doc.Developing", introduction to xmonad internals and writing
+             your own extensions.
 category: System
 author: Spencer Janssen
 exposed: True
-exposed-modules:    	XMonad.Doc
-                        XMonad.Doc.Configuring
-                        XMonad.Doc.Extending
-                        XMonad.Doc.Developing
-                        XMonad.Actions.Commands
-                        XMonad.Actions.ConstrainedResize
-                        XMonad.Actions.CopyWindow
-                        XMonad.Actions.CycleSelectedLayouts
-                        XMonad.Actions.CycleWS
-                        XMonad.Actions.DeManage
-                        XMonad.Actions.DwmPromote
-                        XMonad.Actions.DynamicWorkspaces
-                        XMonad.Actions.FindEmptyWorkspace
-                        XMonad.Actions.FlexibleManipulate
-                        XMonad.Actions.FlexibleResize
-                        XMonad.Actions.FloatKeys
-                        XMonad.Actions.FocusNth
-                        XMonad.Actions.MouseGestures
-                        XMonad.Actions.MouseResize
-                        XMonad.Actions.NoBorders
-                        XMonad.Actions.PerWorkspaceKeys
-                        XMonad.Actions.Promote
-                        XMonad.Actions.RotSlaves
-                        XMonad.Actions.Search
-                        XMonad.Actions.SimpleDate
-                        XMonad.Actions.SinkAll
-                        XMonad.Actions.Submap
-                        XMonad.Actions.SwapWorkspaces
-                        XMonad.Actions.TagWindows
-                        XMonad.Actions.UpdatePointer
-                        XMonad.Actions.Warp
-                        XMonad.Actions.WindowGo
-                        XMonad.Actions.WindowBringer
-                        XMonad.Config.Sjanssen
-                        XMonad.Config.Dons
-                        XMonad.Config.Arossato
-                        XMonad.Config.Droundy
-                        XMonad.Hooks.DynamicLog
-                        XMonad.Hooks.EventHook
-                        XMonad.Hooks.EwmhDesktops
-                        XMonad.Hooks.ManageDocks
-                        XMonad.Hooks.ManageHelpers
-                        XMonad.Hooks.SetWMName
-                        XMonad.Hooks.ServerMode
-                        XMonad.Hooks.UrgencyHook
-                        XMonad.Hooks.XPropManage
-                        XMonad.Layout.Accordion
-                        XMonad.Layout.Circle
-                        XMonad.Layout.Combo
-                        XMonad.Layout.Decoration
-                        XMonad.Layout.DecorationMadness
-                        XMonad.Layout.Dishes
-                        XMonad.Layout.DragPane
-                        XMonad.Layout.DwmStyle
-                        XMonad.Layout.Grid
-                        XMonad.Layout.HintedTile
-                        XMonad.Layout.IM
-                        XMonad.Layout.LayoutCombinators
-                        XMonad.Layout.LayoutHints
-                        XMonad.Layout.LayoutModifier
-                        XMonad.Layout.LayoutScreens
-                        XMonad.Layout.MagicFocus
-                        XMonad.Layout.Magnifier
-                        XMonad.Layout.Maximize
-                        XMonad.Layout.MosaicAlt
-                        XMonad.Layout.MultiToggle
-                        XMonad.Layout.Named
-                        XMonad.Layout.NoBorders
-                        XMonad.Layout.PerWorkspace
-                        XMonad.Layout.Reflect
-                        XMonad.Layout.ResizableTile
-                        XMonad.Layout.ResizeScreen
-                        XMonad.Layout.Roledex
-                        XMonad.Layout.ScratchWorkspace
-                        XMonad.Layout.Simplest
-                        XMonad.Layout.SimpleDecoration
-                        XMonad.Layout.SimpleFloat
-                        XMonad.Layout.Spiral
-                        XMonad.Layout.Square
-                        XMonad.Layout.ShowWName
-                        XMonad.Layout.Tabbed
-                        XMonad.Layout.TabBarDecoration
-                        XMonad.Layout.ThreeColumns
-                        XMonad.Layout.ToggleLayouts
-                        XMonad.Layout.TwoPane
-                        XMonad.Layout.WindowArranger
-                        XMonad.Layout.WindowNavigation
-                        XMonad.Layout.WorkspaceDir
-                        XMonad.Prompt.Directory
-                        XMonad.Prompt
-                        XMonad.Prompt.AppendFile
-                        XMonad.Prompt.Input
-                        XMonad.Prompt.Email
-                        XMonad.Prompt.Layout
-                        XMonad.Prompt.Man
-                        XMonad.Prompt.DirExec
-                        XMonad.Prompt.RunOrRaise
-                        XMonad.Prompt.Shell
-                        XMonad.Prompt.Ssh
-                        XMonad.Prompt.Theme
-                        XMonad.Prompt.Window
-                        XMonad.Prompt.Workspace
-                        XMonad.Prompt.XMonad
-                        XMonad.Util.CustomKeys
-                        XMonad.Util.Dmenu
-                        XMonad.Util.Dzen
-                        XMonad.Util.EZConfig
-                        XMonad.Util.Font
-                        XMonad.Util.Invisible
-                        XMonad.Util.Loggers
-                        XMonad.Util.NamedWindows
-                        XMonad.Util.Run
-                        XMonad.Util.Scratchpad
-                        XMonad.Util.Themes
-                        XMonad.Util.Timer
-                        XMonad.Util.WindowProperties
-                        XMonad.Util.WorkspaceCompare
-                        XMonad.Util.XSelection
-                        XMonad.Util.XUtils
+exposed-modules: XMonad.Doc XMonad.Doc.Configuring
+                 XMonad.Doc.Extending XMonad.Doc.Developing XMonad.Actions.Commands
+                 XMonad.Actions.ConstrainedResize XMonad.Actions.CopyWindow
+                 XMonad.Actions.CycleRecentWS XMonad.Actions.CycleSelectedLayouts
+                 XMonad.Actions.CycleWS XMonad.Actions.DeManage
+                 XMonad.Actions.DwmPromote XMonad.Actions.DynamicWorkspaces
+                 XMonad.Actions.FindEmptyWorkspace XMonad.Actions.FlexibleManipulate
+                 XMonad.Actions.FlexibleResize XMonad.Actions.FloatKeys
+                 XMonad.Actions.FocusNth XMonad.Actions.MouseGestures
+                 XMonad.Actions.MouseResize XMonad.Actions.NoBorders
+                 XMonad.Actions.PerWorkspaceKeys XMonad.Actions.Plane
+                 XMonad.Actions.Promote XMonad.Actions.RotSlaves
+                 XMonad.Actions.Search XMonad.Actions.SimpleDate
+                 XMonad.Actions.SinkAll XMonad.Actions.Submap
+                 XMonad.Actions.SwapWorkspaces XMonad.Actions.TagWindows
+                 XMonad.Actions.UpdatePointer XMonad.Actions.Warp
+                 XMonad.Actions.WindowNavigation XMonad.Actions.WindowGo
+                 XMonad.Actions.WindowBringer XMonad.Config.Arossato
+                 XMonad.Config.Desktop XMonad.Config.Droundy XMonad.Config.Gnome
+                 XMonad.Config.Kde XMonad.Config.PlainConfig XMonad.Config.Sjanssen
+                 XMonad.Config.Xfce XMonad.Hooks.DynamicHooks
+                 XMonad.Hooks.DynamicLog XMonad.Hooks.EventHook
+                 XMonad.Hooks.EwmhDesktops XMonad.Hooks.FadeInactive
+                 XMonad.Hooks.ManageDocks XMonad.Hooks.ManageHelpers
+                 XMonad.Hooks.Script XMonad.Hooks.SetWMName XMonad.Hooks.ServerMode
+                 XMonad.Hooks.UrgencyHook XMonad.Hooks.XPropManage
+                 XMonad.Layout.Accordion XMonad.Layout.BoringWindows
+                 XMonad.Layout.Circle XMonad.Layout.Combo XMonad.Layout.Decoration
+                 XMonad.Layout.DecorationMadness XMonad.Layout.Dishes
+                 XMonad.Layout.DragPane XMonad.Layout.DwmStyle XMonad.Layout.Gaps
+                 XMonad.Layout.Grid XMonad.Layout.HintedGrid
+                 XMonad.Layout.HintedTile XMonad.Layout.IM
+                 XMonad.Layout.LayoutCombinators XMonad.Layout.LayoutHints
+                 XMonad.Layout.LayoutModifier XMonad.Layout.LayoutScreens
+                 XMonad.Layout.MagicFocus XMonad.Layout.Magnifier
+                 XMonad.Layout.Master XMonad.Layout.Maximize XMonad.Layout.MosaicAlt
+                 XMonad.Layout.MultiToggle XMonad.Layout.MultiToggle.Instances
+                 XMonad.Layout.Named XMonad.Layout.NoBorders
+                 XMonad.Layout.PerWorkspace XMonad.Layout.Reflect
+                 XMonad.Layout.ResizableTile XMonad.Layout.ResizeScreen
+                 XMonad.Layout.Roledex XMonad.Layout.Simplest
+                 XMonad.Layout.SimpleDecoration XMonad.Layout.SimpleFloat
+                 XMonad.Layout.Spiral XMonad.Layout.Square XMonad.Layout.ShowWName
+                 XMonad.Layout.StackTile XMonad.Layout.Tabbed
+                 XMonad.Layout.TabBarDecoration XMonad.Layout.ThreeColumns
+                 XMonad.Layout.ToggleLayouts XMonad.Layout.TwoPane
+                 XMonad.Layout.WindowArranger XMonad.Layout.WindowNavigation
+                 XMonad.Layout.WorkspaceDir XMonad.Layout.SimplestFloat
+                 XMonad.Prompt.Directory XMonad.Prompt XMonad.Prompt.AppendFile
+                 XMonad.Prompt.AppLauncher XMonad.Prompt.Input XMonad.Prompt.Email
+                 XMonad.Prompt.Layout XMonad.Prompt.Man XMonad.Prompt.DirExec
+                 XMonad.Prompt.RunOrRaise XMonad.Prompt.Shell XMonad.Prompt.Ssh
+                 XMonad.Prompt.Theme XMonad.Prompt.Window XMonad.Prompt.Workspace
+                 XMonad.Prompt.XMonad XMonad.Util.CustomKeys XMonad.Util.Dmenu
+                 XMonad.Util.Dzen XMonad.Util.EZConfig XMonad.Util.Font
+                 XMonad.Util.Invisible XMonad.Util.Loggers XMonad.Util.NamedWindows
+                 XMonad.Util.Run XMonad.Util.Scratchpad XMonad.Util.Themes
+                 XMonad.Util.Timer XMonad.Util.WindowProperties
+                 XMonad.Util.WorkspaceCompare XMonad.Util.XSelection
+                 XMonad.Util.XUtils
 hidden-modules:
 import-dirs: @PREFIX@/lib/xmonad-contrib-@PKGVERSION@/ghc-@GHCVERSION@
 library-dirs: @PREFIX@/lib/xmonad-contrib-@PKGVERSION@/ghc-@GHCVERSION@
+hs-libraries: HSxmonad-contrib-@PKGVERSION@
 extra-libraries:
 extra-ghci-libraries:
 include-dirs:
 includes:
-depends: base-3.0.1.0 containers-0.1.0.1 directory-1.0.0.0 process-1.0.0.0 X11-1.4.1 mtl-1.1.0.0 unix-2.3.0.0 xmonad-0.7
+depends: base-3.0.2.0 containers-0.1.0.2 directory-1.0.0.1
+         process-1.0.0.1 random-1.0.0.0 old-time-1.0.0.0 old-locale-1.0.0.0
+         mtl-1.1.0.1 unix-2.3.0.1 X11-1.4.5 xmonad-@PKGVERSION@ xmonad-@PKGVERSION@
 hugs-options:
 cc-options:
 ld-options:
 framework-dirs:
 frameworks:
 haddock-interfaces: @PREFIX@/share/doc/xmonad-contrib-@PKGVERSION@/html/xmonad-contrib.haddock
-haddock-html: @PREFIX@/share/doc/xmonad-contrib-@PKGVERSION@/html' | @PREFIX@/bin/ghc-pkg update -
+haddock-html: @PREFIX@/share/doc/xmonad-contrib-@PKGVERSION@/html
+' | @PREFIX@/bin/ghc-pkg update -
            ;;
 esac

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/09 18:20:24 zul_ Exp $
 #
 
 DISTNAME=	xmonad-contrib-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/xmonad-contrib/${VERSION}/
 
-MAINTAINER=	degroote@netbsd.org
+MAINTAINER=	degroote@NetBSD.org
 HOMEPAGE=	http://xmonad.org/
 COMMENT=	Third party tiling scripts to xmonad
 
@@ -24,7 +23,7 @@ CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
 CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-VERSION=		0.7
+VERSION=		0.8.1
 
 
 do-configure:

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/08 23:53:55 zul_ Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/09 18:20:24 zul_ Exp $
 lib/${PKGNAME}/ghc-${GHCVERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/Commands.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/ConstrainedResize.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/CopyWindow.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/CycleRecentWS.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/CycleSelectedLayouts.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/CycleWS.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/DeManage.hi
@@ -17,6 +18,7 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/MouseGestures.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/MouseResize.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/NoBorders.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/PerWorkspaceKeys.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/Plane.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/Promote.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/RotSlaves.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/Search.hi
@@ -29,24 +31,33 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/UpdatePointer.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/Warp.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/WindowBringer.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/WindowGo.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions/WindowNavigation.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Arossato.hi
-lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Dons.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Desktop.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Droundy.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Gnome.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Kde.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/PlainConfig.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Sjanssen.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config/Xfce.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Doc.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Doc/Configuring.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Doc/Developing.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Doc/Extending.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/DynamicHooks.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/DynamicLog.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/EventHook.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/EwmhDesktops.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/FadeInactive.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/ManageDocks.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/ManageHelpers.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/Script.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/ServerMode.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/SetWMName.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/UrgencyHook.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks/XPropManage.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Accordion.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/BoringWindows.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Circle.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Combo.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Decoration.hi
@@ -54,7 +65,9 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/DecorationMadness.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Dishes.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/DragPane.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/DwmStyle.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Gaps.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Grid.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/HintedGrid.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/HintedTile.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/IM.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/LayoutCombinators.hi
@@ -63,9 +76,11 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/LayoutModifier.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/LayoutScreens.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/MagicFocus.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Magnifier.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Master.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Maximize.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/MosaicAlt.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/MultiToggle.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/MultiToggle/Instances.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Named.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/NoBorders.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/PerWorkspace.hi
@@ -73,13 +88,14 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Reflect.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/ResizableTile.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/ResizeScreen.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Roledex.hi
-lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/ScratchWorkspace.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/ShowWName.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/SimpleDecoration.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/SimpleFloat.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Simplest.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/SimplestFloat.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Spiral.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Square.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/StackTile.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/TabBarDecoration.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/Tabbed.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/ThreeColumns.hi
@@ -89,6 +105,7 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/WindowArranger.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/WindowNavigation.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout/WorkspaceDir.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt.hi
+lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt/AppLauncher.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt/AppendFile.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt/DirExec.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt/Directory.hi
@@ -120,13 +137,4 @@ lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Util/WorkspaceCompare.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Util/XSelection.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Util/XUtils.hi
 lib/${PKGNAME}/ghc-${GHCVERSION}/libHS${PKGNAME}.a
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Util
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Prompt
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Layout
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Hooks
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Doc
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Config
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad/Actions
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}/XMonad
-@dirrm lib/${PKGNAME}/ghc-${GHCVERSION}
-@dirrm lib/${PKGNAME}
+share/doc/${PKGNAME}/LICENSE
