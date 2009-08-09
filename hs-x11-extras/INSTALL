@@ -25,7 +25,7 @@ extra-libraries: Xinerama X11 Xext
 extra-ghci-libraries:
 include-dirs: @PREFIX@/lib/X11-extras-@PKGVERSION@/ghc-@GHCVERSION@/include
 includes: XlibExtras.h
-depends: base-3.0.1.0 X11-1.4.1
+depends: base-3.0.2.0 X11-1.4.5
 hugs-options:
 cc-options: -I@XINCLUDES@
 ld-options: -L@XLIBRARIES@ -R@XLIBRARIES@
