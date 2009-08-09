@@ -24,6 +24,8 @@
 
 set -e
 
+export PATH=$PSS_PRE_PATH:$PATH:$PSS_POST_PATH
+
 . pipestatus
 
 export LC_ALL=C
@@ -409,8 +411,6 @@ if test "$PSS_SLAVES"; then
 	    -c "env $environ $0 -s -f '$qfields'" '|' \
 	paexec_reorder -s > "$partial_summary_fn"
 elif test "$slave"; then
-    export PATH=$PSS_PRE_PATH:$PATH:$PSS_POST_PATH
-
     process_one_by_one
     exit 0
 else

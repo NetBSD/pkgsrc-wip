@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------
+Version 0.31.0, by Aleksey Cheusov, Sun,  9 Aug 2009 21:08:34 +0300
+
+  - pkg_src_summary(1) accepts PSS_PRE_PATH and PSS_POST_PATH
+    environment variables.
+
+----------------------------------------------------------------------
 Version 0.30.0, by Aleksey Cheusov, Sat, 30 May 2009 17:12:18 +0300
 
   - New utility pkg_summary2build_graph that converts src_summary
