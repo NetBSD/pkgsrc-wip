@@ -399,14 +399,18 @@ partial_summary_fn=$tmp_dir/partial_summary.txt
 if test "$PSS_SLAVES"; then
     qfields="$(echo $PSS_FIELDS | sed 's| |,|g')"
     environ="PSS_SLAVES= BMAKE=$BMAKE CKSUM=$CKSUM PKGSRCDIR=$PKGSRCDIR"
+    environ="$environ PSS_PRE_PATH=$PSS_PRE_PATH PSS_POST_PATH=$PSS_POST_PATH"
 
     runpipe0 \
 	packages2stdout $pkgpaths '|' \
-	paexec -slez $PSS_PAEXEC_EXTRA_OPTS -n "$PSS_SLAVES" \
+	paexec -slez $PSS_PAEXEC_EXTRA_OPTS \
+	    -n "$PSS_SLAVES" \
 	    -t "$PSS_TRANSPORT" \
-	-c "env $environ $0 -s -f '$qfields'" '|' \
+	    -c "env $environ $0 -s -f '$qfields'" '|' \
 	paexec_reorder -s > "$partial_summary_fn"
 elif test "$slave"; then
+    export PATH=$PSS_PRE_PATH:$PATH:$PSS_POST_PATH
+
     process_one_by_one
     exit 0
 else
