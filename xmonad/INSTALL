@@ -30,13 +30,15 @@ extra-libraries:
 extra-ghci-libraries:
 include-dirs:
 includes:
-depends: base-3.0.1.0 containers-0.1.0.1 directory-1.0.0.0 process-1.0.0.0 X11-1.4.1 mtl-1.1.0.0 unix-2.3.0.0
+depends: base-3.0.2.0 containers-0.1.0.2 directory-1.0.0.1
+         process-1.0.0.1 X11-1.4.5 mtl-1.1.0.1 unix-2.3.0.1
 hugs-options:
 cc-options:
 ld-options:
 framework-dirs:
 frameworks:
 haddock-interfaces: @PREFIX@/share/doc/xmonad-@PKGVERSION@/html/xmonad.haddock
-haddock-html: @PREFIX@/share/doc/xmonad-@PKGVERSION@/html' | @PREFIX@/bin/ghc-pkg update -
+haddock-html: @PREFIX@/share/doc/xmonad-@PKGVERSION@/html
+' | @PREFIX@/bin/ghc-pkg update -
            ;;
 esac
