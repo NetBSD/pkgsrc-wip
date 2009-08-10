@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/11/01 19:06:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/10 20:26:19 cheusov Exp $
 #
 
 DISTNAME=	pipestatus-0.5.0
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pipestatus/}
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/pipestatus/
 COMMENT=	UNIX/POSIX shell helper for running pipes safely
+
+LICENSE=		public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
