@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/11/14 20:43:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/10 20:22:15 cheusov Exp $
 #
 
 PKGNAME=	${DISTNAME:S/mawk/mawk-uxre/}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/mawk/
 
 MAINTAINER=	cheusov@tut.by
 COMMENT=	AWK clone by Mike Brennan with UXRE regexp library
+
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
