@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/14 20:05:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/10 19:52:29 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mueller-dic.chat.ru/
 COMMENT=	DICTD data for English-Russian dictionary by Mueller
+
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dict-server>=1.9.14:../../wip/dict-server
 
