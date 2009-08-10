@@ -1,4 +1,3 @@
 pkgsrc-wip TODO for flashrom
 
- * Support Linux
- * Get upstream to do releng
+ * Support Linux, Solaris

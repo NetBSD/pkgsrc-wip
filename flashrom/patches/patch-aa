@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/29 17:01:00 jakllsch Exp $
+$NetBSD: patch-aa,v 1.2 2009/08/10 14:52:39 jakllsch Exp $
 
---- flashrom.c.orig	2007-11-29 00:36:06.000000000 +0000
-+++ flashrom.c
-@@ -38,6 +38,9 @@
- #include <sys/psw.h>
- #include <asm/sunddi.h>
- #endif
-+#if defined(__NetBSD__)
-+#include <machine/sysarch.h>
-+#endif
- #include "flash.h"
+--- Makefile.orig	2009-05-03 23:37:07.000000000 +0000
++++ Makefile
+@@ -26,6 +26,10 @@ ifeq ($(OS_ARCH), FreeBSD)
+ CFLAGS += -I/usr/local/include
+ LDFLAGS += -L/usr/local/lib
+ endif
++ifeq ($(OS_ARCH), NetBSD)
++OS_MACHINE = $(shell uname -m)
++LDFLAGS += -l$(OS_MACHINE)
++endif
  
- char *chip_to_probe = NULL;
+ LDFLAGS += -lpci -lz
+ 
