@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/14 06:46:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/10 20:11:10 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -7,6 +7,8 @@ CATEGORIES=	devel
 
 MAINTAINER=	cheusov@tut.by
 COMMENT=	POSIX compatible regular expression library
+
+LICENSE=		gnu-lgpl-v2
 
 USE_LIBTOOL=		yes
 
