@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/16 20:42:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/10 20:09:23 cheusov Exp $
 #
 
 DISTNAME=	am-utils-6.1.5
@@ -18,6 +18,8 @@ MASTER_SITES=	ftp://ftp.am-utils.org/pub/am-utils/ \
 MAINTAINER=		cheusov@tut.by
 HOMEPAGE=		http://www.am-utils.org/
 COMMENT=		Berkeley automounter suite of utilities
+
+LICENSE=		original-bsd
 
 USE_TOOLS+=		yacc lex perl:run
 GNU_CONFIGURE=		yes
