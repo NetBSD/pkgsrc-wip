@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3540 2009/08/09 23:09:32 jihbed Exp $
+# $Id: Makefile,v 1.3541 2009/08/10 09:33:12 jukka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,7 +291,6 @@ SUBDIR+=	distella
 SUBDIR+=	diveintopython
 SUBDIR+=	djview4
 SUBDIR+=	dk-milter
-SUBDIR+=	dkim-milter
 SUBDIR+=	dmd-bin
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
