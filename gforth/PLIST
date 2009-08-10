@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/08/10 13:34:42 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/08/10 22:06:34 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -228,20 +228,3 @@ share/gforth/${PKGVERSION}/wordinfo.fs
 share/gforth/${PKGVERSION}/wordsets.fs
 share/gforth/${PKGVERSION}/xwords.fs
 share/gforth/site-forth/siteinit.fs
-@pkgdir share/gforth/${PKGVERSION}/arch/sparc
-@pkgdir share/gforth/${PKGVERSION}/arch/shboom
-@pkgdir share/gforth/${PKGVERSION}/arch/sharc
-@pkgdir share/gforth/${PKGVERSION}/arch/r8c
-@pkgdir share/gforth/${PKGVERSION}/arch/misc
-@pkgdir share/gforth/${PKGVERSION}/arch/m68k
-@pkgdir share/gforth/${PKGVERSION}/arch/ia64
-@pkgdir share/gforth/${PKGVERSION}/arch/hppa
-@pkgdir share/gforth/${PKGVERSION}/arch/h8
-@pkgdir share/gforth/${PKGVERSION}/arch/generic
-@pkgdir share/gforth/${PKGVERSION}/arch/c165
-@pkgdir share/gforth/${PKGVERSION}/arch/avr
-@pkgdir share/gforth/${PKGVERSION}/arch/arm
-@pkgdir share/gforth/${PKGVERSION}/arch/8086
-@pkgdir share/gforth/${PKGVERSION}/arch/6502
-@pkgdir share/gforth/${PKGVERSION}/arch/4stack
-@pkgdir lib/gforth/site-forth
