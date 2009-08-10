@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/03/08 22:21:08 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/08/10 20:28:37 cheusov Exp $
 #
 # used by wip/pkg_online-client/Makefile
 # used by wip/pkg_online-server/Makefile
@@ -12,6 +12,8 @@ VERSION=	0.9.1
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=	Client/Server search in pkgsrc packages
+
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

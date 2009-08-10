@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/08/10 19:28:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.39 2009/08/10 20:30:25 cheusov Exp $
 #
 
 DISTNAME=	runawk-0.16.0
@@ -11,7 +11,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/runawk
 COMMENT=	Wrapper that impelements modules for AWK
 
-#LICENSE=		mit
+LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/10 10:05:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/10 20:27:36 cheusov Exp $
 
 DISTNAME=	pkg_conflicts-0.4.0
 CATEGORIES=	pkgtools
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	# empty http://www.mova.org/~cheusov/pub/pkg_conflicts/
 COMMENT=	Tools for automatic CONFLICTS detection
+
+LICENSE=	mit
 
 DEPENDS+=	runawk>=0.14.3:../../wip/runawk
 DEPENDS+=	pkg_online-client>=0.6.0:../../wip/pkg_online-client
