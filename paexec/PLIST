@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/10 12:18:16 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/10 19:35:34 cheusov Exp $
 bin/paexec
 bin/paexec_reorder
 man/man1/paexec.1
@@ -19,10 +19,3 @@ share/examples/paexec/make_package/make_package_cmd__xxx_failed
 share/examples/paexec/make_package/make_package_tasks
 share/examples/paexec/toupper/toupper_cmd
 share/examples/paexec/toupper/toupper_run
-@dirrm share/doc/paexec
-@dirrm share/examples/paexec/1_div_X
-@dirrm share/examples/paexec/all_substr
-@dirrm share/examples/paexec/cc_wrapper
-@dirrm share/examples/paexec/make_package
-@dirrm share/examples/paexec/toupper
-@dirrm share/examples/paexec
