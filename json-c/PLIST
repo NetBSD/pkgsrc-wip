@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/12 21:12:30 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/10 23:22:54 jihbed Exp $
 include/json/arraylist.h
 include/json/bits.h
 include/json/debug.h
@@ -14,6 +14,7 @@ lib/pkgconfig/json.pc
 share/doc/html/json-c/annotated.html
 share/doc/html/json-c/arraylist_8h.html
 share/doc/html/json-c/bits_8h.html
+share/doc/html/json-c/classes.html
 share/doc/html/json-c/config_8h.html
 share/doc/html/json-c/debug_8h.html
 share/doc/html/json-c/doxygen.css
@@ -52,6 +53,3 @@ share/doc/html/json-c/unionjson__object_1_1data.html
 share/json-c/AUTHORS
 share/json-c/ChangeLog
 share/json-c/README
-@dirrm share/json-c
-@dirrm share/doc/html/json-c
-@dirrm include/json
