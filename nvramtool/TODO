@@ -1,4 +1,4 @@
-pkgsrc-wip TODO for lxbios
+pkgsrc-wip TODO for nvramtool
  
- * Support Linux
- * Get upstream to do releng
+ * Test/Support non-NetBSD builds
+ * Get upstream to do releng?

@@ -1,25 +1,28 @@
-$NetBSD: patch-ab,v 1.2 2008/12/19 18:51:18 jakllsch Exp $
+$NetBSD: patch-ab,v 1.3 2009/08/10 15:08:02 jakllsch Exp $
 
---- /local/pkgsrc/work/wip/nvramtool/work/nvramtool/cmos_lowlevel.c.orig	2008-12-19 18:41:26.000000000 +0000
-+++ /local/pkgsrc/work/wip/nvramtool/work/nvramtool/cmos_lowlevel.c
-@@ -33,6 +33,11 @@
- #include <unistd.h>
- #endif
+--- common.h.orig	2009-08-10 14:53:50.000000000 +0000
++++ common.h
+@@ -43,6 +43,15 @@
+ #include <string.h>
+ #include <ctype.h>
  
 +#if defined(__NetBSD__)
-+#include <sys/types.h>
-+#include <machine/sysarch.h>
++#include "pio.h"
++#define OUTB outb
++#define OUTW outw
++#define OUTL outl
++#define INB  inb
++#define INW  inw
++#define INL  inl
++#else
+ #if defined(__FreeBSD__)
+ #include <sys/types.h>
+ #include <machine/cpufunc.h>
+@@ -61,6 +70,7 @@
+ #define INW  inw
+ #define INL  inl
+ #endif
 +#endif
-+
- #include "common.h"
- #include "cmos_lowlevel.h"
  
-@@ -281,7 +286,7 @@ void set_iopl (int level)
-        }
-     }
- #else
--   if (iopl(level))
-+   if (i386_iopl(level))
-     { fprintf(stderr,
-               "%s: iopl() system call failed.  You must be root to do "
-               "this.\n",
+ #define FALSE 0
+ #define TRUE 1

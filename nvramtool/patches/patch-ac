@@ -1,28 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2008/12/19 18:56:57 jakllsch Exp $
+$NetBSD: patch-ac,v 1.2 2009/08/10 15:08:02 jakllsch Exp $
 
---- /local/pkgsrc/work/wip/nvramtool/work/nvramtool/common.h.orig	2008-12-19 18:19:00.000000000 +0000
-+++ /local/pkgsrc/work/wip/nvramtool/work/nvramtool/common.h
-@@ -43,6 +43,15 @@
- #include <string.h>
- #include <ctype.h>
+--- cmos_lowlevel.c.orig	2009-08-10 14:53:50.000000000 +0000
++++ cmos_lowlevel.c
+@@ -33,6 +33,11 @@
+ #include <unistd.h>
+ #endif
  
 +#if defined(__NetBSD__)
-+#include "pio.h"
-+#define OUTB outb
-+#define OUTW outw
-+#define OUTL outl
-+#define INB  inb
-+#define INW  inw
-+#define INL  inl
-+#else
- #if defined(__FreeBSD__)
- #include <sys/types.h>
- #include <machine/cpufunc.h>
-@@ -61,6 +70,7 @@
- #define INW  inw
- #define INL  inl
- #endif
++#include <sys/types.h>
++#include <machine/sysarch.h>
 +#endif
++
+ #include "common.h"
+ #include "cmos_lowlevel.h"
  
- #define FALSE 0
- #define TRUE 1
