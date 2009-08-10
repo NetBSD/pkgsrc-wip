@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2009/03/12 00:58:02 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/10 19:47:19 cheusov Exp $
 
 .include "../../wip/dict-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dictd/dict-client/}
 CATEGORIES=	textproc
 COMMENT=	Dictionary Service Protocol client
+
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake yacc lex
 USE_LIBTOOL=		yes
