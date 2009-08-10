@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/10 10:07:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/10 19:45:29 cheusov Exp $
 
 DISTNAME=	awk-pkgsrc-dewey-${VERSION}
 CATEGORIES=	pkgtools
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://www.mova.org/~cheusov/
 COMMENT=	Pkgsrc dewey module for AWK programming language
+
+LICENSE=	public-domain
 
 DEPENDS+=	runawk-[0-9]*:../../wip/runawk
 

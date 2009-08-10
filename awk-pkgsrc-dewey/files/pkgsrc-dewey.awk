@@ -1,4 +1,8 @@
 ############################################################
+# Written by Aleksey Cheusov <vle@gmx.net>
+# Public Domain
+
+############################################################
 # dewey functions
 
 BEGIN {
