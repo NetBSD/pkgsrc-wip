@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2009/07/13 08:17:28 ghen Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/08/11 11:47:17 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -319,6 +319,7 @@ sbin/dovecotpw
 share/doc/dovecot/auth-protocol.txt
 share/doc/dovecot/documentation.txt
 share/doc/dovecot/securecoding.txt
+share/doc/dovecot/thread-refs.txt
 share/doc/dovecot/wiki/ACL.txt
 share/doc/dovecot/wiki/AixPluginsSupport.txt
 share/doc/dovecot/wiki/AuthDatabase.CheckPassword.txt
@@ -361,6 +362,7 @@ share/doc/dovecot/wiki/Design.Indexes.txt
 share/doc/dovecot/wiki/Design.MailProcess.txt
 share/doc/dovecot/wiki/Design.Processes.txt
 share/doc/dovecot/wiki/Design.txt
+share/doc/dovecot/wiki/DomainLost.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
@@ -378,6 +380,8 @@ share/doc/dovecot/wiki/LDA.Indexing.txt
 share/doc/dovecot/wiki/LDA.Postfix.txt
 share/doc/dovecot/wiki/LDA.Qmail.txt
 share/doc/dovecot/wiki/LDA.Sendmail.txt
+share/doc/dovecot/wiki/LDA.Sieve.CMU.txt
+share/doc/dovecot/wiki/LDA.Sieve.Dovecot.txt
 share/doc/dovecot/wiki/LDA.Sieve.txt
 share/doc/dovecot/wiki/LDA.txt
 share/doc/dovecot/wiki/Logging.txt

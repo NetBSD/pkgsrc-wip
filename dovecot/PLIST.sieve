@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.sieve,v 1.1 2009/06/25 14:20:49 ghen Exp $
-bin/sieve-filter
+@comment $NetBSD: PLIST.sieve,v 1.2 2009/08/11 11:47:17 ghen Exp $
 bin/sieve-test
 bin/sievec
 bin/sieved
