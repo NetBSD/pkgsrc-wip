@@ -1,0 +1,37 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/08/11 02:35:47 christtrekker Exp $
+#
+
+DISTNAME=	efltk-2.0.8
+#PKGREVISION=	0
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
+EXTRACT_SUFX=	.tar.gz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ede.sourceforge.net/
+COMMENT=	Extended Fast Light Toolkit
+
+WRKSRC=			${WRKDIR}/efltk
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake msgfmt
+USE_LIBTOOL=		yes
+
+CONFIGURE_ARGS+=	--enable-iconv
+CONFIGURE_ARGS+=	--enable-xft
+CONFIGURE_ARGS+=	--enable-plugins
+CONFIGURE_ARGS+=	--disable-unixODBC
+CONFIGURE_ARGS+=	--disable-shared
+
+.include "options.mk"
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
