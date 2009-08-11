@@ -1,0 +1,3 @@
+This package has known vulnerabilities, please investigate and fix if possible
+.
+ CVE-2009-1725 (fixed in SVN repository r1002163)
