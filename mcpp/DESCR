@@ -4,7 +4,7 @@ ISO C90, ISO C99, and ISO C++98.  MCPP is especially useful for
 debugging the source program which use complicated macros and also
 useful for checking portability of the source.
 
-Though mcpp could be built as a replacement of GCC's resident
-proprocessor or as a subroutine called from some other main program,
+Although mcpp could be built as a replacement of GCC's resident
+preprocessor or as a subroutine called from some other main program,
 this package installs only a stand-alone program named 'mcpp' which
 behaves independent from GCC.

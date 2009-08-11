@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 23:40:05 jkryl Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/11 09:43:04 jkryl Exp $
 bin/mcpp
 man/man1/mcpp.1
 share/doc/mcpp/LICENSE
@@ -6,4 +6,3 @@ share/doc/mcpp/NEWS
 share/doc/mcpp/README
 share/doc/mcpp/mcpp-manual-jp.html
 share/doc/mcpp/mcpp-manual.html
-@dirrm share/doc/mcpp
