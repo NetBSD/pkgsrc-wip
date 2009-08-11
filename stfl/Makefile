@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/07/18 13:44:39 smoppy Exp $
+# $NetBSD: Makefile,v 1.10 2009/08/11 21:34:07 smoppy Exp $
 
 DISTNAME=	stfl-0.21
 CATEGORIES=	devel
@@ -25,13 +25,6 @@ SUBST_MESSAGE.makefile=	Fixing distribution Makefile...
 SUBST_FILES.makefile=	${MAKE_FILE}
 SUBST_SED.makefile=	-e 's/LDLIBS.*/& -liconv/'
 
-.include "../../mk/bsd.prefs.mk"
-
-# NetBSD iconv implementation doesn't support
-# the wchar_t encoding (upon stfl relies).
-.if ${OPSYS} == "NetBSD"
 .include "../../converters/libiconv/buildlink3.mk"
-.endif
-
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
