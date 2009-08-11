@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/11 13:12:45 fwsf Exp $
 #
 
 DISTNAME=	qt-creator-1.2.1-src
@@ -21,7 +21,9 @@ INSTALLATION_DIRS=      bin lib/qtcreator lib/qtcreator/plugins/Nokia \
 			share/qtcreator/translations
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	qt4-tools>=4.5.2nb1:../../x11/qt4-tools
+BUILD_DEPENDS+=	qt4-tools>=4.5.2nb1:../../x11/qt4-tools \
+		qt4-sqlite3>=4.5.2:../../x11/qt4-sqlite3
+
 BUILD_TARGET=	make_default qch_docs
 MAKE_ENV+=	PREFIX=${PREFIX}
 
