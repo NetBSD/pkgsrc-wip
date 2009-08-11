@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/06 14:50:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/11 23:22:21 jihbed Exp $
 #
 
 DISTNAME=	spin520
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/520//}-5.2.0
 CATEGORIES=	devel
 MASTER_SITES=	http://spinroot.com/spin/Src/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://spinroot.com/spin/whatispin.html
 COMMENT=	Spin is an efficient on-the-fly verification system
 #LICENSE=	Spin Public license http://www.spinroot.com/spin/spin_license.html

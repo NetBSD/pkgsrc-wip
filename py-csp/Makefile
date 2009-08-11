@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/11 23:12:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/11 23:20:24 jihbed Exp $
 #
 
 DISTNAME=	pycsp-0.6.0
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pycsp.googlecode.com/files/
 
-MAINTAINER=	netbsdresearch@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pycsp/
 COMMENT=	PyCSP Python CSP Library
 #LICENSE=	LICENSE
