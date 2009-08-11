@@ -1,8 +1,4 @@
-<<<<<<< Makefile
-# $Id: Makefile,v 1.3542 2009/08/10 21:16:31 jihbed Exp $
-=======
-# $Id: Makefile,v 1.3542 2009/08/10 21:16:31 jihbed Exp $
->>>>>>> 1.3541
+# $Id: Makefile,v 1.3543 2009/08/11 02:40:00 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -339,6 +335,7 @@ SUBDIR+=	edbus
 SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	edoc
+SUBDIR+=	efltk
 SUBDIR+=	efreet
 SUBDIR+=	eic
 SUBDIR+=	ejourn
