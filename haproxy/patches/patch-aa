@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/12 20:03:07 shindenmorr Exp $
+
+--- Makefile.orig	2009-08-09 22:53:49.000000000 +0200
++++ Makefile
+@@ -70,7 +70,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
+ # Use TARGET=<target_name> to optimize for a specifc target OS among the
+ # following list (use the default "generic" if uncertain) :
+ #    generic, linux22, linux24, linux24e, linux26, solaris,
+-#    freebsd, openbsd, cygwin, custom
++#    freebsd, netbsd, openbsd, cygwin, custom
+ TARGET =
+ 
+ #### TARGET CPU
+@@ -211,6 +211,12 @@ ifeq ($(TARGET),freebsd)
+   USE_KQUEUE     = implicit
+   USE_TPROXY     = implicit
+ else
++ifeq ($(TARGET),netbsd)
++  # This is for FreeBSD
++  USE_POLL       = implicit
++  USE_KQUEUE     = implicit
++  USE_TPROXY     = implicit
++else
+ ifeq ($(TARGET),openbsd)
+   # This is for OpenBSD >= 3.0
+   USE_POLL       = implicit
+@@ -225,6 +231,7 @@ ifeq ($(TARGET),cygwin)
+   TARGET_CFLAGS  = $(if $(filter 1.5.%, $(shell uname -r)), -DUSE_IPV6 -DAF_INET6=23 -DINET6_ADDRSTRLEN=46, )
+ endif # cygwin
+ endif # openbsd
++endif # netbsd
+ endif # freebsd
+ endif # solaris
+ endif # linux26
+@@ -447,7 +454,7 @@ all:
+ 	@echo "Please choose the target among the following supported list :"
+ 	@echo
+ 	@echo "   linux26, linux24, linux24e, linux22, solaris"
+-	@echo "   freebsd, openbsd, cygwin, custom, generic"
++	@echo "   freebsd, netbsd, openbsd, cygwin, custom, generic"
+ 	@echo
+ 	@echo "Use \"generic\" if you don't want any optimization, \"custom\" if you"
+ 	@echo "want to precisely tweak every option, or choose the target which"
