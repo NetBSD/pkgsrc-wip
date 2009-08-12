@@ -1,0 +1,59 @@
+$NetBSD: patch-ai,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+
+--- src/VBox/Runtime/Makefile.kmk.orig	2009-08-12 14:35:40.000000000 +0200
++++ src/VBox/Runtime/Makefile.kmk
+@@ -558,6 +558,54 @@ RuntimeR3_SOURCES.freebsd = \
+ 	r3/posix/tls-posix.cpp \
+ 	r3/posix/utf8-posix.cpp
+ 
++RuntimeR3_SOURCES.netbsd = \
++	generic/pathhost-generic.cpp \
++	generic/RTDirQueryInfo-generic.cpp \
++	generic/RTDirSetTimes-generic.cpp \
++	generic/RTFileMove-generic.cpp \
++	generic/RTLogWriteDebugger-generic.cpp \
++	generic/RTTimeLocalNow-generic.cpp \
++	generic/RTTimerCreate-generic.cpp \
++	generic/RTUuidCreate-generic.cpp \
++	generic/mppresent-generic.cpp \
++	generic/sched-generic.cpp \
++	generic/utf16locale-generic.cpp \
++	generic/uuid-generic.cpp \
++	generic/RTMpCpuId-generic.cpp \
++	generic/RTMpCpuIdFromSetIndex-generic.cpp \
++	generic/RTMpCpuIdToSetIndex-generic.cpp \
++	generic/RTMpIsCpuPossible-generic.cpp \
++	generic/RTMpGetMaxCpuId-generic.cpp \
++	generic/RTMpGetOnlineSet-generic.cpp \
++	generic/RTMpGetSet-generic.cpp \
++	generic/RTMpIsCpuOnline-generic.cpp \
++	generic/RTProcIsRunningByName-generic.cpp \
++	r3/netbsd/mp-netbsd.cpp \
++	r3/netbsd/alloc-netbsd.cpp \
++	r3/netbsd/rtProcInitExePath-netbsd.cpp \
++	r3/posix/RTSystemQueryOSInfo-posix.cpp \
++	r3/posix/dir-posix.cpp \
++	r3/posix/env-posix.cpp \
++	r3/posix/fileio-posix.cpp \
++	r3/posix/filelock-posix.cpp \
++	r3/posix/fs-posix.cpp \
++	r3/posix/ldrNative-posix.cpp \
++	r3/posix/path-posix.cpp \
++	r3/posix/process-posix.cpp \
++	r3/posix/rand-posix.cpp \
++	r3/posix/RTMpGetCount-posix.cpp \
++	r3/posix/RTTimeNow-posix.cpp \
++	r3/posix/semevent-posix.cpp \
++	r3/posix/semeventmulti-posix.cpp \
++	r3/posix/semmutex-posix.cpp \
++	r3/posix/semrw-posix.cpp \
++	r3/posix/thread-posix.cpp \
++	r3/posix/time-posix.cpp \
++	r3/posix/timelocal-posix.cpp \
++	r3/posix/timer-posix.cpp \
++	r3/posix/tls-posix.cpp \
++	r3/posix/utf8-posix.cpp
++
+ RuntimeR3_SOURCES.solaris = \
+ 	generic/pathhost-generic.cpp \
+ 	generic/RTDirQueryInfo-generic.cpp \

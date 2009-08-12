@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/08/03 00:02:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/12 12:54:17 tnn2 Exp $
 #
 
-DISTNAME=	VirtualBox-3.0.2-OSE
-PKGNAME=	virtualbox-3.0.2
+DISTNAME=	VirtualBox-${VBOX_VER}-OSE
+PKGNAME=	virtualbox-${VBOX_VER}
+VBOX_VER=	3.0.4
 CATEGORIES=	emulators
-MASTER_SITES=	http://download.virtualbox.org/virtualbox/3.0.2/
+MASTER_SITES=	http://download.virtualbox.org/virtualbox/${VBOX_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
@@ -15,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-WRKSRC=		${WRKDIR}/VirtualBox-3.0.2_OSE
+WRKSRC=		${WRKDIR}/VirtualBox-${VBOX_VER}_OSE
 
 CHECK_PORTABILITY_SKIP+= src/VBox/VMM/testcase/mkdsk.sh # XXX
 

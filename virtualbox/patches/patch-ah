@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+
+--- src/recompiler/fpu/softfloat-native.h.orig	2009-08-04 19:14:28.000000000 +0200
++++ src/recompiler/fpu/softfloat-native.h
+@@ -1,8 +1,12 @@
+ /* Native implementation of soft float functions */
+ #include <math.h>
+ 
+-#if (defined(_BSD) && !defined(__APPLE__)) || defined(HOST_SOLARIS)
+-#include <ieeefp.h>
++#if (defined(_BSD) && !defined(__APPLE__)) || defined(HOST_SOLARIS) || defined(__NetBSD__)
++# include <ieeefp.h>
++# if defined(__NetBSD__)
++#  define fabsl(f) fabs(f)
++#  define scalbnl(x,n) scalbn(x,n)
++# endif
+ #elif defined(_MSC_VER)
+ # include <fpieee.h>
+ # ifndef fabsf
+@@ -14,6 +18,10 @@
+ 
+ #if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
++# if defined(__NetBSD__)
++ /* XXX undo namespace pollution from sys/param.h */
++# undef PVM
++# endif
+ #endif
+ 
+ /*

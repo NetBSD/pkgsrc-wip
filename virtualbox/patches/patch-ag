@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+
+--- src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp.orig	2009-08-04 19:18:37.000000000 +0200
++++ src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp
+@@ -317,7 +317,7 @@ static void supR3HardenedGetFullExePath(
+      *
+      * Darwin, OS/2 and Windows all have proper APIs for getting the program file name.
+      */
+-#if defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_SOLARIS)
++#if defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
+ # ifdef RT_OS_LINUX
+     int cchLink = readlink("/proc/self/exe", &g_szSupLibHardenedExePath[0], sizeof(g_szSupLibHardenedExePath) - 1);
+ # elif defined(RT_OS_SOLARIS)
+@@ -728,7 +728,7 @@ static void supR3HardenedMainDropPrivile
+     egid = getegid();
+     rgid = sgid = getgid();
+ 
+-# elif defined(RT_OS_SOLARIS)
++# elif defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
+     /* Solaris doesn't have setresuid, but the setreuid interface is BSD
+        compatible and will set the saved uid to euid when we pass it a ruid
+        that isn't -1 (which we do). */

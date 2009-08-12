@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+
+--- src/VBox/Runtime/r3/posix/thread-posix.cpp.orig	2009-08-04 19:18:58.000000000 +0200
++++ src/VBox/Runtime/r3/posix/thread-posix.cpp
+@@ -259,7 +259,7 @@ RTDECL(int) RTThreadSleep(unsigned cMill
+         pthread_yield_np();
+ #elif defined(RT_OS_FREEBSD) /* void pthread_yield */
+         pthread_yield();
+-#elif defined(RT_OS_SOLARIS)
++#elif defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
+         sched_yield();
+ #else
+         if (!pthread_yield())
+@@ -294,7 +294,7 @@ RTDECL(bool) RTThreadYield(void)
+     uint64_t u64TS = ASMReadTSC();
+ #ifdef RT_OS_DARWIN
+     pthread_yield_np();
+-#elif defined(RT_OS_SOLARIS)
++#elif defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
+     sched_yield();
+ #else
+     pthread_yield();

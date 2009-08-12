@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+
+--- src/VBox/Runtime/r3/posix/semmutex-posix.cpp.orig	2009-08-04 19:18:58.000000000 +0200
++++ src/VBox/Runtime/r3/posix/semmutex-posix.cpp
+@@ -190,7 +190,7 @@ RTDECL(int)  RTSemMutexRequest(RTSEMMUTE
+     }
+     else
+     {
+-#ifdef RT_OS_DARWIN
++#if defined(RT_OS_DARWIN) || defined(RT_OS_NETBSD)
+         AssertMsgFailed(("Not implemented on Darwin yet because of incomplete pthreads API."));
+         return VERR_NOT_IMPLEMENTED;
+ #else /* !RT_OS_DARWIN */
