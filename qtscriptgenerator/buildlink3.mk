@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/08/02 23:56:38 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/08/12 02:32:03 obache Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.15.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,6 +16,7 @@ BUILDLINK_TREE+=	qtscriptgenerator
 QTSCRIPTGENERATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qtscriptgenerator+=	qtscriptgenerator>=0.1.0
+BUILDLINK_ABI_DEPENDS.qtscriptgenerator?=	qtscriptgenerator>=0.1.0nb1
 BUILDLINK_PKGSRCDIR.qtscriptgenerator?=	../../wip/qtscriptgenerator
 
 # XXX

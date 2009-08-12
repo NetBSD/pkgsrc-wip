@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.28 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=		Firebird-2.1.1.17910-0
 PKGNAME=		firebird-2.1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=firebird/}
 EXTRACT_SUFX=		.tar.bz2

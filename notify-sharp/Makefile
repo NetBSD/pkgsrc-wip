@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/08/07 17:41:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r2998.orig
 PKGNAME=	notify-sharp-0.4.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/n/notify-sharp/}
 

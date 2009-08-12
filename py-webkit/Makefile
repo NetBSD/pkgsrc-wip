@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/06/17 23:55:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:03 obache Exp $
 #
 
 DISTNAME=	pywebkitgtk-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://pywebkitgtk.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/06/19 10:31:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=	IronPython-1.0.1-Src
 PKGNAME=	ironpython-1.0.1
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/ironpython/
 EXTRACT_SUFX=	.zip

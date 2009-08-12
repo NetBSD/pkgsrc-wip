@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/08/12 01:52:04 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/08/12 02:32:05 obache Exp $
 #
 
 DISTNAME=		lat-1.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		databases
 MASTER_SITES=		http://dev.mmgsecurity.com/downloads/lat/1.2/
 

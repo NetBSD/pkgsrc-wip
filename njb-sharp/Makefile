@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/22 10:51:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:05 obache Exp $
 #
 
 DISTNAME=	njb-sharp-0.3.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.banshee-project.org/legacy/njb-sharp/
 

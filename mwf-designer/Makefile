@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/10/12 14:36:09 koifren Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:05 obache Exp $
 
 DISTNAME=	mwf-designer
 PKGNAME=	${DISTNAME}-${MWF_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.mono-project.com/
 

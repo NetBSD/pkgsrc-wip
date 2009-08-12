@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/27 23:08:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=	mono-zeroconf-0.9.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.banshee-project.org/mono-zeroconf/
 EXTRACT_SUFX=	.tar.bz2

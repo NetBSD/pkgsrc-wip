@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/22 14:12:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:05 obache Exp $
 #
 
 DISTNAME=	liblastfm-sharp-0.1.09
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://lastfm-sharp.googlecode.com/files/
 

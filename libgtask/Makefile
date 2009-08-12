@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/31 16:40:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/12 02:32:05 obache Exp $
 #
 
 DISTNAME=	gtask-0.1.2
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.dronelabs.com/sources/gtask/0.1/
 

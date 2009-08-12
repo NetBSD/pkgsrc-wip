@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=	dbus-explorer-0.5
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ndesk.org/archive/dbus-explorer/
 

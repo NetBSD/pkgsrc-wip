@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/07 16:54:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:04 obache Exp $
 #
 
 DISTNAME=	frogmicroblog-0.1.4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://froggymicroblog.googlecode.com/files/
 
