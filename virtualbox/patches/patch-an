@@ -1,0 +1,64 @@
+$NetBSD: patch-an,v 1.3 2009/08/13 15:36:31 tnn2 Exp $
+
+--- VBox/Devices/Audio/mixeng.c.orig	2009-08-04 19:18:09.000000000 +0200
++++ VBox/Devices/Audio/mixeng.c
+@@ -153,6 +153,59 @@
+ #undef IN_T
+ #undef SHIFT
+ 
++/* work around really bizarre preprocessor issue */
++/* may be related to pkgsrc/emulators/qemu/patches/patch-ao */
++#ifdef __NetBSD__
++#define conv_natural_uint8_t_to_mono conv_natural___uint8_t_to_mono
++#define conv_natural_uint16_t_to_mono conv_natural___uint16_t_to_mono
++#define conv_natural_uint32_t_to_mono conv_natural___uint32_t_to_mono
++#define conv_natural_uint8_t_to_mono conv_natural___uint8_t_to_mono
++#define conv_swap_uint16_t_to_mono conv_swap___uint16_t_to_mono
++#define conv_swap_uint32_t_to_mono conv_swap___uint32_t_to_mono
++#define conv_natural_int8_t_to_mono conv_natural___int8_t_to_mono
++#define conv_natural_int16_t_to_mono conv_natural___int16_t_to_mono
++#define conv_natural_int32_t_to_mono conv_natural___int32_t_to_mono
++#define conv_natural_int8_t_to_mono conv_natural___int8_t_to_mono
++#define conv_swap_int16_t_to_mono conv_swap___int16_t_to_mono
++#define conv_swap_int32_t_to_mono conv_swap___int32_t_to_mono
++#define conv_natural_uint8_t_to_stereo conv_natural___uint8_t_to_stereo
++#define conv_natural_uint16_t_to_stereo conv_natural___uint16_t_to_stereo
++#define conv_natural_uint32_t_to_stereo conv_natural___uint32_t_to_stereo
++#define conv_natural_uint8_t_to_stereo conv_natural___uint8_t_to_stereo
++#define conv_swap_uint16_t_to_stereo conv_swap___uint16_t_to_stereo
++#define conv_swap_uint32_t_to_stereo conv_swap___uint32_t_to_stereo
++#define conv_natural_int8_t_to_stereo conv_natural___int8_t_to_stereo
++#define conv_natural_int16_t_to_stereo conv_natural___int16_t_to_stereo
++#define conv_natural_int32_t_to_stereo conv_natural___int32_t_to_stereo
++#define conv_natural_int8_t_to_stereo conv_natural___int8_t_to_stereo
++#define conv_swap_int16_t_to_stereo conv_swap___int16_t_to_stereo
++#define conv_swap_int32_t_to_stereo conv_swap___int32_t_to_stereo
++#define clip_natural_uint8_t_from_mono clip_natural___uint8_t_from_mono
++#define clip_natural_uint16_t_from_mono clip_natural___uint16_t_from_mono
++#define clip_natural_uint32_t_from_mono clip_natural___uint32_t_from_mono
++#define clip_natural_uint8_t_from_mono clip_natural___uint8_t_from_mono
++#define clip_swap_uint16_t_from_mono clip_swap___uint16_t_from_mono
++#define clip_swap_uint32_t_from_mono clip_swap___uint32_t_from_mono
++#define clip_natural_int8_t_from_mono clip_natural___int8_t_from_mono
++#define clip_natural_int16_t_from_mono clip_natural___int16_t_from_mono
++#define clip_natural_int32_t_from_mono clip_natural___int32_t_from_mono
++#define clip_natural_int8_t_from_mono clip_natural___int8_t_from_mono
++#define clip_swap_int16_t_from_mono clip_swap___int16_t_from_mono
++#define clip_swap_int32_t_from_mono clip_swap___int32_t_from_mono
++#define clip_natural_uint8_t_from_stereo clip_natural___uint8_t_from_stereo
++#define clip_natural_uint16_t_from_stereo clip_natural___uint16_t_from_stereo
++#define clip_natural_uint32_t_from_stereo clip_natural___uint32_t_from_stereo
++#define clip_natural_uint8_t_from_stereo clip_natural___uint8_t_from_stereo
++#define clip_swap_uint16_t_from_stereo clip_swap___uint16_t_from_stereo
++#define clip_swap_uint32_t_from_stereo clip_swap___uint32_t_from_stereo
++#define clip_natural_int8_t_from_stereo clip_natural___int8_t_from_stereo
++#define clip_natural_int16_t_from_stereo clip_natural___int16_t_from_stereo
++#define clip_natural_int32_t_from_stereo clip_natural___int32_t_from_stereo
++#define clip_natural_int8_t_from_stereo clip_natural___int8_t_from_stereo
++#define clip_swap_int16_t_from_stereo clip_swap___int16_t_from_stereo
++#define clip_swap_int32_t_from_stereo clip_swap___int32_t_from_stereo
++#endif
++
+ t_sample *mixeng_conv[2][2][2][3] = {
+     {
+         {
