@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.3 2009/08/13 15:36:31 tnn2 Exp $
+$NetBSD: patch-an,v 1.4 2009/08/13 15:38:18 tnn2 Exp $
 
---- VBox/Devices/Audio/mixeng.c.orig	2009-08-04 19:18:09.000000000 +0200
-+++ VBox/Devices/Audio/mixeng.c
+--- src/VBox/Devices/Audio/mixeng.c.orig	2009-08-04 19:18:09.000000000 +0200
++++ src/VBox/Devices/Audio/mixeng.c
 @@ -153,6 +153,59 @@
  #undef IN_T
  #undef SHIFT
