@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/11 13:12:45 fwsf Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/13 13:42:46 fwsf Exp $
 #
 
 DISTNAME=	qt-creator-1.2.1-src
@@ -58,7 +58,7 @@ do-install:
                 ${INSTALL_DATA_DIR} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
 	cd ${WRKSRC}/share/qtcreator && ${FIND} designer gdbmacros \
-		schemes snippets templates -type f -exec \
+		schemes snippets templates -type f \! -name "*.orig" -exec \
                 ${INSTALL_DATA} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
 
