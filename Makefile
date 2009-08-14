@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3545 2009/08/14 14:11:57 jsonn Exp $
+# $Id: Makefile,v 1.3546 2009/08/14 14:22:17 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1782,7 +1782,6 @@ SUBDIR+=	py-yapgvb
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	pydance
 SUBDIR+=	pydb
-SUBDIR+=	pygopherd
 SUBDIR+=	pynfo
 SUBDIR+=	pypanel
 SUBDIR+=	pypod

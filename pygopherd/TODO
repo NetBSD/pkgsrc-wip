@@ -1,6 +1,0 @@
-This is just an update of PyGopherd since it's unmaintained in pkgsrc and I do
-not have commit access to it.  I'm also testing to see if this will run with
-Python 2.4, which is why I added it to PYTHON_VERSIONS_ACCEPTED.
-
-So far PyGopherd seems to work fine with Python 2.4 on my system, but more
-testing is needed to see if there are any hidden problems.
