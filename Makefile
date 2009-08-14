@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3544 2009/08/12 21:14:55 shindenmorr Exp $
+# $Id: Makefile,v 1.3545 2009/08/14 14:11:57 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1141,7 +1141,6 @@ SUBDIR+=	miracl
 SUBDIR+=	mirage
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
-SUBDIR+=	mixminion
 SUBDIR+=	mixxx
 #SUBDIR+=	mk 		# not a package
 SUBDIR+=	mk-configure
