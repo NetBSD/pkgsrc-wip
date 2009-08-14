@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/06/27 13:21:14 asau Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/14 13:32:49 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source-r2
 PKGNAME=		sbcl-1.0.29
@@ -83,8 +83,17 @@ post-build:
 do-install:
 	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
+	find $(DESTDIR)$(PREFIX)/lib/sbcl -type d -name CVS -exec rm -rf {} \+
 
 do-test:
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
+
+CVS_REPOSITORIES=	sbcl
+CVS_ROOT.sbcl=		:pserver:anonymous:@sbcl.cvs.sourceforge.net:/cvsroot/sbcl
+WRKSRC=			${WRKDIR}/sbcl
+DISTNAME=
+PKGNAME=		sbcl-1.0.99
+
+.include "../mk/cvs-package.mk"
 
 .include "../../mk/bsd.pkg.mk"
