@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2009/04/07 04:40:26 asau Exp $
+# $NetBSD: Makefile,v 1.28 2009/08/14 12:03:08 asau Exp $
 #
 
-DISTNAME=		ecl-9.4.1
-# PKGNAME=		ecl-9.4.99
+DISTNAME=		ecl-9.8.3
+PKGNAME=		ecl-9.8.99
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
@@ -22,7 +23,7 @@ CVS_MODULE.ecl=		ecl
 # CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
 # CVS_MODULE.ecl-test=	ecl-test
 
-# WRKSRC=			${WRKDIR}/ecl
+WRKSRC=			${WRKDIR}/ecl
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -30,9 +31,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		yes
 
-CONFIGURE_ARGS+=	--enable-boehm=system
-CONFIGURE_ENV+=		ECL_BOEHM_GC_HEADER=gc/gc.h
-CONFIGURE_ARGS+=	--with-system-gmp
+CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
 
 .include "options.mk"
 
@@ -43,20 +42,22 @@ SUBST_MESSAGE.fix-version=	Fixing package version.
 SUBST_FILES.fix-version=	src/configure.in
 SUBST_SED.fix-version=		-e '/^AC_INIT(\[ecl\],/s/\[\([0-9.]*\)\]/[${PKGVERSION_NOREV}]/'
 
-PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
+SUBST_CLASSES+=			fix-libdir
+SUBST_STAGE.fix-libdir=		post-patch
+SUBST_MESSAGE.fix-libdir=	Fixing package version.
+SUBST_FILES.fix-libdir=		src/configure.in
+SUBST_SED.fix-libdir=		-e '/^ecldir=/s|^.*$$|ecldir="$${libdir}/${PKGNAME_NOREV}"|'
+
+
+PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
+		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
 
 # Make package version change to come in effect:
 USE_TOOLS+=		autoconf
 pre-configure:
 	cd ${WRKSRC}/src && autoconf
 
-# Work around problem with libraries on "Darwin 8.11.0 Power Macintosh":
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-INSTALL_UNSTRIPPED=    yes
-.endif
-
-# .include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
