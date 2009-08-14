@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3546 2009/08/14 14:22:17 jsonn Exp $
+# $Id: Makefile,v 1.3547 2009/08/14 15:49:46 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1274,7 +1274,6 @@ SUBDIR+=	omniORB
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
-SUBDIR+=	opal
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
