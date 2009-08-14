@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/02 00:21:18 pebog Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/14 14:43:09 pebog Exp $
 bin/cdcc
 bin/dccproc
 libexec/cron-dccd
 libexec/dbclean
 libexec/dblist
+libexec/dcc-nagios
 libexec/dcc-stats-collect
 libexec/dcc-stats-graph
 libexec/dcc-stats-init

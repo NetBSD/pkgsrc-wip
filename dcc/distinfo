@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/06/22 17:40:47 pebog Exp $
+$NetBSD: distinfo,v 1.8 2009/08/14 14:43:09 pebog Exp $
 
-SHA1 (dcc-1.3.109.tar.Z) = d4c3ab192d9c99ff47f848ad00d1ee83ecfcb203
-RMD160 (dcc-1.3.109.tar.Z) = 83e50e0fd90c3ddf79ea5ebb5ca1836571697f56
-Size (dcc-1.3.109.tar.Z) = 1614467 bytes
+SHA1 (dcc-1.3.113.tar.Z) = c0e39a9b9c0ad2e7a6022fbf5783029f28144316
+RMD160 (dcc-1.3.113.tar.Z) = d49e7388ac6eb07a096d112cc9bca8121dde48be
+Size (dcc-1.3.113.tar.Z) = 1610709 bytes

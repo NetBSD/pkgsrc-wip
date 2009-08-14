@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/06/22 17:40:47 pebog Exp $
+# $NetBSD: Makefile,v 1.16 2009/08/14 14:43:09 pebog Exp $
 #
 #
 #	Request by the author:
@@ -10,7 +10,7 @@
 #	> you distribute. Updatedcc must work.
 #
 #
-DISTNAME=		dcc-1.3.109
+DISTNAME=		dcc-1.3.113
 #PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
@@ -116,6 +116,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/list-msg ${DESTDIR}${DCC_EGDIR}/cgi-bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/webuser-notify ${DESTDIR}${DCC_EGDIR}/cgi-bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/cron-dccd ${DESTDIR}${PREFIX}/libexec/
+	${INSTALL_SCRIPT} ${WRKSRC}/misc/dcc-nagios ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/dcc-stats-collect ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/dcc-stats-graph ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/misc/dcc-stats-init ${DESTDIR}${PREFIX}/libexec/
