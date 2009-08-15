@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/05 21:33:40 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/15 12:37:50 jihbed Exp $
 bin/csp2B
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/manual.ps
@@ -17,5 +17,3 @@ share/examples/${PKGNAME}/Tokens.csp
 share/examples/${PKGNAME}/TokensActs.mch
 share/examples/${PKGNAME}/VendingMachine.csp
 share/examples/${PKGNAME}/VendingMachine2.csp
-@dirrm share/examples/${PKGNAME}
-@dirrm share/doc/${PKGNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/03 22:05:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/15 12:37:50 jihbed Exp $
 #
 
 DISTNAME=	csp2B1.2
@@ -6,7 +6,7 @@ PKGNAME=	csp2b-1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ecs.soton.ac.uk/~mjb/csp2B/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://users.ecs.soton.ac.uk/mjb/csp2B/
 COMMENT=	The csp2B Tool written in Moscow ML
 #LICENSE=	LICENSE
@@ -32,7 +32,7 @@ do-build:
 	cd ${WRKSRC} && \
 		${MOSMLC} csp2B.sig \
 		${MOSMLC} -o csp2B csp2B.sml
-		
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/csp2B	${DESTDIR}${PREFIX}/bin
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/csp2B
