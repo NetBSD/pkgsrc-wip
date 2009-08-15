@@ -70,7 +70,7 @@ Suggested package updates
 	o ocp-0.1.17
 	o opal-2.2.11
 	o openmpi-1.3.2
-	o openvrml-0.18.2
+	o openvrml-0.18.3
 	o ortp-0.16.0
 	o osmose-0.9.0b
 	o p5-Net-DBus-0.33.6
@@ -81,7 +81,7 @@ Suggested package updates
 	o py-PyPE-2.8.8
 	o py-gdata-1.2.4
 	o py-gnucash-0.7.55
-	o qcomicbook-0.4.0
+	o qcomicbook-0.4.1
 	o quodlibet-2.0
 	o rdup-1.0.0
 	o rezound-0.12.3beta
