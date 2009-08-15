@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/15 01:26:07 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/15 01:32:22 prudhvikrishna Exp $
 #
 
 DISTNAME=	framework-3.2
@@ -11,17 +11,17 @@ HOMEPAGE=	http://spool.metasploit.com/releases/
 COMMENT=	Exploit-Framework for Penetration-Testing
 LICENSE=	modified-bsd
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 SCRIPTS=	msfcli msfconsole msfd msfelfscan msfencode msfmachscan \
 		msfopcode msfpayload msfpescan msfweb
 
 #Fix me for msfgui
 
-PKG_DESTDIR_SUPPORT+=	user-destdir
 NO_BUILD=	yes
 USE_TOOLS+=	pax ln chmod
 
 INSTALLATION_DIRS+=	${PKGNAME}
-DATADIR=	${DESTDIR}${PREFIX}/${PKGNAME}
+DATADIR=	${PREFIX}/${PKGNAME}
 
 REPLACE_RUBY+=	${SCRIPTS} \
 		data/msfweb/vendor/rails/actionpack/lib/action_controller/session/drb_server.rb \
@@ -45,10 +45,10 @@ pre-patch:
 	${FIND} ${WRKSRC} -type f -exec chmod a-x {} \;
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${DATADIR}
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${DATADIR}
 .for f in ${SCRIPTS}
-	${CHMOD} +x ${DATADIR}/${f}
-	${LN} -s ${DATADIR}/${f} ${DESTDIR}${PREFIX}/bin
+	${CHMOD} +x ${DESTDIR}${DATADIR}/${f}
+	${LN} -s ${DESTDIR}${DATADIR}/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 
 
