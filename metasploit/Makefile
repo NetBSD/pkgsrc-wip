@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/15 01:10:54 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/15 01:26:07 prudhvikrishna Exp $
 #
 
 DISTNAME=	framework-3.2
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 SCRIPTS=	msfcli msfconsole msfd msfelfscan msfencode msfmachscan \
 		msfopcode msfpayload msfpescan msfweb
+
+#Fix me for msfgui
 
 PKG_DESTDIR_SUPPORT+=	user-destdir
 NO_BUILD=	yes
