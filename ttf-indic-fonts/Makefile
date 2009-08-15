@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/15 03:23:42 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/15 03:28:19 prudhvikrishna Exp $
 #
 
 DISTNAME=	ttf-indic-fonts_0.5.4
@@ -7,7 +7,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/t/ttf-indic-fonts/
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/t/ttf-indic-fonts/
+HOMEPAGE=	http://www.debian-in.org/
 COMMENT=	TTF Indic Fonts from Debian
 LICENSE=	gnu-gpl-v2
 
