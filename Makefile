@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3548 2009/08/15 01:19:39 prudhvikrishna Exp $
+# $Id: Makefile,v 1.3549 2009/08/15 03:26:35 prudhvikrishna Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2084,6 +2084,7 @@ SUBDIR+=	treeview
 SUBDIR+=	tripwire2
 SUBDIR+=	tsh
 SUBDIR+=	tsm
+SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
 SUBDIR+=	ttysnoop
 SUBDIR+=	tuareg-mode
