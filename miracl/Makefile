@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/16 05:53:29 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/15 03:47:45 prudhvikrishna Exp $
 #
 
 DISTNAME=	miracl
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.computing.dcu.ie/pub/crypto/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	ftp://ftp.computing.dcu.ie/pub/crypto/
+HOMEPAGE=	http://www.shamus.ie
 COMMENT=	Multiprecision Integer and Rational Arithmetic C/C++ Library
 
 INSTALLATION_DIRS+=	include/${DISTNAME}
