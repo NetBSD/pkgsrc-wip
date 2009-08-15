@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/16 15:14:38 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/15 03:51:06 prudhvikrishna Exp $
 #
 
 DISTNAME=	yersinia-0.7.1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.yersinia.net/download/
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 HOMEPAGE=	http://www.yersinia.net/
 COMMENT=	Layer 2 vulnerability scanner (switches, spanning tree, 802.1q ...)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT+=	user-destdir
 
