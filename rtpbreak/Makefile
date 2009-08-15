@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/15 22:42:15 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/15 03:41:29 prudhvikrishna Exp $
 #
 
 DISTNAME=	rtpbreak-1.3a
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 HOMEPAGE=	http://xenion.antifork.org/rtpbreak/
 COMMENT=	Detects, reconstructs and analyzes any RTP session
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	libnet11>=1.1.2.1:../../devel/libnet11
 
