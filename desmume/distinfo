@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/11 03:07:10 dillo Exp $
+$NetBSD: distinfo,v 1.2 2009/08/16 12:00:05 thomasklausner Exp $
 
-SHA1 (desmume-0.8.tar.gz) = 2cd567ccd737dc90f601f711e0bee32d78aee9de
-RMD160 (desmume-0.8.tar.gz) = 34757edf746cc3b16089a107e933cccba3030ebf
-Size (desmume-0.8.tar.gz) = 690259 bytes
+SHA1 (desmume-0.9.4.tar.gz) = 06eb3cb9c57547d3c43e272648d176a252143e43
+RMD160 (desmume-0.9.4.tar.gz) = c86eab6727331a45403325facc0add968275de6d
+Size (desmume-0.9.4.tar.gz) = 1035843 bytes
+SHA1 (patch-aa) = 8f51d0d746065b6b4be6cee62b1fa74f914c849a

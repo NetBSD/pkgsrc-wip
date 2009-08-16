@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/16 12:00:05 thomasklausner Exp $
 #
 
-DISTNAME=	desmume-0.8
+DISTNAME=	desmume-0.9.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
 
@@ -11,6 +11,7 @@ COMMENT=	Nintendo DS emulator
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool perl pkg-config
+USE_LANGUAGES=	c c++
 
 PKG_DESTDIR_SUPPORT=user-destdir
 
