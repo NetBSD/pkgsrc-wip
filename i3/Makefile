@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/28 21:45:09 jtonio Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/16 15:38:31 thomasklausner Exp $
 #
 
 PKGNAME=	i3-3b
@@ -41,8 +41,8 @@ post-build:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/i3.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../devel/libev/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../wip/libev/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
