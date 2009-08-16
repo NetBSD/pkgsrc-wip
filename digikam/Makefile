@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/16 12:22:30 thomasklausner Exp $
 #
 
-DISTNAME=	digikam-1.0.0-beta1
+DISTNAME=	digikam-1.0.0-beta3
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
@@ -28,6 +28,7 @@ USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/liblqr/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/kdemultimedia4/buildlink3.mk"
 # for libkdcraw>=0.4.0

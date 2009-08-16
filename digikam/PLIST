@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/01 15:45:29 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/08/16 12:22:30 thomasklausner Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -8,6 +8,7 @@ include/digikam/bcgmodifier.h
 include/digikam/cietonguewidget.h
 include/digikam/colorgradientwidget.h
 include/digikam/colormodifier.h
+include/digikam/curvesbox.h
 include/digikam/curveswidget.h
 include/digikam/dcolor.h
 include/digikam/dcolorblend.h
@@ -65,6 +66,7 @@ include/digikam/statusled.h
 include/digikam/statusnavigatebar.h
 include/digikam/statusprogressbar.h
 include/digikam/statuszoombar.h
+include/digikam/template.h
 include/digikam/xmpwidget.h
 include/digikam_export.h
 lib/kde4/digikamimageplugin_adjustcurves.so
@@ -94,6 +96,7 @@ lib/kde4/digikamimageplugin_sheartool.so
 lib/kde4/digikamimageplugin_superimpose.so
 lib/kde4/digikamimageplugin_texture.so
 lib/kde4/digikamimageplugin_whitebalance.so
+lib/kde4/digikamnepomukservice.so
 lib/kde4/kio_digikamalbums.so
 lib/kde4/kio_digikamdates.so
 lib/kde4/kio_digikamsearch.so
@@ -197,6 +200,7 @@ share/kde/apps/digikam/data/stone-pattern.png
 share/kde/apps/digikam/data/stone-texture.png
 share/kde/apps/digikam/data/target.png
 share/kde/apps/digikam/data/togglemouseover.png
+share/kde/apps/digikam/data/topicset.iptc-subjectcode.xml
 share/kde/apps/digikam/data/wall-pattern.png
 share/kde/apps/digikam/data/wall-texture.png
 share/kde/apps/digikam/data/wood-pattern.png
@@ -669,11 +673,13 @@ share/kde4/services/digikamimageplugin_sheartool.desktop
 share/kde4/services/digikamimageplugin_superimpose.desktop
 share/kde4/services/digikamimageplugin_texture.desktop
 share/kde4/services/digikamimageplugin_whitebalance.desktop
+share/kde4/services/digikamnepomukservice.desktop
 share/kde4/services/digikamsearch.protocol
 share/kde4/services/digikamtags.protocol
 share/kde4/servicetypes/digikamimageplugin.desktop
 share/locale/ar/LC_MESSAGES/digikam.mo
 share/locale/be/LC_MESSAGES/digikam.mo
+share/locale/bg/LC_MESSAGES/digikam.mo
 share/locale/ca/LC_MESSAGES/digikam.mo
 share/locale/cs/LC_MESSAGES/digikam.mo
 share/locale/da/LC_MESSAGES/digikam.mo
@@ -714,6 +720,7 @@ share/locale/sk/LC_MESSAGES/digikam.mo
 share/locale/sl/LC_MESSAGES/digikam.mo
 share/locale/sv/LC_MESSAGES/digikam.mo
 share/locale/th/LC_MESSAGES/digikam.mo
+share/locale/tr/LC_MESSAGES/digikam.mo
 share/locale/uk/LC_MESSAGES/digikam.mo
 share/locale/vi/LC_MESSAGES/digikam.mo
 share/locale/zh_CN/LC_MESSAGES/digikam.mo
