@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2009/01/10 01:13:45 mwdavies Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/16 16:00:26 thomasklausner Exp $
 #
 
-DISTNAME=	ortp-0.13.1
+DISTNAME=	ortp-0.16.0
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/linphone/ortp/sources/
 
 MAINTAINER=	zul@netbsd-fr.org
 HOMEPAGE=	http://www.linphone.org/index.php/eng/code_review/ortp
 COMMENT=	Real-time Transport Protocol stack
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
