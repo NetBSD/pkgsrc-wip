@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/12 15:05:50 othyro Exp $
+$NetBSD: distinfo,v 1.2 2009/08/16 12:32:43 jh88 Exp $
 
-SHA1 (flimsel-0.0.5.tar.gz) = e9e30945a06c55e5fc2f83bae56ea1eacefdbb25
-RMD160 (flimsel-0.0.5.tar.gz) = 19895b0f2b531a94796fe34b327820ead749be40
-Size (flimsel-0.0.5.tar.gz) = 87619 bytes
+SHA1 (flimsel-0.0.6.tar.gz) = d636535b0c307c247541c6c18de76bac2999dfc5
+RMD160 (flimsel-0.0.6.tar.gz) = f661df5757cbae465e80f4ff3ee0be6f7df7cc08
+Size (flimsel-0.0.6.tar.gz) = 101876 bytes
