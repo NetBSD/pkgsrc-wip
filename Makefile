@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3549 2009/08/15 03:26:35 prudhvikrishna Exp $
+# $Id: Makefile,v 1.3550 2009/08/16 12:22:52 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -956,7 +956,6 @@ SUBDIR+=	ldp
 SUBDIR+=	ldtp
 SUBDIR+=	ledger
 SUBDIR+=	leim-current
-SUBDIR+=	lensfun
 SUBDIR+=	leo
 SUBDIR+=	lhs2tex
 SUBDIR+=	libAppleWM

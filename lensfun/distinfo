@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/08 14:50:32 thomasklausner Exp $
-
-SHA1 (lensfun-0.2.2b.tar.bz2) = 290fcef1a50e7c25b907d2e61de17d51eac4d507
-RMD160 (lensfun-0.2.2b.tar.bz2) = cecc1904de24e3c6fb8794d19e14e98d002a5ebe
-Size (lensfun-0.2.2b.tar.bz2) = 149560 bytes
-SHA1 (patch-aa) = d31dd742f232aa8a75f50f14f782918ba11a8119
-SHA1 (patch-ab) = 16f41934661ec0c51dbc85dae42936d91c209adb
