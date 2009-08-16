@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/28 21:39:35 jtonio Exp $
-
-SHA1 (libev-3.7.tar.gz) = eefd99ef01b15a64c32bf36a1955d2f13bd06e21
-RMD160 (libev-3.7.tar.gz) = 464c5b3ec097495f7c31ea5a108c9c6f839c1ab5
-Size (libev-3.7.tar.gz) = 463344 bytes

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3550 2009/08/16 12:22:52 thomasklausner Exp $
+# $Id: Makefile,v 1.3551 2009/08/16 15:39:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -983,7 +983,6 @@ SUBDIR+=	libdmx
 SUBDIR+=	libdrm
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
-SUBDIR+=	libev
 SUBDIR+=	libexosip
 SUBDIR+=	libgadu
 SUBDIR+=	libgdata
