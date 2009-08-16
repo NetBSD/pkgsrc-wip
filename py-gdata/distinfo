@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/19 20:01:25 mj_turner Exp $
-
-SHA1 (gdata.py-1.0.12.1.tar.gz) = d6e31cc20e309b75011f194cc3650216c957de53
-RMD160 (gdata.py-1.0.12.1.tar.gz) = d4102d2c2ea5a200090e147f64a10e33ee170244
-Size (gdata.py-1.0.12.1.tar.gz) = 327734 bytes
-SHA1 (patch-aa) = 7b475141d528eeeaa744b57a1c1d920d82260e85

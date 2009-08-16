@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3552 2009/08/16 15:53:30 thomasklausner Exp $
+# $Id: Makefile,v 1.3553 2009/08/16 16:12:28 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1685,7 +1685,6 @@ SUBDIR+=	py-flakes
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-fs
 SUBDIR+=	py-gcalendarsync
-SUBDIR+=	py-gdata
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gmpy
