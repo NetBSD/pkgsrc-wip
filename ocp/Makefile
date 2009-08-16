@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2008/02/25 16:18:05 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/16 15:51:03 thomasklausner Exp $
 
-DISTNAME=		ocp-0.1.15
-PKGREVISION=		2
+DISTNAME=		ocp-0.1.17
 CATEGORIES=		audio
-MASTER_SITES=		http://stian.lunafish.org/ocp/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		http://stian.cubic.org/ocp/
+EXTRACT_SUFX=		.tar.lzma
 
 MAINTAINER=		shattered@users.sourceforge.net
-HOMEPAGE=		http://stian.lunafish.org/project-ocp.php
+HOMEPAGE=		http://stian.cubic.org/project-ocp.php
 COMMENT=		Open Cubic Player
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
