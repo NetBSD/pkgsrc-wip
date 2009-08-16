@@ -17,8 +17,6 @@ Suggested package updates
 	o cinelerra-2.1
 	o d4x-2.5.7.1
 	o daphne-1.0
-	o desmume-0.9.4
-	o digikam-1.0.0beta3
 	o directfb-1.0.0
 	o ecasound-2.6.0
 	o editline-20090722.3.0
@@ -50,14 +48,12 @@ Suggested package updates
 	o icecat-3.5.2
 	o kino-1.0.0
 	o libAppleWM-1.3.0
-	o libexosip-3.3.0
 	o libgdata-0.4.0
 	o libgksu-2.0.4
 	o libuuid-1.41.8
 	o lincity-ng-2.0
 	o linphone-3.1.2
 	o lives-1.0.0
-	o llvm-2.5
 	o man-1.6f
 	o meta-tracker-0.6.95
 	o mixxx-1.7.0
@@ -66,13 +62,9 @@ Suggested package updates
 	o mpgedit-0.73dev2
 	o mupen64-0.5
 	o nautilus-open-terminal-0.17
-	o ocp-0.1.17
-	o opal-2.2.11
 	o openmpi-1.3.2
 	o openvrml-0.18.3
-	o ortp-0.16.0
 	o osmose-0.9.0b
-	o p5-Net-DBus-0.33.6
 	o parted-1.9.0
 	o passepartout-0.7.1
 	o pdnsd-1.2.7
