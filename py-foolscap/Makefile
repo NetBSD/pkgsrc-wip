@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/18 01:26:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/18 22:09:26 jihbed Exp $
 #
 
 DISTNAME=	foolscap-0.4.2.tar
@@ -14,6 +14,7 @@ COMMENT=	Foolscap contains an RPC protocol for Twisted
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
+#DEPENDS+=	zope3-[0-9]*:../../www/zope3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,7 +25,6 @@ PYTHON_VERSIONS_ACCEPTED= 26 25 24
 
 REPLACE_PYTHON+=	bin/flogtool
 
-DOCSPEC=		${PREFIX}/share/doc/py-foolscap/specifications
 
 INSTALLATION_DIRS=	share/doc/py-foolscap
 
@@ -35,10 +35,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt \
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSPEC}
-	${INSTALL_DATA} ${WRKSRC}/doc/specifications/* \
-		${DESTDIR}${DOCSPEC}
-
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
