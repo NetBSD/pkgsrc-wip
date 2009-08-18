@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/13 21:00:44 asau Exp $
+# $NetBSD: Makefile,v 1.21 2009/08/18 20:24:16 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://clisp.cons.org/
 COMMENT=		CLISP, a Common Lisp implementation
+LICENSE=		gnu-gpl-v2
 
 CVS_REPOSITORIES=	clisp
 CVS_ROOT.clisp=		:pserver:anonymous:@clisp.cvs.sourceforge.net:/cvsroot/clisp
