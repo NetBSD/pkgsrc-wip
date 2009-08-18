@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2009/08/18 15:26:29 plunky Exp $
+
+--- parser/obex.c.orig	2007-02-18 03:39:02.000000000 +0000
++++ parser/obex.c
+@@ -236,7 +236,7 @@ void obex_dump(int level, struct frame *
+ 
+ 	frm = add_frame(frm);
+ 
+-	while (frm->len > 0) {
++	while (frm->len >= 3) {
+ 		opcode = get_u8(frm);
+ 		length = get_u16(frm);
+ 		status = opcode & 0x7f;

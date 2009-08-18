@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.4 2009/01/10 18:08:04 plunky Exp $
+$NetBSD: patch-am,v 1.5 2009/08/18 15:26:29 plunky Exp $
 
---- src/hci_lib.c.orig	2009-01-10 18:01:19.000000000 +0000
+--- src/hci_lib.c.orig	2009-08-18 15:53:42.000000000 +0100
 +++ src/hci_lib.c
 @@ -71,6 +71,7 @@ static char *hci_bit2str(hci_map *m, uns
  	return str;
@@ -102,7 +102,7 @@ $NetBSD: patch-am,v 1.4 2009/01/10 18:08:04 plunky Exp $
  int lmp_strtover(char *str, unsigned int *ver)
  {
  	return hci_str2uint(ver_map, str, ver);
-@@ -2492,3 +2506,4 @@ int hci_read_clock(int dd, uint16_t hand
+@@ -2493,3 +2507,4 @@ int hci_read_clock(int dd, uint16_t hand
  	*accuracy = rp.accuracy;
  	return 0;
  }

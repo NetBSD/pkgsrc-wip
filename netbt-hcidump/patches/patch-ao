@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
+$NetBSD: patch-ao,v 1.2 2009/08/18 15:26:29 plunky Exp $
 
 --- src/hcidump.c.orig	2007-07-28 15:41:34.000000000 +0100
 +++ src/hcidump.c
@@ -22,35 +22,16 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  {
  	struct cmsghdr *cmsg;
  	struct msghdr msg;
-@@ -207,10 +211,14 @@ static int process_frames(int dev, int s
- 		return -1;
- 	}
- 
-+#if 0
+@@ -210,7 +214,7 @@ static int process_frames(int dev, int s
  	if (dev == HCI_DEV_NONE)
  		printf("system: ");
  	else
- 		printf("device: hci%d ", dev);
-+#else
-+	printf("device: %s ", (dev == NULL ? "all" : dev));
-+#endif
+-		printf("device: hci%d ", dev);
++		printf("device: %s ", dev);
  
  	printf("snap_len: %d filter: 0x%lx\n", snap_len, parser.filter);
  
-@@ -304,10 +312,10 @@ static int process_frames(int dev, int s
- 		cmsg = CMSG_FIRSTHDR(&msg);
- 		while (cmsg) {
- 			switch (cmsg->cmsg_type) {
--			case HCI_CMSG_DIR:
-+			case SCM_HCI_DIRECTION:
- 				frm.in = *((int *) CMSG_DATA(cmsg));
- 				break;
--			case HCI_CMSG_TSTAMP:
-+			case SCM_TIMESTAMP:
- 				frm.ts = *((struct timeval *) CMSG_DATA(cmsg));
- 				break;
- 			}
-@@ -553,10 +561,13 @@ static int open_file(char *file, int mod
+@@ -553,10 +557,13 @@ static int open_file(char *file, int mod
  	return fd;
  }
  
@@ -66,7 +47,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  	struct hci_dev_info di;
  	int sk, dd, opt;
  
-@@ -582,6 +593,7 @@ static int open_socket(int dev, unsigned
+@@ -582,6 +589,7 @@ static int open_socket(int dev, unsigned
  
  		hci_close_dev(dd);
  	}
@@ -74,14 +55,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  
  	/* Create HCI socket */
  	sk = socket(AF_BLUETOOTH, SOCK_RAW, BTPROTO_HCI);
-@@ -591,18 +603,19 @@ static int open_socket(int dev, unsigned
- 	}
- 
- 	opt = 1;
--	if (setsockopt(sk, SOL_HCI, HCI_DATA_DIR, &opt, sizeof(opt)) < 0) {
-+	if (setsockopt(sk, BTPROTO_HCI, SO_HCI_DIRECTION, &opt, sizeof(opt)) < 0) {
- 		perror("Can't enable data direction info");
- 		return -1;
+@@ -597,12 +605,13 @@ static int open_socket(int dev, unsigned
  	}
  
  	opt = 1;
@@ -96,7 +70,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  	hci_filter_clear(&flt);
  	hci_filter_all_ptypes(&flt);
  	hci_filter_all_events(&flt);
-@@ -610,12 +623,34 @@ static int open_socket(int dev, unsigned
+@@ -610,12 +619,34 @@ static int open_socket(int dev, unsigned
  		perror("Can't set filter");
  		return -1;
  	}
@@ -121,7 +95,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
 +	memset(&addr, 0, sizeof(addr));
 +	addr.bt_len = sizeof(addr);
 +	addr.bt_family = AF_BLUETOOTH;
-+	if (dev && !bt_devaddr(dev, &addr.bt_bdaddr)) {
++	if (dev != HCI_DEV_NONE && !bt_devaddr(dev, &addr.bt_bdaddr)) {
 +		perror("device");
 +		exit(1);
 +	}
@@ -132,7 +106,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  					dev, strerror(errno), errno);
  		return -1;
  	}
-@@ -660,11 +695,13 @@ static int open_connection(char *addr, c
+@@ -660,11 +691,13 @@ static int open_connection(char *addr, c
  			((struct sockaddr_in *) &ss)->sin_addr.s_addr = htonl(INADDR_ANY);
  			((struct sockaddr_in *) &ss)->sin_port = 0;
  			break;
@@ -146,7 +120,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  		}
  
  		if (bind(sk, (struct sockaddr *) &ss, sizeof(ss)) < 0) {
-@@ -854,7 +891,7 @@ static int wait_connection(char *addr, c
+@@ -854,7 +887,7 @@ static int wait_connection(char *addr, c
  	return -1;
  }
  
@@ -155,7 +129,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  {
  	while (1) {
  		int dd, sk;
-@@ -950,7 +987,9 @@ static void usage(void)
+@@ -950,7 +983,9 @@ static void usage(void)
  	"  -Y, --novendor             No vendor commands or events\n"
  	"  -N, --noappend             No appending to existing files\n"
  	"  -4, --ipv4                 Use IPv4 as transport\n"
@@ -165,7 +139,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  	"  -h, --help                 Give this help list\n"
  	"      --usage                Give a short usage message\n"
  	);
-@@ -983,7 +1022,9 @@ static struct option main_options[] = {
+@@ -983,7 +1018,9 @@ static struct option main_options[] = {
  	{ "nopermcheck",	0, 0, 'Z' },
  	{ "noappend",		0, 0, 'N' },
  	{ "ipv4",		0, 0, '4' },
@@ -175,31 +149,25 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/01/13 13:23:05 plunky Exp $
  	{ "help",		0, 0, 'h' },
  	{ 0 }
  };
-@@ -992,7 +1033,7 @@ int main(int argc, char *argv[])
+@@ -992,7 +1029,7 @@ int main(int argc, char *argv[])
  {
  	unsigned long flags = 0;
  	unsigned long filter = 0;
 -	int device = 0;
-+	char *device = NULL;
++	char *device = HCI_DEV_NONE;
  	int defpsm = 0;
  	int defcompid = DEFAULT_COMPID;
  	int opt, pppdump_fd = -1, audio_fd = -1;
-@@ -1002,10 +1043,14 @@ int main(int argc, char *argv[])
- 	while ((opt=getopt_long(argc, argv, "i:l:p:m:w:r:s:n:d:taxXRC:H:O:P:D:A:BVYZN46h", main_options, NULL)) != -1) {
+@@ -1003,7 +1040,7 @@ int main(int argc, char *argv[])
  		switch(opt) {
  		case 'i':
-+#if 0
  			if (strcasecmp(optarg, "none") && strcasecmp(optarg, "system"))
- 				device = atoi(optarg + 3);
+-				device = atoi(optarg + 3);
++				device = optarg;
  			else
  				device = HCI_DEV_NONE;
-+#else
-+			device = optarg;
-+#endif
  			break;
- 
- 		case 'l': 
-@@ -1113,9 +1158,11 @@ int main(int argc, char *argv[])
+@@ -1113,9 +1150,11 @@ int main(int argc, char *argv[])
  			af = AF_INET;
  			break;
  

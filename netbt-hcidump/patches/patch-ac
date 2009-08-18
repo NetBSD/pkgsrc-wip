@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2008/11/07 12:49:21 plunky Exp $
+$NetBSD: patch-ac,v 1.4 2009/08/18 15:26:29 plunky Exp $
 
---- bluetooth/hci.h.orig	2008-10-05 21:05:46.000000000 +0100
+--- bluetooth/hci.h.orig	2009-08-18 15:53:42.000000000 +0100
 +++ bluetooth/hci.h
 @@ -39,6 +39,7 @@ extern "C" {
  #define HCI_MAX_EVENT_SIZE	260
@@ -26,10 +26,15 @@ $NetBSD: patch-ac,v 1.3 2008/11/07 12:49:21 plunky Exp $
  /* HCI Socket options */
  #define HCI_DATA_DIR	1
  #define HCI_FILTER	2
-@@ -1815,6 +1818,7 @@ struct hci_inquiry_req {
+@@ -1815,6 +1818,12 @@ struct hci_inquiry_req {
  	uint8_t  num_rsp;
  };
  #define IREQ_CACHE_FLUSH 0x0001
++#else
++#define HCI_CMSG_DIR	SCM_HCI_DIRECTION
++#define HCI_CMSG_TSTAMP	SCM_TIMESTAMP
++#define HCI_DEV_NONE	NULL
++#define HCI_DATA_DIR	SO_HCI_DIRECTION
 +#endif
  
  #ifdef __cplusplus

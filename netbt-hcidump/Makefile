@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/01/20 17:51:45 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/18 15:26:29 plunky Exp $
 
 DISTNAME=		netbt-hcidump-1.42
 CATEGORIES=		sysutils
@@ -20,16 +20,8 @@ WRKSRC=			${WRKDIR}/bluez-hcidump-1.42
 LIBSRC=			${WRKDIR}/bluez-4.27
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PKG_OPTIONS_VAR=	PKG_OPTIONS.hcidump
-PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUGGESTED_OPTIONS=	inet6
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CPPFLAGS+=	-DINET6
-.endif
+.include "options.mk"
 
 CPPFLAGS+=	-DVERSION=\""1.42-netbt"\"
 
