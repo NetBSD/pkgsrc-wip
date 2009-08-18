@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
+$NetBSD: patch-ac,v 1.6 2009/08/18 12:10:31 mwdavies Exp $
 
---- kio/kssl/kopenssl.cpp.orig	2008-10-23 12:05:00.000000000 +1300
+Includes patch from https://bugs.kde.org/show_bug.cgi?id=193215
+
+--- kio/kssl/kopenssl.cpp.ORIG	2008-10-23 12:05:00.000000000 +1300
 +++ kio/kssl/kopenssl.cpp
 @@ -236,7 +236,7 @@ void KOpenSSLProxy::destroy() {
     delete x;
@@ -96,7 +98,32 @@ $NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -382,6 +361,17 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -357,8 +336,12 @@ KOpenSSLProxy::KOpenSSLProxy()
+              << "libssl.so." SHLIB_VERSION_NUMBER
+              #endif
+              << "libssl.so"
++             #if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++	     << "libssl.so.1"
++             #else
+ 	     << "libssl.so.0"
+              #endif
++             #endif
+ 	     ;
+ 
+    libnamesc
+@@ -374,7 +357,11 @@ KOpenSSLProxy::KOpenSSLProxy()
+              << "libcrypto.so." SHLIB_VERSION_NUMBER
+              #endif
+              << "libcrypto.so"
++             #if defined(OPENSSL_VERSION_NUMBER) && OPENSSL_VERSION_NUMBER >= 0x10000000L
++	     << "libcrypto.so.1"
++             #else
+ 	     << "libcrypto.so.0"
++	     #endif
+              #endif
+ 	     ;
+ #endif
+@@ -382,6 +369,17 @@ KOpenSSLProxy::KOpenSSLProxy()
     for (QStringList::const_iterator it = libpaths.constBegin();
                                it != libpaths.constEnd();
                                ++it) {
@@ -114,7 +141,7 @@ $NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
        for (QStringList::const_iterator shit = libnamesc.constBegin();
                                   shit != libnamesc.constEnd();
                                   ++shit) {
-@@ -404,6 +394,7 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -404,6 +402,7 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->cryptoLib = 0;
           }
        }
@@ -122,7 +149,7 @@ $NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
        if (d->cryptoLib) break;
     }
  
-@@ -533,28 +524,20 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -533,28 +532,20 @@ KOpenSSLProxy::KOpenSSLProxy()
  #endif
     }
  
@@ -162,7 +189,7 @@ $NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
        for (QStringList::const_iterator shit = libnamess.constBegin();
                                   shit != libnamess.constEnd();
                                   ++shit) {
-@@ -576,9 +559,9 @@ KOpenSSLProxy::KOpenSSLProxy()
+@@ -576,9 +567,9 @@ KOpenSSLProxy::KOpenSSLProxy()
               d->sslLib = 0;
           }
        }
@@ -173,3 +200,12 @@ $NetBSD: patch-ac,v 1.5 2009/01/10 09:14:14 mwdavies Exp $
  
     if (d->sslLib) {
  #ifdef KSSL_HAVE_SSL
+@@ -622,7 +613,7 @@ KOpenSSLProxy::KOpenSSLProxy()
+       K_SSL_set_session = (int (*)(SSL*,SSL_SESSION*)) d->sslLib->resolveFunction("SSL_set_session");
+       K_d2i_SSL_SESSION = (SSL_SESSION* (*)(SSL_SESSION**,unsigned char**, long)) d->sslLib->resolveFunction("d2i_SSL_SESSION");
+       K_i2d_SSL_SESSION = (int (*)(SSL_SESSION*,unsigned char**)) d->sslLib->resolveFunction("i2d_SSL_SESSION");
+-      K_SSL_get_ciphers = (STACK *(*)(const SSL*)) d->sslLib->resolveFunction("SSL_get_ciphers");
++      K_SSL_get_ciphers = (STACK_OF(SSL_CIPHER) *(*)(const SSL*)) d->sslLib->resolveFunction("SSL_get_ciphers");
+ #endif
+ 
+ 
