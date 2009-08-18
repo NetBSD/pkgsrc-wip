@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.1 2009/08/18 15:26:29 plunky Exp $
+$NetBSD: patch-ap,v 1.2 2009/08/18 15:28:18 plunky Exp $
+
+this is a bugfix, has been reported upstreadm (18 Aug 2009)
 
 --- parser/obex.c.orig	2007-02-18 03:39:02.000000000 +0000
 +++ parser/obex.c
