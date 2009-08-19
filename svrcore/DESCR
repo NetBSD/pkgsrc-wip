@@ -1,0 +1,17 @@
+The Netscape svrcore library is a kind of object-oriented package
+for handling PIN requests from NSS.
+
+Terry Hayes wrote the Netscape svrcore library in 1998.
+Valerie Chu wrote the ntgetpin.c and related files.
+
+svrcore used to contain two major parts.
+
+The first part is what we released on mozilla.  It is a kind of
+object-oriented package for handling PIN requests from NSS. The
+idea was to provide a standard way for servers to allow PIN input
+from a file or from the terminal.  There is also a PIN handler
+that caches the PIN in memory after encrypting it with a key on
+a device (such as a Fortezza card). This allowed a server to
+restart without having to reenter the PIN. However since the PIN
+is encrypted, a core dump would not expose it.  In addition,
+removing the device would also make the PIN inaccessible.
