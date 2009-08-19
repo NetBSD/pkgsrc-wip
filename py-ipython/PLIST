@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/09 23:41:05 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/08/19 21:22:56 jihbed Exp $
 bin/ipcluster
 bin/ipcontroller
 bin/ipengine
@@ -104,15 +104,15 @@ ${PYSITELIB}/IPython/Extensions/ipy_kitcfg.pyo
 ${PYSITELIB}/IPython/Extensions/ipy_legacy.py
 ${PYSITELIB}/IPython/Extensions/ipy_legacy.pyc
 ${PYSITELIB}/IPython/Extensions/ipy_legacy.pyo
-${PYSITELIB}/IPython/Extensions/ipy_leo.py
-${PYSITELIB}/IPython/Extensions/ipy_leo.pyc
-${PYSITELIB}/IPython/Extensions/ipy_leo.pyo
 ${PYSITELIB}/IPython/Extensions/ipy_lookfor.py
 ${PYSITELIB}/IPython/Extensions/ipy_lookfor.pyc
 ${PYSITELIB}/IPython/Extensions/ipy_lookfor.pyo
 ${PYSITELIB}/IPython/Extensions/ipy_p4.py
 ${PYSITELIB}/IPython/Extensions/ipy_p4.pyc
 ${PYSITELIB}/IPython/Extensions/ipy_p4.pyo
+${PYSITELIB}/IPython/Extensions/ipy_pretty.py
+${PYSITELIB}/IPython/Extensions/ipy_pretty.pyc
+${PYSITELIB}/IPython/Extensions/ipy_pretty.pyo
 ${PYSITELIB}/IPython/Extensions/ipy_profile_doctest.py
 ${PYSITELIB}/IPython/Extensions/ipy_profile_doctest.pyc
 ${PYSITELIB}/IPython/Extensions/ipy_profile_doctest.pyo
@@ -248,6 +248,9 @@ ${PYSITELIB}/IPython/__init__.pyo
 ${PYSITELIB}/IPython/background_jobs.py
 ${PYSITELIB}/IPython/background_jobs.pyc
 ${PYSITELIB}/IPython/background_jobs.pyo
+${PYSITELIB}/IPython/clipboard.py
+${PYSITELIB}/IPython/clipboard.pyc
+${PYSITELIB}/IPython/clipboard.pyo
 ${PYSITELIB}/IPython/completer.py
 ${PYSITELIB}/IPython/completer.pyc
 ${PYSITELIB}/IPython/completer.pyo
@@ -281,6 +284,9 @@ ${PYSITELIB}/IPython/external/Itpl.pyo
 ${PYSITELIB}/IPython/external/__init__.py
 ${PYSITELIB}/IPython/external/__init__.pyc
 ${PYSITELIB}/IPython/external/__init__.pyo
+${PYSITELIB}/IPython/external/argparse.py
+${PYSITELIB}/IPython/external/argparse.pyc
+${PYSITELIB}/IPython/external/argparse.pyo
 ${PYSITELIB}/IPython/external/configobj.py
 ${PYSITELIB}/IPython/external/configobj.pyc
 ${PYSITELIB}/IPython/external/configobj.pyo
@@ -293,6 +299,9 @@ ${PYSITELIB}/IPython/external/mglob.pyo
 ${PYSITELIB}/IPython/external/path.py
 ${PYSITELIB}/IPython/external/path.pyc
 ${PYSITELIB}/IPython/external/path.pyo
+${PYSITELIB}/IPython/external/pretty.py
+${PYSITELIB}/IPython/external/pretty.pyc
+${PYSITELIB}/IPython/external/pretty.pyo
 ${PYSITELIB}/IPython/external/simplegeneric.py
 ${PYSITELIB}/IPython/external/simplegeneric.pyc
 ${PYSITELIB}/IPython/external/simplegeneric.pyo
@@ -302,18 +311,6 @@ ${PYSITELIB}/IPython/external/validate.pyo
 ${PYSITELIB}/IPython/frontend/__init__.py
 ${PYSITELIB}/IPython/frontend/__init__.pyc
 ${PYSITELIB}/IPython/frontend/__init__.pyo
-${PYSITELIB}/IPython/frontend/_process/__init__.py
-${PYSITELIB}/IPython/frontend/_process/__init__.pyc
-${PYSITELIB}/IPython/frontend/_process/__init__.pyo
-${PYSITELIB}/IPython/frontend/_process/killableprocess.py
-${PYSITELIB}/IPython/frontend/_process/killableprocess.pyc
-${PYSITELIB}/IPython/frontend/_process/killableprocess.pyo
-${PYSITELIB}/IPython/frontend/_process/pipedprocess.py
-${PYSITELIB}/IPython/frontend/_process/pipedprocess.pyc
-${PYSITELIB}/IPython/frontend/_process/pipedprocess.pyo
-${PYSITELIB}/IPython/frontend/_process/winprocess.py
-${PYSITELIB}/IPython/frontend/_process/winprocess.pyc
-${PYSITELIB}/IPython/frontend/_process/winprocess.pyo
 ${PYSITELIB}/IPython/frontend/asyncfrontendbase.py
 ${PYSITELIB}/IPython/frontend/asyncfrontendbase.pyc
 ${PYSITELIB}/IPython/frontend/asyncfrontendbase.pyo
@@ -338,6 +335,18 @@ ${PYSITELIB}/IPython/frontend/linefrontendbase.pyo
 ${PYSITELIB}/IPython/frontend/prefilterfrontend.py
 ${PYSITELIB}/IPython/frontend/prefilterfrontend.pyc
 ${PYSITELIB}/IPython/frontend/prefilterfrontend.pyo
+${PYSITELIB}/IPython/frontend/process/__init__.py
+${PYSITELIB}/IPython/frontend/process/__init__.pyc
+${PYSITELIB}/IPython/frontend/process/__init__.pyo
+${PYSITELIB}/IPython/frontend/process/killableprocess.py
+${PYSITELIB}/IPython/frontend/process/killableprocess.pyc
+${PYSITELIB}/IPython/frontend/process/killableprocess.pyo
+${PYSITELIB}/IPython/frontend/process/pipedprocess.py
+${PYSITELIB}/IPython/frontend/process/pipedprocess.pyc
+${PYSITELIB}/IPython/frontend/process/pipedprocess.pyo
+${PYSITELIB}/IPython/frontend/process/winprocess.py
+${PYSITELIB}/IPython/frontend/process/winprocess.pyc
+${PYSITELIB}/IPython/frontend/process/winprocess.pyo
 ${PYSITELIB}/IPython/frontend/tests/__init__.py
 ${PYSITELIB}/IPython/frontend/tests/__init__.pyc
 ${PYSITELIB}/IPython/frontend/tests/__init__.pyo
@@ -347,6 +356,9 @@ ${PYSITELIB}/IPython/frontend/tests/test_asyncfrontendbase.pyo
 ${PYSITELIB}/IPython/frontend/tests/test_frontendbase.py
 ${PYSITELIB}/IPython/frontend/tests/test_frontendbase.pyc
 ${PYSITELIB}/IPython/frontend/tests/test_frontendbase.pyo
+${PYSITELIB}/IPython/frontend/tests/test_linefrontend.py
+${PYSITELIB}/IPython/frontend/tests/test_linefrontend.pyc
+${PYSITELIB}/IPython/frontend/tests/test_linefrontend.pyo
 ${PYSITELIB}/IPython/frontend/tests/test_prefilterfrontend.py
 ${PYSITELIB}/IPython/frontend/tests/test_prefilterfrontend.pyc
 ${PYSITELIB}/IPython/frontend/tests/test_prefilterfrontend.pyo
@@ -512,9 +524,6 @@ ${PYSITELIB}/IPython/kernel/core/traceback_formatter.pyo
 ${PYSITELIB}/IPython/kernel/core/traceback_trap.py
 ${PYSITELIB}/IPython/kernel/core/traceback_trap.pyc
 ${PYSITELIB}/IPython/kernel/core/traceback_trap.pyo
-${PYSITELIB}/IPython/kernel/core/ultraTB.py
-${PYSITELIB}/IPython/kernel/core/ultraTB.pyc
-${PYSITELIB}/IPython/kernel/core/ultraTB.pyo
 ${PYSITELIB}/IPython/kernel/core/util.py
 ${PYSITELIB}/IPython/kernel/core/util.pyc
 ${PYSITELIB}/IPython/kernel/core/util.pyo
@@ -635,6 +644,9 @@ ${PYSITELIB}/IPython/kernel/tests/test_task.pyo
 ${PYSITELIB}/IPython/kernel/tests/test_taskfc.py
 ${PYSITELIB}/IPython/kernel/tests/test_taskfc.pyc
 ${PYSITELIB}/IPython/kernel/tests/test_taskfc.pyo
+${PYSITELIB}/IPython/kernel/tests/test_twistedutil.py
+${PYSITELIB}/IPython/kernel/tests/test_twistedutil.pyc
+${PYSITELIB}/IPython/kernel/tests/test_twistedutil.pyo
 ${PYSITELIB}/IPython/kernel/twistedutil.py
 ${PYSITELIB}/IPython/kernel/twistedutil.pyc
 ${PYSITELIB}/IPython/kernel/twistedutil.pyo
@@ -686,13 +698,15 @@ ${PYSITELIB}/IPython/testing/decorators.pyo
 ${PYSITELIB}/IPython/testing/decorators_numpy.py
 ${PYSITELIB}/IPython/testing/decorators_numpy.pyc
 ${PYSITELIB}/IPython/testing/decorators_numpy.pyo
+${PYSITELIB}/IPython/testing/decorators_trial.py
+${PYSITELIB}/IPython/testing/decorators_trial.pyc
+${PYSITELIB}/IPython/testing/decorators_trial.pyo
 ${PYSITELIB}/IPython/testing/iptest.py
 ${PYSITELIB}/IPython/testing/iptest.pyc
 ${PYSITELIB}/IPython/testing/iptest.pyo
 ${PYSITELIB}/IPython/testing/mkdoctests.py
 ${PYSITELIB}/IPython/testing/mkdoctests.pyc
 ${PYSITELIB}/IPython/testing/mkdoctests.pyo
-${PYSITELIB}/IPython/testing/notes.txt
 ${PYSITELIB}/IPython/testing/parametric.py
 ${PYSITELIB}/IPython/testing/parametric.pyc
 ${PYSITELIB}/IPython/testing/parametric.pyo
@@ -720,6 +734,9 @@ ${PYSITELIB}/IPython/testing/plugin/simple.pyo
 ${PYSITELIB}/IPython/testing/plugin/simplevars.py
 ${PYSITELIB}/IPython/testing/plugin/simplevars.pyc
 ${PYSITELIB}/IPython/testing/plugin/simplevars.pyo
+${PYSITELIB}/IPython/testing/plugin/test_ipdoctest.py
+${PYSITELIB}/IPython/testing/plugin/test_ipdoctest.pyc
+${PYSITELIB}/IPython/testing/plugin/test_ipdoctest.pyo
 ${PYSITELIB}/IPython/testing/plugin/test_refs.py
 ${PYSITELIB}/IPython/testing/plugin/test_refs.pyc
 ${PYSITELIB}/IPython/testing/plugin/test_refs.pyo
@@ -729,18 +746,45 @@ ${PYSITELIB}/IPython/testing/tests/__init__.pyo
 ${PYSITELIB}/IPython/testing/tests/test_decorators.py
 ${PYSITELIB}/IPython/testing/tests/test_decorators.pyc
 ${PYSITELIB}/IPython/testing/tests/test_decorators.pyo
-${PYSITELIB}/IPython/testing/tutils.py
-${PYSITELIB}/IPython/testing/tutils.pyc
-${PYSITELIB}/IPython/testing/tutils.pyo
+${PYSITELIB}/IPython/testing/tests/test_decorators_trial.py
+${PYSITELIB}/IPython/testing/tests/test_decorators_trial.pyc
+${PYSITELIB}/IPython/testing/tests/test_decorators_trial.pyo
+${PYSITELIB}/IPython/testing/tests/test_tools.py
+${PYSITELIB}/IPython/testing/tests/test_tools.pyc
+${PYSITELIB}/IPython/testing/tests/test_tools.pyo
+${PYSITELIB}/IPython/testing/tools.py
+${PYSITELIB}/IPython/testing/tools.pyc
+${PYSITELIB}/IPython/testing/tools.pyo
 ${PYSITELIB}/IPython/testing/util.py
 ${PYSITELIB}/IPython/testing/util.pyc
 ${PYSITELIB}/IPython/testing/util.pyo
 ${PYSITELIB}/IPython/tests/__init__.py
 ${PYSITELIB}/IPython/tests/__init__.pyc
 ${PYSITELIB}/IPython/tests/__init__.pyo
+${PYSITELIB}/IPython/tests/obj_del.py
+${PYSITELIB}/IPython/tests/obj_del.pyc
+${PYSITELIB}/IPython/tests/obj_del.pyo
+${PYSITELIB}/IPython/tests/refbug.py
+${PYSITELIB}/IPython/tests/refbug.pyc
+${PYSITELIB}/IPython/tests/refbug.pyo
+${PYSITELIB}/IPython/tests/tclass.py
+${PYSITELIB}/IPython/tests/tclass.pyc
+${PYSITELIB}/IPython/tests/tclass.pyo
+${PYSITELIB}/IPython/tests/test_fakemodule.py
+${PYSITELIB}/IPython/tests/test_fakemodule.pyc
+${PYSITELIB}/IPython/tests/test_fakemodule.pyo
 ${PYSITELIB}/IPython/tests/test_genutils.py
 ${PYSITELIB}/IPython/tests/test_genutils.pyc
 ${PYSITELIB}/IPython/tests/test_genutils.pyo
+${PYSITELIB}/IPython/tests/test_iplib.py
+${PYSITELIB}/IPython/tests/test_iplib.pyc
+${PYSITELIB}/IPython/tests/test_iplib.pyo
+${PYSITELIB}/IPython/tests/test_magic.py
+${PYSITELIB}/IPython/tests/test_magic.pyc
+${PYSITELIB}/IPython/tests/test_magic.pyo
+${PYSITELIB}/IPython/tests/test_platutils.py
+${PYSITELIB}/IPython/tests/test_platutils.pyc
+${PYSITELIB}/IPython/tests/test_platutils.pyo
 ${PYSITELIB}/IPython/tools/__init__.py
 ${PYSITELIB}/IPython/tools/__init__.pyc
 ${PYSITELIB}/IPython/tools/__init__.pyo
@@ -772,174 +816,11 @@ ${PYSITELIB}/IPython/wildcard.pyo
 ${PYSITELIB}/IPython/winconsole.py
 ${PYSITELIB}/IPython/winconsole.pyc
 ${PYSITELIB}/IPython/winconsole.pyo
-man/man1/ipython.1
-man/man1/pycolor.1
-share/doc/ipython/examples/core/demo_colors_blink.py
-share/doc/ipython/examples/core/embtest.py
-share/doc/ipython/examples/core/example-demo.py
-share/doc/ipython/examples/core/example-embed-short.py
-share/doc/ipython/examples/core/example-embed.py
-share/doc/ipython/examples/core/example-gnuplot.py
-share/doc/ipython/examples/core/ipy.vim
-share/doc/ipython/examples/core/ipython-sh.desktop
-share/doc/ipython/examples/core/ipython.desktop
-share/doc/ipython/examples/core/ipython_here_shell_extension.reg
-share/doc/ipython/examples/core/leo_bridge_demo.leo
-share/doc/ipython/examples/core/seteditor.py
-share/doc/ipython/examples/kernel/HISTORY.gz
-share/doc/ipython/examples/kernel/asyncmultiengine1.py
-share/doc/ipython/examples/kernel/davinci.txt
-share/doc/ipython/examples/kernel/davinci0.txt
-share/doc/ipython/examples/kernel/davinci1.txt
-share/doc/ipython/examples/kernel/davinci2.txt
-share/doc/ipython/examples/kernel/davinci3.txt
-share/doc/ipython/examples/kernel/fetchparse.py
-share/doc/ipython/examples/kernel/helloworld.py
-share/doc/ipython/examples/kernel/mcdriver.py
-share/doc/ipython/examples/kernel/mcpricer.py
-share/doc/ipython/examples/kernel/multiengine1.ipy
-share/doc/ipython/examples/kernel/multiengine2.ipy
-share/doc/ipython/examples/kernel/multienginemap.py
-share/doc/ipython/examples/kernel/nwmerge.py
-share/doc/ipython/examples/kernel/parallel_pylab.ipy
-share/doc/ipython/examples/kernel/phistogram.py
-share/doc/ipython/examples/kernel/plotting_backend.py
-share/doc/ipython/examples/kernel/plotting_frontend.py
-share/doc/ipython/examples/kernel/pwordfreq.py
-share/doc/ipython/examples/kernel/pwordfreq_skel.py
-share/doc/ipython/examples/kernel/rmt.ipy
-share/doc/ipython/examples/kernel/rmtkernel.py
-share/doc/ipython/examples/kernel/task1.py
-share/doc/ipython/examples/kernel/task2.py
-share/doc/ipython/examples/kernel/task_profiler.py
-share/doc/ipython/examples/kernel/taskmap.py
-share/doc/ipython/examples/kernel/wordfreq.py
-share/doc/ipython/examples/kernel/wordfreq_skel.py
-share/doc/ipython/extensions/igrid_help.css
-share/doc/ipython/extensions/igrid_help.html
-share/doc/ipython/manual/html/_sources/api/index.txt
-share/doc/ipython/manual/html/_sources/api/ipython_api.txt
-share/doc/ipython/manual/html/_sources/changes.txt
-share/doc/ipython/manual/html/_sources/config/customization.txt
-share/doc/ipython/manual/html/_sources/config/index.txt
-share/doc/ipython/manual/html/_sources/config/initial_config.txt
-share/doc/ipython/manual/html/_sources/config/new_config.txt
-share/doc/ipython/manual/html/_sources/credits.txt
-share/doc/ipython/manual/html/_sources/development/development.txt
-share/doc/ipython/manual/html/_sources/development/index.txt
-share/doc/ipython/manual/html/_sources/development/notification_blueprint.txt
-share/doc/ipython/manual/html/_sources/development/roadmap.txt
-share/doc/ipython/manual/html/_sources/faq.txt
-share/doc/ipython/manual/html/_sources/history.txt
-share/doc/ipython/manual/html/_sources/index.txt
-share/doc/ipython/manual/html/_sources/install/index.txt
-share/doc/ipython/manual/html/_sources/install/install.txt
-share/doc/ipython/manual/html/_sources/interactive/extension_api.txt
-share/doc/ipython/manual/html/_sources/interactive/index.txt
-share/doc/ipython/manual/html/_sources/interactive/reference.txt
-share/doc/ipython/manual/html/_sources/interactive/shell.txt
-share/doc/ipython/manual/html/_sources/interactive/tutorial.txt
-share/doc/ipython/manual/html/_sources/license_and_copyright.txt
-share/doc/ipython/manual/html/_sources/overview.txt
-share/doc/ipython/manual/html/_sources/parallel/index.txt
-share/doc/ipython/manual/html/_sources/parallel/parallel_intro.txt
-share/doc/ipython/manual/html/_sources/parallel/parallel_mpi.txt
-share/doc/ipython/manual/html/_sources/parallel/parallel_multiengine.txt
-share/doc/ipython/manual/html/_sources/parallel/parallel_task.txt
-share/doc/ipython/manual/html/_static/contents.png
-share/doc/ipython/manual/html/_static/default.css
-share/doc/ipython/manual/html/_static/doctools.js
-share/doc/ipython/manual/html/_static/file.png
-share/doc/ipython/manual/html/_static/jquery.js
-share/doc/ipython/manual/html/_static/minus.png
-share/doc/ipython/manual/html/_static/navigation.png
-share/doc/ipython/manual/html/_static/plus.png
-share/doc/ipython/manual/html/_static/pygments.css
-share/doc/ipython/manual/html/_static/rightsidebar.css
-share/doc/ipython/manual/html/_static/searchtools.js
-share/doc/ipython/manual/html/_static/sphinxdoc.css
-share/doc/ipython/manual/html/_static/stickysidebar.css
-share/doc/ipython/manual/html/_static/traditional.css
-share/doc/ipython/manual/html/api/index.html
-share/doc/ipython/manual/html/api/ipython_api.html
-share/doc/ipython/manual/html/changes.html
-share/doc/ipython/manual/html/config/customization.html
-share/doc/ipython/manual/html/config/index.html
-share/doc/ipython/manual/html/config/initial_config.html
-share/doc/ipython/manual/html/config/new_config.html
-share/doc/ipython/manual/html/credits.html
-share/doc/ipython/manual/html/development/development.html
-share/doc/ipython/manual/html/development/index.html
-share/doc/ipython/manual/html/development/notification_blueprint.html
-share/doc/ipython/manual/html/development/roadmap.html
-share/doc/ipython/manual/html/faq.html
-share/doc/ipython/manual/html/genindex.html
-share/doc/ipython/manual/html/history.html
-share/doc/ipython/manual/html/index.html
-share/doc/ipython/manual/html/install/index.html
-share/doc/ipython/manual/html/install/install.html
-share/doc/ipython/manual/html/interactive/extension_api.html
-share/doc/ipython/manual/html/interactive/index.html
-share/doc/ipython/manual/html/interactive/reference.html
-share/doc/ipython/manual/html/interactive/shell.html
-share/doc/ipython/manual/html/interactive/tutorial.html
-share/doc/ipython/manual/html/license_and_copyright.html
-share/doc/ipython/manual/html/modindex.html
-share/doc/ipython/manual/html/objects.inv
-share/doc/ipython/manual/html/overview.html
-share/doc/ipython/manual/html/parallel/index.html
-share/doc/ipython/manual/html/parallel/parallel_intro.html
-share/doc/ipython/manual/html/parallel/parallel_mpi.html
-share/doc/ipython/manual/html/parallel/parallel_multiengine.html
-share/doc/ipython/manual/html/parallel/parallel_task.html
-share/doc/ipython/manual/html/search.html
-share/doc/ipython/manual/html/searchindex.json
-share/doc/ipython/manual/ipython.pdf
-@dirrm share/doc/ipython/manual/html/parallel
-@dirrm share/doc/ipython/manual/html/interactive
-@dirrm share/doc/ipython/manual/html/install
-@dirrm share/doc/ipython/manual/html/development
-@dirrm share/doc/ipython/manual/html/config
-@dirrm share/doc/ipython/manual/html/api
-@dirrm share/doc/ipython/manual/html/_static
-@dirrm share/doc/ipython/manual/html/_sources/parallel
-@dirrm share/doc/ipython/manual/html/_sources/interactive
-@dirrm share/doc/ipython/manual/html/_sources/install
-@dirrm share/doc/ipython/manual/html/_sources/development
-@dirrm share/doc/ipython/manual/html/_sources/config
-@dirrm share/doc/ipython/manual/html/_sources/api
-@dirrm share/doc/ipython/manual/html/_sources
-@dirrm share/doc/ipython/manual/html
-@dirrm share/doc/ipython/manual
-@dirrm share/doc/ipython/extensions
-@dirrm share/doc/ipython/examples/kernel
-@dirrm share/doc/ipython/examples/core
-@dirrm share/doc/ipython/examples
-@dirrm share/doc/ipython
-@dirrm ${PYSITELIB}/IPython/tools/tests
-@dirrm ${PYSITELIB}/IPython/tools
-@dirrm ${PYSITELIB}/IPython/tests
-@dirrm ${PYSITELIB}/IPython/testing/tests
-@dirrm ${PYSITELIB}/IPython/testing/plugin
-@dirrm ${PYSITELIB}/IPython/testing
-@dirrm ${PYSITELIB}/IPython/kernel/tests
-@dirrm ${PYSITELIB}/IPython/kernel/scripts
-@dirrm ${PYSITELIB}/IPython/kernel/core/tests
-@dirrm ${PYSITELIB}/IPython/kernel/core/config
-@dirrm ${PYSITELIB}/IPython/kernel/core
-@dirrm ${PYSITELIB}/IPython/kernel/config
-@dirrm ${PYSITELIB}/IPython/kernel
-@dirrm ${PYSITELIB}/IPython/gui/wx
-@dirrm ${PYSITELIB}/IPython/gui
-@dirrm ${PYSITELIB}/IPython/frontend/wx
-@dirrm ${PYSITELIB}/IPython/frontend/tests
-@dirrm ${PYSITELIB}/IPython/frontend/cocoa/tests
-@dirrm ${PYSITELIB}/IPython/frontend/cocoa
-@dirrm ${PYSITELIB}/IPython/frontend/_process
-@dirrm ${PYSITELIB}/IPython/frontend
-@dirrm ${PYSITELIB}/IPython/external
-@dirrm ${PYSITELIB}/IPython/config/tests
-@dirrm ${PYSITELIB}/IPython/config
-@dirrm ${PYSITELIB}/IPython/UserConfig
-@dirrm ${PYSITELIB}/IPython/Extensions
-@dirrm ${PYSITELIB}/IPython
+man/man1/ipcluster.1.gz
+man/man1/ipcontroller.1.gz
+man/man1/ipengine.1.gz
+man/man1/ipython-wx.1.gz
+man/man1/ipython.1.gz
+man/man1/ipythonx.1.gz
+man/man1/irunner.1.gz
+man/man1/pycolor.1.gz
