@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3553 2009/08/16 16:12:28 thomasklausner Exp $
+# $Id: Makefile,v 1.3554 2009/08/19 16:52:49 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1971,6 +1971,7 @@ SUBDIR+=	suse100_SDL
 SUBDIR+=	suse100_devel
 SUBDIR+=	suse100_gdb
 SUBDIR+=	svgalib
+SUBDIR+=	svrcore
 SUBDIR+=	swami
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
