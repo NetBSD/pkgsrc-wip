@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3554 2009/08/19 16:52:49 udontknow Exp $
+# $Id: Makefile,v 1.3555 2009/08/19 18:11:26 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1035,6 +1035,7 @@ SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4mcs
 SUBDIR+=	libxfce4menu
 SUBDIR+=	libxfce4util
+SUBDIR+=	libzdb
 SUBDIR+=	libzrtpcpp
 SUBDIR+=	lidia
 SUBDIR+=	lincity-ng
