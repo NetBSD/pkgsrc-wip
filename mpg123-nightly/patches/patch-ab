@@ -1,45 +1,36 @@
-$NetBSD: patch-ab,v 1.4 2009/05/24 19:27:50 cheusov Exp $
+$NetBSD: patch-ab,v 1.5 2009/08/20 21:56:21 cheusov Exp $
 
---- configure.ac.orig	2009-05-24 00:45:16.000000000 +0300
+--- configure.ac.orig	2009-08-21 00:28:11.000000000 +0300
 +++ configure.ac
-@@ -553,31 +553,26 @@ case $target in
- 		AC_MSG_WARN([Unknown target operating system])
+@@ -567,31 +567,26 @@ case $host in
+ 		AC_MSG_WARN([Unknown host operating system])
  		cpu_type="i386"
  		buffer=disabled
 -		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	i486-*)
- 		AC_MSG_WARN([Unknown target operating system])
+ 		AC_MSG_WARN([Unknown host operating system])
  		cpu_type="i486"
  		buffer=disabled
 -		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	i586-*)
- 		AC_MSG_WARN([Unknown target operating system])
- 		cpu_type="i586"
+ 		AC_MSG_WARN([Unknown host operating system])
+ 		cpu_type="x86"
  		buffer=disabled
 -		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	i686-*)
- 		AC_MSG_WARN([Unknown target operating system])
+ 		AC_MSG_WARN([Unknown host operating system])
  		cpu_type="x86"
  		buffer=disabled
 -		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
  	x86_64-*)
- 		AC_MSG_WARN([Unknown target operating system])
- 		cpu_type="x86-64"
+ 		AC_MSG_WARN([Unknown host operating system])
+ 		cpu_type="x86-64_all"
  		buffer=disabled
 -		ADD_CPPFLAGS="-DGENERIC $ADD_CPPFLAGS"
  	;;
    *)
-   	AC_MSG_WARN([Unknown target operating system])
-@@ -770,6 +765,8 @@ AC_HEADER_STDC
- dnl Is it too paranoid to specifically check for stdint.h and limits.h?
- AC_CHECK_HEADERS([stdio.h stdlib.h string.h unistd.h sched.h sys/ioctl.h sys/types.h stdint.h limits.h inttypes.h sys/time.h sys/wait.h sys/resource.h sys/signal.h signal.h])
- 
-+AC_CHECK_HEADERS([sys/wait.h sys/time.h sys/resource.h])
-+
- dnl ############## Types
- 
- dnl Detect large file support, enable switches if needed.
+   	AC_MSG_WARN([Unknown host operating system])
