@@ -5,7 +5,7 @@ Suggested package updates
 	o amarok-2.1.1
 	o applewmproto-1.3.0
 	o argouml-0.24
-	o asymptote-1.82
+	o asymptote-1.83
 	o backintime-0.9.26
 	o bakery-2.6.3
 	o bsnes-0.046
@@ -42,7 +42,7 @@ Suggested package updates
 	o guitone-0.9
 	o hitori-0.2.2
 	o hu-go-2.11
-	o i3-3b
+	o i3-3c
 	o icc-11.0
 	o icecat-3.5.2
 	o kino-1.0.0
@@ -72,7 +72,7 @@ Suggested package updates
 	o py-gnucash-0.7.55
 	o qcomicbook-0.4.1
 	o quodlibet-2.0
-	o rdup-1.0.0
+	o rdup-1.0.2
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog-4.2.0
@@ -86,7 +86,6 @@ Suggested package updates
 	o task-1.8.0
 	o tasks-0.16
 	o tmw-0.0.29.1
-	o toppler-1.1.3
 	o tripwire-2.4.0.1
 	o uade-2.12
 	o ufraw-0.14
