@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/06 22:33:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/20 00:29:14 jihbed Exp $
 #
 
-DISTNAME=	logilab-common-0.42.0
+DISTNAME=	logilab-common-0.44.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://ftp.logilab.org/pub/common/
@@ -13,7 +13,7 @@ COMMENT=	Useful miscellaneous modules used by Logilab projects
 
 DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../wip/py-ipython
+DEPENDS+=	${PYPKGPREFIX}-ipython>=0.10:../../wip/py-ipython
 #DEPENDS+=	${PYPKGPREFIX}-omniORBpy>=3.2:../../wip/py-omniORBpy
 DEPENDS+=	pydb>=1.26:../../wip/pydb
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
