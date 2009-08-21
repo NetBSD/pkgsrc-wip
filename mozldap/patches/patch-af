@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/08/21 03:45:36 udontknow Exp $
+
+--- configure.in.orig	2008-09-11 11:38:34.000000000 -0300
++++ configure.in
+@@ -2637,6 +2637,7 @@ ldap/libraries/libiutil/Makefile
+ ldap/libraries/libssldap/Makefile
+ ldap/libraries/libutil/Makefile
+ "
++AC_CONFIG_FILES([mozldap.pc])
+ 
+ dnl since configure won't handle 2 levels of directory
+ dnl structure for us..
