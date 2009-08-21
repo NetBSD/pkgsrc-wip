@@ -1,0 +1,6 @@
+p5-mozldap is also known as PerLDAP.
+PerLDAP, Perl-LDAP, is made up of two main components to write LDAP clients:
+An interface to the C SDK API, and a set of Object Oriented Perl classes.
+The API interface is almost 100% compatible with Netscape's C SDK, but it's
+harder to use than the OO layer. The Object oriented interface is ment to be
+an easier way to write most common LDAP clients
