@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2009/02/20 17:51:40 schnoebe Exp $
+# $NetBSD: Makefile,v 1.24 2009/08/21 03:11:27 schnoebe Exp $
 
-DISTNAME=		pyicqt-0.8.1.3
+DISTNAME=		pyicqt-0.8.1.4
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
 CATEGORIES=		chat python
 MASTER_SITES=		http://pyicqt.googlecode.com/files/
@@ -8,6 +8,7 @@ MASTER_SITES=		http://pyicqt.googlecode.com/files/
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyicqt/
 COMMENT=		Transport connecting Jabber to the ICQ IM network
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

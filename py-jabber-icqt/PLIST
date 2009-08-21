@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/14 04:36:27 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/08/21 03:11:27 schnoebe Exp $
 bin/PyICQt
 ${JABBER_EXDIR}/pyicqt.xml
 ${TRANSPORTDIR}/data/defaultAIMAvatar.png
@@ -67,7 +67,7 @@ ${TRANSPORTDIR}/src/services/VersionTeller.py
 ${TRANSPORTDIR}/src/services/XMPPPing.py
 ${TRANSPORTDIR}/src/services/__init__.py
 ${TRANSPORTDIR}/src/session.py
-${TRANSPORTDIR}/src/svninfo.py
+${TRANSPORTDIR}/src/git_ver.py
 ${TRANSPORTDIR}/src/tlib/__init__.py
 ${TRANSPORTDIR}/src/tlib/countrycodes.py
 ${TRANSPORTDIR}/src/tlib/httpcompat.py
@@ -78,23 +78,6 @@ ${TRANSPORTDIR}/src/tlib/scheduler.py
 ${TRANSPORTDIR}/src/tlib/socks5.py
 ${TRANSPORTDIR}/src/tlib/sockserror.py
 ${TRANSPORTDIR}/src/twistd.py
-${TRANSPORTDIR}/src/twistfix/README
-${TRANSPORTDIR}/src/twistfix/__init__.py
-${TRANSPORTDIR}/src/twistfix/version.py
-${TRANSPORTDIR}/src/twistfix/words/__init__.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/__init__.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/__init__.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/client.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/component.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jid.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/jstrports.py
-${TRANSPORTDIR}/src/twistfix/words/protocols/jabber/xmpp_stringprep.py
-${TRANSPORTDIR}/src/twistfix/words/xish/__init__.py
-${TRANSPORTDIR}/src/twistfix/words/xish/domish.py
-${TRANSPORTDIR}/src/twistfix/words/xish/utility.py
-${TRANSPORTDIR}/src/twistfix/words/xish/xmlstream.py
-${TRANSPORTDIR}/src/twistfix/words/xish/xpath.py
-${TRANSPORTDIR}/src/twistfix/words/xish/xpathparser.py
 ${TRANSPORTDIR}/src/utils.py
 ${TRANSPORTDIR}/src/web/__init__.py
 ${TRANSPORTDIR}/src/web/handler.py
