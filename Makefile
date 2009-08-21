@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3556 2009/08/21 03:50:47 udontknow Exp $
+# $Id: Makefile,v 1.3557 2009/08/21 04:03:55 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1525,6 +1525,7 @@ SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
+SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	packman
 SUBDIR+=	paexec
