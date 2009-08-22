@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/07/20 10:04:47 asau Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/08/22 14:24:31 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -568,6 +568,7 @@ share/maxima/${PKGVERSION}/share/contrib/integer_sequence.lisp
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.html
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.mac
 share/maxima/${PKGVERSION}/share/contrib/integration/abs_integrate.texi
+share/maxima/${PKGVERSION}/share/contrib/integration/hyperint.mac
 share/maxima/${PKGVERSION}/share/contrib/integration/partition.mac
 share/maxima/${PKGVERSION}/share/contrib/integration/rtest_abs_integrate.mac
 share/maxima/${PKGVERSION}/share/contrib/levin/levin.dem
@@ -704,6 +705,7 @@ share/maxima/${PKGVERSION}/share/contrib/sarag/examples.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/hard_test.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/intervalArithmetic.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/lowLevel.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/multiCertificateOfPositivity.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/readme.txt
 share/maxima/${PKGVERSION}/share/contrib/sarag/rootCounting.mac
 share/maxima/${PKGVERSION}/share/contrib/sarag/rootIsolation.mac
@@ -943,6 +945,11 @@ share/maxima/${PKGVERSION}/share/lapack/lapack/dlaexc.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlahqr.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlahrd.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlaln2.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc1.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc2.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc3.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc4.lisp
+share/maxima/${PKGVERSION}/share/lapack/lapack/dlamc5.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlamch.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlamrg.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack/dlange.lisp
@@ -1647,6 +1654,7 @@ share/maxima/${PKGVERSION}/tests/rtest_scalarp.mac
 share/maxima/${PKGVERSION}/tests/rtest_sign.mac
 share/maxima/${PKGVERSION}/tests/rtest_signum.mac
 share/maxima/${PKGVERSION}/tests/rtest_taylor.mac
+share/maxima/${PKGVERSION}/tests/rtest_translator.mac
 share/maxima/${PKGVERSION}/tests/rtest_trig.mac
 share/maxima/${PKGVERSION}/tests/rtest_zeta.mac
 share/maxima/${PKGVERSION}/tests/rtestconjugate.mac
