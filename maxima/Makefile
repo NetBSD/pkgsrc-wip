@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/05/14 20:15:24 asau Exp $
+# $NetBSD: Makefile,v 1.19 2009/08/22 12:07:04 asau Exp $
 #
 
-DISTNAME=		maxima-5.18.1
+DISTNAME=		maxima-5.19.1
 # On updates, please make sure editors/TeXmacs knows about the new
 # version number.
 # (if needed, patch plugins/maxima/bin/{maxima_detect,tm_maxima})
@@ -28,7 +28,7 @@ TEST_TARGET=		check
 
 # Section for VCS-based package:
 
-PKGNAME=		maxima-5.18.99
+PKGNAME=		maxima-5.19.99
 
 CVS_REPOSITORIES=	maxima
 CVS_ROOT.maxima=	:pserver:anonymous:@maxima.cvs.sourceforge.net:/cvsroot/maxima
