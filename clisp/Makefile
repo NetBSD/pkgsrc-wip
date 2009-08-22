@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/08/22 17:07:59 asau Exp $
+# $NetBSD: Makefile,v 1.25 2009/08/22 18:09:00 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -32,7 +32,7 @@ BUILD_DIRS=		src
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		groff ps2pdf
+USE_TOOLS+=		groff
 UNLIMIT_RESOURCES=	stacksize
 
 CONFIGURE_ARGS+=	--disable-maintainer-mode
@@ -45,6 +45,10 @@ MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGBASE}/emacs"
 MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGBASE}/vim"
 
 TEST_TARGET=		check mod-check
+
+# Avoid building PDF documentation (it requires Ghostscript):
+CONFIGURE_ENV+=		PS2PDF= ac_cv_prog_PS2PDF=
+#USE_TOOLS+=		ps2pdf	# to build PDF documentation
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/08/22 12:11:08 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/08/22 18:09:00 asau Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -73,7 +73,6 @@ share/doc/clisp/SUMMARY
 share/doc/clisp/clisp.1
 share/doc/clisp/clisp.dvi
 share/doc/clisp/clisp.html
-share/doc/clisp/clisp.pdf
 share/doc/clisp/clisp.png
 share/doc/clisp/clisp.ps
 share/doc/clisp/editors.txt
