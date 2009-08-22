@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/08/14 13:32:49 asau Exp $
+# $NetBSD: Makefile,v 1.20 2009/08/22 12:17:59 asau Exp $
 
-DISTNAME=		${PKGNAME_NOREV}-source-r2
-PKGNAME=		sbcl-1.0.29
+DISTNAME=		${PKGNAME_NOREV}-source
+PKGNAME=		sbcl-1.0.30
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,8 +16,8 @@ ONLY_FOR_PLATFORM+=	Linux-*-i386
 # It should be possible to have SBCL working on amd64, powerpc,
 # sparc, alpha, mips, and HPPA hardware also, but they probably
 # need a bit of porting work done in SBCL itself.
-# In addition, SBCL should also work on Linux, Darwin, Solaris,
-# FreeBSD, OpenBSD, and possibly Win32, OSF/1, HP-UX, and Irix.
+# In addition, SBCL should also work on Darwin, Solaris, OpenBSD,
+# and possibly Win32, OSF/1, HP-UX, and Irix.
 
 USE_TOOLS+=		gmake gtar:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -51,14 +51,17 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 #SBCL_BOOT_SYSTEM=	sbcl			# SBCL
 
 .if !defined(SBCL_BOOT_SYSTEM)
-SBCL_BOOT_SYSTEM=	clisp
+# Use "clisp -ansi -on-error abort" to make the build more reproducible,
+# per Christophe Rhodes:
+SBCL_BOOT_SYSTEM=	clisp -ansi -on-error abort
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
 ULIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == clisp
 BUILD_DEPENDS+=		clisp-[0-9]*:../../lang/clisp
+ULIMIT_RESOURCES=	datasize
 .elif ${SBCL_BOOT_SYSTEM} == sbcl
 # Get bootstrap version:
-BUILD_DEPENDS+=		sbcl-[0-9]*:../sbcl-boot
+BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
 .endif
 
 
@@ -76,13 +79,14 @@ SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
 do-build:
-	cd ${WRKSRC} && ${SH} make.sh "${SBCL_BOOT_SYSTEM}"
+	cd ${WRKSRC} && ${SH} make.sh ${SBCL_BOOT_SYSTEM:Q}
 post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
 
 do-install:
-	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX}/${PKGMANDIR} ${SH} install.sh
+	cd ${WRKSRC} && BUILD_ROOT=${DESTDIR:Q} INSTALL_ROOT=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR} ${SH} install.sh
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
+	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/posix-tests.lisp.orig
 	find $(DESTDIR)$(PREFIX)/lib/sbcl -type d -name CVS -exec rm -rf {} \+
 
 do-test:
