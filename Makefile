@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3559 2009/08/21 23:03:31 thomasklausner Exp $
+# $Id: Makefile,v 1.3560 2009/08/22 17:01:19 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -566,6 +566,7 @@ SUBDIR+=	gtkglk
 SUBDIR+=	gtkhotkey
 SUBDIR+=	gtklookat
 SUBDIR+=	gtksourcecompletion
+SUBDIR+=	gts
 SUBDIR+=	gtuxnes
 SUBDIR+=	gtypist
 SUBDIR+=	guichan
@@ -1692,6 +1693,7 @@ SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gmpy
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-gtk2-docs
+SUBDIR+=	py-gts
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
