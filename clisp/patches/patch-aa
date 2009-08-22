@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2009/05/22 22:38:30 asau Exp $
+$NetBSD: patch-aa,v 1.6 2009/08/22 12:13:15 asau Exp $
 
 Don't use cache file to avoid trailing space problem.
 
---- src/makemake.in.orig	2009-05-19 13:04:21.000000000 +0400
-+++ src/makemake.in	2009-05-19 13:19:11.000000000 +0400
-@@ -1868,7 +1868,7 @@
+--- src/makemake.in.orig	2009-08-14 18:02:03.000000000 +0400
++++ src/makemake.in	2009-08-18 19:14:44.000000000 +0400
+@@ -1915,7 +1915,7 @@
  echol "psdir   = ${PSDIR}"
  echol "pdfdir  = ${PDFDIR}"
  echol "libdir  = ${LIBDIR}"
@@ -13,12 +13,12 @@ Don't use cache file to avoid trailing space problem.
  if [ -n "$USE_GETTEXT" ] ; then
    echol "localedir = ${LOCALEDIR}"
  fi
-@@ -3282,7 +3282,7 @@
+@@ -3339,7 +3339,7 @@
  done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
  # is bash, config.cache may be unparsable with sh on Solaris
--echotab "      \$(SHELL) ./configure --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
-+echotab "      \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
- echotab "    else \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
+-echotab "      \$(SHELL) \$\$m/configure --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
++echotab "      \$(SHELL) \$\$m/configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
+ echotab "    else \$(SHELL) \$\$m/configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
  echotab "    fi ) ;\\"
- echotab "fi"
+ echotab "fi; \\"
