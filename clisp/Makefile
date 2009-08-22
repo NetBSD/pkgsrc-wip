@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/08/22 13:37:07 asau Exp $
+# $NetBSD: Makefile,v 1.23 2009/08/22 17:05:35 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -32,7 +32,7 @@ BUILD_DIRS=		src
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		dvipdf
+USE_TOOLS+=		groff
 UNLIMIT_RESOURCES=	stacksize
 
 CONFIGURE_ARGS+=	--disable-maintainer-mode
