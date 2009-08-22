@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2009/06/04 19:29:46 minskim Exp $
+# $NetBSD: options.mk,v 1.17 2009/08/22 05:36:22 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -7,9 +7,25 @@ PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	x11 xft2
+PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Support D-BUS
+###
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus/buildlink3.mk"
+.endif
+
+###
+### Support SVG
+###
+.if !empty(PKG_OPTIONS:Msvg)
+.include "../../graphics/librsvg/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-rsvg
+.endif
 
 ###
 ### Any of the "toolkit" options implies "x11".
@@ -21,11 +37,11 @@ PKG_OPTIONS+=		x11
 .endif
 
 ###
-### Default to using the Xaw X11 toolkit if none is specified.
+### Default to using the gtk if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
 .  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
-PKG_OPTIONS+=		xaw
+PKG_OPTIONS+=		gtk
 .  endif
 .endif
 
@@ -47,22 +63,6 @@ CONFIGURE_ARGS+=	--with-png
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-
-###
-### Support D-BUS
-###
-.  if !empty(PKG_OPTIONS:Mdbus)
-.include "../../sysutils/dbus/buildlink3.mk"
-.  endif
-
-###
-### Support SVG
-###
-.  if !empty(PKG_OPTIONS:Msvg)
-.include "../../graphics/librsvg/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--without-rsvg
-.  endif
 
 ###
 ### Enable font backend
