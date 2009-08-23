@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/01 20:54:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/23 22:26:59 thomasklausner Exp $
 #
 
 DISTNAME=	tagging-0.2.1
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=		yes
 USE_LANGUAGES=	# none
 
