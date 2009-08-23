@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/08/21 03:45:36 udontknow Exp $
+# $NetBSD: options.mk,v 1.2 2009/08/23 20:45:21 udontknow Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.ldapsdk
+PKG_OPTIONS_VAR=        PKG_OPTIONS.mozldap
 PKG_SUPPORTED_OPTIONS=  sasl
 
 .include "../../mk/bsd.options.mk"
