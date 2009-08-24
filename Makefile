@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3560 2009/08/22 17:01:19 jihbed Exp $
+# $Id: Makefile,v 1.3561 2009/08/24 20:46:35 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -95,6 +95,7 @@ SUBDIR+=	ap2-zeroconf
 SUBDIR+=	apachebench2
 SUBDIR+=	applewmproto
 SUBDIR+=	apstget
+SUBDIR+=	apvlv
 SUBDIR+=	ar7
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
