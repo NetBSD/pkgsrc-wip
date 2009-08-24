@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/24 20:24:48 leot1990 Exp $
+bin/apvlv
+man/man1/apvlv.1
+share/doc/apvlv/Startup.pdf
+share/doc/apvlv/apvlvrc.example
+share/doc/apvlv/dir.png
+share/doc/apvlv/pdf.png
+share/doc/apvlv/reg.png
