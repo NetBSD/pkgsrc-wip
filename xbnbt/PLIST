@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/16 19:07:18 loic-hoguin Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/25 11:56:46 thomasklausner Exp $
 sbin/bnbt
+share/doc/xbnbt/XBNBT.txt
 share/doc/xbnbt/bnbtphp.html
 share/doc/xbnbt/bnbtphp.png
 share/doc/xbnbt/changelog.txt
@@ -25,9 +26,8 @@ share/doc/xbnbt/release.png
 share/doc/xbnbt/run_linux.png
 share/doc/xbnbt/run_windows.png
 share/doc/xbnbt/service.png
-share/doc/xbnbt/torrentitem
+share/doc/xbnbt/torrentItem
 share/doc/xbnbt/users.txt
-share/doc/xbnbt/xbnbt.txt
 share/examples/xbnbt/bnbtphp/admin.php
 share/examples/xbnbt/bnbtphp/allowed/empty.txt
 share/examples/xbnbt/bnbtphp/include/benc.inc.php
@@ -109,23 +109,3 @@ share/xbnbt/images/xml.png
 share/xbnbt/stylesheets/filedump.xsl
 share/xbnbt/stylesheets/rss.xsl
 share/xbnbt/stylesheets/xbnbt.css
-@dirrm share/xbnbt/stylesheets
-@dirrm share/xbnbt/images
-@dirrm share/xbnbt
-@dirrm share/examples/xbnbt/tags
-@dirrm share/examples/xbnbt/robots/blank
-@dirrm share/examples/xbnbt/robots
-@dirrm share/examples/xbnbt/ipb2_mod/sources
-@dirrm share/examples/xbnbt/ipb2_mod/ips_kernel
-@dirrm share/examples/xbnbt/ipb2_mod
-@dirrm share/examples/xbnbt/default_header
-@dirrm share/examples/xbnbt/default_footer
-@dirrm share/examples/xbnbt/database
-@dirrm share/examples/xbnbt/config/windows
-@dirrm share/examples/xbnbt/config
-@dirrm share/examples/xbnbt/bnbtphp/include
-@dirrm share/examples/xbnbt/bnbtphp/allowed
-@dirrm share/examples/xbnbt/bnbtphp
-@dirrm share/examples/xbnbt
-@dirrm share/doc/xbnbt/license
-@dirrm share/doc/xbnbt

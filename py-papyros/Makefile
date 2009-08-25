@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/25 23:26:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/25 11:56:46 thomasklausner Exp $
 #
 
-DISTNAME=		papyros-0.2.1
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	papyros-0.2.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://papyros.googlecode.com/files/
 EXTRACT_SUFX=	.zip

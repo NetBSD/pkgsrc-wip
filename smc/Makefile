@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/07/16 16:08:39 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/25 11:56:46 thomasklausner Exp $
 #
 
-PKGNAME=		smc-0.97
 DISTNAME=		SMC_0.97
-PKGREVISION=		3
+PKGNAME=		smc-0.97
+PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smclone/}
 DISTFILES=		${DISTNAME}_source.zip ${DISTNAME}_game.zip \
@@ -29,10 +29,8 @@ post-extract:
 
 post-patch:
 	@cd ${WRKSRC} && \
-	${MV} makefile.am Makefile.am && \
-	${MV} src/makefile.am src/Makefile.am && \
-	${RM} -f data/makefile.am data/Makefile.am && \
-	${RM} -f docs/makefile.am && \
+	${RM} -f data/Makefile.am && \
+	${RM} -f docs/Makefile.am && \
 	${SH} autogen.sh && \
 	${CHMOD} a+x configure && \
 	${CP} ${FILESDIR}/smc ${WRKDIR}/.smc

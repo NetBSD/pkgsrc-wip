@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/22 02:11:32 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/25 11:56:45 thomasklausner Exp $
 #
 
 DISTNAME=	distella
@@ -12,6 +12,7 @@ HOMEPAGE=	http://members.cox.net/rcolbert/index.htm
 COMMENT=	6502 Disassembler with Atari 2600 headers and cycle counting info
 
 NO_CONFIGURE=	YES
+EXTRACT_OPTS_ZIP=	-Laqo
 
 post-extract:
 	${MKDIR} ${WRKSRC}

@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/14 22:45:17 h2m Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/08/25 11:56:46 thomasklausner Exp $
 bin/smc
 lib/smc/smc
 share/doc/smc/controls.html
 share/doc/smc/credits.html
 share/doc/smc/history.html
 share/doc/smc/license.txt
-share/doc/smc/licenses/creative_commons.txt
-share/doc/smc/licenses/gpl.txt
-share/doc/smc/licenses/lgpl.txt
+share/doc/smc/licenses/Creative_Commons.txt
+share/doc/smc/licenses/GPL.txt
+share/doc/smc/licenses/LGPL.txt
 share/doc/smc/readme-linux.txt
 share/doc/smc/style.css
 share/smc/font/bluebold.ttf
@@ -187,14 +187,14 @@ share/smc/pixmaps/ground/green_1/ground/right.png
 share/smc/pixmaps/ground/green_1/ground/right_down.png
 share/smc/pixmaps/ground/green_1/ground/right_up.png
 share/smc/pixmaps/ground/green_1/ground/up.png
+share/smc/pixmaps/ground/green_1/ground_2/Image1.png
+share/smc/pixmaps/ground/green_1/ground_2/Image2.png
+share/smc/pixmaps/ground/green_1/ground_2/Image3.png
 share/smc/pixmaps/ground/green_1/ground_2/down.png
 share/smc/pixmaps/ground/green_1/ground_2/hill_left.png
 share/smc/pixmaps/ground/green_1/ground_2/hill_left_up.png
 share/smc/pixmaps/ground/green_1/ground_2/hill_right.png
 share/smc/pixmaps/ground/green_1/ground_2/hill_right_up.png
-share/smc/pixmaps/ground/green_1/ground_2/image1.png
-share/smc/pixmaps/ground/green_1/ground_2/image2.png
-share/smc/pixmaps/ground/green_1/ground_2/image3.png
 share/smc/pixmaps/ground/green_1/ground_2/left.png
 share/smc/pixmaps/ground/green_1/ground_2/left_down.png
 share/smc/pixmaps/ground/green_1/ground_2/left_up.png
@@ -436,6 +436,7 @@ share/smc/pixmaps/signs/yoshi/post.png
 share/smc/pixmaps/slider/grey_1/slider_left.png
 share/smc/pixmaps/slider/grey_1/slider_middle.png
 share/smc/pixmaps/slider/grey_1/slider_right.png
+share/smc/pixmaps/world/Waypoints/default_1.png
 share/smc/pixmaps/world/arrow_down.png
 share/smc/pixmaps/world/arrow_down_small.png
 share/smc/pixmaps/world/arrow_left.png
@@ -469,7 +470,6 @@ share/smc/pixmaps/world/objects/hill_blue_2.png
 share/smc/pixmaps/world/overworlds/default/1.png
 share/smc/pixmaps/world/overworlds/default/1_layer.png
 share/smc/pixmaps/world/tiles/green_1/todo
-share/smc/pixmaps/world/waypoints/default_1.png
 share/smc/sounds/audio_on.ogg
 share/smc/sounds/beep_1.ogg
 share/smc/sounds/cannon_1.ogg
@@ -507,99 +507,5 @@ share/smc/sounds/tock.ogg
 share/smc/world/default/map_list (todo).txt
 share/smc/world/default/world.txt
 share/smc/world/worlds.txt
-@dirrm share/smc/world/default
-@dirrm share/smc/world
-@dirrm share/smc/sounds
-@dirrm share/smc/pixmaps/world/waypoints
-@dirrm share/smc/pixmaps/world/tiles/green_1
-@dirrm share/smc/pixmaps/world/tiles
-@dirrm share/smc/pixmaps/world/overworlds/default
-@dirrm share/smc/pixmaps/world/overworlds
-@dirrm share/smc/pixmaps/world/objects
-@dirrm share/smc/pixmaps/world/maryo/small
-@dirrm share/smc/pixmaps/world/maryo
-@dirrm share/smc/pixmaps/world/levels
-@dirrm share/smc/pixmaps/world
-@dirrm share/smc/pixmaps/slider/grey_1
-@dirrm share/smc/pixmaps/slider
-@dirrm share/smc/pixmaps/signs/yoshi
-@dirrm share/smc/pixmaps/signs/default_1
-@dirrm share/smc/pixmaps/signs
-@dirrm share/smc/pixmaps/pipes/updown
-@dirrm share/smc/pixmaps/pipes/up
-@dirrm share/smc/pixmaps/pipes/right
-@dirrm share/smc/pixmaps/pipes/leftright
-@dirrm share/smc/pixmaps/pipes/left
-@dirrm share/smc/pixmaps/pipes/down
-@dirrm share/smc/pixmaps/pipes
-@dirrm share/smc/pixmaps/old_pixmaps
-@dirrm share/smc/pixmaps/menu/items
-@dirrm share/smc/pixmaps/menu
-@dirrm share/smc/pixmaps/maryo
-@dirrm share/smc/pixmaps/hills/light_blue_1
-@dirrm share/smc/pixmaps/hills/green_1
-@dirrm share/smc/pixmaps/hills/blue_1
-@dirrm share/smc/pixmaps/hills
-@dirrm share/smc/pixmaps/ground/yoshi_1
-@exec ${MKDIR} %D/share/smc/pixmaps/ground/sand_1
-@dirrm share/smc/pixmaps/ground/sand_1
-@dirrm share/smc/pixmaps/ground/plastic_1/screw_block_red
-@dirrm share/smc/pixmaps/ground/plastic_1/screw_block_grey
-@dirrm share/smc/pixmaps/ground/plastic_1/screw_block_green
-@dirrm share/smc/pixmaps/ground/plastic_1/screw_block_blue
-@dirrm share/smc/pixmaps/ground/plastic_1
-@dirrm share/smc/pixmaps/ground/jungle_1/ground
-@dirrm share/smc/pixmaps/ground/jungle_1
-@dirrm share/smc/pixmaps/ground/green_2/hedges
-@dirrm share/smc/pixmaps/ground/green_2
-@dirrm share/smc/pixmaps/ground/green_1/hedges
-@dirrm share/smc/pixmaps/ground/green_1/ground_2
-@dirrm share/smc/pixmaps/ground/green_1/ground
-@dirrm share/smc/pixmaps/ground/green_1
-@dirrm share/smc/pixmaps/ground/ghost_1
-@dirrm share/smc/pixmaps/ground
-@dirrm share/smc/pixmaps/game/leveleditor
-@dirrm share/smc/pixmaps/game/level
-@dirrm share/smc/pixmaps/game/items
-@dirrm share/smc/pixmaps/game/box
-@dirrm share/smc/pixmaps/game/background
-@dirrm share/smc/pixmaps/game
-@exec ${MKDIR} %D/share/smc/pixmaps/extra
-@dirrm share/smc/pixmaps/extra
-@dirrm share/smc/pixmaps/enemy/turtle/red
-@dirrm share/smc/pixmaps/enemy/turtle
-@dirrm share/smc/pixmaps/enemy/thwomp
-@dirrm share/smc/pixmaps/enemy/rex
-@dirrm share/smc/pixmaps/enemy/jpiranha
-@dirrm share/smc/pixmaps/enemy/goomba/brown
-@dirrm share/smc/pixmaps/enemy/goomba/blue
-@dirrm share/smc/pixmaps/enemy/goomba
-@dirrm share/smc/pixmaps/enemy/banzai_bill
-@dirrm share/smc/pixmaps/enemy
-@dirrm share/smc/pixmaps/clouds/grey_1
-@dirrm share/smc/pixmaps/clouds/default_1
-@dirrm share/smc/pixmaps/clouds/cloudy_1
-@dirrm share/smc/pixmaps/clouds
-@dirrm share/smc/pixmaps/blocks/wood
-@dirrm share/smc/pixmaps/blocks/stone
-@dirrm share/smc/pixmaps/blocks/sand
-@dirrm share/smc/pixmaps/blocks/ice
-@dirrm share/smc/pixmaps/blocks
-@dirrm share/smc/pixmaps/animation/smoke_1
-@dirrm share/smc/pixmaps/animation/light_1
-@dirrm share/smc/pixmaps/animation/iceball_1
-@dirrm share/smc/pixmaps/animation/goldpiece_1
-@dirrm share/smc/pixmaps/animation/fireball_1
-@dirrm share/smc/pixmaps/animation/fire_1
-@dirrm share/smc/pixmaps/animation
-@dirrm share/smc/pixmaps
-@dirrm share/smc/music/overworld
-@dirrm share/smc/music/land
-@dirrm share/smc/music/game
-@dirrm share/smc/music
-@dirrm share/smc/levels
-@dirrm share/smc/font
-@dirrm share/smc
-@dirrm share/doc/smc/licenses
-@dirrm share/doc/smc
-@dirrm lib/smc
+@pkgdir share/smc/pixmaps/ground/sand_1
+@pkgdir share/smc/pixmaps/extra

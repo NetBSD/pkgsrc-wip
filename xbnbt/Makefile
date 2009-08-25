@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/08/25 11:56:46 thomasklausner Exp $
 
 DISTNAME=	xbnbt-81b.3.5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbnbt/}
 EXTRACT_SUFX=	.zip
@@ -14,14 +15,13 @@ WRKSRC=		${WRKDIR}/xbnbt/bnbt/src
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pax
 
-MAKE_FILE=	makefile
 BUILD_TARGET+=	bnbt
 
 INSTALLATION_DIRS+=	sbin share/doc/xbnbt share/examples/xbnbt share/xbnbt
 
 post-extract:
-	mv ${WRKDIR:Q}/"copy of xbnbt-81b.3" ${WRKDIR:Q}/xbnbt
-	mv ${WRKDIR:Q}/xbnbt/bnbt/examples/"xbnbt ipb2 mod" \
+	mv ${WRKDIR:Q}/"Copy of xbnbt-81b.3" ${WRKDIR:Q}/xbnbt
+	mv ${WRKDIR:Q}/xbnbt/bnbt/examples/"XBNBT IPB2 Mod" \
 		${WRKDIR:Q}/xbnbt/bnbt/examples/ipb2_mod
 
 do-install:

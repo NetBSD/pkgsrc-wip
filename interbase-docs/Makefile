@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2009/08/25 11:56:45 thomasklausner Exp $
 #
 
 DISTNAME=		60All
@@ -18,8 +18,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BUILD=		yes
 
 ID6_DIR=	${PREFIX}/share/doc/${PKGNAME}
-ID6_FILES=		apiguide.pdf datadef.pdf devguide.pdf embedsql.pdf \
-			getstart.pdf langref.pdf opguide.pdf
+ID6_FILES=		ApiGuide.pdf DataDef.pdf DevGuide.pdf EmbedSQL.pdf \
+			GetStart.pdf LANGREF.PDF OpGuide.pdf
 
 do-install:
 	${INSTALL_DATA_DIR} ${ID6_DIR}

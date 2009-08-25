@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 08:03:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/08/25 11:56:46 thomasklausner Exp $
 bin/runxlrd.py
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.pyc
@@ -9,14 +9,14 @@ ${PYSITELIB}/xlrd/biffh.pyo
 ${PYSITELIB}/xlrd/compdoc.py
 ${PYSITELIB}/xlrd/compdoc.pyc
 ${PYSITELIB}/xlrd/compdoc.pyo
+${PYSITELIB}/xlrd/doc/HISTORY.html
+${PYSITELIB}/xlrd/doc/README.html
 ${PYSITELIB}/xlrd/doc/compdoc.html
-${PYSITELIB}/xlrd/doc/history.html
-${PYSITELIB}/xlrd/doc/readme.html
 ${PYSITELIB}/xlrd/doc/xlrd.html
 ${PYSITELIB}/xlrd/examples/namesdemo.xls
-${PYSITELIB}/xlrd/examples/xlrdnameapidemo.py
-${PYSITELIB}/xlrd/examples/xlrdnameapidemo.pyc
-${PYSITELIB}/xlrd/examples/xlrdnameapidemo.pyo
+${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.py
+${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.pyc
+${PYSITELIB}/xlrd/examples/xlrdnameAPIdemo.pyo
 ${PYSITELIB}/xlrd/formatting.py
 ${PYSITELIB}/xlrd/formatting.pyc
 ${PYSITELIB}/xlrd/formatting.pyo
@@ -35,6 +35,3 @@ ${PYSITELIB}/xlrd/timemachine.pyo
 ${PYSITELIB}/xlrd/xldate.py
 ${PYSITELIB}/xlrd/xldate.pyc
 ${PYSITELIB}/xlrd/xldate.pyo
-@dirrm ${PYSITELIB}/xlrd/examples
-@dirrm ${PYSITELIB}/xlrd/doc
-@dirrm ${PYSITELIB}/xlrd
