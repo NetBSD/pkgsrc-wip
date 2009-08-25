@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/25 16:26:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2009/08/25 16:27:40 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -32,7 +32,7 @@ SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 
-# uses its own internal plasma library/includes but if system plasma not 
+# uses its own internal plasma library/includes but if system plasma not
 # there will install some plasma config.
 # dont use buildlink as results in header file conflicts
 #DEPENDS+=	kdebase-workspace4>=4.1.3:../../wip/kdebase-workspace4
@@ -42,6 +42,7 @@ SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.5
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/taglib-extras/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/mysql5-embedded/buildlink3.mk"
