@@ -1,3 +1,5 @@
 test on i386 and amd64
 send reports to prudhvi-krishna-bsd@surapaneni.in
 findout what license this package uses.
+upstream distfile changed -- find out why
+. doesn't contain linux64, so doesn't build on amd64
