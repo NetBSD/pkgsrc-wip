@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/24 20:24:48 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/25 20:05:06 leot1990 Exp $
 #
 
 DISTNAME=	apvlv-0.0.6.10
-CATEGORIES=	local
+CATEGORIES=	print
 MASTER_SITES=	http://apvlv.googlecode.com/files/
 
 MAINTAINER=	leot1990@users.sourceforge.net
