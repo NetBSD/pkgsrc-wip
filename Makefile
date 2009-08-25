@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3563 2009/08/25 22:58:20 leot1990 Exp $
+# $Id: Makefile,v 1.3564 2009/08/25 22:59:41 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1424,6 +1424,7 @@ SUBDIR+=	p5-Exception-Base
 SUBDIR+=	p5-Exception-Class-TryCatch
 SUBDIR+=	p5-Exporter-Tidy
 SUBDIR+=	p5-Frontier-RPC
+SUBDIR+=	p5-Getopt-GUI-Long
 SUBDIR+=	p5-GD-Barcode
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-HTML-CalendarMonthSimple
