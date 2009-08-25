@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/16 19:41:31 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2009/08/25 11:57:52 thomasklausner Exp $
 
 VERSION=		20080308
 DICTNAME=		fr_FR-classique
@@ -12,7 +12,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dico.savant.free.fr/index.php
 COMMENT=		French (Classic) dictionary for hunspell
 
-EXTRACT_OPTS_ZIP=	-aqo # We don't want -L
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# none
 

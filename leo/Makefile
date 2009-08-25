@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/03 11:00:18 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2009/08/25 11:57:52 thomasklausner Exp $
 #
 
 DISTNAME=		leo-4-4-2-1-final
@@ -15,8 +15,6 @@ DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
 
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	src/leo.py scripts/LinixInstall.py
-
-EXTRACT_OPTS_ZIP=	-aqo
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
