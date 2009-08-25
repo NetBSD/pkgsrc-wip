@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3562 2009/08/25 22:25:50 leot1990 Exp $
+# $Id: Makefile,v 1.3563 2009/08/25 22:58:20 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2098,6 +2098,7 @@ SUBDIR+=	tuxanci-server
 SUBDIR+=	tuxtype2
 SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
+SUBDIR+=	twitmail
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
