@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/08/25 16:27:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/26 10:55:45 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.1.1
+PKGREVISION=	1
 CATEGORIES=	audio multimedia
 MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
 		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
@@ -24,7 +25,7 @@ CMAKE_ARGS+=	-DMYSQL_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/
 CMAKE_ARGS+=	-DMYSQL_EMBEDDED_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql/libmysqld.a
 CMAKE_ARGS+=	-DMYSQL_EMBEDDED_FOUND:BOOL=TRUE
 CMAKE_ARGS+=	-DHAVE_MYSQL_OPT_EMBEDDED_CONNECTION:BOOL=TRUE
-CMAKE_ARGS+=	-DMYSQL_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-client}/lib/mysql/libmysqlclient.so
+CMAKE_ARGS+=	-DMYSQL_LIBRARIES:PATH=${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql/libmysqlclient.so
 
 SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	post-patch
@@ -32,16 +33,10 @@ SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 
-# uses its own internal plasma library/includes but if system plasma not
-# there will install some plasma config.
-# dont use buildlink as results in header file conflicts
-#DEPENDS+=	kdebase-workspace4>=4.1.3:../../wip/kdebase-workspace4
-
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.5
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/taglib-extras/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
