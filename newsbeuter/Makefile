@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/08/11 22:03:05 smoppy Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/26 21:45:14 thomasklausner Exp $
 
 DISTNAME=	newsbeuter-2.0
 CATEGORIES=	news
@@ -17,7 +17,7 @@ USE_GNU_ICONV=	yes
 
 REPLACE_PERL+=	txt2h.pl
 
-INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALL_MAKE_FLAGS+=	prefix=${PREFIX} mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
