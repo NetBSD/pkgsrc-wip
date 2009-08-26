@@ -1,0 +1,2 @@
+Syn68k is ARDI's 68LC040 CPU emulator. It allows other CPUs to run
+instruction streams meant to run on Motorola's 68LC040 line of CPUs.

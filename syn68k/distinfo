@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/26 19:26:01 christtrekker Exp $
+
+SHA1 (ctm-syn68k-b9044353deba13876bd024ea42c8be04e2ff3d8f.tar.gz) = 4fdc85d97a3607a8abe1de24c8177cf290cce8d9
+RMD160 (ctm-syn68k-b9044353deba13876bd024ea42c8be04e2ff3d8f.tar.gz) = 8a4ea9306d0ab2adea29fc9e643afaa6d31826cd
+Size (ctm-syn68k-b9044353deba13876bd024ea42c8be04e2ff3d8f.tar.gz) = 316870 bytes
