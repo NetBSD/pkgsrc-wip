@@ -7,7 +7,7 @@ Suggested package updates
 	o argouml-0.24
 	o backintime-0.9.26
 	o bakery-2.6.3
-	o bsnes-0.046
+	o bsnes-0.050
 	o bub-n-bros-1.6
 	o cclive-0.4.7
 	o cdogs-0.4
@@ -16,6 +16,7 @@ Suggested package updates
 	o cinelerra-2.1
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o desmume-0.9.4
 	o directfb-1.0.0
 	o ecasound-2.6.0
 	o editline-20090722.3.0
@@ -48,7 +49,7 @@ Suggested package updates
 	o libAppleWM-1.3.0
 	o libgdata-0.4.0
 	o libgksu-2.0.4
-	o libuuid-1.41.8
+	o libuuid-1.41.9
 	o lincity-ng-2.0
 	o linphone-3.1.2
 	o lives-1.0.0
@@ -82,7 +83,7 @@ Suggested package updates
 	o spe-0.8.2a
 	o swftools-0.9.0
 	o sxemacs-22.1.10
-	o task-1.8.0
+	o task-1.8.1
 	o tasks-0.16
 	o tmw-0.0.29.1
 	o tripwire-2.4.0.1
