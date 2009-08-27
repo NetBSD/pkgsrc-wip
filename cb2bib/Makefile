@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/08/27 15:55:34 thomasklausner Exp $
 #
 
 DISTNAME=		cb2bib-0.7.2
@@ -8,10 +8,6 @@ MASTER_SITES=		http://www.molspaces.com/dl/progs/
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.molspaces.com/cb2bib/
 COMMENT=		Extract and organize bibliographic references
-
-BROKEN=			Requires QT>=4.2, and pkgsrc is still at 4.1
-DEPENDS+=		qt4-libs>=4.2:../../x11/qt4-libs
-DEPENDS+=		qt4-tools>=4.2:../../x11/qt4-tools
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
