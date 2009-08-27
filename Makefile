@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3566 2009/08/27 17:41:15 jihbed Exp $
+# $Id: Makefile,v 1.3567 2009/08/27 17:50:44 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1160,6 +1160,7 @@ SUBDIR+=	monkey-bubble
 SUBDIR+=	mono-zeroconf
 SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moregroupware
+SUBDIR+=	mothanna
 SUBDIR+=	moto4lin
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
