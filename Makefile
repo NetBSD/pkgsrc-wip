@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3567 2009/08/27 17:50:44 jihbed Exp $
+# $Id: Makefile,v 1.3568 2009/08/27 18:00:41 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2046,6 +2046,7 @@ SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	tftp-hpa
+SUBDIR+=	thabit
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	thunderbird-bin
