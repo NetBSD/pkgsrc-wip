@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/26 19:26:01 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/27 15:33:07 christtrekker Exp $
 #
 
 DISTNAME=	ctm-syn68k-b9044353deba13876bd024ea42c8be04e2ff3d8f
@@ -11,6 +11,8 @@ HOMEPAGE=	http://download.github.com/
 COMMENT=	ARDI's 68LC040 CPU emulator
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR} # More than one possibility -- please check manually.
+USE_TOOLS+=	bash
+REPLACE_BASH=	autogen.sh test/testall.sh
+
 
 .include "../../mk/bsd.pkg.mk"

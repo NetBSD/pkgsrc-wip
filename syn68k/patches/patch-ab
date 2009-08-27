@@ -1,0 +1,15 @@
+--- include/syn68k_public.h.orig	Mon Jun 22 23:38:05 2009
++++ include/syn68k_public.h	Thu Aug 27 09:48:57 2009
+@@ -1,7 +1,12 @@
+ #if !defined (_syn68k_public_h_)
+ #define _syn68k_public_h_
+ 
++#ifdef HAVE_STDINT_H
+ #include <stdint.h>
++#endif
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#endif
+ #include <setjmp.h>
+ 
+ /* Decide whether we are big or little endian here.  Add more machines as
