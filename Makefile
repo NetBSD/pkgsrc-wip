@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3565 2009/08/26 20:39:17 udontknow Exp $
+# $Id: Makefile,v 1.3566 2009/08/27 17:41:15 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -56,6 +56,7 @@ SUBDIR+=	acpid
 SUBDIR+=	adamem
 SUBDIR+=	adms
 SUBDIR+=	admsmb
+SUBDIR+=	ae-fonts-mono
 SUBDIR+=	aegis-devel
 SUBDIR+=	aeneas
 SUBDIR+=	aespipe
