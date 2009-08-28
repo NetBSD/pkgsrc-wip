@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+# $NetBSD: options.mk,v 1.2 2009/08/28 11:48:15 jihbed Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rss-glib
 
 PKG_SUPPORTED_OPTIONS=	python mono vala
-PKG_SUGGESTED_OPTIONS=	python
+PKG_SUGGESTED_OPTIONS=	python mono vala
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,6 +17,7 @@ PYTHON_VERSIONS_ACCEPTED=	26 25 24 23 22
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
 .  include "../../devel/py-gobject/buildlink3.mk"
 .  include "../../x11/py-gtk2/buildlink3.mk"
+PLIST_SRC+=		${PKGDIR}/PLIST.python
 .else
 CONFIGURE_ARGS+=	--disable-python
 .endif
@@ -28,6 +29,7 @@ CONFIGURE_ARGS+=	--disable-python
 .  include "../../lang/mono/buildlink3.mk"
 .  include "../../x11/gtk-sharp/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mono=yes
+PLIST_SRC+=		${PKGDIR}/PLIST.mono
 .else
 CONFIGURE_ARGS+=	--disable-mono
 .endif
@@ -38,6 +40,7 @@ CONFIGURE_ARGS+=	--disable-mono
 .if !empty(PKG_OPTIONS:Mvala)
 .  include "../../lang/vala/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-vala=yes
+PLIST_SRC+=		${PKGDIR}/PLIST.vala
 .else
 CONFIGURE_ARGS+=	--disable-vala
 .endif

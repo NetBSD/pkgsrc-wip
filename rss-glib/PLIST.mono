@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.mono,v 1.1 2009/08/28 11:48:15 jihbed Exp $
+lib/mono/gac/rss-glib-sharp/${PKGVERSION}.0__25389429e069c928/rss-glib-sharp.dll
+lib/mono/gac/rss-glib-sharp/${PKGVERSION}.0__25389429e069c928/rss-glib-sharp.dll.config
+lib/mono/gac/rss-glib-sharp/${PKGVERSION}.0__25389429e069c928/rss-glib-sharp.dll.mdb
+lib/mono/rss-glib-sharp-1.0/rss-glib-sharp.dll
+lib/mono/rss-glib-sharp-1.0/rss-glib-sharp.dll.mdb
+lib/pkgconfig/rss-glib-sharp-1.0.pc

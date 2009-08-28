@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.python,v 1.1 2009/08/28 11:48:15 jihbed Exp $
+${PYSITELIB}/gtk-2.0/rss.la
+share/pygtk/2.0/defs/rss.defs
