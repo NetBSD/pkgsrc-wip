@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3568 2009/08/27 18:00:41 jihbed Exp $
+# $Id: Makefile,v 1.3569 2009/08/28 07:48:47 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1126,7 +1126,6 @@ SUBDIR+=	mic-paren
 SUBDIR+=	microcom
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
-SUBDIR+=	milkytracker
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	milter-manager
 SUBDIR+=	mime-support
