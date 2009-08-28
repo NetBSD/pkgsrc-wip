@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/26 09:34:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/28 10:50:49 jihbed Exp $
 #
 
 DISTNAME=	amqplib-0.6
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://barryp.org/software/py-amqplib/
 COMMENT=	Client library for AMQP wirtten by python
-#LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
