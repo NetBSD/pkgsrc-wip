@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3569 2009/08/28 07:48:47 thomasklausner Exp $
+# $Id: Makefile,v 1.3570 2009/08/29 11:51:37 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -147,6 +147,7 @@ SUBDIR+=	bioruby
 SUBDIR+=	bird
 SUBDIR+=	blam
 SUBDIR+=	blassic
+SUBDIR+=	bleachbit
 SUBDIR+=	blop
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
@@ -1765,7 +1766,6 @@ SUBDIR+=	py-sympy-core
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-tranquil
-SUBDIR+=	py-trash
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-zopeinterface
