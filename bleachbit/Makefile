@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/29 11:45:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/29 13:29:53 jihbed Exp $
 #
 
 DISTNAME=	bleachbit-0.6.3
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED= 26 25
 PYDISTUTILSPKG= yes
 
-#only_platform: netbsd and linux
+ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-*
 
 REPLACE_PYTHON+=	bleachbit.py
 
