@@ -1,0 +1,131 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/08/29 11:45:21 jihbed Exp $
+
+--- ./bleachbit/Unix.py.orig	2009-08-27 13:03:52.000000000 +0000
++++ ./bleachbit/Unix.py	2009-08-29 11:52:31.000000000 +0000
+@@ -146,17 +146,18 @@
+ 
+     ooosharedirs = [ '/usr/lib/openoffice/share/', # Ubuntu 8
+         '/usr/lib/openoffice.org/basis3.0/share/', # Fedora 10
++        '/usr/pkg/lib/OpenOffice.org3.1.0/openoffice.org/basis3.1/share/', #NetBSD
+         '/opt/ooo-dev/basis3.0/share', # Sun development snapshot
+         '/opt/openoffice.org/basis3.0/share/' ] # Sun
+ 
+ 
+     def __init__(self):
+         self.__languages = []
+-        if os.path.exists('/usr/share/gnome/help'):
+-            for gapp in os.listdir('/usr/share/gnome/help'):
++        if os.path.exists('/usr/pkg/share/gnome/help'):
++            for gapp in os.listdir('/usr/pkg/share/gnome/help'):
+                 if 'libs' == gapp:
+                     continue
+-                dirname = os.path.join('/usr/share/gnome/help', gapp)
++                dirname = os.path.join('/usr/pkg/share/gnome/help', gapp)
+                 self.__basedirs.append(dirname)
+ 
+         for ooosharedir in self.ooosharedirs:
+@@ -257,7 +258,7 @@
+ 
+         # CUPS, Fedora 10
+         # /usr/share/cups/templates/es/jobs.tmpl
+-        lps += ( ('/usr/share/cups/templates/', lambda d: d.endswith('tmpl')) , )
++        lps += ( ('/usr/pkg/share/cups/templates/', lambda d: d.endswith('tmpl')) , )
+ 
+         # CUPS, Fedora 10
+         # /usr/share/cups/www/es/images/button-add-printer.gif
+@@ -271,16 +272,16 @@
+ 
+         # Evolution
+         # /usr/share/evolution/2.22/help/quickref/es/quickref.pdf
+-        lps += ( ('/usr/share/evolution/*/help/quickref/', dir_filter) , )
++        lps += ( ('/usr/pkg/share/evolution/*/help/quickref/', dir_filter) , )
+ 
+         # foomatic
+         dir_filter = lambda d: 2 != len(d)
+-        lps += ( ('/usr/share/foomatic/db/source/PPD/Kyocera/', dir_filter) , )
++        lps += ( ('/usr/pkg/share/foomatic/db/source/PPD/Kyocera/', dir_filter) , )
+ 
+         # man pages
+         # /usr/share/man/es/man1/man.1.gz
+         dir_filter = lambda d: d.startswith('man')
+-        lps += ( ('/usr/share/man/', dir_filter) , )
++        lps += ( ('/usr/pkg/man/', dir_filter) , )
+ 
+         # process lps
+         for lp in lps:
+@@ -294,7 +295,7 @@
+         globexs = []
+ 
+         # /usr/share/i18n/locales/es_ES@euro
+-        globexs += ( ('/usr/share/i18n/locales/??_*', 'locales/([a-z]{2}_[A-Z]{2})'), )
++        globexs += ( ('/usr/pkg/share/i18n/locales/??_*', 'locales/([a-z]{2}_[A-Z]{2})'), )
+         # /usr/share/ppd/splix/samsung/ml1740fr.ppd
+         globexs += ( ('/usr/share/ppd/splix/*/*fr.ppd', '(fr).ppd$' ), )
+         # /usr/share/espeak-data/es_dict
+@@ -310,7 +311,7 @@
+         # /usr/share/myspell/dicts/hyph_es_ES.dic
+         globexs += ( ('/usr/share/myspell/dicts/hyph_??_??.dic', '([a-z]{2}_[A-Z]{2}).dic$' ), )
+         # /usr/share/omf/gedit/gedit-es.omf
+-        globexs += ( ('/usr/share/omf/*/*-*.omf', '-([a-z]{2}).omf$'), )
++        globexs += ( ('/usr/pkg/share/omf/*/*-*.omf', '-([a-z]{2}).omf$'), )
+         # OpenOffice.org
+         # /usr/lib/openoffice/share/autocorr/acor_es-ES.dat
+         for ooosharedir in self.ooosharedirs:
+@@ -336,9 +337,9 @@
+         """Return the name of the language in its own language"""
+         if language_code in self.__native_locale_names:
+             return self.__native_locale_names[language_code]
+-        if os.path.exists('/usr/share/locale/all_languages'):
++        if os.path.exists('/usr/pkg/share/locale/all_languages'):
+             if not self.__config_read:
+-                self.__config.read('/usr/share/locale/all_languages')
++                self.__config.read('/usr/pkg/share/locale/all_languages')
+                 self.__config_read = True
+             option = 'Name[%s]' % (language_code, )
+             if self.__config.has_option(language_code, option):
+@@ -600,13 +601,12 @@
+ 
+     def test_is_broken_xdg_desktop(self):
+         """Unit test for is_broken_xdg_desktop()"""
+-        menu_dirs = [ '/usr/share/applications', \
+-            '/usr/share/autostart', \
+-            '/usr/share/gnome/autostart', \
+-            '/usr/share/gnome/apps', \
+-            '/usr/share/mimelnk', \
+-            '/usr/share/applnk-redhat/', \
+-            '/usr/local/share/applications/' ]
++        menu_dirs = [ '/usr/pkg/share/applications', \
++            '/usr/pkg/share/autostart', \
++            '/usr/pkg/share/gnome/autostart', \
++            '/usr/pkg/share/gnome/apps', \
++            '/usr/spkg/hare/mimelnk', \
++            '/usr/share/applnk-redhat/'] 
+         for dirname in menu_dirs:
+             for filename in [fn for fn in FileUtilities.children_in_directory(dirname, False) \
+                 if fn.endswith('.desktop')]:
+@@ -649,7 +649,7 @@
+         locale = locale_globex('/bin/ls', '(ls)$').next()
+         self.assertEqual(locale, ('ls', '/bin/ls'))
+ 
+-        fakepath = '/usr/share/omf/gedit/gedit-es.omf'
++        fakepath = '/usr/pkg/share/omf/gedit/gedit-es.omf'
+ 
+         def test_yield(pathname, regex):
+             """Replacement for globex()"""
+@@ -658,7 +658,7 @@
+         old_globex = FileUtilities.globex
+         FileUtilities.globex = test_yield
+ 
+-        func = locale_globex('/usr/share/omf/*/*-*.omf', '-([a-z]{2}).omf$')
++        func = locale_globex('/usr/pkg/share/omf/*/*-*.omf', '-([a-z]{2}).omf$')
+         actual = func.next()
+         expect = ('es', fakepath)
+         self.assertEqual(actual, expect, "Expected '%s' but got '%s'" % (expect, actual))
+@@ -704,6 +704,6 @@
+             print 'debug: yum bytes cleaned %d', bytes_freed
+ 
+ 
+-if __name__ == '__main__' and 'linux2' == sys.platform:
++if __name__ == '__main__' and 'netbsd5' <= sys.platform or 'linux2' == sys.platform:
+     unittest.main()
+ 

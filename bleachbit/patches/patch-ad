@@ -1,0 +1,131 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/08/29 11:45:21 jihbed Exp $
+
+--- ./bleachbit/CleanerBackend.py.orig	2009-08-27 13:03:52.000000000 +0000
++++ ./bleachbit/CleanerBackend.py	2009-08-29 01:27:48.000000000 +0000
+@@ -33,6 +33,9 @@
+ 
+ import FileUtilities
+ 
++if 'netbsd5' <= sys.platform:
++    import Unix
++
+ if 'linux2' == sys.platform:
+     import Unix
+ 
+@@ -126,7 +129,7 @@
+         for running in self.running:
+             type = running[0]
+             pathname = running[1]
+-            if 'exe' == type and sys.platform == 'linux2':
++            if 'exe' == type and sys.platform >= 'netbsd5' or 'linux2':
+                 if Unix.is_running(pathname):
+                     print "debug: process '%s' is runnning" % pathname
+                     return True
+@@ -193,7 +196,7 @@
+         # 'compact' or 'optimize' instead.
+         self.add_option('vacuum', _('Vacuum'), _('Clean database fragmentation to reduce space and improve speed without removing any data'))
+ 
+-        if sys.platform == 'linux2':
++        if sys.platform >= 'netbsd5':
+             self.profile_dir = "~/.mozilla/firefox*/*/"
+             self.add_running('exe', 'firefox')
+             self.add_running('exe', 'firefox-bin')
+@@ -215,7 +218,7 @@
+     def list_files(self):
+         # browser cache
+         cache_base = None
+-        if sys.platform == 'linux2':
++        if sys.platform >= 'netbsd5' or 'linux2':
+             cache_base = self.profile_dir
+         if sys.platform == 'win32':
+             cache_base = "$USERPROFILE\\Local Settings\\Application Data\\Mozilla\\Firefox\\Profiles\\*"
+@@ -407,7 +410,7 @@
+         self.add_option('recent_documents', _('Most recently used'), _("Delete the list of recently used documents"))
+ 
+         # reference: http://katana.oooninja.com/w/editions_of_openoffice.org
+-        if sys.platform == 'linux2':
++        if sys.platform >= 'netbsd5' or 'linux2':
+             self.prefixes = [ "~/.ooo-2.0", "~/.openoffice.org2", "~/.openoffice.org2.0", "~/.openoffice.org/3" ]
+             self.prefixes += [ "~/.ooo-dev3" ]
+         if sys.platform == 'win32':
+@@ -507,7 +510,7 @@
+ 
+     def __init__(self):
+         Cleaner.__init__(self)
+-        if sys.platform == 'linux2':
++        if sys.platform >= 'netbsd5' or 'linux2':
+             # TRANSLATORS: desktop entries are .desktop files in Linux tha
+             # make up the application menu (the menu that shows BleachBit,
+             # Firefox, and others.  The .desktop files also associate file
+@@ -546,7 +549,7 @@
+ 
+     def list_files(self):
+         # cache
+-        if sys.platform == 'linux2' and self.options["cache"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["cache"][1]:
+             dirname = os.path.expanduser("~/.cache/")
+             for filename in children_in_directory(dirname, True):
+                 yield filename
+@@ -563,7 +566,7 @@
+             '~/.kde2/share/mimelnk/application/', \
+             '~/.kde2/share/applnk' ]
+ 
+-        if sys.platform == 'linux2' and self.options["desktop_entry"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["desktop_entry"][1]:
+             for dirname in menu_dirs:
+                 for filename in [fn for fn in children_in_directory(dirname, False) \
+                     if fn.endswith('.desktop') ]:
+@@ -571,7 +574,7 @@
+                         yield filename
+ 
+         # unwanted locales
+-        if sys.platform == 'linux2' and self.options["localizations"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["localizations"][1]:
+             callback = lambda locale, language: options.get_language(language)
+             for path in Unix.locales.localization_paths(callback):
+                 yield path
+@@ -606,7 +609,7 @@
+                     files += [ globbed ]
+ 
+         # most recently used documents list
+-        if sys.platform == 'linux2' and self.options["recent_documents"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["recent_documents"][1]:
+             files += [ os.path.expanduser("~/.recently-used") ]
+ 
+         # fixme http://www.freedesktop.org/wiki/Specifications/desktop-bookmark-spec
+@@ -617,7 +620,7 @@
+ 
+ 
+         # temporary
+-        if sys.platform == 'linux2' and self.options["tmp"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["tmp"][1]:
+             dirnames = [ '/tmp', '/var/tmp' ]
+             for dirname in dirnames:
+                 for path in children_in_directory(dirname, True):
+@@ -639,7 +642,7 @@
+ 
+ 
+         # trash
+-        if sys.platform == 'linux2' and self.options["trash"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["trash"][1]:
+             dirname = os.path.expanduser("~/.Trash")
+             for filename in children_in_directory(dirname, False):
+                 yield filename
+@@ -681,7 +684,7 @@
+ 
+ 
+         # recent documents
+-        if sys.platform == 'linux2' and self.options["recent_documents"][1]:
++        if sys.platform >= 'netbsd5' or 'linux2' and self.options["recent_documents"][1]:
+             # GNOME 2.26 (as seen on Ubuntu 9.04) will retain the list
+             # in memory if it is simply deleted, so it must be shredded
+             # (or at least truncated).
+@@ -775,7 +778,7 @@
+ 
+ backends = {}
+ backends["firefox"] = Firefox()
+-if sys.platform == 'linux2':
++if sys.platform >= 'netbsd5' or 'linux2':
+     backends["kde"] = KDE()
+ backends["openofficeorg"] = OpenOfficeOrg()
+ if sys.platform == 'linux2':

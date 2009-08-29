@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/29 11:45:21 jihbed Exp $
+
+--- setup.py.orig	2009-08-16 17:03:08.000000000 +0000
++++ setup.py	2009-08-24 01:05:41.000000000 +0000
+@@ -64,6 +64,9 @@
+ 
+ 
+ data_files = []
++if sys.platform >= 'netbsd5':
++    data_files.append(('/usr/pkg/share/applications',['./bleachbit.desktop']))
++    data_files.append(('/usr/pkg/share/pixmaps/',['./bleachbit.png']))
+ if sys.platform == 'linux2':
+     data_files.append(('/usr/share/applications', ['./bleachbit.desktop']))
+     data_files.append(('/usr/share/pixmaps/', ['./bleachbit.png']))
