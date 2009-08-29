@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3572 2009/08/29 21:54:45 leot1990 Exp $
+# $Id: Makefile,v 1.3573 2009/08/29 22:29:37 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1269,7 +1269,6 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nvramtool
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
-SUBDIR+=	octave-nox11
 SUBDIR+=	ode
 SUBDIR+=	ogmrip
 SUBDIR+=	olsrd
