@@ -1,0 +1,6 @@
+Lingua::Translate translates text from one written language to another.
+Currently this is implemented by contacting Babelfish
+(http://babelfish.altavista.com/), so see there for the language pairs that
+are supported. Babelfish uses SysTran (http://www.systran.org/) to perform the
+translation, and contacting a SysTran translation server directly is also
+supported (in case your translation needs grow beyond babelfish' capacity).
