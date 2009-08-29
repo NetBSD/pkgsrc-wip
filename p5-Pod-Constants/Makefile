@@ -1,0 +1,23 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/08/29 21:19:45 leot1990 Exp $
+#
+
+DISTNAME=	Pod-Constants-0.16
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	textproc perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SAMV/}
+
+MAINTAINER=	leot1990@users.sourceforge.net
+HOMEPAGE=	http://search.cpan.org/dist/Pod-Constants/
+COMMENT=	Include constants from POD
+LICENSE=	artistic-2.0 # OR gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	p5-Test-Simple>=0.18:../../devel/p5-Test-Simple
+DEPENDS+=	p5-Pod-Parser>=1.13:../../textproc/p5-Pod-Parser
+
+PERL5_PACKLIST=	auto/Pod/Constants/.packlist
+USE_LANGUAGES=	# none
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"

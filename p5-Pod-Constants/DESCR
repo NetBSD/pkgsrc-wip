@@ -1,0 +1,3 @@
+Pod::Constants allows you to specify those constants that should be
+documented in your POD, and pull them out a run time in a fairly arbitrary
+fashion.
