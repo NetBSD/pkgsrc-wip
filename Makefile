@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3570 2009/08/29 11:51:37 jihbed Exp $
+# $Id: Makefile,v 1.3571 2009/08/29 15:39:18 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1019,7 +1019,6 @@ SUBDIR+=	libowl-av
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
-SUBDIR+=	libpciaccess
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
