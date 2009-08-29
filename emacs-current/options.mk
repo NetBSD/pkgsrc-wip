@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2009/08/22 05:36:22 obache Exp $
+# $NetBSD: options.mk,v 1.18 2009/08/29 02:22:32 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -10,6 +10,13 @@ PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
 PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 
 .include "../../mk/bsd.options.mk"
+
+###
+### Check incompatible option sets.
+###
+.if !empty(PKG_OPTIONS:Mnextstep) && !empty(PKG_OPTIONS:xft2)
+PKG_FAIL_REASON+=	`xft2' options is incompatible with `nextstep' option.
+.endif
 
 ###
 ### Support D-BUS
