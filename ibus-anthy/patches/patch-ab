@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/30 08:30:16 obache Exp $
+
+--- engine/Makefile.in.orig	2009-06-03 03:54:34.000000000 +0000
++++ engine/Makefile.in
+@@ -705,7 +705,7 @@ uninstall-am: uninstall-anthyDATA uninst
+ 
+ 
+ anthy.py anthy_wrap.c: anthy.i
+-	$(SWIG) -python -I/usr/include -o anthy_wrap.c $(srcdir)/anthy.i
++	$(SWIG) -python -I/usr/include ${ANTHY_CFLAGS} -o anthy_wrap.c $(srcdir)/anthy.i
+ 
+ anthy.xml: anthy.xml.in
+ 	( \
