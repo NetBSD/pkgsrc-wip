@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+
+--- setup/main.py.orig	2009-08-29 01:59:07.000000000 +0000
++++ setup/main.py
+@@ -69,7 +69,7 @@ class Setup(object):
+ 
+     def __init__(self):
+         super(Setup, self).__init__()
+-        locale.bind_textdomain_codeset("ibus", "UTF-8")
++        gettext.bind_textdomain_codeset("ibus", "UTF-8")
+         glade.textdomain("ibus")
+         glade_file = path.join(path.dirname(__file__), "./setup.glade")
+         self.__xml = glade.XML(glade_file)

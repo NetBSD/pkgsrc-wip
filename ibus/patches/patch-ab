@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+
+--- bus/main.c.orig	2009-08-29 01:59:07.000000000 +0000
++++ bus/main.c
+@@ -185,7 +185,7 @@ main (gint argc, gchar **argv)
+     }
+ 
+     /* create a new process group */
+-    setpgrp ();
++    setpgid (0, 0);
+ 
+     g_type_init ();
+ 
