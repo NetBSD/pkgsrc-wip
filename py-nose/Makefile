@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/02 00:05:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/30 21:20:17 jihbed Exp $
 #
 
-DISTNAME=	nose-0.10.1
+DISTNAME=	nose-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://python-nose.googlecode.com/files/
@@ -11,16 +11,12 @@ HOMEPAGE=	http://code.google.com/p/python-nose/
 COMMENT=	Unittest-based testing framework for python
 LICENSE=	gnu-lgpl-v2.1
 
+DEPENDS+=	pydb>=1.26:../../wip/pydb
+DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../wip/py-coverage
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-
-DOCDIR=	${PREFIX}/share/doc/${PKGNAME}
-
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${DOCDIR}
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
