@@ -1,27 +1,23 @@
-# $NetBSD: Makefile,v 1.3 2009/07/05 11:01:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/08/30 21:31:00 jihbed Exp $
 #
 
-DISTNAME=	coverage-3.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	coverage-3.0.1.tar
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://bitbucket.org/ned/coveragepy/downloads/
-EXTRACT_SUFX=	.bz2
+MASTER_SITES=	http://pypi.python.org/packages/source/c/coverage/
+EXTRACT_SUFX=	.gz#md5=9c40e153a80fc42944c11ce11ab02de5
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nedbatchelder.com/code/coverage/
 COMMENT=	Python module that measures and testing code coverage for Python
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=		user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/coveragepy
+WRKSRC=	${WRKDIR}/coverage-3.0.1
 
-USE_TOOLS+=	tar
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c
 BUILD_TARGET=	tracer.so
-
-post-extract:
-	cd ${WRKDIR} && ${TAR} -xvf ${DISTNAME}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
