@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/08/31 00:31:03 jihbed Exp $
+
+SHA1 (pycscope-0.3.tar.gz) = 0b719f8068d5d8378819fc18f2b049c7a2720f46
+RMD160 (pycscope-0.3.tar.gz) = 226656017274066eb59533dfa65fd3264e67c96b
+Size (pycscope-0.3.tar.gz) = 13650 bytes
