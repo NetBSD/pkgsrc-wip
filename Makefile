@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3575 2009/08/31 12:22:30 jsonn Exp $
+# $Id: Makefile,v 1.3576 2009/08/31 13:58:39 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -579,6 +579,7 @@ SUBDIR+=	guitone
 SUBDIR+=	gune
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwhois
+SUBDIR+=	gwsmhg
 SUBDIR+=	gxconsole
 SUBDIR+=	gxmessage
 SUBDIR+=	gxmms2
@@ -1677,6 +1678,7 @@ SUBDIR+=	py-buildbot
 SUBDIR+=	py-chm
 SUBDIR+=	py-configobj
 SUBDIR+=	py-coverage
+SUBDIR+=	py-cscope
 SUBDIR+=	py-csp
 SUBDIR+=	py-daemon
 SUBDIR+=	py-dbutils
@@ -1729,7 +1731,9 @@ SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mocker
+SUBDIR+=	py-mpmath
 SUBDIR+=	py-mysqldb-docs
+SUBDIR+=	py-netcdf
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose-senario
 SUBDIR+=	py-ntch
