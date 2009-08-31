@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2009/03/22 19:21:27 moubctez Exp $
+$NetBSD: patch-ah,v 1.2 2009/08/31 09:32:16 moubctez Exp $
 
---- manpages/Makefile.orig	2009-03-22 12:34:34.000000000 +0100
+--- manpages/Makefile.orig	2009-02-20 18:43:30.000000000 +0100
 +++ manpages/Makefile
-@@ -30,8 +30,7 @@ all:
+@@ -47,8 +47,7 @@ all:
  	@echo Nothing to do
  	
  install: uninstall

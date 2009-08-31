@@ -1,25 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2009/03/29 16:33:22 tnn2 Exp $
+$NetBSD: patch-aa,v 1.7 2009/08/31 09:32:16 moubctez Exp $
 
---- src/osdep/network.c.orig	2009-03-26 22:01:02.000000000 +0100
-+++ src/osdep/network.c
-@@ -32,14 +32,19 @@
+--- src/osdep/byteorder.h.orig	2009-08-31 09:41:38.000000000 +0200
++++ src/osdep/byteorder.h
+@@ -176,7 +176,7 @@
  
- #ifdef __MACH__
- #include <libkern/OSByteOrder.h>
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__NetBSD__)
- #include <machine/endian.h>
- #if BYTE_ORDER == BIG_ENDIAN
- # define __be32_to_cpu(x)       (x)
- # define __be64_to_cpu(x)       (x)
- #elif BYTE_ORDER == LITTLE_ENDIAN
-+# if defined(__NetBSD__)
-+# define __be32_to_cpu(x)       bswap32(x)
-+# define __be64_to_cpu(x)       bswap64(x)
-+#else
- # define __be32_to_cpu(x)       __bswap32(x)
- # define __be64_to_cpu(x)       __bswap64(x)
-+# endif
- #endif
- #elif defined (__sun) && defined (__sparc) /* Solaris SPARC, not Solaris x86 */
- #include <sys/byteorder.h>
+ 
+ 	// FreeBSD
+-	#ifdef __FreeBSD__
++	#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 		#include <machine/endian.h>
+ 	#endif
+ 

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2009/03/22 19:21:27 moubctez Exp $
+$NetBSD: patch-af,v 1.2 2009/08/31 09:32:16 moubctez Exp $
 
---- src/Makefile.orig	2009-01-22 23:52:20.000000000 +0100
+--- src/Makefile.orig	2009-06-14 17:07:09.000000000 +0200
 +++ src/Makefile
-@@ -174,10 +174,8 @@ distclean: clean
+@@ -201,10 +201,8 @@ distclean: clean
  
  install: all
  	$(MAKE) -C $(OSD) install

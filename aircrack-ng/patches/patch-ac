@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2009/03/29 16:33:22 tnn2 Exp $
+$NetBSD: patch-ac,v 1.3 2009/08/31 09:32:16 moubctez Exp $
 
---- src/airserv-ng.c.orig	2009-03-26 22:01:02.000000000 +0100
+--- src/airserv-ng.c.orig	2009-06-06 02:18:38.000000000 +0200
 +++ src/airserv-ng.c
 @@ -24,6 +24,7 @@
  
@@ -10,21 +10,3 @@ $NetBSD: patch-ac,v 1.2 2009/03/29 16:33:22 tnn2 Exp $
  #include <netinet/in.h>
  #include <arpa/inet.h>
  #include <stdio.h>
-@@ -37,7 +38,7 @@
- 
- #ifdef __MACH__
- #include <libkern/OSByteOrder.h>
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__NetBSD__)
- #include <machine/endian.h>
- #else
- #include <asm/byteorder.h>
-@@ -450,7 +451,7 @@ static void handle_card(struct sstate *s
- 	ri->ri_rate = OSSwapHostToBigInt32(ri->ri_rate);
- 	ri->ri_antenna = OSSwapHostToBigInt32(ri->ri_antenna);
- 
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__NetBSD__)
- #if BYTE_ORDER == BIG_ENDIAN
- # define __be32_to_cpu(x)       (x)
- # define __be64_to_cpu(x)       (x)

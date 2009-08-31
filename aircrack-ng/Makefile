@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/03/29 16:33:22 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2009/08/31 09:32:16 moubctez Exp $
 
-DISTNAME=		aircrack-ng-1.0-rc3
-PKGNAME=		aircrack-ng-1.0rc3
+DISTNAME=		aircrack-ng-1.0-rc4
+PKGNAME=		aircrack-ng-1.0rc4
 CATEGORIES=		security net
 MASTER_SITES=		http://download.aircrack-ng.org/
 
@@ -14,6 +14,7 @@ INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1
 
 USE_TOOLS+=		bash gmake
 REPLACE_BASH+=		scripts/airdriver-ng
+REPLACE_BASH+=		scripts/airodump-ng-oui-update
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
