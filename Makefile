@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3574 2009/08/31 12:13:17 yacht Exp $
+# $Id: Makefile,v 1.3575 2009/08/31 12:22:30 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -458,7 +458,6 @@ SUBDIR+=	gambas2
 SUBDIR+=	gambc
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
-SUBDIR+=	gbemol
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gcc44
