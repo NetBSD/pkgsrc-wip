@@ -1,0 +1,43 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/08/31 12:09:50 yacht Exp $
+
+--- src/sipe.c.orig	2009-08-24 05:45:44.000000000 +0100
++++ src/sipe.c
+@@ -4655,7 +4655,6 @@ static void process_incoming_notify_msrt
+ 	const char *availability;
+ 	const char *activity;
+ 	const char *activity_name = NULL;
+-	char *tmp = NULL;
+ 	const char *name;
+ 	char *uri;
+ 	int avl;
+@@ -4669,8 +4668,6 @@ static void process_incoming_notify_msrt
+ 	xmlnode *xn_display_name = xmlnode_get_child(xn_presentity, "displayName");
+ 	xmlnode *xn_email = xmlnode_get_child(xn_presentity, "email");
+ 	xmlnode *xn_userinfo = xmlnode_get_child(xn_presentity, "userInfo");
+-        xmlnode *xn_state = xn_userinfo ? xmlnode_get_descendant(xn_userinfo, "states", "state",  NULL):NULL;
+-        const char *avail = xn_state ? xmlnode_get_attrib(xn_state, "avail") : NULL;
+ 
+ 	xmlnode *xn_note = xn_userinfo ? xmlnode_get_child(xn_userinfo, "note") : NULL;
+ 	char *note = xn_note ? xmlnode_get_data(xn_note) : NULL;
+@@ -4718,13 +4715,6 @@ static void process_incoming_notify_msrt
+ 	if (avl < 100)
+ 		activity_name = SIPE_STATUS_ID_OFFLINE;
+ 
+-	if (act < 100 && avl < 100) { /* MSRTC elements are zero */
+-		if (avail) {
+-			avl = atoi(avail);
+-			activity_name = tmp = sipe_get_status_by_availability(avl);
+-		}
+-	}
+-
+ 	sbuddy = g_hash_table_lookup(sip->buddies, uri);
+ 	if (sbuddy)
+ 	{
+@@ -4741,7 +4731,6 @@ static void process_incoming_notify_msrt
+ 	purple_prpl_got_user_status(sip->account, uri, activity_name, NULL);
+ 	g_free(note);
+ 	xmlnode_free(xn_presentity);
+-	g_free(tmp);
+ 	g_free(uri);
+ }
+ 

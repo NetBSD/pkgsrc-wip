@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/08/31 12:09:50 yacht Exp $
+
+--- src/sipe-utils.c.orig	2009-08-24 05:45:44.000000000 +0100
++++ src/sipe-utils.c
+@@ -200,9 +200,9 @@ char *trim(char *b)
+ {
+ 	char *e = b + strlen(b);
+ 
+-	while (b < e && isspace(*b))
++	while (b < e && isspace((unsigned char)*b))
+ 		++b;
+-	while (e > b && isspace(*(e - 1)))
++	while (e > b && isspace((unsigned char)*(e - 1)))
+ 		--e;
+ 	*e='\0';
+ 
