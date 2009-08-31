@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/16 12:22:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/08/31 21:20:22 thomasklausner Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -87,6 +87,7 @@ lib/kde4/digikamimageplugin_infrared.so
 lib/kde4/digikamimageplugin_inpainting.so
 lib/kde4/digikamimageplugin_inserttext.so
 lib/kde4/digikamimageplugin_lenscorrection.so
+lib/kde4/digikamimageplugin_localcontrast.so
 lib/kde4/digikamimageplugin_noisereduction.so
 lib/kde4/digikamimageplugin_oilpaint.so
 lib/kde4/digikamimageplugin_perspective.so
@@ -222,6 +223,7 @@ share/kde/apps/digikam/digikamimageplugin_infrared_ui.rc
 share/kde/apps/digikam/digikamimageplugin_inpainting_ui.rc
 share/kde/apps/digikam/digikamimageplugin_inserttext_ui.rc
 share/kde/apps/digikam/digikamimageplugin_lenscorrection_ui.rc
+share/kde/apps/digikam/digikamimageplugin_localcontrast_ui.rc
 share/kde/apps/digikam/digikamimageplugin_noisereduction_ui.rc
 share/kde/apps/digikam/digikamimageplugin_oilpaint_ui.rc
 share/kde/apps/digikam/digikamimageplugin_perspective_ui.rc
@@ -664,6 +666,7 @@ share/kde4/services/digikamimageplugin_infrared.desktop
 share/kde4/services/digikamimageplugin_inpainting.desktop
 share/kde4/services/digikamimageplugin_inserttext.desktop
 share/kde4/services/digikamimageplugin_lenscorrection.desktop
+share/kde4/services/digikamimageplugin_localcontrast.desktop
 share/kde4/services/digikamimageplugin_noisereduction.desktop
 share/kde4/services/digikamimageplugin_oilpaint.desktop
 share/kde4/services/digikamimageplugin_perspective.desktop
