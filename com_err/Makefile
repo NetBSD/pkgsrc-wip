@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/03 22:38:45 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/08/31 11:42:52 yacht Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
+PKGREVISION=	1
 # what should the version be?
 PKGNAME=	com_err-${E2FSPROGS_VERSION}
 WRKSRC=		${WRKDIR}/${DISTNAME}/lib/et
