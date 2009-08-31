@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/08/31 22:10:25 thomasklausner Exp $
+
+--- configure.orig	2001-05-11 05:17:12.000000000 +0000
++++ configure
+@@ -14,7 +14,7 @@ ENABLE_SETUP="yes"
+ 
+ ## Where do we look for stuff?
+ ###################################
+-std_bin_dirs="/usr/bin /usr/X11R6/bin /usr/local/bin $HOME/bin"
++std_bin_dirs="/usr/bin /usr/X11R6/bin /usr/local/bin $HOME/bin $PREFIX/bin"
+ std_lib_dirs="/usr/lib /usr/X11R6/lib /usr/local/lib $HOME/lib"
+ 
+ ## Bring in the functions
