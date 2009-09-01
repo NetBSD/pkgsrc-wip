@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/07/30 12:47:22 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/09/01 13:09:52 mwdavies Exp $
 bin/akregator
 bin/akregatorstorageexporter
 bin/egroupwarewizard
@@ -728,7 +728,6 @@ share/icons/hicolor/scalable/apps/kmail.svgz
 share/icons/hicolor/scalable/apps/korganizer.svgz
 share/icons/oxygen/128x128/apps/kalarm.png
 share/icons/oxygen/128x128/apps/kleopatra.png
-share/icons/oxygen/16x16/actions/document-new-from-template.png
 share/icons/oxygen/16x16/actions/edit-delete-page.png
 share/icons/oxygen/16x16/actions/ldap_lookup.png
 share/icons/oxygen/16x16/actions/mail-forwarded-replied.png
@@ -749,11 +748,8 @@ share/icons/oxygen/16x16/status/mail-task.png
 share/icons/oxygen/22x22/actions/button_fewer.png
 share/icons/oxygen/22x22/actions/button_more.png
 share/icons/oxygen/22x22/actions/checkmark.png
-share/icons/oxygen/22x22/actions/document-new-from-template.png
 share/icons/oxygen/22x22/actions/edit-delete-page.png
-share/icons/oxygen/22x22/actions/kalarm.png
 share/icons/oxygen/22x22/actions/mail-reply-custom.png
-share/icons/oxygen/22x22/actions/new-command-alarm.png
 share/icons/oxygen/22x22/apps/kalarm.png
 share/icons/oxygen/22x22/apps/kleopatra.png
 share/icons/oxygen/22x22/mimetypes/x-mail-distribution-list.png
@@ -828,6 +824,10 @@ share/kde/apps/kaddressbook/printing/ringbinder-style.png
 share/kde/apps/kaddressbook/vcard_xxportui.rc
 share/kde/apps/kaddressbook/zone.tab
 share/kde/apps/kalarm/kalarmui.rc
+share/kde/apps/kalarm/icons/oxygen/16x16/actions/document-new-from-template.png
+share/kde/apps/kalarm/icons/oxygen/22x22/actions/document-new-from-template.png
+share/kde/apps/kalarm/icons/oxygen/22x22/actions/kalarm.png
+share/kde/apps/kalarm/icons/oxygen/22x22/actions/new-command-alarm.png
 share/kde/apps/kconf_update/kalarm-1.2.1-general.pl
 share/kde/apps/kconf_update/kalarm-1.9.5-defaults.pl
 share/kde/apps/kconf_update/kalarm-2.0.2-general.pl

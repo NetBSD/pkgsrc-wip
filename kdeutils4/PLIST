@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/07/30 12:47:23 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/09/01 13:09:53 mwdavies Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -266,7 +266,6 @@ share/kde/apps/profiles/dragonplayer.profile.xml
 share/kde/apps/profiles/klauncher.profile.xml
 share/kde/apps/profiles/kmix.profile.xml
 share/kde/apps/profiles/konqueror.profile.xml
-share/kde/apps/profiles/noatun.profile.xml
 share/kde/apps/profiles/okular.profile.xml
 share/kde/apps/profiles/profile.dtd
 share/kde/apps/profiles/shutdown.profile.xml
