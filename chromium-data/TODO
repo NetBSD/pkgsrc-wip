@@ -1,1 +1,0 @@
-It seems that GAMEGRP points to "root" instead of "games" it must be changed on default bsd.mk preferences.
