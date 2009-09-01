@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3581 2009/09/01 13:03:37 udontknow Exp $
+# $Id: Makefile,v 1.3582 2009/09/01 13:13:52 udontknow Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1475,6 +1475,7 @@ SUBDIR+=	p5-Net-IP-Match-Regexp
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-SenderBase
 SUBDIR+=	p5-Net-SMTP-TLS
+SUBDIR+=	p5-Net-Syslog
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-News-Newsrc
