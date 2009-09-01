@@ -1,4 +1,1 @@
-Does not compile on NetBSD-5.99.15/amd64 because of inline assembler
-in durango.c and lx_driver.c.
-
-https://bugs.freedesktop.org/show_bug.cgi?id=23590
+Package needs to be finished on an i386.
