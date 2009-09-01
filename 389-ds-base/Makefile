@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/26 20:36:01 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/01 21:21:31 udontknow Exp $
 #
 
 DISTNAME=	389-ds-base-1.2.2
@@ -33,7 +33,6 @@ CFLAGS+=                -I${BUILDLINK_DIR}/include/ldap
 
 EGDIR=                  ${PREFIX}/share/examples/389-ds-base
 CONF_FILES+=		${EGDIR}/dirsrv/config/certmap.conf ${PKG_SYSCONFDIR}/dirsrv/config/certmap.conf
-CONF_FILES+=		${EGDIR}/dirsrv/config/dirsrv ${PKG_SYSCONFDIR}/dirsrv/config/dirsrv
 CONF_FILES+=		${EGDIR}/dirsrv/config/slapd-collations.conf ${PKG_SYSCONFDIR}/dirsrv/config/slapd-collations.conf
 CONF_FILES+=		${EGDIR}/dirsrv/schema/00core.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/00core.ldif
 CONF_FILES+=		${EGDIR}/dirsrv/schema/01common.ldif ${PKG_SYSCONFDIR}/dirsrv/schema/01common.ldif

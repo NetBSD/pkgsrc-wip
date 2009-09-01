@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/26 20:36:01 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/01 21:21:31 udontknow Exp $
 bin/cl-dump
 bin/cl-dump.pl
 bin/dbgen.pl
@@ -169,7 +169,6 @@ share/dirsrv/script-templates/template-usn-tombstone-cleanup.pl
 share/dirsrv/script-templates/template-verify-db.pl
 share/dirsrv/script-templates/template-vlvindex
 share/examples/389-ds-base/dirsrv/config/certmap.conf
-share/examples/389-ds-base/dirsrv/config/dirsrv
 share/examples/389-ds-base/dirsrv/config/slapd-collations.conf
 share/examples/389-ds-base/dirsrv/schema/00core.ldif
 share/examples/389-ds-base/dirsrv/schema/01common.ldif
