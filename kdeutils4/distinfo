@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.22 2009/09/01 13:09:53 mwdavies Exp $
+$NetBSD: distinfo,v 1.23 2009/09/02 09:38:37 mwdavies Exp $
 
 SHA1 (kdeutils-4.3.1.tar.bz2) = 9743636306cfb137241b6c87f5944e6bf91870fe
 RMD160 (kdeutils-4.3.1.tar.bz2) = 72dcc9d0a5592b371873398604e1bf59acb9eb4e
 Size (kdeutils-4.3.1.tar.bz2) = 2524224 bytes
+SHA1 (patch-aa) = 275e579aa5b99b7e2e4e0af719d6fd629f6bfd8b
