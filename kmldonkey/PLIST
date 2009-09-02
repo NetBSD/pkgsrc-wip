@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/07 01:33:52 ficovh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/02 22:32:11 thomasklausner Exp $
 bin/kmldonkey
 bin/kmldonkey_submit
 include/kmldonkey/clientinfo.h
@@ -69,23 +69,3 @@ share/kde/services/magnet.protocol
 share/kde/services/mldonkey.protocol
 share/kde/services/sig2dat.protocol
 share/kde/servicetypes/kmldonkey_plugin.desktop
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services/kded
-@comment in kde: @dirrm share/kde/services
-@dirrm share/kde/apps/mldonkeyapplet/pics
-@dirrm share/kde/apps/mldonkeyapplet
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@dirrm share/kde/apps/kmldonkey/images/networks
-@dirrm share/kde/apps/kmldonkey/images
-@dirrm share/kde/apps/kmldonkey
-@comment in kde: @dirrm share/kde/apps/kicker/applets
-@comment in kde: @dirrm share/kde/apps
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kmldonkey-apidocs/kmldonkey/html
-@dirrm share/doc/kde/HTML/en/kmldonkey-apidocs/kmldonkey/html
-@dirrm share/doc/kde/HTML/en/kmldonkey-apidocs/kmldonkey
-@dirrm share/doc/kde/HTML/en/kmldonkey-apidocs
-@dirrm share/doc/kde/HTML/en/kmldonkey
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3
-@dirrm include/kmldonkey
