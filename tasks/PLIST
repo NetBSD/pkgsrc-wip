@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/09 16:21:38 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/02 12:31:36 thomasklausner Exp $
 bin/tasks
 share/applications/tasks.desktop
 share/icons/hicolor/16x16/apps/tasks.png
@@ -33,15 +33,7 @@ share/locale/ro/LC_MESSAGES/tasks.mo
 share/locale/ru/LC_MESSAGES/tasks.mo
 share/locale/sk/LC_MESSAGES/tasks.mo
 share/locale/sv/LC_MESSAGES/tasks.mo
+share/locale/th/LC_MESSAGES/tasks.mo
 share/locale/tr/LC_MESSAGES/tasks.mo
 share/locale/vi/LC_MESSAGES/tasks.mo
 share/locale/zh_CN/LC_MESSAGES/tasks.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
