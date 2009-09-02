@@ -1,9 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/30 13:03:24 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/09/02 12:21:18 thomasklausner Exp $
 bin/task
 man/man1/task.1
+man/man5/task-tutorial.5
 man/man5/taskrc.5
-share/doc/task/AUTHORS
-share/doc/task/ChangeLog
-share/doc/task/NEWS
-share/doc/task/README
-share/doc/task/task_completion.sh
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/i18n/strings.de-DE
+share/doc/${PKGNAME}/i18n/strings.en-US
+share/doc/${PKGNAME}/i18n/strings.es-ES
+share/doc/${PKGNAME}/i18n/strings.fr-FR
+share/doc/${PKGNAME}/i18n/strings.nl-NL
+share/doc/${PKGNAME}/i18n/strings.sv-SE
+share/doc/${PKGNAME}/i18n/tips.de-DE
+share/doc/${PKGNAME}/i18n/tips.en-US
+share/doc/${PKGNAME}/i18n/tips.sv-SE
+share/doc/${PKGNAME}/scripts/bash/task_completion.sh
+share/doc/${PKGNAME}/scripts/vim/README
+share/doc/${PKGNAME}/scripts/vim/ftdetect/task.vim
+share/doc/${PKGNAME}/scripts/vim/syntax/taskdata.vim
+share/doc/${PKGNAME}/scripts/vim/syntax/taskedit.vim
+share/doc/${PKGNAME}/scripts/zsh/_task
