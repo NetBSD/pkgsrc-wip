@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/08/26 18:51:38 gduzan Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/02 10:00:26 thomasklausner Exp $
 
 DISTNAME=	kmymoney2-1.0.0
 CATEGORIES=	finance kde
@@ -10,6 +10,8 @@ HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for KDE
 LICENSE=	gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake msgfmt perl pkg-config bash
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
@@ -18,7 +20,6 @@ CONFIG_SHELL=		${BASH}
 SHLIBTOOL_OVERRIDE=	# empty
 
 USE_TOOLS+=		gsed
-
 USE_TOOLS+=		autoconf
 
 pre-configure:
@@ -30,20 +31,14 @@ CONFIGURE_ARGS+=	--enable-mt
 
 REPLACE_PERL+=	admin/fixuifiles
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.if (${OPSYS} == "NetBSD")
-BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
-.endif
-
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.if (${OPSYS} == "NetBSD")
+BUILDLINK_ABI_DEPENDS.qt3-libs+=	qt3-libs>=3.3.8nb9
+.endif
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
