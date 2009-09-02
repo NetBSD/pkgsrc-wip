@@ -1,0 +1,10 @@
+Ruby convenience framework for instant messaging.
+
+Features
+* Supports sending and receiving of messages, using an API inspired by Action
+  Mailer
+* Simple mocking out of message sending code, to make unit testing your
+  messaging code almost trivial
+* Configuration for the messengers separated from the code
+* Ability to control multiple messengers, if you want, although a single
+  messenger is much easier
