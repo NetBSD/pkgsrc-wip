@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/17 09:16:08 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/02 09:29:46 rsmarples Exp $
 
 DISTNAME=	TracFullBlogPlugin-0.1dev
-PKGNAME=	trac-plugins-FullBlog-0.1pre6158
+PKGNAME=	trac-plugins-FullBlog-0.1pre6403
 PKGREVISION=	# blank on purpose even though pkglint moans
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
@@ -16,7 +16,7 @@ DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
 SVN_REPOSITORIES=	fullblog
 SVN_ROOT.fullblog=	http://trac-hacks.org/svn/fullblogplugin/0.11
-SVN_TAG.fullblog=	6158
+SVN_TAG.fullblog=	6403
 
 NO_CHECKSUM=	yes
 
