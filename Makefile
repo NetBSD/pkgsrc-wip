@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3583 2009/09/01 21:16:59 thomasklausner Exp $
+# $Id: Makefile,v 1.3584 2009/09/02 19:37:29 yuripoloni Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1854,6 +1854,7 @@ SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
 SUBDIR+=	ruby-GalleryAdministrator
+SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
 SUBDIR+=	runawk
