@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/11 10:16:40 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/03 22:08:22 cheusov Exp $
 #
 
 DISTNAME=		mc-4.1.40-pre9
@@ -13,10 +13,14 @@ COMMENT=		Midnight Commander clone
 
 CONFLICTS+=		mc-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 INSTALL_MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
+
+CONFIGURE_ARGS+=	--disable-nls
 
 REPLACE_PERL+=		vfs/extfs/a vfs/extfs/deb vfs/extfs/mailfs
 
