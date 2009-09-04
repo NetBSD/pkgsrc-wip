@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2009/08/26 10:55:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2009/09/04 22:38:39 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.1.1
-PKGREVISION=	1
+VERS=		2.1.80
 CATEGORIES=	audio multimedia
-MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
-		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
+MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
+		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
+#MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
+#		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://amarok.kde.org/
 COMMENT=	KDE4 audio player
+LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
@@ -45,6 +47,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.5
 # for plasma
 .include "../../wip/kdebase-workspace4/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../wip/liblastfm/buildlink3.mk"
 .include "../../wip/qtscriptgenerator/buildlink3.mk"
 .include "../../wip/kde4/kde4.mk"
 .include "../../mk/bsd.pkg.mk"
