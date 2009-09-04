@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2009/01/17 09:19:24 asau Exp $
+# $NetBSD: options.mk,v 1.9 2009/09/04 10:58:14 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -25,6 +25,8 @@ PKG_SUGGESTED_OPTIONS+=		regexp
 .elif ${OPSYS} == "FreeBSD" && !empty(OS_VERSION:N[0-6].*)
 PKG_SUGGESTED_OPTIONS+=		gmalloc
 .endif
+
+PKG_SUGGESTED_OPTIONS=		gmalloc ffcall	# Override!!
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

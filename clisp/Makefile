@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/08/22 18:09:00 asau Exp $
+# $NetBSD: Makefile,v 1.26 2009/09/04 10:58:14 asau Exp $
 #
 
 DISTNAME=		clisp-2.47
@@ -55,6 +55,8 @@ CONFIGURE_ENV+=		PS2PDF= ac_cv_prog_PS2PDF=
 .if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-mmap
 .endif
+
+CONFIGURE_ARGS+=	--with-dynamic-modules
 
 .include "options.mk"
 
