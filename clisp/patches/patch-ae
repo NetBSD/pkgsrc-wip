@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2009/09/04 12:48:30 asau Exp $
+
+Remove offending assertion, time_t is wider than unsigned int on NetBSD 5.99.
+
+--- modules/syscalls/gllib/mktime.c.orig	2009-08-06 04:03:32.000000000 +0400
++++ modules/syscalls/gllib/mktime.c	2009-09-04 13:43:32.000000000 +0400
+@@ -165,8 +165,6 @@
+ 	    int year0, int yday0, int hour0, int min0, int sec0)
+ {
+   verify (C99_integer_division, -1 / 2 == 0);
+-  verify (long_int_year_and_yday_are_wide_enough,
+-	  INT_MAX <= LONG_MAX / 2 || TIME_T_MAX <= UINT_MAX);
+ 
+   /* Compute intervening leap days correctly even if year is negative.
+      Take care to avoid integer overflow here.  */
