@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/09/28 06:41:09 rillig Exp $
+$NetBSD: distinfo,v 1.7 2009/09/05 20:33:58 asau Exp $
 
-SHA1 (ccrypt-1.4.tar.gz) = d3a55097c0681cf02a0c5626aaebfcbaeb5a4aca
-RMD160 (ccrypt-1.4.tar.gz) = f80c1a24889d4dcffb852c8e02455f095896eeda
-Size (ccrypt-1.4.tar.gz) = 165797 bytes
-SHA1 (patch-ab) = ec1bc807704b32783ac1aa5e1f019ef96f505069
-SHA1 (patch-ad) = b5ce3306a010ab30d23eec9556acdf8257a99357
-SHA1 (patch-ae) = 919633e63465cea9d0203041a8120d6e92ce9fb3
-SHA1 (patch-af) = 8b34aaf980ba364def40129afe60241290e97709
-SHA1 (patch-ag) = fb61cd453d31aa09300258894e3e8f3219b64092
+SHA1 (ccrypt-1.9.tar.gz) = 5ad1889c71be905c3004c80dc011948c9c35c814
+RMD160 (ccrypt-1.9.tar.gz) = 2e7ec037dcfab82ad6963b8644a52017ac6c003e
+Size (ccrypt-1.9.tar.gz) = 667059 bytes
+SHA1 (patch-ah) = a5c08375daf92a3bf770bc6168338abaed42dd0b

@@ -1,0 +1,20 @@
+--- emacs/Makefile.in.orig	2009-08-29 05:30:12.000000000 +0400
++++ emacs/Makefile.in	2009-09-06 00:25:41.000000000 +0400
+@@ -309,7 +309,7 @@
+ 	    test -f elc-stamp; exit $$?; \
+ 	  fi; \
+ 	else : ; fi
+-install-lispLISP: $(lisp_LISP) $(ELCFILES)
++install-lispLISP: $(lisp_LISP)
+ 	@$(NORMAL_INSTALL)
+ 	@if test "$(EMACS)" != no; then \
+ 	  test -z "$(lispdir)" || $(mkdir_p) "$(DESTDIR)$(lispdir)"; \
+@@ -373,7 +373,7 @@
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LISP) $(ELCFILES)
++all-am: Makefile $(LISP)
+ installdirs:
+ 	for dir in "$(DESTDIR)$(lispdir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
