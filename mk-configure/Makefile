@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/09/05 14:41:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2009/09/05 14:53:47 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.11.1
@@ -35,10 +35,10 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == SunOS && exists(/usr/xpg4/bin/awk)
-REPLACE_INTERPRETER+=   awk
-REPLACE.awk.old=        /usr/bin/awk
-REPLACE.awk.new=        /usr/xpg4/bin/awk
-REPLACE_FILES.awk=      mkc_check_version
+REPLACE_INTERPRETER+=	awk
+REPLACE.awk.old=	/usr/bin/awk
+REPLACE.awk.new=	/usr/xpg4/bin/awk
+REPLACE_FILES.awk=	mkc_check_version
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/09/05 13:50:43 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/09/05 14:53:47 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -15,6 +15,12 @@ man/man1/mkc_check_header.1
 man/man1/mkc_check_prog.1
 man/man1/mkc_check_sizeof.1
 man/man7/mk-configure.7
+share/doc/mk-configure/COPYRIGHT
+share/doc/mk-configure/ChangeLog
+share/doc/mk-configure/FAQ
+share/doc/mk-configure/NEWS
+share/doc/mk-configure/README
+share/doc/mk-configure/TODO
 share/examples/mk-configure/8/Makefile
 share/examples/mk-configure/Makefile
 share/examples/mk-configure/hello_compilers/Makefile
@@ -99,12 +105,6 @@ share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
 share/examples/mk-configure/subprojects/test.mk
 share/examples/mk-configure/subprojects/version.mk
-share/doc/mk-configure/COPYRIGHT
-share/doc/mk-configure/ChangeLog
-share/doc/mk-configure/FAQ
-share/doc/mk-configure/NEWS
-share/doc/mk-configure/README
-share/doc/mk-configure/TODO
 share/mk/_mkc.missedfiles.mk
 share/mk/_mkc.ver.mk
 share/mk/configure.mk
