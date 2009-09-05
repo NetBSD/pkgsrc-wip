@@ -4,10 +4,12 @@ Major changes from original nawk:
   - fixed: serious bug with regular expression, NetBSD PR/33392
   - tolower/toupper functions support multibyte charsets, NetBSD PR/36394
   - there is no hardcoded limit on number of open files, NetBSD PR/37205
-  - incorrect handling of \ at the end of line in awk script NetBSD PR/37212
-  - fixed: description of function "close" in man page PR/38132
-  - fixed: incorrect matching of [:cntrl:] PR/38737
-  - warning about non-portable escape sequences PR/39002
-  - fixed: free(): warning: junk pointer, too low to make sense PR/39132
-  - fixed: broken -Ft is broken PR/39133
-  - fixed: segfaults when "nextfile" is in BEGIN {...} bin/39134
+  - incorrect handling of \ at the end of line in awk script, NetBSD PR/37212
+  - fixed: description of function "close" in man page, PR/38132
+  - fixed: incorrect matching of [:cntrl:], PR/38737
+  - warning about non-portable escape sequences, PR/39002
+  - fixed: free(): warning: junk pointer, too low to make sense, PR/39132
+  - fixed: broken -Ft is broken, PR/39133
+  - fixed: segfaults when "nextfile" is in BEGIN {...}, bin/39134
+  - fixed: nawk doesn't handle RS as a RE but as a single character, PR/30294
+  - fixed: awk(1) crash with RE and ^ anchor, PR/40689
