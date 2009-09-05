@@ -1,30 +1,33 @@
-# $NetBSD: Makefile,v 1.5 2009/07/28 22:22:16 rsmarples Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/05 20:56:20 asau Exp $
 
-CATEGORIES=www
-DISTNAME=cgit-0.8.2.1
-PKGREVISION=1
-HOMEPAGE=http://hjemli.net/git/cgit
-COMMENT=Fast web interface for git
+DISTNAME=	cgit-0.8.2.1
+PKGREVISION=	1
+CATEGORIES=	www
+MASTER_SITES=	http://hjemli.net/git/cgit/snapshot/
+EXTRACT_SUFX=	.tar.bz2
 
-USE_TOOLS+=gmake
-MAKE_JOBS_SAFE=no
-MAKE_FLAGS+=GIT_VER=1.6.3.3
-BUILD_MAKE_FLAGS+=CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
-BUILD_TARGET=get-git all
+HOMEPAGE=	http://hjemli.net/git/cgit
+COMMENT=	Fast web interface for git
+MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 
-PKG_DESTDIR_SUPPORT=user-destdir
-BUILD_DEPENDS+= curl>=7.19.2:../../www/curl
+BUILD_DEPENDS+=	curl>=7.19.2:../../www/curl
 
-MASTER_SITES=http://hjemli.net/git/cgit/snapshot/
-DISTFILES=${DISTNAME}.tar.bz2
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
+
+USE_TOOLS+=		gmake
+MAKE_FLAGS+=		GIT_VER=1.6.3.3
+BUILD_MAKE_FLAGS+=	CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
+BUILD_TARGET=		get-git all
 
 CGIT_CONFIG=	${PKG_SYSCONFDIR}/cgitrc
 CGIT_CGIBIN=	${PREFIX}/libexec/cgi-bin
 CGIT_HTDOCS=	${PREFIX}/share/httpd/htdocs/cgit
 CGIT_EGDIR=	${PREFIX}/share/examples
 
-CONF_FILES= ${CGIT_EGDIR}/cgitrc ${CGIT_CONFIG}
-INSTALLATION_DIRS= libexec/cgi-bin share/httpd/htdocs/cgit
+CONF_FILES=		${CGIT_EGDIR}/cgitrc ${CGIT_CONFIG}
+INSTALLATION_DIRS=	libexec/cgi-bin share/httpd/htdocs/cgit
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cgit ${DESTDIR}${CGIT_CGIBIN}/cgit.cgi
