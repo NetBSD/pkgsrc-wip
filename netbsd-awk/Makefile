@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/09/09 20:44:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/05 18:16:30 cheusov Exp $
 #
 
-DISTNAME=	netbsd-awk-20080721
+DISTNAME=	netbsd-awk-20090901
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	http://mova.org/~cheusov/pub/netbsd-tools/
 EXTRACT_SUFX=	.tar.bz2
