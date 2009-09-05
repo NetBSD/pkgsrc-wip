@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/08 16:45:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/09/05 19:42:54 asau Exp $
 bin/ccgnu2-config
 include/cc++/address.h
 include/cc++/buffer.h
@@ -44,4 +44,3 @@ lib/libccgnu2.la
 lib/pkgconfig/libccext2.pc
 lib/pkgconfig/libccgnu2.pc
 share/aclocal/ost_check2.m4
-@dirrm include/cc++
