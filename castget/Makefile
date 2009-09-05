@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/29 09:46:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/05 18:57:43 asau Exp $
 #
 
 DISTNAME=	castget-1.0.1
@@ -17,7 +17,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake intltool pkg-config
 
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS=	share/examples
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/castgetrc.example \
