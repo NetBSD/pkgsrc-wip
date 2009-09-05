@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2009/08/02 22:16:36 pettai Exp $
+$NetBSD: distinfo,v 1.4 2009/09/05 18:46:29 asau Exp $
 
-SHA1 (Botan-1.8.5.tgz) = e23b916e24ed7653d409d887b1a958e085f0648f
-RMD160 (Botan-1.8.5.tgz) = e641e8c51dbb5ae55014e755496075da489f84bb
-Size (Botan-1.8.5.tgz) = 3444972 bytes
+SHA1 (Botan-1.8.6.tgz) = 8a7ad28222c8f2ae1819be312e3f6bac8f2b33c1
+RMD160 (Botan-1.8.6.tgz) = 57b4a7442a83a7369c4752f71bf74f2e6792a26c
+Size (Botan-1.8.6.tgz) = 3464318 bytes
 SHA1 (patch-aa) = 91a2711d489ceb8d49c6b1c6b8b76d3bd4f2c2a9
+SHA1 (patch-ab) = 0ea36671ce20312923c895dbed54516901ec404a
+SHA1 (patch-ac) = 2c30c98a62f5570f552cf280d7dc9c815abbce5e
+SHA1 (patch-ad) = 732e11be291aaabe8817e6a77cbd5e3716dbd9bd

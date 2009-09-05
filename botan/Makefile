@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/08/02 21:59:35 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/05 18:46:29 asau Exp $
 
-DISTNAME=	Botan-1.8.5
-PKGNAME=	botan-1.8.5
-#PKGREVISION=	0
+DISTNAME=	Botan-1.8.6
+PKGNAME=	botan-1.8.6
 CATEGORIES=	security
 MASTER_SITES=	http://files.randombit.net/botan/
 EXTRACT_SUFX=	.tgz
@@ -14,30 +13,21 @@ LICENSE=	botan-license
 
 LICENSE_FILE=	${FILESDIR}/botan-license
 
-USE_TOOLS+=	perl
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	c++
-REPLACE_PERL=	./configure.pl
-#REPLACE_PYTHON=	./configure.py
-#HAS_CONFIGURE=	yes
-CONFIG_SHELL=		perl
-#CONFIGURE_SCRIPT=	./configure.pl
-#CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+HAS_CONFIGURE=		yes
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	./configure.py
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+USE_TOOLS=		pkg-config
 
-MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
+USE_LANGUAGES=		c++
+
+MAKE_FLAGS+=		LIB_OPT=${CXXFLAGS:Q}
 
 CXXFLAGS.DragonFly+=	-D_DRAGONFLY_SOURCE
 #CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 BUILDLINK_TRANSFORM+=	rm:-mcpu=i686
 
-# depricated
-pre-build:
-	cd ${WRKSRC} && \
-	${CONFIG_SHELL} ./configure.pl --prefix=${PREFIX:Q}
-
-# new way
-#pre-build:
-#	cd ${WRKSRC} && \
-#	${CONFIG_SHELL} ./configure.py --prefix=${PREFIX:Q}
-
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
