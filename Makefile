@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3585 2009/09/02 22:34:24 thomasklausner Exp $
+# $Id: Makefile,v 1.3586 2009/09/05 17:35:23 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -50,7 +50,6 @@ SUBDIR+=	TextEdit
 SUBDIR+=	TinySVM
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
-SUBDIR+=	aamath
 SUBDIR+=	abclock
 SUBDIR+=	acpid
 SUBDIR+=	adamem
