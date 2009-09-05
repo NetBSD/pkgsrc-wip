@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/09/05 14:26:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2009/09/05 14:41:41 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.11.0
+DISTNAME=	mk-configure-0.11.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -34,11 +34,11 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${OPSYS} == NetBSD && exists(/usr/pkg/heirloom/bin/posix2001/awk)
+.if ${OPSYS} == SunOS && exists(/usr/xpg4/bin/awk)
 REPLACE_INTERPRETER+=   awk
-REPLACE.awk.old=        /.*/nawk
-REPLACE.awk.new=        /usr/bin/awk
+REPLACE.awk.old=        /usr/bin/awk
+REPLACE.awk.new=        /usr/xpg4/bin/awk
 REPLACE_FILES.awk=      mkc_check_version
-#.endif
+.endif
 
 .include "../../mk/bsd.pkg.mk"
