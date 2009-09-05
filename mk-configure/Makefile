@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/09/05 13:50:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2009/09/05 14:26:31 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.11.0
@@ -31,5 +31,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PREFIX}/${PKGDOCDIR}
 .endfor
 	cp -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+#.if ${OPSYS} == NetBSD && exists(/usr/pkg/heirloom/bin/posix2001/awk)
+REPLACE_INTERPRETER+=   awk
+REPLACE.awk.old=        /.*/nawk
+REPLACE.awk.new=        /usr/bin/awk
+REPLACE_FILES.awk=      mkc_check_version
+#.endif
 
 .include "../../mk/bsd.pkg.mk"
