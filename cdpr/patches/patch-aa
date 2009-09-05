@@ -1,35 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2003/06/08 11:05:58 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/05 20:48:45 asau Exp $
 
---- Makefile.orig	2003-02-14 04:58:28.000000000 +0000
-+++ Makefile
-@@ -3,21 +3,26 @@
+--- Makefile.orig	2003-12-06 03:17:06.000000000 +0300
++++ Makefile	2009-09-06 00:44:45.000000000 +0400
+@@ -3,7 +3,7 @@
  #CFLAGS=-Wall -ggdb -lpcap -I/usr/include/pcap
  
  # Standard build with pcap installed on the system
--#CFLAGS = -Wall -ggdb
-+#
-+# XXX Recent libpcap's have both HAVE_PCAP_IF_T and HAVE_PCAP_FREECODE.
-+# XXX NetBSD's in-tree pcap does not.
-+#
-+#CFLAGS=-Wall -ggdb -lpcap -DHAVE_PCAP_IF_T -DHAVE_PCAP_FREECODE
-+CFLAGS+=-Wall
+-CFLAGS = -Wall -W -O2 -ggdb
++CFLAGS = -O2 -Wall
  
  # Build for the Zaurus with the pcap headers/libs one dir up
--CFLAGS = -DZAURUS -Wall -I. -I../libpcap-0.7.1 -L../libpcap-0.7.1 -ggdb
-+#CFLAGS = -DZAURUS -Wall -I. -I../libpcap-0.7.1 -L../libpcap-0.7.1 -ggdb
- 
- # Build for Solaris with the pcap headers/libs one dir up
- #CFLAGS = -DSOLARIS -Wall -I. -I../libpcap-0.7.1 -L../libpcap-0.7.1 -ggdb
- 
--LDFLAGS = -lpcap
-+LDFLAGS+= -lpcap
- 
- # Build for Solaris
+ #CFLAGS = -DZAURUS -Wall -I. -I../libpcap-0.7.1 -L../libpcap-0.7.1 -ggdb
+@@ -17,7 +17,7 @@
  #LDFLAGS = -lsocket -lnsl -lpcap
  
- cdpr: cdpr.c cdp.h
--	gcc $(CFLAGS) cdpr.c $(LDFLAGS) -o cdpr
-+	$(CC) $(CFLAGS) cdpr.c $(LDFLAGS) -o cdpr
+ cdpr: cdpr.c cdprs.c conffile.c cdp.h cdpr.h
+-	gcc $(CFLAGS) cdpr.c cdprs.c conffile.c $(LDFLAGS) -o cdpr
++	$(CC) $(CFLAGS) $(LDFLAGS) -o cdpr cdpr.c cdprs.c conffile.c
  
  clean:
  	rm -f cdpr

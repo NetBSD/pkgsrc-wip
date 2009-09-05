@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/09/28 06:41:09 rillig Exp $
+$NetBSD: distinfo,v 1.6 2009/09/05 20:48:45 asau Exp $
 
-SHA1 (cdpr-1.0.8.tgz) = 94425d26a3fcb5f5841a1f3c8a9d5a1cb360186a
-RMD160 (cdpr-1.0.8.tgz) = 4d522752dc6b6592e832f738f5e12c2e96f79323
-Size (cdpr-1.0.8.tgz) = 16800 bytes
-SHA1 (patch-aa) = 7d16e03421174286d37365a67fce9e10efd2c933
-SHA1 (patch-ab) = ba2f050ef2c84c43061b729fbe94a471e974f421
+SHA1 (cdpr-2.3.tgz) = 2d453bfacf653aeba079f135128f5242c7ccd0c0
+RMD160 (cdpr-2.3.tgz) = d26524fad4f05b8962ad98341d22202d3e6c735d
+Size (cdpr-2.3.tgz) = 25492 bytes
+SHA1 (patch-aa) = 08a62cb3757623e257ed9bb2457391fa34aac77e
