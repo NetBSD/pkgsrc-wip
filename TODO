@@ -101,6 +101,8 @@ Suggested ready to import packages
 	o am-utils [pkg/35668]
 	o botan
 	o castget
+	o commoncpp2
+	o ccrtp
 	o gipfel [pkg/40558]
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
