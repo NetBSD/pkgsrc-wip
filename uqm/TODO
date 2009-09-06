@@ -1,14 +1,2 @@
-* This doesn't currently work under NetBSD 1.6.2 and GNU PTH.
-
-  - SDL_SemWait is returning -1, which indicates an error
-
-  - src/sc2code/libs/threads/sdl/sdlthreads.h
-    #define NativeSetSemaphore(sem) \
-                SDL_SemWait ((sem))
-
-
-  - src/sc2code/libs/threads/thrcommon.c
-    int
-    SetSemaphore (Semaphore sem)
-    [...]
-    i = NativeSetSemaphore ((NativeSemaphore) sem);
+. destdir support broken: destdir is leaked into bin/uqm
+. missing rpath: with native X, libGL.so.2 isn't found
