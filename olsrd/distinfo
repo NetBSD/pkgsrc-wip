@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2009/09/06 23:06:47 khorben Exp $
+$NetBSD: distinfo,v 1.4 2009/09/06 23:17:58 khorben Exp $
 
 SHA1 (olsrd-0.5.6-r5.tar.gz) = ffdb773c840e03e269ca67fd39fd0fec623fa61a
 RMD160 (olsrd-0.5.6-r5.tar.gz) = 67d7957659b75d8a22c483d245f5026104f582db
 Size (olsrd-0.5.6-r5.tar.gz) = 655329 bytes
 SHA1 (patch-aa) = c9cd8a8953055085d838ec355793e0e48528a22e
 SHA1 (patch-ab) = f58b9aa8aa526968a88816e241cc57ee95dc2398
-SHA1 (patch-ac) = ebd8cebc8b524b4ac47d83f7fd80457170d65c75
+SHA1 (patch-ac) = 3856bf562c9a0c92417c04c5a0c5c32bdd3d54af
 SHA1 (patch-ad) = b9f220ebaaf06d852e00976139f970db9e4f474e

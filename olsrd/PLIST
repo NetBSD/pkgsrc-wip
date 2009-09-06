@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/06 23:06:47 khorben Exp $
-etc/olsrd.conf
+@comment $NetBSD: PLIST,v 1.4 2009/09/06 23:17:58 khorben Exp $
 man/man5/olsrd.conf.5
 man/man8/olsrd.8
 sbin/olsrd
