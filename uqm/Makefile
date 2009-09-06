@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/05/19 09:00:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2009/09/06 23:06:24 thomasklausner Exp $
 #
 
 DISTNAME=	uqm-0.6.2-source
@@ -18,8 +18,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-USE_TOOLS=	gmake pkg-config
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/sc2
+USE_TOOLS=		gmake pkg-config
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/sc2
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-configure
@@ -27,7 +27,7 @@ SUBST_MESSAGE.config=	Fixing config.state...
 SUBST_FILES.config=	config.state
 SUBST_SED.config+=	-e 's;/usr/local/games;${DESTDIR}${PREFIX};'
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin lib share/uqm/content/packages share/doc/uqm
 
 do-configure:
 	cd ${WRKSRC} && ./build.sh uqm config
@@ -37,11 +37,10 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ./build.sh uqm install
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/uqm/content/packages
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uqm
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.6.0-content.uqm \
 		${DESTDIR}${PREFIX}/share/uqm/content/packages
-	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt ${DESTDIR}${PREFIX}/share/doc/uqm
+	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt \
+		${DESTDIR}${PREFIX}/share/doc/uqm
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"
