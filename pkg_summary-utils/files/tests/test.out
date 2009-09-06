@@ -292,7 +292,7 @@ CATEGORIES=graphics
 = wip/runawk
 --------------------------------------------------
 ------- pkg_list_all_pkgs #3
-XXXXX
+XXXX
 --------------------------------------------------
 ------- pkg_micro_src_summary #4
 PKGNAME=distbb-X
@@ -535,6 +535,10 @@ ok1
 ok2
 --------------------------------------------------
 ------- pkg_src_summary #10.1
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=26
+PKGNAME=ap2-py26-python-3.3.1
+PKGPATH=www/ap2-python
+
 ASSIGNMENTS=PKG_APACHE=apache2
 PKGNAME=ap2-py25-python-3.3.1
 PKGPATH=www/ap2-python
@@ -545,6 +549,10 @@ PKGPATH=www/ap2-python
 
 ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=23
 PKGNAME=ap2-py23-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=26
+PKGNAME=ap22-py26-python-3.3.1
 PKGPATH=www/ap2-python
 
 PKGNAME=ap22-py25-python-3.3.1
@@ -560,6 +568,10 @@ PKGPATH=www/ap2-python
 
 --------------------------------------------------
 ------- pkg_src_summary #10.2
+ASSIGNMENTS=PYTHON_VERSION_REQD=26
+PKGNAME=ap22-py26-python-3.3.1
+PKGPATH=www/ap2-python
+
 PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
