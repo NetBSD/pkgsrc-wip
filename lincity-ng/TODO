@@ -1,0 +1,2 @@
+On NetBSD-5.99.16/amd64, dumps core during startup, generating
+a 152MB core. -- wiz 20090907
