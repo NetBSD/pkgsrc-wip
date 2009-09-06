@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/20 11:44:24 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/06 07:37:56 asau Exp $
 #
 
 DISTNAME=	geant4.9.2
@@ -17,6 +17,12 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/source
 MAKE_FILE=	GNUmakefile
 USE_TOOLS+=	gmake pax
 USE_LANGUAGES=	c c++
+
+REPLACE_SH=	examples/advanced/Tiara/envCommon.sh
+# It should be:
+#REPLACE_CSH=	examples/extended/biasing/B02/setupPI.csh
+# skip it for now:
+CHECK_INTERPRETER_SKIP=	geant/examples/extended/biasing/B02/setupPI.csh
 
 BUILD_TARGET=	# empty
 
