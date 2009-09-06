@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2009/06/29 15:41:01 khorben Exp $
+$NetBSD: patch-ab,v 1.2 2009/09/06 21:15:32 khorben Exp $
 
 --- Makefile.inc.orig	2009-06-24 19:00:51.000000000 +0200
 +++ Makefile.inc
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2009/06/29 15:41:01 khorben Exp $
  # target directories and names
  DESTDIR ?=
 -SBINDIR ?= $(DESTDIR)/usr/sbin
-+DESTDIR ?= /usr
++PREFIX ?= /usr
 +SBINDIR ?= $(DESTDIR)$(PREFIX)/sbin
  ETCDIR  ?= $(DESTDIR)/etc
 -LIBDIR  ?= $(DESTDIR)/usr/lib
