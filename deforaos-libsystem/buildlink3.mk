@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/09/06 21:54:31 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/09/06 23:26:04 khorben Exp $
 
 BUILDLINK_TREE+=	deforaos-libsystem
 
@@ -8,7 +8,6 @@ DEFORAOS_LIBSYSTEM_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.deforaos-libsystem+=	deforaos-libsystem>=0.1.2
 BUILDLINK_PKGSRCDIR.deforaos-libsystem?=	../../wip/deforaos-libsystem
 
-#.include "../../security/openssl/buildlink3.mk"
 .endif	# DEFORAOS_LIBSYSTEM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-deforaos-libsystem

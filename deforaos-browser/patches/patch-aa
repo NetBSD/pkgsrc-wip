@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/09/06 21:57:47 khorben Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/06 23:25:31 khorben Exp $
+
+gcc prefers "-lSystem" to "-lSystem"
 
 --- src/Makefile.orig	2009-08-13 18:59:40.000000000 +0200
 +++ src/Makefile
