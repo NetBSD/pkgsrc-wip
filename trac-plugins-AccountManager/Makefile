@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2009/07/20 13:12:26 rsmarples Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/07 11:50:32 obache Exp $
 
-DISTNAME=	TracAccountManager-0.2.1dev
-PKGNAME=	trac-plugins-AccountManager-0.2.1pre5836
-PKGREVISION=	# empty
-EGG_NAME=	${DISTNAME}
+DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
+PKGNAME=	trac-plugins-AccountManager-0.2.1pre${SVN_REV}
+EGG_NAME=	TracAccountManager-0.2.1dev
 CATEGORIES=	www
-MASTER_SITES=	# not defined
+MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/AccountManagerPlugin
@@ -15,19 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
-SVN_REPOSITORIES=	acct_mgr
-SVN_ROOT.acct_mgr=	http://trac-hacks.org/svn/accountmanagerplugin/0.11
-SVN_TAG.acct_mgr=	5836
-
-NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}/acct_mgr
-
-PRIVILEGED_STAGES+=	clean
+SVN_REV=	5836
+SVN_MOD=	accountmanagerplugin/0.11
+WRKSRC=		${WRKDIR}/${SVN_MOD}
 
 post-extract:
-	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
+	find ${WRKSRC} -type f -print | xargs chmod +r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
