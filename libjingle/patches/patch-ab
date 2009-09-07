@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+
+--- talk/base/openssladapter.cc.orig	2008-09-16 14:55:22.000000000 +0100
++++ talk/base/openssladapter.cc
+@@ -641,7 +641,7 @@ OpenSSLAdapter::SSLPostConnectionCheck(S
+     int extension_nid = OBJ_obj2nid(X509_EXTENSION_get_object(extension));
+ 
+     if (extension_nid == NID_subject_alt_name) {
+-      X509V3_EXT_METHOD* meth = X509V3_EXT_get(extension);
++      const X509V3_EXT_METHOD* meth = X509V3_EXT_get(extension);
+       if (!meth)
+         break;
+ 

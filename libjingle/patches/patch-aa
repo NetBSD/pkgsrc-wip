@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+
+--- talk/base/network.cc.orig	2008-09-16 14:55:22.000000000 +0100
++++ talk/base/network.cc
+@@ -185,7 +185,8 @@ void NetworkManager::CreateNetworks(std:
+ 
+   struct ifconf ifc;
+   ifc.ifc_len = 64 * sizeof(struct ifreq);
+-  ifc.ifc_buf = new char[ifc.ifc_len];
++  char *ifcbuf = new char[ifc.ifc_len];
++  ifc.ifc_buf = ifcbuf;
+ 
+   if (ioctl(fd, SIOCGIFCONF, &ifc) < 0) {
+     PLOG(LERROR, errno) << "ioctl";
+@@ -193,9 +194,9 @@ void NetworkManager::CreateNetworks(std:
+   }
+   assert(ifc.ifc_len < static_cast<int>(64 * sizeof(struct ifreq)));
+ 
+-  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifc.ifc_buf);
++  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifcbuf);
+   struct ifreq* end =
+-      reinterpret_cast<struct ifreq*>(ifc.ifc_buf + ifc.ifc_len);
++      reinterpret_cast<struct ifreq*>(ifcbuf + ifc.ifc_len);
+ 
+   while (ptr < end) {
+     struct sockaddr_in* inaddr =
+@@ -212,7 +213,7 @@ void NetworkManager::CreateNetworks(std:
+ #endif
+   }
+ 
+-  delete [] ifc.ifc_buf;
++  delete [] ifcbuf;
+   close(fd);
+ }
+ #endif

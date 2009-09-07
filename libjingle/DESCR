@@ -1,0 +1,7 @@
+This is the farsight version of Google's libjingle as distributed by
+Freedesktop.org. It's required by gst-plugins-farsight.
+
+Google's Libjingle (http://code.google.com/apis/talk/index.html) is Google
+Talk's implementation of Jingle and Jingle-Audio (proposed extensions to
+XMPP) to interoperate with Google Talk's peer-to-peer and voice calling
+capabilities.

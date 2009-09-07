@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+
+--- talk/base/ssladapter.cc.orig	2008-09-16 14:55:22.000000000 +0100
++++ talk/base/ssladapter.cc
+@@ -99,7 +99,7 @@ static void locking_function(int mode, i
+ }
+ 
+ static unsigned long id_function() {
+-  return static_cast<unsigned long>(THREAD_ID);
++  return reinterpret_cast<unsigned long>(THREAD_ID);
+ }
+ 
+ struct CRYPTO_dynlock_value {
