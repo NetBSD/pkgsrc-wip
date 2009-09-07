@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/07 14:13:27 jihbed Exp $
+bin/graph-editor
+bin/graph-editor.byte
+bin/graph-editor.opt
+bin/graph-viewer
+bin/graph-viewer.byte
+bin/graph-viewer.opt
+lib/ocaml/graph.a
+lib/ocaml/graph.cma
+lib/ocaml/graph.cmi
+lib/ocaml/graph.cmo
+lib/ocaml/graph.cmx
+lib/ocaml/graph.cmxa
+lib/ocaml/viewGraph.cmo
+lib/ocaml/viewGraph.cmx
+lib/ocaml/viewGraph_select.cmo
+lib/ocaml/viewGraph_select.cmx
+lib/ocaml/viewGraph_test.cmo
+lib/ocaml/viewGraph_test.cmx
+lib/ocaml/viewGraph_utils.cmo
+lib/ocaml/viewGraph_utils.cmx
+share/doc/ocamlgraph/FAQ
+share/doc/ocamlgraph/README
