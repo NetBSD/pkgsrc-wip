@@ -87,7 +87,14 @@ pkg_cmp_summary -P src_summary.txt src_summary2.txt | sort -k2,2
 echo '--------------------------------------------------'
 echo '------- pkg_list_all_pkgs #3'
 env  pkg_list_all_pkgs |
-awk 'END {gsub(/[0-9]/, "X", NR); print NR}'
+awk '
+END {
+    if (NR > 7000) {
+        print "XXXX"
+    }else{
+        print "failure"
+    }
+}'
 
 normalize_version (){
   awk '{
@@ -177,7 +184,7 @@ echo '------- pkg_src_summary #11'
 pkg_src_summary -A -f PKGNAME,PKGPATH \
    graphics/py-cairo:PYTHON_VERSION_REQD=25 |
 grep -v DEPENDS |
-pkg_grep_summary -m PKGPATH 'gmake|py-Numeric|py-cairo' |
+pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo' |
 normalize_version
 
 echo '--------------------------------------------------'
