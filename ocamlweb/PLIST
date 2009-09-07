@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/07 14:12:27 jihbed Exp $
+bin/ocamlweb
+man/man1/ocamlweb.1
+share/texmf/tex/latex/misc/ocamlweb.sty

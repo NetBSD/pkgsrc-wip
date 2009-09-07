@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/07 14:12:27 jihbed Exp $
+
+SHA1 (ocamlweb-1.37.tar.gz) = 65d0bf3d34aec4e5cf133604565068b863a661d4
+RMD160 (ocamlweb-1.37.tar.gz) = cadcad4ac7fc55c99c18cc6e43d0e0b6c70b9844
+Size (ocamlweb-1.37.tar.gz) = 122424 bytes
+SHA1 (patch-aa) = bae9facc56ca2f91b16f070c137c1629003f3405
