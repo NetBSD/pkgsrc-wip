@@ -1,0 +1,5 @@
+This is the Farsight plugin for GStreamer.
+
+Farsight uses GStreamer for all its media streaming needs. A large part of
+the project is to provide the required elements and improvements to GStreamer
+in order to deal with streaming protocols such as RTP.
