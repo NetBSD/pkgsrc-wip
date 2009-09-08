@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/24 21:29:51 netcap Exp $
+$NetBSD: distinfo,v 1.2 2009/09/08 17:20:42 fjaeckel Exp $
 
-SHA1 (Pound-2.4c.tgz) = 25347e0f44f5dc4bfc1cec5bc3e07755815c85b3
-RMD160 (Pound-2.4c.tgz) = 8a1bde47343692dfdaf76ebd7f0fcf29ee15facd
-Size (Pound-2.4c.tgz) = 157006 bytes
+SHA1 (Pound-2.4.5.tgz) = c5e3122045df0239f9e92de24fd3e48788b9d1f5
+RMD160 (Pound-2.4.5.tgz) = 75e2fd05065b9cb83208a49c339fc10c8e7cb199
+Size (Pound-2.4.5.tgz) = 170486 bytes
