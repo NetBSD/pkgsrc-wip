@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/08/19 13:20:05 schnoebe Exp $
+# $NetBSD: Makefile,v 1.15 2009/09/08 03:18:02 schnoebe Exp $
 
 PSI_VERSION=	0.13
 DISTNAME=	psi-${PSI_VERSION}
@@ -48,19 +48,22 @@ SITES.${l}=	http://psi-im.org/download/lang/
 .endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
+INSTALL_DIRS=		src
+INSTALL_TARGET=		install_target install_sharedfiles
+INSTALL_MAKE_FLAGS=	INSTALL_ROOT=${DESTDIR}
 
 .include "options.mk"
 
 post-install:
 	# remove some files that shouldn't be there,
 	# install some files where they should be installed
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/psi
-	${RM} ${PREFIX}/share/psi/README
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/psi
-	${RM} ${PREFIX}/share/psi/COPYING
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/psi
+	${RM} ${DESTDIR}${PREFIX}/share/psi/README
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/psi
+	${RM} ${DESTDIR}${PREFIX}/share/psi/COPYING
 	# install the translations
 .for f in ${LANG_FILES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
 .endfor
 
 .include "../../devel/libidn/buildlink3.mk"
@@ -68,5 +71,4 @@ post-install:
 .include "../../security/qca2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.4.0
 .include "../../x11/qt4-libs/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
