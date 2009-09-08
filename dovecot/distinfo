@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.47 2009/08/11 11:47:17 ghen Exp $
+$NetBSD: distinfo,v 1.48 2009/09/08 08:27:18 ghen Exp $
 
-SHA1 (dovecot-1.2-managesieve-0.11.8.tar.gz) = b6f3ea109af6848b6cc4d81083d02aff4fd009c7
-RMD160 (dovecot-1.2-managesieve-0.11.8.tar.gz) = d69cec0c626b09753b7ad293529274725b75555e
-Size (dovecot-1.2-managesieve-0.11.8.tar.gz) = 389860 bytes
-SHA1 (dovecot-1.2-sieve-0.1.11.tar.gz) = 4345ca6873427355bef32703015589fcbf4e8585
-RMD160 (dovecot-1.2-sieve-0.1.11.tar.gz) = 3a4b6866ab338d17e07eaf60f067191e01c6d94c
-Size (dovecot-1.2-sieve-0.1.11.tar.gz) = 944964 bytes
-SHA1 (dovecot-1.2.3-managesieve-0.11.8.diff.gz) = 6e36540500efa46f9bb859395f4188a557bfb195
-RMD160 (dovecot-1.2.3-managesieve-0.11.8.diff.gz) = a4e086950245000b4d68f0f6a943aae5f2c09b39
-Size (dovecot-1.2.3-managesieve-0.11.8.diff.gz) = 6425 bytes
-SHA1 (dovecot-1.2.3.tar.gz) = 881ae3748af2f2352b3e84037ce044b57eef4b7c
-RMD160 (dovecot-1.2.3.tar.gz) = 190a28af98686ae58cd6fd25cd2c88463db3f812
-Size (dovecot-1.2.3.tar.gz) = 2652036 bytes
+SHA1 (dovecot-1.2-managesieve-0.11.9.tar.gz) = 63f3c6cf6615586c5b4bbd2feffc9f0c774edcb7
+RMD160 (dovecot-1.2-managesieve-0.11.9.tar.gz) = 1b85540bb0b32e30a6f8e780b6922c4e8ce3bb23
+Size (dovecot-1.2-managesieve-0.11.9.tar.gz) = 396242 bytes
+SHA1 (dovecot-1.2-sieve-0.1.12.tar.gz) = cd142f051b45b58cc162222f9ccdc12e1f69c343
+RMD160 (dovecot-1.2-sieve-0.1.12.tar.gz) = 92ed585f098ebaa37bececa56bdd912d47e7f162
+Size (dovecot-1.2-sieve-0.1.12.tar.gz) = 964938 bytes
+SHA1 (dovecot-1.2.4-managesieve-0.11.9.diff.gz) = 6bf0e3a96d08e2d8dd222414cc49031fcf072254
+RMD160 (dovecot-1.2.4-managesieve-0.11.9.diff.gz) = 25d6fc34869495312891cece5a607912223825a8
+Size (dovecot-1.2.4-managesieve-0.11.9.diff.gz) = 6422 bytes
+SHA1 (dovecot-1.2.4.tar.gz) = 37a9947cd86c09a7b5582f085c6a75e928336f1e
+RMD160 (dovecot-1.2.4.tar.gz) = ea19b3543ed8c4f012e3cfc5acf9bc2767eb6b83
+Size (dovecot-1.2.4.tar.gz) = 2637375 bytes
 SHA1 (patch-aa) = 447e46268a93201b3ef22491ff0968752978d020
 SHA1 (patch-ab) = 37a99a6b0abbed8dd14d773d6a7c22dd8011433a
 SHA1 (patch-ac) = 29906f29cc30352aba38083b43730d92b47d251e
