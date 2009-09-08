@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/06/29 09:09:13 fjaeckel Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/08 09:34:01 fjaeckel Exp $
 
-DISTNAME=	bird-1.1.0
+DISTNAME=	bird-1.1.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://bird.network.cz/pub/bird/
 
