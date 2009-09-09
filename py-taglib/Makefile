@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/06 19:09:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/09 11:18:58 thomasklausner Exp $
 #
 
 DISTNAME=	python-taglib-1.3.3
@@ -19,8 +19,6 @@ PY_PATCHPLIST=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23 22
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
