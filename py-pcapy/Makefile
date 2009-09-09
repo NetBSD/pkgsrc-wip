@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/22 15:38:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=		pcapy-0.10.2
@@ -12,8 +12,6 @@ COMMENT=		Python interface to pcap library
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	23
 
 .include "../../lang/python/extension.mk"
 

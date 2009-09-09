@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=		Soya-0.6.1
@@ -14,8 +14,6 @@ COMMENT=		High level 3D engine for Python
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	23
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

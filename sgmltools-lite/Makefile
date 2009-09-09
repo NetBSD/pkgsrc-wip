@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/22 15:38:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2009/09/09 11:22:14 thomasklausner Exp $
 
 DISTNAME=	sgmltools-lite-3.0.3
 PKGREVISION=	1
@@ -24,8 +24,6 @@ PKG_SYSCONFSUBDIR=	sgml
 EGDIR=			${LOCALBASE}/share/examples/sgmltools-lite
 CONFIGURE_ARGS+=	--with-etcsgml=${EGDIR}
 CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share
-
-PYTHON_VERSIONS_ACCEPTED=	23
 
 # Avoid using -s on /usr/pkg/bin/sgmltools
 _STRIPFLAG_INSTALL=

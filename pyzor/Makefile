@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/11/03 14:45:09 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/09 11:22:14 thomasklausner Exp $
 
 DISTNAME=	pyzor-0.4.0
 CATEGORIES=	mail
@@ -12,8 +12,6 @@ COMMENT=	Collaborative, networked system to detect and block spam
 .if defined(PYZOR_USE_PYZORD) && !empty(PYZOR_USE_PYZORD:M[Yy][Ee][Ss])
 DEPENDS+=	${PYPKGPREFIX}-gdbm>=0nb1:../../databases/py-gdbm
 .endif
-
-PYTHON_VERSIONS_ACCEPTED=	23
 
 BUILD_DEFS+=	PYZOR_USE_PYZORD
 

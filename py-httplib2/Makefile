@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/19 20:20:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=	httplib2-0.5.0
@@ -12,8 +12,6 @@ COMMENT=	Comprehensive http client library for Python
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

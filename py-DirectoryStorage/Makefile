@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/22 21:23:01 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=		DirectoryStorage_1_1_7
@@ -14,7 +14,6 @@ COMMENT=		Storage for ZODB, that uses files and directories
 NO_CONFIGURE=		yes
 PYTHON_PATCH_SCRIPTS=	${TOOLS}
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED=	23
 
 # package settings
 

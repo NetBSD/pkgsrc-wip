@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/09 11:22:10 thomasklausner Exp $
 #
 
 DISTNAME=	LiVES-0.9.9.9
@@ -24,9 +24,6 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	pkg-config perl gmake intltool msgfmt
-
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
-
 
 REPLACE_PERL+=	build-lives-rfx-plugin-multi build-lives-rfx-plugin \
 		tools/autolives.pl \

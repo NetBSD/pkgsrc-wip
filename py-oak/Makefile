@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/22 15:38:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=		oak-1.2
@@ -12,11 +12,6 @@ COMMENT=		Authoritative/recursive DNS server
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-#
-# TODO: I am not sure about non- versions
-#
-PYTHON_VERSIONS_ACCEPTED=	23
 
 post-patch:
 	${CP} ${WRKSRC}/setup.cfg ${WRKSRC}/setup.cfg.pkgsrc

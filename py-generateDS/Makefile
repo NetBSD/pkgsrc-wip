@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/05/22 15:38:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=	generateDS-1.6a
@@ -15,7 +15,6 @@ PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PYTHON_PATCH_SCRIPTS=	generateDS.py
-PYTHON_VERSIONS_ACCEPTED= 23
 
 # set up a convenience link
 post-install:

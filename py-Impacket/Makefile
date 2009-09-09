@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/22 15:38:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 DISTNAME=		Impacket-0.9.5.1
@@ -12,8 +12,6 @@ COMMENT=		Collection of Python classes for working with network protocols
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

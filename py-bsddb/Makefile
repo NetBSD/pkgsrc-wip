@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/06 20:54:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/09 11:22:11 thomasklausner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-bsddb-0
@@ -17,8 +17,6 @@ EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_bsddb.c
 PY_SETUP_SUBST+=	BLPREFIX=${LOCALBASE}
 PY_SETUP_SUBST+=	DBRTPREFIX=${BUILDLINK_PREFIX.db4}
 PY_SETUP_SUBST+=	DBPREFIX=${BUILDLINK_PREFIX.db4}
-
-PYTHON_VERSIONS_ACCEPTED= 23
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
