@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/08/16 15:35:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.24 2009/09/09 11:32:10 athaba Exp $
 #
 
-DISTNAME=		tor-0.2.1.19
-PKGREVISION=		2
+DISTNAME=		tor-0.2.2.1-alpha
+PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -43,26 +43,21 @@ OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
-CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
+CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
-CONF_FILES+=		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample \
-			${PKG_SYSCONFDIR}/torrc
+CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
+				${PKG_SYSCONFDIR}/torrc
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
 
-INSTALLATION_DIRS+=	share/examples/tor
+INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
+
 CHECK_PORTABILITY_SKIP+=contrib/*
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=		-c99
 .endif
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
-		${DESTDIR}${PREFIX}/share/examples/tor/torrc.sample
-	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
-		${DESTDIR}${PREFIX}/share/examples/tor/tor-tsocks.conf
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 .include "../../devel/libevent/buildlink3.mk"

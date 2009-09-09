@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tor.in,v 1.1.1.1 2008/08/01 22:57:08 athaba Exp $
+# $NetBSD: tor.in,v 1.2 2009/09/09 11:32:10 athaba Exp $
 #
 # PROVIDE: tor
 # REQUIRE: DAEMON
@@ -26,7 +26,7 @@ restart_cmd="tor_stop ; tor_start"
 
 tor_start ()
 {
-	${command} --User @TOR_USER@ --Group @TOR_GROUP@ --RunAsDaemon 1 \
+	${command} --User @TOR_USER@ --RunAsDaemon 1 \
 		--DataDirectory @PKG_HOME@ --PIDFile ${pidfile}
 }
 

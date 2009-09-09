@@ -1,3 +1,6 @@
+This package contains the unstable version of Tor.
+You can find the stable version in net/tor.
+
 The simple version: Tor provides a distributed network of servers ("onion
 routers"). Users bounce their TCP streams (web traffic, FTP, SSH, etc.) around
 the routers. This makes it hard for recipients, observers, and even the onion
