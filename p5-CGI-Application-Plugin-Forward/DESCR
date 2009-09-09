@@ -1,0 +1,7 @@
+The forward method passes control to another run mode and returns its output.
+This is equivalent to calling $self->$other_runmode, except that
+CGI::Application's internal value of the current run mode is updated.
+This means that calling $self->get_current_runmode after calling forward will
+return the name of the new run mode.
+This is useful for modules that depend on the name of the current run mode
+such as CGI::Application::Plugin::AnyTemplate.
