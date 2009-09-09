@@ -4,7 +4,7 @@ LC_ALL=C
 export LC_ALL
 
 #
-srcdir=..
+srcdir="`pwd`/.."
 if test "$OBJDIR"; then
     objdir=${OBJDIR}
 else
@@ -17,10 +17,12 @@ if test -z "$BMAKE"; then
 fi
 PKGSRCDIR="`pwd`/../../../.."
 
-AWKPATH="$srcdir"
+AWKPATH="$srcdir:$OBJDIR"
 PATH=$OBJDIR:$PATH
 
-export PKGSRCDIR BMAKE AWKPATH PATH
+PSS_MKSCRIPTSDIR="${srcdir}"
+
+export PKGSRCDIR BMAKE AWKPATH PATH PSS_MKSCRIPTSDIR AWKPATH
 
 #
 print_args (){
