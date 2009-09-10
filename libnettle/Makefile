@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/09/06 10:08:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/10 12:20:17 cheusov Exp $
 
 DISTNAME=	nettle-1.15
 PKGNAME=	lib${DISTNAME}
@@ -12,6 +12,16 @@ HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/
 COMMENT=	Cryptographic library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SOEXT=dylib
+.else
+SOEXT=so
+.endif
+
+PLIST_SUBST+=		SOEXT=${SOEXT}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-openssl --enable-shared
