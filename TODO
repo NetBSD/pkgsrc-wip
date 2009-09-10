@@ -24,7 +24,7 @@ Suggested package updates
 	o firebird-2.0.3
 	o gajim-0.12
 	o gallery-1.5.10
-	o gambas2-2.15
+	o gambas2-2.16
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o gcc44-4.4.1
@@ -50,7 +50,7 @@ Suggested package updates
 	o libuuid-1.41.9
 	o lincity-ng-2.0
 	o linphone-3.1.2
-	o lives-1.0.0
+	o lives-1.1.1
 	o man-1.6f
 	o meta-tracker-0.6.95
 	o mixxx-1.7.0
@@ -89,7 +89,7 @@ Suggested package updates
 	o ufraw-0.14
 	o uptimed-0.3.16
 	o vinagre-2.26.0
-	o virtualbox-3.0.4
+	o virtualbox-3.0.6
 	o xaralx-bin-0.7.1692
 	o xf86-video-geode-2.11.4.1
 	o xinetd-2.3.14
