@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3587 2009/09/09 20:07:02 ficovh Exp $
+# $Id: Makefile,v 1.3588 2009/09/10 05:03:38 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1488,6 +1488,7 @@ SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Constants
+SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-RTF-Writer
