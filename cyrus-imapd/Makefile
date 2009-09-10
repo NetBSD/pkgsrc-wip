@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2009/04/06 04:56:52 obache Exp $
+# $NetBSD: Makefile,v 1.20 2009/09/10 05:40:12 obache Exp $
 
-DISTNAME=	cyrus-imapd-2.3.14
+DISTNAME=	cyrus-imapd-2.3.15
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
@@ -94,6 +94,7 @@ PLIST_SUBST+=		LDAP="@comment "
 .if !empty(PKG_OPTIONS:Msnmp)
 .  include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
+USE_TOOLS+=		perl:run
 .else
 CONFIGURE_ARGS+=	--without-snmp
 .endif
