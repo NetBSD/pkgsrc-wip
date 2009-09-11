@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2009/06/07 21:53:06 jsonn Exp $
+# $NetBSD: Makefile,v 1.11 2009/09/11 22:26:50 jsonn Exp $
 #
 
-DISTNAME=	e_dbus-0.5.0.060
+DISTNAME=	e_dbus-0.5.0.062
 PKGNAME=	${DISTNAME:S/_//}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-04-22/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
