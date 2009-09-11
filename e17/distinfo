@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2009/06/11 21:38:08 jsonn Exp $
+$NetBSD: distinfo,v 1.13 2009/09/11 23:03:18 jsonn Exp $
 
-SHA1 (enlightenment-0.16.999.060.tar.bz2) = 970d3f54bebd28f651c85a3965e81d94a4dd11d7
-RMD160 (enlightenment-0.16.999.060.tar.bz2) = 8b59f67f230c3b30f4920662fe638f6f633eac54
-Size (enlightenment-0.16.999.060.tar.bz2) = 4764636 bytes
+SHA1 (enlightenment-0.16.999.062.tar.bz2) = c9acf5cb41325a14bff345e9b4fa0a670ca29331
+RMD160 (enlightenment-0.16.999.062.tar.bz2) = 0c1bab3fddf7d4a78b0501d7c65e8eb57ce4e77a
+Size (enlightenment-0.16.999.062.tar.bz2) = 5067997 bytes
 SHA1 (patch-aa) = 70e28f1d31e334a0d3ba2c58232835f2cd40ea48
 SHA1 (patch-ab) = 7924bdaf7053f4026be405a4a6c2a15717b98f1f
 SHA1 (patch-ac) = 278ff1d840d28bd76148796c6ae8a6ea4ba06ff4
