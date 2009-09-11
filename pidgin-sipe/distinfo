@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/31 12:09:50 yacht Exp $
+$NetBSD: distinfo,v 1.2 2009/09/11 09:54:18 yacht Exp $
 
-SHA1 (pidgin-sipe-1.6.2.tar.gz) = 9db4e393622c690cc2c34fee03b30ae4b07f9021
-RMD160 (pidgin-sipe-1.6.2.tar.gz) = 1c7b9e641dc6c2c6a68d18d633670cb422031adb
-Size (pidgin-sipe-1.6.2.tar.gz) = 446888 bytes
-SHA1 (patch-aa) = 5931b871a1fe4cc3d122bea112a48be3e4da505e
-SHA1 (patch-ab) = ba04bab7436136a41968df7f0e687638c1b6ca26
+SHA1 (pidgin-sipe-1.6.3.tar.gz) = 08bcb7ac4f1ca6f9934edf2d3c842a7f0b17f631
+RMD160 (pidgin-sipe-1.6.3.tar.gz) = e73e18bdfaef05100d65a38b780f2f6348ef8074
+Size (pidgin-sipe-1.6.3.tar.gz) = 557536 bytes

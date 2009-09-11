@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/31 12:09:50 yacht Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/11 09:54:18 yacht Exp $
 #
 
-DISTNAME=	pidgin-sipe-1.6.2
+DISTNAME=	pidgin-sipe-1.6.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipe/}
 
-MAINTAINER=	joachim.kuebart@gmx.net
+MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://sipe.sourceforge.net/
 COMMENT=	Pidgin plugin for Microsoft Office Communicator
 
