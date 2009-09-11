@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/11 23:05:15 jsonn Exp $
+bin/elementary_quicklaunch
+bin/elementary_run
+bin/elementary_test
+bin/elementary_testql
+include/Elementary.h
+include/elementary/elementary_config.h
+lib/elementary_testql.la
+lib/libelementary.la
+lib/pkgconfig/elementary.pc
+share/applications/elementary_test.desktop
+share/elementary/images/logo.png
+share/elementary/images/logo_small.png
+share/elementary/images/panel_01.jpg
+share/elementary/images/plant_01.jpg
+share/elementary/images/rock_01.jpg
+share/elementary/images/rock_02.jpg
+share/elementary/images/sky_01.jpg
+share/elementary/images/sky_02.jpg
+share/elementary/images/sky_03.jpg
+share/elementary/images/sky_04.jpg
+share/elementary/images/wood_01.jpg
+share/elementary/objects/test.edj
+share/elementary/themes/default.edj
+share/icons/elementary.png
