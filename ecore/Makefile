@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2009/07/14 22:25:31 jsonn Exp $
+# $NetBSD: Makefile,v 1.30 2009/09/11 22:01:15 jsonn Exp $
 #
 
-DISTNAME=	ecore-0.9.9.061
+DISTNAME=	ecore-0.9.9.062
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-06-14/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
@@ -20,12 +20,11 @@ CONFIGURE_ARGS+=	--disable-openssl \
 			--enable-ecore-desktop \
 			--disable-ecore-evas-sdl
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/evas-software-x11/buildlink3.mk"
-.include "../../graphics/evas-xrender-x11/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
