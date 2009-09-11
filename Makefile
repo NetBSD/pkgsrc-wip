@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3589 2009/09/10 06:00:40 ficovh Exp $
+# $Id: Makefile,v 1.3590 2009/09/11 22:48:51 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -341,6 +341,7 @@ SUBDIR+=	eic
 SUBDIR+=	ejourn
 SUBDIR+=	ekg2
 SUBDIR+=	electricsheep
+SUBDIR+=	elementary
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
 SUBDIR+=	emacs-current
