@@ -1,34 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2008/02/06 21:33:54 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/12 21:27:21 cheusov Exp $
 
---- Makefile.in.orig	1996-02-01 07:05:40.000000000 +0200
+--- Makefile.in.orig	2009-07-26 19:24:30.000000000 +0300
 +++ Makefile.in
-@@ -6,7 +6,7 @@ SHELL=/bin/sh
- CC = @CC@
+@@ -24,6 +24,7 @@ EXTRA_CFLAGS	= @EXTRA_CFLAGS@
+ CFLAGS          = @CFLAGS@ $(EXTRA_CFLAGS)
+ LDFLAGS         = @LDFLAGS@
+ MATHLIB         = @MATHLIB@
++LIBS            =
  
- CFLAGS =   @CFLAGS@
--
-+LDFLAGS = @LDFLAGS@
- MATHLIB = @MATHLIB@
+ YACC            = @YACC@
  
- YACC = @YACC@ 
-@@ -25,17 +25,13 @@ O=parse.o scan.o memory.o main.o hash.o 
-   fin.o files.o  scancode.o matherr.o  fcall.o version.o\
-   missing.o
+@@ -61,7 +62,7 @@ all :	$(PROG)
+ check :  mawk_test fpe_test
  
--REXP_O=rexp/rexp.o rexp/rexp0.o rexp/rexp1.o rexp/rexp2.o\
--    rexp/rexp3.o 
--
--REXP_C=rexp/rexp.c rexp/rexp0.c rexp/rexp1.c rexp/rexp2.c\
--    rexp/rexp3.c 
--
-+REXP_O=rexp/regexp.o
-+REXP_C=rexp/regexp.c
+ $(PROG) : $(OBJS)
+-	@ECHO_LD@$(CC) $(LDFLAGS) -o $@ $(OBJS) $(MATHLIB)
++	@ECHO_LD@$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS) $(MATHLIB)
  
- mawk_and_test :  mawk  mawk_test  fpe_test
+ TESTPATH= PATH=`pwd`:`cd $(srcdir);pwd`/test:/bin:/usr/bin; export PATH
  
- mawk : $(O)  rexp/.done
--	$(CC) $(CFLAGS) -o mawk $(O) $(REXP_O) $(MATHLIB) 
-+	$(CC) $(LDFLAGS) -o mawk $(O) $(REXP_O) $(MATHLIB) 
- 
- mawk_test :  mawk  # test that we have a sane mawk
- 	@cp mawk test/mawk

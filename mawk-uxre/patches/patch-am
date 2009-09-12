@@ -1,159 +1,34 @@
-$NetBSD: patch-am,v 1.2 2008/10/18 13:18:40 cheusov Exp $
+$NetBSD: patch-am,v 1.3 2009/09/12 21:27:21 cheusov Exp $
 
---- rexp/regexp_system.c.orig	2008-10-18 16:02:32.000000000 +0300
-+++ rexp/regexp_system.c
-@@ -0,0 +1,154 @@
-+#include <sys/types.h>
-+#include <stdio.h>
-+#include <regex.h>
-+#include <string.h>
-+#include <stdlib.h>
-+#include <errno.h>
-+
-+typedef struct {
-+   regex_t re;
-+   char *regexp;
-+} mawk_re_t;
-+
-+static mawk_re_t *last_used_regexp = NULL;
-+static int err_code = 0;
-+
-+void prepare_regexp (regexp)
-+   char *regexp;
-+{
-+   int bs = 0;
-+   char *tail = regexp;
-+   char ch;
-+
-+   while ((ch = *regexp++) != 0){
-+      if (bs){
-+	 switch (ch){
-+	 case 'n': *tail++ = '\n';   break;
-+	 case 't': *tail++ = '\t';   break;
-+	 case 'f': *tail++ = '\f';   break;
-+	 case 'b': *tail++ = '\b';   break;
-+	 case 'r': *tail++ = '\r';   break;
-+	 case 'a': *tail++ = '\07';  break;
-+	 case 'v': *tail++ = '\013'; break;
-+	 default:  *tail++ = '\\'; *tail++ = ch;
-+	 }
-+
-+	 bs = 0;
-+      }else{
-+	 if (ch == '\\'){
-+	    bs = 1;
-+	 }else{
-+	    *tail++ = ch;
-+	 }
-+      }
-+   }
-+
-+   *tail = 0;
-+}
-+
-+void * REcompile(regexp)
-+   char *regexp;
-+{
-+   int ere_flags = REG_EXTENDED;
+--- regexp_system.c.orig	2009-07-27 18:47:57.000000000 +0300
++++ regexp_system.c
+@@ -113,6 +113,20 @@ prepare_regexp(char *regexp)
+ void *
+ REcompile(char *regexp)
+ {
++    int ere_flags = REG_EXTENDED;
 +#ifdef REG_ONESUB
-+   ere_flags |= REG_ONESUB;
++    ere_flags |= REG_ONESUB;
 +#endif
 +#ifdef REG_BKTEMPTY
-+   ere_flags |= REG_BKTEMPTY;
++    ere_flags |= REG_BKTEMPTY;
 +#endif
 +#ifdef REG_BKTESCAPE
-+   ere_flags |= REG_BKTESCAPE;
++    ere_flags |= REG_BKTESCAPE;
 +#endif
 +#ifdef REG_ESCSEQ
-+   ere_flags |= REG_ESCSEQ;
++    ere_flags |= REG_ESCSEQ;
 +#endif
 +
-+   mawk_re_t *re = (mawk_re_t*) malloc (sizeof (mawk_re_t));
-+   size_t len = strlen (regexp);
-+   char *new_regexp = (char *) malloc (len + 3);
-+/*   fprintf (stderr, "REcompile: %s\n", regexp); */
-+
-+   if (!re || !new_regexp)
-+      return NULL;
-+
-+   new_regexp [0] = '(';
-+   memcpy (new_regexp + 1, regexp, len);
-+   new_regexp [len+1] = ')';
-+   new_regexp [len+2] = 0;
-+
-+   prepare_regexp (new_regexp);
-+
-+   last_used_regexp = re;
-+
-+   memset (re, 0, sizeof (mawk_re_t));
-+   re -> regexp = strdup (new_regexp);
-+   err_code = regcomp (&re->re, new_regexp, ere_flags);
-+
-+   free (new_regexp);
-+
-+   if (err_code)
-+      return NULL;
-+
-+   return re;
-+}
-+
-+int
-+REtest(str, re)
-+   char *str ;
-+   mawk_re_t* re ;
-+{
-+/*   fprintf (stderr, "REtest: \"%s\" ~ /%s/", str, re -> regexp); */
-+
-+   last_used_regexp = re;
-+
-+   if (regexec (&re->re, str, 0, NULL, 0)){
-+/*      fprintf (stderr, "=1\n"); */
-+      return 0;
-+   }else{
-+/*      fprintf (stderr, "=0\n"); */
-+      return 1;
-+   }
-+}
-+
-+char *REmatch(str, re, lenp)
-+   char *str ;
-+   mawk_re_t* re ;
-+   unsigned *lenp ;
-+{
-+   regmatch_t match [100];
-+/*   fprintf (stderr, "REmatch: \"%s\" ~ /%s/", str, re -> regexp); */
-+
-+   last_used_regexp = re;
-+
-+   if (!regexec (&re->re, str, 100, match, 0)){
-+      *lenp = match [0].rm_eo - match[0].rm_so;
-+/*      fprintf (stderr, "=%i/%i\n", match [0].rm_so, *lenp); */
-+      return str + match [0].rm_so;
-+   }else{
-+/*      fprintf (stderr, "=0\n"); */
-+      return NULL;
-+   }
-+}
-+
-+void  REmprint(m, f)
-+  void * m ; 
-+  FILE *f ;
-+{
-+   /* no debugging code available */
-+   abort ();
-+}
-+
-+static char error_buffer [2048];
-+
-+char *REerror ()
-+{
-+   size_t len;
-+   if (last_used_regexp){
-+      len = regerror (err_code, &last_used_regexp -> re,
-+		      error_buffer, sizeof (error_buffer));
-+      return error_buffer;
-+   }else{
-+      snprintf (error_buffer, sizeof (error_buffer), "malloc failed: %s",
-+		strerror (errno));
-+   }
-+}
+     mawk_re_t *re = (mawk_re_t *) malloc(sizeof(mawk_re_t));
+     size_t len = strlen(regexp);
+     char *new_regexp = (char *) malloc(len + 3);
+@@ -131,7 +145,7 @@ REcompile(char *regexp)
+ 
+     memset(re, 0, sizeof(mawk_re_t));
+     re->regexp = strdup(new_regexp);
+-    err_code = regcomp(&re->re, new_regexp, REG_EXTENDED);
++    err_code = regcomp(&re->re, new_regexp, ere_flags);
+ 
+     free(new_regexp);
+ 

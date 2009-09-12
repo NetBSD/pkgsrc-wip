@@ -1,44 +1,29 @@
-# $NetBSD: Makefile,v 1.9 2009/08/16 18:23:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/12 21:27:21 cheusov Exp $
 #
 
-DISTNAME=	mawk-1.3.3
-PKGNAME=	${DISTNAME:S/mawk/mawk-uxre/}
-PKGREVISION=	1
+DISTNAME=	mawk-1.3.3-20090820
+PKGNAME=	${DISTNAME:S/-20/.20/:S/mawk/mawk-uxre/}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/mawk/
+MASTER_SITES=	ftp://invisible-island.net/mawk/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	cheusov@tut.by
-COMMENT=	AWK clone by Mike Brennan with UXRE regexp library
+MAINTAINER=	vle@gmx.net
+COMMENT=	AWK clone by Mike Brennan
 
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		autoconf213
-
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 bin
 
-BUILD_TARGET=		mawk_and_test
+TEST_TARGET=		mawk_test fpe_test
 
 GNU_CONFIGURE=		yes
-CONFIGURE_HAS_MANDIR=	no
-TEST_TARGET=		mawk_test fpe_test
-PKG_DESTDIR_SUPPORT=	user-destdir
+CONFIGURE_ARGS+=	--without-builtin-regex
+
+MAKEFLAGS+=		LIBS=-luxre
+
 MAKE_JOBS_SAFE=		no
-
-.include "../../mk/bsd.prefs.mk"
-
-# mawk configure fails with -ffast-math
-CFLAGS:=		${CFLAGS:S/-ffast-math//}
-
-LDFLAGS+=		-luxre
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CPPFLAGS=
-.endif
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mawk ${DESTDIR}${PREFIX}/bin/mawk-uxre
