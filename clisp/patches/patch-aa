@@ -1,11 +1,19 @@
-$NetBSD: patch-aa,v 1.7 2009/09/04 11:00:40 asau Exp $
+$NetBSD: patch-aa,v 1.8 2009/09/12 09:55:13 asau Exp $
 
 Don't use cache file to avoid trailing space problem.
 Fix installation of dynamic modules if they're not built.
 
---- src/makemake.in.orig	2009-09-04 11:58:01.000000000 +0400
-+++ src/makemake.in	2009-09-04 12:42:11.000000000 +0400
-@@ -1911,7 +1911,7 @@
+--- src/makemake.in.orig	2009-09-12 12:23:45.000000000 +0400
++++ src/makemake.in	2009-09-12 13:15:02.000000000 +0400
+@@ -538,6 +538,7 @@
+ RANLIB='@RANLIB@'                   # either 'ranlib' or ':'
+ INSTALL='@INSTALL@'                 # either 'install -c' or 'cp'
+ INSTALL_PROGRAM='@INSTALL_PROGRAM@' # either 'install -c' or 'cp'
++INSTALL_SCRIPT='@INSTALL_SCRIPT@'   # either 'install -c' or 'cp', never 'strip'
+ INSTALL_DATA='@INSTALL_DATA@'       # either 'install -c -m 644' or 'cp'
+ GROFF='@GROFF@'                     # either 'groff' or ''
+ PS2PDF='@PS2PDF@'                   # either 'ps2pdf' or ''
+@@ -1915,7 +1916,7 @@
  echol "psdir   = ${PSDIR}"
  echol "pdfdir  = ${PDFDIR}"
  echol "libdir  = ${LIBDIR}"
@@ -14,16 +22,24 @@ Fix installation of dynamic modules if they're not built.
  if [ -n "$USE_GETTEXT" ] ; then
    echol "localedir = ${LOCALEDIR}"
  fi
-@@ -3344,7 +3344,7 @@
+@@ -2067,6 +2068,7 @@
+ echol '# Programs used by "make install":'
+ echol "INSTALL = ${INSTALL}"
+ echol "INSTALL_PROGRAM = ${INSTALL_PROGRAM}"
++echol "INSTALL_SCRIPT = ${INSTALL_SCRIPT}"
+ echol "INSTALL_DATA = ${INSTALL_DATA}"
+ echol
+ echol '# Programs used by "make distrib":'
+@@ -3350,7 +3352,7 @@
  done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
  # is bash, config.cache may be unparsable with sh on Solaris
--echotab "      \$(SHELL) \$\$m/configure --with-clisp=\"${HEREP}/clisp -K boot ${localeflags}${someflags}\" --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
-+echotab "      \$(SHELL) \$\$m/configure --with-clisp=\"${HEREP}/clisp -K boot ${localeflags}${someflags}\" --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
+-echotab "      \$(SHELL) \$\$m/configure --with-clisp=\"${HEREP}/clisp -K boot ${someflags}\" --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
++echotab "      \$(SHELL) \$\$m/configure --with-clisp=\"${HEREP}/clisp -K boot ${someflags}\" --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
  echotab "    else \$(SHELL) \$\$m/configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
  echotab "    fi ) ;\\"
  echotab "fi; \\"
-@@ -3605,8 +3605,10 @@
+@@ -3621,8 +3623,10 @@
      echotab "mkdir -p \$(DESTDIR)\$(lisplibdir)/build-aux"
      echotab "for f in ${BUILD_AUX}; do \$(INSTALL_DATA) build-aux/\$\$f \$(DESTDIR)\$(lisplibdir)/build-aux/\$\$f; done"
      if [ "${with_dynamic_modules}" != no ]; then
@@ -36,3 +52,12 @@ Fix installation of dynamic modules if they're not built.
        echotab "absdest=\`cd \"\$(DESTDIR)\$(lisplibdir)\"; pwd\` ; \\"
        echotab "here=\`pwd\`; \\"
        echotab "for m in \$(MODULES); do \\"
+@@ -3641,7 +3645,7 @@
+     echotab "  esac; \\"
+     echotab "done"
+     echotab "mkdir -p \$(DESTDIR)\$(bindir)"
+-    echotab "\$(INSTALL_PROGRAM) clisp-link \$(DESTDIR)\$(bindir)/clisp-link"
++    echotab "\$(INSTALL_SCRIPT) clisp-link \$(DESTDIR)\$(bindir)/clisp-link"
+     # Don't strip the executables, otherwise (disassemble #'cons)
+     # and saveinitmem/:executable won't work.
+     # echotab "strip \$(DESTDIR)\$(lisplibdir)/base/lisp${LEXE}"
