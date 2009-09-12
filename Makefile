@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3591 2009/09/12 12:10:27 cheusov Exp $
+# $Id: Makefile,v 1.3592 2009/09/12 17:44:32 yacht Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -544,6 +544,7 @@ SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
 SUBDIR+=	gst-inspector
+SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
 SUBDIR+=	gtg
@@ -1002,6 +1003,7 @@ SUBDIR+=	libgxim
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libipctdata
+SUBDIR+=	libjingle
 SUBDIR+=	liblastfm
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
@@ -1889,6 +1891,7 @@ SUBDIR+=	scim-uim
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scmail
+SUBDIR+=	scorched3d
 SUBDIR+=	scourge
 SUBDIR+=	scr2png
 SUBDIR+=	scratchpad
