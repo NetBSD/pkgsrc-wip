@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3590 2009/09/11 22:48:51 jsonn Exp $
+# $Id: Makefile,v 1.3591 2009/09/12 12:10:27 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1102,6 +1102,7 @@ SUBDIR+=	marathon-trilogy
 SUBDIR+=	marsyas
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
+SUBDIR+=	mawk
 SUBDIR+=	mawk-uxre
 SUBDIR+=	maxima
 SUBDIR+=	mc-mp
