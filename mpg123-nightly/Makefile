@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/24 19:27:50 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/12 06:54:09 cheusov Exp $
 
 DISTNAME=	mpg123-${MPG123_VERSION}
 CATEGORIES=	audio
@@ -46,7 +46,7 @@ SVN_ROOT.mpg123=	svn://orgis.org/mpg123/trunk
 SVN_MODULE.mpg123=	mpg123
 
 pre-configure:
-	cd ${WRKSRC} && sh ./autogen.sh
+	cd ${WRKSRC} && autoreconf -iv
 
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.fast.prefs.mk"
