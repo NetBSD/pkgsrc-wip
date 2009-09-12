@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/09/12 17:40:34 yacht Exp $
+
+--- src/client/client/SecureID.cpp.orig	2008-03-02 18:47:36.000000000 +0000
++++ src/client/client/SecureID.cpp
+@@ -34,6 +34,38 @@ std::string SecureID::GetPrivateKey(void
+ 	return "0:0:0:0:0:0";
+ }
+ 
++#elif defined(__NetBSD__)
++
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <net/if_dl.h>
++#include <ifaddrs.h>
++
++std::string SecureID::GetPrivateKey(void)
++{
++	std::string Key;
++	struct ifaddrs *ifap;
++
++	if (!getifaddrs(&ifap)) {
++		for (struct ifaddrs *p = ifap; p; p->ifa_next) {
++			if (p->ifa_addr->sa_family == AF_LINK &&
++			    p->ifa_name && strncmp(p->ifa_name, "lo", 2)) {
++				struct sockaddr_dl *sdl =
++					(struct sockaddr_dl *)p->ifa_addr;
++				for (int i = 0; i != 6; ++i) {
++					if (i != 0)
++						Key += ':';
++					Key += static_cast<int>(
++					    sdl->sdl_data[sdl->sdl_nlen + i]);
++				}
++				break;
++			}
++		}
++		freeifaddrs(ifap);
++	}
++	return Key;
++}
++
+ #else
+ 
+ #include <sys/ioctl.h>

@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/09/12 17:40:34 yacht Exp $
+
+--- src/common/3dsparse/aseFile.tab.cpp.orig	2009-02-23 03:14:20.000000000 +0000
++++ src/common/3dsparse/aseFile.tab.cpp
+@@ -5,7 +5,8 @@
+ 
+ #define YYBISON 1  /* Identify Bison output.  */
+ 
+-#if !defined(__FreeBSD__) && !defined(__DARWIN__) && !defined(_WIN32)
++#if !defined(__FreeBSD__) && !defined(__DARWIN__) && !defined(_WIN32) && \
++    !defined(__NetBSD__)
+ #define alloca 
+ #endif //!defined(__FreeBSD__) && !defined(__DARWIN__)
+ 
