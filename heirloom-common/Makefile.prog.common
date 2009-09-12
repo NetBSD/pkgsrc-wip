@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.prog.common,v 1.9 2008/09/23 21:33:29 cheusov Exp $
+# $NetBSD: Makefile.prog.common,v 1.10 2009/09/12 08:14:24 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -77,7 +77,7 @@ MAKE_FLAGS+=	LIBBZ2=-lbz2
 MAKE_FLAGS+=	USE_BZLIB=${USE_BZLIB}
 MAKE_FLAGS+=	LD=${CC:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	CPPFLAGS=${CPPFLAGS}
+MAKE_FLAGS+=	CPPFLAGS=${CPPFLAGS:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	CFLAGSS=${CFLAGS:Q}
 MAKE_FLAGS+=	CFLAGS2=${CFLAGS:Q}
