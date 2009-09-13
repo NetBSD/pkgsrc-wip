@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/09/12 17:40:34 yacht Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/13 15:19:02 yacht Exp $
+
+Write an implementation to read the MAC address on BSD where ioctl(SIOCGHWADDR)
+isn't available.
 
 --- src/client/client/SecureID.cpp.orig	2008-03-02 18:47:36.000000000 +0000
 +++ src/client/client/SecureID.cpp

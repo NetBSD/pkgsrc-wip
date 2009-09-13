@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/12 17:40:34 yacht Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/13 15:19:01 yacht Exp $
 bin/scorched3d
 bin/scorched3dc
 bin/scorched3ds
+share/doc/scorched3d/README-EXPAT.txt
+share/doc/scorched3d/README-ODE.txt
+share/doc/scorched3d/README-SDL.txt
+share/doc/scorched3d/README-SDLMIXER.txt
+share/doc/scorched3d/README-SDLNET.txt
+share/doc/scorched3d/README-apoc.txt
+share/doc/scorched3d/README-ft2.txt
+share/doc/scorched3d/README-libjpg.txt
+share/doc/scorched3d/README-ogg.txt
+share/doc/scorched3d/README-png.txt
+share/doc/scorched3d/README-wxwindows.txt
+share/doc/scorched3d/README-zlib.txt
 share/scorched3d/data/accessories.xml
 share/scorched3d/data/accessories/banana/banana.txt
 share/scorched3d/data/accessories/banana/bantex.bmp
@@ -1660,15 +1672,3 @@ share/scorched3d/data/windows/white.bmp
 share/scorched3d/data/windows/wind.bmp
 share/scorched3d/data/windows/winda.bmp
 share/scorched3d/data/windows/winda2.bmp
-share/doc/scorched3d/README-EXPAT.txt
-share/doc/scorched3d/README-ODE.txt
-share/doc/scorched3d/README-SDL.txt
-share/doc/scorched3d/README-SDLMIXER.txt
-share/doc/scorched3d/README-SDLNET.txt
-share/doc/scorched3d/README-apoc.txt
-share/doc/scorched3d/README-ft2.txt
-share/doc/scorched3d/README-libjpg.txt
-share/doc/scorched3d/README-ogg.txt
-share/doc/scorched3d/README-png.txt
-share/doc/scorched3d/README-wxwindows.txt
-share/doc/scorched3d/README-zlib.txt
