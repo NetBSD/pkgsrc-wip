@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2009/09/11 23:03:18 jsonn Exp $
+$NetBSD: distinfo,v 1.14 2009/09/13 10:42:10 jsonn Exp $
 
 SHA1 (enlightenment-0.16.999.062.tar.bz2) = c9acf5cb41325a14bff345e9b4fa0a670ca29331
 RMD160 (enlightenment-0.16.999.062.tar.bz2) = 0c1bab3fddf7d4a78b0501d7c65e8eb57ce4e77a
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 1c280cdf3bb2a67985a8e94ffb11ab0cf124532f
 SHA1 (patch-af) = 785db672d1d771770d5d96efb77b34b94d403a43
 SHA1 (patch-ag) = 99ec8af1686937f345b8337ea963fcd6be71768b
 SHA1 (patch-ah) = 917f385d4c1e8ee3065cceb90b822c3e09bda61f
+SHA1 (patch-ai) = c50fb23efb4da8487cd8bf486e85926ae01bfd9c
