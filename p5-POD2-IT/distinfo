@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/08/18 23:14:58 leot1990 Exp $
+$NetBSD: distinfo,v 1.3 2009/09/13 10:49:56 leot1990 Exp $
 
-SHA1 (POD2-IT-0.12.tar.gz) = 3330134269fdbb93ff3ca2de7a791e0aeee6d3d4
-RMD160 (POD2-IT-0.12.tar.gz) = ca77e42afb9b1c0b2a117cc80c1df13114557b72
-Size (POD2-IT-0.12.tar.gz) = 597148 bytes
+SHA1 (POD2-IT-0.13.tar.gz) = 17667df55f67701a6c9cfe40f4e017e4ae6737ce
+RMD160 (POD2-IT-0.13.tar.gz) = 426a0fd8b71dd854402c9e1fed9621917fecc4c6
+Size (POD2-IT-0.13.tar.gz) = 603948 bytes
