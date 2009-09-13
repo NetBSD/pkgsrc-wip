@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
+
+--- src/rucn.cpp.orig	2007-07-10 10:16:06.000000000 +0300
++++ src/rucn.cpp
+@@ -175,7 +175,7 @@ void convert(const char *filename, print
+ #endif
+ 
+ 	g_stat(idxfilename, &stats);
+-	fprintf(ifofile, "StarDict's dict ifo file\nversion=2.4.2\nwordcount=%d\nidxfilesize=%ld\nbookname=%s\nsametypesequence=m\n", array->len, stats.st_size, basefilename);
++	fprintf(ifofile, "StarDict's dict ifo file\nversion=2.4.2\nwordcount=%d\nidxfilesize=%ld\nbookname=%s\nsametypesequence=m\n", array->len, (long) stats.st_size, basefilename);
+ 	fclose(ifofile);
+ 
+ 	g_free(buffer);
