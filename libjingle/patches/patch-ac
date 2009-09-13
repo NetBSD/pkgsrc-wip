@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+$NetBSD: patch-ac,v 1.2 2009/09/13 15:09:47 yacht Exp $
+
+Don't use SO_PRIORITY which isn't available on NetBSD.
 
 --- talk/base/physicalsocketserver.cc.orig	2008-09-16 14:55:22.000000000 +0100
 +++ talk/base/physicalsocketserver.cc

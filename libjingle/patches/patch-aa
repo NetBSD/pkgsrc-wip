@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/13 15:09:47 yacht Exp $
+
+Depending on the declared type of ifconf:ifc_buf, it cannot be used with
+delete []. Store the dynamically allocated storage in a separate variable
+of the correct type and use that with delete[].
 
 --- talk/base/network.cc.orig	2008-09-16 14:55:22.000000000 +0100
 +++ talk/base/network.cc

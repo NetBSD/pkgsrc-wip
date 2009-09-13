@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/07 18:25:33 yacht Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/13 15:09:47 yacht Exp $
 #
 
 DISTNAME=	libjingle-0.3.12
@@ -8,6 +8,7 @@ MASTER_SITES=	http://farsight.freedesktop.org/releases/libjingle/
 MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://farsight.freedesktop.org/releases/libjingle/
 COMMENT=	Google Talk's implementation of Jingle and Jingle-Audio
+
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
