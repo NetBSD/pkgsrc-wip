@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/03/08 15:56:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/14 17:34:13 cheusov Exp $
 #
 
-DISTNAME=		stardict-2.4.4
-PKGREVISION=		2
+DISTNAME=		stardict-3.0.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stardict/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,21 +10,27 @@ MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://stardict.sourceforge.net/
 COMMENT=		Cross-Platform and international dictionary written in Gtk2
 
+BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+
+LICENSE=		gnu-gpl-v3
+
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-USE_TOOLS+=		perl
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_TOOLS+=		gmake perl pkg-config msgfmt
+#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
+
+CONFIGURE_ARGS+=	--disable-spell --disable-gucharmap --disable-festival
+CONFIGURE_ARGS+=	--disable-espeak
 
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF_SCHEMAS+=	stardict.schemas
 
-.include "../../devel/GConf/schemas.mk"
+#.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../mk/x11.buildlink3.mk"
+#.include "../../mk/omf-scrollkeeper.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
