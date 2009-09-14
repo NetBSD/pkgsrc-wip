@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/09/14 17:34:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2009/09/14 17:43:46 cheusov Exp $
 #
 
 DISTNAME=		stardict-3.0.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://stardict.sourceforge.net/
 COMMENT=		Cross-Platform and international dictionary written in Gtk2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
@@ -29,8 +31,9 @@ MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF_SCHEMAS+=	stardict.schemas
 
-#.include "../../devel/GConf/schemas.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-#.include "../../mk/omf-scrollkeeper.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
