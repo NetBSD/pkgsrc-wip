@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/15 07:52:43 asau Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/15 09:49:24 asau Exp $
 #
 
 DISTNAME=	LabPlot-1.6.0.1-2
@@ -29,6 +29,9 @@ CONFIGURE_ARGS+= --disable-ocaml
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
+.include "../../devel/netcdf/buildlink3.mk"
+.include "../../devel/hdf5/buildlink3.mk"
+.include "../../math/qhull/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
