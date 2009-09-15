@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
+$NetBSD: patch-ad,v 1.2 2009/09/15 15:35:26 cheusov Exp $
 
 --- src/dsl2dict.c.orig	2007-07-10 10:16:06.000000000 +0300
 +++ src/dsl2dict.c
@@ -27,12 +27,3 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
  
  #define BUFSIZE BUFSIZ
  #define UCS_MARK 0xFEFF
-@@ -392,7 +403,7 @@ static char *make_dict(char *dslfilename
-         size_t inbuff_size;
-         size_t outbuff_size = BUFSIZE;
-         size_t writems;
--        char *inbufptr = (char *) inbuff;
-+        const char *inbufptr = (char *) inbuff;
-         char *outbufptr = (char *) outbuff;
-         long filepos = BUFOVERLAP * UCS_CHARLEN;
-         char *buffborder;

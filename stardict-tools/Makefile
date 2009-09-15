@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/13 18:25:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/15 15:35:25 cheusov Exp $
 #
 
 DISTNAME=	stardict-tools-3.0.1
@@ -44,6 +44,7 @@ post-install:
 	cd ..; \
 	${INSTALL_DATA} ${EXTRA_DOC_FILES} ${DESTDIR}${EXTRA_DIR}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../databases/mysql5-client/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
