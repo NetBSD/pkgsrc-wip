@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/06 07:53:29 asau Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/15 07:52:43 asau Exp $
 #
 
 DISTNAME=	LabPlot-1.6.0.1-2
@@ -12,11 +12,11 @@ COMMENT=	Data analysis and visualisation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	YES
-USE_LANGUAGES+=	c c++
-
-WRKSRC=		${WRKDIR}/LabPlot-1.6.0.1
+WRKSRC=			${WRKDIR}/LabPlot-1.6.0.1
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
+USE_LANGUAGES+=		c c++
+USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+= --enable-gsl
 CONFIGURE_ARGS+= --enable-fftw
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+= --enable-tiff
 CONFIGURE_ARGS+= --enable-jasper
 CONFIGURE_ARGS+= --disable-ocaml
 
-.include "../../meta-pkgs/kde3/kde3.mk"
+#.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
