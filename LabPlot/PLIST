@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/11 12:16:27 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/09/15 07:32:22 asau Exp $
 bin/LabPlot
 bin/labplot
 lib/libLabPlot.la
@@ -316,58 +316,3 @@ share/kde/apps/LabPlot/title.qs
 share/kde/apps/LabPlot/ylog.qs
 share/kde/mimelnk/application/x-lml.desktop
 share/kde/mimelnk/application/x-lpl.desktop
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/mimelnk
-@dirrm share/kde/apps/LabPlot/qsa-icons
-@dirrm share/kde/apps/LabPlot/colormaps
-@dirrm share/kde/apps/LabPlot
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in kde: @dirrm share/icons/locolor/32x32/mimetypes
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/32x32
-@comment in kde: @dirrm share/icons/locolor/22x22/mimetypes
-@comment in kde: @dirrm share/icons/locolor/22x22/apps
-@comment in kde: @dirrm share/icons/locolor/22x22
-@comment in kde: @dirrm share/icons/locolor/16x16/mimetypes
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/icons/locolor/16x16
-@comment in kde: @dirrm share/icons/locolor
-@dirrm share/icons/hicolor/64x64/mimetypes
-@dirrm share/icons/hicolor/64x64/apps
-@dirrm share/icons/hicolor/64x64
-@dirrm share/icons/hicolor/48x48/mimetypes
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/48x48
-@dirrm share/icons/hicolor/32x32/mimetypes
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/32x32
-@dirrm share/icons/hicolor/22x22/mimetypes
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/22x22
-@dirrm share/icons/hicolor/16x16/mimetypes
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/16x16
-@dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/doc/kde/HTML/sv/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pl/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/pl
-@dirrm share/doc/kde/HTML/nl/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/en/LabPlot/small_pics
-@dirrm share/doc/kde/HTML/en/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/br/LabPlot
-@comment in kde: @dirrm share/doc/kde/HTML/br
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde
-@comment in kde: @dirrm share/applications/kde
-@comment in xdg-dirs: @dirrm share/applications
