@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/09/15 19:11:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/15 19:13:10 cheusov Exp $
 #
 
-DISTNAME=	stardict-tools-3.0.1]
+DISTNAME=	stardict-tools-3.0.1
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stardict/}
