@@ -1,4 +1,2 @@
-* There's no log2() functions in math.h for FreeBSD (?)
-  so temporary get rid of it (see patches).
 * Take care about missing packages: qsa, vtk and grass
 * Try not to pull all KDE.
