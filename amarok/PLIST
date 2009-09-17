@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/09/04 22:38:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/09/17 06:04:03 thomasklausner Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
@@ -62,8 +62,6 @@ share/icons/hicolor/22x22/apps/amarok.png
 share/icons/hicolor/32x32/apps/amarok.png
 share/icons/hicolor/48x48/apps/amarok.png
 share/icons/hicolor/64x64/apps/amarok.png
-share/kde/apps/amarok/data/DefaultDockLayout32
-share/kde/apps/amarok/data/DefaultDockLayout64
 share/kde/apps/amarok/data/DefaultPlaylistLayouts.xml
 share/kde/apps/amarok/data/InfoAppletCustomStyle.css
 share/kde/apps/amarok/data/InfoParserLoading.html
@@ -350,7 +348,10 @@ share/kde/apps/amarok/images/loading1.png
 share/kde/apps/amarok/images/loading2.png
 share/kde/apps/amarok/images/navigation_arrows.svg
 share/kde/apps/amarok/images/nocover.png
-share/kde/apps/amarok/images/opendesktop.png
+share/kde/apps/amarok/images/opendesktop-22.png
+share/kde/apps/amarok/images/playlist-bookmark-16.png
+share/kde/apps/amarok/images/playlist-layouts-22.png
+share/kde/apps/amarok/images/playlist-sorting-16.png
 share/kde/apps/amarok/images/pud_items.svg
 share/kde/apps/amarok/images/service_info_loading1.png
 share/kde/apps/amarok/images/service_info_loading10.png
@@ -389,13 +390,9 @@ share/kde/apps/amarok/scripts/script_console/script.spec
 share/kde/apps/desktoptheme/Amarok-Mockup/colors
 share/kde/apps/desktoptheme/Amarok-Mockup/widgets/background.svg
 share/kde/apps/desktoptheme/Amarok-Mockup/widgets/text-background.svgz
-share/kde/apps/desktoptheme/amarok-default.desktop
 share/kde/apps/desktoptheme/default/widgets/amarok-albums.svg
-share/kde/apps/desktoptheme/default/widgets/amarok-background.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-currenttrack.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-info-applet.svg
-share/kde/apps/desktoptheme/default/widgets/amarok-logo.svg
-share/kde/apps/desktoptheme/default/widgets/amarok-wallpaper.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-wikipedia.svg
 share/kde/apps/desktoptheme/default/widgets/amarok-wikipediaheader.svg
 share/kde/apps/solid/actions/amarok-play-audiocd.desktop
@@ -450,15 +447,18 @@ share/locale/bg/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/bg/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/bg/LC_MESSAGES/amarokpkg.mo
 share/locale/ca/LC_MESSAGES/amarok.mo
+share/locale/ca/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/ca/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/ca/LC_MESSAGES/amarokpkg.mo
 share/locale/cs/LC_MESSAGES/amarok.mo
 share/locale/da/LC_MESSAGES/amarok.mo
+share/locale/da/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/da/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/da/LC_MESSAGES/amarokpkg.mo
 share/locale/de/LC_MESSAGES/amarok.mo
 share/locale/de/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/de/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/de/LC_MESSAGES/amarokpkg.mo
-share/locale/el/LC_MESSAGES/amarok.mo
 share/locale/en_GB/LC_MESSAGES/amarok.mo
 share/locale/en_GB/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/es/LC_MESSAGES/amarok.mo
@@ -498,6 +498,9 @@ share/locale/pa/LC_MESSAGES/amarok.mo
 share/locale/pa/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/pa/LC_MESSAGES/amarokpkg.mo
 share/locale/pl/LC_MESSAGES/amarok.mo
+share/locale/pl/LC_MESSAGES/amarok_scriptengine_qscript.mo
+share/locale/pl/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/pl/LC_MESSAGES/amarokpkg.mo
 share/locale/pt/LC_MESSAGES/amarok.mo
 share/locale/pt/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/pt/LC_MESSAGES/amarokcollectionscanner_qt.mo
