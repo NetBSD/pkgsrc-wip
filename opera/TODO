@@ -1,0 +1,8 @@
+ALL:
+* fix detection of libaspell.so in bin/opera
+
+FreeBSD:
+* expect libqt-mt.so.3, but pkgsrc install libqt-mt.so.6 from x11/qt3-libs.
+
+Solaris:
+* Not tested.
