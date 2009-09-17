@@ -116,7 +116,9 @@ Suggested ready to import packages
 	o heirloom-sh [pkg/40272]
 	o javascript-mode [pkg/35669]
 	o libdbi, libdbi-driver-{mysql,pgsql,sqlite{,3}} [pkg/40235]
+	o paexec
 	o pipestatus [pkg/40250]
+	o runawk
 	o send-pr
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
