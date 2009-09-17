@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/11 19:44:13 fjaeckel Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/17 11:57:10 fjaeckel Exp $
 
 DISTNAME=	bird-1.1.3
 CATEGORIES=	net
@@ -19,4 +19,5 @@ CONFIGURE_ARGS+= --localstatedir=/var
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/bison/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
