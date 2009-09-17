@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/17 12:07:47 fjaeckel Exp $
+# $NetBSD: Makefile,v 1.9 2009/09/17 17:18:46 fjaeckel Exp $
 
 DISTNAME=	bird-1.1.3
 PKGREVISION=            1
@@ -18,6 +18,7 @@ DEPENDS+= bison*:../../devel/bison
 PKG_DESTDIR_SUPPORT=  user-destdir
 
 CONFIGURE_ARGS+= --localstatedir=/var
+CONFIGURE_ARGS+= --enable-ipv6
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
