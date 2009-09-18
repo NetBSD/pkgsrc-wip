@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/18 07:44:56 obache Exp $
+
+SHA1 (gobject-introspection-0.6.5.tar.gz) = 14871936f2f2518db3f78753fb5f523c8fd4d8d2
+RMD160 (gobject-introspection-0.6.5.tar.gz) = efaf16b546629cf293a9b113391e4f73b3a4a680
+Size (gobject-introspection-0.6.5.tar.gz) = 777165 bytes
