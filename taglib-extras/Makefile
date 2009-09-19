@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/19 13:39:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/19 13:47:51 thomasklausner Exp $
 #
 
 DISTNAME=	taglib-extras-1.0.0
@@ -21,8 +21,6 @@ SUBST_FILES.rpath=	taglib-extras-config.cmake
 SUBST_SED.rpath=	-e "s|-L\\([^ 	]*\\)|${COMPILER_RPATH_FLAG}\\1 -L\\1|g"
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Add rpath to config script.
-
-.include "options.mk"
 
 BUILDLINK_ABI_DEPENDS.taglib+=	taglib>=1.6
 .include "../../audio/taglib/buildlink3.mk"
