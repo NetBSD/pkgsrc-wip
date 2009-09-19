@@ -67,7 +67,7 @@ while test $# -ne 0; do
     shift
 done
 
-DISTDIR=${DISTDIR:=/usr/pkgsrc/distfiles}
+DISTDIR=${DISTDIR:=@DISTDIR@}
 cd "$DISTDIR"
 
 useful_distfiles (){

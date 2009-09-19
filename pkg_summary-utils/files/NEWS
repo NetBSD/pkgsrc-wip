@@ -1,4 +1,19 @@
 ----------------------------------------------------------------------
+Version 0.32.0, by Aleksey Cheusov, Sat, 19 Sep 2009 15:18:45 +0300
+
+  - Default values of variables PKG_SUFX, DISTDIR, PKGSRCDIR, BMAKE
+    and PKG_INFO_CMD are embedded to scripts itself and are obtained
+    from pkgsrc. Manual pages do not tell what is the default.
+
+  - tests/test.sh:
+
+    fix in regression test #3, pkgsrc vs. pkgsrc+wip ==> XXXX vs. XXXXX
+
+    fix in regression test #11 (Darwin)
+
+    "make test" doesn't need "make install" anymore
+
+----------------------------------------------------------------------
 Version 0.31.0, by Aleksey Cheusov, Sun,  9 Aug 2009 21:08:34 +0300
 
   - pkg_src_summary(1) accepts PSS_PRE_PATH and PSS_POST_PATH

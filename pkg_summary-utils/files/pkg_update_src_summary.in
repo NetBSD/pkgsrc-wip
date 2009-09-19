@@ -28,13 +28,8 @@ set -e
 
 ############################################################
 # user settable variables
-if test -z "$PKGSRCDIR"; then
-    PKGSRCDIR=/usr/pkgsrc
-fi
-
-if test -z "$BMAKE"; then
-    BMAKE=make
-fi
+PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
+BMAKE=${BMAKE:=@BMAKE@}
 
 ############################################################
 usage (){

@@ -6,18 +6,18 @@ MANDIR?=	${PREFIX}/man
 DOCDIR=		${PREFIX}/share/doc/pkg_summary-utils
 AWKMODDIR?=	${PREFIX}/share/awk
 MKSCRIPTSDIR?=	${PREFIX}/share/psu_mk
+DISTDIR?=	/usr/pkgsrc/distfiles
 
 INST_DIR?=	${INSTALL} -d
 
 SH?=		/bin/sh
 AWK?=		/usr/bin/awk
+PKG_INFO_CMD?=	/usr/sbin/pkg_info -K /var/db/pkg
 
 # NetBSD make is required for pkgsrc
 BMAKE?=		/usr/bin/make
 
 #############################################################
-
-.include "Makefile.version"
 
 SCRIPTS=	pkg_cmp_summary pkg_list_all_pkgs
 SCRIPTS+=	pkg_refresh_summary pkg_src_fetch_var
@@ -61,6 +61,11 @@ PROJECTNAME=	pkg_summary-utils
 	    -e 's,@@mkscriptsdir@@,${MKSCRIPTSDIR},g' \
 	    -e 's,@SH@,${SH},g' \
 	    -e 's,@AWK@,${AWK},g' \
+	    -e 's,@DISTDIR@,${DISTDIR},g' \
+	    -e 's,@PKGSRCDIR@,${PKGSRCDIR},g' \
+	    -e 's,@BMAKE@,${BMAKE},g' \
+	    -e 's,@PKG_SUFX@,${PKG_SUFX},g' \
+	    -e 's,@PKG_INFO_CMD@,${PKG_INFO_CMD},g' \
 	    ${.ALLSRC} > ${.TARGET} && chmod +x ${.TARGET}
 
 .PHONY: clean-my
@@ -100,4 +105,5 @@ test : all
 
 ############################################################
 
+.include "version.mk"
 .include <bsd.prog.mk>

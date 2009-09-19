@@ -57,14 +57,10 @@ while test $# -ne 0; do
     shift
 done
 
-if test -z "$PKG_SUFX"; then
-    PKG_SUFX=.tgz
-fi
+PKG_SUFX=${PKG_SUFX:=@PKG_SUFX@}
 PKG_SUFX_RE="`echo $PKG_SUFX | sed 's,[.],[.],g'`"
 
-if test -z "$PKG_INFO_CMD"; then
-    PKG_INFO_CMD=pkg_info
-fi
+PKG_INFO_CMD="${PKG_INFO_CMD:=@PKG_INFO_CMD@}"
 
 if test -z "$TEST_CMD"; then
     TEST_CMD=test

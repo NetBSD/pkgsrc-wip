@@ -57,11 +57,11 @@ done
 ############################################################
 # user settable variables
 if test -z "$PKGSRCDIR"; then
-    PKGSRCDIR=/usr/pkgsrc
+    PKGSRCDIR=@PKGSRCDIR@
 fi
 
 if test -z "$BMAKE"; then
-    BMAKE=make
+    BMAKE=@BMAKE@
 fi
 
 ############################################################

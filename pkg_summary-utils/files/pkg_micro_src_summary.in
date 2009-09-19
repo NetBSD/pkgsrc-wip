@@ -28,13 +28,8 @@ set -e
 
 ############################################################
 # user settable variables
-if test -z "$PKGSRCDIR"; then
-    export PKGSRCDIR=/usr/pkgsrc # export - for pkg_src_fetch_var
-fi
-
-if test -z "$BMAKE"; then
-    export BMAKE=make
-fi
+export PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@} # export - for pkg_src_fetch_var
+export BMAKE=${BMAKE:=@BMAKE@}
 
 ############################################################
 tmpdir=/tmp/pkg_micro_src_summary.$$

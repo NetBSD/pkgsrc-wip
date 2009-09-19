@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_update_summary.1,v 1.6 2008/11/07 17:55:46 cheusov Exp $
+.\"	$NetBSD: pkg_update_summary.1,v 1.7 2009/09/19 13:31:58 cheusov Exp $
 .\"
 .\" Copyright (c) 2007 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -54,13 +54,13 @@ only newest versions for each PKGPATH:PKGBASE pair is kept in summary
 .SH ENVIRONMENT
 .TP
 .B PKG_SUFX
-Binary package extension, either .tgz or .tbz, defaults to '.tgz'
+Binary package extension (either .tgz or .tbz).
 .TP
 .B TEST_CMD
 Solaris's test command does not like option -nt, defaults to 'test'
 .TP
 .B PKG_INFO_CMD
-Path to pkg_info command, defaults to 'pkg_info'
+Path to pkg_info command
 .SH EXAMPLES
 .VB
 pkg_update_summary /srv/packages/All/pkg_summary.txt /srv/packages/All

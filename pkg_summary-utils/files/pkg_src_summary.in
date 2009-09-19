@@ -32,17 +32,10 @@ export LC_ALL=C
 
 ############################################################
 # user settable variables
-if test -z "$PKGSRCDIR"; then
-    PKGSRCDIR=/usr/pkgsrc
-fi
+PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
+BMAKE=${BMAKE:=@BMAKE@}
+PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@@mkscriptsdir@@}
 
-if test -z "$BMAKE"; then
-    BMAKE=make
-fi
-
-if test -z "$PSS_MKSCRIPTSDIR"; then
-    PSS_MKSCRIPTSDIR=@@mkscriptsdir@@
-fi
 ############################################################
 usage (){
     cat 1>&2 <<EOF
