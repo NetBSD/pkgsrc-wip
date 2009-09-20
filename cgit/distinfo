@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/07/28 22:22:16 rsmarples Exp $
+$NetBSD: distinfo,v 1.5 2009/09/20 16:23:44 mstapelberg Exp $
 
-SHA1 (cgit-0.8.2.1.tar.bz2) = 1c40de81530a3c0513bc963cc81f14685448f6f9
-RMD160 (cgit-0.8.2.1.tar.bz2) = 2e83250130aa1d4f087c853567c794b58a24368c
-Size (cgit-0.8.2.1.tar.bz2) = 50598 bytes
-SHA1 (patch-aa) = 86919e2068e90b86390b9f35ca1f27e69d58c60e
+SHA1 (cgit-0.8.3.tar.bz2) = 3957956d71acf2f4a7024bd8ee5ea6f967550d2f
+RMD160 (cgit-0.8.3.tar.bz2) = 383f3547c34f7e015437e4af049372a0dbd05c5f
+Size (cgit-0.8.3.tar.bz2) = 54775 bytes
+SHA1 (patch-aa) = 2a3699097ca01c7f653c20e0de843d562885d0a2
 SHA1 (patch-ab) = 1f049bbb12f6b7322778bd629da0802ed4bd766e
 SHA1 (patch-ac) = 51ace148ac8a41e6b0e19c7c9d00d9ef608b36a1

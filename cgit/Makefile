@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/09/05 20:56:20 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/20 16:23:43 mstapelberg Exp $
 
-DISTNAME=	cgit-0.8.2.1
+DISTNAME=	cgit-0.8.3
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://hjemli.net/git/cgit/snapshot/
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake
-MAKE_FLAGS+=		GIT_VER=1.6.3.3
+MAKE_FLAGS+=		GIT_VER=1.6.4.3
 BUILD_MAKE_FLAGS+=	CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
 BUILD_TARGET=		get-git all
 
