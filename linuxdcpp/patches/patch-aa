@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.6 2009/09/20 07:53:23 tnn2 Exp $
+
+--- client/QueueManager.cpp.orig	2008-11-30 17:53:56.000000000 +0100
++++ client/QueueManager.cpp
+@@ -35,6 +35,7 @@
+ #include "StringTokenizer.h"
+ #include "DirectoryListing.h"
+ 
++#include <limits.h>
+ #include <limits>
+ 
+ #ifdef ff
