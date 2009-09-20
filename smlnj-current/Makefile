@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/06/27 20:17:35 asau Exp $
+# $NetBSD: Makefile,v 1.16 2009/09/20 00:38:08 asau Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -25,7 +25,7 @@ MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Working version of SML/NJ Standard ML compiler
 
-SML_VERSION=	110.70
+SML_VERSION=	110.71
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
