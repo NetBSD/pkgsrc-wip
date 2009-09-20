@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/20 13:42:14 tonnerre Exp $
 #
 
-DISTNAME=	nanoblogger-3.3
+DISTNAME=	nanoblogger-3.4.1
 CATEGORIES=	www
 MASTER_SITES=	http://nanoblogger.sourceforge.net/downloads/
 
