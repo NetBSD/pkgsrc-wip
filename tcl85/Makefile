@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/24 19:29:35 egavilan Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/20 21:24:29 shindenmorr Exp $
 #
 
 DISTNAME=		tcl${TCL_PKGSRC_PATCHLEVEL}-src
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tcl.tk/
 COMMENT=		Tool Command Language, a dynamic language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tcl85/Makefile.version"
 
@@ -36,5 +38,6 @@ DESTDIRPREFIX=          ${DESTDIR}${PREFIX}
 
 post-install:
 	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
+	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ln -s tclsh8.5 tclsh
 
 .include "../../mk/bsd.pkg.mk"
