@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/24 19:35:09 egavilan Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/20 21:30:10 shindenmorr Exp $
+bin/wish
 bin/wish8.5
 include/tk.h
 include/tkDecls.h
@@ -142,7 +143,6 @@ lib/tk8.5/optMenu.tcl
 lib/tk8.5/palette.tcl
 lib/tk8.5/panedwindow.tcl
 lib/tk8.5/pkgIndex.tcl
-lib/tk8.5/prolog.ps
 lib/tk8.5/safetk.tcl
 lib/tk8.5/scale.tcl
 lib/tk8.5/scrlbar.tcl
@@ -548,9 +548,3 @@ man/mann/ttk_treeview.n
 man/mann/ttk_widget.n
 man/mann/winfo.n
 man/mann/wm.n
-@dirrm lib/tk8.5/ttk
-@dirrm lib/tk8.5/msgs
-@dirrm lib/tk8.5/images
-@dirrm lib/tk8.5/demos/images
-@dirrm lib/tk8.5/demos
-@dirrm lib/tk8.5

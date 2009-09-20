@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/24 19:35:09 egavilan Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/20 21:30:10 shindenmorr Exp $
 
 DISTNAME=		tk${TK_PKGSRC_PATCHLEVEL}-src
 PKGNAME=		tk-${TK_PKGSRC_PATCHLEVEL}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tcl.tk/
 COMMENT=		Graphical toolkit for Tcl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tk85/Makefile.version"
 
@@ -30,6 +32,8 @@ INSTALL_TARGET=	install install-private-headers
 DESTDIRPREFIX=		${DESTDIR}${PREFIX}
 
 post-install:
+	rm -f ${DESTDIRPREFIX:Q}/bin/wish
+	ln -s wish8.5 ${DESTDIRPREFIX:Q}/bin/wish
 	mv ${DESTDIRPREFIX:Q}/lib/tkConfig.sh ${DESTDIRPREFIX:Q}/lib/tk${TK_PKGSRC_VERSION}
 
 .include "../../mk/bsd.pkg.mk"
