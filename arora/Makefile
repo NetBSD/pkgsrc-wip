@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/07/30 21:27:09 rsmarples Exp $
+# $NetBSD: Makefile,v 1.7 2009/09/21 10:53:00 htepper Exp $
 
-DISTNAME=		arora-0.8.0
+DISTNAME=		arora-0.9.0
 CATEGORIES=		www net
 MASTER_SITES=		http://arora.googlecode.com/files/
 
