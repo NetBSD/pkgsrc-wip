@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2009/09/16 11:24:51 asau Exp $
+$NetBSD: patch-aa,v 1.10 2009/09/22 21:06:41 asau Exp $
 
 Don't use cache file to avoid trailing space problem.
 Fix installation of dynamic modules if they're not built.
 
---- src/makemake.in.orig	2009-09-12 12:23:45.000000000 +0400
-+++ src/makemake.in	2009-09-12 13:15:02.000000000 +0400
-@@ -1915,7 +1916,7 @@
+--- src/makemake.in.orig	2009-09-15 21:18:18.000000000 +0400
++++ src/makemake.in	2009-09-22 23:27:54.000000000 +0400
+@@ -1916,7 +1916,7 @@
  echol "psdir   = ${PSDIR}"
  echol "pdfdir  = ${PDFDIR}"
  echol "libdir  = ${LIBDIR}"
@@ -14,7 +14,7 @@ Fix installation of dynamic modules if they're not built.
  if [ -n "$USE_GETTEXT" ] ; then
    echol "localedir = ${LOCALEDIR}"
  fi
-@@ -3350,7 +3352,7 @@
+@@ -3354,7 +3354,7 @@
  done
  # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
  # is bash, config.cache may be unparsable with sh on Solaris
@@ -23,7 +23,7 @@ Fix installation of dynamic modules if they're not built.
  echotab "    else \$(SHELL) \$\$m/configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
  echotab "    fi ) ;\\"
  echotab "fi; \\"
-@@ -3621,8 +3623,10 @@
+@@ -3626,8 +3626,10 @@
      echotab "mkdir -p \$(DESTDIR)\$(lisplibdir)/build-aux"
      echotab "for f in ${BUILD_AUX}; do \$(INSTALL_DATA) build-aux/\$\$f \$(DESTDIR)\$(lisplibdir)/build-aux/\$\$f; done"
      if [ "${with_dynamic_modules}" != no ]; then
@@ -31,7 +31,7 @@ Fix installation of dynamic modules if they're not built.
 -      echotab "for f in dynmod/*; do \$(INSTALL_DATA) \$\$f \$(DESTDIR)\$(lisplibdir)/\$\$f; done"
 +      echotab "if [ -d dynmod ]; then \\"
 +      echotab "  mkdir \$(DESTDIR)\$(lisplibdir)/dynmod; \\"
-+      echotab "  for f in dynmod/*; do \$(INSTALL_DATA) \$\$f \$(DESTDIR)\$(lisplibdir)/\$\$f; done; \\"
++      echotab "  if test -f dynmod/*; then for f in dynmod/*; do \$(INSTALL_DATA) \$\$f \$(DESTDIR)\$(lisplibdir)/\$\$f; done; fi; \\"
 +      echotab "fi"
        echotab "absdest=\`cd \"\$(DESTDIR)\$(lisplibdir)\"; pwd\` ; \\"
        echotab "here=\`pwd\`; \\"
