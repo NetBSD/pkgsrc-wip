@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/02/06 17:55:10 asau Exp $
+# $NetBSD: Makefile,v 1.22 2009/09/22 19:37:40 asau Exp $
 
 PKGNAME=		fricas-1.0.99
 DISTNAME=		${PKGNAME}-full
@@ -12,7 +12,7 @@ COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	fricas
-SVN_ROOT.fricas=	https://fricas.svn.sourceforge.net/svnroot/fricas/trunk
+SVN_ROOT.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
 SVN_MODULE.fricas=	fricas
 
 #WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
