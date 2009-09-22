@@ -1,0 +1,9 @@
+Chalkboard is a Haskell hosted Domain Specific Language (DSL) for
+image generation and processing. The basic structure is a chalk board,
+a two-dimensional canvas of values, typically colors. Chalkboard
+provides the usual image processing functions (masking, overlaying,
+function mapping, cropping, warping, rotating) as well as a few more
+unusual ones.
+
+Chalkboard Viewer is a portal into a dynamically updatable Board, via
+an OpenGL window.

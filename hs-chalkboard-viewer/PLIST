@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/22 14:46:34 phonohawk Exp $
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/Graphics/Chalkboard/Viewer.hi
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/Graphics/Chalkboard/Viewer.p_hi
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/HSchalkboard-viewer-${PKGVERSION}.o
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/libHSchalkboard-viewer-${PKGVERSION}.a
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/libHSchalkboard-viewer-${PKGVERSION}_p.a
+lib/chalkboard-viewer-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/chalkboard-viewer-${PKGVERSION}/LICENSE
