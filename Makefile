@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3596 2009/09/16 08:30:30 spzeidler Exp $
+# $Id: Makefile,v 1.3597 2009/09/22 12:39:15 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -100,7 +100,6 @@ SUBDIR+=	apvlv
 SUBDIR+=	ar7
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
-SUBDIR+=	aria2
 SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	armagetronad
