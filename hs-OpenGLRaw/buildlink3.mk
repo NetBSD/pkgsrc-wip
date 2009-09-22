@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/22 13:31:04 phonohawk Exp $
+
+BUILDLINK_TREE+=	hs-OpenGLRaw
+
+.if !defined(HS_OPENGLRAW_BUILDLINK3_MK)
+HS_OPENGLRAW_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.hs-OpenGLRaw+=	hs-OpenGLRaw>=1.1.0.0
+BUILDLINK_PKGSRCDIR.hs-OpenGLRaw?=	../../wip/hs-OpenGLRaw
+
+.endif	# HS_OPENGLRAW_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-hs-OpenGLRaw
