@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/22 14:01:20 phonohawk Exp $
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/Data/Tensor.hi
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/Data/Tensor.p_hi
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/HSTensor-${PKGVERSION}.o
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/libHSTensor-${PKGVERSION}.a
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/libHSTensor-${PKGVERSION}_p.a
+lib/Tensor-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/Tensor-${PKGVERSION}/LICENSE
