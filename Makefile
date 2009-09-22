@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3606 2009/09/22 14:47:32 phonohawk Exp $
+# $Id: Makefile,v 1.3607 2009/09/22 15:13:46 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1955,7 +1955,6 @@ SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
 SUBDIR+=	smc
-SUBDIR+=	smlnj-current
 SUBDIR+=	smproxy
 SUBDIR+=	smstools
 SUBDIR+=	smtp-gated
