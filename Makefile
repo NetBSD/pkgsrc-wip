@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3603 2009/09/22 13:59:07 phonohawk Exp $
+# $Id: Makefile,v 1.3604 2009/09/22 14:10:13 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -720,6 +720,7 @@ SUBDIR+=	hs-HsOpenSSL
 SUBDIR+=	hs-HsSVN
 SUBDIR+=	hs-Lucu
 SUBDIR+=	hs-ObjectName
+SUBDIR+=	hs-OpenGL
 SUBDIR+=	hs-OpenGLRaw
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
