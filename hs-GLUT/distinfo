@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/22 14:20:30 phonohawk Exp $
+
+SHA1 (GLUT-2.2.2.0.tar.gz) = f99c372da9f770c85c1d75106d1198190db027b3
+RMD160 (GLUT-2.2.2.0.tar.gz) = 0791f8547acb3c782250e32dd21331662d2a11c8
+Size (GLUT-2.2.2.0.tar.gz) = 650235 bytes
