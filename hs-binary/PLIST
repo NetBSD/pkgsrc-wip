@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/10 07:39:00 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/09/23 07:04:49 phonohawk Exp $
 lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary.hi
 lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary.p_hi
 lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Builder.hi
@@ -12,8 +12,3 @@ lib/binary-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-${PKGVERSION}.a
 lib/binary-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-${PKGVERSION}_p.a
 lib/binary-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/binary-${PKGVERSION}/LICENSE
-@dirrm share/doc/binary-${PKGVERSION}
-@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary
-@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}/Data
-@dirrm lib/binary-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/binary-${PKGVERSION}

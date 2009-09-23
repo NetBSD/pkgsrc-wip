@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 04:50:37 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/23 07:04:49 phonohawk Exp $
 #
 
-DISTNAME=	binary-0.5.0.1
-PKGNAME=	hs-${DISTNAME}
+DISTNAME=	binary-0.5.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
