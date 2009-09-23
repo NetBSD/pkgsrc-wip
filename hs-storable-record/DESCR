@@ -1,0 +1,2 @@
+With this package definition you can build a Storable instance of a
+record type from Storable instances of its elements.
