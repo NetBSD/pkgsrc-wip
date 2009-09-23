@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/02 06:57:32 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/23 06:35:34 phonohawk Exp $
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/HSHUnit-${PKGVERSION}.o
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/Test/HUnit.hi
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/Test/HUnit.p_hi
@@ -13,9 +13,8 @@ lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/Test/HUnit/Text.p_hi
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/libHSHUnit-${PKGVERSION}.a
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/libHSHUnit-${PKGVERSION}_p.a
 lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/HUnit-${PKGVERSION}/README
+share/HUnit-${PKGVERSION}/doc/Guide.html
+share/HUnit-${PKGVERSION}/examples/Example.hs
+share/HUnit-${PKGVERSION}/prologue.txt
 share/doc/HUnit-${PKGVERSION}/LICENSE
-@dirrm share/doc/HUnit-${PKGVERSION}
-@dirrm lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/Test/HUnit
-@dirrm lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}/Test
-@dirrm lib/HUnit-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/HUnit-${PKGVERSION}
