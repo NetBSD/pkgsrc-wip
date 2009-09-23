@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3611 2009/09/23 05:44:04 phonohawk Exp $
+# $Id: Makefile,v 1.3612 2009/09/23 06:04:04 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -723,6 +723,7 @@ SUBDIR+=	hs-ObjectName
 SUBDIR+=	hs-OpenGL
 SUBDIR+=	hs-OpenGLRaw
 SUBDIR+=	hs-QuickCheck
+SUBDIR+=	hs-QuickCheck1
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
