@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 06:53:04 phonohawk Exp $
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Reader.hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Reader.p_hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/State.hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/State.p_hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Transformer.hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Transformer.p_hi
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/HSmonoid-transformer-${PKGVERSION}.o
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/libHSmonoid-transformer-${PKGVERSION}.a
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/libHSmonoid-transformer-${PKGVERSION}_p.a
+lib/monoid-transformer-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/monoid-transformer-${PKGVERSION}/LICENSE

@@ -1,0 +1,4 @@
+Monoid transformers: State, Reader
+
+There is no Writer transformer. It's vice versa: The Writer monad
+transforms a monoid to a monad.
