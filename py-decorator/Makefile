@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/08/30 21:39:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/23 09:57:37 jihbed Exp $
 #
 
-DISTNAME=	decorator-3.1.1.tar
+DISTNAME=	decorator-3.1.2.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/decorator/
-EXTRACT_SUFX=	.gz#md5=a9b069b0b86dfe53498e8fb4d0b154c1
+EXTRACT_SUFX=	.gz#md5=9ebbe8d0f0c42495561b8e79fd0d8e56
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/decorator
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/decorator-3.1.1
+WRKSRC=		${WRKDIR}/decorator-3.1.2
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 25 24
