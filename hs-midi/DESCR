@@ -1,0 +1,5 @@
+MIDI is the Musical Instrument Digital Interface. The package contains
+definition of realtime and file MIDI messages, reading and writing
+MIDI files. It contains no sending and receiving of MIDI
+messages. Cf. alsa-midi, jack-midi and hmidi packages. For music
+composition with MIDI output, see Haskore.
