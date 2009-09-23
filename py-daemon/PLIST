@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/07/06 19:34:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/09/23 09:20:41 jihbed Exp $
 ${PYSITELIB}/daemon/__init__.py
 ${PYSITELIB}/daemon/__init__.pyc
 ${PYSITELIB}/daemon/__init__.pyo
@@ -17,24 +17,9 @@ ${PYSITELIB}/daemon/version/__init__.pyo
 ${PYSITELIB}/daemon/version/version_info.py
 ${PYSITELIB}/daemon/version/version_info.pyc
 ${PYSITELIB}/daemon/version/version_info.pyo
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/requires.txt
-${PYSITELIB}/python_daemon-1.4.6-py2.5.egg-info/top_level.txt
-${PYSITELIB}/tests/__init__.py
-${PYSITELIB}/tests/__init__.pyc
-${PYSITELIB}/tests/__init__.pyo
-${PYSITELIB}/tests/scaffold.py
-${PYSITELIB}/tests/scaffold.pyc
-${PYSITELIB}/tests/scaffold.pyo
-${PYSITELIB}/tests/test_daemon.py
-${PYSITELIB}/tests/test_daemon.pyc
-${PYSITELIB}/tests/test_daemon.pyo
-${PYSITELIB}/tests/test_pidlockfile.py
-${PYSITELIB}/tests/test_pidlockfile.pyc
-${PYSITELIB}/tests/test_pidlockfile.pyo
-${PYSITELIB}/tests/test_runner.py
-${PYSITELIB}/tests/test_runner.pyc
-${PYSITELIB}/tests/test_runner.pyo
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/requires.txt
+${PYSITELIB}/python_daemon-1.4.8-py2.5.egg-info/top_level.txt
