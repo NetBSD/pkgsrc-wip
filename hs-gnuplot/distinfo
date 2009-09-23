@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/09/23 13:00:58 phonohawk Exp $
+
+SHA1 (gnuplot-0.3.3.tar.gz) = 7a539e52fba04b625b32d895b6d2791801f70c88
+RMD160 (gnuplot-0.3.3.tar.gz) = 7a57ecaa2d38698b02f229f63ba4b854b1e143be
+Size (gnuplot-0.3.3.tar.gz) = 15892 bytes
