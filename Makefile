@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3620 2009/09/23 09:27:25 phonohawk Exp $
+# $Id: Makefile,v 1.3621 2009/09/23 11:40:37 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -771,6 +771,7 @@ SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-compat
 SUBDIR+=	hs-regex-posix
 SUBDIR+=	hs-stm
+SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-time
 SUBDIR+=	hs-transformers
