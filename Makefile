@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3610 2009/09/23 05:20:18 phonohawk Exp $
+# $Id: Makefile,v 1.3611 2009/09/23 05:44:04 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -21,7 +21,6 @@ SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	QLandkarte
-SUBDIR+=	QuickCheck
 SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rserve
@@ -723,6 +722,7 @@ SUBDIR+=	hs-Lucu
 SUBDIR+=	hs-ObjectName
 SUBDIR+=	hs-OpenGL
 SUBDIR+=	hs-OpenGLRaw
+SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
