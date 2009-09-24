@@ -37,6 +37,7 @@ Suggested package updates
 	o gnunet-0.8.0c
 	o grass-6.2.3
 	o grisbi-0.5.8
+	o gtkaml-0.2.8
 	o guichan-0.8.1
 	o guitone-0.9
 	o hitori-0.2.2
@@ -48,6 +49,7 @@ Suggested package updates
 	o libAppleWM-1.4.0
 	o libgdata-0.4.0
 	o libgksu-2.0.4
+	o libpthread-stubs-0.2
 	o libuuid-1.41.9
 	o lincity-ng-2.0
 	o linphone-3.2.0
@@ -96,7 +98,7 @@ Suggested package updates
 	o vinagre-2.26.0
 	o virtualbox-3.0.6
 	o xaralx-bin-0.7.1692
-	o xf86-video-geode-2.11.4.1
+	o xf86-video-geode-2.11.5
 	o xinetd-2.3.14
 	o xmms2-0.6
 	o xmonad-0.8
