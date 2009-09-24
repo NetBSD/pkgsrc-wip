@@ -1,19 +1,25 @@
-# $NetBSD: Makefile,v 1.18 2009/07/24 02:23:27 phonohawk Exp $
+# $NetBSD: Makefile,v 1.19 2009/09/24 08:34:39 phonohawk Exp $
 
-DISTNAME=		darcs-2.2.0
+DISTNAME=		darcs-2.3.1
 PKGNAME=		${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel scm
-MASTER_SITES=		http://www.darcs.net/
 
 MAINTAINER=		matias@dotbsd.org
 HOMEPAGE=		http://www.darcs.net/
 COMMENT=		Distributed revision control system
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+= -fbytestring -futf8-string -f-type-witnesses -f-test
+.include "options.mk"
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-hashed-storage/buildlink3.mk"
+.include "../../wip/hs-haskeline/buildlink3.mk"
 .include "../../wip/hs-html/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-regex-compat/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+.include "../../wip/hs-regex-compat/buildlink3.mk"
+.include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

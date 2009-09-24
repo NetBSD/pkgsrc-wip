@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.7 2009/09/24 08:34:39 phonohawk Exp $
+
+--- darcs.cabal.orig	2009-09-21 03:06:46.000000000 +0900
++++ darcs.cabal
+@@ -307,7 +307,7 @@ Library
+     cc-options:     -DHAVE_SIGINFO_H
+ 
+   build-depends:   base          < 4,
+-                   regex-compat >= 0.71 && < 0.94,
++                   regex-compat >= 0.71,
+                    mtl          >= 1.0 && < 1.2,
+                    parsec       >= 2.0 && < 3.1,
+                    html         == 1.0.*,
+@@ -438,7 +438,7 @@ Executable          darcs
+     cc-options:     -DHAVE_SIGINFO_H
+ 
+   build-depends:   base          < 4,
+-                   regex-compat >= 0.71 && < 0.94,
++                   regex-compat >= 0.71,
+                    mtl          >= 1.0 && < 1.2,
+                    parsec       >= 2.0 && < 3.1,
+                    html         == 1.0.*,

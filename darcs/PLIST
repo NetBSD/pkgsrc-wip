@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/07/24 02:23:27 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/09/24 08:34:39 phonohawk Exp $
 bin/darcs
 lib/${PKGNAME}/${HASKELL_VERSION}/ByteStringUtils.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/ByteStringUtils.p_hi
@@ -36,6 +36,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Diff.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Diff.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Dist.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Dist.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/GZCRCs.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/GZCRCs.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Get.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Get.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Help.hi
@@ -44,8 +46,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Init.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Init.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/MarkConflicts.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/MarkConflicts.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Mv.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Mv.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Move.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Move.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Optimize.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Optimize.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/Pull.hi
@@ -80,6 +82,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowContents.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowContents.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowFiles.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowFiles.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowIndex.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowIndex.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowRepo.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowRepo.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Commands/ShowTags.hi
@@ -112,6 +116,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Flags.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Flags.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Global.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Global.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Gorsvet.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Gorsvet.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Hopefully.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/Hopefully.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Darcs/IO.hi
@@ -259,6 +265,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/SHA1.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/SHA1.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Ssh.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Ssh.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/ThisVersion.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/ThisVersion.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/URL.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/URL.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/UTF8.hi
@@ -269,3 +277,4 @@ lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 share/doc/${PKGNAME}/COPYING
+share/man/man1/darcs.1
