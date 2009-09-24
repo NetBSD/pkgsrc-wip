@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/09/17 06:04:03 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/09/24 10:33:05 thomasklausner Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
@@ -34,7 +34,6 @@ lib/kde4/amarok_service_lastfm.so
 lib/kde4/amarok_service_magnatunestore.so
 lib/kde4/amarok_service_mp3tunes.so
 lib/kde4/amarok_service_opmldirectory.so
-lib/kde4/amarok_service_shoutcast.so
 lib/kde4/kcm_amarok_service_ampache.so
 lib/kde4/kcm_amarok_service_lastfm.so
 lib/kde4/kcm_amarok_service_magnatunestore.so
@@ -436,7 +435,6 @@ share/kde4/services/amarok_service_magnatunestore_config.desktop
 share/kde4/services/amarok_service_mp3tunes.desktop
 share/kde4/services/amarok_service_mp3tunes_config.desktop
 share/kde4/services/amarok_service_opmldirectory.desktop
-share/kde4/services/amarok_service_shoutcast.desktop
 share/kde4/services/amaroklastfm.protocol
 share/kde4/servicetypes/amarok_codecinstall.desktop
 share/kde4/servicetypes/amarok_context_applet.desktop
@@ -472,7 +470,9 @@ share/locale/et/LC_MESSAGES/amarokpkg.mo
 share/locale/eu/LC_MESSAGES/amarok.mo
 share/locale/fi/LC_MESSAGES/amarok.mo
 share/locale/fr/LC_MESSAGES/amarok.mo
+share/locale/fr/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/fr/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/fr/LC_MESSAGES/amarokpkg.mo
 share/locale/it/LC_MESSAGES/amarok.mo
 share/locale/it/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/it/LC_MESSAGES/amarokcollectionscanner_qt.mo
@@ -510,7 +510,9 @@ share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo
 share/locale/ru/LC_MESSAGES/amarok.mo
+share/locale/ru/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/ru/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/ru/LC_MESSAGES/amarokpkg.mo
 share/locale/sl/LC_MESSAGES/amarok.mo
 share/locale/sl/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/sr/LC_MESSAGES/amarok.mo
