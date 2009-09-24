@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.11 2009/05/20 08:32:00 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.12 2009/09/24 08:25:50 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -156,7 +156,7 @@ HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
 .if ${HASKELL_COMPILER} == "ghc"
 
 # Add dependency to the GHC.
-.include "../../lang/ghc/buildlink3.mk"
+.include "../../wip/ghc/buildlink3.mk"
 
 # Tools
 _GHC_BIN=		${PREFIX}/bin/ghc
