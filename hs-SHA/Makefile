@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2009/02/10 07:20:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/24 02:05:29 phonohawk Exp $
 #
 
-DISTNAME=	SHA-1.0.3
-PKGREVISION=	1
-PKGNAME=	hs-${DISTNAME}
+DISTNAME=	SHA-1.4.0
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell implementation of SHA digest functions
+LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/QuickCheck/buildlink3.mk"
+.include "../../wip/hs-binary/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
