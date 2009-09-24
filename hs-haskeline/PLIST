@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/05 04:28:16 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/24 06:22:54 phonohawk Exp $
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/HShaskeline-${PKGVERSION}.o
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline.p_hi
@@ -10,12 +10,16 @@ lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/IConv.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/Posix.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/Posix.p_hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/Terminfo.hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend/Terminfo.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/Completion.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/Completion.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/History.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/History.p_hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/KillRing.hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/KillRing.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/Undo.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command/Undo.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Completion.hi
@@ -42,6 +46,8 @@ lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Monads.h
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Monads.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Prefs.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Prefs.p_hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/RunCommand.hi
+lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/RunCommand.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Term.hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Term.p_hi
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Vi.hi
@@ -51,12 +57,3 @@ lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/libHShaskeline-${PKGVERSION}.a
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/libHShaskeline-${PKGVERSION}_p.a
 lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/haskeline-${PKGVERSION}/LICENSE
-@dirrm share/doc/haskeline-${PKGVERSION}
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/include
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Command
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline/Backend
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Haskeline
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System/Console
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}/System
-@dirrm lib/haskeline-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/haskeline-${PKGVERSION}
