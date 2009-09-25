@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2007/12/28 02:54:37 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/25 12:54:45 thomasklausner Exp $
 lib/mpg123/output_sun.la
-@dirrm lib/mpg123
