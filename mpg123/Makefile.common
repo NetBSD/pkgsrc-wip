@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.3 2009/09/25 12:53:43 thomasklausner Exp $
 #
 # used by wip/mpg123-oss/Makefile
 # used by wip/mpg123-sun/Makefile
@@ -29,12 +29,11 @@ MAKE_ENV+=		MPG123_SUBDIRS=${MPG123_SUBDIRS:Q}
 MAKE_ENV+=		MPG123_SUBDIRS.src=${MPG123_SUBDIRS.src:Q}
 
 .if !defined(MPG123_BUILDING_BASE)
+INSTALLATION_DIRS+=	lib/mpg123
 LIBS+=			-lmpg123
 BUILD_DIRS=		src/output
 PATCHDIR=	${.CURDIR}/../../wip/mpg123/patches
 do-install:
-	${RUN} ${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib &&		\
-		${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/mpg123 &&	\
 	${LIBTOOL} --mode=install ${INSTALL_LIB} 			\
 		${WRKSRC}/src/output/output_${MPG123_MODULE}.la 	\
 		${DESTDIR}${PREFIX}/lib/mpg123
