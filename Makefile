@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3629 2009/09/25 10:28:17 thomasklausner Exp $
+# $Id: Makefile,v 1.3630 2009/09/25 15:08:01 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -830,7 +830,6 @@ SUBDIR+=	ilbc-rfc3951
 SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	imagination
-SUBDIR+=	imgseek
 SUBDIR+=	imonc
 SUBDIR+=	interbase-docs
 #SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
@@ -1737,6 +1736,7 @@ SUBDIR+=	py-gnucash
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gts
 SUBDIR+=	py-httplib2
+SUBDIR+=	py-imgSeek
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
