@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/12/09 22:01:34 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/25 08:08:56 bartoszkuzma Exp $
 #
 
-DISTNAME=		smtp-gated-1.4.16
+DISTNAME=		smtp-gated-1.4.16.2
 # PKGNAME=		${DISTNAME:S/-rc/rc/}
 CATEGORIES=		mail
 MASTER_SITES=		http://smtp-proxy.klolik.org/files/
@@ -9,6 +9,7 @@ MASTER_SITES=		http://smtp-proxy.klolik.org/files/
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://smtp-proxy.klolik.org/
 COMMENT=		Proxy for SMTP sessions with virus and spam scan
+LICENSE=		gnu-gpl-v2
 
 SMTP_GATED_GROUP?=	smtpgw
 SMTP_GATED_USER?=	smtpgw
@@ -38,18 +39,19 @@ EGDIR=			${PREFIX}/share/examples/smtp-gated
 CONF_FILES=		${EGDIR}/smtp-gated.conf \
 			${PKG_SYSCONFDIR}/smtp-gated.conf
 RCD_SCRIPTS=		smtp_gated
-
 USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
+
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 post-extract:
 	${CP} ${FILESDIR}/smtp-gated.conf ${WRKDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.PL ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/smtp-gated.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.PL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/smtp-gated.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
