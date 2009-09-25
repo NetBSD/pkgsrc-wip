@@ -1,15 +1,15 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+$NetBSD: patch-af,v 1.2 2009/09/25 17:37:10 tnn2 Exp $
 
---- jdk/make/common/shared/Defs-utils.gmk.orig	2008-12-30 18:39:22.000000000 +0100
+--- jdk/make/common/shared/Defs-utils.gmk.orig	2009-09-24 23:41:39.000000000 +0200
 +++ jdk/make/common/shared/Defs-utils.gmk
-@@ -205,3 +205,10 @@ endif
- ifeq ($(SYSTEM_UNAME),Darwin)
-   NAWK = $(USRBIN_PATH)awk
+@@ -240,7 +240,8 @@ ifeq ($(PLATFORM),bsd)
+   endif
+   ifeq ($(OS_VENDOR), NetBSD)
+     NAWK       = $(UTILS_USR_BIN_PATH)awk
+-    ZIPEXE     = $(UTILS_DEVTOOL_PATH)zip
+-    UNZIP      = $(UTILS_DEVTOOL_PATH)unzip
++    ZIPEXE     = $(PKGSRC_ZIPEXE)
++    UNZIP      = $(PKGSRC_UNZIP)
++    UNZIPSFX   = $(PKGSRC_UNZIPSFX)
+   endif
  endif
-+
-+ifeq ($(SYSTEM_UNAME),NetBSD)
-+  NAWK = $(USRBIN_PATH)awk
-+  ZIPEXE = $(PKGSRC_ZIPEXE)
-+  UNZIP = $(PKGSRC_UNZIP)
-+  UNZIPSFX = $(PKGSRC_UNZIPSFX)
-+endif

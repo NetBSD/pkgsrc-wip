@@ -1,12 +1,12 @@
-# $NetBSD: bootstrap.mk,v 1.3 2009/01/11 11:54:25 tnn2 Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2009/09/25 17:37:10 tnn2 Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-5.*-i386 NetBSD-5.*-x86_64
 
-BOOTKIT.i386=		bootstrap-jdk-7-bin-netbsd-5-i386-20090111.tar.bz2
+BOOTKIT.i386=		bootstrap-jdk-7-bin-netbsd-5-i386-20090925.tar.bz2
 SITES.${BOOTKIT.i386}=	http://mx1.nygren.pp.se/distfiles/
 DISTFILES+=		${BOOTKIT.i386}
 
-BOOTKIT.amd64=		bootstrap-jdk-7-bin-netbsd-5-amd64-20090111.tar.bz2
+BOOTKIT.amd64=		bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2
 SITES.${BOOTKIT.amd64}=	http://mx1.nygren.pp.se/distfiles/
 DISTFILES+=		${BOOTKIT.amd64}
 
@@ -20,9 +20,10 @@ EXTRACT_ONLY+=		${BOOTKIT.amd64}
 ALT_BOOTDIR=		${WRKDIR}/bootstrap
 .endif
 
-.if defined(PKG_DEVELOPER)
-bootstrapkit:
-	mkdir ${WRKSRC}/bootstrap
-	cd ${BUILDDIR}/j2sdk-image && pax -rwpp $$(cat ${FILESDIR}/PLIST.boot | sed 's/$${ARCH}/amd64/') ${WRKSRC}/bootstrap
-	cd ${WRKSRC} && tar cjvf bootstrap.tar.bz2 bootstrap
+.if !exists(/usr/lib/libstdc++.so.6) || !exists(/usr/lib/libpthread.so.0)
+PKG_FAIL_REASON+=	"Using NetBSD-current? If so, this package can build a native JDK for you."
+PKG_FAIL_REASON+=	"But during the build, two compatibility libraries from NetBSD 5.0 must"
+PKG_FAIL_REASON+=	"be available. Please fetch libstdc++.so.6 and libpthread.so.0 from the"
+PKG_FAIL_REASON+=	"NetBSD 5.0 distribution and drop them in /usr/lib . After the package"
+PKG_FAIL_REASON+=	"Has been built you can remove them."
 .endif

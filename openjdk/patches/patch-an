@@ -1,16 +1,12 @@
-$NetBSD: patch-an,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+$NetBSD: patch-an,v 1.2 2009/09/25 17:37:10 tnn2 Exp $
 
---- hotspot/src/os_cpu/bsd_x86/vm/bytes_bsd_x86.inline.hpp.orig	2008-12-30 21:08:33.000000000 +0100
+--- hotspot/src/os_cpu/bsd_x86/vm/bytes_bsd_x86.inline.hpp.orig	2009-09-24 22:52:54.000000000 +0200
 +++ hotspot/src/os_cpu/bsd_x86/vm/bytes_bsd_x86.inline.hpp
-@@ -39,6 +39,11 @@
- #    define bswap_16(x)	swap16(x)
+@@ -40,6 +40,7 @@
  #    define bswap_32(x)	swap32(x)
  #    define bswap_64(x)	swap64(x)
-+#  elif defined(__NetBSD__)
+ #  elif defined(__NetBSD__)
 +#    include <machine/bswap.h>
-+#    define bswap_16(x) bswap16(x)
-+#    define bswap_32(x) bswap32(x)
-+#    define bswap_64(x) bswap64(x)
- #  else
- #    define bswap_16(x) __bswap16(x)
- #    define bswap_32(x) __bswap32(x)
+ #    define bswap_16(x)	bswap16(x)
+ #    define bswap_32(x)	bswap32(x)
+ #    define bswap_64(x)	bswap64(x)

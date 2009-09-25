@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/01/11 12:45:03 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/25 17:37:10 tnn2 Exp $
 
-DISTNAME=	openjdk-7-ea-src-b42-19_dec_2008
-PKGNAME=	openjdk-1.7.0.42.20081230
-PKGREVISION=	1
+DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
+PKGNAME=	openjdk-1.7.0.72.20090924
 CATEGORIES=	lang
-MASTER_SITES=	http://www.java.net/download/openjdk/jdk7/promoted/b42/
+MASTER_SITES=	http://www.java.net/download/openjdk/jdk7/promoted/b72/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tnn@NetBSD.org
@@ -13,18 +12,20 @@ COMMENT=	Open-source impl. of the Java Platform, Standard Edition
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-PATCHFILES+=	jdk-7-bsd-port-42.20081230.diff.gz
+PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.gz
 PATCH_SITES+=	http://mx1.nygren.pp.se/distfiles/
 
 ANT=		apache-ant-1.7.1-bin.zip
 SITES.${ANT}=	${MASTER_SITE_APACHE:=ant/binaries/}
 DISTFILES+=	${ANT}
 EXTRACT_ONLY+=	${ANT}
-PREPEND_PATH+=	${WRKDIR}/${ANT:S/-bin.zip//}/bin
+ANT_BIN=	${WRKDIR}/${ANT:S/-bin.zip//}/bin
+PREPEND_PATH+=	${ANT_BIN}
 
 EXTRACT_USING=	gtar
 ICEDTEA=	icedtea-1.8.tar.gz
@@ -87,8 +88,24 @@ SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWI
 #	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/icedtea-1.8/patches/icedtea-${icedtea_patch}.patch
 #.endfor
 
+post-extract:
+	chmod +x ${ANT_BIN}/ant
+
 post-build:
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
+
+do-build: ${WRKDIR}/stage2-done
+
+${WRKDIR}/stage1-done:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	rm -rf ${WRKDIR}/bootstrap
+	cd ${BUILDDIR} && mv j2sdk-image ${WRKDIR}/bootstrap
+	rm -rf ${BUILDDIR}
+	touch ${WRKDIR}/stage1-done
+
+${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	touch ${WRKDIR}/stage2-done
 
 do-install:
 	cd ${BUILDDIR} && mv j2sdk-image openjdk && pax -rwpp openjdk ${DESTDIR}${PREFIX}
@@ -101,5 +118,6 @@ BUILDLINK_DEPMETHOD.cups?=	build
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

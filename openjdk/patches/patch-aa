@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2009/09/25 17:37:10 tnn2 Exp $
 
---- jdk/make/common/shared/Platform.gmk.orig	2008-12-30 18:39:22.000000000 +0100
+--- jdk/make/common/shared/Platform.gmk.orig	2009-09-24 22:52:54.000000000 +0200
 +++ jdk/make/common/shared/Platform.gmk
-@@ -339,11 +339,7 @@ ifeq ($(PLATFORM), bsd)
+@@ -287,11 +287,7 @@ ifeq ($(PLATFORM), bsd)
    #    a fully built workspace.
    REQUIRED_FREE_SPACE=1500000
    # How much RAM does this machine have:
 -  ifeq ($(OS_VENDOR), OpenBSD)
--    MB_OF_MEMORY=$(shell perl -e 'printf "%d", `sysctl hw.physmem | cut -d'=' -f2` / 1048576' )
+-    MB_OF_MEMORY=$(shell sysctl -n hw.physmem | awk '{print int($$NF / 1048576); }' )
 -  else
--    MB_OF_MEMORY=$(shell expr `sysctl hw.physmem | cut -d' ' -f2` / 1048576 )
+-    MB_OF_MEMORY=$(shell (sysctl -n hw.physmem64 2> /dev/null || sysctl -n hw.physmem) | awk '{print int($$NF / 1048576); }' )
 -  endif
 +  MB_OF_MEMORY=$(shell expr `sysctl hw.physmem | sed 's/[^0-9]//g'` / 1048576 )
  endif

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/07 12:33:56 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/25 17:37:10 tnn2 Exp $
 openjdk/ASSEMBLY_EXCEPTION
 openjdk/LICENSE
 openjdk/THIRD_PARTY_README
@@ -317,7 +317,6 @@ openjdk/jre/bin/rmiregistry
 openjdk/jre/bin/servertool
 openjdk/jre/bin/tnameserv
 openjdk/jre/bin/unpack200
-openjdk/jre/lib/applet/.keep
 openjdk/jre/lib/${ARCH}/headless/libmawt.so
 openjdk/jre/lib/${ARCH}/jexec
 openjdk/jre/lib/${ARCH}/jli/libjli.so
@@ -347,7 +346,9 @@ openjdk/jre/lib/${ARCH}/libnet.so
 openjdk/jre/lib/${ARCH}/libnio.so
 openjdk/jre/lib/${ARCH}/libnpt.so
 openjdk/jre/lib/${ARCH}/librmi.so
+openjdk/jre/lib/${ARCH}/libsaproc.so
 openjdk/jre/lib/${ARCH}/libsplashscreen.so
+openjdk/jre/lib/${ARCH}/libsunecc.so
 openjdk/jre/lib/${ARCH}/libunpack.so
 openjdk/jre/lib/${ARCH}/libverify.so
 openjdk/jre/lib/${ARCH}/libzip.so
@@ -356,7 +357,7 @@ openjdk/jre/lib/${ARCH}/server/Xusage.txt
 openjdk/jre/lib/${ARCH}/server/libjsig.so
 openjdk/jre/lib/${ARCH}/server/libjvm.so
 openjdk/jre/lib/${ARCH}/xawt/libmawt.so
-openjdk/jre/lib/audio/soundbank.gm
+openjdk/jre/lib/applet/.keep
 openjdk/jre/lib/calendars.properties
 openjdk/jre/lib/charsets.jar
 openjdk/jre/lib/classlist
@@ -366,11 +367,11 @@ openjdk/jre/lib/cmm/LINEAR_RGB.pf
 openjdk/jre/lib/cmm/PYCC.pf
 openjdk/jre/lib/cmm/sRGB.pf
 openjdk/jre/lib/content-types.properties
-@comment openjdk/jre/lib/ct.sym
 openjdk/jre/lib/currency.data
 openjdk/jre/lib/ext/dnsns.jar
 openjdk/jre/lib/ext/localedata.jar
 openjdk/jre/lib/ext/meta-index
+openjdk/jre/lib/ext/sunec.jar
 openjdk/jre/lib/ext/sunjce_provider.jar
 openjdk/jre/lib/ext/sunpkcs11.jar
 openjdk/jre/lib/flavormap.properties
@@ -471,6 +472,7 @@ openjdk/jre/lib/zi/America/Argentina/Jujuy
 openjdk/jre/lib/zi/America/Argentina/La_Rioja
 openjdk/jre/lib/zi/America/Argentina/Mendoza
 openjdk/jre/lib/zi/America/Argentina/Rio_Gallegos
+openjdk/jre/lib/zi/America/Argentina/Salta
 openjdk/jre/lib/zi/America/Argentina/San_Juan
 openjdk/jre/lib/zi/America/Argentina/San_Luis
 openjdk/jre/lib/zi/America/Argentina/Tucuman
@@ -637,7 +639,7 @@ openjdk/jre/lib/zi/Asia/Kabul
 openjdk/jre/lib/zi/Asia/Kamchatka
 openjdk/jre/lib/zi/Asia/Karachi
 openjdk/jre/lib/zi/Asia/Kashgar
-openjdk/jre/lib/zi/Asia/Katmandu
+openjdk/jre/lib/zi/Asia/Kathmandu
 openjdk/jre/lib/zi/Asia/Kolkata
 openjdk/jre/lib/zi/Asia/Krasnoyarsk
 openjdk/jre/lib/zi/Asia/Kuala_Lumpur
@@ -853,6 +855,7 @@ openjdk/lib/ct.sym
 openjdk/lib/ir.idl
 openjdk/lib/jconsole.jar
 openjdk/lib/orb.idl
+openjdk/lib/sa-jdi.jar
 openjdk/lib/tools.jar
 openjdk/man/ja/man1/appletviewer.1
 openjdk/man/ja/man1/extcheck.1
@@ -975,6 +978,13 @@ openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx/examples/scandir/TestUtils.java
 openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx/examples/scandir/config/XmlConfigUtilsTest.java
 openjdk/sample/jmx/jmx-scandir/truststore
 openjdk/sample/nbproject/project.xml
+openjdk/sample/nio/file/AclEdit.java
+openjdk/sample/nio/file/Chmod.java
+openjdk/sample/nio/file/Copy.java
+openjdk/sample/nio/file/DiskUsage.java
+openjdk/sample/nio/file/FileType.java
+openjdk/sample/nio/file/WatchDir.java
+openjdk/sample/nio/file/Xdd.java
 openjdk/sample/nio/multicast/MulticastAddress.java
 openjdk/sample/nio/multicast/Reader.java
 openjdk/sample/nio/multicast/Sender.java
@@ -1028,167 +1038,3 @@ openjdk/sample/scripting/scriptpad/src/scripts/memory.js
 openjdk/sample/scripting/scriptpad/src/scripts/memory.sh
 openjdk/sample/scripting/scriptpad/src/scripts/textcolor.js
 openjdk/src.zip
-@dirrm openjdk/bin
-@dirrm openjdk/demo/applets/ArcTest
-@dirrm openjdk/demo/applets/BarChart
-@dirrm openjdk/demo/applets/Blink
-@dirrm openjdk/demo/applets/CardTest
-@dirrm openjdk/demo/applets/Clock
-@dirrm openjdk/demo/applets/DitherTest
-@dirrm openjdk/demo/applets/DrawTest
-@dirrm openjdk/demo/applets/Fractal
-@dirrm openjdk/demo/applets/GraphicsTest
-@dirrm openjdk/demo/applets/MoleculeViewer/models
-@dirrm openjdk/demo/applets/MoleculeViewer
-@dirrm openjdk/demo/applets/NervousText
-@dirrm openjdk/demo/applets/SimpleGraph
-@dirrm openjdk/demo/applets/SortDemo
-@dirrm openjdk/demo/applets/SpreadSheet
-@dirrm openjdk/demo/applets/WireFrame/models
-@dirrm openjdk/demo/applets/WireFrame
-@dirrm openjdk/demo/applets
-@dirrm openjdk/demo/jfc/CodePointIM
-@dirrm openjdk/demo/jfc/FileChooserDemo
-@dirrm openjdk/demo/jfc/Font2DTest
-@dirrm openjdk/demo/jfc/Metalworks
-@dirrm openjdk/demo/jfc/Notepad
-@dirrm openjdk/demo/jfc/SampleTree
-@dirrm openjdk/demo/jfc/SwingApplet
-@dirrm openjdk/demo/jfc/TableExample
-@dirrm openjdk/demo/jfc
-@dirrm openjdk/demo/jpda/com/sun/tools/example
-@dirrm openjdk/demo/jpda/com/sun/tools
-@dirrm openjdk/demo/jpda/com/sun
-@dirrm openjdk/demo/jpda/com
-@dirrm openjdk/demo/jpda
-@dirrm openjdk/demo/jvmti/gctest/lib
-@dirrm openjdk/demo/jvmti/gctest
-@dirrm openjdk/demo/jvmti/heapTracker/lib
-@dirrm openjdk/demo/jvmti/heapTracker
-@dirrm openjdk/demo/jvmti/heapViewer/lib
-@dirrm openjdk/demo/jvmti/heapViewer
-@dirrm openjdk/demo/jvmti/hprof/lib
-@dirrm openjdk/demo/jvmti/hprof
-@dirrm openjdk/demo/jvmti/minst/lib
-@dirrm openjdk/demo/jvmti/minst
-@dirrm openjdk/demo/jvmti/mtrace/lib
-@dirrm openjdk/demo/jvmti/mtrace
-@dirrm openjdk/demo/jvmti/versionCheck/lib
-@dirrm openjdk/demo/jvmti/versionCheck
-@dirrm openjdk/demo/jvmti/waiters/lib
-@dirrm openjdk/demo/jvmti/waiters
-@dirrm openjdk/demo/jvmti
-@dirrm openjdk/demo/management/FullThreadDump
-@dirrm openjdk/demo/management/JTop
-@dirrm openjdk/demo/management/MemoryMonitor
-@dirrm openjdk/demo/management/VerboseGC
-@dirrm openjdk/demo/management
-@dirrm openjdk/demo/nbproject/jfc/FileChooserDemo/nbproject
-@dirrm openjdk/demo/nbproject/jfc/FileChooserDemo
-@dirrm openjdk/demo/nbproject/jfc/Font2DTest/nbproject
-@dirrm openjdk/demo/nbproject/jfc/Font2DTest
-@dirrm openjdk/demo/nbproject/jfc/Metalworks/nbproject
-@dirrm openjdk/demo/nbproject/jfc/Metalworks
-@dirrm openjdk/demo/nbproject/jfc/Notepad/nbproject
-@dirrm openjdk/demo/nbproject/jfc/Notepad
-@dirrm openjdk/demo/nbproject/jfc/SampleTree/nbproject
-@dirrm openjdk/demo/nbproject/jfc/SampleTree
-@dirrm openjdk/demo/nbproject/jfc/SwingApplet/nbproject
-@dirrm openjdk/demo/nbproject/jfc/SwingApplet
-@dirrm openjdk/demo/nbproject/jfc/TableExample/nbproject
-@dirrm openjdk/demo/nbproject/jfc/TableExample
-@dirrm openjdk/demo/nbproject/jfc
-@dirrm openjdk/demo/nbproject/management/FullThreadDump/nbproject
-@dirrm openjdk/demo/nbproject/management/FullThreadDump
-@dirrm openjdk/demo/nbproject/management/JTop/nbproject
-@dirrm openjdk/demo/nbproject/management/JTop
-@dirrm openjdk/demo/nbproject/management/MemoryMonitor/nbproject
-@dirrm openjdk/demo/nbproject/management/MemoryMonitor
-@dirrm openjdk/demo/nbproject/management/VerboseGC/nbproject
-@dirrm openjdk/demo/nbproject/management/VerboseGC
-@dirrm openjdk/demo/nbproject/management
-@dirrm openjdk/demo/nbproject/scripting/jconsole-plugin/nbproject
-@dirrm openjdk/demo/nbproject/scripting/jconsole-plugin
-@dirrm openjdk/demo/nbproject/scripting
-@dirrm openjdk/demo/nbproject
-@dirrm openjdk/demo/scripting/jconsole-plugin
-@dirrm openjdk/demo/scripting
-@dirrm openjdk/demo
-@dirrm openjdk/include/${LOWER_OPSYS}
-@dirrm openjdk/include
-@dirrm openjdk/jre/bin
-@dirrm openjdk/jre/lib/${ARCH}/headless
-@dirrm openjdk/jre/lib/${ARCH}/jli
-@dirrm openjdk/jre/lib/${ARCH}/native_threads
-@dirrm openjdk/jre/lib/${ARCH}/server
-@dirrm openjdk/jre/lib/${ARCH}/xawt
-@dirrm openjdk/jre/lib/${ARCH}
-@dirrm openjdk/jre/lib/applet
-@dirrm openjdk/jre/lib/audio
-@dirrm openjdk/jre/lib/cmm
-@dirrm openjdk/jre/lib/ext
-@dirrm openjdk/jre/lib/im
-@dirrm openjdk/jre/lib/images/cursors
-@dirrm openjdk/jre/lib/images
-@dirrm openjdk/jre/lib/management
-@dirrm openjdk/jre/lib/security
-@dirrm openjdk/jre/lib/servicetag
-@dirrm openjdk/jre/lib/zi/Africa
-@dirrm openjdk/jre/lib/zi/America/Argentina
-@dirrm openjdk/jre/lib/zi/America/Indiana
-@dirrm openjdk/jre/lib/zi/America/Kentucky
-@dirrm openjdk/jre/lib/zi/America/North_Dakota
-@dirrm openjdk/jre/lib/zi/America
-@dirrm openjdk/jre/lib/zi/Antarctica
-@dirrm openjdk/jre/lib/zi/Asia
-@dirrm openjdk/jre/lib/zi/Atlantic
-@dirrm openjdk/jre/lib/zi/Australia
-@dirrm openjdk/jre/lib/zi/Etc
-@dirrm openjdk/jre/lib/zi/Europe
-@dirrm openjdk/jre/lib/zi/Indian
-@dirrm openjdk/jre/lib/zi/Pacific
-@dirrm openjdk/jre/lib/zi/SystemV
-@dirrm openjdk/jre/lib/zi
-@dirrm openjdk/jre/lib
-@dirrm openjdk/jre
-@dirrm openjdk/lib
-@dirrm openjdk/man/ja/man1
-@dirrm openjdk/man/ja
-@dirrm openjdk/man/man1
-@dirrm openjdk/man
-@dirrm openjdk/sample/jmx/jmx-scandir/docfiles
-@dirrm openjdk/sample/jmx/jmx-scandir/nbproject
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com/sun/jmx/examples/scandir/config
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com/sun/jmx/examples/scandir
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com/sun/jmx/examples
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com/sun/jmx
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com/sun
-@dirrm openjdk/sample/jmx/jmx-scandir/src/com
-@dirrm openjdk/sample/jmx/jmx-scandir/src/etc
-@dirrm openjdk/sample/jmx/jmx-scandir/src
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx/examples/scandir/config
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx/examples/scandir
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx/examples
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com/sun/jmx
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com/sun
-@dirrm openjdk/sample/jmx/jmx-scandir/test/com
-@dirrm openjdk/sample/jmx/jmx-scandir/test
-@dirrm openjdk/sample/jmx/jmx-scandir
-@dirrm openjdk/sample/jmx
-@dirrm openjdk/sample/nbproject
-@dirrm openjdk/sample/nio/multicast
-@dirrm openjdk/sample/nio/server
-@dirrm openjdk/sample/nio
-@dirrm openjdk/sample/scripting/scriptpad/nbproject
-@dirrm openjdk/sample/scripting/scriptpad/src/META-INF
-@dirrm openjdk/sample/scripting/scriptpad/src/com/sun/sample/scriptpad
-@dirrm openjdk/sample/scripting/scriptpad/src/com/sun/sample
-@dirrm openjdk/sample/scripting/scriptpad/src/com/sun
-@dirrm openjdk/sample/scripting/scriptpad/src/com
-@dirrm openjdk/sample/scripting/scriptpad/src/resources
-@dirrm openjdk/sample/scripting/scriptpad/src/scripts
-@dirrm openjdk/sample/scripting/scriptpad/src
-@dirrm openjdk/sample/scripting/scriptpad
-@dirrm openjdk/sample/scripting
-@dirrm openjdk/sample
-@dirrm openjdk
