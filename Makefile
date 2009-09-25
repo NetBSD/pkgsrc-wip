@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3628 2009/09/25 09:10:04 thomasklausner Exp $
+# $Id: Makefile,v 1.3629 2009/09/25 10:28:17 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2069,6 +2069,7 @@ SUBDIR+=	tde
 SUBDIR+=	teamspeak
 SUBDIR+=	teapot
 SUBDIR+=	teco
+SUBDIR+=	tellico
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
 SUBDIR+=	tenmado
