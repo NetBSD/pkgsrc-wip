@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/11 10:44:14 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/25 09:32:00 bartoszkuzma Exp $
 bin/vdesk
 share/doc/vdesk/AUTHORS
 share/doc/vdesk/COPYING
 share/doc/vdesk/README
-@dirrm share/doc/vdesk
+@pkgdir share/doc/vdesk
