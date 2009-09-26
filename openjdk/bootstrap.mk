@@ -1,8 +1,8 @@
-# $NetBSD: bootstrap.mk,v 1.4 2009/09/25 17:37:10 tnn2 Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2009/09/26 07:48:10 tnn2 Exp $
 
 ONLY_FOR_PLATFORM=	NetBSD-5.*-i386 NetBSD-5.*-x86_64
 
-BOOTKIT.i386=		bootstrap-jdk-7-bin-netbsd-5-i386-20090925.tar.bz2
+BOOTKIT.i386=		bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2
 SITES.${BOOTKIT.i386}=	http://mx1.nygren.pp.se/distfiles/
 DISTFILES+=		${BOOTKIT.i386}
 

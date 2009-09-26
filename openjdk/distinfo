@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2009/09/25 17:37:10 tnn2 Exp $
+$NetBSD: distinfo,v 1.5 2009/09/26 07:48:10 tnn2 Exp $
 
 SHA1 (openjdk-1.7.0.72.20090924/apache-ant-1.7.1-bin.zip) = a7e8fa7bc2102a8d8df99c64db73c2eae3d8b483
 RMD160 (openjdk-1.7.0.72.20090924/apache-ant-1.7.1-bin.zip) = a4e2c992ac7c81949b391d146baf9c411dbb2c2d
@@ -6,9 +6,9 @@ Size (openjdk-1.7.0.72.20090924/apache-ant-1.7.1-bin.zip) = 11657986 bytes
 SHA1 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 7d41c0c68835e831d0ff612df74b4a612329a450
 RMD160 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 15c98327d4b5d62a73b837f1401be3b4d40acd1d
 Size (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 24284982 bytes
-SHA1 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090925.tar.bz2) = c498e01f961410286d3ae8bad2b44b9770808f3a
-RMD160 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090925.tar.bz2) = 11bdc1ec6c8b848c53162ebdc9bcb80aa2adb8ab
-Size (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090925.tar.bz2) = 24155049 bytes
+SHA1 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 7c2d04344d764e04e711a07e43aa9690419bad1c
+RMD160 (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 7d38fdd1f5a977e03c4d5ffe88c3df22e79371e1
+Size (openjdk-1.7.0.72.20090924/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 24156646 bytes
 SHA1 (openjdk-1.7.0.72.20090924/icedtea-1.8.tar.gz) = b55281fe606c475c67c470ebd1490ab41fcc4452
 RMD160 (openjdk-1.7.0.72.20090924/icedtea-1.8.tar.gz) = 36e0decee1e9f04f94dcb625e5ad5d200709224a
 Size (openjdk-1.7.0.72.20090924/icedtea-1.8.tar.gz) = 5882607 bytes
