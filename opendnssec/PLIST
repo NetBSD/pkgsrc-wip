@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1 2009/09/26 23:46:33 pettai Exp $
+bin/hsmspeed
+bin/hsmutil
+bin/kasp_auditor
+bin/ksmutil
+bin/signer_engine_cli
+include/hsmtest.h
+include/libhsm.h
+include/libhsmdns.h
+lib/libhsm.la
+lib/opendnssec/kasp_auditor.rb
+lib/opendnssec/kasp_auditor/auditor.rb
+lib/opendnssec/kasp_auditor/auditor_daemon.rb
+lib/opendnssec/kasp_auditor/config.rb
+lib/opendnssec/kasp_auditor/key_tracker.rb
+lib/opendnssec/kasp_auditor/parse.rb
+lib/opendnssec/kasp_auditor/preparser.rb
+lib/opendnssec/signer/Engine.py
+lib/opendnssec/signer/Engine.pyc
+lib/opendnssec/signer/Engine.pyo
+lib/opendnssec/signer/EngineConfig.py
+lib/opendnssec/signer/EngineConfig.pyc
+lib/opendnssec/signer/EngineConfig.pyo
+lib/opendnssec/signer/Util.py
+lib/opendnssec/signer/Util.pyc
+lib/opendnssec/signer/Util.pyo
+lib/opendnssec/signer/Worker.py
+lib/opendnssec/signer/Worker.pyc
+lib/opendnssec/signer/Worker.pyo
+lib/opendnssec/signer/Zone.py
+lib/opendnssec/signer/Zone.pyc
+lib/opendnssec/signer/Zone.pyo
+lib/opendnssec/signer/ZoneConfig.py
+lib/opendnssec/signer/ZoneConfig.pyc
+lib/opendnssec/signer/ZoneConfig.pyo
+lib/opendnssec/signer/ZoneList.py
+lib/opendnssec/signer/ZoneList.pyc
+lib/opendnssec/signer/ZoneList.pyo
+lib/opendnssec/time_shift.rb
+libexec/opendnssec/create_dnskey
+libexec/opendnssec/finalizer
+libexec/opendnssec/get_serial
+libexec/opendnssec/nsec3er
+libexec/opendnssec/nseccer
+libexec/opendnssec/signer
+libexec/opendnssec/signer_threads
+libexec/opendnssec/sorter
+libexec/opendnssec/zone_reader
+sbin/communicated
+sbin/keygend
+sbin/signer_engine
+share/opendnssec/database_create.sqlite3
+@pkgdir var/run/opendnssec
+@pkgdir var/opendnssec/unsigned
+@pkgdir var/opendnssec/tmp
+@pkgdir var/opendnssec/signed
+@pkgdir var/opendnssec/signconf

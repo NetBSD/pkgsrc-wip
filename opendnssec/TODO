@@ -1,0 +1,3 @@
+- Fix rubydns gem package
+- Fix options.mk for softhsm support
+- Fix java support, if needed?
