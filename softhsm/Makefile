@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/09/26 20:10:46 pettai Exp $
 #
 
 DISTNAME=	softhsm-${RCVERSION}
@@ -16,9 +16,9 @@ USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4
 USE_LIBTOOL=	yes
 
 SVN_REPOSITORIES=	softhsm
-SVN_ROOT.softhsm=	http://svn.opendnssec.se/trunk/softHSM/
+SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
 SVN_MODULE.softhsm=	softHSM
-RCVERSION=		1.0.0-RC2
+RCVERSION=		1.0.0-RC3
 NO_CHECKSUM=		yes
 
 PKG_DESTDIR_SUPPORT=    user-destdir
