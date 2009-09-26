@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 22:31:42 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/26 20:24:41 pettai Exp $
 bin/softhsm
 lib/libsofthsm.la
+lib/libsofthsm.a
+lib/libsofthsm.so
+lib/libsofthsm.so.1
+lib/libsofthsm.so.1.0.0
+
