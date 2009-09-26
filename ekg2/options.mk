@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2009/09/20 22:05:14 shindenmorr Exp $
+# $NetBSD: options.mk,v 1.3 2009/09/26 20:42:10 shindenmorr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ekg2
-PKG_SUPPORTED_OPTIONS=	libgadu jabber
-PKG_SUGGESTED_OPTIONS=	libgadu jabber
+PKG_SUPPORTED_OPTIONS=	gg jabber
+PKG_SUGGESTED_OPTIONS=	gg jabber
+PLIST_VARS+=		gg jabber
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,7 +14,7 @@ PKG_SUGGESTED_OPTIONS=	libgadu jabber
 PLIST.jabber=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibgadu)
+.if !empty(PKG_OPTIONS:Mgg)
 .include "../../wip/libgadu/buildlink3.mk"
-PLIST.gg+=	yes
+PLIST.gg=	yes
 .endif
