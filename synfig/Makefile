@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/20 18:20:24 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/27 04:42:44 phonohawk Exp $
 #
 
 DISTNAME=	synfig-0.61.08
@@ -19,8 +19,8 @@ PKGCONFIG_OVERRIDE+=	synfig.pc.in
 
 .include "options.mk"
 
+.include "../../devel/ETL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
-.include "../../wip/ETL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
