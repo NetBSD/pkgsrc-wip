@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/09/27 15:42:26 asau Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/09/27 15:59:46 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -802,6 +802,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/POLYCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/POLYCATQ.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/POLYLIFT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/POLYROOT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/POLYVEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PPCURVE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/PREASSOC.${FASL}
@@ -960,6 +961,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVEFOR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVERAD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVESER.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVETRA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOREXPV.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SORTPAK.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SPACE3.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SPACEC.${FASL}
@@ -1042,6 +1044,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TUBETOOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TUPLE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TWOFACT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/TYPE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/U32VEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UDPO.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UDVO.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UFD-.${FASL}
@@ -1087,6 +1090,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSODE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSODETL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/UTSSOL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VARIABLE.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECREC1.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECREC2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECTCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECTCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VECTOR.${FASL}
@@ -2642,11 +2647,13 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/trigcat.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/triset.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/tube.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/twofact.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/u32vec.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/unifact.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/updecomp.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/updivp.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/utsode.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/variable.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/vecrec.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/vector.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/view2D.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/view3D.spad.pamphlet
