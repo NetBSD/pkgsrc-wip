@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/28 02:54:36 bsadewitz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2009/09/27 16:08:08 blef Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
@@ -13,7 +12,7 @@ MPG123_MODULE=		dummy
 MAKE_ENV+=		MPG123_PROGRAM=mpg123
 MAKE_ENV+=		EXTRA_INSTALL_TARGETS="install-exec-am install-data-am"
 
-MPG123_BUILDING_BASE=	# defined
+MPG123_BUILDING_BASE=	# empty
 
 .include "options.mk"
 
