@@ -1,21 +1,27 @@
-@comment $NetBSD: PLIST.common,v 1.3 2009/04/09 09:30:42 bartoszkuzma Exp $
-man/man5/rsyslog.conf.5
-man/man8/rsyslogd.8
-sbin/rsyslogd
-share/examples/rc.d/rsyslogd
-share/examples/rsyslog/rsyslog.conf
+@comment $NetBSD: PLIST,v 1.4 2009/09/28 22:32:45 bartoszkuzma Exp $
+${PLIST.gssapi}lib/rsyslog/imgssapi.la
 lib/rsyslog/imklog.la
 lib/rsyslog/immark.la
 lib/rsyslog/imtcp.la
 lib/rsyslog/imudp.la
 lib/rsyslog/imuxsock.la
+${PLIST.gssapi}lib/rsyslog/lmgssutil.la
 lib/rsyslog/lmnet.la
 lib/rsyslog/lmnetstrms.la
+${PLIST.gnutls}lib/rsyslog/lmnsd_gtls.la
 lib/rsyslog/lmnsd_ptcp.la
 lib/rsyslog/lmregexp.la
 lib/rsyslog/lmtcpclt.la
 lib/rsyslog/lmtcpsrv.la
+${PLIST.gssapi}lib/rsyslog/omgssapi.la
+${PLIST.mail}lib/rsyslog/ommail.la
+${PLIST.mysql}lib/rsyslog/ommysql.la
+${PLIST.pgsql}lib/rsyslog/ompgsql.la
+${PLIST.snmp}lib/rsyslog/omsnmp.la
 lib/rsyslog/omtesting.la
+man/man5/rsyslog.conf.5
+man/man8/rsyslogd.8
+sbin/rsyslogd
 share/doc/rsyslog/bugs.html
 share/doc/rsyslog/build_from_repo.html
 share/doc/rsyslog/contributors.html
@@ -108,3 +114,7 @@ share/doc/rsyslog/tls_cert_udp_relay.html
 share/doc/rsyslog/troubleshoot.html
 share/doc/rsyslog/v3compatibility.html
 share/doc/rsyslog/version_naming.html
+share/examples/rc.d/rsyslogd
+${PLIST.mysql}share/examples/rsyslog/createDB-mysql.sql
+${PLIST.pgsql}share/examples/rsyslog/createDB-pgsql.sql
+share/examples/rsyslog/rsyslog.conf

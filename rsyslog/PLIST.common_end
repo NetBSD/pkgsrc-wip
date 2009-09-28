@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.common_end,v 1.2 2008/12/09 18:04:29 bartoszkuzma Exp $
-@dirrm share/doc/rsyslog
-@dirrm share/examples/rsyslog
-@dirrm lib/rsyslog

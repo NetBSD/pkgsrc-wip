@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2009/04/09 09:30:42 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.17 2009/09/28 22:32:45 bartoszkuzma Exp $
 #
 
-DISTNAME=		rsyslog-3.21.11
+DISTNAME=		rsyslog-3.22.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.rsyslog.com/rsyslog/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.rsyslog.com/
 COMMENT=		The enhanced syslogd for Unix
+LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 
@@ -26,11 +27,7 @@ EGDIR=			${PREFIX}/share/examples/rsyslog
 CONF_FILES=		${EGDIR}/rsyslog.conf ${PKG_SYSCONFDIR}/rsyslog.conf
 RCD_SCRIPTS=		rsyslogd
 
-PLIST_SRC=		PLIST.common
-
 .include "options.mk"
-
-PLIST_SRC+=		PLIST.common_end
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -47,5 +44,4 @@ post-install:
 .	endif
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

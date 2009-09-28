@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.mysql,v 1.1 2008/12/07 14:16:32 bartoszkuzma Exp $
-lib/rsyslog/ommysql.la
-share/examples/rsyslog/createDB-mysql.sql
