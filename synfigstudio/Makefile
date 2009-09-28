@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/28 05:29:31 phonohawk Exp $
 #
 
 DISTNAME=	synfigstudio-0.61.08
@@ -23,11 +23,11 @@ USE_TOOLS+=	automake
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
+.include "../../devel/ETL/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../wip/ETL/buildlink3.mk"
 .include "../../wip/synfig/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

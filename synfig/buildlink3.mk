@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:52 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/09/28 04:58:50 phonohawk Exp $
 
 BUILDLINK_TREE+=	synfig
 
@@ -39,10 +39,10 @@ pkgbase:= synfig
 .    include "../../multimedia/ffmpeg/buildlink3.mk"
 .  endif
 
+.include "../../devel/ETL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
-.include "../../wip/ETL/buildlink3.mk"
 .endif # SYNFIG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-synfig

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:52 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/09/28 05:29:31 phonohawk Exp $
 
 BUILDLINK_TREE+=	synfigstudio
 
@@ -8,10 +8,10 @@ SYNFIGSTUDIO_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.synfigstudio+=	synfigstudio>=0.61.08
 BUILDLINK_PKGSRCDIR.synfigstudio?=	../../wip/synfigstudio
 
+.include "../../devel/ETL/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
-.include "../../wip/ETL/buildlink3.mk"
 .include "../../wip/synfig/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
