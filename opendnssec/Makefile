@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/09/26 23:46:33 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/09/28 20:36:36 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${RCVERSION}
@@ -13,7 +13,7 @@ COMMENT=	OSS for a fast and easy DNSSEC deployment
 #LICENSE_FILE=	${FILESDIR}/iis-license
 
 DEPENDS+=       rubygems:../../misc/rubygems
-#DEPENDS+=       dnsruby:../../wip/dnsruby
+DEPENDS+=       ruby-dnsruby:../../wip/ruby-dnsruby
 
 USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4 perl
 USE_LIBTOOL=	yes
