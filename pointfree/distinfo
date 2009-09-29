@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/28 02:59:06 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/09/29 08:52:52 phonohawk Exp $
 
-SHA1 (pointfree-1.0.1.tar.gz) = 9d6539c6185cf20f9b94478301a194e2409f1779
-RMD160 (pointfree-1.0.1.tar.gz) = 8eede699b3a3c45bc73dd48c9b6c889917f793ca
-Size (pointfree-1.0.1.tar.gz) = 19101 bytes
-SHA1 (patch-aa) = 5794d71f92714f56038d8fbf48a75f6a39972481
+SHA1 (pointfree-1.0.3.tar.gz) = 8847edf093ac3cc684d7e0c365013da7c284c278
+RMD160 (pointfree-1.0.3.tar.gz) = 594a62ecbe0c35adac673ecf64d6973529c922e4
+Size (pointfree-1.0.3.tar.gz) = 19016 bytes
