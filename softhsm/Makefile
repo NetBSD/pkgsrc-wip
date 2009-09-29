@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/29 20:54:42 pettai Exp $
+# $NetBSD: Makefile,v 1.8 2009/09/29 21:50:19 pettai Exp $
 #
 
 DISTNAME=	softhsm-${RCVERSION}
@@ -31,10 +31,10 @@ BUILD_DEFS+=	VARBASE
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ENV+=		F77=${FALSE:Q}
+#CONFIGURE_ENV+=	F77=${FALSE:Q}
 
 WRKSRC=			${WRKDIR}/softHSM
 
