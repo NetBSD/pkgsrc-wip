@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/09/29 14:53:34 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/29 20:39:33 pettai Exp $
 #
 
 DISTNAME=	softhsm-${RCVERSION}
+PKGNAME=	${DISTNAME:S/${RCVERSION}/${VERSION}/}
 CATEGORIES=	security
 MASTER_SITES=	# not defined
 
@@ -19,6 +20,7 @@ SVN_REPOSITORIES=	softhsm
 SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
 SVN_MODULE.softhsm=	softHSM
 RCVERSION=		1.0.0-RC3
+VERSION=		${RCVERSION:S/-RC/rc/}
 NO_CHECKSUM=		yes
 
 PKG_DESTDIR_SUPPORT=    user-destdir
