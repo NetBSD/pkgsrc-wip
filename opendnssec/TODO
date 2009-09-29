@@ -1,3 +1,2 @@
-- Fix rubydns gem package
-- Fix options.mk for softhsm support
-- Fix java support, if needed?
+- Fix options.mk -auditor. Problem if disabled
+- Fix java, no need for full dependency
