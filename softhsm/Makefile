@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/26 20:10:46 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/29 14:53:34 pettai Exp $
 #
 
 DISTNAME=	softhsm-${RCVERSION}
@@ -24,11 +24,14 @@ NO_CHECKSUM=		yes
 PKG_DESTDIR_SUPPORT=    user-destdir
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
+BUILD_DEFS+=	VARBASE
+
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/softhsm
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 WRKSRC=			${WRKDIR}/softHSM
