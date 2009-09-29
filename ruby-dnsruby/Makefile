@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/28 20:27:40 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/29 11:30:01 pettai Exp $
 
 DISTNAME=	dnsruby-1.37
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,11 +10,11 @@ COMMENT=	Ruby DNS client library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_BUILD=	yes
 GEM_BUILD=      gemspec
 
-post-patch:
-	cd ${DISTDIR} && ${CP} ${DISTFILES} ${WRKSRC}
+post-extract:
+	${MKDIR} -p ${WRKSRC}/html/classes
+	${MKDIR} -p ${WRKSRC}/html/files 
 
 .include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
