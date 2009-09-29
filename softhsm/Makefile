@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/29 20:39:33 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2009/09/29 20:41:37 pettai Exp $
 #
 
 DISTNAME=	softhsm-${RCVERSION}
@@ -45,6 +45,6 @@ pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../wip/botan/buildlink3.mk"
+.include "../../security/botan/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
