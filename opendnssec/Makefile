@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/28 21:36:19 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2009/09/29 08:14:37 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${RCVERSION}
@@ -8,12 +8,9 @@ MASTER_SITES=	# not defined
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
-#LICENSE=	iis-license
+LICENSE=	iis-license
 
-#LICENSE_FILE=	${FILESDIR}/iis-license
-
-DEPENDS+=       rubygems:../../misc/rubygems
-DEPENDS+=       ${RUBY_PKGPREFIX}-dnsruby:../../wip/ruby-dnsruby
+LICENSE_FILE=	${FILESDIR}/iis-license
 
 USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4 perl
 USE_LIBTOOL=	yes
@@ -23,6 +20,8 @@ SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${RCVERSION}
 SVN_MODULE.opendnssec=	OpenDNSSEC
 RCVERSION=		1.0a5
 NO_CHECKSUM=		yes
+
+.include "options.mk"
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 PKG_INSTALLATION_TYPES= overwrite pkgviews
@@ -47,6 +46,5 @@ pre-configure:
 .include "../../net/ldns/buildlink3.mk"
 .include "../../devel/cunit/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../lang/ruby/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
