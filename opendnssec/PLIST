@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2009/09/26 23:46:33 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/29 15:10:19 pettai Exp $
 bin/hsmspeed
 bin/hsmutil
 bin/kasp_auditor
 bin/ksmutil
 bin/signer_engine_cli
+etc/opendnssec/conf.xml
+etc/opendnssec/conf.xml.sample
+etc/opendnssec/kasp.xml
+etc/opendnssec/kasp.xml.sample
+etc/opendnssec/zonelist.xml
+etc/opendnssec/zonelist.xml.sample
 include/hsmtest.h
 include/libhsm.h
 include/libhsmdns.h
@@ -49,9 +55,13 @@ libexec/opendnssec/zone_reader
 sbin/communicated
 sbin/keygend
 sbin/signer_engine
+share/opendnssec/conf.rnc
+share/opendnssec/conf.rng
 share/opendnssec/database_create.sqlite3
-@pkgdir var/run/opendnssec
-@pkgdir var/opendnssec/unsigned
-@pkgdir var/opendnssec/tmp
-@pkgdir var/opendnssec/signed
-@pkgdir var/opendnssec/signconf
+share/opendnssec/kasp.rnc
+share/opendnssec/kasp.rng
+share/opendnssec/kasp2html.xsl
+share/opendnssec/signconf.rnc
+share/opendnssec/signconf.rng
+share/opendnssec/zonelist.rnc
+share/opendnssec/zonelist.rng
