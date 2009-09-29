@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/28 02:59:06 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/09/29 08:46:49 phonohawk Exp $
 bin/pointfree
 share/doc/${PKGNAME}/LICENSE
-@dirrm share/doc/${PKGNAME}
