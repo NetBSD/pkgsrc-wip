@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/05/19 09:00:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2009/09/30 10:31:58 fhajny Exp $
 
 DISTNAME=	dk-milter-1.0.2
 #PKGREVISION=	1
@@ -16,6 +16,8 @@ USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	post-patch
 SUBST_FILES.libs=	site.config.m4.dist dk-filter/Makefile.m4 \
@@ -24,6 +26,9 @@ SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|g'
+.if ${OPSYS} == SunOS
+SUBST_SED.libs+=        -e 's|-lrt|-lrt -lresolv|g'
+.endif
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
 # Rename dk-filter to dk-milter.
