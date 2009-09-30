@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2009/09/27 07:46:22 tnn2 Exp $
+$NetBSD: distinfo,v 1.7 2009/09/30 11:31:10 tnn2 Exp $
 
 SHA1 (openjdk-1.7.0.72.20090924/apache-ant-1.7.1-bin.zip) = a7e8fa7bc2102a8d8df99c64db73c2eae3d8b483
 RMD160 (openjdk-1.7.0.72.20090924/apache-ant-1.7.1-bin.zip) = a4e2c992ac7c81949b391d146baf9c411dbb2c2d
@@ -21,6 +21,7 @@ Size (openjdk-1.7.0.72.20090924/jdk-7-icedtea-plugs-1.6a.tar.gz) = 64679 bytes
 SHA1 (openjdk-1.7.0.72.20090924/openjdk-7-ea-src-b72-17_sep_2009.zip) = f0f16b933ee4feb0bef41fb2a607356bbc7366c2
 RMD160 (openjdk-1.7.0.72.20090924/openjdk-7-ea-src-b72-17_sep_2009.zip) = 56db1b5cc128ca79e93fdb5382d35dc9c2ecb3ef
 Size (openjdk-1.7.0.72.20090924/openjdk-7-ea-src-b72-17_sep_2009.zip) = 94044483 bytes
+SHA1 (patch-aa) = fbcdd83c292de2be9a5b31971e3d69750c038735
 SHA1 (patch-ab) = a49c5712262d30b36d1913811f51c8f1a1dcb39d
 SHA1 (patch-ae) = f888ba67cfc7255911ee049e1a69dae4efe7dd17
 SHA1 (patch-af) = 9c9c152005c0feec1e6fd0db0fc552a3637db9b7
