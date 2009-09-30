@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.12 2009/03/10 09:44:31 absd Exp $
+# $NetBSD: options.mk,v 1.13 2009/09/30 08:51:00 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
 PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin inet6
-PKG_SUGGESTED_OPTIONS=		jdk15-plugin
+#PKG_SUGGESTED_OPTIONS=		jdk15-plugin
 PKG_OPTIONS_LEGACY_VARS+=	JDK15_USE_JCE:jdk15-jce
 
-.include "../../www/seamonkey/gecko-options.mk"
+#.include "../../www/seamonkey/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
 
 .if empty(PKG_OPTIONS:Minet6)
@@ -32,7 +32,7 @@ MOZILLA=	${PKG_OPTIONS:@opt@${PKG_OPTIONS_GROUP.gecko:M${opt}}@}
 MAKE_ENV+=	BROWSER=${MOZILLA:Q}
 MAKE_ENV+=	ALT_MOZILLA_HEADERS_PATH=${PREFIX:Q}/include/${MOZILLA}
 
-.include "../../www/seamonkey/gecko-depends.mk"
+#.include "../../www/seamonkey/gecko-depends.mk"
 # Check: is nspr necessary?
 #.include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.nspr=	build
