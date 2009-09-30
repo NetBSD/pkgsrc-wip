@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/21 03:11:27 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/09/30 13:14:51 fhajny Exp $
 bin/PyICQt
 ${JABBER_EXDIR}/pyicqt.xml
 ${TRANSPORTDIR}/data/defaultAIMAvatar.png
@@ -24,6 +24,7 @@ ${TRANSPORTDIR}/src/config.py
 ${TRANSPORTDIR}/src/contact.py
 ${TRANSPORTDIR}/src/debug.py
 ${TRANSPORTDIR}/src/disco.py
+${TRANSPORTDIR}/src/git_ver.py
 ${TRANSPORTDIR}/src/globals.py
 ${TRANSPORTDIR}/src/imgmanip.py
 ${TRANSPORTDIR}/src/iq.py
@@ -101,11 +102,6 @@ share/examples/rc.d/pyicqt
 @dirrm ${TRANSPORTDIR}/src/chardet_utf
 @dirrm ${TRANSPORTDIR}/src/xdb
 @dirrm ${TRANSPORTDIR}/src/web
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/xish
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols/jabber
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols
-@dirrm ${TRANSPORTDIR}/src/twistfix/words
-@dirrm ${TRANSPORTDIR}/src/twistfix
 @dirrm ${TRANSPORTDIR}/src/tlib
 @dirrm ${TRANSPORTDIR}/src/services
 @dirrm ${TRANSPORTDIR}/src/legacy/services

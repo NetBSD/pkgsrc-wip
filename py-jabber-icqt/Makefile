@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/08/21 03:11:27 schnoebe Exp $
+# $NetBSD: Makefile,v 1.25 2009/09/30 13:14:51 fhajny Exp $
 
 DISTNAME=		pyicqt-0.8.1.4
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -84,6 +84,7 @@ SUBST_SED.paths+=	-e 's,@JABBER_USER@,${JABBER_USER},g'
 SUBST_SED.paths+=	-e 's,@JABBER_LOGDIR@,${JABBER_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@JABBER_PIDDIR@,${JABBER_PIDDIR},g'
+SUBST_SED.paths+=	-e 's,@PYTHONBIN@,${PYTHONBIN},g'
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

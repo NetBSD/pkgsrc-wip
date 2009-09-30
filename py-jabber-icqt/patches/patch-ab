@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2008/02/18 21:24:57 sebpierrel Exp $
+$NetBSD: patch-ab,v 1.6 2009/09/30 13:14:51 fhajny Exp $
 
 pkg path
 
 --- src/main.py.orig	2007-06-03 20:10:36.000000000 -0500
 +++ src/main.py
 @@ -1,3 +1,5 @@
-+#!/usr/pkg/bin/python2.4
++#!@PYTHONBIN@
 +#
  # Copyright 2004-2006 Daniel Henninger <jadestorm@nc.rr.com>
  # Licensed for distribution under the GPL version 2, check COPYING for details
