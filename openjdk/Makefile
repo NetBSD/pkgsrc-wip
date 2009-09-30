@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/09/25 17:37:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/30 10:05:15 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk-1.7.0.72.20090924
@@ -108,7 +108,8 @@ ${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
 	touch ${WRKDIR}/stage2-done
 
 do-install:
-	cd ${BUILDDIR} && mv j2sdk-image openjdk && pax -rwpp openjdk ${DESTDIR}${PREFIX}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/java
+	cd ${BUILDDIR} && mv j2sdk-image openjdk7 && pax -rwpp openjdk7 ${DESTDIR}${PREFIX}/java
 
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
