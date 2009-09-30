@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/07/30 12:26:56 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/09/30 12:14:41 mwdavies Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -4312,7 +4312,6 @@ share/kde4/services/ScreenSavers/KVm.desktop
 share/kde4/services/ScreenSavers/KWave.desktop
 share/kde4/services/ScreenSavers/anemone.desktop
 share/kde4/services/ScreenSavers/anemotaxis.desktop
-share/kde4/services/ScreenSavers/ant.desktop
 share/kde4/services/ScreenSavers/antinspect.desktop
 share/kde4/services/ScreenSavers/antspotlight.desktop
 share/kde4/services/ScreenSavers/apollonian.desktop
@@ -4332,7 +4331,6 @@ share/kde4/services/ScreenSavers/boxed.desktop
 share/kde4/services/ScreenSavers/braid.desktop
 share/kde4/services/ScreenSavers/bsod.desktop
 share/kde4/services/ScreenSavers/bubble3d.desktop
-share/kde4/services/ScreenSavers/bubbles.desktop
 share/kde4/services/ScreenSavers/bumps.desktop
 share/kde4/services/ScreenSavers/cage.desktop
 share/kde4/services/ScreenSavers/ccurve.desktop
@@ -4340,7 +4338,6 @@ share/kde4/services/ScreenSavers/circuit.desktop
 share/kde4/services/ScreenSavers/cloudlife.desktop
 share/kde4/services/ScreenSavers/compass.desktop
 share/kde4/services/ScreenSavers/coral.desktop
-share/kde4/services/ScreenSavers/critical.desktop
 share/kde4/services/ScreenSavers/crystal.desktop
 share/kde4/services/ScreenSavers/cubenetic.desktop
 share/kde4/services/ScreenSavers/cubestorm.desktop
@@ -4361,7 +4358,6 @@ share/kde4/services/ScreenSavers/euler2d.desktop
 share/kde4/services/ScreenSavers/extrusion.desktop
 share/kde4/services/ScreenSavers/fadeplot.desktop
 share/kde4/services/ScreenSavers/fireworkx.desktop
-share/kde4/services/ScreenSavers/flag.desktop
 share/kde4/services/ScreenSavers/flame.desktop
 share/kde4/services/ScreenSavers/flipflop.desktop
 share/kde4/services/ScreenSavers/flipscreen3d.desktop
@@ -4370,14 +4366,12 @@ share/kde4/services/ScreenSavers/fluidballs.desktop
 share/kde4/services/ScreenSavers/flurry.desktop
 share/kde4/services/ScreenSavers/flyingtoasters.desktop
 share/kde4/services/ScreenSavers/fontglide.desktop
-share/kde4/services/ScreenSavers/forest.desktop
 share/kde4/services/ScreenSavers/fuzzyflakes.desktop
 share/kde4/services/ScreenSavers/galaxy.desktop
 share/kde4/services/ScreenSavers/gears.desktop
 share/kde4/services/ScreenSavers/gflux.desktop
 share/kde4/services/ScreenSavers/glblur.desktop
 share/kde4/services/ScreenSavers/gleidescope.desktop
-share/kde4/services/ScreenSavers/glforestfire.desktop
 share/kde4/services/ScreenSavers/glknots.desktop
 share/kde4/services/ScreenSavers/glmatrix.desktop
 share/kde4/services/ScreenSavers/glplanet.desktop
@@ -4407,19 +4401,13 @@ share/kde4/services/ScreenSavers/klein.desktop
 share/kde4/services/ScreenSavers/kpartsaver.desktop
 share/kde4/services/ScreenSavers/kumppa.desktop
 share/kde4/services/ScreenSavers/lament.desktop
-share/kde4/services/ScreenSavers/laser.desktop
 share/kde4/services/ScreenSavers/lavalite.desktop
-share/kde4/services/ScreenSavers/lightning.desktop
-share/kde4/services/ScreenSavers/lisa.desktop
-share/kde4/services/ScreenSavers/lissie.desktop
-share/kde4/services/ScreenSavers/lmorph.desktop
 share/kde4/services/ScreenSavers/loop.desktop
 share/kde4/services/ScreenSavers/maze.desktop
 share/kde4/services/ScreenSavers/memscroller.desktop
 share/kde4/services/ScreenSavers/menger.desktop
 share/kde4/services/ScreenSavers/metaballs.desktop
 share/kde4/services/ScreenSavers/mirrorblob.desktop
-share/kde4/services/ScreenSavers/mismunch.desktop
 share/kde4/services/ScreenSavers/moebius.desktop
 share/kde4/services/ScreenSavers/moire.desktop
 share/kde4/services/ScreenSavers/moire2.desktop
@@ -4439,7 +4427,6 @@ share/kde4/services/ScreenSavers/phosphor.desktop
 share/kde4/services/ScreenSavers/piecewise.desktop
 share/kde4/services/ScreenSavers/pinion.desktop
 share/kde4/services/ScreenSavers/pipes.desktop
-share/kde4/services/ScreenSavers/pixmaps.desktop
 share/kde4/services/ScreenSavers/polyhedra.desktop
 share/kde4/services/ScreenSavers/polyominoes.desktop
 share/kde4/services/ScreenSavers/polytopes.desktop
@@ -4454,7 +4441,6 @@ share/kde4/services/ScreenSavers/rd-bomb.desktop
 share/kde4/services/ScreenSavers/ripples.desktop
 share/kde4/services/ScreenSavers/rocks.desktop
 share/kde4/services/ScreenSavers/rorschach.desktop
-share/kde4/services/ScreenSavers/rotor.desktop
 share/kde4/services/ScreenSavers/rotzoomer.desktop
 share/kde4/services/ScreenSavers/rubik.desktop
 share/kde4/services/ScreenSavers/sballs.desktop
@@ -4465,9 +4451,7 @@ share/kde4/services/ScreenSavers/slidescreen.desktop
 share/kde4/services/ScreenSavers/slip.desktop
 share/kde4/services/ScreenSavers/sonar.desktop
 share/kde4/services/ScreenSavers/speedmine.desktop
-share/kde4/services/ScreenSavers/sphere.desktop
 share/kde4/services/ScreenSavers/spheremonics.desktop
-share/kde4/services/ScreenSavers/spiral.desktop
 share/kde4/services/ScreenSavers/spotlight.desktop
 share/kde4/services/ScreenSavers/sproingies.desktop
 share/kde4/services/ScreenSavers/squiral.desktop
@@ -4479,19 +4463,14 @@ share/kde4/services/ScreenSavers/strange.desktop
 share/kde4/services/ScreenSavers/substrate.desktop
 share/kde4/services/ScreenSavers/superquadrics.desktop
 share/kde4/services/ScreenSavers/swirl.desktop
-share/kde4/services/ScreenSavers/t3d.desktop
 share/kde4/services/ScreenSavers/thornbird.desktop
 share/kde4/services/ScreenSavers/triangle.desktop
 share/kde4/services/ScreenSavers/truchet.desktop
 share/kde4/services/ScreenSavers/twang.desktop
 share/kde4/services/ScreenSavers/vermiculate.desktop
 share/kde4/services/ScreenSavers/vidwhacker.desktop
-share/kde4/services/ScreenSavers/vines.desktop
 share/kde4/services/ScreenSavers/wander.desktop
-share/kde4/services/ScreenSavers/webcollage.desktop
 share/kde4/services/ScreenSavers/whirlwindwarp.desktop
-share/kde4/services/ScreenSavers/whirlygig.desktop
-share/kde4/services/ScreenSavers/worm.desktop
 share/kde4/services/ScreenSavers/wormhole.desktop
 share/kde4/services/ScreenSavers/xanalogtv.desktop
 share/kde4/services/ScreenSavers/xflame.desktop
@@ -4500,8 +4479,6 @@ share/kde4/services/ScreenSavers/xlyap.desktop
 share/kde4/services/ScreenSavers/xmatrix.desktop
 share/kde4/services/ScreenSavers/xrayswarm.desktop
 share/kde4/services/ScreenSavers/xspirograph.desktop
-share/kde4/services/ScreenSavers/xsublim.desktop
-share/kde4/services/ScreenSavers/xteevee.desktop
 share/kde4/services/ScreenSavers/zoom.desktop
 share/sounds/KDE_Logout_new.wav
 share/sounds/KDE_Startup_new.wav
