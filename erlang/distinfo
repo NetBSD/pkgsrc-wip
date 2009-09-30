@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.3 2009/03/16 18:03:00 asau Exp $
+$NetBSD: distinfo,v 1.4 2009/09/30 23:09:23 asau Exp $
 
-SHA1 (erlang/otp_src_R12B-5.tar.gz) = 6c45509acf70d35d5def2cbefd86ada093c1ac3a
-RMD160 (erlang/otp_src_R12B-5.tar.gz) = 7265ae8ebd045ec5b977148a7c9b995eb7ef2d2d
-Size (erlang/otp_src_R12B-5.tar.gz) = 47470402 bytes
-SHA1 (patch-aa) = b9ba24f232b6beba1e1044667bb354326b399d6d
+SHA1 (erlang/otp_src_R13B01.tar.gz) = 29d0e06dd351f31c70112454f8187e70ee75ca03
+RMD160 (erlang/otp_src_R13B01.tar.gz) = f40ed0d6837f187f889a49c841a6615714b5ae96
+Size (erlang/otp_src_R13B01.tar.gz) = 54662132 bytes
 SHA1 (patch-ab) = f0a148c893693a7877ff4d1678535a78179e32a2
 SHA1 (patch-ac) = ac9af68982593faa6736f70f5c196b6835748f58
-SHA1 (patch-ad) = 0cdafbe46cd3bf65710db10ae23e725fd01dc2c5
 SHA1 (patch-ae) = 59075d269ac05bf029c41e8eab89e7669d80514f
 SHA1 (patch-af) = 357ec0b48484cb03f8ef03959cb59f369fbabe41
 SHA1 (patch-ag) = a0aba985d765050dadc0d8410c3a891954ffeaa7
@@ -21,5 +19,5 @@ SHA1 (patch-ao) = 48a41181b6dfbe42a163d8853d1c07faeafb9639
 SHA1 (patch-ap) = 81afc77c91712792c4ada381015f949a28f4baf2
 SHA1 (patch-aq) = c42d52f0cafe5538aafcd9bd7e24d3ea0c8640a0
 SHA1 (patch-ar) = f602b05a46de98a95b2e2567a5ba04ecb3feec6f
-SHA1 (patch-as) = e745c8e53c99034ebd65f9b36e6254f54e8c58ff
+SHA1 (patch-as) = b989c04579c37e9370288edaf296172bb07be046
 SHA1 (patch-at) = f0b8733b9ce3ac6c15274e83464499779ae25399

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/03/16 18:03:00 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/09/30 23:09:22 asau Exp $
 
-DISTNAME=		otp_src_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
+DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
@@ -37,7 +37,9 @@ SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
-PLIST_SRC=		PLIST.common
+TEST_TARGET=		tests
+
+PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,8 +55,6 @@ CONFIGURE_ARGS+=	--enable-kernel-poll
 
 .include "options.mk"
 
-PLIST_SRC+=		PLIST.common_end
-
 .include "Makefile.versions"
 
 ###
@@ -63,11 +63,17 @@ PLIST_SRC+=		PLIST.common_end
 pre-build:
 	${RUN} ${RM} -f ${WRKSRC}/lib/stdlib/ebin/dets_v9.beam
 
-post-install:
-	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/kernel-${VERSION.kernel}/examples
-	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
-	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
-	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
+# post-install:
+# 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/kernel-${VERSION.kernel}/examples
+# 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
+# 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
+# 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
+
+# Generate PLIST
+.for _pkg_ _version_ in $(_VERSIONS)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
+.endfor
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/R13B01\//) {sub(/\/releases\/R13B01\//,"/releases/$${VERSION}/", $$0);}}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

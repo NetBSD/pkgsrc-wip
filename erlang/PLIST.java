@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+@comment $NetBSD: PLIST.java,v 1.2 2009/09/30 23:09:23 asau Exp $
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Any.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHelper.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHolder.java
@@ -78,18 +78,3 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
 lib/erlang/lib/jinterface-${VERSION.jinterface}/priv/OtpErlang.jar
 lib/erlang/lib/orber-${VERSION.orber}/java_src/Orber/InitialReference.java
 lib/erlang/lib/orber-${VERSION.orber}/priv/Orber/InitialReference.class
-@dirrm lib/erlang/lib/orber-${VERSION.orber}/priv/Orber
-@dirrm lib/erlang/lib/orber-${VERSION.orber}/java_src/Orber
-@dirrm lib/erlang/lib/orber-${VERSION.orber}/java_src
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/priv
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src
-@dirrm lib/erlang/lib/jinterface-${VERSION.jinterface}
-@dirrm lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic
-@dirrm lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp
-@dirrm lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson
-@dirrm lib/erlang/lib/ic-${VERSION.ic}/java_src/com
-@dirrm lib/erlang/lib/ic-${VERSION.ic}/java_src
