@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3631 2009/09/29 22:58:44 pettai Exp $
+# $Id: Makefile,v 1.3632 2009/09/30 10:30:35 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -160,7 +160,6 @@ SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
 SUBDIR+=	boost-test-suite
-SUBDIR+=	botan
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
