@@ -1,9 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2009/02/14 05:25:22 schnoebe Exp $
+$NetBSD: patch-ai,v 1.3 2009/09/30 13:23:23 fhajny Exp $
 
---- ylib.py.orig	2008-09-04 11:33:26.000000000 -0500
+--- ylib.py.orig	2009-03-03 10:56:30.627316492 +0000
 +++ ylib.py
-@@ -142,8 +142,8 @@ class YahooCon:
-                 if pay[each].has_key(7):
+@@ -143,7 +143,7 @@ class YahooCon:
                      self.roster[pay[each][7]]=('available', typ, status)
                      if pay[each].has_key(198):
                          if pay[each][198] == '1' and pay[each].has_key(197):
@@ -12,8 +11,7 @@ $NetBSD: patch-ai,v 1.2 2009/02/14 05:25:22 schnoebe Exp $
                              if b != None and self.handlers.has_key('avatar'):
                                  self.handlers['avatar'](self,pay[each][7],b)
                          elif pay[each][198] == '0':
-@@ -177,8 +177,8 @@ class YahooCon:
-             for each in pay:
+@@ -178,7 +178,7 @@ class YahooCon:
                  if pay[each].has_key(4):
                      if pay[each].has_key(198):
                          if pay[each][198] == '1' and pay[each].has_key(197):
