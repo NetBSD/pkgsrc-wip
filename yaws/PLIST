@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/16 18:34:59 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/09/30 13:50:26 fhajny Exp $
 bin/yaws
 lib/yaws/ebin/authmod_gssapi.beam
 lib/yaws/ebin/haxe.beam
@@ -8,7 +8,6 @@ lib/yaws/ebin/mime_type_c.beam
 lib/yaws/ebin/mime_types.beam
 lib/yaws/ebin/yaws.app
 lib/yaws/ebin/yaws.beam
-lib/yaws/ebin/yaws_404.beam
 lib/yaws/ebin/yaws_api.beam
 lib/yaws/ebin/yaws_app.beam
 lib/yaws/ebin/yaws_appmod_cgi.beam
@@ -24,6 +23,7 @@ lib/yaws/ebin/yaws_jsonrpc.beam
 lib/yaws/ebin/yaws_log.beam
 lib/yaws/ebin/yaws_log_file_h.beam
 lib/yaws/ebin/yaws_ls.beam
+lib/yaws/ebin/yaws_outmod.beam
 lib/yaws/ebin/yaws_pam.beam
 lib/yaws/ebin/yaws_revproxy.beam
 lib/yaws/ebin/yaws_rpc.beam
@@ -34,6 +34,7 @@ lib/yaws/ebin/yaws_server.beam
 lib/yaws/ebin/yaws_session_server.beam
 lib/yaws/ebin/yaws_soap_lib.beam
 lib/yaws/ebin/yaws_soap_srv.beam
+lib/yaws/ebin/yaws_stats.beam
 lib/yaws/ebin/yaws_sup.beam
 lib/yaws/ebin/yaws_sup_restarts.beam
 lib/yaws/ebin/yaws_ticker.beam
@@ -44,6 +45,7 @@ lib/yaws/include/soap.hrl
 lib/yaws/include/yaws.hrl
 lib/yaws/include/yaws_api.hrl
 lib/yaws/include/yaws_dav.hrl
+lib/yaws/priv/lib/setuid_drv.so
 lib/yaws/priv/envelope.xsd
 lib/yaws/priv/epam
 lib/yaws/priv/lib/.gitignore
@@ -260,7 +262,6 @@ share/yaws/www/ssi/dynamic.2
 share/yaws/www/ssi/dynamic.3
 share/yaws/www/ssi_ex1
 share/yaws/www/static.html
-share/yaws/www/stats.yaws
 share/yaws/www/stats_ex.yaws
 share/yaws/www/stil.css
 share/yaws/www/stream.yaws

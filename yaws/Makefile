@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/03/16 18:34:59 asau Exp $
+# $NetBSD: Makefile,v 1.10 2009/09/30 13:50:26 fhajny Exp $
 #
 
-PKGVERSION=		1.81
+PKGVERSION=		1.84
 
 DISTNAME=		yaws-${PKGVERSION}
 CATEGORIES=		www
@@ -30,13 +30,23 @@ LIBDIR=			${PREFIX}/lib/yaws
 WWWDIR=			${PREFIX}/share/yaws/www
 INSTALLATION_DIRS=	${EGDIR}
 INSTALLATION_DIRS+=	${LIBDIR}/ebin ${LIBDIR}/include
-INSTALLATION_DIRS+=	${LIBDIR}/priv ${WWWDIR}
+INSTALLATION_DIRS+=	${LIBDIR}/priv ${LIBDIR}/priv/lib ${WWWDIR}
 
 OWN_DIRS=		${VARBASE}/log/yaws
 
-REPLACE_PYTHON=		www/cgi-bin/foo.py
-#CHECK_INTERPRETER_SKIP=	${WWWDIR}/cgi-bin/foo.py
-CHECK_INTERPRETER_SKIP=	share/yaws/www/cgi-bin/foo.py
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == SunOS
+REPLACE_INTERPRETER+=	ksh
+REPLACE.ksh.old=	/bin/sh
+REPLACE.ksh.new=	/bin/ksh
+REPLACE_FILES.ksh=	scripts/Subst
+.endif
+
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	.*/bin/python
+REPLACE.python.new=	${PREFIX}/bin/python
+REPLACE_FILES.python=	www/cgi-bin/foo.py
 
 post-patch:
 	${RM} ${WRKDIR}/yaws
@@ -58,6 +68,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ebin/* ${DESTDIR}${LIBDIR}/ebin
 	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${LIBDIR}/include
 	cd ${WRKSRC}/priv && pax -rw . ${DESTDIR}${LIBDIR}/priv
+	${INSTALL_DATA} ${WRKSRC}/priv/lib/setuid_drv.so ${DESTDIR}${LIBDIR}/priv/lib/setuid_drv.so
+	${INSTALL_DATA} ${WRKSRC}/priv/envelope.xsd ${DESTDIR}${LIBDIR}/priv/envelope.xsd
+	${INSTALL_DATA} ${WRKSRC}/priv/epam ${DESTDIR}${LIBDIR}/priv/epam
+	${INSTALL_DATA} ${WRKSRC}/priv/mime.types ${DESTDIR}${LIBDIR}/priv/mime.types
+	${INSTALL_DATA} ${WRKSRC}/priv/soap.xsd ${DESTDIR}${LIBDIR}/priv/soap.xsd
+	${INSTALL_DATA} ${WRKSRC}/priv/wsdl.xsd ${DESTDIR}${LIBDIR}/priv/wsdl.xsd
 
 	cd ${WRKSRC}/www && pax -rw . ${DESTDIR}${WWWDIR}
 
@@ -69,5 +85,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
 
 .include "../../lang/erlang/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

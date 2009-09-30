@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2007/06/21 13:00:33 bartoszkuzma Exp $
+$NetBSD: patch-ai,v 1.2 2009/09/30 13:50:27 fhajny Exp $
 
---- scripts/netbsd/yaws.sh.orig	2006-08-07 11:35:30.000000000 +0200
+--- scripts/netbsd/yaws.sh.orig	2009-07-05 18:20:13.000000000 +0000
 +++ scripts/netbsd/yaws.sh
 @@ -1,4 +1,4 @@
 -#!/bin/sh
@@ -13,7 +13,7 @@ $NetBSD: patch-ai,v 1.1 2007/06/21 13:00:33 bartoszkuzma Exp $
  name="yaws"
  rcvar=$name
 -yaws_command="%prefix%bin/${name}"
--required_files="%etcdir%yaws.conf"
+-required_files="%etcdir%yaws/yaws.conf"
 +yaws_command="@PREFIX@/bin/${name}"
 +required_files="@PKG_SYSCONFDIR@/yaws/yaws.conf"
  
