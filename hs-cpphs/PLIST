@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/03 07:23:50 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/01 05:27:58 phonohawk Exp $
 bin/cpphs
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/HScpphs-${PKGVERSION}.o
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs.hi
@@ -28,12 +28,5 @@ lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/HuttonMeijer.p
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/libHScpphs-${PKGVERSION}_p.a
 lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/package-description
+man/man1/cpphs.1
 share/doc/cpphs-${PKGVERSION}/LICENCE-LGPL
-@dirrm share/doc/cpphs-${PKGVERSION}
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Text
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor/Cpphs
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language/Preprocessor
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}/Language
-@dirrm lib/cpphs-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/cpphs-${PKGVERSION}
