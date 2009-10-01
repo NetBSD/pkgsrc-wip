@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3638 2009/10/01 08:59:43 phonohawk Exp $
+# $Id: Makefile,v 1.3639 2009/10/01 17:48:08 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2245,33 +2245,10 @@ SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86rushproto
-SUBDIR+=	xfce4
-SUBDIR+=	xfce4-appfinder
-SUBDIR+=	xfce4-desktop
-SUBDIR+=	xfce4-dev-tools
-SUBDIR+=	xfce4-exo
-SUBDIR+=	xfce4-extras
-SUBDIR+=	xfce4-gtk2-engine
-SUBDIR+=	xfce4-icon-theme
 SUBDIR+=	xfce4-mailwatch-plugin
-SUBDIR+=	xfce4-mcs-manager
-SUBDIR+=	xfce4-mcs-plugins
-SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-mount-plugin
-SUBDIR+=	xfce4-mousepad
-SUBDIR+=	xfce4-orage
-SUBDIR+=	xfce4-panel
-SUBDIR+=	xfce4-print
 SUBDIR+=	xfce4-radio-plugin
-SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-taskmanager
-SUBDIR+=	xfce4-terminal
-SUBDIR+=	xfce4-thunar
-SUBDIR+=	xfce4-utils
-SUBDIR+=	xfce4-wm
-SUBDIR+=	xfce4-wm-themes
-SUBDIR+=	xfce4-xarchiver
-SUBDIR+=	xfce4-xmms-plugin
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
