@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/09/23 09:04:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/01 10:37:14 jihbed Exp $
 #
 
-DISTNAME=	gxmessage-2.12.3
+DISTNAME=	gxmessage-2.12.4
 CATEGORIES=	x11
 MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=     pkg-config msgfmt
+USE_TOOLS+=     pkg-config intltool msgfmt
 TEXINFO_REQD=		4.0
 INFO_FILES=		yes
 
