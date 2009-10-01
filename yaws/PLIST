@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/09/30 13:50:26 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/01 00:02:27 asau Exp $
 bin/yaws
 lib/yaws/ebin/authmod_gssapi.beam
 lib/yaws/ebin/haxe.beam
@@ -45,7 +45,6 @@ lib/yaws/include/soap.hrl
 lib/yaws/include/yaws.hrl
 lib/yaws/include/yaws_api.hrl
 lib/yaws/include/yaws_dav.hrl
-lib/yaws/priv/lib/setuid_drv.so
 lib/yaws/priv/envelope.xsd
 lib/yaws/priv/epam
 lib/yaws/priv/lib/.gitignore
@@ -273,21 +272,4 @@ share/yaws/www/yapp_intro.yaws
 share/yaws/www/yaws-1.55_to_1.56.patch
 share/yaws/www/ybed.erl
 share/yaws/www/yman.yaws
-@dirrm share/yaws/www/ssi
-@dirrm share/yaws/www/shoppingcart
-@dirrm share/yaws/www/jsolait/lib
-@dirrm share/yaws/www/jsolait
-@dirrm share/yaws/www/icons/small
-@dirrm share/yaws/www/icons
-@dirrm share/yaws/www/code
-@dirrm share/yaws/www/cgi-bin
-@dirrm share/yaws/www
-@dirrm share/yaws
-@dirrm share/examples/yaws
-@dirrm lib/yaws/priv/lib
-@dirrm lib/yaws/priv
-@dirrm lib/yaws/include
-@dirrm lib/yaws/ebin
-@dirrm lib/yaws
-@exec ${MKDIR} %D/etc/yaws
-@dirrm etc/yaws
+@pkgdir etc/yaws
