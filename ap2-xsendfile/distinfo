@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/01 12:39:31 fhajny Exp $
+
+SHA1 (mod_xsendfile-0.9.tar.gz) = 081af9fa65a4ff97187eb24c2dcc75b7cabffffa
+RMD160 (mod_xsendfile-0.9.tar.gz) = 45431fd2988172c6d519d6d9435c2d5ad2e97903
+Size (mod_xsendfile-0.9.tar.gz) = 10240 bytes
