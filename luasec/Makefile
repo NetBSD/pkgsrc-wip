@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/01 06:19:59 thomasklausner Exp $
 #
 
 PKGNAME=		lua-sec-0.3.3
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.inf.puc-rio.br/~brunoos/luasec/
 COMMENT=		Lua binding for OpenSSL library
 LICENSE=		mit
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -23,11 +23,13 @@ INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR}
 
 .if ${OPSYS} == "SunOS"
 BUILD_TARGET=		solaris
+.else
+BUILD_TARGET=		bsd
 .endif
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/ssl.lua ${DESTDIR}${PREFIX}/${LUA_LDIR}/ssl.lua
-	${INSTALL_LIB} ${DESTDIR}${WRKSRC}/src/ssl.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/ssl.so
+	${INSTALL_LIB} ${WRKSRC}/src/ssl.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/ssl.so
 
 .include "../../lang/lua/module.mk"
 .include "../../security/openssl/buildlink3.mk"
