@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/01 13:42:26 fhajny Exp $
 #
 
 PKGNAME=	sphinxsearch-${PKGVERSION}
@@ -11,6 +11,7 @@ MASTER_SITES=	http://www.sphinxsearch.com/downloads/
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.sphinxsearch.com/
 COMMENT=	Sphinx Full-Text Search Engine
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
