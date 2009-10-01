@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/14 22:44:25 thomasklausner Exp $
-lib/libluasocket.so
-lib/libluasocket.so.2.0.1
-lib/lua/ftp.lua
-lib/lua/http.lua
-lib/lua/ltn12.lua
-lib/lua/mime.lua
-lib/lua/smtp.lua
-lib/lua/socket.lua
-lib/lua/tp.lua
-lib/lua/url.lua
-@dirrm lib/lua
+@comment $NetBSD: PLIST,v 1.5 2009/10/01 20:28:24 fhajny Exp $
+lib/lua/5.1/mime.so
+lib/lua/5.1/socket.so
+share/lua/5.1/ftp.lua
+share/lua/5.1/http.lua
+share/lua/5.1/ltn12.lua
+share/lua/5.1/mime.lua
+share/lua/5.1/smtp.lua
+share/lua/5.1/socket.lua
+share/lua/5.1/tp.lua
+share/lua/5.1/url.lua
