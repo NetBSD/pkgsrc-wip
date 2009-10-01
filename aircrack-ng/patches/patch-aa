@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/08/31 09:32:16 moubctez Exp $
+$NetBSD: patch-aa,v 1.8 2009/10/01 08:37:18 moubctez Exp $
 
---- src/osdep/byteorder.h.orig	2009-08-31 09:41:38.000000000 +0200
+--- src/osdep/byteorder.h.orig	2009-08-13 20:51:18.000000000 +0200
 +++ src/osdep/byteorder.h
-@@ -176,7 +176,7 @@
+@@ -184,7 +184,7 @@
  
  
  	// FreeBSD

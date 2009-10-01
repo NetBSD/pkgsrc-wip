@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.2 2009/08/31 09:32:16 moubctez Exp $
+$NetBSD: patch-ad,v 1.3 2009/10/01 08:37:18 moubctez Exp $
 
---- common.mak.orig	2009-07-25 02:34:40.000000000 +0200
+--- common.mak.orig	2009-09-01 11:32:00.000000000 +0200
 +++ common.mak
 @@ -70,10 +70,10 @@ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
- CFLAGS          ?= -g -W -Wall -Werror -O3 -Wno-strict-aliasing
+ CFLAGS          ?= -g -W -Wall -Werror -O3
  CFLAGS          += $(OPTFLAGS) $(REVFLAGS) $(COMMON_CFLAGS)
  
 -prefix          = /usr/local
