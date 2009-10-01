@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3635 2009/10/01 05:52:37 phonohawk Exp $
+# $Id: Makefile,v 1.3636 2009/10/01 06:52:23 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -734,6 +734,7 @@ SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
 SUBDIR+=	hs-dataenc
+SUBDIR+=	hs-derive
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-event-list
 SUBDIR+=	hs-explicit-exception
