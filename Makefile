@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3634 2009/10/01 04:44:11 phonohawk Exp $
+# $Id: Makefile,v 1.3635 2009/10/01 05:52:37 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -780,6 +780,7 @@ SUBDIR+=	hs-time
 SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-uconv
+SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-x11
@@ -2158,7 +2159,6 @@ SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	umix
-SUBDIR+=	uniplate
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
