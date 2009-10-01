@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/01 16:18:59 roelants Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -16,6 +16,7 @@ EXTRACT_SUFX=	.tar.bz2
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include \
 			--x-libraries=${X11BASE}/libs
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://spuriousinterrupt.org/projects/mailwatch/
 COMMENT=	Xfce mail checker plugin for the panel
 
