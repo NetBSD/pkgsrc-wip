@@ -1,0 +1,82 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+
+--- Makefile.in.orig	2008-06-08 08:57:36.000000000 +0000
++++ Makefile.in
+@@ -64,7 +64,7 @@ am__vpath_adj = case $$p in \
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(sysconfdir)"
++am__installdirs = "$(DESTDIR)$(egdir)"
+ sysconfDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(sysconf_DATA)
+ ETAGS = etags
+@@ -174,6 +174,7 @@ program_transform_name = @program_transf
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
++egdir = @egdir@
+ target_alias = @target_alias@
+ @USE_LIBSTEMMER_FALSE@SUBDIRS = src test
+ @USE_LIBSTEMMER_TRUE@SUBDIRS = libstemmer_c src test
+@@ -239,20 +240,20 @@ sphinx-min.conf.dist: $(top_builddir)/co
+ uninstall-info-am:
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(mkdir_p) "$(DESTDIR)$(sysconfdir)"
++	test -z "$(egdir)" || $(mkdir_p) "$(DESTDIR)$(egdir)"
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egdir)/$$f'"; \
++	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egdir)/$$f"; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(sysconfdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(sysconfdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(egdir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(egdir)/$$f"; \
+ 	done
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+@@ -522,7 +523,7 @@ check: check-recursive
+ all-am: Makefile $(DATA)
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	for dir in "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(egdir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: install-recursive
+@@ -570,7 +571,6 @@ info-am:
+ 
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ 
+ install-exec-am: install-sysconfDATA
+ 
+@@ -609,7 +609,7 @@ uninstall-info: uninstall-info-recursive
+ 	distclean-hdr distclean-recursive distclean-tags \
+ 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+-	install-data-am install-data-hook install-exec install-exec-am \
++	install-data-am install-exec install-exec-am \
+ 	install-info install-info-am install-man install-strip \
+ 	install-sysconfDATA installcheck installcheck-am installdirs \
+ 	installdirs-am maintainer-clean maintainer-clean-generic \
+@@ -618,8 +618,6 @@ uninstall-info: uninstall-info-recursive
+ 	uninstall uninstall-am uninstall-info-am uninstall-sysconfDATA
+ 
+ 
+-install-data-hook:
+-	mkdir -p $(DESTDIR)$(localstatedir)/data && mkdir -p $(DESTDIR)$(localstatedir)/log
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

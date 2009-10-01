@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+bin/indexer
+bin/search
+bin/searchd
+bin/spelldump
+include/sphinxclient.h
+lib/libsphinxclient.a
+lib/libsphinxclient.la
+lib/libsphinxclient.so
+lib/libsphinxclient-0.0.1.so
+share/examples/sphinx/example.sql
+share/examples/sphinx/sphinx-full.conf
+share/examples/sphinx/sphinx-min.conf

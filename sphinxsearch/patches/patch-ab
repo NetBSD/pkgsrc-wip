@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+
+--- configure.orig	Wed Jul  9 22:29:17 2008
++++ configure	Tue Mar 10 15:27:07 2009
+@@ -1847,12 +1847,12 @@
+ echo "$as_me:$LINENO: checking whether to compile debug version" >&5
+ echo $ECHO_N "checking whether to compile debug version... $ECHO_C" >&6
+ if test x$ac_cv_use_debug != xno; then
+-	SPHINX_CFLAGS="-Wall -g -D_FILE_OFFSET_BITS=64"
++	SPHINX_CFLAGS="-g -D_FILE_OFFSET_BITS=64"
+ 	SPHINX_INJECT_FLAGS="-D_FILE_OFFSET_BITS=64"
+ 	echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ else
+-	SPHINX_CFLAGS="-Wall -g -D_FILE_OFFSET_BITS=64 -O3 -DNDEBUG"
++	SPHINX_CFLAGS="-g -D_FILE_OFFSET_BITS=64 -O3 -DNDEBUG"
+ 	SPHINX_INJECT_FLAGS="-D_FILE_OFFSET_BITS=64 -DNDEBUG"
+ 	echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
