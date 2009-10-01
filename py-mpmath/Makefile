@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/31 00:38:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/01 12:42:40 jihbed Exp $
 #
 
 DISTNAME=	mpmath-0.13
@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://mpmath.googlecode.com/files/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://mpmath.googlecode.com/files/
+HOMEPAGE=	http://code.google.com/p/mpmath/
 COMMENT=	Python library for arbitrary-precision floating-point arithmetic
 #LICENSE=	# TODO: (see mk/license.mk)
 
