@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/09/29 21:54:44 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2009/10/02 21:29:02 pettai Exp $
 #
 
-DISTNAME=	opendnssec-${RCVERSION}
+DISTNAME=	opendnssec-${VERSION}
 CATEGORIES=	net security
 MASTER_SITES=	# not defined
 
@@ -13,12 +13,13 @@ LICENSE=	iis-license
 LICENSE_FILE=	${FILESDIR}/iis-license
 
 USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4 perl
+USE_JAVA=	no
 USE_LIBTOOL=	yes
 
 SVN_REPOSITORIES=	opendnssec
-SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${RCVERSION}
+SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
 SVN_MODULE.opendnssec=	OpenDNSSEC
-RCVERSION=		1.0a5
+VERSION=		1.0.0b1
 NO_CHECKSUM=		yes
 
 .include "options.mk"
@@ -39,7 +40,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-#CONFIGURE_ENV+=	F77=${FALSE:Q}
 
 WRKSRC=			${WRKDIR}/OpenDNSSEC
 

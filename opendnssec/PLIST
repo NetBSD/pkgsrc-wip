@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/29 15:10:19 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/02 21:29:02 pettai Exp $
 bin/hsmspeed
 bin/hsmutil
 bin/kasp_auditor
+bin/kasp_check
 bin/ksmutil
 bin/signer_engine_cli
 etc/opendnssec/conf.xml
 etc/opendnssec/conf.xml.sample
 etc/opendnssec/kasp.xml
 etc/opendnssec/kasp.xml.sample
+etc/opendnssec/zonefetch.xml.sample
 etc/opendnssec/zonelist.xml
 etc/opendnssec/zonelist.xml.sample
 include/hsmtest.h
@@ -21,6 +23,7 @@ lib/opendnssec/kasp_auditor/config.rb
 lib/opendnssec/kasp_auditor/key_tracker.rb
 lib/opendnssec/kasp_auditor/parse.rb
 lib/opendnssec/kasp_auditor/preparser.rb
+lib/opendnssec/kasp_checker.rb
 lib/opendnssec/signer/Engine.py
 lib/opendnssec/signer/Engine.pyc
 lib/opendnssec/signer/Engine.pyo
@@ -51,9 +54,9 @@ libexec/opendnssec/nseccer
 libexec/opendnssec/signer
 libexec/opendnssec/signer_threads
 libexec/opendnssec/sorter
+libexec/opendnssec/zone_fetcher
 libexec/opendnssec/zone_reader
-sbin/communicated
-sbin/keygend
+sbin/enforcerd
 sbin/signer_engine
 share/opendnssec/conf.rnc
 share/opendnssec/conf.rng
@@ -63,5 +66,7 @@ share/opendnssec/kasp.rng
 share/opendnssec/kasp2html.xsl
 share/opendnssec/signconf.rnc
 share/opendnssec/signconf.rng
+share/opendnssec/zonefetch.rnc
+share/opendnssec/zonefetch.rng
 share/opendnssec/zonelist.rnc
 share/opendnssec/zonelist.rng
