@@ -1,0 +1,6 @@
+This is a strict version of the Get monad from the binary
+package. It's pretty much just a copy and paste job from the original
+source code. The binary team are currently unsure about their future
+plans w.r.t. strictness, so this is just a stop gap measure. See
+http://www.haskell.org/haskellwiki/DealingWithBinaryData for
+documentation.
