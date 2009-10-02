@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/29 05:50:22 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2009/10/02 02:06:45 phonohawk Exp $
 
-SHA1 (HDBC-sqlite3-2.1.0.0.tar.gz) = 49c2e865e370ffa5369e480446303050b22c2416
-RMD160 (HDBC-sqlite3-2.1.0.0.tar.gz) = 9f8c7b2313bf496245f204ddf3428d5175db92a2
-Size (HDBC-sqlite3-2.1.0.0.tar.gz) = 18614 bytes
-SHA1 (patch-aa) = 7aba8e88335b4049df920f253a190d6dc8bd7839
+SHA1 (HDBC-sqlite3-2.1.0.2.tar.gz) = 558a3874bc66730429f7fa3bd5c9b0a37f8afdd6
+RMD160 (HDBC-sqlite3-2.1.0.2.tar.gz) = 0729101240fa78bb6374113c9884c684727cdb12
+Size (HDBC-sqlite3-2.1.0.2.tar.gz) = 23480 bytes
