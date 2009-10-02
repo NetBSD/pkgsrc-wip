@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2009/10/02 16:43:34 fhajny Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sphinx-search
-PKG_SUPPORTED_OPTIONS=		mysql pgsql iconv
-PKG_SUGGESTED_OPTIONS=          mysql iconv
+PKG_OPTIONS_NONEMPTY_SETS=	db
+PKG_OPTIONS_SET.db=		mysql pgsql
+PKG_SUPPORTED_OPTIONS=		iconv
+PKG_SUGGESTED_OPTIONS=		mysql iconv
 
 .include "../../mk/bsd.options.mk"
 
