@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/29 05:32:31 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/02 01:59:57 phonohawk Exp $
 #
 
-DISTNAME=	HDBC-2.1.0
+DISTNAME=	HDBC-2.1.1
 CATEGORIES=	databases
 
 MAINTAINER=	pho@cielonegro.org

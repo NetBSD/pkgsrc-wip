@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/05/29 05:32:31 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/10/02 01:59:57 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-HDBC
 
 .if !defined(HS_HDBC_BUILDLINK3_MK)
 HS_HDBC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-HDBC+=	hs-HDBC>=2.1.0
+BUILDLINK_API_DEPENDS.hs-HDBC+=	hs-HDBC>=2.1.1
 BUILDLINK_PKGSRCDIR.hs-HDBC?=	../../wip/hs-HDBC
 
 .include "../../wip/hs-convertible/buildlink3.mk"
