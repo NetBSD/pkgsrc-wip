@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/01 13:42:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/02 07:29:38 fhajny Exp $
 #
 
 PKGNAME=	sphinxsearch-${PKGVERSION}
@@ -32,7 +32,7 @@ SPHINX_LOG?=	${VARBASE}/log/sphinx
 EGDIR=		${DESTDIR}${PREFIX}/share/examples/sphinx
 CONF_FILES+=	${EGDIR}/sphinx-min.conf ${PKG_SYSCONFDIR}/sphinx.conf
 
-INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/sbin ${EGDIR}
+INSTALLATION_DIRS=	bin sbin ${EGDIR}
 OWN_DIRS+=		${SPHINX_DIR} ${SPHINX_RUN} ${SPHINX_LOG}
 OWN_DIRS_PERMS+=	${SPHINX_DIR} ${SPHINX_USER} ${SPHINX_GROUP} 0770
 OWN_DIRS_PERMS+=	${SPHINX_RUN} ${SPHINX_USER} ${SPHINX_GROUP} 0770
