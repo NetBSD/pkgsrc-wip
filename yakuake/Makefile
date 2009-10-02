@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/04 16:19:49 msorc Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/02 22:44:03 thomasklausner Exp $
 #
 
 DISTNAME=	yakuake-2.9.4
@@ -16,11 +16,9 @@ USE_CMAKE=              yes
 USE_LANGUAGES=          c c++
 USE_TOOLS+=             awk msgfmt pkg-config perl
 
-
-# url2pkg-marker (please do not remove this line.)
-.include "../../wip/kde4/kde4.mk"
-.include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdebase-runtime4/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/kdebase-runtime4/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

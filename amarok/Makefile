@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/02 08:12:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2009/10/02 22:44:03 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -39,15 +39,15 @@ SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/taglib-extras/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../wip/mysql5-embedded/buildlink3.mk"
-.include "../../wip/kdemultimedia4/buildlink3.mk"
-# for plasma
-.include "../../wip/kdebase-workspace4/buildlink3.mk"
-.include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../multimedia/kdemultimedia4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/liblastfm/buildlink3.mk"
+.include "../../wip/mysql5-embedded/buildlink3.mk"
 .include "../../wip/qtscriptgenerator/buildlink3.mk"
-.include "../../wip/kde4/kde4.mk"
+.include "../../wip/taglib-extras/buildlink3.mk"
+# for plasma
+.include "../../x11/kdebase-workspace4/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

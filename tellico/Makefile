@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/25 10:25:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/02 22:44:03 thomasklausner Exp $
 #
 
 DISTNAME=	tellico-2.0
@@ -25,12 +25,12 @@ pre-build:
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/exempi/buildlink3.mk"
+.include "../../graphics/kdegraphics4/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
+.include "../../misc/kdepimlibs4/buildlink3.mk"
+.include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../net/yaz/buildlink3.mk"
 .include "../../print/poppler-qt4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdegraphics4/buildlink3.mk"
-.include "../../wip/kdemultimedia4/buildlink3.mk"
-.include "../../wip/kdepimlibs4/buildlink3.mk"
+.include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
