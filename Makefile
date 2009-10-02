@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3640 2009/10/02 03:25:16 phonohawk Exp $
+# $Id: Makefile,v 1.3641 2009/10/02 03:27:56 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -727,6 +727,7 @@ SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-binary-strict
+SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-chalkboard
