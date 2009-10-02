@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.common,v 1.1 2009/10/02 20:06:36 pettai Exp $
+bin/softhsm
+lib/libsofthsm.la
+lib/libsofthsm.a

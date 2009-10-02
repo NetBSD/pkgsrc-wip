@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/09/29 21:50:19 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/02 20:06:36 pettai Exp $
 #
 
-DISTNAME=	softhsm-${RCVERSION}
-PKGNAME=	${DISTNAME:S/${RCVERSION}/${VERSION}/}
+DISTNAME=	softhsm-${VERSION}
+PKGNAME=	${DISTNAME:S/${VERSION}/${RCVERSION}/}
 CATEGORIES=	security
 MASTER_SITES=	# not defined
 
@@ -19,8 +19,8 @@ USE_LIBTOOL=	yes
 SVN_REPOSITORIES=	softhsm
 SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
 SVN_MODULE.softhsm=	softHSM
-RCVERSION=		1.0.0-RC3
-VERSION=		${RCVERSION:S/-RC/rc/}
+VERSION=		1.0.0
+RCVERSION=		${VERSION:S/-RC/rc/}
 NO_CHECKSUM=		yes
 
 PKG_DESTDIR_SUPPORT=    user-destdir
@@ -34,7 +34,16 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-#CONFIGURE_ENV+=	F77=${FALSE:Q}
+
+PLIST_OPSYS?=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
+.if exists(${PLIST_OPSYS})
+PLIST_SHLIB=		${PLIST_OPSYS}
+.else
+PLIST_SHLIB=		${PKGDIR}/PLIST.shlib
+.endif
+PLIST_SRC=		${PLIST_SHLIB}
+PLIST_SRC+=		${PKGDIR}/PLIST.common
+PLIST_SUBST+=		SHLIB_VERSION=${RCVERSION:C/[^0-9]*$//}
 
 WRKSRC=			${WRKDIR}/softHSM
 
