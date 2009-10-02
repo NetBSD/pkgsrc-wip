@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/02 03:26:52 phonohawk Exp $
+
+SHA1 (bytestring-trie-0.1.4.tar.gz) = 6a4ce312d12a029c55a21c59330753e64b265929
+RMD160 (bytestring-trie-0.1.4.tar.gz) = c6765fb156ec964c725d711cbfb3aca9c6235430
+Size (bytestring-trie-0.1.4.tar.gz) = 14107 bytes

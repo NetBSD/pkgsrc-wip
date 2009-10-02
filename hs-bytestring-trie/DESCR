@@ -1,0 +1,7 @@
+An efficient finite map from (byte)strings to values.
+
+The implementation is based on big-endian patricia trees, like
+Data.IntMap. We first trie on the elements of Data.ByteString and then
+trie on the big-endian bit representation of those elements. Patricia
+trees have efficient algorithms for union and other merging
+operations, but they're also quick for lookups and insertions.

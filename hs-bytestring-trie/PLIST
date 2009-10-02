@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 03:26:52 phonohawk Exp $
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/BitTwiddle.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/BitTwiddle.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/ByteStringInternal.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/ByteStringInternal.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Convenience.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Convenience.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Internal.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Internal.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/HSbytestring-trie-${PKGVERSION}.o
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/libHSbytestring-trie-${PKGVERSION}.a
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/libHSbytestring-trie-${PKGVERSION}_p.a
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/bytestring-trie-${PKGVERSION}/LICENSE
+@dirrm share/doc/bytestring-trie-${PKGVERSION}
+@dirrm lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie
+@dirrm lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data
+@dirrm lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}
+@dirrm lib/bytestring-trie-${PKGVERSION}
