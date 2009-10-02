@@ -1,0 +1,2 @@
+Test with mysql-embedded; if it doesn't work, switch to external
+mysql daemon.
