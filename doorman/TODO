@@ -1,3 +1,1 @@
-IT DOES NOT BUILDS.
-
-any idea? suggestion? if anybody could help on that i'll be happy :)
+Add PKG_DESTDIR_SUPPORT, it needs to find lsof.
