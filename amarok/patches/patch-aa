@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.7 2009/10/04 21:43:58 thomasklausner Exp $
+
+From Jeff Mitchell; will probably be in next release.
+
+--- CMakeLists.txt.orig	2009-09-28 17:41:44.000000000 +0000
++++ CMakeLists.txt
+@@ -55,9 +55,9 @@ endif(CMAKE_BUILD_TYPE MATCHES debugfull
+ SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fmessage-length=0")
+ if (CMAKE_COMPILER_IS_GNUCXX)
+     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fmessage-length=0")
+-    if( NOT WIN32 AND NOT APPLE )
++    if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+         SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,--as-needed")
+-    endif( NOT WIN32 AND NOT APPLE )
++    endif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ endif (CMAKE_COMPILER_IS_GNUCXX)
+ 
+ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/shared )

@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.7 2009/10/04 21:43:58 thomasklausner Exp $
+
+--- src/collection/mysqlecollection/CMakeLists.txt.orig	2009-09-28 17:34:03.000000000 +0000
++++ src/collection/mysqlecollection/CMakeLists.txt
+@@ -82,6 +82,7 @@ if(APPLE)
+ 	SET_TARGET_PROPERTIES(amarok_collection-mysqlecollection PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
+ endif(APPLE)
+ 
++SET_TARGET_PROPERTIES(amarok_collection-mysqlecollection PROPERTIES LINK_FLAGS "@@WLR@@")
+ install(TARGETS amarok_collection-mysqlecollection DESTINATION ${PLUGIN_INSTALL_DIR} )
+ 
+ install(FILES ../sqlcollection/org.kde.amarok.SqlCollection.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
