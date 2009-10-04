@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/10/04 18:53:12 mwdavies Exp $
+
+--- kspread/functions/financial.cpp.orig	2009-10-04 03:47:10.000000000 +1300
++++ kspread/functions/financial.cpp
+@@ -29,6 +29,10 @@
+ 
+ #include <math.h>
+ 
++#ifdef __NetBSD__
++#define fmin(a,b) ((a) < (b) ? (a) : (b))
++#endif
++
+ #include "CalculationSettings.h"
+ #include "FinancialModule.h"
+ #include "FunctionModuleRegistry.h"
