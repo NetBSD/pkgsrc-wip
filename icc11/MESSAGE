@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/10/04 21:46:36 alnsn Exp $
+
+${PKGNAME} has been installed to ${LOCALBASE}/icc11.
+
+To build pkgsrc packages with this compiler, please
+copy your license to ${LOCALBASE}/icc11/licenses
+and add the following lines to your mk.conf:
+
+	PKGSRC_COMPILER=icc
+	ICCBASE=${LOCALBASE}/icc11
+	NOGCCERROR=yes
+
+===========================================================================

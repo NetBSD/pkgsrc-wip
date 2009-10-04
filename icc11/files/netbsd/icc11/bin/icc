@@ -1,0 +1,49 @@
+#!/bin/sh
+
+INTEL_LICENSE_FILE="@ICC_PREFIX@/licenses:${HOME}/intel/licenses:${INTEL_LICENSE_FILE:-/opt/intel/licenses}"
+export INTEL_LICENSE_FILE
+
+PATH="@ICC_PREFIX@/bin/@ICC_ARCH@:@GCC_PREFIX@/bin:${PATH:-/bin:/usr/bin}"
+export PATH
+
+LANG=C
+LC_MESSAGES=C
+export LANG LC_MESSAGES
+
+aslocation=@BINUTILS_PREFIX@/bin
+
+for opt in "$@"
+do
+	case "${opt}"
+	in
+	-E|-v|-V|--version)                 notransorm=1 ;;
+	-c) test -w @OPSYS_EMULDIR@/tmp/ || notransorm=1 ;;
+	-dryrun) dryrun=1 ;;
+	-Qlocation,as,*)
+		aslocation="${opt#-Qlocation,as,}/"
+		;;
+	-shared-intel)
+		echo "${opt} is not supported on $(uname)." 1>&2
+		exit 1
+		;;
+	esac
+done
+
+if [ -n "${notransorm}" ]
+then
+	exec ${0##*/} "-Qlocation,as,${aslocation}" -D__NetBSD__ \
+		-Ulinux -U__linux__ -U__linux -U__gnu_linux__ "$@"
+elif [ -n "${dryrun}" ]
+then
+	${0##*/} "-Qlocation,as,${aslocation}" "$@" 3>&1 1>&2 2>&3 3>&- | \
+		awk -f @ICC_PREFIX@/libexec/transform-dryrun.awk \
+		    -f @ICC_PREFIX@/libexec/print-dryrun.awk     \
+		3>&1 1>&2 2>&3 3>&-
+else
+	${0##*/} "-Qlocation,as,${aslocation}" -dryrun "$@" 3>&1 1>&2 2>&3 3>&- | \
+		awk -v aslocation="${aslocation}"                \
+		    -f @ICC_PREFIX@/libexec/transform-dryrun.awk \
+		    -f @ICC_PREFIX@/libexec/sh-dryrun.awk        \
+		3>&1 1>&2 2>&3 3>&- | \
+		sh -e -
+fi
