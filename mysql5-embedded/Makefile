@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/10/03 23:13:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2009/10/04 21:42:40 thomasklausner Exp $
 
 DISTNAME=		mysql-5.1.36
 PKGNAME=		${DISTNAME:S/-/-embedded-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.1/}
 
@@ -38,7 +38,7 @@ CXXFLAGS+=		-fPIC -DPIC
 INSTALLATION_DIRS=	mysqld/lib/mysql
 
 # install headers and client library
-INSTALL_DIRS=	include libmysql
+INSTALL_DIRS=	include libmysql sql
 
 # We only need readline to placate the configure script.  None of the
 # binaries are actually linked against -lreadline, so make this only
