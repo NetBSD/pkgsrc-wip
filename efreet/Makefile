@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2009/09/11 22:20:03 jsonn Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/04 21:41:44 jsonn Exp $
 #
 
 DISTNAME=	efreet-0.5.0.062
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 EXTRACT_SUFX=	.tar.bz2
