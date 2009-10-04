@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/10/04 21:46:36 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/04 22:07:47 alnsn Exp $
 
 ICC_MAJOR_VERSION=	11.1
 ICC_MINOR_VERSION=	056
@@ -30,7 +30,7 @@ ICC_PREFIX=		${PREFIX}/icc11
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64 \
 			Linux-*-i386 Linux-*-x86_64
 
-USE_TOOLS+=		pax objcopy ar make
+USE_TOOLS+=		pax make rpm2pkg
 
 ENABLE_LANGUAGES+=	c
 
