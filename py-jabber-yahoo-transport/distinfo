@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.9 2009/09/30 13:26:21 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2009/10/05 03:28:46 schnoebe Exp $
 
-SHA1 (status.patch) = 905da46d63cbb0ba08b20a162cb2e55c2658822b
-RMD160 (status.patch) = d78c8dc3f63e7f605698d814cd1c07ee23c0683b
-Size (status.patch) = 4671 bytes
-SHA1 (yahoo-transport-0.4.tar.gz) = a89efcd9f65c37626d5b1cf5a2ee4ab9af739340
-RMD160 (yahoo-transport-0.4.tar.gz) = 18b56aa47ac78c885e623e70c8824a0ce73a9846
-Size (yahoo-transport-0.4.tar.gz) = 101030 bytes
-SHA1 (patch-aa) = abd666dad12100175a1b13b2edabf53c56807f20
+SHA1 (yahoo-transport-0.4.90.tar.gz) = f639b5a79746786399194a8eddfba34788b7cad4
+RMD160 (yahoo-transport-0.4.90.tar.gz) = 3917dda1eebc828d93d2e861ea6c2dccae740b31
+Size (yahoo-transport-0.4.90.tar.gz) = 424053 bytes
 SHA1 (patch-ab) = 8ba2d2cb010a1a3fd4053e181e51ef97a657d1ab
-SHA1 (patch-ad) = 0f59993dbf96d2bb7738b47513413f58e1f9eff6
 SHA1 (patch-ag) = b728cdb548a7fe77fd3372ac7a289b78eafddb7c
-SHA1 (patch-ah) = d0abc582b20469f753bf8e844e94e751369fa7d0
-SHA1 (patch-ai) = b263037eca67b9f9958060369d629d8feb4155dd

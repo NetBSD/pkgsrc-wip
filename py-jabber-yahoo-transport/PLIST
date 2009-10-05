@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/18 00:27:34 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/05 03:28:46 schnoebe Exp $
 ${TRANSPORTDIR}/ChangeLog
 ${TRANSPORTDIR}/adhoc.py
 ${TRANSPORTDIR}/adhoc.pyc
@@ -38,5 +38,3 @@ ${TRANSPORTDIR}/ylib.py
 ${TRANSPORTDIR}/ylib.pyc
 ${JABBER_EXDIR}/yahoo-transport.xml
 share/examples/rc.d/yahoo-transport
-@dirrm ${TRANSPORTDIR}/curphoo
-@dirrm ${TRANSPORTDIR}
