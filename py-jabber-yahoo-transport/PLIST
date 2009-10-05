@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/05 03:28:46 schnoebe Exp $
-${TRANSPORTDIR}/ChangeLog
+@comment $NetBSD: PLIST,v 1.5 2009/10/05 03:34:01 schnoebe Exp $
 ${TRANSPORTDIR}/adhoc.py
 ${TRANSPORTDIR}/adhoc.pyc
 ${TRANSPORTDIR}/avatar.py
