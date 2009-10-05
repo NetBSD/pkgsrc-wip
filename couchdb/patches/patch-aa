@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/05 10:44:48 fhajny Exp $
+
+Set pkgsrc standard paths
+
+--- configure.orig	2009-07-16 20:59:36.000000000 +0000
++++ configure
+@@ -798,6 +798,7 @@ locallibdir
+ localdocdir
+ localdatadir
+ localconfdir
++localegdir
+ bug_uri
+ version_release
+ version_stage
+@@ -13181,21 +13182,23 @@ bug_uri="https://issues.apache.org/jira/
+ 
+ localconfdir=${sysconfdir}/${package_identifier}
+ 
++localegdir=@EGDIR@
++
+ localdatadir=${datadir}/${package_identifier}
+ 
+ localdocdir=${datadir}/doc/${package_identifier}
+ 
+ locallibdir=${libdir}/${package_identifier}
+ 
+-localstatelibdir=${localstatedir}/lib/${package_identifier}
++localstatelibdir=${localstatedir}/db/${package_identifier}
+ 
+ localstatelogdir=${localstatedir}/log/${package_identifier}
+ 
+-localstaterundir=${localstatedir}/run/${package_identifier}
++localstaterundir=@RUNDIR@
+ 
+-locallibbindir=${locallibdir}/bin
++locallibbindir=${libexecdir}/${package_identifier}
+ 
+-localerlanglibdir=${locallibdir}/erlang/lib
++localerlanglibdir=@ERLANG_PREFIX@/lib/erlang/lib
+ 
+ 
+ # fix for older autotools that don't define "abs_top_YYY" by default

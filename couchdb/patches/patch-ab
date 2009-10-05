@@ -1,0 +1,74 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/10/05 10:44:48 fhajny Exp $
+
+Install into examples, not sysconfdir
+
+--- etc/couchdb/Makefile.in.orig	2009-03-24 16:14:55.000000000 +0000
++++ etc/couchdb/Makefile.in
+@@ -51,7 +51,7 @@ am__vpath_adj = case $$p in \
+     *) f=$$p;; \
+   esac;
+ am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+-am__installdirs = "$(DESTDIR)$(localconfdir)"
++am__installdirs = "$(DESTDIR)$(localegdir)"
+ localconfDATA_INSTALL = $(INSTALL_DATA)
+ DATA = $(localconf_DATA) $(noinst_DATA)
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+@@ -167,6 +167,7 @@ launchddir = @launchddir@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+ localconfdir = @localconfdir@
++localegdir = @localegdir@
+ localdatadir = @localdatadir@
+ localdocdir = @localdocdir@
+ localedir = @localedir@
+@@ -253,20 +254,20 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-localconfDATA: $(localconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(localconfdir)" || $(MKDIR_P) "$(DESTDIR)$(localconfdir)"
++	test -z "$(localegdir)" || $(MKDIR_P) "$(DESTDIR)$(localegdir)"
+ 	@list='$(localconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(localconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(localconfdir)/$$f'"; \
+-	  $(localconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(localconfdir)/$$f"; \
++	  echo " $(localconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(localegdir)/$$f'"; \
++	  $(localconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(localegdir)/$$f"; \
+ 	done
+ 
+ uninstall-localconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+ 	@list='$(localconf_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+-	  echo " rm -f '$(DESTDIR)$(localconfdir)/$$f'"; \
+-	  rm -f "$(DESTDIR)$(localconfdir)/$$f"; \
++	  echo " rm -f '$(DESTDIR)$(localegdir)/$$f'"; \
++	  rm -f "$(DESTDIR)$(localegdir)/$$f"; \
+ 	done
+ tags: TAGS
+ TAGS:
+@@ -305,7 +306,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(localconfdir)"; do \
++	for dir in "$(DESTDIR)$(localegdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
+@@ -426,12 +427,12 @@ default_dev.ini: default.ini.tpl
+ 	< $< > $@
+ 
+ install-data-hook:
+-	if test ! -f "$(DESTDIR)/$(localconfdir)/local.ini"; then \
+-	    cp $(srcdir)/local.ini "$(DESTDIR)/$(localconfdir)/local.ini"; \
++	if test ! -f "$(DESTDIR)/$(localegdir)/local.ini"; then \
++	    cp $(srcdir)/local.ini "$(DESTDIR)/$(localegdir)/local.ini"; \
+ 	fi
+ 
+ uninstall-local:
+-	rm -f "$(DESTDIR)/$(localconfdir)/local.ini"
++	rm -f "$(DESTDIR)/$(localegdir)/local.ini"
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
