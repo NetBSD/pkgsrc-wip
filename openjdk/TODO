@@ -1,3 +1,4 @@
+- IPv4 networking doesn't work correctly due to v6only=1
 - investigate fontconfig issues (fonts are not displayed properly)
 - Fix netbsd-4 build
 - review patches/*, look for XXX, implement commented out code
