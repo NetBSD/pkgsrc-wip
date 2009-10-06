@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/10/06 13:32:30 tnn2 Exp $
+$NetBSD: distinfo,v 1.9 2009/10/06 13:33:56 tnn2 Exp $
 
 SHA1 (openjdk-1.7.0.72.20090924/Xerces-J-src.2.9.1.tar.gz) = 78786a120c10b3d7079384cecbd2860260e47445
 RMD160 (openjdk-1.7.0.72.20090924/Xerces-J-src.2.9.1.tar.gz) = 20bc600ce07fdcf82483e1992dada5ba40c80ff8
@@ -33,6 +33,7 @@ Size (openjdk-1.7.0.72.20090924/xalan-j_2_7_1-src.tar.gz) = 6284437 bytes
 SHA1 (patch-aa) = fbcdd83c292de2be9a5b31971e3d69750c038735
 SHA1 (patch-ab) = a49c5712262d30b36d1913811f51c8f1a1dcb39d
 SHA1 (patch-ac) = 5291039b02ddfe1bc9387209c8d6addb7c86e95b
+SHA1 (patch-ad) = f53d5c4b9ad117943e721e256ec926ac28ac259f
 SHA1 (patch-ae) = f888ba67cfc7255911ee049e1a69dae4efe7dd17
 SHA1 (patch-af) = 9c9c152005c0feec1e6fd0db0fc552a3637db9b7
 SHA1 (patch-aj) = 8ef0a8d446ea5883d1807a49ab123395d50a06ac
