@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/06 04:38:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/06 04:40:12 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}${OPERA_DIST_SEP}${OPERA_DIST_SUFFIX}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -51,7 +51,7 @@ PLIST.ia32w=		yes
 OPERA_DIST_SUFFIX=	${OPERA_VARIANT}.${OPERA_ARCH}
 OPERA_DIST_SEP=		.
 
-.ifndef EMUL_IS_NATIVE
+.if !defined(EMUL_IS_NATIVE)
 post-tools: emul-md5sum
 
 .PHONY: emul-md5sum
