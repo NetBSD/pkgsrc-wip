@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/30 10:05:15 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/06 16:26:39 tnn2 Exp $
+bin/openjdk7-jar
+bin/openjdk7-java
+bin/openjdk7-javac
+bin/openjdk7-javadoc
+bin/openjdk7-javah
+bin/openjdk7-javap
+bin/openjdk7-keytool
+bin/openjdk7-orbd
+bin/openjdk7-policytool
+bin/openjdk7-rmid
+bin/openjdk7-rmiregistry
+bin/openjdk7-servertool
+bin/openjdk7-tnameserv
 java/openjdk7/ASSEMBLY_EXCEPTION
 java/openjdk7/LICENSE
 java/openjdk7/THIRD_PARTY_README

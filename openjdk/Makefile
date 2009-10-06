@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2009/10/06 13:45:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/06 16:26:39 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
-PKGNAME=	openjdk-1.7.0.72.20090924
+PKGNAME=	openjdk7-1.7.0.72.20090924
 CATEGORIES=	lang
 MASTER_SITES=	http://www.java.net/download/openjdk/jdk7/promoted/b72/
 EXTRACT_SUFX=	.zip
@@ -15,6 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+JAVA_NAME=	openjdk7
+JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
+JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
+		policytool rmid rmiregistry servertool tnameserv
 
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
 PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.gz
@@ -110,11 +115,11 @@ ${WRKDIR}/cacerts:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/java/openjdk7
+	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}
 	cd ${BUILDDIR}/j2sdk-image && pax -rwpp .			\
-	  ${DESTDIR}${PREFIX}/java/openjdk7
+	  ${DESTDIR}${JAVA_HOME}/.
 	${INSTALL_DATA} ${WRKDIR}/cacerts				\
-	  ${DESTDIR}${PREFIX}/java/openjdk7/jre/lib/security/cacerts
+	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 
 .include "icedtea-extras.mk"
 
@@ -128,4 +133,5 @@ BUILDLINK_DEPMETHOD.cups?=	build
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
