@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/10/06 18:33:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2009/10/06 18:46:37 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -95,7 +95,7 @@ ${WRKDIR}/stage1-done:
 	touch ${WRKDIR}/stage1-done
 
 # stage 2 rebuilds the JDK using native tools
-${WRKDIR}/stage2-done: #${WRKDIR}/stage1-done
+${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
 	touch ${WRKDIR}/stage2-done
