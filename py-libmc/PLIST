@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/06 09:30:32 fhajny Exp $
+${PYSITELIB}/_pylibmc.so
+${PYSITELIB}/pylibmc.py
+${PYSITELIB}/pylibmc.pyc
+${PYSITELIB}/pylibmc.pyo
