@@ -1,13 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1 2009/09/30 08:15:35 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/10/06 18:33:17 tnn2 Exp $
 
-BUILDLINK_TREE+=	openjdk
+BUILDLINK_TREE+=	openjdk7
 
-.if !defined(OPENJDK_BUILDLINK3_MK)
-OPENJDK_BUILDLINK3_MK:=
+.if !defined(OPENJDK7_BUILDLINK3_MK)
+OPENJDK7_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.openjdk+=	openjdk>=1.7.0.72.20090924
-BUILDLINK_PKGSRCDIR.openjdk?=	../../wip/openjdk
+BUILDLINK_API_DEPENDS.openjdk7+=	openjdk7>=1.7.0.72.20090924
+BUILDLINK_PKGSRCDIR.openjdk7?=		../../wip/openjdk
 
-.endif	# OPENJDK_BUILDLINK3_MK
+.endif	# OPENJDK7_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-openjdk
+BUILDLINK_TREE+=	-openjdk7

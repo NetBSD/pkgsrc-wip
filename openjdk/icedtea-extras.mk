@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.1 2009/10/06 13:32:30 tnn2 Exp $
+# $NetBSD: icedtea-extras.mk,v 1.2 2009/10/06 18:33:17 tnn2 Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
@@ -28,7 +28,7 @@ EXTRACT_ONLY+=			${XERCES_TOOLS_TGZ}
 
 RHINO=				rhino1_7R2
 RHINO_TGZ=			${RHINO}.zip
-SITES.${RHINO}=			${MASTER_SITE_MOZILLA:=js/}
+SITES.${RHINO_TGZ}=		${MASTER_SITE_MOZILLA:=js/}
 DISTFILES+=			${RHINO_TGZ}
 EXTRACT_ONLY+=			${RHINO_TGZ}
 
@@ -60,7 +60,10 @@ ${WRKDIR}/${XERCES}/tools:
 post-extract: apply-icedtea-patches
 .PHONY: apply-icedtea-patches
 apply-icedtea-patches:
-	cd ${WRKSRC} && patch -z orig-icedtea -p1 < ${WRKDIR}/${ICEDTEA}/patches/icedtea-plugin.patch
+	cd ${WRKDIR} && patch -z orig-icedtea < ${WRKDIR}/${ICEDTEA}/patches/icedtea-plugin.patch
+	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-ma
+	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-mb
+	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-mc
 
 ${WRKDIR}/stage3-done: ${WRKDIR}/${ICEDTEA}/IcedTeaPlugin.so
 
