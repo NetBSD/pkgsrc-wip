@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/30 15:04:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/10/06 13:32:30 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk-1.7.0.72.20090924
@@ -20,18 +20,13 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.gz
 PATCH_SITES+=	http://mx1.nygren.pp.se/distfiles/
 
-ANT=		apache-ant-1.7.1-bin.zip
-SITES.${ANT}=	${MASTER_SITE_APACHE:=ant/binaries/}
-DISTFILES+=	${ANT}
-EXTRACT_ONLY+=	${ANT}
-ANT_BIN=	${WRKDIR}/${ANT:S/-bin.zip//}/bin
-PREPEND_PATH+=	${ANT_BIN}
-
-EXTRACT_USING=	gtar
-ICEDTEA=	icedtea-1.8.tar.gz
-SITES.${ICEDTEA}=	http://icedtea.classpath.org/download/source/
-DISTFILES+=	${ICEDTEA}
-EXTRACT_ONLY+=	${ICEDTEA}
+ANT=			apache-ant-1.7.1
+ANT_TGZ=		${ANT}-bin.zip
+SITES.${ANT_TGZ}=	${MASTER_SITE_APACHE:=ant/binaries/}
+DISTFILES+=		${ANT_TGZ}
+EXTRACT_ONLY+=		${ANT_TGZ}
+ANT_BIN=		${WRKDIR}/${ANT}/bin
+PREPEND_PATH+=		${ANT_BIN}
 
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
@@ -69,7 +64,9 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 .include "bootstrap.mk"
-.include "plugs.mk"
+.if defined(TNN)
+.include "icedtea-extras.mk"
+.endif
 
 SUBST_CLASSES+=			add-rpaths
 SUBST_STAGE.add-rpaths=		pre-build
@@ -82,17 +79,12 @@ SUBST_FILES.add-rpaths=		jdk/make/sun/awt/Makefile		\
 				jdk/make/sun/xawt/Makefile
 SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWIN_LIB)|g'
 
-#post-patch:
-#	cd ${WRKSRC} && cp -R ${WRKDIR}/icedtea-1.8/overlays/openjdk/jdk/src/share/classes/com/sun/media/sound jdk/src/share/classes/com/sun/media
-#.for icedtea_patch in sound properties copy-plugs
-#	cd ${WRKSRC} && patch -s -p1 < ${WRKDIR}/icedtea-1.8/patches/icedtea-${icedtea_patch}.patch
-#.endfor
-
 post-extract:
 	chmod +x ${ANT_BIN}/ant
 
-do-build: ${WRKDIR}/stage2-done
+do-build: ${WRKDIR}/stage3-done
 
+# stage 1 builds a native JDK using the bootstrap binaries
 ${WRKDIR}/stage1-done:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	rm -rf ${WRKDIR}/bootstrap
@@ -100,14 +92,19 @@ ${WRKDIR}/stage1-done:
 	rm -rf ${BUILDDIR}
 	touch ${WRKDIR}/stage1-done
 
-${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done ${WRKDIR}/cacerts
+# stage 2 rebuilds the JDK using native tools
+${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	touch ${BUILDDIR}/j2sdk-image/jre/lib/applet/.keep
 	touch ${WRKDIR}/stage2-done
 
+# stage 3 builds third party add-ons
+${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/${ICEDTEA}/IcedTeaPlugin.so ${WRKDIR}/cacerts
+	touch ${WRKDIR}/stage3-done
+
 ${WRKDIR}/cacerts:
 	for cert in ${FILESDIR}/cacerts/*.crt; do			\
-		${ECHO} yes | ${WRKDIR}/bootstrap/bin/keytool		\
+		${ECHO} yes | ${BUILDDIR}/bin/keytool			\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
 		  -alias `${ECHO} $$cert | sed 's,.*/\\([^/]*\\)\\.crt,\\1,'` \
