@@ -1,1 +1,1 @@
-PHP memcached extension based on libmemcached library
+PHP extension for interfacing with memcached via libmemcached library
