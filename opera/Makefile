@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/17 09:20:23 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/06 04:38:25 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}${OPERA_DIST_SEP}${OPERA_DIST_SUFFIX}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -13,7 +13,7 @@ MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
 COMMENT=		Small, fast and customizable WWW client
-#LICENSE=		opera-1000-license
+LICENSE_FILE=		opera-1000-license
 
 EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64
 EMUL_PLATFORMS+=	linux-i386 linux-x86_64 linux-powerpc
