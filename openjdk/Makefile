@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/10/06 18:46:37 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2009/10/06 22:53:49 thomasklausner Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -15,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+# old name of package
+CONFLICTS=	openjdk-[0-9]*
 
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
