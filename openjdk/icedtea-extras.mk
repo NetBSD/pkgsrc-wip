@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.2 2009/10/06 18:33:17 tnn2 Exp $
+# $NetBSD: icedtea-extras.mk,v 1.3 2009/10/07 12:04:45 tnn2 Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
@@ -60,10 +60,10 @@ ${WRKDIR}/${XERCES}/tools:
 post-extract: apply-icedtea-patches
 .PHONY: apply-icedtea-patches
 apply-icedtea-patches:
-	cd ${WRKDIR} && patch -z orig-icedtea < ${WRKDIR}/${ICEDTEA}/patches/icedtea-plugin.patch
-	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-ma
-	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-mb
-	cd ${WRKDIR} && patch -z orig-post-icedtea < ${FILESDIR}/patch-manual-mc
+	cd ${WRKDIR} && patch -z orig-icedtea -p0 < ${WRKDIR}/${ICEDTEA}/patches/icedtea-plugin.patch
+	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-ma
+	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-mb
+	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-mc
 
 ${WRKDIR}/stage3-done: ${WRKDIR}/${ICEDTEA}/IcedTeaPlugin.so
 

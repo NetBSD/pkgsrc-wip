@@ -1,7 +1,7 @@
-$NetBSD: patch-manual-ma,v 1.1 2009/10/06 18:33:17 tnn2 Exp $
+$NetBSD: patch-manual-ma,v 1.2 2009/10/07 12:04:45 tnn2 Exp $
 
 --- openjdk/jdk/src/share/classes/sun/applet/PluginAppletViewer.java.orig2	2009-10-06 16:21:54.000000000 +0200
-+++ openjdk/src/share/classes/sun/applet/PluginAppletViewer.java
++++ openjdk/jdk/src/share/classes/sun/applet/PluginAppletViewer.java
 @@ -44,7 +44,7 @@ import sun.awt.SunToolkit;
  import sun.awt.AppContext;
  import sun.awt.X11.*;
