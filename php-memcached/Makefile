@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.2 2009/10/06 09:16:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/07 10:43:22 fhajny Exp $
 #
 
 MODNAME=		memcached
 PECL_VERSION=		1.0.0
 CATEGORIES+=		devel
+
+MAINTAINER=		filip@joyent.com
+HOMEPAGE=		http://github.com/andreiz/php-memcached
 COMMENT=		PHP extension for interfacing with memcached via libmemcached library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
