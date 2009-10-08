@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3643 2009/10/04 18:53:12 mwdavies Exp $
+# $Id: Makefile,v 1.3644 2009/10/08 19:23:27 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -376,6 +376,7 @@ SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
 SUBDIR+=	esmart
 SUBDIR+=	ethtool
+SUBDIR+=	etoile
 SUBDIR+=	eventlog
 SUBDIR+=	evilvte
 SUBDIR+=	ewl
