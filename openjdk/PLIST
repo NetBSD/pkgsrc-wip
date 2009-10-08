@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/07 12:04:45 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/08 22:03:33 tnn2 Exp $
 bin/openjdk7-jar
 bin/openjdk7-java
 bin/openjdk7-javac
@@ -41,7 +41,6 @@ java/openjdk7/bin/keytool
 java/openjdk7/bin/native2ascii
 java/openjdk7/bin/orbd
 java/openjdk7/bin/pack200
-${PLIST.plugin}java/openjdk7/bin/pluginappletviewer
 java/openjdk7/bin/policytool
 java/openjdk7/bin/rmic
 java/openjdk7/bin/rmid
@@ -325,7 +324,6 @@ java/openjdk7/jre/bin/java
 java/openjdk7/jre/bin/keytool
 java/openjdk7/jre/bin/orbd
 java/openjdk7/jre/bin/pack200
-${PLIST.plugin}java/openjdk7/jre/bin/pluginappletviewer
 java/openjdk7/jre/bin/policytool
 java/openjdk7/jre/bin/rmid
 java/openjdk7/jre/bin/rmiregistry

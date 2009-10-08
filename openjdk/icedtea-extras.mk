@@ -1,30 +1,21 @@
-# $NetBSD: icedtea-extras.mk,v 1.3 2009/10/07 12:04:45 tnn2 Exp $
+# $NetBSD: icedtea-extras.mk,v 1.4 2009/10/08 22:03:33 tnn2 Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
 
-ICEDTEA=			icedtea-1.11
-ICEDTEA_TGZ=			${ICEDTEA}.tar.gz
-SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/download/source/
+DIST_SUBDIR=			openjdk7
+
+ICEDTEA=			icedtea-175529fae103
+ICEDTEA_TGZ=			175529fae103.tar.bz2
+SITES.${ICEDTEA_TGZ}=		http://icedtea.classpath.org/hg/icedtea/archive/
 DISTFILES+=			${ICEDTEA_TGZ}
 EXTRACT_ONLY+=			${ICEDTEA_TGZ}
 
 XALAN=				xalan-j_2_7_1
-XALAN_TGZ=			${XALAN}-src.tar.gz
+XALAN_TGZ=			${XALAN}-bin.zip
 SITES.${XALAN_TGZ}=		${MASTER_SITE_APACHE:=xml/xalan-j/}
 DISTFILES+=			${XALAN_TGZ}
 EXTRACT_ONLY+=			${XALAN_TGZ}
-
-XERCES=				xerces-2_9_1
-XERCES_TGZ=			Xerces-J-src.2.9.1.tar.gz
-SITES.${XERCES_TGZ}=		${MASTER_SITE_APACHE:=xerces/j/source/}
-DISTFILES+=			${XERCES_TGZ}
-EXTRACT_ONLY+=			${XERCES_TGZ}
-
-XERCES_TOOLS_TGZ=		Xerces-J-tools.2.9.1.tar.gz
-SITES.${XERCES_TOOLS_TGZ}=	${MASTER_SITE_APACHE:=xerces/j/source/}
-DISTFILES+=			${XERCES_TOOLS_TGZ}
-EXTRACT_ONLY+=			${XERCES_TOOLS_TGZ}
 
 RHINO=				rhino1_7R2
 RHINO_TGZ=			${RHINO}.zip
@@ -32,45 +23,50 @@ SITES.${RHINO_TGZ}=		${MASTER_SITE_MOZILLA:=js/}
 DISTFILES+=			${RHINO_TGZ}
 EXTRACT_ONLY+=			${RHINO_TGZ}
 
-${WRKDIR}/${XALAN}/build/xalan.jar:
-	cd ${WRKDIR}/xalan-j_2_7_1 && ${SETENV} ${MAKE_ENV} ant
+# fixme: Should depend on devel/apache-ant?
+ANT=				apache-ant-1.7.1
+ANT_TGZ=			${ANT}-bin.zip
+SITES.${ANT_TGZ}=		${MASTER_SITE_APACHE:=ant/binaries/}
+DISTFILES+=			${ANT_TGZ}
+EXTRACT_ONLY+=			${ANT_TGZ}
+ANT_BIN=			${WRKDIR}/${ANT}/bin
+PREPEND_PATH+=			${ANT_BIN}
 
-${WRKDIR}/${XERCES}/build/xercesImpl.jar:
-	cd ${WRKDIR}/xerces-2_9_1 && ${SETENV} ${MAKE_ENV} ant jar
-
-${WRKDIR}/${ICEDTEA}/Makefile: ${WRKDIR}/${XALAN}/build/xalan.jar ${WRKDIR}/${XERCES}/build/xercesImpl.jar
-	cd ${WRKDIR}/${ICEDTEA} && \
-	  ${SETENV} ${CONFIGURE_ENV} ac_cv_path_MD5SUM=${PREFIX}/gmd5sum \
-	  LDFLAGS="${LDFLAGS} -Wl,-R${PREFIX}/lib" \
-	  ${CONFIG_SHELL} ./configure \
-	  --with-jdk-home=${BUILDDIR}/j2sdk-image \
-	  --with-xalan2-jar=${WRKDIR}/${XALAN}/build/xalan.jar \
-	  --with-xalan2-serializer-jar=${WRKDIR}/${XALAN}/build/serializer.jar \
-	  --with-xerces2-jar=${WRKDIR}/${XERCES}/build/xercesImpl.jar \
+ICEDTEA_CONFIGURE_ARGS=	\
+	  --with-xalan2-jar=${WRKDIR}/${XALAN}/xalan.jar \
+	  --with-xalan2-serializer-jar=${WRKDIR}/${XALAN}/serializer.jar \
+	  --with-xerces2-jar=${WRKDIR}/${XALAN}/xercesImpl.jar \
 	  --with-rhino=${WRKDIR}/${RHINO}/js.jar
 
-${WRKDIR}/${ICEDTEA}/IcedTeaPlugin.so: ${WRKDIR}/${ICEDTEA}/Makefile
-	cd ${WRKDIR}/${ICEDTEA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} IcedTeaPlugin.so
+.if defined(ICEDTEA_PACKAGE)
+CONFIGURE_ARGS+=	${ICEDTEA_CONFIGURE_ARGS}
+CONFIGURE_ARGS+=	--with-jdk-home=${PREFIX}/java/openjdk7
+CONFIGURE_ARGS+=	--with-jdk-home=/work/pkgsrc-obj/wip/openjdk/work.mac/bootstrap
 
-post-extract: ${WRKDIR}/${XERCES}/tools
+USE_LANGUAGES=		c c++
+USE_TOOLS+=	gawk pkg-config autoconf automake
+CONFIGURE_ENV+=	ac_cv_path_MD5SUM=/usr/bin/true
 
-${WRKDIR}/${XERCES}/tools:
-	mv ${WRKDIR}/tools ${WRKDIR}/${XERCES}/.
+pre-configure: icedtea-autoconf
+.PHONY: icedtea-autoconf
+icedtea-autoconf:
+	cd ${WRKDIR}/${ICEDTEA} && ${SETENV} ${CONFIGURE_ENV} autoreconf -if
 
-post-extract: apply-icedtea-patches
-.PHONY: apply-icedtea-patches
-apply-icedtea-patches:
-	cd ${WRKDIR} && patch -z orig-icedtea -p0 < ${WRKDIR}/${ICEDTEA}/patches/icedtea-plugin.patch
-	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-ma
-	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-mb
-	cd ${WRKDIR} && patch -z orig-post-icedtea -p0 < ${FILESDIR}/patch-manual-mc
+post-extract: icedtea-post-extract
+.PHONY: icedtea-post-extract
+icedtea-post-extract:
+	chmod +x ${ANT_BIN}/ant
 
-${WRKDIR}/stage3-done: ${WRKDIR}/${ICEDTEA}/IcedTeaPlugin.so
-
-# XXX most of these are probably not needed for the plugin build,
-# but configure needs them
-BUILD_DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
-USE_TOOLS+=	gawk pkg-config
+BUILDLINK_DEPMETHOD.cups?=     build
+.include "../../print/cups/buildlink3.mk"
+.include "../../wip/openjdk/buildlink3.mk"
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXp?=	build
+.include "../../x11/libXp/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libXt/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXtst?=	build
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif

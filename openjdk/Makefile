@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/10/06 22:53:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2009/10/08 22:03:33 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -8,11 +8,10 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
-COMMENT=	Open-source impl. of the Java Platform, Standard Edition
+COMMENT=	Open-source implementation of the Java Platform, Standard Edition
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -27,14 +26,6 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
 PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.gz
 PATCH_SITES+=	http://mx1.nygren.pp.se/distfiles/
-
-ANT=			apache-ant-1.7.1
-ANT_TGZ=		${ANT}-bin.zip
-SITES.${ANT_TGZ}=	${MASTER_SITE_APACHE:=ant/binaries/}
-DISTFILES+=		${ANT_TGZ}
-EXTRACT_ONLY+=		${ANT_TGZ}
-ANT_BIN=		${WRKDIR}/${ANT}/bin
-PREPEND_PATH+=		${ANT_BIN}
 
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
@@ -72,6 +63,7 @@ PLIST_SUBST+=	LOWER_OPSYS=${LOWER_OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 .include "bootstrap.mk"
+.include "icedtea-extras.mk"
 
 SUBST_CLASSES+=			add-rpaths
 SUBST_STAGE.add-rpaths=		pre-build
@@ -86,6 +78,10 @@ SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWI
 
 post-extract:
 	chmod +x ${ANT_BIN}/ant
+	cd ${WRKDIR}/${ICEDTEA}/plugin/icedteanp/java && pax -rw . \
+	  ${WRKSRC}/jdk/src/share/classes
+	cd ${WRKDIR}/${ICEDTEA}/netx && pax -rw . \
+	  ${WRKSRC}/jdk/src/share/classes
 
 do-build: ${WRKDIR}/stage3-done
 
@@ -124,14 +120,14 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/cacerts				\
 	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 
-.include "options.mk"
-
 .include "../../graphics/freetype2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cups?=	build
 .include "../../print/cups/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXp?=	build
 .include "../../x11/libXp/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"

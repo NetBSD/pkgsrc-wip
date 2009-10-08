@@ -1,7 +1,6 @@
 - investigate fontconfig issues (fonts are not displayed properly)
 - Fix netbsd-4 build
 - review patches/*, look for XXX, implement commented out code
-- integrate iced tea support for sound and browser plugin.
-    See http://icedtea.classpath.org/
+- add pulseaudio support
 - Fix Linux build
 - Add support for OtherBSD
