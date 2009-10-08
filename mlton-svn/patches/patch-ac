@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2009/10/08 06:11:13 fulviociriaco Exp $
+
+--- mlton/front-end/Makefile.orig	2009-10-06 21:18:35.000000000 +0200
++++ mlton/front-end/Makefile
+@@ -20,20 +20,20 @@ clean:
+ 
+ ml.lex.sml: ml.lex
+ 	rm -f ml.lex.sml
+-	mllex ml.lex
++	(mllex ml.lex || ml-lex ml.lex)
+ 	chmod -w ml.lex.sml
+ 
+ ml.grm.sig ml.grm.sml: ml.grm
+ 	rm -f ml.grm.*
+-	mlyacc ml.grm
++	(mlyacc ml.grm || ml-yacc ml.grm)
+ 	chmod -w ml.grm.*
+ 
+ mlb.lex.sml: mlb.lex
+ 	rm -f mlb.lex.sml
+-	mllex mlb.lex
++	(mllex mlb.lex || ml-lex mlb.lex)
+ 	chmod -w mlb.lex.sml
+ 
+ mlb.grm.sig mlb.grm.sml: mlb.grm
+ 	rm -f mlb.grm.*
+-	mlyacc mlb.grm
++	(mlyacc mlb.grm || ml-yacc mlb.grm)
+ 	chmod -w mlb.grm.*

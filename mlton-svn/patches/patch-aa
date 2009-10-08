@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2009/10/08 06:11:13 fulviociriaco Exp $
+
+--- Makefile.orig	2009-10-06 20:56:09.000000000 +0200
++++ Makefile
+@@ -292,8 +292,8 @@ version:
+ # The TBIN and TLIB are where the files are going to be after installing.
+ # The DESTDIR and is added onto them to indicate where the Makefile actually
+ # puts them.
+-DESTDIR := $(CURDIR)/install
+-PREFIX := /usr
++#DESTDIR := $(CURDIR)/install
++#PREFIX := /usr
+ ifeq ($(findstring $(TARGET_OS), darwin freebsd solaris), $(TARGET_OS))
+ PREFIX := /usr/local
+ endif
+@@ -331,11 +331,11 @@ MAN_PAGES :=  \
+ install-no-docs:
+ 	mkdir -p "$(TLIB)" "$(TBIN)" "$(TMAN)"
+ 	$(CP) "$(LIB)/." "$(TLIB)/"
+-	sed "/^lib=/s;.*;lib='$(prefix)/$(ULIB)';"			\
++	sed "/^lib=/s;.*;lib='$(DESTDIR)$(prefix)/$(ULIB)';"			\
+ 		<"$(BIN)/mlton" >"$(TBIN)/mlton"
+ 	chmod a+x "$(TBIN)/mlton"
+ 	if [ -x "$(BIN)/mlton.trace" ]; then                            \
+-		sed "/^lib=/s;.*;lib='$(prefix)/$(ULIB)';"		\
++		sed "/^lib=/s;.*;lib='$(DESTDIR)$(prefix)/$(ULIB)';"		\
+ 			<"$(BIN)/mlton.trace" >"$(TBIN)/mlton.trace";   \
+ 		chmod a+x "$(TBIN)/mlton.trace";                        \
+ 	fi
