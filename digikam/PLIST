@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/08/31 21:20:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/08 18:50:02 thomasklausner Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -102,6 +102,7 @@ lib/kde4/kio_digikamalbums.so
 lib/kde4/kio_digikamdates.so
 lib/kde4/kio_digikamsearch.so
 lib/kde4/kio_digikamtags.so
+lib/kde4/plugins/marble/ExternalDraw.so
 lib/libdigikamcore.so
 lib/libdigikamcore.so.1
 lib/libdigikamcore.so.1.0.0

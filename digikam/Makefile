@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/10/02 22:44:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2009/10/08 18:50:02 thomasklausner Exp $
 #
 
-DISTNAME=	digikam-1.0.0-beta4
+DISTNAME=	digikam-1.0.0-beta5
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
