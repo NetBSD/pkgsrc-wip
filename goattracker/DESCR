@@ -1,0 +1,11 @@
+This is a crossplatform C64 music editor. Supports output via Dag Lem's reSID
+engine, the HardSID 4U USB device & HardSID soundcards or CatWeasel MK3.
+
+From V2.0 onwards the editor includes more powerful step-programming (wave/
+arpeggio, pulse and filter), 63 instruments, more instrument parameters &
+pattern commands. May be less userfriendly than V1.xx, but you can import
+V1.xx songs and instruments to see how the corresponding V2 features work.
+Rastertime usage has stayed about the same. Also available in stereo.
+
+V2.68 adds Antti Lankila's improved reSID distortion code. See /I command
+line option.

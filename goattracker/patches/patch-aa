@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/09 11:14:03 rodo6510 Exp $
+
+--- makefile.common	2009-01-03 00:22:58.000000000 +0100
++++ /home/nikon/devel/makefile.common	2009-10-06 21:19:23.000000000 +0200
+@@ -1,17 +1,19 @@
+ # common makefile directives for linux and win32 build
+-
+ CC=gcc
+ CXX=g++
+-CFLAGS+=-O3 -Wall -Ibme -Iasm
++CFLAGS=-O3 -Wall -Ibme -Iasm -I/usr/pkg/include -D_GNU_SOURCE=1 -D_REENTRANT -D_THREAD_SAFE
+ CXXFLAGS=$(CFLAGS)
++LIBS=`sdl-config --libs`
++PREFIX=../linux/
++SUFFIX=
++
++EXE=	$(PREFIX)goattrk2 $(SUFFIX) \
++	$(PREFIX)ins2snd2 $(SUFFIX) \
++	$(PREFIX)sngspli2 $(SUFFIX) \
++	$(PREFIX)betaconv $(SUFFIX) \
++	$(PREFIX)mod2sng $(SUFFIX) 
+ 
+-EXE=	$(PREFIX)goattrk2$(SUFFIX) \
+-	$(PREFIX)ins2snd2$(SUFFIX) \
+-	$(PREFIX)sngspli2$(SUFFIX) \
+-	$(PREFIX)betaconv$(SUFFIX) \
+-	$(PREFIX)mod2sng$(SUFFIX)
+-
+-all: $(EXE)
++all: dat2inc datafile $(EXE)
+ 
+ $(PREFIX)goattrk2$(SUFFIX): goatdata.o goattrk2.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
+ gfile.o greloc.o ghelp.o gsound.o gconsole.o gsid.o \
+@@ -43,11 +45,21 @@ $(PREFIX)betaconv$(SUFFIX): betaconv.o b
+ 	gcc -o $@ $^
+ 	strip $@
+ 
++datafile: bme/datafile.c bme/bme_end.c
++	gcc -o datafile bme/datafile.c bme/bme_end.c $(CFLAGS) 
++	strip datafile 
++
++dat2inc: bme/dat2inc.c
++	gcc -o dat2inc bme/dat2inc.c 
++	strip dat2inc
++
++
++
+ goattrk2.dat: player.s altplayer.s chargen.bin palette.bin cursor.bin goattrk2.bmp goattrk2.seq
+-	datafile $@ goattrk2.seq
++	./datafile $@ goattrk2.seq
+ 
+ goatdata.c: goattrk2.dat
+-	dat2inc $< $@
++	./dat2inc ./goattrk2.dat $@
+ 
+ clean:
+ 	$(RM) *.o *~

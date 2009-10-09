@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/09 11:14:03 rodo6510 Exp $
+
+SHA1 (goattrk2.zip) = f6dcadf24b3e605d6f1597c2ebeb8d73f561d4d1
+RMD160 (goattrk2.zip) = 9259d3f93eb4472e5ec12da5b40e48bb67dbdbd6
+Size (goattrk2.zip) = 1052957 bytes
+SHA1 (patch-aa) = 3b17aac0bbf565763f826a2caf512f9b5692b32c
