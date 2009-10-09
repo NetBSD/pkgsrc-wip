@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/09 06:31:56 thomasklausner Exp $
 #
 
-DISTNAME=		activation-1.0
-PKGNAME=		java-gnujaf-1.0
+DISTNAME=		activation-1.1.1
+PKGNAME=		java-gnujaf-1.1.1
 CATEGORIES=		textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/classpathx/
 
@@ -13,6 +13,7 @@ COMMENT=		GNU Java Activation Framework
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+MAKE_JOBS_SAFE=		no
 
-.include "../../mk/java-env.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/17 15:42:29 poppnk Exp $
---- Makefile.in.orig	2004-07-17 16:33:45.000000000 +0000
-+++ Makefile.in	2004-07-17 16:34:04.000000000 +0000
-@@ -371,7 +371,7 @@
- activation: $(classes)
+$NetBSD: patch-aa,v 1.2 2009/10/09 06:31:56 thomasklausner Exp $
+--- Makefile.in.orig	2006-05-13 11:50:11.000000000 +0200
++++ Makefile.in
+@@ -465,7 +465,7 @@ $(dst):
+ 	mkdir -p $@
  
  $(classes): $(dst)/%.class: $(src)/%.java
 -	$(JAVAC) $(JAVACFLAGS) -classpath $(ACTIVATION_CLASSPATH) -d $(dst) $<
