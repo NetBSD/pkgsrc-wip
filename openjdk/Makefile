@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/10/08 22:03:33 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2009/10/09 20:24:14 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -75,6 +75,11 @@ SUBST_FILES.add-rpaths=		jdk/make/sun/awt/Makefile		\
 				jdk/make/sun/splashscreen/Makefile	\
 				jdk/make/sun/xawt/Makefile
 SUBST_SED.add-rpaths=		-e 's|-L$$(OPENWIN_LIB)|-L$$(OPENWIN_LIB) -Wl,-R$$(OPENWIN_LIB)|g'
+
+PLIST_VARS+=	i386
+.if ${MACHINE_ARCH} == "i386"
+PLIST.i386=	yes
+.endif
 
 post-extract:
 	chmod +x ${ANT_BIN}/ant
