@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/16 15:38:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/10/09 06:16:01 thomasklausner Exp $
 #
 
 PKGNAME=	i3-3b
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=		docbook-xml-[0-9]*:../../textproc/docbook-xml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 INSTALLATION_DIRS=${PKG_SYSCONFDIR}/i3 ${PKGMANDIR}/man1
 CONF_FILES=${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/i3/config
