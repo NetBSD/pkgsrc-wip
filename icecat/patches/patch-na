@@ -1,4 +1,4 @@
-$NetBSD: patch-na,v 1.1 2009/09/11 14:01:19 yhardy Exp $
+$NetBSD: patch-na,v 1.2 2009/10/10 14:15:29 tnn2 Exp $
 
 # reported upstream as:
 #   https://bugzilla.mozilla.org/show_bug.cgi?id=512802
