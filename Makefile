@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3646 2009/10/09 11:20:58 rodo6510 Exp $
+# $Id: Makefile,v 1.3647 2009/10/10 13:34:08 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1296,6 +1296,7 @@ SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opendchub
 SUBDIR+=	opendnssec
+SUBDIR+=	openfst
 SUBDIR+=	openjdk
 SUBDIR+=	openjdk7-icedtea-plugin
 SUBDIR+=	openlogos
