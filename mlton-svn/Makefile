@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/10/08 06:11:12 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/10 19:53:28 fulviociriaco Exp $
 
 DISTNAME= mlton
 PKGNAME= mlton-svn
@@ -13,24 +13,22 @@ LICENSE= modified-bsd
 
 USE_TOOLS+= gmake
 
-.if !defined(mlton_boot)
+.if (!defined(mlton_boot) ||  ${mlton_boot} == mlton ) 
 BUILD_TARGET= all
-BUILD_DEPENDS+=  mlton*:../../wip/mlton-svn
-.elif ${mlton_boot} == mlton
-BUILD_TARGET= all
-BUILD_DEPENDS+=  mlton*:../../wip/mlton-svn
+BUILD_DEPENDS+=  mlton>=svnnb20091009*:../../wip/mlton-svn
+.include "../../wip/mlton-svn/buildlink3.mk"
 .elif ${mlton_boot} == smlnj
 BUILD_TARGET=smlnj-mlton all
 BUILD_DEPENDS+=  smlnj*:../../lang/smlnj
+.else
+	error
 .endif
-
 INSTALL_TARGET= install
 
 SVN_REPOSITORIES= mlton
 SVN_ROOT.mlton= svn://mlton.org/mlton/trunk
 WRKSRC= ${WRKDIR}/mlton
 
-#.include "options.mk"
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
