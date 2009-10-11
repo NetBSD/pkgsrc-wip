@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/11 10:44:57 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/10/11 11:18:15 thomasklausner Exp $
 bin/monkey-bubble
 bin/monkey-srv
 share/applications/monkey-bubble.desktop
@@ -178,8 +178,3 @@ share/monkey-bubble/sounds/stick.wav
 share/omf/monkey-bubble/monkey-bubble-C.omf
 share/omf/monkey-bubble/monkey-bubble-fr.omf
 share/pixmaps/monkey-bubble-icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in rarian: @dirrm share/omf
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

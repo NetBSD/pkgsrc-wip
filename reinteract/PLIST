@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:15 thomasklausner Exp $
 bin/reinteract
 ${PYSITELIB}/reinteract/__init__.py
 ${PYSITELIB}/reinteract/__init__.pyc
@@ -162,5 +162,3 @@ share/reinteract/examples/index.rnb
 share/reinteract/examples/play.rws
 share/reinteract/examples/plot.rws
 share/reinteract/examples/plot2.rws
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in xdg-dirs: @dirrm share/applications

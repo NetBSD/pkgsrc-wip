@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:13 thomasklausner Exp $
 bin/gdmap
 man/man1/gdmap.1
 share/applications/gdmap.desktop
@@ -11,5 +11,3 @@ share/locale/hr/LC_MESSAGES/GdMap.mo
 share/locale/ru/LC_MESSAGES/GdMap.mo
 share/locale/tr/LC_MESSAGES/GdMap.mo
 share/pixmaps/gdmap_icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

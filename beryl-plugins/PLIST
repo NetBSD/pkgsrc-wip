@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/25 07:07:57 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 11:18:12 thomasklausner Exp $
 lib/beryl/lib3d.la
 lib/beryl/libanimation.la
 lib/beryl/libannotate.la
@@ -57,9 +57,3 @@ share/locale/sv_SE/LC_MESSAGES/beryl-plugins.mo
 share/locale/zh_CN/LC_MESSAGES/beryl-plugins.mo
 share/locale/zh_HK/LC_MESSAGES/beryl-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/beryl-plugins.mo
-@comment dirrm share/locale/sv_FI/LC_MESSAGES
-@comment share/locale/nb_NO/LC_MESSAGES
-@comment share/locale/it_IT/LC_MESSAGES
-@comment share/locale/hu_HU/LC_MESSAGES
-@comment need to manage this: dirrm share/beryl
-@comment need to manage this: dirrm lib/beryl

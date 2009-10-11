@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:12 thomasklausner Exp $
 bin/arista-gtk
 bin/arista-transcode
 ${PYSITELIB}/arista/__init__.py
@@ -46,4 +46,3 @@ share/arista/ui/icon.svg
 share/arista/ui/logo.svg
 share/arista/ui/main.ui
 share/arista/ui/prefs.ui
-@comment in xdg-dirs: @dirrm share/applications

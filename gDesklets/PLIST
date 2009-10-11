@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 11:18:13 thomasklausner Exp $
 bin/gdesklets
 bin/gdesklets-display-thumbnailer
 lib/pkgconfig/gdesklets-core.pc
@@ -117,9 +117,4 @@ share/icons/gnome/48x48/mimetypes/x-gdesklets-display.png
 share/mime-info/gdesklets.keys
 share/mime-info/gdesklets.mime
 share/pixmaps/gdesklets.png
-@comment in gnome-dirs: @dirrm share/mime-info
-@comment @dirrm share/icons/gnome/48x48/mimetypes
-@exec ${MKDIR} %D/share/gdesklets/Displays
-@comment in GConf2: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in gnome2-dirs: @dirrm share/application-registry
+@pkgdir share/gdesklets/Displays

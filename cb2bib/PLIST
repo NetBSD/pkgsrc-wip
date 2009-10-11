@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:12 thomasklausner Exp $
 bin/cb2bib
 share/applications/cb2bib.desktop
 share/cb2bib/AUTHORS
@@ -16,5 +16,3 @@ share/cb2bib/testPDFImport/nomeaning2.pdf
 share/cb2bib/testPDFImport/nomeaning3.pdf
 share/cb2bib/testPDFImport/nomeaning4.pdf
 share/pixmaps/cb2bib.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

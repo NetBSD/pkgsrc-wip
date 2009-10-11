@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:14 thomasklausner Exp $
 bin/gpicview
 share/applications/gpicview.desktop
 share/gpicview/pixmaps/clockwise.png
@@ -22,5 +22,3 @@ share/locale/sk/LC_MESSAGES/gpicview.mo
 share/locale/zh_CN/LC_MESSAGES/gpicview.mo
 share/locale/zh_TW/LC_MESSAGES/gpicview.mo
 share/pixmaps/gpicview.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

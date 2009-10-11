@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:12 thomasklausner Exp $
 share/GNUstep/Local/Applications/Terminal.app/Resources/DefaultTerminalServices.svcs
 share/GNUstep/Local/Applications/Terminal.app/Resources/English.lproj/Localizable.strings
 share/GNUstep/Local/Applications/Terminal.app/Resources/French.lproj/Localizable.strings
@@ -18,4 +18,3 @@ share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_line.tiff
 share/GNUstep/Local/Applications/Terminal.app/Resources/cursor_stroked.tiff
 share/GNUstep/Local/Applications/Terminal.app/Terminal
 share/GNUstep/Local/Applications/Terminal.app/stamp.make
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications

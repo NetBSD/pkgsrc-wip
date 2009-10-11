@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:15 thomasklausner Exp $
 bin/rosegarden
 bin/rosegardensequencer
 lib/libRosegardenSequencer.la
@@ -1095,10 +1095,3 @@ share/locale/en_GB/LC_MESSAGES/rosegarden.mo
 share/locale/es/LC_MESSAGES/rosegarden.mo
 share/locale/fr/LC_MESSAGES/rosegarden.mo
 share/locale/ru/LC_MESSAGES/rosegarden.mo
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/icons/hicolor/32x32/apps
-@comment in kde: @dirrm share/icons/hicolor/16x16/apps
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Applications
-@comment in kde: @dirrm share/doc/kde/HTML/en

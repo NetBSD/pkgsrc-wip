@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/23 01:46:22 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 11:18:14 thomasklausner Exp $
 bin/guitone
 share/pixmaps/guitone.png
-@comment in xdg-dirs: @dirrm share/pixmaps

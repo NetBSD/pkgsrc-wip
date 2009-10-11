@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:12 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:15 thomasklausner Exp $
 include/wx-2.8/wx/wxPython/i_files/__init__.py
 include/wx-2.8/wx/wxPython/i_files/_about.i
 include/wx-2.8/wx/wxPython/i_files/_accel.i
@@ -1721,5 +1721,3 @@ ${PYSITELIB}/wxaddons/sized_controls.pyo
 ${PYSITELIB}/wxversion.py
 ${PYSITELIB}/wxversion.pyc
 ${PYSITELIB}/wxversion.pyo
-@comment in wxGTK: @dirrm include/wx-2.8/wx
-@comment in wxGTK: @dirrm include/wx-2.8

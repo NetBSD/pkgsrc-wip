@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:58 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:15 thomasklausner Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/README
 share/mplayer/DOCS/de/bugreports.html
@@ -249,4 +249,3 @@ share/mplayer/DOCS/zh/users_against_developers.html
 share/mplayer/DOCS/zh/video.html
 share/mplayer/codecs.conf
 share/mplayer/input.conf
-@comment in mplayer-fonts: @dirrm share/mplayer

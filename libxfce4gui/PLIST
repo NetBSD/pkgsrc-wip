@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/10/11 10:44:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/10/11 11:18:15 thomasklausner Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -137,9 +137,3 @@ share/locale/uk/LC_MESSAGES/libxfcegui4.mo
 share/locale/ur/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_CN/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_TW/LC_MESSAGES/libxfcegui4.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in libglade: @dirrm lib/libglade/2.0

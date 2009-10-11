@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:16 thomasklausner Exp $
 bin/zapping
 bin/zapping_remote
 lib/zapping/plugins/libalirc.zapping.la
@@ -48,8 +48,3 @@ share/pixmaps/zapping/vt_loading2.jpeg
 share/zapping/mpeg_properties.glade2
 share/zapping/screenshot.glade2
 share/zapping/zapping.glade2
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in scrollkeeper: @dirrm share/omf
-@comment in gnome-dirs: @dirrm share/gnome/help
-@comment in GConf2: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

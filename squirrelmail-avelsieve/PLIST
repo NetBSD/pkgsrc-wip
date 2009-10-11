@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:19 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:15 thomasklausner Exp $
 share/squirrelmail/plugins/avelsieve/addrule.php
 share/squirrelmail/plugins/avelsieve/addspamrule.php
 share/squirrelmail/plugins/avelsieve/config/config_sample.php
@@ -133,4 +133,3 @@ share/squirrelmail/plugins/avelsieve/po/xgetpo
 share/squirrelmail/plugins/avelsieve/setup.php
 share/squirrelmail/plugins/avelsieve/table.php
 share/squirrelmail/plugins/avelsieve/version
-@comment cleaning up after ourselves

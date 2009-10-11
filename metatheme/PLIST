@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 11:18:15 thomasklausner Exp $
 bin/metatheme-edit
 bin/metatheme_selector_capplet
 include/mtm/mtm-config-gui.h
@@ -56,6 +56,3 @@ share/mime-info/metatheme.mime
 share/pixmaps/32_butteflylogo.png
 share/pixmaps/gnome-application-x-metatheme.png
 share/pixmaps/settings.png
-@comment in gnome2-control-center: @dirrm share/mime-info
-@comment in gnome2-control-center: @dirrm share/control-center-2.0/capplets
-@comment in xdg-dirs: @dirrm share/applications

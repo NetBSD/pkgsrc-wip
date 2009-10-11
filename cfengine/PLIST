@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:31 thomasklausner Exp $
-@comment $Id: PLIST,v 1.5 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:12 thomasklausner Exp $
 man/man8/cfagent.8
 man/man8/cfengine.8
 man/man8/cfenvd.8

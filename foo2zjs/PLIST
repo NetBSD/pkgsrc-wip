@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:36 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:13 thomasklausner Exp $
 bin/arm2hpdl
 bin/foo2hp
 bin/foo2hp2600-wrapper
@@ -109,5 +109,3 @@ share/foomatic/ppd/foo2zjs/Samsung-CLX-2160.ppd.gz
 share/foomatic/ppd/foo2zjs/Samsung-CLX-3160.ppd.gz
 share/foomatic/ppd/foo2zjs/Xerox-Phaser-6110.ppd.gz
 share/foomatic/ppd/foo2zjs/Xerox-Phaser-6115MFP.ppd.gz
-@comment share/foomatic/ppd
-@comment share/cups/model

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/27 17:43:01 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 11:18:16 thomasklausner Exp $
 libexec/xfce4/panel-plugins/xfce4-mailwatch-plugin
 share/icons/hicolor/48x48/apps/xfce-newmail.png
 share/icons/hicolor/48x48/apps/xfce-nomail.png
@@ -31,6 +31,3 @@ share/xfce4/doc/C/images/mailwatch-pop3-settings.png
 share/xfce4/doc/C/images/mailwatch-properties.png
 share/xfce4/doc/C/xfce4-mailwatch-plugin.html
 share/xfce4/panel-plugins/mailwatch.desktop
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor

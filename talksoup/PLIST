@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:15 thomasklausner Exp $
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/Defaults.plist
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/TalkSoup.desktop
@@ -163,4 +163,3 @@ share/GNUstep/Local/Library/Headers/TalkSoupBundles
 share/GNUstep/Local/Library/Libraries/libTalkSoupBundles.so
 share/GNUstep/Local/Library/Libraries/libTalkSoupBundles.so.0.0.1
 share/GNUstep/Local/Tools/TalkSoup
-@comment in devel/gnustep-make: @dirrm share/GNUstep

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:32 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:13 thomasklausner Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz.h
@@ -90,5 +90,3 @@ share/locale/xh/LC_MESSAGES/compiz.mo
 share/locale/zh_CN/LC_MESSAGES/compiz.mo
 share/locale/zh_TW/LC_MESSAGES/compiz.mo
 share/locale/zu/LC_MESSAGES/compiz.mo
-@comment @dirrm share/gnome/wm-properties
-@comment in GConf2: @dirrm share/gconf/schemas

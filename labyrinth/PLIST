@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:51 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:14 thomasklausner Exp $
 bin/labyrinth
 ${PYSITELIB}/labyrinth/BaseThought.py
 ${PYSITELIB}/labyrinth/BaseThought.pyc
@@ -71,8 +71,3 @@ share/locale/pt_BR/LC_MESSAGES/labyrinth.mo
 share/locale/pt_PT/LC_MESSAGES/labyrinth.mo
 share/locale/ru/LC_MESSAGES/labyrinth.mo
 share/locale/sv/LC_MESSAGES/labyrinth.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in xdg-dirs: @dirrm share/applications

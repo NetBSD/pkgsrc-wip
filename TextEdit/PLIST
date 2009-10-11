@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:12 thomasklausner Exp $
 share/GNUstep/Local/Applications/TextEdit.app/Resources/Edit.tiff
 share/GNUstep/Local/Applications/TextEdit.app/Resources/EditTitle.tiff
 share/GNUstep/Local/Applications/TextEdit.app/Resources/Encodings.txt
@@ -26,4 +26,3 @@ share/GNUstep/Local/Applications/TextEdit.app/Resources/text.tiff
 share/GNUstep/Local/Applications/TextEdit.app/TextEdit
 share/GNUstep/Local/Applications/TextEdit.app/stamp.make
 share/GNUstep/Local/Tools/TextEdit
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:45:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/11 11:18:16 thomasklausner Exp $
 bin/xspd
 sbin/xhtmlpp
 @comment etc/xspd/xspd.conf
@@ -79,4 +79,3 @@ share/xspd/utils/xspStuffEncode
 share/xspd/xspanalyze
 share/xspd/xspdAdmin.xsp
 share/xspd/xspfwd
-@comment @dirrm etc/xspd

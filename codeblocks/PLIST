@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:13 thomasklausner Exp $
 bin/cb_console_runner
 bin/cb_share_config
 bin/codeblocks
@@ -664,7 +664,3 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-codeblocks-workspace.
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-codeblocks.png
 share/mime/packages/codeblocks.xml
 share/pixmaps/codeblocks.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/icons
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:59 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:15 thomasklausner Exp $
 bin/navigatrix
 include/giscoordinate.h
 include/gisdegrees.h
@@ -14,10 +14,3 @@ share/icons/hicolor/32x32/actions/track.png
 share/icons/hicolor/48x48/actions/track.png
 share/kde/applnk/Applications/navigatrix.desktop
 share/kde/apps/navigatrix/navigatrixui.rc
-@comment dirrm share/icons/hicolor/48x48/actions
-@comment dirrm share/icons/hicolor/32x32/actions
-@comment dirrm share/icons/hicolor/22x22/actions
-@comment dirrm share/icons/hicolor/16x16/apps
-@comment dirrm share/icons/hicolor/16x16/actions
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Applications

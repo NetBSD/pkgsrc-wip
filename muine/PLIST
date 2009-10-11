@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:58 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 11:18:15 thomasklausner Exp $
 bin/muine
 lib/muine/libmuine.la
 lib/muine/muine-dbus.dll
@@ -67,21 +67,3 @@ share/locale/tr/LC_MESSAGES/muine.mo
 share/locale/uk/LC_MESSAGES/muine.mo
 share/locale/vi/LC_MESSAGES/muine.mo
 share/locale/zh_CN/LC_MESSAGES/muine.mo
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in xdg-dirs: @dirrm share/applications

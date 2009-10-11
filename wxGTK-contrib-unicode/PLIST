@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:16 thomasklausner Exp $
 include/wx-2.8/wx/fl/antiflickpl.h
 include/wx-2.8/wx/fl/bardragpl.h
 include/wx-2.8/wx/fl/barhintspl.h
@@ -58,5 +58,3 @@ lib/libwx_gtk2u_ogl-2.8.la
 lib/libwx_gtk2u_plot-2.8.la
 lib/libwx_gtk2u_stc-2.8.la
 lib/libwx_gtk2u_svg-2.8.la
-@comment in wxGTK: @dirrm include/wx-2.8/wx
-@comment in wxGTK: @dirrm include/wx-2.8

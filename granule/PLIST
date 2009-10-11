@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 11:18:14 thomasklausner Exp $
 bin/granule
 share/applications/granule.desktop
 share/granule/pixmaps/cardview_32x32.png
@@ -60,5 +60,3 @@ ${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/granule.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/granule.mo
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/pixmaps

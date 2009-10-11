@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:16 thomasklausner Exp $
 bin/yakuake
 share/applications/kde4/yakuake.desktop
 share/locale/ca/LC_MESSAGES/yakuake.mo
@@ -114,5 +114,3 @@ share/kde/apps/yakuake/skins/plastik_dark/title/quit_down.png
 share/kde/apps/yakuake/skins/plastik_dark/title/quit_over.png
 share/kde/apps/yakuake/skins/plastik_dark/title/quit_up.png
 share/kde/apps/yakuake/skins/plastik_dark/title/right.png
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/applications/kde4

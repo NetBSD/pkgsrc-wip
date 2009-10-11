@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/10/11 10:45:17 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/10/11 11:18:15 thomasklausner Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
@@ -81,5 +81,3 @@ share/scite/vb.properties
 share/scite/verilog.properties
 share/scite/vhdl.properties
 share/scite/yaml.properties
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

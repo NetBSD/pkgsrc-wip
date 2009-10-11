@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:14 thomasklausner Exp $
 bin/gnomebaker
 share/applications/gnomebaker.desktop
 share/gnome/help/gnomebaker/C/figures/gnomebaker-blank-cdrw.png
@@ -46,10 +46,3 @@ share/gnomebaker/state12.png
 share/gnomebaker/state13.png
 share/icons/hicolor/48x48/apps/gnomebaker-48.png
 share/omf/gnomebaker/gnomebaker-C.omf
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in xdg-dirs: @dirrm share/applications

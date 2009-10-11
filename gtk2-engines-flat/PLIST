@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 11:18:14 thomasklausner Exp $
 lib/gtk-${PKGVERSION}/2.10.0/engines/libflat.la
 share/themes/Flat/ICON.png
 share/themes/Flat/README.html
 share/themes/Flat/gtk-${PKGVERSION}/gtkrc
-@comment in xdg-dirs: @dirrm share/themes
-@comment in gtk2: @dirrm lib/gtk-${PKGVERSION}/2.10.0/engines

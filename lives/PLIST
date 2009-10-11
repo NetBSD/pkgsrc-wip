@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:55 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:15 thomasklausner Exp $
 bin/autolives.pl
 bin/avi_encoder.py
 bin/build-lives-rfx-plugin
@@ -236,5 +236,3 @@ share/locale/pt_BR/LC_MESSAGES/lives.mo
 share/locale/ru/LC_MESSAGES/lives.mo
 share/locale/tr/LC_MESSAGES/lives.mo
 share/pixmaps/lives.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

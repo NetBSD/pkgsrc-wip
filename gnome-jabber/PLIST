@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:13 thomasklausner Exp $
 bin/gnome-jabber
 lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.4.0/engines/libhcengine.la
@@ -63,4 +63,3 @@ share/locale/ru/LC_MESSAGES/gnome-jabber.mo
 share/locale/sr/LC_MESSAGES/gnome-jabber.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-jabber.mo
 share/locale/sv/LC_MESSAGES/gnome-jabber.mo
-@comment in GConf2: @dirrm share/gconf/schemas

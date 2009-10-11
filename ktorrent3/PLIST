@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 11:18:14 thomasklausner Exp $
 bin/ktorrent
 bin/ktupnptest
 include/libbtcore/bcodec/bdecoder.h
@@ -547,37 +547,3 @@ share/locale/sv/LC_MESSAGES/ktorrent.mo
 share/locale/uk/LC_MESSAGES/ktorrent.mo
 share/locale/zh_CN/LC_MESSAGES/ktorrent.mo
 share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
-@comment in kde: @dirrm share/kde4/servicetypes
-@comment in kde: @dirrm share/kde4/services
-@comment in kde: @dirrm share/kde4
-@comment in kde: @dirrm share/kde/apps/cmake/modules
-@comment in kde: @dirrm share/kde/apps/cmake
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/places
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in kde: @dirrm share/applications/kde4
-@comment in xdg-dirs: @dirrm share/applications
-@comment in kde: @dirrm lib/kde4

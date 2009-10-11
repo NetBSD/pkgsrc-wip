@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:14 thomasklausner Exp $
 bin/graveman
 man/fr/man1/graveman.1
 man/man1/graveman.1
@@ -190,5 +190,3 @@ share/locale/pt_BR/LC_MESSAGES/graveman.mo
 share/locale/ru/LC_MESSAGES/graveman.mo
 share/locale/sv/LC_MESSAGES/graveman.mo
 share/pixmaps/graveman${PKGVERSION}8.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

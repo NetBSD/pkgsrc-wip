@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 11:18:14 thomasklausner Exp $
 bin/gnomeradio
 etc/gconf/gconf.xml.defaults/apps/gnomeradio/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnomeradio/presets/%gconf.xml
@@ -122,4 +122,3 @@ var/scrollkeeper/zh_CN/scrollkeeper_cl.xml
 var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml
 var/scrollkeeper/zh_TW/scrollkeeper_cl.xml
 var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml
-@comment in GConf2: @dirrm share/gconf/schemas

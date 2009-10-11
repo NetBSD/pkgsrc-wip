@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/11 11:18:13 thomasklausner Exp $
 bin/bg5+latex
 bin/bg5conv
 bin/bg5latex
@@ -289,6 +289,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90enc.def
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90gar.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/c90nrsr.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/CJK/thai/thaicjk.ldf
-@comment In teTeX-bin: ${PKG_LOCALTEXMFPREFIX}/web2c/texmf.cnf
-@comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/hyphen
-@comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/babel

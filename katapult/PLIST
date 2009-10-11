@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:14 thomasklausner Exp $
 bin/katapult
 lib/kde3/katapult_amarokcatalog.la
 lib/kde3/katapult_bookmarkcatalog.la
@@ -70,20 +70,3 @@ share/locale/sk/LC_MESSAGES/katapult.mo
 share/locale/sv/LC_MESSAGES/katapult.mo
 share/locale/tr/LC_MESSAGES/katapult.mo
 share/locale/uk/LC_MESSAGES/katapult.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/icons/crystalsvg/128x128/actions
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

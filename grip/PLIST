@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:14 thomasklausner Exp $
 bin/grip
 share/applications/grip.desktop
 share/gnome/help/grip/C/cdconfig.png
@@ -64,6 +64,3 @@ share/locale/zh_CN/LC_MESSAGES/grip-2.2.mo
 share/locale/zh_HK/LC_MESSAGES/grip-2.2.mo
 share/locale/zh_TW/LC_MESSAGES/grip-2.2.mo
 share/pixmaps/gripicon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in xdg-dirs: @dirrm share/applications

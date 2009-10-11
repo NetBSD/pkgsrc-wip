@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:20 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:15 thomasklausner Exp $
 bin/tagtool
 share/applications/tagtool.desktop
 share/icons/hicolor/48x48/apps/TagTool.png
@@ -35,7 +35,3 @@ share/tagtool/tab_rename.png
 share/tagtool/tab_tag.png
 share/tagtool/tagtool.glade
 share/tagtool/warn.png
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications

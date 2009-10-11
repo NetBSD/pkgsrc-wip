@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:13 thomasklausner Exp $
 bin/gimmie
 lib/bonobo/servers/GNOME_GimmieApplet.server
 ${PYSITELIB}/gimmie/W3CDate.py
@@ -128,17 +128,3 @@ share/locale/sv/LC_MESSAGES/gimmie.mo
 share/locale/vi/LC_MESSAGES/gimmie.mo
 share/locale/zh_CN/LC_MESSAGES/gimmie.mo
 share/pixmaps/gimmie.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in gnome2-dirs: @dirrm share/gnome-2.0
-@comment in GConf: @dirrm share/gconf/schemas

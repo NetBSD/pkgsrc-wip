@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:29 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:12 thomasklausner Exp $
 bin/beryl
 include/beryl/beryl-decoration.h
 include/beryl/beryl-settings-backend.h
@@ -115,9 +115,3 @@ share/locale/uk_UA/LC_MESSAGES/beryl-core.mo
 share/locale/zh_CN/LC_MESSAGES/beryl-core.mo
 share/locale/zh_HK/LC_MESSAGES/beryl-core.mo
 share/locale/zh_TW/LC_MESSAGES/beryl-core.mo
-@comment these belong to libiconv: 	share/locale/uk_UA/LC_MESSAGES
-@comment 				share/locale/uk_UA
-@comment 				share/locale/sv_FI/LC_MESSAGES
-@comment 				share/locale/sv_FI
-@comment 				share/locale/hu_HU/LC_MESSAGES
-@comment 				share/locale/hu_HU

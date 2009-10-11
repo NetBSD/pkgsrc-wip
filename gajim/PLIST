@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/10/11 10:44:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/10/11 11:18:13 thomasklausner Exp $
 bin/gajim
 ${REMOTE}bin/gajim-remote
 ${GTKSPELL}lib/gajim/gtkspell.la
@@ -1016,5 +1016,3 @@ share/locale/uk/LC_MESSAGES/gajim.mo
 share/locale/zh_CN/LC_MESSAGES/gajim.mo
 share/pixmaps/gajim.png
 share/pixmaps/gajim_about.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

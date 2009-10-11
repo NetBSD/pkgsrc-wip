@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:34 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:13 thomasklausner Exp $
 bin/emelfm2
 lib/emelfm2/plugins/e2p_clone.so
 lib/emelfm2/plugins/e2p_cpbar.so
@@ -76,5 +76,3 @@ share/pixmaps/emelfm2/terminal_48.png
 share/pixmaps/emelfm2/trash_48.png
 share/pixmaps/emelfm2/user_commands_48.png
 share/pixmaps/emelfm2/view_48.png
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

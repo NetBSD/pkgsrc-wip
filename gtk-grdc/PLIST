@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/15 23:02:37 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 11:18:14 thomasklausner Exp $
 bin/grdc
 share/applications/grdc.desktop
 share/locale/es/LC_MESSAGES/grdc.mo
@@ -9,6 +9,3 @@ share/pixmaps/grdc-rdp.png
 share/pixmaps/grdc-vnc-ssh.png
 share/pixmaps/grdc-vnc.png
 share/pixmaps/grdc.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
