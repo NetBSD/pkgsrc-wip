@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 23:35:52 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,7 +51,3 @@ ${PYSITELIB}/DBUtils/ThreadingLocal.pyc
 ${PYSITELIB}/DBUtils/ThreadingLocal.pyo
 ${PYSITELIB}/DBUtils/__init__.pyc
 ${PYSITELIB}/DBUtils/__init__.pyo
-@dirrm ${PYSITELIB}/DBUtils/Testing
-@dirrm ${PYSITELIB}/DBUtils/Examples
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/DBUtils

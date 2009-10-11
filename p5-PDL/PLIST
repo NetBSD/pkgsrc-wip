@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/01 04:31:09 apost Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:04 thomasklausner Exp $
 ${PERL5_SITEARCH}/PDL/pdldoc.db
 ${PERL5_SITEARCH}/PDL/Index.pod
 ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Reduce.html
@@ -96,16 +96,3 @@ ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Transform/Cartography.html
 ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/PDL.html
 ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/pod2htmi.tmp
 ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/pod2htmd.tmp
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Core
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Doc
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Pod
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/IO
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Graphics/TriD
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Graphics/PGPLOT
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Graphics
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Opt
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Fit
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Filter
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL/Transform
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs/PDL
-@dirrm ${PERL5_SITEARCH}/PDL/HtmlDocs

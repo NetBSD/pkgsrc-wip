@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/04 11:54:25 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
 NaturalDocs/Config/Languages.txt
 NaturalDocs/Config/Topics.txt
 NaturalDocs/Help/bugs.html
@@ -101,27 +101,3 @@ NaturalDocs/NaturalDocs.bat
 NaturalDocs/Styles/Default.css
 NaturalDocs/Styles/Roman.css
 NaturalDocs/Styles/Small.css
-@dirrm NaturalDocs/Styles
-@dirrm NaturalDocs/Modules/NaturalDocs/Topics
-@dirrm NaturalDocs/Modules/NaturalDocs/SymbolTable
-@dirrm NaturalDocs/Modules/NaturalDocs/Settings
-@dirrm NaturalDocs/Modules/NaturalDocs/Project
-@dirrm NaturalDocs/Modules/NaturalDocs/Parser
-@dirrm NaturalDocs/Modules/NaturalDocs/Menu
-@dirrm NaturalDocs/Modules/NaturalDocs/Languages/Prototype
-@dirrm NaturalDocs/Modules/NaturalDocs/Languages/Advanced
-@dirrm NaturalDocs/Modules/NaturalDocs/Languages
-@dirrm NaturalDocs/Modules/NaturalDocs/ClassHierarchy
-@dirrm NaturalDocs/Modules/NaturalDocs/Builder
-@dirrm NaturalDocs/Modules/NaturalDocs
-@dirrm NaturalDocs/Modules
-@dirrm NaturalDocs/JavaScript
-@dirrm NaturalDocs/Info
-@dirrm NaturalDocs/Help/javascript
-@dirrm NaturalDocs/Help/images/menu
-@dirrm NaturalDocs/Help/images/header
-@dirrm NaturalDocs/Help/images
-@dirrm NaturalDocs/Help/example
-@dirrm NaturalDocs/Help
-@dirrm NaturalDocs/Config
-@dirrm NaturalDocs

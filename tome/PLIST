@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/17 00:14:51 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 bin/tome3
 share/tome3/game/addons/.cvsignore
 share/tome3/game/addons/WHATISIT.txt
@@ -528,62 +528,4 @@ share/tome3/game/pref/pref-x11.prf
 share/tome3/game/pref/pref.prf
 share/tome3/game/pref/user.prf
 share/tome3/tome.cfg
-@dirrm share/tome3/game/pref
-@dirrm share/tome3/game/packs
-@dirrm share/tome3/game/modules/tome/scripts/wilderness
-@dirrm share/tome3/game/modules/tome/scripts/quests
-@dirrm share/tome3/game/modules/tome/scripts/ai
-@dirrm share/tome3/game/modules/tome/scripts
-@dirrm share/tome3/game/modules/tome/pref
-@dirrm share/tome3/game/modules/tome/media/sound
-@dirrm share/tome3/game/modules/tome/media/music
-@dirrm share/tome3/game/modules/tome/media/graf/16x16/features
-@dirrm share/tome3/game/modules/tome/media/graf/16x16
-@dirrm share/tome3/game/modules/tome/media/graf
-@dirrm share/tome3/game/modules/tome/media
-@dirrm share/tome3/game/modules/tome/file
-@dirrm share/tome3/game/modules/tome/data/wild
-@dirrm share/tome3/game/modules/tome/data/towns
-@dirrm share/tome3/game/modules/tome/data/stores
-@dirrm share/tome3/game/modules/tome/data/player
-@dirrm share/tome3/game/modules/tome/data/monsters
-@dirrm share/tome3/game/modules/tome/data/maps
-@dirrm share/tome3/game/modules/tome/data/magic
-@dirrm share/tome3/game/modules/tome/data/items
-@dirrm share/tome3/game/modules/tome/data/gods
-@dirrm share/tome3/game/modules/tome/data/dungeon/vaults
-@dirrm share/tome3/game/modules/tome/data/dungeon
-@dirrm share/tome3/game/modules/tome/data/display
-@dirrm share/tome3/game/modules/tome/data
 @exec ${MKDIR} %D/share/tome3/game/modules/tome/addons
-@dirrm share/tome3/game/modules/tome/addons
-@dirrm share/tome3/game/modules/tome
-@dirrm share/tome3/game/modules/ode/scripts
-@dirrm share/tome3/game/modules/ode/pref
-@dirrm share/tome3/game/modules/ode/file
-@dirrm share/tome3/game/modules/ode/data/wild
-@dirrm share/tome3/game/modules/ode/data/towns
-@dirrm share/tome3/game/modules/ode/data/stores
-@dirrm share/tome3/game/modules/ode/data/player
-@dirrm share/tome3/game/modules/ode/data/monsters
-@dirrm share/tome3/game/modules/ode/data/magic
-@dirrm share/tome3/game/modules/ode/data/items
-@dirrm share/tome3/game/modules/ode/data/dungeon
-@dirrm share/tome3/game/modules/ode/data/display
-@dirrm share/tome3/game/modules/ode/data
-@dirrm share/tome3/game/modules/ode
-@dirrm share/tome3/game/modules
-@dirrm share/tome3/game/media/graf
-@dirrm share/tome3/game/media/font
-@dirrm share/tome3/game/media
-@dirrm share/tome3/game/help
-@dirrm share/tome3/game/engine/subsystems
-@dirrm share/tome3/game/engine/ai
-@dirrm share/tome3/game/engine
-@dirrm share/tome3/game/addons/module_packer
-@dirrm share/tome3/game/addons/luashell
-@dirrm share/tome3/game/addons/flagseditor/help
-@dirrm share/tome3/game/addons/flagseditor
-@dirrm share/tome3/game/addons
-@dirrm share/tome3/game
-@dirrm share/tome3

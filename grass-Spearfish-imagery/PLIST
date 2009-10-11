@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:21:32 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
 share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
 share/dataset/geography/${PKGNAME}/PERMANENT/SEARCH_PATH
@@ -107,41 +107,5 @@ share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/REF
 share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/sig.1
 share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/test
 share/dataset/geography/${PKGNAME}/user1/gscam
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotxy
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test/sig
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup/spot.test
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear/subgroup
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/spotspear
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap/subgroup/nhap.123
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap/subgroup
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/nhap
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/gs
-@dirrm share/dataset/geography/${PKGNAME}/user1/group/demo
-@dirrm share/dataset/geography/${PKGNAME}/user1/group
-@dirrm share/dataset/geography/${PKGNAME}/user1
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/hist
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/colr
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cellhd
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.p
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.3
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.2
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.ms.1
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/spot.comp
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.enh
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.3
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.2
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap.1
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs14.1
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/gs13.1
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cell
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/cats
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
-@dirrm share/dataset/geography/${PKGNAME}
 @exec ${MKDIR} %D/share/dataset/geography/
-@dirrm share/dataset/geography

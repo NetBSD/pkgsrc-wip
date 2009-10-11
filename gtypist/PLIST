@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/02/21 22:59:25 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:41 thomasklausner Exp $
 bin/gtypist
 bin/typefortune
 info/gtypist.info
@@ -38,4 +38,3 @@ share/locale/nl/LC_MESSAGES/gtypist.mo
 share/locale/ru/LC_MESSAGES/gtypist.mo
 share/locale/zh_CN/LC_MESSAGES/gtypist.mo
 share/locale/zh_TW/LC_MESSAGES/gtypist.mo
-@dirrm share/gtypist

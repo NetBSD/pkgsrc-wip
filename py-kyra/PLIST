@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/07 02:55:55 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/PyKyra/FPS.py
 ${PYSITELIB}/PyKyra/GlIsoMath.py
 ${PYSITELIB}/PyKyra/KrCanvas.py
@@ -27,4 +27,3 @@ ${PYSITELIB}/PyKyra/KrVideo.py
 ${PYSITELIB}/PyKyra/SMPEG.py
 ${PYSITELIB}/PyKyra/__init__.py
 ${PYSITELIB}/PyKyra/_pyKyra.so
-@dirrm ${PYSITELIB}/PyKyra

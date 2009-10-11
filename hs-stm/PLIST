@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/04 04:27:06 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TArray.hi
@@ -18,11 +18,3 @@ lib/stm-${PKGVERSION}/${HASKELL_VERSION}/libHSstm-${PKGVERSION}.a
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/libHSstm-${PKGVERSION}_p.a
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/stm-${PKGVERSION}/LICENSE
-@dirrm share/doc/stm-${PKGVERSION}
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Sequential
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control
-@dirrm lib/stm-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/stm-${PKGVERSION}

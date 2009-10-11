@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/24 16:20:34 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:56 thomasklausner Exp $
 share/AlephOne/Scenarios/1/Fonts.fntA
 share/AlephOne/Scenarios/1/M1A1 Images.imgA
 share/AlephOne/Scenarios/1/M1A1 Map.sceA
@@ -212,27 +212,4 @@ share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_c.bmp
 share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_l.bmp
 share/AlephOne/Scenarios/Infinity/Themes/Default/tiny_button_r.bmp
 @exec ${MKDIR} %D/share/AlephOne/Scenarios/Infinity/Tracks
-@dirrm share/AlephOne/Scenarios/Infinity/Tracks
-@dirrm share/AlephOne/Scenarios/Infinity/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/Infinity/Themes/Default
-@dirrm share/AlephOne/Scenarios/Infinity/Themes
-@dirrm share/AlephOne/Scenarios/Infinity/Scripts
-@dirrm share/AlephOne/Scenarios/Infinity/Physics Models
-@dirrm share/AlephOne/Scenarios/Infinity
 @exec ${MKDIR} %D/share/AlephOne/Scenarios/2/Tracks
-@dirrm share/AlephOne/Scenarios/2/Tracks
-@dirrm share/AlephOne/Scenarios/2/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/2/Themes/Default
-@dirrm share/AlephOne/Scenarios/2/Themes
-@dirrm share/AlephOne/Scenarios/2/Scripts
-@dirrm share/AlephOne/Scenarios/2/Physics Models
-@dirrm share/AlephOne/Scenarios/2
-@dirrm share/AlephOne/Scenarios/1/Tracks
-@dirrm share/AlephOne/Scenarios/1/Themes/Default/CVS
-@dirrm share/AlephOne/Scenarios/1/Themes/Default
-@dirrm share/AlephOne/Scenarios/1/Themes
-@dirrm share/AlephOne/Scenarios/1/Scripts
-@dirrm share/AlephOne/Scenarios/1/Physics Models
-@dirrm share/AlephOne/Scenarios/1
-@dirrm share/AlephOne/Scenarios
-@dirrm share/AlephOne

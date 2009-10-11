@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/18 16:08:47 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:40 thomasklausner Exp $
 bin/grass
 bin/grass63
 ${PKGNAME}/AUTHORS
@@ -2636,9 +2636,6 @@ ${PKGNAME}/scripts/v.univar.sh
 ${PKGNAME}/scripts/v.what.vect
 bin/gem6
 bin/grass63
-@dirrm ${PKGNAME}/scripts
-@dirrm ${PKGNAME}/man/man1
-@dirrm ${PKGNAME}/man
 ${PLIST.nls}@exec ${MKDIR} %D/${PKGNAME}/locale/zh/LC_MESSAGES
 ${PLIST.nls}@dirrm ${PKGNAME}/locale/zh/LC_MESSAGES
 ${PLIST.nls}@dirrm ${PKGNAME}/locale/zh
@@ -2706,70 +2703,13 @@ ${PLIST.nls}@exec ${MKDIR} %D/${PKGNAME}/locale/am/LC_MESSAGES
 ${PLIST.nls}@dirrm ${PKGNAME}/locale/am/LC_MESSAGES
 ${PLIST.nls}@dirrm ${PKGNAME}/locale/am
 ${PLIST.nls}@dirrm ${PKGNAME}/locale
-@dirrm ${PKGNAME}/lib
-@dirrm ${PKGNAME}/include/grass/vect
-@dirrm ${PKGNAME}/include/grass/rtree
-@dirrm ${PKGNAME}/include/grass/dgl
-@dirrm ${PKGNAME}/include/grass
-@dirrm ${PKGNAME}/include/Make
-@dirrm ${PKGNAME}/include
-@dirrm ${PKGNAME}/fonts
-@dirrm ${PKGNAME}/etc/wxpython/vdigit
-@dirrm ${PKGNAME}/etc/wxpython/scripts
-@dirrm ${PKGNAME}/etc/wxpython/images
-@dirrm ${PKGNAME}/etc/wxpython/icons/silk
-@dirrm ${PKGNAME}/etc/wxpython/icons
-@dirrm ${PKGNAME}/etc/wxpython/gui_modules
-@dirrm ${PKGNAME}/etc/wxpython/compat
-@dirrm ${PKGNAME}/etc/wxpython
-@dirrm ${PKGNAME}/etc/v.digit
-@dirrm ${PKGNAME}/etc/symbol/extra
-@dirrm ${PKGNAME}/etc/symbol/demo
-@dirrm ${PKGNAME}/etc/symbol/basic
-@dirrm ${PKGNAME}/etc/symbol
-@dirrm ${PKGNAME}/etc/r.li.setup
-@dirrm ${PKGNAME}/etc/r.in.wms
-@dirrm ${PKGNAME}/etc/paint/patterns
-@dirrm ${PKGNAME}/etc/paint
-@dirrm ${PKGNAME}/etc/ogr_csv
 ${PLIST.opengl}@dirrm ${PKGNAME}/etc/nviz2.2/scripts
 ${PLIST.opengl}@dirrm ${PKGNAME}/etc/nviz2.2/bitmaps/flythrough
 ${PLIST.opengl}@dirrm ${PKGNAME}/etc/nviz2.2/bitmaps
 ${PLIST.opengl}@dirrm ${PKGNAME}/etc/nviz2.2
-@dirrm ${PKGNAME}/etc/nad
 @exec ${MKDIR} %D/${PKGNAME}/etc/msgs
-@dirrm ${PKGNAME}/etc/msgs
-@dirrm ${PKGNAME}/etc/lister
-@dirrm ${PKGNAME}/etc/i.oif
-@dirrm ${PKGNAME}/etc/gui/scripts
-@dirrm ${PKGNAME}/etc/gui/icons
-@dirrm ${PKGNAME}/etc/gui
-@dirrm ${PKGNAME}/etc/gtcltk
-@dirrm ${PKGNAME}/etc/gm
-@dirrm ${PKGNAME}/etc/gem/skeleton
-@dirrm ${PKGNAME}/etc/gem
-@dirrm ${PKGNAME}/etc/form
-@dirrm ${PKGNAME}/etc/dm/script
-@dirrm ${PKGNAME}/etc/dm
-@dirrm ${PKGNAME}/etc/db.test
-@dirrm ${PKGNAME}/etc/d.polar
-@dirrm ${PKGNAME}/etc/colors
-@dirrm ${PKGNAME}/etc
-@dirrm ${PKGNAME}/driver/db
-@dirrm ${PKGNAME}/driver
 ${PLIST.opengl}@dirrm ${PKGNAME}/docs/html/nviz/nvimg/work
 ${PLIST.opengl}@dirrm ${PKGNAME}/docs/html/nviz/nvimg/panel
 ${PLIST.opengl}@dirrm ${PKGNAME}/docs/html/nviz/nvimg
 ${PLIST.opengl}@dirrm ${PKGNAME}/docs/html/nviz/img/nv
 ${PLIST.opengl}@dirrm ${PKGNAME}/docs/html/nviz/img
-@dirrm ${PKGNAME}/docs/html/nviz
-@dirrm ${PKGNAME}/docs/html/icons/silk
-@dirrm ${PKGNAME}/docs/html/icons
-@dirrm ${PKGNAME}/docs/html/gem
-@dirrm ${PKGNAME}/docs/html
-@dirrm ${PKGNAME}/docs
-@dirrm ${PKGNAME}/bwidget/lang
-@dirrm ${PKGNAME}/bwidget/images
-@dirrm ${PKGNAME}/bwidget
-@dirrm ${PKGNAME}/bin
-@dirrm ${PKGNAME}

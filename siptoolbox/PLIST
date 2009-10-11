@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/11 01:34:02 pmatias Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 lib/scilab-${SCIVERSION}/contrib/sip/builder.sce
 lib/scilab-${SCIVERSION}/contrib/sip/images/ABOUT.txt
 lib/scilab-${SCIVERSION}/contrib/sip/images/ararauna.jpg
@@ -205,9 +205,3 @@ lib/scilab-${SCIVERSION}/contrib/sip/man/watershed.htm
 lib/scilab-${SCIVERSION}/contrib/sip/man/whatis.htm
 lib/scilab-${SCIVERSION}/contrib/sip/man/xgetpixel.htm
 lib/scilab-${SCIVERSION}/contrib/sip/man/xor.htm
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip/man
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip/macros
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip/lib
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip/images/photonics
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip/images
-@dirrm lib/scilab-${SCIVERSION}/contrib/sip

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gnomevfs,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.gnomevfs,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HSgnomevfs.o
 lib/gtk2hs/imports/gnomevfs/System/Gnome/VFS.hi
 lib/gtk2hs/imports/gnomevfs/System/Gnome/VFS/Cancellation.hi
@@ -22,7 +22,3 @@ lib/gtk2hs/imports/gnomevfs/System/Gnome/VFS/VolumeMonitor.hi
 lib/gtk2hs/imports/gnomevfs/System/Gnome/VFS/Xfer.hi
 lib/gtk2hs/libHSgnomevfs.a
 lib/gtk2hs/gnomevfs.package.conf
-@dirrm lib/gtk2hs/imports/gnomevfs/System/Gnome/VFS
-@dirrm lib/gtk2hs/imports/gnomevfs/System/Gnome
-@dirrm lib/gtk2hs/imports/gnomevfs/System
-@dirrm lib/gtk2hs/imports/gnomevfs

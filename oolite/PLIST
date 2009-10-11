@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/03 13:02:07 koifren Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 share/GNUstep/Local/Tools/oolite
-@dirrm share/GNUstep/Local/Tools
 share/oolite.debug/Resources/Info-gnustep.plist
 share/oolite.debug/Contents/Resources/Sounds/buy.ogg
 share/oolite.debug/Contents/Resources/Sounds/warning.ogg
@@ -215,14 +214,3 @@ share/oolite.debug/Contents/Resources/oolite-icon.icns
 share/oolite.debug/Contents/Resources/oolite-expansion-document.icns
 share/oolite.debug/oolite
 bin/oolite
-@dirrm share/oolite.debug/Contents/Resources/AIs
-@dirrm share/oolite.debug/Contents/Resources/Models
-@dirrm share/oolite.debug/Contents/Resources/Textures
-@dirrm share/oolite.debug/Contents/Resources/Images
-@dirrm share/oolite.debug/Contents/Resources/Music
-@dirrm share/oolite.debug/Contents/Resources/Config
-@dirrm share/oolite.debug/Contents/Resources/Sounds
-@dirrm share/oolite.debug/Contents/Resources
-@dirrm share/oolite.debug/Contents
-@dirrm share/oolite.debug/Resources
-@dirrm share/oolite.debug

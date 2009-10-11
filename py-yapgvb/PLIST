@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/10/17 16:05:34 marko_schuetz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 ${PYSITELIB}/yapgvb/__init__.pyc
 ${PYSITELIB}/yapgvb/__init__.pyo
 ${PYSITELIB}/yapgvb/_yapgvb.so
@@ -28,5 +28,3 @@ ${PYSITELIB}/yapgvb/graph_attributes.pyc
 ${PYSITELIB}/yapgvb/graph_attributes.pyo
 ${PYSITELIB}/yapgvb/mneumonics.pyc
 ${PYSITELIB}/yapgvb/mneumonics.pyo
-@dirrm ${PYSITELIB}/yapgvb/examples
-@dirrm ${PYSITELIB}/yapgvb

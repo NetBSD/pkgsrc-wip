@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/30 09:18:15 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:05 thomasklausner Exp $
 bin/pdfedit
 man/man1/pdfedit.1
 share/doc/pdfedit/README
@@ -278,21 +278,3 @@ share/pdfedit/scripts/delinearize.qs
 share/pdfedit/scripts/pdftoxml.qs
 share/pdfedit/scripts/update.qs
 share/pdfedit/test.qs
-@dirrm share/pdfedit/scripts
-@dirrm share/pdfedit/lang
-@dirrm share/pdfedit/icon/hicolor
-@dirrm share/pdfedit/icon
-@dirrm share/pdfedit/help/images
-@dirrm share/pdfedit/help/cs
-@dirrm share/pdfedit/help
-@dirrm share/pdfedit
-@dirrm share/doc/pdfedit/images
-@dirrm share/doc/pdfedit/gui/menuAndToolbarsFun/images
-@dirrm share/doc/pdfedit/gui/menuAndToolbarsFun
-@dirrm share/doc/pdfedit/gui/images
-@dirrm share/doc/pdfedit/gui
-@dirrm share/doc/pdfedit/design/kernel/images
-@dirrm share/doc/pdfedit/design/kernel
-@dirrm share/doc/pdfedit/design/images
-@dirrm share/doc/pdfedit/design
-@dirrm share/doc/pdfedit

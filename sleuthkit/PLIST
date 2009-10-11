@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/05 16:40:57 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:18 thomasklausner Exp $
 bin/dcalc
 bin/dcat
 bin/disk_sreset
@@ -62,5 +62,3 @@ share/sorter/linux.sort
 share/sorter/openbsd.sort
 share/sorter/solaris.sort
 share/sorter/windows.sort
-@dirrm share/sorter
-@dirrm share/doc/sleuthkit

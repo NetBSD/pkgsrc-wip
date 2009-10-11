@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/30 14:17:17 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scourge
 share/scourgedir/scourge
 share/scourgedir/data/.DS_Store
@@ -77,10 +77,3 @@ share/scourgedir/data/Thumbs.db
 share/scourgedir/data/marble.bmp
 share/scourgedir/data/floor3.bmp
 share/scourgedir/saved/scourge.cfg
-@dirrm share/scourgedir/data/fonts
-@dirrm share/scourgedir/data/models
-@dirrm share/scourgedir/data/objects
-@dirrm share/scourgedir/data/portraits
-@dirrm share/scourgedir/data
-@dirrm share/scourgedir/saved
-@dirrm share/scourgedir

@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/06 17:43:31 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:35 thomasklausner Exp $
 share/es40-firmware/cl67srmrom.exe
-@dirrm share/es40-firmware

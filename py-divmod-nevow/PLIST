@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/22 21:01:34 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/formless/processors.py
 ${PYSITELIB}/formless/configurable.py
 ${PYSITELIB}/formless/iformless.py
@@ -313,23 +313,3 @@ ${PYSITELIB}/nevow/wsgi.pyc
 ${PYSITELIB}/nevow/wsgi.pyo
 ${PYSITELIB}/nevow/zomnesrv.pyc
 ${PYSITELIB}/nevow/zomnesrv.pyo
-@dirrm ${PYSITELIB}/nevow/test/test_package/Foo/Baz
-@dirrm ${PYSITELIB}/nevow/test/test_package/Foo
-@dirrm ${PYSITELIB}/nevow/test/test_package
-@dirrm ${PYSITELIB}/nevow/test
-@dirrm ${PYSITELIB}/nevow/taglibrary
-@dirrm ${PYSITELIB}/nevow/scripts
-@dirrm ${PYSITELIB}/nevow/plugins
-@dirrm ${PYSITELIB}/nevow/livetrial
-@dirrm ${PYSITELIB}/nevow/js/Nevow/TagLibrary
-@dirrm ${PYSITELIB}/nevow/js/Nevow/Athena/Tests
-@dirrm ${PYSITELIB}/nevow/js/Nevow/Athena
-@dirrm ${PYSITELIB}/nevow/js/Nevow
-@dirrm ${PYSITELIB}/nevow/js/Divmod/Runtime
-@dirrm ${PYSITELIB}/nevow/js/Divmod
-@dirrm ${PYSITELIB}/nevow/js
-@dirrm ${PYSITELIB}/nevow/flat
-@dirrm ${PYSITELIB}/nevow/athena_private
-@dirrm ${PYSITELIB}/nevow
-@dirrm ${PYSITELIB}/formless/test
-@dirrm ${PYSITELIB}/formless

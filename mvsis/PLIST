@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 17:51:47 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mvsis
 share/mvsis/examples/C880.blif
 share/mvsis/examples/apex6.blif
@@ -21,6 +21,3 @@ share/mvsis/examples/term1.blif
 share/mvsis/share/master.mvsisrc
 share/mvsis/share/script.check
 share/mvsis/share/script.mvs
-@dirrm share/mvsis/share
-@dirrm share/mvsis/examples
-@dirrm share/mvsis

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/12 16:20:07 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mozplugger-controller
 bin/mozplugger-helper
 lib/mozilla/plugins/mozplugger.so
 share/examples/mozplugger/mozpluggerrc
-@dirrm share/examples/mozplugger
 @unexec ${RMDIR} %D/lib/mozilla/plugins 2>/dev/null || ${TRUE}

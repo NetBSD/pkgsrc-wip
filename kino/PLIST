@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:34 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:50 thomasklausner Exp $
 bin/kino
 include/kino/audio_filters.h
 include/kino/audio_transitions.h
@@ -81,15 +81,4 @@ share/locale/fr/LC_MESSAGES/kino.mo
 share/locale/sv/LC_MESSAGES/kino.mo
 share/pixmaps/kino.png
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/kino/scripts/publish
-@dirrm share/kino/scripts/exports
-@dirrm share/kino/scripts
-@dirrm share/kino/help
-@dirrm share/kino
-@dirrm share/examples/kino/hotplug/usb
-@dirrm share/examples/kino/hotplug
-@dirrm share/examples/kino
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/hotplug/kino
-@dirrm lib/hotplug
-@dirrm include/kino

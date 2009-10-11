@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/21 19:29:16 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:12 thomasklausner Exp $
 bin/qemu-neo1973
 ${NEO1973_PREFIX}/bin/flash2raw
 ${NEO1973_PREFIX}/bin/flash2raw.akita
@@ -66,14 +66,3 @@ ${NEO1973_PREFIX}/share/qemu/pxe-rtl8139.bin
 ${NEO1973_PREFIX}/share/qemu/vgabios-cirrus.bin
 ${NEO1973_PREFIX}/share/qemu/vgabios.bin
 ${NEO1973_PREFIX}/share/qemu/video.x
-@dirrm ${NEO1973_PREFIX}/share/qemu/keymaps
-@dirrm ${NEO1973_PREFIX}/share/qemu
-@dirrm ${NEO1973_PREFIX}/share/doc/qemu
-@dirrm ${NEO1973_PREFIX}/share/doc
-@dirrm ${NEO1973_PREFIX}/share
-@dirrm ${NEO1973_PREFIX}/man/man1
-@dirrm ${NEO1973_PREFIX}/man
-@dirrm ${NEO1973_PREFIX}/bin
-@dirrm ${NEO1973_PREFIX}/libexec/openmoko
-@dirrm ${NEO1973_PREFIX}/libexec
-@dirrm ${NEO1973_PREFIX}/

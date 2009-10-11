@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/14 14:27:28 sohsmith Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/tcmplex-panteltje
 share/doc/tcmplex-panteltje/README
 share/doc/tcmplex-panteltje/COPYRIGHT
 share/doc/tcmplex-panteltje/LICENSE
 share/doc/tcmplex-panteltje/CHANGES
-@dirrm share/doc/tcmplex-panteltje

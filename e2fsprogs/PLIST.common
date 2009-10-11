@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2008/02/21 05:40:39 tnn2 Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2009/10/11 10:44:33 thomasklausner Exp $
 bin/chattr
 bin/compile_et
 bin/lsattr
@@ -107,11 +107,3 @@ share/et/et_c.awk
 share/et/et_h.awk
 share/ss/ct_c.awk
 share/ss/ct_c.sed
-@dirrm share/ss
-@dirrm share/et
-@dirrm include/uuid
-@dirrm include/ss
-@dirrm include/ext2fs
-@dirrm include/et
-@dirrm include/e2p
-@dirrm include/blkid

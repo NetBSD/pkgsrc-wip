@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 05:36:30 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 include/ga/GA1DArrayGenome.C
 include/ga/GA1DArrayGenome.h
 include/ga/GA1DBinStrGenome.h
@@ -51,4 +51,3 @@ include/ga/gaid.h
 include/ga/garandom.h
 include/ga/gatypes.h
 lib/libga.a
-@dirrm include/ga

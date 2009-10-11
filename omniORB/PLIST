@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/08/25 15:00:35 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:00 thomasklausner Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -433,20 +433,4 @@ share/idl/omniORB/ir.idl
 share/idl/omniORB/orb.idl
 share/idl/omniORB/poa.idl
 share/idl/omniORB/poa_include.idl
-@dirrm share/idl/omniORB/COS
-@dirrm share/idl/omniORB
 @unexec /bin/rmdir %D/share/idl 2>/dev/null || true
-@dirrm share/examples/omniORB
-@dirrm share/doc/omniORB/omniORB
-@dirrm share/doc/omniORB
-@dirrm ${PYSITELIB}/omniidl_be/cxx/skel
-@dirrm ${PYSITELIB}/omniidl_be/cxx/impl
-@dirrm ${PYSITELIB}/omniidl_be/cxx/header
-@dirrm ${PYSITELIB}/omniidl_be/cxx/dynskel
-@dirrm ${PYSITELIB}/omniidl_be/cxx
-@dirrm ${PYSITELIB}/omniidl_be
-@dirrm ${PYSITELIB}/omniidl
-@dirrm include/omnithread
-@dirrm include/omniORB4/internal
-@dirrm include/omniORB4
-@dirrm include/COS

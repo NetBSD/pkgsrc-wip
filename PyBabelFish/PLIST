@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 18:31:48 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
 bin/pybabelfish
 ${PYSITELIB}/BabelPhish/URLRead.py
 ${PYSITELIB}/BabelPhish/pixmaps/babtitle.gif
@@ -25,5 +25,3 @@ ${PYSITELIB}/BabelPhish/pyfilter.py
 ${PYSITELIB}/BabelPhish/pytheme.py
 ${PYSITELIB}/BabelPhish/pythonol_festival.py
 ${PYSITELIB}/BabelPhish/symbolbar.py
-@dirrm ${PYSITELIB}/BabelPhish/pixmaps
-@dirrm ${PYSITELIB}/BabelPhish

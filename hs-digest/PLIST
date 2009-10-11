@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/14 11:23:11 zecrazytux Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:43 thomasklausner Exp $
 lib/digest-${PKGVERSION}/ghc-6.8.3/Data/Digest/Adler32.hi
 lib/digest-${PKGVERSION}/ghc-6.8.3/Data/Digest/CRC32.hi
 lib/digest-${PKGVERSION}/ghc-6.8.3/HSdigest-${PKGVERSION}.o
 lib/digest-${PKGVERSION}/ghc-6.8.3/libHSdigest-${PKGVERSION}.a
 lib/ghc-6.8.3/package.conf
 share/doc/digest-${PKGVERSION}/LICENSE
-@dirrm share/doc/digest-${PKGVERSION}
-@dirrm lib/ghc-6.8.3
-@dirrm lib/digest-${PKGVERSION}/ghc-6.8.3/Data/Digest
-@dirrm lib/digest-${PKGVERSION}/ghc-6.8.3/Data
-@dirrm lib/digest-${PKGVERSION}/ghc-6.8.3

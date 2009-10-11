@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/03 22:30:18 nocker Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
 bin/68kasm
 bin/bsvc
 bin/sim68000
@@ -159,21 +159,3 @@ share/examples/bsvc/m68360/gdb7/ustub.c
 share/examples/bsvc/m68360/gdb7/ustub.h
 share/examples/bsvc/m68360/gdb7/xstub.c
 share/examples/bsvc/m68360/gdb7/xstub.h
-@dirrm share/examples/bsvc/m68360/gdb7
-@dirrm share/examples/bsvc/m68360/gdb6
-@dirrm share/examples/bsvc/m68360/gcc5
-@dirrm share/examples/bsvc/m68360/gcc4
-@dirrm share/examples/bsvc/m68360/gcc3
-@dirrm share/examples/bsvc/m68360/gcc2
-@dirrm share/examples/bsvc/m68360/gas1
-@dirrm share/examples/bsvc/m68360
-@dirrm share/examples/bsvc/m68000
-@dirrm share/examples/bsvc
-@dirrm share/doc/bsvc/Manual/ps
-@dirrm share/doc/bsvc/Manual/html
-@dirrm share/doc/bsvc/Manual
-@dirrm share/doc/bsvc/68kasm
-@dirrm share/doc/bsvc
-@dirrm lib/bsvc/help
-@dirrm lib/bsvc/bitmaps
-@dirrm lib/bsvc

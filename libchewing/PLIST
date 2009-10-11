@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 13:41:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
 include/chewing/chewing.h
 include/chewing/chewingio.h
 include/chewing/global.h
@@ -14,5 +14,3 @@ share/chewing/pinyin.tab
 share/chewing/swkb.dat
 share/chewing/symbols.dat
 share/chewing/us_freq.dat
-@dirrm share/chewing
-@dirrm include/chewing

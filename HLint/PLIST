@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/12 03:54:39 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
 bin/hlint
 share/doc/${PKGNAME}/LICENSE
 share/${PKGNAME}/Hints.hs
 share/${PKGNAME}/report.html
-@dirrm share/${PKGNAME}
-@dirrm share/doc/${PKGNAME}

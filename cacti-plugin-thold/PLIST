@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/09 20:34:21 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
 share/cacti/plugins/thold/LICENSE
 share/cacti/plugins/thold/README
 share/cacti/plugins/thold/cli_thresholds.php
@@ -26,8 +26,3 @@ share/cacti/plugins/thold/thold_add.php
 share/cacti/plugins/thold/thold_functions.php
 share/cacti/plugins/thold/thold_graph.php
 share/cacti/plugins/thold/thold_templates.php
-@dirrm share/cacti/plugins/thold/includes
-@dirrm share/cacti/plugins/thold/images
-@dirrm share/cacti/plugins/thold/extras
-@dirrm share/cacti/plugins/thold
-@dirrm share/cacti/plugins

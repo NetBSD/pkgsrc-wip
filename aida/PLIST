@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/19 03:20:57 hugor Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 include/AIDA/AIDA.h
 include/AIDA/IAnalysisFactory.h
 include/AIDA/IAnnotation.h
@@ -143,9 +143,3 @@ share/doc/${PKGBASE}/api/hep/aida/OutOfStorageException.html
 share/doc/${PKGBASE}/api/hep/aida/package-frame.html
 share/doc/${PKGBASE}/api/hep/aida/package-summary.html
 share/doc/${PKGBASE}/api/hep/aida/package-tree.html
-@dirrm share/doc/${PKGBASE}/api/hep/aida
-@dirrm share/doc/${PKGBASE}/api/hep
-@dirrm share/doc/${PKGBASE}/api
-@dirrm share/doc/${PKGBASE}/UsersGuide
-@dirrm share/doc/${PKGBASE}
-@dirrm include/AIDA

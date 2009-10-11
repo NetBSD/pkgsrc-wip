@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 12:42:19 virtus Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
 include/colors.h
 include/dialog.h
 include/dir.h
@@ -31,4 +31,3 @@ share/examples/libdialog/radio3.c
 share/examples/libdialog/text.c
 share/examples/libdialog/tree.c
 share/examples/libdialog/yesno.c
-@dirrm share/examples/libdialog

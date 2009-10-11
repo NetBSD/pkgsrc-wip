@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/22 00:17:57 rsmarples Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 ${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/dependency_links.txt
@@ -61,8 +61,3 @@ ${PYSITELIB}/tracspamfilter/templates/admin_spammonitor.html
 ${PYSITELIB}/tracspamfilter/upgrades.py
 ${PYSITELIB}/tracspamfilter/upgrades.pyc
 ${PYSITELIB}/tracspamfilter/upgrades.pyo
-@dirrm ${PYSITELIB}/tracspamfilter/templates
-@dirrm ${PYSITELIB}/tracspamfilter/htdocs
-@dirrm ${PYSITELIB}/tracspamfilter/filters
-@dirrm ${PYSITELIB}/tracspamfilter
-@dirrm ${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info

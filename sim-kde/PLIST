@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:38 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:18 thomasklausner Exp $
 bin/sim
 bin/simctrl
 lib/libsimapi.la
@@ -103,8 +103,3 @@ share/locale/uk/LC_MESSAGES/sim.mo
 share/locale/zh_TW/LC_MESSAGES/sim.mo
 share/mimelnk/application/x-icq.desktop
 share/services/simctrl.desktop
-@dirrm share/apps/sim/styles
-@dirrm share/apps/sim/sounds
-@dirrm share/apps/sim/pict
-@dirrm share/apps/sim
-@dirrm lib/sim

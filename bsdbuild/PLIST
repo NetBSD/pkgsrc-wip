@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
 bin/h2mandoc
 bin/mkconfigure
 bin/mkify
@@ -121,5 +121,3 @@ share/bsdbuild/manlinks.pl
 share/bsdbuild/mkconcurrent.pl
 share/bsdbuild/mkdep
 share/bsdbuild/ml.xsl
-@dirrm share/bsdbuild/BSDBuild
-@dirrm share/bsdbuild

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/11 14:14:51 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:25 thomasklausner Exp $
 bin/uni
 bin/wvtestrunner.pl
 include/wvstreams/fileutils.h
@@ -240,7 +240,3 @@ man/man8/uniconfd.8
 sbin/uniconfd
 share/examples/wvstreams/uniconf.conf
 var/lib/uniconf/uniconfd.ini
-@dirrm share/examples/wvstreams
-@dirrm lib/valgrind
-@dirrm include/wvstreams/xplc
-@dirrm include/wvstreams

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/22 03:08:12 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/crm
 bin/cssdiff
 bin/cssmerge
@@ -26,6 +26,3 @@ share/examples/crm114/priolist.mfp.example
 share/examples/crm114/procmailrc.recipe
 share/examples/crm114/rewrites.mfp
 share/examples/crm114/whitelist.mfp.example
-@dirrm share/examples/crm114
-@dirrm share/doc/crm114
-@dirrm share/crm114

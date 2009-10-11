@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/09 12:36:27 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:27 thomasklausner Exp $
 bin/xwelltris
 share/xwelltris/board2.gif
 share/xwelltris/font2.gif
@@ -7,4 +7,3 @@ share/xwelltris/topnine.gif
 share/xwelltris/wellcuts.gif
 share/xwelltris/wellintro.gif
 share/xwelltris/welltris.scores
-@dirrm share/xwelltris

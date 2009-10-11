@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 18:03:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 include/lingoteach/lingdefs.h
 include/lingoteach/lingoteach.h
 lib/liblingoteach.la
@@ -25,6 +25,3 @@ share/doc/${PKGNAME}/html/globals_eval.html
 share/doc/${PKGNAME}/html/globals_func.html
 share/doc/${PKGNAME}/html/globals_type.html
 share/doc/${PKGNAME}/html/index.html
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@dirrm include/lingoteach

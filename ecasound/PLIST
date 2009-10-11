@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/06 22:20:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:33 thomasklausner Exp $
 bin/ecaconvert
 bin/ecafixdc
 bin/ecalength
@@ -157,7 +157,3 @@ share/ecasound/ecasound.el
 share/ecasound/ecasoundrc
 share/ecasound/effect_presets
 share/ecasound/generic_oscillators
-@dirrm share/ecasound
-@dirrm include/libecasoundc
-@dirrm include/libecasound
-@dirrm include/kvutils

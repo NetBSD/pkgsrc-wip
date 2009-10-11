@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/13 13:17:48 cetrox Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
 bin/snes9express
 share/snes9express/snes.s9xskin
 share/snes9express/snsp.s9xskin
-@dirrm share/snes9express

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/03 14:11:38 marko_schuetz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:17 thomasklausner Exp $
 bin/buildcat
 bin/gensgmlenv
 bin/sgmltools
@@ -35,15 +35,4 @@ share/examples/sgmltools-lite/aliases
 share/examples/sgmltools-lite/catalog
 share/examples/sgmltools-lite/catalog.rh62
 share/examples/sgmltools-lite/catalog.suse
-@dirrm etc/sgml/catalog.d
-@dirrm etc/sgml
-@dirrm share/sgml/stylesheets/sgmltools
-@dirrm share/sgml/stylesheets
 @exec ${MKDIR} %D/share/sgml/misc/sgmltools/site-backends
-@dirrm share/sgml/misc/sgmltools/site-backends
-@dirrm share/sgml/misc/sgmltools/python/backends
-@dirrm share/sgml/misc/sgmltools/python
-@dirrm share/sgml/misc/sgmltools
-@dirrm share/sgml/misc
-@dirrm share/sgml/dtd/sgmltools
-@dirrm share/sgml/dtd

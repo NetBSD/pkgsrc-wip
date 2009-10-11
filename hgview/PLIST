@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/01 23:20:35 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:42 thomasklausner Exp $
 bin/hgview
 ${PYSITELIB}/hgview/__init__.py
 ${PYSITELIB}/hgview/__init__.pyc
@@ -42,7 +42,3 @@ ${PYSITELIB}/hgview/qt4/hgview_qt4.pyo
 share/hgview/hgview.glade
 share/hgview/hgview.ui
 man/man1/hgview.1
-@dirrm share/hgview
-@dirrm ${PYSITELIB}/hgview/qt4
-@dirrm ${PYSITELIB}/hgview/gtk
-@dirrm ${PYSITELIB}/hgview

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/18 00:46:34 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:52 thomasklausner Exp $
 include/libbtctl/btctl-discovery-source.h
 include/libbtctl/btctl.h
 include/libbtctl/bthelper.h
@@ -20,7 +20,3 @@ share/gtk-doc/html/libbtctl/libbtctl-obex-server-source.html
 share/gtk-doc/html/libbtctl/style.css
 share/locale/be/LC_MESSAGES/libbtctl.mo
 share/locale/en_GB/LC_MESSAGES/libbtctl.mo
-@dirrm share/gtk-doc/html/libbtctl
-@dirrm share/gtk-doc/html
-@dirrm share/gtk-doc
-@dirrm include/libbtctl

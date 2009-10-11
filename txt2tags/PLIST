@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/18 10:26:13 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:23 thomasklausner Exp $
 bin/txt2tags
 man/man1/txt2tags.1
 share/doc/txt2tags/manpage-ca.man
@@ -36,6 +36,3 @@ share/examples/txt2tags/sample.tex
 share/examples/txt2tags/sample.txt
 share/examples/txt2tags/sample.wiki
 share/examples/txt2tags/sample.xhtml
-@dirrm share/examples/txt2tags/img
-@dirrm share/examples/txt2tags
-@dirrm share/doc/txt2tags

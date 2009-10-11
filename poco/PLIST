@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:06 thomasklausner Exp $
 include/Poco/ASCIIEncoding.h
 include/Poco/AbstractCache.h
 include/Poco/AbstractDelegate.h
@@ -623,15 +623,3 @@ lib/libPocoZip.so
 lib/libPocoZip.so.6
 lib/libPocoZipd.so
 lib/libPocoZipd.so.6
-@dirrm include/Poco/Zip
-@dirrm include/Poco/XML
-@dirrm include/Poco/Util
-@dirrm include/Poco/SAX
-@dirrm include/Poco/Net
-@dirrm include/Poco/Data/SQLite
-@dirrm include/Poco/Data/ODBC
-@dirrm include/Poco/Data/MySQL
-@dirrm include/Poco/Data
-@dirrm include/Poco/DOM
-@dirrm include/Poco/Crypto
-@dirrm include/Poco

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/27 18:49:39 rumko Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/tcc
 include/libtcc.h
 lib/libtcc.a
@@ -13,6 +13,3 @@ lib/tcc/include/varargs.h
 lib/tcc/libtcc1.a
 man/man1/tcc.1
 share/doc/tcc/tcc-doc.html
-@dirrm share/doc/tcc
-@dirrm lib/tcc/include
-@dirrm lib/tcc

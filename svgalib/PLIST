@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/27 06:03:36 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
 bin/dumpreg
 bin/restorefont
 bin/restorepalette
@@ -262,5 +262,3 @@ man/man7/svgalib.mach32.7
 man/man7/threedkit.7
 man/man7/vgagl.7
 man/man8/mode3.8
-@dirrm include/linux
-@dirrm etc/vga

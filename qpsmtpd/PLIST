@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/06 05:58:55 ficovh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 bin/qpsmtpd
 bin/qpsmtpd-forkserver
 lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/qpsmtpd/.packlist
@@ -14,8 +14,3 @@ lib/perl5/vendor_perl/man/man3/Qpsmtpd::Constants.3
 lib/perl5/vendor_perl/man/man3/Qpsmtpd::DSN.3
 lib/perl5/vendor_perl/man/man3/Qpsmtpd::Postfix.3
 lib/perl5/vendor_perl/man/man3/Qpsmtpd::Transaction.3
-@dirrm lib/perl5/vendor_perl/man/man3
-@dirrm lib/perl5/vendor_perl/bin
-@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/qpsmtpd
-@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
-@dirrm lib/perl5/vendor_perl/5.8.0

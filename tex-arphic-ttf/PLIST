@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/28 01:42:00 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 @comment In teTeX-texmf: ${PKG_LOCALTEXMFPREFIX}/fonts/map/fontname/special.map
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/bkai00mp/bkai00mp01.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/bkai00mp/bkai00mp02.tfm
@@ -175,11 +175,5 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/arphic/bsmi00lp.ttf
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/arphic/gbsn00lp.ttf
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/arphic/gkai00mp.ttf
 @comment In ttf2pk: ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/arphic
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/gkai00mp
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/gbsn00lp
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/bsmi00lp
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic/bkai00mp
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/arphic
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm

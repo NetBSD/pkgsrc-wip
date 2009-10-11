@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/14 23:33:01 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:36 thomasklausner Exp $
 bin/flyback
 share/flyback/GPL.txt
 share/flyback/backup_backend.py
@@ -8,4 +8,3 @@ share/flyback/flyback.py
 share/flyback/help_data.py
 share/flyback/opengl_viewer.py
 share/flyback/viewer.glade
-@dirrm share/flyback

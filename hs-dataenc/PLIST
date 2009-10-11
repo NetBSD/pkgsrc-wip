@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/04 05:09:16 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:43 thomasklausner Exp $
 lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base16.hi
 lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base16.p_hi
 lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/Base32.hi
@@ -32,8 +32,3 @@ lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/libHSdataenc-${PKGVERSION}.a
 lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/libHSdataenc-${PKGVERSION}_p.a
 lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/dataenc-${PKGVERSION}/LICENSE
-@dirrm share/doc/dataenc-${PKGVERSION}
-@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary
-@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}/Codec
-@dirrm lib/dataenc-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/dataenc-${PKGVERSION}

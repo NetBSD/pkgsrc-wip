@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/23 05:59:54 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:57 thomasklausner Exp $
 bin/search.cgi
 bin/udm-config
 include/udm_agent.h
@@ -161,17 +161,3 @@ share/doc/mnogosearch/create/msql/ispell.txt
 share/doc/mnogosearch/create/msql/multi.txt
 share/doc/mnogosearch/create/msql/track.txt
 share/doc/mnogosearch/create/ibase/create.sql
-@dirrm share/examples/mnogosearch
-@dirrm share/doc/mnogosearch/create/oracle
-@dirrm share/doc/mnogosearch/create/sybase
-@dirrm share/doc/mnogosearch/create/stopwords
-@dirrm share/doc/mnogosearch/create/solid
-@dirrm share/doc/mnogosearch/create/sapdb
-@dirrm share/doc/mnogosearch/create/pgsql
-@dirrm share/doc/mnogosearch/create/virtuoso
-@dirrm share/doc/mnogosearch/create/mysql
-@dirrm share/doc/mnogosearch/create/mssql
-@dirrm share/doc/mnogosearch/create/msql
-@dirrm share/doc/mnogosearch/create/ibase
-@dirrm share/doc/mnogosearch/create
-@dirrm share/doc/mnogosearch

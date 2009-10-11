@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/14 21:46:39 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
 include/at/appletalk.h
 include/at/nbp.h
 include/at/pap.h
 lib/libnatali.a
 share/doc/natali
-@dirrm include/at

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/19 07:54:02 sourceforge_low Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:56 thomasklausner Exp $
 bin/mmaker
 bin/mmaker-launch
 ${PYSITELIB}/MenuMaker/CLI.py
@@ -159,16 +159,3 @@ ${PYSITELIB}/Prophet/Support/__init__.py
 ${PYSITELIB}/Prophet/Support/__init__.pyc
 ${PYSITELIB}/Prophet/__init__.py
 ${PYSITELIB}/Prophet/__init__.pyc
-@dirrm ${PYSITELIB}/Prophet/Program/GNOME/
-@dirrm ${PYSITELIB}/Prophet/Program/KDE/Games/
-@dirrm ${PYSITELIB}/Prophet/Program/KDE/Office/
-@dirrm ${PYSITELIB}/Prophet/Program/X/Office/
-@dirrm ${PYSITELIB}/Prophet/Program/KDE/
-@dirrm ${PYSITELIB}/Prophet/Program/XFce/
-@dirrm ${PYSITELIB}/Prophet/Program/XFce4/
-@dirrm ${PYSITELIB}/Prophet/Program/X/
-@dirrm ${PYSITELIB}/Prophet/Support/
-@dirrm ${PYSITELIB}/Prophet/Package/
-@dirrm ${PYSITELIB}/Prophet/Program/
-@dirrm ${PYSITELIB}/Prophet/
-@dirrm ${PYSITELIB}/MenuMaker/

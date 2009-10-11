@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/09 12:44:17 zul_ Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 share/eboard/Adventurer.png
 share/eboard/Alpha.png
 share/eboard/Altinov.png
@@ -50,4 +50,3 @@ share/eboard/extras1.prevconf
 share/eboard/extras${PKGVERSION}.prevconf
 share/eboard/themeconf.extras1
 share/eboard/themeconf.extras${PKGVERSION}
-@dirrm share/eboard

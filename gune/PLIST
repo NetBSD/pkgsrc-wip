@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/29 13:54:47 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 include/gune/alist.h
 include/gune/array.h
 include/gune/error.h
@@ -195,4 +195,3 @@ man/man3/string.h.3
 man/man3/sym_eq.3
 man/man3/types.h.3
 man/man3/version.h.3
-@dirrm include/gune

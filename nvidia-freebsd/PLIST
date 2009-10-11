@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/18 18:32:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 X11R6/lib/libGL.so
 X11R6/lib/libGL.so.1
 X11R6/lib/libGLcore.so
@@ -16,4 +16,3 @@ emul/linux/usr/X11R6/lib/libGLcore.so.1
 emul/linux/usr/X11R6/lib/libGLcore.so.1.0.${PKGVERSION}
 share/doc/nvidia-${LOWER_OPSYS}-1.0/README
 share/doc/nvidia-${LOWER_OPSYS}-1.0/README.Linux
-@dirrm share/doc/nvidia-${LOWER_OPSYS}-1.0

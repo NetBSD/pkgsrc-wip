@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/20 03:03:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
 bin/rubyphoto.rb
 ${RUBY_VENDORLIB}/rubyphoto.rb
 ${RUBY_VENDORLIB}/gallery/gallery.rb
@@ -18,16 +18,13 @@ ${RUBY_VENDORLIB}/gallery/.ja.i/user_admin.erb
 ${RUBY_VENDORLIB}/gallery/.ja.i/footer.erb
 ${RUBY_VENDORLIB}/gallery/.ja.i/messages.rb
 ${RUBY_VENDORLIB}/gallery/.ja.i/gallery_admin.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/.ja.i
 ${RUBY_VENDORLIB}/gallery/.en/messages.rb
-@dirrm ${RUBY_VENDORLIB}/gallery/.en
 ${RUBY_VENDORLIB}/gallery/mail.en/header.erb
 ${RUBY_VENDORLIB}/gallery/mail.en/admin.erb
 ${RUBY_VENDORLIB}/gallery/mail.en/error.erb
 ${RUBY_VENDORLIB}/gallery/mail.en/footer.erb
 ${RUBY_VENDORLIB}/gallery/mail.en/messages.rb
 ${RUBY_VENDORLIB}/gallery/mail.en/mail.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/mail.en
 ${RUBY_VENDORLIB}/gallery/html/image_admin.erb
 ${RUBY_VENDORLIB}/gallery/html/login.erb
 ${RUBY_VENDORLIB}/gallery/html/header.erb
@@ -40,12 +37,10 @@ ${RUBY_VENDORLIB}/gallery/html/mail_info.erb
 ${RUBY_VENDORLIB}/gallery/html/footer.erb
 ${RUBY_VENDORLIB}/gallery/html/show_message.erb
 ${RUBY_VENDORLIB}/gallery/html/user_admin.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/html
 ${RUBY_VENDORLIB}/gallery/config/shared_config.erb
 ${RUBY_VENDORLIB}/gallery/config/config.erb
 ${RUBY_VENDORLIB}/gallery/config/album_config.erb
 ${RUBY_VENDORLIB}/gallery/config/image_config.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/config
 ${RUBY_VENDORLIB}/gallery/theme_html/admin.erb
 ${RUBY_VENDORLIB}/gallery/theme_html/add.erb
 ${RUBY_VENDORLIB}/gallery/theme_html/image_admin.erb
@@ -57,20 +52,15 @@ ${RUBY_VENDORLIB}/gallery/theme_html/mail_info.erb
 ${RUBY_VENDORLIB}/gallery/theme_html/footer.erb
 ${RUBY_VENDORLIB}/gallery/theme_html/show_message.erb
 ${RUBY_VENDORLIB}/gallery/theme_html/user_admin.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/theme_html
 ${RUBY_VENDORLIB}/gallery/.ja/messages.rb
-@dirrm ${RUBY_VENDORLIB}/gallery/.ja
 ${RUBY_VENDORLIB}/gallery/mail.ja/admin.erb
 ${RUBY_VENDORLIB}/gallery/mail.ja/header.erb
 ${RUBY_VENDORLIB}/gallery/mail.ja/error.erb
 ${RUBY_VENDORLIB}/gallery/mail.ja/footer.erb
 ${RUBY_VENDORLIB}/gallery/mail.ja/messages.rb
 ${RUBY_VENDORLIB}/gallery/mail.ja/mail.erb
-@dirrm ${RUBY_VENDORLIB}/gallery/mail.ja
-@dirrm ${RUBY_VENDORLIB}/gallery
 ${RUBY_VENDORLIB}/findbin/abspath.rb
 ${RUBY_VENDORLIB}/findbin/findbin.rb
-@dirrm ${RUBY_VENDORLIB}/findbin
 ${RUBY_VENDORLIB}/rubyphoto/imagemagick.rb
 ${RUBY_VENDORLIB}/rubyphoto/rmagick.rb
 ${RUBY_VENDORLIB}/rubyphoto/xmlparser.rb
@@ -86,15 +76,12 @@ ${RUBY_VENDORLIB}/rubyphoto/xmlscanner.rb
 ${RUBY_VENDORLIB}/rubyphoto/template.rb
 ${RUBY_VENDORLIB}/rubyphoto/rubyphoto.rb
 ${RUBY_VENDORLIB}/rubyphoto/imlib.rb
-@dirrm ${RUBY_VENDORLIB}/rubyphoto
 ${RUBY_VENDORLIB}/webutils/realtime-counter.rb
 ${RUBY_VENDORLIB}/webutils/realtime-counter.rjs
-@dirrm ${RUBY_VENDORLIB}/webutils
 ${RUBY_DOCDIR}/gallery/COPYING_for_RubyPhoto
 ${RUBY_DOCDIR}/gallery/README.en
 ${RUBY_DOCDIR}/gallery/README.ja
 ${RUBY_DOCDIR}/gallery/README_for_RubyPhoto.html
-@dirrm ${RUBY_DOCDIR}/gallery
 ${RUBY_EXAMPLESDIR}/gallery/album.xml.en
 ${RUBY_EXAMPLESDIR}/gallery/album.xml.ja
 ${RUBY_EXAMPLESDIR}/gallery/counter.rb
@@ -102,7 +89,6 @@ ${RUBY_EXAMPLESDIR}/gallery/css/gallery.css
 ${RUBY_EXAMPLESDIR}/gallery/css/gallery_admin.css
 ${RUBY_EXAMPLESDIR}/gallery/css/gallery_base.css
 ${RUBY_EXAMPLESDIR}/gallery/css/rubyphoto.css
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/css
 ${RUBY_EXAMPLESDIR}/gallery/dot.forward
 ${RUBY_EXAMPLESDIR}/gallery/dot.htaccess
 ${RUBY_EXAMPLESDIR}/gallery/dot.rubyphoto-ignore
@@ -116,7 +102,6 @@ ${RUBY_EXAMPLESDIR}/gallery/images/granitesm_top.gif
 ${RUBY_EXAMPLESDIR}/gallery/images/granitesm_up.gif
 ${RUBY_EXAMPLESDIR}/gallery/images/powered_by_cozmixng.png.en
 ${RUBY_EXAMPLESDIR}/gallery/images/powered_by_cozmixng.png.ja
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/images
 ${RUBY_EXAMPLESDIR}/gallery/initgallery.rb
 ${RUBY_EXAMPLESDIR}/gallery/mail.conf
 ${RUBY_EXAMPLESDIR}/gallery/scripts/set_focus.js
@@ -124,68 +109,52 @@ ${RUBY_EXAMPLESDIR}/gallery/scripts/theme_changer.js
 ${RUBY_EXAMPLESDIR}/gallery/scripts/theme_changer_form.js
 ${RUBY_EXAMPLESDIR}/gallery/scripts/user_level.js
 ${RUBY_EXAMPLESDIR}/gallery/scripts/utils.js
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/scripts
 ${RUBY_EXAMPLESDIR}/gallery/templates/.en/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.en/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.en/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.en/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.en/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/.en
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/.ja.i
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/.ja/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/.ja
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/theme.en
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/theme.ja
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en.art/.photo.html
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en.art/flash_art.html.en
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en.art/zphoto.css
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en.art
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en/.photo.html
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en/flash.html.en
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en/zphoto.css
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.en
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja.art/.photo.html
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja.art/flash_art.html.ja.utf8
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja.art/zphoto.css
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja.art
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja/.photo.html
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja/flash.html.ja.utf8
 ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja/zphoto.css
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates/zphoto.ja
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates2/default1.en
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en/album.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en/config.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en/image.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en/shared.xml
 ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en/tree.xml
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates2/default2.en
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/templates2
 ${RUBY_EXAMPLESDIR}/gallery/interface/admin.rb
 ${RUBY_EXAMPLESDIR}/gallery/interface/mail_admin.rb
-@dirrm ${RUBY_EXAMPLESDIR}/gallery/interface
-@dirrm ${RUBY_EXAMPLESDIR}/gallery

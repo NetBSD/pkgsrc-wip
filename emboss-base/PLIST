@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/14 10:33:15 splitscreen Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:34 thomasklausner Exp $
 bin/aaindexextract
 bin/abiview
 bin/acdc
@@ -1444,28 +1444,3 @@ share/EMBOSS/test/wormpep/des.trg
 share/EMBOSS/test/wormpep/division.lkp
 share/EMBOSS/test/wormpep/entrynam.idx
 share/EMBOSS/test/wormpep/wormpep
-@dirrm share/EMBOSS/test/wormpep
-@dirrm share/EMBOSS/test/swnew
-@dirrm share/EMBOSS/test/swiss
-@dirrm share/EMBOSS/test/pir
-@dirrm share/EMBOSS/test/genbank
-@dirrm share/EMBOSS/test/gb
-@dirrm share/EMBOSS/test/embl
-@dirrm share/EMBOSS/test/data
-@dirrm share/EMBOSS/test
-@dirrm share/EMBOSS/scripts
-@dirrm share/EMBOSS/doc/tutorials
-@dirrm share/EMBOSS/doc/programs/text
-@dirrm share/EMBOSS/doc/programs/html
-@dirrm share/EMBOSS/doc/programs
-@dirrm share/EMBOSS/doc/manuals
-@dirrm share/EMBOSS/doc
-@dirrm share/EMBOSS/data/REBASE
-@dirrm share/EMBOSS/data/PROSITE
-@dirrm share/EMBOSS/data/PRINTS
-@dirrm share/EMBOSS/data/CODONS
-@dirrm share/EMBOSS/data/AAINDEX
-@dirrm share/EMBOSS/data
-@dirrm share/EMBOSS/acd
-@dirrm share/EMBOSS
-@dirrm include/emboss

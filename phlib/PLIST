@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/05 18:44:24 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 include/phlib/xl_assert.h
 include/phlib/xl_base64_decode.h
 include/phlib/xl_base64_encode.h
@@ -27,4 +27,3 @@ lib/libpxtra.a.${PKGVERSION}
 lib/libpxtra.so
 lib/libpxtra.so.1
 lib/libpxtra.so.${PKGVERSION}
-@dirrm include/phlib

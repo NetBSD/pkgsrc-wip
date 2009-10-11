@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/03 08:48:56 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:27 thomasklausner Exp $
 sbin/zabbix_agent
 sbin/zabbix_agentd
 sbin/zabbix_get
@@ -246,30 +246,3 @@ share/zabbix/upgrades/Makefile.in
 share/zabbix/upgrades/dbpatches/1.4/mysql/patch.sql
 share/zabbix/upgrades/dbpatches/1.4/oracle/patch.sql
 share/zabbix/upgrades/dbpatches/1.4/postgresql/patch.sql
-@dirrm share/zabbix/upgrades/dbpatches/1.4/postgresql
-@dirrm share/zabbix/upgrades/dbpatches/1.4/oracle
-@dirrm share/zabbix/upgrades/dbpatches/1.4/mysql
-@dirrm share/zabbix/upgrades/dbpatches/1.4
-@dirrm share/zabbix/upgrades/dbpatches
-@dirrm share/zabbix/upgrades
-@dirrm share/zabbix/schema
-@dirrm share/zabbix/frontends/php/js
-@dirrm share/zabbix/frontends/php/include/locales
-@dirrm share/zabbix/frontends/php/include/classes
-@dirrm share/zabbix/frontends/php/include
-@dirrm share/zabbix/frontends/php/images/sysmaps/old
-@dirrm share/zabbix/frontends/php/images/sysmaps
-@dirrm share/zabbix/frontends/php/images/gradients
-@dirrm share/zabbix/frontends/php/images/general/tree
-@dirrm share/zabbix/frontends/php/images/general
-@dirrm share/zabbix/frontends/php/images/flash
-@dirrm share/zabbix/frontends/php/images
-@dirrm share/zabbix/frontends/php/create
-@dirrm share/zabbix/frontends/php/conf
-@dirrm share/zabbix/frontends/php/audio
-@dirrm share/zabbix/frontends/php
-@dirrm share/zabbix/frontends
-@dirrm share/zabbix/data
-@dirrm share/zabbix
-@dirrm share/examples/zabbix
-@dirrm share/doc/zabbix

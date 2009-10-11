@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/03 01:40:54 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
 include/sidplay/Buffer.h
 include/sidplay/SidTune.h
 include/sidplay/SmartPtr.h
@@ -15,4 +15,3 @@ include/sidplay/sidtypes.h
 include/sidplay/sidusage.h
 lib/libsidplay2.la
 lib/pkgconfig/libsidplay2.pc
-@dirrm include/sidplay

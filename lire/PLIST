@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/18 22:01:46 airhead Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 bin/lire
 bin/lr_anondump
 bin/lr_anonymize
@@ -975,76 +975,7 @@ share/perl5/LocaleData/fr/LC_MESSAGES/lire.mo
 share/perl5/LocaleData/nl/LC_MESSAGES/lire.mo
 share/perl5/Time/Timezone.pm
 @exec ${MKDIR} %D/var/spool/lire
-@dirrm var/spool/lire
 @exec ${MKDIR} %D/var/lib/lire/data
-@dirrm var/lib/lire/data
-@dirrm var/lib/lire
-@dirrm share/perl5/Time
-@dirrm share/perl5/LocaleData/nl/LC_MESSAGES
-@dirrm share/perl5/LocaleData/nl
-@dirrm share/perl5/LocaleData/fr/LC_MESSAGES
-@dirrm share/perl5/LocaleData/fr
-@dirrm share/perl5/LocaleData
-@dirrm share/perl5/Lire/WWW/UserAgent
-@dirrm share/perl5/Lire/WWW/Filename
-@dirrm share/perl5/Lire/WWW/Domain
-@dirrm share/perl5/Lire/WWW
-@dirrm share/perl5/Lire/UI
-@dirrm share/perl5/Lire/Test
-@dirrm share/perl5/Lire/SQLExt
-@dirrm share/perl5/Lire/ReportParser
-@dirrm share/perl5/Lire/Report
-@dirrm share/perl5/Lire/Proxy
-@dirrm share/perl5/Lire/OutputFormats
 @exec ${MKDIR} %D/share/perl5/Lire/Msgstore
-@dirrm share/perl5/Lire/Msgstore
-@dirrm share/perl5/Lire/Firewall
-@dirrm share/perl5/Lire/FTP
-@dirrm share/perl5/Lire/DlfConverters
-@dirrm share/perl5/Lire/DlfAnalysers
-@dirrm share/perl5/Lire/Config
-@dirrm share/perl5/Lire/ChartTypes
-@dirrm share/perl5/Lire
-@dirrm share/lire/xml/dtd
-@dirrm share/lire/xml
-@dirrm share/lire/tex
-@dirrm share/lire/templates
-@dirrm share/lire/schemas
-@dirrm share/lire/reports/www
-@dirrm share/lire/reports/syslog
-@dirrm share/lire/reports/spamfilter
-@dirrm share/lire/reports/proxy
-@dirrm share/lire/reports/print
-@dirrm share/lire/reports/msgstore
-@dirrm share/lire/reports/ftp
-@dirrm share/lire/reports/firewall
-@dirrm share/lire/reports/email
-@dirrm share/lire/reports/dnszone
-@dirrm share/lire/reports/dns
-@dirrm share/lire/reports/dialup
-@dirrm share/lire/reports/database
-@dirrm share/lire/reports
-@dirrm share/lire/html
-@dirrm share/lire/filters/www
-@dirrm share/lire/filters/syslog
-@dirrm share/lire/filters/proxy
-@dirrm share/lire/filters/msgstore
-@dirrm share/lire/filters/firewall
-@dirrm share/lire/filters/email
-@dirrm share/lire/filters/dnszone
-@dirrm share/lire/filters/dns
-@dirrm share/lire/filters
-@dirrm share/lire/config-spec
-@dirrm share/lire
-@dirrm share/doc/lire/user-manual
-@dirrm share/doc/lire/examples
-@dirrm share/doc/lire/dev-manual
-@dirrm share/doc/lire
-@dirrm libexec/lire/convertors
-@dirrm libexec/lire
-@dirrm etc/lire/plugins
 @exec ${MKDIR} %D/etc/lire/converters
-@dirrm etc/lire/converters
 @exec ${MKDIR} %D/etc/lire/config
-@dirrm etc/lire/config
-@dirrm etc/lire

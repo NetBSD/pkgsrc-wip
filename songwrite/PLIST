@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 03:52:07 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
 bin/songwrite-${PYVERSSUFFIX}
 share/songwrite/__init__.py
 share/songwrite/asciitab.py
@@ -57,8 +57,3 @@ share/songwrite/stemml.py
 share/songwrite/tablature.py
 share/songwrite/ui.py
 share/songwrite/view.py
-@dirrm share/songwrite/doc/fr
-@dirrm share/songwrite/doc/en
-@dirrm share/songwrite/doc
-@dirrm share/songwrite/data
-@dirrm share/songwrite

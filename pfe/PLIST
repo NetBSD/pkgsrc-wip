@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/08/26 18:26:09 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:05 thomasklausner Exp $
 bin/pfe
 bin/pfe-config
 bin/pfe-config-forth
@@ -1497,18 +1497,4 @@ share/pfe/test/wordsets.4th
 share/pfe/test/wordsets.fs
 share/pfe/testmodule1.fs
 share/pfe/testmodule2.fs
-@dirrm share/pfe/test
-@dirrm share/pfe/lib
-@dirrm share/pfe
 @exec ${MKDIR} %D/share/info
-@dirrm share/info
-@dirrm share/doc/pfe/${PKGVERSION}/pfe-wordsets
-@dirrm share/doc/pfe/${PKGVERSION}/pfe-manual
-@dirrm share/doc/pfe/${PKGVERSION}/dpans
-@dirrm share/doc/pfe/${PKGVERSION}/4thtutor
-@dirrm share/doc/pfe/${PKGVERSION}
-@dirrm share/doc/pfe
-@dirrm lib/pfe-forth/renamed
-@dirrm lib/pfe-forth
-@dirrm lib/pfe
-@dirrm include/pfe

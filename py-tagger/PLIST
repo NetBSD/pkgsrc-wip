@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/30 12:22:56 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:11 thomasklausner Exp $
 bin/apic.py
 bin/mp3check.py
 ${PYSITELIB}/tagger/__init__.py
@@ -110,7 +110,3 @@ share/doc/html/${PKGNAME}/public/toc-tagger.id3v2frame-module.html
 share/doc/html/${PKGNAME}/public/toc-tagger.utility-module.html
 share/doc/html/${PKGNAME}/public/toc.html
 share/doc/html/${PKGNAME}/public/trees.html
-@dirrm share/doc/html/${PKGNAME}/public
-@dirrm share/doc/html/${PKGNAME}/private
-@dirrm share/doc/html/${PKGNAME}
-@dirrm ${PYSITELIB}/tagger

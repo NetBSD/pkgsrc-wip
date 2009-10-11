@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/04 13:27:25 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:12 thomasklausner Exp $
 include/wx-2.8/wx/wxPython/i_files/__init__.py
 include/wx-2.8/wx/wxPython/i_files/_about.i
 include/wx-2.8/wx/wxPython/i_files/_accel.i
@@ -1721,81 +1721,5 @@ ${PYSITELIB}/wxaddons/sized_controls.pyo
 ${PYSITELIB}/wxversion.py
 ${PYSITELIB}/wxversion.pyc
 ${PYSITELIB}/wxversion.pyo
-@dirrm ${PYSITELIB}/wxaddons
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/tools
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/lib/mixins
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/lib/editor
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/lib/colourchooser
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython/lib
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wxPython
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/XRCed/plugins/bitmaps
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/XRCed/plugins
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/XRCed/misc
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/XRCed
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/tests/syntax
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/tests
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/styles
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/src/syntax
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/src/extern
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/src/eclib
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/src/autocomp
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/src
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/plugins
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme/Tango/toolbar
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme/Tango/mime
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme/Tango/menu
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme/Tango
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme/Default
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps/theme
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/pixmaps
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/zh_CN/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/zh_CN
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/uk_UA/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/uk_UA
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/tr_TR/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/tr_TR
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/sr_YU/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/sr_YU
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/ru_RU/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/ru_RU
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/pt_BR/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/pt_BR
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/nn_NO/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/nn_NO
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/nl_NL/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/nl_NL
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/ja_JP/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/ja_JP
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/it_IT/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/it_IT
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/fr_FR/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/fr_FR
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/es_ES/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/es_ES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/en_US/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/en_US
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/de_DE/LC_MESSAGES
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale/de_DE
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/locale
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra/docs
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools/Editra
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/tools
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/py
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/ogl
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/mixins
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/masked
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/floatcanvas/Utilities
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/floatcanvas
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/editor
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/colourchooser
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/art
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/analogclock/lib_setup
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib/analogclock
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/lib
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx/build
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode/wx
-@dirrm ${PYSITELIB}/wx-2.8-gtk2-unicode
-@dirrm include/wx-2.8/wx/wxPython/i_files
-@dirrm include/wx-2.8/wx/wxPython
 @comment in wxGTK: @dirrm include/wx-2.8/wx
 @comment in wxGTK: @dirrm include/wx-2.8

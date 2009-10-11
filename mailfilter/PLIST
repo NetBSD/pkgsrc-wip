@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:35 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:55 thomasklausner Exp $
 bin/mailfilter
 man/man1/mailfilter.1
 man/man5/mailfilterex.5
@@ -12,4 +12,3 @@ share/locale/fr/LC_MESSAGES/mailfilter.mo
 share/locale/it/LC_MESSAGES/mailfilter.mo
 share/locale/pt_BR/LC_MESSAGES/mailfilter.mo
 share/locale/ru/LC_MESSAGES/mailfilter.mo
-@dirrm share/doc/mailfilter

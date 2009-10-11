@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 04:00:50 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
 bin/vis
 include/abs.h
 include/absInt.h
@@ -223,5 +223,3 @@ share/vis/script_model_check.robust
 share/vis/script_model_check.simple
 share/vis/sislib.mv
 share/vis/visdbgpp
-@dirrm share/vis/help
-@dirrm share/vis

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 17:09:31 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
 bin/webcleaner
 ${PYSITELIB}/_webcleaner2_configdata.py
 ${PYSITELIB}/_webcleaner2_configdata.pyc
@@ -211,15 +211,3 @@ ${PYSITELIB}/wc/url.pyc
 ${PYSITELIB}/wc/strtime.pyc
 ${PYSITELIB}/wc/update.pyc
 ${PYSITELIB}/wc/win32start.pyc
-@dirrm ${PYSITELIB}/wc/webgui/context
-@dirrm ${PYSITELIB}/wc/webgui/simpletal
-@dirrm ${PYSITELIB}/wc/webgui
-@dirrm ${PYSITELIB}/wc/proxy/auth
-@dirrm ${PYSITELIB}/wc/proxy/dns
-@dirrm ${PYSITELIB}/wc/proxy
-@dirrm ${PYSITELIB}/wc/magic
-@dirrm ${PYSITELIB}/wc/filter/rules
-@dirrm ${PYSITELIB}/wc/filter
-@dirrm ${PYSITELIB}/wc/parser
-@dirrm ${PYSITELIB}/wc/js
-@dirrm ${PYSITELIB}/wc

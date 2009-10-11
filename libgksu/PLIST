@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:34 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:53 thomasklausner Exp $
 include/libgksu1.2/gksu-context.h
 include/libgksu1.2/gksu.h
 lib/libgksu1.2.la
@@ -18,5 +18,3 @@ share/locale/pt_BR/LC_MESSAGES/libgksu1.2.mo
 share/locale/ro/LC_MESSAGES/libgksu1.2.mo
 share/locale/ru/LC_MESSAGES/libgksu1.2.mo
 share/locale/sk/LC_MESSAGES/libgksu1.2.mo
-@dirrm lib/libgksu1.2
-@dirrm include/libgksu1.2

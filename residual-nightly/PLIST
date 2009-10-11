@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/03 15:49:13 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 bin/residual
 share/doc/residual/AUTHORS
 share/doc/residual/COPYING.GPL
@@ -8,4 +8,3 @@ share/doc/residual/README
 share/doc/residual/TODO
 share/pixmaps/residual.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/doc/residual

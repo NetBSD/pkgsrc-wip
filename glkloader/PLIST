@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/02 17:26:58 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 include/glkloader/Make.glkloader
 include/glkloader/gi_blorb.h
 include/glkloader/gi_dispa.h
@@ -11,6 +11,3 @@ lib/libglkloader.so.0.3
 lib/libglkloader.so.0.3.2
 share/doc/glkloader/README
 share/doc/glkloader/samples/glkloaderrc
-@dirrm share/doc/glkloader/samples
-@dirrm share/doc/glkloader
-@dirrm include/glkloader

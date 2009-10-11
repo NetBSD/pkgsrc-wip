@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 09:03:12 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:57 thomasklausner Exp $
 ${EMACS_INFOPREFIX}/mmm.info-1.gz
 ${EMACS_INFOPREFIX}/mmm.info-2.gz
 ${EMACS_INFOPREFIX}/mmm.info.gz
@@ -30,4 +30,3 @@ ${EMACS_LISPPREFIX}/mmm-utils.el
 ${EMACS_LISPPREFIX}/mmm-utils.elc
 ${EMACS_LISPPREFIX}/mmm-vars.el
 ${EMACS_LISPPREFIX}/mmm-vars.elc
-@dirrm ${EMACS_LISPPREFIX}/mmm-mode

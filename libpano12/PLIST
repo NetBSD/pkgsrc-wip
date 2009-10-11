@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/27 00:04:03 kirtai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
 bin/PTOptimizer
 include/pano12/PixMap.h
 include/pano12/f2c.h
@@ -17,5 +17,3 @@ lib/libpano12.so
 share/doc/libpano12/README.linux
 share/doc/libpano12/README.mac
 share/doc/libpano12/README.windows
-@dirrm share/doc/libpano12
-@dirrm include/pano12

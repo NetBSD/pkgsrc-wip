@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/20 18:35:21 jsonn Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:25 thomasklausner Exp $
 bin/rdfproc
 bin/redland-config
 bin/redland-db-upgrade
@@ -50,12 +50,3 @@ man/man1/rdfproc.1
 man/man1/redland-config.1
 man/man1/redland-db-upgrade.1
 man/man3/redland.3
-@dirrm lib/python2p2/site-packages
-@dirrm lib/perl5/site_perl/man/man3
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RDF/Redland/CORE
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RDF/Redland
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/RDF
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/RDF/Redland
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}/RDF
-@dirrm lib/perl5/site_perl/5.6.1/${MACHINE_ARCH}-${LOWER_OPSYS}

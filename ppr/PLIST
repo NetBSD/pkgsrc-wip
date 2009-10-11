@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/06 08:58:00 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:06 thomasklausner Exp $
 bin/ppr-config
 bin/ppr-followme
 bin/ppr-index
@@ -673,52 +673,6 @@ share/ppr/www/style/prn_media.css
 share/ppr/www/style/shared.css
 share/ppr/www/style/show_jobs.css
 share/ppr/www/style/show_queues.css
-@dirrm share/ppr/www/style
-@dirrm share/ppr/www/q_icons
-@dirrm share/ppr/www/js
-@dirrm share/ppr/www/images
-@dirrm share/ppr/www/html
-@dirrm share/ppr/www/help
-@dirrm share/ppr/www/docs/refman
-@dirrm share/ppr/www/docs/pprpopup
-@dirrm share/ppr/www/docs/pprinst
-@dirrm share/ppr/www/docs/pprhack
-@dirrm share/ppr/www/docs/pprdoc
-@dirrm share/ppr/www/docs/misc
-@dirrm share/ppr/www/docs
-@dirrm share/ppr/www/clientsoft
-@dirrm share/ppr/www
 @exec ${MKDIR} %D/share/ppr/man
-@dirrm share/ppr/man
-@dirrm share/ppr/locale/ru_RU/LC_MESSAGES
-@dirrm share/ppr/locale/ru_RU
-@dirrm share/ppr/locale/fr_FR/LC_MESSAGES
-@dirrm share/ppr/locale/fr_FR
-@dirrm share/ppr/locale/de_DE/LC_MESSAGES
-@dirrm share/ppr/locale/de_DE
-@dirrm share/ppr/locale
-@dirrm share/ppr/lib
-@dirrm share/ppr/fonts
-@dirrm share/ppr/cache/procset
 @exec ${MKDIR} %D/share/ppr/cache/font
-@dirrm share/ppr/cache/font
 @exec ${MKDIR} %D/share/ppr/cache/file
-@dirrm share/ppr/cache/file
-@dirrm share/ppr/cache/encoding
-@dirrm share/ppr/cache
-@dirrm share/ppr/PPDFiles
-@dirrm share/ppr
-@dirrm share/examples/ppr/ppr
-@dirrm libexec/ppr/responders
-@dirrm libexec/ppr/lib/PrintDesk
-@dirrm libexec/ppr/lib/PPR
-@dirrm libexec/ppr/lib
-@dirrm libexec/ppr/interfaces
-@dirrm libexec/ppr/fixup
-@dirrm libexec/ppr/filters
-@dirrm libexec/ppr/editps
-@dirrm libexec/ppr/commentators
-@dirrm libexec/ppr/cgi-bin
-@dirrm libexec/ppr/browsers
-@dirrm libexec/ppr/bin
-@dirrm libexec/ppr

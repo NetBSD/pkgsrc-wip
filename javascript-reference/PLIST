@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/27 17:37:15 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:49 thomasklausner Exp $
 share/doc/javascript-reference-1.5/classint.html
 share/doc/javascript-reference-1.5/array.html
 share/doc/javascript-reference-1.5/boolean.html
@@ -35,4 +35,3 @@ share/doc/javascript-reference-1.5/stmt.html
 share/doc/javascript-reference-1.5/string.html
 share/doc/javascript-reference-1.5/sun.html
 share/doc/javascript-reference-1.5/toplev.html
-@dirrm share/doc/javascript-reference-1.5

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/20 06:15:58 marmfield Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:51 thomasklausner Exp $
 bin/lbe
 lib/ldapbrowser/CHANGES.TXT
 lib/ldapbrowser/LICENSE.ICONS
@@ -29,8 +29,3 @@ lib/ldapbrowser/templates/person.template
 lib/ldapbrowser/templates/templates.config
 lib/ldapbrowser/uofmichigan.cfg
 lib/ldapbrowser/uofmichigan.cfg.sample
-@dirrm lib/ldapbrowser/templates
-@dirrm lib/ldapbrowser/lib
-@dirrm lib/ldapbrowser/help
-@dirrm lib/ldapbrowser/applet
-@dirrm lib/ldapbrowser

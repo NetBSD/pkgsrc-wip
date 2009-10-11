@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/24 14:05:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/HijriApplet
 ${PYSITELIB}/HijriCal.py
 ${PYSITELIB}/HijriCal.pyc
@@ -8,5 +8,4 @@ ${PYSITELIB}/hijri.pyc
 ${PYSITELIB}/hijri.pyo
 share/applications/hijra-autostart.desktop
 share/doc/hijra-python/readme-ar.html
-@dirrm share/doc/hijra-python
 @comment in xdg-dirs: @dirrm share/applications

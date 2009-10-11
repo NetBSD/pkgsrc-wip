@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/02 00:10:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:07 thomasklausner Exp $
 ${PYSITELIB}/editobj2/__init__.pyc
 ${PYSITELIB}/editobj2/__init__.pyo
 ${PYSITELIB}/editobj2/editor.pyc
@@ -31,4 +31,3 @@ ${PYSITELIB}/editobj2/treewidget.pyc
 ${PYSITELIB}/editobj2/treewidget.pyo
 ${PYSITELIB}/editobj2/undoredo.pyc
 ${PYSITELIB}/editobj2/undoredo.pyo
-@dirrm ${PYSITELIB}/editobj2

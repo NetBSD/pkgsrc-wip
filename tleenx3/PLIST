@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/19 19:17:46 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/tleenx3
 share/tleenx3/pixmaps/away.png
 share/tleenx3/pixmaps/beback.png
@@ -27,5 +27,3 @@ share/tleenx3/pixmaps/tleenx-logo.png
 share/tleenx3/pixmaps/tleenx.png
 share/tleenx3/pixmaps/tleenx_dol.png
 share/tleenx3/pixmaps/wizytowka.png
-@dirrm share/tleenx3/pixmaps
-@dirrm share/tleenx3

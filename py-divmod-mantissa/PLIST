@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/22 21:02:42 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/build/lib/xmantissa/product.py
 ${PYSITELIB}/build/lib/xmantissa/people.py
 ${PYSITELIB}/build/lib/xmantissa/_webidgen.py
@@ -920,27 +920,3 @@ ${PYSITELIB}/xmantissa/website.pyc
 ${PYSITELIB}/xmantissa/website.pyo
 ${PYSITELIB}/xmantissa/webtheme.pyc
 ${PYSITELIB}/xmantissa/webtheme.pyo
-@dirrm ${PYSITELIB}/xmantissa/themes/base
-@dirrm ${PYSITELIB}/xmantissa/themes
-@dirrm ${PYSITELIB}/xmantissa/test/resources
-@dirrm ${PYSITELIB}/xmantissa/test/historic
-@dirrm ${PYSITELIB}/xmantissa/test
-@dirrm ${PYSITELIB}/xmantissa/static/js/PlotKit
-@dirrm ${PYSITELIB}/xmantissa/static/js
-@dirrm ${PYSITELIB}/xmantissa/static/images
-@dirrm ${PYSITELIB}/xmantissa/static
-@dirrm ${PYSITELIB}/xmantissa/plugins
-@dirrm ${PYSITELIB}/xmantissa/js/PlotKit
-@dirrm ${PYSITELIB}/xmantissa/js/MochiKit
-@dirrm ${PYSITELIB}/xmantissa/js/Mantissa/Test
-@dirrm ${PYSITELIB}/xmantissa/js/Mantissa
-@dirrm ${PYSITELIB}/xmantissa/js
-@dirrm ${PYSITELIB}/xmantissa/benchmarks
-@dirrm ${PYSITELIB}/xmantissa
-@dirrm ${PYSITELIB}/nevow/plugins
-@dirrm ${PYSITELIB}/build/lib/xmantissa/test/historic
-@dirrm ${PYSITELIB}/build/lib/xmantissa/test
-@dirrm ${PYSITELIB}/build/lib/xmantissa/plugins
-@dirrm ${PYSITELIB}/build/lib/xmantissa
-@dirrm ${PYSITELIB}/build/lib
-@dirrm ${PYSITELIB}/axiom/plugins

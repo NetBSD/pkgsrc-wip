@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/28 01:46:47 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 @comment In teTeX-texmf: ${PKG_LOCALTEXMFPREFIX}/fonts/map/fontname/special.map
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi/gothic/gothic01.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi/gothic/gothic02.tfm
@@ -61,9 +61,5 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi/mincho/mincho31.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/kochi/gothic.ttf
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/kochi/mincho.ttf
 @comment In ttf2pk: ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/kochi
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi/mincho
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/kochi
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm

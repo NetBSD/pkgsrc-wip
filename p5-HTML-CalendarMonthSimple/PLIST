@@ -1,9 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/20 18:35:21 jsonn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:04 thomasklausner Exp $
 lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML/CalendarMonthSimple/.packlist
 lib/perl5/vendor_perl/man/man3/HTML::CalendarMonthSimple.3
-@dirrm lib/perl5/vendor_perl/man/man3
-@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML/CalendarMonthSimple
-@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/HTML
-@dirrm lib/perl5/vendor_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto
-@dirrm lib/perl5/vendor_perl/5.8.0/HTML
-@dirrm lib/perl5/vendor_perl/5.8.0

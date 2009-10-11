@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/28 23:47:36 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 bin/freej
 doc/FreeJ-${PKGVERSION}/API
 doc/FreeJ-${PKGVERSION}/AUTHORS
@@ -30,7 +30,3 @@ lib/freej/water.la
 man/man1/freej.1
 share/freej/freej-gtk2.glade
 share/freej/ipernav.png
-@dirrm share/freej
-@dirrm lib/freej
-@dirrm doc/FreeJ-${PKGVERSION}
-@dirrm doc

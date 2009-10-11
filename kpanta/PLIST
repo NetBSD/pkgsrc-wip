@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
 bin/kpanta
 share/applnk/Games/kpanta.desktop
 share/apps/kpanta/kpantaui.rc
@@ -59,7 +59,3 @@ share/doc/HTML/en/kpanta/index.cache.bz2
 share/doc/HTML/en/kpanta/index.docbook
 share/icons/locolor/16x16/apps/kpanta.png
 share/icons/locolor/32x32/apps/kpanta.png
-@dirrm share/doc/HTML/en/kpanta
-@dirrm share/apps/kpanta/pics/pics0
-@dirrm share/apps/kpanta/pics
-@dirrm share/apps/kpanta

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/03 15:22:17 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:13 thomasklausner Exp $
 ${QCC}bin/qcc
 bin/qctl
 man/man8/qcc.8
@@ -7,4 +7,3 @@ man/man8/qico.8
 sbin/qico
 share/examples/qico/qico.conf
 share/examples/rc.d/qico
-@dirrm share/examples/qico

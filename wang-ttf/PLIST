@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/05 07:58:47 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
 lib/X11/fonts/TTF/WCL-01.ttf
 lib/X11/fonts/TTF/WCL-02.ttf
 lib/X11/fonts/TTF/WCL-03.ttf
@@ -44,4 +44,3 @@ lib/X11/fonts/TTF/wts55.ttf
 share/doc/wang-ttf/Changes-WCL.txt
 share/doc/wang-ttf/Changes.txt
 share/doc/wang-ttf/README.b5
-@dirrm share/doc/wang-ttf

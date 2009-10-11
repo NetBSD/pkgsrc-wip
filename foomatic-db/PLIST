@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/14 11:13:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:37 thomasklausner Exp $
 share/foomatic/db/oldprinterids
 share/foomatic/db/source/driver/PM760p.upp.xml
 share/foomatic/db/source/driver/PM760pl.upp.xml
@@ -2434,9 +2434,3 @@ share/foomatic/db/source/printer/Xerox-WorkCentre_XD120f.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XE80.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XE90fx.xml
 share/foomatic/db/source/printer/Xerox-WorkCentre_XK35c.xml
-@dirrm share/foomatic/db/source/driver
-@dirrm share/foomatic/db/source/opt
-@dirrm share/foomatic/db/source/printer
-@dirrm share/foomatic/db/source
-@dirrm share/foomatic/db
-@dirrm share/foomatic

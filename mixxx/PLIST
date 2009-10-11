@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/12 19:34:47 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:57 thomasklausner Exp $
 bin/mixxx
 share/doc/mixxx-1.3/COPYING
 share/doc/mixxx-1.3/LICENSE
@@ -1123,12 +1123,3 @@ share/mixxx/skins/traditional/zpet3.png
 share/mixxx/skins/traditional/zpet4.png
 share/mixxx/skins/traditional/zpet5.png
 share/mixxx/skins/traditional/zpetback.png
-@dirrm share/mixxx/skins/traditional
-@dirrm share/mixxx/skins/outlineSmall
-@dirrm share/mixxx/skins/outlineClose
-@dirrm share/mixxx/skins/outline
-@dirrm share/mixxx/skins
-@dirrm share/mixxx/midi
-@dirrm share/mixxx/keyboard
-@dirrm share/mixxx
-@dirrm share/doc/mixxx-1.3

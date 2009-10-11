@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/23 16:07:00 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:51 thomasklausner Exp $
 bin/lhs2TeX
 man/man1/lhs2TeX.1
 share/doc/${PKGNAME}/Guide2.pdf
@@ -19,8 +19,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist/lazylist.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable/polytable.sty
 share/texmf-var/ls-R
 share/texmf/ls-R
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist
-@dirrm share/lhs2tex
-@dirrm share/doc/${PKGNAME}
-@dirrm share/doc/lhs2tex

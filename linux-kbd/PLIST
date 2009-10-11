@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 bin/chvt
 bin/deallocvt
 bin/dumpkeys
@@ -573,23 +573,3 @@ share/kbd/unimaps/viscii.uni
 share/locale/es/LC_MESSAGES/kbd.mo
 share/locale/nl/LC_MESSAGES/kbd.mo
 share/locale/ru/LC_MESSAGES/kbd.mo
-@dirrm share/kbd/unimaps
-@dirrm share/kbd/keymaps/sun
-@dirrm share/kbd/keymaps/mac/include
-@dirrm share/kbd/keymaps/mac/all
-@dirrm share/kbd/keymaps/mac
-@dirrm share/kbd/keymaps/include
-@dirrm share/kbd/keymaps/i386/qwertz
-@dirrm share/kbd/keymaps/i386/qwerty
-@dirrm share/kbd/keymaps/i386/include
-@dirrm share/kbd/keymaps/i386/fgGIod
-@dirrm share/kbd/keymaps/i386/dvorak
-@dirrm share/kbd/keymaps/i386/azerty
-@dirrm share/kbd/keymaps/i386
-@dirrm share/kbd/keymaps/atari
-@dirrm share/kbd/keymaps/amiga
-@dirrm share/kbd/keymaps
-@dirrm share/kbd/consoletrans
-@dirrm share/kbd/consolefonts/partialfonts
-@dirrm share/kbd/consolefonts
-@dirrm share/kbd

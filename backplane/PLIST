@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/06 19:55:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:28 thomasklausner Exp $
 backplane/COPYRIGHT
 backplane/README
 backplane/bin/dbdate
@@ -65,21 +65,3 @@ backplane/man/man1/replicator.1
 backplane/man/man7/backplane.7
 backplane/man/man8/drd_cursor.8
 backplane/man/man8/drd_database.8
-@dirrm backplane/man/man8
-@dirrm backplane/man/man7
-@dirrm backplane/man/man1
-@dirrm backplane/man
-@dirrm backplane/log
-@dirrm backplane/lib
-@dirrm backplane/include/rdbms
-@dirrm backplane/include/libthreads
-@dirrm backplane/include/libsupport
-@dirrm backplane/include/libpclient
-@dirrm backplane/include/libnclient
-@dirrm backplane/include/libdbtypes
-@dirrm backplane/include/libdbcore
-@dirrm backplane/include/libclient
-@dirrm backplane/include
-@dirrm backplane/etc
-@dirrm backplane/docs
-@dirrm backplane/bin

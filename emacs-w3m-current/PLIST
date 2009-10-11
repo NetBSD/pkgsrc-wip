@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/08 08:03:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:34 thomasklausner Exp $
 info/emacs-w3m-ja.info
 info/emacs-w3m.info
 share/emacs/site-lisp/w3m/ChangeLog
@@ -326,4 +326,3 @@ share/emacs/site-lisp/w3m/w3m-weather.el
 share/emacs/site-lisp/w3m/w3m-weather.elc
 share/emacs/site-lisp/w3m/w3m.el
 share/emacs/site-lisp/w3m/w3m.elc
-@dirrm share/emacs/site-lisp/w3m

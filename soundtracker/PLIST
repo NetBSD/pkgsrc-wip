@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/04 00:47:10 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:19 thomasklausner Exp $
 bin/soundtracker
 share/locale/da/LC_MESSAGES/soundtracker.mo
 share/locale/de/LC_MESSAGES/soundtracker.mo
@@ -29,4 +29,3 @@ share/soundtracker/rightarrow.xpm
 share/soundtracker/sharp.xpm
 share/soundtracker/soundtracker_splash.png
 share/soundtracker/stop.xpm
-@dirrm share/soundtracker

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/13 20:03:50 grantbeattie Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 UnrealTournament-server/Help/Logo.bmp
 UnrealTournament-server/Help/ReadMe.htm
 UnrealTournament-server/Help/Unreal.ico
@@ -460,35 +460,3 @@ UnrealTournament-server/Web/plaintext/message.uhtm
 UnrealTournament-server/Web/plaintext/root.uhtm
 UnrealTournament-server/Web/root.uhtm
 UnrealTournament-server/ucc
-@dirrm UnrealTournament-server/Web/plaintext
-@dirrm UnrealTournament-server/Web/images
-@dirrm UnrealTournament-server/Web
-@dirrm UnrealTournament-server/Textures
-@dirrm UnrealTournament-server/System
-@dirrm UnrealTournament-server/Sounds
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngWorldStats/logs
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngWorldStats/bin
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngWorldStats
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/processedLogs
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/skins/custom_graphics
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/skins/Default
-@dirrm NetGamesUSA
-@dirrm Skin/custom_graphics
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/skins/Default
-@dirrm NetGamesUSA
-@dirrm Skin
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/skins
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/graphics
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/Total_Game_Stats
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/Individual_Game_Stats/Last_Game
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/Individual_Game_Stats/Highest_Score
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html/Individual_Game_Stats
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/html
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats/data
-@dirrm UnrealTournament-server/NetGamesUSA.com/ngStats
-@dirrm UnrealTournament-server/NetGamesUSA.com
-@dirrm UnrealTournament-server/Music
-@dirrm UnrealTournament-server/Maps
-@dirrm UnrealTournament-server/Logs
-@dirrm UnrealTournament-server/Help
-@dirrm UnrealTournament-server

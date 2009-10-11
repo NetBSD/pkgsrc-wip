@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/27 10:02:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:13 thomasklausner Exp $
 bin/rosegarden
 bin/rosegardensequencer
 lib/libRosegardenSequencer.la
@@ -1099,24 +1099,6 @@ share/locale/ru/LC_MESSAGES/rosegarden.mo
 @comment in kde: @dirrm share/icons/locolor/16x16/apps
 @comment in kde: @dirrm share/icons/hicolor/32x32/apps
 @comment in kde: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/rosegarden/styles
-@dirrm share/kde/apps/rosegarden/pixmaps/transport
-@dirrm share/kde/apps/rosegarden/pixmaps/toolbar
-@dirrm share/kde/apps/rosegarden/pixmaps/rg21/8
-@dirrm share/kde/apps/rosegarden/pixmaps/rg21/4
-@dirrm share/kde/apps/rosegarden/pixmaps/rg21
-@dirrm share/kde/apps/rosegarden/pixmaps/misc
-@dirrm share/kde/apps/rosegarden/pixmaps/feta/8
-@dirrm share/kde/apps/rosegarden/pixmaps/feta/6
-@dirrm share/kde/apps/rosegarden/pixmaps/feta/4
-@dirrm share/kde/apps/rosegarden/pixmaps/feta/12
-@dirrm share/kde/apps/rosegarden/pixmaps/feta/10
-@dirrm share/kde/apps/rosegarden/pixmaps/feta
-@dirrm share/kde/apps/rosegarden/pixmaps
-@dirrm share/kde/apps/rosegarden/library
-@dirrm share/kde/apps/rosegarden
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Applications
-@dirrm share/doc/kde/HTML/en/rosegarden
 @comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm lib/mcop

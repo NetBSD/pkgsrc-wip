@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/26 16:24:23 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 ${PYSITELIB}/pywm/__init__.py
 ${PYSITELIB}/pywm/__init__.pyc
 ${PYSITELIB}/pywm/__init__.pyo
@@ -36,5 +36,3 @@ ${PYSITELIB}/pywm/flwm.py
 ${PYSITELIB}/pywm/flwm.pyc
 ${PYSITELIB}/pywm/flwm.pyo
 ${PYSITELIB}/pywm/flwm_.so
-@dirrm ${PYSITELIB}/pywm/examples
-@dirrm ${PYSITELIB}/pywm

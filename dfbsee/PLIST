@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 03:13:27 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 bin/dfbsee
 man/man1/dfbsee.1
 share/DFBSee/decker.ttf
-@dirrm share/DFBSee

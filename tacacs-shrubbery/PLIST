@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/16 19:04:11 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:20 thomasklausner Exp $
 man/man3/regexp.3
 man/man5/tac_plus.conf.5
 man/man8/tac_plus.8
@@ -7,4 +7,3 @@ sbin/tac_convert
 sbin/tac_plus
 sbin/tac_pwd
 share/doc/tacacs/users_guide
-@dirrm share/doc/tacacs

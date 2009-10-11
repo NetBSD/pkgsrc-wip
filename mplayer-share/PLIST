@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/14 16:22:06 lsed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:58 thomasklausner Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/README
 share/mplayer/DOCS/de/bugreports.html
@@ -249,30 +249,4 @@ share/mplayer/DOCS/zh/users_against_developers.html
 share/mplayer/DOCS/zh/video.html
 share/mplayer/codecs.conf
 share/mplayer/input.conf
-@dirrm share/mplayer/DOCS/zh
-@dirrm share/mplayer/DOCS/xml/xsl
-@dirrm share/mplayer/DOCS/xml/ru
-@dirrm share/mplayer/DOCS/xml/pl
-@dirrm share/mplayer/DOCS/xml/hu
-@dirrm share/mplayer/DOCS/xml/fr
-@dirrm share/mplayer/DOCS/xml/es
-@dirrm share/mplayer/DOCS/xml/en
-@dirrm share/mplayer/DOCS/xml/cs
-@dirrm share/mplayer/DOCS/xml
-@dirrm share/mplayer/DOCS/tech/realcodecs
-@dirrm share/mplayer/DOCS/tech
-@dirrm share/mplayer/DOCS/man/zh
-@dirrm share/mplayer/DOCS/man/sv
-@dirrm share/mplayer/DOCS/man/pl
-@dirrm share/mplayer/DOCS/man/it
-@dirrm share/mplayer/DOCS/man/hu
-@dirrm share/mplayer/DOCS/man/fr
-@dirrm share/mplayer/DOCS/man/es
-@dirrm share/mplayer/DOCS/man/en
-@dirrm share/mplayer/DOCS/man/de
-@dirrm share/mplayer/DOCS/man/cs
-@dirrm share/mplayer/DOCS/man
-@dirrm share/mplayer/DOCS/it
-@dirrm share/mplayer/DOCS/de
-@dirrm share/mplayer/DOCS
 @comment in mplayer-fonts: @dirrm share/mplayer

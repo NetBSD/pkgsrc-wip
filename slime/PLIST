@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/19 07:35:40 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 ${EMACS_INFOPREFIX}/slime.info
 ${EMACS_LISPPREFIX}/slime/ChangeLog
 ${EMACS_LISPPREFIX}/slime/bridge.el
@@ -30,4 +30,3 @@ ${EMACS_LISPPREFIX}/slime/swank.lisp
 ${EMACS_LISPPREFIX}/slime/tree-widget.el
 ${EMACS_LISPPREFIX}/slime/tree-widget.elc
 ${EMACS_LISPPREFIX}/slime/xref.lisp
-@dirrm ${EMACS_LISPPREFIX}/slime

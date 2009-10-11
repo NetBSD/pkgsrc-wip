@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 00:23:25 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
 bin/ile.pl
 share/doc/ile/COPYING
 share/doc/ile/README.html
 share/doc/ile/style.css
 share/examples/ile/ile.xml
-@dirrm share/examples/ile
-@dirrm share/doc/ile

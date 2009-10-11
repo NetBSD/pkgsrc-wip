@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.freebsd-i386,v 1.2 2007/09/04 17:00:46 ghen Exp $
+@comment $NetBSD: PLIST.freebsd-i386,v 1.3 2009/10/11 10:45:03 thomasklausner Exp $
 bin/opera
 man/man1/opera.1
 share/doc/opera/LICENSE
@@ -115,17 +115,5 @@ share/opera/styles/user/textonly.css
 share/opera/styles/user/userstyle.ini
 share/opera/styles/wml.css
 share/opera/styles/OPF.css
-@dirrm share/doc/opera
-@dirrm share/opera/styles/user
-@dirrm share/opera/styles
-@dirrm share/opera/skin
 @comment @dirrm share/opera/plugins
-@dirrm share/opera/locale/en
-@dirrm share/opera/locale
-@dirrm share/opera/java
-@dirrm share/opera/ini
-@dirrm share/opera/images
-@dirrm share/opera/help
-@dirrm share/opera/config
-@dirrm share/opera/bin
 @comment @dirrm share/opera

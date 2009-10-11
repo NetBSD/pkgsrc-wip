@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/11 12:33:16 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:41 thomasklausner Exp $
 bin/grisbi
 man/man1/grisbi.1
 share/applications/grisbi.desktop
@@ -54,13 +54,7 @@ share/pixmaps/grisbi/payment-methods.png
 share/pixmaps/grisbi/reconciliation.png
 share/pixmaps/grisbi/transaction-list.png
 share/pixmaps/grisbi/warnings.png
-@dirrm share/pixmaps/grisbi
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in xdg-dirs: @dirrm share/mime-info
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/grisbi/help/fr
-@dirrm share/doc/grisbi/help/de
-@dirrm share/doc/grisbi/help/C
-@dirrm share/doc/grisbi/help
-@dirrm share/doc/grisbi
 @comment in xdg-dirs: @dirrm share/applications

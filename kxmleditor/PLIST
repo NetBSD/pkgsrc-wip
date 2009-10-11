@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/27 10:02:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:50 thomasklausner Exp $
 bin/kxmleditor
 lib/libkxmleditorpart.la
 share/doc/kde/HTML/en/kxmleditor/common
@@ -98,17 +98,3 @@ share/kde/apps/kxmleditor/pics/xml_procinstr_b.png
 share/kde/apps/kxmleditor/pics/xml_text.png
 share/kde/apps/kxmleditor/pics/xml_text_b.png
 share/kde/services/kxmleditorpart.desktop
-@dirrm share/kde/apps/kxmleditor/pics
-@dirrm share/kde/apps/kxmleditor/icons/locolor/16x16/actions
-@dirrm share/kde/apps/kxmleditor/icons/locolor/16x16
-@dirrm share/kde/apps/kxmleditor/icons/locolor
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/32x32
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/22x22
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kxmleditor/icons/hicolor/16x16
-@dirrm share/kde/apps/kxmleditor/icons/hicolor
-@dirrm share/kde/apps/kxmleditor/icons
-@dirrm share/kde/apps/kxmleditor
-@dirrm share/doc/kde/HTML/en/kxmleditor

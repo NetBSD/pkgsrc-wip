@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/22 21:00:27 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/build/lib/epsilon/structlike.py
 ${PYSITELIB}/build/lib/epsilon/extime.py
 ${PYSITELIB}/build/lib/epsilon/modal.py
@@ -240,13 +240,3 @@ ${PYSITELIB}/epsilon/test/utils.pyc
 ${PYSITELIB}/epsilon/test/utils.pyo
 ${PYSITELIB}/epsilon/unrepr.pyc
 ${PYSITELIB}/epsilon/unrepr.pyo
-@dirrm ${PYSITELIB}/epsilon/test
-@dirrm ${PYSITELIB}/epsilon/scripts
-@dirrm ${PYSITELIB}/epsilon/hotfixes
-@dirrm ${PYSITELIB}/epsilon
-@dirrm ${PYSITELIB}/build/lib/epsilon/test
-@dirrm ${PYSITELIB}/build/lib/epsilon/scripts
-@dirrm ${PYSITELIB}/build/lib/epsilon/hotfixes
-@dirrm ${PYSITELIB}/build/lib/epsilon
-@dirrm ${PYSITELIB}/build/lib
-@dirrm ${PYSITELIB}/build

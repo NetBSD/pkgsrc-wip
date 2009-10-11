@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/14 01:32:24 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:29 thomasklausner Exp $
 bin/bastard
 bin/bdbdump
 bin/bobjdump
@@ -229,34 +229,6 @@ share/bastard/utils/op-conv.pl
 share/bastard/utils/sig_gen.sh
 share/bastard/utils/tyexport
 share/bastard/utils/tyimport
-@dirrm share/bastard/utils
-@dirrm share/bastard/scripts/macros
-@dirrm share/bastard/scripts
 @exec ${MKDIR} %D/share/bastard/plugins/signatures
-@dirrm share/bastard/plugins/signatures
-@dirrm share/bastard/plugins
-@dirrm share/bastard/os
-@dirrm share/bastard/lang
-@dirrm share/bastard/formats
-@dirrm share/bastard/engines/disasm.full
-@dirrm share/bastard/engines
-@dirrm share/bastard/doc/man
-@dirrm share/bastard/doc
-@dirrm share/bastard/db
-@dirrm share/bastard/comp
-@dirrm share/bastard/asm
-@dirrm share/bastard/arch
-@dirrm share/bastard/.license
-@dirrm share/bastard
-@dirrm include/bastard/script/eic/sys
 @exec ${MKDIR} %D/include/bastard/script/eic/module
-@dirrm include/bastard/script/eic/module
-@dirrm include/bastard/script/eic
-@dirrm include/bastard/script
 @exec ${MKDIR} %D/include/bastard/module
-@dirrm include/bastard/module
-@dirrm include/bastard/extensions
-@dirrm include/bastard/db
-@dirrm include/bastard/cli
-@dirrm include/bastard/api
-@dirrm include/bastard

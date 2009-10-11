@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.cairo,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.cairo,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HScairo.o
 lib/gtk2hs/cairo.package.conf
 lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo.hi
@@ -19,11 +19,3 @@ lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Internal/Utilities.hi
 lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Matrix.hi
 lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Types.hi
 lib/gtk2hs/libHScairo.a
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Internal/Surfaces
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Internal/Fonts
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Internal/Drawing
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo/Internal
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering/Cairo
-@dirrm lib/gtk2hs/imports/cairo/Graphics/Rendering
-@dirrm lib/gtk2hs/imports/cairo/Graphics
-@dirrm lib/gtk2hs/imports/cairo

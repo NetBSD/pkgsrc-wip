@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/30 14:06:45 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
 bin/wings
 lib/erlang/lib/${PKGNAME}/AUTHORS
 lib/erlang/lib/${PKGNAME}/README
@@ -283,32 +283,7 @@ lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/primitives/wpc_tt.beam
 lib/erlang/lib/${PKGNAME}/license.terms
 lib/erlang/lib/${PKGNAME}/vsn.mk
 lib/erlang/lib/${PKGNAME}/wings
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/primitives
 @exec ${MKDIR} %D/lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/jpeg
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/jpeg
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/import_export
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/fonts
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/default
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/commands
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/autouv
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins/accel
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/plugins
 @exec ${MKDIR} %D/lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/patches
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/patches
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/${PKGNAME}
-@dirrm lib/erlang/lib/${PKGNAME}/lib/stdlib-1.13.11/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/stdlib-1.13.11
-@dirrm lib/erlang/lib/${PKGNAME}/lib/kernel-2.10.12/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/kernel-2.10.12
-@dirrm lib/erlang/lib/${PKGNAME}/lib/esdl-0.95.0630/priv
-@dirrm lib/erlang/lib/${PKGNAME}/lib/esdl-0.95.0630/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/esdl-0.95.0630
 @exec ${MKDIR} %D/lib/erlang/lib/${PKGNAME}/lib/bullshit/priv
-@dirrm lib/erlang/lib/${PKGNAME}/lib/bullshit/priv
 @exec ${MKDIR} %D/lib/erlang/lib/${PKGNAME}/lib/bullshit/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/bullshit/ebin
-@dirrm lib/erlang/lib/${PKGNAME}/lib/bullshit
-@dirrm lib/erlang/lib/${PKGNAME}/lib
-@dirrm lib/erlang/lib/${PKGNAME}/bin
-@dirrm lib/erlang/lib/${PKGNAME}

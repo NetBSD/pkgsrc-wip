@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/14 17:59:53 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:41 thomasklausner Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -679,19 +679,3 @@ share/gromacs/tutor/water/grompp.mdp
 share/gromacs/tutor/water/index.ndx
 share/gromacs/tutor/water/spc216.pdb
 share/gromacs/tutor/water/topol.top
-@dirrm share/gromacs/tutor/water
-@dirrm share/gromacs/tutor/speptide
-@dirrm share/gromacs/tutor/nmr2
-@dirrm share/gromacs/tutor/nmr1
-@dirrm share/gromacs/tutor/mixed
-@dirrm share/gromacs/tutor/methanol
-@dirrm share/gromacs/tutor/gmxdemo
-@dirrm share/gromacs/tutor
-@dirrm share/gromacs/top
-@dirrm share/gromacs/template
-@dirrm share/gromacs/html/online
-@dirrm share/gromacs/html/images
-@dirrm share/gromacs/html
-@dirrm share/gromacs
-@dirrm include/gromacs/types
-@dirrm include/gromacs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/06 20:22:42 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/spark.py
 share/py-spark/doc/doc.html
 share/py-spark/doc/doc.tex
@@ -21,9 +21,3 @@ share/py-spark/examples/python/main.py
 share/py-spark/examples/python/parse.py
 share/py-spark/examples/python/scan.py
 share/py-spark/examples/python/spark.py
-@dirrm share/py-spark/examples/python
-@dirrm share/py-spark/examples/paper
-@dirrm share/py-spark/examples/auto
-@dirrm share/py-spark/examples
-@dirrm share/py-spark/doc
-@dirrm share/py-spark/

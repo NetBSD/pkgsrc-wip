@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/23 00:02:29 lexort Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 bin/geotifcp
 bin/listgeo
 include/cpl_serv.h
@@ -51,4 +51,3 @@ share/epsg_csv/projop_wparm.csv
 share/epsg_csv/stateplane.csv
 share/epsg_csv/unit_of_measure.csv
 share/epsg_csv/version_history.csv
-@dirrm share/epsg_csv

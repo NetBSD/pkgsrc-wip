@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/12 19:44:29 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
 bin/expn
 bin/pawd
 info/am-utils.info
@@ -50,5 +50,3 @@ share/doc/am-utils/README.y2k
 share/examples/am-utils/amd.conf
 share/examples/am-utils/lostaltmail.conf
 share/examples/rc.d/amd-pkgsrc
-@dirrm share/doc/am-utils
-@dirrm share/examples/am-utils

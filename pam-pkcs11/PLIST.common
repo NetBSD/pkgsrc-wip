@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2005/11/24 13:42:36 udontknow Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 bin/make_hash_link.sh
 bin/pkcs11_eventmgr
 bin/pkcs11_inspect
@@ -18,5 +18,3 @@ share/examples/pam-pkcs11/pam.d_login.example
 share/examples/pam-pkcs11/pam_pkcs11.conf.example
 share/examples/pam-pkcs11/pkcs11_eventmgr.conf.example
 share/examples/pam-pkcs11/subject_mapping.example
-@dirrm share/examples/pam-pkcs11
-@dirrm lib/pam_pkcs11

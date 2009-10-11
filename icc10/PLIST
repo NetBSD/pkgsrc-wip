@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/03 21:50:51 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:46 thomasklausner Exp $
 ${ICC_SUBPREFIX}/bin/codecov
 ${ICC_SUBPREFIX}/bin/icc
 ${ICC_SUBPREFIX}/bin/icc.cfg
@@ -2373,80 +2373,9 @@ ${ICC_SUBPREFIX}/samples/pgo_samples/pgotools_sample.c
 ${ICC_SUBPREFIX}/samples/samples.htm
 ${ICC_SUBPREFIX}/samples/vec_samples/novec_sample.c
 ${ICC_SUBPREFIX}/samples/vec_samples/vec_sample.c
-@dirrm ${ICC_SUBPREFIX}/samples/vec_samples
-@dirrm ${ICC_SUBPREFIX}/samples/pgo_samples
-@dirrm ${ICC_SUBPREFIX}/samples/optimize
-@dirrm ${ICC_SUBPREFIX}/samples/openmp_samples
-@dirrm ${ICC_SUBPREFIX}/samples/ipo_samples
-@dirrm ${ICC_SUBPREFIX}/samples/intrinsic_samples
-@dirrm ${ICC_SUBPREFIX}/samples/cluster
-@dirrm ${ICC_SUBPREFIX}/samples
-@dirrm ${ICC_SUBPREFIX}/man/man1
-@dirrm ${ICC_SUBPREFIX}/man
-@dirrm ${ICC_SUBPREFIX}/licenses
-@dirrm ${ICC_SUBPREFIX}/lib/locale/en_US
-@dirrm ${ICC_SUBPREFIX}/lib/locale
-@dirrm ${ICC_SUBPREFIX}/lib
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/common
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/ccp
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/optaps_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/windows
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/linux
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/common
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/intref_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/common
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/fpops_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/linux
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/common
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/cref_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/common_options
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/common_content
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/ccpp_options
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/copts_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/whxdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/whgdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/whdata
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/css
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/cppug_ccl
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/common
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls/art
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects/bldaps_cls
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls/mergedProjects
-@dirrm ${ICC_SUBPREFIX}/doc/main_cls
-@dirrm ${ICC_SUBPREFIX}/doc
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/tools
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples/Fortran
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples/C
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/examples
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp/docs
 ${PLIST.amd64}@dirrm ${ICC_SUBPREFIX}/cluster_omp
-@dirrm ${ICC_SUBPREFIX}/bin
-@dirrm ${ICC_SUBPREFIX}

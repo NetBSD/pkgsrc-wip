@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/08 13:15:13 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:57 thomasklausner Exp $
 bin/mirage
 ${PYSITELIB}/imgfuncs.so
 ${PYSITELIB}/mirage.pyc
@@ -24,4 +24,3 @@ share/mirage/stock_fullscreen.png
 share/mirage/stock_leave-fullscreen.png
 share/mirage/stock_shuffle.png
 share/pixmaps/mirage.png
-@dirrm share/mirage

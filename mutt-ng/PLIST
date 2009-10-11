@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/18 00:46:36 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:58 thomasklausner Exp $
 bin/fleang
 bin/muttng
 bin/muttngbug
@@ -93,7 +93,3 @@ share/locale/tr/LC_MESSAGES/muttng.mo
 share/locale/uk/LC_MESSAGES/muttng.mo
 share/locale/zh_CN/LC_MESSAGES/muttng.mo
 share/locale/zh_TW/LC_MESSAGES/muttng.mo
-@dirrm share/doc/muttng/samples/iconv
-@dirrm share/doc/muttng/samples
-@dirrm share/doc/muttng/html
-@dirrm share/doc/muttng

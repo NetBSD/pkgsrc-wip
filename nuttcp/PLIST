@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/24 15:42:29 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 bin/nuttcp
 ${PKGMANDIR}/man8/nuttcp.8
 share/doc/${PKGBASE}/README
 share/doc/${PKGBASE}/examples.txt
 share/doc/${PKGBASE}/nuttcp.html
-@dirrm share/doc/${PKGBASE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:55 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:59 thomasklausner Exp $
 bin/netlogd
 bin/perfclient
 include/QUANTA/QUANTA.hxx
@@ -148,67 +148,3 @@ share/QUANTA/demos/threads/mutex/mutex_demo
 share/QUANTA/demos/threads/threads/doc/README.html
 share/QUANTA/demos/threads/threads/simple_thread_test
 share/QUANTA/demos/threads/threads/thread_test
-@dirrm share/QUANTA/demos/threads/threads/doc
-@dirrm share/QUANTA/demos/threads/threads
-@dirrm share/QUANTA/demos/threads/mutex/doc
-@dirrm share/QUANTA/demos/threads/mutex
-@dirrm share/QUANTA/demos/threads/condition/doc
-@dirrm share/QUANTA/demos/threads/condition
-@dirrm share/QUANTA/demos/threads/barrier/doc
-@dirrm share/QUANTA/demos/threads/barrier
-@dirrm share/QUANTA/demos/threads
-@dirrm share/QUANTA/demos/network/udpreflector/doc
-@dirrm share/QUANTA/demos/network/udpreflector
-@dirrm share/QUANTA/demos/network/udp/doc
-@dirrm share/QUANTA/demos/network/udp
-@dirrm share/QUANTA/demos/network/tcpreflector/doc
-@dirrm share/QUANTA/demos/network/tcpreflector
-@dirrm share/QUANTA/demos/network/tcp/doc
-@dirrm share/QUANTA/demos/network/tcp
-@dirrm share/QUANTA/demos/network/sync/barrier/udpbarrier/doc
-@dirrm share/QUANTA/demos/network/sync/barrier/udpbarrier
-@dirrm share/QUANTA/demos/network/sync/barrier/tcpbarrier/doc
-@dirrm share/QUANTA/demos/network/sync/barrier/tcpbarrier
-@dirrm share/QUANTA/demos/network/sync/barrier
-@dirrm share/QUANTA/demos/network/sync
-@dirrm share/QUANTA/demos/network/rpc/doc
-@dirrm share/QUANTA/demos/network/rpc
-@dirrm share/QUANTA/demos/network/remoteParallelFileIO64/doc
-@dirrm share/QUANTA/demos/network/remoteParallelFileIO64
-@dirrm share/QUANTA/demos/network/remoteParallelFileIO32/doc
-@dirrm share/QUANTA/demos/network/remoteParallelFileIO32
-@dirrm share/QUANTA/demos/network/remoteFileIO64/doc
-@dirrm share/QUANTA/demos/network/remoteFileIO64
-@dirrm share/QUANTA/demos/network/remoteFileIO32/doc
-@dirrm share/QUANTA/demos/network/remoteFileIO32
-@dirrm share/QUANTA/demos/network/rbudp/doc
-@dirrm share/QUANTA/demos/network/rbudp
-@dirrm share/QUANTA/demos/network/paralleltcp/doc
-@dirrm share/QUANTA/demos/network/paralleltcp
-@dirrm share/QUANTA/demos/network/objectStream/objectStreamUdp/doc
-@dirrm share/QUANTA/demos/network/objectStream/objectStreamUdp
-@dirrm share/QUANTA/demos/network/objectStream/objectStreamTcp/doc
-@dirrm share/QUANTA/demos/network/objectStream/objectStreamTcp
-@dirrm share/QUANTA/demos/network/objectStream
-@dirrm share/QUANTA/demos/network/mcast/doc
-@dirrm share/QUANTA/demos/network/mcast
-@dirrm share/QUANTA/demos/network/http/doc
-@dirrm share/QUANTA/demos/network/http
-@dirrm share/QUANTA/demos/network/fec/doc
-@dirrm share/QUANTA/demos/network/fec
-@dirrm share/QUANTA/demos/network/extendedTcp/doc
-@dirrm share/QUANTA/demos/network/extendedTcp
-@dirrm share/QUANTA/demos/network/extendedParallelTcp/doc
-@dirrm share/QUANTA/demos/network/extendedParallelTcp
-@dirrm share/QUANTA/demos/network/datapack/doc
-@dirrm share/QUANTA/demos/network/datapack
-@dirrm share/QUANTA/demos/network
-@dirrm share/QUANTA/demos/misc/observer/doc
-@dirrm share/QUANTA/demos/misc/observer
-@dirrm share/QUANTA/demos/misc/adt/doc
-@dirrm share/QUANTA/demos/misc/adt
-@dirrm share/QUANTA/demos/misc
-@dirrm share/QUANTA/demos/db/doc
-@dirrm share/QUANTA/demos/db
-@dirrm share/QUANTA/demos
-@dirrm share/QUANTA

@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/27 09:53:48 jh88 Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gipfel
 share/doc/gipfel/NEWS
 share/doc/gipfel/README
 share/gipfel/gipfel.dat
-@dirrm share/gipfel
-@dirrm share/doc/gipfel

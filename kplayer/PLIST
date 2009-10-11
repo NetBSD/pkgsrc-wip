@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/08 11:46:55 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:50 thomasklausner Exp $
 bin/kplayer
 lib/kde3/libkplayerpart.la
 share/applications/kde/kplayer.desktop
@@ -345,22 +345,9 @@ share/locale/zh_CN/LC_MESSAGES/kplayer.mo
 @comment in kde: @dirrm share/icons/hicolor/32x32/apps
 @comment in kde: @dirrm share/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/kplayer/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kplayer/icons/hicolor/32x32
-@dirrm share/kde/apps/kplayer/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kplayer/icons/hicolor/22x22
-@dirrm share/kde/apps/kplayer/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kplayer/icons/hicolor/16x16
-@dirrm share/kde/apps/kplayer/icons/hicolor
-@dirrm share/kde/apps/kplayer/icons
-@dirrm share/kde/apps/kplayer
 @comment in kde: @dirrm share/kde/apps
-@dirrm share/doc/kde/HTML/sv/kplayer
 @comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt/kplayer
 @comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/en/kplayer
 @comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/kplayer
 @comment in kde: @dirrm share/doc/kde/HTML/da
 @comment in kde: @dirrm lib/kde3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/19 14:15:55 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:13 thomasklausner Exp $
 bin/qgis
 bin/qgis_help
 include/qgis/qgis.h
@@ -1569,44 +1569,13 @@ share/qgis/themes/nkids/qgis32x32.png
 share/qgis/themes/nkids/remove_all_to_overview.png
 share/qgis/themes/nkids/show_all_layers1.png
 share/qgis/themes/nkids/show_layerReal.png
-@dirrm share/qgis/themes/nkids
 ${PLIST.grass}@dirrm share/qgis/themes/default/grass
-@dirrm share/qgis/themes/gis
-@dirrm share/qgis/themes/default
 ${PLIST.grass}@dirrm share/qgis/themes/classic/grass
-@dirrm share/qgis/themes/classic
-@dirrm share/qgis/themes
-@dirrm share/qgis/svg/transport
-@dirrm share/qgis/svg/symbol
-@dirrm share/qgis/svg/sport
-@dirrm share/qgis/svg/services
-@dirrm share/qgis/svg/north_arrows
-@dirrm share/qgis/svg/landmark
-@dirrm share/qgis/svg/icon
-@dirrm share/qgis/svg/gpsicons
-@dirrm share/qgis/svg/geometric
-@dirrm share/qgis/svg/entertainment
-@dirrm share/qgis/svg/emergency
-@dirrm share/qgis/svg/biology
-@dirrm share/qgis/svg
-@dirrm share/qgis/resources/context_help
-@dirrm share/qgis/resources
 ${PLIST.python}@dirrm share/qgis/python/qgis
 ${PLIST.python}@dirrm share/qgis/python/plugins/plugin_installer
 ${PLIST.python}@dirrm share/qgis/python/plugins/mapserver_export
 ${PLIST.python}@dirrm share/qgis/python/plugins
 ${PLIST.python}@dirrm share/qgis/python
-@dirrm share/qgis/images/splash
-@dirrm share/qgis/images/north_arrows
-@dirrm share/qgis/images/icons
-@dirrm share/qgis/images/developers
-@dirrm share/qgis/images
-@dirrm share/qgis/i18n
-@dirrm share/qgis/doc/images
 ${PLIST.grass}@dirrm share/qgis/grass/modules
 ${PLIST.grass}@dirrm share/qgis/grass/config
 ${PLIST.grass}@dirrm share/qgis/grass
-@dirrm share/qgis/doc
-@dirrm share/qgis
-@dirrm lib/qgis
-@dirrm include/qgis

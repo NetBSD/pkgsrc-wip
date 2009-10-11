@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/25 13:51:03 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
 bin/brltty
 bin/brltty-config
 bin/brltty-install
@@ -149,7 +149,3 @@ share/brltty/text.visiob.tbl
 share/brltty/text.vni.tbl
 share/examples/brltty/brlapi.key
 share/examples/brltty/brltty.conf
-@dirrm share/examples/brltty
-@dirrm share/brltty
-@dirrm lib/brltty
-@dirrm include/brltty

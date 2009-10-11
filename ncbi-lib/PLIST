@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/28 05:15:17 mchittur Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:59 thomasklausner Exp $
 include/ncbi/FSpCompat.h
 include/ncbi/FullPath.h
 include/ncbi/MoreCarbonAccessors.h
@@ -543,6 +543,3 @@ lib/ncbi/libvibgif.a
 lib/ncbi/libvibnet.a
 lib/ncbi/libvibrant.a
 lib/ncbi/ncbithr.o
-@dirrm lib/ncbi
-@dirrm include/ncbi/connect
-@dirrm include/ncbi

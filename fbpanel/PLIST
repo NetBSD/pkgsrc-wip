@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/06 16:46:07 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:35 thomasklausner Exp $
 bin/fbpanel
 man/man1/fbpanel.1
 share/fbpanel/default
@@ -40,6 +40,3 @@ share/fbpanel/plugins/tclock.so
 share/fbpanel/plugins/test.so
 share/fbpanel/plugins/tray.so
 share/fbpanel/plugins/wincmd.so
-@dirrm share/fbpanel/plugins
-@dirrm share/fbpanel/images
-@dirrm share/fbpanel

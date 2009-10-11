@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:27 thomasklausner Exp $
 bin/sesman
 bin/sesrun
 bin/startwm.sh
@@ -23,7 +23,3 @@ share/xrdp/ad256.bmp
 share/xrdp/cursor0.cur
 share/xrdp/cursor1.cur
 share/xrdp/xrdp256.bmp
-@dirrm share/xrdp
-@dirrm share/examples/xrdp
-@dirrm share/doc/xrdp
-@dirrm etc/xrdp

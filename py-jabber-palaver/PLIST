@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/08/26 21:03:47 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/palaver/__init__.py
 ${PYSITELIB}/palaver/__init__.pyc
 ${PYSITELIB}/palaver/__init__.pyo
@@ -76,8 +76,4 @@ share/doc/palaver/XEP.txt
 share/doc/palaver/muc-pgsql.sql
 share/examples/jabber/palaver.xml
 share/examples/rc.d/palaver
-@dirrm ${PYSITELIB}/palaver/xmpp
-@dirrm ${PYSITELIB}/palaver/test
-@dirrm ${PYSITELIB}/palaver
-@dirrm share/doc/palaver
 @exec "rmdir share/examples/jabber || true"

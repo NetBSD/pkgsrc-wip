@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 13:55:36 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/synfig
 bin/synfig-config
 etc/synfig_modules.cfg
@@ -128,7 +128,3 @@ lib/synfig/modules/libmod_ppm.la
 lib/synfig/modules/libmod_yuv420p.la
 share/locale/es/LC_MESSAGES/synfig.mo
 share/locale/fr/LC_MESSAGES/synfig.mo
-@dirrm lib/synfig/modules
-@dirrm lib/synfig
-@dirrm include/synfig-0.0/synfig
-@dirrm include/synfig-0.0

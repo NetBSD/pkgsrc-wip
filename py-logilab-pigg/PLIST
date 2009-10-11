@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:31:53 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/pigg/__init__.py
 ${PYSITELIB}/pigg/__init__.pyc
 ${PYSITELIB}/pigg/__init__.pyo
@@ -20,4 +20,3 @@ ${PYSITELIB}/pigg/utils.pyo
 ${PYSITELIB}/pigg/wgenerator.py
 ${PYSITELIB}/pigg/wgenerator.pyc
 ${PYSITELIB}/pigg/wgenerator.pyo
-@dirrm ${PYSITELIB}/pigg

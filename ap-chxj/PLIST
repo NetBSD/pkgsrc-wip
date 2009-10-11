@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/08 13:11:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:27 thomasklausner Exp $
 lib/httpd/mod_chxj.so
 share/doc/mod_chxj/modchxj.html
 share/examples/mod_chxj/device_data.xml
 share/examples/mod_chxj/emoji.xml
-@dirrm share/doc/mod_chxj
-@dirrm share/examples/mod_chxj

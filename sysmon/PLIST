@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/02 20:25:40 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/sysmon
 bin/sysmond
 man/man5/sysmon.conf.5
@@ -17,5 +17,3 @@ share/doc/sysmon/sysmon.conf.man.html
 share/doc/sysmon/sysmon.jpg
 share/doc/sysmon/sysmon.man.html
 share/examples/sysmon/sysmon.conf.dist
-@dirrm share/examples/sysmon
-@dirrm share/doc/sysmon

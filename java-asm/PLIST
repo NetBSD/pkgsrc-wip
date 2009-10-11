@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/10 19:28:37 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 lib/java/asm/asm-attrs.jar
 lib/java/asm/asm-tree.jar
 lib/java/asm/asm-util.jar
@@ -107,26 +107,3 @@ share/examples/java-asm/helloworld/README
 share/examples/java-asm/helloworld/build.xml
 share/examples/java-asm/helloworld/etc/execute.properties
 share/examples/java-asm/helloworld/src/Helloworld.java
-@dirrm share/examples/java-asm/helloworld/src
-@dirrm share/examples/java-asm/helloworld/etc
-@dirrm share/examples/java-asm/helloworld
-@dirrm share/examples/java-asm/etc
-@dirrm share/examples/java-asm/compile/src
-@dirrm share/examples/java-asm/compile/etc
-@dirrm share/examples/java-asm/compile
-@dirrm share/examples/java-asm/attributes/src
-@dirrm share/examples/java-asm/attributes/etc
-@dirrm share/examples/java-asm/attributes
-@dirrm share/examples/java-asm/adapt/src
-@dirrm share/examples/java-asm/adapt/etc
-@dirrm share/examples/java-asm/adapt
-@dirrm share/examples/java-asm
-@dirrm share/doc/java-asm/resources
-@dirrm share/doc/java-asm/org/objectweb/asm/util
-@dirrm share/doc/java-asm/org/objectweb/asm/tree
-@dirrm share/doc/java-asm/org/objectweb/asm/attrs
-@dirrm share/doc/java-asm/org/objectweb/asm
-@dirrm share/doc/java-asm/org/objectweb
-@dirrm share/doc/java-asm/org
-@dirrm share/doc/java-asm
-@dirrm lib/java/asm

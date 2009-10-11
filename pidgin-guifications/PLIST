@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/06/24 19:17:03 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 lib/pidgin/guifications.la
 share/locale/bn/LC_MESSAGES/guifications.mo
 share/locale/cs/LC_MESSAGES/guifications.mo
@@ -55,9 +55,3 @@ share/pixmaps/pidgin/guifications/themes/default/background.png
 share/pixmaps/pidgin/guifications/themes/default/theme.xml
 share/pixmaps/pidgin/guifications/themes/mini/background.png
 share/pixmaps/pidgin/guifications/themes/mini/theme.xml
-@dirrm share/pixmaps/pidgin/guifications/themes/mini
-@dirrm share/pixmaps/pidgin/guifications/themes/default
-@dirrm share/pixmaps/pidgin/guifications/themes/Penguins
-@dirrm share/pixmaps/pidgin/guifications/themes
-@dirrm share/pixmaps/pidgin/guifications/conf
-@dirrm share/pixmaps/pidgin/guifications

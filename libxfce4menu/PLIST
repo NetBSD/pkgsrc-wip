@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/15 20:30:10 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
 include/xfce4/libxfce4menu-0.1/libxfce4menu/libxfce4menu-config.h
 include/xfce4/libxfce4menu-0.1/libxfce4menu/libxfce4menu.h
 include/xfce4/libxfce4menu-0.1/libxfce4menu/xfce-menu-and-rules.h
@@ -74,6 +74,3 @@ share/locale/pt_PT/LC_MESSAGES/libxfce4menu-0.1.mo
 share/locale/sq/LC_MESSAGES/libxfce4menu-0.1.mo
 share/locale/uk/LC_MESSAGES/libxfce4menu-0.1.mo
 share/locale/ur/LC_MESSAGES/libxfce4menu-0.1.mo
-@dirrm share/doc/libxfce4menu
-@dirrm include/xfce4/libxfce4menu-0.1/libxfce4menu
-@dirrm include/xfce4/libxfce4menu-0.1

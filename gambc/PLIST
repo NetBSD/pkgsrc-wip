@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/06 20:25:41 fulviociriaco Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:38 thomasklausner Exp $
 bin/gambc-doc.bat
 bin/gambit-sc
 bin/gambit-si
@@ -39,4 +39,3 @@ lib/syntax-case.scm
 share/doc/gambc/gambit-c.html
 share/doc/gambc/gambit-c.pdf
 share/doc/gambc/gambit-c.txt
-@dirrm share/doc/gambc

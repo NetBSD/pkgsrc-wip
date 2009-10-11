@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/02 07:43:46 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIO.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIO.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIf.hi
@@ -224,26 +224,3 @@ lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-${PKGVERSION}.a
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-${PKGVERSION}_p.a
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/hxt-${PKGVERSION}/LICENCE
-@dirrm share/doc/hxt-${PKGVERSION}
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/Unicode
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Parser
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/IO
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/DTDValidation
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/DOM
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/Pickle
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/NTree
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Char
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control
-@dirrm lib/hxt-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/hxt-${PKGVERSION}

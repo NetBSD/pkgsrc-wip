@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/01 03:23:42 jdwhite Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
@@ -148,8 +148,3 @@ share/examples/rc.d/upslog
 share/examples/rc.d/upsmon
 share/nut/cmdvartab
 share/nut/driver.list
-@dirrm share/nut
-@dirrm share/examples/nut
-@dirrm share/doc/nut/cables
-@dirrm share/doc/nut
-@dirrm libexec/nut

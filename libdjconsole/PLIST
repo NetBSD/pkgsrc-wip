@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/14 05:38:53 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
 include/libdjconsole/bitfield.h
 include/libdjconsole/delta.h
 include/libdjconsole/djconsole.h
@@ -15,5 +15,3 @@ share/libdjconsole/06f8-b101.leds
 share/libdjconsole/06f8-d001.buttons
 share/libdjconsole/06f8-d001.leds
 share/libdjconsole/06f8-d001.mouse
-@dirrm share/libdjconsole
-@dirrm include/libdjconsole

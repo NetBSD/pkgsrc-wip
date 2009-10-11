@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.X,v 1.2 2003/08/22 16:39:15 xtraeme Exp $
+@comment $NetBSD: PLIST.X,v 1.3 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scm
 bin/scmlit
 info/Xlibscm.info
@@ -27,4 +27,3 @@ share/scm/slibcat
 share/scm/x11.scm
 share/scm/xatoms.scm
 share/scm/xevent.scm
-@dirrm share/scm

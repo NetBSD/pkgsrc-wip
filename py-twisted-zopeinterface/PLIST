@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/12 00:20:01 milosn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/zope/interface/__init__.py
 ${PYSITELIB}/zope/interface/_flatten.py
 ${PYSITELIB}/zope/interface/adapter.py
@@ -123,9 +123,3 @@ ${PYSITELIB}/zope/interface/tests/unitfixtures.pyc
 ${PYSITELIB}/zope/interface/tests/unitfixtures.pyo
 ${PYSITELIB}/zope/interface/verify.pyc
 ${PYSITELIB}/zope/interface/verify.pyo
-@dirrm ${PYSITELIB}/zope/interface/common/tests
-@dirrm ${PYSITELIB}/zope/interface/common
-@dirrm ${PYSITELIB}/zope/interface/tests
-@dirrm ${PYSITELIB}/zope/interface
-@dirrm ${PYSITELIB}/zope.interface-${PKGVERSION}-py2.4.egg-info
-@dirrm ${PYSITELIB}/zope

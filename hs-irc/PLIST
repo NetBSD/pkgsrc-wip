@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 05:16:26 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
 lib/irc-${PKGVERSION}/${HASKELL_VERSION}/HSirc-${PKGVERSION}.o
 lib/irc-${PKGVERSION}/${HASKELL_VERSION}/Network/IRC.hi
 lib/irc-${PKGVERSION}/${HASKELL_VERSION}/Network/IRC/Base.hi
@@ -7,8 +7,3 @@ lib/irc-${PKGVERSION}/${HASKELL_VERSION}/Network/IRC/Parser.hi
 lib/irc-${PKGVERSION}/${HASKELL_VERSION}/libHSirc-${PKGVERSION}.a
 lib/irc-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/irc-${PKGVERSION}/LICENSE
-@dirrm share/doc/irc-${PKGVERSION}
-@dirrm lib/irc-${PKGVERSION}/${HASKELL_VERSION}/Network/IRC
-@dirrm lib/irc-${PKGVERSION}/${HASKELL_VERSION}/Network
-@dirrm lib/irc-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/irc-${PKGVERSION}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/23 12:24:47 tqcla Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 bin/ps2sp.pl
 bin/qucs
 bin/qucsator
@@ -360,15 +360,3 @@ share/qucs/tline/cstrip_kj_2.trc
 share/qucs/tline/hp.trc
 share/qucs/tline/ustrip50fr4.trc
 share/qucs/tline/ustrip_jansen.trc
-@dirrm share/qucs/tline
-@dirrm share/qucs/library
-@dirrm share/qucs/lang
-@dirrm share/qucs/docs/uk
-@dirrm share/qucs/docs/ru
-@dirrm share/qucs/docs/fr
-@dirrm share/qucs/docs/es
-@dirrm share/qucs/docs/en
-@dirrm share/qucs/docs/de
-@dirrm share/qucs/docs
-@dirrm share/qucs/bitmaps
-@dirrm share/qucs

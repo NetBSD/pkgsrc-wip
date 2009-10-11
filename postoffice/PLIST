@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/08 12:13:14 pbraun9 Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:45:06 thomasklausner Exp $
 bin/ndbm
 bin/runq
 etc/postoffice.cf
@@ -25,6 +25,4 @@ share/examples/postoffice/mailer.conf
 share/examples/postoffice/pop_passwd.pl
 share/examples/postoffice/postoffice.cf
 share/examples/rc.d/postoffice
-@dirrm share/examples/postoffice
 @exec ${MKDIR} %D/etc/virtual
-@dirrm etc/virtual

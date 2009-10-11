@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/03 23:45:48 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 man/man8/dnrd.8
 sbin/dnrd
 share/doc/dnrd/AUTHORS
@@ -8,4 +8,3 @@ share/doc/dnrd/README
 share/doc/dnrd/README-cache
 share/doc/dnrd/README-master
 share/doc/dnrd/master.sample
-@dirrm share/doc/dnrd

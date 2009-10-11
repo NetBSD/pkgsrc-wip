@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/10 12:17:06 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/Defaults.plist
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/TalkSoup.app/Resources/TalkSoup.desktop
@@ -163,87 +163,4 @@ share/GNUstep/Local/Library/Headers/TalkSoupBundles
 share/GNUstep/Local/Library/Libraries/libTalkSoupBundles.so
 share/GNUstep/Local/Library/Libraries/libTalkSoupBundles.so.0.0.1
 share/GNUstep/Local/Tools/TalkSoup
-@dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework/Versions/0.990/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework/Versions/0.990/Resources
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework/Versions/0.990/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework/Versions/0.990
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework/Versions
-@dirrm share/GNUstep/Local/Library/Frameworks/TalkSoupBundles.framework
-@dirrm share/GNUstep/Local/Library/Frameworks
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/Tools
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/TabContent.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/StandardQuery.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/StandardChannel.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/TopicInspector.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/ServerList.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/ServerEditor.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/Preferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/NamePrompt.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/GroupEditor.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/GeneralPreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/GNUstepOutput.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/FontPreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/ColorPreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj/BundlePreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output/GNUstepOutput
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Output
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Piper/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Piper/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Piper
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Colorizer/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Colorizer/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters/Colorizer
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/OutFilters
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Input/NetclassesInput/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Input/NetclassesInput
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/Input
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/PrivateBeep/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/PrivateBeep/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/PrivateBeep
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageOutTab/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageOutTab/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageOutTab
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageInTab/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageInTab/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/MessageInTab
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Logging/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Logging/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Logging
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/KeepAlive/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/KeepAlive/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/KeepAlive
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Highlighting/Resources/English.lproj/HighlightingPreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Highlighting/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Highlighting/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Highlighting
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Emoticon/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Emoticon/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Emoticon
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Deunderline/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Deunderline/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Deunderline
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Dereverse/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Dereverse/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Dereverse
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Decolorizer/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Decolorizer/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Decolorizer
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Debold/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Debold/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/Debold
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/DCCSupport/Resources/English.lproj/DCCSupportPreferences.gorm
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/DCCSupport/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/DCCSupport/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters/DCCSupport
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup/InFilters
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/TalkSoup
-@dirrm share/GNUstep/Local/Library/ApplicationSupport
-@dirrm share/GNUstep/Local/Library
-@dirrm share/GNUstep/Local/Applications/TalkSoup.app/Resources
-@dirrm share/GNUstep/Local/Applications/TalkSoup.app
 @comment in devel/gnustep-make: @dirrm share/GNUstep

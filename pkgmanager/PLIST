@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/08/11 14:46:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:06 thomasklausner Exp $
 bin/pkgmanager
 lib/pkgmanager/init.mem
 lib/pkgmanager/packages.fas
@@ -9,4 +9,3 @@ lib/pkgmanager/pkgmgr-print.fas
 lib/pkgmanager/pkgmgr-util.fas
 lib/pkgmanager/run.lisp
 man/man8/pkgmanager.8
-@dirrm lib/pkgmanager

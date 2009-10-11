@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/05/27 06:52:52 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:34 thomasklausner Exp $
 bin/emerald
 bin/emerald-theme-manager
 include/emerald/emerald.h
@@ -60,8 +60,3 @@ share/mime-info/emerald.mime
 share/mime/packages/emerald.xml
 share/pixmaps/emerald-theme-manager-icon.png
 @comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/emerald/theme
-@dirrm share/emerald
-@dirrm lib/emerald/engines
-@dirrm lib/emerald
-@dirrm include/emerald

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/12 11:36:29 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 lib/alphamail/AlphaMail.pm
 lib/alphamail/AlphaMail/AddressBook.pm
 lib/alphamail/AlphaMail/AdminAccessRule.pm
@@ -259,31 +259,3 @@ share/alphamail/util/hang_detector
 share/alphamail/util/init.d/alphamail_tmpfs
 share/alphamail/util/init.d/imap_webcache
 share/examples/rc.d/imap_webcache
-@dirrm share/alphamail/util/init.d
-@dirrm share/alphamail/util
-@dirrm share/alphamail/tests/resources
-@dirrm share/alphamail/tests/lib/message/resources
-@dirrm share/alphamail/tests/lib/message
-@dirrm share/alphamail/tests/lib
-@dirrm share/alphamail/tests/interface
-@dirrm share/alphamail/tests/cache
-@dirrm share/alphamail/tests
-@dirrm share/alphamail/htdocs/static/rte/images
-@dirrm share/alphamail/htdocs/static/rte
-@dirrm share/alphamail/htdocs/static
-@dirrm share/alphamail/htdocs/mail/viewers
-@dirrm share/alphamail/htdocs/mail/settings
-@dirrm share/alphamail/htdocs/mail/docs/faq
-@dirrm share/alphamail/htdocs/mail/docs
-@dirrm share/alphamail/htdocs/mail/admin
-@dirrm share/alphamail/htdocs/mail/addressbook
-@dirrm share/alphamail/htdocs/mail
-@dirrm share/alphamail/htdocs
-@dirrm share/alphamail/docs/notes
-@dirrm share/alphamail/docs
-@dirrm share/alphamail/conf
-@dirrm lib/alphamail/Encode
-@dirrm lib/alphamail/Apache2/SiteControl
-@dirrm lib/alphamail/Apache2
-@dirrm lib/alphamail/AlphaMail
-@dirrm lib/alphamail

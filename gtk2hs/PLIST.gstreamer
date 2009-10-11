@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gstreamer,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.gstreamer,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HSgstreamer.o
 lib/gtk2hs/gstreamer.package.conf
 lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer.hi
@@ -66,13 +66,3 @@ lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Net/Hierarchy.hi
 lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Net/NetClientClock.hi
 lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Net/Types.hi
 lib/gtk2hs/libHSgstreamer.a
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Net
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/DataProtocol
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Core
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Controller
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Base
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer/Audio
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming/GStreamer
-@dirrm lib/gtk2hs/imports/gstreamer/Media/Streaming
-@dirrm lib/gtk2hs/imports/gstreamer/Media
-@dirrm lib/gtk2hs/imports/gstreamer

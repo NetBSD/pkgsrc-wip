@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/25 22:21:56 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/daphne
 lib/daphne/libvldp2.so
 share/daphne/pics/ConsoleFont.bmp
@@ -109,9 +109,3 @@ share/doc/daphne/graphics/screenshot1.jpg
 share/doc/daphne/graphics/screenshot2.jpg
 share/doc/daphne/graphics/screenshot3.jpg
 share/doc/daphne/index.html
-@dirrm share/doc/daphne/graphics
-@dirrm share/doc/daphne
-@dirrm share/daphne/sound
-@dirrm share/daphne/pics
-@dirrm share/daphne
-@dirrm lib/daphne

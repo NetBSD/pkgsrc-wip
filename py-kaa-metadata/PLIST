@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/29 16:15:17 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 bin/mminfo
 ${PYSITELIB}/kaa/metadata/__init__.py
 ${PYSITELIB}/kaa/metadata/__init__.pyc
@@ -176,11 +176,3 @@ ${PYSITELIB}/kaa/metadata/video/riff.pyo
 ${PYSITELIB}/kaa/metadata/video/vcd.py
 ${PYSITELIB}/kaa/metadata/video/vcd.pyc
 ${PYSITELIB}/kaa/metadata/video/vcd.pyo
-@dirrm ${PYSITELIB}/kaa/metadata/video
-@dirrm ${PYSITELIB}/kaa/metadata/misc
-@dirrm ${PYSITELIB}/kaa/metadata/image
-@dirrm ${PYSITELIB}/kaa/metadata/games
-@dirrm ${PYSITELIB}/kaa/metadata/disc
-@dirrm ${PYSITELIB}/kaa/metadata/audio/eyeD3
-@dirrm ${PYSITELIB}/kaa/metadata/audio
-@dirrm ${PYSITELIB}/kaa/metadata

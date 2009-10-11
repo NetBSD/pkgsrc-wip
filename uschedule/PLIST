@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/25 13:31:09 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 bin/uschedule
 bin/uschedulecmd
 bin/uscheduleconf
@@ -21,4 +21,3 @@ sbin/uscheduled
 share/doc/uschedule/ChangeLog
 share/doc/uschedule/NEWS
 share/doc/uschedule/SECURITY-BUG
-@dirrm share/doc/uschedule

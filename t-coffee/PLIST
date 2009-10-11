@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/18 18:47:17 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/t_coffee
 share/doc/html/tcoffee/t_coffee.html
 share/doc/html/tcoffee/t_coffee4html.cgi
@@ -9,5 +9,3 @@ share/doc/tcoffee/t_coffee_doc.doc
 share/doc/tcoffee/t_coffee_doc.html
 share/doc/tcoffee/t_coffee_doc.pdf
 share/doc/tcoffee/t_coffee_doc.ps
-@dirrm share/doc/tcoffee
-@dirrm share/doc/html/tcoffee

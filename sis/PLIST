@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 00:05:50 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 bin/blif2vst
 bin/espresso
 bin/jedi
@@ -468,14 +468,3 @@ share/sis/sis_lib/stdcell2_2.genlib
 share/sis/sis_lib/synch.genlib
 share/sis/sis_lib/weird.genlib
 share/sis/sis_lib/weird.lib
-@dirrm share/sis/sis_lib/help
-@dirrm share/sis/sis_lib
-@dirrm share/sis/historical
-@dirrm share/sis/espresso_examples/random
-@dirrm share/sis/espresso_examples/math
-@dirrm share/sis/espresso_examples/indust
-@dirrm share/sis/espresso_examples/doc
-@dirrm share/sis/espresso_examples
-@dirrm share/sis/doc
-@dirrm share/sis
-@dirrm include/sis

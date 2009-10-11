@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/30 02:28:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:37 thomasklausner Exp $
 bin/foomatic-combo-xml
 bin/foomatic-compiledb
 bin/foomatic-configure
@@ -29,4 +29,3 @@ sbin/foomatic-replaceoldprinterids
 share/foomatic/templates/pjl_enum_choice.xml
 share/foomatic/templates/pjl_enum_option.xml
 share/foomatic/templates/pjl_num_option.xml
-@dirrm share/foomatic/templates

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/03 04:10:48 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/HSHsOpenSSL-${PKGVERSION}.o
 lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL.hi
 lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL.p_hi
@@ -63,10 +63,3 @@ lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/libHSHsOpenSSL-${PKGVERSION}.a
 lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/libHSHsOpenSSL-${PKGVERSION}_p.a
 lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/HsOpenSSL-${PKGVERSION}/COPYING
-@dirrm share/doc/HsOpenSSL-${PKGVERSION}
-@dirrm lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/include
-@dirrm lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL/X509
-@dirrm lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL/EVP
-@dirrm lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL
-@dirrm lib/HsOpenSSL-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/HsOpenSSL-${PKGVERSION}

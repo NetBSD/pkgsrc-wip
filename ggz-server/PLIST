@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/05 15:36:07 mrohrer Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/ggzd
 bin/ggzduedit
-@dirrm etc/ggzd
 etc/ggzd/ggzd.conf.example
 etc/ggzd/ggzd.motd
-@dirrm etc/ggzd/rooms
 etc/ggzd/rooms/entry.room
 etc/ggzd/rooms/tictactoe.room
 etc/ggzd/rooms/reversi.room
@@ -31,7 +29,6 @@ etc/ggzd/rooms/keepalive.room
 etc/ggzd/rooms/geekgame.room
 etc/ggzd/rooms/tuxman.room
 etc/ggzd/rooms/widelands.room
-@dirrm etc/ggzd/games
 etc/ggzd/games/tictactoe.dsc
 etc/ggzd/games/reversi.dsc
 etc/ggzd/games/chess.dsc
@@ -58,7 +55,6 @@ etc/ggzd/games/geekgame.dsc
 etc/ggzd/games/tuxman.dsc
 etc/ggzd/games/widelands.dsc
 include/ggzdmod.h
-@dirrm include/ggzdmod++
 include/ggzdmod++/ggzgameserver.h
 include/ggzdmod++/net.h
 include/ggzdmod++/mnet.h
@@ -72,7 +68,6 @@ lib/libggzdmod++.so.1
 lib/libggzdmod++.so
 lib/libggzdmod++.la
 lib/libggzdmod++.a
-@dirrm lib/ggzd
 lib/ggzd/ggzd.tictactoe
 lib/ggzd/ggzd.reversi
 lib/ggzd/ggzd.chess
@@ -96,17 +91,12 @@ lib/ggzd/widelands_server
 share/man/man3/ggzdmod.h.3
 share/man/man6/ggzd.6
 share/man/man6/ggzduedit.6
-@dirrm share/ggz/ggzd
-@dirrm share/ggz/ggzd/ggzcards
 share/ggz/ggzd/ggzcards/spades.aispec
 share/ggz/ggzd/ggzcards/suaro.aispec
-@dirrm share/ggz/ggzd/hastings1066
 share/ggz/ggzd/hastings1066/battle_of_hastings
 share/ggz/ggzd/hastings1066/yorkshire
 share/ggz/ggzd/hastings1066/coast
-@dirrm share/ggz/ggzd/muehle
 share/ggz/ggzd/muehle/classic
 share/ggz/ggzd/muehle/roman
 share/ggz/ggzd/muehle/twelvemensmorris
-@dirrm share/ggz/ggzd/tuxmanserv
 share/ggz/ggzd/tuxmanserv/level9.pac

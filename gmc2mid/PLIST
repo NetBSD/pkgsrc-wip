@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/07 16:06:33 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gmc2mid
 share/doc/gmc2mid/README
 share/examples/gmc2mid/lections/lection1.gmc
@@ -41,11 +41,3 @@ share/examples/gmc2mid/samples/incomplete/rosen.gmc
 share/examples/gmc2mid/samples/incomplete/saveworld.gmc
 share/examples/gmc2mid/samples/incomplete/silberfaeden.gmc
 share/examples/gmc2mid/samples/others_songs/uptempo.gmc
-@dirrm share/doc/gmc2mid
-@dirrm share/examples/gmc2mid/lections
-@dirrm share/examples/gmc2mid/samples/complete
-@dirrm share/examples/gmc2mid/samples/from_mid2gmc
-@dirrm share/examples/gmc2mid/samples/incomplete
-@dirrm share/examples/gmc2mid/samples/others_songs
-@dirrm share/examples/gmc2mid/samples
-@dirrm share/examples/gmc2mid

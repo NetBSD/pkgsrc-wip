@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/08 12:46:04 ahallmann Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:46 thomasklausner Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -419,20 +419,3 @@ share/hylafax/etc_templates/ro/notify-rejected.txt
 share/hylafax/etc_templates/ro/notify-removed.txt
 share/hylafax/etc_templates/ro/notify-requeued.txt
 share/hylafax/etc_templates/ro/notify-timedout.txt
-@dirrm share/hylafax/etc_templates/ro
-@dirrm share/hylafax/etc_templates/pt_BR
-@dirrm share/hylafax/etc_templates/pt
-@dirrm share/hylafax/etc_templates/pl
-@dirrm share/hylafax/etc_templates/it
-@dirrm share/hylafax/etc_templates/html-sample1
-@dirrm share/hylafax/etc_templates/fr
-@dirrm share/hylafax/etc_templates/es
-@dirrm share/hylafax/etc_templates/en
-@dirrm share/hylafax/etc_templates/de
-@dirrm share/hylafax/etc_templates
-@dirrm share/hylafax/etc_template
-@dirrm share/hylafax/config_template
-@dirrm share/hylafax
-@dirrm share/doc/hylafax
-@dirrm libexec/hylafax
-@dirrm libdata/hylafax

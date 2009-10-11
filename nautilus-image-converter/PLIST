@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/10 22:55:04 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
 lib/nautilus/extensions-2.0/libnautilus-image-converter.la
 share/locale/cs/LC_MESSAGES/nautilus-image-converter.mo
 share/locale/es/LC_MESSAGES/nautilus-image-converter.mo
@@ -13,5 +13,3 @@ share/locale/ru/LC_MESSAGES/nautilus-image-converter.mo
 share/locale/sv/LC_MESSAGES/nautilus-image-converter.mo
 share/nautilus-image-converter/nautilus-image-resize.glade
 share/nautilus-image-converter/nautilus-image-rotate.glade
-@dirrm share/nautilus-image-converter
-@dirrm lib/nautilus/extensions-2.0

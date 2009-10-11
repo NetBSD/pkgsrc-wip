@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/15 17:36:04 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:21 thomasklausner Exp $
 bin/a2ping
 bin/afm2pl
 bin/afm2tfm
@@ -502,23 +502,4 @@ share/texmf/xdvi/XDvi
 share/texmf/xdvi/pixmaps/toolbar.xpm
 share/texmf/xdvi/pixmaps/toolbar2.xpm
 share/texmf/xdvi/xdvi.cfg
-@dirrm share/texmf/xdvi/pixmaps
-@dirrm share/texmf/xdvi
-@dirrm share/texmf/web2c
-@dirrm share/texmf/texconfig/x
-@dirrm share/texmf/texconfig/v
-@dirrm share/texmf/texconfig/g
-@dirrm share/texmf/texconfig
-@dirrm share/texmf/dvips/gsftopk
-@dirrm share/texmf/dvips/base
-@dirrm share/texmf/dvipdfm
-@dirrm share/texmf/doc/tetex
-@dirrm share/texmf/doc/bibtex8
-@dirrm share/texmf/bibtex/csf
 @exec ${MKDIR} %D/share/texmf-var/web2c
-@dirrm share/texmf-var/web2c
-@dirrm share/texmf-var
-@dirrm share/texmf-dist
-@dirrm share/texmf
-@dirrm share/lcdf-typetools
-@dirrm include/kpathsea

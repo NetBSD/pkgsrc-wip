@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/20 00:10:47 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/sxemacs
 bin/${PKGNAME}
 lib/sxemacs
@@ -1350,24 +1350,4 @@ man/xemacs.1
 @comment @exec ${MKDIR} %D/lib/sxemacs/site-modules
 @comment @dirrm lib/sxemacs/site-modules
 @comment @dirrm lib/sxemacs
-@dirrm lib/${PKGNAME}/lisp/term
-@dirrm lib/${PKGNAME}/lisp/mule
-@dirrm lib/${PKGNAME}/lisp
-@dirrm lib/${PKGNAME}/info
 @exec ${MKDIR} %D/lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/modules
-@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/modules
-@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/include/s
-@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/include/m
-@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/include
-@dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/${PKGNAME}/etc/toolbar
-@dirrm lib/${PKGNAME}/etc/tests/external-widget
-@dirrm lib/${PKGNAME}/etc/tests
-@dirrm lib/${PKGNAME}/etc/sparcworks
-@dirrm lib/${PKGNAME}/etc/photos
-@dirrm lib/${PKGNAME}/etc/idd
-@dirrm lib/${PKGNAME}/etc/eos
-@dirrm lib/${PKGNAME}/etc/custom/example-themes
-@dirrm lib/${PKGNAME}/etc/custom
-@dirrm lib/${PKGNAME}/etc
-@dirrm lib/${PKGNAME}

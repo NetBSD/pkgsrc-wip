@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST_SRC,v 1.4 2005/05/02 20:33:58 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST_SRC,v 1.5 2009/10/11 10:44:47 thomasklausner Exp $
 interchange/_session_storable
 interchange/_uid
 interchange/catalog_after.cfg
@@ -1191,55 +1191,3 @@ man/man1/offline.1
 man/man1/restart.1
 man/man1/update.1
 share/examples/rc.d/interchange
-@dirrm interchange/src/mod_interchange
-@dirrm interchange/src
-@dirrm interchange/lib/UI/vars
-@dirrm interchange/lib/UI/profiles
-@dirrm interchange/lib/UI/pages/include
-@dirrm interchange/lib/UI/pages/admin/special
-@dirrm interchange/lib/UI/pages/admin/reports/traffic
-@dirrm interchange/lib/UI/pages/admin/reports/order
-@dirrm interchange/lib/UI/pages/admin/reports
-@dirrm interchange/lib/UI/pages/admin
-@dirrm interchange/lib/UI/locales
-@dirrm interchange/lib/UI
-@dirrm interchange/foundation/upload
-@dirrm interchange/foundation/templates/sampledata/tools/products
-@dirrm interchange/foundation/templates/sampledata/tools/images/thumb
-@dirrm interchange/foundation/templates/sampledata/tools/images/items
-@dirrm interchange/foundation/templates/sampledata/tools/images
-@dirrm interchange/foundation/templates/sampledata/tools/etc
-@dirrm interchange/foundation/templates/sampledata/tools
-@dirrm interchange/foundation/templates/sampledata/reports/products
-@dirrm interchange/foundation/templates/sampledata/reports/download
-@dirrm interchange/foundation/templates/sampledata/reports
-@dirrm interchange/foundation/templates/sampledata
-@dirrm interchange/foundation/templates/foundation/regions
-@dirrm interchange/foundation/templates/foundation
-@dirrm interchange/foundation/templates/components
-@dirrm interchange/foundation/templates
-@dirrm interchange/foundation/special_pages
-@dirrm interchange/foundation/products
-@dirrm interchange/foundation/pages/query
-@dirrm interchange/foundation/pages/ord
-@dirrm interchange/foundation/pages/affiliate
-@dirrm interchange/foundation/pages/admin/reports
-@dirrm interchange/foundation/pages/admin/report_def
-@dirrm interchange/foundation/pages/admin
-@dirrm interchange/foundation/pages
-@dirrm interchange/foundation/images/thumb
-@dirrm interchange/foundation/images/items
-@dirrm interchange/foundation/images/foundation
-@dirrm interchange/foundation/images/affiliate
-@dirrm interchange/foundation/images
-@dirrm interchange/foundation/html
-@dirrm interchange/foundation/etc
-@dirrm interchange/foundation/dbconf/pgsql
-@dirrm interchange/foundation/dbconf/oracle
-@dirrm interchange/foundation/dbconf/mysql
-@dirrm interchange/foundation/dbconf/default_db
-@dirrm interchange/foundation/config
-@dirrm interchange/foundation/backup
-@dirrm interchange/foundation
-@dirrm interchange/etc
-@dirrm interchange

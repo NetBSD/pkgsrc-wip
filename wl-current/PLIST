@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/02 07:45:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:24 thomasklausner Exp $
 info/wl-ja.info
 info/wl.info
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
 share/doc/wl/en/README
-@dirrm share/doc/wl/en
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
 share/doc/wl/ja/README.ja
-@dirrm share/doc/wl/ja
-@dirrm share/doc/wl
 share/emacs/site-lisp/wl/acap.el
 share/emacs/site-lisp/wl/acap.elc
 share/emacs/site-lisp/wl/bbdb-wl.el
@@ -163,16 +160,12 @@ share/emacs/site-lisp/wl/wl-version.el
 share/emacs/site-lisp/wl/wl-version.elc
 share/emacs/site-lisp/wl/wl.el
 share/emacs/site-lisp/wl/wl.elc
-@dirrm share/emacs/site-lisp/wl
 share/examples/wl/en/dot.addresses
 share/examples/wl/en/dot.folders
 share/examples/wl/en/dot.wl
-@dirrm share/examples/wl/en
 share/examples/wl/ja/dot.addresses
 share/examples/wl/ja/dot.folders
 share/examples/wl/ja/dot.wl
-@dirrm share/examples/wl/ja
-@dirrm share/examples/wl
 share/wl/access.xpm
 share/wl/archive.xpm
 share/wl/closed.xpm
@@ -258,5 +251,4 @@ share/wl/wl-summary-reply-with-citation-up.xpm
 share/wl/wl-summary-set-flags-up.xpm
 share/wl/wl-summary-sync-force-update-up.xpm
 share/wl/wl-write-current-folder-up.xpm
-@dirrm share/wl
-@comment $NetBSD: PLIST,v 1.4 2008/12/02 07:45:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:24 thomasklausner Exp $

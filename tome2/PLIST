@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/11/15 07:29:45 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:22 thomasklausner Exp $
 bin/tome
 share/tome2/apex/.cvsignore
 share/tome2/apex/delete.me
@@ -446,28 +446,4 @@ share/tome2/xtra/graf/tome-128.png
 share/tome2/xtra/music/delete.me
 share/tome2/xtra/sound/Sound.cfg
 share/tome2/xtra/sound/readme.txt
-@dirrm share/tome2/xtra/sound
-@dirrm share/tome2/xtra/music
-@dirrm share/tome2/xtra/graf
-@dirrm share/tome2/xtra/font
-@dirrm share/tome2/xtra
-@dirrm share/tome2/user
-@dirrm share/tome2/scpt
-@dirrm share/tome2/save
-@dirrm share/tome2/pref
 @exec ${MKDIR} %D/share/tome2/plot
-@dirrm share/tome2/plot
-@dirrm share/tome2/patch
-@dirrm share/tome2/note
-@dirrm share/tome2/mods
-@dirrm share/tome2/info
-@dirrm share/tome2/help
-@dirrm share/tome2/file
-@dirrm share/tome2/edit
-@dirrm share/tome2/dngn
-@dirrm share/tome2/data
-@dirrm share/tome2/core
-@dirrm share/tome2/cmov
-@dirrm share/tome2/bone
-@dirrm share/tome2/apex
-@dirrm share/tome2

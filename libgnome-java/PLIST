@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/03 16:52:50 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 lib/libgnomejni.la
 lib/pkgconfig/gnome2-java.pc
 share/doc/${PKGNAME}/AUTHORS
@@ -149,36 +149,4 @@ share/doc/${PKGNAME}/tutorial/examples/Second.java
 share/doc/${PKGNAME}/tutorial/examples/Third.java
 share/java/gnome2.10-${PKGVERSION}.jar
 share/java/gnome2.10.jar
-@dirrm share/java
-@dirrm share/doc/${PKGNAME}/tutorial/examples
-@dirrm share/doc/${PKGNAME}/tutorial
-@dirrm share/doc/${PKGNAME}/examples/testgnome
-@dirrm share/doc/${PKGNAME}/examples/stocktoolbar
-@dirrm share/doc/${PKGNAME}/examples/stockmenu
-@dirrm share/doc/${PKGNAME}/examples/simplemenu
-@dirrm share/doc/${PKGNAME}/examples/radiotoolbar
-@dirrm share/doc/${PKGNAME}/examples/radiomenu
-@dirrm share/doc/${PKGNAME}/examples/popupmenu
-@dirrm share/doc/${PKGNAME}/examples/iconentry
-@dirrm share/doc/${PKGNAME}/examples/href
-@dirrm share/doc/${PKGNAME}/examples/gnomeurl
-@dirrm share/doc/${PKGNAME}/examples/gnomesound
-@dirrm share/doc/${PKGNAME}/examples/gnomeconfig
-@dirrm share/doc/${PKGNAME}/examples/fontpick
-@dirrm share/doc/${PKGNAME}/examples/fileentry
-@dirrm share/doc/${PKGNAME}/examples/entry
-@dirrm share/doc/${PKGNAME}/examples/druid
-@dirrm share/doc/${PKGNAME}/examples/dateedit
-@dirrm share/doc/${PKGNAME}/examples/colorpicker
-@dirrm share/doc/${PKGNAME}/examples/canvas
-@dirrm share/doc/${PKGNAME}/examples/appbar
-@dirrm share/doc/${PKGNAME}/examples/app
-@dirrm share/doc/${PKGNAME}/examples
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/api/resources
-@dirrm share/doc/${PKGNAME}/api/resources
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gnome/event
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gnome
-@dirrm share/doc/${PKGNAME}/api/org/gnu
-@dirrm share/doc/${PKGNAME}/api/org
-@dirrm share/doc/${PKGNAME}/api
-@dirrm share/doc/${PKGNAME}

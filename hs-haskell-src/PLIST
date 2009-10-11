@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/03 07:07:38 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/HShaskell-src-${PKGVERSION}.o
 lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer.hi
 lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer.p_hi
@@ -16,8 +16,3 @@ lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-src-${PKGVERSION}.
 lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-src-${PKGVERSION}_p.a
 lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/haskell-src-${PKGVERSION}/LICENSE
-@dirrm share/doc/haskell-src-${PKGVERSION}
-@dirrm lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell
-@dirrm lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}/Language
-@dirrm lib/haskell-src-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/haskell-src-${PKGVERSION}

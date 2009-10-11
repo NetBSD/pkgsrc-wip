@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/21 20:02:12 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
 bin/ciscoCallTable
 bin/ciscoCdpStat
 bin/ciscoSysConf
@@ -29,4 +29,3 @@ man/man1/istat.1
 man/man1/justarp.1
 man/man1/justinfo.1
 man/man1/justnetstat.1
-@dirrm lib/tcl/just

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/09 23:08:51 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
 bin/getfacl
 bin/chacl
 bin/setfacl
@@ -60,6 +60,3 @@ share/locale/de/LC_MESSAGES/acl.mo
 share/locale/fr/LC_MESSAGES/acl.mo
 share/locale/pl/LC_MESSAGES/acl.mo
 share/locale/sv/LC_MESSAGES/acl.mo
-@dirrm share/doc/acl
-@dirrm include/sys
-@dirrm include/acl

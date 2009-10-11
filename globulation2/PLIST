@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/19 18:05:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:39 thomasklausner Exp $
 bin/glob2
 share/applications/glob2.desktop
 share/glob2/AUTHORS
@@ -1661,12 +1661,3 @@ share/pixmaps/glob2-icon-24x24.png
 share/pixmaps/glob2-icon-32x32.png
 share/pixmaps/glob2-icon-48x48.png
 share/pixmaps/glob2-icon-64x64.png
-@dirrm share/glob2/maps
-@dirrm share/glob2/data/zik
-@dirrm share/glob2/data/gui
-@dirrm share/glob2/data/gfx/cursor
-@dirrm share/glob2/data/gfx
-@dirrm share/glob2/data/fonts
-@dirrm share/glob2/data
-@dirrm share/glob2/campaigns
-@dirrm share/glob2

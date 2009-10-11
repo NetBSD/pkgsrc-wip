@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:22:40 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:35 thomasklausner Exp $
 bin/fasta34
 bin/fasta34_t
 bin/fastm34
@@ -92,5 +92,3 @@ share/examples/fasta/prot_test.lib
 share/examples/fasta/qrhuld.aa
 share/examples/fasta/xurt8c.aa
 share/examples/fasta/xurtg.aa
-@dirrm share/examples/fasta
-@dirrm share/doc/fasta

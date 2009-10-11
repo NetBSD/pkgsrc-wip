@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/28 03:17:28 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:06 thomasklausner Exp $
 man/man8/pop-before-smtp.8
 sbin/pop-before-smtp
 share/doc/pop-before-smtp/COPYING
@@ -10,5 +10,3 @@ share/doc/pop-before-smtp/TODO
 share/doc/pop-before-smtp/popauth.m4
 share/examples/pop-before-smtp/pop-before-smtp-conf.pl
 share/examples/rc.d/pop-before-smtp
-@dirrm share/doc/pop-before-smtp
-@dirrm share/examples/pop-before-smtp

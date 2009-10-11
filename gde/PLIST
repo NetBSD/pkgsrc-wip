@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 18:17:39 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
 gde/bin/Consto01mask
 gde/bin/DotPlotTool
 gde/bin/MakeCons
@@ -22,8 +22,3 @@ gde/scripts/installBLASTDB.pl
 gde/scripts/installBLASTDBPROT.pl
 gde/scripts/newDATASET.pl
 gde/scripts/newURL.pl
-@dirrm gde/scripts
-@dirrm gde/doc
-@dirrm gde/db
-@dirrm gde/bin
-@dirrm gde

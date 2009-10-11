@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/23 08:07:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:23 thomasklausner Exp $
 bin/tuxtype2
 share/doc/html/tuxtype2/index-1.html
 share/doc/html/tuxtype2/index-2.html
@@ -326,31 +326,3 @@ share/tuxtype2/data/words/word.lst
 share/tuxtype2/data/words/words1.txt
 share/tuxtype2/data/words/words2.txt
 share/tuxtype2/data/words/words3.txt
-@dirrm share/tuxtype2/data/words
-@dirrm share/tuxtype2/data/themes/nynorsk/words
-@dirrm share/tuxtype2/data/themes/nynorsk/text
-@dirrm share/tuxtype2/data/themes/nynorsk/images
-@dirrm share/tuxtype2/data/themes/nynorsk
-@dirrm share/tuxtype2/data/themes/french/words
-@dirrm share/tuxtype2/data/themes/french
-@dirrm share/tuxtype2/data/themes/dansk/words
-@dirrm share/tuxtype2/data/themes/dansk
-@dirrm share/tuxtype2/data/themes/armenian/images
-@dirrm share/tuxtype2/data/themes/armenian/fonts
-@dirrm share/tuxtype2/data/themes/armenian
-@dirrm share/tuxtype2/data/themes
-@dirrm share/tuxtype2/data/text
-@dirrm share/tuxtype2/data/sounds/alphabet
-@dirrm share/tuxtype2/data/sounds
-@dirrm share/tuxtype2/data/images/tux
-@dirrm share/tuxtype2/data/images/status
-@dirrm share/tuxtype2/data/images/menu
-@dirrm share/tuxtype2/data/images/hands
-@dirrm share/tuxtype2/data/images/comets
-@dirrm share/tuxtype2/data/images/cities
-@dirrm share/tuxtype2/data/images/backgrounds
-@dirrm share/tuxtype2/data/images
-@dirrm share/tuxtype2/data/fonts
-@dirrm share/tuxtype2/data
-@dirrm share/doc/tuxtype2
-@dirrm share/doc/html/tuxtype2

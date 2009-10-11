@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/05 22:59:31 jkuittinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:07 thomasklausner Exp $
 ${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
 ${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
@@ -37,7 +37,3 @@ ${PYSITELIB}/beaker/synchronization.pyc
 ${PYSITELIB}/beaker/synchronization.pyo
 ${PYSITELIB}/beaker/util.pyc
 ${PYSITELIB}/beaker/util.pyo
-@dirrm ${PYSITELIB}/beaker/ext
-@dirrm ${PYSITELIB}/beaker/crypto
-@dirrm ${PYSITELIB}/beaker
-@dirrm ${PYSITELIB}/Beaker-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info

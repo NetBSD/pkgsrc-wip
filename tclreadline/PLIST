@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 22:58:43 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 include/tclreadline.h
 lib/libtclreadline.la
 lib/tclreadline${PKGVERSION}/pkgIndex.tcl
@@ -7,5 +7,3 @@ lib/tclreadline${PKGVERSION}/tclreadlineInit.tcl
 lib/tclreadline${PKGVERSION}/tclreadlineSetup.tcl
 man/mann/tclreadline.n
 share/examples/tclreadline/tclshrc
-@dirrm share/examples/tclreadline
-@dirrm lib/tclreadline${PKGVERSION}

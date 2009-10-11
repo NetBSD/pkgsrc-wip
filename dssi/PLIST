@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 17:57:13 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 bin/dssi_osc_send
 bin/dssi_osc_update
 bin/jack-dssi-host
@@ -11,7 +11,4 @@ lib/dssi/trivial_sampler.la
 lib/dssi/trivial_synth.la
 lib/pkgconfig/dssi.pc
 @exec ${MKDIR} %D/lib/dssi/trivial_sampler
-@dirrm lib/dssi/trivial_sampler
 @exec ${MKDIR} %D/lib/dssi/less_trivial_synth
-@dirrm lib/dssi/less_trivial_synth
-@dirrm lib/dssi

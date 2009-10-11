@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/29 23:35:55 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 bin/tpp
 man/man1/tpp.1
 share/doc/tpp/CHANGES
@@ -25,6 +25,3 @@ share/doc/tpp/examples/source.tpp
 share/doc/tpp/examples/test.tpp
 share/doc/tpp/examples/tpp-features.tpp
 share/doc/tpp/examples/wrap.tpp
-@dirrm share/doc/tpp/examples
-@dirrm share/doc/tpp/contrib
-@dirrm share/doc/tpp

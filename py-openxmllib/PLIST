@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/02 00:06:32 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/openxmlinfo.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,5 +21,3 @@ ${PYSITELIB}/openxmllib/utils.pyc
 ${PYSITELIB}/openxmllib/utils.pyo
 ${PYSITELIB}/openxmllib/wordprocessing.pyc
 ${PYSITELIB}/openxmllib/wordprocessing.pyo
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/openxmllib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/13 09:12:03 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:49 thomasklausner Exp $
 share/classpath/jep.jar
 share/doc/java-jep/html/CustFunc.java
 share/doc/java-jep/html/Half.java
@@ -96,18 +96,4 @@ share/doc/java-jep/javadoc/package-list
 share/doc/java-jep/javadoc/packages.html
 share/doc/java-jep/javadoc/serialized-form.html
 share/doc/java-jep/javadoc/stylesheet.css
-@dirrm share/doc/java-jep/javadoc/org/nfunk/jep/type
-@dirrm share/doc/java-jep/javadoc/org/nfunk/jep/function
-@dirrm share/doc/java-jep/javadoc/org/nfunk/jep
-@dirrm share/doc/java-jep/javadoc/org/nfunk
-@dirrm share/doc/java-jep/javadoc/org
-@dirrm share/doc/java-jep/javadoc
-@dirrm share/doc/java-jep/html/img
-@dirrm share/doc/java-jep/html/_notes
-@dirrm share/doc/java-jep/html/Templates
-@dirrm share/doc/java-jep/html/Library
-@dirrm share/doc/java-jep/html
 @exec ${MKDIR} %D/share/doc/java-jep/grammar
-@dirrm share/doc/java-jep/grammar
-@dirrm share/doc/java-jep
-@dirrm share/classpath

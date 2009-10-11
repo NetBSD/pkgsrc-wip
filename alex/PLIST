@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/23 15:29:37 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
 bin/alex
 share/${PKGNAME}/AlexTemplate
 share/${PKGNAME}/AlexTemplate-debug
@@ -36,6 +36,3 @@ share/examples/alex/tkns.hs
 share/examples/alex/words.x
 share/examples/alex/words_monad.x
 share/examples/alex/words_posn.x
-@dirrm share/examples/alex
-@dirrm share/doc/alex
-@dirrm share/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/30 20:35:40 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:30 thomasklausner Exp $
 bin/ciptool
 bin/dund
 bin/hcitool
@@ -29,6 +29,3 @@ sbin/hciconfig
 sbin/hcid
 sbin/hid2hci
 sbin/sdpd
-@dirrm etc/dbus-1/system.d
-@dirrm etc/dbus-1
-@dirrm etc/bluetooth

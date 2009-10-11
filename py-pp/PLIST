@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 22:59:25 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/ppserver.py
 ${PYSITELIB}/pp.pyc
 ${PYSITELIB}/pp.pyo
@@ -17,5 +17,3 @@ share/examples/${PKGNAME}/quicksort.py
 share/examples/${PKGNAME}/reverse_md5.py
 share/examples/${PKGNAME}/sum_primes.py
 share/examples/${PKGNAME}/sum_primes_functor.py
-@dirrm share/examples/${PKGNAME}
-@dirrm share/doc/${PKGNAME}

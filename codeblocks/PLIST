@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/05 19:47:13 jsonn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
 bin/cb_console_runner
 bin/cb_share_config
 bin/codeblocks
@@ -666,92 +666,5 @@ share/mime/packages/codeblocks.xml
 share/pixmaps/codeblocks.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/icons/gnome/48x48/mimetypes
-@dirrm share/icons/gnome/48x48
-@dirrm share/icons/gnome
 @comment in xdg-dirs: @dirrm share/icons
-@dirrm share/codeblocks/templates/wizard/wxwidgets/wxsmith
-@dirrm share/codeblocks/templates/wizard/wxwidgets/wxfb/frame
-@dirrm share/codeblocks/templates/wizard/wxwidgets/wxfb/dialog
-@dirrm share/codeblocks/templates/wizard/wxwidgets/wxfb
-@dirrm share/codeblocks/templates/wizard/wxwidgets/rc
-@dirrm share/codeblocks/templates/wizard/wxwidgets/pch
-@dirrm share/codeblocks/templates/wizard/wxwidgets/common
-@dirrm share/codeblocks/templates/wizard/wxwidgets
-@dirrm share/codeblocks/templates/wizard/win32gui/files/frame
-@dirrm share/codeblocks/templates/wizard/win32gui/files/dialog
-@dirrm share/codeblocks/templates/wizard/win32gui/files
-@dirrm share/codeblocks/templates/wizard/win32gui
-@dirrm share/codeblocks/templates/wizard/sys/files
-@dirrm share/codeblocks/templates/wizard/sys
-@dirrm share/codeblocks/templates/wizard/staticlib/files
-@dirrm share/codeblocks/templates/wizard/staticlib
-@dirrm share/codeblocks/templates/wizard/smartwin/files
-@dirrm share/codeblocks/templates/wizard/smartwin
-@dirrm share/codeblocks/templates/wizard/sharedlib/files
-@dirrm share/codeblocks/templates/wizard/sharedlib
-@dirrm share/codeblocks/templates/wizard/sdl/files
-@dirrm share/codeblocks/templates/wizard/sdl
-@dirrm share/codeblocks/templates/wizard/qt4/files
-@dirrm share/codeblocks/templates/wizard/qt4
-@dirrm share/codeblocks/templates/wizard/plugins/templates
-@dirrm share/codeblocks/templates/wizard/plugins
-@dirrm share/codeblocks/templates/wizard/opengl/files_win
-@dirrm share/codeblocks/templates/wizard/opengl/files_unix
-@dirrm share/codeblocks/templates/wizard/opengl
-@dirrm share/codeblocks/templates/wizard/ogre/files
-@dirrm share/codeblocks/templates/wizard/ogre
-@dirrm share/codeblocks/templates/wizard/lf/files/structured
-@dirrm share/codeblocks/templates/wizard/lf/files/quick
-@dirrm share/codeblocks/templates/wizard/lf/files
-@dirrm share/codeblocks/templates/wizard/lf
-@dirrm share/codeblocks/templates/wizard/irrlicht/files
-@dirrm share/codeblocks/templates/wizard/irrlicht
-@dirrm share/codeblocks/templates/wizard/h_file
-@dirrm share/codeblocks/templates/wizard/gtk/files
-@dirrm share/codeblocks/templates/wizard/gtk
-@dirrm share/codeblocks/templates/wizard/glut/files
-@dirrm share/codeblocks/templates/wizard/glut
-@dirrm share/codeblocks/templates/wizard/glfw/files
-@dirrm share/codeblocks/templates/wizard/glfw
-@dirrm share/codeblocks/templates/wizard/fltk/fluid
-@dirrm share/codeblocks/templates/wizard/fltk/files
-@dirrm share/codeblocks/templates/wizard/fltk
-@dirrm share/codeblocks/templates/wizard/empty_file
-@dirrm share/codeblocks/templates/wizard/empty
-@dirrm share/codeblocks/templates/wizard/dll/files
-@dirrm share/codeblocks/templates/wizard/dll
-@dirrm share/codeblocks/templates/wizard/directx/files
-@dirrm share/codeblocks/templates/wizard/directx
-@dirrm share/codeblocks/templates/wizard/d/console
-@dirrm share/codeblocks/templates/wizard/d
-@dirrm share/codeblocks/templates/wizard/console/cpp
-@dirrm share/codeblocks/templates/wizard/console/c
-@dirrm share/codeblocks/templates/wizard/console
-@dirrm share/codeblocks/templates/wizard/c_file
-@dirrm share/codeblocks/templates/wizard/avr/files
-@dirrm share/codeblocks/templates/wizard/avr
-@dirrm share/codeblocks/templates/wizard
-@dirrm share/codeblocks/templates
-@dirrm share/codeblocks/scripts
-@dirrm share/codeblocks/plugins
-@dirrm share/codeblocks/lib_finder
-@dirrm share/codeblocks/lexers
-@dirrm share/codeblocks/images/settings
-@dirrm share/codeblocks/images/codesnippets
-@dirrm share/codeblocks/images/codecompletion
-@dirrm share/codeblocks/images/16x16
-@dirrm share/codeblocks/images
-@dirrm share/codeblocks/icons
-@dirrm share/codeblocks
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm include/codeblocks/wxscintilla/include/wx
-@dirrm include/codeblocks/wxscintilla/include
-@dirrm include/codeblocks/wxscintilla
-@dirrm include/codeblocks/wxFlatNotebook
-@dirrm include/codeblocks/tinyxml
-@dirrm include/codeblocks/scripting/sqplus
-@dirrm include/codeblocks/scripting/include
-@dirrm include/codeblocks/scripting/bindings
-@dirrm include/codeblocks/scripting
-@dirrm include/codeblocks

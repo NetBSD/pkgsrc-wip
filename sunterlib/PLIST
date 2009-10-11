@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/28 15:31:37 airhead Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:19 thomasklausner Exp $
 lib/scsh/modules/afs
 lib/scsh/modules/afs-0.1/load.scm
 lib/scsh/modules/afs-0.1/scheme/afs-fs.scm
@@ -207,79 +207,3 @@ share/doc/scsh/modules/treaps-1.0/NEWS
 share/doc/scsh/modules/treaps-1.0/README
 share/scsh/modules/tiff-1.1/bsp.tiff
 share/scsh/modules/tiff-1.1/gnu-head-sm.tif
-@dirrm lib/scsh/modules/treaps-1.0/scheme
-@dirrm lib/scsh/modules/treaps-1.0
-@dirrm lib/scsh/modules/tiff-1.1/scheme
-@dirrm lib/scsh/modules/tiff-1.1
-@dirrm lib/scsh/modules/srfi-37-0.4/scheme
-@dirrm lib/scsh/modules/srfi-37-0.4
-@dirrm lib/scsh/modules/srfi-10-0.1/scheme
-@dirrm lib/scsh/modules/srfi-10-0.1
-@dirrm lib/scsh/modules/sequences-1.0/scheme
-@dirrm lib/scsh/modules/sequences-1.0
-@dirrm lib/scsh/modules/profile-0.0/scheme
-@dirrm lib/scsh/modules/profile-0.0
-@dirrm lib/scsh/modules/procedure-tables-0.1/scheme
-@dirrm lib/scsh/modules/procedure-tables-0.1
-@dirrm lib/scsh/modules/pps-1.0/scheme
-@dirrm lib/scsh/modules/pps-1.0
-@dirrm lib/scsh/modules/module-system-1.0/scheme
-@dirrm lib/scsh/modules/module-system-1.0
-@dirrm lib/scsh/modules/krims-0.1/scheme
-@dirrm lib/scsh/modules/krims-0.1
-@dirrm lib/scsh/modules/intsets-1.0/scheme
-@dirrm lib/scsh/modules/intsets-1.0
-@dirrm lib/scsh/modules/interaction-0.2/scheme
-@dirrm lib/scsh/modules/interaction-0.2
-@dirrm lib/scsh/modules/image-info-1.0/scheme
-@dirrm lib/scsh/modules/image-info-1.0
-@dirrm lib/scsh/modules/heap-images-1.0/scheme
-@dirrm lib/scsh/modules/heap-images-1.0
-@dirrm lib/scsh/modules/file-mode-1.0/scheme
-@dirrm lib/scsh/modules/file-mode-1.0
-@dirrm lib/scsh/modules/exceptions-0.1/scheme
-@dirrm lib/scsh/modules/exceptions-0.1
-@dirrm lib/scsh/modules/dir-streams-1.0/scheme
-@dirrm lib/scsh/modules/dir-streams-1.0
-@dirrm lib/scsh/modules/continuation-data-type-0.1/scheme
-@dirrm lib/scsh/modules/continuation-data-type-0.1
-@dirrm lib/scsh/modules/concurrency-0.2/scheme
-@dirrm lib/scsh/modules/concurrency-0.2
-@dirrm lib/scsh/modules/cml-1.0/scheme
-@dirrm lib/scsh/modules/cml-1.0
-@dirrm lib/scsh/modules/bytio-1.0/scheme
-@dirrm lib/scsh/modules/bytio-1.0
-@dirrm lib/scsh/modules/binary-parse-1.0/scheme
-@dirrm lib/scsh/modules/binary-parse-1.0
-@dirrm lib/scsh/modules/base64-1.0/scheme
-@dirrm lib/scsh/modules/base64-1.0
-@dirrm lib/scsh/modules/banana-0.1/scheme
-@dirrm lib/scsh/modules/banana-0.1
-@dirrm lib/scsh/modules/afs-0.1/scheme
-@dirrm lib/scsh/modules/afs-0.1
-@dirrm share/doc/scsh/modules/treaps-1.0
-@dirrm share/doc/scsh/modules/tiff-1.1
-@dirrm share/doc/scsh/modules/sunterlib-0.6
-@dirrm share/doc/scsh/modules/srfi-37-0.4
-@dirrm share/doc/scsh/modules/srfi-10-0.1
-@dirrm share/doc/scsh/modules/sequences-1.0
-@dirrm share/doc/scsh/modules/profile-0.0
-@dirrm share/doc/scsh/modules/procedure-tables-0.1
-@dirrm share/doc/scsh/modules/pps-1.0
-@dirrm share/doc/scsh/modules/module-system-1.0
-@dirrm share/doc/scsh/modules/krims-0.1
-@dirrm share/doc/scsh/modules/intsets-1.0
-@dirrm share/doc/scsh/modules/interaction-0.2
-@dirrm share/doc/scsh/modules/image-info-1.0
-@dirrm share/doc/scsh/modules/heap-images-1.0
-@dirrm share/doc/scsh/modules/file-mode-1.0
-@dirrm share/doc/scsh/modules/exceptions-0.1
-@dirrm share/doc/scsh/modules/dir-streams-1.0
-@dirrm share/doc/scsh/modules/continuation-data-type-0.1
-@dirrm share/doc/scsh/modules/concurrency-0.2
-@dirrm share/doc/scsh/modules/cml-1.0
-@dirrm share/doc/scsh/modules/bytio-1.0
-@dirrm share/doc/scsh/modules/binary-parse-1.0
-@dirrm share/doc/scsh/modules/base64-1.0
-@dirrm share/doc/scsh/modules/banana-0.1
-@dirrm share/doc/scsh/modules/afs-0.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/10 19:30:00 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 lib/java/bcel.jar
 share/doc/java-bcel/apidocs/allclasses-frame.html
 share/doc/java-bcel/apidocs/allclasses-noframe.html
@@ -1122,41 +1122,4 @@ share/doc/java-bcel/xref/org/apache/bcel/verifier/structurals/package-summary.ht
 share/doc/java-bcel/xref/overview-frame.html
 share/doc/java-bcel/xref/overview-summary.html
 share/doc/java-bcel/xref/stylesheet.css
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/verifier/structurals
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/verifier/statics
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/verifier/exc
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/verifier
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/util
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/generic
-@dirrm share/doc/java-bcel/xref/org/apache/bcel/classfile
-@dirrm share/doc/java-bcel/xref/org/apache/bcel
-@dirrm share/doc/java-bcel/xref/org/apache
-@dirrm share/doc/java-bcel/xref/org
-@dirrm share/doc/java-bcel/xref
-@dirrm share/doc/java-bcel/target/generated-xdocs
 @exec ${MKDIR} %D/share/doc/java-bcel/target/docs
-@dirrm share/doc/java-bcel/target/docs
-@dirrm share/doc/java-bcel/target
-@dirrm share/doc/java-bcel/style
-@dirrm share/doc/java-bcel/images
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/structurals/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/structurals
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/statics/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/statics
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/exc/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/exc
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/verifier
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/util/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/util
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/generic/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/generic
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/classfile/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/classfile
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel/class-use
-@dirrm share/doc/java-bcel/apidocs/org/apache/bcel
-@dirrm share/doc/java-bcel/apidocs/org/apache
-@dirrm share/doc/java-bcel/apidocs/org
-@dirrm share/doc/java-bcel/apidocs
-@dirrm share/doc/java-bcel
-@dirrm lib/java

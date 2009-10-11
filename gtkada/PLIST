@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/11 23:05:20 johnrshannon Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 bin/gate
 bin/gate-in.exe
 bin/gdialog
@@ -453,30 +453,3 @@ lib/libgtkada_glade.so
 share/gtkada/examples/testgtk/create_layout.adb
 share/gtkada/examples/testgtk/opengl/view_gl.adb
 share/gtkada/examples/testgtk/testgtk
-@dirrm share/gtkada/examples/user_data
-@dirrm share/gtkada/examples/tutorial/tictactoe
-@dirrm share/gtkada/examples/tutorial/table
-@dirrm share/gtkada/examples/tutorial/simple
-@dirrm share/gtkada/examples/tutorial/packbox
-@dirrm share/gtkada/examples/tutorial/helloworld2
-@dirrm share/gtkada/examples/tutorial/helloworld
-@dirrm share/gtkada/examples/tutorial/gtkdial
-@dirrm share/gtkada/examples/tutorial
-@dirrm share/gtkada/examples/testgtk/opengl
-@dirrm share/gtkada/examples/testgtk
-@dirrm share/gtkada/examples/powergnu
-@dirrm share/gtkada/examples/handlers
-@dirrm share/gtkada/examples/gtk_examples
-@dirrm share/gtkada/examples/editor
-@dirrm share/gtkada/examples/dynamic_cast
-@dirrm share/gtkada/examples/doublebuffer
-@dirrm share/gtkada/examples/documentation
-@dirrm share/gtkada/examples/composite_widget
-@dirrm share/gtkada/examples/calendar_combo
-@dirrm share/gtkada/examples/base_widget
-@dirrm share/gtkada/examples
-@dirrm share/gtkada
-@dirrm include/gtkada
-@dirrm doc/GtkAda/gtkada_ug
-@dirrm doc/GtkAda/gtkada_rm
-@dirrm doc/GtkAda

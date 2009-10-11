@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/03 21:44:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:23 thomasklausner Exp $
 share/httpd/htdocs/uebimiau/CHANGELOG.txt
 share/httpd/htdocs/uebimiau/INSTALL.txt
 share/httpd/htdocs/uebimiau/README.txt
@@ -144,13 +144,3 @@ share/httpd/htdocs/uebimiau/themes/neotech.net/upload-attach.htm
 share/httpd/htdocs/uebimiau/themes/neotech.net/webmail.css
 share/httpd/htdocs/uebimiau/themes/neotech.net/webmail.js
 share/httpd/htdocs/uebimiau/upload.php
-@dirrm share/httpd/htdocs/uebimiau/database
-@dirrm share/httpd/htdocs/uebimiau/extra
-@dirrm share/httpd/htdocs/uebimiau/images
-@dirrm share/httpd/htdocs/uebimiau/inc
-@dirrm share/httpd/htdocs/uebimiau/langs
-@dirrm share/httpd/htdocs/uebimiau/smarty
-@dirrm share/httpd/htdocs/uebimiau/themes/default
-@dirrm share/httpd/htdocs/uebimiau/themes/neotech.net
-@dirrm share/httpd/htdocs/uebimiau/themes
-@dirrm share/httpd/htdocs/uebimiau

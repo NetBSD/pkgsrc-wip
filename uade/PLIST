@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/25 14:58:57 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:23 thomasklausner Exp $
 bin/pwrap.pl
 bin/uade
 man/man1/uade.1
@@ -244,14 +244,3 @@ share/uade/players/uadeformats
 share/uade/score
 share/uade/uadelogo.xpm
 share/uade/uaerc
-@dirrm share/uade/players/S
-@dirrm share/uade/players/ENV/EaglePlayer
-@dirrm share/uade/players/ENV
-@dirrm share/uade/players
-@dirrm share/uade
-@dirrm share/doc/${PKGNAME}/uade-docs/players/ptk-prowiz
-@dirrm share/doc/${PKGNAME}/uade-docs/players/WantedTeam
-@dirrm share/doc/${PKGNAME}/uade-docs/players
-@dirrm share/doc/${PKGNAME}/uade-docs/decrunch
-@dirrm share/doc/${PKGNAME}/uade-docs
-@dirrm share/doc/${PKGNAME}

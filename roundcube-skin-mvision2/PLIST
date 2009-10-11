@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 22:38:13 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 share/roundcube/skins/${PKGVERSION}_en/.DS_Store
 share/roundcube/skins/${PKGVERSION}_en/._.DS_Store
 share/roundcube/skins/${PKGVERSION}_en/.project
@@ -264,15 +264,4 @@ share/roundcube/skins/${PKGVERSION}_en/templates/vertical.css
 share/roundcube/skins/${PKGVERSION}_en/vertical.css
 share/roundcube/skins/${PKGVERSION}_en/vertical_ie8.css
 share/roundcube/skins/${PKGVERSION}_en/watermark.html
-@dirrm share/roundcube/skins/${PKGVERSION}_en/templates
-@dirrm share/roundcube/skins/${PKGVERSION}_en/includes
-@dirrm share/roundcube/skins/${PKGVERSION}_en/images/icons
-@dirrm share/roundcube/skins/${PKGVERSION}_en/images/googiespell
-@dirrm share/roundcube/skins/${PKGVERSION}_en/images/display
-@dirrm share/roundcube/skins/${PKGVERSION}_en/images/buttons
-@dirrm share/roundcube/skins/${PKGVERSION}_en/images
-@dirrm share/roundcube/skins/${PKGVERSION}_en/.settings
 @exec ${MKDIR} %D/share/roundcube/skins/${PKGVERSION}_en/.cache
-@dirrm share/roundcube/skins/${PKGVERSION}_en/.cache
-@dirrm share/roundcube/skins/${PKGVERSION}_en
-@dirrm share/roundcube/skins

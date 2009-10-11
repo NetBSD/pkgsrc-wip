@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/22 16:25:57 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:01 thomasklausner Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -493,10 +493,3 @@ share/openmpi/mpicc-wrapper-data.txt
 share/openmpi/mpicxx-wrapper-data.txt
 share/openmpi/mpif77-wrapper-data.txt
 share/openmpi/mpif90-wrapper-data.txt
-@dirrm share/openmpi/amca-param-sets
-@dirrm share/openmpi
-@dirrm lib/openmpi
-@dirrm include/openmpi/ompi/mpi/cxx
-@dirrm include/openmpi/ompi/mpi
-@dirrm include/openmpi/ompi
-@dirrm include/openmpi

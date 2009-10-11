@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/20 05:58:41 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/Subversion.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Config.hi
@@ -20,10 +20,3 @@ lib/${PKGNAME}/${HASKELL_VERSION}/include/HsSVN.h
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 share/doc/${PKGNAME}/COPYING
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/include
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/Stream
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion/FileSystem
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Subversion
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
-@dirrm lib/${PKGNAME}

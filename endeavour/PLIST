@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/11 02:36:59 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:34 thomasklausner Exp $
 bin/endeavour2
 bin/endeavour2-config
 lib/endeavour2/LICENSE
@@ -666,11 +666,3 @@ share/endeavour2/icons/icon_usb_plug_48x48.xpm
 share/endeavour2/images/texttips_example.xpm
 share/endeavour2/images/tooltips_example.xpm
 @comment in xdg-dirs: @dirrm share/icons
-@dirrm share/endeavour2/images
-@dirrm share/endeavour2/icons
-@dirrm share/endeavour2/help
-@dirrm share/endeavour2
-@dirrm lib/endeavour2/lib
-@dirrm lib/endeavour2/include
-@dirrm lib/endeavour2/bin
-@dirrm lib/endeavour2

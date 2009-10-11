@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/10 20:10:37 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:47 thomasklausner Exp $
 lib/io/addons/DistributedObjects/_build/dll/libIoDistributedObjects.so
 lib/io/addons/DistributedObjects/_build/lib/libIoDistributedObjects.a
 lib/io/addons/DistributedObjects/build.io
@@ -8,8 +8,3 @@ lib/io/addons/DistributedObjects/io/DOServer.io
 lib/io/addons/DistributedObjects/io/MDOConnection.io
 lib/io/addons/DistributedObjects/io/MDOServer.io
 lib/io/addons/DistributedObjects/protos
-@dirrm lib/io/addons/DistributedObjects/io
-@dirrm lib/io/addons/DistributedObjects/_build/lib
-@dirrm lib/io/addons/DistributedObjects/_build/dll
-@dirrm lib/io/addons/DistributedObjects/_build
-@dirrm lib/io/addons/DistributedObjects

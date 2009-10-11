@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/27 14:34:42 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:06 thomasklausner Exp $
 bin/pltek
 bin/plm2gif
 bin/plpr
@@ -128,9 +128,3 @@ share/plplot${PKGVERSION}/plstnd5.fnt
 share/plplot${PKGVERSION}/plxtnd5.fnt
 share/plplot${PKGVERSION}/usa.map
 share/plplot${PKGVERSION}/usaglobe.map
-@dirrm share/plplot${PKGVERSION}/examples/c++
-@dirrm share/plplot${PKGVERSION}/examples/c
-@dirrm share/plplot${PKGVERSION}/examples
-@dirrm share/plplot${PKGVERSION}
-@dirrm share/doc/plplot
-@dirrm include/plplot

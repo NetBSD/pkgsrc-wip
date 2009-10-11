@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/19 23:30:59 mreriksson Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 bin/ipmitool
 man/man1/ipmitool.1
 man/man8/ipmievd.8
@@ -15,6 +15,3 @@ share/ipmitool/create_webpage.sh
 share/ipmitool/create_webpage_compact.sh
 share/ipmitool/ipmi.init.basic
 share/ipmitool/ipmi.init.redhat
-@dirrm share/ipmitool
-@dirrm share/doc/ipmitool
-@dirrm etc/cups/certs

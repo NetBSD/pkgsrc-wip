@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 00:26:48 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 lib/mono/gac/policy.2.0.taglib-sharp/0.0.0.0__db62eba44689b5b0/policy.2.0.taglib-sharp.config
 lib/mono/gac/policy.2.0.taglib-sharp/0.0.0.0__db62eba44689b5b0/policy.2.0.taglib-sharp.dll
 lib/mono/gac/taglib-sharp/${PKGVERSION}__db62eba44689b5b0/taglib-sharp.dll
 lib/mono/gac/taglib-sharp/${PKGVERSION}__db62eba44689b5b0/taglib-sharp.dll.mdb
 lib/mono/taglib-sharp/taglib-sharp.dll
 share/pkgconfig/taglib-sharp.pc
-@dirrm lib/mono/taglib-sharp
-@dirrm lib/mono/gac/taglib-sharp/${PKGVERSION}__db62eba44689b5b0
-@dirrm lib/mono/gac/taglib-sharp
-@dirrm lib/mono/gac/policy.2.0.taglib-sharp/0.0.0.0__db62eba44689b5b0
-@dirrm lib/mono/gac/policy.2.0.taglib-sharp
 @comment in mono: @dirrm lib/mono/gac
 @comment in mono: @dirrm lib/mono

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/20 01:06:57 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:10 thomasklausner Exp $
 bin/PyAIMt
 ${TRANSPORTDIR}/src/avatar.py
 ${TRANSPORTDIR}/src/adhoc.py
@@ -96,22 +96,3 @@ ${TRANSPORTDIR}/tools/managessi.py
 ${TRANSPORTDIR}/tools/migrate.py
 ${JABBER_EXDIR}/pyaimt.xml
 share/examples/rc.d/pyaimt
-@dirrm ${TRANSPORTDIR}/tools
-@dirrm ${TRANSPORTDIR}/src/xdb
-@dirrm ${TRANSPORTDIR}/src/web
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/xish
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols/jabber
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols
-@dirrm ${TRANSPORTDIR}/src/twistfix/words
-@dirrm ${TRANSPORTDIR}/src/twistfix
-@dirrm ${TRANSPORTDIR}/src/tlib
-@dirrm ${TRANSPORTDIR}/src/services
-@dirrm ${TRANSPORTDIR}/src/legacy/services
-@dirrm ${TRANSPORTDIR}/src/legacy
-@dirrm ${TRANSPORTDIR}/src/langs
-@dirrm ${TRANSPORTDIR}/src
-@dirrm ${TRANSPORTDIR}/data/www/images
-@dirrm ${TRANSPORTDIR}/data/www/css
-@dirrm ${TRANSPORTDIR}/data/www
-@dirrm ${TRANSPORTDIR}/data
-@dirrm ${TRANSPORTDIR}

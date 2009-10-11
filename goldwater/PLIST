@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/05 18:42:04 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 bin/GWDBridge
 bin/GWNServer
 bin/goldwater
@@ -15,7 +15,3 @@ pkgdb/${PKGNAME}/+DESC
 pkgdb/${PKGNAME}/+SIZE_ALL
 pkgdb/${PKGNAME}/+SIZE_PKG
 pkgdb/phlib-1.20/+REQUIRED_BY
-@dirrm pkgdb/phlib-1.20
-@dirrm pkgdb/${PKGNAME}
-@dirrm pkgdb/expat-1.95.6nb1
-@dirrm pkgdb

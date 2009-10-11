@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/02 16:38:13 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:28 thomasklausner Exp $
 bin/azureus
 share/azureus/Azureus.png
 share/azureus/Azureus.torrent.png
@@ -24,7 +24,3 @@ share/azureus/swt-about.html
 share/azureus/swt-mozilla.jar
 share/azureus/swt-pi.jar
 share/azureus/swt.jar
-@dirrm share/azureus/plugins/azupdater
-@dirrm share/azureus/plugins/azplugins
-@dirrm share/azureus/plugins
-@dirrm share/azureus

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 18:05:57 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:24 thomasklausner Exp $
 bin/dba
 bin/dnal
 bin/estwise
@@ -34,5 +34,3 @@ share/wise2/wisecfg/tm.pri
 share/wise2/wisecfg/wise.2
 share/wise2/wisecfg/wise.per
 share/wise2/wisecfg/worm.gf
-@dirrm share/wise2/wisecfg
-@dirrm share/wise2

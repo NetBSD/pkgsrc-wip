@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/25 14:48:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/plucker-build
 bin/plucker-decode
 bin/plucker-dump
@@ -89,6 +89,3 @@ ${PYSITELIB}/PyPlucker/helper/timeoutsocket.pyo
 share/doc/py-plucker/exclusionlist.txt
 share/doc/py-plucker/home.html
 share/doc/py-plucker/pluckerrc.sample
-@dirrm share/doc/py-plucker
-@dirrm ${PYSITELIB}/PyPlucker/helper
-@dirrm ${PYSITELIB}/PyPlucker

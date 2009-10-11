@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/29 06:17:55 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
 bin/DBDirect-hdbc-sqlite3
 lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC/SQLite3.hi
 lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC/SQLite3.p_hi
@@ -6,8 +6,3 @@ lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/HShaskelldb-hdbc-sql
 lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-sqlite3-${PKGVERSION}.a
 lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHShaskelldb-hdbc-sqlite3-${PKGVERSION}_p.a
 lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/package-description
-@dirrm lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB/HDBC
-@dirrm lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HaskellDB
-@dirrm lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database
-@dirrm lib/haskelldb-hdbc-sqlite3-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/haskelldb-hdbc-sqlite3-${PKGVERSION}

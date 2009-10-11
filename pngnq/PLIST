@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/15 08:20:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:06 thomasklausner Exp $
 bin/pngnq
 share/doc/pngnq/LICENSE
 share/doc/pngnq/README
-@dirrm share/doc/pngnq

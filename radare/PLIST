@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/13 09:40:26 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
 bin/bindiff
 bin/bug
 bin/hasher
@@ -67,6 +67,3 @@ share/doc/radare/java
 share/doc/radare/map-struct
 share/doc/radare/shell
 share/radare/magic/elf
-@dirrm share/radare/magic
-@dirrm share/doc/radare
-@dirrm libexec/radare

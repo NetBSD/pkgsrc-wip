@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/02 22:22:15 mreriksson Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:04 thomasklausner Exp $
 bin/p3nfsd
 man/man1/p3nfsd.1
 share/doc/${PKGNAME}/CHANGES
@@ -17,4 +17,3 @@ share/doc/${PKGNAME}/nfsc3.opl
 share/doc/${PKGNAME}/nfsc3a.opl
 share/doc/${PKGNAME}/nfsc5.opl
 share/doc/${PKGNAME}/usb.linux
-@dirrm share/doc/${PKGNAME}

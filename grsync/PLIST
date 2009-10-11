@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/11 18:19:32 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:41 thomasklausner Exp $
 bin/grsync
 bin/grsync-batch
 man/man1/grsync-batch.1
@@ -6,6 +6,3 @@ man/man1/grsync.1
 share/applications/grsync.desktop
 share/grsync/grsync.glade
 share/pixmaps/grsync.png
-@dirrm share/pixmaps
-@dirrm share/grsync
-@dirrm share/applications

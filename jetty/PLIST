@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/17 20:47:29 unex_linija Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:49 thomasklausner Exp $
 jetty/LICENSE.TXT
 jetty/README.TXT
 jetty/VERSION.TXT
@@ -42,22 +42,4 @@ share/examples/jetty/jetty-jmx.xml
 share/examples/jetty/jetty.xml
 share/examples/jetty/webdefault.xml
 share/examples/rc.d/jetty
-@dirrm share/examples/jetty
-@dirrm jetty/webapps/template/src/com/acme
-@dirrm jetty/webapps/template/src/com
-@dirrm jetty/webapps/template/src
-@dirrm jetty/webapps/template/WEB-INF/lib
-@dirrm jetty/webapps/template/WEB-INF/classes/com/acme
-@dirrm jetty/webapps/template/WEB-INF/classes/com
-@dirrm jetty/webapps/template/WEB-INF/classes
-@dirrm jetty/webapps/template/WEB-INF
-@dirrm jetty/webapps/template
-@dirrm jetty/webapps
 @exec ${MKDIR} %D/jetty/logs
-@dirrm jetty/logs
-@dirrm jetty/lib
-@dirrm jetty/extra/lib
-@dirrm jetty/extra
-@dirrm jetty/ext
-@dirrm jetty/etc
-@dirrm jetty

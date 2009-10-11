@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/12 22:44:24 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:55 thomasklausner Exp $
 boot/System.map-${PKGVERSION}
 boot/bzImage-${PKGVERSION}
 boot/${PKGNAME}.config
@@ -46,26 +46,3 @@ lib/modules/${PKGVERSION}/modules.isapnpmap
 lib/modules/${PKGVERSION}/modules.pcimap
 lib/modules/${PKGVERSION}/modules.symbols
 lib/modules/${PKGVERSION}/modules.usbmap
-@dirrm lib/modules/${PKGVERSION}/kernel/sound/usb
-@dirrm lib/modules/${PKGVERSION}/kernel/sound/drivers/mpu401
-@dirrm lib/modules/${PKGVERSION}/kernel/sound/drivers
-@dirrm lib/modules/${PKGVERSION}/kernel/sound
-@dirrm lib/modules/${PKGVERSION}/kernel/net/irda
-@dirrm lib/modules/${PKGVERSION}/kernel/net/bluetooth
-@dirrm lib/modules/${PKGVERSION}/kernel/net
-@dirrm lib/modules/${PKGVERSION}/kernel/fs/ntfs
-@dirrm lib/modules/${PKGVERSION}/kernel/fs
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/usb/class
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/usb
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/net
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/message/i2o
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/message
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/input/mouse
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/input
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/char/drm
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/char/agp
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/char
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers/block
-@dirrm lib/modules/${PKGVERSION}/kernel/drivers
-@dirrm lib/modules/${PKGVERSION}/kernel
-@dirrm lib/modules/${PKGVERSION}

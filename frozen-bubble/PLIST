@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/24 20:47:22 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:37 thomasklausner Exp $
 bin/frozen-bubble
 bin/frozen-bubble-editor
 lib/frozen-bubble/fb-server
@@ -3250,14 +3250,3 @@ share/locale/sk/LC_MESSAGES/frozen-bubble.mo
 share/locale/sl/LC_MESSAGES/frozen-bubble.mo
 share/locale/sv/LC_MESSAGES/frozen-bubble.mo
 share/locale/tr/LC_MESSAGES/frozen-bubble.mo
-@dirrm lib/frozen-bubble
-@dirrm share/frozen-bubble/snd
-@dirrm share/frozen-bubble/gfx/pinguins
-@dirrm share/frozen-bubble/gfx/menu/anims
-@dirrm share/frozen-bubble/gfx/menu
-@dirrm share/frozen-bubble/gfx/intro
-@dirrm share/frozen-bubble/gfx/flags
-@dirrm share/frozen-bubble/gfx/balls
-@dirrm share/frozen-bubble/gfx
-@dirrm share/frozen-bubble/data
-@dirrm share/frozen-bubble

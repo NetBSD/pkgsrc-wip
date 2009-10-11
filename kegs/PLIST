@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/13 22:38:01 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
 bin/xkegs
 share/doc/kegs/CHANGES.txt
 share/doc/kegs/COPYING.txt
@@ -9,5 +9,3 @@ share/doc/kegs/README.linux.partitions.txt
 share/doc/kegs/README.mac.txt
 share/doc/kegs/README.win32.txt
 share/kegs/config.kegs
-@dirrm share/kegs
-@dirrm share/doc/kegs

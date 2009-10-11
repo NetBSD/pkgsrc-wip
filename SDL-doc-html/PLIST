@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/31 12:20:02 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
 share/doc/SDL-doc/html/audio.html
 share/doc/SDL-doc/html/cdrom.html
 share/doc/SDL-doc/html/event.html
@@ -199,5 +199,3 @@ share/doc/SDL-doc/html/time.html
 share/doc/SDL-doc/html/video.html
 share/doc/SDL-doc/html/wm.html
 @exec ${MKDIR} %D/share/doc/SDL-doc/html
-@dirrm share/doc/SDL-doc/html
-@dirrm share/doc/SDL-doc

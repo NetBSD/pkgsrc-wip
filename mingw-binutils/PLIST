@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/07/21 14:13:04 makoto Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/10/11 10:44:57 thomasklausner Exp $
 bin/${MINGW_TARGET}-addr2line
 bin/${MINGW_TARGET}-ar
 bin/${MINGW_TARGET}-as
@@ -124,4 +124,3 @@ share/locale/zh_CN/LC_MESSAGES/ld.mo
 share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 share/locale/zh_TW/LC_MESSAGES/binutils.mo
 share/locale/zh_TW/LC_MESSAGES/ld.mo
-@dirrm ${MINGW_TARGET}/lib/ldscripts

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/29 20:40:38 mchittur Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:59 thomasklausner Exp $
 bin/asn2ff
 bin/asn2gb
 bin/asn2idx
@@ -195,9 +195,3 @@ share/doc/ncbi/seq_install/win-ie3.css
 share/doc/ncbi/seq_install/win-netscape.css
 share/doc/ncbi/sequin.htm
 share/doc/ncbi/tbl2asn.txt
-@dirrm share/doc/ncbi/seq_install
-@dirrm share/doc/ncbi/man
-@dirrm share/doc/ncbi/images
-@dirrm share/doc/ncbi/fa2htgs
-@dirrm share/doc/ncbi/blast
-@dirrm share/doc/ncbi

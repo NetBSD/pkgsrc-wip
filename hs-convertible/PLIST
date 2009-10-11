@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/29 05:24:07 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible.hi
 lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible.p_hi
 lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Base.hi
@@ -20,9 +20,3 @@ lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-${PKGVERSION}.
 lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/libHSconvertible-${PKGVERSION}_p.a
 lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/convertible-${PKGVERSION}/COPYRIGHT
-@dirrm share/doc/convertible-${PKGVERSION}
-@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible/Instances
-@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data/Convertible
-@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}/Data
-@dirrm lib/convertible-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/convertible-${PKGVERSION}

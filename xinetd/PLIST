@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:07 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:25 thomasklausner Exp $
 man/man5/xinetd.conf.5
 man/man8/itox.8
 man/man8/xconv.pl.8
@@ -21,5 +21,3 @@ share/examples/xinetd/xinetd.d/ftp-sensor
 share/examples/xinetd/xinetd.d/tcpmux-server
 share/examples/xinetd/xinetd.d/time-dgram
 share/examples/xinetd/xinetd.d/time-stream
-@dirrm share/examples/xinetd/xinetd.d
-@dirrm share/examples/xinetd

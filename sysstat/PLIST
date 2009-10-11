@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:39 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:20 thomasklausner Exp $
 bin/iostat
 bin/mpstat
 bin/sadf
@@ -33,6 +33,3 @@ share/locale/pt/LC_MESSAGES/sysstat.mo
 share/locale/ro/LC_MESSAGES/sysstat.mo
 share/locale/ru/LC_MESSAGES/sysstat.mo
 share/locale/sk/LC_MESSAGES/sysstat.mo
-@dirrm share/examples/sysstat
-@dirrm share/doc/sysstat
-@dirrm libexec/sa

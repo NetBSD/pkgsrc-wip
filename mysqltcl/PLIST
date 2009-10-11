@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/05 20:07:07 alchow Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 lib/tcl/${PKGNAME}/libmysqltcl${PKGVERSION}.so
 lib/tcl/${PKGNAME}/pkgIndex.tcl
 man/mann/mysqltcl.n
-@dirrm lib/tcl/${PKGNAME}
 @comment in tcl: @dirrm lib/tcl

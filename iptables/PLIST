@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/15 13:21:10 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:48 thomasklausner Exp $
 bin/ip6tables
 bin/iptables
 bin/iptables-restore
@@ -85,4 +85,3 @@ man/man8/ip6tables.8
 man/man8/iptables-restore.8
 man/man8/iptables-save.8
 man/man8/iptables.8
-@dirrm lib/iptables

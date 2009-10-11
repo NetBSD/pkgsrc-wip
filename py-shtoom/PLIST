@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/27 10:58:58 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/shtoom.py
 bin/shtam.py
 bin/shmessage.py
@@ -156,12 +156,3 @@ ${PYSITELIB}/shtoom/rtp.pyo
 ${PYSITELIB}/shtoom/sip.pyo
 ${PYSITELIB}/shtoom/stun.pyo
 ${PYSITELIB}/shtoom/upnp.pyo
-@dirrm ${PYSITELIB}/shtoom/app
-@dirrm ${PYSITELIB}/shtoom/audio
-@dirrm ${PYSITELIB}/shtoom/ui/tkui
-@dirrm ${PYSITELIB}/shtoom/ui/textui
-@dirrm ${PYSITELIB}/shtoom/ui/gnomeui
-@dirrm ${PYSITELIB}/shtoom/ui/qtui
-@dirrm ${PYSITELIB}/shtoom/ui
-@dirrm ${PYSITELIB}/shtoom/multicast
-@dirrm ${PYSITELIB}/shtoom

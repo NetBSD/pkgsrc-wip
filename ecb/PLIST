@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/16 05:00:08 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 info/ecb.info
 info/ecb.info-1
 info/ecb.info-10
@@ -71,4 +71,3 @@ ${EMACS_LISPPREFIX}/ecb/silentcomp.el
 ${EMACS_LISPPREFIX}/ecb/silentcomp.elc
 ${EMACS_LISPPREFIX}/ecb/tree-buffer.el
 ${EMACS_LISPPREFIX}/ecb/tree-buffer.elc
-@dirrm ${EMACS_LISPPREFIX}/ecb

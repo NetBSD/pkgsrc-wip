@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/04 08:22:38 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 include/gtksourceviewmm-1.0/gtksourceviewmm.h
 include/gtksourceviewmm-1.0/gtksourceviewmm/init.h
 include/gtksourceviewmm-1.0/gtksourceviewmm/private/sourcebuffer_p.h
@@ -127,9 +127,3 @@ share/doc/libgtksourceviewmm-1.0/docs/reference/html/tabs.css
 share/doc/libgtksourceviewmm-1.0/docs/reference/html/todo.html
 share/doc/libgtksourceviewmm-1.0/docs/reference/html/wrap__init_8h-source.html
 share/doc/libgtksourceviewmm-1.0/docs/reference/html/wrap__init_8h.html
-@dirrm share/doc/libgtksourceviewmm-1.0/docs/reference/html
-@dirrm lib/gtksourceviewmm-1.0/proc/m4
-@dirrm lib/gtksourceviewmm-1.0/include
-@dirrm include/gtksourceviewmm-1.0/gtksourceviewmm/private
-@dirrm include/gtksourceviewmm-1.0/gtksourceviewmm
-@dirrm include/gtksourceviewmm-1.0

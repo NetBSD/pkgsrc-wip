@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 00:15:35 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 share/VisionEgg-${PYVERSSUFFIX}/demo/GUI/drumDemoGUI.py
 share/VisionEgg-${PYVERSSUFFIX}/demo/Pyro/gratingPyroGUI.py
 share/VisionEgg-${PYVERSSUFFIX}/demo/Pyro/gratingPyroServer.py
@@ -49,8 +49,3 @@ share/VisionEgg-${PYVERSSUFFIX}/demo/tcp/gratingTCP.py
 share/VisionEgg-${PYVERSSUFFIX}/demo/texture.py
 share/VisionEgg-${PYVERSSUFFIX}/demo/textureDrum.py
 share/VisionEgg-${PYVERSSUFFIX}/demo/visual_jitter.py
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/demo/tcp
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/demo/daq
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/demo/Pyro
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/demo/GUI
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/demo

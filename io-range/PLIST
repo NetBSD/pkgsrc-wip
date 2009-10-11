@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/29 18:37:25 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:47 thomasklausner Exp $
 include/io/Range/IoRange.h
 include/io/Range/IoRange_inline.h
 lib/io/addons/Range/_build/dll/libIoRange.so
@@ -7,9 +7,3 @@ lib/io/addons/Range/build.io
 lib/io/addons/Range/depends
 lib/io/addons/Range/io/Extras.io
 lib/io/addons/Range/io/Range.io
-@dirrm lib/io/addons/Range/io
-@dirrm lib/io/addons/Range/_build/lib
-@dirrm lib/io/addons/Range/_build/dll
-@dirrm lib/io/addons/Range/_build
-@dirrm lib/io/addons/Range
-@dirrm include/io/Range

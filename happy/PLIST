@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/12 03:19:29 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:42 thomasklausner Exp $
 bin/happy
 share/doc/${PKGNAME}/LICENSE
 share/${PKGNAME}/GLR_Base
@@ -14,5 +14,3 @@ share/${PKGNAME}/HappyTemplate-arrays-ghc
 share/${PKGNAME}/HappyTemplate-arrays-ghc-debug
 share/${PKGNAME}/HappyTemplate-coerce
 share/${PKGNAME}/HappyTemplate-ghc
-@dirrm share/${PKGNAME}
-@dirrm share/doc/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 22:20:57 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
 bin/boinc_client
 bin/boinc_cmd
 bin/ca-bundle.crt
@@ -32,4 +32,3 @@ include/boinc/version.h
 lib/libboinc.a
 lib/libboinc_api.a
 lib/libboinc_zip.a
-@dirrm include/boinc

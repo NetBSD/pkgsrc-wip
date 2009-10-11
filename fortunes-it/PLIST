@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/18 03:49:14 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 share/games/fortune/it/adams
 share/games/fortune/it/adams.dat
 share/games/fortune/it/banner
@@ -45,4 +45,3 @@ share/games/fortune/it/zuse
 share/games/fortune/it/zuse-o
 share/games/fortune/it/zuse-o.dat
 share/games/fortune/it/zuse.dat
-@dirrm share/games/fortune/it

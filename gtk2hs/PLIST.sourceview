@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sourceview,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.sourceview,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HSsourceview.o
 lib/gtk2hs/libHSsourceview.a
 lib/gtk2hs/sourceview.package.conf
@@ -14,8 +14,3 @@ lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk/SourceView/SourceTagStyle.hi
 lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk/SourceView/SourceTagTable.hi
 lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk/SourceView/SourceView.hi
 lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk/SourceView/Types.hi
-@dirrm lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk/SourceView
-@dirrm lib/gtk2hs/imports/sourceview/Graphics/UI/Gtk
-@dirrm lib/gtk2hs/imports/sourceview/Graphics/UI
-@dirrm lib/gtk2hs/imports/sourceview/Graphics
-@dirrm lib/gtk2hs/imports/sourceview

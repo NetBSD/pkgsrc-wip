@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 19:58:09 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:54 thomasklausner Exp $
 include/libparsifal/bistream.h
 include/libparsifal/dtdvalid.h
 include/libparsifal/isrcmem.h
@@ -10,4 +10,3 @@ include/libparsifal/xmlpool.h
 include/libparsifal/xmlsbuf.h
 include/libparsifal/xmlvect.h
 lib/libparsifal.la
-@dirrm include/libparsifal

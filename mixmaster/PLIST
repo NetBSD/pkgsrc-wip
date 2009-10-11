@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/08/20 17:31:49 tvierling Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:57 thomasklausner Exp $
 bin/mix
 man/man1/mix.1
 share/examples/mixmaster/abuse.txt.in
@@ -19,4 +19,3 @@ share/examples/mixmaster/rab.blk
 share/examples/mixmaster/reply.txt.in
 share/examples/mixmaster/type1.hlp
 share/examples/mixmaster/usage.txt.in
-@dirrm share/examples/mixmaster

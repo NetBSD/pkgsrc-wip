@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2006/12/03 17:46:50 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/tac_plus_generate_passwd
 man/man8/tac_plus.8
 sbin/tac_plus
 share/doc/tac_plus/users_guide
 share/examples/tac_plus/tac_plus.cfg
-@dirrm share/examples/tac_plus
-@dirrm share/doc/tac_plus

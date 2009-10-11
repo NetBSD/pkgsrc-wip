@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/07/04 19:18:35 milosn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:48 thomasklausner Exp $
 bin/io
 include/io/BStream.h
 include/io/BStreamTag.h
@@ -105,4 +105,3 @@ include/io/utf8internal.h
 include/io/utf_convert.h
 lib/libiovmall.a
 lib/libiovmall.so
-@dirrm include/io

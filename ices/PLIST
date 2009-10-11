@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/29 01:40:36 icmp Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:46 thomasklausner Exp $
 bin/ices
 etc/ices.conf.dist
 etc/modules/ices.pm.dist
 etc/modules/ices.py.dist
 man/man1/ices.1
 share/doc/ices/icesmanual.html
-@dirrm share/doc/ices
-@dirrm etc/modules

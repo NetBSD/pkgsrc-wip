@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/31 21:36:13 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:53 thomasklausner Exp $
 include/libgtk-java/gtk_java.h
 lib/libgtkjni.la
 lib/pkgconfig/gtk2-java.pc
@@ -730,62 +730,3 @@ share/java/gtk2.8-${PKGVERSION}.jar
 share/java/gtk2.8.jar
 share/libgtk-java/macros/jg_gnome_java.m4
 share/libgtk-java/macros/jg_gtk_java.m4
-@dirrm share/libgtk-java/macros
-@dirrm share/libgtk-java
-@dirrm share/doc/${PKGNAME}/examples/uimanager
-@dirrm share/doc/${PKGNAME}/examples/treestore
-@dirrm share/doc/${PKGNAME}/examples/tree
-@dirrm share/doc/${PKGNAME}/examples/textbuffer
-@dirrm share/doc/${PKGNAME}/examples/text
-@dirrm share/doc/${PKGNAME}/examples/TestTree
-@dirrm share/doc/${PKGNAME}/examples/testgtk
-@dirrm share/doc/${PKGNAME}/examples/table
-@dirrm share/doc/${PKGNAME}/examples/stockitem
-@dirrm share/doc/${PKGNAME}/examples/stockicons
-@dirrm share/doc/${PKGNAME}/examples/statusbar
-@dirrm share/doc/${PKGNAME}/examples/spinbutton
-@dirrm share/doc/${PKGNAME}/examples/scrolledwin
-@dirrm share/doc/${PKGNAME}/examples/scale
-@dirrm share/doc/${PKGNAME}/examples/rangewidgets
-@dirrm share/doc/${PKGNAME}/examples/radiobuttons
-@dirrm share/doc/${PKGNAME}/examples/progressbar
-@dirrm share/doc/${PKGNAME}/examples/paned
-@dirrm share/doc/${PKGNAME}/examples/packbox
-@dirrm share/doc/${PKGNAME}/examples/notebook
-@dirrm share/doc/${PKGNAME}/examples/memorymgt
-@dirrm share/doc/${PKGNAME}/examples/invisible
-@dirrm share/doc/${PKGNAME}/examples/image
-@dirrm share/doc/${PKGNAME}/examples/frame
-@dirrm share/doc/${PKGNAME}/examples/fixed
-@dirrm share/doc/${PKGNAME}/examples/fileselector
-@dirrm share/doc/${PKGNAME}/examples/filechooser
-@dirrm share/doc/${PKGNAME}/examples/expander
-@dirrm share/doc/${PKGNAME}/examples/entrycompletion
-@dirrm share/doc/${PKGNAME}/examples/entry
-@dirrm share/doc/${PKGNAME}/examples/editor
-@dirrm share/doc/${PKGNAME}/examples/drawingAreaTest
-@dirrm share/doc/${PKGNAME}/examples/draganddrop
-@dirrm share/doc/${PKGNAME}/examples/dataTable
-@dirrm share/doc/${PKGNAME}/examples/combobox
-@dirrm share/doc/${PKGNAME}/examples/checkbutton
-@dirrm share/doc/${PKGNAME}/examples/calendar
-@dirrm share/doc/${PKGNAME}/examples/buttons
-@dirrm share/doc/${PKGNAME}/examples/buttonbox
-@dirrm share/doc/${PKGNAME}/examples/base
-@dirrm share/doc/${PKGNAME}/examples/aspectframe
-@dirrm share/doc/${PKGNAME}/examples/application
-@dirrm share/doc/${PKGNAME}/examples/alignment
-@dirrm share/doc/${PKGNAME}/examples/aboutdialog
-@dirrm share/doc/${PKGNAME}/examples
-@dirrm share/doc/${PKGNAME}/api/resources
-@dirrm share/doc/${PKGNAME}/api/org/gnu/pango
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gtk/event
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gtk
-@dirrm share/doc/${PKGNAME}/api/org/gnu/glib
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gdk
-@dirrm share/doc/${PKGNAME}/api/org/gnu/atk
-@dirrm share/doc/${PKGNAME}/api/org/gnu
-@dirrm share/doc/${PKGNAME}/api/org
-@dirrm share/doc/${PKGNAME}/api
-@dirrm share/doc/${PKGNAME}
-@dirrm include/libgtk-java

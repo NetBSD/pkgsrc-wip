@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/20 19:32:13 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:06 thomasklausner Exp $
 share/examples/psh/complete-examples
 share/examples/psh/pshrc
 share/psh/complete/debian
@@ -27,7 +27,3 @@ share/psh/themes/simple
 share/psh/themes/stereophonic
 share/psh/themes/sunos
 share/psh/themes/vms
-@dirrm share/psh/themes
-@dirrm share/psh/complete
-@dirrm share/psh
-@dirrm share/examples/psh

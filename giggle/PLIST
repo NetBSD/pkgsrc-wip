@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/04 22:21:02 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:39 thomasklausner Exp $
 bin/giggle
 lib/libgiggle.la
 share/applications/giggle.desktop
@@ -21,6 +21,4 @@ share/locale/vi/LC_MESSAGES/giggle.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/giggle/glade
-@dirrm share/giggle
 @comment in xdg-dirs: @dirrm share/applications

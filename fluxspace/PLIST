@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/12 17:33:35 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:36 thomasklausner Exp $
 bin/fluxspace
 bin/fluxspace-add-idesk-icon
 bin/fluxspace-sync-idesk-with-appdirs
@@ -44,7 +44,3 @@ share/fluxspace/ChangeLog
 share/fluxspace/NEWS
 share/fluxspace/README
 share/fluxspace/examples/fluxspace.xml
-@dirrm share/fluxspace/examples
-@dirrm share/fluxspace
-@dirrm ${PYSITELIB}/fluxspace
-@dirrm ${PYSITELIB}/fluxlet

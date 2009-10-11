@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/15 15:33:56 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:45:25 thomasklausner Exp $
 bin/XaraLX
 share/XaraLX/Designs/53 Corvette.xar
 share/XaraLX/Designs/55 Mercedes.xar
@@ -25,5 +25,3 @@ share/XaraLX/Designs/feathers.xar
 share/XaraLX/Designs/leafgirl.xar
 share/XaraLX/Designs/scope3 simple.xar
 share/XaraLX/XaraLX
-@dirrm share/XaraLX/Designs
-@dirrm share/XaraLX

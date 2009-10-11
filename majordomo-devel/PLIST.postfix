@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.postfix,v 1.1.1.1 2006/07/17 18:11:01 kheinz Exp $
+@comment $NetBSD: PLIST.postfix,v 1.2 2009/10/11 10:44:55 thomasklausner Exp $
 majordomo/bin/.mj_confirm
 majordomo/bin/.mj_shell
 majordomo/bin/.mj_shutdown
@@ -5522,67 +5522,5 @@ majordomo/man/man3/Mj::TokenDB.3
 majordomo/man/man3/Mj::Util.3
 majordomo/man/man3/mj_cf_data.3
 majordomo/man/man3/mj_cf_defs.3
-@dirrm majordomo/man/man3
-@dirrm majordomo/man/man1
-@dirrm majordomo/man
-@dirrm majordomo/lists/SITE/files/fr/help
-@dirrm majordomo/lists/SITE/files/fr/format/wwwusr
-@dirrm majordomo/lists/SITE/files/fr/format/wwwconfirm
-@dirrm majordomo/lists/SITE/files/fr/format/wwwadm
-@dirrm majordomo/lists/SITE/files/fr/format/text
-@dirrm majordomo/lists/SITE/files/fr/format
-@dirrm majordomo/lists/SITE/files/fr/error
-@dirrm majordomo/lists/SITE/files/fr/config/categories
-@dirrm majordomo/lists/SITE/files/fr/config
-@dirrm majordomo/lists/SITE/files/fr
-@dirrm majordomo/lists/SITE/files/en/help
-@dirrm majordomo/lists/SITE/files/en/format/wwwusr
-@dirrm majordomo/lists/SITE/files/en/format/wwwconfirm
-@dirrm majordomo/lists/SITE/files/en/format/wwwadm
-@dirrm majordomo/lists/SITE/files/en/format/text
-@dirrm majordomo/lists/SITE/files/en/format
-@dirrm majordomo/lists/SITE/files/en/error
-@dirrm majordomo/lists/SITE/files/en/config/categories
-@dirrm majordomo/lists/SITE/files/en/config
-@dirrm majordomo/lists/SITE/files/en
-@dirrm majordomo/lists/SITE/files/de/informal/help
-@dirrm majordomo/lists/SITE/files/de/informal
-@dirrm majordomo/lists/SITE/files/de/help
-@dirrm majordomo/lists/SITE/files/de
-@dirrm majordomo/lists/SITE/files
-@dirrm majordomo/lists/SITE
-@dirrm majordomo/lists/ALIASES
 @comment @dirrm majordomo/lists
-@dirrm majordomo/lib/setup/messages/fr
-@dirrm majordomo/lib/setup/messages/en
-@dirrm majordomo/lib/setup/messages
-@dirrm majordomo/lib/setup
-@dirrm majordomo/lib/auto/Mj/Util
-@dirrm majordomo/lib/auto/Mj/Token
-@dirrm majordomo/lib/auto/Mj/SimpleDB
-@dirrm majordomo/lib/auto/Mj/Resend
-@dirrm majordomo/lib/auto/Mj/Parser
-@dirrm majordomo/lib/auto/Mj/MailOut
-@dirrm majordomo/lib/auto/Mj/MIMEParser
-@dirrm majordomo/lib/auto/Mj/List
-@dirrm majordomo/lib/auto/Mj/Inform
-@dirrm majordomo/lib/auto/Mj/Format
-@dirrm majordomo/lib/auto/Mj/Digest/Build
-@dirrm majordomo/lib/auto/Mj/Digest
-@dirrm majordomo/lib/auto/Mj/Deliver/Dest
-@dirrm majordomo/lib/auto/Mj/Deliver
-@dirrm majordomo/lib/auto/Mj/Config
-@dirrm majordomo/lib/auto/Mj/BounceHandler
-@dirrm majordomo/lib/auto/Mj/Archive
-@dirrm majordomo/lib/auto/Mj/Access
-@dirrm majordomo/lib/auto/Mj
-@dirrm majordomo/lib/auto/Majordomo
-@dirrm majordomo/lib/auto
-@dirrm majordomo/lib/Mj/SimpleDB
-@dirrm majordomo/lib/Mj/Digest
-@dirrm majordomo/lib/Mj/Deliver
-@dirrm majordomo/lib/Mj
-@dirrm majordomo/lib/Bf
-@dirrm majordomo/lib
-@dirrm majordomo/bin
 @comment @dirrm majordomo

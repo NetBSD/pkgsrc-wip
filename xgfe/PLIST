@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 21:00:02 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:25 thomasklausner Exp $
 bin/xgfe
 share/doc/html/xgfe-2.0/CHANGES
 share/doc/html/xgfe-2.0/curve-fitting.gif
@@ -28,4 +28,3 @@ share/doc/html/xgfe-2.0/xgfe-abb.jpg
 share/doc/html/xgfe-2.0/xgfe-docs.html
 share/doc/html/xgfe-2.0/xgfe-main.jpg
 share/doc/html/xgfe-2.0/xgfe.html
-@dirrm share/doc/html/xgfe-2.0

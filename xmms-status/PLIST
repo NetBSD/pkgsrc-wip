@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:39 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:26 thomasklausner Exp $
 lib/xmms/General/libstatusdocklet.a
 lib/xmms/General/libstatusdocklet.la
 lib/xmms/General/libstatusdocklet.so
@@ -17,4 +17,3 @@ share/xmms/status_docklet/stave-anim5.xpm
 share/xmms/status_docklet/timetre-idle.xpm
 share/xmms/status_docklet/timetre-paused-anim.xpm
 share/xmms/status_docklet/timetre-playing-anim.xpm
-@dirrm share/xmms/status_docklet

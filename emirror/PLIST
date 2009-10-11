@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/18 19:22:23 hweiss Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:34 thomasklausner Exp $
 bin/emirror
 bin/mirror
 bin/updateindex
@@ -221,14 +221,4 @@ lib/emirror/process.pyc
 lib/emirror/tools.py
 lib/emirror/tools.pyc
 man/man1/emirror.1
-@dirrm lib/emirror
-@dirrm etc/emirror/unused
-@dirrm etc/emirror/themes/zope
-@dirrm etc/emirror/themes/freshmeat
-@dirrm etc/emirror/themes/eclipt-php
-@dirrm etc/emirror/themes/eclipt
-@dirrm etc/emirror/themes/blue
-@dirrm etc/emirror/themes
 @exec ${MKDIR} %D/etc/emirror/active
-@dirrm etc/emirror/active
-@dirrm etc/emirror

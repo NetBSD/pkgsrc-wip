@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/22 12:05:49 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 ${PYSITELIB}/genetic/__init__.py
 ${PYSITELIB}/genetic/__init__.pyc
 ${PYSITELIB}/genetic/__init__.pyo
@@ -62,5 +62,3 @@ ${PYSITELIB}/genetic/organism.pyo
 ${PYSITELIB}/genetic/prog.py
 ${PYSITELIB}/genetic/prog.pyc
 ${PYSITELIB}/genetic/prog.pyo
-@dirrm ${PYSITELIB}/genetic/demo
-@dirrm ${PYSITELIB}/genetic

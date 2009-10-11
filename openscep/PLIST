@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/11/02 03:11:36 aolcarton Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:01 thomasklausner Exp $
 bin/derdump
 bin/scep
 bin/scepclient
@@ -83,6 +83,4 @@ share/httpd/htdocs/openscep/scepxid.1.html
 share/httpd/htdocs/openscep/title.html
 share/httpd/htdocs/openscep/updatecrl.8.html
 share/httpd/htdocs/openscep/welcome.html
-@dirrm share/httpd/htdocs/openscep
 ${WEBUI}@dirrm libexec/cgi-bin/openscep
-@dirrm share/examples/openscep

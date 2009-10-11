@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/11 17:36:32 kh-p Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:26 thomasklausner Exp $
 bin/xmoto
 bin/xmoto-edit
 man/man6/xmoto-edit.6.gz
@@ -10,5 +10,3 @@ share/xmoto/editor.dat
 share/xmoto/fonts.dat
 share/xmoto/xmoto.bin
 share/xmoto/xmoto.ogg
-@dirrm share/xmoto
-@dirrm man/mang

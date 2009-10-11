@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/19 16:13:39 fulviociriaco Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:28 thomasklausner Exp $
 bin/autopsy
 man/man1/autopsy.1
 share/autopsy/conf.pl
@@ -151,6 +151,3 @@ share/autopsy/pict/tl_t_tl_cur.jpg
 share/autopsy/pict/tl_t_tl_link.jpg
 share/autopsy/pict/tl_t_view_cur.jpg
 share/autopsy/pict/tl_t_view_link.jpg
-@dirrm share/autopsy/pict
-@dirrm share/autopsy/lib
-@dirrm share/autopsy

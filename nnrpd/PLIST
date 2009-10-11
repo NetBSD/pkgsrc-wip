@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/15 15:41:19 hfath Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:00 thomasklausner Exp $
 libexec/filter_nnrpd.pl
 sbin/mailpost
 sbin/actived
@@ -32,4 +32,3 @@ share/examples/nnrpd/innshellvars.tcl
 share/examples/nnrpd/nnrp.access
 share/examples/nnrpd/moderators
 share/examples/rc.d/actived
-@dirrm share/examples/nnrpd

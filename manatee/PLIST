@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 20:27:56 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:56 thomasklausner Exp $
 libexec/cgi-bin/AssignLoci.cgi
 libexec/cgi-bin/BER_hypo_display.cgi
 libexec/cgi-bin/BacAnnotationPage.cgi
@@ -770,37 +770,3 @@ share/httpd/htdocs/tdb/submit_gateway.html
 share/httpd/htdocs/tdb/tagcompressbase.js
 share/httpd/htdocs/tdb/template.html
 share/httpd/htdocs/tdb/utility.js
-@dirrm share/httpd/htdocs/tdb/js
-@dirrm share/httpd/htdocs/tdb/images/orfinfopage
-@dirrm share/httpd/htdocs/tdb/images/interpro
-@dirrm share/httpd/htdocs/tdb/images
-@dirrm share/httpd/htdocs/tdb
-@dirrm libexec/cgi-bin/webblast
-@dirrm libexec/cgi-bin/urls
-@dirrm libexec/cgi-bin/trees/utility
-@dirrm libexec/cgi-bin/trees
-@dirrm libexec/cgi-bin/tools
-@dirrm libexec/cgi-bin/templates/docs
-@dirrm libexec/cgi-bin/templates
-@dirrm libexec/cgi-bin/summary
-@dirrm libexec/cgi-bin/shared/urls
-@dirrm libexec/cgi-bin/shared/templates/docs
-@dirrm libexec/cgi-bin/shared/templates
-@dirrm libexec/cgi-bin/shared/js
-@dirrm libexec/cgi-bin/shared/go_cgi/go_slim
-@dirrm libexec/cgi-bin/shared/go_cgi
-@dirrm libexec/cgi-bin/shared/Manatee
-@dirrm libexec/cgi-bin/shared/Coati/Web
-@dirrm libexec/cgi-bin/shared/Coati/Test
-@dirrm libexec/cgi-bin/shared/Coati/Evidence
-@dirrm libexec/cgi-bin/shared/Coati/Coati
-@dirrm libexec/cgi-bin/shared/Coati/Cache
-@dirrm libexec/cgi-bin/shared/Coati
-@dirrm libexec/cgi-bin/shared
-@dirrm libexec/cgi-bin/paralogs
-@dirrm libexec/cgi-bin/js
-@dirrm libexec/cgi-bin/help
-@dirrm libexec/cgi-bin/frameshift
-@dirrm libexec/cgi-bin/consistency_checks
-@dirrm libexec/cgi-bin/conf
-@dirrm libexec/cgi-bin/Manatee

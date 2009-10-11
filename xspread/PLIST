@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/20 20:19:14 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:27 thomasklausner Exp $
 bin/pxspread
 bin/xspread
 man/man1/pxspread.1
@@ -40,7 +40,3 @@ share/xspread/examples/ex2
 share/xspread/examples/ex2o
 share/xspread/examples/ex3
 share/xspread/examples/tutorial
-@dirrm share/xspread/examples
-@dirrm share/xspread/documents
-@dirrm share/xspread
-@dirrm share/doc/xspread

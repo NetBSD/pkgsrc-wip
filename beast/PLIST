@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 05:59:31 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:29 thomasklausner Exp $
 bin/beast
 bin/bsesh
 include/bse/bse.h
@@ -159,15 +159,3 @@ share/beast/v0.5.4/scripts/progressor-example.scm
 share/beast/v0.5/images/beast-mime.png
 share/beast/v0.5/images/beast-splash.png
 share/beast/v0.5/images/bse-mime.png
-@dirrm include/bse
-@dirrm include/bsw
-@dirrm include/sfi
-@dirrm lib/bse/v0.5.4/plugins
-@dirrm lib/bse/v0.5.4
-@dirrm lib/bse
-@dirrm share/beast/v0.5.4/docs
-@dirrm share/beast/v0.5.4/scripts
-@dirrm share/beast/v0.5/images
-@dirrm share/beast/v0.5.4
-@dirrm share/beast/v0.5
-@dirrm share/beast

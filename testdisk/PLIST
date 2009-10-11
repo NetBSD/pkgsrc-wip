@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/15 21:14:59 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:21 thomasklausner Exp $
 man/man1/photorec.1
 man/man1/testdisk.1
 sbin/photorec
@@ -318,5 +318,3 @@ share/doc/${PKGNAME}/html/win_kompilieren.html
 share/doc/${PKGNAME}/html/winxp_created.gif
 share/doc/${PKGNAME}/html/x_click_but04.gif
 share/doc/${PKGNAME}/html/x_click_but11.gif
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}

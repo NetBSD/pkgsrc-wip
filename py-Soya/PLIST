@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/02 03:06:31 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
 bin/soya_editor
 ${PYSITELIB}/soya/__init__.py
 ${PYSITELIB}/soya/animation.py
@@ -91,7 +91,3 @@ ${PYSITELIB}/soya/data/font_time_22.data
 ${PYSITELIB}/soya/data/fx.data
 ${PYSITELIB}/soya/data/fx.png
 ${PYSITELIB}/soya/data/soya3d_logo.tga
-@dirrm ${PYSITELIB}/soya/editor
-@dirrm ${PYSITELIB}/soya/game
-@dirrm ${PYSITELIB}/soya/data
-@dirrm ${PYSITELIB}/soya

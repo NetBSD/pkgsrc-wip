@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/08 09:38:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:28 thomasklausner Exp $
 bin/avibench
 bin/avicat
 bin/avifile-config
@@ -114,12 +114,6 @@ share/doc/avifile/avicap/configuration.html
 share/doc/avifile/avicap/epg.html
 share/doc/avifile/avicap/shutdown_resume.html
 share/doc/avifile/avicap/timertable.html
-@dirrm share/doc/avifile/avicap
-@dirrm share/doc/avifile
 ${PLIST.v4l}@dirrm share/avifile/i18
-@dirrm share/avifile/pixmaps
 ${PLIST.v4l}@dirrm share/avifile/scripts
-@dirrm share/avifile
 ${PLIST.vidix}@dirrm lib/avifile/vidix
-@dirrm lib/avifile
-@dirrm include/avifile

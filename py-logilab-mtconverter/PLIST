@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:32:42 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/mtconverter/__init__.py
 ${PYSITELIB}/logilab/mtconverter/__init__.pyc
@@ -48,8 +48,3 @@ ${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/dependency_links.txt
 ${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/namespace_packages.txt
 ${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/top_level.txt
-@dirrm ${PYSITELIB}/logilab_mtconverter-${PKGVERSION}-py2.5.egg-info
-@dirrm ${PYSITELIB}/logilab/mtconverter/transforms
-@dirrm ${PYSITELIB}/logilab/mtconverter/test
-@dirrm ${PYSITELIB}/logilab/mtconverter
-@dirrm ${PYSITELIB}/logilab

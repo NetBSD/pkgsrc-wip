@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/20 18:35:22 jsonn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
 include/syntax_api.h
 lib/librpsl.a
 lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL/.packlist
@@ -13,4 +13,3 @@ lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::Attribute.3
 lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::Error.3
 lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL::TemplateAttribute.3
 lib/perl5/site_perl/man/man3/Net::Whois::RIPE::RPSL.3
-@dirrm lib/perl5/site_perl/5.8.6/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Net/Whois/RIPE/RPSL

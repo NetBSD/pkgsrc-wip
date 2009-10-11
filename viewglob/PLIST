@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/17 17:43:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 bin/gviewglob
 bin/viewglob
 man/man1/gviewglob.1
@@ -9,4 +9,3 @@ share/viewglob/glob-expand
 share/viewglob/gviewglob
 share/viewglob/init-viewglob.bashrc
 share/viewglob/seer
-@dirrm share/viewglob

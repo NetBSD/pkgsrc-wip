@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:57:34 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
 bin/checknews
 bin/cnewsdo
 bin/inews
@@ -155,15 +155,3 @@ share/examples/cnews/mailpaths.eg
 share/examples/cnews/organization
 share/examples/cnews/sys.eg
 share/examples/cnews/whoami.eg
-@dirrm share/examples/cnews
-@dirrm share/doc/cnews
-@dirrm ${CNEWSBIN}/relay
-@dirrm ${CNEWSBIN}/nov
-@dirrm ${CNEWSBIN}/maint
-@dirrm ${CNEWSBIN}/input
-@dirrm ${CNEWSBIN}/inject
-@dirrm ${CNEWSBIN}/expire
-@dirrm ${CNEWSBIN}/decompressors
-@dirrm ${CNEWSBIN}/ctl
-@dirrm ${CNEWSBIN}/batch
-@dirrm ${CNEWSBIN}

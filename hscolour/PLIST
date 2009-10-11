@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 09:42:14 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
 bin/HsColour
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour.hi
@@ -19,10 +19,3 @@ lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
 share/doc/${PKGNAME}/LICENCE-GPL
 share/${PKGNAME}/hscolour.css
-@dirrm share/${PKGNAME}
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HsColour
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}/Language
-@dirrm lib/${PKGNAME}/${HASKELL_VERSION}
-@dirrm lib/${PKGNAME}

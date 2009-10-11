@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/21 13:07:49 rsmarples Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 ${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/dependency_links.txt
@@ -51,10 +51,3 @@ ${PYSITELIB}/tracscreenshots/timeline.pyo
 ${PYSITELIB}/tracscreenshots/wiki.py
 ${PYSITELIB}/tracscreenshots/wiki.pyc
 ${PYSITELIB}/tracscreenshots/wiki.pyo
-@dirrm ${PYSITELIB}/tracscreenshots/templates
-@dirrm ${PYSITELIB}/tracscreenshots/htdocs/js
-@dirrm ${PYSITELIB}/tracscreenshots/htdocs/css
-@dirrm ${PYSITELIB}/tracscreenshots/htdocs
-@dirrm ${PYSITELIB}/tracscreenshots/db
-@dirrm ${PYSITELIB}/tracscreenshots
-@dirrm ${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info

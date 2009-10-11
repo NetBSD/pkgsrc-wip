@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/25 11:51:00 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 bin/ltrace
 man/man1/ltrace.1
 share/doc/ltrace/BUGS
@@ -7,5 +7,3 @@ share/doc/ltrace/ChangeLog
 share/doc/ltrace/README
 share/doc/ltrace/TODO
 share/examples/ltrace/ltrace.conf
-@dirrm share/examples/ltrace
-@dirrm doc/ltrace

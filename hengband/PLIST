@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 05:10:37 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/hengband
 share/hengband/apex/h_scores.raw
 share/hengband/apex/readme.txt
@@ -228,17 +228,3 @@ share/hengband/save/delete.me
 share/hengband/script/delete.me
 share/hengband/user/delete.me
 share/hengband/xtra/graf/8x8.bmp
-@dirrm share/hengband/xtra/graf
-@dirrm share/hengband/xtra
-@dirrm share/hengband/user
-@dirrm share/hengband/script
-@dirrm share/hengband/save
-@dirrm share/hengband/pref
-@dirrm share/hengband/info
-@dirrm share/hengband/help
-@dirrm share/hengband/file
-@dirrm share/hengband/edit
-@dirrm share/hengband/data
-@dirrm share/hengband/bone
-@dirrm share/hengband/apex
-@dirrm share/hengband

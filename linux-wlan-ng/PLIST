@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/13 13:40:22 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:55 thomasklausner Exp $
 etc/wlan/prism2_af.hex
 etc/wlan/prism2_ak.hex
 etc/wlan/prism2_pm.hex
@@ -11,4 +11,3 @@ sbin/prism2dl
 sbin/wlancfg
 sbin/wlanctl-ng
 sbin/wland
-@dirrm etc/wlan

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 21:41:33 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/glimmerm
 share/doc/glimmerm/README.first
 share/examples/glimmerm/trained_dir/Arabidopsis/acc1.mar
@@ -322,9 +322,3 @@ share/glimmerm/scoreATG
 share/glimmerm/scoreSTOP
 share/glimmerm/trainGlimmerM
 share/glimmerm/updomeasure
-@dirrm share/glimmerm
-@dirrm share/examples/glimmerm/trained_dir/Aspergillus/trees
-@dirrm share/examples/glimmerm/trained_dir/Aspergillus
-@dirrm share/examples/glimmerm/trained_dir/Arabidopsis/trees
-@dirrm share/examples/glimmerm/trained_dir/Arabidopsis
-@dirrm share/doc/glimmerm

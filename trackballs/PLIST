@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 00:39:31 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 bin/trackballs
 man/man6/trackballs.6
 share/locale/de/LC_MESSAGES/trackballs.mo
@@ -217,10 +217,4 @@ share/trackballs/sfx/start.wav
 share/trackballs/sfx/switch.wav
 share/trackballs/sfx/time_warning.wav
 share/trackballs/sfx/timeout.wav
-@dirrm share/trackballs/sfx
 @exec ${MKDIR} %D/share/trackballs/music
-@dirrm share/trackballs/music
-@dirrm share/trackballs/levels
-@dirrm share/trackballs/images
-@dirrm share/trackballs/fonts
-@dirrm share/trackballs

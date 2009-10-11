@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/11 13:14:49 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 bin/deskscribe
 bin/mausgrapher
 share/applications/deskscribe.desktop
@@ -27,9 +27,4 @@ share/mime/packages/deskscribe.xml
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/deskscribe/icons/hicolor/48x48/status
-@dirrm share/deskscribe/icons/hicolor/48x48
-@dirrm share/deskscribe/icons/hicolor
-@dirrm share/deskscribe/icons
-@dirrm share/deskscribe
 @comment in xdg-dirs: @dirrm share/applications

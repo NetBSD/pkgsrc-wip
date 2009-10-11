@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/06 15:12:54 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gjots2
 share/pixmaps/gjots.png
 share/gjots2/gjots.glade2
@@ -35,9 +35,3 @@ lib/gjots2/gui.py
 lib/gjots2/version.py
 lib/gjots2/printDialog.py
 lib/gjots2/sortDialog.py
-@dirrm share/pixmaps
-@dirrm share/man/man1
-@dirrm share/gjots2
-@dirrm share/doc/${PKGNAME}
-@dirrm share/applications
-@dirrm lib/gjots2

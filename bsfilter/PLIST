@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/16 13:09:11 ura Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
 bin/bsfilter
 share/examples/bsfilter/bsfilter.conf.sample
 share/examples/bsfilter/dot-qmail.sample
@@ -12,10 +12,3 @@ share/examples/bsfilter/mua/mew3/bs_spam
 share/examples/bsfilter/mua/mew3/mew.el
 share/examples/bsfilter/mua/mew4/emacs.el
 share/examples/bsfilter/mua/mew4/mew.el
-@dirrm share/examples/bsfilter/mda/maildrop
-@dirrm share/examples/bsfilter/mda/procmail
-@dirrm share/examples/bsfilter/mda
-@dirrm share/examples/bsfilter/mua/mew3
-@dirrm share/examples/bsfilter/mua/mew4
-@dirrm share/examples/bsfilter/mua
-@dirrm share/examples/bsfilter

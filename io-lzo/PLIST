@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/10 20:15:02 milosn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:47 thomasklausner Exp $
 lib/io/addons/LZO/_build/dll/libIoLZO.so
 lib/io/addons/LZO/_build/lib/libIoLZO.a
 lib/io/addons/LZO/build.io
 lib/io/addons/LZO/depends
 lib/io/addons/LZO/io/LZO.io
 lib/io/addons/LZO/protos
-@dirrm lib/io/addons/LZO/io
-@dirrm lib/io/addons/LZO/_build/lib
-@dirrm lib/io/addons/LZO/_build/dll
-@dirrm lib/io/addons/LZO/_build
-@dirrm lib/io/addons/LZO

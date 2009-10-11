@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/30 14:10:18 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:33 thomasklausner Exp $
 bin/dfbdump
 bin/dfbg
 bin/dfbinfo
@@ -117,25 +117,4 @@ man/man1/dfbg.1
 man/man1/directfb-csource.1
 man/man5/directfbrc.5
 share/directfb-${PKGVERSION}/cursor.dat
-@dirrm share/directfb-${PKGVERSION}
-@dirrm lib/directfb-${PKGVERSION}/wm
-@dirrm lib/directfb-${PKGVERSION}/systems
 @exec ${MKDIR} %D/lib/directfb-${PKGVERSION}/interfaces/IDirectFBVideoProvider
-@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBVideoProvider
-@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBImageProvider
-@dirrm lib/directfb-${PKGVERSION}/interfaces/IDirectFBFont
-@dirrm lib/directfb-${PKGVERSION}/interfaces
-@dirrm lib/directfb-${PKGVERSION}/inputdrivers
-@dirrm lib/directfb-${PKGVERSION}
-@dirrm include/directfb/fusion
-@dirrm include/directfb/direct
-@dirrm include/directfb-internal/windows
-@dirrm include/directfb-internal/misc
-@dirrm include/directfb-internal/media
-@dirrm include/directfb-internal/input
-@dirrm include/directfb-internal/gfx/generic
-@dirrm include/directfb-internal/gfx
-@dirrm include/directfb-internal/display
-@dirrm include/directfb-internal/core
-@dirrm include/directfb-internal
-@dirrm include/directfb

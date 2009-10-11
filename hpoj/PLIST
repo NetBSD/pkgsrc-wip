@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/08 19:22:34 airhead Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/hpojip-test
 bin/ptal-connect
 bin/ptal-device
@@ -52,4 +52,3 @@ share/doc/hpoj/setup-print.html
 share/doc/hpoj/setup-scan-details.html
 share/doc/hpoj/setup-scan.html
 share/doc/hpoj/xojpanel.html
-@dirrm share/doc/hpoj

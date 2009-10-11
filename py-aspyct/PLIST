@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/12 08:32:34 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 ${PYSITELIB}/Aspyct/__init__.pyc
 ${PYSITELIB}/Aspyct/__init__.pyo
 ${PYSITELIB}/Aspyct/aop.pyc
@@ -15,5 +15,3 @@ ${PYSITELIB}/Aspyct/unit.pyc
 ${PYSITELIB}/Aspyct/unit.pyo
 ${PYSITELIB}/Aspyct/utils.pyc
 ${PYSITELIB}/Aspyct/utils.pyo
-@dirrm ${PYSITELIB}/Aspyct/core
-@dirrm ${PYSITELIB}/Aspyct

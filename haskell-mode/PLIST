@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/29 02:15:33 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-c.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-c.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-cabal.el
@@ -20,4 +20,3 @@ ${EMACS_LISPPREFIX}/haskell-mode/haskell-simple-indent.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-site-file.el
 ${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.el
 ${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.elc
-@dirrm ${EMACS_LISPPREFIX}/haskell-mode

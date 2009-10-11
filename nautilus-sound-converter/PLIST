@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/14 14:58:40 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
 lib/nautilus/extensions-2.0/libnautilus-sound-converter.la
 share/nautilus-sound-converter/main.xml
 share/nautilus-sound-converter/progress.xml
-@dirrm share/nautilus-sound-converter
-@dirrm lib/nautilus/extensions-2.0

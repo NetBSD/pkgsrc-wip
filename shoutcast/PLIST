@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 20:04:31 icmp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 bin/sc_serv
 etc/shoutcast/sc_serv.conf
 share/doc/shoutcast/README.shoutcast
 share/shoutcast/content/scpromo.mp3
-@dirrm share/shoutcast/content
-@dirrm share/shoutcast
-@dirrm share/doc/shoutcast
-@dirrm etc/shoutcast

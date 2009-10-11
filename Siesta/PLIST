@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/08 15:32:55 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
 lib/perl5/site_perl/${PERL_VERSION}/Module/Build.pm
 lib/perl5/site_perl/${PERL_VERSION}/Module/Build/Base.pm
 lib/perl5/site_perl/${PERL_VERSION}/Module/Build/Compat.pm
@@ -38,8 +38,3 @@ lib/perl5/site_perl/man/man3/Module::Build::Platform::aix.3
 lib/perl5/site_perl/man/man3/Module::Build::Platform::cygwin.3
 lib/perl5/site_perl/man/man3/Module::Build::Platform::darwin.3
 lib/perl5/site_perl/man/man3/Module::Build::Platform::os2.3
-@dirrm lib/perl5/site_perl/man/man3
-@dirrm lib/perl5/site_perl/${PERL_VERSION}/Module/Build/Platform
-@dirrm lib/perl5/site_perl/${PERL_VERSION}/Module/Build
-@dirrm lib/perl5/site_perl/${PERL_VERSION}/Module
-@dirrm lib/perl5/site_perl/${PERL_VERSION}

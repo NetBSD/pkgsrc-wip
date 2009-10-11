@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/28 16:37:57 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 ${EMACS_LISPPREFIX}/mpc/images/mpc/ffwd.xpm
 ${EMACS_LISPPREFIX}/mpc/images/mpc/next.xpm
 ${EMACS_LISPPREFIX}/mpc/images/mpc/pause.xpm
@@ -9,6 +9,3 @@ ${EMACS_LISPPREFIX}/mpc/images/mpc/stop.xpm
 ${EMACS_LISPPREFIX}/mpc/mpc-autoloads.el
 ${EMACS_LISPPREFIX}/mpc/mpc.el
 ${EMACS_LISPPREFIX}/mpc/mpc.elc
-@dirrm ${EMACS_LISPPREFIX}/mpc/images/mpc
-@dirrm ${EMACS_LISPPREFIX}/mpc/images
-@dirrm ${EMACS_LISPPREFIX}/mpc

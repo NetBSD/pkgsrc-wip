@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/28 13:02:16 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:31 thomasklausner Exp $
 share/cacti/plugins/monitor/LICENSE
 share/cacti/plugins/monitor/README
 share/cacti/plugins/monitor/images/blue.gif
@@ -16,6 +16,3 @@ share/cacti/plugins/monitor/setup.php
 share/cacti/plugins/monitor/sounds/attn-noc.wav
 share/cacti/plugins/monitor/sounds/index.php
 share/cacti/plugins/monitor/wz_tooltip.js
-@dirrm share/cacti/plugins/monitor/sounds
-@dirrm share/cacti/plugins/monitor/images
-@dirrm share/cacti/plugins/monitor

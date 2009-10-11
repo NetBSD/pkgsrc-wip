@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/12 22:59:10 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 bin/gnome-alsamixer
 share/pixmaps/gnome-alsamixer/gnome-alsamixer-icon.png
-@dirrm share/pixmaps/gnome-alsamixer

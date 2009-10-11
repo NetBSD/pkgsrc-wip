@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/05/02 02:45:44 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:13 thomasklausner Exp $
 bin/regexxer
 share/applications/regexxer.desktop
 share/gconf/schemas/regexxer.schemas
@@ -39,4 +39,3 @@ share/regexxer/prefdialog.glade
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/icons/hicolor/48x48/apps
-@dirrm share/regexxer

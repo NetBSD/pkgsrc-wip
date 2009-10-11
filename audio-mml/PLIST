@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/12 05:27:58 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:28 thomasklausner Exp $
 bin/rat
 bin/rat-${PKGVERSION}
 bin/rat-${PKGVERSION}-media
@@ -104,7 +104,3 @@ include/audio-mml/voxlet.h
 lib/libuclaudio.la
 man/man1/rat.1
 share/examples/audio-mml/sdr/plugins/sdr2.plugin.S02.audio.rtp.-.rat-${PKGVERSION}
-@dirrm share/examples/audio-mml/sdr/plugins
-@dirrm share/examples/audio-mml/sdr
-@dirrm share/examples/audio-mml
-@dirrm include/audio-mml

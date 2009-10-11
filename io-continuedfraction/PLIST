@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:49:17 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
 lib/io/addons/ContinuedFraction/_build/dll/libIoContinuedFraction.so
 lib/io/addons/ContinuedFraction/_build/lib/libIoContinuedFraction.a
 lib/io/addons/ContinuedFraction/build.io
 lib/io/addons/ContinuedFraction/depends
 lib/io/addons/ContinuedFraction/io/ContinuedFraction.io
-@dirrm lib/io/addons/ContinuedFraction/io
-@dirrm lib/io/addons/ContinuedFraction/_build/lib
-@dirrm lib/io/addons/ContinuedFraction/_build/dll
-@dirrm lib/io/addons/ContinuedFraction/_build
-@dirrm lib/io/addons/ContinuedFraction

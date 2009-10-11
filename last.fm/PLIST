@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/30 21:45:19 netcap Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:51 thomasklausner Exp $
 bin/last.fm
 lib/last.fm/libLastFmTools.a
 lib/last.fm/libLastFmTools.la
@@ -132,15 +132,3 @@ share/last.fm/services/libsrv_itunesdevice.la
 share/last.fm/services/libsrv_itunesdevice.la.blsav
 share/last.fm/services/libsrv_mp3transcode.la
 share/last.fm/services/libsrv_mp3transcode.la.blsav
-@dirrm share/last.fm/data/buttons
-@dirrm share/last.fm/data/icons
-@dirrm share/last.fm/data/i18n
-@dirrm share/last.fm/data
-@dirrm share/last.fm/extensions
-@dirrm share/last.fm/services/debug/.libs
-@dirrm share/last.fm/services/debug
-@dirrm share/last.fm/services/.libs
-@dirrm share/last.fm/services
-@dirrm share/last.fm/.libs
-@dirrm share/last.fm
-@dirrm lib/last.fm

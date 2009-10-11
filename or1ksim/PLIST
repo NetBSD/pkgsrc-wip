@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/25 18:06:55 kheinz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:03 thomasklausner Exp $
 bin/or1ksim
 share/doc/or1ksim/AUTHORS
 share/doc/or1ksim/COPYING
@@ -9,5 +9,3 @@ share/doc/or1ksim/README
 share/doc/or1ksim/README.gdb
 share/examples/or1ksim/or1ksim.cfg
 share/examples/or1ksim/virtex.tim
-@dirrm share/doc/or1ksim
-@dirrm share/examples/or1ksim

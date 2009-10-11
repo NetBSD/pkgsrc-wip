@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/29 12:24:30 marc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 bin/pysite
 ${PYSITELIB}/pysite/__init__.py
 ${PYSITELIB}/pysite/__init__.pyc
@@ -71,12 +71,3 @@ share/examples/Pysite/normal.css
 share/examples/Pysite/pysiterc
 share/examples/Pysite/template
 share/examples/Pysite/title
-@dirrm share/examples/Pysite/news
-@dirrm share/examples/Pysite/license
-@dirrm share/examples/Pysite/install
-@dirrm share/examples/Pysite/download
-@dirrm share/examples/Pysite/docs/user
-@dirrm share/examples/Pysite/docs/api
-@dirrm share/examples/Pysite/docs
-@dirrm share/examples/Pysite
-@dirrm ${PYSITELIB}/pysite

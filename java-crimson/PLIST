@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/14 22:33:15 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 share/classpath/crimson.jar
-@dirrm share/classpath

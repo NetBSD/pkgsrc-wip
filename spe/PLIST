@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/28 13:19:06 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:19 thomasklausner Exp $
 bin/spe
 ${PYSITELIB}/blenpy/__init__.pyc
 ${PYSITELIB}/blenpy/__init__.pyo
@@ -536,64 +536,3 @@ ${PYSITELIB}/spe/winInstall.pyc
 ${PYSITELIB}/spe/winInstall.pyo
 ${PYSITELIB}/spe/winUninstall.pyc
 ${PYSITELIB}/spe/winUninstall.pyo
-@dirrm ${PYSITELIB}/spe/framework/tabs
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser/license
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/wxPyColourChooser
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/tree_ctrl
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toolbar
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/toggle_button
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/text_ctrl
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_text
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_line
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/static_bitmap
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/splitter_window
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spin_ctrl
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/spacer
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/slider
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_button
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/radio_box
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/panel
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/notebook
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/menubar
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_ctrl
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/list_box
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/grid
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/gauge
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/frame
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/dialog
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/custom_widget
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/combo_box
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/choice
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/checkbox
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/button
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets/bitmap_button
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/widgets
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons/msw
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons/gtk
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/icons
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/examples
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/edit_sizers
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/docs/img
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/docs
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade/codegen
-@dirrm ${PYSITELIB}/spe/framework/plugins/wxGlade
-@dirrm ${PYSITELIB}/spe/framework/plugins/pychecker
-@dirrm ${PYSITELIB}/spe/framework/plugins/kiki/docs
-@dirrm ${PYSITELIB}/spe/framework/plugins/kiki
-@dirrm ${PYSITELIB}/spe/framework/plugins
-@dirrm ${PYSITELIB}/spe/framework/menus
-@dirrm ${PYSITELIB}/spe/framework/images
-@dirrm ${PYSITELIB}/spe/framework/dialogs
-@dirrm ${PYSITELIB}/spe/framework
-@dirrm ${PYSITELIB}/spe/examples
-@dirrm ${PYSITELIB}/spe/doc/blender_python_API
-@dirrm ${PYSITELIB}/spe/doc
-@dirrm ${PYSITELIB}/spe
-@dirrm ${PYSITELIB}/sm_idle/Icons
-@dirrm ${PYSITELIB}/sm_idle
-@dirrm ${PYSITELIB}/sm
-@dirrm ${PYSITELIB}/blenpy/plugins
-@dirrm ${PYSITELIB}/blenpy/icons
-@dirrm ${PYSITELIB}/blenpy/doc/screenshots
-@dirrm ${PYSITELIB}/blenpy/doc
-@dirrm ${PYSITELIB}/blenpy

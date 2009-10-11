@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 22:03:05 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/tranquil/__init__.pyc
 ${PYSITELIB}/tranquil/__init__.pyo
 ${PYSITELIB}/tranquil/middleware/__init__.pyc
@@ -9,5 +9,3 @@ ${PYSITELIB}/tranquil/models.pyc
 ${PYSITELIB}/tranquil/models.pyo
 ${PYSITELIB}/tranquil/translator.pyc
 ${PYSITELIB}/tranquil/translator.pyo
-@dirrm ${PYSITELIB}/tranquil/middleware
-@dirrm ${PYSITELIB}/tranquil

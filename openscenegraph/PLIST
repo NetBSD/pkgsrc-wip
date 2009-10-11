@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/24 22:19:37 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:01 thomasklausner Exp $
 bin/osgarchive
 bin/osgconv
 bin/osgfilecache
@@ -578,22 +578,3 @@ lib/osgPlugins-${PKGVERSION}/osgdb_xine.so
 lib/osgPlugins-${PKGVERSION}/osgdb_zip.so
 lib/pkgconfig/openscenegraph.pc
 lib/pkgconfig/openthreads.pc
-@dirrm lib/osgPlugins-${PKGVERSION}
-@dirrm include/osgWidget
-@dirrm include/osgVolume
-@dirrm include/osgViewer/api/X11
-@dirrm include/osgViewer/api
-@dirrm include/osgViewer
-@dirrm include/osgUtil
-@dirrm include/osgText
-@dirrm include/osgTerrain
-@dirrm include/osgSim
-@dirrm include/osgShadow
-@dirrm include/osgParticle
-@dirrm include/osgManipulator
-@dirrm include/osgGA
-@dirrm include/osgFX
-@dirrm include/osgDB
-@dirrm include/osgAnimation
-@dirrm include/osg
-@dirrm include/OpenThreads

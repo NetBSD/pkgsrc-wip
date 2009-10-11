@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 share/doc/py-visionegg-docs-0.9.9/about.html
 share/doc/py-visionegg-docs-0.9.9/contents.html
 share/doc/py-visionegg-docs-0.9.9/controllers.html
@@ -198,5 +198,3 @@ share/doc/py-visionegg-docs-0.9.9/reference/toc.html
 share/doc/py-visionegg-docs-0.9.9/reference/trees.html
 share/doc/py-visionegg-docs-0.9.9/visionegg.css
 share/doc/py-visionegg-docs-0.9.9/visionegg.html
-@dirrm share/doc/py-visionegg-docs-0.9.9/reference
-@dirrm share/doc/py-visionegg-docs-0.9.9

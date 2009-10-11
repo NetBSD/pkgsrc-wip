@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/23 00:10:07 marc Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:46 thomasklausner Exp $
 bin/ht2html.py
 ${PYSITELIB}/Banner.py
 ${PYSITELIB}/Banner.pyc
@@ -40,4 +40,3 @@ share/examples/ht2html/index.html
 share/examples/ht2html/links.h
 share/examples/ht2html/style.ht
 share/examples/ht2html/style.html
-@dirrm share/examples/ht2html

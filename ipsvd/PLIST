@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/29 04:52:52 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 man/man5/ipsvd-instruct.5
 man/man7/ipsvd.7
 man/man8/ipsvd-cdb.8
@@ -23,4 +23,3 @@ share/doc/ipsvd/tcpsvd.8.html
 share/doc/ipsvd/udpsvd.8.html
 share/doc/ipsvd/upgrade.html
 share/doc/ipsvd/usedietlibc.html
-@dirrm share/doc/ipsvd

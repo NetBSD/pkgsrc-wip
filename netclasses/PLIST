@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/10 10:04:28 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:59 thomasklausner Exp $
 share/GNUstep/Local/Library/Frameworks/netclasses.framework/Headers
 share/GNUstep/Local/Library/Frameworks/netclasses.framework/Resources
 share/GNUstep/Local/Library/Frameworks/netclasses.framework/Versions/${PKGVERSION}/Headers/IRCObject.h
@@ -19,12 +19,6 @@ share/GNUstep/Local/Library/Headers/netclasses/IRCObject.h
 share/GNUstep/Local/Library/Headers/netclasses/LineObject.h
 share/GNUstep/Local/Library/Headers/netclasses/NetBase.h
 share/GNUstep/Local/Library/Headers/netclasses/NetTCP.h
-@dirrm share/GNUstep/Local/Library/Headers/netclasses
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/netclasses.framework/Versions/${PKGVERSION}/Resources
-@dirrm share/GNUstep/Local/Library/Frameworks/netclasses.framework/Versions/${PKGVERSION}/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/netclasses.framework/Versions/${PKGVERSION}
-@dirrm share/GNUstep/Local/Library/Frameworks/netclasses.framework/Versions
-@dirrm share/GNUstep/Local/Library/Frameworks/netclasses.framework
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Frameworks

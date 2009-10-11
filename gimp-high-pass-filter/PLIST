@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/21 06:17:39 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 share/gimp/2.0/scripts/high-pass.scm
-@dirrm share/gimp/2.0/scripts

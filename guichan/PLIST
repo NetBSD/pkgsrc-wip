@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/05 00:03:41 pseudo_anim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 include/guichan.hpp
 include/guichan/actionevent.hpp
 include/guichan/actionlistener.hpp
@@ -58,7 +58,3 @@ include/guichan/x.hpp
 lib/libguichan.la
 lib/libguichan_opengl.la
 lib/libguichan_sdl.la
-@dirrm include/guichan/widgets
-@dirrm include/guichan/sdl
-@dirrm include/guichan/opengl
-@dirrm include/guichan

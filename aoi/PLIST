@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/08 05:22:58 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 bin/aoi
 lib/java/${PKGNAME}/ArtOfIllusion.jar
 lib/java/${PKGNAME}/Icons/32x32.png
@@ -31,12 +31,3 @@ lib/java/${PKGNAME}/Scripts/Tools/Thicken.bsh
 share/doc/${PKGNAME}/HISTORY
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/java/${PKGNAME}/Scripts/Tools
-@dirrm lib/java/${PKGNAME}/Scripts/Startup
-@dirrm lib/java/${PKGNAME}/Scripts/Objects
-@dirrm lib/java/${PKGNAME}/Scripts
-@dirrm lib/java/${PKGNAME}/Plugins/Help
-@dirrm lib/java/${PKGNAME}/Plugins
-@dirrm lib/java/${PKGNAME}/Icons
-@dirrm lib/java/${PKGNAME}

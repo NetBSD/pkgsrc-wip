@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/24 09:58:07 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:59 thomasklausner Exp $
 lib/nautilus/extensions-2.0/libnautilus-open-terminal.la
 share/gconf/schemas/nautilus-open-terminal.schemas
 share/locale/ar/LC_MESSAGES/nautilus-open-terminal.mo
@@ -55,8 +55,6 @@ share/locale/uk/LC_MESSAGES/nautilus-open-terminal.mo
 share/locale/vi/LC_MESSAGES/nautilus-open-terminal.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-open-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-open-terminal.mo
-@dirrm share/locale/sr@Latn/LC_MESSAGES
-@dirrm share/locale/sr@Latn
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in nautilus: @dirrm lib/nautilus/extensions-2.0
 @comment in nautilus: @dirrm lib/nautilus

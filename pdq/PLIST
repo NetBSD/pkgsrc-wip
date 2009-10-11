@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 07:19:19 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 bin/lpd_cancel
 bin/lpd_print
 bin/lpd_status
@@ -35,10 +35,3 @@ share/pdq/interfaces/efax-0.1
 share/pdq/interfaces/local-port-1.0
 share/pdq/interfaces/tcp-port-2.0
 share/pdq/printrc.example
-@dirrm share/pdq/interfaces
-@dirrm share/pdq/drivers/postscript
-@dirrm share/pdq/drivers/misc
-@dirrm share/pdq/drivers/ghostscript
-@dirrm share/pdq/drivers/generic
-@dirrm share/pdq/drivers
-@dirrm share/pdq

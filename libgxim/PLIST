@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/22 16:14:10 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 include/libgxim/gximattr.h
 include/libgxim/gximclconn.h
 include/libgxim/gximcltmpl.h
@@ -44,6 +44,3 @@ share/gtk-doc/html/libgxim/up.png
 share/libgxim/AUTHORS
 share/libgxim/NEWS
 share/libgxim/README
-@dirrm share/libgxim
-@dirrm share/gtk-doc/html/libgxim
-@dirrm include/libgxim

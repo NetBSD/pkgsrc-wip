@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/02/02 13:02:40 koifren Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gnocky
 share/gnocky/glade/caller-id.png
 share/gnocky/glade/cellphone.png
@@ -44,6 +44,3 @@ share/gnocky/pixmaps/phones/unknown.png
 share/gnocky/pixmaps/sm.png
 share/locale/it/LC_MESSAGES/gnocky.mo
 share/locale/pl/LC_MESSAGES/gnocky.mo
-@dirrm share/gnocky/pixmaps/phones
-@dirrm share/gnocky/pixmaps
-@dirrm share/gnocky/glade

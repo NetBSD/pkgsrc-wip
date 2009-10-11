@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/05 16:52:26 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:55 thomasklausner Exp $
 bin/autolives.pl
 bin/avi_encoder.py
 bin/build-lives-rfx-plugin
@@ -237,29 +237,4 @@ share/locale/ru/LC_MESSAGES/lives.mo
 share/locale/tr/LC_MESSAGES/lives.mo
 share/pixmaps/lives.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/lives/themes/sunburst
-@dirrm share/lives/themes/pinks
-@dirrm share/lives/themes/greenish
-@dirrm share/lives/themes/editor
-@dirrm share/lives/themes/default
-@dirrm share/lives/themes/cutting_room
-@dirrm share/lives/themes/camera
-@dirrm share/lives/themes
-@dirrm share/lives/plugins/effects/RFXscripts
-@dirrm share/lives/plugins/effects
-@dirrm share/lives/plugins
-@dirrm share/lives/icons
-@dirrm share/lives
-@dirrm share/doc/${PKGNAME}
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/lives/plugins/playback/video
-@dirrm lib/lives/plugins/playback
-@dirrm lib/lives/plugins/encoders
-@dirrm lib/lives/plugins/effects/rendered
-@dirrm lib/lives/plugins/effects/realtime/weed
-@dirrm lib/lives/plugins/effects/realtime
-@dirrm lib/lives/plugins/effects
-@dirrm lib/lives/plugins/decoders
-@dirrm lib/lives/plugins
-@dirrm lib/lives
-@dirrm include/weed

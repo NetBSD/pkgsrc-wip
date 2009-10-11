@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 02:32:19 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:27 thomasklausner Exp $
 bin/zsh
 bin/zsh-4.3.6-dev-0
 lib/zsh/4.3.6-dev-0/zsh/cap.so
@@ -791,36 +791,4 @@ share/zsh/${PKGNAME}/functions/Zle/up-line-or-beginning-search
 share/zsh/${PKGNAME}/functions/Zle/url-quote-magic
 share/zsh/${PKGNAME}/functions/Zle/which-command
 share/zsh/${PKGNAME}/functions/Zle/zed-set-file-name
-@dirrm share/zsh/${PKGNAME}/functions/Zle
-@dirrm share/zsh/${PKGNAME}/functions/Zftp
-@dirrm share/zsh/${PKGNAME}/functions/TCP
-@dirrm share/zsh/${PKGNAME}/functions/Prompts
-@dirrm share/zsh/${PKGNAME}/functions/Newuser
-@dirrm share/zsh/${PKGNAME}/functions/Misc
-@dirrm share/zsh/${PKGNAME}/functions/MIME
-@dirrm share/zsh/${PKGNAME}/functions/Exceptions
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Zsh
-@dirrm share/zsh/${PKGNAME}/functions/Completion/X
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Unix
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Redhat
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Mandriva
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Linux
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Debian
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Darwin
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Cygwin
-@dirrm share/zsh/${PKGNAME}/functions/Completion/Base
-@dirrm share/zsh/${PKGNAME}/functions/Completion/BSD
-@dirrm share/zsh/${PKGNAME}/functions/Completion/AIX
-@dirrm share/zsh/${PKGNAME}/functions/Completion
-@dirrm share/zsh/${PKGNAME}/functions/Calendar
-@dirrm share/zsh/${PKGNAME}/functions
-@dirrm share/zsh/${PKGNAME}
 @exec ${MKDIR} %D/share/zsh/site-functions
-@dirrm share/zsh/site-functions
-@dirrm share/zsh/4.3.6-dev-0/scripts
-@dirrm share/zsh/4.3.6-dev-0
-@dirrm share/zsh
-@dirrm lib/zsh/4.3.6-dev-0/zsh/net
-@dirrm lib/zsh/4.3.6-dev-0/zsh
-@dirrm lib/zsh/4.3.6-dev-0
-@dirrm lib/zsh

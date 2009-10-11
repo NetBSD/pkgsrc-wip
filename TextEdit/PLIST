@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/28 22:19:03 dvol Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:26 thomasklausner Exp $
 share/GNUstep/Local/Applications/TextEdit.app/Resources/Edit.tiff
 share/GNUstep/Local/Applications/TextEdit.app/Resources/EditTitle.tiff
 share/GNUstep/Local/Applications/TextEdit.app/Resources/Encodings.txt
@@ -26,16 +26,4 @@ share/GNUstep/Local/Applications/TextEdit.app/Resources/text.tiff
 share/GNUstep/Local/Applications/TextEdit.app/TextEdit
 share/GNUstep/Local/Applications/TextEdit.app/stamp.make
 share/GNUstep/Local/Tools/TextEdit
-@dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/Russian.lproj
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/German.lproj
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/Preferences.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/Info.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/FindPanel.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/EncodingAccessory.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/Edit.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj/Document.gorm
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources/English.lproj
-@dirrm share/GNUstep/Local/Applications/TextEdit.app/Resources
-@dirrm share/GNUstep/Local/Applications/TextEdit.app
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/25 21:28:57 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 include/crackcert.h
 include/cryptoki.h
 include/cryptoki_unix.h
@@ -10,4 +10,3 @@ include/pkcs11t.h
 include/thread_generic.h
 lib/libmusclepkcs11.la
 share/examples/muscle-pkcs11/pkcs11rc.example
-@dirrm share/examples/muscle-pkcs11

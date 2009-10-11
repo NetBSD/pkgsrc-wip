@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 10:02:19 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:27 thomasklausner Exp $
 bin/arista-gtk
 bin/arista-transcode
 ${PYSITELIB}/arista/__init__.py
@@ -46,18 +46,4 @@ share/arista/ui/icon.svg
 share/arista/ui/logo.svg
 share/arista/ui/main.ui
 share/arista/ui/prefs.ui
-@dirrm share/arista/ui
-@dirrm share/arista/presets
-@dirrm share/arista/locale/templates
-@dirrm share/arista/locale/it/LC_MESSAGES
-@dirrm share/arista/locale/it
-@dirrm share/arista/locale/fr/LC_MESSAGES
-@dirrm share/arista/locale/fr
-@dirrm share/arista/locale/es/LC_MESSAGES
-@dirrm share/arista/locale/es
-@dirrm share/arista/locale/de/LC_MESSAGES
-@dirrm share/arista/locale/de
-@dirrm share/arista/locale
-@dirrm share/arista
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/arista

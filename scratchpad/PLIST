@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/22 21:40:44 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scratchpad
 share/applications/scratchpad.desktop
 share/doc/scratchpad/README
 share/gconf/schemas/scratchpad.schemas
 share/pixmaps/scratchpad.svg
 share/scratchpad/scratchpad-ui.xml
-@dirrm share/scratchpad
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/scratchpad
 @comment in xdg-dirs: @dirrm share/applications

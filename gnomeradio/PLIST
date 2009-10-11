@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:33 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:40 thomasklausner Exp $
 bin/gnomeradio
 etc/gconf/gconf.xml.defaults/apps/gnomeradio/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnomeradio/presets/%gconf.xml
@@ -122,54 +122,4 @@ var/scrollkeeper/zh_CN/scrollkeeper_cl.xml
 var/scrollkeeper/zh_CN/scrollkeeper_extended_cl.xml
 var/scrollkeeper/zh_TW/scrollkeeper_cl.xml
 var/scrollkeeper/zh_TW/scrollkeeper_extended_cl.xml
-@dirrm var/scrollkeeper/zh_TW
-@dirrm var/scrollkeeper/zh_CN
-@dirrm var/scrollkeeper/vi
-@dirrm var/scrollkeeper/tr
-@dirrm var/scrollkeeper/sv
-@dirrm var/scrollkeeper/sr@Latn
-@dirrm var/scrollkeeper/sr
-@dirrm var/scrollkeeper/sl
-@dirrm var/scrollkeeper/sk
-@dirrm var/scrollkeeper/ru
-@dirrm var/scrollkeeper/ro
-@dirrm var/scrollkeeper/pt_BR
-@dirrm var/scrollkeeper/pl
-@dirrm var/scrollkeeper/no
-@dirrm var/scrollkeeper/nl
-@dirrm var/scrollkeeper/ko
-@dirrm var/scrollkeeper/ja
-@dirrm var/scrollkeeper/it
-@dirrm var/scrollkeeper/index
-@dirrm var/scrollkeeper/hu
-@dirrm var/scrollkeeper/fr
-@dirrm var/scrollkeeper/es
-@dirrm var/scrollkeeper/el
-@dirrm var/scrollkeeper/de
-@dirrm var/scrollkeeper/da
-@dirrm var/scrollkeeper/cs
-@dirrm var/scrollkeeper/ca
-@dirrm var/scrollkeeper/be
-@dirrm var/scrollkeeper/am
-@dirrm var/scrollkeeper/TOC
-@dirrm var/scrollkeeper/C
-@dirrm var/scrollkeeper
-@dirrm var
-@dirrm share/pixmaps
-@dirrm share/omf/gnomeradio
-@dirrm share/omf
-@dirrm share/gnome/help/gnomeradio/C/figures
-@dirrm share/gnome/help/gnomeradio/C
-@dirrm share/gnome/help/gnomeradio
-@dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
-@dirrm share/applications
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/recording
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio/presets
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomeradio
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio/recording
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio/presets
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnomeradio
-@dirrm etc/gconf/gconf.xml.defaults/apps
-@dirrm etc/gconf/gconf.xml.defaults

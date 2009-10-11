@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/09 19:52:12 shattered Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:12 thomasklausner Exp $
 bin/findbpm
 bin/pydance
 man/man1/findbpm.1
@@ -342,29 +342,3 @@ share/games/pydance/themes/gfx/64x64/soloesque.zip
 share/games/pydance/themes/gfx/64x64/vividesque.zip
 share/games/pydance/ui.py
 share/games/pydance/util.py
-@dirrm share/examples/pydance
-@dirrm share/games/pydance/sound
-@dirrm share/games/pydance/images
-@dirrm share/games/pydance/songs
-@dirrm share/games/pydance/themes/gfx/48x48/default
-@dirrm share/games/pydance/themes/gfx/48x48
-@dirrm share/games/pydance/themes/gfx/32x32/ez2
-@dirrm share/games/pydance/themes/gfx/32x32/default
-@dirrm share/games/pydance/themes/gfx/32x32/dmxesque
-@dirrm share/games/pydance/themes/gfx/32x32
-@dirrm share/games/pydance/themes/gfx/64x64/default
-@dirrm share/games/pydance/themes/gfx/64x64/oldschool
-@dirrm share/games/pydance/themes/gfx/64x64
-@dirrm share/games/pydance/themes/gfx/56x56/ez2
-@dirrm share/games/pydance/themes/gfx/56x56/default
-@dirrm share/games/pydance/themes/gfx/56x56
-@dirrm share/games/pydance/themes/gfx
-@dirrm share/games/pydance/themes/dj/djenzay/positive
-@dirrm share/games/pydance/themes/dj/djenzay/negative
-@dirrm share/games/pydance/themes/dj/djenzay/neutral
-@dirrm share/games/pydance/themes/dj/djenzay/rankings
-@dirrm share/games/pydance/themes/dj/djenzay
-@dirrm share/games/pydance/themes/dj/none
-@dirrm share/games/pydance/themes/dj
-@dirrm share/games/pydance/themes
-@dirrm share/games/pydance

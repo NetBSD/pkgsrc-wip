@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/10/10 17:46:00 mchittur Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 bin/om_console
 bin/om_niche
 bin/om_viewer
@@ -47,7 +47,3 @@ lib/openmodeller/libomdg_bs.la
 lib/openmodeller/libomdistance_to_average.la
 lib/openmodeller/libomminimum_distance.la
 lib/openmodeller/libomoldgarp.la
-@dirrm lib/openmodeller
-@dirrm include/openmodeller/models
-@dirrm include/openmodeller/env_io
-@dirrm include/openmodeller

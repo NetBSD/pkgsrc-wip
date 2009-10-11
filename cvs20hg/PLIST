@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/03 19:14:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/cvs20hg
 ${PYSITELIB}/cvstohg/CVStools.py
 ${PYSITELIB}/cvstohg/CVStools.pyc
@@ -12,4 +12,3 @@ ${PYSITELIB}/cvstohg/chast.pyo
 ${PYSITELIB}/cvstohg/cvs20hg.py
 ${PYSITELIB}/cvstohg/cvs20hg.pyc
 ${PYSITELIB}/cvstohg/cvs20hg.pyo
-@dirrm ${PYSITELIB}/cvstohg

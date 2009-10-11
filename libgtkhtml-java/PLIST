@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/30 15:22:34 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 lib/libgtkhtmljni.la
 lib/pkgconfig/gtkhtml-java.pc
 share/doc/${PKGNAME}/AUTHORS
@@ -35,14 +35,4 @@ share/doc/${PKGNAME}/examples/html/x438.html
 share/doc/${PKGNAME}/examples/html/x525.html
 share/java/gtkhtml2.6-${PKGVERSION}.jar
 share/java/gtkhtml2.6.jar
-@dirrm share/java
-@dirrm share/doc/${PKGNAME}/examples/html
-@dirrm share/doc/${PKGNAME}/examples/TestHTML
-@dirrm share/doc/${PKGNAME}/examples
 @exec ${MKDIR} %D/share/doc/${PKGNAME}/api/resources
-@dirrm share/doc/${PKGNAME}/api/resources
-@dirrm share/doc/${PKGNAME}/api/org/gnu/gtkhtml
-@dirrm share/doc/${PKGNAME}/api/org/gnu
-@dirrm share/doc/${PKGNAME}/api/org
-@dirrm share/doc/${PKGNAME}/api
-@dirrm share/doc/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 07:34:37 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 bin/svm_classify
 bin/svm_learn
 bin/svm_model
@@ -14,4 +14,3 @@ lib/libtinysvm.la
 man/man1/svm_classify.1
 man/man1/svm_learn.1
 man/man1/svm_model.1
-@dirrm include/TinySVM

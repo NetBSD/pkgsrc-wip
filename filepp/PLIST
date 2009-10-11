@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/05 20:22:39 alchow Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:36 thomasklausner Exp $
 bin/filepp
 man/man1/filepp.1
 share/filepp/modules/bigdef.pm
@@ -19,5 +19,3 @@ share/filepp/modules/maths.pm
 share/filepp/modules/regexp.pm
 share/filepp/modules/tolower.pm
 share/filepp/modules/toupper.pm
-@dirrm share/filepp/modules
-@dirrm share/filepp

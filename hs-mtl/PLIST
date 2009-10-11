@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/10 05:04:35 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:44 thomasklausner Exp $
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont.hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont.p_hi
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont/Class.hi
@@ -46,14 +46,3 @@ lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSmtl-${PKGVERSION}.a
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSmtl-${PKGVERSION}_p.a
 lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/mtl-${PKGVERSION}/LICENSE
-@dirrm share/doc/mtl-${PKGVERSION}
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Writer
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/State
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Reader
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/RWS
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Error
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Cont
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}/Control
-@dirrm lib/mtl-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/mtl-${PKGVERSION}

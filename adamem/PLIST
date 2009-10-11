@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/29 04:57:42 xmor61 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:26 thomasklausner Exp $
 bin/adam
 bin/adamem
 bin/coleco
@@ -10,4 +10,3 @@ share/adamem/OS7.rom
 share/adamem/WP.rom
 share/adamem/adamem.snd
 share/adamem/adamem.txt
-@dirrm share/adamem

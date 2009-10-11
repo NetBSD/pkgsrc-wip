@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/29 00:31:59 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 man/man5/diablo-files.5
 man/man5/diablo-kp.5
 man/man8/dexpire.8
@@ -119,27 +119,10 @@ news/samples/reader/dreader.access
 news/samples/reader/dserver.hosts
 news/samples/reader/moderators
 @exec ${MKDIR} %D/news/spool/news
-@dirrm news/spool/news
 @exec ${MKDIR} %D/news/spool/group
-@dirrm news/spool/group
 @exec ${MKDIR} %D/news/spool/cache
-@dirrm news/spool/cache
-@dirrm news/spool
-@dirrm news/samples/reader
-@dirrm news/samples/feeder+reader
-@dirrm news/samples/feeder
-@dirrm news/samples/adm
-@dirrm news/samples
 @exec ${MKDIR} %D/news/run
-@dirrm news/run
 @exec ${MKDIR} %D/news/man/man8
-@dirrm news/man/man8
 @exec ${MKDIR} %D/news/man/man5
-@dirrm news/man/man5
-@dirrm news/man
 @exec ${MKDIR} %D/news/log
-@dirrm news/log
 @exec ${MKDIR} %D/news/dqueue
-@dirrm news/dqueue
-@dirrm news/dbin
-@dirrm news

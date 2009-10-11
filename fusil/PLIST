@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/17 23:08:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 bin/fusil-clamav
 bin/fusil-firefox
 bin/fusil-gettext
@@ -265,10 +265,3 @@ share/doc/${PKGNAME}/usage.rst
 share/examples/${PKGNAME}/good-bye-world
 share/examples/${PKGNAME}/hello-world
 share/examples/${PKGNAME}/xterm
-@dirrm share/examples/${PKGNAME}
-@dirrm share/doc/${PKGNAME}
-@dirrm ${PYSITELIB}/fusil/process
-@dirrm ${PYSITELIB}/fusil/network
-@dirrm ${PYSITELIB}/fusil/mas
-@dirrm ${PYSITELIB}/fusil/linux
-@dirrm ${PYSITELIB}/fusil

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/21 18:28:21 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:36 thomasklausner Exp $
 bin/ficl
 include/ficl.h
 include/ficlcompatibility.h
@@ -78,13 +78,3 @@ share/ficl/test/sarray.fr
 share/ficl/test/testcase.fr
 share/ficl/test/tester.fr
 share/ficl/test/vocab.fr
-@dirrm share/ficl/test
-@dirrm share/ficl/softcore
-@dirrm share/ficl/doc/source
-@dirrm share/ficl/doc/graphics
-@dirrm share/ficl/doc/articles
-@dirrm share/ficl/doc
-@dirrm share/ficl/contrib/xclasses
-@dirrm share/ficl/contrib
-@dirrm share/ficl
-@dirrm include/ficlplatform

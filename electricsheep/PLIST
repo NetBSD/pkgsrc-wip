@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/01 13:36:37 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:34 thomasklausner Exp $
 bin/electricsheep
 bin/electricsheep-voter
 bin/mpeg2dec_onroot
@@ -10,4 +10,3 @@ share/electricsheep/electricsheep-frown.png
 share/electricsheep/electricsheep-smile.png
 libexec/xscreensaver/config/electricsheep.xml
 man/man1/electricsheep.1
-@dirrm share/electricsheep

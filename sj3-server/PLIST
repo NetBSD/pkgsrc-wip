@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/14 14:02:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 bin/sj3mkdic
 lib/libsj3core.la
 libdata/sj3main.dic
@@ -15,5 +15,4 @@ share/examples/sj3/freebsd-sj3.sh.in
 share/examples/sj3/freebsd-sj3proxy.sh.in
 share/examples/sj3/sj3proxy.lua.example
 share/examples/sj3/sj3serv.lua.example
-@dirrm share/examples/sj3
 @unexec ${RMDIR} %D/share/doc/sj3 2>/dev/null || ${TRUE}

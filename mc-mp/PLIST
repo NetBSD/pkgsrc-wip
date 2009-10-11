@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/09/03 22:08:22 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:56 thomasklausner Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -131,9 +131,3 @@ lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
-@dirrm lib/mc/term
-@dirrm lib/mc/syntax
-@dirrm lib/mc/extfs
-@dirrm lib/mc/codepages
-@dirrm lib/mc/bin
-@dirrm lib/mc

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 00:21:37 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:32 thomasklausner Exp $
 bin/dbus-explorer
 lib/dbus-explorer/DBusExplorer.exe
 lib/dbus-explorer/DBusExplorer.exe.mdb
 share/applications/dbus-explorer.desktop
 share/locale/fr/LC_MESSAGES/dbus-explorer.mo
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/dbus-explorer

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 04:24:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 share/gdesklets/Displays/StarterBar/gfx/bg-e.png
 share/gdesklets/Displays/StarterBar/gfx/bg-n.png
 share/gdesklets/Displays/StarterBar/gfx/bg-ne.png
@@ -25,23 +25,5 @@ share/gdesklets/Sensors/StarterBar/locale/sr@Latn/LC_MESSAGES/gdesklets.mo
 share/gdesklets/Sensors/StarterBar/locale/sv/LC_MESSAGES/gdesklets.mo
 share/gdesklets/Sensors/StarterBar/__init__.py
 share/gdesklets/Sensors/StarterBar/home.desktop
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sv/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sv
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sr@Latn/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sr@Latn
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sr/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sr
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sq/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/sq
-@dirrm share/gdesklets/Sensors/StarterBar/locale/pt/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/pt
-@dirrm share/gdesklets/Sensors/StarterBar/locale/fr/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/fr
-@dirrm share/gdesklets/Sensors/StarterBar/locale/de/LC_MESSAGES
-@dirrm share/gdesklets/Sensors/StarterBar/locale/de
-@dirrm share/gdesklets/Sensors/StarterBar/locale
-@dirrm share/gdesklets/Sensors/StarterBar
 @comment in gDesklets: @dirrm share/gdesklets/Sensors
-@dirrm share/gdesklets/Displays/StarterBar/gfx
-@dirrm share/gdesklets/Displays/StarterBar
 @comment in gDesklets: @dirrm share/gdesklets/Displays

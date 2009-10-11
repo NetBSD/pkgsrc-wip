@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 19:02:25 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 bin/gtg
 ${PYSITELIB}/GTG/__init__.py
 ${PYSITELIB}/GTG/__init__.pyc
@@ -131,30 +131,4 @@ share/locale/sv/LC_MESSAGES/gtg.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gtg/icons/hicolor/svg
-@dirrm share/gtg/icons/hicolor/scalable/apps
-@dirrm share/gtg/icons/hicolor/scalable
-@dirrm share/gtg/icons/hicolor/32x32/apps
-@dirrm share/gtg/icons/hicolor/32x32
-@dirrm share/gtg/icons/hicolor/24x24/apps
-@dirrm share/gtg/icons/hicolor/24x24/actions
-@dirrm share/gtg/icons/hicolor/24x24
-@dirrm share/gtg/icons/hicolor/22x22/categories
-@dirrm share/gtg/icons/hicolor/22x22/apps
-@dirrm share/gtg/icons/hicolor/22x22/actions
-@dirrm share/gtg/icons/hicolor/22x22
-@dirrm share/gtg/icons/hicolor/16x16/emblems
-@dirrm share/gtg/icons/hicolor/16x16/categories
-@dirrm share/gtg/icons/hicolor/16x16/apps
-@dirrm share/gtg/icons/hicolor/16x16/actions
-@dirrm share/gtg/icons/hicolor/16x16
-@dirrm share/gtg/icons/hicolor
-@dirrm share/gtg/icons
-@dirrm share/gtg
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/GTG/tools
-@dirrm ${PYSITELIB}/GTG/taskeditor
-@dirrm ${PYSITELIB}/GTG/taskbrowser
-@dirrm ${PYSITELIB}/GTG/core
-@dirrm ${PYSITELIB}/GTG/backends
-@dirrm ${PYSITELIB}/GTG

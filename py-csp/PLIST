@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/19 22:11:43 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
 ${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/dependency_links.txt
@@ -104,9 +104,3 @@ share/examples/${PKGNAME}/Sieve.py
 share/examples/${PKGNAME}/TokenRing.py
 share/examples/${PKGNAME}/WebServer.py
 share/examples/${PKGNAME}/common.py
-@dirrm share/examples/${PKGNAME}
-@dirrm ${PYSITELIB}/pycsp/threads
-@dirrm ${PYSITELIB}/pycsp/processes
-@dirrm ${PYSITELIB}/pycsp/net
-@dirrm ${PYSITELIB}/pycsp/greenlets
-@dirrm ${PYSITELIB}/pycsp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/26 16:39:25 lkundrak Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:00 thomasklausner Exp $
 bin/nx
 lib/nx/bin/nxclient
 lib/nx/bin/nxesd
@@ -83,13 +83,3 @@ lib/nx/share/images/wizard.png
 lib/nx/share/keyboards
 lib/nx/share/keys/server.id_dsa.key
 lib/nx/share/rgb
-@dirrm lib/nx/share/keys
-@dirrm lib/nx/share/images
-@dirrm lib/nx/share/icons
-@dirrm lib/nx/share/documents/client
-@dirrm lib/nx/share/documents
-@dirrm lib/nx/share/cups
-@dirrm lib/nx/share
-@dirrm lib/nx/lib
-@dirrm lib/nx/bin
-@dirrm lib/nx

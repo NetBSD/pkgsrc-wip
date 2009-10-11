@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/20 09:37:42 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:51 thomasklausner Exp $
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
@@ -114,6 +114,4 @@ share/emacs/${PKGVERSION}/leim/quail/vntelex.el.gz
 share/emacs/${PKGVERSION}/leim/quail/vntelex.elc
 share/emacs/${PKGVERSION}/leim/quail/welsh.el.gz
 share/emacs/${PKGVERSION}/leim/quail/welsh.elc
-@dirrm share/emacs/${PKGVERSION}/leim/ja-dic
-@dirrm share/emacs/${PKGVERSION}/leim/quail
 @comment belongs to emacs package: dirrm share/emacs/${PKGVERSION}/leim

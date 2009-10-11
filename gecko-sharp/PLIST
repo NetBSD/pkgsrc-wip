@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/23 22:31:06 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
 lib/mono/gac/gecko-sharp/2.0.0.0__ccf7d78a55e9f021/gecko-sharp.dll
 lib/mono/gac/gecko-sharp/2.0.0.0__ccf7d78a55e9f021/gecko-sharp.dll.config
 lib/mono/gecko-sharp-2.0/gecko-sharp.dll
@@ -6,9 +6,5 @@ lib/monodoc/sources/gecko-sharp-docs.source
 lib/monodoc/sources/gecko-sharp-docs.tree
 lib/monodoc/sources/gecko-sharp-docs.zip
 lib/pkgconfig/gecko-sharp-2.0.pc
-@dirrm lib/monodoc/sources
-@dirrm lib/mono/gecko-sharp-2.0
-@dirrm lib/mono/gac/gecko-sharp/2.0.0.0__ccf7d78a55e9f021
-@dirrm lib/mono/gac/gecko-sharp
 @comment in mono: @dirrm lib/mono/gac
 @comment in mono: @dirrm lib/mono

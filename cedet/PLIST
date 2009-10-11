@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/16 04:52:08 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:31 thomasklausner Exp $
 bin/semanticdb.sh
 info/bovine.info
 info/cogre.info
@@ -376,14 +376,3 @@ ${EMACS_LISPPREFIX}/cedet/speedbar/speedbar-load.elc
 ${EMACS_LISPPREFIX}/cedet/speedbar/speedbar-loaddefs.el
 ${EMACS_LISPPREFIX}/cedet/speedbar/speedbar.el
 ${EMACS_LISPPREFIX}/cedet/speedbar/speedbar.elc
-@dirrm ${EMACS_LISPPREFIX}/cedet/speedbar
-@dirrm ${EMACS_LISPPREFIX}/cedet/semantic/wisent
-@dirrm ${EMACS_LISPPREFIX}/cedet/semantic/bovine
-@dirrm ${EMACS_LISPPREFIX}/cedet/semantic
-@dirrm ${EMACS_LISPPREFIX}/cedet/eieio
-@dirrm ${EMACS_LISPPREFIX}/cedet/ede
-@dirrm ${EMACS_LISPPREFIX}/cedet/contrib
-@dirrm ${EMACS_LISPPREFIX}/cedet/common/icons
-@dirrm ${EMACS_LISPPREFIX}/cedet/common
-@dirrm ${EMACS_LISPPREFIX}/cedet/cogre
-@dirrm ${EMACS_LISPPREFIX}/cedet

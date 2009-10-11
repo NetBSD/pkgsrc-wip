@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/07/24 18:02:24 athaba Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:09 thomasklausner Exp $
 bin/buildbot
 ${PYSITELIB}/buildbot/__init__.pyc
 ${PYSITELIB}/buildbot/__init__.pyo
@@ -228,15 +228,3 @@ ${PYSITELIB}/buildbot/test/test_webparts.pyc
 ${PYSITELIB}/buildbot/test/test_webparts.pyo
 ${PYSITELIB}/buildbot/util.pyc
 ${PYSITELIB}/buildbot/util.pyo
-@dirrm ${PYSITELIB}/buildbot/test/subdir
-@dirrm ${PYSITELIB}/buildbot/test/mail
-@dirrm ${PYSITELIB}/buildbot/test
-@dirrm ${PYSITELIB}/buildbot/steps
-@dirrm ${PYSITELIB}/buildbot/status/web
-@dirrm ${PYSITELIB}/buildbot/status
-@dirrm ${PYSITELIB}/buildbot/slave
-@dirrm ${PYSITELIB}/buildbot/scripts
-@dirrm ${PYSITELIB}/buildbot/process
-@dirrm ${PYSITELIB}/buildbot/clients
-@dirrm ${PYSITELIB}/buildbot/changes
-@dirrm ${PYSITELIB}/buildbot

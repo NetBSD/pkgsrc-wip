@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 18:06:30 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:25 thomasklausner Exp $
 bin/xgobi
 bin/xgvis
 man/man1/xgobi.1
@@ -228,8 +228,3 @@ share/examples/${PKGNAME}/data_xgvis/torus1.edges
 share/examples/${PKGNAME}/data_xgvis/torus1.pos
 share/examples/${PKGNAME}/data_xgvis/torus2.edges
 share/examples/${PKGNAME}/data_xgvis/torus2.pos
-@dirrm share/examples/${PKGNAME}/data_xgvis
-@dirrm share/examples/${PKGNAME}/data_xgobi
-@dirrm share/examples/${PKGNAME}
-@dirrm share/doc/${PKGNAME}/HELP
-@dirrm share/doc/${PKGNAME}

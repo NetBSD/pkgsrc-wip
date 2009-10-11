@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/09 16:20:45 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:39 thomasklausner Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -160,10 +160,3 @@ share/examples/givaro/Polynomial/pol_eval.C
 share/examples/givaro/Polynomial/pol_factor.C
 share/examples/givaro/Rational/iratrecon.C
 share/examples/givaro/Rational/polydouble.C
-@dirrm share/examples/givaro/Rational
-@dirrm share/examples/givaro/Polynomial
-@dirrm share/examples/givaro/Integer
-@dirrm share/examples/givaro/FiniteField
-@dirrm share/examples/givaro
-@dirrm include/gmp++
-@dirrm include/givaro

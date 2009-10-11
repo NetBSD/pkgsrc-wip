@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/02/15 03:09:06 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/10/11 10:45:10 thomasklausner Exp $
 ${TRANSPORTDIR}/data/defaultJabberAvatar.png
 ${TRANSPORTDIR}/data/defaultMSNAvatar.png
 ${TRANSPORTDIR}/src/avatar.py
@@ -50,14 +50,3 @@ ${TRANSPORTDIR}/src/xmlconfig.py
 bin/PyMSNt
 ${JABBER_EXDIR}/pymsnt.xml
 share/examples/rc.d/pymsnt
-@dirrm ${TRANSPORTDIR}/src/baseproto
-@dirrm ${TRANSPORTDIR}/src/legacy/msn
-@dirrm ${TRANSPORTDIR}/src/legacy
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols/jabber
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/protocols
-@dirrm ${TRANSPORTDIR}/src/twistfix/words/xish
-@dirrm ${TRANSPORTDIR}/src/twistfix/words
-@dirrm ${TRANSPORTDIR}/src/twistfix
-@dirrm ${TRANSPORTDIR}/src
-@dirrm ${TRANSPORTDIR}/data
-@dirrm ${TRANSPORTDIR}

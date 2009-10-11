@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 17:13:29 bjan2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/tilp
 bin/tilpreg
 etc/tilp/tilp.registry
@@ -148,12 +148,3 @@ share/tilp/pixmaps/tb_ready.xpm
 share/tilp/pixmaps/tb_refresh.xpm
 share/tilp/pixmaps/tb_trash.xpm
 share/tilp/pixmaps/yes.xpm
-@dirrm share/tilp/pixmaps
-@dirrm share/tilp/icons
-@dirrm share/tilp/help
-@dirrm share/tilp/glade
-@dirrm share/tilp
-@dirrm share/appsign83
-@dirrm lib/tilp
-@dirrm include/tilp
-@dirrm etc/tilp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/25 21:02:36 cherrymathew Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/sid
 man/man1/sid.1
 share/doc/sid/guide-single/common.css
@@ -25,8 +25,3 @@ share/doc/sid/changelog-single/index.html
 share/doc/sid/sid.1-single/common.css
 share/doc/sid/sid.1-single/docbook.css
 share/doc/sid/sid.1-single/index.html
-@dirrm share/doc/sid/guide-single
-@dirrm share/doc/sid/guide
-@dirrm share/doc/sid/sid.1-single
-@dirrm share/doc/sid/changelog-single
-@dirrm share/doc/sid

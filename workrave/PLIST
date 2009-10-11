@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/13 19:15:24 briandealwis Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:25 thomasklausner Exp $
 bin/workrave
 share/examples/workrave/sound/events/workrave.soundlist
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/workrave.mo
@@ -80,11 +80,5 @@ share/workrave/images/workrave-icon-small.png
 share/workrave/images/workrave-quiet-icon-medium.png
 share/workrave/images/workrave-suspended-icon-medium.png
 share/workrave/images/workrave.png
-@dirrm share/workrave/images
-@dirrm share/workrave/exercises
-@dirrm share/workrave
-@dirrm share/sounds/workrave
-@dirrm share/examples/workrave/sound/events
 @comment in xdg-dirs: @dirrm share/sounds
-@dirrm share/pixmaps/workrave
 @comment in xdg-dirs: @dirrm share/pixmaps

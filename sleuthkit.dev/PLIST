@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/02/19 15:53:18 fulviociriaco Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
 bin/blkcalc
 bin/blkcat
 bin/blkls
@@ -75,11 +75,3 @@ share/tsk3/sorter/linux.sort
 share/tsk3/sorter/openbsd.sort
 share/tsk3/sorter/solaris.sort
 share/tsk3/sorter/windows.sort
-@dirrm share/tsk3/sorter
-@dirrm share/tsk3
-@dirrm include/tsk3/vs
-@dirrm include/tsk3/img
-@dirrm include/tsk3/hashdb
-@dirrm include/tsk3/fs
-@dirrm include/tsk3/base
-@dirrm include/tsk3

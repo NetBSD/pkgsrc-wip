@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 13:00:49 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 include/lo/lo.h
 include/lo/lo_endian.h
 include/lo/lo_errors.h
@@ -9,4 +9,3 @@ include/lo/lo_throw.h
 include/lo/lo_types.h
 lib/liblo.la
 lib/pkgconfig/liblo.pc
-@dirrm include/lo

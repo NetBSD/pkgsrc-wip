@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/20 17:15:07 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:53 thomasklausner Exp $
 bin/sip_reg
 include/eXosip2/eX_call.h
 include/eXosip2/eX_message.h
@@ -10,4 +10,3 @@ include/eXosip2/eX_setup.h
 include/eXosip2/eX_subscribe.h
 include/eXosip2/eXosip.h
 lib/libeXosip2.la
-@dirrm include/eXosip2

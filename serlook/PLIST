@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/27 10:02:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:17 thomasklausner Exp $
 bin/serlook
 share/doc/kde/HTML/en/serlook/common
 share/doc/kde/HTML/en/serlook/dump_format_settings.png
@@ -81,7 +81,3 @@ share/kde/doc/serlook/INSTALL
 share/kde/doc/serlook/KNOWN_BUGS
 share/kde/doc/serlook/README
 share/kde/doc/serlook/TODO
-@dirrm share/kde/doc/serlook
-@dirrm share/kde/apps/serlook
-@dirrm share/doc/kde/HTML/serlook
-@dirrm share/doc/kde/HTML/en/serlook

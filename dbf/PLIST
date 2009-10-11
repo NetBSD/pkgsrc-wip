@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/21 15:07:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/dbf
 share/doc/dbf/BUGS
 share/doc/dbf/ChangeLog
@@ -7,4 +7,3 @@ share/doc/dbf/FAQ
 share/doc/dbf/INSTALL
 share/doc/dbf/MANIFEST
 share/doc/dbf/README
-@dirrm share/doc/dbf

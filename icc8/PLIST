@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/11/26 16:43:45 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:46 thomasklausner Exp $
 emul/linux/opt/intel_cc_80/bin/Errormatch.txt
 emul/linux/opt/intel_cc_80/bin/codecov
 emul/linux/opt/intel_cc_80/bin/icc
@@ -1554,55 +1554,3 @@ emul/linux/opt/intel_idb_73/doc/idb_debugger_manual.htm
 emul/linux/opt/intel_idb_73/doc/idb_release_notes.htm
 emul/linux/opt/intel_idb_73/doc/idbsupport
 emul/linux/opt/intel_idb_73/man/man1/idb.1
-@dirrm emul/linux/opt/intel_idb_73/man/man1
-@dirrm emul/linux/opt/intel_idb_73/man
-@dirrm emul/linux/opt/intel_idb_73/doc
-@dirrm emul/linux/opt/intel_idb_73/bin
-@dirrm emul/linux/opt/intel_idb_73
-@dirrm emul/linux/opt/intel_cc_80/substitute_headers
-@dirrm emul/linux/opt/intel_cc_80/man/man1
-@dirrm emul/linux/opt/intel_cc_80/man
-@dirrm emul/linux/opt/intel_cc_80/licenses
-@dirrm emul/linux/opt/intel_cc_80/lib
-@dirrm emul/linux/opt/intel_cc_80/include/c++/ext
-@dirrm emul/linux/opt/intel_cc_80/include/c++/backward
-@dirrm emul/linux/opt/intel_cc_80/include/c++/alt
-@dirrm emul/linux/opt/intel_cc_80/include/c++
-@dirrm emul/linux/opt/intel_cc_80/include
-@dirrm emul/linux/opt/intel_cc_80/doc/training/templ_im/icons
-@dirrm emul/linux/opt/intel_cc_80/doc/training/templ_im/buttons
-@dirrm emul/linux/opt/intel_cc_80/doc/training/templ_im
-@dirrm emul/linux/opt/intel_cc_80/doc/training/templ/nav
-@dirrm emul/linux/opt/intel_cc_80/doc/training/templ
-@dirrm emul/linux/opt/intel_cc_80/doc/training/scripts
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/images/vs6
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/images
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/final
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/feedback
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch6
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch5
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch4
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch35
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch3
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch2
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch1/vc6
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch1
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize/ch0
-@dirrm emul/linux/opt/intel_cc_80/doc/training/optimize
-@dirrm emul/linux/opt/intel_cc_80/doc/training
-@dirrm emul/linux/opt/intel_cc_80/doc/ref/whxdata
-@dirrm emul/linux/opt/intel_cc_80/doc/ref/whgdata
-@dirrm emul/linux/opt/intel_cc_80/doc/ref/whdata
-@dirrm emul/linux/opt/intel_cc_80/doc/ref
-@dirrm emul/linux/opt/intel_cc_80/doc/notes
-@dirrm emul/linux/opt/intel_cc_80/doc/c_ug/whxdata
-@dirrm emul/linux/opt/intel_cc_80/doc/c_ug/whgdata
-@dirrm emul/linux/opt/intel_cc_80/doc/c_ug/whdata
-@dirrm emul/linux/opt/intel_cc_80/doc/c_ug
-@dirrm emul/linux/opt/intel_cc_80/doc/asm_ug/whxdata
-@dirrm emul/linux/opt/intel_cc_80/doc/asm_ug/whgdata
-@dirrm emul/linux/opt/intel_cc_80/doc/asm_ug/whdata
-@dirrm emul/linux/opt/intel_cc_80/doc/asm_ug
-@dirrm emul/linux/opt/intel_cc_80/doc
-@dirrm emul/linux/opt/intel_cc_80/bin
-@dirrm emul/linux/opt/intel_cc_80

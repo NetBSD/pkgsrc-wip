@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/02 08:09:02 jkjuopperi Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:51 thomasklausner Exp $
 bin/ledger
 include/ledger/acconf.h
 include/ledger/amount.h
@@ -37,4 +37,3 @@ share/emacs/site-lisp/ledger.el
 share/emacs/site-lisp/ledger.elc
 share/emacs/site-lisp/timeclock.el
 share/emacs/site-lisp/timeclock.elc
-@dirrm include/ledger

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/22 15:56:09 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:55 thomasklausner Exp $
 bin/ircat
 bin/irexec
 bin/irpty
@@ -26,4 +26,3 @@ man/man8/lircd.8
 man/man8/lircmd.8
 sbin/lircd
 sbin/lircmd
-@dirrm include/lirc

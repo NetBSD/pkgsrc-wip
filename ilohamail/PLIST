@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/05/24 01:19:40 ykomatsu Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/10/11 10:44:47 thomasklausner Exp $
 share/doc/ilohamail/COPYING
 share/doc/ilohamail/INSTALL
 share/doc/ilohamail/Manual/configure.MySQL.html
@@ -810,52 +810,3 @@ share/ilohamail/source/themes/default/info.inc
 share/ilohamail/source/themes/default/override.inc
 share/ilohamail/source/tool.php
 share/ilohamail/source/view.php
-@dirrm share/ilohamail/source/themes/default/images
-@dirrm share/ilohamail/source/themes/default
-@dirrm share/ilohamail/source/themes
-@dirrm share/ilohamail/source/images
-@dirrm share/ilohamail/source
-@dirrm share/ilohamail/lang/vn
-@dirrm share/ilohamail/lang/tw
-@dirrm share/ilohamail/lang/tr
-@dirrm share/ilohamail/lang/si
-@dirrm share/ilohamail/lang/se
-@dirrm share/ilohamail/lang/ru
-@dirrm share/ilohamail/lang/ro
-@dirrm share/ilohamail/lang/pt
-@dirrm share/ilohamail/lang/pl
-@dirrm share/ilohamail/lang/no
-@dirrm share/ilohamail/lang/nn_NO
-@dirrm share/ilohamail/lang/nl
-@dirrm share/ilohamail/lang/kr
-@dirrm share/ilohamail/lang/jp
-@dirrm share/ilohamail/lang/it
-@dirrm share/ilohamail/lang/hu
-@dirrm share/ilohamail/lang/ga
-@dirrm share/ilohamail/lang/fr
-@dirrm share/ilohamail/lang/es
-@dirrm share/ilohamail/lang/eng_GB
-@dirrm share/ilohamail/lang/eng
-@dirrm share/ilohamail/lang/el
-@dirrm share/ilohamail/lang/dk
-@dirrm share/ilohamail/lang/de
-@dirrm share/ilohamail/lang/cz
-@dirrm share/ilohamail/lang/cn
-@dirrm share/ilohamail/lang/cat
-@dirrm share/ilohamail/lang/br
-@dirrm share/ilohamail/lang/bg
-@dirrm share/ilohamail/lang/ar
-@dirrm share/ilohamail/lang
-@dirrm share/ilohamail/include
-@dirrm share/ilohamail/data/users
-@dirrm share/ilohamail/data/uploads
-@dirrm share/ilohamail/data/sessions
-@dirrm share/ilohamail/data/gpg
-@dirrm share/ilohamail/data/cache
-@dirrm share/ilohamail/data
-@dirrm share/ilohamail
-@dirrm share/examples/ilohamail/conf
-@dirrm share/examples/ilohamail
-@dirrm share/doc/ilohamail/MySQL
-@dirrm share/doc/ilohamail/Manual
-@dirrm share/doc/ilohamail

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/18 00:46:39 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:45:23 thomasklausner Exp $
 bin/arch
 bin/cal
 bin/chkdupexe
@@ -142,5 +142,3 @@ share/misc/getopt/getopt-parse.bash
 share/misc/getopt/getopt-parse.tcsh
 share/misc/getopt/getopt-test.bash
 share/misc/getopt/getopt-test.tcsh
-@dirrm share/misc/getopt
-@dirrm share/examples/util-linux

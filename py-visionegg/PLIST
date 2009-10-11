@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 00:15:34 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 ${PYSITELIB}/VisionEgg/Configuration.py
 ${PYSITELIB}/VisionEgg/Configuration.pyc
 ${PYSITELIB}/VisionEgg/Configuration.pyo
@@ -170,8 +170,3 @@ share/VisionEgg-${PYVERSSUFFIX}/test/conform.py
 share/VisionEgg-${PYVERSSUFFIX}/test/display_dc_restoration.py
 share/VisionEgg-${PYVERSSUFFIX}/test/display_voltage_regulation.py
 share/VisionEgg-${PYVERSSUFFIX}/test/opengl_info.py
-@dirrm ${PYSITELIB}/VisionEgg/PyroApps
-@dirrm ${PYSITELIB}/VisionEgg
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/test
-@dirrm share/VisionEgg-${PYVERSSUFFIX}/data
-@dirrm share/VisionEgg-${PYVERSSUFFIX}

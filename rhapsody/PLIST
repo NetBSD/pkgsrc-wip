@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/21 22:53:02 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 bin/rhapsody
 share/rhapsody/clientcmnds.hlp
 share/rhapsody/irccmnds.hlp
 share/rhapsody/keys.hlp
-@dirrm share/rhapsody

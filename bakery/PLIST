@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/11 16:10:02 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:29 thomasklausner Exp $
 include/bakery-2.6/bakery/App/App.h
 include/bakery-2.6/bakery/App/AppInstanceManager.h
 include/bakery-2.6/bakery/App/App_Gtk.h
@@ -56,12 +56,3 @@ share/locale/uk/LC_MESSAGES/bakery.mo
 share/locale/vi/LC_MESSAGES/bakery.mo
 share/locale/zh_CN/LC_MESSAGES/bakery.mo
 share/locale/zh_TW/LC_MESSAGES/bakery.mo
-@dirrm lib/bakery-2.6/include
-@dirrm lib/bakery-2.6
-@dirrm include/bakery-2.6/bakery/View
-@dirrm include/bakery-2.6/bakery/Utilities
-@dirrm include/bakery-2.6/bakery/Document
-@dirrm include/bakery-2.6/bakery/Configuration
-@dirrm include/bakery-2.6/bakery/App
-@dirrm include/bakery-2.6/bakery
-@dirrm include/bakery-2.6

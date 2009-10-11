@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/09 21:40:00 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:52 thomasklausner Exp $
 bin/assa-genesis
 bin/assa-hexdump
 bin/assa-genesis-3.5
@@ -62,5 +62,3 @@ include/assa-3.5/assa/XDRHack.h
 include/assa-3.5/assa/xdrIOBuffer.h
 lib/libassa-3.5.la
 lib/pkgconfig/assa-3.5.pc
-@dirrm include/assa-3.5/assa
-@dirrm include/assa-3.5

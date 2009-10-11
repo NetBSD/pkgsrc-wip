@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sh,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.sh,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 include/asm/addrspace.h
 include/asm/adx/io.h
 include/asm/bigsur/bigsur.h
@@ -107,25 +107,3 @@ include/asm/systemh/io.h
 include/asm/ubc.h
 include/asm/ucontext.h
 include/asm/watchdog.h
-@dirrm include/asm/adx
-@dirrm include/asm/bigsur
-@dirrm include/asm/cat68701
-@dirrm include/asm/cpu-sh2
-@dirrm include/asm/cpu-sh3
-@dirrm include/asm/cpu-sh4
-@dirrm include/asm/cqreek
-@dirrm include/asm/dmida
-@dirrm include/asm/dreamcast
-@dirrm include/asm/ec3104
-@dirrm include/asm/harp
-@dirrm include/asm/hd64461
-@dirrm include/asm/hd64465
-@dirrm include/asm/hp6xx
-@dirrm include/asm/mpc1211
-@dirrm include/asm/overdrive
-@dirrm include/asm/saturn
-@dirrm include/asm/se
-@dirrm include/asm/se7751
-@dirrm include/asm/sh2000
-@dirrm include/asm/snapgear
-@dirrm include/asm/systemh

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/29 16:14:08 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/kaa/imlib2/_Imlib2module.so
 ${PYSITELIB}/kaa/imlib2/__init__.py
 ${PYSITELIB}/kaa/imlib2/__init__.pyc
@@ -12,4 +12,3 @@ ${PYSITELIB}/kaa/imlib2/image.pyo
 ${PYSITELIB}/kaa/imlib2/version.py
 ${PYSITELIB}/kaa/imlib2/version.pyc
 ${PYSITELIB}/kaa/imlib2/version.pyo
-@dirrm ${PYSITELIB}/kaa/imlib2

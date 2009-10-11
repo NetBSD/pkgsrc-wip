@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/02 06:49:30 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
 bin/tagsoup
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/HStagsoup-${PKGVERSION}.o
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Download.hi
@@ -21,9 +21,3 @@ lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHStagsoup-${PKGVERSION}.a
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHStagsoup-${PKGVERSION}_p.a
 lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/tagsoup-${PKGVERSION}/LICENSE
-@dirrm share/doc/tagsoup-${PKGVERSION}
-@dirrm lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/TagSoup
-@dirrm lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML
-@dirrm lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text
-@dirrm lib/tagsoup-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/tagsoup-${PKGVERSION}

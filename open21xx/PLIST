@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 08:03:07 ianzag Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 bin/as218x
 bin/as219x
 bin/ez21
@@ -24,5 +24,3 @@ open21xx/ADSP-21992.ldf
 open21xx/include/ad1847.h
 open21xx/include/mmregs.h
 open21xx/include/registers.h
-@dirrm open21xx/include
-@dirrm open21xx

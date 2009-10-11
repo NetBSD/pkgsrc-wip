@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 18:11:50 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 lib/java/jakarta-struts/commons-beanutils.jar
 lib/java/jakarta-struts/commons-collections.jar
 lib/java/jakarta-struts/commons-digester.jar
@@ -24,4 +24,3 @@ lib/java/jakarta-struts/validator-rules.xml
 lib/java/jakarta-struts/validator-rules_1_1.dtd
 lib/java/jakarta-struts/web-app_2_2.dtd
 lib/java/jakarta-struts/web-app_2_3.dtd
-@dirrm lib/java/jakarta-struts

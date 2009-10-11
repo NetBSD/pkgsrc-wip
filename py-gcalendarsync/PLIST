@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/02 00:14:15 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 bin/googlecalsync.py
 share/doc/${PKGNAME}/README
-@dirrm share/doc/${PKGNAME}

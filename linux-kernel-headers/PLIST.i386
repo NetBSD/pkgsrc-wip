@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i386,v 1.2 2004/03/07 04:02:20 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.i386,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 include/asm/acpi.h
 include/asm/agp.h
 include/asm/apic.h
@@ -142,12 +142,3 @@ include/asm/vga.h
 include/asm/vic.h
 include/asm/vm86.h
 include/asm/voyager.h
-@dirrm include/asm/mach-bigsmp
-@dirrm include/asm/mach-default
-@dirrm include/asm/mach-es7000
-@dirrm include/asm/mach-generic
-@dirrm include/asm/mach-numaq
-@dirrm include/asm/mach-pc9800
-@dirrm include/asm/mach-summit
-@dirrm include/asm/mach-visws
-@dirrm include/asm/mach-voyager

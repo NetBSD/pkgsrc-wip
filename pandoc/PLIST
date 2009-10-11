@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 21:17:17 zecrazytux Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 bin/hsmarkdown
 bin/html2markdown
 bin/markdown2pdf
@@ -10,4 +10,3 @@ man/man1/pandoc.1
 share/${PKGNAME}/doc/BUGS
 share/${PKGNAME}/doc/README
 share/${PKGNAME}/doc/README.html
-@dirrm share/${PKGNAME}/doc

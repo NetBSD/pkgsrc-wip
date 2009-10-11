@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/08 05:07:53 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/last
 bin/lastb
 bin/mesg
@@ -32,4 +32,3 @@ sbin/shutdown
 sbin/sulogin
 sbin/telinit
 share/sysvinit/initscript.sample
-@dirrm share/sysvinit

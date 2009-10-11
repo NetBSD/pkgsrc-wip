@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2008/08/07 21:36:34 yazzy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:34 thomasklausner Exp $
 bin/entrance
 bin/entrance_edit
 bin/entrance_edit-config
@@ -19,9 +19,3 @@ share/entrace/themes/darkrock.edj
 share/entrace/themes/default.edj
 share/entrace/users/default.edj
 share/examples/rc.d/entranced
-@dirrm share/entrace/users
-@dirrm share/entrace/themes
-@dirrm share/entrace/images/sessions
-@dirrm share/entrace/images
-@dirrm share/entrace
-@dirrm libexec/entrace

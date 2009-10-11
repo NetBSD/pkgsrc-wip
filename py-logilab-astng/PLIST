@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:28:15 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/astng/__init__.py
 ${PYSITELIB}/logilab/astng/__init__.pyc
@@ -146,14 +146,3 @@ ${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/dependency_links.txt
 ${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/namespace_packages.txt
 ${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/requires.txt
 ${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/top_level.txt
-@dirrm ${PYSITELIB}/logilab_astng-${PKGVERSION}-py2.5.egg-info
-@dirrm ${PYSITELIB}/logilab/astng/test/regrtest_data/package/subpackage
-@dirrm ${PYSITELIB}/logilab/astng/test/regrtest_data/package
-@dirrm ${PYSITELIB}/logilab/astng/test/regrtest_data
-@dirrm ${PYSITELIB}/logilab/astng/test/data2
-@dirrm ${PYSITELIB}/logilab/astng/test/data/appl
-@dirrm ${PYSITELIB}/logilab/astng/test/data/SSL1
-@dirrm ${PYSITELIB}/logilab/astng/test/data
-@dirrm ${PYSITELIB}/logilab/astng/test
-@dirrm ${PYSITELIB}/logilab/astng
-@dirrm ${PYSITELIB}/logilab

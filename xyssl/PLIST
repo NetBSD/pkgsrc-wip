@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/08 21:56:50 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:27 thomasklausner Exp $
 bin/xyssl_aescrypt2
 bin/xyssl_benchmark
 bin/xyssl_dh_client
@@ -41,4 +41,3 @@ include/xyssl/ssl.h
 include/xyssl/timing.h
 include/xyssl/x509.h
 lib/libxyssl.a
-@dirrm include/xyssl

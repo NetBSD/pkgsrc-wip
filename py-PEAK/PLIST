@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 21:03:04 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 bin/peak
 ${PYSITELIB}/fcgiapp.so
 ${PYSITELIB}/kjbuckets.so
@@ -732,46 +732,3 @@ ${PYSITELIB}/persistence/tests/test_list.pyo
 ${PYSITELIB}/persistence/tests/test_persistence.py
 ${PYSITELIB}/persistence/tests/test_persistence.pyc
 ${PYSITELIB}/persistence/tests/test_persistence.pyo
-@dirrm ${PYSITELIB}/persistence/tests
-@dirrm ${PYSITELIB}/persistence
-@dirrm ${PYSITELIB}/peak/web/tests
-@dirrm ${PYSITELIB}/peak/web
-@dirrm ${PYSITELIB}/peak/util/tests
-@dirrm ${PYSITELIB}/peak/util
-@dirrm ${PYSITELIB}/peak/tools/version
-@dirrm ${PYSITELIB}/peak/tools/supervisor
-@dirrm ${PYSITELIB}/peak/tools/n2
-@dirrm ${PYSITELIB}/peak/tools
-@dirrm ${PYSITELIB}/peak/tests
-@dirrm ${PYSITELIB}/peak/storage/tests
-@dirrm ${PYSITELIB}/peak/storage
-@dirrm ${PYSITELIB}/peak/security/tests
-@dirrm ${PYSITELIB}/peak/security
-@dirrm ${PYSITELIB}/peak/running/tests
-@dirrm ${PYSITELIB}/peak/running
-@dirrm ${PYSITELIB}/peak/query/tests
-@dirrm ${PYSITELIB}/peak/query
-@dirrm ${PYSITELIB}/peak/net
-@dirrm ${PYSITELIB}/peak/naming/tests
-@dirrm ${PYSITELIB}/peak/naming/factories
-@dirrm ${PYSITELIB}/peak/naming
-@dirrm ${PYSITELIB}/peak/model/tests
-@dirrm ${PYSITELIB}/peak/model
-@dirrm ${PYSITELIB}/peak/metamodels/tests
-@dirrm ${PYSITELIB}/peak/metamodels/UML14/model
-@dirrm ${PYSITELIB}/peak/metamodels/UML14
-@dirrm ${PYSITELIB}/peak/metamodels/UML13/model/Foundation
-@dirrm ${PYSITELIB}/peak/metamodels/UML13/model/Behavioral_Elements
-@dirrm ${PYSITELIB}/peak/metamodels/UML13/model
-@dirrm ${PYSITELIB}/peak/metamodels/UML13
-@dirrm ${PYSITELIB}/peak/metamodels
-@dirrm ${PYSITELIB}/peak/events/tests
-@dirrm ${PYSITELIB}/peak/events
-@dirrm ${PYSITELIB}/peak/ddt/tests
-@dirrm ${PYSITELIB}/peak/ddt
-@dirrm ${PYSITELIB}/peak/config/tests
-@dirrm ${PYSITELIB}/peak/config
-@dirrm ${PYSITELIB}/peak/binding/tests
-@dirrm ${PYSITELIB}/peak/binding
-@dirrm ${PYSITELIB}/peak/api
-@dirrm ${PYSITELIB}/peak

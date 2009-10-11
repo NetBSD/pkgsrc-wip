@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/06 14:32:53 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 share/guile/site/scsh/alt-syntax.scm
 share/guile/site/scsh/ascii.scm
 share/guile/site/scsh/awk.scm
@@ -58,5 +58,3 @@ share/guile/site/scsh/syscalls.scm
 share/guile/site/scsh/time.scm
 share/guile/site/scsh/utilities.scm
 share/guile/site/scsh/weak.scm
-@dirrm share/guile/site/scsh/rx
-@dirrm share/guile/site/scsh

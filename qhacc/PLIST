@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/11 01:26:54 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:13 thomasklausner Exp $
 bin/qhacc
 bin/qhacc-cli
 bin/qhacc-config
@@ -96,16 +96,3 @@ share/qhacc/qhacc_bg_BG.qm
 share/qhacc/qhacc_bg_BG.ts
 share/qhacc/qhacc_es_ES.qm
 share/qhacc/qhacc_es_ES.ts
-@dirrm share/qhacc/extras
-@dirrm share/qhacc
-@dirrm share/examples/qhacc/easysetup
-@dirrm share/examples/qhacc
-@dirrm share/doc/qhacc
-@dirrm lib/qhacc/plugins/report
-@dirrm lib/qhacc/plugins/import
-@dirrm lib/qhacc/plugins/graph
-@dirrm lib/qhacc/plugins/export
-@dirrm lib/qhacc/plugins/db
-@dirrm lib/qhacc/plugins
-@dirrm lib/qhacc
-@dirrm include/qhacc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/15 04:03:44 dvol Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/ApplicationScripting
 share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj/ScriptingMenu.gorm/data.classes
 share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj/ScriptingMenu.gorm/objects.gorm
@@ -79,40 +79,9 @@ share/GNUstep/Local/Library/StepTalk/Modules/SimpleTranscript.bundle/SimpleTrans
 share/GNUstep/Local/Library/StepTalk/Modules/SimpleTranscript.bundle/stamp.make
 share/GNUstep/Local/Tools/stenvironment
 share/GNUstep/Local/Tools/stexec
-@dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/SimpleTranscript.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/SimpleTranscript.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/ObjectiveC.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/ObjectiveC.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/Foundation.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/Foundation.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/AppKit.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules/AppKit.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Modules
-@dirrm share/GNUstep/Local/Library/StepTalk/Languages/Smalltalk.stlanguage/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Languages/Smalltalk.stlanguage
-@dirrm share/GNUstep/Local/Library/StepTalk/Languages
-@dirrm share/GNUstep/Local/Library/StepTalk/Finders/DistributedFinder.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Finders/DistributedFinder.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Finders/ApplicationFinder.bundle/Resources
-@dirrm share/GNUstep/Local/Library/StepTalk/Finders/ApplicationFinder.bundle
-@dirrm share/GNUstep/Local/Library/StepTalk/Finders
-@dirrm share/GNUstep/Local/Library/StepTalk
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework/Versions/A/Resources/Environments
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework/Versions/A/Resources
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework/Versions/A/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework/Versions/A
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework/Versions
-@dirrm share/GNUstep/Local/Library/Frameworks/StepTalk.framework
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Frameworks
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj/TranscriptWindow.gorm
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj/ScriptsPanel.gorm
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj/ScriptingMenu.gorm
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources/English.lproj
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle/Resources
-@dirrm share/GNUstep/Local/Library/Bundles/ApplicationScripting.bundle
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Bundles
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local

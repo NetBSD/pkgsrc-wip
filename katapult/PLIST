@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/20 08:42:46 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
 bin/katapult
 lib/kde3/katapult_amarokcatalog.la
 lib/kde3/katapult_bookmarkcatalog.la
@@ -84,7 +84,6 @@ share/locale/uk/LC_MESSAGES/katapult.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
 @comment in kde: @dirrm share/icons/crystalsvg/128x128/actions
-@dirrm share/doc/kde/HTML/en/katapult
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3

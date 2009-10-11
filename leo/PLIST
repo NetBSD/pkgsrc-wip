@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/03 16:59:13 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:51 thomasklausner Exp $
 bin/leo
 lib/leo/Icons/LeoApp.ico
 lib/leo/Icons/LeoApp16.ico
@@ -995,27 +995,3 @@ lib/leo/test/unittest/batchTest.pyc
 lib/leo/test/unittest/errorTest.py
 lib/leo/test/unittest/errorTest.pyc
 lib/leo/uninstall
-@dirrm lib/leo/test/unittest
-@dirrm lib/leo/test
-@dirrm lib/leo/src
-@dirrm lib/leo/scripts
-@dirrm lib/leo/plugins/trees
-@dirrm lib/leo/plugins
-@dirrm lib/leo/modes
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/tests
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/lib
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/doc
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/demos
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/contrib
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2/bin
-@dirrm lib/leo/extensions/Pmw/Pmw_1_2
-@dirrm lib/leo/extensions/Pmw
-@dirrm lib/leo/extensions
-@dirrm lib/leo/doc/html/tigris
-@dirrm lib/leo/doc/html
-@dirrm lib/leo/doc/LeoN
-@dirrm lib/leo/doc
-@dirrm lib/leo/dist
-@dirrm lib/leo/config
-@dirrm lib/leo/Icons
-@dirrm lib/leo

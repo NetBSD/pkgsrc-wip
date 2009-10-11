@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/26 17:15:02 mrohrer Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
 bin/ggz-gtk
 include/ggz-embed.h
 include/ggz-gtk.h
@@ -8,8 +8,6 @@ lib/libggz-gtk.so
 lib/libggz-gtk.so.1
 lib/libggz-gtk.so.1.0.0
 man/man6/ggz-gtk.6
-@dirrm share/ggz
-@dirrm share/ggz/ggz-gtk-client
 share/ggz/ggz-gtk-client/about_bg.png
 share/ggz/ggz-gtk-client/ggz_gtk_admin.svg
 share/ggz/ggz-gtk-client/ggz_gtk_bot.svg
@@ -21,7 +19,6 @@ share/ggz/ggz-gtk-client/ggz_gtk_lag3.svg
 share/ggz/ggz-gtk-client/ggz_gtk_lag4.svg
 share/ggz/ggz-gtk-client/ggz_gtk_lag5.svg
 share/ggz/ggz-gtk-client/ggz_gtk_registered.svg
-@dirrm share/ggz/help
 share/ggz/help/ggz-gtk-chat.png
 share/ggz/help/ggz-gtk-handbook.html
 share/ggz/help/ggz-gtk-launch.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/18 00:46:28 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:31 thomasklausner Exp $
 bin/cinelerra
 bin/mpeg3cat
 bin/mpeg3dump
@@ -151,7 +151,3 @@ lib/libsndfilehv.la
 share/locale/de/LC_MESSAGES/cinelerra.mo
 share/locale/es/LC_MESSAGES/cinelerra.mo
 share/locale/sl/LC_MESSAGES/cinelerra.mo
-@dirrm lib/cinelerra/fonts
-@dirrm lib/cinelerra
-@dirrm include/quicktime
-@dirrm include/mpeg3

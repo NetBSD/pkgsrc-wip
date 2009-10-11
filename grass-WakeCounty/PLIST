@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:23:35 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
 share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
 share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_INFO
@@ -36,24 +36,5 @@ share/dataset/geography/${PKGNAME}/helena/fcell/ned30.sl
 share/dataset/geography/${PKGNAME}/helena/hist/ned30
 share/dataset/geography/${PKGNAME}/helena/hist/ned30.asp
 share/dataset/geography/${PKGNAME}/helena/hist/ned30.sl
-@dirrm share/dataset/geography/${PKGNAME}/helena/hist
-@dirrm share/dataset/geography/${PKGNAME}/helena/fcell
-@dirrm share/dataset/geography/${PKGNAME}/helena/colr
-@dirrm share/dataset/geography/${PKGNAME}/helena/cellhd
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/ned30.sl
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/ned30.asp
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/ned30
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell
-@dirrm share/dataset/geography/${PKGNAME}/helena/cats
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp
-@dirrm share/dataset/geography/${PKGNAME}/helena
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
-@dirrm share/dataset/geography/${PKGNAME}
-@dirrm share/dataset/geography
-@dirrm share/dataset

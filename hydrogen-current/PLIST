@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/03 17:38:14 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
 bin/hydrogen
 bin/hydrogenPlayer
 lib/hydrogen/plugins/wasp_booster.so
@@ -424,31 +424,3 @@ share/hydrogen/data/img/gray/songEditor/songEditorLabelBG.png
 share/hydrogen/data/img/gray/songEditor/songEditorLabelSBG.png
 share/hydrogen/data/img/gray/splash/splash.png
 share/hydrogen/data/img/gray/waveDisplay/background.png
-@dirrm share/hydrogen/data/demo_songs
-@dirrm share/hydrogen/data/drumkits/GMkit
-@dirrm share/hydrogen/data/drumkits/TR808EmulationKit
-@dirrm share/hydrogen/data/drumkits
-@dirrm share/hydrogen/data/doc/img_tutorial
-@dirrm share/hydrogen/data/doc/img/nl
-@dirrm share/hydrogen/data/doc/img
-@dirrm share/hydrogen/data/doc/infoSplash
-@dirrm share/hydrogen/data/doc/man/C
-@dirrm share/hydrogen/data/doc/man/ru
-@dirrm share/hydrogen/data/doc/man
-@dirrm share/hydrogen/data/doc
-@dirrm share/hydrogen/data/i18n
-@dirrm share/hydrogen/data/img/gray/instrumentEditor
-@dirrm share/hydrogen/data/img/gray/patternEditor
-@dirrm share/hydrogen/data/img/gray/waveDisplay
-@dirrm share/hydrogen/data/img/gray/splash
-@dirrm share/hydrogen/data/img/gray/lcd
-@dirrm share/hydrogen/data/img/gray/mixerPanel
-@dirrm share/hydrogen/data/img/gray/about
-@dirrm share/hydrogen/data/img/gray/songEditor
-@dirrm share/hydrogen/data/img/gray/playerControlPanel
-@dirrm share/hydrogen/data/img/gray
-@dirrm share/hydrogen/data/img
-@dirrm share/hydrogen/data
-@dirrm share/hydrogen
-@dirrm lib/hydrogen/plugins
-@dirrm lib/hydrogen

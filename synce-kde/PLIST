@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/04 23:11:11 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/raki
 bin/vdccm
 include/rakiapi.h
@@ -42,6 +42,3 @@ share/kde/services/rapip.protocol
 share/kde/servicetypes/rakisynchronizer.desktop
 share/locale/de/LC_MESSAGES/synce-kde.mo
 share/locale/fr/LC_MESSAGES/synce-kde.mo
-@dirrm share/doc/HTML/en/raki
-@dirrm share/apps/raki/scripts
-@dirrm share/apps/raki

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/05 12:40:06 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 bin/linuxdcpp
 share/linuxdcpp/glade/downloadqueue.glade
 share/linuxdcpp/glade/favoritehubs.glade
@@ -33,6 +33,3 @@ share/linuxdcpp/pixmaps/quit.png
 share/linuxdcpp/pixmaps/search.png
 share/linuxdcpp/pixmaps/settings.png
 share/linuxdcpp/pixmaps/upload.png
-@dirrm share/linuxdcpp/glade
-@dirrm share/linuxdcpp/pixmaps
-@dirrm share/linuxdcpp

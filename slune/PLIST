@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/02 03:11:26 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:18 thomasklausner Exp $
 ${PYSITELIB}/slune/__init__.py
 ${PYSITELIB}/slune/character.py
 ${PYSITELIB}/slune/circuit_generator.py
@@ -320,21 +320,3 @@ share/slune/worlds/world-indusmeeting.data
 share/slune/worlds/world-racinde.data
 share/slune/worlds/world-ridepark.data
 share/slune/worlds/world-urbancall.data
-@dirrm ${PYSITELIB}/slune
-@dirrm share/slune/worlds
-@dirrm share/slune/sounds
-@dirrm share/slune/shapes
-@dirrm share/slune/materials
-@dirrm share/slune/locale/pt/LC_MESSAGES
-@dirrm share/slune/locale/pt
-@dirrm share/slune/locale/nb/LC_MESSAGES
-@dirrm share/slune/locale/nb
-@dirrm share/slune/locale/fr/LC_MESSAGES
-@dirrm share/slune/locale/fr
-@dirrm share/slune/locale/es/LC_MESSAGES
-@dirrm share/slune/locale/es
-@dirrm share/slune/locale/en/LC_MESSAGES
-@dirrm share/slune/locale/en
-@dirrm share/slune/locale
-@dirrm share/slune/images
-@dirrm share/slune

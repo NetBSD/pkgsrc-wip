@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HSglib.o
 lib/gtk2hs/HSgtk.o
 lib/gtk2hs/HSsoegtk.o
@@ -217,35 +217,3 @@ lib/gtk2hs/libHSglib.a
 lib/gtk2hs/libHSgtk.a
 lib/gtk2hs/libHSsoegtk.a
 lib/gtk2hs/soegtk.package.conf
-@dirrm lib/gtk2hs/include
-@dirrm lib/gtk2hs/imports/soegtk/Graphics/SOE
-@dirrm lib/gtk2hs/imports/soegtk/Graphics
-@dirrm lib/gtk2hs/imports/soegtk
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Windows
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/TreeList
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Selectors
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Scrolling
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Pango
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Ornaments
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Multiline
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/ModelView
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Misc
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/MenuComboToolbar
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Layout
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/General
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Gdk
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Entry
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Embedding
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Display
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Buttons
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/ActionMenuToolbar
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk/Abstract
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI/Gtk
-@dirrm lib/gtk2hs/imports/gtk/Graphics/UI
-@dirrm lib/gtk2hs/imports/gtk/Graphics
-@dirrm lib/gtk2hs/imports/gtk
-@dirrm lib/gtk2hs/imports/glib/System/Glib
-@dirrm lib/gtk2hs/imports/glib/System
-@dirrm lib/gtk2hs/imports/glib
-@dirrm lib/gtk2hs/imports
-@dirrm lib/gtk2hs

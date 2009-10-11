@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/20 13:39:22 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:28 thomasklausner Exp $
 bin/armagetronad
 etc/games/armagetronad/aiplayers.cfg
 etc/games/armagetronad/default.cfg
@@ -89,28 +89,3 @@ share/games/armagetronad/textures/rim_wall.png
 share/games/armagetronad/textures/shadow.png
 share/games/armagetronad/textures/sky.png
 share/games/armagetronad/textures/title.jpg
-@dirrm share/games/armagetronad/textures
-@dirrm share/games/armagetronad/sound
-@dirrm share/games/armagetronad/scripts
-@dirrm share/games/armagetronad/resource/included/Z-Man/fortress
-@dirrm share/games/armagetronad/resource/included/Z-Man
-@dirrm share/games/armagetronad/resource/included/Your_mom/clever
-@dirrm share/games/armagetronad/resource/included/Your_mom
-@dirrm share/games/armagetronad/resource/included/Anonymous/polygon/regular
-@dirrm share/games/armagetronad/resource/included/Anonymous/polygon
-@dirrm share/games/armagetronad/resource/included/Anonymous
-@dirrm share/games/armagetronad/resource/included/AATeam
-@dirrm share/games/armagetronad/resource/included
-@dirrm share/games/armagetronad/resource
-@dirrm share/games/armagetronad/models
-@dirrm share/games/armagetronad/language
-@dirrm share/games/armagetronad/desktop/icons/small
-@dirrm share/games/armagetronad/desktop/icons/medium
-@dirrm share/games/armagetronad/desktop/icons/large
-@dirrm share/games/armagetronad/desktop/icons
-@dirrm share/games/armagetronad/desktop
-@dirrm share/games/armagetronad
-@dirrm share/doc/games/armagetronad/html/net
-@dirrm share/doc/games/armagetronad/html
-@dirrm share/doc/games/armagetronad
-@dirrm share/doc/games

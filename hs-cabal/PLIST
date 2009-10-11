@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/13 10:55:04 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/CopyFile.hi
 lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/CopyFile.p_hi
 lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/Exception.hi
@@ -106,15 +106,3 @@ lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/libHSCabal-${PKGVERSION}.a
 lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/libHSCabal-${PKGVERSION}_p.a
 lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/Cabal-${PKGVERSION}/LICENSE
-@dirrm share/doc/Cabal-${PKGVERSION}
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Language
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Simple/PreProcess
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Simple/GHC
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Simple/Build
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Simple
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/PackageDescription
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}/Distribution
-@dirrm lib/Cabal-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/Cabal-${PKGVERSION}

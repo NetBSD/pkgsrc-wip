@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/23 05:59:34 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:34 thomasklausner Exp $
 bin/E-Areas.epplet
 bin/E-Bandwidth.epplet
 bin/E-Biff.epplet
@@ -228,45 +228,3 @@ share/enlightenment/epplet_icons/E-UrlWatch.icon
 share/enlightenment/epplet_icons/E-Wireless.icon
 share/enlightenment/epplet_icons/E-Xss.icon
 share/enlightenment/epplet_icons/Emix.icon
-@dirrm share/enlightenment/epplet_icons
-@dirrm share/enlightenment/epplet_data/Emix/Emix.ABOUT
-@dirrm share/enlightenment/epplet_data/Emix
-@dirrm share/enlightenment/epplet_data/E-Wireless/E-Wireless.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Wireless
-@dirrm share/enlightenment/epplet_data/E-UrlWatch/E-UrlWatch.ABOUT
-@dirrm share/enlightenment/epplet_data/E-UrlWatch
-@dirrm share/enlightenment/epplet_data/E-Toolbox
-@dirrm share/enlightenment/epplet_data/E-ScreenShoot/E-ScreenShoot.ABOUT
-@dirrm share/enlightenment/epplet_data/E-ScreenShoot
-@dirrm share/enlightenment/epplet_data/E-ScreenSave/E-ScreenSave.ABOUT
-@dirrm share/enlightenment/epplet_data/E-ScreenSave
-@dirrm share/enlightenment/epplet_data/E-SD/E-SD.ABOUT
-@dirrm share/enlightenment/epplet_data/E-SD
-@dirrm share/enlightenment/epplet_data/E-Power/E-Power.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Power
-@dirrm share/enlightenment/epplet_data/E-PlayCD/E-PlayCD.ABOUT
-@dirrm share/enlightenment/epplet_data/E-PlayCD
-@dirrm share/enlightenment/epplet_data/E-Pinger/E-Pinger.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Pinger
-@dirrm share/enlightenment/epplet_data/E-Pants/E-Pants.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Pants
-@dirrm share/enlightenment/epplet_data/E-OpenGL-Demo/E-OpenGL-Demo.ABOUT
-@dirrm share/enlightenment/epplet_data/E-OpenGL-Demo
-@dirrm share/enlightenment/epplet_data/E-NetFlame/E-NetFlame.ABOUT
-@dirrm share/enlightenment/epplet_data/E-NetFlame
-@dirrm share/enlightenment/epplet_data/E-Mountbox/E-Mountbox.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Mountbox
-@dirrm share/enlightenment/epplet_data/E-MoonClock/E-MoonClock.ABOUT
-@dirrm share/enlightenment/epplet_data/E-MoonClock
-@dirrm share/enlightenment/epplet_data/E-Mixer/E-Mixer.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Mixer
-@dirrm share/enlightenment/epplet_data/E-Magic
-@dirrm share/enlightenment/epplet_data/E-GtkRc/E-GtkRc.ABOUT
-@dirrm share/enlightenment/epplet_data/E-GtkRc
-@dirrm share/enlightenment/epplet_data/E-Cpu/E-Cpu.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Cpu
-@dirrm share/enlightenment/epplet_data/E-Clock/E-Clock.ABOUT
-@dirrm share/enlightenment/epplet_data/E-Clock
-@dirrm share/enlightenment/epplet_data/E-Biff
-@dirrm share/enlightenment/epplet_data
-@dirrm share/enlightenment

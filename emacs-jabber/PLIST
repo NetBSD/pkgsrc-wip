@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/07/23 23:53:01 netcap Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:34 thomasklausner Exp $
 ${EMACS_INFOPREFIX}/jabber.info
 ${EMACS_LISPPREFIX}/emacs-jabber/fsm.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-activity.el
@@ -54,4 +54,3 @@ ${EMACS_LISPPREFIX}/emacs-jabber/jabber-xmessage.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber-xml.el
 ${EMACS_LISPPREFIX}/emacs-jabber/jabber.el
 ${EMACS_LISPPREFIX}/emacs-jabber/srv.el
-@dirrm ${EMACS_LISPPREFIX}/emacs-jabber

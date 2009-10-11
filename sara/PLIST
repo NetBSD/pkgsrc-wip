@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/27 14:21:39 netcap Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:17 thomasklausner Exp $
 bin/backdoor.sara
 bin/boot.sara
 bin/bounce.sara
@@ -448,27 +448,5 @@ share/sara/targets.pl
 share/sara/todo.pl
 share/sara/trust.pl
 share/sara/xml.pl
-@dirrm share/sara/rules/auth-data
-@dirrm share/sara/rules/administrators
-@dirrm share/sara/rules
 @exec ${MKDIR} %D/share/sara/html/update
-@dirrm share/sara/html/update
-@dirrm share/sara/html/tutorials/first_time
-@dirrm share/sara/html/tutorials
-@dirrm share/sara/html/search
-@dirrm share/sara/html/running
-@dirrm share/sara/html/reporting/reportweiter.old
-@dirrm share/sara/html/reporting
 @exec ${MKDIR} %D/share/sara/html/plugins/images
-@dirrm share/sara/html/plugins/images
-@dirrm share/sara/html/plugins
-@dirrm share/sara/html/nvd
-@dirrm share/sara/html/images
-@dirrm share/sara/html/dots
-@dirrm share/sara/html/docs/readme.img
-@dirrm share/sara/html/docs
-@dirrm share/sara/html/data
-@dirrm share/sara/html/admin
-@dirrm share/sara/html
-@dirrm share/sara
-@dirrm share/examples/sara

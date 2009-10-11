@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/20 13:42:14 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:58 thomasklausner Exp $
 bin/nb
 share/nanoblogger/copyright
 share/nanoblogger/default/articles/example.txt
@@ -80,34 +80,6 @@ share/nanoblogger/plugins/weblog_links.sh
 share/nanoblogger/plugins/weblog_status.sh
 share/nanoblogger/plugins/z001_articles_meta.sh
 share/nanoblogger/welcome-to-nb.txt
-@dirrm share/nanoblogger/plugins/entry/format
-@dirrm share/nanoblogger/plugins/entry/mod
-@dirrm share/nanoblogger/plugins/entry
-@dirrm share/nanoblogger/plugins/page/format
-@dirrm share/nanoblogger/plugins/page
-@dirrm share/nanoblogger/plugins/archive/month
-@dirrm share/nanoblogger/plugins/archive/year
-@dirrm share/nanoblogger/plugins/archive/day
-@dirrm share/nanoblogger/plugins/archive
-@dirrm share/nanoblogger/plugins/makepage
-@dirrm share/nanoblogger/plugins/post
-@dirrm share/nanoblogger/plugins
 @exec ${MKDIR} %D/share/nanoblogger/default/plugins
-@dirrm share/nanoblogger/default/plugins
-@dirrm share/nanoblogger/default/data
 @exec ${MKDIR} %D/share/nanoblogger/default/parts
-@dirrm share/nanoblogger/default/parts
-@dirrm share/nanoblogger/default/articles
-@dirrm share/nanoblogger/default/styles
-@dirrm share/nanoblogger/default/images
 @exec ${MKDIR} %D/share/nanoblogger/default/cache
-@dirrm share/nanoblogger/default/cache
-@dirrm share/nanoblogger/default/templates
-@dirrm share/nanoblogger/default
-@dirrm share/nanoblogger/lib
-@dirrm share/nanoblogger/moods/smilies
-@dirrm share/nanoblogger/moods
-@dirrm share/nanoblogger/lang/en
-@dirrm share/nanoblogger/lang
-@dirrm share/nanoblogger/docs
-@dirrm share/nanoblogger

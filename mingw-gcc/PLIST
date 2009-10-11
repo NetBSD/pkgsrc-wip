@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/08/24 01:04:14 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/10/11 10:44:57 thomasklausner Exp $
 bin/${MACHINE_ARCH}--mingw32-c++
 bin/${MACHINE_ARCH}--mingw32-cc
 bin/${MACHINE_ARCH}--mingw32-cpp
@@ -315,24 +315,3 @@ share/locale/nl/LC_MESSAGES/gcc.mo
 share/locale/rw/LC_MESSAGES/gcc.mo
 share/locale/sv/LC_MESSAGES/gcc.mo
 share/locale/tr/LC_MESSAGES/gcc.mo
-@dirrm libexec/gcc/${MACHINE_ARCH}--mingw32/3.4.5/install-tools
-@dirrm libexec/gcc/${MACHINE_ARCH}--mingw32/3.4.5
-@dirrm libexec/gcc/${MACHINE_ARCH}--mingw32
-@dirrm libexec/gcc
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32/3.4.5/install-tools/include
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32/3.4.5/install-tools
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32/3.4.5/include/objc
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32/3.4.5/include
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32/3.4.5
-@dirrm lib/gcc/${MACHINE_ARCH}--mingw32
-@dirrm lib/gcc
-@dirrm include/c++/3.4.5/${MACHINE_ARCH}--mingw32/bits/stdc++.h.gch
-@dirrm include/c++/3.4.5/${MACHINE_ARCH}--mingw32/bits
-@dirrm include/c++/3.4.5/${MACHINE_ARCH}--mingw32
-@dirrm include/c++/3.4.5/ext
-@dirrm include/c++/3.4.5/debug
-@dirrm include/c++/3.4.5/bits
-@dirrm include/c++/3.4.5/backward
-@dirrm include/c++/3.4.5
-@dirrm ${MACHINE_ARCH}--mingw32/lib
-@dirrm ${MACHINE_ARCH}--mingw32/bin

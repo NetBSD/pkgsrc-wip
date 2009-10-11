@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/11/28 22:02:07 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:26 thomasklausner Exp $
 ${EMULSUBDIR}/opt/xpde/bin/XPde
 ${EMULSUBDIR}/opt/xpde/bin/XPwm
 ${EMULSUBDIR}/opt/xpde/bin/applets/DateTimeProps
@@ -1187,29 +1187,5 @@ ${EMULSUBDIR}/usr/lib/bplXPsysprovider.so
 ${EMULSUBDIR}/usr/lib/dclVTClx_K3.so
 ${EMULSUBDIR}/usr/lib/libborqt-6.9-qt2.3.so
 ${EMULSUBDIR}/usr/lib/libqtintf-6.9-qt2.3.so
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/misc
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/32x32/system
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/32x32/filetypes
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/32x32
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/24x24/system
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/24x24
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/16x16/system
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default/16x16
-@dirrm ${EMULSUBDIR}/opt/xpde/themes/default
-@dirrm ${EMULSUBDIR}/opt/xpde/themes
-@dirrm ${EMULSUBDIR}/opt/xpde/share/icons
-@dirrm ${EMULSUBDIR}/opt/xpde/share/fonts
-@dirrm ${EMULSUBDIR}/opt/xpde/share/doc/planning
-@dirrm ${EMULSUBDIR}/opt/xpde/share/doc/install
-@dirrm ${EMULSUBDIR}/opt/xpde/share/doc/developers
-@dirrm ${EMULSUBDIR}/opt/xpde/share/doc/buildguide
-@dirrm ${EMULSUBDIR}/opt/xpde/share/doc
-@dirrm ${EMULSUBDIR}/opt/xpde/share/apps
-@dirrm ${EMULSUBDIR}/opt/xpde/share/applets
-@dirrm ${EMULSUBDIR}/opt/xpde/share
-@dirrm ${EMULSUBDIR}/opt/xpde/bin/apps
-@dirrm ${EMULSUBDIR}/opt/xpde/bin/applets
-@dirrm ${EMULSUBDIR}/opt/xpde/bin
-@dirrm ${EMULSUBDIR}/opt/xpde
 @exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}
 @unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null

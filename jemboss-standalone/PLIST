@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/08 21:51:29 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:49 thomasklausner Exp $
 bin/jemboss
 share/EMBOSS/jemboss/LICENSE
 share/EMBOSS/jemboss/README
@@ -644,37 +644,3 @@ share/EMBOSS/jemboss/resources/version
 share/EMBOSS/jemboss/resources/wossname.jar
 share/EMBOSS/jemboss/runJemboss.sh
 share/EMBOSS/jemboss/runJemboss.sh.new3
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/gui/filetree
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/gui/form
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/gui/sequenceChooser
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/gui/startup
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/gui
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/parser/acd
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/parser
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/programs
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss/soap
-@dirrm share/EMBOSS/jemboss/api/org/emboss/jemboss
-@dirrm share/EMBOSS/jemboss/api/org/emboss
-@dirrm share/EMBOSS/jemboss/api/org
-@dirrm share/EMBOSS/jemboss/api
-@dirrm share/EMBOSS/jemboss/images
-@dirrm share/EMBOSS/jemboss/lib/axis
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/draw
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/editor
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/gui/filetree
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/gui/form
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/gui/sequenceChooser
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/gui/startup
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/gui
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/parser/acd
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/parser
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/programs
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/server
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss/soap
-@dirrm share/EMBOSS/jemboss/org/emboss/jemboss
-@dirrm share/EMBOSS/jemboss/org/emboss
-@dirrm share/EMBOSS/jemboss/org
-@dirrm share/EMBOSS/jemboss/lib
-@dirrm share/EMBOSS/jemboss/resources
-@dirrm share/EMBOSS/jemboss/utils
-@dirrm share/EMBOSS/jemboss

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/02 15:45:28 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
 bin/speedx
 share/doc/speedx/README
 share/speedx/background/sky0.png
@@ -63,15 +63,3 @@ share/speedx/road/road1.png
 share/speedx/road/road2.png
 share/speedx/road/road3.png
 share/speedx/scene/arrivee.png
-@dirrm share/speedx/scene
-@dirrm share/speedx/road
-@dirrm share/speedx/num
-@dirrm share/speedx/music
-@dirrm share/speedx/cars/jeep
-@dirrm share/speedx/cars/f1_1
-@dirrm share/speedx/cars/camion
-@dirrm share/speedx/cars/Panorama
-@dirrm share/speedx/cars
-@dirrm share/speedx/background
-@dirrm share/speedx
-@dirrm share/doc/speedx

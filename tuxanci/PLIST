@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/10 13:35:12 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 bin/tuxanci
 lib/tuxanci/libmodAI.so
 lib/tuxanci/libmodMove.so
@@ -128,12 +128,3 @@ share/tuxanci/sound/smrt.ogg
 share/tuxanci/sound/switch_gun.ogg
 share/tuxanci/sound/teleport.ogg
 share/tuxanci/sound/tuxanci-smrt.ogg
-@dirrm share/tuxanci/sound
-@dirrm share/tuxanci/music
-@dirrm share/tuxanci/lang
-@dirrm share/tuxanci/image
-@dirrm share/tuxanci/font
-@dirrm share/tuxanci/doc
-@dirrm share/tuxanci/arena
-@dirrm share/tuxanci
-@dirrm lib/tuxanci

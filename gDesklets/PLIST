@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/23 05:59:37 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:37 thomasklausner Exp $
 bin/gdesklets
 bin/gdesklets-display-thumbnailer
 lib/pkgconfig/gdesklets-core.pc
@@ -119,76 +119,7 @@ share/mime-info/gdesklets.mime
 share/pixmaps/gdesklets.png
 @comment in gnome-dirs: @dirrm share/mime-info
 @comment @dirrm share/icons/gnome/48x48/mimetypes
-@dirrm share/gdesklets/utils
-@dirrm share/gdesklets/sensor
-@dirrm share/gdesklets/main
-@dirrm share/gdesklets/locale/tr/LC_MESSAGES
-@dirrm share/gdesklets/locale/tr
-@dirrm share/gdesklets/locale/sv/LC_MESSAGES
-@dirrm share/gdesklets/locale/sv
-@dirrm share/gdesklets/locale/sr@Latn/LC_MESSAGES
-@dirrm share/gdesklets/locale/sr@Latn
-@dirrm share/gdesklets/locale/sr/LC_MESSAGES
-@dirrm share/gdesklets/locale/sr
-@dirrm share/gdesklets/locale/sq/LC_MESSAGES
-@dirrm share/gdesklets/locale/sq
-@dirrm share/gdesklets/locale/ru/LC_MESSAGES
-@dirrm share/gdesklets/locale/ru
-@dirrm share/gdesklets/locale/pt_BR/LC_MESSAGES
-@dirrm share/gdesklets/locale/pt_BR
-@dirrm share/gdesklets/locale/pt/LC_MESSAGES
-@dirrm share/gdesklets/locale/pt
-@dirrm share/gdesklets/locale/pl/LC_MESSAGES
-@dirrm share/gdesklets/locale/pl
-@dirrm share/gdesklets/locale/no/LC_MESSAGES
-@dirrm share/gdesklets/locale/no
-@dirrm share/gdesklets/locale/nl/LC_MESSAGES
-@dirrm share/gdesklets/locale/nl
-@dirrm share/gdesklets/locale/ms/LC_MESSAGES
-@dirrm share/gdesklets/locale/ms
-@dirrm share/gdesklets/locale/lt/LC_MESSAGES
-@dirrm share/gdesklets/locale/lt
-@dirrm share/gdesklets/locale/ko/LC_MESSAGES
-@dirrm share/gdesklets/locale/ko
-@dirrm share/gdesklets/locale/ja/LC_MESSAGES
-@dirrm share/gdesklets/locale/ja
-@dirrm share/gdesklets/locale/it/LC_MESSAGES
-@dirrm share/gdesklets/locale/it
-@dirrm share/gdesklets/locale/hr/LC_MESSAGES
-@dirrm share/gdesklets/locale/hr
-@dirrm share/gdesklets/locale/he/LC_MESSAGES
-@dirrm share/gdesklets/locale/he
-@dirrm share/gdesklets/locale/fr/LC_MESSAGES
-@dirrm share/gdesklets/locale/fr
-@dirrm share/gdesklets/locale/eu/LC_MESSAGES
-@dirrm share/gdesklets/locale/eu
-@dirrm share/gdesklets/locale/es/LC_MESSAGES
-@dirrm share/gdesklets/locale/es
-@dirrm share/gdesklets/locale/el/LC_MESSAGES
-@dirrm share/gdesklets/locale/el
-@dirrm share/gdesklets/locale/de/LC_MESSAGES
-@dirrm share/gdesklets/locale/de
-@dirrm share/gdesklets/locale/cs/LC_MESSAGES
-@dirrm share/gdesklets/locale/cs
-@dirrm share/gdesklets/locale/ca/LC_MESSAGES
-@dirrm share/gdesklets/locale/ca
-@dirrm share/gdesklets/locale/az/LC_MESSAGES
-@dirrm share/gdesklets/locale/az
-@dirrm share/gdesklets/locale/ar/LC_MESSAGES
-@dirrm share/gdesklets/locale/ar
-@dirrm share/gdesklets/locale
-@dirrm share/gdesklets/libdesklets
-@dirrm share/gdesklets/factory
-@dirrm share/gdesklets/display
-@dirrm share/gdesklets/desktop
-@dirrm share/gdesklets/data
-@dirrm share/gdesklets/config
-@dirrm share/gdesklets/Sensors/FontSelector
-@dirrm share/gdesklets/Sensors/External
-@dirrm share/gdesklets/Sensors
 @exec ${MKDIR} %D/share/gdesklets/Displays
-@dirrm share/gdesklets/Displays
-@dirrm share/gdesklets
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @comment in gnome2-dirs: @dirrm share/application-registry

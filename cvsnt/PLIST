@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/13 10:36:37 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/cvs
 bin/cvslockd
 bin/cvsnt
@@ -24,11 +24,3 @@ share/examples/rc.d/cvslockd
 share/examples/cvsnt/ca.pem.example
 share/examples/cvsnt/Plugins.example
 share/examples/cvsnt/PServer.example
-@dirrm lib/cvsnt/database
-@dirrm lib/cvsnt/xdiff
-@dirrm lib/cvsnt/triggers
-@dirrm lib/cvsnt/protocols
-@dirrm lib/cvsnt/mdns
-@dirrm lib/cvsnt
-@dirrm etc/cvsnt
-@dirrm share/examples/cvsn

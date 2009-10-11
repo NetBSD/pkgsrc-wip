@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/23 07:36:36 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
 lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-bytestring-${PKGVERSION}.o
 lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.hi
 lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.p_hi
@@ -14,9 +14,3 @@ lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-bytestring-
 lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSnetwork-bytestring-${PKGVERSION}_p.a
 lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/network-bytestring-${PKGVERSION}/LICENSE
-@dirrm share/doc/network-bytestring-${PKGVERSION}
-@dirrm lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString
-@dirrm lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket
-@dirrm lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Network
-@dirrm lib/network-bytestring-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/network-bytestring-${PKGVERSION}

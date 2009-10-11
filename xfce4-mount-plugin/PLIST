@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/13 09:23:22 ondratu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:25 thomasklausner Exp $
 libexec/xfce4/panel-plugins/xfce4-mount-plugin
 share/icons/hicolor/48x48/apps/xfce-mount.png
 share/icons/hicolor/scalable/apps/xfce-mount.svg
@@ -20,5 +20,3 @@ share/locale/uk/LC_MESSAGES/xfce4-mount-plugin.mo
 share/locale/vi/LC_MESSAGES/xfce4-mount-plugin.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-mount-plugin.mo
 share/xfce4/panel-plugins/xfce4-mount-plugin.desktop
-@dirrm libexec/xfce4/mcs-plugins
-@dirrm share/xfce4/panel-plugins

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/01 18:18:13 goteki Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 ${PYSITELIB}/pysnmp/__init__.pyc
 ${PYSITELIB}/pysnmp/__init__.py
 ${PYSITELIB}/pysnmp/asn1/__init__.pyc
@@ -129,18 +129,3 @@ ${PYSITELIB}/pysnmp/test/walk.pyc
 ${PYSITELIB}/pysnmp/test/walk.py
 ${PYSITELIB}/pysnmp/version.pyc
 ${PYSITELIB}/pysnmp/version.py
-@dirrm ${PYSITELIB}/pysnmp/test
-@dirrm ${PYSITELIB}/pysnmp/proto/api/generic
-@dirrm ${PYSITELIB}/pysnmp/proto/api/alpha
-@dirrm ${PYSITELIB}/pysnmp/proto/api
-@dirrm ${PYSITELIB}/pysnmp/proto
-@dirrm ${PYSITELIB}/pysnmp/mapping/udp
-@dirrm ${PYSITELIB}/pysnmp/mapping
-@dirrm ${PYSITELIB}/pysnmp/compat/snmpy
-@dirrm ${PYSITELIB}/pysnmp/compat/pysnmp2x
-@dirrm ${PYSITELIB}/pysnmp/compat/pysnmp1x
-@dirrm ${PYSITELIB}/pysnmp/compat
-@dirrm ${PYSITELIB}/pysnmp/asn1/encoding/ber
-@dirrm ${PYSITELIB}/pysnmp/asn1/encoding
-@dirrm ${PYSITELIB}/pysnmp/asn1
-@dirrm ${PYSITELIB}/pysnmp

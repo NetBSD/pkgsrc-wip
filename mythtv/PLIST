@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/13 19:22:38 grantbeattie Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mythbackend
 bin/mythcommflag
 bin/mythepg
@@ -168,13 +168,3 @@ share/mythtv/themes/blueosd/osd.xml
 share/mythtv/themes/blueosd/osd-small.png
 share/mythtv/tv_settings.xml
 share/mythtv/mysql.txt
-@dirrm share/mythtv/themes/blue
-@dirrm share/mythtv/themes/blueosd
-@dirrm share/mythtv/themes/default
-@dirrm share/mythtv/themes/defaultosd
-@dirrm share/mythtv/themes/liquid
-@dirrm share/mythtv/themes/oldosd
-@dirrm share/mythtv/themes
-@dirrm share/mythtv/i18n
-@dirrm share/mythtv
-@dirrm include/mythtv

@@ -1,4 +1,3 @@
-@dirrm share/emerald/themes/Adonis_Mod
 share/emerald/themes/Adonis_Mod/theme.screenshot.png
 share/emerald/themes/Adonis_Mod/theme.ini.bak
 share/emerald/themes/Adonis_Mod/buttons.restore.png
@@ -6,16 +5,13 @@ share/emerald/themes/Adonis_Mod/theme.ini
 share/emerald/themes/Adonis_Mod/buttons.close.png
 share/emerald/themes/Adonis_Mod/buttons.max.png
 share/emerald/themes/Adonis_Mod/buttons.min.png
-@dirrm share/emerald/themes/Beryl_Default
 share/emerald/themes/Beryl_Default/buttons.restore.png
 share/emerald/themes/Beryl_Default/buttons.close.png
 share/emerald/themes/Beryl_Default/buttons.min.png
 share/emerald/themes/Beryl_Default/buttons.max.png
 share/emerald/themes/Beryl_Default/theme.ini
-@dirrm share/emerald/themes/ButtonLess
 share/emerald/themes/ButtonLess/theme.screenshot.png
 share/emerald/themes/ButtonLess/theme.ini
-@dirrm share/emerald/themes/Canopy
 share/emerald/themes/Canopy/theme.screenshot.png
 share/emerald/themes/Canopy/buttons.unsticky.png
 share/emerald/themes/Canopy/buttons.sticky.png
@@ -30,7 +26,6 @@ share/emerald/themes/Canopy/buttons.close.png
 share/emerald/themes/Canopy/buttons.min.png
 share/emerald/themes/Canopy/buttons.restore.png
 share/emerald/themes/Canopy/buttons.max.png
-@dirrm share/emerald/themes/Compiz-Gilouche
 share/emerald/themes/Compiz-Gilouche/theme.screenshot.png
 share/emerald/themes/Compiz-Gilouche/theme.ini.bak
 share/emerald/themes/Compiz-Gilouche/buttons.restore.png
@@ -39,7 +34,6 @@ share/emerald/themes/Compiz-Gilouche/buttons.close.png
 share/emerald/themes/Compiz-Gilouche/buttons.max.png
 share/emerald/themes/Compiz-Gilouche/buttons.min.png
 share/emerald/themes/Compiz-Gilouche/buttons.help.png
-@dirrm share/emerald/themes/Blue_Satin
 share/emerald/themes/Blue_Satin/theme.screenshot.png
 share/emerald/themes/Blue_Satin/buttons.restore.png
 share/emerald/themes/Blue_Satin/buttons.max.png
@@ -49,7 +43,6 @@ share/emerald/themes/Blue_Satin/buttons.min.png
 share/emerald/themes/Blue_Satin/buttons.help.png
 share/emerald/themes/Blue_Satin/buttons.menu.png
 share/emerald/themes/Blue_Satin/buttons.shade.png
-@dirrm share/emerald/themes/Crystal-ICE
 share/emerald/themes/Crystal-ICE/theme.screenshot.png
 share/emerald/themes/Crystal-ICE/buttons.restore.png
 share/emerald/themes/Crystal-ICE/buttons.max.png
@@ -58,10 +51,8 @@ share/emerald/themes/Crystal-ICE/buttons.close.png
 share/emerald/themes/Crystal-ICE/buttons.min.png
 share/emerald/themes/Crystal-ICE/buttons.help.png
 share/emerald/themes/Crystal-ICE/buttons.menu.png
-@dirrm share/emerald/themes/Fayal
 share/emerald/themes/Fayal/theme.screenshot.png
 share/emerald/themes/Fayal/theme.ini
-@dirrm share/emerald/themes/LimeRefresh
 share/emerald/themes/LimeRefresh/theme.ini.bak
 share/emerald/themes/LimeRefresh/theme.ini
 share/emerald/themes/LimeRefresh/buttons.restore.png
@@ -77,21 +68,18 @@ share/emerald/themes/LimeRefresh/buttons.above.png
 share/emerald/themes/LimeRefresh/buttons.sticky.png
 share/emerald/themes/LimeRefresh/buttons.close.png
 share/emerald/themes/LimeRefresh/theme.screenshot.png
-@dirrm share/emerald/themes/Minimal
 share/emerald/themes/Minimal/theme.screenshot.png
 share/emerald/themes/Minimal/buttons.close.png
 share/emerald/themes/Minimal/buttons.restore.png
 share/emerald/themes/Minimal/theme.ini
 share/emerald/themes/Minimal/buttons.max.png
 share/emerald/themes/Minimal/buttons.min.png
-@dirrm share/emerald/themes/Mirage
 share/emerald/themes/Mirage/theme.screenshot.png
 share/emerald/themes/Mirage/buttons.restore.png
 share/emerald/themes/Mirage/buttons.min.png
 share/emerald/themes/Mirage/buttons.max.png
 share/emerald/themes/Mirage/buttons.close.png
 share/emerald/themes/Mirage/theme.ini
-@dirrm share/emerald/themes/frame
 share/emerald/themes/frame/theme.screenshot.png
 share/emerald/themes/frame/buttons.help.png
 share/emerald/themes/frame/buttons.restore.png
@@ -106,7 +94,6 @@ share/emerald/themes/frame/buttons.above.png
 share/emerald/themes/frame/buttons.unabove.png
 share/emerald/themes/frame/buttons.sticky.png
 share/emerald/themes/frame/buttons.unsticky.png
-@dirrm share/emerald/themes/Orangeglass
 share/emerald/themes/Orangeglass/theme.screenshot.png
 share/emerald/themes/Orangeglass/buttons.glow1.png
 share/emerald/themes/Orangeglass/buttons.restore.png
@@ -115,7 +102,6 @@ share/emerald/themes/Orangeglass/buttons.close.png
 share/emerald/themes/Orangeglass/buttons.max.png
 share/emerald/themes/Orangeglass/buttons.min.png
 share/emerald/themes/Orangeglass/buttons.help.png
-@dirrm share/emerald/themes/funky
 share/emerald/themes/funky/theme.screenshot.png
 share/emerald/themes/funky/buttons.glow1.png
 share/emerald/themes/funky/buttons.restore.png
@@ -123,7 +109,6 @@ share/emerald/themes/funky/theme.ini
 share/emerald/themes/funky/buttons.close.png
 share/emerald/themes/funky/buttons.max.png
 share/emerald/themes/funky/buttons.min.png
-@dirrm share/emerald/themes/human-ubuntulooks
 share/emerald/themes/human-ubuntulooks/buttons.max.png
 share/emerald/themes/human-ubuntulooks/theme.ini
 share/emerald/themes/human-ubuntulooks/pixmaps.inactive_title_left.png
@@ -155,7 +140,6 @@ share/emerald/themes/human-ubuntulooks/pixmaps.inactive_bottom.png
 share/emerald/themes/human-ubuntulooks/pixmaps.inactive_right.png
 share/emerald/themes/human-ubuntulooks/pixmaps.inactive_left.png
 share/emerald/themes/human-ubuntulooks/pixmaps.inactive_title_right.png
-@dirrm share/emerald/themes/orangelook-colonel
 share/emerald/themes/orangelook-colonel/buttons.inactive_glow.png
 share/emerald/themes/orangelook-colonel/theme.screenshot.png
 share/emerald/themes/orangelook-colonel/buttons.restore.png
@@ -165,7 +149,6 @@ share/emerald/themes/orangelook-colonel/theme.ini
 share/emerald/themes/orangelook-colonel/buttons.close.png
 share/emerald/themes/orangelook-colonel/buttons.min.png
 share/emerald/themes/orangelook-colonel/buttons.help.png
-@dirrm share/emerald/themes/Orangeglow
 share/emerald/themes/Orangeglow/buttons.inactive_glow.png
 share/emerald/themes/Orangeglow/theme.screenshot.png
 share/emerald/themes/Orangeglow/buttons.glow.png
@@ -174,7 +157,6 @@ share/emerald/themes/Orangeglow/theme.ini
 share/emerald/themes/Orangeglow/buttons.close.png
 share/emerald/themes/Orangeglow/buttons.max.png
 share/emerald/themes/Orangeglow/buttons.min.png
-@dirrm share/emerald/themes/Paper
 share/emerald/themes/Paper/buttons.unsticky.png
 share/emerald/themes/Paper/buttons.menu.png
 share/emerald/themes/Paper/theme.screenshot.png
@@ -189,7 +171,6 @@ share/emerald/themes/Paper/buttons.unabove.png
 share/emerald/themes/Paper/buttons.max.png
 share/emerald/themes/Paper/buttons.min.png
 share/emerald/themes/Paper/buttons.help.png
-@dirrm share/emerald/themes/Pinx
 share/emerald/themes/Pinx/theme.screenshot.png
 share/emerald/themes/Pinx/buttons.restore.png
 share/emerald/themes/Pinx/buttons.close.png
@@ -204,7 +185,6 @@ share/emerald/themes/Pinx/buttons.unabove.png
 share/emerald/themes/Pinx/buttons.above.png
 share/emerald/themes/Pinx/buttons.sticky.png
 share/emerald/themes/Pinx/buttons.unsticky.png
-@dirrm share/emerald/themes/PlatinUm
 share/emerald/themes/PlatinUm/pixmaps.active_bottom_left.png
 share/emerald/themes/PlatinUm/pixmaps.active_top.png
 share/emerald/themes/PlatinUm/buttons.menu.png
@@ -225,7 +205,6 @@ share/emerald/themes/PlatinUm/pixmaps.inactive_top_left.png
 share/emerald/themes/PlatinUm/pixmaps.inactive_top.png
 share/emerald/themes/PlatinUm/pixmaps.inactive_right.png
 share/emerald/themes/PlatinUm/pixmaps.inactive_left.png
-@dirrm share/emerald/themes/Red-Alice
 share/emerald/themes/Red-Alice/buttons.menu.png
 share/emerald/themes/Red-Alice/pixmaps.active_bottom_left.png
 share/emerald/themes/Red-Alice/pixmaps.active_bottom.png
@@ -242,14 +221,12 @@ share/emerald/themes/Red-Alice/buttons.inactive_glow.png
 share/emerald/themes/Red-Alice/buttons.close.png
 share/emerald/themes/Red-Alice/buttons.max.png
 share/emerald/themes/Red-Alice/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-Candy-1pxb
 share/emerald/themes/Rezlooks-Candy-1pxb/theme.screenshot.png
 share/emerald/themes/Rezlooks-Candy-1pxb/buttons.restore.png
 share/emerald/themes/Rezlooks-Candy-1pxb/theme.ini
 share/emerald/themes/Rezlooks-Candy-1pxb/buttons.close.png
 share/emerald/themes/Rezlooks-Candy-1pxb/buttons.max.png
 share/emerald/themes/Rezlooks-Candy-1pxb/buttons.min.png
-@dirrm share/emerald/themes/Sky
 share/emerald/themes/Sky/buttons.unshade.png
 share/emerald/themes/Sky/buttons.min.png
 share/emerald/themes/Sky/buttons.sticky.png
@@ -264,7 +241,6 @@ share/emerald/themes/Sky/buttons.max.png
 share/emerald/themes/Sky/buttons.menu.png
 share/emerald/themes/Sky/buttons.above.png
 share/emerald/themes/Sky/buttons.unabove.png
-@dirrm share/emerald/themes/orangelook
 share/emerald/themes/orangelook/buttons.inactive_glow.png
 share/emerald/themes/orangelook/theme.screenshot.png
 share/emerald/themes/orangelook/buttons.glow.png
@@ -273,42 +249,36 @@ share/emerald/themes/orangelook/theme.ini
 share/emerald/themes/orangelook/buttons.close.png
 share/emerald/themes/orangelook/buttons.max.png
 share/emerald/themes/orangelook/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-Candy
 share/emerald/themes/Rezlooks-Candy/theme.screenshot.png
 share/emerald/themes/Rezlooks-Candy/buttons.restore.png
 share/emerald/themes/Rezlooks-Candy/theme.ini
 share/emerald/themes/Rezlooks-Candy/buttons.close.png
 share/emerald/themes/Rezlooks-Candy/buttons.max.png
 share/emerald/themes/Rezlooks-Candy/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-Graphite-1pxb
 share/emerald/themes/Rezlooks-Graphite-1pxb/theme.screenshot.png
 share/emerald/themes/Rezlooks-Graphite-1pxb/buttons.restore.png
 share/emerald/themes/Rezlooks-Graphite-1pxb/theme.ini
 share/emerald/themes/Rezlooks-Graphite-1pxb/buttons.close.png
 share/emerald/themes/Rezlooks-Graphite-1pxb/buttons.max.png
 share/emerald/themes/Rezlooks-Graphite-1pxb/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-Graphite
 share/emerald/themes/Rezlooks-Graphite/theme.screenshot.png
 share/emerald/themes/Rezlooks-Graphite/buttons.restore.png
 share/emerald/themes/Rezlooks-Graphite/theme.ini
 share/emerald/themes/Rezlooks-Graphite/buttons.close.png
 share/emerald/themes/Rezlooks-Graphite/buttons.max.png
 share/emerald/themes/Rezlooks-Graphite/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-PastelGreen-1pxb
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/theme.screenshot.png
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/buttons.restore.png
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/theme.ini
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/buttons.close.png
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/buttons.max.png
 share/emerald/themes/Rezlooks-PastelGreen-1pxb/buttons.min.png
-@dirrm share/emerald/themes/Rezlooks-PastelGreen
 share/emerald/themes/Rezlooks-PastelGreen/theme.screenshot.png
 share/emerald/themes/Rezlooks-PastelGreen/buttons.restore.png
 share/emerald/themes/Rezlooks-PastelGreen/theme.ini
 share/emerald/themes/Rezlooks-PastelGreen/buttons.close.png
 share/emerald/themes/Rezlooks-PastelGreen/buttons.max.png
 share/emerald/themes/Rezlooks-PastelGreen/buttons.min.png
-@dirrm share/emerald/themes/Scaled_Black_Mod
 share/emerald/themes/Scaled_Black_Mod/buttons.up.png
 share/emerald/themes/Scaled_Black_Mod/buttons.sticky.png
 share/emerald/themes/Scaled_Black_Mod/buttons.unshade.png
@@ -329,7 +299,6 @@ share/emerald/themes/Scaled_Black_Mod/buttons.min.png
 share/emerald/themes/Scaled_Black_Mod/buttons.unsticky.png
 share/emerald/themes/Scaled_Black_Mod/buttons.down.png
 share/emerald/themes/Scaled_Black_Mod/buttons.unabove.png
-@dirrm share/emerald/themes/SlateHorn_Blue
 share/emerald/themes/SlateHorn_Blue/buttons.inactive_glow.png
 share/emerald/themes/SlateHorn_Blue/buttons.sticky.png
 share/emerald/themes/SlateHorn_Blue/buttons.glow.png
@@ -347,7 +316,6 @@ share/emerald/themes/SlateHorn_Blue/buttons.help.png
 share/emerald/themes/SlateHorn_Blue/buttons.unsticky.png
 share/emerald/themes/SlateHorn_Blue/buttons.above.png
 share/emerald/themes/SlateHorn_Blue/buttons.unabove.png
-@dirrm share/emerald/themes/SlateHorn_Green
 share/emerald/themes/SlateHorn_Green/buttons.inactive_glow.png
 share/emerald/themes/SlateHorn_Green/theme.screenshot.png
 share/emerald/themes/SlateHorn_Green/buttons.menu.png
@@ -365,7 +333,6 @@ share/emerald/themes/SlateHorn_Green/buttons.above.png
 share/emerald/themes/SlateHorn_Green/buttons.unabove.png
 share/emerald/themes/SlateHorn_Green/buttons.sticky.png
 share/emerald/themes/SlateHorn_Green/buttons.unsticky.png
-@dirrm share/emerald/themes/SlateHorn_Red
 share/emerald/themes/SlateHorn_Red/buttons.inactive_glow.png
 share/emerald/themes/SlateHorn_Red/theme.screenshot.png
 share/emerald/themes/SlateHorn_Red/buttons.menu.png
@@ -383,7 +350,6 @@ share/emerald/themes/SlateHorn_Red/buttons.above.png
 share/emerald/themes/SlateHorn_Red/buttons.unabove.png
 share/emerald/themes/SlateHorn_Red/buttons.sticky.png
 share/emerald/themes/SlateHorn_Red/buttons.unsticky.png
-@dirrm share/emerald/themes/SlateHorn_Yellow
 share/emerald/themes/SlateHorn_Yellow/buttons.inactive_glow.png
 share/emerald/themes/SlateHorn_Yellow/theme.screenshot.png
 share/emerald/themes/SlateHorn_Yellow/buttons.menu.png
@@ -401,7 +367,6 @@ share/emerald/themes/SlateHorn_Yellow/buttons.above.png
 share/emerald/themes/SlateHorn_Yellow/buttons.unabove.png
 share/emerald/themes/SlateHorn_Yellow/buttons.sticky.png
 share/emerald/themes/SlateHorn_Yellow/buttons.unsticky.png
-@dirrm share/emerald/themes/SolidSlateModified
 share/emerald/themes/SolidSlateModified/buttons.menu.png
 share/emerald/themes/SolidSlateModified/theme.screenshot.png
 share/emerald/themes/SolidSlateModified/buttons.shade.png
@@ -415,7 +380,6 @@ share/emerald/themes/SolidSlateModified/buttons.close.png
 share/emerald/themes/SolidSlateModified/buttons.max.png
 share/emerald/themes/SolidSlateModified/buttons.min.png
 share/emerald/themes/SolidSlateModified/buttons.help.png
-@dirrm share/emerald/themes/TiSkin_Classic
 share/emerald/themes/TiSkin_Classic/buttons.max.png
 share/emerald/themes/TiSkin_Classic/theme.ini
 share/emerald/themes/TiSkin_Classic/pixmaps.active_bottom_left.png
@@ -431,7 +395,6 @@ share/emerald/themes/TiSkin_Classic/buttons.close.png
 share/emerald/themes/TiSkin_Classic/buttons.min.png
 share/emerald/themes/TiSkin_Classic/pixmaps.active_right.png
 share/emerald/themes/TiSkin_Classic/pixmaps.active_bottom.png
-@dirrm share/emerald/themes/VRunner-Quicksilver
 share/emerald/themes/VRunner-Quicksilver/theme.screenshot.png
 share/emerald/themes/VRunner-Quicksilver/buttons.shade.png
 share/emerald/themes/VRunner-Quicksilver/buttons.glow.png
@@ -442,7 +405,6 @@ share/emerald/themes/VRunner-Quicksilver/buttons.inactive_glow.png
 share/emerald/themes/VRunner-Quicksilver/buttons.close.png
 share/emerald/themes/VRunner-Quicksilver/buttons.max.png
 share/emerald/themes/VRunner-Quicksilver/buttons.min.png
-@dirrm share/emerald/themes/Wombat_Black
 share/emerald/themes/Wombat_Black/pixmaps.active_bottom_left.png
 share/emerald/themes/Wombat_Black/pixmaps.active_top.png
 share/emerald/themes/Wombat_Black/buttons.min.png
@@ -461,7 +423,6 @@ share/emerald/themes/Wombat_Black/pixmaps.active_left.png
 share/emerald/themes/Wombat_Black/buttons.restore.png
 share/emerald/themes/Wombat_Black/buttons.close.png
 share/emerald/themes/Wombat_Black/buttons.help.png
-@dirrm share/emerald/themes/Wombat_Gray
 share/emerald/themes/Wombat_Gray/pixmaps.active_top.png
 share/emerald/themes/Wombat_Gray/buttons.min.png
 share/emerald/themes/Wombat_Gray/theme.ini
@@ -480,7 +441,6 @@ share/emerald/themes/Wombat_Gray/pixmaps.active_left.png
 share/emerald/themes/Wombat_Gray/buttons.restore.png
 share/emerald/themes/Wombat_Gray/buttons.close.png
 share/emerald/themes/Wombat_Gray/buttons.help.png
-@dirrm share/emerald/themes/euh
 share/emerald/themes/euh/buttons.unsticky.png
 share/emerald/themes/euh/buttons.menu.png
 share/emerald/themes/euh/theme.screenshot.png
@@ -495,7 +455,6 @@ share/emerald/themes/euh/buttons.unabove.png
 share/emerald/themes/euh/buttons.max.png
 share/emerald/themes/euh/buttons.min.png
 share/emerald/themes/euh/buttons.help.png
-@dirrm share/emerald/themes/Adonis
 share/emerald/themes/Adonis/buttons.above.png
 share/emerald/themes/Adonis/theme.screenshot.png
 share/emerald/themes/Adonis/theme.ini.bak
@@ -507,4 +466,3 @@ share/emerald/themes/Adonis/buttons.min.png
 share/emerald/themes/Adonis/buttons.unabove.png
 share/emerald/themes/Adonis/buttons.sticky.png
 share/emerald/themes/Adonis/buttons.unsticky.png
-@dirrm share/emerald/themes

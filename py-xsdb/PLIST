@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/15 13:23:24 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 ${PYSITELIB}/xsdb/__init__.py
 ${PYSITELIB}/xsdb/__init__.pyc
 ${PYSITELIB}/xsdb/__init__.pyo
@@ -104,4 +104,3 @@ ${PYSITELIB}/xsdb/xspickle.pyo
 ${PYSITELIB}/xsdb/xsserve.py
 ${PYSITELIB}/xsdb/xsserve.pyc
 ${PYSITELIB}/xsdb/xsserve.pyo
-@dirrm ${PYSITELIB}/xsdb

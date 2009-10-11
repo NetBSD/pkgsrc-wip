@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/12 13:48:46 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:05 thomasklausner Exp $
 bin/picasm
 share/doc/picasm/picasm.doc
 share/examples/picasm/example.asm
@@ -6,5 +6,3 @@ share/examples/picasm/morse.asm
 share/examples/picasm/morse.h
 share/examples/picasm/pic16c84.h
 share/examples/picasm/picmac.h
-@dirrm share/examples/picasm
-@dirrm share/doc/picasm

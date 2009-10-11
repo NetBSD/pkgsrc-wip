@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/17 21:38:36 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:12 thomasklausner Exp $
 bin/qcomicbook
 man/man1/qcomicbook.1
 share/qcomicbook/bestfit.png
@@ -29,6 +29,3 @@ share/qcomicbook/settings.png
 share/qcomicbook/thumbnails.png
 share/qcomicbook/twopages.png
 share/qcomicbook/wholepage.png
-@dirrm share/qcomicbook/help/en
-@dirrm share/qcomicbook/help
-@dirrm share/qcomicbook

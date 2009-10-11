@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/28 20:27:49 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:55 thomasklausner Exp $
 bin/av7110_loadkeys
 bin/czap
 bin/dvbdate
@@ -49,8 +49,3 @@ share/linuxtv-dvb/dvb-t/uk-Rowridge
 share/linuxtv-dvb/dvb-t/uk-SandyHeath
 share/linuxtv-dvb/dvb-t/uk-Storeton
 share/linuxtv-dvb/dvb-t/uk-WinterHill
-@dirrm share/linuxtv-dvb/dvb-t
-@dirrm share/linuxtv-dvb/dvb-s
-@dirrm share/linuxtv-dvb/dvb-c
-@dirrm share/linuxtv-dvb
-@dirrm share/doc/linuxtv-dvb

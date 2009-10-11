@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 08:40:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,5 +9,3 @@ ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/tracexcelviewer/__init__.py
 ${PYSITELIB}/tracexcelviewer/__init__.pyc
 ${PYSITELIB}/tracexcelviewer/__init__.pyo
-@dirrm ${PYSITELIB}/tracexcelviewer
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

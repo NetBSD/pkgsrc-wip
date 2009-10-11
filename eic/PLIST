@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/14 01:22:17 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:34 thomasklausner Exp $
 EiC/BugList.html
 EiC/Change.html
 EiC/Distribution.html
@@ -749,45 +749,4 @@ EiC/test/testcode/tstruct.c.def
 bin/eic
 bin/eictester
 man/man1/eic.man.1
-@dirrm EiC/test/testcode
-@dirrm EiC/test/sniptests
-@dirrm EiC/test/posix.1
-@dirrm EiC/test/lcctests
-@dirrm EiC/test/gnutests
-@dirrm EiC/test/eicScripts
-@dirrm EiC/test/crash
-@dirrm EiC/test/EiCtests
-@dirrm EiC/test
-@dirrm EiC/module/xv
-@dirrm EiC/module/tools
-@dirrm EiC/module/stdClib/test
-@dirrm EiC/module/stdClib/src/_SUNOS
-@dirrm EiC/module/stdClib/src/_SOLARIS
-@dirrm EiC/module/stdClib/src/_OSF1
-@dirrm EiC/module/stdClib/src/_NETBSD
-@dirrm EiC/module/stdClib/src/_LINUX
-@dirrm EiC/module/stdClib/src/_IRIX
-@dirrm EiC/module/stdClib/src/_HPUX
-@dirrm EiC/module/stdClib/src/_FREEBSD
-@dirrm EiC/module/stdClib/src/_DJGPP
-@dirrm EiC/module/stdClib/src
-@dirrm EiC/module/stdClib
-@dirrm EiC/module/gnuplot
-@dirrm EiC/module/examples
-@dirrm EiC/module/cgihtml/examples
-@dirrm EiC/module/cgihtml/docs
-@dirrm EiC/module/cgihtml/cgi-bin
-@dirrm EiC/module/cgihtml
-@dirrm EiC/module/MathStats
-@dirrm EiC/module
-@dirrm EiC/main/examples
-@dirrm EiC/main
-@dirrm EiC/lib
-@dirrm EiC/include/sys
 @exec ${MKDIR} %D/EiC/include/module
-@dirrm EiC/include/module
-@dirrm EiC/include
-@dirrm EiC/doc/tech_doc
-@dirrm EiC/doc/removed
-@dirrm EiC/doc
-@dirrm EiC

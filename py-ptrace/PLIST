@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/05 21:49:29 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/gdb.py
 bin/strace.py
 ${PYSITELIB}/ptrace/__init__.py
@@ -175,7 +175,3 @@ ${PYSITELIB}/ptrace/tools.pyo
 ${PYSITELIB}/ptrace/version.py
 ${PYSITELIB}/ptrace/version.pyc
 ${PYSITELIB}/ptrace/version.pyo
-@dirrm ${PYSITELIB}/ptrace/syscall
-@dirrm ${PYSITELIB}/ptrace/debugger
-@dirrm ${PYSITELIB}/ptrace/binding
-@dirrm ${PYSITELIB}/ptrace

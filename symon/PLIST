@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/14 11:49:07 yeled Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 libexec/symon
 libexec/symux
 man/man8/symon.8
@@ -10,5 +10,3 @@ share/symon/c_smrrds.sh
 share/symon/client/SymuxClient.0
 share/symon/client/SymuxClient.pm
 share/symon/client/getsymonitem.pl
-@dirrm share/examples/symon
-@dirrm share/symon

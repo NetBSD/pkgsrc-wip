@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/03 19:52:33 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:26 thomasklausner Exp $
 man/man8/acpid.8
 sbin/acpi_listen
 sbin/acpid
@@ -10,6 +10,3 @@ share/examples/acpid/panasonic/ac_adapter
 share/examples/acpid/panasonic/hotkey
 share/examples/acpid/panasonic/hotkey.pl
 share/examples/acpid/sample.conf
-@dirrm share/examples/acpid/panasonic
-@dirrm share/examples/acpid/battery
-@dirrm share/examples/acpid

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/04 05:26:33 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 bin/lucu-implant-file
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/HSLucu-${PKGVERSION}.o
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu.hi
@@ -67,12 +67,3 @@ lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/libHSLucu-${PKGVERSION}.a
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/libHSLucu-${PKGVERSION}_p.a
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/Lucu-${PKGVERSION}/COPYING
-@dirrm share/doc/Lucu-${PKGVERSION}
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Resource
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Parser
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/MIMEType
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network
-@dirrm lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/Lucu-${PKGVERSION}

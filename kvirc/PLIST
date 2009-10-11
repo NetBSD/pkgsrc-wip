@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/07 19:36:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:50 thomasklausner Exp $
 bin/kvi_run_netscape.sh
 bin/kvi_search_help.sh
 bin/kvirc
@@ -1770,32 +1770,3 @@ share/locale/sharedfileswindow_it.mo
 share/locale/sharedfileswindow_pt.mo
 share/locale/sharedfileswindow_pt_BR.mo
 share/locale/sharedfileswindow_ru.mo
-@dirrm share/kvirc/3.2/themes/default.lores
-@dirrm share/kvirc/3.2/themes/default.hires
-@dirrm share/kvirc/3.2/themes
-@dirrm share/kvirc/3.2/protocols
-@dirrm share/kvirc/3.2/pics
-@dirrm share/kvirc/3.2/msgcolors
-@dirrm share/kvirc/3.2/modules/caps/tool
-@dirrm share/kvirc/3.2/modules/caps/serverimport
-@dirrm share/kvirc/3.2/modules/caps/crypt
-@dirrm share/kvirc/3.2/modules/caps/action
-@dirrm share/kvirc/3.2/modules/caps
-@dirrm share/kvirc/3.2/modules
-@dirrm share/kvirc/3.2/mimelnk
-@dirrm share/kvirc/3.2/license
-@dirrm share/kvirc/3.2/icons/64x64
-@dirrm share/kvirc/3.2/icons/48x48
-@dirrm share/kvirc/3.2/icons/32x32
-@dirrm share/kvirc/3.2/icons/16x16
-@dirrm share/kvirc/3.2/icons
-@dirrm share/kvirc/3.2/help/en
-@dirrm share/kvirc/3.2/help
-@dirrm share/kvirc/3.2/defscript
-@dirrm share/kvirc/3.2/config/modules
-@dirrm share/kvirc/3.2/config
-@dirrm share/kvirc/3.2/applnk
-@dirrm share/kvirc/3.2
-@dirrm share/kvirc
-@dirrm include/kvirc/${PKGVERSION}
-@dirrm include/kvirc

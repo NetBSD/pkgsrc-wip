@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/20 05:20:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:13 thomasklausner Exp $
 ${RUBY_VENDORARCHLIB}/ldap.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/ldap/control.rb
 ${RUBY_VENDORLIB}/ldap/ldif.rb
 ${RUBY_VENDORLIB}/ldap/schema.rb
-@dirrm ${RUBY_VENDORLIB}/ldap
 ${RUBY_DOCDIR}/ldap/ChangeLog
 ${RUBY_DOCDIR}/ldap/FAQ
 ${RUBY_DOCDIR}/ldap/README
 ${RUBY_DOCDIR}/ldap/TODO
-@dirrm ${RUBY_DOCDIR}/ldap
 ${RUBY_EXAMPLESDIR}/ldap/cgi/search.cgi
 ${RUBY_EXAMPLESDIR}/ldap/cgi/search.html
 ${RUBY_EXAMPLESDIR}/ldap/pr_ctl
-@dirrm ${RUBY_EXAMPLESDIR}/ldap/cgi
-@dirrm ${RUBY_EXAMPLESDIR}/ldap

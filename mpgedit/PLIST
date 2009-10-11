@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 02:01:02 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mp3decoder.sh
 bin/mpgedit
 bin/mpgedit_nocurses
@@ -20,4 +20,3 @@ share/xmpgedit/pause.xpm
 share/xmpgedit/play.xpm
 share/xmpgedit/record.xpm
 share/xmpgedit/stop.xpm
-@dirrm share/xmpgedit

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/01 22:38:26 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 bin/fnidl
 bin/fnaming
 bin/fnfeed
@@ -334,26 +334,3 @@ share/doc/Fnorb/tests/interop/TestFixed_impl.h
 share/doc/Fnorb/tests/interop/TestInterop.idl
 share/doc/Fnorb/tests/interop/Utils.cpp
 share/doc/Fnorb/tests/interop/Utils.h
-@dirrm ${PYSITELIB}/Fnorb/script
-@dirrm ${PYSITELIB}/Fnorb/parser
-@dirrm ${PYSITELIB}/Fnorb/orb
-@dirrm ${PYSITELIB}/Fnorb/cos/naming/CosNaming_skel
-@dirrm ${PYSITELIB}/Fnorb/cos/naming/CosNaming
-@dirrm ${PYSITELIB}/Fnorb/cos/naming
-@dirrm ${PYSITELIB}/Fnorb/cos/interface_repository/IntRep_skel
-@dirrm ${PYSITELIB}/Fnorb/cos/interface_repository/IntRep
-@dirrm ${PYSITELIB}/Fnorb/cos/interface_repository
-@dirrm ${PYSITELIB}/Fnorb/cos
-@dirrm ${PYSITELIB}/Fnorb/compiler
-@dirrm ${PYSITELIB}/Fnorb
-@dirrm share/doc/Fnorb/tests/interop
-@dirrm share/doc/Fnorb/tests/datatransfer
-@dirrm share/doc/Fnorb/tests
-@dirrm share/doc/Fnorb/examples/unions
-@dirrm share/doc/Fnorb/examples/tkinter
-@dirrm share/doc/Fnorb/examples/threaded
-@dirrm share/doc/Fnorb/examples/naming
-@dirrm share/doc/Fnorb/examples/misc
-@dirrm share/doc/Fnorb/examples/hello-world
-@dirrm share/doc/Fnorb/examples
-@dirrm share/doc/Fnorb

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 04:09:54 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/punjab/__init__.py
 ${PYSITELIB}/punjab/__init__.pyc
 ${PYSITELIB}/punjab/__init__.pyo
@@ -42,7 +42,3 @@ share/doc/punjab/INSTALL.txt
 share/doc/punjab/README.txt
 share/examples/rc.d/punjab
 @exec ${MKDIR} %D/share/examples/jabber
-@dirrm share/examples/jabber
-@dirrm share/doc/punjab
-@dirrm ${PYSITELIB}/punjab/xmpp
-@dirrm ${PYSITELIB}/punjab

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/03/12 07:52:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/11 10:44:36 thomasklausner Exp $
 bin/ffmpeg
 bin/ffserver
 include/libavcodec/avcodec.h
@@ -40,9 +40,3 @@ lib/vhook/fish.so
 lib/vhook/null.so
 lib/vhook/ppm.so
 lib/vhook/watermark.so
-@dirrm lib/vhook
-@dirrm include/libswscale
-@dirrm include/libavutil
-@dirrm include/libavformat
-@dirrm include/libavdevice
-@dirrm include/libavcodec

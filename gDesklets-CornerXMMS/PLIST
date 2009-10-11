@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 04:46:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:37 thomasklausner Exp $
 share/gdesklets/Displays/CornerXMMS/cornerxmms-bottomright.display
 share/gdesklets/Displays/CornerXMMS/gfx/bar0.png
 share/gdesklets/Displays/CornerXMMS/gfx/bar1.png
@@ -26,6 +26,3 @@ share/gdesklets/Displays/CornerXMMS/gfx/stop0.png
 share/gdesklets/Displays/CornerXMMS/gfx/textmask-br0.png
 share/gdesklets/Displays/CornerXMMS/gfx/textmask-br1.png
 share/gdesklets/Sensors/CornerXMMS/__init__.py
-@dirrm share/gdesklets/Sensors/CornerXMMS
-@dirrm share/gdesklets/Displays/CornerXMMS/gfx
-@dirrm share/gdesklets/Displays/CornerXMMS

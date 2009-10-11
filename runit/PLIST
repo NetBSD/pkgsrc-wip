@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/04/23 23:30:10 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:15 thomasklausner Exp $
 man/man8/chpst.8
 man/man8/runit-init.8
 man/man8/runit.8
@@ -65,13 +65,3 @@ share/examples/runit/openbsd/3
 share/examples/runit/openbsd/ctrlaltdel
 share/examples/runit/openbsd/getty-ttyC4/finish
 share/examples/runit/openbsd/getty-ttyC4/run
-@dirrm share/examples/runit/openbsd/getty-ttyC4
-@dirrm share/examples/runit/openbsd
-@dirrm share/examples/runit/macosx/StartupItems
-@dirrm share/examples/runit/macosx
-@dirrm share/examples/runit/freebsd/getty-ttyv4
-@dirrm share/examples/runit/freebsd
-@dirrm share/examples/runit/debian/getty-tty5
-@dirrm share/examples/runit/debian
-@dirrm share/examples/runit
-@dirrm share/doc/runit

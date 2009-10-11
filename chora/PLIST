@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/16 02:52:15 jgoamakf Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
 share/chora/COPYING
 share/chora/README
 share/chora/annotate.php
@@ -118,51 +118,3 @@ share/chora/templates/log/header.inc
 share/chora/templates/log/request.inc
 share/chora/templates/log/rev.inc
 share/chora/templates/menu/menu.inc
-@dirrm share/chora/templates/menu
-@dirrm share/chora/templates/log
-@dirrm share/chora/templates/index
-@dirrm share/chora/templates/history
-@dirrm share/chora/templates/directory
-@dirrm share/chora/templates/diff/hr
-@dirrm share/chora/templates/diff
-@dirrm share/chora/templates/checkout
-@dirrm share/chora/templates/annotate
-@dirrm share/chora/templates
-@dirrm share/chora/po
-@dirrm share/chora/locale/zh_TW/LC_MESSAGES
-@dirrm share/chora/locale/zh_TW
-@dirrm share/chora/locale/zh_CN/LC_MESSAGES
-@dirrm share/chora/locale/zh_CN
-@dirrm share/chora/locale/sv_SE/LC_MESSAGES
-@dirrm share/chora/locale/sv_SE
-@dirrm share/chora/locale/ro_RO/LC_MESSAGES
-@dirrm share/chora/locale/ro_RO
-@dirrm share/chora/locale/pt_BR/LC_MESSAGES
-@dirrm share/chora/locale/pt_BR
-@dirrm share/chora/locale/pl_PL/LC_MESSAGES
-@dirrm share/chora/locale/pl_PL
-@dirrm share/chora/locale/nl_NL/LC_MESSAGES
-@dirrm share/chora/locale/nl_NL
-@dirrm share/chora/locale/nb_NO/LC_MESSAGES
-@dirrm share/chora/locale/nb_NO
-@dirrm share/chora/locale/fr_FR/LC_MESSAGES
-@dirrm share/chora/locale/fr_FR
-@dirrm share/chora/locale/fi_FI/LC_MESSAGES
-@dirrm share/chora/locale/fi_FI
-@dirrm share/chora/locale/es_ES/LC_MESSAGES
-@dirrm share/chora/locale/es_ES
-@dirrm share/chora/locale/en_US
-@dirrm share/chora/locale/de_DE/LC_MESSAGES
-@dirrm share/chora/locale/de_DE
-@dirrm share/chora/locale/cs_CZ/LC_MESSAGES
-@dirrm share/chora/locale/cs_CZ
-@dirrm share/chora/locale
-@dirrm share/chora/lib/MIME/Viewer
-@dirrm share/chora/lib/MIME
-@dirrm share/chora/lib/CVSLib
-@dirrm share/chora/lib
-@dirrm share/chora/graphics/mime
-@dirrm share/chora/graphics
-@dirrm share/chora/docs
-@dirrm share/chora/config
-@dirrm share/chora

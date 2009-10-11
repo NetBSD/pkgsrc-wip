@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:30:54 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
 bin/epylint
 bin/pylint
 bin/pylint-gui
@@ -102,8 +102,3 @@ ${PYSITELIB}/pylint/reporters/text.pyo
 ${PYSITELIB}/pylint/utils.py
 ${PYSITELIB}/pylint/utils.pyc
 ${PYSITELIB}/pylint/utils.pyo
-@dirrm ${PYSITELIB}/pylint/reporters
-@dirrm ${PYSITELIB}/pylint/pyreverse
-@dirrm ${PYSITELIB}/pylint/checkers
-@dirrm ${PYSITELIB}/pylint-${PKGVERSION}-py2.5.egg-info
-@dirrm ${PYSITELIB}/pylint

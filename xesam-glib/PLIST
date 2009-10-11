@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/28 23:10:54 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:25 thomasklausner Exp $
 include/xesam-1.0/xesam-glib.h
 include/xesam-1.0/xesam-glib/xesam-g-dbus-searcher-stub.h
 include/xesam-1.0/xesam-glib/xesam-g-dbussearcher.h
@@ -47,6 +47,3 @@ share/gtk-doc/html/xesam-glib/xesam-glib-Global-Definitions.html
 share/gtk-doc/html/xesam-glib/xesam-glib-XesamGQueryToken.html
 share/gtk-doc/html/xesam-glib/xesam-glib.devhelp
 share/gtk-doc/html/xesam-glib/xesam-glib.devhelp2
-@dirrm share/gtk-doc/html/xesam-glib
-@dirrm include/xesam-1.0/xesam-glib
-@dirrm include/xesam-1.0

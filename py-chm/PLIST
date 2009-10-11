@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/25 09:21:52 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
 ${PYSITELIB}/chm/__init__.py
 ${PYSITELIB}/chm/__init__.pyc
 ${PYSITELIB}/chm/__init__.pyo
@@ -10,4 +10,3 @@ ${PYSITELIB}/chm/chmlib.py
 ${PYSITELIB}/chm/chmlib.pyc
 ${PYSITELIB}/chm/chmlib.pyo
 ${PYSITELIB}/chm/extra.so
-@dirrm ${PYSITELIB}/chm

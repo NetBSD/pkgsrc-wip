@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 07:39:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:27 thomasklausner Exp $
 bin/yamcha
 bin/yamcha-config
 bin/yamcha-mkmodel
@@ -18,4 +18,3 @@ libexec/yamcha/showse
 libexec/yamcha/svm_learn_wrapper
 libexec/yamcha/zipmodel
 man/man1/yamcha.1
-@dirrm libexec/yamcha

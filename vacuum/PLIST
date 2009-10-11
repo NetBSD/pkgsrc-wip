@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/18 13:22:55 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 bin/vacuum
 man/man6/vacuum.6
 share/vacuum/ag2.voc
@@ -85,6 +85,3 @@ share/vacuum/superspit.wav
 share/vacuum/time.wav
 share/vacuum/vacuum.ico
 share/vacuum/witch.wav
-@dirrm share/vacuum/music
-@dirrm share/vacuum/bin
-@dirrm share/vacuum

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/16 12:47:30 jukka Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:33 thomasklausner Exp $
 lib/libdk.a
 man/man8/dk-milter.8
 sbin/dk-milter
@@ -36,5 +36,3 @@ share/doc/dk-milter/libdk/dk_verify.html
 share/doc/dk-milter/libdk/index.html
 share/doc/dk-milter/libdk/overview.html
 share/doc/dk-milter/libdk/rfc2822_mailbox_split.html
-@dirrm share/doc/dk-milter/libdk
-@dirrm share/doc/dk-milter

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:39 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:26 thomasklausner Exp $
 bin/init.tcl
 bin/install-sh
 bin/nscgi.so
@@ -903,22 +903,3 @@ share/nsd/servers/server1/pages/tests/tcl/test1.tcl
 share/nsd/servers/server1/pages/tests/tcl/test1a.tcl
 share/nsd/servers/server1/pages/tests/tcl/test1b.tcl
 share/nsd/servers/server1/pages/tests/tests.html
-@dirrm share/nsd/servers/server1/pages/tests/tcl
-@dirrm share/nsd/servers/server1/pages/tests/sec
-@dirrm share/nsd/servers/server1/pages/tests/dbase
-@dirrm share/nsd/servers/server1/pages/tests/cdev
-@dirrm share/nsd/servers/server1/pages/tests/api
-@dirrm share/nsd/servers/server1/pages/tests/adp
-@dirrm share/nsd/servers/server1/pages/tests
-@dirrm share/nsd/servers/server1/pages
-@dirrm share/nsd/servers/server1/modules/nsperm
-@dirrm share/nsd/servers/server1/modules
-@dirrm share/nsd/servers/server1
-@dirrm share/nsd/servers
-@dirrm share/nsd/modules/tcl/nsperm
-@dirrm share/nsd/modules/tcl
-@dirrm share/nsd/modules
-@dirrm share/nsd
-@dirrm share/examples/nsd
-@dirrm include/nsd/include
-@dirrm include/nsd

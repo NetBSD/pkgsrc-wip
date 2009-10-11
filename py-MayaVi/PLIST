@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/11/23 01:35:58 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 bin/mayavi
 ${PYSITELIB}/mayavi/Base/DataVizManager.py
 ${PYSITELIB}/mayavi/Base/DataVizManager.pyc
@@ -237,12 +237,3 @@ ${PYSITELIB}/vtkPipeline/vtkMethodParser.pyo
 ${PYSITELIB}/vtkPipeline/vtkPipeline.py
 ${PYSITELIB}/vtkPipeline/vtkPipeline.pyc
 ${PYSITELIB}/vtkPipeline/vtkPipeline.pyo
-@dirrm ${PYSITELIB}/mayavi/tools
-@dirrm ${PYSITELIB}/mayavi/Sources
-@dirrm ${PYSITELIB}/mayavi/Modules
-@dirrm ${PYSITELIB}/mayavi/Misc
-@dirrm ${PYSITELIB}/mayavi/Filters
-@dirrm ${PYSITELIB}/mayavi/Base
-@dirrm ${PYSITELIB}/mayavi
-@dirrm ${PYSITELIB}/vtkPipeline/Icons
-@dirrm ${PYSITELIB}/vtkPipeline

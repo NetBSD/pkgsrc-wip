@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/09 00:16:21 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/hitori
 share/applications/hitori.desktop
 share/gnome/help/hitori/C/figures/hitori_main_window.png
@@ -18,15 +18,9 @@ share/icons/hicolor/48x48/apps/hitori.png
 share/locale/en_GB/LC_MESSAGES/hitori.mo
 share/omf/hitori/hitori-C.omf
 share/omf/hitori/hitori-en_GB.omf
-@dirrm share/omf/hitori
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/hitori
-@dirrm share/gnome/help/hitori/en_GB/figures
-@dirrm share/gnome/help/hitori/en_GB
-@dirrm share/gnome/help/hitori/C/figures
-@dirrm share/gnome/help/hitori/C
 @comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2009/07/01 16:38:45 lexort Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
 ${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/dependency_links.txt
@@ -12,5 +12,3 @@ ${PYSITELIB}/roadmaphours/__init__.pyo
 ${PYSITELIB}/roadmaphours/roadmaphours.py
 ${PYSITELIB}/roadmaphours/roadmaphours.pyc
 ${PYSITELIB}/roadmaphours/roadmaphours.pyo
-@dirrm ${PYSITELIB}/roadmaphours
-@dirrm ${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info

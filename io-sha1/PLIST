@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/07 16:51:30 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
 lib/io/addons/SHA1/_build/dll/libIoSHA1.so
 lib/io/addons/SHA1/_build/lib/libIoSHA1.a
 lib/io/addons/SHA1/build.io
 lib/io/addons/SHA1/depends
 lib/io/addons/SHA1/io/sha1.io
-@dirrm lib/io/addons/SHA1/io
-@dirrm lib/io/addons/SHA1/_build/lib
-@dirrm lib/io/addons/SHA1/_build/dll
-@dirrm lib/io/addons/SHA1/_build
-@dirrm lib/io/addons/SHA1

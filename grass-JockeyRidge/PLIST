@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/08 17:11:12 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
 share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
 share/dataset/geography/${PKGNAME}/PERMANENT/PROJ_INFO
@@ -70,40 +70,11 @@ share/dataset/geography/${PKGNAME}/helena/windows/lookout.2ma
 share/dataset/geography/${PKGNAME}/helena/windows/meas02
 share/dataset/geography/${PKGNAME}/helena/windows/meas02.1m
 share/dataset/geography/${PKGNAME}/helena/windows/seg.1m.dmin05
-@dirrm share/dataset/geography/${PKGNAME}/helena/windows
-@dirrm share/dataset/geography/${PKGNAME}/helena/site_lists
-@dirrm share/dataset/geography/${PKGNAME}/helena/hist
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/g3dcell
-@dirrm share/dataset/geography/${PKGNAME}/helena/g3dcell
-@dirrm share/dataset/geography/${PKGNAME}/helena/fcell
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig_plus
-@dirrm share/dataset/geography/${PKGNAME}/helena/dig_plus
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig_cats
-@dirrm share/dataset/geography/${PKGNAME}/helena/dig_cats
-@dirrm share/dataset/geography/${PKGNAME}/helena/dig_att
-@dirrm share/dataset/geography/${PKGNAME}/helena/dig_ascii
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/dig
-@dirrm share/dataset/geography/${PKGNAME}/helena/dig
-@dirrm share/dataset/geography/${PKGNAME}/helena/colr
-@dirrm share/dataset/geography/${PKGNAME}/helena/cellhd
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/manteo1m.20k
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.3m
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.sites.1m
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/lidar99.def
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc/dem.30m
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell_misc
-@dirrm share/dataset/geography/${PKGNAME}/helena/cell
-@dirrm share/dataset/geography/${PKGNAME}/helena/cats
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/helena/.tmp
-@dirrm share/dataset/geography/${PKGNAME}/helena
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp/bathy.meas.ncsu.edu
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT/.tmp
-@dirrm share/dataset/geography/${PKGNAME}/PERMANENT
-@dirrm share/dataset/geography/${PKGNAME}
 @exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}
 @exec ${MKDIR} %D/share/dataset/geography/
-@dirrm share/dataset/geography
-@dirrm share/dataset

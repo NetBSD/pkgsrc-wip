@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/18 22:29:05 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:09 thomasklausner Exp $
 bin/ping.py
 bin/rpcdump.py
 bin/samrdump.py
@@ -57,5 +57,3 @@ ${PYSITELIB}/impacket/smb.pyo
 ${PYSITELIB}/impacket/uuid.py
 ${PYSITELIB}/impacket/uuid.pyc
 ${PYSITELIB}/impacket/uuid.pyo
-@dirrm ${PYSITELIB}/impacket/dcerpc
-@dirrm ${PYSITELIB}/impacket

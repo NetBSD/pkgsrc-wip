@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/08 05:05:25 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/tenmado
 man/man6/tenmado.6
 share/games/tenmado/default/score-stage-1.txt
@@ -82,7 +82,3 @@ share/games/tenmado/image/trinity-damaged.png
 share/games/tenmado/image/trinity.png
 share/games/tenmado/image/uncertainty-damaged.png
 share/games/tenmado/image/uncertainty.png
-@dirrm var/games/tenmado
-@dirrm share/games/tenmado/image
-@dirrm share/games/tenmado/default
-@dirrm share/games/tenmado

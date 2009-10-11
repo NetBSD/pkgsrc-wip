@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/05/27 06:58:06 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:29 thomasklausner Exp $
 bin/beryl-settings-simple
 share/applications/beryl-settings-simple.desktop
 share/beryl-settings-simple/applications-development.svg
@@ -26,4 +26,3 @@ share/locale/nl/LC_MESSAGES/beryl-settings-simple.mo
 share/locale/zh_CN/LC_MESSAGES/beryl-settings-simple.mo
 share/locale/zh_HK/LC_MESSAGES/beryl-settings-simple.mo
 share/locale/zh_TW/LC_MESSAGES/beryl-settings-simple.mo
-@dirrm share/beryl-settings-simple

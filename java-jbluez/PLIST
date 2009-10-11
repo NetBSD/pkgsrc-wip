@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/22 14:18:45 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 lib/java/jbluez.jar
 lib/libjbluez.so
 share/doc/jbluez/allclasses-frame.html
@@ -38,9 +38,3 @@ share/doc/jbluez/packages.html
 share/doc/jbluez/resources/inherit.gif
 share/doc/jbluez/serialized-form.html
 share/doc/jbluez/stylesheet.css
-@dirrm share/doc/jbluez/resources
-@dirrm share/doc/jbluez/com/appliancestudio/jbluez/class-use
-@dirrm share/doc/jbluez/com/appliancestudio/jbluez
-@dirrm share/doc/jbluez/com/appliancestudio
-@dirrm share/doc/jbluez/com
-@dirrm share/doc/jbluez

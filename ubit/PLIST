@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/23 13:38:51 dauphing Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:23 thomasklausner Exp $
 bin/ubit-config
 bin/umsd
 bin/uremote
@@ -103,4 +103,3 @@ include/ubit/uxmlgrammar.hpp
 include/ubit/uxmlparser.hpp
 lib/libubit.la
 man/man1/ubit-config.1
-@dirrm include/ubit

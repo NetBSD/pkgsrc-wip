@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/01/08 17:18:04 shattered Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/11 10:45:00 thomasklausner Exp $
 libexec/oops/accel.so
 libexec/oops/berkeley_db_api.so
 libexec/oops/custom_log.so
@@ -36,6 +36,3 @@ share/examples/oops/tables/koi-alt.tab
 share/examples/oops/tables/koi-iso.tab
 share/examples/oops/tables/koi-win.tab
 share/examples/rc.d/oops
-@dirrm share/examples/oops/tables
-@dirrm share/examples/oops
-@dirrm libexec/oops

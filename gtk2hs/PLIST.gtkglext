@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gtkglext,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
+@comment $NetBSD: PLIST.gtkglext,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk2hs/HSgtkglext.o
 lib/gtk2hs/gtkglext.package.conf
 lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk/OpenGL.hi
@@ -11,8 +11,3 @@ lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk/OpenGL/Pixmap.hi
 lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk/OpenGL/Types.hi
 lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk/OpenGL/Window.hi
 lib/gtk2hs/libHSgtkglext.a
-@dirrm lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk/OpenGL
-@dirrm lib/gtk2hs/imports/gtkglext/Graphics/UI/Gtk
-@dirrm lib/gtk2hs/imports/gtkglext/Graphics/UI
-@dirrm lib/gtk2hs/imports/gtkglext/Graphics
-@dirrm lib/gtk2hs/imports/gtkglext

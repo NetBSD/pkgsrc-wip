@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/28 01:45:13 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 @comment In teTeX-texmf: ${PKG_LOCALTEXMFPREFIX}/fonts/map/fontname/special.map
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/batang/batang01.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/batang/batang02.tfm
@@ -145,11 +145,5 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/baekmuk/dotum.ttf
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/baekmuk/gulim.ttf
 ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/baekmuk/hline.ttf
 @comment In ttf2pk: ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype/baekmuk
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/truetype
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/hline
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/gulim
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/dotum
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk/batang
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/baekmuk
 @comment In teTeX-texmf: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm

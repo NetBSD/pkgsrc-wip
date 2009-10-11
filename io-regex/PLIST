@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/05 10:29:46 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:47 thomasklausner Exp $
 lib/io/addons/Regex/_build/dll/libIoRegex.so
 lib/io/addons/Regex/_build/lib/libIoRegex.a
 lib/io/addons/Regex/build.io
@@ -7,8 +7,3 @@ lib/io/addons/Regex/io/Regex.io
 lib/io/addons/Regex/io/RegexMatch.io
 lib/io/addons/Regex/io/RegexMatches.io
 lib/io/addons/Regex/io/Sequence_regex.io
-@dirrm lib/io/addons/Regex/io
-@dirrm lib/io/addons/Regex/_build/lib
-@dirrm lib/io/addons/Regex/_build/dll
-@dirrm lib/io/addons/Regex/_build
-@dirrm lib/io/addons/Regex

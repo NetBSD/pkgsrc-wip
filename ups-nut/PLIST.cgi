@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.cgi,v 1.1.1.1 2008/02/01 03:23:42 jdwhite Exp $
+@comment $NetBSD: PLIST.cgi,v 1.2 2009/10/11 10:45:23 thomasklausner Exp $
 libexec/cgi-bin/nut/upsimage.cgi
 libexec/cgi-bin/nut/upsset.cgi
 libexec/cgi-bin/nut/upsstats.cgi
@@ -16,6 +16,3 @@ share/httpd/htdocs/nut/bottom.html
 share/httpd/htdocs/nut/header.html
 share/httpd/htdocs/nut/index.html
 share/httpd/htdocs/nut/nut-banner.png
-@dirrm share/httpd/htdocs/nut
-@dirrm share/httpd/htdocs
-@dirrm libexec/cgi-bin/nut

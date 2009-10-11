@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/23 07:40:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
 bin/cabocha
 bin/cabocha-config
 include/cabocha.h
@@ -17,6 +17,3 @@ libexec/cabocha/kc2cabocha.pl
 libexec/cabocha/kc2juman.pl
 man/man1/cabocha.1
 share/examples/cabocharc
-@dirrm libexec/cabocha
-@dirrm lib/cabocha/model
-@dirrm lib/cabocha

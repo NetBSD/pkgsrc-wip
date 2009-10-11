@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/18 02:59:37 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/kaa/__init__.py
 ${PYSITELIB}/kaa/__init__.pyc
 ${PYSITELIB}/kaa/__init__.pyo
@@ -141,9 +141,3 @@ ${PYSITELIB}/kaa/weakref.pyo
 ${PYSITELIB}/kaa/xmlutils.py
 ${PYSITELIB}/kaa/xmlutils.pyc
 ${PYSITELIB}/kaa/xmlutils.pyo
-@dirrm ${PYSITELIB}/kaa/notifier/pynotifier
-@dirrm ${PYSITELIB}/kaa/notifier
-@dirrm ${PYSITELIB}/kaa/input
-@dirrm ${PYSITELIB}/kaa/inotify
-@dirrm ${PYSITELIB}/kaa/distribution
-@dirrm ${PYSITELIB}/kaa

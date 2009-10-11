@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/14 11:46:31 shattered Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:32 thomasklausner Exp $
 bin/csoap-config
 bin/soapclient
 include/libcsoap-1.1/libcsoap/soap-admin.h
@@ -25,7 +25,3 @@ lib/libcsoap.la
 lib/libnanohttp.la
 lib/pkgconfig/libcsoap.pc
 share/aclocal/libcsoap.m4
-@dirrm include/nanohttp-1.1/nanohttp
-@dirrm include/nanohttp-1.1
-@dirrm include/libcsoap-1.1/libcsoap
-@dirrm include/libcsoap-1.1

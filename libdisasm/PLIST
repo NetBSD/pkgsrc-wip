@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/14 01:25:06 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
 bin/op-conv.pl
 bin/quikdis
 lib/libdisasm.so
 share/libdisasm/IntCode.txt
 share/libdisasm/Perl-Disassembler-HOWTO.txt
 share/libdisasm/libdisasm.txt
-@dirrm share/libdisasm

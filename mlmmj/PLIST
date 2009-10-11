@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/08 04:48:17 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:57 thomasklausner Exp $
 bin/mlmmj-bounce
 bin/mlmmj-list
 bin/mlmmj-maintd
@@ -44,5 +44,3 @@ share/mlmmj/text.skel/unsub-notsubscribed
 share/mlmmj/text.skel/unsub-ok
 share/mlmmj/text.skel/unsub-ok-digest
 share/mlmmj/text.skel/unsub-ok-nomail
-@dirrm share/mlmmj/text.skel
-@dirrm share/mlmmj

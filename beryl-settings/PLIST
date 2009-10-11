@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/25 07:07:58 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:29 thomasklausner Exp $
 bin/beryl-settings
 share/applications/beryl-settings.desktop
 share/bsm/images/accessibility.svg
@@ -79,6 +79,3 @@ share/locale/zh_TW/LC_MESSAGES/beryl-settings.mo
 @comment @dirrm share/locale/hu_HU/LC_MESSAGES
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/bsm/images
-@dirrm share/bsm
-@dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/05 04:21:07 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Extensible.hi
 lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Extensible.p_hi
 lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/HSextensible-exceptions-${PKGVERSION}.o
@@ -6,8 +6,3 @@ lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSextensible-excep
 lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/libHSextensible-exceptions-${PKGVERSION}_p.a
 lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/extensible-exceptions-${PKGVERSION}/LICENSE
-@dirrm share/doc/extensible-exceptions-${PKGVERSION}
-@dirrm lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception
-@dirrm lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}/Control
-@dirrm lib/extensible-exceptions-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/extensible-exceptions-${PKGVERSION}

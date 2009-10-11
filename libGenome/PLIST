@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/18 20:43:58 daprice Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:51 thomasklausner Exp $
 include/gn/gnABISource.h
 include/gn/gnBaseFeature.h
 include/gn/gnBaseFilter.h
@@ -45,4 +45,3 @@ include/gn/gnStringTools.h
 include/gn/gnTranslator.h
 include/gn/gnVersion.h
 lib/libGenome.la
-@dirrm include/gn

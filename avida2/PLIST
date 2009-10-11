@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 05:41:31 mjasm Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:28 thomasklausner Exp $
 share/avida/analyze_mode.html
 share/avida/analyze_samples.html
 share/avida/code_c++_intro.html
@@ -79,7 +79,3 @@ avida-2.0b1/inst_set.default
 avida-2.0b1/organism.default
 avida-2.0b1/preset_organisms/dummy
 avida-2.0b1/primitive
-@dirrm avida-2.0b1/preset_organisms
-@dirrm avida-2.0b1
-@dirrm share/avida/glossary
-@dirrm share/avida

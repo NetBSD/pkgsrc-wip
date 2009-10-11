@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/21 23:29:41 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:33 thomasklausner Exp $
 bin/dragbox
 ${PYSITELIB}/Dragbox/__init__.py
 ${PYSITELIB}/Dragbox/__init__.pyc
@@ -38,5 +38,3 @@ ${PYSITELIB}/Dragbox/window.pyc
 ${PYSITELIB}/Dragbox/window.pyo
 man/man1/dragbox.1
 share/dragbox/preferences.glade
-@dirrm share/dragbox
-@dirrm ${PYSITELIB}/Dragbox

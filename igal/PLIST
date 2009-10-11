@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/28 11:48:26 drue Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:46 thomasklausner Exp $
 bin/igal
 man/man1/igal.1
 share/igal/indextemplate.html
@@ -9,5 +9,3 @@ share/doc/igal/README
 share/doc/igal/THANKS
 share/doc/igal/ChangeLog
 share/doc/igal/COPYING
-@dirrm share/doc/igal
-@dirrm share/igal

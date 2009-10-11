@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/23 16:50:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:48 thomasklausner Exp $
 lib/java/log4j.jar
 share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/class-use/Main.html
 share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/doc-files/screen_01.png
@@ -432,58 +432,4 @@ share/examples/java/jakarta-log4j/sort4.properties
 share/examples/java/jakarta-log4j/subclass/MyLogger.java
 share/examples/java/jakarta-log4j/subclass/MyLoggerFactory.java
 share/examples/java/jakarta-log4j/subclass/MyLoggerTest.java
-@dirrm share/examples/java/jakarta-log4j/subclass
-@dirrm share/examples/java/jakarta-log4j/lf5/UsingSocketAppenders
-@dirrm share/examples/java/jakarta-log4j/lf5/UsingLogMonitorAdapter
-@dirrm share/examples/java/jakarta-log4j/lf5/OpeningLogFiles
-@dirrm share/examples/java/jakarta-log4j/lf5/InitUsingXMLPropertiesFile
-@dirrm share/examples/java/jakarta-log4j/lf5/InitUsingPropertiesFile
-@dirrm share/examples/java/jakarta-log4j/lf5/InitUsingMultipleAppenders
-@dirrm share/examples/java/jakarta-log4j/lf5/InitUsingLog4JProperties
-@dirrm share/examples/java/jakarta-log4j/lf5/InitUsingDefaultConfigurator
-@dirrm share/examples/java/jakarta-log4j/lf5
-@dirrm share/examples/java/jakarta-log4j/customLevel
-@dirrm share/examples/java/jakarta-log4j
-@dirrm share/doc/java/jakarta-log4j/lf5/images
-@dirrm share/doc/java/jakarta-log4j/lf5
-@dirrm share/doc/java/jakarta-log4j/images
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/xml/examples/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/xml/examples
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/xml/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/xml
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/varia/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/varia
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/spi/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/spi
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/performance/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/performance
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or/sax/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or/sax
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or/jms/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or/jms
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/or
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/nt/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/nt
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/net/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/net
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/lf5/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/lf5
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/jmx/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/jmx
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/jdbc/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/jdbc
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/helpers/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/helpers
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/config/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/config
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/doc-files
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/class-use
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw
-@dirrm share/doc/java/jakarta-log4j/api/org/apache/log4j
-@dirrm share/doc/java/jakarta-log4j/api/org/apache
-@dirrm share/doc/java/jakarta-log4j/api/org
-@dirrm share/doc/java/jakarta-log4j/api
-@dirrm share/doc/java/jakarta-log4j
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || true

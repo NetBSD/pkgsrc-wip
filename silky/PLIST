@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/25 14:52:24 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:18 thomasklausner Exp $
 bin/silky
 share/doc/silky/AUTHORS
 share/doc/silky/COPYING
@@ -27,6 +27,3 @@ share/silky/silky-query.glade
 share/silky/silky.glade
 share/silky/stock_people.png
 share/silky/tips.txt
-@dirrm share/silky
-@dirrm share/pixmaps/silky
-@dirrm share/doc/silky

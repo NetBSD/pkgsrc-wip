@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 00:46:04 bencollver Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
 bin/gplbasic
 share/doc/gplbasic/BUGS
 share/doc/gplbasic/Design.txt
@@ -116,7 +116,3 @@ share/gplbasic/test/test.sh
 share/gplbasic/test/update.sh
 share/gplbasic/test/write.bas
 share/gplbasic/test/write.out
-@dirrm share/gplbasic/test
-@dirrm share/gplbasic/bench
-@dirrm share/gplbasic
-@dirrm share/doc/gplbasic

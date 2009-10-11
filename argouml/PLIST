@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/18 22:38:44 daprice Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:27 thomasklausner Exp $
 bin/argouml
 lib/java/argouml/antlrall.jar
 lib/java/argouml/argouml.jar
@@ -6,4 +6,3 @@ lib/java/argouml/gef.jar
 lib/java/argouml/i18n.jar
 lib/java/argouml/nsuml.jar
 lib/java/argouml/ocl-argo.jar
-@dirrm lib/java/argouml

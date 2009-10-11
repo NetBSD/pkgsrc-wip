@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/31 23:22:45 netcap Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:34 thomasklausner Exp $
 ${EMACS_LISPPREFIX}/erc/erc-auto.el
 ${EMACS_LISPPREFIX}/erc/erc-auto.elc
 ${EMACS_LISPPREFIX}/erc/erc-autoaway.el
@@ -77,4 +77,3 @@ ${EMACS_LISPPREFIX}/erc/erc-xdcc.el
 ${EMACS_LISPPREFIX}/erc/erc-xdcc.elc
 ${EMACS_LISPPREFIX}/erc/erc.el
 ${EMACS_LISPPREFIX}/erc/erc.elc
-@dirrm ${EMACS_LISPPREFIX}/erc

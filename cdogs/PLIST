@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/29 05:03:30 dhowland Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:31 thomasklausner Exp $
 bin/cdogs
 share/cdogs/data/cdogs-icon.ico
 share/cdogs/data/cdogs_icon.bmp
@@ -34,11 +34,3 @@ share/doc/cdogs/doc/README
 share/doc/cdogs/doc/README_DATA
 share/doc/cdogs/doc/TODO
 share/doc/cdogs/doc/original_readme.txt
-@dirrm share/doc/cdogs/doc
-@dirrm share/doc/cdogs
-@dirrm share/cdogs/data/sounds
-@dirrm share/cdogs/data/music
-@dirrm share/cdogs/data/missions
-@dirrm share/cdogs/data/graphics
-@dirrm share/cdogs/data
-@dirrm share/cdogs

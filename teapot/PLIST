@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/30 10:18:33 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:21 thomasklausner Exp $
 bin/teapot
 man/man1/teapot.1
 share/doc/teapot/teapot.doc
@@ -14,5 +14,3 @@ share/examples/teapot/life
 share/examples/teapot/life.README
 share/examples/teapot/sqrt
 share/examples/teapot/sqrt.README
-@dirrm share/examples/teapot
-@dirrm share/doc/teapot

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.arm,v 1.2 2004/01/30 13:10:52 marttikuparinen Exp $
+@comment $NetBSD: PLIST.arm,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 include/asm/arch-anakin/dma.h
 include/asm/arch-anakin/hardware.h
 include/asm/arch-anakin/ide.h
@@ -408,25 +408,3 @@ include/asm/spinlock.h
 include/asm/therm.h
 include/asm/ucontext.h
 include/asm/vga.h
-@dirrm include/asm/arch-anakin
-@dirrm include/asm/arch-arc
-@dirrm include/asm/arch-at91rm9200
-@dirrm include/asm/arch-cl7500
-@dirrm include/asm/arch-clps711x
-@dirrm include/asm/arch-ebsa110
-@dirrm include/asm/arch-ebsa285
-@dirrm include/asm/arch-epxa
-@dirrm include/asm/arch-integrator
-@dirrm include/asm/arch-l7200
-@dirrm include/asm/arch-mx1ads
-@dirrm include/asm/arch-nexuspci
-@dirrm include/asm/arch-omaha
-@dirrm include/asm/arch-riscstation
-@dirrm include/asm/arch-rpc
-@dirrm include/asm/arch-sa1100
-@dirrm include/asm/arch-shark
-@dirrm include/asm/arch-tbox
-@dirrm include/asm/hardware
-@dirrm include/asm/mach
-@dirrm include/asm/proc-armo
-@dirrm include/asm/proc-armv

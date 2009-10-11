@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/07 00:05:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:02 thomasklausner Exp $
 bin/opentracker
 share/doc/opentracker/README
 share/doc/opentracker/README_v6
-@dirrm share/doc/opentracker

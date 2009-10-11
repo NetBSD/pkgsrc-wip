@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/29 05:50:22 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3.hi
 lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3.p_hi
 lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3/Connection.hi
@@ -18,9 +18,3 @@ lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHSHDBC-sqlite3-${PKGVERSION
 lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/libHSHDBC-sqlite3-${PKGVERSION}_p.a
 lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/HDBC-sqlite3-${PKGVERSION}/COPYRIGHT
-@dirrm share/doc/HDBC-sqlite3-${PKGVERSION}
-@dirrm lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Sqlite3
-@dirrm lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC
-@dirrm lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}/Database
-@dirrm lib/HDBC-sqlite3-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/HDBC-sqlite3-${PKGVERSION}

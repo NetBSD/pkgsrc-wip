@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:37 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:13 thomasklausner Exp $
 bin/realtimebattle
 games/RealTimeBattle/Arenas/Circle.arena
 games/RealTimeBattle/Arenas/Circles.arena
@@ -63,12 +63,3 @@ share/locale/ja/LC_MESSAGES/RealTimeBattle.mo
 share/locale/pl/LC_MESSAGES/RealTimeBattle.mo
 share/locale/pt/LC_MESSAGES/RealTimeBattle.mo
 share/locale/sv/LC_MESSAGES/RealTimeBattle.mo
-@dirrm include/RealTimeBattle
-@dirrm games/RealTimeBattle/Robots/seek_and_destroy
-@dirrm games/RealTimeBattle/Robots/rotate_and_fire
-@dirrm games/RealTimeBattle/Robots/empty
-@dirrm games/RealTimeBattle/Robots
-@dirrm games/RealTimeBattle/Documentation
-@dirrm games/RealTimeBattle/Arenas
-@dirrm games/RealTimeBattle
-@dirrm games

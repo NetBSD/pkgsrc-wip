@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/17 14:36:20 virtus Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:19 thomasklausner Exp $
 bin/srvx
 share/examples/srvx/sockcheck.conf.example
 share/examples/srvx/srvx.conf.example
@@ -7,5 +7,3 @@ share/srvx/global.help
 share/srvx/helpserv.help
 share/srvx/nickserv.help
 share/srvx/opserv.help
-@dirrm share/srvx
-@dirrm share/examples/srvx

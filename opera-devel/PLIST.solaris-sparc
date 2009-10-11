@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.1 2007/07/30 15:49:10 jlamwww Exp $
+@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/10/11 10:45:03 thomasklausner Exp $
 bin/opera
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/missingsyms.so
 lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1/opera
@@ -117,18 +117,5 @@ share/opera/styles/user/showstructure.css
 share/opera/styles/user/textonly.css
 share/opera/styles/user/userstyle.ini
 share/opera/styles/wml.css
-@dirrm share/opera/styles/user
-@dirrm share/opera/styles
-@dirrm share/opera/skin
-@dirrm share/opera/locale/en
-@dirrm share/opera/locale
-@dirrm share/opera/java
-@dirrm share/opera/ini
-@dirrm share/opera/images
-@dirrm share/opera/help
-@dirrm share/opera/config
-@dirrm share/opera
-@dirrm share/doc/opera
-@dirrm lib/opera/${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1
 @comment @dirrm lib/opera/plugins
 @comment @dirrm lib/opera

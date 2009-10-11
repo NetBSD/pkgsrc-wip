@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/02 09:08:50 x400 Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:19 thomasklausner Exp $
 include/spandsp.h
 include/spandsp/adsi.h
 include/spandsp/arctan2.h
@@ -126,5 +126,3 @@ include/spandsp/vector_int.h
 include/spandsp/version.h
 lib/libspandsp.la
 lib/pkgconfig/spandsp.pc
-@dirrm include/spandsp/private
-@dirrm include/spandsp

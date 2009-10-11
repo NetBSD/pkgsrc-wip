@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 22:52:04 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:48 thomasklausner Exp $
 lib/io/addons/SystemCall/_build/dll/libIoSystemCall.so
 lib/io/addons/SystemCall/_build/lib/libIoSystemCall.a
 lib/io/addons/SystemCall/build.io
 lib/io/addons/SystemCall/depends
 lib/io/addons/SystemCall/io/SystemCall.io
-@dirrm lib/io/addons/SystemCall/io
-@dirrm lib/io/addons/SystemCall/_build/lib
-@dirrm lib/io/addons/SystemCall/_build/dll
-@dirrm lib/io/addons/SystemCall/_build
-@dirrm lib/io/addons/SystemCall

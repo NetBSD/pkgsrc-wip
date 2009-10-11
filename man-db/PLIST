@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/18 00:46:35 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:55 thomasklausner Exp $
 bin/apropos
 bin/catman
 bin/lexgrog
@@ -65,22 +65,4 @@ share/locale/it/LC_MESSAGES/man-db.mo
 share/locale/ja/LC_MESSAGES/man-db.mo
 share/locale/pt_BR/LC_MESSAGES/man-db.mo
 share/locale/sv/LC_MESSAGES/man-db.mo
-@dirrm share/examples/man-db
-@dirrm man/ja_JP.eucJP/man8
-@dirrm man/ja_JP.eucJP/man5
-@dirrm man/ja_JP.eucJP/man1
-@dirrm man/ja_JP.eucJP
-@dirrm man/it_IT.88591/man8
-@dirrm man/it_IT.88591/man5
-@dirrm man/it_IT.88591/man1
-@dirrm man/it_IT.88591
-@dirrm man/es_ES.88591/man8
-@dirrm man/es_ES.88591/man5
-@dirrm man/es_ES.88591/man1
-@dirrm man/es_ES.88591
-@dirrm man/de_DE.88591/man8
-@dirrm man/de_DE.88591/man5
-@dirrm man/de_DE.88591/man1
-@dirrm man/de_DE.88591
 @exec ${MKDIR} %D/lib/man-db
-@dirrm lib/man-db

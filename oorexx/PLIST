@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/26 15:23:05 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 bin/oorexx-config
 bin/rexx
 bin/rexx.cat
@@ -43,5 +43,3 @@ share/ooRexx/semcls.rex
 share/ooRexx/stack.rex
 share/ooRexx/usecomp.rex
 share/ooRexx/usepipe.rex
-@dirrm share/ooRexx
-@dirrm lib/ooRexx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/04 18:29:09 lexort Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:22 thomasklausner Exp $
 ${PYSITELIB}/sensitivetickets-0.1-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/sensitivetickets-0.1-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/sensitivetickets-0.1-py2.5.egg-info/dependency_links.txt
@@ -11,4 +11,3 @@ ${PYSITELIB}/sensitivetickets/__init__.pyo
 ${PYSITELIB}/sensitivetickets/sensitivetickets.py
 ${PYSITELIB}/sensitivetickets/sensitivetickets.pyc
 ${PYSITELIB}/sensitivetickets/sensitivetickets.pyo
-@dirrm ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info

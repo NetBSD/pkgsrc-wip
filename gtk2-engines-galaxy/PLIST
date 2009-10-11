@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/23 05:59:40 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:41 thomasklausner Exp $
 lib/gtk-2.0/2.4.0/engines/libgalaxy.la
 share/themes/Galaxy/gtk-2.0/gtkrc
-@dirrm share/themes/Galaxy/gtk-2.0
-@dirrm share/themes/Galaxy
 @comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/engines

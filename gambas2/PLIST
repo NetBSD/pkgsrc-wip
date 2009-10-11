@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/29 12:49:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
 bin/gambas-database-manager.gambas
 bin/gambas2.gambas
 bin/gba2
@@ -3188,241 +3188,51 @@ share/gambas2/info/gb.settings.info
 share/gambas2/info/gb.settings.list
 share/gambas2/info/gb.vb.info
 share/gambas2/info/gb.vb.list
-@dirrm share/gambas2/info
 @exec ${MKDIR} %D/share/gambas2/help/hello-world
-@dirrm share/gambas2/help/hello-world
-@dirrm share/gambas2/help/.rsrc/WidgetsListBox
-@dirrm share/gambas2/help/.rsrc/WebSiteScreenshots
-@dirrm share/gambas2/help/.rsrc/WebHome
-@dirrm share/gambas2/help/.rsrc/VisualIntroductionToGambas
-@dirrm share/gambas2/help/.rsrc/VariablesConvertVal
-@dirrm share/gambas2/help/.rsrc/VariablesConvertCstr
-@dirrm share/gambas2/help/.rsrc/VariablesConvertCint
-@dirrm share/gambas2/help/.rsrc/VariablesCollection
-@dirrm share/gambas2/help/.rsrc/VariablesArrayMyDatatype
-@dirrm share/gambas2/help/.rsrc/VariablesArray
-@dirrm share/gambas2/help/.rsrc/Timer
-@dirrm share/gambas2/help/.rsrc/TextLabels
-@dirrm share/gambas2/help/.rsrc/StringsDivideWords
-@dirrm share/gambas2/help/.rsrc/StringsDivideChar
-@dirrm share/gambas2/help/.rsrc/StringsCompareLike
-@dirrm share/gambas2/help/.rsrc/StringsCatenate
-@dirrm share/gambas2/help/.rsrc/RadioButtons
-@dirrm share/gambas2/help/.rsrc/ProgressBar
-@dirrm share/gambas2/help/.rsrc/Playground
-@dirrm share/gambas2/help/.rsrc/PictureOnButtons
-@dirrm share/gambas2/help/.rsrc/OrganizeRadioButtons
-@dirrm share/gambas2/help/.rsrc/NewForm
-@dirrm share/gambas2/help/.rsrc/ModalForm
-@dirrm share/gambas2/help/.rsrc/MiscFilesOpen
-@dirrm share/gambas2/help/.rsrc/MiscFilesMydatatype
-@dirrm share/gambas2/help/.rsrc/MiscFilesLoadSave
-@dirrm share/gambas2/help/.rsrc/MiscFilesLoadArray
-@dirrm share/gambas2/help/.rsrc/MiscFilesDialog
-@dirrm share/gambas2/help/.rsrc/MiscExec
-@dirrm share/gambas2/help/.rsrc/MiscApplicationArgs
-@dirrm share/gambas2/help/.rsrc/MakeMessages
-@dirrm share/gambas2/help/.rsrc/MakeMenu
-@dirrm share/gambas2/help/.rsrc/InputBox
-@dirrm share/gambas2/help/.rsrc/InfoExtract
-@dirrm share/gambas2/help/.rsrc/HowToTranslateGambas
-@dirrm share/gambas2/help/.rsrc/HowDoesGambasWork
-@dirrm share/gambas2/help/.rsrc/HowDoIUsePublicAndPrivateVariables
-@dirrm share/gambas2/help/.rsrc/HowDoIUseOptionalParameters
-@dirrm share/gambas2/help/.rsrc/HowDoIUseModules
-@dirrm share/gambas2/help/.rsrc/HowDoIUseLocalAndGlobalVariables
-@dirrm share/gambas2/help/.rsrc/HowDoIUseConstructors
-@dirrm share/gambas2/help/.rsrc/HowDoITest1
-@dirrm share/gambas2/help/.rsrc/HowDoISayHelloWorld
-@dirrm share/gambas2/help/.rsrc/HowDoIPassAValue
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeMoreThanOneObjectOfAClass
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeAnObjectOfAClass
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeAnArrayDatatype
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeAnArray
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeAFunction
-@dirrm share/gambas2/help/.rsrc/HowDoIMakeACollection
-@dirrm share/gambas2/help/.rsrc/HowDoIDoTransparency
-@dirrm share/gambas2/help/.rsrc/HowDoIDivideAStringIntoWords
-@dirrm share/gambas2/help/.rsrc/HowDoIDivideAStringIntoChars
-@dirrm share/gambas2/help/.rsrc/HowDoICreateObjectsDynamically
-@dirrm share/gambas2/help/.rsrc/HowDoIConvertVbProjects
-@dirrm share/gambas2/help/.rsrc/HowDoIConvertStringsWithVal
-@dirrm share/gambas2/help/.rsrc/HowDoIConvertStringsToInt
-@dirrm share/gambas2/help/.rsrc/HowDoIConvertDataToStrings
-@dirrm share/gambas2/help/.rsrc/HowDoIConcatenateStrings
-@dirrm share/gambas2/help/.rsrc/HowDoICompareStringsUsingLike
-@dirrm share/gambas2/help/.rsrc/GridView
-@dirrm share/gambas2/help/.rsrc/Frm2form
-@dirrm share/gambas2/help/.rsrc/EventMousePosition
-@dirrm share/gambas2/help/.rsrc/EventMouseDown
-@dirrm share/gambas2/help/.rsrc/EventMouseButtonArgument
-@dirrm share/gambas2/help/.rsrc/EventButtonArgument
-@dirrm share/gambas2/help/.rsrc/DrawFigures
-@dirrm share/gambas2/help/.rsrc/DifferencesFromVB
-@dirrm share/gambas2/help/.rsrc/ChristopheBONNET
-@dirrm share/gambas2/help/.rsrc/CheckBox
-@dirrm share/gambas2/help/.rsrc
-@dirrm share/gambas2/help
-@dirrm share/gambas2/examples/Video/MyWebCam/.gambas
-@dirrm share/gambas2/examples/Video/MyWebCam
 @exec ${MKDIR} %D/share/gambas2/examples/Video/MoviePlayer/.lang
-@dirrm share/gambas2/examples/Video/MoviePlayer/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Video/MoviePlayer/.gambas
-@dirrm share/gambas2/examples/Video/MoviePlayer/.gambas
-@dirrm share/gambas2/examples/Video/MoviePlayer
-@dirrm share/gambas2/examples/Video
-@dirrm share/gambas2/examples/Sound/MusicPlayer/.lang
-@dirrm share/gambas2/examples/Sound/MusicPlayer/.icon
 @exec ${MKDIR} %D/share/gambas2/examples/Sound/MusicPlayer/.gambas
-@dirrm share/gambas2/examples/Sound/MusicPlayer/.gambas
-@dirrm share/gambas2/examples/Sound/MusicPlayer
 @exec ${MKDIR} %D/share/gambas2/examples/Sound/CDPlayer/.gambas
-@dirrm share/gambas2/examples/Sound/CDPlayer/.gambas
-@dirrm share/gambas2/examples/Sound/CDPlayer
-@dirrm share/gambas2/examples/Sound
 @exec ${MKDIR} %D/share/gambas2/examples/OpenGL/GambasGears/.gambas
-@dirrm share/gambas2/examples/OpenGL/GambasGears/.gambas
-@dirrm share/gambas2/examples/OpenGL/GambasGears
-@dirrm share/gambas2/examples/OpenGL
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/WebBrowser/.gambas
-@dirrm share/gambas2/examples/Networking/WebBrowser/.gambas
-@dirrm share/gambas2/examples/Networking/WebBrowser
-@dirrm share/gambas2/examples/Networking/UDPServerClient/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/UDPServerClient/.gambas
-@dirrm share/gambas2/examples/Networking/UDPServerClient/.gambas
-@dirrm share/gambas2/examples/Networking/UDPServerClient
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/ServerSocket/.gambas
-@dirrm share/gambas2/examples/Networking/ServerSocket/.gambas
-@dirrm share/gambas2/examples/Networking/ServerSocket
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/SerialPort/.gambas
-@dirrm share/gambas2/examples/Networking/SerialPort/.gambas
-@dirrm share/gambas2/examples/Networking/SerialPort
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/HTTPPost/.gambas
-@dirrm share/gambas2/examples/Networking/HTTPPost/.gambas
-@dirrm share/gambas2/examples/Networking/HTTPPost
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/HTTPGet/.gambas
-@dirrm share/gambas2/examples/Networking/HTTPGet/.gambas
-@dirrm share/gambas2/examples/Networking/HTTPGet
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/DnsClient/.gambas
-@dirrm share/gambas2/examples/Networking/DnsClient/.gambas
-@dirrm share/gambas2/examples/Networking/DnsClient
 @exec ${MKDIR} %D/share/gambas2/examples/Networking/ClientSocket/.gambas
-@dirrm share/gambas2/examples/Networking/ClientSocket/.gambas
-@dirrm share/gambas2/examples/Networking/ClientSocket
-@dirrm share/gambas2/examples/Networking
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Notepad/.lang
-@dirrm share/gambas2/examples/Miscellaneous/Notepad/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Notepad/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Notepad/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Notepad
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/HighlightEditor/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/HighlightEditor/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/HighlightEditor
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Explorer/.lang
-@dirrm share/gambas2/examples/Miscellaneous/Explorer/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Explorer/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Explorer/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Explorer
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Evaluator/.lang
-@dirrm share/gambas2/examples/Miscellaneous/Evaluator/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Miscellaneous/Evaluator/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Evaluator/.gambas
-@dirrm share/gambas2/examples/Miscellaneous/Evaluator
-@dirrm share/gambas2/examples/Miscellaneous
 @exec ${MKDIR} %D/share/gambas2/examples/Games/Solitaire/.gambas
-@dirrm share/gambas2/examples/Games/Solitaire/.gambas
-@dirrm share/gambas2/examples/Games/Solitaire
 @exec ${MKDIR} %D/share/gambas2/examples/Games/Snake/.gambas
-@dirrm share/gambas2/examples/Games/Snake/.gambas
-@dirrm share/gambas2/examples/Games/Snake
 @exec ${MKDIR} %D/share/gambas2/examples/Games/RobotFindsKitten/.gambas
-@dirrm share/gambas2/examples/Games/RobotFindsKitten/.gambas
-@dirrm share/gambas2/examples/Games/RobotFindsKitten
-@dirrm share/gambas2/examples/Games/DeepSpace/object.data
-@dirrm share/gambas2/examples/Games/DeepSpace/images
-@dirrm share/gambas2/examples/Games/DeepSpace/doc/.html_files
-@dirrm share/gambas2/examples/Games/DeepSpace/doc
-@dirrm share/gambas2/examples/Games/DeepSpace/.gambas
-@dirrm share/gambas2/examples/Games/DeepSpace
-@dirrm share/gambas2/examples/Games
-@dirrm share/gambas2/examples/Exec/Console/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Exec/Console/.gambas
-@dirrm share/gambas2/examples/Exec/Console/.gambas
-@dirrm share/gambas2/examples/Exec/Console
-@dirrm share/gambas2/examples/Exec
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/Sensor/.lang
-@dirrm share/gambas2/examples/Drawing/Sensor/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/Sensor/.gambas
-@dirrm share/gambas2/examples/Drawing/Sensor/.gambas
-@dirrm share/gambas2/examples/Drawing/Sensor
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/OnScreenDisplay/.lang
-@dirrm share/gambas2/examples/Drawing/OnScreenDisplay/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/OnScreenDisplay/.gambas
-@dirrm share/gambas2/examples/Drawing/OnScreenDisplay/.gambas
-@dirrm share/gambas2/examples/Drawing/OnScreenDisplay
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/ImageViewer/.lang
-@dirrm share/gambas2/examples/Drawing/ImageViewer/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/ImageViewer/.gambas
-@dirrm share/gambas2/examples/Drawing/ImageViewer/.gambas
-@dirrm share/gambas2/examples/Drawing/ImageViewer
-@dirrm share/gambas2/examples/Drawing/Clock/img
-@dirrm share/gambas2/examples/Drawing/Clock/.icon
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/Clock/.gambas
-@dirrm share/gambas2/examples/Drawing/Clock/.gambas
-@dirrm share/gambas2/examples/Drawing/Clock
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/Chart/.gambas
-@dirrm share/gambas2/examples/Drawing/Chart/.gambas
-@dirrm share/gambas2/examples/Drawing/Chart
 @exec ${MKDIR} %D/share/gambas2/examples/Drawing/AnalogWatch/.gambas
-@dirrm share/gambas2/examples/Drawing/AnalogWatch/.gambas
-@dirrm share/gambas2/examples/Drawing/AnalogWatch
-@dirrm share/gambas2/examples/Drawing
 @exec ${MKDIR} %D/share/gambas2/examples/Database/Database/.lang
-@dirrm share/gambas2/examples/Database/Database/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Database/Database/.gambas
-@dirrm share/gambas2/examples/Database/Database/.gambas
-@dirrm share/gambas2/examples/Database/Database
-@dirrm share/gambas2/examples/Database/DataReportExample/pic
 @exec ${MKDIR} %D/share/gambas2/examples/Database/DataReportExample/.gambas
-@dirrm share/gambas2/examples/Database/DataReportExample/.gambas
-@dirrm share/gambas2/examples/Database/DataReportExample
-@dirrm share/gambas2/examples/Database
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/TreeView/.gambas
-@dirrm share/gambas2/examples/Basic/TreeView/.gambas
-@dirrm share/gambas2/examples/Basic/TreeView
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/Timer/.lang
-@dirrm share/gambas2/examples/Basic/Timer/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/Timer/.gambas
-@dirrm share/gambas2/examples/Basic/Timer/.gambas
-@dirrm share/gambas2/examples/Basic/Timer
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/Object/.lang
-@dirrm share/gambas2/examples/Basic/Object/.lang
-@dirrm share/gambas2/examples/Basic/Object/.gambas
-@dirrm share/gambas2/examples/Basic/Object
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/DragNDrop/.gambas
-@dirrm share/gambas2/examples/Basic/DragNDrop/.gambas
-@dirrm share/gambas2/examples/Basic/DragNDrop
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/Collection/.lang
-@dirrm share/gambas2/examples/Basic/Collection/.lang
-@dirrm share/gambas2/examples/Basic/Collection/.gambas
-@dirrm share/gambas2/examples/Basic/Collection
-@dirrm share/gambas2/examples/Basic/Blights/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Basic/Blights/.gambas
-@dirrm share/gambas2/examples/Basic/Blights/.gambas
-@dirrm share/gambas2/examples/Basic/Blights
-@dirrm share/gambas2/examples/Basic
 @exec ${MKDIR} %D/share/gambas2/examples/Automation/Scripting/.lang
-@dirrm share/gambas2/examples/Automation/Scripting/.lang
 @exec ${MKDIR} %D/share/gambas2/examples/Automation/Scripting/.gambas
-@dirrm share/gambas2/examples/Automation/Scripting/.gambas
-@dirrm share/gambas2/examples/Automation/Scripting
 @exec ${MKDIR} %D/share/gambas2/examples/Automation/KateBrowser/.lang
-@dirrm share/gambas2/examples/Automation/KateBrowser/.lang
-@dirrm share/gambas2/examples/Automation/KateBrowser/.icon
 @exec ${MKDIR} %D/share/gambas2/examples/Automation/KateBrowser/.gambas
-@dirrm share/gambas2/examples/Automation/KateBrowser/.gambas
-@dirrm share/gambas2/examples/Automation/KateBrowser
-@dirrm share/gambas2/examples/Automation
-@dirrm share/gambas2/examples
-@dirrm share/gambas2
-@dirrm lib/gambas2

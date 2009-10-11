@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/14 06:29:49 heidnes Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gnokii
 bin/sendsms
 lib/libgnokii.la
@@ -70,5 +70,3 @@ share/locale/sk/LC_MESSAGES/gnokii.mo
 share/locale/sl/LC_MESSAGES/gnokii.mo
 share/locale/sv/LC_MESSAGES/gnokii.mo
 share/locale/zh_CN/LC_MESSAGES/gnokii.mo
-@dirrm share/doc/gnokii
-@dirrm include/gnokii

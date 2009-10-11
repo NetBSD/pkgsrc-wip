@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/08/02 17:57:30 fulviociriaco Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
 bin/babel
 bin/obchiral
 bin/obconformer
@@ -199,19 +199,3 @@ share/openbabel/${PKGVERSION}/ringtyp.txt
 share/openbabel/${PKGVERSION}/space-groups.txt
 share/openbabel/${PKGVERSION}/torlib.txt
 share/openbabel/${PKGVERSION}/types.txt
-@dirrm share/openbabel/${PKGVERSION}
-@dirrm share/openbabel
-@dirrm lib/openbabel/${PKGVERSION}
-@dirrm lib/openbabel
-@dirrm include/openbabel-2.0/openbabel/math
-@dirrm include/openbabel-2.0/openbabel
-@dirrm include/openbabel-2.0
-@dirrm include/inchi102
-@dirrm emul/linux/usr/lib/GL
-@dirrm emul/linux/usr/lib
-@dirrm emul/linux/usr/include/GL
-@dirrm emul/linux/usr/include
-@dirrm emul/linux/usr/X11R6/lib/modules/dri
-@dirrm emul/linux/usr/X11R6/lib/modules
-@dirrm emul/linux/usr/X11R6/lib
-@dirrm emul/linux/etc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/02 03:23:36 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
 lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/BitBuilder.hi
 lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/BitBuilder.p_hi
 lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/BitPut.hi
@@ -22,9 +22,3 @@ lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-strict-${PKGVERSI
 lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/libHSbinary-strict-${PKGVERSION}_p.a
 lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/binary-strict-${PKGVERSION}/LICENSE
-@dirrm share/doc/binary-strict-${PKGVERSION}
-@dirrm lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary/Strict
-@dirrm lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Binary
-@dirrm lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}/Data
-@dirrm lib/binary-strict-${PKGVERSION}/${HASKELL_VERSION}
-@dirrm lib/binary-strict-${PKGVERSION}

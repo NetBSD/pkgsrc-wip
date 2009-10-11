@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/06 12:33:46 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:57 thomasklausner Exp $
 ${MINGW_TARGET}/bin/mingwm10.dll
 ${MINGW_TARGET}/include/assert.h
 ${MINGW_TARGET}/include/conio.h
@@ -89,8 +89,3 @@ ${MINGW_TARGET}/lib/libmsvcr80d.a
 ${MINGW_TARGET}/lib/libmsvcr90.a
 ${MINGW_TARGET}/lib/libmsvcr90d.a
 ${MINGW_TARGET}/lib/txtmode.o
-@dirrm ${MINGW_TARGET}/include/sys
-@dirrm ${MINGW_TARGET}/include
-@dirrm ${MINGW_TARGET}/lib
-@dirrm ${MINGW_TARGET}/bin
-@dirrm ${MINGW_TARGET}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/19 05:19:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:25 thomasklausner Exp $
 bin/pythonol
 ${PYSITELIB}/Pythonol/INSTALL-ME.sh
 ${PYSITELIB}/Pythonol/PyInstallShield
@@ -225,14 +225,3 @@ ${PYSITELIB}/Pythonol/user-doc/Pythonol-LICENSE
 ${PYSITELIB}/Pythonol/user-doc/SQLite-LICENSE
 ${PYSITELIB}/Pythonol/verb_conjugate.py
 ${PYSITELIB}/Pythonol/verb_families.py
-@dirrm ${PYSITELIB}/Pythonol/user-doc
-@dirrm ${PYSITELIB}/Pythonol/theme/gtk
-@dirrm ${PYSITELIB}/Pythonol/theme
-@dirrm ${PYSITELIB}/Pythonol/pixmaps
-@dirrm ${PYSITELIB}/Pythonol/icons
-@dirrm ${PYSITELIB}/Pythonol/festival
-@dirrm ${PYSITELIB}/Pythonol/docs/images
-@dirrm ${PYSITELIB}/Pythonol/docs
-@dirrm ${PYSITELIB}/Pythonol/dictionary
-@dirrm ${PYSITELIB}/Pythonol/datafiles
-@dirrm ${PYSITELIB}/Pythonol

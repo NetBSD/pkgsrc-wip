@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/28 11:45:22 milosn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 ${PYSITELIB}/vertex/q2qstandalone.py
 ${PYSITELIB}/vertex/__init__.py
 ${PYSITELIB}/vertex/_version.py
@@ -167,11 +167,3 @@ ${PYSITELIB}/vertex/test/test_q2q.pyo
 ${PYSITELIB}/vertex/test/test_sigma.pyo
 ${PYSITELIB}/vertex/test/test_statemachine.pyo
 ${PYSITELIB}/vertex/test/test_subproducer.pyo
-@dirrm ${PYSITELIB}/vertex/test
-@dirrm ${PYSITELIB}/vertex/scripts
-@dirrm ${PYSITELIB}/vertex
-@dirrm ${PYSITELIB}/build/lib/vertex/test
-@dirrm ${PYSITELIB}/build/lib/vertex/scripts
-@dirrm ${PYSITELIB}/build/lib/vertex
-@dirrm ${PYSITELIB}/build/lib
-@dirrm ${PYSITELIB}/build

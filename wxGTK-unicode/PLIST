@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/13 23:50:44 shattered Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:25 thomasklausner Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.8
@@ -581,23 +581,3 @@ share/locale/tr/LC_MESSAGES/wxstd.mo
 share/locale/uk/LC_MESSAGES/wxstd.mo
 share/locale/zh_CN/LC_MESSAGES/wxstd.mo
 share/locale/zh_TW/LC_MESSAGES/wxstd.mo
-@dirrm share/doc/wxGTK-unicode
-@dirrm share/bakefile/presets
-@dirrm share/bakefile
-@dirrm lib/wx/include/gtk2-unicode-release-2.8/wx
-@dirrm lib/wx/include/gtk2-unicode-release-2.8
-@dirrm lib/wx/include
-@dirrm lib/wx/config
-@dirrm lib/wx
-@dirrm include/wx-2.8/wx/xrc
-@dirrm include/wx-2.8/wx/xml
-@dirrm include/wx-2.8/wx/unix
-@dirrm include/wx-2.8/wx/richtext
-@dirrm include/wx-2.8/wx/protocol
-@dirrm include/wx-2.8/wx/html
-@dirrm include/wx-2.8/wx/gtk/gnome
-@dirrm include/wx-2.8/wx/gtk
-@dirrm include/wx-2.8/wx/generic
-@dirrm include/wx-2.8/wx/aui
-@dirrm include/wx-2.8/wx
-@dirrm include/wx-2.8

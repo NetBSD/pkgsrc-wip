@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/28 17:34:03 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/10/11 10:44:40 thomasklausner Exp $
 bin/gnump3d
 bin/gnump3d-index
 bin/gnump3d-top
@@ -363,23 +363,3 @@ share/gnump3d/redgrey/search.html
 share/gnump3d/redgrey/stats.html
 share/gnump3d/redgrey/tagbrowse.html
 @exec ${MKDIR} %D/share/gnump3d/simple
-@dirrm share/gnump3d/simple
-@dirrm share/gnump3d/redgrey
-@dirrm share/gnump3d/nausicaa
-@dirrm share/gnump3d/handheld
-@dirrm share/gnump3d/dotNET/images
-@dirrm share/gnump3d/dotNET
-@dirrm share/gnump3d/default
-@dirrm share/gnump3d/Thexder
-@dirrm share/gnump3d/Tabular
-@dirrm share/gnump3d/SchwartzNGrau
-@dirrm share/gnump3d/Nomad
-@dirrm share/gnump3d/LaFrere
-@dirrm share/gnump3d/Clean
-@dirrm share/gnump3d/BlueBox
-@dirrm share/gnump3d/Liquid
-@dirrm share/gnump3d/Musicus
-@dirrm share/gnump3d
-@dirrm lib/perl5/5.8.0/gnump3d/plugins
-@dirrm lib/perl5/5.8.0/gnump3d/lang
-@dirrm lib/perl5/5.8.0/gnump3d

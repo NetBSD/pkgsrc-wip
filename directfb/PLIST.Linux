@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2004/09/23 05:59:32 jlamwww Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3 2009/10/11 10:44:33 thomasklausner Exp $
 bin/dfbdump
 bin/dfbg
 bin/dfbinfo
@@ -97,22 +97,3 @@ man/man1/dfbg.1
 man/man1/directfb-csource.1
 man/man5/directfbrc.5
 share/${PKGNAME}/cursor.dat
-@dirrm share/${PKGNAME}
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBVideoProvider
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBImageProvider
-@dirrm lib/${PKGNAME}/interfaces/IDirectFBFont
-@dirrm lib/${PKGNAME}/interfaces
-@dirrm lib/${PKGNAME}/inputdrivers
-@dirrm lib/${PKGNAME}/gfxdrivers
-@dirrm lib/${PKGNAME}
-@dirrm include/directfb-internal/windows
-@dirrm include/directfb-internal/misc
-@dirrm include/directfb-internal/media
-@dirrm include/directfb-internal/input
-@dirrm include/directfb-internal/gfx
-@dirrm include/directfb-internal/display
-@dirrm include/directfb-internal/core/fusion
-@dirrm include/directfb-internal/core/fbdev
-@dirrm include/directfb-internal/core
-@dirrm include/directfb-internal
-@dirrm include/directfb

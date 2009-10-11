@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/02 02:14:43 dawszy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mtrack
 bin/tle2mtrack
 etc/mtrackrc
@@ -25,5 +25,3 @@ share/mtrack/visibility.help
 share/mtrack/world.pbm
 var/mtrack/locfile
 var/mtrack/satfile
-@dirrm var/mtrack
-@dirrm share/mtrack

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/29 11:37:59 leuzi Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:17 thomasklausner Exp $
 bin/scribus
 include/scribus/about.h
 include/scribus/actionmanager.h
@@ -999,39 +999,3 @@ share/scribus/templates/textbased/author.jpg
 share/scribus/templates/textbased/textbased.png
 share/scribus/templates/textbased/textbased.sla.gz
 share/scribus/templates/textbased/textbasedtn.png
-@dirrm share/scribus/templates/textbased
-@dirrm share/scribus/templates/sc_presentation
-@dirrm share/scribus/templates/nl2
-@dirrm share/scribus/templates/nl1
-@dirrm share/scribus/templates/br1
-@dirrm share/scribus/templates
-@dirrm share/scribus/scripts
-@dirrm share/scribus/samples
-@dirrm share/scribus/plugins
-@dirrm share/scribus/loremipsum
-@dirrm share/scribus/icons
-@dirrm share/scribus/dtd
-@dirrm share/scribus
-@dirrm share/doc/scribus-${PKGVERSION}/pl/tutorials/scribus-short-words
-@dirrm share/doc/scribus-${PKGVERSION}/pl/tutorials
-@dirrm share/doc/scribus-${PKGVERSION}/pl
-@dirrm share/doc/scribus-${PKGVERSION}/fr/tutorials/scribus-short-words
-@dirrm share/doc/scribus-${PKGVERSION}/fr/tutorials
-@dirrm share/doc/scribus-${PKGVERSION}/fr
-@dirrm share/doc/scribus-${PKGVERSION}/en/tutorials/scribus-short-words
-@dirrm share/doc/scribus-${PKGVERSION}/en/tutorials
-@dirrm share/doc/scribus-${PKGVERSION}/en/images
-@dirrm share/doc/scribus-${PKGVERSION}/en
-@dirrm share/doc/scribus-${PKGVERSION}/de
-@dirrm share/doc/scribus-${PKGVERSION}/cs/tutorials/scribus-short-words
-@dirrm share/doc/scribus-${PKGVERSION}/cs/tutorials
-@dirrm share/doc/scribus-${PKGVERSION}/cs
-@dirrm share/doc/scribus-${PKGVERSION}
-@dirrm lib/scribus/swatches
-@dirrm lib/scribus/profiles
-@dirrm lib/scribus/plugins/gettext
-@dirrm lib/scribus/plugins
-@dirrm lib/scribus/keysets
-@dirrm lib/scribus/dicts
-@dirrm lib/scribus
-@dirrm include/scribus

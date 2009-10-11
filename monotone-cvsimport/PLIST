@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/03/26 04:07:11 bsadewitz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:58 thomasklausner Exp $
 bin/mtn
 info/monotone.info
 share/doc/monotone/figures/branch-heads.png
@@ -77,8 +77,3 @@ share/monotone/contrib/op2calltree.py
 share/monotone/contrib/parse-accounting.pl
 share/monotone/contrib/perf-test.sh
 share/monotone/contrib/recreate-manifest-tables.sh
-@dirrm share/monotone/contrib/command
-@dirrm share/monotone/contrib
-@dirrm share/monotone
-@dirrm share/doc/monotone/figures
-@dirrm share/doc/monotone

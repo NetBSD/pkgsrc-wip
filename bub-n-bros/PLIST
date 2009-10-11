@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/15 00:19:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
 games/bubbros/BubBob.icns
 games/bubbros/BubBob.py
 games/bubbros/BubBob.pyo
@@ -383,29 +383,3 @@ games/bubbros/metaserver/pipelayer.py
 games/bubbros/metaserver/pipelayer.pyo
 games/bubbros/metaserver/socketoverudp.py
 games/bubbros/metaserver/socketoverudp.pyo
-@dirrm games/bubbros/metaserver
-@dirrm games/bubbros/java
-@dirrm games/bubbros/http2/sf
-@dirrm games/bubbros/http2/data
-@dirrm games/bubbros/http2
-@dirrm games/bubbros/doc
-@dirrm games/bubbros/display/windows
-@dirrm games/bubbros/display
-@dirrm games/bubbros/common
-@dirrm games/bubbros/bubbob/tmp
-@dirrm games/bubbros/bubbob/sounds
-@dirrm games/bubbros/bubbob/music
-@dirrm games/bubbros/bubbob/levels
-@dirrm games/bubbros/bubbob/images
-@dirrm games/bubbros/bubbob/ext7
-@dirrm games/bubbros/bubbob/ext6
-@dirrm games/bubbros/bubbob/ext5
-@dirrm games/bubbros/bubbob/ext4
-@dirrm games/bubbros/bubbob/ext3
-@dirrm games/bubbros/bubbob/ext2
-@dirrm games/bubbros/bubbob/ext1
-@dirrm games/bubbros/bubbob/doc/images
-@dirrm games/bubbros/bubbob/doc
-@dirrm games/bubbros/bubbob
-@dirrm games/bubbros
-@dirrm games

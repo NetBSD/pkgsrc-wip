@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/21 01:05:11 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:20 thomasklausner Exp $
 bin/synfigstudio
 include/synfigapp-0.0/synfigapp/action.h
 include/synfigapp-0.0/synfigapp/action_param.h
@@ -147,6 +147,3 @@ share/pixmaps/synfigstudio/valuenode_icon.png
 share/pixmaps/synfigstudio/vector_icon.png
 share/pixmaps/synfigstudio/width_icon.png
 share/pixmaps/synfigstudio/zoom_icon.png
-@dirrm share/pixmaps/synfigstudio
-@dirrm include/synfigapp-0.0/synfigapp
-@dirrm include/synfigapp-0.0

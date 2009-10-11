@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/12/01 04:25:52 mwicks Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
 bin/foomatic-rip
 bin/hp-align
 bin/hp-check
@@ -1185,41 +1185,3 @@ share/ppd/HP/hp_color_LaserJet_5500.ppd.gz
 share/ppd/HP/hp_color_LaserJet_9500.ppd.gz
 share/ppd/HP/hp_color_LaserJet_9500_MFP.ppd.gz
 share/ppd/HP/hp_officejet_9100_series.ppd.gz
-@dirrm share/ppd/HP/fax
-@dirrm share/ppd/HP
-@dirrm share/ppd
-@dirrm share/hplip/ui
-@dirrm share/hplip/scan
-@dirrm share/hplip/prnt
-@dirrm share/hplip/plugins
-@dirrm share/hplip/pcard
-@dirrm share/hplip/fax/ppd
-@dirrm share/hplip/fax/backend
-@dirrm share/hplip/fax
-@dirrm share/hplip/data/xml
-@dirrm share/hplip/data/ps
-@dirrm share/hplip/data/pcl
-@dirrm share/hplip/data/ldl
-@dirrm share/hplip/data/images
-@dirrm share/hplip/data
-@dirrm share/hplip/copier
-@dirrm share/hplip/base
-@dirrm share/hplip
-@dirrm share/examples/hplip
-@dirrm share/doc/${PKGNAME}/troubleshooting
-@dirrm share/doc/${PKGNAME}/tech_docs/man_pages
-@dirrm share/doc/${PKGNAME}/tech_docs
-@dirrm share/doc/${PKGNAME}/supported_devices
-@dirrm share/doc/${PKGNAME}/styles
-@dirrm share/doc/${PKGNAME}/install/step4/suse
-@dirrm share/doc/${PKGNAME}/install/step4/setup
-@dirrm share/doc/${PKGNAME}/install/step4/cups
-@dirrm share/doc/${PKGNAME}/install/step4
-@dirrm share/doc/${PKGNAME}/install/step3
-@dirrm share/doc/${PKGNAME}/install/step2
-@dirrm share/doc/${PKGNAME}/install/step1
-@dirrm share/doc/${PKGNAME}/install
-@dirrm share/doc/${PKGNAME}/images
-@dirrm share/doc/${PKGNAME}/howtos
-@dirrm share/doc/${PKGNAME}
-@dirrm share/doc/hpijs-2.6.10

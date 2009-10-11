@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/23 15:34:40 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
 include/gtksourcecompletion-1.0/gtksourcecompletion/gsc-documentwords-provider.h
 include/gtksourcecompletion-1.0/gtksourcecompletion/gsc-i18n.h
 include/gtksourcecompletion-1.0/gtksourcecompletion/gsc-info.h
@@ -37,8 +37,3 @@ share/gtksourcecompletion/pixmaps/document-words-icon.png
 share/locale/es/LC_MESSAGES/gtksourcecompletion.mo
 share/locale/fr/LC_MESSAGES/gtksourcecompletion.mo
 share/locale/it/LC_MESSAGES/gtksourcecompletion.mo
-@dirrm share/gtksourcecompletion/pixmaps
-@dirrm share/gtksourcecompletion
-@dirrm share/gtk-doc/html/gtksourcecompletion-1.0
-@dirrm include/gtksourcecompletion-1.0/gtksourcecompletion
-@dirrm include/gtksourcecompletion-1.0

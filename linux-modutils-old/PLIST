@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/27 06:11:01 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:55 thomasklausner Exp $
 man/man1/kernelversion.1
 man/man2/create_module.2
 man/man2/delete_module.2
@@ -27,4 +27,3 @@ sbin/modinfo.old
 sbin/modprobe.old
 sbin/rmmod.old
 share/linux-modutils-old/modules.conf.example
-@dirrm share/linux-modutils-old

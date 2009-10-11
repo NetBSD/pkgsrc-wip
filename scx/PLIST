@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/28 15:35:15 airhead Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:17 thomasklausner Exp $
 lib/scsh/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}/libscx.la
 lib/scsh/modules/${PKGNAME}/load.scm
 lib/scsh/modules/${PKGNAME}/scheme/examples/hello-xft.scm
@@ -41,13 +41,3 @@ lib/scsh/modules/${PKGNAME}/scheme/xt/resource-types.scm
 lib/scsh/modules/${PKGNAME}/scheme/xt/widget-type.scm
 lib/scsh/modules/${PKGNAME}/scheme/xt/widget.scm
 lib/scsh/modules/scx
-@dirrm lib/scsh/modules/${PKGNAME}/scheme/xt
-@dirrm lib/scsh/modules/${PKGNAME}/scheme/xlib
-@dirrm lib/scsh/modules/${PKGNAME}/scheme/libs
-@dirrm lib/scsh/modules/${PKGNAME}/scheme/examples
-@dirrm lib/scsh/modules/${PKGNAME}/scheme
-@dirrm lib/scsh/modules/${PKGNAME}
-@dirrm lib/scsh/modules/${PKGNAME}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/scsh/modules/${PKGNAME}
-@dirrm lib/scsh/modules
-@dirrm lib/scsh

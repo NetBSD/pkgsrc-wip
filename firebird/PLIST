@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/08/29 22:41:04 hoka_adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/10/11 10:44:36 thomasklausner Exp $
 bin/blrtable
 bin/build_file
 bin/codes
@@ -182,18 +182,3 @@ share/examples/firebird/stat/stat9.e
 share/examples/firebird/udf/udf.sql
 share/examples/firebird/udf/udflib.c
 share/examples/firebird/udf/udflib.def
-@dirrm share/examples/firebird/udf
-@dirrm share/examples/firebird/stat
-@dirrm share/examples/firebird/include
-@dirrm share/examples/firebird/empbuild
-@dirrm share/examples/firebird/dyn
-@dirrm share/examples/firebird/api
-@dirrm share/examples/firebird
-@dirrm share/doc/firebird/sql.extensions
-@dirrm share/doc/firebird/license
-@dirrm share/doc/firebird
-@dirrm libexec/firebird/udf
-@dirrm libexec/firebird/intl
-@dirrm libexec/firebird
-@dirrm firebird/help
-@dirrm firebird

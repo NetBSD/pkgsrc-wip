@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/11 01:31:24 pmatias Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:51 thomasklausner Exp $
 bin/animal-config
 include/animal/adjacency.h
 include/animal/analysis.h
@@ -30,5 +30,3 @@ include/animal/set.h
 include/animal/util.h
 lib/libanimal.la
 lib/pkgconfig/animal.pc
-@dirrm include/animal/base
-@dirrm include/animal

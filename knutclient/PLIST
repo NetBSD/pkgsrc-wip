@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/12 03:15:00 jdwhite Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
 bin/knutclient
 share/kde/applnk/Utilities/knutclient.desktop
 share/kde/apps/knutclient/knutclientui.rc
@@ -50,13 +50,3 @@ share/locale/it/LC_MESSAGES/knutclient.mo
 share/locale/pt_BR/LC_MESSAGES/knutclient.mo
 share/locale/ru/LC_MESSAGES/knutclient.mo
 share/locale/uk/LC_MESSAGES/knutclient.mo
-@dirrm share/icons/locolor/32x32/apps
-@dirrm share/icons/locolor/16x16/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/html/knutclient/en
-@dirrm share/doc/html/knutclient/cs
-@dirrm share/doc/html/knutclient
-@dirrm share/kde/apps/knutclient/pics
-@dirrm share/kde/apps/knutclient

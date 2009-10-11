@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/09 23:40:30 akihabara Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:19 thomasklausner Exp $
 bin/tryto
 bin/uncat
 man/man1/tryto.1
@@ -27,4 +27,3 @@ share/doc/socklog/tryto.1.html
 share/doc/socklog/uncat.1.html
 share/doc/socklog/upgrade.html
 share/doc/socklog/usedietlibc.html
-@dirrm share/doc/socklog

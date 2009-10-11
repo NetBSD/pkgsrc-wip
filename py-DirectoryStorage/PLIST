@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 16:59:26 mpasternak Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:07 thomasklausner Exp $
 bin/backup.py
 bin/checkds.py
 bin/dumpdsf.py
@@ -43,7 +43,3 @@ share/doc/DirectoryStorage/rawbackup
 share/doc/DirectoryStorage/replica
 share/doc/DirectoryStorage/snapshot
 share/doc/DirectoryStorage/todo
-@dirrm share/doc/DirectoryStorage
-@dirrm ${PYSITELIB}/DirectoryStorage/DirectoryStorageToolkit/management
-@dirrm ${PYSITELIB}/DirectoryStorage/DirectoryStorageToolkit
-@dirrm ${PYSITELIB}/DirectoryStorage

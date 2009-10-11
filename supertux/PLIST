@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/19 16:51:49 h2m Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:19 thomasklausner Exp $
 bin/supertux
 share/applications/supertux.desktop
 share/pixmaps/supertux.png
@@ -778,20 +778,3 @@ share/supertux/sounds/stomp.wav
 share/supertux/sounds/upgrade.wav
 share/supertux/sounds/warp.wav
 share/supertux/supertux.strf
-@dirrm share/supertux/sounds
-@dirrm share/supertux/music
-@dirrm share/supertux/levels/worldmaps
-@dirrm share/supertux/levels/world1
-@dirrm share/supertux/levels/misc
-@dirrm share/supertux/levels/bonus2
-@dirrm share/supertux/levels/bonus1
-@dirrm share/supertux/levels
-@dirrm share/supertux/images/worldmap
-@dirrm share/supertux/images/title
-@dirrm share/supertux/images/tilesets
-@dirrm share/supertux/images/status
-@dirrm share/supertux/images/shared
-@dirrm share/supertux/images/icons
-@dirrm share/supertux/images/background
-@dirrm share/supertux/images
-@dirrm share/supertux

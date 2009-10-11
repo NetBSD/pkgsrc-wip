@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:18:37 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:10 thomasklausner Exp $
 bin/pyflakes
 ${PYSITELIB}/pyflakes/__init__.py
 ${PYSITELIB}/pyflakes/__init__.pyc
@@ -6,4 +6,3 @@ ${PYSITELIB}/pyflakes/__init__.pyo
 ${PYSITELIB}/pyflakes/messages.py
 ${PYSITELIB}/pyflakes/messages.pyc
 ${PYSITELIB}/pyflakes/messages.pyo
-@dirrm ${PYSITELIB}/pyflakes

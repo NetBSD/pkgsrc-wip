@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/25 10:22:09 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:39 thomasklausner Exp $
 bin/gnochm
 share/application-registry/gnochm.applications
 share/applications/gnochm.desktop
@@ -31,8 +31,3 @@ share/omf/gnochm/gnochm-C.omf
 share/pixmaps/chmfile.png
 share/pixmaps/gnochm.png
 share/pixmaps/gnochm_logo.png
-@dirrm share/omf/gnochm
-@dirrm share/gnome/help/gnochm/C
-@dirrm share/gnome/help/gnochm
-@dirrm share/gnochm/glade
-@dirrm share/gnochm

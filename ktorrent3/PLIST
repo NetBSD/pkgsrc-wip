@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/06 11:01:34 absd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:50 thomasklausner Exp $
 bin/ktorrent
 bin/ktupnptest
 include/libbtcore/bcodec/bdecoder.h
@@ -550,12 +550,6 @@ share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
 @comment in kde: @dirrm share/kde4/servicetypes
 @comment in kde: @dirrm share/kde4/services
 @comment in kde: @dirrm share/kde4
-@dirrm share/kde/apps/ktorrent/www/mobile
-@dirrm share/kde/apps/ktorrent/www/default
-@dirrm share/kde/apps/ktorrent/www/common
-@dirrm share/kde/apps/ktorrent/www/coldmilk
-@dirrm share/kde/apps/ktorrent/www
-@dirrm share/kde/apps/ktorrent
 @comment in kde: @dirrm share/kde/apps/cmake/modules
 @comment in kde: @dirrm share/kde/apps/cmake
 @comment in kde: @dirrm share/kde/apps
@@ -587,17 +581,3 @@ share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
 @comment in kde: @dirrm share/applications/kde4
 @comment in xdg-dirs: @dirrm share/applications
 @comment in kde: @dirrm lib/kde4
-@dirrm include/libbtcore/util
-@dirrm include/libbtcore/tracker
-@dirrm include/libbtcore/torrent
-@dirrm include/libbtcore/peer
-@dirrm include/libbtcore/net
-@dirrm include/libbtcore/mse
-@dirrm include/libbtcore/migrate
-@dirrm include/libbtcore/interfaces
-@dirrm include/libbtcore/download
-@dirrm include/libbtcore/diskio
-@dirrm include/libbtcore/dht
-@dirrm include/libbtcore/datachecker
-@dirrm include/libbtcore/bcodec
-@dirrm include/libbtcore

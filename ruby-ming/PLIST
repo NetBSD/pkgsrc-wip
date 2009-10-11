@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/06 11:35:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:45:15 thomasklausner Exp $
 ${RUBY_VENDORARCHLIB}/ming/mingc.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/ming/ming.rb
 ${RUBY_EG}/ming/_README.examples
@@ -233,24 +233,3 @@ ${RUBY_EG}/ming/version8/setLineStyleTest.rb
 ${RUBY_EG}/ming/version8/setNetworkAccess.rb
 ${RUBY_EG}/ming/version8/setScriptLimits.rb
 ${RUBY_EG}/ming/version8/setTabIndex.rb
-@dirrm ${RUBY_EG}/ming/version8
-@dirrm ${RUBY_EG}/ming/swfcomponent/pictures
-@dirrm ${RUBY_EG}/ming/swfcomponent
-@dirrm ${RUBY_EG}/ming/rubyguts/railsconnection
-@dirrm ${RUBY_EG}/ming/rubyguts/midnightcommander
-@dirrm ${RUBY_EG}/ming/rubyguts
-@dirrm ${RUBY_EG}/ming/rtmp
-@dirrm ${RUBY_EG}/ming/multimedia
-@dirrm ${RUBY_EG}/ming/level3/aa
-@dirrm ${RUBY_EG}/ming/level3/AScode
-@dirrm ${RUBY_EG}/ming/level3
-@dirrm ${RUBY_EG}/ming/level2
-@dirrm ${RUBY_EG}/ming/level1
-@dirrm ${RUBY_EG}/ming/common
-@dirrm ${RUBY_EG}/ming
-@dirrm ${RUBY_VENDORLIB}/ming
-@dirrm ${RUBY_VENDORARCHLIB}/ming
-@dirrm ${RUBY_VENDORARCHLIB}
-@dirrm ${RUBY_VENDORLIB}
-@dirrm ${RUBY_VENDORLIB_BASE}
-@dirrm lib/ruby

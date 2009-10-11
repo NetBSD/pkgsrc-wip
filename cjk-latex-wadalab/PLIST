@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/09 14:53:38 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:31 thomasklausner Exp $
 share/texmf/fonts/tfm/public/wadalab/dgjgreek.tfm
 share/texmf/fonts/tfm/public/wadalab/dgjhira.tfm
 share/texmf/fonts/tfm/public/wadalab/dgjka.tfm
@@ -366,5 +366,3 @@ share/texmf/tex/latex/CJK/JIS/c52maru.fd
 share/texmf/tex/latex/CJK/JIS/c52maru.fdv
 share/texmf/tex/latex/CJK/JIS/c52min.fd
 share/texmf/tex/latex/CJK/JIS/c52min.fdv
-@dirrm share/texmf/fonts/type1/public/wadalab
-@dirrm share/texmf/fonts/tfm/public/wadalab

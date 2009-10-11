@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/29 13:29:21 x400 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:31 thomasklausner Exp $
 bin/callweaver
 sbin/streamplayer
 include/callweaver/acl.h
@@ -272,18 +272,7 @@ ${PLIST.mysql}share/examples/callweaver/res_mysql.conf
 ${PLIST.pgsql}share/examples/callweaver/cdr_pgsql.conf
 ${PLIST.pgsql}share/examples/callweaver/res_pgsql.conf
 share/examples/rc.d/callweaver
-@dirrm share/examples/callweaver
-@dirrm share/doc/callweaver
-@dirrm share/callweaver/ogi
 @exec ${MKDIR} %D/share/callweaver/moh
-@dirrm share/callweaver/moh
 @exec ${MKDIR} %D/share/callweaver/keys
-@dirrm share/callweaver/keys
 @exec ${MKDIR} %D/share/callweaver/images
-@dirrm share/callweaver/images
-@dirrm share/callweaver
 @exec ${MKDIR} %D/lib/callweaver/modules/icd
-@dirrm lib/callweaver/modules/icd
-@dirrm lib/callweaver/modules
-@dirrm lib/callweaver
-@dirrm include/callweaver

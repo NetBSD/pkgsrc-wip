@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/28 00:53:50 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:13 thomasklausner Exp $
 bin/qvamps
 share/qvamps/lib/MainWindow.pm
 share/qvamps/lib/VTSList.pm
@@ -25,9 +25,3 @@ share/qvamps/penguin_ntsc.mpg
 share/qvamps/penguin_pal.mpg
 share/qvamps/translations/xx.qm
 lib/qvamps/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/LibDvdRead.so
-@dirrm share/qvamps/etc
-@dirrm share/qvamps/lib
-@dirrm share/qvamps/translations
-@dirrm share/qvamps
-@dirrm lib/qvamps/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
-@dirrm lib/qvamps
