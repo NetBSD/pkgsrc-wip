@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2009/10/11 18:41:30 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/11 19:11:37 pettai Exp $
 #
 
 VER=		1.0.2
 DISTNAME=	4Suite-XML-${VER}
-PKGNAME=	${PYPKGPREFIX}-4suite-${VER}
+PKGNAME=	${PYPKGPREFIX}-4Suite-${VER}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=foursuite/}
 
