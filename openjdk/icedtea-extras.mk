@@ -1,4 +1,4 @@
-# $NetBSD: icedtea-extras.mk,v 1.4 2009/10/08 22:03:33 tnn2 Exp $
+# $NetBSD: icedtea-extras.mk,v 1.5 2009/10/11 09:30:15 tnn2 Exp $
 
 # Needed to extract icedtea
 EXTRACT_USING=			gtar
@@ -41,7 +41,6 @@ ICEDTEA_CONFIGURE_ARGS=	\
 .if defined(ICEDTEA_PACKAGE)
 CONFIGURE_ARGS+=	${ICEDTEA_CONFIGURE_ARGS}
 CONFIGURE_ARGS+=	--with-jdk-home=${PREFIX}/java/openjdk7
-CONFIGURE_ARGS+=	--with-jdk-home=/work/pkgsrc-obj/wip/openjdk/work.mac/bootstrap
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=	gawk pkg-config autoconf automake
