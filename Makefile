@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3648 2009/10/11 10:12:07 thomasklausner Exp $
+# $Id: Makefile,v 1.3649 2009/10/11 10:28:58 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -380,6 +380,7 @@ SUBDIR+=	etoile
 SUBDIR+=	eventlog
 SUBDIR+=	evilvte
 SUBDIR+=	ewl
+SUBDIR+=	exact-image
 SUBDIR+=	expiretable
 SUBDIR+=	ezbounce
 SUBDIR+=	ezstream
