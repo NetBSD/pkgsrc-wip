@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/18 23:02:13 oht Exp $
---- makefile.orig	2004-11-22 21:11:22.000000000 +0100
-+++ makefile	2005-03-06 22:09:48.000000000 +0100
-@@ -17,12 +17,12 @@
+$NetBSD: patch-aa,v 1.2 2009/10/11 13:50:22 thomasklausner Exp $
+
+--- makefile.orig	2007-01-15 18:37:25.000000000 +0100
++++ makefile
+@@ -18,12 +18,12 @@ all:		$(TARGETS)
  
  install:	all
  	strip $(TARGETS)
 -	cp $(TARGETS) /usr/local/sbin
 -	cp *.1 /usr/local/man/man1
-+	cp $(TARGETS) ${PREFIX}/sbin
-+	cp *.1 ${PREFIX}/man/man1
++	${BSD_INSTALL_PROGRAM} $(TARGETS) ${DESTDIR}${PREFIX}/sbin
++	${BSD_INSTALL_DATA} *.1 ${DESTDIR}${PREFIX}/man/man1
  
  
  pop3.proxy:	$(POP3PROXY)
@@ -16,4 +17,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/03/18 23:02:13 oht Exp $
 +	$(CC) -o $@ $(POP3PROXY)
  
  
- 
+ debian:		all
