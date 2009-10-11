@@ -12,7 +12,6 @@ Suggested package updates
 	o ccrypt-1.9
 	o cdogs-0.4
 	o chora-2.0.1
-	o chromium-0.9.14
 	o cinelerra-4.1
 	o d4x-2.5.7.1
 	o daphne-1.0
@@ -33,7 +32,6 @@ Suggested package updates
 	o gforge-4.5.11
 	o globulation2-0.9.4
 	o gnokii-0.6.28
-	o gnome-commander-1.2.8
 	o gnunet-0.8.0c
 	o grass-6.2.3
 	o grisbi-0.5.8
@@ -71,7 +69,6 @@ Suggested package updates
 	o ogmrip-0.13.2
 	o openmpi-1.3.3
 	o openvrml-0.18.3
-	o ortp-0.16.1
 	o osmose-0.9.0b
 	o parted-1.9.0
 	o passepartout-0.7.1
@@ -93,11 +90,8 @@ Suggested package updates
 	o sxemacs-22.1.10
 	o task-1.8.2 (now called taskwarrior)
 	o tmw-0.0.29.1
-	o tripwire-2.4.0.1
 	o uade-2.12
-	o ufraw-0.14
 	o uptimed-0.3.16
-	o vinagre-2.26.0
 	o virtualbox-3.0.8
 	o xaralx-bin-0.7.1692
 	o xcursor-themes-1.0.2
