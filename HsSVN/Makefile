@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/16 21:42:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/11 12:43:43 cheusov Exp $
 #
 
 DISTNAME=	HsSVN-0.4
@@ -14,6 +14,6 @@ CONFIGURE_ENV+=	EXTRA_LDFLAGS=-L${BUILDLINK_DIR}/lib
 
 .include "../../wip/mk/haskell.mk" # This should be "../../mk/haskell.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
-.include "../../wip/stm/buildlink3.mk"
+.include "../../wip/hs-stm/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
