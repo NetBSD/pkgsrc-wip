@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.prog.common,v 1.10 2009/09/12 08:14:24 cheusov Exp $
+# $NetBSD: Makefile.prog.common,v 1.11 2009/10/11 09:38:45 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT?=	Collection of standard Unix utilities
 
 USE_TOOLS+=	yacc lex make
 
-MAKE_FILE=		makefile
+MAKE_FILE=		makefile.hl
 HLROOT?=		heirloom
 PLIST_SUBST+=		HLROOT=${HLROOT}
 
@@ -93,6 +93,8 @@ MAKE_FLAGS+=	IUXRE=
 MAKE_FLAGS+=	LUXRE="-luxre"
 .endif
 
+# makefile.hl is for case insensitive HFS+ (Darwin)
 pre-build:
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile makefiles
+	set -e; cd ${WRKSRC}; \
+	test -f makefile.hl || mv makefile makefile.hl; \
+	${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f makefile.hl makefiles
