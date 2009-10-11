@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:18 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:50:43 thomasklausner Exp $
 ${PLUGIN_DIR}/INSTALL
 ${PLUGIN_DIR}/README
 ${PLUGIN_DIR}/config.php.sample
@@ -20,4 +20,3 @@ ${PLUGIN_DIR}/locale/pt_BR/LC_MESSAGES/change_ldappass.po
 ${PLUGIN_DIR}/options.php
 ${PLUGIN_DIR}/setup.php
 ${PLUGIN_DIR}/version
-@unexec ${RMDIR} %D/${PLUGIN_DIR} 2>/dev/null || ${TRUE}

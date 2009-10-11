@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:54 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:50:43 thomasklausner Exp $
 include/tilp/calc_def.h
 include/tilp/calc_err.h
 include/tilp/calc_int.h
@@ -16,4 +16,3 @@ include/tilp/update.h
 lib/libticalcs-4.la
 libdata/pkgconfig/ticalcs-4.pc
 man/man1/ticalcs-config.1
-@unexec ${RMDIR} libdata/pkgconfig >/dev/null 2>&1 || ${TRUE}

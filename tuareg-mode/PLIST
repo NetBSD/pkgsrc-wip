@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/02 18:55:45 jtonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:50:44 thomasklausner Exp $
 ${EMACS_LISPPREFIX}/camldebug.el
 ${EMACS_LISPPREFIX}/sym-lock.el
 ${EMACS_LISPPREFIX}/tuareg.el
-@unexec ${RMDIR} %D/${EMACS_LISPPREFIX} 2>/dev/null || ${TRUE}

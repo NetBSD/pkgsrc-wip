@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:48 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:50:43 thomasklausner Exp $
 lib/java/log4j.jar
 share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/class-use/Main.html
 share/doc/java/jakarta-log4j/api/org/apache/log4j/chainsaw/doc-files/screen_01.png
@@ -432,4 +432,3 @@ share/examples/java/jakarta-log4j/sort4.properties
 share/examples/java/jakarta-log4j/subclass/MyLogger.java
 share/examples/java/jakarta-log4j/subclass/MyLoggerFactory.java
 share/examples/java/jakarta-log4j/subclass/MyLoggerTest.java
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || true

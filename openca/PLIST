@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:00 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:50:43 thomasklausner Exp $
 bin/openca-addcert
 bin/openca-backup
 bin/openca-browserexp
@@ -927,33 +927,3 @@ share/httpd/htdocs/ra/scripts/sl_SI/ieCSR.vbs
 share/httpd/htdocs/ra/scripts/sl_SI/ieEnroll.js
 share/httpd/htdocs/ra/scripts/sl_SI/signForm.js
 share/httpd/htdocs/ra/scripts/sl_SI/signForm.vbs
-@unexec ${RMDIR} %D/share/httpd/htdocs/ra 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/httpd/htdocs/pub 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/httpd/htdocs/node 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/httpd/htdocs/ldap 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/httpd/htdocs/ca 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/en_GB 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/el_GR 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/de_DE 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/es_ES 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/fr_FR 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/it_IT 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/ja_JP 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/pl_PL 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/sl_SI 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/ru_RU 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails/C 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca/mails 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/openca 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/access_control 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/servers 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/bp/functions 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/bp 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/database 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/init.d 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/openssl/extfiles 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/openssl/openssl 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/openssl 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/rbac/cmds >/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/rbac >/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/etc/openca/scep >/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:50:43 thomasklausner Exp $
 bin/o3totxt
 bin/tracker-extract
 bin/tracker-files
@@ -147,13 +147,3 @@ share/tracker/sqlite-tracker-triggers.sql
 share/tracker/sqlite-tracker.sql
 share/tracker/sqlite-user-data.sql
 share/tracker/tracker-introspect.xml
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@unexec ${RMDIR} %D/share/gnome/autostart 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
-@comment in dbus: @dirrm share/dbus-1/services

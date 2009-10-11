@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:45:00 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:50:43 thomasklausner Exp $
 bin/catior
 bin/convertior
 bin/genior
@@ -433,4 +433,3 @@ share/idl/omniORB/ir.idl
 share/idl/omniORB/orb.idl
 share/idl/omniORB/poa.idl
 share/idl/omniORB/poa_include.idl
-@unexec /bin/rmdir %D/share/idl 2>/dev/null || true
