@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/09 11:16:49 poppnk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/11 08:43:12 thomasklausner Exp $
 lib/libcairojni.la
 lib/pkgconfig/cairo-java.pc
 share/doc/${PKGNAME}/AUTHORS
@@ -53,7 +53,6 @@ share/doc/${PKGNAME}/api/org/freedesktop/cairo/package-summary.html
 share/doc/${PKGNAME}/api/org/freedesktop/cairo/package-tree.html
 share/doc/${PKGNAME}/api/overview-tree.html
 share/doc/${PKGNAME}/api/package-list
-share/doc/${PKGNAME}/api/packages.html
 share/doc/${PKGNAME}/api/resources/inherit.gif
 share/doc/${PKGNAME}/api/serialized-form.html
 share/doc/${PKGNAME}/api/stylesheet.css
