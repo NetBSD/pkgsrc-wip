@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/10/11 10:26:50 thomasklausner Exp $
+
+--- utility/Endianess.hh.orig	2007-07-06 12:15:17.000000000 +0000
++++ utility/Endianess.hh
+@@ -37,7 +37,7 @@
+ #include <sys/types.h>
+ #include <inttypes.h>
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+   #include <sys/endian.h>
+ 
+   #define bswap_16 bswap16
