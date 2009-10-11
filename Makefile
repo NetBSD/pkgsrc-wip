@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3647 2009/10/10 13:34:08 pallegra Exp $
+# $Id: Makefile,v 1.3648 2009/10/11 10:12:07 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1564,6 +1564,7 @@ SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcsx
+SUBDIR+=	pcsx-df
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfedit
