@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/11 10:04:42 thomasklausner Exp $
+
+SHA1 (pcsx-df-1.10.tar.gz) = e4eaf30ef66fdc56778f475b4b1002e2a93bea31
+RMD160 (pcsx-df-1.10.tar.gz) = 7a78aa5dedd9a8bfe913cbb0a2851837d1b6e834
+Size (pcsx-df-1.10.tar.gz) = 3379907 bytes
+SHA1 (patch-aa) = a353199fc663da29e9b9312e18f91c3758fdc46d
+SHA1 (patch-ab) = 98e0bf4c6e9556d30c536df628d2cc7d74cf0d1b
+SHA1 (patch-ac) = f6e198bee462d33215bd09d0e03d0e308ed1a8e4
+SHA1 (patch-ad) = 44c431d3996c92f52e778e8a154fdf3ff9cc1b94
+SHA1 (patch-ae) = b06d8f265f331e26e169cd2c07e54c8f5d25584b
