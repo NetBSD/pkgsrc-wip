@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3653 2009/10/12 15:54:41 christtrekker Exp $
+# $Id: Makefile,v 1.3654 2009/10/12 23:56:29 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -378,6 +378,8 @@ SUBDIR+=	esdl
 SUBDIR+=	esmart
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
+SUBDIR+=	etoile-core
+SUBDIR+=	etoile-services
 SUBDIR+=	eventlog
 SUBDIR+=	evilvte
 SUBDIR+=	ewl
