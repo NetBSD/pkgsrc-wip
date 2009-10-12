@@ -55,6 +55,7 @@ ins-include:
 
 ins-bsd: libicc11bsd.a
 	install -m 644 libicc11bsd.a ${PREFIX}/icc11/lib/${ICC_ARCH}
+	install -m 755 -d ${PREFIX}/icc11/libexec
 	install -m 644 icc11/libexec/sh-dryrun.awk ${PREFIX}/icc11/libexec
 	install -m 644 icc11/libexec/print-dryrun.awk ${PREFIX}/icc11/libexec
 	install -m 644 icc11/libexec/transform-dryrun.awk ${PREFIX}/icc11/libexec
