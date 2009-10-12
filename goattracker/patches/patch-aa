@@ -1,57 +1,71 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/10/09 11:14:03 rodo6510 Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/12 10:13:57 rodo6510 Exp $
 
 --- makefile.common	2009-01-03 00:22:58.000000000 +0100
-+++ /home/nikon/devel/makefile.common	2009-10-06 21:19:23.000000000 +0200
-@@ -1,17 +1,19 @@
- # common makefile directives for linux and win32 build
--
- CC=gcc
++++ /home/nikon/makefile.common_goat
+@@ -4,16 +4,17 @@ CC=gcc
  CXX=g++
--CFLAGS+=-O3 -Wall -Ibme -Iasm
-+CFLAGS=-O3 -Wall -Ibme -Iasm -I/usr/pkg/include -D_GNU_SOURCE=1 -D_REENTRANT -D_THREAD_SAFE
+ CFLAGS+=-O3 -Wall -Ibme -Iasm
  CXXFLAGS=$(CFLAGS)
 +LIBS=`sdl-config --libs`
-+PREFIX=../linux/
-+SUFFIX=
-+
-+EXE=	$(PREFIX)goattrk2 $(SUFFIX) \
-+	$(PREFIX)ins2snd2 $(SUFFIX) \
-+	$(PREFIX)sngspli2 $(SUFFIX) \
-+	$(PREFIX)betaconv $(SUFFIX) \
-+	$(PREFIX)mod2sng $(SUFFIX) 
  
 -EXE=	$(PREFIX)goattrk2$(SUFFIX) \
 -	$(PREFIX)ins2snd2$(SUFFIX) \
 -	$(PREFIX)sngspli2$(SUFFIX) \
 -	$(PREFIX)betaconv$(SUFFIX) \
 -	$(PREFIX)mod2sng$(SUFFIX)
--
++EXE=	goattrk2 \
++	ins2snd2 \
++	sngspli2 \
++	betaconv \
++	mod2sng
+ 
 -all: $(EXE)
 +all: dat2inc datafile $(EXE)
  
- $(PREFIX)goattrk2$(SUFFIX): goatdata.o goattrk2.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
+-$(PREFIX)goattrk2$(SUFFIX): goatdata.o goattrk2.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
++goattrk2: goatdata.o goattrk2.o gsong.o gorder.o gpattern.o ginstr.o gtable.o gplay.o gdisplay.o \
  gfile.o greloc.o ghelp.o gsound.o gconsole.o gsid.o \
-@@ -43,11 +45,21 @@ $(PREFIX)betaconv$(SUFFIX): betaconv.o b
+ resid/envelope.o resid/extfilt.o resid/filter.o resid/pot.o resid/sid.o resid/wave.o resid/wave6581__ST.o \
+ resid/wave6581_P_T.o resid/wave6581_PS_.o resid/wave6581_PST.o resid/wave8580__ST.o resid/wave8580_P_T.o \
+@@ -27,27 +28,35 @@ bme/bme_gfx.o bme/bme_snd.o bme/bme_win.
+ 	$(CXX) -o $@ $^ $(LIBS)
+ 	strip $@
+ 
+-$(PREFIX)mod2sng$(SUFFIX): mod2sng.o bme/bme_end.o
++mod2sng: mod2sng.o bme/bme_end.o
  	gcc -o $@ $^
  	strip $@
  
+-$(PREFIX)ins2snd2$(SUFFIX): ins2snd2.o bme/bme_end.o
++ins2snd2: ins2snd2.o bme/bme_end.o
+ 	gcc -o $@ $^
+ 	strip $@
+ 
+-$(PREFIX)sngspli2$(SUFFIX): sngspli2.o bme/bme_end.o
++sngspli2: sngspli2.o bme/bme_end.o
+ 	gcc -o $@ $^
+ 	strip $@
+ 
+-$(PREFIX)betaconv$(SUFFIX): betaconv.o bme/bme_end.o
++betaconv: betaconv.o bme/bme_end.o
+ 	gcc -o $@ $^
+ 	strip $@
 +datafile: bme/datafile.c bme/bme_end.c
-+	gcc -o datafile bme/datafile.c bme/bme_end.c $(CFLAGS) 
-+	strip datafile 
++	gcc -o ./datafile bme/datafile.c bme/bme_end.c $(LIBS)
++	strip ./datafile
 +
 +dat2inc: bme/dat2inc.c
-+	gcc -o dat2inc bme/dat2inc.c 
-+	strip dat2inc
++	gcc -o ./dat2inc bme/dat2inc.c
++	strip ./dat2inc
 +
-+
-+
+ 
  goattrk2.dat: player.s altplayer.s chargen.bin palette.bin cursor.bin goattrk2.bmp goattrk2.seq
 -	datafile $@ goattrk2.seq
 +	./datafile $@ goattrk2.seq
  
  goatdata.c: goattrk2.dat
 -	dat2inc $< $@
-+	./dat2inc ./goattrk2.dat $@
++	./dat2inc $< $@
  
  clean:
  	$(RM) *.o *~
