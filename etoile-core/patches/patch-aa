@@ -1,0 +1,10 @@
+--- GNUmakefile.orig	2009-03-17 08:19:35.000000000 -0500
++++ GNUmakefile	2009-10-12 13:35:59.000000000 -0500
+@@ -6,6 +6,6 @@
+ # Projects (listed by dependency order, then alphabetical order)
+ #
+ 
+-SUBPROJECTS = Frameworks Languages Bundles Services Developer #Documentation
++SUBPROJECTS = Frameworks Languages
+ 
+ include $(GNUSTEP_MAKEFILES)/aggregate.make
