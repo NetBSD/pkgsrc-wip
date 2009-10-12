@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/12 21:35:57 thomasklausner Exp $
 share/dataset/geography/spearfish/PERMANENT/COMBINE/test
 share/dataset/geography/spearfish/PERMANENT/Census/spear.140
 share/dataset/geography/spearfish/PERMANENT/DEFAULT_WIND
@@ -516,6 +516,4 @@ share/dataset/geography/spearfish/PERMANENT/windows/9961
 share/dataset/geography/spearfish/PERMANENT/windows/county
 share/dataset/geography/spearfish/PERMANENT/windows/subregion.NW
 share/dataset/geography/spearfish/user1/WIND
-@exec ${MKDIR} %D/share/dataset/geography/spearfish/PERMANENT/g3dcell
-@unexec ${RMDIR} %D/share/dataset/geography 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/dataset 2>/dev/null || ${TRUE}
+@pkgdir share/dataset/geography/spearfish/PERMANENT/g3dcell

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/12 21:35:57 thomasklausner Exp $
 share/dataset/geography/${PKGNAME}/PERMANENT/DEFAULT_WIND
 share/dataset/geography/${PKGNAME}/PERMANENT/MYNAME
 share/dataset/geography/${PKGNAME}/PERMANENT/SEARCH_PATH
@@ -107,5 +107,4 @@ share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/REF
 share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/sig.1
 share/dataset/geography/${PKGNAME}/user1/group/spotxy/subgroup/spot.test/sig/test
 share/dataset/geography/${PKGNAME}/user1/gscam
-@exec ${MKDIR} %D/share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig
-@exec ${MKDIR} %D/share/dataset/geography/
+@pkgdir share/dataset/geography/${PKGNAME}/PERMANENT/cell_misc/nhap1.orig

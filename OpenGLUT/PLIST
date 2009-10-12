@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/08 22:33:56 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/12 21:35:56 thomasklausner Exp $
 include/GL/openglut.h
 include/GL/openglut_exp.h
 include/GL/openglut_ext.h
@@ -280,4 +280,3 @@ man/man3/glutWireSphere.3
 man/man3/glutWireTeapot.3
 man/man3/glutWireTetrahedron.3
 man/man3/glutWireTorus.3
-@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}

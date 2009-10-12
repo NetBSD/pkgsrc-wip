@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/10/12 21:35:57 thomasklausner Exp $
 share/doc/hunspell-${DICTNAME}/${DICTNAME}_AUTHORS
 share/doc/hunspell-${DICTNAME}/${DICTNAME}_COPYING
 share/doc/hunspell-${DICTNAME}/${DICTNAME}_ChangeLog
@@ -10,4 +10,3 @@ share/doc/hunspell-${DICTNAME}/${DICTNAME}_statistiche.ods
 share/doc/hunspell-${DICTNAME}/${DICTNAME}_todo.txt
 share/hunspell/${DICTNAME}.aff
 share/hunspell/${DICTNAME}.dic
-@unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
