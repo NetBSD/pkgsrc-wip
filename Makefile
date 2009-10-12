@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3652 2009/10/12 07:28:38 thomasklausner Exp $
+# $Id: Makefile,v 1.3653 2009/10/12 15:54:41 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -327,6 +327,7 @@ SUBDIR+=	ecl
 SUBDIR+=	ecore
 SUBDIR+=	edb
 SUBDIR+=	edbus
+SUBDIR+=	edelib
 SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	edoc
@@ -1094,7 +1095,9 @@ SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
 SUBDIR+=	lwc
+SUBDIR+=	lxmusic
 SUBDIR+=	lxrandr
+SUBDIR+=	lxterminal
 SUBDIR+=	lzs-lkm
 SUBDIR+=	mac-robber
 SUBDIR+=	mailfilter
