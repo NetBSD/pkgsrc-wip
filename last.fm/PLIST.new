@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.new,v 1.1.1.1 2007/11/19 22:02:45 netcap Exp $
-bin/last.fm
-emul/linux/dev/null
-share/last.fm/services/lastfm.protocol
-@dirrm share/last.fm/services
-@dirrm share/last.fm
