@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/09 11:14:03 rodo6510 Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/12 10:11:28 rodo6510 Exp $
 #
 
 DISTNAME=	goattrk2
 PKGNAME=	goattracker-2.68
-CATEGORIES=	audio
+CATEGORIES=	wip	
 MASTER_SITES=	http://cadaver.homeftp.net/tools/
 EXTRACT_SUFX=	.zip
 
@@ -13,6 +13,7 @@ COMMENT=	Crossplatform C64 Music Editor
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+CFLAGS=			-I{PREFIX}/include -D_GNU_SOURCE=1 -D_REENTRANT -D_THREAD_SAFE 
 WRKSRC=			${WRKDIR}/src
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
@@ -21,11 +22,11 @@ INSTALLATION_DIRS=	bin share/examples/goattracker share/doc/goattracker
 
 do-install:
 
-	${INSTALL_PROGRAM} ${WRKDIR}/linux/goattrk2 ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/linux/sngspli2 ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/linux/mod2sng ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/linux/ins2snd2 ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKDIR}/linux/betaconv ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/src/goattrk2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/src/sngspli2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/src/mod2sng ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/src/ins2snd2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/src/betaconv ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/goattracker
 	${INSTALL_DATA} ${WRKDIR}/examples/*.sng ${DESTDIR}${PREFIX}/share/examples/goattracker
 	${INSTALL_DATA} ${WRKDIR}/examples/*.ins ${DESTDIR}${PREFIX}/share/examples/goattracker
