@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2009/10/09 20:24:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2009/10/13 17:01:52 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
 CATEGORIES=	lang
-MASTER_SITES=	http://www.java.net/download/openjdk/jdk7/promoted/b72/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
+#		 http://www.java.net/download/openjdk/jdk7/promoted/b72/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/
@@ -24,8 +25,11 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
 		policytool rmid rmiregistry servertool tnameserv
 
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
-PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.gz
-PATCH_SITES+=	http://mx1.nygren.pp.se/distfiles/
+PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.bz2
+
+CACERTS=	cacerts-20091013.tar.bz2
+DISTFILES+=	${CACERTS}
+EXTRACT_ONLY+=	${CACERTS}
 
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
@@ -105,11 +109,11 @@ ${WRKDIR}/stage2-done: ${WRKDIR}/stage1-done
 	touch ${WRKDIR}/stage2-done
 
 # stage 3 builds third party add-ons
-${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts
+${WRKDIR}/stage3-done: ${WRKDIR}/stage2-done ${WRKDIR}/cacerts.out
 	touch ${WRKDIR}/stage3-done
 
-${WRKDIR}/cacerts:
-	for cert in ${FILESDIR}/cacerts/*.crt; do			\
+${WRKDIR}/cacerts.out:
+	for cert in ${WRKDIR}/cacerts/*.crt; do			\
 		${ECHO} yes | ${BUILDDIR}/bin/keytool			\
 		  -importcert						\
 		  -keystore ${.TARGET}					\
@@ -122,7 +126,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}
 	cd ${BUILDDIR}/j2sdk-image && pax -rwpp .			\
 	  ${DESTDIR}${JAVA_HOME}/.
-	${INSTALL_DATA} ${WRKDIR}/cacerts				\
+	${INSTALL_DATA} ${WRKDIR}/cacerts.out				\
 	  ${DESTDIR}${JAVA_HOME}/jre/lib/security/cacerts
 
 .include "../../graphics/freetype2/buildlink3.mk"

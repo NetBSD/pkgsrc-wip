@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2009/10/12 16:26:21 tnn2 Exp $
+$NetBSD: distinfo,v 1.17 2009/10/13 17:01:52 tnn2 Exp $
 
 SHA1 (openjdk7/175529fae103.tar.bz2) = 297f474423a18d727a87b922b1665ea4e5d54732
 RMD160 (openjdk7/175529fae103.tar.bz2) = 37bb512ccce29eb764a6bf9649c13715bf3eb2d6
@@ -6,18 +6,27 @@ Size (openjdk7/175529fae103.tar.bz2) = 4599216 bytes
 SHA1 (openjdk7/apache-ant-1.7.1-bin.zip) = a7e8fa7bc2102a8d8df99c64db73c2eae3d8b483
 RMD160 (openjdk7/apache-ant-1.7.1-bin.zip) = a4e2c992ac7c81949b391d146baf9c411dbb2c2d
 Size (openjdk7/apache-ant-1.7.1-bin.zip) = 11657986 bytes
+SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = 51cbd9fc1a97fc40cf61391933b082f8eee17abb
+RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = c2e2e0a17ae6d53eee1b91948a6d39080b07cafd
+Size (openjdk7/bootstrap-jdk-7-bin-netbsd-4-i386-20091012.tar.bz2) = 24186222 bytes
 SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 7d41c0c68835e831d0ff612df74b4a612329a450
 RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 15c98327d4b5d62a73b837f1401be3b4d40acd1d
 Size (openjdk7/bootstrap-jdk-7-bin-netbsd-5-amd64-20090925.tar.bz2) = 24284982 bytes
 SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 7c2d04344d764e04e711a07e43aa9690419bad1c
 RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 7d38fdd1f5a977e03c4d5ffe88c3df22e79371e1
 Size (openjdk7/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 24156646 bytes
-SHA1 (openjdk7/jdk-7-bsd-port-72.20090924.diff.gz) = f051cf023abc040d0f50a16f4804228c6b3e2287
-RMD160 (openjdk7/jdk-7-bsd-port-72.20090924.diff.gz) = 7f46ae3d4bc23a8eaf02095263501d70d4cdd714
-Size (openjdk7/jdk-7-bsd-port-72.20090924.diff.gz) = 692841 bytes
-SHA1 (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.zip) = f0f16b933ee4feb0bef41fb2a607356bbc7366c2
-RMD160 (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.zip) = 56db1b5cc128ca79e93fdb5382d35dc9c2ecb3ef
-Size (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.zip) = 94044483 bytes
+SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 3b64ed7022dc80a79442c5c628ec45541a0db4c3
+RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 8272fce9729db7b3d35443861ef3a523da8805e3
+Size (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 24266209 bytes
+SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
+RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
+Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
+SHA1 (openjdk7/jdk-7-bsd-port-72.20090924.diff.bz2) = 9af2b0070b0a3367017c8cddeb48bae770cffbe7
+RMD160 (openjdk7/jdk-7-bsd-port-72.20090924.diff.bz2) = 52053be9e0430fa318ef14fbd3b3085d609307b6
+Size (openjdk7/jdk-7-bsd-port-72.20090924.diff.bz2) = 547293 bytes
+SHA1 (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.tar.bz2) = 5183eae9fb4b1f601736a00bdaa02ed28df1219a
+RMD160 (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.tar.bz2) = 8bee2fa131c5d7acbf1a55d974ab76065596dc49
+Size (openjdk7/openjdk-7-ea-src-b72-17_sep_2009.tar.bz2) = 46645162 bytes
 SHA1 (openjdk7/rhino1_7R2.zip) = 3bb380cfb7f6febb87a64b2dee7fa308042f37e4
 RMD160 (openjdk7/rhino1_7R2.zip) = 58ae321829ac701e442bfbfed3d6f87b2bb6ba4c
 Size (openjdk7/rhino1_7R2.zip) = 2996867 bytes
@@ -32,6 +41,7 @@ SHA1 (patch-ae) = f888ba67cfc7255911ee049e1a69dae4efe7dd17
 SHA1 (patch-af) = 9c9c152005c0feec1e6fd0db0fc552a3637db9b7
 SHA1 (patch-ag) = 6287960055a79d05dc193e31d29ffc0158b33cdd
 SHA1 (patch-ah) = 1870d4c12802a93d3ad8e7d0780c50ba1d5e9c3e
+SHA1 (patch-ai) = 6d6c394c3de7578754b901686b88142cbc524ef7
 SHA1 (patch-aj) = 8ef0a8d446ea5883d1807a49ab123395d50a06ac
 SHA1 (patch-am) = 7e0ffa317a83d5b1e34c3f3e76b7a3de26980df6
 SHA1 (patch-an) = b0636c22521d9727ad79df6914c9ce8c7c70b362
