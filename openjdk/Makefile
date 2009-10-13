@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/10/13 17:01:52 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2009/10/13 19:57:17 tnn2 Exp $
 
 DISTNAME=	openjdk-7-ea-src-b72-17_sep_2009
 PKGNAME=	openjdk7-1.7.0.72.20090924
@@ -26,6 +26,7 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap keytool orbd \
 
 # "hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port/"
 PATCHFILES+=	jdk-7-bsd-port-72.20090924.diff.bz2
+PATCH_SITES+=	${MASTER_SITE_LOCAL:=openjdk7/}
 
 CACERTS=	cacerts-20091013.tar.bz2
 DISTFILES+=	${CACERTS}
