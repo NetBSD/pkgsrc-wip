@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/02/21 13:55:59 asau Exp $
+# $NetBSD: Makefile,v 1.6 2009/10/14 20:17:34 asau Exp $
 
-DISTNAME=	atlas3.8.3
-PKGNAME=	atlas-3.8.3
+ATLAS_VERSION=	3.9.15
+
+DISTNAME=	atlas${ATLAS_VERSION}
+PKGNAME=	atlas-${ATLAS_VERSION}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=math-atlas/}
 EXTRACT_SUFX=	.tar.bz2

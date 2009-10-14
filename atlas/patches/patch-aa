@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2008/04/27 19:08:31 asau Exp $
+$NetBSD: patch-aa,v 1.2 2009/10/14 20:17:35 asau Exp $
 
 Teach it about NetBSD.
 
---- CONFIG/include/atlconf.h.orig	2008-02-22 19:38:51.000000000 +0300
-+++ CONFIG/include/atlconf.h	2008-04-27 18:42:03.000000000 +0400
+--- CONFIG/include/atlconf.h.orig	2009-02-20 18:22:54.000000000 +0300
++++ CONFIG/include/atlconf.h	2009-02-21 20:30:30.000000000 +0300
 @@ -6,12 +6,12 @@
  #include <string.h>
  #include <assert.h>
  
--#define NOS 12
-+#define NOS 13
+-#define NOS 13
++#define NOS 14
  static char *osnam[NOS] =
     {"UNKNOWN", "Linux", "SunOS", "SunOS4", "OSF1", "IRIX", "AIX",
--    "Win9x", "WinNT", "HPUX", "FreeBSD", "OSX"};
-+    "Win9x", "WinNT", "HPUX", "FreeBSD", "OSX", "NetBSD"};
+-    "Win9x", "WinNT", "WinSFU", "HPUX", "FreeBSD", "OSX"};
++    "Win9x", "WinNT", "WinSFU", "HPUX", "FreeBSD", "OSX", "NetBSD"};
  enum OSTYPE {OSOther=0, OSLinux, OSSunOS, OSSunOS4, OSOSF1, OSIRIX, OSAIX,
--             OSWin9x, OSWinNT, OSHPUX, OSFreeBSD, OSOSX};
-+             OSWin9x, OSWinNT, OSHPUX, OSFreeBSD, OSOSX, OSNetBSD};
- #define OSIsWin(OS_) (((OS_) == OSWinNT) || ((OS_) == OSWin9x))
+-             OSWin9x, OSWinNT, OSWinSFU, OSHPUX, OSFreeBSD, OSOSX};
++             OSWin9x, OSWinNT, OSWinSFU, OSHPUX, OSFreeBSD, OSOSX, OSNetBSD};
+ #define OSIsWin(OS_) ( ((OS_) == OSWinNT) || ((OS_) == OSWin9x) || \
+                        ((OS_) == OSWinSFU) )
  
- enum ARCHFAM {AFOther=0, AFPPC, AFSPARC, AFALPHA, AFX86, AFIA64, AFMIPS};
