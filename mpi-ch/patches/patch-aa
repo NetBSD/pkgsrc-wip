@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2009/03/22 22:56:35 asau Exp $
+$NetBSD: patch-aa,v 1.5 2009/10/14 13:05:40 asau Exp $
 
 Install configuration files into example directory.
 
---- src/env/Makefile.in.orig	2009-03-18 19:24:09.000000000 +0300
-+++ src/env/Makefile.in	2009-03-23 01:26:20.000000000 +0300
+--- src/env/Makefile.in.orig	2009-10-07 21:18:29.000000000 +0400
++++ src/env/Makefile.in	2009-10-14 15:54:09.000000000 +0400
 @@ -19,6 +19,8 @@
- exec_prefix     = @exec_prefix@
- bindir          = @bindir@
+ srcdir          = @srcdir@
+ abs_srcdir      = @abs_srcdir@
  sysconfdir      = @sysconfdir@
 +datadir		= @datadir@
 +exampledir	= ${datadir}/examples
@@ -32,6 +32,6 @@ Install configuration files into example directory.
 +	if [ -s mpicxx.conf ] ; then $(INSTALL_DATA) mpicxx.conf ${DESTDIR}${exampledir}/mpicxx.conf ; fi
 +	if [ -s mpif77.conf ] ; then $(INSTALL_DATA) mpif77.conf ${DESTDIR}${exampledir}/mpif77.conf ; fi
 +	if [ -s mpif90.conf ] ; then $(INSTALL_DATA) mpif90.conf ${DESTDIR}${exampledir}/mpif90.conf ; fi
+ 	${MAKE} install-postamble
  
  install-strip:
- 	$(MAKE) INSTALL_STRIP_FLAG=-s install
