@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/07/27 23:57:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2009/10/14 14:40:39 jihbed Exp $
 #
 
-DISTNAME=	pyntch-dist-20090615
-PKGNAME=	${PYPKGPREFIX}-ntch-${VERSION}
-CATEGORIES=	devel python
+DISTNAME=	pyntch-dist-20090907
+CATEGORIES=	wip
 MASTER_SITES=	http://www.unixuser.org/~euske/python/pyntch/
 
 MAINTAINER=	kamel.derouiche@gmail.com
