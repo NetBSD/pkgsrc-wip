@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3655 2009/10/14 10:25:19 rodo6510 Exp $
+# $Id: Makefile,v 1.3656 2009/10/14 11:47:49 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1303,8 +1303,6 @@ SUBDIR+=	opencobol
 SUBDIR+=	opendchub
 SUBDIR+=	opendnssec
 SUBDIR+=	openfst
-SUBDIR+=	openjdk
-SUBDIR+=	openjdk7-icedtea-plugin
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openoffice2-bin-af
