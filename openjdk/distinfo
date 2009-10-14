@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2009/10/13 17:01:52 tnn2 Exp $
+$NetBSD: distinfo,v 1.18 2009/10/14 07:48:41 tnn2 Exp $
 
 SHA1 (openjdk7/175529fae103.tar.bz2) = 297f474423a18d727a87b922b1665ea4e5d54732
 RMD160 (openjdk7/175529fae103.tar.bz2) = 37bb512ccce29eb764a6bf9649c13715bf3eb2d6
@@ -18,6 +18,9 @@ Size (openjdk7/bootstrap-jdk-7-bin-netbsd-5-i386-20090926.tar.bz2) = 24156646 by
 SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 3b64ed7022dc80a79442c5c628ec45541a0db4c3
 RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 8272fce9729db7b3d35443861ef3a523da8805e3
 Size (openjdk7/bootstrap-jdk-7-bin-netbsd-6-amd64-20091013.tar.bz2) = 24266209 bytes
+SHA1 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-i386-20091014.tar.bz2) = abf359bfdc78d41c3bfae1258be9d5137259bfd6
+RMD160 (openjdk7/bootstrap-jdk-7-bin-netbsd-6-i386-20091014.tar.bz2) = bca2310ee5e2e83fabf6288d62004f690aa828ae
+Size (openjdk7/bootstrap-jdk-7-bin-netbsd-6-i386-20091014.tar.bz2) = 24168404 bytes
 SHA1 (openjdk7/cacerts-20091013.tar.bz2) = 905e88e6e2ccdbfe1f36c1dace7cc687fba78890
 RMD160 (openjdk7/cacerts-20091013.tar.bz2) = 0f4e14197016201ff65272a944eafecc6f2d5770
 Size (openjdk7/cacerts-20091013.tar.bz2) = 55894 bytes
