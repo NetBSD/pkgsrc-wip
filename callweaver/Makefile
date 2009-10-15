@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/29 13:29:21 x400 Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/15 16:19:32 x400 Exp $
 
 DISTNAME=	callweaver-1.2.1
 PKGREVISION=	1
@@ -107,6 +107,12 @@ OWN_DIRS+=		${CWLOGDIR} ${CWSPOOLDIR} ${CWVARDIR}
 	woomera.conf
 CONF_FILES+=		${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
 .endfor
+
+.if !empty(PKG_OPTIONS:Mjabber)
+.for f in res_jabber.conf
+CONF_FILES+=            ${CWCONFEXAMPLESDIR:Q}/${f} ${CWCONFDIR:Q}/${f}
+.endfor
+.endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .for f in cdr_mysql.conf \

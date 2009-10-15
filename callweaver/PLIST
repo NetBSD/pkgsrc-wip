@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/10/15 16:19:32 x400 Exp $
 bin/callweaver
 sbin/streamplayer
 include/callweaver/acl.h
@@ -206,6 +206,7 @@ lib/callweaver/modules/res_indications.la
 lib/callweaver/modules/res_monitor.la
 lib/callweaver/modules/res_musiconhold.la
 lib/callweaver/modules/res_ogi.la
+${PLIST.jabber}lib/callweaver/modules/res_jabber.la
 ${PLIST.mysql}lib/callweaver/modules/app_sql_mysql.la
 ${PLIST.mysql}lib/callweaver/modules/cdr_mysql.la
 ${PLIST.mysql}lib/callweaver/modules/res_config_mysql.la
@@ -267,6 +268,7 @@ share/examples/callweaver/sip_notify.conf
 share/examples/callweaver/udptl.conf
 share/examples/callweaver/voicemail.conf
 share/examples/callweaver/woomera.conf
+${PLIST.jabber}share/examples/callweaver/res_jabber.conf
 ${PLIST.mysql}share/examples/callweaver/cdr_mysql.conf
 ${PLIST.mysql}share/examples/callweaver/res_mysql.conf
 ${PLIST.pgsql}share/examples/callweaver/cdr_pgsql.conf
