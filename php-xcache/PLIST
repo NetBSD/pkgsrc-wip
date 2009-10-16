@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/16 17:50:31 mbowie Exp $
+lib/php/20040412/xcache.so
+share/examples/xcache/admin/common-en.lang.php
+share/examples/xcache/admin/common-zh-simplified-utf-8.lang.php
+share/examples/xcache/admin/common-zh-traditional-utf-8.lang.php
+share/examples/xcache/admin/common.php
+share/examples/xcache/admin/config.php.example
+share/examples/xcache/admin/edit.php
+share/examples/xcache/admin/edit.tpl.php
+share/examples/xcache/admin/footer.tpl.php
+share/examples/xcache/admin/header.tpl.php
+share/examples/xcache/admin/help-en.lang.php
+share/examples/xcache/admin/help-zh-simplified-utf-8.lang.php
+share/examples/xcache/admin/help-zh-traditional-utf-8.lang.php
+share/examples/xcache/admin/help.php
+share/examples/xcache/admin/index.php
+share/examples/xcache/admin/tablesort.js
+share/examples/xcache/admin/xcache.css
+share/examples/xcache/admin/xcache.php
+share/examples/xcache/admin/xcache.tpl.php
+share/examples/xcache/xcache.ini
+@dirrm share/examples/xcache/admin
+@dirrm share/examples/xcache

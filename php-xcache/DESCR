@@ -1,0 +1,2 @@
+XCache is a fast, stable php opcode cacher that has been tested and
+now running on production servers under high load.
