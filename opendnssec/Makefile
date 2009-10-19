@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/10/11 19:21:16 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2009/10/19 08:26:41 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 SVN_REPOSITORIES=	opendnssec
 SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
 SVN_MODULE.opendnssec=	OpenDNSSEC
-VERSION=		1.0.0b2
+VERSION=		1.0.0b3
 NO_CHECKSUM=		yes
 
 .include "options.mk"
