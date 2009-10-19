@@ -336,7 +336,7 @@ generate_summary (){
 
 ############################################################
 installed_packages2stdout (){
-    pkg_info -X '*' | sed -n 's,^PKGPATH=,,p'
+    pkg_info -Xa | sed -n 's,^PKGPATH=,,p'
 }
 
 packages2stdout__1per_line (){
@@ -534,10 +534,62 @@ NF == 0 {
 
 get_processed_pkgs < "$partial_summary_fn" > "$processed_pkgs_fn"
 
+deps1_all_fn=$tmp_dir/level1_all_deps.txt
+deps1_needed_fn=$tmp_dir/level1_needed_deps.txt
+
+filter_needed_deps (){
+    runawk -v partial_summary_fn="$partial_summary_fn" -e '
+#use "xgetline.awk"
+#use "pkg_grep_summary.awk"
+#use "braceexpand.awk"
+
+BEGIN {
+   oldFS = FS
+   FS = " "
+   while (xgetline0(partial_summary_fn)){
+      if (match($0, /^(BUILD_)?DEPENDS=/)) {
+         $0=substr($0, RLENGTH+1)
+         for (i=1; i <= NF; i += 2){
+            if ($i ~ /[{]/){
+               $i = braceexpand($i)
+               sub(/ .*$/, "", $i)
+            }
+            gsub(/:[.][.]\/[.][.]\//, " ")
+            sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", $i)
+            needed [$i, $(i+1)] = 1
+         }
+      }
+   }
+   FS = oldFS
+
+   grep_summary__field = "" # all lines will be analysed
+}
+
+function grep_summary__condition (               _res){
+   if (fname == "PKGNAME"){
+      pkgname = fvalue
+      sub(/-[^-]+$/, "", pkgname)
+   }else if (fname == "PKGPATH"){
+      pkgpath = fvalue
+   }
+
+   if (pkgpath && pkgname){
+      _res = (pkgname SUBSEP pkgpath) in needed
+      pkgname = pkgpath = ""
+      return _res
+   }else{
+      return -1
+   }
+}
+' "$@"
+}
+
 while test -n "${with_dep}${with_bdep}"; do
     runawk -v with_dep=$with_dep -v with_bdep=$with_bdep \
 	   -v processed_pkgs_fn=$processed_pkgs_fn -e '
 #use "xgetline.awk"
+#use "braceexpand.awk"
+
     BEGIN {
 	while (xgetline0(processed_pkgs_fn)){
 	    processed_pkgs [$0] = 1
@@ -557,8 +609,12 @@ while test -n "${with_dep}${with_bdep}"; do
     }
     (with_dep && /^DEPENDS=/) || (with_bdep && /^BUILD_DEPENDS=/)  {
 	sub(/^[^=]*=/, "")
-	gsub(/[^ ]*:[.][.]\/[.][.]\//, "")
 	for (i=1; i <= NF; ++i){
+	    if ($i ~ /[{]/){
+		$i = braceexpand($i)
+		sub(/ .*$/, "", $i)
+	    }
+	    gsub(/[^ ]*:[.][.]\/[.][.]\//, "", $i)
 	    sub(/\/+$/, "", $i)
 	    depends [$i inher_assigns] = 1
 	}
@@ -573,23 +629,38 @@ while test -n "${with_dep}${with_bdep}"; do
     }
     ' "$partial_summary_fn" > "$extra_deps_fn"
 
-    if test -s "$extra_deps_fn"; then
-	if test -n "$debug"; then
-	    echo ===== extra_deps: ========= 1>&2
-	    sort "$extra_deps_fn" 1>&2
-	fi
-	runpipe0 \
-	    env _PSS_RECURS=1 $0 $make_plist < "$extra_deps_fn" '|' \
-	    tee -a "$partial_summary_fn" '|' \
-	    get_processed_pkgs >> "$processed_pkgs_fn"
+    if test -n "$debug"; then
+	echo '===== extra_deps: =========' 1>&2
+	sort "$extra_deps_fn" 1>&2
+    fi
 
-	pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
-	mv "$partial_summary_fn".tmp "$partial_summary_fn"
-
-	cat "$extra_deps_fn" >> "$processed_pkgs_fn"
-    else
+    if ! test -s "$extra_deps_fn"; then
 	break
     fi
+
+    env _PSS_RECURS=1 $0 -m $make_plist \
+	< "$extra_deps_fn" > "$deps1_all_fn"
+    if test -n "$debug"; then
+	echo '===== level-1 deps summaries (multivariant) =========' 1>&2
+	cat "$deps1_all_fn" 1>&2
+    fi
+
+    filter_needed_deps "$deps1_all_fn" > "$deps1_needed_fn"
+    if test -n "$debug"; then
+	echo '===== level-1 deps summaries (needed) =========' 1>&2
+	cat "$deps1_needed_fn" 1>&2
+    fi
+
+    if ! test -s "$deps1_needed_fn"; then
+	break
+    fi
+
+    cat "$deps1_needed_fn" >> "$partial_summary_fn"
+
+    pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
+    mv "$partial_summary_fn".tmp "$partial_summary_fn"
+
+    get_processed_pkgs "$deps1_needed_fn" >> "$processed_pkgs_fn"
 done
 
 remove_intrernal_fields (){
