@@ -1,12 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2009/08/06 14:54:50 jihbed Exp $
-
---- ./Xspin5.2/xspin520.tcl.orig	2009-08-05 23:31:10.000000000 +0000
-+++ ./Xspin5.2/xspin520.tcl	2009-08-05 23:31:39.000000000 +0000
-@@ -1,6 +1,6 @@
+--- ./Xspin5.2/xspin521.tcl.orig	2009-09-06 21:20:10.000000000 +0000
++++ ./Xspin5.2/xspin521.tcl	2009-10-20 12:52:01.000000000 +0000
+@@ -1,7 +1,6 @@
  #!/bin/sh
  # the next line restarts using wish \
 -exec wish c:/cygwin/bin/xspin -- $*
+-
 +exec wish /usr/pkg/bin/xspin -- $*
- 
  # cd	;# enable to cd to home directory by default
  
+ # on PCs:
