@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2009/09/30 08:51:00 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.14 2009/10/20 10:24:22 absd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk15
-PKG_SUPPORTED_OPTIONS=		jdk15-jce jdk15-plugin inet6
+PKG_SUPPORTED_OPTIONS=		sun-jre-jce jdk15-plugin inet6
 #PKG_SUGGESTED_OPTIONS=		jdk15-plugin
-PKG_OPTIONS_LEGACY_VARS+=	JDK15_USE_JCE:jdk15-jce
 
 #.include "../../www/seamonkey/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
@@ -15,7 +14,7 @@ MAKE_ENV+=		DONT_ENABLE_IPV6=YES
 ###
 ### Java(TM) Cryptography Extension (JCE)
 ###
-.if !empty(PKG_OPTIONS:Mjdk15-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES+=	jce_policy-1_5_0.zip
 PLIST.jce=	yes
 post-build:

@@ -1,16 +1,15 @@
-# $NetBSD: options.mk,v 1.5 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: options.mk,v 1.6 2009/10/20 10:24:22 absd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk14
-PKG_SUPPORTED_OPTIONS=		jdk14-jce jdk14-plugin inet6
+PKG_SUPPORTED_OPTIONS=		sun-jre-jce jdk14-plugin inet6
 PKG_SUGGESTED_OPTIONS=		jdk14-plugin
-PKG_OPTIONS_LEGACY_VARS+=	JDK14_USE_JCE:jdk14-jce
 
 .include "../../mk/bsd.options.mk"
 
 ###
 ### Java(TM) Cryptography Extension (JCE)
 ###
-.if !empty(PKG_OPTIONS:Mjdk14-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES+=			jce_policy-1_4_2.zip
 PLIST_SRC+=			PLIST.jce
 post-build:

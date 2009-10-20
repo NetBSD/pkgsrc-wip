@@ -1,9 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: options.mk,v 1.5 2009/10/20 10:24:22 absd Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk16
-PKG_SUPPORTED_OPTIONS=		jdk16-jce inet6 debug fastdebug # jdk16-plugin
+PKG_SUPPORTED_OPTIONS=		sun-jre-jce inet6 debug fastdebug # jdk16-plugin
 PKG_SUGGESTED_OPTIONS=		# jdk16-plugin
-PKG_OPTIONS_LEGACY_VARS+=	JDK16_USE_JCE:jdk16-jce
 
 # fixme
 #.include "../../www/seamonkey/gecko-options.mk"
@@ -28,7 +27,7 @@ MAKE_ENV+=		SKIP_FASTDEBUG_BUILD=false
 ###
 ### Java(TM) Cryptography Extension (JCE)
 ###
-.if !empty(PKG_OPTIONS:Mjdk16-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES+=	jce_policy-6.zip
 PLIST_SRC+=	PLIST.jce
 post-build:
