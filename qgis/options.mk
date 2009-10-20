@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/05/19 04:15:36 brook1 Exp $
+# $NetBSD: options.mk,v 1.2 2009/10/20 20:44:43 asau Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
@@ -12,8 +12,8 @@ CMAKE_ARGS+=		-DWITH_GRASS:BOOL=TRUE
 CMAKE_ARGS+=            -DGRASS_PREFIX:PATH=${PREFIX}/grass-${GRASS_VERSION}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${GRASS_HOME}/lib
 PLIST.grass=		yes
-.include "../../wip-local/grass/Makefile.common"
-.include "../../wip-local/grass/buildlink3.mk"
+.include "../../wip/grass/Makefile.common"
+.include "../../wip/grass/buildlink3.mk"
 .else
 CMAKE_ARGS+=            -DWITH_GRASS:BOOL=FALSE
 .endif
