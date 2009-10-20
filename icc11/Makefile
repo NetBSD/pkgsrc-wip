@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/10/04 22:07:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/20 22:29:10 alnsn Exp $
 
 ICC_MAJOR_VERSION=	11.1
 ICC_MINOR_VERSION=	056
 ICC_VERSION=		${ICC_MAJOR_VERSION}.${ICC_MINOR_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
-DISTNAME=		l_cproc_p_${ICC_VERSION}_${ICC_ARCH}
+DISTNAME=		l_cproc_p_${ICC_VERSION}
 PKGNAME=		icc11-${ICC_VERSION}
 EXTRACT_SUFX=		.tgz
 EXTRACT_ELEMENTS=	${ICC_EXTRACT_RPMS}
@@ -70,11 +71,7 @@ SUBST_FILES.installdir=	icc11/bin/iccvars.sh                         \
 
 SUBST_STAGE.vars=	pre-configure
 SUBST_VARS.vars=	ICC_PREFIX ICC_ARCH OPSYS_EMULDIR GCC_PREFIX BINUTILS_PREFIX
-SUBST_FILES.vars=	icc11/bin/icc
-
-.if ${OPSYS} != "Linux"
-SUBST_FILES.vars+=	icc11/libexec/sh-dryrun.awk
-.endif
+SUBST_FILES.vars=	util.h icc xiar README.pkgsrc
 
 PLIST_VARS+=		linux netbsd i386 x86_64 linux_x86_64
 PLIST.${LOWER_OPSYS}=	yes
@@ -82,25 +79,28 @@ PLIST.${MACHINE_ARCH}=	yes
 PLIST.${LOWER_OPSYS}_${MACHINE_ARCH}=yes
 
 ICC_EXTRACT_RPMS=\
+	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.i486.rpm              \
+	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.x86_64.rpm            \
 	${DISTNAME}/rpm/intel-cprocsdk${ICC_MINOR_VERSION}-11.1-1.noarch.rpm         \
-	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.${ICC_RPM_ARCH}.rpm   \
 	${DISTNAME}/rpm/intel-cprolib${ICC_MINOR_VERSION}-11.1-1.${ICC_RPM_ARCH}.rpm \
 	${DISTNAME}/rpm/intel-cprolibdev${ICC_MINOR_VERSION}-11.1-1.${ICC_RPM_ARCH}.rpm
 
 WRKSRC=			${WRKDIR}/${ICC_MAJOR_VERSION}
 
 post-extract:
-	cd ${WRKDIR} && rpm2pkg -s 4 ${ICC_EXTRACT_RPMS}   && \
-	cd ${WRKSRC} && mv ${ICC_MINOR_VERSION} icc11      && \
-	cd ${FILESDIR}/${LOWER_OPSYS}                      && \
-	find . -type f | grep -v /CVS/ | pax -rw ${WRKSRC} && \
-	cp ../Makefile ${WRKSRC}
+	cd ${WRKDIR} && rpm2pkg -s 4 ${ICC_EXTRACT_RPMS}
+	cd ${WRKSRC} && mv ${ICC_MINOR_VERSION} icc11 && \
+	    rm icc11/bin/${ICC_ARCH}/uninstall_cproc.sh
+	cd ${FILESDIR} && find . ! -type d | pax -rw ${WRKSRC}
+	if [ -d ${FILESDIR}/${LOWER_OPSYS} ]; then \
+	    cd ${FILESDIR}/${LOWER_OPSYS} && \
+	    find . ! -type d | pax -rw ${WRKSRC}; fi
 
 do-build:
 	cd ${WRKSRC} && make ${LOWER_OPSYS} ICC_ARCH=${ICC_ARCH}
 
 do-install:
-	cd ${WRKSRC} && make install-${LOWER_OPSYS} ICC_ARCH=${ICC_ARCH} \
+	cd ${WRKSRC} && make install-${LOWER_OPSYS}-${ICC_ARCH} \
 		PREFIX=${DESTDIR}${PREFIX} PKGMANDIR=${PKGMANDIR}
 
 .include "../../lang/gcc34/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/05 12:55:48 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/20 22:29:10 alnsn Exp $
 ${PLIST.i386}icc11/lib/${ICC_ARCH}/libimf_pic.a
 ${PLIST.i386}icc11/lib/${ICC_ARCH}/libipgo_pic.a
 ${PLIST.i386}icc11/lib/${ICC_ARCH}/libirc_fp.a
@@ -28,9 +28,8 @@ ${PLIST.linux}icc11/lib/${ICC_ARCH}/libpdbx.so.5
 ${PLIST.linux}icc11/lib/${ICC_ARCH}/libsvml.so
 ${PLIST.linux}icc11/lib/${ICC_ARCH}/tselect_libFNP.so
 ${PLIST.netbsd}icc11/lib/${ICC_ARCH}/libicc11bsd.a
-${PLIST.netbsd}icc11/libexec/print-dryrun.awk
-${PLIST.netbsd}icc11/libexec/sh-dryrun.awk
-${PLIST.netbsd}icc11/libexec/transform-dryrun.awk
+${PLIST.netbsd}icc11/libexec/as
+${PLIST.netbsd}icc11/libexec/ld
 ${PLIST.x86_64}icc11/include/${ICC_ARCH}/kmp_remote_memory.h
 ${PLIST.x86_64}icc11/include/${ICC_ARCH}/kmp_sharable.h
 ${PLIST.x86_64}icc11/lib/${ICC_ARCH}/crtclusterbegin.o
@@ -56,13 +55,20 @@ icc11/bin/${ICC_ARCH}/profmerge
 icc11/bin/${ICC_ARCH}/proforder
 icc11/bin/${ICC_ARCH}/svcpcom
 icc11/bin/${ICC_ARCH}/tselect
-icc11/bin/${ICC_ARCH}/uninstall_cproc.sh
 icc11/bin/${ICC_ARCH}/xiar
 icc11/bin/${ICC_ARCH}/xild
+icc11/bin/codecov
 icc11/bin/icc
 icc11/bin/iccvars.csh
 icc11/bin/iccvars.sh
 icc11/bin/icpc
+icc11/bin/prelink
+icc11/bin/profdcg
+icc11/bin/profmerge
+icc11/bin/proforder
+icc11/bin/tselect
+icc11/bin/xiar
+icc11/bin/xild
 icc11/include/${ICC_ARCH}/xmmintrin.h
 icc11/include/_intel_mf_runtime.h
 icc11/include/complex.h
@@ -129,6 +135,8 @@ man/man1/codecov_c.1
 man/man1/icc.1
 man/man1/icpc.1
 man/man1/tselect_c.1
+share/doc/icc11/README.bsd
+share/doc/icc11/README.pkgsrc
 share/doc/icc11/credist.txt
 share/doc/icc11/credist_jp.txt
 share/doc/icc11/csupport
