@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/10/20 08:53:32 jihbed Exp $
+
+SHA1 (greenlet-0.2.tar.gz) = b864ec8db6685f72e7174b7df57ac644d12f9fd5
+RMD160 (greenlet-0.2.tar.gz) = 8f32f008f5846dd99d14115f4c8c7aa9b1e2a428
+Size (greenlet-0.2.tar.gz) = 22124 bytes
