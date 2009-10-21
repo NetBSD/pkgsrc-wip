@@ -677,3 +677,108 @@ COMMENT=XXKB - switches and indicates a current keyboard layout
 PKGNAME=xxkb-X
 COMMENT=XXKB - switches and indicates a current keyboard layout
 
+--------------------------------------------------
+------- pkg_summary2build_graph #17.1
+devel/gmake devel/libmaa
+devel/gmake editors/emacs
+devel/gmake textproc/dict-client
+devel/gmake wip/dict-client
+devel/gmake wip/dict-server
+devel/libltdl textproc/dict-client
+devel/libmaa wip/dict-client
+devel/libmaa wip/dict-server
+devel/libmaa wip/paexec
+devel/libtool-base devel/libltdl
+devel/libtool-base devel/libmaa
+devel/libtool-base devel/pkg-config
+devel/libtool-base graphics/jpeg
+devel/libtool-base graphics/libungif
+devel/libtool-base graphics/png
+devel/libtool-base graphics/tiff
+devel/libtool-base wip/dict-client
+devel/libtool-base wip/dict-server
+devel/pkg-config editors/emacs
+editors/emacs textproc/dictem
+graphics/jpeg editors/emacs
+graphics/jpeg graphics/tiff
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+lang/perl5 graphics/libungif
+net/netcat wip/pkg_online-client
+pkgtools/x11-links editors/emacs
+sysutils/checkperms devel/gmake
+sysutils/checkperms devel/libltdl
+sysutils/checkperms devel/libmaa
+sysutils/checkperms devel/libtool-base
+sysutils/checkperms devel/pkg-config
+sysutils/checkperms editors/emacs
+sysutils/checkperms graphics/jpeg
+sysutils/checkperms graphics/libungif
+sysutils/checkperms graphics/png
+sysutils/checkperms graphics/tiff
+sysutils/checkperms lang/perl5
+sysutils/checkperms net/netcat
+sysutils/checkperms pkgtools/x11-links
+sysutils/checkperms textproc/dict-client
+sysutils/checkperms textproc/dictem
+sysutils/checkperms wip/awk-pkgsrc-dewey
+sysutils/checkperms wip/dict-client
+sysutils/checkperms wip/dict-server
+sysutils/checkperms wip/distbb
+sysutils/checkperms wip/paexec
+sysutils/checkperms wip/pipestatus
+sysutils/checkperms wip/pkg_online
+sysutils/checkperms wip/pkg_online-client
+sysutils/checkperms wip/pkg_online-server
+sysutils/checkperms wip/pkg_summary-utils
+sysutils/checkperms wip/runawk
+textproc/dict-client textproc/dictem
+wip/awk-pkgsrc-dewey wip/pkg_summary-utils
+wip/dict-client wip/pkg_online-client
+wip/dict-server wip/pkg_online-server
+wip/paexec wip/distbb
+wip/pipestatus wip/pkg_online-client
+wip/pipestatus wip/pkg_online-server
+wip/pipestatus wip/pkg_summary-utils
+wip/pkg_online-client wip/pkg_online
+wip/pkg_online-server wip/pkg_online
+wip/pkg_summary-utils wip/distbb
+wip/pkg_summary-utils wip/pkg_online-client
+wip/pkg_summary-utils wip/pkg_online-server
+wip/runawk wip/awk-pkgsrc-dewey
+wip/runawk wip/distbb
+wip/runawk wip/pkg_summary-utils
+--------------------------------------------------
+------- pkg_summary2build_graph #17.2
+devel/gmake
+devel/libltdl
+devel/libmaa wip/dict-client
+devel/libtool-base
+devel/pkg-config
+editors/emacs
+graphics/jpeg
+graphics/libungif
+graphics/png
+graphics/tiff
+lang/perl5
+pkgtools/digest
+sysutils/checkperms
+textproc/dict-client
+textproc/dictem
+wip/awk-pkgsrc-dewey
+wip/dict-client wip/pkg_online-client
+wip/dict-server
+wip/distbb
+wip/paexec
+wip/pipestatus
+wip/pkg_online-client wip/pkg_online
+wip/pkg_online-server wip/pkg_online
+wip/pkg_summary-utils
+wip/runawk
+--------------------------------------------------
+------- pkg_summary2build_graph #17.3
+audio/py-mutagen audio/py-karaoke
+audio/py-mutagen:PYTHON_VERSION_REQD=24 audio/py-karaoke:PYTHON_VERSION_REQD=24
+audio/py-mutagen:PYTHON_VERSION_REQD=26 audio/py-karaoke:PYTHON_VERSION_REQD=26

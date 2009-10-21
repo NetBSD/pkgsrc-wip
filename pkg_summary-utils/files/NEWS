@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.34.0, by Aleksey Cheusov, Wed, 21 Oct 2009 11:34:30 +0300
+
+  - FIX: pkg_summary2build_graph is reimplemented and now handles
+    correctly summaries with enriched PKGPATHS and ASSIGNMENTS field.
+    Regression tests for this utility have been added.
+
+----------------------------------------------------------------------
 Version 0.33.0, by Aleksey Cheusov, Sat, 17 Oct 2009 21:41:48 +0300
 
   - FIX: 'pkg_src_summary -A meta-pkgs/php4-extensions'

@@ -269,3 +269,15 @@ echo '--------------------------------------------------'
 echo '------- pkg_src_summary #16.4'
 pkg_src_summary -f PKGNAME,PKGPATH,COMMENT --rem-fields=PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
+echo '--------------------------------------------------'
+echo '------- pkg_summary2build_graph #17.1'
+pkg_summary2build_graph src_summary.txt |
+sort
+echo '--------------------------------------------------'
+echo '------- pkg_summary2build_graph #17.2'
+pkg_summary2build_graph src_summary2.txt |
+sort
+echo '--------------------------------------------------'
+echo '------- pkg_summary2build_graph #17.3'
+pkg_summary2build_graph src_summary7.txt |
+sort

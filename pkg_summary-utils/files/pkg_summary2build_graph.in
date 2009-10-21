@@ -45,77 +45,57 @@
 #.end-str
 ############################################################
 
-/^PKGNAME=/ {
-	pkgname = substr($0, 9)
-	pkgbase = pkgname
-	sub(/-[^-]+$/, "", pkgbase)
-
-	pkgpaths [pkgbase] = 1
-
+/^ASSIGNMENTS=/ {
+	assigns = substr($0, 13)
 	next
 }
 
 /^PKGPATH=/ {
 	pkgpath = substr($0, 9)
-	nodep_pkgpaths [pkgpath] = 1
 	next
 }
 
 NF == 0 {
-	assert(pkgbase != "", "Cannot find pkgbase")
 	assert(pkgpath != "", "Cannot find pkgpath")
 
-	pkgpaths [pkgbase] = pkgpath
+	if (assigns)
+		pkgpath = pkgpath ":" assigns
 
-	pkgbase = pkgpath = ""
+	all_pkgs [pkgpath] = 1
+
+	cnt = 0
+	for (dep in deps){
+		++cnt
+		print dep, pkgpath
+		dep_pkgs [dep] = 1
+	}
+	if (cnt)
+		dep_pkgs [pkgpath] = 1
+
+	delete deps
+
+	assigns = pkgpath = ""
 	next
 }
 
 /^DEPENDS=/ || /^BUILD_DEPENDS=/ {
 	sub(/^[^=]+=/, "")
-	delete deps
-	for (i=1; i <= NF; ++i){
-		if ($i !~ /[{]/){
-			sub(/^.*:(..\/..\/)?/, "", $i)
-			deps [$i " " pkgpath] = 1
-			delete nodep_pkgpaths [pkgpath]
-			delete nodep_pkgpaths [$i]
-		}else{
-			depbase = $i
-			sub(/:.*$/, "", depbase)
-			depbase = braceexpand(depbase)
-			sub(/ .*$/, "", depbase)
-			sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
 
-			delete nodep_pkgpaths [pkgpath]
-			hidden_deps [depbase " " pkgpath] = 1
+	for (i=1; i <= NF; ++i){
+		if ($i ~ /[{]/){
+			$i = braceexpand($i)
+			sub(/ .*$/, "", $i)
 		}
-	}
-	for (dep in deps){
-		print dep
+		sub(/^[^:]*:(..\/..\/)?/, "", $i)
+		deps [$i] = 1
 	}
 }
 
 END {
-	ex = 0
-
-	for (hdep in hidden_deps){
-		base = hdep
-		sub(/ .*$/, "", base)
-
-		if (! (base in pkgpaths)){
-			print "Cannot find PKGPATH for " base > "/dev/stderr"
-			ex = 1
-		}else{
-			pkgpath = hdep
-			sub(/^.* /, "", pkgpath)
-
-			print pkgpaths [base], pkgpath
+	for (pkgpath in all_pkgs){
+		if (! (pkgpath in dep_pkgs)){
+			print pkgpath
 		}
-	}
-
-	for (pkgpath in nodep_pkgpaths){
-		print pkgpath
 	}
 
 	exit ex

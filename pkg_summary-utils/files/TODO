@@ -34,7 +34,6 @@ existing tools:
          non-portable 'test f1 -nt f2'
 
     pkg_grep_summary:
-       - man page
 
     pkg_summary2build_graph:
 
