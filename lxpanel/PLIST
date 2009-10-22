@@ -1,0 +1,63 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/22 00:38:43 jeremy-c-reed Exp $
+bin/lxpanel
+bin/lxpanelctl
+include/lxpanel/plugin.h
+lib/lxpanel/plugins/thermal.so
+lib/pkgconfig/lxpanel.pc
+man/man1/lxpanel.1
+man/man1/lxpanelctl.1
+share/lxpanel/images/background.png
+share/lxpanel/images/capslock-off.png
+share/lxpanel/images/capslock-on.png
+share/lxpanel/images/file-manager.png
+share/lxpanel/images/gnome-applications.png
+share/lxpanel/images/gnome-control-center.png
+share/lxpanel/images/gnome-devel.png
+share/lxpanel/images/gnome-fs-desktop.png
+share/lxpanel/images/gnome-globe.png
+share/lxpanel/images/gnome-graphics.png
+share/lxpanel/images/gnome-joystick.png
+share/lxpanel/images/gnome-logout.png
+share/lxpanel/images/gnome-multimedia.png
+share/lxpanel/images/gnome-netstatus-0-24.png
+share/lxpanel/images/gnome-netstatus-25-49.png
+share/lxpanel/images/gnome-netstatus-50-74.png
+share/lxpanel/images/gnome-netstatus-75-100.png
+share/lxpanel/images/gnome-netstatus-disconn.png
+share/lxpanel/images/gnome-netstatus-error.png
+share/lxpanel/images/gnome-netstatus-idle.png
+share/lxpanel/images/gnome-netstatus-rx.png
+share/lxpanel/images/gnome-netstatus-tx.png
+share/lxpanel/images/gnome-netstatus-txrx.png
+share/lxpanel/images/gnome-setting.png
+share/lxpanel/images/gnome-settings.png
+share/lxpanel/images/gnome-system.png
+share/lxpanel/images/gnome-util.png
+share/lxpanel/images/mute.png
+share/lxpanel/images/my-computer.png
+share/lxpanel/images/ns-bothrs.png
+share/lxpanel/images/ns-connected.png
+share/lxpanel/images/ns-disconnect.png
+share/lxpanel/images/ns-lock.png
+share/lxpanel/images/ns-problem.png
+share/lxpanel/images/ns-recvdata.png
+share/lxpanel/images/ns-senddata.png
+share/lxpanel/images/numlock-off.png
+share/lxpanel/images/numlock-on.png
+share/lxpanel/images/redhat-internet.png
+share/lxpanel/images/scrllock-off.png
+share/lxpanel/images/scrllock-on.png
+share/lxpanel/images/stock_volume.png
+share/lxpanel/images/volume.png
+share/lxpanel/profile/default/config
+share/lxpanel/profile/default/panels/panel
+share/lxpanel/ui/panel-pref.ui
+@dirrm share/lxpanel/ui
+@dirrm share/lxpanel/profile/default/panels
+@dirrm share/lxpanel/profile/default
+@dirrm share/lxpanel/profile
+@dirrm share/lxpanel/images
+@dirrm share/lxpanel
+@dirrm lib/lxpanel/plugins
+@dirrm lib/lxpanel
+@dirrm include/lxpanel
