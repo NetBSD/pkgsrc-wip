@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/22 00:38:43 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/22 00:49:43 jeremy-c-reed Exp $
 #
 
 DISTNAME=	lxpanel-0.3.999
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	SHORT_DESCRIPTION_OF_THE_PACKAGE
+
+DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -22,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	lxpanel.pc.in
 # menu-cache, lxmenu-data
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../wip/menu-cache/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
