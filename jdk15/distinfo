@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/03/06 21:10:52 ghen Exp $
+$NetBSD: distinfo,v 1.12 2009/10/22 20:18:10 absd Exp $
 
 SHA1 (bsd-jdk15-patches-8.tar.bz2) = d79d11da85629933530e64ad53ab3319c626a090
 RMD160 (bsd-jdk15-patches-8.tar.bz2) = 36efc84ca89f11e7a3cd51511656164a22d5e7b6
@@ -17,7 +17,7 @@ SHA1 (patch-ab) = 549dac84644247e0c90978f2c78ce49ee62f7434
 SHA1 (patch-ac) = ceb2b0fe31ca6fc3a06285625655db1ee20ec0a1
 SHA1 (patch-ad) = 18014bd4b668be764cc1a170b161e80cd48c625f
 SHA1 (patch-ae) = a5c50cc33f8fcbdd66318af81fe303285bab6f3b
-SHA1 (patch-af) = 9da5210f49d0983bb32edf91ba08c1552717a397
+SHA1 (patch-af) = c6ab873b86e71bf23476a2a17a3e40454f24608a
 SHA1 (patch-ag) = bec1a8c871b826361ab5acbe7c7b64f92b71d8bc
 SHA1 (patch-ah) = ebba71477dccc416e81e1d3aaca5d098a03df760
 SHA1 (patch-aj) = c28c777ebfceea200fd0e0311981be5b38cbb247
