@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/09/29 21:54:44 pettai Exp $
+# $NetBSD: options.mk,v 1.3 2009/10/24 21:33:59 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.opendnssec
 PKG_SUPPORTED_OPTIONS=		auditor softhsm
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--disable-auditor
 .include "../../lang/ruby/buildlink3.mk"
 
 DEPENDS+=	rubygems:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby:../../wip/ruby-dnsruby
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.39:../../wip/ruby-dnsruby
 .endif
 
 ###
