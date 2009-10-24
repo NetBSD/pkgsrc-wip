@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/10/19 08:26:41 pettai Exp $
+# $NetBSD: Makefile,v 1.11 2009/10/24 20:49:36 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -15,13 +15,13 @@ DEPENDS+=	${PYPKGPREFIX}-4Suite:../../wip/py-4Suite
 LICENSE_FILE=	${FILESDIR}/iis-license
 
 USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4 perl
-USE_JAVA=	no
+USE_JAVA=	build
 USE_LIBTOOL=	yes
 
 SVN_REPOSITORIES=	opendnssec
 SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
 SVN_MODULE.opendnssec=	OpenDNSSEC
-VERSION=		1.0.0b3
+VERSION=		1.0.0b4
 NO_CHECKSUM=		yes
 
 .include "options.mk"
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 WRKSRC=			${WRKDIR}/OpenDNSSEC
+EGDIR=			${PREFIX}/share/examples/opendnssec
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
@@ -50,9 +51,33 @@ CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 .include "../../mk/java-vm.mk"
 .endif
 
+CONF_FILES=	${EGDIR}/conf.xml.sample \
+			${PKG_SYSCONFDIR}/opendnssec/conf.xml
+CONF_FILES+=	${EGDIR}/kasp.xml.sample \
+			${PKG_SYSCONFDIR}/opendnssec/kasp.xml
+CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
+			${PKG_SYSCONFDIR}/opendnssec/zonefetch.xml
+CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
+			${PKG_SYSCONFDIR}/opendnssec/zonelist.xml
+
+INSTALLATION_DIRS=	${EGDIR} ${VARBASE}/opendnssec/tmp
+INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signconf
+INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signed
+INSTALLATION_DIRS+=	${VARBASE}/opendnssec/unsigned
+
 pre-configure:
 	${CHMOD} u+x ${WRKSRC}/autogen.sh
 	cd ${WRKSRC} && ./autogen.sh
+
+pre-install:
+	${INSTALL_DATA} ${WRKSRC}/conf/conf.xml \
+		${DESTDIR}${EGDIR}/conf.xml.sample
+	${INSTALL_DATA} ${WRKSRC}/conf/kasp.xml \
+		${DESTDIR}${EGDIR}/kasp.xml.sample
+	${INSTALL_DATA} ${WRKSRC}/conf/zonefetch.xml \
+		${DESTDIR}${EGDIR}/zonefetch.xml.sample
+	${INSTALL_DATA} ${WRKSRC}/conf/zonelist.xml \
+		${DESTDIR}${EGDIR}/zonelist.xml.sample
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

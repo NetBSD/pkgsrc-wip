@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 19:44:36 pettai Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/10/24 20:49:36 pettai Exp $
 bin/ods-auditor
 bin/ods-control
 bin/ods-hsmspeed
@@ -12,7 +12,6 @@ include/libhsmdns.h
 lib/libhsm.la
 lib/opendnssec/kasp_auditor.rb
 lib/opendnssec/kasp_auditor/auditor.rb
-lib/opendnssec/kasp_auditor/auditor_daemon.rb
 lib/opendnssec/kasp_auditor/config.rb
 lib/opendnssec/kasp_auditor/key_tracker.rb
 lib/opendnssec/kasp_auditor/parse.rb

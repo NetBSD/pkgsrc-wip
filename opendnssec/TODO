@@ -1,2 +1,1 @@
 - Fix options.mk -auditor. Problem if disabled
-- Fix java, no need for full dependency
