@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/10/02 20:06:36 pettai Exp $
+# $NetBSD: Makefile,v 1.10 2009/10/24 20:52:44 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
@@ -46,12 +46,20 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common
 PLIST_SUBST+=		SHLIB_VERSION=${RCVERSION:C/[^0-9]*$//}
 
 WRKSRC=			${WRKDIR}/softHSM
+EGDIR=			${PREFIX}/share/examples/softhsm
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+CONF_FILES=		${EGDIR}/softhsm.conf ${PKG_SYSCONFDIR}/softhsm.conf
+
+INSTALLATION_DIRS=	${EGDIR} ${VARBASE}/softhsm
 
 pre-configure:
 	${CHMOD} u+x ${WRKSRC}/autogen.sh
 	cd ${WRKSRC} && ./autogen.sh
+
+pre-install:
+	${INSTALL_DATA} ${WRKSRC}/softhsm.conf ${DESTDIR}${EGDIR}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
