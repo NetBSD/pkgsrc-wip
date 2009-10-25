@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+
+--- gmond/g25_config.h.orig	2009-01-28 16:23:20.000000000 -0700
++++ gmond/g25_config.h
+@@ -4,7 +4,7 @@
+ #include <string.h>
+ 
+ /* autoconf me later */
+-#define DEFAULT_GMOND_CONFIG_FILE "/etc/ganglia/gmond.conf"
++#define DEFAULT_GMOND_CONFIG_FILE "@PKG_SYSCONFDIR@/gmond.conf"
+ 
+ typedef struct
+    {

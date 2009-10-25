@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+
+--- libmetrics/netbsd/metrics.c.orig	2009-01-28 16:23:20.000000000 -0700
++++ libmetrics/netbsd/metrics.c
+@@ -134,7 +134,10 @@ cpu_speed_func ( void )
+ 
+    cpu_speed = 0;
+ 
+-#if (__NetBSD_Version__ > 299000000)
++#if (__NetBSD_Version__ > 500000000)
++   if (sysctlbyname("machdep.tsc_freq", &cpu_speed, &len, NULL, 0) == -1)
++      val.uint32 = 0;
++#elif (__NetBSD_Version__ > 299000000)
+    if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
+       val.uint32 = 0;
+ #endif

@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+
+--- mans/gmond.1.orig	2009-01-28 16:23:20.000000000 -0700
++++ mans/gmond.1
+@@ -18,7 +18,7 @@ Print version and exit
+ .TP
+ \fB\-c\fR, \fB\-\-conf\fR=\fISTRING\fR
+ Location of gmond configuration file  (default=
+-`/etc/ganglia/gmond.conf')
++`@PKG_SYSCONFDIR@/gmond.conf')
+ .TP
+ \fB\-l\fR, \fB\-\-location\fR=\fISTRING\fR
+ Location of this host in the cluster

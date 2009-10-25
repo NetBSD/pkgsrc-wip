@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+
+--- mans/gmetad.1.orig	2009-01-28 16:23:20.000000000 -0700
++++ mans/gmetad.1
+@@ -19,7 +19,7 @@ Print version and exit
+ .TP
+ \fB\-c\fR, \fB\-\-conf\fR=\fISTRING\fR
+ Location of gmetad configuration file
+-(default='/etc/ganglia/gmetad.conf')
++(default='@PKG_SYSCONFDIR@/gmetad.conf')
+ .TP
+ \fB\-d\fR, \fB\-\-debug\fR=\fIINT\fR
+ Debug level. If greater than zero, daemon will stay in

@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+
+--- gmetad/gmetad.conf.orig	2009-01-28 16:23:20.000000000 -0700
++++ gmetad/gmetad.conf
+@@ -110,5 +110,5 @@ data_source "my cluster" localhost
+ #
+ #-------------------------------------------------------------------------------
+ # Where gmetad stores its round-robin databases
+-# default: "/var/lib/ganglia/rrds"
++# default: "/var/db/ganglia/rrds"
+ # rrd_rootdir "/some/other/place"
