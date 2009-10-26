@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/24 22:00:25 pettai Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/10/26 22:23:09 pettai Exp $
 bin/ods-auditor
 bin/ods-control
 bin/ods-hsmspeed
@@ -51,9 +51,13 @@ libexec/opendnssec/zone_fetcher
 libexec/opendnssec/zone_reader
 sbin/ods-enforcerd
 sbin/ods-signerd
+share/examples/opendnssec/conf.xml
 share/examples/opendnssec/conf.xml.sample
+share/examples/opendnssec/kasp.xml
 share/examples/opendnssec/kasp.xml.sample
+share/examples/opendnssec/zonefetch.xml
 share/examples/opendnssec/zonefetch.xml.sample
+share/examples/opendnssec/zonelist.xml
 share/examples/opendnssec/zonelist.xml.sample
 share/opendnssec/conf.rnc
 share/opendnssec/conf.rng

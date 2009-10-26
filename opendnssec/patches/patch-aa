@@ -1,0 +1,40 @@
+--- conf/Makefile.am.orig	2009-10-26 22:16:03.000000000 +0100
++++ conf/Makefile.am	2009-10-26 23:00:30.000000000 +0100
+@@ -20,6 +20,7 @@
+ 
+ sysconfdir = @sysconfdir@/opendnssec
+ datadir = @datadir@/opendnssec
++EGDIR = @EGDIR@
+ 
+ noinst_DATA = ${XML}
+ 
+@@ -53,16 +54,16 @@
+ 	
+ 
+ install-data-hook:
+-	test -d ${sysconfdir} || mkdir -p ${DESTDIR}${sysconfdir}
+-	test -f ${sysconfdir}/conf.xml || \
+-		${INSTALL_DATA} ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/conf.xml ${DESTDIR}${sysconfdir}/conf.xml.sample
+-	test -f ${sysconfdir}/zonelist.xml || \
+-		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${sysconfdir}/zonelist.xml.sample
+-	test -f ${sysconfdir}/zonefetch.xml || \
+-		${INSTALL_DATA} ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/zonefetch.xml ${DESTDIR}${sysconfdir}/zonefetch.xml.sample
+-	test -f ${sysconfdir}/kasp.xml || \
+-		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}
+-	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${sysconfdir}/kasp.xml.sample
++	test -d ${EGDIR} || mkdir -p ${DESTDIR}${EGDIR}
++	test -f ${EGDIR}/conf.xml || \
++		${INSTALL_DATA} ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/conf.xml ${DESTDIR}${EGDIR}/conf.xml.sample
++	test -f ${EGDIR}/zonelist.xml || \
++		${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/zonelist.xml ${DESTDIR}${EGDIR}/zonelist.xml.sample
++	test -f ${EGDIR}/zonefetch.xml || \
++		${INSTALL_DATA} ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/zonefetch.xml ${DESTDIR}${EGDIR}/zonefetch.xml.sample
++	test -f ${EGDIR}/kasp.xml || \
++		${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}
++	${INSTALL_DATA} ${top_builddir}/kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
