@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/10/26 22:23:09 pettai Exp $
+# $NetBSD: Makefile,v 1.13 2009/10/26 22:53:29 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -66,7 +66,6 @@ CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
 			${PKG_SYSCONFDIR}/opendnssec/zonelist.xml
 
 INSTALLATION_DIRS=	${EGDIR} ${PKG_SYSCONFDIR}/opendnssec
-INSTALLATION_DIRS+=	${PREFIX}/opendnssec
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/tmp
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signconf
