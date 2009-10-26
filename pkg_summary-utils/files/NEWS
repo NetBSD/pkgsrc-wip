@@ -1,4 +1,13 @@
 ----------------------------------------------------------------------
+Version 0.34.1, by Aleksey Cheusov, Mon, 26 Oct 2009 11:57:37 +0200
+
+  - Yet another fix for
+
+           pkg_src_summary -A meta-pkgs/php4-extensions
+
+    (DEPENDS field should contain enriched PKGPATHs for php4 packages)
+
+----------------------------------------------------------------------
 Version 0.34.0, by Aleksey Cheusov, Wed, 21 Oct 2009 11:34:30 +0300
 
   - FIX: pkg_summary2build_graph is reimplemented and now handles
