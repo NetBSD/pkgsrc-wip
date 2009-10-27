@@ -1,58 +1,22 @@
-$NetBSD: patch-aq,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-aq,v 1.2 2009/10/27 09:04:24 asau Exp $
 
---- erts/etc/unix/Install.src.orig	2007-11-26 13:55:53.000000000 -0500
-+++ erts/etc/unix/Install.src
-@@ -8,7 +8,8 @@ while [ $# -ne 0 ]; do
- 	case $1 in
+--- erts/etc/unix/Install.src.orig	2009-09-18 18:07:12.000000000 +0400
++++ erts/etc/unix/Install.src	2009-10-27 01:43:51.000000000 +0300
+@@ -27,14 +27,15 @@
  		-minimal) start_option=minimal ;;
  		-sasl)    start_option=sasl    ;;
+ 		-cross)   cross=yes            ;;
 -		*)        ERL_ROOT=$1          ;;
 +		*)        ERL_ROOT=$DESTDIR/$1;
 +		          ERL_IROOT=$1         ;;
  	esac
  	shift
  done
-@@ -35,7 +36,7 @@ fi
- if [ -d $ERL_ROOT/erts-%I_VSN%/obj ]
+ 
+ if [ -z "$cross" ]
  then
- 	cd $ERL_ROOT/erts-%I_VSN%/obj
--	sed -e "s;%FINAL_ROOTDIR%;$ERL_ROOT;" Makefile.src > Makefile
-+	sed -e "s;%FINAL_ROOTDIR%;$ERL_IROOT;" Makefile.src > Makefile
- fi
- 
- if [ ! -d $ERL_ROOT/bin ]
-@@ -59,14 +60,14 @@ esac
- 
- cd $ERL_ROOT/erts-%I_VSN%/bin
- 
--sed -e "s;%FINAL_ROOTDIR%;$ERL_ROOT;" erl.src > erl
-+sed -e "s;%FINAL_ROOTDIR%;$ERL_IROOT;" erl.src > erl
- chmod 755 erl
- 
- #
- # Create start file for embedded system use,
- #
- (cd $ERL_ROOT/erts-%I_VSN%/bin;
--  sed -e "s;%FINAL_ROOTDIR%;$ERL_ROOT;" start.src > start;
-+  sed -e "s;%FINAL_ROOTDIR%;$ERL_IROOT;" start.src > start;
-   chmod 755 start)
- 
- cd $ERL_ROOT/bin
-@@ -87,7 +88,7 @@ if [ -h epmd ]; then
-   /bin/rm -f epmd
- fi
- 
--ln -s $ERL_ROOT/erts-%I_VSN%/bin/epmd epmd
-+ln -s ../erts-%I_VSN%/bin/epmd epmd
- 
- cp -p $ERL_ROOT/erts-%I_VSN%/bin/run_erl .
- cp -p $ERL_ROOT/erts-%I_VSN%/bin/to_erl .
-@@ -97,7 +98,7 @@ chmod 755 start_erl
- echo ""
- 
- echo %I_VSN% %I_SYSTEM_VSN% > $ERL_ROOT/releases/start_erl.data
--sed -e "s;%ERL_ROOT%;$ERL_ROOT;" $ERL_ROOT/releases/RELEASES.src > $ERL_ROOT/releases/RELEASES
-+sed -e "s;%ERL_ROOT%;$ERL_IROOT;" $ERL_ROOT/releases/RELEASES.src > $ERL_ROOT/releases/RELEASES
- 
- if [ "$start_option" = "query" ]
- then
+-    TARGET_ERL_ROOT="$ERL_ROOT"
++    TARGET_ERL_ROOT="$ERL_IROOT"
+ else
+     TARGET_ERL_ROOT="$ERL_ROOT"
+     ERL_ROOT=`pwd`

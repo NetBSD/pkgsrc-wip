@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/09/30 23:10:16 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/27 09:04:24 asau Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -52,6 +52,7 @@ lib/erlang/erts-${VERSION.erts}/include/internal/erl_memory_trace_protocol.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_misc_utils.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf_format.h
+lib/erlang/erts-${VERSION.erts}/include/internal/erts_internal.mk
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread.mk
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread_header_config.h
@@ -1374,6 +1375,7 @@ lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/decode/decode_version.
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/eidefs.mk
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/eicode.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/encode_atom.c
+lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/encode_big.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/encode_bignum.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/encode_binary.c
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/encode/encode_boolean.c
@@ -2179,6 +2181,7 @@ lib/erlang/lib/inets-${VERSION.inets}/src/httpd_esi.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_example.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_file.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_instance_sup.erl
+lib/erlang/lib/inets-${VERSION.inets}/src/httpd_internal.hrl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_log.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_manager.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/httpd_misc_sup.erl
@@ -2365,6 +2368,7 @@ lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_config.hrl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_db.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_dns.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_dns.hrl
+lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_dns_record_adts.hrl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_gethost_native.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_hosts.erl
 lib/erlang/lib/kernel-${VERSION.kernel}/src/inet_int.hrl
@@ -3198,6 +3202,8 @@ lib/erlang/lib/reltool-${VERSION.reltool}/ebin/reltool_server.beam
 lib/erlang/lib/reltool-${VERSION.reltool}/ebin/reltool_sys_win.beam
 lib/erlang/lib/reltool-${VERSION.reltool}/ebin/reltool_target.beam
 lib/erlang/lib/reltool-${VERSION.reltool}/ebin/reltool_utils.beam
+lib/erlang/lib/reltool-${VERSION.reltool}/examples/display_args
+lib/erlang/lib/reltool-${VERSION.reltool}/examples/mnesia_core_dump_viewer
 lib/erlang/lib/reltool-${VERSION.reltool}/src/reltool.erl
 lib/erlang/lib/reltool-${VERSION.reltool}/src/reltool.hrl
 lib/erlang/lib/reltool-${VERSION.reltool}/src/reltool_app_win.erl
@@ -4141,7 +4147,9 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAcceleratorTable.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxArtProvider.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiDockArt.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiManager.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiManagerEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiNotebook.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiNotebookEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiPaneInfo.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxAuiTabArt.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxBitmap.beam
@@ -4220,6 +4228,8 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridSizer.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxHelpEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxHtmlEasyPrinting.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxHtmlLinkEvent.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxHtmlWindow.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxIcon.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxIconBundle.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxIconizeEvent.beam
@@ -4339,6 +4349,11 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxe_server.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxe_util.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/demo.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/demo.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/demo_html_tagger.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/demo_html_tagger.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/erlang.png
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_aui.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_aui.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_button.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_button.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_canvas.beam
@@ -4351,12 +4366,19 @@ lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_cursor.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_cursor.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_dialogs.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_dialogs.erl
-lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_frameutilities.beam
-lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_frameutilities.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_frame_utils.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_frame_utils.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_gauge.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_gauge.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_gl.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_gl.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_graphicsContext.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_graphicsContext.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_grid.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_grid.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_htmlWindow.beam
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_htmlWindow.erl
+lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_htmlWindow.html
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_listCtrl.beam
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_listCtrl.erl
 lib/erlang/lib/wx-${VERSION.wx}/examples/demo/ex_notebook.beam
@@ -4443,7 +4465,9 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAcceleratorTable.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxArtProvider.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiDockArt.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiManager.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiManagerEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiNotebook.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiNotebookEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiPaneInfo.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxAuiTabArt.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxBitmap.erl
@@ -4522,6 +4546,8 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridSizer.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxHelpEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxHtmlEasyPrinting.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxHtmlLinkEvent.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxHtmlWindow.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxIcon.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxIconBundle.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxIconizeEvent.erl
@@ -4690,11 +4716,14 @@ lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_b64Bin.yrl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_b64Bin_scan.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_eventp.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_html.erl
+lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_internal.hrl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_lib.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_otpsgml.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_regexp.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_old_dom.erl
+lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_old_dom.hrl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_parser.erl
+lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_parser.hrl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_parser_latin1.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_parser_list.erl
 lib/erlang/lib/xmerl-${VERSION.xmerl}/src/xmerl_sax_parser_utf16be.erl
