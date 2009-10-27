@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2009/04/13 22:04:53 pettai Exp $
+# $NetBSD: options.mk,v 1.4 2009/10/27 11:19:54 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
-PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip ldap p0f dkim
+PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip ldap dkim p0f spamassassin postfix
 PKG_SUGGESTED_OPTIONS=		dnsrbl
 
 .include "../../mk/bsd.options.mk"
@@ -62,7 +62,7 @@ CONFIGURE_ARGS+=	--with-openldap=${PREFIX:Q}
 ### DKIM
 ###
 .if empty(PKG_OPTIONS:Mdkim)
-CONFIGURE_ARGS+=	--disable-dkim=${PREFIX:Q}
+CONFIGURE_ARGS+=	--disable-dkim
 .else
 DEPENDS+=		dkim-milter>=2.6:../../mail/dkim-milter
 .include "../../mail/dkim-milter/buildlink3.mk"
@@ -76,7 +76,16 @@ CONFIGURE_ARGS+=	--with-libdkim=${PREFIX:Q}
 .if empty(PKG_OPTIONS:Mp0f)
 CONFIGURE_ARGS+=	--disable-p0f
 .else
-DEPENDS+=		../../security/p0f
+DEPENDS+=		p0f:../../security/p0f
 
 CONFIGURE_ARGS+=	--with-p0f=${PREFIX:Q}
 .endif
+
+###
+### spamassassin
+###
+.if empty(PKG_OPTIONS:Mspamassassin)
+CONFIGURE_ARGS+=	--disable-p0f
+.else
+DEPENDS+=		spamassassin:../../mail/spamassassin
+CONFIGURE_ARGS+=	--enable-spamassassin

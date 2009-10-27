@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/08 00:23:49 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2009/10/27 11:19:54 pettai Exp $
 
-DISTNAME=	milter-greylist-4.1.12
-PKGNAME=	milter-greylist-devel-4.1.12
+DISTNAME=	milter-greylist-${VERSION}
+PKGNAME=	milter-greylist-devel-${VERSION}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 OWNER=		pettai@nordu.net
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail devel snapshot
+
+VERSION=	4.3.3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,14 +28,15 @@ PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
 PKG_GECOS.smmsp=	Sendmail Message Submission Program
 
+INSTALLATION_DIRS=	${DESTDIR}${PREFIX}/share/doc/milter-greylist
+INSTALLATION_DIRS+=	${DESTDIR}${PREFIX}/share/examples/milter-greylist
+
 RCD_SCRIPTS=	milter-greylist
 
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/milter-greylist
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/milter-greylist
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/milter-greylist
 	${INSTALL_DATA} ${WRKSRC}/greylist.conf \
 	  ${DESTDIR}${PREFIX}/share/examples/milter-greylist
 

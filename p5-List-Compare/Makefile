@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/08 12:06:01 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2009/10/27 11:19:54 pettai Exp $
 #
 
 DISTNAME=		List-Compare-0.37
@@ -7,7 +7,7 @@ CATEGORIES=		perl5 textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=List/}
 
 MAINTAINER=		pettai@nordu.net
-HOMEPAGE=		http://search.cpan.org/CPAN/authors/id/J/JK/JKEENAN/
+HOMEPAGE=		http://search.cpan.org/~jkeenan/List-Compare/
 COMMENT=		Compare elements of two or more lists
 
 PKG_DESTDIR_SUPPORT=	user-destdir

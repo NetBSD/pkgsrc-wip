@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3658 2009/10/26 20:47:54 jym-netbsd Exp $
+# $Id: Makefile,v 1.3659 2009/10/27 11:19:54 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1084,6 +1084,7 @@ SUBDIR+=	lletters
 SUBDIR+=	llvm
 SUBDIR+=	lmdbg
 SUBDIR+=	lmtp2nntp
+SUBDIR+=	log4shib
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
