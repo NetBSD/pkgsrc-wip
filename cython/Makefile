@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/10 21:12:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/27 12:25:51 jihbed Exp $
 #
 
-DISTNAME=	Cython-0.11.2
-PKGNAME=	cython-0.11.2
+DISTNAME=	Cython-0.11.3
+PKGNAME=	cython-0.11.3
 CATEGORIES=	lang python
-MASTER_SITES=	http://cython.org/
+MASTER_SITES=	http://cython.org/release/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://cython.org/
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_ACCEPTED= 26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

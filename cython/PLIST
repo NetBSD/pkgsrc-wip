@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/10 21:12:51 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/10/27 12:25:51 jihbed Exp $
 bin/cython
 ${PYSITELIB}/Cython/CodeWriter.py
 ${PYSITELIB}/Cython/CodeWriter.pyc
@@ -136,7 +136,6 @@ ${PYSITELIB}/Cython/Distutils/build_ext.pyo
 ${PYSITELIB}/Cython/Distutils/extension.py
 ${PYSITELIB}/Cython/Distutils/extension.pyc
 ${PYSITELIB}/Cython/Distutils/extension.pyo
-${PYSITELIB}/Cython/Includes/__cython__.pxd
 ${PYSITELIB}/Cython/Includes/numpy.pxd
 ${PYSITELIB}/Cython/Includes/python.pxd
 ${PYSITELIB}/Cython/Includes/python2.5.pxd
