@@ -1,0 +1,59 @@
+--- configs/Makefile.in.orig	2009-08-16 19:41:22.000000000 +0200
++++ configs/Makefile.in	2009-10-27 10:59:25.000000000 +0100
+@@ -274,6 +274,7 @@
+ 	keygen.sh \
+ 	metagen.sh \
+ 	upgrade.xsl
++EGDIR = /usr/pkg/share/examples/shibboleth
+ 
+ 
+ # The config files are installed "special".  Unlike the entries in
+@@ -376,12 +377,12 @@
+ uninstall-info-am:
+ install-pkgsysconfDATA: $(pkgsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pkgsysconfdir)" || $(mkdir_p) "$(DESTDIR)$(pkgsysconfdir)"
++	test -z "$(EGDIR)" || $(mkdir_p) "$(DESTDIR)$(EGDIR)"
+ 	@list='$(pkgsysconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(pkgsysconfdir)/$$f'"; \
+-	  $(pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(pkgsysconfdir)/$$f"; \
++	  echo " $(pkgsysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(EGDIR)/$$f'"; \
++	  $(pkgsysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(EGDIR)/$$f"; \
+ 	done
+ 
+ uninstall-pkgsysconfDATA:
+@@ -572,23 +573,23 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgxmldir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgsysconfdir)
+ 	for f in $(BUILTCONFIGFILES); do \
+-		if test ! -f $(DESTDIR)${pkgsysconfdir}/$$f; then \
+-			$(INSTALL_DATA) $$f $(DESTDIR)${pkgsysconfdir}; \
++		if test ! -f $(DESTDIR)${EGDIR}/$$f; then \
++			$(INSTALL_DATA) $$f $(DESTDIR)${EGDIR}; \
+ 		fi; \
+-		$(INSTALL_DATA) $$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
++		$(INSTALL_DATA) $$f $(DESTDIR)${EGDIR}/$$f.dist; \
+         done
+ 	for f in $(CONFIGFILES); do \
+-		if test ! -f $(DESTDIR)${pkgsysconfdir}/$$f; then \
+-			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}; \
++		if test ! -f $(DESTDIR)${EGDIR}/$$f; then \
++			$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${EGDIR}; \
+ 		fi; \
+-		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${pkgsysconfdir}/$$f.dist; \
++		$(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)${EGDIR}/$$f.dist; \
+         done
+ 
+ install-data-hook:
+-	chmod +x $(DESTDIR)$(pkgsysconfdir)/keygen.sh
+-	chmod +x $(DESTDIR)$(pkgsysconfdir)/metagen.sh
++	chmod +x $(DESTDIR)$(EGDIR)/keygen.sh
++	chmod +x $(DESTDIR)$(EGDIR)/metagen.sh
+ 	if test -z "$(NOKEYGEN)"; then \
+-		cd $(DESTDIR)$(pkgsysconfdir); \
++		cd $(DESTDIR)$(EGDIR); \
+ 		sh ./keygen.sh -b ; \
+ 	fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
