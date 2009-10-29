@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cntlm.sh,v 1.1.1.1 2009/10/26 20:46:17 jym-netbsd Exp $
+# $NetBSD: cntlm.sh,v 1.2 2009/10/29 18:05:05 jym-netbsd Exp $
 #
 # PROVIDE: cntlm
 # REQUIRE: DAEMON
@@ -29,6 +29,7 @@ pidfile="@VARBASE@/run/${name}.pid"
 
 command="@PREFIX@/bin/${name}"
 command_args="-U $cntlm_user -P $pidfile -c $cntlm_config "
+required_files="$cntlm_config"
 
 start_precmd="cntlm_prestartcmd"
 stop_postcmd="cntlm_poststopcmd"
