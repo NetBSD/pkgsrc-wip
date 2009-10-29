@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2009/10/14 13:05:40 asau Exp $
+$NetBSD: patch-aa,v 1.6 2009/10/29 12:09:44 asau Exp $
 
 Install configuration files into example directory.
 
@@ -20,7 +20,7 @@ Install configuration files into example directory.
 -	if [ ! -d ${DESTDIR}${sysconfdir} ] ; then $(MKDIR_P) ${DESTDIR}${sysconfdir} ; fi
 -	$(INSTALL_DATA) mpixxx_opts.conf ${DESTDIR}${sysconfdir}/mpixxx_opts.conf
 -	$(INSTALL_DATA) mpicc.conf ${DESTDIR}${sysconfdir}/mpicc.conf
-+	if [ ! -d ${DESTDIR}${sysconfdir} ] ; then $(MKDIR_P) ${DESTDIR}${exampledir} ; fi
++	if [ ! -d ${DESTDIR}${exampledir} ] ; then $(MKDIR_P) ${DESTDIR}${exampledir} ; fi
 +	$(INSTALL_DATA) mpixxx_opts.conf ${DESTDIR}${exampledir}/mpixxx_opts.conf
 +	$(INSTALL_DATA) mpicc.conf ${DESTDIR}${exampledir}/mpicc.conf
  	if [ -s mpicxx ] ; then $(INSTALL_SCRIPT) mpicxx ${DESTDIR}${bindir}/mpicxx ; fi
