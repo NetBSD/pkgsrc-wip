@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/18 07:30:19 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/29 05:47:52 obache Exp $
 #
 
-DISTNAME=	clutter-1.0.4
+DISTNAME=	clutter-1.1.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.clutter-project.org/sources/clutter/1.0/
+MASTER_SITES=	http://www.clutter-project.org/sources/clutter/1.1/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://clutter-project.org/
@@ -30,6 +30,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.7.4
+BUILDLINK_API_DEPENDS.json-glib+=	json-glib>=0.8.0
 .include "../../wip/json-glib-devel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
