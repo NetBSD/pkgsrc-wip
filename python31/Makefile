@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/30 01:01:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2009/10/30 01:26:44 jeremy-c-reed Exp $
 
 DISTNAME=	Python-3.1.1
 PKGNAME=	python31-3.1.1
@@ -44,11 +44,11 @@ LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		3.1
 
-PLIST_SRC=	${.CURDIR}/../../lang/python31/PLIST.common
-.if exists(${.CURDIR}/../../lang/python31/PLIST.${OPSYS})
-PLIST_SRC+=	${.CURDIR}/../../lang/python31/PLIST.${OPSYS}
+PLIST_SRC=	${.CURDIR}/../../wip/python31/PLIST.common
+.if exists(${.CURDIR}/../../wip/python31/PLIST.${OPSYS})
+PLIST_SRC+=	${.CURDIR}/../../wip/python31/PLIST.${OPSYS}
 .endif
-PLIST_SRC+=	${.CURDIR}/../../lang/python31/PLIST.common_end
+PLIST_SRC+=	${.CURDIR}/../../wip/python31/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
