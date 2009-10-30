@@ -33,6 +33,7 @@ Suggested package updates
 	o hitori-0.2.2
 	o hu-go-2.11
 	o i3-3c
+	o icecat-3.5.4
 	o jakarta-log4j-1.2.15 [now called apache-log4j, http://logging.apache.org/log4j/1.2/download.html]
 	o jakarta-struts-1.2.4
 	o jalview-2.4
@@ -53,7 +54,7 @@ Suggested package updates
 	o llvm-2.6
 	o man-1.6f
 	o mcabber-0.9.10
-	o meta-tracker-0.7.4
+	o meta-tracker-0.7.5
 	o mixxx-1.7.0
 	o moe-1.3
 	o mpich2-1.1
@@ -83,7 +84,7 @@ Suggested package updates
 	o sxemacs-22.1.10
 	o task-1.8.3 (now called taskwarrior)
 	o tmw-0.0.29.1
-	o uade-2.12
+	o uade-2.13
 	o uptimed-0.3.16
 	o virtualbox-3.0.8
 	o xaralx-bin-0.7.1692
