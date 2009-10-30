@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2009/10/30 19:42:48 jeremy-c-reed Exp $
 bin/2to3
 bin/idle3
 bin/pydoc${PY_VER_SUFFIX}
@@ -1685,8 +1685,8 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_multibytecodec.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_multiprocessing.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_pickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_random.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_socket_failed.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl_failed.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_socket.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_struct.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testcapi.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so

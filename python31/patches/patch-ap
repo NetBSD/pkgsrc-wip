@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
+$NetBSD: patch-ap,v 1.2 2009/10/30 19:42:48 jeremy-c-reed Exp $
 
 --- Modules/socketmodule.c.orig	2009-03-31 21:20:48 +0300
 +++ Modules/socketmodule.c	2009-04-20 16:16:04 +0300
@@ -45,7 +45,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
  		{
  			struct sockaddr_hci *addr = (struct sockaddr_hci *)addr_ret;
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+			char *straddr = PyString_AsString(args);
++			char *straddr = _PyUnicode_AsString(args);
 +
 +			_BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
 +			if (straddr == NULL) {
