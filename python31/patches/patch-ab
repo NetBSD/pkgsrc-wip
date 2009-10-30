@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
+$NetBSD: patch-ab,v 1.2 2009/10/30 01:24:54 jeremy-c-reed Exp $
 
 --- Lib/distutils/command/build_ext.py.orig	2007-04-24 09:27:25.000000000 -0600
 +++ Lib/distutils/command/build_ext.py
@@ -15,9 +15,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
 +        # command line args.  Hence we combine them in order:
          extra_args = ext.extra_link_args or []
  
-+        if os.environ.get('LDFLAGS'):
-+            extra_args = list(extra_args)
-+            extra_args.extend(string.split(os.environ['LDFLAGS']))
++ #        if os.environ.get('LDFLAGS'):
++ #           extra_args = list(extra_args)
++ #           extra_args.extend(string.split(os.environ['LDFLAGS']))
 +
          # Detect target language, if not provided
          language = ext.language or self.compiler.detect_language(sources)
