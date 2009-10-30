@@ -1,0 +1,10 @@
+--- Lib/distutils/command/install.py.orig	2009-06-04 02:39:50.000000000 -0500
++++ Lib/distutils/command/install.py	2009-10-29 19:02:46.000000000 -0500
+@@ -687,5 +687,6 @@
+                     ('install_headers', has_headers),
+                     ('install_scripts', has_scripts),
+                     ('install_data',    has_data),
+-                    ('install_egg_info', lambda self:True),
+                    ]
++    if not os.environ.get('PKGSRC_PYTHON_NO_EGG'):
++        sub_commands += [('install_egg_info', lambda self:True),]
