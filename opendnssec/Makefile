@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/10/27 11:19:54 pettai Exp $
+# $NetBSD: Makefile,v 1.15 2009/10/31 22:50:29 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -11,6 +11,7 @@ COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	iis-license
 
 DEPENDS+=	${PYPKGPREFIX}-4Suite:../../wip/py-4Suite
+BUILD_DEPENDS+=	CUnit:../../devel/cunit
 
 LICENSE_FILE=	${FILESDIR}/iis-license
 
@@ -83,7 +84,7 @@ pre-configure:
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
-.include "../../devel/cunit/buildlink3.mk"
+#.include "../../devel/cunit/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
