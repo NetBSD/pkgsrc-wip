@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/31 22:13:46 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/10/31 22:15:28 pettai Exp $
 bin/4xml
 bin/4xpath
 bin/4xslt
@@ -470,7 +470,6 @@ share/4Suite/Schemata/xhtml-symbol.ent
 share/4Suite/Schemata/xhtml1-strict.dtd
 share/4Suite/Schemata/xhtml1-transitional.dtd
 share/4Suite/Schemata/xsa.dtd
-share/4Suite/Data/Stylesheets
 share/4Suite/Data/Stylesheets/commandline.css
 share/4Suite/Data/Stylesheets/commandline_html.xslt
 share/4Suite/Data/Stylesheets/docbook_html-css.xslt
