@@ -50,6 +50,13 @@
 	next
 }
 
+/^PKGNAME=/ {
+	pkgbase = substr($0, 9)
+	sub(/-[^-]+$/, "", pkgbase)
+
+	next
+}
+
 /^PKGPATH=/ {
 	pkgpath = substr($0, 9)
 	next
@@ -60,6 +67,8 @@ NF == 0 {
 
 	if (assigns)
 		pkgpath = pkgpath ":" assigns
+
+	pkgpaths [pkgbase] = pkgpath
 
 	all_pkgs [pkgpath] = 1
 
@@ -74,7 +83,7 @@ NF == 0 {
 
 	delete deps
 
-	assigns = pkgpath = ""
+	assigns = pkgpath = pkgbase = ""
 	next
 }
 
@@ -83,15 +92,36 @@ NF == 0 {
 
 	for (i=1; i <= NF; ++i){
 		if ($i ~ /[{]/){
-			$i = braceexpand($i)
-			sub(/ .*$/, "", $i)
+			depbase = braceexpand($i)
+			sub(/ .*$/, "", depbase)
+			sub(/:.*$/, "", depbase)
+			sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
+			hidden_deps [depbase " " pkgpath] = 1
+	}else{
+			sub(/^[^:]*:(..\/..\/)?/, "", $i)
+			deps [$i] = 1
 		}
-		sub(/^[^:]*:(..\/..\/)?/, "", $i)
-		deps [$i] = 1
 	}
 }
 
 END {
+	for (hdep in hidden_deps){
+		base = hdep
+		sub(/ .*$/, "", base)
+
+		if (! (base in pkgpaths)){
+			print "Cannot find PKGPATH for " base > "/dev/stderr"
+			ex = 1
+		}else{
+			pkgpath = hdep
+			sub(/^.* /, "", pkgpath)
+
+			depbase = pkgpaths [base]
+			print depbase, pkgpath
+
+			dep_pkgs [pkgpath] = dep_pkgs [deppath] = 1
+		}
+	}
 	for (pkgpath in all_pkgs){
 		if (! (pkgpath in dep_pkgs)){
 			print pkgpath
