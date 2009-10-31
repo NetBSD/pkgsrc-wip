@@ -281,3 +281,8 @@ echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.3'
 pkg_summary2build_graph src_summary7.txt |
 sort
+echo '--------------------------------------------------'
+echo '------- pkg_summary2build_graph #17.4'
+pkg_summary2build_graph src_summary8.txt |
+sort | uniq
+
