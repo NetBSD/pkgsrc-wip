@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2009/10/24 21:33:59 pettai Exp $
+# $NetBSD: options.mk,v 1.4 2009/11/01 23:35:40 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.opendnssec
 PKG_SUPPORTED_OPTIONS=		auditor softhsm
-PKG_SUGGESTED_OPTIONS=		auditor
+PKG_SUGGESTED_OPTIONS=		auditor softhsm
 
 .include "../../mk/bsd.options.mk"
 

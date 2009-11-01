@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/10/31 22:50:29 pettai Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/01 23:35:40 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -31,7 +31,7 @@ NO_CHECKSUM=		yes
 #ONLY_FOR_PLATFORM=	NetBSD-*-* Darwin-*-*
 
 PKG_DESTDIR_SUPPORT=    user-destdir
-PKG_INSTALLATION_TYPES= overwrite pkgviews
+#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 BUILD_DEFS+=	VARBASE
 
@@ -80,6 +80,9 @@ INSTALLATION_DIRS+=	${VARBASE}/opendnssec/unsigned
 pre-configure:
 	${CHMOD} u+x ${WRKSRC}/autogen.sh
 	cd ${WRKSRC} && ./autogen.sh
+
+pre-install:
+	${MKDIR} ${PKG_SYSCONFDIR}/opendnssec
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
