@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2009/10/27 11:19:54 pettai Exp $
+# $NetBSD: options.mk,v 1.5 2009/11/01 23:45:57 pettai Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
 PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf geoip ldap dkim p0f spamassassin postfix
@@ -89,3 +89,13 @@ CONFIGURE_ARGS+=	--disable-p0f
 .else
 DEPENDS+=		spamassassin:../../mail/spamassassin
 CONFIGURE_ARGS+=	--enable-spamassassin
+.endif
+
+###
+### postfix
+###
+.if empty(PKG_OPTIONS:Mpostfix)
+CONFIGURE_ARGS+=	--disable-postfix
+.else
+CONFIGURE_ARGS+=	--enable-postfix
+.endif
