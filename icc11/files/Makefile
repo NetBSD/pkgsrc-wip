@@ -15,13 +15,13 @@ libicc11bsd.a: icc11bsd.o
 	    objcopy --redefine-sym my_stderr=stderr libicc11bsd.a
 
 icc11bsd.o: icc11bsd.c
-	cc icc11bsd.c -c -o icc11bsd.o
+	cc -O icc11bsd.c -c -o icc11bsd.o
 
 as: as.c util.h util.c
-	cc as.c util.c -o as
+	cc -O as.c util.c -o as
 
 ld: ld.c util.h util.c
-	cc ld.c util.c -o ld
+	cc -O ld.c util.c -o ld
 
 install-linux-ia32:     ins-common ins-common-ia32    ins-so-ia32
 install-linux-intel64:  ins-common ins-common-intel64 ins-so-intel64

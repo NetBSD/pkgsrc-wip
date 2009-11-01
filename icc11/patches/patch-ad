@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2009/10/04 21:46:37 alnsn Exp $
+$NetBSD: patch-ad,v 1.2 2009/11/01 17:39:10 alnsn Exp $
 
---- icc11/include/math.h.orig	2009-10-03 22:46:09.000000000 +0100
+--- icc11/include/math.h.orig	2009-11-01 14:41:27.000000000 +0000
 +++ icc11/include/math.h
 @@ -27,7 +27,7 @@
  # error "This Intel <math.h> is for use with only the Intel compilers!"
@@ -100,3 +100,12 @@ $NetBSD: patch-ad,v 1.1 2009/10/04 21:46:37 alnsn Exp $
  
  #define fpclassify( __x__ ) __IMFC99MACRO1ARG_ALL( __x__, fpclassify, __, f, __, d, __, l)
  #define isinf( __x__ )      __IMFC99MACRO1ARG_ALL( __x__, isinf,      __, f,   ,  , __, l)
+@@ -1142,7 +1151,7 @@ _LIBIMF_EXT ___pmatherrl _LIBIMF_PUBAPI 
+ 
+ /* Standard conformance support */
+ 
+-#if (!defined(__linux__) || !defined(__USE_MISC)) || defined (__PURE_INTEL_C99_HEADERS__)
++#if ((!defined(__linux__) || !defined(__USE_MISC)) && !defined(_NETBSD_SOURCE)) || defined (__PURE_INTEL_C99_HEADERS__)
+ typedef enum ___LIB_VERSIONIMF_TYPE {
+      _IEEE_ = -1    /* IEEE-like behavior    */
+     ,_SVID_         /* SysV, Rel. 4 behavior */
