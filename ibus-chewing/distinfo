@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/30 08:31:23 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/11/01 08:48:40 obache Exp $
 
-SHA1 (ibus-chewing-1.0.10.20090523-Source.tar.gz) = 890835307c9ac8a7c73b9be8c12637bb6c79630f
-RMD160 (ibus-chewing-1.0.10.20090523-Source.tar.gz) = defd308aefffa3beff4bf25ea0aa8dd43b0c1f08
-Size (ibus-chewing-1.0.10.20090523-Source.tar.gz) = 66306 bytes
+SHA1 (ibus-chewing-1.2.0.20091002-Source.tar.gz) = d6773335a334be9afe46eb56924fd4487138faa3
+RMD160 (ibus-chewing-1.2.0.20091002-Source.tar.gz) = abbc926b3602a68d8b6317f80723f805e2ec5ec9
+Size (ibus-chewing-1.2.0.20091002-Source.tar.gz) = 91817 bytes

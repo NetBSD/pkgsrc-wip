@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/01 08:48:40 obache Exp $
 bin/ibus-daemon
 bin/ibus-setup
 include/ibus-1.0/ibus.h
@@ -16,6 +16,7 @@ include/ibus-1.0/ibuserror.h
 include/ibus-1.0/ibusfactory.h
 include/ibus-1.0/ibushotkey.h
 include/ibus-1.0/ibusinputcontext.h
+include/ibus-1.0/ibuskeymap.h
 include/ibus-1.0/ibuskeysyms.h
 include/ibus-1.0/ibuslookuptable.h
 include/ibus-1.0/ibusmainloop.h
@@ -32,6 +33,7 @@ include/ibus-1.0/ibusservice.h
 include/ibus-1.0/ibusshare.h
 include/ibus-1.0/ibustext.h
 include/ibus-1.0/ibustypes.h
+include/ibus-1.0/ibusversion.h
 include/ibus-1.0/ibusxml.h
 lib/gtk-2.0/2.10.0/immodules/im-ibus.la
 lib/libibus.la
@@ -174,16 +176,19 @@ share/gtk-doc/html/ibus/ch03.html
 share/gtk-doc/html/ibus/ch04.html
 share/gtk-doc/html/ibus/ch05.html
 share/gtk-doc/html/ibus/home.png
+share/gtk-doc/html/ibus/ibus-IBusKeymap.html
 share/gtk-doc/html/ibus/ibus-ibusdebug.html
 share/gtk-doc/html/ibus/ibus-ibusenumtypes.html
 share/gtk-doc/html/ibus/ibus-ibuserror.html
 share/gtk-doc/html/ibus/ibus-ibusinternal.html
 share/gtk-doc/html/ibus/ibus-ibuskeysyms.html
+share/gtk-doc/html/ibus/ibus-ibusmainloop.html
 share/gtk-doc/html/ibus/ibus-ibusmarshalers.html
 share/gtk-doc/html/ibus/ibus-ibusmessage.html
 share/gtk-doc/html/ibus/ibus-ibuspendingcall.html
 share/gtk-doc/html/ibus/ibus-ibusshare.html
 share/gtk-doc/html/ibus/ibus-ibustypes.html
+share/gtk-doc/html/ibus/ibus-ibusversion.html
 share/gtk-doc/html/ibus/ibus-ibusxml.html
 share/gtk-doc/html/ibus/ibus-keyname-table.html
 share/gtk-doc/html/ibus/ibus.devhelp
@@ -196,12 +201,10 @@ share/gtk-doc/html/ibus/style.css
 share/gtk-doc/html/ibus/up.png
 share/ibus/component/gconf.xml
 share/ibus/component/gtkpanel.xml
-share/ibus/icons/engine-default.svg
-share/ibus/icons/ibus-help.png
-share/ibus/icons/ibus-keyboard.svg
-share/ibus/icons/ibus-locale.svg
-share/ibus/icons/ibus-zh.svg
-share/ibus/icons/ibus.svg
+share/ibus/keymaps/common
+share/ibus/keymaps/jp
+share/ibus/keymaps/modifiers
+share/ibus/keymaps/us
 share/ibus/setup/engineabout.py
 share/ibus/setup/engineabout.pyc
 share/ibus/setup/engineabout.pyo
@@ -220,7 +223,7 @@ share/ibus/setup/keyboardshortcut.pyo
 share/ibus/setup/main.py
 share/ibus/setup/main.pyc
 share/ibus/setup/main.pyo
-share/ibus/setup/setup.glade
+share/ibus/setup/setup.ui
 share/ibus/ui/gtk/candidatepanel.py
 share/ibus/ui/gtk/candidatepanel.pyc
 share/ibus/ui/gtk/candidatepanel.pyo
@@ -254,6 +257,15 @@ share/ibus/ui/gtk/propitem.pyo
 share/ibus/ui/gtk/toolitem.py
 share/ibus/ui/gtk/toolitem.pyc
 share/ibus/ui/gtk/toolitem.pyo
+share/icons/hicolor/16x16/apps/ibus-keyboard.png
+share/icons/hicolor/22x22/apps/ibus-keyboard.png
+share/icons/hicolor/24x24/apps/ibus-keyboard.png
+share/icons/hicolor/32x32/apps/ibus-keyboard.png
+share/icons/hicolor/48x48/apps/ibus-keyboard.png
+share/icons/hicolor/scalable/apps/ibus-engine.svg
+share/icons/hicolor/scalable/apps/ibus-keyboard.svg
+share/icons/hicolor/scalable/apps/ibus-setup.svg
+share/icons/hicolor/scalable/apps/ibus.svg
 share/locale/ar/LC_MESSAGES/ibus.mo
 share/locale/as/LC_MESSAGES/ibus.mo
 share/locale/bn_IN/LC_MESSAGES/ibus.mo
@@ -267,11 +279,13 @@ share/locale/hi/LC_MESSAGES/ibus.mo
 share/locale/hu/LC_MESSAGES/ibus.mo
 share/locale/ja/LC_MESSAGES/ibus.mo
 share/locale/kn/LC_MESSAGES/ibus.mo
+share/locale/ko/LC_MESSAGES/ibus.mo
 share/locale/ml/LC_MESSAGES/ibus.mo
 share/locale/mr/LC_MESSAGES/ibus.mo
 share/locale/or/LC_MESSAGES/ibus.mo
 share/locale/pa/LC_MESSAGES/ibus.mo
 share/locale/pl/LC_MESSAGES/ibus.mo
+share/locale/ru/LC_MESSAGES/ibus.mo
 share/locale/sr/LC_MESSAGES/ibus.mo
 share/locale/sr@latin/LC_MESSAGES/ibus.mo
 share/locale/ta/LC_MESSAGES/ibus.mo
@@ -280,6 +294,6 @@ share/locale/vi/LC_MESSAGES/ibus.mo
 share/locale/zh_CN/LC_MESSAGES/ibus.mo
 share/locale/zh_HK/LC_MESSAGES/ibus.mo
 share/locale/zh_TW/LC_MESSAGES/ibus.mo
-share/pixmaps/ibus-setup.svg
-share/pixmaps/ibus.svg
+@pkgdir share/pixmaps
+@pkgdir share/ibus/icons
 @pkgdir share/ibus/engine

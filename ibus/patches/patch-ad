@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+$NetBSD: patch-ad,v 1.2 2009/11/01 08:48:40 obache Exp $
 
---- ui/gtk/main.py.orig	2009-08-29 01:59:07.000000000 +0000
+--- ui/gtk/main.py.orig	2009-10-23 06:37:37.000000000 +0000
 +++ ui/gtk/main.py
-@@ -24,7 +24,7 @@ import sys
+@@ -25,7 +25,7 @@ import sys
  import getopt
  import ibus
  import gtk
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
  import panel
  import notifications
  
-@@ -76,5 +76,5 @@ def main():
+@@ -77,5 +77,5 @@ def main():
      launch_panel()
  
  if __name__ == "__main__":

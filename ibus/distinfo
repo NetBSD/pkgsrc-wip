@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/11/01 08:48:40 obache Exp $
 
-SHA1 (ibus-1.1.0.20090829.tar.gz) = 218aeaa30864a7d7a2046377aad5fc542e2b572d
-RMD160 (ibus-1.1.0.20090829.tar.gz) = a96d6802c199c1373462b4a37875bc345bdbb7f3
-Size (ibus-1.1.0.20090829.tar.gz) = 1233331 bytes
-SHA1 (patch-aa) = 3c3c9428966e7a8b333ec763e760310214055464
-SHA1 (patch-ab) = 25262c75576fa8cf91e4a407adf4c9cde10e96bd
-SHA1 (patch-ac) = a8ca7cbc51c2fd85c7bce147311d757512d045ce
-SHA1 (patch-ad) = 8bee6423ca011005a7061c6aea4422f7b60cb29f
+SHA1 (ibus-1.2.0.20091024.tar.gz) = ec238f7cf4322af91e595178e49303bd4bfd5cd7
+RMD160 (ibus-1.2.0.20091024.tar.gz) = 557df94edb257b7a83059f25371b359140180263
+Size (ibus-1.2.0.20091024.tar.gz) = 1444736 bytes
+SHA1 (patch-aa) = 5abfef3ecc41ac9af719bfdc01f690760b446bac
+SHA1 (patch-ab) = 0be504a86c3b200866f6fd697c6a33888ad437bc
+SHA1 (patch-ad) = df81742330c49cddaa6b2d08f156d29a97ab1a80

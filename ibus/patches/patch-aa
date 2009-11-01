@@ -1,38 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/30 08:28:05 obache Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/01 08:48:40 obache Exp $
 
---- configure.orig	2009-08-29 02:23:25.000000000 +0000
+--- configure.orig	2009-11-01 07:24:43.000000000 +0000
 +++ configure
-@@ -19501,9 +19501,9 @@ $as_echo "yes" >&6; }
- 	IBUS_HAS_QT4=yes
- fi
- 
--if test x"$IBUS_HAS_QT4" == x"yes"; then
-+if test x"$IBUS_HAS_QT4" = x"yes"; then
-     QMAKE=`$PKG_CONFIG --variable=qmake Qt`
--    if test x"$QMAKE" == x""; then
-+    if test x"$QMAKE" = x""; then
-         # Extract the first word of "qmake-qt4", so it can be a program name with args.
- set dummy qmake-qt4; ac_word=$2
- { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -19545,7 +19545,7 @@ fi
- 
- 
-     fi
--    if test x"$QMAKE" == x""; then
-+    if test x"$QMAKE" = x""; then
-         # Extract the first word of "qmake", so it can be a program name with args.
- set dummy qmake; ac_word=$2
- { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -19587,7 +19587,7 @@ fi
- 
- 
-     fi
--    if test x"$QMAKE" == x""; then
-+    if test x"$QMAKE" = x""; then
-         IBUS_HAS_QT4=no
-         { $as_echo "$as_me:$LINENO: WARNING: Can not find qmake." >&5
- $as_echo "$as_me: WARNING: Can not find qmake." >&2;}
-@@ -20179,7 +20179,7 @@ $as_echo "no" >&6; }
+@@ -20014,7 +20014,7 @@ $as_echo "no" >&6; }
  fi
  
  
