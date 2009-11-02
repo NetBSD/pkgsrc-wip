@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2009/10/30 19:42:48 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2009/11/02 17:53:26 jeremy-c-reed Exp $
 bin/2to3
 bin/idle3
 bin/pydoc${PY_VER_SUFFIX}
@@ -2103,10 +2103,10 @@ lib/python${PY_VER_SUFFIX}/pipes.pyo
 lib/python${PY_VER_SUFFIX}/pkgutil.py
 lib/python${PY_VER_SUFFIX}/pkgutil.pyc
 lib/python${PY_VER_SUFFIX}/pkgutil.pyo
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}5/IN.py
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}5/IN.pyc
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}5/IN.pyo
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}5/regen
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/regen
 lib/python${PY_VER_SUFFIX}/platform.py
 lib/python${PY_VER_SUFFIX}/platform.pyc
 lib/python${PY_VER_SUFFIX}/platform.pyo

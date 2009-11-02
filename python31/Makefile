@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/30 01:26:44 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/02 17:53:26 jeremy-c-reed Exp $
 
 DISTNAME=	Python-3.1.1
 PKGNAME=	python31-3.1.1
@@ -141,6 +141,10 @@ MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 .endif
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
+
+PRINT_PLIST_AWK+=        { gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
+PRINT_PLIST_AWK+=        { gsub(/python${PY_VER_SUFFIX}/, \
+				"python$${PY_VER_SUFFIX}") }
 
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
