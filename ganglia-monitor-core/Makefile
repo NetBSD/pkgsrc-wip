@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/03 17:22:06 thomasklausner Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -42,7 +42,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${DESTDIR}${EGDIR}/
-	${DESTDIR}${PREFIX}/sbin/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
+	${WRKSRC}/gmond/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../devel/apr/buildlink3.mk"
