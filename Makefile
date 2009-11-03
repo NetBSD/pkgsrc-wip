@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3663 2009/11/03 17:37:21 schnoebe Exp $
+# $Id: Makefile,v 1.3664 2009/11/03 17:54:28 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1304,7 +1304,6 @@ SUBDIR+=	openca
 SUBDIR+=	opencobol
 SUBDIR+=	opendchub
 SUBDIR+=	opendnssec
-SUBDIR+=	openfst
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openoffice2-bin-af
