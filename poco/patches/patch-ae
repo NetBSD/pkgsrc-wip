@@ -1,13 +1,23 @@
-$NetBSD: patch-ae,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+$NetBSD: patch-ae,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
 
---- build/config/FreeBSD.orig	2008-10-09 18:14:00.000000000 +0200
+--- build/config/FreeBSD.orig	2009-05-12 13:22:09.000000000 -0500
 +++ build/config/FreeBSD
-@@ -20,7 +20,7 @@ CXX     = g++
+@@ -20,7 +20,8 @@ CXX     = g++
  LINK    = $(CXX)
  LIB     = ar -cr
  RANLIB  = ranlib
 -SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
-+SHLIB   = $(CXX) -Wl,-R$(PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-R$(POCO_PREFIX)/lib
++SHLIB   = $(CXX) -Wl,-R$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
  DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
  STRIP   = strip
+@@ -52,7 +53,7 @@ STATICOPT_CXX   =
+ STATICOPT_LINK  = -static
+ SHAREDOPT_CC    = -fPIC
+ SHAREDOPT_CXX   = -fPIC
+-SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH) -L$(POCO_PREFIX)/lib
+ DEBUGOPT_CC     = -g -D_DEBUG
+ DEBUGOPT_CXX    = -g -D_DEBUG
+ DEBUGOPT_LINK   = -g

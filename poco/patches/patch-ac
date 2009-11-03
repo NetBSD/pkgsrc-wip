@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+$NetBSD: patch-ac,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
 
 --- Foundation/src/NamedMutex_UNIX.cpp.orig	2008-10-09 18:14:00.000000000 +0200
 +++ Foundation/src/NamedMutex_UNIX.cpp
@@ -6,8 +6,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
  		unsigned short int* array;
  		struct seminfo*     __buf;
  	};
--#elif defined(hpux)
-+#elif defined(hpux) || defined(__NetBSD__)
+-#elif defined(__hpux)
++#elif defined(__hpux) || defined(__NetBSD__)
  	union semun
  	{
  		int              val;

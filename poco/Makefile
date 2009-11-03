@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
 #
 
-DISTNAME=	poco-1.3.3p1-all
-PKGNAME=	poco-1.3.3p1
+DISTNAME=	poco-1.3.5-all
+PKGNAME=	poco-1.3.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pocoproject.org/
 COMMENT=	POCO C++ libraries
+# LICENSE=	boost
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

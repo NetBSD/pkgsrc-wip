@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2009/11/03 00:19:28 schnoebe Exp $
+
+--- Makefile.orig	2009-05-12 13:22:15.000000000 -0500
++++ Makefile
+@@ -24,7 +24,9 @@ endif
+ all: libexecs tests samples
+ 
+ INSTALLDIR = $(DESTDIR)$(POCO_PREFIX)
+-COMPONENTS = Foundation XML Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL Zip
++Master_COMPONENTS = Foundation XML Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL Zip
++
++COMPONENTS = $(filter-out $(foreach f,$(OMIT),$f%),$(Master_COMPONENTS))
+ 
+ cppunit:
+ 	$(MAKE) -C $(POCO_BASE)/CppUnit 
