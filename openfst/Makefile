@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/10 13:29:20 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/03 17:50:42 thomasklausner Exp $
 #
 
 DISTNAME=	openfst-1.1
@@ -20,5 +20,4 @@ GNU_CONFIGURE=	yes
 
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
