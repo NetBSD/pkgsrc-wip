@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/24 21:34:10 asau Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/04 18:55:13 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.2.0
@@ -23,6 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
 USE_LANGUAGES+=		fortran
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
