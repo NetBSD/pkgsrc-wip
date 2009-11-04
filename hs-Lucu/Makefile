@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/27 03:12:59 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/04 01:22:00 phonohawk Exp $
 #
 
-DISTNAME=	Lucu-0.3.2
+DISTNAME=	Lucu-0.3.3
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

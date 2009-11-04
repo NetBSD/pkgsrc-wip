@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/27 03:12:59 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2009/11/04 01:22:00 phonohawk Exp $
 
-SHA1 (Lucu-0.3.2.tar.gz) = a439d5c20942500868e45c33e13d1e4eade7b413
-RMD160 (Lucu-0.3.2.tar.gz) = f22c9d959d2844f9691aab33b5d36e57066820f0
-Size (Lucu-0.3.2.tar.gz) = 58553 bytes
+SHA1 (Lucu-0.3.3.tar.gz) = 1abfb14aca3db7380109451656843231526a2874
+RMD160 (Lucu-0.3.3.tar.gz) = f0cacf2518ae54a91dfcaa2333bdc845f0be0121
+Size (Lucu-0.3.3.tar.gz) = 59106 bytes
