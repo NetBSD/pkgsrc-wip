@@ -1,0 +1,11 @@
+$NetBSD: patch-zb,v 1.1.1.1 2009/11/04 16:05:18 tnn2 Exp $
+
+--- mozilla/toolkit/toolkit-tiers.mk.orig	2009-10-25 15:34:12.000000000 +0100
++++ mozilla/toolkit/toolkit-tiers.mk
+@@ -270,3 +270,6 @@ endif
+ ifdef ENABLE_TESTS
+ tier_toolkit_dirs	+= testing/mochitest
+ endif
++
++# XXX pkgsrc: see patch-za
++tier_toolkit_dirs	+= xpfe/components/autocomplete
