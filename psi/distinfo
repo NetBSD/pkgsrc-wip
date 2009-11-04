@@ -1,26 +1,11 @@
-$NetBSD: distinfo,v 1.11 2009/08/19 13:16:11 schnoebe Exp $
+$NetBSD: distinfo,v 1.12 2009/11/04 07:45:52 schnoebe Exp $
 
 SHA1 (psi-0.13/psi-0.13.tar.bz2) = 36d9d058531b29a47f94418b6e8a8b75e5446adf
 RMD160 (psi-0.13/psi-0.13.tar.bz2) = 7557aea37d837eede5f28ec481eaa74dcc7958f5
 Size (psi-0.13/psi-0.13.tar.bz2) = 2180062 bytes
-SHA1 (psi-0.13/psi_de.qm) = 696e385811c1b83757b46d2dbd97f78488c842f5
-RMD160 (psi-0.13/psi_de.qm) = 951546d33cd6d9eef1aeaae25374d98a02e63f74
-Size (psi-0.13/psi_de.qm) = 277623 bytes
-SHA1 (psi-0.13/psi_fr.qm) = 0c59cb6d80c8df69bcb3ba4af7270a1001487238
-RMD160 (psi-0.13/psi_fr.qm) = e2e4d88d95574f4b3e6ccec69cb25f5a09970e9a
-Size (psi-0.13/psi_fr.qm) = 281615 bytes
-SHA1 (psi-0.13/psi_mk.qm) = 8754ef2147eff5a22524b9ad07c05f562b32c0c0
-RMD160 (psi-0.13/psi_mk.qm) = ed60c9743db41452bdf7cefcd5b999bb7db66a45
-Size (psi-0.13/psi_mk.qm) = 263502 bytes
-SHA1 (psi-0.13/psi_pl.qm) = 39d2baa887c852f2b8673a3e93aac86171c69bc5
-RMD160 (psi-0.13/psi_pl.qm) = ca5775457ee9e8193f9f6dc4579821088971af95
-Size (psi-0.13/psi_pl.qm) = 276987 bytes
-SHA1 (psi-0.13/psi_pt_BR.qm) = 8e7e00093b8353e65c9ff59c816c515f41da4054
-RMD160 (psi-0.13/psi_pt_BR.qm) = 3c3c2a690d4c7513d47453e4420a3b20d169eb25
-Size (psi-0.13/psi_pt_BR.qm) = 265850 bytes
-SHA1 (psi-0.13/psi_ru.qm) = 5c1288f81d5f9cbe532c8b6a2ad445a3e7dd49d1
-RMD160 (psi-0.13/psi_ru.qm) = d26555d6ce62ca6ec2cb1078417bf0d886db53d6
-Size (psi-0.13/psi_ru.qm) = 258520 bytes
+SHA1 (psi-0.13/psi-0.13_langpack_2009-09-03.zip) = d40b57aef2fe601d30dd64abcb3ad43c3f0c4cdd
+RMD160 (psi-0.13/psi-0.13_langpack_2009-09-03.zip) = 0537aa47c7e3cdd5883580e28dba1dc8104177e1
+Size (psi-0.13/psi-0.13_langpack_2009-09-03.zip) = 1130940 bytes
 SHA1 (patch-ad) = 19ac57e2662be8b02be735cd57bb80da97345bf8
 SHA1 (patch-ah) = 5342053f85425439cc653d33e3777d502903e691
 SHA1 (patch-ak) = a6de601a2acedf0cd8e9b15cd402f569f7152d97

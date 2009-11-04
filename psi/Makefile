@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/09/08 03:18:02 schnoebe Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/04 07:45:52 schnoebe Exp $
 
 PSI_VERSION=	0.13
 DISTNAME=	psi-${PSI_VERSION}
@@ -16,10 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}
-DISTFILES=	${DEFAULT_DISTFILES} ${LANG_FILES}
-EXTRACT_ONLY=	${DEFAULT_DISTFILES}
+DISTFILES=	${DEFAULT_DISTFILES} ${LANG_PACK}
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake unzip
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
@@ -33,19 +32,18 @@ CONFIGURE_ARGS+=	--with-zlib-inc=${BUILDLINK_PREFIX.zlib}/include
 CONFIGURE_ARGS+=	--with-zlib-lib=${BUILDLINK_PREFIX.zlib}/lib
 
 #
-# LANG_FILES left for when the translations get released in a few weeks
-#	the PLIST will also need to be updated at that time.
+#   LANG_PACK is an archive of all the translations..
 #
-# LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
-# 		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
-# 		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
+LANG_PACK=psi-0.13_langpack_2009-09-03.zip
+SITES.${LANG_PACK}= http://fs.scs-tsa.de/psi_l10n/
 
-LANG_FILES=     psi_pt_BR.qm psi_de.qm psi_fr.qm \
-                psi_mk.qm psi_ru.qm psi_pl.qm
-
-.for l in ${LANG_FILES}
-SITES.${l}=	http://psi-im.org/download/lang/
-.endfor
+#
+#   LANG_FILES are the translations we're going to install
+#
+LANG_FILES= be/psi_be.qm de/psi_de.qm es/psi_es.qm fr/psi_fr.qm \
+	    it/psi_it.qm mk/psi_mk.qm pl/psi_pl.qm pt_BR/psi_pt_BR.qm \
+	    ru/psi_ru.qm sv/psi_sv.qm ur_PK/psi_ur_PK.qm \
+	    zh_TW/psi_zh_TW.qm
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
 INSTALL_DIRS=		src
@@ -63,7 +61,7 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/psi/COPYING
 	# install the translations
 .for f in ${LANG_FILES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
+	${INSTALL_DATA} ${WRKDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
 .endfor
 
 .include "../../devel/libidn/buildlink3.mk"
