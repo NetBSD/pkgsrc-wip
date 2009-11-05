@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/25 04:54:13 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/05 17:30:36 christtrekker Exp $
 #
 
 DISTNAME=	lcdproc-0.5.3
-CATEGORIES=	sysutils
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lcdproc/}
 
 MAINTAINER=	christtrekker@users.sourceforge.net
