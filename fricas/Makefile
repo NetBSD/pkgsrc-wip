@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/09/22 19:37:40 asau Exp $
+# $NetBSD: Makefile,v 1.23 2009/11/05 11:47:46 asau Exp $
 
 PKGNAME=		fricas-1.0.99
 DISTNAME=		${PKGNAME}-full
@@ -20,11 +20,10 @@ WRKSRC=			${WRKDIR}/fricas
 
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
 # Problems:
 # 1. Building X11 interfaces requires X server running.
