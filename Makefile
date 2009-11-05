@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3666 2009/11/04 16:21:56 tnn2 Exp $
+# $Id: Makefile,v 1.3667 2009/11/05 11:59:12 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1673,6 +1673,7 @@ SUBDIR+=	pxview
 SUBDIR+=	py-4Suite
 SUBDIR+=	py-Beaker
 SUBDIR+=	py-Brenda
+SUBDIR+=	py-CherryPy
 SUBDIR+=	py-CVSToys
 SUBDIR+=	py-DirectoryStorage
 SUBDIR+=	py-EditObj2
@@ -1689,6 +1690,7 @@ SUBDIR+=	py-Protocols-docs
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
+SUBDIR+=	py-PythonMagick
 SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
