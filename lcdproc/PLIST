@@ -1,1 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/16 20:16:11 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/05 19:40:06 christtrekker Exp $
+bin/fortune.pl
+bin/iosock.pl
+bin/lcdexec
+bin/lcdident.pl
+bin/lcdmetar.pl
+bin/lcdproc
+bin/lcdvc
+bin/tail.pl
+bin/x11amp.pl
+lib/lcdproc/CFontz.so
+lib/lcdproc/CFontz633.so
+lib/lcdproc/CwLnx.so
+lib/lcdproc/MtxOrb.so
+lib/lcdproc/bayrad.so
+lib/lcdproc/curses.so
+lib/lcdproc/glk.so
+lib/lcdproc/lb216.so
+lib/lcdproc/lcdm001.so
+lib/lcdproc/pyramid.so
+lib/lcdproc/text.so
+man/man1/lcdexec.1
+man/man1/lcdproc.1
+man/man1/lcdvc.1
+man/man5/lcdproc-config.5
+man/man8/LCDd.8
+sbin/LCDd
+share/examples/lcdproc/LCDd.conf
+share/examples/lcdproc/lcdexec.conf
+share/examples/lcdproc/lcdproc.conf
+share/examples/lcdproc/lcdvc.conf
