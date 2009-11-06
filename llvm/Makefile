@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/05 22:18:00 christtrekker Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/06 01:00:13 asau Exp $
 #
 
 DISTNAME=	llvm-2.6
@@ -18,7 +18,7 @@ MAKE_DIRS+=	etc/llvm
 
 CONFIGURE_ARGS=	--enable-bindings=none	# no OCaml, please!
 
-INSTALLATION_DIRS=	lib
+INSTALLATION_DIRS=	bin lib
 
 # This should be changed!
 CONFIGURE_ARGS+= --enable-targets=host-only
