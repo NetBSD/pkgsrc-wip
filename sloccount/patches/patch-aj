@@ -1,0 +1,10 @@
+$NetBSD: patch-aj,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- extract_license.orig	2009-11-06 12:33:43.000000000 +0100
++++ extract_license
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # extract_license
+ # Determine the license of a program, given 2 parameters:
+ # (1) the directory containing the program's source code.

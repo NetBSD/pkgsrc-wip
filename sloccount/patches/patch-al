@@ -1,0 +1,10 @@
+$NetBSD: patch-al,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- fortran_count.orig	2009-11-06 12:33:44.000000000 +0100
++++ fortran_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # fortran_count - count physical lines of code in Fortran 77.
+ # Usage: fortran_count [-f file] [list_of_files]
+ #  file: file with a list of files to count (if "-", read list from stdin)

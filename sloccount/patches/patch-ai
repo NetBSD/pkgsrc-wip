@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- extract-count.orig	2009-11-06 12:33:43.000000000 +0100
++++ extract-count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ 
+ # Given USC output as standard input, find the # of physical and logical SLOC, and save in
+ # "physical.sloc" and "logical.sloc".

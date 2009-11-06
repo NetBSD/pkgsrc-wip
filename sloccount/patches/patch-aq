@@ -1,0 +1,10 @@
+$NetBSD: patch-aq,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- lex_count.orig	2009-11-06 12:33:47.000000000 +0100
++++ lex_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # lex_count
+ # Usage: lex_count [-f file] [list_of_files]
+ #  file: file with a list of files to count (if "-", read list from stdin)

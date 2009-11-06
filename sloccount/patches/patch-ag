@@ -1,0 +1,10 @@
+$NetBSD: patch-ag,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- cobol_count.orig	2009-11-06 12:33:42.000000000 +0100
++++ cobol_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # cobol_count - count physical lines of code.
+ # Usage: cobol_count [-f file] [list_of_files]
+ #  file: file with a list of files to count (if "-", read list from stdin)

@@ -1,0 +1,10 @@
+$NetBSD: patch-ao,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- get_sloc_details.orig	2009-11-06 12:33:46.000000000 +0100
++++ get_sloc_details
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ 
+ # get_sloc_details
+ # Take a list of dirs, and get the detailed SLOC entries for every file.

@@ -1,0 +1,10 @@
+$NetBSD: patch-ap,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- haskell_count.orig	2009-11-06 12:33:46.000000000 +0100
++++ haskell_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ # haskell_count - count physical lines of code
+ # Strips out {- .. -} and -- comments and counts the rest.
+ # Pragmas, {-#...}, are counted as SLOC.

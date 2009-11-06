@@ -1,0 +1,10 @@
+$NetBSD: patch-an,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- get_sloc.orig	2009-11-06 12:33:45.000000000 +0100
++++ get_sloc
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ 
+ # get_sloc
+ # Take a list of dirs, and get the SLOC or filecount data from them.

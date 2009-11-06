@@ -1,0 +1,10 @@
+$NetBSD: patch-am,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- generic_count.orig	2009-11-06 12:33:45.000000000 +0100
++++ generic_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ # generic_count - count physical lines of code, given a comment marker.
+ # Usage: generic_count commentstart [-f file] [list_of_files]
+ #  commentstart: string that begins a comment (continuing til end-of-line)

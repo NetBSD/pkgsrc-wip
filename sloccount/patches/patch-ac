@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- append_specname.orig	2009-11-06 12:33:36.000000000 +0100
++++ append_specname
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ 
+ # Given a 2-column list "sloc build-directory-name",
+ # output a 3-column list which appends the name of the spec file.

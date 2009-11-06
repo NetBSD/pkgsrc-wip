@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- /home/netbsd/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile.orig	2009-11-06 12:40:24.000000000 +0100
++++ /home/netbsd/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile
+@@ -29,6 +29,7 @@
+ # If you want to store this as part of an official distribution,
+ # change this to "/usr":
+ PREFIX=/usr/local
++DESTDIR=
+ 
+ # Set "EXE_SUFFIX" to ".exe" if you're running on Windows, like this:
+ # EXE_SUFFIX=.exe
+@@ -69,10 +70,10 @@ VERSION=2.26
+ RPM_VERSION=1
+ ARCH=i386
+ VERSIONEDNAME=$(NAME)-$(VERSION)
+-INSTALL_DIR=$(PREFIX)/bin
+-MAN_DIR=$(PREFIX)/share/man
++INSTALL_DIR=$(DESTDIR)$(PREFIX)/bin
++MAN_DIR=$(DESTDIR)$(PREFIX)/share/man
+ MAN_DIR_MAN1=$(MAN_DIR)/man1
+-DOC_DIR=$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
++DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
+ POSTED_DIR=/home/dwheeler/dwheeler.com/sloccount
+ 
+ COMPILED_EXECUTABLES= \

@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+SHA1 (sloccount-2.26.tar.gz) = 505031c6adfb93e454aaf8b0ee7de04122079d13
+RMD160 (sloccount-2.26.tar.gz) = a5bd1dbe8bd5e5c52ed790990c0d5d8fc49b26ff
+Size (sloccount-2.26.tar.gz) = 190948 bytes
+SHA1 (patch-aa) = 156d2859f6ee0d8965b12eac450e784a35df89dc
+SHA1 (patch-ab) = 405b06d24ae05d009cd3568c706e3374a0dbd3c9
+SHA1 (patch-ac) = 9f61436f412440e89cc39b418358895caaa24ef2
+SHA1 (patch-ad) = 5d5a1f552851334338035a319b62a13d5dbd1bb7
+SHA1 (patch-ae) = d0d2617da730ac6380ec5438fa32364e1a86942f
+SHA1 (patch-ag) = b273aa74f5b2184d5e32ed4df0694075966192c7
+SHA1 (patch-ah) = 8942c903421dcac2d7394b0ff67987d17662bf28
+SHA1 (patch-ai) = 0814c759e22043aba110c5f39d9eb85cf95409c9
+SHA1 (patch-aj) = 17e47f36cf5e6c771cc063f270b2a2ec67928e5e
+SHA1 (patch-ak) = f711555f28d937f587d596ce882f010147074833
+SHA1 (patch-al) = 2f7f8ef7ed05efd28476bc92ba4bd4ac53ef9213
+SHA1 (patch-am) = 0bcd981bd8a43e9700b416bb8bfa47ff06467952
+SHA1 (patch-an) = f52de32ed2d7c19effd1877ff69eb4df64683733
+SHA1 (patch-ao) = 00d2d308d2e447d5b726b234fbf49c30949ce7b7
+SHA1 (patch-ap) = b74f64b896c1507ecabab01fa3a75387b384939e
+SHA1 (patch-aq) = 532f83d79a3f2898ba8849add93ba2619f240009
+SHA1 (patch-as) = e284b4e92fd74e8ecff2409ea44833aa61fb0002
+SHA1 (patch-at) = b50be53e0bf4f4bc0cc19c76c18a2f32a18abd27
+SHA1 (patch-au) = 9dace9004cdaed05c2637470e6b6819c9249503a
+SHA1 (patch-av) = cbb0fa247fdda6d7363181e34282c43a880911ab
+SHA1 (patch-aw) = d6d3bfccb7464bcdc2bfee2d8f0bbff0d67dca57
+SHA1 (patch-ax) = ac3b573f3ff95124a4148163fd8c92c6bf63b1d3
+SHA1 (patch-az) = b065dcc7502a35e098dcc7574ae0b3196e0e06dd

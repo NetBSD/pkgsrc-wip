@@ -1,0 +1,10 @@
+$NetBSD: patch-at,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- objc_count.orig	2009-11-06 12:33:47.000000000 +0100
++++ objc_count
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ # objc_count - count physical lines of code
+ # Strips out /* .. */ and counts the rest.
+ # Usage: objc_count [-f file] [list_of_files]

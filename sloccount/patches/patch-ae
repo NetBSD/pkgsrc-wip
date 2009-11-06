@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- break_filelist.orig	2009-11-06 12:33:41.000000000 +0100
++++ break_filelist
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ 
+ # break_filelist
+ # Take a list of dirs which contain a "filelist";

@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2009/11/06 11:46:43 khorben Exp $
+
+--- append_license.orig	2009-11-06 12:33:33.000000000 +0100
++++ append_license
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/usr/bin/env perl
+ 
+ # Given a 3-column list "sloc build-directory-name spec-filename",
+ # output a 4-column list which appends the license.
