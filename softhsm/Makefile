@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2009/10/24 20:52:44 pettai Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/07 22:45:18 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
-PKGNAME=	${DISTNAME:S/${VERSION}/${RCVERSION}/}
+#PKGNAME=	${DISTNAME:S/${VERSION}/${RCVERSION}/}
 CATEGORIES=	security
-MASTER_SITES=	# not defined
+MASTER_SITES=	http://www.opendnssec.org/files/source/
 
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.opendnssec.se/wiki/SoftHSM/
@@ -16,15 +16,15 @@ LICENSE_FILE=	${FILESDIR}/iis-license
 USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4
 USE_LIBTOOL=	yes
 
-SVN_REPOSITORIES=	softhsm
-SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
-SVN_MODULE.softhsm=	softHSM
-VERSION=		1.0.0
-RCVERSION=		${VERSION:S/-RC/rc/}
-NO_CHECKSUM=		yes
+#SVN_REPOSITORIES=	softhsm
+#SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
+#SVN_MODULE.softhsm=	softHSM
+VERSION=		1.1.0
+#RCVERSION=		${VERSION:S/-RC/rc/}
+#NO_CHECKSUM=		yes
 
 PKG_DESTDIR_SUPPORT=    user-destdir
-PKG_INSTALLATION_TYPES= overwrite pkgviews
+#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 BUILD_DEFS+=	VARBASE
 
@@ -43,25 +43,34 @@ PLIST_SHLIB=		${PKGDIR}/PLIST.shlib
 .endif
 PLIST_SRC=		${PLIST_SHLIB}
 PLIST_SRC+=		${PKGDIR}/PLIST.common
-PLIST_SUBST+=		SHLIB_VERSION=${RCVERSION:C/[^0-9]*$//}
+#PLIST_SUBST+=		SHLIB_VERSION=${RCVERSION:C/[^0-9]*$//}
+PLIST_SUBST+=		SHLIB_VERSION=1.0.1
 
-WRKSRC=			${WRKDIR}/softHSM
+#WRKSRC=		${WRKDIR}/softHSM
 EGDIR=			${PREFIX}/share/examples/softhsm
 
+SUBST_CLASSES+=         paths
+SUBST_FILES.paths=      ${WRKSRC}/Makefile.in
+SUBST_STAGE.paths=      post-patch
+SUBST_SED.paths=        -e 's,@EGDIR@,${EGDIR},'
+
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+.include "options.mk"
 
 CONF_FILES=		${EGDIR}/softhsm.conf ${PKG_SYSCONFDIR}/softhsm.conf
 
 INSTALLATION_DIRS=	${EGDIR} ${VARBASE}/softhsm
+INSTALLATION_DIRS+=	etc bin lib
 
-pre-configure:
-	${CHMOD} u+x ${WRKSRC}/autogen.sh
-	cd ${WRKSRC} && ./autogen.sh
+#pre-configure:
+#	${CHMOD} u+x ${WRKSRC}/autogen.sh
+#	cd ${WRKSRC} && ./autogen.sh
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/softhsm.conf ${DESTDIR}${EGDIR}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+#.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
