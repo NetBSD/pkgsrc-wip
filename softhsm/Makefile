@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/11/07 22:45:18 pettai Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/07 23:46:32 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
@@ -34,17 +34,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-
-PLIST_OPSYS?=		${PKGDIR}/PLIST.${LOWER_OPSYS:C/([.0-9]*)$//}
-.if exists(${PLIST_OPSYS})
-PLIST_SHLIB=		${PLIST_OPSYS}
-.else
-PLIST_SHLIB=		${PKGDIR}/PLIST.shlib
-.endif
-PLIST_SRC=		${PLIST_SHLIB}
-PLIST_SRC+=		${PKGDIR}/PLIST.common
-#PLIST_SUBST+=		SHLIB_VERSION=${RCVERSION:C/[^0-9]*$//}
-PLIST_SUBST+=		SHLIB_VERSION=1.0.1
 
 #WRKSRC=		${WRKDIR}/softHSM
 EGDIR=			${PREFIX}/share/examples/softhsm
