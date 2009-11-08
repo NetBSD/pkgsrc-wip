@@ -195,7 +195,7 @@ END {
 			pkgname = pkgbases [pkgpath]
 
 		if (out_pkgpath)
-			print dep "," pkgbases [dep], pkgpath "," pkgname
+			print dep ";" pkgbases [dep], pkgpath ";" pkgname
 		else
 			print pkgbases [dep], pkgname
 	}
@@ -213,7 +213,7 @@ END {
 				if (!out_pkgpath)
 					print_nodep_node(pkgname)
 				else
-					print pkgpath "," pkgname
+					print pkgpath ";" pkgname
 			}
 		}
 	}
