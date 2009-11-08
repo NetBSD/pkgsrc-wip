@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/01/06 21:36:14 shindenmorr Exp $
+# $NetBSD: options.mk,v 1.2 2009/11/08 23:12:34 pettai Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wordpress-mu
+
 PKG_OPTIONS_REQUIRED_GROUPS=	wordpress-mu
 PKG_OPTIONS_GROUP.wordpress-mu=	php-cgi ap-php
+
+PKG_SUGGESTED_OPTIONS=		ap-php
 
 .include "../../mk/bsd.options.mk"
 
