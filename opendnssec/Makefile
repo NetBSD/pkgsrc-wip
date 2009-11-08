@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/11/01 23:35:40 pettai Exp $
+# $NetBSD: Makefile,v 1.17 2009/11/08 00:08:24 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	iis-license
 
-DEPENDS+=	${PYPKGPREFIX}-4Suite:../../wip/py-4Suite
-BUILD_DEPENDS+=	CUnit:../../devel/cunit
+DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../wip/py-4Suite
+BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 LICENSE_FILE=	${FILESDIR}/iis-license
 
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 WRKSRC=			${WRKDIR}/OpenDNSSEC
 EGDIR=			${PREFIX}/share/examples/opendnssec
+PKG_SYSCONFDIR=		${PKG_SYSCONFBASEDIR}/opendnssec
 
 SUBST_CLASSES+=         paths
 SUBST_FILES.paths=      ${WRKSRC}/conf/Makefile.am
@@ -58,19 +59,19 @@ CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 .endif
 
 CONF_FILES=	${EGDIR}/conf.xml.sample \
-			${PKG_SYSCONFDIR}/opendnssec/conf.xml
+			${PKG_SYSCONFDIR}/conf.xml
 CONF_FILES+=	${EGDIR}/kasp.xml.sample \
-			${PKG_SYSCONFDIR}/opendnssec/kasp.xml
+			${PKG_SYSCONFDIR}/kasp.xml
 CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
-			${PKG_SYSCONFDIR}/opendnssec/zonefetch.xml
+			${PKG_SYSCONFDIR}/zonefetch.xml
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
-			${PKG_SYSCONFDIR}/opendnssec/zonelist.xml
+			${PKG_SYSCONFDIR}/zonelist.xml
 
-INSTALLATION_DIRS=	${EGDIR} ${PKG_SYSCONFDIR}/opendnssec
-INSTALLATION_DIRS+=	${PREFIX}/share/opendnssec
-INSTALLATION_DIRS+=	${PREFIX}/lib/opendnssec
-INSTALLATION_DIRS+=	${PREFIX}/lib/opendnssec/signer
-INSTALLATION_DIRS+=	${PREFIX}/lib/opendnssec/kasp_auditor
+INSTALLATION_DIRS=	${EGDIR} ${PKG_SYSCONFDIR}
+INSTALLATION_DIRS+=	share/opendnssec
+INSTALLATION_DIRS+=	lib/opendnssec
+INSTALLATION_DIRS+=	lib/opendnssec/signer
+INSTALLATION_DIRS+=	lib/opendnssec/kasp_auditor
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/tmp
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signconf
@@ -85,9 +86,9 @@ pre-install:
 	${MKDIR} ${PKG_SYSCONFDIR}/opendnssec
 
 .include "../../lang/python/application.mk"
+#.include "../../devel/cunit/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
-#.include "../../devel/cunit/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
