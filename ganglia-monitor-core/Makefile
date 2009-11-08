@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/03 17:22:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/08 18:30:32 brook1 Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -17,6 +17,21 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gmetad
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++ fortran
+
+PLIST_VARS+=		python
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.ganglia
+PKG_SUPPORTED_OPTIONS=	python		# Gmond support for python modules
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpython)
+CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
+PLIST.python=		yes
+.include "../../lang/python/application.mk"
+.else
+CONFIGURE_ARGS+=	--disable-python
+.endif
 
 SUBST_CLASSES+=		pkg_sysconfdir
 SUBST_STAGE.pkg_sysconfdir=	pre-configure
@@ -47,7 +62,6 @@ post-install:
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/confuse/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
