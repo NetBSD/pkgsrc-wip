@@ -943,6 +943,11 @@ runawk pkg_summary-utils
 tiff emacs
 x11-links x11-links
 --------------------------------------------------
+------- pkg_summary2deps #18.3
+audio/py-mutagen,py25-mutagen audio/py-karaoke,py25-karaoke-0.7.1
+audio/py-mutagen:PYTHON_VERSION_REQD=24,py24-mutagen audio/py-karaoke:PYTHON_VERSION_REQD=24,py24-karaoke-0.7.1
+audio/py-mutagen:PYTHON_VERSION_REQD=26,py26-mutagen audio/py-karaoke:PYTHON_VERSION_REQD=26,py26-karaoke-0.7.1
+--------------------------------------------------
 ------- pkg_summary2deps #18.4
 devel/p5-Module-Build
 lang/perl5 devel/p5-ExtUtils-CBuilder

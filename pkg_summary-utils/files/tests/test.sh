@@ -308,33 +308,31 @@ normalize_version
 # pkg_summary2build_graph
 echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.1'
-pkg_summary2build_graph src_summary.txt |
-sort
+pkg_summary2build_graph src_summary.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.2'
-pkg_summary2build_graph src_summary2.txt |
-sort
+pkg_summary2build_graph src_summary2.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.3'
-pkg_summary2build_graph src_summary7.txt |
-sort
+pkg_summary2build_graph src_summary7.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.4'
-pkg_summary2build_graph src_summary8.txt |
-sort | uniq
+pkg_summary2build_graph src_summary8.txt | sort | uniq
 
 
 
 # pkg_summary2deps
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.1'
-pkg_summary2deps -Apn src_summary.txt |
-sort
+pkg_summary2deps -Apn src_summary.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.2'
-pkg_summary2deps -dnt src_summary.txt |
-sort
+pkg_summary2deps -dnt src_summary.txt | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #18.3'
+pkg_summary2deps -Apntr src_summary7.txt | sort
+
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.4'
-pkg_summary2deps -Dp src_summary8.txt |
-sort | uniq
+pkg_summary2deps -Dp src_summary8.txt | sort | uniq

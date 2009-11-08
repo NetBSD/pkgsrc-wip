@@ -49,6 +49,7 @@
 #   -D                   analyse BUILD_DEPENDS
 #   -A                   analyse both DEPENDS and BUILD_DEPENDS
 #   -t                   produces output compatible with tsort(1)
+#   -r                   do not strip versions from PKGNAME
 #.end-str
 ############################################################
 
@@ -63,6 +64,8 @@ BEGIN {
 	if (getarg("A")){
 		dep_builddep = dep_depends = 1
 	}
+
+	keep_ver = getarg("r")
 
 	if (!out_pkgname && !out_pkgpath){
 		print "Either -p or -n should be applied" > "/dev/stderr"
@@ -98,7 +101,8 @@ NF == 0 {
 		pkgpath = pkgpath ":" assigns
 
 	pkgpaths [pkgbase] = pkgpath
-	pkgnames [pkgpath] = pkgbase
+	pkgnames [pkgpath] = pkgname
+	pkgbases [pkgpath] = pkgbase
 
 	all_pkgs [pkgpath] = 1
 
@@ -173,20 +177,32 @@ END {
 
 		assert(out_pkgname)
 
-		if (out_pkgpath)
-			print dep "," pkgnames [dep], pkgpath "," pkgnames [pkgpath]
+		if (keep_ver)
+			pkgname = pkgnames [pkgpath]
 		else
-			print pkgnames [dep], pkgnames [pkgpath]
+			pkgname = pkgbases [pkgpath]
+
+		if (out_pkgpath)
+			print dep "," pkgbases [dep], pkgpath "," pkgname
+		else
+			print pkgbases [dep], pkgname
 	}
 
 	for (pkgpath in all_pkgs){
 		if (! (pkgpath in dep_pkgs)){
-			if (!out_pkgname)
+			if (!out_pkgname){
 				print_nodep_node(pkgpath)
-			else if (!out_pkgpath)
-				print_nodep_node(pkgnames [pkgpath])
-			else
-				print pkgpath "," pkgnames [pkgpath]
+			}else{
+				if (keep_ver)
+					pkgname = pkgnames [pkgpath]
+				else
+					pkgname = pkgbases [pkgpath]
+
+				if (!out_pkgpath)
+					print_nodep_node(pkgname)
+				else
+					print pkgpath "," pkgname
+			}
 		}
 	}
 
