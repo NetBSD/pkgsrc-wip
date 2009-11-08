@@ -111,8 +111,10 @@ NF == 0 {
 		++cnt
 		if (!out_pkgname)
 			print dep, pkgpath
+		else if (!out_pkgpath)
+			print deps [dep], pkgbase
 		else
-			full_deps [dep " " pkgpath] = 1
+			full_deps [dep " " pkgpath] = deps [dep]
 
 		dep_pkgs [dep] = 1
 	}
@@ -130,15 +132,25 @@ NF == 0 {
 
 	for (i=1; i <= NF; ++i){
 		if ($i ~ /[{]/){
-			depbase = braceexpand($i)
-			sub(/ .*$/, "", depbase)
-			sub(/:.*$/, "", depbase)
-			sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
-			hidden_deps [depbase " " pkgpath] = 1
+			depname = braceexpand($i)
+			sub(/ .*$/, "", depname)
+			sub(/:.*$/, "", depname)
+
+			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
+			depbase = substr(depname, 1, idx-1)
+
+			hidden_deps [depbase " " pkgpath] = depname
 	}else{
 			deppath = $i
 			sub(/^[^:]*:(..\/..\/)?/, "", deppath)
-			deps [deppath] = 1
+
+			depname = $i
+			sub(/:.*$/, "", depname)
+
+			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
+			depbase = substr(depname, 1, idx-1)
+
+			deps [deppath] = depbase
 		}
 	}
 }
