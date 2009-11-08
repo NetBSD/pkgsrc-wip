@@ -43,13 +43,14 @@
 # usage: pkg_summary2deps [OPTIONS] [files...]
 # OPTIONS:
 #   -h|--help            display this help
-#   -p                   output pkgpath
-#   -n                   output pkgname
+#   -p                   output PKGPATH
+#   -n                   output PKGNAME
 #   -d                   analyse DEPENDS
 #   -D                   analyse BUILD_DEPENDS
 #   -A                   analyse both DEPENDS and BUILD_DEPENDS
-#   -t                   produces output compatible with tsort(1)
+#   -t                   produce output compatible in tsort(1) format
 #   -r                   do not strip versions from PKGNAME
+#   -R                   do not strip versions from dependencies
 #.end-str
 ############################################################
 
@@ -66,6 +67,7 @@ BEGIN {
 	}
 
 	keep_ver = getarg("r")
+	keep_depver = getarg("R")
 
 	if (!out_pkgname && !out_pkgpath){
 		print "Either -p or -n should be applied" > "/dev/stderr"
@@ -123,7 +125,7 @@ NF == 0 {
 
 	delete deps
 
-	assigns = pkgpath = pkgbase = ""
+	assigns = pkgpath = pkgbase = pkgname = ""
 	next
 }
 
@@ -139,7 +141,8 @@ NF == 0 {
 			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
 			depbase = substr(depname, 1, idx-1)
 
-			hidden_deps [depbase " " pkgpath] = depname
+			hidden_deps [depbase " " pkgpath] = \
+				hidden_deps [depbase " " pkgpath] SUBSEP depname
 	}else{
 			deppath = $i
 			sub(/^[^:]*:(..\/..\/)?/, "", deppath)
@@ -147,10 +150,15 @@ NF == 0 {
 			depname = $i
 			sub(/:.*$/, "", depname)
 
-			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
-			depbase = substr(depname, 1, idx-1)
+#			deps [deppath] = depname
+			if (keep_depver){
+				deps [deppath] = depname
+			}else{
+				idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
+				depbase = substr(depname, 1, idx-1)
 
-			deps [deppath] = depbase
+				deps [deppath] = depbase
+			}
 		}
 	}
 }
@@ -194,10 +202,15 @@ END {
 		else
 			pkgname = pkgbases [pkgpath]
 
-		if (out_pkgpath)
-			print dep ";" pkgbases [dep], pkgpath ";" pkgname
+		if (keep_depver)
+			depname = pkgnames [dep]
 		else
-			print pkgbases [dep], pkgname
+			depname = pkgbases [dep]
+
+		if (out_pkgpath)
+			print dep ";" depname, pkgpath ";" pkgname
+		else
+			print depname, pkgname
 	}
 
 	for (pkgpath in all_pkgs){
