@@ -1,4 +1,9 @@
 ----------------------------------------------------------------------
+Version 0.35.0, by Aleksey Cheusov
+
+ - New mega tool pkg_summary2deps
+
+----------------------------------------------------------------------
 Version 0.34.2, by Aleksey Cheusov, Mon, 31 Oct 2009 21:34:37 +0200
 
  - Fix for a bug (cyclic dependencies again)

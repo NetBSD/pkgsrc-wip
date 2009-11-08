@@ -1,0 +1,194 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2008-2009 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+############################################################
+
+#env "LC_ALL=C"
+
+#use "power_getopt.awk"
+#use "alt_assert.awk"
+#use "braceexpand.awk"
+
+############################################################
+#.begin-str help
+# pkg_summary2deps - converts pkg_summary to the dependency graph
+#   by analysing pkgname:../../pkg/path and 
+#   {alter,native}:../../pkg/path entries
+#   in DEPENDS and BUILD_DEPENDS fields.
+# Format of the output:
+#   package1
+#   package2 package3
+#   ...
+# Here package3 depends on package2, package1 has no dependencies.
+# usage: pkg_summary2deps [OPTIONS] [files...]
+# OPTIONS:
+#   -h|--help            display this help
+#   -p                   output pkgpath
+#   -n                   output pkgname
+#   -d                   analyse DEPENDS
+#   -D                   analyse BUILD_DEPENDS
+#   -A                   analyse both DEPENDS and BUILD_DEPENDS
+#   -t                   produces output compatible with tsort(1)
+#.end-str
+############################################################
+
+BEGIN {
+	out_pkgname = getarg("n")
+	out_pkgpath = getarg("p")
+
+	mode_tsort  = getarg("t")
+
+	dep_depends  = getarg("d")
+	dep_builddep = getarg("D")
+	if (getarg("A")){
+		dep_builddep = dep_depends = 1
+	}
+
+	if (!out_pkgname && !out_pkgpath){
+		print "Either -p or -n should be applied" > "/dev/stderr"
+		exit 1
+	}
+	if (!dep_depends && !dep_builddep){
+		print "Either -d, -D or -A should be applied" > "/dev/stderr"
+		exit 1
+	}
+}
+
+/^ASSIGNMENTS=/ {
+	assigns = substr($0, 13)
+	next
+}
+
+/^PKGPATH=/ {
+	pkgpath = substr($0, 9)
+	next
+}
+
+/^PKGNAME=/ {
+	pkgbase = pkgname = substr($0, 9)
+	sub(/-[^-]+$/, "", pkgbase)
+
+	next
+}
+
+NF == 0 {
+	assert(pkgpath != "", "Cannot find pkgpath")
+
+	if (assigns)
+		pkgpath = pkgpath ":" assigns
+
+	pkgpaths [pkgbase] = pkgpath
+	pkgnames [pkgpath] = pkgbase
+
+	all_pkgs [pkgpath] = 1
+
+	cnt = 0
+	for (dep in deps){
+		++cnt
+		if (!out_pkgname)
+			print dep, pkgpath
+		else
+			full_deps [dep " " pkgpath] = 1
+
+		dep_pkgs [dep] = 1
+	}
+	if (cnt)
+		dep_pkgs [pkgpath] = 1
+
+	delete deps
+
+	assigns = pkgpath = pkgbase = ""
+	next
+}
+
+(dep_depends && /^DEPENDS=/) || (dep_builddep && /^BUILD_DEPENDS=/) {
+	sub(/^[^=]+=/, "")
+
+	for (i=1; i <= NF; ++i){
+		if ($i ~ /[{]/){
+			depbase = braceexpand($i)
+			sub(/ .*$/, "", depbase)
+			sub(/:.*$/, "", depbase)
+			sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
+			hidden_deps [depbase " " pkgpath] = 1
+	}else{
+			deppath = $i
+			sub(/^[^:]*:(..\/..\/)?/, "", deppath)
+			deps [deppath] = 1
+		}
+	}
+}
+
+function print_nodep_node (node){
+	if (mode_tsort)
+		print node, node
+	else
+		print node
+}
+
+END {
+	for (hdep in hidden_deps){
+		base = hdep
+		sub(/ .*$/, "", base)
+
+		if (! (base in pkgpaths)){
+			print "Cannot find PKGPATH for " base > "/dev/stderr"
+			ex = 1
+		}else{
+			pkgpath = hdep
+			sub(/^.* /, "", pkgpath)
+
+			depbase = pkgpaths [base]
+			print depbase, pkgpath
+
+			dep_pkgs [pkgpath] = dep_pkgs [deppath] = 1
+		}
+	}
+
+	for (hdep in full_deps){
+		dep = hdep
+		sub(/ .*$/, "", dep)
+		pkgpath = hdep
+		sub(/^.* /, "", pkgpath)
+
+		assert(out_pkgname)
+
+		if (out_pkgpath)
+			print dep "," pkgnames [dep], pkgpath "," pkgnames [pkgpath]
+		else
+			print pkgnames [dep], pkgnames [pkgpath]
+	}
+
+	for (pkgpath in all_pkgs){
+		if (! (pkgpath in dep_pkgs)){
+			if (!out_pkgname)
+				print_nodep_node(pkgpath)
+			else if (!out_pkgpath)
+				print_nodep_node(pkgnames [pkgpath])
+			else
+				print pkgpath "," pkgnames [pkgpath]
+		}
+	}
+
+	exit ex
+}

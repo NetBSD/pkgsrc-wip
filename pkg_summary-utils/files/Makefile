@@ -27,6 +27,7 @@ SCRIPTS+=	pkg_update_summary pkg_grep_summary
 SCRIPTS+=	cvs_checksum pkg_assignments2pkgpath
 SCRIPTS+=	pkg_uniq_summary pkg_summary2bb_pkgs
 SCRIPTS+=	pkg_cleanup_distdir pkg_summary2build_graph
+SCRIPTS+=	pkg_summary2deps
 
 MAN=		pkg_summary-utils.7
 MAN+=		pkg_cmp_summary.1 pkg_grep_summary.1

@@ -56,6 +56,8 @@ runtest pkg_grep_summary -m MAINTAINER 'cheusov|vle@gmx.net' < src_summary.txt |
 
 runtest pkg_grep_summary -s PKGPATH graphics/png < src_summary.txt
 
+
+
 # pkg_cmp_summary
 echo '--------------------------------------------------'
 echo '------- pkg_cmp_summary #1.1'
@@ -85,6 +87,8 @@ echo '--------------------------------------------------'
 echo '------- pkg_cmp_summary #1.7'
 pkg_cmp_summary -P src_summary.txt src_summary2.txt | sort -k2,2
 
+
+
 # pkg_list_all_pkgs
 echo '--------------------------------------------------'
 echo '------- pkg_list_all_pkgs #3'
@@ -107,12 +111,16 @@ normalize_version (){
   }' "$@"
 }
 
+
+
 # pkg_micro_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #4'
 pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"
 pkg_micro_src_summary $pkgs | tee "$objdir"/summary_micro.txt |
 normalize_version
+
+
 
 # pkg_refresh_summary
 echo '--------------------------------------------------'
@@ -125,6 +133,8 @@ echo '------- pkg_refresh_summary #5.2'
 pkg_refresh_summary -o src_summary.txt src_summary2.txt |
 sed -n 's/^PKGNAME=//p' | sort
 
+
+
 # pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #6'
@@ -133,10 +143,14 @@ pkg_src_summary -f PKGNAME,PKGPATH $pkgs |
 tee "$objdir"/summary_full.txt |
 normalize_version
 
+
+
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #7'
 pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |
 grep -v '^='
+
+
 
 # pkg_summary4view
 echo '--------------------------------------------------'
@@ -149,6 +163,8 @@ echo '------- pkg_summary4view #8.1'
 pkg_summary4view -h     2>&1 | grep pkg_summary4view >/dev/null && echo ok
 pkg_summary4view --help 2>&1 | grep pkg_summary4view >/dev/null && echo ok
 
+
+
 # pkg_uniq_summary
 echo '--------------------------------------------------'
 echo '------- pkg_uniq_summary #9'
@@ -158,6 +174,8 @@ echo '--------------------------------------------------'
 echo '------- pkg_uniq_summary #9.1'
 pkg_uniq_summary -h 2>&1     | grep pkg_uniq_summary > /dev/null && echo ok1
 pkg_uniq_summary --help 2>&1 | grep pkg_uniq_summary > /dev/null && echo ok2
+
+
 
 # pkg_src_summary
 echo '--------------------------------------------------'
@@ -181,6 +199,8 @@ pkg_src_summary -m -f'PKGNAME PKGPATH' \
    www/ap2-python:PYTHON_VERSION_REQD=25,PKG_APACHE=apache22 |
 grep -v DEPENDS
 
+
+# pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #11'
 pkg_src_summary -A -f PKGNAME,PKGPATH \
@@ -189,6 +209,9 @@ grep -v DEPENDS |
 pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo' |
 normalize_version
 
+
+
+# pkg_assignments2pkgpath
 echo '--------------------------------------------------'
 echo '------- pkg_assignments2pkgpath #12'
 pkg_assignments2pkgpath -h 2>&1 |
@@ -197,6 +220,9 @@ grep pkg_assignments2pkgpath > /dev/null && echo ok1
 pkg_assignments2pkgpath --help 2>&1 |
 grep pkg_assignments2pkgpath > /dev/null && echo ok2
 
+
+
+# pkg_src_fetch_var
 echo '--------------------------------------------------'
 echo '------- pkg_src_fetch_var #13.1'
 echo x11/xxkb | pkg_src_fetch_var -f 'PKGNAME PKGPATH MAINTAINER' |
@@ -217,6 +243,9 @@ echo '------- pkg_src_fetch_var #13.4'
 echo x11/xxkb | pkg_src_fetch_var --fields 'PKGNAME PKGPATH MAINTAINER' |
 normalize_version
 
+
+
+# pkg_micro_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_micro_src_summary #14.1'
 pkg_micro_src_summary -f PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
@@ -235,6 +264,8 @@ pkg_micro_src_summary --fields PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
 
 
+
+# pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #15.1'
 pkg_src_summary -f PKGNAME --add-fields 'PKGPATH MAINTAINER' x11/xxkb |
@@ -253,6 +284,8 @@ pkg_src_summary -fPKGNAME --add-fields=PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
 
 
+
+# pkg_src_summary
 echo '--------------------------------------------------'
 echo '------- pkg_src_summary #16.1'
 pkg_src_summary -f PKGNAME,PKGPATH,COMMENT --rem-fields 'PKGPATH MAINTAINER' x11/xxkb |
@@ -269,6 +302,10 @@ echo '--------------------------------------------------'
 echo '------- pkg_src_summary #16.4'
 pkg_src_summary -f PKGNAME,PKGPATH,COMMENT --rem-fields=PKGPATH,MAINTAINER x11/xxkb |
 normalize_version
+
+
+
+# pkg_summary2build_graph
 echo '--------------------------------------------------'
 echo '------- pkg_summary2build_graph #17.1'
 pkg_summary2build_graph src_summary.txt |
@@ -286,3 +323,18 @@ echo '------- pkg_summary2build_graph #17.4'
 pkg_summary2build_graph src_summary8.txt |
 sort | uniq
 
+
+
+# pkg_summary2deps
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #18.1'
+pkg_summary2deps -Apn src_summary.txt |
+sort
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #18.2'
+pkg_summary2deps -dnt src_summary.txt |
+sort
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #18.4'
+pkg_summary2deps -Dp src_summary8.txt |
+sort | uniq
