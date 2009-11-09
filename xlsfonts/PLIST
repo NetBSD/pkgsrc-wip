@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/01/29 16:46:14 bsadewitz Exp $
-bin/xlsfonts
-man/man1/xlsfonts.1
