@@ -336,3 +336,7 @@ pkg_summary2deps -Apntr src_summary7.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.4'
 pkg_summary2deps -Dp src_summary8.txt | sort | uniq
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #18.5'
+pkg_summary2deps -Dpr src_summary8.txt | sort | uniq

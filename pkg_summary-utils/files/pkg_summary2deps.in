@@ -49,13 +49,18 @@
 #   -D                   analyse BUILD_DEPENDS
 #   -A                   analyse both DEPENDS and BUILD_DEPENDS
 #   -t                   produce output compatible in tsort(1) format
-#   -r                   do not strip versions from PKGNAME
-#   -R                   do not strip versions from dependencies
+#   -r                   do not strip versions from PKGNAME,
+#                        imply -n
+#   -R                   do not strip versions from dependencies (buggy!!!),
+#                        imply -n
 #.end-str
 ############################################################
 
 BEGIN {
-	out_pkgname = getarg("n")
+	keep_ver = getarg("r")
+	keep_depver = getarg("R")
+
+	out_pkgname = keep_ver || keep_depver || getarg("n")
 	out_pkgpath = getarg("p")
 
 	mode_tsort  = getarg("t")
@@ -65,9 +70,6 @@ BEGIN {
 	if (getarg("A")){
 		dep_builddep = dep_depends = 1
 	}
-
-	keep_ver = getarg("r")
-	keep_depver = getarg("R")
 
 	if (!out_pkgname && !out_pkgpath){
 		print "Either -p or -n should be applied" > "/dev/stderr"
@@ -118,7 +120,8 @@ NF == 0 {
 		else
 			full_deps [dep " " pkgpath] = deps [dep]
 
-		dep_pkgs [dep] = 1
+		if (!keep_ver)
+			dep_pkgs [dep] = 1
 	}
 	if (cnt)
 		dep_pkgs [pkgpath] = 1
@@ -182,10 +185,28 @@ END {
 			pkgpath = hdep
 			sub(/^.* /, "", pkgpath)
 
-			depbase = pkgpaths [base]
-			print depbase, pkgpath
+			dep = pkgpaths [base]
 
-			dep_pkgs [pkgpath] = dep_pkgs [deppath] = 1
+			if (keep_ver)
+				pkgname = pkgnames [pkgpath]
+			else
+				pkgname = pkgbases [pkgpath]
+
+			if (keep_depver)
+				depname = pkgnames [dep]
+			else
+				depname = pkgbases [dep]
+
+			if (!out_pkgpath)
+				print depbase, pkgname
+			else if (!out_pkgname)
+				print dep, pkgpath
+			else
+				print dep ";" depname, pkgpath ";" pkgname
+
+			dep_pkgs [pkgpath] = 1
+			if (!keep_ver)
+				dep_pkgs [deppath] = 1
 		}
 	}
 

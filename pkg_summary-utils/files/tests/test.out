@@ -945,8 +945,11 @@ x11-links x11-links
 --------------------------------------------------
 ------- pkg_summary2deps #18.3
 audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen audio/py-karaoke:PYTHON_VERSION_REQD=24;py24-karaoke-0.7.1
+audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen-1.15
 audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen audio/py-karaoke:PYTHON_VERSION_REQD=26;py26-karaoke-0.7.1
+audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen-1.15
 audio/py-mutagen;py25-mutagen audio/py-karaoke;py25-karaoke-0.7.1
+audio/py-mutagen;py25-mutagen-1.15
 --------------------------------------------------
 ------- pkg_summary2deps #18.4
 devel/p5-Module-Build
@@ -969,3 +972,26 @@ sysutils/checkperms textproc/p5-Pod-Readme
 sysutils/checkperms textproc/p5-Regexp-Common
 sysutils/checkperms textproc/p5-Text-Diff
 sysutils/checkperms textproc/p5-YAML
+--------------------------------------------------
+------- pkg_summary2deps #18.5
+devel/p5-Module-Build;p5-Module-Build-0.35000
+lang/perl5;perl devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01
+lang/perl5;perl devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01
+lang/perl5;perl devel/p5-version;p5-version-0.7702
+sysutils/checkperms;checkperms archivers/p5-Archive-Tar;p5-Archive-Tar-1.54
+sysutils/checkperms;checkperms devel/p5-Algorithm-Diff;p5-Algorithm-Diff-1.1902nb1
+sysutils/checkperms;checkperms devel/p5-Compress-Raw-Bzip2;p5-Compress-Raw-Bzip2-2.021
+sysutils/checkperms;checkperms devel/p5-Compress-Raw-Zlib;p5-Compress-Raw-Zlib-2.021
+sysutils/checkperms;checkperms devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01
+sysutils/checkperms;checkperms devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01
+sysutils/checkperms;checkperms devel/p5-IO-Compress;p5-IO-Compress-2.021
+sysutils/checkperms;checkperms devel/p5-IO-String;p5-IO-String-1.08nb1
+sysutils/checkperms;checkperms devel/p5-IO-Zlib;p5-IO-Zlib-1.10
+sysutils/checkperms;checkperms devel/p5-version;p5-version-0.7702
+sysutils/checkperms;checkperms lang/perl5;perl-5.10.0nb7
+sysutils/checkperms;checkperms textproc/p5-Filter;p5-Filter-1.37
+sysutils/checkperms;checkperms textproc/p5-Pod-Readme;p5-Pod-Readme-0.09
+sysutils/checkperms;checkperms textproc/p5-Regexp-Common;p5-Regexp-Common-2.122nb1
+sysutils/checkperms;checkperms textproc/p5-Text-Diff;p5-Text-Diff-1.37
+sysutils/checkperms;checkperms textproc/p5-YAML;p5-YAML-0.70
+sysutils/checkperms;checkperms-1.10
