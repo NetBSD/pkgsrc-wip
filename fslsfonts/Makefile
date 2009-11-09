@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 22:31:40 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/09 19:38:50 tnn2 Exp $
 #
 
-DISTNAME=	fslsfonts-1.0.1
+DISTNAME=	fslsfonts-1.0.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
