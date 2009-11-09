@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/02/09 20:12:31 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/09 20:10:06 othyro Exp $
 
-DISTNAME=		libzrtpcpp-1.4.3
+DISTNAME=		libzrtpcpp-1.4.6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=ccrtp/}
 
