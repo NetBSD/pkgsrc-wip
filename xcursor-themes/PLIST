@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:16 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/09 19:48:02 tnn2 Exp $
 share/icons/handhelds/cursors/X_cursor
 share/icons/handhelds/cursors/based_arrow_down
 share/icons/handhelds/cursors/based_arrow_up
@@ -71,6 +71,7 @@ share/icons/redglass/cursors/top_left_corner
 share/icons/redglass/cursors/top_right_corner
 share/icons/redglass/cursors/top_side
 share/icons/redglass/cursors/top_tee
+share/icons/redglass/cursors/watch
 share/icons/redglass/cursors/xterm
 share/icons/whiteglass/cursors/X_cursor
 share/icons/whiteglass/cursors/base_arrow_down
