@@ -1,19 +1,8 @@
-$NetBSD: distinfo,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+$NetBSD: distinfo,v 1.2 2009/11/09 14:45:20 brook1 Exp $
 
 SHA1 (ganglia-3.1.2.tar.gz) = be5db246eb755d8c450140d1c80afef4f1179fe1
 RMD160 (ganglia-3.1.2.tar.gz) = 1f78cf1019759e12c3c65901fd74ac65dfddf4e3
 Size (ganglia-3.1.2.tar.gz) = 1213196 bytes
-SHA1 (patch-aa) = 7f523bf59edbe848c3798e5a4e20c8f376405a8e
-SHA1 (patch-ab) = d1b2ff2523e9d42659f87f70b3fb80d72d2444e7
-SHA1 (patch-ac) = d3f35f82876f018b9f0e583bc1e38085c732d79c
 SHA1 (patch-ad) = e258e4efb1ae012db51901de87e614cede78812c
 SHA1 (patch-ae) = 260a78711c2c7f1111ce8c4b0d54d2edd60dde08
-SHA1 (patch-af) = af117f3035bd89bfbcc710d118dbf429bb1a29ec
-SHA1 (patch-ag) = a1c5529a8110042359122c14586e13b37913b749
-SHA1 (patch-ah) = 71b7941a6fbe1d27705b0e4658cfaf3d5582190b
-SHA1 (patch-ai) = 69528ce5c58e5e2c323aa5d566a979499a2ff8e3
-SHA1 (patch-aj) = 1161e9485bb053ceb1cd40cd56555b1e97f529d9
 SHA1 (patch-ak) = 094e07fac40d39093a80dfbee640a1503abaa4cb
-SHA1 (patch-al) = c65fb5a5e1f3ee30e1380ece55b7fe78710ab328
-SHA1 (patch-am) = 2f926d44a86b51cab79fe373fe09821583dad9b0
-SHA1 (patch-an) = 1f97b91a26d86a526e05e44f8ed65d2242a94827

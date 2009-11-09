@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/08 18:30:32 brook1 Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/09 14:45:20 brook1 Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -41,7 +41,7 @@ SUBST_FILES.pkg_sysconfdir=	mans/gmetad.1 mans/gmetric.1 mans/gmond.1 \
 			gmetric/cmdline.c gmetric/cmdline.h		\
 			gmond/cmdline.c gmond/cmdline.h gmond/g25_config.h \
 			ganglia.html
-SUBST_VARS.pkg_sysconfdir=	PKG_SYSCONFDIR
+SUBST_SED.pkg_sysconfdir=	-e 's,/etc/ganglia,${PKG_SYSCONFDIR},g'
 
 EGDIR=			${PREFIX}/share/examples/ganglia
 CONF_FILES=		${EGDIR}/gmond.conf ${PKG_SYSCONFDIR}/gmond.conf
