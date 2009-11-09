@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3671 2009/11/09 23:15:23 othyro Exp $
+# $Id: Makefile,v 1.3672 2009/11/09 23:23:48 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1579,6 +1579,7 @@ SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
+SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
