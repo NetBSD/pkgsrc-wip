@@ -5,7 +5,8 @@ BUILD_DEPENDS={perl>=5.10,p5-Module-Build>=0.2608nb1}:../../devel/p5-Module-Buil
 
 PKGNAME=p5-Module-Build-0.35000
 PKGPATH=devel/p5-Module-Build
-DEPENDS=p5-Archive-Tar>=1.08:../../archivers/p5-Archive-Tar p5-ExtUtils-ParseXS>=1.02:../../devel/p5-ExtUtils-ParseXS p5-ExtUtils-CBuilder>=0.15:../../devel/p5-ExtUtils-CBuilder p5-Pod-Readme>=0.04:../../textproc/p5-Pod-Readme p5-version>=0.74:../../devel/p5-version   perl>=5.10.0:../../lang/perl5 perl<5.12.0:../../lang/perl5 BUILD_DEPENDS=p5-YAML>=0.50:../../textproc/p5-YAML perl>=5.10.0:../../lang/perl5 checkperms>=1.1:../../sysutils/checkperms
+DEPENDS=p5-Archive-Tar>=1.08:../../archivers/p5-Archive-Tar p5-ExtUtils-ParseXS>=1.02:../../devel/p5-ExtUtils-ParseXS p5-ExtUtils-CBuilder>=0.15:../../devel/p5-ExtUtils-CBuilder p5-Pod-Readme>=0.04:../../textproc/p5-Pod-Readme p5-version>=0.74:../../devel/p5-version   perl>=5.10.0:../../lang/perl5 perl<5.12.0:../../lang/perl5
+BUILD_DEPENDS=p5-YAML>=0.50:../../textproc/p5-YAML perl>=5.10.0:../../lang/perl5 checkperms>=1.1:../../sysutils/checkperms
 
 PKGNAME=checkperms-1.10
 PKGPATH=sysutils/checkperms
