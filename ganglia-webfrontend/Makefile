@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/09 17:24:52 brook1 Exp $
 #
 
 DISTNAME=	ganglia-3.1.2
@@ -32,7 +32,7 @@ SUBST_FILES.prefix=	conf.php
 SUBST_VARS.prefix=	PREFIX
 
 do-install:
-	cd ${WRKSRC} && pax -rw . ${DESTDIR}${DOCROOT}/
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${DOCROOT}/
 	${RM} ${DESTDIR}${DOCROOT}/AUTHORS
 	${RM} ${DESTDIR}${DOCROOT}/COPYING
 	${RM} ${DESTDIR}${DOCROOT}/Makefile.am
