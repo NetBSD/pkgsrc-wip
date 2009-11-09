@@ -1,4 +1,4 @@
-$Id: DESC,v 1.6 2008/07/19 07:50:00 phonohawk Exp $
+$Id: DESC,v 1.7 2009/11/09 03:00:07 schnoebe Exp $
 
 Please provide .mk files descriptions and reasons for existence of those
 files here.
@@ -39,3 +39,7 @@ haskell.mk - generalised .mk file for Haskell Cabal packages.
              installation, and "unregistered" after
              uninstallation. Look how wip/cabal/INSTALL handles this:
              it should really be automated.
+
+git-package.mk   -  retrieve sources from git repositories, much like
+		    svn-package.mk and cvs-package.mk handle SVN and CVS
+		    repositories. 
