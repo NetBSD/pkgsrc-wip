@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/09 14:45:20 brook1 Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/09 15:05:36 brook1 Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -49,13 +49,14 @@ CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
 
 RCD_SCRIPTS=		gmond gmetad
 
-INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/gmond/gmond.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${DESTDIR}${EGDIR}/
 	${WRKSRC}/gmond/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
 

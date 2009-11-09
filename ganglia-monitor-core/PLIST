@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/08 18:30:32 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/09 15:05:36 brook1 Exp $
 bin/ganglia-config
 bin/gmetric
 bin/gstat
@@ -23,6 +23,7 @@ man/man1/gmetad.1
 man/man1/gmetric.1
 man/man1/gmond.1
 man/man1/gstat.1
+man/man5/gmond.conf.5
 sbin/gmetad
 sbin/gmond
 share/examples/ganglia/gmetad.conf
