@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/07 23:43:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/11/09 23:06:49 christtrekker Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -19,6 +19,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=     gmake perl
 INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
+
+# Has problems finding shared libs on some platforms...
+CFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 pre-build:
 	if [ -L ${WRKSRC}/vars ]; then ${RM} ${WRKSRC}/vars; fi
