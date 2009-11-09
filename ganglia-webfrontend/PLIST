@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/10/25 16:08:18 brook1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/09 10:10:56 thomasklausner Exp $
 share/httpd/htdocs/ganglia/auth.php
 share/httpd/htdocs/ganglia/class.TemplatePower.inc.php
 share/httpd/htdocs/ganglia/cluster_legend.html
@@ -60,8 +60,3 @@ share/httpd/htdocs/ganglia/templates/default/node_extra.tpl
 share/httpd/htdocs/ganglia/templates/default/physical_view.tpl
 share/httpd/htdocs/ganglia/templates/default/show_node.tpl
 share/httpd/htdocs/ganglia/version.php
-@dirrm share/httpd/htdocs/ganglia/templates/default/images
-@dirrm share/httpd/htdocs/ganglia/templates/default
-@dirrm share/httpd/htdocs/ganglia/templates
-@dirrm share/httpd/htdocs/ganglia/graph.d
-@dirrm share/httpd/htdocs/ganglia
