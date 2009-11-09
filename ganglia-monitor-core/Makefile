@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/09 16:56:19 brook1 Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/09 17:02:58 brook1 Exp $
 #
 
 DISTNAME=		ganglia-3.1.2
@@ -48,13 +48,14 @@ SUBST_FILES.pkg_sysconfdir=	ganglia.html				\
 SUBST_SED.pkg_sysconfdir+=	-e 's,/etc/ganglia,${PKG_SYSCONFDIR},g'
 SUBST_SED.pkg_sysconfdir+=	-e 's,/usr/lib/ganglia,${PREFIX}/lib/ganglia,g'
 
+DOCDIR=			${PREFIX}/share/doc/ganglia
 EGDIR=			${PREFIX}/share/examples/ganglia
 CONF_FILES=		${EGDIR}/gmond.conf ${PKG_SYSCONFDIR}/gmond.conf
 CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
 
 RCD_SCRIPTS=		gmond gmetad
 
-INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
@@ -64,6 +65,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/gmond/gmond.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${DESTDIR}${EGDIR}/
 	${WRKSRC}/gmond/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
+	${INSTALL_DATA} ${WRKSRC}/gmond/modules/python/README ${DESTDIR}${DOCDIR}/
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../devel/apr/buildlink3.mk"
