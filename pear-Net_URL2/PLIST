@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/09 23:12:18 othyro Exp $
+lib/php/.registry/net_url2.reg
+lib/php/Net/URL2.php
+lib/php/doc/Net_URL2/docs/6470.php
+lib/php/doc/Net_URL2/docs/example.php
