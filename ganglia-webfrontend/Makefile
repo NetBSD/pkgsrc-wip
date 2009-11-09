@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/09 17:24:52 brook1 Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/09 17:37:25 brook1 Exp $
 #
 
 DISTNAME=	ganglia-3.1.2
@@ -17,7 +17,6 @@ DEPENDS+=	ganglia-monitor-core>=3.0.1:../../parallel/ganglia-monitor-core
 
 USE_TOOLS+=	pax
 
-NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME}/web/
 
 DOCROOT=	${PREFIX}/share/httpd/htdocs/ganglia
@@ -31,15 +30,18 @@ SUBST_MESSAGE.prefix=	Fixing PREFIX
 SUBST_FILES.prefix=	conf.php
 SUBST_VARS.prefix=	PREFIX
 
+JUNKFILES+=		AUTHORS COPYING Makefile.am conf.php.in conf.php.orig
+JUNKFILES+=		templates/default/footer.tpl.orig version.php.in
+
+do-build:
+	${MKDIR} ${WRKDIR}/ganglia
+	cd ${WRKSRC} && ${PAX} -rw . ${WRKDIR}/ganglia/
+.for f in ${JUNKFILES}
+	${RM} ${WRKDIR}/ganglia/$f
+.endfor
+
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${DOCROOT}/
-	${RM} ${DESTDIR}${DOCROOT}/AUTHORS
-	${RM} ${DESTDIR}${DOCROOT}/COPYING
-	${RM} ${DESTDIR}${DOCROOT}/Makefile.am
-	${RM} ${DESTDIR}${DOCROOT}/conf.php.in
-	${RM} ${DESTDIR}${DOCROOT}/conf.php.orig
-	${RM} ${DESTDIR}${DOCROOT}/templates/default/footer.tpl.orig
-	${RM} ${DESTDIR}${DOCROOT}/version.php.in
+	cd ${WRKDIR}/ganglia && ${PAX} -rw . ${DESTDIR}${DOCROOT}/
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
