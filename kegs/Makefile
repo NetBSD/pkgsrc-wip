@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/10 15:55:59 christtrekker Exp $
+# $NetBSD: Makefile,v 1.11 2009/11/10 16:08:15 christtrekker Exp $
 #
 
 DISTNAME=	kegs.0.91
@@ -16,7 +16,9 @@ ONLY_FOR_PLATFORM=	Linux-*-i386 Linux-*-powerpc SunOS-*-i386 SunOS-*-sparc Darwi
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-powerpc *-*-x86_64 *-*-ia64 *-*-mips *-*-m68k
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+#WRKSRC=		${WRKDIR}/${DISTNAME}/src
+CONFIGURE_DIRS=	src
+BUILD_DIRS=	src
 USE_TOOLS+=     gmake perl
 INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
 
@@ -24,26 +26,26 @@ INSTALLATION_DIRS+=	bin share/doc/${PKGBASE} share/${PKGBASE}
 CFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 pre-build:
-	if [ -L ${WRKSRC}/vars ]; then ${RM} ${WRKSRC}/vars; fi
+	if [ -L ${WRKSRC}/src/vars ]; then ${RM} ${WRKSRC}/src/vars; fi
 	@${ECHO} Building for ${OPSYS} on ${MACHINE_ARCH}...
 	case "${OPSYS}_${MACHINE_ARCH}" in				\
-	Linux_ppc) ${LN} -s ${WRKSRC}/vars_linuxppc ${WRKSRC}/vars; break;;\
-	Linux_i386) ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
-	SunOS_sparc*) ${LN} -s ${WRKSRC}/vars_solaris ${WRKSRC}/vars; break;;\
-	SunOS_i386) ${LN} -s ${WRKSRC}/vars_x86solaris ${WRKSRC}/vars; break;;\
-	Darwin*) ${LN} -s ${WRKSRC}/vars_mac ${WRKSRC}/vars; break;;	\
-	HPUX*) ${LN} -s ${WRKSRC}/vars_hp ${WRKSRC}/vars; break;;	\
-	*_i386) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
-	*_ppc) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/vars_linuxppc ${WRKSRC}/vars; break;;\
-	*_amd64|*_ia64|*_x86_64) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/vars_x86linux ${WRKSRC}/vars; break;;\
-	*_mips|*_m68k) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/vars_linuxppc ${WRKSRC}/vars; break;;\
+	Linux_ppc) ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
+	Linux_i386) ${LN} -s ${WRKSRC}/src/vars_x86linux ${WRKSRC}/src/vars; break;;\
+	SunOS_sparc*) ${LN} -s ${WRKSRC}/src/vars_solaris ${WRKSRC}/src/vars; break;;\
+	SunOS_i386) ${LN} -s ${WRKSRC}/src/vars_x86solaris ${WRKSRC}/src/vars; break;;\
+	Darwin*) ${LN} -s ${WRKSRC}/src/vars_mac ${WRKSRC}/src/vars; break;;	\
+	HPUX*) ${LN} -s ${WRKSRC}/src/vars_hp ${WRKSRC}/src/vars; break;;	\
+	*_i386) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/src/vars_x86linux ${WRKSRC}/src/vars; break;;\
+	*_ppc) ${ECHO} "${OPSYS} on ${MACHINE_ARCH} is not officially supported, but ought to work..."; ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
+	*_amd64|*_ia64|*_x86_64) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/src/vars_x86linux ${WRKSRC}/src/vars; break;;\
+	*_mips|*_m68k) ${ECHO} "${MACHINE_ARCH} is not supported, but might work..."; ${LN} -s ${WRKSRC}/src/vars_linuxppc ${WRKSRC}/src/vars; break;;\
 	*) ${ECHO} Your platform is not recognized. ;;			\
 	esac
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/../xkegs ${DESTDIR}${PREFIX}/bin/xkegs
-	${INSTALL_DATA} ${WRKSRC}/../*txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/../config.kegs ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_PROGRAM} ${WRKSRC}/xkegs ${DESTDIR}${PREFIX}/bin/xkegs
+	${INSTALL_DATA} ${WRKSRC}/*txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/config.kegs ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
