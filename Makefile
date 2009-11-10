@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3678 2009/11/10 08:40:52 thomasklausner Exp $
+# $Id: Makefile,v 1.3679 2009/11/10 15:58:55 brook1 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -462,8 +462,6 @@ SUBDIR+=	gallery
 SUBDIR+=	gallery2
 SUBDIR+=	gambas2
 SUBDIR+=	gambc
-SUBDIR+=	ganglia-monitor-core
-SUBDIR+=	ganglia-webfrontend
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcc42
