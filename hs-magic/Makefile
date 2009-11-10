@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/07/27 04:30:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/10 07:21:07 phonohawk Exp $
 #
 
-DISTNAME=	magic-1.0.7
-PKGREVISION=	1
+DISTNAME=	magic-1.0.8
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
