@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 22:49:49 schnoebe Exp $
+bin/spectrum
+share/spectrum/certificates/facebook.pem
+share/spectrum/locales/cs.po
+share/examples/jabberd/spectrum.cfg
