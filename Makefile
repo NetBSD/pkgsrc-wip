@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3673 2009/11/10 03:23:24 phonohawk Exp $
+# $Id: Makefile,v 1.3674 2009/11/10 03:36:47 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -8,7 +8,6 @@ SUBDIR+=	Chinput
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
-SUBDIR+=	HCL
 SUBDIR+=	HLint
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
@@ -711,6 +710,7 @@ SUBDIR+=	hpoj
 SUBDIR+=	hs-FileManip
 SUBDIR+=	hs-GLURaw
 SUBDIR+=	hs-GLUT
+SUBDIR+=	hs-HCL
 SUBDIR+=	hs-HDBC
 SUBDIR+=	hs-HDBC-sqlite3
 SUBDIR+=	hs-HSH

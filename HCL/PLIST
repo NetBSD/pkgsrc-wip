@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:25 thomasklausner Exp $
-bin/hangman
-lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
-lib/${PKGNAME}/${HASKELL_VERSION}/System/Console/HCL.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
-lib/${PKGNAME}/${HASKELL_VERSION}/package-description
-share/${PKGNAME}/hangman/2of12.txt
