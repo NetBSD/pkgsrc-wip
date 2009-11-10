@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/10 14:48:34 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/10 16:14:38 fhajny Exp $
 
-DISTNAME=	term-ansicolor-1.0.3
+DISTNAME=	term-ansicolor-1.0.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
