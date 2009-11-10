@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/25 22:32:00 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/11/10 12:15:43 jihbed Exp $
 
-SHA1 (pylast-0.3.2.tar.gz) = 364cb22438667b9fd2e20d2615969a2ec1cb6f23
-RMD160 (pylast-0.3.2.tar.gz) = 5acce0b0014aa57d139cf80ae73675d24e934d36
-Size (pylast-0.3.2.tar.gz) = 16930 bytes
+SHA1 (pylast-0.4.18.tar.gz) = 7f8649e3d5b937a0e1d146aaedd402bf2010497d
+RMD160 (pylast-0.4.18.tar.gz) = f3c4815dddb614f63798d57fa1966b7c74af6416
+Size (pylast-0.4.18.tar.gz) = 32925 bytes
