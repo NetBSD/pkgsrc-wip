@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 14:48:34 fhajny Exp $
+${GEM_HOME}/cache/term-ansicolor-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/GPL
+${GEM_LIBDIR}/README.en
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/examples/cdiff.rb
+${GEM_LIBDIR}/examples/example.rb
+${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/lib/term/ansicolor.rb
+${GEM_LIBDIR}/make_doc.rb
+${GEM_HOME}/specifications/term-ansicolor-${PKGVERSION}.gemspec
