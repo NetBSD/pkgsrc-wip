@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/10 09:31:56 phonohawk Exp $
 #
 
-DISTNAME=		Cabal-1.6.0.2
-PKGNAME=		hs-cabal-1.6.0.2
-PKGREVISION=		1
-CATEGORIES=		devel
-MASTER_SITES=		http://www.haskell.org/cabal/release/${PKGNAME}/
+DISTNAME=	Cabal-1.6.0.3
+CATEGORIES=	devel
 
-MAINTAINER=		emil@math.su.se
-HOMEPAGE=		http://www.haskell.org/cabal/release/${PKGNAME}/
-COMMENT=		Haskell common architecture for building applications and libraries
+MAINTAINER=	emil@math.su.se
+COMMENT=	Haskell common architecture for building applications and libraries
 
 .include "../../wip/mk/haskell.mk"
-.include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
