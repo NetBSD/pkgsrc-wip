@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:08 thomasklausner Exp $
-DISTNAME=	hopenssl-${VERSION}
-PKGNAME=	hs-hopenssl-${VERSION}
-VERSION=	1.2
+# $NetBSD: Makefile,v 1.3 2009/11/10 09:00:32 phonohawk Exp $
+DISTNAME=	hopenssl-1.2
 CATEGORIES=	security
 
 MAINTAINER=	emil@math.su.se
