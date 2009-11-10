@@ -1,28 +1,47 @@
-$NetBSD: patch-aa,v 1.1 2009/09/23 06:35:34 phonohawk Exp $
+$NetBSD: patch-aa,v 1.2 2009/11/10 09:17:45 phonohawk Exp $
 
---- HUnit.cabal.orig	2009-09-06 20:09:24.000000000 +0900
+--- HUnit.cabal.orig	2009-10-11 22:52:17.000000000 +0900
 +++ HUnit.cabal
-@@ -48,6 +48,7 @@ Library
-         Extensions: CPP
- 
- Executable basic-tests
-+    Buildable: False
-     Main-Is:            HUnitTest98.lhs
-     HS-Source-Dirs:     . tests
-     Build-Depends:      base<5
-@@ -61,6 +62,7 @@ Executable basic-tests
-         Extensions: CPP
- 
- Executable extended-tests
-+    Buildable: False
-     Main-Is:            HUnitTestExtended.lhs
-     HS-Source-Dirs:     . tests
-     Build-Depends:      base<5
-@@ -74,6 +76,7 @@ Executable extended-tests
-         Extensions: CPP
- 
- Executable terminal-tests
-+    Buildable: False
-     Main-Is:            TerminalTest.lhs
-     HS-Source-Dirs:     . tests
-     Build-Depends:      base<5
+@@ -46,42 +46,3 @@ Library
+         Test.HUnit.Text,
+         Test.HUnit
+     Extensions: CPP
+-
+-Executable basic-tests
+-    Main-Is:            HUnitTest98.lhs
+-    HS-Source-Dirs:     . tests
+-    Build-Depends:      base<5
+-    if flag(base4)
+-        Build-Depends: base >=4
+-        CPP-Options: -DBASE4
+-    else
+-        Build-Depends: base <4
+-    if impl(ghc >= 6.10)
+-        Build-Depends: base >=4
+-        Extensions: CPP
+-
+-Executable extended-tests
+-    Main-Is:            HUnitTestExtended.lhs
+-    HS-Source-Dirs:     . tests
+-    Build-Depends:      base<5
+-    if flag(base4)
+-        Build-Depends: base >=4
+-        CPP-Options: -DBASE4
+-    else
+-        Build-Depends: base <4
+-    if impl(ghc >= 6.10)
+-        Build-Depends: base >=4
+-        Extensions: CPP
+-
+-Executable terminal-tests
+-    Main-Is:            TerminalTest.lhs
+-    HS-Source-Dirs:     . tests
+-    Build-Depends:      base<5
+-    if flag(base4)
+-        Build-Depends: base >=4
+-        CPP-Options: -DBASE4
+-    else
+-        Build-Depends: base <4
+-    if impl(ghc >= 6.10)
+-        Build-Depends: base >=4
+-        Extensions: CPP
