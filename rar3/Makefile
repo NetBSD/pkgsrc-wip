@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 09:00:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/10 00:32:47 othyro Exp $
 
-DISTNAME=		rarbsd-3.8.0
-PKGNAME=		rar-3.8.0
+DISTNAME=		rarbsd-3.9.0
+PKGNAME=		rar-3.9.0
 WRKSRC=			${WRKDIR}/rar
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.rarlab.com/rar/
