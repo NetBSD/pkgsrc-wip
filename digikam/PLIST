@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/08 18:50:02 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/11/10 09:39:44 thomasklausner Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -32,6 +32,7 @@ include/digikam/greycstorationiface.h
 include/digikam/greycstorationsettings.h
 include/digikam/greycstorationwidget.h
 include/digikam/histogrambox.h
+include/digikam/histogrampainter.h
 include/digikam/histogramwidget.h
 include/digikam/hslmodifier.h
 include/digikam/iccpreviewwidget.h
@@ -127,19 +128,9 @@ share/icons/hicolor/64x64/apps/digikam.png
 share/icons/hicolor/64x64/apps/showfoto.png
 share/icons/hicolor/scalable/apps/digikam.svgz
 share/icons/hicolor/scalable/apps/showfoto.svgz
-share/kde/apps/digikam/about/box-bottom-left.png
-share/kde/apps/digikam/about/box-bottom-middle.png
-share/kde/apps/digikam/about/box-bottom-right.png
-share/kde/apps/digikam/about/box-middle-left.png
-share/kde/apps/digikam/about/box-middle-right.png
-share/kde/apps/digikam/about/box-top-left.png
-share/kde/apps/digikam/about/box-top-middle.png
-share/kde/apps/digikam/about/box-top-right.png
-share/kde/apps/digikam/about/infopage.css
-share/kde/apps/digikam/about/infopage_rtl.css
+share/kde/apps/digikam/about/digikam.css
 share/kde/apps/digikam/about/main.html
 share/kde/apps/digikam/about/top-left-digikam.png
-share/kde/apps/digikam/about/top-middle.png
 share/kde/apps/digikam/cameraui.rc
 share/kde/apps/digikam/data/assistant-collection.png
 share/kde/apps/digikam/data/assistant-metadata.png

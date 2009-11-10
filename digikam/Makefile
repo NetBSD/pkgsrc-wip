@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/10/08 18:50:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2009/11/10 09:39:44 thomasklausner Exp $
 #
 
-DISTNAME=	digikam-1.0.0-beta5
+DISTNAME=	digikam-1.0.0-beta6
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
@@ -19,8 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
-REPLACE_PERL=	utilities/scripts/digitaglinktree
-REPLACE_SH=	utilities/scripts/cleanup_digikamdb
+REPLACE_PERL=	utilities/scripts/digitaglinktree/digitaglinktree
 USE_CMAKE=	yes
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 
