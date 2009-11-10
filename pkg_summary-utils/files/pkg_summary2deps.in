@@ -93,46 +93,23 @@ BEGIN {
 
 /^PKGNAME=/ {
 	pkgbase = pkgname = substr($0, 9)
-	sub(/-[^-]+$/, "", pkgbase)
+	if (!keep_ver)
+		sub(/-[^-]+$/, "", pkgbase)
 
 	next
 }
 
-NF == 0 {
-	assert(pkgpath != "", "Cannot find pkgpath")
-
-	if (assigns)
-		pkgpath = pkgpath ":" assigns
-
-	pkgpaths [pkgbase] = pkgpath
-	pkgnames [pkgpath] = pkgname
-	pkgbases [pkgpath] = pkgbase
-
-	all_pkgs [pkgpath] = 1
-
-	cnt = 0
-	for (dep in deps){
-		++cnt
-		if (!out_pkgname)
-			print dep, pkgpath
-		else if (!out_pkgpath)
-			print deps [dep], pkgbase
-		else
-			full_deps [dep " " pkgpath] = deps [dep]
-
-		if (!keep_ver)
-			dep_pkgs [dep] = 1
-	}
-	if (cnt)
-		dep_pkgs [pkgpath] = 1
-
-	delete deps
-
-	assigns = pkgpath = pkgbase = pkgname = ""
+dep_depends && /^DEPENDS=/ {
+	deps = $0
 	next
 }
 
-(dep_depends && /^DEPENDS=/) || (dep_builddep && /^BUILD_DEPENDS=/) {
+dep_builddep && /^BUILD_DEPENDS=/ {
+	bdeps = $0
+	next
+}
+
+function process_deps (){
 	sub(/^[^=]+=/, "")
 
 	for (i=1; i <= NF; ++i){
@@ -144,26 +121,68 @@ NF == 0 {
 			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
 			depbase = substr(depname, 1, idx-1)
 
-			hidden_deps [depbase " " pkgpath] = \
-				hidden_deps [depbase " " pkgpath] SUBSEP depname
-	}else{
+			if (!keep_depver){
+				depname = depbase
+			}
+
+			if (!out_pkgname)
+				hidden_deps [depbase " " pkgpath] = depname
+			else if (!out_pkgpath)
+				hidden_deps [depbase " " pkgbase] = depname
+			else
+				hidden_deps [depbase " " pkgpath ";" pkgbase] = depname
+
+			dep_pkgs [pkgpath] = 1
+		}else{
 			deppath = $i
 			sub(/^[^:]*:(..\/..\/)?/, "", deppath)
 
 			depname = $i
 			sub(/:.*$/, "", depname)
 
-#			deps [deppath] = depname
 			if (keep_depver){
-				deps [deppath] = depname
+				depbase = depname
 			}else{
 				idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
 				depbase = substr(depname, 1, idx-1)
-
-				deps [deppath] = depbase
 			}
+
+			if (!out_pkgname)
+				full_deps [deppath " " pkgpath] = 1
+			else if (!out_pkgpath)
+				full_deps [depbase " " pkgbase] = 1
+			else
+				full_deps [deppath ";" depbase " " pkgpath ";" pkgbase] = 1
+
+			dep_pkgs [pkgpath] = 1
+			if (!keep_ver)
+				dep_pkgs [deppath] = 1
 		}
 	}
+}
+
+NF == 0 {
+	assert(pkgpath != "", "Cannot find pkgpath")
+
+	if (assigns)
+		pkgpath = pkgpath ":" assigns
+
+	base = pkgbase
+	sub(/-[^-]+$/, "", base)
+	pkgpaths [base] = pkgpath
+	pkgnames [pkgpath] = pkgname
+	pkgbases [pkgpath] = pkgbase
+
+	all_pkgs [pkgpath] = 1
+
+	$0 = deps
+	process_deps()
+
+	$0 = bdeps
+	process_deps()
+
+	deps = bdeps = assigns = pkgpath = pkgbase = pkgname = ""
+	next
 }
 
 function print_nodep_node (node){
@@ -173,36 +192,38 @@ function print_nodep_node (node){
 		print node
 }
 
+function generate_pkgdepname (){
+	if (keep_ver)
+		pkgname = pkgnames [pkgpath]
+	else
+		pkgname = pkgbases [pkgpath]
+
+	if (keep_depver)
+		depname = pkgnames [dep]
+	else
+		depname = pkgbases [dep]
+}
+
 END {
 	for (hdep in hidden_deps){
-		base = hdep
-		sub(/ .*$/, "", base)
+		depbase = hdep
+		sub(/ .*$/, "", depbase)
 
-		if (! (base in pkgpaths)){
-			print "Cannot find PKGPATH for " base > "/dev/stderr"
+		depname = hidden_deps [hdep]
+
+		if (! (depbase in pkgpaths)){
+			print "Cannot find PKGPATH for " depbase > "/dev/stderr"
 			ex = 1
 		}else{
 			pkgpath = hdep
-			sub(/^.* /, "", pkgpath)
-
-			dep = pkgpaths [base]
-
-			if (keep_ver)
-				pkgname = pkgnames [pkgpath]
-			else
-				pkgname = pkgbases [pkgpath]
-
-			if (keep_depver)
-				depname = pkgnames [dep]
-			else
-				depname = pkgbases [dep]
+			sub(/^[^ ]* /, "", pkgpath)
 
 			if (!out_pkgpath)
-				print depbase, pkgname
+				print hidden_deps [hdep], pkgpath
 			else if (!out_pkgname)
-				print dep, pkgpath
+				print pkgpaths [depbase], pkgpath
 			else
-				print dep ";" depname, pkgpath ";" pkgname
+				print pkgpaths [depbase] ";" depname, pkgpath
 
 			dep_pkgs [pkgpath] = 1
 			if (!keep_ver)
@@ -216,22 +237,7 @@ END {
 		pkgpath = hdep
 		sub(/^.* /, "", pkgpath)
 
-		assert(out_pkgname)
-
-		if (keep_ver)
-			pkgname = pkgnames [pkgpath]
-		else
-			pkgname = pkgbases [pkgpath]
-
-		if (keep_depver)
-			depname = pkgnames [dep]
-		else
-			depname = pkgbases [dep]
-
-		if (out_pkgpath)
-			print dep ";" depname, pkgpath ";" pkgname
-		else
-			print depname, pkgname
+		print dep, pkgpath
 	}
 
 	for (pkgpath in all_pkgs){
@@ -239,10 +245,7 @@ END {
 			if (!out_pkgname){
 				print_nodep_node(pkgpath)
 			}else{
-				if (keep_ver)
-					pkgname = pkgnames [pkgpath]
-				else
-					pkgname = pkgbases [pkgpath]
+				generate_pkgdepname()
 
 				if (!out_pkgpath)
 					print_nodep_node(pkgname)

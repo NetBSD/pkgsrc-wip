@@ -18,7 +18,7 @@ BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 PKGNAME=p5-Archive-Tar-1.54
 PKGPATH=archivers/p5-Archive-Tar
 DEPENDS=p5-IO-Zlib>=1.01:../../devel/p5-IO-Zlib p5-IO-Compress>=2.017:../../devel/p5-IO-Compress p5-IO-String-[0-9]*:../../devel/p5-IO-String p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff perl>=5.10.0:../../lang/perl5 perl<5.12.0:../../lang/perl5
-BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms checkperms-[0-9]*:../../sysutils/checkperms checkperms>=1.0:../../sysutils/checkperms
 
 PKGNAME=p5-ExtUtils-ParseXS-2.20.04.01
 PKGPATH=devel/p5-ExtUtils-ParseXS
