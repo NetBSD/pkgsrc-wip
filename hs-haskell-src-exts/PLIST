@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/01 05:41:55 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/10 04:07:52 phonohawk Exp $
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/HShaskell-src-exts-${PKGVERSION}.o
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts.p_hi
@@ -6,24 +6,12 @@ lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Anno
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Build.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Build.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Comments.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Comments.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ExactPrint.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ExactPrint.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Fixity.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Fixity.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Lexer.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Lexer.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ParseMonad.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ParseMonad.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ParseUtils.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ParseUtils.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Parser.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Parser.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Pretty.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Pretty.p_hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/SrcLoc.hi
-lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/SrcLoc.p_hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Simplify.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Simplify.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Syntax.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Syntax.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Build.hi
@@ -36,16 +24,22 @@ lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Exte
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Extension.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Fixity.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Fixity.p_hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalParser.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalParser.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Lexer.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Lexer.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseMonad.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseMonad.p_hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseSyntax.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseSyntax.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseUtils.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/ParseUtils.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Parser.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Parser.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Pretty.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Pretty.p_hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/SrcLoc.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/SrcLoc.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Syntax.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Syntax.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-src-exts-${PKGVERSION}.a
