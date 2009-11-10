@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/22 13:31:04 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/10 07:41:23 phonohawk Exp $
 #
 
-DISTNAME=	OpenGLRaw-1.1.0.0
+DISTNAME=	OpenGLRaw-1.1.0.1
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org
