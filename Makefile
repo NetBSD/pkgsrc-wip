@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3679 2009/11/10 15:58:55 brook1 Exp $
+# $Id: Makefile,v 1.3680 2009/11/10 16:22:19 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -938,7 +938,6 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
-SUBDIR+=	kegs
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
