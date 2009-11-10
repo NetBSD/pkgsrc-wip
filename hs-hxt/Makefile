@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/07/27 02:15:59 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/10 09:49:43 phonohawk Exp $
 #
 
-DISTNAME=	hxt-8.3.1
+DISTNAME=	hxt-8.3.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.fh-wedel.de/~si/HXmlToolbox/index.html
 COMMENT=	Collection of tools for processing XML with Haskell
 LICENSE=	mit
 
