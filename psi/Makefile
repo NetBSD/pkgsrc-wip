@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2009/11/04 07:45:52 schnoebe Exp $
+# $NetBSD: Makefile,v 1.17 2009/11/10 21:28:30 schnoebe Exp $
 
-PSI_VERSION=	0.13
+PSI_VERSION=	0.14-rc1
 DISTNAME=	psi-${PSI_VERSION}
+PKGNAME=	${DISTNAME:S/-rc/rc/}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
 DIST_SUBDIR=	${DISTNAME}
-DISTFILES=	${DEFAULT_DISTFILES} ${LANG_PACK}
+DISTFILES=	${DEFAULT_DISTFILES} # ${LANG_PACK}
 
 USE_TOOLS+=	gmake unzip
 USE_LANGUAGES=	c c++
@@ -40,10 +41,10 @@ SITES.${LANG_PACK}= http://fs.scs-tsa.de/psi_l10n/
 #
 #   LANG_FILES are the translations we're going to install
 #
-LANG_FILES= be/psi_be.qm de/psi_de.qm es/psi_es.qm fr/psi_fr.qm \
-	    it/psi_it.qm mk/psi_mk.qm pl/psi_pl.qm pt_BR/psi_pt_BR.qm \
-	    ru/psi_ru.qm sv/psi_sv.qm ur_PK/psi_ur_PK.qm \
-	    zh_TW/psi_zh_TW.qm
+# LANG_FILES= be/psi_be.qm de/psi_de.qm es/psi_es.qm fr/psi_fr.qm \
+# 	    it/psi_it.qm mk/psi_mk.qm pl/psi_pl.qm pt_BR/psi_pt_BR.qm \
+# 	    ru/psi_ru.qm sv/psi_sv.qm ur_PK/psi_ur_PK.qm \
+# 	    zh_TW/psi_zh_TW.qm
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
 INSTALL_DIRS=		src
