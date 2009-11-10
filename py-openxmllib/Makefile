@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/06/17 23:49:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/10 12:07:46 jihbed Exp $
 #
 
-DISTNAME=	openxmllib-1.0.4
+DISTNAME=	openxmllib-1.0.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://openxmllib.googlecode.com/files/
@@ -20,5 +20,4 @@ PYTHON_VERSIONS_ACCEPTED=	26 25 24
 
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

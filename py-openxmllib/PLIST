@@ -1,23 +1,32 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/10 12:07:46 jihbed Exp $
 bin/openxmlinfo.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/openxmllib/__init__.py
 ${PYSITELIB}/openxmllib/__init__.pyc
 ${PYSITELIB}/openxmllib/__init__.pyo
+${PYSITELIB}/openxmllib/contenttypes.py
 ${PYSITELIB}/openxmllib/contenttypes.pyc
 ${PYSITELIB}/openxmllib/contenttypes.pyo
+${PYSITELIB}/openxmllib/document.py
 ${PYSITELIB}/openxmllib/document.pyc
 ${PYSITELIB}/openxmllib/document.pyo
+${PYSITELIB}/openxmllib/namespaces.py
 ${PYSITELIB}/openxmllib/namespaces.pyc
 ${PYSITELIB}/openxmllib/namespaces.pyo
+${PYSITELIB}/openxmllib/presentation.py
 ${PYSITELIB}/openxmllib/presentation.pyc
 ${PYSITELIB}/openxmllib/presentation.pyo
+${PYSITELIB}/openxmllib/spreadsheet.py
 ${PYSITELIB}/openxmllib/spreadsheet.pyc
 ${PYSITELIB}/openxmllib/spreadsheet.pyo
+${PYSITELIB}/openxmllib/utils.py
 ${PYSITELIB}/openxmllib/utils.pyc
 ${PYSITELIB}/openxmllib/utils.pyo
+${PYSITELIB}/openxmllib/wordprocessing.py
 ${PYSITELIB}/openxmllib/wordprocessing.pyc
 ${PYSITELIB}/openxmllib/wordprocessing.pyo
