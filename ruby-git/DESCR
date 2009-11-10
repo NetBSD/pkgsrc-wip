@@ -1,0 +1,2 @@
+Ruby/Git is a Ruby library that can be used to create, read and manipulate
+Git repositories by wrapping system calls to the git binary.
