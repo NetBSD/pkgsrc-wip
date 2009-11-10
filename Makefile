@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3676 2009/11/10 03:46:47 phonohawk Exp $
+# $Id: Makefile,v 1.3677 2009/11/10 04:27:19 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -702,6 +702,7 @@ SUBDIR+=	heroes
 SUBDIR+=	hgview
 SUBDIR+=	hijra
 SUBDIR+=	hitori
+SUBDIR+=	hlint
 SUBDIR+=	homebank
 SUBDIR+=	hping3
 SUBDIR+=	hplip
