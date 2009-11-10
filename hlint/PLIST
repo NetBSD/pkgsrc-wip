@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 04:25:26 phonohawk Exp $
+bin/hlint
+share/doc/${PKGNAME}/LICENSE
+share/${PKGNAME}/Default.hs
+share/${PKGNAME}/Dollar.hs
+share/${PKGNAME}/Generalise.hs
+share/${PKGNAME}/HLint.hs
+share/${PKGNAME}/Test.hs
+share/${PKGNAME}/hlint.1
+share/${PKGNAME}/hs-lint.el
+share/${PKGNAME}/report.html
