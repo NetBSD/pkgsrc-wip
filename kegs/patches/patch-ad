@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.4 2009/11/10 15:55:59 christtrekker Exp $
 --- vars_linuxppc.orig	2004-12-06 18:42:47.000000000 -0600
 +++ vars_linuxppc	2009-11-05 10:30:39.000000000 -0600
 @@ -2,7 +2,7 @@

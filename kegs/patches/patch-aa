@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2009/11/10 15:55:59 christtrekker Exp $
 --- Makefile.orig	Mon Dec  6 18:42:47 2004
 +++ Makefile	Mon May  4 11:37:22 2009
 @@ -11,7 +11,7 @@
