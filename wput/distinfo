@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/27 19:53:18 othyro Exp $
+$NetBSD: distinfo,v 1.2 2009/11/10 00:41:04 othyro Exp $
 
-SHA1 (wput-0.6.1.tgz) = 1c11d831b2403d838babe4416d4c7af434a7e300
-RMD160 (wput-0.6.1.tgz) = 7089af96008eee036ba027e05d0936ba51d07993
-Size (wput-0.6.1.tgz) = 312342 bytes
+SHA1 (wput-0.6.2.tgz) = c058f76395672d1fbbb839c958d6537e82fc88b7
+RMD160 (wput-0.6.2.tgz) = a3a62556ca258048ff5110ecdec199c98107766f
+Size (wput-0.6.2.tgz) = 368510 bytes

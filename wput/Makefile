@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/03/05 00:50:05 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/10 00:40:32 othyro Exp $
 #
 
-DISTNAME=	wput-0.6.1
+DISTNAME=	wput-0.6.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wput/}
 EXTRACT_SUFX=	.tgz
