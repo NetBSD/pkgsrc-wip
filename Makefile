@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3674 2009/11/10 03:36:47 phonohawk Exp $
+# $Id: Makefile,v 1.3675 2009/11/10 03:39:22 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -8,7 +8,6 @@ SUBDIR+=	Chinput
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
-SUBDIR+=	HLint
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	MoleInvasion
