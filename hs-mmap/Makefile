@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/24 05:27:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/10 07:34:50 phonohawk Exp $
 #
 
-DISTNAME=	mmap-0.4.1
+DISTNAME=	mmap-0.5.4
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
