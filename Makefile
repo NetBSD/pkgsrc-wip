@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3672 2009/11/09 23:23:48 othyro Exp $
+# $Id: Makefile,v 1.3673 2009/11/10 03:23:24 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -10,7 +10,6 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	HCL
 SUBDIR+=	HLint
-SUBDIR+=	HsSVN
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	MoleInvasion
