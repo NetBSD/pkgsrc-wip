@@ -1181,3 +1181,32 @@ sysutils/checkperms;checkperms>=1.1 textproc/p5-Regexp-Common;p5-Regexp-Common-2
 sysutils/checkperms;checkperms>=1.1 textproc/p5-Text-Diff;p5-Text-Diff-1.37
 sysutils/checkperms;checkperms>=1.1 textproc/p5-YAML;p5-YAML-0.70
 textproc/p5-YAML;p5-YAML>=0.50 devel/p5-Module-Build;p5-Module-Build-0.35000
+--------------------------------------------------
+------- pkg_summary2deps #20.1
+awk-pkgsrc-dewey pkg_summary-utils
+checkperms
+dict-client pkg_online-client
+dict-server pkg_online-server
+gmake
+libmaa dict-client
+libmaa dict-server
+libmaa paexec
+libtool-base
+netcat pkg_online-client
+paexec distbb
+pipestatus distbb
+pipestatus pkg_online-client
+pipestatus pkg_online-server
+pipestatus pkg_summary-utils
+pkg_online-client pkg_conflicts
+pkg_online-server pkg_conflicts
+pkg_online-client pkg_online
+pkg_online-server pkg_online
+pkg_summary-utils distbb
+pkg_summary-utils pkg_online-client
+pkg_summary-utils pkg_online-server
+runawk awk-pkgsrc-dewey
+runawk distbb
+runawk paexec
+runawk pkg_conflicts
+runawk pkg_summary-utils

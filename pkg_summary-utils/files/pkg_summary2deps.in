@@ -100,18 +100,16 @@ BEGIN {
 }
 
 dep_depends && /^DEPENDS=/ {
-	deps = $0
+	depends = depends " " substr($0, 9)
 	next
 }
 
 dep_builddep && /^BUILD_DEPENDS=/ {
-	bdeps = $0
+	build_depends = build_depends " " substr($0, 15)
 	next
 }
 
 function process_deps (){
-	sub(/^[^=]+=/, "")
-
 	for (i=1; i <= NF; ++i){
 		if ($i ~ /[{]/){
 			depname = braceexpand($i)
@@ -140,12 +138,10 @@ function process_deps (){
 			depname = $i
 			sub(/:.*$/, "", depname)
 
-			if (keep_depver){
-				depbase = depname
-			}else{
-				idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
-				depbase = substr(depname, 1, idx-1)
-			}
+			depbase = depname
+
+			if (!keep_depver)
+				sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
 
 			if (!out_pkgname)
 				full_deps [deppath " " pkgpath] = 1
@@ -156,7 +152,7 @@ function process_deps (){
 
 			dep_pkgs [pkgpath] = 1
 			if (!keep_ver)
-				dep_pkgs [deppath] = 1
+				dep_pkgs [deppath] = dep_pkgs [depbase] = 1
 		}
 	}
 }
@@ -175,13 +171,13 @@ NF == 0 {
 
 	all_pkgs [pkgpath] = 1
 
-	$0 = deps
+	$0 = depends
 	process_deps()
 
-	$0 = bdeps
+	$0 = build_depends
 	process_deps()
 
-	deps = bdeps = assigns = pkgpath = pkgbase = pkgname = ""
+	depends = build_depends = assigns = pkgpath = pkgbase = pkgname = ""
 	next
 }
 
@@ -247,10 +243,12 @@ END {
 			}else{
 				generate_pkgdepname()
 
-				if (!out_pkgpath)
+				if (pkgname in dep_pkgs){
+				}else if (!out_pkgpath){
 					print_nodep_node(pkgname)
-				else
+				}else{
 					print pkgpath ";" pkgname
+				}
 			}
 		}
 	}

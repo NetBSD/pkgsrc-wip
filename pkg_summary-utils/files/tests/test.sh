@@ -362,3 +362,6 @@ echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #19.5'
 pkg_summary2deps -DpRr src_summary8.txt | sort | uniq
 
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #20.1'
+pkg_summary2deps -dn bin_summary1.txt | sort
