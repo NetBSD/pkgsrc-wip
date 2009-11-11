@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/09/13 08:02:25 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/11/11 18:19:14 cheusov Exp $
 bin/runawk
 man/man1/runawk.1
 share/doc/runawk/ChangeLog
@@ -13,10 +13,15 @@ share/examples/runawk/demo_has_prefix
 share/examples/runawk/demo_has_prefix.in
 share/examples/runawk/demo_has_suffix
 share/examples/runawk/demo_has_suffix.in
+share/examples/runawk/demo_heapsort
+share/examples/runawk/demo_heapsort2
+share/examples/runawk/demo_heapsort.in
 share/examples/runawk/demo_modinfo
 share/examples/runawk/demo_multisub
 share/examples/runawk/demo_power_getopt
 share/examples/runawk/demo_power_getopt2
+share/examples/runawk/demo_quicksort
+share/examples/runawk/demo_quicksort2
 share/examples/runawk/demo_readfile
 share/examples/runawk/demo_readfile.in
 share/examples/runawk/demo_runcmd
@@ -39,6 +44,8 @@ share/runawk/embed_str.awk
 share/runawk/exitnow.awk
 share/runawk/has_prefix.awk
 share/runawk/has_suffix.awk
+share/runawk/heapsort.awk
+share/runawk/init_getopt.awk
 share/runawk/isnum.awk
 share/runawk/match_br.awk
 share/runawk/max.awk
@@ -47,9 +54,11 @@ share/runawk/modinfo.awk
 share/runawk/multisub.awk
 share/runawk/pow.awk
 share/runawk/power_getopt.awk
+share/runawk/quicksort.awk
 share/runawk/readfile.awk
 share/runawk/runcmd.awk
 share/runawk/shquote.awk
+share/runawk/sort.awk
 share/runawk/str2regexp.awk
 share/runawk/tokenre.awk
 share/runawk/xclose.awk
