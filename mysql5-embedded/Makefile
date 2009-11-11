@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2009/10/04 21:42:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/11 11:25:10 mwdavies Exp $
 
-DISTNAME=		mysql-5.1.36
+DISTNAME=		mysql-5.1.40
 PKGNAME=		${DISTNAME:S/-/-embedded-/}
 PKGREVISION=		3
 CATEGORIES=		databases
