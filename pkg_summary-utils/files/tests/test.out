@@ -1199,10 +1199,10 @@ pipestatus pkg_online-client
 pipestatus pkg_online-server
 pipestatus pkg_summary-utils
 pkg_online-client pkg_conflicts
-pkg_online-server pkg_conflicts
 pkg_online-client pkg_online
 pkg_online-server pkg_online
 pkg_summary-utils distbb
+pkg_summary-utils pkg_conflicts
 pkg_summary-utils pkg_online-client
 pkg_summary-utils pkg_online-server
 runawk awk-pkgsrc-dewey
