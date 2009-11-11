@@ -48,10 +48,10 @@
 #   -d                   analyse DEPENDS
 #   -D                   analyse BUILD_DEPENDS
 #   -A                   analyse both DEPENDS and BUILD_DEPENDS
-#   -t                   produce output compatible in tsort(1) format
+#   -t                   produce output compatible in tsort(1) command
 #   -r                   do not strip versions from PKGNAME,
 #                        imply -n
-#   -R                   do not strip versions from dependencies (buggy!!!),
+#   -R                   do not strip versions from dependencies,
 #                        imply -n
 #.end-str
 ############################################################
