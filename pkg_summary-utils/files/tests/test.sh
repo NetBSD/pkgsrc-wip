@@ -325,6 +325,7 @@ pkg_summary2build_graph src_summary8.txt | sort | uniq
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.1'
 pkg_summary2deps -Apn src_summary.txt | sort
+
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.2'
 pkg_summary2deps -dnt src_summary.txt | sort
@@ -340,3 +341,24 @@ pkg_summary2deps -Dp src_summary8.txt | sort | uniq
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #18.5'
 pkg_summary2deps -Dpr src_summary8.txt | sort | uniq
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #19.1'
+pkg_summary2deps -ApnR src_summary.txt | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #19.2'
+pkg_summary2deps -dntR src_summary.txt | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #19.3'
+pkg_summary2deps -ApntrR src_summary7.txt | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #19.4'
+pkg_summary2deps -DpR src_summary8.txt | sort | uniq
+
+echo '--------------------------------------------------'
+echo '------- pkg_summary2deps #19.5'
+pkg_summary2deps -DpRr src_summary8.txt | sort | uniq
+

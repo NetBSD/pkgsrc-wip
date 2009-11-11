@@ -23,7 +23,7 @@ PKGNAME=dictem-0.82
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 PKGNAME=dict-server-1.10.11nb2
 PKGPATH=wip/dict-server
-DEPENDS=   libmaa>=0.990:../../devel/libmaa
+DEPENDS=   libmaa>=1.2:../../devel/libmaa
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol server
 MAINTAINER=cheusov@tut.by
@@ -40,7 +40,7 @@ CATEGORIES=textproc
 
 PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
-DEPENDS=  libmaa>=0.990:../../devel/libmaa
+DEPENDS=  libmaa>=1.0:../../devel/libmaa
 BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://www.dict.org/
 COMMENT=Dictionary Service Protocol client
@@ -999,3 +999,185 @@ sysutils/checkperms;checkperms textproc/p5-Text-Diff;p5-Text-Diff-1.37
 sysutils/checkperms;checkperms textproc/p5-YAML;p5-YAML-0.70
 sysutils/checkperms;checkperms-1.10
 textproc/p5-YAML;p5-YAML devel/p5-Module-Build;p5-Module-Build-0.35000
+--------------------------------------------------
+------- pkg_summary2deps #19.1
+devel/gmake;gmake>=3.81 devel/libmaa;libmaa
+devel/gmake;gmake>=3.81 editors/emacs;emacs
+devel/gmake;gmake>=3.81 textproc/dict-client;dict-client
+devel/gmake;gmake>=3.81 wip/dict-client;dict-client
+devel/gmake;gmake>=3.81 wip/dict-server;dict-server
+devel/libltdl;libltdl>=1.5.10 textproc/dict-client;dict-client
+devel/libmaa;libmaa>=0.990 wip/paexec;paexec
+devel/libmaa;libmaa>=1.0 wip/dict-client;dict-client
+devel/libmaa;libmaa>=1.2 wip/dict-server;dict-server
+devel/libtool-base;libtool-base>=1.5.18nb5 devel/libltdl;libltdl
+devel/libtool-base;libtool-base>=1.5.18nb5 devel/libmaa;libmaa
+devel/libtool-base;libtool-base>=1.5.18nb5 devel/pkg-config;pkg-config
+devel/libtool-base;libtool-base>=1.5.18nb5 graphics/jpeg;jpeg
+devel/libtool-base;libtool-base>=1.5.18nb5 graphics/libungif;libungif
+devel/libtool-base;libtool-base>=1.5.18nb5 graphics/png;png
+devel/libtool-base;libtool-base>=1.5.18nb5 graphics/tiff;tiff
+devel/libtool-base;libtool-base>=1.5.18nb5 wip/dict-client;dict-client
+devel/libtool-base;libtool-base>=1.5.18nb5 wip/dict-server;dict-server
+devel/pkg-config;pkg-config>=0.19 editors/emacs;emacs
+editors/emacs;emacs>=22 textproc/dictem;dictem
+graphics/jpeg;jpeg>=6b editors/emacs;emacs
+graphics/jpeg;jpeg>=6b graphics/tiff;tiff
+graphics/jpeg;jpeg>=6bnb2 editors/emacs;emacs
+graphics/jpeg;jpeg>=6bnb2 graphics/tiff;tiff
+graphics/libungif;libungif>=4.1.0 editors/emacs;emacs
+graphics/libungif;libungif>=4.1.0.1 editors/emacs;emacs
+graphics/libungif;libungif>=4.1.3nb1 editors/emacs;emacs
+graphics/png;png>=1.2.4 editors/emacs;emacs
+graphics/png;png>=1.2.9nb2 editors/emacs;emacs
+graphics/tiff;tiff>=3.6.1 editors/emacs;emacs
+graphics/tiff;tiff>=3.7.2nb1 editors/emacs;emacs
+lang/perl5;perl>=5.0 editors/emacs;emacs
+lang/perl5;perl>=5.0 graphics/libungif;libungif
+net/netcat;netcat-[0-9]* wip/pkg_online-client;pkg_online-client
+pkgtools/x11-links;x11-links>=0.38 editors/emacs;emacs
+sysutils/checkperms;checkperms>=1.1 devel/gmake;gmake
+sysutils/checkperms;checkperms>=1.1 devel/libltdl;libltdl
+sysutils/checkperms;checkperms>=1.1 devel/libmaa;libmaa
+sysutils/checkperms;checkperms>=1.1 devel/libtool-base;libtool-base
+sysutils/checkperms;checkperms>=1.1 devel/pkg-config;pkg-config
+sysutils/checkperms;checkperms>=1.1 editors/emacs;emacs
+sysutils/checkperms;checkperms>=1.1 graphics/jpeg;jpeg
+sysutils/checkperms;checkperms>=1.1 graphics/libungif;libungif
+sysutils/checkperms;checkperms>=1.1 graphics/png;png
+sysutils/checkperms;checkperms>=1.1 graphics/tiff;tiff
+sysutils/checkperms;checkperms>=1.1 lang/perl5;perl
+sysutils/checkperms;checkperms>=1.1 net/netcat;netcat
+sysutils/checkperms;checkperms>=1.1 pkgtools/x11-links;x11-links
+sysutils/checkperms;checkperms>=1.1 textproc/dict-client;dict-client
+sysutils/checkperms;checkperms>=1.1 textproc/dictem;dictem
+sysutils/checkperms;checkperms>=1.1 wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey
+sysutils/checkperms;checkperms>=1.1 wip/dict-client;dict-client
+sysutils/checkperms;checkperms>=1.1 wip/dict-server;dict-server
+sysutils/checkperms;checkperms>=1.1 wip/distbb;distbb
+sysutils/checkperms;checkperms>=1.1 wip/paexec;paexec
+sysutils/checkperms;checkperms>=1.1 wip/pipestatus;pipestatus
+sysutils/checkperms;checkperms>=1.1 wip/pkg_online-client;pkg_online-client
+sysutils/checkperms;checkperms>=1.1 wip/pkg_online-server;pkg_online-server
+sysutils/checkperms;checkperms>=1.1 wip/pkg_online;pkg_online
+sysutils/checkperms;checkperms>=1.1 wip/pkg_summary-utils;pkg_summary-utils
+sysutils/checkperms;checkperms>=1.1 wip/runawk;runawk
+textproc/dict-client;dict-client>=1.9.14 textproc/dictem;dictem
+wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey>=0.5.6 wip/pkg_summary-utils;pkg_summary-utils
+wip/dict-client;dict-client>=1.10.9 wip/pkg_online-client;pkg_online-client
+wip/dict-server;dict-server>=1.10.10nb2 wip/pkg_online-server;pkg_online-server
+wip/paexec;paexec>=0.10.0 wip/distbb;distbb
+wip/pipestatus;pipestatus-[0-9]* wip/pkg_online-client;pkg_online-client
+wip/pipestatus;pipestatus-[0-9]* wip/pkg_online-server;pkg_online-server
+wip/pipestatus;pipestatus-[0-9]* wip/pkg_summary-utils;pkg_summary-utils
+wip/pkg_online-client;pkg_online-client-[0-9]* wip/pkg_online;pkg_online
+wip/pkg_online-server;pkg_online-server-[0-9]* wip/pkg_online;pkg_online
+wip/pkg_summary-utils;pkg_summary-utils-[0-9]* wip/pkg_online-client;pkg_online-client
+wip/pkg_summary-utils;pkg_summary-utils>=0.18.1 wip/distbb;distbb
+wip/pkg_summary-utils;pkg_summary-utils>=0.19.0 wip/pkg_online-server;pkg_online-server
+wip/runawk;runawk-[0-9]* wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey
+wip/runawk;runawk>=0.12.1 wip/pkg_summary-utils;pkg_summary-utils
+wip/runawk;runawk>=0.13.0 wip/distbb;distbb
+--------------------------------------------------
+------- pkg_summary2deps #19.2
+awk-pkgsrc-dewey>=0.5.6 pkg_summary-utils
+checkperms checkperms
+dict-client>=1.10.9 pkg_online-client
+dict-client>=1.9.14 dictem
+dict-server>=1.10.10nb2 pkg_online-server
+emacs>=22 dictem
+gmake gmake
+jpeg>=6b emacs
+jpeg>=6b tiff
+jpeg>=6bnb2 emacs
+jpeg>=6bnb2 tiff
+libltdl>=1.5.10 dict-client
+libmaa>=0.990 paexec
+libmaa>=1.0 dict-client
+libmaa>=1.2 dict-server
+libtool-base libtool-base
+libungif>=4.1.0 emacs
+libungif>=4.1.0.1 emacs
+libungif>=4.1.3nb1 emacs
+netcat-[0-9]* pkg_online-client
+paexec>=0.10.0 distbb
+perl>=5.0 emacs
+perl>=5.0 libungif
+pipestatus-[0-9]* pkg_online-client
+pipestatus-[0-9]* pkg_online-server
+pipestatus-[0-9]* pkg_summary-utils
+pkg-config pkg-config
+pkg_online-client-[0-9]* pkg_online
+pkg_online-server-[0-9]* pkg_online
+pkg_summary-utils-[0-9]* pkg_online-client
+pkg_summary-utils>=0.18.1 distbb
+pkg_summary-utils>=0.19.0 pkg_online-server
+png>=1.2.4 emacs
+png>=1.2.9nb2 emacs
+runawk-[0-9]* awk-pkgsrc-dewey
+runawk>=0.12.1 pkg_summary-utils
+runawk>=0.13.0 distbb
+tiff>=3.6.1 emacs
+tiff>=3.7.2nb1 emacs
+x11-links x11-links
+--------------------------------------------------
+------- pkg_summary2deps #19.3
+audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen-1.15
+audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen>=1.9 audio/py-karaoke:PYTHON_VERSION_REQD=24;py24-karaoke-0.7.1
+audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen-1.15
+audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen>=1.9 audio/py-karaoke:PYTHON_VERSION_REQD=26;py26-karaoke-0.7.1
+audio/py-mutagen;py25-mutagen-1.15
+audio/py-mutagen;py25-mutagen>=1.9 audio/py-karaoke;py25-karaoke-0.7.1
+--------------------------------------------------
+------- pkg_summary2deps #19.4
+lang/perl5;perl>=5.10 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder
+lang/perl5;perl>=5.10 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS
+lang/perl5;perl>=5.10 devel/p5-version;p5-version
+lang/perl5;perl>=5.10.0 devel/p5-Module-Build;p5-Module-Build
+sysutils/checkperms;checkperms-[0-9]* archivers/p5-Archive-Tar;p5-Archive-Tar
+sysutils/checkperms;checkperms>=1.0 archivers/p5-Archive-Tar;p5-Archive-Tar
+sysutils/checkperms;checkperms>=1.1 archivers/p5-Archive-Tar;p5-Archive-Tar
+sysutils/checkperms;checkperms>=1.1 devel/p5-Algorithm-Diff;p5-Algorithm-Diff
+sysutils/checkperms;checkperms>=1.1 devel/p5-Compress-Raw-Bzip2;p5-Compress-Raw-Bzip2
+sysutils/checkperms;checkperms>=1.1 devel/p5-Compress-Raw-Zlib;p5-Compress-Raw-Zlib
+sysutils/checkperms;checkperms>=1.1 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder
+sysutils/checkperms;checkperms>=1.1 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-Compress;p5-IO-Compress
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-String;p5-IO-String
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-Zlib;p5-IO-Zlib
+sysutils/checkperms;checkperms>=1.1 devel/p5-Module-Build;p5-Module-Build
+sysutils/checkperms;checkperms>=1.1 devel/p5-version;p5-version
+sysutils/checkperms;checkperms>=1.1 lang/perl5;perl
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Filter;p5-Filter
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Pod-Readme;p5-Pod-Readme
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Regexp-Common;p5-Regexp-Common
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Text-Diff;p5-Text-Diff
+sysutils/checkperms;checkperms>=1.1 textproc/p5-YAML;p5-YAML
+textproc/p5-YAML;p5-YAML>=0.50 devel/p5-Module-Build;p5-Module-Build
+--------------------------------------------------
+------- pkg_summary2deps #19.5
+lang/perl5;perl>=5.10 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01
+lang/perl5;perl>=5.10 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01
+lang/perl5;perl>=5.10 devel/p5-version;p5-version-0.7702
+lang/perl5;perl>=5.10.0 devel/p5-Module-Build;p5-Module-Build-0.35000
+sysutils/checkperms;checkperms-1.10
+sysutils/checkperms;checkperms-[0-9]* archivers/p5-Archive-Tar;p5-Archive-Tar-1.54
+sysutils/checkperms;checkperms>=1.0 archivers/p5-Archive-Tar;p5-Archive-Tar-1.54
+sysutils/checkperms;checkperms>=1.1 archivers/p5-Archive-Tar;p5-Archive-Tar-1.54
+sysutils/checkperms;checkperms>=1.1 devel/p5-Algorithm-Diff;p5-Algorithm-Diff-1.1902nb1
+sysutils/checkperms;checkperms>=1.1 devel/p5-Compress-Raw-Bzip2;p5-Compress-Raw-Bzip2-2.021
+sysutils/checkperms;checkperms>=1.1 devel/p5-Compress-Raw-Zlib;p5-Compress-Raw-Zlib-2.021
+sysutils/checkperms;checkperms>=1.1 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01
+sysutils/checkperms;checkperms>=1.1 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-Compress;p5-IO-Compress-2.021
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-String;p5-IO-String-1.08nb1
+sysutils/checkperms;checkperms>=1.1 devel/p5-IO-Zlib;p5-IO-Zlib-1.10
+sysutils/checkperms;checkperms>=1.1 devel/p5-Module-Build;p5-Module-Build-0.35000
+sysutils/checkperms;checkperms>=1.1 devel/p5-version;p5-version-0.7702
+sysutils/checkperms;checkperms>=1.1 lang/perl5;perl-5.10.0nb7
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Filter;p5-Filter-1.37
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Pod-Readme;p5-Pod-Readme-0.09
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Regexp-Common;p5-Regexp-Common-2.122nb1
+sysutils/checkperms;checkperms>=1.1 textproc/p5-Text-Diff;p5-Text-Diff-1.37
+sysutils/checkperms;checkperms>=1.1 textproc/p5-YAML;p5-YAML-0.70
+textproc/p5-YAML;p5-YAML>=0.50 devel/p5-Module-Build;p5-Module-Build-0.35000
