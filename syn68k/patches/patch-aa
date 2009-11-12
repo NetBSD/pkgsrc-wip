@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2009/11/12 21:10:37 christtrekker Exp $
 --- configure.ac.orig	Mon Jun 22 23:38:05 2009
 +++ configure.ac	Thu Aug 27 09:42:20 2009
 @@ -139,7 +139,7 @@

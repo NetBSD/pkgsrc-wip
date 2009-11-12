@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2009/11/12 21:10:37 christtrekker Exp $
 --- include/syn68k_public.h.orig	Mon Jun 22 23:38:05 2009
 +++ include/syn68k_public.h	Thu Aug 27 09:48:57 2009
 @@ -1,7 +1,12 @@
