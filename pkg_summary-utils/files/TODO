@@ -2,6 +2,10 @@ TODO list and thoughts
 
 existing tools:
 
+    cvs_checksum:
+
+    pkg_assignments2pkgpath:
+
     pkg_cleanup_distdir:
 
     pkg_cmp_summary:
@@ -9,6 +13,8 @@ existing tools:
        - -f <p> use pkgpath only for comparison
        - -f <n> use pkgbase only for comparison
        - -f <pn> use pkgbase and pkgpath for comparison
+
+    pkg_grep_summary:
 
     pkg_list_all_pkgs:
 
@@ -25,7 +31,16 @@ existing tools:
        - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
+    pkg_summary2bb_pkgs:
+
+    pkg_summary2build_graph:
+
+    pkg_summary2deps:
+
     pkg_summary4view:
+       - another format for DEPENDS, BUILD_DEPENDS and CONFLICTS
+
+    pkg_uniq_summary:
 
     pkg_update_src_summary:
 
@@ -33,13 +48,9 @@ existing tools:
        - use standard 'find -newer' instead of 'ls -1t' and
          non-portable 'test f1 -nt f2'
 
-    pkg_grep_summary:
-
-    pkg_summary2build_graph:
-
-    pkg_summary2bb_pkgs:
-
 new tools?
+    - list leaf packages?
+
     - pkg_lint_summary:
          - versions consistency
          - old binaries
@@ -63,7 +74,6 @@ new tools?
 
     - pkg_op_summary <refresh|intersect|subtract>
 
-    - pkg_get_deps
     - pkg_summary2binary
 
 ANY IDEAS? LET ME KNOW

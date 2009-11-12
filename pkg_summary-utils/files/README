@@ -30,7 +30,11 @@ pkg_summary(5) and pkg_src_summary (the same but for pkgsrc tree).
    pkg_cleanup_distdir    - cleanups directory with binary packages,
                             that is remove all binaries absent
                             in input summary.
-   pkg_uniq_summary       - filters out repeated package summaries.
+   pkg_uniq_summary        - filters out repeated package summaries.
+   pkg_assignments2pkgpath - makes an ASSIGNMENTS field a part of PKGPATH
+   pkg_summary2bb_pkgs     - outputs packages ready for bulk builds
+   pkg_summary2deps        - extract dependencies from summary
+   pkg_summary2build_graph - synonym for pkg_summary2deps -Ap
 
 =================================================================
 
