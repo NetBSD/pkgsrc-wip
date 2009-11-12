@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3680 2009/11/10 16:22:19 thomasklausner Exp $
+# $Id: Makefile,v 1.3681 2009/11/12 11:40:14 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -405,6 +405,7 @@ SUBDIR+=	fbpanel
 SUBDIR+=	fdm
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	ficl
+SUBDIR+=	filelight
 SUBDIR+=	filepp
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
@@ -938,6 +939,9 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
+SUBDIR+=	kgrab
+SUBDIR+=	kgraphviewer
+SUBDIR+=	kile
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
@@ -952,6 +956,7 @@ SUBDIR+=	kpathsea
 SUBDIR+=	kplayer
 SUBDIR+=	kstart
 SUBDIR+=	ktorrent3
+SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kylix-openedition
