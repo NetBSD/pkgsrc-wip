@@ -1210,3 +1210,65 @@ runawk distbb
 runawk paexec
 runawk pkg_conflicts
 runawk pkg_summary-utils
+--------------------------------------------------
+------- pkg_summary2deps #20.2
+awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils
+devel/gmake;gmake
+devel/libtool-base;libtool-base
+dict-client wip/pkg_online-client;pkg_online-client
+dict-server wip/pkg_online-server;pkg_online-server
+libmaa wip/dict-client;dict-client
+libmaa wip/dict-server;dict-server
+libmaa wip/paexec;paexec
+netcat wip/pkg_online-client;pkg_online-client
+paexec wip/distbb;distbb
+pipestatus wip/distbb;distbb
+pipestatus wip/pkg_online-client;pkg_online-client
+pipestatus wip/pkg_online-server;pkg_online-server
+pipestatus wip/pkg_summary-utils;pkg_summary-utils
+pkg_online-client wip/pkg_conflicts;pkg_conflicts
+pkg_online-client wip/pkg_online;pkg_online
+pkg_online-server wip/pkg_online;pkg_online
+pkg_summary-utils wip/distbb;distbb
+pkg_summary-utils wip/pkg_conflicts;pkg_conflicts
+pkg_summary-utils wip/pkg_online-client;pkg_online-client
+pkg_summary-utils wip/pkg_online-server;pkg_online-server
+runawk wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey
+runawk wip/distbb;distbb
+runawk wip/paexec;paexec
+runawk wip/pkg_conflicts;pkg_conflicts
+runawk wip/pkg_summary-utils;pkg_summary-utils
+sysutils/checkperms;checkperms
+--------------------------------------------------
+------- pkg_summary2deps #20.3
+awk-pkgsrc-dewey>=0.5.6 pkg_summary-utils-0.35rc1
+checkperms-1.10
+dict-client>=1.10.9 pkg_online-client-0.9.1
+dict-server>=1.10.10nb2 pkg_online-server-0.9.1
+gmake-3.81
+libmaa-1.1.0
+libmaa>=0.990 dict-client-1.11.2
+libmaa>=0.990 dict-server-1.11.2
+libmaa>=0.990 paexec-0.13.0nb1
+libtool-base-1.5.26nb2
+netcat-1.10nb2
+netcat-[0-9]* pkg_online-client-0.9.1
+paexec>=0.13.0nb1 distbb-0.33.0
+pipestatus-0.6.0
+pipestatus-[0-9]* pkg_online-client-0.9.1
+pipestatus-[0-9]* pkg_online-server-0.9.1
+pipestatus-[0-9]* pkg_summary-utils-0.35rc1
+pipestatus>=0.5.0 distbb-0.33.0
+pkg_online-client-0.9.1 pkg_online-0.9.1
+pkg_online-client>=0.6.0 pkg_conflicts-0.4.0
+pkg_online-server-0.9.1 pkg_online-0.9.1
+pkg_summary-utils-[0-9]* pkg_conflicts-0.4.0
+pkg_summary-utils-[0-9]* pkg_online-client-0.9.1
+pkg_summary-utils>=0.18.1 pkg_online-server-0.9.1
+pkg_summary-utils>=0.31.0 distbb-0.33.0
+runawk-0.18.0
+runawk-[0-9]* awk-pkgsrc-dewey-0.5.6
+runawk>=0.14.3 distbb-0.33.0
+runawk>=0.14.3 pkg_conflicts-0.4.0
+runawk>=0.16.0 paexec-0.13.0nb1
+runawk>=0.16.0 pkg_summary-utils-0.35rc1
