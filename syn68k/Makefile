@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/12 21:10:37 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/12 21:30:56 christtrekker Exp $
 #
 
 #DISTNAME=	ctm-syn68k-b9044353deba13876bd024ea42c8be04e2ff3d8f
@@ -15,6 +15,7 @@ LICENSE=	mit
 USE_TOOLS+=	autoconf automake bash
 #REPLACE_BASH=	autogen.sh test/testall.sh
 REPLACE_BASH=	test/testall.sh
+REPLACE_SH=	configure
 
 SUBST_CLASSES+=	replace_bash_early
 SUBST_STAGE.replace_bash_early=	pre-configure
