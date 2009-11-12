@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/09/05 14:53:47 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/11/12 22:52:48 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_custom
 bin/mkc_check_decl
@@ -42,6 +42,7 @@ share/examples/mk-configure/hello_dlopen/dlopen_test.c
 share/examples/mk-configure/hello_dlopen/expect.out
 share/examples/mk-configure/hello_dlopen/test.mk
 share/examples/mk-configure/hello_files/Makefile
+share/examples/mk-configure/hello_files/expect.NetBSD.out
 share/examples/mk-configure/hello_files/expect.out
 share/examples/mk-configure/hello_files/shell_func.7
 share/examples/mk-configure/hello_files/shell_func.texinfo
@@ -81,6 +82,17 @@ share/examples/mk-configure/hello_strlcpy/hello.c
 share/examples/mk-configure/hello_strlcpy/input.in
 share/examples/mk-configure/hello_strlcpy/strlcpy.c
 share/examples/mk-configure/hello_strlcpy/test.mk
+share/examples/mk-configure/hello_subdirs/Makefile
+share/examples/mk-configure/hello_subdirs/prog1/Makefile
+share/examples/mk-configure/hello_subdirs/prog1/expect.out
+share/examples/mk-configure/hello_subdirs/prog1/prog1.awk
+share/examples/mk-configure/hello_subdirs/prog1/prog1.c
+share/examples/mk-configure/hello_subdirs/prog1/prog1.sh
+share/examples/mk-configure/hello_subdirs/prog1/test.mk
+share/examples/mk-configure/hello_subdirs/prog2/Makefile
+share/examples/mk-configure/hello_subdirs/prog2/expect.out
+share/examples/mk-configure/hello_subdirs/prog2/prog2.c
+share/examples/mk-configure/hello_subdirs/prog2/test.mk
 share/examples/mk-configure/hello_world/COPYRIGHT
 share/examples/mk-configure/hello_world/Makefile
 share/examples/mk-configure/hello_world/README
@@ -105,10 +117,7 @@ share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
 share/examples/mk-configure/subprojects/test.mk
 share/examples/mk-configure/subprojects/version.mk
-share/mk/_mkc.missedfiles.mk
-share/mk/_mkc.ver.mk
 share/mk/configure.mk
-share/mk/mkc.common.mk
 share/mk/mkc.configure.mk
 share/mk/mkc.files.mk
 share/mk/mkc.intexts.mk
@@ -118,3 +127,16 @@ share/mk/mkc.own.mk
 share/mk/mkc.pkg-config.mk
 share/mk/mkc.prog.mk
 share/mk/mkc.subdir.mk
+share/mk/mkc.ver.mk
+share/mk/mkc_imp.files.mk
+share/mk/mkc_imp.inc.mk
+share/mk/mkc_imp.info.mk
+share/mk/mkc_imp.init.mk
+share/mk/mkc_imp.lib.mk
+share/mk/mkc_imp.links.mk
+share/mk/mkc_imp.man.mk
+share/mk/mkc_imp.own.mk
+share/mk/mkc_imp.platform.sys.mk
+share/mk/mkc_imp.prog.mk
+share/mk/mkc_imp.subdir.mk
+share/mk/mkc_imp.sys.mk
