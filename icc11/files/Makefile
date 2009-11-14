@@ -1,6 +1,8 @@
-linux:
+linux-ia32:
+linux-intel64:
 
-netbsd: redefine-syms libicc11bsd.a as ld
+netbsd-ia32: as ld redefine-syms libicc11bsd-ia32.a
+netbsd-intel64: netbsd-ia32 libicc11bsd-intel64.a
 
 .PHONY: redefine-syms
 
@@ -10,12 +12,19 @@ redefine-syms:
 	    --redefine-sym __assert_fail=__assertion_failed \
 	    {} \;
 
-libicc11bsd.a: icc11bsd.o
-	ar r libicc11bsd.a icc11bsd.o && \
-	    objcopy --redefine-sym my_stderr=stderr libicc11bsd.a
+libicc11bsd-ia32.a: icc11bsd-ia32.o
+	ar r libicc11bsd-ia32.a icc11bsd-ia32.o
+	objcopy --redefine-sym my_stderr=stderr libicc11bsd-ia32.a
 
-icc11bsd.o: icc11bsd.c
-	cc -O icc11bsd.c -c -o icc11bsd.o
+icc11bsd-ia32.o: icc11bsd.c
+	cc -m32 -O icc11bsd.c -c -o icc11bsd-ia32.o
+
+libicc11bsd-intel64.a: icc11bsd-intel64.o
+	ar r libicc11bsd-intel64.a icc11bsd-intel64.o
+	objcopy --redefine-sym my_stderr=stderr libicc11bsd-intel64.a
+
+icc11bsd-intel64.o: icc11bsd.c
+	cc -m64 -O icc11bsd.c -c -o icc11bsd-intel64.o
 
 as: as.c util.h util.c
 	cc -O as.c util.c -o as
@@ -77,34 +86,35 @@ ins-common-intel64: ins-inc-intel64 ins-bin-intel64 ins-lib-intel64
 .PHONY: ins-inc-intel64 ins-bin-intel64 ins-lib-intel64
 
 ins-so-ia32:
-	find icc11/lib/ia32    ! -type d | grep  -w so | pax -rw -pp ${PREFIX}
+	find icc11/lib/ia32 ! -type d | grep  -w so | pax -rw -pp ${PREFIX}
 
 ins-so-intel64:
-	find icc11/lib/intel64 ! -type d | grep  -w so | pax -rw -pp ${PREFIX}
+	find icc11/lib      ! -type d | grep  -w so | pax -rw -pp ${PREFIX}
 
 ins-lib-ia32:
-	find icc11/lib/ia32    ! -type d | grep -vw so | pax -rw -pp ${PREFIX}
+	find icc11/lib/ia32 ! -type d | grep -vw so | pax -rw -pp ${PREFIX}
 
 ins-lib-intel64:
-	find icc11/lib/intel64 ! -type d | grep -vw so | pax -rw -pp ${PREFIX}
+	find icc11/lib      ! -type d | grep -vw so | pax -rw -pp ${PREFIX}
 
 ins-bin-ia32:
-	find icc11/bin/ia32    ! -type d | pax -rw -pp ${PREFIX}
+	find icc11/bin/ia32 ! -type d | pax -rw -pp ${PREFIX}
 
 ins-bin-intel64:
-	find icc11/bin/intel64 ! -type d | pax -rw -pp ${PREFIX}
+	find icc11/bin      ! -type d | pax -rw -pp ${PREFIX}
 
 ins-inc-ia32:
-	find icc11/include/ia32    ! -type d ! -name *.orig | pax -rw -pp ${PREFIX}
+	find icc11/include/ia32 ! -type d ! -name *.orig | pax -rw -pp ${PREFIX}
 
 ins-inc-intel64:
-	find icc11/include/intel64 ! -type d ! -name *.orig | pax -rw -pp ${PREFIX}
+	find icc11/include      ! -type d ! -name *.orig | pax -rw -pp ${PREFIX}
 
-ins-bsd-ia32: libicc11bsd.a
-	install -m 644 libicc11bsd.a ${PREFIX}/icc11/lib/ia32
+ins-bsd-ia32: libicc11bsd-ia32.a
+	install -m 644 libicc11bsd-ia32.a    ${PREFIX}/icc11/lib/ia32/libicc11bsd.a
 
-ins-bsd-intel64: libicc11bsd.a
-	install -m 644 libicc11bsd.a ${PREFIX}/icc11/lib/intel64
+ins-bsd-intel64: libicc11bsd-intel64.a
+	install -m 644 libicc11bsd-ia32.a    ${PREFIX}/icc11/lib/ia32/libicc11bsd.a
+	install -m 644 libicc11bsd-intel64.a ${PREFIX}/icc11/lib/intel64/libicc11bsd.a
 
 ins-bsd: as ld
 	install -m 755 -d ${PREFIX}/icc11/libexec

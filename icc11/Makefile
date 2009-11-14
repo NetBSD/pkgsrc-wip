@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/11/01 17:39:09 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/14 14:45:32 alnsn Exp $
 
 ICC_MAJOR_VERSION=	11.1
-ICC_MINOR_VERSION=	056
+ICC_MINOR_VERSION=	059
 ICC_VERSION=		${ICC_MAJOR_VERSION}.${ICC_MINOR_VERSION}
-PKGREVISION=		2
 CATEGORIES=		lang
 DISTNAME=		l_cproc_p_${ICC_VERSION}
 PKGNAME=		icc11-${ICC_VERSION}
@@ -51,53 +50,59 @@ EMUL_REQD=		suse>=10.0
 
 .if ${MACHINE_ARCH} == "i386"
 ICC_ARCH=		ia32
-ICC_RPM_ARCH=		i486
 .else
 ICC_ARCH=		intel64
-ICC_RPM_ARCH=		x86_64
 .endif
-
-PLIST_SUBST+=		ICC_ARCH=${ICC_ARCH}
 
 SUBST_CLASSES+=		installdir vars
 
 SUBST_MESSAGE.installdir=Substituting <INSTALLDIR>
 SUBST_STAGE.installdir=	pre-configure
 SUBST_SED.installdir=	-e 's,<INSTALLDIR>,${ICC_PREFIX},g'
-SUBST_FILES.installdir=	icc11/bin/iccvars.sh                         \
-			icc11/bin/iccvars.csh                        \
-			icc11/bin/${ICC_ARCH}/iccvars_${ICC_ARCH}.sh \
-                       	icc11/bin/${ICC_ARCH}/iccvars_${ICC_ARCH}.csh
+SUBST_FILES.installdir=	icc11/bin/iccvars.sh           \
+			icc11/bin/iccvars.csh          \
+			icc11/bin/ia32/iccvars_ia32.sh \
+                       	icc11/bin/ia32/iccvars_ia32.csh
+
+.if ${MACHINE_ARCH} == "x86_64"
+SUBST_FILES.installdir+=icc11/bin/intel64/iccvars_intel64.sh \
+                       	icc11/bin/intel64/iccvars_intel64.csh
+.endif
 
 SUBST_STAGE.vars=	pre-configure
 SUBST_VARS.vars=	ICC_PREFIX ICC_ARCH OPSYS_EMULDIR GCC_PREFIX BINUTILS_PREFIX
 SUBST_FILES.vars=	util.h icc xiar README.pkgsrc
 
-PLIST_VARS+=		linux netbsd i386 x86_64 linux_x86_64
+PLIST_VARS+=		linux netbsd x86_64 linux_x86_64 netbsd_x86_64
 PLIST.${LOWER_OPSYS}=	yes
 PLIST.${MACHINE_ARCH}=	yes
 PLIST.${LOWER_OPSYS}_${MACHINE_ARCH}=yes
 
 ICC_EXTRACT_RPMS=\
-	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.i486.rpm              \
-	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.x86_64.rpm            \
-	${DISTNAME}/rpm/intel-cprocsdk${ICC_MINOR_VERSION}-11.1-1.noarch.rpm         \
-	${DISTNAME}/rpm/intel-cprolib${ICC_MINOR_VERSION}-11.1-1.${ICC_RPM_ARCH}.rpm \
-	${DISTNAME}/rpm/intel-cprolibdev${ICC_MINOR_VERSION}-11.1-1.${ICC_RPM_ARCH}.rpm
+	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.i486.rpm       \
+	${DISTNAME}/rpm/intel-cproc${ICC_MINOR_VERSION}-11.1-1.x86_64.rpm     \
+	${DISTNAME}/rpm/intel-cprocsdk${ICC_MINOR_VERSION}-11.1-1.noarch.rpm  \
+	${DISTNAME}/rpm/intel-cprolib${ICC_MINOR_VERSION}-11.1-1.i486.rpm     \
+	${DISTNAME}/rpm/intel-cprolibdev${ICC_MINOR_VERSION}-11.1-1.i486.rpm
+
+.if ${MACHINE_ARCH} == "x86_64"
+ICC_EXTRACT_RPMS+=\
+	${DISTNAME}/rpm/intel-cprolib${ICC_MINOR_VERSION}-11.1-1.x86_64.rpm \
+	${DISTNAME}/rpm/intel-cprolibdev${ICC_MINOR_VERSION}-11.1-1.x86_64.rpm
+.endif
 
 WRKSRC=			${WRKDIR}/${ICC_MAJOR_VERSION}
 
 post-extract:
 	cd ${WRKDIR} && rpm2pkg -s 4 ${ICC_EXTRACT_RPMS}
-	cd ${WRKSRC} && mv ${ICC_MINOR_VERSION} icc11 && \
-	    rm icc11/bin/${ICC_ARCH}/uninstall_cproc.sh
+	cd ${WRKSRC} && mv ${ICC_MINOR_VERSION} icc11
 	cd ${FILESDIR} && find . ! -type d | pax -rw ${WRKSRC}
 	if [ -d ${FILESDIR}/${LOWER_OPSYS} ]; then \
 	    cd ${FILESDIR}/${LOWER_OPSYS} && \
 	    find . ! -type d | pax -rw ${WRKSRC}; fi
 
 do-build:
-	cd ${WRKSRC} && make ${LOWER_OPSYS} ICC_ARCH=${ICC_ARCH}
+	cd ${WRKSRC} && make ${LOWER_OPSYS}-${ICC_ARCH}
 
 do-install:
 	cd ${WRKSRC} && make install-${LOWER_OPSYS}-${ICC_ARCH} \

@@ -1,9 +1,0 @@
-#!/bin/sh
-
-INTEL_LICENSE_FILE="@ICC_PREFIX@/licenses:${HOME}/intel/licenses:${INTEL_LICENSE_FILE:-/opt/intel/licenses}"
-export INTEL_LICENSE_FILE
-
-PATH="@ICC_PREFIX@/bin/@ICC_ARCH@:@GCC_PREFIX@/bin:${PATH:-/bin:/usr/bin}"
-export PATH
-
-exec ${0##*/} "-Qlocation,as,@BINUTILS_PREFIX@/bin" "$@"
