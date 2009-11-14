@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/11/14 13:46:36 jtonio Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/14 15:34:30 jtonio Exp $
 #
 
 DISTNAME=	i3-3.d
 PKGNAME=	${DISTNAME:C/\.//}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://i3.zekjur.net/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,7 +27,7 @@ CONF_FILES=	${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/config
 SUBST_CLASSES+=			fix-prefix
 SUBST_STAGE.fix-prefix=		pre-configure
 SUBST_MESSAGE.fix-prefix=	Fixing absolute paths (installation)
-SUBST_FILES.fix-prefix=		Makefile
+SUBST_FILES.fix-prefix=		Makefile i3-input/Makefile i3-msg/Makefile
 SUBST_SED.fix-prefix=		-e 's,/usr/bin,${PREFIX}/bin,g'
 SUBST_SED.fix-prefix+=		-e 's,/etc/i3,${PREFIX}/share/doc/i3,g'
 
@@ -40,7 +41,9 @@ post-build:
 	cd ${WRKSRC} && gmake -C man
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/i3.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.for i in i3.1 i3-input.1 i3-msg.1
+	${INSTALL_MAN} ${WRKSRC}/man/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endfor
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
