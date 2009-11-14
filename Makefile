@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3681 2009/11/12 11:40:14 mwdavies Exp $
+# $Id: Makefile,v 1.3682 2009/11/14 23:50:05 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -930,6 +930,7 @@ SUBDIR+=	json-glib-devel
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
 SUBDIR+=	just
+SUBDIR+=	k3b
 SUBDIR+=	kBuild
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
@@ -939,6 +940,7 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
+SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kile
@@ -950,10 +952,12 @@ SUBDIR+=	kmymoney2-devel
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
+SUBDIR+=	konversation
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kpathsea
 SUBDIR+=	kplayer
+SUBDIR+=	krusader
 SUBDIR+=	kstart
 SUBDIR+=	ktorrent3
 SUBDIR+=	kuickshow
@@ -1918,6 +1922,7 @@ SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rosegarden-current
 SUBDIR+=	roundcube-skin-mvision2
+SUBDIR+=	rsibreak
 SUBDIR+=	rss-glib
 SUBDIR+=	rst-mode
 SUBDIR+=	rsyslog
