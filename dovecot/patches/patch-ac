@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.6 2009/06/05 06:50:12 ghen Exp $
+$NetBSD: patch-ac,v 1.7 2009/11/14 15:52:13 ghen Exp $
 
---- doc/Makefile.in.orig	2009-06-01 06:30:20.000000000 +0200
+--- doc/Makefile.in.orig	2009-11-10 03:35:49.000000000 +0100
 +++ doc/Makefile.in
-@@ -219,11 +219,7 @@ top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- SUBDIRS = wiki
+@@ -272,11 +272,7 @@ docfiles = \
+ 
+ @BUILD_DOCS_TRUE@doc_DATA = $(docfiles)
  confdir = $(sysconfdir)
 -conf_DATA = \
 -	dovecot-db-example.conf \
@@ -13,5 +13,5 @@ $NetBSD: patch-ac,v 1.6 2009/06/05 06:50:12 ghen Exp $
 -	dovecot-sql-example.conf
 +conf_DATA =
  
- doc_DATA = \
- 	auth-protocol.txt \
+ EXTRA_DIST = \
+ 	dovecot-initd.sh \

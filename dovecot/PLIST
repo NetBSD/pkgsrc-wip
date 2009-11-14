@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/10/11 10:44:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/11/14 15:52:13 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -86,6 +86,7 @@ include/dovecot/src/lib-mail/message-address.h
 include/dovecot/src/lib-mail/message-date.h
 include/dovecot/src/lib-mail/message-decoder.h
 include/dovecot/src/lib-mail/message-header-decode.h
+include/dovecot/src/lib-mail/message-header-encode.h
 include/dovecot/src/lib-mail/message-header-parser.h
 include/dovecot/src/lib-mail/message-id.h
 include/dovecot/src/lib-mail/message-parser.h
@@ -296,6 +297,7 @@ lib/dovecot/pop3/lib20_mbox_snarf_plugin.so
 lib/dovecot/pop3/lib20_virtual_plugin.so
 lib/dovecot/pop3/lib20_zlib_plugin.so
 lib/dovecot/pop3/lib21_fts_squat_plugin.so
+libexec/dovecot/authtest
 libexec/dovecot/checkpassword-reply
 libexec/dovecot/convert-tool
 libexec/dovecot/deliver
@@ -402,6 +404,11 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
+share/doc/dovecot/wiki/ManageSieve.Clients.txt
+share/doc/dovecot/wiki/ManageSieve.Configuration.txt
+share/doc/dovecot/wiki/ManageSieve.Install.1.0.txt
+share/doc/dovecot/wiki/ManageSieve.Install.txt
+share/doc/dovecot/wiki/ManageSieve.Troubleshooting.txt
 share/doc/dovecot/wiki/ManageSieve.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
@@ -495,4 +502,4 @@ share/examples/dovecot/dovecot-openssl.cnf
 share/examples/dovecot/dovecot-sql-example.conf
 share/examples/dovecot/mkcert.sh
 share/examples/rc.d/dovecot
-@exec ${MKDIR} %D/lib/dovecot/auth
+@pkgdir lib/dovecot/auth
