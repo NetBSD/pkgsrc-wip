@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.7 2009/11/14 23:44:31 mwdavies Exp $
+
+SHA1 (k3b-1.68.0alpha3.tar.bz2) = 014d7de53d497a8cd6068f42bd2cccf23a36ad9a
+RMD160 (k3b-1.68.0alpha3.tar.bz2) = a2c3d6e45834f8403236ac857920f60973e07a1f
+Size (k3b-1.68.0alpha3.tar.bz2) = 3899288 bytes
+SHA1 (patch-ae) = 124d5ba1a3384d012a8b471f55fd624ffe9df5d4
+SHA1 (patch-af) = f2326f21219178443535fc4a80b8bdd46479b1ad
