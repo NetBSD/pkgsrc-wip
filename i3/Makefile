@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/10/09 06:16:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/14 10:17:50 jtonio Exp $
 #
 
-PKGNAME=	i3-3b
-DISTNAME=	i3-3.b
+DISTNAME=	i3-3.d
+PKGNAME=	${DISTNAME:C/\.//}
 CATEGORIES=	wm
 MASTER_SITES=	http://i3.zekjur.net/downloads/
 EXTRACT_SUFX=	.tar.bz2
