@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 11:18:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/11/14 11:37:23 zul_ Exp $
 bin/mcabber
 man/man1/mcabber.1
 share/applications/mcabber.desktop
-share/examples/mcabber/mcabberrc
+share/examples/mcabber/mcabberrc.example
 share/mcabber/help/de/hlp.txt
 share/mcabber/help/de/hlp_add.txt
 share/mcabber/help/de/hlp_alias.txt

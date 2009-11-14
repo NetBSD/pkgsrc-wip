@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2009/11/14 11:37:23 zul_ Exp $
 #
 
-DISTNAME=	mcabber-0.9.9
+DISTNAME=	mcabber-0.9.10
 CATEGORIES=	chat
 MASTER_SITES=	http://www.lilotux.net/~mikael/mcabber/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,9 +19,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake xgettext pkg-config
 USE_NCURSES=		yes
 
+
+INSTALLATION_DIRS+= 	share/examples/mcabber
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mcabber.desktop ${PREFIX}/share/applications/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mcabber
 	${INSTALL_DATA} ${WRKSRC}/mcabberrc.example \
 			${DESTDIR}${PREFIX}/share/examples/mcabber
 
