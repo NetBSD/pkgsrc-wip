@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/06 01:00:13 asau Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/14 17:10:37 asau Exp $
 #
 
 DISTNAME=	llvm-2.6
@@ -32,7 +32,22 @@ CONFIGURE_ARGS+= --enable-targets=host-only
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
+#.include "../../lang/ocaml/buildlink3.mk"
 TEST_TARGET=	check unittests
+
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	llvm
+SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
+SVN_MODULE.llvm=	llvm
+
+PKGNAME=		llvm-2.6.99
+WRKSRC=			$(WRKDIR)/$(SVN_MODULE.llvm)
+
+CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
+			utils/buildit/build_llvm
+
+
+.include "../../wip/mk/svn-package.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
