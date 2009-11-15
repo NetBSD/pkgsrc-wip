@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/11/15 20:48:01 jym-netbsd Exp $
+
+Execute "run-libmicro" to run the benchmark.
+
+You can pipe the output of "run-libmicro" to a file, and process it later
+via "multiview" when you need to generate an HTML report.
+
+For example, suppose you want to compare two runs. You can do:
+
+$ run-libmicro > output.1
+$ run-libmicro > output.2
+$ multiview output.1 output.2 > comparison.html
+
+Then read 'comparison.html' in your favorite web browser.
+
+===========================================================================
