@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/15 20:48:01 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/17 20:33:12 jym-netbsd Exp $
 #
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
@@ -26,6 +26,12 @@ INSTALLATION_DIRS+=	libexec/${PKGBASE}/bin
 INSTALLATION_DIRS+=	libexec/${PKGBASE}/bin-${MACHINE_ARCH}
 
 LIBMICRO_BASE=		${PREFIX}/libexec/${PKGBASE}
+
+SUBST_CLASSES+=		fix-arch
+SUBST_MESSAGE.fix-arch=	Fix machine architecture path
+SUBST_STAGE.fix-arch=	pre-configure
+SUBST_FILES.fix-arch=	Makefile bench.sh wrapper.sh
+SUBST_SED.fix-arch=	-e 's|@@MACHINE_ARCH@@|${MACHINE_ARCH:Q}|'
 
 post-build:
 	${SED}  -e 's|@@DESTDIR@@|${DESTDIR:Q}|'	\

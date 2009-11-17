@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/11/15 20:48:01 jym-netbsd Exp $
+$NetBSD: patch-af,v 1.2 2009/11/17 20:33:12 jym-netbsd Exp $
 
 --- bench.sh.orig	2007-07-02 23:17:45.000000000 +0200
 +++ bench.sh
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.1.1.1 2009/11/15 20:48:01 jym-netbsd Exp $
  touch $IFILE
  
 -ARCH=`arch -k`
-+ARCH=`uname -m`
++ARCH=@@MACHINE_ARCH@@
  
  # produce benchmark header for easier comparisons
  
