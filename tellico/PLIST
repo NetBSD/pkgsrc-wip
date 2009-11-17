@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/25 10:25:18 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/17 14:40:42 thomasklausner Exp $
 bin/tellico
 share/applications/kde4/tellico.desktop
 share/doc/kde/HTML/en/tellico/advanced.docbook
@@ -108,6 +108,7 @@ share/kde/apps/tellico/data-sources/fr.allocine.py.spec
 share/kde/apps/tellico/data-sources/ministerio_de_cultura.py
 share/kde/apps/tellico/data-sources/ministerio_de_cultura.py.spec
 share/kde/apps/tellico/delicious2tellico.xsl
+share/kde/apps/tellico/discogs2tellico.xsl
 share/kde/apps/tellico/dvd-logo.png
 share/kde/apps/tellico/entry-templates/Album.xsl
 share/kde/apps/tellico/entry-templates/Compact.xsl
@@ -172,18 +173,21 @@ share/kde/apps/tellico/report-templates/Title_Listing_(Horizontal).xsl
 share/kde/apps/tellico/report-templates/Title_Listing_(Vertical).xsl
 share/kde/apps/tellico/report-templates/Tri-Column.xsl
 share/kde/apps/tellico/shadowAlpha.png
+share/kde/apps/tellico/srw2tellico.xsl
 share/kde/apps/tellico/tellico-by-author.xsl
 share/kde/apps/tellico/tellico-by-title.xsl
 share/kde/apps/tellico/tellico-common.xsl
 share/kde/apps/tellico/tellico-printing.xsl
 share/kde/apps/tellico/tellico.dtd
 share/kde/apps/tellico/tellico.tips
+share/kde/apps/tellico/tellico2gcstar.xsl
 share/kde/apps/tellico/tellico2html.js
 share/kde/apps/tellico/tellico2html.xsl
 share/kde/apps/tellico/tellico2onix.xsl
 share/kde/apps/tellico/tellicoui.rc
 share/kde/apps/tellico/vhs-logo.png
 share/kde/apps/tellico/welcome.html
+share/kde/apps/tellico/winecom2tellico.xsl
 share/kde/apps/tellico/xmp2tellico.xsl
 share/kde/apps/tellico/yahoo2tellico.xsl
 share/kde/apps/tellico/z3950-servers.cfg
