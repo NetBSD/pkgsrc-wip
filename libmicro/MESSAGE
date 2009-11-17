@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2009/11/16 01:20:30 jym-netbsd Exp $
+$NetBSD: MESSAGE,v 1.3 2009/11/17 20:26:56 jym-netbsd Exp $
 
 Execute "run-libmicro" to run the benchmark.
 
@@ -15,8 +15,8 @@ $ multiview output.1 output.2 > comparison.html
 Then read 'comparison.html' in your favorite web browser.
 
 WARNING: libMicro's results are strongly dependant of compile time options
-and compiler's optimizations. You must ensure that that the compiler does
-not arbitrarily chose optimizations that do not fit the benchmark and
+and compiler's optimizations. You must ensure that the compiler does
+not arbitrarily chose optimizations that do not fit the benchmark, or
 which may return irrelevant results. For example: over-simplification of
 the call-graph, load/store variables from register instead of memory,
 function vs builtin macro expansion, ...
