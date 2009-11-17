@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/09/24 10:33:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/11/17 09:19:22 thomasklausner Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
@@ -61,6 +61,7 @@ share/icons/hicolor/22x22/apps/amarok.png
 share/icons/hicolor/32x32/apps/amarok.png
 share/icons/hicolor/48x48/apps/amarok.png
 share/icons/hicolor/64x64/apps/amarok.png
+share/kde/apps/amarok/amarok.notifyrc
 share/kde/apps/amarok/data/DefaultPlaylistLayouts.xml
 share/kde/apps/amarok/data/InfoAppletCustomStyle.css
 share/kde/apps/amarok/data/InfoParserLoading.html
@@ -320,14 +321,25 @@ share/kde/apps/amarok/images/default-theme-clean.svg
 share/kde/apps/amarok/images/emblem-ampache-scalable.svgz
 share/kde/apps/amarok/images/emblem-ampache.png
 share/kde/apps/amarok/images/emblem-default.png
+share/kde/apps/amarok/images/emblem-delicious.png
+share/kde/apps/amarok/images/emblem-digg.png
+share/kde/apps/amarok/images/emblem-facebook.png
+share/kde/apps/amarok/images/emblem-identica.png
 share/kde/apps/amarok/images/emblem-jamendo-scalable.svgz
 share/kde/apps/amarok/images/emblem-jamendo.png
 share/kde/apps/amarok/images/emblem-lastfm-scalable.svg
 share/kde/apps/amarok/images/emblem-lastfm.png
+share/kde/apps/amarok/images/emblem-linkedin.png
 share/kde/apps/amarok/images/emblem-magnatune.png
 share/kde/apps/amarok/images/emblem-mp3tunes.png
+share/kde/apps/amarok/images/emblem-myspace.png
+share/kde/apps/amarok/images/emblem-reddit.png
 share/kde/apps/amarok/images/emblem-scripted-scalable.svgz
 share/kde/apps/amarok/images/emblem-scripted.png
+share/kde/apps/amarok/images/emblem-stackoverflow.png
+share/kde/apps/amarok/images/emblem-twitter.png
+share/kde/apps/amarok/images/emblem-wikipedia.png
+share/kde/apps/amarok/images/emblem-xing.png
 share/kde/apps/amarok/images/hover_info_ampache.png
 share/kde/apps/amarok/images/hover_info_collections.png
 share/kde/apps/amarok/images/hover_info_dynamic_playlists.png
@@ -458,7 +470,9 @@ share/locale/de/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/de/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/de/LC_MESSAGES/amarokpkg.mo
 share/locale/en_GB/LC_MESSAGES/amarok.mo
+share/locale/en_GB/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/en_GB/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/en_GB/LC_MESSAGES/amarokpkg.mo
 share/locale/es/LC_MESSAGES/amarok.mo
 share/locale/es/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/es/LC_MESSAGES/amarokcollectionscanner_qt.mo
@@ -473,15 +487,26 @@ share/locale/fr/LC_MESSAGES/amarok.mo
 share/locale/fr/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/fr/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/fr/LC_MESSAGES/amarokpkg.mo
+share/locale/hu/LC_MESSAGES/amarok.mo
+share/locale/hu/LC_MESSAGES/amarok_scriptengine_qscript.mo
+share/locale/hu/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/hu/LC_MESSAGES/amarokpkg.mo
 share/locale/it/LC_MESSAGES/amarok.mo
 share/locale/it/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/it/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/it/LC_MESSAGES/amarokpkg.mo
-share/locale/ja/LC_MESSAGES/amarok.mo
 share/locale/km/LC_MESSAGES/amarok.mo
 share/locale/km/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/km/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/km/LC_MESSAGES/amarokpkg.mo
+share/locale/lt/LC_MESSAGES/amarok.mo
+share/locale/lt/LC_MESSAGES/amarok_scriptengine_qscript.mo
+share/locale/lt/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/lt/LC_MESSAGES/amarokpkg.mo
+share/locale/lv/LC_MESSAGES/amarok.mo
+share/locale/lv/LC_MESSAGES/amarok_scriptengine_qscript.mo
+share/locale/lv/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/lv/LC_MESSAGES/amarokpkg.mo
 share/locale/nb/LC_MESSAGES/amarok.mo
 share/locale/nb/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/nb/LC_MESSAGES/amarokcollectionscanner_qt.mo
@@ -509,6 +534,7 @@ share/locale/pt_BR/LC_MESSAGES/amarok.mo
 share/locale/pt_BR/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/pt_BR/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/pt_BR/LC_MESSAGES/amarokpkg.mo
+share/locale/ro/LC_MESSAGES/amarok.mo
 share/locale/ru/LC_MESSAGES/amarok.mo
 share/locale/ru/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/ru/LC_MESSAGES/amarokcollectionscanner_qt.mo
@@ -534,6 +560,10 @@ share/locale/uk/LC_MESSAGES/amarokcollectionscanner_qt.mo
 share/locale/uk/LC_MESSAGES/amarokpkg.mo
 share/locale/wa/LC_MESSAGES/amarok.mo
 share/locale/wa/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/zh_CN/LC_MESSAGES/amarok.mo
+share/locale/zh_CN/LC_MESSAGES/amarok_scriptengine_qscript.mo
+share/locale/zh_CN/LC_MESSAGES/amarokcollectionscanner_qt.mo
+share/locale/zh_CN/LC_MESSAGES/amarokpkg.mo
 share/locale/zh_TW/LC_MESSAGES/amarok.mo
 share/locale/zh_TW/LC_MESSAGES/amarok_scriptengine_qscript.mo
 share/locale/zh_TW/LC_MESSAGES/amarokcollectionscanner_qt.mo

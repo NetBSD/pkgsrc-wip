@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/10/08 21:15:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2009/11/17 09:19:22 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.2.0
-PKGREVISION=	2
+VERS=		2.2.1
 CATEGORIES=	audio multimedia
 #MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 #		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -45,6 +44,7 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/liblastfm/buildlink3.mk"
 .include "../../wip/mysql5-embedded/buildlink3.mk"
