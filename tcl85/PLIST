@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/20 21:24:29 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/17 23:40:44 bharder Exp $
 bin/tclsh
 bin/tclsh8.5
 include/tcl.h
@@ -234,11 +234,11 @@ lib/tcl8.5/tclConfig.sh
 lib/tcl8.5/tclIndex
 lib/tcl8.5/tm.tcl
 lib/tcl8.5/word.tcl
-lib/tcl8/8.4/http-2.7.3.tm
-lib/tcl8/8.4/platform-1.0.4.tm
+lib/tcl8/8.4/http-2.7.5.tm
+lib/tcl8/8.4/platform-1.0.5.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.4.2.tm
-lib/tcl8/8.5/tcltest-2.3.1.tm
+lib/tcl8/8.5/tcltest-2.3.2.tm
 man/man1/tclsh.1
 man/man3/TCL_MEM_DEBUG.3
 man/man3/Tcl_Access.3

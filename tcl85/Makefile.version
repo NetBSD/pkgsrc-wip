@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.2 2009/09/20 21:24:29 shindenmorr Exp $
+# $NetBSD: Makefile.version,v 1.3 2009/11/17 23:40:44 bharder Exp $
 
 TCL_PKGSRC_VERSION=	8.5
-TCL_PKGSRC_PATCHLEVEL=	8.5.7
+TCL_PKGSRC_PATCHLEVEL=	8.5.8

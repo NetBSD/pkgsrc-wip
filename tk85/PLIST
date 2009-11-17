@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/09/20 21:30:10 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/17 23:40:44 bharder Exp $
 bin/wish
 bin/wish8.5
 include/tk.h
@@ -174,6 +174,7 @@ lib/tk8.5/ttk/sizegrip.tcl
 lib/tk8.5/ttk/treeview.tcl
 lib/tk8.5/ttk/ttk.tcl
 lib/tk8.5/ttk/utils.tcl
+lib/tk8.5/ttk/vistaTheme.tcl
 lib/tk8.5/ttk/winTheme.tcl
 lib/tk8.5/ttk/xpTheme.tcl
 lib/tk8.5/unsupported.tcl
@@ -545,6 +546,7 @@ man/mann/ttk_separator.n
 man/mann/ttk_sizegrip.n
 man/mann/ttk_style.n
 man/mann/ttk_treeview.n
+man/mann/ttk_vsapi.n
 man/mann/ttk_widget.n
 man/mann/winfo.n
 man/mann/wm.n
