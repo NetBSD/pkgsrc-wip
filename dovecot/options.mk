@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2009/07/05 20:37:43 ghen Exp $
+# $NetBSD: options.mk,v 1.13 2009/11/18 15:54:30 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	dovecot-sieve dovecot-managesieve gssapi
@@ -20,6 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	kqueue
 CONFIGURE_ARGS+=	--with-ssl=openssl
 CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
 CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
+BUILDLINK_API_DEPENDS.openssl=openssl>=0.9.8a
 .  include "../../security/openssl/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--with-ssl=gnutls
