@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/18 17:00:03 christtrekker Exp $
+lib/X11/fonts/TTF/ALEXA.TTF
+lib/X11/fonts/TTF/Cairo.ttf
+lib/X11/fonts/TTF/CITYOARG.TTF
+lib/X11/fonts/TTF/GENEVA.TTF
+lib/X11/fonts/TTF/genoa.ttf
+lib/X11/fonts/TTF/MONACO.TTF
+lib/X11/fonts/TTF/MOTTEK.TTF
+lib/X11/fonts/TTF/virtue.ttf
