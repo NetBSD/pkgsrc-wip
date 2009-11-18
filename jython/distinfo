@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/18 12:34:53 jihbed Exp $
+
+SHA1 (jython_installer-2.5.1.jar) = f0e8137b79b6f42cdc0835ab5344d823173ae326
+RMD160 (jython_installer-2.5.1.jar) = e25d1992408d03a4479f3eca6ebbeaa2292b26b8
+Size (jython_installer-2.5.1.jar) = 15338930 bytes
