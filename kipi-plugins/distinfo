@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/18 12:25:26 thomasklausner Exp $
+
+SHA1 (kipi-plugins-0.8.0.tar.bz2) = 652aaa0d27c5aff648d71848d4b35a6385bf0f97
+RMD160 (kipi-plugins-0.8.0.tar.bz2) = ce5c7e5b4832757e39bb285033eff0ecf0a6bfce
+Size (kipi-plugins-0.8.0.tar.bz2) = 3856681 bytes
+SHA1 (patch-aa) = 6d3087889630c12454b58293a31aa0eed48265ab
