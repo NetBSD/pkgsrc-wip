@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3684 2009/11/18 12:33:05 thomasklausner Exp $
+# $Id: Makefile,v 1.3685 2009/11/18 15:00:49 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -933,6 +933,7 @@ SUBDIR+=	json-glib-devel
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
 SUBDIR+=	just
+SUBDIR+=	jython
 SUBDIR+=	k3b
 SUBDIR+=	kBuild
 SUBDIR+=	kaffe
@@ -1756,6 +1757,7 @@ SUBDIR+=	py-chm
 SUBDIR+=	py-clutter
 SUBDIR+=	py-configobj
 SUBDIR+=	py-coverage
+SUBDIR+=	py-cryptoidlib
 SUBDIR+=	py-cscope
 SUBDIR+=	py-csp
 SUBDIR+=	py-daemon
@@ -2049,6 +2051,7 @@ SUBDIR+=	softhsm
 SUBDIR+=	songwrite
 SUBDIR+=	soundtracker
 SUBDIR+=	sox
+SUBDIR+=	spade
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spandsp
