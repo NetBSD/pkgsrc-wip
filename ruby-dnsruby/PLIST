@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/19 08:54:29 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/18 21:10:42 pettai Exp $
 ${GEM_HOME}/cache/dnsruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
@@ -36,12 +36,16 @@ ${GEM_LIBDIR}/lib/Dnsruby/resource/A.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/AAAA.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/AFSDB.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/CERT.rb
+${GEM_LIBDIR}/lib/Dnsruby/resource/DHCID.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/DLV.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/DNSKEY.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/DS.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/HINFO.rb
+${GEM_LIBDIR}/lib/Dnsruby/resource/HIP.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/IN.rb
+${GEM_LIBDIR}/lib/Dnsruby/resource/IPSECKEY.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/ISDN.rb
+${GEM_LIBDIR}/lib/Dnsruby/resource/KX.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/LOC.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/MINFO.rb
 ${GEM_LIBDIR}/lib/Dnsruby/resource/MX.rb
@@ -70,6 +74,7 @@ ${GEM_LIBDIR}/lib/Dnsruby/select_thread.rb
 ${GEM_LIBDIR}/lib/Dnsruby/single_verifier.rb
 ${GEM_LIBDIR}/lib/Dnsruby/update.rb
 ${GEM_LIBDIR}/lib/Dnsruby/validator_thread.rb
+${GEM_LIBDIR}/lib/Dnsruby/zone_reader.rb
 ${GEM_LIBDIR}/lib/Dnsruby/zone_transfer.rb
 ${GEM_LIBDIR}/lib/dnsruby.rb
 ${GEM_LIBDIR}/test/custom.txt
@@ -83,6 +88,8 @@ ${GEM_LIBDIR}/test/tc_dnsruby.rb
 ${GEM_LIBDIR}/test/tc_ds.rb
 ${GEM_LIBDIR}/test/tc_escapedchars.rb
 ${GEM_LIBDIR}/test/tc_header.rb
+${GEM_LIBDIR}/test/tc_hip.rb
+${GEM_LIBDIR}/test/tc_ipseckey.rb
 ${GEM_LIBDIR}/test/tc_itar.rb
 ${GEM_LIBDIR}/test/tc_misc.rb
 ${GEM_LIBDIR}/test/tc_name.rb
