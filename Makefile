@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3686 2009/11/18 17:02:48 christtrekker Exp $
+# $Id: Makefile,v 1.3687 2009/11/19 14:22:06 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1942,7 +1942,6 @@ SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
-SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-nokogiri
