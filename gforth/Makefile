@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/19 19:09:00 asau Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/20 00:50:37 asau Exp $
 
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
@@ -27,6 +27,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake aclocal
 USE_TOOLS+=	makeinfo gzip
 USE_TOOLS+=	perl:build
+USE_TOOLS+=	gm4	# m4 regressed in NetBSD 5.99.21-22
 
 MAKE_JOBS_SAFE=	no # fresh Gforth is required to build doc
 BUILD_TARGET=	all info # doc
