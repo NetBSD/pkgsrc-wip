@@ -1,7 +1,12 @@
-# $Id: svn-package.mk,v 1.12 2009/07/06 18:22:23 minskim Exp $
+# $Id: svn-package.mk,v 1.13 2009/11/20 11:18:59 asau Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
+#
+# === User-settable variables ===
+#
+# CHECKOUT_DATE
+#	Date to check out in ISO format (YYYY-MM-DD).
 #
 # === Package-settable variables ===
 #
@@ -82,7 +87,11 @@ BUILD_DEPENDS+=		subversion-base>=1.0:../../devel/subversion-base
 DISTFILES?=		# empty
 # Enforce PKGREVISION unless SVN_TAG is set
 .if empty(SVN_TAG)
+. if defined(CHECKOUT_DATE)
+PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
+. else
 PKGREVISION?=		$(_SVN_PKGVERSION:S/.//g)
+. endif
 .endif
 
 #
@@ -134,6 +143,7 @@ _SVN_DISTDIR=		${DISTDIR}/svn-packages
 # Generation of repository-specific variables
 #
 
+# determine appropriate checkout date or tag
 .for repo in ${SVN_REPOSITORIES}
 SVN_MODULE.${repo}?=	${repo}
 .  if defined(SVN_TAG.${repo})
@@ -142,31 +152,55 @@ _SVN_TAG.${repo}=	${SVN_TAG.${repo}}
 .  elif defined(SVN_TAG)
 _SVN_TAG_FLAG.${repo}=	-r${SVN_TAG}
 _SVN_TAG.${repo}=	${SVN_TAG}
+.  elif defined(CHECKOUT_DATE)
+_SVN_TAG_FLAG.${repo}=	-r{${CHECKOUT_DATE}}
+_SVN_TAG.${repo}=	{${CHECKOUT_DATE}}
 .  else
 _SVN_TAG_FLAG.${repo}=	-r{${_SVN_TODAY} 00:00 +0000}
 _SVN_TAG.${repo}=	${_SVN_TODAY}
 .  endif
+
+# Cache support:
+.  if !defined(NO_SVN_CACHE.${repo}) \
+   || defined(NO_SVN_CACHE.${repo}) && empty(NO_SVN_CACHE.${repo}:M[Yy][Ee][Ss])
+#   cache file name
 .  if !defined(SVN_DISTBASE.${repo})
 SVN_DISTBASE.${repo}=	${PKGBASE}-${SVN_MODULE.${repo}}
 .  endif
 _SVN_DISTFILE.${repo}=	${SVN_DISTBASE.${repo}}-${_SVN_TAG.${repo}}.tar.gz
+
+#   command to extract cache file
+_SVN_EXTRACT_CACHED.${repo}=	\
+	if [ -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ]; then		\
+	  ${STEP_MSG} "Extracting cached Subversion archive "${_SVN_DISTFILE.${repo}:Q}"."; \
+	  pax -r -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q};	\
+	  exit 0;							\
+	fi
+
+#   create cache archive
+_SVN_CREATE_CACHE.${repo}=	\
+	${STEP_MSG} "Creating cached Subversion archive "${_SVN_DISTFILE.${repo}:Q}"."; \
+	${MKDIR} ${_SVN_DISTDIR:Q};							\
+	pax -w -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ${SVN_MODULE.${repo}:Q}
+.  else
+# I have to set them to noop:
+_SVN_DISTFILE.${repo}=		:
+_SVN_EXTRACT_CACHED.${repo}=	:
+_SVN_CREATE_CACHE.${repo}=	:
+.  endif
 .endfor
 
 pre-extract: do-svn-extract
 
 do-svn-extract: .PHONY
 .if defined(SVN_CERTS) && !empty(SVN_CERTS)
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
-	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${SVN_CERTS:Q} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+	${RUN}${MKDIR} -p ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+	${RUN}${CP} ${SVN_CERTS:Q} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
 .endif
 .for repo in ${SVN_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
 	if [ ! -d ${_SVN_DISTDIR} ]; then mkdir -p ${_SVN_DISTDIR:Q}; fi;	\
-	if [ -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ]; then		\
-	  ${STEP_MSG} "Extracting cached Subversion archive "${_SVN_DISTFILE.${repo}:Q}"."; \
-	  pax -r -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q};	\
-	  exit 0;							\
-	fi;								\
+	${_SVN_EXTRACT_CACHED.${repo}};					\
 	${STEP_MSG} "Downloading "${SVN_MODULE.${repo}:Q}" from "${SVN_ROOT.${repo}:Q}"."; \
 	${SETENV} ${_SVN_ENV}						\
 		${_SVN_CMD} checkout ${_SVN_CHECKOUT_FLAGS}		\
@@ -174,9 +208,7 @@ do-svn-extract: .PHONY
 			${_SVN_FLAGS}		 			\
 			${SVN_ROOT.${repo}:Q}				\
 			${SVN_MODULE.${repo}:Q};			\
-	${STEP_MSG} "Creating cached Subversion archive "${_SVN_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_SVN_DISTDIR:Q};					\
-	pax -w -z -f ${_SVN_DISTDIR}/${_SVN_DISTFILE.${repo}:Q} ${SVN_MODULE.${repo}:Q}
+	${_SVN_CREATE_CACHE.${repo}}
 .endfor
 
 .endif

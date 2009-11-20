@@ -1,9 +1,14 @@
-# $Id: cvs-package.mk,v 1.35 2009/05/18 12:36:03 tnn2 Exp $
+# $Id: cvs-package.mk,v 1.36 2009/11/20 11:18:59 asau Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
 # package is fetched from CVS, an archive is created from it and saved
 # in ${DISTDIR}/cvs-packages, to save bandwidth.
+#
+# === User-settable variables ===
+#
+# CHECKOUT_DATE
+#	Date to check out in ISO format (YYYY-MM-DD).
 #
 # === Package-settable variables ===
 #
@@ -87,7 +92,11 @@ DISTFILES?=		# empty
 PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
 # Enforce PKGREVISION unless CVS_TAG is set:
 .if empty(CVS_TAG)
+. if defined(CHECKOUT_DATE)
+PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
+. else
 PKGREVISION?=		$(_CVS_PKGVERSION:S/.//g)
+. endif
 .endif
 
 #
@@ -145,17 +154,39 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 
 .for repo in ${CVS_REPOSITORIES}
 CVS_MODULE.${repo}?=	${repo}
+
+# determine appropriate checkout date or tag
 .  if defined(CVS_TAG.${repo})
 _CVS_TAG_FLAG.${repo}=	-r${CVS_TAG.${repo}}
 _CVS_TAG.${repo}=	${CVS_TAG.${repo}}
 .  elif defined(CVS_TAG)
 _CVS_TAG_FLAG.${repo}=	-r${CVS_TAG}
 _CVS_TAG.${repo}=	${CVS_TAG}
+.  elif defined(CHECKOUT_DATE)
+_CVS_TAG_FLAG.${repo}=	-D${CHECKOUT_DATE:Q}
+_CVS_TAG.${repo}=	${CHECKOUT_DATE:Q}
 .  else
 _CVS_TAG_FLAG.${repo}=	'-D${_CVS_TODAY} 00:00 +0000'
 _CVS_TAG.${repo}=	${_CVS_TODAY:Q}
 .  endif
+
+# Cache support:
+#   cache file name
 _CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.gz
+
+#   command to extract cache file
+_CVS_EXTRACT_CACHED.${repo}=	\
+	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
+	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
+	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q};	\
+	  exit 0;							\
+	fi
+
+#   create cache archive
+_CVS_CREATE_CACHE.${repo}=	\
+	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
+	${MKDIR} ${_CVS_DISTDIR:Q};					\
+	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
 .endfor
 
 pre-extract: do-cvs-extract
@@ -164,11 +195,7 @@ do-cvs-extract: .PHONY
 .for repo in ${CVS_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
 	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi;	\
-	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
-	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q};	\
-	  exit 0;							\
-	fi;								\
+	${_CVS_EXTRACT_CACHED.${repo}};					\
 	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)";	\
 	if [ -n "$$p" ]; then						\
 	  ${STEP_MSG} "Extracting cached CVS archive \"""$$p\".";	\
@@ -188,9 +215,7 @@ do-cvs-extract: .PHONY
 	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${repo}:Q}		\
 	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
 	      -d ${repo} ${CVS_MODULE.${repo}:Q};				\
-	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
+	${_CVS_CREATE_CACHE.${repo}}
 .endfor
 
 .endif
