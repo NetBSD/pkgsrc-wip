@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/11/14 23:44:31 mwdavies Exp $
+# $NetBSD: Makefile,v 1.10 2009/11/21 20:31:26 mwdavies Exp $
 #
 
 DISTNAME=		k3b-1.68.0alpha3
@@ -23,6 +23,7 @@ USE_TOOLS+=		perl pkg-config
 USE_LANGUAGES=		c c++
 
 #CMAKE_ARGS+=		-DK3B_ENABLE_DVD_RIPPING=OFF
+#CMAKE_ARGS+=            -DCMAKE_BUILD_TYPE=Debug
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 
@@ -42,5 +43,6 @@ BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
+.include "../../security/polkit-qt/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

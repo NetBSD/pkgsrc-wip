@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/14 23:44:31 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/11/21 20:31:26 mwdavies Exp $
 bin/k3b
+bin/k3bsetup
 include/k3b_export.h
 include/k3bactivepipe.h
 include/k3baudiocdtrackdrag.h
@@ -133,14 +134,19 @@ lib/kde4/k3bwavedecoder.so
 lib/kde4/kcm_k3bexternalencoder.so
 lib/kde4/kcm_k3blameencoder.so
 lib/kde4/kcm_k3boggvorbisencoder.so
+lib/kde4/kcm_k3bsetup.so
 lib/kde4/kio_videodvd.so
+lib/kde4/libexec/k3bsetup_worker
 lib/libk3b.so
 lib/libk3b.so.6
 lib/libk3b.so.6.0.0
 lib/libk3bdevice.so
 lib/libk3bdevice.so.6
 lib/libk3bdevice.so.6.0.0
+share/PolicyKit/policy/org.k3b.setup.policy
 share/applications/kde4/k3b.desktop
+share/dbus-1/interfaces/org.k3b.setup.xml
+share/dbus-1/system-services/org.k3b.setup.service
 share/icons/hicolor/128x128/apps/k3b.png
 share/icons/hicolor/16x16/apps/k3b.png
 share/icons/hicolor/22x22/apps/k3b.png
@@ -341,6 +347,7 @@ share/kde4/services/k3bmaddecoder.desktop
 share/kde4/services/k3bmpcdecoder.desktop
 share/kde4/services/k3boggvorbisdecoder.desktop
 share/kde4/services/k3boggvorbisencoder.desktop
+share/kde4/services/k3bsetup.desktop
 share/kde4/services/k3bsoxencoder.desktop
 share/kde4/services/k3bwavedecoder.desktop
 share/kde4/services/kcm_k3bexternalencoder.desktop

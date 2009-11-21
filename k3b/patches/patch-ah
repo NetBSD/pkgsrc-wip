@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.4 2009/11/21 20:31:26 mwdavies Exp $
+
+--- libk3bdevice/k3bdevicemanager.cpp.orig	2009-11-21 23:45:08.000000000 +1300
++++ libk3bdevice/k3bdevicemanager.cpp
+@@ -354,7 +354,7 @@ bool K3b::Device::DeviceManager::saveCon
+ 
+ K3b::Device::Device* K3b::Device::DeviceManager::addDevice( const Solid::Device& solidDevice )
+ {
+-    if ( findDevice( solidDevice.as<Solid::Block>()->device() ) ) {
++    if ( findDevice( solidDevice.as<Solid::GenericInterface>()->propertyExists("block.netbsd.raw_device") ? solidDevice.as<Solid::GenericInterface>()->property("block.netbsd.raw_device").toString() : solidDevice.as<Solid::Block>()->device() ) ) {
+         kDebug() << "(K3b::Device::DeviceManager) dev " << solidDevice.as<Solid::Block>()->device()  << " already found";
+         return 0;
+     }
