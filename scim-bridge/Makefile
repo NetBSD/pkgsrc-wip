@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 09:00:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/22 12:52:44 obache Exp $
 #
 
 DISTNAME=	scim-bridge-0.4.16
@@ -16,8 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-
-#CFLAGS+=	-Wextra
 
 CONFIGURE_ARGS+=	--enable-agent
 CONFIGURE_ARGS+=	--disable-documents
