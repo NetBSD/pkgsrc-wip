@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/13 17:12:34 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/22 11:09:50 gschwarz Exp $
 
 DISTNAME=	dnrd-2.20.3
 CATEGORIES=	net
@@ -16,15 +16,8 @@ GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-LIBS+=		-lrt	# for sem_*()
-.endif
-
-.if ${OPSYS} == "SunOS"
-LIBS+=		-lsocket
-LIBS+=		-lnsl	# for inet_ntoa()
-LIBS+=		-lresolv	# for inet_aton()
-.endif
+LIBS.NetBSD+=	-lrt	# for sem_*()
+LIBS.SunOS+=	-lrt -lsocket -lnsl -lresolv	# for sem_*(), inet_ntoa(), inet_aton()
 
 INSTALLATION_DIRS=	sbin share/doc/dnrd
 
