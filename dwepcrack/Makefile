@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/19 20:20:10 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/22 11:17:27 gschwarz Exp $
 
 DISTNAME=	dwepcrack-0.4
 PKGREVISION=	2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=	YES
 
 INSTALLATION_DIRS=	bin
+
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/dwepcrack ${DESTDIR}${PREFIX}/bin
