@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/11/08 23:12:34 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2009/11/22 17:44:29 pettai Exp $
 #
 
 DISTNAME=		wordpress-mu-${VERSION}
-VERSION=		2.8.5.2
+VERSION=		2.8.6
 CATEGORIES=		www
 MASTER_SITES=		http://mu.wordpress.org/
 
