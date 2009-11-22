@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2009/08/01 17:55:55 gschwarz Exp $
+# $NetBSD: Makefile,v 1.12 2009/11/22 15:49:08 gschwarz Exp $
 
-DISTNAME=	moe-1.2
+DISTNAME=	moe-1.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=moe/}
 
