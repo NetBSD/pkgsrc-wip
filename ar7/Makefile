@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/19 20:16:24 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/22 10:26:10 gschwarz Exp $
 
 DISTNAME=	ar7-0.1
 CATEGORIES=	net
@@ -13,5 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 INSTALLATION_DIRS=	bin
+
+USE_FEATURES+=	getopt_long
+LIBS.SunOS+=	-lnsl -lsocket
 
 .include "../../mk/bsd.pkg.mk"

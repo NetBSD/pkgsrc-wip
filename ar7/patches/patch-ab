@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2009/11/22 10:26:10 gschwarz Exp $
+
+--- src/logic.c.orig	2009-11-08 10:49:06.920001000 +0100
++++ src/logic.c	2009-11-08 10:51:26.039999000 +0100
+@@ -2,7 +2,13 @@
+ #include "err.h"
+ #include <stdio.h>
+ #include <string.h>
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/config.h>	/* needed for the other headers */
++#include <nbcompat/cdefs.h>	/* needed for the other headers */
++#include <nbcompat/getopt.h>
++#else
+ #include <getopt.h>
++#endif
+ 
+ #include "defaults.h"
+ int ar7_login(int fd, const char *user, const char *pass)
