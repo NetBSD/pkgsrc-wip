@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/01 08:48:40 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/22 11:13:09 obache Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.2.0.20090915
@@ -9,7 +9,7 @@ DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
-COMMENT=	PinYin engine for IBus
+COMMENT=	PinYin engine for IBus platform
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

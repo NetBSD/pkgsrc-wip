@@ -1,1 +1,2 @@
-Korean input engine for IBus.
+The Hangul engine for IBus platform. It provides Korean input method from
+libhangul.
