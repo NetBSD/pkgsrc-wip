@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: slim.sh,v 1.1.1.1 2007/03/12 22:07:08 ondratu Exp $
+# $NetBSD: slim.sh,v 1.2 2009/11/22 23:16:00 shindenmorr Exp $
 #
 
 # PROVIDE: slim
@@ -15,7 +15,7 @@ name="slim"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
 command_args="-d"
-pidfile="/var/run/${name}.pid"
+pidfile="/var/run/${name}.lock"
 required_files="@PKG_SYSCONFDIR@/slim.conf"
 
 if [ -f /etc/rc.subr ]; then
