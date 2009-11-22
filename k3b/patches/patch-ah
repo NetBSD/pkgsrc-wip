@@ -1,8 +1,16 @@
-$NetBSD: patch-ah,v 1.4 2009/11/21 20:31:26 mwdavies Exp $
+$NetBSD: patch-ah,v 1.5 2009/11/22 01:25:09 mwdavies Exp $
 
---- libk3bdevice/k3bdevicemanager.cpp.orig	2009-11-21 23:45:08.000000000 +1300
+--- libk3bdevice/k3bdevicemanager.cpp.orig	2009-09-20 03:38:40.000000000 +1200
 +++ libk3bdevice/k3bdevicemanager.cpp
-@@ -354,7 +354,7 @@ bool K3b::Device::DeviceManager::saveCon
+@@ -38,6 +38,7 @@
+ #include <Solid/OpticalDrive>
+ #include <Solid/Block>
+ #include <Solid/Device>
++#include <Solid/GenericInterface>
+ 
+ #include <iostream>
+ #include <limits.h>
+@@ -354,7 +355,7 @@ bool K3b::Device::DeviceManager::saveCon
  
  K3b::Device::Device* K3b::Device::DeviceManager::addDevice( const Solid::Device& solidDevice )
  {

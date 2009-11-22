@@ -1,12 +1,20 @@
-$NetBSD: patch-ag,v 1.3 2009/11/21 20:31:26 mwdavies Exp $
+$NetBSD: patch-ag,v 1.4 2009/11/22 01:25:09 mwdavies Exp $
 
---- libk3bdevice/k3bdevice.cpp.orig	2009-11-21 23:35:52.000000000 +1300
+--- libk3bdevice/k3bdevice.cpp.orig	2009-05-07 19:08:16.000000000 +1200
 +++ libk3bdevice/k3bdevice.cpp
-@@ -242,9 +242,14 @@ K3b::Device::Device::Handle K3b::Device:
+@@ -35,6 +35,7 @@
+ #include <Solid/OpticalDrive>
+ #include <Solid/Block>
+ #include <Solid/StorageAccess>
++#include <Solid/GenericInterface>
+ 
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+@@ -242,9 +243,14 @@ K3b::Device::Device::Handle K3b::Device:
  
  K3b::Device::Device::Device( const Solid::Device& dev )
  {
-+    Solid::GenericInterface *gi = dev.as<Solid::GenericInterface>();
++    const Solid::GenericInterface *gi = dev.as<Solid::GenericInterface>();
 +
      d = new Private;
      d->solidDevice = dev;
