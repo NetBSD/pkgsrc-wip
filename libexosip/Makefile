@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/19 20:23:31 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/22 15:30:21 gschwarz Exp $
 
 DISTNAME=	libeXosip2-3.3.0
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+USE_FEATURES+=		getopt_long
 
 DEPENDS+=	libosip2>=3.2.0:../../devel/libosip
 .include "../../devel/libosip/buildlink3.mk"

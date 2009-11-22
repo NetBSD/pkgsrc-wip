@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2009/11/22 15:30:22 gschwarz Exp $
+
+--- tools/sip_reg.c.orig	2008-10-26 16:00:31.000000000 +0100
++++ tools/sip_reg.c	2009-11-22 16:28:03.000000000 +0100
+@@ -56,8 +56,14 @@
+ 
+ #if !defined(WIN32) && !defined(_WIN32_WCE) && !defined(__arc__)
+ #define _GNU_SOURCE
++#if defined(HAVE_NBCOMPAT_H)
++#include <nbcompat/config.h>	/* needed for the other headers */
++#include <nbcompat/cdefs.h>	/* needed for the other headers */
++#include <nbcompat/getopt.h>
++#else
+ #include <getopt.h>
+ #endif
++#endif
+ 
+ #define PROG_NAME "sipreg"
+ #define PROG_VER  "1.0"
