@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/19 20:15:42 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/22 09:10:08 gschwarz Exp $
 
 DISTNAME=	aeneas-1.2
 CATEGORIES=	misc
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/aeneas/
 COMMENT=	3D Monte Carlo simulation software for submicron semiconductor devices
+
+USE_FEATURES+=	getopt_long
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
