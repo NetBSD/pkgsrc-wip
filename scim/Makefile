@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2009/11/22 12:38:30 obache Exp $
 #
 
 DISTNAME=		scim-1.4.9
@@ -30,7 +30,7 @@ GNU_CONFIGURE=		yes
 #CFLAGS+=		-Wextra
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-GTK2_IMMODULES=		yes
+CONFIGURE_ARGS+=	--disable-gtk2-immodule
 
 EGDIR=			${PREFIX}/share/examples/scim
 CONF_FILES=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
@@ -43,7 +43,7 @@ PTHREAD_AUTO_VARS=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/modules.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt=	build
 .include "../../x11/libXt/buildlink3.mk"
