@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/23 13:40:57 koifren Exp $
+
+This triggers an error in mono. I should fix that instead
+
+--- src/core/MonoDevelop.Core/MonoDevelop.Core.Assemblies/MonoTargetRuntime.cs	2009-10-07 18:35:23.000000000 +0300
++++ src/core/MonoDevelop.Core/MonoDevelop.Core.Assemblies/MonoTargetRuntime.cs	2009-11-23 15:26:12.000000000 +0200
+@@ -164,7 +164,7 @@
+ 		
+ 		protected override void OnInitialize ()
+ 		{
+-			foreach (string pcfile in GetAllPkgConfigFiles ()) {
++/*			foreach (string pcfile in GetAllPkgConfigFiles ()) {
+ 				try {
+ 					ParsePCFile (pcfile);
+ 				}
+@@ -173,8 +173,9 @@
+ 				}
+ 			}
+ 			PcFileCache.Save ();
++*/
+ 		}
+-
++/*
+ 		private void ParsePCFile (string pcfile)
+ 		{
+ 			// Don't register the package twice
+@@ -186,7 +187,7 @@
+ 			if (pinfo.IsValidPackage)
+ 				RuntimeAssemblyContext.RegisterPackage (pinfo, false);
+ 		}
+-
++*/
+ 		
+ 		public static TargetRuntime RegisterRuntime (MonoRuntimeInfo info)
+ 		{
