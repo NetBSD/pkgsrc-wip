@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/18 14:33:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/23 09:05:12 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc3
@@ -14,6 +14,7 @@ COMMENT=	SPADE is an agent platform based on the XMPP/Jabber technology
 DEPENDS+=	${PYPKGPREFIX}-psyco>=1.6:../../lang/py-psyco
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
+DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 
 PKG_DESTDIR_SUPPORT=	user-destdir
