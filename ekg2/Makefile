@@ -1,22 +1,26 @@
-# $NetBSD: Makefile,v 1.6 2008/03/15 16:24:55 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/23 22:30:12 shindenmorr Exp $
 #
 
-DISTNAME=	ekg2-0.1.1
-PKGREVISION=	1
+DISTNAME=	ekg2-20091123
 CATEGORIES=	chat
-MASTER_SITES=	http://pl.ekg2.org/ \
-		http://pl.ekg2.org/archive/
+MASTER_SITES=	http://pl.ekg2.org/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shinden@linux.pl
 HOMEPAGE=	http://pl.ekg2.org/
-COMMENT=	Multi-protocol communicator - gg, jabber, irc
+COMMENT=	Multiplatform, multiprotocol, plugin-based instant messanger
+#LICENSE=	# TODO: (see mk/license.mk)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+
+PKG_DESTDIR_SUPPORT=	destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl gmake
 CONFIGURE_ARGS+=	--enable-shared \
 			--disable-static \
 			--enable-dynamic \
@@ -32,7 +36,7 @@ CONFIGURE_ARGS+=	--enable-shared \
 			--with-sqlite3 \
 			--without-gpg \
 			--without-logsoracle \
-			--with-curses=${BUILDLINK_PREFIX.ncurses}
+			--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 
 .include "options.mk"
 .include "../../devel/ncurses/buildlink3.mk"
