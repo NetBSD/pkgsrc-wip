@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3689 2009/11/22 11:03:59 roelants Exp $
+# $Id: Makefile,v 1.3690 2009/11/23 10:12:46 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -965,7 +965,6 @@ SUBDIR+=	kpathsea
 SUBDIR+=	kplayer
 SUBDIR+=	krusader
 SUBDIR+=	kstart
-SUBDIR+=	ktorrent3
 SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
