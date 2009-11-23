@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/11/22 12:38:30 obache Exp $
+# $NetBSD: Makefile,v 1.14 2009/11/23 11:37:54 obache Exp $
 #
 
 DISTNAME=		scim-1.4.9
@@ -26,8 +26,6 @@ PKGCONFIG_OVERRIDE+=	scim-x11utils.pc.in
 PKGCONFIG_OVERRIDE+=	scim.pc.in
 
 GNU_CONFIGURE=		yes
-
-#CFLAGS+=		-Wextra
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-gtk2-immodule

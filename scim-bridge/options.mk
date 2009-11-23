@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/05/12 08:50:11 obache Exp $
+# $NetBSD: options.mk,v 1.3 2009/11/23 11:37:54 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scim-bridge
@@ -10,11 +10,12 @@ PLIST_VARS+=	gtk qt
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk)
+GTK2_IMMODULES=		yes
 .include "../../x11/gtk2/modules.mk"
 CONFIGURE_ARGS+=	--enable-gtk2-immodule
 PLIST.gtk=		yes
 .else
-CONFIGURE_ARGS+=	--disable-gtk2-immodule
+CONFIGURE_ARGS+=	--enable-gtk2-immodule=no
 .endif
 
 #.if !empty(PKG_OPTIONS:Mqt3)

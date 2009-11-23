@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/14 13:52:13 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/23 11:37:54 obache Exp $
 #
 
 DISTNAME=		scim-fcitx.3.1.1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.scim-im.org/
 COMMENT=		Fcitx ported to SCIM
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

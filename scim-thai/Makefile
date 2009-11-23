@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/23 11:37:54 obache Exp $
 #
 
 DISTNAME=	scim-thai-0.1.1
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+USE_SCIM_GTKUTILS=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libthai/buildlink3.mk"

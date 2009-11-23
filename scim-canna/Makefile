@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/14 13:45:31 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/11/23 11:37:54 obache Exp $
 #
 
 DISTNAME=		scim-canna-1.0.1
@@ -16,6 +16,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		yes
+
+USE_SCIM_GTKUTILS=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/canna-lib/buildlink3.mk"
