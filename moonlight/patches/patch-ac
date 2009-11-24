@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+--- src/debug.cpp.orig	2009-11-24 19:11:22.000000000 +0200
++++ src/debug.cpp	2009-11-24 19:12:47.000000000 +0200
+@@ -307,6 +307,9 @@
+ char* 
+ get_stack_trace_prefix (const char* prefix)
+ {
++#ifdef __NetBSD__
++	return "No stack trace on this platform yet";
++#else
+ 	int address_count;
+ 	gpointer ip;
+ 	int total_length = 0;
+@@ -352,6 +355,7 @@
+ 	}
+ 	
+ 	return result;
++#endif
+ }
+ 
+ void

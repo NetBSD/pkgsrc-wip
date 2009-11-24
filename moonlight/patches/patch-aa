@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+--- configure.orig	2009-11-24 19:03:28.000000000 +0200
++++ configure	2009-11-24 19:05:25.000000000 +0200
+@@ -24223,6 +24223,10 @@
+                 OSTYPE=linux
+ 		CODECS_OS_SUPPORTED="yes"
+                 ;;
++    *netbsd*)
++		OSTYPE=netbsd
++		CODECS_OS_SUPPORTED="yes"
++		;;
+ esac
+ 
+ if test ${ARCH} = unknown; then

@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+--- src/codec-url.h.orig	2009-11-24 19:19:43.000000000 +0200
++++ src/codec-url.h	2009-11-24 19:20:14.000000000 +0200
+@@ -13,13 +13,11 @@
+ #ifndef __CODEC_URL_H__
+ #define __CODEC_URL_H__
+ 
+-#if defined (__linux__)
+ #  if defined (__i386__)
+ #    define CODEC_URL "http://go.microsoft.com/fwlink/?LinkId=133186"
+ #  endif
+ #  if defined (__x86_64__)
+ #    define CODEC_URL "http://go.microsoft.com/fwlink/?LinkId=133816"
+ #  endif
+-#endif
+ 
+ #endif

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+
+SHA1 (moon-1.0.1.tar.bz2) = caaf0a75c0d385477d97107190adcb771d1d4e27
+RMD160 (moon-1.0.1.tar.bz2) = 5deb30d777d5d81b256c7f926e2f6aec53ee66ec
+Size (moon-1.0.1.tar.bz2) = 8812587 bytes
+SHA1 (patch-aa) = 8533edd2213e8e6c3abd86c9088f497b931fb3a4
+SHA1 (patch-ab) = d8de099dfba3481703cdd33d5dbb913b8c6c391f
+SHA1 (patch-ac) = 51d5a1b7bc09c219d9c09149cbd8cc92180545a5
+SHA1 (patch-ad) = 7aaf939cd472c06111e6afd8eaf30ea2ca0cb6f1

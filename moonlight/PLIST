@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+bin/mopen1
+lib/libmoon.la
+lib/moon/plugin/README
+lib/moon/plugin/libmoonloader.la
+lib/moon/plugin/libmoonplugin.la
+lib/moon/plugin/libmoonplugin-ff3bridge.la
