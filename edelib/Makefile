@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 15:45:52 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/24 16:12:12 christtrekker Exp $
 #
 
 DISTNAME=	edelib-2.0-beta
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 WRKSRC=		${WRKDIR}/edelib-2.0-beta
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config jam
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	edelib-dbus.pc.in
