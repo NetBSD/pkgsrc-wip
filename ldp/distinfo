@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/04/19 07:40:06 koifren Exp $
-
-SHA1 (ldp-0.1.3.tar.gz) = 209d075b2fe4031ed0b0154f1330ac3f33cd0f6b
-RMD160 (ldp-0.1.3.tar.gz) = fa95beda2f06054fdcd245b05344d827bd643a7e
-Size (ldp-0.1.3.tar.gz) = 26589 bytes
