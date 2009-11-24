@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3693 2009/11/24 12:24:58 jihbed Exp $
+# $Id: Makefile,v 1.3694 2009/11/24 14:50:58 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1751,6 +1751,7 @@ SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-chm
+SUBDIR+=	py-clonedigger
 SUBDIR+=	py-clutter
 SUBDIR+=	py-configobj
 SUBDIR+=	py-coverage
