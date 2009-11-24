@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/24 16:12:12 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/24 16:31:50 christtrekker Exp $
 #
 
 DISTNAME=	edelib-2.0-beta
@@ -19,5 +19,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	edelib-dbus.pc.in
 PKGCONFIG_OVERRIDE+=	edelib-gui.pc.in
 PKGCONFIG_OVERRIDE+=	edelib.pc.in
+
+BUILD_DEPENDS+=	jam>=2.0:../../devel/jam
 
 .include "../../mk/bsd.pkg.mk"
