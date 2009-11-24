@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3692 2009/11/23 12:24:41 obache Exp $
+# $Id: Makefile,v 1.3693 2009/11/24 12:24:58 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -820,6 +820,7 @@ SUBDIR+=	hu-go
 SUBDIR+=	hunspell-ar
 SUBDIR+=	hunspell-it_IT
 SUBDIR+=	hydrogen-current
+SUBDIR+=	hyena
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
 SUBDIR+=	i3
@@ -1604,6 +1605,7 @@ SUBDIR+=	pdb2ldif
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfedit
 SUBDIR+=	pdftk
+SUBDIR+=	pdfmod
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
