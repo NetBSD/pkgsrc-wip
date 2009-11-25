@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/09/10 05:40:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/11/25 11:56:07 obache Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -50,8 +50,8 @@ cyrus/bin/quota
 cyrus/bin/reconstruct
 cyrus/bin/rehash
 cyrus/bin/sievec
-cyrus/bin/smmapd
 cyrus/bin/sieved
+cyrus/bin/smmapd
 cyrus/bin/squatter
 cyrus/bin/sync_client
 cyrus/bin/sync_reset
@@ -120,6 +120,7 @@ man/man8/cvt_cyrusdb.8
 man/man8/cyr_dbtool.8
 man/man8/cyr_df.8
 man/man8/cyr_expire.8
+man/man8/cyr_synclog.8
 man/man8/cyrus-deliver.8
 man/man8/cyrus-fetchnews.8
 man/man8/cyrus-idled.8
@@ -130,7 +131,6 @@ man/man8/cyrus-nntpd.8
 man/man8/cyrus-notifyd.8
 man/man8/cyrus-pop3d.8
 man/man8/cyrus-quota.8
-man/man8/cyr_synclog.8
 man/man8/fud.8
 man/man8/ipurge.8
 man/man8/make_md5.8
