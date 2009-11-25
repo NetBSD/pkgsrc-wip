@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/11/25 12:02:32 obache Exp $
+# $NetBSD: Makefile,v 1.22 2009/11/25 12:10:50 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.15
 CATEGORIES=	mail
@@ -66,7 +66,7 @@ PKG_OPTIONS+=	gssapi
 
 .if !empty(PKG_OPTIONS:Mkerberos4)
 .  if exists(/usr/include/kerberosIV/krb.h)
-CRYPTO+=		uses Kerberos encryption code
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-krb=/usr
 .  endif
 .elif !empty(PKG_OPTIONS:Mgssapi)
