@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3698 2009/11/25 10:39:46 jihbed Exp $
+# $Id: Makefile,v 1.3699 2009/11/25 10:56:08 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1867,6 +1867,7 @@ SUBDIR+=	py-willow
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xlrd
+SUBDIR+=	py-xmiparser 
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
