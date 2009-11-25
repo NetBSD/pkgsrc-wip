@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/24 21:20:32 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/25 17:00:39 koifren Exp $
 
 DISTNAME=	moon-1.0.1
 CATEGORIES=	multimedia
@@ -20,6 +20,9 @@ CONFIGURE_ARGS=			--with-cairo=system
 USE_LANGUAGES=	c c++
 USE_TOOLS=	bash gmake pkg-config
 USE_LIBTOOL=	yes
+
+BUILDLINK_TRANSFORM+=\
+  opt:-lxpcomglue_s:${PREFIX}/lib/xulrunner/libxpcomglue_s.a
 
 ONLY_FOR_PLATFORM=	Linux-*-i386 Linux-*-x86_64 NetBSD-*-i386 NetBSD-*-x86_64
 
