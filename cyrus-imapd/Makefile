@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/09/10 05:40:12 obache Exp $
+# $NetBSD: Makefile,v 1.21 2009/11/25 12:02:32 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.15
 CATEGORIES=	mail
@@ -31,12 +31,12 @@ CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
-FILES_SUBST+=		CYRUS_USER=${CYRUS_USER:Q}
-FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP:Q}
+FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
+FILES_SUBST+=		CYRUS_GROUP=${CYRUS_GROUP}
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER:Q}
-CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
+CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/cyrus-master.pid
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--with-krb=/usr
 .  endif
 .elif !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
 GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
@@ -109,29 +109,29 @@ CONFIGURE_ARGS+=	--without-zephyr
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 db3
 .  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDBBASE:Q}
-CONFIGURE_ENV+=		BDB_TYPE=${BDB_TYPE:Q}
+CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
+CONFIGURE_ENV+=		BDB_TYPE=${BDB_TYPE}
 .else
 CONFIGURE_ARGS+=	--without-bdb
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q}
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 .else
 CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX:Q}
+CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX}
 .else
 CONFIGURE_ARGS+=	--without-pgsql
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
 .  include "../../databases/sqlite3/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3:Q}
+CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3}
 .else
 CONFIGURE_ARGS+=	--without-sqlite
 .endif
