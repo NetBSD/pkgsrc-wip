@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/11/25 07:53:00 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -100,6 +100,7 @@ ${PYSITELIB}/trac/htdocs/css/trac.css
 ${PYSITELIB}/trac/htdocs/css/wiki.css
 ${PYSITELIB}/trac/htdocs/desc.png
 ${PYSITELIB}/trac/htdocs/dots.gif
+${PYSITELIB}/trac/htdocs/download.png
 ${PYSITELIB}/trac/htdocs/draft.png
 ${PYSITELIB}/trac/htdocs/edit_toolbar.png
 ${PYSITELIB}/trac/htdocs/editedticket.png
@@ -239,6 +240,9 @@ ${PYSITELIB}/trac/tests/functional/better_twill.pyo
 ${PYSITELIB}/trac/tests/functional/compat.py
 ${PYSITELIB}/trac/tests/functional/compat.pyc
 ${PYSITELIB}/trac/tests/functional/compat.pyo
+${PYSITELIB}/trac/tests/functional/svntestenv.py
+${PYSITELIB}/trac/tests/functional/svntestenv.pyc
+${PYSITELIB}/trac/tests/functional/svntestenv.pyo
 ${PYSITELIB}/trac/tests/functional/testcases.py
 ${PYSITELIB}/trac/tests/functional/testcases.pyc
 ${PYSITELIB}/trac/tests/functional/testcases.pyo
@@ -410,6 +414,9 @@ ${PYSITELIB}/trac/versioncontrol/svn_authz.pyo
 ${PYSITELIB}/trac/versioncontrol/svn_fs.py
 ${PYSITELIB}/trac/versioncontrol/svn_fs.pyc
 ${PYSITELIB}/trac/versioncontrol/svn_fs.pyo
+${PYSITELIB}/trac/versioncontrol/svn_prop.py
+${PYSITELIB}/trac/versioncontrol/svn_prop.pyc
+${PYSITELIB}/trac/versioncontrol/svn_prop.pyo
 ${PYSITELIB}/trac/versioncontrol/templates/browser.html
 ${PYSITELIB}/trac/versioncontrol/templates/changeset.html
 ${PYSITELIB}/trac/versioncontrol/templates/diff_form.html
@@ -508,6 +515,7 @@ ${PYSITELIB}/trac/wiki/default-pages/TracInterfaceCustomization
 ${PYSITELIB}/trac/wiki/default-pages/TracLinks
 ${PYSITELIB}/trac/wiki/default-pages/TracLogging
 ${PYSITELIB}/trac/wiki/default-pages/TracModPython
+${PYSITELIB}/trac/wiki/default-pages/TracModWSGI
 ${PYSITELIB}/trac/wiki/default-pages/TracNavigation
 ${PYSITELIB}/trac/wiki/default-pages/TracNotification
 ${PYSITELIB}/trac/wiki/default-pages/TracPermissions
@@ -527,7 +535,6 @@ ${PYSITELIB}/trac/wiki/default-pages/TracTimeline
 ${PYSITELIB}/trac/wiki/default-pages/TracUnicode
 ${PYSITELIB}/trac/wiki/default-pages/TracUpgrade
 ${PYSITELIB}/trac/wiki/default-pages/TracWiki
-${PYSITELIB}/trac/wiki/default-pages/WikiMacros
 ${PYSITELIB}/trac/wiki/default-pages/TracWorkflow
 ${PYSITELIB}/trac/wiki/default-pages/WikiDeletePage
 ${PYSITELIB}/trac/wiki/default-pages/WikiFormatting
