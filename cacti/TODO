@@ -1,2 +1,3 @@
 - Maybe clean up the installation, move rra, log and docs dirs
 - Fix defaults for localhost linux_memory.pl -> bsd_memory.pl
+- Fix security issue: http://secunia.com/advisories/37481/
