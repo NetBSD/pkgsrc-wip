@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/08 05:36:12 obache Exp $
-lib/scim-1.0/1.4.0/IMEngine/chewing.la
-lib/scim-1.0/1.4.0/SetupUI/chewing-imengine-setup.la
-share/locale/nl/LC_MESSAGES/scim-chewing.mo
-share/locale/zh_TW/LC_MESSAGES/scim-chewing.mo
-share/scim/icons/scim-chewing-swap-colors.png
-share/scim/icons/scim-chewing.png

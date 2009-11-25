@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3694 2009/11/24 14:50:58 jihbed Exp $
+# $Id: Makefile,v 1.3695 2009/11/25 00:31:52 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1955,26 +1955,6 @@ SUBDIR+=	sara
 SUBDIR+=	sbcl
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
-SUBDIR+=	scim
-SUBDIR+=	scim-anthy
-SUBDIR+=	scim-array
-SUBDIR+=	scim-bridge
-SUBDIR+=	scim-canna
-SUBDIR+=	scim-ccinput
-SUBDIR+=	scim-chewing
-SUBDIR+=	scim-fcitx
-SUBDIR+=	scim-hangul
-SUBDIR+=	scim-inputpad
-SUBDIR+=	scim-m17n
-SUBDIR+=	scim-pinyin
-SUBDIR+=	scim-prime
-SUBDIR+=	scim-sinhala
-SUBDIR+=	scim-skk
-SUBDIR+=	scim-tables
-SUBDIR+=	scim-thai
-SUBDIR+=	scim-tomoe
-SUBDIR+=	scim-uim
-SUBDIR+=	scim-unikey
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scmail

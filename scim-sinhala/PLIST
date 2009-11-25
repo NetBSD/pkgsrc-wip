@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/08/08 05:36:12 obache Exp $
-lib/scim-1.0/1.4.0/IMEngine/sinhala.la
-share/locale/ja/LC_MESSAGES/scim-sinhala.mo
-share/scim/icons/scim-sinhala.png

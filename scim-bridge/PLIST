@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/08 05:36:12 obache Exp $
-bin/scim-bridge
-${PLIST.gtk}lib/gtk-2.0/immodules/im-scim-bridge.la
-${PLIST.qt}qt4/plugins/inputmethods/im-scim-bridge.la

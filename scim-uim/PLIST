@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/08 05:36:13 obache Exp $
-lib/scim-1.0/1.4.0/IMEngine/uim.la
-share/scim/icons/scim-uim.png
