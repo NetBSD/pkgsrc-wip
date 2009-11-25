@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3695 2009/11/25 00:31:52 obache Exp $
+# $Id: Makefile,v 1.3696 2009/11/25 00:34:23 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -999,7 +999,6 @@ SUBDIR+=	libassa
 SUBDIR+=	libatomic_ops
 SUBDIR+=	libavc1394
 SUBDIR+=	libbtctl
-SUBDIR+=	libchewing
 SUBDIR+=	libcli
 SUBDIR+=	libcm
 SUBDIR+=	libcmt

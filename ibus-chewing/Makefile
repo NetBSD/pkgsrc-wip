@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/22 11:13:09 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/11/25 00:34:23 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.2.0.20091002-Source
@@ -34,8 +34,8 @@ CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../wip/ibus/buildlink3.mk"
-.include "../../wip/libchewing/buildlink3.mk"
 .include "../../devel/gob2/buildlink3.mk"
+.include "../../inputmethod/libchewing/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
