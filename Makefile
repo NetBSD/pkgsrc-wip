@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3697 2009/11/25 06:08:26 koifren Exp $
+# $Id: Makefile,v 1.3698 2009/11/25 10:39:46 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1796,6 +1796,7 @@ SUBDIR+=	py-kcs11
 SUBDIR+=	py-kyra
 SUBDIR+=	py-last
 SUBDIR+=	py-lib
+SUBDIR+=	py-libdisassemble
 SUBDIR+=	py-libmc
 SUBDIR+=	py-libmemcache
 SUBDIR+=	py-libmpdclient2
