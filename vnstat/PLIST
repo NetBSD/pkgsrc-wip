@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:50:44 thomasklausner Exp $
-bin/vnstat
-man/man1/vnstat.1
-share/examples/vnstat.conf
-@pkgdir var/vnstat
