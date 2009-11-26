@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/11/26 17:34:36 guigui2 Exp $
+
+SHA1 (ccxstream-1.0.15.tar.gz) = d97ac63374bf8ff6dcb77ccb89a6e92ff3e713d6
+RMD160 (ccxstream-1.0.15.tar.gz) = 01676289efe8181cb1c7c9c1340205c7adb97b3c
+Size (ccxstream-1.0.15.tar.gz) = 40384 bytes
