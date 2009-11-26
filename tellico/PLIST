@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/17 14:40:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/11/26 16:39:17 thomasklausner Exp $
 bin/tellico
 share/applications/kde4/tellico.desktop
 share/doc/kde/HTML/en/tellico/advanced.docbook
@@ -203,6 +203,7 @@ share/locale/da/LC_MESSAGES/tellico.mo
 share/locale/de/LC_MESSAGES/tellico.mo
 share/locale/el/LC_MESSAGES/tellico.mo
 share/locale/en_GB/LC_MESSAGES/tellico.mo
+share/locale/eo/LC_MESSAGES/tellico.mo
 share/locale/es/LC_MESSAGES/tellico.mo
 share/locale/et/LC_MESSAGES/tellico.mo
 share/locale/fi/LC_MESSAGES/tellico.mo
