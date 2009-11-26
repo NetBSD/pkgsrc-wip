@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3699 2009/11/25 10:56:08 jihbed Exp $
+# $Id: Makefile,v 1.3700 2009/11/26 09:15:08 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -317,6 +317,7 @@ SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	dsh
 SUBDIR+=	dssi
+SUBDIR+=	duali-data
 SUBDIR+=	dumb
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
@@ -944,6 +945,7 @@ SUBDIR+=	kahakai
 SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
+SUBDIR+=	kasct-font
 SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kdiff3
@@ -1767,6 +1769,7 @@ SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-django-diario
 SUBDIR+=	py-django-tagging
+SUBDIR+=	py-duali
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-flakes
 SUBDIR+=	py-foolscap
