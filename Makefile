@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3700 2009/11/26 09:15:08 jihbed Exp $
+# $Id: Makefile,v 1.3701 2009/11/27 15:50:25 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2143,6 +2143,7 @@ SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
+SUBDIR+=	thunderbird
 SUBDIR+=	tilda
 SUBDIR+=	tilp
 SUBDIR+=	tint2
