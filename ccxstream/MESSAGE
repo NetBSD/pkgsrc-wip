@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2009/11/27 08:37:26 thomasklausner Exp $
-
-Don't forget to update mountpoints (-S statements in
-ccxstream_flags) before starting ccxstream.
-===========================================================================
