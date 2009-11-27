@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/26 17:34:36 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/11/27 08:34:34 thomasklausner Exp $
 bin/ccxstream
 bin/ccxtest
 share/doc/ccxstream/COPYRIGHT
@@ -9,3 +9,4 @@ share/doc/ccxstream/TODO
 share/doc/ccxstream/xbmsp-rc
 share/doc/ccxstream/xbmsp-xml.txt
 share/doc/ccxstream/xbmsp.txt
+share/examples/rc.d/ccxstream
