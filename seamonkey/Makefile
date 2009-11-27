@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/04 16:09:57 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2009/11/27 16:30:59 tnn2 Exp $
 #
 
 DISTNAME=	seamonkey-${SEAMONKEY_VER}.source
@@ -19,7 +19,7 @@ CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=suite
-CONFIGURE_ARGS+=	--enable-libxul
+CONFIGURE_ARGS+=	--enable-static
 
 # XXX these should be options, but for now ...
 CONFIGURE_ARGS+=	--disable-dbus --disable-gnomevfs --disable-gnomeui
