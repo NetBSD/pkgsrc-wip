@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/11/21 20:31:26 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/11/27 21:24:00 mwdavies Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -147,6 +147,7 @@ share/PolicyKit/policy/org.k3b.setup.policy
 share/applications/kde4/k3b.desktop
 share/dbus-1/interfaces/org.k3b.setup.xml
 share/dbus-1/system-services/org.k3b.setup.service
+share/examples/k3b/org.k3b.setup.conf
 share/icons/hicolor/128x128/apps/k3b.png
 share/icons/hicolor/16x16/apps/k3b.png
 share/icons/hicolor/22x22/apps/k3b.png
@@ -355,6 +356,7 @@ share/kde4/services/kcm_k3blameencoder.desktop
 share/kde4/services/kcm_k3boggvorbisencoder.desktop
 share/kde4/services/videodvd.protocol
 share/kde4/servicetypes/k3bplugin.desktop
+share/mime/packages/x-k3b.xml
 share/sounds/k3b_error1.wav
 share/sounds/k3b_success1.wav
 share/sounds/k3b_wait_media1.wav
