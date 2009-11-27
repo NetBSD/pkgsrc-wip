@@ -3,7 +3,3 @@ PREFIX/share/joomla/administrator/cache? Most likely these should be
 somewhere in /var (e.g. /var/joomla).
 
 DESTDIR support
-
-- This package has known vulnerabilities, please investigate and fix if possible
-.
- http://secunia.com/advisories/37262/

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/10/11 10:50:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/11/27 13:21:39 marttikuparinen Exp $
 share/examples/joomla/joomla.conf
 share/joomla/CHANGELOG.php
 share/joomla/COPYRIGHT.php
@@ -1766,6 +1766,9 @@ share/joomla/installation.disabled/installer/views/install/view.php
 share/joomla/installation.disabled/language/ar-DZ/ar-DZ.ini
 share/joomla/installation.disabled/language/ar-DZ/ar-DZ.xml
 share/joomla/installation.disabled/language/ar-DZ/index.html
+share/joomla/installation.disabled/language/az-AZ/az-AZ.ini
+share/joomla/installation.disabled/language/az-AZ/az-AZ.xml
+share/joomla/installation.disabled/language/az-AZ/index.html
 share/joomla/installation.disabled/language/be-BY/be-BY.ini
 share/joomla/installation.disabled/language/be-BY/be-BY.xml
 share/joomla/installation.disabled/language/be-BY/index.html
@@ -1804,6 +1807,9 @@ share/joomla/installation.disabled/language/es-ES/index.html
 share/joomla/installation.disabled/language/et-EE/et-EE.ini
 share/joomla/installation.disabled/language/et-EE/et-EE.xml
 share/joomla/installation.disabled/language/et-EE/index.html
+share/joomla/installation.disabled/language/fa-AF/fa-AF.ini
+share/joomla/installation.disabled/language/fa-AF/fa-AF.xml
+share/joomla/installation.disabled/language/fa-AF/index.html
 share/joomla/installation.disabled/language/fa-IR/fa-IR.ini
 share/joomla/installation.disabled/language/fa-IR/fa-IR.xml
 share/joomla/installation.disabled/language/fa-IR/index.html
@@ -1825,6 +1831,9 @@ share/joomla/installation.disabled/language/hr-HR/index.html
 share/joomla/installation.disabled/language/hu-HU/hu-HU.ini
 share/joomla/installation.disabled/language/hu-HU/hu-HU.xml
 share/joomla/installation.disabled/language/hu-HU/index.html
+share/joomla/installation.disabled/language/id-ID/id-ID.ini
+share/joomla/installation.disabled/language/id-ID/id-ID.xml
+share/joomla/installation.disabled/language/id-ID/index.html
 share/joomla/installation.disabled/language/index.html
 share/joomla/installation.disabled/language/is-IS/index.html
 share/joomla/installation.disabled/language/is-IS/is-IS.ini
@@ -1835,6 +1844,9 @@ share/joomla/installation.disabled/language/it-IT/it-IT.xml
 share/joomla/installation.disabled/language/ja-JP/index.html
 share/joomla/installation.disabled/language/ja-JP/ja-JP.ini
 share/joomla/installation.disabled/language/ja-JP/ja-JP.xml
+share/joomla/installation.disabled/language/km-KH/index.html
+share/joomla/installation.disabled/language/km-KH/km-KH.ini
+share/joomla/installation.disabled/language/km-KH/km-KH.xml
 share/joomla/installation.disabled/language/lo-LA/index.html
 share/joomla/installation.disabled/language/lo-LA/lo-LA.ini
 share/joomla/installation.disabled/language/lo-LA/lo-LA.xml
@@ -1858,6 +1870,9 @@ share/joomla/installation.disabled/language/nl-NL/nl-NL.xml
 share/joomla/installation.disabled/language/pl-PL/index.html
 share/joomla/installation.disabled/language/pl-PL/pl-PL.ini
 share/joomla/installation.disabled/language/pl-PL/pl-PL.xml
+share/joomla/installation.disabled/language/ps-AF/index.html
+share/joomla/installation.disabled/language/ps-AF/ps-AF.ini
+share/joomla/installation.disabled/language/ps-AF/ps-AF.xml
 share/joomla/installation.disabled/language/pt-BR/index.html
 share/joomla/installation.disabled/language/pt-BR/pt-BR.ini
 share/joomla/installation.disabled/language/pt-BR/pt-BR.xml
@@ -1879,6 +1894,9 @@ share/joomla/installation.disabled/language/si-LK/si-LK.xml
 share/joomla/installation.disabled/language/sk-SK/index.html
 share/joomla/installation.disabled/language/sk-SK/sk-SK.ini
 share/joomla/installation.disabled/language/sk-SK/sk-SK.xml
+share/joomla/installation.disabled/language/sl-SI/index.html
+share/joomla/installation.disabled/language/sl-SI/sl-SI.ini
+share/joomla/installation.disabled/language/sl-SI/sl-SI.xml
 share/joomla/installation.disabled/language/sq-AL/index.html
 share/joomla/installation.disabled/language/sq-AL/sq-AL.ini
 share/joomla/installation.disabled/language/sq-AL/sq-AL.xml
@@ -1900,6 +1918,9 @@ share/joomla/installation.disabled/language/ta-LK/ta-LK.xml
 share/joomla/installation.disabled/language/th-TH/index.html
 share/joomla/installation.disabled/language/th-TH/th-TH.ini
 share/joomla/installation.disabled/language/th-TH/th-TH.xml
+share/joomla/installation.disabled/language/tl-PH/index.html
+share/joomla/installation.disabled/language/tl-PH/tl-PH.ini
+share/joomla/installation.disabled/language/tl-PH/tl-PH.xml
 share/joomla/installation.disabled/language/tr-TR/tr-TR.ini
 share/joomla/installation.disabled/language/tr-TR/tr-TR.xml
 share/joomla/installation.disabled/language/uk-UA/index.html
@@ -2534,6 +2555,7 @@ share/joomla/media/system/images/closebox.png
 share/joomla/media/system/images/index.html
 share/joomla/media/system/images/mootree.gif
 share/joomla/media/system/images/mootree_loader.gif
+share/joomla/media/system/images/spinner.gif
 share/joomla/media/system/index.html
 share/joomla/media/system/js/calendar-setup.js
 share/joomla/media/system/js/calendar.js
@@ -3458,6 +3480,10 @@ share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/utils/index.html
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/utils/mclayer.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/utils/mctabs.js
 share/joomla/plugins/editors/tinymce/jscripts/tiny_mce/utils/validate.js
+share/joomla/plugins/editors/tinymce/templates/index.html
+share/joomla/plugins/editors/tinymce/templates/layout1.html
+share/joomla/plugins/editors/tinymce/templates/snippet1.html
+share/joomla/plugins/editors/tinymce/templates/template_list.js
 share/joomla/plugins/editors/xstandard.php
 share/joomla/plugins/editors/xstandard.xml
 share/joomla/plugins/editors/xstandard/attachmentlibrary.php
@@ -4118,11 +4144,14 @@ share/joomla/templates/rhuk_milkyway/template_thumbnail.png
 share/joomla/templates/system/component.php
 share/joomla/templates/system/css/editor.css
 share/joomla/templates/system/css/error.css
+share/joomla/templates/system/css/error_rtl.css
 share/joomla/templates/system/css/general.css
 share/joomla/templates/system/css/index.html
 share/joomla/templates/system/css/offline.css
 share/joomla/templates/system/css/offline_rtl.css
 share/joomla/templates/system/css/system.css
+share/joomla/templates/system/css/template.css
+share/joomla/templates/system/css/template_rtl.css
 share/joomla/templates/system/css/toolbar.css
 share/joomla/templates/system/error.php
 share/joomla/templates/system/html/index.html
