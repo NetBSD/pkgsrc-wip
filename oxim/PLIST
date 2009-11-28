@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+bin/oxim
+bin/oxim-agent
+bin/oxim2tab
+${PLIST.gtk}lib/gtk-2.0/immodules/gtk-im-oxim.so
+lib/liboxim.la
+${PLIST.gtk}lib/oxim/immodules/gtk-im-oxim.la
+${PLIST.chewing}lib/oxim/modules/chewing.la
+lib/oxim/modules/gen-inp-v1.la
+lib/oxim/modules/gen-inp.la
+${PLIST.unicode}lib/oxim/modules/unicode.la
+lib/oxim/panels/defaultkeyboard.conf
+lib/oxim/panels/defaultkeyboard.xpm
+lib/oxim/tables/cnscj.tab
+lib/oxim/tables/cnsphone.tab
+lib/oxim/tables/default.phr
+lib/oxim/tables/symbol.list
+man/man1/oxim.1
+share/examples/oxim/locale.list
+share/examples/oxim/oxim.conf
+share/locale/zh_CN/LC_MESSAGES/oxim.mo
+share/locale/zh_HK/LC_MESSAGES/oxim.mo
+share/locale/zh_TW/LC_MESSAGES/oxim.mo

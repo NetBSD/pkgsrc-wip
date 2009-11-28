@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+
+--- src/lib/oxim_set_locale.c.orig	2009-04-08 08:22:12.000000000 +0000
++++ src/lib/oxim_set_locale.c
+@@ -100,7 +100,7 @@ oxim_set_lc_messages(char *loc_name, cha
+ 	strncpy(loc_return, loc, loc_size);
+ #ifdef HAVE_LIBINTL_H
+     textdomain("oxim");
+-    bindtextdomain("oxim", NULL);
++    bindtextdomain("oxim", "@PREFIX@/@PKGLOCALEDIR@/locale");
+ #endif
+     return True;
+ }

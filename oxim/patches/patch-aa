@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+
+--- Makefile.in.orig	2009-10-08 05:40:54.000000000 +0000
++++ Makefile.in
+@@ -713,8 +713,6 @@ uninstall-am: uninstall-local
+ 
+ 
+ install-exec-local:
+-	$(mkinstalldirs) $(DESTDIR)/$(input_d_dir)
+-	sed 's|@OXIM_IM_MODULE_DIR@|$(IM_MODULES_DIR)|' oxim-start.sh.in > $(DESTDIR)/$(input_d_dir)/oxim
+ 	$(mkinstalldirs) $(DESTDIR)/$(mandir)/man1/
+ 	$(INSTALL_DATA) oxim.1 $(DESTDIR)/$(mandir)/man1/oxim.1
+ @ENABLE_EEEPC_TRUE@	$(mkinstalldirs) $(DESTDIR)/$(xsession_d_dir)

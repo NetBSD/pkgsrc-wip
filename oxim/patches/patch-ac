@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+
+--- src/xim/gui_menu.c.orig	2009-09-25 07:41:10.000000000 +0000
++++ src/xim/gui_menu.c
+@@ -37,6 +37,10 @@ typedef int (*func) (void);
+ #define Y_LEADING       2
+ #define KEY_SPACE	16
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
++
+ /*----------------------------------------------------------*/
+ static int menu_actived = False; /* 選單執行中 */
+ static unsigned int n_items  = 0; /* 選項數量 */
