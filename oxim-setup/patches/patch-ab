@@ -1,0 +1,64 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/utils/oxim-setup.in.orig	2009-07-01 00:29:32.000000000 +0000
++++ src/utils/oxim-setup.in
+@@ -1,41 +1,40 @@
+-#!/bin/bash
+-export TEXTDOMAIN="oxim-setup"
+-source gettext.sh
++#!/bin/sh
++TEXTDOMAIN="oxim-setup"; export TEXTDOMAIN
+ 
+-export EXTERNAL_DOWNLOAD_URL=""
++EXTERNAL_DOWNLOAD_URL=""; export EXTERNAL_DOWNLOAD_URL
+ 
++prefix=@prefix@
++exec_prefix=@exec_prefix@
+ 
+ #oxim-setup-php
+-function run_php(){
+-	#if which php && php -v|grep "cli" && php -r 'if (!extension_loaded("php-gtk")) echo (!dl("php_gtk2.so"));' ; then
+-	if which php 2>/dev/null && php -v|grep "cli" ; then
+-		#echo `php -v|grep -o 'PHP \([0-9].[0-9].[0-9]\) *'|grep -o '\([0-9].[0-9].[0-9]\)'`
+-		/usr/lib/oxim-setup/oxim-setup-php/oxim-setup 2>/dev/null && exit
++run_php(){
++	if test -x @OXIMSETUP_PHP_DIR@/oxim-setup ; then
++		@OXIMSETUP_PHP_DIR@/oxim-setup 2>/dev/null && exit
+ 	fi
+ }
+ 
+ # oxim-setup-qt3
+-function run_qt3(){
+-	if test -x /sbin/ldconfig && /sbin/ldconfig -p|grep libqt-mt ; then
+-		/usr/lib/oxim-setup/oxim-setup-qt3/oxim-setup && exit
++run_qt3(){
++	if test -x @OXIMSETUP_QT3_DIR@/oxim-setup ; then
++		@OXIMSETUP_QT3_DIR@/oxim-setup && exit
+ 	fi
+ }
+ 
+ # oxim-setup-gtk
+-function run_gtk(){ 
+-	if test -x /sbin/ldconfig && /sbin/ldconfig -p|grep gtk-x11-2.0 ; then
+-		/usr/lib/oxim-setup/oxim-setup-gtk/oxim-setup >/dev/null 2>&1 && exit
++run_gtk(){ 
++	if test -x @OXIMSETUP_GTK_DIR@/oxim-setup ; then
++		@OXIMSETUP_GTK_DIR@/oxim-setup >/dev/null 2>&1 && exit
+ 	fi
+ }
+ 
+ # oxim-setup-gambas
+-function run_gambas(){
+-	if which gbr2 && which gbx2 ; then
+-		/usr/lib/oxim-setup/oxim-setup-gambas/oxim-setup && exit
++run_gambas(){
++	if test -x @OXIMSETUP_GAMBAS_DIR@/oxim-setup ; then
++		@OXIMSETUP_GAMBAS_DIR@/oxim-setup && exit
+ 	fi
+ }
+ 
+-function runall(){
++runall(){
+ 	run_php
+ 	run_gambas
+ 	run_qt3

@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+bin/oxim-setup
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/gtkrc
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon1.png
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon2.png
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon3.png
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon4.png
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon5.png
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/icon_textview_icon6.png
+${PLIST.gtk}${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/oxim-setup
+${PLIST.gtk}lib/oxim-setup/oxim-setup-gtk/oxim-setup-glade.xml
+${PLIST.qt}lib/oxim-setup/oxim-setup-qt3/oxim-setup
+man/man1/oxim-setup.1
+share/applications/oxim-setup.desktop
+share/locale/zh_CN/LC_MESSAGES/oxim-setup.mo
+share/locale/zh_HK/LC_MESSAGES/oxim-setup.mo
+share/locale/zh_TW/LC_MESSAGES/oxim-setup.mo
+share/pixmaps/oxim-setup.png

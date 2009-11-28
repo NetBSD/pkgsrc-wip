@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/oxim-setup-qt3/common.h.orig	2008-11-10 05:54:40.000000000 +0000
++++ src/oxim-setup-qt3/common.h
+@@ -1,6 +1,6 @@
+ #include "config.h"
+ #include <libintl.h>
+-#include "oxim-setup.h"
++//#include "oxim-setup.h"
+ #include "oximtool.h"
+ 
+ #define _(string) ((trUtf8(gettext(string))).replace("_", "&"))

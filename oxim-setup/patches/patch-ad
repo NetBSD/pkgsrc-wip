@@ -1,0 +1,10 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/utils/Makefile.am.orig	2009-03-27 03:08:31.000000000 +0000
++++ src/utils/Makefile.am
+@@ -1,4 +1,4 @@
+ install-strip: install-exec-local
+ install-exec-local:
+ 	$(mkinstalldirs) $(DESTDIR)/$(bindir)/
+-	install oxim-setup $(DESTDIR)/$(bindir)/
++	$(INSTALL_SCRIPT) oxim-setup $(DESTDIR)/$(bindir)/

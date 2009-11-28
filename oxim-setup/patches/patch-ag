@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/oxim-setup-gtk-1.1.7/src/utils.c.orig	2009-09-18 01:27:35.000000000 +0000
++++ src/oxim-setup-gtk-1.1.7/src/utils.c
+@@ -218,9 +218,9 @@ const gchar* g_get_usrlib_dir(void)
+ 	if(usrlib_str==NULL)
+ 	{
+ //#if __WORDSIZE == 64
+-//	  usrlib_str = g_strdup("/usr/lib64");
++//	  usrlib_str = g_strdup("@PREFIX@/lib");
+ //#else
+-	  usrlib_str = g_strdup("/usr/lib");
++	  usrlib_str = g_strdup("@PREFIX@/lib");
+ //#endif
+ 	}
+ 	return usrlib_str;

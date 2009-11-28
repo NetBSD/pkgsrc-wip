@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/oxim-setup-qt3/main.cpp.orig	2009-04-21 03:28:26.000000000 +0000
++++ src/oxim-setup-qt3/main.cpp
+@@ -9,7 +9,7 @@
+ int main( int argc, char ** argv )
+ {
+     setlocale(LC_ALL, "");
+-    bindtextdomain("oxim-setup", "/usr/share/locale");
++    bindtextdomain("oxim-setup", "@PREFIX@/@PKGLOCALEDIR@/locale");
+     textdomain("oxim-setup");
+     
+     QApplication oxim_setup(argc, argv);

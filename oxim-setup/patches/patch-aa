@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- po/Makefile.in.in.orig	2008-11-04 00:57:35.000000000 +0000
++++ po/Makefile.in.in
+@@ -8,8 +8,8 @@
+ # Please note that the actual code of GNU gettext is covered by the GNU
+ # General Public License and is *not* in the public domain.
+ 
+-PACKAGE = @PACKAGE_GETTEXT@
+-VERSION = @VERSION_GETTEXT@
++PACKAGE = @PACKAGE_NAME@
++VERSION = @PACKAGE_VERSION@
+ 
+ SHELL = /bin/sh
+ @SET_MAKE@

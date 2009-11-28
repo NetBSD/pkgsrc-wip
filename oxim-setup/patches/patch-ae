@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/utils/Makefile.in.orig	2009-11-09 03:05:51.000000000 +0000
++++ src/utils/Makefile.in
+@@ -397,7 +397,7 @@ uninstall-am:
+ install-strip: install-exec-local
+ install-exec-local:
+ 	$(mkinstalldirs) $(DESTDIR)/$(bindir)/
+-	install oxim-setup $(DESTDIR)/$(bindir)/
++	$(INSTALL_SCRIPT) oxim-setup $(DESTDIR)/$(bindir)/
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

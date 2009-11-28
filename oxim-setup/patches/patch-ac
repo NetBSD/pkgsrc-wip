@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+
+--- src/oxim-setup-gtk-1.1.7/include/oxim_setup_gtk_global.h.orig	2009-09-30 00:11:44.000000000 +0000
++++ src/oxim-setup-gtk-1.1.7/include/oxim_setup_gtk_global.h
+@@ -16,30 +16,18 @@
+ #elif defined(INSTALLATION_LEVEL)
+ #	define GTKRC_FILEPATH (g_get_gtkrc_fp())
+ #	define GLADE_FILEPATH (g_get_glade_fp())
+-#  if __WORDSIZE == 64
+-#       define TEXTVIEW_ICON1_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon1.png")
+-#       define TEXTVIEW_ICON2_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon2.png")
+-#       define TEXTVIEW_ICON3_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon3.png")
+-#       define TEXTVIEW_ICON4_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon4.png")
+-#       define TEXTVIEW_ICON5_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon5.png")
+-#       define TEXTVIEW_ICON6_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/icon_textview_icon6.png")
+-#       define V_PIXBUF_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/Vpixbuf.png")
+-#       define N_PIXBUF_FILEPATH ("/usr/lib64/oxim-setup/oxim-setup-gtk/Npixbuf.png")
+-#  else
+-#	define TEXTVIEW_ICON1_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon1.png")
+-#	define TEXTVIEW_ICON2_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon2.png")
+-#	define TEXTVIEW_ICON3_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon3.png")
+-#	define TEXTVIEW_ICON4_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon4.png")
+-#	define TEXTVIEW_ICON5_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon5.png")
+-#	define TEXTVIEW_ICON6_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon6.png")
+-#	define V_PIXBUF_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/Vpixbuf.png")
+-#	define N_PIXBUF_FILEPATH ("/usr/lib/oxim-setup/oxim-setup-gtk/Npixbuf.png")
+-#  endif
++#	define TEXTVIEW_ICON1_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon1.png")
++#	define TEXTVIEW_ICON2_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon2.png")
++#	define TEXTVIEW_ICON3_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon3.png")
++#	define TEXTVIEW_ICON4_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon4.png")
++#	define TEXTVIEW_ICON5_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon5.png")
++#	define TEXTVIEW_ICON6_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/icon_textview_icon6.png")
++#	define V_PIXBUF_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/Vpixbuf.png")
++#	define N_PIXBUF_FILEPATH ("@PREFIX@/lib/oxim-setup/oxim-setup-gtk/Npixbuf.png")
+ #else
+ #	error no-define DEVELOPMENT_LEVEL OR INSTALLATION_LEVEL
+ #endif //DEVELOPE_LEVEL
+ 
+-#include <bits/wordsize.h>
+ #include <gtk/gtk.h>
+ //#include <glade/glade.h>
+ #include <gmodule.h>
