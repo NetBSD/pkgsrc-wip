@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3701 2009/11/27 15:50:25 tnn2 Exp $
+# $Id: Makefile,v 1.3702 2009/11/28 11:05:59 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1319,6 +1319,7 @@ SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
 SUBDIR+=	opax
+SUBDIR+=	opendesktop-fonts
 SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openal-soft
@@ -1381,6 +1382,9 @@ SUBDIR+=	outguess
 SUBDIR+=	overgod
 SUBDIR+=	owl
 SUBDIR+=	oww-nox11
+SUBDIR+=	oxim
+SUBDIR+=	oxim-filter
+SUBDIR+=	oxim-setup
 SUBDIR+=	ozymandns
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
