@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/12/09 12:24:28 yhardy Exp $
-
-If you experience font rendering problems with this package, try increasing
-the process's limit for open file descriptors by running e.g.:
-
-    $ ulimit -n 256
-
-===========================================================================
