@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/28 11:03:31 obache Exp $
+bin/zhocompose
+bin/zhorelate
+lib/oxim/filters/oxim_compose
+lib/oxim/filters/oxim_compose.xpm
+lib/oxim/filters/oxim_relate
+lib/oxim/filters/oxim_relate.xpm
+lib/oxim/filters/oxim_s2t
+lib/oxim/filters/oxim_s2t.xpm
+lib/oxim/filters/oxim_speak
+lib/oxim/filters/oxim_speak.xpm
+lib/oxim/filters/oxim_speed
+lib/oxim/filters/oxim_speed.xpm
+lib/oxim/filters/oxim_t2s
+lib/oxim/filters/oxim_t2s.xpm
+lib/oxim/filters/oxim_translate
+lib/oxim/filters/oxim_translate.xpm
+lib/oxim/filters/oxim_unicode
+lib/oxim/filters/oxim_unicode.xpm
