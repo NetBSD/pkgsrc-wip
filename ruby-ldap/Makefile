@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/19 09:00:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2009/11/29 07:59:29 obache Exp $
 
 DISTNAME=	ruby-ldap-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ldap-${VER}
@@ -20,7 +20,8 @@ RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 USE_TOOLS+=		pax
 
-.include "options.mk"
+CONFIGURE_ARGS+=	--with-openldap2
+CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 
 DOCS=		ChangeLog FAQ README TODO
 
@@ -32,5 +33,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/ldap
 	cd ${WRKSRC}/example && pax -rw -pp * ${DESTDIR}${RUBY_EXAMPLESDIR}/ldap
 
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
