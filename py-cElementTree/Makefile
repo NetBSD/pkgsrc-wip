@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/18 07:40:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/29 12:14:20 obache Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cElementTree-0
 CATEGORIES=	textproc python
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://www.python.org/
+HOMEPAGE=	http://www.effbot.org/zone/celementtree.htm
 COMMENT=	C implementation of Python ElementTree API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
