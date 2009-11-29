@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/19 20:27:11 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2009/11/29 21:35:06 gschwarz Exp $
 
 DISTNAME=	sipbomber_0.8
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -18,6 +18,8 @@ NO_CONFIGURE=	YES
 INSTALLATION_DIRS=	bin
 
 CXXFLAGS+=	-DQT_THREAD_SUPPORT -D_REENTRANT
+LIBS.SunOS+=	-lnsl -lsocket
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/sipb_main ${DESTDIR}${PREFIX}/bin/sipbomber

@@ -1,15 +1,17 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/07/13 12:46:23 gschwarz Exp $
+$NetBSD: patch-ad,v 1.2 2009/11/29 21:35:07 gschwarz Exp $
 
---- Makefile.orig	2008-07-13 11:59:59.000000000 +0200
-+++ Makefile	2008-07-13 12:05:28.000000000 +0200
-@@ -1,5 +1,5 @@
+--- Makefile.orig	2006-09-21 18:07:42.000000000 +0200
++++ Makefile	2009-11-08 21:45:22.899999000 +0100
+@@ -1,15 +1,15 @@
  #Makefile
 -CPP=c++
 +#CPP=c++
  OPT=-O
  WARN=-Wall -W -Wno-long-long -Wno-unused -ansi
  CFLAG=$(OPT) $(WARN) -DQT_THREAD_SUPPORT -D_REENTRANT
-@@ -8,8 +8,8 @@
+-LIBS=-L$(QTDIR)/lib -lqt-mt -lpthread
++LIBS+=-L$(QTDIR)/lib -lqt-mt -lpthread
+ 
  MOC=$(QTDIR)/bin/moc
  INC=-I./ -I$(QTDIR)/include -Istests/ -Ibnf/ -Icert_test
  
