@@ -1,16 +1,34 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 07:57:02 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/11/29 09:10:27 obache Exp $
 #
 
 DISTNAME=	clips-6.24
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ghg.net/clips/download/archive/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clipsrules/}
+EXTRACT_SUFX=	.tar.Z
+DISTFILES=	clips_core_source_624.tar.Z make_and_help_files_624.zip
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://www.ghg.net/clips/CLIPS.html
+HOMEPAGE=	http://clipsrules.sourceforge.net/
 COMMENT=	Tool for Building Expert Systems
+LICENSE=	public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c
 
+WRKSRC=		${WRKDIR}/clipssrc/clipssrc
+
+MAKE_FILE=	makefile.gcc
+BUILD_TARGET=	clips
+
+INSTALLATION_DIRS=	bin share/doc/clips
+
+post-extract:
+	${RUN} cd ${WRKDIR}; mv makefile.* ${WRKSRC}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/clips ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/clips.hlp ${DESTDIR}${PREFIX}/share/doc/clips
+
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
