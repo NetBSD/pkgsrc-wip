@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/29 21:08:35 jihbed Exp $
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/top_level.txt
-${PYSITELIB}/anyjson.py
-${PYSITELIB}/anyjson.pyc
-${PYSITELIB}/anyjson.pyo
