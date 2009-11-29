@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/14 04:30:57 obache Exp $
-bin/topless
-man/man1/topless.1
