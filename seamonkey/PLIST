@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/11/27 16:30:59 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/11/29 00:22:31 tnn2 Exp $
 bin/seamonkey
 lib/seamonkey/.autoreg
 lib/seamonkey/README
@@ -80,8 +80,11 @@ lib/seamonkey/components/browser.xpt
 lib/seamonkey/components/glautocomp.js
 lib/seamonkey/components/jsconsole-clhandler.js
 lib/seamonkey/components/jsmimeemitter.js
+${PLIST.gnome}lib/seamonkey/components/libdbusservice.so
 lib/seamonkey/components/libimgicon.so
 lib/seamonkey/components/libjsd.so
+${PLIST.gnome}lib/seamonkey/components/libmozgnome.so
+${PLIST.gnome}lib/seamonkey/components/libnkgnomevfs.so
 lib/seamonkey/components/libsuite.so
 lib/seamonkey/components/libxpinstall.so
 lib/seamonkey/components/mail.xpt

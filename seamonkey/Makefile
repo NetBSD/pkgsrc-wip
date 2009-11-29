@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/27 16:30:59 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2009/11/29 00:22:31 tnn2 Exp $
 #
 
 DISTNAME=	seamonkey-${SEAMONKEY_VER}.source
@@ -21,22 +21,15 @@ CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
 CONFIGURE_ARGS+=	--enable-application=suite
 CONFIGURE_ARGS+=	--enable-static
 
-# XXX these should be options, but for now ...
-CONFIGURE_ARGS+=	--disable-dbus --disable-gnomevfs --disable-gnomeui
-CONFIGURE_ARGS+=	--disable-jit
-
 ALL_ENV+=		MOZILLA_PKG_NAME=seamonkey
 
-# Unfortunately seamonkey doesn't support building with external libxul-sdk
-# yet. I don't feel like replicating all of the xulrunner patches in wip,
-# so let's just reach over with a quick and dirty hack.
-# They will apply cleanly as long as xulrunner and seamonkey are based
-# on the same gecko minor release. I expect they will usually be due to the
-# way mozilla releases security updates.
-post-extract:
-	cd ${WRKSRC}/${MOZILLA_DIR} &&					\
-	  cat ${.CURDIR}/../../devel/xulrunner/patches/patch-* |	\
-	  ${TOOLS_PLATFORM.patch} -p0
+MOZILLA_PATCHES=	${.CURDIR}/../../devel/xulrunner/patches/patch-*
+pre-patch:
+	@${STEP_MSG} "Applying common mozilla patches from devel/xulrunner"
+.for i in ${MOZILLA_PATCHES}
+	${RUN} ${CAT} ${i} | ${PATCH} -s -p0 -d ${WRKSRC}/${MOZILLA_DIR} || \
+	  { ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
+.endfor
 
 pre-configure:
 	cd ${WRKSRC}/directory/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
@@ -50,5 +43,7 @@ do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
+
 .include "../../devel/xulrunner/mozilla-common.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
