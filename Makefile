@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3705 2009/11/29 07:35:07 obache Exp $
+# $Id: Makefile,v 1.3706 2009/11/29 08:13:43 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1947,7 +1947,6 @@ SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
-SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-nokogiri
 SUBDIR+=	ruby-polyglot
