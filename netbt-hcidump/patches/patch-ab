@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2009/08/18 15:26:29 plunky Exp $
+$NetBSD: patch-ab,v 1.4 2009/11/30 19:49:04 plunky Exp $
 
---- bluetooth/bluetooth.h.orig	2009-08-18 15:53:42.000000000 +0100
+--- bluetooth/bluetooth.h.orig	2009-11-30 19:29:17.000000000 +0000
 +++ bluetooth/bluetooth.h
 @@ -30,6 +30,7 @@
  extern "C" {
