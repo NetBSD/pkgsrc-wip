@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/18 07:40:07 obache Exp $
-${PYSITELIB}/_elementtree.so
+@comment $NetBSD: PLIST,v 1.2 2009/11/30 11:34:20 obache Exp $
+${PYSITELIB}/${C_MODULE_NAME}.so
