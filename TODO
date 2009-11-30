@@ -2,6 +2,7 @@ Suggested package updates
 =========================
 
 	o applewmproto-1.4.1
+	o archimedes-0.9.0
 	o argouml-0.24
 	o backintime-0.9.26
 	o bsnes-0.055
@@ -11,6 +12,7 @@ Suggested package updates
 	o cinelerra-4.1
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o desmume-0.9.5
 	o directfb-1.0.0
 	o dmxproto-2.3
 	o ecasound-2.7.0
@@ -53,7 +55,7 @@ Suggested package updates
 	o lirc-0.8.6
 	o lives-1.1.6
 	o man-1.6f
-	o meta-tracker-0.7.8
+	o meta-tracker-0.7.9
 	o mixxx-1.7.0
 	o mpich2-1.1
 	o mpgedit-0.73dev2
@@ -69,7 +71,7 @@ Suggested package updates
 	o pike-7.8.352
 	o py-PyPE-2.8.8
 	o py-gnucash-0.7.55
-	o qcomicbook-0.4.4
+	o qcomicbook-0.5.0
 	o quodlibet-2.0
 	o rdup-1.0.2
 	o rezound-0.12.3beta
