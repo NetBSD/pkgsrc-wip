@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2009/11/10 09:39:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2009/12/01 10:29:01 thomasklausner Exp $
 #
 
-DISTNAME=	digikam-1.0.0-beta6
-PKGNAME=	${DISTNAME:S/-beta/beta/}
+DISTNAME=	digikam-1.0.0-rc
+PKGNAME=	${DISTNAME:S/-rc/rc1/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
