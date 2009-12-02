@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/18 21:14:40 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2009/12/02 00:19:41 thomasklausner Exp $
 
-SHA1 (zeitgeist-0.2.0.tar.gz) = 2f77d32e73645abb0fe2d1304292bcb70554d9b2
-RMD160 (zeitgeist-0.2.0.tar.gz) = 47c8516b78384329e9675484ddc76abb7ce5fc19
-Size (zeitgeist-0.2.0.tar.gz) = 408155 bytes
+SHA1 (zeitgeist-0.3.0.tar.gz) = 06152ccbddd8ab1c96192e17164fc4e68ff3793f
+RMD160 (zeitgeist-0.3.0.tar.gz) = 5db8fe83bb5dbd97db5359771d6c7c2b0e213f74
+Size (zeitgeist-0.3.0.tar.gz) = 236731 bytes

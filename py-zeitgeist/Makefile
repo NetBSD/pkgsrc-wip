@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/02 00:19:41 thomasklausner Exp $
 #
 
-DISTNAME=	zeitgeist-0.2.0
+DISTNAME=	zeitgeist-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://edge.launchpad.net/zeitgeist/0.2/0.2/+download/
+MASTER_SITES=	http://edge.launchpad.net/zeitgeist/0.3/0.3.0/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/zeitgeist/
@@ -23,6 +23,7 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool
 PY_PATCHPLIST=	yes
 
+# https://bugs.launchpad.net/bugs/401199
 REPLACE_PYTHON=	zeitgeist-daemon zeitgeist-datahub
 
 .include "../../lang/python/application.mk"
