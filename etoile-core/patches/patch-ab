@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2009/12/02 23:09:55 christtrekker Exp $
+--- Frameworks/EtoileFoundation/Source/ETUUID.m.orig	2009-03-17 08:18:26.000000000 -0500
++++ Frameworks/EtoileFoundation/Source/ETUUID.m	2009-11-10 11:15:39.000000000 -0600
+@@ -15,7 +15,7 @@
+ // time and pid to seed the random number generator.
+ #if defined(__FreeBSD__) || defined(__OpenBSD) || defined(__DragonFly__)
+ #define INITRANDOM() srandomdev()
+-#elif defined(__linux__)
++#else
+ #include <sys/time.h>
+ #include <time.h>
+ #include <sys/types.h>
+@@ -23,6 +23,7 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <errno.h>
++#if defined(__linux__)
+ /** Returns a strong random number which can be used as a seed for srandom().
+     This random number is obtained from Linux entropy pool through /dev/random.
+     Unlike /dev/urandom, /dev/random blocks when the entropy estimate isn't 
+@@ -83,6 +84,7 @@
+ }
+ #define INITRANDOM() ETSRandomDev()
+ #endif
++#endif
+ #import "Macros.h"
+ 
+ 
