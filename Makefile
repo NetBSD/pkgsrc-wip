@@ -1,8 +1,4 @@
-<<<<<<< Makefile
-# $Id: Makefile,v 1.3711 2009/12/02 13:52:34 fhajny Exp $
-=======
-# $Id: Makefile,v 1.3711 2009/12/02 13:52:34 fhajny Exp $
->>>>>>> 1.3706
+# $Id: Makefile,v 1.3712 2009/12/02 15:17:50 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -417,6 +413,7 @@ SUBDIR+=	filelight
 SUBDIR+=	filepp
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
+SUBDIR+=	firefox
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firehose
 SUBDIR+=	fish
@@ -2359,6 +2356,7 @@ SUBDIR+=	xspread
 SUBDIR+=	xtags
 SUBDIR+=	xtrace
 SUBDIR+=	xtrlock
+SUBDIR+=	xulrunner
 SUBDIR+=	xvmware
 SUBDIR+=	xwelltris
 SUBDIR+=	xxdiff
