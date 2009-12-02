@@ -1,7 +1,7 @@
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3710 2009/12/02 13:50:29 fhajny Exp $
+# $Id: Makefile,v 1.3711 2009/12/02 13:52:34 fhajny Exp $
 =======
-# $Id: Makefile,v 1.3710 2009/12/02 13:50:29 fhajny Exp $
+# $Id: Makefile,v 1.3711 2009/12/02 13:52:34 fhajny Exp $
 >>>>>>> 1.3706
 #
 
@@ -1954,7 +1954,6 @@ SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-ming
-SUBDIR+=	ruby-polyglot
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-treetop
