@@ -1,4 +1,12 @@
-# $Id: Makefile,v 1.3712 2009/12/02 15:17:50 tnn2 Exp $
+<<<<<<< Makefile
+<<<<<<< Makefile
+# $Id: Makefile,v 1.3713 2009/12/03 20:17:48 jihbed Exp $
+=======
+# $Id: Makefile,v 1.3713 2009/12/03 20:17:48 jihbed Exp $
+>>>>>>> 1.3706
+=======
+# $Id: Makefile,v 1.3713 2009/12/03 20:17:48 jihbed Exp $
+>>>>>>> 1.3712
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -231,6 +239,7 @@ SUBDIR+=	converttomp3
 SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	couchdb
+SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
@@ -394,6 +403,7 @@ SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
 SUBDIR+=	eventlog
 SUBDIR+=	evilvte
+SUBDIR+=	evolution-couchdb
 SUBDIR+=	ewl
 SUBDIR+=	exact-image
 SUBDIR+=	expiretable
@@ -1762,6 +1772,7 @@ SUBDIR+=	py-chm
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-clutter
 SUBDIR+=	py-configobj
+SUBDIR+=	py-couchdb
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cryptoidlib
 SUBDIR+=	py-cscope
