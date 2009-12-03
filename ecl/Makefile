@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/10/28 22:19:47 asau Exp $
+# $NetBSD: Makefile,v 1.30 2009/12/03 19:13:09 asau Exp $
 #
 
-DISTNAME=		ecl-9.10.2
-PKGNAME=		ecl-9.10.99
+DISTNAME=		ecl-9.12.2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
@@ -22,8 +21,6 @@ CVS_MODULE.ecl=		ecl
 # CVS_REPOSITORIES+=	ecl-test
 # CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
 # CVS_MODULE.ecl-test=	ecl-test
-
-WRKSRC=			${WRKDIR}/ecl
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -52,12 +49,19 @@ SUBST_SED.fix-libdir=		-e '/^ecldir=/s|^.*$$|ecldir="$${libdir}/${PKGNAME_NOREV}
 PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
 		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
 
-# Make package version change to come in effect:
-USE_TOOLS+=		autoconf
-pre-configure:
-	cd ${WRKSRC}/src && autoconf
+## CVS part:
 
-.include "../../wip/mk/cvs-package.mk"
+# PKGNAME=		ecl-9.12.99
+# WRKSRC=			${WRKDIR}/ecl
+
+# Make package version change to come in effect:
+# USE_TOOLS+=		autoconf
+# pre-configure:
+# 	cd ${WRKSRC}/src && autoconf
+
+# CVS_ROOT.ecl=	/home/asau/mirr/ecls
+
+# .include "../../wip/mk/cvs-package.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
