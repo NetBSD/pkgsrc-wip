@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2009/08/29 13:29:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/03 00:49:39 jihbed Exp $
 #
 
-DISTNAME=	bleachbit-0.6.3
+DISTNAME=	bleachbit-0.7.2
 CATEGORIES=	sysutils python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/bleachbit/bleachbit/0.6.3/
+MASTER_SITES=	http://garr.dl.sourceforge.net/project/bleachbit/bleachbit/0.7.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bleachbit.sourceforge.net/
 COMMENT=	Bleachbit is a privacy and cleaning tool
 #LICENSE=	# TODO: (see mk/license.mk)
-
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
