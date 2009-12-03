@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/03 20:10:22 jihbed Exp $
+include/couchdb-glib-1.0/couchdb-document-contact.h
+include/couchdb-glib-1.0/couchdb-glib.h
+include/couchdb-glib-1.0/couchdb-types.h
+lib/libcouchdb-glib-1.0.la
+lib/pkgconfig/couchdb-glib-1.0.pc
