@@ -1,26 +1,33 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/03 10:38:10 jihbed Exp $
+#
 
-DISTNAME=	jakarta-log4j-1.2.8
+DISTNAME=	logging-log4j-1.3alpha-8
+PKGNAME=		jakarta-log4j-1.3a-8
 CATEGORIES=	www
-MASTER_SITES?=	http://logging.apache.org/log4j/
+MASTER_SITES=	http://archive.apache.org/dist/logging/log4j/1.3alpha-8/
 
 MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://logging.apache.org/log4j/docs/
 COMMENT=	Logging facility for Java
+#LICENSE=	# TODO: (see mk/license.mk)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_JAVA=	run
 USE_TOOLS+=	pax
 
+USE_LANGUAGES=	c++
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/dist/lib/log4j-1.2.8.jar ${PREFIX}/lib/java/log4j.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jakarta-log4j
-	cd ${WRKSRC}/docs && pax -rwpe . ${PREFIX}/share/doc/java/jakarta-log4j
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/java/jakarta-log4j/COPYRIGHT
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/jakarta-log4j
-	cd ${WRKSRC}/examples && pax -rwpe . ${PREFIX}/share/examples/java/jakarta-log4j
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/lib/log4j-all-1.3alpha-8.jar ${DESTDIR}${PREFIX}/lib/java/log4j.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java/jakarta-log4j
+	cd ${WRKSRC}/docs && pax -rwpe . ${DESTDIR}${PREFIX}/share/doc/java/jakarta-log4j
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.txt ${DESTDIR}${PREFIX}/share/doc/java/jakarta-log4j/COPYRIGHT
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/java/jakarta-log4j
+	cd ${WRKSRC}/examples && pax -rwpe . ${DESTDIR}${PREFIX}/share/examples/java/jakarta-log4j
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
