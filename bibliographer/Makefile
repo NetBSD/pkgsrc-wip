@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/11 13:33:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/03 08:55:36 jihbed Exp $
 #
 
 DISTNAME=	bibliographer-0.1.3
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://launchpad.net/bibliographer/trunk/0.1.3/+download/
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://launchpad.net/bibliographer/trunk/0.1.3/+download/
+HOMEPAGE=	https://launchpad.net/bibliographer
 COMMENT=	Bibliographer is a bibtex editor written in Gtk\# and Mono
 #LICENSE=	# TODO: (see mk/license.mk)
 
