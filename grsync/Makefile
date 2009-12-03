@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/07/07 21:50:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/03 08:37:59 jihbed Exp $
 #
 
-DISTNAME=	grsync-0.9.1
-CATEGORIES=	sysutils
+DISTNAME=	grsync-0.9.3
+CATEGORIES=	wip
 MASTER_SITES=	http://www.opbyte.it/release/
 
 MAINTAINER=	pkgsrc@blackmouse.biz
