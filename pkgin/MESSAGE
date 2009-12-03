@@ -1,34 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2009/06/05 22:30:51 imilh Exp $
+$NetBSD: MESSAGE,v 1.5 2009/12/03 12:33:31 imilh Exp $
 
 First steps before using pkgin.
 
-. Modify ${PREFIX}/etc/pkgin/repositories.conf to suit your platform
+. Modify ${PKG_SYSCONFDIR}/pkgin/repositories.conf to suit your platform
 . Initialize the database :
 
 	# pkgin update
-
-***************************************************************************
-
-WARNING PKGIN < 20090516 USERS
-
-pkgin's database format has changed, follow those simple steps in
-order to restore your keepable packages list :
-
-	# pkgin show-keep | cut -d' ' -f1 > keep.list
-
-Delete your current database
-
-	# rm -rf /var/db/pkgin
-
-Update pkgin's database
-
-	# pkgin update
-
-Record your keepable packages again
-
-	# for pkg in `cat keep.list`; do pkgin keep $pkg; done
-
-***************************************************************************
 
 ===========================================================================

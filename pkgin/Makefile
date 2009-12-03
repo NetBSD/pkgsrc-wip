@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2009/06/08 10:22:11 imilh Exp $
+# $NetBSD: Makefile,v 1.25 2009/12/03 12:33:31 imilh Exp $
 #
 
-DISTNAME=		pkgin-20090608
+DISTNAME=		pkgin-20091203
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://imil.net/NetBSD/
 
@@ -16,24 +16,24 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/repositories.conf.example		\
 			${PKG_SYSCONFDIR}/${PKGBASE}/repositories.conf
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}			\
-			${PKG_SYSCONFDIR}/${PKGBASE}
+OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
 WRKSRC=			${WRKDIR}/pkgin
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Adjusting path.
-SUBST_FILES.path=	Makefile actions.c pkgin.1
-SUBST_SED.path=		-e "s|/usr/pkg|${PREFIX}|g"
+SUBST_FILES.path=	Makefile.in actions.c pkgin.1
+SUBST_SED.path=		-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g"
+SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
+SUBST_SED.path+=	-e "s|/var|${VARBASE}|g"
 
-USE_BSD_MAKEFILE=		yes
-USE_FEATURES=			nbcompat
+GNU_CONFIGURE=		yes
+USE_FEATURES=		nbcompat
 
 NBCOMPAT_CONFIGURE_ARGS+=	--enable-db
-
-.include "options.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgin ${DESTDIR}${PREFIX}/bin
