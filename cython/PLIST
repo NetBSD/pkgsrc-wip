@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/27 12:25:51 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/03 09:09:59 jihbed Exp $
 bin/cython
 ${PYSITELIB}/Cython/CodeWriter.py
 ${PYSITELIB}/Cython/CodeWriter.pyc
 ${PYSITELIB}/Cython/CodeWriter.pyo
+${PYSITELIB}/Cython/Compiler/AnalysedTreeTransforms.py
+${PYSITELIB}/Cython/Compiler/AnalysedTreeTransforms.pyc
+${PYSITELIB}/Cython/Compiler/AnalysedTreeTransforms.pyo
 ${PYSITELIB}/Cython/Compiler/Annotate.py
 ${PYSITELIB}/Cython/Compiler/Annotate.pyc
 ${PYSITELIB}/Cython/Compiler/Annotate.pyo
@@ -101,12 +104,21 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestParseTreeTransforms.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestTreeFragment.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.py
+${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestTreePath.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.py
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/__init__.pyo
 ${PYSITELIB}/Cython/Compiler/TreeFragment.py
 ${PYSITELIB}/Cython/Compiler/TreeFragment.pyc
 ${PYSITELIB}/Cython/Compiler/TreeFragment.pyo
+${PYSITELIB}/Cython/Compiler/TreePath.py
+${PYSITELIB}/Cython/Compiler/TreePath.pyc
+${PYSITELIB}/Cython/Compiler/TreePath.pyo
+${PYSITELIB}/Cython/Compiler/TypeInference.py
+${PYSITELIB}/Cython/Compiler/TypeInference.pyc
+${PYSITELIB}/Cython/Compiler/TypeInference.pyo
 ${PYSITELIB}/Cython/Compiler/TypeSlots.py
 ${PYSITELIB}/Cython/Compiler/TypeSlots.pyc
 ${PYSITELIB}/Cython/Compiler/TypeSlots.pyo
@@ -141,11 +153,14 @@ ${PYSITELIB}/Cython/Includes/python.pxd
 ${PYSITELIB}/Cython/Includes/python2.5.pxd
 ${PYSITELIB}/Cython/Includes/python_bool.pxd
 ${PYSITELIB}/Cython/Includes/python_buffer.pxd
+${PYSITELIB}/Cython/Includes/python_bytes.pxd
+${PYSITELIB}/Cython/Includes/python_cobject.pxd
 ${PYSITELIB}/Cython/Includes/python_complex.pxd
 ${PYSITELIB}/Cython/Includes/python_dict.pxd
 ${PYSITELIB}/Cython/Includes/python_exc.pxd
 ${PYSITELIB}/Cython/Includes/python_float.pxd
 ${PYSITELIB}/Cython/Includes/python_function.pxd
+${PYSITELIB}/Cython/Includes/python_getargs.pxd
 ${PYSITELIB}/Cython/Includes/python_instance.pxd
 ${PYSITELIB}/Cython/Includes/python_int.pxd
 ${PYSITELIB}/Cython/Includes/python_iterator.pxd
@@ -157,7 +172,7 @@ ${PYSITELIB}/Cython/Includes/python_method.pxd
 ${PYSITELIB}/Cython/Includes/python_module.pxd
 ${PYSITELIB}/Cython/Includes/python_number.pxd
 ${PYSITELIB}/Cython/Includes/python_object.pxd
-${PYSITELIB}/Cython/Includes/python_parse.pxd
+${PYSITELIB}/Cython/Includes/python_pycapsule.pxd
 ${PYSITELIB}/Cython/Includes/python_ref.pxd
 ${PYSITELIB}/Cython/Includes/python_sequence.pxd
 ${PYSITELIB}/Cython/Includes/python_set.pxd
@@ -166,6 +181,7 @@ ${PYSITELIB}/Cython/Includes/python_tuple.pxd
 ${PYSITELIB}/Cython/Includes/python_type.pxd
 ${PYSITELIB}/Cython/Includes/python_unicode.pxd
 ${PYSITELIB}/Cython/Includes/python_version.pxd
+${PYSITELIB}/Cython/Includes/python_weakref.pxd
 ${PYSITELIB}/Cython/Includes/stdio.pxd
 ${PYSITELIB}/Cython/Includes/stdlib.pxd
 ${PYSITELIB}/Cython/Mac/DarwinSystem.py
@@ -265,3 +281,10 @@ ${PYSITELIB}/pyximport/pyxbuild.pyo
 ${PYSITELIB}/pyximport/pyximport.py
 ${PYSITELIB}/pyximport/pyximport.pyc
 ${PYSITELIB}/pyximport/pyximport.pyo
+share/doc/cython/About.html
+share/doc/cython/FAQ.html
+share/doc/cython/extension_types.html
+share/doc/cython/index.html
+share/doc/cython/overview.html
+share/doc/cython/sharing.html
+share/doc/cython/special_methods.html
