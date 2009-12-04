@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/04 19:37:54 jihbed Exp $
 #
 
-DISTNAME=	hitori-0.2.1
-CATEGORIES=	games
-MASTER_SITES=	http://tecnocode.co.uk/downloads/
+DISTNAME=	hitori-0.2.3
+CATEGORIES=	games gnome
+MASTER_SITES=	http://ftp.acc.umu.se/pub/GNOME/sources/hitori/0.2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://tecnocode.co.uk/projects/hitori/
