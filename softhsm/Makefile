@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/11/07 23:46:32 pettai Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/04 22:03:00 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
@@ -13,13 +13,13 @@ LICENSE=	iis-license
 
 LICENSE_FILE=	${FILESDIR}/iis-license
 
-USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4
+#USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4
 USE_LIBTOOL=	yes
 
 #SVN_REPOSITORIES=	softhsm
 #SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
 #SVN_MODULE.softhsm=	softHSM
-VERSION=		1.1.0
+VERSION=		1.1.1
 #RCVERSION=		${VERSION:S/-RC/rc/}
 #NO_CHECKSUM=		yes
 

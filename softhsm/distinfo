@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/11/07 22:45:18 pettai Exp $
+$NetBSD: distinfo,v 1.3 2009/12/04 22:03:00 pettai Exp $
 
-SHA1 (softhsm-1.1.0.tar.gz) = ee353df634e6a92f21086c28a62ec4033e7bd051
-RMD160 (softhsm-1.1.0.tar.gz) = 70fc201fc33501157ea28d71749d9560b0c16123
-Size (softhsm-1.1.0.tar.gz) = 391216 bytes
+SHA1 (softhsm-1.1.1.tar.gz) = 3fe4dd3e330d9be0e3bb4a21dc7979540c5975da
+RMD160 (softhsm-1.1.1.tar.gz) = 0b88e7df39e3ffb834402d5fed9a4e23750464cb
+Size (softhsm-1.1.1.tar.gz) = 393136 bytes
 SHA1 (patch-aa) = 581bb21ea2a929f233fac6310c1cb43fffc28d7f
