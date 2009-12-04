@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/11 15:58:55 rhialto Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/04 13:32:57 rhialto Exp $
 
 DISTNAME=		qvamps-0.98
 CATEGORIES=		multimedia
@@ -28,6 +28,7 @@ DEPENDS+=		dvdauthor-[0-9]*:../../multimedia/dvdauthor
 DEPENDS+=		p5-qt3-[0-9]*:../../wip/p5-qt3
 
 REPLACE_PERL+=		qvamps
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"

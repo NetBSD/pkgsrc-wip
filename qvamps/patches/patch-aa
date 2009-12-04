@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2008/04/11 15:58:55 rhialto Exp $
+$NetBSD: patch-aa,v 1.3 2009/12/04 13:32:57 rhialto Exp $
 
 This message from swig appears to be harmless:
     ifo_read.i:49: Error: Syntax error in input(1).
 
 --- Makefile.orig	2006-05-02 21:17:13.000000000 +0200
-+++ Makefile	2008-04-11 17:44:36.000000000 +0200
-@@ -20,10 +20,10 @@
++++ Makefile
+@@ -20,10 +20,10 @@ LANGUAGES ?= xx
  PLINC      = $(shell perl -e \
  	       'use Config; print "$$Config{archlibexp}/CORE\n";')
  PLARCH     = $(shell perl -e 'use Config; print "$$Config{archname}\n";')
@@ -18,7 +18,7 @@ This message from swig appears to be harmless:
  CFLAGS    += -I $(PLINC) $(PLCFLAGS) -Wall -W -Wno-strict-aliasing \
  	       -Wno-unused-function -Wno-unused-variable \
  	       -Wno-unused-parameter
-@@ -67,7 +67,7 @@
+@@ -67,7 +67,7 @@ BINDIST   ?= qVamps-$(VERSION).$(BINVERS
  		@rm -f $@.tmp
  
  %.msgs:		%.pm
@@ -27,7 +27,7 @@ This message from swig appears to be harmless:
  
  %.qm:		%.ts
  		$(LRELEASE) -verbose $< -qm $@
-@@ -84,7 +84,7 @@
+@@ -84,7 +84,7 @@ LibDvdRead.so:	libdvdread_wrap.o
  		$(CC) $(SOLDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
  
  libdvdread_wrap.c LibDvdRead.pm:	libdvdread.i ifo_read.i ignores.i
@@ -36,12 +36,39 @@ This message from swig appears to be harmless:
  
  ifo_read.i:	ifo_read.c
  		$(CC) -E -P $< > $@
-@@ -122,7 +122,7 @@
+@@ -122,23 +122,24 @@ $(BINDIST):	qvamps LibDvdRead.so main_sw
  
  # other targets go below
  install:	all
 -		$(INSTALL) -m 755 -d $(PREFIX)/share/qvamps/etc \
+-		  $(PREFIX)/share/qvamps/lib \
+-		  $(PREFIX)/share/qvamps/translations \
+-		  $(PREFIX)/lib/qvamps/$(PLARCH)
+-		$(INSTALL) -m 755 qvamps $(PREFIX)/bin
 +		$(INSTALL) -m 755 -d \
- 		  $(PREFIX)/share/qvamps/lib \
- 		  $(PREFIX)/share/qvamps/translations \
- 		  $(PREFIX)/lib/qvamps/$(PLARCH)
++		  $(DESTDIR)$(PREFIX)/bin \
++		  $(DESTDIR)$(PREFIX)/share/qvamps/lib \
++		  $(DESTDIR)$(PREFIX)/share/qvamps/translations \
++		  $(DESTDIR)$(PREFIX)/lib/qvamps/$(PLARCH)
++		$(INSTALL) -m 755 qvamps $(DESTDIR)$(PREFIX)/bin
+ 		$(INSTALL) -m 644 $(addsuffix .pm,$(UIMODULES) \
+ 		  $(MSGMODULES) $(GENMODULES) $(OTHMODULES)) \
+-		  $(PREFIX)/share/qvamps/lib
++		  $(DESTDIR)$(PREFIX)/share/qvamps/lib
+ 		$(INSTALL) -m 644 $(addsuffix .qm,$(LANGUAGES)) \
+-		  $(PREFIX)/share/qvamps/translations
++		  $(DESTDIR)$(PREFIX)/share/qvamps/translations
+ 		$(INSTALL) -m 644 penguin.jpg silence.mpa penguin_ntsc.mpg \
+-		  penguin_pal.mpg $(PREFIX)/share/qvamps
+-		$(INSTALL) -m 755 LibDvdRead.so $(PREFIX)/lib/qvamps/$(PLARCH)
++		  penguin_pal.mpg $(DESTDIR)$(PREFIX)/share/qvamps
++		$(INSTALL) -m 755 LibDvdRead.so $(DESTDIR)$(PREFIX)/lib/qvamps/$(PLARCH)
+ 
+ uninstall:
+-		rm -rf $(PREFIX)/bin/qvamps $(PREFIX)/share/qvamps \
+-		  $(PREFIX)/lib/qvamps
++		rm -rf $(DESTDIR)$(PREFIX)/bin/qvamps $(DESTDIR)$(PREFIX)/share/qvamps \
++		  $(DESTDIR)$(PREFIX)/lib/qvamps
+ 
+ clean:
+ 		rm -f LibDvdRead.so libdvdread_wrap.c ifo_read.i $(addsuffix \
