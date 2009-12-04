@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2009/08/22 05:37:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.81 2009/12/04 15:36:39 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1359,8 +1359,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/gulp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/gulp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/helper.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/levents.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/levents.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mnt.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp-mode.el.gz
@@ -1369,8 +1367,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lisp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lmenu.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/lmenu.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/lucid.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/lucid.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.el.gz
@@ -2017,7 +2013,6 @@ share/emacs/${PKGVERSION}/lisp/international/latin1-disp.el.gz
 share/emacs/${PKGVERSION}/lisp/international/latin1-disp.elc
 share/emacs/${PKGVERSION}/lisp/international/mule-cmds.el.gz
 share/emacs/${PKGVERSION}/lisp/international/mule-cmds.elc
-share/emacs/${PKGVERSION}/lisp/international/mule-conf.el
 share/emacs/${PKGVERSION}/lisp/international/mule-diag.el.gz
 share/emacs/${PKGVERSION}/lisp/international/mule-diag.elc
 share/emacs/${PKGVERSION}/lisp/international/mule-util.el.gz
@@ -2731,8 +2726,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/cc-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-styles.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-styles.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/cc-subword.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/cc-subword.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-vars.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cc-vars.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cfengine.el.gz
