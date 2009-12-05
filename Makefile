@@ -1,11 +1,11 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3714 2009/12/05 20:56:29 jihbed Exp $
+# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
 =======
-# $Id: Makefile,v 1.3714 2009/12/05 20:56:29 jihbed Exp $
+# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
 >>>>>>> 1.3706
 =======
-# $Id: Makefile,v 1.3714 2009/12/05 20:56:29 jihbed Exp $
+# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
 >>>>>>> 1.3712
 #
 
@@ -1823,6 +1823,7 @@ SUBDIR+=	py-libmemcache
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtunepimp
+SUBDIR+=	py-libxc
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
