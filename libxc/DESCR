@@ -1,0 +1,3 @@
+Libxc is the ETSF library of exchange-correlation functionals. The aim is to
+provide a portable, well tested and reliable set of exchange and correlation
+functionals that can be used by all the ETSF codes and also other codes.
