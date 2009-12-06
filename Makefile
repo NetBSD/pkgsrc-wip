@@ -1,11 +1,11 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
+# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
 =======
-# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
+# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
 >>>>>>> 1.3706
 =======
-# $Id: Makefile,v 1.3715 2009/12/05 21:09:32 jihbed Exp $
+# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
 >>>>>>> 1.3712
 #
 
@@ -845,6 +845,7 @@ SUBDIR+=	ibus-chewing
 SUBDIR+=	ibus-hangul
 SUBDIR+=	ibus-m17n
 SUBDIR+=	ibus-pinyin
+SUBDIR+=	ibus-qt
 SUBDIR+=	icc10
 SUBDIR+=	icc11
 SUBDIR+=	icecast
