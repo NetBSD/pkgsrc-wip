@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/28 00:04:43 rhialto Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/06 23:05:08 rhialto Exp $
 
 This is rather ugly, but we need to find the local copy of the
 smoke library, and the rpath.
 
 --- PerlQt/Makefile.PL.in.orig	2005-07-10 21:59:28.000000000 +0200
-+++ PerlQt/Makefile.PL.in	2008-03-27 18:41:23.000000000 +0100
-@@ -86,6 +86,8 @@
++++ PerlQt/Makefile.PL.in
+@@ -86,6 +86,8 @@ my $localsmoke = File::Spec->catdir($abs
  # See lib/ExtUtils/MakeMaker.pm for details of how to influence
  # the contents of the Makefile that is written.
  
@@ -14,7 +14,7 @@ smoke library, and the rpath.
  WriteMakefile(
      'NAME'		=> 'Qt',
      'VERSION_FROM'	=> 'Qt.pm', # finds $VERSION
-@@ -104,7 +106,7 @@
+@@ -104,7 +106,7 @@ WriteMakefile(
      'DEFINE'            => $cxxflags,
      'H'                 => ["marshall.h", "perlqt.h", "smokeperl.h"],
      'ABSTRACT'		=> "An OO interface to Trolltech's Qt toolkit",
@@ -23,7 +23,7 @@ smoke library, and the rpath.
      ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
        (
         AUTHOR     => 'Ashley Winters <qaqortog@nwlink.com>') : ()),
-@@ -134,6 +136,14 @@
+@@ -134,6 +136,14 @@ sub MY::dist {
                     $i;
  }
  
@@ -38,3 +38,12 @@ smoke library, and the rpath.
  sub MY::install {
  		  package MY;
  		  my $i = shift->SUPER::install(@_);
+@@ -157,7 +167,7 @@ sub MY::install {
+ 		  $i .= "\ninstall_my_perlqt_doc:\n".
+                         "\t\@echo Installing documentation in ${doc_dir}\n".
+                         "\t\@$^X -MExtUtils::Install -MConfig -e \\\n".
+-		        "\t\t'install({ \"$src\" => \"${doc_dir}\" },0,0)' \$(DEV_NULL)\n";
++		        "\t\t'install({ \"$src\" => \"\$(DESTDIR)${doc_dir}\" },0,0)' \$(DEV_NULL)\n";
+ 		  $doc_dir_glob = $doc_dir;
+ 		  $i;
+ }
