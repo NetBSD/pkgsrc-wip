@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/11/12 22:22:24 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/06 20:10:37 gschwarz Exp $
 
---- doc/Makefile.in.orig	2005-05-05 11:02:43.000000000 +0200
-+++ doc/Makefile.in	2005-11-12 22:06:11.000000000 +0100
-@@ -476,10 +476,10 @@
+--- doc/Makefile.in.orig	2009-11-09 18:49:38.340007000 +0100
++++ doc/Makefile.in	2009-11-09 18:53:07.330004000 +0100
+@@ -544,10 +544,10 @@
  # install local data
  #
  install-data-local:
@@ -14,6 +14,6 @@ $NetBSD: patch-aa,v 1.1 2005/11/12 22:22:24 gschwarz Exp $
 +	$(INSTALL_DATA) $(srcdir)/siproxd.conf.example	$(DESTDIR)$(prefix)/share/examples/siproxd/
 +	$(INSTALL_DATA) $(srcdir)/siproxd_passwd.cfg	$(DESTDIR)$(prefix)/share/examples/siproxd/
 +	chmod 600 $(DESTDIR)$(prefix)/share/examples/siproxd/siproxd_passwd.cfg
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+ 	$(mkinstalldirs) $(DESTDIR)$(docdir)
+ @have_docbook2pdf_TRUE@	$(INSTALL_DATA) $(srcdir)/pdf/*			$(DESTDIR)$(docdir)/
+ @have_docbook2html_TRUE@	$(INSTALL_DATA) $(srcdir)/html/*		$(DESTDIR)$(docdir)/
