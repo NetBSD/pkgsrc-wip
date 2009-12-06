@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/14 06:29:47 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/06 13:21:17 obache Exp $
 #
 
-DISTNAME=	milter-manager-1.0.1
+DISTNAME=	milter-manager-1.4.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=milter-manager/}
 
@@ -19,6 +19,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--with-package-platform=pkgsrc
 CONFIGURE_ARGS+=	--with-rcddir=${RCD_SCRIPTS_DIR}
+CONFIGURE_ARGS+=	--with-default-effective-user=${MILTER_MANAGER_USER}
+CONFIGURE_ARGS+=	--with-default-effective-group=${MILTER_MANAGER_GROUP}
+CONFIGURE_ARGS+=	--with-default-socket-group=${MILTER_MANAGER_SOCKET_GROUP}
+CONFIGURE_ARGS+=	--with-default-pid-file=${VARBASE}/run/milter-manager/milter-manager.pid
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -43,12 +47,10 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/defaults
 OWN_DIRS_PERMS+=	${VARBASE}/run/milter-manager \
 			${MILTER_MANAGER_USER} ${MILTER_MANAGER_GROUP} 755
 
-FILES_SUBST+=		MILTER_MANAGER_USER=${MILTER_MANAGER_USER}
-FILES_SUBST+=		MILTER_MANAGER_GROUP=${MILTER_MANAGER_GROUP}
-FILES_SUBST+=		MILTER_MANAGER_SOCKET_GROUP=${MILTER_MANAGER_SOCKET_GROUP}
-
 .for conf in milter-manager.conf \
+	applicable-conditions/authentication.conf \
 	applicable-conditions/remote-network.conf \
+	applicable-conditions/restrict-accounts.conf \
 	applicable-conditions/s25r.conf \
 	applicable-conditions/sendmail-compatible.conf \
 	defaults/pkgsrc.conf
