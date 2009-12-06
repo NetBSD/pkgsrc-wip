@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/11/14 15:34:30 jtonio Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/06 22:10:06 thomasklausner Exp $
 #
 
 DISTNAME=	i3-3.d
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=		docbook-xml-[0-9]*:../../textproc/docbook-xml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake pkg-config lex yacc
+USE_TOOLS+=		bison gmake pkg-config lex yacc
 
 PKG_SYSCONFSUBDIR=	i3
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
