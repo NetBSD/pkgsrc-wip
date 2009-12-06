@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2008/03/12 08:58:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2009/12/06 22:08:19 thomasklausner Exp $
 #
 
 DISTNAME=	xmms2-0.2DrJekyll
 PKGNAME=	xmms2-0.2rc10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -41,6 +41,7 @@ BUILDLINK_DEPMETHOD.python=	build
 .include "../../lang/python/application.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
