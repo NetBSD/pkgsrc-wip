@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/08/08 03:56:10 genolopolis Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/06 02:28:22 genolopolis Exp $
 #
 
-DISTNAME=	cfengine-3.0.2b5
+DISTNAME=	cfengine-3.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cfengine.org/tarballs/
 

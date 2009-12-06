@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/08/01 20:04:55 genolopolis Exp $
+$NetBSD: distinfo,v 1.2 2009/12/06 02:28:22 genolopolis Exp $
 
-SHA1 (cfengine-3.0.2b5.tar.gz) = de3d32d4aa0c0be073e2a04d7b5a051c9f64746d
-RMD160 (cfengine-3.0.2b5.tar.gz) = b5d74f4c978b5be02e15247b8e58c47825c0f8b8
-Size (cfengine-3.0.2b5.tar.gz) = 2035446 bytes
+SHA1 (cfengine-3.0.2.tar.gz) = 705bf0fa8032b495d67592b28f3c11784e619020
+RMD160 (cfengine-3.0.2.tar.gz) = 8de5dcd4d96ad76d159b412252528d08a6c9590b
+Size (cfengine-3.0.2.tar.gz) = 2078775 bytes
