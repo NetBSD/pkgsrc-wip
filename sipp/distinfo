@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2008/10/31 19:26:00 gschwarz Exp $
+$NetBSD: distinfo,v 1.8 2009/12/06 18:45:24 gschwarz Exp $
 
 SHA1 (sipp.3.1.src.tar.gz) = 781e50a74844abbdff1b90781fa24d062f0c1352
 RMD160 (sipp.3.1.src.tar.gz) = bd89c94b3a006fdc5717d43765776901976dbf71
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = af7df29abfc0ae49e2e52a138e3a0c5c156b2a30
 SHA1 (patch-ac) = 16ecd2344318b4af570cc062bf357dfde0676831
 SHA1 (patch-ad) = c5927fd3026bccc344e9a0b095435b5a3dd72aa0
 SHA1 (patch-ae) = 2ec35d0077019a3cb0915e1f428750b0eee4aea7
-SHA1 (patch-af) = 3515f757ff3c8fa3cd1008fb2bdf001eac6b3a43
+SHA1 (patch-af) = c7e48619f39d10bb94c891aba27c5aba7313c376

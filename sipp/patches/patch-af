@@ -1,8 +1,18 @@
-$NetBSD: patch-af,v 1.1 2008/10/31 19:26:00 gschwarz Exp $
+$NetBSD: patch-af,v 1.2 2009/12/06 18:45:25 gschwarz Exp $
 
---- sipp.hpp.orig	2008-10-26 04:42:33.000000000 +0100
-+++ sipp.hpp	2008-10-26 04:43:23.000000000 +0100
-@@ -52,6 +52,9 @@
+--- sipp.hpp.orig	2008-04-11 14:26:37.000000000 +0200
++++ sipp.hpp	2009-11-09 18:02:01.560006000 +0100
+@@ -25,6 +25,9 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef __sun
++#include <alloca.h>
++#endif
+ #include <string.h>
+ #include <pthread.h>
+ #include <sys/types.h>
+@@ -52,6 +55,9 @@
  #else
  #include <stdarg.h>
  #endif
