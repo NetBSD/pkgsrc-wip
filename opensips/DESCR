@@ -1,0 +1,4 @@
+OpenSIPS (Open SIP Server) is a mature Open Source implementation of a
+SIP server. OpenSIPS is more than a SIP proxy/router as it includes
+application-level functionalities. OpenSIPS, as a SIP server, is the
+core component of any SIP-based VoIP solution.
