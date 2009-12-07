@@ -1,11 +1,11 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
+# $Id: Makefile,v 1.3718 2009/12/07 15:16:06 jihbed Exp $
 =======
-# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
+# $Id: Makefile,v 1.3718 2009/12/07 15:16:06 jihbed Exp $
 >>>>>>> 1.3706
 =======
-# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
+# $Id: Makefile,v 1.3718 2009/12/07 15:16:06 jihbed Exp $
 >>>>>>> 1.3712
 #
 
@@ -601,6 +601,8 @@ SUBDIR+=	guile-scsh
 SUBDIR+=	guilerxspencer
 SUBDIR+=	guitone
 SUBDIR+=	gune
+SUBDIR+=	gupnp-ui
+SUBDIR+=    gupnp-vala
 SUBDIR+=	gurlchecker
 SUBDIR+=	gwhois
 SUBDIR+=	gwsmhg
