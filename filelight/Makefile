@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/11/12 11:33:13 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/07 16:26:16 thomasklausner Exp $
 #
 
 DISTNAME=	99561-filelight-1.9rc3
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.methylblue.com/filelight/
 COMMENT=	Graphical filesystem usage monitor
 LICENSE=	gnu-gpl-v3
+
+BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
