@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/05 21:49:29 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2009/12/07 16:11:03 jihbed Exp $
 
-SHA1 (python-ptrace-0.6.tar.gz) = ebc871cfd179c25a03c1ff5007c2b9fb68d73e2d
-RMD160 (python-ptrace-0.6.tar.gz) = 548a6c82b4e3bf1f938039cd0b9481714b224324
-Size (python-ptrace-0.6.tar.gz) = 79530 bytes
+SHA1 (python-ptrace-0.6.2.tar.gz) = b36b678627e936cc57d1a280ab866c316644e029
+RMD160 (python-ptrace-0.6.2.tar.gz) = a08ad88abc846142a334803bdcb5b856a268bfcd
+Size (python-ptrace-0.6.2.tar.gz) = 75200 bytes

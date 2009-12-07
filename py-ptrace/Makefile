@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/05 21:49:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/07 16:11:03 jihbed Exp $
 #
 
-DISTNAME=	python-ptrace-0.6
+DISTNAME=	python-ptrace-0.6.2
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ptrace/
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# none
-
 PYDISTUTILSPKG= 	yes
 
 PYTHON_VERSIONS_ACCEPTED= 26 25
@@ -22,4 +20,5 @@ PYTHON_VERSIONS_ACCEPTED= 26 25
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+
 .include "../../mk/bsd.pkg.mk"
