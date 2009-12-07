@@ -1,11 +1,11 @@
 <<<<<<< Makefile
 <<<<<<< Makefile
-# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
+# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
 =======
-# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
+# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
 >>>>>>> 1.3706
 =======
-# $Id: Makefile,v 1.3716 2009/12/06 07:08:03 obache Exp $
+# $Id: Makefile,v 1.3717 2009/12/07 10:59:29 marttikuparinen Exp $
 >>>>>>> 1.3712
 #
 
@@ -1333,6 +1333,7 @@ SUBDIR+=	oops
 SUBDIR+=	oorexx
 SUBDIR+=	opax
 SUBDIR+=	opendesktop-fonts
+SUBDIR+=	opensips
 SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openal-soft
