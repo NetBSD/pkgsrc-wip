@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2008/11/14 09:34:56 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.4 2009/12/08 12:19:39 thomasklausner Exp $
 
---- console/Makefile.in.orig	2008-11-14 09:15:55.000000000 +0000
+--- console/Makefile.in.orig	2009-09-28 13:04:14.000000000 +0000
 +++ console/Makefile.in
-@@ -282,7 +282,7 @@ target_alias = @target_alias@
- @BUILD_CONSOLE_TRUE@	-I$(top_srcdir)/mediastreamer2/include
+@@ -322,6 +322,7 @@ COMMON_CFLAGS = $(STRICT_OPTIONS) -DIN_L
+ @BUILD_CONSOLE_TRUE@		$(top_builddir)/mediastreamer2/src/libmediastreamer.la \
+ @BUILD_CONSOLE_TRUE@		$(ORTP_LIBS) \
+ @BUILD_CONSOLE_TRUE@		$(SPEEX_LIBS) \
++@BUILD_CONSOLE_TRUE@		$(INTLLIBS) \
+ @BUILD_CONSOLE_TRUE@		$(OSIP_LIBS)
  
- @BUILD_CONSOLE_TRUE@linphonec_SOURCES = linphonec.c linphonec.h commands.c
--@BUILD_CONSOLE_TRUE@linphonec_LDADD = $(top_builddir)/coreapi/liblinphone.la $(READLINE_LIBS) $(OSIP_LIBS)
-+@BUILD_CONSOLE_TRUE@linphonec_LDADD = $(top_builddir)/coreapi/liblinphone.la $(READLINE_LIBS) $(OSIP_LIBS) $(INTLLIBS)
- @BUILD_CONSOLE_TRUE@sipomatic_SOURCES = \
- @BUILD_CONSOLE_TRUE@	sipomatic.c sipomatic.h
  

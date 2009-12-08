@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.26 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.27 2009/12/08 12:19:38 thomasklausner Exp $
 
-DISTNAME=	linphone-3.0.0
-PKGREVISION=	1
+DISTNAME=	linphone-3.2.1
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/stable/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool perl pkg-config
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 USE_GNU_READLINE=	yes # rl_hook_func_t et al.
 USE_PKGLOCALEDIR=	yes
@@ -19,6 +22,9 @@ CONFIGURE_ARGS+=	--with-osip=${BUILDLINK_PREFIX.libosip2}
 CONFIGURE_ARGS+=	--with-speex=${BUILDLINK_PREFIX.speex}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
+
+# don't treat warnings as errors, code is not portable enough (3.2.1)
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "options.mk"
 

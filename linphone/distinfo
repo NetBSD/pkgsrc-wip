@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.9 2008/11/26 19:36:02 gschwarz Exp $
+$NetBSD: distinfo,v 1.10 2009/12/08 12:19:38 thomasklausner Exp $
 
-SHA1 (linphone-3.0.0.tar.gz) = 52bd8250367523d59a13d5be4f779ab44eb3e25e
-RMD160 (linphone-3.0.0.tar.gz) = 66f1083d54902c2ff91f544d84f8bad978a04b0d
-Size (linphone-3.0.0.tar.gz) = 7577336 bytes
-SHA1 (patch-aa) = 1e2a32a4c3fc44013ecf1cb4d6afb30392c2b964
+SHA1 (linphone-3.2.1.tar.gz) = ff5434372465ccfd059de1a26f4712f30f5f9ed7
+RMD160 (linphone-3.2.1.tar.gz) = 8ed4b172dc2b9ad90d8bf4da82dbbc8b16e6b169
+Size (linphone-3.2.1.tar.gz) = 7906185 bytes
+SHA1 (patch-aa) = 4aed6c6db26854b7248a2a463a7af3fe9aa360d3
 SHA1 (patch-ab) = e30859150b718718a42b08c8eb80d8a8f2b95a41
-SHA1 (patch-ae) = 0f231e5b0d04c4e552a4463d7896f70368a2a880
+SHA1 (patch-ac) = 9bc380ee29963e3be9ae115ebebdec7a5359f93c
+SHA1 (patch-ae) = c29dc04d45064e4343ae35c9945c067d37ffb5ae
 SHA1 (patch-ah) = 48f4da64e9bf18ad962ff0019638cb88be26a12c

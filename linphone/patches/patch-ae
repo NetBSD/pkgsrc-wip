@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.5 2008/11/26 19:36:02 gschwarz Exp $
+$NetBSD: patch-ae,v 1.6 2009/12/08 12:19:39 thomasklausner Exp $
 
---- configure.orig	2008-10-10 14:48:47.000000000 +0200
-+++ configure	2008-11-23 21:30:23.000000000 +0100
-@@ -22200,7 +22200,7 @@
- LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
+--- configure.orig	2009-09-28 13:04:16.000000000 +0000
++++ configure
+@@ -9543,7 +9543,7 @@ fi
+ LIBTOOL_DEPS="$ltmain"
  
  # Always use our own libtool.
 -LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- # Prevent multiple expansion
+ 
  
