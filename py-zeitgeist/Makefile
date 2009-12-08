@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/12/02 00:19:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/08 13:04:12 thomasklausner Exp $
 #
 
 DISTNAME=	zeitgeist-0.3.0
@@ -22,9 +22,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool
 PY_PATCHPLIST=	yes
-
-# https://bugs.launchpad.net/bugs/401199
-REPLACE_PYTHON=	zeitgeist-daemon zeitgeist-datahub
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
