@@ -1,0 +1,9 @@
+Virtual Jaguar is software dedicated to emulating the Atari Jaguar
+hardware on a standard PC. The software was originally developed
+by David Raingeard of Potato Emulation.
+
+Virtual Jaguar GCC/SDL is not only a port of the MS Visual C++/SDL
+sourcecode but has also been extended and rewritten so that we can
+enjoy Atari Jaguar emulation on every platform which uses the GCC
+compiler and that can make use of the Simple Directmedia Layer
+library (SDL).
