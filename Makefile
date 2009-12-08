@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3720 2009/12/08 09:55:52 thomasklausner Exp $
+# $Id: Makefile,v 1.3721 2009/12/08 21:58:11 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -964,6 +964,7 @@ SUBDIR+=	kino
 SUBDIR+=	kipi-plugins
 SUBDIR+=	kissme
 SUBDIR+=	klamav
+SUBDIR+=	kmldonkey
 SUBDIR+=	kmymoney2-cvs
 SUBDIR+=	kmymoney2-devel
 SUBDIR+=	knutclient
