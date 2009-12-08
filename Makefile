@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3719 2009/12/08 01:02:07 thomasklausner Exp $
+# $Id: Makefile,v 1.3720 2009/12/08 09:55:52 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2249,6 +2249,7 @@ SUBDIR+=	viewer
 SUBDIR+=	viewglob
 SUBDIR+=	vino
 SUBDIR+=	virtualbox
+SUBDIR+=	virtualjaguar
 SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vkeybd
