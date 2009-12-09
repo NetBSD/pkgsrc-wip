@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/19 21:13:45 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/09 23:03:00 gschwarz Exp $
 
 DISTNAME=	weplab-0.1.5
 CATEGORIES=	security
@@ -15,10 +15,7 @@ LIBS+=		${BUILDLINK_LDADD.getopt:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-CPPFLAGS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
-.endif
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/weplab ${DESTDIR}${PREFIX}/bin
