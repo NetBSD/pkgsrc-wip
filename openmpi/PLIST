@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/12/03 10:18:00 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/12/09 12:54:41 asau Exp $
 bin/mpiCC
 bin/mpiCC-vt
 bin/mpic++
@@ -40,9 +40,6 @@ bin/vtf77
 bin/vtf90
 bin/vtfilter
 bin/vtunify
-etc/openmpi-default-hostfile
-etc/openmpi-mca-params.conf
-etc/openmpi-totalview.tcl
 include/mpi.h
 include/mpif-common.h
 include/mpif-config.h
@@ -503,6 +500,9 @@ man/man7/orte_filem.7
 man/man7/orte_hosts.7
 man/man7/orte_snapc.7
 share/openmpi/amca-param-sets/example.conf
+share/openmpi/examples/openmpi-default-hostfile
+share/openmpi/examples/openmpi-mca-params.conf
+share/openmpi/examples/openmpi-totalview.tcl
 share/openmpi/help-coll-sync.txt
 share/openmpi/help-dash-host.txt
 share/openmpi/help-ess-base.txt
