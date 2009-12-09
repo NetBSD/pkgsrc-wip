@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/11/01 07:37:45 gschwarz Exp $
+$NetBSD: patch-ab,v 1.2 2009/12/09 22:42:11 gschwarz Exp $
 
---- tftpd/recvfrom.c.orig	2008-11-01 08:08:38.000000000 +0100
-+++ tftpd/recvfrom.c	2008-11-01 08:10:55.000000000 +0100
+--- tftpd/recvfrom.c.orig	2009-02-16 23:51:22.000000000 +0100
++++ tftpd/recvfrom.c	2009-11-10 11:45:13.390003000 +0100
 @@ -150,6 +150,10 @@
          setsockopt(s, IPPROTO_IP, IP_PKTINFO, &on, sizeof(on));
  #endif
@@ -13,3 +13,12 @@ $NetBSD: patch-ab,v 1.1 2008/11/01 07:37:45 gschwarz Exp $
  #ifdef IPV6_RECVPKTINFO
      if (from->sa_family == AF_INET6)
          setsockopt(s, IPPROTO_IPV6, IPV6_RECVPKTINFO, &on, sizeof(on));
+@@ -245,7 +249,7 @@
+ 
+ int
+ myrecvfrom(int s, void *buf, int len, unsigned int flags,
+-           struct sockaddr *from, int *fromlen, union sock_addr *myaddr)
++           struct sockaddr *from, socklen_t *fromlen, union sock_addr *myaddr)
+ {
+     /* There is no way we can get the local address, fudge it */
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/09 22:42:11 gschwarz Exp $
 
 DISTNAME=	tftp-hpa-5.0
 PKGREVISION=	1
@@ -14,6 +14,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	autoconf gmake
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	ac_cv_search_getopt_long=no
+.endif
 
 MAKE_ENV+=	INSTALLROOT="${DESTDIR}"
 
