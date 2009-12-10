@@ -1,0 +1,33 @@
+$NetBSD: patch-ae,v 1.1 2009/12/10 22:52:02 asau Exp $
+
+Don't use GZIP variable, it is used by gzip itself.
+
+--- docs/Makefile.orig	2009-12-11 01:46:48.000000000 +0300
++++ docs/Makefile	2009-12-11 02:12:29.000000000 +0300
+@@ -59,7 +59,7 @@
+ 	$(Verb) $(RM) -rf $@ $(PROJ_OBJ_DIR)/html.tar
+ 	$(Verb) cd $(PROJ_SRC_DIR) && \
+ 	  $(TAR) cf $(PROJ_OBJ_DIR)/html.tar *.html
+-	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/html.tar
++	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/html.tar
+ 
+ install-doxygen: doxygen
+ 	$(Echo) Installing doxygen documentation
+@@ -82,7 +82,7 @@
+ 	$(Echo) Packaging doxygen documentation
+ 	$(Verb) $(RM) -rf $@ $(PROJ_OBJ_DIR)/doxygen.tar
+ 	$(Verb) $(TAR) cf $(PROJ_OBJ_DIR)/doxygen.tar doxygen
+-	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/doxygen.tar
++	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/doxygen.tar
+ 	$(Verb) $(CP) $(PROJ_OBJ_DIR)/doxygen.tar.gz $(PROJ_OBJ_DIR)/doxygen/html/
+ 
+ userloc: $(LLVM_SRC_ROOT)/docs/userloc.html
+@@ -117,7 +117,7 @@
+ 	$(Echo) Packaging ocamldoc documentation
+ 	$(Verb) $(RM) -rf $@ $(PROJ_OBJ_DIR)/ocamldoc.tar
+ 	$(Verb) $(TAR) cf $(PROJ_OBJ_DIR)/ocamldoc.tar ocamldoc
+-	$(Verb) $(GZIP) $(PROJ_OBJ_DIR)/ocamldoc.tar
++	$(Verb) $(GZIPBIN) $(PROJ_OBJ_DIR)/ocamldoc.tar
+ 	$(Verb) $(CP) $(PROJ_OBJ_DIR)/ocamldoc.tar.gz $(PROJ_OBJ_DIR)/ocamldoc/html/
+ 
+ uninstall-local::

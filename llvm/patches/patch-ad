@@ -1,8 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2008/02/22 16:35:00 thomasklausner Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/10 22:52:02 asau Exp $
 
---- Makefile.config.in.orig	2007-07-03 23:04:11.000000000 +0000
-+++ Makefile.config.in
-@@ -79,11 +79,11 @@ LLVMMAKE := $(LLVM_SRC_ROOT)/make
+Don't use GZIP variable, it is used by gzip itself.
+
+--- Makefile.config.in.orig	2009-12-11 01:47:51.000000000 +0300
++++ Makefile.config.in	2009-12-11 02:15:30.000000000 +0300
+@@ -79,11 +79,11 @@
  PROJ_bindir     := $(DESTDIR)$(PROJ_prefix)/bin
  PROJ_libdir     := $(DESTDIR)$(PROJ_prefix)/lib
  PROJ_datadir    := $(DESTDIR)$(PROJ_prefix)/share
@@ -16,3 +18,12 @@ $NetBSD: patch-ad,v 1.1 2008/02/22 16:35:00 thomasklausner Exp $
  
  # Determine if we're on a unix type operating system
  LLVM_ON_UNIX:=@LLVM_ON_UNIX@
+@@ -159,7 +159,7 @@
+ DOT        := @DOT@
+ DOXYGEN    := @DOXYGEN@
+ GROFF      := @GROFF@
+-GZIP       := @GZIP@
++GZIPBIN    := @GZIP@
+ OCAMLC     := @OCAMLC@
+ OCAMLOPT   := @OCAMLOPT@
+ OCAMLDEP   := @OCAMLDEP@
