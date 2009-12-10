@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3723 2009/12/10 15:21:10 bubuchka Exp $
+# $Id: Makefile,v 1.3724 2009/12/10 18:58:32 absd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1282,7 +1282,6 @@ SUBDIR+=	ncbi-lib
 #SUBDIR+=	ncurses-devel	# missing Makefile.common
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
-SUBDIR+=	neb-wipe
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
 SUBDIR+=	nestra
