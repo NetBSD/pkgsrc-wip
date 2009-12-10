@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.5 2007/11/20 05:56:10 bsadewitz Exp $
+$NetBSD: patch-al,v 1.6 2009/12/10 15:39:05 gregoire Exp $
 
 --- normal/parser.y.orig	2007-07-21 19:32:29.000000000 -0400
 +++ normal/parser.y
@@ -6,8 +6,8 @@ $NetBSD: patch-al,v 1.5 2007/11/20 05:56:10 bsadewitz Exp $
  
  %%
  /* It should be possible to do this in a clean way...  */
--script:		{ state->err = 0} newlines commands
-+script:		{ state->err = 0;} newlines commands
+-script_init:	{ state->err = 0} script
++script_init:	{ state->err = 0;} script
  		  {
- 		    state->parsed = $3;
+ 		    state->parsed = $2;
  		  }
