@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3724 2009/12/10 18:58:32 absd Exp $
+# $Id: Makefile,v 1.3725 2009/12/11 14:24:11 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -93,6 +93,7 @@ SUBDIR+=	applewmproto
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
 SUBDIR+=	ar7
+SUBDIR+=	arcem-current
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
 SUBDIR+=	arista
