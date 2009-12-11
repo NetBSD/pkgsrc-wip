@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:09 thomasklausner Exp $
-${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/pycsp-0.6.0-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2009/12/11 20:42:06 jihbed Exp $
+${PYSITELIB}/pycsp-0.6.2-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/pycsp-0.6.2-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/pycsp-0.6.2-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/pycsp-0.6.2-py2.5.egg-info/top_level.txt
 ${PYSITELIB}/pycsp/__init__.py
 ${PYSITELIB}/pycsp/__init__.pyc
 ${PYSITELIB}/pycsp/__init__.pyo
@@ -10,8 +10,6 @@ ${PYSITELIB}/pycsp/greenlets/__init__.py
 ${PYSITELIB}/pycsp/greenlets/__init__.pyc
 ${PYSITELIB}/pycsp/greenlets/__init__.pyo
 ${PYSITELIB}/pycsp/greenlets/alternation.py
-${PYSITELIB}/pycsp/greenlets/alternation.pyc
-${PYSITELIB}/pycsp/greenlets/alternation.pyo
 ${PYSITELIB}/pycsp/greenlets/channel.py
 ${PYSITELIB}/pycsp/greenlets/channel.pyc
 ${PYSITELIB}/pycsp/greenlets/channel.pyo
@@ -31,8 +29,6 @@ ${PYSITELIB}/pycsp/net/__init__.py
 ${PYSITELIB}/pycsp/net/__init__.pyc
 ${PYSITELIB}/pycsp/net/__init__.pyo
 ${PYSITELIB}/pycsp/net/alternation.py
-${PYSITELIB}/pycsp/net/alternation.pyc
-${PYSITELIB}/pycsp/net/alternation.pyo
 ${PYSITELIB}/pycsp/net/channel.py
 ${PYSITELIB}/pycsp/net/channel.pyc
 ${PYSITELIB}/pycsp/net/channel.pyo
@@ -55,8 +51,6 @@ ${PYSITELIB}/pycsp/processes/__init__.py
 ${PYSITELIB}/pycsp/processes/__init__.pyc
 ${PYSITELIB}/pycsp/processes/__init__.pyo
 ${PYSITELIB}/pycsp/processes/alternation.py
-${PYSITELIB}/pycsp/processes/alternation.pyc
-${PYSITELIB}/pycsp/processes/alternation.pyo
 ${PYSITELIB}/pycsp/processes/channel.py
 ${PYSITELIB}/pycsp/processes/channel.pyc
 ${PYSITELIB}/pycsp/processes/channel.pyo
@@ -93,14 +87,10 @@ ${PYSITELIB}/pycsp/threads/guard.pyo
 ${PYSITELIB}/pycsp/threads/process.py
 ${PYSITELIB}/pycsp/threads/process.pyc
 ${PYSITELIB}/pycsp/threads/process.pyo
-share/examples/${PKGNAME}/Commstime.py
-share/examples/${PKGNAME}/Commstime_Io.py
-share/examples/${PKGNAME}/Configuration.py
-share/examples/${PKGNAME}/Dining-Phil.py
-share/examples/${PKGNAME}/DisplayAPI.py
-share/examples/${PKGNAME}/MCPi.py
-share/examples/${PKGNAME}/MultipleTokenRing.py
-share/examples/${PKGNAME}/Sieve.py
-share/examples/${PKGNAME}/TokenRing.py
-share/examples/${PKGNAME}/WebServer.py
-share/examples/${PKGNAME}/common.py
+share/examples/py-csp/autotest.py
+share/examples/py-csp/common.py
+share/examples/py-csp/commtest.py
+share/examples/py-csp/guardtest.py
+share/examples/py-csp/iotest.py
+share/examples/py-csp/poisontest.py
+share/examples/py-csp/selecttest.py
