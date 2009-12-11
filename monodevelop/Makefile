@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/11/23 13:45:19 koifren Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/11 13:57:21 koifren Exp $
 
-DISTNAME=	monodevelop-2.1.1
+DISTNAME=	monodevelop-2.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2

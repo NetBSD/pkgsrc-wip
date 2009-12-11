@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/23 13:45:19 koifren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/12/11 13:57:22 koifren Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -55,6 +55,14 @@ lib/monodevelop/AddIns/MonoDevelop.CodeMetrics/MonoDevelop.CodeMetrics.dll
 lib/monodevelop/AddIns/MonoDevelop.CodeMetrics/MonoDevelop.CodeMetrics.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Debugger/MonoDevelop.Debugger.dll
 lib/monodevelop/AddIns/MonoDevelop.Debugger/MonoDevelop.Debugger.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/Mono.Debugger.Soft.dll
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/Mono.Debugger.Soft.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.AspNet.dll
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.AspNet.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.Moonlight.dll
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.Moonlight.dll.mdb
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.dll
+lib/monodevelop/AddIns/MonoDevelop.Debugger.Soft/MonoDevelop.Debugger.Soft.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.Linux.dll
 lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.Linux.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Deployment/MonoDevelop.Deployment.dll
@@ -140,6 +148,7 @@ lib/monodevelop/AddIns/MonoDevelop.TextTemplating/MonoDevelop.TextTemplating.dll
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/MonoDevelop.TextTemplating.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/TextTransform.exe
 lib/monodevelop/AddIns/MonoDevelop.TextTemplating/TextTransform.exe.mdb
+lib/monodevelop/bin/buildinfo
 lib/monodevelop/bin/MonoDevelop.Projects.Formats.MSBuild.exe
 lib/monodevelop/bin/MonoDevelop.Projects.Formats.MSBuild.exe.mdb
 lib/monodevelop/bin/Mono.Cecil.Mdb.dll
