@@ -1,7 +1,0 @@
-$NetBSD: patch-rb,v 1.1.1.1 2009/12/02 14:36:40 tnn2 Exp $
-
---- browser/branding/unofficial/configure.sh.orig	2009-10-29 23:10:36.000000000 +0100
-+++ browser/branding/unofficial/configure.sh
-@@ -1 +1 @@
--MOZ_APP_DISPLAYNAME="Namoroka"
-+MOZ_APP_DISPLAYNAME="Browser"
