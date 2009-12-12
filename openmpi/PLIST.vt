@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.vt,v 1.2 2009/12/12 21:54:18 asau Exp $
 bin/mpiCC-vt
 bin/mpic++-vt
 bin/mpicc-vt
