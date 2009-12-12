@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2009/06/08 09:38:20 obache Exp $
+# $NetBSD: options.mk,v 1.12 2009/12/12 20:09:33 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -104,6 +104,7 @@ CONFIGURE_ARGS+=	--disable-mad
 .include "../../audio/liba52/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-a52 --enable-ffmpeg-a52 \
 			--with-a52-prefix=${BUILDLINK_PREFIX.liba52:Q}
+PLIST.ffmpeg=		yes
 .else
 CONFIGURE_ARGS+=	--disable-a52
 .endif
