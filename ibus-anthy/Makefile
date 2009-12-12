@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/27 09:43:56 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/12 06:05:45 obache Exp $
 #
 
 DISTNAME=	ibus-anthy-1.2.0.20091127
@@ -15,11 +15,21 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	py[0-9]*-ibus-anthy-[0-9]*
 
+DEPENDS+=	kasumi-[0-9]*:../../inputmethod/kasumi
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config msgfmt gmake intltool
+
+FIND_PREFIX:=	KASUMI_DIR=kasumi
+.include "../../mk/find-prefix.mk"
+
+SUBST_CLASSES+=		kasumi
+SUBST_STAGE.kasumi=	pre-configure
+SUBST_FILES.kasumi=	setup/anthyprefs.py
+SUBST_SED.kasumi=	-e 's|/usr/bin/kasumi|${KASUMI_DIR}/bin/kasumi|g'
 
 .include "../../devel/swig/buildlink3.mk"
 PY_PATCHPLIST=		yes
