@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/12/12 19:48:24 asau Exp $
+# $NetBSD: Makefile,v 1.20 2009/12/12 19:51:04 asau Exp $
 
 DISTNAME=	openmpi-1.4
 CATEGORIES=	parallel
@@ -27,11 +27,6 @@ CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 .include "options.mk"
 
 TEST_TARGET=	check
-
-#USE_TOOLS+=	aclocal autoconf automake
-#USE_TOOLS+=	bash
-# pre-configure:
-# 	cd ${WRKSRC} && bash autogen.sh && aclocal && autoconf && automake
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
