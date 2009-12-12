@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/12/12 15:22:24 asau Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/12 15:41:21 asau Exp $
 
 DISTNAME=	openmpi-1.4
 CATEGORIES=	parallel
@@ -20,13 +20,10 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4
 
-#CONFIGURE_ARGS=		LIBLTDL_SUBDIR=	# use our libltdl
-
 CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
-CONFIGURE_ENV+=		NM=/usr/bin/nm
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
-CONFIGUGE_ENV+=		LIBLTDL=libltdl.la # LTDLINCL=-I/usr/pkg/include
+CONFIGUGE_ENV+=		LIBLTDL=libltdl.la # LTDLINCL=-I${PREFIX}/include
 BUILD_MAKE_FLAGS=	LIBLTDL=$(BUILDLINK_PREFIX.libltdl)/lib/libltdl.la # configure doesn't allow overriding it
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 
