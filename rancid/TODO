@@ -1,2 +1,1 @@
-- Maybe change the hardcoded PATH in the Makefile -> SUBST_SED.paths= 
 - CVE-2008-4979 (getipacctg) still not fixed
