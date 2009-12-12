@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/12/12 15:46:41 asau Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/12 16:00:21 asau Exp $
 
 DISTNAME=	mlton
+PKGNAME=	mlton-0
 CATEGORIES=	lang
 
 MAINTAINER=	oivulf@gmail.com
@@ -11,7 +12,6 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake
 
 .if !defined(MLTON_BOOT) || $(MLTON_BOOT) == "mlton"
-#BUILD_DEPENDS+=  mlton>=svnnb20091009*:../../wip/mlton-svn
 BUILD_TARGET=	all
 .else
 # use SML/NJ
