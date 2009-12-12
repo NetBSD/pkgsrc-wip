@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/24 05:35:33 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/12 15:13:07 phonohawk Exp $
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Bundled/Posix.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Bundled/Posix.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Bundled/SHA256.hi
@@ -10,12 +10,16 @@ lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/AnchoredPath.
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/AnchoredPath.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Darcs.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Darcs.p_hi
+lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Hash.hi
+lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Hash.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Index.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Index.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Monad.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Monad.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Packed.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Packed.p_hi
+lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Plain.hi
+lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Plain.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Tree.hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Tree.p_hi
 lib/hashed-storage-${PKGVERSION}/${HASKELL_VERSION}/Storage/Hashed/Utils.hi
