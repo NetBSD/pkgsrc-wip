@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/12/12 18:38:06 asau Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/12 19:48:24 asau Exp $
 
 DISTNAME=	openmpi-1.4
 CATEGORIES=	parallel
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.open-mpi.org/
 COMMENT=	Open source MPI-2 implementation
-
-MAKE_JOBS_SAFE=	no	# temporary
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
