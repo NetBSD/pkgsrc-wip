@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/12 16:07:55 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/12 16:09:36 asau Exp $
 
 DISTNAME=	mlton
 PKGNAME=	mlton-0
@@ -9,6 +9,7 @@ HOMEPAGE=	http://mlton.org/
 COMMENT=	Standard ML whole-program optimizing compiler
 LICENSE=	modified-bsd
 
+MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake
 
 .if defined(MLTON_BOOT) && $(MLTON_BOOT) == "mlton"
