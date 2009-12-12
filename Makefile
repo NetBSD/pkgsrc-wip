@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3726 2009/12/11 20:59:56 ghen Exp $
+# $Id: Makefile,v 1.3727 2009/12/12 15:07:55 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -792,6 +792,7 @@ SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
 SUBDIR+=	hs-mime
 SUBDIR+=	hs-mmap
+SUBDIR+=	hs-mmap4
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-network
