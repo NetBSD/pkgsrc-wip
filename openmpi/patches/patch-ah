@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.1 2009/12/09 10:19:10 asau Exp $
+$NetBSD: patch-ah,v 1.2 2009/12/12 21:55:05 asau Exp $
 
 Rewrite network interface configuration using getifaddrs(3) for BSD,
 this should fix OpenMPI for NetBSD. By Kevin M. Buckley.
 
---- opal/util/if.c.orig	2009-07-10 10:46:54.000000000 +1200
-+++ opal/util/if.c
+--- opal/util/if.c.orig	2009-12-08 23:36:09.000000000 +0300
++++ opal/util/if.c	2009-12-13 00:06:38.000000000 +0300
 @@ -38,6 +38,9 @@
  #endif
  #ifdef HAVE_NETINET_IN_H
@@ -15,7 +15,7 @@ this should fix OpenMPI for NetBSD. By Kevin M. Buckley.
  #endif
  #ifdef HAVE_ARPA_INET_H
  #include <arpa/inet.h>
-@@ -164,6 +167,146 @@ static int opal_ifinit(void) 
+@@ -164,6 +167,145 @@
                                  false, false, (int)false, &sd);
      do_not_resolve = OPAL_INT_TO_BOOL(sd);
  
@@ -86,11 +86,10 @@ this should fix OpenMPI for NetBSD. By Kevin M. Buckley.
 +#endif
 +            sin_addr = (struct sockaddr_in *) cur_ifaddrs->ifa_addr;
 +
-+            /* There shouldn't be any IPv6 address starting with fe80: to skip */
-+
-+#if defined(__DragonFly__)
++	    /* Do we really need to skip link-local addresses? */
++#if 0
 +            /* skip link local address: */
-+            if(IN_LINKLOCAL (htonl(((struct sockaddr_in)cur_ifaddrs->ifa_addr)->sin_addr.s_addr))) {
++            if(IN_LINKLOCAL (htonl(((struct sockaddr_in*)cur_ifaddrs->ifa_addr)->sin_addr.s_addr))) {
 +#if 0
 +                opal_output(0, "opal_ifinit: skipping link-local ip address on interface %s.\n",
 +                        cur_ifaddrs->ifa_name);
@@ -162,7 +161,7 @@ this should fix OpenMPI for NetBSD. By Kevin M. Buckley.
      /* create the internet socket to test off */
  /*
     Change AF_INET to AF_UNSPEC (or AF_INET6) and everything will fail.
-@@ -356,6 +499,10 @@ static int opal_ifinit(void) 
+@@ -356,6 +498,10 @@
      }
      free(ifconf.ifc_req);
      close(sd);
