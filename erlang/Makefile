@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/30 23:09:22 asau Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/13 03:42:00 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -73,7 +73,7 @@ pre-build:
 .for _pkg_ _version_ in $(_VERSIONS)
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
 .endfor
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/R13B01\//) {sub(/\/releases\/R13B01\//,"/releases/$${VERSION}/", $$0);}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/releases\/${DIST_VERSION_MAJOR}\//) {sub(/\/releases\/${DIST_VERSION_MAJOR}\//,"/releases/$${VERSION}/", $$0);}}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
