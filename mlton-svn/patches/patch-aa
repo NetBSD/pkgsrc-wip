@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2009/10/08 06:11:13 fulviociriaco Exp $
+$NetBSD: patch-aa,v 1.2 2009/12/13 16:19:28 asau Exp $
 
---- Makefile.orig	2009-10-06 20:56:09.000000000 +0200
-+++ Makefile
-@@ -292,8 +292,8 @@ version:
+Don't use "GZIP" variable, "gzip" treats it in its own way.
+Support staged installation.
+Use "pax" to install documentation.
+
+--- Makefile.orig	2009-12-13 06:50:34.000000000 +0300
++++ Makefile	2009-12-13 19:10:00.000000000 +0300
+@@ -34,7 +34,7 @@
+ NLFFIGEN := mlnlffigen
+ PATH := $(BIN):$(SRC)/bin:$(shell echo $$PATH)
+ CP := /bin/cp -fpR
+-GZIP := gzip --force --best
++GZIPCMD := gzip --force --best
+ RANLIB := ranlib
+ 
+ # If we're compiling with another version of MLton, then we want to do
+@@ -294,8 +294,8 @@
  # The TBIN and TLIB are where the files are going to be after installing.
  # The DESTDIR and is added onto them to indicate where the Makefile actually
  # puts them.
@@ -13,7 +26,7 @@ $NetBSD: patch-aa,v 1.1 2009/10/08 06:11:13 fulviociriaco Exp $
  ifeq ($(findstring $(TARGET_OS), darwin freebsd solaris), $(TARGET_OS))
  PREFIX := /usr/local
  endif
-@@ -331,11 +331,11 @@ MAN_PAGES :=  \
+@@ -336,11 +336,11 @@
  install-no-docs:
  	mkdir -p "$(TLIB)" "$(TBIN)" "$(TMAN)"
  	$(CP) "$(LIB)/." "$(TLIB)/"
@@ -27,3 +40,40 @@ $NetBSD: patch-aa,v 1.1 2009/10/08 06:11:13 fulviociriaco Exp $
  			<"$(BIN)/mlton.trace" >"$(TBIN)/mlton.trace";   \
  		chmod a+x "$(TBIN)/mlton.trace";                        \
  	fi
+@@ -354,7 +354,7 @@
+ 	( cd "$(SRC)/man" && tar cf - $(MAN_PAGES)) | \
+ 		( cd "$(TMAN)/" && tar xf - )
+ 	if $(GZIP_MAN); then						\
+-		cd "$(TMAN)" && $(GZIP) $(MAN_PAGES);			\
++		cd "$(TMAN)" && $(GZIPCMD) $(MAN_PAGES);			\
+ 	fi
+ 
+ .PHONY: install-strip
+@@ -405,8 +405,8 @@
+ .PHONY: move-docs
+ move-docs:	install-docs install-no-docs
+ 	cd "$(TLIB)/sml"; for i in *; do test -d "$(TDOC)/$$i" || mkdir -p "$(TDOC)/$$i"; done
+-	cd "$(TLIB)/sml"; for i in */[Dd]oc; do mv "$$i" "$(TDOC)/$$i"; done
+-	cd "$(TLIB)/sml"; for i in */README*; do mv "$$i" "$(TDOC)/$$i"; done
++	cd "$(TLIB)/sml"; pax -rw */[Dd]oc "$(TDOC)/"
++	cd "$(TLIB)/sml"; pax -rw */README* "$(TDOC)/"
+ 
+ .PHONY: release
+ release: version
+@@ -423,7 +423,7 @@
+ 	mkdir -p "$(BSDSRC)"
+ 	( cd $(SRC) && tar -cpf - . ) | ( cd "$(BSDSRC)" && tar -xpf - )
+ 	cd /tmp && tar -cpf - mlton-$(VERSION) | \
+-		 $(GZIP) >/usr/ports/distfiles/mlton-$(VERSION)-$(RELEASE).freebsd.src.tgz
++		 $(GZIPCMD) >/usr/ports/distfiles/mlton-$(VERSION)-$(RELEASE).freebsd.src.tgz
+         # do not change "make" to "$(MAKE)" in the following line
+ 	cd "$(BSDSRC)/package/freebsd" && MAINTAINER_MODE=yes make build-package
+ 
+@@ -440,6 +440,6 @@
+ 	( cd "$(SRC)" && tar -cpf - . ) | ( cd "$(SOURCEDIR)" && tar -xpf - )
+ 	$(CP) "$(SOURCEDIR)/$(SPEC)" "$(TOPDIR)/SPECS/mlton.spec"
+ 	( cd "$(TOPDIR)/SOURCES" && tar -cpf - mlton-$(VERSION) )		\
+-		| $(GZIP) >"$(SOURCEDIR).tgz"
++		| $(GZIPCMD) >"$(SOURCEDIR).tgz"
+ 	rm -rf "$(SOURCEDIR)"
+ 	rpm -ba --quiet --clean "$(TOPDIR)/SPECS/mlton.spec"
