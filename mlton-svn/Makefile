@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/13 16:21:14 asau Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/13 16:24:43 asau Exp $
 
 DISTNAME=	mlton
 PKGNAME=	mlton-0
@@ -24,6 +24,9 @@ BUILD_TARGET=	smlnj-mlton all
 SVN_REPOSITORIES=	mlton
 SVN_ROOT.mlton=		svn://mlton.org/mlton/trunk
 WRKSRC=		$(WRKDIR)/mlton
+
+# REPLACE_PERL=	lib/mlrisc-lib/MLRISC/cm/makeallcm build/lib/sml/mlrisc-lib/cm/makeallcm \
+# 		lib/mlrisc-lib/MLRISC/cm/makecm build/lib/sml/mlrisc-lib/cm/makecm
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
