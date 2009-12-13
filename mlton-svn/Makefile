@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/12/12 16:09:36 asau Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/13 16:21:14 asau Exp $
 
 DISTNAME=	mlton
 PKGNAME=	mlton-0
@@ -8,6 +8,8 @@ MAINTAINER=	oivulf@gmail.com
 HOMEPAGE=	http://mlton.org/
 COMMENT=	Standard ML whole-program optimizing compiler
 LICENSE=	modified-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake
