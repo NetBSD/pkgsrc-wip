@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/28 16:55:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/13 13:31:02 pettai Exp $
 #
 
 DISTNAME=	mvision2.2
@@ -16,7 +16,9 @@ DEPENDS+=	roundcube>=0.2-stable:../../mail/roundcube
 WRKSRC=		${WRKDIR}/mvision2_en
 USE_LANGUAGES=	# none
 
-NO_BUILD=	no
+NO_BUILD=	yes
+
+INSTALLATION_DIRS=	share/roundcube/skins
 
 do-install:
 	${CP} -R ${WRKDIR}/mvision2_en ${DESTDIR}${PREFIX}/share/roundcube/skins/
