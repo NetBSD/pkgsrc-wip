@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/12 18:25:10 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/12/13 03:45:23 asau Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -46,6 +46,8 @@ lib/erlang/erts-${VERSION.erts}/include/erl_driver.h
 lib/erlang/erts-${VERSION.erts}/include/erl_fixed_size_int_types.h
 lib/erlang/erts-${VERSION.erts}/include/erl_int_sizes_config.h
 lib/erlang/erts-${VERSION.erts}/include/erl_memory_trace_parser.h
+lib/erlang/erts-${VERSION.erts}/include/erl_nif.h
+lib/erlang/erts-${VERSION.erts}/include/erl_nif_api_funcs.h
 lib/erlang/erts-${VERSION.erts}/include/internal/README
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_errno.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_memory_trace_protocol.h
@@ -1170,7 +1172,9 @@ lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_codeserver.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_contracts.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_dataflow.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_dep.beam
+lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_explanation.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_gui.beam
+lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_gui_wx.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_options.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_plt.beam
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/ebin/dialyzer_races.beam
@@ -1181,14 +1185,16 @@ lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer.hrl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_analysis_callgraph.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_callgraph.erl
-lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_callgraph.hrl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_cl.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_cl_parse.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_codeserver.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_contracts.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_dataflow.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_dep.erl
+lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_explanation.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_gui.erl
+lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_gui_wx.erl
+lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_gui_wx.hrl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_options.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_plt.erl
 lib/erlang/lib/dialyzer-${VERSION.dialyzer}/src/dialyzer_races.erl
@@ -1325,6 +1331,44 @@ lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.hrl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_wiki.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/otpsgml_layout.erl
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/bin/codeline_preprocessing.escript
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/css/otp_doc.css
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/application.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/appref.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/book.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/bookinsidecover.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/chapter.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/cites.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.entities.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.header.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.image.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.refs.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/common.table.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/comref.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/cref.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/erlref.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/fascicules.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/fileref.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/part.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/report.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/terms.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/xhtml1-frameset.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/xhtml1-strict.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/docbuilder_dtd/xhtml1-transitional.dtd
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/dtd_html_entities/xhtml-lat1.ent
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/dtd_man_entities/xhtml-lat1.ent
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/images/erlang-logo.gif
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/images/erlang-logo.png
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_closed.gif
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_open.gif
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flip_static.gif
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/js/flipmenu/flipmenu.js
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_html.xsl
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_html_params.xsl
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_man.xsl
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_pdf.xsl
+lib/erlang/lib/erl_docgen-${VERSION.erl_docgen}/priv/xsl/db_pdf_params.xsl
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/bin/erl_call
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/include/ei.h
 lib/erlang/lib/erl_interface-${VERSION.erl_interface}/include/ei_connect.h
@@ -3360,7 +3404,9 @@ lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_config.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_misc_sup.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_mpd.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_net_if.beam
+lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_net_if_filter.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_network_interface.beam
+lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_network_interface_filter.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_server.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_server_sup.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_supervisor.beam
@@ -3502,6 +3548,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/src/app/snmp_internal.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_lib.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_lib.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_mib_gram.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_mib_gram.yrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_mib_to_hrl.erl
@@ -3516,7 +3563,9 @@ lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_internal.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_misc_sup.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_mpd.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_net_if.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_net_if_filter.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_network_interface.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_network_interface_filter.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_server.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_server_sup.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_supervisor.erl
@@ -3551,9 +3600,9 @@ lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_channel_sup.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_cli.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_cm.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_connection.beam
+lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_connection_controler.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_connection_handler.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_connection_manager.beam
-lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_connection_sup.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_dsa.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_file.beam
 lib/erlang/lib/ssh-${VERSION.ssh}/ebin/ssh_io.beam
@@ -3595,9 +3644,9 @@ lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_cli.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_cm.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connect.hrl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connection.erl
+lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connection_controler.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connection_handler.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connection_manager.erl
-lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_connection_sup.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_dsa.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_file.erl
 lib/erlang/lib/ssh-${VERSION.ssh}/src/ssh_io.erl
@@ -3996,8 +4045,11 @@ lib/erlang/lib/tools-${VERSION.tools}/ebin/xref_reader.beam
 lib/erlang/lib/tools-${VERSION.tools}/ebin/xref_scanner.beam
 lib/erlang/lib/tools-${VERSION.tools}/ebin/xref_utils.beam
 lib/erlang/lib/tools-${VERSION.tools}/emacs/README
+lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang-eunit.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang-start.el
 lib/erlang/lib/tools-${VERSION.tools}/emacs/erlang.el
+lib/erlang/lib/tools-${VERSION.tools}/emacs/test.erl.indented
+lib/erlang/lib/tools-${VERSION.tools}/emacs/test.erl.orig
 lib/erlang/lib/tools-${VERSION.tools}/examples/xref_examples.erl
 lib/erlang/lib/tools-${VERSION.tools}/priv/cover.tool
 lib/erlang/lib/tools-${VERSION.tools}/priv/index.html
@@ -4222,8 +4274,17 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGraphicsRenderer.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGrid.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridBagSizer.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellAttr.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellBoolEditor.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellBoolRenderer.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellChoiceEditor.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellEditor.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellFloatEditor.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellFloatRenderer.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellNumberEditor.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellNumberRenderer.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellRenderer.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellStringRenderer.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridCellTextEditor.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxGridSizer.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxHelpEvent.beam
@@ -4245,6 +4306,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListItem.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListView.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxListbook.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxLogNull.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMDIChildFrame.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMDIClientWindow.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxMDIParentFrame.beam
@@ -4540,8 +4602,17 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGraphicsRenderer.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGrid.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridBagSizer.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellAttr.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellBoolEditor.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellBoolRenderer.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellChoiceEditor.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellEditor.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellFloatEditor.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellFloatRenderer.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellNumberEditor.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellNumberRenderer.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellRenderer.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellStringRenderer.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridCellTextEditor.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxGridSizer.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxHelpEvent.erl
@@ -4563,6 +4634,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListItem.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListView.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxListbook.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxLogNull.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMDIChildFrame.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMDIClientWindow.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxMDIParentFrame.erl
@@ -4767,21 +4839,8 @@ lib/erlang/usr/include/erl_driver.h
 lib/erlang/usr/include/erl_fixed_size_int_types.h
 lib/erlang/usr/include/erl_int_sizes_config.h
 lib/erlang/usr/include/erl_memory_trace_parser.h
+lib/erlang/usr/include/erl_nif.h
+lib/erlang/usr/include/erl_nif_api_funcs.h
 lib/erlang/usr/include/obsolete/driver.h
 lib/erlang/usr/lib/liberts.a
 lib/erlang/usr/lib/liberts_r.a
-@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/crl
-@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/otpCA/certs
-@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/crl
-@pkgdir lib/erlang/lib/ssl-${VERSION.ssl}/examples/certs/etc/erlangCA/certs
-@pkgdir lib/erlang/lib/percept-${VERSION.percept}/priv/logs
-@pkgdir lib/erlang/lib/mnesia-${VERSION.mnesia}/include
-@pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/priv
-@pkgdir lib/erlang/lib/kernel-${VERSION.kernel}/examples/uds_dist/ebin
-@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/logs
-@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/secret/top_secret
-@pkgdir lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/htdocs/mnesia_secret/top_secret
-@pkgdir lib/erlang/lib/erl_interface-${VERSION.erl_interface}/src/auxdir
-@pkgdir lib/erlang/lib/common_test-${VERSION.common_test}/priv/bin
-@pkgdir lib/erlang/erts-${VERSION.erts}/man
-@pkgdir lib/erlang/erts-${VERSION.erts}/doc
