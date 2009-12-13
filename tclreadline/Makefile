@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/13 00:21:03 pettai Exp $
 #
 
 DISTNAME=	tclreadline-2.1.0
@@ -19,6 +19,13 @@ EGDIR=		${PREFIX}/share/examples/tclreadline
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
+
+SUBST_CLASSES+=         paths
+SUBST_FILES.paths=      ${WRKSRC}/pkgIndex.tcl.in
+SUBST_FILES.paths+=     ${WRKSRC}/tclreadlineInit.tcl.in
+SUBST_FILES.paths+=     ${WRKSRC}/tclreadlineSetup.tcl.in
+SUBST_STAGE.paths=      post-patch
+SUBST_SED.paths=        -e 's,@@PREFIX@@,${PREFIX},'
 
 INSTALLATION_DIRS=	include ${PKGMANDIR}/mann lib \
 			lib/tclreadline${PKGVERSION} ${EGDIR}
