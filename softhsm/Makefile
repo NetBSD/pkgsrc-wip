@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/04 22:03:00 pettai Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/13 23:12:56 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
@@ -45,12 +45,12 @@ SUBST_SED.paths=        -e 's,@EGDIR@,${EGDIR},'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-.include "options.mk"
-
 CONF_FILES=		${EGDIR}/softhsm.conf ${PKG_SYSCONFDIR}/softhsm.conf
 
 INSTALLATION_DIRS=	${EGDIR} ${VARBASE}/softhsm
 INSTALLATION_DIRS+=	etc bin lib
+
+.include "options.mk"
 
 #pre-configure:
 #	${CHMOD} u+x ${WRKSRC}/autogen.sh
