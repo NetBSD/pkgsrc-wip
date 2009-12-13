@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/18 21:10:42 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/13 01:00:42 pettai Exp $
 
 DISTNAME=	dnsruby-1.40
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ GEM_BUILD=      gemspec
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/html/classes
-	${MKDIR} -p ${WRKSRC}/html/files 
+	${MKDIR} -p ${WRKSRC}/html/files
 
 .include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
