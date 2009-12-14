@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/12/13 03:42:00 asau Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/14 13:12:48 fhajny Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
@@ -38,8 +39,6 @@ SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
 TEST_TARGET=		tests
-
-PLIST_SRC=		PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

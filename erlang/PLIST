@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/13 03:45:23 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/12/14 13:12:48 fhajny Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -59,7 +59,7 @@ lib/erlang/erts-${VERSION.erts}/include/internal/ethread.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread.mk
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread_header_config.h
 lib/erlang/erts-${VERSION.erts}/include/internal/i386/atomic.h
-lib/erlang/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/ethread.h
+lib/erlang/erts-${VERSION.erts}/include/internal/i386/ethread.h
 lib/erlang/erts-${VERSION.erts}/include/internal/i386/rwlock.h
 lib/erlang/erts-${VERSION.erts}/include/internal/i386/spinlock.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ppc32/atomic.h
