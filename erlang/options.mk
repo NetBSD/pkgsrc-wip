@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+# $NetBSD: options.mk,v 1.2 2009/12/14 14:12:46 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
+PKG_OPTIONS_OPTIONAL_GROUPS=	odbc
+PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
 
 .include "../../mk/bsd.options.mk"
 
@@ -24,4 +26,19 @@ CONFIGURE_ARGS+=	--enable-hipe
 .else
 PLIST_SUBST+=		SMP=""
 CONFIGURE_ARGS+=	--disable-hipe
+.endif
+
+###
+### Provide iodbc/unixodbc option support
+###
+.if !empty(PKG_OPTIONS:Miodbc)
+.  include "../../databases/iodbc/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-odbc=${BUILDLINK_PREFIX.iodbc}
+PLIST_SRC+=		PLIST.odbc
+.endif
+
+.if !empty(PKG_OPTIONS:Munixodbc)
+.  include "../../databases/unixodbc/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-odbc=${BUILDLINK_PREFIX.unixodbc}
+PLIST_SRC+=		PLIST.odbc
 .endif
