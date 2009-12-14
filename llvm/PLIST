@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/12/06 22:22:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/12/14 07:25:31 thomasklausner Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -138,7 +138,6 @@ include/llvm/CallGraphSCCPass.h
 include/llvm/CallingConv.h
 include/llvm/CodeGen/AsmPrinter.h
 include/llvm/CodeGen/BinaryObject.h
-include/llvm/CodeGen/BreakCriticalMachineEdge.h
 include/llvm/CodeGen/CallingConvLower.h
 include/llvm/CodeGen/DAGISelHeader.h
 include/llvm/CodeGen/DwarfWriter.h
