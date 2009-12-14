@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/27 01:55:11 genolopolis Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/14 01:30:08 genolopolis Exp $
 #
 
 DISTNAME=	collectd-4.7.2
@@ -25,7 +25,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR:Q}/${PKGBASE}
 
 EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=            ${EGDIR}/collectd.conf ${PKG_SYSCONFDIR}/${PKGBASE}/collectd.conf
-INSTALL_MAKE_FLAGS+=    ${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS+=    sysconfdir=${EGDIR:Q}
 
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST=	auto/Collectd/.packlist
