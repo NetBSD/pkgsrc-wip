@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/11 16:05:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/14 08:12:40 obache Exp $
 #
 
 DISTNAME=	gobject-introspection-0.6.6
@@ -21,6 +21,8 @@ USE_TOOLS+=	pkg-config flex bison gmake
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
+
+TEST_TARGET=	check
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
