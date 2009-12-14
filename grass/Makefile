@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2009/12/14 23:37:53 lexort Exp $
 #
 
 DISTNAME=		grass-${GRASS_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		geography
 MASTER_SITES=		http://grass.itc.it/grass63/source/
 
