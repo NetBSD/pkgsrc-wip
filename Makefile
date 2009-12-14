@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3728 2009/12/14 02:28:23 phonohawk Exp $
+# $Id: Makefile,v 1.3729 2009/12/14 07:27:42 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2163,7 +2163,6 @@ SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	tilda
 SUBDIR+=	tilp
-SUBDIR+=	tint2
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
