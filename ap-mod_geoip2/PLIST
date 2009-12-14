@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2009/12/14 01:43:26 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.1 2009/12/14 01:43:26 genolopolis Exp $
+lib/httpd/mod_geoip.so
