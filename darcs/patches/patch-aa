@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2009/09/24 08:34:39 phonohawk Exp $
+$NetBSD: patch-aa,v 1.8 2009/12/14 03:23:41 phonohawk Exp $
 
 --- darcs.cabal.orig	2009-09-21 03:06:46.000000000 +0900
 +++ darcs.cabal
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.7 2009/09/24 08:34:39 phonohawk Exp $
                     mtl          >= 1.0 && < 1.2,
                     parsec       >= 2.0 && < 3.1,
                     html         == 1.0.*,
+@@ -480,7 +480,7 @@ Executable          darcs
+       buildable: False
+ 
+   if flag(mmap) && !os(windows)
+-    build-depends:    mmap >= 0.2
++    build-depends:    mmap >= 0.4 && < 0.5
+     cpp-options:      -DHAVE_MMAP
+ 
+   if flag(bytestring)
