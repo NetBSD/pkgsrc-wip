@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/15 22:49:24 fhajny Exp $
+bin/pgsql2shp
+bin/shp2pgsql
+man/man1/pgsql2shp.1
+man/man1/shp2pgsql.1
+share/doc/postgis/README.postgis
+share/doc/postgis/ZMSgeoms.txt
+share/doc/postgis/faq.xml
+share/doc/postgis/installation.xml
+share/doc/postgis/introduction.xml
+share/doc/postgis/performance_tips.xml
+share/doc/postgis/postgis.xml
+share/doc/postgis/reference.xml
+share/doc/postgis/reference_old.xml
+share/doc/postgis/release_notes.xml
+share/doc/postgis/reporting.xml
+share/doc/postgis/style.css
+share/doc/postgis/template.xml
+share/doc/postgis/using_postgis_app.xml
+share/doc/postgis/using_postgis_dataman.xml
+share/postgresql/contrib/postgis.sql
+share/postgresql/contrib/postgis_upgrade.sql
+share/postgresql/contrib/spatial_ref_sys.sql
+share/postgresql/contrib/uninstall_postgis.sql
