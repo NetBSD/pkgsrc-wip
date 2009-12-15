@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+$NetBSD: patch-ac,v 1.2 2009/12/15 11:51:51 fhajny Exp $
 
---- api/libsphinxclient/sphinxclient.c.orig	Tue Jul 15 21:30:36 2008
-+++ api/libsphinxclient/sphinxclient.c	Tue Mar 10 21:46:22 2009
+--- api/libsphinxclient/sphinxclient.c.orig	2009-11-13 23:23:06.000000000 +0000
++++ api/libsphinxclient/sphinxclient.c
 @@ -20,6 +20,9 @@
  #include <stdarg.h>
  #include <stdio.h>
@@ -12,3 +12,36 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
  
  #ifndef _WIN32
  #include "sphinxclient_config.h"
+@@ -277,7 +280,14 @@ static void sphinx_free_results ( sphinx
+ }
+ 
+ 
+-void sock_close ( int sock );
++static void sock_close ( int sock )
++{
++#if _WIN32
++	closesocket ( sock );
++#else
++	close ( sock );
++#endif
++}
+ 
+ void sphinx_destroy ( sphinx_client * client )
+ {
+@@ -1213,16 +1223,6 @@ static int sock_set_blocking ( int sock 
+ }
+ 
+ 
+-static void sock_close ( int sock )
+-{
+-#if _WIN32
+-	closesocket ( sock );
+-#else
+-	close ( sock );
+-#endif
+-}
+-
+-
+ // wrap FD_SET to prevent warnings on Windows
+ #if _WIN32
+ #pragma warning(disable:4127) // conditional expr is const

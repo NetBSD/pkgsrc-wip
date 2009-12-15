@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2009/12/15 11:51:51 fhajny Exp $
+
+--- src/sphinxstd.h.orig	2009-11-15 17:11:30.000000000 +0000
++++ src/sphinxstd.h
+@@ -53,6 +53,11 @@ typedef int __declspec("SAL_nokernel") _
+ #include <pthread.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#define pthread_mutexattr_setpshared(m,a)	(0)
++#define pthread_condattr_setpshared(m,a)	(0)
++#endif
++
+ /////////////////////////////////////////////////////////////////////////////
+ // COMPILE-TIME CHECKS
+ /////////////////////////////////////////////////////////////////////////////

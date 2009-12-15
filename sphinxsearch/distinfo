@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/01 13:37:31 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2009/12/15 11:51:51 fhajny Exp $
 
-SHA1 (sphinx-0.9.8.1.tar.gz) = eed4c6f5b314f965c19cca8aebd0b6d847cd35f9
-RMD160 (sphinx-0.9.8.1.tar.gz) = ab2bfee4cad552217e132449c7dd6b1071ed5bc9
-Size (sphinx-0.9.8.1.tar.gz) = 949660 bytes
-SHA1 (patch-aa) = 9664df0e1f49c524de5ca69eb0b1d49bac465ac7
-SHA1 (patch-ab) = 13608befae3d829ace1c5c8a7c4178a0f118dc43
-SHA1 (patch-ac) = 07e7bb999d2764c405a3a9a83d7ee150ea35f55c
-SHA1 (patch-ad) = 65f9a1a537db4f2a761ed4387d7432ba8ca1c297
+SHA1 (sphinx-0.9.9.tar.gz) = 8c739b96d756a50972c27c7004488b55d7458015
+RMD160 (sphinx-0.9.9.tar.gz) = ed3cd1a9328114c1d2a6325cce5520065076c275
+Size (sphinx-0.9.9.tar.gz) = 1218359 bytes
+SHA1 (patch-aa) = 968ecbe55da2e57cb0ce08cbd6b203195602e040
+SHA1 (patch-ab) = 6cc68df001c859a7f6d1fde88ee1826537900737
+SHA1 (patch-ac) = d54b34b7c4664c853583934b918bb681edd38343
+SHA1 (patch-ad) = ad54908964544fc9f78897cea4954d3167ef3ae7
+SHA1 (patch-ae) = ad222ba0c18c849dfc88e05ad1a213b4d6714169

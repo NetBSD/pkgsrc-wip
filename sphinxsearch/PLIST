@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/02 07:29:38 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/15 11:51:51 fhajny Exp $
 bin/indexer
+bin/indextool
 bin/search
 bin/searchd
 bin/spelldump

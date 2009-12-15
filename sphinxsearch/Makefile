@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/10/02 07:29:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/15 11:51:51 fhajny Exp $
 #
 
 PKGNAME=	sphinxsearch-${PKGVERSION}
 DISTNAME=	sphinx-${PKGVERSION}
-PKGVERSION=	0.9.8.1
-PKGREVISION=	1
+PKGVERSION=	0.9.9
 CATEGORIES=	databases textproc
 MASTER_SITES=	http://www.sphinxsearch.com/downloads/
 
@@ -55,7 +54,7 @@ SUBST_SED.paths+=	-e 's,@egdir@,${EGDIR},g'
 CONFIGURE_DIRS=		.
 CONFIGURE_DIRS+=	api/libsphinxclient
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 post-install:
 	${MV} ${EGDIR}/sphinx.conf.dist ${EGDIR}/sphinx-full.conf
