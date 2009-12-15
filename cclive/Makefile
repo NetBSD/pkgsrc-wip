@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/08/31 10:38:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2009/12/15 13:56:04 thomasklausner Exp $
 #
 
-DISTNAME=		cclive-0.5.0
+DISTNAME=		cclive-0.5.6
 CATEGORIES=		net multimedia www
 MASTER_SITES=		http://cclive.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
