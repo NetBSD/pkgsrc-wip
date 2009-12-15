@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/09/06 23:38:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/15 14:24:50 thomasklausner Exp $
 #
 
-DISTNAME=	musca-0.9.22
+DISTNAME=	musca-0.9.24
 CATEGORIES=	wm
 MASTER_SITES=	http://aerosuidae.net/
 EXTRACT_SUFX=	.tgz

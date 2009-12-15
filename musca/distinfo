@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/05/27 15:44:23 ishit Exp $
+$NetBSD: distinfo,v 1.3 2009/12/15 14:24:50 thomasklausner Exp $
 
-SHA1 (musca-0.9.22.tgz) = 4a143b710e66d57cc57656b8a31eb607ae2327ab
-RMD160 (musca-0.9.22.tgz) = 2a719822f45d3b589659cf38bb073a8bbee130da
-Size (musca-0.9.22.tgz) = 52198 bytes
-SHA1 (patch-aa) = f43dbbd1a80c81a70008d01f630e932660d88d4b
+SHA1 (musca-0.9.24.tgz) = a74d27a352b76dccf09792a00e50ba3c05b9929b
+RMD160 (musca-0.9.24.tgz) = 599e6539455b94d05a48485ad28f4b28ca7d73e1
+Size (musca-0.9.24.tgz) = 81210 bytes
+SHA1 (patch-aa) = dfd1213bdfcb94b70bf2a93a38fc09f932488639
