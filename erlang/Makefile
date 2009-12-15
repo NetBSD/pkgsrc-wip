@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/14 14:12:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2009/12/15 11:50:46 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -39,6 +39,8 @@ SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
 TEST_TARGET=		tests
+TEST_MAKE_FLAGS=	ERL_TOP=$(WRKSRC)
+REPLACE_PERL+=		make/make_emakefile
 
 PLIST_SRC=		PLIST
 
@@ -68,11 +70,8 @@ CONFIGURE_ARGS+=	--enable-kernel-poll
 pre-build:
 	${RUN} ${RM} -f ${WRKSRC}/lib/stdlib/ebin/dets_v9.beam
 
-# post-install:
-# 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/kernel-${VERSION.kernel}/examples
-# 	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib/ssl-${VERSION.ssl}/examples
-# 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/observer-${VERSION.observer}/priv/bin/*.bat
-# 	rm ${DESTDIR}${PREFIX}/lib/erlang/lib/webtool-${VERSION.webtool}/priv/bin/*.bat
+post-install:
+	chmod -R go-w ${DESTDIR}${PREFIX}/lib/erlang/lib
 
 # Generate PLIST
 .for _pkg_ _version_ in $(_VERSIONS)
