@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/15 21:35:53 christtrekker Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
@@ -15,12 +15,6 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://trilogyrelease.bungie.org/
 COMMENT=	Bungie game data files, playable with the Aleph One engine
 LICENSE=	generic-nonlicense
-
-RESTRICTED=	Copyrighted game material given away gratis - not sure what to call that.
-NO_SRC_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
