@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/05 08:34:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/12/16 08:26:51 obache Exp $
 bin/ibus-daemon
 bin/ibus-setup
 include/ibus-1.0/ibus.h
@@ -24,6 +24,7 @@ include/ibus-1.0/ibusmarshalers.h
 include/ibus-1.0/ibusmessage.h
 include/ibus-1.0/ibusobject.h
 include/ibus-1.0/ibusobservedpath.h
+include/ibus-1.0/ibuspanelservice.h
 include/ibus-1.0/ibuspendingcall.h
 include/ibus-1.0/ibusproperty.h
 include/ibus-1.0/ibusproxy.h
@@ -161,9 +162,11 @@ share/gtk-doc/html/ibus/IBusEngineDesc.html
 share/gtk-doc/html/ibus/IBusFactory.html
 share/gtk-doc/html/ibus/IBusHotkeyProfile.html
 share/gtk-doc/html/ibus/IBusInputContext.html
+share/gtk-doc/html/ibus/IBusKeymap.html
 share/gtk-doc/html/ibus/IBusLookupTable.html
 share/gtk-doc/html/ibus/IBusObject.html
 share/gtk-doc/html/ibus/IBusObservedPath.html
+share/gtk-doc/html/ibus/IBusPanelService.html
 share/gtk-doc/html/ibus/IBusProperty.html
 share/gtk-doc/html/ibus/IBusProxy.html
 share/gtk-doc/html/ibus/IBusSerializable.html
@@ -175,8 +178,8 @@ share/gtk-doc/html/ibus/ch02.html
 share/gtk-doc/html/ibus/ch03.html
 share/gtk-doc/html/ibus/ch04.html
 share/gtk-doc/html/ibus/ch05.html
+share/gtk-doc/html/ibus/ch06.html
 share/gtk-doc/html/ibus/home.png
-share/gtk-doc/html/ibus/ibus-IBusKeymap.html
 share/gtk-doc/html/ibus/ibus-ibusdebug.html
 share/gtk-doc/html/ibus/ibus-ibusenumtypes.html
 share/gtk-doc/html/ibus/ibus-ibuserror.html
@@ -190,7 +193,6 @@ share/gtk-doc/html/ibus/ibus-ibusshare.html
 share/gtk-doc/html/ibus/ibus-ibustypes.html
 share/gtk-doc/html/ibus/ibus-ibusversion.html
 share/gtk-doc/html/ibus/ibus-ibusxml.html
-share/gtk-doc/html/ibus/ibus-keyname-table.html
 share/gtk-doc/html/ibus/ibus.devhelp
 share/gtk-doc/html/ibus/ibus.devhelp2
 share/gtk-doc/html/ibus/index.html
@@ -203,6 +205,7 @@ share/ibus/component/gconf.xml
 share/ibus/component/gtkpanel.xml
 share/ibus/keymaps/common
 share/ibus/keymaps/jp
+share/ibus/keymaps/kr
 share/ibus/keymaps/modifiers
 share/ibus/keymaps/us
 share/ibus/setup/engineabout.py
