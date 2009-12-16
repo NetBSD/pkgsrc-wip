@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.13 2009/09/24 08:46:10 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.14 2009/12/16 10:02:40 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -215,16 +215,16 @@ _CABAL_SETUP_SCRIPT=	Setup.*hs
 
 # Define configure target.
 do-configure:
-	cd ${WRKSRC} && \
+	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} \
 			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} configure ${CONFIGURE_ARGS}
 
 # Define build target.
 do-build:
-	cd ${WRKSRC} && \
+	${RUN} cd ${WRKSRC} && \
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} build
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
-	cd ${WRKSRC} && \
+	${RUN} cd ${WRKSRC} && \
 		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} haddock
 .endif
 
@@ -233,7 +233,7 @@ do-build:
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
 
 do-install:
-	cd ${WRKSRC} && \
+	${RUN} cd ${WRKSRC} && \
 		if [ "${DESTDIR}" = "" ]; then \
 			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy && \
 			if [ -f dist/installed-pkg-config ]; then \
