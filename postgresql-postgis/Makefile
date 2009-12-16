@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/16 09:33:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/16 11:44:12 lexort Exp $
 
 DISTNAME=		postgis-1.4.0
 PKGNAME=		postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# postgis requires pgxs.mk and associated Makefiles to be installed.
+# When/if 82 and 83 install pgxs.mk, they can be added.
 PGSQL_VERSIONS_ACCEPTED=	84
 
 CONFLICTS=		postgis-[0-9]*
