@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/15 22:49:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/16 09:33:59 fhajny Exp $
 
 DISTNAME=		postgis-1.4.0
-PKGNAME=		postgresql${PGSQL_VERSION_DEFAULT}-${DISTNAME}
+PKGNAME=		postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		databases geography
 MASTER_SITES=		http://postgis.refractions.net/download/
 
@@ -22,6 +23,8 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake lex pax perl
 USE_LANGUAGES=		c c++
+
+TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
@@ -49,7 +52,7 @@ do-install:
 	cd ${WRKSRC}/doc/html && pax -rw -pp *.css ${DESTDIR}${DOCDIR}
 	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-DEPENDS+=	postgresql${PGSQL_VERSION_DEFAULT}-server>=0:../../databases/postgresql${PGSQL_VERSION_DEFAULT}-server
+DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 .include "../../geography/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
