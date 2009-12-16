@@ -5,8 +5,8 @@ standard distribution:
   . minor fix for compatibility with pkgsrc's cc wrapper (massaging of -Wl).
 
 - util/deviceiter.c
-  . inclusion of <sys/disklabel.h> disabled on NetBSD, due to a conflict on
-    the `UNUSED' macro.
+  . moved the inclusion of local header files after <sys/disklabel.h>, as
+    otherwise there is a conflict on NetBSD with the `UNUSED' macro.
 
 - Makefile
   . $(sysconfdir)/grub.d replaced with $(EGDIR).

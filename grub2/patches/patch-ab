@@ -1,18 +1,24 @@
-$NetBSD: patch-ab,v 1.10 2009/12/16 14:37:31 gregoire Exp $
+$NetBSD: patch-ab,v 1.11 2009/12/16 18:14:30 gregoire Exp $
 
 --- util/deviceiter.c.orig	2009-11-09 16:48:16.000000000 +0100
 +++ util/deviceiter.c
-@@ -111,7 +111,12 @@ get_kfreebsd_version (void)
+@@ -29,9 +29,6 @@
+ #include <fcntl.h>
+ #include <limits.h>
  
- #if defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
- # include <sys/ioctl.h>		/* ioctl */
--# include <sys/disklabel.h>
-+  /* the preprocessor macro `UNUSED', which is defined in grub/types.h,
-+     conflicts with NetBSD's sys/disklabel.h, where the word `UNUSED'
-+     appears. */
-+# if !defined(__NetBSD__)
-+#  include <sys/disklabel.h>
-+# endif
- # include <sys/cdio.h>		/* CDIOCCLRDEBUG */
- # if defined(__FreeBSD_kernel__)
- #  include <sys/param.h>
+-#include <grub/util/misc.h>
+-#include <grub/util/deviceiter.h>
+-
+ #ifdef __linux__
+ # if !defined(__GLIBC__) || \
+         ((__GLIBC__ < 2) || ((__GLIBC__ == 2) && (__GLIBC_MINOR__ < 1)))
+@@ -135,6 +132,9 @@ have_devfs (void)
+ }
+ #endif /* __linux__ */
+ 
++#include <grub/util/misc.h>
++#include <grub/util/deviceiter.h>
++
+ /* These three functions are quite different among OSes.  */
+ static void
+ get_floppy_disk_name (char *name, int unit)
