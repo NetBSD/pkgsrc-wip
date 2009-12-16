@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/12/16 14:37:31 gregoire Exp $
+# $NetBSD: Makefile,v 1.11 2009/12/16 17:01:50 gregoire Exp $
 #
 
 DISTNAME=		grub-1.97.1
@@ -52,6 +52,25 @@ CONF_FILES+=		${EGDIR}/00_${OPSYS:tl} ${PKG_SYSCONFDIR}/00_${OPSYS:tl}
 CFLAGS+=		-DHAVE_OPENDISK
 LDFLAGS+=		-lutil
 .endif
+
+#
+# GRUB 2's configure script sets the variables `target_cpu' and `platform',
+# which are used to define the location of library directory.  We must take
+# this into account for PLIST.  The following mimics the behavior of the
+# configure script.  Our job is simpler as we only accept i386 and x86_64
+# (see definition of ONLY_FOR_PLATFORM above).
+#
+GRUB_TARGET_CPU=	${MACHINE_ARCH}
+.if ${LOWER_VENDOR} == "apple"
+GRUB_PLATFORM=		"efi"
+.else
+GRUB_PLATFORM=		"pc"
+.endif
+.if ${GRUB_TARGET_CPU} == "x86_64" && ${GRUB_PLATFORM} == "pc"
+GRUB_TARGET_CPU=	"i386"
+.endif
+PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
+PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
