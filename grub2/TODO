@@ -1,4 +1,0 @@
-* Remove NetBSD patches when official GNU GRUB release supports NetBSD.
-* Test GRUB on supported architectures and possibly port it.
-* Make fixed locations like '/grub' configurable when GRUB does so.
-* Add new entries to mk/defaults/options.description.

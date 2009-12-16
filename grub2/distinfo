@@ -1,8 +1,20 @@
-$NetBSD: distinfo,v 1.11 2009/12/10 15:39:02 gregoire Exp $
+$NetBSD: distinfo,v 1.12 2009/12/16 14:37:31 gregoire Exp $
 
-SHA1 (patch-aa) = 3bf24d8da73dc283944d78ad18c97fb7fa297e10
-SHA1 (patch-ab) = 3ebac7adfee145e029ae615c869a78e65aa875d0
-SHA1 (patch-ag) = 2e9af1e1d8f340bf09bcc91d9e973e3e7adb56b0
-SHA1 (patch-ah) = 1048f551688628b8a577e46a292d92d587693fa3
-SHA1 (patch-ak) = c844ebd381519dc9d1a8a1029727b66a5812eb9c
-SHA1 (patch-al) = 3ee5d6eb05d11286766280699abcdb89defde1a1
+SHA1 (grub-1.97.1.tar.gz) = a8465fc16ef5d082a43df0f8e7caeea01db0c515
+RMD160 (grub-1.97.1.tar.gz) = 3f0036add7298bfd1bb2dcd963671bbeea136c3c
+Size (grub-1.97.1.tar.gz) = 1242959 bytes
+SHA1 (patch-aa) = 92435d458d9b94cec531575240efcf6c5db4de80
+SHA1 (patch-ab) = 89336dba1f7c6a5a30fd7dcb2a78caeb512956d1
+SHA1 (patch-ac) = 87de2d112e35710d250ade4e0f514441a34d8a23
+SHA1 (patch-ad) = 59e143eeac54494b4071ae42afd438bf7eea5552
+SHA1 (patch-ae) = 57b78a9bcd6f83386e542997ad89d88f3f42db01
+SHA1 (patch-af) = 802b40d110df98116d1c60e1561ea4c534ef8e3a
+SHA1 (patch-ag) = b88dcceed8b2f5bef8cbd357be74a12c9a0238ce
+SHA1 (patch-ah) = 0b94a274b525807dab07e1e5190816fc147fdb67
+SHA1 (patch-ai) = c77565920fd55c4e7dfe851d39f679a0e11612f4
+SHA1 (patch-aj) = e5fc32d5dcd2adaef2f3a2209ba00132a28e01e7
+SHA1 (patch-ak) = 236ebdc0756f36d701950d2aa723114f29d8ae5c
+SHA1 (patch-al) = 3a5a8aeda326b3855374774a498f9312c212500f
+SHA1 (patch-am) = e9c9fbd7c4952dcb4fe264b8eb0eb822e99d95b4
+SHA1 (patch-an) = d02b45d83d8c18b55c5bd688424e5b4b2656a377
+SHA1 (patch-ao) = 666317fccdc92c0dd3c90a1fd722659fed0b56b9

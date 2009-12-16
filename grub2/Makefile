@@ -1,48 +1,60 @@
-# $NetBSD: Makefile,v 1.9 2009/12/10 17:52:36 gregoire Exp $
+# $NetBSD: Makefile,v 1.10 2009/12/16 14:37:31 gregoire Exp $
+#
 
-DISTNAME=		grub2
+DISTNAME=		grub-1.97.1
+PKGNAME=		grub2-1.97.1
 PKGREVISION=		1
-PKGNAME=		grub2-${GRUB_VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		# not defined
+MASTER_SITES=		ftp://alpha.gnu.org/gnu/grub/
 
-MAINTAINER=		lkundrak@skosi.org
-HOMEPAGE=		http://www.gnu.org/software/grub/grub.html
-COMMENT=		Multiboot compilant GNU boot manager and loader
+MAINTAINER=		gregoire.sutre@labri.fr
+HOMEPAGE=		http://www.gnu.org/software/grub/grub-2.en.html
+COMMENT=		GRand Unified Bootloader, version 2
+LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake bison
-CONFIGURE_ARGS+=	--program-transform-name=s,grub,grub2,
+#
+# XXX: Linux-*-powerpc and others?
+#
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-MAKE_JOBS_SAFE=		no
+PKG_SYSCONFSUBDIR=	${PKGBASE}
+
+USE_TOOLS+=		gmake bison makeinfo
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--program-transform-name=s,grub,grub2,
+INFO_FILES=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-EGFILES=		00_header 10_linux 10_hurd
+EGFILES=		00_header 30_os-prober 40_custom README
 .for file in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
-GRUB_MACHINE_ARCH=	${"${MACHINE_ARCH}" == "x86_64":?i386:${MACHINE_ARCH}}
 
-MAKE_ENV+=		LIBARGP=-largp
+# The patched Makefile installs configuration scripts in ${EGDIR}.
 MAKE_ENV+=		EGDIR=${EGDIR}
-##
-## XXX: Linux-*-powerpc and others
-##
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
-PLIST_SUBST+=		GRUB_MACHINE_ARCH=${GRUB_MACHINE_ARCH}
-PKG_SYSCONFSUBDIR=	${PKGBASE}
-REPLACE_SH+=		*.sh *.in */*.in */*/*.in */*/*/*.in
 
-PLIST_SRC=		${PKGDIR}/PLIST.common
+.include "../../mk/bsd.prefs.mk"
 
-.include "cvs.mk"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+CONF_FILES+=		${EGDIR}/00_${OPSYS:tl} ${PKG_SYSCONFDIR}/00_${OPSYS:tl}
+.endif
+
+#
+# NetBSD has opendisk support since 1.3.  The following lines are required
+# for proper detection of devices (e.g. in grub2-mkdevicemap).
+# XXX: remove the following lines when opendisk auto-detection is added to
+#      GRUB 2's configure script (it is in GRUB Legacy's configure.ac).
+#
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M1.[0-2]*)
+CFLAGS+=		-DHAVE_OPENDISK
+LDFLAGS+=		-lutil
+.endif
+
+# This package uses help2man to generate man pages.
+BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+
 .include "options.mk"
-
-.include "../../wip/libargp/buildlink3.mk"
-.include "../../archivers/liblzo/buildlink3.mk"
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../wip/mk/cvs-package.mk"
-
 .include "../../mk/bsd.pkg.mk"

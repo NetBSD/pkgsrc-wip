@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.10 2009/12/16 14:37:31 gregoire Exp $
+
+--- util/grub-mkconfig.in.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/grub-mkconfig.in
+@@ -27,6 +27,7 @@ package_version=@PACKAGE_VERSION@
+ datarootdir=@datarootdir@
+ datadir=@datadir@
+ pkgdatadir=${datadir}/`echo @PACKAGE_TARNAME@ | sed "${transform}"`
++pkglibdirbase=${libdir}/`echo @PACKAGE_TARNAME@ | sed "${transform}"`
+ grub_prefix=`echo /boot/grub | sed ${transform}`
+ grub_cfg=""
+ grub_mkconfig_dir=${sysconfdir}/grub.d
+@@ -73,7 +74,7 @@ for option in "$@"; do
+     esac
+ done
+ 
+-. ${libdir}/grub/grub-mkconfig_lib
++. ${pkglibdirbase}/grub-mkconfig_lib
+ 
+ if [ "x$EUID" = "x" ] ; then
+   EUID=`id -u`

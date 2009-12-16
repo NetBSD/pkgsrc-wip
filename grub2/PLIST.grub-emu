@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.grub-emu,v 1.2 2007/01/25 05:24:18 lkundrak Exp $
-sbin/grub2-emu

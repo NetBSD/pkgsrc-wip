@@ -1,52 +1,18 @@
-$NetBSD: patch-ab,v 1.9 2009/12/10 15:39:05 gregoire Exp $
+$NetBSD: patch-ab,v 1.10 2009/12/16 14:37:31 gregoire Exp $
 
---- Makefile.in.orig	2007-06-11 02:26:17.000000000 -0400
-+++ Makefile.in
-@@ -30,15 +30,16 @@ sbindir = @sbindir@
- libexecdir = @libexecdir@
- datarootdir = @datarootdir@
- datadir = @datadir@
--sysconfdir = @sysconfdir@
-+sysconfdir = ${EGDIR}
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
--libdir = @libdir@
-+libdir = ${PREFIX}/lib
- infodir = @infodir@
- mandir = @mandir@
- includedir = @includedir@
- pkgdatadir = $(datadir)/`echo @PACKAGE_TARNAME@ | sed '$(transform)'`
- pkglibdir =  $(libdir)/`echo @PACKAGE_TARNAME@/$(target_cpu)-$(platform) | sed '$(transform)'`
-+pkglibdirbase = $(libdir)/`echo @PACKAGE_TARNAME@ | sed '$(transform)'`
+--- util/deviceiter.c.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/deviceiter.c
+@@ -111,7 +111,12 @@ get_kfreebsd_version (void)
  
- PACKAGE_NAME = @PACKAGE_NAME@
- PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -159,23 +160,23 @@ install-local: all
- 	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sbindir)/$$dest; \
-	  $(HELP2MAN) --section=8 $(builddir)/$$file > $(DESTDIR)$(mandir)/man8/$$dest.8; \
- 	done
--	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/grub.d
-+	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
- 	@list='$(update-grub_SCRIPTS)'; for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
--	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sysconfdir)/grub.d/$$dest; \
-+	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sysconfdir)/$$dest; \
- 	done
- 	@list='$(update-grub_DATA)'; for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
--	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(sysconfdir)/grub.d/$$dest; \
-+	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(sysconfdir)/$$dest; \
- 	done
--	$(mkinstalldirs) $(DESTDIR)$(libdir)/grub
-+	$(mkinstalldirs) $(DESTDIR)$(pkglibdirbase)
- 	@list='$(lib_DATA)'; \
- 	for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,'`"; \
--	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(libdir)/grub/$$dest; \
-+	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(pkglibdirbase)/$$dest; \
- 	done
- 
- install-strip:
+ #if defined(__FreeBSD_kernel__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ # include <sys/ioctl.h>		/* ioctl */
+-# include <sys/disklabel.h>
++  /* the preprocessor macro `UNUSED', which is defined in grub/types.h,
++     conflicts with NetBSD's sys/disklabel.h, where the word `UNUSED'
++     appears. */
++# if !defined(__NetBSD__)
++#  include <sys/disklabel.h>
++# endif
+ # include <sys/cdio.h>		/* CDIOCCLRDEBUG */
+ # if defined(__FreeBSD_kernel__)
+ #  include <sys/param.h>

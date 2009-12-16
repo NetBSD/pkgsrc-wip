@@ -1,26 +1,38 @@
-# $NetBSD: options.mk,v 1.1 2007/11/20 05:56:10 bsadewitz Exp $
+# $NetBSD: options.mk,v 1.2 2009/12/16 14:37:31 gregoire Exp $
+#
+
+#
+# Description of options (taken from configure --help):
+# grub-mm-debug		include memory manager debugging
+# grub-emu		build and install the `grub-emu' debugging utility
+# grub-mkfont		build and install the `grub-mkfont' utility
+#
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grub2
-PKG_SUPPORTED_OPTIONS=	grub-mm-debug grub-emu
-
-### New options descriptions:
-### grub-emu		Include memory manager debugging
-### grub-mm-debug	Build and install the `grub-emu' debugging utility
-###
-PKG_SUGGESTED_OPTIONS=	grub-mm-debug grub-emu
+PKG_SUPPORTED_OPTIONS=	grub-mm-debug grub-emu grub-mkfont
+PKG_SUGGESTED_OPTIONS=	grub-emu grub-mkfont
 
 .include "../../mk/bsd.options.mk"
-###
-### Include memory manager debugging
-###
+
+PLIST_VARS+=		emu mkfont
+
 .if !empty(PKG_OPTIONS:Mgrub-mm-debug)
 CONFIGURE_ARGS+=	--enable-mm-debug
+.else
+CONFIGURE_ARGS+=	--disable-mm-debug
 .endif
-###
-### Build and install the `grub-emu' debugging utility
-###
+
 .if !empty(PKG_OPTIONS:Mgrub-emu)
 CONFIGURE_ARGS+=	--enable-grub-emu
-PLIST_SRC+=		${PKGDIR}/PLIST.grub-emu
-.  include "../../mk/curses.buildlink3.mk" # XXXbjs make sure this is OK
+PLIST.emu=		yes
+.else
+CONFIGURE_ARGS+=	--disable-grub-emu
+.endif
+
+.if !empty(PKG_OPTIONS:Mgrub-mkfont)
+CONFIGURE_ARGS+=	--enable-grub-mkfont
+PLIST.mkfont=		yes
+.include "../../graphics/freetype2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-grub-mkfont
 .endif

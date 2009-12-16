@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.6 2009/12/16 14:37:31 gregoire Exp $
+$NetBSD: patch-aj,v 1.7 2009/12/16 14:37:31 gregoire Exp $
 
---- util/grub.d/10_windows.in.orig	2009-11-09 16:48:16.000000000 +0100
-+++ util/grub.d/10_windows.in
+--- util/grub.d/10_linux.in.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/grub.d/10_linux.in
 @@ -19,7 +19,8 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -10,5 +10,5 @@ $NetBSD: patch-ak,v 1.6 2009/12/16 14:37:31 gregoire Exp $
 +pkglibdirbase=${libdir}/`echo @PACKAGE_TARNAME@ | sed "@program_transform_name@"`
 +. ${pkglibdirbase}/grub-mkconfig_lib
  
- case "`uname 2>/dev/null`" in
-   CYGWIN*)  ;;
+ if [ "x${GRUB_DISTRIBUTOR}" = "x" ] ; then
+   OS=GNU/Linux

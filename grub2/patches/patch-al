@@ -1,13 +1,15 @@
-$NetBSD: patch-al,v 1.6 2009/12/10 15:39:05 gregoire Exp $
+$NetBSD: patch-al,v 1.7 2009/12/16 14:37:31 gregoire Exp $
 
---- normal/parser.y.orig	2007-07-21 19:32:29.000000000 -0400
-+++ normal/parser.y
-@@ -55,7 +55,7 @@
+--- util/grub.d/30_os-prober.in.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/grub.d/30_os-prober.in
+@@ -19,8 +19,9 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
++pkglibdirbase=${libdir}/`echo @PACKAGE_TARNAME@ | sed "@program_transform_name@"`
  
- %%
- /* It should be possible to do this in a clean way...  */
--script_init:	{ state->err = 0} script
-+script_init:	{ state->err = 0;} script
- 		  {
- 		    state->parsed = $2;
- 		  }
+-. ${libdir}/grub/grub-mkconfig_lib
++. ${pkglibdirbase}/grub-mkconfig_lib
+ 
+ if [ "x${GRUB_DISABLE_OS_PROBER}" = "xtrue" ]; then
+   exit 0

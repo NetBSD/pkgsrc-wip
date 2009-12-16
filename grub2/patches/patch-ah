@@ -1,21 +1,14 @@
-$NetBSD: patch-ah,v 1.5 2007/11/20 05:56:10 bsadewitz Exp $
+$NetBSD: patch-ah,v 1.6 2009/12/16 14:37:31 gregoire Exp $
 
---- kern/mm.c.orig	2007-07-21 19:32:26.000000000 -0400
-+++ kern/mm.c
-@@ -454,6 +454,16 @@ grub_mm_dump (unsigned lineno)
-   grub_printf ("\n");
- }
+--- util/grub.d/10_freebsd.in.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/grub.d/10_freebsd.in
+@@ -19,7 +19,8 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+-. ${libdir}/grub/grub-mkconfig_lib
++pkglibdirbase=${libdir}/`echo @PACKAGE_TARNAME@ | sed "@program_transform_name@"`
++. ${pkglibdirbase}/grub-mkconfig_lib
  
-+
-+/*
-+ * XXX: gcc on systems using non-executable mapping of stack generates
-+ * reference to __enable_execute_stack() (libgcc)
-+ * Probably there's better way to solve this, than such an ugly workaround.
-+ */
-+
-+void __enable_execute_stack (void);
-+void __enable_execute_stack (void) {}
-+
- void *
- grub_debug_malloc (const char *file, int line, grub_size_t size)
- {
+ case "${GRUB_DISTRIBUTOR}" in
+   Debian)	OS="${GRUB_DISTRIBUTOR} GNU/kFreeBSD" ;;

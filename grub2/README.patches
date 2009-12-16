@@ -1,0 +1,23 @@
+The patches included with this package perform the following changes to the
+standard distribution:
+
+- configure
+  . minor fix for compatibility with pkgsrc's cc wrapper (massaging of -Wl).
+
+- util/deviceiter.c
+  . inclusion of <sys/disklabel.h> disabled on NetBSD, due to a conflict on
+    the `UNUSED' macro.
+
+- Makefile
+  . $(sysconfdir)/grub.d replaced with $(EGDIR).
+  . $(libdir)/grub replaced with $(libdir)/grub2 (via name transformation).
+  . grub.info installed as grub2.info (via name transformation).
+
+- conf/common.{mk,rmk}
+  . installation of all example configuration scripts (and not only the one
+    corresponding to the running OS).
+
+- various scripts in util
+  . {libdir}/grub replaced with $(libdir)/grub2 (via name transformation).
+  . sourcing of grub-mkconfig_lib moved after command-line parsing, so that
+    --help always works (required man page generation with help2man).
