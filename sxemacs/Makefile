@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/10 17:21:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/16 20:00:38 jsonn Exp $
 
 DISTNAME=	sxemacs-22.1.5
 PKGREVISION=	1
@@ -82,7 +82,7 @@ PLIST_SUBST+=	X11ONLY=""
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
 .include "../../devel/ncurses/buildlink3.mk"
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:41 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/16 20:00:38 jsonn Exp $
 #
 
 DISTNAME=		xplore-1.2a
@@ -12,6 +12,6 @@ COMMENT=		X11/Motif File Manager
 
 USE_IMAKE=		YES
 
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

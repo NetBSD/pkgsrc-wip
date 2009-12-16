@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/22 15:11:04 tnn2 Exp $
+# $NetBSD: Makefile,v 1.18 2009/12/16 20:00:39 jsonn Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -61,7 +61,7 @@ do-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/xpm/buildlink3.mk"
+.include "../../libXpm/libXpm/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
