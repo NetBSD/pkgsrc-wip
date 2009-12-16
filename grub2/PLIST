@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/12/16 14:37:31 gregoire Exp $
-
+@comment $NetBSD: PLIST,v 1.11 2009/12/16 14:43:15 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
