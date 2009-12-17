@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/17 13:23:00 bubuchka Exp $
+${PYSITELIB}/ipaddr.py
