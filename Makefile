@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3729 2009/12/14 07:27:42 thomasklausner Exp $
+# $Id: Makefile,v 1.3730 2009/12/17 13:25:45 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1806,6 +1806,7 @@ SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gts
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-imgSeek
+SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
