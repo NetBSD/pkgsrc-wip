@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/15 22:49:24 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/17 00:25:36 lexort Exp $
 bin/pgsql2shp
 bin/shp2pgsql
+lib/libpostgis-1.4.la
 man/man1/pgsql2shp.1
 man/man1/shp2pgsql.1
 share/doc/postgis/README.postgis
@@ -19,6 +20,8 @@ share/doc/postgis/template.xml
 share/doc/postgis/using_postgis_app.xml
 share/doc/postgis/using_postgis_dataman.xml
 share/postgresql/contrib/postgis.sql
-share/postgresql/contrib/postgis_upgrade.sql
+share/postgresql/contrib/postgis_upgrade_12_to_14.sql
+share/postgresql/contrib/postgis_upgrade_13_to_14.sql
+share/postgresql/contrib/postgis_upgrade_14_minor.sql
 share/postgresql/contrib/spatial_ref_sys.sql
 share/postgresql/contrib/uninstall_postgis.sql
