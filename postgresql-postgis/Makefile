@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/12/17 00:25:36 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/17 10:01:58 fhajny Exp $
 
 DISTNAME=		postgis-1.4.1rc2
 PKGNAME=		postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		databases geography
 MASTER_SITES=		http://postgis.refractions.net/download/
 
@@ -12,9 +13,10 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# postgis requires pgxs.mk and associated Makefiles to be installed.
-# When/if 82 and 83 install pgxs.mk, they can be added.
+# See TODO
 PGSQL_VERSIONS_ACCEPTED=	84
+
+DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 CONFLICTS=		postgis-[0-9]*
 
@@ -31,7 +33,7 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
 
-DOCDIR=		${PREFIX}/share/doc/postgis
+DOCDIR=			${PREFIX}/share/doc/postgis
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	extras/template_gis/profile \
@@ -41,20 +43,18 @@ SUBST_FILES.paths=	extras/template_gis/profile \
 SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_STAGE.paths=	pre-configure
 
-INSTALLATION_DIRS=	${DOCDIR} ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
-# Install is manual because distribution fails if docbook prereqs are not
+# Docs install is manual because distribution fails if docbook prereqs are not
 # satisfied, rather than using the prebuilt versions which are actually
 # in the distfile.
-do-install:
-	cd ${WRKSRC} && ${GMAKE} install DESTDIR=${DESTDIR}
+post-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/README.postgis ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.xml ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.txt ${DESTDIR}${DOCDIR}
-	cd ${WRKSRC}/doc/html && pax -rw -pp *.css ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/postgis.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/style.css ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/images/* ${DESTDIR}${DOCDIR}/images
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/postgis_comments.sql ${DESTDIR}${PREFIX}/share/postgresql/contrib
 	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
 .include "../../geography/geos/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"

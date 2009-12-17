@@ -1,2 +1,3 @@
-Only tested on Solaris SX:CE so far. Also should be tested with
-Postgresql 8.3 and maybe 8.2.
+Only tested on Solaris SX:CE so far.
+Needs the pgxs makefiles installed with PostgreSQL client. They are
+only currently provided as of postgresql84-client-8.4.1nb1.
