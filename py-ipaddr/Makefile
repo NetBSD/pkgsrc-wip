@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/17 13:23:00 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/17 18:16:09 bubuchka Exp $
 #
 
 DISTNAME=	ipaddr-2.0.0
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 26 25 24	# XXX - 30 also requires it
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
