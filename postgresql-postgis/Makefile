@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/12/17 10:01:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2009/12/17 10:11:35 moubctez Exp $
 
 DISTNAME=		postgis-1.4.1rc2
 PKGNAME=		postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -23,15 +23,14 @@ CONFLICTS=		postgis-[0-9]*
 # gmake complains about adding + to parent rule
 MAKE_JOBS_SAFE=		no
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake lex pax perl
 USE_LANGUAGES=		c c++
-
-TEST_TARGET=		check
-
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake lex pax perl
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/postgresql/contrib
+
+TEST_TARGET=		check
 
 DOCDIR=			${PREFIX}/share/doc/postgis
 
@@ -45,9 +44,6 @@ SUBST_STAGE.paths=	pre-configure
 
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
-# Docs install is manual because distribution fails if docbook prereqs are not
-# satisfied, rather than using the prebuilt versions which are actually
-# in the distfile.
 post-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/README.postgis ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/postgis.html ${DESTDIR}${DOCDIR}
