@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3731 2009/12/18 14:07:51 rhialto Exp $
+# $Id: Makefile,v 1.3732 2009/12/18 14:39:16 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -262,6 +262,7 @@ SUBDIR+=	d4x
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
+SUBDIR+=	dasm
 SUBDIR+=	datapipe
 SUBDIR+=	db1
 SUBDIR+=	dbf
