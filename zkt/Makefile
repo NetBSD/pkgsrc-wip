@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/05 14:52:12 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/18 00:25:53 pettai Exp $
 #
 
 DISTNAME=	zkt-0.98
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	sbin man/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dnssec-zkt ${DESTDIR}${PREFIX}/sbin/dnssec-zkt
