@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/12/18 11:03:44 gregoire Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/18 13:28:25 gregoire Exp $
 #
 
 DISTNAME=		grub-1.97.1
 PKGNAME=		grub2-1.97.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://alpha.gnu.org/gnu/grub/
 
@@ -77,21 +77,27 @@ PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 
 #
 # The following substitutions fix the configuration and library paths:
-# - $(sysconfdir)/grub.d is replaced by $(EGDIR) in Makefile.in.
-# - $(libdir)/grub is replaced by $(libdir)/grub2 in Makefile.in and in
-#   the scripts in util/ that source a file in ${libdir}/grub.
+# - $sysconfdir/grub.d is replaced by $sysconfdir in scripts, and by $EGDIR
+#   in Makefile.in.
+# - $sysconfdir/default/grub is replaced by $sysconfdir/default.conf in
+#   scripts
+# - $libdir/grub is replaced by $libdir/grub2 in Makefile.in and in scripts.
 #
-SUBST_CLASSES+=                 fix-paths
-SUBST_STAGE.fix-paths=          pre-configure
-SUBST_MESSAGE.fix-paths=        Fixing configuration and library paths.
-SUBST_FILES.fix-paths=          Makefile.in
-SUBST_FILES.fix-paths+=         util/grub-mkconfig.in util/update-grub_lib.in
-SUBST_FILES.fix-paths+=         util/grub.d/*
-SUBST_FILES.fix-paths+=         util/i386/pc/grub-install.in
-SUBST_FILES.fix-paths+=         util/sparc64/ieee1275/grub-install.in
-SUBST_SED.fix-paths=            -e 's,\$$(sysconfdir)/grub.d,\$$(EGDIR),g'
-SUBST_SED.fix-paths+=           -e 's,\$$(libdir)/grub,\$$(libdir)/grub2,g'
-SUBST_SED.fix-paths+=           -e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
+SUBST_CLASSES+=			fix-paths-1 fix-paths-2
+SUBST_STAGE.fix-paths-1=	pre-configure
+SUBST_MESSAGE.fix-paths-1=	Fixing configuration and library paths in makefile.
+SUBST_FILES.fix-paths-1=	Makefile.in
+SUBST_SED.fix-paths-1=		-e 's,\$$(sysconfdir)/grub.d,\$$(EGDIR),g'
+SUBST_SED.fix-paths-1+=		-e 's,\$$(libdir)/grub,\$$(libdir)/grub2,g'
+SUBST_STAGE.fix-paths-2=	pre-configure
+SUBST_MESSAGE.fix-paths-2=	Fixing configuration and library paths in scripts.
+SUBST_FILES.fix-paths-2=	util/grub-mkconfig.in util/update-grub_lib.in
+SUBST_FILES.fix-paths-2+=	util/grub.d/[0-3]*
+SUBST_FILES.fix-paths-2+=	util/i386/pc/grub-install.in
+SUBST_FILES.fix-paths-2+=	util/sparc64/ieee1275/grub-install.in
+SUBST_SED.fix-paths-2=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
+SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'
+SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
