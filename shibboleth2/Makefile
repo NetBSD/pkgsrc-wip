@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2009/10/27 11:34:29 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/18 00:30:52 pettai Exp $
 #
 
 DISTNAME=	shibboleth-sp-${PKGVERSION}
 PKGNAME=	shibboleth2-${PKGVERSION}
 PKGVERSION=	2.2.1
-CATEGORIES=	wip
+CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.internet2.edu/downloads/shibboleth/cppsp/latest/
 
 MAINTAINER=	pettai@nordu.net
@@ -76,4 +76,3 @@ INSTALLATION_DIRS+=	${VARBASE}/log/shibboleth
 .include "../../wip/opensaml2/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
-
