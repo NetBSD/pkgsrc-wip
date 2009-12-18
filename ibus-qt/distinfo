@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/06 07:06:29 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/12/18 10:52:12 obache Exp $
 
-SHA1 (ibus-qt-1.2.0.20091206-Source.tar.gz) = 460a3ffaef458b1c3672854ed533fb8ab4512c16
-RMD160 (ibus-qt-1.2.0.20091206-Source.tar.gz) = ccfd3f1e8c48b773f6304b94a74c40e002b2f702
-Size (ibus-qt-1.2.0.20091206-Source.tar.gz) = 325997 bytes
+SHA1 (ibus-qt-1.2.0.20091217-Source.tar.gz) = 8083fb529ef87a58a6a7795a6ba4b39211326c34
+RMD160 (ibus-qt-1.2.0.20091217-Source.tar.gz) = 7f98942ace6661c16ffe82bd07cb8408a4b1ea6b
+Size (ibus-qt-1.2.0.20091217-Source.tar.gz) = 135595 bytes

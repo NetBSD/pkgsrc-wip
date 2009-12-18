@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/06 07:06:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/18 10:52:12 obache Exp $
 include/ibus-qt/qibusattribute.h
 include/ibus-qt/qibusattrlist.h
 include/ibus-qt/qibusbus.h
@@ -22,7 +22,6 @@ include/ibus-qt/qibusobservedpath.h
 include/ibus-qt/qibusproperty.h
 include/ibus-qt/qibusproplist.h
 include/ibus-qt/qibusserializable.h
-include/ibus-qt/qibusservice.h
 include/ibus-qt/qibustext.h
 lib/libibus-qt.so
 lib/libibus-qt.so.1
