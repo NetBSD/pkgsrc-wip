@@ -1,20 +1,12 @@
-$NetBSD: distinfo,v 1.13 2009/12/16 18:14:30 gregoire Exp $
+$NetBSD: distinfo,v 1.14 2009/12/18 11:03:44 gregoire Exp $
 
 SHA1 (grub-1.97.1.tar.gz) = a8465fc16ef5d082a43df0f8e7caeea01db0c515
 RMD160 (grub-1.97.1.tar.gz) = 3f0036add7298bfd1bb2dcd963671bbeea136c3c
 Size (grub-1.97.1.tar.gz) = 1242959 bytes
 SHA1 (patch-aa) = 92435d458d9b94cec531575240efcf6c5db4de80
 SHA1 (patch-ab) = 4a69c597a8890274d1c7f88ac3ae60e939677e96
-SHA1 (patch-ac) = 87de2d112e35710d250ade4e0f514441a34d8a23
+SHA1 (patch-ac) = 534bc5e8d3f36988273bcfe8e7f3f6a8ae0b0ce3
 SHA1 (patch-ad) = 59e143eeac54494b4071ae42afd438bf7eea5552
 SHA1 (patch-ae) = 57b78a9bcd6f83386e542997ad89d88f3f42db01
-SHA1 (patch-af) = 802b40d110df98116d1c60e1561ea4c534ef8e3a
-SHA1 (patch-ag) = b88dcceed8b2f5bef8cbd357be74a12c9a0238ce
-SHA1 (patch-ah) = 0b94a274b525807dab07e1e5190816fc147fdb67
-SHA1 (patch-ai) = c77565920fd55c4e7dfe851d39f679a0e11612f4
-SHA1 (patch-aj) = e5fc32d5dcd2adaef2f3a2209ba00132a28e01e7
-SHA1 (patch-ak) = 236ebdc0756f36d701950d2aa723114f29d8ae5c
-SHA1 (patch-al) = 3a5a8aeda326b3855374774a498f9312c212500f
-SHA1 (patch-am) = e9c9fbd7c4952dcb4fe264b8eb0eb822e99d95b4
-SHA1 (patch-an) = d02b45d83d8c18b55c5bd688424e5b4b2656a377
-SHA1 (patch-ao) = 666317fccdc92c0dd3c90a1fd722659fed0b56b9
+SHA1 (patch-af) = ebd87294944ccc4f027eb770ad43a316e2ac6fa0
+SHA1 (patch-ag) = 659cb79965a9e01d5a1f9c498cfe6bf2af310d2a

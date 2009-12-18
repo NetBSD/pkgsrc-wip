@@ -1,43 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2009/12/16 14:37:31 gregoire Exp $
+$NetBSD: patch-ac,v 1.7 2009/12/18 11:03:44 gregoire Exp $
 
 --- Makefile.in.orig	2009-11-09 16:48:15.000000000 +0100
 +++ Makefile.in
-@@ -40,6 +40,7 @@ mandir = @mandir@
- includedir = @includedir@
- pkgdatadir = $(datadir)/`echo @PACKAGE_TARNAME@ | sed '$(transform)'`
- pkglibdir =  $(libdir)/`echo @PACKAGE_TARNAME@/$(target_cpu)-$(platform) | sed '$(transform)'`
-+pkglibdirbase =  $(libdir)/`echo @PACKAGE_TARNAME@ | sed '$(transform)'`
- 
- PACKAGE_NAME = @PACKAGE_NAME@
- PACKAGE_TARNAME = @PACKAGE_TARNAME@
-@@ -282,30 +283,30 @@ install-local: all
- 	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sbindir)/$$dest; \
- 	  $(HELP2MAN) --section=8 -o $(DESTDIR)$(mandir)/man8/$$dest.8 $(builddir)/$$file; \
- 	done
--	$(SHELL) $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/grub.d
-+	$(SHELL) $(mkinstalldirs) $(DESTDIR)$(EGDIR)
- 	@list='$(grub-mkconfig_SCRIPTS)'; for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
--	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(sysconfdir)/grub.d/$$dest; \
-+	  $(INSTALL_SCRIPT) $$dir$$file $(DESTDIR)$(EGDIR)/$$dest; \
- 	done
- 	@list='$(grub-mkconfig_DATA)'; for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
--	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(sysconfdir)/grub.d/$$dest; \
-+	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(EGDIR)/$$dest; \
- 	done
--	$(SHELL) $(mkinstalldirs) $(DESTDIR)$(libdir)/grub
-+	$(SHELL) $(mkinstalldirs) $(DESTDIR)$(pkglibdirbase)
- 	@list='$(lib_SCRIPTS)'; \
- 	for file in $$list; do \
- 	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
- 	  dest="`echo $$file | sed 's,.*/,,'`"; \
--	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(libdir)/grub/$$dest; \
-+	  $(INSTALL_DATA) $$dir$$file $(DESTDIR)$(pkglibdirbase)/$$dest; \
- 	done
- 	$(SHELL) $(mkinstalldirs) $(DESTDIR)$(infodir)
+@@ -304,8 +304,8 @@ install-local: all
  	@list='$(info_INFOS)'; \
  	for file in $$list; do \
  	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
@@ -48,20 +13,13 @@ $NetBSD: patch-ac,v 1.6 2009/12/16 14:37:31 gregoire Exp $
  	  if (install-info --version && \
  	       install-info --version 2>&1 | sed 1q | grep -i -v debian) >/dev/null 2>&1; then \
  	    install-info --info-dir="$(DESTDIR)$(infodir)" "$(DESTDIR)$(infodir)/$$dest" || :; \
-@@ -338,17 +339,17 @@ uninstall:
- 	done
- 	@list='$(grub-mkconfig_SCRIPTS) $(grub-mkconfig_DATA)'; for file in $$list; do \
- 	  dest="`echo $$file | sed 's,.*/,,' | sed '$(transform)'`"; \
--	  rm -f $(DESTDIR)$(sysconfdir)/grub.d/$$dest; \
-+	  rm -f $(DESTDIR)$(EGDIR)/$$dest; \
- 	done
+@@ -343,12 +343,12 @@ uninstall:
  	@list='$(lib_SCRIPTS)'; \
  	for file in $$list; do \
  	  dest="`echo $$file | sed 's,.*/,,'`"; \
 -	  echo rm -f $(DESTDIR)$(libdir)/$$dest; \
--	  rm -f $(DESTDIR)$(libdir)/grub/$$dest; \
-+	  echo rm -f $(DESTDIR)$(pkglibdirbase)/$$dest; \
-+	  rm -f $(DESTDIR)$(pkglibdirbase)/$$dest; \
++	  echo rm -f $(DESTDIR)$(libdir)/grub/$$dest; \
+ 	  rm -f $(DESTDIR)$(libdir)/grub/$$dest; \
  	done
  	@list='$(info_INFOS)'; \
  	for file in $$list; do \

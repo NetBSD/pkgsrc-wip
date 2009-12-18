@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/12/16 14:37:31 gregoire Exp $
+# $NetBSD: options.mk,v 1.3 2009/12/18 11:03:44 gregoire Exp $
 #
 
 #
@@ -10,7 +10,7 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grub2
 PKG_SUPPORTED_OPTIONS=	grub-mm-debug grub-emu grub-mkfont
-PKG_SUGGESTED_OPTIONS=	grub-emu grub-mkfont
+PKG_SUGGESTED_OPTIONS=	grub-mm-debug grub-emu grub-mkfont
 
 .include "../../mk/bsd.options.mk"
 

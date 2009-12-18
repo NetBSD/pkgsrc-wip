@@ -1,15 +1,24 @@
-$NetBSD: patch-ag,v 1.6 2009/12/16 14:37:31 gregoire Exp $
+$NetBSD: patch-ag,v 1.7 2009/12/18 11:03:44 gregoire Exp $
 
---- util/grub.d/00_header.in.orig	2009-11-09 16:48:16.000000000 +0100
-+++ util/grub.d/00_header.in
-@@ -22,8 +22,9 @@ prefix=@prefix@
- exec_prefix=@exec_prefix@
- libdir=@libdir@
- grub_prefix=`echo /boot/grub | sed ${transform}`
-+pkglibdirbase=${libdir}/`echo @PACKAGE_TARNAME@ | sed "@program_transform_name@"`
+--- util/sparc64/ieee1275/grub-install.in.orig	2009-11-09 16:48:16.000000000 +0100
++++ util/sparc64/ieee1275/grub-install.in
+@@ -31,9 +31,6 @@ target_cpu=@target_cpu@
+ platform=@platform@
+ pkglibdir=${libdir}/`echo ${PACKAGE_TARNAME}/${target_cpu}-${platform} | sed ${transform}`
  
+-# for make_system_path_relative_to_its_root()
 -. ${libdir}/grub/grub-mkconfig_lib
-+. ${pkglibdirbase}/grub-mkconfig_lib
+-
+ grub_setup=${sbindir}/`echo grub-setup | sed ${transform}`
+ grub_mkimage=${bindir}/`echo grub-mkimage | sed ${transform}`
+ grub_mkdevicemap=${sbindir}/`echo grub-mkdevicemap | sed ${transform}`
+@@ -120,6 +117,9 @@ for option in "$@"; do
+     esac
+ done
  
- # Do this as early as possible, since other commands might depend on it.
- # (e.g. the `loadfont' command might need lvm or raid modules)
++# for make_system_path_relative_to_its_root()
++. ${libdir}/grub/grub-mkconfig_lib
++
+ if test "x$install_device" = x; then
+     echo "install_device not specified." 1>&2
+     usage

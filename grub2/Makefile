@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/12/16 17:01:50 gregoire Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/18 11:03:44 gregoire Exp $
 #
 
 DISTNAME=		grub-1.97.1
@@ -25,6 +25,9 @@ USE_TOOLS+=		gmake bison makeinfo
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--program-transform-name=s,grub,grub2,
+CONFIGURE_ARGS+=	--enable-grub-fstest
+CONFIGURE_ARGS+=	--disable-efiemu
+CONFIGURE_ARGS+=	--disable-grub-emu-usb
 INFO_FILES=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -71,6 +74,24 @@ GRUB_TARGET_CPU=	"i386"
 .endif
 PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
 PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+
+#
+# The following substitutions fix the configuration and library paths:
+# - $(sysconfdir)/grub.d is replaced by $(EGDIR) in Makefile.in.
+# - $(libdir)/grub is replaced by $(libdir)/grub2 in Makefile.in and in
+#   the scripts in util/ that source a file in ${libdir}/grub.
+#
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing configuration and library paths.
+SUBST_FILES.fix-paths=          Makefile.in
+SUBST_FILES.fix-paths+=         util/grub-mkconfig.in util/update-grub_lib.in
+SUBST_FILES.fix-paths+=         util/grub.d/*
+SUBST_FILES.fix-paths+=         util/i386/pc/grub-install.in
+SUBST_FILES.fix-paths+=         util/sparc64/ieee1275/grub-install.in
+SUBST_SED.fix-paths=            -e 's,\$$(sysconfdir)/grub.d,\$$(EGDIR),g'
+SUBST_SED.fix-paths+=           -e 's,\$$(libdir)/grub,\$$(libdir)/grub2,g'
+SUBST_SED.fix-paths+=           -e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
