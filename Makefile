@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3730 2009/12/17 13:25:45 bubuchka Exp $
+# $Id: Makefile,v 1.3731 2009/12/18 14:07:51 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -325,6 +325,7 @@ SUBDIR+=	dvd2xvid
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen
+SUBDIR+=	e-uae
 SUBDIR+=	e00pg
 SUBDIR+=	e16keyedit
 SUBDIR+=	e16menuedit
@@ -2246,6 +2247,7 @@ SUBDIR+=	vcf
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
+SUBDIR+=	vice2
 SUBDIR+=	vidalia
 SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
