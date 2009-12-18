@@ -4,7 +4,7 @@
  	keygen.sh \
  	metagen.sh \
  	upgrade.xsl
-+EGDIR = /usr/pkg/share/examples/shibboleth
++EGDIR = @EGDIR@
  
  
  # The config files are installed "special".  Unlike the entries in

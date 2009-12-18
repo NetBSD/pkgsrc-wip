@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/10/27 11:34:29 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/18 00:17:32 pettai Exp $
 bin/mdquery
 bin/resolvertest
 include/shibsp/AbstractSPRequest.h
@@ -131,3 +131,4 @@ share/xml/shibboleth/shibboleth-2.0-sp-notify.xsd
 share/xml/shibboleth/shibboleth-metadata-1.0.xsd
 share/xml/shibboleth/shibboleth.xsd
 @pkgdir share/doc/shibboleth-${PKGVERSION}/api
+@pkgdir etc/shibboleth
