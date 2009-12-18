@@ -1,3 +1,150 @@
-Only tested on Solaris SX:CE so far.
+* pgxs
+
 Needs the pgxs makefiles installed with PostgreSQL client. They are
 only currently provided as of postgresql84-client-8.4.1nb1.
+
+* testing
+
+** Solaris SX:CE
+
+some testing, but not make check
+
+** netbsd-5/i386 (gdt)
+
+library is broken:
+
+-rw-r--r--  1 root  wheel  552896 Dec 18 18:31 /usr/pkg/lib/libpostgis-1.4.a
+-rwxr-xr-x  1 root  wheel    1054 Dec 18 18:31 /usr/pkg/lib/libpostgis-1.4.la
+lrwxr-xr-x  1 root  wheel      23 Dec 18 18:31 /usr/pkg/lib/libpostgis-1.4.so -> libpostgis-1.4.so.0.0.0
+lrwxr-xr-x  1 root  wheel      23 Dec 18 18:31 /usr/pkg/lib/libpostgis-1.4.so.0 -> libpostgis-1.4.so.0.0.0
+-rwxr-xr-x  1 root  wheel  268342 Dec 18 18:31 /usr/pkg/lib/libpostgis-1.4.so.0.0.0
+
+two problems:
+
+1) postgis.sql references $libdir/postgis-1.4
+
+CREATE OR REPLACE FUNCTION spheroid_in(cstring)
+	RETURNS spheroid 
+	AS '$libdir/postgis-1.4','ellipsoid_in'
+	LANGUAGE 'C' IMMUTABLE STRICT; 
+
+2) lwgeos
+
+nm -u /usr/pkg/lib/libpostgis-1.4.so | egrep lw
+
+         U lw_get_int32
+         U lw_vasprintf
+         U lwalloc
+         U lwalloc_var
+         U lwcircstring_deserialize
+         U lwcircstring_serialize_buf
+         U lwcollection_construct
+         U lwcollection_construct_empty
+         U lwcompound_deserialize
+         U lwcurvepoly_deserialize
+         U lwerror
+         U lwerror_var
+         U lwfree
+         U lwfree_var
+         U lwgeom_add_bbox
+         U lwgeom_as_lwline
+         U lwgeom_as_lwpoint
+         U lwgeom_as_lwpoly
+         U lwgeom_as_multi
+         U lwgeom_clone
+         U lwgeom_compute_box2d
+         U lwgeom_compute_box3d
+         U lwgeom_contains_subgeoms
+         U lwgeom_curvepolygon_area
+         U lwgeom_desegmentize
+         U lwgeom_deserialize
+         U lwgeom_dropSRID
+         U lwgeom_drop_bbox
+         U lwgeom_force_rhr
+         U lwgeom_free
+         U lwgeom_geohash
+         U lwgeom_getType
+         U lwgeom_getcircstring_inspected
+         U lwgeom_getgeom_inspected
+         U lwgeom_getline_inspected
+         U lwgeom_getnumgeometries
+         U lwgeom_getpoint
+         U lwgeom_getpoint_inspected
+         U lwgeom_getpoly_inspected
+         U lwgeom_getsrid
+         U lwgeom_getsubgeometry
+         U lwgeom_getsubgeometry_inspected
+         U lwgeom_getsubtype_inspected
+         U lwgeom_hasBBOX
+         U lwgeom_hasM
+         U lwgeom_hasSRID
+         U lwgeom_hasZ
+         U lwgeom_inspect
+         U lwgeom_longitude_shift
+         U lwgeom_makeType_full
+         U lwgeom_mindistance2d_recursive
+         U lwgeom_mindistance2d_recursive_tolerance
+         U lwgeom_ndims
+         U lwgeom_pointarray_length
+         U lwgeom_pointarray_length2d
+         U lwgeom_polygon_area
+         U lwgeom_polygon_perimeter
+         U lwgeom_polygon_perimeter2d
+         U lwgeom_pt_inside_circle
+         U lwgeom_release
+         U lwgeom_reverse
+         U lwgeom_same
+         U lwgeom_segmentize
+         U lwgeom_segmentize2d
+         U lwgeom_serialize_buf
+         U lwgeom_serialize_size
+         U lwgeom_size
+         U lwgeom_to_hexwkb
+         U lwgeom_typeflags
+         U lwgeom_typename
+         U lwinspected_release
+         U lwline_addpoint
+         U lwline_clip_to_ordinate_range
+         U lwline_construct
+         U lwline_crossing_direction
+         U lwline_deserialize
+         U lwline_free
+         U lwline_from_lwmpoint
+         U lwline_from_lwpointarray
+         U lwline_release
+         U lwline_removepoint
+         U lwline_serialize
+         U lwline_serialize_buf
+         U lwline_setPoint4d
+         U lwmessage_truncate
+         U lwmline_clip_to_ordinate_range
+         U lwmpoint_deserialize
+         U lwnotice
+         U lwnotice_var
+         U lwpoint_clone
+         U lwpoint_construct
+         U lwpoint_deserialize
+         U lwpoint_free
+         U lwpoint_getPoint2d_p
+         U lwpoint_getPoint3dm_p
+         U lwpoint_release
+         U lwpoint_serialize
+         U lwpoint_serialize_buf
+         U lwpoly_as_lwgeom
+         U lwpoly_construct
+         U lwpoly_deserialize
+         U lwpoly_free
+         U lwpoly_from_lwlines
+         U lwpoly_release
+         U lwpoly_serialize
+         U lwpoly_serialize_buf
+         U lwrealloc
+         U lwrealloc_var
+         U make_lwpoint2d
+         U make_lwpoint3dm
+         U make_lwpoint3dz
+         U make_lwpoint4d
+         U serialized_lwgeom_from_ewkt
+         U serialized_lwgeom_to_ewkb
+         U serialized_lwgeom_to_ewkt
+         U serialized_lwgeom_to_hexwkb
