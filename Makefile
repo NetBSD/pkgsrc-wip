@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3732 2009/12/18 14:39:16 rhialto Exp $
+# $Id: Makefile,v 1.3733 2009/12/19 15:26:01 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -118,6 +118,7 @@ SUBDIR+=	autopsy
 SUBDIR+=	autossh
 SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
+SUBDIR+=	awesome
 SUBDIR+=	awflwm
 SUBDIR+=	awk-pkgsrc-dewey
 SUBDIR+=	axe
