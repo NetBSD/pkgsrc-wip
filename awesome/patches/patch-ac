@@ -1,0 +1,66 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/12/19 15:21:40 pallegra Exp $
+
+--- CMakeLists.txt.orig	2009-11-26 19:03:25.000000000 +0000
++++ CMakeLists.txt
+@@ -175,8 +175,12 @@ if(GENERATE_MANPAGES)
+         string(REGEX REPLACE ".txt\$" ".xml" xmlfile ${txtfile})
+         string(REPLACE ${SOURCE_DIR}
+                        ${BUILD_DIR} xmlfile ${xmlfile})
+-        string(REGEX REPLACE ".xml\$" ".gz" gzfile ${xmlfile})
+-        string(REGEX REPLACE ".gz\$" "" manfile ${gzfile})
++        if(COMPRESS_MANPAGES)
++            string(REGEX REPLACE ".xml\$" ".gz" gzfile ${xmlfile})
++            string(REGEX REPLACE ".gz\$" "" manfile ${gzfile})
++        else()
++            string(REGEX REPLACE ".xml\$" "" manfile ${xmlfile})
++        endif()
+ 
+         add_custom_command(
+             COMMAND ${ASCIIDOC_EXECUTABLE} -d manpage -b docbook -o ${xmlfile} - < ${txtfile}
+@@ -189,18 +193,28 @@ if(GENERATE_MANPAGES)
+             OUTPUT  ${manfile}
+             WORKING_DIRECTORY ${BUILD_DIR}/manpages
+             DEPENDS ${xmlfile})
+-        add_custom_command(
+-            COMMAND ${GZIP_EXECUTABLE} < ${manfile} > ${gzfile}
+-            OUTPUT  ${gzfile}
+-            WORKING_DIRECTORY ${BUILD_DIR}/manpages
+-            DEPENDS ${manfile}
+-            VERBATIM)
+ 
+-        set(MAN_FILES ${MAN_FILES} ${gzfile})
++        if(COMPRESS_MANPAGES)
++            add_custom_command(
++                COMMAND ${GZIP_EXECUTABLE} < ${manfile} > ${gzfile}
++                OUTPUT  ${gzfile}
++                WORKING_DIRECTORY ${BUILD_DIR}/manpages
++                DEPENDS ${manfile}
++                VERBATIM)
++
++            set(MAN_FILES ${MAN_FILES} ${gzfile})
++        else()
++            set(MAN_FILES ${MAN_FILES} ${manfile})
++        endif()
+ 
+         # figure out in what section to install to from filename
+-        string(REGEX REPLACE "^.*\\.([0-9])\\.gz\$" "\\1" section ${gzfile})
+-        set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${gzfile})
++        if(COMPRESS_MANPAGES)
++            string(REGEX REPLACE "^.*\\.([0-9])\\.gz\$" "\\1" section ${gzfile})
++            set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${gzfile})
++        else()
++            string(REGEX REPLACE "^.*\\.([0-9])\\$" "\\1" section ${manfile})
++            set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${manfile})
++        endif()
+     endforeach()
+ 
+     add_custom_target(man ALL DEPENDS ${MAN_FILES})
+@@ -292,7 +306,7 @@ install(TARGETS ${PROJECT_AWE_NAME} RUNT
+ install(FILES "utils/awsetbg" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+ install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH})
+-install(FILES ${AWE_CONF_FILE_DEFAULT} DESTINATION ${AWESOME_SYSCONFDIR}
++install(FILES ${AWE_CONF_FILE_DEFAULT} DESTINATION ${AWESOME_EGDIR}
+         RENAME ${AWE_CONF_FILE})
+ if(GENERATE_MANPAGES)
+     install(FILES ${AWE_MAN1_FILES} DESTINATION ${AWESOME_MAN_PATH}/man1)
