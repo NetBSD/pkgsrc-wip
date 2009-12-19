@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2009/11/08 00:08:24 pettai Exp $
+# $NetBSD: Makefile,v 1.18 2009/12/19 21:44:23 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
 CATEGORIES=	net security
-MASTER_SITES=	# not defined
+MASTER_SITES=	http://www.opendnssec.org/files/source/
 
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.opendnssec.org/
@@ -15,26 +15,24 @@ BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 LICENSE_FILE=	${FILESDIR}/iis-license
 
-USE_TOOLS+=     aclocal autoconf automake autoheader gmake gm4 perl
-USE_JAVA=	build
-USE_LIBTOOL=	yes
+#SVN_REPOSITORIES=	opendnssec
+#SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
+#SVN_MODULE.opendnssec=	OpenDNSSEC
+#NO_CHECKSUM=		yes
+VERSION=		1.0.0rc2
 
-SVN_REPOSITORIES=	opendnssec
-SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
-SVN_MODULE.opendnssec=	OpenDNSSEC
-VERSION=		1.0.0b4
-NO_CHECKSUM=		yes
-
-.include "options.mk"
+PKG_DESTDIR_SUPPORT=	user-destdir
+#PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 # XXX: Others might work
 #ONLY_FOR_PLATFORM=	NetBSD-*-* Darwin-*-*
 
-PKG_DESTDIR_SUPPORT=    user-destdir
-#PKG_INSTALLATION_TYPES= overwrite pkgviews
-
 BUILD_DEFS+=	VARBASE
 
+#USE_TOOLS+=	aclocal autoconf automake autoheader gmake gm4 perl
+USE_TOOLS+=	bash gmake gm4 perl
+CONFIG_SHELL=	${BASH}
+USE_JAVA=	build
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
@@ -42,32 +40,27 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-WRKSRC=			${WRKDIR}/OpenDNSSEC
+#WRKSRC=		${WRKDIR}/OpenDNSSEC
 EGDIR=			${PREFIX}/share/examples/opendnssec
-PKG_SYSCONFDIR=		${PKG_SYSCONFBASEDIR}/opendnssec
+ODS_SYSCONFDIR=		${PKG_SYSCONFDIR}/opendnssec
 
-SUBST_CLASSES+=         paths
-SUBST_FILES.paths=      ${WRKSRC}/conf/Makefile.am
-SUBST_STAGE.paths=      post-patch
-SUBST_SED.paths=        -e 's,@EGDIR@,${EGDIR},'
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKSRC}/conf/Makefile.in
+SUBST_STAGE.paths=	post-patch
+SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-.if ${OPSYS} == "NetBSD" 
-#PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
-.include "../../mk/java-vm.mk"
-.endif
-
 CONF_FILES=	${EGDIR}/conf.xml.sample \
-			${PKG_SYSCONFDIR}/conf.xml
+			${ODS_SYSCONFDIR}/conf.xml
 CONF_FILES+=	${EGDIR}/kasp.xml.sample \
-			${PKG_SYSCONFDIR}/kasp.xml
+			${ODS_SYSCONFDIR}/kasp.xml
 CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
-			${PKG_SYSCONFDIR}/zonefetch.xml
+			${ODS_SYSCONFDIR}/zonefetch.xml
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
-			${PKG_SYSCONFDIR}/zonelist.xml
+			${ODS_SYSCONFDIR}/zonelist.xml
 
-INSTALLATION_DIRS=	${EGDIR} ${PKG_SYSCONFDIR}
+INSTALLATION_DIRS=	${EGDIR} ${ODS_SYSCONFDIR}
 INSTALLATION_DIRS+=	share/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec
 INSTALLATION_DIRS+=	lib/opendnssec/signer
@@ -78,9 +71,16 @@ INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signconf
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/signed
 INSTALLATION_DIRS+=	${VARBASE}/opendnssec/unsigned
 
-pre-configure:
-	${CHMOD} u+x ${WRKSRC}/autogen.sh
-	cd ${WRKSRC} && ./autogen.sh
+.include "options.mk"
+
+.if ${OPSYS} == "NetBSD"
+#PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
+.include "../../mk/java-vm.mk"
+.endif
+
+#pre-configure:
+#	${CHMOD} u+x ${WRKSRC}/autogen.sh
+#	cd ${WRKSRC} && ./autogen.sh
 
 pre-install:
 	${MKDIR} ${PKG_SYSCONFDIR}/opendnssec
@@ -90,5 +90,6 @@ pre-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../wip/mk/svn-package.mk"
+#.include "../../databases/mysql5-client/buildlink3.mk"
+#.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
