@@ -60,7 +60,7 @@ diff -u -r1.4 options.mk
 --- options.mk	12 Apr 2008 22:43:01 -0000	1.4
 +++ options.mk	19 Dec 2009 14:44:18 -0000
 @@ -1,12 +1,12 @@
- # $NetBSD: cairo-xcb.diff,v 1.1.1.1 2009/12/19 15:21:40 pallegra Exp $
+ # $NetBSD: cairo-xcb.diff,v 1.2 2009/12/20 11:29:56 pallegra Exp $
  
  PKG_OPTIONS_VAR=	PKG_OPTIONS.cairo
 -PKG_SUPPORTED_OPTIONS=	x11
@@ -87,7 +87,7 @@ diff -u -r1.4 options.mk
 +###
 +### xcb support
 +###
-+.if !empty(PKG_OPTIONS:Mx11)
++.if !empty(PKG_OPTIONS:Mxcb)
 +CONFIGURE_ARGS+=	--enable-xcb
 +PLIST.xcb=		yes
 +.include "../../x11/xcb-util/buildlink3.mk"
