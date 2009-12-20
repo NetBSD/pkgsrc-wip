@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/30 11:36:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/20 08:07:39 obache Exp $
 bin/g-ir-compiler
 bin/g-ir-generate
 bin/g-ir-scanner
@@ -98,3 +98,4 @@ share/gir-1.0/libxml2-2.0.gir
 share/gir-1.0/xfixes-4.0.gir
 share/gir-1.0/xft-2.0.gir
 share/gir-1.0/xlib-2.0.gir
+share/gobject-introspection-1.0/Makefile.introspection
