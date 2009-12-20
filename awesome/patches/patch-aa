@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2009/12/20 11:25:40 pallegra Exp $
+
+--- common/util.h.orig	2009-11-26 19:03:25.000000000 +0000
++++ common/util.h
+@@ -32,7 +32,7 @@
+ #include <assert.h>
+ #include <stdio.h>
+ 
+-#if !(defined (__FreeBSD__) || defined(__OpenBSD__))
++#if !(defined (__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__))
+ #include <alloca.h>
+ #endif
+ 
