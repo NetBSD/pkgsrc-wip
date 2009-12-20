@@ -7,6 +7,7 @@ Suggested package updates
 	o backintime-0.9.26
 	o bsnes-0.058
 	o cairo-java-1.0.8
+	o cclive-0.5.7
 	o chora-2.0.1
 	o cinelerra-4.1
 	o d4x-2.5.7.1
@@ -30,13 +31,13 @@ Suggested package updates
 	o gnokii-0.6.28
 	o gnunet-0.8.0c
 	o gnupod-0.99.8
-	o gobject-introspection-0.6.6
+	o gobject-introspection-0.6.7
 	o grub2-1.97.1
 	o gtkaml-0.2.9.1
 	o guichan-0.8.1
 	o guitone-0.9
 	o hu-go-2.11
-	o icecat-3.5.5
+	o icecat-3.5.6
 	o jakarta-log4j-1.2.15 [now called apache-log4j, http://logging.apache.org/log4j/1.2/download.html]
 	o jakarta-struts-1.2.4
 	o jalview-2.4
@@ -54,7 +55,7 @@ Suggested package updates
 	o lirc-0.8.6
 	o lives-1.1.6
 	o man-1.6f
-	o meta-tracker-0.7.11
+	o meta-tracker-0.7.12
 	o mixxx-1.7.0
 	o mpich2-1.1
 	o mpgedit-0.73dev2
@@ -87,7 +88,7 @@ Suggested package updates
 	o tmw-0.0.29.1
 	o uade-2.13
 	o uptimed-0.3.16
-	o virtualbox-3.1.0
+	o virtualbox-3.1.2
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.0
 	o xcursor-themes-1.0.2
