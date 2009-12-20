@@ -1,23 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/12/19 15:21:40 pallegra Exp $
+$NetBSD: patch-ac,v 1.2 2009/12/20 23:49:47 pallegra Exp $
 
 --- CMakeLists.txt.orig	2009-11-26 19:03:25.000000000 +0000
 +++ CMakeLists.txt
-@@ -175,8 +175,12 @@ if(GENERATE_MANPAGES)
-         string(REGEX REPLACE ".txt\$" ".xml" xmlfile ${txtfile})
-         string(REPLACE ${SOURCE_DIR}
+@@ -177,6 +177,7 @@ if(GENERATE_MANPAGES)
                         ${BUILD_DIR} xmlfile ${xmlfile})
--        string(REGEX REPLACE ".xml\$" ".gz" gzfile ${xmlfile})
--        string(REGEX REPLACE ".gz\$" "" manfile ${gzfile})
-+        if(COMPRESS_MANPAGES)
-+            string(REGEX REPLACE ".xml\$" ".gz" gzfile ${xmlfile})
-+            string(REGEX REPLACE ".gz\$" "" manfile ${gzfile})
-+        else()
-+            string(REGEX REPLACE ".xml\$" "" manfile ${xmlfile})
-+        endif()
+         string(REGEX REPLACE ".xml\$" ".gz" gzfile ${xmlfile})
+         string(REGEX REPLACE ".gz\$" "" manfile ${gzfile})
++        string(REGEX REPLACE ".xml\$" "" manfile ${xmlfile})
  
          add_custom_command(
              COMMAND ${ASCIIDOC_EXECUTABLE} -d manpage -b docbook -o ${xmlfile} - < ${txtfile}
-@@ -189,18 +193,28 @@ if(GENERATE_MANPAGES)
+@@ -189,18 +190,27 @@ if(GENERATE_MANPAGES)
              OUTPUT  ${manfile}
              WORKING_DIRECTORY ${BUILD_DIR}/manpages
              DEPENDS ${xmlfile})
@@ -43,24 +36,34 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/12/19 15:21:40 pallegra Exp $
 +        endif()
  
          # figure out in what section to install to from filename
--        string(REGEX REPLACE "^.*\\.([0-9])\\.gz\$" "\\1" section ${gzfile})
+         string(REGEX REPLACE "^.*\\.([0-9])\\.gz\$" "\\1" section ${gzfile})
 -        set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${gzfile})
 +        if(COMPRESS_MANPAGES)
-+            string(REGEX REPLACE "^.*\\.([0-9])\\.gz\$" "\\1" section ${gzfile})
 +            set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${gzfile})
 +        else()
-+            string(REGEX REPLACE "^.*\\.([0-9])\\$" "\\1" section ${manfile})
 +            set(AWE_MAN${section}_FILES ${AWE_MAN${section}_FILES} ${manfile})
 +        endif()
      endforeach()
  
      add_custom_target(man ALL DEPENDS ${MAN_FILES})
-@@ -292,7 +306,7 @@ install(TARGETS ${PROJECT_AWE_NAME} RUNT
+@@ -291,15 +301,17 @@ endif()
+ install(TARGETS ${PROJECT_AWE_NAME} RUNTIME DESTINATION bin)
  install(FILES "utils/awsetbg" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
  install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
- install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH})
+-install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH})
 -install(FILES ${AWE_CONF_FILE_DEFAULT} DESTINATION ${AWESOME_SYSCONFDIR}
++install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH}
++    PATTERN "*.in" EXCLUDE)
 +install(FILES ${AWE_CONF_FILE_DEFAULT} DESTINATION ${AWESOME_EGDIR}
          RENAME ${AWE_CONF_FILE})
  if(GENERATE_MANPAGES)
      install(FILES ${AWE_MAN1_FILES} DESTINATION ${AWESOME_MAN_PATH}/man1)
+     install(FILES ${AWE_MAN5_FILES} DESTINATION ${AWESOME_MAN_PATH}/man5)
+ endif()
+ install(DIRECTORY ${AWE_ICON_DIR} DESTINATION ${AWESOME_DATA_PATH})
+-install(DIRECTORY ${BUILD_DIR}/themes DESTINATION ${AWESOME_DATA_PATH})
++install(DIRECTORY ${BUILD_DIR}/themes DESTINATION ${AWESOME_DATA_PATH}
++    PATTERN "*.in" EXCLUDE)
+ install(DIRECTORY ${SOURCE_DIR}/themes DESTINATION ${AWESOME_DATA_PATH}
+     PATTERN "*.in" EXCLUDE)
+ install(FILES ${AWE_DOC_FILES} DESTINATION ${AWESOME_DOC_PATH})

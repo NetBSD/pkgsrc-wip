@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/20 11:25:39 pallegra Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/20 23:49:47 pallegra Exp $
 #
 
 DISTNAME=	awesome-3.4.2
@@ -15,11 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	awesome<3.0
 
-USE_TOOLS+=	bash
+USE_TOOLS+=	bash gmake pkg-config
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
-MAKE_JOBS_SAFE=	no
 USE_LANGUAGES=	c c++
+
+CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
+CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ}
+CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
 
 REPLACE_BASH+=	build-utils/gperf.sh
 
