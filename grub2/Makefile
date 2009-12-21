@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/12/21 10:28:29 gregoire Exp $
+# $NetBSD: Makefile,v 1.16 2009/12/21 16:33:18 gregoire Exp $
 #
 
 DISTNAME=		grub-1.97.1
@@ -31,19 +31,19 @@ CONFIGURE_ARGS+=	--disable-grub-emu-usb
 INFO_FILES=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-EGFILES=		00_header 30_os-prober 40_custom README
-.for file in ${EGFILES}
-CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
-.endfor
 
-# The patched Makefile installs configuration scripts in ${EGDIR}.
+# The modified Makefile installs all configuration scripts in ${EGDIR}.
 MAKE_ENV+=		EGDIR=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
+EGFILES=		00_header 30_os-prober 40_custom README
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-CONF_FILES+=		${EGDIR}/10_${OPSYS:tl} ${PKG_SYSCONFDIR}/10_${OPSYS:tl}
+EGFILES+=		10_${OPSYS:tl}
 .endif
+.for file in ${EGFILES}
+CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
+.endfor
 
 #
 # NetBSD has opendisk support since 1.3.  The following lines are required
@@ -76,11 +76,11 @@ PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
 PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 
 #
-# The following substitutions fix the configuration and library paths:
+# The following substitutions adjust the configuration and library paths:
 # - $sysconfdir/grub.d is replaced by $sysconfdir in scripts, and by $EGDIR
 #   in Makefile.in.
 # - $sysconfdir/default/grub is replaced by $sysconfdir/default.conf in
-#   scripts
+#   scripts.
 # - $libdir/grub is replaced by $libdir/grub2 in Makefile.in and in scripts.
 #
 SUBST_CLASSES+=			fix-paths-1 fix-paths-2
@@ -100,7 +100,7 @@ SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/defa
 SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
 
 # This package uses help2man to generate man pages.
-BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"
