@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/12/17 20:11:12 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/21 04:57:17 schnoebe Exp $
 
 DISTNAME=		spectrum
-PKGNAME=		${DISTNAME}-0.0
+PKGNAME=		${DISTNAME}-0.1
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E
@@ -52,6 +52,11 @@ INSTALLATION_DIRS+=	share/examples/jabberd
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/spectrum.cfg ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/schemas/mysql_schema.sql \
+						${EGDIR}/spectrum-mysql.sql
+	${INSTALL_DATA} ${WRKSRC}/schemas/sqlite_schema.sql \
+						${EGDIR}/spectrum-sqlite3.sql
+
 
 .include "../../wip/poco/buildlink3.mk"
 .include "../../wip/gloox/buildlink3.mk"

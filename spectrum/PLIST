@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 22:49:49 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/21 04:57:17 schnoebe Exp $
 bin/spectrum
 share/spectrum/certificates/facebook.pem
 share/spectrum/locales/cs.po
 share/examples/jabberd/spectrum.cfg
+share/examples/jabberd/spectrum-mysql.sql
+share/examples/jabberd/spectrum-sqlite3.sql
