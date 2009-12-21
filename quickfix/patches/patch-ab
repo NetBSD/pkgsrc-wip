@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/12/21 22:10:20 alnsn Exp $
+
+--- configure.orig	2006-09-14 13:53:46.000000000 +0000
++++ configure
+@@ -20070,7 +20070,7 @@ echo "$as_me:$LINENO: checking which thr
+ echo $ECHO_N "checking which threading environment to use... $ECHO_C" >&6
+ # each host OS needs special threading flags
+ case $build_os in
+-	freebsd*)
++	freebsd*|netbsd*)
+ 		LIBS="-pthread $LIBS"
+ 		echo "$as_me:$LINENO: result: -pthread" >&5
+ echo "${ECHO_T}-pthread" >&6
