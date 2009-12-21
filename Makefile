@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3733 2009/12/19 15:26:01 pallegra Exp $
+# $Id: Makefile,v 1.3734 2009/12/21 18:00:06 gregoire Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -565,6 +565,7 @@ SUBDIR+=	groku
 SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
+SUBDIR+=	grub2-current
 SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gstat
