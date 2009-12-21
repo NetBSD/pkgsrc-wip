@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2009/09/22 19:10:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/21 20:41:08 cheusov Exp $
 #
 
-DISTNAME=	mawk-1.3.3-20090920
+DISTNAME=	mawk-1.3.4
 PKGNAME=	${DISTNAME:S/-20/.20/:S/mawk/mawk-uxre/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://invisible-island.net/mawk/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	vle@gmx.net
-COMMENT=	AWK clone by Mike Brennan
+MAINTAINER=		vle@gmx.net
+COMMENT=		AWK clone by Mike Brennan
 
 LICENSE=		gnu-gpl-v2
 
@@ -21,7 +21,7 @@ TEST_TARGET=		mawk_test fpe_test
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-builtin-regex
 
-MAKEFLAGS+=		LIBS=-luxre
+MAKEFLAGS+=		LIBS=-luxre\ -lm
 
 MAKE_JOBS_SAFE=		no
 
