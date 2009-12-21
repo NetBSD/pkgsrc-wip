@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/18 13:19:28 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/21 20:44:46 rhialto Exp $
 #
 
-DISTNAME=		vice-2.1
+DISTNAME=		vice-2.2
 #PKGREVISION=		0
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/ \
-			http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/
+			http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/VICE/ \
+			http://www.trikaliotis.net/Download/vice/
 
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://www.viceteam.org/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
+
+PATCH_SITES=            http://www.students.tut.fi/~nuotio/
+PATCHFILES+=            vice_2_2_netbsd.patch
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
