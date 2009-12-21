@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/21 20:44:46 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/21 20:50:25 rhialto Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -11,9 +11,9 @@ bin/xpet
 bin/xplus4
 bin/xvic
 info/vice.info
-man/man1/c1541.1.gz
-man/man1/petcat.1.gz
-man/man1/vice.1.gz
+man/man1/c1541.1
+man/man1/petcat.1
+man/man1/vice.1
 share/doc/vice/64doc.txt
 share/doc/vice/BUGS
 share/doc/vice/COPYING
