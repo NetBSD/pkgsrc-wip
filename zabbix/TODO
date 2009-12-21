@@ -1,4 +1,4 @@
-$Id: TODO,v 1.8 2009/03/05 11:12:50 tnn2 Exp $
+$Id: TODO,v 1.9 2009/12/21 00:48:02 tonnerre Exp $
 
 2. Install sample configuration files.
 3. Options: provide sane default values.
@@ -9,6 +9,12 @@ $Id: TODO,v 1.8 2009/03/05 11:12:50 tnn2 Exp $
 9. Check curl requirement, it seems to be non-optional.
 
 DoS from remote:
-http://secunia.com/advisories/29383/
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1353
 PHP Frontend Multiple Vulnerabilities:
 http://secunia.com/advisories/34091/
+More security vulnerabilities:
+https://support.zabbix.com/browse/ZBX-993
+https://support.zabbix.com/browse/ZBX-1030
+https://support.zabbix.com/browse/ZBX-1031
+https://support.zabbix.com/browse/ZBX-1032
+https://support.zabbix.com/browse/ZBX-1355
