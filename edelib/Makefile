@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/11/24 16:31:50 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/21 19:25:39 christtrekker Exp $
 #
 
 DISTNAME=	edelib-2.0-beta
@@ -20,6 +20,55 @@ PKGCONFIG_OVERRIDE+=	edelib-dbus.pc.in
 PKGCONFIG_OVERRIDE+=	edelib-gui.pc.in
 PKGCONFIG_OVERRIDE+=	edelib.pc.in
 
-BUILD_DEPENDS+=	jam>=2.0:../../devel/jam
+PKG_OPTIONS_VAR=	PKG_OPTIONS.edelib
+PKG_SUPPORTED_OPTIONS=	dbus fam-only largefile nls shared
+PKG_SUGGESTED_OPTIONS=	dbus nls
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
+
+BUILD_DEPENDS+=	jam:../../devel/jam
+BUILD_DEPENDS+=	doxygen:../../devel/doxygen
+
+.if !empty(PKG_OPTIONS:Mdbus)
+.  include "../../sysutils/dbus/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
+
+.if !empty(PKG_OPTIONS:Mfam-only)
+CONFIGURE_ARGS+=	--enable-fam-only
+.else
+CONFIGURE_ARGS+=	--disable-fam-only
+.endif
+
+.if !empty(PKG_OPTIONS:Mlargefile)
+CONFIGURE_ARGS+=	--enable-largefile
+.else
+CONFIGURE_ARGS+=	--disable-largefile
+.endif
+
+.if !empty(PKG_OPTIONS:Mnls)
+CONFIGURE_ARGS+=	--enable-nls
+.else
+CONFIGURE_ARGS+=	--disable-nls
+.endif
+
+.if !empty(PKG_OPTIONS:Mshared)
+CONFIGURE_ARGS+=	--enable-shared
+.else
+CONFIGURE_ARGS+=	--disable-shared
+.endif
+
+.include "../../mk/fam.buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+
+do-build:
+	cd ${WRKSRC} && jam
+do-install:
+	cd ${WRKSRC} && jam install
 
 .include "../../mk/bsd.pkg.mk"
