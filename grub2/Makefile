@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/12/21 00:46:26 gregoire Exp $
+# $NetBSD: Makefile,v 1.15 2009/12/21 10:28:29 gregoire Exp $
 #
 
 DISTNAME=		grub-1.97.1
@@ -42,7 +42,7 @@ MAKE_ENV+=		EGDIR=${EGDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-CONF_FILES+=		${EGDIR}/00_${OPSYS:tl} ${PKG_SYSCONFDIR}/00_${OPSYS:tl}
+CONF_FILES+=		${EGDIR}/10_${OPSYS:tl} ${PKG_SYSCONFDIR}/10_${OPSYS:tl}
 .endif
 
 #
