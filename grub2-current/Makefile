@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+# $NetBSD: Makefile,v 1.2 2009/12/22 08:29:18 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -19,7 +19,7 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 
-USE_TOOLS+=		autoconf automake
+USE_TOOLS+=		autoconf automake gettext-m4
 USE_TOOLS+=		gmake bison makeinfo
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
