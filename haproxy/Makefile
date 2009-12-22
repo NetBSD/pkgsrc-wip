@@ -1,17 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/12 20:03:07 shindenmorr Exp $
-#
+# $NetBSD: Makefile,v 1.2 2009/12/22 11:00:43 moubctez Exp $
 
-DISTNAME=	haproxy-1.3.20
+DISTNAME=	haproxy-1.3.22
 CATEGORIES=	www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.3/src/
 
 MAINTAINER=	shinden@linux.pl
-HOMEPAGE=	http://haproxy.1wt.eu/download/1.3/src/
+HOMEPAGE=	http://haproxy.1wt.eu/
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
+
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		gmake
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
+BUILD_MAKE_FLAGS+=	TARGET=${TARGET}
+INSTALL_MAKE_FLAGS+=	TARGET=${TARGET}
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	DOCDIR=${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS=	${EGDIR} share/examples/rc.d
 
@@ -29,28 +36,20 @@ TARGET=freebsd
 .elif ${OPSYS} == "OpenBSD"
 TARGET=openbsd
 .elif ${OPSYS} == "Linux"
-.if !empty(OS_VERSION:M2.6.*)
+.  if !empty(OS_VERSION:M2.6.*)
 TARGET=linux26
-.elif !empty(OS_VERSION:M2.4.*)
-.if exists(/usr/include/linux/eventpoll.h)
+.  elif !empty(OS_VERSION:M2.4.*)
+.    if exists(/usr/include/linux/eventpoll.h)
 TARGET=linux24e
-.else
+.    else
 TARGET=linux24
-.endif
-.endif
+.    endif
+.  endif
 .else
 TARGET=generic
 .endif
 
-do-build:
-	cd ${WRKSRC} && make TARGET=${TARGET}
-
-do-install:
-	cd ${WRKSRC} && make PREFIX=${DESTDIR}${PREFIX} \
-	DOCDIR=${DESTDIR}${PREFIX}/share/doc/${PKGBASE} \
-	MANDIR=${DESTDIR}${PREFIX}/man install
-
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/examples/haproxy.cfg ${DESTDIR}${EGDIR};
+	${INSTALL_DATA} ${WRKSRC}/examples/haproxy.cfg ${DESTDIR}${EGDIR}/
 
 .include "../../mk/bsd.pkg.mk"
