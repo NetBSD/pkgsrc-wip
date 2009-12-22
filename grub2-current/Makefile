@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/22 08:29:18 gregoire Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/22 14:59:42 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -97,6 +97,11 @@ SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+
+# Since revision 1974 (2009-12-22) of the bazaar trunk, the real GNU sed is
+# required as the option `-i' of GNU sed is used (in file genmk.rb).
+USE_TOOLS+=		gsed
+TOOLS_PLATFORM.gsed=	# empty   (to trick pkgsrc into the real gsed)
 
 .include "bzr.mk"
 .include "options.mk"
