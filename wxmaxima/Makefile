@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/14 18:27:49 helgoman Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2009/12/22 02:48:43 helgoman Exp $
 #
 
-DISTNAME=	wxMaxima-0.8.3a
+DISTNAME=	wxMaxima-0.8.4
 CATEGORIES=	math
-MASTER_SITES=	http://downloads.sourceforge.net/project/wxmaxima/wxMaxima/0.8.3a/
+MASTER_SITES=	http://downloads.sourceforge.net/project/wxmaxima/wxMaxima/0.8.4/
 
-MAINTAINER=	H_Muehlmeier@gmx.de
+MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://wxmaxima.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Graphical UI for maxima
 #LICENSE=	# TODO: (see mk/license.mk)
