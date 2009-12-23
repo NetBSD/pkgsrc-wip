@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2009/11/25 12:10:50 obache Exp $
+# $NetBSD: Makefile,v 1.23 2009/12/23 08:30:18 obache Exp $
 
-DISTNAME=	cyrus-imapd-2.3.15
+DISTNAME=	cyrus-imapd-2.3.16
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/ \
@@ -109,8 +109,9 @@ CONFIGURE_ARGS+=	--without-zephyr
 .if !empty(PKG_OPTIONS:Mbdb)
 BDB_ACCEPTED=		db4 db3
 .  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
-CONFIGURE_ENV+=		BDB_TYPE=${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-bdb=${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-bdb-incdir=${BDBBASE}/include/${BDB_TYPE}
+CONFIGURE_ARGS+=	--with-bdb-libdir=${BDBBASE}/lib
 .else
 CONFIGURE_ARGS+=	--without-bdb
 .endif

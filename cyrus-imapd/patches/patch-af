@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.4 2009/04/06 04:56:52 obache Exp $
+$NetBSD: patch-af,v 1.5 2009/12/23 08:30:18 obache Exp $
 
---- imap/message.c.orig	2009-03-06 03:52:55.000000000 +0000
+--- imap/message.c.orig	2009-11-19 21:52:55.000000000 +0000
 +++ imap/message.c
 @@ -74,6 +74,10 @@
  #include "global.h"
