@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/23 21:19:51 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/23 21:52:33 christtrekker Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
@@ -27,7 +27,8 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-extract:
-	${FIND} ${WRKDIR} -name CVS -print | ${XARGS} ${RM} -rf
+	#${FIND} ${WRKDIR} -name CVS -exec ${RM} -vrf "{}" \;
+	${FIND} ${WRKDIR} -name CVS -print | ${XARGS} -I repl ${RM} -vrf "repl"
 	${FIND} ${WRKDIR}/M1A1 -type f -exec ${CHMOD} 0644 {} \;
 	${FIND} ${WRKDIR}/Marathon\ 2 -type f -exec ${CHMOD} 0644 {} \;
 	${FIND} ${WRKDIR}/Marathon\ Infinity -type f -exec ${CHMOD} 0644 {} \;
