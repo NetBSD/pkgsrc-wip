@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/15 21:35:53 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/23 21:19:51 christtrekker Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
@@ -25,6 +25,12 @@ INSTALLATION_DIRS+= ${SCENARIO_BASE}/${scenario} ${SCENARIO_BASE}/${scenario}/Ph
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+post-extract:
+	${FIND} ${WRKDIR} -name CVS -print | ${XARGS} ${RM} -rf
+	${FIND} ${WRKDIR}/M1A1 -type f -exec ${CHMOD} 0644 {} \;
+	${FIND} ${WRKDIR}/Marathon\ 2 -type f -exec ${CHMOD} 0644 {} \;
+	${FIND} ${WRKDIR}/Marathon\ Infinity -type f -exec ${CHMOD} 0644 {} \;
 
 do-install:
 	#install the files into the Scenarios dir
