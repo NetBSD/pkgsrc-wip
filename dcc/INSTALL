@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.2 2009/06/09 11:41:39 pebog Exp $
+# $NetBSD: INSTALL,v 1.3 2009/12/23 19:54:37 pebog Exp $
 #
 #	mostly taken from homedir/Makefile.in
 #
@@ -28,8 +28,8 @@ POST-INSTALL)
 	#
 	#	assemble sed-commands
 	#
-	SED_CMD1="-e s/secret1/${SECRET1}/"
-	SED_CMD2="-e s/secret2/${SECRET2}/"
+	SED_CMD1="-e /^[:blank:]*[^#]/{s/secret1/${SECRET1}/;}"
+	SED_CMD2="-e /^[:blank:]*[^#]/{s/secret2/${SECRET2}/;}"
 
 	if [ ! -f ${DCC_HOME}/${IDS} ]; then
 		#
