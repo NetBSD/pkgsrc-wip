@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/23 21:02:16 ghen Exp $
 #
 
 DISTNAME=	ion-3-20090110
@@ -9,10 +9,7 @@ MASTER_SITES=	http://iki.fi/tuomov/dl/
 
 MAINTAINER=	matias@dotbsd.org
 HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
-# The license requires us to mark this package as "obsolete" starting
-# with the 28th day after the latest release. To be on the safe side,
-# we just always mark it as obsolete.
-COMMENT=	Tiling tabbed window manager (obsolete version)
+COMMENT=	Tiling tabbed window manager
 
 MAKE_JOBS_SAFE=		no
 
