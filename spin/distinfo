@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/10/20 12:52:48 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2009/12/23 08:40:14 jihbed Exp $
 
-SHA1 (spin522.tar.gz) = 049fe676b079cbe9e278099544fbb055c92e3927
-RMD160 (spin522.tar.gz) = 4a37d647fd1dfe782a5e552d363822528a3c55c6
-Size (spin522.tar.gz) = 408953 bytes
-SHA1 (patch-aa) = 092cd2a5729bc7035a8fab701819688b81ba531e
+SHA1 (spin524.tar.gz) = 91d2cf9c12a28947ce1934b0c007d7fb8f613575
+RMD160 (spin524.tar.gz) = bf07242f4f47e41365410604c43466cee05a9afc
+Size (spin524.tar.gz) = 362299 bytes

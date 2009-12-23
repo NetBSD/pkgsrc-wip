@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/10/20 12:52:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/23 08:40:14 jihbed Exp $
 #
 
-DISTNAME=	spin522
-PKGNAME=	${DISTNAME:S/522//}-5.2.2
+DISTNAME=	spin524
+PKGNAME=	spin-5.2.4
 CATEGORIES=	devel
 MASTER_SITES=	http://spinroot.com/spin/Src/
 
@@ -18,14 +18,10 @@ USE_TOOLS+=	flex gmake
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/doc/spin share/examples/spin
 
 do-build:
-	cd ${WRKSRC}/Src5.2.2 && ${GMAKE}
+	cd ${WRKSRC}/Src5.2.4 && ${GMAKE}
 
 do-install:
-	cd ${WRKSRC}/Xspin5.2 && \
-		${MV} xspin521.tcl xspin
-	${INSTALL_PROGRAM} ${WRKSRC}/Src5.2.2/spin \
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/Xspin5.2/xspin \
+	${INSTALL_PROGRAM} ${WRKSRC}/Src5.2.4/spin \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/Doc/* \
 		${DESTDIR}${PREFIX}/share/doc/spin
@@ -34,6 +30,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/Man/spin.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
