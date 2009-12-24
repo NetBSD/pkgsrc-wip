@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2009/11/17 09:19:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2009/12/24 13:49:54 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.2.1
+VERS=		2.2.1.90
 CATEGORIES=	audio multimedia
-#MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
-#		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
-MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
-		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
+MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
+		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
+#MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
+#		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
@@ -37,6 +37,8 @@ SUBST_FILES.mysql+=	src/collection/mysqlecollection/CMakeLists.txt
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql:
 
+# XXX: moodbar support?
+
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
@@ -52,5 +54,8 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../wip/taglib-extras/buildlink3.mk"
 # for plasma
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.3.0
 .include "../../x11/kdelibs4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.5.0
+.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
