@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/01 20:39:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/12/24 12:22:36 thomasklausner Exp $
 bin/dngconverter
 bin/scangui
 lib/kde4/kipiplugin_acquireimages.so
@@ -126,6 +126,14 @@ share/kde/apps/kipiplugin_htmlexport/themes/cleanframes/template.xsl
 share/kde/apps/kipiplugin_htmlexport/themes/cleanframes/yellow.css
 share/kde/apps/kipiplugin_htmlexport/themes/dateframes/dateframes.desktop
 share/kde/apps/kipiplugin_htmlexport/themes/dateframes/template.xsl
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/back.png
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/floating_cards.desktop
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/forward.png
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/next.png
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/prev.png
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/style.css
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/template.xsl
+share/kde/apps/kipiplugin_htmlexport/themes/floating_cards/up.png
 share/kde/apps/kipiplugin_htmlexport/themes/frames/frames.desktop
 share/kde/apps/kipiplugin_htmlexport/themes/frames/style.css
 share/kde/apps/kipiplugin_htmlexport/themes/frames/template.xsl
@@ -213,6 +221,22 @@ share/locale/ar/LC_MESSAGES/kipiplugin_jpeglossless.mo
 share/locale/ar/LC_MESSAGES/kipiplugin_timeadjust.mo
 share/locale/ar/LC_MESSAGES/kipiplugin_wallpaper.mo
 share/locale/ar/LC_MESSAGES/kipiplugins.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_acquireimages.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_advancedslideshow.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_calendar.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_flickrexport.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_galleryexport.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_gpssync.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_htmlexport.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_ipodexport.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_jpeglossless.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_metadataedit.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_picasawebexport.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_rawconverter.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_sendimages.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_timeadjust.mo
+share/locale/ast/LC_MESSAGES/kipiplugin_wallpaper.mo
+share/locale/ast/LC_MESSAGES/kipiplugins.mo
 share/locale/be/LC_MESSAGES/kipiplugin_acquireimages.mo
 share/locale/be/LC_MESSAGES/kipiplugin_advancedslideshow.mo
 share/locale/be/LC_MESSAGES/kipiplugin_jpeglossless.mo
@@ -450,6 +474,7 @@ share/locale/et/LC_MESSAGES/kipiplugin_wallpaper.mo
 share/locale/et/LC_MESSAGES/kipiplugins.mo
 share/locale/fi/LC_MESSAGES/kipiplugin_facebook.mo
 share/locale/fi/LC_MESSAGES/kipiplugin_gpssync.mo
+share/locale/fi/LC_MESSAGES/kipiplugin_htmlexport.mo
 share/locale/fi/LC_MESSAGES/kipiplugin_jpeglossless.mo
 share/locale/fi/LC_MESSAGES/kipiplugin_metadataedit.mo
 share/locale/fi/LC_MESSAGES/kipiplugin_printimages.mo
@@ -468,12 +493,14 @@ share/locale/fr/LC_MESSAGES/kipiplugin_gpssync.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_htmlexport.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_imageviewer.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_jpeglossless.mo
+share/locale/fr/LC_MESSAGES/kipiplugin_kioexportimport.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_metadataedit.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_picasawebexport.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_printimages.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_rawconverter.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_removeredeyes.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_sendimages.mo
+share/locale/fr/LC_MESSAGES/kipiplugin_shwup.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_smug.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_timeadjust.mo
 share/locale/fr/LC_MESSAGES/kipiplugin_wallpaper.mo
@@ -658,6 +685,7 @@ share/locale/lt/LC_MESSAGES/kipiplugin_printimages.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_rawconverter.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_removeredeyes.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_sendimages.mo
+share/locale/lt/LC_MESSAGES/kipiplugin_shwup.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_smug.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_timeadjust.mo
 share/locale/lt/LC_MESSAGES/kipiplugin_wallpaper.mo
@@ -890,6 +918,7 @@ share/locale/ro/LC_MESSAGES/kipiplugins.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_acquireimages.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_advancedslideshow.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_dngconverter.mo
+share/locale/ru/LC_MESSAGES/kipiplugin_facebook.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_flashexport.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_flickrexport.mo
 share/locale/ru/LC_MESSAGES/kipiplugin_gpssync.mo
@@ -1067,12 +1096,14 @@ share/locale/zh_TW/LC_MESSAGES/kipiplugin_htmlexport.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_imageviewer.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_ipodexport.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_jpeglossless.mo
+share/locale/zh_TW/LC_MESSAGES/kipiplugin_kioexportimport.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_metadataedit.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_picasawebexport.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_printimages.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_rawconverter.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_removeredeyes.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_sendimages.mo
+share/locale/zh_TW/LC_MESSAGES/kipiplugin_shwup.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_smug.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_timeadjust.mo
 share/locale/zh_TW/LC_MESSAGES/kipiplugin_wallpaper.mo
