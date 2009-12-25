@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/12/16 08:26:51 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/25 04:28:41 obache Exp $
 #
 
-DISTNAME=	ibus-1.2.0.20091215
+DISTNAME=	ibus-1.2.0.20091225
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
