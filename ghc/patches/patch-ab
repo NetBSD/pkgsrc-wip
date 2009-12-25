@@ -1,29 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2009/01/11 09:28:43 phonohawk Exp $
+$NetBSD: patch-ab,v 1.5 2009/12/25 05:49:52 phonohawk Exp $
 
---- ../ghc-6.6.1/configure.orig	2007-04-26 02:29:16.000000000 +0900
-+++ ../ghc-6.6.1/configure
-@@ -2590,20 +2590,12 @@ fi
-       exit 1
-    else
-    $PerlCmd -v >conftest.out 2>&1
--   if grep "v5.6" conftest.out >/dev/null 2>&1; then
-+   if grep "v5." conftest.out >/dev/null 2>&1; then
-       :
-    else
--      if grep "v5.8" conftest.out >/dev/null 2>&1; then
--         :
--      else
--         if grep "version 6" conftest.out >/dev/null 2>&1; then
--            :
--         else
--            { { echo "$as_me:$LINENO: error: your version of perl probably won't work, try upgrading it." >&5
--echo "$as_me: error: your version of perl probably won't work, try upgrading it." >&2;}
--   { (exit 1); exit 1; }; }
--         fi
--      fi
-+      { { echo "$as_me:$LINENO: error: your version of perl probably won't work, try upgrading it." >&5
-+          echo "$as_me: error: your version of perl probably won't work, try upgrading it." >&2; }
-+        { (exit 1); exit 1; }; }
-    fi
- rm -fr conftest*
+--- rts/posix/Select.c.orig	2009-12-11 03:11:32.000000000 +0900
++++ rts/posix/Select.c
+@@ -32,6 +32,8 @@
+ #include <unistd.h>
+ #endif
  
++#include <sys/select.h>
++
+ #if !defined(THREADED_RTS)
+ /* last timestamp */
+ lnat timestamp = 0;

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/07/26 22:49:54 phonohawk Exp $
+# $NetBSD: Makefile,v 1.14 2009/12/25 05:49:51 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		6.10.4
+VERSION=		6.12.1
 CATEGORIES=		lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
@@ -10,13 +10,12 @@ COMMENT=		Compiler for the functional language Haskell
 LICENSE=		modified-bsd
 
 DISTFILES=		${DISTNAME}-src.tar.bz2 \
-				ghc-6.6.1-src.tar.bz2 \
-				ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz \
-				ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz
+				${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2 \
+				${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
 
-SITES.ghc-6.6.1-src.tar.bz2						= http://www.haskell.org/ghc/dist/6.6.1/
-SITES.ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz	= http://static.cielonegro.org/archive/
-SITES.ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz	= http://static.cielonegro.org/archive/
+SITES.${DISTNAME}-src.tar.bz2						= http://www.haskell.org/ghc/dist/${VERSION}/
+SITES.${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2	= http://static.cielonegro.org/archive/
+SITES.${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2	= http://static.cielonegro.org/archive/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,44 +23,103 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Unregisterised HC packages are architecture dependent. We have to
 # create more HC packages to support more architectures.
-ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc
+ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386
+# Note: Darwin-*-powerpc is temporarily disabled for now. It shall
+# come back in the near future. Thanks for your patience.
 
-GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
-USE_TOOLS+=			gmake perl:run find:run cp:run
-
-# We don't want to extract all of the DISTFILEs.
-EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2 \
-				ghc-6.6.1-src.tar.bz2
-
-.if ${MACHINE_ARCH} == "i386"
-EXTRACT_ONLY += ghc-6.6.1-i386-unknown-freebsd-hc.tar.gz
-.elif ${MACHINE_ARCH} == "powerpc"
-EXTRACT_ONLY += ghc-6.6.1-powerpc-apple-darwin-hc.tar.gz
+# We must provide the real pass to gcc to the ./configure script,
+# because GHC has a runtime dependency on it. Aren't there any better
+# way than this?
+.include "../../mk/compiler.mk"
+.if empty(CCPATH)
+WARNINGS+= "This package depends on pkgsrc's undocumented variable CCPATH but it disappeared somehow."
+WARNINGS+= "Using hard-coded /usr/bin/gcc as the C compiler..."
+CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
+.else
+CONFIGURE_ARGS+= --with-gcc=${CCPATH}
 .endif
 
-# We need to tell the ./configure that libgmp is in a non-standard path. Without
-# that, the resulting GHC tries to link programs by executing ld(1) without
-# passing it -L${PREFIX}/lib.
-CONFIGURE_ARGS += --with-gmp-includes=${PREFIX}/include
-CONFIGURE_ARGS += --with-gmp-libraries=${PREFIX}/lib
+USE_TOOLS+=	gmake bsdtar perl:run
+CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
+
+# We don't want to extract all of the DISTFILEs.
+EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
+
+CONFIGURE_ARGS += \
+	--prefix=${PREFIX} \
+	--mandir=${PREFIX}/${PKGMANDIR} \
+	--with-gmp-includes=${PREFIX}/include \
+	--with-gmp-libraries=${PREFIX}/lib \
+	--with-iconv-includes=${PREFIX}/include \
+	--with-iconv-libraries=${PREFIX}/lib
 
 # Build an unregisterised bootstrap compiler and install it directly
 # into the .buildlink directory. But we can't use "make install"
 # because we don't build it in a standard way (./configure && make).
 #
-# To install it, we search for any non-symlink executables in
-# work/ghc-6.6.1 whose name ends with "-inplace". Then copy those
-# files into ${BUILDLINK_DIR}/bin with dropping the "-inplace" at
-# their tails.
+# To install it, we just copy ghc and ghc-pkg from
+# "work/bootstrap/ghc-${VERSION}/inplace/bin" to
+# "${BUILDLINK_DIR}/bin". Note that in-place ghc isn't usable before
+# running "ghc-pkg recache".
+
+.if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
+BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2
+BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
+
+.elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
+BOOTSTRAP_TARBALL = ${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
+BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
+
+#.elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
+#BOOTSTRAP_TARBALL = ${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
+#BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
+
+.else
+PKG_FAIL_REASON+=	"internal error: unsupported platform"
+.endif
+
 pre-configure:
-	cd ${WRKDIR}/ghc-6.6.1 && \
-		${CHMOD} +x ./distrib/hc-build && \
-		${ENV} ${CONFIGURE_ENV} ./distrib/hc-build -C --disable-readline --enable-hc-boot-unregisterised && \
-		${FIND} . -type f -and -perm -o+x -and -name '*-inplace' | \
-			while read i; do \
-				${CP} $$i ${BUILDLINK_DIR}/bin/`basename $$i | sed -e 's/-inplace//'`; \
-			done
+	${RUN} cd ${WRKDIR} && \
+		${ECHO} "====> Preparing bootstrap compiler" && \
+		${MKDIR} bootstrap && \
+		${CP} -r ${DISTNAME} bootstrap && \
+		cd bootstrap/${DISTNAME} && \
+		${LN} -sf ${PWD_CMD} utils/ghc-pwd/ghc-pwd && \
+		${ECHO} "====> Configuring for bootstrap compiler" && \
+		${ENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot ${CONFIGURE_ARGS} && \
+		${ECHO} "====> Extracting bootstrap HC archive" && \
+		(cd .. && bsdtar jxfm ${DISTDIR}/${BOOTSTRAP_TARBALL}) && \
+		${SH} mkfiles && \
+		${ECHO} "====> Building bootstrap compiler" && \
+		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
+		for c in libraries/*/configure; do \
+			(cd `${DIRNAME} $$c` && ${ENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
+		done && \
+		for i in inplace/lib/package.conf.d/*.conf */*/package-data.mk */*/*/package-data.mk; do \
+			${SED} -e "s#\\[\\[GHC_SOURCE_PATH\\]\\]#`${PWD_CMD}`#g" $$i > $$i.tmp; \
+			${MV} -f $$i.tmp $$i; \
+		done && \
+		${TOUCH} -r inplace/lib/package.conf.d */*/package-data.mk */*/*/package-data.mk && \
+		${GMAKE} bootstrapping-files && \
+		${GMAKE} all_ghc_stage2 && \
+		${GMAKE} inplace/bin/ghc-pkg && \
+		${GMAKE} inplace/lib/unlit && \
+		inplace/bin/ghc-pkg recache && \
+		${CP} inplace/bin/ghc-stage2 ${BUILDLINK_DIR}/bin/ghc && \
+		${CP} inplace/bin/ghc-pkg ${BUILDLINK_DIR}/bin/ghc-pkg
+
+# We need to tell the libraries/integer-gmp/configure that libgmp is
+# in a non-standard path. Without that, the resulting GHC tries to
+# link programs by executing ld(1) without passing it -L${PREFIX}/lib.
+do-configure:
+	${RUN} cd ${WRKSRC} && \
+		${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	${RUN} ${ECHO} "libraries/integer-gmp_CONFIGURE_OPTS += \
+		--configure-option=--with-gmp-includes=${PREFIX}/include \
+		--configure-option=--with-gmp-libraries=${PREFIX}/lib" > ${WRKSRC}/mk/build.mk
+	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
+		--configure-option=--with-curses-includes=${PREFIX}/include \
+		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
 
 # The ghc compiler does normally split the generated C files into small
 # parts before sending them to gcc, to enable the linker to eliminate
@@ -72,11 +130,20 @@ pre-configure:
 # for a description of the problem.
 # Disable file splitting until pkgsrc gets improved.
 pre-build:
-	${ECHO} "SplitObjs=NO" > ${WRKSRC}/mk/build.mk
+	${RUN} ${ECHO} "SplitObjs = NO" >> ${WRKSRC}/mk/build.mk
 
 # Some unused scripts don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 
+# GHC currently *requires* ${PREFIX}/lib to be in
+# "/etc/ld-elf.so.conf". See
+# http://hackage.haskell.org/trac/ghc/ticket/2933
+CHECK_SHLIBS_SUPPORTED= 	no
+
+BUILDLINK_DEPMETHOD.libxslt = build
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
