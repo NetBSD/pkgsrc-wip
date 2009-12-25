@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/12/24 13:40:31 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2009/12/25 11:56:01 ryo-on Exp $
 #
 
 DISTNAME=	umefont-410
-PKGNAME=	umefont-0.410
+PKGNAME=	${DISTNAME:S/-/-0./}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ume-font/22212/}
 
@@ -13,15 +13,17 @@ COMMENT=	Ume 18 Japanese fonts (Mincho and Gothic)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_X11BASE=    YES
-NO_CONFIGURE=   YES
-NO_BUILD=       YES
+USE_X11BASE=	YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 INSTALLATION_DIRS=	lib/X11/fonts/TTF \
 			${DOCSDIR}
-FONTS_DIRS.ttf= ${PREFIX}/lib/X11/fonts/TTF
+
+FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	ume-pgc4.ttf \
 		ume-pgc5.ttf \
@@ -47,7 +49,7 @@ USE_LANGUAGES=	# none
 
 do-install:
 .for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
 .endfor
 .for docfile in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
