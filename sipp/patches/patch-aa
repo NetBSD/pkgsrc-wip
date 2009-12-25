@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/07/14 22:02:13 gschwarz Exp $
+$NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
 
 --- Makefile.orig	2008-04-11 14:26:37.000000000 +0200
 +++ Makefile	2008-07-12 16:35:34.000000000 +0200
@@ -139,7 +139,7 @@ $NetBSD: patch-aa,v 1.6 2008/07/14 22:02:13 gschwarz Exp $
  
  $(OUTPUT): $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ)
 -	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
-+	$(CXX) $(LFLAGS) \
++	$(CXX) $(LDFLAGS) \
  	$(DEBUG_FLAGS) -o $@ $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ) $(LIBS) $(TLS_LIBS) $(PCAPPLAY_LIBS) $(EXTRAENDLIBS)
  
  debug:
